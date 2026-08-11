@@ -741,11 +741,11 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **4** | la etapa de investigación en la venta | **4** | **6** | **5** | **5** | **SUB-PURO a UNA lectura de cerrarse**: el 862 sale A; falta un par que nunca entró a la cola |
 | **5** | **la competencia entre inversores** | **4** | **6** | **6** | **6** | **PURO, y el PRIMERO DE CUATRO MIEMBROS** del archivo (puesto 1030). Se declaró puro con tres por el contador, se degradó a sub-puro por el **barrido de las A**, y vuelve a puro **con el tamaño correcto** |
 | **6** | **la etnografía de campo** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el primero que **nace de un par CRUZADO** entre dos parejas ya declaradas |
-| **7** | la junta asesora | **4** | **6** | **4** | **4** | **SUB-PURO**, y el único donde el par que cruza **los dos momentos** (identificar y formalizar) ya está leído y es A. El puesto **976** lo sube a 4 de 6 |
+| **7** | la junta asesora | **4** | **6** | **5** | **4** | **MEZCLADO desde el 16 ago 2026** (antes sub-puro), corrección declarada por el 9.10: el puesto **1190** mete un **D** dentro de la nómina. Cola cerrada, **un par nunca encolado**. Es la **cabecera de LA ESCALERA QUE NO SUBE**, R38 |
 | **8** | **los cuadrantes de mercado** | **6** | **15** | **7** | **7** | **SUB-PURO, y el más cargado del inventario**: siete pares leídos y **los siete en A**, sin un solo sano. Añadido el 13 ago 2026 con **corrección declarada**: lo conté en cinco miembros en R18 y son **seis** |
-| **9** | **build-measure-learn** | **5** | **10** | **5** | **5** | **SUB-PURO, el de MÁS MIEMBROS declarado**: cinco pares leídos y los cinco en A. Dos de sus cinco miembros los levantó el **barrido de las A**, no el contador |
+| **9** | **build-measure-learn** | **7** | **21** | **7** | **7** | **SUB-PURO, y el de MÁS MIEMBROS del inventario**: siete pares leídos y los siete en A. **Remedido al puesto 1400** (R38, banco 9.10): eran cinco y son **siete**, por el **1182** y el **1208**, los dos del **barrido de las A**. Le queda **un pendiente en cola, el 1449** |
 | **10** | **el compromiso contado tres veces** | 3 | 3 | **3** | 3 | **PURO**, y el **primero certificado por los dos instrumentos desde el minuto uno** (14 ago 2026, tramo 1101-1157). Racimo de Rackham: `obtencion_compromiso`, `obtencion_de_compromiso` y `obtencion_compromiso_venta`, pares **197, 222 y 463**. El **barrido de las A no levanta ni un candidato fuera**; el **contador se come a un miembro**, `obtencion_compromiso`, por no llevar la partícula *de*. **Cero aristas internas entre los tres** |
-| **11** | **la seleccion de canal** | **6** | **15** | **7** | **7** | **SUB-PURO, y EMPATA con los cuadrantes como el mas cargado del inventario**: siete pares leidos y **los siete en A**, sin un solo sano. Anadido el 14 ago 2026 al **recomputar la ficha del racimo**, que citaba cuatro leidos cuando ya eran siete (banco 9.10). **NO es estrella**: el 762 y el 945 no tocan al general |
+| **11** | **la seleccion de canal** | **6** | **15** | **8** | **8** | **SUB-PURO, y EMPATA con los cuadrantes como el mas cargado del inventario**: siete pares leidos y **los siete en A**, sin un solo sano. Anadido el 14 ago 2026 al **recomputar la ficha del racimo**, que citaba cuatro leidos cuando ya eran siete (banco 9.10). **NO es estrella**: el 762 y el 945 no tocan al general. **Recomputado al puesto 1517**: el **1488** lo sube a 8 de 15, los ocho en A, y confirma el **9.25** por tercera vez |
 
 > **LECCIÓN DEL 13 ago 2026, con dos sub-puros rotos el mismo día** (el 3 por el
 > puesto 872 y la familia de innovación por el 863): **una familia con muchos
@@ -1881,6 +1881,44 @@ direcciones:
 > del tramo se resolvieron con la vara.** Cuando esa cifra sube y la de A baja,
 > la cola está en zona de jerarquías. **Las dos juntas dicen lo que ninguna dice
 > sola.**
+
+> **ADJUDICACION DEL FUNDADOR, 16 ago 2026, en el checkpoint de los 1.400: LA
+> CIFRA DE LA VARA CAMBIA DE SIGNIFICADO.** Se sigue reportando por tramo, igual
+> que antes, **pero deja de leerse como senal de duplicacion pendiente.**
+
+**LA EVIDENCIA QUE FUERZA LA ADJUDICACION**, contada del archivo:
+
+| medida | cifra |
+|---|---:|
+| pares resueltos citando el 9.6.1 desde el puesto 1001 | **148** |
+| de esos, cuantos salieron REPITE | **CERO** |
+| ultima A resuelta con la vara | centena **901-1000** |
+| pares sin una sola A de la vara | **400 seguidos** |
+
+> **LO QUE LA CIFRA MIDE DESDE HOY: cuanta JERARQUIA SIN CABLEAR atraviesa el
+> tramo.** No mide cuanta repeticion queda por encontrar. Un tramo con la vara
+> alta ya no es un tramo sospechoso: es un tramo **lleno de madres que nombran un
+> paso en una linea y de hijos que traen el procedimiento de esa linea, y sin el
+> cable puesto.**
+
+> **Y de donde sale eso**: es **la bolsa del barrido `paso_contra_nodo.py`
+> apareciendo de a poco.** El barrido conto 624 candidatos sin arista con esa
+> misma anatomia, y una muestra los dio 79 por ciento jerarquia sana. **La cola
+> los esta entregando uno por uno.** La vara no encuentra duplicados porque **lo
+> que le queda delante no son duplicados**: son enlaces que faltan.
+
+> **COMO SE LEEN LAS DOS CIFRAS JUNTAS, version definitiva:**
+>
+> | tasa de A | cifra de la vara | que dice el tramo |
+> |---|---|---|
+> | alta | baja | **zona de gemelos**: fusiones, caro |
+> | alta | alta | **zona de madres e hijos que repiten**: la vara corta por los dos lados |
+> | **baja** | **alta** | **zona de jerarquia sin cablear**: enlaces, barato. **Aqui esta el ejercicio hoy** |
+> | baja | baja | zona de pares ajenos: nada que hacer |
+>
+> **La cifra de la vara sigue sin proyectarse**, por la regla de arriba. Y sigue
+> siendo por tramo: **describe la cola, no el catalogo.**
+
 
 ---
 

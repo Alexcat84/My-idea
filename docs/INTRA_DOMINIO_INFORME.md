@@ -4333,6 +4333,167 @@ sostenerlo lo mantiene puro. **Lo perdido**: de `hipotesis_tipo_mercado`, el
 > **La cobertura de ese puro, como manda el 9.26: TRES de TRES.** Es una forma sin
 > reserva.
 
+
+### TANDA R38, TRIGESIMOCUARTA CIEGA: seis de seis
+
+**Acumulado: 228 releidas, de las cuales 204 a ciegas. Discrepancias: UNA**, el
+395, cerrada por los dos lados.
+
+**Las perdidas se derivaron leyendo los doce nodos y buscando cada una en el
+grafo**, y **dos de las nueve candidatas se cayeron porque existen en otro nodo
+vivo**: se dicen abajo con nombre. **Y la tanda trae DOS CHOQUES DE MEDICION**
+contra cifras publicadas en la tabla viva.
+
+| puesto | el par | que se pierde de verdad |
+|---:|---|---|
+| **704** | `cuatro_capacidades_mercado` contra `marco_analisis_mercado_cadena_suministro` | **reforzar la fortaleza en vez de corregir debilidades menores** y las **metricas por capacidad**; del otro lado, **quienes participan en el mercado** y **el tipo de mercado a dos anos** |
+| **709** | `customer_validation` contra `introduccion_validacion_clientes` | **la razon de dos a uno** en ventas y marketing; del otro lado, **posicionar el producto y la empresa** |
+| **711** | `escenarios_futuros` contra `future_scenarios_planning` | **la probabilidad pequena a los escenarios alternativos**; del otro lado, **el bloque entero de IA**, nueve pasos |
+| **712** | `formalizar_junta_asesora` contra `identificar_junta_asesores` | **el asesor tipo CEO**, la **compensacion con vesting** y **documentar la operacion**; del otro lado, **el almuerzo informal** |
+| **713** | `community_building_estrategia` contra `construccion_de_comunidad_como_canal_traccion` | los **espacios de meta discusion** y las **guias de calidad**; del otro lado, la **pregunta de entrada** y la **conexion cruzada entre miembros** |
+| **723** | `ciclo_construir_medir_aprender` contra `design_test_repeat` | **repetir el ciclo cada vez mas rapido**; del otro lado, **anclar el prototipo a la propuesta de valor** |
+
+**LAS DOS QUE SE CAYERON AL BUSCARLAS**, y conviene decirlo porque el que no las
+busca las escribe: de `introduccion_validacion_clientes`, *probar canales de venta
+y distribucion* **no se pierde**, esta en `mapa_de_canal_de_ventas` y en otros
+cinco nodos vivos; de `community_building_estrategia`, *delegar la moderacion con
+karma o votacion* **tampoco**, esta entera en `gestion_calidad_comunidad_a_escala`.
+
+#### 712: CUARTO ejemplar de arista en los dos sentidos que aun asi duplica, y cabecera de LA ESCALERA QUE NO SUBE
+
+**Van cuatro**, con el 570, el 614 y el 635. **Y este trae algo que los otros tres
+no tenian: es el par de cabecera de una escalera de las del 9.12.**
+
+**LA MESA DE LA JUNTA ASESORA, remedida hoy contra el archivo:**
+
+| medida | cifra |
+|---|---:|
+| nomina | **CUATRO** nodos |
+| pares posibles | 6 |
+| en la cola | 5 |
+| **leidos** | **5** |
+| **en A** | **4** (328, 367, 712, 976) |
+| **en D** | **1**, el **1190** |
+| pendientes en cola | **cero** |
+| **nunca encolado** | **1**: `formalizar_junta_asesora` contra `identificar_consejo_asesores` |
+
+**LA FAMILIA ES UN CUADRO DE DOS POR DOS**, y por eso se ve la escalera:
+
+| | `identificar_junta_asesores` | `identificar_consejo_asesores` |
+|---|---|---|
+| **`formalizar_junta_asesora`** | **712 A** | **nunca encolado** |
+| **`formalize_advisory_board`** | **976 A** | **1190 D** |
+
+> **Las columnas son el mismo momento contado dos veces y las filas tambien**: el
+> 328 empareja los dos *formalizar* y el 367 los dos *identificar*, **los dos en
+> A**. O sea que **los cuatro nodos son dos nodos escritos cuatro veces**, y las
+> celdas del cuadro son **el escalon**: identificar contra formalizar.
+>
+> **Tres de las cuatro celdas cruzadas estan leidas y NO dicen lo mismo**: dos en
+> A y una en D. **Ese es exactamente el 9.12**: la escalera esta anunciada, el
+> paso de identificar a formalizar existe como secuencia declarada en el propio
+> paso 6 de `identificar_consejo_asesores`, **y aun asi tres de sus cuatro cruces
+> duplican contenido en vez de continuarlo.**
+
+**CHOQUE DE MEDICION NUMERO UNO, declarado por el 9.10.** La **tabla viva de los
+puros** trae esta familia como su **numero 7**, *SUB-PURO, 4 leidos, 4 en A*.
+**Ya no lo es.** El puesto **1190**, posterior a la fecha de corte de la tabla,
+metio un **D** dentro de la nomina.
+
+> **La familia de la junta asesora pasa de SUB-PURO a MEZCLADO**, por la misma
+> regla que rompio al numero 3 con el 872. **Y su cobertura, como manda el 9.26:
+> 5 de 6.** Con un solo par ausente, y ese par ausente es **una de las cuatro
+> celdas del cruce**: si sale A, la escalera duplica en tres de cuatro y la
+> excepcion es el 1190; si sale D, duplica en dos de cuatro y **la figura queda
+> partida por la mitad.** Un par mueve la forma en las dos direcciones, tal cual
+> lo dice el 9.26.
+
+**LA ANOTACION QUE PIDE EL ENCARGO, en el registro de dependencias**: el **1190
+depende de esta mesa**, y la mesa **no puede sentarse pensando que decide sobre un
+sub-puro**. Decide sobre una familia **mezclada de cuatro nodos con un cruce sin
+leer**, y con la escalera de cabecera puesta por el 712.
+
+#### 711: el par del acto de `future_scenarios_planning`, y el acto es de DOS
+
+**Citado como manda la nota de la seccion 54.7:**
+
+| el acto | |
+|---|---|
+| **tamano** | **DOS** nodos: `escenarios_futuros` y `future_scenarios_planning` |
+| **la costura** | ninguno de los dos: **el acto entero es este par** |
+| **cobertura** | **1 de 1**, completa, **y aun asi es la forma minima** |
+| **lo que cuesta** | **una decision de par**, de las 121 del retrato |
+
+> **Y aqui la perdida NO es simetrica, ni de lejos.** `escenarios_futuros` tiene
+> siete pasos de Cooper y `future_scenarios_planning` tiene **trece**, de los
+> cuales **nueve son un bloque de IA entero**: que tareas se automatizarian con
+> crecimiento lineal, que pasa si la capacidad se multiplica por cien, el plan de
+> contingencia entre lineal y exponencial, la revision trimestral, y las senales
+> de alerta regulatorias y tecnologicas.
+>
+> **Si la fusion elige mal el superviviente, se pierde la mitad del catalogo de
+> escenarios de IA.** Queda dicho aqui para que la decision no se tome por
+> antiguedad ni por nombre.
+
+**Y una precision de nomina que evita un error futuro**: `future_scenarios_planning`
+**NO es miembro del racimo de la supervision de la IA** de la seccion 11. Ese
+racimo tiene ocho nombrados y este no esta entre ellos. **Un nodo con pasos de IA
+no es un nodo del racimo de la IA**: el racimo se definio por la supervision, no
+por la mencion.
+
+#### 723: par interno del sub-puro de BUILD-MEASURE-LEARN, y el sub-puro CRECIO
+
+**CHOQUE DE MEDICION NUMERO DOS, declarado por el 9.10.** El encargo lo cita como
+**sub-puro de cinco miembros**, que es lo que dice la tabla viva en su numero 9.
+**Medido hoy contra el archivo, son SIETE.**
+
+| medida | tabla viva (vigente al 1157) | **medido al puesto 1400** |
+|---|---:|---:|
+| miembros | 5 | **7** |
+| pares posibles | 10 | **21** |
+| en la cola | no anotado | **8** |
+| **leidos** | 5 | **7** |
+| **en A** | 5 | **7** |
+| estado | SUB-PURO | **SUB-PURO**, y por mas margen |
+
+**LA NOMINA DE SIETE**: `build_measure_learn`, `ciclo_construir_medir_aprender`,
+`ciclo_crear_medir_aprender`, `design_test_repeat`, `desarrollo_en_espiral`,
+`startup_como_experimento_cientifico` y `testing_process_completo`. **Los pares:**
+213, 376, 486, **723**, 796, 1182 y 1208, **los siete en A**.
+
+> **La tabla no mintio: dijo su fecha de corte.** Los dos miembros que faltaban
+> entraron **despues** del puesto 1157, por el **1182** y el **1208**, los dos
+> levantados por el barrido de las A y no por el contador. **Esto es exactamente
+> el patron de la nota del inventario: remedir cambio el tamano otra vez, y otra
+> vez hacia arriba.** Van tres remediciones y **ninguna dejo la cifra igual.**
+
+> **Su cobertura, como manda el 9.26: SIETE de VEINTIUNO.** Es el sub-puro **con
+> mas miembros y con la reserva mas grande del inventario**: catorce pares
+> posibles sin leer, de los cuales **trece no entraron nunca a la cola**. **Un
+> solo sano lo tumba**, y por el 9.16 esto sigue siendo una promesa.
+>
+> **Y le queda UN pendiente en cola, el puesto 1449, que cae en el tramo que se
+> lee ahora mismo.** Sale en esta pasada.
+
+#### 704 y 709: dos pares que no mueven nomina, y por que
+
+**El 704** es interno del racimo de **los cuadrantes de mercado**, el numero 8 de
+la tabla viva, y los dos nodos ya estaban dentro de su acto de seis. **No lo
+agranda: lo densifica.** **La perdida verificada** de `cuatro_capacidades_mercado`
+es la unica linea del inventario que manda **invertir en la fortaleza en vez de
+corregir la debilidad**, y no aparece en ningun otro nodo vivo.
+
+**El 709** es interno del acto de **siete de la apertura de Customer Validation**,
+la mesa que el 655 midio. **La perdida verificada** de
+`introduccion_validacion_clientes` es **posicionar correctamente el producto y la
+empresa**, que **no esta en ningun otro nodo del catalogo con esas palabras**; y
+de `customer_validation`, **la razon de dos a uno** entre lo invertido en ventas y
+marketing y lo que vuelve, que es **el unico umbral numerico de la etapa**.
+
+> **Los dos van a bloques distintos**: el 704 al reparto de la mesa de los
+> cuadrantes y el 709 al de la mesa de Customer Validation. **Ninguno de los dos
+> se decide ahora**, por la regla del reparto por bloques del 9.11.
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -4710,6 +4871,94 @@ Mollick:
 > vecinas. **La cola decidira: cuando traiga un par cruzado, sube o se parte.**
 
 ---
+
+
+---
+
+## 11.bis LA PARTICION, ESCRITA Y SIN EJECUTAR (16 ago 2026, vigente al puesto 1517)
+
+**LAS CUATRO CONDICIONES SALIERON D. Las cuatro.** Este texto las cierra y deja
+escrito lo que la seccion 11 anticipaba, **medido del archivo y sin adjudicar
+nada**.
+
+| puesto | el par cruzado | clase |
+|---:|---|:---:|
+| **1211** | `comprension_capacidades_limitaciones_ia` contra `principio_humano_en_el_loop` | **D** |
+| **1239** | `comprension_capacidades_limitaciones_ia` contra `human_in_the_loop_ia` | **D** |
+| **1339** | `human_in_the_loop_ia` contra `jagged_frontier_ia` | **D** |
+| **1451** | `jagged_frontier_ia` contra `principio_humano_en_el_loop` | **D** |
+
+> **Las cuatro parejas que cruzarian las dos mitades originales estan leidas y
+> ninguna repite.** El texto de la seccion 11 decia: *si los cuatro salieran D,
+> este racimo se parte en dos y hay que decirlo.* **Se dice.**
+
+### 11.bis.1 Y NO SE PARTE EN DOS: SE PARTE EN TRES
+
+**Medido sobre las A internas de la nomina, con cierre transitivo.**
+
+| bloque | tamano | miembros |
+|---|---:|---|
+| **EL BLOQUE HUMANO** | **5** | `principio_humano_en_el_loop`, `human_in_the_loop_ia`, `alineacion_etica_ia_negocio`, `mitigar_falling_asleep_wheel`, `riesgo_sobredependencia_ia` |
+| **EL BLOQUE DEL MAPA** | **2** | `comprension_capacidades_limitaciones_ia`, `jagged_frontier_ia` |
+| **SUELTO** | **1** | `comprender_alineacion_etica_ia` |
+
+> **La sorpresa no es la particion: es el tercer pedazo.**
+> `comprender_alineacion_etica_ia` **no pertenece a ninguna de las dos mitades**.
+> Su unico par interno leido es el **993**, contra `alineacion_etica_ia_negocio`,
+> **y salio D**. Estaba en la nomina por tema, no por evidencia.
+
+**Y el bloque humano crecio por un camino que nadie predijo**: la pareja del
+*falling asleep at the wheel*, `mitigar_falling_asleep_wheel` y
+`riesgo_sobredependencia_ia`, **entro entera por el puesto 1041**, que engancho
+`human_in_the_loop_ia` con `mitigar_falling_asleep_wheel`. **Las dos mitades
+originales no se unieron; una de ellas absorbio a una tercera pareja.**
+
+### 11.bis.2 LAS DOS ABSORCIONES, y salen al reves una de la otra
+
+**El encargo pedia registrar que pasa con cada una de las dos parejas adyacentes.
+Pasan cosas distintas y el motivo es medible.**
+
+| puesto | la pareja adyacente | resultado | por que |
+|---:|---|---|---|
+| **1478** | las **alucinaciones**: `deteccion_alucinaciones_ia` y `gestion_alucinaciones_ia` | **NO ENTRA** | el par sale **D**: `principio_humano_en_el_loop` nombra *reconocer cuando la IA inventa* **en una linea** y el otro trae el **procedimiento** de esa linea. Vara del 9.6.1, CONTINUA |
+| **1517** | **invitar a la IA a todo**: `invitar_ia_a_todo` y `principio_invitar_ia_siempre` | **ENTRA** | el par sale **A**: `invitar_ia_a_todo` y `jagged_frontier_ia` **hacen el mismo barrido de tareas**, probar la maquina en cada una y anotar donde rinde |
+| **363** | (interno de las alucinaciones) | **se fusionan entre si** | releido a ciegas en R19 y sostenido. **Decida lo que decida el 1478** |
+
+> **La leccion, y sirve para las demas parejas adyacentes del inventario: una
+> pareja vecina se absorbe cuando HACE LO MISMO que un miembro del racimo, y no
+> cuando DESARROLLA UNA LINEA suya.** El detalle de una linea es jerarquia y se
+> arregla con una arista; el mismo acto escrito dos veces es gemelo y se arregla
+> con una fusion.
+
+### 11.bis.3 LA NOMINA VIGENTE, recomputada al puesto 1517
+
+| medida | antes (al 1400) | **ahora** |
+|---|---:|---:|
+| miembros | 8 | **10** |
+| pares posibles | 28 | **45** |
+| en la cola | 13 | **15** |
+| **leidos** | 10 | **14** |
+| **A / D** | 6 / 4 | **8 / 6** |
+| pendientes en cola | 3 | **1**, el **1541** |
+| nunca encolados | 15 | **30** |
+
+**La particion final, sobre los DIEZ:**
+
+| bloque | tamano | que es |
+|---|---:|---|
+| **EL BLOQUE HUMANO** | **5** | quien decide y quien revisa |
+| **EL BLOQUE DEL MAPA** | **4** | probar la maquina tarea por tarea y anotar donde rinde |
+| **SUELTO** | **1** | `comprender_alineacion_etica_ia` |
+
+> **Cobertura, como manda el 9.26: 14 de 45.** La particion es **PROVISIONAL** y
+> queda dicho con que la puede mover: **un par pendiente en cola, el 1541**, y
+> **treinta que no entraron nunca**. Basta una A entre un miembro del bloque
+> humano y uno del bloque del mapa para que los dos vuelvan a ser uno, y **hay
+> treinta pares donde eso podria estar escondido**.
+
+> **SIN EJECUTAR.** Esto es una medicion, no una adjudicacion. **Ningun nodo se
+> toca**, ninguna mesa se sienta, y la decision de si el catalogo quiere dos
+> racimos, tres o uno **es del fundador**.
 
 ## 12. MEDICION: LA SERIE DE COLEMAN, candidata a TERCERA SERIE DECLARADA
 
@@ -10132,3 +10381,179 @@ le quedaba un pendiente, el 1399. Es falso por dos lados.**
 > las A que queden no van a venir de madres e hijos. **Van a venir de gemelos que
 > se llaman distinto**, como el 1387, que aparecio de la nada entre dos nodos sin
 > una sola lectura previa.
+
+## 61. CHECKPOINT DE LOS 1.500: tres condiciones resueltas y una mesa que crece
+
+**Tramo 1401-1517, ciento diecisiete pares leidos. DIEZ A, 8,5 por ciento.**
+
+**EL MARCADOR, recomputado del archivo como manda el 9.10:**
+
+| medida | cifra |
+|---|---:|
+| **registrados** | **1.517 de 3.388**, el 44,8 por ciento |
+| huecos | **cero** |
+| global | **A 336, B 89, C 7, D 1.085** |
+| **tasa global de A** | **22,1%** |
+| nucleo (core) | **1.362 pares** |
+| **tasa del nucleo** | **24,6%** |
+
+### 61.1 LAS DOS SERIES DEL TRAMO
+
+| tramo | pares | A | tasa de A | **con la vara** | **de esos, A** |
+|---|---:|---:|---:|---:|---:|
+| **1401-1500** (la centena) | 100 | **7** | **7,0%** | **28** (28,0%) | **0** |
+| 1501-1517 (el resto) | 17 | 3 | 17,6% | 8 (47,1%) | 0 |
+| **1401-1517** (el tramo) | 117 | **10** | **8,5%** | **36** (30,8%) | **0** |
+
+> **LA VARA SIGUE SIN PRODUCIR NI UNA A, y ya van QUINIENTOS DIECISIETE pares.**
+> Desde el puesto 1001 ha decidido **184 pares y los 184 salieron CONTINUA**. La
+> adjudicacion del 16 ago 2026 al banco 9.19 se cumple tramo a tramo: **la cifra
+> mide jerarquia sin cablear, no duplicacion pendiente.**
+
+**Y el ultimo tramo trae la cifra de vara mas alta del ejercicio, 47,1 por
+ciento**: casi la mitad de sus pares son una madre que enuncia y un hijo que
+detalla. En ese tramo estan los dos casos mas literales que se han visto: el
+**1506**, donde `teoria_de_restricciones` **cita el titulo del otro nodo dentro de
+su paso 3**; y el **1503**, donde la madre dedica media linea a coordinar aprender
+con construir y el hijo entero es sobre esa coordinacion.
+
+### 61.2 LAS TRES CONDICIONES QUE EL ENCARGO PEDIA
+
+| puesto | que decidia | **resultado** |
+|---:|---|---|
+| **1451** | cuarta y ultima condicion cruzada del racimo de la IA | **D**. Las cuatro salieron D: **el racimo se parte**, y en TRES, no en dos |
+| **1478** | absorcion de la pareja de las **alucinaciones** | **D**. **NO entra**: es jerarquia, no gemelo |
+| **1517** | absorcion de la pareja de **invitar a la IA a todo** | **A**. **SI entra**: la nomina pasa de OCHO a DIEZ |
+
+**La particion queda escrita entera y sin ejecutar en la seccion 11.bis**, con su
+fecha de corte y su cobertura: **bloque humano de CINCO, bloque del mapa de
+CUATRO, y `comprender_alineacion_etica_ia` SUELTO**, porque su unico par interno
+leido, el 993, salio D.
+
+> **Lo que las dos absorciones ensenan juntas, y sirve para el resto del
+> inventario**: una pareja vecina **se absorbe cuando hace lo mismo que un
+> miembro**, y **no se absorbe cuando desarrolla una linea suya.** El 1517 hace el
+> mismo barrido de tareas que `jagged_frontier_ia`; el 1478 detalla una linea de
+> `principio_humano_en_el_loop`. **Mismo racimo, misma distancia aparente, y
+> resultados opuestos por un motivo medible.**
+
+### 61.3 LA MESA UNIDA CRECE A DIECISIETE
+
+**Y era la que se habia cerrado con la frase *cero candidatos fuera*.** El puesto
+**1499**, `decision_factory_mentality` contra `gestion_portafolio_foco`, sale **A**
+y mete un miembro nuevo por el barrido de las A.
+
+| medida | al 1400 | **al 1517** |
+|---|---:|---:|
+| **nomina** | 16 | **17** |
+| pares posibles | 120 | **136** |
+| en la cola | 21 | **23** |
+| **leidos** | 20 | **22** |
+| **en A** | 16 | **17** |
+| B / D | 1 / 3 | **2 / 3** |
+| pendientes en cola | 1 | **1**, el **1524** |
+
+> **Cobertura, por el 9.26: 22 de 136.** La forma sigue **PROVISIONAL** y con la
+> reserva mayor del inventario: **113 pares que nunca entraron a la cola.**
+>
+> **Y la leccion del 9.16 se cobra otra vez**: una nomina se declaro cerrada con
+> el barrido corrido, y **el barrido volvio a hablar cien puestos despues**. No
+> porque estuviera mal corrido, sino porque **el barrido solo ve las A que ya
+> existen**, y la cola sigue fabricando A. **Ninguna nomina esta cerrada mientras
+> queden pares suyos sin leer.**
+
+**Y QUEDA ANOTADO EL CASO QUE NO LA HIZO CRECER**, porque la comparacion es util:
+el puesto **1459**, `cinco_artefactos_stage_gate` contra `estructura_de_gates`,
+**es la D mas ajustada del tramo**, con tres de cuatro pasos correspondidos. Lo
+que la inclina a CONTINUA es que la madre gobierna ademas **las etapas y los
+roles**, que el otro no toca. **Si el fundador la leyera como A, la mesa iria a
+dieciocho.** Queda escrito para que la decision sea suya y no un descuido mio.
+
+### 61.4 LAS OTRAS SIETE A DEL TRAMO
+
+| puesto | el par | que le hace al inventario |
+|---:|---|---|
+| **1431** | `convertir_necesidad_en_demanda` contra `insight_observacion_empatia` | acto NUEVO de dos. **Octava trampa de identificador**: mismo libro y **mismo subtitulo** |
+| **1436** | `creacion_option_pool` contra `pool_opciones_empleados` | densifica la familia de la reserva de opciones: **5 de 6 pares leidos, los cinco en A** |
+| **1438** | `framework_flujos_de_datos_ppp` contra `framework_ppph_flujos` | acto NUEVO de dos, **cinco pasos correspondidos uno a uno**. **Novena trampa** |
+| **1449** | `build_measure_learn` contra `design_test_repeat` | **cierra la cola del sub-puro de build-measure-learn**: 8 de 8 encolados leidos, **los ocho en A** |
+| **1468** | `business_model_canvas_scorecard` contra `business_model_canvas_vs_plan` | acto NUEVO de dos. **Decima trampa** |
+| **1488** | `hipotesis_de_canales` contra `seleccion_canal_fisico` | confirma el **9.25** por tercera vez: la especializacion **fisica funde**. Racimo del canal a **8 de 15, los ocho en A** |
+| **1507** | `atacar_mercados_establecidos_con_problema` contra `encontrar_grandes_problemas_mercados_emergentes` | el **mismo metodo con el mercado cambiado de parametro**. Familia a **tres nodos** |
+| **1510** | `atencion_focal_y_periferica` contra `wallas_intimacion_fringe_consciousness` | familia de la conciencia periferica a **tres nodos** |
+
+> **TRES TRAMPAS DE IDENTIFICADOR NUEVAS EN CIEN PARES**, la octava, la novena y
+> la decima, **mas dos que se leyeron y NO repiten** (el 1402, *ways to grow*
+> framework contra matrix; y el 1398 de la centena anterior). **La trampa ya no es
+> una rareza: es la fuente principal de A que le queda a la cola**, tal como
+> anticipo el checkpoint de los 1.400.
+
+### 61.5 CUATRO CANDIDATOS NATURALES LEIDOS Y DESCARTADOS
+
+**Y esto es lo que el 9.16 pedia: la lectura que admite o descarta al candidato,
+escrita.**
+
+| puesto | el candidato | la familia | resultado |
+|---:|---|---|---|
+| **1426** | `posicionamiento_por_tipo_de_mercado` | el **puro de tres** del tipo de mercado | **descartado**, sigue en 3 con cobertura **3 de 3** |
+| **1433** | `encontrar_lead_vc` | el **puro de cuatro** de la competencia entre inversores | **descartado**, sigue en 4 con cobertura **6 de 6** |
+| **1465** | `venture_debt_terminos_economicos` | la familia de los **warrants** | **descartado**, sigue en 3 |
+| **1489** | `modelo_spin` | el **puro numero 10**, el compromiso contado tres veces | **descartado**, sigue en 3 con cobertura **3 de 3** |
+
+> **Los dos puros con cobertura completa de la tabla viva aguantaron su prueba
+> mas dura**: el candidato natural, del mismo libro y del mismo tema, se leyo y
+> salio sano. **Un puro que sobrevive a su candidato vale mas que un puro que
+> nunca lo tuvo delante.**
+
+### 61.6 UNA FAMILIA QUE CIERRA COBERTURA Y RESULTA MEZCLADA
+
+**El puesto 1448 cierra los tres pares posibles de la familia de los warrants:
+`warrants_deuda_convertible`, `warrant_pricing_venture_debt` y
+`warrants_financiamiento`. Cobertura 3 de 3, sin reserva.**
+
+> **Y el resultado es que NO es un sub-puro: dos A y una D.** Con dos pares leidos
+> parecia uniforme; con el tercero deja de serlo. **Es el 9.26 en su forma mas
+> corta: la cobertura completa no confirmo la forma, la corrigio.**
+
+### 61.7 LAS CINCO FRONTERAS QUE AGUANTAN
+
+**El retrato de las A dijo que no hay una tercera mesa escondida. El tramo lo puso
+a prueba cinco veces y las cinco veces aguanto.**
+
+| puesto | que se probaba | resultado |
+|---:|---|---|
+| **1414** | la estrella de pasa o no pasa (4) contra build-measure-learn (7) | **D**, no nacen once |
+| **1422** | los dos racimos de Rackham de cuatro | **D**, no nacen ocho |
+| **1453** | Customer Discovery (9) contra Customer Validation (7) | **D**, no nacen dieciseis |
+| **1467** | el mapa de ventas (6) contra preservar efectivo (3) | **D**, no nacen nueve |
+| **1477** | Customer Discovery contra Customer Validation, **por sus dos costuras mayores** | **D**, y la frontera esta **escrita dentro del nodo**: empieza donde el otro termina |
+
+> **El retrato de las A queda confirmado por lectura, no solo por conteo.** Las dos
+> componentes grandes siguen separadas, **y la mayor crecio de doce a TRECE por el
+> 1499**, no por fusionarse con nadie.
+
+### 61.8 UN CONTRAEJEMPLO DECLARADO, por el 9.10
+
+**En los puestos 1388, 1463 y 1474 quedo escrito que los indices del inventario
+salen sanos contra las fases que enumeran. La figura tiene una excepcion medida.**
+
+> **El indice de Wallas SI repite con una de sus etapas.** El puesto **1109**,
+> `cuatro_etapas_del_pensamiento_creativo` contra `wallas_etapa_iluminacion`, es
+> **A**; y el **1494**, contra `wallas_etapa_incubacion`, es **D**.
+>
+> **La figura no es una ley: es una tendencia con al menos un contraejemplo.** El
+> mismo indice repite con una etapa y no con otra, **asi que la forma se decide
+> por fase y no por indice.** Queda escrito antes de que alguien la cite como
+> regla.
+
+### 61.9 EL SALDO
+
+> **Mil quinientos diecisiete pares. Mil ochocientos setenta y uno por delante.**
+> El nucleo baja a **24,6 por ciento** y la centena 1401-1500 cierra en **siete A**,
+> la segunda mas limpia del ejercicio.
+>
+> **Lo que este checkpoint cierra**: tres condiciones vivas que llevaban cientos
+> de puestos abiertas, un racimo partido y medido, y **una mesa que crece despues
+> de haberse declarado cerrada**. Lo que abre: **el 1524 y el 1541**, los dos
+> ultimos pendientes de las dos familias grandes, **caen los dos en el proximo
+> tramo.**

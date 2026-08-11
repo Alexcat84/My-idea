@@ -2537,3 +2537,63 @@ costuras.** El plan lo escribio como **tres destejidos**. **Falta el final.**
 > barrido de las A y con el cierre transitivo**, y escribir la cobertura al lado
 > (banco 9.26). **Las dos remediciones hechas hasta hoy cambiaron el tamano de la
 > mesa; ninguna lo dejo igual.**
+
+---
+
+## EL RETRATO DE LAS A: la pasada tiene DOS mesas, no diez (16 ago 2026)
+
+**Pieza del inventario. Fecha de corte: VIGENTE AL PUESTO 1.400**, como manda el
+banco 9.21. Recomputado entero del archivo, banco 9.10.
+
+| medida | cifra |
+|---|---:|
+| pares en clase A | **326** |
+| **nodos tocados por alguna A** | **466** |
+| **componentes conexas** de la relacion gemelo | **175** |
+| de dos nodos | **121** |
+| de tres | 29 |
+| de cuatro | 9 |
+| de cinco | 7 |
+| de seis | 4 |
+| de siete | 3 |
+| **de nueve** | **1**, el acto de Customer Discovery |
+| **de doce** | **1**, el nucleo conexo de la mesa unida |
+
+### LO QUE ESTO LE DICE AL PLAN, y hay que decirlo entero
+
+> **LA PASADA NO TIENE DIEZ MESAS. TIENE DOS MESAS Y UN MONTON DE DECISIONES DE
+> PAR.**
+
+**Ciento veintiuna de las 175 componentes son parejas sueltas: el 69 por ciento.**
+Una pareja suelta no necesita mesa. Necesita **una decision de dos nodos**: cual
+sobrevive, o si se funden, o si se enlazan. Se resuelve leyendo dos fichas.
+
+| forma | cuantas | que cuesta |
+|---|---:|---|
+| **pareja suelta** (2 nodos) | **121** | una decision, dos fichas delante |
+| racimo chico (3 o 4) | 38 | una decision con contexto |
+| racimo mediano (5 a 7) | 14 | **una sesion**, no una mesa |
+| **mesa de verdad** (9 y 12) | **2** | **sesion larga, con nomina y orden escritos** |
+
+> **Y LA SEGUNDA LECTURA, que es la que ahorra trabajo: NO HAY UNA TERCERA MESA
+> ESCONDIDA.** El salto de tamano es limpio, de siete a nueve y de nueve a doce, y
+> **las dos componentes grandes son exactamente las dos que el ejercicio ya tiene
+> escritas**: el acto de Customer Discovery y la mesa unida de puertas y
+> portafolio. **El mapa completo de las A no revela ninguna familia grande que no
+> estuviera ya en el registro de mesas.**
+
+**QUE SE HACE CON ESTO:**
+
+> 1. **El registro de mesas no crece por descubrimiento.** Puede crecer porque el
+>    fundador decida sentar una, no porque aparezca una que nadie habia visto.
+> 2. **El grueso del trabajo de la pasada es en lote**, no en sesion: 121 decisiones
+>    de par que se pueden agrupar por libro o por tema y despachar seguidas.
+> 3. **La cifra es PROVISIONAL y va a crecer**, porque faltan 1.988 pares por leer.
+>    Lo que no se espera que cambie es la FORMA: la cola ya entrego sus pares mas
+>    parecidos, y lo que viene detras, por el 9.19, es jerarquia sin cablear.
+
+> **La cobertura al lado, como manda el 9.26**: este retrato se toma sobre **1.400
+> pares leidos de 3.388**, el 41,3 por ciento de la cola. **Es una forma
+> PROVISIONAL como todas**, y la reserva concreta es que una sola A futura entre
+> dos componentes grandes las une en una sola. **Ninguna de las dos mesas escritas
+> se toco entre si hasta hoy.**
