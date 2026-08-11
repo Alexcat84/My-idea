@@ -715,6 +715,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **3** | el sales roadmap | **5** | **10** | 4 | 4 | **SUB-PURO**: el trío es puro puertas adentro, la familia no está cerrada |
 | **4** | la etapa de investigación en la venta | **4** | **6** | 4 | 4 | **SUB-PURO**, por lo mismo |
 | **5** | **la competencia entre inversores** | 3 | 3 | **3** | 3 | **PURO**, y el **primero declarado con el contador ya vigente** |
+| **6** | **la etnografía de campo** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el primero que **nace de un par CRUZADO** entre dos parejas ya declaradas |
 
 **Lo que le falta a cada sub-puro para cerrarse, nombrado:**
 
@@ -722,6 +723,11 @@ Cuando choquen con esta tabla, **manda la tabla**.
 |---:|---:|---|
 | **3** | **6** | puestos 872, 918, 1023, 1306, 1330 y el par `customer_validation_sales_roadmap` contra `sales_roadmap`, **que nunca entró a la cola** |
 | **4** | **2** | puesto 862 y el par `etapa_de_investigacion` contra `investigacion_como_habilidad_clave`, **que nunca entró a la cola** |
+| **6** | **3** | las **tres fuera de la cola**: `etnografia_de_proyecto` contra `investigacion_etnografica_ideacion`, y `etnografia_aplicada_en_equipos_multidisciplinarios` contra cada uno de los dos de Cooper |
+
+> **El 6 es el más barato de cerrar de los tres sub-puros**: sus tres lecturas
+> pendientes **no están en la cola**, o sea que son **tres lecturas encargadas y
+> cero esperas**. Los otros dos dependen de puestos que aún no llegan.
 
 > **DOS DE CUATRO PUROS CAYERON EN DOS DÍAS, y los dos por la misma causa: la
 > nómina.** El tercero se declaró sobre una nómina reconstruida por el cribado y

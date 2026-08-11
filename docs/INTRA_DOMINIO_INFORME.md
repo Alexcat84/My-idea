@@ -4359,3 +4359,104 @@ declaran dos obras y nunca entraron a la cola de las 128.**
 > (puesto 834, con el 823): **las dos veces el solape cayo en los pasos 1 a 4.**
 > Lo que se pierde aqui es la **inmersion previa** antes de la sesion, que no esta
 > en ningun otro nodo del racimo.
+
+
+---
+
+## 29. EL TRAMO 837 a 842: el par que CRUZA dos parejas y funda una familia
+
+**Seis pares leidos, los seis del nucleo.** Acumulado **842 de 3.388**, global
+**30,8%** de A y **nucleo 37,6%**. El tramo dio **33,3%**. **El checkpoint de los
+900 es el proximo.**
+
+### 29.1 LA ETNOGRAFIA DE CAMPO: SEXTO SUB-PURO, y nace de un cruce
+
+**Puesto 839.** El archivo tenia **dos parejas de etnografia declaradas y
+separadas**, cada una dentro de su libro, **y ningun par cruzado leido**:
+
+| puesto | pareja | libro | clase |
+|---:|---|---|:---:|
+| **381** | `etnografia_aplicada_en_equipos_multidisciplinarios` contra `etnografia_de_proyecto` | *Change by Design* (Brown) | **A** |
+| **230** | `etnografia_investigacion_usuario` contra `investigacion_etnografica_ideacion` | *Winning at New Products* (Cooper) | **A** |
+
+> **Este par es el cruce, y sale A.** Los dos libros mandan el mismo instrumento
+> con los mismos gestos: elegir un entorno de uso real, observar en contexto en
+> vez de preguntar, traducir lo observado en insights, y montar el equipo con las
+> habilidades para observar e inferir.
+>
+> **No son dos parejas vecinas: son CUATRO nodos del mismo instrumento.** Es la
+> misma pregunta que el racimo de la seccion 11 tiene abierta con su puesto 1211,
+> **y aqui ya esta contestada.**
+
+**EL CONTADOR PRIMERO, como manda el banco 9.5.** `contar_nombre.py` levanta
+**siete** vivos con el termino; **la lectura deja fuera a tres, con su motivo**:
+
+| nodo | por que no entra |
+|---|---|
+| `netnografia_social_media` | **monitorea foros y redes**: no hay campo ni observacion presencial |
+| `diseno_mas_alla_del_individuo` | su objeto son las **dinamicas de grupo**; la etnografia en video es un paso suyo, no su asunto |
+| `equipos_visita_cliente` | **entrevista con guia estructurada**, y ya salio **D** contra un miembro en el puesto 722 |
+
+**LA NOMINA: CUATRO miembros.**
+
+| | |
+|---|---:|
+| miembros | **4**: `etnografia_de_proyecto`, `etnografia_aplicada_en_equipos_multidisciplinarios`, `etnografia_investigacion_usuario`, `investigacion_etnografica_ideacion` |
+| pares posibles | **6** |
+| en la cola | **3** |
+| **leidos** | **3**, y **los TRES en A** (230, 381, 839) |
+| **nunca en cola** | **3** |
+| aristas internas | **1**, la de la pareja de Brown; los dos de Cooper **aislados entre si y del resto** |
+
+> **SUB-PURO por la condicion dura**: todo lo leido repite, pero **la mitad de los
+> pares posibles nunca entro a la cola**, asi que la familia no esta cerrada.
+> **Entra a la tabla viva de los puros del banco 9.5 como el numero 6.**
+>
+> **Y es el sub-puro mas barato de cerrar de los tres**: le faltan **tres
+> lecturas** y **ninguna esta en la cola**, o sea que son tres lecturas
+> encargadas, no tres esperas.
+
+### 29.2 LA FAMILIA DE LOS LOTES QUEDA LEIDA ENTERA, y su B pide relectura
+
+**Puesto 837.** Con este par, **los tres pares posibles de la familia estan
+leidos**, que es la primera vez en varios tramos que una familia se cierra sola:
+
+| par | nodos | clase |
+|---:|---|:---:|
+| **215** | `espiral_mortal_lotes_grandes` contra `espiral_muerte_lotes_grandes` | **B** |
+| **680** | `espiral_muerte_lotes_grandes` contra `trabajo_en_lotes_pequenos` | **D** |
+| **837** | `espiral_mortal_lotes_grandes` contra `trabajo_en_lotes_pequenos` | **D** |
+
+> **Los dos D dicen lo mismo con el mismo motivo**: cada espiral es un
+> **diagnostico** y el nodo de los lotes pequenos es el **tratamiento**. Y los dos
+> diagnosticos **miran cosas distintas**: uno las senales de calendario, fechas
+> que se posponen y arreglos de ultimo momento; el otro los **traspasos entre
+> especialidades** y el retrabajo por lanzamiento.
+
+> **LO QUE ESTO LE HACE AL 215, y va como PROPUESTA, no ejecutado.** Ese B se
+> emitio por una figura de nombre, *ids casi identicos dentro del nucleo*, con la
+> observacion de que **recetan cosas distintas**. Hoy hay evidencia nueva que
+> entonces no existia: **los dos espirales han sido leidos contra el mismo
+> tratamiento y los dos dieron D por la misma razon.** Eso dice que son **dos
+> diagnosticos complementarios del mismo fenomeno**, no un nodo contado dos veces.
+>
+> **Recomiendo relectura del 215 con esta evidencia delante.** No lo muevo: es un
+> veredicto emitido y la relectura de las A tiene su cauce.
+
+### 29.3 Lo demas del tramo
+
+> **1. UNA ARISTA QUE FALTA de las baratas** (puesto **841**):
+> `customer_discovery_cuatro_fases` **invoca la prueba de pasa o no pasa dentro de
+> su fase 3** y **no enlaza** a `realizar_pruebas_pasa_no_pasa`, que es el nodo
+> que la ejecuta. Del banco 9.6, un solo enlace.
+>
+> **2. El grafo no sabe que dos nodos son el mismo principio** (puesto **840**):
+> `genchi_gembutsu` y `genchi_gembutsu_salir_del_edificio` comparten **la raiz del
+> id, el libro y la palabra japonesa**, repiten entero, y **no tienen arista entre
+> ellos.** El censo por script no levanta a nadie mas: **dos vivos, cero
+> deprecados.** Es la fusion mas limpia del tramo.
+>
+> **3. El frente del Stage-Gate llega a SIETE nodos leidos** (puesto **838**),
+> entre etapas, puertas y sistemas. Este par sale **D** porque es la alternancia
+> canonica, la etapa hace y la puerta decide, **pero el frente entero sigue
+> pidiendo mesa** y no pareja por pareja, como ya quedo dicho en el 356.
