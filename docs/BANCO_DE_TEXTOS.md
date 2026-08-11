@@ -718,7 +718,7 @@ puntero desde donde se usa.
 > el cuarto, `gestion_multiples_term_sheets`, **se llama por el documento**. Sus
 > dos pares con miembros ya estaban en el archivo **y los dos en A** (394 y 413).
 
-#### TABLA VIVA DE LOS PUROS, al 12 ago 2026
+#### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
 
 **Esta tabla es la fuente. Las declaraciones individuales de más abajo quedan
 CONGELADAS como historia: dicen lo que se sabía el día que se escribieron.**
@@ -735,6 +735,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **7** | la junta asesora | **4** | **6** | **4** | **4** | **SUB-PURO**, y el único donde el par que cruza **los dos momentos** (identificar y formalizar) ya está leído y es A. El puesto **976** lo sube a 4 de 6 |
 | **8** | **los cuadrantes de mercado** | **6** | **15** | **7** | **7** | **SUB-PURO, y el más cargado del inventario**: siete pares leídos y **los siete en A**, sin un solo sano. Añadido el 13 ago 2026 con **corrección declarada**: lo conté en cinco miembros en R18 y son **seis** |
 | **9** | **build-measure-learn** | **5** | **10** | **5** | **5** | **SUB-PURO, el de MÁS MIEMBROS declarado**: cinco pares leídos y los cinco en A. Dos de sus cinco miembros los levantó el **barrido de las A**, no el contador |
+| **10** | **el compromiso contado tres veces** | 3 | 3 | **3** | 3 | **PURO**, y el **primero certificado por los dos instrumentos desde el minuto uno** (14 ago 2026, tramo 1101-1157). Racimo de Rackham: `obtencion_compromiso`, `obtencion_de_compromiso` y `obtencion_compromiso_venta`, pares **197, 222 y 463**. El **barrido de las A no levanta ni un candidato fuera**; el **contador se come a un miembro**, `obtencion_compromiso`, por no llevar la partícula *de*. **Cero aristas internas entre los tres** |
 
 > **LECCIÓN DEL 13 ago 2026, con dos sub-puros rotos el mismo día** (el 3 por el
 > puesto 872 y la familia de innovación por el 863): **una familia con muchos

@@ -7305,3 +7305,200 @@ cableado que vale mas que cualquier veredicto suelto.
 > 45, corrido el mismo dia, **ya estaba viejo cuando se escribio.** Los
 > instrumentos que cruzan contra el archivo hay que volver a correrlos, porque el
 > archivo sigue creciendo debajo de ellos.
+
+---
+
+## 47. TRAMO 1101-1157: dos familias medidas, un puro nuevo y una trampa de identificador
+
+### 47.1 EL MARCADOR
+
+| medida | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **1.157** de 3.388 | 311 | 88 | 6 | 752 | **26,9%** |
+| **NUCLEO por separado** | **1.002** | 310 | 86 | 6 | 600 | **30,9%** |
+| **el tramo 1101-1157** | **57** | **7** | 0 | 0 | 50 | **12,3%** |
+
+**Sin huecos. Ningun nodo se toco.** El nucleo cruza los **mil pares leidos**.
+
+### 47.2 LAS DOS SERIES, cuarto tramo seguido
+
+| tramo | leidos | tasa de A | **pares resueltos con LA VARA** | con arista |
+|---|---:|---:|---:|---:|
+| 1001-1050 | 50 | 16,0% | 15 (30%) | 11 |
+| 1051-1100 | 50 | 14,0% | 19 (38%) | 8 |
+| **1101-1157** | **57** | **12,3%** | **21 (37%)** | **17** |
+
+> **La tasa de A baja por cuarto tramo y la vara se sostiene arriba del tercio.**
+> Y aparece un dato nuevo: **17 de 57 pares tenian arista**, el doble de
+> proporcion que el tramo anterior. La cola entro en zonas mejor cableadas
+> (Rackham, Venture Deals, los formularios de proyecto) y eso se ve en la cifra.
+
+### 47.3 PURO NUEVO, y certificado por los dos instrumentos: EL COMPROMISO CONTADO TRES VECES
+
+**Racimo de Rackham. Los tres nodos dicen como conseguir que el cliente se
+comprometa, y los tres repiten entre si.**
+
+| nodo | pasos |
+|---|---:|
+| `obtencion_compromiso` | 4 |
+| `obtencion_de_compromiso` | 5 |
+| `obtencion_compromiso_venta` | 4 |
+
+**LOS DOS INSTRUMENTOS, como manda el estandar de certificacion:**
+
+| instrumento | resultado |
+|---|---|
+| **contador** (`contar_nombre.py "obtencion de compromiso" "obtener compromiso" "compromiso del cliente"`) | 10 nodos vivos, de los que **solo DOS son miembros**; los otros ocho **mencionan** el compromiso sin serlo. **Y se le escapa el tercero** |
+| **barrido de las A** | **TRES A vigentes** (197, 222, 463) y **CERO candidatos fuera de la nomina** |
+
+> **TRES pares posibles, TRES en la cola, TRES leidos y los TRES en A.** No es un
+> sub-puro: **todos los pares estan leidos**, asi que no es una promesa (banco
+> 9.16), es un resultado.
+>
+> **Y el contador vuelve a fallar por el mismo motivo del 9.20**: el miembro que
+> se le escapa es **`obtencion_compromiso`**, que no lleva la particula *de* y por
+> eso no casa con el termino buscado. **Es justo el nodo que cierra el triangulo.**
+> Con el contador solo, este puro se habria declarado de dos miembros y con un
+> par: la mitad de lo que es.
+>
+> **CERO aristas internas entre tres nodos que repiten entre si.** El caso mas
+> limpio del archivo de lo que el 9.6 llama la arista que falta.
+
+### 47.4 EL RACIMO MAS GRANDE DEL TRAMO: LA GESTION DEL PORTAFOLIO
+
+**Cooper otra vez, y es grande.** Nomina levantada por el **barrido de las A**,
+que es lo unico que la levanta entera: el contador de *portafolio* y *portfolio*
+da **43 nodos vivos**, casi todos meros mencionadores.
+
+| nodo | pasos | por que es miembro |
+|---|---:|---|
+| `portfolio_management` | 6 | **el centro: CUATRO A** (574, 853, 967, 1119) |
+| `gestion_portafolio_formal` | 6 | tres A (468, 574, 616) |
+| `gestion_de_portafolio_gates_go_kill` | 5 | tres A (616, 967, 488) |
+| `revision_portafolio_periodica` | 5 | A 468 |
+| `gestion_portafolio_dos_niveles` | 4 | A 853 |
+| `gestion_portafolio_foco` | 5 | A 802, A 1119 |
+| `equipos_dedicados_de_proyecto` | 6 | **A 802**, y ver abajo |
+
+**LA FORMA, vigente al puesto 1157: 21 pares posibles, 10 en la cola, 9 leidos.**
+
+| clase | pares |
+|---|---|
+| **A** | **SIETE**: 468, 574, 616, 802, 853, 967, 1119 |
+| **B** | uno: 600 |
+| **D** | uno: **1151**, leido en este tramo |
+| pendiente | 1366 |
+
+> **Siete A entre siete nodos y CERO aristas internas.** Es el bloque de
+> repeticion mas grande medido en el ejercicio y no tiene ni un cable.
+>
+> **Y es MEZCLADO, no puro**, y lo prueba justo el par de este tramo: el **1151**,
+> `gestion_portafolio_dos_niveles` contra `revision_portafolio_periodica`, sale
+> **D** porque el segundo es el procedimiento de una linea del primero. **Dos
+> miembros de un racimo pueden ser madre e hijo entre si**, y eso es exactamente
+> lo que hace que el racimo no sea puro.
+
+**EL MIEMBRO QUE NO PARECE MIEMBRO, y es el hallazgo del puesto 1156.**
+
+> `equipos_dedicados_de_proyecto` se llama por el EQUIPO y repite con
+> `gestion_portafolio_foco` (puesto 802). **Su asunto real es elegir pocos
+> proyectos y cortar el resto: es podar el portafolio con titulo de equipo.**
+>
+> Por eso el **1156** sale D: leido contra `equipo_multifuncional`, que **tambien
+> tiene A vigente** (672, contra `equipo_multifuncional_real`), resulta que **los
+> dos son gemelos de familias distintas.** **Dos nodos que por el titulo parecen
+> hermanos y por la evidencia son de casas distintas**, y eso solo lo dice el
+> barrido de las A.
+
+**DONDE SE DESDIBUJA LA FRONTERA, y lo digo sin cerrarlo.** Admitir
+`sistema_gates_go_kill` como octavo miembro **arrastra tres candidatos mas** por
+sus propias A: `estructura_gates` (356), `requisitos_gates_con_dientes` (801) y
+`gates_go_kill_decision_points` (1038).
+
+> **Ahi el portafolio se toca con una familia de COMPUERTAS.** Decidir si son una
+> familia o dos **es trabajo de lectura, no de conteo**, y por eso la nomina
+> queda declarada en **SIETE** con la puerta anotada. El 9.20 lo dice: el script
+> dice donde mirar, la pertenencia se decide leyendo.
+
+### 47.5 LA TRAMPA DEL IDENTIFICADOR, y aparece TRES veces en 57 pares
+
+**Tres parejas de nodos vivos cuyos identificadores se diferencian en una
+particula o una letra.**
+
+| los dos identificadores | que son | como se supo |
+|---|---|---|
+| `estrategia_innovacion_producto` (5 pasos) y **`estrategia_de_innovacion_producto`** (7 pasos) | **NODOS DISTINTOS**: uno es la estrategia de arenas y recursos, el otro una doctrina de valentia. Contra el mismo tercero dan **A** (1121) y **D** (1129) | leyendo los dos, tras el choque de veredictos |
+| `obtencion_compromiso` y `obtencion_de_compromiso` | **GEMELOS PROBADOS**: A en el puesto 463, y son dos tercios del puro de la seccion 47.3 | barrido de las A |
+| `usuarios_extremos_edge_cases` y `usuarios_extremos_insights` | **GEMELOS PROBADOS**: A en el puesto 426 | barrido de las A |
+
+> **La particula no dice nada por si sola.** En un caso separa dos nodos que de
+> verdad son distintos; en los otros dos separa dos copias del mismo. **Por eso
+> no se puede juzgar por el nombre**, ni para unir ni para separar.
+>
+> **Y el primer caso deja un pendiente que la cola no puede resolver**: entre
+> `estrategia_innovacion_producto` y `estrategia_de_innovacion_producto` **no hay
+> par en la cola.** Es el segundo caso del ejercicio, con el racimo de las
+> disruptivas del R30, de una pareja que el cribado no va a decidir nunca.
+
+### 47.6 EL INDICE CON DOS HIJOS PARA LA MISMA FASE, y una correccion de mi metodo
+
+**Coleman.** `ocho_fases_experiencia_cliente` es el indice de las ocho fases. En
+este tramo salieron **dos hijos suyos para la MISMA fase, la cuarta**:
+
+| puesto | el hijo | arista con el indice |
+|---:|---|---|
+| **1139** | `fase_activate_primera_impresion` | **NO** |
+| **1141** | `fase_activate` | **SI** |
+
+> **Los dos ya estaban probados como gemelos**: el puesto **183** registro **A**
+> entre ellos. Y hay un tercero que instancia la misma fase por la serie de
+> medios, `seis_herramientas_comunicacion_fase_activate` (puesto 1068). **El
+> indice esta cableado a uno de sus dos hijos gemelos y suelto del otro.**
+
+**CORRECCION DECLARADA, y es de metodo, no de veredicto.** En el puesto **1087**
+de la sesion anterior anote como **sospecha** que `fase_assess` y
+`fase_assess_experiencia_cliente` podian repetir entre si.
+
+> **El barrido de las A lo contesta en una consulta**: el puesto **373** ya tenia
+> **A** entre `fase_assess_experiencia_cliente` y un tercer nodo,
+> `fase_assess_ciclo_cliente`. **Debi correr el barrido en vez de anotar una
+> sospecha.** El 9.20 dice que corre **siempre**, no solo cuando toca declarar una
+> nomina, y esta es la prueba de por que: **una sospecha escrita es trabajo
+> aplazado; un barrido es trabajo hecho.**
+
+### 47.7 LA FAMILIA DEL PROMPTING avanza dos pares, y los dos sanos
+
+Levantada en la tanda R30 a partir del 514. **Dos de los cinco pendientes salieron
+en este tramo:**
+
+| puesto | el par | clase | por que |
+|---:|---|:---:|---|
+| **1125** | `ingenieria_de_prompts_efectiva` contra `prompting_cadena_de_pensamiento` | **D** | tecnicas distintas; la madre **no nombra** la cadena de pensamiento |
+| **1144** | `ingenieria_de_prompts_efectiva` contra `prompting_por_persona_ia` | **D** | el hijo trae el procedimiento de la **linea 1** de la madre |
+
+> **La forma que va saliendo**: `ingenieria_de_prompts_efectiva` es la madre,
+> `asignacion_persona_ia` **la repite** (A del 514) y `prompting_por_persona_ia`
+> **la continua**. **El puesto que decide si los dos ultimos son ademas gemelos
+> entre si es el 1175**, que sigue en la cola. No lo adelanto.
+
+### 47.8 LO QUE SE SOSTIENE DE TRAMOS ANTERIORES
+
+| medicion | como queda |
+|---|---|
+| **`filosofia_customer_validation`** | **QUINTO** par (1137). Cuatro hijos sanos, un repetidor, **cinco pares y CERO aristas** |
+| **Rackham, madres e hijos** | **siete de siete sanos** (899, 1021, 1049, 1067, 1081, 1130, 1133) mas dos mas en este tramo (1149, 1150). El **1146 es A**, pero **no es par de madre e hijo**: son dos nodos laterales |
+| **la mesa del PIVOTE** | **NO gana miembro.** El puesto **1140** salio **D**, no A: `actualizar_modelo_de_negocio_pivot_o_proceed` lleva **cinco veredictos y los cinco D**. **La nomina de siete queda intacta** |
+| **`lienzo_modelo_negocio`** | leido dos veces (1123, 1136), las dos sanas por la vara y las dos **invariantes** pese a ser la costura mas averiada del archivo, **17 pasos** con los nueve bloques mandados completar **cuatro** veces |
+
+### 47.9 EL SALDO
+
+> **Mil ciento cincuenta y siete pares, y el nucleo pasa de los mil.** Lo que este
+> tramo deja no son veredictos sueltos: **son dos familias que nadie habia
+> contado**, una de tres que resulta ser **PURO** y otra de siete que es el
+> **bloque de repeticion mas grande medido**, y las dos con **cero aristas
+> internas**.
+>
+> **Las dos las levanto el mismo instrumento, y no fue el contador.** En el puro,
+> el contador se comio al miembro que cierra el triangulo; en el racimo grande,
+> el contador devolvia 43 nodos casi todos falsos. **El barrido de las A no fallo
+> en ninguno de los dos.**
