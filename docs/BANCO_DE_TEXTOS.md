@@ -750,6 +750,22 @@ Selling*. Verificado en el archivo de veredictos:
 >
 > **Por eso el estado PURO se declara CONTANDO EL JSONL, nunca de memoria.**
 
+> **PRECISION DEL 12 ago 2026, y corrige una ambigüedad de la frase de arriba:
+> los pares que se cuentan son los PARES POSIBLES de la nómina, no los pares que
+> entraron a la cola.** La cola del cribado se arma por umbral de semejanza, así
+> que una familia grande puede tener casi todos sus pares **fuera** de ella, y
+> entonces *cero pendientes* se cumple sin que nadie los haya leído.
+>
+> **El ejemplar que lo destapó** (puesto 690): la familia de *Get, Keep, Grow*
+> tiene **8 miembros, 28 pares posibles y solo 3 en la cola**, los tres leídos y
+> los tres **A**. Con la frase vieja sería PURO; con la precisión, **no llega ni a
+> candidato**: le faltan 25 lecturas.
+>
+> **Las tres declaraciones vivas se verificaron contra esta precisión y las tres
+> se sostienen**, porque en familias pequeñas todos los pares posibles entraron a
+> la cola: el trío del sales roadmap 3 de 3, la familia del encaje 6 de 6, el
+> racimo del control de la junta 3 de 3.
+
 **TERCER PURO DECLARADO (11 ago 2026): `el sales roadmap`**, de *The Startup
 Owner's Manual*. Verificado contando el jsonl:
 

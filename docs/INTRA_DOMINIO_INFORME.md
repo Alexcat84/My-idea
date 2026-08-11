@@ -2032,3 +2032,159 @@ veredicto.
 > **Lo que NO cambia de la 15.2**: la pregunta que abria seguia siendo la
 > correcta, y la respuesta llego. **Lo que cambia es que la incoherencia entre el
 > 581 y el 633 no era de doctrina: era mia, y era de medicion.**
+
+---
+
+## 17. EL TRAMO 646 a 700: la regla nueva puesta a trabajar
+
+**Cincuenta y cinco pares leidos, los cincuenta y cinco del nucleo, y es el
+primer tramo que se lee con la regla LA MAYORIA MANDA del banco 9.6.1 delante.**
+
+### CHECKPOINT DE LOS 700, contado antes de escribir
+
+| | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **global al puesto 700** | **700 de 3.388** | 240 | 57 | 4 | 399 | **34,3%** |
+| **nucleo al puesto 700** | **545** | 239 | 55 | 4 | 247 | **43,9%** |
+| tramo 646 a 700 | 55 | 10 | 9 | 0 | 36 | **18,2%** |
+
+> **LA TASA DE A DEL TRAMO SE DERRUMBO A 18,2%, y hay que decir por que, porque no
+> es que los nodos hayan mejorado: es que la vara cambio.** Con la regla vieja,
+> sin arista igual a duplicacion, varios de estos pares habrian salido A. La tasa
+> del nucleo bajo de 47,3% a 43,9% en cincuenta y cinco lecturas, **y el motivo es
+> la regla, no el material.**
+
+### 17.1 LA REGLA NUEVA, aplicada cinco veces, con sus proporciones
+
+| puesto | la madre | hijos de paso | enlazados | rama | clase |
+|---:|---|---:|---:|---|:---:|
+| **656** | `analisis_de_ratios_financieros` | **8** | **1** | mitad o menos | **D** |
+| **670** | `customer_discovery_overview` | **4** | **1** | mitad o menos | **D** |
+| **676** | `customer_discovery_overview` | **4** | **1** | mitad o menos | **D** |
+| **689** | `esfuerzo_y_energia_intelectual` | **2** | **1** | mitad exacta | **D** |
+| **658**, **678** | dos madres distintas | 6 y 3 | **0** | **la figura no aplica** | **A** |
+
+#### El limite que puse yo, y lo declaro porque no esta en la regla
+
+> **La figura pide que la madre enlace a unos hijos si y a otros no.** Cuando
+> enlaza a **CERO**, no hay hermanos enlazados de los que sacar mayoria: **no es
+> la figura, es el caso corriente**, y manda la regla original, **sin arista igual
+> a DUPLICACION**.
+>
+> **Ese limite lo aplique yo en los puestos 658 y 678 para no romper la linea de
+> veredictos que ya existe. No esta escrito en la regla y queda para el visto.**
+
+### 17.2 TRES CORRECCIONES DEL MISMO ORIGEN, y quedan veinte por medir
+
+**La regla nueva no solo gobierna lo que viene: alcanza hacia atras.**
+
+| puesto | era | queda | por que |
+|---:|:---:|:---:|---|
+| **633** | A | **D** | familia en CADENA, cinco de cinco |
+| **644** | A | **D** | misma madre que el 670, uno de cuatro, continua |
+| **473** | A | **D** | misma madre que el 689, uno de dos, continua |
+
+> **Las tres corregidas en su razon, con el motivo escrito: el veredicto se emitio
+> con la regla vieja y la regla que lo gobierna se escribio despues.**
+
+**Y AQUI ESTA LA DECISION QUE NO ME TOCA TOMAR:**
+
+> **Quedan VEINTE veredictos en A con la misma silueta**, hijo con casa propia sin
+> arista: los puestos **393, 395, 396, 455, 470, 474, 490, 497, 522, 552, 555,
+> 557, 568, 582, 586, 610, 624, 625, 658 y 678.**
+>
+> **Ninguno esta medido con la regla nueva.** De los cinco que si medi este tramo,
+> **tres cayeron del lado de la figura y cambiaron de clase, y dos no.** La
+> proporcion no se puede adivinar: hay que medir madre por madre, y **cada uno
+> cuesta una lectura con el grafo delante.**
+>
+> **Lo traigo en vez de barrer**, porque un barrido sin medir seria justo el error
+> que la regla vino a corregir.
+
+### 17.3 PRECISION QUE HAY QUE HACERLE A LA CONDICION DURA DEL PURO
+
+**Encontrada en el puesto 690 y verificada contra las tres declaraciones vivas.**
+
+La condicion dura del banco 9.5 dice **todos los pares leidos y cero pendientes**.
+**Pendientes de la COLA. Y la cola no contiene todos los pares posibles.**
+
+**EL EJEMPLAR QUE LO DESTAPA: la familia de Get, Keep, Grow.**
+
+| | |
+|---|---:|
+| nodos vivos que la nombran | **8** |
+| pares **posibles** | **28** |
+| pares **en la cola intra** | **3** |
+| leidos | **3** |
+| **clases** | **A, A, A** (puestos 277, 292, 624) |
+| pendientes **de la cola** | **0** |
+
+> **Leido con la frase de hoy, este racimo seria PURO: todos sus pares leidos,
+> todos repiten, cero pendientes. Y es falso: veinticinco de sus veintiocho pares
+> nunca entraron a la cola**, porque cayeron por debajo del umbral de semejanza.
+>
+> **LA CONDICION DURA TIENE QUE CONTAR PARES POSIBLES, NO PARES DE LA COLA.**
+
+**VERIFICADO CONTRA LO YA DECLARADO, y las tres se sostienen:** el trio del sales
+roadmap tiene 3 posibles y 3 leidos; la familia del encaje 6 y 6; el racimo del
+control de la junta 3 y 3. **En familias pequenas todos los pares posibles
+entraron a la cola, y por eso el hueco no habia asomado.**
+
+### 17.4 EL PASO QUE TIENE TRES CASAS, y coincide con la familia del encaje
+
+**El paso 4 de `customer_discovery_overview`**, evalua los resultados y decide si
+tienes validacion suficiente, **tiene TRES nodos que lo desarrollan**:
+
+| casa | puesto | clase |
+|---|---:|:---:|
+| `pivotar_o_proceder` | 644 | D, corregido |
+| `product_market_fit` | 670 | D |
+| `verificar_product_market_fit` | 676 | D |
+
+> **La madre no enlaza a ninguna de las tres.** Y **dos de las tres son miembros
+> de la FAMILIA DEL ENCAJE** de la seccion 15.6, la del mezclado completo con cero
+> aristas internas. **El paso 4 de esta madre y la familia del encaje son el mismo
+> nudo visto desde dos lados**, y quien se siente a resolver uno resuelve el otro.
+
+### 17.5 LO QUE EL TRAMO DEJA ADEMAS
+
+> **1. LA TRAMPA DEL NOMBRE, segunda confirmacion.** El puesto **683** leyo
+> `customer_development_modelo` contra `modelo_customer_development`, las mismas
+> dos palabras al reves, **y no son gemelos**. Con el 637, **dos de dos
+> predicciones por nombre han salido falsas.**
+>
+> **2. UNA FAMILIA QUE NO TIENE PROBLEMA DE DUPLICADOS SINO DE CABLEADO.** Los
+> puestos 681, 699 y 700 leyeron los tres pares de `build_metrics_toolset`,
+> `checkpoints_validacion` y `medir_comportamiento_cliente_mvp`: **los tres
+> sanos**, y **los tres con la arista que falta**. Instalar los sensores, poner la
+> vara y leer el resultado son tres nodos que nadie conecto.
+>
+> **3. EL UNICO LIBRO QUE CABLEA BIEN.** *A Project Manager's Book of Forms* llego
+> a **cuatro familias bien enlazadas** en dos tramos, riesgo (579, 613, 659),
+> cronograma (578), requisitos (671) y reportes (642). **Es el unico del nucleo
+> que enlaza sus formularios de forma consistente.**
+>
+> **4. LAS NOMINAS SIGUEN CORTADAS.** `inversion_proporcional` repite en A con
+> `five_whys_inversion_proporcional` (puesto 678) y **no esta en la nomina** del
+> racimo censado de los cinco porques. Es el **tercer** racimo censado al que le
+> falta un miembro que ya emparejo en A.
+>
+> **5. PRIMERA VEZ QUE LOS DOS NODOS ESTAN CENSADOS Y LA REGLA NO CORRE.** En el
+> puesto **677** los dos nodos son miembros de racimos censados, **pero de racimos
+> DISTINTOS**. La regla FAMILIA DECLARADA pide los dos en la MISMA nomina.
+
+### 17.6 UN REFINAMIENTO DE LA REGLA DEL NODO AVERIADO
+
+**Registrado en el puesto 673 y usado otra vez en el 678.**
+
+> La seccion 15.4 dice que un nodo averiado contamina sus pares. **Este tramo le
+> pone el limite: contamina solo cuando el SOLAPE CRUZA LA JUNTURA.**
+>
+> En el **673**, `seleccion_ceo_fundador` es costura confirmada de doce pasos, y
+> el solape con `errores_comunes_asignacion_roles` **cae entero dentro de sus
+> pasos 1 a 4**, el bloque que sobrevive a la cirugia. **El veredicto se puede
+> emitir hoy.** Lo mismo en el **678** con el bloque de Ries de
+> `five_whys_inversion_proporcional`.
+>
+> **Si el solape vive de un solo lado de la costura, el par se lee. Si la cruza,
+> se espera al arreglo.**
