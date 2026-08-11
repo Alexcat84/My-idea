@@ -10557,3 +10557,116 @@ salen sanos contra las fases que enumeran. La figura tiene una excepcion medida.
 > de haberse declarado cerrada**. Lo que abre: **el 1524 y el 1541**, los dos
 > ultimos pendientes de las dos familias grandes, **caen los dos en el proximo
 > tramo.**
+
+## 62. CHECKPOINT DE LOS 1.600: cinco colas cerradas y el sub-puro mas cargado del archivo
+
+**Tramo 1518-1600, ochenta y tres pares. NUEVE A, 10,8 por ciento.**
+
+| medida | cifra |
+|---|---:|
+| **registrados** | **1.600 de 3.388**, el 47,2 por ciento |
+| huecos | **cero** |
+| global | **A 345, B 89, C 7, D 1.159** |
+| **tasa global de A** | **21,6%** |
+| **nucleo** | **1.445 pares, A 344, tasa 23,8%** |
+
+### 62.1 LAS DOS SERIES
+
+| tramo | pares | A | tasa de A | nucleo | tasa del nucleo | **vara** | **vara-A** |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **1501-1600** (la centena) | 100 | **12** | **12,0%** | 100 | **12,0%** | **31** (31,0%) | **0** |
+| 1518-1600 (el tramo) | 83 | 9 | 10,8% | 83 | 10,8% | 23 (27,7%) | 0 |
+
+> **La vara llega a SEISCIENTOS pares sin producir una A.** Desde el puesto 1001
+> ha decidido **215 pares y los 215 salieron CONTINUA.** La adjudicacion del 9.19
+> se sostiene tramo a tramo.
+
+**Y la centena SUBE de 7 a 12 A**, la primera subida desde la centena 801-900. El
+motivo esta medido y no es una vuelta de la duplicacion antigua: **de las doce, la
+mitad son pares internos de racimos ya escritos** (el cierre, las pruebas A/B, el
+reparto de tareas con IA), o sea **densidad dentro de familias conocidas, no
+familias nuevas**.
+
+### 62.2 CINCO COLAS CERRADAS, y hay que decirlo con sus cifras
+
+**En este tramo terminan su cola CINCO nominas**, tres de ellas por pares de este
+mismo tramo.
+
+| familia | nomina | posibles | en cola | leidos | resultado | cobertura |
+|---|---:|---:|---:|---:|---|---:|
+| **la mesa unida** (1524) | **17** | 136 | 23 | **23** | **18 A**, 2 B, 3 D | **23 de 136** |
+| **el racimo de la IA** (1541) | **10** | 45 | 15 | **15** | **8 A**, 7 D | **15 de 45** |
+| **el racimo del cierre** | **6** | 15 | 9 | **9** | **NUEVE A, cero sanos** | **9 de 15** |
+| **el sub-puro de build-measure-learn** | **8** | 28 | 9 | **9** | **NUEVE A, cero sanos** | **9 de 28** |
+| **el reparto de tareas con IA** (1597) | **4** | 6 | 3 | **3** | **TRES A** | **3 de 6** |
+
+> **EL RACIMO DEL CIERRE ES HOY EL SUB-PURO MAS CARGADO DEL INVENTARIO: nueve
+> pares leidos y los nueve en A**, por delante de los cuadrantes de mercado (7) y
+> de la seleccion de canal (8). **Y su cola esta cerrada**, o sea que el ejercicio
+> ya no le va a traer un sano por la via ordinaria: **solo pueden tumbarlo los
+> seis pares que nunca entraron a la cola.**
+
+**EL SUB-PURO DE BUILD-MEASURE-LEARN CRECIO OTRA VEZ, de SIETE a OCHO**, por el
+puesto **1573**, y con el entra `design_thinking_proceso`, de Cooper. **Su cola
+tambien cierra: nueve pares leidos y los nueve en A, cobertura 9 de 28.** Van
+**cuatro remediciones de esta misma nomina** (5, luego 7, luego 8) y **ninguna la
+dejo igual**, tal como advierte la nota del inventario.
+
+### 62.3 LO QUE CRECIO Y LO QUE NO
+
+| nomina | antes | **ahora** | por que |
+|---|---:|---:|---|
+| **build-measure-learn** | 7 | **8** | el **1573**, subconjunto estricto |
+| **reparto de tareas con IA** | 2 | **4** | el **1582** y el **1597**, y con miembros de **dos libros** |
+| la mesa unida | 17 | 17 | el **1537** no la hace crecer: `diamante_decision_tres_partes` sigue sin una sola A |
+| el racimo del cierre | 6 | 6 | el **1564** y el **1585** son **internos**: densifican, no agrandan |
+| las pruebas A/B | 6 | 6 | el **1571** y el **1575** son **internos** |
+| **el puro numero 10** | 3 | **3** | **TRES candidatos naturales leidos y descartados**: 1489, 1523 y 1598 |
+
+> **El puro numero 10 es hoy la forma mas probada del inventario.** Cobertura
+> completa, 3 de 3, certificado por los dos instrumentos, **y tres candidatos del
+> mismo libro y del mismo tema leidos uno por uno y descartados.** Ninguna otra
+> forma del archivo ha resistido tres.
+
+### 62.4 UNA FAMILIA CON COBERTURA COMPLETA Y CERO A
+
+**El puesto 1558 cierra los tres pares posibles de la familia de los MERCADOS DE
+VARIOS LADOS**: `mercados_multilaterales`, `multi_sided_market_channel` y
+`optimizacion_mercado_multilado`. **Cobertura 3 de 3, y LAS TRES SANAS.**
+
+> **Es lo contrario de un puro y merece nombre propio**: una familia de tres del
+> mismo libro y del mismo asunto, con **todos sus pares leidos y ninguno repite.**
+> Los tres nodos son **un mapa, un calculo y una ejecucion**, y ninguno sobra.
+> **Con la cobertura entera se puede afirmar; con dos pares habria sido una
+> sospecha.**
+
+### 62.5 EL RETRATO DE LAS A, recomputado al 1600
+
+| medida | al 1400 | al 1517 | **al 1600** |
+|---|---:|---:|---:|
+| nodos tocados por alguna A | 466 | 475 | **480** |
+| componentes | 175 | 177 | **178** |
+| **parejas sueltas** | 121 | 120 | **120** |
+| de tres | 29 | 31 | **31** |
+| de cuatro | 9 | 10 | **11** |
+| de siete | 3 | 3 | **2** |
+| **de ocho** | 0 | 0 | **1** |
+| de nueve | 1 | 1 | **1** |
+| de trece | 0 | 1 | **1** |
+
+> **La lectura del plan no cambia: siguen siendo DOS mesas y ciento veinte
+> decisiones de par.** Lo que se movio es el escalon de arriba: **una componente
+> de siete paso a ocho** (build-measure-learn) **y ninguna se fusiono con otra**.
+> **Sigue sin haber una tercera mesa escondida**, y en este tramo la frontera
+> entre las dos grandes se probo **cuatro veces mas** (1557, 1576, y antes 1453 y
+> 1477) **y aguanto las cuatro.**
+
+### 62.6 EL SALDO
+
+> **Mil seiscientos pares. Mil setecientos ochenta y ocho por delante.** El nucleo
+> queda en **23,8 por ciento**.
+>
+> **Lo que este tramo cambia**: cinco nominas dejan de tener cola, o sea que
+> **cinco familias del inventario ya no pueden cambiar de forma por el camino
+> ordinario**. De aqui en adelante, lo que las mueva tendra que venir de los pares
+> que nunca se encolaron, **y esos hay que ir a buscarlos, no esperarlos.**
