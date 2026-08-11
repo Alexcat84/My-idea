@@ -2269,19 +2269,30 @@ de los que se puede afirmar la forma sin condicion:
 
 **LA EVIDENCIA, medida el mismo dia:**
 
-| dominio | pares leidos | A | **tasa de A** |
-|---|---:|---:|---:|
-| `core` | 1.445 | 344 | **23,8%** |
-| `compras` | 155 | 1 | **0,6%** |
-| `entrega` | 171 | 2 | **1,2%** |
-| `environmental` | 46 | 14 | **30,4%** |
-| **global** | **1.817** | **361** | **19,9%** |
+| dominio | pares leidos | A | **tasa de A** | estado |
+|---|---:|---:|---:|---|
+| `core` | 1.445 | 344 | **23,8%** | CERRADO |
+| `compras` | 155 | 1 | **0,6%** | CERRADO |
+| `entrega` | 171 | 2 | **1,2%** | CERRADO |
+| `environmental` | 170 | 29 | **17,1%** | CERRADO |
+| `exportacion` | 71 | 13 | **18,3%** | abierto |
+| **global** | **2.012** | **389** | **19,3%** | abierto |
 
-> **El 19,9 por ciento global no describe a ninguno de los cuatro.** Es el
-> promedio de un dominio que casi no repite, entrega con **1,2**, y de otro que
-> repite **mas que el nucleo**, environmental con **30,4**. Y la centena mas limpia
-> del ejercicio, la 1601-1700 con **DOS A**, no midio una mejora del catalogo:
-> midio que estaba pasando el dominio de entrega.
+**Tabla recomputada del archivo al puesto 2.012** (banco 9.10 y 9.21). La version
+adoptada el 17 ago 2026 media environmental **a 46 pares** y daba **30,4%**; el
+dominio cerro en **17,1%**. Ver la PRECISION al final de esta regla.
+
+> **El 19,3 por ciento global no describe a ninguno de los cinco.** Es el promedio
+> de un dominio que casi no repite, `entrega` con **1,2**, y de uno que repite
+> **cuarenta veces mas**, `core` con **23,8**. Y la centena mas limpia del
+> ejercicio, la 1601-1700 con **DOS A**, no midio una mejora del catalogo: midio
+> que estaba pasando el dominio de entrega.
+
+**CORRECCION DECLARADA, medida el 19 ago 2026.** La primera version de esta regla
+decia que environmental *"repite mas que el nucleo"*. **Con el dominio cerrado,
+repite MENOS: 17,1% contra 23,8%.** La cifra de la tabla no era falsa, llevaba su
+corte escrito, "46 pares leidos". **Lo que fallo fue la glosa**, que leyo esa foto
+como propiedad del dominio: el error exacto que el 9.21 nombra.
 
 **LO QUE ESTO OBLIGA, y es corto:**
 
@@ -2295,3 +2306,31 @@ de los que se puede afirmar la forma sin condicion:
 > porque cambia la clase de lo que queda, y **ahora se sabe que tambien cambia
 > porque cambia el dominio de lo que queda.** Son dos causas distintas y hay que
 > separarlas antes de sacar conclusiones.
+
+
+**PRECISION, adoptada el 19 ago 2026: LA COLA DEL DOMINIO SE AGOTA POR DENTRO.**
+
+> **Un dominio a medio leer no describe al dominio, por la misma razon por la que
+> la global no describe al dominio.** La cola esta ordenada por parecido
+> descendente, asi que **dentro de cada dominio los pares mas parecidos entran
+> primero** y la tasa cae segun avanza.
+
+**Medido dos veces, en dos dominios distintos, con la misma forma:**
+
+| `environmental` (cerrado en 17,1%) | pares | A | tasa |
+|---|---:|---:|---:|
+| 1772-1800 | 29 | 10 | **34,5%** |
+| 1801-1850 | 50 | 12 | **24,0%** |
+| 1851-1900 | 50 | 4 | **8,0%** |
+| 1901-1941 | 41 | 3 | **7,3%** |
+
+| `exportacion` (abierto en 18,3%) | pares | A | tasa |
+|---|---:|---:|---:|
+| 1942-1966 | 25 | 9 | **36,0%** |
+| 1967-1991 | 25 | 4 | **16,0%** |
+| 1992-2012 | 21 | **0** | **0,0%** |
+
+> **LO QUE OBLIGA:** toda tasa por dominio se escribe con su cobertura al lado
+> (banco 9.26) **y con la marca de abierto o cerrado**. Un dominio abierto al
+> 18,3% no dice 18,3%: dice **"18,3% hasta aqui, y va bajando"**. Ninguna
+> comparacion entre dominios es valida si alguno de los dos esta abierto.

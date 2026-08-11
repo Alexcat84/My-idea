@@ -11067,3 +11067,117 @@ huella de carbono, da resultados opuestos y por un motivo verificable:**
 > falla lo bastante como para que nunca se pueda dar por hecho.** La regla
 > practica queda escrita: **la trampa se confirma leyendo los pasos, y cuatro de
 > las lecturas de este dominio existen solo porque no se dio por supuesto.**
+
+---
+
+## 66. EL CHECKPOINT DE LOS 2.000, y la correccion que obliga a precisar el 9.27
+
+**Corte: puesto 2.012.** Marcador recomputado del archivo, no de tabla anterior
+(banco 9.10).
+
+### 66.1 EL MARCADOR, con la tasa POR DOMINIO al lado de la global (banco 9.27)
+
+| dominio | puestos | pares leidos | A | B | C | D | **tasa de A** |
+|---|---|---:|---:|---:|---:|---:|---:|
+| `compras` | 1-155 | 155 | 1 | 2 | 0 | 152 | **0,6%** |
+| `core` | 156-1600 | **1.445** | **344** | 87 | 7 | 1.007 | **23,8%** (CERRADO) |
+| `entrega` | 1601-1771 | 171 | 2 | 0 | 0 | 169 | **1,2%** (CERRADO) |
+| `environmental` | 1772-1941 | **170** | **29** | 0 | 0 | 141 | **17,1%** (CERRADO) |
+| `exportacion` | 1942-2012 | 71 | 13 | 0 | 0 | 58 | **18,3%** (abierto) |
+| **GLOBAL** | 1-2012 | **2.012** | **389** | **89** | **7** | **1.527** | **19,3%** |
+
+**Faltan 1.376 pares para el final.** Van 2.012 de 3.388, sin huecos.
+
+### 66.2 LA CORRECCION DECLARADA: environmental NO repite mas que el nucleo
+
+**El 9.27 se escribio el 17 ago 2026 con environmental a 46 pares leidos y 30,4%
+de A**, y su texto corrido decia que era *"otro que repite mas que el nucleo"*.
+
+> **Medido hoy con el dominio CERRADO: environmental repite MENOS que el nucleo.
+> 170 pares, 29 A, 17,1% contra el 23,8% del nucleo.**
+
+**La cifra de la tabla no era falsa: llevaba su corte escrito al lado, "46 pares
+leidos", tal como manda el 9.21.** Lo que fallo fue **la glosa en prosa**, que
+leyo esa foto como una propiedad del dominio. Es exactamente el error que el 9.21
+nombra: *"un numero sin corte se lee como propiedad del catalogo, y no lo es: es
+una foto"*. **La regla funciono; la frase que la acompanaba no.**
+
+**Por eso NO se para el cribado:** no hay contradiccion con una regla vigente ni
+con una cifra publicada con su corte. Hay una **lectura corregida**, y se corrige
+en su sitio (banco 9.17: entre dos nominas manda la MEDICION).
+
+### 66.3 LO QUE LA CORRECCION ENSENA, y es una figura nueva: LA COLA DEL DOMINIO SE AGOTA POR DENTRO
+
+**No es que environmental bajara por azar. Es que un dominio a medio leer no
+describe al dominio**, y ahora esta medido **dos veces, en dos dominios
+distintos, con la misma forma.**
+
+| `environmental` (cerrado) | pares | A | tasa |
+|---|---:|---:|---:|
+| primeros 29 (1772-1800) | 29 | 10 | **34,5%** |
+| siguientes 50 (1801-1850) | 50 | 12 | **24,0%** |
+| siguientes 50 (1851-1900) | 50 | 4 | **8,0%** |
+| ultimos 41 (1901-1941) | 41 | 3 | **7,3%** |
+
+| `exportacion` (abierto) | pares | A | tasa |
+|---|---:|---:|---:|
+| primeros 25 (1942-1966) | 25 | 9 | **36,0%** |
+| siguientes 25 (1967-1991) | 25 | 4 | **16,0%** |
+| ultimos 21 (1992-2012) | 21 | **0** | **0,0%** |
+
+> **Las dos curvas caen igual: el primer tercio del dominio concentra la
+> duplicacion y el ultimo tercio esta limpio.** No es una coincidencia de dos
+> dominios: es la consecuencia de como esta ordenada la cola. **La cola esta
+> ordenada por parecido descendente**, asi que dentro de cada dominio los pares
+> mas parecidos entran primero. La tasa de un dominio **no se puede leer hasta que
+> el dominio cierra.**
+
+**Lo que obliga, y es corto:** toda tasa por dominio se escribe **con su cobertura
+al lado** (banco 9.26) y con la marca de **abierto o cerrado**. Un dominio abierto
+al 18,3% no dice 18,3%: dice **"18,3% hasta aqui, y va bajando"**.
+
+### 66.4 EL TRAMO 1989-2012: VEINTICUATRO PARES, CERO A
+
+**El tramo mas limpio de todo el ejercicio en su tamano.** Veinticuatro D
+seguidas, y ninguna forzada. Contadas por como se resolvieron: **diez** donde los
+dos nodos no comparten ni un paso, **ocho** que se resolvieron por la vara, y
+**seis** donde lo compartido es letra generica de dos a cinco lineas y toda la
+sustancia esta en lo propio de cada uno (1989, 1990, 1997, 2001, 2010 y 2011).
+
+**LA VARA DEL TRAMO (banco 9.6.1): 8 de 24, un 33,3%** de pares donde uno de los
+dos nodos nombra en UNA LINEA lo que el otro trae como procedimiento. Son los
+puestos 1991, 1992, 1993, 1995, 2005, 2006, 2009 y la mitad del 2012.
+
+> **Y aqui la vara alta NO significa cola pendiente** (banco 9.19): significa que
+> este dominio esta hecho de **un indice y sus fichas**. `seleccion_de_metodo_de_pago`
+> nombra los cinco metodos de pago en una linea y hay **un nodo por metodo**;
+> `documentacion_exportacion` nombra "que documentos necesitas" y hay un nodo por
+> documento. **Es una enciclopedia, y una enciclopedia con indice no es una
+> enciclopedia que se repite.**
+
+### 66.5 LA FIGURA DEL TRAMO: EL ESQUELETO COMPARTIDO
+
+**Dos veces en veinticuatro pares**, y las dos con la misma forma: dos nodos con
+**el mismo esqueleto de pasos** y **contenido distinto en cada paso**.
+
+| puesto | los dos hermanos | el esqueleto comun | lo que los separa |
+|---:|---|---|---|
+| **2001** | `customs_bonded_warehouses` / `foreign_trade_zones` | evaluar si conviene, contactar la oficina | en el almacen la mercancia **solo espera**; en la zona **se le puede trabajar encima** |
+| **2011** | `financiamiento_sba_exportacion` / `programas_ex_im_bank` | capital de trabajo, consultar al servicio comercial | uno pasa por un **prestamista privado**, el otro **es el banco** |
+
+> **El esqueleto compartido es lo contrario del subconjunto estricto.** En el
+> subconjunto los pasos del corto viven dentro del largo y la clase es **A**. Aqui
+> **la forma coincide y el contenido no comparte nada**, y la clase es **D**. Son
+> las dos caras de la misma pregunta, y la unica manera de distinguirlas es la
+> que ya esta escrita: **leer los pasos, no la forma.**
+
+### 66.6 LA COLA ABIERTA DEL TRAMO, anotada para cuando salga
+
+**Puesto 2006**, `clausula_antidesviacion` contra `documentacion_exportacion`,
+salio **D**: la clausula es una linea dentro de un documento, no un documento.
+**Pero `licencia_exportacion_regulaciones` (leido en el puesto 2008) trae en su
+paso 6 la MISMA orden**: incluir la declaracion de control de destino en todas
+las facturas comerciales.
+
+> **Ese par no ha salido todavia.** Queda anotado aqui para leerlo cuando aparezca,
+> y para que no se cierre el dominio sin haberlo mirado.
