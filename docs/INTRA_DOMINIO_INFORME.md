@@ -2331,3 +2331,78 @@ tienes validacion suficiente, **tiene TRES nodos que lo desarrollan**:
 >
 > **Si el solape vive de un solo lado de la costura, el par se lee. Si la cruza,
 > se espera al arreglo.**
+
+---
+
+## 18. EL TRAMO 701 a 724: familias que se cuentan solas
+
+**Veinticuatro pares leidos, los veinticuatro del nucleo. Sin checkpoint: el
+proximo es el de los 800.** Acumulado **724 de 3.388**, global **33,1%** de A y
+**nucleo 42,0%**; el tramo dio **25,0%**.
+
+### 18.1 LA TRAMPA DEL NOMBRE, tercera vez, y esta vez es mia contra mi
+
+**En el puesto 669 conte la familia de las seis herramientas de comunicacion de
+Coleman y dije CUATRO nodos: la madre y tres aplicaciones.** El puesto **719**
+trajo una cuarta aplicacion, `estrategia_multicanal_bienvenida`, **que aplica las
+mismas seis herramientas y no lleva `seis` en el identificador.**
+
+> **Volvi a contar por nombre.** Es la tercera vez que ese barrido falla, despues
+> del **637** y el **683**, **y las dos anteriores las habia escrito yo mismo como
+> leccion.** La cuenta de esa familia queda **abierta** hasta que se haga por
+> contenido.
+
+### 18.2 CUATRO CANDIDATOS A RACIMO, contados y no declarados
+
+| familia | miembros vistos | pares leidos | señal |
+|---|---:|---|---|
+| **las cuatro areas de desempeno** (651, 704) | **3** | 2, los dos **A** | mismo libro, mismas cuatro areas |
+| **los cofundadores** (708, 716) | **3 o mas** | 2, los dos **B** | el mismo nodo dudoso dos veces |
+| **el bucle de cuatro tiempos** (376, 723) | **3** | 2, los dos **A** | tres nodos para *construir, medir, aprender* |
+| **Wallas** (473, 689, 693, 718, 721) | **6** | 5 | una familia entera de como se trabaja la cabeza |
+
+> **El bucle es el mas barato de los cuatro y el mas claro**: `ciclo_construir_medir_aprender`,
+> `ciclo_crear_medir_aprender` y `design_test_repeat` **dicen los mismos cuatro
+> pasos**, y los dos primeros se diferencian **en un verbo del identificador**.
+>
+> **Y de paso confirma un juicio de la medicion de los veinte**: `design_test_repeat`
+> no es hijo de paso de `fit_problema_solucion`, **es un nodo de ciclo con vida
+> propia, y ahora se sabe que ademas tiene dos gemelos.**
+
+### 18.3 EL OTRO LADO DEL REFINAMIENTO DEL 673
+
+**El puesto 673 fijo que un nodo averiado contamina el par solo cuando el solape
+CRUZA la juntura. El puesto 724 es el primero que la cruza.**
+
+> `voz_del_cliente_voc` es costura **confirmada** con la anatomia escrita en la
+> ficha: **DOBLE DE LA OBSERVACION**, diez pasos en dos mitades que hablan **las
+> dos** de observar al cliente en su contexto.
+>
+> Y lo que `voice_of_customer_estrategico` solapa con el **es justamente la
+> observacion**, o sea **las dos mitades a la vez**. El veredicto se emitiria
+> contra un texto que va a perder la mitad de su masa. **Queda en B y se lee
+> despues del arreglo interno.**
+>
+> **Lo que si queda anotado para el redactor**: *buscar necesidades futuras* y
+> *que los mantiene despiertos por la noche* **no estan en el nodo largo**.
+
+### 18.4 Lo demas del tramo
+
+> **1. CUARTO EJEMPLAR de con arista y aun asi duplicacion** (puesto **712**,
+> las dos juntas asesoras), con el 570, el 614 y el 635. **Ninguno de los cuatro
+> tiene madre que resuma: son textos del mismo grano cableados entre si.**
+>
+> **2. TERCER EJEMPLAR de *Traction* como forastero** (puesto **710**):
+> `compromiso_linea_tiempo_cliente` cita a Weinberg y esta parado dentro del tema
+> de obtencion de compromiso, que es de Rackham. Con `tacticas_cierre_ventas` y
+> `framework_spin_selling` **ya son tres.**
+>
+> **3. La introduccion a Customer Validation lleva SEIS pares leidos** (245, 247,
+> 597, 655, 697 y 709). **Es de las zonas mas repetidas del nucleo** y todavia no
+> esta declarada como racimo.
+>
+> **4. Dos tramos bien cableados, y los dos son excepcion.** El de Wallas entre
+> iluminacion, intimacion y verificacion (puesto 721), y el de `customer_profile`
+> hacia sus tres hijos, `customer_jobs`, `customer_pains` y `customer_gains`
+> (puesto 705). **En un tramo donde la averia dominante es el cero enlazados,
+> conviene anotar quien si enlaza.**
