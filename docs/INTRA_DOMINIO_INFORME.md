@@ -1049,6 +1049,30 @@ YA ES A.**
 >
 > **Direccion provisional de par**, por la 9.3.
 
+#### FIGURA NUEVA (13 ago 2026): LA FRONTERA INTRA-LIBRO
+
+**Hasta hoy todas las fronteras registradas eran ENTRE LIBROS**: Rackham contra
+Weinberg en el cierre, Blank contra Ries en el pivote. **El puesto 877 trae la
+primera de un libro consigo mismo.**
+
+| nodo | que manda para el MISMO caso, cofundar con amigos o familia |
+|---|---|
+| `cofundar_con_amigos_familia_riesgos` | **estructuras de autoridad CLARAS aunque resulten socialmente incomodas** |
+| `relacion_previa_y_estructura_roles` | **estructura de decision mas COLEGIADA E IGUALITARIA** |
+
+**Los dos son de *The Founder's Dilemmas*.**
+
+> **No es duplicacion y no es error del catalogo: es que el libro dice las dos
+> cosas**, una desde el riesgo de la relacion y otra desde el diseno de roles.
+> **Y no es un empate que se resuelva fusionando**, porque fundir deja al lector
+> con una sola de las dos y sin saber que la otra existia.
+
+> **LO QUE LA FIGURA OBLIGA**: escribir la frontera **dentro de los dos nodos**,
+> nombrando la condicion que decide. **Una frontera intra-libro es mas peligrosa
+> que una entre libros**, porque el lector no tiene la senal de *son autores
+> distintos* para sospechar que hay dos escuelas. **Parece contradiccion y es
+> matiz, y solo el texto puede decirlo.**
+
 #### 221: NOTA DE FRONTERA, y limita una fusion antes de que se haga
 
 **`compromiso_linea_tiempo_cliente` y `tacticas_cierre_ventas` repiten**: los dos
@@ -2581,6 +2605,102 @@ plantilla sobre contenidos que no se parecen**, que salio **D**.
 > `construccion_de_leverage` si la trae y `estrategia_competencia_vcs` no. **La
 > misma instruccion es perdida o no segun el companero del par.** Las listas de
 > perdidas no son del nodo: son del par.
+
+### RELECTURA CONJUNTA DEL 530: la medicion, y el veredicto
+
+**Encargada tras el puesto 863.** La pregunta era una sola: **el paso que la razon
+del 530 cita, existe en los dos nodos o en uno solo.**
+
+**MEDIDO, paso por paso y contra el grafo:**
+
+| lo que la razon del 530 afirma | `estrategia_de_innovacion_y_tecnologia` | `estrategia_de_innovacion_de_producto` |
+|---|---|---|
+| identificar los mercados atractivos | **paso 1** | **no aparece** |
+| **pesarlos contra las competencias propias** | **paso 2** | **NO APARECE, ni en pasos ni en resumen** |
+| seleccionar las arenas donde ambos convergen | **paso 3** | **no**: dice *definir arenas estrategicas*, una linea |
+| declarar que queda fuera del alcance | paso 4 | no |
+| usar la estrategia como filtro en los gates | paso 5 | no |
+
+> **Cinco de cinco pasos del primero estan ausentes del segundo.** Lo unico que el
+> segundo tiene es **la palabra arenas**, en una linea, dentro de una lista de
+> seis que va de objetivos a roadmap.
+
+**EL ESQUELETO ES EL MISMO DEL 863**, verificado: madre con las arenas en una
+linea, hijo con el metodo de seleccion completo.
+
+> **VEREDICTO: el 530 pasa de A a D**, por la vara del banco 9.6.1, con correccion
+> declarada dentro de su razon. **Es la segunda discrepancia del ejercicio y la
+> segunda que se resuelve en conjunta.**
+
+**LO QUE ESTO LE HACE A LA FAMILIA, contado del archivo:**
+
+| | antes de hoy | ahora |
+|---|---:|---:|
+| pares leidos | 6 | **7** |
+| en **A** | **6** | **5** |
+| en **D** | 0 | **2** (530 y 863) |
+
+> **La familia de la estrategia de innovacion pasa de *seis de seis en A* a
+> **cinco y dos**, y el motivo de los dos sanos es el mismo: `y_tecnologia` **no
+> es un hermano que repite, es el procedimiento de las arenas.** Con nueve
+> lecturas pendientes, **la apuesta mas cargada del inventario se desinfla dos
+> veces en un dia.**
+
+---
+
+### TANDA R24, VIGESIMA CIEGA: seis de seis
+
+**Acumulado: 144 releidas, de las cuales 120 a ciegas. Discrepancias: UNA**, el
+395. **El 530 no cuenta como discrepancia de tanda**: no salio de una relectura
+ciega sino de una inconsistencia que el cribado destapo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **421** | `fase_admit` contra `fase_admit_celebracion` | el **artefacto que memorializa** el momento, la **co-creacion** del producto con el cliente, y **que la celebracion no venga solo del vendedor**; del otro lado, **evitar el silencio posventa** | de **lector** |
+| **426** | `usuarios_extremos_edge_cases` contra `usuarios_extremos_insights` | **documentar los hallazgos como activos creativos** para futuras iteraciones, y **evitar la ortodoxia** de las soluciones estandar cuando los extremos piden otra cosa | de **lector** |
+| **432** | `cierre_sofisticacion_comprador` contra `riesgo_tecnicas_cierre_venta_compleja` | **medir la satisfaccion posventa** para detectar si el cierre esta danando la relacion, y **reemplazar el cierre por preguntas** que exploren necesidades reales | de **lector** |
+| **434** | `business_intelligence_niveles_datos` contra `jerarquia_datos_scor` | **sumar datos externos** (tamano de mercado, indicadores economicos, comparaciones sectoriales) y **el control de accesos** por funcion; del otro lado, **el almacen de datos** y **automatizar la captura** | de **lector** |
+| **439** | `get_out_of_the_building` contra `manifiesto_regla1_hechos_fuera_del_edificio` | **no hacer listas con todas las funciones que piden los clientes** y **documentar en el momento**; del otro lado, **prepararse para feedback impredecible y doloroso** y **experiencia de primera mano de cada parte del modelo** | de **lector** |
+| **440** | `alineacion_motivacional_cofundadores` contra `compatibilidad_motivaciones_riqueza_control` | **la matriz de escenarios** para verificar consenso; del otro lado, **si ambos buscan control** anticipar el choque y resolverlo sin liderazgo compartido ambiguo, y **confiar de verdad en la capacidad** del socio antes de cederle autoridad | de **lector** |
+
+#### 421: ADMIT DOBLADA, la SEGUNDA fase confirmada por lectura
+
+**La medicion de la seccion 12 conto dos nodos en Admit. Esta relectura lo
+confirma leyendo**, y con eso **son DOS las fases dobles confirmadas por lectura**,
+Assess (puesto 373) y Admit.
+
+> **Y trae algo que el otro nodo no tiene y que no es de Coleman-el-programa sino
+> de Coleman-el-artesano**: **crear un artefacto fisico o digital que memorialice
+> el momento**, certificado, mensaje personalizado o video. **Es EL MATERIAL DEL
+> RITUAL.**
+>
+> **Anotado en el racimo de experiencia como avistamiento con destino ya
+> conocido**: cuando la mesa consolide la fase Admit, **este artefacto es lo
+> primero que hay que salvar**, porque es lo unico operativo que el nodo base no
+> dice. Igual que la inmersion previa del brainstorming (puesto 834).
+
+#### 432: TERCERA poda intra-Rackham, y la frontera sigue en pie
+
+**Es la tercera fusion dentro del racimo del cierre que NO toca la frontera**, con
+los puestos **248** y **274**.
+
+> **Los dos nodos son de Rackham y del mismo lado.** La frontera de la seccion 9
+> separa **el lado de Rackham** (no cierres, investiga) **del lado de Weinberg**
+> (cierra), y **fusionar dentro de un lado no la borra: la limpia.**
+>
+> **Van tres podas intra-Rackham y cero cruces.** La frontera **no ha tenido que
+> defenderse ni una vez**, que es la mejor senal que puede dar una frontera
+> declarada.
+
+#### 439: la familia de SALIR DEL EDIFICIO ya son cuatro nodos leidos
+
+Con los puestos **840** (el genchi gembutsu por duplicado) y **849**
+(`customer_development_modelo` contra `customer_discovery_get_out_of_building`),
+**este es el tercer par de la misma zona y el tercero en A**.
+
+> **Cuatro nodos del nucleo mandan salir a hablar con clientes**, dos con la
+> palabra japonesa y dos con la inglesa, **y ninguno enlaza con ninguno.** Es la
+> zona con mas repeticion confirmada y menos cableado del tramo.
 
 ---
 

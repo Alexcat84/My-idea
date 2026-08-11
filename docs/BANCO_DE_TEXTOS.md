@@ -1667,3 +1667,60 @@ pasada que las borra) **más guarda en Gate 0** para que no vuelvan a entrar.
 > **El contador dice dónde mirar por el nombre; el barrido de las A dice dónde
 > mirar por el archivo.** Los dos alimentan la misma lectura, que sigue siendo
 > quien decide.
+
+---
+
+### 9.16 DOCTRINA: EL SUB-PURO ES UNA PROMESA, NO UN RESULTADO
+
+**Adoptada el 13 ago 2026**, el día en que **dos sub-puros se rompieron a la vez**
+y por el mismo mecanismo.
+
+> **Una familia con muchos pares SIN LEER puede tener TODOS sus pares leídos en A
+> y no ser pura.** El sub-puro dice *hasta aquí todo repite*; **no dice nada sobre
+> lo que falta.**
+>
+> **Y la fuerza de la promesa es inversa a lo que aparenta**: cuantos más pares le
+> falten, **más impresiona la racha y más fácil es que el siguiente sea el sano.**
+
+**LOS DOS EJEMPLARES, del mismo día:**
+
+| racimo | racha que tenía | el par que la rompió | quedaba sin leer |
+|---|---|---|---:|
+| **el sales roadmap** | 4 de 4 en A | **872**, D | 6 de 10 |
+| **la estrategia de innovación** | **6 de 6** en A, *la apuesta más cargada del inventario* | **863**, D | 9 de 15 |
+
+> **El segundo es el aviso serio**: seis pares seguidos en A **no bastaron**. Si
+> seis no bastan, **ninguna racha basta mientras queden pares sin leer.**
+
+> **LO QUE ESTO CAMBIA EN LA PRÁCTICA, y es poco pero es todo**: un sub-puro **no
+> se cita como evidencia de que una familia es un duplicado**. Se cita como
+> **cuántas lecturas faltan para saberlo**. La tabla viva del §9.5 ya lleva esa
+> columna; la doctrina obliga a leerla.
+
+---
+
+### 9.17 PRECISIÓN a la DISCIPLINA DEL DICTADO: entre dos nóminas manda la MEDICIÓN
+
+**Adoptada el 13 ago 2026**, tras un fallo mío en el puesto 863.
+
+> **Cuando dos fuentes dan nóminas distintas de la misma familia, manda LA
+> MEDICIÓN MÁS RECIENTE.** El censo viejo **se cita como censo, no como medida**:
+> dice a quién se llamó familia el día que se escribió, no cuántos son hoy.
+
+**EL EJEMPLAR, y es propio.** En la tanda R19 escribí que la familia de la
+estrategia de innovación era **un racimo censado de TRES** y anuncié el puesto 863
+como *posible puro de tres*.
+
+| fuente | qué decía | qué era |
+|---|---|---|
+| `RACIMOS_MIEMBROS.jsonl` | **3 miembros** | **el censo**, congelado el día que se hizo |
+| **§4 de este informe** | **6 miembros, 15 pares posibles** | **la medición**, hecha después y contra el grafo |
+
+> **Miré el censo y no la medición**, teniendo las dos en el mismo repositorio.
+> **La consecuencia no fue una cifra mal puesta: fue anunciar un puro de tres que
+> no podía existir**, porque la familia tenía el doble de miembros y nueve pares
+> sin leer.
+
+> **La regla operativa**: antes de citar una nómina, **buscar si hay una medición
+> posterior en el informe.** El censo es el punto de partida del contador (§9.5.1),
+> no su resultado.
