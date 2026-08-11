@@ -2137,3 +2137,13 @@ Encontrado al leer los nueve pares dirigidos (informe §33).
 > **Un racimo con miembros de tres dominios no es una familia: es un grupo de
 > nombres parecidos.** No es mecánico: pide decidir si la nómina se depura o si
 > esos racimos se declaran explícitamente transversales.
+
+**CONTROL MECÁNICO NUEVO, adoptado el 13 ago 2026**: **revisar TODA nómina por el
+DOMINIO de sus miembros.** Es una pasada de lectura sobre
+`docs/RACIMOS_MIEMBROS.jsonl` cruzada con el grafo, sin criterio: **lista los
+racimos cuyos miembros no comparten dominio.**
+
+> **Los tres casos ya hallados son la muestra, no el censo.** El control los
+> encuentra todos de una vez, y cada uno se resuelve igual: **o la nómina se
+> depura, o el racimo se declara transversal de forma explícita.** Lo que no puede
+> quedar es un racimo que **parece** de un dominio y no lo es.

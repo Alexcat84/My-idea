@@ -2497,6 +2497,91 @@ escrita por primera vez** (tercera de las veinte que la recibe):
 > vieja ya lo decia.** La unica perdida real del par son **los habitos de compra
 > establecidos en la categoria.**
 
+### TANDA R23, DECIMONOVENA CIEGA: seis de seis
+
+**Acumulado: 138 releidas, de las cuales 114 a ciegas. Discrepancias acumuladas:
+UNA**, el puesto 395, ya resuelta en conjunta. Perdidas propuestas, verificadas
+una por una contra los dos nodos.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **404** | `cash_burn_calculation` contra `metrics_that_matter_framework` | **definir que burn rate es aceptable** y **cuantos pivotes mas se pueden costear**. Las dos del nodo grande: **el chico no aporta nada propio** | de **lector** |
+| **406** | `key_resources_hypothesis` contra `recursos_clave` | de Blank: **de donde puede venir el dinero** (capital de riesgo, subsidios, factoring, leasing), **que vale la pena proteger** como propiedad intelectual, y **que dependencias quedan fuera de tu control**; de Osterwalder: **calcular los recursos financieros** concretos, efectivo y lineas de credito | de **lector** |
+| **410** | `planificacion_preguntas_implicacion` contra `preguntas_implicacion` | **escribir tres problemas potenciales antes de la llamada**, y **practicar y refinar** las preguntas porque son las que mas habilidad piden | de **lector** |
+| **413** | `estrategia_competencia_vcs` contra `gestion_multiples_term_sheets` | **la ventana de tres a seis meses**, **pedir feedback concreto si dicen que no**, **nunca compartir el contenido de un term sheet**, y **dos que el dictado no listo**: identificar a todos los VCs objetivo antes de empezar y usar el primer term sheet como palanca | de **lector** |
+| **417** | `blogging_como_canal_de_traccion` contra `content_marketing_blog` | **las infografias y el contenido visual**, que se comparten unas veinte veces mas; los **lead magnets** para construir lista de correo; y **los seis meses de publicacion consistente antes de evaluar** | de **lector** |
+| **419** | `desirability_feasibility_viability` contra `triada_restricciones_diseno` | **aprovechar los activos existentes** (marca, base de clientes, distribucion) cuando se parte de deseabilidad, e **iterar entre las tres restricciones durante todo el ciclo** y no de forma lineal | de **lector** |
+
+#### 404: EL HIJO CONTENIDO, y la vara dice que no trae nada
+
+**Los cuatro pasos de `cash_burn_calculation` son los pasos 3, 4 y 5 de
+`metrics_that_matter_framework`**, verificado uno por uno:
+
+| cash_burn | donde vive en el otro |
+|---|---|
+| ingresos netos por trimestre | paso **3**, restar descuentos y costos de canal |
+| restar costos de ventas, producto y operativos | paso **4** |
+| el resultado es lo quemado | paso **4** |
+| restar del efectivo inicial para saber cuanto queda | paso **5**, la hoja trimestral con el efectivo en banco |
+
+> **LA VARA, aplicada y con respuesta clara: NO trae procedimiento propio.** No es
+> que lo que anade quepa en una linea: **es que no anade nada.** El nodo grande lo
+> contiene entero y ademas trae dos pasos previos (tipo de canal, unidades por
+> precio de venta validado) y dos posteriores (el burn aceptable, cuantos pivotes
+> quedan) que el chico no tiene.
+>
+> **Es el CONTENIDO SIN RESIDUO**, la fusion mas barata que existe: **se borra el
+> chico y no hay que salvar nada de el.** Distinto del caso normal, donde siempre
+> queda algo que rescatar.
+>
+> **Y tiene arista en los dos sentidos**, verificada resolviendo a nodo vivo: **el
+> grafo ya sabe que van juntos.**
+
+#### 406: el gemelo VERDADERO de `key_resources_hypothesis`, y lo que le dice a la calibracion
+
+**El molde PLANTILLA DE ID esta registrado en `INTRA_DOMINIO_RESUMEN.md` como
+falso positivo conocido**, con su ejemplar: el puesto **427**,
+`key_partners_hypothesis` contra `key_resources_hypothesis`, **dos ids de la misma
+plantilla sobre contenidos que no se parecen**, que salio **D**.
+
+**Y ahora estan leidos los DOS gemelos verdaderos de esos dos nodos:**
+
+| nodo | su gemelo de verdad | id | puesto | clase |
+|---|---|---|---:|:---:|
+| `key_partners_hypothesis` | `partners_hypothesis_physical` | **misma plantilla** | 361 | **A** |
+| `key_resources_hypothesis` | **`recursos_clave`** | **plantilla distinta**, de otro libro | **406** | **A** |
+
+> **LO QUE ESTO LE ANADE A LA CALIBRACION, y es a favor del instrumento**: el
+> molde **engano una vez** (el 427) **y no impidio cazar a ninguno de los dos
+> reales.** Uno lo caza **por la plantilla** y el otro **a pesar de ella**, porque
+> `recursos_clave` no comparte ni el sufijo ni el idioma.
+>
+> **El modo de fallo del eje de titulo es de PRECISION, no de RECALL**: mete un
+> par de mas, no deja fuera a los buenos. **Eso es exactamente lo que se le
+> pide a un eje que va a leerse entero.**
+
+#### 413: el cuarto miembro del sub-puro, confirmado ahora POR LECTURA
+
+**El puesto 394 lo trajo por el conteo; este lo confirma por el contenido.**
+
+| | |
+|---|---:|
+| miembros | **4** |
+| pares posibles | **6** |
+| **leidos** | **5**, y **los cinco en A** (257, 334, 394, **413**, 787) |
+| falta | **1**: el puesto **1030**, en la cola |
+
+> **`gestion_multiples_term_sheets` repite con DOS miembros distintos**, y en los
+> dos casos por el mismo mecanismo: **sincronizar los tiempos para que los term
+> sheets lleguen juntos y no revelar con quien mas se habla.** La nomina de cuatro
+> **ya no descansa en el contador: descansa en dos lecturas.**
+
+> **Y un detalle que ensena a escribir listas de perdidas**: *nunca compartas el
+> term sheet* **fue perdida aqui y NO lo fue en el 394**, porque
+> `construccion_de_leverage` si la trae y `estrategia_competencia_vcs` no. **La
+> misma instruccion es perdida o no segun el companero del par.** Las listas de
+> perdidas no son del nodo: son del par.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -5227,6 +5312,7 @@ y que decide cada una.**
 | **nomina medida** | **siete** por lectura contra **cinco** censados. 21 pares posibles, 10 en cola, **5 leidos**, 11 que nunca entraron, **dos aristas internas** |
 | **el saldo** | dentro de Blank ya esta resuelto: la misma puerta **repite** (268 A), puertas distintas son **sanas** (594 D, 598 D). **El cruce entre libros no**: 771 y 843, los dos **B** |
 | **QUE DECIDE** | si el catalogo quiere **un nodo por LIBRO** o **un nodo por PUERTA** del proceso |
+| **EL CRITERIO, con evidencia** | **si cada libro ya se repite a si mismo, el criterio de reparto no puede ser el libro.** Medido: dentro de Blank la misma puerta repite (**268 A**), dentro de Ries la misma decision repite (**860 A**), y el **acto** de pivotar repite entre los dos libros (**857 A**). **Los unicos pares sin resolver son los cruzados** (771, 843). **La evidencia empuja hacia UN NODO POR PUERTA** |
 | **AMPLIADA el 13 ago 2026** | la zona tiene **DOS familias**, la de la **DECISION** (siete nodos) y la del **ACTO de pivotar** (`pivote_estrategico`, `pivote_startup`, `catalogo_pivotes`), y **SEIS dudosos** contados del archivo: 591, 668, 737, 753, 771 y 843. **`pivote_startup` solo carga cuatro de los seis** |
 | **recomendacion del auditor, registrada** | **el catalogo se organiza por lo que el lector HACE, no por la biblioteca**: **un nodo por PUERTA** como opcion por defecto, y **nodo por libro solo donde los libros discrepen de verdad**, y entonces se llama **FRONTERA DECLARADA** y se escribe como tal, no como dos nodos que se ignoran |
 

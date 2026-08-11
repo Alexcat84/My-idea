@@ -702,6 +702,22 @@ herramientas muertas**, `Delicious` en uno y `Social Mention` en los dos.
 > sanos. **Ahí la pregunta no es cuál sobra sino cuántos nodos quiere el
 > catálogo**, y **se lee entero** antes de tocar nada.
 
+#### EL CONTADOR SE COMPLEMENTA CON EL BARRIDO DE LAS A
+
+**Adoptada el 13 ago 2026, junto a la regla del contador.** El texto completo vive
+en **§9.15**, al final de este banco, y **no se copia aquí**: esta línea es el
+puntero desde donde se usa.
+
+> **Todo nodo con un A VIGENTE contra cualquier miembro es candidato a miembro** y
+> entra a la lectura de pertenencia. **El contador dice dónde mirar por el nombre;
+> el barrido de las A dice dónde mirar por el archivo.**
+
+> **El modo de fallo que lo obliga**: el contador **falla cuando el nodo se llama
+> por su ARTEFACTO y no por la familia.** Ejemplar: el quinto puro se declaró con
+> tres miembros porque el censo se corrió sobre *competencia entre inversores*, y
+> el cuarto, `gestion_multiples_term_sheets`, **se llama por el documento**. Sus
+> dos pares con miembros ya estaban en el archivo **y los dos en A** (394 y 413).
+
 #### TABLA VIVA DE LOS PUROS, al 12 ago 2026
 
 **Esta tabla es la fuente. Las declaraciones individuales de más abajo quedan

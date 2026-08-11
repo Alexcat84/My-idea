@@ -621,3 +621,21 @@ dos**, y no por casualidad: **los dos son el mismo molde.**
 siendo el que caza los pares de id casi identico que la semantica no siempre
 sube, que es justo para lo que se puso. **Lo que queda medido es su modo de
 fallo, y ahora tiene nombre.**
+
+### AMPLIACION DEL 13 ago 2026: el molde engano una vez y no dejo fuera a ninguno
+
+**Con la relectura R23 estan leidos los gemelos VERDADEROS de los dos nodos que el
+molde emparejo mal.**
+
+| nodo | su gemelo de verdad | comparte plantilla | puesto | clase |
+|---|---|---|---:|:---:|
+| `key_partners_hypothesis` | `partners_hypothesis_physical` | **si** | 361 | **A** |
+| `key_resources_hypothesis` | **`recursos_clave`** | **no**, ni el sufijo ni el idioma | **406** | **A** |
+
+> **Uno se caza POR la plantilla y el otro A PESAR de ella.** El molde produjo
+> **un** par de mas (el 427, en D) y **no dejo fuera a ninguno de los dos reales**.
+
+> **La calibracion queda dicha en una linea: el modo de fallo del eje de titulo es
+> de PRECISION, no de RECALL.** Mete pares de mas, no pierde los buenos. **Para un
+> eje que va a leerse entero, ese es el fallo barato**, y confirma la decision de
+> no tocar el umbral a mitad de corrida.
