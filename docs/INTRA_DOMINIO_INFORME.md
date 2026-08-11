@@ -10670,3 +10670,136 @@ VARIOS LADOS**: `mercados_multilaterales`, `multi_sided_market_channel` y
 > **cinco familias del inventario ya no pueden cambiar de forma por el camino
 > ordinario**. De aqui en adelante, lo que las mueva tendra que venir de los pares
 > que nunca se encolaron, **y esos hay que ir a buscarlos, no esperarlos.**
+
+## 63. LA TANDA LARGA 1518-1817: tres dominios, tres tasas, y la duplicacion cambia de casa
+
+**Trescientos pares en una sola tanda. VEINTICINCO A, 8,3 por ciento.** Los
+checkpoints de los 1.700 y los 1.800 caen dentro y van con sus cifras.
+
+| medida | cifra |
+|---|---:|
+| **registrados** | **1.817 de 3.388**, el 53,6 por ciento |
+| huecos | **cero** |
+| global | **A 361, B 89, C 7, D 1.360** |
+| **tasa global de A** | **19,9%**, y baja del 20 por primera vez |
+| **nucleo (core)** | **1.445 pares, A 344, 23,8%** |
+
+> **EL NUCLEO NO SE MOVIO NI UN PAR EN ESTA TANDA.** El ultimo par de `core` fue
+> el **1600**. De los trescientos, **83 son core** (los del tramo 1518-1600) y
+> **217 no lo son**. La tasa del nucleo queda congelada en 23,8 por ciento hasta
+> que la cola vuelva a traer pares del catalogo central.
+
+### 63.1 LAS TRES SERIES, y la tasa por dominio es la cifra que importa
+
+| tramo | pares | A | tasa | **con la vara** | **vara-A** | dominios |
+|---|---:|---:|---:|---:|---:|---|
+| 1518-1600 | 83 | 9 | 10,8% | 23 (27,7%) | 0 | core |
+| **1601-1700** | 100 | **2** | **2,0%** | 21 (21,0%) | 0 | entrega |
+| **1701-1800** | 100 | **10** | **10,0%** | 8 (8,0%) | 0 | entrega + environmental |
+| 1801-1817 | 17 | 4 | 23,5% | 1 (5,9%) | 0 | environmental |
+| **TOTAL** | **300** | **25** | **8,3%** | **53 (17,7%)** | **0** | |
+
+**Y POR DOMINIO, que es donde la cifra se vuelve legible:**
+
+| dominio | pares leidos | A | **tasa de A** |
+|---|---:|---:|---:|
+| `core` | 1.445 | 344 | **23,8%** |
+| `compras` | 155 | 1 | **0,6%** |
+| **`entrega`** | **171** | **2** | **1,2%** |
+| **`environmental`** | **46** | **14** | **30,4%** |
+
+> **La tasa media del tramo, 8,3 por ciento, no describe ningun dominio.** Es el
+> promedio de un dominio que casi no repite, entrega con **1,2 por ciento**, y de
+> otro que repite mas que el nucleo, environmental con **30,4 por ciento**. **La
+> centena 1601-1700 es la mas limpia del ejercicio entero, con DOS A**, y la que
+> viene detras multiplica esa cifra por cinco.
+>
+> **Leccion para el marcador: a partir de aqui la tasa global deja de ser una
+> medida del catalogo y pasa a ser una medida de que dominio esta pasando por la
+> cola.** Se reporta, pero se lee **por dominio**.
+
+**LA VARA SIGUE SIN PRODUCIR UNA SOLA A, Y YA VAN OCHOCIENTOS DIECISIETE PARES.**
+Desde el puesto 1001 ha decidido **268 pares y los 268 salieron CONTINUA**. Y su
+frecuencia **cae con el dominio**: 27,7 por ciento en core, 21 por ciento en
+entrega, **5,9 por ciento en environmental**. En un dominio de nodos gemelos casi
+no hay madres ni hijos que separar.
+
+### 63.2 EL DOMINIO DE ENTREGA: una malla, no un catalogo con duplicados
+
+**171 pares leidos y solo DOS A**, las dos en los primeros doce puestos del
+dominio. Despues, **CIENTO CINCUENTA Y NUEVE pares seguidos sin una sola A.**
+
+> **El retrato del dominio**: unos veinticinco nodos de empaque, medicion y
+> servicio que **se cruzan en dependencias reales y no en repeticiones**. La
+> anatomia dominante es la de la vara: **una regla general de empaque nombra un
+> caso en una linea y otro nodo trae el procedimiento de ese caso** (liquidos,
+> fragiles, pesados, mercancia peligrosa, teletrabajo, alucinaciones del carton).
+>
+> **Y la QUINTA ESTRELLA del ejercicio nacio aqui**, en el puesto 1609: centro
+> `calcular_peso_dimensional_antes_cotizar`, dos A con los perifericos y el par
+> periferico sano. **Cobertura 3 de 3, completa, y la primera estrella fuera del
+> nucleo.**
+
+**TRES TENSIONES DEL DOMINIO que ningun nodo resuelve**, anotadas para su mesa:
+
+| puestos | la tension |
+|---|---|
+| **1714, 1741, 1765** | el **piso de cinco centimetros de relleno** contra la orden de **reducir el relleno excesivo**, sin que nadie defina la proteccion minima |
+| **1726** | el **patron de cinta en H** recorre la misma cara grande y plana donde la etiqueta debe quedar **sin cinta encima** |
+| **1733, 1679** | la **copia interior de la etiqueta** y la **regla del contenedor rigido** suponen una caja, y el nodo del umbral admite **sobre o bolsa** |
+
+### 63.3 EL DOMINIO AMBIENTAL: entra duplicando
+
+**46 pares leidos y CATORCE A, 30,4 por ciento**, la tasa mas alta de cualquier
+dominio del archivo y por encima del nucleo en su mejor momento reciente.
+
+> **Y la forma de esa duplicacion es distinta a todo lo visto.** De las catorce A,
+> **once son entre identificadores casi iguales**: el mismo concepto escrito dos
+> veces con el sustantivo cambiado, con las palabras invertidas, con un dos al
+> final, o con una preposicion de diferencia.
+>
+> **La trampa de identificador deja de ser una rareza y pasa a ser LA FORMA
+> PRINCIPAL de este dominio.** En el nucleo se contaron doce trampas en mil
+> seiscientos pares; aqui hay once confirmadas en cuarenta y seis.
+
+**Y no todas confirman, que es lo que hace util la lectura:** el **1780**
+(`issue_spotting_ambiental` contra `issue_spotting_sostenibilidad`) y el **1813**
+(`eco_efectividad` contra `eco_efectividad_2`) **son identificadores gemelos que
+salen SANOS**, porque debajo hay dos instrumentos distintos. **La trampa se
+confirma leyendo los pasos, nunca leyendo el nombre.**
+
+### 63.4 CINCO SUBCONJUNTOS ESTRICTOS EN UNA SOLA TANDA
+
+**La figura del subconjunto estricto, que en mil quinientos pares habia dado tres
+ejemplares (511, 1182, 1332), da CINCO en esta tanda:**
+
+| puesto | el nodo contenido | dentro de |
+|---:|---|---|
+| **1573** | `design_test_repeat` | `design_thinking_proceso` |
+| **1601** | `calcular_peso_dimensional_antes_cotizar` | `medir_paquete_redondeando_hacia_arriba` |
+| **1776** | `evitar_greenwashing_2` | `evitar_greenwashing` |
+| **1794** | `critica_al_pib_como_metrica` | `critica_del_pib_como_metrica_de_progreso` |
+| **1811** | `liderazgo_ceo_sostenibilidad` | `vision_alineacion_sostenibilidad` |
+
+> **Con estos cinco la figura llega a OCHO ejemplares y deja de ser una
+> curiosidad.** Y su anatomia es siempre la misma: **un nodo corto cuyos pasos
+> estan todos dentro de uno largo, al mismo grano y sin aportar procedimiento.**
+> **No es jerarquia**, porque el corto no detalla nada; **es el mismo texto
+> podado.**
+
+### 63.5 EL RETRATO DE LAS A, recomputado al 1817
+
+| medida | al 1600 | **al 1817** |
+|---|---:|---:|
+| nodos tocados por alguna A | 480 | **510** |
+| componentes | 178 | **192** |
+| **parejas sueltas** | 120 | **132** |
+| de tres | 31 | **33** |
+| de cuatro | 11 | **11** |
+| de ocho / nueve / trece | 1 / 1 / 1 | **1 / 1 / 1** |
+
+> **La lectura del plan se refuerza en vez de cambiar: DOS mesas y ahora CIENTO
+> TREINTA Y DOS decisiones de par.** Las catorce componentes nuevas de la tanda
+> **son todas de dos o de tres nodos**, y **ninguna de las tres componentes
+> grandes se movio ni se fusiono con otra**. **Sigue sin haber una tercera mesa
+> escondida**, y los dominios nuevos no traen mesas: traen parejas.
