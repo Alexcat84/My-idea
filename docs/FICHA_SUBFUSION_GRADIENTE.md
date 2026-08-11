@@ -2877,6 +2877,77 @@ no por el informe cerrado.
 > escribio. **El informe dice lo que el instrumento vio. Esta lista dice lo que
 > aparecio despues.** Las dos cifras siguen siendo verdad por separado.
 
+### LA POBLACION MEDIDA: 20 nodos, no uno
+
+**Medida el 11 ago 2026, disparada por el puesto 590 del cribado intra.** La
+lista dejo de ser una anecdota y paso a tener tamano.
+
+**El predictor de fuentes de este instrumento dice que declarar dos o mas obras
+en el campo `fuente` es la senal mas fuerte de costura, 91% de aciertos.**
+Contado sobre el grafo:
+
+| | |
+|---|---:|
+| nodos **vivos** que declaran DOS obras en `fuente` | **67** |
+| de esos, **entraron a la cola de las 128** | **47** |
+| de esos, **NUNCA entraron a la cola** | **20** |
+
+> **VEINTE nodos llevan puesta la senal mas fuerte del instrumento y el
+> instrumento no llego a mirarlos.** No es un fallo del cierre: las 128 son las
+> 128 que las dos senales cazaron. **Es el tamano real de lo que quedo afuera, y
+> ahora esta contado en vez de sospechado.**
+
+**Los veinte, con lo que el otro eje ya sabe de ellos:**
+
+| nodo | pasos | las dos obras declaradas | lectura del cribado intra |
+|---|---:|---|---|
+| `analisis_trafico_competitivo` | 8 | The Startup Owner's Manual mas Traction | 508 **A** |
+| `bundle_ideas` | 9 | The field guide to human-centered design mas Essentials of Supply Chain | **sin par en la cola intra** |
+| `co_creation_session` | 9 | The field guide to human-centered design mas Essentials of Supply Chain | sin leer aun |
+| `criterios_seleccion_proveedores` | 10 | A Project Manager's Book of Forms mas Essentials of Supply Chain | **sin par en la cola intra** |
+| `decision_pivote_perseverar` | 9 | The Lean Startup mas Traction | 464 D |
+| `diseno_estructura_recompensas_roles` | 7 | The Founder's Dilemmas mas Never Lose a Customer Again | **sin par en la cola intra** |
+| `earned_vs_paid_media` | 8 | The Startup Owner's Manual mas Traction | **sin par en la cola intra** |
+| `estrategia_crecimiento_clientes` | 10 | The Startup Owner's Manual mas Never Lose a Customer Again | sin leer aun |
+| **`fit_problema_solucion`** | 6 | **Value Proposition Design mas Traction** | **490 A, 497 A, 536 A** |
+| **`five_whys_inversion_proporcional`** | 9 | **The Lean Startup mas SPIN Selling** | **590 A**, 620 D |
+| `gestion_cuentas_por_cobrar` | 9 | Financial Intelligence for Entrepreneurs mas Essentials of Supply Chain | sin leer aun |
+| `gestion_inventario` | 9 | Financial Intelligence for Entrepreneurs mas Essentials of Supply Chain | sin leer aun |
+| `keep_customers_strategy` | 6 | The Startup Owner's Manual mas Never Lose a Customer Again | 210 B, **624 A** |
+| `metricas_de_adquisicion_activacion` | 9 | The Startup Owner's Manual mas Traction | 392 **A** |
+| `preguntas_ipo_dolor_cliente` | 7 | The Startup Owner's Manual mas SPIN Selling | sin leer aun |
+| `procesamiento_paralelo_con_espirales` | 9 | Winning at New Products mas Essentials of Supply Chain | sin leer aun |
+| `relaciones_con_clientes` | 8 | Business Model Generation mas Never Lose a Customer Again | **sin par en la cola intra** |
+| **`retention_metrics`** | 9 | The Startup Owner's Manual mas Never Lose a Customer Again | 233 B, **522 A** |
+| `seleccion_estrategia_pricing` | 6 | The Startup Owner's Manual mas Essentials of Supply Chain | **sin par en la cola intra** |
+| `superioridad_producto_beneficios` | 10 | Winning at New Products mas SPIN Selling | 285 **A**, 461 D |
+
+**Tres cosas que la tabla dice y que no se veian antes:**
+
+> **1. Ocho de los veinte ya tienen lectura del otro eje, y seis de esos ocho
+> dieron por lo menos una A.** O sea que **el eje intra ya los estaba encontrando
+> de rebote**, uno por uno, sin saber que compartian esta marca.
+>
+> **2. SEIS de los veinte no tienen ni un par en la cola intra.** A esos **no los
+> va a encontrar ningun eje**: ni el de costuras, que cerro sin verlos, ni el
+> intra, que no tiene por donde entrarles. **Sin esta lista quedaban invisibles
+> para siempre.**
+>
+> **3. `five_whys_inversion_proporcional` es el ejemplar que abrio la medicion**:
+> nueve pasos, del 1 al 5 el analisis de incidentes de Ries y del 6 al 9 un bloque
+> de VENTAS de Rackham, la causa raiz de las objeciones, revisar grabaciones de
+> llamadas y redisenar el entrenamiento. **La costura la declara el propio campo
+> `fuente`** y aun asi el nodo nunca entro a la cola.
+
+> **Y el dato que mas ordena el plan**: **`fit_problema_solucion` es al mismo
+> tiempo uno de estos veinte y el CENTRO DE REPETICION de la familia del encaje**
+> de la seccion 15.6 del informe intra, la que repite con sus otros tres hermanos.
+> **El nodo que mas duplica hacia afuera es tambien el que esta partido por
+> dentro.** Ese se arregla una sola vez, por el TOQUE UNICO, y el arreglo tiene
+> que hacerse **antes** de decidir la arquitectura de la familia.
+
+---
+
 ### 1. `core/retention_metrics`, 9 pasos: PRIMERA FUERA DE COLA
 
 **Hallada el 11 ago 2026 en el puesto 522 del cribado intra-dominio**, o sea

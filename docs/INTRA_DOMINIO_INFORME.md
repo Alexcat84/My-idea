@@ -1696,3 +1696,188 @@ clases son B, C y D: tres pares, tres clases distintas.**
 > delante**, y **solo dos de los cuatro tienen la cuenta cerrada**: el 201 con tres
 > de tres, y ninguno mas. **El 203 tiene dos pares sin leer, el 246 cinco y el 360
 > tres**: ninguno de esos puede declararse ni puro ni mezclado-completo todavia.
+
+---
+
+## 15. EL TRAMO 568 a 645: la regla de la arista se parte en dos
+
+**Setenta y ocho pares leidos, los setenta y ocho del nucleo.** Es el tramo que
+mas le ha exigido a la regla de la seccion 3, y la regla salio de el **partida en
+sus dos mitades, con una de ellas puesta a prueba y todavia sin veredicto.**
+
+### CHECKPOINT DE LOS 600, contado antes de escribir
+
+| | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **global al puesto 600** | **600** | 215 | 44 | 4 | 337 | **35,8%** |
+| **nucleo al puesto 600** | **445** | 214 | 42 | 4 | 185 | **48,1%** |
+
+**Y el acumulado al cierre de este tramo, que es la cifra de lectura:**
+
+| | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **global** | **645 de 3.388** | 233 | 48 | 4 | 360 | **36,1%** |
+| **nucleo** | **490** | 232 | 46 | 4 | 208 | **47,3%** |
+| tramo 568 a 645 | 78 | 28 | 9 | 0 | 41 | 35,9% |
+
+> **La tasa de A del nucleo lleva veinte puestos moviendose menos de un punto**
+> (49,5% en el 567, 48,1% en el 600, 47,3% en el 645). **Baja despacio y no rebota.**
+
+### 15.1 LA MITAD QUE NUNCA HABIA DISPARADO: con arista y aun asi duplicacion
+
+**La regla de la seccion 3 tiene dos mitades y hasta este tramo solo se habia
+usado una.** La segunda dice que **una madre que RE-DESARROLLA al mismo grano que
+su hijo es duplicacion aunque la arista exista.** Nunca habia disparado. En este
+tramo disparo **tres veces**:
+
+| puesto | el par | la arista | por que igual repite |
+|---:|---|:---:|---|
+| **570** | `desarrollo_presentacion_problema` contra `presentacion_problema_tres_columnas` | **en los dos sentidos** | la madre recorre las tres columnas en sus pasos 2, 3 y 4 **con el mismo detalle** que el hijo |
+| **614** | `alineacion_cadena_estrategia_negocio` contra `definicion_alineacion_cadena_suministro` | **en los dos sentidos** | ninguno resume al otro: los dos disenan la cadena entera |
+| **635** | `customer_development_modelo` contra `customer_discovery` | **en los dos sentidos** | mismo orden, mismo grano, mismas cuatro ordenes |
+
+> **La arista no absuelve.** Lo que absuelve es que **uno de los dos sea un
+> resumen**. Cuando los dos textos son del mismo tamano de grano, la arista solo
+> documenta la duplicacion en vez de resolverla.
+
+### 15.2 LA MITAD QUE SE PUSO A PRUEBA: HERMANOS ENLAZADOS MENOS UNO
+
+**Figura nueva, y va con una pregunta abierta para el auditor.** Aparecio en el
+puesto **581** y se repitio en el **633**.
+
+> **Cuando una madre enlaza a los hijos de sus OTROS pasos y no al de este, la
+> arista que falta parece una omision del grafo y no una prueba de duplicacion.**
+
+| puesto | la madre | hijos con arista | el hijo sin arista |
+|---:|---|:---:|---|
+| **581** | `cumplimiento_magnuson_moss` | **4 de 5** | `prohibicion_tie_in_sales` |
+| **633** | `proceso_diseno_modelo_negocio_5_fases` | **2 de 5** | `fase_diseno_prototipado_modelos` |
+
+**Y aqui esta la incoherencia, declarada en vez de escondida:**
+
+> **El 581 quedo en D PROVISIONAL** porque fusionar romperia una familia sana de
+> cinco radios. **El 633 quedo en A**, aplicando la regla literal, **porque su
+> misma silueta con su misma madre ya habia dado A en el puesto 395** y el archivo
+> no puede contradecirse solo.
+>
+> **Los dos no pueden estar bien.** Si el auditor acepta el refinamiento, se
+> releen juntos el **395**, el **581** y el **633**, y hay que fijar **desde que
+> proporcion de hermanos enlazados la arista que falta deja de acusar**: el 581
+> esta en cuatro de cinco y el 633 en dos de cinco, y no es lo mismo.
+
+### 15.3 DUPLICACION CRUZADA: cada uno absorbe lo que el otro enlaza
+
+**Figura nueva, dos ejemplares en cuatro puestos de distancia.**
+
+| puesto | uno lo trae DENTRO | el otro lo ENLAZA |
+|---:|---|---|
+| **573** | `colaboracion_cadena_suministro` trae el diagnostico del efecto latigo en sus pasos 1 y 2 | `compartir_datos_cadena_suministro` apunta a `diagnostico_efecto_latigo` |
+| **574** | `gestion_portafolio_formal` trae los Strategic Buckets en su paso 4 | `portfolio_management` apunta a `metodo_strategic_buckets` |
+
+> **El mismo material vive dos veces con dos tratamientos opuestos**: pegado por
+> dentro en un nodo y colgado por fuera en el otro. **La mesa tiene que elegir uno
+> de los dos tratamientos para el catalogo entero**, porque hoy el lector recibe
+> respuestas distintas segun por cual entre.
+
+Y el **568** trae la version extrema: **una madre que no enlaza a NINGUNO de sus
+dos hijos, y los dos hijos enlazados entre si.**
+
+### 15.4 UN NODO AVERIADO CONTAMINA TODOS SUS PARES
+
+**Regla de metodo, encontrada en el 592 y confirmada en el 599.**
+
+> **Un veredicto emitido contra un texto que va a cambiar no vale.** Por el
+> **TOQUE UNICO del banco 9.4**, cuando uno de los dos nodos es costura
+> confirmada, **el par se lee DESPUES del arreglo interno, no antes.**
+
+| puesto | quien esta averiado | que dice la ficha de costuras |
+|---:|---|---|
+| **592** | `producto_minimo_viable` | **el emblema**: 22 pasos y 10 condiciones para cinco cosas, con la misma orden repetida cuatro veces |
+| **599** | **los DOS** | `key_partners_hypothesis` es **triple**; `asociaciones_clave` son **tres bloques de dos libros**, con un libro declarado dos veces en el campo `fuente` |
+
+### 15.5 LAS NOMINAS ESTAN CORTADAS, y se puede medir cuanto
+
+**Tres familias medidas contra su racimo censado, y las tres salen cortas.**
+
+| familia | nodos vivos que la nombran | en la nomina censada | pares en cola | leidos | pendientes |
+|---|---:|---:|---:|---:|---:|
+| **el pivote** (puesto 591) | **19** | racimo de otra puerta | 28 | 4 | 24 |
+| **customer discovery** (puesto 615) | **16** | **7** | 32 | 14 | 18 |
+| **la sucesion del CEO** (puesto 618) | **11** | **sin censar** | 21 | 6 | 15 |
+
+**Y el corte no es arbitrario, es peor: corta por el medio de un par que repite.**
+
+> **Puesto 598**: la nomina del racimo `Pivotar o proceder` tiene un nodo de la
+> puerta de **validacion** y deja fuera uno de la puerta de **descubrimiento**,
+> con el que el puesto 268 ya emparejo en **A**.
+>
+> **Puesto 611**: `customer_discovery` esta en la nomina y
+> `customer_discovery_introduccion` no, **y el par repite**.
+
+**La familia de la sucesion trae ademas la firma del racimo del cierre**: diez de
+once son de *The Founder's Dilemmas*, **uno es forastero** de *The Hard Thing
+About Hard Things*, y un doceavo declara los dos libros a la vez y es costura
+confirmada.
+
+#### La leccion del barrido por nombre, aprendida a la mala
+
+> En el puesto **615** escribi que `equipo_customer_development` y
+> `customer_development_team` **son una pareja que se lee sola**. En el puesto
+> **637** los lei de verdad y **no son gemelos**: comparten un paso, no cuatro.
+> **Corregido en su razon.**
+>
+> **Un barrido por nombre senala donde mirar, nunca que decir.** Lo habia escrito
+> yo mismo en el puesto 591 y aun asi lo hice mal veinticuatro puestos despues.
+
+### 15.6 SEGUNDO MEZCLADO COMPLETO: la familia del ENCAJE, y es SUELTA
+
+**Encontrada en el puesto 638 contando el jsonl. Cumple la condicion dura.**
+
+| | |
+|---|---:|
+| miembros | **4**: `fit_problema_solucion`, `problem_solution_fit`, `product_market_fit`, `verificar_product_market_fit` |
+| pares posibles | **6** |
+| **leidos** | **6** (puestos 186, 297, 338, 490, 497, 536) |
+| pendientes | **0** |
+| clases | **3 A y 3 B** |
+| **aristas internas** | **CERO** |
+
+**Pero la forma no es un monton: las clases estan repartidas con sentido.**
+
+> **Los tres A son los tres pares de `fit_problema_solucion`**, o sea que ese nodo
+> **repite con los otros tres**. Los tres B son los otros tres pares entre si.
+>
+> **No es un mezclado sin centro como el 201: es un CENTRO DE REPETICION.** Un
+> nodo que absorbe a los tres y tres nodos que entre ellos son dudosos.
+>
+> **Y el centro de repeticion es, otra vez, una costura**: `fit_problema_solucion`
+> declara *Value Proposition Design* **y** *Traction* en su campo `fuente`, **y es
+> uno de los veinte que quedaron fuera de la cola de las 128.**
+
+### 15.7 LA SERIE DE COLEMAN, afinada por dos pares
+
+**La doctrina de la serie por fases quedo con su limite escrito:**
+
+| puesto | el par | clase | por que |
+|---:|---|:---:|---|
+| **580** | Assess contra Activate | **D** | **fases distintas**: mismo instrumento, dos publicos, dos entregables |
+| **595** | Accomplish contra Accomplish | **A** | **la MISMA fase**: no hay nada que los salve |
+
+> **En una serie por fases, dos nodos de fases distintas son sanos y dos nodos de
+> la misma fase son gemelos.** La serie legitima la repeticion del instrumento,
+> no la del casillero.
+
+### 15.8 TRACTION, forastero recurrente en las familias de Rackham
+
+**Segundo ejemplar, encontrado en el puesto 625.**
+
+| familia de Rackham | el forastero | su fuente |
+|---|---|---|
+| **el cierre en venta grande** (seccion 9) | `tacticas_cierre_ventas` | ***Traction*** (Weinberg) |
+| **SPIN** | **`framework_spin_selling`** | ***Traction*** (Weinberg) |
+
+> **Un nodo que se llama `framework_spin_selling` y cita a Weinberg** es la misma
+> anomalia que el octavo miembro del racimo del cierre. **Dos veces no es
+> casualidad: hay una extraccion de *Traction* que dejo material de SPIN con la
+> procedencia cambiada**, y eso lo tiene que mirar el frente de fuentes, no la
+> mesa de racimos.
