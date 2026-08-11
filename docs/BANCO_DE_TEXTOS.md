@@ -730,15 +730,20 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **2** | la ecuación de valor | **4** | **6** | 4 | 4 | **SUB-PURO desde el 13 ago 2026**, degradado con corrección declarada: el puesto **950** trae un cuarto miembro por el **barrido de las A** |
 | **3** | el sales roadmap | **5** | **10** | 5 | 4 | **MEZCLADO desde el 13 ago 2026**: el puesto **872** sale D y rompe el sub-puro |
 | **4** | la etapa de investigación en la venta | **4** | **6** | **5** | **5** | **SUB-PURO a UNA lectura de cerrarse**: el 862 sale A; falta un par que nunca entró a la cola |
-| **5** | la competencia entre inversores | **4** | **6** | 5 | 5 | **SUB-PURO** desde el 13 ago 2026, **degradado con corrección declarada**: el contador se quedó en tres y el cuarto miembro se llamaba distinto |
+| **5** | **la competencia entre inversores** | **4** | **6** | **6** | **6** | **PURO, y el PRIMERO DE CUATRO MIEMBROS** del archivo (puesto 1030). Se declaró puro con tres por el contador, se degradó a sub-puro por el **barrido de las A**, y vuelve a puro **con el tamaño correcto** |
 | **6** | **la etnografía de campo** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el primero que **nace de un par CRUZADO** entre dos parejas ya declaradas |
-| **7** | **la junta asesora** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el único donde el par que cruza **los dos momentos** (identificar y formalizar) ya está leído y es A |
+| **7** | la junta asesora | **4** | **6** | **4** | **4** | **SUB-PURO**, y el único donde el par que cruza **los dos momentos** (identificar y formalizar) ya está leído y es A. El puesto **976** lo sube a 4 de 6 |
+| **8** | **los cuadrantes de mercado** | **6** | **15** | **7** | **7** | **SUB-PURO, y el más cargado del inventario**: siete pares leídos y **los siete en A**, sin un solo sano. Añadido el 13 ago 2026 con **corrección declarada**: lo conté en cinco miembros en R18 y son **seis** |
 
 > **LECCIÓN DEL 13 ago 2026, con dos sub-puros rotos el mismo día** (el 3 por el
 > puesto 872 y la familia de innovación por el 863): **una familia con muchos
 > pares sin leer puede tener TODOS sus pares leídos en A y no ser pura.** Cuantos
 > más le falten, más fácil es que el siguiente sea el sano. **El sub-puro es una
 > promesa, no un resultado.**
+
+> **LOS PUROS DE HOY SON DOS**: el **1**, el efectivo contra la ganancia, y el
+> **5**, la competencia entre inversores. **Todo lo demás de esta tabla es
+> sub-puro o mezclado.** La ecuación de valor dejó de ser puro el 13 ago 2026.
 
 **Lo que le falta a cada sub-puro para cerrarse, nombrado:**
 
@@ -748,7 +753,8 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **4** | **1** | solo el par `etapa_de_investigacion` contra `investigacion_como_habilidad_clave`, **que nunca entró a la cola**. Una lectura dirigida lo cierra, y sería el **primer PURO de cuatro miembros** |
 | **7** | **3** | puestos **976** y **1190**, los dos en la cola, más `identificar_consejo_asesores` contra `formalizar_junta_asesora`, **que nunca entró** |
 | **2** | **2** | `construccion_de_valor_percibido` contra `ecuacion_de_valor_cliente` y contra `ecuacion_de_valor_venta`, **ninguno de los dos en la cola** |
-| **5** | **1** | puesto **1030**, `gestion_multiples_term_sheets` contra `leverage_en_negociacion_con_vcs`, **en la cola**. Si sale A, es **PURO de CUATRO**, el primero de ese tamaño |
+
+| **8** | **8** | **las ocho fuera de la cola**: ningún par pendiente de la familia de los cuadrantes está encolado |
 | **6** | **3** | las **tres fuera de la cola**: `etnografia_de_proyecto` contra `investigacion_etnografica_ideacion`, y `etnografia_aplicada_en_equipos_multidisciplinarios` contra cada uno de los dos de Cooper |
 
 > **El 6 es el más barato de cerrar de los tres sub-puros**: sus tres lecturas

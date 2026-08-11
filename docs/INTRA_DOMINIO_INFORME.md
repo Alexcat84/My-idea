@@ -6509,3 +6509,85 @@ ellos.
 > **La adjudicacion del 13 ago 2026 se paga sola en el mismo dia en que se
 > escribio**: dos veredictos que estarian bloqueados estan emitidos, con su
 > relectura anotada y sin haber juzgado nada que dependa de la cirugia.
+
+---
+
+## 43. EL TRAMO 1001 a 1036: nace el PRIMER PURO DE CUATRO, y la vara resuelve un tercio
+
+**Treinta y seis pares leidos, los treinta y seis del nucleo.** Acumulado **1.036
+de 3.388**, global **28,5%** de A y **nucleo 33,4%**. **El tramo dio 16,7%** (30
+D, 6 A).
+
+**Y la cifra nueva que el banco 9.19 manda reportar: TRECE de los treinta y seis
+se resolvieron con LA VARA, el 36%.**
+
+> **Las dos juntas dicen lo que ninguna dice sola.** Una tasa de A del 16,7% con
+> **un tercio de los pares resueltos por jerarquia** no describe un catalogo
+> limpio: describe **un catalogo mal cableado**. La cola sigue en la zona que la
+> doctrina nueva nombro.
+
+### 43.1 EL PRIMER PURO DE CUATRO MIEMBROS
+
+**Puesto 1030**, y era la unica lectura que le faltaba a la familia.
+
+| | |
+|---|---:|
+| racimo | **la competencia entre inversores** |
+| miembros | **4**: `construccion_de_leverage`, `estrategia_competencia_vcs`, `leverage_en_negociacion_con_vcs`, `gestion_multiples_term_sheets` |
+| pares posibles | **6** |
+| **leidos** | **6** |
+| **en A** | **SEIS de SEIS** |
+
+> **PURO por la condicion dura, y el primero de CUATRO miembros del archivo**,
+> despues de tres puros de tres. **La prediccion de la tanda R23 se cumple**: alli
+> quedo escrito que si el 1030 salia A, esta familia seria el primer puro de ese
+> tamano.
+>
+> **Y su historia es la del banco 9.15**: se declaro puro con **tres** miembros
+> (contador por nombre), se degrado a sub-puro cuando el **barrido de las A**
+> destapo el cuarto, **y ahora vuelve a puro con el tamano correcto.** El puro no
+> era falso: **estaba mal contado.**
+
+### 43.2 LA COLA EN ZONA DE JERARQUIAS, con nombres
+
+**Los trece resueltos con la vara, y la madre que nombra en cada uno:**
+
+| puesto | la madre nombra en una linea | el hijo trae el procedimiento |
+|---:|---|---|
+| 1001 | *mapea los tipos de cliente* | el retrato con entorno, rutina y decisor aparte |
+| 1002 | *clasifica el pivote segun el catalogo* | el reempaquetado sin redisenar el producto |
+| 1007 | *pon el esfuerzo en la calidad de tus preguntas* | la tesis de investigar con su medicion |
+| 1009 | *prueba la importancia del problema* | la deteccion de fuga con trafico frio |
+| 1012 | *selecciona el medio segun la fase* | los seis canales aplicados a Assess con su piloto |
+| 1013 | *elige la forma segun la complejidad* | pequeno en inspiracion, grande en implementacion |
+| 1020 | *disena acciones para cada una de las ocho fases* | la fase Acclimate entera |
+| 1021 | *disena las preguntas en orden SPIN* | las preguntas de implicacion con su mapeo |
+| 1022 | *identifica el rol de tu contacto* | la jerarquia real de la firma |
+| 1023 | *define quien influye y decide* | el mapa de acceso, los patrones de peligro, el flujo |
+| 1024 | *responde las seis preguntas de Chopra y Meindl* | entrevistar, comparar y clasificar el segmento |
+| 1025 | *organiza tus metricas por cohortes* | el analisis de cohortes entero |
+| 1029 | *prueba con experimentos si le importa* | el guion de la prueba de solucion |
+
+> **Trece madres que nombran y trece hijos que ejecutan.** **De los trece, once no
+> tienen arista.** Es la bolsa del barrido `paso_contra_nodo.py` apareciendo par
+> por par en la cola, exactamente como la doctrina 9.19 predice.
+
+### 43.3 Lo demas del tramo
+
+> **1. TRES ARISTAS QUE FALTAN ENTRE ARTEFACTOS QUE SE CONSUMEN** (puestos
+> **1016**, **1036** y **1002**): `validar_modelo_negocio_hechos` **empieza
+> reuniendo** las capturas que otros dos nodos producen, y no enlaza con ninguno
+> de los dos. **El catalogo describe una cadena de trabajo y el grafo no la
+> conoce.**
+>
+> **2. El CRUCE portafolio-puertas se acota** (puesto **1014**): `sistema_gates_go_kill`
+> contra `gestion_portafolio_formal` sale **sano y con arista**. **El cruce no es
+> entre las dos familias: es de un nodo concreto**, `gestion_de_portafolio_gates_go_kill`.
+> **La mesa 1 tiene ahora el problema mas chico de lo que parecia.**
+>
+> **3. Decima de las VEINTE fuera de cola, leida** (puesto **1025**,
+> `keep_customers_strategy`), y **no bloquea**: el solape cae en su segundo bloque
+> y el veredicto es invariante.
+>
+> **4. `realizar_pruebas_pasa_no_pasa` llega a CATORCE pares leidos y TRECE
+> sanos.** Sigue siendo el nodo mas leido sin duplicarse de todo el cribado.
