@@ -911,6 +911,35 @@ cerrada por definición, no reconstruida por el cribado:
 > arenas. **Queda declarado con la condición encima y con los dos puestos que la
 > resuelven nombrados.**
 
+> **LA CONDICIÓN SE CUMPLIÓ EL MISMO DÍA. CORRECCIÓN DECLARADA: el CUARTO PURO
+> queda DEGRADADO A SUB-PURO.**
+>
+> **El puesto 800 salió A**: `etapa_investigacion_ventas` repite con
+> `investigacion_como_habilidad_clave`, **tres de sus cuatro pasos son el mismo**,
+> priorizar preguntar sobre presentar, medir la proporción, y buscar lo que el
+> cliente no dice. **La familia es de CUATRO.**
+
+| la familia real | |
+|---|---:|
+| miembros | **4** |
+| pares posibles | **6** |
+| **leídos** | **4** (209, 278, 303 y **800**) |
+| **que repiten** | **4 de 4** |
+| **le faltan** | **2**: el puesto **862** y el par `etapa_de_investigacion` contra `investigacion_como_habilidad_clave`, **que nunca entró a la cola** |
+
+> **El trío sigue siendo puro puertas adentro**, así que la figura correcta es
+> **SUB-PURO**, la misma del trío del descubrimiento (276) y del trío de las
+> arenas (280).
+>
+> **Y es el candidato más barato que hay a COMPLETAR LOS PARES DEL PURO: DOS
+> lecturas dirigidas** y esta familia cierra en un sentido o en el otro, con
+> cuatro de cuatro ya repitiendo.
+>
+> **Lo que este caso deja como lección**: la condición se escribió el mismo día
+> que la declaración y se cumplió treinta y un puestos después. **Un puro
+> declarado sobre una nómina censada no es más seguro que uno declarado sobre una
+> reconstruida: el censo también corta.**
+
 ### 9.5.1 El espejo: MEZCLADO COMPLETO, y es la categoría más cara
 
 **Encontrado el 11 ago 2026 al remedir los racimos pre-regla.**

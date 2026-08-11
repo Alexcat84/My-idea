@@ -1423,7 +1423,12 @@ PURO y hay que declararlo.**
 >
 > **Cumple la condicion dura con pares posibles y no con pares de cola**, que es
 > la precision del banco 9.5. **Declarado CUARTO PURO.** **CON CONDICION, puesta ocho
-> puestos despues por el propio cribado: ver seccion 22.1.** Le falta lo unico que a
+> puestos despues por el propio cribado: ver seccion 22.1.**
+>
+> **DEGRADADO A SUB-PURO EL MISMO DIA, en el puesto 800**: la condicion se
+> cumplio, la familia es de CUATRO y le faltan dos pares. **Correccion declarada
+> en el banco 9.5 y medida en la seccion 24.1.** Lo que sigue en pie es el trio:
+> **puro puertas adentro, sub-puro hacia afuera.** Le falta lo unico que a
 > un puro le puede faltar: **un superviviente propuesto**, que aqui no lo da
 > ninguna relectura todavia.
 
@@ -3439,3 +3444,98 @@ escrita: **diecisiete pasos y CUATRO narraciones del Canvas.**
 > **Lo que si queda salvado**: el analisis cruzado, **como una debilidad de un
 > bloque golpea a los otros**, no esta en el nodo largo y es lo unico que el corto
 > aporta.
+
+---
+
+## 24. CHECKPOINT DE LOS 800
+
+**Dieciseis pares leidos en el tramo 785 a 800, los dieciseis del nucleo. Sin
+huecos: 800 de 800.**
+
+### El marcador completo, recomputado del archivo
+
+| | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **global** | **800 de 3.388** | **248** | 78 | 4 | 470 | **31,0%** |
+| **nucleo** | **645** | **247** | 76 | 4 | 318 | **38,3%** |
+| tramo 785 a 800 | 16 | 9 | 1 | 0 | 6 | **56,2%** |
+
+**La serie de checkpoints, para que se vea que la curva no la mueve el material:**
+
+| checkpoint | global | nucleo |
+|---|---:|---:|
+| 600 | 35,8% | 48,1% |
+| 700 | 34,3% | 43,9% |
+| **800** | **31,0%** | **38,3%** |
+
+> **Diez puntos de caida en el nucleo entre el 600 y el 800, y la mitad no la
+> puso la cola: la puso la doctrina.** Entre esos dos checkpoints se escribieron
+> la regla de la mayoria, la ratificacion del cero y la vara de la linea o el
+> procedimiento, y **diecinueve veredictos pasaron de A a D sin que se tocara un
+> nodo.**
+
+> **El tramo del checkpoint, en cambio, dio 56,2%, la tasa mas alta en mucho
+> rato**, y por un motivo de cola: **cayeron juntas varias parejas de gemelos
+> puros** (el leverage con los VCs, la voz del cliente, el marcador de innovacion,
+> los regalos, las metricas que importan). **La cola no reparte parejo, y por eso
+> el acumulado es la cifra de lectura y no el tramo.**
+
+### 24.1 EL CUARTO PURO DURO TREINTA Y UN PUESTOS
+
+**Declarado en la relectura R12 con la nomina censada de tres. Condicionado ocho
+puestos despues, en el 769. Degradado en el 800.**
+
+> El **800** salio **A**: `etapa_investigacion_ventas` repite con
+> `investigacion_como_habilidad_clave`, y **tres de sus cuatro pasos son el
+> mismo**.
+
+| la familia real | |
+|---|---:|
+| miembros | **4** |
+| pares posibles | **6** |
+| leidos | **4**, y **los cuatro en A** |
+| le faltan | **2**: el **862** y uno que **nunca entro a la cola** |
+
+> **Queda como SUB-PURO**, la tercera figura de esa clase con el trio del
+> descubrimiento (276) y el de las arenas (280). **Y es el candidato mas barato a
+> COMPLETAR LOS PARES DEL PURO que hay hoy: dos lecturas.**
+>
+> **La leccion, escrita tambien en el banco**: un puro declarado sobre nomina
+> **censada** no es mas seguro que uno sobre nomina reconstruida. **El censo
+> tambien corta.**
+
+### 24.2 LA LISTA DE LOS VEINTE YA BLOQUEA LECTURAS
+
+**Puesto 798, y es la primera vez.**
+
+> `preguntas_ipo_dolor_cliente` es uno de los **veinte nodos que declaran dos
+> obras y nunca entraron a la cola de las 128**. Sus siete pasos se parten a la
+> vista: **1 a 4 son las preguntas IPO de Blank** y **5 a 7 son preguntas de
+> problema de Rackham**.
+>
+> Y `preguntas_problema_2` **solapa exactamente con el bloque injertado**. Por el
+> TOQUE UNICO, el par se lee despues de la cirugia.
+>
+> **LO QUE ESTO PRUEBA: la lista de los veinte no era una curiosidad de censo.**
+> Bloquea lecturas igual que las 128, y **ninguno de esos veinte tiene todavia
+> ficha de anatomia propia.**
+
+### 24.3 Lo demas del tramo
+
+> **1. LA FAMILIA DE GARANTIAS FEDERALES, contada del archivo: ONCE nodos y
+> TREINTA Y NUEVE pares leidos, con 38 D y una sola B. CERO A.** Es, con
+> diferencia, **la familia mejor escrita del nucleo**: once nodos que se rozan
+> todo el tiempo en el vocabulario y no repiten ni una vez.
+>
+> **2. La vara sale por el lado que menos se usa** (puesto 793): `estimacion_tres_puntos`
+> desarrolla el metodo de tres puntos de su madre y **lo que anade cabe en una
+> linea**, el nombre de la ponderacion Beta. **REPITE.** Es el primer caso donde la
+> vara confirma una A en vez de tumbarla.
+>
+> **3. La familia de los tres circulos tiene DOS nodos** (puesto 795):
+> `circulos_busqueda_cofundadores` y `seleccion_relaciones_cofundadores`, con su
+> par ya leido en el 187 en **B**. **La madre no enlaza a ninguno de los dos.**
+>
+> **4. `design_test_repeat` acumula su segundo gemelo** (puesto 796, con el 723).
+> Cuatro pasos, dos gemelos y ninguna arista propia. **Es el nodo que sostuvo dos
+> veredictos de la familia del encaje** y cada lectura nueva lo deja mas suelto.
