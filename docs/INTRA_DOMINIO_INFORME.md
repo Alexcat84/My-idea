@@ -10974,3 +10974,96 @@ miembro del racimo. No lo es.**
 > **Y el forastero no queda huerfano: tiene su propio acto de dos**, del lado del
 > compromiso con linea de tiempo. **Estaba en la familia equivocada, no en
 > ninguna.**
+
+## 65. CHECKPOINT DE LOS 1.900: la curva propia del dominio ambiental
+
+**Tramo 1818-1900, ochenta y tres pares. DOCE A, 14,5 por ciento.** Todos del
+dominio `environmental`.
+
+| medida | cifra |
+|---|---:|
+| **registrados** | **1.904 de 3.388**, el 56,2 por ciento |
+| huecos | **cero** |
+| global | **A 374, B 89, C 7, D 1.434** |
+| **tasa global de A** | **19,6%** |
+
+**LA TASA POR DOMINIO, como manda el banco 9.27:**
+
+| dominio | pares | A | **tasa** |
+|---|---:|---:|---:|
+| `core` | 1.445 | 344 | **23,8%**, cerrado |
+| `compras` | 155 | 1 | 0,6% |
+| `entrega` | 171 | 2 | 1,2% |
+| **`environmental`** | **133** | **27** | **20,3%** |
+
+| tramo | pares | A | tasa | **vara** | **vara-A** |
+|---|---:|---:|---:|---:|---:|
+| **1801-1900** (la centena) | 100 | **16** | **16,0%** | 22 (22,0%) | **0** |
+| 1818-1900 (el tramo) | 83 | 12 | 14,5% | 21 (25,3%) | 0 |
+
+### 65.1 EL DOMINIO TIENE SU PROPIA CURVA, Y BAJA
+
+**La tasa de `environmental` medida en dos momentos:**
+
+| corte | pares leidos | A | tasa |
+|---|---:|---:|---:|
+| al puesto **1817** | 46 | 14 | **30,4%** |
+| al puesto **1904** | 133 | 27 | **20,3%** |
+
+> **El dominio entrega primero sus nodos escritos dos veces y despues su malla de
+> nodos complementarios.** Es la misma forma que hizo `entrega`, que abrio con dos
+> A en doce puestos y despues encadeno ciento cincuenta y nueve sanos, **pero con
+> la meseta mucho mas alta.**
+>
+> **Consecuencia para el 9.27**: la tasa por dominio **tampoco es un numero fijo,
+> es una curva**, y hay que decir en que punto de la cola se midio. **El 30,4 por
+> ciento del checkpoint anterior no era el dominio: era su primera centena.**
+
+### 65.2 LO QUE CRECIO
+
+**Cinco familias del dominio crecieron o cerraron cobertura en este tramo**, todas
+por cierre transitivo y todas de `The Green to Gold` o de `Cradle to Cradle`:
+
+| familia | tamano | cobertura | nota |
+|---|---:|---|---|
+| **la critica a la eco eficiencia** | **3** | **3 de 3, completa** | **TRIANGULO CERRADO** (1783, 1832, 1836) |
+| **el respeto a la diversidad** | **3** | **3 de 3, completa** | **TRIANGULO CERRADO** (1779, 1792, 1857), y su cuarto candidato **descartado** en el 1901 |
+| **la alianza sectorial** | **4** | 3 de 6 | crecio dos veces, 1871 y 1903 |
+| **el riesgo ambiental extendido** | **3** | 2 de 3 | 1788 y 1822 |
+| **la huella de carbono** | **3** | 2 de 3 | 1805 y 1865, con discriminacion medida |
+
+> **DOS TRIANGULOS CERRADOS EN UN SOLO TRAMO**, y con el de las estructuras de
+> gates ya son tres en el archivo. **La figura del triangulo cerrado, tres nodos y
+> tres pares en A, es hoy la unica forma que se puede afirmar sin reserva** en un
+> dominio donde casi ninguna familia tiene la cola completa.
+
+### 65.3 LA DISCRIMINACION MEDIDA, y vale como ejemplar
+
+**El mismo nodo, `definir_limites_huella_carbono`, leido contra los dos nodos de
+huella de carbono, da resultados opuestos y por un motivo verificable:**
+
+| puesto | contra | clase | por que |
+|---:|---|:---:|---|
+| **1855** | `medir_huella_carbono_corporativa` | **D** | ese nodo **no tiene** ni la frontera organizacional ni el ano base |
+| **1865** | `huella_carbono_empresarial` | **A** | ese nodo **si los tiene**, con las mismas palabras |
+
+> **No es una inconsistencia: es la vara funcionando.** Dos nodos que parecen
+> hermanos difieren en dos pasos, y esos dos pasos deciden la clase de un tercero
+> contra cada uno. **Es el mejor ejemplo del tramo de por que la clase se decide
+> leyendo los pasos y no el titulo.**
+
+### 65.4 LAS TRAMPAS DE IDENTIFICADOR DEL DOMINIO, con su tasa de acierto
+
+**Van CUATRO leidas que NO confirman**, y conviene tenerlas contadas:
+
+| puesto | el par de identificadores gemelos | resultado |
+|---:|---|---|
+| 1780 | `issue_spotting_ambiental` / `issue_spotting_sostenibilidad` | **D** |
+| 1813 | `eco_efectividad` / `eco_efectividad_2` | **D** |
+| **1867** | `dialogo_con_stakeholders` / `dialogo_stakeholders` | **D** |
+| **1886** | `triple_bottom_line` / `triple_bottom_line_2` | **D** |
+
+> **En este dominio el identificador gemelo acierta la mayoria de las veces, pero
+> falla lo bastante como para que nunca se pueda dar por hecho.** La regla
+> practica queda escrita: **la trampa se confirma leyendo los pasos, y cuatro de
+> las lecturas de este dominio existen solo porque no se dio por supuesto.**
