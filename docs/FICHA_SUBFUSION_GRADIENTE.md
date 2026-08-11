@@ -4525,6 +4525,19 @@ que en el caso 1 de Goldratt.
 
 ## h) `nucleo`, el par de INNOVACION ABIERTA: el mas pegado hasta la fecha
 
+> **SOSTENIDO EN RELECTURA A CIEGAS (11 ago 2026).** Este par es tambien el
+> **puesto 244 del cribado intra-dominio**, donde salio **A**, y la **tanda R8 de
+> la relectura lo adjudico con las razones tapadas y coincidio**. **TRES EJES lo
+> han mirado y los tres dicen lo mismo**: el gradiente lo llamo el mas pegado, el
+> intra le dio A, y la ciega lo sostiene.
+>
+> **Y la relectura anade lo que ninguno de los tres daba: que se pierde.** De
+> `innovacion_abierta` viajan **el sindrome NIH** (evaluar cuanto hay en la
+> organizacion) y **los metodos-segun-complejidad** del producto y la industria.
+> De `open_innovation_ideacion` viaja **adaptar el Stage-Gate para manejar ideas,
+> IP y tecnologias externas**. **Las tres son perdidas de LECTOR**, por la
+> distincion del banco 9.7.
+
 `open_innovation_ideacion` (puesto **187**, 6 pasos) y `innovacion_abierta`
 (puesto **233**, 7 pasos). **Los dos del nucleo y los dos del mismo libro**
 (*Winning at New Products - Robert G. Cooper*).

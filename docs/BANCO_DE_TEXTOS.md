@@ -787,6 +787,46 @@ Selling*. Verificado en el archivo de veredictos:
 aparezca con arista verificada se anota aquí en vez de ir a la mesa**: es la vía
 rápida, y su valor está en no gastarle a la mesa un tiempo que no le corresponde.
 
+### 9.7 PÉRDIDA DE LECTOR contra PÉRDIDA DE CATÁLOGO
+
+**Distinción del 11 ago 2026, nacida de una corrección a una frase mía.**
+
+**Cuando dos nodos se funden, lo que solo tenía el que muere se pierde. Pero no
+todas las pérdidas son la misma avería:**
+
+| tipo | qué pasa | qué cuesta arreglarlo |
+|---|---|---|
+| **PÉRDIDA DE CATÁLOGO** | el dato **no existe en ningún otro nodo vivo**. Si no se rescata antes de fundir, **desaparece del producto** | **hay que rescatarlo ANTES de fusionar**, y eso condiciona el orden del trabajo |
+| **PÉRDIDA DE LECTOR** | el dato **sigue existiendo en otro nodo**, pero **quien lea el superviviente no llegará a él** | **arista o traslado**, y se puede hacer después |
+
+> **La diferencia no es cosmética: cambia el orden del plan.** Una pérdida de
+> catálogo **bloquea** la fusión hasta que alguien rescate el dato. Una de lector
+> **no bloquea nada**: la fusión se hace y el enlace se añade luego.
+
+**EL EJEMPLAR, y es el que obligó a escribir la distinción.** En la relectura R7
+escribí que la cifra doctrinal de Blank, *1,7x o 3x el presupuesto de marketing
+del líder*, **o viajaba en la fusión o desaparecía del catálogo**.
+
+> **Era falso, y lo destapó el propio cribado una hora después.** La cifra vive en
+> **dos nodos vivos**: `hipotesis_tipo_mercado` y `analisis_costo_entrada_mercado`.
+> Y el segundo **es hijo con casa propia del primero, CON arista verificada**:
+> desarrolla justamente su paso del costo de entrada, **y lo hace con más
+> precisión**, añadiendo los umbrales del **74, el 41 y el 26 por ciento**.
+>
+> **O sea que el dato no solo no desaparecía: estaba mejor guardado al lado, y con
+> camino desde el original.** **Era una pérdida de lector, y de las leves.**
+
+**LA REGLA DE MÉTODO QUE DEJA:**
+
+> **La tercera pregunta de la relectura, *qué se pierde al fusionar*, ya no se
+> contesta con una lista: se contesta con una lista CLASIFICADA POR TIPO.**
+>
+> **Y clasificar exige ir al grafo, no a la memoria**: para decir *de catálogo*
+> hay que haber buscado el dato en el resto del catálogo y no haberlo encontrado.
+> **Decirlo sin buscar es exactamente el error que esta distinción viene a
+> impedir**, y es el que yo cometí.
+
+
 
 
 

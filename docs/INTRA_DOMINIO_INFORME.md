@@ -1009,9 +1009,54 @@ grafo.
 
 > **UNA CIFRA QUE MERECE SU PROPIA LINEA**: el 228 es el unico par de las siete
 > tandas donde lo que se pierde es **un numero**. *1,7x o 3x el presupuesto de
-> marketing del lider* no es una formulacion que se pueda reconstruir leyendo el
-> nodo superviviente: **o viaja, o desaparece del catalogo.** Las demas perdidas
-> son gestos que otro redactor podria volver a escribir; **esta no.**
+> marketing del lider* no se puede reconstruir leyendo el nodo superviviente. Las
+> demas perdidas son gestos que otro redactor podria volver a escribir; **esta
+> no.**
+>
+> **CORREGIDO EL MISMO DIA, y la correccion vale mas que la frase.** Aqui escribi
+> que la cifra *o viaja o desaparece del catalogo*. **Es falso**: vive tambien en
+> `analisis_costo_entrada_mercado`, que es **hijo con casa propia CON arista** del
+> mismo nodo y la trae **con mas precision**, con los umbrales del 74, el 41 y el
+> 26 por ciento. **Es una PERDIDA DE LECTOR, no de catalogo**, y de ahi salio la
+> distincion del banco 9.7.
+
+### TANDA R8, CUARTA CIEGA: seis de seis
+
+**Acumulado: 48 de 48, de los cuales 24 a ciegas.** Perdidas verificadas contra el
+grafo **y clasificadas por tipo**, segun la doctrina del banco 9.7 que esta tanda
+estrena.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **235** | `estrategia_de_innovacion_y_tecnologia` contra `seleccion_arenas_estrategicas` | **la mecanica de la sesion**: generar doce arenas o mas y priorizar de dos a cuatro; y **declarar que queda FUERA del alcance de busqueda** | de **lector** |
+| **236** | `how_might_we_brief_social` contra `how_might_we_briefs` | **el conocimiento-local**: validar el brief con ONGs o actores en terreno antes de prototipar | de **lector** |
+| **237** | `desafios_de_diseno_competitivos` contra `diseno_de_desafios_de_innovacion` | **equipos-independientes** (no gubernamentales) e **impacto-en-inversion** del primero; **aprendizaje-colectivo mas alla del ganador** del segundo | de **lector** |
+| **241** | `shadow_ai_use_organizacional` contra `shadow_ia_organizacional` | **encuestas-anonimas** del primero; **power-users** (estan en cualquier nivel jerarquico) y **recompensar en vez de amenazar** del segundo | de **lector** |
+| **244** | `innovacion_abierta` contra `open_innovation_ideacion` | **sindrome NIH** y **metodos-segun-complejidad** del primero; **Stage-Gate-para-IP** del segundo | de **lector** |
+| **245** | `customer_validation_sell_phase` contra `filosofia_customer_validation` | **las tres preguntas de escala** de la filosofia (puede crecer, se repite la venta, se puede pagar la adquisicion) y el **proceso-de-aprobacion** del primero | de **lector** |
+
+> **LAS SEIS SON PERDIDAS DE LECTOR, ninguna de catalogo.** Es la primera tanda
+> clasificada con la distincion nueva, y **sale entera del lado barato**: lo que
+> se perderia en estas seis fusiones **sigue existiendo en el catalogo por otra
+> via o es reconstruible**, asi que **el arreglo es traslado o arista, no rescate
+> previo.**
+
+> **DIRECCIONES PROVISIONALES DE PAR**, por la 9.3: el **235** es del racimo de
+> las arenas y la estrategia de innovacion (seis miembros), el **236** del racimo
+> censado del encuadre del problema, y el **245** de la apertura de Customer
+> Validation.
+
+#### 244: es tambien el par de INNOVACION ABIERTA de la ficha, y SE SOSTIENE
+
+**El par de los puestos 187 y 233 de la numeracion del gradiente**, registrado en
+`docs/FICHA_SUBFUSION_GRADIENTE.md` como **el mas pegado de aquella tanda**: los
+dos del nucleo y los dos de *Winning at New Products* (Cooper), con el scouting,
+la pagina web, la transferencia universitaria, las sesiones con proveedores y la
+co-creacion tipo LEGO **coincidiendo uno a uno**.
+
+> **Tres ejes lo han mirado y los tres coinciden**: el gradiente lo llamo el mas
+> pegado, el cribado intra le dio **A** en el puesto 244, y la relectura **a
+> ciegas** lo sostiene. **Anotado tambien en la ficha.**
 
 ---
 
@@ -1457,6 +1502,17 @@ tiene **cuatro miembros, y los cuatro declaran libros distintos**:
 > **RECOMENDACION, y no es adjudicacion: la decision de fuente PRIMERO.** Es mas
 > barata (es una pasada por libro, no una mesa), y **deja el racimo mejor
 > planteado en vez de peor.** Lo contrario obliga a rehacer la mesa.
+
+> **APROBADO COMO ORDEN DEL PLAN, 11 ago 2026.** La recomendacion deja de ser
+> recomendacion: **el cruce se ejecuta FUENTE PRIMERO**, con el motivo que ya
+> estaba escrito, **el destejido convierte un racimo de cuatro libros en un
+> duplicado de dos nodos del mismo libro.**
+>
+> **Y eso fija un precedente de orden para los cruces que vengan**: cuando un
+> frente **cambia lo que un nodo dice** y otro frente **decide cuantos nodos
+> hacen falta**, **primero va el que cambia lo que dicen.** Decidir cuantos
+> hacen falta sobre un texto que va a cambiar es decidir sobre lo que ya no
+> sera.
 
 ### CRUCE 2: el racimo del Portafolio contra el racimo de las puertas del Stage-Gate
 
