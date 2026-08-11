@@ -750,6 +750,41 @@ Selling*. Verificado en el archivo de veredictos:
 >
 > **Por eso el estado PURO se declara CONTANDO EL JSONL, nunca de memoria.**
 
+**TERCER PURO DECLARADO (11 ago 2026): `el sales roadmap`**, de *The Startup
+Owner's Manual*. Verificado contando el jsonl:
+
+| | |
+|---|---:|
+| miembros | **3** (`sales_roadmap`, `refinar_sales_roadmap`, `hoja_de_ruta_de_ventas`) |
+| pares posibles | **3** |
+| **leídos** | **3** (puestos 192, 200 y 255) |
+| **que repiten** | **3** |
+| pendientes | **0** |
+
+> **Y este llega con superviviente ya propuesto**, de la relectura R4:
+> **`refinar_sales_roadmap`**, seis pasos contra tres y cinco, superconjunto claro.
+> **Un puro con superviviente identificado no necesita ni mesa ni deliberación:
+> necesita que alguien escriba el texto y se lleve lo que se pierde.**
+
+### 9.5.1 El espejo: MEZCLADO COMPLETO, y es la categoría más cara
+
+**Encontrado el 11 ago 2026 al remedir los racimos pre-regla.**
+
+> **Un racimo con TODOS sus pares leídos, CERO pendientes, y clases DISTINTAS en
+> todos ellos.** Cumple la misma condición dura que el puro **y da el resultado
+> contrario**: ni un solo par repite.
+
+**PRIMER MEZCLADO COMPLETO: `el control de la junta`** (racimo del puesto 201).
+Tres miembros, tres pares posibles, los tres leídos, **y las clases son B, C y D**.
+
+> **Y no tiene centro**: grado máximo 1, un aislado. **Dos nodos enlazados y un
+> tercero suelto.**
+>
+> **MEZCLADO COMPLETO SIN CENTRO es lo más caro que hay en este inventario**: hay
+> que decidir la arquitectura **y** no hay ningún nodo que se pueda dejar de pie
+> por defecto. **Va entero a la mesa, y va primero entre los mezclados**, porque
+> es el único donde ya no queda ninguna lectura pendiente que pudiera simplificarlo.
+
 ### 9.6 LA ARISTA QUE FALTA: la clase de arreglo más barata que existe
 
 **Registrada el 11 ago 2026, con dos ejemplares y lista abierta.**

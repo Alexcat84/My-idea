@@ -2834,6 +2834,33 @@ DELIBERADA.**
 
 ---
 
+## SANO POR DENTRO, GEMELO POR FUERA
+
+**Registrado el 11 ago 2026, con ejemplar doble, desde la relectura R9 del otro
+eje.**
+
+**Dos pares del cribado intra-dominio salieron A, o sea que los nodos repiten
+entre si, y los cuatro nodos implicados estan declarados FALSOS en esta ficha**,
+o sea limpios por dentro:
+
+| par del cribado | veredicto de ESTA ficha | veredicto del intra |
+|---|---|---|
+| los dos de **SPIN** (puesto 248) | **falsos**, secuencia legitima sin repeticion interna | **A**, repiten entre si |
+| los dos de **regalos** (puesto 251) | **falsos** | **A**, repiten entre si |
+
+> **UN NODO PUEDE ESTAR LIMPIO POR DENTRO Y TENER UN GEMELO FUERA.** Las dos
+> lecturas son correctas y **ninguna corrige a la otra**: son dos preguntas
+> distintas sobre el mismo nodo.
+>
+> **Y es el ejemplar doble, visto desde este lado, del PUNTO CIEGO que el informe
+> de cierre declaro.** Alli el eje intra tapaba el agujero de este instrumento, la
+> forma que parte pura. **Aqui este instrumento acierta al declararlos limpios y el
+> intra encuentra lo que este no podia ver por diseno.**
+>
+> **Los dos instrumentos no se corrigen: se completan.**
+
+---
+
 ## COSTURAS FUERA DE COLA
 
 **Lista abierta el 11 ago 2026, despues del cierre del instrumento.**

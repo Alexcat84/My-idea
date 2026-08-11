@@ -1058,6 +1058,72 @@ co-creacion tipo LEGO **coincidiendo uno a uno**.
 > pegado, el cribado intra le dio **A** en el puesto 244, y la relectura **a
 > ciegas** lo sostiene. **Anotado tambien en la ficha.**
 
+### TANDA R9, QUINTA CIEGA: seis de seis
+
+**Acumulado: 54 de 54, de los cuales 30 a ciegas.** Perdidas verificadas contra el
+grafo y clasificadas por tipo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **247** | `customer_validation` contra `filosofia_customer_validation` | **la metrica peso-invertido-peso-devuelto** (si por cada peso en ventas y marketing vuelven dos) y **las tres preguntas de escala** | de **lector** |
+| **248** | `framework_spin_selling` contra `modelo_spin_preguntas` | **calificar-rapido-sin-abusar** de las de situacion; **ajusta-al-flujo** sin forzar el orden rigido y **presenta-recien-cuando-articule** la necesidad explicita | de **lector** |
+| **249** | `hr_calidad_gestion` contra `hr_como_control_de_calidad_gerencial` | **compensacion-contra-mercado**, **tiempo-a-productivo** de un empleado nuevo, **contratar a un disenador de procesos** y **el giro de HR como control de calidad DE LOS GERENTES** | de **lector** |
+| **251** | `regalos_estrategicos_sorpresa` contra `sorprender_cliente_estrategico` | **el 2 a 10 por ciento de utilidades**, **la nota a mano**, **evitar-festivos** y **la familia del cliente** en la investigacion previa | de **lector** |
+| **252** | `clasificacion_mercados_cadena_suministro` contra `modelo_cuadrantes_mercado` | **oportunidades-por-cuadrante** y **capacidades-a-reforzar** | de **lector** |
+| **255** | `hoja_de_ruta_de_ventas` contra `sales_roadmap` | ya anotadas en los puestos **192** y **200** | de **lector** |
+
+> **Nota del 248, y es de frontera**: esta fusion es **intra-Rackham**, los dos
+> nodos son del mismo libro y del mismo lado. **No toca la frontera de momento
+> con el forastero de Weinberg**, que sigue vigente.
+
+#### EL TRIO DEL SALES ROADMAP: TERCER PURO, verificado contando el jsonl
+
+| | |
+|---|---:|
+| miembros | **3**: `sales_roadmap`, `refinar_sales_roadmap`, `hoja_de_ruta_de_ventas` |
+| pares posibles | **3** |
+| **leidos** | **3**: puestos **192**, **200** y **255** |
+| **que repiten** | **3** |
+| pendientes | **0** |
+
+> **Cumple la condicion dura. Declarado TERCER PURO en el banco 9.5.** Y ya tiene
+> superviviente propuesto de la tanda R4: **`refinar_sales_roadmap`**, seis pasos
+> contra tres y cinco, superconjunto claro.
+>
+> **DETALLE DE CAMPO, otra vez el mismo**: dos de los tres declaran *Blank, Steve*
+> y el tercero *Steve Blank*. **La misma obra en dos grafias dentro de un racimo de
+> tres nodos.**
+
+#### SANO POR DENTRO, GEMELO POR FUERA: el patron, con ejemplar doble
+
+**Dos de los pares de esta tanda enfrentan nodos que el instrumento de costuras ya
+habia leido y declarado FALSOS**, o sea sanos por dentro. **Y aqui salen A**, o
+sea gemelos por fuera.
+
+| nodo | el instrumento de costuras dijo | el cribado intra dice |
+|---|---|---|
+| los dos de **SPIN** del puesto 248 | **falsos**: secuencia legitima, sin repeticion interna | **A**: repiten entre si |
+| los dos de **regalos** del puesto 251 | **falsos** | **A**: repiten entre si |
+
+> **UN NODO PUEDE ESTAR LIMPIO POR DENTRO Y TENER UN GEMELO FUERA.** No son
+> preguntas que se contesten la una con la otra: **son dos preguntas distintas
+> sobre el mismo nodo.**
+>
+> **Es el ejemplar doble de lo que el informe de cierre declaro como punto ciego,
+> visto desde el otro lado**: alli el eje intra tapaba el agujero del de costuras
+> (la forma que parte pura). **Aqui el de costuras acierta al decir que estan
+> limpios y el intra encuentra lo que el otro no podia ver por diseno.**
+>
+> **Los dos instrumentos no se corrigen: se completan.** Ninguna de las dos
+> lecturas es un error de la otra.
+
+> **La familia de los regalos queda con tres nodos y dos relaciones distintas**:
+> `regalos_estrategicos_sorpresa` y `sorprender_cliente_estrategico` **repiten**
+> (puesto 251), y `shock_and_awe_kit_bienvenida` es **sano frente al primero**
+> (puesto 564), **porque se contradicen sobre la marca**: uno manda regalar **sin
+> logos** y el otro **con identidad de marca**. **La contradiccion es lo que lo
+> salva.**
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -1537,3 +1603,96 @@ racimo nuevo de **las puertas del Stage-Gate** (seis miembros, seccion 1).
 > **Y todo cruce lleva su orden recomendado con el motivo**, porque *resolverlos
 > juntos* casi nunca significa a la vez: significa **en el orden que no obliga a
 > rehacer nada.**
+
+---
+
+## 14. REMEDICION DE LOS RACIMOS PRE-REGLA
+
+**Aprobada el 11 ago 2026 y ejecutada el mismo dia.** Los racimos declarados en
+los puestos **201, 203, 246 y 360** se declararon **antes de que existiera la
+regla de la arista** de la seccion 3, asi que **su forma nunca se midio: se
+supuso.** Dos de ellos ya habian cambiado de lectura al remedirlos por accidente.
+
+**Metodo: el de la seccion 6**, aristas resueltas a nodo vivo caminando
+`ids_alias`, umbrales identicos.
+
+> **Y la remedicion destapo un defecto anterior al de la arista: DOS de los cuatro
+> se declararon con la NOMINA INCOMPLETA.** El 246 se declaro con cuatro miembros
+> y son **seis**; el 360 con tres y son **siete**. **Los miembros que faltaban
+> aparecieron despues, en veredictos posteriores, y nadie volvio a la declaracion
+> a sumarlos.**
+
+### El resultado, racimo por racimo
+
+| racimo | n | aristas | forma medida | aislados |
+|---|---:|---:|---|---|
+| **201** el control de la junta | 3 | 1 | **MIXTO**, grado maximo 1 | `board_control_etapas_tardias` |
+| **203** el capital de trabajo | **4** | 2 | **CENTRO ENLAZADO** | `dso_dpo_gestion_capital_trabajo` |
+| **246** el reparto de equity | **6** | 7 | **CENTRO ENLAZADO** | **ninguno** |
+| **360** el lienzo de propuesta de valor | **7** | 7 | **CENTRO ENLAZADO** | `customer_profile_value_map`, `desarrollo_value_proposition_usp` |
+
+### 203: SEPTIMO GEMELO SIN CASA, y la lectura vieja estaba del reves
+
+**La razon del puesto 203 dice**: *tres nodos, el nodo conjunto mas uno por cada
+mitad*, con `dso_dpo_gestion_capital_trabajo` de conjunto.
+
+> **Medido: son CUATRO y el conjunto es OTRO.** `ciclo_de_conversion_de_efectivo`
+> **enlaza con las dos mitades**, `gestion_dso` y `gestion_cuentas_por_pagar_dpo`,
+> y **`dso_dpo_gestion_capital_trabajo` no toca a ninguno de los tres.**
+>
+> **CENTRO SANO CON GEMELO SIN CASA, y es el SEPTIMO candidato.** El nodo que yo
+> llame conjunto **es el gemelo**.
+
+**Y su lectura de familia cambia de sitio**: no hay que decidir la arquitectura de
+tres, **hay que resolver uno**. Es de las baratas.
+
+### 246: la mejor conectada de las cuatro, y sin gemelo
+
+**Con la nomina completa de seis**, `criterios_equity_split` **toca a los otros
+CINCO** y **no hay ni un aislado**. Es **la unica de las cuatro remedidas sin
+gemelo que resolver**.
+
+> **Eso cambia lo que la mesa tiene que hacer con ella**: la familia **ya esta
+> presidida**. Lo que queda es podar de las hijas lo que el centro ya dice, que es
+> trabajo de redactor. **Sus seis pares leidos dan A, B, C y A, A**, o sea que es
+> **MEZCLADA**, pero **mezclada con centro**, que es la version facil.
+
+### 360: se confirma, y con DOS gemelos
+
+**Con la nomina completa de siete**, `value_proposition_canvas` es el centro con
+grado 4, y **hay DOS aislados**: `customer_profile_value_map` y
+`desarrollo_value_proposition_usp`. **Coincide con lo que el barrido de la
+seccion 6 ya habia medido**, y con la correccion que la seccion 5 recibio en el
+puesto 459.
+
+### 201: el PRIMER MEZCLADO COMPLETO, y no tiene centro
+
+**Tres miembros, tres pares posibles, LOS TRES LEIDOS, cero pendientes. Y las
+clases son B, C y D: tres pares, tres clases distintas.**
+
+> **Es el espejo exacto del racimo PURO del banco 9.5**: la condicion dura se
+> cumple (todo leido, nada pendiente) **y el resultado es el contrario**. **Ni un
+> solo par repite.**
+>
+> **Su forma tampoco ayuda**: grado maximo 1, un aislado, **no hay centro que
+> presida.** Dos nodos enlazados entre si y un tercero suelto.
+>
+> **MEZCLADO COMPLETO SIN CENTRO es la categoria mas cara que hay**: hay que
+> decidir la arquitectura **y** no hay ningun nodo que se pueda dejar de pie por
+> defecto. **Va entero a la mesa.**
+
+### LO QUE LA REMEDICION DEJA COMO REGLA
+
+> **1. Ningun racimo va a la mesa sin forma medida.** La forma no se supone: se
+> cuenta. **Dos de los cuatro tenian la forma mal supuesta y uno la tenia del
+> reves.**
+>
+> **2. La nomina de un racimo declarado se RE-CUENTA antes de usarla.** Dos de los
+> cuatro habian crecido en veredictos posteriores **sin que nadie volviera a la
+> declaracion**. Un racimo declarado con cuatro y medido con seis **da otra
+> forma**.
+>
+> **3. La etiqueta PURO o MEZCLADO se pone con los pares leidos y los pendientes
+> delante**, y **solo dos de los cuatro tienen la cuenta cerrada**: el 201 con tres
+> de tres, y ninguno mas. **El 203 tiene dos pares sin leer, el 246 cinco y el 360
+> tres**: ninguno de esos puede declararse ni puro ni mezclado-completo todavia.
