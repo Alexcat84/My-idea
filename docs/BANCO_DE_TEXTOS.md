@@ -732,5 +732,61 @@ archivo de veredictos:
 Un racimo con pares sin leer **no puede declararse puro**, porque el par que falta
 es exactamente el que podría desmentirlo.
 
+**SEGUNDO PURO DECLARADO (11 ago 2026): `la ecuación de valor`**, de *SPIN
+Selling*. Verificado en el archivo de veredictos:
+
+| | |
+|---|---:|
+| miembros | **3** (`ecuacion_de_valor`, `ecuacion_de_valor_cliente`, `ecuacion_de_valor_venta`) |
+| pares posibles | **3** |
+| **leídos** | **3** (puestos 185, 217 y 258) |
+| **que repiten** | **3** |
+| pendientes | **0** |
+
+> **Salió de una corrección al encargo, y conviene que quede la forma del error.**
+> El encargo daba la familia por *dos de tres, a la espera del tercero*. **El
+> tercero ya estaba leído y ya era A.** La condición dura no se cumplía en el
+> futuro: **se cumplía en el archivo, y nadie había ido a mirar.**
+>
+> **Por eso el estado PURO se declara CONTANDO EL JSONL, nunca de memoria.**
+
+### 9.6 LA ARISTA QUE FALTA: la clase de arreglo más barata que existe
+
+**Registrada el 11 ago 2026, con dos ejemplares y lista abierta.**
+
+> **Hay una avería que no necesita mesa, ni redactor, ni decidir qué sobra: un
+> nodo desarrolla el paso de otro, los dos están bien escritos, y lo único que
+> falta es el enlace que lleva del uno al otro.**
+>
+> **El arreglo es añadir la arista. Nada más.**
+
+**Es el tercer escalón de coste, por debajo de todo lo demás:**
+
+| clase de arreglo | qué exige |
+|---|---|
+| racimo **mezclado** | una **mesa**: decidir cuántos nodos quiere el catálogo |
+| racimo **puro** o par con fusión | un **redactor**: escribir el superviviente y llevarse lo que se pierde |
+| **la arista que falta** | **un enlace**. No se toca ni un texto |
+
+**LOS DOS EJEMPLARES, verificados contra el grafo resolviendo a nodo vivo:**
+
+| madre | qué le falta |
+|---|---|
+| **`proceso_diseno_modelo_negocio_5_fases`** | tiene **dos hijas** que desarrollan dos de sus cinco fases y **enlaza con una y no con la otra**: sí con `fase_mobilizar_modelo_negocio` (fase 1), no con `proceso_ideacion_modelo_negocio` (fase 3) |
+| **`preparacion_materiales_fundraising`** | **lista cuatro materiales y dos tienen nodo propio**, `elevator_pitch_inversion` y `executive_summary_inversion`, **y no enlaza con ninguno de los dos** |
+
+> **El segundo caso enseña por qué la clase importa.** Un lector que llegue a
+> *prepara tus materiales* ve cuatro líneas. **Dos de esas cuatro líneas tienen
+> detrás un nodo entero que él no va a encontrar nunca**, porque nada lo lleva
+> allí. **El contenido existe, está bien escrito, y es inalcanzable.**
+>
+> **Eso no es duplicación: es contenido huérfano de camino.** Y se arregla con dos
+> aristas.
+
+**LA LISTA QUEDA ABIERTA.** El cribado sigue trayendo casos, y **cada uno que
+aparezca con arista verificada se anota aquí en vez de ir a la mesa**: es la vía
+rápida, y su valor está en no gastarle a la mesa un tiempo que no le corresponde.
+
+
 
 

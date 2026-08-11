@@ -908,6 +908,85 @@ verificados contra el grafo.
 > roadmap, el **206** del racimo censado de Customer discovery y el **207** del
 > racimo nuevo de la estrategia de innovacion.
 
+### TANDA R6, SEGUNDA CIEGA: seis de seis, y una corrige al encargo
+
+**Seis puestos mas adjudicados con las razones tapadas, SEIS DE SEIS al
+destapar.** Acumulado: **36 de 36**, de los cuales **12 a ciegas**.
+
+| puesto | el par | que se pierde, o que nota deja |
+|---:|---|---|
+| **213** | `build_measure_learn` contra `ciclo_crear_medir_aprender` | viajan **la inversion de Ries** (*partir del final del ciclo*) y el **innovation accounting** del segundo; y **el anclaje a los Canvas** del primero, su paso 0 |
+| **214** | `channels_hypothesis_physical` contra `hipotesis_de_canales` | **familia del canal**: direccion **provisional de par**, y trae dos datos nuevos, abajo |
+| **217** | `ecuacion_de_valor` contra `ecuacion_de_valor_cliente` | **choca con el encargo**, abajo |
+| **219** | `option_pool_negociacion` contra `pool_opciones_empleados` | viajan **el matiz pre-money** (*valuacion pre-money mas alta como alternativa*) y **verifica-si-incluye-otorgadas** (*si el pool incluye opciones ya otorgadas o solo el no emitido*) |
+| **220** | `advances_vs_continuations` contra `objetivos_de_llamada_orientados_a_avance` | **familia declarada**: los dos son miembros del racimo censado del avance y el compromiso, que suma par |
+| **221** | `compromiso_linea_tiempo_cliente` contra `tacticas_cierre_ventas` | **NOTA DE FRONTERA**, abajo |
+
+#### CHOCA CON EL ENCARGO, y a favor: la ecuacion de valor YA es PURA
+
+**El encargo dice que la ecuacion de valor va dos de tres y que si el tercer par
+sale A se declara pura. Verificado en el archivo: el tercer par YA ESTA LEIDO Y
+YA ES A.**
+
+| par | puesto | clase |
+|---|---:|:---:|
+| `ecuacion_de_valor_cliente` contra `ecuacion_de_valor_venta` | **185** | **A** |
+| `ecuacion_de_valor` contra `ecuacion_de_valor_cliente` | **217** | **A** |
+| `ecuacion_de_valor` contra `ecuacion_de_valor_venta` | **258** | **A** |
+
+> **Tres miembros, tres pares posibles, LOS TRES LEIDOS, LOS TRES A, CERO
+> pendientes.** Cumple la condicion dura **hoy**, no cuando llegue un tercer par.
+>
+> **Sube a racimo nuevo y se declara SEGUNDO PURO** en el banco 9.5. **Los tres
+> son de `core` y los tres de *SPIN Selling*.**
+>
+> **Y su forma es SUELTO**: cero aristas internas entre los tres. **Tres nodos que
+> dicen lo mismo y el grafo no conoce a ninguno de los otros dos.**
+
+#### 214: la familia del canal crece a SEIS, y la evidencia va a favor de la jerarquia
+
+**Dos datos nuevos, los dos verificados:**
+
+> **1. `channels_hypothesis_physical` es un SEXTO miembro** que no estaba en la
+> seccion 10, donde la familia se declaro con cinco. **Los seis son de `core` y
+> los seis de Blank**, con `validar_canal_distribucion` en la grafia *Blank,
+> Steve*.
+>
+> **2. Y la familia ya tiene CUATRO veredictos A** (puestos 165, 214, 400 y 537)
+> **de quince pares posibles, con cuatro pendientes en la cola** (609, 762, 945 y
+> 1488).
+
+> **LA EVIDENCIA DE ESTA TANDA VA A FAVOR DE LA JERARQUIA, no de la mega-fusion.**
+> El par del 214 enfrenta **la hipotesis de canal FISICO contra la hipotesis de
+> canal GENERAL**, y repite. **Es el mismo reparto que el 537 con el digital y que
+> el 165 con el fisico de la otra rama.**
+>
+> **Tres especializaciones distintas repitiendo contra el mismo general es
+> exactamente lo que una madre con hijas produce cuando a las hijas no se les ha
+> podado lo que la madre ya dice.** **No prueba que sobren: prueba que no se
+> podaron.**
+>
+> **Direccion provisional de par**, por la 9.3.
+
+#### 221: NOTA DE FRONTERA, y limita una fusion antes de que se haga
+
+**`compromiso_linea_tiempo_cliente` y `tacticas_cierre_ventas` repiten**: los dos
+mandan poner fecha al piloto, pedir un si o un no explicito al vencer el plazo, no
+dejar la decision abierta y documentarla.
+
+> **PERO LOS DOS SON DEL LADO DE WEINBERG DE LA FRONTERA.** `tacticas_cierre_ventas`
+> es **el forastero** del racimo del cierre en venta grande, el nodo de *Traction*
+> que convive con los siete de Rackham sin contradecirlos.
+>
+> **LA FUSION DE ESTOS DOS NO DEBE ABSORBER LOS NODOS DE RACKHAM.** El superviviente
+> hereda **la doctrina de pedir la decision con fecha**, que es de Weinberg y que
+> aplica **cuando el prospecto ya esta calificado**. **Los siete de Rackham dicen
+> otra cosa sobre otro momento y su frontera sigue vigente.**
+>
+> **Fundir a los dos que si cierran es correcto. Dejar que ese superviviente se
+> coma a los que no cierran seria borrar la frontera por via de fusion**, que es
+> justo lo que la candidata a frontera de la seccion 9 viene a impedir.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -1031,6 +1110,17 @@ nucleo.** Y eso **no tiene ficha todavia**.
 > caiga en los dos sin el matiz del momento **lee que no hay que cerrar y que hay
 > que cerrar.** **Eso pide una linea de frontera escrita, no una fusion.**
 
+> **Y LA FRONTERA YA TIENE QUE DEFENDERSE DE UNA FUSION, antes de estar escrita
+> (puesto 221, relectura R6).** `tacticas_cierre_ventas` **repite con
+> `compromiso_linea_tiempo_cliente`**, y los dos son del lado de Weinberg: poner
+> fecha al piloto, pedir un si o un no al vencer el plazo, documentarlo.
+>
+> **Esa fusion es correcta y hay que acotarla en el mismo acto**: el superviviente
+> hereda **la doctrina de pedir la decision con fecha**, y **NO absorbe a los siete
+> de Rackham.** **Borrar la frontera por via de fusion es la forma en que una
+> frontera no escrita se pierde**: nadie decide quitarla, simplemente un nodo
+> crece y se la traga.
+
 
 ---
 
@@ -1051,7 +1141,13 @@ de Blank:
 | `seleccion_canal_fisico` | 4 | el canal **fisico** |
 | `channels_hypothesis_web_mobile` | 5 | el canal **digital** |
 | `hipotesis_de_canales` | 5 | la hipotesis de canal del lienzo |
+| **`channels_hypothesis_physical`** | 5 | **la hipotesis de canal FISICO** |
 | `validar_canal_distribucion` | 6 | validar el canal elegido |
+
+> **CORRECCION DEL 11 ago 2026, de la relectura R6 (puesto 214): son SEIS y no
+> cinco.** `channels_hypothesis_physical` no estaba en esta lista cuando se
+> declaro el racimo. **La familia tiene ahora CUATRO veredictos A de quince pares
+> posibles, con cuatro pendientes en la cola**, los puestos 609, 762, 945 y 1488.
 
 > **DETALLE DE CAMPO, ya conocido y aqui otra vez**: cuatro declaran *Steve
 > Blank* y `validar_canal_distribucion` declara *Blank, Steve*. **La misma obra en
