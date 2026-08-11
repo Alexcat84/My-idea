@@ -3049,6 +3049,17 @@ Contado sobre el grafo:
 > 128 que las dos senales cazaron. **Es el tamano real de lo que quedo afuera, y
 > ahora esta contado en vez de sospechado.**
 
+**CORRECCION DECLARADA, 13 ago 2026.** Esta tabla mostraba **cuatro A que ya no
+existen**: los puestos **490**, **497**, **522** y **624** fueron volteados de A a
+D por la ejecucion de la ratificacion, y **el volteo no barrio esta tabla**. Las
+filas de abajo ya estan corregidas contra el archivo.
+
+> **Lo que la correccion cambia**: **ninguno de los tres nodos afectados va a cura
+> acoplada.** `retention_metrics` y `keep_customers_strategy` **se quedan sin
+> gemelo declarado** (les queda un B y un D cada uno), y `fit_problema_solucion`
+> **pasa de tres A a una sola**. Su cirugia sigue siendo partirlos; lo que
+> desaparece es la fusion que venia pegada.
+
 **Los veinte, con lo que el otro eje ya sabe de ellos:**
 
 | nodo | pasos | las dos obras declaradas | lectura del cribado intra |
@@ -3061,16 +3072,16 @@ Contado sobre el grafo:
 | `diseno_estructura_recompensas_roles` | 7 | The Founder's Dilemmas mas Never Lose a Customer Again | **sin par en la cola intra** |
 | `earned_vs_paid_media` | 8 | The Startup Owner's Manual mas Traction | **sin par en la cola intra** |
 | `estrategia_crecimiento_clientes` | 10 | The Startup Owner's Manual mas Never Lose a Customer Again | sin leer aun |
-| **`fit_problema_solucion`** | 6 | **Value Proposition Design mas Traction** | **490 A, 497 A, 536 A** |
+| **`fit_problema_solucion`** | 6 | **Value Proposition Design mas Traction** | **490 D, 497 D, 536 A** |
 | **`five_whys_inversion_proporcional`** | 9 | **The Lean Startup mas SPIN Selling** | **590 A**, 620 D |
 | `gestion_cuentas_por_cobrar` | 9 | Financial Intelligence for Entrepreneurs mas Essentials of Supply Chain | sin leer aun |
 | `gestion_inventario` | 9 | Financial Intelligence for Entrepreneurs mas Essentials of Supply Chain | sin leer aun |
-| `keep_customers_strategy` | 6 | The Startup Owner's Manual mas Never Lose a Customer Again | 210 B, **624 A** |
+| `keep_customers_strategy` | 6 | The Startup Owner's Manual mas Never Lose a Customer Again | 210 B, **624 D** |
 | `metricas_de_adquisicion_activacion` | 9 | The Startup Owner's Manual mas Traction | 392 **A** |
 | `preguntas_ipo_dolor_cliente` | 7 | The Startup Owner's Manual mas SPIN Selling | sin leer aun |
 | `procesamiento_paralelo_con_espirales` | 9 | Winning at New Products mas Essentials of Supply Chain | sin leer aun |
 | `relaciones_con_clientes` | 8 | Business Model Generation mas Never Lose a Customer Again | **sin par en la cola intra** |
-| **`retention_metrics`** | 9 | The Startup Owner's Manual mas Never Lose a Customer Again | 233 B, **522 A** |
+| **`retention_metrics`** | 9 | The Startup Owner's Manual mas Never Lose a Customer Again | 233 B, **522 D**, 848 D |
 | `seleccion_estrategia_pricing` | 6 | The Startup Owner's Manual mas Essentials of Supply Chain | **sin par en la cola intra** |
 | `superioridad_producto_beneficios` | 10 | Winning at New Products mas SPIN Selling | 285 **A**, 461 D |
 

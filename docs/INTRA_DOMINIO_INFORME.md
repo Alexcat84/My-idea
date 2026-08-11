@@ -623,7 +623,7 @@ el mismo nodo sale de tres maneras distintas segun con que hermano se compare.**
 |---:|---|:---:|---|
 | **353** | `metricas_cohortes` contra `analisis_de_cohortes` | **A** | mismo instrumento, mismo uso |
 | **478** | `metricas_cohortes` contra `metricas_accionables` | **D** | hijo con casa propia **CON arista**: jerarquia sana |
-| **522** | `metricas_cohortes` contra `retention_metrics` | **A** | hijo con casa propia **SIN arista**: duplicacion |
+| **522** | `metricas_cohortes` contra `retention_metrics` | **D** | **CORREGIDO el 13 ago 2026**: decia A; la ratificacion lo volteo a D y esta tabla no se barrio. Ver seccion 30.1 |
 
 > **`metricas_cohortes` es a la vez un duplicado, un hijo legitimo y un
 > duplicado otra vez, segun a quien se le ponga al lado.** Las tres lecturas son
@@ -666,6 +666,13 @@ el mismo nodo sale de tres maneras distintas segun con que hermano se compare.**
 > **centro `metricas_accionables`, gemelo `retention_metrics`**, que no enlaza con
 > ninguno de los otros cuatro.
 >
+> **MARCADO PARA EL AUDITOR el 13 ago 2026, y no lo re-adjudico**: esta candidatura
+> **descansaba en el puesto 522 en A**, y el 522 **es D** desde la ratificacion.
+> **Sin esa A, `retention_metrics` no es gemelo de nadie en esta familia**: lo que
+> le queda es un **B** (233) y un **D** (522). **La figura puede seguir siendo
+> util por la forma** (un nodo sin ninguna arista al centro) **pero ya no por el
+> contenido**, y quien decida eso no soy yo. **Ver seccion 30.1.**
+>
 > **Con esto son SEIS los candidatos a esa figura**, los cinco de la tabla de la
 > seccion 6 mas este.
 
@@ -675,10 +682,13 @@ el mismo nodo sale de tres maneras distintas segun con que hermano se compare.**
 > enlaza, y esa parte esta sana. **Lo que hay que resolver son dos cosas y no
 > cinco:**
 >
-> 1. **El gemelo `retention_metrics`**, que ademas es la primera **COSTURA FUERA
->    DE COLA** de la ficha de costuras: **lleva dos temas pegados** y su cirugia
->    es partirlo. **Partirlo puede resolver el gemelo de paso**, porque su mitad
->    de retencion es lo que se solapa con el racimo y la de adquisicion no.
+> 1. **`retention_metrics`**, que es la primera **COSTURA FUERA DE COLA** de la
+>    ficha de costuras: **lleva dos temas pegados** y su cirugia es partirlo.
+>    **Partirlo puede resolver de paso lo que quede pendiente con el racimo**,
+>    porque su mitad de retencion es lo que se solapa y la de adquisicion no.
+>    **CORREGIDO el 13 ago 2026**: este texto lo llamaba *el gemelo*, y no lo es;
+>    esa palabra venia del puesto 522 en A, **que la ratificacion volteo a D**.
+>    **La cirugia no cambia; el motivo si.** Ver seccion 30.1.
 > 2. **El par del puesto 353**, `metricas_cohortes` contra `analisis_de_cohortes`,
 >    que repite y **cuelga del mismo centro**: ahi si hay fusion que hacer.
 >
@@ -4617,3 +4627,120 @@ leidos**, que es la primera vez en varios tramos que una familia se cierra sola:
 > entre etapas, puertas y sistemas. Este par sale **D** porque es la alternancia
 > canonica, la etapa hace y la puerta decide, **pero el frente entero sigue
 > pidiendo mesa** y no pareja por pareja, como ya quedo dicho en el 356.
+
+
+---
+
+## 30. EL TRAMO 843 a 848: dos tablas que envejecieron, y el racimo del pivote pide mesa
+
+**Seis pares leidos, los seis del nucleo.** Acumulado **848 de 3.388**, global
+**30,7%** de A y **nucleo 37,4%**. **El tramo dio 16,7%**, el mas sano en varios
+tramos. **El checkpoint de los 900 es el proximo.**
+
+### 30.1 CUATRO VEREDICTOS VOLTEADOS QUE DOS TABLAS SEGUIAN MOSTRANDO EN VERDE
+
+**Encontrado al preparar el puesto 848, y es el hallazgo del tramo.** Iba a
+declarar `retention_metrics` como **noveno ejemplar de la cura acoplada** apoyado
+en la tabla de las veinte costuras fuera de cola, que le atribuye un **522 A**.
+
+> **El archivo dice que el 522 es D.** Y no es un error del archivo: **el 522 fue
+> una de las diecinueve que la ejecucion de la ratificacion volteo de A a D**, con
+> su motivo escrito, *el hijo trae el procedimiento entero de cohortes*.
+>
+> **Lo que fallo no fue la lectura: fue que el volteo actualizo los veredictos y
+> no las tablas que los citan.**
+
+**LOS CUATRO, verificados uno por uno contra el archivo:**
+
+| puesto | par | la tabla decia | el archivo dice | donde estaba stale |
+|---:|---|:---:|:---:|---|
+| **490** | `fit_problema_solucion` | **A** | **D** | ficha, tabla de los veinte |
+| **497** | `fit_problema_solucion` | **A** | **D** | ficha, tabla de los veinte |
+| **522** | `metricas_cohortes` contra `retention_metrics` | **A** | **D** | ficha **y** seccion 7 de este informe |
+| **624** | `estrategia_get_keep_grow` contra `keep_customers_strategy` | **A** | **D** | ficha, tabla de los veinte |
+
+> **Los cuatro son del mismo grupo**: el de *cero hijos de paso enlazados* que la
+> ratificacion resolvio con la vara. **No es azar: es que un volteo en bloque toca
+> muchas filas de una vez y nadie barrio las tablas detras.**
+
+**LO QUE ESTO CAMBIA, y hay que decirlo por separado porque son dos cosas:**
+
+> **1. Un hecho, corregido aqui**: **`retention_metrics` NO va a cura acoplada.**
+> Su unica A aparente era el 522. Con el 522 en D, lo que le queda es **un B (233)
+> y un D (522)**, y **un nodo sin gemelo declarado no tiene con quien fundirse**:
+> su cirugia es partirlo en dos y ya. **Lo mismo vale para
+> `keep_customers_strategy`** (210 B, 624 D) **y para `fit_problema_solucion`**,
+> que pasa de parecer un triplicador (tres A) a tener **una sola A y dos D**.
+>
+> **2. Dos interpretaciones que dependian de esas cifras, y NO las re-adjudico**:
+> la seccion 7 llamo a `retention_metrics` **el gemelo** del racimo de las
+> metricas de cohorte y lo propuso como ejemplar de la figura **CENTRO SANO CON
+> GEMELO SIN CASA**. **Las dos descansaban en el 522 en A.** Corrijo la cifra y
+> **dejo las dos lecturas marcadas para el auditor**, porque cambiarlas es
+> adjudicar, no corregir.
+
+> **LA REGLA QUE ESTO PIDE, propuesta y sin aplicar**: **toda tabla que cite un
+> veredicto por numero se recomputa del archivo, no se copia**, y **todo volteo en
+> bloque barre las tablas derivadas en el mismo acto.** Una tabla que cita un
+> veredicto viejo **no falla: dice que si**, que es la forma peor. **Es
+> exactamente el canon de fallar ruidoso aplicado a los papeles.**
+
+### 30.2 EL RACIMO DEL PIVOTE: cinco censados, SIETE por lectura, y cuatro sin decidir
+
+**Puestos 843 y 846.** El censo del racimo `Pivotar o proceder` dice **cinco
+miembros**. **La lectura levanta dos mas** y los dos con evidencia dentro del
+archivo:
+
+| nodo que la nomina no tiene | por que entra |
+|---|---|
+| `pivote_o_proceder` | **repite (268 A)** con `pivotar_o_proceder`, que **si** esta en la nomina |
+| `decision_pivote_perseverar` | es la misma decision desde *The Lean Startup* mas *Traction*, y **ya tiene dos pares internos en la cola** |
+
+**Dejado FUERA por lectura**: `war_room_pivot_proceed`, cuyo objeto es **montar la
+sala** (cubrir una pared con el lienzo, otra con las hipotesis, un pizarron), no
+tomar la decision.
+
+| | |
+|---|---:|
+| miembros | **7** |
+| pares posibles | **21** |
+| en la cola | **10** |
+| **leidos** | **5**: 268 **A**, 594 **D**, 598 **D**, 771 **B**, **843 B** |
+| pendientes de cola | **5** (860, 957, 968, 1140, 1305) |
+| **nunca en cola** | **11** |
+| aristas internas | **2** entre siete |
+
+> **EL SALDO DICE UNA COSA CLARA Y DEJA OTRA ABIERTA.** Dentro de Blank ya esta
+> resuelto: **la misma puerta contada dos veces REPITE** (268) y **puertas
+> distintas del proceso son SANAS** (594, 598). **Lo que no se resuelve es el
+> cruce entre libros**: Ries entra por las metricas, Blank por la reunion, y los
+> dos pares que lo miden estan en **B** (771 y 843).
+>
+> **LO QUE LA MESA TIENE QUE DECIDIR, ahora nombrado**: si el catalogo quiere **un
+> nodo de decision por LIBRO** o **un nodo por PUERTA del proceso**. Con la
+> segunda respuesta los pares cruzados caen solos; con la primera, tambien, pero
+> al reves. **Sin esa respuesta se van a seguir acumulando B en esta zona**, y ya
+> van dos.
+
+### 30.3 Lo demas del tramo
+
+> **1. LA RELACION MAS SANA DE VARIOS TRAMOS** (puesto **845**): `metodo_payback`
+> **nombra a NPV dentro de sus propios pasos** como el metodo con el que hay que
+> complementarlo. **El catalogo no solo los tiene separados: sabe para que sirve
+> cada uno y lo dice en el texto.** Es el contraejemplo util de todo lo demas que
+> este informe cuenta.
+>
+> **2. OTRA ARISTA QUE FALTA de las baratas** (puesto **846**), y con una
+> condicion: `customer_discovery_overview` invoca la decision de pivotar en su
+> fase 4 y no enlaza al nodo que la ejecuta. **Pero esa madre ya tiene gemelo
+> declarado** (puesto 156, con `customer_discovery_cuatro_fases`), asi que **la
+> arista hay que crearla desde el superviviente de esa fusion, no desde el nodo de
+> hoy**. Es la segunda arista que falta del mismo tipo en dos tramos: la del 841
+> es la misma madre con otra fase.
+>
+> **3. TERCERA vez que `brainstorming_divergente` entra a un par y se juzga pese a
+> la costura** (puesto **844**, con el 823 y el 834). **Las tres veces el solape
+> cayo en sus pasos 1 a 4**, el bloque de Tim Brown que la cirugia deja en pie.
+> **Ya no es casualidad: el injerto de Mollick vive en la mitad del nodo que nadie
+> toca al compararlo**, y por eso este nodo se puede seguir leyendo sin esperar a
+> su cirugia.
