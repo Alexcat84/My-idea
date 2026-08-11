@@ -2857,6 +2857,17 @@ o sea limpios por dentro:
 > forma que parte pura. **Aqui este instrumento acierta al declararlos limpios y el
 > intra encuentra lo que este no podia ver por diseno.**
 >
+> **TERCER EJEMPLAR, anadido el 12 ago 2026 desde la relectura R10, y es el mas
+> claro de los tres porque esta ficha dejo escrito POR QUE lo declaro falso:**
+>
+> | par del cribado | veredicto de ESTA ficha | veredicto del intra |
+> |---|---|---|
+> | **`founder_ceo_succession_process`** (puesto 256 del intra) | **falso**, bloque 51,5: *falso positivo de secuencia legitima por pasos tematicamente ESPEJADOS*, su paso 2 evalua si TUS habilidades encajan y su paso 6 si encaja el perfil de QUIEN TE SUCEDERIA | **A**, repite con `identificacion_necesidad_sucesion_ceo` |
+>
+> **El espejo interno era real y el gemelo externo tambien.** Un nodo puede tener
+> sus propios pasos bien ordenados, sin repetirse a si mismo, y aun asi estar
+> contado dos veces en el catalogo.
+>
 > **Los dos instrumentos no se corrigen: se completan.**
 
 ---

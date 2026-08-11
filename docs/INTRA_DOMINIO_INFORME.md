@@ -1158,6 +1158,66 @@ sea gemelos por fuera.
 > logos** y el otro **con identidad de marca**. **La contradiccion es lo que lo
 > salva.**
 
+### TANDA R10, SEXTA CIEGA: seis de seis
+
+**Acumulado: 60 de 60, de los cuales 36 a ciegas.** Perdidas verificadas contra el
+grafo y clasificadas por tipo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **256** | `founder_ceo_succession_process` contra `identificacion_necesidad_sucesion_ceo` | **deja-que-quien-dirige-opere**: el proceso de dejar operar a quien dirige, identificar los problemas y trabajar junto a esa persona | de **lector** |
+| **257** | `estrategia_competencia_vcs` contra `leverage_en_negociacion_con_vcs` | **no-reveles** con que otros inversores hablas salvo que sean colaboradores conocidos; **ofertas-de-compra-como-palanca**; y **traccion-antes**, producto, ingresos o contratos antes de acercarte | de **lector** |
+| **258** | `ecuacion_de_valor` contra `ecuacion_de_valor_venta` | ya anotadas en los puestos **185** y **217** | de **lector** |
+| **261** | `formacion_de_habitos_de_pensamiento` contra `gestion_de_habitos_mentales_para_pensar` | **fringe-thoughts**, registrar los pensamientos espontaneos que aparecen fuera del horario, y **rupturas-deliberadas** de rutina cuando el pensamiento se estanca | de **lector** |
+| **262** | `customer_appreciation_pr` contra `customer_appreciation_soporte` | **contests** y sorteos de bajo costo y alto valor emocional; y **satisfaccion-sobre-eficiencia** como politica explicita | de **lector** |
+| **264** | `how_might_we_framing` contra `how_might_we_hmw` | casi nada: el **ni-amplio-ni-estrecho** esta en los dos. Solo cambia el uso final, **brujula** de todo el proceso contra **titular** de la sesion de brainstorming | de **lector** |
+
+#### 256: TERCER EJEMPLAR de SANO POR DENTRO, GEMELO POR FUERA
+
+**Y es el mas claro de los tres, porque la ficha de costuras dice exactamente por
+que lo declaro falso.**
+
+> `founder_ceo_succession_process` esta en la cola de las 128 con bloque **51,5**,
+> y se leyo **FALSO** con una razon nombrada: **falso positivo de secuencia
+> legitima por pasos tematicamente ESPEJADOS**. Su paso 2 dice *evalua si TUS
+> habilidades encajan con la siguiente etapa* y su paso 6 dice *evalua si el
+> perfil de QUIEN TE SUCEDERIA encaja con la etapa*. **Espejo, no repeticion.**
+>
+> **Y aqui sale A**: repite por fuera con `identificacion_necesidad_sucesion_ceo`.
+>
+> **Los dos instrumentos aciertan.** El de costuras midio si el nodo se repite a
+> si mismo y dijo que no, con el motivo escrito; el intra midio si tiene gemelo
+> fuera y dijo que si. **Anotado en la ficha junto a los otros dos.**
+
+#### 258: el SEGUNDO PURO se sostiene, y ya con sus tres pares releidos
+
+**El puro de la ecuacion de valor**, del banco 9.5, tiene tres miembros y tres
+pares, los puestos **185, 217 y 258**. **Este es el tercero y ultimo**, y la
+relectura a ciegas lo sostiene.
+
+> **Un puro cuyos tres pares han pasado por la relectura no vuelve a la mesa: va
+> directo al redactor.** Es el unico de los tres puros declarados que tiene
+> **todos** sus pares releidos.
+
+#### Cuatro familias que este tanda deja PROVISIONALES
+
+**Ninguna se declara racimo aqui: se anotan con su nombre para que la mesa las
+cuente antes de tocarlas.**
+
+| familia | por que queda provisional |
+|---|---|
+| **la sucesion** | ya medida en el puesto 618: **once nodos vivos**, diez de *The Founder's Dilemmas* y uno forastero. El 256 es un par mas de esa familia |
+| **la competencia entre inversores** | `estrategia_competencia_vcs` y `leverage_en_negociacion_con_vcs` son de **libros distintos**, *Venture Deals* y *The Founder's Dilemmas*, y mandan la misma jugada: varios term sheets a la vez |
+| **los habitos de pensamiento** | el 261 es **vecino** de la familia de Wallas ya tocada en los puestos 473, 689 y 693: `esfuerzo_y_energia_intelectual` y sus hijos. **Cinco nodos del mismo libro sobre como se trabaja la cabeza** |
+| **el HMW** | el 264 se suma a los puestos 236 y 237, ya leidos, sobre encuadre del problema y desafios de diseno |
+
+> **CRUCE ANOTADO, del 262 a la seccion 13**: `customer_appreciation_pr` manda
+> notas escritas a mano y regalos pequenos a clientes tempranos, que es
+> **exactamente el material de la familia de los regalos** del puesto 251 y del
+> 564. **Dos frentes tocan los mismos gestos desde libros distintos**, Weinberg
+> por el lado de traccion y Coleman por el de experiencia. Quien redacte uno tiene
+> que mirar el otro.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -2032,6 +2092,89 @@ veredicto.
 > **Lo que NO cambia de la 15.2**: la pregunta que abria seguia siendo la
 > correcta, y la respuesta llego. **Lo que cambia es que la incoherencia entre el
 > 581 y el 633 no era de doctrina: era mia, y era de medicion.**
+
+### 16.5 LA MEDICION DE LOS VEINTE: el saldo
+
+**Hecha el 12 ago 2026 por encargo del fundador.** Los veinte veredictos en **A**
+con la silueta *hijo con casa propia sin arista* se midieron **madre por madre con
+el grafo delante**, en este orden: **forma primero** (cadena o radios),
+**proporcion despues**, y encima la regla de la mayoria con el limite del
+cero-enlazados.
+
+| | |
+|---|---:|
+| veredictos medidos | **20** |
+| **cambian de clase** | **9** |
+| **se sostienen** | **11** |
+
+**Los nueve que cambian, todos de A a D:**
+
+| puesto | madre | forma | proporcion |
+|---:|---|---|---|
+| **393** | `busqueda_cofundador_complementario` | radios | 1 de 3 |
+| **396** | `preparacion_materiales_fundraising` | radios | 1 de 3 |
+| **455** | `customer_validation_sell_phase` | radios | 1 de 3 |
+| **470** | `modelo_spin_preguntas` | radios | 1 de 4 |
+| **473** | `esfuerzo_y_energia_intelectual` | radios | 1 de 2 |
+| **552** | `preparacion_materiales_fundraising` | radios | 1 de 3 |
+| **625** | `metodologia_spin_selling` | radios | 1 de 2 |
+| **633** | `proceso_diseno_modelo_negocio_5_fases` | **cadena** | 5 de 5 |
+| **644** | `customer_discovery_overview` | radios | 1 de 4 |
+
+**Los once que se sostienen, y el motivo es casi siempre el mismo:**
+
+| puesto | madre | por que sigue en A |
+|---:|---|---|
+| **395** | la madre de 5 fases | **cadena completa**: la fase 3 ya tiene su casa, este es un duplicado |
+| **474** | `programacion_entregas_delivery_scheduling` | cero enlazados **y** el hijo repite dos pasos mas de la madre |
+| **490**, **497** | `fit_problema_solucion` | cero hijos de paso enlazados |
+| **522** | `retention_metrics` | cero enlazados |
+| **555** | `etapa_pruebas_necesaria` | cero enlazados |
+| **557** | `sucesion_iniciada_por_fundador` | cero enlazados |
+| **568** | `publicidad_offline_pruebas_locales` | cero enlazados |
+| **582** | `customer_development_weekly_lessons_learned` | cero enlazados |
+| **586** | `brainstorming_efectivo` | cero enlazados |
+| **610** | `acumulacion_capital_previo_fundacion` | cero enlazados |
+| **624** | `estrategia_get_keep_grow` | cero enlazados |
+
+> **DIEZ DE LOS ONCE SE SOSTIENEN POR EL LIMITE DEL CERO-ENLAZADOS**, o sea por el
+> limite que yo puse en el puesto 658 y que **no esta escrito en la regla**. Si el
+> auditor lo tumba, esos diez se releen otra vez. **Es la pieza de doctrina mas
+> cara que hay ahora mismo sobre la mesa.**
+
+#### Los cuatro juicios de HIJO O NO HIJO que sostienen el saldo
+
+**La cuenta depende de decidir que enlace es un hijo de paso y cual no.** El
+criterio es el del puesto 581: **hijo de paso es el nodo que desarrolla un item
+que la madre ENUMERA.** Cuatro casos lo pusieron a prueba y los cuatro los decidi
+yo, asi que van declarados:
+
+| madre | el enlace en duda | mi juicio |
+|---|---|---|
+| `fit_problema_solucion` | `design_test_repeat` | **no es hijo**: es el ciclo entero de prototipar, testear y repetir, que abarca los pasos 1 a 3 y anade el prototipado que la madre no enumera |
+| `fit_problema_solucion` | `circulos_busqueda_cofundadores` | **no es hijo**: es de cofundadores, no toca ningun paso. Arista suelta de nodo costurado |
+| `sucesion_iniciada_por_fundador` | `framework_tres_rs_sucesion` | **no es hijo**: los tres Rs son acciones del **sucesor** y los pasos de la madre son acciones del **fundador** |
+| `estrategia_get_keep_grow` | `embudo_get_keep_grow` | **no es hijo sino GEMELO**: cubre Get, Keep y Grow al mismo grano que la madre |
+| `acumulacion_capital_previo_fundacion` | `seleccion_relaciones_cofundadores` | **no es hijo aqui**: mapea la red para ELEGIR cofundador, que es el paso 3 de **otra** madre |
+
+> **Si alguno de esos cinco juicios se cae, la proporcion de su madre pasa a uno o
+> mas de N y el veredicto se vuelve a jugar.** El 490 y el 497 son los que mas
+> cuelgan de esto, y arrastran la lectura de CENTRO DE REPETICION de la familia
+> del encaje de la seccion 15.6.
+
+#### Lo que la medicion deja como dato, mas alla del saldo
+
+> **1. La forma manda sobre la cuenta, y solo una de veinte era cadena.**
+> Diecinueve de las veinte madres estan cableadas en radios; **la unica cadena era
+> la que yo habia contado mal.**
+>
+> **2. La avería dominante no es la mayoria, es el CERO.** Once de las veinte
+> madres no enlazan **a ninguno** de sus hijos de paso. **No es que falte un radio:
+> es que no hay rueda.**
+>
+> **3. La regla nueva movio la tasa de A del nucleo casi cuatro puntos**, de 47,3%
+> antes de escribirla a **42,8%** despues de aplicarla a todo lo medido. **No
+> cambio ni un nodo: cambio la vara.**
 
 ---
 

@@ -766,6 +766,37 @@ Selling*. Verificado en el archivo de veredictos:
 > la cola: el trío del sales roadmap 3 de 3, la familia del encaje 6 de 6, el
 > racimo del control de la junta 3 de 3.
 
+#### La clase de tarea que esto crea: COMPLETAR LOS PARES DEL PURO
+
+**Registrada el 12 ago 2026.**
+
+> **Un candidato a puro no se declara desde la cola: se COMPLETA desde la nómina.**
+> Se cuentan los pares posibles de sus miembros, se restan los que ya están
+> leídos, y **los que falten se leen a mano**, entren o no entren en la cola por
+> umbral de semejanza.
+
+**Es una clase de tarea nueva y tiene su sitio en la escala de coste**, entre la
+arista que falta y el redactor:
+
+| clase de arreglo | qué exige |
+|---|---|
+| la arista que falta | **un enlace**. No se toca ni un texto |
+| **completar los pares del puro** | **N lecturas dirigidas**, sin mesa y sin redactor. Sale un veredicto: puro, mezclado o ni una cosa ni otra |
+| racimo puro o par con fusión | un **redactor** |
+| racimo mezclado | una **mesa** |
+
+> **Por qué vale la pena pagarla**: un candidato que se completa y sale **puro**
+> se ahorra la mesa entera, porque un puro no se delibera, se redacta. **Las N
+> lecturas compran la posibilidad de saltarse la parte cara.**
+
+**EL CONTRAEJEMPLO QUE LA HIZO FALTA**, y queda como el primer encargo de esta
+clase: **la familia de *Get, Keep, Grow*.** Ocho miembros, **28 pares posibles**,
+**3 en la cola** y los tres **A** (puestos 277, 292 y 624).
+
+> **Le faltan VEINTICINCO lecturas.** Con la frase vieja se habría declarado puro
+> con tres; con la precisión, **no es ni candidato hasta que esas veinticinco
+> estén hechas.** Y hay motivo para hacerlas: **tres de tres repiten.**
+
 **TERCER PURO DECLARADO (11 ago 2026): `el sales roadmap`**, de *The Startup
 Owner's Manual*. Verificado contando el jsonl:
 
@@ -833,6 +864,13 @@ Tres miembros, tres pares posibles, los tres leídos, **y las clases son B, C y 
 >
 > **Eso no es duplicación: es contenido huérfano de camino.** Y se arregla con dos
 > aristas.
+
+> **PRECISIÓN DEL 12 ago 2026, medida en la medición de los veinte**: la madre
+> `preparacion_materiales_fundraising` **sí enlaza a uno de sus tres hijos**,
+> `presentacion_inversionistas`, que desarrolla su paso 3. **Uno de tres sigue
+> siendo minoría**, así que el diagnóstico de contenido huérfano de camino no
+> cambia y las dos aristas siguen faltando; **lo que cambia es la frase "no enlaza
+> con ninguno de los dos", que era cierta de esos dos y falsa de la familia.**
 
 **LA LISTA QUEDA ABIERTA.** El cribado sigue trayendo casos, y **cada uno que
 aparezca con arista verificada se anota aquí en vez de ir a la mesa**: es la vía
