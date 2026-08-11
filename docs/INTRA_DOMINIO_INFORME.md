@@ -2533,3 +2533,66 @@ CRUZA la juntura. El puesto 724 es el primero que la cruza.**
 > hacia sus tres hijos, `customer_jobs`, `customer_pains` y `customer_gains`
 > (puesto 705). **En un tramo donde la averia dominante es el cero enlazados,
 > conviene anotar quien si enlaza.**
+
+---
+
+## 19. EL CHOQUE DE LA RATIFICACION, traido sin resolver
+
+**Encontrado el 12 ago 2026 al aplicar la ratificacion del cero-enlazados, y lo
+traigo en vez de resolverlo porque no me toca.**
+
+### Lo que chocan son dos frases que ahora conviven en el mismo veredicto
+
+| la frase vieja, del puesto 658 | la frase nueva, de la ratificacion |
+|---|---|
+| con **cero enlazados** la **figura NO APLICA**, y manda la regla original: **sin arista igual a DUPLICACION** | **cero enlazados es el caso extremo del mitad-o-menos**: la silueta no dice nada y **manda el CONTENIDO** |
+
+> **No dicen lo mismo, y la diferencia decide clases.** La primera sostiene la
+> **A** por la ausencia de arista. La segunda manda **juzgar por
+> continua-o-repite**, y en la mayoria de estas siluetas el hijo desarrolla un
+> paso con material propio, o sea **CONTINUA**, que es **D**.
+>
+> **Es exactamente la misma logica que hizo caer a nueve veredictos en la medicion
+> de los veinte.** Si se aplica a estos diez, varios caen tambien.
+
+### La cuenta, hecha para que la decision se tome con numeros
+
+**De los diez, DOS aguantan el test de contenido y OCHO probablemente no.**
+
+| puesto | que dice el contenido | aguanta la A |
+|---:|---|:---:|
+| **568** | el hijo desarrolla el paso 3 **y ademas repite el paso 4** de la madre | **si** |
+| **586** | lo unico que el hijo anade es una linea, la no atribucion de ideas | **si** |
+| **490**, **497** | el hijo trae su checklist propia de encaje, seis evaluaciones que la madre no tiene | probablemente no |
+| **522** | el hijo trae el procedimiento entero de cohortes | probablemente no |
+| **555** | el hijo trae alfa, campo, piloto, soft launch y la vuelta atras | probablemente no |
+| **557** | el hijo trae el procedimiento de participar en la propia sucesion | probablemente no |
+| **582** | el hijo trae el ciclo rojo a negro y la serie historica | probablemente no |
+| **610** | el hijo trae el mapeo de red y el puente al primer cliente | probablemente no |
+| **624** | el hijo trae umbrales, cohortes, CAC contra valor de vida y la simulacion | probablemente no |
+
+> **Y el puesto 474, que no esta en la lista de los diez, aguanta por el mismo
+> motivo que el 568**: su hijo repite dos pasos mas de la madre.
+
+### Por que no lo resuelvo yo
+
+> **El encargo dice que los diez quedan citando la regla.** Cambiarlos por mi
+> cuenta seria interpretar la ratificacion mas alla de lo que dice, y **la
+> ratificacion vino justamente a quitar de en medio un limite que yo habia puesto
+> solo.**
+>
+> **Los diez quedan con las dos lecturas encima y el choque escrito en su razon.**
+> Con el visto del auditor son ocho lecturas dirigidas, ni una mas.
+
+### Y hay una tercera salida, que es la que yo propondria
+
+> **La regla podria distinguir DOS preguntas que hoy mete en una.** Cuando el hijo
+> desarrolla un paso de la madre, siempre hay repeticion **de la orden** y casi
+> siempre hay material **nuevo** en el hijo. Lo que cambia entre casos es cuanto.
+>
+> **La vara que ya usa el archivo sin nombrarla**: si lo que el hijo anade cabe en
+> una linea, **repite**; si el hijo trae un procedimiento que la madre no tiene,
+> **continua**. El 586 y el 568 caen del primer lado y los otros ocho del segundo.
+>
+> **Nombrarla convertiria ocho lecturas dirigidas en cero**, porque la cuenta de
+> arriba ya esta hecha con esa vara.
