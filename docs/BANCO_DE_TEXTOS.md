@@ -714,6 +714,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **2** | **la ecuación de valor** | 3 | 3 | **3** | 3 | **PURO**, y el único con **los tres pares releídos a ciegas** |
 | **3** | el sales roadmap | **5** | **10** | 4 | 4 | **SUB-PURO**: el trío es puro puertas adentro, la familia no está cerrada |
 | **4** | la etapa de investigación en la venta | **4** | **6** | 4 | 4 | **SUB-PURO**, por lo mismo |
+| **5** | **la competencia entre inversores** | 3 | 3 | **3** | 3 | **PURO**, y el **primero declarado con el contador ya vigente** |
 
 **Lo que le falta a cada sub-puro para cerrarse, nombrado:**
 
@@ -729,6 +730,20 @@ Cuando choquen con esta tabla, **manda la tabla**.
 > **Los dos que quedan de pie son los dos que se re-verificaron con el contador**,
 > y **los dos son de tres miembros**. **Cuanto más chica la familia, menos sitio
 > hay donde esconder un cuarto miembro.**
+
+> **AÑADIDO EL 12 ago 2026: el QUINTO PURO nace ya con el contador hecho.** El
+> censo levantó **once** candidatos y la lectura dejó **tres**; el más cercano de
+> los descartados, `batna_definicion`, queda **anotado como vecino** y **no tiene
+> ni un par con el trío en la cola**, así que hoy no hay lectura que pueda
+> desmentirlo.
+>
+> **Superviviente propuesto: `construccion_de_leverage`**, el único que trae
+> anclar en dos o tres términos y nunca mover primero en precio.
+>
+> **Y de paso corrige una cuenta del encargo**: el par que se daba por faltar,
+> estrategia contra construcción, **es el puesto 787 y está leído desde hace
+> cuatro tandas, en A**. Tercera vez que una cuenta de pares hecha de memoria
+> resulta estar por detrás del archivo.
 
 ##### LA REGLA DEL CONTADOR, adoptada el 12 ago 2026
 
@@ -1291,6 +1306,65 @@ eso es una arista que falta. MEDIDO CON LA FORMA DELANTE, ESO ESTA MAL:**
 alli la madre lista cuatro materiales, dos tienen nodo propio, **no hay cadena** y
 **no enlaza a ninguno de los dos**, o sea cero de dos. Sigue siendo arista que
 falta por la via del contenido huerfano de camino, no por la de la mayoria.
+
+### 9.8 EL DESEMPATE POR CABLEADO
+
+**Registrada el 12 ago 2026.** Sirve para elegir **superviviente**, que es la
+pregunta que un racimo puro deja abierta.
+
+> **El CONTENIDO decide quién sobrevive cuando los nodos difieren.** Sobrevive el
+> que trae lo que el otro no tiene, y lo del otro viaja.
+>
+> **A contenido empatado, DESEMPATA EL GRAFO.** Sobrevive **el mejor cableado**:
+> el que ya tiene las aristas que el superviviente va a necesitar.
+
+**Por qué, y es de coste puro:**
+
+> Fundir hacia el nodo bien cableado **conserva sus aristas gratis**. Fundir hacia
+> el mal cableado **obliga a reconstruir a mano todas las que se pierden**, y cada
+> arista que no se reconstruye es contenido huérfano de camino (banco 9.6).
+
+**EL EJEMPLAR (puestos 326 y 815): los dos programas de Coleman.**
+
+| | |
+|---|---|
+| el par | `fases_de_retencion_de_clientes` contra `ocho_fases_experiencia_cliente`, **A**, sostenido a ciegas en R16 |
+| el contenido | **empatado**: cada uno aporta una prioridad y las dos tienen que viajar |
+| el grafo | `ocho_fases_experiencia_cliente` enlaza a **las ocho fases, al otro programa, a la serie de los seis medios y a la bienvenida**. El otro, casi nada |
+| **superviviente** | **`ocho_fases_experiencia_cliente`** |
+
+> **Es la primera vez que el cribado recomienda una dirección de fusión por la
+> FORMA y no por el texto**, y sale prácticamente sin discusión.
+
+---
+
+### 9.9 LA POSICIÓN DEL SOLAPE: cuándo un costurado bloquea y cuándo no
+
+**Registrada el 12 ago 2026, y precisa la regla del TOQUE ÚNICO (9.4) para los
+pares.**
+
+> **Un nodo costurado NO bloquea todos sus pares.** Bloquea **solo cuando el
+> solape del par toca la juntura**: si lo que los dos nodos comparten es material
+> que la cirugía va a mover, el veredicto se emitiría contra un texto que va a
+> cambiar.
+>
+> **Si el solape cae ENTERO dentro de un bloque, el par se juzga normal**, porque
+> ese bloque va a sobrevivir intacto a la cirugía.
+
+**LA EVIDENCIA, cuatro casos medidos:**
+
+| puesto | nodo costurado | dónde cae el solape | ¿bloqueó? |
+|---:|---|---|:---:|
+| 724, 755 | `voz_del_cliente_voc` | la observación, que está en **las dos mitades** | **sí** |
+| 738 | los dos de A/B | la mecánica A/B, en **todos los bloques** | **sí** |
+| 784 | `lienzo_modelo_negocio` | los nueve bloques, o sea **las cuatro narraciones** | **sí** |
+| **823** | `brainstorming_divergente` | los pasos **1 a 4**, y la juntura está en el 5 | **NO** |
+
+> **La diferencia no es el nodo: es dónde cae el solape.** Y por eso la pregunta
+> se puede contestar **antes** de la cirugía, mirando la anatomía que la ficha ya
+> tiene escrita.
+
+---
 
 ### 9.7 PÉRDIDA DE LECTOR contra PÉRDIDA DE CATÁLOGO
 

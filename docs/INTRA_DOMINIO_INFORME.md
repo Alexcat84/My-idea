@@ -1764,6 +1764,112 @@ el grafo.
 >
 > **Anotado junto a LA FORMA DEL TRATAMIENTO en la seccion 12.**
 
+### TANDA R17, DECIMOTERCERA CIEGA: seis de seis
+
+**Acumulado: 102 de 102, de los cuales 78 a ciegas.** Perdidas verificadas contra
+el grafo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **330** | `proceso_sop_mop` contra `sop_colaborativo` | reparto menor: uno pone el **CONOPS** y la simulacion del sistema completo, el otro la **cadencia mensual** y la validacion con socios | de **lector** |
+| **331** | `analisis_de_gastos_de_capital` contra `propuesta_gasto_capital` | **la taxonomia de beneficios** (directos, incrementales, de evitacion de costos e intangibles); el **hurdle rate**; el **analisis de sensibilidad**; **decision-del-analisis-no-al-reves**; **proyeccion-conservadora**; e **involucra-tecnicos** en las proyecciones | de **lector** |
+| **334** | `construccion_de_leverage` contra `leverage_en_negociacion_con_vcs` | **sincroniza-tiempos** para que los term sheets lleguen juntos; **ancla-en-2-3** terminos prioritarios; y **nunca-el-primero-en-precio** | de **lector** |
+| **335** | `prototipado_de_experiencias` contra `prototipado_experiencial_servicios` | reparto menor: uno dice **maqueta a escala real**, el otro **documentar insights emocionales**; lo demas es calco | de **lector** |
+| **339** | `entender_term_sheet` contra `term_sheet_overview` | **clausulas-distraccion**, detectar las que no afectan ni economia ni control; y **asesoria-legal-VC** especializada para revisar el documento completo | de **lector** |
+| **340** | `modelo_cascada_desarrollo_producto` contra `modelo_tradicional_introduccion_producto` | **deten-la-ejecucion-ciega** si no hay contacto continuo con el cliente; y **no-contrates-VP-antes** de validar el modelo | de **lector** |
+
+#### 331: SEXTO nodo donde los dos ejes se cruzan, y TERCERO del tipo caro
+
+**Y aqui hay que corregir la clasificacion del encargo, medida contra la ficha.**
+
+> **El encargo lo llama la CUARTA FALSA de costuras reaparecida gemela.**
+> **`propuesta_gasto_capital` no es falsa: es CONFIRMADA**, doce pasos, **DOBLE**,
+> y ademas **el PRIMER FALSO NEGATIVO del instrumento**, el nodo por el que el
+> umbral de bloque bajo de 45 a 44.
+
+**El grupo, recontado de la ficha:**
+
+| nodo | veredicto de costuras | puesto del intra |
+|---|---|---:|
+| SPIN | falsa | 248 |
+| regalos | falsa | 251 |
+| `founder_ceo_succession_process` | falsa | 256 |
+| `optimizacion_embudo_get_customers` | **confirmada** | 277 |
+| `producto_unico_superior` | **confirmada** | 285 |
+| **`propuesta_gasto_capital`** | **confirmada** | **331** |
+
+> **TRES falsas con gemelo y TRES confirmadas con gemelo.** Las tres confirmadas
+> son las que necesitan **CURA ACOPLADA**; en las falsas no hay nada que destejer.
+
+**Y esta trae una tercera pieza que las otras dos no tenian:**
+
+> **La ficha ya habia medido que `propuesta_gasto_capital` esta ENCADENADO con un
+> vecino generico**: `calculo_roi` a `comparacion_metodos_inversion` a
+> `propuesta_gasto_capital`, **con el generico primero**, y aun asi la costurada
+> vuelve a derivar lo mismo.
+>
+> **Asi que aqui la cura no es doble sino TRIPLE**: destejer el apendice, fusionar
+> con el gemelo `analisis_de_gastos_de_capital`, **y mirar antes al vecino
+> generico**, porque parte del material duplicado puede sobrar del todo si
+> `calculo_roi` ya lo cubre. **Los tres movimientos, un solo acto.**
+
+**Anotado en la ficha junto a los otros dos del tipo caro.**
+
+#### LAS DOS NOMINAS, contadas con el contador y leidas una por una
+
+##### a) La familia S&OP: CUATRO miembros y CERO aristas
+
+| | |
+|---|---:|
+| miembros | **4**: `sop_colaborativo`, `sales_operations_planning`, `mission_and_operations_planning`, `proceso_sop_mop` |
+| pares posibles | **6** |
+| en la cola | 5 |
+| **leidos** | **4**: **A** (173), **A** (330), **B** (703), **D** (725) |
+| pendientes de cola | **1** (puesto 1218) |
+| nunca en cola | **1**: `proceso_sop_mop` contra `sales_operations_planning` |
+| **aristas internas** | **CERO**, los cuatro aislados |
+
+> **Va a salir MEZCLADA, no pura**: ya tiene un sano y un dudoso dentro. **Le
+> faltan DOS lecturas** para cerrar la cuenta.
+>
+> **El contador levanta tres nodos mas** (`driver_produccion`,
+> `plataforma_colaboracion_masiva`, `roadmap_proyectos_operacionales_12_meses`) y
+> **la lectura los deja fuera**: mencionan el S&OP o el plan maestro de pasada y
+> su objeto es otro.
+
+##### b) La competencia entre inversores: QUINTO PURO, y este si paso el contador
+
+**El encargo decia que faltaba el par estrategia contra construccion. Ese par es
+el puesto 787, se leyo hace cuatro tandas y dio A.** Contado el jsonl, la familia
+esta **cerrada**.
+
+| | |
+|---|---:|
+| miembros | **3**: `construccion_de_leverage`, `estrategia_competencia_vcs`, `leverage_en_negociacion_con_vcs` |
+| pares posibles | **3** |
+| **leidos** | **3** (puestos **257**, **334** y **787**) |
+| **que repiten** | **3** |
+| pendientes | **0** |
+| aristas internas | **1**, y `estrategia_competencia_vcs` queda aislado |
+
+**EL CONTADOR, hecho antes de declarar, como manda la regla del banco 9.5:** el
+censo levanta **once** candidatos y **la lectura deja tres**. Los tres descartados
+que mas se acercaban:
+
+| nodo | por que NO entra |
+|---|---|
+| `gestion_sindicato_inversores` | maneja el sindicato **ya formado**, no crea la competencia |
+| `no_shop_extension_negotiation` | negocia la extension del no-shop, otro objeto |
+| **`batna_definicion`** | **el mas cercano**: su paso 3 manda mantener conversaciones con varios inversores y su paso 4 usar las alternativas como palanca. **Pero su objeto es el plan B, los limites propios y no farolear.** Queda **anotado como vecino**, y **no tiene ni un par con el trio en la cola**, asi que no hay lectura que pueda desmentirlo por ahora |
+
+> **DECLARADO QUINTO PURO**, y es **el primero declarado con la regla del contador
+> ya vigente**: censo primero, lectura despues, condicion dura al final. **Los tres
+> son de libros distintos**, *Venture Deals* dos y *The Founder's Dilemmas* uno.
+>
+> **Superviviente propuesto**: `construccion_de_leverage`, que es el unico que
+> trae las dos reglas de negociacion que los otros no tienen, **anclar en dos o
+> tres terminos** y **nunca mover primero en precio**.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -2165,6 +2271,13 @@ Todas las cifras recontadas del grafo, sobre nodos VIVOS.**
 >
 > **Un programa unico que las pierda deja la serie sin punto de entrada**, porque
 > Affirm y Activate son justamente donde la serie dice que esta el problema.
+>
+> **Y EL SUPERVIVIENTE YA TIENE NOMBRE, por el DESEMPATE POR CABLEADO del banco
+> 9.8**: **`ocho_fases_experiencia_cliente`**. Los dos programas dicen
+> practicamente lo mismo, asi que el contenido no desempata; **el grafo si**. Ese
+> nodo enlaza a **las ocho fases, al otro programa, a la serie de los seis medios
+> y a la aplicacion de la bienvenida**, medido en el puesto 815. **Fundir hacia el
+> es gratis; fundir hacia el otro obliga a reconstruir doce aristas.**
 
 > **1. LA SERIE YA TIENE DOS NODOS-PROGRAMA, y la DECISION 1 pide UNO.**
 > `fases_de_retencion_de_clientes` y `ocho_fases_experiencia_cliente` **presentan

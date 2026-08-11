@@ -2920,9 +2920,27 @@ o sea limpios por dentro:
 > evolucionara**, las **necesidades que el cliente no sabe nombrar**, y los
 > **proveedores que pueden innovar contigo**.
 >
-> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y DOS
-> confirmadas con gemelo** (277, 285). **Las dos confirmadas son las unicas que
-> necesitan cura acoplada**: en las falsas no hay nada que destejer.
+> **SEXTO EJEMPLAR, anadido el 12 ago 2026 desde la relectura R17, y es el TERCERO
+> del tipo caro. Ademas obliga a corregir una clasificacion del encargo:**
+>
+> | nodo | veredicto de ESTA ficha | veredicto del intra |
+> |---|---|---|
+> | **`propuesta_gasto_capital`** (puesto 331 del intra) | **CONFIRMADA**, doce pasos, **DOBLE**, y ademas **el PRIMER FALSO NEGATIVO** del instrumento, el nodo por el que el umbral de bloque bajo de 45 a 44 | **A**, repite con `analisis_de_gastos_de_capital` |
+>
+> **El encargo lo llamaba una falsa reaparecida. No lo es: es confirmada**, y por
+> eso entra en el grupo caro y no en el barato.
+>
+> **Y su cura no es doble sino TRIPLE.** Esta ficha ya habia medido que este nodo
+> **esta encadenado con un vecino generico**, `calculo_roi` a
+> `comparacion_metodos_inversion` a `propuesta_gasto_capital`, **con el generico
+> primero**, y que aun asi la costurada vuelve a derivar lo mismo. **Los tres
+> movimientos van en un solo acto**: destejer el apendice, fusionar con el gemelo,
+> y **mirar antes al vecino generico**, porque parte del material duplicado puede
+> sobrar del todo si `calculo_roi` ya lo cubre.
+
+> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y TRES
+> confirmadas con gemelo** (277, 285, 331). **Las tres confirmadas son las unicas
+> que necesitan cura acoplada**: en las falsas no hay nada que destejer.
 
 > **Los dos instrumentos no se corrigen: se completan.**
 
