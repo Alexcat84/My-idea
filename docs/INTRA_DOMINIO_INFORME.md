@@ -2702,6 +2702,99 @@ Con los puestos **840** (el genchi gembutsu por duplicado) y **849**
 > palabra japonesa y dos con la inglesa, **y ninguno enlaza con ninguno.** Es la
 > zona con mas repeticion confirmada y menos cableado del tramo.
 
+### TANDA R25, VIGESIMOPRIMERA CIEGA: seis de seis
+
+**Acumulado: 150 releidas, de las cuales 126 a ciegas. Discrepancias: UNA**, el
+395. Perdidas propuestas, verificadas contra los dos nodos y repartidas por
+bloques donde hacia falta.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **447** | `fase_acclimate_experiencia_cliente` contra `fase_acclimate_mapa_de_proceso` | **medir la aclimatacion** con encuestas rapidas, **celebrar los hitos**, e **identificar los momentos de friccion**; del otro lado, el **mapa visual que muestra en que etapa esta el cliente**, **detectar las senales silenciosas** de desconexion antes de la queja, y **partir lo complejo en pasos digeribles** | de **lector** |
+| **450** | `estrategia_de_balas_de_plomo` contra `lead_bullets_no_silver_bullets` | **si el problema es de mercado o de producto**, **resistir la tentacion de buscar mercados alternativos**, y **comunicar al equipo que no hay atajos**; del otro lado, **no buscar asociaciones ni adquisiciones como solucion magica** | de **lector** |
+| **451** | `validacion_hipotesis_ingresos` contra `verificar_modelo_ingresos` | el **valor de vida del cliente** para fijar precio y **si la rentabilidad mejora al crecer**; del otro lado, los **tres escenarios** optimista, esperado y pesimista, y el **cash burn contra la caja disponible** | de **lector** |
+| **452** | `ab_testing_optimizacion` contra `split_testing` | **una sola**: la **significancia estadistica del 95%**. Lo demas viaja con el destejido, ver abajo | de **lector** |
+| **453** | `formalizacion_acuerdo_equity` contra `reparto_inicial_equity` | las **implicaciones fiscales y legales** en tu mercado; del otro lado, **esperar a que la estrategia y el equipo se estabilicen** antes de cerrar el reparto, y usar una **plantilla estructurada** para la conversacion | de **lector** |
+| **456** | `invitar_ia_a_todo` contra `principio_invitar_ia_siempre` | **repetir el ejercicio periodicamente porque las capacidades de la IA cambian** y **compartir los hallazgos con el equipo**; del otro lado, **iterar el prompt** hasta encontrar la forma optima para esa tarea | de **lector** |
+
+#### 447: TERCERA fase doble de Coleman confirmada por lectura
+
+**Con Assess (373) y Admit (421), van TRES fases dobles confirmadas leyendo**, y
+esta es ademas **la unica de las tres que la medicion contaba como racimo de
+TRES** (`fase_acclimate`, `fase_acclimate_experiencia_cliente`,
+`fase_acclimate_mapa_de_proceso`).
+
+> **Y las dos mitades se reparten el trabajo de forma limpia**: una mide y
+> celebra, la otra dibuja el mapa y vigila el silencio. **No es una copia peor de
+> la otra: son dos aportes distintos sobre el mismo hueso**, mapear el recorrido y
+> comunicar por hitos.
+>
+> **Lo que esto le anade al tratamiento de la seccion 12**: de las ocho fases,
+> **tres ya tienen su duplicacion confirmada por lectura y no solo por conteo.**
+> El paso 3 del tratamiento, consolidar fase por fase, **ya tiene tres fases con
+> la evidencia hecha.**
+
+#### 452: `ab_testing_optimizacion` es el UNDECIMO ejemplar de la CURA ACOPLADA
+
+**Consultada la ficha antes de registrar, como manda el dictado:**
+
+| eje | veredicto |
+|---|---|
+| **la ficha de costuras** | **CONFIRMADA**, quince pasos, corte **10**, **TRES NARRACIONES**: landing page (1 a 5), metrica unica (6 a 10) y canal nucleo (11 a 15), con el tercer bloque en segunda persona mientras los dos primeros van en infinitivo |
+| **el intra** | **A** en este puesto 452, gemelo `split_testing` |
+
+> **Costurada confirmada con gemelo declarado: CURA ACOPLADA.** **Undecimo
+> ejemplar y OCTAVO del tipo caro.** Anotado en la ficha.
+>
+> **Y su cura ya estaba emparejada con otra**: la ficha dice que este nodo y
+> `split_testing_experimentos_ab` (el octavo ejemplar, puesto 374) **se leen
+> juntos porque su destejido probablemente converge en uno.** **Ahora son TRES
+> nodos de A/B en el mismo acto**: los dos costurados y `split_testing`, que
+> repite con los dos.
+
+**SU PUESTO EN LA COLA, con la regla recien adjudicada: EN COLA, NO CONGELADO.**
+
+> **La POSICION dice bloquea**: el solape (definir variaciones, partir el trafico,
+> medir conversion, confianza estadistica) **toca el bloque 1 a 5 Y el bloque 11 a
+> 15**, o sea que cruza junturas.
+>
+> **La DEPENDENCIA dice que se emite, y manda ella**: sobreviva la narracion que
+> sobreviva, **lo que quede seguira siendo un nodo de pruebas A/B**, y
+> `split_testing` es un nodo de pruebas A/B entero. **El veredicto es
+> invariante.**
+
+**LA PERDIDA, REPARTIDA y verificada como pedia el dictado:**
+
+| se salva en ESTA fusion | viaja con el destejido |
+|---|---|
+| de `split_testing`: la **significancia estadistica superior al 95%**, que el otro solo nombra como *confianza estadistica* sin cifra | **la saturacion** (paso 15) y **el canal nucleo** (paso 11), los dos del **bloque de Weinberg** |
+| | |
+
+> **Verificado antes de listarlo**: los dos que el dictado proponia como perdida,
+> saturacion y canal nucleo, **estan en el tercer bloque**, el que la cirugia se
+> lleva. **No se pierden aqui.** Quinto ejemplar de la figura del banco 9.11.
+
+#### 456: NO es par interno del racimo de la IA, y lo traigo
+
+**El dictado lo daba como par interno del racimo IA-supervision. Verificado contra
+la nomina: no lo es.**
+
+| | |
+|---|---|
+| la nomina del racimo (seccion 11) | **ocho miembros**, y **ninguno de los dos de este par** esta entre ellos |
+| pares en la cola entre este par y los ocho | **UNO**: el puesto **1517**, `invitar_ia_a_todo` contra `jagged_frontier_ia`, **pendiente** |
+
+> **Lo que si es**: **la pareja del PRINCIPIO 1 de Mollick**, invitar a la IA a
+> todo, **adyacente al racimo pero fuera de su nomina.** Su asunto es *pruebala en
+> todo*; el del racimo es *donde tiene que mirar una persona*. **Son la puerta y
+> el freno del mismo libro, no el mismo tema.**
+>
+> **Y su forma es exactamente la de la pareja de las alucinaciones** (puesto 363):
+> **un par interno que repite, adyacente al racimo, con UN solo puesto de la cola
+> que decide si entra.** Alli era el 1478; aqui es el **1517**. **Quedan los dos
+> anotados como condiciones vivas del racimo**, y ninguno de los dos es de los
+> cuatro cruzadores que deciden si el racimo se parte.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -5771,3 +5864,109 @@ avance*.
 > **4. Y una pareja que el redactor deberia ENLAZAR en vez de fundir** (puesto
 > **906**): decidir el ritmo de crecimiento **contando el efectivo** contra
 > decidirlo **contando a los competidores**. Ninguno mira lo que mira el otro.
+
+---
+
+## 38. EL BARRIDO DEL PASO CONTRA EL NODO: el tercer eje
+
+**Instrumento nuevo, aprobado el 13 ago 2026: `scripts/paso_contra_nodo.py`.
+Estrictamente de solo lectura.** Su salida es `docs/PASO_NODO_CANDIDATOS.jsonl`.
+
+### 38.1 POR QUE HACIA FALTA
+
+**Los dos instrumentos existentes miden lo mismo desde dos sitios, y ninguno mira
+este eje:**
+
+| instrumento | que compara |
+|---|---|
+| `intra_dominio.py` | **nodo contra nodo** del mismo dominio |
+| `costuras_internas.py` | **paso contra paso DENTRO del mismo nodo** |
+| **`paso_contra_nodo.py`** | **un PASO de la madre contra un NODO ENTERO que lo desarrolla** |
+
+> **La figura la encontro el cribado a mano, una y otra vez.** En el tramo 901 a
+> 928 fueron **siete de veintiocho pares**: una madre enumera un paso en una linea
+> y otro nodo trae el procedimiento entero de esa linea, **sin arista entre
+> ellos**.
+>
+> **El instrumento no adjudica cual de los dos destinos toca.** La lista alimenta
+> las dos clases que el plan ya tiene: **ARISTA QUE FALTA** (banco 9.6) cuando la
+> jerarquia es sana, y **PODA** cuando la madre re-desarrolla lo que el hijo ya
+> cuenta.
+
+### 38.2 EL METODO, con sus umbrales declarados
+
+**DOS SENALES, y tienen que disparar LAS DOS:**
+
+| senal | que mide | umbral |
+|---|---|---:|
+| **TITULO** | `token_set_ratio` del paso contra el **titulo** del hijo candidato. Se usa `set` y no `sort` porque los largos son muy distintos: un titulo de cinco palabras dentro de un paso de veinte | **72** |
+| **CONTENCION** | que proporcion de las palabras de contenido del paso vive dentro de la **identidad** del hijo (titulo mas resumen mas entregable) | **0,45** |
+
+**Y un piso**: pasos de menos de **cuatro** palabras de contenido no se miden.
+*Iterar rapido* se parece a demasiadas cosas.
+
+> **POR QUE LAS DOS Y NO CUALQUIERA.** Es la leccion del umbral 0,80 del intra:
+> **dentro de un dominio la vecindad tematica es la norma, no la senal.**
+> Cualquiera de las dos sola llena la lista de vecinos legitimos. **La conjuncion
+> pide que el paso NOMBRE al hijo y ademas que su vocabulario VIVA dentro de el.**
+
+**Excluye**: deprecados de los dos lados, el propio nodo, y los pares de distinto
+dominio. **El nucleo cuenta como un dominio mas**, igual que en el intra.
+
+### 38.3 EL VOLUMEN
+
+**3.521 nodos vivos mirados. 742 candidatos, sobre 507 madres distintas.**
+
+| dominio | nodos | candidatos | con arista | **sin arista** |
+|---|---:|---:|---:|---:|
+| **quality** | 792 | **323** | 27 | **296** |
+| **core** | 1.618 | **298** | 69 | **229** |
+| environmental | 289 | 32 | 0 | 32 |
+| franquicias | 195 | 29 | 2 | 27 |
+| health_safety | 283 | 27 | 11 | 16 |
+| exportacion | 141 | 23 | 6 | 17 |
+| entrega | 47 | 4 | 0 | 4 |
+| seguridad_digital | 55 | 4 | 2 | 2 |
+| risk_management | 55 | 1 | 0 | 1 |
+| compras | 46 | 1 | 1 | 0 |
+| **TOTAL** | **3.521** | **742** | **118** | **624** |
+
+> **SEISCIENTOS VEINTICUATRO candidatos sin arista.** Si aunque sea la mitad
+> resultara jerarquia sana, **son mas de trescientas aristas que faltan**, cada
+> una un solo enlace. **Es, de lejos, la bolsa de trabajo barato mas grande que
+> ningun instrumento haya destapado.**
+>
+> **Y la sorpresa es `quality`**: 323 candidatos con **la mitad de nodos** que el
+> nucleo. **Es el dominio donde esta figura mas abunda**, y hasta hoy nadie lo
+> habia mirado por este eje.
+
+### 38.4 LOS DIEZ CANDIDATOS MAS FUERTES
+
+| puntaje | madre y paso | hijo candidato | arista |
+|---:|---|---|:---:|
+| **1,000** | `verificar_clientes_y_canales`, paso 2 de 6: *crear un dia en la vida del cliente antes y despues del producto* | `dia_en_la_vida_del_cliente` (5 pasos) | **NO** |
+| **1,000** | `planificacion_estrategica_despliegue`, paso 1 de 7 | `definir_mision_organizacional` (4 pasos) | **NO** |
+| **1,000** | `plan_cambio_climatico`, paso 3 de 5 | `implementar_estrategias_reduccion_emisiones` (5 pasos) | **NO** |
+| 0,962 | `estrategias_de_crecimiento_empresarial`, paso 5 de 6 | `due_diligence_adquisiciones` (6 pasos) | SI |
+| 0,943 | `seguimiento_cumplimiento_cadena_suministro`, paso 1 de 4 | `identificacion_proveedores_criticos` (4 pasos) | **NO** |
+| 0,929 | `genchi_gembutsu_salir_del_edificio`, paso 1 de 5: *identificar las preguntas de fe mas criticas* | `leap_of_faith_questions` (4 pasos) | SI |
+| 0,921 | `lectura_balance_general`, paso 3 de 6 | `tipos_de_pasivos` (4 pasos) | SI |
+| 0,884 | `rapid_prototyping`, paso 1 de 5 | `determine_what_to_prototype` (4 pasos) | SI |
+| 0,875 | `tasa_de_retorno_requerida`, paso 3 de 4 | `costo_de_capital` (4 pasos) | SI |
+| 0,857 | `tasa_interna_retorno_irr`, paso 3 de 4 | `tasa_de_retorno_requerida` (4 pasos) | SI |
+
+> **El primero es la figura en estado puro y ya estaba a la vista del cribado**:
+> el puesto **926** leyo `verificar_clientes_y_canales` y su paso 2 dice
+> literalmente *crear un dia en la vida del cliente*. **Existe un nodo que se
+> llama asi y hace eso, y no hay arista.**
+>
+> **Los que SI tienen arista tambien sirven, y para lo contrario**: son la
+> jerarquia sana ya cableada, **el patron de referencia contra el que se lee todo
+> lo demas.**
+
+### 38.5 LO QUE ESTE INSTRUMENTO NO HACE
+
+> **No adjudica, no ordena la cola, y no toca un nodo.** Cada fila es **una cita
+> para leer**, igual que la del intra. **Y no reemplaza a los otros dos ejes: los
+> completa.** Un nodo puede estar sano en los tres ejes y aun asi tener mal el
+> cableado, que es justamente lo que este barrido destapa.

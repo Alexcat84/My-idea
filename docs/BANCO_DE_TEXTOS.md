@@ -1442,6 +1442,32 @@ pares.**
 | el nodo va a cura acoplada | **después de la cirugía Y de la fusión** |
 | el solape cae entero en un bloque que sobrevive | **no se relee: el par se juzga hoy** |
 
+##### ADJUDICADO (13 ago 2026): MANDA LA DEPENDENCIA; LA POSICIÓN ES PISTA
+
+> **Cuando los dos criterios discrepan, manda la DEPENDENCIA.** La posición del
+> solape **no es un test: es una pista que obliga a comprobar la dependencia**, y
+> nunca la sustituye.
+
+**El motivo, escrito**: el congelado existe **para no juzgar sobre un texto que va
+a cambiar**. Si el veredicto es **invariante** a cualquier destejido plausible,
+congelar no protege de nada: **cuesta una relectura que no va a cambiar nada.**
+
+> **Cuando la posición dice *bloquea*, lo que produce es una OBLIGACIÓN**:
+> comprobar si el veredicto depende de qué sobreviva. Si depende, se congela. Si
+> no, se emite y se encola.
+
+**EL EJEMPLAR, y es el que obligó a adjudicar**: el puesto **915**.
+
+| criterio | qué decía |
+|---|---|
+| **posición** | el solape son las pruebas A/B, y el costurado las tiene a los **dos lados** de su juntura: **bloquea** |
+| **dependencia** | la clase se decide por la **fase del embudo**, Get contra Grow, no por el A/B: **invariante** |
+
+> **Aplicación confirmada: D, en cola sin congelar.** Y el mismo criterio resuelve
+> el puesto **452**, donde el solape cruza dos junturas de tres narraciones y el
+> veredicto sigue siendo invariante: sobreviva la narración que sobreviva, lo que
+> quede sigue siendo un nodo de pruebas A/B.
+
 ##### CONGELADO contra EN COLA: dos cuentas, no una
 
 **Aprobada por el auditor el 13 ago 2026.** Nace del puesto 361, el primer par que

@@ -3044,9 +3044,30 @@ o sea limpios por dentro:
 > los 7 y 8. **Si el solape de un par futuro cae sobre el CAC, ese par SI
 > bloquea.** El 392 no, porque su solape es el montaje del instrumento.
 
-> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y SIETE
+> **UNDECIMO EJEMPLAR, anadido el 13 ago 2026 desde la relectura R25, y es el
+> OCTAVO del tipo caro:**
+>
+> | nodo | veredicto de ESTA ficha | veredicto del intra |
+> |---|---|---|
+> | **`ab_testing_optimizacion`** (puesto 452 del intra) | **CONFIRMADA**, quince pasos, corte 10, **TRES NARRACIONES**: landing page 1 a 5, metrica unica 6 a 10, canal nucleo 11 a 15 | **A**, repite con `split_testing` |
+>
+> **Y su cura ya estaba emparejada**: esta ficha dice que este nodo y
+> `split_testing_experimentos_ab` se leen juntos porque su destejido converge en
+> uno. **Ahora son TRES nodos en el mismo acto**: los dos costurados mas
+> `split_testing`, que repite con los dos (374 y 452).
+>
+> **Lo que hay que salvar, ya repartido** (banco 9.11): **en la fusion**, la
+> **significancia estadistica superior al 95%** de `split_testing`, que el
+> costurado solo nombra como confianza estadistica sin cifra. **Con el destejido**
+> viajan la **saturacion** (paso 15) y el **canal nucleo** (paso 11), los dos del
+> tercer bloque.
+>
+> **Su par entra a la cola SIN congelar** por la regla adjudicada: el solape cruza
+> dos junturas, pero el veredicto es invariante.
+
+> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y OCHO
 > confirmadas o fuera de cola con gemelo** (277, 285, 331, **361**, **374**,
-> **386**, **392**). **Las cuatro confirmadas son
+> **386**, **392**, **452**). **Las cuatro confirmadas son
 > las unicas que necesitan cura acoplada**: en las falsas no hay nada que
 > destejer.
 
