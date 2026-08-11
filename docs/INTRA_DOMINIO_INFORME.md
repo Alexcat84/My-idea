@@ -3784,6 +3784,120 @@ preguntas distintas, y la ficha del plan uso la respuesta de la primera para la
 segunda.** La cura de `brainstorming_divergente` no es de cuatro nodos: **es de
 cinco, y puede ser de seis.**
 
+### TANDA R34, TRIGESIMA CIEGA: seis de seis
+
+**Acumulado: 204 releidas, de las cuales 180 a ciegas. Discrepancias: UNA**, el
+395, cerrada por los dos lados.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **590** | `five_whys_inversion_proporcional` contra `tecnica_cinco_porques` | **reunir a los involucrados** y **si la causa es tecnica o humana**; del otro lado, dos cosas que **viven en el bloque injertado**, ver abajo | de **lector** |
+| **595** | `fase_accomplish` contra `fase_accomplish_experiencia_cliente` | **los tres escenarios** y **el 5% de las ganancias**; del otro lado, **recoger evidencia para usos futuros** | de **catalogo** |
+| **596** | `acquisicion_viral_engineering` contra `herramientas_adquisicion_viral` | **los tipos de efecto de red** y **las recompensas por referir**; del otro lado, **animar a los primeros clientes a promoverlo** | de **catalogo** |
+| **601** | `cierre_segun_complejidad_venta` contra `ineficacia_cierre_ventas_grandes` | **el permiso para la venta pequena**, **revisar el proceso completo** y **capacitar diferenciando**; del otro lado, **auditar por observacion** y **comparar tasas**. **La clasificacion esta en los dos** | de **catalogo** |
+| **602** | `ficcion_especulativa_como_metodo` contra `historia_del_futuro_escenarios_especulativos` | **los principios de diseno**; del otro lado **TRES y no una** | de **lector** |
+| **605** | `analisis_disrupciones_mercado` contra `evaluacion_industria_cliente` | **la voz del cliente cara a cara** y **los usuarios lideres**; del otro lado **TRES y no una** | de **catalogo** |
+
+#### 595 y el tratamiento de Coleman: no son ocho fases con dos programas
+
+**El encargo pide reformular el tratamiento y medir cuantas fases tienen doble
+casa. Medido, y la respuesta es peor de lo que decia el marco anterior.**
+
+**Criterio: se cuenta un nodo en una fase si la nombra en su IDENTIFICADOR o en su
+TITULO.** Los dos nodos indice se cuentan aparte, porque pertenecen a las ocho.
+
+| fase | nodos que la nombran | pares internos leidos | tiene A interna |
+|---|---:|---|:---:|
+| **ASSESS** | **4** | 224 B, **373 A** | **SI** |
+| **ADMIT** | **2** | **421 A** | **SI** |
+| AFFIRM | **1** | sin pares | no |
+| **ACTIVATE** | **3** | **183 A** | **SI** |
+| **ACCLIMATE** | **3** | 253 B, 196 B, **447 A** | **SI** |
+| **ACCOMPLISH** | **2** | **595 A** | **SI** |
+| **ADOPT** | **2** | 965 D | no |
+| ADVOCATE | **1** | sin pares | no |
+
+**Mas los DOS INDICES**, `ocho_fases_experiencia_cliente` y
+`fases_de_retencion_de_clientes`, **que son gemelos entre si** (A del puesto 326).
+
+> **LA REFORMULACION, con la cifra: SEIS de las OCHO fases tienen DOBLE CASA, y
+> CINCO de esas seis ya tienen la repeticion PROBADA con una A interna.** Solo
+> AFFIRM y ADVOCATE tienen un nodo cada una, y ADOPT tiene dos que no repiten
+> (965 D).
+>
+> **No son ocho fases con dos programas encima.** Son **veinte nodos para ocho
+> fases**: dieciocho de fase mas dos indices que tambien repiten entre si. **La
+> mesa no tiene que decidir entre dos programas: tiene que decidir fase por fase**,
+> y en cinco de ellas la decision ya esta forzada por una A.
+
+**Y una nota que la tabla deja a la vista**: dos nodos mas llegan a ACCLIMATE **por
+contenido y no por nombre**, `gamificacion_onboarding_visual` y
+`visualizacion_progreso_onboarding`, gemelos entre si por el puesto **571**. **Si
+se cuentan, ACCLIMATE tiene CINCO** y es la fase mas poblada del libro.
+
+**LAS PERDIDAS DEL 595, verificadas**: `fase_accomplish_experiencia_cliente` es el
+unico que **clasifica en los tres escenarios** y el unico que **reserva el 5% de
+las ganancias**; `fase_accomplish` es el unico que manda **recoger evidencia,
+testimonios y datos, del resultado logrado para usos futuros**. **Las tres se
+verifican enteras.**
+
+#### 590: dos de las perdidas viven en el bloque injertado, y eso cambia su fecha
+
+**HALLAZGO DE ANATOMIA**: `five_whys_inversion_proporcional` declara **fuente
+doble**, *The Lean Startup* y **SPIN Selling**, y sus **nueve pasos** se parten en
+el metodo general (1 a 5) y **un bloque de ventas (6 a 9)**. Es la **SEXTA costura
+entre libros** del ejercicio y **la primera cuyo segundo libro es Rackham**.
+
+> **PRECISION DECLARADA, por el banco 9.11**: las dos perdidas que el encargo pone
+> de este lado, **revisar grabaciones y patrones** y **medir tras el cambio
+> estructural**, estan **las dos en los pasos 7 y 9**, o sea **dentro del bloque
+> injertado**. **No las pierde esta fusion: su destino lo decide la decision de
+> fuente**, que va antes. **Sexto ejemplar de la figura del reparto por bloques.**
+
+**Las dos del otro lado se verifican enteras y son de metodo puro**: **reunir a
+todas las personas involucradas** en el descubrimiento, el diagnostico y la
+reparacion, y **identificar en cada nivel si la causa es tecnica o humana**.
+
+#### 601: la clasificacion esta en los dos, y el permiso no estaba listado
+
+**CORRECCION DECLARADA.** El encargo listaba *clasificar por valor y relacion* como
+exclusivo de `cierre_segun_complejidad_venta`. **Los dos clasifican**: el paso 1 de
+uno y el paso 1 del otro, con palabras distintas y el mismo corte.
+
+| lo exclusivo de `cierre_segun_complejidad_venta` | |
+|---|---|
+| **el PERMISO para la venta pequena**: *aplicar tecnicas de cierre tradicionales sin restriccion* | **no estaba listado**, y es el unico sitio del racimo donde el cierre duro queda **autorizado** en vez de solo desaconsejado |
+| revisar el proceso de venta completo y no solo el cierre | no estaba listado |
+| capacitar al equipo diferenciando por tipo de venta | ya listado |
+
+**Y las dos del otro lado se verifican, y son lo mas valioso del par**: **auditar
+el uso de tecnicas de cierre observando llamadas reales** y **comparar tasas de
+exito entre vendedores que usan muchas y pocas**. **Es la unica verificacion
+EMPIRICA de todo el racimo del cierre**: los demas miembros afirman la tesis, este
+dice como comprobarla en la propia empresa.
+
+#### 602 y 605: dos listas de perdidas cortas, y las dos del mismo lado
+
+**CORRECCION DECLARADA en los dos casos.**
+
+| puesto | lo listado | lo que falta, verificado |
+|---:|---|---|
+| **602** | *compartir con el equipo antes de requisitos* | **el horizonte de 10 a 15 anos**, que es la unica cifra del par; y **los tres tipos de actor** que hay que meter en la historia, usuarios, empresas y reguladores |
+| **605** | *evaluar el futuro de cada actor* | **los impulsores de rentabilidad de la industria y como estan cambiando**; y **definir escenarios futuros** para detectar arenas |
+
+> **En los dos casos el lado corto de la lista era el mismo lado**, el del nodo mas
+> largo. **Buscar en el grafo antes de clasificar sirve para las perdidas que se
+> caen; releer el par entero sirve para las que faltan.** Son dos disciplinas
+> distintas y hacen falta las dos.
+
+#### 596: verificado entero
+
+**Las tres perdidas se verifican.** `acquisicion_viral_engineering` es el unico que
+manda **identificar QUE TIPO de efecto de red aplica**, boca a boca, compartir o
+red directa, y el unico que propone **recompensas por referir**;
+`herramientas_adquisicion_viral` es el unico que manda **animar activamente a los
+primeros clientes a promoverlo**, que es pedir en vez de incentivar.
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -7703,7 +7817,7 @@ la bolsa del 9.19 sigue engordando por su lado.
 > que volver a correrlo cuando la cola avance. Queda anotado como recordatorio de
 > la seccion 45, no como enmienda a su metodo.
 
-Con el 1061, la cifra viva es **DIECIOCHO costuras con gemelo** y **tres actos de tres**.
+Con el 1061, la cifra viva es **DIECISIETE costuras con gemelo (corregido el 14 ago 2026 por el cierre transitivo, seccion 54 del informe: el 1061 unio dos costuras que YA estaban dentro de las diecisiete, asi que cambio la clase del acto y no la cuenta)** y **tres actos de tres**.
 
 ### 46.4 LA FIGURA NUEVA: LA VARA EN LOS DOS SENTIDOS (puesto 1077, clase C)
 
@@ -8687,3 +8801,110 @@ metricas, y la busqueda del punto brillante entre los clientes leales.
 > queda fuera con cuatro lecturas, la segunda condicion de la IA cae del mismo
 > lado que la primera, y la figura del 9.22 **gana un ejemplar que el grafo ya
 > habia cableado bien**. **Tres cosas que no se sabian y ahora estan medidas.**
+
+---
+
+## 54. EL CIERRE TRANSITIVO DE LA RELACION GEMELO: trece actos, no diecisiete
+
+**Encargo del 14 ago 2026. Solo lectura, sin adjudicar. VIGENTE AL PUESTO 1256**,
+por el banco 9.21.
+
+### 54.1 EL METODO, y por que la cifra es reproducible
+
+**Las 46 confirmadas se volvieron a extraer de la ficha**, no se copiaron de la
+salida anterior: patron de una linea con un identificador y un veredicto, y
+**vuelve a dar exactamente 46**. Mas las **tres fuera de cola con anatomia
+escrita**. **Total mirado: 49.**
+
+**Sobre ellas se construyo el grafo de la relacion gemelo** usando **las 319 A
+vigentes del archivo**, y se calcularon sus **componentes conexas**: si A repite
+con B y B con C, los tres son el mismo acto (banco 9.24).
+
+### 54.2 LA CIFRA
+
+| medida | resultado |
+|---|---:|
+| costuras miradas | **49** |
+| **sin ninguna A** (componente de una) | **32** |
+| **con gemelo** | **17** |
+| **ACTOS** en que se reparten esas 17 | **13** |
+| **nodos totales que entran en esos 13 actos** | **38** |
+
+> **CORRECCION DECLARADA, y es mia.** El 13 ago escribi que la cifra viva era de
+> **DIECIOCHO** costuras con gemelo tras el hallazgo del 1061. **Son DIECISIETE.**
+> El 1061 unio a dos costuras que **ya estaban las dos dentro de las diecisiete**:
+> no anadio una costura al conjunto, **cambio la CLASE del acto**, de dos actos
+> sueltos a uno solo. **La cuenta de costuras y la cuenta de actos son distintas y
+> yo sume en la equivocada.**
+
+### 54.3 LOS TRECE ACTOS, por tamano
+
+| # | tamano | costurados | sanos | pares A que lo sostienen | aristas internas |
+|---:|---:|---:|---:|---|---:|
+| **1** | **7** | 1 | 6 | 234, 586, 823, 834, 844, 885, 943 | 2 |
+| **2** | **6** | **3** | 3 | 277, 374, 452, 643, **1061** | 1 |
+| **3** | **4** | 1 | 3 | 386, 526, 788 | 2 |
+| **4** | 3 | 1 | 2 | 492, 673, 833 | 0 |
+| 5 a 13 | **2** cada uno | 1 o 2 | | un par cada uno | 0 salvo el 361 |
+
+**LOS CUATRO GRANDES, con nombre:**
+
+| # | la costura que lo ancla | los demas miembros |
+|---:|---|---|
+| **1** | `brainstorming_divergente` | `brainstorming_efectivo`, `reglas_brainstorming`, `generar_multiples_opciones`, `construir_sobre_ideas_ajenas`, `pensamiento_convergente_divergente`, `design_attitude_vs_decision_attitude` |
+| **2** | **TRES costuras**: `ab_testing_optimizacion`, `optimizacion_embudo_get_customers`, `split_testing_experimentos_ab` | `funnel_get_customers_optimizacion`, `split_testing`, `test_ab_precio` |
+| **3** | `voz_del_cliente_voc` | `enfoque_mercado_voc`, `homework_frontend_loading`, `voice_of_customer_homework` |
+| **4** | `seleccion_ceo_fundador` | `asignacion_de_titulos_ejecutivos`, `errores_comunes_asignacion_roles` |
+
+**Y los nueve de dos**: `producto_unico_superior`, `propuesta_gasto_capital`,
+`blueprint_de_experiencia` con `customer_journey_mapping`,
+`plan_de_adquisicion_acquire`, `key_partners_hypothesis`,
+`metricas_de_adquisicion_activacion`, `principio_calidad_mvp` con
+`producto_minimo_viable`, `future_scenarios_planning`, `retention_metrics`.
+
+### 54.4 CUANTOS ACTOS CRECIERON: TRES de trece
+
+| acto | vecinos directos | cierre transitivo | crece |
+|---|---:|---:|---:|
+| **1, el brainstorming** | 4 | **7** | **+3** |
+| **3, la voz del cliente** | 2 | **4** | **+2** |
+| **2, las pruebas A/B** | 5 | **6** | **+1** |
+| los otros diez | igual | igual | **=** |
+
+> **Tres de trece crecen, y los tres son de los cuatro mas grandes.** **En total,
+> los actos pasan de 32 nodos a 38**: seis nodos que nadie habia contado y que
+> **hay que tener delante el dia de la fusion**, porque estan pegados por una A a
+> alguien que si estaba contado.
+>
+> **El acto 3 es el aviso mas util**: `voz_del_cliente_voc` parecia una costura con
+> **un** gemelo sano y son **tres**, y dos de ellos, `homework_frontend_loading` y
+> `voice_of_customer_homework`, **se leyeron en la relectura R31** sin que nadie
+> notara que colgaban de la misma costura.
+
+### 54.5 LO QUE CAMBIA EN EL ORDEN DE LA PASADA
+
+**El acto 2 es el mas caro por cirugias y no estaba dicho.** El orden escrito en el
+plan pone `ab_testing_optimizacion` como **tercera cirugia**; medido por
+componentes, **ese acto contiene TRES costuras**, o sea **tres destejidos y luego
+una decision sobre seis nodos.**
+
+| acto | costuras que hay que destejer | nodos en la decision final |
+|---|---:|---:|
+| **2, pruebas A/B** | **3** | 6 |
+| 11, el MVP (cura acoplada mayor) | 2 | 2 |
+| 1, brainstorming | 1, mas la decision de fuente | **7** |
+| 3, voz del cliente | 1 | 4 |
+
+> **La tercera cirugia del plan no es una cirugia: son tres.** Queda anotado aqui
+> y no se reordena nada: **el criterio del plan sigue siendo congelados liberados**,
+> y esto es informacion para quien se siente, no una adjudicacion.
+
+### 54.6 LO QUE ESTE CALCULO NO HACE
+
+> **No adjudica.** No dice si los siete nodos del brainstorming deben quedar en
+> uno, en dos o en cuatro. **Dice cuantos hay que tener delante para poder
+> decidirlo**, que es exactamente lo que faltaba.
+>
+> **Y caduca.** Cada A nueva puede unir dos componentes y volver un acto de dos en
+> un acto de cinco. **Vigente al puesto 1256**; se vuelve a correr al cierre del
+> cribado, junto al barrido de confirmadas, como manda el 9.21.

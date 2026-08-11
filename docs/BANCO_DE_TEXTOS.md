@@ -2040,3 +2040,55 @@ UNO**, y los demas no se parecen entre ellos.
 > solo las A del centro habria dado estrella en los tres casos, y en dos habria
 > mandado a arreglar por separado lo que necesita mesa. **Por eso la segunda
 > cuenta no es opcional.**
+
+---
+
+### 9.24 DOCTRINA: EL GEMELO NO ES LA FAMILIA
+
+**El barrido de las A contesta una pregunta y solo una: QUIEN ES GEMELO DE UN
+NODO.** Una **cura acoplada** no fusiona un nodo con sus gemelos: **fusiona una
+FAMILIA**, y una familia es el **CIERRE TRANSITIVO** de la relacion gemelo.
+
+> **Si A repite con B y B repite con C, los tres son el mismo acto**, aunque
+> **A y C nunca se hayan leido juntos** y aunque su par **ni siquiera este en la
+> cola.**
+>
+> **La relacion gemelo NO es transitiva como veredicto** (que A repita con B y B
+> con C no prueba que A repita con C), **pero SI lo es como ACTO**: no se puede
+> fusionar A con B sin decidir a la vez que pasa con C, porque C esta pegado a B.
+> **Son dos cosas distintas y conviene no confundirlas: una es una clase, la otra
+> es un alcance.**
+
+**LO QUE ESTO OBLIGA:**
+
+> **1. Toda cifra de cura acoplada se calcula sobre COMPONENTES CONEXAS**, no
+>    sobre vecinos directos.
+> **2. El barrido de las A sigue siendo el instrumento correcto para levantar la
+>    nomina**; lo que cambia es **que hacer con su salida**: la salida es la lista
+>    de aristas, no la lista de actos.
+> **3. Y como toda cifra de cruce, lleva su fecha de corte** (banco 9.21): el
+>    cierre transitivo crece cada vez que una A nueva conecta dos componentes.
+
+**EL EJEMPLAR: el racimo del brainstorming, encontrado el 14 ago 2026 en la
+relectura R33.**
+
+| vista | tamano del acto |
+|---|---:|
+| **vecinos directos** (lo que uso la ficha del plan) | **4**: `brainstorming_divergente` mas sus tres gemelos, 823, 834 y 844 |
+| **cierre transitivo** (lo correcto) | **7** |
+
+**Los tres que aparecen al cerrar**, y ninguno es gemelo directo de la costura:
+
+| nodo | como entra |
+|---|---|
+| `construir_sobre_ideas_ajenas` | repite con `brainstorming_efectivo` (**586**), que es gemelo de la costura |
+| `pensamiento_convergente_divergente` | repite con `generar_multiples_opciones` (**943**) |
+| `design_attitude_vs_decision_attitude` | por la cadena (**885**) |
+
+> **El acto mas caro del inventario paso de cuatro nodos a SIETE, y ninguno de los
+> tres nuevos se podia ver mirando a la costura.** Habia que mirar a sus gemelos.
+
+**Y LA REGLA DE LECTURA QUE DEJA, que es lo unico que hay que recordar:**
+
+> **Un nodo costurado no arrastra a sus gemelos. Arrastra a la componente entera
+> en la que vive.**

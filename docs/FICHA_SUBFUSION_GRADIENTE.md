@@ -3147,7 +3147,7 @@ o sea limpios por dentro:
 > archivo que sigue creciendo caduca, y hay que volver a correrlo cuando la cola
 > avance.
 >
-> **Cifra viva: DIECIOCHO costuras con gemelo y TRES actos de tres** (341, 494 y
+> **Cifra viva: DIECISIETE costuras con gemelo (corregido el 14 ago 2026 por el cierre transitivo, seccion 54 del informe: el 1061 unio dos costuras que YA estaban dentro de las diecisiete, asi que cambio la clase del acto y no la cuenta) y TRES actos de tres** (341, 494 y
 > 1061).
 
 > **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y DIECIOCHO
