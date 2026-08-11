@@ -3898,6 +3898,161 @@ red directa, y el unico que propone **recompensas por referir**;
 `herramientas_adquisicion_viral` es el unico que manda **animar activamente a los
 primeros clientes a promoverlo**, que es pedir en vez de incentivar.
 
+### TANDA R35, TRIGESIMOPRIMERA CIEGA: seis de seis
+
+**Acumulado: 210 releidas, de las cuales 186 a ciegas. Discrepancias: UNA**, el
+395, cerrada por los dos lados.
+
+> **PRECEDENTE DE PARADA, y se anota aqui para que quede.** Una primera version de
+> esta tanda se encargo con seis puestos que **no eran los que el encargo
+> describia**: dos estaban mal caracterizados y **cuatro de los seis eran D**,
+> cuando las seis tandas anteriores fueron **A pura**. **La tanda se paro sin
+> escribir nada y se trajo la medicion.** Queda como precedente: **cuando los
+> puestos no calzan con lo que el encargo dice de ellos, se para antes de
+> redactar, no despues.**
+
+**En esta tanda las perdidas NO vienen dictadas: se derivaron leyendo los doce
+nodos y verificando contra el grafo.**
+
+| puesto | el par | que se pierde |
+|---:|---|---|
+| **609** | `channels_hypothesis_physical` contra `seleccion_canal_distribucion` | **casi nada, y ese es el hallazgo**: ver abajo |
+| **611** | `customer_discovery` contra `customer_discovery_introduccion` | **las cuatro preguntas clave** y **no delegues**; del otro lado, **construir el producto minimo** y **confirmar que compraria** |
+| **614** | `alineacion_cadena_estrategia_negocio` contra `definicion_alineacion_cadena_suministro` | **las seis preguntas de Chopra y Meindl**, **el quinto control** y la coherencia con la propuesta de valor; del otro lado, **mapear la cadena entera** y **nombrar los roles** |
+| **616** | `gestion_de_portafolio_gates_go_kill` contra `gestion_portafolio_formal` | **los seis criterios** y **matar en firme en vez de estrangular**; del otro lado, **las cubetas estrategicas**, la cadencia y el ranking hasta el limite |
+| **627** | `definir_meta_de_traccion` contra `traction_goal` | **el filtro de actividades** contra la meta; del otro lado, **los subobjetivos con fecha en el calendario** y la reevaluacion por fase |
+| **630** | `creacion_data_warehouse` contra `data_warehouse_como_fundamento` | **automatizar la captura** y **empezar pequeno**; del otro lado, **la cadencia de refresco** y **la regla de prioridad** |
+
+**NINGUNO de los doce nodos es costura confirmada**, asi que en esta tanda no hay
+acto del cierre transitivo que citar. **Se comprobo antes de escribirlo.**
+
+#### 614: SEGUNDO EJEMPLAR de la arista que existe y aun asi duplica
+
+**Con el 570, ya son dos.** Arista **en los dos sentidos**, verificada resolviendo
+a nodo vivo, **y el par repite igual.**
+
+> **Lo comun es la tesis entera**: identificar el rol propio dentro de la cadena,
+> decidir si se compite por eficiencia o por capacidad de respuesta, y alinear las
+> decisiones de produccion, inventario, ubicacion y transporte con esa eleccion.
+>
+> **Y aqui la perdida tiene una pieza que hay que mirar dos veces**:
+> `alineacion_cadena_estrategia_negocio` habla de **CINCO controles** e incluye la
+> **INFORMACION**; `definicion_alineacion_cadena_suministro` lista solo **CUATRO**
+> y la deja fuera. **Una fusion hacia el segundo pierde un control entero**, no un
+> matiz.
+>
+> **Lo demas de ese lado**: las **seis preguntas de Chopra y Meindl** sobre el
+> mercado, con sus autores nombrados, y validar que la estrategia sea coherente
+> con la propuesta de valor. **Del otro lado**: mapear todas las empresas y
+> actividades de la cadena, y nombrar los roles posibles, proveedor, fabricante,
+> distribuidor.
+
+**LA MITAD DE LA REGLA QUEDA CON DOS EJEMPLARES.** El banco 9.5.0 registro que
+**la arista no exculpa** y que la parafrasis abolida solo conservaba la mitad que
+acusa. **Van dos casos donde la arista esta puesta, en los dos sentidos, y el
+contenido esta duplicado de todos modos.** Ya no es una rareza de un par.
+
+#### 616: segundo par interno de la MESA UNIDA, y NO estan enlazados
+
+**CORRECCION DECLARADA.** El encargo dice que el grafo los enlaza. **Verificado:
+NO hay arista entre ellos, en ninguno de los dos sentidos.** La mesa unida tiene
+doce aristas internas y **ninguna es esta**.
+
+> **Con el 574, van dos pares internos de la mesa releidos y los dos sostienen A.**
+> Lo comun es el embudo que descarta lo debil, las puertas con criterios visibles
+> y la revision del conjunto.
+>
+> **Lo propio de `gestion_de_portafolio_gates_go_kill`**: los **SEIS CRITERIOS**
+> nombrados, estrategico, ventaja competitiva, atractivo de mercado,
+> apalancamiento y factibilidad; y **matar en firme en vez de reducir recursos
+> gradualmente**, que es la unica regla del grupo contra los proyectos zombis.
+> **Lo propio de `gestion_portafolio_formal`**: las **cubetas estrategicas**, la
+> cadencia de dos a cuatro revisiones al ano, y el ranking dentro de cada cubeta
+> hasta agotar el limite.
+
+#### 609: es contra el GENERAL, y el hijo no especializa nada
+
+**CORRECCION DECLARADA.** El encargo lo da como par entre dos hijos. **Es un hijo
+contra el general**: `seleccion_canal_distribucion` es el nodo general del racimo,
+segun su propia ficha de la seccion 10.
+
+**LA EVIDENCIA SEPARADA, que es lo que la mesa necesita y aqui esta medida:**
+
+| tipo de par | cuantos | puestos |
+|---|---:|---|
+| **contra el GENERAL** | **CUATRO, todos A** | 165, 400, 537, **609** |
+| **entre HIJOS** | **CUATRO, tres leidos y los tres A** | 214, 762, 945, y el **1488 pendiente** |
+
+> **La mesa tiene que ver las dos columnas juntas.** Que el general repita con sus
+> hijos sostiene la lectura madre-hijas; **que los hijos repitan ENTRE ELLOS la
+> debilita**, porque dos especializaciones distintas no deberian decir lo mismo.
+
+**Y EL HALLAZGO DEL PAR, que apunta en la misma direccion**: leidos paso por paso,
+`channels_hypothesis_physical` y el general **dicen lo mismo cinco veces**. Los
+habitos de compra, el costo del canal, la complejidad y el precio, un solo canal, y
+el recalculo de ingresos: **estan en los dos y en el mismo orden.**
+
+> **El hijo FISICO no tiene ni un paso que sea fisico.** Es el general con otro
+> titulo. **Lo unico suyo** es que fija el limite del canal unico **hasta completar
+> la validacion**, donde el general lo fija **durante el descubrimiento**: dos
+> etapas distintas. **Y lo unico del general** son los tres componentes del costo
+> de canal, distribucion, promocion y devoluciones.
+>
+> **Comparelo con el hijo DIGITAL** (puesto 537), que si trajo algo propio, probar
+> varios canales con presupuesto parecido para comparar el costo por cliente.
+> **Las especializaciones de esta familia no son uniformes: una especializa y la
+> otra solo se llama distinto.**
+
+#### 611: y la familia queda MEDIDA ENTERA, la primera del ejercicio
+
+**CORRECCION DECLARADA**: el encargo la llama sub-puro. **No lo es: es MEZCLADA.**
+Y lo que si es, es mucho mas util.
+
+| medida | resultado |
+|---|---:|
+| miembros | **5** |
+| pares posibles | **10** |
+| **en la cola** | **10** |
+| **leidos** | **10** |
+| clases | **6 A, 3 D, 1 B** |
+| aristas internas | **1** |
+
+> **ES LA PRIMERA FAMILIA DEL EJERCICIO CON COBERTURA COMPLETA: diez de diez.** No
+> hay ni un par sin encolar ni uno sin leer. **De todas las nominas medidas hasta
+> aqui, de esta se sabe todo.**
+>
+> **Y la forma que se ve con todo leido**: `customer_discovery` es el centro con
+> **cuatro A**; los tres sanos son **415**, **424** y **1255**, y los tres
+> enfrentan a un nodo de PROCESO con uno de FASES. **La familia repite en el eje
+> del proceso y jerarquiza en el de las fases**, y eso solo se puede afirmar
+> porque estan los diez.
+
+**Y arrastra DOS candidatos fuera de la nomina**: `customer_discovery_get_out_of_building`
+(849) y `desarrollo_de_clientes_customer_development` (1052), **los dos por A con
+`customer_development_modelo`**.
+
+**Las perdidas del 611**: de `customer_discovery_introduccion` se pierden **las
+cuatro preguntas clave como lista** y **no delegues esta tarea en otra persona**;
+esa segunda **sobrevive** en `customer_discovery_get_out_of_building`, como quedo
+registrado en el puesto 510. De `customer_discovery` se pierden **construir un
+producto minimo para probar la solucion** y **confirmar que el problema importa lo
+suficiente como para comprar**.
+
+#### 627 y 630: dos pares de nodo repetido con la misma forma
+
+**Los dos son el mismo caso: dos nodos del mismo libro para el mismo concepto,
+donde uno anade el CUANDO y el otro anade el FILTRO.**
+
+| puesto | lo que anade uno | lo que anade el otro |
+|---:|---|---|
+| **627** | `traction_goal`: **subobjetivos con fecha en el calendario**, junto a los hitos de producto, y **reevaluar al cambiar de fase** | `definir_meta_de_traccion`: **evaluar cada actividad de mercadeo** contra la meta y **descartar las de resultado marginal** |
+| **630** | `data_warehouse_como_fundamento`: la **cadencia de refresco**, diaria u horaria, y **priorizarlo ANTES de construir modulos analiticos** | `creacion_data_warehouse`: **automatizar la captura** para no teclear a mano, y **empezar por una version pequena** antes de ampliarla |
+
+> **En los dos casos la fusion es asimetrica y conviene decirlo**: el superviviente
+> tiene que quedarse con **el calendario y el filtro** en un caso, y con **la
+> prioridad y el arranque pequeno** en el otro. **Quedarse con uno solo de los dos
+> nodos pierde la mitad util en las dos parejas.**
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -4057,6 +4212,22 @@ de Blank:
 > cinco.** `channels_hypothesis_physical` no estaba en esta lista cuando se
 > declaro el racimo. **La familia tiene ahora CUATRO veredictos A de quince pares
 > posibles, con cuatro pendientes en la cola**, los puestos 609, 762, 945 y 1488.
+
+> **LA EVIDENCIA, PARTIDA EN DOS, para la candidatura madre-hijas (R35, 14 ago
+> 2026).** No es lo mismo que el general repita con un hijo que dos hijos repitan
+> entre si, **y la mesa tiene que ver las dos columnas.**
+>
+> | tipo de par | cuantos | puestos |
+> |---|---:|---|
+> | **contra el GENERAL** | **CUATRO, todos A** | 165, 400, 537, 609 |
+> | **entre HIJOS** | **CUATRO, tres leidos y los tres A** | 214, 762, 945, y el 1488 pendiente |
+>
+> **Que el general repita con sus hijos sostiene la lectura madre-hijas; que los
+> hijos repitan ENTRE ELLOS la debilita**, porque dos especializaciones distintas
+> no deberian decir lo mismo. **Y el 609 anade el dato mas duro**: el hijo FISICO
+> no tiene ni un paso que sea fisico, dice lo mismo que el general cinco veces
+> seguidas. **El hijo DIGITAL si trae algo propio.** Las especializaciones de esta
+> familia **no son uniformes**.
 
 > **RECOMPUTO DEL ARCHIVO, 14 ago 2026 (relectura R31), por el banco 9.10.** La
 > cifra de arriba quedo vieja: **609, 762 y 945 ya estan leidos y los TRES en A.**
