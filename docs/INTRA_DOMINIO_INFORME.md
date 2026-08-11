@@ -101,6 +101,15 @@ tres marcados **A**.
 
 **Pares ya leidos**: puestos **332** y **349**, **los dos marcados D**, sanos.
 
+> **ACTUALIZADO EL 12 ago 2026: este racimo esta CERRADO y es un MEZCLADO
+> COMPLETO.** Sus **tres** pares posibles estan leidos, **cero pendientes**, con
+> clases **D, D y A**: el tercero es el puesto **709**, `customer_validation`
+> contra `introduccion_validacion_clientes`, en **A**.
+>
+> **Lo estaba desde el 709 y nadie lo habia declarado.** Salio al contar el jsonl
+> para corregir una cifra puesta de memoria en el puesto 781. **Registrado como
+> CUARTO MEZCLADO COMPLETO en el banco 9.5.**
+
 > **Este racimo se abre aunque sus dos pares salieran sanos**, y ese es
 > justamente el motivo: **tres nodos abren la misma etapa** y cada pareja se
 > defiende sola, uno con los actos, otro con la postura y otro con el temario.
@@ -3219,3 +3228,85 @@ racimo de las puertas.
 > cuatro sanos.** Es el segundo nodo del tramo con esa firma, con
 > `verificar_product_market_fit` de la seccion 21.2: **se rozan con muchos y no
 > repiten con ninguno.**
+
+---
+
+## 23. EL TRAMO 773 a 784: el cuarto mezclado completo estaba escondido en una cifra mal puesta
+
+**Doce pares leidos, los doce del nucleo.** Acumulado **784 de 3.388**, global
+**30,5%** de A y **nucleo 37,8%**. El tramo dio **33,3%**. **El checkpoint de los
+800 es el proximo.**
+
+### 23.1 UNA CIFRA DE MEMORIA QUE DESTAPO UN RACIMO CERRADO
+
+**En el puesto 781 escribi que la apertura de Customer Validation llevaba SIETE
+pares leidos. Lo escribi de memoria. Al contar el jsonl para corregirlo aparecio
+algo mas grande que el numero.**
+
+| lo que conte | resultado |
+|---|---|
+| el conjunto ampliado de **5 nodos** | **10 pares posibles, 8 leidos**, 2 que nunca entraron a la cola |
+| **el racimo C declarado en la seccion 1**, de **3 miembros** | **3 pares posibles, LOS TRES LEIDOS, cero pendientes** |
+
+> **Clases del racimo C: D, D y A.** Es un **MEZCLADO COMPLETO**, el **CUARTO** del
+> archivo, con el racimo del control de la junta, la familia del encaje y los
+> habitos de pensamiento.
+>
+> **Y estaba completo desde el puesto 709**, o sea desde hace setenta y cinco
+> lecturas, **sin que nadie lo declarara.**
+
+> **Su forma es la peor que puede tener una mesa: dos pares sanos y uno que
+> repite.** No se pueden fusionar los tres ni dejar los tres. **Hay que decidir la
+> arquitectura con dos de los tres pares diciendo que no hay nada que decidir.**
+
+**LA LECCION, y es de procedimiento**: la correccion de una cifra **no es
+mantenimiento, es lectura**. Al contar para arreglar un numero se ve la familia
+entera, y ahi estaba el racimo cerrado. **Vale la pena contar aunque el numero no
+importe.**
+
+### 23.2 TERCER PAR DE NOMBRE INVERTIDO, y los tres reales se confirmaron leyendo
+
+**Puesto 782**: `diversidad_vs_homogeneidad_equipo` contra
+`homogeneidad_vs_diversidad_equipo`. **Las mismas dos palabras al reves, y esta
+vez SI son gemelos**, con arista en los dos sentidos.
+
+| par de nombre invertido | como se supo |
+|---|---|
+| 637 y 683, los de customer development | **prediccion, y salio FALSA las dos veces** |
+| **estructura_gates** contra **estructura_de_gates** (765) | **lectura**, y salio cierta |
+| **este 782** | **lectura**, y salio cierta |
+| las dos etapas de investigacion (209, 278, 303) | **lectura**, y salio cierta |
+
+> **Tres aciertos y dos fallos, y la diferencia es siempre la misma**: los tres
+> aciertos se leyeron antes de decirlos y los dos fallos se dijeron antes de
+> leerlos. **El script cuenta; la lectura decide.**
+
+### 23.3 EL CUARTO PURO SUMA SU SEGUNDO VECINO
+
+**Puesto 775.** Tras `investigacion_como_habilidad_clave` del 769, se arrima
+`cuatro_etapas_llamada_de_ventas`.
+
+> **A este NO lo juzgo miembro, y digo por que**: su objeto son las **cuatro
+> etapas** de la llamada y no la investigacion, y **ENLAZA a dos miembros de la
+> familia**, `etapa_investigacion_ventas` e `investigacion_como_habilidad_clave`.
+> **Se comporta como marco, no como hermano.**
+>
+> **Pero el aviso queda**: el cuarto puro tiene ya **dos nodos externos rozandolo**
+> y **tres pares pendientes** que pueden convertirlo en sub-puro (800, 862 y el
+> que nunca entro a la cola).
+
+### 23.4 EL TERCER NODO QUE BLOQUEA UN PAR
+
+**Puesto 784.** `lienzo_modelo_negocio` es costura confirmada con anatomia
+escrita: **diecisiete pasos y CUATRO narraciones del Canvas.**
+
+> El solape con `swot_business_model_canvas` **son los nueve bloques**, o sea
+> **exactamente el nucleo que el nodo repite cuatro veces**. **Cruza las cuatro
+> junturas a la vez**, asi que el par no se juzga hoy.
+>
+> **Ya son TRES los nodos que bloquean lecturas por costura**: `voz_del_cliente_voc`
+> (dos pares), los dos de A/B del puesto 738, y este.
+>
+> **Lo que si queda salvado**: el analisis cruzado, **como una debilidad de un
+> bloque golpea a los otros**, no esta en el nodo largo y es lo unico que el corto
+> aporta.

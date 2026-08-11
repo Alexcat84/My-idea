@@ -914,6 +914,20 @@ Tres miembros, tres pares posibles, los tres leídos, **y las clases son B, C y 
 > **Y no tiene centro**: grado máximo 1, un aislado. **Dos nodos enlazados y un
 > tercero suelto.**
 >
+**CUARTO MEZCLADO COMPLETO (12 ago 2026): `la apertura de Customer Validation`**,
+el racimo C de la sección 1 del informe intra, de *The Startup Owner's Manual*.
+Tres miembros, tres pares posibles, los tres leídos, cero pendientes, y las clases
+**D, D y A**.
+
+> **Estaba completo desde el puesto 709 y nadie lo había declarado.** Salió al
+> contar el jsonl para corregir una cifra que yo había escrito de memoria en el
+> puesto 781. **La corrección encontró más que el número que iba a arreglar.**
+>
+> **Su forma es la peor posible para una mesa**: dos pares sanos y uno que repite,
+> o sea que **no se puede ni fusionar los tres ni dejarlos los tres**. Hay que
+> decidir la arquitectura con dos de los tres pares diciendo que no hay nada que
+> decidir.
+
 **TERCER MEZCLADO COMPLETO (12 ago 2026): `los hábitos de pensamiento`**, de
 *The Art of Thought*. Tres miembros, tres pares posibles, los tres leídos, cero
 pendientes, y las clases **A, A y D**: los dos nodos de **formación** del hábito
