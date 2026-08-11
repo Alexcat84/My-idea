@@ -2948,6 +2948,50 @@ Contado sobre el grafo:
 
 ---
 
+### LAS SEIS QUE NINGUN EJE VOLVERA A MIRAR
+
+**Nombradas el 12 ago 2026 por encargo del fundador, para que la relectura final
+las tenga por escrito.**
+
+De los veinte de la tabla de arriba, **seis no tienen NI UN PAR en la cola del
+cribado intra-dominio**, verificado contra `docs/INTRA_DOMINIO_PARES.jsonl`.
+
+> **Eso significa exactamente esto: el instrumento de costuras cerro sin verlos y
+> el eje intra no tiene por donde entrarles.** Los otros catorce, tarde o
+> temprano, salen por un par. **Estos seis no salen por ningun lado.** Si no
+> quedan nombrados aqui, **desaparecen del inventario sin que nadie los haya
+> leido nunca.**
+
+**Los seis, con el corte aparente verificado sobre sus propios pasos:**
+
+| nodo | pasos | las dos obras | donde se ve el corte |
+|---|---:|---|---|
+| **`bundle_ideas`** | 9 | *The field guide to human-centered design* mas *Essentials of Supply Chain Management* | **paso 6**. Del 1 al 5 es taller de ideacion, agrupar por tema lo que salio de la lluvia, combinar lo que se complementa, descartar lo que no encaja. Del 6 al 9 es diseno de sistema, listar lo que el sistema tiene que lograr, buscar UNA combinacion de tecnologia que sirva a varios objetivos, y evaluar riesgo y costo de cada combinacion |
+| **`criterios_seleccion_proveedores`** | 10 | *A Project Manager's Book of Forms* mas *Essentials of Supply Chain Management* | **paso 7**. Del 1 al 6 es el formulario de puntaje ponderado entero, repartir la importancia hasta sumar cien, calificar, multiplicar y sumar. Del 7 al 10 es abastecimiento, definir que comprar segun el plan de negocio, mirar mas alla del precio, **reducir el numero de proveedores para concentrar volumen** y anotar la lista de preferidos |
+| **`diseno_estructura_recompensas_roles`** | 7 | *The Founder's Dilemmas* mas *Never Lose a Customer Again* | **paso 4**. Del 1 al 3 es compensacion por tipo de rol, contingente para los individuales y estable para los colaborativos. Del 4 al 7 es **experiencia del cliente**, auditar si los incentivos premian solo adquisicion, **dar asiento ejecutivo al lider de experiencia**, bonos ligados a retencion y valor vitalicio, y quitar los incentivos que premian rapidez por encima de calidad de relacion |
+| **`earned_vs_paid_media`** | 8 | *The Startup Owner's Manual* mas *Traction* | **paso 5**. Del 1 al 4 son las dos listas y la regla de probar en pequeno. Del 5 al 8 es medios **fuera de internet**, preguntar al cliente que consume, pedir el prospecto de audiencia a cada medio, comparar alcance contra precio, y arrancar con radio local, prensa local o vallas |
+| **`relaciones_con_clientes`** | 8 | *Business Model Generation* mas *Never Lose a Customer Again* | **paso 5**. Del 1 al 4 es el bloque del lienzo, motivacion por segmento, tipo de relacion, costo de mantenerla y co-creacion. Del 5 al 8 es **comunidad de marca de Coleman**, rituales y simbolos, un momento de iniciacion publico, un vocabulario compartido para los miembros, y conectar clientes nuevos con veteranos |
+| **`seleccion_estrategia_pricing`** | 6 | *The Startup Owner's Manual* mas *Essentials of Supply Chain Management* | **paso 5**, y es el mas corto de los seis. Del 1 al 4 y el 6 son de tipo de mercado, comparacion con la competencia, valor unico contra commodity, ingresos recurrentes y validar con clientes reales. **El 5 es el intruso**: calcular el TCO y el ROI si vendes B2B |
+
+> **CINCO DE LOS SEIS parten en dos bloques limpios y el sexto tiene el injerto en
+> un solo paso.** `seleccion_estrategia_pricing` es el mas barato de arreglar de
+> toda la lista: **un paso que se saca o se enlaza a `analisis_tco_roi_b2b`**, que
+> ya existe y ya esta en esta ficha con dos fuentes tambien.
+
+**Y hay una lectura de conjunto que vale para el plan:**
+
+> **De los seis, CUATRO llevan pegado un bloque de dos libros concretos**:
+> *Essentials of Supply Chain Management* en tres (`bundle_ideas`,
+> `criterios_seleccion_proveedores`, `seleccion_estrategia_pricing`) y
+> *Never Lose a Customer Again* en dos (`diseno_estructura_recompensas_roles`,
+> `relaciones_con_clientes`).
+>
+> **Es la misma firma que el informe de cierre ya midio**: Hugos es el libro que
+> mas junturas dejo en el nucleo. **Estas seis no son casos raros: son la cola de
+> la misma extraccion.**
+
+---
+
 ### 1. `core/retention_metrics`, 9 pasos: PRIMERA FUERA DE COLA
 
 **Hallada el 11 ago 2026 en el puesto 522 del cribado intra-dominio**, o sea

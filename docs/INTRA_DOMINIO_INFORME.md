@@ -560,7 +560,41 @@ sin ninguna arista dentro del racimo.
 
 **NO SE ADJUDICA NADA AQUI.** La tabla es el mapa; las decisiones son de la mesa.
 
+### REGLA DE METODO: LA NOMINA QUE CRECE RE-MIDE SU FORMA
+
+**Anadida el 12 ago 2026, y sale del defecto de origen que destapo la remedicion
+de la seccion 14.**
+
+> **La forma de un racimo se mide sobre su nomina. Si la nomina cambia, la forma
+> medida caduca.** Un racimo declarado con cuatro miembros y medido con seis **no
+> da la misma forma**, no da los mismos aislados y no da el mismo centro.
+
+**LOS DOS EJEMPLARES, y los dos son de esta misma casa:**
+
+| racimo | se declaro con | resulto tener | que cambio al re-medir |
+|---|---:|---:|---|
+| **el reparto de equity** (puesto 246) | **4** | **6** | de forma supuesta a **CENTRO ENLAZADO sin ningun aislado**, o sea la unica de las remedidas **sin gemelo que resolver** |
+| **el lienzo de propuesta de valor** (puesto 360) | **3** | **7** | de tres nodos a **CENTRO ENLAZADO con DOS gemelos sin casa** |
+
+> **En los dos casos los miembros que faltaban aparecieron DESPUES, en veredictos
+> posteriores, y nadie volvio a la declaracion a sumarlos.** No es que se midiera
+> mal: es que se midio bien **una nomina que despues crecio y nadie volvio.**
+
+**LO QUE LA REGLA OBLIGA, y son tres movimientos baratos:**
+
+> **1. Todo veredicto que suma un miembro a un racimo ya declarado lo dice en su
+> razon**, con el nombre del racimo. Sin eso el crecimiento no deja rastro.
+>
+> **2. Antes de usar la forma de un racimo para cualquier cosa, se RE-CUENTA la
+> nomina.** La forma vieja no se hereda: se vuelve a medir.
+>
+> **3. La forma medida se guarda SIEMPRE con el tamano de nomina con el que se
+> midio.** Una forma sin su n al lado **no se puede saber si esta vigente**, y una
+> forma que no se sabe si esta vigente **es peor que no tenerla**, porque se usa
+> igual.
+
 ---
+
 
 ## 7. RACIMO NUEVO: LAS METRICAS DE COHORTE
 
@@ -1753,6 +1787,11 @@ puesto **581** y se repitio en el **633**.
 | **581** | `cumplimiento_magnuson_moss` | **4 de 5** | `prohibicion_tie_in_sales` |
 | **633** | `proceso_diseno_modelo_negocio_5_fases` | **2 de 5** | `fase_diseno_prototipado_modelos` |
 
+> **CORRECCION DECLARADA DEL 12 ago 2026, y esta tabla es la que estaba mal.**
+> La proporcion del **581** es **3 de 5**, no cuatro de cinco, y la del **633**
+> **no se cuenta por radios porque esa familia esta cableada en CADENA**: son
+> cinco de cinco. **El 633 paso a D.** Todo medido y explicado en la **seccion 16**.
+
 **Y aqui esta la incoherencia, declarada en vez de escondida:**
 
 > **El 581 quedo en D PROVISIONAL** porque fusionar romperia una familia sana de
@@ -1881,3 +1920,115 @@ confirmada.
 > casualidad: hay una extraccion de *Traction* que dejo material de SPIN con la
 > procedencia cambiada**, y eso lo tiene que mirar el frente de fuentes, no la
 > mesa de racimos.
+
+---
+
+## 16. LA RELECTURA CONJUNTA DE 395, 581 Y 633
+
+**Hecha el 12 ago 2026 con la regla LA MAYORIA MANDA del banco 9.6.1 delante, y
+no arrastrando ningun veredicto.** El encargo lo dijo con estas palabras: **la
+coherencia sale de la vara comun, no de arrastrar veredictos.** Salio bien que
+fuera asi, porque **la vara comun destapo que mi medicion del 11 de agosto media
+lo que no era.**
+
+### El resultado, con las proporciones medidas
+
+| puesto | el par | proporcion medida | clase antes | clase ahora |
+|---:|---|---|:---:|:---:|
+| **395** | `proceso_ideacion_modelo_negocio` contra la madre de 5 fases | **cadena completa, 5 de 5** | A | **A**, razon reescrita |
+| **581** | `prohibicion_tie_in_sales` contra `cumplimiento_magnuson_moss` | **3 de 5 radios**, estricta mayoria | D provisional | **D firme** |
+| **633** | `fase_diseno_prototipado_modelos` contra la madre de 5 fases | **cadena completa, 5 de 5** | A | **D** |
+
+### 16.1 EL HALLAZGO QUE LA RELECTURA OBLIGO A TRAER: la familia ENCADENADA
+
+**Lo escribi en la seccion 15.2 asi: la madre enlaza a la fase 1 y a la fase 2 y
+no enlaza a la fase 3, ni a la 4, ni a la 5, o sea DOS de CINCO. Eso esta MAL, y
+el error es de metodo, no de cuenta.**
+
+> **Conte RADIOS en una familia cableada en CADENA.**
+
+**La cadena, verificada contra el grafo resolviendo a nodo vivo:**
+
+| de | a | fase |
+|---|---|---|
+| `proceso_diseno_modelo_negocio_5_fases` | `fase_mobilizar_modelo_negocio` | **1** |
+| `fase_mobilizar_modelo_negocio` | `fase_entendimiento_investigacion_mercado` | **2** |
+| `fase_entendimiento_investigacion_mercado` | **`fase_diseno_prototipado_modelos`** | **3** |
+| `fase_diseno_prototipado_modelos` | `fase_implementacion_modelo` | **4** |
+| `fase_implementacion_modelo` | `fase_gestion_continua_modelo` | **5** |
+
+> **Cinco fases, cinco hijos, cinco enlaces, CERO sueltos.** La madre solo enlaza
+> directo a dos porque **no le hace falta enlazar a mas: la cadena lleva sola.**
+>
+> **Y por eso el 633 pasa a D.** No es un hijo sin camino: es la casa reconocida
+> de la fase 3, alcanzable en el orden correcto. **Aqui no falta ninguna arista.**
+
+**LA REGLA DE MEDICION QUE ESTO FIJA, y quedo en el banco 9.6.1: antes de contar,
+se mira la FORMA.** Radios y cadena se cuentan distinto, y contar radios en una
+cadena **da minoria donde hay cableado completo.**
+
+### 16.2 El 395 no se salva con lo mismo, y ahora se ve por que
+
+**Si la cadena establece la jerarquia, la pregunta del 395 cambia de sitio.**
+
+> La fase 3 **ya tiene su casa**: `fase_diseno_prototipado_modelos`, la que la
+> cadena reconoce. **`proceso_ideacion_modelo_negocio` es una SEGUNDA casa para la
+> misma fase**, colgada de un nodo de tecnica y no de la cadena.
+>
+> **Eso no es una arista que falta: es un duplicado de casa.** La clase A se
+> sostiene **con una razon mejor que la que tenia**, y concuerda con el puesto
+> **641**, que dio A a las otras dos casas de esa misma fase 3.
+
+**La fase 3 de este metodo tiene TRES nodos**: el de la cadena, el del 395 y
+`prototipado_modelos_negocio`, que es hijo con arista del segundo (puesto 572) y
+hermano sin arista del primero (puesto 641). **Una fase, tres casas, un solo
+camino.**
+
+### 16.3 El 581 se confirma, y de paso corrige mi cuenta
+
+**La clase D se sostiene y deja de ser provisional. Pero la cuenta que la
+justificaba estaba mal por los dos lados.**
+
+> **Lo que dije**: la madre enlaza a **cuatro** hijos, uno por cada requisito que
+> enumera, y falta **un** radio de cinco.
+>
+> **Lo que hay:**
+> **1.** `contratos_de_servicio_garantia` esta enlazado **pero no desarrolla
+> ningun requisito enumerado por la madre**. No es hijo de paso y no cuenta.
+> **2.** Me falto un hijo. El paso 3 tiene **DOS** prohibiciones, no comprar a
+> proveedor unico **y** no usar frases enganosas, y **las dos tienen casa propia**,
+> `prohibicion_tie_in_sales` y `evitar_terminos_enganosos_garantia`, **y ninguna
+> de las dos esta enlazada desde la madre.**
+
+| hijo de paso enumerado | que paso desarrolla | enlazado desde la madre |
+|---|---|:---:|
+| `clasificacion_garantia_full_limited` | paso 2, titulo claro | **si** |
+| `regla_divulgacion_garantia` | paso 2, terminos divulgados | **si** |
+| `regla_disponibilidad_previa_venta` | paso 2, disponibilidad previa | **si** |
+| `prohibicion_tie_in_sales` | paso 3, no obligar a comprar | **NO** |
+| `evitar_terminos_enganosos_garantia` | paso 3, no enganar | **NO** |
+
+> **TRES de CINCO es estricta mayoria, asi que la jerarquia esta establecida y el
+> veredicto D se sostiene. Pero no falta una arista: FALTAN DOS.**
+
+**Y hay un hallazgo extra que la remedicion destapo, y es la figura del puesto
+568 otra vez:** el cubo real de esta familia **no es la madre, es un hijo**.
+`clasificacion_garantia_full_limited` enlaza a **SIETE** nodos de la familia,
+**incluidos los dos que a la madre le faltan.**
+
+> **La madre no enlaza y el hijo si.** Es la tercera vez que aparece esta forma en
+> el archivo, con el 568 y el 574. **Cuando el catalogo tiene un cubo desplazado,
+> lo barato no siempre es enlazar desde la madre: puede ser reconocer que el cubo
+> es el hijo.**
+
+### 16.4 CORRECCION DECLARADA en la seccion 15.2
+
+**La tabla de la seccion 15.2 dice que el 633 esta en dos de cinco y que por eso
+su silueta no exculpa. Eso queda corregido aqui**: la proporcion real es cadena
+completa, y el 633 paso a D. **La fila del 581 tambien cambia**, de cuatro de
+cinco a **tres de cinco**, que sigue siendo estricta mayoria y no altera su
+veredicto.
+
+> **Lo que NO cambia de la 15.2**: la pregunta que abria seguia siendo la
+> correcta, y la respuesta llego. **Lo que cambia es que la incoherencia entre el
+> 581 y el 633 no era de doctrina: era mia, y era de medicion.**

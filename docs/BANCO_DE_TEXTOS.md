@@ -822,6 +822,82 @@ Tres miembros, tres pares posibles, los tres leídos, **y las clases son B, C y 
 aparezca con arista verificada se anota aquí en vez de ir a la mesa**: es la vía
 rápida, y su valor está en no gastarle a la mesa un tiempo que no le corresponde.
 
+### 9.6.1 LA MAYORIA MANDA: cuando la arista que falta acusa y cuando no
+
+**Registrada el 12 ago 2026, adjudicada por el fundador, para la figura
+HERMANOS ENLAZADOS MENOS UNO que el cribado intra encontro en los puestos 581 y
+633.**
+
+> **La figura**: una madre enumera varios pasos, **varios de esos pasos tienen
+> hijo con casa propia**, y la madre **enlaza a unos si y a otros no**.
+
+**La regla, con las aristas resueltas a nodo VIVO:**
+
+| lo que se mide | el veredicto |
+|---|---|
+| la madre enlaza a la **ESTRICTA MAYORIA** de sus hijos | **la jerarquia esta establecida**. El hijo suelto es **LA ARISTA QUE FALTA**: par **D**, arreglo de enlace |
+| la madre enlaza a **la mitad o menos** | **la silueta ni exculpa ni acusa**. El par se juzga por **continua-o-repite sobre los pasos** |
+
+> **EL RACIONAL, y es lo que hace falta recordar cuando el caso siguiente no se
+> parezca a estos: LAS ARISTAS PRUEBAN INTENCION.**
+>
+> **Cuatro de cinco es un cableado con un hueco. Dos de cinco es un patron sin
+> establecer.** En el primer caso el grafo demuestra que alguien sabia como se
+> enlaza esta familia y se salto uno; en el segundo no hay nada que demuestre que
+> la familia iba a estar enlazada, asi que la ausencia de arista no dice nada y
+> hay que volver al texto.
+
+#### CAVEAT MEDIDO: la familia ENCADENADA no se cuenta por radios
+
+**Encontrado el 12 ago 2026 al aplicar la regla a sus dos casos, y hay que
+dejarlo escrito porque casi produce un veredicto falso.**
+
+> **Una familia puede estar cableada en CADENA en vez de en radios.** La madre
+> enlaza al primer hijo, el primero al segundo, el segundo al tercero, y asi. En
+> esa forma **la madre enlaza directamente a uno o dos y AUN ASI todos los hijos
+> estan cableados en el orden correcto.**
+>
+> **Contar radios directos en una familia encadenada mide lo que no es**, y da
+> minoria donde hay cableado completo.
+
+**EL EJEMPLAR, verificado contra el grafo resolviendo a nodo vivo:**
+`proceso_diseno_modelo_negocio_5_fases` enlaza directo solo a **dos de sus cinco
+fases**, pero la cadena esta entera:
+
+**madre a fase 1**, `fase_mobilizar_modelo_negocio`; **fase 1 a fase 2**,
+`fase_entendimiento_investigacion_mercado`; **fase 2 a fase 3**,
+`fase_diseno_prototipado_modelos`; **fase 3 a fase 4**,
+`fase_implementacion_modelo`; **fase 4 a fase 5**, `fase_gestion_continua_modelo`.
+
+> **Cinco fases, cinco hijos, CERO sueltos.** La medicion correcta de esta familia
+> **no es dos de cinco: es cadena completa**, y por lo tanto **la jerarquia esta
+> establecida** igual que con mayoria de radios.
+>
+> **LA REGLA DE MEDICION QUE ESTO FIJA: antes de contar, se mira la FORMA.** Si
+> los hijos estan encadenados en el orden que la madre enumera, la cadena cuenta
+> como cableado establecido. Si estan sueltos alrededor de la madre, se cuentan
+> los radios.
+
+#### CORRECCION DECLARADA del primer ejemplar de la 9.6
+
+**El primer ejemplar de la lista de arriba decia que
+`proceso_diseno_modelo_negocio_5_fases` tiene dos hijas, enlaza con
+`fase_mobilizar_modelo_negocio` y no con `proceso_ideacion_modelo_negocio`, y que
+eso es una arista que falta. MEDIDO CON LA FORMA DELANTE, ESO ESTA MAL:**
+
+> **La madre tiene CINCO hijos, uno por fase, y los cinco estan encadenados.**
+> `proceso_ideacion_modelo_negocio` **no es la hija de la fase 3**: la hija de la
+> fase 3 es `fase_diseno_prototipado_modelos`, y esta enlazada desde la fase 2.
+>
+> **`proceso_ideacion_modelo_negocio` es una SEGUNDA CASA para una fase que ya
+> tiene la suya.** Eso no es una arista que falta: **es un duplicado**, y por eso
+> el puesto 395 se sostiene en A con la razon reescrita.
+
+**El segundo ejemplar de la 9.6, `preparacion_materiales_fundraising`, NO cambia**:
+alli la madre lista cuatro materiales, dos tienen nodo propio, **no hay cadena** y
+**no enlaza a ninguno de los dos**, o sea cero de dos. Sigue siendo arista que
+falta por la via del contenido huerfano de camino, no por la de la mayoria.
+
 ### 9.7 PÉRDIDA DE LECTOR contra PÉRDIDA DE CATÁLOGO
 
 **Distinción del 11 ago 2026, nacida de una corrección a una frase mía.**
