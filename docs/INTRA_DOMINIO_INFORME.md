@@ -2596,3 +2596,89 @@ traigo en vez de resolverlo porque no me toca.**
 >
 > **Nombrarla convertiria ocho lecturas dirigidas en cero**, porque la cuenta de
 > arriba ya esta hecha con esa vara.
+
+---
+
+## 20. EL TRAMO 725 a 742: el tramo mas sano del cribado
+
+**Dieciocho pares leidos, los dieciocho del nucleo.** Acumulado **742 de 3.388**,
+global **32,5%** de A y **nucleo 40,9%**. **Sin checkpoint: el proximo es el de
+los 800.**
+
+### 20.1 La cifra del tramo, y por que no significa lo que parece
+
+| | leidos | A | B | D | tasa de A |
+|---|---:|---:|---:|---:|---:|
+| tramo 725 a 742 | 18 | **1** | 2 | 15 | **5,6%** |
+
+> **Es la tasa de A mas baja de todo el cribado, y no es que el catalogo haya
+> mejorado en dieciocho lecturas.** Es que **la cola llego a una zona de familias
+> bien separadas**: la de garantias federales, donde cada nodo es una obligacion
+> legal distinta (puestos 727, 736, 739), la serie de fases del lienzo (740), las
+> letras de SPIN (741) y los formularios de despido (735).
+>
+> **Cuando una familia se escribio con un nodo por objeto, el cribado la atraviesa
+> sin encontrar nada.** Y eso tambien es un dato: **hay zonas del nucleo que estan
+> bien.**
+
+### 20.2 El primer par que NACE con las dos lecturas encima
+
+**El puesto 730** es el primer veredicto nuevo emitido **despues** de que el
+choque de la seccion 19 quedara escrito.
+
+> `efecto_bullwhip` desarrolla los pasos 1 y 2 de `colaboracion_cadena_suministro`
+> y la madre **no enlaza a ninguno de sus hijos**. Por la lectura vieja es **A**;
+> por la ratificacion, el hijo trae **una contabilidad entera** que la madre no
+> tiene, o sea **CONTINUA**, y seria **D**.
+>
+> **Se registro en A y con el choque anotado dentro.** No elijo yo: mientras la
+> doctrina tenga dos lecturas, **los veredictos nuevos de esta silueta nacen con
+> las dos y lo dicen.**
+
+### 20.3 Dos familias que hay que contar antes de tocar
+
+> **1. LA FAMILIA DE A/B, por lo menos CUATRO nodos** (puesto 738):
+> `ab_testing_optimizacion` con **quince** pasos en tres bloques,
+> `split_testing_experimentos_ab` con **nueve** en dos y costura **confirmada**,
+> mas `split_testing` y `test_ab_precio` del puesto 643. **Ninguno enlaza a otro.**
+> El par 738 quedo en **B** porque los dos nodos estan averiados **y el solape
+> cruza las dos junturas**: es el segundo caso de doble averia despues del 599.
+>
+> **2. LA FAMILIA DE S&OP, TRES nodos y una lectura imposible todavia** (puesto
+> 725): `sales_operations_planning`, `sop_colaborativo` y
+> `mission_and_operations_planning`. **El primer par dio B (703), el segundo D
+> (725) y el tercero esta pendiente en el puesto 1218.** La familia no se puede
+> leer hasta que caiga ese tercero, y **son solo tres pares: es candidata natural
+> a COMPLETAR LOS PARES DEL PURO**, la clase de tarea del banco 9.5.
+
+### 20.4 Y una cuenta mia corregida, otra vez por conteo a ojo
+
+**Puesto 728.** En el **470** conte **cuatro** hijos de paso de
+`modelo_spin_preguntas` y son **CINCO**: `preguntas_need_payoff` existe vivo y
+desarrolla su paso 4.
+
+> **La proporcion pasa de uno de cuatro a uno de cinco**, sigue siendo mitad o
+> menos y **el veredicto D de aquel par no cambia**. Pero el error es el mismo de
+> siempre. **Es justo lo que `scripts/contar_nombre.py` viene a impedir**, y esta
+> es la primera vez que el error aparece **despues** de tener la herramienta.
+>
+> **La leccion no es que conte mal: es que segui contando a mano teniendo el
+> script.** La regla del banco 9.5.1 no sirve si no se usa.
+
+### 20.5 Lo demas anotado al paso
+
+> **La familia de la sucesion llega a ONCE pares leidos** (256, 354, 423, 435,
+> 557, 612, 618, 621, 634, 720 y 732) **sobre DOCE nodos**: el puesto 732 le suma
+> `riesgo_beneficio_retener_fundador` a los once medidos en el 618. **Sigue sin
+> censar y sigue con su forastero de *The Hard Thing*.**
+>
+> **Y la cifra la conte mal dos veces antes de escribirla**: puse cinco y liste
+> siete. **La correcta salio de contar el archivo, no la memoria**, que es la
+> tercera leccion del mismo tipo en dos tramos. **Once de sesenta y seis pares
+> posibles: esta familia es la mas leida del nucleo sin estar declarada.**
+>
+> **La familia de los cofundadores llega a TRES pares** (708, 716, 729), dos de
+> ellos dudosos, y tampoco esta censada.
+>
+> **El racimo del pivote sigue en 19 nodos y 24 pares sin leer**, y este tramo le
+> sumo dos lecturas mas (733, 737).
