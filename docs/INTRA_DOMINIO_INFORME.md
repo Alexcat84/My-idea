@@ -9971,3 +9971,164 @@ leidos** (1083, 1094, 1170, 1345) **y los cuatro SIN ARISTA.**
 > cojeaba y dos contraejemplos**. Hoy tiene **tres ejemplares**, dos de ellos
 > completos. **Una figura con tres casos medidos ya no es una observacion: es una
 > forma del catalogo.**
+
+## 60. CHECKPOINT DE LOS 1.400: la vara deja de producir A
+
+**Tramo 1360-1400, cuarenta y un pares leidos. CUATRO A: los puestos 1366, 1371,
+1386 y 1387. Tasa del tramo, 9,8 por ciento.**
+
+**EL MARCADOR, recomputado del archivo como manda el 9.10:**
+
+| medida | cifra |
+|---|---:|
+| **registrados** | **1.400 de 3.388** |
+| huecos | **cero** |
+| global | **A 326, B 89, C 7, D 978** |
+| **tasa global de A** | **23,3%** |
+| nucleo (core) | **1.245 pares** |
+| **tasa del nucleo** | **26,1%** |
+| compras | 155 pares, **1 A** |
+
+### 60.1 LA TASA DE A POR CENTENA, la serie entera
+
+| centena | pares | A | tasa | nucleo | A del nucleo | tasa del nucleo |
+|---|---:|---:|---:|---:|---:|---:|
+| 1-100 | 100 | 1 | 1,0% | 0 | 0 | sin nucleo |
+| 101-200 | 100 | 24 | 24,0% | 45 | 24 | **53,3%** |
+| 201-300 | 100 | 54 | 54,0% | 100 | 54 | **54,0%** |
+| 301-400 | 100 | 51 | 51,0% | 100 | 51 | 51,0% |
+| 401-500 | 100 | 39 | 39,0% | 100 | 39 | 39,0% |
+| 501-600 | 100 | 32 | 32,0% | 100 | 32 | 32,0% |
+| 601-700 | 100 | 21 | 21,0% | 100 | 21 | 21,0% |
+| 701-800 | 100 | 24 | 24,0% | 100 | 24 | 24,0% |
+| 801-900 | 100 | 25 | 25,0% | 100 | 25 | 25,0% |
+| 901-1000 | 100 | 18 | 18,0% | 100 | 18 | 18,0% |
+| 1001-1100 | 100 | 15 | 15,0% | 100 | 15 | 15,0% |
+| 1101-1200 | 100 | 9 | 9,0% | 100 | 9 | 9,0% |
+| 1201-1300 | 100 | 7 | 7,0% | 100 | 7 | 7,0% |
+| **1301-1400** | 100 | **6** | **6,0%** | 100 | **6** | **6,0%** |
+
+> **La centena que se cierra hoy es la mas limpia del ejercicio con nucleo dentro:
+> SEIS A en cien pares.** De 54 por ciento a 6 por ciento en once centenas, **sin
+> tocar un solo nodo**. Y con la advertencia del 9.19 puesta donde toca: **esto es
+> una posicion en la cola, no una prediccion.** La cola se ordeno por sospecha, y
+> lo sospechoso se leyo primero.
+
+### 60.2 LOS PARES RESUELTOS CON LA VARA, y el hallazgo del checkpoint
+
+**Se cuenta lo que se puede contar: los pares cuya razon cita el 9.6.1.**
+
+| centena | con la vara | de cien | **de esos, A** |
+|---|---:|---:|---:|
+| 1-300 | 0 | 0,0% | 0 |
+| 301-400 | 3 | 3,0% | 0 |
+| 401-500 | 12 | 12,0% | **1** |
+| 501-600 | 15 | 15,0% | **2** |
+| 601-700 | 12 | 12,0% | **2** |
+| 701-800 | 9 | 9,0% | **2** |
+| 801-900 | 23 | 23,0% | **4** |
+| 901-1000 | 31 | 31,0% | **5** |
+| 1001-1100 | 34 | 34,0% | **0** |
+| 1101-1200 | 42 | 42,0% | **0** |
+| 1201-1300 | 38 | 38,0% | **0** |
+| **1301-1400** | **34** | **34,0%** | **0** |
+
+> **LA VARA DEJO DE PRODUCIR A, y lleva CUATROCIENTOS PARES sin producir una.**
+> La ultima A resuelta citando el 9.6.1 esta en la centena 901-1000. Desde el
+> puesto 1001, la vara ha decidido **148 pares y los 148 salieron CONTINUA.**
+
+**Que significa, dicho sin adorno.** La vara nacio como un cuchillo de dos filos:
+*si lo que el hijo anade cabe en una linea, repite; si trae un procedimiento que
+la madre no tiene, continua*. **En la primera mitad del ejercicio corto por los
+dos lados.** Hoy corta por uno solo.
+
+> **La lectura honesta es que la cola cambio de presa, como dice el 9.19.** Los
+> pares madre-hijo que REPETIAN estaban arriba en la cola y ya se leyeron; los que
+> quedan son madres que nombran a un hijo en una linea y el hijo trae su
+> procedimiento. **La vara sigue siendo el instrumento mas usado del tramo, un
+> par de cada tres, pero hoy es un instrumento de ABSOLUCION.**
+>
+> **Lo que NO significa**: que la vara este gastada. **Un cuchillo que solo corta
+> por un lado sigue cortando**, y sin el estos 148 pares habrian sido discusiones
+> de parecido. La cifra es una descripcion de la cola, no una critica del banco.
+
+### 60.3 LO QUE EL TRAMO CAMBIA EN EL INVENTARIO
+
+**Cuatro A, y las cuatro tocan una nomina ya escrita. Ninguna abre un frente nuevo
+salvo una, y esa nace de cero.**
+
+| puesto | el par | que le hace al inventario |
+|---:|---|---|
+| **1366** | `gestion_de_portafolio_gates_go_kill` contra `gestion_portafolio_foco` | **el par pendiente de LA MESA UNIDA**: la lleva a **dieciseis A** |
+| **1371** | `employee_pool_esop` contra `pool_opciones_empleados` | **la familia de la reserva de opciones pasa a CUATRO nodos** por cierre transitivo |
+| **1386** | `customer_discovery_get_out_of_building` contra `customer_discovery_introduccion` | **cierra la cola del acto de CUSTOMER DISCOVERY**, sin agrandarlo |
+| **1387** | `entrenamiento_empleados_startup` contra `entrenamiento_funcional_empleados` | **acto NUEVO de dos nodos**, y **quinta trampa de identificador** |
+
+**DOS COLAS CERRADAS EN EL MISMO TRAMO, y es la primera vez que pasa.**
+
+| familia | nomina | posibles | en cola | leidos | A | resto | pendientes |
+|---|---:|---:|---:|---:|---:|---|---:|
+| **acto de Customer Discovery** | 9 | 36 | 16 | **16** | **12** | 3 D, 1 B | **cero** |
+| **la mesa unida** | 16 | 120 | 21 | **20** | **16** | 1 B, 3 D | **uno**, el 1524 |
+
+> **Cobertura al lado de las dos formas, como manda el 9.26**: la de Customer
+> Discovery es **16 de 36** y la de la mesa unida es **20 de 120**. **Las dos
+> formas siguen siendo PROVISIONALES**, y la segunda con una reserva enorme:
+> **noventa y nueve de sus pares no se encolaron nunca.** Cerrar la cola no es
+> tener cobertura; es agotar lo que el ejercicio se propuso mirar.
+
+### 60.4 UNA CORRECCION MIA, declarada por el 9.10
+
+**En la razon del puesto 1377 escribi que la mesa unida cerraba su cola y que solo
+le quedaba un pendiente, el 1399. Es falso por dos lados.**
+
+| lo que escribi | lo medido |
+|---|---|
+| el 1377 es par interno de la mesa unida | **`pruning_portafolio` NO figura en la nomina de dieciseis.** El par no era interno |
+| queda **un** pendiente en cola | quedaban **DOS**: el 1399 y el **1524** |
+
+> **De donde salio el error**: lei el nodo `portfolio_management` como si su
+> compania en el par heredara la pertenencia. **Un miembro de la mesa en un par no
+> hace del par un asunto de la mesa**, exactamente igual que el 9.24 dice que el
+> gemelo no es la familia. **La correccion esta escrita dentro de la propia razon
+> del 1377 en el archivo**, no solo aqui, para que quien lea la linea vea las dos
+> cosas.
+
+### 60.5 EL RETRATO DE LAS A A LOS 1.400
+
+**Recomputado entero del archivo.**
+
+| medida | cifra |
+|---|---:|
+| pares en A | **326** |
+| **nodos tocados por alguna A** | **466** |
+| componentes conexas de la relacion gemelo | **175** |
+| de dos nodos | 121 |
+| de tres | 29 |
+| de cuatro | 9 |
+| de cinco | 7 |
+| de seis | 4 |
+| de siete | 3 |
+| **de nueve** | **1**, Customer Discovery |
+| **de doce** | **1**, la mesa unida |
+
+> **Ciento veintiuna de las 175 componentes son parejas sueltas.** El grueso de la
+> repeticion del catalogo **no son racimos: son gemelos de dos**. Y las dos
+> componentes grandes, la de doce y la de nueve, **son las dos mesas que el
+> ejercicio ya tiene escritas**, o sea que el mapa grande no esconde una tercera.
+>
+> **Vigente al puesto 1400**, como manda el 9.21.
+
+### 60.6 EL SALDO DEL CHECKPOINT
+
+> **Mil cuatrocientos pares. Mil novecientos ochenta y ocho por delante.** El
+> ejercicio llega al 41,3 por ciento de la cola con **cero huecos**, la tasa del
+> nucleo en **26,1 por ciento** y la centena que se cierra en **6 por ciento**.
+>
+> **Lo que este checkpoint aporta que los otros no**: por primera vez se mide **un
+> instrumento del banco contra su propio rendimiento**, y sale que **la vara lleva
+> cuatrocientos pares absolviendo y ninguno condenando**. Eso no cambia ninguna
+> clase ya escrita, pero **cambia lo que hay que esperar del resto de la cola**:
+> las A que queden no van a venir de madres e hijos. **Van a venir de gemelos que
+> se llaman distinto**, como el 1387, que aparecio de la nada entre dos nodos sin
+> una sola lectura previa.
