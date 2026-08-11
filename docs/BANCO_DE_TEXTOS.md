@@ -750,6 +750,17 @@ Selling*. Verificado en el archivo de veredictos:
 >
 > **Por eso el estado PURO se declara CONTANDO EL JSONL, nunca de memoria.**
 
+> **CORRECCIÓN DECLARADA DEL AUDITOR, 12 ago 2026, y refuerza la frase de
+> arriba.** Al encargar la relectura R12 se dio por faltante el par
+> *enfoque contra ventas* de la familia de la etapa de investigación. **Estaba
+> leído desde el puesto 303, y en A.** La familia no estaba en 2 de 3: estaba en
+> **3 de 3**, y por eso pudo declararse el cuarto puro ese mismo día.
+>
+> **La regla vale para los dos lados de la mesa: la cuenta de pares se declara
+> contando el jsonl, también cuando la hace el auditor.** No es una regla sobre
+> quién se equivoca; es sobre qué fuente manda. **El archivo manda sobre el
+> recuerdo, venga de donde venga el recuerdo.**
+
 > **PRECISION DEL 12 ago 2026, y corrige una ambigüedad de la frase de arriba:
 > los pares que se cuentan son los PARES POSIBLES de la nómina, no los pares que
 > entraron a la cola.** La cola del cribado se arma por umbral de semejanza, así

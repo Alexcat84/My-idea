@@ -1443,6 +1443,105 @@ PURO y hay que declararlo.**
 > recuerdo.** Es el mismo error que el contador vino a matar, en su otra forma.
 > **Antes de decir que a una familia le falta un par, se cuenta el jsonl.**
 
+### TANDA R13, NOVENA CIEGA: seis de seis
+
+**Acumulado: 78 de 78, de los cuales 54 a ciegas.** Perdidas verificadas contra
+el grafo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **285** | `producto_unico_superior` contra `superioridad_producto_beneficios` | los **discursos por posicionamiento**, si eliges premium NO enumeres caracteristicas y si eliges precio bajo SI; **desarma-la-competencia**; **imagina-la-evolucion** del producto rival; **necesidades-sin-nombre**, las que el cliente no sabe pedir; y **proveedores-que-innovan** contigo | de **lector** |
+| **288** | `arquetipos_de_cliente` contra `customer_archetypes` | **patrones-de-conversaciones**, buscar lo que se repite en las charlas exploratorias; e **hipotesis-provisional**, tratar cada retrato como algo que se revisa al aprender | de **lector** |
+| **289** | `assumption_and_constraint_log` contra `assumption_constraint_log` | practicamente nada: **es el mismo formulario con y sin conjuncion en el identificador** | de **lector** |
+| **290** | `decision_cuando_fundar` contra `tres_preguntas_carrera` | nada: **calco permutado**, los mismos tres factores en distinto orden y el mismo cierre de reforzar el mas debil | de **lector** |
+| **292** | `embudo_get_keep_grow` contra `estrategia_get_keep_grow` | **earned-vs-paid** como tacticas a probar; **CAC-contra-margen** por venta; **adquirir-es-lo-mas-caro** como regla de prioridad; y **actualiza-canvas** con pruebas de pasa o no pasa por etapa | de **lector** |
+| **293** | `mitigar_falling_asleep_wheel` contra `riesgo_sobredependencia_ia` | **pruebas-para-que-la-IA-falle**, casos disenados a proposito para medir si el equipo lo detecta; y **medir-con-y-sin-apoyo**, comparar la calidad de las decisiones tomadas con IA y sin ella | de **lector** |
+
+#### 285: QUINTO gemelo-de-costurada, y el segundo del tipo caro
+
+**`producto_unico_superior` es la confirmada LEVE de la tanda 13 de la ficha**, y
+aqui repite con `superioridad_producto_beneficios`.
+
+> **Es el segundo caso de AVERIADO POR DENTRO Y GEMELO POR FUERA**, tras
+> `optimizacion_embudo_get_customers` del puesto 277. **Los otros tres del grupo
+> eran falsas de costuras.**
+>
+> **Le aplica la CURA ACOPLADA igual que al 277**: destejer el apendice ajeno y
+> fusionar con el gemelo **en el mismo acto**, por el TOQUE UNICO del banco 9.4.
+> **Anotado en la ficha.**
+
+#### 289: par de familia D4, al monton
+
+**`assumption_and_constraint_log` contra `assumption_constraint_log`: el mismo
+formulario con y sin la conjuncion `and` en el identificador.**
+
+> **No es una decision de contenido: es la DECISION 4 ya adjudicada**, la de los
+> identificadores que solo se diferencian en una particula. **Va al monton de esa
+> decision y no consume mesa.**
+
+#### 293: LA SUPERVISION DE LA IA SUBE A RACIMO, y con una precision
+
+**El candidato de la seccion 11 sube.** Pero hay que decir con exactitud **que se
+cumplio y que no**, porque la condicion que yo mismo escribi alli era mas
+estrecha.
+
+> **LO QUE ESCRIBI EN LA SECCION 11**: *nadie ha leido todavia un par CRUZADO
+> entre las dos mitades*, y sin eso no esta probado que sean una familia y no dos
+> parejas vecinas.
+>
+> **LO QUE HAY HOY**: el **293** es un **TERCER par disjunto**, con dos nodos
+> nuevos, y el **692** es el primero que **cruza**, pero cruza un nodo nuevo con la
+> mitad 1, no las dos mitades originales entre si.
+>
+> **Los cuatro pares que cruzarian las mitades 1 y 2 siguen PENDIENTES**: los
+> puestos **1211**, **1239**, **1339** y **1451**.
+
+**Sube igual, y el motivo es que la evidencia agregada es de otro tamano:**
+
+| | |
+|---|---:|
+| miembros | **8** |
+| pares posibles | **28** |
+| en la cola intra | **13** |
+| **leidos** | **4** |
+| **de esos, en A** | **CUATRO DE CUATRO** (166, 177, 293, 692) |
+| pendientes de la cola | **9** (792, 993, 1041, 1211, 1239, 1339, 1451, 1496, 1541) |
+| pares que nunca entraron a la cola | **15** |
+| **aristas internas** | **UNA** |
+| fuente | **la misma para los ocho**: *Co-Intelligence* (Mollick) |
+
+**LA NOMINA, contada con `scripts/contar_nombre.py` y leida uno por uno:**
+
+| nodo | pasos |
+|---|---:|
+| `human_in_the_loop_ia` | 4 |
+| `principio_humano_en_el_loop` | 4 |
+| `comprension_capacidades_limitaciones_ia` | 5 |
+| `jagged_frontier_ia` | 4 |
+| **`mitigar_falling_asleep_wheel`** | 4 |
+| **`riesgo_sobredependencia_ia`** | 4 |
+| **`alineacion_etica_ia_negocio`** | 5 |
+| **`comprender_alineacion_etica_ia`** | 4 |
+
+> **Cuatro miembros nuevos respecto del candidato**, los tres primeros traidos por
+> pares ya leidos y el cuarto por lectura del contador.
+>
+> **La forma sigue siendo la peor**: **una sola arista interna** entre ocho nodos,
+> `jagged_frontier_ia` con `riesgo_sobredependencia_ia`. **Ocho nodos del mismo
+> libro sobre el mismo asunto y el grafo conoce una sola pareja.**
+
+**ADYACENTE, anotada y NO incluida**: `deteccion_alucinaciones_ia` y
+`gestion_alucinaciones_ia` repiten entre si (puesto **363**, A) y el paso 2 de
+`principio_humano_en_el_loop` manda justamente reconocer cuando la IA inventa.
+
+> **El par que decide si se absorben es el 1478 y esta pendiente.** Hasta
+> entonces son una pareja vecina, no dos miembros.
+
+**LO QUE ESTE RACIMO PIDE**: es el tercer caso, con las puertas del Stage-Gate y
+la serie de Coleman, en que **cuatro fusiones sueltas no valen**. Ocho nodos que
+dicen donde acaba la IA y empieza la persona **necesitan una sola decision de
+cuantos nodos quiere el catalogo**, no cuatro podas.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -1682,10 +1781,20 @@ declarada`**, igual que la del cierre en venta grande.
 
 ---
 
-## 11. CANDIDATO a racimo: LA SUPERVISION DE LA IA
+## 11. RACIMO NUEVO: LA SUPERVISION DE LA IA
 
-**CANDIDATO, no censo.** Se registra aqui para que la relectura lo encuentre
-hecho; **no sube a racimo hasta que un tercer par lo confirme o lo desmienta.**
+> **SUBIO A RACIMO EL 12 ago 2026, en la relectura R13.** Lo que sigue es el texto
+> del candidato tal como se escribio, **sin retocar**, y debajo lo que cambio.
+>
+> **La nomina paso de CUATRO a OCHO miembros** y los pares leidos de dos a cuatro,
+> los cuatro en **A**. **La forma no mejoro**: una sola arista interna entre ocho.
+>
+> **Y la condicion que este mismo texto puso NO se cumplio como estaba escrita**:
+> el par que cruzaria las dos mitades originales sigue pendiente. **Lo que subio
+> el racimo fue la evidencia agregada, no esa condicion.** Todo medido y
+> declarado en la seccion 8, tanda R13.
+
+**EL TEXTO ORIGINAL DEL CANDIDATO, del 11 ago 2026:**
 
 ### Los cuatro nodos, verificados contra el grafo
 

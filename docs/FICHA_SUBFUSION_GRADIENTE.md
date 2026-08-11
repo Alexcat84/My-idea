@@ -2903,6 +2903,27 @@ o sea limpios por dentro:
 > **Anotado en las fichas de los dos ejes**, que es lo que la cura acoplada exige:
 > ninguno de los dos frentes puede tocar este nodo sin el otro.
 
+> **QUINTO EJEMPLAR, anadido el 12 ago 2026 desde la relectura R13, y es el
+> SEGUNDO del tipo caro:**
+>
+> | nodo | veredicto de ESTA ficha | veredicto del intra |
+> |---|---|---|
+> | **`producto_unico_superior`** (puesto 285 del intra) | **CONFIRMADA LEVE**, tanda 13 | **A**, repite con `superioridad_producto_beneficios` |
+>
+> **Averiado por dentro y gemelo por fuera, igual que el 277.** Le aplica la misma
+> **CURA ACOPLADA**: destejer el apendice ajeno y fusionar con el gemelo **en el
+> mismo acto**.
+>
+> **Lo que hay que salvar, medido en el puesto 285**: los **discursos por
+> posicionamiento** (si eliges premium NO enumeres caracteristicas, si eliges
+> precio bajo SI), **desarmar el producto de la competencia**, **imaginar como
+> evolucionara**, las **necesidades que el cliente no sabe nombrar**, y los
+> **proveedores que pueden innovar contigo**.
+>
+> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y DOS
+> confirmadas con gemelo** (277, 285). **Las dos confirmadas son las unicas que
+> necesitan cura acoplada**: en las falsas no hay nada que destejer.
+
 > **Los dos instrumentos no se corrigen: se completan.**
 
 ---
