@@ -34,7 +34,20 @@ va a seguir subiendo mientras la cirugía no arranque, porque los nodos costurad
 son grandes y por eso entran a muchos pares.
 
 **LA COLA DE RELECTURA POST-CIRUGÍA queda nombrada**: los puestos **592, 599,
-724, 738, 755, 784, 798, 827, 830, 831 y 835**. Se releen **después** de operar sus nodos, y
+724, 738, 755, 784, 798, 827, 830, 831, 835 y 361**.
+
+**Actualización del 13 ago 2026 (R19): la cola es MÁS ANCHA que la cuenta de
+congelados, y el 361 es el primero que las separa.** `key_partners_hypothesis`
+resultó ser **costura confirmada con gemelo declarado**, o sea **cura acoplada**
+(séptimo ejemplar de la ficha). Su par **entra a la cola porque el texto va a
+cambiar**, pero **no queda congelado**: el nodo chico **es** el bloque 1 a 5 del
+grande, así que cualquier destejido plausible lo deja contenido igual y el
+veredicto no depende de la cirugía.
+
+> **La regla que esto propone, pendiente del visto del auditor**: un par entra a
+> la **cola** cuando su texto va a cambiar; queda **congelado** solo cuando **el
+> veredicto depende de qué sobreviva**. Hoy la cuenta va **once congelados, doce
+> en cola**. Se releen **después** de operar sus nodos, y
 sus razones ya llevan escrito qué hay que salvar en cada caso.
 
 > **Dos avisos para quien la ejecute.** El **827** tiene los **dos** nodos

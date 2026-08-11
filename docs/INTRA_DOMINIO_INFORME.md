@@ -684,6 +684,12 @@ el mismo nodo sale de tres maneras distintas segun con que hermano se compare.**
 >
 > **Las dos decisiones son de nodo, no de familia. El centro se queda como esta.**
 
+> **CONFIRMADO A CIEGAS el 13 ago 2026, relectura R19.** La segunda de las dos
+> decisiones, el par del puesto 353, **volvio a leerse sin mirar el veredicto y
+> volvio a salir A.** Es el pilar del arreglo: **si se cayera, el centro
+> `metricas_accionables` se quedaria con dos hijos que repiten entre si** y esto
+> dejaria de ser un problema de dos nodos para volver a ser uno de cinco.
+
 ---
 
 ## 8. LA RELECTURA DE LAS A, y su metodo
@@ -1978,6 +1984,159 @@ ficha.**
 > si alguno saliera A, la familia pasaria de cuatro a cinco o seis. **Es la misma
 > forma que tumbo dos puros, y esta vez queda dicho antes y no despues.**
 
+### TANDA R19, DECIMOQUINTA CIEGA: seis de seis
+
+**Acumulado: 114 de 114, de los cuales 90 a ciegas.** Perdidas verificadas contra
+el grafo, y **dos de las listadas en el dictado no resistieron la verificacion**:
+quedan corregidas aqui abajo con su motivo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **353** | `analisis_de_cohortes` contra `metricas_cohortes` | **canal-mas-leal**, que canal de adquisicion trae clientes mas leales; y **curva-por-mejoras**, comparar cohortes en el tiempo para ver si las mejoras del producto cambian algo de verdad | de **lector** |
+| **354** | `founder_ceo_succession_process` contra `sucesion_iniciada_por_fundador` | **el encuadre iniciada-por-fundador contra impuesta-por-la-junta**, con el dato de que quien la inicia conserva rol senior y silla | de **lector** |
+| **356** | `estructura_gates` contra `sistema_gates_go_kill` | **criterios-eliminatorios** y **quien-con-poder-sobre-recursos** de un lado; **anota-decision-y-motivo** y **recursos-solo-tras-el-gate** del otro | de **lector** |
+| **357** | `estrategia_de_innovacion_de_producto` contra `estrategia_innovacion_producto` | **el roadmap a tres o cinco anos** de uno; **los planes de ataque por arena** (innovador, seguidor rapido, proveedor de bajo costo) del otro | de **lector** |
+| **361** | `key_partners_hypothesis` contra `partners_hypothesis_physical` | **una sola**: la **validacion posterior con reuniones reales** (ver la correccion) | de **lector** |
+| **363** | `deteccion_alucinaciones_ia` contra `gestion_alucinaciones_ia` | **pregunta-de-distintas-formas**, **politica-interna** escrita, y el **patron sonar-creible** como senal de alerta | de **lector** |
+
+#### LAS DOS CORRECCIONES DEL DICTADO, declaradas
+
+**Por la DISCIPLINA DEL AUDITOR del banco 9.5: todo estado pasado va consultado.**
+Estas dos salieron de consultarlo.
+
+> **1. En el 361, dos de las tres perdidas dictadas ya estan dentro del nodo
+> grande y por lo tanto no se pierden.**
+>
+> | perdida dictada | donde ya vive |
+> |---|---|
+> | **tabla-de-tres-columnas** | es el **entregable literal** de `key_partners_hypothesis`: *tabla de socios clave con columnas nombre, que proveen, que ofrece la empresa a cambio* |
+> | **suplentes** | es su **paso 1**: *listar socios potenciales primarios y alternativos por tipo* |
+> | **validacion-con-reuniones** | **no esta**: esta es la unica perdida real del par |
+>
+> **El archivo tampoco lo tenia fino**: la razon del 361 daba por cubierta la
+> validacion con el *dejarlo anotado* del paso 5, que es **actualizar el Canvas**,
+> no reunirse. **Actualizar un lienzo no valida un socio.**
+>
+> **2. En el 363, la prohibicion en documentos legales y financieros es COMUN, no
+> perdida.** Esta en el paso 4 de `deteccion_alucinaciones_ia` y en el paso 1 de
+> `gestion_alucinaciones_ia`, que la extiende a pitch decks, reportes y contratos.
+> **Lo unico que solo uno nombra es la palabra financieros.** Es un matiz, no una
+> perdida entera, y las otras tres del dictado se sostienen.
+
+> **Ninguna de las dos cambia una clase.** Cambian **lo que el redactor tiene que
+> salvar**, que es justamente para lo que se escriben estas listas.
+
+#### 353: el par que el arreglo del racimo de cohortes ya habia nombrado
+
+**La seccion 7 cerro con dos decisiones y no cinco**, y **este par es la segunda
+de las dos.** La relectura a ciegas lo confirma sin tocarlo.
+
+> **Vale la pena decir por que importa que aguante**: el arreglo entero del racimo
+> de las metricas de cohorte **descansa sobre estas dos decisiones**. Si esta se
+> cayera, el centro `metricas_accionables` se quedaria con dos hijos que repiten
+> entre si y la familia volveria a ser un problema de cinco nodos.
+
+#### 356: el cruce portafolio-puertas, visto DESDE DENTRO
+
+**El cruce 2 de la seccion 13 mide el toque por fuera**:
+`sistema_gates_go_kill` repite con `gestion_de_portafolio_gates_go_kill`, que
+esta censado en otro racimo, y por eso la mesa de las puertas tiene que mirar
+tambien la nomina del portafolio.
+
+> **Este par mide el mismo nodo por dentro**: `sistema_gates_go_kill` **tambien
+> repite con `estructura_gates`, que es de su propio racimo.**
+>
+> **Y eso cambia el orden del arreglo, no solo su tamano.** El nodo que une los
+> dos racimos **esta duplicado dentro del suyo**: si la mesa del portafolio lo
+> toca primero, decide sobre un nodo que la mesa de las puertas va a fusionar
+> despues. **Primero se cierra la familia de las puertas, y con el superviviente
+> en la mano se mira el cruce con el portafolio.** Anotado tambien en la seccion
+> 13.
+
+#### 357: la clase citada, y el nodo costurado NO es ninguno de los dos
+
+**Consultada la ficha, como mandaba el dictado. Lo que hay no es lo que el dictado
+suponia**, y por eso queda escrito con nombre y cifra.
+
+**El nucleo tiene CUATRO nodos vivos con casi el mismo nombre**, y el censo por
+script los levanta a los cuatro:
+
+| nodo | pasos | que es | en la ficha de costuras |
+|---|---:|---|---|
+| `estrategia_de_innovacion_de_producto` | 6 | objetivos, arenas, buckets, roadmap | **no aparece** |
+| `estrategia_innovacion_producto` | 5 | metas, rol, arenas, recursos, planes de ataque | **no aparece** |
+| `estrategia_de_innovacion_y_tecnologia` | 5 | las arenas como filtro de ideas | **no aparece** |
+| **`estrategia_de_innovacion_producto`** | **7** | **la apuesta audaz**, Cooper mas Horowitz | **CONFIRMADA**, bloque **45,7**, corte **3** |
+
+> **El costurado es el CUARTO**, el unico sin la segunda preposicion, y **no es
+> ninguno de los dos del par 357.** El par **no esta bloqueado por ninguna de las
+> tres causas del banco 9.9**: se juzga hoy, y su **A se sostiene**.
+>
+> **La ficha ya lo habia bautizado**: *LA APUESTA AUDAZ, DOS VECES*, con la
+> reinvencion contra el feedback del cliente contada en sus pasos 4 a 7 con
+> vocabulario de Horowitz.
+
+**Y el estado de la familia, contado del archivo:**
+
+| par | nodos | clase |
+|---:|---|:---:|
+| **357** | los dos del racimo censado | **A** |
+| **530** | `estrategia_de_innovacion_de_producto` contra `estrategia_de_innovacion_y_tecnologia` | **A** |
+| **863** | `estrategia_de_innovacion_y_tecnologia` contra `estrategia_innovacion_producto` | **pendiente, y cae en este mismo tramo** |
+| 405 | el costurado contra `estrategia_de_innovacion_y_tecnologia` | **B**, bloqueado por la costura |
+| 1325 | el costurado contra `estrategia_de_innovacion_de_producto` | pendiente |
+
+> **El racimo censado de TRES se cierra en el puesto 863**, que esta a menos de
+> treinta lecturas. **Si sale A, los tres pares del racimo estan leidos y los tres
+> en A: seria un PURO de tres**, con la condicion dura cumplida y el contador ya
+> corrido aqui arriba. **Queda como condicion viva, no como prediccion.**
+
+#### 361: `key_partners_hypothesis` es el SEPTIMO EJEMPLAR de la CURA ACOPLADA
+
+**Consultada la ficha, como mandaba el dictado, y la clase real es la peor de las
+posibles para el plan:**
+
+| eje | veredicto |
+|---|---|
+| **la ficha de costuras** | **CONFIRMADA**, bloque **51,7**, catorce pasos, **TRIPLE**: el Canvas en los pasos 1 a 5, el libro de traccion en los 6 a 10, y las alianzas por cuello de botella en los 11 a 14 |
+| **el intra** | **A** en este mismo puesto 361, gemelo `partners_hypothesis_physical` |
+
+> **Averiado por dentro y gemelo por fuera: le toca CURA ACOPLADA**, destejer y
+> fusionar en el mismo acto. **Es el SEPTIMO ejemplar de la lista y el CUARTO del
+> tipo caro**, detras de 277, 285 y 331. **Anotado en la ficha, que es donde la
+> cura acoplada exige que viva.**
+
+**Y por la TERCERA CAUSA del banco 9.9, el par entra a la COLA DE RELECTURA
+POST-CIRUGIA.** Con una diferencia que hay que decir para que la cuenta no se
+tuerza:
+
+> **El 361 entra a la cola SIN quedar congelado, y es el primero asi.** La clase
+> se emite hoy porque **la relacion del par es la propia estructura de bloques**:
+> el nodo chico **es** el bloque 1 a 5 del grande, y eso lo dice la ficha, no la
+> lectura. **Cualquier destejido plausible deja el bloque del Canvas en pie**, asi
+> que el superviviente de la cura sigue conteniendo al chico entero.
+>
+> **Comparalo con el 835**, que si quedo en B: alli los dos nodos son textos
+> independientes que **se cruzan en dos instrucciones**, y cuanto se cruzan
+> depende de que quede tras la cura. **Ahi la clase si depende de la cirugia.**
+
+> **LO QUE ESTO SEPARA, y va como propuesta al auditor**: **la cola de relectura
+> es mas ancha que la cuenta de congelados.** Un par entra a la cola cuando su
+> texto va a cambiar; queda **congelado** solo cuando **el veredicto depende de
+> que sobreviva**. **Hoy los dos numeros se llevaban juntos y este par los
+> separa: once congelados, doce en cola.**
+
+#### 363: la pareja de las alucinaciones, y quien decide si entra al racimo
+
+**Los dos nodos son del mismo libro, Mollick, y repiten la misma politica.** La
+fusion entre ellos **no depende de nadie**: se hace.
+
+> **Lo que si depende de otra lectura es si la pareja se absorbe en el racimo LA
+> SUPERVISION DE LA IA**, el de la seccion 11. **Y el que lo decide tiene numero:
+> el puesto 1478**, `deteccion_alucinaciones_ia` contra
+> `principio_humano_en_el_loop`, **el unico par de la cola que toca los dos
+> lados.** Anotado en la seccion 11 junto a las otras condiciones vivas.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -2266,6 +2425,12 @@ cinco puestos concretos y cada uno decide algo distinto:
 > decirlo.**
 >
 > **El quinto decide el tamano**: con el 1478 en A la nomina pasa de ocho a diez.
+>
+> **Precision del 13 ago 2026, relectura R19**: el puesto **363**, el par INTERNO
+> de esa pareja adyacente, **se releyo a ciegas y sostuvo su A**. La pareja se
+> fusiona entre si **decida lo que decida el 1478**; lo unico que ese puesto
+> decide es **si el superviviente entra al racimo o se queda al lado**. Son dos
+> preguntas distintas y conviene no mezclarlas.
 
 **EL TEXTO ORIGINAL DEL CANDIDATO, del 11 ago 2026:**
 
@@ -2546,6 +2711,15 @@ racimo nuevo de **las puertas del Stage-Gate** (seis miembros, seccion 1).
 > **Los dos racimos se tocan en ese par**, asi que **la mesa de las puertas tiene
 > que mirar tambien la nomina del portafolio antes de decidir cuantos nodos quiere
 > el catalogo**. Si no, decide sobre seis cuando en realidad hay siete en juego.
+
+> **AMPLIACION del 13 ago 2026, relectura R19, y cambia el ORDEN del arreglo.**
+> El puesto **356** mide el mismo nodo por dentro: **`sistema_gates_go_kill`
+> tambien repite con `estructura_gates`, que es de su PROPIO racimo.**
+>
+> **El nodo que une los dos racimos esta duplicado dentro del suyo.** Si la mesa
+> del portafolio lo toca primero, decide sobre un nodo que la mesa de las puertas
+> va a fusionar despues. **Orden recomendado: primero se cierra la familia de las
+> puertas, y con el superviviente en la mano se mira el cruce con el portafolio.**
 
 ### LA REGLA QUE ESTA SECCION FIJA
 

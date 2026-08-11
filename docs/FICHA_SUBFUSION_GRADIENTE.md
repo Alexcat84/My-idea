@@ -2961,9 +2961,31 @@ o sea limpios por dentro:
 > y **mirar antes al vecino generico**, porque parte del material duplicado puede
 > sobrar del todo si `calculo_roi` ya lo cubre.
 
-> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y TRES
-> confirmadas con gemelo** (277, 285, 331). **Las tres confirmadas son las unicas
-> que necesitan cura acoplada**: en las falsas no hay nada que destejer.
+> **SEPTIMO EJEMPLAR, anadido el 13 ago 2026 desde la relectura R19, y es el
+> CUARTO del tipo caro:**
+>
+> | nodo | veredicto de ESTA ficha | veredicto del intra |
+> |---|---|---|
+> | **`key_partners_hypothesis`** (puesto 361 del intra) | **CONFIRMADA**, bloque **51,7**, catorce pasos, **TRIPLE**: el Canvas en 1 a 5, el libro de traccion en 6 a 10, las alianzas por cuello de botella en 11 a 14 | **A**, repite con `partners_hypothesis_physical` |
+>
+> **Averiado por dentro y gemelo por fuera. Cura acoplada**, destejer y fusionar
+> en el mismo acto.
+>
+> **Lo que hay que salvar, medido en el puesto 361**: una sola cosa, la
+> **validacion posterior con reuniones reales** del nodo chico. Las otras dos que
+> el encargo daba por perdidas **ya viven dentro del grande**: la tabla de tres
+> columnas es su **entregable literal** y los suplentes son su **paso 1**.
+>
+> **Y este ejemplar es distinto de los tres anteriores en una cosa util**: el nodo
+> chico **es** el bloque 1 a 5 del grande, asi que **cualquier destejido plausible
+> deja el Canvas en pie** y el superviviente sigue conteniendolo. Por eso su par
+> **entra a la cola de relectura post-cirugia SIN quedar congelado**, que es el
+> primer caso de esa distincion. **Anotado en PENDIENTES.**
+
+> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y CUATRO
+> confirmadas con gemelo** (277, 285, 331, **361**). **Las cuatro confirmadas son
+> las unicas que necesitan cura acoplada**: en las falsas no hay nada que
+> destejer.
 
 > **Los dos instrumentos no se corrigen: se completan.**
 
