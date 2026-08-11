@@ -3926,3 +3926,79 @@ se juzgo igual.**
 > **Es el contraejemplo util**: de los cuatro nodos costurados que han entrado a
 > pares, **tres bloquearon y este no**. La diferencia no es el nodo: **es donde
 > cae el solape.**
+
+---
+
+## 27. EL TRAMO 825 a 830: los nodos costurados empiezan a costar de verdad
+
+**Seis pares leidos, los seis del nucleo.** Acumulado **830 de 3.388**, global
+**30,7%** de A y **nucleo 37,6%**. **El tramo dio CERO A**, y la mitad de sus
+pares quedo bloqueada. **El checkpoint de los 900 es el proximo.**
+
+### 27.1 LA CUENTA DE LO QUE LAS COSTURAS ESTAN CONGELANDO
+
+**Contada del archivo con la regla del banco 9.9 delante.**
+
+| nodo costurado | pares que bloquea | puestos |
+|---|---:|---|
+| `voz_del_cliente_voc` | **3** | 724, 755, **827** |
+| `producto_minimo_viable` | **2** | 592, **830** |
+| `lienzo_modelo_negocio` | 1 | 784 |
+| los dos de A/B | 1 | 738 |
+| `preguntas_ipo_dolor_cliente` | 1 | 798 |
+| `key_partners_hypothesis` y `asociaciones_clave` | 1 | 599 |
+
+> **Nueve pares congelados por seis nodos.** Y la cuenta va a seguir subiendo,
+> porque **estos nodos son grandes y por eso entran a muchos pares.**
+>
+> **Lo que esto cambia para el plan**: la cirugia de costuras dejo de ser un
+> frente paralelo. **Cada nodo que se opera libera lecturas del otro eje**, y
+> `voz_del_cliente_voc` solo ya vale tres.
+
+**Y el 827 trae el caso extremo: LOS DOS nodos del par estan costurados.**
+`ganar_comprension_del_cliente` es ademas uno de los ocho ejemplares de **LA
+FORMA QUE PARTE**, con once pasos partidos entre la comprension del cliente y el
+montaje del CRM.
+
+### 27.2 LA VARA Y LA POSICION DEL SOLAPE, trabajando juntas en el mismo tramo
+
+**Las dos reglas nuevas resolvieron cuatro de los seis pares sin deliberar:**
+
+| puesto | regla | resultado |
+|---:|---|---|
+| **825** | la vara (9.6.1) | el hijo trae el procedimiento de crear mercado: **CONTINUA**, D |
+| **827** | la posicion del solape (9.9) | el solape toca juntura **por los dos lados**: **bloquea**, B |
+| **830** | la posicion del solape (9.9) | el solape es una orden que el emblema **repite cuatro veces**: **bloquea**, B |
+| 829 | ninguna, lectura directa | programa contra pieza: **D** |
+
+> **Antes de que las dos reglas existieran, estos cuatro habrian sido cuatro
+> discusiones.** Ahora son cuatro lineas de razon con la anatomia de la ficha
+> delante.
+
+### 27.3 UNA ARISTA QUE FALTA DENTRO DEL NODO MEJOR CABLEADO
+
+**Puesto 829.** `ocho_fases_experiencia_cliente` enlaza a **siete** de las ocho
+fases y **no enlaza a `fase_adopt_ciclo_cliente`**.
+
+> **Es la arista que falta mas barata del archivo**: un solo enlace, dentro del
+> nodo que el puesto 815 midio como el mejor cableado de todo el cribado, **y que
+> el banco 9.8 acaba de nombrar superviviente del programa unico de Coleman.**
+>
+> **Conviene arreglarla antes de la fusion, no despues**: si el superviviente nace
+> con siete de ocho, la octava se pierde en el traslado.
+
+### 27.4 Lo demas anotado
+
+> **1. La familia de la cultura de innovacion, DOS nodos de dos libros** (puesto
+> 828), sin citarse: uno mira lo que el lider **hace** con su tiempo, el otro mira
+> el **clima** de la oficina. **Sin censar.**
+>
+> **2. Los dos hijos de `preparacion_materiales_fundraising` salen sanos entre
+> si** (puesto 826): el resumen ejecutivo y el deck son artefactos distintos, con
+> arista en los dos sentidos. **La madre sigue sin enlazar a ninguno de los dos**,
+> que es la arista que falta del banco 9.6 ya registrada.
+>
+> **3. `tipo_de_mercado_estrategia_competitiva` repite con su gemelo y continua
+> con su hijo** (puestos 686 y 825). **Es el ejemplo mas limpio de para que sirve
+> la vara**: el mismo nodo, dos vecinos, dos clases distintas y ninguna
+> discusion.
