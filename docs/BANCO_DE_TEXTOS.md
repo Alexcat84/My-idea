@@ -2092,3 +2092,39 @@ relectura R33.**
 
 > **Un nodo costurado no arrastra a sus gemelos. Arrastra a la componente entera
 > en la que vive.**
+
+---
+
+### 9.25 FIGURA: LAS ESPECIALIZACIONES NO SON UNIFORMES
+
+**Adjudicado el 14 ago 2026.** Cuando una familia parece una **madre con hijas
+especializadas**, la tentacion es tratarla en bloque: o se fusionan todas en la
+madre o se enlazan todas a ella. **La medicion dice que eso es un error de
+lectura.**
+
+> **DENTRO DE UNA JERARQUIA CANDIDATA, CADA HIJO SE JUZGA POR LO QUE APORTA.**
+> No por la forma de la familia, no por el titulo del nodo, y no por lo que hagan
+> sus hermanos.
+
+**LA PRUEBA, y es una sola pregunta**: leidos paso por paso, **el hijo trae algo
+que la madre no tiene?** Si lo trae, **se ENLAZA**; si no lo trae, **se FUNDE**.
+**La misma familia puede necesitar las dos cosas a la vez.**
+
+**EL EJEMPLAR: la familia del canal, y las dos hijas se comportan al reves.**
+
+| hija | que aporta sobre el general | veredicto de la mesa |
+|---|---|---|
+| **`channels_hypothesis_web_mobile`**, la DIGITAL | **si aporta**: probar varios canales con presupuesto parecido para comparar el costo por cliente (puesto 537) | **SE ENLAZA** |
+| **`channels_hypothesis_physical`**, la FISICA | **no aporta nada fisico**: repite al general **cinco veces**, paso por paso y en el mismo orden. Lo unico suyo es que fija el limite del canal unico en otra etapa (puesto 609) | **SE FUNDE** |
+
+> **La mesa de esa familia queda con DOS decisiones distintas, no una.** Y eso no
+> se ve mirando la forma: **se ve leyendo cada hijo contra la madre y contando lo
+> que sobrevive.**
+
+**POR QUE IMPORTA MAS ALLA DE ESA FAMILIA:** una jerarquia candidata **se declara
+por la forma** (un nodo general, varios especializados) **y se resuelve por el
+contenido**. Entre esas dos cosas hay espacio para que **la mitad de la familia
+este bien y la otra mitad sobre.**
+
+> **Y el sintoma que la delata es barato de mirar**: un hijo que **no tiene ni un
+> paso de su propia especialidad** no es un hijo, **es una copia con otro titulo.**

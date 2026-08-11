@@ -4053,6 +4053,155 @@ donde uno anade el CUANDO y el otro anade el FILTRO.**
 > prioridad y el arranque pequeno** en el otro. **Quedarse con uno solo de los dos
 > nodos pierde la mitad util en las dos parejas.**
 
+### TANDA R36, TRIGESIMOSEGUNDA CIEGA: seis de seis
+
+**Acumulado: 216 releidas, de las cuales 192 a ciegas. Discrepancias: UNA**, el
+395, cerrada por los dos lados.
+
+**Las perdidas se derivaron leyendo los doce nodos y BUSCANDO CADA UNA en el grafo
+antes de listarla.** Tres se cayeron por esa busqueda.
+
+| puesto | el par | que se pierde de verdad |
+|---:|---|---|
+| **635** | `customer_development_modelo` contra `customer_discovery` | **el canal y el precio** en la respuesta recogida; del otro lado, **probar la percepcion del problema antes de mostrar nada** |
+| **639** | `diseno_experimentos_pass_fail` contra `realizar_pruebas_pasa_no_pasa` | las **cifras** y los **artefactos**; del otro lado, **el costo de adquisicion contra el precio** y **la clasificacion de reacciones** |
+| **641** | `fase_diseno_prototipado_modelos` contra `prototipado_modelos_negocio` | **no descartar porque un experto diga que no**; del otro lado, **la escalera de fidelidad**, **la manipulacion de escenarios** y **los tres prototipos minimos** |
+| **643** | `split_testing` contra `test_ab_precio` | **el reparto equitativo del trafico** y **el 95% de significancia**; del otro lado, **las rondas multiples** |
+| **651** | `cuatro_capacidades_mercado` contra `cuatro_categorias_desempeno_cadena_suministro` | **invertir en la fortaleza y no en la debilidad**; del otro lado, **la cadencia diaria del dato** |
+| **653** | `ciclo_de_conversion_de_efectivo` contra `dso_dpo_gestion_capital_trabajo` | **la formula del ciclo** y **el capital de trabajo requerido**; del otro lado, **las causas de un DSO alto** |
+
+#### 643: par INTERNO del acto de A/B, el mas caro del inventario
+
+**Los dos nodos son miembros del ACTO 2 del cierre transitivo**, y por la nota de
+la seccion 54.7 se cita entero:
+
+| el acto 2 | |
+|---|---|
+| **tamano** | **SEIS nodos** |
+| **costuras dentro** | **TRES**: `ab_testing_optimizacion`, `optimizacion_embudo_get_customers`, `split_testing_experimentos_ab` |
+| **sanos dentro** | `split_testing`, `test_ab_precio`, `funnel_get_customers_optimizacion` |
+| **pares A que lo sostienen** | 277, 374, 452, **643**, 1061 |
+| **lo que cuesta** | **TRES destejidos** y despues **una decision sobre seis nodos**. Es la **tercera cirugia del orden de la pasada**, y la unica que son tres |
+
+> **Este par es entre los dos SANOS del acto**, y aun asi repite. **Que dos nodos
+> limpios de un acto digan lo mismo confirma que el problema del acto no es solo
+> el destejido: es que sobran nodos aunque se destejan todos.**
+
+**LAS PERDIDAS, verificadas**: de `split_testing` se pierden **dividir el trafico
+equitativamente entre control y desafiante** y **exigir significancia estadistica
+superior al 95% antes de concluir**, que es el unico umbral estadistico de toda la
+familia. De `test_ab_precio` se pierde **ejecutar rondas multiples para afinar el
+precio optimo**, que es lo unico que trata la prueba como un barrido y no como una
+comparacion de dos.
+
+#### 641: DOS CASAS PARA LA MISMA FASE, ahora entre las dos casas
+
+**Es la figura que resolvio la discrepancia del 395**, y aqui aparece **entre las
+dos casas directamente** en vez de entre una casa y un tercero.
+
+> **Los dos desarrollan la misma fase de diseno del modelo de negocio** y coinciden
+> en el nucleo: generar varias variantes, prototiparlas con el lienzo y quedarse
+> con la de mas potencial tras explorar.
+
+**LAS PERDIDAS, y la busqueda cambio la lista.** De `fase_diseno_prototipado_modelos`
+se pierde **una sola cosa y no aparece en ningun otro nodo vivo**: **no descartar
+ideas solo porque un experto diga que no funcionara.** Su otra pieza, la narrativa
+por modelo con respuesta externa, **si tiene equivalente** en el otro lado, la
+prueba de campo con clientes reales.
+
+De `prototipado_modelos_negocio` se pierden **tres**, y las tres son suyas:
+
+| lo exclusivo | |
+|---|---|
+| **la escalera de fidelidad** | boceto rapido, luego lienzo elaborado, luego caso de negocio en hoja de calculo. **Ningun otro nodo de la zona escalona el prototipo** |
+| **la manipulacion de escenarios** | quitar un segmento, quitar un recurso costoso, cambiar una pieza y ver que pasa |
+| **los TRES prototipos minimos** | construir al menos tres distintos antes de elegir, **evitando apegarse emocionalmente**. Verificado: la cifra no aparece en ningun otro nodo |
+
+#### 639: tercer par de la ESTRELLA de pass/fail
+
+**El centro contra su cuarto miembro.** Con el 467 y el 511, **las tres A de la
+estrella tocan al mismo nodo**, `diseno_experimentos_pass_fail`.
+
+> **Y la forma se sostiene**: el unico par periferico leido, el **636**, sigue
+> sano. **Tres radios en A y el unico par entre radios en D**: es la estrella del
+> banco 9.23 con la segunda cuenta hecha.
+
+**LAS PERDIDAS, y una se cayo al buscarla.** De `realizar_pruebas_pasa_no_pasa` se
+pierden **dos y las dos son unicas en el grafo**: **comparar cuanto cuesta
+conseguir un cliente contra el precio del producto**, y **clasificar las reacciones
+en categorias**, los que aman el producto, los que piden funciones nuevas, los
+indiferentes. **Ninguna de las dos aparece en ningun otro nodo vivo.**
+
+De `diseno_experimentos_pass_fail` se pierden **las cifras y los artefactos**:
+nueve de treinta pedidos, diez a treinta prospectos, y las paginas de aterrizaje,
+presentaciones y maquetas. **Pero NO se pierde la regla del maximo local**: vive en
+`global_vs_local_maximum` y en `disenar_tests_pass_fail`, verificado.
+
+#### 651: la misma taxonomia con dos nombres, y el racimo ya la tenia contada
+
+**Las cuatro capacidades y las cuatro categorias son LAS MISMAS CUATRO**: servicio
+al cliente, eficiencia interna, flexibilidad de demanda y desarrollo de producto.
+Un nodo las llama capacidades y el otro categorias de desempeno.
+
+> **NO es un miembro nuevo.** Medido antes de escribirlo: el racimo de los
+> **CUADRANTES DE MERCADO**, el numero 8 de la tabla viva, ya cuenta a
+> `cuatro_categorias_desempeno_cadena_suministro` entre sus **seis** miembros.
+> **Siete pares leidos de quince posibles y los SIETE en A**, cero candidatos
+> fuera. **Este par es uno de esos siete y la ficha estaba al dia.**
+
+**LAS PERDIDAS**: de `cuatro_capacidades_mercado` se pierde **invertir en reforzar
+la fortaleza en vez de corregir debilidades menores**, verificado como unico en el
+grafo, y es la unica regla de asignacion de toda la familia. De
+`cuatro_categorias_desempeno_cadena_suministro` se pierde **recolectar los datos de
+forma diaria o continua**, que es la unica cadencia que alguien da.
+
+#### 653: el racimo declarado en el 203 no se confirma, y el gemelo estaba en otro sitio
+
+**El puesto 203 declaro una figura: un RACIMO NUEVO de tres nodos del capital de
+trabajo**, el conjunto `dso_dpo_gestion_capital_trabajo` mas uno por cada mitad,
+`gestion_dso` y `gestion_cuentas_por_pagar_dpo`.
+
+**Remedido hoy, esa candidatura no se confirma:**
+
+| par | puesto | clase |
+|---|---:|:---:|
+| el conjunto contra la mitad del cobro | 191 | **D** |
+| el conjunto contra la mitad del pago | 203 | **C** |
+| **el conjunto contra el CICLO** | **653** | **A** |
+
+> **Los tres nodos de la figura del 203 no repiten entre si: el conjunto jerarquiza
+> con sus dos mitades.** Y la unica A de `dso_dpo_gestion_capital_trabajo`, en
+> cinco lecturas, **es con `ciclo_de_conversion_de_efectivo`**, que no estaba en
+> aquella figura.
+>
+> **La lectura confirma la remedicion**: lo que parecia un racimo de tres por
+> cercania de tema **era una jerarquia de tres**, y la repeticion real estaba con
+> el nodo del ciclo. **Los dos forman una PAREJA CERRADA**: ninguno de los dos
+> tiene otra A.
+
+**LAS PERDIDAS, verificadas como unicas en el grafo**: de
+`ciclo_de_conversion_de_efectivo` se pierden **la formula del ciclo**, dias de
+cobro mas dias de inventario menos dias de pago, y **multiplicarla por las ventas
+diarias para estimar el capital de trabajo requerido**. De
+`dso_dpo_gestion_capital_trabajo` se pierden **las CAUSAS de un dia de cobro
+elevado**: quejas de clientes, terminos de venta laxos y facturacion lenta.
+
+#### 635: la busqueda tumbo una perdida y precisó otra
+
+**CORRECCION DE MI PROPIA LISTA.** Antes de escribir, busque las dos piezas de
+`customer_development_modelo` en el grafo:
+
+| pieza | verificacion | veredicto |
+|---|---|---|
+| **combinar con desarrollo agil en paralelo** | vive en `customer_development_agile_pairing`, `etapa_development` y dos mas | **NO ES PERDIDA** |
+| **recoger respuesta sobre el CANAL y el PRECIO**, no solo sobre el producto | ningun otro nodo de la zona pide las tres dimensiones juntas | **perdida real** |
+
+**Y del otro lado**: `customer_discovery` es el unico de la zona que manda **probar
+como percibe el cliente el problema ANTES de mostrarle nada del producto**. La
+frase equivalente solo aparece en `desarrollo_presentacion_problema`, que es un
+nodo de reunion y no de etapa: **la instruccion sobrevive, pero cambia de sitio y
+de momento**, y eso conviene decirlo en vez de darla por salvada.
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -4212,6 +4361,13 @@ de Blank:
 > cinco.** `channels_hypothesis_physical` no estaba en esta lista cuando se
 > declaro el racimo. **La familia tiene ahora CUATRO veredictos A de quince pares
 > posibles, con cuatro pendientes en la cola**, los puestos 609, 762, 945 y 1488.
+
+> **ADJUDICADO EL 14 ago 2026: LAS ESPECIALIZACIONES NO SON UNIFORMES.** La
+> jerarquia madre-hijas **no se aplica en bloque a esta familia**. Con la evidencia
+> medida, **la digital SE ENLAZA** (aporta probar varios canales con presupuesto
+> parecido, puesto 537) **y la fisica SE FUNDE** (no tiene ni un paso fisico y
+> repite al general cinco veces, puesto 609). **La mesa de esta familia queda con
+> DOS decisiones distintas, no una.** La figura general queda en el banco, 9.25.
 
 > **LA EVIDENCIA, PARTIDA EN DOS, para la candidatura madre-hijas (R35, 14 ago
 > 2026).** No es lo mismo que el general repita con un hijo que dos hijos repitan
@@ -9499,3 +9655,79 @@ En este tramo se aplico **seis veces**, y **cuatro de los seis actos son de UNO*
 > innovacion queda ordenada, con el nodo averiado solo y los dos sanos repitiendo
 > entre si; los tres subconjuntos estrictos quedan juntos y contados. **Y el racimo
 > de la IA queda a UNA lectura de partirse en dos.**
+
+---
+
+## 58. LA PRIMERA FAMILIA CON COBERTURA COMPLETA, y lo que solo se ve con todo leido
+
+**Registrado el 14 ago 2026, a partir del puesto 611 (relectura R35).**
+
+### 58.1 LA MEDICION
+
+**`customer_discovery` y sus cuatro vecinos** son la **primera familia del
+ejercicio de la que se sabe todo.**
+
+| medida | resultado |
+|---|---:|
+| miembros | **5** |
+| pares posibles | **10** |
+| **en la cola** | **10** |
+| **leidos** | **10** |
+| clases | **6 A, 3 D, 1 B** |
+| aristas internas | **1** |
+| candidatos fuera de nomina | **2** |
+
+**Los cinco**: `customer_discovery`, `customer_discovery_overview`,
+`customer_discovery_cuatro_fases`, `customer_discovery_introduccion` y
+`customer_development_modelo`.
+
+> **Ni un par sin encolar ni uno sin leer.** De todas las nominas medidas hasta
+> aqui, esta es la unica sin reserva: **cuando se dice que es MEZCLADA, no es una
+> conjetura sobre pares pendientes, es el resultado.**
+
+### 58.2 LA LECTURA DE FORMA: una familia puede tener DOS formas segun el eje
+
+**Con los diez pares delante, los tres sanos NO estan repartidos al azar.**
+
+| par sano | puesto | que enfrenta |
+|---|---:|---|
+| `cuatro_fases` contra `introduccion` | 415 | un nodo de **FASES** contra uno de **PROCESO** |
+| `introduccion` contra `overview` | 424 | un nodo de **PROCESO** contra uno de **FASES** |
+| `customer_development_modelo` contra `cuatro_fases` | 1255 | un nodo de **PROCESO** contra uno de **FASES** |
+
+**Y las seis A caen todas dentro de un mismo eje**: `customer_discovery` con
+`overview` (206), con `cuatro_fases` (276), con `introduccion` (611) y con
+`customer_development_modelo` (635); mas `cuatro_fases` con `overview` (156) y
+`modelo` con `introduccion` (1082).
+
+> **LA FAMILIA REPITE EN EL EJE DEL PROCESO Y JERARQUIZA EN EL DE LAS FASES.** No
+> es una familia con forma unica: **es una familia con dos formas, y cual toca
+> depende de que eje se cruce.**
+>
+> **La mesa no tiene que decidir cuantos nodos quiere: tiene que decidir cuantos
+> quiere POR EJE.**
+
+### 58.3 POR QUE ESTA LECTURA EXIGE COBERTURA TOTAL
+
+> **Con nueve de diez pares, esta lectura no se puede hacer.** Bastaria que el par
+> que falta fuera uno de los tres sanos para que la familia pareciera un racimo
+> uniforme, o uno de las seis A para que pareciera mas jerarquica de lo que es.
+>
+> **La forma de una familia no es una propiedad de sus pares leidos: es una
+> propiedad del conjunto.** Y por eso, de las familias medidas en este ejercicio,
+> **esta es la unica de la que se puede afirmar la forma sin reserva.**
+>
+> **Lo que esto obliga hacia adelante**: cuando una nomina tenga pares sin leer,
+> **su forma se escribe como provisional y con la cifra de cobertura al lado.** No
+> es lo mismo decir *mezclado con siete de quince leidos* que decir *mezclado con
+> diez de diez*.
+
+### 58.4 LOS DOS CANDIDATOS QUE ARRASTRA
+
+**Fuera de la nomina de cinco, el barrido levanta dos mas**, los dos por A con
+`customer_development_modelo`: **`customer_discovery_get_out_of_building`** (849) y
+**`desarrollo_de_clientes_customer_development`** (1052).
+
+> **Con ellos la familia seria de siete y la cobertura completa se perderia.** Se
+> anotan como candidatos y **la cifra de cobertura total se declara sobre los
+> cinco**, que es sobre lo que esta medida.
