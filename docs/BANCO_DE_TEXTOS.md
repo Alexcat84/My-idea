@@ -716,6 +716,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **4** | la etapa de investigación en la venta | **4** | **6** | 4 | 4 | **SUB-PURO**, por lo mismo |
 | **5** | **la competencia entre inversores** | 3 | 3 | **3** | 3 | **PURO**, y el **primero declarado con el contador ya vigente** |
 | **6** | **la etnografía de campo** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el primero que **nace de un par CRUZADO** entre dos parejas ya declaradas |
+| **7** | **la junta asesora** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el único donde el par que cruza **los dos momentos** (identificar y formalizar) ya está leído y es A |
 
 **Lo que le falta a cada sub-puro para cerrarse, nombrado:**
 
@@ -723,6 +724,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 |---:|---:|---|
 | **3** | **6** | puestos 872, 918, 1023, 1306, 1330 y el par `customer_validation_sales_roadmap` contra `sales_roadmap`, **que nunca entró a la cola** |
 | **4** | **2** | puesto 862 y el par `etapa_de_investigacion` contra `investigacion_como_habilidad_clave`, **que nunca entró a la cola** |
+| **7** | **3** | puestos **976** y **1190**, los dos en la cola, más `identificar_consejo_asesores` contra `formalizar_junta_asesora`, **que nunca entró** |
 | **6** | **3** | las **tres fuera de la cola**: `etnografia_de_proyecto` contra `investigacion_etnografica_ideacion`, y `etnografia_aplicada_en_equipos_multidisciplinarios` contra cada uno de los dos de Cooper |
 
 > **El 6 es el más barato de cerrar de los tres sub-puros**: sus tres lecturas
@@ -1416,6 +1418,24 @@ pares.**
 | el solape toca la juntura | **después de la cirugía** del nodo |
 | el nodo va a cura acoplada | **después de la cirugía Y de la fusión** |
 | el solape cae entero en un bloque que sobrevive | **no se relee: el par se juzga hoy** |
+
+##### CONGELADO contra EN COLA: dos cuentas, no una
+
+**Aprobada por el auditor el 13 ago 2026.** Nace del puesto 361, el primer par que
+obligó a separarlas.
+
+> **Se CONGELA** el par cuyo **veredicto DEPENDE de qué quede tras la cirugía.**
+> Ejemplar: el **835**, dos textos independientes que se cruzan en dos
+> instrucciones; cuánto se cruzan depende de qué sobreviva.
+>
+> **Se ENCOLA SIN CONGELAR** el par cuyo veredicto es **invariante a cualquier
+> destejido plausible.** Ejemplar: el **361**, donde el nodo chico **es** el
+> bloque 1 a 5 del grande: sobreviva lo que sobreviva, lo sigue conteniendo.
+
+> **La cola es siempre más ancha que los congelados**, porque todo congelado está
+> también en cola. **Las dos cuentas se llevan por separado y cada una con su
+> lista**, en `docs/PENDIENTES.md`. Llevarlas juntas hace parecer bloqueado lo que
+> solo está pendiente de releer, y eso **infla el costo aparente de la cirugía.**
 
 ---
 

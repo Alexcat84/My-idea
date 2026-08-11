@@ -2982,8 +2982,30 @@ o sea limpios por dentro:
 > **entra a la cola de relectura post-cirugia SIN quedar congelado**, que es el
 > primer caso de esa distincion. **Anotado en PENDIENTES.**
 
-> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y CUATRO
-> confirmadas con gemelo** (277, 285, 331, **361**). **Las cuatro confirmadas son
+> **OCTAVO EJEMPLAR, anadido el 13 ago 2026 desde la relectura R20, y es el
+> QUINTO del tipo caro:**
+>
+> | nodo | veredicto de ESTA ficha | veredicto del intra |
+> |---|---|---|
+> | **`split_testing_experimentos_ab`** (puesto 374 del intra) | **CONFIRMADA**, nueve pasos, corte 6, **DOBLE**: el A/B de Ries en 1 a 5 y el grupo de control de Rackham en 6 a 9 | **A**, repite con `split_testing` |
+>
+> **Cura acoplada**, destejer y fusionar en el mismo acto. **Y este nodo ya tenia
+> encargo de leerse JUNTO con `ab_testing_optimizacion`**, la otra costurada de
+> A/B del nucleo, cuyo par comun (puesto 738) esta congelado: **la cura de los dos
+> y la fusion con `split_testing` son el MISMO acto, no tres.**
+>
+> **Lo que hay que salvar, medido en el puesto 374**: del nodo chico, la
+> **significancia estadistica del 95%**. Las otras dos piezas que el encargo daba
+> por perdidas, el **cambio porcentual** y el **grupo de control similar**, **viven
+> en el bloque de Rackham** y por tanto **se van con el destejido**, no se pierden
+> en la fusion.
+>
+> **Su par entra a la cola SIN congelar** por la regla del banco 9.9: el solape
+> cae entero en el bloque 1 a 5 y el destejido se lleva el 6 a 9, asi que lo que
+> sobrevive es justo donde el solape vive.
+
+> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y CINCO
+> confirmadas con gemelo** (277, 285, 331, **361**, **374**). **Las cuatro confirmadas son
 > las unicas que necesitan cura acoplada**: en las falsas no hay nada que
 > destejer.
 

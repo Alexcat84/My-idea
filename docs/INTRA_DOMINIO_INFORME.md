@@ -2137,6 +2137,137 @@ fusion entre ellos **no depende de nadie**: se hace.
 > `principio_humano_en_el_loop`, **el unico par de la cola que toca los dos
 > lados.** Anotado en la seccion 11 junto a las otras condiciones vivas.
 
+### TANDA R20, DECIMOSEXTA CIEGA: seis de seis
+
+**Acumulado: 120 de 120, de los cuales 96 a ciegas.** Perdidas **propuestas por el
+auditor y verificadas una por una contra los dos nodos** antes de escribirlas.
+**El saldo de esa verificacion: una lista entera cae, otra se recorta a un tercio,
+y dos crecen.**
+
+| puesto | el par | que se pierde DE VERDAD | tipo |
+|---:|---|---|---|
+| **364** | `rediseno_procesos_negocio_cliente` contra `rediseno_procesos_negocio_cx` | las cuatro dictadas **mas tres**: ver abajo | de **lector** |
+| **366** | `deep_dive_workshop` contra `metodologia_deep_dive` | el formato **Como podriamos**, **simular la situacion** cuando no se puede observar, y la version ligera **Skinny Dip** | de **lector** |
+| **367** | `identificar_consejo_asesores` contra `identificar_junta_asesores` | **NADA verificable**: las tres dictadas ya viven en el otro nodo | de **lector** |
+| **371** | `metrics_that_matter_framework` contra `validar_modelo_financiero` | **burn rate aceptable y cuantos pivotes quedan**; el **P&L, balance y flujo multianual**; y el **CAC contra el LTV** | de **lector** |
+| **373** | `fase_assess_ciclo_cliente` contra `fase_assess_experiencia_cliente` | **algo tangible que de una prueba real** de la experiencia posterior; y **calificar del 1 al 10** la etapa de hoy | de **lector** |
+| **374** | `split_testing` contra `split_testing_experimentos_ab` | **una sola**: la **significancia del 95%**. Las otras dos se van con el destejido | de **lector** |
+
+#### 364: las cuatro se sostienen, y hay TRES mas que el dictado no listo
+
+| perdida | de que nodo | verificado |
+|---|---|---|
+| compensaciones automaticas al incumplir la promesa | `_cliente` | **si**, paso 4, y no esta en el otro |
+| presupuesto sostenido durante varios anos | `_cx` | **si**, paso 5 |
+| ensenar a TODAS las personas, no solo a quien atiende | `_cx` | **si**, paso 2 |
+| reducir la cantidad de herramientas y sistemas | `_cx` | **si**, paso 3 |
+| **resolucion en un solo contacto** | `_cliente` | **anadida**, paso 3 |
+| **medir el impacto con metricas antes y despues** | `_cliente` | **anadida**, paso 5 |
+| **alguien con vision de todo el proceso a cargo** | `_cx` | **anadida**, paso 4 |
+
+> **Siete piezas para salvar en un par de dos nodos de cinco pasos cada uno.** Es
+> el par mas caro de fundir del tramo, y **el dictado se quedaba corto por tres**.
+
+#### 366: y el CRUCE con el racimo del HMW queda anotado
+
+> **`deep_dive_workshop` manda plantear la pregunta central en formato COMO
+> PODRIAMOS dentro de su paso 2.** Y el nucleo tiene un racimo censado,
+> **`Encuadre del problema (How Might We)`, con CINCO miembros.**
+>
+> **Es la misma figura que los seis canales dentro de una fase de Coleman**: una
+> serie instanciada **dentro** de un nodo que pertenece a otra familia. **Y por
+> eso lleva el mismo orden**: quien toque el HMW despues de fundir los deep dive
+> tiene que volver a entrar en el nodo fundido.
+
+#### 367: las TRES perdidas dictadas ya viven en el otro nodo
+
+**Este es el motivo por el que el dictado se verifica antes de escribirlo.**
+
+| perdida dictada | donde ya vive en `identificar_junta_asesores` |
+|---|---|
+| **mentor de negocio** | en su **resumen**: *asi como un mentor de negocios con experiencia previa en startups* |
+| **pide ayuda concreta** | en su **paso 4**: *asesores para problemas tecnicos, introducciones a clientes clave, conocimiento de dominio y desarrollo de producto* |
+| **formaliza mas adelante** | en su **resumen**: *formalizar la junta asesora se hace mas adelante, durante la validacion de clientes* |
+
+> **La fusion de este par no pierde nada verificable en ningun sentido.** Los dos
+> nodos dicen lo mismo con las mismas piezas, **uno repartiendolas entre pasos y
+> resumen y el otro toda en pasos.** Es la fusion mas barata del tramo y
+> probablemente de varios tramos.
+
+#### 373: la ASSESS DOBLADA confirmada, y la evidencia viva del ORDEN
+
+**El par repite y aguanta la ciega.** Lo que aporta a la seccion 12 no es la
+clase, es la **prueba de que el paso 2 del tratamiento va donde esta**:
+
+> **`fase_assess_ciclo_cliente` manda, en su paso 5, disenar al menos una mejora
+> usando uno de los SEIS CANALES de comunicacion.** O sea que **la serie de los
+> medios esta instanciada DENTRO de un nodo de la serie de las fases**, viva y
+> operante, no como nota.
+>
+> **Ese es el motivo del orden medios-antes-que-fases**, y ahora tiene ejemplar
+> leido dos veces: **si las fases se consolidan primero, la consolidacion se hace
+> sobre un texto que la serie de medios va a reescribir despues.**
+
+#### 374: la clase citada, la cura, y DOS de las tres perdidas no se pierden aqui
+
+**Consultada la ficha antes de registrar, como mandaba el dictado:**
+
+| eje | veredicto |
+|---|---|
+| **la ficha de costuras** | **CONFIRMADA**, nueve pasos, corte **6**, **DOBLE**: el A/B de producto de Ries en los pasos **1 a 5** y la narracion de **grupo de control de Rackham** en los **6 a 9** |
+| **el intra** | **A** en este mismo puesto 374, gemelo `split_testing` |
+
+> **Costurada confirmada con gemelo declarado: CURA ACOPLADA.** Es el **OCTAVO
+> ejemplar** de la lista de la ficha y el **QUINTO del tipo caro**. Anotado alli.
+
+**Y la regla nueva del banco 9.9 decide su puesto sin discutir:**
+
+> **EN COLA, NO CONGELADO.** El solape **cae entero en el bloque 1 a 5**, el de
+> Ries, y **el destejido se lleva el bloque 6 a 9**, el de Rackham. Lo que
+> sobrevive a la cura **es justamente el bloque donde el solape vive**, asi que
+> **el veredicto es invariante**: siga la cirugia el camino que siga, el
+> superviviente sigue repitiendo con `split_testing`.
+
+**LA CORRECCION DE LAS PERDIDAS, y es la misma del puesto 344:**
+
+| perdida dictada | en que bloque vive | que le pasa |
+|---|---|---|
+| **significancia del 95%** | en `split_testing`, el nodo chico | **se pierde de verdad** en esta fusion |
+| comparar el **cambio porcentual** y no los absolutos | paso 8, **bloque de Rackham** | **no se pierde aqui**: se va con el destejido |
+| **grupo de control con desempeno inicial similar** | paso 6, **bloque de Rackham** | **no se pierde aqui**: se va con el destejido |
+
+> **Dos de las tres perdidas dictadas pertenecen al material que la cirugia va a
+> sacar del nodo.** Hay que salvarlas, si, **pero en el otro frente y con otro
+> destino**, no en este par. **Es la segunda vez que pasa lo mismo** y ya se puede
+> decir en general: **cuando un nodo costurado entra a un par, la lista de
+> perdidas hay que repartirla por bloques antes de entregarsela al redactor.**
+
+#### LA NOMINA DE LA JUNTA ASESORA: SEPTIMO SUB-PURO
+
+**El contador primero, con `contar_nombre.py` y tres terminos**, *junta asesora*,
+*consejo asesor* y *advisory*. **La lectura deja fuera a uno**:
+`decision_pivotar_o_proceder`, que **consulta** al consejo asesor en un paso pero
+cuyo objeto es la decision de pivotar.
+
+| | |
+|---|---:|
+| miembros | **4**: `identificar_consejo_asesores`, `identificar_junta_asesores`, `formalizar_junta_asesora`, `formalize_advisory_board` |
+| pares posibles | **6** |
+| en la cola | **5** |
+| **leidos** | **3**, y **los TRES en A** (328, 367, **712**) |
+| pendientes de cola | **2** (976 y 1190) |
+| **nunca en cola** | **1** |
+| aristas internas | **1**, entre `identificar_junta_asesores` y `formalizar_junta_asesora`; **los otros dos aislados** |
+
+> **La familia son DOS momentos, identificar y formalizar, con dos nodos cada
+> uno.** Y **el par que cruza los dos momentos ya esta leido: el 712, y es A.**
+> O sea que **aqui no repite solo cada momento consigo mismo: repite el momento
+> siguiente con el anterior.**
+>
+> **SUB-PURO por la condicion dura**, y **de los que se cierran solos**: dos de
+> las tres lecturas que faltan **ya estan en la cola**. Entra a la tabla viva del
+> banco 9.5 como el numero **7**.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -2527,6 +2658,18 @@ Todas las cifras recontadas del grafo, sobre nodos VIVOS.**
 > **tiene que decidir las dos series juntas**, porque en Assess se tocan. Si se
 > consolidan las fases primero, el nodo de canal de Assess queda colgando de un
 > nodo que ya no existe.
+
+> **CONFIRMADO A CIEGAS el 13 ago 2026, relectura R20, puesto 373.** El par
+> `fase_assess_ciclo_cliente` contra `fase_assess_experiencia_cliente` **repite y
+> aguanta la relectura**, asi que **los tres nodos de fase de Assess siguen en
+> pie** y con ellos la cuenta de cuatro nodos para un paso.
+>
+> **Y de ahi sale la EVIDENCIA VIVA del orden del tratamiento**: el paso 5 de
+> `fase_assess_ciclo_cliente` **manda usar uno de los seis canales**, o sea que
+> **la serie de los medios esta instanciada DENTRO de la serie de las fases**,
+> operante y no como nota. **Ese es el motivo por el que los medios van antes que
+> las fases** en la forma del tratamiento: consolidar las fases primero seria
+> consolidar sobre un texto que la otra serie va a reescribir.
 
 > **SEIS DE LAS OCHO FASES ESTAN DOBLADAS O TRIPLICADAS.** Solo Affirm y Advocate
 > tienen un nodo. **Dieciseis nodos para ocho pasos.**
@@ -4442,6 +4585,20 @@ leidos**, que es la primera vez en varios tramos que una familia se cierra sola:
 >
 > **Recomiendo relectura del 215 con esta evidencia delante.** No lo muevo: es un
 > veredicto emitido y la relectura de las A tiene su cauce.
+
+> **EJECUTADA el 13 ago 2026, aprobada por el auditor. El 215 pasa de B a C, SANO
+> CON FIGURA, con correccion declarada dentro de su razon.** Verificado paso por
+> paso: **ni uno solo se solapa entre los dos espirales.** Uno mira el
+> **calendario** y receta un tope de lote; el otro mira los **traspasos** y receta
+> juntar diseno e ingenieria.
+>
+> **La FIGURA se conserva y es la que sostiene la C**: ids casi identicos, mismo
+> libro, mismo nombre de concepto. **Un lector los va a tomar por el mismo nodo
+> aunque no lo sean**, y eso es problema de NOMBRE: **su arreglo es renombrar para
+> que se distingan, no fundir.**
+>
+> **Efecto en el marcador: una B menos y una C mas**, y la familia de los lotes
+> queda cerrada sin ninguna duda dentro. **Es la quinta C del archivo.**
 
 ### 29.3 Lo demas del tramo
 

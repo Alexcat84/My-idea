@@ -33,8 +33,18 @@ caería sobre un texto que va a cambiar (banco 9.4 y 9.9).
 va a seguir subiendo mientras la cirugía no arranque, porque los nodos costurados
 son grandes y por eso entran a muchos pares.
 
-**LA COLA DE RELECTURA POST-CIRUGÍA queda nombrada**: los puestos **592, 599,
-724, 738, 755, 784, 798, 827, 830, 831, 835 y 361**.
+**LAS DOS CUENTAS, separadas y nombradas** (regla aprobada el 13 ago 2026, banco
+§9.9). La cola es siempre más ancha: **todo congelado está también en cola**.
+
+| cuenta | qué significa | hoy | lista |
+|---|---|---:|---|
+| **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | **11** | 592, 599, 724, 738, 755, 784, 798, 827, 830, 831, 835 |
+| **EN COLA** | el texto va a cambiar, se relee igual | **13** | los once de arriba **más 361 y 374** |
+
+**Los dos que están en cola sin congelar**, y por qué: en el **361** el nodo chico
+**es** el bloque 1 a 5 del grande; en el **374** el solape cae entero en el bloque
+1 a 5 y el destejido se lleva el 6 a 9. **En los dos, lo que sobrevive es justo
+donde el solape vive**, así que el veredicto es invariante.
 
 **Actualización del 13 ago 2026 (R19): la cola es MÁS ANCHA que la cuenta de
 congelados, y el 361 es el primero que las separa.** `key_partners_hypothesis`
