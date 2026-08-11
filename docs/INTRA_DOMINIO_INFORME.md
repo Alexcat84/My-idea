@@ -666,7 +666,12 @@ el mismo nodo sale de tres maneras distintas segun con que hermano se compare.**
 > **centro `metricas_accionables`, gemelo `retention_metrics`**, que no enlaza con
 > ninguno de los otros cuatro.
 >
-> **MARCADO PARA EL AUDITOR el 13 ago 2026, y no lo re-adjudico**: esta candidatura
+> **ADJUDICADO el 13 ago 2026: esta candidatura CAE.** `retention_metrics` pasa de
+> **gemelo sin casa** a **MIEMBRO SIN ARISTA**, y su arreglo es la arista que
+> falta del banco 9.6, no una fusion. **Ver seccion 31.** Lo que sigue queda como
+> historia de lo que se penso antes de la adjudicacion.
+>
+> **La marca original**: esta candidatura
 > **descansaba en el puesto 522 en A**, y el 522 **es D** desde la ratificacion.
 > **Sin esa A, `retention_metrics` no es gemelo de nadie en esta familia**: lo que
 > le queda es un **B** (233) y un **D** (522). **La figura puede seguir siendo
@@ -2277,6 +2282,84 @@ cuyo objeto es la decision de pivotar.
 > **SUB-PURO por la condicion dura**, y **de los que se cierran solos**: dos de
 > las tres lecturas que faltan **ya estan en la cola**. Entra a la tabla viva del
 > banco 9.5 como el numero **7**.
+
+### TANDA R21, DECIMOSEPTIMA CIEGA: seis de seis
+
+**Acumulado: 126 de 126, de los cuales 102 a ciegas.** Perdidas propuestas,
+verificadas contra los dos nodos **y repartidas por bloques** donde hacia falta,
+por la figura nueva del banco 9.11.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **376** | `ciclo_construir_medir_aprender` contra `ciclo_crear_medir_aprender` | **partir del final del ciclo**, definir que se necesita aprender antes de construir; las **metricas de innovation accounting** que lo demuestran; y **una tercera que el dictado no listo**, repetir el ciclo **cada vez mas rapido** | de **lector** |
+| **378** | `valor_del_dinero_en_el_tiempo` contra `valor_presente` | **identificar el riesgo** de recibir el dinero mas tarde, y **definir el retorno exigido** segun ese riesgo | de **lector** |
+| **380** | `test_socios_de_trafico` contra `traffic_partners_hypothesis` | de uno: el **correo centrado en lo que el socio gana**, la **ficha de resultados** tras cada reunion, y **cerrar acuerdos firmes**; del otro: **ordenar la lista por criticidad** y mirar **tiendas de aplicaciones y marketplaces** | de **lector** |
+| **381** | `etnografia_aplicada_en_equipos_multidisciplinarios` contra `etnografia_de_proyecto` | las **situaciones analogas** (el pit stop para entender urgencias) y la **convivencia y estadias** frente a las entrevistas puntuales | de **lector** |
+| **386** | `enfoque_mercado_voc` contra `voz_del_cliente_voc` | **repartida por bloques**, ver abajo | de **lector** |
+| **387** | `fallo_como_aprendizaje_startup` contra `fracaso_como_aprendizaje_startup` | los **criterios de exito y fracaso** definidos de antemano, **documentar cada fracaso** como aprendizaje valido, y **no penalizar** al equipo por hipotesis fallidas | de **lector** |
+
+#### 386: `voz_del_cliente_voc` es el NOVENO ejemplar de la cura acoplada
+
+**Es el nodo que mas pares congela de todo el archivo**, tres (724, 755, 827), y
+ahora se sabe por que le toca la cura mas cara:
+
+| eje | veredicto |
+|---|---|
+| **la ficha de costuras** | **CONFIRMADA**, bloque **50,2**, diez pasos, **DOBLE DE LA OBSERVACION**: Cooper en los pasos **1 a 5** y Coleman en los **6 a 10**, con el duplicado literal **paso 2 contra paso 6** |
+| **el intra** | **A** en este puesto 386, gemelo `enfoque_mercado_voc` |
+
+> **Costurada confirmada con gemelo declarado: CURA ACOPLADA.** **Noveno ejemplar
+> y SEXTO del tipo caro.** Y aqui la frase de la ficha se vuelve literal:
+> **destejer y fundir son el mismo acto**, porque el gemelo cubre justo la mitad
+> que la cirugia deja en pie.
+
+**SU PUESTO EN LA COLA, con la regla del 9.9: EN COLA, NO CONGELADO.**
+
+> El solape con `enfoque_mercado_voc` **cae entero en el bloque 1 a 5**, el de
+> Cooper, y **el destejido se lleva el 6 a 10**, el de Coleman. **Lo que sobrevive
+> es justo donde el solape vive**, asi que el veredicto es invariante. **Tercer par
+> en cola sin congelar**, con el 361 y el 374.
+
+**LA PERDIDA, REPARTIDA por el banco 9.11:**
+
+| se salva en ESTA fusion | viaja con el destejido |
+|---|---|
+| de `enfoque_mercado_voc`: la **evaluacion preliminar de mercado** antes de comprometer recursos, el **analisis competitivo detallado** de productos, precios y tecnologias, y **probar los conceptos con clientes reales** antes del desarrollo formal | de `voz_del_cliente_voc`, **bloque 6 a 10**: observar **una vez al mes**, ponerse en el lugar del cliente, las **pepitas de oro** de los comentarios casuales, anotar y revisar uno o dos dias despues, y buscar patrones |
+
+> **El dictado listaba el bloque de observacion entero como perdida.** La mitad de
+> Cooper (pasos 1 a 5) **no se pierde: sobrevive en el superviviente.** La mitad de
+> Coleman **tampoco se pierde aqui: se va con el destejido.** **Tercer ejemplar de
+> la figura**, con el 344 y el 374.
+
+#### 381: par interno del sub-puro de la etnografia, y aguanta
+
+**Es uno de los tres pares que sostienen el sub-puro numero 6 del banco 9.5**, con
+el 230 y el 839. **Releido a ciegas, sostiene su A.**
+
+> **Lo que esto asegura**: el sub-puro **no descansa en una sola lectura vieja**.
+> De sus tres pares, **este es el segundo que se releee** y los dos han aguantado.
+> Le siguen faltando **tres lecturas, las tres fuera de la cola.**
+
+#### 376 y 387: dos ids SINONIMOS, al monton de la DECISION 4
+
+| puesto | los dos ids | la diferencia |
+|---:|---|---|
+| **376** | `ciclo_construir_medir_aprender` contra `ciclo_crear_medir_aprender` | **construir** contra **crear** |
+| **387** | `fallo_como_aprendizaje_startup` contra `fracaso_como_aprendizaje_startup` | **fallo** contra **fracaso** |
+
+> **Van al monton de la DECISION 4 y no consumen mesa.** **Una precision de
+> redaccion, no de fondo**: la DECISION 4 esta escrita para *identificadores que
+> solo se diferencian en una particula* (el ejemplar fue `and` contra nada, puesto
+> 289). **Estos dos se diferencian en un SINONIMO**, que es un paso mas alla de una
+> particula. **Van al mismo monton por decision del auditor**, y queda dicho para
+> que el texto de la decision se ensanche cuando alguien la redacte, o para que
+> estos lleven su propia linea.
+
+> **Y los dos traen la misma leccion de fondo**: en los dos casos **el nodo con el
+> id mas largo es el que trae el material propio** (partir del final y el
+> innovation accounting en el 376; los criterios de exito y fracaso, la
+> documentacion y el no penalizar en el 387). **El monton de la DECISION 4 no
+> puede fusionar a ciegas por el id: tiene que leer cual de los dos trae mas.**
 
 ---
 
@@ -4744,3 +4827,99 @@ tomar la decision.
 > **Ya no es casualidad: el injerto de Mollick vive en la mitad del nodo que nadie
 > toca al compararlo**, y por eso este nodo se puede seguir leyendo sin esperar a
 > su cirugia.
+
+
+---
+
+## 31. ADJUDICACION DEL RACIMO DE COHORTES, y el RECUENTO de la figura entera
+
+**Adjudicado por el auditor el 13 ago 2026**, a raiz de los cuatro veredictos
+volteados de la seccion 30.1.
+
+### 31.1 LA ADJUDICACION: de GEMELO SIN CASA a MIEMBRO SIN ARISTA
+
+> **Con el 522 en D, `retention_metrics` deja de ser GEMELO y pasa a ser MIEMBRO
+> SIN ARISTA.** No repite al centro: **simplemente nadie lo enlazo.** Y eso lo
+> saca de la figura de la seccion 5 y lo mete en **LA ARISTA QUE FALTA**, banco
+> 9.6, que es la clase de arreglo mas barata que existe.
+>
+> **El centro sigue sano.** `metricas_accionables` toca a tres de los otros cuatro
+> y nada de eso cambia.
+
+**Y el arreglo del racimo queda en UNA decision, no en dos:**
+
+| antes (con el 522 en A) | ahora |
+|---|---|
+| **dos** decisiones: resolver el gemelo **y** fundir el par del 353 | **una**: partir `retention_metrics` por su propia costura y **enlazar su mitad de retencion al centro** |
+| la fusion venia **pegada** a la cirugia | **no hay fusion pegada**: se parte y se enlaza |
+
+> **La cirugia no cambia: sigue siendo partirlo en dos por el corte del paso 6**,
+> que es lo que la ficha ya tenia escrito. **Lo que cambia es lo que pasa despues**:
+> antes habia que decidir si absorberlo, ahora solo hay que **enlazar la mitad que
+> queda**. **El par del 353 sigue siendo la otra decision del racimo y no se
+> toca.**
+
+### 31.2 EL RECUENTO DE LA FIGURA: ocho candidatos, TRECE gemelos, TRES probados
+
+**Recontado contra el grafo y contra el archivo, uno por uno.** La prueba que se
+exige a cada gemelo es la que el auditor fijo: **aristas o un par A VIGENTE.**
+
+> **LA DISTINCION QUE EL RECUENTO OBLIGA A NOMBRAR, y no la habia**: **AISLADO no
+> es GEMELO.**
+>
+> **Cero aristas** es un hecho del **grafo** y dice *nadie lo enlazo*. **Gemelo**
+> es un hecho de **lectura** y dice *repite al centro*. **La figura necesita las
+> dos mitades**, y hasta hoy se estaba declarando con una sola.
+
+| candidato | gemelo declarado | aristas | par A vigente | veredicto |
+|---|---|:---:|---|---|
+| el lienzo de propuesta de valor | `customer_profile_value_map` | 0 | **475 A y 477 A** | **PROBADO, por partida doble** |
+| el capital de trabajo (203) | `dso_dpo_gestion_capital_trabajo` | 0 | **653 A** | **PROBADO** |
+| la iluminacion de Wallas | `intimation_illumination` | 0 | **403 A** (con un miembro, no con el centro) | **PROBADO** |
+| **las metricas de cohorte** | **`retention_metrics`** | 0 | **522 volteado a D**, y 233 en B | **SALE**, ver 31.1 |
+| el lienzo de propuesta de valor | `desarrollo_value_proposition_usp` | 0 | ninguno | **SIN PROBAR** |
+| Auditoria de calidad | `auditoria_calidad` | 0 | ninguno | **SIN PROBAR** |
+| Auditoria de calidad | `reporte_auditoria` | 0 | ninguno | **SIN PROBAR** |
+| Mapeo del flujo de valor | `analisis_flujo_de_valor` | 0 | ninguno | **SIN PROBAR** |
+| Mapeo del flujo de valor | `value_stream_mapping_ambiental` | 0 | ninguno | **SIN PROBAR** |
+| Cinturones de Six Sigma | `desarrollo_expertos_capaces` | 0 | ninguno | **SIN PROBAR** |
+| Cinturones de Six Sigma | `rol_facilitador_black_belt` | 0 | ninguno | **SIN PROBAR** |
+| Los puntos de Deming | `eliminar_slogans_metas` | 0 | ninguno | **SIN PROBAR** |
+| Los puntos de Deming | `mejora_continua_del_sistema` | 0 | ninguno | **SIN PROBAR** |
+
+> **TRECE gemelos declarados en OCHO candidatos. TRES probados, UNO fuera, y NUEVE
+> sin una sola lectura que los respalde.** Los nueve se declararon **por la
+> forma**: cero aristas dentro de su racimo, que es verdad y es todo lo que se
+> midio.
+
+**Y LO QUE HACE FALTA PARA PROBARLOS NO VA A LLEGAR SOLO:**
+
+| gemelo sin probar | par interno pendiente en la cola |
+|---|---|
+| `auditoria_calidad` | **2659 y 3229**, los dos muy lejos |
+| **los otros OCHO** | **NINGUNO: nunca entraron a la cola** |
+
+> **Ocho de los nueve no tienen ni un par interno en la cola entera de 3.388.** El
+> cribado **no los va a contestar nunca**, por muchos tramos que avance. **Si se
+> quieren probar, es por encargo**, un par cada uno, nueve lecturas en total.
+>
+> **Mientras tanto la cifra honesta de la figura es TRES ejemplares probados**, no
+> ocho candidatos. **Los nueve siguen siendo candidatos por forma y quedan
+> nombrados como tales**, no borrados.
+
+### 31.3 UNA TRAMPA DE MEDICION QUE CASI CUELA: la AUTO-ARISTA
+
+**Al medir las aristas internas, `analisis_flujo_de_valor` aparecio con una y
+estuve a punto de registrarlo como correccion al barrido de la seccion 6.**
+
+> **Era el nodo enlazandose a si mismo.** `analisis_flujo_de_valor` se lista
+> dentro de sus propios `nodos_previos`, y al resolver alias el enlace vuelve a
+> el. **El barrido de la seccion 6 estaba bien y mi medicion estaba mal.**
+>
+> **Contadas en el grafo vivo: VEINTISIETE nodos tienen auto-arista.** No es un
+> caso raro.
+
+> **Lo que esto pide, y va como nota al plan**: **todo conteo de grado o de
+> aislados tiene que excluir el propio nodo**, o los aislados dejan de parecerlo.
+> Es una linea de codigo y una fuente de falsos negativos que ya me alcanzo una
+> vez.

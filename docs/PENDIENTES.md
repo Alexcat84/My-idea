@@ -41,10 +41,18 @@ son grandes y por eso entran a muchos pares.
 | **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | **11** | 592, 599, 724, 738, 755, 784, 798, 827, 830, 831, 835 |
 | **EN COLA** | el texto va a cambiar, se relee igual | **13** | los once de arriba **más 361 y 374** |
 
-**Los dos que están en cola sin congelar**, y por qué: en el **361** el nodo chico
+**Los TRES que están en cola sin congelar**, y por qué: en el **361** el nodo chico
 **es** el bloque 1 a 5 del grande; en el **374** el solape cae entero en el bloque
-1 a 5 y el destejido se lleva el 6 a 9. **En los dos, lo que sobrevive es justo
+1 a 5 y el destejido se lleva el 6 a 9; en el **386** el solape cae entero en el
+bloque de Cooper, que es el que sobrevive. **En los tres, lo que sobrevive es justo
 donde el solape vive**, así que el veredicto es invariante.
+
+**Actualización del 13 ago 2026**: la cola pasa a **14** (los once congelados más
+361, 374 y 386). Y el **386** confirma quién va primero en la cirugía:
+`voz_del_cliente_voc` es **el nodo que más pares congela** (tres: 724, 755, 827),
+y además resultó **costura confirmada con gemelo declarado**, o sea **cura
+acoplada**: destejer y fundir son el mismo acto, porque el gemelo cubre justo la
+mitad que la cirugía deja en pie.
 
 **Actualización del 13 ago 2026 (R19): la cola es MÁS ANCHA que la cuenta de
 congelados, y el 361 es el primero que las separa.** `key_partners_hypothesis`
@@ -2071,3 +2079,32 @@ distingue; (3) esta.
   buscando sobre el master entero. Los 22 mal anclados se re-anclaron (0 podados: todos
   superaban el piso calibrado), el proponedor ya solo mira candidatos de dominio `core`, y la
   aserción pasó de "packs pendientes" a **todos los puentes en cada corrida**.
+
+---
+
+## MESA PENDIENTE: EL RACIMO DEL PIVOTE
+
+**Convocada el 13 ago 2026, desde el tramo 843 a 848 del cribado intra.**
+
+**Lo medido**: el censo dice **cinco miembros**, la lectura levanta **siete**
+(entran `pivote_o_proceder`, que repite en el 268 con un miembro de la nómina, y
+`decision_pivote_perseverar`; queda fuera `war_room_pivot_proceed`, que monta la
+sala y no decide). **21 pares posibles, 10 en cola, 5 leídos, 11 que nunca
+entraron, dos aristas internas entre siete.**
+
+**El saldo de los leídos**: dentro de Blank ya está resuelto, la misma puerta
+contada dos veces **repite** (268 A) y puertas distintas del proceso son **sanas**
+(594 D, 598 D). **El cruce entre libros no**: 771 y 843, los dos en **B**.
+
+### LA RECOMENDACIÓN DEL AUDITOR, registrada y sin adjudicar
+
+> **El catálogo se organiza por lo que el lector HACE, no por la biblioteca.**
+>
+> **UN NODO POR PUERTA** como opción por defecto. **Nodo por libro solo donde los
+> libros discrepen de verdad**, y en ese caso se llama **FRONTERA DECLARADA** y se
+> escribe como tal, no como dos nodos que se ignoran.
+
+> **Lo que la mesa tiene que hacer con esto**: mirar los dos pares en B (771 y
+> 843) y decidir si Ries y Blank **discrepan** sobre cómo decidir un pivote, o si
+> solo **entran por sitios distintos** a la misma puerta. Si es lo segundo, la
+> recomendación los resuelve a los dos de una vez.

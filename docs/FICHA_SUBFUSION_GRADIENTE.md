@@ -3004,8 +3004,30 @@ o sea limpios por dentro:
 > cae entero en el bloque 1 a 5 y el destejido se lleva el 6 a 9, asi que lo que
 > sobrevive es justo donde el solape vive.
 
-> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y CINCO
-> confirmadas con gemelo** (277, 285, 331, **361**, **374**). **Las cuatro confirmadas son
+> **NOVENO EJEMPLAR, anadido el 13 ago 2026 desde la relectura R21, y es el SEXTO
+> del tipo caro. Ademas es el nodo que MAS PARES CONGELA de todo el archivo:**
+>
+> | nodo | veredicto de ESTA ficha | veredicto del intra |
+> |---|---|---|
+> | **`voz_del_cliente_voc`** (puesto 386 del intra) | **CONFIRMADA**, bloque 50,2, diez pasos, **DOBLE DE LA OBSERVACION**: Cooper en 1 a 5, Coleman en 6 a 10, duplicado literal paso 2 contra paso 6 | **A**, repite con `enfoque_mercado_voc` |
+>
+> **Aqui la frase de la cura acoplada se vuelve literal: destejer y fundir son el
+> MISMO acto**, porque el gemelo cubre **justo la mitad que la cirugia deja en
+> pie** (los pasos 1 a 5, los de Cooper).
+>
+> **Lo que hay que salvar, medido en el puesto 386 y ya REPARTIDO por bloques**
+> (banco 9.11): **en la fusion**, la evaluacion preliminar de mercado, el analisis
+> competitivo detallado y probar los conceptos con clientes reales antes del
+> desarrollo formal, los tres de `enfoque_mercado_voc`. **Con el destejido** viaja
+> el bloque 6 a 10 entero: observar una vez al mes, ponerse en el lugar del
+> cliente, las pepitas de oro, anotar y revisar a los dos dias, y buscar patrones.
+>
+> **Su par entra a la cola SIN congelar**: el solape cae entero en el bloque de
+> Cooper, que es el que sobrevive. **Pero los TRES pares que este nodo congela
+> siguen congelados**, y por eso sigue siendo el primero de la cirugia.
+
+> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y SEIS
+> confirmadas con gemelo** (277, 285, 331, **361**, **374**, **386**). **Las cuatro confirmadas son
 > las unicas que necesitan cura acoplada**: en las falsas no hay nada que
 > destejer.
 

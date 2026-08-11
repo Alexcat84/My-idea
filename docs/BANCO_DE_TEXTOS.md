@@ -1478,7 +1478,94 @@ del líder*, **o viajaba en la fusión o desaparecía del catálogo**.
 > **Decirlo sin buscar es exactamente el error que esta distinción viene a
 > impedir**, y es el que yo cometí.
 
+---
 
+### 9.10 TODA TABLA QUE CITA UN VEREDICTO SE RECOMPUTA DEL ARCHIVO
 
+**Adoptada el 13 ago 2026.** Nace del tramo 843 a 848, donde cuatro veredictos
+volteados seguían vivos en dos tablas.
 
+> **Toda tabla que cita un veredicto por número se RECOMPUTA del archivo, no se
+> copia.** Y **todo volteo en bloque barre las tablas derivadas en el mismo acto**,
+> no después.
 
+> **El motivo, en una frase: una tabla con un veredicto viejo no falla, dice que
+> sí.** No hay síntoma. Quien la lea la creerá, y la creerá con más confianza que
+> al archivo, porque la tabla está resumida y el archivo no.
+
+**EL EJEMPLAR, con sus cuatro filas.** La ejecución de la ratificación volteó
+diecinueve pares de A a D. **Cuatro de esos números vivían citados en tablas** y
+nadie las barrió:
+
+| puesto | dónde estaba citado en verde | qué hacía creer |
+|---:|---|---|
+| **490** | ficha, tabla de las veinte costuras fuera de cola | que `fit_problema_solucion` repetía tres veces |
+| **497** | ficha, misma tabla | lo mismo |
+| **522** | ficha **y** informe intra §7 | que `retention_metrics` tenía **gemelo**, y de ahí que fuera a **cura acoplada** |
+| **624** | ficha, misma tabla | que `keep_customers_strategy` tenía gemelo |
+
+> **Lo que costó de verdad**: el 522 estuvo a punto de producir un **noveno
+> ejemplar de cura acoplada que no existe.** La tabla no mintió por malicia:
+> **envejeció**, que es la única forma en que un papel miente.
+
+> **Es el canon de FALLAR RUIDOSO aplicado a los papeles.** Un número derivado que
+> no se recomputa **es un test verde y mal**.
+
+---
+
+### 9.11 FIGURA: LA PÉRDIDA SE REPARTE POR BLOQUES
+
+**Adoptada el 13 ago 2026.** Ejemplares: puestos **344**, **374** y **386**.
+
+> **Cuando un nodo COSTURADO entra a un par, parte de lo que parece pérdida no se
+> pierde: se va con el destejido.** El material del bloque ajeno **sale del nodo
+> igual**, decida lo que decida la fusión, y va a vivir a donde ese bloque acabe.
+
+> **Al redactor se le entrega la lista YA REPARTIDA**, en dos columnas: **lo que
+> se salva en esta fusión** y **lo que viaja con el destejido**. Una lista sin
+> repartir le hace buscar sitio, dentro del superviviente, a material que no va a
+> estar ahí.
+
+| ejemplar | lo que se salva en la fusión | lo que viaja con el destejido |
+|---:|---|---|
+| **344** | el tope bajo por prueba, las pruebas escalonadas | los 19 canales y anotar lo que falla (**bloque Bullseye**) |
+| **374** | la significancia del 95% | el cambio porcentual, el grupo de control similar (**bloque Rackham**) |
+| **386** | la mitad de Cooper de la observación (pasos 1 a 5) | la mitad de Coleman (pasos 6 a 10) |
+
+> **Y la regla de orden que esto deja**: **primero se lee la anatomía de la ficha,
+> después se escribe la lista de pérdidas.** Al revés sale mal las tres veces.
+
+---
+
+### 9.12 FIGURA: LA ESCALERA QUE NO SUBE
+
+**Adoptada el 13 ago 2026.** Ejemplar: la familia de la **junta asesora**.
+
+> **DOS nodos declarados como MOMENTOS DISTINTOS de un proceso cuyo contenido no
+> exige nada nuevo en el segundo.** El catálogo los presenta como peldaños
+> (identificar, luego formalizar) y **el texto no sube de peldaño.**
+
+**EL TEST, y es de una línea:**
+
+> **Si el momento DOS no pide nada que el momento UNO no pida ya, no son dos
+> momentos: es el mismo escrito dos veces con etiqueta de secuencia.**
+
+**EL EJEMPLAR**: `identificar_junta_asesores` contra `formalizar_junta_asesora`,
+**puesto 712 en A**. El primero manda identificar candidatos, invitarlos
+informalmente, buscar asesores por área y dejar la formalización para más
+adelante. **El segundo manda reclutar por área, sumar clientes clave y acordar la
+frecuencia**: la misma escalera, el mismo peldaño.
+
+**CÓMO SE DISTINGUE DE UNA SERIE LEGÍTIMA, que es lo que hace útil la figura:**
+
+| | la escalera que no sube | la serie legítima |
+|---|---|---|
+| ejemplo | la junta asesora | **las ocho fases de Coleman**, las **etapas de Rackham** |
+| qué pide cada peldaño | **lo mismo, con otro nombre** | **algo que el anterior no pedía**: Assess mide la evaluación previa, Admit trata la compra, Affirm trata el arrepentimiento |
+| cómo se ve en el archivo | el par entre peldaños sale **A** | el par entre peldaños sale **D** |
+| qué arreglo pide | **fusión**: un nodo, no dos | **ninguno**: la serie está bien |
+
+> **Por qué importa nombrarla**: una escalera falsa **se defiende sola** ante quien
+> la mire por encima, porque *son momentos distintos del proceso* suena a razón.
+> **El test la desarma sin discutir**: que enseñe qué pide el segundo que el
+> primero no pida.
