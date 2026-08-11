@@ -736,6 +736,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **8** | **los cuadrantes de mercado** | **6** | **15** | **7** | **7** | **SUB-PURO, y el más cargado del inventario**: siete pares leídos y **los siete en A**, sin un solo sano. Añadido el 13 ago 2026 con **corrección declarada**: lo conté en cinco miembros en R18 y son **seis** |
 | **9** | **build-measure-learn** | **5** | **10** | **5** | **5** | **SUB-PURO, el de MÁS MIEMBROS declarado**: cinco pares leídos y los cinco en A. Dos de sus cinco miembros los levantó el **barrido de las A**, no el contador |
 | **10** | **el compromiso contado tres veces** | 3 | 3 | **3** | 3 | **PURO**, y el **primero certificado por los dos instrumentos desde el minuto uno** (14 ago 2026, tramo 1101-1157). Racimo de Rackham: `obtencion_compromiso`, `obtencion_de_compromiso` y `obtencion_compromiso_venta`, pares **197, 222 y 463**. El **barrido de las A no levanta ni un candidato fuera**; el **contador se come a un miembro**, `obtencion_compromiso`, por no llevar la partícula *de*. **Cero aristas internas entre los tres** |
+| **11** | **la seleccion de canal** | **6** | **15** | **7** | **7** | **SUB-PURO, y EMPATA con los cuadrantes como el mas cargado del inventario**: siete pares leidos y **los siete en A**, sin un solo sano. Anadido el 14 ago 2026 al **recomputar la ficha del racimo**, que citaba cuatro leidos cuando ya eran siete (banco 9.10). **NO es estrella**: el 762 y el 945 no tocan al general |
 
 > **LECCIÓN DEL 13 ago 2026, con dos sub-puros rotos el mismo día** (el 3 por el
 > puesto 872 y la familia de innovación por el 863): **una familia con muchos
@@ -1245,6 +1246,32 @@ rápida, y su valor está en no gastarle a la mesa un tiempo que no le correspon
 >
 > **3. Y la señal de alarma es el silencio**: una regla que nunca produce un caso
 > incómodo probablemente ya no es la regla, sino la mitad cómoda de ella.
+
+#### NOTA DE DISCIPLINA (14 ago 2026): LA LINEA TRUNCADA NO SE COMPLETA, SE CONSULTA
+
+**No es regla nueva: es la misma de arriba mirando hacia el otro lado.** La
+paráfrasis achica una regla que sí se leyó entera; esto achica un texto que **no
+se leyó entero**, y el resultado se parece: **una versión más pequeña con el
+mismo nombre, que nadie revisa porque suena bien.**
+
+> **Cuando un texto llega cortado, o cuando la respuesta está a una consulta de
+> distancia, el gesto correcto es CONSULTAR, no completar.** Completar es barato
+> y produce material que parece verificado y no lo está.
+
+**LOS DOS EJEMPLARES, uno de cada lado de la mesa, y por eso se anotan juntos:**
+
+| quien | que pasó | que había de verdad |
+|---|---|---|
+| **el encargo** | listó **`preventas`** como pérdida del puesto **511**, leyendo un paso que el volcado mostraba **truncado** | el paso dice **páginas de aterrizaje, presentaciones o maquetas**. La palabra *preventas* **no aparece en ninguno de los dos nodos** |
+| **yo** | en el puesto **1087** anoté una **sospecha** de que dos nodos de la misma fase podían repetir, en vez de correr el barrido | el puesto **373** ya tenía **A** entre uno de ellos y un tercer nodo. **La respuesta llevaba escrita en el archivo cientos de puestos** |
+
+> **Los dos fallos son el mismo**: dar por buena una versión corta de algo que
+> estaba entero a una consulta de distancia. **Una sospecha escrita es trabajo
+> aplazado; un dato consultado es trabajo hecho.**
+>
+> **Y ninguno de los dos cambió una clase**, que es justo lo que los hace útiles
+> como ejemplares: **el daño de esta clase de error no se ve en el veredicto, se
+> ve en lo que alguien construya encima.**
 
 ---
 
@@ -1953,3 +1980,63 @@ reglas de siempre. **La figura exige dos líneas distintas**, una en cada nodo.
 
 > **Primera aparición en 1.100 pares leídos.** Es rara, y por eso conviene tenerla
 > nombrada: sin nombre, un par así se lee como duplicación mutua y se fusiona.
+
+---
+
+### 9.23 FIGURA: EL RACIMO EN ESTRELLA
+
+**No toda familia que repite es una familia que repite.** Cuando **todas las A
+tocan al mismo nodo** y **los perifericos leidos entre si salen sanos**, lo que
+hay no es un grupo de hermanos duplicados: es **un CENTRO QUE REPITE CON CADA
+UNO**, y los demas no se parecen entre ellos.
+
+> **COMO SE MIDE, y son dos cuentas separadas:**
+>
+> **1. PARES CON EL CENTRO**: todos en A.
+> **2. PARES ENTRE PERIFERICOS**: al menos uno leido, y sano.
+>
+> **Si falta la segunda cuenta, no se puede llamar estrella.** Un centro con
+> muchas A y ningun par periferico leido **no es una estrella todavia: es un
+> centro con muchas A**, y puede ser un racimo mezclado que aun no se ha visto
+> por dentro.
+
+**POR QUE IMPORTA: cambia el coste del arreglo, y hacia abajo.**
+
+| forma | que hay que decidir | coste |
+|---|---|---|
+| **PURO o SUB-PURO** | **cuantos nodos quiere el catalogo** para todo el asunto. Todos contra todos | **MESA**: una sola decision, cara, con todos los miembros delante |
+| **MEZCLADO** | lo mismo, **y ademas** que hacer con los pares sanos de dentro | **MESA**, y mas larga: hay que separar lo que repite de lo que jerarquiza |
+| **ESTRELLA** | **el centro contra cada periferico, por separado** | **SIN MESA**: son N decisiones independientes, y cada una se puede tomar sola |
+
+> **La estrella es la forma barata.** No hay que reunir a nadie: **el centro se
+> mira contra cada periferico como si fuera un par suelto**, porque para el efecto
+> practico lo es. Lo que ata a los perifericos entre si no es el parecido, es solo
+> compartir madre.
+
+**EL EJEMPLAR: la familia PASS/FAIL, cuatro miembros.**
+
+| cuenta | resultado |
+|---|---|
+| **pares con el centro** `diseno_experimentos_pass_fail` | **TRES y los tres A**: 467, 511, 639 |
+| **pares entre perifericos** | **UNO leido y SANO**: el 636, `diseno_experimentos_hipotesis` contra `realizar_pruebas_pasa_no_pasa`, D porque uno disena la prueba y el otro fija el umbral |
+
+> **Y LA CONDICION VIVA DE ESTE EJEMPLAR, escrita porque toca escribirla**: la
+> estrella se sostiene sobre **UN SOLO par periferico leido**. Quedan otros dos:
+> el **1346**, en la cola, **que si sale A rompe la estrella**; y
+> `disenar_tests_pass_fail` contra `diseno_experimentos_hipotesis`, que **nunca
+> entro a la cola** y por tanto **el cribado no lo va a decidir**.
+>
+> **Un ejemplar con condicion viva sigue siendo un ejemplar**, pero la figura se
+> declara sabiendo de que pata cojea.
+
+**LOS DOS CONTRAEJEMPLOS, medidos el mismo dia y por eso valen:**
+
+| familia | pares con el centro | pares perifericos | forma |
+|---|---|---|---|
+| **el portafolio** (7 miembros) | 4, todos A | **5 leidos: TRES A**, un B y un D | **MEZCLADO**, no estrella: los perifericos **si** repiten entre ellos |
+| **la seleccion de canal** (6 miembros) | 4, todos A | **3 leidos y los TRES A** | **SUB-PURO**: ni un sano en toda la familia |
+
+> **La misma pinta desde el centro y tres formas distintas por dentro.** Mirar
+> solo las A del centro habria dado estrella en los tres casos, y en dos habria
+> mandado a arreglar por separado lo que necesita mesa. **Por eso la segunda
+> cuenta no es opcional.**

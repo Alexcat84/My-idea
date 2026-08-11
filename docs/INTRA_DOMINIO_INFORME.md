@@ -3381,6 +3381,130 @@ de `homework_frontend_loading`. **Son tres:**
 > evaluacion a tres profundidades distintas**, y solo una de las tres parejas ha
 > pasado por la cola.
 
+### TANDA R31, VIGESIMOSEPTIMA CIEGA: seis de seis
+
+**Acumulado: 186 releidas, de las cuales 162 a ciegas. Discrepancias: UNA**, el
+395, cerrada por los dos lados.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **531** | `diferencia_ventaja_beneficio` contra `framework_caracteristicas_ventajas_beneficios` | **clasificar cada afirmacion** en caracteristica, ventaja o beneficio y **revisar transcripciones propias midiendo la proporcion**; del otro lado, **el remedio**, ver abajo | de **lector** |
+| **536** | `fit_problema_solucion` contra `problem_solution_fit` | **familia declarada**: el reparto NO se cierra en el par | ver abajo |
+| **537** | `channels_hypothesis_web_mobile` contra `seleccion_canal_distribucion` | **probar varios canales con presupuesto parecido** para comparar el costo por cliente; del otro lado, los **habitos de compra establecidos** de la categoria y la **complejidad y precio** del producto frente al canal | de **catalogo** |
+| **541** | `encuesta_satisfaccion_postproyecto` contra `reunion_conclusion_proyecto` | el **monitoreo de tres meses** contra el remordimiento posterior, **el contenido** de la encuesta interna y **pedir testimonios solo despues de dar valor** | de **catalogo** |
+| **544** | `cash_is_king` contra `profit_vs_cash` | **familia declarada**: es el PRIMER PURO, el reparto no se cierra en el par | ver abajo |
+| **547** | `customer_segments_hypothesis` contra `segmentos_de_clientes_problema_necesidad` | **el dia en la vida**, el **mapa de influencia** y **salir del edificio a observar**; del otro lado, los **mercados de varios lados**. Y **DOS ROLES que el encargo no listaba**, ver abajo | de **catalogo** |
+
+#### 536 y 544: la regla operativa de las familias declaradas, sin pelear la clase
+
+**Los dos pares son A y los dos siguen siendo A.** Lo que NO se decide aqui es la
+direccion de la fusion, por el **banco 9.3**: *una direccion de fusion decidida
+sobre un par no sobrevive a su familia.*
+
+| par | su familia | que decide la mesa y no el par |
+|---:|---|---|
+| **536** | **la puerta del ajuste** | no cual de los dos sobra, sino **si el catalogo quiere uno, dos o tres hitos** en esta zona |
+| **544** | **el primer puro**, el efectivo contra la ganancia | cual de los **tres** miembros sobrevive, no cual de estos dos |
+
+**PRECISION MEDIDA sobre el 536, con el barrido de las A corrido antes de
+escribir**: el barrido levanta **CERO candidatos** fuera de la pareja. **La
+familia del ajuste es hoy una PREGUNTA DECLARADA, no una nomina medida**: lo que
+esta escrito es que dos nodos llevan nombres de dos hitos distintos, no que haya
+mas miembros. **Conviene decirlo asi y no llamarla racimo.**
+
+> **Y un hecho del 536 que la mesa necesita**: `fit_problema_solucion` tiene
+> **fuente doble** (*Value Proposition Design* y *Traction*) y sus pasos 4 a 6 son
+> del segundo libro, las fases I, II y III del embudo de traccion. **Fusionar aqui
+> mueve material de un libro que el otro nodo no toca.**
+
+**Y el 544 SI es nomina medida**: tres miembros, tres pares posibles, los tres
+leidos (**300, 487, 544**) y los tres en A, **y el barrido no levanta ni un
+candidato**. Es el puro numero 1 de la tabla viva.
+
+#### 537: la familia del canal suma su TERCERA especializacion, y hay que recomputar su ficha
+
+**Es el tercer par en A contra el mismo nodo general**,
+`seleccion_canal_distribucion`, y esta vez con la especializacion **digital**.
+
+> **TERCER VOTO A FAVOR DE LA LECTURA MADRE-HIJAS**, y queda anotado en la
+> candidatura del racimo: el general no repite con hermanos cualquiera, **repite
+> con sus propias especializaciones**, la fisica (165), la del lienzo (400) y la
+> digital (537). **Lo que se pierde en cada fusion no es una concrecion suelta:
+> es un canal entero que el general no puede llevar sin dejar de ser general.**
+
+**RECOMPUTO DEL ARCHIVO, por el banco 9.10, y la ficha del racimo estaba vieja.**
+La seccion 10 decia *cuatro veredictos A de quince pares posibles, con cuatro
+pendientes en la cola: 609, 762, 945 y 1488.* **Tres de esos cuatro ya estan
+leidos.**
+
+| medida | lo que decia la ficha | **lo que dice el archivo hoy** |
+|---|---|---|
+| pares leidos | 4 | **7** |
+| en A | 4 | **7** |
+| pendientes en cola | 4 (609, 762, 945, 1488) | **1** (solo el 1488) |
+
+> **Los tres nuevos son 609, 762 y 945, y los TRES en A.** Y dos de ellos, el 762
+> y el 945, **no tocan al nodo general**: son especializaciones que repiten
+> **entre si**.
+>
+> **Lo que eso cambia, y es lo importante**: la familia del canal **NO es un
+> racimo en estrella** (banco 9.23). **Es un SUB-PURO de seis miembros con siete
+> pares leidos y los siete en A, sin un solo sano en toda la familia.** Empata con
+> los cuadrantes de mercado como **el sub-puro mas cargado del inventario**, y no
+> estaba en la tabla viva. Se anade.
+
+#### 531: la perdida es de dos lados, no de uno
+
+**CORRECCION DECLARADA.** El encargo listaba las dos perdidas del lado del marco.
+**Verificadas y correctas.** Pero el otro lado tambien pierde, y no estaba
+listado:
+
+| lo que solo tiene `diferencia_ventaja_beneficio` | |
+|---|---|
+| **EL REMEDIO** | el marco dice *evita presentar caracteristicas antes de desarrollar necesidades explicitas*, o sea **la prohibicion**. Este dice ademas **que hacer en su lugar**: *vuelve a preguntas de implicacion o de necesidad y beneficio*. **La prohibicion sin el remedio deja al lector parado** |
+| la regla de la **apertura** | *evita ABRIR la conversacion con ventajas genericas*. El marco lo cubre por implicacion, pero **no nombra el momento** |
+
+#### 541: la encuesta interna no se pierde, se pierde SU CONTENIDO
+
+**PRECISION DECLARADA.** El encargo listaba *encuesta interna al equipo* como
+perdida. **Las dos la tienen**: `encuesta_satisfaccion_postproyecto` dice en su
+paso 5, en una linea, *aplica la encuesta tanto a tu equipo como a tu cliente*.
+
+> **Lo que se perderia es lo que hay que PREGUNTARLE al equipo**, que solo esta en
+> `reunion_conclusion_proyecto`: **satisfaccion de trabajar con ese cliente y
+> disposicion a repetir**. Sin eso queda la instruccion de encuestar al equipo y
+> ninguna pregunta que hacerle. **Las otras dos perdidas del encargo, el monitoreo
+> de tres meses y pedir testimonios solo despues de dar valor, se verifican
+> enteras.**
+
+#### 547: la escala esta en los dos, y se pierden DOS ROLES que no estaban listados
+
+**DOS CORRECCIONES DECLARADAS, las dos verificadas contra los dos nodos.**
+
+**PRIMERA: la escala de consciencia NO se pierde.** El encargo la listaba como
+perdida de `customer_segments_hypothesis`. **Los dos nodos la tienen, con
+etiquetas distintas para los mismos cuatro niveles:**
+
+| `customer_segments_hypothesis` | `segmentos_de_clientes_problema_necesidad` |
+|---|---|
+| no lo nota / lo nota pero no actua / busca solucion / ya la improviso | latente / pasivo / activo / con solucion casera |
+
+> **Es la misma escala en dos vocabularios.** Lo unico que de verdad solo tiene el
+> primero es **el mercado de varios lados**.
+
+**SEGUNDA, y es la que importa: cada nodo nombra TRES roles de compra y solo
+comparten UNO.**
+
+| nodo | los roles que nombra |
+|---|---|
+| `customer_segments_hypothesis` | quien **usa**, quien **paga**, quien **decide** |
+| `segmentos_de_clientes_problema_necesidad` | quien **usa**, quien **influye**, quien **recomienda** |
+
+> **La union son CINCO roles y la interseccion es UNO.** Una fusion que se quede
+> con cualquiera de los dos **pierde dos roles del mapa de compra**, y son
+> justamente los que deciden a quien hay que entrevistar. **No estaba en la lista
+> de perdidas y es la mas cara del par.**
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -3540,6 +3664,14 @@ de Blank:
 > cinco.** `channels_hypothesis_physical` no estaba en esta lista cuando se
 > declaro el racimo. **La familia tiene ahora CUATRO veredictos A de quince pares
 > posibles, con cuatro pendientes en la cola**, los puestos 609, 762, 945 y 1488.
+
+> **RECOMPUTO DEL ARCHIVO, 14 ago 2026 (relectura R31), por el banco 9.10.** La
+> cifra de arriba quedo vieja: **609, 762 y 945 ya estan leidos y los TRES en A.**
+> **Hoy la familia lleva SIETE pares leidos de quince posibles, LOS SIETE EN A**,
+> un solo pendiente en cola (**1488**) y **siete que nunca entraron**. Y **el 762
+> y el 945 no tocan al nodo general**: las especializaciones repiten tambien entre
+> si, o sea que **NO es un racimo en estrella (banco 9.23): es un SUB-PURO de seis
+> miembros sin un solo par sano.** Entra a la tabla viva del banco.
 
 > **DETALLE DE CAMPO, ya conocido y aqui otra vez**: cuatro declaran *Steve
 > Blank* y `validar_canal_distribucion` declara *Blank, Steve*. **La misma obra en
@@ -7502,3 +7634,106 @@ en este tramo:**
 > el contador se comio al miembro que cierra el triangulo; en el racimo grande,
 > el contador devolvia 43 nodos casi todos falsos. **El barrido de las A no fallo
 > en ninguno de los dos.**
+
+---
+
+## 48. LA NOMINA DEL PORTAFOLIO, contada con los dos instrumentos
+
+**Encargo del 14 ago 2026. Vigente al puesto 1157**, por el banco 9.21.
+
+### 48.1 LOS DOS INSTRUMENTOS
+
+| instrumento | resultado |
+|---|---|
+| **contador** (`contar_nombre.py "portafolio" "portfolio"`) | **43 nodos vivos**, 115 menciones. **Casi todos son mencionadores**: nodos de precios, de redes profesionales, de clausulas de riesgo y hasta uno de `environmental` que dicen la palabra sin ser de la familia |
+| **barrido de las A** | **SIETE miembros** y **UN candidato fuera de nomina**: `sistema_gates_go_kill`, por el puesto 488 |
+
+> **El contador solo habria dado una lista de 43 para leer a mano.** El barrido da
+> siete con su evidencia. **Es el mismo reparto de trabajo del 9.20**: el contador
+> dice donde mirar, el barrido dice quien es.
+
+### 48.2 LA NOMINA: siete miembros, y quien los levanta
+
+| nodo | pasos | sus A |
+|---|---:|---|
+| **`portfolio_management`** | 6 | **CUATRO**: 574, 853, 967, 1119 |
+| `gestion_portafolio_formal` | 6 | tres: 468, 574, 616 |
+| `gestion_de_portafolio_gates_go_kill` | 5 | tres: 488, 616, 967 |
+| `gestion_portafolio_foco` | 5 | dos: 802, 1119 |
+| `gestion_portafolio_dos_niveles` | 4 | una: 853 |
+| `revision_portafolio_periodica` | 5 | una: 468 |
+| `equipos_dedicados_de_proyecto` | 6 | una: 802, **y se llama por el equipo, no por el portafolio** |
+
+### 48.3 LA CUENTA DE PARES, completa
+
+| medida | cuantos |
+|---|---:|
+| **pares posibles** | **21** |
+| **en la cola** | **10** |
+| **leidos** | **9** |
+| **pendientes en cola** | **1** (el 1366) |
+| **NUNCA ENCOLADOS** | **11** |
+
+| clase | pares |
+|---|---|
+| **A** | **SIETE**: 468, 574, 616, 802, 853, 967, 1119 |
+| **B** | uno: 600 |
+| **D** | uno: 1151 |
+
+**ARISTAS INTERNAS: CERO.** Siete nodos del mismo libro sobre el mismo asunto,
+siete pares que repiten, **y ni un cable entre ninguno**.
+
+### 48.4 NO ES SUB-PURO, Y TAMPOCO ES ESTRELLA. Es MEZCLADO
+
+**El encargo preguntaba si sale sub-puro. No sale, y conviene decir exactamente
+por que**, porque las dos cosas que lo impiden son distintas.
+
+| lo que lo impide | cual |
+|---|---|
+| **un D leido dentro de la familia** | el **1151**: `gestion_portafolio_dos_niveles` contra `revision_portafolio_periodica` es **madre e hija**, no un duplicado |
+| **un B sin resolver** | el **600** |
+
+**Y tampoco es una ESTRELLA** (banco 9.23), aunque desde el centro lo parezca:
+
+| cuenta | resultado |
+|---|---|
+| pares con el centro `portfolio_management` | **4, todos A** |
+| pares **entre perifericos** | **5 leidos: TRES en A** (468, 616, 802), un B y un D |
+
+> **Los perifericos SI repiten entre ellos.** No es un centro que repite con cada
+> uno: **es una familia que repite de verdad, con una jerarquia sana metida
+> dentro.** Es la forma **mas cara** de la tabla de costes del 9.23: pide mesa, y
+> la mesa tiene ademas que separar lo que repite de lo que jerarquiza.
+
+### 48.5 LO QUE SI ES, y con esto queda dicho el tamano
+
+> **Once de los veintiun pares NUNCA ENTRARON A LA COLA.** La familia tiene siete
+> A sobre **nueve** lecturas, y **la mitad de sus pares no se va a leer nunca en
+> este ejercicio.** Cualquier cifra que se le ponga vale sobre lo leido, no sobre
+> la familia.
+>
+> **Aun asi, y con esa reserva escrita: SIETE PARES EN A entre siete nodos es el
+> bloque de repeticion mas grande medido hasta el puesto 1157**, y su consolidacion
+> seria la mayor del plan. **Lo que no se puede decir es que sea sub-puro**, y
+> decirlo cambiaria el tipo de mesa que necesita.
+
+### 48.6 EL CRUCE CON LA MESA DE LAS PUERTAS, por el 488
+
+**Ya estaba escrito en la seccion 13, CRUCE 2. Aqui va solo lo que cambia**, para
+no tener el cruce en dos sitios.
+
+| pieza | estado |
+|---|---|
+| **el par que une los dos racimos** | **488**: `gestion_de_portafolio_gates_go_kill` (portafolio) contra `sistema_gates_go_kill` (puertas). **A** |
+| **el nodo que une** | `sistema_gates_go_kill`, **y esta duplicado dentro de su propio racimo**: puesto **356** contra `estructura_gates` |
+| **el orden ya recomendado** | **primero se cierra la familia de las puertas**, y con el superviviente en la mano se mira el cruce |
+
+> **LO QUE ESTA MEDICION ANADE AL CRUCE**: la nomina del portafolio **no es de
+> seis, es de siete**, y el par que une los dos racimos **no es el unico hilo**.
+> Admitir `sistema_gates_go_kill` como octavo miembro arrastra **tres candidatos
+> mas** por sus propias A: `estructura_gates` (356),
+> `requisitos_gates_con_dientes` (801) y `gates_go_kill_decision_points` (1038).
+>
+> **O sea que las dos mesas no se tocan en un punto: se tocan en una franja.**
+> Decidir si portafolio y puertas son una familia o dos **es trabajo de lectura**,
+> y el barrido no lo va a contestar: solo dice que la frontera esta ahi.
