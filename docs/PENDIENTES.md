@@ -41,6 +41,8 @@ son grandes y por eso entran a muchos pares.
 | **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | **12** | 592, 599, 724, 738, 755, 784, 798, 827, 830, 831, 835, **851** |
 | **EN COLA** | el texto va a cambiar, se relee igual | **15** | los doce de arriba **más 361, 374 y 386** |
 
+**Actualización del 13 ago 2026**: el **915** entra en cola sin congelar, y es el primero donde el test de POSICIÓN y el de DEPENDENCIA se contradicen (ver informe §37.1). Cola a **16**.
+
 **Los TRES que están en cola sin congelar**, y por qué: en el **361** el nodo chico
 **es** el bloque 1 a 5 del grande; en el **374** el solape cae entero en el bloque
 1 a 5 y el destejido se lleva el 6 a 9; en el **386** el solape cae entero en el

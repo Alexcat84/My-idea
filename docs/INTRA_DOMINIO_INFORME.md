@@ -5680,3 +5680,94 @@ trae **cuatro ejemplares del lado bueno**, y los cuatro pasan el test:
 > **4. `realizar_pruebas_pasa_no_pasa` queda confirmado como instrumento y no
 > como copia**: **once pares leidos, diez D.** Tres de ellos en esta tanda, contra
 > tres nodos de etapa distintos, y los tres sanos.
+
+---
+
+## 37. EL TRAMO 901 a 928: la vara resuelve siete de veintiocho, y un choque de criterios
+
+**Veintiocho pares leidos, los veintiocho del nucleo.** Acumulado **928 de
+3.388**, global **29,7%** de A y **nucleo 35,6%**. **El tramo dio 17,9%** (23 D, 5
+A), sosteniendo la meseta baja del checkpoint anterior. **El proximo checkpoint es
+el de los 1.000.**
+
+### 37.1 EL CHOQUE DE CRITERIOS DEL 915, y lo traigo antes de que se repita
+
+**Es la primera vez que los DOS tests del banco 9.9 se contradicen.**
+
+| test | que dice del puesto 915 |
+|---|---|
+| **la POSICION del solape** (9.9 original) | el solape son las **pruebas A/B**, y `optimizacion_embudo_get_customers` las tiene **en su paso 3 (Blank) y otra vez en su paso 7 (Weinberg)**. **Toca la juntura: bloquea** |
+| **la DEPENDENCIA** (regla adoptada el 13 ago) | el veredicto **no depende** de cual copia sobreviva: la clase se decide por **la fase del embudo**, Get contra Grow, no por el A/B. **Invariante: se emite** |
+
+> **Aplique el de DEPENDENCIA**, porque es el criterio que el auditor adopto como
+> definicion (*se congela el par cuyo veredicto DEPENDE de que quede tras la
+> cirugia*) **y el de posicion es su proxy.** El par queda **D y en cola sin
+> congelar.**
+>
+> **LO QUE TRAIGO**: hasta hoy los dos tests decian siempre lo mismo y por eso
+> convivian sin jerarquia. **Ahora hay un caso donde no**, y conviene dejar escrito
+> cual manda antes de que aparezca el segundo. **Mi lectura es que manda la
+> dependencia y la posicion queda como atajo**, pero eso lo decide el auditor.
+
+### 37.2 LA VARA RESUELVE SIETE PARES DE VEINTIOCHO, y todos con la misma forma
+
+**Siete pares del tramo se resolvieron por LA LINEA O EL PROCEDIMIENTO**, y los
+siete tienen la misma anatomia: **una madre que nombra un paso en una linea y un
+hijo que trae el procedimiento entero.**
+
+| puesto | la madre y su linea | el hijo y su procedimiento |
+|---:|---|---|
+| **901** | los tres capitales, *listar el capital humano* | educacion formal contra experiencia tacita, modelos mentales, y **hacia afuera contra hacia adentro** |
+| **902** | los tres circulos, *evaluar que falta en el equipo* | las tres brechas y el aviso de **no fichar redundantes** |
+| **903** | las cuatro etapas de Wallas, *define e investiga* | barrer la habitacion, hipotesis que se contradicen, y **aceptar que la etapa se sienta infructuosa** |
+| **904** | la cultura financiera, *sesiones regulares* | tres sesiones de 30 a 60 minutos, mensuales, reunion semanal de numeros, mapas de dinero |
+| **909** | la estrategia de ventas, *cuantos deben decir si* | el organigrama, el earlyvangelist, el comprador economico, y **repetir para hallar patrones** |
+| **910** | la evaluacion de industria, *investigacion VoC cara a cara* | el porque detras de cada peticion, las necesidades futuras, y los hallazgos inesperados |
+| **912** | el customer development, *ajusta el modelo* | la reunion, el mapa del cliente, el recorte de funciones y el plan a 18 meses |
+
+> **Siete de veintiocho, y en los siete falta la arista.** No es coincidencia:
+> **es la forma dominante del catalogo en esta zona.** Una madre enumera y un hijo
+> ejecuta, **y el grafo no los une**.
+>
+> **Lo que esto le dice al plan**: la clase de arreglo mas barata del banco 9.6
+> **no es un caso suelto, es un patron con volumen.** Vale la pena un barrido
+> dirigido que busque exactamente esta figura en vez de esperar a que la cola la
+> traiga par por par.
+
+### 37.3 LA FRONTERA DEL CIERRE SE CRUZA, y aguanta
+
+**Puesto 917.** `compromiso_linea_tiempo_cliente` (Weinberg) contra
+`obtencion_compromiso` (Rackham): **un par que cruza la frontera del racimo del
+cierre**, la que separa *pide el si con fecha* de *no pidas el cierre, busca el
+avance*.
+
+> **Sale D, y no por poco: ni un paso se solapa.** Uno manda **solicitar un
+> compromiso de respuesta si o no al finalizar el plazo y descartar a quien no
+> confirme**; el otro manda **medir el exito por avances y no por pedidos** y dice
+> que presionar por el si es la tecnica equivocada en venta compleja.
+>
+> **La frontera no solo aguanta: se ve mejor desde aqui.** Los dos lados **no se
+> duplican, se contradicen en el metodo**, y por eso el catalogo tiene que
+> conservar los dos **con su condicion escrita**. Es el mismo tratamiento que la
+> FRONTERA INTRA-LIBRO del puesto 877, ahora entre libros.
+
+### 37.4 Lo demas del tramo
+
+> **1. `customer_development_modelo` llega a NUEVE pares leidos** (912 y 922, los
+> dos D). **Cuatro sanos seguidos.** La mesa 3 acumula evidencia de que su
+> problema es de **alturas** y no de contenido.
+>
+> **2. DOS PARES DE FORMULARIOS HERMANOS Y BIEN CABLEADOS** (puestos **921** y
+> **927**): el cierre de contrato dentro del cierre de proyecto, y el registro de
+> cambios junto al de decisiones. **Misma forma, objetos distintos, arista en los
+> dos sentidos.** Son el contraejemplo limpio de todo lo anterior: **cuando el
+> catalogo hace bien las cosas, se ve.**
+>
+> **3. DOS PRIMAS DE EQUITY QUE NO SE PUEDEN FUNDIR** (puesto **913**): la **prima
+> de idea**, de 10 a 15 puntos para quien origino el concepto, y la **prima de
+> rol**, de 14 a 20 para el director general y de 5 a 8 para el de tecnologia.
+> **Rangos distintos y motivos distintos.** Fundirlas perderia una de las dos.
+>
+> **4. Y una pareja que el redactor deberia ENLAZAR en vez de fundir** (puesto
+> **906**): decidir el ritmo de crecimiento **contando el efectivo** contra
+> decidirlo **contando a los competidores**. Ninguno mira lo que mira el otro.
