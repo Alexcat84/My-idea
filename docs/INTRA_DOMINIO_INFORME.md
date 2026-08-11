@@ -1293,6 +1293,155 @@ la seccion 1 describe como el sistema entero, dos veces.**
 > nodos quiere el catalogo para el descubrimiento de clientes, que sigue siendo
 > decision de familia.
 
+### TANDA R12, OCTAVA CIEGA: seis de seis
+
+**Acumulado: 72 de 72, de los cuales 48 a ciegas.** Perdidas verificadas contra
+el grafo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **277** | `funnel_get_customers_optimizacion` contra `optimizacion_embudo_get_customers` | **data-chief**, revisar a diario las diez o doce metricas clave con esa figura; **escala-el-mas-productivo** primero; y **no-demasiados-a-la-vez** para no confundir resultados. **Todas TRAS el destejido**, ver abajo | de **lector** |
+| **278** | `enfoque_etapa_investigacion` contra `etapa_de_investigacion` | **entrena-primero-S-y-P**: entrenar en preguntas de Situacion y Problema antes de pasar a Implicacion y Necesidad-beneficio | de **lector** |
+| **280** | `estrategia_de_innovacion_arenas` contra `seleccion_arenas_estrategicas` | ya anotadas en los puestos **207** y **235** | de **lector** |
+| **281** | `formacion_de_habitos_de_pensamiento` contra `formacion_de_habitos_de_trabajo_creativo` | casi nada: uno anade el **estimulo sensorial** asociado al habito y el otro **perseverar hasta el segundo aire** | de **lector** |
+| **282** | `antigoals_framework` contra `definir_antigoals` | **revisita-periodica** de las cuatro listas conforme el proyecto evoluciona; y **comparte-con-equipo** para que el equipo se agrupe tambien alrededor de lo que NO se hara | de **lector** |
+| **284** | `influence_map_organizacional` contra `mapa_organizacional_influencia` | **impacto-en-vida-diaria**, representar como el producto cambia el dia de cada persona del mapa; y **actualiza-el-lienzo** con esos hallazgos | de **lector** |
+
+#### 277: CUARTO NODO DONDE LOS DOS EJES SE CRUZAN, y es el primero al reves
+
+**`optimizacion_embudo_get_customers` es la doble de la TANDA 14 de la ficha de
+costuras**, diez pasos, Blank y Weinberg, con la anatomia escrita: **EL TESTEO
+DICHO DOS VECES.**
+
+> **Y aqui hay que decir en que se parece a los otros tres y en que NO.**
+>
+> Los tres anteriores, SPIN (248), regalos (251) y `founder_ceo_succession_process`
+> (256), eran **FALSAS** de costuras: **sanos por dentro y gemelos por fuera.**
+>
+> **Este es CONFIRMADA: averiado por dentro Y gemelo por fuera.** Es la cuarta vez
+> que los dos ejes caen sobre el mismo nodo, **y la primera vez que los dos
+> encuentran algo.**
+
+**LA CURA ACOPLADA, que es lo que este caso obliga a nombrar:**
+
+> **No se puede destejer primero y fusionar despues, ni al reves.** Si se desteje
+> la costura interna, el nodo queda mas corto y el gemelo pasa a cubrir mas de el;
+> si se fusiona con el gemelo primero, se fusiona **arrastrando la mitad ajena**
+> que la cirugia iba a quitar.
+>
+> **Destejido y fusion van en el MISMO acto, por el TOQUE UNICO del banco 9.4.**
+> Y por eso las perdidas del 277 se anotan **tras el destejido**: lo que hay que
+> salvar es lo que sobreviva a las dos operaciones juntas.
+>
+> **Anotado en las fichas de los dos ejes.**
+
+#### 280: EL TRIO DE LAS ARENAS es SUB-PURO, y la familia es de SEIS
+
+**El encargo ofrecia dos respuestas, tres o cinco. Contado con
+`scripts/contar_nombre.py` y el jsonl, la respuesta es OTRA y hay que traerla.**
+
+**EL TRIO, y cumple la condicion dura puertas adentro:**
+
+| | |
+|---|---:|
+| miembros | **3**: `estrategia_de_innovacion_arenas`, `estrategia_de_innovacion_y_tecnologia`, `seleccion_arenas_estrategicas` |
+| pares **posibles del trio** | **3** |
+| leidos | **3** (puestos **207**, **235** y **280**) |
+| que repiten | **3** |
+| pendientes | **0** |
+
+**PERO NO ES UNA FAMILIA CERRADA, y por dos motivos medidos:**
+
+> **1. Uno de los tres ya esta censado en OTRO racimo.**
+> `estrategia_de_innovacion_y_tecnologia` es miembro del racimo
+> `Estrategia de innovacion de producto` de `RACIMOS_MIEMBROS.jsonl`, junto a
+> `estrategia_innovacion_producto` y `estrategia_de_innovacion_de_producto`.
+>
+> **2. El contador destapa un cuarto nodo de arenas que no estaba en ninguna
+> lista**: **`strat_map_arenas_estrategicas`**, con **trece menciones**, y leido es
+> el instrumento con el que se eligen las arenas: definir la base actual,
+> identificar candidatas, seis a ocho criterios de atractivo y seis a ocho de
+> fortaleza, calificar de cero a diez, graficar las burbujas y quedarse con el
+> cuadrante superior derecho.
+
+**LA FAMILIA MEDIDA, uniendo las tres listas:**
+
+| | |
+|---|---:|
+| miembros | **6** |
+| pares **posibles** | **15** |
+| en la cola intra | **9** |
+| **leidos** | **6** |
+| **de esos, en A** | **SEIS DE SEIS** (207, 235, 280, 357, 460, 530) |
+| pendientes **de la cola** | 3 (puestos 863, 1121, 1290) |
+| **pares que NUNCA entraron a la cola** | **6** |
+
+> **Seis pares leidos y los seis repiten.** No hay un solo sano en esta familia.
+>
+> **Por eso el trio NO se declara puro: se declara SUB-PURO**, como el del puesto
+> 276, y por el mismo motivo. **Y la familia de seis se convierte en el mejor
+> candidato que hay a COMPLETAR LOS PARES DEL PURO** del banco 9.5: **nueve
+> lecturas dirigidas** y esta familia queda cerrada en un sentido o en el otro.
+>
+> **Si las nueve salen A, son seis nodos que dicen una sola cosa.** Con seis de
+> seis ya en A, **es la apuesta mas cargada del inventario.**
+
+**SATELITES ANOTADOS, no miembros**: `desarrollo_attack_plans` desarrolla el paso
+de los planes de ataque y `product_roadmap_estrategico` el del roadmap. **No
+entran a la cuenta**: el script los trae, la lectura los deja fuera.
+
+#### Las dos familias que el encargo daba en 2 de 3, y estan en 3 de 3
+
+**Las dos se midieron contra el jsonl antes de escribir esto, y las dos estaban
+mas adelantadas de lo que el encargo suponia. Lo traigo porque una de ellas es un
+PURO y hay que declararlo.**
+
+##### CUARTO PURO: `la etapa de investigacion en la venta`
+
+**Y este no es sub-puro: la nomina es CENSADA y esta cerrada por definicion.**
+
+| | |
+|---|---:|
+| miembros, de `RACIMOS_MIEMBROS.jsonl` | **3**: `etapa_investigacion_ventas`, `etapa_de_investigacion`, `enfoque_etapa_investigacion` |
+| pares **posibles** | **3** |
+| **leidos** | **3** (puestos **209**, **278** y **303**) |
+| que repiten | **3** |
+| pendientes | **0** |
+
+> **El par que el encargo daba por faltar, enfoque contra ventas, es el puesto
+> 303 y esta leido desde hace tiempo, en A.** La cuenta salio de contar el
+> archivo, no de suponerla.
+>
+> **Cumple la condicion dura con pares posibles y no con pares de cola**, que es
+> la precision del banco 9.5. **Declarado CUARTO PURO.** Le falta lo unico que a
+> un puro le puede faltar: **un superviviente propuesto**, que aqui no lo da
+> ninguna relectura todavia.
+
+##### TERCER MEZCLADO COMPLETO: `los habitos de pensamiento`
+
+| | |
+|---|---:|
+| miembros | **3**: `formacion_de_habitos_de_pensamiento`, `formacion_de_habitos_de_trabajo_creativo`, `gestion_de_habitos_mentales_para_pensar` |
+| pares posibles | **3** |
+| **leidos** | **3** (puestos **261**, **281** y **333**) |
+| clases | **A, A y D** |
+| pendientes | **0** |
+
+> **Los dos nodos de FORMACION del habito repiten entre si y con el de GESTION uno
+> repite y el otro no.** El 333 lo dejo escrito: formar el habito, hora fija y
+> repeticion durante semanas, no es lo mismo que administrarlo y hasta romperlo a
+> proposito.
+>
+> **Es el tercer mezclado completo del archivo**, con el racimo del control de la
+> junta (seccion 14) y la familia del encaje (seccion 15.6). **Y es el mas barato
+> de los tres**: dos nodos que se funden y un tercero que se queda, con la arista
+> entre ellos como unico trabajo pendiente.
+
+> **LO QUE ESTAS DOS DEJAN COMO AVISO**: el encargo las daba en 2 de 3 y estaban
+> en 3 de 3. **Ninguna de las dos cuentas era mia ni del auditor: eran del
+> recuerdo.** Es el mismo error que el contador vino a matar, en su otra forma.
+> **Antes de decir que a una familia le falta un par, se cuenta el jsonl.**
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -2335,6 +2484,16 @@ habian caido antes de que se hiciera la lista (473, 633 y 644).
 >
 > **Los pase a D aplicando la vara y lo declare dentro de sus razones**, con la
 > palabra EXTENSION DECLARADA delante, **para que se puedan vetar en una linea.**
+
+> **RATIFICADA POR EL AUDITOR EL 12 ago 2026, SIN VETO.** La razon que dio es la
+> que cierra el asunto mejor que la mia: **una frase abolida no puede seguir
+> sosteniendo veredictos en ninguna parte del archivo.** No era una extension
+> discutible, era el alcance real de la abolicion.
+>
+> **Y eso deja una regla de procedimiento**: cuando una frase de doctrina se
+> retira, **se retira de TODAS las razones que la citan**, no solo de las que
+> estaban en la lista del encargo. **La lista era mi cuenta; el alcance es de la
+> regla.**
 
 **Los dos, medidos:** en el **658** el hijo trae el **calculo del costo de
 retraso con sus cinco componentes** y la regla de superponer solo si supera al

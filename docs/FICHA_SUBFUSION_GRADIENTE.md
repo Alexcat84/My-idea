@@ -2868,6 +2868,41 @@ o sea limpios por dentro:
 > sus propios pasos bien ordenados, sin repetirse a si mismo, y aun asi estar
 > contado dos veces en el catalogo.
 >
+> **CUARTO EJEMPLAR, anadido el 12 ago 2026 desde la relectura R12, Y ES EL
+> PRIMERO AL REVES.** Los tres de arriba son nodos que ESTA ficha declaro FALSOS,
+> sanos por dentro, y que el intra encontro con gemelo fuera. **Este es
+> CONFIRMADA.**
+>
+> | nodo | veredicto de ESTA ficha | veredicto del intra |
+> |---|---|---|
+> | **`optimizacion_embudo_get_customers`** (puesto 277 del intra) | **CONFIRMADA**, tanda 14, diez pasos, Blank y Weinberg: **EL TESTEO DICHO DOS VECES** | **A**, repite con `funnel_get_customers_optimizacion` |
+>
+> **Averiado por dentro Y gemelo por fuera.** Es la cuarta vez que los dos ejes
+> caen sobre el mismo nodo y **la primera en que los dos encuentran algo.**
+>
+> ### LA CURA ACOPLADA
+>
+> **Este caso obliga a nombrar un tratamiento que no estaba en ninguna ficha.**
+>
+> > **El destejido y la fusion NO se pueden hacer por separado, en ningun orden.**
+> >
+> > **Si se desteje primero**, el nodo queda mas corto y el gemelo pasa a cubrir
+> > una porcion mayor de lo que queda: la decision de fusion cambia despues de la
+> > cirugia. **Si se fusiona primero**, se fusiona arrastrando la mitad ajena que
+> > la cirugia iba a quitar, y el superviviente nace con la costura dentro.
+> >
+> > **Van en el MISMO acto, por el TOQUE UNICO del banco 9.4.** Un solo encargo:
+> > destejer la mitad de Weinberg, fusionar lo que queda con el gemelo, y salvar
+> > en el superviviente lo que sobreviva a las dos operaciones.
+>
+> **Lo que hay que salvar, medido en el puesto 277 y anotado alli**: el
+> **data-chief** con la revision diaria de las diez o doce metricas clave,
+> **escalar primero el programa mas productivo**, y **no optimizar demasiados
+> programas a la vez**.
+>
+> **Anotado en las fichas de los dos ejes**, que es lo que la cura acoplada exige:
+> ninguno de los dos frentes puede tocar este nodo sin el otro.
+
 > **Los dos instrumentos no se corrigen: se completan.**
 
 ---

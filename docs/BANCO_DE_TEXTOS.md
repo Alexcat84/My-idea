@@ -797,6 +797,18 @@ Selling*. Verificado en el archivo de veredictos:
 > **Y la condición para declararlo es la misma de siempre, aplicada al
 > subconjunto: se cuentan los PARES POSIBLES del trío, no los de la cola.**
 
+**SEGUNDO EJEMPLAR (12 ago 2026): el trío de las ARENAS ESTRATÉGICAS**, de
+*Winning at New Products*. `estrategia_de_innovacion_arenas`,
+`estrategia_de_innovacion_y_tecnologia` y `seleccion_arenas_estrategicas`: **tres
+pares posibles, los tres leídos, los tres A, cero pendientes.**
+
+> **Y su familia envolvente es la más cargada del inventario**: **6 nodos, 15
+> pares posibles, 6 leídos y LOS SEIS EN A.** Ni un sano.
+>
+> **Le faltan nueve lecturas** (3 en la cola, 6 que nunca entraron) y **es hoy el
+> mejor candidato a COMPLETAR LOS PARES DEL PURO**: con seis de seis repitiendo,
+> es la apuesta más cargada que hay sobre la mesa.
+
 #### La clase de tarea que esto crea: COMPLETAR LOS PARES DEL PURO
 
 **Registrada el 12 ago 2026.**
@@ -844,6 +856,22 @@ Owner's Manual*. Verificado contando el jsonl:
 > **Un puro con superviviente identificado no necesita ni mesa ni deliberación:
 > necesita que alguien escriba el texto y se lleve lo que se pierde.**
 
+**CUARTO PURO DECLARADO (12 ago 2026): `la etapa de investigación en la venta`**,
+de *SPIN Selling*. **Y es el primero declarado sobre una nómina CENSADA**, o sea
+cerrada por definición, no reconstruida por el cribado:
+
+| | |
+|---|---:|
+| miembros, de `RACIMOS_MIEMBROS.jsonl` | **3** (`etapa_investigacion_ventas`, `etapa_de_investigacion`, `enfoque_etapa_investigacion`) |
+| pares posibles | **3** |
+| **leídos** | **3** (puestos 209, 278 y 303) |
+| que repiten | **3** |
+| pendientes | **0** |
+
+> **Le falta lo único que a un puro le puede faltar: superviviente propuesto.**
+> Ninguna relectura lo ha nombrado todavía, así que este va a la mesa solo para
+> eso, y en una frase: **cuál de los tres se queda.**
+
 ### 9.5.1 El espejo: MEZCLADO COMPLETO, y es la categoría más cara
 
 **Encontrado el 11 ago 2026 al remedir los racimos pre-regla.**
@@ -858,6 +886,15 @@ Tres miembros, tres pares posibles, los tres leídos, **y las clases son B, C y 
 > **Y no tiene centro**: grado máximo 1, un aislado. **Dos nodos enlazados y un
 > tercero suelto.**
 >
+**TERCER MEZCLADO COMPLETO (12 ago 2026): `los hábitos de pensamiento`**, de
+*The Art of Thought*. Tres miembros, tres pares posibles, los tres leídos, cero
+pendientes, y las clases **A, A y D**: los dos nodos de **formación** del hábito
+repiten entre sí, y frente al de **gestión** uno repite y el otro no.
+
+> **Es el más barato de los tres mezclados completos**: dos nodos que se funden,
+> uno que se queda, y la arista entre ellos como único trabajo pendiente. **No
+> necesita mesa: necesita redactor y un enlace.**
+
 > **MEZCLADO COMPLETO SIN CENTRO es lo más caro que hay en este inventario**: hay
 > que decidir la arquitectura **y** no hay ningún nodo que se pueda dejar de pie
 > por defecto. **Va entero a la mesa, y va primero entre los mezclados**, porque
