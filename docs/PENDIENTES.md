@@ -2597,3 +2597,44 @@ sobrevive, o si se funden, o si se enlazan. Se resuelve leyendo dos fichas.
 > PROVISIONAL como todas**, y la reserva concreta es que una sola A futura entre
 > dos componentes grandes las une en una sola. **Ninguna de las dos mesas escritas
 > se toco entre si hasta hoy.**
+
+---
+
+## CONTRADICCIONES INTERNAS (17 ago 2026)
+
+**ADJUDICACION DEL FUNDADOR, y cierra el pendiente de doctrina del puesto 1632:**
+
+> **LA CONTRADICCION NO DECIDE LA CLASE.** La clase la decide **continua-o-repite**
+> y nada mas. Donde dos nodos se contradicen y ninguno desarrolla al otro, **la D
+> se queda**. Lo que cambia es que la contradiccion **se anota aqui** en vez de
+> perderse en la razon de un puesto.
+
+**MOTIVO ESCRITO, del fundador:** *una frontera necesita dos doctrinas legitimas*.
+Dos autores pueden mandar cosas opuestas y los dos tener razon en su contexto: eso
+es una **frontera**. Pero **una sola fuente no se contradice a si misma**: si dos
+nodos de la misma guia chocan, lo que hay es un **defecto de instruccion**, un
+umbral o una condicion que uno de los dos omitio al extraerse. **Y el puesto 1642
+lo prueba**: la condicion que faltaba, *la bolsa nunca es el contenedor unico*,
+**existia en un tercer nodo de la misma familia.**
+
+### LA TABLA, con sus dos columnas
+
+| puesto | los dos nodos | **tipo** | que se hace |
+|---:|---|---|---|
+| **1632** | `elegir_sobre_o_caja_tamano` contra `evitar_materiales_blandos_contenedor_final`, **misma fuente** | **INTRA: defecto de instruccion** | **REPUESTO**: la condicion existe en `empacar_liquidos_doble_barrera` (puesto 1642), *nunca en bolsa o sobre como unico contenedor*. Verificar contra el original y reponerla en el nodo del umbral |
+| **1714, 1741, 1765** | el **piso de cinco centimetros** de relleno contra **reducir el relleno excesivo** | **INTRA: defecto de instruccion** | falta el umbral: `tratar_packaging_costo_marca` dice *sin bajar de la proteccion minima* y **no la define**. La definicion existe en `aplicar_regla_fija_de_colchon_de_relleno`: cinco centimetros y la prueba de la sacudida. **Verificar contra el original y reponer** |
+| **1726** | la **cinta en H** sobre la misma cara donde la etiqueta debe quedar sin cinta encima | **INTRA: defecto de instruccion** | ningun nodo dice donde va la etiqueta cuando la H ya esta puesta. **No hay tercer nodo que lo resuelva: hay que ir al original** |
+| **1733 y 1679** | la **copia interior** y la **cara grande y plana** suponen caja; el nodo del umbral admite **sobre o bolsa** | **INTRA: defecto de instruccion** | misma raiz que el 1632. Se resuelve con la misma reposicion |
+| **1643** | `evitar_materiales_blandos_contenedor_final` contra `revisar_necesidades_de_empaque`, **fuentes distintas** | **INTER: frontera candidata** | una guia admite bolsa plastica como envoltorio y la otra la descarta como contenedor final. **Dos doctrinas legitimas**: se anota como frontera y NO se repone nada |
+| **1365, 1425, 1527, 1629** | leer la senal contra forzar el si; la competencia entre muchos contra el unico que dice que si; habilitadores contra obstaculos; cobrar por rapidez contra pagarla | **INTER: frontera candidata** | ya leidos como D con esa lectura. Quedan aqui como el precedente de la columna |
+
+### COMO SE USA
+
+> **INTRA-FUENTE**: se busca la condicion o el umbral que falta **primero dentro
+> del catalogo** (otro nodo de la misma familia suele tenerlo) y, si no aparece,
+> **se verifica contra el documento original**. Es trabajo de extraccion, no de
+> cribado, y **no cambia ninguna clase**.
+>
+> **INTER-FUENTE**: se anota como **frontera candidata** y se lleva a la mesa del
+> dominio. **Tampoco cambia la clase.** Lo que decide es si el catalogo quiere
+> conservar las dos doctrinas con su contexto al lado, o elegir una.

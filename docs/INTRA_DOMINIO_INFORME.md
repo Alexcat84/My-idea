@@ -10803,3 +10803,174 @@ ejemplares (511, 1182, 1332), da CINCO en esta tanda:**
 > **son todas de dos o de tres nodos**, y **ninguna de las tres componentes
 > grandes se movio ni se fusiono con otra**. **Sigue sin haber una tercera mesa
 > escondida**, y los dominios nuevos no traen mesas: traen parejas.
+
+## 64. EL NUCLEO QUEDA CERRADO, R40, Y LA RECONCILIACION DEL RACIMO DEL CIERRE
+
+### 64.1 HITO: EL NUCLEO ESTA CERRADO
+
+**Fecha de corte: puesto 1.600. El ultimo par de `core` de toda la cola.**
+
+| medida | **cifra final del nucleo** |
+|---|---:|
+| **pares leidos de `core`** | **1.445** |
+| **en A** | **344** |
+| **tasa de A del nucleo** | **23,8%** |
+| B / C / D | 87 / 7 / 1.007 |
+
+> **Esta cifra ya no se mueve.** De aqui al puesto 3.388 la cola no trae un solo
+> par mas del catalogo central: los 1.771 que quedan son de `compras`, `entrega`,
+> `environmental`, `exportacion` y `franquicias`. **El 23,8 por ciento es el numero
+> definitivo del nucleo**, y toda comparacion futura de tasas se hace contra el,
+> no contra la global, por el banco 9.27.
+
+**LA CURVA COMPLETA DEL NUCLEO, para que quede en un solo lugar:**
+
+| centena | tasa del nucleo |
+|---|---:|
+| 101-200 | 53,3% |
+| 201-300 | **54,0%**, el maximo |
+| 401-500 | 39,0% |
+| 601-700 | 21,0% |
+| 901-1000 | 18,0% |
+| 1201-1300 | 7,0% |
+| **1501-1600** | **12,0%** |
+
+> **De 54 a 23,8 de media, y con la ultima centena del nucleo en 12 por ciento.
+> Sin tocar un solo nodo.**
+
+### 64.2 TANDA R40, DEL AUDITOR: DIEZ DE DIEZ SOSTENIDAS
+
+**Acumulado: 250 releidas, de las cuales 226 a ciegas. Discrepancias: UNA**, el
+395, cerrada por los dos lados.
+
+| puesto | el par | dominio |
+|---:|---|---|
+| 1524 | `estructura_de_gates` contra `estructura_gates` | core |
+| 1552 | `bucle_retroalimentacion_autoajustable` contra `ciclos_retroalimentacion_autoajuste` | core |
+| 1564 | `cierre_segun_tamano_decision` contra `ineficacia_cierre_ventas_grandes` | core |
+| 1571 | `split_testing_experimentos_ab` contra `test_ab_precio` | core |
+| 1573 | `design_test_repeat` contra `design_thinking_proceso` | core |
+| 1575 | `ab_testing_optimizacion` contra `test_ab_precio` | core |
+| 1582 | `descomposicion_tareas_trabajo` contra `division_trabajo_humano_ia` | core |
+| 1585 | `cierre_segun_complejidad_venta` contra `cierre_segun_tamano_decision` | core |
+| 1597 | `automatizacion_tareas_aburridas` contra `descomposicion_tareas_trabajo` | core |
+| 1601 | `calcular_peso_dimensional_antes_cotizar` contra `medir_paquete_redondeando_hacia_arriba` | entrega |
+
+#### 64.2.1 EL ACTO DE A/B, recomputado, y una precision de tamano
+
+**Vigente al puesto 1817**, por el banco 9.21.
+
+| medida | cifra |
+|---|---:|
+| **nomina** | **SEIS** |
+| pares posibles | 15 |
+| en la cola | 8 |
+| **leidos** | **8**, cola cerrada |
+| **A / B** | **7 / 1** (el 738) |
+| **cobertura** | **8 de 15** |
+
+**LOS SEIS**: `split_testing`, `split_testing_experimentos_ab`,
+`ab_testing_optimizacion`, `optimizacion_embudo_get_customers`,
+`funnel_get_customers_optimizacion` y `test_ab_precio`.
+
+> **PRECISION, y va con la medicion delante como manda el 9.17: el acto NO gana un
+> miembro en esta tanda.** `test_ab_precio` **ya era miembro desde el puesto 643**,
+> y el acto ya estaba en seis. **Lo que cambia es la DENSIDAD, no el tamano.**
+>
+> **Y el cambio es real y vale anotarlo**: `test_ab_precio` pasa de UNA A a TRES
+> (643, 1571, 1575), **contra tres nodos generales distintos**. Es el segundo nodo
+> mas conectado del acto y **la unica aplicacion concreta** entre cinco manuales
+> generales: **la prueba A/B aplicada al precio repite con todos los manuales que
+> se le leen.**
+>
+> **Esto refuerza lo que el 643 mostro y la nota del plan recogio**: la repeticion
+> de este acto **no esta solo dentro de las costuras**, y por eso su cirugia
+> termina en una **FUSION** y no en tres destejidos.
+
+#### 64.2.2 EL TRIO DE LAS ESTRUCTURAS DE GATES, confirmado por lectura triple
+
+**Los tres pares posibles leidos y los TRES en A. Cobertura 3 de 3, completa.**
+
+| puesto | el par |
+|---:|---|
+| **745** | `estructura_gates` contra `requisitos_gates_con_dientes` |
+| **765** | `estructura_de_gates` contra `requisitos_gates_con_dientes` |
+| **1524** | `estructura_de_gates` contra `estructura_gates` |
+
+> **Es un TRIANGULO CERRADO dentro de la mesa unida**: tres nodos, tres pares, tres
+> A, sin un solo sano y sin un par pendiente. **La cuarta trampa de identificador
+> del ejercicio queda confirmada por los tres lados**, y no por deduccion: el
+> 1524 se leyo aparte y dio lo mismo que la transitividad predecia.
+>
+> **Lo que le hace a la mesa unida**: no cambia su nomina de diecisiete, pero
+> **identifica dentro de ella un nucleo de tres que se funde sin discusion**. Es el
+> primer movimiento evidente cuando esa mesa se siente.
+
+### 64.3 RECONCILIACION DEL RACIMO DEL CIERRE, con correccion declarada
+
+**El encargo pregunta por una nomina de OCHO. La seccion 51.4 publico DIEZ. El
+barrido de las A mide SEIS. Se cuentan las tres y se declara cual es la buena.**
+
+| instrumento | resultado | de donde salio |
+|---|---:|---|
+| **el contador por nombre y tema** | 8 a 10 | la ficha de la seccion 9, ampliada en la 51.4 |
+| **el barrido de las A** | **SEIS** | cierre transitivo sobre las A del archivo |
+
+**LA NOMINA BUENA ES LA DE SEIS**, por el banco 9.17 y el 9.20: entre dos nominas
+manda la medicion, y el barrido corre siempre junto al contador.
+
+| medida | cifra |
+|---|---:|
+| **nomina** | **SEIS** |
+| pares posibles | 15 |
+| en la cola | 9 |
+| **leidos** | **9**, cola cerrada |
+| **en A** | **NUEVE, cero sanos** |
+| cobertura | **9 de 15** |
+
+**LOS SEIS**: `riesgo_tecnicas_cierre_venta_compleja` (el centro, cinco A),
+`cierre_segun_complejidad_venta`, `cierre_segun_tamano_decision`,
+`cierre_sofisticacion_comprador`, `ineficacia_cierre_ventas_grandes` y
+`diferencias_venta_pequena_venta_grande`.
+
+**CORRECCION DECLARADA, por el banco 9.10.** La seccion **51.4** dice *la nomina
+medida hoy es de DIEZ*. **No lo era.** Lo que se midio ese dia fueron las A
+nuevas; **la cifra de diez arrastraba a cuatro candidatos que el contador habia
+metido por titulo y que el archivo desmintio uno por uno:**
+
+| candidato del contador | como quedo medido | veredicto |
+|---|---|---|
+| `relacion_continua_con_cliente` | **cuatro lecturas, cuatro sanas** (520, 1206, 1217, 1249) | **FUERA**, ya declarado adyacente en la 53.4 |
+| `cierre_satisfaccion_postventa` | **tres lecturas, cero A** (337 B, 1280 D, 1427 D) | **FUERA** |
+| `tacticas_cierre_ventas` (Weinberg) | **seis lecturas, una sola A y NO es con el cierre** | **FUERA**, y ver abajo |
+| `escala_actitud_cierre` | **CERO lecturas y CERO pares en la cola** | **NO MEDIBLE** por la via ordinaria |
+
+> **La cuarta fila es la que hay que decir sin adorno**: `escala_actitud_cierre` es
+> un nodo vivo de Rackham sobre el cierre **que nunca entro a la cola**. No esta
+> fuera por medicion: **esta fuera por ausencia**. Es un pendiente de los que solo
+> se resuelven yendo a buscarlo, y queda anotado como tal.
+
+#### 64.3.1 LA FRONTERA DE MOMENTO: el forastero quedo FUERA, y ahora esta medido
+
+**`tacticas_cierre_ventas`, de *Traction*, se llamo durante mucho tiempo el octavo
+miembro del racimo. No lo es.**
+
+| medida | resultado |
+|---|---|
+| lecturas totales | **SEIS**, y la cola no le deja ninguna pendiente |
+| contra miembros del cierre | **una sola, el 1333, y sale D** |
+| contra la familia del compromiso | **tres, y las tres D** (408, 437, 504) |
+| contra las senales de compra | una, D (1365) |
+| **su unica A** | el **221**, con `compromiso_linea_tiempo_cliente`, **que no es del cierre** |
+| **su acto real** | **DOS nodos**: el y `compromiso_linea_tiempo_cliente` |
+
+> **La frontera de momento se sostiene y ahora esta probada por seis lados.**
+> Rackham manda **no presionar el cierre en la venta grande** y Weinberg manda
+> **pedir un si o un no explicito y no dejar la decision abierta**. Son dos
+> doctrinas legitimas, y por la adjudicacion de hoy eso es una **FRONTERA
+> CANDIDATA inter-fuente**, no un defecto: **queda anotada en la lista de
+> contradicciones internas y no cambia ninguna clase.**
+>
+> **Y el forastero no queda huerfano: tiene su propio acto de dos**, del lado del
+> compromiso con linea de tiempo. **Estaba en la familia equivocada, no en
+> ninguna.**

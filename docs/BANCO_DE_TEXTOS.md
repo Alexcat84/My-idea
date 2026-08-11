@@ -1919,6 +1919,28 @@ direcciones:
 > **La cifra de la vara sigue sin proyectarse**, por la regla de arriba. Y sigue
 > siendo por tramo: **describe la cola, no el catalogo.**
 
+> **PRECISION DEL 17 ago 2026: LA VARA ES UN FENOMENO DEL NUCLEO.** La cifra no
+> solo cambia por tramo: **cambia por DOMINIO, y de forma ordenada.**
+
+| dominio | pares del tramo largo | **resueltos con la vara** |
+|---|---:|---:|
+| `core` (1518-1600) | 83 | **27,7%** |
+| `entrega` | 171 | **21,0%** |
+| `environmental` (1801-1817) | 17 | **5,9%** |
+
+> **La jerarquia sin cablear vive donde los libros se solapan.** El nucleo tiene
+> quince libros que cuentan las mismas etapas con distinto grano, y por eso
+> produce madres que enuncian e hijos que desarrollan. **Un dominio de fuentes
+> practicas y homogeneas, como entrega, produce menos; y uno de nodos gemelos
+> escritos dos veces, como environmental, casi ninguno: ahi no hay dos niveles,
+> hay dos copias.**
+>
+> **Consecuencia para leer el marcador**: una cifra de vara baja en un dominio
+> nuevo **no significa que la cola se haya limpiado.** Significa que ese dominio
+> no esta hecho de capas. **La vara y la tasa de A se leen las dos por dominio,
+> por el 9.27.**
+
+
 
 ---
 
@@ -2234,3 +2256,42 @@ de los que se puede afirmar la forma sin condicion:
 > declaro con **una sola** de sus dos cuentas hecha, y quedo con condicion viva
 > escrita hasta que el puesto **1346** la resolvio. **Funciono porque la condicion
 > estaba escrita.** Sin ella, habria sido una forma afirmada sobre media medicion.
+
+---
+
+### 9.27 REGLA: LA MEDIA NO DESCRIBE A NADIE. LA TASA SE LEE POR DOMINIO
+
+**Adoptada el 17 ago 2026**, al cerrar la tanda larga 1518-1817.
+
+> **La tasa global de A dejo de ser una medida del catalogo y paso a ser un
+> ARTEFACTO DE MEZCLA: dice que dominio esta pasando por la cola, no cuanto
+> repite el inventario.**
+
+**LA EVIDENCIA, medida el mismo dia:**
+
+| dominio | pares leidos | A | **tasa de A** |
+|---|---:|---:|---:|
+| `core` | 1.445 | 344 | **23,8%** |
+| `compras` | 155 | 1 | **0,6%** |
+| `entrega` | 171 | 2 | **1,2%** |
+| `environmental` | 46 | 14 | **30,4%** |
+| **global** | **1.817** | **361** | **19,9%** |
+
+> **El 19,9 por ciento global no describe a ninguno de los cuatro.** Es el
+> promedio de un dominio que casi no repite, entrega con **1,2**, y de otro que
+> repite **mas que el nucleo**, environmental con **30,4**. Y la centena mas limpia
+> del ejercicio, la 1601-1700 con **DOS A**, no midio una mejora del catalogo:
+> midio que estaba pasando el dominio de entrega.
+
+**LO QUE ESTO OBLIGA, y es corto:**
+
+> 1. **Todo marcador lleva la tasa POR DOMINIO al lado de la global.**
+> 2. **Ninguna tendencia se declara sobre la serie global** si el tramo cambio de
+>    dominio. La curva por centenas solo compara centenas del mismo dominio.
+> 3. **La global se sigue reportando**, porque mide el avance de la cola; **pero no
+>    se interpreta como estado del catalogo.**
+
+> **Y la regla de arriba, el 9.19, sigue en pie y se apoya en esta**: la tasa baja
+> porque cambia la clase de lo que queda, y **ahora se sabe que tambien cambia
+> porque cambia el dominio de lo que queda.** Son dos causas distintas y hay que
+> separarlas antes de sacar conclusiones.
