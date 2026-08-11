@@ -3116,6 +3116,73 @@ juntos salen CINCO.**
 sera director general sin dar por hecho que es la persona de la idea, **cae entero
 en el bloque 1 a 5** y la juntura esta en el 5. **En cola sin congelar.**
 
+### TANDA R29, VIGESIMOQUINTA CIEGA: seis de seis
+
+**Acumulado: 174 releidas, de las cuales 150 a ciegas. Discrepancias: UNA**, el
+395, resuelta.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **498** | `riesgo_cofundadores_relacion_previa` contra `seleccion_relaciones_cofundadores` | **los tres circulos** (cercanos, indirectos, desconocidos) y los **acuerdos explicitos sobre roles y conflictos** si el cofundador es cercano; del otro lado, **revisar si ya trabajaste de verdad con esa persona** y no solo si se conocen socialmente | de **lector** |
+| **502** | `split_igual_vs_desigual` contra `teoria_equidad_split_equity` | la **logica social contra la de negocio** y el **riesgo de asimetria** si se elige la equivocada; del otro lado, **no cerrar con un apreton de manos rapido** y **dejar por escrito por que** se eligio igual o desigual | de **lector** |
+| **505** | `evaluacion_tecnologias_disruptivas` contra `tecnologias_disruptivas_oportunidad` | **mapear el desempeno de la tecnologia dominante** en el tiempo y **evaluar si esa dominante ya excede las necesidades reales** de los usuarios; del otro lado, la pregunta **y entonces que hago**, la accion concreta | de **lector** |
+| **507** | `fase_diseno_prototipado_modelos` contra `proceso_ideacion_modelo_negocio` | la **narrativa por modelo** con retroalimentacion externa, y **no descartar ideas porque un experto diga que no funcionara** | de **lector** |
+| **508** | `analisis_trafico_competitivo` contra `capturar_conocimiento_de_mercado` | **los foros y sitios de preguntas** tipo Quora y **disenar tests A/B a partir de los anuncios observados** de la competencia; del otro lado, **los pares de mercados adyacentes, analistas y periodistas** y **los eventos con demos** | de **lector** |
+| **510** | `customer_discovery_get_out_of_building` contra `manifiesto_regla1_hechos_fuera_del_edificio` | **no delegar** la investigacion de clientes en empleados o consultores, y **prepararse para feedback impredecible y a veces doloroso** | de **lector** |
+
+#### 507: aqui es donde la duplicacion del 395 se cobra bien, y aguanta la ciega
+
+**El 395 paso de A a D porque cobraba una duplicacion que no era suya. ESTE es el
+par al que pertenecia**, y releido sin mirar el veredicto **vuelve a salir A**.
+
+> **Los dos desarrollan la fase 3 de la misma madre** y coinciden en lo esencial:
+> generar multiples variantes de modelo de negocio, prototipar cada una con el
+> lienzo, y quedarse con la de mas potencial tras explorar.
+>
+> **Lo que confirma la conjunta**: la duplicacion existe, **esta cobrada una sola
+> vez y en el par correcto.** Con la relectura firme, la unica discrepancia del
+> ejercicio queda cerrada por los dos lados: el par que sobraba paso a D y el par
+> que la sostiene aguanta a ciegas.
+
+#### 508: EL PAR DE ALEXA, y el toque unico ahorra CINCO verificaciones, no cuatro
+
+**Correccion declarada del dictado, verificada contra el grafo.** El nodo que
+muere en la fusion, `analisis_trafico_competitivo`, **no nombra cuatro
+herramientas: nombra CINCO.**
+
+| paso | herramientas nombradas | estado en el censo |
+|---:|---|---|
+| **1** | **Alexa** o **Compete** | **las DOS muertas** |
+| **5** | **MixRank** o **Adbeat** | las dos **vivas** |
+| **6** | **Alexa** o **Quantcast** | Alexa muerta; **Quantcast SIN VERIFICAR** |
+
+**Y el superviviente, `capturar_conocimiento_de_mercado`, dice en su paso 3
+*herramientas de medicion de trafico web y rankings de app stores*: cero nombres
+propios.**
+
+> **LO QUE ESTO LE HACE AL PLAN, y es el argumento mas limpio que ha dado el TOQUE
+> UNICO del banco 9.4**: fundir hacia el superviviente generico **borra cinco
+> nombres propios de una sola vez, y con ellos cinco verificaciones de vigencia
+> que alguien tendria que hacer y rehacer con los anos.** Dos de los cinco **ya
+> estan muertos hoy**.
+>
+> **No es que el nodo generico sea mejor por ser vago: es que el especifico
+> caduca.** Aqui la fusion **no pierde informacion util: pierde mantenimiento.**
+
+**Y QUEDA UN NOMBRE NUEVO PARA EL CENSO**: **`Quantcast`**, citada en el paso 6 de
+`analisis_trafico_competitivo`. **Estado: SIN VERIFICAR**, y se registra asi y no
+como viva: **no la he comprobado.** Es el nombre propio numero catorce del censo,
+detras de AngelList.
+
+#### 510: la familia de SALIR DEL EDIFICIO sigue creciendo
+
+Con los puestos **840** (el genchi gembutsu por duplicado), **849** y **439**,
+**este es el cuarto par de la misma zona y el cuarto en A.**
+
+> **Seis nodos del nucleo mandan salir a hablar con clientes**, dos con la palabra
+> japonesa y cuatro con la inglesa, **y de los cuatro pares leidos ninguno tiene
+> arista.** Es la zona con mas repeticion confirmada y menos cableado del archivo.
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
@@ -6804,3 +6871,83 @@ datos o coordinarte mejor con tus proveedores**.
 > **3. Tercera lectura del nodo de preguntas de implicacion contra un nodo de
 > secuencia** (puesto **1049**), y las tres sanas. **Pero la arista solo existe en
 > una de las tres** (la del 1021). **El mismo hijo, tres madres, un cable.**
+
+---
+
+## 45. EL BARRIDO DE CONFIRMADAS CONTRA LAS A: la cifra, de una vez
+
+**Encargo aprobado el 13 ago 2026. Solo lectura, sin adjudicar.** Cruza las
+**46 costuras CONFIRMADAS** del cierre del instrumento contra **todos los
+veredictos A vigentes** del archivo, mas las **tres fuera de cola con anatomia
+escrita**.
+
+### 45.1 EL METODO, y por que la cifra es fiable
+
+**Las confirmadas se extrajeron de las tablas de veredicto de la ficha con un
+patron unico**, y el conteo cuadra con su propio marcador: **46 confirmadas y 82
+falsas, 128 en total.** No es una lista escrita a mano: **es la ficha leida.**
+
+**Las tres fuera de cola que entran**: `retention_metrics`,
+`procesamiento_paralelo_con_espirales` y `metricas_de_adquisicion_activacion`,
+que son las unicas de los veinte con anatomia verificada. **Total mirado: 49.**
+
+### 45.2 LA CIFRA
+
+| clase de cura | costuras | que significa |
+|---|---:|---|
+| **SIN GEMELO** | **32** | no tienen ni una A. **Su arreglo es solo destejido**: un acto |
+| **CONTRA GEMELO SANO** | **13** | destejer y fundir **en el mismo acto**: dos movimientos |
+| **CONTRA COSTURADA** | **4** nodos en **2 pares** | destejer los dos **y solo entonces decidir la fusion**: tres movimientos |
+| **TOTAL con gemelo** | **17** | |
+
+> **DIECISIETE costuras necesitan cura acoplada, no doce.** El goteo llevaba
+> **catorce** encontradas de una en una, cuando una relectura las cruzaba. **El
+> barrido encuentra tres mas y las encuentra todas juntas.**
+
+### 45.3 LAS TRES QUE EL GOTEO NO HABIA ENCONTRADO
+
+| costura | sus gemelos | por que no aparecio antes |
+|---|---|---|
+| **`brainstorming_divergente`** | **TRES**: `brainstorming_efectivo` (823), `reglas_brainstorming` (834), `generar_multiples_opciones` (844) | los tres pares se leyeron **como pares del racimo del brainstorming**, no como pruebas de gemelo |
+| **`future_scenarios_planning`** | `escenarios_futuros` (711) | su par se leyo antes de que la cura acoplada existiera como figura |
+| **`plan_de_adquisicion_acquire`** | `plan_acquire_activate` (344) | el puesto 344 **cito su clase de costura** y **no dio el paso** de declarar el ejemplar |
+
+> **La primera es la mas cara del archivo y nadie la habia contado.**
+> `brainstorming_divergente` tiene **TRES gemelos**: su cura acoplada no es de dos
+> nodos, **es de CUATRO en un solo acto**. Y ademas **es el injerto de Mollick**,
+> o sea que la decision de fuente tambien la toca. **Es el nodo con mas frentes
+> encima de todo el catalogo.**
+
+### 45.4 LOS DOS ACTOS DE TRES, y los dos ya estaban nombrados
+
+| par | los dos nodos | puesto |
+|---|---|---:|
+| **el mapa contado dos veces** | `blueprint_de_experiencia` y `customer_journey_mapping` | **341** |
+| **la cura acoplada mayor** | `producto_minimo_viable` y `principio_calidad_mvp` | **494** |
+
+> **El barrido confirma que son exactamente dos y no mas.** Los dos ya estaban
+> registrados, **y el barrido prueba que no hay un tercero escondido.** Es la clase
+> mas cara y el catalogo solo la tiene dos veces.
+
+### 45.5 LOS CONGELADOS DE ESTE GRUPO, y su motivo
+
+| puesto | por que congela |
+|---:|---|
+| **494** | **la dependencia es directa**: si el destejido conserva la narracion de la calidad el par deja de repetir; si conserva la del conjunto minimo, sigue |
+| **738** | los **dos** nodos de A/B estan averiados y **el solape cruza las dos junturas** |
+
+> **Los demas pares de este grupo estan EN COLA SIN CONGELAR** (361, 374, 386,
+> 392, 452, 492, 969): en todos ellos **el solape cae en el bloque que sobrevive**
+> y el veredicto es invariante. **La regla de la dependencia deja congelados solo
+> dos de diecisiete.**
+
+### 45.6 LO QUE EL BARRIDO NO HACE, y hay que decirlo
+
+> **No adjudica.** Las diecisiete siguen necesitando que alguien decida el orden y
+> el destino de cada material. **Lo unico que cambia es que ahora se sabe cuantas
+> son antes de empezar**, en vez de irlas descubriendo mientras se trabaja.
+>
+> **Y deja una leccion de metodo para el resto del plan**: **doce de las
+> diecisiete se encontraron de una en una a lo largo de veinte relecturas.** El
+> barrido tardo una consulta. **Cuando una figura se puede cruzar mecanicamente,
+> cruzarla es mas barato que esperarla.**

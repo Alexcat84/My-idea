@@ -2388,6 +2388,19 @@ tenia una muerta mas de la que yo habia sumado**.
 > | **no verificables** | **1**: Guide to Greener Electronics |
 > | **verificadas en total** | **12** |
 >
+> **AMPLIACION DEL 13 ago 2026, desde el puesto 508 del cribado intra**:
+> **`Quantcast`**, citada en el paso 6 de `analisis_trafico_competitivo`.
+> **Estado: SIN VERIFICAR**, y se registra asi y no como viva porque **no la he
+> comprobado**. Es el nombre propio numero **catorce**, detras de `AngelList`.
+>
+> **Y el mismo puesto deja el mejor argumento del TOQUE UNICO que ha dado el
+> cribado**: `analisis_trafico_competitivo` nombra **CINCO** herramientas (Alexa y
+> Compete en su paso 1, MixRank y Adbeat en el 5, Alexa o Quantcast en el 6) y su
+> gemelo dice *herramientas de medicion de trafico web*, **cero nombres propios**.
+> **Fundir hacia el generico borra cinco verificaciones de vigencia de una vez**, y
+> **dos de las cinco ya estan muertas**. La fusion aqui no pierde informacion util:
+> **pierde mantenimiento.**
+
 > **Seis muertas de doce verificadas.** La mitad. **Y el catalogo tiene otros
 > dieciocho nombres propios anotados sin verificar.**
 
@@ -3099,9 +3112,32 @@ o sea limpios por dentro:
 > estetica** (aceptable), y el aviso de **no dar por hecho que el estandar de
 > calidad de la industria es lo que el cliente valora**.
 
-> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y ONCE
-> confirmadas o fuera de cola con gemelo** (277, 285, 331, **361**, **374**,
-> **386**, **392**, **452**, **492**, y la pareja del **494**). **Las cuatro confirmadas son
+> **RECUENTO COMPLETO DEL 13 ago 2026: EL BARRIDO SUSTITUYE AL GOTEO.**
+>
+> **Los ejemplares de arriba se encontraron de uno en uno a lo largo de veinte
+> relecturas. El barrido de confirmadas contra las A los cuenta de una vez**, y
+> sobre las **46 confirmadas mas las 3 fuera de cola con anatomia** da:
+>
+> | clase de cura | costuras |
+> |---|---:|
+> | **SIN GEMELO**, solo destejido | **32** |
+> | **CONTRA GEMELO SANO**, destejer y fundir en un acto | **13** |
+> | **CONTRA COSTURADA**, acto de tres | **4** nodos en **2** pares |
+> | **TOTAL con gemelo** | **17** |
+>
+> **TRES que el goteo no habia encontrado:**
+>
+> | costura | sus gemelos |
+> |---|---|
+> | **`brainstorming_divergente`** | **TRES**: 823, 834 y 844. **Su cura es de CUATRO nodos en un solo acto**, y ademas es el injerto de Mollick: el nodo con mas frentes encima del catalogo |
+> | `future_scenarios_planning` | `escenarios_futuros` (711) |
+> | `plan_de_adquisicion_acquire` | `plan_acquire_activate` (344) |
+>
+> **Y prueba un negativo util: los actos de tres son exactamente DOS**, el 341 y
+> el 494, **los dos ya registrados. No hay un tercero escondido.**
+
+> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y DIECISIETE
+> costuras con gemelo**, contadas por barrido y no por goteo. **Las cuatro confirmadas son
 > las unicas que necesitan cura acoplada**: en las falsas no hay nada que
 > destejer.
 

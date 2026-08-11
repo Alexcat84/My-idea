@@ -742,6 +742,28 @@ Cuando choquen con esta tabla, **manda la tabla**.
 > más le falten, más fácil es que el siguiente sea el sano. **El sub-puro es una
 > promesa, no un resultado.**
 
+##### EL ESTÁNDAR DE CERTIFICACIÓN DE UN PURO
+
+**Adoptado el 13 ago 2026, con el primer puro de ejemplar.**
+
+> **Toda declaración futura de PURO cita LOS DOS instrumentos**, y dice el
+> resultado de cada uno:
+>
+> **1. EL CONTADOR** por nombre, con los descartes de lectura y su motivo.
+> **2. EL BARRIDO DE LAS A**, y **cuántos candidatos levantó**. Si levantó alguno,
+>    la lectura que lo admite o lo descarta va escrita.
+
+**EL EJEMPLAR ES EL PURO NÚMERO 1**, el efectivo contra la ganancia: tres
+miembros, tres pares posibles, los tres leídos y en A, **y el barrido de las A no
+levanta NI UN candidato**. Ningún nodo del catálogo tiene una A contra ninguno de
+los tres.
+
+> **Es el único racimo del archivo probado por los dos instrumentos**, y por eso
+> es el estándar. **Los tres puros anteriores se declararon con uno solo, y dos de
+> ellos se cayeron después**: el quinto por el barrido de las A, la ecuación de
+> valor por lo mismo. **La certificación no es una formalidad: es lo que separa un
+> puro de una racha.**
+
 > **LOS PUROS DE HOY SON DOS**: el **1**, el efectivo contra la ganancia, y el
 > **5**, la competencia entre inversores. **Todo lo demás de esta tabla es
 > sub-puro o mezclado.** La ecuación de valor dejó de ser puro el 13 ago 2026.
@@ -1811,8 +1833,9 @@ direcciones:
 > buena noticia ni una mala**. Es el aviso de que **el trabajo que queda cambió de
 > tipo**, de fusiones a enlaces, **y de caro a barato.**
 
-> **PRECISIÓN DEL 13 ago 2026, medida en dos tramos consecutivos**: la figura
-> **no viene repartida por la cola, viene en RACIMOS**. El tramo 1001 a 1036 dio
+> **PRECISIÓN ADOPTADA POR EL AUDITOR el 13 ago 2026**, medida en dos tramos
+> consecutivos: la figura **no viene repartida por la cola, viene en RACIMOS**, y
+> **la cifra de la vara NO SE PROYECTA**: se lee por tramo y se reporta por tramo. El tramo 1001 a 1036 dio
 > **36%** de pares resueltos con la vara y el 1037 a 1050 dio **14%**, con la tasa
 > de A casi igual en los dos. **La cifra de la vara sirve por TRAMO y no por par**:
 > es un indicador de **posición en la cola**, no una propiedad del catálogo.
