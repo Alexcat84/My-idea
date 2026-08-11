@@ -3,6 +3,41 @@
 Lista viva de lo que queda por hacer. Se actualiza al cerrar o abrir frentes.
 (Última actualización: agosto 2026.)
 
+## 0b. La cirugía de costuras se ordena por PARES LIBERADOS (12 ago 2026)
+
+**El dato que cambia la prioridad**, contado del archivo del cribado intra: hay
+**nueve pares congelados por seis nodos costurados**. Un par congelado es una
+lectura que no se puede emitir hasta que el nodo se opere, porque el veredicto
+caería sobre un texto que va a cambiar (banco 9.4 y 9.9).
+
+**Orden propuesto, de más a menos pares liberados:**
+
+| nodo a operar | pares que libera | puestos |
+|---|---:|---|
+| **`voz_del_cliente_voc`** | **3** | 724, 755, 827 |
+| **`producto_minimo_viable`** | **2** | 592, 830 |
+| `lienzo_modelo_negocio` | 1 | 784 |
+| `ab_testing_optimizacion` + `split_testing_experimentos_ab` | 1 | 738 |
+| `preguntas_ipo_dolor_cliente` | 1 | 798 |
+| `key_partners_hypothesis` + `asociaciones_clave` | 1 | 599 |
+
+> **`voz_del_cliente_voc` vale por tres y `producto_minimo_viable` por dos**: los
+> dos primeros movimientos de la cirugía liberan cinco de los nueve.
+>
+> **Y el criterio se puede seguir aplicando**: cada nodo costurado que entre a un
+> par nuevo sube en la lista. La cuenta se rehace del jsonl, no de memoria.
+
+**LA COLA DE RELECTURA POST-CIRUGÍA queda nombrada**: los puestos **592, 599,
+724, 738, 755, 784, 798, 827 y 830**. Se releen **después** de operar sus nodos, y
+sus razones ya llevan escrito qué hay que salvar en cada caso.
+
+> **Dos avisos para quien la ejecute.** El **827** tiene los **dos** nodos
+> costurados, así que necesita las dos cirugías antes. Y el **341**, aunque no
+> está congelado, **manda que los dos mapas del racimo de experiencia se reúnan en
+> uno**: destejer por separado ahí no arregla, aplaza (ficha, CURA CONJUNTA).
+
+---
+
 ## 0. Despliegues de staging APAGADOS en Vercel (12 ago 2026)
 
 **Qué se hizo:** `web/vercel.json` lleva ahora

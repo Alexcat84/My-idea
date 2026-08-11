@@ -1122,6 +1122,29 @@ Chain Management*.
 **El reparto se invierte respecto de la tanda anterior**: dos y cuatro donde
 antes fue cuatro y dos. Las dos confirmadas son las dos del nucleo.
 
+### CURA CONJUNTA: los DOS mapas del racimo de experiencia se reunen en UNO
+
+**Anadido el 12 ago 2026 desde la relectura R18, puesto 341 del cribado intra.**
+
+> **`blueprint_de_experiencia` y `customer_journey_mapping` estan los dos en esta
+> cola, los dos confirmados, y ademas REPITEN ENTRE SI** (puesto 341, clase **A**).
+>
+> **Y el solape no es cualquiera: es el bloque de mapeo de uno contra el bloque de
+> mapeo del otro.** Los dos mandan recorrer el viaje etapa por etapa, identificar
+> los puntos de contacto y evaluarlos uno a uno.
+
+**LO QUE ESTO OBLIGA, y es mas fuerte que la cura acoplada normal:**
+
+> **No son dos destejidos que ademas hay que fusionar: es UN SOLO acto con tres
+> movimientos.** Destejer los dos, **reunir los dos bloques de mapa en uno**, y
+> decidir en cual de los dos nodos vive el mapa resultante.
+>
+> **Si se destejen por separado quedan DOS mapas** y el par vuelve a aparecer
+> exactamente igual que hoy. **El destejido por separado no arregla nada aqui: lo
+> aplaza.**
+
+---
+
 ### `core/customer_journey_mapping`, 10 pasos: EL MAPEO CONTADO DOS VECES
 
 **Bloque 48,6, corte 7.** Dos fuentes: *Change by Design* y *Never Lose a

@@ -1870,6 +1870,114 @@ que mas se acercaban:
 > trae las dos reglas de negociacion que los otros no tienen, **anclar en dos o
 > tres terminos** y **nunca mover primero en precio**.
 
+### TANDA R18, DECIMOCUARTA CIEGA: seis de seis
+
+**Acumulado: 108 de 108, de los cuales 84 a ciegas.** Perdidas verificadas contra
+el grafo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **341** | `blueprint_de_experiencia` contra `customer_journey_mapping` | ver abajo: **los dos nodos estan costurados y el solape es mapa contra mapa** | de **lector** |
+| **342** | `framework_scor_plan_source_make_deliver` contra `scor_model_operaciones` | **la escalera completa de metricas**: KPI de **nivel 1** por categoria, metricas de **nivel 2**, diagnostico de **nivel 3** cuando hay desviacion, y el **benchmark** contra la industria | de **lector** |
+| **343** | `estrategia_cuatro_capacidades_mercado` contra `modelo_cuadrantes_mercado` | **una-o-dos-capacidades**, concentrar la inversion en una o dos y no en todas; y **evita-eficiencia-en-crecimiento**, no invertir en eficiencia interna si compites en mercado de crecimiento | de **lector** |
+| **344** | `plan_acquire_activate` contra `plan_de_adquisicion_acquire` | **los-19-canales** y **anota-lo-que-falla** (los dos del bloque Bullseye), **tope-bajo-por-prueba** y **escalonadas** | de **lector** |
+| **345** | `determinar_tipo_de_mercado` contra `tipo_de_mercado_estrategia_competitiva` | **umbral-74** y las bandas de cuota; **escribe-el-documento** con las preguntas clave del tipo elegido; y **actualiza-canvas** con la hipotesis | de **lector** |
+| **346** | `senales_de_compra_en_venta_grande` contra `senales_de_compra_reales` | **no-celebres-antes** de tiempo cuando el cliente menciona problemas; **clasifica-tras-cada-reunion** lo que dijo; y **planea-otra-conversacion** si solo hubo problemas mencionados | de **lector** |
+
+#### 341: LOS DOS COSTURADOS, y el solape es MAPA CONTRA MAPA
+
+**Los dos estan en la cola de las 128 y los dos con anatomia escrita en la
+ficha.**
+
+| nodo | anatomia registrada |
+|---|---|
+| `blueprint_de_experiencia` | **17 pasos, corte 13**, uno de los ocho ejemplares de **LA FORMA QUE PARTE** |
+| `customer_journey_mapping` | **10 pasos, corte 7**, bloque 48,6, **EL MAPEO CONTADO DOS VECES**, dos fuentes: *Change by Design* y *Never Lose a Customer Again* |
+
+> **Y el solape del par no es cualquiera: es el bloque de mapeo de uno contra el
+> bloque de mapeo del otro.** Los dos mandan recorrer el viaje del cliente etapa
+> por etapa, identificar los puntos de contacto y evaluarlos.
+
+**LO QUE ESTO LE APORTA A LA CURA DEL RACIMO DE EXPERIENCIA, y es lo util:**
+
+> **No son dos cirugias independientes que ademas hay que fusionar: son UNA.** El
+> destejido de los dos tiene que **reunir los dos bloques de mapa en uno solo**,
+> porque son el mismo mapa contado dos veces en dos nodos distintos.
+>
+> **Si se destejen por separado quedan dos mapas**, y el par vuelve a aparecer
+> igual que ahora. **Anotado junto a la cura acoplada en la ficha.**
+
+#### 344: consultada la ficha, y la clase se cita con su fuente
+
+**`plan_de_adquisicion_acquire` esta registrado en
+`docs/FICHA_SUBFUSION_GRADIENTE.md` como CONFIRMADA**, bloque **48,3**, corte
+**9**, y nombrado alli **la QUINTA DE LA FORMA QUE PARTE**, con dos fuentes,
+*The Startup Owner's Manual* y *Traction*:
+
+| bloque | de que habla |
+|---|---|
+| **1 a 7** | **el Acquire Plan de Blank**: hipotesis, quien hace que con que presupuesto y que metrica, el pasa o falla antes de cada prueba, instrumentar el sitio, lanzar escalonado, tope de gasto y la plomeria de activacion |
+| **8 a 12** | **el programa Bullseye de Weinberg, entero**: los 19 canales, prueba barata por canal, correrlas y medir, comparar y elegir, y anotar lo aprendido |
+
+> **La clase del par es A y se emite hoy**, y el motivo esta en el banco 9.9: **el
+> solape con `plan_acquire_activate` cae ENTERO en el bloque 1 a 7**, el de Blank.
+> **No toca la juntura.**
+>
+> **Y eso corrige la lectura de las perdidas**: de las cuatro anotadas, **dos son
+> del bloque Bullseye** (los 19 canales y anotar lo que falla) y **por lo tanto no
+> se pierden en esta fusion: se van con el destejido**, a donde sea que el
+> programa de Weinberg acabe viviendo. **Las que de verdad hay que salvar aqui son
+> las otras dos**, el tope bajo por prueba y las pruebas escalonadas.
+
+#### LAS DOS NOMINAS, contadas con el contador y leidas una por una
+
+##### a) Los CUADRANTES DE MERCADO: cinco miembros y casi ningun par en la cola
+
+| | |
+|---|---:|
+| miembros | **5**: `modelo_cuadrantes_mercado`, `clasificacion_mercados_cadena_suministro`, `cuatro_capacidades_mercado`, `estrategia_cuatro_capacidades_mercado`, `cuatro_categorias_desempeno_cadena_suministro` |
+| pares posibles | **10** |
+| en la cola | **5** |
+| **leidos** | **4**, y **los CUATRO en A** (252, 343, 518, 651) |
+| pendiente de cola | **1** (puesto 963) |
+| **nunca en cola** | **CINCO** |
+| aristas internas | **1**, con tres aislados |
+
+> **Cuatro de cuatro repiten y a la familia le faltan seis lecturas**, cinco de
+> ellas fuera de la cola. **Es el mismo perfil de las arenas**: mucha repeticion
+> confirmada y la mayoria de los pares sin encolar.
+>
+> **El contador levanta tres nodos mas** (`ways_to_grow_matrix`,
+> `ways_to_grow_framework`, `strat_map_arenas_estrategicas`) y **la lectura los
+> deja fuera**: hablan de matrices de crecimiento y de arenas, no de los cuadrantes
+> de oferta y demanda.
+
+##### b) El TIPO DE MERCADO: cuatro miembros, y va a salir MEZCLADA
+
+| | |
+|---|---:|
+| miembros | **4**: `determinar_tipo_de_mercado`, `tipo_de_mercado_estrategia_competitiva`, `hipotesis_tipo_mercado`, `entrada_mercado_nuevo` |
+| pares posibles | **6** |
+| **leidos** | **4**: **A** (228), **A** (345), **A** (686), **D** (825) |
+| pendientes de cola | **0** |
+| **nunca en cola** | **2** |
+| aristas internas | **2**, con `hipotesis_tipo_mercado` aislado |
+
+> **Ya tiene un sano dentro, asi que va a salir MEZCLADA**, y le faltan **dos
+> lecturas**, las dos fuera de la cola. **Es de las mas baratas de cerrar.**
+
+**DOS VECINOS QUE EL CONTADOR LEVANTA Y LA LECTURA DEJA FUERA, con su motivo:**
+
+| nodo | por que no entra |
+|---|---|
+| `market_type_revenue_growth` | **consume** el tipo de mercado para proyectar curvas de ingresos; su objeto es la proyeccion |
+| `posicionamiento_por_tipo_de_mercado` | **consume** el tipo para decidir el posicionamiento; su objeto es el mensaje |
+
+> **Los dos tienen pares con la familia en la cola y los cuatro estan pendientes**
+> (1145, 1214, 1323, 1426). **Quedan anotados como vecinos con lectura pendiente**:
+> si alguno saliera A, la familia pasaria de cuatro a cinco o seis. **Es la misma
+> forma que tumbo dos puros, y esta vez queda dicho antes y no despues.**
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado

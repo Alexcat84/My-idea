@@ -774,6 +774,36 @@ dura y antes que ella en el orden de ejecución.**
 >
 > **Y el orden importa**: contar los pares de una nómina incompleta da una
 > respuesta correcta a una pregunta equivocada. **Por eso el contador va primero.**
+
+##### LA DISCIPLINA DEL DICTADO: todo estado pasado va consultado o marcado
+
+**Registrada el 12 ago 2026, y vale para los dos lados de la mesa.**
+
+> **Un encargo que afirma el estado de algo ya leído está citando de memoria salvo
+> que diga lo contrario.** La memoria de un archivo de miles de veredictos es
+> exactamente el sitio donde no hay que confiar.
+
+**LA REGLA:**
+
+> **Todo veredicto o estado del pasado que aparezca en un dictado se CONSULTA
+> antes de usarlo, o se marca explícitamente "a verificar".** Quien escribe el
+> encargo no tiene que consultarlo: tiene que **decir si lo consultó**.
+>
+> **Y quien lo ejecuta lo verifica igual**, porque el coste de comprobar es una
+> consulta y el coste de no hacerlo es un registro falso que después hay que
+> corregir con su corrección declarada encima.
+
+**TRES EJEMPLARES, todos del mismo lado y todos corregidos en el acto:**
+
+| qué decía el dictado | qué había en el archivo |
+|---|---|
+| el par *enfoque contra ventas* **faltaba** | estaba leído en el puesto **303**, en A, y por eso pudo declararse el cuarto puro |
+| el par 300 emparejaba dos nodos **fuera** de la nómina del primer puro | los dos **están** en la nómina, y ese par es uno de los tres que lo hicieron puro |
+| `propuesta_gasto_capital` era una **falsa** de costuras reaparecida | es **CONFIRMADA**, y además el **primer falso negativo** del instrumento |
+
+> **Los tres se detectaron consultando, y ninguno llegó al archivo.** Esa es
+> exactamente la función de la regla: **que el error muera en la consulta y no en
+> el registro.**
 >
 > **Y los dos sub-puros no son un fracaso: son la clase de tarea COMPLETAR LOS
 > PARES DEL PURO con el trabajo ya cuantificado**, seis lecturas uno y dos el
