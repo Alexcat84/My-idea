@@ -3608,3 +3608,72 @@ puestos despues, en el 769. Degradado en el 800.**
 > **4. `design_test_repeat` acumula su segundo gemelo** (puesto 796, con el 723).
 > Cuatro pasos, dos gemelos y ninguna arista propia. **Es el nodo que sostuvo dos
 > veredictos de la familia del encaje** y cada lectura nueva lo deja mas suelto.
+
+---
+
+## 25. EL TRAMO 801 a 812: las familias grandes empiezan a chocar entre ellas
+
+**Doce pares leidos, los doce del nucleo.** Acumulado **812 de 3.388**, global
+**31,0%** de A y **nucleo 38,2%**. El tramo dio **33,3%**. **El proximo
+checkpoint es el de los 900.**
+
+### 25.1 EL RACIMO DE LAS PUERTAS LLEGA A CINCO PARES Y LOS CINCO EN A
+
+**Puesto 801**, con el 275, 302, 356 y 745.
+
+> **Cinco fusiones distintas sobre los mismos ocho nodos**, y ninguna se puede
+> ejecutar sin deshacer las otras cuatro. **Es el argumento mas fuerte del archivo
+> a favor del PROGRAMA UNICO** que el 275 pidio: no son cinco podas, es una sola
+> decision de arquitectura.
+
+### 25.2 LA FAMILIA FINANCIERA DE LA VALIDACION, cuatro nodos y tres que se solapan
+
+| nodo | puesto | clase |
+|---|---:|:---:|
+| `metrics_that_matter_framework` contra `verificar_modelo_ingresos` | 791 | **A** |
+| `validar_modelo_financiero` contra `verificar_modelo_ingresos` | **807** | **A** |
+| `revenue_pricing_hypothesis` contra `verificar_modelo_ingresos` | 679 | D |
+
+> **Tres nodos dicen casi lo mismo con nombres distintos** y el cuarto,
+> `revenue_pricing_hypothesis`, se salva porque es la hipotesis previa y no el
+> calculo. **Sin censar todavia**, y cada uno aporta una pieza real: el numero de
+> pivotes que quedan, los tres escenarios, y el estado de resultados multianual
+> para inversionistas.
+
+### 25.3 EL MARCO DE LAS CUATRO ETAPAS SALE SANO CONTRA DOS DE SUS CUATRO
+
+**Puesto 805, tras el 775.** `cuatro_etapas_llamada_de_ventas` **enfrentado a la
+apertura y a la investigacion, y sano las dos veces**, con la vara resolviendolo
+sin deliberacion: su paso sobre cada etapa es **una linea** y el nodo de la etapa
+trae **el procedimiento**.
+
+> **Eso lo confirma como MARCO y no como hermano**, que es lo que ya se habia
+> dicho en el 775 por la via de las aristas. **Dos metodos distintos, misma
+> conclusion.**
+
+### 25.4 LA FAMILIA DE LOS REGALOS SE SALVA POR CONTRADECIRSE, otra vez
+
+**Puesto 812.** `celebracion_hitos_cliente` manda un gesto **alineado con la
+marca**; `sorprender_cliente_estrategico` prohibe **el logo y los mensajes de
+marca** en el regalo.
+
+> **Es la segunda vez que esta familia se salva por la misma contradiccion**, tras
+> el puesto 564. **La marca en el regalo es la linea divisoria de esta familia**, y
+> ya hay dos pares donde eso es lo unico que separa a los nodos.
+>
+> **Para la mesa eso es una decision de contenido, no de arquitectura**: alguien
+> tiene que decidir si el regalo lleva marca o no, y **la respuesta determina
+> cuantos nodos quedan.**
+
+### 25.5 Dos familias mas que piden contador antes que mesa
+
+> **1. LOS DATOS DEL CLIENTE de Coleman, CUATRO nodos vistos** (puestos 657, 687,
+> 811 y el de seguimiento del 317): `investigar_datos_cliente`,
+> `conexion_personal_emocional`, `personalizacion_investigacion_prospecto` y
+> `seguimiento_informacion_cliente`. **Los pares se contradicen segun con quien se
+> compare**: sanos unos contra otros y dudoso el 811. **Sin contar la familia no se
+> decide nada.**
+>
+> **2. LA VOZ DEL CLIENTE, CINCO nodos vistos** (puesto 806), y uno de ellos,
+> `voz_del_cliente_voc`, **es costura confirmada que bloquea dos pares**. **No se
+> puede decidir de a pares mientras el nodo grande siga sin operar.**
