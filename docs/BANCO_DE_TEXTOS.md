@@ -734,6 +734,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **6** | **la etnografía de campo** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el primero que **nace de un par CRUZADO** entre dos parejas ya declaradas |
 | **7** | la junta asesora | **4** | **6** | **4** | **4** | **SUB-PURO**, y el único donde el par que cruza **los dos momentos** (identificar y formalizar) ya está leído y es A. El puesto **976** lo sube a 4 de 6 |
 | **8** | **los cuadrantes de mercado** | **6** | **15** | **7** | **7** | **SUB-PURO, y el más cargado del inventario**: siete pares leídos y **los siete en A**, sin un solo sano. Añadido el 13 ago 2026 con **corrección declarada**: lo conté en cinco miembros en R18 y son **seis** |
+| **9** | **build-measure-learn** | **5** | **10** | **5** | **5** | **SUB-PURO, el de MÁS MIEMBROS declarado**: cinco pares leídos y los cinco en A. Dos de sus cinco miembros los levantó el **barrido de las A**, no el contador |
 
 > **LECCIÓN DEL 13 ago 2026, con dos sub-puros rotos el mismo día** (el 3 por el
 > puesto 872 y la familia de innovación por el 863): **una familia con muchos
@@ -755,6 +756,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **2** | **2** | `construccion_de_valor_percibido` contra `ecuacion_de_valor_cliente` y contra `ecuacion_de_valor_venta`, **ninguno de los dos en la cola** |
 
 | **8** | **8** | **las ocho fuera de la cola**: ningún par pendiente de la familia de los cuadrantes está encolado |
+| **9** | **5** | puesto **1449**, en la cola, más **cuatro que nunca entraron** |
 | **6** | **3** | las **tres fuera de la cola**: `etnografia_de_proyecto` contra `investigacion_etnografica_ideacion`, y `etnografia_aplicada_en_equipos_multidisciplinarios` contra cada uno de los dos de Cooper |
 
 > **El 6 es el más barato de cerrar de los tres sub-puros**: sus tres lecturas
@@ -1813,3 +1815,37 @@ direcciones:
 > del tramo se resolvieron con la vara.** Cuando esa cifra sube y la de A baja,
 > la cola está en zona de jerarquías. **Las dos juntas dicen lo que ninguna dice
 > sola.**
+
+---
+
+### 9.20 PROCEDIMIENTO: EL BARRIDO DE LAS A CORRE JUNTO AL CONTADOR, SIEMPRE
+
+**Adoptado el 13 ago 2026.** Eleva a **procedimiento obligatorio** lo que §9.15
+había dejado como complemento.
+
+> **Antes de declarar CUALQUIER nómina se corren LOS DOS instrumentos:**
+>
+> **1. EL CONTADOR** (`contar_nombre.py`): levanta candidatos **por el nombre**.
+> **2. EL BARRIDO DE LAS A**: levanta candidatos **por el archivo**. Todo nodo con
+>    un **A vigente** contra cualquier miembro es candidato a miembro.
+>
+> **Los dos levantan; la lectura decide.** Ninguna nómina se declara con uno solo.
+
+**POR QUÉ ES OBLIGATORIO Y NO RECOMENDADO: tres errores, y los tres del mismo
+modo de fallo.** El contador falla cuando **el miembro no lleva el nombre de la
+familia**, y eso no es raro: pasa cada vez que un nodo se llama por su artefacto,
+por su autor o en otro idioma.
+
+| familia | lo que el contador dio | lo que faltaba | el A que ya estaba en el archivo |
+|---|---:|---|---|
+| **el quinto puro**, competencia entre inversores | 3 miembros | `gestion_multiples_term_sheets`, que se llama por el **documento** | **394 y 413** |
+| **los cuadrantes de mercado** | 5 miembros | `marco_analisis_mercado_cadena_suministro`, que se llama por el **método** | **704** |
+| **build-measure-learn** | 3 miembros | `design_test_repeat` y `testing_process_completo`, que se llaman por el **gesto** y por el **proceso** | **723 y 796** |
+
+> **En los tres casos la evidencia ya estaba escrita en el archivo antes de que se
+> declarara la nómina.** No hacía falta leer nada nuevo: hacía falta mirar.
+
+> **Y el coste de no correrlo se mide**: el quinto puro se declaró puro, se
+> degradó a sub-puro y volvió a puro; los cuadrantes se reportaron con cinco
+> miembros y diez pares cuando eran seis y quince. **Ninguno de los dos errores
+> fue de lectura. Los dos fueron de censo.**

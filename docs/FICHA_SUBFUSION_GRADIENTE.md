@@ -3065,9 +3065,43 @@ o sea limpios por dentro:
 > **Su par entra a la cola SIN congelar** por la regla adjudicada: el solape cruza
 > dos junturas, pero el veredicto es invariante.
 
-> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y OCHO
+> **DUODECIMO EJEMPLAR, anadido el 13 ago 2026 desde la relectura R28:**
+>
+> | nodo | veredicto de ESTA ficha | veredicto del intra |
+> |---|---|---|
+> | **`seleccion_ceo_fundador`** (puestos 492 y 673 del intra) | **CONFIRMADA**, bloque 46,8, doce pasos, corte 5, **DOBLE DE LA DECISION DE CEO** | **A** con `asignacion_de_titulos_ejecutivos` (492) **y A** con `errores_comunes_asignacion_roles` (673) |
+>
+> **Dos gemelos declarados, y el primero se leyo hace mucho.** El ejemplar se
+> podia declarar desde el 673 y no se declaro: los doce se han encontrado **uno a
+> uno, cuando una relectura los cruza**, en vez de barriendo. **Queda propuesto un
+> barrido que cruce las confirmadas contra todas las A del archivo de una vez.**
+
+> **DECIMOTERCERO Y CUARTO, el mismo dia y en el mismo par: LA CURA ACOPLADA
+> MAYOR** (puesto 494 del intra).
+>
+> | nodo | veredicto de ESTA ficha |
+> |---|---|
+> | **`producto_minimo_viable`** | **CONFIRMADA**, bloque **80,2**, veintidos pasos, **CINCO narraciones**, el emblema de la averia |
+> | **`principio_calidad_mvp`** | **CONFIRMADA**, bloque 49,2, catorce pasos, **TRES narraciones del mismo MVP** |
+>
+> **Es la primera cura acoplada de COSTURADA contra COSTURADA**, y por eso son
+> TRES movimientos y no dos: destejer el emblema, destejer al pariente, **y solo
+> entonces decidir si lo que queda se funde.** Precedente exacto: el puesto **341**,
+> blueprint contra journey.
+>
+> **Su par queda CONGELADO**, y con el motivo mas limpio que ha dado la regla de la
+> dependencia: **si el destejido de `principio_calidad_mvp` conserva su narracion
+> de la CALIDAD (pasos 1 a 5) el par deja de repetir; si conserva la del CONJUNTO
+> MINIMO (11 a 14) sigue repitiendo.** No se puede saber antes de la cirugia.
+>
+> **Lo que hay que salvar y ninguna de las dos cirugias amenaza**: la distincion
+> entre **defectos que impiden aprender** (inaceptables) y **baja fidelidad
+> estetica** (aceptable), y el aviso de **no dar por hecho que el estandar de
+> calidad de la industria es lo que el cliente valora**.
+
+> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y ONCE
 > confirmadas o fuera de cola con gemelo** (277, 285, 331, **361**, **374**,
-> **386**, **392**, **452**). **Las cuatro confirmadas son
+> **386**, **392**, **452**, **492**, y la pareja del **494**). **Las cuatro confirmadas son
 > las unicas que necesitan cura acoplada**: en las falsas no hay nada que
 > destejer.
 

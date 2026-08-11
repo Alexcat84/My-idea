@@ -38,8 +38,8 @@ son grandes y por eso entran a muchos pares.
 
 | cuenta | qué significa | hoy | lista |
 |---|---|---:|---|
-| **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | **12** | 592, 599, 724, 738, 755, 784, 798, 827, 830, 831, 835, **851** |
-| **EN COLA** | el texto va a cambiar, se relee igual | **15** | los doce de arriba **más 361, 374 y 386** |
+| **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | **13** | 592, 599, 724, 738, 755, 784, 798, 827, 830, 831, 835, 851, **494** |
+| **EN COLA** | el texto va a cambiar, se relee igual | **19** | los trece de arriba **más 361, 374, 386, 392, 492 y 915** |
 
 **Actualización del 13 ago 2026**: el **915** entra en cola sin congelar, y es el primero donde el test de POSICIÓN y el de DEPENDENCIA se contradicen (ver informe §37.1). Cola a **16**.
 
@@ -2221,3 +2221,38 @@ el instrumento vuelva a correr.
 > titulo del hijo, y **penalizar el candidato cuando los verbos pertenecen a
 > familias distintas** (observar contra construir, listar contra definir). No se
 > toca el umbral: se anade una senal.
+
+---
+
+## LA CURA ACOPLADA MAYOR: el primer destejido del plan viene con gemelo costurado
+
+**Registrado el 13 ago 2026, puesto 494 del cribado intra.**
+
+`producto_minimo_viable` es **el emblema de la avería** (22 pasos, cinco
+narraciones, bloque 80,2, el más alto del archivo) y es **el primer destejido del
+plan**. Su gemelo, `principio_calidad_mvp`, **también es costura confirmada** (14
+pasos, tres narraciones).
+
+> **No son dos movimientos: son TRES.** Destejer el emblema, destejer al pariente,
+> **y solo entonces decidir si lo que queda se funde.** Hacerlo en otro orden
+> obliga a rehacer.
+
+**Y el par queda CONGELADO por dependencia directa**: si el destejido de
+`principio_calidad_mvp` conserva su narración de **la calidad** (pasos 1 a 5), el
+par deja de repetir; si conserva la del **conjunto mínimo** (11 a 14), sigue
+repitiendo. **No se puede saber antes de la cirugía.**
+
+**Precedente exacto**: el puesto **341** (`blueprint_de_experiencia` contra
+`customer_journey_mapping`), donde los dos estaban costurados y el solape era mapa
+contra mapa. **Es la segunda vez que aparece esta forma, y ésta cae sobre el nodo
+que abre el plan.**
+
+### PROPUESTO: el barrido de confirmadas contra las A
+
+**Van DOCE ejemplares de cura acoplada encontrados de uno en uno**, cuando una
+relectura los cruza. El del puesto 492 **se podía declarar desde el 673** y no se
+declaró.
+
+> **Un barrido que cruce las costuras confirmadas contra todas las A del archivo
+> diría cuántas hay de una vez**, en vez de irlas encontrando. Es de solo lectura
+> y no adjudica nada: **cambia el goteo por una cifra.**

@@ -2980,6 +2980,142 @@ con **cinco miembros y diez pares posibles**. **Son SEIS.**
 > **siete pares leidos y los SIETE en A**, sin un solo sano. **Le faltan ocho
 > lecturas y ninguna esta en la cola.**
 
+### TANDA R28, VIGESIMOCUARTA CIEGA: seis de seis
+
+**Acumulado: 168 releidas, de las cuales 144 a ciegas. Discrepancias: UNA**, el
+395.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **486** | `build_measure_learn` contra `ciclo_construir_medir_aprender` | **partir de la hipotesis sacada de los dos Canvas** (el paso 0 del primero) y **repetir el ciclo cada vez mas rapido** | de **lector** |
+| **487** | `cash_is_king` contra `diferencia_ganancia_flujo_caja` | **revisar el saldo cada semana**, o cada dia en momento critico, y **aprender a leer el estado de flujo** aunque el lenguaje parezca tecnico; del otro lado, **proyectar a doce o dieciocho meses**, **identificar el momento en que crecer deja sin liquidez**, y **conseguir lineas de credito ANTES** de que falte el efectivo | de **lector** |
+| **488** | `gestion_de_portafolio_gates_go_kill` contra `sistema_gates_go_kill` | **los seis criterios** de evaluacion y **matar en vez de reducir recursos**; del otro lado, el **scorecard por gate** y **anotar la decision y el motivo** | de **lector** |
+| **489** | `periodo_incubacion_mental` contra `wallas_etapa_incubacion` | **alternar entre varios problemas** en vez de agotar cada uno, y **confiar en que la inactividad aparente es productiva**; del otro lado, **registrar en que momentos surgen las ideas** para hallar el patron propio | de **lector** |
+| **492** | `asignacion_de_titulos_ejecutivos` contra `seleccion_ceo_fundador` | **mapear el capital humano, social y financiero** que aporta cada fundador, y **documentar por que se asigno cada titulo**, que es mas fino que el *documenta el acuerdo* del otro | de **lector** |
+| **494** | `principio_calidad_mvp` contra `producto_minimo_viable` | **repartida por bloques y con una advertencia**, ver abajo | de **lector** |
+
+#### 494: CURA ACOPLADA MAYOR, y es la primera de COSTURADA CONTRA COSTURADA
+
+**Consultada la ficha antes de registrar. Los DOS son costuras confirmadas**, y
+eso cambia la forma del arreglo:
+
+| nodo | veredicto de la ficha |
+|---|---|
+| **`producto_minimo_viable`** | **CONFIRMADA**, bloque **80,2**, el mas alto del archivo. **VEINTIDOS pasos, CINCO narraciones del MVP en fila.** Es **el emblema de la averia** |
+| **`principio_calidad_mvp`** | **CONFIRMADA**, bloque **49,2**, catorce pasos, **TRES NARRACIONES del mismo MVP**, y la ficha ya lo llamaba *pariente directo del emblema* |
+
+> **Las curas acopladas anteriores eran COSTURADA contra GEMELO SANO**: se destejia
+> uno y se fundia con el otro, en un acto. **Esta es COSTURADA contra COSTURADA**,
+> y por eso son TRES movimientos y no dos: **destejer el emblema, destejer al
+> pariente, y solo entonces decidir si lo que queda se funde.**
+>
+> **Tiene precedente exacto**: el puesto **341**, `blueprint_de_experiencia`
+> contra `customer_journey_mapping`, donde los dos estaban costurados y el solape
+> era mapa contra mapa. **Es la segunda vez que aparece esta forma, y esta cae
+> sobre el primer destejido del plan.**
+
+**CONGELADO, y por el motivo mas limpio que ha dado la regla de la dependencia:**
+
+> **El veredicto DEPENDE de que sobreviva, y de forma directa.** Los catorce pasos
+> de `principio_calidad_mvp` son tres narraciones: **la calidad en el MVP** (1 a
+> 5), **lanzar rapido y aceptar el fallo** (6 a 10) y **el conjunto minimo de
+> caracteristicas** (11 a 14). **El solape con el emblema esta casi todo en la
+> TERCERA.**
+>
+> **Si el destejido conserva la narracion de la CALIDAD, el par deja de repetir y
+> seria D. Si conserva la del CONJUNTO MINIMO, sigue repitiendo y es A.** No hay
+> forma de saberlo antes de la cirugia. **CONGELADO.**
+
+**LA PERDIDA, repartida y verificada como pedia el dictado:**
+
+| sobrevive al destejido y hay que salvarlo | se va con el destejido |
+|---|---|
+| de `principio_calidad_mvp`, **bloque 1 a 5**: preguntarse si pulir una caracteristica contribuye al aprendizaje, lanzar versiones simplificadas y medir la reaccion real, **no dar por hecho que el estandar de calidad de la industria es lo que el cliente valora**, y **distinguir los defectos que impiden aprender de la baja fidelidad estetica** | del **bloque 11 a 14**, que es el que repite: identificar las funcionalidades criticas, excluir las secundarias, lanzar la minima y monitorear, iterar con el uso real |
+| del emblema: **lo que quede tras colapsar sus cinco narraciones**, que hoy no se puede nombrar | |
+
+> **La distincion entre defecto que impide aprender y fealdad aceptable es lo mas
+> valioso del par**, y es lo unico que ninguna de las dos cirugias amenaza.
+
+#### 487: EL PRIMER PURO pasa los DOS instrumentos, y sigue en pie
+
+**`cash_is_king` YA estaba dentro**, y esta es la cifra:
+
+| | |
+|---|---:|
+| miembros | **3**: `cash_is_king`, `diferencia_ganancia_flujo_caja`, `profit_vs_cash` |
+| pares posibles | **3** |
+| en la cola | **3** |
+| **leidos** | **3** (300, **487**, 544) |
+| **en A** | **3** |
+| **candidatos levantados por el BARRIDO DE LAS A** | **NINGUNO** |
+
+> **Es el primer racimo del archivo que pasa los DOS instrumentos**: el contador
+> por nombre no levanta un cuarto miembro que la lectura acepte, **y el barrido de
+> las A no levanta ni un candidato.** Ningun nodo del catalogo tiene una A contra
+> ninguno de los tres.
+>
+> **El primer puro se queda como esta, y ahora con la prueba que a los otros les
+> falto.**
+
+#### 486: la familia de BUILD-MEASURE-LEARN es de CINCO, y el barrido levanta dos
+
+**El encargo daba tres nodos. Con el contador y el barrido de las A corriendo
+juntos salen CINCO.**
+
+| como entro | nodo | evidencia |
+|---|---|---|
+| dictado | `build_measure_learn` | |
+| dictado | `ciclo_construir_medir_aprender` | |
+| dictado | `ciclo_crear_medir_aprender` | |
+| **barrido de las A** | **`design_test_repeat`** | **723 A** contra `ciclo_construir_medir_aprender` |
+| **barrido de las A** | **`testing_process_completo`** | **796 A** contra `design_test_repeat` |
+
+**LA NOMINA:**
+
+| | |
+|---|---:|
+| miembros | **5** |
+| pares posibles | **10** |
+| en la cola | **6** |
+| **leidos** | **5**, y **los CINCO en A** (213, 376, 486, 723, 796) |
+| pendiente de cola | **1** (puesto **1449**) |
+| **nunca en cola** | **4** |
+| aristas internas | **1** entre cinco |
+
+> **SUB-PURO de cinco miembros, y es el mas grande declarado hasta hoy.** Cinco
+> pares leidos, cinco A, cero sanos.
+>
+> **Y la forma es la peor**: **una sola arista entre cinco nodos** que dicen el
+> mismo bucle de cuatro tiempos. **Dos libros lo cuentan cuatro veces y el grafo
+> conoce una sola de esas relaciones.**
+
+> **LA LECTURA QUE DECIDE LOS DOS CANDIDATOS, dicha entera**: `design_test_repeat`
+> es el bucle desnudo con vocabulario de Value Proposition Design, prototipar,
+> testear, aprender y repetir. **Entra.** `testing_process_completo` es el mismo
+> bucle **con el instrumental encima**, los dos lienzos, la tarjeta de test, la de
+> aprendizaje y el termometro; **entra tambien**, porque su paso 4 es el bucle y
+> el resto es la caja de herramientas alrededor, no otro objeto.
+
+#### 492: `seleccion_ceo_fundador` es el DUODECIMO ejemplar de la cura acoplada
+
+| eje | veredicto |
+|---|---|
+| **la ficha** | **CONFIRMADA**, bloque 46,8, doce pasos, corte **5**, **DOBLE DE LA DECISION DE CEO**: Founder's Dilemmas en 1 a 5 y Horowitz en 6 a 12 |
+| **el intra** | **A** en este puesto 492, y **otra A en el 673** contra `errores_comunes_asignacion_roles` |
+
+> **Costurada confirmada con DOS gemelos declarados: cura acoplada.** **Y el
+> primero de los dos, el 673, se leyo hace mucho.** El ejemplar se podia declarar
+> desde entonces y no se declaro, porque los ejemplares se han ido encontrando
+> **uno a uno, cuando una relectura los cruza**, en vez de barriendo.
+>
+> **Lo que esto pide, y lo dejo propuesto**: un barrido que cruce **las costuras
+> confirmadas contra todas las A del archivo**, de una vez. **Van doce ejemplares
+> encontrados de uno en uno; el barrido diria cuantos hay.**
+
+**Por el banco 9.9 el par se juzga HOY**: el solape, discutir y negociar quien
+sera director general sin dar por hecho que es la persona de la idea, **cae entero
+en el bloque 1 a 5** y la juntura esta en el 5. **En cola sin congelar.**
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
