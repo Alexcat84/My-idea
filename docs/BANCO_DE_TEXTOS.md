@@ -702,6 +702,46 @@ herramientas muertas**, `Delicious` en uno y `Social Mention` en los dos.
 > sanos. **Ahí la pregunta no es cuál sobra sino cuántos nodos quiere el
 > catálogo**, y **se lee entero** antes de tocar nada.
 
+#### TABLA VIVA DE LOS PUROS, al 12 ago 2026
+
+**Esta tabla es la fuente. Las declaraciones individuales de más abajo quedan
+CONGELADAS como historia: dicen lo que se sabía el día que se escribieron.**
+Cuando choquen con esta tabla, **manda la tabla**.
+
+| # | racimo | miembros | pares posibles | leídos | en A | estado hoy |
+|---:|---|---:|---:|---:|---:|---|
+| **1** | **el efectivo contra la ganancia** | 3 | 3 | **3** | 3 | **PURO**, re-verificado con el contador el 12 ago |
+| **2** | **la ecuación de valor** | 3 | 3 | **3** | 3 | **PURO**, y el único con **los tres pares releídos a ciegas** |
+| **3** | el sales roadmap | **5** | **10** | 4 | 4 | **SUB-PURO**: el trío es puro puertas adentro, la familia no está cerrada |
+| **4** | la etapa de investigación en la venta | **4** | **6** | 4 | 4 | **SUB-PURO**, por lo mismo |
+
+**Lo que le falta a cada sub-puro para cerrarse, nombrado:**
+
+| # | lecturas que faltan | cuáles |
+|---:|---:|---|
+| **3** | **6** | puestos 872, 918, 1023, 1306, 1330 y el par `customer_validation_sales_roadmap` contra `sales_roadmap`, **que nunca entró a la cola** |
+| **4** | **2** | puesto 862 y el par `etapa_de_investigacion` contra `investigacion_como_habilidad_clave`, **que nunca entró a la cola** |
+
+> **DOS DE CUATRO PUROS CAYERON EN DOS DÍAS, y los dos por la misma causa: la
+> nómina.** El tercero se declaró sobre una nómina reconstruida por el cribado y
+> el cuarto sobre una **censada**. **Ninguna de las dos protegió.**
+>
+> **Los dos que quedan de pie son los dos que se re-verificaron con el contador**,
+> y **los dos son de tres miembros**. **Cuanto más chica la familia, menos sitio
+> hay donde esconder un cuarto miembro.**
+
+> **LA REGLA QUE ESTO FIJA, y es de procedimiento**: **un puro no se declara sin
+> pasar antes el contador sobre su nómina.** La condición dura mira los pares; el
+> contador mira los miembros. **Faltaba el segundo paso y costó dos
+> declaraciones.**
+>
+> **Y los dos sub-puros no son un fracaso: son la clase de tarea COMPLETAR LOS
+> PARES DEL PURO con el trabajo ya cuantificado**, seis lecturas uno y dos el
+> otro. **Antes eran dos declaraciones firmes y falsas; ahora son ocho lecturas
+> dirigidas.**
+
+---
+
 **PRIMER PURO DECLARADO: `El efectivo contra la ganancia`.** Verificado en el
 archivo de veredictos:
 
@@ -877,6 +917,19 @@ Owner's Manual*. Verificado contando el jsonl:
 > **`refinar_sales_roadmap`**, seis pasos contra tres y cinco, superconjunto claro.
 > **Un puro con superviviente identificado no necesita ni mesa ni deliberación:
 > necesita que alguien escriba el texto y se lleve lo que se pierde.**
+
+> **CORRECCIÓN DECLARADA DEL 12 ago 2026: DEGRADADO A SUB-PURO.** El puesto
+> **319** leyó `customer_validation_sales_roadmap` contra
+> `sales_roadmap_vs_sales_force`, **dos nodos de la misma familia que no estaban
+> en la nómina**, y salió **A**.
+>
+> **La familia real es de CINCO**: 10 pares posibles, **4 leídos y los cuatro en
+> A**, cinco pendientes en cola (872, 918, 1023, 1306, 1330) y **uno que nunca
+> entró** (`customer_validation_sales_roadmap` contra `sales_roadmap`).
+>
+> **El trío sigue siendo puro puertas adentro y sigue teniendo superviviente
+> propuesto.** Lo que ya no se puede decir es que la familia esté cerrada.
+> **Le faltan SEIS lecturas.** Estado vigente en la tabla viva de arriba.
 
 **CUARTO PURO DECLARADO (12 ago 2026): `la etapa de investigación en la venta`**,
 de *SPIN Selling*. **Y es el primero declarado sobre una nómina CENSADA**, o sea

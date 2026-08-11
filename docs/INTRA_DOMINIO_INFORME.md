@@ -1648,6 +1648,75 @@ cierre en venta grande.**
 de los tres forasteros de *Traction* en familias de Rackham (con
 `tacticas_cierre_ventas` y `compromiso_linea_tiempo_cliente`).
 
+### TANDA R15, UNDECIMA CIEGA: seis de seis
+
+**Acumulado: 90 de 90, de los cuales 66 a ciegas.** Perdidas verificadas contra
+el grafo.
+
+| puesto | el par | que se pierde | tipo |
+|---:|---|---|---|
+| **307** | `apertura_efectiva_llamada_venta` contra `apertura_llamada_venta_grande` | **veinte-por-ciento-de-preliminares** como tope de tiempo; **retoma-el-control** si el comprador pregunta por producto demasiado pronto; y **el-mito-de-la-primera-impresion**, que en venta grande la apertura pesa poco | de **lector** |
+| **308** | `cofundar_con_amigos_familia_riesgos` contra `riesgo_cofundadores_relacion_previa` | **firewalls**, mecanismos formales para separar lo personal de lo profesional; **proyecto-pequeno-de-prueba** antes de comprometerse; y **trabajaste-de-verdad**, revisar si ya trabajaron juntos y no solo si se conocen | de **lector** |
+| **312** | `produccion_scheduling_balance_objetivos` contra `programacion_produccion` | casi nada: **calco con reparto menor**, los mismos lote economico, run-out time y balance de los tres objetivos, en distinto orden | de **lector** |
+| **317** | `investigar_datos_cliente` contra `seguimiento_informacion_cliente` | **cuenta-tu-algo-primero** para animar al cliente a contar; **escucha-enfocada** para captar lo que sale solo; **razon-declarada-vs-razon-real** de la compra; y **fecha-del-dato**, registrar cuando se obtuvo y cuando se actualizo | de **lector** |
+| **319** | `customer_validation_sales_roadmap` contra `sales_roadmap_vs_sales_force` | **calco con reparto menor**: uno pone el detalle de quien decide y donde esta el presupuesto, el otro la regla de no contratar vendedores hasta validar | de **lector** |
+| **320** | `estrategia_anuncios_sociales_respuesta_indirecta` contra `social_ads_indirect_response` | **migrar-gradualmente** la audiencia hacia conversion; **ventanas-largas** de medicion frente a la publicidad de busqueda; y **contenido-de-mision**, explicar el proposito de la marca y no solo el producto | de **lector** |
+
+#### 307: LA FAMILIA DE LAS ETAPAS DE RACKHAM, anotada y sin censar
+
+**La apertura entra al inventario, y con ella se ve el conjunto.**
+
+> *SPIN Selling* divide la llamada en **cuatro etapas**: **Preliminares**
+> (apertura), **Investigacion**, **Demostracion de capacidad** y **Obtencion de
+> compromiso**. **El cribado ya toco las cuatro por separado**:
+>
+> | etapa | donde aparecio |
+> |---|---|
+> | **apertura** | puesto **307**, este par |
+> | **investigacion** | el sub-puro de cuatro nodos (209, 278, 303, 800) |
+> | **demostracion** | dentro del racimo del cierre y en `cuatro_etapas_llamada_de_ventas` |
+> | **compromiso** | el racimo censado `El avance y el compromiso en la venta` |
+
+> **Queda anotada como FAMILIA VECINA del racimo del cierre en venta grande, y no
+> se amplia ningun censo.** La nomina la dira el contador cuando le toque: **hoy
+> solo se sabe que las cuatro etapas tienen nodos y que tres de las cuatro ya
+> tienen familia propia medida.**
+>
+> **El marco que las une, `cuatro_etapas_llamada_de_ventas`, ya salio en el puesto
+> 775 y se comporta como marco y no como hermano**: enlaza a dos miembros de la
+> familia de investigacion.
+
+#### 319: EL TERCER PURO TAMBIEN CAE, y por el mismo motivo que el cuarto
+
+**Contado con `scripts/contar_nombre.py` y el jsonl.**
+
+> **`customer_validation_sales_roadmap` y `sales_roadmap_vs_sales_force` son de la
+> misma familia que el trio**, leidos uno por uno: el primero define quien influye
+> y decide, donde esta el presupuesto y cuantas llamadas cuesta cerrar; el segundo
+> manda escribir paso a paso el camino a una venta repetible y **no contratar
+> vendedores hasta validarlo**. **Los dos son el mapa de ventas.**
+
+| | trio | familia real |
+|---|---:|---:|
+| miembros | 3 | **5** |
+| pares posibles | 3 | **10** |
+| leidos | 3 | **4** (192, 200, 255 y **319**) |
+| en A | 3 | **4 de 4** |
+| pendientes de cola | 0 | **5** (872, 918, 1023, 1306, 1330) |
+| nunca en cola | 0 | **1** (`customer_validation_sales_roadmap` contra `sales_roadmap`) |
+
+> **CORRECCION DECLARADA: el TERCER PURO queda degradado a SUB-PURO.** El trio
+> sigue siendo puro puertas adentro y **sigue teniendo superviviente propuesto**,
+> `refinar_sales_roadmap`, de la relectura R4. **Lo que ya no se puede decir es que
+> la familia este cerrada.**
+>
+> **Le faltan SEIS lecturas**, cinco en cola y una que nunca entro. **Es mas caro
+> de cerrar que el sub-puro de la investigacion, que necesita dos.**
+
+**Y el sexto nodo que el contador levanta, `optimizacion_mercado_multilado`, NO
+entra**: menciona el roadmap de ventas de pasada y su objeto es otro. **El script
+lo trae, la lectura lo deja fuera.**
+
 ---
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
