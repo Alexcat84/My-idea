@@ -6313,3 +6313,101 @@ son el registro de por que hubo una correccion.
 > **LA LECCION DE METODO, que es la que vale para el proximo barrido**: **una
 > regla abolida no se busca solo en la forma que la nombra.** Se busca tambien en
 > **su espejo**, y en este caso el espejo era el 34% del defecto.
+
+---
+
+## 42. CHECKPOINT DE LOS 1.000
+
+**Cincuenta y ocho pares leidos de una vez, del 943 al 1.000, los cincuenta y ocho
+del nucleo.**
+
+### 42.1 EL MARCADOR, recomputado del archivo
+
+| | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **1.000** | **289** | 88 | 5 | 618 | **28,9%** |
+| **NUCLEO** | **845** | **288** | 86 | 5 | 466 | **34,1%** |
+| compras | 155 | 1 | 2 | 0 | 152 | 0,6% |
+
+**La cola entera son 3.388 pares. Van 1.000: el 29,5%.**
+
+### 42.2 LA CURVA POR CENTENAS: la meseta se rompe hacia abajo
+
+| centena | tasa de A |
+|---|---:|
+| 201 a 300 | 54,0% |
+| 301 a 400 | 51,0% |
+| 401 a 500 | 39,0% |
+| 501 a 600 | 32,0% |
+| 601 a 700 | 21,0% |
+| 701 a 800 | 24,0% |
+| 801 a 900 | 25,0% |
+| **901 a 1.000** | **18,0%** |
+
+> **La centena mas sana de todo el cribado**, y la primera que baja de veinte.
+> **La meseta del 21 al 25 que el checkpoint de los 900 describio no era una
+> meseta: era el tramo medio de una bajada que sigue.**
+>
+> **Y el cierre lo dice mas fuerte que el promedio: los ultimos VEINTIDOS pares,
+> del 979 al 1.000, dieron CERO A.** Es la racha de sanos mas larga del ejercicio.
+
+**LA PROYECCION SE REVISA, como se prometio.** En el checkpoint de los 900 estimé
+entre 550 y 620 duplicados mas en lo que falta, con la meseta del 25%. **Con la
+centena nueva en 18%, esa cifra baja**: si el ritmo de las dos ultimas centenas
+(21,5% de media) se sostiene sobre los 2.388 pares que faltan, salen **unos 510**;
+si sigue bajando, menos.
+
+> **Sigue siendo proyeccion.** Lo que si es medicion es la direccion, y ya lleva
+> **siete centenas seguidas** apuntando al mismo lado.
+
+### 42.3 POR QUE ESTA CENTENA ES DISTINTA, y no es azar
+
+**Trece de los veintidos pares finales se resolvieron con LA VARA, y los trece con
+la misma forma**: una madre que nombra un paso en una linea y un hijo que trae el
+procedimiento entero.
+
+> **Es exactamente la figura que el barrido `paso_contra_nodo.py` salio a contar
+> el mismo dia**, y que la muestra pineada midio en **79% de jerarquia sana**.
+>
+> **Los dos ejes se confirman entre si sin haberse coordinado**: el cribado la
+> encuentra par por par y el barrido la cuenta de golpe. **Cuando el cribado entra
+> en una zona donde esta figura abunda, la tasa de A se desploma**, porque esta
+> figura **no es duplicacion: es jerarquia sin cablear.**
+
+**Y la lectura de fondo del checkpoint es esa:**
+
+> **La cola se ordeno por similitud, y la similitud alta caza duplicados. La
+> similitud media caza JERARQUIAS.** Por eso la tasa de A baja: **no es que quede
+> menos por arreglar, es que lo que queda es de otra clase**, y la clase que queda
+> es la barata.
+
+### 42.4 LO QUE ESTOS CINCUENTA Y OCHO PARES MOVIERON
+
+| que | donde |
+|---|---|
+| **el SEGUNDO PURO degrada a sub-puro** | puesto **950**: `construccion_de_valor_percibido` entra como cuarto miembro de la ecuacion de valor por el barrido de las A |
+| **el racimo de la SUPERVISION DE LA IA pasa a MEZCLADO** | puesto **993**: primer par interno sano, y no es de los cuatro cruzadores |
+| **la familia de los CUADRANTES DE MERCADO cierra su cola** | puesto **963**: cinco pares leidos y los cinco en A; le quedan cinco que nunca entraron |
+| **el sub-puro de la JUNTA ASESORA avanza a 4 de 6** | puesto **976**, los cuatro en A |
+| **`retention_metrics` VUELVE a cura acoplada** | puesto **969**: el gemelo que le faltaba, con correccion declarada sobre mi propia nota del 848 |
+| **la fase ADOPT no esta doblada: esta invadida** | puesto **965**: sus dos nodos son sanos entre si, y la duplicacion corre hacia la familia de la tribu |
+| **cuarto par cruzado del pivote, y el primero que separa los dos criterios** | puesto **968**: con un nodo por PUERTA sobrevive entero, con un nodo por LIBRO no |
+| **octava de las veinte fuera de cola, leida** | puesto **974**, `gestion_cuentas_por_cobrar` |
+
+### 42.5 LA REGLA ADJUDICADA, trabajando dos veces en el cierre
+
+**Los puestos 998 y 999 enfrentan el mismo emblema**, `lienzo_modelo_negocio`, el
+nodo de **diecisiete pasos** que repite *completar los nueve bloques* en siete de
+ellos.
+
+> **Por POSICION, cualquier solape con ese nodo toca alguna juntura.** Si la
+> posicion siguiera siendo test, **los dos pares estarian congelados.**
+>
+> **Por DEPENDENCIA, los dos son invariantes**: sobreviva la copia que sobreviva,
+> el lienzo de modelo de negocio seguira siendo un lienzo distinto del de
+> propuesta de valor (998) y seguira siendo el insumo del plan de tecnologia
+> (999). **Los dos se emiten y se encolan.**
+>
+> **La adjudicacion del 13 ago 2026 se paga sola en el mismo dia en que se
+> escribio**: dos veredictos que estarian bloqueados estan emitidos, con su
+> relectura anotada y sin haber juzgado nada que dependa de la cirugia.

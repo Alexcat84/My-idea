@@ -727,7 +727,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | # | racimo | miembros | pares posibles | leídos | en A | estado hoy |
 |---:|---|---:|---:|---:|---:|---|
 | **1** | **el efectivo contra la ganancia** | 3 | 3 | **3** | 3 | **PURO**, re-verificado con el contador el 12 ago |
-| **2** | **la ecuación de valor** | 3 | 3 | **3** | 3 | **PURO**, y el único con **los tres pares releídos a ciegas** |
+| **2** | la ecuación de valor | **4** | **6** | 4 | 4 | **SUB-PURO desde el 13 ago 2026**, degradado con corrección declarada: el puesto **950** trae un cuarto miembro por el **barrido de las A** |
 | **3** | el sales roadmap | **5** | **10** | 5 | 4 | **MEZCLADO desde el 13 ago 2026**: el puesto **872** sale D y rompe el sub-puro |
 | **4** | la etapa de investigación en la venta | **4** | **6** | **5** | **5** | **SUB-PURO a UNA lectura de cerrarse**: el 862 sale A; falta un par que nunca entró a la cola |
 | **5** | la competencia entre inversores | **4** | **6** | 5 | 5 | **SUB-PURO** desde el 13 ago 2026, **degradado con corrección declarada**: el contador se quedó en tres y el cuarto miembro se llamaba distinto |
@@ -747,6 +747,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **3** | **5** | puestos 918, 1023, 1306, 1330 y el par `customer_validation_sales_roadmap` contra `sales_roadmap`, **que nunca entró a la cola**. El 872 ya se leyó y salió **D** |
 | **4** | **1** | solo el par `etapa_de_investigacion` contra `investigacion_como_habilidad_clave`, **que nunca entró a la cola**. Una lectura dirigida lo cierra, y sería el **primer PURO de cuatro miembros** |
 | **7** | **3** | puestos **976** y **1190**, los dos en la cola, más `identificar_consejo_asesores` contra `formalizar_junta_asesora`, **que nunca entró** |
+| **2** | **2** | `construccion_de_valor_percibido` contra `ecuacion_de_valor_cliente` y contra `ecuacion_de_valor_venta`, **ninguno de los dos en la cola** |
 | **5** | **1** | puesto **1030**, `gestion_multiples_term_sheets` contra `leverage_en_negociacion_con_vcs`, **en la cola**. Si sale A, es **PURO de CUATRO**, el primero de ese tamaño |
 | **6** | **3** | las **tres fuera de la cola**: `etnografia_de_proyecto` contra `investigacion_etnografica_ideacion`, y `etnografia_aplicada_en_equipos_multidisciplinarios` contra cada uno de los dos de Cooper |
 
