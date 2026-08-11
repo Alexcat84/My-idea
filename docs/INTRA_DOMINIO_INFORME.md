@@ -9378,3 +9378,124 @@ ACTO y su tamano.** En este tramo se aplico **tres veces**:
 > y 884 estan sanos.** Por cada par que hay que fusionar hay casi tres que solo
 > habia que leer para descartar. **El cribado no esta encontrando averias: esta
 > midiendo cuantas NO hay.**
+
+---
+
+## 57. TRAMO 1301-1340: la tercera condicion de la IA cae del mismo lado
+
+### 57.1 EL MARCADOR
+
+| medida | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **1.340** de 3.388 | 322 | 89 | 7 | 922 | **24,0%** |
+| **NUCLEO por separado** | **1.185** | 321 | 87 | 7 | 770 | **27,1%** |
+| **el tramo 1301-1340** | **40** | **2** | 0 | 0 | 38 | **5,0%** |
+
+**Sin huecos. Ningun nodo se toco.** La vara resuelve **14 de 40, el 35%**.
+
+### 57.2 LA TERCERA CONDICION DEL RACIMO DE LA IA, Y TAMBIEN SANA
+
+**El puesto 1339**, `human_in_the_loop_ia` contra `jagged_frontier_ia`, es **el
+tercero de los cuatro cruces** que la seccion 11 dejo escritos.
+
+| condicion | puesto | clase |
+|---|---:|:---:|
+| `comprension_capacidades` contra `principio_humano_en_el_loop` | 1211 | **D** |
+| `comprension_capacidades` contra `human_in_the_loop_ia` | 1239 | **D** |
+| **`jagged_frontier_ia` contra `human_in_the_loop_ia`** | **1339** | **D** |
+| `jagged_frontier_ia` contra `principio_humano_en_el_loop` | **1451** | **pendiente** |
+
+> **Y las tres tienen la MISMA forma, que es lo que hace fuerte al conjunto.** En
+> las tres, **un nodo MAPEA la maquina** (lista las tareas, prueba con casos
+> variados, anota donde rinde bien y donde mal) **y despacha la supervision humana
+> en UNA LINEA**; y el otro nodo **es esa linea entera** (define la frontera de
+> autonomia, revisa cada respuesta, registra las alucinaciones, dobla la revision
+> en lo critico).
+>
+> **No son tres lecturas independientes que casualmente coinciden: son la misma
+> relacion leida tres veces entre cuatro nodos distintos.**
+>
+> **La seccion 11 escribio que si los cuatro cruces salieran D, el racimo se parte
+> en dos.** Van **tres de cuatro**. **Queda el 1451 y de el depende.** No lo
+> adelanto, pero la mesa debe saber que llega con tres votos puestos y una sola
+> lectura por delante.
+
+### 57.3 TERCER SUBCONJUNTO ESTRICTO DEL EJERCICIO
+
+**El puesto 1332**, `valor_presente` dentro de `metodo_valor_presente_neto`: los
+**cuatro** pasos del primero estan enteros en los **seis** del segundo y en el
+mismo orden.
+
+| los tres subconjuntos estrictos | puesto | perdida |
+|---|---:|---|
+| `disenar_tests_pass_fail` en `diseno_experimentos_pass_fail` | 511 | **cero** |
+| `design_test_repeat` en `desarrollo_en_espiral` | 1182 | **cero**, y cruza libros |
+| **`valor_presente` en `metodo_valor_presente_neto`** | **1332** | **cero** |
+
+> **En los tres la direccion de la fusion esta FORZADA y no hay reparto por bloques
+> que hacer.** Son los A mas baratos del archivo: **el nodo que muere no tiene ni
+> una linea propia.**
+
+### 57.4 EL OCTAVO MIEMBRO DEL RACIMO DEL CIERRE SE SEPARA POR TERCERA VEZ
+
+**El puesto 1333**, `riesgo_tecnicas_cierre_venta_compleja` contra
+`tacticas_cierre_ventas`, **y los dos dicen lo contrario:**
+
+| nodo | que manda |
+|---|---|
+| `riesgo_tecnicas_cierre_venta_compleja` (Rackham) | **no presiones el cierre** si la venta es compleja o el comprador es profesional |
+| `tacticas_cierre_ventas` (**Weinberg**) | **pide un si o un no explicito** al final y **no dejes la decision abierta** |
+
+> **La ficha del racimo ya habia anotado que dos de sus tres D eran contra este
+> nodo** (408 y 504). **Con este son TRES sanos, contra tres miembros distintos de
+> Rackham.** El unico miembro que no es de Rackham **se separa de todos los que se
+> le leen.** Queda anotado, sin adjudicar.
+
+### 57.5 LA TRAMPA DE IDENTIFICADOR MAS AFILADA, y esta vez cambia un acto
+
+**TRES nodos vivos cuyos identificadores se diferencian en particulas**, todos de
+Cooper y todos sobre la estrategia de innovacion de producto:
+
+| nodo | pasos | como se comporta |
+|---|---:|---|
+| `estrategia_innovacion_producto` | 5 | **repite** con los otros dos vecinos (357, 1121) |
+| `estrategia_de_innovacion_de_producto` | 6 | **repite** con los mismos (357, 460) |
+| **`estrategia_de_innovacion_producto`** | **7** | **COSTURA CONFIRMADA**, y sale **SANO** contra los dos (1129 y **1325**) |
+
+> **El que esta averiado es justo el que NO repite.** Su acto del cierre transitivo
+> es de **UNO**: no tiene gemelo, asi que **su arreglo es un destejido solo, sin
+> fusion detras.**
+>
+> **Y si el 1325 hubiera salido A, ese acto habria pasado de uno a cuatro.** Es la
+> primera vez en el ejercicio que **una sola lectura decidia el tamano de un acto**,
+> y por eso se leyo dos veces antes de escribirla.
+
+### 57.6 LA REGLA DEL ACTO, aplicada seis veces mas
+
+**La seccion 54.7 pide citar el ACTO cuando un par toca una costura confirmada.**
+En este tramo se aplico **seis veces**, y **cuatro de los seis actos son de UNO**:
+
+| puesto | la costura | su acto |
+|---:|---|---|
+| 1302 | `coeficiente_viral` | **1**, sin gemelo |
+| 1304 y **1340** | `seleccion_ceo_fundador` | **3** |
+| 1318 | `procesamiento_paralelo_con_espirales` | **1**, sin gemelo |
+| 1322 | `ganar_comprension_del_cliente` | **1**, sin gemelo |
+| 1324 | `voz_del_cliente_voc` | **4**, y su cirugia es la **segunda del orden de la pasada** |
+| 1338 | `revisiones_regulares_desempeno_ceo` | **1**, sin gemelo |
+
+> **Cuatro de las seis costuras tocadas en este tramo son de las TREINTA Y DOS sin
+> gemelo.** Su arreglo es un destejido y se acabo. **La regla esta cumpliendo
+> exactamente lo que se le pidio**: decir, en el momento de leer, cuanto pesa el
+> nodo que se acaba de tocar.
+
+### 57.7 EL SALDO
+
+> **Mil trescientos cuarenta pares.** El tramo trae **dos A en cuarenta**: un
+> subconjunto estricto y una fusion de arquitecturas modulares.
+>
+> **Lo que deja son tres cierres y una espera.** El racimo del cierre confirma por
+> tercera vez que su octavo miembro no encaja; la familia de la estrategia de
+> innovacion queda ordenada, con el nodo averiado solo y los dos sanos repitiendo
+> entre si; los tres subconjuntos estrictos quedan juntos y contados. **Y el racimo
+> de la IA queda a UNA lectura de partirse en dos.**
