@@ -4173,6 +4173,21 @@ declarada`**, igual que la del cierre en venta grande.
 293, 692). **Nueve pendientes de cola y quince que nunca entraron.** **Una sola
 arista interna**, entre `jagged_frontier_ia` y `riesgo_sobredependencia_ia`.
 
+> **RECOMPUTO DEL ARCHIVO, 14 ago 2026, por el banco 9.10. La cifra de arriba
+> quedo vieja: son NUEVE los pares internos leidos, no cuatro.**
+>
+> | clase | pares |
+> |---|---|
+> | **A** | **SEIS**: 166, 177, 293, 692, **792**, **1041** |
+> | **D** | **TRES**: **993**, **1211**, **1239** |
+>
+> **Y las tres D importan de forma distinta.** El **993** ya estaba anotado como el
+> primer par interno sano, el que paso el racimo a MEZCLADO. **Los otros dos, el
+> 1211 y el 1239, son DOS DE LAS CUATRO CONDICIONES VIVAS**, las que deciden si las
+> dos mitades originales son una sola familia. **Van dos de cuatro y las dos en D.**
+> Quedan el **1339** y el **1451**. **Las condiciones no se tocan aqui**: se
+> recomputa la cuenta, que es lo que el 9.10 obliga.
+
 ### LAS CONDICIONES VIVAS DE ESTE RACIMO
 
 **Escritas aqui dentro para que no vivan solo en una razon de veredicto.** Son
@@ -8908,6 +8923,62 @@ una decision sobre seis nodos.**
 > **Y caduca.** Cada A nueva puede unir dos componentes y volver un acto de dos en
 > un acto de cinco. **Vigente al puesto 1256**; se vuelve a correr al cierre del
 > cribado, junto al barrido de confirmadas, como manda el 9.21.
+
+### 54.7 LA LECCION DE METODO: la relectura ve PARES, no componentes
+
+**Adoptado el 14 ago 2026.** El calculo de la seccion 54 dejo a la vista un fallo
+de mirada que no es del instrumento sino de la costumbre.
+
+> **El ejemplar**: `homework_frontend_loading` y `voice_of_customer_homework`
+> **se leyeron en la relectura R31, en el puesto 526**, y ninguno de los dos se
+> anoto como lo que era: **dos miembros del acto de `voz_del_cliente_voc`**, la
+> costura que carga **tres congelados**. Se leyo el par y se escribio el par.
+> **El acto al que pertenecian no aparecia por ningun lado.**
+
+**LA REGLA QUE SALE DE AHI:**
+
+> **Cuando un par de la relectura toque una costura CONFIRMADA, se cita su ACTO y
+> su TAMANO, no solo el par.** Un par dice que dos nodos repiten; **el acto dice
+> cuantos nodos van a estar en la mesa el dia que eso se arregle**, y esa es la
+> cifra que le sirve a quien planifica.
+
+**Por que la relectura no lo veia sola**: la relectura verifica **una clase**, y
+una clase se decide entre dos nodos. **El alcance no se decide entre dos**: se
+decide sobre la componente (banco 9.24). **Son dos preguntas y la tanda solo hacia
+una.**
+
+### 54.8 LO QUE ESTO LE ANADE AL ORDEN DE LA PASADA
+
+**El tercer puesto del orden escrito en el plan no es una cirugia.**
+
+| puesto en el orden | la cirugia | lo que cuesta de verdad |
+|---:|---|---|
+| 1 | `producto_minimo_viable` | **2 destejidos** (con `principio_calidad_mvp`) y una decision sobre **2 nodos** |
+| 2 | `voz_del_cliente_voc` | **1 destejido** y una decision sobre **4 nodos** |
+| **3** | **`ab_testing_optimizacion`** | **TRES destejidos** (`ab_testing_optimizacion`, `optimizacion_embudo_get_customers` y `split_testing_experimentos_ab`) **y una decision sobre SEIS nodos** |
+
+> **El acto 2 del cierre transitivo contiene TRES costuras confirmadas.** El plan
+> lo escribio como una cirugia que libera dos congelados; **medido por
+> componentes, es la mas cara de las tres en cirugias y la segunda en nodos.**
+>
+> **No se reordena nada**: el criterio del plan sigue siendo **congelados
+> liberados**, y por esa cuenta el orden es correcto. **Esto es informacion de
+> coste para quien se siente, no una adjudicacion.**
+
+### 54.9 RECOMPUTO AL PUESTO 1277: sin cambios
+
+**Corrido de nuevo sobre el archivo tras el tramo 1257-1277**, como manda el 9.21.
+
+| medida | al puesto 1256 | **al puesto 1277** |
+|---|---:|---:|
+| actos | 13 | **13** |
+| nodos en actos | 38 | **38** |
+| tamanos | 7, 6, 4, 3 y nueve de 2 | **iguales** |
+
+> **La unica A del tramo es el puesto 1257**, `arquitectura_flexible_soa` contra
+> `arquitectura_tecnica_modular`, **y ninguno de los dos es costura**: crea una
+> componente nueva que no toca a las cuarenta y nueve. **La tabla de actos queda
+> vigente al puesto 1277 sin tocar una cifra.**
 
 ---
 
