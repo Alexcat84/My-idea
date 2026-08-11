@@ -720,6 +720,15 @@ puntero desde donde se usa.
 
 #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
 
+> **PASADA DE REDACCION del 14 ago 2026, por el banco 9.26: la forma va con su
+> COBERTURA.** Las columnas *pares posibles* y *leidos* de esta tabla **ya son esa
+> cobertura**: leanse siempre juntas con la columna de estado. **Toda forma con
+> leidos menor que pares posibles es PROVISIONAL**, y solo tres familias del
+> inventario tienen cobertura total: `customer_discovery` (10 de 10), el
+> **scorecard** (3 de 3) y los **regalos** (3 de 3), las tres fuera de esta tabla
+> por no ser puros. **Dentro de la tabla, la unica con cobertura completa es el
+> puro numero 10**, el compromiso contado tres veces, 3 de 3.
+
 **Esta tabla es la fuente. Las declaraciones individuales de más abajo quedan
 CONGELADAS como historia: dicen lo que se sabía el día que se escribieron.**
 Cuando choquen con esta tabla, **manda la tabla**.
@@ -2143,3 +2152,47 @@ este bien y la otra mitad sobre.**
 
 > **Y el sintoma que la delata es barato de mirar**: un hijo que **no tiene ni un
 > paso de su propia especialidad** no es un hijo, **es una copia con otro titulo.**
+
+---
+
+### 9.26 REGLA: TODA FORMA DE FAMILIA SE ESCRIBE CON SU COBERTURA AL LADO
+
+**La clase de un par se decide con dos nodos. La FORMA de una familia se decide
+con el conjunto**, y el conjunto casi nunca esta entero.
+
+> **Toda vez que se escriba que una familia es PURA, SUB-PURA, MEZCLADA o EN
+> ESTRELLA, se escribe al lado su COBERTURA: cuantos pares leidos de cuantos
+> posibles.** Y **mientras falte un par, la forma es PROVISIONAL** y se dice asi.
+
+**POR QUE, y la cuenta lo demuestra sola.** Una familia de cinco miembros tiene
+diez pares. Con **nueve leidos** y una forma escrita:
+
+| si el par que falta es... | lo que pasa con la forma escrita |
+|---|---|
+| uno de los **sanos** | la familia parecia **mas uniforme de lo que es**: se leyo como racimo y era mezclada |
+| una de las **A** | la familia parecia **mas jerarquica de lo que es**: se leyo como mezclada y era casi pura |
+
+> **Un solo par ausente puede mover la forma en las dos direcciones.** Por eso la
+> cobertura no es un adorno estadistico: **es la mitad del enunciado.**
+
+**LO QUE CAMBIA EN LA REDACCION, y es poco:**
+
+> **No es lo mismo escribir *mezclado* que escribir *mezclado, 7 de 15 leidos*.**
+> La segunda forma dice lo mismo y ademas dice cuanto vale. **Y cuando la
+> cobertura es total se gana el derecho a decirlo sin reserva**, que es lo que
+> hace valiosa a la familia de `customer_discovery`, **diez de diez** (informe,
+> seccion 58).
+
+**LOS TRES EJEMPLARES DE COBERTURA COMPLETA MEDIDOS HASTA HOY**, y son los unicos
+de los que se puede afirmar la forma sin condicion:
+
+| familia | forma | cobertura |
+|---|---|---|
+| `customer_discovery` y sus cuatro vecinos | **MEZCLADA**, con dos formas segun el eje | **10 de 10** |
+| el **scorecard** | **ESTRELLA** | **3 de 3** |
+| los **regalos estrategicos** | **ESTRELLA** | **3 de 3** |
+
+> **Y el contraejemplo que obliga la regla**: la estrella de **pass/fail** se
+> declaro con **una sola** de sus dos cuentas hecha, y quedo con condicion viva
+> escrita hasta que el puesto **1346** la resolvio. **Funciono porque la condicion
+> estaba escrita.** Sin ella, habria sido una forma afirmada sobre media medicion.

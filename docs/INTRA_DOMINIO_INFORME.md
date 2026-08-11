@@ -4202,6 +4202,137 @@ frase equivalente solo aparece en `desarrollo_presentacion_problema`, que es un
 nodo de reunion y no de etapa: **la instruccion sobrevive, pero cambia de sitio y
 de momento**, y eso conviene decirlo en vez de darla por salvada.
 
+### TANDA R37, TRIGESIMOTERCERA CIEGA: seis de seis
+
+**Acumulado: 222 releidas, de las cuales 198 a ciegas. Discrepancias: UNA**, el
+395, cerrada por los dos lados.
+
+**Las perdidas se derivaron leyendo los doce nodos y buscando cada una en el
+grafo.** Y la tanda deja **una correccion mia** que no es de perdidas sino de una
+cifra publicada.
+
+| puesto | el par | que se pierde |
+|---:|---|---|
+| **655** | `filosofia_customer_validation` contra `filosofia_validacion_clientes` | **la version del producto y los materiales** y **las tres preguntas**; del otro lado, **no montar equipo de ventas todavia** y **que las reglas corporativas no aplican** |
+| **672** | `equipo_multifuncional` contra `equipo_multifuncional_real` | **incluir a cada area desde el inicio** y **evitar el modelo de relevos**; del otro lado, **liberar tiempo real** y **premiar por desempeno del equipo** |
+| **673** | `errores_comunes_asignacion_roles` contra `seleccion_ceo_fundador` | **no poner cofundadores en la junta por lealtad** y **cautela con los titulos tempranos**; del otro lado, **las brechas propias y los mentores** |
+| **674** | `fase_mobilizacion_equipo_multifuncional` contra `fase_mobilizar_modelo_negocio` | **educar a quien decide con historias y no con teoria**; del otro lado, **el ejercicio de matar o entusiasmar** y **el respaldo visible** |
+| **686** | `hipotesis_tipo_mercado` contra `tipo_de_mercado_estrategia_competitiva` | **el costo de entrada** y **la base de competencia**; del otro lado, **los umbrales de cuota** y **actualizar el lienzo** |
+| **692** | `alineacion_etica_ia_negocio` contra `principio_humano_en_el_loop` | **avisar al cliente** y **detectar sesgos**; del otro lado, **reconocer la invencion** |
+
+#### 674: la familia del diseno de modelo de negocio REPITE POR FASE
+
+**Con el 641, que mostro lo mismo en la fase de DISENO, este puesto lo muestra en
+la fase de MOVILIZACION.** Medido sobre las cinco fases del proceso de
+Osterwalder:
+
+| fase | nodos que la nombran | pares internos | tiene A |
+|---|---:|---|:---:|
+| **MOVILIZAR** | **2** | **674 A** | **SI** |
+| COMPRENDER | 1 | sin pares | no |
+| **DISENAR** | **3** mas el indice | **641 A**, **507 A**, 572 D | **SI** |
+| IMPLEMENTAR | 1 | sin pares | no |
+| GESTIONAR | 1 | sin pares | no |
+
+> **DOS de las CINCO fases tienen doble casa, y las dos con la repeticion probada.**
+> **Queda registrada como CANDIDATA A TRATAMIENTO DE SERIE**, como el de Coleman,
+> **y sin adjudicar**. Y con la comparacion honesta al lado: **Coleman tiene seis
+> de ocho fases con doble casa; este tiene dos de cinco.** Es la misma figura, mas
+> chica.
+
+**Y LA FASE DE DISENO RESULTA SER UNA ESTRELLA, medida al pasar:**
+
+| cuenta | resultado |
+|---|---|
+| pares con el centro `fase_diseno_prototipado_modelos` | **DOS y los dos A**: 641 y 507 |
+| par entre perifericos | **UNO leido y SANO**: 572 |
+| **cobertura** | **3 de 3** |
+
+> **Es la CUARTA estrella del ejercicio**, y la tercera con cobertura completa. Y
+> ademas el nodo indice de las cinco fases, `proceso_diseno_modelo_negocio_5_fases`,
+> sale **sano contra los tres** (633, 395): **el indice no repite con sus fases**,
+> igual que en Coleman.
+
+#### 673: par del acto de la SELECCION DE CEO
+
+**Los dos nodos son miembros del ACTO 4 del cierre transitivo**, citado entero como
+manda la nota de la seccion 54.7:
+
+| el acto 4 | |
+|---|---|
+| **tamano** | **TRES nodos** |
+| **la costura** | **`seleccion_ceo_fundador`**, doce pasos y **fuente doble** |
+| **los sanos** | `errores_comunes_asignacion_roles` y `asignacion_de_titulos_ejecutivos` |
+| **lo que cuesta** | **un destejido** y despues **una decision sobre tres nodos** |
+
+**LAS PERDIDAS, verificadas.** De `errores_comunes_asignacion_roles` se pierden dos
+que no estan en el nodo grande: **no colocar automaticamente a los cofundadores en
+la junta directiva solo por lealtad**, y **ser cauteloso al asignar titulos de alto
+nivel temprano pensando en el crecimiento futuro**. De `seleccion_ceo_fundador` se
+pierden **identificar las brechas propias de habilidad** y **buscar mentores con
+experiencia real fundando**, que estan en su primer bloque. **Y como su destejido
+va antes que la fusion, el reparto de esas dos se decide despues de la cirugia**,
+no ahora.
+
+#### 692: par interno del racimo de la IA, y suma cohesion
+
+**Verificado contra la nomina de ocho de la seccion 11: los dos son miembros.**
+`alineacion_etica_ia_negocio` y `principio_humano_en_el_loop`.
+
+> **Es un par INTERNO de los que suman cohesion, no uno de los cuatro cruzadores.**
+> **Las condiciones vivas no se tocan**: siguen siendo el 1211, el 1239, el 1339 y
+> el 1451, **y de esas van tres en D**.
+>
+> **Lo que este par anade** es que la mitad humana del racimo esta bien trabada por
+> dentro: con el 166 y el 792, **`principio_humano_en_el_loop` y
+> `human_in_the_loop_ia` repiten con la alineacion etica y entre si.** La cuenta
+> interna queda en **nueve pares leidos, seis A y tres D**.
+
+**LAS PERDIDAS**: de `alineacion_etica_ia_negocio` se pierden **avisar con
+transparencia al cliente cuando habla con una maquina**, que no aparece en ningun
+otro nodo del racimo, y **crear una forma simple de detectar y corregir sesgos**.
+De `principio_humano_en_el_loop` se pierde **aprender a reconocer cuando la maquina
+inventa**, citas que no existen y datos que no se pueden comprobar.
+
+#### 655: y aqui va una CORRECCION MIA de una cifra publicada
+
+**El par es A y sigue siendo A.** `filosofia_validacion_clientes` es la postura y
+`filosofia_customer_validation` es la misma etapa contada con pasos: los dos dicen
+que se sale a pedir pedidos reales y no opiniones, y que eso es la prueba.
+
+> **CORRECCION DECLARADA, por el banco 9.10.** En la seccion 56.4 escribi que
+> `filosofia_customer_validation` llevaba **ocho lecturas, dos A y seis sanas**, y
+> que el reparto era limpio porque **las dos A eran contra nodos que abren la
+> etapa**.
+>
+> **Recomputado del archivo: son DIECIOCHO lecturas, CINCO A y TRECE D.** Conte
+> solo las que habia leido yo en este tramo y las di por el total. **Y con las
+> cinco A delante, el reparto limpio que afirme NO se sostiene**: repite tambien
+> con `customer_validation` (247) y con `customer_validation_sell_phase` (245), que
+> no son nodos de apertura sino la etapa y su fase de venta.
+>
+> **Lo que si se sostiene, y ahora medido**: es el nodo con mas lecturas del
+> archivo y **su componente de gemelos es de SIETE nodos**, con 21 pares posibles,
+> 15 en la cola, 14 leidos y **ocho de ellos en A**. **La mesa de la apertura de
+> Customer Validation es mucho mas grande que el par que la levanto.**
+
+#### 672 y 686: dos pares que no mueven nada, y conviene decirlo
+
+**El 672** confirma la nomina del racimo de los equipos que cruzan areas:
+`equipo_multifuncional_real` es el centro con dos A, la 476 y esta. **Lo perdido**:
+de `equipo_multifuncional`, incluir a cada area **desde el inicio** y **evitar el
+modelo de pasar el proyecto de area en area**; del otro, **liberar tiempo real** de
+las tareas habituales y **premiar por desempeno del equipo y no individual**.
+
+**El 686** es uno de los tres pares del **PURO DE TRES del tipo de mercado**, y
+sostenerlo lo mantiene puro. **Lo perdido**: de `hipotesis_tipo_mercado`, el
+**costo de entrada** con la regla de 1,7 o 3 veces el presupuesto del lider, y la
+**base de competencia**; del otro, los **umbrales de cuota** del 74% y el 26%, y
+**actualizar el lienzo** con la hipotesis.
+
+> **La cobertura de ese puro, como manda el 9.26: TRES de TRES.** Es una forma sin
+> reserva.
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -9485,11 +9616,18 @@ nueve en D**: 294, 733, 846, 912, 954, 1140, 1161, 1170 y **1300**.
 > por acumulacion de lo que el 1140 dijo por lectura: **no es miembro de la mesa
 > del pivote.** Y es, medido, **el nodo mejor delimitado del catalogo**.
 
-**Y su espejo, en la misma centena**: `filosofia_customer_validation` llega a
-**OCHO lecturas, DOS A y SEIS sanas**, y el reparto es limpio: **las dos A son
-contra nodos que ABREN la etapa** (549 y 1096) **y las seis sanas contra los
-instrumentos que la ejecutan.** **Repite con quien la enuncia y jerarquiza con
-quien la hace.**
+**Y su espejo, en la misma centena**: `filosofia_customer_validation` es el otro
+extremo, el nodo con mas lecturas del archivo.
+
+> **CORRECCION DECLARADA del 14 ago 2026 (relectura R37), por el banco 9.10.**
+> Aqui se escribio que llevaba **ocho lecturas, dos A y seis sanas**, y que el
+> reparto era limpio porque las dos A eran contra nodos de apertura. **Recomputado
+> del archivo: son DIECIOCHO lecturas, CINCO A y TRECE D**, y con las cinco
+> delante **el reparto limpio no se sostiene**: repite tambien con
+> `customer_validation` (247) y con `customer_validation_sell_phase` (245), que no
+> abren la etapa. **Se contaron solo las lecturas de este tramo y se dieron por el
+> total.** Lo que si esta medido: **su componente de gemelos es de SIETE nodos**,
+> 21 pares posibles, 15 en cola, 14 leidos y **ocho en A**.
 
 ### 56.5 LA SEXTA PAREJA QUE LA COLA NO PUEDE CERRAR
 

@@ -2479,3 +2479,61 @@ distintas y la ficha uso la respuesta de la primera para la segunda.**
 > nodos a cinco, y puede ser de seis**. El orden escrito en la ficha, fuente
 > primero, destejido despues y los gemelos al final, **no cambia**; lo que cambia
 > es cuantos nodos entran en el ultimo paso.
+
+---
+
+## DOS NOTAS AL ORDEN DE LA PASADA (14 ago 2026)
+
+### 1. LA TERCERA CIRUGIA NO TERMINA EN TRES DESTEJIDOS: TERMINA EN UNA FUSION
+
+**El acto 2 del cierre transitivo, el de las pruebas A/B, tiene SEIS nodos y TRES
+costuras.** El plan lo escribio como **tres destejidos**. **Falta el final.**
+
+> **El puesto 643 emparejo a los DOS NODOS SANOS del acto**, `split_testing` y
+> `test_ab_precio`, **y salio A.** O sea que **la repeticion de ese acto no esta
+> solo dentro de las costuras: esta tambien entre los nodos limpios.**
+>
+> **Destejer las tres costuras NO cierra el acto.** Despues de las tres cirugias
+> **queda una fusion sobre seis nodos**, y esa fusion habria hecho falta aunque
+> ninguno estuviera costurado.
+
+**EL TERCER PUESTO DEL ORDEN QUEDA ASI:**
+
+| paso | que es |
+|---:|---|
+| 3a | destejer `ab_testing_optimizacion` |
+| 3b | destejer `optimizacion_embudo_get_customers` |
+| 3c | destejer `split_testing_experimentos_ab` |
+| **3d** | **FUNDIR: decidir cuantos nodos quiere el catalogo entre los SEIS**, con los tres ya destejidos |
+
+> **Es el unico puesto del orden con cuatro movimientos.** Y el cuarto no es
+> opcional: **sin el, el acto queda con seis nodos limpios que siguen diciendo lo
+> mismo.**
+
+### 2. REMEDIR SIEMPRE RESTA, y las formas viejas sin remedir sobrecuentan
+
+**Patron observado el 14 ago 2026, con dos casos y ninguno en contra.**
+
+| figura | como se declaro | como quedo al remedir |
+|---|---|---|
+| el **racimo del capital de trabajo** (puesto 203) | **TRES nodos**: el conjunto mas sus dos mitades | **NO es racimo**: el conjunto **jerarquiza** con las dos mitades (191 D, 203 C). Su unica A esta con un nodo que no estaba en la figura |
+| el **racimo del brainstorming** (ficha del nodo de mas frentes) | **CUATRO nodos** por gemelos directos | **SIETE** por cierre transitivo, **pero la direccion fue al reves**: ahi remedir SUMO |
+
+> **El patron no es que remedir siempre resta en NUMERO: es que remedir siempre
+> resta en CERTEZA.** En el 203 quito masa a la figura; en el brainstorming se la
+> anadio. **Lo que las dos remediciones tienen en comun es que la figura escrita
+> era falsa en su tamano**, y en las dos el error venia de **contar por cercania de
+> tema en vez de por evidencia**.
+
+**LO QUE ESTO DEJA DICHO PARA EL INVENTARIO:**
+
+> **Toda forma vieja que no se haya remedido es sospechosa de estar mal
+> dimensionada**, en cualquiera de las dos direcciones. **Las figuras declaradas
+> por parecido** (mismo tema, mismo libro, nombres parecidos) **sobrecuentan**; las
+> declaradas **por gemelo directo** cuando el arreglo es una fusion **subcuentan**,
+> por el banco 9.24.
+>
+> **La regla practica**: antes de sentar una mesa, **remedir su nomina con el
+> barrido de las A y con el cierre transitivo**, y escribir la cobertura al lado
+> (banco 9.26). **Las dos remediciones hechas hasta hoy cambiaron el tamano de la
+> mesa; ninguna lo dejo igual.**
