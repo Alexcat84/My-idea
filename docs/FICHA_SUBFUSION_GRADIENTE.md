@@ -3136,7 +3136,21 @@ o sea limpios por dentro:
 > **Y prueba un negativo util: los actos de tres son exactamente DOS**, el 341 y
 > el 494, **los dos ya registrados. No hay un tercero escondido.**
 
-> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y DIECISIETE
+> **CORRECCION DEL MISMO DIA, y el negativo de arriba queda anulado.** El puesto
+> **1061** registro una **TERCERA costurada contra costurada**:
+> `ab_testing_optimizacion` contra `optimizacion_embudo_get_customers`, **las dos
+> confirmadas**, y congelado por la regla de la dependencia.
+>
+> **Por que el barrido no lo vio**: cruza las confirmadas contra las **A vigentes
+> en el momento de correrlo**, y esa A se registro horas despues, en el tramo
+> 1051-1100. **El instrumento no fallo, se quedo viejo**: un barrido contra un
+> archivo que sigue creciendo caduca, y hay que volver a correrlo cuando la cola
+> avance.
+>
+> **Cifra viva: DIECIOCHO costuras con gemelo y TRES actos de tres** (341, 494 y
+> 1061).
+
+> **El grupo queda asi: TRES falsas con gemelo** (248, 251, 256) **y DIECIOCHO
 > costuras con gemelo**, contadas por barrido y no por goteo. **Las cuatro confirmadas son
 > las unicas que necesitan cura acoplada**: en las falsas no hay nada que
 > destejer.

@@ -6951,3 +6951,161 @@ que son las unicas de los veinte con anatomia verificada. **Total mirado: 49.**
 > diecisiete se encontraron de una en una a lo largo de veinte relecturas.** El
 > barrido tardo una consulta. **Cuando una figura se puede cruzar mecanicamente,
 > cruzarla es mas barato que esperarla.**
+
+---
+
+## 46. CHECKPOINT DE LOS 1.100: el tramo 1051-1100 completo
+
+### 46.1 EL MARCADOR
+
+| medida | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **1.100** de 3.388 | 304 | 88 | 6 | 702 | **27,6%** |
+| **NUCLEO por separado** | **945** | 303 | 86 | 6 | 550 | **32,1%** |
+| **el tramo 1051-1100** | **50** | **7** | 0 | **1** | 42 | **14,0%** |
+
+**Sin huecos: 1 a 1.100 registrados uno por uno.** Ningun nodo se toco.
+
+### 46.2 LAS DOS SERIES QUE PIDE EL ENCARGO, y van en direcciones contrarias
+
+| tramo | leidos | tasa de A | **pares resueltos con LA VARA** |
+|---|---:|---:|---:|
+| **901-1000** | 100 | **18,0%** | 31 (**31%**) |
+| **1001-1050** | 50 | **16,0%** | 15 (**30%**) |
+| **1051-1100** | 50 | **14,0%** | **19 (38%)** |
+
+> **La tasa de A baja por tercer tramo seguido y la de la vara sube.** Es
+> exactamente lo que anuncio el 9.19 y por eso la cifra de la vara se lee por
+> tramo: **casi cuatro de cada diez pares de este tramo se resolvieron citando la
+> linea contra el procedimiento.** No es que el catalogo repita menos: es que la
+> cola dejo de traer duplicados y empezo a traer jerarquias, que se resuelven con
+> una regla y no con una fusion.
+>
+> **Y la cifra NO SE PROYECTA.** Vale para donde va la cola hoy.
+
+**Solo 8 de los 50 pares tenian arista.** El resto son jerarquias sanas sin cable:
+la bolsa del 9.19 sigue engordando por su lado.
+
+### 46.3 LO QUE ESTE TRAMO CORRIGE DEL BARRIDO, el mismo dia
+
+> **El puesto 1061 es la TERCERA costurada contra costurada del archivo**:
+> `ab_testing_optimizacion` contra `optimizacion_embudo_get_customers`, **las dos
+> confirmadas**. El barrido de la seccion 45 conto **exactamente dos** actos de
+> tres, el 341 y el 494, **y ese negativo queda corregido: son tres.**
+>
+> **Por que el barrido no lo vio, dicho sin adornos**: el barrido cruza las
+> confirmadas contra las **A vigentes en el momento de correrlo**, y esta A no
+> existia todavia; se registro horas despues, en este mismo tramo. **El
+> instrumento no fallo, se quedo viejo.** La leccion no es que el barrido sea
+> malo: es que **un barrido contra un archivo que sigue creciendo caduca**, y hay
+> que volver a correrlo cuando la cola avance. Queda anotado como recordatorio de
+> la seccion 45, no como enmienda a su metodo.
+
+Con el 1061, la cifra viva es **DIECIOCHO costuras con gemelo** y **tres actos de tres**.
+
+### 46.4 LA FIGURA NUEVA: LA VARA EN LOS DOS SENTIDOS (puesto 1077, clase C)
+
+`herramientas_de_activacion_web` contra `diseno_landing_page`, del mismo libro y
+**con arista**. **Cada uno es hijo del otro, y ninguno repite al otro.**
+
+| sentido | la linea | el procedimiento |
+|---|---|---|
+| **A hacia B** | herramientas paso 5: *crear paginas de aterrizaje segun la fuente del trafico* | **todo** `diseno_landing_page`: contenido segun origen, tono del anuncio que trajo al visitante, una sola llamada a la accion, diseno limpio, navegacion corta |
+| **B hacia A** | landing paso 4: *incluir demos de menos de un minuto, pruebas gratuitas o calculadoras* | **todo** `herramientas_de_activacion_web`: el demo funcional, las pruebas limitadas con correos de seguimiento, el contacto directo, los videos de bienvenida con moderacion |
+
+> **Lo que la figura ensena: la vara es una relacion entre LINEAS, no entre
+> NODOS.** Dos nodos pueden ser cada uno hijo del otro sin que ninguno repita al
+> otro, porque **la linea que uno expande no es la linea que el otro expande.**
+> Es la primera vez en 1.100 pares que aparece, y por eso el par es **C, sano con
+> figura**, y no D. **Queda propuesta al banco; no la adjudico.**
+
+### 46.5 LO QUE CIERRA DEL TRATAMIENTO DE COLEMAN (puesto 1068)
+
+**La serie de los seis medios esta instanciada por fase, y las instancias se
+repiten entre ellas.** Con lo que ya se sabia, el cuadro queda completo:
+
+| puesto | que probo |
+|---:|---|
+| **948** | los **dos nodos generales** de la serie repiten entre si |
+| **1012** | la instancia de **Assess** es **hija** del general: sana |
+| **1068** | dos instancias, **Celebracion** y **Activate**, **repiten entre si**: A |
+
+> **La serie no esta duplicada solo arriba: esta duplicada tantas veces como fases
+> la instancien.** Lo unico propio de cada instancia son uno o dos gestos de
+> diagnostico, la nota del uno al diez en Activate y el mensaje atado al hito en
+> Celebracion. El procedimiento, elegir dos o tres canales, preparar contenido y
+> medir, es el mismo texto en las dos.
+
+### 46.6 LA ZONA DE BLANK: cuatro madres y casi ningun cable
+
+**El tramo cayo casi entero en el metodo de Blank**, y deja una medicion de
+cableado que vale mas que cualquier veredicto suelto.
+
+| madre | hijos leidos en este tramo | veredictos | aristas |
+|---|---|---|---:|
+| **`filosofia_customer_validation`** | 1079, 1084, 1086, **1096** | tres sanos y **una A** | **cero** |
+| **`customer_discovery_cuatro_fases`** | 1083 (fase 1), 1094 (fase 4) | dos sanos | **cero** |
+| **`customer_discovery_phase2_problem_test`** | 1092 | sano | **cero con su hijo** |
+
+> **`filosofia_customer_validation` es una madre con cuatro hijos verificados y
+> ni un solo cable**, y el mas visible es el 1086: `decision_pivotar_o_proceder`
+> es literalmente el paso siguiente de la filosofia y no hay arista entre ellos.
+>
+> **Y el 1092 deja el caso mas fino de la bolsa.** El nodo indice **si tiene
+> cableado**, cuatro previos y cuatro siguientes distintos, **pero ninguno de
+> ellos es uno de los tres nodos cuyos titulos son sus propios pasos.** No es un
+> nodo aislado: **es un nodo cableado hacia los lados y no hacia sus hijos.** Es
+> una forma de falta de arista que el conteo de grado nunca hubiera encontrado,
+> porque el grado sale bien.
+
+### 46.7 EL OTRO LADO: los libros que si jerarquizan
+
+| libro | hijos leidos | resultado |
+|---|---:|---|
+| **Rackham, SPIN** | 5 (899, 1021, 1049, 1067, **1081**) | **cinco sanos, cinco de cinco** |
+| **Cooper, Winning at New Products** | 1099 | **sano y con arista** |
+
+> **Rackham es el libro mejor jerarquizado del archivo hasta aqui.**
+>
+> **Y el 1099 es la prueba del 9.12 al derecho**: la escalera de Cooper **si
+> sube**, y se ve en la misma cifra medida con dos profundidades a proposito,
+> **plazo de recuperacion en la puerta** y **valor presente neto con
+> sensibilidad** en la etapa. El gasto crece solo despues de que la puerta lo
+> autorice, que es para lo que sirve una puerta.
+
+### 46.8 UN MARCO COMPARTIDO NO ES UN MARCO DUPLICADO (puesto 1097)
+
+`customer_development_process` (Osterwalder) contra `modelo_customer_development`
+(Blank): **el mismo modelo de cuatro pasos en dos libros**, y aun asi **D**.
+
+> Uno dice **que son** las cuatro etapas y las describe; el otro dice **como se
+> recorren**, con la senal de alto, la velocidad de escape y el permiso de
+> retroceder, **y nunca dice cuales son.**
+>
+> **La prueba que decide: fundirlos no borraria material, lo SUMARIA.** El
+> contenido de cada uno es exactamente el hueco del otro. **Ahi esta la frontera
+> entre un marco compartido por dos fuentes y un marco duplicado**, y conviene
+> tenerla escrita porque la cola va a traer mas casos de dos libros contando lo
+> mismo.
+
+### 46.9 SOSPECHA REGISTRADA, no adjudicada
+
+> En el puesto **1074** se leyo un nodo llamado **`fase_assess`** y en el **1087**
+> otro llamado **`fase_assess_experiencia_cliente`**, **del mismo libro y de la
+> misma fase**. Los dos pares salieron sanos contra terceros, pero **son dos nodos
+> para la misma fase de Coleman** y quedan marcados como **candidatos fuertes a
+> repetir entre si** cuando su propio par salga en la cola. No lo adelanto: lo
+> anoto para que no se pase.
+
+### 46.10 EL SALDO DEL CHECKPOINT
+
+> **Mil cien pares leidos uno por uno, sin huecos y sin tocar un nodo.** La tasa
+> del nucleo bajo de **54%** en la centena 3 a **32,1%** acumulada, **y el tramo
+> suelto marca 14,0%**. La doctrina hizo ese trabajo sola: **cada punto que baja
+> es un par que antes se hubiera cobrado como fusion y hoy se resuelve citando una
+> regla.**
+>
+> **Y este tramo deja el aviso mas util del checkpoint**: el barrido de la seccion
+> 45, corrido el mismo dia, **ya estaba viejo cuando se escribio.** Los
+> instrumentos que cruzan contra el archivo hay que volver a correrlos, porque el
+> archivo sigue creciendo debajo de ellos.
