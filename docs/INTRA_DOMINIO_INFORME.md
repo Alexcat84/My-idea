@@ -5423,3 +5423,140 @@ en su etapa 2 y **no enlaza** a `customer_validation`, que la ejecuta.
 > una es la **decision de migrar** y la otra es la **revision de periodo**. Lo mas
 > valioso del segundo, **distinguir la utilidad reportada del flujo de caja real
 > disponible**, no esta en el primero.
+
+---
+
+## 36. CHECKPOINT DE LOS 900, y el tramo mas sano del cribado entero
+
+**Cuarenta pares leidos de una vez, del 861 al 900, los cuarenta del nucleo.**
+
+### 36.1 EL MARCADOR COMPLETO, recomputado del archivo
+
+| | leidos | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **GLOBAL** | **900** | **272** | 86 | 5 | 537 | **30,2%** |
+| **NUCLEO** | **745** | **271** | 84 | 5 | 385 | **36,4%** |
+| compras | 155 | 1 | 2 | 0 | 152 | 0,6% |
+
+**La cola entera son 3.388 pares. Van 900: el 26,6%.**
+
+### 36.2 LA CURVA POR CENTENAS, que es el dato del checkpoint
+
+| centena | tasa de A global | nucleo | tasa de A del nucleo |
+|---|---:|---:|---:|
+| 1 a 100 | 1,0% | 0 | sin nucleo |
+| 101 a 200 | 24,0% | 45 | **53,3%** |
+| 201 a 300 | 54,0% | 100 | **54,0%** |
+| 301 a 400 | 51,0% | 100 | **51,0%** |
+| 401 a 500 | 39,0% | 100 | **39,0%** |
+| 501 a 600 | 33,0% | 100 | **33,0%** |
+| 601 a 700 | 21,0% | 100 | **21,0%** |
+| 701 a 800 | 24,0% | 100 | **24,0%** |
+| **801 a 900** | **25,0%** | 100 | **25,0%** |
+
+> **LA CURVA BAJA Y SE APLANA.** De 54% en la segunda y tercera centena a **una
+> meseta del 21 al 25% en las tres ultimas.** No es que el catalogo mejore: es que
+> **la cola esta ordenada por similitud y los pares mas parecidos ya se leyeron.**
+>
+> **Lo util para planificar**: si la meseta se sostiene, **las 2.488 lecturas que
+> faltan aportarian del orden de 550 a 620 duplicados mas**, no 750. **Pero eso es
+> una proyeccion, no una medicion**, y se revisa en cada checkpoint.
+
+**Y el tramo 861 a 900 es el mas sano de todo el cribado**: **33 D, 7 A, 17,5%**.
+**Ninguna centena habia bajado de 21%.**
+
+### 36.3 LAS DOS CONDICIONES VIVAS, resueltas
+
+#### 862: el sub-puro de la ETAPA DE INVESTIGACION avanza y queda a UNA lectura
+
+**Sale A**, y con eso el sub-puro numero 4 del banco 9.5 pasa de **4 de 6** a
+**5 de 6 pares leidos, los cinco en A.**
+
+> **Le queda UNA sola lectura, y no va a llegar por la cola**: el par
+> `etapa_de_investigacion` contra `investigacion_como_habilidad_clave` **nunca
+> entro**. **Una lectura dirigida lo cierra**, y seria el primer puro de cuatro
+> miembros del archivo.
+
+#### 863: el racimo de la estrategia de innovacion sale D, y arrastra DOS correcciones
+
+**Sale D**, y hay que decir las dos cosas que eso rompe.
+
+> **CORRECCION 1, y es mia.** Mi nota de la tanda R19 llamaba a esto *un racimo
+> censado de TRES* y anunciaba el 863 como *posible puro de tres*. **Estaba mal**:
+> la **seccion 4 de este mismo informe** ya habia medido la familia en **SEIS
+> miembros y quince pares posibles**. Yo mire `RACIMOS_MIEMBROS.jsonl` (que dice
+> tres) y no la medicion propia del informe (que dice seis). **Es exactamente el
+> modo de fallo que la disciplina del dictado nombra, cometido por mi.**
+>
+> **CORRECCION 2, y es la que cuesta.** La familia tenia **SEIS de SEIS en A** y
+> era, en palabras de la seccion 4, *la apuesta mas cargada del inventario*. **Este
+> es su primer sano.** Deja de ser sub-puro y pasa a **MEZCLADA**, con nueve
+> lecturas todavia pendientes.
+
+**Y traigo sin resolver un choque interno que este par destapa:**
+
+> **El puesto 530 es LA MISMA RELACION contra el otro gemelo de la madre, y esta
+> en A.** Su razon dice que los dos nodos mandan *pesar los mercados contra las
+> competencias propias*, **y ese paso no esta en los seis de
+> `estrategia_de_innovacion_de_producto`**: solo esta en
+> `estrategia_de_innovacion_y_tecnologia`.
+>
+> **Si el 863 es D por la vara, el 530 tiene el mismo esqueleto.** **No lo muevo:
+> pido relectura conjunta**, igual que se hizo con el 395.
+
+### 36.4 DOS SUB-PUROS SE ROMPEN EN EL MISMO TRAMO
+
+| # | racimo | estaba | queda |
+|---:|---|---|---|
+| **3** | el sales roadmap | SUB-PURO, 4 de 4 en A | **MEZCLADO** (872 sale D) |
+| la familia de innovacion | seis miembros | SUB-PURO, 6 de 6 en A | **MEZCLADA** (863 sale D) |
+
+> **Los dos se rompen por el mismo mecanismo y conviene nombrarlo**: una familia
+> con muchos pares **sin leer** puede tener todos sus pares leidos en A **y no ser
+> pura**. **Cuantos mas pares le falten, mas facil es que el siguiente sea el
+> sano.** El sub-puro es una promesa, no un resultado, y estos dos lo demuestran.
+
+### 36.5 LAS ESCALERAS QUE SI SUBEN: cuatro ejemplares en un solo tramo
+
+**El banco 9.12 nombro LA ESCALERA QUE NO SUBE con la junta asesora.** Este tramo
+trae **cuatro ejemplares del lado bueno**, y los cuatro pasan el test:
+
+| puesto | los dos peldanos | que exige el segundo que el primero no |
+|---:|---|---|
+| **876** | etapa 1 Scoping contra etapa 2 Business Case de Cooper | investigacion de mercado detallada, voz del cliente profunda, NPV con sensibilidad |
+| **888** | la tesis de investigar contra las preguntas de Implicacion | mapear consecuencias financieras y operativas de cada problema |
+| **892** | fase Assess contra fase Admit de Coleman | la celebracion inmediata y el rescate del silencio posventa |
+| **895** | fase Mobilizar contra fase Entendimiento de Osterwalder | mapa de empatia, expertos del dominio, intentos previos fallidos |
+
+> **Los cuatro salen D y ninguno pide arreglo.** Sirven para lo contrario de lo
+> habitual: **para saber cuando NO hay problema.** Y dejan una lectura de fondo:
+> **en las tres series (Cooper, Coleman, Osterwalder) las FASES estan sanas; lo
+> que repite son las SEGUNDAS CASAS de cada fase.**
+
+### 36.6 Lo demas del tramo
+
+> **1. `customer_validation` es el nodo mas mirado del archivo y NO repite con
+> casi nadie**: **catorce pares leidos, once D y tres A.** En este tramo entro a
+> **cinco** y los cinco salieron sanos. **Eso le da a la MESA 3 su dato mas
+> importante**: el problema de la zona del customer development **no es este
+> nodo**, es que **tres madres distintas lo nombran y ninguna lo enlaza.**
+>
+> **2. PRIMER USO DEL BARRIDO DE LAS A** (puesto **878**, banco 9.15):
+> `tecnica_anclaje_negociacion` aparece con un A contra un miembro del sub-puro de
+> inversores, entra como **candidato** y **la lectura lo deja fuera** con su
+> motivo, su objeto es como negociar terminos y no como generar competencia. **La
+> regla funciono exactamente como se escribio: el archivo levanta, la lectura
+> decide.**
+>
+> **3. UNA FRONTERA QUE HAY QUE DECLARAR, y es dentro del MISMO libro** (puesto
+> **877**): para el mismo caso, cofundar con amigos o familia,
+> `cofundar_con_amigos_familia_riesgos` manda **autoridad clara aunque incomode** y
+> `relacion_previa_y_estructura_roles` manda **estructura colegiada e igualitaria**.
+> **Los dos son de *The Founder's Dilemmas*.** No es duplicacion: es una **FRONTERA
+> DECLARADA** en el sentido que el auditor dio al termino en la mesa del pivote, y
+> hay que escribirla como tal en vez de dejar que el lector encuentre los dos
+> consejos y elija al azar.
+>
+> **4. `realizar_pruebas_pasa_no_pasa` queda confirmado como instrumento y no
+> como copia**: **once pares leidos, diez D.** Tres de ellos en esta tanda, contra
+> tres nodos de etapa distintos, y los tres sanos.

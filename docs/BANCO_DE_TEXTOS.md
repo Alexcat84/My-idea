@@ -728,18 +728,24 @@ Cuando choquen con esta tabla, **manda la tabla**.
 |---:|---|---:|---:|---:|---:|---|
 | **1** | **el efectivo contra la ganancia** | 3 | 3 | **3** | 3 | **PURO**, re-verificado con el contador el 12 ago |
 | **2** | **la ecuación de valor** | 3 | 3 | **3** | 3 | **PURO**, y el único con **los tres pares releídos a ciegas** |
-| **3** | el sales roadmap | **5** | **10** | 4 | 4 | **SUB-PURO**: el trío es puro puertas adentro, la familia no está cerrada |
-| **4** | la etapa de investigación en la venta | **4** | **6** | 4 | 4 | **SUB-PURO**, por lo mismo |
+| **3** | el sales roadmap | **5** | **10** | 5 | 4 | **MEZCLADO desde el 13 ago 2026**: el puesto **872** sale D y rompe el sub-puro |
+| **4** | la etapa de investigación en la venta | **4** | **6** | **5** | **5** | **SUB-PURO a UNA lectura de cerrarse**: el 862 sale A; falta un par que nunca entró a la cola |
 | **5** | la competencia entre inversores | **4** | **6** | 5 | 5 | **SUB-PURO** desde el 13 ago 2026, **degradado con corrección declarada**: el contador se quedó en tres y el cuarto miembro se llamaba distinto |
 | **6** | **la etnografía de campo** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el primero que **nace de un par CRUZADO** entre dos parejas ya declaradas |
 | **7** | **la junta asesora** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el único donde el par que cruza **los dos momentos** (identificar y formalizar) ya está leído y es A |
+
+> **LECCIÓN DEL 13 ago 2026, con dos sub-puros rotos el mismo día** (el 3 por el
+> puesto 872 y la familia de innovación por el 863): **una familia con muchos
+> pares sin leer puede tener TODOS sus pares leídos en A y no ser pura.** Cuantos
+> más le falten, más fácil es que el siguiente sea el sano. **El sub-puro es una
+> promesa, no un resultado.**
 
 **Lo que le falta a cada sub-puro para cerrarse, nombrado:**
 
 | # | lecturas que faltan | cuáles |
 |---:|---:|---|
-| **3** | **6** | puestos 872, 918, 1023, 1306, 1330 y el par `customer_validation_sales_roadmap` contra `sales_roadmap`, **que nunca entró a la cola** |
-| **4** | **2** | puesto 862 y el par `etapa_de_investigacion` contra `investigacion_como_habilidad_clave`, **que nunca entró a la cola** |
+| **3** | **5** | puestos 918, 1023, 1306, 1330 y el par `customer_validation_sales_roadmap` contra `sales_roadmap`, **que nunca entró a la cola**. El 872 ya se leyó y salió **D** |
+| **4** | **1** | solo el par `etapa_de_investigacion` contra `investigacion_como_habilidad_clave`, **que nunca entró a la cola**. Una lectura dirigida lo cierra, y sería el **primer PURO de cuatro miembros** |
 | **7** | **3** | puestos **976** y **1190**, los dos en la cola, más `identificar_consejo_asesores` contra `formalizar_junta_asesora`, **que nunca entró** |
 | **5** | **1** | puesto **1030**, `gestion_multiples_term_sheets` contra `leverage_en_negociacion_con_vcs`, **en la cola**. Si sale A, es **PURO de CUATRO**, el primero de ese tamaño |
 | **6** | **3** | las **tres fuera de la cola**: `etnografia_de_proyecto` contra `investigacion_etnografica_ideacion`, y `etnografia_aplicada_en_equipos_multidisciplinarios` contra cada uno de los dos de Cooper |
