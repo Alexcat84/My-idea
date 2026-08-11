@@ -5970,3 +5970,85 @@ dominio. **El nucleo cuenta como un dominio mas**, igual que en el intra.
 > para leer**, igual que la del intra. **Y no reemplaza a los otros dos ejes: los
 > completa.** Un nodo puede estar sano en los tres ejes y aun asi tener mal el
 > cableado, que es justamente lo que este barrido destapa.
+
+---
+
+## 39. EL TRAMO 929 a 942: el barrido nuevo encuentra su primer caso de manual
+
+**Catorce pares leidos, los catorce del nucleo.** Acumulado **942 de 3.388**,
+global **29,5%** de A y **nucleo 35,2%**. **El tramo dio 14,3%.** **Faltan 58 para
+el checkpoint de los 1.000.**
+
+### 39.1 EL CASO DE MANUAL DEL TERCER EJE, y salio en el mismo dia
+
+**Puesto 932.** `cumplimiento_magnuson_moss` es la madre de la familia de
+garantias, y **nombra a CUATRO nodos hermanos en dos de sus cuatro pasos:**
+
+| lo que dice la madre | el nodo que lo desarrolla |
+|---|---|
+| *titulo claro* | el nodo del titulo de la garantia |
+| *terminos divulgados con claridad* | el nodo de la divulgacion |
+| *disponibilidad antes de la venta* | **`regla_disponibilidad_previa_venta`**, leido en el 929 |
+| *que no obligue a comprarte algo mas* | **`prohibicion_tie_in_sales`**, leido en el 929 |
+
+> **Y no enlaza con ninguno.** Cuatro hijos nombrados en dos lineas, cero
+> aristas. **Es exactamente lo que el barrido de la seccion 38 sale a buscar**, y
+> aparecio a mano en el mismo tramo en que el instrumento se escribio.
+>
+> **Lo util es que confirma el diseno del barrido por otra via**: la figura no es
+> una impresion del cribador, **es una forma que el catalogo repite**, y ahora hay
+> un instrumento que la cuenta en vez de esperarla.
+
+### 39.2 LA SEGUNDA CASA VUELVE A APARECER, y en la misma cadena
+
+**Puesto 933.** `fase_mobilizacion_equipo_multifuncional` desarrolla la **fase 1**
+de `proceso_diseno_modelo_negocio_5_fases`. **Pero esa fase ya tenia casa**:
+`fase_mobilizar_modelo_negocio`, leido en los puestos 865 y 895.
+
+| fase de Osterwalder | casas que tiene |
+|---|---|
+| **1, Movilizar** | **DOS**: `fase_mobilizar_modelo_negocio` y `fase_mobilizacion_equipo_multifuncional` |
+| **3, Disenar** | **DOS**: `fase_diseno_prototipado_modelos` y `proceso_ideacion_modelo_negocio` (puestos 395, 507, 641) |
+
+> **Es la misma figura que rompio el 395**, y confirma lo que la seccion 36 dejo
+> escrito: **en las series de fases, las FASES estan sanas y lo que sobra son las
+> segundas casas.** Dos de las cinco fases de Osterwalder ya tienen dos casas cada
+> una.
+
+### 39.3 CUATRO PARES DE ARTEFACTOS HERMANOS, y solo dos cableados
+
+**El tramo trae cuatro pares de la misma forma: un artefacto que define y otro que
+obedece.** Y el saldo del cableado es la mitad:
+
+| puesto | el par | arista |
+|---:|---|:---:|
+| **937** | el cronograma y su diagrama de red | **SI** |
+| **939** | el plan de requisitos y su registro | **SI** |
+| **934** | el informe del contratista y el del proyecto | **NO**, y el texto lo nombra |
+| **931** | las disposiciones vinculantes y el acuerdo de exclusividad | **NO** |
+
+> **Los dos cableados son de la misma coleccion de formularios que los dos que no
+> lo estan.** No es que una fuente cablee bien y otra mal: **es que el cableado se
+> hizo a mano y por eso es irregular.** Con los puestos 881 y 927, esta coleccion
+> lleva **seis pares hermanos leidos, todos sanos, y cuatro con arista.**
+
+### 39.4 Lo demas del tramo
+
+> **1. El frente del Stage-Gate llega a ONCE nodos leidos** (puesto **942**, la
+> puerta 5 contra la etapa 5, sano). **La mesa 1 crece cada tramo y sigue sin
+> convocarse.**
+>
+> **2. El nucleo tiene DOS nodos de encaje producto-mercado** (puesto **930**):
+> este `product_market_fit` y el `verificar_product_market_fit` del puesto 922.
+> **Su par pide contador**, y ninguno de los dos se ha leido contra el otro.
+>
+> **3. Los dos principios de Mollick quedan separados** (puesto **940**): probarlo
+> todo (principio 1) contra asumir que la IA mejora (principio 4). **El paso 3 del
+> primero es una linea y el segundo es su procedimiento entero.** Y con el puesto
+> 456 queda dicho: **la pareja del principio 1 repite entre si, pero es sana
+> contra los otros principios.**
+>
+> **4. `realizar_pruebas_pasa_no_pasa` llega a DOCE pares leidos y ONCE sanos**
+> (puesto **938**). **Ningun otro nodo del cribado ha sostenido tantas lecturas
+> sin duplicarse.** Es un instrumento propio, y a estas alturas eso ya no es una
+> lectura: es una medicion.
