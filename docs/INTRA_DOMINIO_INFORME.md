@@ -2795,3 +2795,84 @@ desarrolla su paso 4.
 >
 > **El racimo del pivote sigue en 19 nodos y 24 pares sin leer**, y este tramo le
 > sumo dos lecturas mas (733, 737).
+
+---
+
+## 21. EL TRAMO 743 a 760: la vara trabajando en caliente
+
+**Dieciocho pares leidos, los dieciocho del nucleo.** Acumulado **760 de 3.388**,
+global **30,7%** de A y **nucleo 38,3%**. El tramo dio **11,1%**. **Sin
+checkpoint: el proximo es el de los 800.**
+
+### 21.1 La vara nombrada, usada ya en veredictos nuevos
+
+**Es el primer tramo leido con `LA LINEA O EL PROCEDIMIENTO` disponible desde el
+principio, y se uso dos veces sin necesidad de discutir nada.**
+
+| puesto | el caso | lo que la vara resolvio |
+|---:|---|---|
+| **744** | `diagnostico_sintoma_vs_causa_ventas` contra `prevencion_objeciones_vs_manejo` | el hijo trae el diagnostico de objeciones **con su procedimiento**: **CONTINUA**, D |
+| **756** | `pensamiento_serial_vs_espacial` contra `pensamiento_espacial_mapeo` | el selector **nombra** el instrumento en su paso 4 y el instrumento trae el procedimiento entero: **CONTINUA**, D |
+
+> **En los dos casos la razon se escribio en una linea y sin deliberar.** Eso es
+> lo que una vara nombrada compra: **deja de haber caso dificil donde antes habia
+> juicio.**
+
+### 21.2 UN NODO QUE SE ROZA CON DIEZ Y NO REPITE CON NINGUNO
+
+**`verificar_product_market_fit`, contado del archivo en el puesto 760.**
+
+| | |
+|---|---:|
+| pares leidos | **10** (186, 297, 304, 407, 431, 497, 676, 733, 751 y 760) |
+| en **A** | **0** |
+| en **B** | 3 |
+| en **D** | 7 |
+
+> **Es de los nodos mas emparejados del nucleo y no repite con nadie.** La cola lo
+> trae una y otra vez porque **su vocabulario toca el de media familia de
+> validacion**, y cada vez que se lee de verdad resulta ser otra cosa: una lista
+> de comprobacion con umbrales numericos que ningun vecino tiene.
+>
+> **FIGURA QUE ESTO NOMBRA: EL NODO MUY EMPAREJADO Y NUNCA REPETIDO.** No es un
+> problema del nodo: **es un aviso sobre la cola.** Diez lecturas para confirmar
+> diez veces que es sano. **Cuando un nodo acumula muchas D seguidas, sus pares
+> restantes bajan de prioridad**, y eso se puede usar para ordenar lo que queda.
+
+### 21.3 El nodo que bloquea, y ya van dos
+
+**`voz_del_cliente_voc`**, costura confirmada con anatomia **DOBLE DE LA
+OBSERVACION**, **bloquea su segundo par** (puestos 724 y 755).
+
+> **Los dos pares tienen el solape metido justo en la parte que la cirugia va a
+> partir**, asi que ninguno se puede juzgar hoy. **Un nodo averiado no cuesta un
+> arreglo: cuesta el arreglo mas todas las lecturas que congela.**
+>
+> **Y lo que hay que salvar ya esta anotado en los dos**: del 724, buscar
+> necesidades futuras y *que los mantiene despiertos por la noche*; del 755,
+> proyectar como cambia el dia del cliente con el producto, repetir el ejercicio
+> por cada figura de la decision, y llevarle al equipo de desarrollo la imagen
+> viva del antes y el despues.
+
+### 21.4 El racimo de las puertas llega a CUATRO pares y los cuatro en A
+
+**Puesto 745**, con el 275, el 302 y el 356.
+
+> **Cuatro fusiones distintas sobre los mismos seis nodos.** Es la confirmacion
+> mas fuerte que hay de lo que el 275 dejo nombrado: **esto no son cuatro podas,
+> es un PROGRAMA UNICO**, y cada par que se lea va a sumar otra fusion
+> incompatible con las anteriores.
+
+### 21.5 Dos familias mas que hay que contar, y una que avanza
+
+> **1. LOS TRES CAPITALES** (puestos 393, 610, 757): el inventario de capital
+> humano, social y financiero del fundador aparece en varios nodos con
+> redacciones distintas. **Sin censar.**
+>
+> **2. LOS EXPERIMENTOS** (puesto 748): `startup_como_experimento_cientifico` y
+> `producto_como_experimento` dicen la misma doctrina con dos granos, y la familia
+> toca ademas los nodos de MVP y de pruebas de pasa o no pasa. **Sin censar.**
+>
+> **3. EL RACIMO DEL EQUITY AVANZA**: el puesto **754** cerro el tercero de sus
+> cinco pares pendientes. **Quedan dos, los puestos 871 y 1008**, y cuando caigan
+> ese racimo sera de los pocos con la cuenta cerrada.
