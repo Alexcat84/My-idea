@@ -2476,6 +2476,62 @@ de los que se puede afirmar la forma sin condicion:
 
 ---
 
+### 9.28 CLASE DE PERDIDA: LA PERDIDA DE NOMBRE
+
+**Adoptada el 18 ago 2026, del puesto 2.432 y confirmada a ciegas en la R47.**
+
+> **HAY FUSIONES DONDE LO QUE MUERE NO ES UN PASO NI UNA LINEA: ES LA PALABRA POR LA QUE
+> EL LECTOR LLEGA.**
+
+**EL EJEMPLAR.** `funcion_perdida_taguchi` repite contra
+`funcion_perdida_limites_especificacion`: **es la misma cuenta paso por paso**, y la clase
+**A es correcta**. Pero el superviviente **no dice Taguchi en ningun sitio de su texto**, y
+*funcion de perdida de Taguchi* **es como este instrumento se llama en cualquier manual.**
+
+**POR QUE EL ALIAS NO LO RESUELVE, y es la parte que no era obvia.** El grafo guarda el id
+muerto en `ids_alias`, asi que **una arista que apuntaba al nodo viejo sigue resolviendo.**
+**Eso cubre el GRAFO. No cubre AL LECTOR.**
+
+| quien busca | por donde entra | lo cubre el alias |
+|---|---|:---:|
+| **una arista del grafo** | el id | **si** |
+| **el lector de la app** | el titulo y el texto que ve en pantalla | **NO** |
+
+> **Un alias es una redireccion interna. El lector que escribe *Taguchi* no esta
+> resolviendo un id: esta buscando una palabra que tiene que estar EN EL TEXTO.**
+
+**EL REMEDIO, y es barato:** el nombre **viaja como DENOMINACION**, **una linea en el texto
+del superviviente**, no un paso ni un nodo. Basta con que el titulo o la primera linea
+digan *tambien llamada funcion de perdida de Taguchi*.
+
+**COMO SE RECONOCE, sin discutir de gustos:** el id o el titulo del que muere **lleva un
+nombre propio**, apellido o instrumento con nombre, **y ese nombre no aparece en ningun
+sitio del texto del superviviente.** Es comprobable por script.
+
+**LA CARGA MEDIDA, corte 2.438** (`scripts/barrido_perdida_de_nombre.py`, de solo lectura,
+con la lista de marcadores escrita dentro):
+
+| | |
+|---|---:|
+| A del archivo | **466** |
+| A que **eligen direccion** | **58** |
+| **A con perdida de nombre** | **2** |
+
+| puesto | muere | sobrevive | el nombre que se pierde |
+|---:|---|---|---|
+| **2.250** | `niveles_de_madurez_de_seguridad` | `clasificacion_sistemas_por_nivel_seguridad` | **Amalberti** |
+| **2.432** | `funcion_perdida_taguchi` | `funcion_perdida_limites_especificacion` | **Taguchi** |
+
+**SIN ADJUDICAR: son dos denominaciones a reponer, no dos veredictos a revisar.** Las dos
+clases A **se sostienen**.
+
+> **Y UNA NOTA DE METODO DEL PROPIO BARRIDO:** la primera corrida dio **tres**, y el
+> tercero era falso: **`ries` casaba dentro de `riesgo`**. Se corrigio a **coincidencia por
+> palabra completa** antes de publicar la cifra. **La deteccion por subcadena inventa
+> nombres propios donde no los hay**, que es la misma familia de error que el 3% lexico.
+
+---
+
 ### 9.27 REGLA: LA MEDIA NO DESCRIBE A NADIE. LA TASA SE LEE POR DOMINIO
 
 **Adoptada el 17 ago 2026**, al cerrar la tanda larga 1518-1817.

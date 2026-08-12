@@ -4770,6 +4770,79 @@ veredicto, y las dos veces la respuesta es la misma.**
 > mirar.** Es exactamente lo que la cola ya hace con la similitud, y **el limite es el
 > mismo: el veredicto se lee.**
 
+### TANDA R47: dos puestos, DOS DE DOS COINCIDEN
+
+**18 ago 2026.** Quinta relectura ciega sobre marcados: **2.432 y 2.431. Las dos
+coinciden.**
+
+| | |
+|---|---:|
+| relecturas ciegas | **7** (R42 a R47) mas el barrido de direccion |
+| puestos releidos | **20** |
+| caidas | **4** |
+| **dentro del marcado** | **4** |
+| **fuera** | **0** |
+
+#### a. NACE UNA CLASE DE PERDIDA: LA PERDIDA DE NOMBRE
+
+**Del 2.432 sale una clase que el banco no tenia** y que queda escrita en **9.28**: hay
+fusiones donde **lo que muere no es un paso ni una linea, es la palabra por la que el
+lector llega**. El alias del grafo **cubre el id y no cubre la busqueda**; el remedio es
+que **el nombre viaje como DENOMINACION**, una linea en el texto del superviviente.
+
+**BARRIDO CORRIDO SOBRE LAS 58 A QUE ELIGEN DIRECCION: SON DOS.**
+
+| puesto | muere | sobrevive | el nombre |
+|---:|---|---|---|
+| **2.250** | `niveles_de_madurez_de_seguridad` | `clasificacion_sistemas_por_nivel_seguridad` | **Amalberti** |
+| **2.432** | `funcion_perdida_taguchi` | `funcion_perdida_limites_especificacion` | **Taguchi** |
+
+**Sin adjudicar: son dos denominaciones a reponer, y las dos clases A se sostienen.**
+**Esa es la carga futura de esta clase**, y se recomputa con el script cada vez que crezcan
+las A con direccion.
+
+#### b. `accion_correctiva` QUEDA REGISTRADA COMO ACTO EN COLAPSO
+
+**No es una cadena de pares: es una familia de cinco decidiendose de a dos**, y la
+doctrina vigente dice exactamente que hacer.
+
+| lo leido | resultado |
+|---:|---|
+| 2.418 | muere `accion_correctiva_6`, sobrevive `accion_correctiva_5` |
+| 2.426 | muere `accion_correctiva_6`, sobrevive `accion_correctiva_crosby` |
+| 2.431 | **muere `accion_correctiva_5`**, sobrevive `accion_correctiva_sistematica` |
+
+> **POR 9.3, UNA DIRECCION DE FUSION DECIDIDA SOBRE UN PAR NO SOBREVIVE A SU FAMILIA.** El
+> superviviente del 2.418 murio trece pares despues. **Los supervivientes por par quedan
+> MARCADOS PROVISIONALES.**
+>
+> **POR P.13, EL SUPERVIVIENTE FINAL SE ELIGE UNA SOLA VEZ Y SOBRE LA NOMINA COMPLETA**,
+> no heredando el de la operacion pequena.
+>
+> **POR P.5, EL ACTO SE LEE ENTERO ANTES DE FUNDIRSE**, y aqui eso tiene nombre y numero:
+> **los tres pares sin leer de la familia** (`accion_correctiva`, `accion_correctiva_2`,
+> `accion_correctiva_4` contra los demas) **son su lectura de acto**, no una curiosidad.
+
+**Las clases A de los tres pares no se tocan: lo provisional es la DIRECCION, no el
+veredicto.**
+
+#### c. REGLA MENOR: CUANDO NO HAY SUPERVIVIENTE, LA PERDIDA SE ADHIERE AL ACTO
+
+> **En una A por FUSION MUTUA no hay nodo al que absorber la linea perdida.** La perdida
+> **no queda huerfana ni se asigna a ojo: SE ADHIERE AL ACTO**, y **la hereda quien gane
+> P.8 sobre la nomina final.**
+
+**Aplicado al 2.417**, cuyas tres lineas quedan asi:
+
+| la linea | destino |
+|---|---|
+| **responsables de supervision** | **adherida al acto** |
+| **revisar tras rotacion de personal** | **adherida al acto** |
+| aplicar tecnicas de a prueba de errores | **ARISTA CANDIDATA**, ya resuelta: hay 6 nodos de poka yoke y cero aristas con el par |
+
+**Con esto el archivo tiene cuatro fusiones mutuas** (2.127, 2.368, 2.417, 2.436) **y una
+regla que dice donde va lo que sobra en las cuatro.**
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
