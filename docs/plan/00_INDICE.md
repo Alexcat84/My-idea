@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA COMPLETO: ONCE FASES, 59 OPERACIONES, 56 LISTAS. TRES MESAS ADJUDICADAS, LA CUARTA CON SU EXPEDIENTE ESCRITO, Y SOLO TRES PENDIENTES: DOS MESAS Y UN RECOMPUTO CON FECHA.**
+**EL PLAN ESTA COMPLETO: ONCE FASES, 60 OPERACIONES, 57 LISTAS. TRES MESAS ADJUDICADAS, LAS DOS ULTIMAS CON SU EXPEDIENTE ESCRITO Y SU EVIDENCIA PUESTA, Y SOLO TRES PENDIENTES.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -27,6 +27,15 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > lecturas***. Las dos nominas que faltaban, **el pivote y la serie de Coleman**,
 > estan medidas y escritas en sus mesas. Y **el puro de la competencia entre
 > inversores DEGRADA a sub-puro** con correccion declarada.
+>
+> **DECIMA PASADA, 12 ago 2026: SE EJECUTAN 26 LECTURAS DIRIGIDAS Y LA MESA UNIDA
+> DEJA DE ESTAR A CIEGAS.** El auditor mando **no sentarla** con dos de setenta y dos
+> pares cruzados y en empate, y aprobo la **seleccion minima tal cual**. Saldo: **1 A,
+> 2 C, 23 D**. **La frontera existe pero es una JERARQUIA, no una linea**; **un solo
+> nodo repite**; y **los tres actos no son uno, son madre e hijo**. Cobertura del **17%
+> al 36%**. **El trio de estructuras de gates queda decidido** como avanzada, con el
+> contenido resolviendo lo que el cableado no podia. Y **la ultima mesa, `OP-M-05`,
+> tiene su expediente**, con su pregunta mayor **ya contestada por quince lecturas**.
 >
 > **NOVENA PASADA, 12 ago 2026: TRES MESAS ADJUDICADAS Y UN REGISTRO NUEVO.**
 > **`OP-M-02-MEDIOS` se resuelve contra el cableado** y deja **P.8: el cableado
@@ -88,8 +97,8 @@ el JSONL discrepan, manda el JSONL.
 
 | | |
 |---|---:|
-| operaciones | **59** |
-| **LISTAS** | **56** |
+| operaciones | **60** |
+| **LISTAS** | **57** |
 | **DECISION PENDIENTE** | **3** |
 
 | fase | operaciones | LISTAS | pendientes |
@@ -97,7 +106,7 @@ el JSONL discrepan, manda el JSONL.
 | **0 CODIGO** | 5 | **5** | 0 |
 | **01 FUENTES** | 7 | **7** | 0 |
 | **02 DESTEJIDOS** | 7 | **7** | 0 |
-| **03 FUSIONES** | 12 | **11** | 1 |
+| **03 FUSIONES** | 13 | **12** | 1 |
 | **04 ENLACES** | 4 | **4** | 0 |
 | **05 SANEO** | 12 | **12** | 0 |
 | **06 MESAS** | 5 | **3** | **2** |
@@ -243,6 +252,8 @@ en vez de forzarse.**
 | [`EXPEDIENTE_MESA_PIVOTE.md`](EXPEDIENTE_MESA_PIVOTE.md) | **la tercera mesa, YA ADJUDICADA**: dos puertas mas un acto, siete nodos a tres | **cerrada** |
 | [`EXPEDIENTE_MESA_UNIDA.md`](EXPEDIENTE_MESA_UNIDA.md) | **la cuarta mesa y la grande**, con sus dos correcciones de entrada, para adjudicar | escrita |
 | [`FRONTERAS_DECLARADAS.md`](FRONTERAS_DECLARADAS.md) | **el registro de las fronteras de disposicion**: tres ejemplares, y ninguna se funde | escrita |
+| [`LD_MESA_UNIDA.md`](LD_MESA_UNIDA.md) | **las 26 lecturas dirigidas de la mesa unida**, ejecutadas, con su saldo | **ejecutada** |
+| [`EXPEDIENTE_MESA_M05.md`](EXPEDIENTE_MESA_M05.md) | **la quinta y ultima mesa**, con su pregunta mayor ya contestada | escrita |
 | [`03_FUSIONES.md`](03_FUSIONES.md) | 221 actos sobre 576 nodos, corte 2117, marcado para recomputo | escrita |
 | [`04_ENLACES.md`](04_ENLACES.md) | 477 candidatos tras calibrar, tasa medida en 46 lecturas, mas los sueltos de racimos | escrita |
 | [`06_MESAS.md`](06_MESAS.md) | cinco mesas con nomina, dependencia y opciones con evidencia | escrita |

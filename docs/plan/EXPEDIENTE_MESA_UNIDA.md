@@ -271,3 +271,117 @@ saber si los tres actos son uno.
 > **Y ES LA UNICA DE LAS CUATRO MESAS DONDE ESO PASA.** La junta asesora se sento con
 > **6 de 6**. Coleman con 41 de 378, pero **su decision era de estructura**. **Aqui la
 > decision es de contenido y la cobertura es la peor.**
+
+---
+
+# EL SALDO DE LAS 26 LECTURAS DIRIGIDAS . **12 ago 2026**
+
+> **ADJUDICADO EL 12 ago 2026: LA MESA NO SE SIENTA con dos de setenta y dos pares
+> cruzados leidos y en empate.** Se aprobo la seleccion minima **tal cual** y **se
+> ejecuto el mismo dia**. Van enteras en [`LD_MESA_UNIDA.md`](LD_MESA_UNIDA.md).
+
+| | |
+|---|---:|
+| lecturas | **26** |
+| **A** | **1** |
+| **C**, enlace mutuo | **2** |
+| **D** | **23** |
+| B | **0** |
+
+**LA COBERTURA DE LA MESA PASA DE 23 DE 136 A 49 DE 136**, del **17% al 36%**, y con
+**el 100% de lo que decide leido**.
+
+## 1. QUE DICEN DEL CRUCE DE LA FRONTERA VIEJA
+
+**Sumando el 488 y el 1014, de VEINTISEIS pares cruzados leidos salen 2 A, 2 C y 22
+D.**
+
+> **LA FRONTERA EXISTE. Y NO ES UNA LINEA ENTRE DOS BLOQUES: ES UNA JERARQUIA.**
+
+**En CATORCE de los pares cruzados la relacion no es de vecindad sino de MADRE E
+HIJO**: el nodo del portafolio dice **en una linea** lo que el nodo de la puerta
+**desarrolla en un procedimiento**, o al reves. **Ninguno de los catorce tiene arista
+hoy.**
+
+**Y HAY UN SOLO NODO QUE REPITE CON LAS PUERTAS:**
+
+| | |
+|---|---|
+| `gestion_de_portafolio_gates_go_kill` | **A con `sistema_gates_go_kill`** (puesto 488) y **A con `gates_go_kill_decision_points`** (`LD-52`) |
+
+> **NO HAY UN BLOQUE QUE REPITE: HAY UN NODO.** Y su segunda A **no sorprende al
+> archivo, lo confirma**: cerraba una transitividad que ya estaba escrita.
+
+**Y HAY UN NODO QUE YA ESCRIBE LA FRONTERA, sin que nadie se lo pidiera:**
+
+> **`gestion_portafolio_dos_niveles` es madre de las dos mitades TRES VECES**
+> (`LD-35`, `LD-43`, `LD-51`), **y lleva la frontera dentro de su propio texto**:
+> *definir que decisiones son estrategicas y cuales tacticas*, y *usar ambos procesos
+> de forma complementaria, no sustitutiva*.
+>
+> **La mesa no tiene que inventar donde va la frontera. Tiene que decidir si adopta
+> la que un nodo suyo ya escribio.**
+
+## 2. SI LOS TRES ACTOS SON UNO: **NO. SON MADRE E HIJO**
+
+| lectura | resultado |
+|---|---|
+| **`LD-56`** | `sistema_stage_gate` es **MADRE** de `sistema_gates_go_kill`: el mapa de etapas dice *definir un gate antes de cada etapa* **en una linea**, y el otro trae el procedimiento |
+| **`LD-57`** | `asignacion_recursos_en_gates` es **HIJO** de `sistema_gates_go_kill`: este dice *comprometete recursos solo despues de pasar el gate* **en una linea**, y el otro trae el procedimiento |
+
+> **Y `LD-57` COINCIDE CON EL ARCHIVO SIN HABERLO MIRADO:** el puesto **1399** leyo el
+> mismo `sistema_gates_go_kill` contra `sistema_gestion_recursos_en_gates`, **el otro
+> miembro de ese acto**, y salio **D por exactamente esta razon**. **Los dos miembros
+> del acto de recursos son hijos del mismo padre.**
+
+**LOS TRES ACTOS NO SE FUNDEN: SE ENCADENAN.** Mapa de etapas, anatomia del gate, y
+asignacion de recursos en el gate. **Tres eslabones, no tres copias.**
+
+## 3. LA COSECHA, y no toda es de fusion
+
+| | |
+|---|---:|
+| **fusiones** que estas lecturas habilitan | **1**, y ya estaba: `gestion_de_portafolio_gates_go_kill` con las puertas |
+| **enlaces de madre e hijo** que hoy no existen | **14** |
+| **enlaces mutuos** del banco 9.22 | **2** (`LD-41` y `LD-43`), y **se arreglan con dos aristas cada uno, no con fusion** |
+
+> **VEINTISEIS LECTURAS Y UNA SOLA FUSION NUEVA.** **Lo que esta mesa tenia no era un
+> bloque de duplicacion: era una JERARQUIA SIN CABLEAR.**
+
+## 4. LO QUE LA MESA SE SIENTA A DECIDIR AHORA
+
+**Ya no es *hay frontera o no*. Es esto:**
+
+| | la decision, ya con evidencia |
+|---:|---|
+| **1** | **se adopta la frontera que `gestion_portafolio_dos_niveles` ya escribe**, estrategicas contra tacticas y complementarias no sustitutivas? |
+| **2** | **`gestion_de_portafolio_gates_go_kill` se funde hacia las puertas**, que es donde tiene sus dos A? |
+| **3** | **se cablean los 14 enlaces de madre e hijo y los 2 mutuos**, que es la mayor cosecha de aristas de una sola mesa en todo el plan? |
+| **4** | **el trio de estructuras de gates** ya esta decidido como avanzada: `OP-M-01-TRIO`, **LISTA** |
+
+> **Y LA ADVERTENCIA DE COBERTURA CAMBIA DE SIGNO: sigue habiendo 87 pares fuera de
+> cola, pero ninguno de ellos cruza la frontera.** **Lo que falta por leer ya no puede
+> cambiar la respuesta a la pregunta de la mesa.**
+
+---
+
+## APENDICE: **LA TERCERA VEZ QUE EL NOMBRE ESCONDE Y EL BARRIDO CAZA**
+
+`decision_factory_mentality` **queda como MIEMBRO 17**, y su modo de fallo **se anota
+junto a los otros dos casos**, porque **ya es una serie y no una anecdota**:
+
+| | el que se escapo | de donde | por que se escapo | quien lo cazo |
+|---:|---|---|---|---|
+| **1** | el **sexto de los cuadrantes** | racimo de cuadrantes de mercado | el contador levantaba por el nombre y **el suyo no lo llevaba** | **el barrido de las A** |
+| **2** | **`seis_medios_comunicacion_cliente`** | la serie de Coleman | la lista de palabras tenia *correo*, *video* y *regalo* **pero no *medio* ni *canal*** | **el archivo**, el veredicto 948 |
+| **3** | **`decision_factory_mentality`** | la mesa unida | **no lleva ni *gate* ni *portafolio***: se llama *Haz menos proyectos, pero hazlos bien* | **el barrido de las A**, puestos 1499 y 583 |
+
+> **LOS TRES FALLOS SON EL MISMO: EL CONTADOR LEVANTA POR EL NOMBRE, Y EL NOMBRE
+> MIENTE POR OMISION.** No dice algo falso: **calla lo que el nodo hace.**
+
+> **SE CITA COMO HISTORIA Y NO COMO RECOMENDACION.** El estandar de los dos
+> instrumentos **ya estaba escrito en el banco 9.20 antes de los tres casos**: *el
+> contador levanta por el nombre, el barrido levanta por el archivo, y la lectura
+> decide*. **Lo que estos tres anaden no es la regla: es la cuenta de lo que habria
+> costado no tenerla.** Tres nominas mal, en tres mesas distintas, **y las tres se
+> habrian sentado con un miembro menos.**

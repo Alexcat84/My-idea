@@ -535,3 +535,29 @@ leidos y los CUATRO restantes estan FUERA DE COLA:**
 > **Y LA DIFERENCIA ENTRE LAS DOS SE ESCRIBE, porque leerlas igual seria mentir:**
 > **de Adopt sabemos que sus dos nodos son sanos. De Advocate no sabemos nada.**
 > **Las dos fases quedan con dos nodos, y solo una de las dos lo tiene justificado.**
+
+---
+
+# CUARTA TANDA: **LAS 26 DE LA MESA UNIDA** . `LD-32` a `LD-57`
+
+**Encargadas y EJECUTADAS el 12 ago 2026.** Son la **seleccion minima que decide** de
+`OP-M-01`, aprobada tal cual por el auditor: **los tres candidatos de la franja contra
+los ocho del portafolio, mas dos que dicen si los tres actos son uno.**
+
+> **Van enteras, con su veredicto y su razon, en
+> [`LD_MESA_UNIDA.md`](LD_MESA_UNIDA.md).** Aqui solo el saldo.
+
+| | |
+|---|---:|
+| lecturas | **26** |
+| **A** | **1** |
+| **C**, enlace mutuo | **2** |
+| **D** | **23** |
+| B | 0 |
+
+**LO QUE CONTESTAN:** la frontera **existe pero es una JERARQUIA, no una linea**;
+**un solo nodo repite** con las puertas; `gestion_portafolio_dos_niveles` **ya escribe
+la frontera** dentro de su texto; y **los tres actos NO son uno**: son **madre e hijo**.
+
+**LA COBERTURA DE `OP-M-01` PASA DE 23 DE 136 A 49 DE 136**, y **con el 100% de lo que
+decide leido**.

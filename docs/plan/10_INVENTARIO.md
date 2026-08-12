@@ -20,9 +20,9 @@ racimo, acto, familia de ids, figura y defecto.
 | **racimo** | **13** |
 | **acto** | **221** |
 | **familia_de_ids** | **53** |
-| **figura** | **13** |
+| **figura** | **14** |
 | **defecto** | **16** |
-| **TOTAL** | **326** |
+| **TOTAL** | **327** |
 
 ---
 
@@ -115,7 +115,7 @@ que se sabe con la cobertura que tiene.**
 | **el compromiso contado tres veces** | PURO | 3 de 3 | sano, forma cerrada |
 | **la seleccion de canal** | MEZCLADO | 10 de 10 | repite, forma cerrada |
 | **la supervision de la IA** | PARTIDO 5 mas 4 mas 1 | 14 de 45 al puesto 1517 | en mesa, particion PROVISIONAL |
-| **la mesa unida de puertas y portafolio** | TRES ACTOS de 13, 2 y 2 bajo UNA nomina de tema de 17 | 23 de 136 | en mesa, EXPEDIENTE ESCRITO el 12 ago 2026, cobertura 17% y COLA AGOTADA |
+| **la mesa unida de puertas y portafolio** | TRES ACTOS de 13, 2 y 2 bajo UNA nomina de tema de 17 | 49 de 136 | en mesa, 26 LECTURAS DIRIGIDAS EJECUTADAS el 12 ago 2026, y el trio ya decidido |
 | **el racimo del pivote** | SIETE NODOS A TRES: dos puertas y el acto al que las dos llevan | 13 de 21 | MESA ADJUDICADA el 12 ago 2026: DOS PUERTAS MAS UN ACTO |
 | **la serie de Coleman** | MEZCLADO | 41 de 378 | MESA ADJUDICADA el 12 ago 2026, siete operaciones hijas |
 
@@ -222,6 +222,7 @@ el catalogo produce y que hay que saber distinguir.**
 | **LA COLA DEL DOMINIO SE AGOTA POR DENTRO (9.27)** | 3 dominios medidos | la tasa de A cae dentro de cada dominio: un dominio a medio leer no describe al dominio |
 | **EL PASO DE OFICIO** | medio dominio exportacion | una linea generica que abre media docena de nodos y por si sola no decide ninguna clase |
 | **frontera de disposicion** | 3 ejemplares | Dos nodos que mandan LO CONTRARIO sobre el MISMO gesto, los dos con razon dentro de su doctrina. No es defecto y no se funde: se declara y los dos se quedan. LOS TRES EJEMPLARES: la FRONTERA INTRA LIBRO del puesto 877 (Founder's Dilemmas contra si mismo: autoridad clara contra estructura colegiada); la FRONTERA DE MOMENTO del 221 (Rackham no presionar el cierre contra Weinberg pedir un si o un no), probada por seis lados; y la FRONTERA DE LA DECISION DE PIVOTAR del 1298 (el punto brillante de Ries mas Traction contra decidir rapido y sin miedo de Blank), declarada el 12 ago 2026. LA TERCERA ES LA PRIMERA QUE QUEDA REPARTIDA EN DOS NODOS DISTINTOS del mismo racimo, entre una puerta y el acto que le sigue, lo que la hace mas facil de perder: los dos lados ya no estan uno al lado del otro. UNA FRONTERA SE PIERDE POR PODA, NO POR FUSION. |
+| **el nombre que esconde** | 3 ejemplares | TRES VECES el contador dejo fuera a un miembro real porque su NOMBRE no llevaba la palabra del tema, y las tres veces lo cazo el segundo instrumento. (1) el sexto de los cuadrantes de mercado; (2) seis_medios_comunicacion_cliente, la cabeza de la serie de medios de Coleman, levantada por el veredicto 948; (3) decision_factory_mentality, miembro 17 de la mesa unida, levantado por las A de los puestos 1499 y 583, y que se llama Haz menos proyectos pero hazlos bien. EL FALLO ES EL MISMO: el nombre no dice algo falso, CALLA LO QUE EL NODO HACE. SE CITA COMO HISTORIA Y NO COMO RECOMENDACION: el estandar de los dos instrumentos ya estaba en el banco 9.20 antes de los tres casos. Lo que anaden no es la regla: es la cuenta de lo que habria costado no tenerla, tres nominas mal en tres mesas distintas. |
 
 ---
 

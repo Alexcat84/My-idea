@@ -36,7 +36,15 @@ mas.**
 
 ## APERTURA . `OP-M-01`, LA MESA UNIDA
 
-> **SU EXPEDIENTE COMPLETO YA ESTA ESCRITO:**
+> ## **LAS 26 LECTURAS DIRIGIDAS, EJECUTADAS EL 12 ago 2026.**
+>
+> **La mesa NO se sento con dos de setenta y dos pares cruzados y en empate.** Se
+> ejecuto la seleccion minima: **1 A, 2 C, 23 D**. **La frontera existe pero es una
+> JERARQUIA, no una linea**; **un solo nodo repite**; y **los tres actos no son uno,
+> son madre e hijo**. Cobertura del **17% al 36%**. El **trio de gates** ya esta
+> decidido como avanzada: `OP-M-01-TRIO`, LISTA.
+
+> **SU EXPEDIENTE COMPLETO:**
 > [`EXPEDIENTE_MESA_UNIDA.md`](EXPEDIENTE_MESA_UNIDA.md), del 12 ago 2026, **sin
 > recomendacion nueva donde no la hay**, y **con DOS correcciones de entrada: la nomina
 > son 17 y los pares que no llegaran nunca son 113, no 58**. Trae los tres actos, la
@@ -351,6 +359,13 @@ validacion de clientes*.
 ---
 
 ## APERTURA . `OP-M-05`, CUSTOMER DEVELOPMENT
+
+> **SU EXPEDIENTE COMPLETO YA ESTA ESCRITO:**
+> [`EXPEDIENTE_MESA_M05.md`](EXPEDIENTE_MESA_M05.md), del 12 ago 2026, **sin
+> recomendacion nueva donde no la hay**. Trae la nomina con los dos instrumentos (**dos
+> actos, de nueve y de siete**), sus **46 pares leidos** con **el unico dudoso en
+> crudo**, las aristas que cruzan con dos mesas ya adjudicadas, y **la pregunta 3 ya
+> contestada: quince lecturas entre los dos actos y las quince D**.
 
 **QUE SE DECIDE.** Si el catalogo quiere **UNA puerta de entrada a Customer
 Validation o DOS**. Y, con el acto de nueve delante, **si Customer Discovery es una
