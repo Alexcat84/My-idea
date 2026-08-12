@@ -715,6 +715,55 @@ una verificación.**
 > y **pueden no compartir acto ninguno.** Es la misma advertencia del 50,8 % de la trampa
 > del identificador, dicha del lado de las operaciones.
 
+#### DOS VISTOS DEL AUDITOR SALIENTE, adjudicados el 18 ago 2026 (corte 2.554)
+
+**El auditor humano que apaga su turno deja dos precisiones adjudicadas antes de entregar
+el bucle. Las dos nacen de la FAMILIA SIN ACTO, la tercera especie que la corrección de
+arriba hizo visible, y las dos corrigen etiquetas escritas aquí sin borrarlas.**
+
+**VISTO PRIMERO: SIN ACTO SOLO SE DECLARA CON LA FAMILIA LEÍDA ENTERA.**
+
+> **FAMILIA SIN ACTO es un negativo, y un negativo no se afirma con el universo a medias.**
+> Es el banco 9.26 y la norma de las búsquedas dichos sobre la especie: **una ausencia solo
+> se afirma con lo leído entero.** Mientras falte un par, no se escribe *sin acto*: se
+> escribe **sin acto a la fecha, con su cobertura al lado** (cuántos pares de cuántos), y la
+> forma queda **provisional**.
+
+**LOS DOS EJEMPLARES QUE LO OBLIGAN, y los dos son candidaturas a sin acto que MURIERON al
+leer un par más:**
+
+| familia | cómo estaba | el par que la mató | qué era de verdad |
+|---|---|---|---|
+| **el histograma** | registrada **FAMILIA SIN ACTO** con 2.442 D y 2.486 D (2 de 3) | **2.517 A**, su tercer y último par | **TIENE ACTO**: una sola fusión, `histograma` de ganador sin perder nunca; `histograma_calidad` fuera del acto por sus dos D. **POR DERECHO, final, 3 de 3** |
+| **la responsabilidad gerencial** | **candidata** a sin acto con 2.422 D, 2.508 D y 2.521 D (Deming) | **2.537 A** | **TIENE ACTO**: `mejora_del_sistema_responsabilidad_gerencial` gana a `sistema_estable_causas_comunes`. Especie **provisional**, cobertura **4 de 10** |
+
+> **Dos veces en la misma sesión, una candidatura a sin acto se deshizo al leer un par más.**
+> La regla del 9.3.1 corregido **funcionó**: la prueba de contar solo las A es correcta. **Lo
+> que falló fue ponerle la etiqueta a una familia sin el acto leído entero.** La etiqueta no
+> es un error de la prueba: es un error de haberla dictado antes de tiempo.
+
+**LA CORRECCIÓN A LA TABLA DE ARRIBA, declarada y sin borrar las filas viejas** (que se
+quedan tal cual, superadas por esta fila, porque la manera en que se dictaron de más es
+parte de la doctrina):
+
+| familia | pares al corte 2.554 | especie corregida |
+|---|---|---|
+| **el histograma** | 2.442 D, 2.486 D, **2.517 A** | **POR DERECHO, final** (3 de 3). Deja de ser SIN ACTO |
+| **la auditoría de producto** | 2.433 D, 2.478 D | **SIN ACTO A LA FECHA, cobertura 2 de 3.** Falta `auditoria_de_producto_2` contra `auditoria_producto`; hasta leerlo, provisional. **Es el aviso vivo:** con la misma cobertura, 2 de 3 y las dos D, el histograma prometía sin acto y salió con acto |
+| **la responsabilidad gerencial** | 2.422 D, 2.508 D, 2.521 D, **2.537 A** | **TIENE ACTO, provisional, cobertura 4 de 10.** Ganador a la fecha `mejora_del_sistema_responsabilidad_gerencial` |
+
+**VISTO SEGUNDO: LA FUSIÓN MUTUA NUNCA PRODUCE GANADOR POR DERECHO** (ejemplar 2.525,
+`dia_cero_defectos_2` contra `dia_cero_defectos_3`).
+
+> **Una fusión mutua es un par A donde ninguno domina** (el segundo polo del 9.22, línea en
+> los dos sentidos). Mete a los dos nodos en el acto **y deja el superviviente sin fijar por
+> definición.** Por eso **no puede fundar un GANADOR POR DERECHO**, cuya prueba es *ganó
+> todos los pares A que lo tocan y no queda ninguno pendiente que lo mueva*: en la fusión
+> mutua **no hay ganador que haya ganado**, hay dos que empataron. **Una familia cuya única
+> A es mutua es, como mínimo, POR ELEGIR.** La del Día de Cero Defectos (2.491 A, 2.525 A
+> mutua) **es acto de tres y es POR ELEGIR**, segundo ejemplar de la especie tras
+> `accion_correctiva`.
+
 ---
 
 ### 9.3 Una dirección de fusión decidida sobre un par no sobrevive a su familia
@@ -2740,6 +2789,42 @@ propio sin una lista.**
 > tercero era falso: **`ries` casaba dentro de `riesgo`**. Se corrigio a **coincidencia por
 > palabra completa** antes de publicar la cifra. **La deteccion por subcadena inventa
 > nombres propios donde no los hay**, que es la misma familia de error que el 3% lexico.
+
+#### 9.28.1 SUB-REGLA: LA SIGLA Y EL TERMINO EN OTRO IDIOMA SON DENOMINACIONES APARTE DEL NOMBRE LARGO
+
+**Adjudicada por el auditor saliente el 18 ago 2026 (corte 2.554), de tres ejemplares en una
+sola sesion de `quality`.** Extiende el remedio del 9.28: el control de denominacion dentro
+de cada fusion no busca solo nombres propios e instrumentos.
+
+> **UN ACRONIMO Y UN TERMINO EN OTRO IDIOMA NO SON ABREVIATURAS DEL NOMBRE LARGO: SON OTRAS
+> DENOMINACIONES, y es la que usa quien viene del libro en ingles.** En cada operacion de
+> fusion **se comprueban POR SEPARADO** del nombre largo, porque el nombre largo puede vivir
+> en el texto del superviviente y la sigla o el termino extranjero **morir en el mismo par**.
+
+**LOS TRES EJEMPLARES, verificados contra el texto del superviviente:**
+
+| puesto | el nombre largo (sobrevive) | la denominacion que se pierde | clase |
+|---:|---|---|:---:|
+| **2.477 / 2.488** | gestion por objetivos (en el titulo) | **MBO**, el acronimo | A |
+| **2.517** | histograma (todo el nodo) | **box plot**, el instrumento en su nombre en ingles | A |
+| **2.548** | voz del cliente (vive: `design_for_six_sigma_dfss` la nombra) | **VOC**, el acronimo | A |
+
+> **La forma es siempre la misma: el nombre largo sobrevive y la sigla o el termino en el
+> otro idioma se pierde.** Y el remedio es de una linea: la denominacion **viaja entre
+> parentesis** en el titulo o la primera frase del superviviente (asi lo hace la operacion
+> del 2.488 con MBO). **El nombre largo no cubre a la sigla, del mismo modo que el id no
+> cubre al lector** (la tabla del 9.28): quien escribe *VOC* o *MBO* no esta escribiendo el
+> nombre largo, esta buscando una palabra que tiene que estar EN EL TEXTO.
+
+**LA QUINTA CARA PASA DE HIPOTESIS A FIGURA CON CIFRA.** La quinta cara de las senales de
+superficie, **el sinonimo traducido** (informe, la mezcla de castellano e ingles en el
+catalogo), se anoto **con un solo caso, el 2.464, y sin porcentaje**. Estos tres ejemplares
+le dan cuerpo: **la senal del idioma ya no es un caso suelto, son cuatro apariciones al
+corte 2.554**, una como senal de emparejamiento (2.464, `cero_defectos` contra
+`zero_defects_concepto`, que la cola semantica caso y la lectura resolvio) y **tres como
+perdida de denominacion** (MBO, box plot, VOC). Deja de ser hipotesis: **es figura, con la
+cifra de cuatro y su corte.** Lo que sigue sin cerrar es su TASA (cuatro sobre que universo),
+y eso se mide, no se dicta; queda anotado para el checkpoint.
 
 ---
 
