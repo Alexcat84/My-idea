@@ -13952,3 +13952,82 @@ CASA sigue armada y sin usar**.
 2.500 y 2.600 pendientes.** El dominio completo son **844 pares** y llega al **3.255**.
 
 **El archivo esta en 2.438 sin huecos ni duplicados. Cero nodos tocados.**
+
+
+---
+
+## 84. REPORTE DEL TRAMO 2.439 A 2.443
+
+**Corte: puesto 2.443. Van 32 pares de `quality`** de sus 844.
+
+### 84.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **`quality`** | **32** | **13** | **19** | **40,6%** |
+| archivo global (corte 2.443) | 2.443 | **467** | **1.880** | **19,1%** (B 89, C 7) |
+
+**La tasa del dominio bajo del 44,4% al 40,6%** con cinco pares mas: cuatro D y una A.
+**Sigue sin banda utilizable**, y **el movimiento de casi cuatro puntos con cinco lecturas
+es justamente lo que hace que no lo sea.**
+
+### 84.2 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **4** |
+| **REPITE** | **13** |
+| no se invoco | **15** |
+
+**17 de 32, el 53%.** **Cero PENDIENTE DE DOCTRINA. 17 ARISTA QUE FALTA (53%), 11 SOLAPE
+DECLARADO.**
+
+### 84.3 LO QUE ANADE ESTE TRAMO
+
+**SEGUNDO EJEMPLAR DE LA TRAMPA DEL IDENTIFICADOR EN CINCO PARES (2.439).**
+`clasificacion_de_seriedad_de_defectos_2` **no es un duplicado**: el sufijo marca **la
+variante para el proveedor**. Uno mira hacia adentro (categorias acordadas entre areas,
+validacion con pilotos) y el otro **hacia afuera** (comunicar la clasificacion al
+proveedor, vincularla a los planes de muestreo). **D.**
+
+> **Con el 2.433 son dos ejemplares en cinco pares** donde un sufijo `_2` **marca un
+> destinatario o un objeto distinto, no una repeticion.** La cuenta de la trampa sube:
+> **de los pares de familia leidos en `quality`, tres repitieron y ahora cuatro no.**
+
+**DOS PARES QUE SE ENTREGAN EL TRABAJO Y NO ESTAN CABLEADOS.**
+
+| puesto | quien construye | quien lee o continua |
+|---:|---|---|
+| **2.442** | `histograma`, la receta en siete pasos | `histograma_calidad`, que **agrega los limites de especificacion al grafico** y evalua centrado, ancho y forma **para determinar capacidad** |
+| **2.441** | `control_estadistico_proceso` | `innovacion_tras_control_estadistico`, **CON ARISTA ya puesta** |
+
+> **Un histograma sin los limites dibujados encima no dice si el proceso sirve.** El 2.442
+> es una **arista que falta con direccion**, y de las mas baratas del dominio.
+
+**UNA PERDIDA QUE CONVIENE MIRAR (2.440).** Muere `moral_y_sistema_no_individuo` y se
+lleva *dar seguimiento y **apoyo** a quienes caen fuera de las tolerancias del grupo*.
+**Es la unica linea del par que dice que hacer con la persona que si queda fuera**, y sin
+ella **la doctrina del sistema se lee como que nunca hay nada que hacer con nadie.**
+
+### 84.4 LAS 13 A DE `quality`, con las discutibles marcadas
+
+`2.414`, `2.417`, `2.418`, `2.420`, `2.421`, `2.424`, `2.426`, `2.431`, `2.432`, `2.436`,
+`2.437`, `2.438`, **`2.440`**.
+
+**LAS TRES MAS DISCUTIBLES, y la R48 empieza aqui:**
+
+1. **2.440.** Es la mas fina del tramo: el que muere aporta **dos lineas** y una de ellas,
+   el apoyo al que queda fuera de tolerancias, **no la cubre nadie en el superviviente**.
+   **Si el auditor lee que eso es un paso y no una linea, el par se voltea.**
+2. **2.431**, ya releida y confirmada (R47), **queda marcada mientras el acto de
+   `accion_correctiva` siga en colapso**: su superviviente es **provisional por 9.3** hasta
+   que se lea la familia entera.
+3. **2.432**, ya releida y confirmada, **queda marcada como el ejemplar de la clase 9.28**:
+   la denominacion **Taguchi** tiene que reponerse en el texto del superviviente.
+
+### 84.5 LO QUE FALTA
+
+**Faltan 174 pares del encargo, del 2.444 al 2.617.** **Checkpoints 2.500 y 2.600
+pendientes.** El dominio son **844 pares** y llega al **3.255**.
+
+**El archivo esta en 2.443 sin huecos ni duplicados. Cero nodos tocados.**
