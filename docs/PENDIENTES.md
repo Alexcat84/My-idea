@@ -2860,3 +2860,39 @@ son **la mayoria del corpus doctrinal**.
 > **EL RESUMEN EN UNA LINEA: la deduplicacion de este catalogo se verifica leyendo. Lo
 > que la maquina puede hacer es ORDENAR LA COLA, que es lo que ya hace, y NO decidir el
 > veredicto.**
+
+---
+
+## LOS TRECE RACIMOS DE IDS DE `health_safety`, para el recomputo (18 ago 2026)
+
+**VIAJA AL RECOMPUTO.** El dominio esta **cerrado** (192 pares, 45 A, **23,4%**), y con el
+cierre queda medido lo que el plan tiene que decidir. **Tabla completa con miembros,
+cobertura y aristas: informe intra §80.4.** Reproducible con
+`python scripts/racimos_health_safety.py`, de solo lectura.
+
+| | |
+|---|---:|
+| racimos | **13** |
+| miembros nominales | **74** (68 nodos distintos: `enfoque_situacional_vs_personal` esta en dos) |
+| pares posibles dentro de los racimos | **194** |
+| **leidos por la cola** | **74 (38%)**, con 29 A |
+| **SIN LEER** | **120** |
+| aristas ya puestas entre miembros | **20** |
+
+> **LOS 120 PARES SIN LEER NO VUELVEN POR LA COLA.** El dominio esta cerrado: **se leen si
+> el plan los encarga como lectura dirigida, o no se leen.** Esa es la decision, y la
+> cifra para tomarla es esta.
+
+**LO QUE LA TABLA DEL §80.4 DECIDE POR ADELANTADO:**
+
+- **DOS racimos cerrados**, y los dos pequenos: **la deriva** (6 de 6 leidos, 3 A y 3 D) y
+  **la gestion del error** (3 de 3, cero A). **Ahi la lectura ya no puede cambiar nada.**
+- **EL ERROR COMO SINTOMA es el grande y el mas caro**: 9 miembros, **11 A sobre 14 pares
+  leidos**, 39% de cobertura, y contiene al iman (`errores_como_consecuencia`, nueve A y
+  tres D). **Con 22 pares sin leer, su forma final no esta fijada.**
+- **CINCO racimos sin un solo cable interno** (la vieja y la nueva vision, la gestion del
+  error, la medicion que corrompe, la cultura coordinadora, el aprendizaje
+  organizacional). **Es la cosecha de enlace mas barata del dominio.**
+- **La cobertura es baja donde hay mas aristas**: el error de mantenimiento va al 19% con
+  **6 aristas**; la medicion que corrompe al 19% con **0**. **Donde hay aristas, el grafo
+  ya resolvio parte del racimo.**

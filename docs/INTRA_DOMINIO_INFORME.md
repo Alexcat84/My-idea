@@ -4629,6 +4629,63 @@ y entonces **ninguna de sus lecturas tiene mas credito que otra.**
 el otro resultado posible de una relectura sana: **los marcados tambien se sostienen a
 veces, y eso no debilita la metrica, la completa.**
 
+### TANDA R45: un puesto, el 2.414, COINCIDE
+
+**18 ago 2026.** Tercera relectura ciega hecha solo sobre marcados. **Coincide.**
+`programa_mejora_calidad_14_pasos` repite contra `programa_de_mejora_de_calidad`, los dos
+de Crosby. **La cuenta de la metrica de credito sube a cinco relecturas y dieciseis
+puestos, y sigue en cuatro caidas, cuatro dentro, cero fuera.**
+
+#### TERCERA CABEZA DUPLICADA DE SERIE: la figura ya tiene patron
+
+**Crosby se suma a Coleman y a los medios.** Con tres ejemplares, esto deja de ser una
+coincidencia y pasa a ser **una forma que hay que buscar en cada serie del catalogo**.
+
+| puesto | la serie | las dos cabezas |
+|---:|---|---|
+| **326** | Coleman | los dos programas generales de la serie, **A** |
+| **948** | los medios de Coleman | **los dos nodos generales de la serie repiten entre si** |
+| **2.414** | **los catorce pasos de Crosby** | `programa_de_mejora_de_calidad` (6 pasos) y `programa_mejora_calidad_14_pasos` (7 pasos), **A** |
+
+> **EL PATRON, y por eso conviene tenerlo escrito antes de leer el resto de `quality`:**
+> cuando un libro trae **una serie numerada** (catorce pasos, siete medios, cinco fases),
+> el catalogo tiende a guardar **la serie desplegada en nodos** *y ademas* **una o dos
+> cabezas que la resumen entera**. **Las cabezas repiten entre si**; los pasos de la serie
+> no. La cabeza duplicada **no se detecta por el titulo** (aqui son *Programa de Mejora de
+> Calidad* contra *Programa de Mejora de Calidad, 14 pasos*), **se detecta porque las dos
+> comprimen la misma numeracion.**
+
+#### LA PERDIDA QUE VIAJA, con su motivo de producto
+
+**Muere `programa_mejora_calidad_14_pasos` y se lleva una linea que la vara considera
+menor y el producto no:** *reunir a un pequeno equipo que impulse la mejora, **aunque sea
+de dos o tres personas***.
+
+> **El superviviente pide un equipo con representantes de CADA AREA del negocio.** Para el
+> publico de la app, **un negocio pequeno**, esa frase **descarta el paso 2 entero**: quien
+> tiene tres empleados lee *representantes de cada area* y cierra la ficha. **La linea que
+> muere es lo unico del par que hace el programa ejecutable a esa escala.**
+>
+> **No cambia la clase** (por la vara es linea, y lo es), **cambia lo que la fusion tiene
+> obligacion de reponer.**
+
+#### EL COSTO DE LA NO CALIDAD: ARISTA, NO PERDIDA, y la verificacion la cierra
+
+El hijo pide *definir como vas a medir la calidad **y el costo de la no calidad***. **Eso
+no se copia al superviviente: se cablea**, porque el catalogo tiene el nodo que lo hace,
+`costo_de_mala_calidad_copq`.
+
+> **VERIFICADO CONTRA EL GRAFO, y el resultado corrige el encargo: la arista YA EXISTE.**
+> `costo_de_mala_calidad_copq` figura en los `nodos_previos` **de los dos nodos del par**,
+> del que muere y del que sobrevive. **No es arista candidata: es arista puesta.**
+>
+> **Por eso la perdida aqui es CERO.** El paso del hijo **ya esta servido por el grafo en
+> el superviviente**, y la fusion no tiene que anadir nada por este lado. **Queda escrito
+> porque el caso contrario habria sido trabajo, y porque comprobarlo costo una consulta.**
+
+**Y la fusion alimenta la D1 de Crosby**: es la cabeza de esa serie la que queda de pie,
+asi que el nodo que sobreviva **es el que la D1 tiene que nombrar.**
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -13503,5 +13560,32 @@ puesto 3.255.
 | cribado | **2.417 a 2.617**, 201 pares |
 | checkpoints | **2.500 y 2.600** |
 | comprobacion | la tasa de `quality` con banda utilizable, la proporcion de vara, y **cuantos de los 49 candidatos del barrido caen dentro del tramo leido** |
+
+
+
+### 81.4 LA SEPARACION CANAL CONTRA CATALOGO, y con esto la 75.8 queda cerrada
+
+> **LA PREDICCION MEZCLABA LO QUE EL BARRIDO VE CON LO QUE LA COLA OFRECE. AHORA ESTAN
+> MEDIDOS POR SEPARADO.**
+
+| | que universo mide | cifra de `quality` |
+|---|---|---:|
+| **el barrido paso contra nodo** | **el catalogo entero**: toda madre cuyo paso tiene hijo con casa propia | **291 parejas sin arista** |
+| **la cola del cribado** | **los pares que se parecen**: similitud de titulo y semantica por encima del corte | **844 pares** |
+| **la interseccion** | lo que el cribado puede cosechar leyendo | **49, el 5,8%** |
+
+**LA CONSECUENCIA OPERATIVA, escrita, y SIN RUTA NUEVA:**
+
+1. **Leer `quality` cosecha GEMELOS.** Es lo que la cabecera ya entrego y lo que el 9.19
+   predice: similitud alta, duplicados.
+2. **Sus JERARQUIAS no llegan por la cola: llegan por las rutas que el plan ya tiene.**
+   `OP-E-06` escribe **los que tienen direccion**; `OP-E-07` son **lecturas de frase, no de
+   par**, con la clase ya decidida; y `OP-E-03` computa **la diferencia contra la cola el
+   dia que cada dominio cierre**.
+3. **Los 242 de `quality` que quedan fuera de la cola no son un hueco del cribado: son la
+   carga de esas tres operaciones.** El cribado **no los va a ver**, y no tiene por que.
+
+**Con esto la prediccion de la seccion 75.8 queda cerrada:** no era falsa **y no era
+util**, porque hablaba de un canal con las cifras de otro.
 
 **El archivo esta en 2.416 sin huecos ni duplicados. Cero nodos tocados.**
