@@ -15322,3 +15322,75 @@ cae fuera de esta lista, se mueve el credito de toda la tanda, no el de un vered
 
 ---
 
+## 92. CHECKPOINT 2.600: la fuente del informe no queda trunca en el 2.500
+
+**Apendice compacto, adjudicado por el auditor del bucle (acta vuelta 1, 12 ago 2026).** El
+reporte en prosa de este checkpoint vive en `docs/loop/REPORTE.md` en git (commit `5834d869`);
+esta seccion NO lo re-narra, solo fija las cifras y los commits para que la fuente de
+checkpoints del informe no quede cortada en la seccion 91. **Cifras ya verificadas por el
+auditor contra el archivo y el grafo, corte 2.600.**
+
+### 92.1 MARCADOR RECOMPUTADO (corte 2.600, sin huecos, sin duplicados)
+
+| | |
+|---|---:|
+| **veredictos** | **2.600**, hasta el puesto 2.600 |
+| **A** (REPITE) | **522** |
+| **B** (DUDOSO) | 89 |
+| **C** (SANO CON FIGURA) | 7 |
+| **D** (SANO LIMPIO) | **1.982** |
+| **tasa global de A** | **20,1 %** |
+
+Contra el 2.554 (arranque del bucle): **+14 A y +32 D**. **Quedan 788 pares:** `quality` **655**,
+`risk_management` **106**, `seguridad_digital` **27**.
+
+### 92.2 `quality`, EL DOMINIO MAS REPETIDO, Y SU VARA POR TRAMO
+
+`quality` **189 pares, 68 A, 36,0 %**, sigue al frente del catalogo (contra 23,8 % de `core`).
+Bajo del 37,1 % del corte 2.500 porque el cuerpo entrega menos que la cabeza, no por caida.
+
+| tramo | pares | A | tasa |
+|---|---:|---:|---:|
+| 2.501 a 2.525 | 25 | 11 | **44,0 %** |
+| 2.526 a 2.550 | 25 | 8 | 32,0 % |
+| 2.551 a 2.575 | 25 | 9 | 36,0 % |
+| 2.576 a 2.600 | 25 | 7 | **28,0 %** |
+
+> **El cuerpo de `quality` se sostiene entre 28 y 44 %**, sin tendencia a la baja al 20 % de
+> los dominios anteriores. El 28,0 % del ultimo tramo es tramo cargado de cumulos todo D
+> (benchmarking, cartas de control, seriedad), no descenso. Confirma el 9.19 y su limite.
+
+### 92.3 FAMILIAS DEL 9.3 AL DIA, CON SU ESPECIE (corte 2.600)
+
+| familia | pares leidos | especie |
+|---|---|---|
+| el **histograma** | 3 de 3 (2.442 D, 2.486 D, 2.517 A) | **POR DERECHO, final** |
+| la **auditoria de producto** | 3 de 3, las tres D (2.433, 2.478, 2.594) | **SIN ACTO, cerrada** |
+| **causas comunes vs especiales** | gana 2.497, 2.501, 2.577; el 2.532 es fusion mutua entre perdedores | **candidata a POR DERECHO**, falta cola |
+| **sistema estable / resp. gerencial** | 2.453 A, 2.537 A, 2.572 A; un nodo gano una y perdio otra | **POR ELEGIR**, provisional (cumulo de 17 nodos sin leer entero) |
+| la **capacidad** | 5 de 6, las cinco D | **SIN ACTO A LA FECHA** (falta un par) |
+| la **seriedad** | 5 de 6, las cinco D | **SIN ACTO A LA FECHA** (falta un par) |
+| **dia de cero defectos** | 2.491 A, 2.525 A mutua | **POR ELEGIR** (9.3.1 visto segundo) |
+
+### 92.4 FIGURAS AL DIA
+
+- **Fusion mutua:** dos casos nuevos, el **decimotercero (2.575)** y el **decimocuarto
+  (2.597)**; el duodecimo era el 2.552. Conteo verificado contra el archivo por el auditor.
+- **La senal del idioma (quinta cara, 9.28.1):** **cinco apariciones al corte 2.600**, una de
+  emparejamiento (2.464) y cuatro de perdida de denominacion (MBO, box plot, VOC, COC 2.593).
+  Su TASA se midio en el bucle vuelta 2, ver la nota de medicion del 9.28.1.
+
+### 92.5 CORRECCION DECLARADA Y COMMITS
+
+El tramo trajo una **correccion declarada del propio ejecutor** (la fila de la responsabilidad
+gerencial estaba mal medida por saltarse el resolutor; el 2.453 A la parte en dos actos y la
+vuelve POR ELEGIR). El texto viejo quedo **tachado sin borrar**, porque el error es la leccion.
+Detalle en `docs/loop/REPORTE.md` y en `docs/BANCO_DE_TEXTOS.md` 9.3.1.
+
+| commit | que fija |
+|---|---|
+| **`f3c3750c`** | el archivo del cribado en 2.600 lineas (el estado que el auditor recomputa) |
+| **`5834d869`** | reporte, correccion declarada de 9.3.1 y `.gitignore` del bucle |
+
+---
+

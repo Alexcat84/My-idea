@@ -2439,6 +2439,23 @@ y el 9.21 no la cubria porque solo hablaba de cifras.
 > **Por que importa mas de lo que parece:** de una tabla nadie cita una celda, se
 > cita la frase. **La prosa es lo que viaja**, y viaja sin la tabla al lado.
 
+**PRECISION a la tercera mitad, adjudicada por el auditor del bucle el 12 ago 2026 (acta
+vuelta 1): EL ORDEN CANONICO ES EL CORTE, NO LA FECHA DE CALENDARIO.** La tercera mitad
+obliga a que toda glosa lleve el corte de su cifra; de ahi sale la llave del reloj:
+
+> - **(a)** Lo que se **transcribe** de un adjudicador anterior **conserva la fecha con que
+>   ese adjudicador lo firmo**, aunque quien lo copia trabaje otro dia. No se retoca.
+> - **(b)** Todo texto **NUEVO** se firma con el **reloj real del sistema MAS su corte**
+>   (asi: *"12 ago 2026, corte 2.600"*).
+> - **(c)** La aparente inversion (un 12 ago escrito despues de un 18 ago) **es inofensiva
+>   porque el corte ordena, no la fecha.** El corte es monotono con el trabajo; el reloj no.
+
+**Por que no pide doctrina nueva:** la regla del corte ya estaba escrita; esto solo dice
+**donde vive el orden** cuando el reloj y el corte no coinciden. **Nada de lo ya escrito se
+corrige.** El caso que la produjo: el bucle arranco el 12 ago 2026 sobre doctrina fechada 17
+y 18 ago 2026; el ejecutor firmo sus transcripciones con la fecha del adjudicador y su
+correccion propia con el reloj real, y el corte 2.600 ordena las dos sin contradiccion.
+
 ---
 
 ### 9.22 FIGURA: LA VARA EN LOS DOS SENTIDOS
@@ -2852,6 +2869,42 @@ corte 2.554**, una como senal de emparejamiento (2.464, `cero_defectos` contra
 perdida de denominacion** (MBO, box plot, VOC). Deja de ser hipotesis: **es figura, con la
 cifra de cuatro y su corte.** Lo que sigue sin cerrar es su TASA (cuatro sobre que universo),
 y eso se mide, no se dicta; queda anotado para el checkpoint.
+
+**LA MEDICION DE LA TASA, encargada y corrida (bucle vuelta 2, corte 2.600).** Comando de
+solo lectura: `python scripts/barrido_quinta_cara.py 2600`. Barre `titulo_concepto` y
+`node_id` de los dos nodos de cada par LEIDO buscando siglas (dos o mas mayusculas seguidas)
+y terminos en otro idioma, con revision a mano de los hits. **Resultado: la tasa NO se dicta
+como cifra unica de catalogo, y aqui esta por que, que es la leccion util.**
+
+> **PRIMERO, el universo de catalogo no vale.** El barrido title+id da **863 de 2.600 pares
+> con candidato**, pero **623 son de `core`**, cuyos ids son ingleses POR DISENO
+> (`get_customers`, `the_mom_test`, SPIN, MVP): *customer* solo casa 334 nodos. En `core` el
+> nombre ingles **es** el nombre, no una denominacion que se pierda frente a un nombre largo
+> en castellano. Contar eso como universo mide el idioma del dataset, no la quinta cara.
+>
+> **SEGUNDO, restringido a `quality`** (donde viven las cinco apariciones), con la lista de
+> tokens adjudicada a mano (siglas inglesas reales y terminos ingleses o japoneses; fuera
+> ISO por neutro, romanos, y designaciones de norma): **56 de 189 pares leidos** llevan una
+> denominacion foranea en el titulo o el id, corte 2.600.
+>
+> **TERCERO, y es el hallazgo que impide la division limpia: la superficie title+id NO
+> contiene toda la senal.** De las seis parejas de aparicion (cinco denominaciones), **solo
+> cuatro caen dentro del universo title+id** (2.464 ZD, 2.477 y 2.488 MBO, 2.548 la de six
+> sigma). **Dos caen fuera:** el **box plot del 2.517 vive en el CUERPO** del nodo
+> (`resumen`/`pasos`), no en su titulo ni su id; y el **COC del 2.593 esta en el titulo pero
+> DELETREADO** (*Concerns, Options, Consequences*), no como acronimo en mayusculas, asi que
+> ni el regex de siglas ni la lista curada lo cazan. **Es el 9.28 en su propia carne: el
+> barrido es buscador de candidatos, no censo, y la denominacion vive tambien fuera de
+> title+id.**
+
+**LO QUE SE PUEDE FIRMAR, como COTA sobre la superficie title+id de `quality` (corte 2.600),
+NO como censo:** sobre los **56 pares** con denominacion foranea en title+id, **4** dieron
+senal documentada de la quinta cara, o sea **4 de 56 = 7,1 %**. **Es piso, no tasa cerrada,**
+por partida doble: la senal excede la superficie medida (box plot y COC quedan fuera del
+denominador) y la lista de tokens es curada (incompleta por construccion, 9.28). **NO se
+dicta una tasa global de catalogo.** Lo que pide adjudicacion (traido, no resuelto): el
+universo de la quinta cara solo tiene sentido restringido a los dominios de nombre largo en
+castellano, y su medicion limpia pide barrer el CUERPO del nodo, no solo title+id.
 
 ---
 
