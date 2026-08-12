@@ -11181,3 +11181,121 @@ las facturas comerciales.
 
 > **Ese par no ha salido todavia.** Queda anotado aqui para leerlo cuando aparezca,
 > y para que no se cierre el dominio sin haberlo mirado.
+
+---
+
+## 67. EL CHECKPOINT DE LOS 2.100, y la curva del dominio medida por tercera vez
+
+**Corte: puesto 2.103.** Marcador recomputado del archivo (banco 9.10).
+
+### 67.1 EL MARCADOR, con la tasa POR DOMINIO y su estado (banco 9.27)
+
+| dominio | puestos | pares | A | B | C | D | **tasa de A** | estado |
+|---|---|---:|---:|---:|---:|---:|---:|---|
+| `compras` | 1-155 | 155 | 1 | 2 | 0 | 152 | **0,6%** | CERRADO |
+| `core` | 156-1600 | **1.445** | **344** | 87 | 7 | 1.007 | **23,8%** | CERRADO |
+| `entrega` | 1601-1771 | 171 | 2 | 0 | 0 | 169 | **1,2%** | CERRADO |
+| `environmental` | 1772-1941 | 170 | 29 | 0 | 0 | 141 | **17,1%** | CERRADO |
+| `exportacion` | 1942-2071 | 130 | 15 | 0 | 0 | 115 | **11,5%** | CERRADO |
+| `franquicias` | 2072- | 32 | 8 | 0 | 0 | 24 | **25,0%** | **abierto, y va bajando** |
+| **GLOBAL** | 1-2103 | **2.103** | **399** | **89** | **7** | **1.608** | **19,0%** | abierto |
+
+**Van 2.103 de 3.388, sin huecos. Faltan 1.285.**
+
+### 67.2 LA PREDICCION DEL CHECKPOINT ANTERIOR SE CUMPLIO
+
+En el checkpoint de los 2.000 se escribio, sobre `exportacion`: *"un dominio
+abierto al 18,3% no dice 18,3%: dice **18,3% hasta aqui, y va bajando**"*.
+
+> **`exportacion` cerro en 11,5%.** La prediccion no era una corazonada: era la
+> consecuencia de que la cola esta ordenada por parecido descendente.
+
+**Y la curva se ha medido ya en TRES dominios, con la misma forma:**
+
+| dominio | primer tercio | segundo tercio | ultimo tercio | cierre |
+|---|---:|---:|---:|---:|
+| `environmental` | **34,5%** | 24,0% | **7,3%** | 17,1% |
+| `exportacion` | **36,0%** | 16,0% | **0,0%** | 11,5% |
+| `franquicias` (abierto) | **66,7%** (4/6) | 30,8% (4/13) | **0,0%** (0/13) | por medir |
+
+> **Tres dominios, tres curvas, la misma caida.** `franquicias` abrio con la tasa
+> mas alta medida en todo el ejercicio, **cuatro A en sus primeros seis pares**, y
+> a los treinta y dos pares ya lleva **trece D seguidas**. La tasa del 25,0% que
+> figura hoy en la tabla **no describe al dominio**: describe que se lleva un
+> tercio leido.
+
+### 67.3 EL DOMINIO DE FRANQUICIAS: OCHO A, Y TODAS DE LA MISMA FAMILIA
+
+**Las ocho A del dominio son SUBCONJUNTO ESTRICTO o su caso espejo.** Ninguna es
+un empate de contenido: en siete de ellas un nodo cabe dentro del otro.
+
+| puesto | el nodo que cabe dentro | dentro de | lo unico que anade |
+|---:|---|---|---|
+| 2072 | `terminacion_franquiciado_causas` | `gestion_terminacion_franquiciado` | que los plazos se graduen por gravedad |
+| 2074 | `estimacion_inversion_inicial_franquiciador` | `cinco_categorias_costos_franquicia` | los materiales de entrenamiento |
+| 2075 | `costos_preparacion_franquicia` | `cinco_categorias_costos_franquicia` | mobiliario, y "adicionales" en las marcas |
+| 2076 | `contratar_abogado_especializado_franquicias` | `eleccion_abogado_franquicias` | pedir referencias |
+| 2079 | `estrategia_multicanal_expansion` | `franquicia_mas_crecimiento_corporativo_hibrido` | nada: su paso 4 resume sus pasos 1 y 2 |
+| 2087 | `sitio_web_captura_leads` | `sitio_web_franquicia` | la oferta de valor a cambio del contacto |
+| 2090 | `contratar_abogado_especializado_franquicias` | `contratar_abogado_franquicias` | completar la planificacion antes |
+| **2080** | **ninguno contiene al otro** | `proceso_llamada_inicial_venta` / `proceso_primera_llamada` | **una linea por cada lado** |
+
+**El 2080 es el unico distinto y por eso importa** (ver 67.5).
+
+### 67.4 DOS ESTRELLAS EN EL MISMO DOMINIO, CON ORIENTACIONES OPUESTAS
+
+**Es la primera vez que el ejercicio da las dos formas juntas**, y verlas al lado
+deja clara la unica cosa que las distingue: **quien contiene a quien.**
+
+| | **OCTAVA, clasica** (puesto 2092) | **SEPTIMA, invertida** (puesto 2090) |
+|---|---|---|
+| **centro** | `cinco_categorias_costos_franquicia`, el **largo** | `contratar_abogado_especializado_franquicias`, el **corto** |
+| **periferios** | `estimacion_inversion_inicial_franquiciador`, `costos_preparacion_franquicia` | `eleccion_abogado_franquicias`, `contratar_abogado_franquicias` |
+| **las A** | 2074 y 2075: el centro **contiene** a los dos | 2076 y 2090: el centro **esta contenido** en los dos |
+| **la D entre periferios** | 2092: dos categorias distintas del mismo presupuesto | 2086: cada largo trae lo suyo |
+
+> **En la clasica, un nodo grande fue troceado y cada trozo quedo como nodo.** En
+> la invertida, **un nodo pequeno fue escrito dos veces con dos ampliaciones
+> distintas.** Son dos averias de catalogo distintas y las dos se detectan igual:
+> leyendo los pasos y contando lo que queda fuera.
+
+### 67.5 NOTA DE DOCTRINA PARA EL AUDITOR: la vara vuelve LINEA por los dos lados
+
+**Puesto 2080**, `proceso_llamada_inicial_venta` contra `proceso_primera_llamada`.
+Es la misma agenda de la misma llamada: **seis pasos coinciden, paso por paso y en
+el mismo orden**, con el mismo formulario nombrado igual al final. **Ninguno
+contiene al otro**: cada uno anade UNA linea, una criba mas por experiencia y
+territorio en uno, el rechazo amable del que no califica en el otro.
+
+> **Hasta hoy el 9.22, la vara en los dos sentidos, se habia usado siempre para
+> confirmar D**: la vara volvia PROCEDIMIENTO por los dos lados y el par
+> continuaba. **Este es el primer par donde vuelve LINEA por los dos lados**, que
+> es el caso espejo y da **A**.
+
+**No es regla nueva. Es el 9.6.1 y el 9.22 aplicados juntos**, y queda anotado
+aqui para que el auditor lo mire en la relectura.
+
+**Y viene con su contraste medido, el puesto 2091**, que se leyo D con la misma
+pregunta: alli el solape es de **dos pasos de cuatro** y cada nodo sigue hacia un
+sitio distinto, la calidad del contacto uno y el control del gasto el otro. **Lo
+que separa un caso del otro es cuanto coincide y en que orden**, no el parecido
+de los titulos.
+
+### 67.6 LA REGLA PRACTICA QUE ESTE TRAMO OBLIGO A ESCRIBIR
+
+Con tantas llamadas ajustadas seguidas, quedo hecha explicita la manera de contar
+lo que un nodo anade, y se aplico igual en las veintiseis lecturas del tramo:
+
+> **Es LINEA** un puntero a una fuente, una advertencia, un criterio suelto o una
+> accion unica. **Es PROCEDIMIENTO** un paso que obliga a tomar varias decisiones
+> dentro de si, o que se repite en el tiempo.
+
+**Ejemplos de las dos columnas, todos de este tramo:** linea fue *consultar dos
+sitios oficiales* (2022), *pedir referencias* (2076 y 2090), *definir la oferta de
+valor* (2087). Procedimiento fue *auditar cada cierto tiempo si la relacion
+evoluciono* (2073), *verificar los umbrales de tarifa estado por estado* (2073),
+*establecer la logistica del entrenamiento con sus asistentes obligatorios* (2100).
+
+> **La regla no cambia la vara: la hace contable.** Y como toda vara, se reporta y
+> no se interpreta sola: en un dominio hecho de indice y fichas, como
+> `exportacion`, la vara alta no significo cola pendiente (banco 9.19 y seccion 66.4).
