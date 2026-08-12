@@ -4843,6 +4843,80 @@ veredicto.**
 **Con esto el archivo tiene cuatro fusiones mutuas** (2.127, 2.368, 2.417, 2.436) **y una
 regla que dice donde va lo que sobra en las cuatro.**
 
+### TANDA R48: un puesto, el 2.440, COINCIDE. Y la comprobacion tumba la premisa
+
+**18 ago 2026. La A se sostiene.** `moral_y_sistema_no_individuo` repite contra
+`identificacion_causa_raiz_no_culpa_individual`.
+
+| | |
+|---|---:|
+| relecturas ciegas | **8** (R42 a R48) mas el barrido de direccion |
+| puestos releidos | **21** |
+| caidas | **4** . dentro del marcado **4** . fuera **0** |
+
+#### LA PERDIDA SE VERIFICO ANTES DE CLASIFICARLA, Y NO ES DE CATALOGO
+
+**La hipotesis a comprobar era esta:** *dar seguimiento y **apoyo** a quienes caen fuera de
+las tolerancias del grupo* **seria el unico lugar del catalogo donde se dice que se hace
+CON LA PERSONA despues de absolverla**, y sin ella *enfocate en el sistema* se leeria como
+*abandona al que esta fuera*.
+
+> **LA COMPROBACION CONTRA EL GRAFO DICE QUE NO. HAY DOS NODOS QUE LA CUBREN, Y LOS DOS LA
+> DESARROLLAN MEJOR QUE EL NODO QUE MUERE.** Los dos son de Deming, la misma fuente.
+
+| nodo | el paso que la cubre | que anade sobre la linea que muere |
+|---|---|---|
+| **`deteccion_de_lideres_y_rezagados`** | paso 4: *investigar causas especificas para los de bajo desempeno* | **nombra las tres causas a revisar: equipo, entrenamiento y SALUD** |
+| **`liderazgo_para_mejora_continua`** | paso 2: *disenar mecanismos de **ayuda individual** o reconocimiento segun corresponda* | su **entregable** es literalmente *apoyo individualizado basado en datos*, y anade **el reconocimiento al que esta fuera POR ARRIBA** |
+
+**`deteccion_de_lideres_y_rezagados` ademas hace la mitad que faltaba:** su paso 5 manda
+**estudiar y documentar los metodos de los de ALTO desempeno para replicarlos.** El nodo
+que muere solo miraba hacia abajo.
+
+**ENTONCES LA CLASIFICACION CORRECTA ES OTRA:**
+
+| lo propuesto | lo verificado |
+|---|---|
+| perdida **de CATALOGO** | **perdida DE PAR** |
+| **prioridad de rescate** en el reparto | **ARISTA CANDIDATA**: el contenido tiene dos casas, lo que falta es el cable |
+
+**LA COMPROBACION DEL CABLE, hecha tambien:**
+
+| | |
+|---|---:|
+| aristas entre el superviviente y los dos cubridores | **0** |
+| aristas entre el nodo que muere y los dos cubridores | **0** |
+| `deteccion_de_lideres_y_rezagados` en la cola | **si**, puestos **2.919** y **3.170** |
+| `liderazgo_para_mejora_continua` en la cola | **NO ESTA** |
+
+> **TERCER CASO DE LA MISMA FORMA, y los tres con resultado distinto**: en el **2.414** el
+> COPQ **ya estaba cableado** y la perdida era cero; en el **2.417** el poka yoke **existe
+> y no esta cableado**; aqui **el apoyo al que queda fuera existe, esta mejor desarrollado
+> que en el nodo que muere, y tampoco esta cableado.**
+>
+> **Y este es el primero donde la comprobacion VOLTEA LA PREMISA.** La linea parecia unica
+> y no lo era. **Sin comprobar, se habria escrito una prioridad de rescate para algo que el
+> catalogo ya tiene dos veces.**
+
+**LO QUE SI QUEDA ANOTADO PARA EL REPARTO:** `liderazgo_para_mejora_continua` **no esta en
+la cola**, asi que **el cribado no lo va a emparejar nunca**. Es carga de las rutas de
+enlace, como los 242 de `quality` y los 120 de los racimos de `health_safety`.
+
+### LAS TRES CARAS DE LA MISMA FAMILIA, con su antidoto
+
+**El cribado ha medido tres veces si una senal de forma puede decidir un veredicto. Las
+tres fallan, cada una a su modo, y las tres tienen antidoto escrito.**
+
+| la senal | la medicion | como falla | **el antidoto** |
+|---|---|---|---|
+| **el vocabulario** (§76.3) | 34 marcadas de 46, **1 lo era: 3%** | **no ve el parecido**: dos nodos dicen el mismo paso sin compartir una palabra | **leer el par**. La cobertura lexica no se usa como filtro, solo como orden |
+| **el identificador** (§82.2, §84.3) | 5 pares de familia, **3 repitieron: 60%** | **ve parecido donde no lo hay**: un `_2` puede marcar destinatario (2.439) u objeto (2.433) distinto | **mirar el destinatario y el objeto**, no el sufijo |
+| **la subcadena** (§9.28 del banco) | 3 nombres propios detectados, **1 falso** | **inventa la senal**: `ries` dentro de *riesgo* | **coincidencia por PALABRA COMPLETA**, ya corregida en el script |
+
+> **LAS TRES SIRVEN PARA LO MISMO Y NINGUNA PARA MAS: PONER DELANTE LO QUE HAY QUE MIRAR.**
+> El vocabulario **se queda corto**, el identificador **se pasa de largo**, y la subcadena
+> **se inventa lo que mide**. **Ninguna decide. El veredicto se lee.**
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
