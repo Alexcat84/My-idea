@@ -14378,3 +14378,84 @@ cosas**, y el superviviente solo hace la primera.
 pendientes.** El dominio son **844 pares** y llega al **3.255**.
 
 **El archivo esta en 2.452 sin huecos ni duplicados. Cero nodos tocados.**
+
+
+---
+
+## 87. REPORTE DEL TRAMO 2.453 A 2.456
+
+**Corte: puesto 2.456. Van 45 pares de `quality`** de sus 844.
+
+### 87.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **`quality`** | **45** | **17** | **28** | **37,8%** |
+| archivo global (corte 2.456) | 2.456 | **471** | **1.889** | **19,2%** (B 89, C 7) |
+
+**Cinco cortes:** 44,4% . 40,6% . 40,5% . 39,0% . **37,8%**. **Baja monotona desde el
+segundo corte**, y **la caida se desacelera**: 3,8 puntos, 0,1, 1,5, 1,2. **Sigue sin banda
+publicable**, pero **la forma es ya la del 9.19**: la cola pierde gemelos poco a poco.
+
+### 87.2 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **6** |
+| **REPITE** | **17** |
+| no se invoco | **22** |
+
+**23 de 45, el 51%.** **Cero PENDIENTE DE DOCTRINA. 23 ARISTA QUE FALTA (51%), 19 SOLAPE
+DECLARADO.**
+
+### 87.3 LO QUE ANADE ESTE TRAMO
+
+**UN PAR DONDE EL SOLAPE ES DE CUATRO PASOS Y AUN ASI ES SANO (2.456).**
+`diseno_experimentos_doe_mejora` y `dmaic_fase_improve` comparten **planificar los
+experimentos, el cribado factorial fraccionado, los factoriales 2k y RSM o EVOP**, y **cada
+uno sigue por su lado despues del solape**: uno termina **en el modelo matematico con los
+ajustes optimos**, el otro **en la mejora disenada e implementada**.
+
+> **Es el solape mas grande del dominio que no da A**, y por eso conviene tenerlo escrito:
+> **el tamano del solape no decide.** Lo que decide es **si lo que queda fuera del solape
+> es procedimiento en los dos lados**, y aqui lo es. **Uno acaba en la ecuacion y el otro
+> en el taller.**
+
+**DOS PARES DE IDS GEMELOS CON CONTRAPARTES DISTINTAS.**
+
+| puesto | uno | el otro |
+|---:|---|---|
+| **2.455** | `definiciones_operacionales` pone de acuerdo **a los de dentro**, con supervisores e inspectores y **ejemplos fisicos de conforme y no conforme** | `definiciones_operacionales_de_calidad` pone de acuerdo **al cliente**, traduciendo requisitos subjetivos y **compartiendole las cartas de control** |
+| **2.454** | `analisis_capacidad_proceso` **audita la cuenta**: Cpk, Cpm y **los cinco supuestos** que dicen cuando el numero NO vale | `capacidad_proceso_concepto` **acota el proceso** (maquina, metodo, material, personas) y **dice para que sirve el resultado** |
+
+**UNA PERDIDA DE METODO (2.453).** Muere `sistema_estable_responsabilidad_gerencial` y se
+lleva **la recoleccion por observacion planificada, con conteos puntuales y muestreos
+periodicos**. El superviviente pide **datos diarios durante varias semanas**.
+
+> **No es perdida de nombre, ni de alcance, ni de destino: es de METODO ALTERNATIVO.** Y
+> tiene el mismo peso de producto que las otras tres: **es lo unico del par que sirve a
+> quien no puede tomar datos todos los dias**, que es la mayoria de los negocios pequenos.
+> **Se anota en el reparto con nombre propio.**
+
+### 87.4 LAS 17 A DE `quality`, con las discutibles marcadas
+
+`2.414`, `2.417`, `2.418`, `2.420`, `2.421`, `2.424`, `2.426`, `2.431`, `2.432`, `2.436`,
+`2.437`, `2.438`, `2.440`, `2.445`, `2.447`, `2.451`, **`2.453`**.
+
+**LAS TRES MAS DISCUTIBLES, y la R51 empieza aqui:**
+
+1. **2.453.** La clase se sostiene: el que muere **se salta la clasificacion comun contra
+   especial**, que es el paso que decide el camino. **Pero lo que se lleva es un metodo de
+   recoleccion mas barato**, y este catalogo es para negocios que no miden a diario. **Es
+   el cuarto motivo de perdida de linea, y el primero que no estaba en la tabla.**
+2. **2.451**, ya releida y confirmada (R50), **queda marcada como el ejemplar que dio
+   nombre a la regla de la persuasion.**
+3. **2.447**, ya releida y confirmada, **sigue sin heredero para la unica accion de
+   formacion del par.**
+
+### 87.5 LO QUE FALTA
+
+**Faltan 161 pares del encargo, del 2.457 al 2.617.** **Checkpoints 2.500 y 2.600
+pendientes.** El dominio son **844 pares** y llega al **3.255**.
+
+**El archivo esta en 2.456 sin huecos ni duplicados. Cero nodos tocados.**
