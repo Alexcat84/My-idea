@@ -5010,21 +5010,45 @@ mismos.
 > requisito sustantivo de la norma, el otro trae la formula del ROI. **Ninguno de los dos
 > trae con que convencer.**
 
-### LOS TRES MOTIVOS DE PERDIDA DE LINEA, con su remedio
+### LOS CUATRO MOTIVOS DE PERDIDA DE LINEA, con su remedio
+
+**Adjudicado el 18 ago 2026 tras la R51: la tabla pasa de tres a CUATRO.**
 
 | motivo | que muere | como se reconoce | **el remedio** | ejemplares |
 |---|---|---|---|---|
 | **NOMBRE** (banco 9.28) | **la denominacion del instrumento** | el superviviente **no dice la palabra** por la que se busca | el nombre viaja como **DENOMINACION**: una linea en el titulo o la primera frase | **2.250** (Amalberti), **2.432** (Taguchi) |
 | **ALCANCE** | **los ejemplos que abrian el nodo a otros sectores** | el superviviente **si dice la palabra**, pero **con un solo ejemplo** | los ejemplos **entran a la enumeracion** que el superviviente ya tiene | **2.445** (AS9100, ISO 14000), y el caso Samsung del **2.451** |
 | **DESTINO** | **a donde va el entregable y a quien hay que convencer** | el superviviente **produce el resultado y no dice que hacer con el** | la linea de destino entra **como paso final** del superviviente | **2.451** (*documentar el ROI para reportarlo a la direccion*) |
+| **METODO ALTERNATIVO** | **la otra forma de hacer el mismo paso, la que sirve a otra escala** | el superviviente manda **un solo camino**, y el que muere traia **uno mas barato o mas lento** | el paso del superviviente pasa a **VARIANTE CONDICIONAL**: **la condicion del lector elige el camino** | **2.453**: *recolectar datos diarios durante varias semanas* **o por muestreos periodicos si no puedes medir a diario* |
 
-> **LOS TRES SE PARECEN Y NO SON EL MISMO: uno pierde el NOMBRE, otro las PUERTAS, otro la
-> SALIDA.** Y los tres tienen el mismo remedio de coste: **una linea en el superviviente,
-> nunca un nodo.**
->
-> **Y los tres son invisibles para la vara**, porque la vara pregunta que PROCEDIMIENTO
-> anade el hijo. **Por eso van al reparto de perdidas con nombre propio y no al veredicto:
-> el veredicto esta bien y la fusion es la que puede empobrecer el catalogo.**
+**EL REMEDIO DEL CUARTO, con su forma exacta.** No es anadir un paso ni partir el nodo: es
+**abrir el paso que ya existe.**
+
+| como esta | como queda |
+|---|---|
+| *Recolectar datos diarios de defectos o errores durante varias semanas.* | *Recolectar datos diarios de defectos o errores durante varias semanas, **o por conteos puntuales y muestreos periodicos si no puedes medir a diario**.* |
+
+> **La condicion la evalua el lector, no el catalogo.** Por eso la variante va **dentro del
+> paso** y no como nodo hermano: **un negocio de tres personas no necesita elegir entre dos
+> fichas, necesita que la ficha contemple su caso.**
+
+### LA PRUEBA COMUN DE LOS CUATRO
+
+> **VALOR SIN PROCEDIMIENTO NUEVO: INVISIBLES PARA LA VARA, OBLIGATORIOS EN EL REPARTO.**
+
+**Los cuatro tienen la misma anatomia y por eso forman una clase:**
+
+| | |
+|---|---|
+| **que son** | linea que **no anade un paso con decisiones dentro** |
+| **que hace la vara con ellos** | **nada**: por 9.6.1 son LINEA, y el veredicto A **esta bien** |
+| **que se pierde si nadie los anota** | el **nombre** por el que se llega, las **puertas** por las que entra otro rubro, la **salida** hacia quien decide, o la **escala** a la que el lector puede ejecutarlo |
+| **el remedio de los cuatro** | **una linea en el superviviente. Nunca un nodo.** |
+
+> **Y la consecuencia que ordena el trabajo: EL VEREDICTO NO ES EL RIESGO, LA FUSION LO
+> ES.** Las 471 A del archivo estan bien clasificadas; **lo que puede empobrecer el
+> catalogo es fundir sin leer estas cuatro columnas.** Por eso se anotan **con nombre
+> propio, puesto por puesto**, y no como una advertencia general al final.
 
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
@@ -14457,5 +14481,19 @@ periodicos**. El superviviente pide **datos diarios durante varias semanas**.
 
 **Faltan 161 pares del encargo, del 2.457 al 2.617.** **Checkpoints 2.500 y 2.600
 pendientes.** El dominio son **844 pares** y llega al **3.255**.
+
+### TANDA R51: un puesto, el 2.453, COINCIDE
+
+**18 ago 2026. La A se sostiene**, y con ella **la tabla de perdidas pasa a cuatro
+motivos** (seccion 8).
+
+| | |
+|---|---:|
+| relecturas ciegas | **11** (R42 a R51) mas el barrido de direccion |
+| puestos releidos | **25** |
+| caidas | **4** . dentro del marcado **4** . fuera **0** |
+
+> **Once relecturas y ninguna discrepancia fuera de la lista de marcados.** La metrica de
+> credito sigue entera.
 
 **El archivo esta en 2.456 sin huecos ni duplicados. Cero nodos tocados.**

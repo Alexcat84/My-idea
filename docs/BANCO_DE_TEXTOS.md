@@ -1576,6 +1576,36 @@ eso vale también para cualquier deduplicación mecánica que se plantee más ad
 
 ---
 
+### 9.6.3 PRECISIÓN a 9.6.1: EL TAMAÑO DEL SOLAPE NO DECIDE
+
+**Adoptada el 18 ago 2026, del puesto 2.456, y es el ejemplar del lado contrario al 9.6.2.**
+
+> **La vara no cuenta cuántos pasos comparten dos nodos. Pregunta qué queda FUERA del
+> solape, y en qué lado.**
+
+**EL EJEMPLAR.** `diseno_experimentos_doe_mejora` contra `dmaic_fase_improve`, los dos de
+Juran y **con arista puesta**, comparten **CUATRO pasos idénticos**: planificar los
+experimentos diseñados, el cribado factorial fraccionado, los factoriales 2k, y RSM o EVOP.
+**Es el solape más grande del dominio.**
+
+| lo que queda fuera | en qué lado | qué es |
+|---|---|---|
+| los **factoriales completos** y **el modelo matemático final con los ajustes óptimos** | `diseno_experimentos_doe_mejora` | **procedimiento** |
+| **evaluar alternativas y seleccionar la solución óptima**, y **diseñar e implementar la mejora** | `dmaic_fase_improve` | **procedimiento** |
+
+> **Procedimiento en los dos lados: el par es SANO.** Uno acaba **en la ecuación** y el
+> otro **en el taller**.
+
+**LA REGLA, y es la simétrica de 9.6.2:** el 9.6.2 dice que la vara **tiene dirección**;
+esta dice que **no tiene báscula**. **Cuatro pasos compartidos no pesan más que uno**: lo
+único que se pesa es **el resto**.
+
+> **EL ERROR QUE PREVIENE:** mirar un solape grande y concluir duplicación. **Un solape
+> grande entre dos nodos que siguen caminos distintos no es una repetición: es una raíz
+> común**, y fundirlos **borra las dos continuaciones para quedarse con el tronco.**
+
+---
+
 ### 9.8 EL DESEMPATE POR CABLEADO
 
 **Registrada el 12 ago 2026.** Sirve para elegir **superviviente**, que es la
