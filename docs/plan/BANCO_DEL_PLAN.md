@@ -535,3 +535,55 @@ se funde hasta que ese triangulo se cierre.**
 
 > **LO QUE NUNCA ES SALIDA: fundir la componente entera porque el cierre transitivo la
 > junta.** **El cierre transitivo no lee: cuenta.**
+
+---
+
+## P.11 PRECISION DE LA VARA: **UNA ADVERTENCIA ES LINEA, NO PROCEDIMIENTO**
+
+**Ratificada por el auditor el 12 ago 2026, y la estreno `LD-58`.**
+
+> **LAS ADVERTENCIAS CALIFICAN EL ACTO, NO LO CONSTITUYEN.**
+>
+> *No lo delegues*, *no dejes que avance*, *preguntate de verdad*, *no te aferres a tu
+> idea*, *evita el multitasking*: **ninguna de esas frases anade un paso al
+> procedimiento. Le anaden una condicion de calidad al paso que ya estaba.**
+
+### POR QUE HACIA FALTA DECIRLO
+
+**La regla practica de la vara ya distinguia linea de procedimiento**: es LINEA un
+puntero, **una advertencia**, un criterio suelto o una accion unica; es PROCEDIMIENTO
+un paso con varias decisiones dentro o que se repite en el tiempo.
+
+**Pero un nodo entero hecho de advertencias no se ve como una linea: se ve como una
+lista de cuatro pasos.** Y ahi es donde la vara se aplicaba mal.
+
+**EL EJEMPLAR QUE LA ESTRENO: `gates_go_kill_decision_points`**, cuatro pasos.
+
+| paso | que es de verdad |
+|---:|---|
+| 1. define con claridad cada punto de decision | **una accion unica** |
+| 2. preguntate de verdad si sigues o paras, **no solo revises como va** | **una advertencia** |
+| 3. **no dejes** que un proyecto avance sin haber decidido | **una advertencia** |
+| 4. anota que decidiste, con sus cinco salidas | **una accion unica mas una taxonomia** |
+
+> **Cuatro pasos, y ni uno es un procedimiento.** Contra
+> `requisitos_gates_con_dientes`, que tiene **seis condiciones cada una con decisiones
+> dentro**, la vara dice **REPITE** sin dudar. **Antes de esta precision, cuatro contra
+> seis parecia una comparacion entre iguales.**
+
+### COMO SE APLICA, en una pregunta
+
+> **Quitale al nodo todas las frases que empiezan por NO, por EVITA o por DE VERDAD.
+> Lo que queda, es un procedimiento o es una lista de punteros?**
+
+**Si lo que queda cabe en una linea, el nodo es linea**, por muchos pasos que tenga
+escritos.
+
+### LO QUE ESTA PRECISION NO AUTORIZA
+
+**No autoriza a borrar las advertencias.** Una advertencia **es lo mas facil de perder
+en una fusion y lo mas caro de recuperar**, porque **no se nota que falta**: el
+procedimiento sigue completo sin ella y simplemente **se ejecuta peor**.
+
+> **UNA ADVERTENCIA NO DECIDE LA CLASE, PERO SIEMPRE VIAJA.** Es linea para la vara y
+> es perdida nombrada para la fusion. **Las dos cosas a la vez.**

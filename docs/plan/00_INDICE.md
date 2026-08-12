@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA CERRADO EN DECISIONES Y ABIERTO EN LECTURAS: ONCE FASES, 67 OPERACIONES, 64 LISTAS. LAS CINCO MESAS ADJUDICADAS, Y LO QUE FALTA NO ES DECIDIR: ES LEER SIETE PARES.**
+**ONCE FASES, 67 OPERACIONES, 64 LISTAS. LAS CINCO MESAS ADJUDICADAS Y LAS SIETE LECTURAS HECHAS. LO QUE QUEDA ES UNA ESPERA CON DISPARADOR Y UNA PARTICION MEDIDA QUE ESPERA UNA SOLA PALABRA.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -270,44 +270,56 @@ en vez de forzarse.**
 
 ---
 
-# CERRADO EN DECISIONES, ABIERTO EN LECTURAS
+# LO QUE QUEDA, Y ES UNA SOLA PALABRA
 
-**La distincion no es retorica: cambia quien tiene que hacer el siguiente trabajo.**
+**El 12 ago 2026 se cerraron las siete lecturas que faltaban.** **Ninguna decision
+nueva quedo pendiente por falta de datos: la unica que queda espera una palabra sobre
+una particion que ya esta medida entera.**
 
-| | |
-|---|---|
-| **una DECISION pendiente** | **espera a alguien**. Nadie puede avanzar sin que se adjudique |
-| **una LECTURA pendiente** | **espera a que se haga**. Nadie tiene que decidir nada: hay que leer y anotar |
+## LAS SIETE LECTURAS, todas hechas
 
-> **HOY EL PLAN NO ESPERA NINGUNA DECISION QUE NO SEA DE ALCANCE. ESPERA SIETE
-> LECTURAS.**
+| lecturas | cuales | resultado |
+|---:|---|---|
+| **2** | `LD-58` y `LD-59`, las que abrian la cadena | **las dos cambiaron la forma** de la operacion que las esperaba |
+| **5** | los pares sin leer del acto de seis, mas la relectura de `LD-44` | **tres A y tres D**, y **el acto se partio** |
 
-## LA LISTA EXACTA DE LO QUE FALTA POR LEER
+> **Con eso, LOS QUINCE PARES DEL ACTO DE SEIS ESTAN LEIDOS.** **Es el unico acto del
+> plan del que se puede decir eso.**
 
-| lecturas | cuales | **que operacion espera** | consecuencia si no se hacen |
-|---:|---|---|---|
-| **5** | los cinco pares sin leer del **acto de seis** de la mesa unida: `gates_go_kill_decision_points` y `gestion_de_portafolio_gates_go_kill` contra `estructura_gates` y `estructura_de_gates`, mas `sistema_gates_go_kill` contra `estructura_de_gates` | **`OP-M-01-FUSION`** y **`OP-M-01-TRIO`** | **la fase 3 no cierra**, y con ella **ni la 4 ni la 5** |
-| **1** | **`LD-44` RELEIDO**, `requisitos_gates_con_dientes` contra `gestion_de_portafolio_gates_go_kill`: es **el unico D entre diez lecturas del mismo acto** | **`OP-M-01-FUSION`** | la fusion de seis se ejecuta **con una contradiccion dentro** |
-| **1** | **`1096` releido** contra el superviviente, tras `OP-M-05-APERTURA` | **`OP-M-05-APERTURA`** | se pierde **el unico gesto propio de `earlyvangelists`** o se funde sobre una D |
+## LO QUE ESPERA UNA PALABRA
 
-**Y ADEMAS, LA COLA DE RELECTURA POST FUSION**, que no bloquea nada pero **se corre
-con el recomputo**: **siete pares**, con su disparador escrito en `08_VERIFICACION`.
+| operacion | la pregunta | por que no se decidio |
+|---|---|---|
+| **`OP-M-01-FUSION`** y **`OP-M-01-TRIO`** | `gestion_de_portafolio_gates_go_kill` **entra en la fusion por sus DOS A, o se queda fuera y se enlaza por sus TRES D?** | **por instruccion**: cuando la D se sostiene y parte el acto, **la particion se trae, no se adjudica** |
+| **`OP-U-02`** | ninguna. **Es una espera** | su disparador es el puesto **3.388** |
 
-## LO QUE ESTO NO ES
+**LA PARTICION, en dos lineas:**
 
-> **NO ES QUE EL PLAN SE HAYA REABIERTO.** Las **cinco mesas siguen adjudicadas**, los
-> supervivientes siguen decididos, las **cinco fronteras** siguen registradas y las
-> **diez reglas** del banco siguen en pie.
+| mitad | | cobertura |
+|---|---|---|
+| **la camarilla de cinco** | `sistema_gates_go_kill`, `gates_go_kill_decision_points`, `requisitos_gates_con_dientes`, `estructura_gates`, `estructura_de_gates` | **10 pares de 10 leidos, LOS DIEZ EN A** |
+| **el sexto** | `gestion_de_portafolio_gates_go_kill` | **2 A y 3 D** contra la camarilla |
 
-> **LO QUE PASO ES QUE DOS LECTURAS CAMBIARON LA FORMA DE DOS OPERACIONES, y eso es
-> exactamente para lo que se pidieron.** **Una lectura que no puede cambiar nada no
-> hace falta hacerla.**
+> **SEA CUAL SEA LA RESPUESTA, LA CAMARILLA SE FUNDE.** Lo unico en discusion es **si
+> el sexto entra o se enlaza**, y **las dos salidas dejan el plan ejecutable.**
 
-## LA REGLA QUE ESTO DEJA
+## LA PREGUNTA DE FONDO, que es mas grande que ese nodo
 
-> **UN PLAN SE CIERRA EN DECISIONES ANTES DE CERRARSE EN LECTURAS, Y LAS DOS FECHAS NO
-> SON LA MISMA.** Confundirlas es lo que produce el dia de la pasada en que alguien
-> tiene que leer un par a las tres de la tarde **con la cirugia ya empezada.**
+> **Cuando un nodo tiene A con dos miembros de una familia y D con tres, MANDA EL
+> CIERRE TRANSITIVO O MANDA LA MAYORIA DE LAS LECTURAS DIRECTAS?**
+
+**El banco 9.24 dice que el acto es el cierre transitivo de la relacion gemelo.** Y el
+cierre transitivo **mete al sexto**. **Pero es la primera vez en el plan que el cierre
+transitivo y la lectura directa se contradicen CON TODAS LAS LECTURAS HECHAS**, asi
+que **no hay mas evidencia que buscar: hay que elegir cual manda.**
+
+> **Lo que se decida ahi vale para todo el catalogo**, y por eso se trae en vez de
+> resolverse dentro de una operacion.
+
+## LA COLA DE RELECTURA POST FUSION sigue viva, y no bloquea
+
+**Siete pares**, con su disparador en `08_VERIFICACION`. **Se corren con el recomputo**
+y no detienen ninguna fase.
 
 ---
 
@@ -390,7 +402,7 @@ que **la vuelta es una instruccion falsa**.
 > obligar a releer un par ya cerrado.** **Estas dos lo obligan**, y **no hay fase que
 > las recoja**: viven dentro de la verificacion de sus operaciones.
 
-### 4. LA FASE 5 NO PUEDE DAR *HECHO* HASTA QUE LA 3 Y LA 4 TERMINEN . **CERRADO EL 12 ago 2026, Y EMPEORO**
+### 4. LA FASE 5 NO PUEDE DAR *HECHO* HASTA QUE LA 3 Y LA 4 TERMINEN . **CERRADO EL 12 ago 2026 CON LAS SIETE LECTURAS HECHAS**
 
 **Las dos lecturas se hicieron el mismo dia, y las dos cambiaron la forma de la
 operacion que las esperaba.**
@@ -400,9 +412,13 @@ operacion que las esperaba.**
 | **`LD-58`** salio **A** | el puente **se cerro hacia la union**: `OP-M-01-FUSION` y `OP-M-01-TRIO` son **una sola fusion de SEIS**, y le faltan **cinco pares por leer** |
 | **`LD-59`** salio **D de madre e hijo** | la apertura de validation **no era una familia plana**: se funde el **triangulo cerrado de tres** y el cuarto **se enlaza** |
 
-> **EL HUECO NO SE CERRO: SE MIDIO.** Antes eran dos lecturas y ahora son **siete**, y
-> estan **nombradas una por una** en la seccion anterior. **Esa es toda la
-> diferencia, y es la que importa: un hueco medido tiene fecha; uno sin medir, no.**
+**Y LAS SIETE SE HICIERON EL MISMO DIA.** Las cinco del acto de seis mas la relectura
+de `LD-44` cerraron **los quince pares** de ese acto, y la de `1096` queda dentro de la
+cola de relectura post fusion, que **no bloquea**.
+
+> **EL HUECO SE CERRO ENTERO EN LECTURAS.** Lo que queda **no es un hueco de orden ni
+> de datos: es una eleccion de doctrina**, y esta escrita arriba con sus dos salidas.
+> **Las dos dejan el plan ejecutable.**
 
 ## LA FRASE QUE RESUME EL DIA
 

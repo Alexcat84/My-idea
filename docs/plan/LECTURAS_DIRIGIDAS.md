@@ -597,3 +597,24 @@ dos operaciones LISTAS no se pueden ejecutar las dos.**
 > **SIN ESTA LECTURA, `OP-M-01-FUSION` y `OP-M-01-TRIO` se pueden ejecutar por
 > separado pero NO LAS DOS SIN VOLVER A MIRAR EL 801.** Esta escrito dentro de las dos
 > operaciones.
+
+---
+
+# SEXTA Y SEPTIMA TANDA: **LAS QUE CIERRAN EL ACTO DE SEIS** . `LD-58` a `LD-65`
+
+**Ejecutadas el 12 ago 2026, en dos encargos del mismo dia.**
+
+| tanda | lecturas | van enteras en |
+|---|---:|---|
+| **las dos que abrian la cadena** | `LD-58` y `LD-59` | [`LD_CADENA.md`](LD_CADENA.md) |
+| **las seis que maduran la fusion** | `LD-60` a `LD-65` | [`LD_ACTO_DE_SEIS.md`](LD_ACTO_DE_SEIS.md) |
+
+**SALDO DE LAS OCHO: cinco A y tres D.**
+
+> **Y CON ELLAS, LOS QUINCE PARES DEL ACTO DE SEIS ESTAN LEIDOS.** Es **el unico acto
+> del plan del que se puede decir eso**, y dentro hay **la unica camarilla
+> completamente cerrada por lectura**: cinco nodos, diez pares, diez A.
+
+**LO QUE CAMBIARON:** `LD-58` junto dos operaciones en una; `LD-59` partio la apertura
+de customer validation; y `LD-60` a `LD-65` **partieron el acto de seis en cinco mas
+uno**, que es lo que hoy espera una palabra.
