@@ -63,8 +63,62 @@ frontera vieja.**
 tratamiento de **SERIE DECLARADA**: un nodo-programa unico, un nodo por paso
 colgando de el, y el numero en el titulo legitimado porque el programa lo explica.
 
-**CON QUE NOMINA.** **83 nodos** declaran el libro: **16 son de FASE**, **2 son
-nodos-PROGRAMA** y **7 son de CANAL**.
+**LA NOMINA, MEDIDA CON LOS DOS INSTRUMENTOS. Corte: 11 ago 2026, puesto 2.117.**
+Instrumento: `scripts/plan/nomina_coleman.py`.
+
+**CONTADOR, por la fuente declarada: 83 nodos citan el libro.** 68 lo llevan de
+primera o unica casa y **15 de SEGUNDA CASA**.
+
+**LA SERIE son 27 de esos 83**, con el criterio escrito dentro del script: es de la
+serie el nodo cuyo id o titulo **nombra una de las ocho fases por su nombre propio**
+o **enumera las ocho**, mas los nodos de canal del programa. *(La palabra suelta
+"fase" no basta: metia `project_close_out`, que es de gestion de proyectos.)*
+
+**EL PROGRAMA, REPARTIDO POR FASE. 19 nodos vivos y 20 ids:**
+
+| fase | nodos vivos | cuales |
+|---|---:|---|
+| **1 Assess** | **3** | `fase_assess`, `fase_assess_ciclo_cliente`, `fase_assess_experiencia_cliente` |
+| **2 Admit** | 2 | `fase_admit`, `fase_admit_celebracion` |
+| **3 Affirm** | **1** | `fase_affirm_buyers_remorse` |
+| **4 Activate** | 2 | `fase_activate`, `fase_activate_primera_impresion` |
+| **5 Acclimate** | **3** | `fase_acclimate`, `fase_acclimate_experiencia_cliente`, `fase_acclimate_mapa_de_proceso` |
+| **6 Accomplish** | 2 | `fase_accomplish`, `fase_accomplish_experiencia_cliente` |
+| **7 Adopt** | 2 | `fase_adopt`, `fase_adopt_ciclo_cliente` |
+| **8 Advocate** | 2 | `advocacy_customer_journey`, `incentivos_no_monetarios_advocacy` |
+| **la cabeza, por duplicado** | 2 | `fases_de_retencion_de_clientes`, `ocho_fases_experiencia_cliente` |
+
+**LOS MEDIOS, 8 nodos:** `seis_canales_comunicacion_assess`,
+`seis_herramientas_comunicacion_fase_activate`,
+`seis_herramientas_comunicacion_celebracion`, `estrategia_multicanal_bienvenida`,
+`regalos_estrategicos_personalizados`, `regalos_estrategicos_sorpresa`,
+`sorprender_cliente_estrategico`, `welcome_call_cliente_veterano`.
+
+**LOS 15 DE SEGUNDA CASA: NINGUNO ENTRA A LA SERIE.** Su primera casa es otro
+libro: Change by Design (4), The Startup Owner's Manual (5), Winning at New
+Products (2), y uno cada uno The Founder's Dilemmas, The Lean Startup, Business
+Model Generation y A Project Manager's Book of Forms.
+
+> **LA CIFRA DE VEINTE DEL ENCARGO CALZA, Y CALZA EXACTA: son los ids del
+> programa.** Medido hoy hay **19 vivos porque el vigesimo, `fase_affirm`, YA ESTA
+> FUNDIDO**: esta deprecado y lo lleva como alias `fase_affirm_buyers_remorse`.
+
+> **Y ESO ES LO MEJOR QUE TRAE ESTA MESA A SU PROPIA DISCUSION: LA FASE 3 YA
+> RECIBIO EL TRATAMIENTO QUE SE DEBATE PARA LAS OTRAS SIETE.**
+> `fase_affirm_buyers_remorse` lleva **TRES alias** dentro: `fase_affirm`,
+> `fase_affirm_reduccion_incertidumbre` y `fase_affirm_reducir_remordimiento`.
+> **Cuatro ids en uno.** La mesa no decide si el tratamiento funciona: decide si se
+> extiende, **y tiene un precedente propio dentro de la misma serie.**
+
+**COBERTURA DE LECTURA, y es la parte floja:** 351 pares posibles entre los 27,
+**38 leidos** (26 D, 9 A, 3 B), **0 en cola** y **313 fuera de cola**. **FORMA
+MEZCLADO, cobertura 38 de 351.**
+
+> **Por el banco 9.26, esta forma es PROVISIONAL y no se puede leer como censo.**
+> Las nueve A ya dicen algo firme: **cada fase con mas de un nodo tiene A por
+> dentro** (assess, admit, activate, acclimate, accomplish), y las dos cabezas
+> **estan en A entre si**, puesto 326. **La cabeza duplicada esta medida, no
+> supuesta.**
 
 **LA RECOMENDACION**, y viene de la **DECISION 1 ya aprobada el 9 ago 2026**: el
 tratamiento de serie declarada **ya esta adoptado** para los programas desmontados
@@ -86,9 +140,55 @@ injertos aporta, QUINCE**, y su material esta pegado **en nodos de otros libros*
 **QUE SE DECIDE.** Si **Ries y Blank discrepan** sobre como decidir un pivote, o si
 **solo entran por sitios distintos a la misma puerta**.
 
-**CON QUE NOMINA.** **Siete miembros, sin cambios.**
-`actualizar_modelo_de_negocio_pivot_o_proceed` **no entra**: ocho veredictos y
-**los ocho D**.
+**LA NOMINA, MEDIDA CON LOS DOS INSTRUMENTOS. Corte: 11 ago 2026, puesto 2.117.**
+Instrumento: `scripts/plan/nominas.py`.
+
+**CONTADOR, por el nombre: 22 candidatos brutos.** **BARRIDO DE LAS A, por el
+archivo: SIETE.** Los dos instrumentos levantan, y la lectura decide.
+
+| el miembro | su libro |
+|---|---|
+| `decision_pivote_perseverar` | The Lean Startup, Ries |
+| `pivotar_o_perseverar` | The Lean Startup, Ries |
+| `pivote_estrategico` | The Lean Startup, Ries |
+| `pivotar_o_proceder` | The Startup Owner's Manual, Blank |
+| `pivote_o_proceder` | The Startup Owner's Manual, Blank |
+| `pivote_startup` | The Startup Owner's Manual, Blank |
+| `pivotes_e_iteraciones` | The Startup Owner's Manual, Blank |
+
+**COBERTURA: 21 pares posibles, 13 leidos, 0 en cola, 8 FUERA DE COLA.**
+**FORMA MEZCLADO, cobertura 13 de 21.**
+
+**Y LA FORMA POR DENTRO, que es lo que la mesa tiene que mirar: LAS CUATRO A NO
+HACEN UN ACTO, HACEN TRES.**
+
+| acto | miembros | por que |
+|---|---|---|
+| **I** | `decision_pivote_perseverar` mas `pivotar_o_perseverar` | A del puesto 860 |
+| **II** | `pivotar_o_proceder` mas `pivote_o_proceder` | A del puesto 268 |
+| **III** | `pivote_estrategico`, `pivote_startup`, `pivotes_e_iteraciones` | A de los puestos 857 y 306 |
+
+> **Y LOS TRES ACTOS ESTAN COSIDOS ENTRE SI POR SEIS DUDOSOS**, no por A: puestos
+> **668, 737, 771, 843, 957 y 1298**. **Eso es exactamente la pregunta de la mesa
+> puesta en numeros: tres nucleos firmes y seis costuras que nadie ha adjudicado.**
+
+**CORRECCION DECLARADA A UNA CIFRA PUBLICADA.** La ficha de esta mesa decia **dos
+pares en B, el 771 y el 843**. **Medido hoy hay SEIS.** Los otros cuatro son 668,
+737, 957 y 1298. *(La cifra vieja no llevaba corte; por el banco 9.21 toda cifra
+lleva el suyo, y el de esta es el puesto 2.117.)*
+
+**LOS QUINCE DEL CONTADOR QUE EL ARCHIVO NO CONFIRMA, y por que no entran:**
+ninguno tiene una sola A con el tema. El mas leido es
+`actualizar_modelo_de_negocio_pivot_o_proceed`, con **11 veredictos y CERO A**.
+*(La ficha decia ocho veredictos: hoy son once, y la conclusion no cambia.)* Le
+siguen `catalogo_pivotes`, `decision_pivotar_o_proceder` y `pivot_post_ventas`, con
+cinco lecturas cada uno y cero A. **Siete de los quince no tienen ni una lectura**,
+entre ellos `coraje_para_pivotar`, `riesgo_no_pivotar_a_tiempo` y
+`runway_como_numero_de_pivotes`.
+
+> **Que un nodo lleve *pivote* en el nombre no lo mete en el racimo.** Los quince se
+> quedan fuera **por el archivo, no por criterio**, y **los ocho pares fuera de cola
+> pueden mover esto**: la nomina es firme hasta donde llega su cobertura.
 
 **LA POSICION DEL AUDITOR, escrita el 11 ago 2026: UN NODO POR PUERTA.** El
 criterio de reparto es **lo que el lector hace**, no de que libro salio el texto.

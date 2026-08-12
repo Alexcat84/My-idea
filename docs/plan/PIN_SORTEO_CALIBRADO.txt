@@ -1,0 +1,36 @@
+PIN DEL SORTEO DE LA MUESTRA CALIBRADA
+Escrito el 11 ago 2026 ANTES de mirar un solo candidato.
+
+BOLSA: docs/plan/PASO_NODO_CALIBRADO.jsonl, filas con "arista": false.
+       536 candidatos, salida de scripts/plan/paso_contra_nodo_calibrado.py
+       con los umbrales del instrumento original (titulo 72, contencion 0.45,
+       min tokens 4) y la senal del verbo incorporada.
+
+SEMILLA: 20260811
+METODO:  random.Random(20260811).sample(bolsa_ordenada_por_id, 24)
+         La bolsa se ordena por (dominio, madre, paso, hijo) antes de sortear,
+         para que el sorteo sea reproducible palabra por palabra.
+TAMANO:  24, el mismo de la muestra vieja, para que las dos tasas sean
+         comparables sin corregir por tamano.
+
+POR QUE SE ESCRIBE ANTES: sin el pin escrito antes, la tasa no vale, porque se
+puede elegir la muestra que la confirme.
+
+================================================================================
+PIN DE LA SEGUNDA MUESTRA
+Escrito el 11 ago 2026 ANTES de mirar un solo candidato de esta bolsa.
+
+POR QUE HAY UNA SEGUNDA. La primera muestra encontro DOS DEFECTOS en el
+reconocedor de verbos: la lista de vacias del instrumento original contiene los
+veinte verbos mas comunes, y la tabla guarda infinitivos mientras el corpus
+escribe en imperativo de tu. Corregidos los dos (V2), la bolsa cambia, y una
+tasa medida sobre una bolsa que ya no existe no sirve para la fase 04.
+
+BOLSA: docs/plan/PASO_NODO_CALIBRADO.jsonl tras la corrida V2, filas con
+       "arista": false. 477 candidatos.
+EXCLUSION: los 22 pares de la primera muestra que sobreviven a V2 se sacan del
+       sorteo, para que las dos muestras sean DISJUNTAS y se puedan sumar.
+       Bolsa efectiva: 455.
+SEMILLA: 20260811002
+METODO:  random.Random(20260811002).sample(bolsa_ordenada_por_id, 24)
+TAMANO:  24, el mismo, para que las tres tasas se comparen sin corregir.

@@ -228,3 +228,53 @@ mas libros contra 4% en los de UNO**.
 
 > **Y NINGUNA TOCA EL BANCO 9.14.** Esa regla usaba las 27 como motivo, y **el
 > motivo queda confirmado en vez de corregido.**
+
+---
+
+## CORRECCION 6. **EL PURO DE LA COMPETENCIA ENTRE INVERSORES DEGRADA A SUB-PURO**
+
+**Va al banco de la SESION A, donde vive la tabla de racimos.** *(La tabla viva del
+plan ya esta recomputada en `INVENTARIO.jsonl` y en `10_INVENTARIO.md`.)*
+
+**LO PUBLICADO:** *la competencia entre inversores*, **PURO, cuatro miembros, seis
+pares, todos en A**, declarado al puesto **1030**.
+
+**LO MEDIDO al puesto 2.117** (`scripts/plan/puro_inversores.py`, contador por el
+nombre mas barrido de las A):
+
+| | publicado | **medido hoy** |
+|---|---:|---:|
+| miembros | 4 | **5** |
+| pares posibles | 6 | **10** |
+| pares leidos | 6 | **7** |
+| de ellos en A | 6 | **7** |
+| **forma** | **PURO** | **SUB-PURO** |
+| cobertura | 6 de 6 | **7 de 10** |
+
+**EL QUINTO MIEMBRO ES `tecnica_anclaje_negociacion`**, y entro por la **A del
+puesto 878** contra `construccion_de_leverage`.
+
+> **LA DEGRADACION NO DESMIENTE NINGUNA LECTURA.** Los siete pares leidos siguen
+> siendo siete A. **Lo que dice es otra cosa: la forma se declaro sobre una nomina
+> que todavia iba a crecer**, y crecio por una A posterior a la declaracion.
+
+**LOS TRES FALTANTES, nombrados, y los tres FUERA DE COLA:**
+`tecnica_anclaje_negociacion` contra `estrategia_competencia_vcs`, contra
+`gestion_multiples_term_sheets` y contra `leverage_en_negociacion_con_vcs`.
+
+> **Si los tres salen A, vuelve a PURO con cinco miembros y diez pares.** Hasta
+> entonces es **SUB-PURO con cobertura 7 de 10**, y por el banco 9.26 **la forma va
+> con la cobertura al lado o no va.**
+
+**TEXTO PARA PEGAR EN LA FILA DE LA TABLA:**
+
+> **la competencia entre inversores** | **SUB-PURO** | **7 de 10** al puesto 2.117 |
+> degradado el 11 ago 2026: la componente crecio a **cinco miembros** por la A del
+> puesto 878. Los tres faltantes son del quinto miembro y **estan fuera de cola**.
+
+**Y LA LECCION, que es mas grande que este racimo:** *el efectivo contra la
+ganancia* y *el compromiso contado tres veces* siguen declarados PUROS con
+**cobertura completa**, asi que no corren este riesgo. **El riesgo lo corre toda
+forma declarada sobre una componente que aun recibe A.** Es el mismo banco 9.26
+dicho al reves: **una forma sin cobertura completa no es un resultado, es un
+estado.**

@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA COMPLETO: ONCE FASES, 44 OPERACIONES, 38 LISTAS. LAS SEIS PENDIENTES SON CINCO MESAS Y UN RECOMPUTO CON FECHA.**
+**EL PLAN ESTA COMPLETO: ONCE FASES, 45 OPERACIONES, 38 LISTAS. LAS SIETE PENDIENTES SON CINCO MESAS, UN RECOMPUTO CON FECHA Y UNA DECISION DE ALCANCE.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -19,6 +19,14 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **Y el plan tiene banco propio**: [`BANCO_DEL_PLAN.md`](BANCO_DEL_PLAN.md), con
 > la regla de medicion que este ciclo obligo a escribir y el hallazgo de la firma
 > posicional del injerto.
+>
+> **CUARTA PASADA, el mismo dia: LA FASE 04 DEJA DE SER UNA PROYECCION.** La
+> calibracion del verbo corrio, la bolsa de trabajo baja de **624 a 477**, y la
+> tasa esta **medida sobre 46 lecturas pineadas**: **32 aristas que faltan, 7
+> gemelos, 7 basura**. **Muere la cifra de *cero podas en veinticuatro
+> lecturas***. Las dos nominas que faltaban, **el pivote y la serie de Coleman**,
+> estan medidas y escritas en sus mesas. Y **el puro de la competencia entre
+> inversores DEGRADA a sub-puro** con correccion declarada.
 
 ---
 
@@ -43,9 +51,9 @@ el JSONL discrepan, manda el JSONL.
 
 | | |
 |---|---:|
-| operaciones | **44** |
+| operaciones | **45** |
 | **LISTAS** | **38** |
-| **DECISION PENDIENTE** | **6** |
+| **DECISION PENDIENTE** | **7** |
 
 | fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
@@ -53,7 +61,7 @@ el JSONL discrepan, manda el JSONL.
 | **01 FUENTES** | 7 | **7** | 0 |
 | **02 DESTEJIDOS** | 6 | **6** | 0 |
 | **03 FUSIONES** | 2 | **1** | 1 |
-| **04 ENLACES** | 2 | **2** | 0 |
+| **04 ENLACES** | 3 | **2** | 1 |
 | **05 SANEO** | 11 | **11** | 0 |
 | **06 MESAS** | 5 | 0 | **5** |
 | **07 ADUANA** | 2 | **2** | 0 |
@@ -61,9 +69,12 @@ el JSONL discrepan, manda el JSONL.
 | **09 LECTURAS DIRIGIDAS** | 3 | **3** | 0 |
 | **10 INVENTARIO** | 1 | **1** | 0 |
 
-> **LAS SEIS PENDIENTES SON CINCO MESAS Y UN RECOMPUTO CON FECHA.** `OP-U-02`
-> espera al dia en que el cribado llegue al puesto **3.388**, y su disparador esta
-> escrito en `08_VERIFICACION`. **Ninguna es un dato que falte.**
+> **LAS SIETE PENDIENTES SON CINCO MESAS, UN RECOMPUTO CON FECHA Y UNA DECISION DE
+> ALCANCE.** `OP-U-02` espera al dia en que el cribado llegue al puesto **3.388**, y
+> su disparador esta escrito en `08_VERIFICACION`. La septima es **`OP-E-03`**, y
+> tampoco es un dato que falte: **es una puerta que solo el fundador puede abrir**,
+> porque mete los cuatro dominios sin cribar en el plan por una via nueva.
+> **Ninguna de las siete es un dato que falte.**
 
 ## EL MAPA DE FASES, con sus dependencias
 

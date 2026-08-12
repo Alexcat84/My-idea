@@ -108,7 +108,7 @@ que se sabe con la cobertura que tiene.**
 | **el efectivo contra la ganancia** | PURO | 3 de 3 | sano, forma cerrada |
 | **la ecuacion de valor** | MEZCLADO | 10 de 10 | repite, forma cerrada |
 | **el sales roadmap** | MEZCLADO | 10 de 15 | repite, cobertura INCOMPLETA |
-| **la competencia entre inversores** | PURO al puesto 1030 | 6 de 6 al 1030 | repite, RE MEDIR: la componente hoy tiene 5 miembros y 10 pares |
+| **la competencia entre inversores** | SUB-PURO | 7 de 10 | repite, DEGRADADO el 11 ago 2026, cobertura INCOMPLETA |
 | **la junta asesora** | MEZCLADO | 6 de 6 | en mesa, forma cerrada |
 | **los cuadrantes de mercado** | MEZCLADO | 15 de 15 | repite, forma cerrada |
 | **build, measure, learn** | SUB-PURO | 9 de 28 | repite, cobertura INCOMPLETA |
@@ -116,21 +116,34 @@ que se sabe con la cobertura que tiene.**
 | **la seleccion de canal** | MEZCLADO | 10 de 10 | repite, forma cerrada |
 | **la supervision de la IA** | PARTIDO 5 mas 4 mas 1 | 14 de 45 al puesto 1517 | en mesa, particion PROVISIONAL |
 | **la mesa unida de puertas y portafolio** | una familia o dos, SIN DECIDIR | 18 de 120 | en mesa, cobertura 15% |
-| **el racimo del pivote** | SIN DECIDIR | siete miembros | en mesa. HUECO NOMBRADO: la nomina por id no esta escrita en ninguna fuente leida |
-| **la serie de Coleman** | candidata a SERIE DECLARADA | 83 nodos del libro, 16 de fase, 2 programa, 7 de canal | en mesa. HUECO NOMBRADO: los 16 nodos de fase no estan enumerados por id |
+| **el racimo del pivote** | MEZCLADO | 13 de 21 | mesa, nomina MEDIDA el 11 ago 2026 (era hueco nombrado) |
+| **la serie de Coleman** | MEZCLADO | 38 de 351 | mesa, nomina MEDIDA el 11 ago 2026 (era hueco nombrado) |
 
 > **TRES SUB-PUROS CAYERON EL 11 ago 2026 al cerrarse su cobertura**: los
 > cuadrantes, la ecuacion de valor y el bloque humano de la IA. **Los tres pasaron
 > a MEZCLADO en cuanto se termino de leerlos**, y por la razon que el banco ya
 > tenia escrita: **el sub-puro es una promesa, no un resultado.**
 
-**DOS HUECOS NOMBRADOS**: el **racimo del pivote** y la **serie de Coleman** no
-tienen nomina por id escrita en ninguna fuente leida. **Sus mesas no pueden
-sentarse sin ella.**
+**LOS DOS HUECOS SE CERRARON EL 11 ago 2026.** El **racimo del pivote** y la
+**serie de Coleman** ya tienen nomina por id, medida con el contador mas el barrido
+de las A y escrita en su bloque de apertura de `06_MESAS`.
 
-**Y UNA CIFRA QUE PIDE RE MEDIRSE**: *la competencia entre inversores* se declaro
-**PURA con 4 miembros y 6 pares al puesto 1030**; la componente medida hoy tiene
-**5 miembros y 10 pares**. **No se corrige aqui: se marca.**
+| nomina | miembros | cobertura | lo que trae a su mesa |
+|---|---:|---|---|
+| **el racimo del pivote** | **7** | **13 de 21**, MEZCLADO | **las cuatro A no hacen un acto, hacen TRES**, cosidos entre si por **seis dudosos** |
+| **la serie de Coleman** | **27** *(19 programa, 8 medios)* | **38 de 351**, MEZCLADO | **la fase 3 YA recibio el tratamiento que la mesa debate**: `fase_affirm_buyers_remorse` lleva tres alias dentro |
+
+**Y LA CIFRA QUE PEDIA RE MEDIRSE SE RE MIDIO, Y BAJO**: *la competencia entre
+inversores* se declaro **PURA con 4 miembros y 6 pares al puesto 1030**; la
+componente medida al puesto 2.117 tiene **5 miembros y 10 pares**, con **7 leidos y
+los 7 en A**. **DEGRADA a SUB-PURO, cobertura 7 de 10.** El quinto miembro,
+`tecnica_anclaje_negociacion`, entro por una A **posterior a la declaracion** (el
+puesto 878), y **los tres pares que faltan son suyos y estan fuera de cola.**
+
+> **La degradacion no desmiente ninguna lectura: los siete pares leidos siguen
+> siendo siete A.** Dice otra cosa, y es la que vale: **la forma se declaro sobre
+> una componente que todavia iba a crecer.** La correccion del banco de la sesion A
+> esta escrita en `CORRECCIONES_A_APLICAR.md`, correccion 6.
 
 ---
 

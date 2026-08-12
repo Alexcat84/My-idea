@@ -29,44 +29,160 @@ de Wilson al 95% **entre 376 y 586**.
 
 ---
 
-## LA CALIBRACION YA ESCRITA, para cuando el instrumento vuelva a correr
+## LA CALIBRACION DEL VERBO, YA CORRIDA. **PASO 1 DE `OP-E-01`, HECHO**
 
-**No se aplica a la lista ya emitida**, que se lee como esta.
+**Corrida el 11 ago 2026.** Instrumento: `scripts/plan/paso_contra_nodo_calibrado.py`.
+Salida: `docs/plan/PASO_NODO_CALIBRADO.jsonl`.
 
-> **En CUATRO de los cinco falsos positivos, el paso y el hijo comparten el
-> SUSTANTIVO y cambian el VERBO**: leer contra disenar, monitorear contra lograr,
-> listar contra definir, comprar contra certificar.
->
-> **El instrumento mide vocabulario y no accion.**
+**LO QUE SE CAMBIO, y es UNA cosa sola:** el instrumento importa la normalizacion
+del original en vez de reescribirla, **para que la bolsa bruta siga siendo la misma
+y las dos corridas se puedan comparar**. Los umbrales no se tocan: titulo 72,
+contencion 0,45, minimo 4 tokens. **Lo unico que se anade es la senal del verbo.**
 
-**La correccion**: extraer el verbo principal del paso y el del titulo del hijo, y
-**penalizar cuando los verbos son de familias distintas**. **No se toca el umbral:
-se anade una senal.**
+**LA REGLA DE LA SENAL, declarada dentro del script:**
 
-## `OP-E-01`, EL ORDEN ADJUDICADO: TRES PASOS Y NO SE SALTAN
+> Se extrae la **FAMILIA DE ACCION** del paso y la del titulo del hijo. **Si las dos
+> se conocen y son DISTINTAS, el candidato se descarta.** Si alguna no se reconoce,
+> **el candidato se mantiene: la senal solo resta, y en la duda no descarta.**
 
-| paso | que se hace |
-|---:|---|
-| **1** | **LA CALIBRACION DEL VERBO** sobre el barrido paso-contra-nodo |
-| **2** | **MUESTRA PINEADA NUEVA** sobre la bolsa reducida, para medir la **tasa residual** |
-| **3** | **SOLO ENTONCES** se decide leer entera o proyectar |
+### EL RESULTADO
 
-**PASO 2, Y EL SORTEO VA DECLARADO:**
+| | brutos | descartados por el verbo | **bolsa reducida** |
+|---|---:|---:|---:|
+| todos los candidatos | 742 | **167** (22,5%) | **575** |
+| **los que no tienen arista** | **624** | **147** | **477** |
 
-> **La muestra nueva se sortea sobre la bolsa REDUCIDA, con la semilla escrita y
-> guardada ANTES de mirar los candidatos**, como se hizo con el pin de la muestra
-> vieja. **Tamano minimo 24, el mismo de la vieja, para que las dos tasas sean
-> comparables.**
->
-> **Sin el pin escrito antes, la tasa no vale: se puede elegir la muestra que la
-> confirme.**
+**POR DOMINIO, la bolsa que queda sin arista:**
 
-**LA CIFRA DE PARTIDA, para comparar contra ella**: 19 jerarquias sanas de 24,
-**cero podas**, 5 falsos positivos, proyeccion de 376 a 586 sobre 624.
+| dominio | brutos | **reducidos** | descartados |
+|---|---:|---:|---:|
+| `quality` | 296 | **208** | 88 |
+| `core` | 229 | **199** | 30 |
+| `environmental` | 32 | **22** | 10 |
+| `franquicias` | 27 | **15** | 12 |
+| `exportacion` | 17 | **15** | 2 |
+| `health_safety` | 16 | **12** | 4 |
+| `entrega` | 4 | **4** | 0 |
+| `seguridad_digital` | 2 | **1** | 1 |
+| `risk_management` | 1 | **1** | 0 |
 
-> **POR QUE ESTE ORDEN Y NO OTRO.** Leer los 624 antes de calibrar es **leer cinco
-> de cada veinticuatro sabiendo que son falsos**. Y calibrar sin volver a
-> muestrear **deja la tasa vieja aplicada a una bolsa que ya no es la misma.**
+**Los pares de familias que mas descartan**: observar contra gestionar (25),
+observar contra construir (16), definir contra gestionar (15), construir contra
+observar (11), ejecutar contra gestionar (9).
+
+---
+
+## LOS DOS DEFECTOS QUE ENCONTRO LA PRIMERA MUESTRA, y su correccion
+
+**La primera corrida descartaba solo 96 de 742 (12,9%), y la muestra leida sobre
+ella salio igual de sucia que la vieja.** Leyendo las 24 aparecio por que, y son
+dos defectos del reconocedor de verbos, ninguno de los umbrales.
+
+| defecto | que pasaba | correccion |
+|---|---|---|
+| **1. la lista de vacias del original CONTIENE VEINTE VERBOS** (`crear`, `definir`, `determinar`, `establecer`, `evaluar`, `hacer`, `identificar`, `realizar`, `revisar`, `usar` y sus formas de tu) | estan ahi con razon **para lo suyo**: el original mide solape de vocabulario y esos verbos son ruido. Pero **para la senal del verbo son justamente la senal**, y se filtraban antes de mirarlas | `contenido()` sigue usando la lista **sin tocar**; **solo `familia()` usa una lista puramente gramatical**, que es la misma menos los verbos |
+| **2. la tabla guarda INFINITIVOS y el corpus escribe en imperativo de tu** (`documenta`, `define`, `revisa`) | el reductor de sufijos va al reves: quita la terminacion y busca la raiz, **y la raiz nunca esta en la tabla** | por cada infinitivo se registra tambien su forma de tu, con la regla mecanica **ar a**, **er/ir e**. Nada se anade a mano |
+
+**MEDIDO: la correccion sube el descarte de 96 a 167**, y sobre las 24 ya leidas
+**mata 2 de los 5 falsos positivos y no toca NI UNA de las 18 jerarquias sanas.**
+
+> **Esa es la prueba que importa, y es la unica que valida una senal que resta:
+> corta falsos y no corta buenos.**
+
+### LO QUE LA CORRECCION NO ARREGLA, dicho con su cifra
+
+**La senal solo puede opinar cuando conoce las DOS familias.** Sobre los 477 que
+quedan sin arista:
+
+| | candidatos | |
+|---|---:|---:|
+| conoce las **dos** familias | 104 | **21,8%** |
+| conoce solo la del paso | 230 | 48,2% |
+| conoce solo la del hijo | 24 | 5,0% |
+| **no conoce ninguna** | 119 | 24,9% |
+
+> **En casi la mitad de la bolsa el hijo no da verbo, porque su titulo es un
+> sustantivo:** *Caracteristicas Clave de Producto y Proceso*, *Plan de Accion a
+> Corto, Mediano y Largo Plazo*, *Indice de Capacidad de Proceso Cpk*. **Contra un
+> titulo sin verbo, la senal no tiene con que comparar**, y por diseno se calla.
+
+---
+
+## LA TASA MEDIDA. **PASO 2 DE `OP-E-01`, HECHO**
+
+**DOS muestras pineadas de 24, con la semilla escrita ANTES de mirar**
+(`docs/plan/PIN_SORTEO_CALIBRADO.txt`), **disjuntas entre si**, leidas con la vara
+del banco 9.6.1 y clasificadas en las tres clases del encargo.
+
+| | jerarquia sana | madre que repite | falso positivo | total |
+|---|---:|---:|---:|---:|
+| **la vieja**, sin calibrar | 19 | 0 | 5 | 24 |
+| **muestra 1**, bolsa de la correccion parcial | 18 | 1 | 5 | 24 |
+| **muestra 2**, bolsa corregida y disjunta | **14** | **6** | **4** | 24 |
+| **LAS DOS SOBRE LA BOLSA BUENA** *(22 de la 1 sobreviven a la correccion)* | **32** | **7** | **7** | **46** |
+
+**LA TASA, sobre 46 lecturas y sobre la bolsa que de verdad se va a trabajar:**
+
+| | |
+|---|---:|
+| **JERARQUIA SANA**, la arista que falta | **32 de 46, 69,6%** |
+| **MADRE QUE REPITE** | **7 de 46, 15,2%** |
+| **FALSO POSITIVO** | **7 de 46, 15,2%** |
+
+> **LA CIFRA QUE MUERE HOY ES *CERO PODAS EN VEINTICUATRO LECTURAS*.** Se escribio
+> con la muestra vieja y **la muestra nueva la desmiente: siete de cuarenta y seis.**
+> La bolsa **si** es una mezcla de dos clases de arreglo.
+
+**PROYECCION sobre los 477, declarada como proyeccion:**
+
+| | esperados |
+|---|---|
+| aristas que faltan | **unas 332**, banda de Wilson al 95% de **263 a 386** |
+| **pares gemelos escondidos en la bolsa** | **unos 73**, banda de **36 a 135** |
+
+---
+
+## EL HALLAZGO GRANDE DE LA MUESTRA: **EL BARRIDO ES TAMBIEN UN DETECTOR DE GEMELOS**
+
+**SEIS de los siete *madre que repite* estan en `quality`, que NO HA ENTRADO NUNCA
+AL CRIBADO INTRA.** Y cinco de los siete son **familias de ids o titulos casi
+sinonimos**, la misma figura que el cribado caza a mano:
+
+| la madre | el hijo | que son |
+|---|---|---|
+| `capacidad_de_proceso` | `capacidad_del_proceso` | **una particula de diferencia** |
+| `analisis_capacidad_proceso` | `capacidad_de_proceso_2` | sufijo numerico |
+| `cero_defectos` | `zero_defects_concepto` | **el mismo titulo traducido** |
+| `filosofia_zero_defectos` | `zero_defects_concepto` | tercer nodo del mismo concepto |
+| `consejo_calidad_2` | `consejo_de_calidad_y_rol_del_director` | sufijo numerico |
+| `identificar_clientes_diseno` | `identificar_clientes_externos_e_internos` | titulos casi sinonimos |
+| `programa_de_referidos_de_franquiciados` | `referidos_franquiciados_existentes` | el paso de la madre resume al hijo entero |
+
+> **Esto no estaba previsto y cambia el valor del instrumento.** El barrido se
+> construyo para encontrar **aristas que faltan** en dominios cribados. **Lo que la
+> muestra ensena es que en los dominios SIN cribar levanta GEMELOS**, que es
+> exactamente lo que alli no tiene quien lo busque.
+
+**Los cuatro dominios sin cribar son 1.185 nodos, un tercio del catalogo.** La
+bolsa calibrada tiene **221 candidatos suyos** (`quality` 208, `health_safety` 12,
+`seguridad_digital` 1). **Es la unica senal medida que existe hoy sobre ellos.**
+
+**Va a `OP-E-03`**, operacion nueva de esta fase.
+
+---
+
+## `OP-E-01`, DONDE QUEDA EL ORDEN ADJUDICADO
+
+| paso | que se hace | estado |
+|---:|---|---|
+| **1** | la calibracion del verbo | **HECHO el 11 ago 2026** |
+| **2** | muestra pineada nueva sobre la bolsa reducida | **HECHO: dos muestras, 46 lecturas** |
+| **3** | decidir leer entera o proyectar | **es lo que queda, y ahora se decide con cifra** |
+
+**LO QUE EL PASO 3 YA PUEDE USAR:** de cada cien candidatos de la bolsa reducida,
+**setenta son arista que falta, quince son gemelos y quince son basura**. **Leer los
+477 cuesta, en el peor caso, 477 lecturas; no leerlos cuesta meter 71 aristas malas
+y perder 73 gemelos.**
 
 ---
 
