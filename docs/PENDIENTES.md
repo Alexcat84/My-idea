@@ -2878,6 +2878,12 @@ Gestion por Objetivos* y **el superviviente no nombra MBO**, sin que el barrido 
 | `scripts/barrido_perdida_de_nombre.py` | **buscador de candidatos**, adelanta trabajo. **NO es censo** |
 | **la operacion de fusion** | **el control real**: dos textos delante, sin lista de por medio |
 
+**PRECISION DEL 18 ago 2026, del puesto 2.488: EL ACRONIMO ES DENOMINACION APARTE.** Quien
+busca **MBO** no escribe *Gestion por Objetivos*. **El control de denominacion busca
+tambien las siglas**, y cuando la sigla muere **viaja entre parentesis** en el titulo o en
+la primera frase del superviviente. **Denominaciones a reponer al dia: Amalberti (2.250),
+Taguchi (2.432) y MBO (2.488).**
+
 **No hay ruta nueva:** el paso se hace **dentro de las operaciones que el plan ya tiene**,
 al redactarlas, junto al reparto de perdidas.
 

@@ -5079,6 +5079,86 @@ advertencia es LINEA, no procedimiento**: por eso la salvaguarda **nunca es un p
 > catalogo es fundir sin leer estas cuatro columnas.** Por eso se anotan **con nombre
 > propio, puesto por puesto**, y no como una advertencia general al final.
 
+### TANDA R55: cuatro puestos, CUATRO DE CUATRO COINCIDEN
+
+**18 ago 2026. 2.492, 2.493, 2.498 y 2.500, ciega, y las cuatro coinciden.** Son
+**los cuatro que el checkpoint 2.500 habia marcado como discutibles**, asi que la tanda
+entra entera dentro del marcado.
+
+| | |
+|---|---:|
+| relecturas ciegas | **15** (R42 a R55) mas el barrido de direccion |
+| puestos releidos | **35** |
+| caidas | **4** . dentro del marcado **4** . fuera **0** |
+
+> **La metrica de credito se sostiene: cero caidas fuera del marcado en quince
+> relecturas.** Cada una de las cuatro caidas historicas cayo donde el cribado habia
+> avisado que podia caer.
+
+#### LO QUE LA R55 ANADE SOBRE LOS VEREDICTOS, sin moverlos
+
+**1. EL 2.498: LOS 250.000 DOLARES VIAJAN CON ATRIBUCION DE AUTOR.**
+
+**No basta el corte del 9.21.** El umbral de retorno minimo por proyecto de un Black Belt
+**es una cifra de Juran**, y en la fusion **viaja diciendo de quien es**, no como si fuera
+un criterio del catalogo.
+
+| como NO se escribe | como se escribe |
+|---|---|
+| *asignale proyectos con retorno minimo de 250.000 dolares* | *Juran fija el umbral en 250.000 dolares de retorno por proyecto* |
+
+> **El motivo es el mismo del 2.473:** una cifra sin dueno **se lee como recomendacion del
+> catalogo**, y este catalogo **no ha medido eso**. La atribucion es la que hace la
+> afirmacion verificable.
+
+**2. EL 2.498: LA VOZ DE NEGOCIO PEQUENO DEL QUE MUERE, al patron.**
+
+`rol_black_belt_six_sigma` es el que habla **al dueno directamente**: *elige a alguien con
+potencial de liderazgo*, *dale una capacitacion*, *acuerda con esa persona como te va a
+asesorar*. **El que sobrevive en la lectura de nombre habla de certificaciones y de
+organismos.** En una fusion mutua **no muere ninguno de los dos, pero se elige una voz**, y
+la que se elige es la del que se dirige al lector.
+
+> **AL PATRON DEL NEGOCIO PEQUENO, como ejemplar nuevo: cuando dos nodos dicen lo mismo y
+> uno lo dice en segunda persona al dueno, ESA es la redaccion que sobrevive.** No es
+> preferencia de estilo: **es la unica de las dos que un lector sin departamento de calidad
+> puede ejecutar.**
+
+**3. EL 2.500: PRIORIZAR COMO PROYECTOS ES PERDIDA DE DESTINO.**
+
+La linea que muere, **priorizar los problemas detectados como proyectos de mejora**, se
+habia anotado suelta. **Queda clasificada: motivo DESTINO**, el tercero de la tabla de
+seis.
+
+| | |
+|---|---|
+| **por que DESTINO y no ALCANCE** | no amplia lo que se mapea: **dice adonde va el resultado del mapa**. Sin ella el VSM termina en un dibujo del estado futuro y **no entra en la cartera de mejora** |
+| **el remedio** | una linea en `mapeo_flujo_valor`: **los desperdicios priorizados salen como proyectos** |
+
+#### ADJUDICACION MENOR AL 2.488: EL ACRONIMO ES DENOMINACION BUSCABLE
+
+**El checkpoint 2.500 dijo que la perdida quedaba reducida al acronimo MBO y que con eso
+bastaba.** Adjudicado: **no basta por si solo, y el remedio es de una linea.**
+
+> **QUIEN BUSCA MBO NO ESCRIBE GESTION POR OBJETIVOS.** Un acronimo **no es una abreviatura
+> del nombre: es OTRA denominacion**, y es la que usa quien viene de un libro de gestion en
+> ingles.
+
+**EN LA OPERACION DE ESA FUSION: MBO VIAJA ENTRE PARENTESIS**, dentro del titulo o de la
+primera frase de `eliminacion_gestion_por_objetivos_y_numeros`.
+
+**REGISTRO DE DENOMINACIONES A REPONER, al dia:**
+
+| puesto | la denominacion | donde se repone |
+|---:|---|---|
+| **2.250** | **Amalberti** | superviviente del par |
+| **2.432** | **Taguchi** | superviviente del par |
+| **2.488** | **MBO**, entre parentesis | `eliminacion_gestion_por_objetivos_y_numeros` |
+
+> **Y la regla que sale de las tres: EL ACRONIMO CUENTA COMO DENOMINACION APARTE.** El
+> control de denominacion dentro de cada fusion (banco 9.28) **busca tambien las siglas**,
+> no solo los nombres propios y los instrumentos.
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -15017,6 +15097,31 @@ pendientes.** El dominio son **844 pares** y llega al **3.255**.
 > leyeron: es SI EL GANADOR PUEDE CAMBIAR.** En la kp **no puede**, porque el unico par que
 > falta por decidir direccion no incluye al ganador. **En la ISO si**, aunque este leida
 > entera, porque el ganador de un par murio en otro.
+
+#### CORREGIDO EL MISMO DIA: LA FILA DE LA ISO Y LA TABLA ENTERA
+
+**La fila de la ISO de la tabla de arriba esta MAL y se deja escrita, tachada por esta
+correccion.** La prueba contaba **todos** los pares; **debe contar solo los pares A**,
+porque **una D no es sobrevivir a un duelo: es que no hubo duelo**. El acto es **el cierre
+transitivo de las A**. Adjudicado y escrito en el banco **9.3.1**.
+
+**EL ERROR FUE COMPARTIDO:** CC lo propuso y **el auditor lo ratifico sin recontar**.
+
+**LA TABLA CORREGIDA, al dia del puesto 2.500:**
+
+| familia | nodos | pares A leidos | especie |
+|---|---:|---|---|
+| **la regla kp** | 3 | **3 de 3, todas A** | **POR DERECHO**, final |
+| **la ISO sectorial** | 3 | **1 A** (2.445); las otras dos D | **POR DERECHO**, final. **Corregido** |
+| **`accion_correctiva`** | 6 o mas | **3 A** y 1 D | **POR ELEGIR**, y provisional: faltan pares |
+| los **ROI** | 3 | **1 A** (2.451) y 1 D | **provisional** |
+| el **QFD** | 3 | **1 A** (2.469) | **provisional** |
+| la **auditoria de producto** | 3 | **0 A**, dos D | **FAMILIA SIN ACTO** |
+| el **histograma** | 3 | **0 A**, dos D | **FAMILIA SIN ACTO** |
+
+> **La auditoria de producto y el histograma NO son familias provisionales: no son
+> familias.** Comparten raiz de id **y no comparten ni una fusion**. Eso es lo que la
+> prueba vieja no sabia decir.
 
 ### ADJUDICACION DEL 2.473: la atribucion es una afirmacion de fuente y se verifica
 

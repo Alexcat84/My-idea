@@ -663,6 +663,58 @@ y sobrevivió en el 2.460.** El acto está completo **y el ganador sigue sin fij
 > El que no perdió nunca **y no tiene pares pendientes que lo toquen** es ganador por
 > derecho.
 
+#### CORRECCIÓN ADJUDICADA EL 18 ago 2026, el mismo día: LA PRUEBA CUENTA SOLO LOS PARES A
+
+**El texto de arriba se queda tal cual, tachado por esta corrección y no borrado, porque
+la manera en que falló es parte de la doctrina.**
+
+**EL ERROR FUE COMPARTIDO Y SE DICE ASÍ: CC lo propuso y el auditor lo ratificó sin
+recontar la familia.** Dos lecturas y ninguna volvió a los tres pares. **Un acuerdo no es
+una verificación.**
+
+**QUÉ ESTABA MAL.** La prueba decía *ninguno ganó todos los pares que lo tocan*, y contaba
+**todos** los pares. **Contaba las D.**
+
+> **UNA D NO ES SOBREVIVIR A UN DUELO: ES QUE NO HUBO DUELO.**
+
+**LA PRUEBA CORREGIDA, y es la definición de acto:**
+
+> **EL ACTO ES EL CIERRE TRANSITIVO DE LAS A.** Un par **A** mete a los dos nodos en el
+> mismo acto. **Un par D saca al nodo del acto; no añade un contendiente.** La pregunta
+> *¿ganó todos los pares que lo tocan?* **se hace únicamente sobre los pares A.**
+
+**LO QUE SE RECLASIFICA, con la prueba corregida:**
+
+| familia | pares | especie corregida |
+|---|---|---|
+| **la regla kp** | 2.467 A, 2.473 A, 2.480 A | **POR DERECHO** . sin cambio |
+| **la ISO sectorial** | 2.445 **A**, 2.460 D, 2.479 D | **POR DERECHO**, no por elegir. **Una sola fusión**, la del 2.445; su ganador `adaptaciones_sectoriales_iso` **no perdió nunca**, y `adopciones_industria_especifica_iso9000` **no está en ese acto** |
+| **`accion_correctiva`** | 2.418 A, 2.426 A, 2.431 A, 2.496 D | **POR ELEGIR**, y es **el ejemplar real de la especie** |
+| **la auditoría de producto** | 2.433 D, 2.478 D | **FAMILIA SIN ACTO** |
+| **el histograma** | 2.442 D, 2.486 D | **FAMILIA SIN ACTO** |
+
+**EL EJEMPLAR BUENO DE POR ELEGIR, que sustituye al de la ISO:**
+
+| puesto | resultado |
+|---:|---|
+| 2.418 | **`accion_correctiva_5` GANA** a `accion_correctiva_6` |
+| 2.426 | `accion_correctiva_crosby` gana a `accion_correctiva_6` |
+| 2.431 | **`accion_correctiva_5` PIERDE** contra `accion_correctiva_sistematica` |
+
+> **Un mismo nodo gana un par A y pierde otro par A.** Ahí sí el ganador puede cambiar, y
+> ahí sí hace falta P.8 sobre la nómina entera. **Eso es GANADOR POR ELEGIR.**
+
+**LA TERCERA ESPECIE, que la prueba corregida hace visible y antes no existía:**
+
+| especie | qué significa | qué queda por hacer |
+|---|---|---|
+| **FAMILIA SIN ACTO** | **ids parecidos y ni un solo par A**: todos los pares leídos salieron D | **nada, y no por estar resuelta: porque no hay nada que fundir.** No es una familia, es un parecido de nombre |
+
+> **La lección que queda, y vale más que la clasificación: EL PARECIDO DE IDENTIFICADOR
+> AGRUPA, NO FUSIONA.** Dos nodos con la misma raíz **están en la misma familia de nombre**
+> y **pueden no compartir acto ninguno.** Es la misma advertencia del 50,8 % de la trampa
+> del identificador, dicha del lado de las operaciones.
+
 ---
 
 ### 9.3 Una dirección de fusión decidida sobre un par no sobrevive a su familia
