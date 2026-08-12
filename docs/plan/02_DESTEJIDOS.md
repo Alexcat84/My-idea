@@ -7,7 +7,16 @@ arregle** (banco 9.24).
 > **La cifra que este calculo aporta no es cuantos pares hay. Es CUANTOS NODOS HAY
 > QUE TENER DELANTE para poder decidir**, que es exactamente lo que faltaba.
 
-**Operaciones: `OP-D-01` a `OP-D-06`. Tres LISTAS, tres DECISION PENDIENTE.**
+**Operaciones: `OP-D-01` a `OP-D-06`. LAS SEIS LISTAS**, tras la adjudicacion del
+11 ago 2026.
+
+> **LA REGLA DE REPARTO, adjudicada, y es lo que desbloqueo las tres que
+> faltaban:** cada perdida se asigna **AL BLOQUE DEL QUE PROVIENE**; la que no
+> tenga bloque va **AL SUPERVIVIENTE**.
+>
+> **Con eso el reparto deja de necesitar una relectura previa.** Los actos 1 y 4 y
+> los nueve de dos estaban pendientes solo porque nadie habia escrito su reparto;
+> ahora se resuelve **en el acto, bloque por bloque**.
 
 ---
 
@@ -154,7 +163,7 @@ Diez pasos, **doble de la observacion**: Cooper en 1 a 5, Coleman en 6 a 10, con
 
 ---
 
-## `OP-D-04`: EL BRAINSTORMING · **DECISION PENDIENTE**
+## `OP-D-04`: EL BRAINSTORMING · **LISTA**
 
 **Acto 1, el mayor: SIETE nodos.** `brainstorming_divergente` mas
 `brainstorming_efectivo`, `reglas_brainstorming`, `generar_multiples_opciones`,
@@ -177,13 +186,14 @@ ser el mismo nodo.**
 2. el destejido despues
 3. **los tres gemelos al final y en un solo acto**
 
-**LA PREGUNTA**: es **el unico de los cuatro grandes sin reparto de perdidas
-escrito**. Se abre una relectura que reparta que se preserva de cada uno de los
-siete antes de la pasada, o el acto entra a la mesa **con la lista en blanco**?
+**ADJUDICADO: la regla de reparto lo resuelve sin relectura previa.** El bloque de
+IA va al racimo de supervision (`OP-F-02`); lo que quede de taller va al
+superviviente; y de cada gemelo, lo propio que no este en el destejido va al
+superviviente. **Cada perdida al bloque del que proviene.**
 
 ---
 
-## `OP-D-05`: LA SELECCION DEL CEO · **DECISION PENDIENTE**
+## `OP-D-05`: LA SELECCION DEL CEO · **LISTA**
 
 **Acto 4. Tres nodos**: `seleccion_ceo_fundador`,
 `asignacion_de_titulos_ejecutivos`, `errores_comunes_asignacion_roles`. Pares que
@@ -191,8 +201,8 @@ lo sostienen: **492, 673, 833**.
 
 **Sin congelados: su orden es libre respecto de los tres primeros.**
 
-**LA PREGUNTA**: tampoco tiene reparto de perdidas escrito. Relectura previa como
-los tres grandes, o se decide en la mesa el mismo dia?
+**ADJUDICADO: misma regla de reparto.** Cada perdida al bloque del que proviene;
+la que no tenga bloque, al superviviente. **Ya no necesita relectura previa.**
 
 > **Nota util para quien se siente**: su par **492** es uno de los **doce
 > ejemplares de cura acoplada encontrados de uno en uno**, y **se podia declarar
@@ -201,7 +211,7 @@ los tres grandes, o se decide en la mesa el mismo dia?
 
 ---
 
-## `OP-D-06`: LOS NUEVE ACTOS DE DOS · **DECISION PENDIENTE**
+## `OP-D-06`: LOS NUEVE ACTOS DE DOS · **LISTA**
 
 **Anclas**: `producto_unico_superior`, `propuesta_gasto_capital`,
 `blueprint_de_experiencia` con `customer_journey_mapping`,
@@ -222,9 +232,31 @@ los tres grandes, o se decide en la mesa el mismo dia?
 > plan de cirugia los trata como **cura acoplada mayor**. **Es la MISMA pareja
 > vista por dos instrumentos, no dos trabajos.**
 
-**LA PREGUNTA**: los nueve se listan por sus anclas pero **no se enumeran sus
-pares completos ni sus repartos**, salvo esos dos. Se abre una relectura de
-reparto para los nueve, o entran a la mesa como bloque?
+**ADJUDICADO Y COMPLETADO. Los nueve pares, medidos contra el archivo el 11 ago
+2026, corte del puesto 2117:**
+
+| puesto | el par |
+|---:|---|
+| **285** | `producto_unico_superior` con `superioridad_producto_beneficios` |
+| **331** | `propuesta_gasto_capital` con `analisis_de_gastos_de_capital` |
+| **341** | `blueprint_de_experiencia` con `customer_journey_mapping` |
+| **344** | `plan_de_adquisicion_acquire` con `plan_acquire_activate` |
+| **361** | `key_partners_hypothesis` con `partners_hypothesis_physical` |
+| **392** | `metricas_de_adquisicion_activacion` con `build_metrics_toolset` |
+| **494** | `principio_calidad_mvp` con `producto_minimo_viable` |
+| **711** | `future_scenarios_planning` con `escenarios_futuros` |
+| **969** | `retention_metrics` con `customer_retention_metrics_webmobile` |
+
+> **HALLAZGO DEL RECOMPUTO: los NUEVE siguen siendo de DOS al corte del 2117.**
+> Ninguno crecio. Es la primera vez que se comprueba, y le quita al recomputo
+> pendiente una de las cosas que podia mover.
+
+**EL REPARTO**: dos ya lo tienen escrito, el 392 y el 341; **los otros siete se
+resuelven con la regla adjudicada**, cada perdida al bloque del que proviene.
+
+> **Y DOS CRUCES MAS CON LA FASE 01**: `producto_unico_superior` y
+> `propuesta_gasto_capital` estan en `OP-F-03`, y `future_scenarios_planning` es
+> uno de los tres injertos de `OP-F-02`. **En los tres manda fuente primero.**
 
 ---
 

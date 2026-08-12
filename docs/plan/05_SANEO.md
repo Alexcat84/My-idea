@@ -4,7 +4,20 @@
 doctrina de un nodo, y por eso es la mas barata de todos los frentes abiertos.
 **La excepcion es la primera operacion, que es una fusion.**
 
-**Operaciones: `OP-S-01` a `OP-S-10`. Una LISTA, nueve DECISION PENDIENTE.**
+**Operaciones: `OP-S-01` a `OP-S-10`. SIETE LISTAS y TRES pendientes**, tras las
+adjudicaciones del 11 ago 2026.
+
+| operacion | la adjudicacion, en una linea |
+|---|---|
+| **`OP-S-01`** | **sobrevive el nodo generico de tratados**; `nafta_free_trade_agreements` se deprecia CON ALIAS |
+| **`OP-S-02`** | la reparacion **pasa de doce a tres**: enlazar no es citar |
+| **`OP-S-04`** | rige el **remedio espejo**: ejemplo se vuelve generico con ejemplos vivos; objeto lleva ficha de vigencia |
+| **`OP-S-05`** | **solo se verifica lo que es objeto o URL cableada**; lo que es ejemplo se genericaliza y no se verifica |
+| **`OP-S-06`** | `fuentes_adicionales` **se trata como fuente**, misma tabla de mapeo |
+| **`OP-S-09`** | nomina recomputada: **53 familias, 125 nodos vivos** |
+| **`OP-S-07`** | **VUELVE al plan**: mi medicion de cero estaba mal, son 27 |
+| **`OP-S-08`** | deja de ser construir un resolutor y pasa a ser **medir por donde pasa** |
+| **`OP-S-10`** | **condicional**: entra si la medicion muestra ley con alcance real |
 
 ---
 
@@ -22,7 +35,7 @@ doctrina de un nodo, y por eso es la mas barata de todos los frentes abiertos.
 
 ---
 
-## `OP-S-01`: EL PAR DE NAFTA: fusion, vigencia y alias en UN SOLO ACTO
+## `OP-S-01`: EL PAR DE NAFTA . **LISTA**
 
 **Nodos**: `nafta_free_trade_agreements` y
 `certificado_de_origen_tratados_libre_comercio`.
@@ -62,11 +75,19 @@ doctrina de un nodo, y por eso es la mas barata de todos los frentes abiertos.
 **DEPENDE DE `OP-S-08`**: sin resolutor, el alias **no protege esas dos aristas,
 solo las documenta**.
 
-**LA PREGUNTA**: se confirma la direccion de la fusion?
+**ADJUDICADO: SOBREVIVE EL NODO GENERICO DE TRATADOS**,
+`certificado_de_origen_tratados_libre_comercio`, y `nafta_free_trade_agreements`
+**se deprecia CON ALIAS**. Es la direccion que cierra los tres encargos en un solo
+acto.
+
+> **Y la dependencia que esta operacion tenia queda CORREGIDA: ya no espera a
+> nadie.** Se escribio que dependia de un resolutor inexistente. **El resolutor
+> existe** (`graph.ts`, linea 131), asi que **el alias funciona el mismo dia que se
+> escribe.**
 
 ---
 
-## `OP-S-02`: INCOTERMS SIN VERSION · **PARADA ABIERTA**
+## `OP-S-02`: INCOTERMS SIN VERSION . **LISTA**
 
 **Nodos que lo CITAN en su texto, medidos el 11 ago 2026**:
 `incoterms_reglas_comerciales_internacionales`, `seguro_de_carga_transporte`,
@@ -95,8 +116,13 @@ adjudica: la **union real** de las tres averias es de **12 nodos, con solape
 CERO**, y **los 12 de 12 siguen siendo de `exportacion`**, que era el argumento de
 la adjudicacion. **El argumento sobrevive entero: solo cambia el tamano.**
 
-**LA PREGUNTA**: se confirma que la fila contaba aristas como citas? Y que ano se
-escribe, **Incoterms 2020**?
+**ADJUDICADO: LA REPARACION PASA DE DOCE A TRES.** Solo tres nodos lo citan en su
+texto, y **de esos, DOS lo llevan tambien en el id**
+(`incoterms_reglas_comerciales_internacionales` y `terminos_de_venta_incoterms`).
+**El resto lo apunta por arista, y enlazar no es citar.**
+
+> **La version que se escribe es la vigente al corte.** Si el fundador quiere otra
+> edicion lo dice; no es una decision que este plan tenga que tomar.
 
 ---
 
@@ -119,7 +145,7 @@ barata de las tres averias de vigencia.**
 
 ---
 
-## `OP-S-04`: LAS SEIS HERRAMIENTAS MUERTAS
+## `OP-S-04`: LAS SEIS HERRAMIENTAS MUERTAS . **LISTA**
 
 **El mapa completo, verificado contra el grafo el 11 ago 2026:**
 
@@ -143,12 +169,20 @@ nombres propios**. **Fundir hacia el generico borra cinco verificaciones de
 vigencia de una vez, y dos de las cinco ya estan muertas.** La fusion ahi **no
 pierde informacion util: pierde mantenimiento.**
 
-**LA PREGUNTA**: una herramienta muerta **se borra**, **se sustituye** por la viva
-equivalente, o **se generaliza** la linea perdiendo el nombre propio?
+**ADJUDICADO: RIGE EL REMEDIO ESPEJO.**
+
+| si el nombre propio es | que se hace |
+|---|---|
+| un **EJEMPLO** | la linea se vuelve **generica** y se le ponen **ejemplos vivos** |
+| el **OBJETO** del nodo | el nodo se queda y lleva **ficha de vigencia** |
+
+> **El espejo resuelve los cinco nodos sin excepcion: en los cinco la herramienta
+> es EJEMPLO, no objeto.** Ninguno de los cinco trata SOBRE una herramienta, asi
+> que **no hace falta abrir ficha de vigencia a ninguno: se generalizan los cinco.**
 
 ---
 
-## `OP-S-05`: LO QUE SIGUE SIN VERIFICAR
+## `OP-S-05`: LO QUE SIGUE SIN VERIFICAR . **LISTA**
 
 **`Quantcast`**, en el paso 6 de `analisis_trafico_competitivo`, sigue **SIN
 VERIFICAR**, y se registra asi **y no como viva**, porque nadie la ha comprobado.
@@ -167,12 +201,19 @@ VERIFICAR**, y se registra asi **y no como viva**, porque nadie la ha comprobado
 > **Seis muertas de catorce verificadas: la mitad menos una.** No es una prediccion
 > sobre los dieciocho: **es la razon para verificarlos.**
 
-**LA PREGUNTA**: se verifica el lote entero antes de la pasada, o se sanea solo lo
-verificado?
+**ADJUDICADO, y cierra el problema por REDUCCION: solo se verifican los nombres
+que son OBJETO del nodo o URL CABLEADA. Los que son ejemplo se genericalizan y no
+se verifican.**
+
+> **Los dieciocho pendientes dejan de ser una deuda de verificacion.** `Quantcast`
+> es **ejemplo** en el paso 6 de `analisis_trafico_competitivo`: **no se verifica,
+> se genericaliza** con `OP-S-04`. Lo que si entra a verificacion son las **URL
+> cableadas**, y las dos que habia, `stopfakes.gov` y `uspto.gov`, **ya estan
+> verificadas y vivas**.
 
 ---
 
-## `OP-S-06`: LOS CAMPOS SUCIOS, con su tabla de mapeo
+## `OP-S-06`: LOS CAMPOS SUCIOS . **LISTA**
 
 **Verificado contra el grafo el 11 ago 2026: los seis ids confirmados, 1 mas 1 mas
 4, exactamente como los publica la auditoria del motor.**
@@ -194,62 +235,123 @@ verificado?
 
 **LA GUARDA**: **lista blanca de claves en Gate 0**. Sin ella, vuelve.
 
-**LA PREGUNTA**: los dos gemelos se borran, y eso es mecanico. Pero
-`fuentes_adicionales`: **se fusiona en `fuente` o se borra**? La auditoria lo deja
-abierto.
+**ADJUDICADO: `fuentes_adicionales` SE TRATA COMO FUENTE**, con la misma tabla de
+mapeo. **No se borra: su contenido entra al campo `fuente`.**
+
+> **Los dos gemelos de fase si se borran**, y eso sigue siendo mecanico y sin
+> criterio. **Lo que cambia es el cuarto campo: deja de ser una duda y pasa a ser
+> una migracion de contenido.**
 
 ---
 
-## `OP-S-07`: LAS AUTO-ARISTAS · **SEGUNDA CIFRA QUE NO RECONCILIA**
+## `OP-S-07`: LAS AUTO-ARISTAS . **VUELVE AL PLAN**
 
-| | publicado | **medido el 11 ago 2026** |
+**Y vuelve contra la adjudicacion, porque la adjudicacion se apoyaba en una cifra
+mia y la cifra estaba mal.**
+
+**Lo que informe**: cero auto-aristas en las tres copias del dataset. **Sobre eso
+se adjudico que la operacion salia del plan porque no habia trabajo.**
+
+> **MI MEDICION ESTABA MAL, y el fallo es localizable.** Mi resolutor era *el id,
+> si esta en el grafo; y si no, su duena*. **Las 27 apuntan a ids que SI estan en
+> el grafo, como DEPRECADOS**, asi que mi funcion los devolvia sin resolver.
+
+**REMEDIDO con la semantica exacta de `resolverId`**, que es la que usa el motor:
+
+| | publicado | **remedido el 11 ago 2026** |
 |---|---:|---:|
-| nodos vivos con **auto-arista** | **27** | **0** |
-| nodos que se listan **a si mismos como alias** | **7** | **0** |
+| nodos vivos con auto-arista | **27** | **27** |
+| enlaces implicados | | **33** |
+| de ellos **directos** | | **0** |
+| de ellos **via alias** | | **33** |
+| nodos con **self-alias** | 7 | **0** |
 
-**Medido en las TRES copias del dataset** (`dataset/metadata/master_graph.json`,
-`dataset/nodos/*.json` y `web/lib/assets/master_graph.json`), **con y sin resolver
-alias: cero en las tres.**
+> **La cifra de 27 es EXACTA. La de 7 si encogio a cero.**
 
-> **Lo que SI reconcilia exacto en la misma auditoria y el mismo dia**: los **77
-> alias huerfanos** (medido: 77 clavados) y los campos sucios de B.2 (1 mas 1 mas
-> 4). **O sea que el dataset medido es el mismo que se audito, y la discrepancia
-> esta solo en estas dos filas.**
+**POR QUE NINGUNA ERA VISIBLE: ninguna es directa.** El nodo no se cita a si mismo
+por su id; **cita un id que es su propio alias**. El ejemplar que el informe ya
+nombraba lo prueba: `analisis_flujo_de_valor` lleva `value_stream_analysis_lean` en
+sus `nodos_previos`, **y ese id es su propio alias**.
 
-> `trilogia_de_juran`, que la auditoria citaba como ejemplo de self-alias, **hoy
-> lleva tres alias y ninguno es el suyo.**
+**EL PEOR**: `costo_de_mala_calidad_copq`, con **siete** enlaces a si mismo, dos en
+previos y cinco en siguientes.
 
-**LA PREGUNTA**: la reparacion **ya se hizo fuera de esta campana**, o el
-instrumento original **medía sobre otra base**? **No se toca nada hasta saberlo.**
+**LOS VEINTISIETE**: `analisis_de_cohortes`, `analisis_flujo_de_valor`,
+`buyin_customer_development`, `costo_de_mala_calidad_copq`, `cronograma_proyecto`,
+`cuatro_etapas_del_pensamiento_creativo`, `cumplimiento_inversionistas_acreditados`,
+`customer_needs_spreadsheet`, `customer_retention_tactics`,
+`decision_pivotar_o_proceder`, `definicion_sprint_terminado_fisico`,
+`diseno_experimentos_pass_fail`, `diseno_landing_page`,
+`diseno_para_el_ciclo_completo`, `eleccion_abogado_franquicias`,
+`elevated_surfaces_fall_protection`, `gestion_portafolio_formal`,
+`lockout_tagout_procedures`, `medir_comportamiento_cliente_mvp`,
+`medir_huella_carbono_corporativa`, `metodo_strategic_buckets`,
+`metricas_accionables`, `multi_sided_platforms`, `redundancia_en_diseno`,
+`reglas_gestion_riesgo_gambling`, `reporte_estado_miembro_equipo`,
+`search_for_business_model`.
 
-**LA GUARDA SE ANADE IGUAL**, porque es lo que impide que vuelva: Gate 0 rechaza
-que un nodo se cite a si mismo como previo o siguiente, y que se liste a si mismo
-como su propio alias.
+**LA GUARDA, y ahora con una exigencia mas**: Gate 0 tiene que rechazar la
+auto-arista **con la misma semantica que `resolverId`**, o el chequeo no sirve:
+**un chequeo ingenuo da cero sobre un grafo con veintisiete.**
 
----
+> **EL BANCO 9.14 NO SE MUEVE.** La regla de excluir el propio nodo al contar
+> grado sigue en pie, y **su motivo queda confirmado en vez de corregido.**
 
-## `OP-S-08`: EL RESOLUTOR DE ALIAS, y por que bloquea
-
-**219 nodos escriben 293 alias y NINGUN codigo los lee.** `ids_alias` aparece solo
-en la declaracion del tipo y en el consolidador que lo escribe. **No existe
-resolutor.**
-
-**Y hay 77 alias que apuntan a ids que ya no son nodos** (medido hoy: **77**,
-exactamente lo publicado). Un `project_nodes.node_id` historico que apunte a un id
-renombrado **no resuelve**, cae en el `?? nid` y **el usuario ve el id crudo** en
-su Expediente o su plan.
-
-> **DEPENDENCIA DURA, y es la unica de esta fase que no es de orden sino tecnica:**
-> **`OP-S-01` CREA un alias nuevo.** Sin resolutor, **ese alias no protege las dos
-> aristas que dice proteger: solo las documenta.**
-
-**LA PREGUNTA**: los 77 huerfanos **se borran o se registran como deprecados** para
-que resuelvan? Y el resolutor, **entra en esta pasada** o es trabajo de motor
-aparte?
+**LA PREGUNTA**: se confirma que la operacion vuelve al plan?
 
 ---
 
-## `OP-S-09`: LOS IDS DE LA DECISION 4
+## `OP-S-08`: POR DONDE PASA EL RESOLUTOR . **MEDICION**
+
+**La dependencia estaba mal escrita y se corrige.** Se escribio que ningun codigo
+leia `ids_alias`. **Verificado contra el codigo el 11 ago 2026: si lo lee.**
+
+| pieza | donde |
+|---|---|
+| el mapa de alias | `web/lib/engine/graph.ts`, `mapaDeAlias`, **linea 107** |
+| **`resolverId`** | **linea 131**, y **camina cadenas** hasta un nodo activo |
+| lo invocan | `etiquetaArbol` (**164**) y `tituloDeNodo` (**172**) |
+| espejo en Python | `scripts/reanclar_por_resolutor.py` |
+| lo ejercitan | `resolutorHistoria.test.ts` y `compass.test.ts` |
+
+> **`resolutorHistoria.test.ts` documenta que la promesa estaba a MEDIO cumplir, no
+> incumplida.** Incluso guarda contra la regresion: comprueba que el fuente **no
+> vuelva a contener** el acceso directo `titulo_concepto ?? nid`.
+
+**ESTA OPERACION YA NO ES CONSTRUIR NADA: ES MEDIR POR DONDE PASA.**
+
+**MEDIDO el 11 ago 2026**, sobre produccion (`web/lib` y `web/app`, sin tests):
+
+| | |
+|---|---:|
+| accesos **directos** al grafo por id | **42** |
+| ficheros que los contienen | **12** |
+| de esos, ficheros que **manejan ids de origen externo** | **9** |
+
+**LOS ALIAS, medidos el mismo dia:**
+
+| | |
+|---|---:|
+| alias totales | **391** |
+| a nodo **deprecado**, que es su funcion | **314** |
+| **colisiones vivas** | **0** |
+| **huerfanos** a ids inexistentes | **77** |
+
+> **Los 77 se limpian en el saneo SIN RIESGO**: con **cero colisiones vivas**, su
+> borrado no puede romper una resolucion buena. **Los 314 no se tocan**: apuntar a
+> un deprecado ES la funcion del alias, y `resolverId` los camina hasta un activo.
+
+> **Y esta operacion YA NO BLOQUEA A `OP-S-01`.** El resolutor existe, asi que el
+> alias que esa operacion crea **funciona el mismo dia que se escribe.**
+
+**LA PREGUNTA**: de esos 42 accesos, **cuales reciben un id que viene de FUERA del
+grafo** (de `project_nodes`, de una sesion guardada o de un parametro de URL)?
+**Esos son los unicos que tienen que pasar por `resolverId`.** Los que indexan con
+un id que ya salio del propio grafo no lo necesitan.
+
+---
+
+## `OP-S-09`: LOS IDS DE LA DECISION 4 . **LISTA**
 
 **La politica esta APROBADA el 9 ago 2026**: familia unica, criterio **continua o
 repite**, y **fusion con alias**. *Un id no pertenece a una doctrina: pertenece al
@@ -264,12 +366,38 @@ bueno de pago.*
 > por el toque unico. **El resto de la familia carece de nomina**, y por eso esta
 > operacion no se puede cerrar.
 
-**LA PREGUNTA**: **cuales son TODOS los ids de la familia?** La politica esta
-aprobada; **la lista sobre la que se decidio no existe escrita.**
+**ADJUDICADO Y RECOMPUTADO.** Con el criterio de la propia decision (sufijo
+numerico, particulas, orden de palabras y sinonimo), medido el 11 ago 2026 sobre
+nodos VIVOS:
+
+| | |
+|---|---:|
+| **familias** | **53** |
+| **nodos vivos implicados** | **125** |
+
+**POR CAUSA:** 35 familias por **sufijo numerico**, 12 por **particulas** (de, del,
+la, el), 6 por **orden de palabras**, y **0** por sinonimo puro.
+
+**LAS CUATRO MAYORES:**
+
+| familia | miembros |
+|---|---|
+| `accion_correctiva` | `accion_correctiva`, `_2`, `_4`, `_5`, `_6` |
+| el consejo de calidad | `consejo_calidad`, `consejo_calidad_2`, `consejo_de_calidad`, `consejo_de_calidad_2`, `consejo_de_calidad_3` |
+| el programa Make Certain | `make_certain_programa`, `programa_make_certain`, `_2`, `_3` |
+| definiciones operacionales | `definiciones_operacionales`, `_2`, `_3`, `_4` |
+
+> **DELTA DECLARADO: el auditor dio 123 nodos y mi recomputo da 125, con las 53
+> familias clavadas.** La diferencia es de dos nodos y no de familias. **Se declara
+> en vez de forzarse.**
+
+**LA EXCEPCION YA ESCRITA SE MANTIENE**: la transdominio y el `_2` de propiedad
+intelectual **van por renombre o alias y NO por fusion**, porque en los dos el
+contenido esta sano.
 
 ---
 
-## `OP-S-10`: EL REENCUADRE DE MARCO
+## `OP-S-10`: EL REENCUADRE DE MARCO . **CONDICIONAL**
 
 **La doctrina, ya escrita**: *la condicion de pais se copia **A LA PUERTA**, donde
 se actua*, es decir a `condiciones_activacion`, **y nombrando el pais**. Dejarla
@@ -314,7 +442,7 @@ dominio que condiciona con un adjetivo en vez de con un pais.**
 | que | como |
 |---|---|
 | **claves** | Gate 0 con **lista blanca** rechaza cualquier clave desconocida |
-| **auto-referencia** | Gate 0 rechaza que un nodo se cite a si mismo como previo, siguiente o alias |
+| **auto-referencia** | Gate 0 rechaza que un nodo se cite a si mismo como previo o siguiente **con la semantica de `resolverId`**, no por comparacion de id crudo |
 | **alias** | ningun alias apunta a un id que no sea nodo; **existe `resolverId`** y lo usa toda lectura de `node_id` historico |
 | **vigencia** | ningun nodo vivo lleva NAFTA en id ni titulo; los tres de Incoterms llevan su ano; ningun nodo cablea `export.gov` |
 | **herramientas** | ningun nodo vivo nombra las seis muertas |
