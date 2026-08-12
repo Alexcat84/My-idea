@@ -2612,6 +2612,33 @@ con la lista de marcadores escrita dentro):
 **SIN ADJUDICAR: son dos denominaciones a reponer, no dos veredictos a revisar.** Las dos
 clases A **se sostienen**.
 
+> **ADJUDICADO EL 18 ago 2026: ESA CIFRA ES UNA COTA INFERIOR, NO UN CENSO.**
+
+**EL MOTIVO, y es de construcción del instrumento:** la lista de marcadores del script es
+**curada**, y una lista curada **está incompleta por construcción**. **Lo probó el puesto
+2.477**: muere `critica_gestion_por_objetivos`, cuyo título nombra **la gestión por
+objetivos (MBO)**, y el superviviente no dice MBO en ningún sitio. **El barrido no la cazó
+porque `mbo` y `gestion por objetivos` no estaban en la lista.**
+
+> **Y no se arregla alargando la lista.** Cada libro nuevo trae denominaciones que nadie
+> anticipó. **El instrumento no puede ser un censo: puede ser un buscador de candidatos.**
+
+**DONDE SE MUDA EL CONTROL, que es lo que resuelve el problema de verdad:**
+
+> **EL CONTROL DE DENOMINACIÓN SE HACE DENTRO DE CADA OPERACIÓN DE FUSIÓN.** Al escribir la
+> operación, **se comprueba si algún id o título que muere lleva una denominación buscable
+> que falte en el texto del superviviente.**
+
+| | |
+|---|---|
+| **el barrido** (`scripts/barrido_perdida_de_nombre.py`) | **buscador de candidatos**: barre el archivo entero y adelanta los que su lista alcanza |
+| **la operación de fusión** | **el control real**: mira **los dos nodos que tiene delante**, sin depender de ninguna lista |
+
+**Por qué ahí funciona y en el barrido no:** la operación **no necesita adivinar qué
+palabras son denominaciones**, porque **tiene los dos textos completos delante y solo dos
+nodos que comparar**. **El barrido tiene 473 A y ninguna forma de saber qué es un nombre
+propio sin una lista.**
+
 > **Y UNA NOTA DE METODO DEL PROPIO BARRIDO:** la primera corrida dio **tres**, y el
 > tercero era falso: **`ries` casaba dentro de `riesgo`**. Se corrigio a **coincidencia por
 > palabra completa** antes de publicar la cifra. **La deteccion por subcadena inventa

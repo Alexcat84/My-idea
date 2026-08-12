@@ -2862,6 +2862,25 @@ son **la mayoria del corpus doctrinal**.
 > que la maquina puede hacer es ORDENAR LA COLA, que es lo que ya hace, y NO decidir el
 > veredicto.**
 
+### AÑADIDO PARA LAS OPERACIONES DEL PLAN: EL CONTROL DE DENOMINACION VA DENTRO DE CADA FUSION (18 ago 2026)
+
+**Adjudicado y escrito en el banco 9.28.** La cifra de perdidas de nombre que publica el
+barrido **es una COTA INFERIOR**: su lista de marcadores es curada y **esta incompleta por
+construccion**. Lo probo el puesto **2.477**, donde muere el nodo titulado *Critica a la
+Gestion por Objetivos* y **el superviviente no nombra MBO**, sin que el barrido lo detectara.
+
+> **PASO OBLIGATORIO AL ESCRIBIR CADA OPERACION DE FUSION:** comprobar si **algun id o
+> titulo que muere lleva una denominacion buscable ausente del texto del superviviente**.
+> Si la lleva, **la denominacion viaja como linea** al superviviente.
+
+| | |
+|---|---|
+| `scripts/barrido_perdida_de_nombre.py` | **buscador de candidatos**, adelanta trabajo. **NO es censo** |
+| **la operacion de fusion** | **el control real**: dos textos delante, sin lista de por medio |
+
+**No hay ruta nueva:** el paso se hace **dentro de las operaciones que el plan ya tiene**,
+al redactarlas, junto al reparto de perdidas.
+
 ---
 
 ## LOS TRECE RACIMOS DE IDS DE `health_safety`, para el recomputo (18 ago 2026)

@@ -14985,6 +14985,39 @@ Metodologia DMADV*.** **La denominacion sobrevive y la clase 9.28 no aplica.**
 **Faltan 150 pares del encargo, del 2.468 al 2.617.** **Checkpoints 2.500 y 2.600
 pendientes.** El dominio son **844 pares** y llega al **3.255**.
 
+### LA FAMILIA kp: PRIMERA DE `quality` CON SUPERVIVIENTE FINAL POR DERECHO
+
+**Registrada el 18 ago 2026.** Tres nodos, **tres pares posibles y los tres leidos**, que es
+**la lectura de acto completa que P.5 exige**.
+
+| puesto | el par | resultado |
+|---:|---|---|
+| **2.467** | `regla_todo_o_nada_inspeccion` contra `punto_equilibrio_calidad_inspeccion` | **A**, muere el primero |
+| **2.473** | `economia_de_la_inspeccion` contra `punto_equilibrio_calidad_inspeccion` | **A**, muere el primero |
+| **2.480** | `economia_de_la_inspeccion` contra `regla_todo_o_nada_inspeccion` | **A por fusion mutua** |
+
+> **`punto_equilibrio_calidad_inspeccion` GANA LOS DOS PARES DIRECTOS.** No queda ninguna
+> lectura pendiente que pueda cambiar al ganador: **el tercer par no lo toca**, y es
+> justamente el que se resolvio en fusion mutua entre los dos perdedores.
+>
+> **ES SUPERVIVIENTE FINAL POR DERECHO, no provisional.**
+
+**Y ESA ES LA DIFERENCIA CON LAS CUATRO DEL 9.3, que siguen provisionales:**
+
+| familia | nodos | pares leidos | estado |
+|---|---:|---|---|
+| **la regla kp** | 3 | **3 de 3** | **FINAL por derecho** |
+| la **ISO sectorial** | 3 | **3 de 3** | **acto completo**, pero reparte A y D entre pares distintos: **el ganador se elige, no se hereda** |
+| `accion_correctiva` | **5 en la cola** | 3 | **provisional** |
+| los **ROI** | 3 | 2 | **provisional** |
+| el **QFD** | 3 | 2 | **provisional** |
+| la **auditoria de producto** | 3 | 2 | **provisional** |
+
+> **La leccion que separa a las dos primeras de las otras cuatro no es cuantos pares se
+> leyeron: es SI EL GANADOR PUEDE CAMBIAR.** En la kp **no puede**, porque el unico par que
+> falta por decidir direccion no incluye al ganador. **En la ISO si**, aunque este leida
+> entera, porque el ganador de un par murio en otro.
+
 ### ADJUDICACION DEL 2.473: la atribucion es una afirmacion de fuente y se verifica
 
 **Registrada el 18 ago 2026 junto a su entrada en CONTRADICCIONES INTERNAS.**
