@@ -753,3 +753,72 @@ arrastrado**.
 
 **CUANDO SE APLICA:** siempre que `P.12` deje un nodo mixto fuera de la fusion. **No es
 una excepcion: es lo que hay que hacer con el que se queda.**
+
+---
+
+## P.14 UN CONTROL QUE SOLO ENCUENTRA FALLOS AJENOS NO ES UN CONTROL
+
+**Adoptada el 12 ago 2026, y la enseno el puesto 1804.**
+
+> **TODO CONTROL REPORTA TAMBIEN LO QUE EL CONTROL FALLO.** Si una relectura de
+> veinticuatro pares no encuentra ni una vez que el archivo tenia razon, **lo primero
+> que hay que revisar no es el archivo: es la relectura.**
+
+### EL EJEMPLAR
+
+**El puesto 1804**, `gestion_centro_datos_verde` contra
+`optimizacion_centro_datos_verde`. **La lectura a ciegas de hoy lo marco como
+CAERIA A B**, porque **tres de los cinco pasos del nodo corto son identicos a tres del
+largo**: contencion de pasillos, rango de temperatura y economizadores.
+
+**Y la razon vieja traia un eje que la lectura de hoy no vio:**
+
+> *Uno **ATACA EL AIRE Y EL CALOR** y el otro **ATACA LA CARGA**. **Uno enfria mejor lo
+> mismo, el otro necesita enfriar menos.***
+
+**Con ese eje nombrado, las tres lineas compartidas son incidentales**: son las medidas
+que **cualquiera** de las dos estrategias usa. **El D se sostiene, y la lectura vieja
+fue mejor que la de hoy.**
+
+### POR QUE ES UNA REGLA Y NO UNA ANECDOTA
+
+**Un relector llega con las doctrinas nuevas en la mano y con ganas de usarlas.** Eso
+**aumenta la sensibilidad y baja la especificidad**: se ve deriva donde hay un eje que
+no se supo nombrar.
+
+> **LA CIFRA DEL PROPIO CONTROL LO DICE: de veinticuatro, UNO cayo por doctrina nueva y
+> UNO fue error del relector. Uno a uno.** **Si el segundo no se hubiera escrito, la
+> tasa publicada seria mejor de lo que es.**
+
+### COMO SE CUMPLE
+
+| | |
+|---|---|
+| **1** | la relectura se hace **A CIEGAS** y **solo despues** se destapa la razon vieja |
+| **2** | **cuando la razon vieja gana, se escribe con su puesto y con el eje que el relector no vio** |
+| **3** | **si el control no encuentra ninguno, se dice**, y se toma como senal de que el metodo puede estar sesgado |
+
+---
+
+## P.15 TODA TASA PUBLICADA LLEVA SU BANDA AL LADO
+
+**Adoptada el 12 ago 2026.**
+
+> **UNA TASA SIN INTERVALO NO ES UNA MEDIDA: ES UNA IMPRESION CON DECIMALES.**
+
+**Y el plan ya tiene dos escarmientos propios:**
+
+| | |
+|---|---|
+| **el cero de veinticuatro** | *cero podas en veinticuatro lecturas* se leyo como un cero **y era un techo del 11,7%**. La clase que decia no existir vale **15,2%** |
+| **el 4,2% de las D** | punto en 4,2 **y banda de 0,7 a 20,2**. **Publicar solo el punto haria creer que el error de dejar pasar esta acotado, y no lo esta** |
+
+### LO QUE OBLIGA
+
+| | |
+|---|---|
+| **1** | **toda tasa del plan lleva su banda**, su **N** y su **fecha de corte**. Las tres, no dos |
+| **2** | **una clase con CERO observaciones se escribe como techo**, nunca como ausencia |
+| **3** | **si la banda es ancha, se dice que es ancha y por que**: casi siempre es que la muestra es chica y el evento raro, **y eso tambien es un resultado** |
+
+> **Y LA FORMA CORTA, para cuando haya prisa: SI NO CABE LA BANDA, NO CABE LA TASA.**

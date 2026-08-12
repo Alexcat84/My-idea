@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA CERRADO: ONCE FASES, 67 OPERACIONES, 66 LISTAS, Y TRECE REGLAS EN SU BANCO. QUEDA UNA SOLA PENDIENTE, `OP-U-02`, Y NO ES UNA DECISION: ES UNA ESPERA CON DISPARADOR.**
+**EL PLAN ESTA CERRADO: ONCE FASES, 69 OPERACIONES, 68 LISTAS, Y QUINCE REGLAS EN SU BANCO. QUEDA UNA SOLA PENDIENTE, `OP-U-02`, Y NO ES UNA DECISION: ES UNA ESPERA CON DISPARADOR. LA SESION B QUEDA EN ESPERA FORMAL.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -105,8 +105,8 @@ el JSONL discrepan, manda el JSONL.
 
 | | |
 |---|---:|
-| operaciones | **67** |
-| **LISTAS** | **66** |
+| operaciones | **69** |
+| **LISTAS** | **68** |
 | **DECISION PENDIENTE** | **1** |
 
 | fase | operaciones | LISTAS | pendientes |
@@ -115,7 +115,7 @@ el JSONL discrepan, manda el JSONL.
 | **01 FUENTES** | 7 | **7** | 0 |
 | **02 DESTEJIDOS** | 7 | **7** | 0 |
 | **03 FUSIONES** | 16 | **15** | 1 |
-| **04 ENLACES** | 8 | **8** | 0 |
+| **04 ENLACES** | 10 | **10** | 0 |
 | **05 SANEO** | 12 | **12** | 0 |
 | **06 MESAS** | 5 | **5** | **0** |
 | **07 ADUANA** | 2 | **2** | 0 |
@@ -414,3 +414,69 @@ cola de relectura post fusion, que **no bloquea**.
 > **Y NO QUEDA NI UNA LECTURA POR HACER QUE BLOQUEE ALGO.** Las siete que faltaban se
 > hicieron el 12 ago 2026, y **la cola de relectura post fusion no bloquea: viaja con
 > el recomputo.**
+
+---
+
+# LA SESION B QUEDA EN ESPERA . **12 ago 2026**
+
+**El plan esta escrito y cerrado.** Lo que sigue **no depende de esta sesion**, y por
+eso se escribe aqui **que la despierta, que espera de la otra, y que no debe hacer
+sola.**
+
+## QUE LA DESPIERTA, y son solo dos cosas
+
+| | el disparador |
+|---:|---|
+| **1** | **el cribado llega al puesto 3.388** y se dispara el recomputo de `OP-U-02`, con su lote de lectura y la cola de relectura post fusion |
+| **2** | **una adjudicacion nueva del auditor**, sobre lo que sea |
+
+> **Nada mas la despierta.** Ni una idea propia, ni una cifra que parezca mejorable, ni
+> una operacion que se pueda pulir. **El plan cerrado se toca cuando alguien lo pide.**
+
+## QUE ESPERA DE LA SESION A
+
+| | |
+|---|---|
+| **1** | **el reporte de la TANDA 3**, del puesto 2.118 al 2.617, que es lo que estaba corriendo cuando esta sesion se abrio |
+| **2** | **la aplicacion de las OCHO correcciones** de [`CORRECCIONES_A_APLICAR.md`](CORRECCIONES_A_APLICAR.md) **en sus propios ficheros**, que esta sesion no toca |
+
+**LAS OCHO, en una linea cada una:**
+
+| | que corrige |
+|---|---|
+| **1** | las 27 auto aristas via alias: **se confirman**, no se corrigen |
+| **2 a 5** | cuatro cifras publicadas que la medicion cambio |
+| **6** | **el puro de la competencia entre inversores degrada a sub puro**, con su reconciliacion entera |
+| **7** | **muere *cero podas en veinticuatro lecturas***, con la medida exacta de la discrepancia |
+| **8** | **un volteo propuesto**, el puesto 2.078, con su superviviente y sus perdidas ya medidos |
+
+> **La octava es la unica que pide una decision.** Las siete primeras **son cifras que
+> ya no cuadran con el archivo**, y **cuanto mas tarden, mas documentos las citaran.**
+
+## QUE NO DEBE HACER SOLA, y esto es una prohibicion y no una preferencia
+
+| | |
+|---|---|
+| **NO toca nodos** | **modo de cierre vigente desde el primer turno.** Ni uno, ni para arreglar algo evidente |
+| **NO toca ficheros de la sesion A** | ni el archivo de veredictos, ni el informe, ni el banco de aquella sesion. **Lo que hay que cambiar alli se escribe en `CORRECCIONES_A_APLICAR.md` y se espera** |
+| **NO adjudica** | cuando una medicion cambia la forma de algo, **se trae**. Esta sesion lo ha hecho seis veces y **las seis veces fue lo correcto** |
+
+> **Y LA RAZON DE FONDO DE LAS TRES: esta sesion MIDE Y ESCRIBE. No decide y no
+> ejecuta.** Todo lo que ha quedado LISTO lo esta **porque alguien mas lo adjudico**, y
+> lo que no, **esta escrito como pregunta con sus opciones.**
+
+## EL ESTADO EN QUE QUEDA TODO
+
+| | |
+|---|---:|
+| operaciones | **69** |
+| **LISTAS** | **68** |
+| pendientes | **1**, `OP-U-02` |
+| reglas del banco del plan | **15** |
+| fronteras declaradas | **5** |
+| entradas del inventario | **335** |
+| lecturas dirigidas **hechas** | **61** |
+| lecturas dirigidas **encargadas y sin hacer** | **4**, las de Adopt y Advocate (`LD-28` a `LD-31`), que no bloquean nada |
+| **corte del archivo** | **2.117 de 3.388** |
+
+> **`OP-U-02` no espera una decision: espera un puesto.**

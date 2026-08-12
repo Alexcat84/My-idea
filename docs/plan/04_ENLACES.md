@@ -151,11 +151,15 @@ del banco 9.6.1 y clasificadas en las tres clases del encargo.
 
 **LA TASA, sobre 46 lecturas y sobre la bolsa que de verdad se va a trabajar:**
 
-| | |
-|---|---:|
-| **JERARQUIA SANA**, la arista que falta | **32 de 46, 69,6%** |
-| **MADRE QUE REPITE** | **7 de 46, 15,2%** |
-| **FALSO POSITIVO** | **7 de 46, 15,2%** |
+| | tasa | **banda de Wilson al 95%** |
+|---|---:|---|
+| **JERARQUIA SANA**, la arista que falta | **32 de 46, 69,6%** | **de 55,2% a 80,9%** |
+| **MADRE QUE REPITE** | **7 de 46, 15,2%** | de 7,6% a 28,2% |
+| **FALSO POSITIVO** | **7 de 46, 15,2%** | de 7,6% a 28,2% |
+
+> **POR `P.15`: toda tasa del plan lleva su banda, su N y su fecha de corte. Las
+> tres.** N igual a **46 lecturas pineadas**, corte **11 ago 2026**. **Si no cabe la
+> banda, no cabe la tasa.**
 
 > **LA CIFRA QUE MUERE HOY ES *CERO PODAS EN VEINTICUATRO LECTURAS*.** Se escribio
 > con la muestra vieja y **la muestra nueva la desmiente: siete de cuarenta y seis.**
@@ -321,3 +325,83 @@ una fusion. Puestos **201, 203, 215, 246, 360, 1077 y 1240**.
 > **puede crear una auto-arista via alias**, que es justo lo que la guarda literal
 > no ve. **Sin la guarda que resuelve, esta fase puede meter en silencio lo que
 > `OP-S-07` acaba de sacar.**
+
+---
+
+# LA COSECHA DE RAZONES DE LAS D . **12 ago 2026**
+
+**Salio de tirar del hilo del control de la muestra pineada.** Aquel encontro, **sin
+buscarlo**, que **nueve de las veintitres D que sostienen su clase nombran una
+jerarquia o una arista que falta**. Si eso pasa en el 39% de veinticuatro, **lo mismo
+esta escrito en cientos de razones que nadie ha vuelto a leer.**
+
+**Instrumento: `scripts/plan/barrido_razones_d.py`.** No interpreta los nodos:
+**lee lo que el veredicto ya dijo.**
+
+## LA COSECHA
+
+| | |
+|---|---:|
+| D en el archivo al corte 2.117 | 1.621 |
+| **D cuya razon nombra jerarquia o arista que falta** | **397** |
+| sobre el total de D | **24,5%** |
+| ya cubiertos | 104 |
+| **NUEVOS** | **293** |
+| de ellos, **con la direccion escrita en su propia razon** | **192** |
+| levantados solo por *continua por la vara*, sin direccion | 101 |
+
+**POR QUE ESTABAN CUBIERTOS LOS 104**: **92 ya tienen arista en el grafo** y **12
+estaban en la bolsa de la fase 04**.
+
+## EL DATO QUE MAS SORPRENDE
+
+> **DE LOS 397 LEVANTADOS, SOLO DOCE ESTABAN EN LA BOLSA DE 477.** **Los dos
+> instrumentos se solapan en un 3%.**
+
+**El barrido paso contra nodo mide VOCABULARIO. La razon de un veredicto es una
+LECTURA.** Y encuentran **cosas casi disjuntas**.
+
+> **LO QUE ESO SIGNIFICA PARA LA FASE 04: tenia medida solo UNA de sus dos mitades.**
+> La bolsa de 477 con su 69,6% de acierto **no era el universo de las aristas que
+> faltan: era el universo de las que un instrumento de parecido puede ver.**
+
+**Y LOS 92 QUE YA TENIAN ARISTA SON EL CONTROL DEL INSTRUMENTO**: son razones que
+nombran la jerarquia sobre pares que **el grafo ya cablea**. **La figura no se la esta
+inventando el barrido.**
+
+## POR QUE ESTOS CANDIDATOS SON DE MEJOR CLASE
+
+| | la bolsa de 477 | **la cosecha de razones** |
+|---|---|---|
+| **que es la evidencia** | dos senales de parecido, titulo y contencion | **un veredicto: el par se leyo entero** |
+| **acierto** | **69,6%**, banda de 55,2 a 80,9 | **por definicion, el lector ya dijo que la arista falta** |
+| **la direccion** | hay que deducirla | **192 la traen escrita en la razon** |
+| **el coste** | 477 lecturas para confirmarlos | **cero: ya estan leidos** |
+
+> **NO HAY QUE LEER NADA PARA COBRAR ESTOS CIENTO NOVENTA Y DOS. HAY QUE ESCRIBIRLOS.**
+
+## REPARTO POR DOMINIO DE LOS 192
+
+| dominio | con direccion | levantados |
+|---|---:|---:|
+| `core` | **146** | 300 |
+| `entrega` | 15 | 22 |
+| `environmental` | 15 | 35 |
+| `exportacion` | 12 | 36 |
+| `franquicias` | 4 | 4 |
+| `compras` | **0** | **0** |
+
+> **En `compras` no levanto ninguno, y no es que no haya jerarquias: es que sus razones
+> son mas cortas y no usan la formula de la vara.** **El instrumento mide como se
+> escribio el veredicto, no como es el par**, y eso hay que decirlo antes de que
+> alguien lea el cero como una propiedad del dominio.
+
+## LAS DOS OPERACIONES
+
+| | |
+|---|---|
+| **`OP-E-06`** | **los 192 con direccion**. Se escriben, no se leen |
+| **`OP-E-07`** | **los 101 sin direccion**. **No es una lectura de par: es una lectura de FRASE**, porque la clase ya esta decidida y solo falta saber quien es la madre |
+
+> **Se separan a proposito: mezclarlas haria que ciento noventa y dos aristas seguras
+> esperaran a ciento un lecturas de frase.**
