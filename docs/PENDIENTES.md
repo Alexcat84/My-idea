@@ -2883,6 +2883,37 @@ cobertura y aristas: informe intra §80.4.** Reproducible con
 > el plan los encarga como lectura dirigida, o no se leen.** Esa es la decision, y la
 > cifra para tomarla es esta.
 
+---
+
+## ANEXO: LOS 55 PARES EN A QUE YA TIENEN LA ARISTA PUESTA (18 ago 2026)
+
+**VIAJA AL RECOMPUTO.** Son las A **donde el grafo ya habia cableado a los dos nodos** y
+aun asi repiten. **Una de cada nueve A del archivo** (55 de 473).
+
+> **QUE PASA AL FUNDIRLAS, adjudicado:** la arista interna **resuelve al superviviente por
+> alias** y nace **AUTO-ARISTA**, el mismo mecanismo de las 27 del grafo vivo (informe
+> §31.3). **No es trabajo manual: es carga de `OP-S-12`** (saneo mecanico) **con su guarda
+> `OP-C-05`**, y **la simulacion P.7 lo reporta antes** de que la operacion se escriba
+> lista.
+
+| dominio | pares | los puestos |
+|---|---:|---|
+| **`core`** | **42** | 188, 194, 212, 237, 244, 261, 265, 282, 292, 302, 307, 325, 326, 334, 345, 361, 376, 378, 381, 404, 462, 508, 541, 544, 559, 562, 570, 609, 614, 635, 712, 782, 893, 1028, 1031, 1109, 1142, 1146, 1332, 1488, 1517, 1564 |
+| `exportacion` | 4 | 1943, 1966, 1981, 2022 |
+| `environmental` | 3 | 1792, 1865, 1917 |
+| `health_safety` | 3 | 2255, 2303, 2309 |
+| `quality` | 3 | 2420, 2432, 2458 |
+| **TOTAL** | **55** | |
+
+**Recomputable con el mismo criterio en cualquier momento:** una A cuenta aqui si
+`res(nodo_b)` esta en los vecinos de `nodo_a` o al reves, **resolviendo alias**.
+
+> **LO QUE ESTA LISTA SIGNIFICA, y no es lo obvio.** Un cable entre dos nodos **dice que
+> alguien vio la relacion**; **no dice que hagan cosas distintas**. Es **la simetrica de la
+> ARISTA QUE FALTA**: alli el grafo **no vio** una jerarquia real, aqui **vio un parentesco
+> y lo cableo en vez de fundirlo.** **El 88% de las A no tienen ese cable**, asi que la
+> mayoria de las fusiones no tocan el grafo; **estas 55 si, y por eso van contadas.**
+
 **LO QUE LA TABLA DEL §80.4 DECIDE POR ADELANTADO:**
 
 - **DOS racimos cerrados**, y los dos pequenos: **la deriva** (6 de 6 leidos, 3 A y 3 D) y

@@ -5010,9 +5010,10 @@ mismos.
 > requisito sustantivo de la norma, el otro trae la formula del ROI. **Ninguno de los dos
 > trae con que convencer.**
 
-### LOS CINCO MOTIVOS DE PERDIDA DE LINEA, con su remedio
+### LOS SEIS MOTIVOS DE PERDIDA DE LINEA, con su remedio
 
-**Adjudicado el 18 ago 2026: de tres a CUATRO tras la R51, y a CINCO tras la R52.**
+**Adjudicado el 18 ago 2026: de tres a CUATRO tras la R51, a CINCO tras la R52, y a SEIS
+tras la R53.**
 
 | motivo | que muere | como se reconoce | **el remedio** | ejemplares |
 |---|---|---|---|---|
@@ -5021,6 +5022,7 @@ mismos.
 | **DESTINO** | **a donde va el entregable y a quien hay que convencer** | el superviviente **produce el resultado y no dice que hacer con el** | la linea de destino entra **como paso final** del superviviente | **2.451** (*documentar el ROI para reportarlo a la direccion*) |
 | **METODO ALTERNATIVO** | **la otra forma de hacer el mismo paso, la que sirve a otra escala** | el superviviente manda **un solo camino**, y el que muere traia **uno mas barato o mas lento** | el paso del superviviente pasa a **VARIANTE CONDICIONAL**: **la condicion del lector elige el camino** | **2.453**: *recolectar datos diarios durante varias semanas* **o por muestreos periodicos si no puedes medir a diario* |
 | **DIRECCION** | **el SENTIDO en que corre cada flujo del paso** | el superviviente **manda hacer la cosa y no dice de quien a quien** | **EL SENTIDO ENTRA DENTRO DEL PASO**: una especificacion en el paso de requisitos y otra en el de retroalimentacion | **2.458**: *los requisitos bajan del proveedor al procesador; la retroalimentacion sube del cliente al procesador* |
+| **SALVAGUARDA** | **la advertencia que impide que un paso se resuelva solo por el sesgo por defecto** | el superviviente **manda decidir y no dice contra que sesgo** | **SE ADOSA AL PASO QUE PROTEGE**: el inciso entero entra al paso que sin el se resolveria solo | **2.461**: *priorizar de forma consensuada, **sin asumir jerarquias automaticas por tipo de cliente*** |
 
 **EL REMEDIO DEL CUARTO, con su forma exacta.** No es anadir un paso ni partir el nodo: es
 **abrir el paso que ya existe.**
@@ -5044,6 +5046,20 @@ especificacion de quien a quien dentro de dos pasos que ya existen.**
 > **Un mapa sin sentidos no es medio mapa: es un mapa que no se puede recorrer.** El
 > superviviente sabe **que pares hay que conectar y que hay que medir**; sin el sentido,
 > **no sabe cual de los dos extremos escribe la especificacion y cual la recibe.**
+
+**EL REMEDIO DEL SEXTO, y esta anclado a P.11.** El banco del plan ya dice que **una
+advertencia es LINEA, no procedimiento**: por eso la salvaguarda **nunca es un paso propio**.
+
+| como esta | como queda |
+|---|---|
+| *Analizar y priorizar las necesidades identificadas.* | *Analizar y priorizar las necesidades identificadas, **de forma consensuada y sin asumir jerarquias automaticas por tipo de cliente**.* |
+
+> **La salvaguarda se adosa AL PASO QUE PROTEGE, no al nodo.** Suelta al final no protege
+> nada: **el sesgo actua dentro del paso de priorizar, y ahi tiene que estar el freno.**
+>
+> **Y la prueba de que hacia falta la sexta entrada: sin ella, esta perdida se habria
+> metido a la fuerza en ALCANCE**, que es la mas parecida y la equivocada. **Una
+> advertencia no abre puertas a otro rubro: cierra una salida facil.**
 
 ### LA PRUEBA COMUN DE LOS CUATRO
 
@@ -14548,8 +14564,87 @@ no una linea, el par se voltea a fusion mutua*. **No procede.**
 > FALTA: alli el grafo **no vio** una jerarquia real; aqui **vio** un parentesco y lo
 > cableo **en vez de** fundirlo.
 >
-> **Para la fusion importa y no es un detalle:** en estos 55 pares, **fundir obliga ademas
-> a rehacer la arista**, porque el nodo al que apuntaba deja de existir.
+> **Para la fusion importa, y la adjudicacion de la R53 corrige como se dijo aqui:** ver
+> abajo.
+
+### TANDA R53: dos puestos, DOS DE DOS COINCIDEN
+
+**18 ago 2026. 2.461 y 2.464, las dos coinciden.**
+
+| | |
+|---|---:|
+| relecturas ciegas | **13** (R42 a R53) mas el barrido de direccion |
+| puestos releidos | **29** |
+| caidas | **4** . dentro del marcado **4** . fuera **0** |
+
+#### LOS 55 PARES CON ARISTA PUESTA: no es trabajo manual
+
+**CORRECCION DECLARADA a lo escrito en la R52.** Alli se dijo que *fundir obliga ademas a
+rehacer la arista*. **No es asi, y el mecanismo ya esta medido en este mismo informe.**
+
+> **AL FUNDIR, LA ARISTA INTERNA RESUELVE AL SUPERVIVIENTE POR ALIAS, Y LO QUE NACE ES UNA
+> AUTO-ARISTA.** Es el mismo mecanismo de **las 27 auto-aristas del grafo vivo** (§31.3):
+> el id muerto queda en `ids_alias`, la arista sigue resolviendo, **y acaba apuntando al
+> nodo consigo mismo.**
+
+| | |
+|---|---|
+| **lo que NO es** | rehacer aristas a mano, par por par |
+| **lo que SI es** | **carga de `OP-S-12`**, saneo mecanico, **con su guarda `OP-C-05`** |
+| **quien lo reporta antes** | **la simulacion P.7**, que toda operacion de mesa exige antes de escribirse lista |
+
+**LOS 55, por dominio:** `core` **42**, `exportacion` **4**, `environmental` **3**,
+`health_safety` **3**, `quality` **3**. **El anexo con los 55 puestos queda en PENDIENTES**,
+enlazado para el recomputo.
+
+#### EL PATRON DEL NEGOCIO PEQUENO, con su regla y sus dos salidas
+
+> **EN CADA FUSION SE MIRA QUIEN CONSERVA LA ESCALA.**
+
+**Y las dos salidas no son la misma cosa ni piden lo mismo:**
+
+| salida | que es | ejemplar | que se hace |
+|---|---|---|---|
+| **LINEA QUE VIAJA** | la escala esta **en una frase** dentro de un nodo que por lo demas repite | **2.414**: *aunque sea de dos o tres personas* | **entra al reparto** como perdida de linea |
+| **MOMENTO CON PROCEDIMIENTO PROPIO** | la escala **tiene pasos propios** y por eso el par es **D** | **2.464**: `zero_defects_concepto`, con *marcar el dia aunque sea contigo mismo* y *el compromiso por escrito entre dos* | **no se fusiona**: se cablea |
+
+> **La diferencia decide si el nodo muere o vive**, y por eso la regla no es *conservar la
+> escala*, es **mirar quien la conserva antes de decidir la direccion.**
+
+#### LA TRAMPA DEL IDENTIFICADOR, RE-MEDIDA: no es 60%, es 25%
+
+**CORRECCION DECLARADA de una cifra publicada** (§82.2 y §84.3, banco 9.21).
+
+| | cifra publicada | **re-medida** |
+|---|---:|---:|
+| pares de `quality` con ids **de la misma familia** | 5 | **8** |
+| de esos, **repiten** (A) | 3 | **2** |
+| **acierto del identificador** | **60%** | **25%** |
+
+**Por que cambia:** la cuenta vieja **solo miraba el sufijo numerico**. La definicion
+completa de familia incluye tambien **preposicion y articulo**, y al abrirla entran tres
+pares mas, **los tres D**: 2.412 (`capacidad_de_proceso` / `capacidad_del_proceso`), 2.415
+(`planificacion_de_la_inspeccion` / `planificacion_inspeccion`) y 2.439.
+
+> **La conclusion no cambia, se refuerza: el identificador ORDENA Y NO DECIDE.** Y ahora
+> **acierta uno de cada cuatro**, no dos de cada tres. **Los seis D son las seis derrotas
+> del identificador ante la lectura.**
+
+**Y UNA PRECISION SOBRE EL 2.464, que NO es una de ellas.** `cero_defectos` contra
+`zero_defects_concepto` **no comparten raiz de id**: uno esta en castellano y el otro en
+ingles. **No es el identificador el que falla ahi, es otra senal: EL SINONIMO TRADUCIDO.**
+Queda anotada como **quinta cara** de la familia de senales de superficie, **sin cifra
+todavia** porque un solo caso no la tiene.
+
+#### EL CATCHBALL DEL 2.463: ARISTA CANDIDATA
+
+`desplegar_metas_organizacion` **reparte** (subdividir, asignar, cronogramas, diagrama de
+arbol, dueno del proceso al terminar) y `despliegue_metas` **pacta** (que los niveles de
+accion elijan los proyectos, y negociar recursos entre niveles hasta el acuerdo).
+
+> **El hoshin necesita los dos y no estan cableados. ARISTA CANDIDATA**, y de las mas
+> claras del dominio: **sin el pacto, el reparto es una orden; sin el reparto, el pacto no
+> tiene sobre que.**
 
 **El archivo esta en 2.456 sin huecos ni duplicados. Cero nodos tocados.**
 
