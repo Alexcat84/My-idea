@@ -5010,9 +5010,9 @@ mismos.
 > requisito sustantivo de la norma, el otro trae la formula del ROI. **Ninguno de los dos
 > trae con que convencer.**
 
-### LOS CUATRO MOTIVOS DE PERDIDA DE LINEA, con su remedio
+### LOS CINCO MOTIVOS DE PERDIDA DE LINEA, con su remedio
 
-**Adjudicado el 18 ago 2026 tras la R51: la tabla pasa de tres a CUATRO.**
+**Adjudicado el 18 ago 2026: de tres a CUATRO tras la R51, y a CINCO tras la R52.**
 
 | motivo | que muere | como se reconoce | **el remedio** | ejemplares |
 |---|---|---|---|---|
@@ -5020,6 +5020,7 @@ mismos.
 | **ALCANCE** | **los ejemplos que abrian el nodo a otros sectores** | el superviviente **si dice la palabra**, pero **con un solo ejemplo** | los ejemplos **entran a la enumeracion** que el superviviente ya tiene | **2.445** (AS9100, ISO 14000), y el caso Samsung del **2.451** |
 | **DESTINO** | **a donde va el entregable y a quien hay que convencer** | el superviviente **produce el resultado y no dice que hacer con el** | la linea de destino entra **como paso final** del superviviente | **2.451** (*documentar el ROI para reportarlo a la direccion*) |
 | **METODO ALTERNATIVO** | **la otra forma de hacer el mismo paso, la que sirve a otra escala** | el superviviente manda **un solo camino**, y el que muere traia **uno mas barato o mas lento** | el paso del superviviente pasa a **VARIANTE CONDICIONAL**: **la condicion del lector elige el camino** | **2.453**: *recolectar datos diarios durante varias semanas* **o por muestreos periodicos si no puedes medir a diario* |
+| **DIRECCION** | **el SENTIDO en que corre cada flujo del paso** | el superviviente **manda hacer la cosa y no dice de quien a quien** | **EL SENTIDO ENTRA DENTRO DEL PASO**: una especificacion en el paso de requisitos y otra en el de retroalimentacion | **2.458**: *los requisitos bajan del proveedor al procesador; la retroalimentacion sube del cliente al procesador* |
 
 **EL REMEDIO DEL CUARTO, con su forma exacta.** No es anadir un paso ni partir el nodo: es
 **abrir el paso que ya existe.**
@@ -5031,6 +5032,18 @@ mismos.
 > **La condicion la evalua el lector, no el catalogo.** Por eso la variante va **dentro del
 > paso** y no como nodo hermano: **un negocio de tres personas no necesita elegir entre dos
 > fichas, necesita que la ficha contemple su caso.**
+
+**EL REMEDIO DEL QUINTO, con su forma exacta.** Tampoco es un paso nuevo: es **una
+especificacion de quien a quien dentro de dos pasos que ya existen.**
+
+| como esta | como queda |
+|---|---|
+| *Identificar expectativas mutuas explicitas entre cada par de roles.* | *Identificar expectativas mutuas explicitas entre cada par de roles, **con los requisitos bajando del proveedor al procesador**.* |
+| *Establecer bucles de retroalimentacion claros para medir cumplimiento.* | *Establecer bucles de retroalimentacion claros para medir cumplimiento, **subiendo del cliente al procesador**.* |
+
+> **Un mapa sin sentidos no es medio mapa: es un mapa que no se puede recorrer.** El
+> superviviente sabe **que pares hay que conectar y que hay que medir**; sin el sentido,
+> **no sabe cual de los dos extremos escribe la especificacion y cual la recibe.**
 
 ### LA PRUEBA COMUN DE LOS CUATRO
 
@@ -14495,6 +14508,48 @@ motivos** (seccion 8).
 
 > **Once relecturas y ninguna discrepancia fuera de la lista de marcados.** La metrica de
 > credito sigue entera.
+
+### TANDA R52: dos puestos, DOS DE DOS COINCIDEN, y se resuelve el riesgo marcado
+
+**18 ago 2026. 2.458 y 2.460, las dos coinciden.**
+
+| | |
+|---|---:|
+| relecturas ciegas | **12** (R42 a R52) mas el barrido de direccion |
+| puestos releidos | **27** |
+| caidas | **4** . dentro del marcado **4** . fuera **0** |
+
+#### EL RIESGO DEL 2.458, RESUELTO: la particion por direccion es LINEA
+
+**Lo que se habia marcado:** *si el auditor lee que la particion por direccion es un paso y
+no una linea, el par se voltea a fusion mutua*. **No procede.**
+
+> **La particion CABE COMO ESPECIFICACION DE QUIEN A QUIEN DENTRO DE LOS PASOS DEL
+> SUPERVIVIENTE**, y por eso es linea: no pide un paso propio, **pide dos incisos**. El
+> remedio escrito en la tabla de perdidas lo demuestra: *con los requisitos bajando del
+> proveedor al procesador* y *subiendo del cliente al procesador* **son dos frases dentro
+> de pasos que ya existen.**
+>
+> **La A se sostiene, y la perdida entra al reparto como QUINTO MOTIVO: DIRECCION.**
+
+#### OTRO EJEMPLAR DE ARISTA QUE NO EXCULPA, y ya son 55
+
+**El 2.458 tenia ARISTA PUESTA entre los dos nodos y aun asi repitio.**
+
+| | |
+|---|---:|
+| A del archivo | **472** |
+| **A con la arista YA PUESTA entre los dos nodos** | **55 (11,7%)** |
+| en `core` | 42 . `exportacion` 4 . `environmental` 3 . `health_safety` 3 . **`quality` 3** |
+| los tres de `quality` | **2.420**, **2.432**, **2.458** |
+
+> **UNA DE CADA NUEVE A ESTABA CABLEADA.** El cable **dice que alguien vio la relacion**;
+> **no dice que los dos nodos hagan cosas distintas.** Es la simetrica de la ARISTA QUE
+> FALTA: alli el grafo **no vio** una jerarquia real; aqui **vio** un parentesco y lo
+> cableo **en vez de** fundirlo.
+>
+> **Para la fusion importa y no es un detalle:** en estos 55 pares, **fundir obliga ademas
+> a rehacer la arista**, porque el nodo al que apuntaba deja de existir.
 
 **El archivo esta en 2.456 sin huecos ni duplicados. Cero nodos tocados.**
 
