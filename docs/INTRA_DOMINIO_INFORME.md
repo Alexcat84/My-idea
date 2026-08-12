@@ -13419,3 +13419,89 @@ cobertura al lado (banco 9.26).
 > distintos** (`enfoque_situacional_vs_personal` aparece en dos). **194 pares posibles, 74
 > leidos, 120 sin leer.** **La cola no volvera a ofrecerlos**: el dominio esta cerrado, y
 > los 120 pares restantes **solo se leen si el plan los encarga como lectura dirigida.**
+
+
+---
+
+## 81. `quality` ABIERTO, y la prediccion de la 75.8 medida (a medias, y por que)
+
+**Corte: puesto 2.416. Van 5 pares de `quality` de los 844 que tiene en la cola.**
+
+### 81.1 CIFRAS, con su banda
+
+| | |
+|---|---:|
+| pares de `quality` leidos | **5** |
+| A | **1** (2.414) |
+| D | **4** |
+| tasa | **20,0%** |
+
+> **CINCO PARES NO SON UNA TASA.** Se escribe porque el encargo la pide, **y no se puede
+> usar para nada**: con 5 lecturas, un solo veredicto distinto la mueve veinte puntos.
+> **El dominio tiene 844 pares en la cola y aqui va el 0,6%.**
+
+**Archivo global al corte 2.416: A 455, B 89, C 7, D 1.865 sobre 2.416. Tasa 18,8%.**
+
+### 81.2 LA PREDICCION DE LA 75.8, y lo que la medicion le hace
+
+**Lo que se escribio antes de leer un solo par:** el barrido paso contra nodo le da a
+`quality` **323 candidatos, 296 sin arista**, mas que a `core` teniendo `core` diez veces
+mas pares; **si acierta, `quality` entrega madre e hijo y no gemelos.**
+
+**LO QUE LA MEDICION DICE, y hay que partirlo en dos porque las dos mitades no coinciden:**
+
+**PRIMERA MITAD: la cabecera de `quality` entrega GEMELOS, no madre e hijo.** Los cinco
+primeros pares tienen similitud de titulo **97,6, 97,3, 94,7, 93,0 y 92,3**, y sus ids se
+diferencian en **una preposicion o un sufijo**:
+
+| puesto | los dos ids | que los separa |
+|---:|---|---|
+| 2.412 | `capacidad_de_proceso` / `capacidad_del_proceso` | **una preposicion** |
+| 2.413 | `control_estadistico_de_procesos` / `control_estadistico_del_proceso` | **una preposicion** |
+| 2.414 | `programa_de_mejora_de_calidad` / `programa_mejora_calidad_14_pasos` | dos formas del mismo catorce pasos |
+| 2.415 | `planificacion_de_la_inspeccion` / `planificacion_inspeccion` | **un articulo** |
+| 2.416 | `eliminacion_causas_error` / `eliminacion_causas_error_2` | **un sufijo** |
+
+**Y eso NO contradice el barrido: confirma el 9.19.** La cola esta ordenada por similitud,
+y **la similitud alta caza duplicados**. Los madre e hijo del barrido **viven mas abajo**.
+La media de similitud de titulo lo dice sola: **70,0 en los veinte primeros pares del
+dominio contra 46,1 en los veinte ultimos.**
+
+**SEGUNDA MITAD, y esta si corrige la prediccion: el solape medido es del 5,8%.**
+
+| | |
+|---|---:|
+| candidatos paso contra nodo de `quality`, **parejas unicas sin arista** | **291** |
+| de esos, **presentes en la cola** de `quality` | **49** |
+| **fuera de la cola** | **242 (83%)** |
+| **pares de la cola de `quality` que son candidato del barrido** | **49 de 844 = 5,8%** |
+
+> **LA PREDICCION ERA OPTIMISTA SOBRE EL CANAL, NO SOBRE EL HALLAZGO.** El barrido si
+> encontro 291 madre e hijo en `quality`. **Lo que no vio es que 242 de ellos NO ESTAN EN
+> LA COLA**, porque una madre y su hijo **no se parecen**: la madre enuncia y el hijo
+> despliega, y la similitud que los emparejaria esta por debajo del corte.
+>
+> **CONSECUENCIA PARA EL PLAN, y es la parte util: leer `quality` entero NO cosecha los
+> 291.** Cosecha, como mucho, **49**. **Los otros 242 son trabajo que la cola no va a
+> ofrecer nunca**, exactamente igual que los 120 pares sin leer de los racimos de
+> `health_safety` (§80.4). **Se leen si se encargan, o no se leen.**
+
+**Y una nota de honestidad sobre la propia prediccion:** decia *si el barrido acerto,
+`quality` entrega madre e hijo y no gemelos*. **La cabecera entrega gemelos.** La
+prediccion no era falsa, **estaba mal formulada**: mezclaba lo que el barrido ve
+(el catalogo entero) con lo que la cola ofrece (los pares parecidos). **Son dos universos
+distintos y ahora estan medidos por separado.**
+
+### 81.3 LO QUE FALTA
+
+**Faltan 201 pares del encargo, del 2.417 al 2.617**, todos de `quality`. **Y el dominio
+completo son 844**, asi que ni siquiera este tramo lo cierra: `quality` llega hasta el
+puesto 3.255.
+
+| pendiente | |
+|---|---|
+| cribado | **2.417 a 2.617**, 201 pares |
+| checkpoints | **2.500 y 2.600** |
+| comprobacion | la tasa de `quality` con banda utilizable, la proporcion de vara, y **cuantos de los 49 candidatos del barrido caen dentro del tramo leido** |
+
+**El archivo esta en 2.416 sin huecos ni duplicados. Cero nodos tocados.**
