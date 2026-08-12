@@ -454,3 +454,84 @@ PRELACION, no de desprecio.**
 | dice algo (piezas propias, rol declarado, alcance) | **el contenido** |
 | **esta empatado y el veredicto lo dice** | **el cableado** |
 | empatado y el cableado tambien | **se trae al auditor** |
+
+---
+
+## P.9 TODA ARISTA NUEVA SE ESCRIBE RESUELTA AL DIA DE SU ESCRITURA
+
+**Adoptada el 12 ago 2026, y nace de leer el plan en orden de ejecucion en vez de en
+orden de escritura.**
+
+> **UNA ARISTA SE ESCRIBE CON EL ID QUE ESTARA VIVO EL DIA EN QUE SE ESCRIBA, no con
+> el que estaba vivo el dia en que se decidio.**
+
+### DE DONDE SALE
+
+**`OP-E-04` tiene nueve aristas, y SEIS de sus destinos mueren el mismo dia en que
+ella se ejecuta**: cinco apuntan a `gates_go_kill_decision_points` y una a
+`estructura_gates`, y los dos desaparecen dentro de sus fusiones.
+
+> **Escribirlas literales seria fabricar SEIS ARISTAS POR ALIAS el mismo dia en que
+> `OP-S-12` acaba de limpiar MIL CINCUENTA Y SEIS.** **La fase que limpia y la fase
+> que ensucia serian la misma tarde.**
+
+### LO QUE LA REGLA OBLIGA, y son tres cosas
+
+| | |
+|---|---|
+| **1** | **los enlaces corren DESPUES de las fusiones que tocan sus destinos**, y eso se escribe en el `depende_de`, no en una nota |
+| **2** | **la arista se escribe con el id RESUELTO**, no con el que aparece en la lectura que la justifica |
+| **3** | **la verificacion de cada enlace incluye que la arista NO NAZCA RESOLVIENDO POR ALIAS**: se comprueba que el id escrito es el id vivo |
+
+### POR QUE NO BASTA CON EL RESOLUTOR
+
+**Porque el resolutor la haria funcionar, y ese es justo el problema.** Una arista
+escrita al id muerto **llega igual a su destino**, asi que **nadie la nota**: el grafo
+se ve bien desde fuera. **Es exactamente la basura que `OP-S-12` mide, y se fabricaria
+por descuido en la operacion que viene despues de limpiarla.**
+
+> **LA FORMA CORTA: EL RESOLUTOR ES UNA RED DE SEGURIDAD, NO UNA LICENCIA.**
+
+---
+
+## P.10 LOS NODOS PUENTE, y son la mitad diagnostica de P.5
+
+**Figura nombrada el 12 ago 2026, despues de que aparecieran TRES en dos dias.**
+
+> **UN NODO PUENTE es el que tiene A con dos nodos que entre si son D.**
+>
+> **La componente que forma puede ser UNA familia o DOS pegadas por el.** Y **el
+> cierre transitivo no lo distingue**: las junta igual.
+
+### LA REGLA DE DETECCION, y es la unica que hay
+
+> **UN NODO PUENTE SOLO SE VE MIRANDO LA COMPONENTE ENTERA.** Leyendo un par, jamas.
+> **Es la mitad diagnostica de P.5**: la regla manda leer el acto entero antes de
+> fundirlo, **y esto es lo que esa lectura encuentra cuando encuentra algo.**
+
+**EN LA PRACTICA:** por cada componente, **se listan sus pares leidos y se busca un
+nodo con dos A cuyos otros extremos den D entre si.** **Si aparece, la componente NO
+se funde hasta que ese triangulo se cierre.**
+
+### LOS TRES EJEMPLARES
+
+| | el puente | sus dos A | la D que los enfrenta | como acabo |
+|---:|---|---|---|---|
+| **1** | `sistema_gates_go_kill` | 488 y 801 | **`LD-44`** | **`LD-58` lo cerro hacia la UNION**: los dos lados son un acto de seis, y la anomalia **se movio** al propio `LD-44` |
+| **2** | `filosofia_customer_validation` | 1096 con earlyvangelists | 1185, 436 y 697 | **se resuelve releyendo contra el superviviente**, banco 9.10 |
+| **3** | `customer_validation` **y** `filosofia_customer_validation` | 781 y 245 con `customer_validation_sell_phase` | **`LD-59`** | **no queda lectura que desempate**: se funde solo el triangulo cerrado y el cuarto **se enlaza** |
+
+> **Y EL TERCERO ENSENA LO QUE LOS DOS PRIMEROS NO: UN PUENTE PUEDE SER DOBLE.** Dos
+> nodos pueden hacer de puente a la vez sobre el mismo par, **y entonces la componente
+> no tiene un punto debil: tiene una costura.**
+
+### LAS TRES SALIDAS, y ninguna es fundir a ciegas
+
+| salida | cuando |
+|---|---|
+| **leer el par que falta** | si queda alguno sin leer. **Es la unica que resuelve de verdad** |
+| **releer contra el superviviente** | si el par existe pero uno de sus nodos va a cambiar. Banco 9.10 |
+| **fundir solo el subconjunto CERRADO y enlazar el resto** | si todas las lecturas estan hechas y aun asi se contradicen. **Es la unica forma que no desmiente ninguna** |
+
+> **LO QUE NUNCA ES SALIDA: fundir la componente entera porque el cierre transitivo la
+> junta.** **El cierre transitivo no lee: cuenta.**

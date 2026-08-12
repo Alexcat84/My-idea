@@ -162,3 +162,59 @@ mal hecho:
 
 > **Y una cuarta, que es la que caza el error de P.1**: **ningun nodo deprecado
 > aparece dentro de una componente.** Si aparece, el instrumento no resolvio.
+
+---
+
+## LA COLA DE RELECTURA POST FUSION
+
+**Abierta el 12 ago 2026, y nace de un hueco que ninguna fase recogia.** El banco 9.10
+manda **recomputar del archivo**, pero **no dice que una fusion pueda obligar a
+releer un par YA CERRADO.**
+
+> **EL DISPARADOR, y es mecanico: UN PAR VUELVE A LA COLA CUANDO UNO DE SUS DOS NODOS
+> MUERE EN UNA FUSION O CAMBIA DE TEXTO.**
+
+**POR QUE SOLO LOS B Y LOS C, y no todos:** un **D** dice que los dos nodos son sanos,
+y fundir uno de ellos con un tercero **no lo vuelve gemelo del otro**. Un **A** ya
+esta resuelto por definicion. **Lo que se mueve es lo que estaba en el filo**: el
+dudoso, que puede caer a cualquier lado, y el enlace mutuo, que puede dejar de serlo
+si uno de sus dos lados cambia.
+
+### LA LISTA, barrida el 12 ago 2026 sobre las diecisiete fusiones del plan
+
+| par | clase | que le pasa | tras que operacion |
+|---:|---|---|---|
+| **707** | **B** | `customer_discovery_overview` **MUERE** | `OP-M-05-INDICE` |
+| **1096** | **A** | su contraparte muere **y su A se volveria contradiccion con su propia D** | `OP-M-05-APERTURA` |
+| **196** | **B** | `fase_acclimate_mapa_de_proceso` **MUERE** | `OP-M-02-ACCLIMATE` |
+| **253** | **B** | `fase_acclimate_experiencia_cliente` **cambia de texto** | `OP-M-02-ACCLIMATE` |
+| **224** | **B** | `fase_assess_ciclo_cliente` **cambia de texto** | `OP-M-02-ASSESS` |
+| **591** | **B** | `pivote_estrategico` **cambia de texto** | `OP-M-03-III` |
+| **968** | **B** | `pivote_o_proceder` **cambia de texto** | `OP-M-03-II` |
+
+**LOS DOS ESTRENOS SON EL 707 Y EL 1096**; los otros cinco los levanto el barrido.
+
+**Y UNA CAE, y se dice para que nadie la busque:** el puesto **751**,
+`customer_validation_sell_phase` contra `verificar_product_market_fit`, **estaba en la
+lista y sale**, porque **`LD-59` dejo a ese nodo fuera de la fusion: ya no muere.**
+
+### LOS SIETE DEL PIVOTE NO ENTRAN, y hay que decir por que
+
+**Los puestos 668, 737, 753, 771, 843, 957 y 1298 son B y sus nodos mueren o cambian**,
+pero **no se releen: se REESCRIBEN**. `OP-M-03` ya los resolvio **por el criterio**, y
+su clase nueva esta adjudicada. **Releerlos seria decidir dos veces lo mismo.**
+
+> **LA DIFERENCIA IMPORTA: un par que una adjudicacion resolvio NO vuelve a la cola.
+> Vuelve el que sigue abierto y cuyo texto cambia bajo los pies.**
+
+### QUE PASA CON LO QUE SE RELEA
+
+| si sale | |
+|---|---|
+| **A** | entra en la fusion que le corresponda, **y su perdida se nombra antes** |
+| **D** | se queda, y **si hay jerarquia se enlaza** |
+| **B otra vez** | **va a la lista de decisiones del inventario final**, y se dice que quedo dudoso dos veces |
+
+> **Y LA COMPROBACION DE QUE ESTA COLA SE CORRIO: al cerrar, ningun par de la lista
+> sigue con su clase vieja apuntando a un nodo que ya no existe.** **Si uno la
+> conserva, es que la relectura no se hizo.**

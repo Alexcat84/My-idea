@@ -20,9 +20,9 @@ racimo, acto, familia de ids, figura y defecto.
 | **racimo** | **13** |
 | **acto** | **221** |
 | **familia_de_ids** | **53** |
-| **figura** | **14** |
+| **figura** | **15** |
 | **defecto** | **17** |
-| **TOTAL** | **328** |
+| **TOTAL** | **329** |
 
 ---
 
@@ -223,6 +223,7 @@ el catalogo produce y que hay que saber distinguir.**
 | **EL PASO DE OFICIO** | medio dominio exportacion | una linea generica que abre media docena de nodos y por si sola no decide ninguna clase |
 | **frontera de disposicion** | 5 ejemplares | Dos nodos que mandan LO CONTRARIO sobre el MISMO gesto, los dos con razon dentro de su doctrina. No es defecto y no se funde: se declara y los dos se quedan. LOS TRES EJEMPLARES: la FRONTERA INTRA LIBRO del puesto 877 (Founder's Dilemmas contra si mismo: autoridad clara contra estructura colegiada); la FRONTERA DE MOMENTO del 221 (Rackham no presionar el cierre contra Weinberg pedir un si o un no), probada por seis lados; y la FRONTERA DE LA DECISION DE PIVOTAR del 1298 (el punto brillante de Ries mas Traction contra decidir rapido y sin miedo de Blank), declarada el 12 ago 2026. LA TERCERA ES LA PRIMERA QUE QUEDA REPARTIDA EN DOS NODOS DISTINTOS del mismo racimo, entre una puerta y el acto que le sigue, lo que la hace mas facil de perder: los dos lados ya no estan uno al lado del otro. UNA FRONTERA SE PIERDE POR PODA, NO POR FUSION. AMPLIADO EL 12 ago 2026 CON DOS MAS, y las dos de clase distinta a las tres primeras. LA CUARTA, la frontera de los dos niveles, NO ES UNA CONTRADICCION SINO UNA DISTINCION, y es la primera que EL CATALOGO ESCRIBIO SOLO: gestion_portafolio_dos_niveles la lleva dentro de sus pasos, estrategicas contra tacticas y complementarias no sustitutivas, y es madre de las dos mitades tres veces (LD-35, LD-43, LD-51). LA QUINTA, discovery contra validation, es la MAS PROBADA DEL PLAN: quince pares leidos entre los dos actos y LOS QUINCE D, con el 445 y el 1477 citados, uno pregunta y el otro cobra. Ninguna de las dos necesitaba adjudicacion: necesitaba REGISTRO, porque el riesgo no es decidirlas mal sino perderlas por descuido en una fusion futura. |
 | **el nombre que esconde** | 3 ejemplares | TRES VECES el contador dejo fuera a un miembro real porque su NOMBRE no llevaba la palabra del tema, y las tres veces lo cazo el segundo instrumento. (1) el sexto de los cuadrantes de mercado; (2) seis_medios_comunicacion_cliente, la cabeza de la serie de medios de Coleman, levantada por el veredicto 948; (3) decision_factory_mentality, miembro 17 de la mesa unida, levantado por las A de los puestos 1499 y 583, y que se llama Haz menos proyectos pero hazlos bien. EL FALLO ES EL MISMO: el nombre no dice algo falso, CALLA LO QUE EL NODO HACE. SE CITA COMO HISTORIA Y NO COMO RECOMENDACION: el estandar de los dos instrumentos ya estaba en el banco 9.20 antes de los tres casos. Lo que anaden no es la regla: es la cuenta de lo que habria costado no tenerla, tres nominas mal en tres mesas distintas. |
+| **nodo puente** | 3 ejemplares | UN NODO PUENTE es el que tiene A con dos nodos que entre si son D. La componente que forma puede ser UNA familia o DOS pegadas por el, y EL CIERRE TRANSITIVO NO LO DISTINGUE: las junta igual. REGLA DE DETECCION, y es la unica que hay: SOLO SE VE MIRANDO LA COMPONENTE ENTERA, leyendo un par jamas. ES LA MITAD DIAGNOSTICA DE P.5. TRES EJEMPLARES en dos dias. (1) sistema_gates_go_kill, A con gestion_de_portafolio_gates_go_kill (488) y con requisitos_gates_con_dientes (801), que son D entre si (LD-44); LD-58 lo cerro HACIA LA UNION y la anomalia se movio al propio LD-44. (2) filosofia_customer_validation con earlyvangelists_ventas_tempranas (1096), que es D con otros tres del acto; se resuelve releyendo contra el superviviente. (3) customer_validation Y filosofia_customer_validation a la vez, los dos A con customer_validation_sell_phase (781 y 245), que es D con introduccion_validacion_clientes (LD-59); AQUI YA NO QUEDA LECTURA QUE DESEMPATE y se funde solo el triangulo cerrado. EL TERCERO ENSENA QUE UN PUENTE PUEDE SER DOBLE: dos nodos haciendo de puente sobre el mismo par, y entonces la componente no tiene un punto debil, tiene una COSTURA. TRES SALIDAS Y NINGUNA ES FUNDIR A CIEGAS: leer el par que falta, releer contra el superviviente, o fundir solo el subconjunto cerrado y enlazar el resto. |
 
 ---
 
@@ -240,15 +241,15 @@ el catalogo produce y que hay que saber distinguir.**
 | **costuras internas confirmadas** | 46 | pendiente | `OP-D-01`, `OP-D-02`, `OP-D-03` y mas |
 | **auto-aristas via alias** | 27 | reparado en el plan | `OP-S-07`, `OP-C-04` |
 | **accesos al grafo sin resolver** | 20 | reparado en el plan | `OP-C-01`, `OP-C-02`, `OP-C-03` |
+| **pares que una fusion reabre** | 7 | pendiente, con disparador escrito en 08_VERIFICACION | `OP-U-02` |
 | **campos sucios** | 6 | reparado en el plan | `OP-S-06` |
 | **herramientas muertas** | 6 | reparado en el plan | `OP-S-04`, `OP-S-05` |
 | **Incoterms sin version** | 3 | reparado en el plan | `OP-S-02` |
 | **portal caducado export.gov** | 3 | reparado en el plan | `OP-S-03` |
 | **racimos con miembro de otro dominio** | 3 | pendiente | `OP-E-02` |
-| **nodos puente sin desempatar** | 2 | pendiente, con su lectura encargada | `OP-M-01-FUSION`, `OP-M-01-TRIO`, `OP-M-05-APERTURA` |
 | **tratado extinto en id y titulo** | 1 | reparado en el plan | `OP-S-01` |
 
-> **12 de los 17 ya tienen operacion LISTA en el plan.** Los 5 pendientes son: **costuras internas confirmadas** (46), **aristas que faltan** (477), **racimos con miembro de otro dominio** (3), **gemelos que el cribado no ve** (73), **nodos puente sin desempatar** (2).
+> **12 de los 17 ya tienen operacion LISTA en el plan.** Los 5 pendientes son: **costuras internas confirmadas** (46), **aristas que faltan** (477), **racimos con miembro de otro dominio** (3), **gemelos que el cribado no ve** (73), **pares que una fusion reabre** (7).
 
 > **Y el mas nuevo de todos es el ultimo de esa lista: los GEMELOS QUE EL CRIBADO NO
 > VE.** Aparecio el 11 ago 2026 leyendo la bolsa calibrada, **no se busco**, y son
