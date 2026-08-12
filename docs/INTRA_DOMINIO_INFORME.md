@@ -13112,3 +13112,132 @@ Levantado por script sobre los ids que empiezan por `caso_`, `estudio_`, `case_`
 | **tasa del tramo** | 13,6% | **12,5%** |
 
 **El 2.335 no mueve ninguna cifra: cambia el superviviente, no la clase.**
+
+
+---
+
+## 79. CHECKPOINT 2.400 y reporte del tramo 2.301 a 2.400
+
+**Corte: puesto 2.400.** El tramo cierra en **100 pares redondos**. `health_safety` sigue
+abierto: **181 de 192**.
+
+### 79.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **tramo 2.301 a 2.400** | **100** | **15** | **85** | **15,0%** |
+| `health_safety` acumulado | **181 de 192** | **45** | 136 | **24,9%** |
+| archivo global (corte 2.400) | 2.400 | **454** | **1.850** | **18,9%** (B 89, C 7) |
+
+**TASA POR DOMINIO (banco 9.27):**
+
+| dominio | pares | A | **tasa** | estado |
+|---|---:|---:|---:|---|
+| `compras` | 155 | 1 | **0,6%** | cerrado |
+| `core` | 1.445 | 344 | **23,8%** | cerrado |
+| `entrega` | 171 | 2 | **1,2%** | cerrado |
+| `environmental` | 170 | 29 | **17,1%** | cerrado |
+| `exportacion` | 130 | 15 | **11,5%** | cerrado |
+| `franquicias` | 148 | 18 | **12,2%** | cerrado |
+| **`health_safety`** | **181 de 192** | **45** | **24,9%** | **abierto, 94% leido** |
+
+### 79.2 CORRECCION DECLARADA: mi prediccion sobre la cola se rompio en el cuarto corte
+
+La seccion 77.2 escribio, con el dominio al 24,3%: **la cifra final seguira por debajo de
+24,3%**. **No se cumplio.**
+
+| corte | pares leidos | **tasa del dominio** | el tramo nuevo solo |
+|---|---:|---:|---|
+| 2.300 | 81 | **37,0%** | . |
+| 2.376 | 157 | **25,5%** | 13,2% |
+| 2.388 | 169 | **24,3%** | 12,5% |
+| **2.400** | **181** | **24,9%** | **33,3%** (4 A en 12) |
+
+> **La direccion acerto tres cortes seguidos y fallo al cuarto.** Los ultimos doce pares
+> devolvieron **33,3%**, mas del doble que los ochenta y ocho anteriores, y **subieron el
+> acumulado del dominio en seis decimas.**
+>
+> **POR QUE, y es lo que hay que aprender de la falla:** la cola **no baja de forma
+> monotona**. Baja **en promedio**, porque va perdiendo gemelos, pero **quedan bolsas**:
+> los puestos 2.389 a 2.400 juntaron cuatro pares de doctrina repetida seguidos
+> (`ingenieria_cultura_aprendizaje`, `seduccion_modelo_persona`,
+> `human_error_como_sintoma`, `vieja_vision_vs_nueva_vision_seguridad`).
+>
+> **LA REGLA SE CORRIGE, no se abandona:** *la tasa de una cola tiende a la baja y no
+> desciende paso a paso*. **Una prediccion sobre la tendencia es legitima; una prediccion
+> sobre cada corte siguiente no lo era, y esta lo era.**
+
+### 79.3 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **12** |
+| **REPITE** | **15** |
+| no se invoco | **73** |
+
+**27 de 100**, contra 81 de 183 en la cabecera. **Cero PENDIENTE DE DOCTRINA en 100
+pares. En los 283 leidos desde el 2.118, cero.**
+
+### 79.4 FIGURAS Y NOMINAS
+
+**Nueva del tramo: EL CASO NO ES LA CASA** (informe §78.3), nacida del 2.335.
+
+**Crecidas:** **ARISTA QUE FALTA en 44 de 100 pares**; el racimo de las defensas en
+**siete**; y **una TENSION DECLARADA INTER FUENTE nueva en el 2.393**, que va a la mesa
+del dominio: `limitaciones_ltif_indicador` manda seguir los casi accidentes **como
+precursores** del grave, y `no_usar_triangulo_heinrich` sostiene que **el menor y el
+grave pueden no compartir causa**. **Dos doctrinas legitimas: frontera candidata, no
+defecto de instruccion**, y la contradiccion no decide la clase (banco 1632).
+
+**Un hijo leido en la direccion correcta, y conviene tenerlo escrito junto al 9.6.2:** el
+**2.392**, donde `reacciones_al_fallo` nombra **las cuatro caracteristicas** de una
+reaccion mala y `foco_proximal_reacciones_falla` **desarrolla la cuarta** trayendo la
+busqueda de senales previas. **Madre e hijo, D, y el hijo vivo.**
+
+### 79.5 CONDICIONES VIVAS
+
+1. **`errores_como_consecuencia`: NUEVE A y TRES D.** Las tres D contra nodos que trabajan
+   **la etiqueta**, **la politica** o **la escena** y no **la busqueda**.
+2. **`vieja_vision_vs_nueva_vision_seguridad`: CUATRO A** (2.253, 2.309, 2.352, 2.400),
+   contra cuatro supervivientes distintos. **Un plan de migracion sin doctrina.**
+3. **`human_error_como_sintoma`: CUATRO A**, y con el **la perdida que viaja se anota por
+   quinta vez**: redisenar la herramienta en vez de entrenar a la persona **sigue siendo
+   la unica accion correctiva directa del racimo** y sigue viajando como linea absorbida.
+4. **Cuatro A del archivo han caido** (2.195, 2.215, 2.338, 2.371) **y las cuatro estaban
+   marcadas.** Ninguna discrepancia fuera de la lista todavia.
+
+### 79.6 LAS 15 A DEL TRAMO, con las discutibles marcadas
+
+`2.303`, `2.309`, `2.310`, `2.311`, `2.328`, **`2.335`**, `2.347`, `2.352`, `2.362`,
+**`2.368`**, `2.387`, `2.389`, **`2.396`**, `2.397`, `2.400`.
+
+**LAS TRES MAS DISCUTIBLES, y la R44 empieza aqui:**
+
+1. **2.396.** Muere `seduccion_modelo_persona`, que **sobrevivio cuatro veces antes**
+   (2.228, 2.331, 2.347, 2.385) **por tener el criterio persona contra sistema**. Aqui el
+   otro lo tiene y la ventaja desaparece. **Lo que se pierde es la explicacion de POR QUE
+   el modelo de persona seduce**, que ningun superviviente conserva.
+2. **2.335.** Resuelto por la R43 en cuanto al superviviente, **pero la clase sigue siendo
+   la mas fina del tramo**: los dos nodos dicen lo mismo en tres pasos y lo que los separa
+   es un requisito de metodo.
+3. **2.389.** Muere `ingenieria_cultura_aprendizaje`, cuyo unico aporte propio es **un
+   enfasis**, comprometer tiempo y recursos a implementar y no solo a hablar. **Es linea
+   por la vara y es lo que mas se incumple en la practica**: si la fusion la deja caer, el
+   ciclo queda escrito y sin dueno.
+
+### 79.7 LO QUE FALTA
+
+**Faltan 217 pares, del 2.401 al 2.617.**
+
+| tramo | dominio | pares | estado |
+|---|---|---:|---|
+| 2.401 a 2.411 | `health_safety` | **11** | pendiente; **cierra el dominio** |
+| 2.412 a 2.617 | `quality` | **206** | pendiente; **abre el dominio** |
+
+**Pendientes con ellos:** los checkpoints **2.500 y 2.600**; **el resumen de los trece
+racimos de ids de `health_safety` para el plan**, que solo se puede escribir con el
+dominio cerrado; y **la comprobacion de la prediccion sobre `quality`** de la seccion
+75.8 (tasa, proporcion de vara y solape con los 296 candidatos sin arista del barrido
+paso contra nodo).
+
+**El archivo esta en 2.400 sin huecos ni duplicados. Cero nodos tocados.**
