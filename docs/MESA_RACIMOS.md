@@ -143,6 +143,30 @@ marco.
 
 **VISTO DEL FUNDADOR: APROBADA, 9 ago 2026.** Se ejecuta la recomendacion del auditor.
 
+#### AMPLIACION (11 ago 2026): el contraejemplo del alias ya no es solo un alias
+
+**Viene del puesto 1955 del cribado intra y de la relectura R41 del auditor.** El
+mismo par que esta decision usa como contraejemplo, `nafta_free_trade_agreements`,
+**salio A en el cribado contra `certificado_de_origen_tratados_libre_comercio`**:
+los cinco pasos se corresponden.
+
+**Eso junta TRES encargos sobre los mismos dos nodos:**
+
+| encargo | de donde viene |
+|---|---|
+| **fusion**, con cinco perdidas a reponer | cribado intra, puesto 1955 |
+| **reparacion de vigencia** del id y el titulo | barrido de marco, ordenes 1 y 2 de su lista |
+| **alias** para no romper dos aristas | **esta decision** |
+
+> **Por el TOQUE UNICO del banco 9.4 los tres van en UN SOLO ACTO.** Y hay una
+> alineacion medida: **el id que la vigencia manda matar es el que la fusion puede
+> matar.** Si la fusion va **hacia** `certificado_de_origen_tratados_libre_comercio`,
+> el mismo acto cierra los tres. **La direccion de la fusion deja de ser libre: una
+> cierra los tres encargos y la otra deja dos abiertos.**
+
+**Queda para la mesa, sin adjudicar aqui.** Detalle y verificacion en
+`PENDIENTES.md`, ficha `vigencia-del-marco-internacional`, y en el informe 69.2.
+
 ---
 
 ## 3. GRUPO 2: la doctrina-columna de mundo

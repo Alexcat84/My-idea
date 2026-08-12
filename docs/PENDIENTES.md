@@ -1343,6 +1343,125 @@ no es opcional.
 
 ---
 
+### MEDICION DE `franquicias` (11 ago 2026), para decidir si entra al barrido
+
+**Encargo del fundador: medir, no leer, y sin adjudicar.** Mismo instrumento que
+se uso para `exportacion`, corrido sobre las cinco casas de texto de los nodos
+vivos.
+
+| | `franquicias` | `exportacion` |
+|---|---:|---:|
+| nodos vivos | **195** | **141** |
+| **(a) cablean marco legal de UN SOLO PAIS** | **31** (15,9%) | **42** (29,8%) |
+| **(b) nombran organismo o portal** | 12 (6,2%) | 34 (24,1%) |
+| **(c) citan norma con version o fecha** | 10 (5,1%) | 3 (2,1%) |
+
+**DONDE CONDICIONA, por la doctrina del marco (*la condicion honesta se copia A LA
+PUERTA*):**
+
+| | `franquicias` | `exportacion` |
+|---|---:|---:|
+| **EN LA PUERTA**, con el pais nombrado en `condiciones_activacion` | **2** de 31 | **5** de 42 |
+| **EN LA DESPEDIDA**, solo en `resumen_teorico` | 4 | 23 |
+| **EN NINGUN SITIO** | **25** (80,6%) | 14 (33,3%) |
+| ejecutan el marco en pasos o entregable **sin condicion en la puerta** | **25** | 36 |
+
+**LAS FAMILIAS DEL MARCO EN `franquicias`**, y ninguna es multinacional:
+
+| familia | nodos |
+|---|---:|
+| documento de divulgacion (**FDD** / UFOC) | **23** |
+| regla federal (**FTC 436**, PMPA) | 9 |
+| **registro o ley estatal** | 9 |
+| items numerados del FDD (Item 8, 19, 23) | 6 |
+| cifra legal en dolares | 2 |
+| agencia o base de datos de un pais (USPTO, TESS) | 1 |
+
+**LOS 31, con su columna de donde condiciona:**
+
+| id | familias | donde |
+|---|---|---|
+| `comprender_definicion_legal_franquicia` | FTC 436, cifra legal | **PUERTA** |
+| `cumplimiento_ftc_rule_436` | FTC 436, FDD, estatal, cifra legal | **PUERTA** |
+| `calculo_roi_franquiciado_2` | FDD, Item | DESPEDIDA |
+| `cumplir_leyes_estatales_franquicia` | FDD, estatal | DESPEDIDA |
+| `eleccion_abogado_franquicias` | FDD | DESPEDIDA |
+| `registro_estatal_franquicia` | FTC 436, FDD, estatal | DESPEDIDA |
+| `alternativa_business_opportunity_licensing` | FTC 436, estatal | **NINGUNO** |
+| `alternativa_trademark_licensing` | FTC 436 | **NINGUNO** |
+| `calificacion_prospectos_award` | FDD | **NINGUNO** |
+| `cinco_categorias_costos_franquicia` | FDD, estatal | **NINGUNO** |
+| `concepto_de_advances` | FDD | **NINGUNO** |
+| `decision_fpr` | FDD, Item | **NINGUNO** |
+| `decision_marca_comun_branding` | estatal | **NINGUNO** |
+| `desarrollar_manual_operaciones` | FDD | **NINGUNO** |
+| `diseno_programa_capacitacion_franquicia` | FDD | **NINGUNO** |
+| `elaboracion_fdd` | FTC 436, FDD, Item | **NINGUNO** |
+| `estimacion_inversion_inicial_franquiciador` | FDD | **NINGUNO** |
+| `estructura_proveedores_aprobados_designados` | FDD | **NINGUNO** |
+| `estructuras_combinadas_franquicia` | estatal | **NINGUNO** |
+| `exenciones_legales_franquicia` | FTC 436 (y PMPA) | **NINGUNO** |
+| `financial_performance_representations` | FTC 436, FDD, Item | **NINGUNO** |
+| `ingresos_por_rebates` | FDD, Item | **NINGUNO** |
+| `los_tres_grandes_criterios` | FDD | **NINGUNO** |
+| `multiples_compradores_influyentes` | estatal | **NINGUNO** |
+| `obtencion_marca_registrada` | agencia de un pais (USPTO, TESS) | **NINGUNO** |
+| `preparar_fdd` | FTC 436, FDD | **NINGUNO** |
+| `proceso_venta_franquicias` | FDD | **NINGUNO** |
+| `programas_compra_franquicia` | FDD, Item | **NINGUNO** |
+| `propuesta_valor_franquicia` | FDD | **NINGUNO** |
+| `proteccion_propiedad_intelectual_franq` | FDD | **NINGUNO** |
+| `revision_legal_marketing` | FDD, estatal | **NINGUNO** |
+
+> **EL PEOR CASO MEDIDO, `obtencion_marca_registrada`.** Su puerta dice *"aun no
+> se posee un trademark **federal**"*: **nombra la federacion como si hubiera una
+> sola.** Sus pasos mandan buscar en la base **TESS del gobierno de EE.UU.** y
+> presentar ante la **USPTO**, sin condicion. **Es el unico del dominio que
+> condiciona con un adjetivo en vez de con un pais.**
+
+> **LO QUE LA MEDICION DICE, sin adjudicar:** `franquicias` cablea marco de un solo
+> pais en **la mitad de proporcion** que `exportacion`, pero **su fraccion muda es
+> mas del doble**: 80,6% contra 33,3%. La doctrina mide **donde se actua**, no
+> cuanto se cita. **La decision es del fundador.**
+
+**SENALES DESCARTADAS a proposito, y por que** (van aparte para que nadie las
+sume): 14 nodos mas dan positivo por **moneda de ilustracion** (*"vender tu
+negocio en $10M"*), **doctrina juridica general** (responsabilidad vicaria, no
+competencia, secreto comercial) o **dato de mercado de un pais** (*"mas de 3.000
+franquiciadores activos en EE.UU."*). **Ninguna de las tres es marco legal de un
+solo pais** y contarlas subiria la cifra de 31 a 45 sin que haya nada que reparar.
+
+### EL PAR DE NAFTA: los tres encargos caen sobre los mismos dos nodos
+
+**Del puesto 1955 del cribado y de la relectura R41.**
+`certificado_de_origen_tratados_libre_comercio` y `nafta_free_trade_agreements`
+**son a la vez** el par que el cribado manda **fundir**, los numeros **1 y 2 de la
+lista de este barrido**, y **el ejemplar escrito de la DECISION 4**, la del alias.
+
+> **Por el TOQUE UNICO del banco 9.4, los tres van en UN SOLO ACTO.** Hacerlos por
+> separado significa **reparar la vigencia de un nodo que la fusion va a borrar
+> despues.**
+
+**Medido contra el grafo, y es la parte util:** el id que este barrido manda matar
+por llevar un tratado extinto, `nafta_free_trade_agreements`, **es tambien el que
+la fusion puede matar**. Si la fusion va **hacia**
+`certificado_de_origen_tratados_libre_comercio`, **el mismo acto cierra los tres
+encargos**. Con dos condiciones verificadas:
+
+1. **El alias es obligatorio**: `foreign_trade_zones` lleva ese id en
+   `nodos_previos` e `import_regulations_foreign_governments` en
+   `nodos_siguientes`, y **hoy ninguno de los dos nodos tiene `ids_alias`.**
+2. **Las cinco perdidas se reponen**: *obtenido en su totalidad*; la conservacion
+   por el periodo que exija la aduana; las cuatro reglas del articulo 401; los dos
+   porcentajes (60 por transaccion, 50 por costo neto); y **los nombres de los
+   formularios**, sin los cuales el paso de completar el certificado no dice que
+   papel llenar.
+
+**No se adjudica la direccion de la fusion.** Queda medido que **una de las dos
+cierra los tres encargos y la otra no**, y va a la mesa.
+
+---
+
 ## Ficha permanente hermana: `vigencia-de-herramientas-nombradas`
 
 **Nace del lote 8 del gradiente (puesto 69).** Es **hermana** de la de arriba, no

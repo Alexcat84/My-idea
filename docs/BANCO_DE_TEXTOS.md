@@ -2017,6 +2017,30 @@ exactamente DOS**, el 341 y el 494. **Horas después, en el mismo día**, el pue
 > es la forma más cara de quedarse viejo, porque **un negativo se lee como
 > "no hay más" y en realidad dice "no había más hasta aquí".**
 
+**TERCERA MITAD, adoptada el 11 ago 2026: TODA GLOSA EN PROSA LLEVA EL CORTE DE
+LA CIFRA QUE INTERPRETA, O NO SE ESCRIBE.**
+
+> **La regla anterior protege la CIFRA. Esta protege la FRASE que la acompana.**
+> Una cifra puede llevar su corte escrito al lado y quedar bien puesta, y **la
+> prosa de al lado convertirla igualmente en una propiedad del catalogo.** La
+> tabla dice *46 pares leidos*; la frase dice *repite mas que el nucleo*. **La
+> tabla envejece bien y la frase no**, porque la frase no lleva el corte encima.
+
+> **LA REGLA, y no admite version corta:** cuando una cifra parcial se interpreta
+> en prosa, **el corte se repite dentro de la interpretacion**, no solo en la
+> celda de al lado. Se escribe *"a 46 pares leidos repite mas que el nucleo"*, y
+> si eso suena provisional es porque **lo es**. Si el corte no cabe en la frase,
+> **la frase no se escribe.**
+
+**EL EJEMPLAR: la glosa del 9.27**, corregida el 11 ago 2026. La cifra de
+`environmental` llevaba su corte, *46 pares leidos, 30,4%*. **La glosa decia
+"repite mas que el nucleo" a secas.** Cerrado el dominio, la cifra quedo en
+**17,1%**, o sea **menos** que el nucleo. **La cifra no mintio; la glosa si**,
+y el 9.21 no la cubria porque solo hablaba de cifras.
+
+> **Por que importa mas de lo que parece:** de una tabla nadie cita una celda, se
+> cita la frase. **La prosa es lo que viaja**, y viaja sin la tabla al lado.
+
 ---
 
 ### 9.22 FIGURA: LA VARA EN LOS DOS SENTIDOS
@@ -2049,6 +2073,61 @@ reglas de siempre. **La figura exige dos líneas distintas**, una en cada nodo.
 
 > **Primera aparición en 1.100 pares leídos.** Es rara, y por eso conviene tenerla
 > nombrada: sin nombre, un par así se lee como duplicación mutua y se fusiona.
+
+**SEGUNDO EJEMPLAR DEL PRIMER POLO: puesto 1240, clase C**, y este llega con **el
+enlace mutuo YA PUESTO**. `diversidad_vs_homogeneidad_equipo` contra
+`prueba_antes_de_comprometerse`, del mismo libro y **con arista en los dos
+sentidos, verificada resolviendo a nodo vivo.**
+
+| sentido | la linea | el procedimiento que la expande |
+|---|---|---|
+| **A hacia B** | diversidad paso 3: *hablar con quien se considere sumar y poner sobre la mesa si comparten valores* | **todo** `prueba_antes_de_comprometerse`: el proyecto pequeno antes de comprometerse, las aspiraciones, el perfil de riesgo, y que haria abandonar a cada uno |
+| **B hacia A** | prueba paso 4: *evaluar si habria disposicion a contratar diversidad de habilidades* | **todo** `diversidad_vs_homogeneidad_equipo`: que habilidades le faltan al negocio, buscar cofundadores distintos, y no elegir a alguien porque se parece a uno |
+
+> **Es el primer caso del archivo donde el grafo ya hizo lo que la figura
+> prescribe.** La figura no describe solo un par raro: **describe un cableado que
+> alguien ya considero correcto sin tener la regla escrita.**
+
+---
+
+## LOS DOS POLOS DEL 9.22, y lo que de verdad decide
+
+**Adoptado el 11 ago 2026, al cerrar la tanda larga 2.** La figura se aplica en
+los dos sentidos; **la simetria del gesto no decide nada por si sola.**
+
+> **LO QUE DECIDE ES SI HAY PROCEDIMIENTO, y en cuantos sentidos aparece.**
+
+| lo que devuelve la vara | que son los dos nodos | clase | el arreglo |
+|---|---|---|---|
+| **PROCEDIMIENTO en los DOS sentidos**, sobre **dos lineas distintas** | **sanos**: cada uno expande una linea del otro y ninguno es la madre | **C** | **ENLACE MUTUO: dos aristas.** Fundirlos borraria los dos procedimientos |
+| **LINEA en los DOS sentidos** | **repiten**: es el mismo material escrito dos veces con dos apostillas | **A** | **FUSION**, con las dos lineas repuestas en el nodo que sobreviva |
+
+> **Y el caso corriente, que NO es esta figura:** procedimiento en UN solo
+> sentido. Ahi hay madre e hijo, la vara del 9.6.1 se aplica una vez y el par
+> **continua**. La figura exige que la vara se aplique **en los dos sentidos**;
+> lo que cambia entre sus dos polos es **que devuelve**, no como se pregunta.
+
+**LOS EJEMPLARES DEL SEGUNDO POLO, los dos de `franquicias`:**
+
+| puesto | los dos nodos | lo que coincide | la linea que anade cada lado |
+|---:|---|---|---|
+| **2080** | `proceso_llamada_inicial_venta` / `proceso_primera_llamada` | **seis pasos de siete, en el mismo orden**, y el mismo formulario nombrado igual al final | una criba mas por experiencia y territorio; el rechazo amable del que no califica |
+| **2105** | `comprender_definicion_legal_franquicia` / `marco_name_system_fee` | **el mismo test de tres elementos** en el mismo orden, y el mismo cierre, el abogado | el umbral concreto en dolares; separar el soporte del control |
+
+**EL CONTRASTE QUE FIJA EL LIMITE: puesto 2091, clase D.**
+`presupuesto_marketing_leads_franquicia` contra `presupuesto_publicidad_franquicia`.
+**Tambien se pregunto en los dos sentidos, y volvio PROCEDIMIENTO por los dos**:
+uno sigue hacia la calidad del contacto y el otro hacia el control del gasto.
+
+> **Lo que separa el 2091 del 2080 no es el parecido de los titulos ni la
+> simetria: es CUANTO coincide y EN QUE ORDEN.** En el 2080 el solape es de seis
+> pasos de siete y en el mismo orden. En el 2091 es de dos de cuatro y las colas
+> apuntan a sitios distintos.
+
+**Y con la regla practica que lo hace contable** *(informe 67.6)*: es **LINEA** un
+puntero, una advertencia, un criterio suelto o una accion unica; es
+**PROCEDIMIENTO** un paso que obliga a varias decisiones dentro de si o que se
+repite en el tiempo.
 
 ---
 

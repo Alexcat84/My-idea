@@ -2401,8 +2401,34 @@ tenia una muerta mas de la que yo habia sumado**.
 > **dos de las cinco ya estan muertas**. La fusion aqui no pierde informacion util:
 > **pierde mantenimiento.**
 
-> **Seis muertas de doce verificadas.** La mitad. **Y el catalogo tiene otros
-> dieciocho nombres propios anotados sin verificar.**
+> **AMPLIACION DEL 11 ago 2026, desde el puesto 2022 del cribado intra y la
+> relectura R41**: `exportacion/proteccion_propiedad_intelectual_internacional`
+> cablea en su paso 3 **dos portales de agencias de un solo pais**, y los dos se
+> verificaron el mismo dia.
+>
+> | nombre propio | estado | quien lo opera |
+> |---|---|---|
+> | **`stopfakes.gov`** | **VIVO** | International Trade Administration, Departamento de Comercio de EE.UU. |
+> | **`uspto.gov`** | **VIVO** | United States Patent and Trademark Office |
+>
+> **Ninguno anuncia mudanza, retiro ni redireccion**, y `stopfakes.gov` sigue
+> ofreciendo sus guias por pais. Son los nombres **quince y dieciseis**.
+>
+> **Y dejan un dato para el barrido de vigencia**: `stopfakes.gov` lo opera **la
+> misma International Trade Administration** que opera `trade.gov`, el organismo
+> que absorbio `export.gov`. **Los tres portales de la lista cuelgan del mismo
+> sitio**, asi que probablemente se muevan juntos la proxima vez.
+
+> **Seis muertas de CATORCE verificadas.** **Y el catalogo tiene otros dieciocho
+> nombres propios anotados sin verificar.**
+>
+> | | |
+> |---|---:|
+> | **muertas** | **6** |
+> | **vivas** | **7**: AdRoll, MixRank, Adbeat, BuySellAds, InnoCentive, **stopfakes.gov**, **uspto.gov** |
+> | **no verificables** | **1** |
+> | **sin verificar** | **1**: Quantcast |
+> | **verificadas en total** | **14** |
 
 ---
 

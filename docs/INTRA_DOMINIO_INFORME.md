@@ -11546,3 +11546,186 @@ por lo discutible:
 | **2105** | segundo caso espejo, y con su contraste D inmediato en el 2106 |
 | **2022** | la clase se decidio porque lo unico propio del hijo era **un puntero a dos sitios web**; su hermano salio D en el 2012 contra la misma madre |
 | **2043** | el nodo corto **reconoce en su propio paso 1** que la puerta es la misma oficina del nodo largo |
+
+---
+
+## 69. REGISTROS PREVIOS DE LA TANDA LARGA 3, y una PARADA por cifra publicada
+
+### 69.1 RELECTURA R41 del auditor: OCHO DE OCHO SOSTENIDAS
+
+**Puestos 2080, 2105, 2022, 2043, 1832, 1955, 2074, 2090.** Ocho de ocho.
+
+| | |
+|---|---:|
+| **acumulado de relecturas** | **258 leidas** |
+| **de ellas ciegas** | **234** |
+| **discrepancias en todo el ejercicio** | **una** |
+
+> **El auditor eligio bien el lote.** Seis de los ocho son los que yo mismo habia
+> marcado como los mas discutibles del tramo, incluidos **los dos casos espejo**
+> (2080 y 2105) y **las dos A que se decidieron por un puntero o una linea**
+> (2022 y 2043). **Las cuatro se sostienen.**
+
+### 69.2 EL PAR DE NAFTA (puesto 1955): ejemplar mayor del TOQUE UNICO
+
+**Nota del auditor sobre el 1955, y es la mas util de las dos.**
+`certificado_de_origen_tratados_libre_comercio` contra
+`nafta_free_trade_agreements` salio **A**: los cinco pasos se corresponden.
+
+**Lo que el auditor vio y yo no habia juntado:** esos dos nodos **no son solo un
+par del cribado**. Son tambien **los dos primeros de la lista del barrido de
+vigencia** *(`PENDIENTES.md`, adjudicacion del 11 ago 2026)* y **el ejemplar
+escrito de la DECISION 4 de la mesa**, la del alias.
+
+**TRES ENCARGOS DISTINTOS CAEN SOBRE LOS MISMOS DOS NODOS:**
+
+| encargo | de donde viene | que manda hacer |
+|---|---|---|
+| **fusion** | el cribado intra, puesto 1955 | fundirlos, reponiendo las cinco perdidas ya listadas |
+| **reparacion de vigencia** | el barrido de marco, orden 1 y 2 de la lista | quitar de id y titulo un tratado extinto desde el 1 de julio de 2020 |
+| **alias** | DECISION 4 de la mesa, aprobada el 9 ago 2026 | el id que muera lleva alias, o rompe lo que apuntaba a el |
+
+> **Por el TOQUE UNICO del banco 9.4, los tres van en UN SOLO ACTO.** Hacerlos por
+> separado significa abrir los mismos dos nodos tres veces, y **reparar la
+> vigencia de un nodo que la fusion va a borrar despues.**
+
+**Y hay una alineacion medida que conviene dejar escrita, porque no es casualidad
+y ahorra una decision:** el id que el barrido de vigencia manda matar,
+`nafta_free_trade_agreements`, **es tambien el que la fusion puede matar**. Si la
+fusion va **hacia** `certificado_de_origen_tratados_libre_comercio`, el mismo acto
+resuelve las tres cosas. **Con dos condiciones verificadas contra el grafo:**
+
+1. **El alias es obligatorio**, y ya tiene dos aristas con nombre que lo prueban:
+   `foreign_trade_zones` lo lleva en `nodos_previos` e
+   `import_regulations_foreign_governments` en `nodos_siguientes`. **Hoy ninguno de
+   los dos nodos tiene `ids_alias`.**
+2. **Las cinco perdidas se reponen o el acto pierde material**: la regla de
+   *obtenido en su totalidad*, la conservacion por el periodo que exija la aduana,
+   las cuatro reglas del articulo 401, los dos porcentajes (60 por transaccion y
+   50 por costo neto) y **los nombres de los formularios**, sin los cuales el paso
+   de completar el certificado no dice que papel llenar.
+
+> **No se adjudica aqui la direccion de la fusion**: se deja medido que **una de
+> las dos direcciones cierra los tres encargos y la otra no.** Va a la mesa.
+
+### 69.3 EL CENSO DE HERRAMIENTAS suma dos, y las dos VIVAS
+
+**Del puesto 2022**, `proteccion_propiedad_intelectual_internacional`, cuyo paso 3
+cablea dos portales de agencias de un solo pais.
+
+| nombre propio | verificado el | estado | quien lo opera |
+|---|---|---|---|
+| **`stopfakes.gov`** | 11 ago 2026 | **VIVO** | International Trade Administration, Departamento de Comercio de EE.UU. |
+| **`uspto.gov`** | 11 ago 2026 | **VIVO** | United States Patent and Trademark Office |
+
+**Ninguno de los dos anuncia mudanza, retiro ni redireccion.** `stopfakes.gov`
+sigue ofreciendo sus guias por pais.
+
+> **Y deja un dato que le sirve al barrido de vigencia**: `stopfakes.gov` lo opera
+> **la misma International Trade Administration** que opera `trade.gov`, o sea el
+> organismo que absorbio `export.gov`. **Los tres portales de la lista cuelgan del
+> mismo sitio**, y eso hace probable que se muevan juntos la proxima vez.
+
+**Son los nombres propios numero quince y dieciseis del censo.** La cuenta de
+vivacidad queda: **6 muertas, 7 vivas, 1 no verificable, 14 verificadas**, con
+**otros dieciocho nombres anotados sin verificar**.
+
+### 69.4 TAREA PREVIA: el barrido de marco medido en `franquicias`
+
+**Medido, no leido, y sin adjudicar.** Detalle completo con ids en `PENDIENTES.md`.
+
+| | `franquicias` | `exportacion` |
+|---|---:|---:|
+| nodos vivos | 195 | 141 |
+| **(a) cablean marco legal de UN SOLO PAIS** | **31** (15,9%) | **42** (29,8%) |
+| **(b) nombran organismo o portal** | **12** (6,2%) | **34** (24,1%) |
+| **(c) citan norma con version o fecha** | **10** (5,1%) | **3** (2,1%) |
+
+**Y AHORA LA COLUMNA QUE DECIDE, la del banco *donde se actua*:**
+
+| donde esta la condicion de pais | `franquicias` | `exportacion` |
+|---|---:|---:|
+| **EN LA PUERTA** (`condiciones_activacion`, con el pais nombrado) | **2** de 31 | **5** de 42 |
+| **EN LA DESPEDIDA** (solo en `resumen_teorico`) | **4** | **23** |
+| **EN NINGUN SITIO** | **25** | **14** |
+| **ejecutan el marco en pasos o entregable sin condicion en la puerta** | **25** | **36** |
+
+> **`franquicias` tiene un problema MAS PEQUENO y MUCHO MAS CALLADO.** Cablea
+> marco de un solo pais en la mitad de proporcion que `exportacion`, pero **el
+> 80,6% de sus nodos de marco no nombra el pais en ningun sitio**, contra el
+> **33,3%** de `exportacion`. Alli casi siempre esta dicho, aunque tarde; **aqui
+> casi nunca esta dicho.**
+
+**LOS DOS QUE SI CONDICIONAN EN LA PUERTA, y son el contramodelo del dominio:**
+`comprender_definicion_legal_franquicia` y `cumplimiento_ftc_rule_436`, los dos
+con la misma primera linea: *solo aplica si vendes o piensas vender franquicias en
+Estados Unidos*.
+
+**EL PEOR CASO MEDIDO, y merece nombre propio: `obtencion_marca_registrada`.** Su
+puerta dice *"aun no se posee un trademark **federal**"*. **Nombra la federacion
+como si hubiera una sola en el mundo.** Y sus pasos mandan buscar en la base
+**TESS del gobierno de EE.UU.** y presentar la solicitud **ante la USPTO**, sin
+condicion de ninguna clase. **Es el unico del dominio que condiciona con un
+adjetivo en vez de con un pais.**
+
+**Que dice la medicion sobre la pregunta del encargo, sin adjudicar:** el volumen
+de `franquicias` es menor, pero **la fraccion muda es mas del doble**, y **25 de
+sus 31 nodos de marco ejecutan el marco sin condicion en ningun sitio**. La
+doctrina escrita mide **donde se actua**, no cuanto se cita.
+
+### 69.5 PARADA: una cifra publicada no reconcilia con el grafo
+
+**Lo encontre al medir `franquicias` con el mismo instrumento que se uso para
+`exportacion`. No lo toco, no lo corrijo y no adivino: lo traigo.**
+
+**LA CIFRA PUBLICADA** esta en `PENDIENTES.md`, seccion *ADJUDICADO PARA EL PLAN
+(11 ago 2026)*, en la tabla que dice **"Recontado del grafo, sobre nodos VIVOS"**:
+
+| averia | publicado | **medido hoy** |
+|---|---:|---:|
+| citan **NAFTA** en su texto | 6 | **6** OK |
+| cablean **`export.gov`** | 3 | **3** OK |
+| citan **Incoterms** sin ninguna version | **12** | **3** |
+| **UNION de las tres** | **21** | **12** |
+
+**DOS DE LAS TRES FILAS CUADRAN EXACTAMENTE.** La de Incoterms no, y por un
+factor de cuatro.
+
+**EL DIAGNOSTICO, medido fichero por fichero en `dataset/nodos/`:**
+
+| donde aparece la palabra Incoterms | nodos |
+|---|---:|
+| **en el TEXTO** (las cinco casas), **vivos** | **3** |
+| en el texto, pero **deprecados** | 2 |
+| **solo en el id, en un alias, en una ARISTA o en `merged_originals`** | **11** (9 de ellos vivos) |
+| total de ficheros tocados | **16** |
+
+> **3 vivos que lo citan + 9 vivos que solo lo llevan en una arista o en el id = 12.**
+> **Ese es el 12 publicado.**
+
+**Y es exactamente el error que la propia adjudicacion habia corregido para
+NAFTA**, tres parrafos mas arriba en el mismo documento:
+
+> *"otros 2 solo lo llevan en una ARISTA que apunta al id
+> `nafta_free_trade_agreements`. **Apuntar al nodo no es citar el tratado**, y
+> mezclarlos infla la cifra."*
+
+**La correccion se aplico a la fila de NAFTA y no a la de Incoterms.** Por eso las
+otras dos filas cuadran y esa no.
+
+**LO QUE NO HAGO:** no toco la tabla publicada, no cambio el numero, no reordeno
+la lista del barrido. **Lo que la medicion deja listo por si el fundador
+adjudica:**
+
+- **Incoterms sin version, nodos vivos que lo CITAN: 3** y los tres son de
+  `exportacion`: `incoterms_reglas_comerciales_internacionales`,
+  `seguro_de_carga_transporte`, `terminos_de_venta_incoterms`.
+- **UNION real de las tres averias: 12 nodos, con solape CERO entre las tres**, y
+  **los 12 de 12 siguen siendo de `exportacion`**, que es lo que la adjudicacion
+  usaba como argumento. **El argumento sobrevive entero: solo cambia el tamano.**
+- **La decision de fondo no se mueve**: `exportacion` sigue siendo el unico
+  dominio tocado por las tres averias, y sigue yendo primero.
+
+> **Se para por la cifra, no por la decision.** La adjudicacion aguanta; el numero
+> que la acompana no. Y por el 9.21 recien ampliado, **una cifra que no cuadra con
+> el grafo se corrige donde esta escrita, no se hereda.**
