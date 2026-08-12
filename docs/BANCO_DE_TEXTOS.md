@@ -620,6 +620,51 @@ escrito — nada de eso es un resultado. Los dos defectos de instrumento de esta
 fase **solo aparecieron al correr de verdad**: ninguna lectura del código los
 habría encontrado.
 
+### 9.3.1 PRECISIÓN a 9.3 y a P.13: GANADOR POR DERECHO contra GANADOR POR ELEGIR
+
+**Adoptada el 18 ago 2026, de las dos primeras familias de `quality` con el acto leído
+entero.**
+
+**9.3 dice que la dirección se decide con la familia delante. P.13 dice que el
+superviviente final se elige una vez, sobre la nómina completa.** Falta una pregunta entre
+las dos, y es la que ahorra trabajo:
+
+> **LO QUE DECIDE NO ES CUÁNTOS PARES SE LEYERON, ES SI EL GANADOR PUEDE CAMBIAR.**
+
+**LAS DOS ESPECIES, y las dos con el acto completo:**
+
+| especie | qué significa | qué queda por hacer |
+|---|---|---|
+| **GANADOR POR DERECHO** | un nodo **ganó todos los pares que lo tocan**, y los que faltan por decidir **no lo incluyen** | **nada**: el superviviente está fijado y la operación se puede escribir |
+| **GANADOR POR ELEGIR** | el acto está leído entero, **pero el ganador de un par murió en otro** | **elegir**, con P.8 y la nómina completa delante |
+
+**EJEMPLAR DE POR DERECHO: la familia de la regla kp**, tres nodos y tres pares.
+
+| puesto | resultado |
+|---:|---|
+| 2.467 | `punto_equilibrio_calidad_inspeccion` gana |
+| 2.473 | `punto_equilibrio_calidad_inspeccion` gana |
+| 2.480 | **fusión mutua entre los dos perdedores**: no toca al ganador |
+
+> **Ganó los dos pares directos y el tercero no lo incluye. No hay lectura pendiente ni
+> futura que pueda moverlo: es final.**
+
+**EJEMPLAR DE POR ELEGIR: la familia ISO sectorial**, también tres nodos y tres pares
+leídos (2.445 A, 2.460 D, 2.479 D). **`estandares_especificos_industria` murió en el 2.445
+y sobrevivió en el 2.460.** El acto está completo **y el ganador sigue sin fijar**, porque
+**ninguno ganó todos los pares que lo tocan.**
+
+> **POR QUÉ IMPORTA, y no es una sutileza de contabilidad:** una familia con **ganador por
+> derecho** se puede escribir como operación **hoy**; una con **ganador por elegir** exige
+> además **la comparación P.8 sobre la nómina entera**, que es trabajo de mesa. **Dos
+> familias con la misma cobertura, 3 de 3, y cargas distintas.**
+>
+> **Y la comprobación es barata:** basta preguntar, de cada nodo, **si perdió alguna vez.**
+> El que no perdió nunca **y no tiene pares pendientes que lo toquen** es ganador por
+> derecho.
+
+---
+
 ### 9.3 Una dirección de fusión decidida sobre un par no sobrevive a su familia
 
 **Doctrina del 11 ago 2026, nacida de un choque real y con su ejemplar.**
