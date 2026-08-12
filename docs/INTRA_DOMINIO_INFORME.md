@@ -14246,3 +14246,83 @@ una vez.**
 pendientes.** El dominio son **844 pares** y llega al **3.255**.
 
 **El archivo esta en 2.448 sin huecos ni duplicados. Cero nodos tocados.**
+
+
+---
+
+## 86. REPORTE DEL TRAMO 2.449 A 2.452
+
+**Corte: puesto 2.452. Van 41 pares de `quality`** de sus 844.
+
+### 86.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **`quality`** | **41** | **16** | **25** | **39,0%** |
+| archivo global (corte 2.452) | 2.452 | **470** | **1.886** | **19,2%** (B 89, C 7) |
+
+**Cuatro cortes seguidos:** 44,4% . 40,6% . 40,5% . **39,0%**. **La cifra se asienta y baja
+despacio**, que es la forma que el 9.19 predice para una cola que empieza a perder gemelos.
+**Sigue sin banda publicable.**
+
+### 86.2 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **5** |
+| **REPITE** | **16** |
+| no se invoco | **20** |
+
+**21 de 41, el 51%.** **Cero PENDIENTE DE DOCTRINA. 22 ARISTA QUE FALTA (54%), 17 SOLAPE
+DECLARADO.**
+
+### 86.3 LO QUE ANADE ESTE TRAMO
+
+**SEGUNDO EJEMPLAR DE LA CLASE PERDIDA DE ALCANCE (2.451)**, y confirma que la clase hacia
+falta. Muere `roi_breakthrough` y se lleva **el caso de exito nombrado, el Six Sigma de
+Samsung**. El superviviente **calcula el ROI mejor** (trae la formula explicita) **y no
+menciona ningun benchmark**.
+
+> **La clase se distingue de la perdida de nombre (9.28) por lo mismo que en el 2.445: no
+> falta la denominacion del instrumento, falta EL EJEMPLO CON EL QUE SE CONVENCE.** Aqui el
+> destinatario esta nombrado en el propio paso que muere: *justificar la inversion continua*
+> **ante la direccion**. **Un ROI bien calculado y sin un caso al lado no mueve un
+> presupuesto.**
+
+**Y se va con el una segunda linea que no es de alcance sino de destino:** *documentar el
+ROI **para reportarlo a la direccion***. **Calcularlo bien y reportarlo hacia arriba son dos
+cosas**, y el superviviente solo hace la primera.
+
+**TRES PARES QUE SE REPARTEN UNA DOCTRINA Y NINGUNO CABLEADO.**
+
+| puesto | una mitad | la otra |
+|---:|---|---|
+| **2.449** | los **factores de complejidad** para normalizar, y el septimo paso, **institucionalizar con capacitacion continua** | **el cronograma acordado con los participantes** y **el instrumento de recoleccion con validaciones incorporadas** |
+| **2.450** | **clasificar las barreras por origen** y **poner dueno a cada una** | las tres barreras que no se van clasificando: **las evaluaciones que dan miedo**, **el supervisor que no conoce el trabajo tecnico**, y **actuar visiblemente sobre las sugerencias** |
+| **2.452** | **estar donde se hace el trabajo** y **escribir tu mismo los reportes** | **sostener el compromiso durante anos** y **no dejar la calidad en un area aislada** |
+
+> **El 2.452 tiene la forma mas limpia de las tres: uno dice que hace el dueno el lunes y
+> el otro que tiene que seguir siendo cierto en tres anos.**
+
+### 86.4 LAS 16 A DE `quality`, con las discutibles marcadas
+
+`2.414`, `2.417`, `2.418`, `2.420`, `2.421`, `2.424`, `2.426`, `2.431`, `2.432`, `2.436`,
+`2.437`, `2.438`, `2.440`, `2.445`, `2.447`, **`2.451`**.
+
+**LAS TRES MAS DISCUTIBLES, y la R50 empieza aqui:**
+
+1. **2.451.** La clase se sostiene por la formula, **pero lo que muere es lo unico del par
+   que se ocupa de que el numero LLEGUE a quien decide**: el reporte hacia arriba y el caso
+   de exito que lo respalda. **Es la segunda vez en siete pares que el superviviente gana
+   por precision de calculo y pierde por capacidad de persuasion.**
+2. **2.445**, ya releida y confirmada (R49), **queda marcada como el ejemplar que da nombre
+   a la clase**, con su remedio ya escrito.
+3. **2.447**, ya releida y confirmada, **queda marcada por la unica accion de formacion del
+   par**, que sigue sin heredero.
+
+### 86.5 LO QUE FALTA
+
+**Faltan 165 pares del encargo, del 2.453 al 2.617.** **Checkpoints 2.500 y 2.600
+pendientes.** El dominio son **844 pares** y llega al **3.255**.
+
+**El archivo esta en 2.452 sin huecos ni duplicados. Cero nodos tocados.**
