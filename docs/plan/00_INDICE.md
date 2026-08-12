@@ -11,13 +11,15 @@ y 08 estan anunciadas en el mapa y **todavia sin escribir**.
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
-> **Dieciseis de diecinueve operaciones pasaron a LISTA.**
 >
-> **Y con una correccion mia declarada**, que esta entera en
-> [`CORRECCIONES_A_APLICAR.md`](CORRECCIONES_A_APLICAR.md): **las 27 auto-aristas
-> estaban bien y mi medicion de cero estaba mal.** La adjudicacion que mataba esa
-> operacion se apoyaba en mi numero, asi que **la operacion vuelve al plan** y
-> espera confirmacion.
+> **TERCERA PASADA, el mismo dia: DIECIOCHO DE DIECINUEVE OPERACIONES ESTAN
+> LISTAS.** `OP-S-07` volvio al plan con sus 27 ids **confirmados por dos
+> instrumentos**, y `OP-S-08` paso de pregunta a **clasificacion cerrada**: 42
+> accesos, **22 internos y 20 externos**, cada externo con su blindaje.
+>
+> **Y el plan tiene banco propio**: [`BANCO_DEL_PLAN.md`](BANCO_DEL_PLAN.md), con
+> la regla de medicion que este ciclo obligo a escribir y el hallazgo de la firma
+> posicional del injerto.
 
 ---
 
@@ -40,24 +42,22 @@ el JSONL discrepan, manda el JSONL.
 
 ## EL MARCADOR DE ESTA ENTREGA
 
-| | primera pasada | **tras las adjudicaciones** |
-|---|---:|---:|
-| operaciones escritas | 19 | **19** |
-| **LISTAS** | 4 | **16** |
-| **DECISION PENDIENTE** | 15 | **3** |
-| preguntas abiertas | 15 | **3** |
+| | primera pasada | tras las adjudicaciones | **hoy** |
+|---|---:|---:|---:|
+| operaciones escritas | 19 | 19 | **19** |
+| **LISTAS** | 4 | 16 | **18** |
+| **DECISION PENDIENTE** | 15 | 3 | **1** |
+| preguntas abiertas | 15 | 3 | **1** |
 
-**LAS DIECISEIS LISTAS**: las tres decisiones de fuente (`OP-F-01`, `OP-F-02`,
-`OP-F-03`), **los seis destejidos enteros** (`OP-D-01` a `OP-D-06`) y seis del
-saneo (`OP-S-01` a `OP-S-06`, mas `OP-S-09`).
+**LAS DIECIOCHO LISTAS**: las tres decisiones de fuente (`OP-F-01` a `OP-F-03`),
+**los seis destejidos enteros** (`OP-D-01` a `OP-D-06`) y **nueve del saneo**
+(`OP-S-01` a `OP-S-09`).
 
-**LAS TRES QUE SIGUEN PENDIENTES**, y las tres por motivos distintos:
+**LA UNICA PENDIENTE, y es condicional por adjudicacion:**
 
-| id | por que sigue pendiente |
+| id | por que |
 |---|---|
-| **`OP-S-07`** | **vuelve al plan contra la adjudicacion**, porque la adjudicacion se apoyaba en una medicion mia que estaba mal. Espera confirmacion |
-| **`OP-S-08`** | la medicion esta hecha; falta el veredicto caso por caso sobre 42 accesos directos en 12 ficheros |
-| **`OP-S-10`** | es CONDICIONAL por adjudicacion: entra si la medicion muestra ley con alcance real, y la condicion queda escrita para evaluarse sin volver a preguntar |
+| **`OP-S-10`** | **CONDICIONAL**: `franquicias` entra al barrido de marco **si** la medicion muestra ley con alcance real. **La condicion esta escrita para evaluarse sin volver a preguntar**, con las cuatro familias medidas al lado |
 
 > **Ocho de los quince congelados se liberan con las tres primeras.** No estan
 > repartidos por el catalogo: **estan amontonados**, y por eso el orden de la
@@ -132,29 +132,29 @@ Ninguna se ha tocado.** Las dos estan escritas como pregunta en su operacion.
 | donde | publicado | medido el 11 ago 2026 | operacion |
 |---|---:|---:|---|
 | Incoterms sin version | **12 nodos** | **3** lo citan en su texto; los otros 9 solo lo apuntan. **ADJUDICADO: la reparacion pasa de doce a tres** | **`OP-S-02`** |
-| auto-aristas | **27 nodos** | **27**, remedido con la semantica de `resolverId`. **LA CIFRA ESTABA BIEN Y MI MEDICION DE CERO ESTABA MAL** | **`OP-S-07`** |
+| auto-aristas | **27 nodos** | **27. LA CIFRA ESTABA BIEN**, confirmada por dos instrumentos. **SE CONFIRMA, NO SE CORRIGE** | **`OP-S-07`** |
 | self-alias | **7 nodos** | **0**. Esa mitad si encogio | `CORRECCIONES_A_APLICAR.md` |
 | familias de ids de la DECISION 4 | sin nomina | **53 familias, 125 nodos vivos**, recomputadas con el criterio de la propia decision | **`OP-S-09`** |
 
 > **LA LECCION, y es cara: una de las dos discrepancias no existia.** La de
 > Incoterms era real y esta adjudicada. **La de las auto-aristas era un fallo de
-> mi instrumento**, que devolvia el id sin resolver cuando el alias apuntaba a un
-> nodo deprecado, **que es exactamente el caso de las 27**. Las 33 auto-aristas
-> son **todas via alias y ninguna directa**, asi que un chequeo ingenuo da cero.
-> **Detalle entero en [`CORRECCIONES_A_APLICAR.md`](CORRECCIONES_A_APLICAR.md).**
+> mi instrumento**, y el fallo viajo hasta una decision: **el auditor adjudico
+> sobre mi cero y mato una operacion real.**
+>
+> **De ahi sale la regla P.1 del [banco del plan](BANCO_DEL_PLAN.md): en este
+> grafo, todo conteo que toque ids pasa por el resolutor ANTES de contar.** Aplica
+> a los instrumentos y a los dictados del auditor por igual.
 
 ---
 
-## LAS TRES PREGUNTAS QUE SIGUEN ABIERTAS
+## LA UNICA PREGUNTA QUE SIGUE ABIERTA
 
-**Las otras doce quedaron cerradas por las adjudicaciones del 11 ago 2026**, y
-cada una esta escrita dentro de su operacion en el campo `adjudicacion`.
+**Las otras catorce quedaron cerradas**: doce por las adjudicaciones del 11 ago
+2026, y dos mas al cerrarse `OP-S-07` y `OP-S-08` el mismo dia.
 
 | operacion | la pregunta |
 |---|---|
-| **`OP-S-07`** | la adjudicacion mataba esta operacion sobre una medicion mia de CERO. **Remedido bien: son 27, exactamente lo publicado.** Se confirma que vuelve al plan? |
-| **`OP-S-08`** | de los **42 accesos directos al grafo en produccion** (12 ficheros, 9 con ids de origen externo), **cuales reciben un id que viene de fuera del grafo**? Esos son los unicos que tienen que pasar por `resolverId` |
-| **`OP-S-10`** | la condicion esta escrita para evaluarse sola: **la medicion muestra ley con alcance real en `franquicias`?** Las cuatro familias medidas son norma obligatoria y no formato de referencia |
+| **`OP-S-10`** | **la medicion muestra ley con alcance real en `franquicias`?** Se cumple si los nodos de marco cablean una norma que OBLIGA a quien opera bajo esa jurisdiccion, y no solo un formato de referencia. **Las cuatro familias medidas son FDD (23), regla federal (9), registro estatal (9) e items del FDD (6): las cuatro son norma obligatoria.** Si eso es ley con alcance real, `franquicias` entra |
 
 **Y UN DELTA DECLARADO, que no es pregunta pero conviene que se vea**: el auditor
 dio **123 nodos** para las familias de ids y **mi recomputo da 125**, con las **53
@@ -168,7 +168,8 @@ en vez de forzarse.**
 | [`01_FUENTES.md`](01_FUENTES.md) | las tres decisiones de fuente, 18 nodos, y el precedente fuente-primero | escrita |
 | [`02_DESTEJIDOS.md`](02_DESTEJIDOS.md) | los 13 actos del cierre transitivo, en orden por congelados liberados | escrita |
 | [`05_SANEO.md`](05_SANEO.md) | marco-pais, vigencia, herramientas, campos sucios, auto-aristas e ids | escrita |
-| [`CORRECCIONES_A_APLICAR.md`](CORRECCIONES_A_APLICAR.md) | las cinco correcciones que viven FUERA de `docs/plan/`, listas para pegar | escrita |
+| [`CORRECCIONES_A_APLICAR.md`](CORRECCIONES_A_APLICAR.md) | una confirmacion y cuatro correcciones que viven FUERA de `docs/plan/`. **Las aplica la SESION A** | escrita |
+| [`BANCO_DEL_PLAN.md`](BANCO_DEL_PLAN.md) | **P.1** la regla de medicion por el resolutor, y **P.2** la firma posicional del injerto | escrita |
 | `03_FUSIONES.md` | fusiones de par y de familia, con superviviente y direccion | **sin escribir** |
 | `04_ENLACES.md` | la arista que falta: 624 candidatos, proyeccion de 376 a 586 | **sin escribir** |
 | `06_MESAS.md` | las mesas con su nomina y sus dependencias | **sin escribir** |

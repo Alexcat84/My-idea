@@ -9,50 +9,47 @@ en el banco**. Las dos cosas no caben a la vez.
 > sesion puede estar escribiendo.** Un fichero pisado en paralelo es caro de
 > deshacer; una correccion escrita y no aplicada, no.
 
-**Basta una linea del fundador para aplicarlas.**
+> **ADJUDICADO el 11 ago 2026: LAS CUATRO CORRECCIONES LAS APLICA LA SESION A**,
+> que es la duena de esos ficheros, **cuando reporte su tanda.** Esta pagina es su
+> encargo, escrito y verificado. **Desde aqui no se cruza la frontera.**
 
 ---
 
-## CORRECCION 0, Y ES MIA: LAS 27 AUTO-ARISTAS ESTABAN BIEN
+## CONFIRMACION 0: LAS 27 AUTO-ARISTAS SE CONFIRMAN, NO SE CORRIGEN
 
-**Se declara primero porque invalida una adjudicacion, y la adjudicacion se
-apoyaba en un numero que di yo.**
+**Va primero y NO es una correccion: es lo contrario.** La cifra publicada de **27
+esta bien** y **no hay que tocarla**.
 
-**Lo que informe el 11 ago 2026**: *auto-aristas medidas hoy, CERO, en las tres
-copias del dataset*. **Sobre eso, el auditor adjudico que la operacion salia del
-plan porque no habia trabajo, y que la cifra publicada de 27 habia que
-corregirla.**
+**Que paso.** Informe *auto-aristas medidas hoy, CERO*. **Mi medicion estaba mal**:
+mi resolutor era *el id, si esta en el grafo; y si no, su duena*, y **las 27
+apuntan a ids que SI estan en el grafo, como DEPRECADOS**, asi que los devolvia sin
+resolver.
 
-> **MI MEDICION ESTABA MAL, y el fallo es concreto y localizable.** Mi resolutor
-> era `res(x) = x si x esta en el grafo, y si no, su duena`. **Las 27 auto-aristas
-> apuntan a ids que SI estan en el grafo, como nodos DEPRECADOS**, asi que mi
-> funcion los devolvia sin resolver y ninguna auto-arista salia.
+**Remedido con la semantica de `resolverId`, y el auditor lo remidio aparte con el
+mismo instrumento: coinciden.**
 
-**REMEDIDO con la semantica exacta de `resolverId`**, que es la que el motor usa:
-devuelve el id solo si el nodo existe **y no esta deprecado**, y si no, camina la
-cadena de alias.
-
-| | publicado | **remedido el 11 ago 2026** |
+| | publicado | **remedido y confirmado** |
 |---|---:|---:|
 | nodos vivos con **auto-arista** | **27** | **27** |
 | enlaces implicados | | **33** |
-| de ellos, **directos** | | **0** |
-| de ellos, **via alias** | | **33** |
-| nodos con **self-alias** | 7 | **0** |
+| **directos** | | **0** |
+| **via alias propio** | | **33** |
 
-> **La cifra de 27 es EXACTA y no hay que corregirla. La de 7 si: hoy mide cero.**
+> **QUIEN APLIQUE ESTA PAGINA TIENE QUE SABER DOS COSAS:**
+>
+> **1. La fila de las 27 en `PENDIENTES.md` se queda como esta.** Ni se corrige ni
+> se anota como dudosa.
+>
+> **2. El motivo del banco 9.14 QUEDA CONFIRMADO.** Esa regla, *todo conteo de
+> grado excluye el propio nodo*, se adopto **usando las 27 como motivo**. El motivo
+> se sostiene entero: **la regla no solo sigue en pie, ahora tiene su cifra
+> verificada dos veces.**
 
-**POR QUE NINGUNA ERA VISIBLE**: ninguna es directa. **El nodo no se cita a si
-mismo por su id: cita un id que es su propio alias.** El ejemplar que el informe
-ya nombraba lo prueba: `analisis_flujo_de_valor` lleva `value_stream_analysis_lean`
-en sus `nodos_previos`, **y ese id es su propio alias**. Un chequeo ingenuo da
-cero; hay que hacerlo con la semantica del resolutor.
+**Lo unico que si encogio es el self-alias**, y va como correccion 1.
 
-**EL PEOR**: `costo_de_mala_calidad_copq`, con **siete** enlaces a si mismo, dos en
-previos y cinco en siguientes.
-
-**CONSECUENCIA EN EL PLAN**: **`OP-S-07` vuelve**, con los 27 ids escritos, y queda
-**DECISION PENDIENTE** a la espera de que el auditor confirme la vuelta.
+**CONSECUENCIA EN EL PLAN**: `OP-S-07` **vuelve como operacion LISTA**, con los 27
+ids, el arreglo y **la guarda que Gate 0 necesita**, que no es la que parece. Ver
+[`05_SANEO.md`](05_SANEO.md).
 
 ---
 
@@ -180,14 +177,16 @@ escribe. **No existe resolutor.***
 
 ## RESUMEN, para decidir de un vistazo
 
-| # | que se corrige | donde | quien lo pidio |
+| # | que pasa | donde | quien lo aplica |
 |---:|---|---|---|
-| **0** | **las 27 auto-aristas NO se corrigen: estaban bien** | ninguna | **correccion mia**, declarada |
-| 1 | self-alias, de 7 a **0** | `AUDITORIA_MOTOR.md` B.3 | auditor |
-| 2 | Incoterms, de 12 a **3**; union de 21 a **12** | `PENDIENTES.md`, adjudicacion del barrido | auditor |
-| 3 | la promesa del resolutor **si** se cumplio | `AUDITORIA_MOTOR.md` B.3 | auditor |
-| 4 | la cuenta de 18, recomputada con su corte | `COSTURAS_INTERNAS_RESUMEN.md` 6 y 7 | auditor |
+| **0** | **NO se corrige nada: las 27 se CONFIRMAN**, y con ellas el motivo del banco 9.14 | ninguna | nadie: **solo hay que saberlo** |
+| 1 | self-alias, de 7 a **0** | `AUDITORIA_MOTOR.md` B.3 | **SESION A** |
+| 2 | Incoterms, de 12 a **3**; union de 21 a **12** | `PENDIENTES.md`, adjudicacion del barrido | **SESION A** |
+| 3 | la promesa del resolutor **si** se cumplio | `AUDITORIA_MOTOR.md` B.3 | **SESION A** |
+| 4 | la cuenta de 18, recomputada con su corte | `COSTURAS_INTERNAS_RESUMEN.md` 6 y 7 | **SESION A** |
 
-> **Ninguna de las cinco toca el banco 9.14**, que es la que usaba las 27 como
-> motivo. **Esa regla no solo sigue en pie: su motivo queda confirmado en vez de
-> corregido.**
+> **Las cuatro son de la SESION A y se aplican cuando reporte su tanda.** Ninguna
+> se toca desde aqui.
+
+> **Y NINGUNA TOCA EL BANCO 9.14.** Esa regla usaba las 27 como motivo, y **el
+> motivo queda confirmado en vez de corregido.**

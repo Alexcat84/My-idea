@@ -244,19 +244,12 @@ mapeo. **No se borra: su contenido entra al campo `fuente`.**
 
 ---
 
-## `OP-S-07`: LAS AUTO-ARISTAS . **VUELVE AL PLAN**
+## `OP-S-07`: LAS AUTO-ARISTAS . **LISTA**
 
-**Y vuelve contra la adjudicacion, porque la adjudicacion se apoyaba en una cifra
-mia y la cifra estaba mal.**
+**Vuelve al plan como operacion LISTA. El auditor la remidio con la semantica de
+`resolverId` y coincide con la cifra remedida: la publicada estaba bien.**
 
-**Lo que informe**: cero auto-aristas en las tres copias del dataset. **Sobre eso
-se adjudico que la operacion salia del plan porque no habia trabajo.**
-
-> **MI MEDICION ESTABA MAL, y el fallo es localizable.** Mi resolutor era *el id,
-> si esta en el grafo; y si no, su duena*. **Las 27 apuntan a ids que SI estan en
-> el grafo, como DEPRECADOS**, asi que mi funcion los devolvia sin resolver.
-
-**REMEDIDO con la semantica exacta de `resolverId`**, que es la que usa el motor:
+**REMEDIDO y CONFIRMADO por dos instrumentos independientes:**
 
 | | publicado | **remedido el 11 ago 2026** |
 |---|---:|---:|
@@ -290,18 +283,38 @@ previos y cinco en siguientes.
 `reglas_gestion_riesgo_gambling`, `reporte_estado_miembro_equipo`,
 `search_for_business_model`.
 
-**LA GUARDA, y ahora con una exigencia mas**: Gate 0 tiene que rechazar la
-auto-arista **con la misma semantica que `resolverId`**, o el chequeo no sirve:
-**un chequeo ingenuo da cero sobre un grafo con veintisiete.**
+**EL ARREGLO**: de cada uno de los 27, **retirar el enlace de `nodos_previos` o
+`nodos_siguientes` que RESUELVE al propio nodo**. Son **33 enlaces**. No se toca
+ningun otro campo, **y los `ids_alias` NO se tocan**: el alias es correcto y util;
+**lo que sobra es la arista que lo usa para volver a casa.**
 
-> **EL BANCO 9.14 NO SE MUEVE.** La regla de excluir el propio nodo al contar
-> grado sigue en pie, y **su motivo queda confirmado en vez de corregido.**
+**VERIFICACION:**
 
-**LA PREGUNTA**: se confirma que la operacion vuelve al plan?
+- ningun nodo vivo se cita a si mismo **ni directamente ni tras resolver alias**
+- **el conteo de aristas del grafo baja en 33 exactamente**, ni una mas
+- la guarda se prueba **con un caso positivo**: si se reinyecta el enlace de
+  `analisis_flujo_de_valor` a `value_stream_analysis_lean`, **Gate 0 tiene que
+  caerse**
+
+### LA CONSECUENCIA DE MAQUINARIA: LA GUARDA DE GATE 0 DEBE RESOLVER, NO COMPARAR
+
+> **Un chequeo literal, id contra id, da CERO sobre un grafo con VEINTISIETE.**
+> Ninguna de las 33 es directa.
+>
+> **Una guarda que compare literalmente pasaria verde el dia de la reparacion y
+> seguiria pasando verde si manana vuelve a entrar una. Es una guarda que no
+> guarda.**
+
+**La guarda correcta**: pasar cada id de `nodos_previos` y `nodos_siguientes` **por
+el resolutor** y compararlo con el id del propio nodo.
+
+> **EL BANCO 9.14 NO SE MUEVE.** La regla de excluir el propio nodo al contar grado
+> sigue en pie, y **su motivo queda confirmado en vez de corregido.** Es el
+> ejemplar mayor de la regla **P.1** del banco del plan.
 
 ---
 
-## `OP-S-08`: POR DONDE PASA EL RESOLUTOR . **MEDICION**
+## `OP-S-08`: POR DONDE PASA EL RESOLUTOR . **LISTA**
 
 **La dependencia estaba mal escrita y se corrige.** Se escribio que ningun codigo
 leia `ids_alias`. **Verificado contra el codigo el 11 ago 2026: si lo lee.**
@@ -344,10 +357,46 @@ leia `ids_alias`. **Verificado contra el codigo el 11 ago 2026: si lo lee.**
 > **Y esta operacion YA NO BLOQUEA A `OP-S-01`.** El resolutor existe, asi que el
 > alias que esa operacion crea **funciona el mismo dia que se escribe.**
 
-**LA PREGUNTA**: de esos 42 accesos, **cuales reciben un id que viene de FUERA del
-grafo** (de `project_nodes`, de una sesion guardada o de un parametro de URL)?
-**Esos son los unicos que tienen que pasar por `resolverId`.** Los que indexan con
-un id que ya salio del propio grafo no lo necesitan.
+### CLASIFICADOS POR ORIGEN DEL ID: 22 INTERNOS y 20 EXTERNOS
+
+> **EL CRITERIO, en una linea.** Un id **INTERNO** salio del propio grafo en la
+> misma pasada, un `nodos_siguientes` o una clave, y por tanto **esta al dia por
+> construccion**. Un id **EXTERNO** entro desde fuera, de una sesion persistida, un
+> artefacto en disco o un parametro, y **puede ser de cualquier era**.
+>
+> **El riesgo esta SOLO en los externos.** Los veintidos internos se dejan como
+> estan.
+
+**LOS VEINTE EXTERNOS, con su origen y su blindaje:**
+
+| sitio | de donde viene el id | como esta hoy | blindaje |
+|---|---|---|---|
+| `compass.ts:153` | indice semantico **persistido** | **HUECO REAL**: si `graph[id]` es `undefined` la condicion entera es falsa y **el id PASA el filtro** | resolver **antes** de puntuar, y descartar el que resuelva a `null` |
+| `clasificar.ts:34, 35, 36` | `entrySeeds` por parametro | sin guarda: rompe con un seed historico | una sola resolucion arriba del `map` cubre las tres |
+| `graph.ts:244` | `resumenNodo(nid)`, con ids de sesion | sin guarda: `n.titulo_concepto` rompe | resolver al entrar, **como ya hacen `etiquetaArbol` y `tituloDeNodo` dos funciones mas arriba** |
+| `interprete.ts:331, 332, 333` | `saltoCandidatos`, del indice semantico | sin guarda | heredan el arreglo de `compass.ts:153` |
+| `planRedactor.ts:53` | `aMaterial(nid)`, llamado con `recorrido.ruta` y `cosechaIds` | sin guarda: rompe | resolver dentro de `aMaterial`: **una linea cubre sus dos llamadas** |
+| `recorrido.ts:271` | `nid` del estado persistido | sin guarda | resolver antes de `obtenerPregunta` |
+| `recorrido.ts:649` | `nuevoActualId`, del camino de sesion | sin guarda | resolver antes de `obtenerPregunta` |
+| `organizer/route.ts:66, 67, 68` | `cargarEntrySeeds()` **sin pasarle el grafo** | sin guarda | **llamar `cargarEntrySeeds(graph)`**: la funcion ya filtra por `esOfrecible` cuando lo recibe |
+| `organizer/stream/route.ts:87, 88, 89` | igual | sin guarda | igual |
+| `start/route.ts:255` | `brecha.semillaId`, de `packs_entry_seeds` | **ya guardado** en la linea 149, con aviso | cambiar *esta en el grafo* por *resuelve*: hoy una semilla renombrada aborta cuando podria resolver |
+| `session/plan:267` | `recorrido.ruta` (**sesion persistida**) | guardado con `filter(nid in graph)`: **no rompe, OMITE EN SILENCIO** | **resolver en vez de filtrar** |
+| `session/plan:405` | `recorrido.ruta`, ultimo | `?.` con fallback a `ideacion` | **resolver**: hoy degrada la fase del proyecto en silencio |
+
+**TRES ARREGLOS CUBREN CATORCE DE LOS VEINTE:**
+
+| arreglo | cubre |
+|---|---:|
+| resolver dentro de `aMaterial` | **3** (la 53 y sus dos llamadas) |
+| llamar `cargarEntrySeeds(graph)` en los dos organizer | **6** |
+| resolver en `compass.ts:153` | **4** (la suya y las tres de `interprete`) |
+
+> **LOS DOS MAS CAROS NO ROMPEN: CALLAN.** `session/plan:267` filtra, y **un
+> concepto historico se cae de la lista sin que nadie se entere**.
+> `session/plan:405` degrada la fase del proyecto a `ideacion` con un `??`
+> silencioso. **Los dos son exactamente el modo de fallo que el canon de fallar
+> ruidoso prohibe**, y ninguno de los dos se ve en una prueba verde.
 
 ---
 
