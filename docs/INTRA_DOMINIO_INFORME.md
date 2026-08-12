@@ -4494,6 +4494,39 @@ marketing y lo que vuelve, que es **el unico umbral numerico de la etapa**.
 > cuadrantes y el 709 al de la mesa de Customer Validation. **Ninguno de los dos
 > se decide ahora**, por la regla del reparto por bloques del 9.11.
 
+### TANDA R42: ocho puestos, SEIS COINCIDEN Y DOS DISCREPAN, y las dos discrepancias caen donde el reporte las habia marcado
+
+**Relectura ciega del auditor, 17 ago 2026, sobre ocho puestos de la tanda 2.118 a
+2.300:** 2.137, 2.166, 2.195, 2.215, 2.242, 2.261, 2.277 y 2.292.
+
+| resultado | puestos | |
+|---|---|---:|
+| **coinciden** | 2.137, 2.166, 2.242, 2.261, 2.277, 2.292 | **6 de 8** |
+| **discrepan** | **2.195 y 2.215** | **2 de 8** |
+
+> **LO QUE ESTA TANDA MIDE NO ES LA TASA DE ACIERTO. ES SI EL MARCADO SIRVE.**
+> El reporte consolidado de la tanda (seccion 73.7) marco **cinco puestos como los mas
+> discutibles** de cuarenta. **Las dos discrepancias del auditor son dos de esos cinco**,
+> y ninguna cayo fuera de la lista.
+
+**Por que eso importa mas que el 6 de 8.** Una relectura ciega que discrepa en puestos
+**no marcados** diria que el lector **no sabe donde esta flojo**, y entonces **ninguna de
+sus cuarenta lecturas tendria mas credito que otra**. Aqui pasa lo contrario: **el lector
+senalo por adelantado donde iba a fallar y fallo exactamente ahi.** El marcado de
+discutibles **deja de ser una cortesia y pasa a ser un instrumento de triaje**: al
+auditor le basta con leer los marcados para encontrar lo que se cae.
+
+**Y hay una prediccion cumplida al pie de la letra.** La seccion 73.7 escribio sobre el
+2.195: *si el auditor sostiene que una pregunta distinta merece nodo aunque se conteste
+en una linea, este veredicto se voltea, **y con el el 2.215***. **Se voltearon los dos, y
+en ese orden de dependencia.** El motivo real resulto ser distinto y mejor que el
+previsto, y esta en la seccion 74.
+
+> **REGLA DE USO QUE DEJA ESTA TANDA:** **toda tanda que se publique lleva su lista de
+> discutibles marcados**, y **la relectura ciega empieza por ellos**. Si una discrepancia
+> aparece **fuera** de la lista, eso **si** es una senal sobre el lector, y se anota como
+> tal.
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -11854,7 +11887,7 @@ cifra lleva su corte.
 | `entrega` | 171 | 2 | 0 | 0 | 169 | **1,2%** |
 | `environmental` | 170 | 29 | 0 | 0 | 141 | **17,1%** |
 | `exportacion` | 130 | 15 | 0 | 0 | 115 | **11,5%** |
-| **`franquicias`** | **148** | **20** | **0** | **0** | **128** | **13,5%** |
+| **`franquicias`** | **148** | **18** | **0** | **0** | **130** | **12,2%** |
 
 > **La global no describe a nadie.** Entre `compras` al 0,6% y `core` al 23,8% hay
 > cuarenta veces de diferencia, y el 18,5% del total no es la tasa de ningun dominio:
@@ -11867,18 +11900,25 @@ cifra lleva su corte.
 | | |
 |---|---:|
 | pares | **148** |
-| A | **20** |
+| A | **18** |
 | B | **0** |
 | C | **0** |
-| D | **128** |
-| **tasa de A** | **13,5%** |
+| D | **130** |
+| **tasa de A** | **12,2%** |
+
+> **CIFRA CORREGIDA EL 17 AGO 2026, y es la segunda correccion sobre este mismo
+> numero.** Cerro primero en **13,5%** con 20 A. **La relectura conjunta con el auditor
+> volteo los puestos 2.195 y 2.215 de A a D** (la vara aplicada al reves: se peso lo que
+> la madre anade al hijo en vez de lo que el hijo anade a la madre). **Con los dos
+> volteos, 18 A sobre 148 y la cifra final del dominio es 12,2%.** El detalle vive en
+> la seccion 74.
 
 **Correccion declarada sobre la cifra publicada en la seccion 70.** Alli se escribio
 *franquicias del 19,6% al 21,7%*, y era correcto **a su corte**: 10 A sobre 46 pares,
-que eran los unicos leidos del dominio al 2.117. **Con el dominio entero leido la cifra
-final es 13,5%**, no porque la de entonces estuviera mal contada, sino porque **una tasa
-sobre 46 pares de 148 no es la tasa del dominio: es la tasa de su cabecera**. Las dos
-conviven con su corte al lado.
+que eran los unicos leidos del dominio al 2.117. **Con el dominio entero leido y los dos
+volteos de la relectura aplicados, la cifra final es 12,2%**, no porque la de entonces
+estuviera mal contada, sino porque **una tasa sobre 46 pares de 148 no es la tasa del
+dominio: es la tasa de su cabecera**. Las tres conviven con su corte al lado.
 
 **Fuente unica del dominio:** los 148 pares salen del mismo libro,
 *Franchise Your Business* de Mark Siebert. **La homogeneidad de fuente no bajo la tasa
@@ -11888,19 +11928,27 @@ sitios de su propio indice.**
 
 ### 71.4 LA VARA POR TRAMO (banco 9.6.1)
 
-**Tramo 2.118 a 2.219: 102 pares, 10 A y 92 D. Tasa del tramo: 9,8%.**
+**Tramo 2.118 a 2.219: 102 pares, 8 A y 94 D. Tasa del tramo: 7,8%** (corregida el
+17 ago 2026 por el volteo de 2.195 y 2.215; la cifra de la primera escritura fue 10 A y
+9,8%).
 
 | la vara dijo | pares | como se lee |
 |---|---:|---|
-| **CONTINUA** (trae procedimiento) | **33** | el hijo no cabia en una linea de la madre |
-| **REPITE** (cabe en una linea) | **10** | los 10 A del tramo |
+| **CONTINUA** (trae procedimiento) | **35** | el hijo no cabia en una linea de la madre |
+| **REPITE** (cabe en una linea) | **8** | los 8 A del tramo |
 | no se invoco | 59 | objetos distintos, la vara no hacia falta |
 
-**43 de 102 pares se decidieron con la vara**, y **en los 10 que dieron A el patron es
+**43 de 102 pares se decidieron con la vara**, y **en los 8 que dieron A el patron es
 el mismo**: el nodo que muere trae **advertencias, criterios sueltos o acciones unicas**,
 nunca un paso con decisiones dentro ni uno que se repita en el tiempo. **La precision
-del 9.6.1 hizo todo el trabajo del tramo**: sin ella, siete de esos diez habrian pasado
+del 9.6.1 hizo todo el trabajo del tramo**: sin ella, cinco de esos ocho habrian pasado
 por D.
+
+> **Y la vara tiene una direccion, que este tramo aprendio a la mala.** Los dos pares
+> volteados eran los dos unicos del tramo donde la pregunta se hizo al reves: **que
+> anade la madre al hijo**. La pregunta correcta es **que anade el hijo a la madre**, y
+> con la direccion invertida **cualquier nodo que enuncie sus pasos en forma compacta
+> muere contra el que despliega uno de ellos**.
 
 **Cero PENDIENTE DE DOCTRINA en el tramo.** Ninguna pareja pidio una regla que no
 existiera. **Las escritas alcanzaron**, que es exactamente lo que decia el encargo.
@@ -11929,9 +11977,10 @@ existiera. **Las escritas alcanzaron**, que es exactamente lo que decia el encar
    2.207) y los dos del medio son **candidatos a gemelo**.
 2. **EL DINERO DEL FRANQUICIADOR**, cinco miembros con cabeza clara:
    `cinco_categorias_costos_franquicia` contiene a `estimacion_inversion_inicial_franquiciador`
-   en su paso 2 y a `costos_preparacion_franquicia` en su paso 6; `capitalizacion_adecuada_del_franquiciador`
-   **repitio dos veces** (2.195 y 2.215) y `principio_apalancamiento_numero_magico`
-   es el unico con doctrina propia. **Cero aristas entre los cinco.**
+   en su paso 2 y a `costos_preparacion_franquicia` en su paso 6, y es **el hijo que
+   despliega el paso 1 de `capitalizacion_adecuada_del_franquiciador`** (2.215, leido D
+   tras la relectura); `principio_apalancamiento_numero_magico` es el unico con doctrina
+   propia. **Cero aristas entre los cinco, y la del 2.215 es candidata de fase 04.**
 3. **EL CANAL CORPORATIVO**, cuatro miembros: `mix_ubicaciones_corporativas_franquicia`,
    `franquicia_mas_crecimiento_corporativo_hibrido`, `estrategia_multicanal_expansion`
    y `combinar_crecimiento_corporativo_y_franquicia`, que **repitio** en el 2.204.
@@ -11957,14 +12006,19 @@ tasa de este dominio es provisional y lleva su corte al lado** (banco 9.21).
 
 | clase | corte 2.219 | **corte 2.300** | delta |
 |---|---:|---:|---:|
-| **A** | 411 | **441** | +30 |
+| **A** | 409 | **439** | +30 |
 | B | 89 | **89** | 0 |
 | C | 7 | **7** | 0 |
-| **D** | 1.712 | **1.763** | +51 |
+| **D** | 1.714 | **1.765** | +51 |
 | **TOTAL** | **2.219** | **2.300** | +81 |
 
-**Tasa global de A: 19,2%.** Subio del 18,5%, **y la subida entera la produce un solo
+**Tasa global de A: 19,1%.** Subio del 18,4%, **y la subida entera la produce un solo
 dominio**.
+
+> **Cifras corregidas el 17 ago 2026.** La primera escritura de esta tabla decia 411 y
+> 441, con el corte 2.219 al 18,5% y el 2.300 al 19,2%. **El volteo de los puestos 2.195
+> y 2.215 de A a D resta dos A a los dos cortes por igual**, asi que **el delta de +30 no
+> cambia**: lo que cambia es el punto de partida y el de llegada. Detalle en la seccion 74.
 
 ### 72.2 LA TASA POR DOMINIO (banco 9.27)
 
@@ -11975,7 +12029,7 @@ dominio**.
 | `entrega` | 171 | 2 | 0 | 0 | 169 | **1,2%** | cerrado |
 | `environmental` | 170 | 29 | 0 | 0 | 141 | **17,1%** | cerrado |
 | `exportacion` | 130 | 15 | 0 | 0 | 115 | **11,5%** | cerrado |
-| `franquicias` | 148 | 20 | 0 | 0 | 128 | **13,5%** | cerrado |
+| `franquicias` | 148 | 18 | 0 | 0 | 130 | **12,2%** | cerrado |
 | **`health_safety`** | **81 de 192** | **30** | 0 | 0 | 51 | **37,0%** | **abierto, 42% leido** |
 
 > **`health_safety` esta al 37,0% con 81 pares leidos: es la tasa mas alta del archivo
@@ -12003,18 +12057,19 @@ fuentes, y ahi aparece **una figura nueva del tramo, LA MISMA NORMA EN DOS FOLLE
 (2.232): OSHA3885 y OSHA3886 cubren el mismo requisito de capacitacion con distinto
 detalle. **No son dos escuelas discrepando: es un organismo publicando dos veces.**
 
-**Y el contraste importa: `franquicias`, tambien de fuente unica, cerro en 13,5%.** La
+**Y el contraste importa: `franquicias`, tambien de fuente unica, cerro en 12,2%.** La
 fuente unica no basta para explicar el 37,0%. **Lo que lo explica es que el mismo
 concepto tiene tres y cuatro nodos, no que el autor sea uno solo.**
 
 ### 72.4 LA VARA POR TRAMO (banco 9.6.1)
 
-**Tanda completa hasta aqui, 2.118 a 2.300: 183 pares, 40 A y 143 D. Tasa 21,9%.**
+**Tanda completa hasta aqui, 2.118 a 2.300: 183 pares, 38 A y 145 D. Tasa 20,8%**
+(corregida el 17 ago 2026: la primera escritura decia 40 A y 21,9%).
 
 | la vara dijo | pares |
 |---|---:|
-| **CONTINUA** | **41** |
-| **REPITE** | **40** |
+| **CONTINUA** | **43** |
+| **REPITE** | **38** |
 | no se invoco | 102 |
 
 **81 de 183 pares se decidieron con la vara, y en el tramo de `health_safety` casi todos.**
@@ -12084,24 +12139,24 @@ retomarlo**, para que ninguna cifra de aqui se lea como cifra de la tanda entera
 | | |
 |---|---:|
 | pares leidos en la tanda | **183** |
-| A | **40** |
+| A | **38** |
 | B | **0** |
 | C | **0** |
-| D | **143** |
-| **tasa de A de la tanda** | **21,9%** |
+| D | **145** |
+| **tasa de A de la tanda** | **20,8%** |
 
 **Y esa cifra sola no dice nada, porque los dos tramos no se parecen** (banco 9.27):
 
 | tramo | dominio | pares | A | **tasa** |
 |---|---|---:|---:|---:|
-| 2.118 a 2.219 | `franquicias` | 102 | 10 | **9,8%** |
+| 2.118 a 2.219 | `franquicias` | 102 | 8 | **7,8%** |
 | 2.220 a 2.300 | `health_safety` | 81 | 30 | **37,0%** |
 
 **Casi cuatro veces de diferencia entre dos tramos consecutivos del mismo cribado, con
-la misma vara y el mismo lector.** El archivo global queda en **A 441, B 89, C 7, D
-1.763 sobre 2.300, tasa 19,2%**.
+la misma vara y el mismo lector.** El archivo global queda en **A 439, B 89, C 7, D
+1.765 sobre 2.300, tasa 19,1%**.
 
-**Un dominio cerrado: `franquicias`, 148 pares, 20 A, 13,5%.**
+**Un dominio cerrado: `franquicias`, 148 pares, 18 A, 12,2%.**
 **Un dominio abierto: `health_safety`, 81 de 192 leidos, 30 A, 37,0% PROVISIONAL.**
 
 ### 73.2 FIGURAS NUEVAS Y CRECIDAS
@@ -12140,7 +12195,7 @@ la misma vara y el mismo lector.** El archivo global queda en **A 441, B 89, C 7
 | racimo | miembros | forma |
 |---|---:|---|
 | **la franquicia inadvertida** | **4** | el mas cargado del dominio; `estructuras_combinadas_franquicia` **repitio dos veces** y los dos del medio son candidatos a gemelo |
-| **el dinero del franquiciador** | **5** | **cerro cobertura**: `cinco_categorias_costos_franquicia` contiene a `estimacion_inversion_inicial_franquiciador` en su paso 2 y a `costos_preparacion_franquicia` en su paso 6, y `capitalizacion_adecuada_del_franquiciador` **repitio dos veces** |
+| **el dinero del franquiciador** | **5** | **cerro cobertura**: `cinco_categorias_costos_franquicia` contiene a `estimacion_inversion_inicial_franquiciador` en su paso 2 y a `costos_preparacion_franquicia` en su paso 6, y es **el hijo que despliega el paso 1 de `capitalizacion_adecuada_del_franquiciador`**, leido D tras la relectura |
 | **el canal corporativo** | 4 | `combinar_crecimiento_corporativo_y_franquicia` repitio |
 | **el mensaje** | 3 | `multiples_compradores_influyentes` es el paso 1 entero de `mensaje_marketing_franquicia` |
 
@@ -12173,9 +12228,11 @@ establecida y el suelto es arista que falta.**
    `falla_sistemica_vs_error_individual`, `human_error_como_sintoma` y
    `riesgos_del_enfoque_en_error_humano`.
 3. **`human_error_como_sintoma`, `new_view_vs_old_view_de_error_humano`,
-   `evitar_sesgo_retrospectivo_hindsight`, `ciclo_de_culpa`, `defensas_en_profundidad_2`,
-   `estructuras_combinadas_franquicia` y `capitalizacion_adecuada_del_franquiciador`
-   repitieron DOS veces cada uno.**
+   `evitar_sesgo_retrospectivo_hindsight`, `ciclo_de_culpa`, `defensas_en_profundidad_2`
+   y `estructuras_combinadas_franquicia` repitieron DOS veces cada uno.**
+   `capitalizacion_adecuada_del_franquiciador` estaba en esta lista y **salio el 17 ago
+   2026**: sus dos supuestas repeticiones eran la vara aplicada al reves, y **ya no repite
+   ninguna vez**.
 
 > **El veredicto del par es firme en los tres casos: ese nodo no aporta.** Lo que queda
 > abierto es **quien se queda con su contenido**, y eso **no se decide par a par: lo
@@ -12204,20 +12261,32 @@ quedan escritas en su veredicto, no como pendiente.**
 
 ### 73.6 CORRECCIONES DECLARADAS
 
-1. **`franquicias` no esta en 21,7%, esta en 13,5%.** La seccion 70 publico *del 19,6%
-   al 21,7%* y **era correcto a su corte**: 10 A sobre **46** pares, los unicos leidos
-   del dominio al 2.117. Con el dominio entero, **20 A sobre 148**. La cifra vieja no
-   estaba mal contada: **una tasa sobre 46 pares de 148 es la tasa de una cabecera, no la
-   de un dominio.** Las dos conviven con su corte al lado (banco 9.21).
+1. **`franquicias` no esta en 21,7% ni en 13,5%, esta en 12,2%, y se corrigio dos veces
+   por dos motivos distintos.** La seccion 70 publico *del 19,6% al 21,7%* y **era
+   correcto a su corte**: 10 A sobre **46** pares, los unicos leidos del dominio al
+   2.117; **una tasa sobre 46 pares de 148 es la tasa de una cabecera, no la de un
+   dominio**, y con el dominio entero fueron 20 A sobre 148, el 13,5%. **La segunda
+   correccion si es un error de lectura y no de corte**: la relectura conjunta con el
+   auditor volteo los puestos 2.195 y 2.215, y el cierre real es **18 A sobre 148, 12,2%**
+   (seccion 74). Las tres cifras conviven con su corte al lado (banco 9.21).
 2. **La tasa global bajo y despues subio, y ninguna de las dos cosas dice lo que
    parece.** Del 18,9% al 18,5% al 2.219 (por 102 pares de un dominio tranquilo) y al
    19,2% al 2.300 (por 81 pares de uno que repite el triple). **La global se mueve por
    composicion, no por criterio.**
-3. **Ninguna correccion sobre veredictos ya registrados.** Cero volteos en esta tanda.
+3. **DOS volteos sobre veredictos ya registrados**, 2.195 y 2.215, ambos de A a D,
+   ambos con correccion declarada dentro de su propia razon. **Es lo unico de este
+   reporte que cambio de clase**, y salio de la relectura del auditor, no de una
+   relectura propia (seccion 74).
 
-### 73.7 LAS 40 A NUEVAS, con las mas discutibles marcadas
+### 73.7 LAS 38 A NUEVAS, con las mas discutibles marcadas
 
-**`franquicias`, 10:**
+> **Encabezado corregido el 17 ago 2026.** Eran 40. **Los puestos 2.195 y 2.215 salieron
+> de esta lista** porque la relectura conjunta con el auditor los volteo a D, y **eran dos
+> de los cinco que esta misma seccion habia marcado como discutibles**. Quedan tachados
+> abajo, no borrados: **una lista de A que oculta las que se cayeron no sirve para medir
+> nada.**
+
+**`franquicias`, 8:**
 
 | puesto | muere | sobrevive |
 |---|---|---|
@@ -12225,12 +12294,12 @@ quedan escritas en su veredicto, no como pendiente.**
 | 2.145 | `mito_control_calidad_corporativo` | `motivated_management_franquiciado` |
 | 2.181 | `estructuras_combinadas_franquicia` | `deteccion_franquicia_inadvertida` |
 | 2.190 | `perdida_control_operativo` | `gestion_terminacion_franquiciado` |
-| **2.195** | `capitalizacion_adecuada_del_franquiciador` | `franquicia_como_capital_alternativo` |
+| ~~2.195~~ | ~~`capitalizacion_adecuada_del_franquiciador`~~ | **VOLTEADA A D** el 17 ago 2026 |
 | 2.196 | `confidencialidad_manual_operaciones` | `desarrollar_manual_operaciones` |
 | 2.202 | `marketing_en_ferias_comerciales_de_franquicias` | `ferias_comerciales_franquicia` |
 | 2.204 | `combinar_crecimiento_corporativo_y_franquicia` | `mix_ubicaciones_corporativas_franquicia` |
 | 2.207 | `estructuras_combinadas_franquicia` | `prevenir_franquicias_inadvertidas` |
-| 2.215 | `capitalizacion_adecuada_del_franquiciador` | `cinco_categorias_costos_franquicia` |
+| ~~2.215~~ | ~~`capitalizacion_adecuada_del_franquiciador`~~ | **VOLTEADA A D** el 17 ago 2026 |
 
 **`health_safety`, 30:**
 
@@ -12269,11 +12338,12 @@ quedan escritas en su veredicto, no como pendiente.**
 
 **LAS CINCO MAS DISCUTIBLES, y por que cada una lo es:**
 
-1. **2.195.** Las dos preguntas son **distintas**: cuanto capital ahorra franquiciar, y
-   con que dinero se paga el programa. **La vara pesa lo anadido, no si la pregunta
-   cambia**, y lo anadido eran tres lineas sobre la fuente de fondos. **Si el auditor
-   sostiene que una pregunta distinta merece nodo aunque se conteste en una linea, este
-   veredicto se voltea, y con el el 2.215.**
+1. **2.195 y 2.215: SE VOLTEARON, y la prediccion escrita aqui se cumplio literal.**
+   Esta seccion decia *si el auditor sostiene que una pregunta distinta merece nodo aunque
+   se conteste en una linea, este veredicto se voltea, y con el el 2.215*. **El auditor lo
+   sostuvo, los dos se voltearon, y el motivo real resulto ser mejor que el previsto**: no
+   era que una pregunta distinta merezca nodo, era que **la vara se habia aplicado al
+   reves**, pesando lo que la madre anade al hijo. Detalle en la seccion 74.
 2. **2.255.** Muere el nodo de **cinco** pasos contra el de **cuatro**, y lo que se va
    como linea absorbida es **la garantia de que los supervisores apliquen los criterios
    igual**. Es la unica linea del par que impide que una cultura justa se vuelva
@@ -12312,3 +12382,104 @@ que no se pueda registrar un veredicto contra un par que no existe.
 
 **Cero nodos tocados en toda la tanda. El modo de cierre se respeto entero: se leyo y se
 documento.**
+
+
+---
+
+## 74. LA RELECTURA CONJUNTA DEL 2.195 Y EL 2.215, y la direccion de la vara
+
+**17 ago 2026, con el caso del auditor delante. Los dos puestos estaban en A y los dos
+pasan a D.** Es el unico cambio de clase de toda la tanda 2.118 a 2.300.
+
+### 74.1 EL CASO DEL AUDITOR, y la verificacion contra el grafo
+
+**Lo que sostuvo el auditor:** que `cinco_categorias_costos_franquicia` **es el
+procedimiento del paso 1** de `capitalizacion_adecuada_del_franquiciador`, la linea
+*estimar el presupuesto* desplegada en siete pasos, y que por la vara eso es **madre e
+hijo, D**; y que en el 2.195 hay **una linea compartida** y **procedimiento propio de
+cada lado**, y eso tambien es **D**.
+
+**Verificado contra `master_graph.json`, y los entregables son la prueba mas limpia:**
+
+| nodo | pasos | **entregable verificado** |
+|---|---:|---|
+| `capitalizacion_adecuada_del_franquiciador` | 4 | **Presupuesto de capitalizacion del programa con fuente de fondos definida** . **DOS productos** |
+| `cinco_categorias_costos_franquicia` | 7 | **Un presupuesto detallado y sumado, dividido en las cinco categorias** . **UNO, y es el primero de los dos de la madre** |
+| `franquicia_como_capital_alternativo` | 4 | **Analisis comparativo de capital requerido, expansion propia contra expansion via franquicia** . una **comparacion**, no un presupuesto |
+
+**El paso 1 de la madre dice** *estimar el presupuesto necesario para desarrollar el
+sistema de franquicia (documentos legales, manuales, marketing)*. **El hijo lo despliega
+en las cinco categorias nombradas** (desarrollo, legal, marketing, personal y
+preparacion), **mas la decision que dimensiona todo lo demas**, *cuantas franquicias
+quieres vender en tu primer ano*, **mas el cierre de sumarlo en un solo presupuesto**.
+
+### 74.2 EL ERROR, nombrado: LA VARA TIENE DIRECCION
+
+**El banco 9.6.1 pregunta QUE ANADE EL HIJO A LA MADRE.** La razon vieja del 2.215
+pregunto lo contrario: **que anade la madre al hijo**. Encontro tres lineas sobre la
+fuente de fondos y mato a la madre.
+
+> **CON LA DIRECCION INVERTIDA, CUALQUIER NODO QUE ENUNCIE SUS PASOS EN FORMA COMPACTA
+> MUERE CONTRA EL QUE DESPLIEGA UNO DE ELLOS.** Y eso liquidaria a **todas las madres del
+> catalogo**: `decision_franquiciar_vs_expansion_propia`, `evaluacion_necesidad_franquiciar`,
+> `seleccion_estructura_franquicia`, `preparar_fdd`, `programa_entrenamiento_franquiciados`.
+> **Todas enuncian pasos que otros nodos despliegan. Ninguna repite por eso.**
+
+**Y la formulacion util, que es la que se lleva al banco como precision de uso:**
+
+> **UNA LINEA QUE TARDA SIETE PASOS EN EJECUTARSE NO ES UNA LINEA: ES UN PROCEDIMIENTO
+> NOMBRADO EN UNA LINEA.** La prueba de que el paso 1 de la madre es un procedimiento
+> **es que existe el hijo que lo ejecuta**. Una madre puede ser un enunciado compacto de
+> sus propios pasos: **eso es lo que es una madre, y no se la mata por serlo.**
+
+**Por que el resto del tramo no esta contaminado:** los otros 24 pares de madre e hijo
+del tramo (2.167, 2.168, 2.175, 2.179, 2.182, 2.185, 2.192, 2.206, 2.210, 2.211, 2.212,
+2.213, 2.216, 2.217 y los del primer lote) **se leyeron en la direccion correcta y todos
+dieron D**. Los dos volteados **son los dos unicos donde la pregunta se hizo al reves**,
+y son **los dos que el propio reporte marco como discutibles**.
+
+### 74.3 EL 2.195, que no es madre e hijo
+
+**Aqui no hay despliegue: hay una linea compartida y dos procedimientos ajenos.**
+
+| | `capitalizacion_adecuada_del_franquiciador` | `franquicia_como_capital_alternativo` |
+|---|---|---|
+| **la linea compartida** | paso 1, el capital del sistema | paso 3, el capital del sistema |
+| lo suyo | **presupuestar** (que el 2.215 demuestra que es procedimiento) y **financiar**: elegir entre ahorros, caja o cuotas, no depender de las cuotas iniciales, validar la estructura | **comparar rutas de capital**: propio o deuda contra franquicia, cuanto haria falta para 10, 50 o 100 unidades, y el riesgo contingente aceptado |
+| pregunta que contesta | **con que dinero se paga el programa** | **si franquiciar es la ruta de capital** |
+
+**Por la vara, CONTINUA. Sano.**
+
+### 74.4 EL RECOMPUTO, del archivo
+
+| | antes | **despues** |
+|---|---:|---:|
+| A del archivo | 441 | **439** |
+| D del archivo | 1.763 | **1.765** |
+| **tasa global** (corte 2.300) | 19,2% | **19,1%** |
+| A de `franquicias` | 20 | **18** |
+| **tasa de `franquicias`** (cierre) | 13,5% | **12,2%** |
+| A del tramo 2.118 a 2.219 | 10 | **8** |
+| **tasa del tramo** | 9,8% | **7,8%** |
+| A de la tanda 2.118 a 2.300 | 40 | **38** |
+| **tasa de la tanda** | 21,9% | **20,8%** |
+| la vara: CONTINUA | 41 | **43** |
+| la vara: REPITE | 40 | **38** |
+
+**Secciones actualizadas con la cifra nueva:** 71.2, 71.3, 71.4, 71.5, 72.1, 72.2, 72.3,
+72.4, 73.1, 73.3, 73.4, 73.6 y 73.7. **Ninguna cifra vieja se borro: todas quedan con su
+corte al lado** (banco 9.21).
+
+### 74.5 LO QUE ARRASTRA, y no es solo aritmetica
+
+1. **`capitalizacion_adecuada_del_franquiciador` deja de ser un repetidor.** Estaba en la
+   lista de nodos que repitieron dos veces (seccion 73.4) y **sale de ella: ya no repite
+   ninguna vez.**
+2. **El racimo del dinero del franquiciador cambia de forma.** Seguia con cinco miembros,
+   pero **la cabeza no es la que se dijo**: `cinco_categorias_costos_franquicia` no
+   absorbe a `capitalizacion_adecuada_del_franquiciador`, **es su hijo**.
+3. **ARISTA QUE FALTA, candidata de fase 04.** Verificada contra el grafo: la madre viene
+   de `riesgo_concepto_vs_amenaza_competitiva`, `evaluacion_riesgo_mercado_dinero_gestion`
+   y `decision_intensidad_capital`, y va a `evaluacion_temperamento_franquiciador`. **No
+   toca a su hijo por ningun lado.** Queda anotada aqui para que el recomputo del plan la
+   recoja.
