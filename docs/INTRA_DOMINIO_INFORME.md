@@ -11299,3 +11299,250 @@ evoluciono* (2073), *verificar los umbrales de tarifa estado por estado* (2073),
 > **La regla no cambia la vara: la hace contable.** Y como toda vara, se reporta y
 > no se interpreta sola: en un dominio hecho de indice y fichas, como
 > `exportacion`, la vara alta no significo cola pendiente (banco 9.19 y seccion 66.4).
+
+---
+
+## 68. LA TANDA LARGA 2: reporte consolidado de los puestos 1818 a 2117
+
+**300 pares leidos de corrido.** Se aplicaron las doctrinas escritas sin inventar
+ninguna. **No hubo que parar**: nada de lo leido contradice una regla vigente ni
+una cifra publicada con su corte.
+
+### 68.1 CIFRAS
+
+**EL TRAMO, 1818-2117:**
+
+| | pares | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **total del tramo** | **300** | **39** | **0** | **0** | **261** | **13,0%** |
+| `environmental` (cola del dominio) | 124 | 15 | 0 | 0 | 109 | 12,1% |
+| `exportacion` (dominio entero) | 130 | 15 | 0 | 0 | 115 | **11,5%** |
+| `franquicias` (apertura) | 46 | 9 | 0 | 0 | 37 | 19,6% |
+
+> **Ni una B ni una C en trescientos pares.** Todas las lecturas se resolvieron con
+> las doctrinas escritas; ninguna quedo en duda.
+
+**EL MARCADOR GLOBAL AL CORTE, recomputado del archivo (banco 9.10):**
+
+| dominio | puestos | pares | A | tasa | estado |
+|---|---|---:|---:|---:|---|
+| `compras` | 1-155 | 155 | 1 | 0,6% | CERRADO |
+| `core` | 156-1600 | 1.445 | 344 | **23,8%** | CERRADO |
+| `entrega` | 1601-1771 | 171 | 2 | 1,2% | CERRADO |
+| `environmental` | 1772-1941 | 170 | 29 | 17,1% | CERRADO |
+| `exportacion` | 1942-2071 | 130 | 15 | 11,5% | CERRADO |
+| `franquicias` | 2072- | 46 | 9 | 19,6% | **abierto, y va bajando** |
+| **GLOBAL** | 1-2117 | **2.117** | **400** | **18,9%** | abierto |
+
+**Van 2.117 de 3.388, sin huecos. Faltan 1.271.**
+
+**LA VARA (banco 9.6.1) POR TRAMO**, reportada y no interpretada sola:
+
+| tramo | pares | resueltos por la vara | % |
+|---|---:|---:|---:|
+| `environmental` 1818-1941 | 124 | 27 | **21,8%** |
+| `exportacion` 1942-2071 | 130 | 37 | **28,5%** |
+| `franquicias` 2072-2117 | 46 | 12 | **26,1%** |
+| **tramo completo** | **300** | **76** | **25,3%** |
+
+> **Y la vara alta de `exportacion` NO significo cola pendiente** (banco 9.19):
+> ese dominio esta hecho de **un indice y sus fichas**, un nodo que nombra los
+> cinco metodos de pago y un nodo por metodo, un nodo que nombra los documentos y
+> un nodo por documento. Una enciclopedia con indice no es una enciclopedia que se
+> repite.
+
+**LA VARA EN LOS DOS SENTIDOS (banco 9.22): 37 usos**, y su reparto dice algo:
+**27 de los 37 caen en `franquicias`**, que es donde los nodos son mas parecidos
+entre si y donde hubo que medir en las dos direcciones para separarlos.
+
+### 68.2 FIGURAS
+
+**NUEVAS EN ESTA TANDA:**
+
+1. **LA COLA DEL DOMINIO SE AGOTA POR DENTRO.** *(precision adoptada al 9.27)*
+   Un dominio a medio leer no describe al dominio, por la misma razon por la que
+   la global no describe al dominio: la cola esta ordenada por parecido
+   descendente, asi que los pares mas parecidos de cada dominio entran primero.
+   **Medida en tres dominios:** `environmental` 34,5% a 7,3%; `exportacion` 36,0%
+   a 0,0%; `franquicias` 66,7% a 0,0% y sigue abierto.
+
+2. **EL ESQUELETO COMPARTIDO** *(puestos 2001 y 2011)*. Dos nodos con la **misma
+   forma de pasos** y **contenido distinto en cada paso**: el almacen aduanero
+   contra la zona franca, la agencia de pequenos negocios contra el banco de
+   exportacion. **Es lo contrario del subconjunto estricto**: alli los pasos del
+   corto viven dentro del largo y la clase es A; aqui la forma coincide, el
+   contenido no comparte nada y la clase es D.
+
+3. **LAS DOS ADUANAS** *(2008, 2013, 2037, 2054, 2070; cinco veces)*. Lo que el
+   pais destino exige para dejar entrar contra lo que el pais propio prohibe
+   sacar. **Con una asimetria que se repitio en las cinco:** contra la regla ajena
+   hay recurso, una queja formal; contra la propia no.
+
+4. **LOS DOS PARES QUE NO SE CRUZAN** *(1942 y 1969 en A; 2034 y 2059 en D)*.
+   Cuatro nodos de cobro bancario formando dos parejas gemelas. Las dos parejas
+   repiten por dentro; **los dos cruces entre parejas salen D**. Es la forma de un
+   catalogo sano con dos instrumentos distintos.
+
+5. **EL PASO DE OFICIO** *(todo `exportacion`)*. "Consulta con la oficina de
+   comercio exterior" abre media docena de nodos del dominio. **Por si solo no
+   decide ninguna clase** y hubo que descontarlo en cada lectura.
+
+6. **LA BIFURCACION** *(2030 y 2050)*. `certificados_genericos_de_origen` **empieza
+   declarando que no es el otro**: su paso 1 es confirmar que el producto NO
+   califica para ningun tratado. Es la frontera mas limpia que dio el ejercicio:
+   escrita dentro del propio nodo.
+
+7. **EL CASO ESPEJO DE LA VARA** *(2080 y 2105)*. Ver 68.5.
+
+**CRECIDAS EN ESTA TANDA:**
+
+8. **SUBCONJUNTO ESTRICTO: de 12 ejemplares a 23.** Once nuevos en el tramo (1966,
+   1967, 2022, 2043, 2072, 2074, 2075, 2076, 2079, 2087, 2090). **Es la figura
+   dominante de `franquicias`**: ocho de sus nueve A son un nodo que cabe dentro
+   de otro.
+
+9. **ESTRELLAS (banco 9.23): de 6 a 8**, y las dos nuevas caen en el mismo dominio
+   con **orientaciones opuestas**, la primera vez que salen juntas.
+
+| | **OCTAVA, clasica** (2092) | **SEPTIMA, invertida** (2090) |
+|---|---|---|
+| centro | `cinco_categorias_costos_franquicia`, el **largo** | `contratar_abogado_especializado_franquicias`, el **corto** |
+| periferios | `estimacion_inversion_inicial_franquiciador`, `costos_preparacion_franquicia` | `eleccion_abogado_franquicias`, `contratar_abogado_franquicias` |
+| las A | 2074 y 2075: el centro **contiene** a los dos | 2076 y 2090: el centro **esta contenido** en los dos |
+| la D | 2092 | 2086 |
+
+> **En la clasica, un nodo grande fue troceado y cada trozo quedo como nodo. En la
+> invertida, un nodo pequeno fue escrito dos veces con dos ampliaciones
+> distintas.** Dos averias de catalogo distintas, y las dos se detectan igual:
+> contando lo que queda fuera.
+
+### 68.3 NOMINAS Y RACIMOS, con su cobertura al lado (banco 9.26)
+
+**`exportacion` cerro con TRECE actos y ninguna familia mayor.** Doce son ACTO 2 y
+uno es ACTO 3:
+
+| acto | miembros | puestos |
+|---|---|---|
+| **investigacion de mercados** (ACTO 3, **SEXTA ESTRELLA**) | `enfoque_paso_a_paso_investigacion_mercado` centro, `screening_mercados_potenciales`, `evaluacion_mercados_objetivo` | 1966, 1967; la D entre periferios en 1972 |
+| carta de credito | `carta_de_credito_letter_of_credit`, `letters_of_credit` | 1942 |
+| reglamento de exportacion | `export_administration_regulations`, `regulaciones_exportacion_ear` | 1943 |
+| seguro de carga | `seguro_de_carga_transporte`, `seguro_exportacion` | 1947 |
+| terminos de venta | `incoterms_reglas_comerciales_internacionales`, `terminos_de_venta_incoterms` | 1952 |
+| certificado de origen | `certificado_de_origen_tratados_libre_comercio`, `nafta_free_trade_agreements` | 1955 |
+| intermediarios | `intermediarios_exportacion`, `uso_intermediarios_exportacion` | 1957 |
+| canales | `seleccion_canales_distribucion`, `seleccion_canales_exportacion` | 1961 |
+| apoyo a pymes | `ecosistema_global_emprendimiento_gee`, `recursos_apoyo_pymes_sba` | 1963 |
+| cobranza documentaria | `documentary_collections`, `letra_de_cambio_bill_of_exchange` | 1969 |
+| metodo de pago | `prevencion_problemas_de_pago`, `seleccion_de_metodo_de_pago` | 1981 |
+| barreras comerciales | `barreras_comerciales_no_arancelarias`, `cumplimiento_acuerdos_comerciales_tanc` | 1984 |
+| propiedad intelectual | `licenciamiento_tecnologico`, `proteccion_propiedad_intelectual_internacional` | 2022 |
+| apoyo del servicio comercial | `consejos_distrito_exportacion_dec`, `uso_del_us_commercial_service` | 2043 |
+
+> **Ningun acto de `exportacion` paso de tres miembros, y el unico de tres es una
+> estrella.** El dominio no tiene familias: tiene parejas de gemelos con nombre
+> distinto, casi todas por duplicacion de terminologia, `letters_of_credit` contra
+> `carta_de_credito_letter_of_credit`.
+
+**`franquicias`, con 46 de sus pares leidos, lleva SEIS actos**, dos de ellos de
+tres miembros y los dos son estrellas *(ver 68.2)*. Los otros cuatro son ACTO 2:
+terminacion (2072), estrategia hibrida (2079), la primera llamada de ventas
+(2080), el sitio web (2087) y la definicion legal (2105).
+
+> **Ninguna nomina se declaro con el contador solo** (banco 9.20): el barrido de
+> las A corrio en cada caso, y por eso el racimo del abogado se vio entero, tres
+> nodos y tres pares, antes de nombrarlo estrella.
+
+### 68.4 CONDICIONES VIVAS
+
+**CUATRO COLAS ANOTADAS Y ABIERTAS**, escritas en la razon del puesto donde
+aparecieron para que no se pierdan:
+
+| anotada en | la cola | por que importa |
+|---:|---|---|
+| **2006** y **2058** | `clausula_antidesviacion` contra `licencia_exportacion_regulaciones` | ese nodo **si ordena** incluir la declaracion de control de destino en todas las facturas; el par no ha salido |
+| **2027** y **2061** | el racimo de **cuatro nodos del plan de exportacion** | `estructura_`, `plan_accion_`, `elementos_..._ejemplo` y `desarrollo_plan_exportacion`; varios pares sin salir |
+| **2114** | la advertencia de **no financiarse con las cuotas iniciales** | sale ya en tres nodos de `franquicias`; faltan pares cruzados |
+| **67.2** | **`franquicias` esta abierto al 19,6% y bajando** | su tasa **no se puede leer hasta que cierre** |
+
+**UNA CONTRADICCION INTERNA NUEVA, INTRA-FUENTE** *(puesto 2094)*: un nodo manda
+dar **recursos dedicados a los dos canales**, propio y franquiciado, y otro manda
+darlos **exclusivamente a la franquicia** hasta que haya caja excedente. **Puede
+leerse como dos momentos, pero como instruccion chocan.** Va a la lista de
+`PENDIENTES.md`, columna INTRA-FUENTE, y **no decide la clase**: decide
+continua-o-repite, y la D se queda, igual que se adjudico en el 1632.
+
+### 68.5 PENDIENTES DE DOCTRINA
+
+> **NINGUNO.** En trescientos pares no hubo que registrar ni una razon marcada
+> como pendiente de doctrina: **las reglas escritas alcanzaron para todos**.
+
+**Pero SI hay una nota de doctrina para el auditor**, que no es regla nueva sino
+dos reglas aplicadas juntas por primera vez:
+
+> **EL CASO ESPEJO DEL 9.22: la vara vuelve LINEA por los DOS lados.**
+>
+> Hasta hoy el 9.22 se habia usado siempre para **confirmar D**: la vara volvia
+> PROCEDIMIENTO por los dos lados y el par continuaba. **En dos pares de esta
+> tanda volvio LINEA por los dos lados**, que es el caso espejo y da **A**.
+>
+> - **2080**, `proceso_llamada_inicial_venta` contra `proceso_primera_llamada`:
+>   la misma agenda de la misma llamada, **seis pasos coincidentes paso por paso y
+>   en el mismo orden**, con el mismo formulario nombrado igual al final. Cada uno
+>   anade una linea.
+> - **2105**, `comprender_definicion_legal_franquicia` contra
+>   `marco_name_system_fee`: **el mismo test de tres elementos** en el mismo orden
+>   y con el mismo cierre, el abogado. Cada uno anade una linea, el umbral de los
+>   quinientos dolares uno y separar soporte de control el otro.
+>
+> **Ninguno de los dos es subconjunto estricto: ninguno contiene al otro.** Por eso
+> se anota. Y viene con su contraste medido, **2091**, que se leyo **D** con la
+> misma pregunta porque alli el solape es de dos pasos de cuatro y cada nodo sigue
+> hacia un sitio distinto.
+
+**Y con la regla practica que este tramo obligo a escribir** *(seccion 67.6)*: es
+**LINEA** un puntero, una advertencia, un criterio suelto o una accion unica; es
+**PROCEDIMIENTO** un paso que obliga a varias decisiones dentro de si o que se
+repite en el tiempo. **No cambia la vara: la hace contable.**
+
+### 68.6 CORRECCIONES DECLARADAS
+
+**UNA, y toca una regla del banco.**
+
+> **El 9.27 decia que `environmental` "repite mas que el nucleo".** Se escribio el
+> 17 ago 2026 con el dominio a **46 pares leidos y 30,4%**. **Con el dominio
+> CERRADO, repite MENOS: 17,1% contra el 23,8% del nucleo.**
+
+**La cifra de la tabla no era falsa: llevaba su corte escrito al lado**, "46 pares
+leidos", tal como manda el 9.21. **Lo que fallo fue la glosa en prosa**, que leyo
+esa foto como propiedad del dominio: el error exacto que el 9.21 nombra.
+
+**Que se hizo:** la tabla del 9.27 se recomputo del archivo al corte, la glosa se
+corrigio en su sitio con la correccion declarada al lado, y se anadio la
+**PRECISION** que la explica *(la cola del dominio se agota por dentro)*.
+
+**Por que NO se paro el cribado:** no hay contradiccion con una regla vigente ni
+con una cifra publicada con su corte. **Hay una lectura corregida por una
+medicion**, que es exactamente lo que manda el 9.17.
+
+### 68.7 LOS PUESTOS NUEVOS EN A, en orden, para la relectura del auditor
+
+**TREINTA Y NUEVE.**
+
+**`environmental`, cola del dominio (15):**
+`1818, 1822, 1824, 1826, 1828, 1829, 1832, 1836, 1857, 1865, 1871, 1884, 1903, 1905, 1917`
+
+**`exportacion`, dominio completo (15):**
+`1942, 1943, 1947, 1952, 1955, 1957, 1961, 1963, 1966, 1967, 1969, 1981, 1984, 2022, 2043`
+
+**`franquicias`, apertura (9):**
+`2072, 2074, 2075, 2076, 2079, 2080, 2087, 2090, 2105`
+
+**Las cuatro que mas conviene mirar primero**, por si la relectura quiere empezar
+por lo discutible:
+
+| puesto | por que |
+|---:|---|
+| **2080** | primer caso espejo del 9.22; **ninguno contiene al otro** |
+| **2105** | segundo caso espejo, y con su contraste D inmediato en el 2106 |
+| **2022** | la clase se decidio porque lo unico propio del hijo era **un puntero a dos sitios web**; su hermano salio D en el 2012 contra la misma madre |
+| **2043** | el nodo corto **reconoce en su propio paso 1** que la puerta es la misma oficina del nodo largo |
