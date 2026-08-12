@@ -11823,3 +11823,124 @@ entonces.**
 > PROPUESTO. Se aplica porque, releido el par con la doctrina de hoy, la vara dice lo
 > mismo que dice la propuesta.** Aqui coinciden. **Si no hubieran coincidido, se habria
 > escrito la discrepancia y el veredicto se habria quedado como estaba.**
+
+---
+
+## 71. CHECKPOINT 2200 (TANDA DE 500), y el cierre de `franquicias`
+
+**Corte de todas las cifras de esta seccion: puesto 2.219 del archivo.** El checkpoint
+encargado era el del 2.200; se escribe al 2.219 **porque ahi cierra el dominio y
+partirlo en el 2.200 habria dado una cifra de dominio incompleta**. Banco 9.21: toda
+cifra lleva su corte.
+
+### 71.1 EL MARCADOR, RECOMPUTADO DEL ARCHIVO
+
+| clase | corte 2.117 | **corte 2.219** | delta |
+|---|---:|---:|---:|
+| **A** | 401 | **411** | +10 |
+| B | 89 | **89** | 0 |
+| C | 7 | **7** | 0 |
+| **D** | 1.620 | **1.712** | +92 |
+| **TOTAL** | **2.117** | **2.219** | +102 |
+
+**Tasa global de A: 18,5%** (411 sobre 2.219). Venia del 18,9%.
+
+### 71.2 LA TASA POR DOMINIO, que es como se lee (banco 9.27)
+
+| dominio | pares leidos | A | B | C | D | **tasa de A** |
+|---|---:|---:|---:|---:|---:|---:|
+| `compras` | 155 | 1 | 2 | 0 | 152 | **0,6%** |
+| `core` | 1.445 | 344 | 87 | 7 | 1.007 | **23,8%** |
+| `entrega` | 171 | 2 | 0 | 0 | 169 | **1,2%** |
+| `environmental` | 170 | 29 | 0 | 0 | 141 | **17,1%** |
+| `exportacion` | 130 | 15 | 0 | 0 | 115 | **11,5%** |
+| **`franquicias`** | **148** | **20** | **0** | **0** | **128** | **13,5%** |
+
+> **La global no describe a nadie.** Entre `compras` al 0,6% y `core` al 23,8% hay
+> cuarenta veces de diferencia, y el 18,5% del total no es la tasa de ningun dominio:
+> es el peso de `core`, que aporta 1.445 de los 2.219 pares leidos.
+
+### 71.3 CIERRE DE DOMINIO: `franquicias`
+
+**Del puesto 2.072 al 2.219, 148 pares, cerrado.**
+
+| | |
+|---|---:|
+| pares | **148** |
+| A | **20** |
+| B | **0** |
+| C | **0** |
+| D | **128** |
+| **tasa de A** | **13,5%** |
+
+**Correccion declarada sobre la cifra publicada en la seccion 70.** Alli se escribio
+*franquicias del 19,6% al 21,7%*, y era correcto **a su corte**: 10 A sobre 46 pares,
+que eran los unicos leidos del dominio al 2.117. **Con el dominio entero leido la cifra
+final es 13,5%**, no porque la de entonces estuviera mal contada, sino porque **una tasa
+sobre 46 pares de 148 no es la tasa del dominio: es la tasa de su cabecera**. Las dos
+conviven con su corte al lado.
+
+**Fuente unica del dominio:** los 148 pares salen del mismo libro,
+*Franchise Your Business* de Mark Siebert. **La homogeneidad de fuente no bajo la tasa
+por si sola** (`environmental` esta al 17,1%), pero explica la forma de las A: **ninguna
+es un choque entre dos libros, todas son un autor diciendo dos veces lo mismo en dos
+sitios de su propio indice.**
+
+### 71.4 LA VARA POR TRAMO (banco 9.6.1)
+
+**Tramo 2.118 a 2.219: 102 pares, 10 A y 92 D. Tasa del tramo: 9,8%.**
+
+| la vara dijo | pares | como se lee |
+|---|---:|---|
+| **CONTINUA** (trae procedimiento) | **33** | el hijo no cabia en una linea de la madre |
+| **REPITE** (cabe en una linea) | **10** | los 10 A del tramo |
+| no se invoco | 59 | objetos distintos, la vara no hacia falta |
+
+**43 de 102 pares se decidieron con la vara**, y **en los 10 que dieron A el patron es
+el mismo**: el nodo que muere trae **advertencias, criterios sueltos o acciones unicas**,
+nunca un paso con decisiones dentro ni uno que se repita en el tiempo. **La precision
+del 9.6.1 hizo todo el trabajo del tramo**: sin ella, siete de esos diez habrian pasado
+por D.
+
+**Cero PENDIENTE DE DOCTRINA en el tramo.** Ninguna pareja pidio una regla que no
+existiera. **Las escritas alcanzaron**, que es exactamente lo que decia el encargo.
+
+### 71.5 LO QUE EL TRAMO DEJA ANOTADO
+
+| figura | pares | nota |
+|---|---:|---|
+| **ARISTA QUE FALTA** | **24** | madre e hijo sin cable, o hermanas de una misma decision |
+| **RACIMO CANDIDATO** | 8 menciones, **4 racimos** | ver abajo |
+| **Falso hermano** | 4 | 2.184, 2.194, 2.201, 2.219 |
+| **FIGURA DE PERSPECTIVA** | 2 | 2.121 y 2.187 |
+| **SOLAPE DECLARADO** | 2 | 2.178 y 2.193 |
+| **GEMELO por vigilar** | 2 | 2.207 y 2.217 |
+| **PROCEDIMIENTO COMPARTIDO** | 2 | 2.139 y 2.175 |
+| **TENSION DECLARADA** | 1 | 2.193 |
+| **ADVERTENCIA DUPLICADA** | 1 | 2.186 |
+| **LAS DOS RAMAS DE LA BIFURCACION** | 1 | 2.198 |
+
+**LOS CUATRO RACIMOS DE `franquicias`:**
+
+1. **LA FRANQUICIA INADVERTIDA**, el mas cargado: `comprender_definicion_legal_franquicia`,
+   `deteccion_franquicia_inadvertida`, `prevenir_franquicias_inadvertidas` y
+   `estructuras_combinadas_franquicia`. **Cuatro nodos sobre la misma prueba de tres
+   elementos y ni una arista entre ellos.** El cuarto **repitio dos veces** (2.181 y
+   2.207) y los dos del medio son **candidatos a gemelo**.
+2. **EL DINERO DEL FRANQUICIADOR**, cinco miembros con cabeza clara:
+   `cinco_categorias_costos_franquicia` contiene a `estimacion_inversion_inicial_franquiciador`
+   en su paso 2 y a `costos_preparacion_franquicia` en su paso 6; `capitalizacion_adecuada_del_franquiciador`
+   **repitio dos veces** (2.195 y 2.215) y `principio_apalancamiento_numero_magico`
+   es el unico con doctrina propia. **Cero aristas entre los cinco.**
+3. **EL CANAL CORPORATIVO**, cuatro miembros: `mix_ubicaciones_corporativas_franquicia`,
+   `franquicia_mas_crecimiento_corporativo_hibrido`, `estrategia_multicanal_expansion`
+   y `combinar_crecimiento_corporativo_y_franquicia`, que **repitio** en el 2.204.
+4. **EL MENSAJE**: `mensaje_marketing_franquicia`, `multiples_compradores_influyentes`
+   (que es su paso 1 entero) y `motivaciones_reales_franquiciado`.
+
+**Y una silueta medida que sigue creciendo (banco 9.6.1, la mayoria manda):**
+`evaluacion_necesidad_franquiciar` nombra en su paso 6 **tres ventajas** de franquiciar,
+**cada una tiene nodo propio y ninguna tiene arista con la madre**; en el 2.205 aparecio
+**una cuarta ventaja con nodo propio, `rentabilidad_incrementada_franquicia`, que la
+madre ni siquiera nombra**. **Cero de cuatro: la silueta ni acusa ni exculpa, y manda el
+contenido**, que es lo que se hizo en los cinco pares.
