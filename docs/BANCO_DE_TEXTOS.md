@@ -930,6 +930,34 @@ dura y antes que ella en el orden de ejecución.**
 > **Los tres se detectaron consultando, y ninguno llegó al archivo.** Esa es
 > exactamente la función de la regla: **que el error muera en la consulta y no en
 > el registro.**
+
+**CUARTO EJEMPLAR, del 18 ago 2026, y es de otra especie: AFIRMAR UNA BUSQUEDA NO
+HECHA.** Los tres anteriores citaban **un estado del archivo** de memoria. Este cita
+**el resultado de una busqueda**.
+
+| qué decía el dictado | qué había en el grafo |
+|---|---|
+| la línea *dar seguimiento y **apoyo** a quienes caen fuera de las tolerancias* era **el único lugar del catálogo** donde se dice qué se hace con la persona tras absolverla, y **el auditor no encontró ninguno más** | **DOS nodos la cubren, y los dos la desarrollan mejor**, los dos de Deming: `deteccion_de_lideres_y_rezagados`, que **nombra las tres causas a revisar** (equipo, entrenamiento y **salud**) y además manda **replicar los métodos de los de alto desempeño**; y `liderazgo_para_mejora_continua`, cuyo entregable es literalmente **apoyo individualizado basado en datos** |
+
+**LA CONSECUENCIA DE NO HABERLO COMPROBADO habría sido cara y silenciosa:** se habría
+escrito **una prioridad de rescate** para una línea que el catálogo **ya tiene dos veces y
+mejor escrita**. **No es un dato mal citado: es trabajo inventado.**
+
+> **LA NORMA QUE SE ADOPTA, y es la salvaguarda que lo cazó:**
+>
+> **TODA PÉRDIDA DECLARADA DE CATÁLOGO SE RE-VERIFICA CONTRA EL GRAFO, SIN IMPORTAR QUIÉN
+> LA DECLARE.** También cuando quien la declara es **el auditor**, y también cuando dice
+> **haber buscado**.
+>
+> **Por qué no es desconfianza: una búsqueda negativa no se puede citar.** Un estado del
+> archivo se comprueba abriendo el archivo; **una búsqueda que no encontró nada solo se
+> comprueba repitiéndola**, y repetirla cuesta una consulta. **La asimetría es entera: el
+> que busca no puede demostrar que buscó bien, y el que verifica lo resuelve en un
+> minuto.**
+
+**Y LA REGLA TIENE LA MISMA FORMA QUE LA DEL 9.28 Y LA DEL 3% LÉXICO:** una señal que
+parece suficiente (*ya busqué*) **no lo es**, y el remedio es siempre **el mismo y barato**:
+**volver a mirar.**
 >
 > **Y los dos sub-puros no son un fracaso: son la clase de tarea COMPLETAR LOS
 > PARES DEL PURO con el trabajo ya cuantificado**, seis lecturas uno y dos el

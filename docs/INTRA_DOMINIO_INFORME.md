@@ -4917,6 +4917,63 @@ tres fallan, cada una a su modo, y las tres tienen antidoto escrito.**
 > El vocabulario **se queda corto**, el identificador **se pasa de largo**, y la subcadena
 > **se inventa lo que mide**. **Ninguna decide. El veredicto se lee.**
 
+### TANDA R49: dos puestos, DOS DE DOS COINCIDEN
+
+**18 ago 2026. 2.445 y 2.447, las dos coinciden.**
+
+| | |
+|---|---:|
+| relecturas ciegas | **9** (R42 a R49) mas el barrido de direccion |
+| puestos releidos | **23** |
+| caidas | **4** . dentro del marcado **4** . fuera **0** |
+
+#### a. CLASE REGISTRADA: PERDIDA DE LINEA CON MOTIVO DE ALCANCE
+
+> **Lo que muere no es un paso, ni una denominacion: es UNA LISTA DE EJEMPLOS que abria
+> el nodo a lectores de otro rubro.**
+
+**COMO SE DISTINGUE DE LA PERDIDA DE NOMBRE (9.28), que es su vecina:**
+
+| | **perdida de NOMBRE** (9.28) | **perdida de ALCANCE** |
+|---|---|---|
+| que se pierde | **la denominacion del instrumento** | **los ejemplos que lo aterrizan en otros sectores** |
+| el sintoma | el superviviente **no dice la palabra** por la que se busca | el superviviente **dice la palabra**, pero **solo con un ejemplo** |
+| el remedio | el nombre viaja como **denominacion**, una linea | **los ejemplos viajan a la lista del superviviente** |
+
+**EL EJEMPLAR: puesto 2.445.** Muere `estandares_especificos_industria` y sobrevive
+`adaptaciones_sectoriales_iso`, **que si nombra ISO y cGMP** y por eso **no entra en 9.28**.
+Lo que se va son **AS9100 e ISO 14000**.
+
+> **EL REMEDIO, escrito: AS9100 e ISO 14000 ENTRAN A LA MENCION DEL QUE QUEDA.** Su paso 4
+> ya dice *certifica bajo la norma sectorial correspondiente*: basta con que **la
+> enumeracion incluya los tres**, cGMP, AS9100 e ISO 14000. **Es una linea, no un nodo.**
+
+**LA REGLA ESPEJO QUE YA EXISTE ES EL 9.18**, *una regla abolida se busca tambien en su
+espejo*. **La relacion es la misma y conviene tenerla dicha: cuando se funde por contenido,
+hay que mirar tambien lo que el nodo servia de PUERTA**, no solo lo que mandaba hacer.
+**Un nodo puede no aportar ni un paso y seguir siendo por donde entra un lector.**
+
+#### b. EL 2.447, y el titulo espejo como CUARTA CARA
+
+**Perdidas nombradas de `estilo_gerencial_hockey_vs_ballet`:**
+
+| la linea | por que se anota |
+|---|---|
+| **capacitar a los supervisores en tecnicas de comunicacion y coordinacion** | **es la unica accion de FORMACION del par.** El superviviente trae un protocolo de reunion completo **escrito para alguien que ya sabe conducir una reunion** |
+| **fomentar la comunicacion clara y coordinada entre los niveles** | el protocolo del superviviente actua **dentro** de una reunion; esta linea es **entre niveles y fuera de ella** |
+
+**EL TITULO ESPEJO ENTRA A LA FAMILIA DE SENALES DE SUPERFICIE, con su historial:**
+
+| puesto | el par | lectura |
+|---:|---|:---:|
+| **2.221** | `new_view_vs_old_view` contra `old_view_vs_new_view_human_error` | **A** |
+| **2.412** | `capacidad_de_proceso` contra `capacidad_del_proceso` | **D** |
+| **2.447** | `estilo_gerencial_ballet_vs_hockey` contra `estilo_gerencial_hockey_vs_ballet` | **A** |
+
+> **Tres apariciones, dos A y una D: el titulo espejo acierta dos de cada tres.** Queda
+> como **cuarta cara** junto al vocabulario (3%), el identificador (60%) y la subcadena
+> (falso de tres). **Y con la misma conclusion: ordena, no decide.**
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
