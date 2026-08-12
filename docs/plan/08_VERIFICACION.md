@@ -218,3 +218,40 @@ su clase nueva esta adjudicada. **Releerlos seria decidir dos veces lo mismo.**
 > **Y LA COMPROBACION DE QUE ESTA COLA SE CORRIO: al cerrar, ningun par de la lista
 > sigue con su clase vieja apuntando a un nodo que ya no existe.** **Si uno la
 > conserva, es que la relectura no se hizo.**
+
+---
+
+## EL ERROR DE DEJAR PASAR, **YA TIENE TASA MEDIDA**
+
+**Era la linea que le faltaba a esta pagina.** Todo lo que se verifica aqui vigila **el
+error de fundir de mas**: las A se releen, se simulan, se recomputan y se corrigen.
+
+> **EL ERROR CONTRARIO, cuantas D eran en realidad A o B, NO TENIA CIFRA.** Y sin esa
+> cifra, **la tasa de A del cribado no tenia banda por abajo.**
+
+| | |
+|---|---|
+| **la cifra** | **23 de 24 sostienen su D: 95,8%** |
+| **el intervalo** | **Wilson al 95%: entre 79,8% y 99,3%** |
+| **el error de dejar pasar** | **4,2%**, banda **de 0,7% a 20,2%** |
+| **proyeccion sobre las 1.621 D** | **unas 68**, banda de **14 a 333** |
+| **fecha de corte** | **12 ago 2026, archivo al puesto 2.117** |
+| **metodo** | **muestra pineada y estratificada, leida A CIEGAS.** Pin en `PIN_MUESTRA_D.txt`, semilla 20260812, instrumento `scripts/plan/muestra_d.py` |
+| **el detalle** | [`CONTROL_MUESTRA_D.md`](CONTROL_MUESTRA_D.md) |
+
+**Y LO UNICO QUE CAYO NO CAYO POR ERROR DE LECTURA: cayo por una regla que se escribio
+DESPUES.** `P.11` es del 12 ago 2026 y el veredicto es del puesto 2.078. **Eso es
+DERIVA MEDIDA DE LA DOCTRINA, y se cuenta aparte.**
+
+### LO QUE ESTA LINEA OBLIGA A PARTIR DE HOY
+
+| | |
+|---|---|
+| **1** | **toda tasa de A que se publique lleva esta banda al lado**, o se esta publicando media cifra |
+| **2** | **el control se repite despues del recomputo**, con la misma semilla y el mismo metodo, para ver si la deriva creció |
+| **3** | **si la banda hay que estrecharla, son unas cien lecturas**, y **eso es una decision de alcance del fundador** |
+
+> **Y LA REGLA DE LECTURA QUE ESTE CONTROL DEJA, porque el propio control la aprendio:
+> UNA MUESTRA QUE SOLO ENCUENTRA FALLOS AJENOS NO ES UNA MUESTRA.** En una de las
+> veinticuatro **el archivo tenia razon y el relector no**, y **eso esta escrito con su
+> puesto**.

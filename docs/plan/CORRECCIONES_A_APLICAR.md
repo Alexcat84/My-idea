@@ -389,3 +389,43 @@ abierta.
 > **UN CERO SOBRE 24 LECTURAS NO ES UN CERO, ES UN TECHO.** Se escribe *no vi
 > ninguno en 24, techo 11,7%*, **nunca** *no hay*. Es el banco 9.21 aplicado a la
 > clase vacia: **la cifra lleva su corte, y el cero lleva su banda.**
+
+---
+
+## CORRECCION 8. **UN VOLTEO PROPUESTO: EL PUESTO 2.078**
+
+**Sale del control de la muestra pineada de las D**, 12 ago 2026. **Es el UNICO de
+veinticuatro que cae**, y **se propone, no se aplica: la sesion A decide.**
+
+**EL PAR:** `elaboracion_fdd` contra `preparar_fdd`, franquicias, **clase actual D**.
+
+**LO QUE DICE LA RAZON VIEJA:** *cada uno trae DOS pasos que el otro no tiene. Por eso
+CONTINUA en los dos sentidos, banco 9.22.*
+
+**LO QUE DICE LA LECTURA A CIEGAS DE HOY, con la vara y no con el conteo:**
+
+| nodo | lo propio | que es |
+|---|---|---|
+| `elaboracion_fdd` | asegurar que **todas las cuotas esten divulgadas**; **documentar la entrega** con la pagina de recibo | **DOS LINEAS**: un criterio y una accion unica |
+| `preparar_fdd` | incluir el contrato y los documentos accesorios; **preparar o crear una entidad corporativa nueva con estados financieros auditados** | una linea **y un PROCEDIMIENTO** |
+
+> **Por la vara del banco 9.6.1, lo que `elaboracion_fdd` anade CABE EN LINEAS.** Y por
+> **`P.11` del banco del plan**, *una advertencia es linea, no procedimiento*, con su
+> pregunta de aplicacion: **quitale al nodo lo que es puntero, criterio suelto o accion
+> unica, y mira si lo que queda es un procedimiento.** **No queda ninguno.**
+
+**LA PROPUESTA, y va con su superviviente ya medido:**
+
+| | |
+|---|---|
+| **clase propuesta** | **A**, y si la sesion A prefiere ser conservadora, **B** |
+| **superviviente** | **`preparar_fdd`**, porque es el unico que trae un procedimiento propio |
+| **perdidas que viajan** | las dos lineas de `elaboracion_fdd`: **la divulgacion completa de cuotas y fuentes de ingreso**, y **documentar la entrega con la pagina de recibo**, que es **lo unico del par que sirve para probar el cumplimiento despues** |
+| **los ids** | `elaboracion_fdd` y `preparar_fdd` son **la misma cosa en dos verbos**: van a la **DECISION 4** |
+
+> **Y LA HONESTIDAD DEL CASO, que hay que decir para que la sesion A pese bien: ESTO NO
+> ES UN ERROR DEL CRIBADO. Es deriva de doctrina.** La razon vieja **cuenta pasos** y la
+> vara **los pesa**, y la precision que lo hace explicito, `P.11`, **se escribio
+> veinticuatro dias despues del veredicto.**
+
+**LO QUE NO SE HIZO:** no se toco el veredicto. **El archivo sigue diciendo D.**

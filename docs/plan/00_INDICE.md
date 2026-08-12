@@ -259,6 +259,7 @@ en vez de forzarse.**
 | [`EXPEDIENTE_MESA_COLEMAN.md`](EXPEDIENTE_MESA_COLEMAN.md) | **la segunda mesa, YA ADJUDICADA**: serie declarada en siete operaciones hijas | **cerrada** |
 | [`EXPEDIENTE_MESA_PIVOTE.md`](EXPEDIENTE_MESA_PIVOTE.md) | **la tercera mesa, YA ADJUDICADA**: dos puertas mas un acto, siete nodos a tres | **cerrada** |
 | [`EXPEDIENTE_MESA_UNIDA.md`](EXPEDIENTE_MESA_UNIDA.md) | **la cuarta mesa y la grande**, con sus dos correcciones de entrada, para adjudicar | escrita |
+| [`CONTROL_MUESTRA_D.md`](CONTROL_MUESTRA_D.md) | **el control del error de dejar pasar**: 23 de 24 D sostienen, con su banda | **medido** |
 | [`FRONTERAS_DECLARADAS.md`](FRONTERAS_DECLARADAS.md) | **el registro de las fronteras de disposicion**: tres ejemplares, y ninguna se funde | escrita |
 | [`LD_MESA_UNIDA.md`](LD_MESA_UNIDA.md) | **las 26 lecturas dirigidas de la mesa unida**, ejecutadas, con su saldo | **ejecutada** |
 | [`EXPEDIENTE_MESA_M05.md`](EXPEDIENTE_MESA_M05.md) | **la quinta y ultima mesa, YA ADJUDICADA**: dos etapas, quince a cero | **cerrada** |
@@ -281,6 +282,7 @@ operacion esperaba estan hechas.**
 | **las lecturas que bloqueaban** | **hechas**: `LD-58` a `LD-65`, ocho en dos encargos del mismo dia |
 | **el acto de seis** | **leido entero**, quince pares de quince. **El unico del plan** |
 | **la unica pendiente** | **`OP-U-02`**, y su disparador es el puesto **3.388** |
+| **el control que faltaba** | **hecho**: el error de dejar pasar es **4,2%**, banda de **0,7% a 20,2%** |
 
 ## LO ULTIMO QUE SE CERRO, y como
 

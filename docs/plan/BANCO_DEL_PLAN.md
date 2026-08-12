@@ -687,3 +687,69 @@ LISTA**. Es barato: **es leer el texto del superviviente con la lista al lado.**
 > **Y ES DE LA MISMA FAMILIA QUE P.9: las dos dicen que lo escrito el dia de la
 > decision hay que releerlo el dia de la ejecucion.** Una lo dice de los ids, la otra
 > de las perdidas.
+
+---
+
+## COROLARIO DE P.13: **UNA FUSION QUE CRECE RE MIDE TAMBIEN A SU SUPERVIVIENTE**
+
+**Registrado el 12 ago 2026.**
+
+> **P.13 dice que al cambiar la nomina se recomprueban las PERDIDAS. El corolario dice
+> que tambien se recomprueba EL SUPERVIVIENTE.**
+
+**Y no es lo mismo, porque el superviviente se elige por P.8 CONTRA LOS QUE ESTABAN.**
+Meter un miembro nuevo **puede cambiar quien contiene a quien y quien aporta mas**, sin
+que ninguna lectura cambie.
+
+### EL EJEMPLAR: EL TRIO DE GATES
+
+| | nomina | superviviente | por que |
+|---|---|---|---|
+| **como trio** | `requisitos_gates_con_dientes`, `estructura_gates`, `estructura_de_gates` | **`requisitos_gates_con_dientes`** | contenia a los otros dos y aportaba el puente al portafolio y la revision post lanzamiento |
+| **como camarilla de cinco** | los tres mas `sistema_gates_go_kill` y `gates_go_kill_decision_points` | **`sistema_gates_go_kill`** | el veredicto 801 mide **TRES piezas propias suyas contra DOS** del otro, sobre un eje que se repite entero |
+
+> **Ninguna lectura cambio. Cambio la nomina, y con ella el ganador.**
+
+**LO QUE ESTO OBLIGA:** cuando una fusion absorbe a otra o gana un miembro, **se
+vuelve a correr P.8 EN ORDEN sobre la nomina nueva**, contenido primero. **No se
+hereda el superviviente de la operacion pequena.**
+
+> **LA FORMA CORTA: EL SUPERVIVIENTE ES UNA PROPIEDAD DE LA NOMINA, NO DEL NODO.**
+
+---
+
+## FIGURA: **COBRAR UNA A SIN FUNDIR**
+
+**Nombrada el 12 ago 2026 con el sexto de gates, y es la plantilla para todo nodo
+mixto que `P.12` deje fuera de una fusion.**
+
+> **Una A es un dato y no una orden.** Dice **que hay un bloque que repite**, no **que
+> los nodos sean el mismo nodo.**
+
+### LA PLANTILLA, en tres pasos
+
+| | |
+|---|---|
+| **1. EL ENLACE** | una arista **de la madre al hijo**, **una sola direccion**, en el sentido que diga la jerarquia |
+| **2. LA PODA DEL SOLAPE** | **el bloque que la A senala DEJA DE REFORMULAR** lo que el otro desarrolla, **y pasa a citar la arista** |
+| **3. LO PROPIO SE QUEDA** | lo que las D senalan **no se toca**: es el motivo de que el nodo viva |
+
+**EL EJEMPLAR:** `gestion_de_portafolio_gates_go_kill`, con **dos A y tres D** contra
+la misma familia. **Sus dos A se cobran en la poda** de su paso 2, *establecer gates
+formales con criterios visibles*, **que es el bloque que reformula la idea general de
+la puerta**. **Sus tres D son el motivo de que viva**: el embudo, los seis criterios y
+el balance del portafolio.
+
+### POR QUE ESTO NO ES UNA FUSION A MEDIAS
+
+**Una fusion resuelve la repeticion BORRANDO UN NODO. Esta la resuelve BORRANDO UN
+BLOQUE.** El resultado en el catalogo es el mismo por el lado que importa, **la
+instruccion deja de estar dos veces**, y **se conserva lo que la fusion habria
+arrastrado**.
+
+> **Y EL COSTE DE NO HACERLO ES DOBLE: el catalogo se queda con el bloque repetido Y
+> sin la arista.** Es exactamente el estado en que la mesa unida encontro sus dos
+> mitades: **once jerarquias sin cablear y un bloque diciendo lo mismo dos veces.**
+
+**CUANDO SE APLICA:** siempre que `P.12` deje un nodo mixto fuera de la fusion. **No es
+una excepcion: es lo que hay que hacer con el que se queda.**

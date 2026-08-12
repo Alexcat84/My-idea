@@ -1,0 +1,38 @@
+PIN DEL SORTEO DE LA MUESTRA DE LAS D
+Escrito el 12 ago 2026 ANTES de mirar un solo veredicto.
+
+QUE SE CONTROLA: EL ERROR DE DEJAR PASAR. Todo el plan mide el error de fundir de
+mas (las A se releen, se simulan y se verifican). NADIE HA MEDIDO NUNCA el error
+contrario: cuantas D del archivo eran en realidad A o B. Sin esa cifra, la tasa de
+A del cribado no tiene banda por abajo.
+
+POBLACION: los veredictos de clase D de docs/INTRA_DOMINIO_VEREDICTOS.jsonl al
+corte 2.117. Son 1.621 de 2.117, el 76,6%.
+
+ESTRATIFICACION: proporcional a la poblacion de D por dominio, con reparto por
+resto mayor. core 15, entrega 2, compras 2, environmental 2, exportacion 2 y
+franquicias 1. TOTAL 24.
+
+SEMILLA: 20260812
+METODO: dentro de cada estrato, los D se ordenan por puesto_intra y se sortean con
+random.Random(20260812 + indice_del_estrato).sample(...). El indice del estrato es
+su posicion en la lista ordenada alfabeticamente de dominios, empezando en cero.
+El sorteo es reproducible palabra por palabra.
+
+LECTURA A CIEGAS, y este es el control de verdad:
+  1. se vuelcan SOLO los dos nodos (titulo, entregable y pasos). La razon del
+     veredicto viejo NO se mira.
+  2. se adjudica con la vara de hoy y con las trece reglas del banco del plan.
+  3. SOLO DESPUES se destapa la razon vieja y se compara.
+Sin ese orden el control no vale: leer la razon primero es leer la respuesta.
+
+QUE SE VA A REPORTAR:
+  - cuantas SOSTIENEN su D
+  - cuantas CAERIAN a A o a B con las doctrinas de hoy
+  - de las que caen, CUANTAS POR REGLAS QUE NO EXISTIAN cuando se leyeron.
+    ESO NO ES ERROR DEL CRIBADO: ES DERIVA MEDIDA DE LA DOCTRINA, y se cuenta aparte.
+  - la tasa con su intervalo de Wilson al 95%.
+
+QUE NO SE VA A HACER: NO SE TOCA NI UN VEREDICTO. Esto es un CONTROL, no una
+correccion. Si alguno amerita volteo, va a CORRECCIONES_A_APLICAR.md para la
+sesion A con su evidencia, y la sesion A decide.
