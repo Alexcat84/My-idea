@@ -474,9 +474,30 @@ sola.**
 | pendientes | **1**, `OP-U-02` |
 | reglas del banco del plan | **15** |
 | fronteras declaradas | **5** |
-| entradas del inventario | **335** |
-| lecturas dirigidas **hechas** | **61** |
-| lecturas dirigidas **encargadas y sin hacer** | **4**, las de Adopt y Advocate (`LD-28` a `LD-31`), que no bloquean nada |
+| entradas del inventario | **336** |
+| lecturas dirigidas **hechas** | **65** |
+| lecturas dirigidas **encargadas y sin hacer** | **CERO** |
 | **corte del archivo** | **2.117 de 3.388** |
 
 > **`OP-U-02` no espera una decision: espera un puesto.**
+
+## CONFIRMACION FINAL, 12 ago 2026
+
+> **EL PLAN NO TIENE NINGUNA LECTURA PENDIENTE QUE NO SEA DEL DISPARADOR DEL
+> RECOMPUTO.**
+
+**Las cuatro que quedaban, `LD-28` a `LD-31`, se ejecutaron el 12 ago 2026 y las cuatro
+salieron D.** **Sesenta y cinco lecturas dirigidas hechas, cero encargadas.**
+
+**Lo unico que sigue en la lista de lecturas es lo que viaja CON el recomputo, y ni una
+de esas bloquea nada:**
+
+| | |
+|---|---|
+| **el lote del sales roadmap** | cinco pares, para cerrar una nomina con cobertura incompleta |
+| **la cola de relectura post fusion** | siete pares, con disparador mecanico |
+| **`OP-E-07`** | ciento un lecturas **de frase**, no de par: la clase ya esta decidida |
+| **`OP-E-03`** | la diferencia contra la cola, que se computa el dia que cada dominio cierre |
+
+> **Ninguna de esas es una lectura que falte: son lecturas que TOCAN CUANDO TOQUE.**
+> **La diferencia esta escrita y es la que cierra esta sesion.**

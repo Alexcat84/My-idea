@@ -20,9 +20,9 @@ racimo, acto, familia de ids, figura y defecto.
 | **racimo** | **13** |
 | **acto** | **221** |
 | **familia_de_ids** | **53** |
-| **figura** | **19** |
+| **figura** | **20** |
 | **defecto** | **19** |
-| **TOTAL** | **335** |
+| **TOTAL** | **336** |
 
 ---
 
@@ -117,7 +117,7 @@ que se sabe con la cobertura que tiene.**
 | **la supervision de la IA** | PARTIDO 5 mas 4 mas 1 | 14 de 45 al puesto 1517 | en mesa, particion PROVISIONAL |
 | **la mesa unida de puertas y portafolio** | DOS MITADES con frontera declarada, y una sola fusion dentro | 49 de 136 | MESA ADJUDICADA el 12 ago 2026: LAS DOS MITADES QUEDAN, con frontera adoptada |
 | **el racimo del pivote** | SIETE NODOS A TRES: dos puertas y el acto al que las dos llevan | 13 de 21 | MESA ADJUDICADA el 12 ago 2026: DOS PUERTAS MAS UN ACTO |
-| **la serie de Coleman** | MEZCLADO | 41 de 378 | MESA ADJUDICADA el 12 ago 2026, siete operaciones hijas |
+| **la serie de Coleman** | MEZCLADO | 45 de 378 | MESA ADJUDICADA el 12 ago 2026, siete operaciones hijas |
 
 > **TRES SUB-PUROS CAYERON EL 11 ago 2026 al cerrarse su cobertura**: los
 > cuadrantes, la ecuacion de valor y el bloque humano de la IA. **Los tres pasaron
@@ -228,6 +228,7 @@ el catalogo produce y que hay que saber distinguir.**
 | **la perdida que cambia de dueno** | 15 reclasificadas | UNA PERDIDA SE DECLARA CONTRA UN PAR Y SE COBRA CONTRA UNA NOMINA. Cuando la nomina cambia, toda perdida listada se recomprueba y la que viva dentro se reclasifica con su dueno. PASADA CORRIDA EL 12 ago 2026 SOBRE LAS QUINCE FUSIONES CON PERDIDAS: 15 reclasificadas de 47. TRES CLASES: VIAJA, la pieza no esta en ningun nodo vivo de la nomina; VIVE DENTRO, ya esta en el superviviente o en otro que sobrevive, y se tacha; YA NO APLICA, era de un nodo que dejo de entrar en la fusion y se la queda. POR QUE IMPORTA Y NO ES BUROCRACIA: una perdida falsa OBLIGA A INJERTAR EN EL SUPERVIVIENTE ALGO QUE YA ESTA, y asi es como se fabrica una repeticion nueva el dia de la pasada. La operacion que limpia seria la que ensucia. DOS PERDIDAS APARECIERON QUE NADIE HABIA LISTADO, y las levanto el mismo recomputo: los ENTREGABLES de la camarilla de cinco, que el superviviente no tiene y tres de los que mueren si, y LAS DOS ADVERTENCIAS de gates_go_kill_decision_points, que por P.11 son linea para la vara y perdida para la fusion. |
 | **cobrar una A sin fundir** | 1 ejemplar | PLANTILLA PARA TODO NODO MIXTO QUE P.12 DEJE FUERA DE UNA FUSION. Una A es un dato y no una orden: dice que hay un bloque que repite, no que los nodos sean el mismo nodo. TRES PASOS: (1) el enlace, una arista de la madre al hijo en una sola direccion; (2) la poda del solape, el bloque que la A senala deja de reformular y pasa a citar la arista; (3) lo propio se queda, porque es el motivo de que el nodo viva. NO ES UNA FUSION A MEDIAS: una fusion resuelve la repeticion BORRANDO UN NODO y esta la resuelve BORRANDO UN BLOQUE. El resultado por el lado que importa es el mismo, la instruccion deja de estar dos veces, y se conserva lo que la fusion habria arrastrado. EL COSTE DE NO HACERLO ES DOBLE: el catalogo se queda con el bloque repetido Y sin la arista, que es el estado en que la mesa unida encontro sus dos mitades. |
 | **el superviviente es de la nomina, no del nodo** | 1 ejemplar | UNA FUSION QUE CRECE RE MIDE TAMBIEN A SU SUPERVIVIENTE. P.13 recomprueba las perdidas al cambiar la nomina; el corolario recomprueba al superviviente, porque se elige por P.8 CONTRA LOS QUE ESTABAN. EJEMPLAR: el trio de gates elegia requisitos_gates_con_dientes porque contenia a los otros dos; como camarilla de cinco gana sistema_gates_go_kill, porque el veredicto 801 mide tres piezas propias suyas contra dos. NINGUNA LECTURA CAMBIO: cambio la nomina, y con ella el ganador. No se hereda el superviviente de la operacion pequena. |
+| **el forastero por cableado** | 2 ejemplares | UN NODO ENTRA A UNA NOMINA POR EL NOMBRE Y SE QUEDA FUERA POR TODO LO DEMAS: sus lecturas contra la nomina salen sanas y sus aristas apuntan a otro vecindario. DOS EJEMPLARES. (1) tacticas_cierre_ventas, llamado durante mucho tiempo el octavo miembro del racimo del cierre: seis lecturas, una sola contra miembros del cierre y sale D, y su unica A es con un nodo que no es del cierre. Tiene su propio acto de dos. (2) incentivos_no_monetarios_advocacy, en la serie de Coleman por fuente y por nombre: CUATRO lecturas contra la serie y LAS CUATRO D (LD-28, LD-30, LD-31 y su cruce), y sus dos aristas van a equity_crowdfunding_terminos y a coeficiente_viral, o sea al mundo del crecimiento viral. COMO SE DETECTA: cuando una nomina se cierra por lectura, el forastero es el miembro que sale sano contra TODOS los demas. Y el cableado lo confirma sin ambiguedad: no comparte ni un vecino con el resto. POR QUE IMPORTA: un forastero no es un error del catalogo, es un error de la NOMINA. El nodo esta bien; lo que esta mal es la lista donde se le puso, y mientras siga ahi TODA FORMA que se calcule sobre esa nomina sale peor de lo que es. |
 
 ---
 

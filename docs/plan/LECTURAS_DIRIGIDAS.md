@@ -525,7 +525,20 @@ leidos y los CUATRO restantes estan FUERA DE COLA:**
 > **Las cuatro son LECTURA DIRIGIDA: no entran en la cola y no mueven el marcador
 > del cribado.**
 
-## LA CONDICION ESCRITA, que es lo que queda si las lecturas no se hacen
+## **EJECUTADAS EL 12 ago 2026, Y LAS CUATRO SALEN D**
+
+**Van enteras en [`LD_ADOPT_ADVOCATE.md`](LD_ADOPT_ADVOCATE.md).** Con ellas, **de los
+seis pares posibles entre los cuatro nodos, los SEIS estan leidos y los SEIS son D**.
+
+> **NI ADOPT NI ADVOCATE GANAN EVIDENCIA PARA EL TRATAMIENTO DE AFFIRM: LA GANAN EN
+> CONTRA.** Las dos se quedan con dos nodos, **y ahora las dos por el mismo motivo
+> medido.**
+
+**Y aparece una condicion nueva, del cableado y no de la lectura:**
+`incentivos_no_monetarios_advocacy` **es candidato a salir de la nomina**, porque sus
+cuatro lecturas contra la serie son D y **sus dos aristas apuntan fuera de ella**.
+
+## LA CONDICION ESCRITA, que era lo que quedaba si las lecturas no se hacian
 
 > **NINGUNA DE LAS DOS FASES SE TOCA.** `fase_adopt`, `fase_adopt_ciclo_cliente`,
 > `advocacy_customer_journey` e `incentivos_no_monetarios_advocacy` **llegan al
