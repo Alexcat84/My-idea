@@ -12483,3 +12483,203 @@ corte al lado** (banco 9.21).
    y `decision_intensidad_capital`, y va a `evaluacion_temperamento_franquiciador`. **No
    toca a su hijo por ningun lado.** Queda anotada aqui para que el recomputo del plan la
    recoja.
+
+
+---
+
+## 75. REPORTE CONSOLIDADO DEL TRAMO 2.301 A 2.376, y la prediccion del 2.300 cumplida
+
+**Corte: puesto 2.376.** El encargo pedia del 2.301 al 2.617, 317 pares. **Van 76.** La
+seccion 75.8 nombra lo que falta. **Ninguna cifra de aqui se lee como cifra del encargo
+entero.**
+
+### 75.1 CIFRAS
+
+| | |
+|---|---:|
+| pares leidos en el tramo | **76** |
+| A | **12** |
+| B | **0** |
+| C | **0** |
+| D | **64** |
+| **tasa de A del tramo** | **15,8%** |
+
+**Archivo global al corte 2.376: A 451, B 89, C 7, D 1.829 sobre 2.376. Tasa 19,0%.**
+
+### 75.2 LA PREDICCION DEL CHECKPOINT 2.300, CUMPLIDA Y MEDIDA
+
+La seccion 72.2 escribio, con `health_safety` al **37,0%** y 111 pares sin leer:
+
+> *La cifra puede moverse, y no en cualquier direccion: la cola del dominio baja de
+> similitud semantica, y en todos los dominios anteriores la tasa cae conforme baja la
+> similitud. **La cifra de cierre sera mas baja que 37,0%.** Cuanto, no se sabe hasta
+> leerla.*
+
+**Se leyeron 76 pares mas. Esto es lo que paso:**
+
+| corte | pares leidos de `health_safety` | A | **tasa** |
+|---|---:|---:|---:|
+| 2.300 | 81 de 192 | 30 | **37,0%** |
+| **2.376** | **157 de 192** | **42** | **26,8%** |
+| el tramo nuevo solo (2.301 a 2.376) | 76 | 12 | **15,8%** |
+
+> **La direccion acerto y la magnitud es grande: el tramo nuevo entrega menos de la mitad
+> de la tasa del anterior, 15,8% contra 37,0%, y arrastra el acumulado del dominio del
+> 37,0% al 26,8%.** Con 35 pares por leer, la cifra de cierre **seguira bajando**.
+>
+> **Y esto vuelve a decir lo mismo que la seccion 71 y la 72: una tasa parcial no es la
+> tasa de un dominio.** El 37,0% publicado al 2.300 era correcto **a su corte** y hoy
+> sobreestima el dominio en mas de diez puntos. **La regla ya no es una advertencia: esta
+> medida dos veces, en `franquicias` y en `health_safety`.**
+
+**Por que baja.** En la cabecera del dominio los pares eran **el mismo concepto extraido
+dos veces** (ids con sufijo `_2`, titulos espejo, preposiciones de diferencia). En la
+cola los pares son **objetos distintos que comparten vocabulario**: el fuego contra la
+intoxicacion (2.370), el escalon contra el agujero (2.373), entender contra cumplir
+(2.361), el deber del que organiza contra el derecho del que ejecuta (2.358).
+
+### 75.3 LA VARA POR TRAMO (banco 9.6.1)
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **8** |
+| **REPITE** | **12** |
+| no se invoco | **56** |
+
+**Solo 20 de 76 pares necesitaron la vara**, contra 81 de 183 en la tanda anterior. **Es
+el mismo hecho contado de otro modo: en la cola del dominio la mayoria de los pares no
+son madre e hijo ni gemelos, son cosas distintas que comparten palabras**, y para eso la
+vara no hace falta.
+
+**Cero PENDIENTE DE DOCTRINA en 76 pares.** Ninguna pareja pidio una regla que no
+existiera. **En los 259 pares leidos desde el 2.118, cero.**
+
+### 75.4 FIGURAS
+
+**Nuevas de este tramo:**
+
+| figura | puesto | que es |
+|---|---|---|
+| **LOS DOS SENTIDOS DEL MISMO INSTRUMENTO** | 2.323 | Tripod-Beta va **hacia atras** desde un accidente y Tripod-Delta va **hacia adelante** sin que haya pasado nada, con el mismo vocabulario de GFT. Un checklist de **220 items, 20 por GFT, trimestral** |
+| **HERMANOS DE UNA MISMA MADRE** | 2.316 | dos hijos que abren **lineas distintas** de la misma madre, y por eso no se pisan |
+| **LAS DOS CARAS DE LA MISMA DECISION** | 2.327 | `abandonar_arreglos_rapidos` dice **que no es un arreglo** y `hard_fixes_organizacionales` dice **que si lo es** |
+| **A POR FUSION MUTUA** | 2.368 | los dos repiten y **ninguno domina**; el superviviente lo decide el racimo. Segundo caso del archivo tras el 2.127 |
+
+**Crecidas:** **ARISTA QUE FALTA en 34 de 76 pares**, casi la mitad; **SOLAPE DECLARADO
+en 15**; **FIGURA DE PERSPECTIVA 1** (2.329, el desajuste entre autoridad y
+responsabilidad **escrito en primera persona del que ejecuta y en primera persona del que
+organiza**); **dos siluetas medidas** (75.5).
+
+### 75.5 NOMINAS, RACIMOS Y SILUETAS
+
+**Racimos que crecieron:** la medicion que corrompe lo medido pasa a **5** miembros
+(`cuestionar_vision_zero`, `responsabilidad_hacia_abajo_vs_rendicion_de_cuentas`,
+`limitaciones_ltif_indicador`, `medidas_proceso_vs_resultado`,
+`metas_de_seguridad_correctas`); las defensas a **6** con `trayectoria_del_accidente`;
+las condiciones latentes a **5**; la cultura coordinadora a **3**.
+
+**Dos siluetas medidas (banco 9.6.1, la mayoria manda):**
+
+1. **`identificacion_evaluacion_peligros` tiene CUATRO hermanos leidos** que abren sus
+   lineas: recopilacion (paso 1, **con arista**), inspeccion (paso 2, sin), investigacion
+   (paso 4, sin) y emergencias y no rutinarias (sin). **Uno de cuatro es mitad o menos:
+   la silueta ni acusa ni exculpa y mando el contenido**, que es lo que se hizo en los
+   cuatro.
+2. **`prevencion_control_peligros` dice en una linea *desarrollar un plan de
+   implementacion*, tiene DOS hijos leidos** (`plan_control_peligros` e
+   `implementacion_controles`) **y no enlaza con ninguno.**
+
+**Precision sobre una silueta ya publicada (2.341):** la seccion 73.3 dijo que
+`hoist_auxiliary_equipment_safety` enlaza con dos de sus tres hermanos y no con
+`powered_industrial_trucks_safety`. **Sigue siendo cierto, y ahora se sabe por que: el
+montacargas cuelga de `materials_handling_safety`, no del hoist.** La familia tiene **dos
+centros y no uno**.
+
+### 75.6 CONDICIONES VIVAS
+
+1. **`errores_como_consecuencia` cae en A por NOVENA vez** (2.242, 2.261, 2.267, 2.303,
+   2.311, 2.347, 2.362, 2.368 y 2.371). **Es la marca del archivo, y la lectura que deja
+   es precisa: no es duplicado de nadie, es EL ENUNCIADO DE LA DOCTRINA SIN NINGUN
+   INSTRUMENTO**, y por eso pierde contra cualquiera que traiga uno.
+2. **Y la serie NO es mecanica, y hay prueba: el puesto 2.345 la rompe.** Contra
+   `atribucion_retrospectiva_del_error`, que trabaja **la etiqueta** y no **la busqueda**,
+   este mismo nodo **si aporta** (buscar sistematicamente los factores del lugar de
+   trabajo y organizacionales) **y quedo en D**. Nueve A y una D, decididas cada una por
+   lo que el otro nodo traia.
+3. **`vieja_vision_vs_nueva_vision_seguridad` cae en A por TERCERA vez** (2.253, 2.309,
+   2.352). Cuatro verbos sin contenido: diagnosticar, migrar, comunicar, redisenar.
+4. **`human_error_como_sintoma` llega a TRES**, y con el **la perdida que viaja ya se
+   anoto tres veces**: la instruccion de **redisenar la herramienta en vez de entrenar a
+   la persona** es la unica accion correctiva directa del racimo, y en el 2.310 viaja
+   hacia un nodo que es **analisis puro, sin un solo paso de remedio**.
+5. **`health_safety` sigue abierto**, 157 de 192, **26,8% y bajando**.
+
+### 75.7 LAS 12 A NUEVAS, con las discutibles marcadas
+
+| puesto | muere | sobrevive |
+|---|---|---|
+| 2.303 | `errores_como_consecuencia` | `enfoque_situacional_vs_personal` |
+| 2.309 | `vieja_vision_vs_nueva_vision_seguridad` | `cultura_de_seguridad_interpretivista_funcionalista` |
+| 2.310 | `human_error_como_sintoma` | `new_view_human_error` |
+| 2.311 | `errores_como_consecuencia` | `error_humano_vs_falla_mecanica` |
+| 2.328 | `reglas_parada_investigacion_accidentes` | `limite_busqueda_causas_pendulo` |
+| **2.335** | `condiciones_latentes_largo_plazo` | `caso_descarrilamiento_nakina` |
+| **2.338** | `cuestionar_vision_zero` | `metas_de_seguridad_correctas` |
+| 2.347 | `errores_como_consecuencia` | `seduccion_modelo_persona` |
+| 2.352 | `vieja_vision_vs_nueva_vision_seguridad` | `new_view_vs_old_view` |
+| 2.362 | `errores_como_consecuencia` | `new_view_human_error` |
+| **2.368** | **fusion mutua** | ninguno domina |
+| 2.371 | `errores_como_consecuencia` | `principios_gestion_error` |
+
+**LAS TRES MAS DISCUTIBLES:**
+
+1. **2.335.** Sobrevive **un estudio de caso** (`caso_descarrilamiento_nakina`, un
+   descarrilamiento con una falla latente de 76 anos) y muere **la doctrina general** que
+   sale de el. Por contenido la vara manda: el caso trae **el analisis geotecnico
+   profundo frente a la inspeccion visual**, que es lo unico del par que dice como se
+   encuentra una condicion latente enterrada. **Pero la fusion tiene que conservar el
+   titulo generico**, o la regla queda colgada de un descarrilamiento concreto.
+2. **2.338.** El que muere es **el unico nodo del catalogo que nombra la Vision Cero**, y
+   su linea de **no usar el cero como excusa retroactiva para decir que todo era
+   evitable** es el unico puente entre esta familia y la del sesgo retrospectivo. **La
+   vara manda por contenido; la fusion tiene que conservar las dos cosas.**
+3. **2.368.** **Fusion mutua sin superviviente**: cada uno anade dos lineas y ninguno
+   trae procedimiento. **Lo que se pierde si nadie lo mira: el nivel organizacional
+   explicito, el entrenamiento contra el sesgo de atribucion, y la instruccion de usar el
+   hallazgo para cambiar el sistema y no para senalar.**
+
+### 75.8 LO QUE FALTA, y donde se retoma
+
+**Van 76 de 317. Faltan 241 pares, del 2.377 al 2.617.**
+
+| tramo | dominio | pares | estado |
+|---|---|---:|---|
+| 2.377 a 2.411 | `health_safety` | **35** | pendiente; **cierra el dominio y fija su cifra final** |
+| 2.412 a 2.617 | `quality` | **206** | pendiente; **abre el dominio**, que no cierra aqui |
+
+**Checkpoints pendientes: 2.400, 2.500 y 2.600.**
+
+**LA PREDICCION SOBRE `quality`, escrita antes de leer un solo par.** El barrido paso
+contra nodo dejo **742 candidatos** en `docs/PASO_NODO_CANDIDATOS.jsonl`, y asi se
+reparten:
+
+| dominio | candidatos | **sin arista** |
+|---|---:|---:|
+| **`quality`** | **323** | **296** |
+| `core` | 298 | 229 |
+| `environmental` | 32 | 32 |
+| `franquicias` | 29 | 27 |
+| `health_safety` | 27 | 16 |
+| resto | 33 | 24 |
+
+> **`quality` tiene mas candidatos que `core`, y `core` tiene diez veces mas pares en la
+> cola.** Si el barrido acierta, **la cola de `quality` deberia entregar madre e hijo, no
+> gemelos**: muchos **CONTINUA** por linea desplegada y muchas **ARISTA QUE FALTA**, con
+> una tasa de A mas parecida a la cola de `health_safety` (15,8%) que a su cabecera
+> (37,0%). **Queda escrito antes de leer para que se pueda comprobar despues.**
+
+**El archivo esta en 2.376 sin huecos ni duplicados.** Se retoma en el **2.377** con
+`python scripts/volcar_pares.py 2377 2385` y se registra con
+`python scripts/registrar_veredictos.py`.
+
+**Cero nodos tocados en todo el tramo. Modo de cierre respetado entero.**
