@@ -134,3 +134,31 @@ el de SPIN (`framework_spin_selling`, `metodologia_spin_selling`, `modelo_spin`,
 **LO UNICO QUE HAY QUE FIJAR**: quien dispara el recomputo y con que instrumento.
 **Y por la regla P.1, ese instrumento RESUELVE ANTES DE CONTAR**, o contara los ya
 absorbidos como nodos vivos.
+
+---
+
+## EL PRIMER ACTO CON DECISION ESCRITA: **LA JUNTA ASESORA**
+
+**`OP-M-04`, adjudicada el 11 ago 2026, y sale de la lista de actos abiertos.**
+
+> **NO SE FUNDE EN UNO: SE FUNDE EN DOS Y SE ENLAZAN.** Cuatro nodos, cuatro pares
+> en A, **y aun asi la decision no es una fusion de cuatro.**
+
+| | |
+|---|---|
+| **fusion 367** | sobrevive `identificar_consejo_asesores`, **por el paso 6**, la unica linea de los cuatro que entrega el testigo |
+| **fusion 328** | sobrevive `formalizar_junta_asesora`, **por DESEMPATE POR CABLEADO**: contenido empatado, y es el unico nodo conectado con el otro lado |
+| **el enlace** | la escalera de identificar hacia formalizar. **Medido: el grafo tenia la cuerda de VUELTA, no la de ida** |
+| **el congelado 1190** | **se libera sin cirugia**: el superviviente conserva el paso 6, formalizar sigue siendo hijo, la D se confirma |
+
+> **LA LECCION PARA EL RESTO DE LA FASE 03, y es la que mas caro sale si se ignora:**
+> **una componente de cuatro nodos en A no obliga a una fusion de cuatro.** Aqui los
+> cuatro A formaban **dos parejas separadas por una etapa del proyecto**, y **una
+> regla mecanica las habria fundido borrando la secuencia.**
+
+> **EL DETECTOR, en una linea: ANTES DE FUNDIR, MIRAR SI HAY UNA LINEA QUE ENTREGUE
+> EL TESTIGO.** Si un nodo dice *esto se hace mas adelante*, **no es gemelo del que
+> lo hace mas adelante: es su madre.**
+
+**El detalle entero esta en**
+[`EXPEDIENTE_MESA_JUNTA_ASESORA.md`](EXPEDIENTE_MESA_JUNTA_ASESORA.md).

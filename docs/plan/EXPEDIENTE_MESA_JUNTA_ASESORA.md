@@ -1,8 +1,12 @@
 # EXPEDIENTE DE MESA: `OP-M-04`, LA JUNTA ASESORA
 
-**LA PRIMERA MESA QUE SE SIENTA.** Se prepara el 11 ago 2026 para **adjudicacion
-del auditor**, y va **sin recomendacion nueva**: aqui esta todo lo que hay, en
-crudo, para que **las tres decisiones se tomen en un solo acto**.
+**LA PRIMERA MESA QUE SE SIENTA, Y LA PRIMERA ADJUDICADA.** Se preparo el 11 ago
+2026 sin recomendacion nueva, y **el auditor la adjudico el mismo dia**. **La
+adjudicacion esta al final de este expediente**, y `OP-M-04` es **LISTA**.
+
+> **Lo que sigue hasta la seccion 6 es el expediente TAL COMO SE ENTREGO**, en
+> crudo y sin recomendacion, para que la decision se pueda auditar contra lo que
+> habia sobre la mesa.
 
 > **MODO DE CIERRE VIGENTE: este expediente no toca ni un nodo. Es papel.**
 
@@ -282,3 +286,152 @@ duplicacion*.
 
 > **UNICA DEPENDENCIA HACIA ARRIBA: NINGUNA.** Esta mesa **no espera a nadie**, y es
 > la razon por la que se sienta primero. **Lo que cuelga de ella es el 1190.**
+
+---
+
+# LA ADJUDICACION DEL AUDITOR . **11 ago 2026**
+
+> **LA MESA QUEDA CERRADA. `OP-M-04` PASA A LISTA.** Lo que sigue no es una
+> propuesta: **es la operacion.**
+
+## a. LA FORMA DEL ACTO: **DOS FUSIONES MAS UN ENLACE**
+
+**NO es una fusion de cuatro.** Son **dos parejas de gemelos unidas por una
+ESCALERA**, y **fundir todo borraria la secuencia identificar y despues formalizar**,
+que es una secuencia real separada por una etapa entera.
+
+## b. FUSION DEL 367: sobrevive **`identificar_consejo_asesores`**
+
+**Por el paso 6**, que es **la unica linea de los cuatro nodos que entrega el
+testigo**.
+
+**Y el gemelo de cuatro pasos no aporta nada propio**, medido paso por paso:
+
+| paso de `identificar_junta_asesores` | donde vive |
+|---|---|
+| 1. identificar clientes o expertos que destaquen | **ya en la madre**, paso 1 |
+| 2. invitarlos a almuerzos o reuniones informales | **ya en la madre**, paso 2 |
+| 4. buscar asesores tecnicos, introducciones, dominio | **ya en la madre**, pasos 3 y 5 |
+| **3. evaluar su interes en convertirse en asesores formales** | **SOLAPE con formalizar** |
+
+> **Y ESA DISTINCION HAY QUE ESCRIBIRLA: EL PASO 3 MUERE COMO SOLAPE Y NO COMO
+> PERDIDA.** No se pierde contenido: **se deja de decir dos veces.** Una perdida se
+> registra y viaja; **un solape se poda y no viaja a ninguna parte.**
+
+## c. FUSION DEL 328: sobrevive **`formalizar_junta_asesora`**, por **DESEMPATE POR CABLEADO**
+
+**El contenido esta empatado**, y lo dice el propio veredicto 328: *los ids son el
+mismo nombre en dos idiomas y los pasos coinciden*. **Cuando el contenido empata, el
+desempate lo da el grafo**: `formalizar_junta_asesora` es **el unico nodo del acto
+que esta conectado con el otro lado**.
+
+**LAS CUATRO PERDIDAS QUE VIAJAN**, de `formalize_advisory_board` al superviviente:
+
+| | la perdida |
+|---:|---|
+| 1 | **el mapa de asesores por area**: tecnico, negocio, cliente, industria, marketing |
+| 2 | **priorizar calidad sobre cantidad**: reclutar solo a quien tenga impacto estrategico real |
+| 3 | **sumar clientes potenciales clave** por su mirada de compra |
+| 4 | **la opcion de invertir en acciones preferentes**, junto al stock comun con vesting |
+
+**VERIFICACION EXPLICITA DE LA ENTRADA POR `customer_discovery`**, que el auditor
+pidio nombrar. **Medido el 11 ago 2026:**
+
+> `customer_discovery.nodos_siguientes` tiene **HOY las dos**:
+> `formalizar_junta_asesora` **y** `formalize_advisory_board`. **Tras la fusion las
+> dos resuelven al superviviente, asi que la entrada NO SE PIERDE**, y **queda
+> DUPLICADA**, que es exactamente lo que limpia `OP-S-12`.
+
+**Las otras tres entradas de `formalize_advisory_board` se redirigen por alias sin
+incidencia**: `hire_data_analytics_chief`, `customer_validation_sell_phase` y la
+propia `customer_discovery`.
+
+## d. EL ENLACE, y **aqui la medicion corrigio la premisa**
+
+**LO QUE SE PIDIO REGISTRAR:** que la arista bidireccional existente resuelve por
+alias hacia la madre y **se convierte en el enlace buscado**, porque **el grafo ya
+tenia la cuerda**.
+
+**LO QUE MIDE `scripts/plan/mesa_junta_verificacion.py`, simulando las dos fusiones
+sobre una copia en memoria:**
+
+| lo comprobado | resultado |
+|---|---|
+| la arista **no es bidireccional** | es **UNA dirigida**, `formalizar_junta_asesora` hacia `identificar_junta_asesores`, **declarada en los dos extremos**. Eso es lo que el veredicto 712 llamo *en los dos sentidos* |
+| **sobrevive a la fusion** | **SI**: resuelve limpia a `formalizar_junta_asesora` hacia `identificar_consejo_asesores` |
+| **es la direccion de la escalera** | **NO. Es la contraria** |
+| la direccion de la escalera, `identificar_consejo_asesores` hacia `formalizar_junta_asesora` | **NO EXISTE hoy ni aparece tras resolver**, en ninguno de los dos campos del superviviente |
+
+> **LA CUERDA QUE EL GRAFO YA TENIA ES LA DE VUELTA, NO LA DE IDA.** Y por la
+> instruccion misma del auditor, *anadir la direccion que falte solo si falta tras
+> resolver*, **la de ida se anade**: es la unica arista nueva de esta operacion.
+
+**RESIDUO NOMBRADO, y se ejecuta asi salvo contraorden.** Quedan **las dos
+direcciones** entre madre e hijo, o sea **un ciclo de dos**. El plan lo tolera por
+escrito, porque `OP-S-12` declara que el mismo destino en los dos campos **no es
+duplicado sino ida y vuelta**. **Pero entre una madre y su hijo, la vuelta dice que
+despues de formalizar viene identificar**, que es lo contrario de lo que esta mesa
+acaba de decidir.
+
+> **LA ALTERNATIVA, si el auditor la prefiere, es UNA LINEA: girar la existente en
+> vez de anadir la que falta.** Se deja escrita para que la decision cueste una
+> palabra y no una relectura.
+
+## e. LA PODA DEL SOLAPE
+
+> **El paso 1 del superviviente de formalizar deja de repetir la busqueda** y
+> **parte del entregable de la madre**, que es **la lista de prospectos**, **citando
+> la arista**.
+
+**Antes:** *identificar clientes potenciales clave descubiertos en customer discovery
+para invitarlos a la junta asesora*. **Eso es el trabajo de la madre**, y la madre lo
+hace mejor: **cinco pasos para llegar a esa lista.**
+
+> **Y es la unica poda de la operacion.** El paso 3 del gemelo del 367 ya murio en la
+> fusion; **este es el solape que queda entre las dos parejas**, y es el que la
+> escalera vuelve innecesario: **con la arista puesta, el hijo no tiene que volver a
+> buscar. Recibe.**
+
+## f. EL 1190 SE LIBERA **SIN CIRUGIA**
+
+**El superviviente conserva el paso 6**, asi que **formalizar sigue siendo su hijo y
+la D se confirma. SALE DE CONGELADOS.**
+
+> **CASO POSITIVO DE LA OPERACION**, y es la verificacion que la manda:
+> **releido el par 1190 tras la ejecucion, TIENE QUE DAR D POR LA VARA.** **Si diera
+> A, la fusion 367 conservo el nodo equivocado**, y hay que deshacerla.
+
+**Era el unico congelado del banco 9.9 que dependia de una mesa.** La trampa que lo
+congelaba era *depende de lo que sobreviva*; **la mesa la desarma no eligiendo mejor,
+sino eligiendo OTRA FORMA: si no hay fusion de cuatro, no hay superviviente unico del
+que depender.**
+
+## g. D4: **EL EJEMPLAR DE FAMILIA DE IDS RESUELTA POR MESA**
+
+**Las dos parejas quedan como el ejemplar**: `consejo` contra `junta`, y `formalize`
+contra `formalizar`. **La misma cosa nombrada en dos idiomas y con dos sustantivos.**
+
+**Los alias cargan los ids que mueren:**
+
+| superviviente | alias que carga despues |
+|---|---|
+| `identificar_consejo_asesores` | **`identificar_advisory_board`** *(el que ya tenia)* **mas `identificar_junta_asesores`** |
+| `formalizar_junta_asesora` | **`formalize_advisory_board`** |
+
+> **Y ESO ES LO QUE HACE A ESTA MESA UN EJEMPLAR Y NO UN CASO: la familia de ids no
+> se resolvio por regla mecanica, se resolvio LEYENDO.** `OP-S-09` funde familias por
+> continua o repite; **aqui la lectura encontro que la familia de cuatro era en
+> realidad DOS familias de dos, separadas por una etapa del proyecto.** **Una regla
+> mecanica habria fundido las cuatro y habria borrado la escalera.**
+
+## LO QUE ESTA MESA LE DEJA AL PLAN
+
+| | |
+|---|---|
+| **`OP-S-12` se corre DESPUES** | esta mesa **genera dos duplicadas** de su clase, medidas: `customer_discovery.nodos_siguientes` y `verificar_product_market_fit.nodos_previos`. **Es la confirmacion de su regla de orden** |
+| **un congelado menos** | el 1190 sale, y **sin cirugia** |
+| **un acto con decision** | el primero del plan |
+| **la figura** | **los cuatro A forman un cuadrado y los dos unicos D salen del mismo nodo.** `identificar_consejo_asesores` es el unico que no repite con los dos de formalizar, **y su diferencia es exactamente UN PASO** |
+
+> **UN SOLO PASO SEPARA UN GEMELO DE UNA MADRE.** Es la leccion que esta mesa manda
+> al resto: **antes de fundir, mirar si hay una linea que entregue el testigo.**

@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA COMPLETO: ONCE FASES, 47 OPERACIONES, 41 LISTAS. LAS SEIS PENDIENTES SON LAS CINCO MESAS Y UN RECOMPUTO CON FECHA, Y LA PRIMERA MESA YA TIENE SU EXPEDIENTE ESCRITO.**
+**EL PLAN ESTA COMPLETO: ONCE FASES, 47 OPERACIONES, 42 LISTAS. QUEDAN CUATRO MESAS Y UN RECOMPUTO CON FECHA: LA PRIMERA MESA YA ESTA ADJUDICADA Y LA SEGUNDA TIENE SU EXPEDIENTE ESCRITO.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -27,6 +27,13 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > lecturas***. Las dos nominas que faltaban, **el pivote y la serie de Coleman**,
 > estan medidas y escritas en sus mesas. Y **el puro de la competencia entre
 > inversores DEGRADA a sub-puro** con correccion declarada.
+>
+> **SEPTIMA PASADA, el mismo dia: SE SIENTA LA PRIMERA MESA Y SE ADJUDICA.**
+> `OP-M-04` pasa a LISTA con **dos fusiones mas un enlace**, y **un solo paso separa
+> un gemelo de una madre**. **El unico congelado que dependia de una mesa sale sin
+> cirugia.** La medicion corrigio la premisa del enlace: **el grafo tenia la cuerda de
+> vuelta, no la de ida**. Y la mesa de **Coleman** ya tiene expediente, con su nomina
+> corregida a **28**.
 >
 > **SEXTA PASADA, el mismo dia: LA BASURA QUE EL RESOLUTOR TAPABA.** Tirando del
 > hilo de las diez aristas por alias de Coleman salieron **1.056 entradas duplicadas
@@ -66,8 +73,8 @@ el JSONL discrepan, manda el JSONL.
 | | |
 |---|---:|
 | operaciones | **47** |
-| **LISTAS** | **41** |
-| **DECISION PENDIENTE** | **6** |
+| **LISTAS** | **42** |
+| **DECISION PENDIENTE** | **5** |
 
 | fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
@@ -77,13 +84,15 @@ el JSONL discrepan, manda el JSONL.
 | **03 FUSIONES** | 2 | **1** | 1 |
 | **04 ENLACES** | 3 | **3** | 0 |
 | **05 SANEO** | 12 | **12** | 0 |
-| **06 MESAS** | 5 | 0 | **5** |
+| **06 MESAS** | 5 | **1** | **4** |
 | **07 ADUANA** | 2 | **2** | 0 |
 | **08 VERIFICACION** | 1 | **1** | 0 |
 | **09 LECTURAS DIRIGIDAS** | 3 | **3** | 0 |
 | **10 INVENTARIO** | 1 | **1** | 0 |
 
-> **LAS SEIS PENDIENTES SON LAS CINCO MESAS Y UN RECOMPUTO CON FECHA.** `OP-U-02`
+> **LAS CINCO PENDIENTES SON CUATRO MESAS Y UN RECOMPUTO CON FECHA.** **`OP-M-04`,
+> la junta asesora, quedo ADJUDICADA el 11 ago 2026**: dos fusiones mas un enlace, y
+> **el congelado 1190 se libera sin cirugia**. `OP-U-02`
 > espera al dia en que el cribado llegue al puesto **3.388**, y su disparador esta
 > escrito en `08_VERIFICACION`. **Ninguna es un dato que falte.**
 >
@@ -211,7 +220,8 @@ en vez de forzarse.**
 | [`RECORTE_POSICIONAL.md`](RECORTE_POSICIONAL.md) | el recorte de P.2 corrido sobre **los 55 libros**: 67 nodos candidatos, seis libros | escrita |
 | [`LECTURAS_DIRIGIDAS.md`](LECTURAS_DIRIGIDAS.md) | los pares que la cola **no traera nunca**: 205 medidos, **27 leidos** en dos tandas | escrita |
 | [`10_INVENTARIO.md`](10_INVENTARIO.md) | **el inventario navegable**: 325 entradas por sujeto, con sus huecos nombrados | escrita |
-| [`EXPEDIENTE_MESA_JUNTA_ASESORA.md`](EXPEDIENTE_MESA_JUNTA_ASESORA.md) | **el expediente de la primera mesa que se sienta**, sin recomendacion, para adjudicar | escrita |
+| [`EXPEDIENTE_MESA_JUNTA_ASESORA.md`](EXPEDIENTE_MESA_JUNTA_ASESORA.md) | **la primera mesa, YA ADJUDICADA**: dos fusiones mas un enlace, con la adjudicacion al final | **cerrada** |
+| [`EXPEDIENTE_MESA_COLEMAN.md`](EXPEDIENTE_MESA_COLEMAN.md) | **la segunda mesa**, sin recomendacion nueva donde no la hay, para adjudicar | escrita |
 | [`03_FUSIONES.md`](03_FUSIONES.md) | 221 actos sobre 576 nodos, corte 2117, marcado para recomputo | escrita |
 | [`04_ENLACES.md`](04_ENLACES.md) | 477 candidatos tras calibrar, tasa medida en 46 lecturas, mas los sueltos de racimos | escrita |
 | [`06_MESAS.md`](06_MESAS.md) | cinco mesas con nomina, dependencia y opciones con evidencia | escrita |

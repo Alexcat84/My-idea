@@ -33,7 +33,12 @@ print()
 # proyectos y solo tiene a Coleman de segunda casa.
 RXF = re.compile(r"assess|admit|affirm|activate|acclimate|accomplish|adopt|advoca"
                  r"|ocho_fases|ocho fases|8_fases|ocho etapas", re.I)
-MED = re.compile(r"correo|email|video|regalo|gift|carta|postal|llamada|telefon|sms|mensaje|evento|herramienta", re.I)
+# CORREGIDO el 11 ago 2026: la lista vieja no tenia MEDIO ni CANAL, y dejaba fuera
+# a seis_medios_comunicacion_cliente, que es LA CABEZA de la serie de medios.
+# Lo levanto el veredicto 948, no el contador: por eso los dos instrumentos.
+MED = re.compile(r"correo|email|video|regalo|gift|carta|postal|llamada|telefon|sms|mensaje"
+                 r"|evento|herramienta|medios_comunicacion|seis_medios|canales_comunicacion"
+                 r"|multicanal|sorprender", re.I)
 serie = []
 for k in prim + seg:
     v = VIV[k]; t = v.get("titulo_concepto") or ""

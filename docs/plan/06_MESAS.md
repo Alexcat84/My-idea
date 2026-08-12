@@ -59,6 +59,14 @@ frontera vieja.**
 
 ## APERTURA . `OP-M-02`, LA SERIE DE COLEMAN
 
+> **SU EXPEDIENTE COMPLETO YA ESTA ESCRITO:**
+> [`EXPEDIENTE_MESA_COLEMAN.md`](EXPEDIENTE_MESA_COLEMAN.md), del 11 ago 2026, **sin
+> recomendacion nueva donde no la hay**. Trae la correccion de la nomina a **28**, el
+> reparto por fase, **los veredictos en crudo de las cinco fases dobles y los tres
+> dudosos**, el desempate del 326 **por cableado, trece contra tres**, y la regla de
+> orden **medios antes que fases** con su evidencia. **Para adjudicar se lee el
+> expediente.**
+
 ### LO PRIMERO QUE ESTA MESA TIENE QUE SABER: **LA FASE 3 YA ESTA FUNDIDA, Y AGUANTA**
 
 > **Esta mesa no debate una propuesta. Debate REPETIR ALGO QUE EL GRAFO YA HIZO Y
@@ -276,7 +284,16 @@ las dos recibe media biblioteca.
 
 ## APERTURA . `OP-M-04`, LA JUNTA ASESORA
 
-> **ESTA MESA SE SIENTA PRIMERA, Y SU EXPEDIENTE COMPLETO YA ESTA ESCRITO:**
+> ## **ADJUDICADA EL 11 ago 2026. `OP-M-04` ES LISTA.**
+>
+> **DOS FUSIONES MAS UN ENLACE, no una fusion de cuatro.** Sobrevive
+> `identificar_consejo_asesores` en el 367, por el paso 6 que entrega el testigo, y
+> sobrevive `formalizar_junta_asesora` en el 328, **por desempate por cableado**. **El
+> 1190 se libera sin cirugia.** La adjudicacion entera, con sus siete puntos y la
+> correccion que la medicion hizo a la premisa del enlace, esta al final del
+> expediente.
+
+> **SU EXPEDIENTE COMPLETO:**
 > [`EXPEDIENTE_MESA_JUNTA_ASESORA.md`](EXPEDIENTE_MESA_JUNTA_ASESORA.md), del 11 ago
 > 2026. **Va sin recomendacion nueva**: trae los pasos de los cuatro nodos, los seis
 > veredictos en crudo, las aristas actuales y las tres decisiones que se toman **en
