@@ -14646,6 +14646,77 @@ accion elijan los proyectos, y negociar recursos entre niveles hasta el acuerdo)
 > claras del dominio: **sin el pacto, el reparto es una orden; sin el reparto, el pacto no
 > tiene sobre que.**
 
+### TANDA R54: dos puestos, DOS DE DOS COINCIDEN
+
+**18 ago 2026. 2.465 y 2.467, las dos coinciden.**
+
+| | |
+|---|---:|
+| relecturas ciegas | **14** (R42 a R54) mas el barrido de direccion |
+| puestos releidos | **31** |
+| caidas | **4** . dentro del marcado **4** . fuera **0** |
+
+#### EL 2.465: LA COMPROBACION TAMBIEN ABSUELVE, y es la tercera vez
+
+**Se marco por sospecha de perdida de nombre** (el metodo se busca por **DMADV**) **y por
+la duda del id**. **Las dos partes se comprueban y las dos absuelven.**
+
+| lo sospechado | lo verificado |
+|---|---|
+| el superviviente **no dice DMADV** | su titulo es **DFSS y Metodologia DMADV**: la denominacion **vive en el texto** |
+| **muere el id** `design_for_six_sigma_dmadv`, que es por donde entra el grafo | **esa es la funcion medida del alias**: el id muerto queda en `ids_alias` y **las aristas siguen resolviendo** (§31.3, las 27 auto-aristas) |
+
+> **PERDIDA DE NOMBRE: CERO.** El alias **no cubre la busqueda del lector** (banco 9.28) **y
+> si cubre la entrada del grafo**, que es exactamente lo que se necesitaba aqui. **Las dos
+> mitades del problema tienen cada una su mecanismo, y en este par los dos estan cubiertos.**
+
+**TERCERA VEZ QUE UNA COMPROBACION BARATA EVITA UN REGISTRO FALSO, y las tres en `quality`
+o su vispera:**
+
+| puesto | lo que se iba a escribir | lo que dijo el grafo |
+|---:|---|---|
+| **2.414** | arista candidata al COPQ | **la arista ya estaba puesta** |
+| **2.440** | perdida de catalogo con prioridad de rescate | **el catalogo lo tiene dos veces y mejor** |
+| **2.465** | perdida de nombre, DMADV | **la denominacion esta en el titulo y el alias cubre el grafo** |
+
+> **Las tres absoluciones costaron una consulta cada una.** Es la misma economia que la
+> disciplina del dictado ya tenia escrita: **el error muere en la consulta y no en el
+> registro.**
+
+#### EL 2.467: SEGUNDO EJEMPLAR DE SALVAGUARDA
+
+Muere `regla_todo_o_nada_inspeccion` y se lleva *anota tu decision y **sigue revisando con
+cartas de control que la fraccion de defectos se mantenga estable***.
+
+> **Se adosa AL PASO DE DECISION**, el de comparar p contra k1 partido k2. Sin el freno,
+> **ese paso se resuelve una vez y queda fijo**: el superviviente **supone que p sigue donde
+> estaba y no manda comprobarlo.**
+>
+> **Dos ejemplares en seis pares** (2.461 y 2.467) **y los dos protegen un paso de
+> DECISION**, no uno de ejecucion. **Es la firma de la clase.**
+
+### LA QUINTA CARA DE LAS SENALES DE SUPERFICIE: EL SINONIMO TRADUCIDO
+
+**Registrada el 18 ago 2026, SIN CIFRA, y esperando su segundo caso.**
+
+| la senal | la medicion | como falla |
+|---|---|---|
+| **el vocabulario** | 34 de 46, **1 lo era: 3%** | **no ve el parecido** |
+| **el identificador** | 8 pares, **2 A: 25%** (re-medido) | **ve parecido donde no lo hay** |
+| **la subcadena** | 3 detectados, **1 falso** | **inventa la senal** |
+| **el titulo espejo** | 3 apariciones, **2 A: 67%** | **acierta dos de cada tres** |
+| **EL SINONIMO TRADUCIDO** | **1 caso: el 2.464** | **invisible para las cuatro anteriores** |
+
+> **`cero_defectos` contra `zero_defects_concepto` son el mismo concepto y NO comparten
+> raiz de id, ni vocabulario suficiente, ni titulo espejo.** Ninguna de las cuatro senales
+> lo empareja: **lo emparejo la similitud semantica de la cola, y lo resolvio la lectura.**
+>
+> **Un caso no es una cifra**, asi que la quinta cara **queda anotada y sin porcentaje.**
+> **Lo que si se puede decir ya: el catalogo mezcla castellano e ingles en los ids del
+> mismo concepto**, y **eso es un riesgo para cualquier deduplicacion que se apoye en la
+> forma del nombre**, que es justo lo que la advertencia de aduana de PENDIENTES pide
+> evitar.
+
 **El archivo esta en 2.456 sin huecos ni duplicados. Cero nodos tocados.**
 
 
