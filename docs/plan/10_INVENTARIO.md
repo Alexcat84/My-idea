@@ -21,8 +21,8 @@ racimo, acto, familia de ids, figura y defecto.
 | **acto** | **221** |
 | **familia_de_ids** | **53** |
 | **figura** | **12** |
-| **defecto** | **15** |
-| **TOTAL** | **324** |
+| **defecto** | **16** |
+| **TOTAL** | **325** |
 
 ---
 
@@ -228,6 +228,7 @@ el catalogo produce y que hay que saber distinguir.**
 
 | defecto | cuantos | estado | operaciones |
 |---|---:|---|---|
+| **aristas duplicadas tras resolucion** | 1056 | reparado en el plan | `OP-S-12`, `OP-C-05` |
 | **aristas que faltan** | 477 | pendiente, BOLSA RECALIBRADA y tasa MEDIDA | `OP-E-01`, `OP-E-03` |
 | **grafias no canonicas del campo fuente** | 129 | reparado en el plan | `OP-S-11` |
 | **alias huerfanos** | 77 | reparado en el plan | `OP-S-08` |
@@ -244,7 +245,7 @@ el catalogo produce y que hay que saber distinguir.**
 | **racimos con miembro de otro dominio** | 3 | pendiente | `OP-E-02` |
 | **tratado extinto en id y titulo** | 1 | reparado en el plan | `OP-S-01` |
 
-> **11 de los 15 ya tienen operacion LISTA en el plan.** Los 4 pendientes son: **costuras internas confirmadas** (46), **aristas que faltan** (477), **racimos con miembro de otro dominio** (3), **gemelos que el cribado no ve** (73).
+> **12 de los 16 ya tienen operacion LISTA en el plan.** Los 4 pendientes son: **costuras internas confirmadas** (46), **aristas que faltan** (477), **racimos con miembro de otro dominio** (3), **gemelos que el cribado no ve** (73).
 
 > **Y el mas nuevo de todos es el ultimo de esa lista: los GEMELOS QUE EL CRIBADO NO
 > VE.** Aparecio el 11 ago 2026 leyendo la bolsa calibrada, **no se busco**, y son

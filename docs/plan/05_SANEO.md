@@ -536,3 +536,106 @@ Thing About Hard Things* **en la misma linea**.
 puede convertir un nodo de UN libro en uno de DOS**, y el predictor de costuras
 separa justamente por ahi. **Mientras el campo no este limpio, el 91% contra 4% no
 se puede usar para nada que no sea ordenar una cola.**
+
+---
+
+## `OP-S-12`: **LAS ARISTAS DUPLICADAS TRAS RESOLUCION** . **LISTA**
+
+**MEDIDO EL 11 ago 2026** con `scripts/plan/aristas_duplicadas_tras_resolver.py`,
+sobre los **3.521 nodos vivos**. **Salio de tirar del hilo de las diez de Affirm.**
+
+**QUE ES LA CLASE.** Un campo de aristas que **lista el id viejo y el nuevo**, y los
+dos **resuelven al mismo destino**. No es un fallo del resolutor: **es basura que
+dejo cada fusion**, que reescribio la referencia **y ademas conservo la vieja.**
+
+| | |
+|---|---:|
+| nodos vivos revisados | 3.521 |
+| **nodos con al menos una duplicada** | **802** *(22,8% del catalogo vivo)* |
+| **entradas que SOBRAN** | **1.056** |
+| grupos afectados (nodo mas campo mas destino) | 1.015 |
+
+> **LAS DIEZ DE AFFIRM ERAN LA PUNTA: hay CIENTO CINCO VECES MAS.** Y no estaban
+> escondidas: **nunca se habian contado**, porque el resolutor las tapa y el grafo
+> se ve bien desde fuera.
+
+**POR MOTIVO, y el reparto es casi total:**
+
+| motivo | entradas |
+|---|---:|
+| **el id nuevo mas su alias** en la misma lista | **1.053** |
+| dos alias del mismo destino, sin el literal | **3** |
+
+**Los tres del segundo motivo, nombrados**, porque son los unicos donde el id bueno
+**no esta**: `cero_defectos` lista dos grafias de `definicion_calidad_conformidad`;
+`definicion_calidad_conformidad` lista dos de `rejilla_madurez_gestion_calidad`; y
+`market_type_revenue_growth` lista `revalidar_modelo_negocio` y
+`revalidacion_modelo_negocio`, **las dos del mismo destino y ninguna es el destino.**
+
+**POR CAMPO, y esta repartido por igual**: `nodos_previos` **531**,
+`nodos_siguientes` **525**. **No es un defecto de un lado del grafo.**
+
+**POR DOMINIO:**
+
+| dominio | nodos tocados | duplicadas |
+|---|---:|---:|
+| `core` | 370 | **461** |
+| `quality` | 214 | **306** |
+| `health_safety` | 79 | 121 |
+| `environmental` | 53 | 59 |
+| `franquicias` | 48 | 55 |
+| `exportacion` | 32 | 48 |
+| `risk_management` | 3 | 3 |
+| `entrega` | 2 | 2 |
+| `seguridad_digital` | 1 | 1 |
+
+**POR TAMANO DEL GRUPO**: 981 grupos con **una** entrada de mas, 29 con dos, 4 con
+tres y **uno con cinco**. **La cola larga es de a una**, lo que confirma el
+mecanismo: **cada fusion deja una.**
+
+**EL PEOR EJEMPLAR, y merece leerse entero.** `doble_significado_calidad` tiene en
+`nodos_siguientes` **SEIS entradas que van todas a `definicion_calidad_conformidad`**:
+`definicion_calidad_conformidad_requisitos_2`, `definicion_calidad_como_conformidad`,
+`definicion_calidad_conformidad_requisitos_3`,
+`definicion_calidad_conformidad_requisitos`, `conformance_to_requirements` y el
+propio `definicion_calidad_conformidad`. **Seis nombres del mismo nodo en la misma
+lista.**
+
+**Y LA BASURA SE CONCENTRA EN POCOS DESTINOS**, que son los que mas fusiones han
+recibido: `costo_de_mala_calidad_copq` aparece duplicado **en 46 nodos distintos**,
+`search_for_business_model` en 35 y `decision_pivotar_o_proceder` en 18.
+
+### LA OPERACION, y es **MECANICA**
+
+> **Por cada nodo vivo y por cada uno de sus dos campos: resolver todas las entradas
+> con la semantica de `resolverId`, quedarse con los destinos DISTINTOS, y escribir
+> el ID RESUELTO.** Nada mas.
+
+**NO HAY NADA QUE DECIDIR AQUI, y por eso es LISTA y no mesa:** las entradas que se
+borran **apuntan al mismo sitio que la que se queda**. **El grafo despues del
+arreglo tiene exactamente los mismos vecinos.**
+
+**LO QUE NO TOCA, a proposito:**
+
+| no toca | por que |
+|---|---|
+| el mismo destino en `nodos_previos` **y** en `nodos_siguientes` | **no es duplicado: es ida y vuelta**, y decidir eso es otra operacion |
+| la **auto-arista** (destino igual al propio nodo) | es **`OP-S-07`**, y contarla aqui inflaria las dos cifras. **Medido: cero solape** |
+
+### **EL ORDEN IMPORTA, y es lo unico delicado de esta operacion**
+
+> **`OP-S-12` SE CORRE AL FINAL DE LA PASADA, DESPUES DE TODAS LAS FUSIONES Y
+> RENOMBRES.** Si se corriera antes, **cada fusion posterior volveria a generar su
+> duplicada** y habria que correrla dos veces.
+
+**Es la misma logica que ya tiene el plan para el recomputo:** lo que depende del
+estado final **se hace cuando el estado es final.**
+
+### VERIFICACION
+
+| | |
+|---|---|
+| **el conteo despues del arreglo da CERO** | mismo script, misma semantica |
+| **el vecindario resuelto de cada nodo NO CAMBIA** | conjunto de destinos distintos antes igual a despues, nodo por nodo. **Es la prueba de que la operacion no perdio ninguna arista** |
+| **cero solape con `OP-S-07`** | ningun grupo con destino igual al propio nodo |
+| **el numero de entradas baja en exactamente 1.056** | si baja mas, se borro algo que no era duplicado |

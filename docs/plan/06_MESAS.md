@@ -276,6 +276,13 @@ las dos recibe media biblioteca.
 
 ## APERTURA . `OP-M-04`, LA JUNTA ASESORA
 
+> **ESTA MESA SE SIENTA PRIMERA, Y SU EXPEDIENTE COMPLETO YA ESTA ESCRITO:**
+> [`EXPEDIENTE_MESA_JUNTA_ASESORA.md`](EXPEDIENTE_MESA_JUNTA_ASESORA.md), del 11 ago
+> 2026. **Va sin recomendacion nueva**: trae los pasos de los cuatro nodos, los seis
+> veredictos en crudo, las aristas actuales y las tres decisiones que se toman **en
+> un solo acto**. Lo que sigue aqui es el resumen; **para adjudicar se lee el
+> expediente.**
+
 **QUE SE DECIDE, y CAMBIO el 11 ago 2026.** Ya **no** es *cual de los dos
 sobrevive*. Es **como se enlazan y que solape se poda**.
 

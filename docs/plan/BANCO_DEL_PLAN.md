@@ -286,3 +286,64 @@ estaba prevista.
 > **El efecto neto de la regla es que NINGUN acto se funde sin haberse leido
 > entero.** Eso, y no otra cosa, es lo que convierte una componente medida en una
 > familia declarada.
+
+---
+
+## P.6 EL TEMA SE LEE, EL ACTO SE COMPUTA
+
+**Adoptada el 11 ago 2026, y nace de una degradacion que no cerraba.**
+
+> **LA NOMINA DE TEMA Y LA NOMINA DE ACTO SON DOS OBJETOS DISTINTOS.**
+>
+> **La nomina de TEMA se DECIDE LEYENDO**: quien pertenece al racimo depende de
+> cual es su objeto, y eso lo dice un lector, no una cuenta.
+>
+> **La nomina de ACTO se COMPUTA**: es el **cierre transitivo de la relacion
+> gemelo** (banco 9.24), y **NO ADMITE GUSTO**. Si hay A, el nodo esta dentro.
+
+> **Y DE AHI LA OBLIGACION QUE ESTA REGLA IMPONE: TODA FORMA DECLARADA DICE SOBRE
+> CUAL DE LAS DOS SE DECLARO.** *Puro*, *sub-puro*, *mezclado* y *partido* son
+> formas de **componente**, o sea del acto. **Escribirlas sin decir sobre que
+> nomina se contaron es lo que produce la contradiccion.**
+
+### POR QUE HACEN FALTA LAS DOS, y por que no se pueden colapsar
+
+**Ninguna de las dos sobra.** El acto contesta *que hay que hacer con estos nodos*:
+si repiten, se funden o se enlazan, y eso no se puede votar. El tema contesta *de
+que va este racimo*, que es lo que hace que una nomina se pueda leer, nombrar y
+sentar en una mesa. **Un acto sin tema es una lista de ids; un tema sin acto es una
+opinion.**
+
+**MIENTRAS NINGUN MIEMBRO AJENO AL TEMA TENGA UNA A, LAS DOS NOMINAS COINCIDEN.**
+Por eso el problema no se ve casi nunca: **aparece exactamente el dia en que un
+nodo de otro tema entra por una A**, y ese dia las dos se separan **sin que nadie
+lo anuncie**.
+
+### EL EJEMPLAR, con sus dos decisiones fechadas y las dos vivas
+
+**`tecnica_anclaje_negociacion` contra el racimo de la competencia entre
+inversores.**
+
+| | decision | fecha | sobre que objeto | resultado |
+|---|---|---|---|---|
+| **1** | la lectura del **puesto 878** lo deja **FUERA**, con motivo escrito: *su objeto es como negociar terminos y no como generar competencia entre inversores* | archivo, puesto 878 | **el TEMA** | nomina de tema: **cuatro** |
+| **2** | el barrido del **11 ago 2026** lo mete **DENTRO** por el cierre transitivo de la A del 878, reafirmada como vigente en el puesto 1295 | 11 ago 2026 | **el ACTO** | nomina de acto: **cinco** |
+
+> **LAS DOS SON CORRECTAS. No hay contradiccion: hay dos objetos.** Lo que estaba
+> mal era **la etiqueta**, no las decisiones: se publico *PURO, cuatro miembros,
+> seis pares*, que es una cuenta de **componente**, mientras la nomina de cuatro era
+> de **tema**.
+
+> **LA REGLA DE ORO QUE ESTO DEJA: si una forma y una nomina no cuadran, antes de
+> discutir quien tiene razon se pregunta SOBRE CUAL DE LAS DOS NOMINAS SE CALCULO LA
+> FORMA.** Casi siempre ahi se acaba la discusion.
+
+### COMO SE ESCRIBE A PARTIR DE HOY
+
+| se escribe asi | y no asi |
+|---|---|
+| *la competencia entre inversores: **acto** de 5, **tema** de 4; **SUB-PURO 7 de 10 sobre el acto*** | *la competencia entre inversores: PURO* |
+| *el racimo del pivote: **acto** partido en 3, **tema** de 7; **MEZCLADO 13 de 21 sobre el tema*** | *el racimo del pivote: MEZCLADO* |
+
+> **Y cuando las dos coinciden, se dice que coinciden.** Es informacion, no ruido:
+> **una nomina donde tema y acto calzan es una nomina que ya no puede sorprender.**

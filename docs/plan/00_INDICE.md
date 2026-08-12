@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA COMPLETO: ONCE FASES, 45 OPERACIONES, 39 LISTAS. LAS SEIS PENDIENTES SON LAS CINCO MESAS Y UN RECOMPUTO CON FECHA.**
+**EL PLAN ESTA COMPLETO: ONCE FASES, 47 OPERACIONES, 41 LISTAS. LAS SEIS PENDIENTES SON LAS CINCO MESAS Y UN RECOMPUTO CON FECHA, Y LA PRIMERA MESA YA TIENE SU EXPEDIENTE ESCRITO.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -27,6 +27,13 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > lecturas***. Las dos nominas que faltaban, **el pivote y la serie de Coleman**,
 > estan medidas y escritas en sus mesas. Y **el puro de la competencia entre
 > inversores DEGRADA a sub-puro** con correccion declarada.
+>
+> **SEXTA PASADA, el mismo dia: LA BASURA QUE EL RESOLUTOR TAPABA.** Tirando del
+> hilo de las diez aristas por alias de Coleman salieron **1.056 entradas duplicadas
+> tras resolver, en 802 nodos**, el 22,8% del catalogo vivo. **Nunca se habian
+> contado.** Van a `OP-S-12`, saneo mecanico, con su guarda `OP-C-05`. Y el banco del
+> plan gana **P.6, el tema se lee y el acto se computa**. **La primera mesa, la junta
+> asesora, ya tiene su expediente completo escrito para adjudicar.**
 >
 > **QUINTA PASADA, el mismo dia: se cierran los tres cabos que dejo la cuarta.** La
 > **degradacion queda RECONCILIADA** con las dos decisiones en el registro, la del
@@ -58,18 +65,18 @@ el JSONL discrepan, manda el JSONL.
 
 | | |
 |---|---:|
-| operaciones | **45** |
-| **LISTAS** | **39** |
+| operaciones | **47** |
+| **LISTAS** | **41** |
 | **DECISION PENDIENTE** | **6** |
 
 | fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
-| **0 CODIGO** | 4 | **4** | 0 |
+| **0 CODIGO** | 5 | **5** | 0 |
 | **01 FUENTES** | 7 | **7** | 0 |
 | **02 DESTEJIDOS** | 6 | **6** | 0 |
 | **03 FUSIONES** | 2 | **1** | 1 |
 | **04 ENLACES** | 3 | **3** | 0 |
-| **05 SANEO** | 11 | **11** | 0 |
+| **05 SANEO** | 12 | **12** | 0 |
 | **06 MESAS** | 5 | 0 | **5** |
 | **07 ADUANA** | 2 | **2** | 0 |
 | **08 VERIFICACION** | 1 | **1** | 0 |
@@ -203,7 +210,8 @@ en vez de forzarse.**
 | [`BANCO_DEL_PLAN.md`](BANCO_DEL_PLAN.md) | **P.1** la regla de medicion por el resolutor, y **P.2** la firma posicional del injerto | escrita |
 | [`RECORTE_POSICIONAL.md`](RECORTE_POSICIONAL.md) | el recorte de P.2 corrido sobre **los 55 libros**: 67 nodos candidatos, seis libros | escrita |
 | [`LECTURAS_DIRIGIDAS.md`](LECTURAS_DIRIGIDAS.md) | los pares que la cola **no traera nunca**: 205 medidos, **27 leidos** en dos tandas | escrita |
-| [`10_INVENTARIO.md`](10_INVENTARIO.md) | **el inventario navegable**: 324 entradas por sujeto, con sus huecos nombrados | escrita |
+| [`10_INVENTARIO.md`](10_INVENTARIO.md) | **el inventario navegable**: 325 entradas por sujeto, con sus huecos nombrados | escrita |
+| [`EXPEDIENTE_MESA_JUNTA_ASESORA.md`](EXPEDIENTE_MESA_JUNTA_ASESORA.md) | **el expediente de la primera mesa que se sienta**, sin recomendacion, para adjudicar | escrita |
 | [`03_FUSIONES.md`](03_FUSIONES.md) | 221 actos sobre 576 nodos, corte 2117, marcado para recomputo | escrita |
 | [`04_ENLACES.md`](04_ENLACES.md) | 477 candidatos tras calibrar, tasa medida en 46 lecturas, mas los sueltos de racimos | escrita |
 | [`06_MESAS.md`](06_MESAS.md) | cinco mesas con nomina, dependencia y opciones con evidencia | escrita |

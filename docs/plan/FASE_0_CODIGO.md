@@ -131,6 +131,43 @@ las 27 auto-aristas **dura hasta la proxima integracion**.
 
 ---
 
+---
+
+## `OP-C-05`: LA GUARDA QUE NO DEJA VOLVER LA BASURA . **LISTA**
+
+**Nace de `OP-S-12`**, y por la misma razon por la que `OP-C-04` nace de `OP-S-07`:
+**una limpieza sin guarda se deshace sola.**
+
+> **LA GUARDA: NINGUNA LISTA DE ARISTAS PUEDE TENER DOS ENTRADAS QUE RESUELVAN AL
+> MISMO DESTINO.**
+
+**EL PSEUDOCODIGO, y es tres lineas:**
+
+```
+para cada nodo vivo, para cada campo en (nodos_previos, nodos_siguientes):
+    destinos = [resolverId(x) for x in campo]
+    si len(destinos) != len(set(destinos)):  FALLA, nombrando nodo, campo y destino
+```
+
+**POR QUE TIENE QUE RESOLVER Y NO COMPARAR LITERAL.** Es la misma leccion que
+`OP-C-04` ya dejo escrita: **comparar literal no ve nada aqui.** Las 1.056 entradas
+duplicadas **son todas distintas como texto**; solo se ven iguales **despues de
+resolver**. **Una guarda literal daria verde sobre las 1.056.**
+
+### VERIFICACION, con **CASO POSITIVO** como manda esta fase
+
+| caso | que se espera |
+|---|---|
+| **caso positivo** | se mete a mano, en una copia, un nodo con `[destino, alias_de_destino]` en el mismo campo. **La guarda TIENE que fallar y nombrar los tres datos.** Si pasa, la guarda no sirve |
+| caso negativo | el grafo saneado por `OP-S-12` pasa en verde |
+| **caso de borde** | el mismo destino en `nodos_previos` **y** en `nodos_siguientes`. **La guarda NO debe fallar**: no es duplicado |
+
+> **Y LA MISMA ADVERTENCIA DE ORDEN QUE LLEVA `OP-S-12`: esta guarda se enciende
+> DESPUES del saneo final.** Encenderla antes **para el trabajo**, porque el grafo de
+> hoy la falla 1.056 veces y **eso no es una regresion, es el estado conocido.**
+
+---
+
 ## LO QUE ESTA FASE LE DEJA A LAS DEMAS
 
 > **Permiso para mover ids.** Sin ella, cada renombre de `OP-S-09`, cada
