@@ -13589,3 +13589,113 @@ puesto 3.255.
 util**, porque hablaba de un canal con las cifras de otro.
 
 **El archivo esta en 2.416 sin huecos ni duplicados. Cero nodos tocados.**
+
+
+---
+
+## 82. REPORTE DEL TRAMO 2.412 A 2.428: `quality` abre en 41,2%
+
+**Corte: puesto 2.428.** Van **17 pares de `quality`** de los 844 que tiene en la cola.
+
+### 82.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **`quality`** | **17** | **7** | **10** | **41,2%** |
+| archivo global (corte 2.428) | 2.428 | **461** | **1.871** | **19,0%** (B 89, C 7) |
+
+> **41,2% es la apertura mas alta del archivo**, por encima del 37,0% con que abrio
+> `health_safety`. **Y con 17 pares sigue sin ser una tasa utilizable**: la banda es
+> enorme y un solo veredicto la mueve seis puntos. **Lo que si es solido es la forma**, y
+> esa se ve con 17.
+
+### 82.2 LA TRAMPA DEL IDENTIFICADOR, con su cuenta
+
+**La cabecera de `quality` esta hecha de nodos que se llaman casi igual.**
+
+| medicion | cifra |
+|---|---:|
+| pares leidos cuyos dos ids son **de la misma familia** (sufijo numerico, preposicion o articulo de diferencia) | **5 de 17** |
+| **familias por sufijo numerico** en la cola de `quality` | **24 familias, 57 nodos** |
+| nodos distintos de `quality` que aparecen en la cola | **573** |
+
+**Las familias mas cargadas, medidas:** `accion_correctiva` **(5)**,
+`definiciones_operacionales` **(4)**, `programa_make_certain` **(3)**,
+`consejo_de_calidad` **(3)**, `dia_cero_defectos` **(3)**,
+`eliminacion_causas_error` **(3)**.
+
+> **LA TRAMPA, y por eso se registra con la cuenta:** un id con sufijo **parece** un
+> duplicado y **no siempre lo es**. En este tramo, de los cinco pares de misma familia,
+> **tres repitieron** (2.417, 2.418, 2.426) **y dos no** (2.422, 2.428). El
+> **sistema_responsabilidad_gerencial** contra su `_2` **es D**: uno acota la
+> responsabilidad y el otro la mide.
+>
+> **El identificador ordena la sospecha; no la resuelve.** Es la misma leccion del 3%
+> lexico por otra via: **la forma del nombre no decide.**
+
+### 82.3 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **2** |
+| **REPITE** | **7** |
+| no se invoco | **8** |
+
+**9 de 17, el 53%**, contra 27 de 100 en la cola de `health_safety`. **La cabecera pide
+vara casi siempre**, que es exactamente lo que el 9.19 dice de la similitud alta.
+
+**Cero PENDIENTE DE DOCTRINA. 9 ARISTA QUE FALTA en 17 pares (53%), 6 SOLAPE DECLARADO.**
+
+### 82.4 FIGURAS
+
+| figura | puesto | nota |
+|---|---|---|
+| **TERCERA CABEZA DUPLICADA DE SERIE** | 2.414 | los catorce pasos de Crosby, tras Coleman (326) y los medios (948). **Con tres ejemplares la figura tiene patron** (§8) |
+| **A POR FUSION MUTUA** | **2.417** | **tercer caso del archivo** tras 2.127 y 2.368. `mantener_las_ganancias` contra `sostener_las_ganancias`, **ids que se diferencian en un verbo sinonimo**, linea en los dos sentidos |
+| **EL TITULO PROMETE LO QUE LOS PASOS NO DAN** | 2.420 | `tipos_innovacion_i_ii` se llama *Dos Tipos de Innovacion, Tipo I y Tipo II* y **sus seis pasos son solo el ejercicio del Tipo II**. La ausencia **refuerza** el veredicto |
+| **diferencia doctrinal INTER fuente** | 2.412 | Deming exige **control estadistico ANTES** de calcular capacidad; Juran calcula sobre historicos **sin nombrar esa condicion**. No es contradiccion frontal: es una precondicion que uno pone y el otro omite |
+
+**Ningun nodo de CASO o ESTUDIO entro a par todavia.** El censo del 2.335 dejo **8 sin
+cribar** y varios con pinta de este dominio (`caso_estudio_benchmarking_terminal`,
+`estudio_mercado_calidad`, `estudio_desempeno_run_charts_servicios`,
+`estudio_mezclas_multiples_fuentes`). **La figura EL CASO NO ES LA CASA queda armada y sin
+usar; se cita el dia que aparezcan.**
+
+### 82.5 LAS 7 A DEL TRAMO, con las discutibles marcadas
+
+| puesto | muere | sobrevive |
+|---|---|---|
+| **2.414** | `programa_mejora_calidad_14_pasos` | `programa_de_mejora_de_calidad` |
+| **2.417** | **fusion mutua** | ninguno domina |
+| 2.418 | `accion_correctiva_6` | `accion_correctiva_5` |
+| 2.420 | `tipos_innovacion_i_ii` | `innovacion_tipo_ii` |
+| **2.421** | `relaciones_largo_plazo_con_proveedores` | `relacion_largo_plazo_proveedor_unico` |
+| 2.424 | `compra_por_precio_mas_bajo_como_error` | `fin_precio_como_criterio_unico` |
+| 2.426 | `accion_correctiva_6` | `accion_correctiva_crosby` |
+
+**LAS TRES MAS DISCUTIBLES, y la R46 empieza aqui:**
+
+1. **2.417.** **Fusion mutua sin superviviente**, y con **tres perdidas** que nadie hereda
+   por defecto: **el mistake proofing** (una clase de control distinta, disenar el error
+   fuera en vez de auditarlo), **el disparador de la rotacion de personal**, y **los
+   responsables de supervision.** Si la fusion elige a ojo, se pierde la primera.
+2. **2.421.** Muere el nodo que trae **la evidencia estadistica de calidad** como criterio
+   de evaluacion y **el recuento de proveedores actuales** como primer paso. El
+   superviviente evalua por *evidencia de mejora continua*, que es mas vago. **Es linea
+   por la vara y es el arranque practico por el oficio.**
+3. **2.414.** Ya releida y confirmada (R45), **queda marcada por su perdida**: *aunque sea
+   de dos o tres personas* es lo unico del par que hace el programa ejecutable en un
+   negocio pequeno, **que es el publico de la app**.
+
+**Y `accion_correctiva_6` repitio DOS veces en cinco pares** (2.418 y 2.426), contra dos
+supervivientes distintos. **Es la version generica de una familia de cinco**, y **la
+familia entera no esta leida**: quedan pares con `accion_correctiva`,
+`accion_correctiva_2` y `accion_correctiva_4` sin tocar.
+
+### 82.6 LO QUE FALTA
+
+**Faltan 189 pares del encargo, del 2.429 al 2.617**, todos de `quality`. **Checkpoints
+2.500 y 2.600 pendientes.** El dominio completo son **844 pares** y llega al puesto
+**3.255**: este tramo no lo cierra ni de lejos.
+
+**El archivo esta en 2.428 sin huecos ni duplicados. Cero nodos tocados.**
