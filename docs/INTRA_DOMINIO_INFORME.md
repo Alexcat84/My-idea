@@ -12834,3 +12834,126 @@ sostuvieron todas.
 > escritas con la vara al reves, las tres del mismo lector y las tres en la misma tanda.**
 > Dos las encontro la relectura ciega del auditor; **la tercera la encontro el barrido, y
 > no habria salido sin la regla escrita primero.**
+
+
+---
+
+## 77. REPORTE CONSOLIDADO DEL TRAMO 2.301 A 2.388
+
+**Corte: puesto 2.388.** El encargo pedia del 2.377 al 2.617, 241 pares; **van 12 de esa
+tanda y 88 desde el 2.301.** La seccion 77.7 nombra lo que falta. **La R43 empieza por
+los discutibles de la 77.6.**
+
+### 77.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **tramo 2.301 a 2.388** | **88** | **12** | **76** | **13,6%** |
+| `health_safety` acumulado | **169 de 192** | 42 | 127 | **24,9%** |
+| archivo global (corte 2.388) | 2.388 | **451** | **1.841** | **18,9%** (B 89, C 7) |
+
+### 77.2 LA PREDICCION DEL 2.300, MEDIDA POR TERCERA VEZ
+
+| corte | pares leidos de `health_safety` | **tasa** |
+|---|---:|---:|
+| 2.300 | 81 de 192 | **37,0%** |
+| 2.376 | 157 de 192 | **26,1%** |
+| **2.388** | **169 de 192** | **24,9%** |
+
+> **Tres cortes, tres bajadas, ninguna sorpresa.** Lo que se escribio en la seccion 72.2
+> se cumple en direccion y en magnitud: **la cabecera de un dominio no predice su cierre**,
+> y con 23 pares por leer **la cifra final seguira por debajo de 24,9%**.
+
+### 77.3 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **10** |
+| **REPITE** | **12** |
+| no se invoco | **66** |
+
+**22 de 88.** En la cabecera del dominio fue casi siempre; aqui, una vez de cada cuatro.
+**La cola no pide vara porque no trae gemelos: trae objetos distintos que comparten
+vocabulario.**
+
+**Cero PENDIENTE DE DOCTRINA en 88 pares. En los 271 leidos desde el 2.118, cero.**
+
+### 77.4 FIGURAS
+
+| figura | puesto | que es |
+|---|---|---|
+| **LOS DOS EXTREMOS DEL MISMO SISTEMA** | 2.388 | `analisis_del_extremo_organizacional` trabaja el **extremo romo** y `perspectiva_dentro_del_tunel` el **afilado**; uno empieza donde el otro termina. La pareja canonica de Dekker, **sin arista** |
+| **LA BRECHA CONTRA SU CAUSA** | 2.380 | uno **describe** la brecha entre trabajo prescrito y real; el otro **la explica** por la acumulacion de reglas en el manual, y es el unico que la **redisena** |
+| **LA VENTANA QUE SE ABRE** | 2.386 | el queso suizo es un mapa permanente; `ventana_oportunidad_accidente` es el instante de la alineacion **y la unica accion del par: romperla** |
+
+**Crecidas: ARISTA QUE FALTA en 40 de 88 pares** (45%); **SOLAPE DECLARADO en 20**; el
+**racimo de las defensas llega a SIETE** miembros.
+
+### 77.5 CONDICIONES VIVAS
+
+1. **`errores_como_consecuencia` cae en A por DECIMA vez** (2.387), y esa es **la mas
+   limpia de las diez**: el superviviente nombra con sus cuatro casillas
+   (presupuesto, capacitacion, dotacion, diseno) **la busqueda organizacional que en los
+   puestos 2.345 y 2.382 lo habia salvado.**
+2. **Y sigue sin ser mecanica: dos D lo prueban.** En el **2.345** y el **2.382**, contra
+   nodos que trabajan **la escena** y no **la busqueda**, este mismo nodo **si aporta**.
+   **Diez A y dos D, decididas cada una por lo que el otro traia.**
+3. **`health_safety` abierto**, 169 de 192, **24,9% y bajando**.
+4. **Tres A del archivo estaban escritas con la vara al reves** (2.195, 2.215, 2.338).
+   **Las tres cayeron, las tres estaban marcadas como discutibles, y el barrido de la
+   seccion 76 cerro la busqueda: no hay una cuarta.**
+
+### 77.6 LAS 12 A DEL TRAMO, con las discutibles marcadas
+
+| puesto | muere | sobrevive |
+|---|---|---|
+| 2.303 | `errores_como_consecuencia` | `enfoque_situacional_vs_personal` |
+| 2.309 | `vieja_vision_vs_nueva_vision_seguridad` | `cultura_de_seguridad_interpretivista_funcionalista` |
+| 2.310 | `human_error_como_sintoma` | `new_view_human_error` |
+| 2.311 | `errores_como_consecuencia` | `error_humano_vs_falla_mecanica` |
+| 2.328 | `reglas_parada_investigacion_accidentes` | `limite_busqueda_causas_pendulo` |
+| **2.335** | `condiciones_latentes_largo_plazo` | `caso_descarrilamiento_nakina` |
+| 2.347 | `errores_como_consecuencia` | `seduccion_modelo_persona` |
+| 2.352 | `vieja_vision_vs_nueva_vision_seguridad` | `new_view_vs_old_view` |
+| 2.362 | `errores_como_consecuencia` | `new_view_human_error` |
+| **2.368** | **fusion mutua** | ninguno domina |
+| 2.371 | `errores_como_consecuencia` | `principios_gestion_error` |
+| 2.387 | `errores_como_consecuencia` | `fallas_activas_condiciones_latentes` |
+
+**LAS TRES MAS DISCUTIBLES, y la R43 empieza aqui:**
+
+1. **2.335.** Sobrevive **un estudio de caso** y muere **la doctrina general** que sale de
+   el. La vara manda por contenido (el caso trae el analisis geotecnico profundo frente a
+   la inspeccion visual), **pero la fusion tiene que conservar el titulo generico**, o la
+   regla queda colgada de un descarrilamiento concreto.
+2. **2.368.** **Fusion mutua sin superviviente.** Cada uno anade dos lineas y ninguno
+   trae procedimiento. **Se pierde, si nadie lo mira: el nivel organizacional explicito,
+   el entrenamiento contra el sesgo de atribucion, y usar el hallazgo para cambiar el
+   sistema y no para senalar.**
+3. **2.310 y 2.371 juntas, por la misma perdida.** En las dos muere el nodo que trae **la
+   unica accion correctiva directa del racimo** (redisenar la herramienta en vez de
+   entrenar a la persona, en el 2.310; las mejoras informativas quedan del lado del
+   superviviente en el 2.371). **La perdida ya se anoto cuatro veces en el archivo, y
+   sigue viajando como linea absorbida.**
+
+### 77.7 LO QUE FALTA, y donde se retoma
+
+**Faltan 229 pares, del 2.389 al 2.617.**
+
+| tramo | dominio | pares | estado |
+|---|---|---:|---|
+| 2.389 a 2.411 | `health_safety` | **23** | pendiente; **cierra el dominio y fija su cifra final** |
+| 2.412 a 2.617 | `quality` | **206** | pendiente; **abre el dominio** |
+
+**Checkpoints pendientes: 2.400, 2.500 y 2.600.** **Pendiente tambien el resumen de
+racimos de ids de `health_safety` para el plan**, que solo se puede escribir con el
+dominio cerrado.
+
+**LA PREDICCION SOBRE `quality` sigue en pie y sin tocar**, escrita en la seccion 75.8
+antes de leer un solo par: **323 candidatos del barrido paso contra nodo, 296 sin arista**,
+mas que `core` teniendo `core` diez veces mas pares. **Si acierta, `quality` entrega madre
+e hijo y no gemelos.** La comprobacion pedida (tasa, proporcion de vara, y cuantos pares
+confirman candidatos que el barrido ya tenia) **se hace al leerlo, y no antes.**
+
+**El archivo esta en 2.388 sin huecos ni duplicados.** Se retoma en el **2.389**.
+**Cero nodos tocados. Modo de cierre respetado entero.**
