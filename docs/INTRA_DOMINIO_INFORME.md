@@ -15044,3 +15044,176 @@ sobre el contenido**, no una denominacion suelta. **Se comprueba contra el nodo 
 citado cuando existe en el catalogo**, que es exactamente lo que este par permitio hacer.
 
 **El archivo esta en 2.467 sin huecos ni duplicados. Cero nodos tocados.**
+
+## 91. CHECKPOINT 2.500: el archivo llega a dos mil quinientos veredictos
+
+**Escrito el 18 ago 2026, al cerrar el puesto 2.500.** Tramo `2.488` a `2.500`, trece pares
+de `quality`, sin reporte intermedio por encargo.
+
+### 91.1 MARCADOR RECOMPUTADO DESDE EL ARCHIVO
+
+| | |
+|---|---:|
+| **veredictos** | **2.500**, sin huecos, hasta el puesto 2.500 |
+| **A** (REPITE) | **487** |
+| **B** (DUDOSO) | 89 |
+| **C** (SANO CON FIGURA) | 7 |
+| **D** (SANO LIMPIO) | **1.917** |
+| **tasa global de A** | **19,5 %** |
+
+**Quedan 888 pares en la cola:** `quality` **755**, `risk_management` **106**,
+`seguridad_digital` **27**.
+
+### 91.2 TASA POR DOMINIO
+
+| dominio | pares | A | tasa | B | C | D |
+|---|---:|---:|---:|---:|---:|---:|
+| `core` | 1.445 | 344 | **23,8 %** | 87 | 7 | 1.007 |
+| `health_safety` | 192 | 45 | **23,4 %** | 0 | 0 | 147 |
+| `entrega` | 171 | 2 | **1,2 %** | 0 | 0 | 169 |
+| `environmental` | 170 | 29 | **17,1 %** | 0 | 0 | 141 |
+| `compras` | 155 | 1 | **0,6 %** | 2 | 0 | 152 |
+| `franquicias` | 148 | 18 | **12,2 %** | 0 | 0 | 130 |
+| `exportacion` | 130 | 15 | **11,5 %** | 0 | 0 | 115 |
+| **`quality`** | **89** | **33** | **37,1 %** | 0 | 0 | 56 |
+
+> **`quality` es, con diferencia, el dominio mas repetido del catalogo.** 37,1 % contra el
+> 23,8 % de `core`, que era el techo anterior. Y **le faltan 755 pares**, asi que la cifra
+> aun se puede mover mucho.
+
+### 91.3 LA VARA POR TRAMO, dentro de `quality`
+
+| tramo | pares | A | tasa |
+|---|---:|---:|---:|
+| 2.400 a 2.424 | 13 | 6 | **46,2 %** |
+| 2.425 a 2.449 | 25 | 9 | 36,0 % |
+| 2.450 a 2.474 | 25 | 8 | **32,0 %** |
+| 2.475 a 2.499 | 25 | 9 | 36,0 % |
+
+> **La cabeza entrega gemelos y despues la banda se asienta:** 46,2 % en la entrada y
+> **32 a 36 % en los tres tramos siguientes**, sin tendencia a la baja. **Es la confirmacion
+> del 9.19 y, a la vez, su limite:** el descenso de cabeza a cuerpo existe, pero **el cuerpo
+> de `quality` no baja al 20 % como en los dominios anteriores.** Se sostiene.
+
+### 91.4 LA TRAMPA DEL IDENTIFICADOR, RE MEDIDA SOBRE EL ARCHIVO ENTERO
+
+**Sustituye a la cifra anterior, que estaba medida solo sobre `quality` y sobre pocos
+pares.** Definicion de familia: **los dos ids comparten raiz**, sea por sufijo numerico o
+porque uno extiende al otro.
+
+| alcance | pares | A | tasa |
+|---|---:|---:|---:|
+| **archivo entero** | **59** | **30** | **50,8 %** |
+| solo `quality` | 17 | 5 | **29,4 %** |
+
+> **Un par cuyos ids comparten raiz repite el doble de veces que un par cualquiera:
+> 50,8 % contra 19,5 %.** Sigue sin ser un veredicto, pero **es la senal de superficie mas
+> fuerte de las cinco caras**, muy por encima del vocabulario (3 %) y del titulo espejo.
+>
+> **Y sigue sin decidir:** **26 de esos 59 pares salieron D**. Ordena la cola; no la falla.
+
+**HIPOTESIS NO MEDIDA, anotada como tal:** en `quality` la tasa es **la mitad** de la
+global, y el 2.499 sugiere por que: **`analisis_flujo_proceso_servicio` no es una serie,
+es un alcance nombrado.** *El sufijo vacio (`_2`, `_3`) y el sufijo que dice algo
+(`_servicio`) podrian no ser la misma trampa.* **No esta contado. No se publica como cifra.**
+
+### 91.5 FIGURAS NUEVAS Y CRECIDAS EN EL TRAMO
+
+| figura | que paso |
+|---|---|
+| **EL SUFIJO QUE SI DISTINGUE** (2.499) | **nueva**, y **como hipotesis sin contar**, no como cifra |
+| **fusion mutua** (2.498) | **crece de 6 a 7 casos** en el archivo |
+| **SALVAGUARDA**, sexto motivo de perdida (2.497) | **tercer ejemplar** |
+| **titulo espejo que NO es duplicado** (2.494) | otro ejemplar: dos titulos que dicen *fitness for purpose* y **cero solape de procedimiento** |
+| **9.6.3, el tamano no decide** (2.493) | ejemplar limpio: **siete pasos contra cuatro, y el de cuatro trae la unica medicion del par** |
+| **9.21, cifra publicada con su corte** (2.498) | los **250.000 dolares** de retorno minimo y las **seis semanas** son de Juran |
+| **la comprobacion tambien absuelve** (2.488 y 2.500) | **dos veces mas**, y las dos sobre perdida de nombre |
+
+**LAS DOS ABSOLUCIONES, porque son las que valen:**
+
+- **2.488 acota el aviso del 2.477.** El superviviente **si dice GESTION POR OBJETIVOS en su
+  titulo**: la denominacion en castellano **no se pierde**. Lo unico que muere es **el
+  acronimo MBO**.
+- **2.500 lo hace del otro lado.** Muere el nodo con el id ingles, `value_stream_mapping`,
+  **pero el superviviente escribe VALUE STREAM MAPPING en su paso 1**: la denominacion
+  **sigue siendo buscable**. **Cero perdida de nombre.**
+
+### 91.6 LAS FAMILIAS DEL 9.3, AL DIA, CON SU ESPECIE DE GANADOR
+
+| familia | nodos | pares leidos | especie |
+|---|---:|---|---|
+| **la regla kp** | 3 | 3 de 3 | **POR DERECHO**, final |
+| **la ISO sectorial** | 3 | 3 de 3 | **PARA ADJUDICAR, ver 91.7** |
+| `accion_correctiva` | 6 o mas | 4 | **POR ELEGIR**, y provisional |
+| **MBO y metas numericas** | 3 o mas | 2, **las dos A** | **provisional y abierta**, ver abajo |
+| los **ROI** | 3 | 2 | provisional |
+| el **QFD** | 3 | 1 | provisional |
+| **dia de cero defectos** | 3 | 1 | provisional |
+| **make certain** | 3 o mas | 1 | provisional |
+| la **auditoria de producto** | 3 | 2, **las dos D** | **sin acto**: no hay fusion que decidir |
+| el **histograma** | 3 | 2, **las dos D** | **sin acto**: no hay fusion que decidir |
+
+**`accion_correctiva` ES EL EJEMPLAR LIMPIO DE POR ELEGIR:**
+
+| puesto | resultado |
+|---:|---|
+| 2.418 | **`accion_correctiva_5` GANA** a `accion_correctiva_6` |
+| 2.426 | `accion_correctiva_crosby` gana a `accion_correctiva_6` |
+| 2.431 | **`accion_correctiva_5` PIERDE** contra `accion_correctiva_sistematica` |
+| 2.496 | `accion_correctiva_5` contra `accion_correctiva_crosby`: **D** |
+
+> **Un mismo nodo gana un par y pierde otro.** Eso es lo que obliga a elegir con P.8 y la
+> nomina entera delante, y **es exactamente la forma que 9.3.1 describe**.
+
+**LA FAMILIA MBO DEJA UN HUECO QUE P.13 TIENE QUE CERRAR:**
+`critica_gestion_por_objetivos` **muere dos veces**, en el 2.477 y en el 2.488, **contra dos
+supervivientes distintos**, `eliminar_metas_numericas_gerencia` y
+`eliminacion_gestion_por_objetivos_y_numeros`, **que nunca se han leido entre si**. La cola
+no trae ese par. **Queda anotado para la mesa.**
+
+### 91.7 PARA ADJUDICAR: EL EJEMPLAR DE 9.3.1 QUE NO SE SOSTIENE
+
+**Lo traigo en vez de arreglarlo, porque contradice una regla escrita hoy mismo.**
+
+**9.3.1 usa la familia ISO sectorial como su ejemplar de GANADOR POR ELEGIR**, con este
+argumento: *`estandares_especificos_industria` murio en el 2.445 y sobrevivio en el 2.460*.
+**Al recontar la familia con los tres pares delante, el argumento no aguanta:**
+
+| puesto | par | clase |
+|---:|---|---|
+| 2.445 | `adaptaciones_sectoriales_iso` contra `estandares_especificos_industria` | **A** |
+| 2.460 | `adopciones_industria_especifica_iso9000` contra `estandares_especificos_industria` | **D** |
+| 2.479 | `adaptaciones_sectoriales_iso` contra `adopciones_industria_especifica_iso9000` | **D** |
+
+> **EL FALLO: una D no es sobrevivir a un duelo, es que no hubo duelo.** Un par sano
+> **saca al nodo del acto**; no anade un contendiente. Contadas asi, **la unica fusion de
+> la familia es el 2.445**, su ganador `adaptaciones_sectoriales_iso` **no perdio nunca**, y
+> `adopciones_industria_especifica_iso9000` **no esta en ese acto**. **La ISO seria POR
+> DERECHO, no por elegir.**
+
+**QUE PIDE ESTO, y son dos cosas distintas:**
+
+1. **La distincion en si NO se cae.** Sigue siendo verdad que *lo que decide no es cuantos
+   pares se leyeron, es si el ganador puede cambiar*. **Y ahora tiene un ejemplar real de
+   POR ELEGIR: `accion_correctiva`.**
+2. **Lo que hay que cambiar es la prueba operativa**, que hoy dice *ninguno gano todos los
+   pares que lo tocan*. **Deberia contar SOLO LOS PARES A.** Con esa precision, las dos
+   familias de dos D, la auditoria de producto y el histograma, **se leen bien de una vez:
+   no tienen acto, no tienen ganador que elegir.**
+
+**NO TOCO 9.3.1 NI LA SECCION 90 HASTA QUE ESTO SE ADJUDIQUE.** Cero reparaciones.
+
+### 91.8 LOS DISCUTIBLES MARCADOS PARA LA R55
+
+**Cuatro, y los cuatro del tramo nuevo.** Por la metrica de credito: **si una discrepancia
+cae fuera de esta lista, se mueve el credito de toda la tanda, no el de un veredicto.**
+
+| puesto | veredicto | por donde puede caer |
+|---:|---|---|
+| **2.492** | **D** | `decision_aptitud_uso` cabe entero dentro del paso 2 del otro. Quien mire solo el solape de la aptitud **dira REPITE**. Mi defensa: el otro trae **la medicion contra especificacion**, sin la cual el corto no puede ni empezar |
+| **2.498** | **A por fusion mutua** | los cuatro anadidos podrian leerse como procedimiento y no como linea, sobre todo **las cuatro sesiones con intervalos**, que es un diseno de practica espaciada. Si eso es procedimiento, **el par es D** |
+| **2.500** | **A** | `value_stream_mapping` trae **flujo de informacion, costo por etapa y priorizacion como cartera**. Tres lineas, dije. **Si la priorizacion cuenta como procedimiento, es D** |
+| **2.493** | **D** | el corto solo anade **tres lineas**; el largo tiene siete pasos. Quien aplique la vara sin 9.6.3 delante **dira REPITE del corto** |
+
+---
+
