@@ -14639,3 +14639,88 @@ este catalogo.**
 pendientes.** El dominio son **844 pares** y llega al **3.255**.
 
 **El archivo esta en 2.460 sin huecos ni duplicados. Cero nodos tocados.**
+
+
+---
+
+## 89. REPORTE DEL TRAMO 2.461 A 2.464
+
+**Corte: puesto 2.464. Van 53 pares de `quality`** de sus 844.
+
+### 89.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **`quality`** | **53** | **19** | **34** | **35,8%** |
+| archivo global (corte 2.464) | 2.464 | **473** | **1.895** | **19,2%** (B 89, C 7) |
+
+**Siete cortes:** 44,4% . 40,6% . 40,5% . 39,0% . 37,8% . 36,7% . **35,8%**. **Seis bajadas
+seguidas**, ninguna mayor que la anterior. **La curva ya no informa nada nuevo: informa que
+es una curva.**
+
+### 89.2 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **7** |
+| **REPITE** | **19** |
+| no se invoco | **27** |
+
+**26 de 53, el 49%.** **Cero PENDIENTE DE DOCTRINA. 28 ARISTA QUE FALTA (53%), 24 SOLAPE
+DECLARADO.**
+
+### 89.3 LO QUE ANADE ESTE TRAMO
+
+**UNA PERDIDA QUE NO ENTRA EN NINGUNO DE LOS CINCO MOTIVOS (2.461), y no se fuerza.**
+Muere `descubrir_necesidades_cliente` y se lleva: *priorizar de forma consensuada, **sin
+asumir jerarquias automaticas por tipo de cliente***.
+
+> **El superviviente prioriza y NO DICE CON QUE CRITERIO.** La linea que muere es **lo unico
+> del par que impide que la priorizacion se resuelva sola por tamano de factura.**
+>
+> **No es NOMBRE, ni ALCANCE, ni DESTINO, ni METODO, ni DIRECCION: es una ADVERTENCIA
+> CONTRA UN SESGO POR DEFECTO.** Se anota en el reparto **con nombre propio y sin motivo
+> asignado**: la tabla tiene cinco entradas porque cinco fueron adjudicadas, **y esta
+> espera adjudicacion en vez de meterse a la fuerza en la mas parecida.**
+
+**EL CATCHBALL DEL HOSHIN, partido en dos nodos y sin cable (2.463).**
+
+| `desplegar_metas_organizacion` | `despliegue_metas` |
+|---|---|
+| **la mecanica de arriba abajo**: subdividir, asignar, cronogramas, **diagrama de arbol**, y **designar dueno del proceso al terminar** | **la conversacion en los dos sentidos**: que **los niveles de accion elijan los proyectos**, y **negociar los recursos entre niveles hasta el acuerdo** |
+
+> **Uno reparte y el otro pacta**, y el hoshin **necesita los dos**. **ARISTA QUE FALTA.**
+
+**Y SE CONFIRMA POR SEGUNDA VEZ (2.464) LO ANOTADO EN EL 2.434:** el **registro de negocio
+pequeno esta concentrado en nodos concretos**, no repartido. `zero_defects_concepto` vuelve
+a ser el que dice *aunque sea contigo mismo* y *por escrito entre tu y la persona que te
+ayuda*, frente a un `cero_defectos` que despliega el programa **por areas**.
+
+> **Para el reparto esto ya es un patron, no una anecdota: hay nodos que son la version
+> ejecutable a escala minima**, y **fundirlos contra su hermano grande sin mirar quien
+> conserva la escala es como se pierde el publico de la app.**
+
+### 89.4 LAS 19 A DE `quality`, con las discutibles marcadas
+
+`2.414`, `2.417`, `2.418`, `2.420`, `2.421`, `2.424`, `2.426`, `2.431`, `2.432`, `2.436`,
+`2.437`, `2.438`, `2.440`, `2.445`, `2.447`, `2.451`, `2.453`, `2.458`, **`2.461`**.
+
+**LAS TRES MAS DISCUTIBLES, y la R53 empieza aqui:**
+
+1. **2.461.** La clase se sostiene con holgura (el superviviente trae tres cosas propias,
+   entre ellas **los usos no previstos y sus riesgos de seguridad**). **Lo que se marca es
+   la perdida sin motivo asignado**: la advertencia contra priorizar por tamano de cliente.
+   **Si el auditor la clasifica, la tabla pasa a seis.**
+2. **2.464**, aunque quedo **D**: se marca porque **es el segundo par donde la escala minima
+   vive en un nodo y no en el otro**, y porque la familia de Cero Defectos **tiene al menos
+   tres miembros** (`cero_defectos`, `zero_defects_concepto`, `filosofia_zero_defectos`)
+   **decidiendose de a dos**, como las otras tres familias ya contadas.
+3. **2.458**, ya releida y confirmada (R52), **queda marcada como el ejemplar del quinto
+   motivo**, DIRECCION.
+
+### 89.5 LO QUE FALTA
+
+**Faltan 153 pares del encargo, del 2.465 al 2.617.** **Checkpoints 2.500 y 2.600
+pendientes.** El dominio son **844 pares** y llega al **3.255**.
+
+**El archivo esta en 2.464 sin huecos ni duplicados. Cero nodos tocados.**
