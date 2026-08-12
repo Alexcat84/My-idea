@@ -175,6 +175,43 @@ escribe. **No existe resolutor.***
 
 ---
 
+## CORRECCION 5: EL CAVEAT DEL PREDICTOR
+
+**UBICACION**: el **informe de cierre de costuras**,
+`docs/COSTURAS_INTERNAS_RESUMEN.md`, seccion 2, *LA HERENCIA PRINCIPAL: EL
+PREDICTOR DE FUENTES*.
+
+**TEXTO PUBLICADO**: la tabla del predictor, **91% de aciertos en nodos de DOS o
+mas libros contra 4% en los de UNO**.
+
+**CAVEAT A PEGAR JUNTO A LA TABLA:**
+
+> **CAVEAT, 11 ago 2026: CON EL CAMPO `fuente` SUCIO, ESTA CIFRA SOLO SIRVE PARA
+> ORDENAR UNA COLA.**
+>
+> **El predictor separa por una propiedad del campo `fuente`: cuantos libros
+> declara el nodo.** Y ese campo **no esta normalizado**: medido el mismo dia,
+> **129 grafias distintas para 55 libros canonicos**. Hugos aparece con **dos**
+> grafias y Horowitz con **tres**, varias truncadas a unos treinta caracteres.
+>
+> **LA CONSECUENCIA ES DIRECTA SOBRE EL PREDICTOR, no sobre el censo: un libro con
+> dos grafias puede convertir un nodo de UN libro en uno de DOS**, que es
+> exactamente la frontera por la que el predictor separa. **Un nodo que declare el
+> mismo libro dos veces cae del lado del 91% sin serlo**, y hay al menos uno
+> medido: `decision_de_vender_startup` lleva *The Hard Thing About Hard Thing* y
+> *The Hard Thing About Hard Things* **en la misma linea**.
+>
+> **SU PRERREQUISITO TIENE NOMBRE: `OP-S-11`** del plan de la pasada unica, el
+> campo `fuente` canonico. **Hasta que esa operacion corra, el 91 contra 4 ordena
+> una cola y no prueba nada.**
+>
+> **Y esto NO contradice al informe: lo confirma.** El propio informe ya declaro la
+> deuda en su ultima linea, *auditar el campo `fuente` antes de fiarse del
+> predictor para nada que no sea ordenar una cola*. **Esta correccion solo pone la
+> cifra de la averia al lado de la deuda, y le da dueno.**
+
+---
+
 ## RESUMEN, para decidir de un vistazo
 
 | # | que pasa | donde | quien lo aplica |
@@ -184,6 +221,7 @@ escribe. **No existe resolutor.***
 | 2 | Incoterms, de 12 a **3**; union de 21 a **12** | `PENDIENTES.md`, adjudicacion del barrido | **SESION A** |
 | 3 | la promesa del resolutor **si** se cumplio | `AUDITORIA_MOTOR.md` B.3 | **SESION A** |
 | 4 | la cuenta de 18, recomputada con su corte | `COSTURAS_INTERNAS_RESUMEN.md` 6 y 7 | **SESION A** |
+| **5** | **el CAVEAT DEL PREDICTOR**: con el campo sucio, el 91 contra 4 solo ordena una cola | `COSTURAS_INTERNAS_RESUMEN.md` 2 | **SESION A** |
 
 > **Las cuatro son de la SESION A y se aplican cuando reporte su tanda.** Ninguna
 > se toca desde aqui.

@@ -131,3 +131,44 @@ posicional vale en general, hay una lista de injertos que nadie ha contado.**
 
 > Se anota, **sin cifra y sin estimacion**, porque inventar un numero aqui seria
 > exactamente lo que la regla P.1 acaba de prohibir.
+
+---
+
+## P.3 REGLA DE REMEDIO: CUANDO EL INJERTO ES DEL MISMO TEMA, NO SE PODA, SE REPARTE
+
+**Adoptada el 11 ago 2026, al cerrar la tanda de los 43 injertos.**
+
+> **El remedio de un injerto depende de UNA sola pregunta: el bloque pegado es del
+> MISMO tema que el nodo, o de otro?**
+
+| el bloque pegado es | que se hace | por que |
+|---|---|---|
+| **de OTRO tema** | **la poda es segura** | el lector distingue solo lo que sobra: ve material que no viene a cuento |
+| **del MISMO tema** | **NO se poda: SE REPARTE** | **el lector no puede distinguir que vino de donde**, asi que podar es elegir por el cual mitad se queda, y esa eleccion no la hace nadie |
+
+**LOS DOS CASOS, medidos, y por eso la regla no es teorica:**
+
+| caso | el bloque | el remedio |
+|---|---|---|
+| **Hugos**, 21 nodos | **cadena de suministro** dentro de nodos de producto y de finanzas: **otro tema** | **la poda era segura**, y por eso la ficha pudo escribir *poda o reparto* sin peligro |
+| **Coleman, Horowitz, Weinberg y Rackham**, 43 nodos | **el tema COINCIDE**: el bloque de Coleman habla del cliente y el nodo tambien; el de Weinberg habla de canal y el nodo tambien | **REPARTO OBLIGATORIO** |
+
+> **POR QUE EL MISMO TEMA HACE LA PODA PELIGROSA, y no solo cara.** Cuando los dos
+> bloques hablan de lo mismo, **el lector que sigue el nodo no sabe donde acaba un
+> libro y empieza el otro**: para el es un procedimiento y ya. **Podar el segundo
+> bloque no le quita ruido: le quita la mitad de un metodo que estaba usando
+> entero.**
+
+**LO QUE OBLIGA, aplicado a las cuatro decisiones de fuente nuevas:**
+
+| operacion | el bloque se REPARTE a |
+|---|---|
+| **`OP-F-04-COL`** | la serie de los 100 dias de Coleman, que ya tiene **16 nodos de fase y dos nodos-programa** |
+| **`OP-F-04-HOR`** | la familia de Horowitz, y donde no exista **se crea nodo propio**: no se borra |
+| **`OP-F-04-WEI`** | el Bullseye y los canales de traccion de Weinberg |
+| **`OP-F-04-RAC`** | la familia de SPIN, que ya tiene un acto CERRADO de cuatro miembros |
+
+> **Y ninguna de las cuatro admite la salida barata.** *Podar y ya* deja de ser una
+> opcion en las cuatro, **y eso encarece la fase 01 a proposito**: el reparto pide
+> decidir a donde va cada bloque, y esa decision es la que evita perder material
+> que el lector estaba usando.
