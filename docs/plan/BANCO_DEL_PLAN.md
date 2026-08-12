@@ -587,3 +587,103 @@ procedimiento sigue completo sin ella y simplemente **se ejecuta peor**.
 
 > **UNA ADVERTENCIA NO DECIDE LA CLASE, PERO SIEMPRE VIAJA.** Es linea para la vara y
 > es perdida nombrada para la fusion. **Las dos cosas a la vez.**
+
+---
+
+## P.12 EL CIERRE TRANSITIVO CONVOCA, LA LECTURA DECIDE
+
+**Adoptada el 12 ago 2026, y resuelve la primera contradiccion del plan entre el
+conteo y la lectura.**
+
+> **EL BANCO 9.24 DEFINE EL UNIVERSO DEL ACTO, NO LA MEMBRESIA DE LA FUSION.**
+>
+> El cierre transitivo dice **quienes se leen y se simulan juntos**. **No dice quienes
+> se funden.**
+
+### LAS TRES PARTES DE LA REGLA
+
+| | |
+|---|---|
+| **1. CONVOCA** | el cierre transitivo **junta a todos** los conectados por A, y **asi hay que leerlos y simularlos**: es el universo del acto |
+| **2. DECIDE** | **con el acto leido ENTERO, mandan los veredictos DIRECTOS.** Una A que nadie leyo no existe; una A que se leyo, vale por si misma |
+| **3. EL MIXTO SE JUZGA CON LA VARA** | un nodo con A y D contra la misma familia **no se decide por conteo**: se lee **contra el superviviente** |
+
+### LA VARA CONTRA EL SUPERVIVIENTE, que es la parte operativa
+
+> **Si el nodo mixto comparte con el superviviente LA IDEA EN LINEAS, CONTINUA:**
+> enlace **mas poda del solape**.
+>
+> **Si comparte PROCEDIMIENTO, ENTRA.**
+
+**NI TRANSITIVIDAD AUTOMATICA NI MAYORIA.** Contar A contra D **es la trampa
+elegante**: parece objetivo y **no lee nada**. Dos A pueden ser dos veces la misma
+linea, y tres D pueden ser tres veces el mismo procedimiento distinto. **El numero no
+sabe cual.**
+
+### EL EJEMPLAR: EL SEXTO DE GATES
+
+**`gestion_de_portafolio_gates_go_kill`**, con **los quince pares de su acto leidos**:
+
+| contra | clase |
+|---|---|
+| `sistema_gates_go_kill` y `gates_go_kill_decision_points` | **A** |
+| `requisitos_gates_con_dientes`, `estructura_gates` y `estructura_de_gates` | **D** |
+
+**Y EL PATRON LO EXPLICA TODO: repite con LA IDEA de puerta y no con su ANATOMIA.**
+Sus dos A son contra **los dos nodos mas generales**, los que dicen *que la puerta
+exista y que sea firme*. Sus tres D son contra **los tres que dicen como se monta por
+dentro**: que entregables, que tipos de criterio, quien aprueba, que salidas hay.
+
+> **Aplicada la vara contra el superviviente: lo que comparte es LA IDEA, y la idea le
+> cabe en una linea, su paso 2.** **CONTINUA: enlace mas poda del solape.**
+
+> **Y eso coincide con la frontera de los dos niveles que su propia mesa adopto**: el
+> sexto es un nodo **estrategico** y los cinco son **tacticos**. **Cuando la vara y la
+> frontera dicen lo mismo, no hay caso.**
+
+### POR QUE ESTA REGLA NO DEBILITA EL 9.24
+
+**El 9.24 sigue siendo lo que era: la unica forma de saber a quien hay que leer
+junto.** Sin el, el sexto nunca se habria comparado con los otros cinco **y su
+enlace no existiria**.
+
+> **LA FORMA CORTA: EL CIERRE TRANSITIVO ES LA CITACION, NO LA SENTENCIA.**
+
+---
+
+## P.13 LAS PERDIDAS SE RECOMPUTAN SOBRE LA NOMINA FINAL
+
+**Adoptada el 12 ago 2026, y la estreno `LD-61`.**
+
+> **UNA PERDIDA SE DECLARA CONTRA UN PAR Y SE COBRA CONTRA UNA NOMINA.** Cuando la
+> nomina de la fusion cambia, **toda perdida listada se vuelve a comprobar contra la
+> nomina completa**, y **la que viva dentro se reclasifica con su dueno.**
+
+**LA PERDIDA NO SE PIERDE: CAMBIA DE DUENO.**
+
+### DE DONDE SALE
+
+**`LD-58` dejo como perdida la taxonomia de CINCO salidas**, porque el superviviente
+candidato tenia cuatro. **`LD-61` la desactivo**: `estructura_de_gates` **lleva las
+cinco**, y esta **dentro de la misma fusion**.
+
+> **La perdida era real contra aquel par y falsa contra esta nomina.** **Y una perdida
+> falsa no es inofensiva: obliga a injertar en el superviviente algo que ya esta, y eso
+> es como se fabrica una repeticion nueva el dia de la pasada.**
+
+### LAS TRES CLASES QUE EL RECOMPUTO PRODUCE
+
+| clase | que es | que se hace |
+|---|---|---|
+| **VIAJA** | la pieza **no esta en ningun nodo vivo de la nomina** | se injerta en el superviviente, con su texto |
+| **VIVE DENTRO** | la pieza **ya esta en el superviviente o en otro que sobrevive** | **se tacha de la lista** y se anota donde vive |
+| **YA NO APLICA** | la pieza era de un nodo que **dejo de entrar en la fusion** | **se retira**: ese nodo sigue vivo y se la queda |
+
+### CUANDO SE CORRE
+
+**Cada vez que cambia la nomina de una fusion**, y **siempre antes de pasarla a
+LISTA**. Es barato: **es leer el texto del superviviente con la lista al lado.**
+
+> **Y ES DE LA MISMA FAMILIA QUE P.9: las dos dicen que lo escrito el dia de la
+> decision hay que releerlo el dia de la ejecucion.** Una lo dice de los ids, la otra
+> de las perdidas.

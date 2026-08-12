@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**ONCE FASES, 67 OPERACIONES, 64 LISTAS. LAS CINCO MESAS ADJUDICADAS Y LAS SIETE LECTURAS HECHAS. LO QUE QUEDA ES UNA ESPERA CON DISPARADOR Y UNA PARTICION MEDIDA QUE ESPERA UNA SOLA PALABRA.**
+**EL PLAN ESTA CERRADO: ONCE FASES, 67 OPERACIONES, 66 LISTAS, Y TRECE REGLAS EN SU BANCO. QUEDA UNA SOLA PENDIENTE, `OP-U-02`, Y NO ES UNA DECISION: ES UNA ESPERA CON DISPARADOR.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -106,16 +106,16 @@ el JSONL discrepan, manda el JSONL.
 | | |
 |---|---:|
 | operaciones | **67** |
-| **LISTAS** | **64** |
-| **DECISION PENDIENTE** | **3** |
+| **LISTAS** | **66** |
+| **DECISION PENDIENTE** | **1** |
 
 | fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
 | **0 CODIGO** | 5 | **5** | 0 |
 | **01 FUENTES** | 7 | **7** | 0 |
 | **02 DESTEJIDOS** | 7 | **7** | 0 |
-| **03 FUSIONES** | 17 | **14** | 3 |
-| **04 ENLACES** | 7 | **7** | 0 |
+| **03 FUSIONES** | 16 | **15** | 1 |
+| **04 ENLACES** | 8 | **8** | 0 |
 | **05 SANEO** | 12 | **12** | 0 |
 | **06 MESAS** | 5 | **5** | **0** |
 | **07 ADUANA** | 2 | **2** | 0 |
@@ -270,56 +270,39 @@ en vez de forzarse.**
 
 ---
 
-# LO QUE QUEDA, Y ES UNA SOLA PALABRA
+# EL PLAN, CERRADO
 
-**El 12 ago 2026 se cerraron las siete lecturas que faltaban.** **Ninguna decision
-nueva quedo pendiente por falta de datos: la unica que queda espera una palabra sobre
-una particion que ya esta medida entera.**
+**12 ago 2026.** **Todas las decisiones estan tomadas y todas las lecturas que alguna
+operacion esperaba estan hechas.**
 
-## LAS SIETE LECTURAS, todas hechas
+| | |
+|---|---|
+| **las cinco mesas** | **adjudicadas** |
+| **las lecturas que bloqueaban** | **hechas**: `LD-58` a `LD-65`, ocho en dos encargos del mismo dia |
+| **el acto de seis** | **leido entero**, quince pares de quince. **El unico del plan** |
+| **la unica pendiente** | **`OP-U-02`**, y su disparador es el puesto **3.388** |
 
-| lecturas | cuales | resultado |
-|---:|---|---|
-| **2** | `LD-58` y `LD-59`, las que abrian la cadena | **las dos cambiaron la forma** de la operacion que las esperaba |
-| **5** | los pares sin leer del acto de seis, mas la relectura de `LD-44` | **tres A y tres D**, y **el acto se partio** |
+## LO ULTIMO QUE SE CERRO, y como
 
-> **Con eso, LOS QUINCE PARES DEL ACTO DE SEIS ESTAN LEIDOS.** **Es el unico acto del
-> plan del que se puede decir eso.**
+**La particion de cinco mas uno se resolvio con doctrina y no con conteo.**
 
-## LO QUE ESPERA UNA PALABRA
+> **`P.12`: EL CIERRE TRANSITIVO CONVOCA, LA LECTURA DECIDE.** El 9.24 dice **a quien
+> hay que leer junto**, no **quien se funde**. Y el nodo mixto **se juzga con la vara
+> contra el superviviente**: comparte la idea en lineas, **continua**; comparte
+> procedimiento, **entra**.
 
-| operacion | la pregunta | por que no se decidio |
-|---|---|---|
-| **`OP-M-01-FUSION`** y **`OP-M-01-TRIO`** | `gestion_de_portafolio_gates_go_kill` **entra en la fusion por sus DOS A, o se queda fuera y se enlaza por sus TRES D?** | **por instruccion**: cuando la D se sostiene y parte el acto, **la particion se trae, no se adjudica** |
-| **`OP-U-02`** | ninguna. **Es una espera** | su disparador es el puesto **3.388** |
+| | |
+|---|---|
+| **la camarilla de cinco** | **se funde**, superviviente `sistema_gates_go_kill`. Es la **unica fusion del plan con su acto leido entero**: P.5 satisfecha **por construccion** |
+| **el sexto** | **vive y se enlaza**, con **poda del solape**: sus **dos A se cobran en la poda** y sus **tres D son el motivo de que viva** |
 
-**LA PARTICION, en dos lineas:**
-
-| mitad | | cobertura |
-|---|---|---|
-| **la camarilla de cinco** | `sistema_gates_go_kill`, `gates_go_kill_decision_points`, `requisitos_gates_con_dientes`, `estructura_gates`, `estructura_de_gates` | **10 pares de 10 leidos, LOS DIEZ EN A** |
-| **el sexto** | `gestion_de_portafolio_gates_go_kill` | **2 A y 3 D** contra la camarilla |
-
-> **SEA CUAL SEA LA RESPUESTA, LA CAMARILLA SE FUNDE.** Lo unico en discusion es **si
-> el sexto entra o se enlaza**, y **las dos salidas dejan el plan ejecutable.**
-
-## LA PREGUNTA DE FONDO, que es mas grande que ese nodo
-
-> **Cuando un nodo tiene A con dos miembros de una familia y D con tres, MANDA EL
-> CIERRE TRANSITIVO O MANDA LA MAYORIA DE LAS LECTURAS DIRECTAS?**
-
-**El banco 9.24 dice que el acto es el cierre transitivo de la relacion gemelo.** Y el
-cierre transitivo **mete al sexto**. **Pero es la primera vez en el plan que el cierre
-transitivo y la lectura directa se contradicen CON TODAS LAS LECTURAS HECHAS**, asi
-que **no hay mas evidencia que buscar: hay que elegir cual manda.**
-
-> **Lo que se decida ahi vale para todo el catalogo**, y por eso se trae en vez de
-> resolverse dentro de una operacion.
+> **Y ES LA PRIMERA OPERACION DEL PLAN QUE COBRA UNA A SIN FUNDIR.** Las dos A del
+> sexto no se tiran: **se ejecutan como poda**. Lo que repite se poda, lo que no repite
+> se queda, **y la arista sustituye al bloque podado.**
 
 ## LA COLA DE RELECTURA POST FUSION sigue viva, y no bloquea
 
-**Siete pares**, con su disparador en `08_VERIFICACION`. **Se corren con el recomputo**
-y no detienen ninguna fase.
+**Siete pares**, con su disparador en `08_VERIFICACION`. **Se corren con el recomputo.**
 
 ---
 
@@ -425,3 +408,7 @@ cola de relectura post fusion, que **no bloquea**.
 > **Se ejecutan sesenta y seis operaciones LISTAS en el orden de arriba, se comprueba
 > cada una contra su criterio de HECHO, y NO SE DECIDE NADA.** Lo unico que se espera
 > es **`OP-U-02`**, y su disparador es **el puesto 3.388.**
+
+> **Y NO QUEDA NI UNA LECTURA POR HACER QUE BLOQUEE ALGO.** Las siete que faltaban se
+> hicieron el 12 ago 2026, y **la cola de relectura post fusion no bloquea: viaja con
+> el recomputo.**
