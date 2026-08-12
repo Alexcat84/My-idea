@@ -14105,3 +14105,87 @@ ella **la doctrina del sistema se lee como que nunca hay nada que hacer con nadi
 pendientes.** El dominio son **844 pares** y llega al **3.255**.
 
 **El archivo esta en 2.443 sin huecos ni duplicados. Cero nodos tocados.**
+
+
+---
+
+## 85. REPORTE DEL TRAMO 2.444 A 2.448
+
+**Corte: puesto 2.448. Van 37 pares de `quality`** de sus 844.
+
+### 85.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **`quality`** | **37** | **15** | **22** | **40,5%** |
+| archivo global (corte 2.448) | 2.448 | **469** | **1.883** | **19,2%** (B 89, C 7) |
+
+**La tasa del dominio se estabiliza: 44,4% al 2.438, 40,6% al 2.443, 40,5% al 2.448.**
+Tres cortes seguidos y el ultimo movimiento es de **una decima**. **Sigue sin ser una banda
+publicable**, pero **por primera vez el dominio deja de saltar.**
+
+### 85.2 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **4** |
+| **REPITE** | **15** |
+| no se invoco | **18** |
+
+**19 de 37, el 51%.** **Cero PENDIENTE DE DOCTRINA. 19 ARISTA QUE FALTA (51%), 14 SOLAPE
+DECLARADO.**
+
+### 85.3 LO QUE ANADE ESTE TRAMO
+
+**TERCERA APARICION DEL TITULO ESPEJO (2.447).** `estilo_gerencial_ballet_vs_hockey` contra
+`estilo_gerencial_hockey_vs_ballet`: **el mismo contraste dicho al derecho y al reves**,
+como el 2.221 (`new_view_vs_old_view` contra `old_view_vs_new_view_human_error`) y el
+2.412 (`capacidad_de_proceso` contra `capacidad_del_proceso`).
+
+> **Y las tres veces la lectura fue distinta: A, D y A.** El titulo espejo **es una senal
+> de sospecha, no un veredicto**, exactamente igual que el sufijo `_2`. **Cuarta cara de la
+> misma familia.**
+
+**DOS PARES QUE SE REPARTEN UNA DOCTRINA POR MITADES, y ninguno esta cableado.**
+
+| puesto | una mitad | la otra |
+|---:|---|---|
+| **2.444** | **Deming**: como se RECONOCE una causa especial (datos cronologicos, cartas, reglas, investigar antes de perder la evidencia) | **Juran**: por que PUERTA sale cada una, PDCA para la especial y **DMAIC para la comun**, mas la advertencia del **tampering** |
+| **2.448** | la **curva de aprendizaje** para saber cuando parar de entrenar | **el tercer caso**: en control **pero** desempeno insatisfactorio, que pide **reasignacion con nueva capacitacion** |
+
+**UNA PERDIDA DE NOMBRE QUE NO LO ES (2.445).** Muere `estandares_especificos_industria` y
+se lleva **AS9100 e ISO 14000**, que son las dos normas por las que un lector de otro rubro
+llegaria. **No entra en la clase 9.28** porque **el superviviente si nombra ISO y cGMP**:
+lo que se pierde **no es la denominacion del instrumento, es la lista de ejemplos**. **Se
+anota como perdida de linea con motivo de alcance.**
+
+**Y el superviviente de ese par trae la unica precision del catalogo sobre la c de cGMP:**
+*actualizar procesos y tecnologia para cumplir con el caracter **actualizado** que exigen
+regulaciones como cGMP*. **Es lo que distingue esa norma de una certificacion que se saca
+una vez.**
+
+### 85.4 LAS 15 A DE `quality`, con las discutibles marcadas
+
+`2.414`, `2.417`, `2.418`, `2.420`, `2.421`, `2.424`, `2.426`, `2.431`, `2.432`, `2.436`,
+`2.437`, `2.438`, `2.440`, **`2.445`**, **`2.447`**.
+
+**LAS TRES MAS DISCUTIBLES, y la R49 empieza aqui:**
+
+1. **2.445.** Muere el nodo con **la lista de ejemplos mas ancha** (AS9100, ISO 14000) y
+   sobrevive el que trae **un requisito sustantivo** (mantener la tecnologia actualizada).
+   **La vara manda por contenido**, pero **la puerta de entrada del lector de aeronautica o
+   de ambiental se va con el que muere.**
+2. **2.447.** El superviviente gana por **un protocolo de reunion completo**, y lo que
+   muere aporta **capacitar a los supervisores en comunicacion**. **Es linea por la vara y
+   es la unica accion de formacion del par**: sin ella el protocolo queda escrito para
+   alguien que ya sabe conducir una reunion.
+3. **2.440**, ya releida y confirmada (R48), **queda marcada con su clasificacion
+   corregida**: no es perdida de catalogo sino **arista candidata**, y los dos nodos que la
+   cubren estan sin cablear.
+
+### 85.5 LO QUE FALTA
+
+**Faltan 169 pares del encargo, del 2.449 al 2.617.** **Checkpoints 2.500 y 2.600
+pendientes.** El dominio son **844 pares** y llega al **3.255**.
+
+**El archivo esta en 2.448 sin huecos ni duplicados. Cero nodos tocados.**
