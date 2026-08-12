@@ -13783,3 +13783,99 @@ familia entera no esta leida**: quedan pares con `accion_correctiva`,
 **3.255**: este tramo no lo cierra ni de lejos.
 
 **El archivo esta en 2.428 sin huecos ni duplicados. Cero nodos tocados.**
+
+
+---
+
+## 83. REPORTE DEL TRAMO 2.429 A 2.438: `quality` sube a 44,4%
+
+**Corte: puesto 2.438. Van 27 pares de `quality`** de sus 844.
+
+### 83.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **`quality`** | **27** | **12** | **15** | **44,4%** |
+| archivo global (corte 2.438) | 2.438 | **466** | **1.876** | **19,1%** (B 89, C 7) |
+
+**Subio del 41,2% al 44,4% con diez pares mas.** Sigue **sin banda utilizable**, y sigue
+siendo **la apertura mas alta del archivo**.
+
+### 83.2 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **3** |
+| **REPITE** | **12** |
+| no se invoco | **12** |
+
+**15 de 27, el 56%.** **Cero PENDIENTE DE DOCTRINA. 14 ARISTA QUE FALTA (52%), 9 SOLAPE
+DECLARADO.**
+
+### 83.3 LO QUE ESTE TRAMO ANADE
+
+**CUARTO CASO DE A POR FUSION MUTUA (2.436)**, y el archivo ya lleva cuatro: 2.127, 2.368,
+2.417 y este. **`enfermedades_mortales_gestion` contra `las_siete_enfermedades_mortales`**
+son los mismos cuatro pasos, y **cada lado aporta dos lineas y ninguno domina**: uno mide
+el impacto **en los numeros** y nombra al responsable; el otro mide **en la cultura** y da
+el criterio de prioridad, **empezar por la que genera mayor dano de fondo**.
+
+> **Dos de las cuatro fusiones mutuas del archivo han salido en `quality`, y en diez
+> pares.** Es la firma de un dominio escrito dos veces.
+
+**LA CADENA DE ABSORCION DE `accion_correctiva`, la familia mas grande del dominio.**
+
+| puesto | muere | sobrevive |
+|---:|---|---|
+| 2.418 | `accion_correctiva_6` | `accion_correctiva_5` |
+| 2.426 | `accion_correctiva_6` | `accion_correctiva_crosby` |
+| **2.431** | **`accion_correctiva_5`** | `accion_correctiva_sistematica` |
+
+> **El superviviente del 2.418 muere en el 2.431.** La familia tiene **cinco miembros en
+> la cola** y va colapsando hacia `accion_correctiva_sistematica` y
+> `accion_correctiva_crosby`. **Quedan sin leer los pares con `accion_correctiva`,
+> `accion_correctiva_2` y `accion_correctiva_4`.**
+
+**EL MEJOR EJEMPLAR DE LA TRAMPA DEL IDENTIFICADOR (2.433).**
+`auditoria_de_producto` contra `auditoria_de_producto_2`: **un sufijo de diferencia y
+auditan cosas distintas.** El primero mide **el producto contra la necesidad del usuario**;
+el segundo **reinspecciona productos ya clasificados para verificar si la decision del
+inspector fue correcta**. **Uno mide el producto y el otro mide al que mide. D.**
+
+**UNA PERDIDA QUE NO ES DE PASOS SINO DE NOMBRE (2.432).** Muere `funcion_perdida_taguchi`
+y el superviviente no dice **Taguchi** en ningun lado. **Es el nombre por el que este
+instrumento se busca en cualquier manual.** La fusion **tiene que reponerlo en el titulo o
+en la primera linea**, o el catalogo pierde la entrada por la que el lector llega.
+
+**Y UNA OBSERVACION DE PRODUCTO (2.434).** La linea de negocio pequeno que se perdio en el
+2.414 (*aunque sea de dos o tres personas*) **vive en otro nodo**: `zero_defects_concepto`
+dice *marca un dia concreto para lanzar el compromiso, **aunque sea contigo mismo o con
+quien te ayude en el negocio***. **El registro de negocio pequeno no esta repartido por el
+catalogo: esta concentrado en nodos concretos**, y conviene saber cuales antes de fundir.
+
+**Ningun nodo de CASO o ESTUDIO ha entrado a par todavia.** La figura **EL CASO NO ES LA
+CASA sigue armada y sin usar**.
+
+### 83.4 LAS 12 A DE `quality`, con las discutibles marcadas
+
+`2.414`, **`2.417`**, `2.418`, `2.420`, `2.421`, `2.424`, `2.426`, **`2.431`**,
+**`2.432`**, `2.436`, `2.437`, `2.438`.
+
+**LAS TRES MAS DISCUTIBLES, y la R47 empieza aqui:**
+
+1. **2.432.** La clase es solida (la misma cuenta paso por paso), **pero el superviviente
+   pierde el nombre canonico del instrumento.** Es el primer caso del archivo donde **lo
+   que se pierde no es un paso ni una linea: es la palabra por la que se busca.**
+2. **2.431.** Mata al superviviente de una A anterior (2.418). **La clase se sostiene por
+   la cadencia de tres niveles del superviviente nuevo**, pero **es la tercera lectura de
+   la misma familia en trece pares**, y la familia no esta leida entera: **el orden en que
+   la cola las va emparejando esta decidiendo quien queda de pie.**
+3. **2.417.** Fusion mutua ya releida (R46) y **con su tercera linea reclasificada a arista
+   candidata**; queda marcada porque **las otras dos siguen sin heredero por defecto.**
+
+### 83.5 LO QUE FALTA
+
+**Faltan 179 pares del encargo, del 2.439 al 2.617**, todos de `quality`. **Checkpoints
+2.500 y 2.600 pendientes.** El dominio completo son **844 pares** y llega al **3.255**.
+
+**El archivo esta en 2.438 sin huecos ni duplicados. Cero nodos tocados.**
