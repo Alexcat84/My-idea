@@ -233,3 +233,56 @@ cola con un nodo del libro que lleva pegado**.
 > injertado, contra el OTRO nodo de Coleman, sale **D**. **Que un nodo lleve un
 > injerto no significa que repita con todo su libro de origen: repite con uno, y
 > hay que leer cual.**
+
+---
+
+## P.5 REGLA DE ORDEN: CADA ACTO QUE VAYA A FUNDIRSE SE LEE ENTERO
+
+**Adoptada el 11 ago 2026, y saca 55 pares del backlog.**
+
+> **CADA ACTO SE LEE ENTERO DESPUES DE SU DESTEJIDO Y ANTES DE SU FUSION.**
+
+**LA PREGUNTA QUE CONTESTA, y no la contesta ninguna otra cosa:**
+
+> **el acto es UNA familia o son DOS?**
+
+**Un acto se construye por transitividad**: si A repite con B y B con C, los tres
+caen en la misma componente. **Pero eso no prueba que A repita con C.** Mientras
+queden pares internos sin leer, **la componente puede ser una familia o pueden ser
+dos pegadas por un nodo puente.**
+
+**POR QUE DESPUES DEL DESTEJIDO Y NO ANTES.** Un acto con costuras dentro **no
+tiene texto estable**: leer un par cuyo nodo va a perder la mitad de sus pasos
+**es leer algo que va a dejar de existir**. Es la misma razon por la que el cribado
+CONGELA un par cuyo veredicto depende de una cirugia.
+
+**POR QUE ANTES DE LA FUSION.** Despues ya no hay a quien preguntarle: **una vez
+fundido, el acto es un nodo y la pregunta de si eran una familia o dos se vuelve
+irrespondible.**
+
+### LO QUE ESTO CAMBIA EN LA CUENTA
+
+**Los 55 pares que estaban en el backlog como *resto sin mesa ni nomina* dejan de
+ser backlog: son la lectura obligatoria de 29 actos.**
+
+| | |
+|---|---:|
+| actos afectados | **29** |
+| pares que se leen | **55** |
+| de ellos, ya leidos como lectura dirigida | **2** (`LD-04` y `LD-08`) |
+| **pendientes reales** | **53** |
+
+> **Y no es trabajo nuevo: es trabajo que ya estaba y no tenia dueno.** Antes se
+> iba a fundir sin leerlo; ahora se lee, y se lee en el unico momento en que la
+> respuesta vale.
+
+### LA REGLA VALE PARA LOS 221 ACTOS, no solo para los 29
+
+**Los 29 son los que tienen pares fuera de cola y ninguna mesa que los recoja.**
+Los demas la cumplen por otra via: **173 actos ya estan enteros** (`OP-U-01`), y
+los grandes **entran por mesa o por destejido**, donde la lectura completa ya
+estaba prevista.
+
+> **El efecto neto de la regla es que NINGUN acto se funde sin haberse leido
+> entero.** Eso, y no otra cosa, es lo que convierte una componente medida en una
+> familia declarada.

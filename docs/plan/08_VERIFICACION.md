@@ -97,6 +97,34 @@ nada.**
 > espere:** el **ORDEN** de la fase 02. Se decide por **congelados liberados**, y
 > **una A nueva no mueve un congelado.**
 
+### EL LOTE DE LECTURA QUE VIAJA CON EL RECOMPUTO
+
+**ADJUDICADO el 11 ago 2026: el inventario final NO lleva ninguna nomina con
+cobertura incompleta pudiendo cerrarla con cinco lecturas.**
+
+| nomina | cobertura hoy | lecturas que faltan |
+|---|---|---:|
+| **el sales roadmap** | **10 de 15**, MEZCLADO desde el puesto 872 | **5** |
+
+**LOS CINCO PARES**, nombrados para que el lote no haya que reconstruirlo:
+
+- `customer_validation_sales_roadmap` contra `estrategia_de_ventas`
+- `customer_validation_sales_roadmap` contra `sales_roadmap`
+- `estrategia_de_ventas` contra `hoja_de_ruta_de_ventas`
+- `estrategia_de_ventas` contra `refinar_sales_roadmap`
+- `estrategia_de_ventas` contra `sales_roadmap_vs_sales_force`
+
+> **Se leen CON el recomputo y no antes**, por dos razones que se suman: su clase
+> ya esta decidida, asi que no urgen; y **el recomputo puede meter miembros nuevos
+> en la nomina**, con lo que leer antes obligaria a volver.
+
+> **Y la regla que esto deja escrita, que es mas grande que estos cinco: TODA
+> NOMINA QUE SE PUEDA CERRAR CON UNA TANDA CORTA SE CIERRA ANTES DEL INVENTARIO
+> FINAL.** Una nomina con cobertura incompleta en el inventario **no dice lo que
+> hay: dice hasta donde se miro.**
+
+---
+
 ### LA COMPROBACION DE QUE EL RECOMPUTO CORRIO BIEN
 
 **Tres cifras que tienen que cuadrar entre si**, y si no cuadran el recomputo esta

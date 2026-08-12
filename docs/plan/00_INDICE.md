@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA COMPLETO: DIEZ FASES, 42 OPERACIONES, 36 LISTAS. LAS SEIS PENDIENTES SON CINCO MESAS Y UN RECOMPUTO CON FECHA.**
+**EL PLAN ESTA COMPLETO: ONCE FASES, 44 OPERACIONES, 38 LISTAS. LAS SEIS PENDIENTES SON CINCO MESAS Y UN RECOMPUTO CON FECHA.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -43,8 +43,8 @@ el JSONL discrepan, manda el JSONL.
 
 | | |
 |---|---:|
-| operaciones | **42** |
-| **LISTAS** | **36** |
+| operaciones | **44** |
+| **LISTAS** | **38** |
 | **DECISION PENDIENTE** | **6** |
 
 | fase | operaciones | LISTAS | pendientes |
@@ -58,7 +58,8 @@ el JSONL discrepan, manda el JSONL.
 | **06 MESAS** | 5 | 0 | **5** |
 | **07 ADUANA** | 2 | **2** | 0 |
 | **08 VERIFICACION** | 1 | **1** | 0 |
-| **09 LECTURAS DIRIGIDAS** | 2 | **2** | 0 |
+| **09 LECTURAS DIRIGIDAS** | 3 | **3** | 0 |
+| **10 INVENTARIO** | 1 | **1** | 0 |
 
 > **LAS SEIS PENDIENTES SON CINCO MESAS Y UN RECOMPUTO CON FECHA.** `OP-U-02`
 > espera al dia en que el cribado llegue al puesto **3.388**, y su disparador esta
@@ -182,7 +183,8 @@ en vez de forzarse.**
 | [`CORRECCIONES_A_APLICAR.md`](CORRECCIONES_A_APLICAR.md) | una confirmacion y cuatro correcciones que viven FUERA de `docs/plan/`. **Las aplica la SESION A** | escrita |
 | [`BANCO_DEL_PLAN.md`](BANCO_DEL_PLAN.md) | **P.1** la regla de medicion por el resolutor, y **P.2** la firma posicional del injerto | escrita |
 | [`RECORTE_POSICIONAL.md`](RECORTE_POSICIONAL.md) | el recorte de P.2 corrido sobre **los 55 libros**: 67 nodos candidatos, seis libros | escrita |
-| [`LECTURAS_DIRIGIDAS.md`](LECTURAS_DIRIGIDAS.md) | los pares que la cola **no traera nunca**: 205 medidos, **27 leidos** en dos tandas, 189 de backlog documentado | escrita |
+| [`LECTURAS_DIRIGIDAS.md`](LECTURAS_DIRIGIDAS.md) | los pares que la cola **no traera nunca**: 205 medidos, **27 leidos** en dos tandas | escrita |
+| [`10_INVENTARIO.md`](10_INVENTARIO.md) | **el inventario navegable**: 323 entradas por sujeto, con sus huecos nombrados | escrita |
 | [`03_FUSIONES.md`](03_FUSIONES.md) | 221 actos sobre 576 nodos, corte 2117, marcado para recomputo | escrita |
 | [`04_ENLACES.md`](04_ENLACES.md) | 624 candidatos, cero podas en 24 lecturas, mas los sueltos de racimos | escrita |
 | [`06_MESAS.md`](06_MESAS.md) | cinco mesas con nomina, dependencia y opciones con evidencia | escrita |

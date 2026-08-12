@@ -90,13 +90,28 @@ injertos aporta, QUINCE**, y su material esta pegado **en nodos de otros libros*
 `actualizar_modelo_de_negocio_pivot_o_proceed` **no entra**: ocho veredictos y
 **los ocho D**.
 
-**NO HAY RECOMENDACION DEL AUDITOR.** Es la unica de las cinco que llega sin
-posicion previa.
+**LA POSICION DEL AUDITOR, escrita el 11 ago 2026: UN NODO POR PUERTA.** El
+criterio de reparto es **lo que el lector hace**, no de que libro salio el texto.
+
+**CON UNA RESERVA, y es la parte que importa:**
+
+> **Donde dos libros discrepan en la DISPOSICION, no hay duplicado: hay FRONTERA
+> DECLARADA, y se ESCRIBE en vez de fundirse.**
+
+**EL CASO CONCRETO DE ESTA MESA**: *buscar el punto brillante antes de pivotar*
+contra *decidir rapido y sin miedo*. **No son dos maneras de decir lo mismo: son
+dos disposiciones frente a la misma decision**, y un lector que reciba solo una de
+las dos recibe media biblioteca.
 
 | opcion | consecuencia |
 |---|---|
-| **discrepan** | es una **FRONTERA** y se declara con las dos doctrinas escritas. **Los dos nodos se quedan** |
-| **entran por sitios distintos** | **la recomendacion resuelve los dos pares en B de una vez**, el 771 y el 843 |
+| **un nodo por puerta** *(la posicion del auditor)* | el reparto lo manda **lo que el lector hace**: una puerta por entrada real, y los textos que sirven a la misma entrada se juntan |
+| **frontera declarada donde discrepan** | los dos nodos **se quedan**, y **se escribe la discrepancia**: cuando la biblioteca discrepa de verdad, **la discrepancia se declara** |
+| entran por sitios distintos sin discrepar | **la recomendacion resuelve los dos pares en B de una vez**, el 771 y el 843 |
+
+> **La reserva no contradice la posicion: la delimita.** *Un nodo por puerta* vale
+> para lo que el lector hace igual desde los dos textos. **Donde los dos textos le
+> dicen que haga cosas distintas, juntarlos borraria una de las dos.**
 
 > **Los dos pares en B dependen de esta decision, y no al reves.** Por eso la mesa
 > va **antes** que su reclasificacion.
