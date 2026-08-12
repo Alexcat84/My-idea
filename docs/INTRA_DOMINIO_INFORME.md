@@ -4527,6 +4527,28 @@ previsto, y esta en la seccion 74.
 > aparece **fuera** de la lista, eso **si** es una senal sobre el lector, y se anota como
 > tal.
 
+### LA REGLA DEL MARCADO, adoptada el 17 ago 2026
+
+> **TODA TANDA QUE SE PUBLIQUE LLEVA SU LISTA DE DISCUTIBLES MARCADOS, Y LA RELECTURA
+> CIEGA EMPIEZA POR ELLOS.**
+
+**Los tres usos que tiene, y el tercero no es obvio:**
+
+1. **TRIAJE.** Al auditor le basta con leer los marcados para encontrar lo que se cae.
+   **En la R42, las dos discrepancias de ocho fueron dos de los cinco marcados.**
+2. **MEDIDA DEL LECTOR.** Si una discrepancia aparece **fuera** de la lista, eso **si**
+   es una senal sobre el lector: **no sabe donde esta flojo**, y entonces **ninguna de
+   sus lecturas tiene mas credito que otra.** Mientras las discrepancias caigan dentro,
+   el resto de la tanda se sostiene.
+3. **EL MARCADO SE ESCRIBE ANTES DE SABER SI ACIERTA**, y por eso vale. Un marcado puesto
+   despues de la relectura no mide nada.
+
+**Y la prueba de que no es autocomplacencia: el marcado tambien predice el arrastre.**
+La seccion 73.7 escribio sobre el 2.195 *si el auditor sostiene X, este veredicto se
+voltea, y con el el 2.215*. **Se voltearon los dos, y en ese orden de dependencia.** El
+barrido de direccion de la seccion 76 anadio un tercero, el **2.338**, y tambien estaba
+marcado.
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -12498,13 +12520,17 @@ entero.**
 | | |
 |---|---:|
 | pares leidos en el tramo | **76** |
-| A | **12** |
+| A | **11** |
 | B | **0** |
 | C | **0** |
-| D | **64** |
-| **tasa de A del tramo** | **15,8%** |
+| D | **65** |
+| **tasa de A del tramo** | **14,5%** |
 
-**Archivo global al corte 2.376: A 451, B 89, C 7, D 1.829 sobre 2.376. Tasa 19,0%.**
+**Archivo global al corte 2.376: A 450, B 89, C 7, D 1.830 sobre 2.376. Tasa 18,9%.**
+
+> **Cifras corregidas el 17 ago 2026 por el barrido de direccion**, que volteo el puesto
+> 2.338 de A a D. La primera escritura decia 12 A, 15,8% del tramo y 19,0% global.
+> Detalle en la seccion 76.
 
 ### 75.2 LA PREDICCION DEL CHECKPOINT 2.300, CUMPLIDA Y MEDIDA
 
@@ -12520,12 +12546,12 @@ La seccion 72.2 escribio, con `health_safety` al **37,0%** y 111 pares sin leer:
 | corte | pares leidos de `health_safety` | A | **tasa** |
 |---|---:|---:|---:|
 | 2.300 | 81 de 192 | 30 | **37,0%** |
-| **2.376** | **157 de 192** | **42** | **26,8%** |
-| el tramo nuevo solo (2.301 a 2.376) | 76 | 12 | **15,8%** |
+| **2.376** | **157 de 192** | **41** | **26,1%** |
+| el tramo nuevo solo (2.301 a 2.376) | 76 | 11 | **14,5%** |
 
 > **La direccion acerto y la magnitud es grande: el tramo nuevo entrega menos de la mitad
-> de la tasa del anterior, 15,8% contra 37,0%, y arrastra el acumulado del dominio del
-> 37,0% al 26,8%.** Con 35 pares por leer, la cifra de cierre **seguira bajando**.
+> de la tasa del anterior, 14,5% contra 37,0%, y arrastra el acumulado del dominio del
+> 37,0% al 26,1%.** Con 35 pares por leer, la cifra de cierre **seguira bajando**.
 >
 > **Y esto vuelve a decir lo mismo que la seccion 71 y la 72: una tasa parcial no es la
 > tasa de un dominio.** El 37,0% publicado al 2.300 era correcto **a su corte** y hoy
@@ -12612,9 +12638,13 @@ centros y no uno**.
    anoto tres veces**: la instruccion de **redisenar la herramienta en vez de entrenar a
    la persona** es la unica accion correctiva directa del racimo, y en el 2.310 viaja
    hacia un nodo que es **analisis puro, sin un solo paso de remedio**.
-5. **`health_safety` sigue abierto**, 157 de 192, **26,8% y bajando**.
+5. **`health_safety` sigue abierto**, 157 de 192, **26,1% y bajando**.
 
-### 75.7 LAS 12 A NUEVAS, con las discutibles marcadas
+### 75.7 LAS 11 A NUEVAS, con las discutibles marcadas
+
+> **Eran 12. El 2.338 salio el 17 ago 2026**, volteado por el barrido de direccion, y
+> **era uno de los tres que esta misma seccion habia marcado como discutibles.** Queda
+> tachado abajo, no borrado.
 
 | puesto | muere | sobrevive |
 |---|---|---|
@@ -12624,7 +12654,7 @@ centros y no uno**.
 | 2.311 | `errores_como_consecuencia` | `error_humano_vs_falla_mecanica` |
 | 2.328 | `reglas_parada_investigacion_accidentes` | `limite_busqueda_causas_pendulo` |
 | **2.335** | `condiciones_latentes_largo_plazo` | `caso_descarrilamiento_nakina` |
-| **2.338** | `cuestionar_vision_zero` | `metas_de_seguridad_correctas` |
+| ~~2.338~~ | ~~`cuestionar_vision_zero`~~ | **VOLTEADA A D** el 17 ago 2026 |
 | 2.347 | `errores_como_consecuencia` | `seduccion_modelo_persona` |
 | 2.352 | `vieja_vision_vs_nueva_vision_seguridad` | `new_view_vs_old_view` |
 | 2.362 | `errores_como_consecuencia` | `new_view_human_error` |
@@ -12639,10 +12669,12 @@ centros y no uno**.
    profundo frente a la inspeccion visual**, que es lo unico del par que dice como se
    encuentra una condicion latente enterrada. **Pero la fusion tiene que conservar el
    titulo generico**, o la regla queda colgada de un descarrilamiento concreto.
-2. **2.338.** El que muere es **el unico nodo del catalogo que nombra la Vision Cero**, y
-   su linea de **no usar el cero como excusa retroactiva para decir que todo era
-   evitable** es el unico puente entre esta familia y la del sesgo retrospectivo. **La
-   vara manda por contenido; la fusion tiene que conservar las dos cosas.**
+2. **2.338: SE VOLTEO, y por la razon que esta misma seccion adelanto.** Aqui se escribio
+   que el que muere es **el unico nodo del catalogo que nombra la Vision Cero** y que su
+   linea de **no usar el cero como excusa retroactiva** es el unico puente con la familia
+   del sesgo retrospectivo. **Eso no era una perdida a vigilar: era la prueba de que la
+   madre conservaba materia propia**, y por tanto de que la vara se habia aplicado al
+   reves. **El par es madre e hijo y quedo en D** (seccion 76).
 3. **2.368.** **Fusion mutua sin superviviente**: cada uno anade dos lineas y ninguno
    trae procedimiento. **Lo que se pierde si nadie lo mira: el nivel organizacional
    explicito, el entrenamiento contra el sesgo de atribucion, y la instruccion de usar el
@@ -12675,7 +12707,7 @@ reparten:
 > **`quality` tiene mas candidatos que `core`, y `core` tiene diez veces mas pares en la
 > cola.** Si el barrido acierta, **la cola de `quality` deberia entregar madre e hijo, no
 > gemelos**: muchos **CONTINUA** por linea desplegada y muchas **ARISTA QUE FALTA**, con
-> una tasa de A mas parecida a la cola de `health_safety` (15,8%) que a su cabecera
+> una tasa de A mas parecida a la cola de `health_safety` (14,5%) que a su cabecera
 > (37,0%). **Queda escrito antes de leer para que se pueda comprobar despues.**
 
 **El archivo esta en 2.376 sin huecos ni duplicados.** Se retoma en el **2.377** con
@@ -12683,3 +12715,122 @@ reparten:
 `python scripts/registrar_veredictos.py`.
 
 **Cero nodos tocados en todo el tramo. Modo de cierre respetado entero.**
+
+
+---
+
+## 76. EL BARRIDO DE DIRECCION sobre todas las A del archivo
+
+**17 ago 2026. Corte: puesto 2.376.** Levantado por `scripts/barrido_direccion.py`, que
+es **de solo lectura** sobre el archivo y sobre el grafo y **no cambia ni una clase**.
+
+### 76.1 EL UNIVERSO, y por que se parte en dos
+
+| | |
+|---|---:|
+| veredictos en el archivo | **2.376** |
+| clase A | **451** |
+| **A cuya razon invoca la vara** (la formula y sus variantes) | **295** (65,4% de las A) |
+| de esas, **ELIGEN DIRECCION**, es decir nombran superviviente | **46** |
+| de esas, **NO eligen direccion**: *REPITE con X* y nada mas | **249** |
+
+> **LA PARTICION NO ES UN DETALLE DE FILTRADO: ES EL RESULTADO.** Una A que **no elige
+> superviviente no puede estar al reves**, porque **nunca eligio un sentido.** Dice *sobra
+> uno* y deja abierto cual, que es exactamente lo que la seccion 8 estableció desde el
+> principio: **la A dice que sobra uno; no dice cual.**
+>
+> **El error de direccion solo existe donde la razon PESO una cosa contra la otra para
+> decidir quien vive.** Y eso son **46 pares de 451 A: el 10,2%.**
+
+**Las 249 sin direccion no quedan absueltas de todo: quedan absueltas de ESTE error.**
+Su direccion sigue **sin decidir**, y decidirla es trabajo de la fusion (fase 04), no del
+cribado. **Las 46 son las unicas que ya comprometieron una respuesta.**
+
+**Reparto de las 46:** `franquicias` **6**, `health_safety` **40**. **Ninguna en `core`,
+`compras`, `entrega`, `environmental` ni `exportacion`**, porque las razones de esos
+dominios cierran con *REPITE con X. Candidato a fusion* y no nombran superviviente.
+
+### 76.2 LA VERIFICACION, una a una, con criterio escrito
+
+**EL CRITERIO, fijado antes de mirar:** una A esta al reves **si y solo si el nodo que
+SOBREVIVE es el desarrollo de UNA SOLA LINEA del que MUERE**, es decir si el superviviente
+**cabe entero dentro de un paso del muerto** y el muerto **conserva materia propia que el
+superviviente no toca en ningun paso.**
+
+**RESULTADO: 46 verificadas, 1 cayo, 45 sostenidas.**
+
+| puesto | dominio | forma del par | veredicto de la verificacion |
+|---:|---|---|---|
+| **2.338** | `health_safety` | **MADRE E HIJO leidos al reves** | **CAE. A pasa a D** |
+| 2.181, 2.190, 2.196, 2.202, 2.204, 2.207 | `franquicias` | gemelos o hijo que muere correctamente | **6 sostenidas** |
+| las 39 restantes | `health_safety` | gemelos, o el hijo muriendo en el sentido correcto | **39 sostenidas** |
+
+**EL CASO QUE CAE, 2.338.** `cuestionar_vision_zero` es **la madre** y dice en sus pasos 1
+y 4, en una linea cada uno, traducir el compromiso de cero en acciones controlables y
+disenar indicadores de proceso. `metas_de_seguridad_correctas` es **el hijo** y despliega
+esas dos lineas en seis pasos. **Y la madre conserva lo que el hijo no toca en ningun
+paso: que la meta de cero no se use como excusa retroactiva para decir que todo era
+evitable, y hablar con claridad de sus limites reales.** El hijo mejora los indicadores;
+**la madre discute si la meta misma es honesta.**
+
+**EL CONTRASTE QUE SOSTIENE LAS 45.** El caso corriente de estas A **no es madre e hijo:
+son gemelos**, dos nodos al mismo nivel que dicen lo mismo con otras palabras
+(`drift_hacia_el_fallo_2` contra `drift_hacia_el_fallo`, `ciclo_de_culpa` contra
+`ciclo_de_culpa_2`, `defensas_en_profundidad_2` contra `defensas_en_profundidad_3`). **En
+un par de gemelos la vara no tiene direccion que equivocar**, porque ninguno es la madre.
+
+**Y el segundo grupo son hijos que mueren BIEN**, que es lo que confunde y por eso se
+escribe: en el **2.196**, `confidencialidad_manual_operaciones` desarrolla la palabra
+*confidencial* del paso 5 de `desarrollar_manual_operaciones`. **Es madre e hijo, y el que
+muere es EL HIJO.** Esa es la direccion correcta, y el 2.215 es su espejo exacto con el
+error dentro.
+
+### 76.3 LO QUE EL BARRIDO PROBO QUE NO SIRVE
+
+Se implemento tambien **una prueba de cobertura lexica**: para cada par, que fraccion de
+los pasos del nodo que muere aparece, por vocabulario, dentro del superviviente. La idea
+era que **una A correcta exige que el muerto este contenido en el que vive.**
+
+| | |
+|---|---:|
+| pares con direccion elegida | 46 |
+| marcados **SOSPECHOSO** por la prueba lexica | **34** |
+| de esos, **realmente al reves** | **1** |
+| **precision de la prueba** | **3%** |
+
+> **La prueba no discrimina, y la razon es del corpus: estos nodos REPITEN IDEAS CON
+> PALABRAS DISTINTAS.** *Historial de pequenos cambios acumulados* y *brecha entre
+> procedimiento escrito y practica real* son el mismo paso y no comparten una palabra.
+>
+> **LA CONSECUENCIA, y va mas alla de este barrido: cualquier deduplicacion mecanica por
+> vocabulario que se plantee sobre este catalogo va a fallar del mismo modo.** La
+> direccion se verifica **leyendo**, y el instrumento util no fue el contador de palabras
+> sino **los entregables**, que en el 2.215 dijeron en una linea lo que la comparacion de
+> pasos tardo un parrafo en decir.
+
+**El script queda igual, con la prueba dentro y con su tasa de acierto escrita en la
+cabecera**, para que nadie la use como si midiera algo.
+
+### 76.4 EL RECOMPUTO
+
+| | antes | **despues** |
+|---|---:|---:|
+| A del archivo | 451 | **450** |
+| D del archivo | 1.829 | **1.830** |
+| **tasa global** (corte 2.376) | 19,0% | **18,9%** |
+| A de `health_safety` | 42 | **41** |
+| **tasa de `health_safety`** (157 de 192) | 26,8% | **26,1%** |
+| A del tramo 2.301 a 2.376 | 12 | **11** |
+| **tasa del tramo** | 15,8% | **14,5%** |
+
+**`franquicias` no se mueve: 18 A sobre 148, 12,2%.** Sus 6 A con direccion elegida se
+sostuvieron todas.
+
+### 76.5 LA CIFRA QUE SE REPORTA
+
+> **295 A invocaban la vara. 46 elegian direccion. 1 cayo.**
+>
+> **Y contando los dos que el auditor ya habia tumbado, el archivo entero tiene TRES A
+> escritas con la vara al reves, las tres del mismo lector y las tres en la misma tanda.**
+> Dos las encontro la relectura ciega del auditor; **la tercera la encontro el barrido, y
+> no habria salido sin la regla escrita primero.**

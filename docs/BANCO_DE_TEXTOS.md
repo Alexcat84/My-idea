@@ -1489,6 +1489,65 @@ alli la madre lista cuatro materiales, dos tienen nodo propio, **no hay cadena**
 **no enlaza a ninguno de los dos**, o sea cero de dos. Sigue siendo arista que
 falta por la via del contenido huerfano de camino, no por la de la mayoria.
 
+### 9.6.2 PRECISIÓN a 9.6.1: LA VARA TIENE DIRECCIÓN
+
+**Registrada el 17 ago 2026, tras la relectura conjunta con el auditor de los puestos
+2.195 y 2.215 y el barrido de dirección que encontró un tercer caso, el 2.338.**
+
+> **LA VARA PREGUNTA QUÉ AÑADE EL HIJO A LA MADRE. NUNCA AL REVÉS.**
+
+**No es una regla nueva: es lo que la tercera fila del 9.22 ya decía** (*procedimiento
+en UN solo sentido: ahí hay madre e hijo, la vara se aplica una vez y el par continúa*).
+Se escribe aparte **porque se aplicó al revés tres veces y ninguna de las tres se
+detectó al escribirla.**
+
+**LA REDUCCIÓN AL ABSURDO, que es lo que la hace obligatoria.** Si se pregunta qué añade
+la madre al hijo, la respuesta casi siempre son líneas, **porque una madre enuncia sus
+pasos en forma compacta: eso es lo que es una madre.** Con la dirección invertida
+mueren, entre otras:
+
+| madre | la línea que enuncia | el hijo que la despliega |
+|---|---|---|
+| `decision_franquiciar_vs_expansion_propia` | *modela el escenario de abrir más unidades propias* | `alternativa_operaciones_propias` |
+| `evaluacion_necesidad_franquiciar` | *evalúa si tu capital y capacidad de gestión bastan* | `estimacion_inversion_inicial_franquiciador` |
+| `preparar_fdd` | *reunir los 23 ítems de divulgación* | `decision_fpr`, `financial_performance_representations` |
+| `programa_entrenamiento_franquiciados` | *contenido y duración de cada etapa* | `entrenamiento_oficina_central` |
+| `identificacion_evaluacion_peligros` | *hacer inspecciones regulares* | `inspeccion_lugar_trabajo_peligros` y otros tres |
+
+> **Con la dirección invertida, TODAS ESAS MADRES REPITEN. Y si todas repiten, no queda
+> jerarquía: queda una lista de hijos sin nadie que los convoque.**
+
+**LA FORMULACIÓN QUE SE CITA, y es la que el cribado usa en la razón:**
+
+> **UNA LÍNEA QUE TARDA SIETE PASOS EN EJECUTARSE NO ES UNA LÍNEA: ES UN PROCEDIMIENTO
+> NOMBRADO EN UNA LÍNEA.** La prueba de que el paso de la madre es un procedimiento **es
+> que existe el hijo que lo ejecuta.**
+
+**CÓMO SE RECONOCE UN PAR MADRE E HIJO, antes de pesar nada.** El hijo **cabe entero
+dentro de UN paso de la madre**, y la madre **conserva materia propia que el hijo no
+toca en ningún paso.** Si eso se cumple, la pregunta ya solo puede hacerse en un
+sentido.
+
+**LOS TRES EJEMPLARES, y los tres con el mismo perfil:**
+
+| puesto | la madre que casi muere | el hijo que la desplegaba | lo que la madre conservaba y el hijo no toca |
+|---:|---|---|---|
+| **2.215** | `capitalizacion_adecuada_del_franquiciador` | `cinco_categorias_costos_franquicia`, **7 pasos para su paso 1** | la fuente de fondos y el aviso de no financiarse con las cuotas iniciales |
+| **2.195** | `capitalizacion_adecuada_del_franquiciador` | *(no era madre e hijo: línea compartida y procedimiento propio a cada lado)* | el mismo presupuesto y financiación |
+| **2.338** | `cuestionar_vision_zero` | `metas_de_seguridad_correctas`, **6 pasos para sus pasos 1 y 4** | que la meta de cero no se use como excusa retroactiva, y hablar de sus límites |
+
+**LA SEÑAL DE VERIFICACIÓN, medida en el barrido:** los entregables lo deciden más rápido
+que los pasos. En el 2.215 la madre entrega **presupuesto MÁS fuente de fondos**, dos
+productos, y el hijo entrega **solo el presupuesto**, que es el primero de los dos.
+
+**Y LO QUE EL BARRIDO PROBÓ QUE NO SIRVE: la prueba léxica.** Medir el solape de
+vocabulario entre los dos nodos **marcó 34 de 46 pares como sospechosos y solo 1 lo era**:
+**3% de precisión.** Estos nodos **repiten ideas con palabras distintas**, así que el
+vocabulario no discrimina. **La dirección se verifica leyendo, no contando palabras**, y
+eso vale también para cualquier deduplicación mecánica que se plantee más adelante.
+
+---
+
 ### 9.8 EL DESEMPATE POR CABLEADO
 
 **Registrada el 12 ago 2026.** Sirve para elegir **superviviente**, que es la
