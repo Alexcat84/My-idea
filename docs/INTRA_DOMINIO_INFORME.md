@@ -11944,3 +11944,129 @@ existiera. **Las escritas alcanzaron**, que es exactamente lo que decia el encar
 **una cuarta ventaja con nodo propio, `rentabilidad_incrementada_franquicia`, que la
 madre ni siquiera nombra**. **Cero de cuatro: la silueta ni acusa ni exculpa, y manda el
 contenido**, que es lo que se hizo en los cinco pares.
+
+---
+
+## 72. CHECKPOINT 2300, y el dominio que dobla a todos los demas
+
+**Corte de todas las cifras de esta seccion: puesto 2.300 del archivo.** `health_safety`
+NO esta cerrado: llega hasta el 2.411 y aqui van leidos 81 de sus 192 pares. **Toda
+tasa de este dominio es provisional y lleva su corte al lado** (banco 9.21).
+
+### 72.1 EL MARCADOR, RECOMPUTADO DEL ARCHIVO
+
+| clase | corte 2.219 | **corte 2.300** | delta |
+|---|---:|---:|---:|
+| **A** | 411 | **441** | +30 |
+| B | 89 | **89** | 0 |
+| C | 7 | **7** | 0 |
+| **D** | 1.712 | **1.763** | +51 |
+| **TOTAL** | **2.219** | **2.300** | +81 |
+
+**Tasa global de A: 19,2%.** Subio del 18,5%, **y la subida entera la produce un solo
+dominio**.
+
+### 72.2 LA TASA POR DOMINIO (banco 9.27)
+
+| dominio | pares leidos | A | B | C | D | **tasa de A** | estado |
+|---|---:|---:|---:|---:|---:|---:|---|
+| `compras` | 155 | 1 | 2 | 0 | 152 | **0,6%** | cerrado |
+| `core` | 1.445 | 344 | 87 | 7 | 1.007 | **23,8%** | cerrado |
+| `entrega` | 171 | 2 | 0 | 0 | 169 | **1,2%** | cerrado |
+| `environmental` | 170 | 29 | 0 | 0 | 141 | **17,1%** | cerrado |
+| `exportacion` | 130 | 15 | 0 | 0 | 115 | **11,5%** | cerrado |
+| `franquicias` | 148 | 20 | 0 | 0 | 128 | **13,5%** | cerrado |
+| **`health_safety`** | **81 de 192** | **30** | 0 | 0 | 51 | **37,0%** | **abierto, 42% leido** |
+
+> **`health_safety` esta al 37,0% con 81 pares leidos: es la tasa mas alta del archivo
+> entero, mas de la mitad por encima de `core`, que era el techo hasta hoy.** Con 111
+> pares sin leer la cifra puede moverse, y no en cualquier direccion: **la cola del
+> dominio baja de similitud semantica, y en todos los dominios anteriores la tasa cae
+> conforme baja la similitud.** La cifra de cierre sera mas baja que 37,0%. **Cuanto,
+> no se sabe hasta leerla, y por eso queda escrita como provisional y no como final.**
+
+### 72.3 POR QUE ESTE DOMINIO REPITE TANTO, y no es lo que parece
+
+**La repeticion de `health_safety` NO viene de dos autores que coinciden. Viene de UN
+MISMO CONCEPTO EXTRAIDO VARIAS VECES DEL MISMO LIBRO.** La prueba esta en los propios
+ids:
+
+| senal en el id o el titulo | ejemplo | pares |
+|---|---|---|
+| **sufijo numerico** | `drift_hacia_el_fallo_2`, `ciclo_de_culpa_2`, `defensas_en_profundidad_2` y `_3`, `cultura_justa_3` | 2.222, 2.226, 2.272, 2.283 |
+| **titulo espejo** | `new_view_vs_old_view` contra `old_view_vs_new_view_human_error` | 2.221 |
+| **una preposicion de diferencia** | `confusion_de_modos_automatizacion` contra `confusion_modos_automatizacion` | 2.235 |
+| **mismo titulo, distinto oficio** | `construccion_linea_tiempo` contra `construccion_timeline_resolucion` | 2.249, y ese dio **D** |
+
+**De las 30 A del tramo, 24 son entre nodos de la MISMA fuente.** Las 6 restantes cruzan
+fuentes, y ahi aparece **una figura nueva del tramo, LA MISMA NORMA EN DOS FOLLETOS**
+(2.232): OSHA3885 y OSHA3886 cubren el mismo requisito de capacitacion con distinto
+detalle. **No son dos escuelas discrepando: es un organismo publicando dos veces.**
+
+**Y el contraste importa: `franquicias`, tambien de fuente unica, cerro en 13,5%.** La
+fuente unica no basta para explicar el 37,0%. **Lo que lo explica es que el mismo
+concepto tiene tres y cuatro nodos, no que el autor sea uno solo.**
+
+### 72.4 LA VARA POR TRAMO (banco 9.6.1)
+
+**Tanda completa hasta aqui, 2.118 a 2.300: 183 pares, 40 A y 143 D. Tasa 21,9%.**
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **41** |
+| **REPITE** | **40** |
+| no se invoco | 102 |
+
+**81 de 183 pares se decidieron con la vara, y en el tramo de `health_safety` casi todos.**
+El patron de las 30 A es siempre el mismo: **lo que el nodo que muere anade son
+advertencias, criterios sueltos, acciones unicas, prohibiciones o principios enunciados**,
+y lo que el superviviente conserva es **una taxonomia nombrada, un test que se puede
+hacer, o un mecanismo que actua en el tiempo**.
+
+**Cero PENDIENTE DE DOCTRINA en 183 pares.** Ninguna pareja pidio una regla que no
+existiera.
+
+### 72.5 LOS RACIMOS ABIERTOS EN `health_safety`
+
+| racimo | miembros | repetidores |
+|---|---:|---|
+| **la vieja y la nueva vision** | **6** | `old_view_vs_new_view_human_error`, `vieja_vision_vs_nueva_vision_seguridad`, `new_view_vs_old_view_de_error_humano` (×2) |
+| **el sesgo retrospectivo** | **6** | `evitar_sesgo_retrospectivo_hindsight` (×2), `sesgo_retrospectivo_hindsight` |
+| **las defensas** | **5** | `defensas_en_profundidad_2` (×2) |
+| **las condiciones latentes** | **5** | ninguno todavia |
+| **el error como sintoma** | **5** | `errores_como_consecuencia` (×3), `human_error_como_sintoma` (×2), `falla_sistemica_vs_error_individual` |
+| **la deriva** | 3 | `drift_hacia_el_fallo_2` (×3) |
+| **la cultura justa** | 3 | `cultura_justa` |
+| **el error de mantenimiento** | 3 | `omisiones_en_mantenimiento` |
+| **la gestion del error** | 3 | ninguno todavia |
+
+**Ninguno de estos racimos tiene UNA SOLA arista entre sus miembros.**
+
+### 72.6 DOS CONDICIONES VIVAS, y por que no se resuelven par a par
+
+**`drift_hacia_el_fallo_2` repitio TRES veces contra TRES supervivientes distintos**
+(`deriva_hacia_el_fallo`, `drift_hacia_el_fallo` y `normalizacion_de_la_desviacion`), y
+**`errores_como_consecuencia` tambien tres** (`falla_sistemica_vs_error_individual`,
+`human_error_como_sintoma` y `riesgos_del_enfoque_en_error_humano`).
+
+> **Un nodo que repite contra tres madres distintas no elige superviviente en ninguna de
+> las tres lecturas: lo elige el racimo.** El veredicto del par dice *este no aporta*, y
+> eso es firme. **Quien se queda con su contenido es una decision de la fusion, no del
+> cribado**, y queda anotada como condicion viva.
+
+**Y hay una CADENA DE ABSORCION medida:** `errores_como_consecuencia` repite contra
+`falla_sistemica_vs_error_individual` (2.242), y `falla_sistemica_vs_error_individual`
+repite contra `fallas_activas_condiciones_latentes` (2.273). **Tres nodos, una cadena, y
+solo el ultimo queda en pie.** El del medio **sobrevive en un par y muere en otro**, que
+es exactamente lo que la doctrina permite: **la clase es del par, no del nodo.**
+
+### 72.7 UNA FIGURA NUEVA: EL HERMANO QUE CORRIGE AL HERMANO
+
+En el puesto **2.283**, `defensas_en_profundidad_3` pide **evaluar si hay dependencias
+ocultas entre capas que se asumen independientes**. `defensas_en_profundidad_2` pide,
+literalmente, **evaluar la integridad de cada capa de forma independiente**. **El segundo
+desmiente el supuesto del primero, y los dos son del mismo autor y del mismo libro.**
+
+**No es contradiccion con una regla vigente ni con una cifra publicada**, asi que no
+detuvo el cribado: **queda declarada**. Lo mismo pasa con el principio de redundancia
+del `_2` y la advertencia de complacencia por exceso de defensas del `_3`.
