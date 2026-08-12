@@ -16,3 +16,12 @@ referencia/
 # ensuciaria el arbol sin aportar nada. La VARA es linea_base_rumbos.json,
 # que si va committeada.
 scripts/rumbos/_ultima_corrida.json
+
+# Artefactos de runtime del orquestador del bucle: el log de vueltas y los
+# volcados JSON de la salida de cada sesion (ejecutor y auditor). Cambian en
+# cada vuelta y ultimo_ejecutor.json se escribe AL TERMINAR el proceso, asi que
+# durante la sesion esta vacio o a medias. El estado durable vive en REPORTE.md,
+# ACTA_AUDITOR.md, PROMPT_SIGUIENTE.md y los veredictos, que si van committeados.
+docs/loop/loop.log
+docs/loop/ultimo_ejecutor.json
+docs/loop/ultimo_auditor.json

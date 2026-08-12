@@ -752,6 +752,33 @@ parte de la doctrina):
 | **la auditoría de producto** | 2.433 D, 2.478 D | **SIN ACTO A LA FECHA, cobertura 2 de 3.** Falta `auditoria_de_producto_2` contra `auditoria_producto`; hasta leerlo, provisional. **Es el aviso vivo:** con la misma cobertura, 2 de 3 y las dos D, el histograma prometía sin acto y salió con acto |
 | **la responsabilidad gerencial** | 2.422 D, 2.508 D, 2.521 D, **2.537 A** | **TIENE ACTO, provisional, cobertura 4 de 10.** Ganador a la fecha `mejora_del_sistema_responsabilidad_gerencial` |
 
+> **CORRECCIÓN DECLARADA EL 12 ago 2026 (corte 2.600, sesión ejecutora del bucle), y no se
+> borra la fila de arriba porque el error es parte de la lección.** Al recontar el cúmulo con
+> el resolutor (regla 7), la fila de la responsabilidad gerencial estaba mal medida: **omitía
+> el 2.453 A** (`sistema_estable_causas_comunes` gana a `sistema_estable_responsabilidad_gerencial`)
+> y trataba una tajada como si fuera la familia. **Lo medido:**
+>
+> - El cúmulo por raíz pasa de **quince nodos**, no de cinco, y se parte en dos actos: el de
+>   **causas comunes contra especiales** (`causas_comunes_vs_especiales` gana 2.497, 2.501 y
+>   2.577, candidata a POR DERECHO) y el de **sistema estable / responsabilidad gerencial**.
+> - El acto de sistema estable ya tenía **DOS A antes del 2.537: el 2.453 y el 2.537**, más el
+>   **2.572 A** de esta sesión. **`sistema_estable_causas_comunes` ganó el 2.453 y perdió el
+>   2.537: esa es la firma de POR ELEGIR**, no de por derecho.
+> - `mejora_del_sistema_responsabilidad_gerencial` queda arriba (ganó 2.537 y 2.572, sin
+>   perder), **candidato provisional**, pero el cúmulo **no está leído entero**, así que la
+>   especie no se fija. **La cobertura 4 de 10 era falsa por partida doble: ni son 10 pares ni
+>   eran 4 los leídos que tocan el acto.**
+>
+> **Y esto es el visto sobre el visto:** el propio ejemplar que ilustra *no declarar sin leer
+> entero* se declaró sin leer entero. **La regla se cumple contándose a sí misma.**
+
+> **RESUELTO EL AVISO VIVO DE LA AUDITORÍA DE PRODUCTO (corte 2.600).** El par que faltaba,
+> `auditoria_de_producto_2` contra `auditoria_producto`, se leyó en el **2.594 y salió D**. La
+> familia queda **3 de 3 y las tres D**: se declara por fin **FAMILIA SIN ACTO**, ahora sí con
+> el acto leído entero. **El visto corta en los dos sentidos:** el histograma prometía sin acto
+> y salió con acto (2.517 A); la auditoría de producto prometía sin acto y **lo cumplió**. La
+> cobertura no adivina la clase; solo dice cuánto falta para poder afirmarla.
+
 **VISTO SEGUNDO: LA FUSIÓN MUTUA NUNCA PRODUCE GANADOR POR DERECHO** (ejemplar 2.525,
 `dia_cero_defectos_2` contra `dia_cero_defectos_3`).
 
