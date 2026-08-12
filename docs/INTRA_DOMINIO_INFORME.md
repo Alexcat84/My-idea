@@ -5022,7 +5022,7 @@ tras la R53.**
 | **DESTINO** | **a donde va el entregable y a quien hay que convencer** | el superviviente **produce el resultado y no dice que hacer con el** | la linea de destino entra **como paso final** del superviviente | **2.451** (*documentar el ROI para reportarlo a la direccion*) |
 | **METODO ALTERNATIVO** | **la otra forma de hacer el mismo paso, la que sirve a otra escala** | el superviviente manda **un solo camino**, y el que muere traia **uno mas barato o mas lento** | el paso del superviviente pasa a **VARIANTE CONDICIONAL**: **la condicion del lector elige el camino** | **2.453**: *recolectar datos diarios durante varias semanas* **o por muestreos periodicos si no puedes medir a diario* |
 | **DIRECCION** | **el SENTIDO en que corre cada flujo del paso** | el superviviente **manda hacer la cosa y no dice de quien a quien** | **EL SENTIDO ENTRA DENTRO DEL PASO**: una especificacion en el paso de requisitos y otra en el de retroalimentacion | **2.458**: *los requisitos bajan del proveedor al procesador; la retroalimentacion sube del cliente al procesador* |
-| **SALVAGUARDA** | **la advertencia que impide que un paso se resuelva solo por el sesgo por defecto** | el superviviente **manda decidir y no dice contra que sesgo** | **SE ADOSA AL PASO QUE PROTEGE**: el inciso entero entra al paso que sin el se resolveria solo | **2.461**: *priorizar de forma consensuada, **sin asumir jerarquias automaticas por tipo de cliente*** |
+| **SALVAGUARDA** | **la advertencia que impide que un paso se resuelva solo por el sesgo por defecto** | el superviviente **manda decidir y no dice contra que sesgo**. **FIRMA DE LA CLASE, medida con sus dos ejemplares: los dos protegen un paso de DECISION, no de ejecucion** | **SE ADOSA AL PASO QUE PROTEGE**: el inciso entero entra al paso que sin el se resolveria solo | **2.461**: *priorizar sin asumir jerarquias automaticas por tipo de cliente*. **2.467**: *seguir revisando con cartas que la fraccion se mantenga estable* |
 
 **EL REMEDIO DEL CUARTO, con su forma exacta.** No es anadir un paso ni partir el nodo: es
 **abrir el paso que ya existe.**
@@ -14984,5 +14984,30 @@ Metodologia DMADV*.** **La denominacion sobrevive y la clase 9.28 no aplica.**
 
 **Faltan 150 pares del encargo, del 2.468 al 2.617.** **Checkpoints 2.500 y 2.600
 pendientes.** El dominio son **844 pares** y llega al **3.255**.
+
+### ADJUDICACION DEL 2.473: la atribucion es una afirmacion de fuente y se verifica
+
+**Registrada el 18 ago 2026 junto a su entrada en CONTRADICCIONES INTERNAS.**
+
+`economia_de_la_inspeccion`, de Juran, **se titula Regla de Deming kp** y en su paso 5
+**admite el muestreo**. `punto_equilibrio_calidad_inspeccion`, de Deming, **lo prohibe** en
+su paso 5.
+
+> **SI ESOS DOS NODOS SE FUNDEN ALGUN DIA, EL ANADIDO DEL MUESTREO SE MARCA COMO AJENO AL
+> AUTOR.**
+>
+> **El motivo, y no es de estilo: una atribucion es una afirmacion de fuente, y las
+> afirmaciones de fuente se verifican.** Decir *regla de Deming* **no es un titulo
+> decorativo: es una cita**, y una cita que admite lo que el citado prohibe **es una cita
+> falsa**.
+>
+> **Un lector no puede salir de este catalogo creyendo que Deming admite el muestreo.**
+> Si la fusion conserva la opcion, **la conserva con su etiqueta**: *variante no atribuible
+> a Deming*.
+
+**Y la regla general que deja, del mismo linaje que la disciplina del dictado:** cuando un
+nodo **lleva un nombre propio en el titulo**, ese nombre **es una afirmacion comprobable
+sobre el contenido**, no una denominacion suelta. **Se comprueba contra el nodo del autor
+citado cuando existe en el catalogo**, que es exactamente lo que este par permitio hacer.
 
 **El archivo esta en 2.467 sin huecos ni duplicados. Cero nodos tocados.**
