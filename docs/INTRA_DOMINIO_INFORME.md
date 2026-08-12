@@ -4573,6 +4573,62 @@ el auditor releyo **solo los discutibles** de la seccion 77.6, **2.335, 2.368, 2
 > vigilar**: el dia que aparezca una fuera, lo que se mueve no es un veredicto, es el
 > credito de toda la tanda.
 
+### TANDA R44: tres puestos, TRES DE TRES COINCIDEN
+
+**18 ago 2026.** Segunda relectura ciega hecha **solo sobre marcados**: los tres
+discutibles de la seccion 79.6, **2.396, 2.389 y 2.335**.
+
+| puesto | resultado | lo que deja escrito |
+|---:|---|---|
+| **2.396** | **coincide** | **tres perdidas nombradas para viajar**, abajo |
+| **2.389** | **coincide** | queda como **ejemplar vivo del 3% lexico** |
+| **2.335** | **coincide** | **confirmado en su estado corregido**: la doctrina es la casa |
+
+**LAS TRES PERDIDAS DEL 2.396, nombradas para que la fusion no las deje caer.** Muere
+`seduccion_modelo_persona` y con el se van:
+
+| la perdida | que es |
+|---|---|
+| **revisar como hablas de los errores** en el negocio para ver si siempre se termina culpando a una persona | **el test de entrada** del nodo, y el unico paso suyo que se ejecuta sin saber doctrina |
+| **el castigo no reemplaza el analisis de la causa de fondo** | **una advertencia con destinatario**: va a las reglas internas, no al investigador |
+| **entender las limitaciones del modelo de persona frente a los problemas de fondo** | **el POR QUE SEDUCE**, que es el titulo del nodo y **va entero al superviviente** |
+
+> **La tercera es la que importa y por eso se escribe aparte.** `enfoque_situacional_vs_personal`
+> dice **cuando** mirar a la persona y **cuando** al sistema; **no dice por que la
+> primera opcion resulta tan comoda.** Sin esa explicacion, el criterio queda como una
+> regla arbitraria que la gente incumple sin saber que la incumple.
+
+**EL 2.389 COMO EJEMPLAR VIVO DEL 3% LEXICO** (informe §76.3 y PENDIENTES, advertencia
+de aduana). `cultura_de_aprendizaje` e `ingenieria_cultura_aprendizaje` son **el mismo
+ciclo de cuatro casillas** escrito con **dos vocabularios que casi no se tocan**:
+*mecanismos formales de analisis de datos* contra *forma sistematica de observar*;
+*procesos de decision para implementar reformas* contra *disenar e imaginar soluciones*.
+**Y estan SIN ARISTA.** Ninguna maquina que compare palabras los junta; la lectura si.
+
+### LA METRICA DE CREDITO, y es el numero que hay que vigilar
+
+> **TODA CAIDA DEBE CAER DENTRO DEL MARCADO. EL DIA QUE APAREZCA UNA FUERA, LO QUE SE
+> MUEVE NO ES UN VEREDICTO: ES EL CREDITO DE TODA LA TANDA.**
+
+**Por que es una metrica y no una frase.** Si el lector **sabe donde esta flojo**, sus
+lecturas no marcadas valen mas que las marcadas, **y esa diferencia es lo que se esta
+midiendo**. Una discrepancia fuera de la lista dice que **el lector no sabe donde falla**,
+y entonces **ninguna de sus lecturas tiene mas credito que otra.**
+
+**LA CUENTA AL DIA, corte 2.400:**
+
+| | |
+|---|---:|
+| caidas del archivo | **4** (2.195, 2.215, 2.338, 2.371) |
+| **caidas DENTRO del marcado** | **4** |
+| **caidas FUERA del marcado** | **0** |
+| relecturas ciegas corridas | **3** (R42, R43, R44) |
+| puestos releidos | **15** |
+
+**CUATRO DE CUATRO DENTRO.** La R44 ademas **no encontro ninguna caida en tres**, que es
+el otro resultado posible de una relectura sana: **los marcados tambien se sostienen a
+veces, y eso no debilita la metrica, la completa.**
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las

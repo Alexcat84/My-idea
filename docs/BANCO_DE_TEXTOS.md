@@ -1982,6 +1982,32 @@ direcciones:
 > buena noticia ni una mala**. Es el aviso de que **el trabajo que queda cambió de
 > tipo**, de fusiones a enlaces, **y de caro a barato.**
 
+**SEGUNDA PRECISION, adoptada el 18 ago 2026 tras un fallo mio, y confirma la primera.**
+
+> **LA TASA DE UNA COLA TIENDE A LA BAJA Y NO DESCIENDE PASO A PASO.** Prediccion sobre
+> **la tendencia**, si. Prediccion sobre **el corte siguiente**, no.
+
+**EL EJEMPLAR, y es propio.** En la seccion 77.2 del informe intra escribi, con
+`health_safety` al **24,3%**, que *la cifra final seguira por debajo de 24,3%*. **Se
+rompio en el corte siguiente.**
+
+| corte | pares leidos | tasa del dominio | el tramo nuevo solo |
+|---|---:|---:|---|
+| 2.300 | 81 | **37,0%** | . |
+| 2.376 | 157 | **25,5%** | 13,2% |
+| 2.388 | 169 | **24,3%** | 12,5% |
+| **2.400** | **181** | **24,9%** | **33,3%** |
+
+**La direccion acerto tres cortes y fallo al cuarto**: los ultimos doce pares devolvieron
+**33,3%** y **subieron** el acumulado.
+
+> **Y LA CAUSA YA ESTABA ESCRITA AQUI ARRIBA:** la precision del auditor del 13 ago dice
+> que **la figura no viene repartida por la cola, viene en RACIMOS**. Los puestos 2.389 a
+> 2.400 fueron exactamente eso, **una bolsa de cuatro pares de doctrina repetida
+> seguidos**. **No es una excepcion a la regla del 9.19: es la regla del 9.19 aplicada a
+> la tasa.** Lo que fallo no fue la doctrina, fue **usarla para predecir un corte en vez
+> de una tendencia.**
+
 > **PRECISIÓN ADOPTADA POR EL AUDITOR el 13 ago 2026**, medida en dos tramos
 > consecutivos: la figura **no viene repartida por la cola, viene en RACIMOS**, y
 > **la cifra de la vara NO SE PROYECTA**: se lee por tramo y se reporta por tramo. El tramo 1001 a 1036 dio
