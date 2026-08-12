@@ -6,8 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**Primera entrega, 11 ago 2026: fases 00, 01, 02 y 05.** Las fases 03, 04, 06, 07
-y 08 estan anunciadas en el mapa y **todavia sin escribir**.
+**EL PLAN ESTA COMPLETO: NUEVE FASES ESCRITAS, 34 OPERACIONES.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -40,48 +39,50 @@ el JSONL discrepan, manda el JSONL.
 
 ---
 
-## EL MARCADOR DE ESTA ENTREGA
+## EL MARCADOR
 
-| | primera pasada | tras las adjudicaciones | **hoy** |
+| | |
+|---|---:|
+| operaciones | **34** |
+| **LISTAS** | **25** |
+| **DECISION PENDIENTE** | **9** |
+
+**POR FASE, en el orden de ejecucion:**
+
+| fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
-| operaciones escritas | 19 | 19 | **19** |
-| **LISTAS** | 4 | 16 | **18** |
-| **DECISION PENDIENTE** | 15 | 3 | **1** |
-| preguntas abiertas | 15 | 3 | **1** |
+| **0 CODIGO** | 4 | **4** | 0 |
+| **01 FUENTES** | 3 | **3** | 0 |
+| **02 DESTEJIDOS** | 6 | **6** | 0 |
+| **03 FUSIONES** | 1 | 0 | **1** |
+| **04 ENLACES** | 2 | 0 | **2** |
+| **05 SANEO** | 10 | **10** | 0 |
+| **06 MESAS** | 5 | 0 | **5** |
+| **07 ADUANA** | 2 | **1** | **1** |
+| **08 VERIFICACION** | 1 | **1** | 0 |
 
-**LAS DIECIOCHO LISTAS**: las tres decisiones de fuente (`OP-F-01` a `OP-F-03`),
-**los seis destejidos enteros** (`OP-D-01` a `OP-D-06`) y **nueve del saneo**
-(`OP-S-01` a `OP-S-09`).
-
-**LA UNICA PENDIENTE, y es condicional por adjudicacion:**
-
-| id | por que |
-|---|---|
-| **`OP-S-10`** | **CONDICIONAL**: `franquicias` entra al barrido de marco **si** la medicion muestra ley con alcance real. **La condicion esta escrita para evaluarse sin volver a preguntar**, con las cuatro familias medidas al lado |
-
-> **Ocho de los quince congelados se liberan con las tres primeras.** No estan
-> repartidos por el catalogo: **estan amontonados**, y por eso el orden de la
-> pasada se decidio por congelados liberados y no por tamano.
-
----
+> **Las nueve pendientes no son huecos del plan: son CINCO MESAS, que por
+> definicion son decisiones que se toman con la familia delante, y CUATRO
+> preguntas de metodo.** Ninguna es un dato que falte.
 
 ## EL MAPA DE FASES, con sus dependencias
 
 ```
-01_FUENTES  ──(OP-F-02 bloquea)──►  02_DESTEJIDOS (OP-D-04)
-    │
-    └──(OP-F-01 fija el estandar)──►  verificacion de TODO 02
+FASE 0  CODIGO   ──bloquea──► TODO lo que mueve un id
+   │              (OP-S-01 deprecar, OP-S-09 renombrar, OP-F-01 y la fase 03)
+   ▼
+01 FUENTES ──(OP-F-02)──► 02 DESTEJIDOS (OP-D-04)
+   │        ──(OP-F-03)──► OP-D-01 y OP-D-06: tres nodos de Hugos estan ahi
+   │        ──(OP-F-01)──► verificacion de TODO 02
+   ▼
+02 DESTEJIDOS ──► 03 FUSIONES   no se funde lo que aun no se desteje
+   │           ──► 06 MESAS      tres mesas no se sientan hasta la cirugia
+   ▼
+05 SANEO      OP-S-01 ──precede──► OP-S-09
+07 ADUANA     OP-A-01 hereda el control posicional de P.2
+08 VERIFICACION envuelve a todas, y el reindexado va AL FINAL
 
-05_SANEO
-    OP-F-03 ──bloquea──► OP-D-01 y OP-D-06 (tres nodos de Hugos estan ahi)
-    OP-S-08 YA NO BLOQUEA: el resolutor EXISTE y funciona
-    OP-S-01 ──precede──► OP-S-09
-
-03_FUSIONES   (sin escribir)  ◄── depende de 02: no se funde lo que aun no se desteje
-04_ENLACES    (sin escribir)  ◄── independiente, se puede adelantar
-06_MESAS      (sin escribir)  ◄── depende de 02: tres mesas no se sientan hasta la cirugia
-07_ADUANA     (sin escribir)  ◄── independiente, es puerta permanente
-08_VERIFICACION (sin escribir) ◄── envuelve a todas
+04 ENLACES  independiente: no mueve ids. Pero se VERIFICA con OP-C-04
 ```
 
 **LAS TRES DEPENDENCIAS QUE NO SON DE ORDEN SINO DE SENTIDO**, y por eso se
@@ -89,6 +90,7 @@ escriben aqui arriba:
 
 | dependencia | por que no es negociable |
 |---|---|
+| **codigo antes que todo** | **la pasada ES lo que mueve ids.** Un camino que resuelva a pelo se rompe, o se calla, el dia que la pasada empiece, **y con el usuario dentro** |
 | **fuente antes que destejido** | el destejido decide que bloques sobreviven, y **esos bloques son los que cargan la atribucion**. Al reves se escribe la fuente equivocada en el superviviente, **y el superviviente es el que se queda** |
 | **destejido antes que fusion** | fundir antes de destejer **obliga a decidir el destino de material que la cirugia iba a quitar de todos modos** |
 | ~~resolutor de alias antes que el alias~~ **CORREGIDA** | **El codigo SI lee `ids_alias`.** `resolverId` existe en `graph.ts` (linea 131), camina cadenas y lo invocan `etiquetaArbol` y `tituloDeNodo`. **La dependencia no era esa**: lo que falta es MEDIR que caminos del runtime pasan por el. `OP-S-08` es ahora esa medicion y **no bloquea a nadie** |
@@ -165,13 +167,15 @@ en vez de forzarse.**
 
 | pagina | que contiene | estado |
 |---|---|---|
+| [`FASE_0_CODIGO.md`](FASE_0_CODIGO.md) | los blindajes del runtime, **primeros de todos**, con caso positivo | escrita |
 | [`01_FUENTES.md`](01_FUENTES.md) | las tres decisiones de fuente, 18 nodos, y el precedente fuente-primero | escrita |
 | [`02_DESTEJIDOS.md`](02_DESTEJIDOS.md) | los 13 actos del cierre transitivo, en orden por congelados liberados | escrita |
 | [`05_SANEO.md`](05_SANEO.md) | marco-pais, vigencia, herramientas, campos sucios, auto-aristas e ids | escrita |
 | [`CORRECCIONES_A_APLICAR.md`](CORRECCIONES_A_APLICAR.md) | una confirmacion y cuatro correcciones que viven FUERA de `docs/plan/`. **Las aplica la SESION A** | escrita |
 | [`BANCO_DEL_PLAN.md`](BANCO_DEL_PLAN.md) | **P.1** la regla de medicion por el resolutor, y **P.2** la firma posicional del injerto | escrita |
-| `03_FUSIONES.md` | fusiones de par y de familia, con superviviente y direccion | **sin escribir** |
-| `04_ENLACES.md` | la arista que falta: 624 candidatos, proyeccion de 376 a 586 | **sin escribir** |
-| `06_MESAS.md` | las mesas con su nomina y sus dependencias | **sin escribir** |
-| `07_ADUANA.md` | la puerta de insercion semantica permanente y Gate 0 | **sin escribir** |
-| `08_VERIFICACION.md` | como se comprueba cada fase y el criterio de HECHO | **sin escribir** |
+| [`RECORTE_POSICIONAL.md`](RECORTE_POSICIONAL.md) | el recorte de P.2 corrido sobre **los 55 libros**: 67 nodos candidatos, seis libros | escrita |
+| [`03_FUSIONES.md`](03_FUSIONES.md) | 221 actos sobre 576 nodos, corte 2117, marcado para recomputo | escrita |
+| [`04_ENLACES.md`](04_ENLACES.md) | 624 candidatos, cero podas en 24 lecturas, mas los sueltos de racimos | escrita |
+| [`06_MESAS.md`](06_MESAS.md) | cinco mesas con nomina, dependencia y opciones con evidencia | escrita |
+| [`07_ADUANA.md`](07_ADUANA.md) | el control posicional permanente, y la puerta semantica sin especificar | escrita |
+| [`08_VERIFICACION.md`](08_VERIFICACION.md) | verificacion por fase y **el criterio de HECHO** | escrita |
