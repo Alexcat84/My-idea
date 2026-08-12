@@ -36,6 +36,14 @@ mas.**
 
 ## APERTURA . `OP-M-01`, LA MESA UNIDA
 
+> **SU EXPEDIENTE COMPLETO YA ESTA ESCRITO:**
+> [`EXPEDIENTE_MESA_UNIDA.md`](EXPEDIENTE_MESA_UNIDA.md), del 12 ago 2026, **sin
+> recomendacion nueva donde no la hay**, y **con DOS correcciones de entrada: la nomina
+> son 17 y los pares que no llegaran nunca son 113, no 58**. Trae los tres actos, la
+> franja con sus tres candidatos, el trio de gates confirmado por lectura triple, las
+> ocho aristas que cruzan la frontera vieja, y **la seleccion minima que decide: 24
+> lecturas contra 113**. **Para adjudicar se lee el expediente.**
+
 **QUE SE DECIDE.** Cuantos nodos quedan de los **dieciseis**, y **si queda alguna
 frontera entre la puerta y el portafolio**.
 
@@ -210,7 +218,14 @@ injertos aporta, QUINCE**, y su material esta pegado **en nodos de otros libros*
 
 ## APERTURA . `OP-M-03`, EL RACIMO DEL PIVOTE
 
-> **SU EXPEDIENTE COMPLETO YA ESTA ESCRITO:**
+> ## **ADJUDICADA EL 12 ago 2026. `OP-M-03` ES LISTA.**
+>
+> **No hay una puerta en dos libros: hay DOS PUERTAS DISTINTAS DEL PROCESO MAS UN
+> ACTO.** Los seis dudosos y el 753 **se resuelven por el criterio**, y el racimo pasa
+> de **siete nodos sin ninguna arista** a **tres nodos y dos aristas**. El 1298 queda
+> como **TERCERA FRONTERA DE DISPOSICION** del catalogo.
+
+> **SU EXPEDIENTE COMPLETO:**
 > [`EXPEDIENTE_MESA_PIVOTE.md`](EXPEDIENTE_MESA_PIVOTE.md), del 12 ago 2026, **sin
 > recomendacion nueva donde no la hay**. Trae los siete miembros con sus pasos, **los
 > TRES actos que forman las cuatro A**, **los seis dudosos en crudo**, las aristas de

@@ -1,8 +1,10 @@
 # EXPEDIENTE DE MESA: `OP-M-03`, EL RACIMO DEL PIVOTE
 
-**LA TERCERA MESA.** Se prepara el 12 ago 2026 para **adjudicacion del auditor**, con
-el mismo estandar que las dos anteriores: **sin recomendacion nueva donde no la haya,
-y con las que ya existen citadas.**
+**LA TERCERA MESA, Y ADJUDICADA EL MISMO DIA.** Se preparo el 12 ago 2026 sin
+recomendacion nueva, y **el auditor la adjudico esa misma tarde**. **La adjudicacion
+esta al final**, y `OP-M-03` es **LISTA**.
+
+> **Lo que sigue hasta la seccion 7 es el expediente TAL COMO SE ENTREGO.**
 
 > **MODO DE CIERRE VIGENTE: este expediente no toca ni un nodo. Es papel.**
 
@@ -320,3 +322,196 @@ internas en el racimo.**
 > Por el banco 9.26 **toda forma de esta mesa es PROVISIONAL**. **Cinco de los ocho
 > que faltan cruzan libros, que es exactamente el eje que la mesa tiene que
 > adjudicar.**
+
+---
+
+# LA ADJUDICACION DEL AUDITOR . **12 ago 2026**
+
+## a. LA RESPUESTA AL CRITERIO
+
+> **NO HAY UNA PUERTA EN DOS LIBROS. HAY DOS PUERTAS DISTINTAS DEL PROCESO MAS UN
+> ACTO.**
+
+| | que es | de quien | cuando se cruza |
+|---|---|---|---|
+| **puerta 1** | **la puerta de METRICAS** | Ries | **recurrente**: cada vez que el motor se mide |
+| **puerta 2** | **la REUNION DEL DESCUBRIMIENTO** | Blank | **una vez**, al final de la prueba del problema |
+| **el acto** | **pivotar** | los dos | **despues de cualquiera de las dos** |
+
+**PROBADO POR TRES VIAS QUE COINCIDEN, y ninguna es una opinion:**
+
+| | la prueba |
+|---:|---|
+| **1** | **los tres pares SANOS separan lo mismo**: el **1245** separa *decidir si se pivota* de *ejecutar el pivote*; el **1312**, *el marco de la puerta* del *acto de pivotar*; el **1320**, *fijar la linea base* de *distinguir que clase de cambio es*. **Los tres: LA PUERTA DEL ACTO** |
+| **2** | **la forma unica de los seis dudosos**: los **SEIS** son **metricas contra reunion**. **Ninguno es puerta contra acto** |
+| **3** | **las aristas sirven maquinarias distintas**: la puerta de metricas cuelga del **ciclo crear medir aprender**, de **afinar el motor de crecimiento** y de la **contabilidad de innovacion**, y desemboca en **establecer la linea base del MVP**. La puerta de la reunion cuelga del **scorecard de descubrimiento**, del **mapa de flujo de trabajo del cliente** y de las **categorias de entusiasmo**, y desemboca en los **checkpoints de validacion** y en **identificar earlyvangelists** |
+
+> **NO SON DOS NOMBRES DE LO MISMO: SON DOS MAQUINARIAS.**
+
+### LOS SIETE DUDOSOS SE RESUELVEN **POR EL CRITERIO**
+
+**Cada razon nueva CITA el criterio en vez de repetir el analisis.** Si una razon no
+lo cita, **es que se esta decidiendo otra vez en vez de aplicar.**
+
+| puesto | el par | como queda | por que |
+|---:|---|---|---|
+| **771** | `pivotar_o_perseverar` contra `pivote_o_proceder` | **D** | **metricas contra reunion: dos puertas distintas** |
+| **843** | `decision_pivote_perseverar` contra `pivote_o_proceder` | **D** | idem |
+| **957** | `decision_pivote_perseverar` contra `pivotar_o_proceder` | **D** | idem |
+| **1298** | `decision_pivote_perseverar` contra `pivote_startup` | **D**, **y FRONTERA DECLARADA** | dos puertas **y ademas dos disposiciones opuestas**: ver el punto e |
+| **668** | `pivote_o_proceder` contra `pivote_startup` | **D CON ENLACE** | **puerta contra acto**: la reunion de Blank contra el acto de pivotar |
+| **737** | `pivotar_o_perseverar` contra `pivote_startup` | **D CON ENLACE** | **puerta contra acto**: la puerta de metricas contra el mismo acto |
+| **753** | `pivot_como_hipotesis_estrategica` contra `pivote_startup` | **D** | el acto contra un nodo de **despues** del pivote: **el mismo eje** |
+
+> **LA DOCTRINA QUE ESTO DEJA, y vale mas alla del pivote: CUANDO TODOS LOS DUDOSOS
+> DE UNA ZONA TIENEN LA MISMA FORMA, NO SON SEIS PREGUNTAS: SON UNA.** La zona no
+> tenia un problema de contenido: **tenia una pregunta sin contestar**, y contestada,
+> **los seis caen solos.**
+
+> **Y LA SEGUNDA: el eje que separa no siempre esta donde se busca.** Aqui se buscaba
+> **entre LIBROS** y estaba **entre MOMENTOS DEL PROCESO**, **y lo dijeron los pares
+> SANOS, no los dudosos.**
+
+## b. ACTO I . `OP-D-07` mas `OP-M-03-I`
+
+**PRIMERO EL DESTEJIDO.** `decision_pivote_perseverar` declara **dos obras** y su
+corte **se ve a simple vista entre el paso 4 y el 5**: del 1 al 4 es Ries; **del 5 al
+9 es Traction, la busqueda del punto brillante**.
+
+**DESPUES LA FUSION. Sobrevive `pivotar_o_perseverar`, por CABLEADO A CONTENIDO
+EMPATADO, 6 contra 4**, que es el supuesto en el que **P.8 deja decidir al grafo**.
+
+**SIMULACION (P.7):** cuatro entradas se redirigen, **CERO duplicadas nuevas** y cero
+auto aristas. **Es la fusion mas limpia de las tres.**
+
+**LAS TRES PIEZAS PROPIAS DEL PAR SE CONSERVAN, y no todas por el mismo motivo:**
+
+| la pieza | de donde viene |
+|---|---|
+| **racionalizacion del fracaso** | **del que muere**: viaja |
+| **linea base nueva** | **ya es del superviviente**: hay que comprobar que el destejido no se la lleva |
+| **comprobacion posterior** | idem |
+
+**Y ADEMAS, EL BLOQUE DEL PUNTO BRILLANTE ENTERO**, que llega por el destejido **y es
+uno de los dos lados de la frontera del 1298**.
+
+> **Por eso el destejido va ANTES y no despues: si se fundiera primero, el bloque de
+> Traction quedaria dentro de un nodo de Ries sin que nadie lo hubiera declarado.**
+
+## c. ACTO II . `OP-M-03-II`
+
+**Sobrevive `pivote_o_proceder`, POR CONTENIDO.**
+
+> **Y ES LA APLICACION MAS DURA DE P.8 QUE HAY EN EL PLAN, porque aqui hay que
+> corregir lo que este mismo expediente escribio.**
+
+**EL EXPEDIENTE DIJO** que en este acto *el cableado no desempata, porque los dos
+estan cableados igual*. **ESO ERA IMPRECISO.** Comparten **dos vecinos**,
+`scorecard_descubrimiento_cliente` y `presentacion_solucion_producto`, **pero los
+grados no empatan**:
+
+| | grado |
+|---|---:|
+| `pivotar_o_proceder` | **10** |
+| `pivote_o_proceder` | **5** |
+
+> **La adjudicacion no cambia: se refuerza.** No es que el contenido decida **donde
+> el grafo calla**; es que **el contenido vence a un cableado de diez a cinco.**
+> **Esa es la prueba de que P.8 no es decorativa.**
+
+**LO QUE DECIDE, y es material propio del superviviente:** **dibujar como trabaja de
+verdad el cliente tipico** con datos reales y compararlo con lo supuesto, y **reducir
+la lista de funciones a algo que se cuente en un parrafo**.
+
+**VIAJA del que muere: la clasificacion de las respuestas del cliente DESDE AMOR
+TOTAL HASTA INDIFERENCIA.**
+
+**LOS IDS SON EL MISMO NOMBRE EN DOS FORMAS y van a la DECISION 4.**
+
+**LAS DOS DUPLICADAS QUE ESTA FUSION FABRICA, NOMBRADAS**, y **ninguna es un
+accidente: salen justo de los dos vecinos compartidos**:
+
+| el nodo | el campo | queda con dos entradas que resuelven a |
+|---|---|---|
+| `presentacion_solucion_producto` | `nodos_previos` | `pivote_o_proceder` |
+| `scorecard_descubrimiento_cliente` | `nodos_siguientes` | `pivote_o_proceder` |
+
+**Se dejan para `OP-S-12`.**
+
+## d. ACTO III . `OP-M-03-III`
+
+**Fusion de los TRES. Sobrevive `pivote_estrategico`.**
+
+**El contenido esta empatado y el veredicto 857 lo dice con todas las letras: los
+pasos se emparejan UNO A UNO, cinco contra cinco.** Por **P.8**, con el contenido
+empatado **decide el cableado**: **13 contra 11** frente a `pivote_startup` y **13
+contra 4** frente a `pivotes_e_iteraciones`.
+
+**SIMULACION (P.7):** quince entradas se redirigen y **dos duplicadas nuevas**,
+`customer_development_agile_pairing.nodos_siguientes` y
+`fracaso_como_aprendizaje_startup.nodos_siguientes`. **Cero auto aristas.**
+
+**LAS CUATRO PERDIDAS QUE VIAJAN:**
+
+| de | la pieza |
+|---|---|
+| `pivote_startup` | **senalar QUE PARTE DEL LIENZO cambia**: segmento, forma de cobrar o propuesta de valor |
+| `pivote_startup` | **DECIDIR CON RAPIDEZ Y SIN MIEDO AL FRACASO** |
+| `pivotes_e_iteraciones` | distinguir el **AJUSTE MENOR** del **CAMBIO SUSTANCIAL** |
+| `pivotes_e_iteraciones` | documentar cada cambio como **VERSION NUEVA DEL LIENZO** |
+
+> **OJO CON LA SEGUNDA: parece redundante y no lo es.** *Decidir con rapidez y sin
+> miedo* **es un lado de la frontera del 1298**. **Podarla por parecerse a otra cosa
+> borraria media biblioteca.**
+
+**LECTURA DE ACTO POR P.5, Y AQUI ES OBLIGATORIA:** el par interno
+`pivote_estrategico` contra `pivotes_e_iteraciones` **NUNCA SE HA LEIDO** y esta
+**fuera de cola**. **El acto se sostiene por transitividad a traves de
+`pivote_startup`**, que es exactamente el caso que P.5 existe para cubrir. **Sin esa
+lectura, la fusion de los tres no se ejecuta.**
+
+## e. LA FRONTERA DECLARADA DEL 1298
+
+> **LAS DOS DISPOSICIONES QUEDAN.**
+
+| el lado | donde vive tras la mesa |
+|---|---|
+| **el punto brillante**: pivotar **solo si no aparece ninguno** | **la puerta de metricas**, `pivotar_o_perseverar` |
+| **decidir rapido y sin miedo al fracaso** | **el acto**, `pivote_estrategico` |
+
+**EL MOTIVO, escrito entre las dos**: **uno empuja a QUEDARSE hasta agotar la
+busqueda y el otro empuja a MOVERSE sin miedo.** **Un lector con una sola de las dos
+recibe media biblioteca.**
+
+**ES LA TERCERA FRONTERA DE DISPOSICION DEL CATALOGO**, y con ella se abre su
+registro: [`FRONTERAS_DECLARADAS.md`](FRONTERAS_DECLARADAS.md), junto a **la frontera
+intra libro del 877** (Founder's Dilemmas contra si mismo) y **la frontera de momento
+del 221** (Rackham contra Weinberg).
+
+> **Y es la primera que queda REPARTIDA EN DOS NODOS DISTINTOS del mismo racimo.**
+> Las dos anteriores viven entre nodos hermanos; **esta vive entre una puerta y el
+> acto que le sigue**, **lo que la hace mas facil de perder**: los dos lados **ya no
+> estan uno al lado del otro.**
+
+## f. LOS ENLACES FINALES . `OP-M-03-ENLACES`
+
+**Cada puerta hacia el acto. DOS aristas, UNA direccion cada una**, por la contraorden
+del 12 ago 2026: **en un grafo de secuencia la vuelta es una instruccion falsa.**
+
+| | |
+|---|---|
+| `pivotar_o_perseverar` **hacia** `pivote_estrategico` | la puerta de metricas hacia el acto |
+| `pivote_o_proceder` **hacia** `pivote_estrategico` | la puerta de la reunion hacia el acto |
+
+### LA FORMA FINAL DEL RACIMO: **SIETE A TRES**
+
+| | antes | **despues** |
+|---|---:|---:|
+| nodos | 7 | **3** |
+| **aristas internas** | **0 de 21** | **2** |
+| dudosos sin resolver | 6, mas el 753 | **0** |
+| fronteras declaradas | 0 | **1** |
+
+> **ES LA PARTE MAS BARATA DE LA MESA Y LA QUE MAS CAMBIA LO QUE EL LECTOR VE.**
+> **Siete nodos sin una sola arista entre ellos** se convierten en **dos puertas y el
+> acto al que las dos llevan.**

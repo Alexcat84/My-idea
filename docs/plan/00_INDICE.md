@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA COMPLETO: ONCE FASES, 54 OPERACIONES, 49 LISTAS. DOS MESAS ADJUDICADAS, LA TERCERA CON SU EXPEDIENTE ESCRITO, Y CINCO PENDIENTES: TRES MESAS, UN RECOMPUTO CON FECHA Y UNA CABEZA QUE SE TRAE AL AUDITOR.**
+**EL PLAN ESTA COMPLETO: ONCE FASES, 59 OPERACIONES, 56 LISTAS. TRES MESAS ADJUDICADAS, LA CUARTA CON SU EXPEDIENTE ESCRITO, Y SOLO TRES PENDIENTES: DOS MESAS Y UN RECOMPUTO CON FECHA.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -27,6 +27,15 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > lecturas***. Las dos nominas que faltaban, **el pivote y la serie de Coleman**,
 > estan medidas y escritas en sus mesas. Y **el puro de la competencia entre
 > inversores DEGRADA a sub-puro** con correccion declarada.
+>
+> **NOVENA PASADA, 12 ago 2026: TRES MESAS ADJUDICADAS Y UN REGISTRO NUEVO.**
+> **`OP-M-02-MEDIOS` se resuelve contra el cableado** y deja **P.8: el cableado
+> desempata, no decide**. **`OP-M-03`, el pivote, queda adjudicada**: no hay una
+> puerta en dos libros, hay **dos puertas del proceso mas un acto**, y el racimo pasa
+> de **siete nodos sin ninguna arista** a **tres nodos y dos aristas**. Se abre el
+> **registro de FRONTERAS DECLARADAS** con sus tres ejemplares. Y **el expediente de
+> la mesa unida** llega con dos correcciones: **la nomina son 17** y **los pares que no
+> llegaran nunca son 113, no 58**.
 >
 > **OCTAVA PASADA, 12 ago 2026: SE ADJUDICA LA SEGUNDA MESA Y SE GIRA UNA ARISTA.**
 > **Contraorden en `OP-M-04`: la vuelta no se tolera, se GIRA**, porque **en un grafo
@@ -79,29 +88,29 @@ el JSONL discrepan, manda el JSONL.
 
 | | |
 |---|---:|
-| operaciones | **54** |
-| **LISTAS** | **49** |
-| **DECISION PENDIENTE** | **5** |
+| operaciones | **59** |
+| **LISTAS** | **56** |
+| **DECISION PENDIENTE** | **3** |
 
 | fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
 | **0 CODIGO** | 5 | **5** | 0 |
 | **01 FUENTES** | 7 | **7** | 0 |
-| **02 DESTEJIDOS** | 6 | **6** | 0 |
-| **03 FUSIONES** | 9 | **7** | 2 |
-| **04 ENLACES** | 3 | **3** | 0 |
+| **02 DESTEJIDOS** | 7 | **7** | 0 |
+| **03 FUSIONES** | 12 | **11** | 1 |
+| **04 ENLACES** | 4 | **4** | 0 |
 | **05 SANEO** | 12 | **12** | 0 |
-| **06 MESAS** | 5 | **2** | **3** |
+| **06 MESAS** | 5 | **3** | **2** |
 | **07 ADUANA** | 2 | **2** | 0 |
 | **08 VERIFICACION** | 1 | **1** | 0 |
 | **09 LECTURAS DIRIGIDAS** | 3 | **3** | 0 |
 | **10 INVENTARIO** | 1 | **1** | 0 |
 
-> **LAS CINCO PENDIENTES SON TRES MESAS, UN RECOMPUTO CON FECHA Y UNA CABEZA.**
-> **`OP-M-04`, la junta asesora, y `OP-M-02`, Coleman, quedaron ADJUDICADAS**, el 11
-> y el 12 de agosto. La quinta pendiente es **`OP-M-02-MEDIOS`**, y **no es un dato
-> que falte: es la primera vez que el desempate por cableado CHOCA con el archivo**,
-> y lo que se decida ahi fija doctrina. `OP-U-02`
+> **LAS TRES PENDIENTES SON DOS MESAS Y UN RECOMPUTO CON FECHA.** **`OP-M-04`,
+> `OP-M-02` y `OP-M-03` quedaron ADJUDICADAS** entre el 11 y el 12 de agosto, y con
+> ellas **`OP-M-02-MEDIOS`**, que fijo doctrina: **el cableado desempata, no
+> decide**. Quedan **`OP-M-01`**, la mesa unida, **cuyo expediente ya esta escrito y
+> cuya cola esta AGOTADA**, y **`OP-M-05`**. `OP-U-02`
 > espera al dia en que el cribado llegue al puesto **3.388**, y su disparador esta
 > escrito en `08_VERIFICACION`. **Ninguna es un dato que falte.**
 >
@@ -231,7 +240,9 @@ en vez de forzarse.**
 | [`10_INVENTARIO.md`](10_INVENTARIO.md) | **el inventario navegable**: 325 entradas por sujeto, con sus huecos nombrados | escrita |
 | [`EXPEDIENTE_MESA_JUNTA_ASESORA.md`](EXPEDIENTE_MESA_JUNTA_ASESORA.md) | **la primera mesa, YA ADJUDICADA**: dos fusiones mas un enlace, con la adjudicacion al final | **cerrada** |
 | [`EXPEDIENTE_MESA_COLEMAN.md`](EXPEDIENTE_MESA_COLEMAN.md) | **la segunda mesa, YA ADJUDICADA**: serie declarada en siete operaciones hijas | **cerrada** |
-| [`EXPEDIENTE_MESA_PIVOTE.md`](EXPEDIENTE_MESA_PIVOTE.md) | **la tercera mesa**, sin recomendacion nueva donde no la hay, para adjudicar | escrita |
+| [`EXPEDIENTE_MESA_PIVOTE.md`](EXPEDIENTE_MESA_PIVOTE.md) | **la tercera mesa, YA ADJUDICADA**: dos puertas mas un acto, siete nodos a tres | **cerrada** |
+| [`EXPEDIENTE_MESA_UNIDA.md`](EXPEDIENTE_MESA_UNIDA.md) | **la cuarta mesa y la grande**, con sus dos correcciones de entrada, para adjudicar | escrita |
+| [`FRONTERAS_DECLARADAS.md`](FRONTERAS_DECLARADAS.md) | **el registro de las fronteras de disposicion**: tres ejemplares, y ninguna se funde | escrita |
 | [`03_FUSIONES.md`](03_FUSIONES.md) | 221 actos sobre 576 nodos, corte 2117, marcado para recomputo | escrita |
 | [`04_ENLACES.md`](04_ENLACES.md) | 477 candidatos tras calibrar, tasa medida en 46 lecturas, mas los sueltos de racimos | escrita |
 | [`06_MESAS.md`](06_MESAS.md) | cinco mesas con nomina, dependencia y opciones con evidencia | escrita |

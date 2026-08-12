@@ -20,9 +20,9 @@ racimo, acto, familia de ids, figura y defecto.
 | **racimo** | **13** |
 | **acto** | **221** |
 | **familia_de_ids** | **53** |
-| **figura** | **12** |
+| **figura** | **13** |
 | **defecto** | **16** |
-| **TOTAL** | **325** |
+| **TOTAL** | **326** |
 
 ---
 
@@ -115,8 +115,8 @@ que se sabe con la cobertura que tiene.**
 | **el compromiso contado tres veces** | PURO | 3 de 3 | sano, forma cerrada |
 | **la seleccion de canal** | MEZCLADO | 10 de 10 | repite, forma cerrada |
 | **la supervision de la IA** | PARTIDO 5 mas 4 mas 1 | 14 de 45 al puesto 1517 | en mesa, particion PROVISIONAL |
-| **la mesa unida de puertas y portafolio** | una familia o dos, SIN DECIDIR | 18 de 120 | en mesa, cobertura 15% |
-| **el racimo del pivote** | MEZCLADO | 13 de 21 | mesa, EXPEDIENTE ESCRITO el 12 ago 2026, pendiente de adjudicacion |
+| **la mesa unida de puertas y portafolio** | TRES ACTOS de 13, 2 y 2 bajo UNA nomina de tema de 17 | 23 de 136 | en mesa, EXPEDIENTE ESCRITO el 12 ago 2026, cobertura 17% y COLA AGOTADA |
+| **el racimo del pivote** | SIETE NODOS A TRES: dos puertas y el acto al que las dos llevan | 13 de 21 | MESA ADJUDICADA el 12 ago 2026: DOS PUERTAS MAS UN ACTO |
 | **la serie de Coleman** | MEZCLADO | 41 de 378 | MESA ADJUDICADA el 12 ago 2026, siete operaciones hijas |
 
 > **TRES SUB-PUROS CAYERON EL 11 ago 2026 al cerrarse su cobertura**: los
@@ -221,6 +221,7 @@ el catalogo produce y que hay que saber distinguir.**
 | **LA A DE BLOQUE (P.4)** | 1 ejemplar y 1 contraejemplo | la repeticion vive entre el bloque injertado y el otro nodo entero. Destejido mas fusion parcial, nunca fusion de enteros |
 | **LA COLA DEL DOMINIO SE AGOTA POR DENTRO (9.27)** | 3 dominios medidos | la tasa de A cae dentro de cada dominio: un dominio a medio leer no describe al dominio |
 | **EL PASO DE OFICIO** | medio dominio exportacion | una linea generica que abre media docena de nodos y por si sola no decide ninguna clase |
+| **frontera de disposicion** | 3 ejemplares | Dos nodos que mandan LO CONTRARIO sobre el MISMO gesto, los dos con razon dentro de su doctrina. No es defecto y no se funde: se declara y los dos se quedan. LOS TRES EJEMPLARES: la FRONTERA INTRA LIBRO del puesto 877 (Founder's Dilemmas contra si mismo: autoridad clara contra estructura colegiada); la FRONTERA DE MOMENTO del 221 (Rackham no presionar el cierre contra Weinberg pedir un si o un no), probada por seis lados; y la FRONTERA DE LA DECISION DE PIVOTAR del 1298 (el punto brillante de Ries mas Traction contra decidir rapido y sin miedo de Blank), declarada el 12 ago 2026. LA TERCERA ES LA PRIMERA QUE QUEDA REPARTIDA EN DOS NODOS DISTINTOS del mismo racimo, entre una puerta y el acto que le sigue, lo que la hace mas facil de perder: los dos lados ya no estan uno al lado del otro. UNA FRONTERA SE PIERDE POR PODA, NO POR FUSION. |
 
 ---
 

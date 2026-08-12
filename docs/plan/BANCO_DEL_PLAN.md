@@ -395,3 +395,62 @@ metodo para predecir el estado final.**
 
 > **Y trae su propio caso positivo: si la simulacion no corrige NADA, tambien vale.**
 > Lo que no vale es **no haberla corrido.**
+
+---
+
+## P.8 EL CABLEADO DESEMPATA, NO DECIDE
+
+**Adoptada el 12 ago 2026, y nace del primer choque entre el grafo y el archivo.**
+
+> **EL DESEMPATE POR CABLEADO SOLO HABLA A CONTENIDO EMPATADO.** Donde el contenido
+> dice algo, **el contenido manda**, aunque el margen de aristas apunte al otro lado.
+
+### QUE CUENTA COMO CONTENIDO, y aqui esta lo que no era obvio
+
+**Contenido no es solo el texto de los pasos.** Tambien lo son, **y con el mismo
+peso**:
+
+| | |
+|---|---|
+| **un PADRE DECLARADO por el archivo** | si una lectura ya dijo que A es la doctrina general y B su hijo, **eso es contenido**, no cableado |
+| **el ALCANCE DEL ROL** | una cabeza que vale para las ocho fases **no puede llamarse como una sola** |
+
+> **Y UNA ARISTA DE MARGEN NO VENCE A NINGUNA DE LAS DOS COSAS.**
+
+### EL EJEMPLAR, con sus dos cifras
+
+**La cabeza de la serie de medios de Coleman, par 948.**
+
+| dice | quien gana | con que |
+|---|---|---|
+| el **cableado** | `estrategia_multicanal_bienvenida` | **3 contra 2**. **Margen de UNA arista** |
+| el **archivo** | `seis_medios_comunicacion_cliente` | el veredicto **1012** lo llama **LA DOCTRINA GENERAL** y declara **hijo** suyo a `seis_canales_comunicacion_assess` |
+
+**Adjudicado: sobrevive `seis_medios_comunicacion_cliente`.**
+
+> **Y el nombre lo confirma por su lado: el id que ganaba por cableado dice
+> BIENVENIDA, que es UNA fase, mientras la doctrina vale para las OCHO.** **La cabeza
+> de una serie no se llama como uno de sus pasos.**
+
+### LA SEGUNDA APLICACION, y es mas dura que la primera
+
+**El acto II del racimo del pivote.** Ahi el cableado **no empata ni por poco**:
+`pivotar_o_proceder` tiene **10** y `pivote_o_proceder` **5**. **Y aun asi sobrevive
+`pivote_o_proceder`**, porque **lleva el material propio**: el mapa del cliente
+tipico y el resumen en un parrafo.
+
+> **Diez contra cinco, y pierde.** Si P.8 solo valiera para empates de una arista
+> seria una regla decorativa. **Vale para esto.**
+
+### LO QUE ESTO NO AUTORIZA
+
+**No autoriza a ignorar el cableado cuando el contenido calla.** En la fusion 328 de
+la junta asesora **el veredicto dice literalmente que los pasos coinciden**: ahi el
+contenido **no tiene nada que decir**, y el cableado decide solo. **La regla es de
+PRELACION, no de desprecio.**
+
+| el contenido | quien decide |
+|---|---|
+| dice algo (piezas propias, rol declarado, alcance) | **el contenido** |
+| **esta empatado y el veredicto lo dice** | **el cableado** |
+| empatado y el cableado tambien | **se trae al auditor** |
