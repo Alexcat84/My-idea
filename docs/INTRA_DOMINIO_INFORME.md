@@ -13297,3 +13297,125 @@ dominio cerrado; y **la comprobacion de la prediccion sobre `quality`** de la se
 paso contra nodo).
 
 **El archivo esta en 2.400 sin huecos ni duplicados. Cero nodos tocados.**
+
+
+---
+
+## 80. CIERRE DE `health_safety`, y sus trece racimos de ids para el plan
+
+**Corte: puesto 2.411. El dominio queda CERRADO.**
+
+### 80.1 LA CIFRA FINAL
+
+**Del puesto 2.220 al 2.411, 192 pares.**
+
+| | |
+|---|---:|
+| pares | **192** |
+| A | **45** |
+| B | **0** |
+| C | **0** |
+| D | **147** |
+| **tasa de A** | **23,4%** |
+
+**Archivo global al corte 2.411: A 454, B 89, C 7, D 1.861 sobre 2.411. Tasa 18,8%.**
+
+| dominio | pares | A | **tasa** |
+|---|---:|---:|---:|
+| `compras` | 155 | 1 | **0,6%** |
+| `entrega` | 171 | 2 | **1,2%** |
+| `exportacion` | 130 | 15 | **11,5%** |
+| `franquicias` | 148 | 18 | **12,2%** |
+| `environmental` | 170 | 29 | **17,1%** |
+| **`health_safety`** | **192** | **45** | **23,4%** |
+| `core` | 1.445 | 344 | **23,8%** |
+
+> **`health_safety` cierra en 23,4%, a cuatro decimas de `core`, y es el segundo dominio
+> mas repetido del archivo.**
+
+### 80.2 LA PREDICCION, resuelta: acerto al cierre y su defensa era mala
+
+| corte | pares | tasa | tramo nuevo |
+|---|---:|---:|---|
+| 2.300 | 81 | **37,0%** | . |
+| 2.376 | 157 | **25,5%** | 13,2% |
+| 2.388 | 169 | **24,3%** | 12,5% |
+| 2.400 | 181 | **24,9%** | **33,3%** |
+| **2.411, cierre** | **192** | **23,4%** | **0,0%** (0 A en 11) |
+
+> **Los ultimos once pares dieron CERO A, y el dominio cerro en 23,4%, por debajo del
+> 24,3% que la seccion 77.2 habia predicho.**
+>
+> **La prediccion acerto al cierre. La defensa que le puse era mala igual**, y la
+> precision del 9.19 se queda como esta: **la tasa de una cola tiende a la baja y no
+> desciende paso a paso**. Que el resultado final coincida **no rehabilita el
+> razonamiento**: entre el 2.388 y el 2.400 la cifra subio, y quien hubiera parado ahi
+> habria publicado una cifra peor que la de partida.
+
+### 80.3 LA VARA EN EL DOMINIO ENTERO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **22** |
+| **REPITE** | **45** |
+| no se invoco | **125** |
+
+**67 de 192.** **Cero PENDIENTE DE DOCTRINA en los 192.** **74 ARISTA QUE FALTA** (39% de
+los pares del dominio) y **42 SOLAPE DECLARADO**.
+
+### 80.4 LOS TRECE RACIMOS DE IDS, medidos para el plan
+
+**Medidos por `scripts/racimos_health_safety.py`, de solo lectura.** Cada forma va con su
+cobertura al lado (banco 9.26).
+
+| racimo | miembros | pares posibles | leidos | A | D | **cobertura** | aristas |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **LA VIEJA Y LA NUEVA VISION** | 6 | 15 | 9 | 4 | 5 | **60%** | **0** |
+| **EL SESGO RETROSPECTIVO** | 7 | 21 | 11 | 3 | 8 | **52%** | 2 |
+| **LAS DEFENSAS** | 7 | 21 | 5 | 2 | 3 | **24%** | 4 |
+| **LAS CONDICIONES LATENTES** | 5 | 10 | 4 | 1 | 3 | **40%** | 3 |
+| **EL ERROR COMO SINTOMA** | 9 | 36 | 14 | **11** | 3 | **39%** | 2 |
+| **LA DERIVA** | 4 | 6 | **6** | 3 | 3 | **100%** | **0** |
+| **LA CULTURA JUSTA** | 4 | 6 | 3 | 1 | 2 | **50%** | 2 |
+| **EL ERROR DE MANTENIMIENTO** | 7 | 21 | 4 | 1 | 3 | **19%** | 6 |
+| **LA GESTION DEL ERROR** | 3 | 3 | **3** | 0 | 3 | **100%** | **0** |
+| **LA MEDICION QUE CORROMPE** | 7 | 21 | 4 | 0 | 4 | **19%** | **0** |
+| **LA CULTURA COORDINADORA** | 3 | 3 | 2 | 0 | 2 | **67%** | **0** |
+| **EL APRENDIZAJE ORGANIZACIONAL** | 5 | 10 | 3 | 1 | 2 | **30%** | **0** |
+| **LA REACCION AL FALLO** | 7 | 21 | 6 | 2 | 4 | **29%** | 1 |
+| **TOTAL** | **74** | **194** | **74** | **29** | **45** | **38%** | **20** |
+
+**COMO SE LEE ESTA TABLA, y son cuatro cosas:**
+
+1. **DOS RACIMOS ESTAN CERRADOS Y LOS DOS SON PEQUENOS:** **la deriva** (4 miembros, 6 de
+   6 leidos, **3 A y 3 D**) y **la gestion del error** (3 miembros, 3 de 3, **cero A**).
+   **El primero se funde en parte y el segundo no se toca**: son los dos unicos del
+   dominio donde **la lectura ya no puede cambiar nada.**
+2. **EL ERROR COMO SINTOMA es el racimo grande y el mas caro:** **9 miembros, 11 A sobre
+   14 pares leidos**, y solo el 39% de cobertura. **Es el que contiene al iman**,
+   `errores_como_consecuencia` con nueve A y tres D. **Con 22 pares sin leer, su forma
+   final no esta fijada.**
+3. **CUATRO RACIMOS TIENEN CERO ARISTAS ENTRE MIEMBROS** (la vieja y la nueva vision, la
+   gestion del error, la medicion que corrompe, la cultura coordinadora) **mas el
+   aprendizaje organizacional**: **cinco de trece sin un solo cable interno.** Es la
+   cosecha de enlace mas barata del dominio.
+4. **COBERTURA BAJA DONDE HAY MAS ARISTAS.** El error de mantenimiento tiene **19% leido y
+   6 aristas**; la medicion que corrompe tiene **19% y 0**. **La cola no ordeno estos
+   racimos por igual**, y eso decide cuanto trabajo queda: donde hay aristas, el racimo ya
+   esta parcialmente resuelto por el grafo.
+
+**LOS RACIMOS QUE CAEN EN FIGURAS CONOCIDAS:**
+
+| figura | racimos donde aparece |
+|---|---|
+| **gemelos de extraccion** (ids `_2`, `_3`, titulos espejo, una preposicion) | la deriva, las defensas, la reaccion al fallo, la cultura justa, la vieja y la nueva vision, el sesgo retrospectivo |
+| **EL CASO NO ES LA CASA** (§78.3) | **las condiciones latentes**, con `caso_descarrilamiento_nakina` |
+| **el iman**: un nodo que repite contra muchos | **el error como sintoma** (9 A, 3 D) y **la vieja y la nueva vision** (`vieja_vision_vs_nueva_vision_seguridad`, 4 A) |
+| **frontera candidata INTER fuente** | **la medicion que corrompe**, puesto 2.393, LTIF contra Heinrich (PENDIENTES) |
+| **A por fusion mutua** | **el error como sintoma**, puesto 2.368 |
+| **advertencia de aduana, el 3% lexico** | **el aprendizaje organizacional**, puesto 2.389 |
+
+> **LA CUENTA QUE EL PLAN NECESITA: 74 miembros nominales en trece racimos, con 68 nodos
+> distintos** (`enfoque_situacional_vs_personal` aparece en dos). **194 pares posibles, 74
+> leidos, 120 sin leer.** **La cola no volvera a ofrecerlos**: el dominio esta cerrado, y
+> los 120 pares restantes **solo se leen si el plan los encarga como lectura dirigida.**
