@@ -4974,6 +4974,58 @@ hay que mirar tambien lo que el nodo servia de PUERTA**, no solo lo que mandaba 
 > como **cuarta cara** junto al vocabulario (3%), el identificador (60%) y la subcadena
 > (falso de tres). **Y con la misma conclusion: ordena, no decide.**
 
+### TANDA R50: un puesto, el 2.451, COINCIDE
+
+**18 ago 2026.** **La A se sostiene.**
+
+| | |
+|---|---:|
+| relecturas ciegas | **10** (R42 a R50) mas el barrido de direccion |
+| puestos releidos | **24** |
+| caidas | **4** . dentro del marcado **4** . fuera **0** |
+
+### REGLA NUEVA AL REPARTO DE PERDIDAS: LA PERSUASION ES CONTENIDO
+
+> **LOS BENCHMARKS, LOS CASOS DE EXITO Y EL DESTINO DEL ENTREGABLE ENTRAN AL REPARTO CON
+> NOMBRE PROPIO.**
+
+**EL MOTIVO, y es de producto y no de doctrina.** **P.8 pesa PROCEDIMIENTO**: cuenta pasos
+con decisiones dentro y deja fuera, por construccion, **el material con el que el lector
+convence a un tercero**. Y este catalogo **no es para auditores de calidad: es para
+emprendedores que tienen que convencer** a un socio, a un banco, a un proveedor o a si
+mismos.
+
+> **Un ROI bien calculado y sin un caso al lado no mueve un presupuesto. Una norma
+> nombrada sin sus hermanas no la encuentra el lector de otro rubro. Un numero exacto que
+> nadie manda hacia arriba no cambia una decision.**
+
+**LOS DOS EJEMPLARES, y los dos son del mismo tramo de siete pares:**
+
+| puesto | muere | sobrevive | lo que se lleva |
+|---:|---|---|---|
+| **2.445** | `estandares_especificos_industria` | `adaptaciones_sectoriales_iso` | **AS9100 e ISO 14000**, las dos puertas por las que entra un lector de aeronautica o de ambiental |
+| **2.451** | `roi_breakthrough` | `roi_proyectos_calidad` | **el Six Sigma de Samsung** como caso que respalda, **y el mandato de reportar el ROI a la direccion** |
+
+> **En los dos, el superviviente GANA POR PRECISION Y PIERDE POR PERSUASION**: uno trae el
+> requisito sustantivo de la norma, el otro trae la formula del ROI. **Ninguno de los dos
+> trae con que convencer.**
+
+### LOS TRES MOTIVOS DE PERDIDA DE LINEA, con su remedio
+
+| motivo | que muere | como se reconoce | **el remedio** | ejemplares |
+|---|---|---|---|---|
+| **NOMBRE** (banco 9.28) | **la denominacion del instrumento** | el superviviente **no dice la palabra** por la que se busca | el nombre viaja como **DENOMINACION**: una linea en el titulo o la primera frase | **2.250** (Amalberti), **2.432** (Taguchi) |
+| **ALCANCE** | **los ejemplos que abrian el nodo a otros sectores** | el superviviente **si dice la palabra**, pero **con un solo ejemplo** | los ejemplos **entran a la enumeracion** que el superviviente ya tiene | **2.445** (AS9100, ISO 14000), y el caso Samsung del **2.451** |
+| **DESTINO** | **a donde va el entregable y a quien hay que convencer** | el superviviente **produce el resultado y no dice que hacer con el** | la linea de destino entra **como paso final** del superviviente | **2.451** (*documentar el ROI para reportarlo a la direccion*) |
+
+> **LOS TRES SE PARECEN Y NO SON EL MISMO: uno pierde el NOMBRE, otro las PUERTAS, otro la
+> SALIDA.** Y los tres tienen el mismo remedio de coste: **una linea en el superviviente,
+> nunca un nodo.**
+>
+> **Y los tres son invisibles para la vara**, porque la vara pregunta que PROCEDIMIENTO
+> anade el hijo. **Por eso van al reparto de perdidas con nombre propio y no al veredicto:
+> el veredicto esta bien y la fusion es la que puede empobrecer el catalogo.**
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las

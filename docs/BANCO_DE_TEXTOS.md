@@ -1989,6 +1989,35 @@ direcciones:
 
 ---
 
+### 9.18.1 EL REMEDIO ESPEJO: un control que caza una averia deja libre a su gemela
+
+**Adoptada el 18 ago 2026, como linea propia del 9.18.** El 9.18 manda **buscar la regla
+abolida tambien en su espejo**. Esta es la misma forma aplicada a **los controles**.
+
+> **TODO CONTROL QUE DETECTA UNA AVERIA POR UN SINTOMA DEJA SIN CUBRIR LA AVERIA QUE NO
+> PRODUCE ESE SINTOMA.** Antes de dar un frente por barrido, hay que preguntar **cual es la
+> averia espejo** y **con que se detecta esa.**
+
+**DONDE NACIO: la ficha de herramientas**, que lo midio primero y lo dejo escrito en una
+linea que sirve de patron:
+
+> ***la muerta se detecta abriendo el enlace; la mutada no, porque el enlace abre.***
+
+**LA MISMA FORMA, ya medida tres veces mas en este cribado:**
+
+| el control | que caza | **la averia espejo que deja libre** |
+|---|---|---|
+| **abrir el enlace** (ficha de herramientas) | la herramienta **muerta** | la **mutada**: el enlace abre y lleva a otra cosa |
+| **el puntero de jurisdiccion** (PENDIENTES) | que **la jurisdiccion** sea otra | que **el tratado nombrado ya no exista en ninguna** |
+| **la cobertura lexica** (informe §76.3) | nada util: **3% de precision** | el parecido **sin vocabulario compartido** |
+| **el identificador de familia** (§82.2) | duplicados reales, **60%** | el `_2` que marca **destinatario u objeto distinto** |
+
+**LA REGLA OPERATIVA, y es barata:** cuando se declare un frente cubierto por un control,
+**escribir al lado que averia NO cubre.** Si no se sabe cual es la espejo, **el frente no
+esta cubierto: esta medido a medias.**
+
+---
+
 ### 9.19 LA COLA CAMBIA DE PRESA: la similitud alta caza duplicados, la media caza jerarquías
 
 **Adoptada el 13 ago 2026**, en el checkpoint de los 1.000.
