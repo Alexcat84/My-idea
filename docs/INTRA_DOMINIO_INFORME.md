@@ -14497,3 +14497,90 @@ motivos** (seccion 8).
 > credito sigue entera.
 
 **El archivo esta en 2.456 sin huecos ni duplicados. Cero nodos tocados.**
+
+
+---
+
+## 88. REPORTE DEL TRAMO 2.457 A 2.460
+
+**Corte: puesto 2.460. Van 49 pares de `quality`** de sus 844.
+
+### 88.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **`quality`** | **49** | **18** | **31** | **36,7%** |
+| archivo global (corte 2.460) | 2.460 | **472** | **1.892** | **19,2%** (B 89, C 7) |
+
+**Seis cortes:** 44,4% . 40,6% . 40,5% . 39,0% . 37,8% . **36,7%**. **Cinco bajadas
+seguidas y cada una menor que la anterior.** Sigue sin banda publicable, **y la forma ya no
+deja duda: es la cola del 9.19 perdiendo gemelos.**
+
+### 88.2 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **6** |
+| **REPITE** | **18** |
+| no se invoco | **25** |
+
+**24 de 49, el 49%.** **Primera vez que la vara baja del 50% en `quality`.**
+**Cero PENDIENTE DE DOCTRINA. 25 ARISTA QUE FALTA (51%), 22 SOLAPE DECLARADO.**
+
+### 88.3 LO QUE ANADE ESTE TRAMO
+
+**TERCERA FAMILIA QUE SE DECIDE DE A DOS (2.460), y conviene tenerlas contadas.**
+
+| familia | miembros vistos | lo que pasa |
+|---|---:|---|
+| `accion_correctiva` | **5 en la cola** | `_6` murio dos veces, y **su superviviente `_5` murio despues** (2.431). Registrada como **ACTO EN COLAPSO** |
+| los **ROI** | 3 | `roi_breakthrough` murio contra `roi_proyectos_calidad` (2.451), que a su vez fue **D** contra `calculo_roi_calidad` (2.427) |
+| las **adopciones ISO sectoriales** | 3 | `estandares_especificos_industria` **murio** en el 2.445 y **sobrevive** en el 2.460 |
+
+> **Las tres son correctas par a par y las tres piden lo mismo: por 9.3, la direccion
+> decidida sobre un par no sobrevive a su familia.** El superviviente final **se elige una
+> vez, sobre la nomina completa**, y hasta entonces **los supervivientes por par son
+> provisionales.**
+
+**DOS FASES CONSECUTIVAS QUE SI ESTAN CABLEADAS (2.457).** `prepare_phase_roadmap` crea los
+charters y `launch_phase_roadmap` los asigna, **y su paso 1 nombra a la fase anterior**.
+**Es el par mas limpio del tramo**: solape de una bisagra, arista puesta, nada que arreglar.
+
+**UNA PERDIDA DE DIRECCION (2.458).** Muere `pensamiento_sistemico_rol_triple` y se lleva
+**la particion por direccion**: *canales de requisitos del proveedor al procesador* contra
+*loops de control del cliente al procesador*.
+
+> **Es lo unico del par que dice que LOS REQUISITOS BAJAN Y LA RETROALIMENTACION SUBE.** El
+> superviviente exige expectativas explicitas entre cada par de roles y bucles que midan
+> cumplimiento, **pero no dice en que sentido corre cada cosa.** **Entra al reparto como
+> perdida de linea, motivo ALCANCE**: no falta el nombre ni el destino, **falta la mitad
+> del mapa.**
+
+**Y UNA CIFRA PUBLICADA QUE SOBREVIVE (2.459):** el estandar de referencia del **2,5% al
+4% de las ventas** para el costo de calidad **queda del lado del superviviente**. Se anota
+porque **es la unica cifra de contraste externo del dominio leida hasta ahora**, y porque
+banco 9.21 obliga a que toda cifra viaje con su corte: **es de Crosby, no una medicion de
+este catalogo.**
+
+### 88.4 LAS 18 A DE `quality`, con las discutibles marcadas
+
+`2.414`, `2.417`, `2.418`, `2.420`, `2.421`, `2.424`, `2.426`, `2.431`, `2.432`, `2.436`,
+`2.437`, `2.438`, `2.440`, `2.445`, `2.447`, `2.451`, `2.453`, **`2.458`**.
+
+**LAS TRES MAS DISCUTIBLES, y la R52 empieza aqui:**
+
+1. **2.458.** El superviviente gana **en los cuatro pasos por afinado**, no por traer nada
+   nuevo. **Es la A mas ajustada del dominio**: si el auditor lee que la particion por
+   direccion es un paso y no una linea, el par se voltea a **fusion mutua**.
+2. **2.460**, aunque quedo **D**: se marca porque **es el par que destapa la tercera
+   familia decidiendose de a dos**, y porque el mismo nodo que aqui sobrevive **murio
+   quince pares antes**.
+3. **2.453**, ya releida y confirmada (R51), **queda marcada como el ejemplar que hizo
+   pasar la tabla de perdidas de tres motivos a cuatro.**
+
+### 88.5 LO QUE FALTA
+
+**Faltan 157 pares del encargo, del 2.461 al 2.617.** **Checkpoints 2.500 y 2.600
+pendientes.** El dominio son **844 pares** y llega al **3.255**.
+
+**El archivo esta en 2.460 sin huecos ni duplicados. Cero nodos tocados.**
