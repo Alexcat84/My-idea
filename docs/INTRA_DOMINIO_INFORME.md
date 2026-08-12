@@ -4686,6 +4686,90 @@ no se copia al superviviente: se cablea**, porque el catalogo tiene el nodo que 
 **Y la fusion alimenta la D1 de Crosby**: es la cabeza de esa serie la que queda de pie,
 asi que el nodo que sobreviva **es el que la D1 tiene que nombrar.**
 
+### TANDA R46: dos puestos, DOS DE DOS COINCIDEN
+
+**18 ago 2026.** Cuarta relectura ciega hecha solo sobre marcados: **2.417 y 2.421**.
+**Las dos coinciden.**
+
+**LA METRICA DE CREDITO AL DIA:**
+
+| | |
+|---|---:|
+| relecturas ciegas corridas | **6** (R42, R43, R44, R45, R46) mas el barrido de direccion |
+| puestos releidos | **18** |
+| caidas del archivo | **4** |
+| **dentro del marcado** | **4** |
+| **fuera del marcado** | **0** |
+
+#### a. EL 2.417, y una fusion mutua NO HEREDA POR DEFECTO
+
+**Es la diferencia entre una A con superviviente y una A mutua.** Cuando hay
+superviviente, lo que muere **se absorbe en un nodo que ya existe**. **Aqui no hay
+superviviente**, asi que **nada se hereda solo**: las tres lineas hay que **escribirlas en
+el encargo de fusion o se pierden las tres.**
+
+| la linea | de que nodo | que es |
+|---|---|---|
+| **asignar responsables de supervision** que verifiquen el cumplimiento del control | `mantener_las_ganancias` | **una asignacion**: sin dueno, el control es un documento |
+| **revisar el sistema tras rotacion de personal** | `mantener_las_ganancias` | **un disparador**, no un calendario. Es la unica condicion del par que se activa por un hecho y no por una fecha |
+| **aplicar tecnicas de a prueba de errores donde sea posible** | `sostener_las_ganancias` | **otra clase de control**: disenar el error fuera en vez de auditarlo despues |
+
+**LA TERCERA SE CLASIFICO CON EL GRAFO ANTES DE ESCRIBIRLA, no por criterio.**
+
+> **RESULTADO: ES ARISTA CANDIDATA, NO PERDIDA.** El catalogo **si tiene** donde cablearla.
+
+| medicion | cifra |
+|---|---:|
+| nodos con **poka yoke o mistake proofing EN EL ID** | **6** |
+| nodos que lo **mencionan en pasos, titulo o entregable** | **13** |
+| de los seis, **presentes en la cola de `quality`** | **3** |
+| **aristas actuales entre los dos nodos del 2.417 y cualquiera de los seis** | **0** |
+
+**Los seis:** `errores_a_prueba_poka_yoke`, `mistake_proofing_poka_yoke`,
+`mistake_proofing_poka_yoke_2`, `poka_yoke_a_prueba_de_errores`,
+`error_proofing_servicio`, `error_proofing_six_sigma_lean`.
+
+> **Y aqui el resultado sale al reves que en el 2.414, que es justo lo que hace util
+> comprobarlo:** alli el COPQ **ya estaba cableado** y la perdida era cero; **aqui el
+> poka yoke existe y NO esta cableado con ninguno de los dos nodos del par.** Misma
+> doctrina, *el paso se cablea y no se copia*, y **dos resultados opuestos.** **Sin la
+> comprobacion, uno de los dos se habria escrito mal.**
+
+#### b. EL 2.421: la evidencia estadistica viaja con nombre
+
+**Muere `relaciones_largo_plazo_con_proveedores` y se lleva un criterio que el
+superviviente no reemplaza:** *definir criterios de evaluacion que incluyan **evidencia
+estadistica de calidad**, no solo el precio*.
+
+> **`relacion_largo_plazo_proveedor_unico` evalua por *evidencia de mejora continua*.** No
+> es lo mismo: **la mejora continua no sustituye a la evidencia estadistica, la diluye.**
+> Una es **una tendencia que se afirma**; la otra es **un dato que se exige**. **Viaja con
+> nombre propio al encargo de fusion.**
+
+**Y la segunda linea del mismo nodo, *revisar cuantos proveedores tienes hoy para cada
+articulo clave*, viaja tambien**: es el **paso cero** que el superviviente da por hecho, y
+sin el la instruccion *reducir progresivamente* no tiene desde donde empezar.
+
+### LAS DOS VIAS, Y UNA SOLA CONCLUSION
+
+**El cribado ha medido dos veces si la forma del nombre o del texto puede decidir un
+veredicto, y las dos veces la respuesta es la misma.**
+
+| via | medicion | resultado |
+|---|---|---|
+| **el vocabulario** (§76.3) | prueba de cobertura lexica sobre 46 A con direccion | **34 marcadas, 1 lo era: 3% de precision** |
+| **el identificador** (§82.2) | 5 pares del mismo id de familia en `quality` | **3 repitieron, 2 no: 60%** |
+
+> **NI EL NOMBRE NI EL VOCABULARIO DECIDEN. ORDENAN.**
+>
+> El identificador acierta mucho mas que el vocabulario, **y aun asi se equivoca dos de
+> cada cinco**: `sistema_responsabilidad_gerencial` contra su `_2` **es D**, porque uno
+> **acota** la responsabilidad y el otro **la mide**.
+>
+> **Lo que las dos vias sirven para hacer es lo mismo: PONER DELANTE lo que hay que
+> mirar.** Es exactamente lo que la cola ya hace con la similitud, y **el limite es el
+> mismo: el veredicto se lee.**
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
