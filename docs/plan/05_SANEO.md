@@ -22,7 +22,7 @@ doctrina de un nodo, y por eso es la mas barata de todos los frentes abiertos.
 
 ---
 
-## `OP-S-01` — EL PAR DE NAFTA: fusion, vigencia y alias en UN SOLO ACTO
+## `OP-S-01`: EL PAR DE NAFTA: fusion, vigencia y alias en UN SOLO ACTO
 
 **Nodos**: `nafta_free_trade_agreements` y
 `certificado_de_origen_tratados_libre_comercio`.
@@ -66,7 +66,7 @@ solo las documenta**.
 
 ---
 
-## `OP-S-02` — INCOTERMS SIN VERSION · **PARADA ABIERTA**
+## `OP-S-02`: INCOTERMS SIN VERSION · **PARADA ABIERTA**
 
 **Nodos que lo CITAN en su texto, medidos el 11 ago 2026**:
 `incoterms_reglas_comerciales_internacionales`, `seguro_de_carga_transporte`,
@@ -100,7 +100,7 @@ escribe, **Incoterms 2020**?
 
 ---
 
-## `OP-S-03` — `export.gov` A `trade.gov` · **LISTA**
+## `OP-S-03`: `export.gov` A `trade.gov` · **LISTA**
 
 **Nodos**: `calculo_de_aranceles_importacion`,
 `evaluacion_preparacion_empresa_exportar`, `reglas_de_origen_fta_2`.
@@ -119,7 +119,7 @@ barata de las tres averias de vigencia.**
 
 ---
 
-## `OP-S-04` — LAS SEIS HERRAMIENTAS MUERTAS
+## `OP-S-04`: LAS SEIS HERRAMIENTAS MUERTAS
 
 **El mapa completo, verificado contra el grafo el 11 ago 2026:**
 
@@ -148,7 +148,7 @@ equivalente, o **se generaliza** la linea perdiendo el nombre propio?
 
 ---
 
-## `OP-S-05` — LO QUE SIGUE SIN VERIFICAR
+## `OP-S-05`: LO QUE SIGUE SIN VERIFICAR
 
 **`Quantcast`**, en el paso 6 de `analisis_trafico_competitivo`, sigue **SIN
 VERIFICAR**, y se registra asi **y no como viva**, porque nadie la ha comprobado.
@@ -172,7 +172,7 @@ verificado?
 
 ---
 
-## `OP-S-06` — LOS CAMPOS SUCIOS, con su tabla de mapeo
+## `OP-S-06`: LOS CAMPOS SUCIOS, con su tabla de mapeo
 
 **Verificado contra el grafo el 11 ago 2026: los seis ids confirmados, 1 mas 1 mas
 4, exactamente como los publica la auditoria del motor.**
@@ -200,7 +200,7 @@ abierto.
 
 ---
 
-## `OP-S-07` — LAS AUTO-ARISTAS · **SEGUNDA CIFRA QUE NO RECONCILIA**
+## `OP-S-07`: LAS AUTO-ARISTAS · **SEGUNDA CIFRA QUE NO RECONCILIA**
 
 | | publicado | **medido el 11 ago 2026** |
 |---|---:|---:|
@@ -228,7 +228,7 @@ como su propio alias.
 
 ---
 
-## `OP-S-08` — EL RESOLUTOR DE ALIAS, y por que bloquea
+## `OP-S-08`: EL RESOLUTOR DE ALIAS, y por que bloquea
 
 **219 nodos escriben 293 alias y NINGUN codigo los lee.** `ids_alias` aparece solo
 en la declaracion del tipo y en el consolidador que lo escribe. **No existe
@@ -249,7 +249,7 @@ aparte?
 
 ---
 
-## `OP-S-09` — LOS IDS DE LA DECISION 4
+## `OP-S-09`: LOS IDS DE LA DECISION 4
 
 **La politica esta APROBADA el 9 ago 2026**: familia unica, criterio **continua o
 repite**, y **fusion con alias**. *Un id no pertenece a una doctrina: pertenece al
@@ -269,7 +269,7 @@ aprobada; **la lista sobre la que se decidio no existe escrita.**
 
 ---
 
-## `OP-S-10` — EL REENCUADRE DE MARCO
+## `OP-S-10`: EL REENCUADRE DE MARCO
 
 **La doctrina, ya escrita**: *la condicion de pais se copia **A LA PUERTA**, donde
 se actua*, es decir a `condiciones_activacion`, **y nombrando el pais**. Dejarla

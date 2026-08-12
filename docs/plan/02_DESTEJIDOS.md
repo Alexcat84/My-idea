@@ -62,7 +62,7 @@ criterio es congelados liberados y por esa cuenta es correcto.
 
 ---
 
-## `OP-D-01` — EL MVP, la cura acoplada mayor · **LISTA**
+## `OP-D-01`: EL MVP, la cura acoplada mayor · **LISTA**
 
 **Acto 11. Nodos: `producto_minimo_viable`, `principio_calidad_mvp`.**
 `producto_minimo_viable` es **el emblema de la averia**: 22 pasos, cinco
@@ -95,7 +95,7 @@ abre el plan.**
 
 ---
 
-## `OP-D-02` — LA VOZ DEL CLIENTE · **LISTA**
+## `OP-D-02`: LA VOZ DEL CLIENTE · **LISTA**
 
 **Acto 3. Cuatro nodos**: `voz_del_cliente_voc`, `enfoque_mercado_voc`,
 `homework_frontend_loading`, `voice_of_customer_homework`.
@@ -129,7 +129,7 @@ Diez pasos, **doble de la observacion**: Cooper en 1 a 5, Coleman en 6 a 10, con
 
 ---
 
-## `OP-D-03` — LAS PRUEBAS A/B · **LISTA**
+## `OP-D-03`: LAS PRUEBAS A/B · **LISTA**
 
 **Acto 2. SEIS nodos y TRES destejidos.** Costuras: `ab_testing_optimizacion`,
 `optimizacion_embudo_get_customers`, `split_testing_experimentos_ab`. Sanos:
@@ -154,7 +154,7 @@ Diez pasos, **doble de la observacion**: Cooper en 1 a 5, Coleman en 6 a 10, con
 
 ---
 
-## `OP-D-04` — EL BRAINSTORMING · **DECISION PENDIENTE**
+## `OP-D-04`: EL BRAINSTORMING · **DECISION PENDIENTE**
 
 **Acto 1, el mayor: SIETE nodos.** `brainstorming_divergente` mas
 `brainstorming_efectivo`, `reglas_brainstorming`, `generar_multiples_opciones`,
@@ -183,7 +183,7 @@ siete antes de la pasada, o el acto entra a la mesa **con la lista en blanco**?
 
 ---
 
-## `OP-D-05` — LA SELECCION DEL CEO · **DECISION PENDIENTE**
+## `OP-D-05`: LA SELECCION DEL CEO · **DECISION PENDIENTE**
 
 **Acto 4. Tres nodos**: `seleccion_ceo_fundador`,
 `asignacion_de_titulos_ejecutivos`, `errores_comunes_asignacion_roles`. Pares que
@@ -201,7 +201,7 @@ los tres grandes, o se decide en la mesa el mismo dia?
 
 ---
 
-## `OP-D-06` — LOS NUEVE ACTOS DE DOS · **DECISION PENDIENTE**
+## `OP-D-06`: LOS NUEVE ACTOS DE DOS · **DECISION PENDIENTE**
 
 **Anclas**: `producto_unico_superior`, `propuesta_gasto_capital`,
 `blueprint_de_experiencia` con `customer_journey_mapping`,
