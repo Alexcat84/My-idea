@@ -2805,3 +2805,57 @@ lo prueba**: la condicion que faltaba, *la bolsa nunca es el contenedor unico*,
 > **INTER-FUENTE**: se anota como **frontera candidata** y se lleva a la mesa del
 > dominio. **Tampoco cambia la clase.** Lo que decide es si el catalogo quiere
 > conservar las dos doctrinas con su contexto al lado, o elegir una.
+
+
+---
+
+## ADVERTENCIA DE DISENO PARA LA ADUANA: el vocabulario no discrimina (18 ago 2026)
+
+**VIAJA AL RECOMPUTO. La sesion del plan la recoge; el cribado solo la mide y la
+entrega.**
+
+> **LA ADUANA NO PUEDE APOYARSE EN VOCABULARIO PARA DECIDIR SI DOS NODOS DICEN LO MISMO.**
+
+**LA MEDICION, del barrido de direccion (informe §76.3).** Se implemento una prueba de
+cobertura lexica sobre los 46 pares del archivo cuya A **elige direccion**: que fraccion
+de los pasos del nodo que muere aparece, por vocabulario, dentro del que sobrevive.
+
+| | |
+|---|---:|
+| pares medidos | **46** |
+| marcados **SOSPECHOSO** por la prueba | **34** |
+| de esos, **realmente al reves** | **1** |
+| **precision** | **3%** |
+
+**POR QUE FALLA, y no es un defecto del umbral.** Este catalogo **repite ideas con
+palabras distintas**. Dos ejemplos medidos, los dos del mismo racimo y los dos siendo
+**el mismo paso**:
+
+| un nodo dice | el otro dice | palabras en comun |
+|---|---|---:|
+| *historial de pequenos cambios y ajustes acumulados en procedimientos operativos* | *brecha entre procedimiento escrito y practica real* | **1** (procedimiento) |
+| *el desempeno puntual se ha vuelto la norma a costa de margenes de seguridad* | *metas de eficiencia local que compiten con la seguridad* | **1** (seguridad) |
+
+**Subir el umbral no arregla nada**: bajarlo mete ruido y subirlo pierde estos casos, que
+son **la mayoria del corpus doctrinal**.
+
+### LO QUE ESTO EXIGE DEL DISENO
+
+1. **El indice semantico de la aduana necesita la prueba que el script ya define**, no el
+   solape de palabras: **que fraccion de los PASOS de un nodo esta EJECUTADA por el otro**,
+   medida sobre significado y no sobre forma. `scripts/barrido_direccion.py` deja la
+   funcion `cobertura()` escrita con su umbral y **con su tasa de acierto en la cabecera**,
+   para que se reemplace el comparador y se conserve la forma de la prueba.
+2. **La aduana tiene que poder distinguir POSTURA de PASO DE TRABAJO.** Es la leccion del
+   puesto 2.371: *aceptar que el error es inevitable* y *ir a buscar que decidio la
+   empresa antes del incidente* comparten casi todo el vocabulario y **no son lo mismo**.
+   Un indice que no separe las dos cosas fundira politicas con protocolos.
+3. **Y tiene que poder distinguir LA CASA DEL EJEMPLO** (figura EL CASO NO ES LA CASA,
+   informe §78.3). La senal es barata y **no esta en los pasos, esta en el entregable**:
+   si el entregable **lleva dentro un dato del caso** (una fecha, un lugar, una empresa),
+   el nodo es ilustracion. **Hay 10 nodos con id `caso_`, `estudio_`, `case_` o
+   `ejemplo_` en el grafo y 8 sin cribar todavia.**
+
+> **EL RESUMEN EN UNA LINEA: la deduplicacion de este catalogo se verifica leyendo. Lo
+> que la maquina puede hacer es ORDENAR LA COLA, que es lo que ya hace, y NO decidir el
+> veredicto.**

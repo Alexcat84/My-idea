@@ -4549,6 +4549,30 @@ voltea, y con el el 2.215*. **Se voltearon los dos, y en ese orden de dependenci
 barrido de direccion de la seccion 76 anadio un tercero, el **2.338**, y tambien estaba
 marcado.
 
+### TANDA R43: cuatro puestos, TRES COINCIDEN Y UNA DISCREPA, y la relectura empezo por los marcados
+
+**18 ago 2026.** La R43 aplico por primera vez **la regla del marcado como protocolo**:
+el auditor releyo **solo los discutibles** de la seccion 77.6, **2.335, 2.368, 2.310 y
+2.371**.
+
+| puesto | resultado |
+|---:|---|
+| **2.335** | **coincide en la clase**, y corrige el superviviente: la doctrina es la casa y el caso viaja como ejemplo (seccion 78.2) |
+| 2.368 | **coincide**: fusion mutua sin superviviente |
+| 2.310 | **coincide** |
+| **2.371** | **DISCREPA. A pasa a D** (seccion 78.1) |
+
+> **TERCERA EVIDENCIA DE QUE EL MARCADO SIRVE, y esta es la mas fuerte de las tres.**
+> En la R42 las dos discrepancias de ocho cayeron dentro de los cinco marcados. El
+> barrido de direccion tumbo el **2.338**, **tambien marcado**. Y la R43, **leyendo
+> unicamente marcados**, encontro **una caida en cuatro**.
+>
+> **Las cuatro caidas que ha tenido el archivo (2.195, 2.215, 2.338 y 2.371) estaban las
+> cuatro marcadas como discutibles antes de que nadie las releyera.** Ninguna
+> discrepancia ha aparecido fuera de la lista todavia, y **ese es el numero que hay que
+> vigilar**: el dia que aparezca una fuera, lo que se mueve no es un veredicto, es el
+> credito de toda la tanda.
+
 ## 9. RACIMO NUEVO: EL CIERRE EN VENTA GRANDE, el mayor encontrado
 
 **Sube a racimo el 11 ago 2026. Ocho miembros, NUEVE pares ya leidos, y las
@@ -12520,13 +12544,13 @@ entero.**
 | | |
 |---|---:|
 | pares leidos en el tramo | **76** |
-| A | **11** |
+| A | **10** |
 | B | **0** |
 | C | **0** |
-| D | **65** |
-| **tasa de A del tramo** | **14,5%** |
+| D | **66** |
+| **tasa de A del tramo** | **13,2%** |
 
-**Archivo global al corte 2.376: A 450, B 89, C 7, D 1.830 sobre 2.376. Tasa 18,9%.**
+**Archivo global al corte 2.376: A 449, B 89, C 7, D 1.831 sobre 2.376. Tasa 18,9%.**
 
 > **Cifras corregidas el 17 ago 2026 por el barrido de direccion**, que volteo el puesto
 > 2.338 de A a D. La primera escritura decia 12 A, 15,8% del tramo y 19,0% global.
@@ -12546,12 +12570,12 @@ La seccion 72.2 escribio, con `health_safety` al **37,0%** y 111 pares sin leer:
 | corte | pares leidos de `health_safety` | A | **tasa** |
 |---|---:|---:|---:|
 | 2.300 | 81 de 192 | 30 | **37,0%** |
-| **2.376** | **157 de 192** | **41** | **26,1%** |
-| el tramo nuevo solo (2.301 a 2.376) | 76 | 11 | **14,5%** |
+| **2.376** | **157 de 192** | **40** | **25,5%** |
+| el tramo nuevo solo (2.301 a 2.376) | 76 | 10 | **13,2%** |
 
 > **La direccion acerto y la magnitud es grande: el tramo nuevo entrega menos de la mitad
-> de la tasa del anterior, 14,5% contra 37,0%, y arrastra el acumulado del dominio del
-> 37,0% al 26,1%.** Con 35 pares por leer, la cifra de cierre **seguira bajando**.
+> de la tasa del anterior, 13,2% contra 37,0%, y arrastra el acumulado del dominio del
+> 37,0% al 25,5%.** Con 35 pares por leer, la cifra de cierre **seguira bajando**.
 >
 > **Y esto vuelve a decir lo mismo que la seccion 71 y la 72: una tasa parcial no es la
 > tasa de un dominio.** El 37,0% publicado al 2.300 era correcto **a su corte** y hoy
@@ -12638,9 +12662,9 @@ centros y no uno**.
    anoto tres veces**: la instruccion de **redisenar la herramienta en vez de entrenar a
    la persona** es la unica accion correctiva directa del racimo, y en el 2.310 viaja
    hacia un nodo que es **analisis puro, sin un solo paso de remedio**.
-5. **`health_safety` sigue abierto**, 157 de 192, **26,1% y bajando**.
+5. **`health_safety` sigue abierto**, 157 de 192, **25,5% y bajando**.
 
-### 75.7 LAS 11 A NUEVAS, con las discutibles marcadas
+### 75.7 LAS 10 A NUEVAS, con las discutibles marcadas
 
 > **Eran 12. El 2.338 salio el 17 ago 2026**, volteado por el barrido de direccion, y
 > **era uno de los tres que esta misma seccion habia marcado como discutibles.** Queda
@@ -12653,13 +12677,13 @@ centros y no uno**.
 | 2.310 | `human_error_como_sintoma` | `new_view_human_error` |
 | 2.311 | `errores_como_consecuencia` | `error_humano_vs_falla_mecanica` |
 | 2.328 | `reglas_parada_investigacion_accidentes` | `limite_busqueda_causas_pendulo` |
-| **2.335** | `condiciones_latentes_largo_plazo` | `caso_descarrilamiento_nakina` |
+| **2.335** | `caso_descarrilamiento_nakina` | `condiciones_latentes_largo_plazo` **(superviviente corregido el 18 ago 2026)** |
 | ~~2.338~~ | ~~`cuestionar_vision_zero`~~ | **VOLTEADA A D** el 17 ago 2026 |
 | 2.347 | `errores_como_consecuencia` | `seduccion_modelo_persona` |
 | 2.352 | `vieja_vision_vs_nueva_vision_seguridad` | `new_view_vs_old_view` |
 | 2.362 | `errores_como_consecuencia` | `new_view_human_error` |
 | **2.368** | **fusion mutua** | ninguno domina |
-| 2.371 | `errores_como_consecuencia` | `principios_gestion_error` |
+| ~~2.371~~ | ~~`errores_como_consecuencia`~~ | **VOLTEADA A D** el 18 ago 2026 |
 
 **LAS TRES MAS DISCUTIBLES:**
 
@@ -12707,7 +12731,7 @@ reparten:
 > **`quality` tiene mas candidatos que `core`, y `core` tiene diez veces mas pares en la
 > cola.** Si el barrido acierta, **la cola de `quality` deberia entregar madre e hijo, no
 > gemelos**: muchos **CONTINUA** por linea desplegada y muchas **ARISTA QUE FALTA**, con
-> una tasa de A mas parecida a la cola de `health_safety` (14,5%) que a su cabecera
+> una tasa de A mas parecida a la cola de `health_safety` (13,2%) que a su cabecera
 > (37,0%). **Queda escrito antes de leer para que se pueda comprobar despues.**
 
 **El archivo esta en 2.376 sin huecos ni duplicados.** Se retoma en el **2.377** con
@@ -12848,21 +12872,24 @@ los discutibles de la 77.6.**
 
 | | pares | A | D | **tasa** |
 |---|---:|---:|---:|---:|
-| **tramo 2.301 a 2.388** | **88** | **12** | **76** | **13,6%** |
-| `health_safety` acumulado | **169 de 192** | 42 | 127 | **24,9%** |
-| archivo global (corte 2.388) | 2.388 | **451** | **1.841** | **18,9%** (B 89, C 7) |
+| **tramo 2.301 a 2.388** | **88** | **11** | **77** | **12,5%** |
+| `health_safety` acumulado | **169 de 192** | 41 | 128 | **24,3%** |
+| archivo global (corte 2.388) | 2.388 | **450** | **1.842** | **18,8%** (B 89, C 7) |
+
+> **Cifras corregidas el 18 ago 2026 por la R43**, que volteo el puesto 2.371 de A a D.
+> La primera escritura decia 12 A, 13,6% del tramo, 24,9% del dominio y 18,9% global.
 
 ### 77.2 LA PREDICCION DEL 2.300, MEDIDA POR TERCERA VEZ
 
 | corte | pares leidos de `health_safety` | **tasa** |
 |---|---:|---:|
 | 2.300 | 81 de 192 | **37,0%** |
-| 2.376 | 157 de 192 | **26,1%** |
-| **2.388** | **169 de 192** | **24,9%** |
+| 2.376 | 157 de 192 | **25,5%** |
+| **2.388** | **169 de 192** | **24,3%** |
 
 > **Tres cortes, tres bajadas, ninguna sorpresa.** Lo que se escribio en la seccion 72.2
 > se cumple en direccion y en magnitud: **la cabecera de un dominio no predice su cierre**,
-> y con 23 pares por leer **la cifra final seguira por debajo de 24,9%**.
+> y con 23 pares por leer **la cifra final seguira por debajo de 24,3%**.
 
 ### 77.3 LA VARA POR TRAMO
 
@@ -12891,19 +12918,24 @@ vocabulario.**
 
 ### 77.5 CONDICIONES VIVAS
 
-1. **`errores_como_consecuencia` cae en A por DECIMA vez** (2.387), y esa es **la mas
-   limpia de las diez**: el superviviente nombra con sus cuatro casillas
+1. **`errores_como_consecuencia` queda en NUEVE A** tras el volteo del 2.371, y la mas
+   limpia de las nueve es el **2.387**: el superviviente nombra con sus cuatro casillas
    (presupuesto, capacitacion, dotacion, diseno) **la busqueda organizacional que en los
    puestos 2.345 y 2.382 lo habia salvado.**
-2. **Y sigue sin ser mecanica: dos D lo prueban.** En el **2.345** y el **2.382**, contra
-   nodos que trabajan **la escena** y no **la busqueda**, este mismo nodo **si aporta**.
-   **Diez A y dos D, decididas cada una por lo que el otro traia.**
-3. **`health_safety` abierto**, 169 de 192, **24,9% y bajando**.
-4. **Tres A del archivo estaban escritas con la vara al reves** (2.195, 2.215, 2.338).
-   **Las tres cayeron, las tres estaban marcadas como discutibles, y el barrido de la
-   seccion 76 cerro la busqueda: no hay una cuarta.**
+2. **Y sigue sin ser mecanica: TRES D lo prueban.** En el **2.345**, el **2.371** y el
+   **2.382**, contra nodos que trabajan **la etiqueta**, **la politica** o **la escena** y
+   no **la busqueda**, este mismo nodo **si aporta**. **Nueve A y tres D, decididas cada
+   una por lo que el otro traia.**
+3. **`health_safety` abierto**, 169 de 192, **24,3% y bajando**.
+4. **CUATRO A del archivo han caido, y las cuatro estaban marcadas** (2.195, 2.215,
+   2.338 y 2.371). Las tres primeras por **la vara al reves**, y el barrido de la seccion
+   76 cerro esa busqueda: **no hay una quinta de ese tipo.** La cuarta es de otra especie:
+   **una postura mapeada sobre una busqueda** (seccion 78.1).
 
-### 77.6 LAS 12 A DEL TRAMO, con las discutibles marcadas
+### 77.6 LAS 11 A DEL TRAMO, con las discutibles marcadas
+
+> **Eran 12. El 2.371 salio el 18 ago 2026**, volteado por la R43, y **era uno de los
+> tres marcados como discutibles.** Queda tachado abajo, no borrado.
 
 | puesto | muere | sobrevive |
 |---|---|---|
@@ -12912,29 +12944,32 @@ vocabulario.**
 | 2.310 | `human_error_como_sintoma` | `new_view_human_error` |
 | 2.311 | `errores_como_consecuencia` | `error_humano_vs_falla_mecanica` |
 | 2.328 | `reglas_parada_investigacion_accidentes` | `limite_busqueda_causas_pendulo` |
-| **2.335** | `condiciones_latentes_largo_plazo` | `caso_descarrilamiento_nakina` |
+| **2.335** | `caso_descarrilamiento_nakina` | `condiciones_latentes_largo_plazo` **(superviviente corregido el 18 ago 2026)** |
 | 2.347 | `errores_como_consecuencia` | `seduccion_modelo_persona` |
 | 2.352 | `vieja_vision_vs_nueva_vision_seguridad` | `new_view_vs_old_view` |
 | 2.362 | `errores_como_consecuencia` | `new_view_human_error` |
 | **2.368** | **fusion mutua** | ninguno domina |
-| 2.371 | `errores_como_consecuencia` | `principios_gestion_error` |
+| ~~2.371~~ | ~~`errores_como_consecuencia`~~ | **VOLTEADA A D** el 18 ago 2026 |
 | 2.387 | `errores_como_consecuencia` | `fallas_activas_condiciones_latentes` |
 
 **LAS TRES MAS DISCUTIBLES, y la R43 empieza aqui:**
 
-1. **2.335.** Sobrevive **un estudio de caso** y muere **la doctrina general** que sale de
-   el. La vara manda por contenido (el caso trae el analisis geotecnico profundo frente a
-   la inspeccion visual), **pero la fusion tiene que conservar el titulo generico**, o la
-   regla queda colgada de un descarrilamiento concreto.
+1. **2.335: RESUELTO, y la clase se sostuvo.** Se marco aqui que *la fusion tiene que
+   conservar el titulo generico o la regla queda colgada de un descarrilamiento
+   concreto*. **La R43 lo confirmo y el superviviente se corrigio**: manda
+   `condiciones_latentes_largo_plazo`, el analisis geotecnico se repone en ella y Nakina
+   viaja como ejemplo nombrado. **De ahi sale la figura EL CASO NO ES LA CASA**
+   (seccion 78.3).
 2. **2.368.** **Fusion mutua sin superviviente.** Cada uno anade dos lineas y ninguno
    trae procedimiento. **Se pierde, si nadie lo mira: el nivel organizacional explicito,
    el entrenamiento contra el sesgo de atribucion, y usar el hallazgo para cambiar el
    sistema y no para senalar.**
-3. **2.310 y 2.371 juntas, por la misma perdida.** En las dos muere el nodo que trae **la
-   unica accion correctiva directa del racimo** (redisenar la herramienta en vez de
-   entrenar a la persona, en el 2.310; las mejoras informativas quedan del lado del
-   superviviente en el 2.371). **La perdida ya se anoto cuatro veces en el archivo, y
-   sigue viajando como linea absorbida.**
+3. **2.310, y el 2.371 ya no la acompana.** En el 2.310 muere el nodo que trae **la
+   unica accion correctiva directa del racimo**, redisenar la herramienta en vez de
+   entrenar a la persona, y **la perdida ya se anoto cuatro veces en el archivo**. El
+   2.371 se marco por la misma inquietud y **la R43 le dio la razon: no era una perdida a
+   vigilar, era un veredicto mal puesto**, y las mejoras informativas se quedan donde
+   estaban porque el par ni siquiera repetia.
 
 ### 77.7 LO QUE FALTA, y donde se retoma
 
@@ -12957,3 +12992,123 @@ confirman candidatos que el barrido ya tenia) **se hace al leerlo, y no antes.**
 
 **El archivo esta en 2.388 sin huecos ni duplicados.** Se retoma en el **2.389**.
 **Cero nodos tocados. Modo de cierre respetado entero.**
+
+
+---
+
+## 78. LA R43, LA CONJUNTA DEL 2.371 Y LA FIGURA EL CASO NO ES LA CASA
+
+**18 ago 2026. Corte de esta seccion: puesto 2.388.**
+
+### 78.1 LA CONJUNTA DEL 2.371, y el 2.335 no cae con ella
+
+**EL CASO DEL AUDITOR:** `principios_gestion_error` **trae OTRO MOMENTO con procedimiento
+propio**, la **gestion** del error y no su **investigacion**.
+
+**VERIFICADO CONTRA EL GRAFO, y los entregables lo cierran en una linea:**
+
+| nodo | entregable verificado | que momento es |
+|---|---|---|
+| `errores_como_consecuencia` | **Protocolo de investigacion de incidentes** que exija identificar causas raiz mas alla del error senalado | **el dia del incidente** |
+| `principios_gestion_error` | **Documento de politica organizacional de gestion de errores** integrado a la cultura de seguridad | **la politica que existe antes y despues** |
+
+**Un protocolo de caso y una politica permanente no son el mismo producto.**
+
+**EL CABLEADO CONFIRMA SIN DECIDIR (P.8): no comparten ni un vecino.**
+`errores_como_consecuencia` viene de `gestion_de_errores` y va a `ciclo_de_culpa`,
+`enfoque_situacional_vs_personal` y `ciclo_de_culpa_2`. `principios_gestion_error` viene
+de `tripod_beta_analisis_incidentes` y `vpc_condiciones_productoras_violacion` y va a
+`regulador_fallas_sistemicas` y `normalizacion_de_la_desviacion`. **Cero solape.**
+
+**EL 2.371 CAE: A pasa a D.**
+
+> **LA LECCION, y es del mismo linaje que la del 9.6.2: UNA POSTURA NO EJECUTA UNA
+> BUSQUEDA.** *Aceptar que el error es inevitable y enfocar la gestion en las condiciones*
+> es una **posicion**; *ir a buscar que decidio la empresa antes del incidente* es un
+> **paso de trabajo**. La lectura vieja los mapeo uno sobre otro **porque comparten el
+> sentimiento**, y eso mato al que trabaja.
+
+**EL IMAN QUEDA EN NUEVE.** `errores_como_consecuencia` baja de diez A a **nueve**, y sus
+**tres D** (2.345, 2.371, 2.382) son las tres por el mismo motivo: **contra nodos que
+trabajan la escena, la etiqueta o la politica, y no la busqueda, este nodo si aporta.**
+
+### 78.2 EL SUPERVIVIENTE DEL 2.335, verificado con P.8
+
+**La clase se sostiene: los tres pasos de uno y de otro van uno a uno.** Lo que cambia es
+**quien se queda de pie.**
+
+**P.8 dice que el cableado desempata pero NO decide, y que EL ALCANCE DEL ROL ES
+CONTENIDO.** Su ejemplar propio lo formula asi: *una cabeza que vale para las ocho fases
+no puede llamarse como una sola*. **Aqui: una casa que vale para toda infraestructura
+critica no puede llamarse como un descarrilamiento concreto.**
+
+**Y los entregables lo prueban sin necesidad de interpretar nada:**
+
+| nodo | entregable verificado |
+|---|---|
+| `condiciones_latentes_largo_plazo` | **Informe de auditoria historica de infraestructura critica** identificando condiciones latentes de origen antiguo . **generico** |
+| `caso_descarrilamiento_nakina` | Informe de **caso de estudio** que manda buscar **posibles FALLAS DE 1916 equivalentes** . **lleva la fecha de un terraplen dentro de su propio producto** |
+
+**EL CABLEADO APUNTA AL OTRO LADO Y NO ALCANZA, y hay que decirlo:** Nakina tiene **tres
+vecinos** y la doctrina **uno**. **P.8 resuelve el choque: una arista de margen no vence
+al alcance del rol.** Y ese margen **no es un argumento a favor de Nakina: es el sintoma
+del problema**, un estudio de caso cableado como si fuera doctrina.
+
+> **SOBREVIVE `condiciones_latentes_largo_plazo`.** El requisito propio de Nakina, **el
+> analisis geotecnico o de ingenieria profundo frente a la inspeccion visual externa**,
+> **se repone en la doctrina**; y **el caso viaja dentro de ella como EJEMPLO NOMBRADO**,
+> con su falla latente de setenta y seis anos, **que es lo que hace creible la regla**.
+
+### 78.3 FIGURA NUEVA: EL CASO NO ES LA CASA
+
+> **LA DOCTRINA SOBREVIVE; EL CASO VIAJA COMO EJEMPLO NOMBRADO, NUNCA AL REVES.**
+>
+> **Como se reconoce, sin discutir de gustos:** el entregable del caso **lleva dentro un
+> dato del caso** (una fecha, un lugar, una empresa). El de la doctrina **vale sin
+> cambiar una palabra para cualquier organizacion.**
+>
+> **Por que importa y no es cosmetica:** un catalogo cuya regla se llama *Descarrilamiento
+> de Nakina* **obliga al lector a saber que fue Nakina antes de poder usar la regla**. El
+> ejemplo se lee **despues** de la regla, no en lugar de ella.
+>
+> **Y el margen de aristas no la voltea** (P.8): si un caso esta mejor cableado que su
+> doctrina, **eso se corrige moviendo las aristas, no coronando al caso.**
+
+**EJEMPLAR: puesto 2.335**, `caso_descarrilamiento_nakina` contra
+`condiciones_latentes_largo_plazo`.
+
+### 78.4 EL BARRIDO DE CASOS, sin adjudicar
+
+Levantado por script sobre los ids que empiezan por `caso_`, `estudio_`, `case_` o
+`ejemplo_`.
+
+| | |
+|---|---:|
+| nodos de caso o estudio **en el grafo** | **10** |
+| pares del archivo leidos que tocan uno | **2** (2.279 y 2.335) |
+| **pares con un caso como SUPERVIVIENTE declarado** | **1** (el 2.335, ya corregido) |
+| nodos de caso **todavia sin cribar** | **8** |
+
+**Los diez:** `case_study_sistema_servicio_completo`, `caso_definicion_arruga`,
+`caso_descarrilamiento_nakina`, `caso_estudio_benchmarking_terminal`,
+`caso_grietas_pequenas_mantenimiento_aeronaves`, `caso_taobao_evolucion_modelo`,
+`estudio_desempeno_run_charts_servicios`, `estudio_lealtad_cliente`,
+`estudio_mercado_calidad`, `estudio_mezclas_multiples_fuentes`.
+
+> **SIN ADJUDICAR, y con un aviso de calendario: varios de los ocho sin cribar tienen
+> pinta de `quality`**, el dominio que abre ahora. **La figura llega justo a tiempo**, y
+> conviene aplicarla al leerlos y no despues.
+
+### 78.5 EL RECOMPUTO
+
+| | antes | **despues** |
+|---|---:|---:|
+| A del archivo | 451 | **450** |
+| D del archivo | 1.841 | **1.842** |
+| **tasa global** (corte 2.388) | 18,9% | **18,8%** |
+| A de `health_safety` | 42 | **41** |
+| **tasa de `health_safety`** (169 de 192) | 24,9% | **24,3%** |
+| A del tramo 2.301 a 2.388 | 12 | **11** |
+| **tasa del tramo** | 13,6% | **12,5%** |
+
+**El 2.335 no mueve ninguna cifra: cambia el superviviente, no la clase.**
