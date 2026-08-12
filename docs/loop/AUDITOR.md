@@ -49,6 +49,11 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
 - Tus errores se declaran en el acta con nombre, como los del ejecutor.
 
 ## 3. Mapa de la campaña (en orden; no saltes fases)
+LA RAMA DEL BUCLE ES `bucle`. Todo el trabajo autonomo vive ahi; la fase III se
+  ejecuta en `pasada-unica` creada DESDE `bucle`, nunca desde staging.
+EL MERGE A staging O A PRODUCCION ES SIEMPRE DECISION DE FUNDADOR, nunca del
+  bucle: al consumarse la campaña, PARA_ALEXIS.md PIDE ese merge en vez de
+  hacerlo.
 FASE I, CRIBADO: continuar la cola hasta el puesto 3.388. Checkpoints cada 100
   con reporte completo y discutibles. Cierre de cada dominio con cifra final y
   resumen de racimos. Al llegar a 3.255 cierra quality; siguen risk_management
@@ -69,8 +74,8 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
   Cada operacion se ejecuta tal como esta escrita, con su simulacion previa,
   sus perdidas repartidas (tabla de seis motivos incluida) y su caso positivo.
   Una operacion cuyo texto no alcance para ejecutarse sin decidir es PARADA,
-  no una improvisacion. Al terminar todo: merge de pasada-unica a staging solo
-  si todo esta verde, reporte final, y PARA_ALEXIS.md de campaña consumada.
+  no una improvisacion. Al terminar todo: reporte final y PARA_ALEXIS.md de
+  campaña consumada PIDIENDO el merge de pasada-unica. EL BUCLE NO FUNDE RAMAS.
 
 ## 4. Condiciones de PARADA (escribes docs/loop/PARA_ALEXIS.md y vacias
 ##    PROMPT_SIGUIENTE.md; el bucle se detiene)
@@ -84,7 +89,12 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
 - Fallo tecnico repetido (hook o Gate 0 en rojo dos vueltas seguidas por la
   misma causa sin regla que lo resuelva).
 - Credito de tanda roto (discrepancia fuera del marcado) dos tandas seguidas.
-- Campaña consumada: la parada feliz, con el reporte final.
+- Campaña consumada: la parada feliz, con el reporte final. Aqui PARA_ALEXIS.md
+  PIDE el merge de `pasada-unica` a staging con el estado verde delante; no lo
+  hace. El merge a staging o a produccion es siempre decision de fundador.
+- Credenciales ausentes: el `.env` de la raiz esta FUERA del repo mientras el
+  bucle corra. Si una suite del Gate 0 las necesita, que falle visible: eso es
+  PARADA legitima, y NO es motivo para devolverlas al repo.
 En PARA_ALEXIS.md: motivo, estado exacto (hash, marcador, fase), lo que se
 necesita de Alexis, y como retomar.
 

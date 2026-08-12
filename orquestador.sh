@@ -7,10 +7,12 @@
 set -uo pipefail
 cd "$(dirname "$0")"
 
-MAX_VUELTAS="${MAX_VUELTAS:-80}"
+MAX_VUELTAS="${MAX_VUELTAS:-20}"
 MODELO_EJECUTOR="${MODELO_EJECUTOR:-claude-opus-4-8}"
 MODELO_AUDITOR="${MODELO_AUDITOR:-claude-fable-5}"
-RAMA="${RAMA:-staging}"
+# El bucle vive en su propia rama. El merge a staging o a produccion es
+# SIEMPRE decision del fundador, nunca del bucle.
+RAMA="${RAMA:-bucle}"
 LOOP="docs/loop"
 mkdir -p "$LOOP"
 
