@@ -11729,3 +11729,97 @@ adjudica:**
 > **Se para por la cifra, no por la decision.** La adjudicacion aguanta; el numero
 > que la acompana no. Y por el 9.21 recien ampliado, **una cifra que no cuadra con
 > el grafo se corrige donde esta escrita, no se hereda.**
+
+---
+
+## 70. LAS OCHO CORRECCIONES APLICADAS, y un volteo decidido
+
+**12 ago 2026, antes de reanudar el cribado.** La otra sesion dejo ocho correcciones
+escritas y verificadas en su encargo, **todas sobre ficheros de esta sesion**. Se
+aplican aqui, **cada una con su correccion declarada donde vive la cifra**, y sin
+borrar el texto original: **una correccion que tapa lo que corrige no se puede
+auditar.**
+
+### LAS SIETE DE CIFRA, y las siete comprobadas contra el grafo antes de escribirlas
+
+| # | que cambia | donde | comprobada |
+|---:|---|---|---|
+| **1** | **self-alias, de 7 a CERO** | `AUDITORIA_MOTOR.md` B.3 | **si**: cero nodos, vivos o deprecados, se listan a si mismos |
+| **2** | **Incoterms sin version, de 12 a 3**; la **union, de 21 a 12** | `PENDIENTES.md` | **si**: tres nodos vivos lo citan en su texto, y son los tres nombrados |
+| **3** | **el resolutor SI existe** | `AUDITORIA_MOTOR.md` B.3 | **si**: `mapaDeAlias` y `resolverId` en `graph.ts` |
+| **4** | la cuenta de **18** nodos de fuente, **31 con la clase entera** | `COSTURAS_INTERNAS_RESUMEN.md` 6 y 7 | se acepta con su corte |
+| **5** | **el CAVEAT DEL PREDICTOR** | `COSTURAS_INTERNAS_RESUMEN.md` 2 | **si**, con un ajuste: ver abajo |
+| **6** | **el quinto puro degrada a SUB-PURO**, 7 de 10 | `BANCO_DE_TEXTOS.md`, tabla de racimos | **si**: la componente mide cinco miembros |
+| **7** | **muere *cero podas en veinticuatro lecturas*** | `PENDIENTES.md`, ficha del barrido | se acepta con su banda |
+
+**DOS AJUSTES QUE ESTA SESION LE HACE AL ENCARGO, y los dos son de una unidad:**
+
+| | el encargo decia | **medido hoy** |
+|---|---|---|
+| **grafias del campo `fuente`** | 129 | **128** en primera posicion, **140** contando todas |
+| **`mapaDeAlias` en `graph.ts`** | linea 107 | **linea 100** |
+
+> **Ninguno mueve un argumento, y los dos se escriben igual.** Es el banco 9.21
+> llevado un paso mas alla: **toda cifra lleva su corte, y ademas su CRITERIO.** *128
+> grafias* y *140 grafias* son la misma medida con dos criterios, y sin decir cual se
+> uso, las dos parecen contradecirse.
+
+### LA OCTAVA: **EL VOLTEO DEL PUESTO 2.078, DECIDIDO. DE D A A**
+
+**`elaboracion_fdd` contra `preparar_fdd`**, franquicias. **Llegaba propuesto y se
+decide aqui**, porque el veredicto es de esta sesion.
+
+**LA RAZON VIEJA CONTABA PASOS PROPIOS, dos contra dos, e invocaba el 9.22. LA VARA
+LOS PESA:**
+
+| nodo | lo propio | que es |
+|---|---|---|
+| `elaboracion_fdd` | que ninguna cuota quede sin divulgar; documentar la entrega con la pagina de recibo | **DOS LINEAS**: un criterio de completitud y una accion unica |
+| `preparar_fdd` | incluir el contrato y los anexos; **preparar o crear una entidad corporativa nueva con estados financieros auditados si no se tienen** | una linea **y un PROCEDIMIENTO** |
+
+> **Por la vara del banco 9.6.1, lo que `elaboracion_fdd` anade CABE EN LINEAS:
+> REPITE.**
+
+**Y EL 9.22 NO APLICA, que es lo que la razon vieja invocaba.** El enlace mutuo pide
+que **cada uno EXPANDA UNA LINEA DISTINTA del otro**. Aqui **ninguno expande una linea
+del otro: cada uno anade cosas suyas**. **Anadir no es expandir**, y confundirlos
+convierte **cualquier par con material propio** en un enlace mutuo.
+
+**DOS SENALES QUE REFUERZAN, y ninguna decide sola:** los ids son **la misma cosa en
+dos verbos**, con titulos y etiquetas sinonimos, *Elabora tu Documento de Divulgacion*
+contra *Redacta tu Documento de Divulgacion*; y **el grafo ya los trata como
+intercambiables** en un punto, porque **los dos desembocan en `decision_fpr`**.
+
+**SUPERVIVIENTE MEDIDO: `preparar_fdd`.** Por contenido, es el unico con procedimiento
+propio; el cableado confirma sin contradecir, **6 contra 5** en quien los nombra.
+
+**PERDIDAS QUE VIAJAN, y la segunda importa mas de lo que parece:** que **todas las
+cuotas y fuentes de ingreso esten completamente divulgadas**, que es la falta clasica
+de este documento; y **documentar la entrega con la pagina de recibo, Item 23**, que es
+**lo unico del par que sirve para probar el cumplimiento despues**, cuando ya nadie
+recuerda la fecha. **Si la fusion se lleva esa linea por delante, el catalogo pierde la
+prueba y se queda con la obligacion.**
+
+**Y NO ES UN ERROR DEL CRIBADO: ES DERIVA DE DOCTRINA.** La precision que lo decide,
+**una advertencia o un criterio suelto es LINEA y no procedimiento**, se escribio
+**despues** de este veredicto. **El lector de entonces conto bien con la doctrina de
+entonces.**
+
+### EL MARCADOR, RECOMPUTADO DEL ARCHIVO TRAS EL VOLTEO
+
+| clase | antes | **despues** |
+|---|---:|---:|
+| **A** | 400 | **401** |
+| B | 89 | 89 |
+| C | 7 | 7 |
+| **D** | 1.621 | **1.620** |
+| **TOTAL** | **2.117** | **2.117** |
+
+**Tasa global de A: 18,9% antes y despues** (400 y 401 sobre 2.117 redondean igual).
+**Lo que si se mueve es `franquicias`: de 9 A sobre 46 a 10 sobre 46, del 19,6% al
+21,7%.**
+
+> **Y una nota de metodo que este volteo deja: UN VOLTEO NO SE APLICA PORQUE VENGA
+> PROPUESTO. Se aplica porque, releido el par con la doctrina de hoy, la vara dice lo
+> mismo que dice la propuesta.** Aqui coinciden. **Si no hubieran coincidido, se habria
+> escrito la discrepancia y el veredicto se habria quedado como estaba.**

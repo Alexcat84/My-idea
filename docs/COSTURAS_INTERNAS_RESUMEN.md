@@ -191,6 +191,34 @@ con 34, 65% con 40, 61% con 46, 56% con 52, 53% con 58, 53% con 64, 54% con 70,
 
 ## 2. LA HERENCIA PRINCIPAL: EL PREDICTOR DE FUENTES
 
+> **CAVEAT DECLARADO, 12 ago 2026: CON EL CAMPO `fuente` SUCIO, ESTA CIFRA SOLO SIRVE
+> PARA ORDENAR UNA COLA.**
+>
+> **El predictor separa por una propiedad del campo `fuente`: cuantos libros declara el
+> nodo.** Y ese campo **no esta normalizado**. **MEDIDO HOY sobre el grafo: 128 grafias
+> distintas en primera posicion para 55 libros canonicos**, y **140 si se cuentan todas
+> las posiciones**. Hugos aparece con **dos** grafias y Horowitz con **tres**, varias
+> truncadas a unos treinta caracteres.
+>
+> *(El encargo que trajo este caveat decia 129; medido hoy con el criterio de primera
+> posicion son **128**. La diferencia es de una grafia y no mueve el argumento, pero se
+> declara: **toda cifra lleva su criterio ademas de su corte**.)*
+>
+> **LA CONSECUENCIA ES DIRECTA SOBRE EL PREDICTOR Y NO SOBRE EL CENSO: un libro con dos
+> grafias puede convertir un nodo de UN libro en uno de DOS**, que es exactamente la
+> frontera por la que el predictor separa. **Un nodo que declare el mismo libro dos
+> veces cae del lado del 91% sin serlo**, y hay al menos uno medido:
+> `decision_de_vender_startup` lleva *The Hard Thing About Hard Thing* y *The Hard
+> Thing About Hard Things* **en la misma linea**.
+>
+> **SU PRERREQUISITO TIENE NOMBRE: el campo `fuente` canonico.** **Hasta que eso corra,
+> el 91 contra 4 ordena una cola y no prueba nada.**
+>
+> **Y ESTO NO CONTRADICE AL INFORME: LO CONFIRMA.** El propio informe ya declaro la
+> deuda en su ultima linea, *auditar el campo `fuente` antes de fiarse del predictor
+> para nada que no sea ordenar una cola*. **Este caveat solo pone la cifra de la averia
+> al lado de la deuda, y le da dueno.**
+
 **Es lo mas util que deja esta campana, y llego por un camino que no era el
 previsto.**
 
@@ -338,6 +366,11 @@ la copia* sino **decidir donde vive el original**.
 
 ## 6. LOS PATRONES DE FUENTE
 
+> **CORRECCION DECLARADA, 12 ago 2026: la cuenta de DIECIOCHO es de 31 con la clase
+> entera, y la nomina de Hugos que el plan usa es de 21 y no de 11. Ver la nota de la
+> seccion 7, punto 1. Lo que NO cambia es la decision: siguen siendo TRES decisiones
+> de fuente y no una lista de arreglos sueltos.**
+
 **Tres decisiones de fuente en la pasada unica, en vez de dieciocho arreglos de
 nodo. Es la misma economia de la mesa de racimos.**
 
@@ -367,6 +400,17 @@ nodo. Es la misma economia de la mesa de racimos.**
 **Lo que el plan de la pasada unica recibe de aqui, en orden de coste:**
 
 1. **Tres decisiones de fuente** que cubren dieciocho nodos.
+   > **RECOMPUTADA CON SU CORTE, 12 ago 2026, tras la adjudicacion de que MANDA LA
+   > CLASE y no la cuenta.** La cuenta de 18 tomaba **cuatro** miembros de la clase
+   > LARGO LEGITIMO, los del *Basic Guide*, y dejaba fuera **tres** que estan en la
+   > misma clase: dos de *Juran's Quality Handbook* y uno de `core`. **Con la clase
+   > entera, el alcance de las tres decisiones es de 7 mas 3 mas 21 = 31 nodos**, no 18.
+   >
+   > **Y EL SALTO GRANDE NO ES ESE:** la nomina de Hugos, publicada como **11 de las 46
+   > confirmadas**, se midio en **21 nodos vivos que declaran Hugos junto a otra
+   > fuente**. **Los dos numeros conviven porque cuentan cosas distintas**: 11 son
+   > costuras confirmadas con pegado de Hugos, 21 son todos los nodos con la firma del
+   > injerto. **La cifra que el plan usa es la de 21, por adjudicacion.**
 2. **Dos racimos transversales** que se destejen juntos, con reparto en vez de poda.
 3. **Nueve cirugias de forma**: ocho que parten, una que reune.
 4. **Treinta y siete podas** de narracion repetida, la primera de ellas

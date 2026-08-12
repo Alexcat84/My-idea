@@ -1314,9 +1314,27 @@ no es opcional.
 | averia | nodos vivos |
 |---|---:|
 | citan **NAFTA** en su texto | **6** |
-| citan **Incoterms** sin ninguna version | **12** |
+| citan **Incoterms** sin ninguna version, EN SU TEXTO | **3** |
 | cablean **`export.gov`** | **3** |
-| **UNION de las tres** | **21** |
+| **UNION de las tres** | **12** |
+
+> **CORRECCION DECLARADA, 12 ago 2026. LAS DOS FILAS QUE CAMBIAN SON LA DE INCOTERMS
+> Y LA DE LA UNION.** La cifra de **12** sumaba **los 3 que lo CITAN en su texto mas 9
+> que solo lo llevan en una arista o en el id**.
+>
+> **ES EL MISMO ERROR QUE ESTA MISMA ADJUDICACION HABIA CORREGIDO TRES PARRAFOS MAS
+> ARRIBA PARA NAFTA**: *apuntar al nodo no es citar el tratado, y mezclarlos infla la
+> cifra*. **Se corrigio la fila de NAFTA y no la de al lado.**
+>
+> **LOS TRES, remedidos sobre el grafo y nombrados**, los tres de `exportacion` y los
+> tres **sin version**: `incoterms_reglas_comerciales_internacionales`,
+> `terminos_de_venta_incoterms` y `seguro_de_carga_transporte`. **Los dos primeros lo
+> llevan tambien en el id.**
+>
+> **LA DECISION DE FONDO NO SE MUEVE, Y HAY QUE DECIRLO ASI DE CLARO.** La union baja
+> de **21 a 12 nodos**, **con solape cero entre las tres averias**, y **los 12 de 12
+> siguen siendo de `exportacion`**, que era el argumento. **El argumento sobrevive
+> entero: solo cambia el tamano.**
 
 > **LOS VEINTIUNO SON DE `exportacion`. Los 21 de 21.** Ni un solo nodo de otro
 > dominio esta tocado por ninguna de las tres averias de vigencia.
@@ -2321,6 +2339,34 @@ de 24** (pin en `docs/PIN_SORTEO_PASO_NODO.txt`, informe §40).
 > **CERO PODAS EN VEINTICUATRO LECTURAS.** La bolsa **no es una mezcla de dos
 > clases de arreglo: es UNA, y es la barata.** Eso simplifica el plan: no hay que
 > triar entre enlazar y podar, hay que **enlazar**.
+
+> ## **CORRECCION DECLARADA, 12 ago 2026: ESTA GLOSA SE RETIRA ENTERA.**
+>
+> **LA BOLSA SI ES UNA MEZCLA DE DOS CLASES.** Remedido con el instrumento calibrado
+> con la senal del verbo y con **46 lecturas pineadas en dos muestras disjuntas**:
+>
+> | | publicado | **medido** |
+> |---|---:|---:|
+> | candidatos sin arista | 624 | **477** |
+> | lecturas | 24 | **46** |
+> | **jerarquia sana** | 19 | **32, 69,6%** |
+> | **MADRE QUE REPITE** | **0** | **7, 15,2%** |
+> | falso positivo | 5 | 7, 15,2% |
+> | proyeccion de aristas | 489, banda 376 a 586 | **332, banda 263 a 386** |
+> | **pares gemelos proyectados** | **no se contemplaban** | **73, banda 36 a 135** |
+>
+> **Y LA MEDIDA EXACTA DE LA DISCREPANCIA, porque no todo se explica con el tamano de
+> la muestra:** el techo al 95% de un **0 de 24** es **11,7%**, y lo medido es
+> **15,2%**. **No son compatibles del todo, pero por poco.** Quedan **dos explicaciones
+> abiertas** y no se puede elegir entre ellas con lo que hay: **o la muestra vieja tuvo
+> mala suerte, o la clase MADRE QUE REPITE no se aplico igual al leerla.** Se escribe
+> como pregunta abierta y no como conclusion.
+>
+> **LO QUE SI QUEDA CERRADO Y ES REGLA, y vale para todo el archivo:**
+>
+> > **UN CERO SOBRE 24 LECTURAS NO ES UN CERO: ES UN TECHO.** Se escribe *no vi ninguno
+> > en 24, techo 11,7%*, **nunca** *no hay*. Es el banco **9.21** aplicado a la clase
+> > vacia: **la cifra lleva su corte, y el cero lleva su banda.**
 
 **PROYECCION, declarada como proyeccion**: aplicando la tasa de cada estrato a su
 tamano salen **489** jerarquias sanas. El intervalo de Wilson al 95% sobre 19 de

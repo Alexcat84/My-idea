@@ -739,7 +739,7 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **2** | la ecuación de valor | **4** | **6** | 4 | 4 | **SUB-PURO desde el 13 ago 2026**, degradado con corrección declarada: el puesto **950** trae un cuarto miembro por el **barrido de las A** |
 | **3** | el sales roadmap | **5** | **10** | 5 | 4 | **MEZCLADO desde el 13 ago 2026**: el puesto **872** sale D y rompe el sub-puro |
 | **4** | la etapa de investigación en la venta | **4** | **6** | **5** | **5** | **SUB-PURO a UNA lectura de cerrarse**: el 862 sale A; falta un par que nunca entró a la cola |
-| **5** | **la competencia entre inversores** | **4** | **6** | **6** | **6** | **PURO, y el PRIMERO DE CUATRO MIEMBROS** del archivo (puesto 1030). Se declaró puro con tres por el contador, se degradó a sub-puro por el **barrido de las A**, y vuelve a puro **con el tamaño correcto** |
+| **5** | **la competencia entre inversores** | **~~4~~ 5** | **~~6~~ 10** | **7** | **7** | **~~PURO~~ SUB-PURO, 7 de 10 al puesto 2.117.** Ver la correccion declarada debajo de la tabla |
 | **6** | **la etnografía de campo** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el primero que **nace de un par CRUZADO** entre dos parejas ya declaradas |
 | **7** | la junta asesora | **4** | **6** | **5** | **4** | **MEZCLADO desde el 16 ago 2026** (antes sub-puro), corrección declarada por el 9.10: el puesto **1190** mete un **D** dentro de la nómina. Cola cerrada, **un par nunca encolado**. Es la **cabecera de LA ESCALERA QUE NO SUBE**, R38 |
 | **8** | **los cuadrantes de mercado** | **6** | **15** | **7** | **7** | **SUB-PURO, y el más cargado del inventario**: siete pares leídos y **los siete en A**, sin un solo sano. Añadido el 13 ago 2026 con **corrección declarada**: lo conté en cinco miembros en R18 y son **seis** |
@@ -776,6 +776,59 @@ los tres.
 > puro de una racha.**
 
 > **LOS PUROS DE HOY SON DOS**: el **1**, el efectivo contra la ganancia, y el
+> **CORRECCION DECLARADA, 12 ago 2026: EL QUINTO PURO DEGRADA A SUB-PURO, y la
+> degradacion viene con su reconciliacion entera porque sin ella no cierra.**
+>
+> **LO PUBLICADO:** *PURO, cuatro miembros, seis pares, los seis en A*, al puesto 1030.
+> **LO MEDIDO al puesto 2.117:** la componente conexa de la relacion gemelo tiene
+> **CINCO miembros y 10 pares posibles**, con **7 leidos y los 7 en A**. **SUB-PURO,
+> cobertura 7 de 10.**
+>
+> **EL QUINTO MIEMBRO ES `tecnica_anclaje_negociacion`**, y entro por la **A del puesto
+> 878** contra `construccion_de_leverage`.
+>
+> **Y AQUI ESTA LO QUE HAY QUE DECIR, PORQUE ESE NODO YA SE HABIA DEJADO FUERA CON
+> MOTIVO ESCRITO.** El propio veredicto del 878, que fue **el primer uso del barrido de
+> las A del banco 9.15**, dice: *la lectura lo deja FUERA, porque su objeto es como
+> negociar terminos y no como generar competencia entre inversores*. **LA EXCLUSION NO
+> SE BORRA.** Fue correcta para lo que decidia, **y ademas explica por que el racimo se
+> declaro con cuatro y no con cinco: la declaracion de PURO del 1030 fue COHERENTE con
+> ella.**
+>
+> **NINGUN PAR NUEVO DEL QUINTO SALIO A DESPUES DE AQUELLA EXCLUSION.** Su unica A
+> sigue siendo la del 878. **Lo que cambio no es la cantidad de evidencia: es lo que el
+> propio archivo dice de ella.** El veredicto del **1295**, posterior a la exclusion Y a
+> la declaracion de puro, escribe: *`tecnica_anclaje_negociacion` tiene una A vigente,
+> el puesto 878 contra `construccion_de_leverage`. **Es gemelo de aquel** y no de este.*
+>
+> **POR QUE MANDA LA MEDICION DE HOY, y no es por ser mas nueva a secas:**
+>
+> | | |
+> |---:|---|
+> | **1** | **el propio archivo lo llama GEMELO** en el 1295, con la A del 878 **vigente** y no revocada |
+> | **2** | **las dos decisiones no hablan del mismo objeto**: la del 878 decide **el TEMA** del racimo, *generar competencia entre inversores*; la de hoy decide **el ACTO**, que por el banco **9.24** es el cierre transitivo de la relacion gemelo **y no admite gusto** |
+> | **3** | **la forma publicada se calculo sobre el ACTO y no sobre el tema**: *puro, cuatro miembros, seis pares* es una cuenta de componente conexa, y por el banco **9.17 manda la MEDICION** |
+>
+> **LO QUE DE VERDAD PASO, dicho sin adornos: SE DECLARO UNA FORMA DE ACTO SOBRE UNA
+> NOMINA DE TEMA.** Mientras el quinto no tuvo A, las dos coincidian. **Desde el 878
+> dejaron de coincidir, y la etiqueta se quedo con la cuenta vieja.**
+>
+> **LOS TRES PARES QUE FALTAN son los tres del quinto miembro y los tres estan FUERA DE
+> COLA**: `tecnica_anclaje_negociacion` contra `estrategia_competencia_vcs`, contra
+> `gestion_multiples_term_sheets` y contra `leverage_en_negociacion_con_vcs`.
+>
+> **Y LA DEGRADACION SE PUEDE DESHACER EN LOS DOS SENTIDOS, que es lo que la hace
+> honesta:** si los tres salen **A**, vuelve a PURO con cinco miembros y diez pares; si
+> salen **D**, el quinto sale del acto y vuelve a PURO con cuatro, **o sea gana la
+> exclusion del 878**; si salen mezclados, queda **MEZCLADO**. **Tres lecturas lo
+> resuelven, y las dos decisiones se quedan en el registro con su fecha.**
+>
+> **LA LECCION, que es mas grande que este racimo:** *el efectivo contra la ganancia* y
+> *el compromiso contado tres veces* siguen PUROS **con cobertura completa**, asi que no
+> corren este riesgo. **El riesgo lo corre toda forma declarada sobre una componente que
+> AUN RECIBE A.** Es el banco **9.26** dicho al reves: **una forma sin cobertura
+> completa no es un resultado, es un estado.**
+
 > **5**, la competencia entre inversores. **Todo lo demás de esta tabla es
 > sub-puro o mezclado.** La ecuación de valor dejó de ser puro el 13 ago 2026.
 

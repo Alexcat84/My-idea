@@ -185,6 +185,28 @@ Recuento sobre los 3.835 nodos en disco:
 - **Qué pasa hoy**: **ningún código lo lee.** Busqué `ids_alias` en todo
   `web/lib`, `web/app`, `scripts/` y `engine/`: solo aparece en la declaración del
   tipo y en el consolidador que lo escribe. **No existe resolutor.**
+  > **CORRECCION DECLARADA, 12 ago 2026: LA PROMESA SI SE CUMPLIO, y esta verificada
+  > contra el codigo.** El resolutor **existe**: `web/lib/engine/graph.ts` construye el
+  > mapa en **`mapaDeAlias` (linea 100)** y exporta **`resolverId` (linea 131)**, que
+  > **camina cadenas de alias** hasta un nodo activo y, si la cadena entera fue
+  > retirada, devuelve el eslabon mas reciente que exista. **Lo invocan `etiquetaArbol`
+  > (164) y `tituloDeNodo` (172)**, hay un espejo en Python en
+  > `scripts/reanclar_por_resolutor.py`, y lo ejercitan `resolutorHistoria.test.ts` y
+  > `compass.test.ts`.
+  >
+  > **AJUSTE DE UNA LINEA sobre el encargo que trajo esta correccion**: aquel citaba
+  > `mapaDeAlias` en la **107**; **medido hoy esta en la 100**. La funcion es la misma y
+  > el resto de las lineas coincide.
+  >
+  > **LO QUE QUEDA NO ES CONSTRUIRLO: ES MEDIR POR DONDE PASA.** En produccion,
+  > `web/lib` y `web/app` sin tests, hay **42 accesos directos al grafo por id, en 12
+  > ficheros, y 9 de esos ficheros manejan ids de origen externo**. Esa es la lista que
+  > hay que revisar.
+  >
+  > **Y LA TABLA DE ALIAS, medida el mismo dia:** **391 alias totales**, **314 a nodo
+  > deprecado** (que es su funcion), **CERO colisiones vivas** y **77 huerfanos** a ids
+  > inexistentes. **Con cero colisiones vivas, borrar los 77 no puede romper ninguna
+  > resolucion buena.**
 - **Y hay 77 alias que apuntan a ids que ya no son nodos** (renombres de la era
   de integración de packs: `carta_de_credito` → `carta_de_credito_letter_of_credit`,
   `ceo_guerra_vs_paz` → `ceo_de_guerra_vs_paz`, …). Esos ids **no están en
@@ -196,6 +218,20 @@ Recuento sobre los 3.835 nodos en disco:
   tiene, entonces, un proveedor de casos que sigue vivo.
 - **Además, 7 nodos se listan a sí mismos como su propio alias** (`trilogia_de_juran`,
   `recomendaciones_smart`, …): ruido inofensivo, pero ruido.
+  > **CORRECCION DECLARADA, 12 ago 2026: HOY SON CERO.** Remedido sobre
+  > `dataset/metadata/master_graph.json`: **ningun nodo, vivo ni deprecado, se lista a
+  > si mismo en `ids_alias`**. `trilogia_de_juran`, el ejemplar citado arriba, lleva
+  > hoy tres alias y **ninguno es el suyo**.
+  >
+  > **LA GUARDA DEL CODIGO SE QUEDA Y HACE BIEN**: `mapaDeAlias` filtra `if (a !== nid)`
+  > con el comentario *el auto-alias (7 nodos) no dice nada*. **La guarda sigue en pie;
+  > la cifra que la motivaba ya no.** Es la diferencia entre una defensa y su
+  > ocasion: la ocasion se fue y la defensa se queda.
+  >
+  > **Y NO CONFUNDIR CON LAS 27 AUTO-ARISTAS**, que son otra cosa y **siguen siendo
+  > 27**: aquello son nodos que se apuntan a si mismos por `nodos_previos` o
+  > `nodos_siguientes` **via alias propio**, no el auto-alias de este parrafo. El motivo
+  > del banco 9.14 queda confirmado, no corregido.
 - **Recomendación**: **arreglar ahora.** Dos piezas: (1) un resolutor
   `resolverId(nid, graph)` que consulte los alias, dentro de `graph.ts` para que
   sea puerta única; (2) un chequeo del Gate 0 que exija que todo alias apunte a
