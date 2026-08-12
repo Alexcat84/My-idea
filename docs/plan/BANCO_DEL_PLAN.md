@@ -172,3 +172,64 @@ posicional vale en general, hay una lista de injertos que nadie ha contado.**
 > opcion en las cuatro, **y eso encarece la fase 01 a proposito**: el reparto pide
 > decidir a donde va cada bloque, y esa decision es la que evita perder material
 > que el lector estaba usando.
+
+---
+
+## P.4 CLASE PROPIA: LA A DE BLOQUE
+
+**Adoptada el 11 ago 2026, con `LD-06` de ejemplar.**
+
+> **Hay repeticion, pero NO entre los dos nodos: entre el BLOQUE INJERTADO de uno
+> y el OTRO NODO ENTERO.**
+
+**COMO SE RECONOCE, y son tres senales juntas:**
+
+1. uno de los dos nodos **declara fuente doble**
+2. su **bloque apendice** repite con el otro nodo **paso por paso**
+3. **su primer bloque no tiene nada que ver** con el otro nodo
+
+**EL ARREGLO, y no admite atajo:**
+
+> **DESTEJIDO MAS FUSION PARCIAL. Nunca fusion de enteros.**
+
+| lo que se hace | lo que NO se hace |
+|---|---|
+| se **desteje** el nodo de fuente doble | **fundir los dos nodos enteros** |
+| su **bloque apendice** se funde con el otro nodo | dejar el injerto donde esta porque *repite igual* |
+| su **primer bloque** se queda como nodo, con su fuente corregida | podar el bloque, que perderia material vivo |
+
+### EL EJEMPLAR: `LD-06`
+
+`project_close_out` declara **Snyder y Coleman**. Sus **pasos 1 a 5** son el cierre
+formal de proyecto: acta de constitucion, criterios de finalizacion, variaciones,
+cierre de contrato, aprobaciones. Sus **pasos 6 a 11 son Coleman**, y **repiten con
+`reunion_conclusion_proyecto` casi paso por paso**, incluida **la misma cifra: tres
+meses de monitoreo posterior.**
+
+> **LA ADVERTENCIA, y es el motivo de que la clase exista: fundir enteros mete una
+> cosa dentro de otra que no le corresponde.** Aqui meteria **el cierre formal de
+> un proyecto dentro de una reunion de conclusion con encuestas**. El superviviente
+> quedaria diciendo que para cerrar una reunion de satisfaccion hay que revisar el
+> acta de constitucion.
+
+### POR QUE NO BASTA CON LLAMARLA A Y SEGUIR
+
+**Una A normal manda fundir.** Si esta se registra como A a secas, **quien ejecute
+va a fundir los nodos enteros**, porque eso es lo que una A significa en todo el
+resto del archivo. **La clase existe para que el ejecutor no tenga que adivinar
+que esta A es distinta.**
+
+> **Y tiene una consecuencia de ORDEN: la A de bloque obliga a que el destejido
+> vaya ANTES que la fusion, siempre.** En una A normal el orden puede discutirse;
+> **en esta no hay fusion posible hasta que el bloque este separado.**
+
+### DONDE BUSCARLAS
+
+**La firma de P.2 las levanta**: todo nodo de fuente doble es candidato, y **son 67
+en el catalogo**. La A de bloque aparece cuando **uno de esos 67 tiene un par en la
+cola con un nodo del libro que lleva pegado**.
+
+> **`LD-07` es el contraejemplo util y va al lado del ejemplar**: el MISMO bloque
+> injertado, contra el OTRO nodo de Coleman, sale **D**. **Que un nodo lleve un
+> injerto no significa que repita con todo su libro de origen: repite con uno, y
+> hay que leer cual.**

@@ -56,3 +56,56 @@ nada.**
 > **Y por la regla P.1 del banco del plan: ese recomputo, como cualquier conteo que
 > toque ids, PASA POR EL RESOLUTOR ANTES DE CONTAR.** Un recomputo literal sobre un
 > grafo recien fusionado **contaria los absorbidos como nodos vivos.**
+
+---
+
+## EL DISPARADOR DEL RECOMPUTO
+
+**Se dispara EL DIA QUE EL CRIBADO LLEGUE AL PUESTO 3.388**, y no antes. Es la
+**unica** recomputacion general del plan (banco 9.21).
+
+> **Por que una sola vez y no en cada checkpoint: un barrido de cruce cuesta lo
+> mismo con 2.117 pares que con 3.388, y solo el ultimo es el bueno.** Los de en
+> medio producen cifras que hay que volver a escribir.
+
+### QUE SE RECOMPUTA, Y EN ESTE ORDEN
+
+**El orden no es de comodidad: cada paso usa la salida del anterior.**
+
+| # | que | por que va aqui |
+|---:|---|---|
+| **1** | **EL RETRATO DE LAS A** | es el insumo de todo lo demas: la lista de A vigentes al cierre |
+| **2** | **EL BARRIDO DE CONFIRMADAS contra las A** | cruza las costuras confirmadas contra el retrato del paso 1. **Da las curas acopladas** |
+| **3** | **EL CIERRE TRANSITIVO** | las componentes se calculan **sobre el retrato del paso 1**, no sobre el archivo crudo |
+| **4** | **LAS NOMINAS Y LOS ACTOS** | cada racimo y cada acto se re-mide **con su cobertura al lado** (banco 9.26), usando las componentes del paso 3 |
+
+> **Y por la regla P.1 del banco del plan, LOS CUATRO RESUELVEN ANTES DE CONTAR.**
+> Un recomputo literal sobre un grafo ya fusionado **contaria los absorbidos como
+> nodos vivos**, y sobre uno sin fusionar **no veria las auto-aristas via alias**.
+
+### QUE OPERACIONES CAMBIAN DE ESTADO CON EL RESULTADO
+
+| operacion | hoy | despues del recomputo |
+|---|---|---|
+| **`OP-U-02`** | DECISION PENDIENTE | **pasa a LISTA** con la lista definitiva de actos cerrados. Es la unica que el recomputo desbloquea por si solo |
+| **`OP-U-01`** | LISTA con **173 actos** | **la cifra se reescribe**: algunos de los 48 abiertos habran cerrado, y **puede que alguno de los 173 haya crecido y se abra** |
+| **`OP-L-02`** | DECISION PENDIENTE | **el universo de 205 se remide**: cada A nueva puede crear pares internos nuevos fuera de cola |
+| **`OP-M-01` a `OP-M-05`** | DECISION PENDIENTE | **sus nominas se re-miden con cobertura**. Una mesa puede **crecer**, y la mesa unida es la candidata |
+| **`OP-D-01` a `OP-D-06`** | LISTA | **los trece actos del cierre transitivo se recomputan.** Los repartos de perdidas **no cambian**; los tamanos si pueden |
+
+> **LO QUE EL RECOMPUTO NO PUEDE CAMBIAR, y conviene decirlo para que nadie lo
+> espere:** el **ORDEN** de la fase 02. Se decide por **congelados liberados**, y
+> **una A nueva no mueve un congelado.**
+
+### LA COMPROBACION DE QUE EL RECOMPUTO CORRIO BIEN
+
+**Tres cifras que tienen que cuadrar entre si**, y si no cuadran el recomputo esta
+mal hecho:
+
+1. **nodos en actos** igual a la suma de los tamanos de las componentes
+2. **A vigentes** igual a la suma de aristas internas de todas las componentes
+3. **todo acto marcado CERRADO** tiene sus pares internos leidos **y** ningun
+   miembro con par pendiente
+
+> **Y una cuarta, que es la que caza el error de P.1**: **ningun nodo deprecado
+> aparece dentro de una componente.** Si aparece, el instrumento no resolvio.

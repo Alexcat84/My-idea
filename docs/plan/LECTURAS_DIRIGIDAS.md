@@ -298,3 +298,191 @@ narrativa**, y presentarlo como historia visual **para venderlo**.
 > nomina cuyos nodos van a pasar por destejido SE HACEN DESPUES del destejido.**
 > Leer antes es leer un texto que va a cambiar, **que es exactamente lo que el
 > congelado evita en el cribado.**
+
+---
+
+# SEGUNDA TANDA: LA SELECCION DE `OP-L-02`
+
+**ADJUDICADO el 11 ago 2026.** De los pares que **no esperan destejido**, se leen
+**solo los que cuelgan de una mesa o de una nomina abierta**. El resto queda como
+**BACKLOG DOCUMENTADO**, con su motivo y su cuenta.
+
+> **LA EVIDENCIA DE LA ADJUDICACION es la primera tanda: dio 2 de 11, y NINGUNO de
+> los nueve sanos cambio nada.** Un par sano fuera de una nomina no mueve una
+> forma, no cierra una cobertura y no desbloquea una mesa: **solo confirma que la
+> cola tenia razon en no traerlo.**
+
+---
+
+## LA CLASIFICACION, remedida con criterio mas fino
+
+| | pares |
+|---|---:|
+| **fuera de cola, total** | **205** |
+| **esperan destejido o cirugia** | **126** |
+| **NO esperan** | **79** |
+| de esos, **cuelgan de una mesa o nomina** | **24** |
+| de esos, **resto sin mesa ni nomina** | **55** |
+
+> **La cifra de espera subio de 97 a 126 al afinar el criterio.** Antes solo se
+> contaban tres nominas; ahora se cuentan **todas las componentes cuyos nodos pasan
+> por un destejido**, que incluye tambien las pruebas A/B, el brainstorming, el
+> MVP, la voz del cliente y customer validation. **Correccion declarada, y la
+> direccion es la buena: hay MAS que esperar y MENOS que leer ahora.**
+
+---
+
+## LOS VEINTICUATRO QUE CUELGAN, nombrados
+
+| nomina o mesa | pares | estado antes | se leen? |
+|---|---:|---|---|
+| **cuadrantes de mercado** | **8** | SUB-PURO, 7 de 15 | **SI** |
+| **ecuacion de valor** | **5** | SUB-PURO, 5 de 10 | **SI** |
+| **supervision de la IA**, bloque humano | **3** | particion provisional 5 mas 4 mas 1 | **SI** |
+| sales roadmap | 5 | **MEZCLADO**, 10 de 15 | **NO** |
+| seleccion de canal | 2 | cerrada en la primera tanda | ya leidas |
+| junta asesora | 1 | cerrada en la primera tanda | ya leida |
+
+**SE LEEN DIECISEIS.** Los cinco de sales roadmap **no**, y el motivo se escribe
+para que se pueda revocar: **su clase ya esta decidida.** El racimo es MEZCLADO
+desde el puesto 872; leer cinco pares mas **cierra su cobertura pero no puede
+cambiar su forma**, y la adjudicacion dice que se lee donde algo puede cambiar.
+
+> **Si el fundador prefiere cobertura completa por encima de eso, son cinco
+> lecturas y quedan nombradas arriba.**
+
+---
+
+## EL SALDO DE LA SEGUNDA TANDA
+
+| | |
+|---|---:|
+| **leidas** | **16** |
+| **REPITEN (A)** | **2** |
+| **SANAS (D)** | **14** |
+| **nominas cerradas con cobertura COMPLETA** | **3** |
+| **sub-puros que caen** | **3** |
+
+> **LOS TRES SUB-PUROS CAYERON AL CERRARSE, y los tres por la misma razon.** El
+> banco ya lo tenia escrito y esta tanda lo confirma tres veces:
+> **el sub-puro es una promesa, no un resultado.**
+
+---
+
+## LOS CUADRANTES DE MERCADO: 15 de 15, y cae
+
+**Seis nodos, los seis de Hugos.** Iban **7 pares leidos y los siete en A**, el mas
+cargado del inventario junto con la seleccion de canal.
+
+| par | clase |
+|---|:---:|
+| `clasificacion_mercados_cadena_suministro` contra `cuatro_capacidades_mercado` | **D** |
+| `clasificacion_mercados_cadena_suministro` contra `cuatro_categorias_desempeno_cadena_suministro` | **D** |
+| `cuatro_capacidades_mercado` contra `modelo_cuadrantes_mercado` | **D** |
+| `cuatro_categorias_desempeno_cadena_suministro` contra `estrategia_cuatro_capacidades_mercado` | **D** |
+| `cuatro_categorias_desempeno_cadena_suministro` contra `marco_analisis_mercado_cadena_suministro` | **D** |
+| `cuatro_categorias_desempeno_cadena_suministro` contra `modelo_cuadrantes_mercado` | **D** |
+| `estrategia_cuatro_capacidades_mercado` contra `marco_analisis_mercado_cadena_suministro` | **D** |
+| **`marco_analisis_mercado_cadena_suministro` contra `modelo_cuadrantes_mercado`** | **A** |
+
+**POR QUE SIETE SANOS.** La familia no es un concepto repetido siete veces: son
+**tres oficios distintos sobre el mismo modelo**.
+
+| oficio | nodos |
+|---|---|
+| **diagnosticar** en que cuadrante estas | `modelo_cuadrantes_mercado`, `clasificacion_mercados_cadena_suministro` |
+| **elegir** en que capacidad invertir | `cuatro_capacidades_mercado`, `estrategia_cuatro_capacidades_mercado` |
+| **medir** el desempeno | `cuatro_categorias_desempeno_cadena_suministro`, `marco_analisis_mercado_cadena_suministro` |
+
+**LA UNICA A, y es limpia.** `modelo_cuadrantes_mercado` tiene **cuatro pasos y los
+cuatro viven dentro** de `marco_analisis_mercado_cadena_suministro`: diagnosticar
+el tipo de mercado, las capacidades a reforzar, **anticipar el cambio** (el otro lo
+dice como *en que tipo estara en dos anos*) y ajustar la mezcla. **Lo unico propio
+es el criterio del eje, comparar oferta y demanda**, y eso cabe en una linea.
+
+> **NUEVA FORMA: 15 de 15, 8 en A y 7 en D. MEZCLADO, con cobertura COMPLETA.**
+> El sub-puro mas cargado del inventario **cae en cuanto se termina de leer.**
+
+---
+
+## LA ECUACION DE VALOR: 10 de 10, y cae
+
+**Cinco nodos, los cinco de Rackham.** Iban 5 de 10, los cinco en A.
+
+| par | clase |
+|---|:---:|
+| `construccion_de_valor_percibido` contra `ecuacion_de_valor_cliente` | **D** |
+| **`construccion_de_valor_percibido` contra `ecuacion_de_valor_venta`** | **A** |
+| `construccion_de_valor_percibido` contra `prevencion_objeciones_vs_manejo` | **D** |
+| `ecuacion_de_valor` contra `prevencion_objeciones_vs_manejo` | **D** |
+| `ecuacion_de_valor_venta` contra `prevencion_objeciones_vs_manejo` | **D** |
+
+**EL QUE ROMPE LA FAMILIA ES `prevencion_objeciones_vs_manejo`, y sale D contra los
+tres.** No es una ecuacion de valor: es **un diagnostico medido**. Empieza
+**registrando en cuantas llamadas aparecen objeciones y en que punto exacto**, lee
+la objecion de precio como **sintoma de necesidad poco desarrollada**, y termina
+mandando **sustituir la practica de responder objeciones por practica de desarrollo
+de necesidades**. **Los otros cuatro explican la balanza; este mide si la balanza
+esta fallando.**
+
+**LA UNICA A**: `ecuacion_de_valor_venta` tiene **tres pasos y los tres viven
+dentro** de `construccion_de_valor_percibido`. Lo unico propio es el criterio del
+umbral, *si el problema percibido es pequeno en relacion al costo de tu solucion*,
+**una linea**.
+
+> **NUEVA FORMA: 10 de 10, 6 en A y 4 en D. MEZCLADO, con cobertura COMPLETA.**
+
+---
+
+## LA SUPERVISION DE LA IA, bloque humano: 10 de 10, y cae
+
+**Cinco nodos de Mollick**, el bloque humano de la particion provisional 5 mas 4
+mas 1. Iban 7 de 10, los siete en A.
+
+| par | clase |
+|---|:---:|
+| `alineacion_etica_ia_negocio` contra `mitigar_falling_asleep_wheel` | **D** |
+| `alineacion_etica_ia_negocio` contra `riesgo_sobredependencia_ia` | **D** |
+| `principio_humano_en_el_loop` contra `riesgo_sobredependencia_ia` | **D** |
+
+**EL QUE SE SEPARA ES `alineacion_etica_ia_negocio`, y sale D contra los dos.** Los
+demas del bloque tratan de **no perder el criterio propio**: revisar antes de
+ejecutar, cuestionar la salida, rotar tareas, medir la calidad con y sin IA,
+**probar con casos disenados para que la IA falle**.
+`alineacion_etica_ia_negocio` trata de otra cosa: **definir los limites eticos del
+sistema, controlar sesgos y AVISAR AL CLIENTE cuando esta hablando con una IA.**
+
+> **Eso ultimo es lo que lo separa del bloque entero: es la unica obligacion del
+> racimo hacia AFUERA.** Los demas protegen el criterio de quien usa la IA; este
+> protege a quien la recibe.
+
+**Y el tercero, `principio_humano_en_el_loop` contra `riesgo_sobredependencia_ia`,
+tambien sale D**: el primero ensena **a reconocer la alucinacion** (citas que no
+existen, respuestas dadas con demasiada seguridad) y **a decidir de antemano** en
+que casos la IA actua sola; el segundo trae **la rotacion de tareas y la medicion
+comparativa**.
+
+> **NUEVA FORMA: 10 de 10, 7 en A y 3 en D. MEZCLADO, con cobertura COMPLETA.**
+> **Y la particion 5 mas 4 mas 1 no se toca**: estas tres lecturas son internas al
+> bloque humano y **no cruzan al bloque del mapa**, que es lo unico que podria
+> unirlos.
+
+---
+
+## EL BACKLOG DOCUMENTADO, con su motivo
+
+**Quedan 189 pares sin leer de los 205.** Cada grupo con su razon escrita:
+
+| grupo | pares | motivo por el que NO se lee |
+|---|---:|---|
+| **esperan destejido o cirugia** | **126** | **regla de orden**: leer antes es leer un texto que va a cambiar |
+| **resto sin mesa ni nomina** | **55** | **la evidencia de la adjudicacion**: 9 de 11 sanos en la primera tanda y **ninguno cambio nada**. Son componentes de 3 a 6 sin mesa asociada |
+| **sales roadmap** | **5** | **su clase ya esta decidida**: MEZCLADO desde el 872. Leerlos cierra cobertura, no cambia forma |
+| **junta asesora y seleccion de canal** | 3 | **ya leidas** en la primera tanda |
+
+> **LOS 55 DEL RESTO SON EL GRUPO QUE MAS PODRIA DOLER, y por eso se cuenta en vez
+> de olvidarse.** Son pares internos de actos de 3 a 6 miembros **que se van a
+> fundir sin haberse leido enteros**. La regla que los cubre esta en `OP-U-01`: **un
+> acto se ejecuta si NO PUEDE CRECER**, y esos actos no pueden crecer porque sus
+> pares que faltan **no estan en la cola**. **Lo que no se sabe de ellos no es si
+> el acto crece: es si el acto entero es una familia o dos.**

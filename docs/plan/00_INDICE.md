@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA COMPLETO: DIEZ FASES ESCRITAS, 42 OPERACIONES, 35 LISTAS.**
+**EL PLAN ESTA COMPLETO: DIEZ FASES, 42 OPERACIONES, 36 LISTAS. LAS SEIS PENDIENTES SON CINCO MESAS Y UN RECOMPUTO CON FECHA.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -44,8 +44,8 @@ el JSONL discrepan, manda el JSONL.
 | | |
 |---|---:|
 | operaciones | **42** |
-| **LISTAS** | **35** |
-| **DECISION PENDIENTE** | **7** |
+| **LISTAS** | **36** |
+| **DECISION PENDIENTE** | **6** |
 
 | fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
@@ -58,11 +58,11 @@ el JSONL discrepan, manda el JSONL.
 | **06 MESAS** | 5 | 0 | **5** |
 | **07 ADUANA** | 2 | **2** | 0 |
 | **08 VERIFICACION** | 1 | **1** | 0 |
-| **09 LECTURAS DIRIGIDAS** | 2 | **1** | 1 |
+| **09 LECTURAS DIRIGIDAS** | 2 | **2** | 0 |
 
-> **LAS SIETE PENDIENTES SON CINCO MESAS Y DOS ESPERAS CON FECHA**: `OP-U-02`
-> espera el cierre del cribado y `OP-L-02` espera los destejidos. **Ninguna es un
-> dato que falte.**
+> **LAS SEIS PENDIENTES SON CINCO MESAS Y UN RECOMPUTO CON FECHA.** `OP-U-02`
+> espera al dia en que el cribado llegue al puesto **3.388**, y su disparador esta
+> escrito en `08_VERIFICACION`. **Ninguna es un dato que falte.**
 
 ## EL MAPA DE FASES, con sus dependencias
 
@@ -157,7 +157,7 @@ fecha**.
 |---|---|
 | **`OP-M-01` a `OP-M-05`** | una mesa **es** una decision que se toma con la familia delante. **Las cinco siguen en pie**, y la de la junta asesora se sienta ya con **cobertura COMPLETA** |
 | **`OP-U-02`** | los 48 actos abiertos esperan **una sola recomputacion al cierre del cribado** (banco 9.21) |
-| **`OP-L-02`** | de los 194 pares de backlog, **97 esperan a su destejido** por la regla de orden que la tanda dirigida dejo escrita. Los otros 97 son la pregunta |
+
 
 **Y DOS DELTAS DECLARADOS, que no son preguntas pero se ven:**
 
@@ -182,7 +182,7 @@ en vez de forzarse.**
 | [`CORRECCIONES_A_APLICAR.md`](CORRECCIONES_A_APLICAR.md) | una confirmacion y cuatro correcciones que viven FUERA de `docs/plan/`. **Las aplica la SESION A** | escrita |
 | [`BANCO_DEL_PLAN.md`](BANCO_DEL_PLAN.md) | **P.1** la regla de medicion por el resolutor, y **P.2** la firma posicional del injerto | escrita |
 | [`RECORTE_POSICIONAL.md`](RECORTE_POSICIONAL.md) | el recorte de P.2 corrido sobre **los 55 libros**: 67 nodos candidatos, seis libros | escrita |
-| [`LECTURAS_DIRIGIDAS.md`](LECTURAS_DIRIGIDAS.md) | los pares que la cola **no traera nunca**: 205 medidos, **11 leidos**, 194 de backlog | escrita |
+| [`LECTURAS_DIRIGIDAS.md`](LECTURAS_DIRIGIDAS.md) | los pares que la cola **no traera nunca**: 205 medidos, **27 leidos** en dos tandas, 189 de backlog documentado | escrita |
 | [`03_FUSIONES.md`](03_FUSIONES.md) | 221 actos sobre 576 nodos, corte 2117, marcado para recomputo | escrita |
 | [`04_ENLACES.md`](04_ENLACES.md) | 624 candidatos, cero podas en 24 lecturas, mas los sueltos de racimos | escrita |
 | [`06_MESAS.md`](06_MESAS.md) | cinco mesas con nomina, dependencia y opciones con evidencia | escrita |
