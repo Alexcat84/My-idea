@@ -116,8 +116,8 @@ que se sabe con la cobertura que tiene.**
 | **la seleccion de canal** | MEZCLADO | 10 de 10 | repite, forma cerrada |
 | **la supervision de la IA** | PARTIDO 5 mas 4 mas 1 | 14 de 45 al puesto 1517 | en mesa, particion PROVISIONAL |
 | **la mesa unida de puertas y portafolio** | una familia o dos, SIN DECIDIR | 18 de 120 | en mesa, cobertura 15% |
-| **el racimo del pivote** | MEZCLADO | 13 de 21 | mesa, nomina MEDIDA el 11 ago 2026 (era hueco nombrado) |
-| **la serie de Coleman** | MEZCLADO | 41 de 378 | mesa, nomina MEDIDA y CORREGIDA el 11 ago 2026, expediente escrito |
+| **el racimo del pivote** | MEZCLADO | 13 de 21 | mesa, EXPEDIENTE ESCRITO el 12 ago 2026, pendiente de adjudicacion |
+| **la serie de Coleman** | MEZCLADO | 41 de 378 | MESA ADJUDICADA el 12 ago 2026, siete operaciones hijas |
 
 > **TRES SUB-PUROS CAYERON EL 11 ago 2026 al cerrarse su cobertura**: los
 > cuadrantes, la ecuacion de valor y el bloque humano de la IA. **Los tres pasaron

@@ -486,3 +486,52 @@ comparativa**.
 > acto se ejecuta si NO PUEDE CRECER**, y esos actos no pueden crecer porque sus
 > pares que faltan **no estan en la cola**. **Lo que no se sabe de ellos no es si
 > el acto crece: es si el acto entero es una familia o dos.**
+
+---
+
+# TERCERA TANDA: **LAS DOS FASES QUE LA MESA DE COLEMAN NO ADJUDICA**
+
+**Encargadas el 12 ago 2026 por la adjudicacion de `OP-M-02`, punto e.** Las fases
+**Adopt** y **Advocate** **no se adjudican**: sus pares van a lecturas dirigidas y las
+dos fases quedan como **CONDICION ESCRITA**.
+
+## POR QUE NO SE ADJUDICAN, y no es lo mismo en las dos
+
+| fase | sus dos nodos | lo que hay |
+|---|---|---|
+| **7 Adopt** | `fase_adopt`, `fase_adopt_ciclo_cliente` | **su par interno ESTA LEIDO y es D**, puesto 965. **Estan declarados sanos: no hay nada que fundir** |
+| **8 Advocate** | `advocacy_customer_journey`, `incentivos_no_monetarios_advocacy` | **su par interno NO SE HA LEIDO.** No hay ni una lectura entre ellos |
+
+> **Y esa diferencia manda dos cosas distintas.** En **Adopt** la mesa **no puede
+> adjudicar porque el archivo ya dijo que no repiten**: adjudicar seria contradecir
+> una lectura. En **Advocate** la mesa **no puede adjudicar porque no sabe**.
+
+## EL LOTE, cuatro lecturas y estan nombradas
+
+**De los seis pares posibles entre los cuatro nodos de las dos fases, DOS estan
+leidos y los CUATRO restantes estan FUERA DE COLA:**
+
+| | el par | por que importa |
+|---|---|---|
+| **`LD-28`** | `advocacy_customer_journey` contra `incentivos_no_monetarios_advocacy` | **es el par interno de Advocate**, y sin el la fase no se puede adjudicar de ninguna manera |
+| `LD-29` | `advocacy_customer_journey` contra `fase_adopt` | cruza las dos fases del final de la serie |
+| `LD-30` | `fase_adopt` contra `incentivos_no_monetarios_advocacy` | idem |
+| `LD-31` | `fase_adopt_ciclo_cliente` contra `incentivos_no_monetarios_advocacy` | idem |
+
+**LOS DOS YA LEIDOS, para que no se lean dos veces**: puesto **965**,
+`fase_adopt` contra `fase_adopt_ciclo_cliente`, **D**; y puesto **666**,
+`advocacy_customer_journey` contra `fase_adopt_ciclo_cliente`, **D**.
+
+> **Las cuatro son LECTURA DIRIGIDA: no entran en la cola y no mueven el marcador
+> del cribado.**
+
+## LA CONDICION ESCRITA, que es lo que queda si las lecturas no se hacen
+
+> **NINGUNA DE LAS DOS FASES SE TOCA.** `fase_adopt`, `fase_adopt_ciclo_cliente`,
+> `advocacy_customer_journey` e `incentivos_no_monetarios_advocacy` **llegan al
+> inventario final tal como estan**, y el inventario **dice por que**: una porque
+> esta declarada sana y la otra porque **nadie la ha mirado**.
+
+> **Y LA DIFERENCIA ENTRE LAS DOS SE ESCRIBE, porque leerlas igual seria mentir:**
+> **de Adopt sabemos que sus dos nodos son sanos. De Advocate no sabemos nada.**
+> **Las dos fases quedan con dos nodos, y solo una de las dos lo tiene justificado.**

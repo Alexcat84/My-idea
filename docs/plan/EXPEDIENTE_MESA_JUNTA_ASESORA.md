@@ -366,16 +366,34 @@ sobre una copia en memoria:**
 > instruccion misma del auditor, *anadir la direccion que falte solo si falta tras
 > resolver*, **la de ida se anade**: es la unica arista nueva de esta operacion.
 
-**RESIDUO NOMBRADO, y se ejecuta asi salvo contraorden.** Quedan **las dos
-direcciones** entre madre e hijo, o sea **un ciclo de dos**. El plan lo tolera por
-escrito, porque `OP-S-12` declara que el mismo destino en los dos campos **no es
-duplicado sino ida y vuelta**. **Pero entre una madre y su hijo, la vuelta dice que
-despues de formalizar viene identificar**, que es lo contrario de lo que esta mesa
-acaba de decidir.
+### **CONTRAORDEN DEL AUDITOR, 12 ago 2026: SE GIRA LA EXISTENTE**
 
-> **LA ALTERNATIVA, si el auditor la prefiere, es UNA LINEA: girar la existente en
-> vez de anadir la que falta.** Se deja escrita para que la decision cueste una
-> palabra y no una relectura.
+**El residuo se cerro en una linea.** Se habia escrito que quedarian las dos
+direcciones, un ciclo de dos, y **la contraorden lo resuelve al reves de como se
+habia dejado escrito**:
+
+> **EN UN GRAFO DE SECUENCIA LA VUELTA ES UNA INSTRUCCION FALSA, y el ciclo de dos
+> FABRICA LA AVERIA QUE ESTA CAMPANA ESTA QUITANDO.**
+
+**LA OPERACION TERMINA CON UNA SOLA ARISTA**, en la direccion de la escalera:
+
+| | antes | **despues** |
+|---|---|---|
+| `formalizar_junta_asesora`.`nodos_siguientes` | contiene `identificar_junta_asesores` | **se retira** |
+| `formalizar_junta_asesora`.`nodos_previos` | no contiene nada del acto | **contiene `identificar_consejo_asesores`** |
+| aristas entre madre e hijo | 1, **al reves** | **1, en la direccion de la escalera** |
+
+**VERIFICACION ACTUALIZADA, y la segunda linea es la que manda:**
+
+| | |
+|---|---|
+| **la escalera existe** | `identificar_consejo_asesores` tiene a `formalizar_junta_asesora` entre sus destinos resueltos |
+| **LA VUELTA NO EXISTE NI LITERAL NI RESUELTA** | se comprueba **con el resolutor puesto**, no comparando literal |
+| **el grado total del acto NO SUBE** | se **gira** una arista, no se anade. **Si el conteo sube en uno, se anadio en vez de girar** |
+
+> **Y ESO DEJA UNA REGLA QUE VALE PARA TODAS LAS MESAS QUE VIENEN: en una escalera,
+> la arista de vuelta no es redundante, es FALSA.** Decir *despues de formalizar
+> viene identificar* **manda al lector a repetir el paso que acaba de dar.**
 
 ## e. LA PODA DEL SOLAPE
 

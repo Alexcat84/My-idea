@@ -59,7 +59,16 @@ frontera vieja.**
 
 ## APERTURA . `OP-M-02`, LA SERIE DE COLEMAN
 
-> **SU EXPEDIENTE COMPLETO YA ESTA ESCRITO:**
+> ## **ADJUDICADA EL 12 ago 2026. `OP-M-02` ES LISTA.**
+>
+> **Coleman recibe el tratamiento de SERIE DECLARADA**, repartido en **siete
+> operaciones hijas**, cada una con su simulacion por **P.7**. El programa unico se
+> decide por cableado **13 contra 3**; las cinco fases con gemelos confirmados van
+> **una a una**; **Adopt y Advocate NO se adjudican** y sus pares van a lecturas
+> dirigidas; y **la cabeza de medios se trae al auditor**, porque el cableado y el
+> archivo **no empatan: se contradicen**.
+
+> **SU EXPEDIENTE COMPLETO:**
 > [`EXPEDIENTE_MESA_COLEMAN.md`](EXPEDIENTE_MESA_COLEMAN.md), del 11 ago 2026, **sin
 > recomendacion nueva donde no la hay**. Trae la correccion de la nomina a **28**, el
 > reparto por fase, **los veredictos en crudo de las cinco fases dobles y los tres
@@ -200,6 +209,14 @@ injertos aporta, QUINCE**, y su material esta pegado **en nodos de otros libros*
 ---
 
 ## APERTURA . `OP-M-03`, EL RACIMO DEL PIVOTE
+
+> **SU EXPEDIENTE COMPLETO YA ESTA ESCRITO:**
+> [`EXPEDIENTE_MESA_PIVOTE.md`](EXPEDIENTE_MESA_PIVOTE.md), del 12 ago 2026, **sin
+> recomendacion nueva donde no la hay**. Trae los siete miembros con sus pasos, **los
+> TRES actos que forman las cuatro A**, **los seis dudosos en crudo**, las aristas de
+> los siete y dos hallazgos nuevos: **los tres sanos separan la PUERTA del ACTO y los
+> seis dudosos son todos entre puertas**, y **en el acto II el cableado no
+> desempata**. **Para adjudicar se lee el expediente.**
 
 **QUE SE DECIDE.** Si **Ries y Blank discrepan** sobre como decidir un pivote, o si
 **solo entran por sitios distintos a la misma puerta**.

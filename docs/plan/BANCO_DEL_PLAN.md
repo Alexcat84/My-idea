@@ -347,3 +347,51 @@ inversores.**
 
 > **Y cuando las dos coinciden, se dice que coinciden.** Es informacion, no ruido:
 > **una nomina donde tema y acto calzan es una nomina que ya no puede sorprender.**
+
+---
+
+## P.7 TODA OPERACION DE MESA SE SIMULA ANTES DE ESCRIBIRSE LISTA
+
+**Adoptada el 12 ago 2026, y nace de que la primera simulacion del plan le corrigio
+DOS cosas a la adjudicacion del auditor.**
+
+> **NINGUNA OPERACION DE MESA PASA A LISTA SIN HABERSE SIMULADO SOBRE UNA COPIA EN
+> MEMORIA DEL GRAFO.** Y **el script de la simulacion se NOMBRA dentro de la
+> operacion**, para que cualquiera pueda volver a correrla.
+
+### QUE TIENE QUE DEVOLVER LA SIMULACION
+
+| | |
+|---|---|
+| **1** | el **desempate por cableado**, con los dos grados a la vista |
+| **2** | los **alias resultantes** del superviviente |
+| **3** | las **entradas que se redirigen**, una por una |
+| **4** | las **duplicadas NUEVAS** que la fusion fabrica, y solo las nuevas |
+| **5** | las **auto-aristas** que la fusion crearia |
+| **6** | las **aristas internas del acto que sobreviven**, con su direccion **resuelta** |
+
+**El instrumento es `scripts/plan/simular_fusion.py`.**
+
+### EL EJEMPLAR, y es la razon de la regla
+
+**La mesa de la junta asesora se adjudico con dos premisas razonables, y la
+simulacion tumbo las dos:**
+
+| la premisa | lo que midio la simulacion |
+|---|---|
+| *la arista entre los dos es **bidireccional** y se convierte en el enlace buscado* | **es UNA sola, dirigida**, declarada en los dos extremos. **Y apunta al reves de la escalera.** La direccion buena **no existia** |
+| *la entrada de `formalize` por `customer_discovery` **se redirige** por alias* | **ya estaban las dos**: `customer_discovery` nombraba a los dos nodos. No habia que redirigir nada, y **la fusion dejaba una duplicada** |
+
+> **NINGUNA DE LAS DOS SE VE LEYENDO. Las dos se ven simulando.** Un expediente
+> completo, con los pasos, los veredictos y las aristas listadas, **no basta**:
+> **una fusion es una operacion sobre el grafo, y el grafo hay que correrlo.**
+
+### LO QUE LA REGLA IMPIDE, dicho con nombre
+
+**Impide adjudicar sobre un grafo imaginado.** Las dos correcciones de la junta
+asesora **no eran errores del auditor**: eran **detalles que solo aparecen cuando se
+ejecuta**. La regla no desconfia de quien adjudica: **desconfia de la lectura como
+metodo para predecir el estado final.**
+
+> **Y trae su propio caso positivo: si la simulacion no corrige NADA, tambien vale.**
+> Lo que no vale es **no haberla corrido.**

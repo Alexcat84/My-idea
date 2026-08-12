@@ -1,8 +1,12 @@
 # EXPEDIENTE DE MESA: `OP-M-02`, LA SERIE DE COLEMAN
 
-**LA SEGUNDA MESA.** Se prepara el 11 ago 2026 para **adjudicacion del auditor**,
-con el mismo estandar que el de la junta asesora: **sin recomendacion nueva donde no
-la haya, y con las que ya existen citadas por su puesto.**
+**LA SEGUNDA MESA, Y TAMBIEN ADJUDICADA.** Se preparo el 11 ago 2026 con el mismo
+estandar que el de la junta asesora, sin recomendacion nueva donde no la habia, y
+**el auditor la adjudico el 12 ago 2026**. **La adjudicacion esta al final**, y
+`OP-M-02` es **LISTA**.
+
+> **Lo que sigue hasta la seccion 6 es el expediente TAL COMO SE ENTREGO**, para que
+> la decision se pueda auditar contra lo que habia sobre la mesa.
 
 > **MODO DE CIERRE VIGENTE: este expediente no toca ni un nodo. Es papel.**
 
@@ -343,10 +347,21 @@ medios ANTES que las fases*.
 > que si lo era.** **Resolver el medio primero deja una sola cuerda y todas las fases
 > apuntan a ella.**
 
-> **Y UN DESAJUSTE QUE LA MESA TIENE QUE MIRAR AUNQUE NO SEA SUYO:**
-> `seis_herramientas_comunicacion_fase_activate` **lleva *fase_activate* en el nombre
-> y quien lo nombra es `fase_acclimate_mapa_de_proceso`.** **El nombre dice una fase y
-> el cableado dice otra.**
+> **LO QUE PARECIA UN DESAJUSTE Y SE MIDIO EL 12 ago 2026: NO LO ES.**
+> `seis_herramientas_comunicacion_fase_activate` lleva *fase_activate* en el nombre y
+> quien lo nombra es `fase_acclimate_mapa_de_proceso`. **Se midio contenido y cableado,
+> que es lo que manda, y los tres coinciden.**
+
+| | |
+|---|---|
+| **el nombre** | dice **Activate** |
+| **el contenido** | dice **Activate sin ninguna duda**: *identifica cual es el primer contacto real que tienes con tu cliente DESPUES DE QUE COMPRA*, y su etiqueta del arbol es *Recibe Bien al Nuevo Cliente* |
+| **el cableado** | dice **Activate**: sus previos son el kit de bienvenida, y su siguiente es **Acclimate**, que es exactamente el orden de la serie |
+
+> **LA CONFUSION FUE MIA Y SE DEJA ESCRITA PORQUE ES REPETIBLE: en un grafo de
+> secuencia, quien te nombra en `nodos_previos` es tu SIGUIENTE, no tu dueno.** Que
+> Acclimate lo liste entre sus previos **no dice que el nodo sea de Acclimate: dice
+> que va antes.**
 
 ---
 
@@ -366,3 +381,154 @@ medios ANTES que las fases*.
 
 **LAS DOS FASES SIN EVIDENCIA, nombradas:** **Adopt**, cuyo unico par leido es **D**
 (puesto 965), y **Advocate**, que **no tiene ningun par leido entre sus dos nodos**.
+
+---
+
+# LA ADJUDICACION DEL AUDITOR . **12 ago 2026**
+
+> **COLEMAN RECIBE EL TRATAMIENTO DE SERIE DECLARADA. `OP-M-02` PASA A LISTA**, y se
+> reparte en **siete operaciones hijas**, cada una con su simulacion por el estandar
+> **P.7**.
+
+## a. EL PROGRAMA UNICO . `OP-M-02-PROG` . **LISTA**
+
+**Sobrevive `ocho_fases_experiencia_cliente` por cableado SIN EMPATE: 13 contra 3**,
+y 4 pasos contra 3.
+
+**LAS DOS PRIORIDADES VIAJAN**, y son lo unico propio del que muere:
+
+| | |
+|---|---|
+| **1** | **priorizar Affirm y Activate** como las dos fases mas descuidadas de la serie |
+| **2** | **detectar donde se atascan** los clientes, con su plan de avance de una fase a la siguiente |
+
+> **El superviviente es ademas el nodo del que cuelga la serie**: el unico que nombra
+> a la cabeza de los medios y el que apunta a la fase 3 por alias. **No es solo el mas
+> cableado: es el que sostiene el mapa.**
+
+**LA SIMULACION LEVANTO UNA AUTO ARISTA** que la fusion crearia, y **esta operacion
+no la arregla**: es de `OP-S-07`, que ya la tiene contada.
+
+## b. LA CABEZA DE MEDIOS . `OP-M-02-MEDIOS` . **SE TRAE AL AUDITOR**
+
+**El auditor mando desempatar por cableado y traerle el caso si el contenido y el
+grafo empatan. MEDIDO: no empatan. SE CONTRADICEN**, que es un caso mas fuerte que el
+previsto, y por eso se trae.
+
+| dice | quien gana | con que |
+|---|---|---|
+| **el cableado** | `estrategia_multicanal_bienvenida` | **3 contra 2**, y 5 pasos contra 4. **Margen de UNA arista** |
+| **el archivo** | `seis_medios_comunicacion_cliente` | el veredicto **1012** lo llama **LA DOCTRINA GENERAL** y declara que `seis_canales_comunicacion_assess` es **su HIJO**. **Es el padre declarado de las instancias** |
+
+**Y HAY UNA TERCERA COSA, de nombre**: el id que gana por cableado dice
+**BIENVENIDA**, que es **una** fase, mientras la doctrina vale para **las ocho**. **Si
+sobrevive, la cabeza general de los medios se llama como una sola fase.**
+
+**LAS TRES OPCIONES, con su consecuencia:**
+
+| | opcion | consecuencia |
+|---:|---|---|
+| **1** | manda el cableado | sobrevive `estrategia_multicanal_bienvenida`, **y hay que renombrar en la misma operacion** para que la cabeza no se llame como una fase |
+| **2** | manda el rol declarado por el archivo | sobrevive `seis_medios_comunicacion_cliente`, y se acepta que **el desempate por cableado no es universal: es subsidiario del rol** cuando el archivo ya declaro uno |
+| **3** | no son cabeza y sub cabeza | son **dos cabezas de temas distintos** y **no se funden** |
+
+> **POR QUE ESTO NO LO RESUELVE LA REGLA DEL CABLEADO SOLA: la regla nacio en
+> `OP-M-04` para desempatar CONTENIDO EMPATADO.** Aqui el contenido **no empata**,
+> porque **el archivo ya asigno un ROL a uno de los dos**. **Un margen de una arista
+> no deberia poder revocar un rol declarado por lectura**, y esa es la pregunta.
+
+> **Es la primera vez que el desempate por cableado choca con el archivo, asi que lo
+> que se decida aqui FIJA DOCTRINA para las mesas que vienen.**
+
+## c. EL ORDEN: **LOS MEDIOS ANTES QUE LAS FASES**
+
+**Citado del veredicto 948**: *el paso 2 de la forma del tratamiento manda resolver
+la serie de los seis medios ANTES que las fases*. **Y con la evidencia de las cuerdas
+cruzadas ya escrita en la seccion 5 de este expediente**: un medio no pertenece a una
+fase, **cuelga de varias**, y `welcome_call_cliente_veterano` cuelga de **siete nodos
+de programa de seis fases distintas**.
+
+**En la practica**: las cinco operaciones de fase **dependen de `OP-M-02-MEDIOS`**, y
+ninguna se ejecuta antes.
+
+## d. LAS CINCO FASES CON GEMELOS CONFIRMADOS
+
+**Tratamiento de Affirm fase por fase: un nodo por fase, y los alias cargan los ids
+que mueren. UNA OPERACION POR FASE, cada una con su simulacion.**
+
+| fase | operacion | sobrevive | cableado | duplicadas que fabrica |
+|---|---|---|---:|---:|
+| **1 Assess** | `OP-M-02-ASSESS` | `fase_assess_ciclo_cliente` | **6 a 4** | 2 |
+| **2 Admit** | `OP-M-02-ADMIT` | **`fase_admit`** | **7 a 4** | 3 |
+| **4 Activate** | `OP-M-02-ACTIVATE` | `fase_activate_primera_impresion` | **4 a 3** | 1 |
+| **5 Acclimate** | `OP-M-02-ACCLIMATE` | `fase_acclimate_experiencia_cliente` | **10 a 3** | 0 |
+| **6 Accomplish** | `OP-M-02-ACCOMPLISH` | `fase_accomplish_experiencia_cliente` | **9 a 8** | 0 |
+
+**LO QUE HAY QUE DECIR DE CADA UNA, y no es lo mismo:**
+
+**ASSESS Y ACCLIMATE QUEDAN CON DOS NODOS, NO CON UNO.** El nodo base de cada una,
+`fase_assess` y `fase_acclimate`, **no entra en la fusion**, porque **sus pares con el
+superviviente son DUDOSOS y no A**: los puestos **224**, **196** y **253**. **Fundir
+sobre un B seria fundir sin veredicto.** **Un nodo por fase queda como CONDICION en
+esas dos.**
+
+**ADMIT es la unica donde gana el nodo base**, y gana con margen: 7 a 4.
+
+**ACTIVATE es el desempate mas flojo, 4 a 3**, y **el veredicto 183 no nombra ninguna
+pieza propia de ninguno de los dos**. **Por eso la lectura de acto de P.5 no es
+opcional ahi**: si al leer los dos textos enteros aparece una pieza propia en el que
+muere, **se registra como perdida antes de fundir**. **Y el precedente de Affirm
+apunta igual: alli tambien murio el nodo base y sobrevivio la instancia tematica.**
+
+**ACCOMPLISH es 9 a 8, y es la mejor comprobacion que ha tenido la regla del
+cableado.** El veredicto 595 dice que la pieza mas concreta del par, **reservar al
+menos el cinco por ciento de las ganancias del proyecto para mejorar la
+experiencia**, es **lo que se perderia**. **Esa pieza esta en el nodo que sobrevive.**
+**El desempate por cableado salvo justo lo que el veredicto temia perder.**
+
+**LAS PERDIDAS QUE VIAJAN, nombradas una por una:**
+
+| fase | del que muere, viaja |
+|---|---|
+| Assess | **crear algo tangible**, muestra, historia o testimonio, que de un anticipo |
+| Admit | **la co creacion** de la celebracion con el cliente, y **el cuidado de que no venga solo del vendedor** |
+| Activate | **ninguna nombrada por el veredicto**. La lectura de acto tiene que buscarlas |
+| Acclimate | **el mapa visual del proceso**, que es el artefacto propio del que muere |
+| Accomplish | **recoger evidencia, testimonios y datos** del logro, para usos futuros |
+
+> **Y LA REGLA DE ORDEN QUE LAS CINCO LLEVAN DENTRO: CADA FASE ES SU PROPIO ACTO, y
+> por P.5 sus pares se leen ENTEROS despues de los destejidos y ANTES de su fusion.**
+
+## e. ADOPT Y ADVOCATE: **NO SE ADJUDICAN**
+
+**Sus pares van a lecturas dirigidas**, `LD-28` a `LD-31`, **y las dos fases quedan
+como CONDICION ESCRITA**. Estan en
+[`LECTURAS_DIRIGIDAS.md`](LECTURAS_DIRIGIDAS.md), tercera tanda.
+
+> **Y no es lo mismo en las dos.** En **Adopt** la mesa no puede adjudicar **porque
+> el archivo ya dijo que no repiten** (puesto 965, D): adjudicar seria contradecir una
+> lectura. En **Advocate** no puede adjudicar **porque no sabe**: su par interno no se
+> ha leido nunca.
+
+## f. EL DESAJUSTE `activate` CONTRA `acclimate`: **MEDIDO, Y NO EXISTE**
+
+**Escrito como paso previo de la etapa de medios, y ejecutado el 12 ago 2026.**
+**Mandan el contenido y el cableado, no el nombre**, y los tres coinciden: es de
+**Activate**. **El detalle esta en la seccion 5 de este expediente.**
+
+> **Lo que queda escrito no es el desajuste, es la leccion: en un grafo de secuencia,
+> quien te nombra en `nodos_previos` es tu SIGUIENTE, no tu dueno.**
+
+## g. LA ADVERTENCIA DE COBERTURA, **dentro de la operacion**
+
+> **LA MESA ADJUDICA ESTRUCTURA. LA COBERTURA SE PAGA FASE POR FASE EN LAS LECTURAS
+> DE ACTO.**
+
+**41 de 378, y 337 pares fuera de cola.** Lo que esta mesa decide **es la forma del
+tratamiento**, y esa decision **se sostiene con lo leido**: hay cabeza duplicada
+medida, cinco fases con gemelos confirmados y una serie de medios duplicada arriba y
+en sus instancias.
+
+> **Lo que NO se sostiene con lo leido es el contenido de cada fusion**, y por eso
+> **ninguna de las siete operaciones hijas se ejecuta sin su lectura de acto.** **La
+> mesa dice COMO; el acto dice QUE se pierde.**
