@@ -12070,3 +12070,245 @@ desmiente el supuesto del primero, y los dos son del mismo autor y del mismo lib
 **No es contradiccion con una regla vigente ni con una cifra publicada**, asi que no
 detuvo el cribado: **queda declarada**. Lo mismo pasa con el principio de redundancia
 del `_2` y la advertencia de complacencia por exceso de defensas del `_3`.
+
+---
+
+## 73. REPORTE CONSOLIDADO DE LA TANDA, del puesto 2.118 al 2.300
+
+**Corte: puesto 2.300.** La tanda encargada iba del 2.118 al 2.617. **Van 183 pares de
+500.** Lo que sigue reporta **lo leido**, y la seccion 73.8 nombra **lo que falta y donde
+retomarlo**, para que ninguna cifra de aqui se lea como cifra de la tanda entera.
+
+### 73.1 CIFRAS
+
+| | |
+|---|---:|
+| pares leidos en la tanda | **183** |
+| A | **40** |
+| B | **0** |
+| C | **0** |
+| D | **143** |
+| **tasa de A de la tanda** | **21,9%** |
+
+**Y esa cifra sola no dice nada, porque los dos tramos no se parecen** (banco 9.27):
+
+| tramo | dominio | pares | A | **tasa** |
+|---|---|---:|---:|---:|
+| 2.118 a 2.219 | `franquicias` | 102 | 10 | **9,8%** |
+| 2.220 a 2.300 | `health_safety` | 81 | 30 | **37,0%** |
+
+**Casi cuatro veces de diferencia entre dos tramos consecutivos del mismo cribado, con
+la misma vara y el mismo lector.** El archivo global queda en **A 441, B 89, C 7, D
+1.763 sobre 2.300, tasa 19,2%**.
+
+**Un dominio cerrado: `franquicias`, 148 pares, 20 A, 13,5%.**
+**Un dominio abierto: `health_safety`, 81 de 192 leidos, 30 A, 37,0% PROVISIONAL.**
+
+### 73.2 FIGURAS NUEVAS Y CRECIDAS
+
+**Nuevas de esta tanda:**
+
+| figura | puesto | que es |
+|---|---|---|
+| **LA MISMA NORMA EN DOS FOLLETOS** | 2.232 | la repeticion cruza fuentes del **mismo organismo**: OSHA3885 y OSHA3886 cubren el mismo requisito con distinto detalle. No son dos escuelas, es una entidad publicando dos veces |
+| **EL HERMANO QUE CORRIGE AL HERMANO** | 2.283 | `defensas_en_profundidad_3` pide buscar **dependencias ocultas entre capas que se asumen independientes**; `defensas_en_profundidad_2` pide evaluar cada capa **de forma independiente**. Un nodo del catalogo desmiente el supuesto de otro, del mismo autor |
+| **MISMO TITULO, DISTINTO OFICIO** | 2.249 | `construccion_linea_tiempo` y `construccion_timeline_resolucion` se llaman igual y hacen cosas distintas: uno reune datos del sistema, el otro **analiza el habla segundo a segundo, con silencios, solapes y cambios de ritmo**. Dio **D** |
+| **ADVERTENCIA DUPLICADA** | 2.186 | la misma advertencia literal en dos nodos, y ninguno repite porque cada uno trae ademas materia propia |
+| **CADENA DE ABSORCION** | 2.242 y 2.273 | tres nodos, dos veredictos A encadenados, **solo el ultimo queda en pie**; el del medio sobrevive en un par y muere en otro |
+| **EL TITULO PROMETE LO QUE LOS PASOS NO DAN** | 2.247 | `hoist_auxiliary_equipment_safety` nombra montacargas en su titulo y ninguno de sus cinco pasos habla de montacargas. No cambia el veredicto, queda anotado |
+
+**Crecidas, que ya existian:**
+
+- **ARISTA QUE FALTA: 48 pares** de 183, el hallazgo mas frecuente con diferencia.
+- **FIGURA DE PERSPECTIVA: 3.** El 2.121 (desventaja por unidad, ventaja en agregado),
+  el 2.187 (el mismo mensaje calibrado al reves segun el segmento) y el **2.287, el
+  mejor de los tres: el mismo autor sostiene que el perfil de riesgo es propio de cada
+  dominio y que las condiciones latentes son iguales en todos. No se contradice,
+  delimita.**
+- **Falso hermano: 5.** Por el titulo (2.184, entrenar), por la palabra (2.194
+  inversionista, 2.245 escalera), por el numero (2.201, los tres), por el verbo (2.219,
+  comparar).
+- **SOLAPE DECLARADO: 19.** **TENSION DECLARADA: 1** (2.193, un nodo pide siete
+  contactos en siete dias y el otro se titula *evitar el acoso*).
+- **GEMELOS POR VIGILAR: 5 parejas**, todas en `health_safety`.
+- **PROCEDIMIENTO COMPARTIDO: 2** (2.139 y 2.175, un hijo que sirve a dos madres).
+
+### 73.3 NOMINAS Y RACIMOS
+
+**En `franquicias`, cuatro racimos, todos sin una sola arista entre miembros:**
+
+| racimo | miembros | forma |
+|---|---:|---|
+| **la franquicia inadvertida** | **4** | el mas cargado del dominio; `estructuras_combinadas_franquicia` **repitio dos veces** y los dos del medio son candidatos a gemelo |
+| **el dinero del franquiciador** | **5** | **cerro cobertura**: `cinco_categorias_costos_franquicia` contiene a `estimacion_inversion_inicial_franquiciador` en su paso 2 y a `costos_preparacion_franquicia` en su paso 6, y `capitalizacion_adecuada_del_franquiciador` **repitio dos veces** |
+| **el canal corporativo** | 4 | `combinar_crecimiento_corporativo_y_franquicia` repitio |
+| **el mensaje** | 3 | `multiples_compradores_influyentes` es el paso 1 entero de `mensaje_marketing_franquicia` |
+
+**En `health_safety`, nueve racimos, tambien sin una sola arista:**
+la vieja y la nueva vision (**6**), el sesgo retrospectivo (**6**), las defensas (**5**),
+las condiciones latentes (**5**), el error como sintoma (**5**), la deriva (3), la
+cultura justa (3), el error de mantenimiento (3) y la gestion del error (3).
+
+**Cambiaron de forma:** dos racimos dejaron de ser listas de parecidos y quedaron con
+**cabeza medida**. En **el dinero del franquiciador**, la cabeza es
+`cinco_categorias_costos_franquicia` porque **contiene a dos miembros por dentro**. En
+**las defensas**, `defensas_en_profundidad_3` no solo contiene al `_2`: **lo corrige**.
+
+**Una silueta medida que crecio** (banco 9.6.1): `evaluacion_necesidad_franquiciar`
+nombra **tres ventajas** de franquiciar, **cada una tiene nodo propio y ninguna tiene
+arista con la madre**; en el 2.205 aparecio **una cuarta ventaja con nodo propio que la
+madre ni nombra**. **Cero de cuatro: la silueta ni acusa ni exculpa, y mando el
+contenido.**
+
+**Y una silueta que si mando** (2.274): `hoist_auxiliary_equipment_safety` enlaza con
+`materials_handling_safety` y `machinery_equipment_safety` **y no** con
+`powered_industrial_trucks_safety`. **Dos de tres es mayoria estricta: la jerarquia esta
+establecida y el suelto es arista que falta.**
+
+### 73.4 CONDICIONES VIVAS
+
+1. **`drift_hacia_el_fallo_2` repitio TRES veces**, contra `deriva_hacia_el_fallo`,
+   `drift_hacia_el_fallo` y `normalizacion_de_la_desviacion`.
+2. **`errores_como_consecuencia` repitio TRES veces**, contra
+   `falla_sistemica_vs_error_individual`, `human_error_como_sintoma` y
+   `riesgos_del_enfoque_en_error_humano`.
+3. **`human_error_como_sintoma`, `new_view_vs_old_view_de_error_humano`,
+   `evitar_sesgo_retrospectivo_hindsight`, `ciclo_de_culpa`, `defensas_en_profundidad_2`,
+   `estructuras_combinadas_franquicia` y `capitalizacion_adecuada_del_franquiciador`
+   repitieron DOS veces cada uno.**
+
+> **El veredicto del par es firme en los tres casos: ese nodo no aporta.** Lo que queda
+> abierto es **quien se queda con su contenido**, y eso **no se decide par a par: lo
+> decide el racimo**. Ninguna de estas condiciones bloquea el cribado.
+
+4. **`health_safety` sigue abierto en 37,0% con 111 pares sin leer.** La cifra **bajara**
+   (la cola pierde similitud y en todos los dominios anteriores la tasa cae con ella),
+   pero **cuanto no se sabe hasta leerla**.
+
+5. **PERDIDA QUE VIAJA Y HAY QUE VIGILAR (2.293):** la instruccion explicita de
+   **redisenar la herramienta en vez de entrenar a la persona** es la unica accion
+   correctiva directa del racimo del error como sintoma. Es LINEA para la clase, **y una
+   perdida real si la fusion la deja caer**: el catalogo se quedaria con el diagnostico y
+   sin el remedio.
+
+### 73.5 PENDIENTES DE DOCTRINA
+
+**Cero.** En 183 pares **ninguna pareja pidio una regla que no existiera**. Las escritas
+alcanzaron, que es exactamente lo que decia el encargo.
+
+**Lo que si hubo, y no es lo mismo, son tres tensiones declaradas sin regla que las
+resuelva y sin que ninguna contradiga regla vigente ni cifra publicada:** la del 2.193
+(siete contactos contra evitar el acoso), la del 2.283 (el hermano que corrige al
+hermano) y la del 2.287 (riesgo local contra condicion latente universal). **Las tres
+quedan escritas en su veredicto, no como pendiente.**
+
+### 73.6 CORRECCIONES DECLARADAS
+
+1. **`franquicias` no esta en 21,7%, esta en 13,5%.** La seccion 70 publico *del 19,6%
+   al 21,7%* y **era correcto a su corte**: 10 A sobre **46** pares, los unicos leidos
+   del dominio al 2.117. Con el dominio entero, **20 A sobre 148**. La cifra vieja no
+   estaba mal contada: **una tasa sobre 46 pares de 148 es la tasa de una cabecera, no la
+   de un dominio.** Las dos conviven con su corte al lado (banco 9.21).
+2. **La tasa global bajo y despues subio, y ninguna de las dos cosas dice lo que
+   parece.** Del 18,9% al 18,5% al 2.219 (por 102 pares de un dominio tranquilo) y al
+   19,2% al 2.300 (por 81 pares de uno que repite el triple). **La global se mueve por
+   composicion, no por criterio.**
+3. **Ninguna correccion sobre veredictos ya registrados.** Cero volteos en esta tanda.
+
+### 73.7 LAS 40 A NUEVAS, con las mas discutibles marcadas
+
+**`franquicias`, 10:**
+
+| puesto | muere | sobrevive |
+|---|---|---|
+| 2.127 | `referidos_franquiciados_existentes` | **fusion mutua**, ninguno domina |
+| 2.145 | `mito_control_calidad_corporativo` | `motivated_management_franquiciado` |
+| 2.181 | `estructuras_combinadas_franquicia` | `deteccion_franquicia_inadvertida` |
+| 2.190 | `perdida_control_operativo` | `gestion_terminacion_franquiciado` |
+| **2.195** | `capitalizacion_adecuada_del_franquiciador` | `franquicia_como_capital_alternativo` |
+| 2.196 | `confidencialidad_manual_operaciones` | `desarrollar_manual_operaciones` |
+| 2.202 | `marketing_en_ferias_comerciales_de_franquicias` | `ferias_comerciales_franquicia` |
+| 2.204 | `combinar_crecimiento_corporativo_y_franquicia` | `mix_ubicaciones_corporativas_franquicia` |
+| 2.207 | `estructuras_combinadas_franquicia` | `prevenir_franquicias_inadvertidas` |
+| 2.215 | `capitalizacion_adecuada_del_franquiciador` | `cinco_categorias_costos_franquicia` |
+
+**`health_safety`, 30:**
+
+| puesto | muere | sobrevive |
+|---|---|---|
+| 2.221 | `old_view_vs_new_view_human_error` | `new_view_vs_old_view` |
+| 2.222 | `drift_hacia_el_fallo_2` | `deriva_hacia_el_fallo` |
+| 2.223 | `rutas_de_salida_y_puertas_de_emergencia` | `rutas_salida_planificacion_emergencias` |
+| 2.226 | `drift_hacia_el_fallo_2` | `drift_hacia_el_fallo` |
+| 2.230 | `responsabilidad_prospectiva` | `rendicion_cuentas_prospectiva` |
+| 2.232 | `capacitacion_conciencia_programa` | `capacitacion_educacion_seguridad` |
+| 2.233 | `ciclo_de_culpa` | `dysfunctional_organizational_culture_patterns` |
+| 2.235 | `confusion_modos_automatizacion` | `confusion_de_modos_automatizacion` |
+| 2.236 | `defensas_en_profundidad_2` | `defensas_en_profundidad` |
+| 2.237 | `drift_hacia_el_fallo_2` | `normalizacion_de_la_desviacion` |
+| 2.242 | `errores_como_consecuencia` | `falla_sistemica_vs_error_individual` |
+| 2.244 | `evitar_sesgo_retrospectivo_hindsight` | `reconstruccion_contexto_situacional` |
+| 2.250 | `niveles_de_madurez_de_seguridad` | `clasificacion_sistemas_por_nivel_seguridad` |
+| 2.252 | `declive_teoria_manzana_podrida` | `accident_proneness_fallacy` |
+| 2.253 | `vieja_vision_vs_nueva_vision_seguridad` | `nueva_vision_organizacion_linea_seguridad` |
+| **2.255** | `cultura_justa` | `cultura_justa_organizacional` |
+| 2.261 | `errores_como_consecuencia` | `human_error_como_sintoma` |
+| **2.264** | `omisiones_en_mantenimiento` | `vulnerabilidad_instalacion` |
+| 2.265 | `areas_riesgo_primario` | `clasificacion_riesgos_por_dominio` |
+| 2.267 | `errores_como_consecuencia` | `riesgos_del_enfoque_en_error_humano` |
+| 2.268 | `critica_perdida_de_conciencia_situacional` | `evitar_perdida_situacion_awareness` |
+| 2.272 | `ciclo_de_culpa` | `ciclo_de_culpa_2` |
+| 2.273 | `falla_sistemica_vs_error_individual` | `fallas_activas_condiciones_latentes` |
+| **2.280** | `human_error_como_sintoma` | `enfoque_situacional_vs_personal` |
+| 2.281 | `sesgo_retrospectivo_hindsight` | `sesgo_retrospectivo_hindsight_2` |
+| 2.283 | `defensas_en_profundidad_2` | `defensas_en_profundidad_3` |
+| 2.290 | `new_view_vs_old_view_de_error_humano` | `investigacion_new_view` |
+| 2.292 | `new_view_vs_old_view_de_error_humano` | `perspectiva_dentro_del_tunel` |
+| **2.293** | `human_error_como_sintoma` | `error_humano_vs_falla_mecanica` |
+| 2.294 | `evitar_sesgo_retrospectivo_hindsight` | `evitar_shopping_bag` |
+
+**LAS CINCO MAS DISCUTIBLES, y por que cada una lo es:**
+
+1. **2.195.** Las dos preguntas son **distintas**: cuanto capital ahorra franquiciar, y
+   con que dinero se paga el programa. **La vara pesa lo anadido, no si la pregunta
+   cambia**, y lo anadido eran tres lineas sobre la fuente de fondos. **Si el auditor
+   sostiene que una pregunta distinta merece nodo aunque se conteste en una linea, este
+   veredicto se voltea, y con el el 2.215.**
+2. **2.255.** Muere el nodo de **cinco** pasos contra el de **cuatro**, y lo que se va
+   como linea absorbida es **la garantia de que los supervisores apliquen los criterios
+   igual**. Es la unica linea del par que impide que una cultura justa se vuelva
+   arbitraria segun quien juzgue.
+3. **2.264.** Lo que muere aporta **firma paso a paso** e **inspeccion independiente
+   antes de la puesta en servicio**. Son calificativos por la vara, **y son controles
+   reales por el oficio.**
+4. **2.280 y 2.293 juntas.** `human_error_como_sintoma` **sobrevivio en el 2.261 y murio
+   en los dos siguientes**, y en las tres lecturas la bisagra fue la misma linea:
+   **redisenar la herramienta en vez de entrenar a la persona**. Sobrevivio donde era el
+   unico que la decia, y murio donde el otro tambien redisena o donde el otro trae tres
+   blancos de analisis. **Es doctrinalmente correcto y practicamente incomodo: la unica
+   accion correctiva del racimo viaja como linea absorbida en dos fusiones distintas.**
+5. **2.221.** Los titulos son el mismo contraste dicho al derecho y al reves, y lo que
+   muere aporta **el Bad Apple en las politicas de cultura justa** y **la tabla
+   comparativa como herramienta de dialogo con la direccion**. Son puntero y accion
+   unica, **pero la tabla es el unico instrumento de conversacion con directivos del
+   racimo entero.**
+
+### 73.8 LO QUE FALTA DE LA TANDA, y donde se retoma
+
+**Van 183 de 500. Faltan 317 pares, del 2.301 al 2.617.**
+
+| tramo | dominio | pares | estado |
+|---|---|---:|---|
+| 2.301 a 2.411 | `health_safety` | **111** | pendiente; **cierra el dominio** y fija su cifra final |
+| 2.412 a 2.617 | `quality` | **206** | pendiente; **abre el dominio**, que no cierra en esta tanda |
+
+**Checkpoints pendientes: 2.400, 2.500 y 2.600.** El del 2.300 esta escrito en la
+seccion 72 y el del 2.200 en la 71.
+
+**El archivo esta en 2.300 sin huecos y sin duplicados.** El cribado se retoma en el
+**2.301** con `python scripts/volcar_pares.py 2301 2312` y se registra con
+`python scripts/registrar_veredictos.py`, que **toma dominio y nodos de la cola** para
+que no se pueda registrar un veredicto contra un par que no existe.
+
+**Cero nodos tocados en toda la tanda. El modo de cierre se respeto entero: se leyo y se
+documento.**
