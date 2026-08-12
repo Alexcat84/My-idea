@@ -254,6 +254,78 @@ nombre mas barrido de las A):
 **EL QUINTO MIEMBRO ES `tecnica_anclaje_negociacion`**, y entro por la **A del
 puesto 878** contra `construccion_de_leverage`.
 
+### LA RECONCILIACION, y sin ella la degradacion no cierra
+
+**ESE NODO YA SE HABIA MIRADO Y YA SE HABIA DEJADO FUERA, CON MOTIVO ESCRITO.** No
+es un descubrimiento: **es una decision que se toma dos veces con veinte meses de
+archivo en medio.** Las dos quedan.
+
+**DECISION 1, puesto 878** *(`INTRA_DOMINIO_VEREDICTOS.jsonl`, y glosada en
+`INTRA_DOMINIO_INFORME.md` seccion 36.6 punto 2)*. Es el **PRIMER USO del barrido
+de las A** del banco 9.15. El veredicto dice, literal:
+
+> *este nodo aparece ahora con un A vigente contra un miembro del sub-puro de la
+> competencia entre inversores, o sea que entra como candidato a miembro; **la
+> lectura lo deja FUERA, porque su objeto es como negociar terminos y no como
+> generar competencia entre inversores.** El candidato se levanta por el archivo y
+> se resuelve leyendo, que es exactamente para lo que se escribio la regla.*
+
+**LA EXCLUSION NO SE BORRA. Fue correcta para lo que decidia**, y ademas explica
+por que el racimo se declaro con cuatro y no con cinco: **la declaracion de PURO
+del puesto 1030 fue COHERENTE con ella**, no la ignoro.
+
+**QUE APARECIO DESPUES DE AQUELLA EXCLUSION.** Solo dos lecturas tocan este asunto
+despues del puesto 878, y hay que decirlas las dos:
+
+| puesto | par | clase | que aporta |
+|---:|---|---|---|
+| **1030** | `gestion_multiples_term_sheets` contra `leverage_en_negociacion_con_vcs` | **A** | cierra los 6 pares de los CUATRO viejos. **Es el puesto donde se declara el PURO** |
+| **1295** | `orden_negociacion_puntos` contra `tecnica_anclaje_negociacion` | **D** | y **lleva dentro la frase que decide**, ver abajo |
+
+> **NINGUN PAR NUEVO DEL QUINTO MIEMBRO SALIO A DESPUES DE LA EXCLUSION. Hay que
+> decirlo asi de claro:** su unica A sigue siendo la del 878. **Lo que cambio no es
+> la cantidad de evidencia, es lo que el propio archivo dice de ella.**
+
+**LA FRASE DEL PUESTO 1295, que es posterior a la exclusion Y posterior a la
+declaracion de PURO:**
+
+> *NOTA DEL BARRIDO: `tecnica_anclaje_negociacion` tiene **una A vigente**, el
+> puesto 878 contra `construccion_de_leverage`. **Es gemelo de aquel** y no de este.*
+
+### POR QUE MANDA LA ADMISION DE HOY
+
+**No manda por ser mas nueva a secas. Manda por tres cosas que se suman:**
+
+1. **La medicion mas reciente del propio archivo lo llama GEMELO**, en el puesto
+   1295, con la A del 878 declarada **vigente** y no revocada.
+2. **Las dos decisiones no hablan del mismo objeto, y por eso las dos pueden ser
+   correctas.** La exclusion del 878 decide **el TEMA del racimo**: *generar
+   competencia entre inversores* no es *como anclar terminos*. La admision de hoy
+   decide **el ACTO**, que por el banco 9.24 **es el cierre transitivo de la relacion
+   gemelo** y no admite gusto: **si hay A, el nodo esta dentro.**
+3. **Y la forma publicada se calculo sobre el ACTO, no sobre el tema.** *PURO,
+   cuatro miembros, seis pares* es una cuenta de componente conexa. **Por el banco
+   9.17 manda la MEDICION**, y la medicion de la componente da cinco.
+
+> **LO QUE DE VERDAD PASO, dicho sin adornos: se declaro una forma de ACTO sobre una
+> nomina de TEMA.** Mientras el quinto no tuvo A, las dos coincidian. **Desde el
+> puesto 878 dejaron de coincidir, y la etiqueta se quedo con la cuenta vieja.**
+
+### LA CONSECUENCIA, Y ES QUE LA DEGRADACION SE PUEDE DESHACER EN LOS DOS SENTIDOS
+
+**Los tres pares que faltan son los tres del quinto miembro, y los tres estan fuera
+de cola.** Segun como salgan:
+
+| si los tres salen | entonces | y quien gana |
+|---|---|---|
+| **A** | vuelve a **PURO con cinco miembros y diez pares** | la admision de hoy, del todo |
+| **D** | el quinto **sale del acto**, la componente se parte y vuelve a **PURO con cuatro** | **la exclusion del 878, del todo** |
+| mezclados | queda **MEZCLADO**, y el racimo deja de ser puro por cualquier via | ninguna: se lee y se escribe |
+
+> **Por eso las dos decisiones se quedan en el registro con su fecha, y ninguna se
+> tacha.** Hoy la degradacion cierra como **SUB-PURO 7 de 10**, y **el desempate
+> esta nombrado, contado y fuera de cola.** **Tres lecturas lo resuelven.**
+
 > **LA DEGRADACION NO DESMIENTE NINGUNA LECTURA.** Los siete pares leidos siguen
 > siendo siete A. **Lo que dice es otra cosa: la forma se declaro sobre una nomina
 > que todavia iba a crecer**, y crecio por una A posterior a la declaracion.
@@ -278,3 +350,42 @@ ganancia* y *el compromiso contado tres veces* siguen declarados PUROS con
 forma declarada sobre una componente que aun recibe A.** Es el mismo banco 9.26
 dicho al reves: **una forma sin cobertura completa no es un resultado, es un
 estado.**
+
+---
+
+## CORRECCION 7. **MUERE *CERO PODAS EN VEINTICUATRO LECTURAS***
+
+**Va al banco de la SESION A y a la ficha del barrido paso contra nodo.**
+
+**LO PUBLICADO:** sobre **624** candidatos sin arista, muestra pineada de 24, **19
+jerarquias sanas, CERO podas, 5 falsos positivos**, proyeccion de **489** aristas
+con banda de 376 a 586. **Y la glosa:** *la bolsa no es una mezcla de dos clases de
+arreglo, es UNA y es la barata.*
+
+**LO MEDIDO el 11 ago 2026**, sobre la bolsa calibrada y con **46 lecturas pineadas
+en dos muestras disjuntas** (`docs/plan/PIN_SORTEO_CALIBRADO.txt`):
+
+| | publicado | **medido** |
+|---|---:|---:|
+| candidatos sin arista | 624 | **477** |
+| lecturas | 24 | **46** |
+| jerarquia sana | 19 | **32, 69,6%** |
+| **madre que repite** | **0** | **7, 15,2%** |
+| falso positivo | 5 | 7, 15,2% |
+| proyeccion de aristas | 489, banda 376 a 586 | **332, banda 263 a 386** |
+| **pares gemelos proyectados** | **no se contemplaban** | **73, banda 36 a 135** |
+
+**LA GLOSA SE RETIRA ENTERA. La bolsa SI es una mezcla de dos clases.**
+
+**Y LA MEDIDA EXACTA DE LA DISCREPANCIA, porque no todo se explica con el tamano:**
+el techo al 95% de un **0 de 24** es **11,7%**; lo medido es **15,2%**. **No son
+compatibles del todo, pero por poco.** Quedan dos explicaciones abiertas y **desde
+la sesion B no se puede elegir entre ellas**: o mala suerte de la muestra vieja, o
+**la clase madre que repite no se aplico igual al leerla**. Se escribe como pregunta
+abierta.
+
+**LO QUE SI QUEDA CERRADO Y ES REGLA:**
+
+> **UN CERO SOBRE 24 LECTURAS NO ES UN CERO, ES UN TECHO.** Se escribe *no vi
+> ninguno en 24, techo 11,7%*, **nunca** *no hay*. Es el banco 9.21 aplicado a la
+> clase vacia: **la cifra lleva su corte, y el cero lleva su banda.**

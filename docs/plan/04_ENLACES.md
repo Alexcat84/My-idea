@@ -9,23 +9,51 @@ desteje: **pone la arista que falta.**
 
 ## LA BOLSA DEL PASO CONTRA NODO
 
-**Medida el 13 ago 2026 con una muestra pineada de 24** (pin en
-`docs/PIN_SORTEO_PASO_NODO.txt`).
+### CORRECCION DECLARADA. **LA CIFRA DE ESTE APARTADO MURIO EL 11 ago 2026**
 
-| | |
-|---|---:|
-| candidatos **sin arista** | **624** |
-| leidos en la muestra | 24 |
-| **JERARQUIA SANA** (arista que falta) | **19** |
-| **MADRE QUE REPITE** (poda) | **0** |
-| falso positivo | 5 |
+**Lo que este apartado decia, y se deja escrito para que la correccion se pueda
+auditar:** medida con una muestra pineada de 24 sobre 624 candidatos sin arista,
+**19 jerarquias sanas, CERO PODAS y 5 falsos positivos**, con proyeccion de 489
+aristas y banda de 376 a 586.
 
-> **CERO PODAS EN VEINTICUATRO LECTURAS.** La bolsa **no es una mezcla de dos
-> clases de arreglo: es UNA, y es la barata.** No hay que triar entre enlazar y
-> podar: hay que **enlazar**.
+**Y la glosa que se colgo de esa cifra, que es la que mas dano hacia:** *la bolsa
+no es una mezcla de dos clases de arreglo, es UNA y es la barata; no hay que triar
+entre enlazar y podar, hay que enlazar.*
 
-**PROYECCION, declarada como proyeccion**: **489** jerarquias sanas, con intervalo
-de Wilson al 95% **entre 376 y 586**.
+**LO MEDIDO HOY, sobre la bolsa calibrada y con 46 lecturas pineadas:**
+
+| | lo publicado | **lo medido el 11 ago 2026** |
+|---|---:|---:|
+| candidatos sin arista | 624 | **477** |
+| lecturas | 24 | **46** |
+| **jerarquia sana** | 19, 79,2% | **32, 69,6%** |
+| **madre que repite** | **0** | **7, 15,2%** |
+| falso positivo | 5, 20,8% | 7, 15,2% |
+| proyeccion de aristas | 489, banda 376 a 586 | **332, banda 263 a 386** |
+
+> **MUERE *CERO PODAS EN VEINTICUATRO LECTURAS*, y muere entera: no encoge, se
+> invierte.** La bolsa **SI es una mezcla de dos clases de arreglo**, y la segunda
+> clase vale unos **73 pares gemelos**.
+
+> **POR QUE SALIO ASI, y aqui hay que ser exacto porque no todo se explica con el
+> tamano de la muestra.** El techo al 95% de un **0 de 24** es **11,7%**. Lo medido
+> hoy es **15,2%**. **Las dos cifras no son compatibles del todo, pero por poco**: si
+> la tasa verdadera fuera 15,2%, ver cero gemelos en 24 lecturas tiene una
+> probabilidad de **cerca del 2%**.
+
+> **O SEA QUE QUEDAN DOS EXPLICACIONES ABIERTAS Y NO SE PUEDE ELEGIR ENTRE ELLAS
+> DESDE AQUI:** o la muestra vieja tuvo mala suerte, o **la clase madre que repite no
+> se aplico igual** al leerla, y algun gemelo se anoto como sana o como falso
+> positivo. **No se puede saber: los 24 viejos son de otro pin y no se releen desde
+> esta sesion.** Se deja escrito como pregunta abierta y no como conclusion.
+
+> **LO QUE SI QUEDA CERRADO, y vale para todo el plan: una cifra de CERO sobre 24
+> lecturas NO ES UN CERO, ES UN TECHO.** El techo de aquel cero llegaba al **11,7%**,
+> y **la glosa lo leyo como si fuera un cero de verdad**. Se escribe *no vi ninguno
+> en 24, techo 11,7%*, y **nunca** *no hay*.
+
+**La correccion para el banco de la SESION A esta en `CORRECCIONES_A_APLICAR.md`,
+correccion 7.**
 
 ---
 
@@ -167,7 +195,49 @@ sinonimos**, la misma figura que el cribado caza a mano:
 bolsa calibrada tiene **221 candidatos suyos** (`quality` 208, `health_safety` 12,
 `seguridad_digital` 1). **Es la unica senal medida que existe hoy sobre ellos.**
 
-**Va a `OP-E-03`**, operacion nueva de esta fase.
+**Va a `OP-E-03`, y el auditor la adjudico el 11 ago 2026: SIN PUERTA NUEVA.**
+
+### `OP-E-03`, ESCRITA COMO **DIFERENCIA CONTRA LA COLA**
+
+> **El barrido NO se abre como fuente del cribado.** Se corre **el dia en que la
+> cola de un dominio cierra**, y solo se pregunta una cosa: **cuales de sus
+> candidatos NO estaban en la cola.** **Esa diferencia, y nada mas que esa, va a
+> lecturas dirigidas.**
+
+**POR QUE ASI.** Una lectura que entra por dos puertas **se cuenta dos veces**, y
+entonces **la tasa por dominio del banco 9.27 deja de significar nada**. La
+diferencia contra la cola es **la unica forma de sumar sin contar doble**.
+
+**EL INSTRUMENTO YA ESTA ESCRITO Y PROBADO**:
+`scripts/plan/diferencia_contra_cola.py`. Entrada: la cola, los veredictos y los
+candidatos. Salida: `docs/plan/DIFERENCIA_CONTRA_COLA.jsonl` con la cuenta por
+dominio. **Pasa los ids por el resolutor antes de comparar**, por la regla P.1: la
+cola se escribio antes de fusiones y renombres, y comparar literal daria
+diferencias falsas.
+
+**ENSAYO EN VACIO DEL 11 ago 2026**, con la cola **tal como esta hoy**, o sea
+**incompleta para los cuatro dominios sin cribar**:
+
+| dominio | filas | par repetido | ya en la cola | **diferencia hoy** |
+|---|---:|---:|---:|---:|
+| `quality` | 208 | 1 | 40 | **167** |
+| `core` | 199 | 1 | 36 | **162** |
+| `environmental` | 22 | 0 | 0 | **22** |
+| `exportacion` | 15 | 0 | 2 | **13** |
+| `franquicias` | 15 | 0 | 2 | **13** |
+| `health_safety` | 12 | 0 | 5 | **7** |
+| `entrega` | 4 | 0 | 2 | **2** |
+| `risk_management` | 1 | 0 | 0 | **1** |
+| `seguridad_digital` | 1 | 0 | 1 | **0** |
+| **TOTAL** | **477** | **2** | **88** | **387** |
+
+> **ESTE ENSAYO NO ES EL RESULTADO Y NO SE PUEDE CITAR COMO TAL.** La cola de
+> `quality` **todavia no se ha planificado**, asi que su diferencia de hoy es un
+> **techo**, no una cuenta. **La cifra que vale es la del dia del cierre**, y por eso
+> la operacion cuelga del **disparador del recomputo** de `08_VERIFICACION`.
+
+> **Lo que el ensayo si prueba es que el instrumento corre y cuadra**: 477 filas
+> igual a 2 pares repetidos mas 88 ya en cola mas 387 de diferencia. **Sin fugas.**
 
 ---
 

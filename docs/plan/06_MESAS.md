@@ -59,6 +59,62 @@ frontera vieja.**
 
 ## APERTURA . `OP-M-02`, LA SERIE DE COLEMAN
 
+### LO PRIMERO QUE ESTA MESA TIENE QUE SABER: **LA FASE 3 YA ESTA FUNDIDA, Y AGUANTA**
+
+> **Esta mesa no debate una propuesta. Debate REPETIR ALGO QUE EL GRAFO YA HIZO Y
+> SOSTUVO.**
+
+**`fase_affirm_buyers_remorse` es hoy la fase 3 entera**, y carga **TRES ids dentro**
+como alias: `fase_affirm`, `fase_affirm_reduccion_incertidumbre` y
+`fase_affirm_reducir_remordimiento`. **Los tres existen como nodos deprecados**, o
+sea que la fusion se hizo con el patron completo: superviviente, alias y baja.
+
+**VERIFICADO EL 11 ago 2026** con `scripts/plan/aristas_por_alias_affirm.py`:
+
+| | |
+|---|---:|
+| ids fundidos en uno | **4** |
+| **aristas vivas que apuntan a un alias** y solo llegan por el resolutor | **10** |
+| de ellas, **con su gemela literal al destino en el MISMO campo** | **10 de 10** |
+| nodos que apuntan al destino **por su nombre propio** | **16** |
+
+**LAS DIEZ ARISTAS QUE ATRAVIESAN EL ALIAS, nombradas:**
+
+| el que apunta | campo | al alias |
+|---|---|---|
+| `fase_admit` | `nodos_siguientes` | `fase_affirm` |
+| `fase_admit_celebracion` | `nodos_siguientes` | `fase_affirm` |
+| `ocho_fases_experiencia_cliente` | `nodos_siguientes` | `fase_affirm` |
+| `fase_activate` | `nodos_previos` | `fase_affirm` |
+| `calibracion_intensidad_celebracion` | `nodos_siguientes` | `fase_affirm_reduccion_incertidumbre` |
+| `fase_acclimate_experiencia_cliente` | `nodos_previos` | `fase_affirm_reduccion_incertidumbre` |
+| `sistema_manejo_quejas` *(y es de `quality`, no de `core`)* | `nodos_siguientes` | `fase_affirm_reduccion_incertidumbre` |
+| `cierre_segun_complejidad_venta` | `nodos_siguientes` | `fase_affirm_reducir_remordimiento` |
+| `fase_activate_primera_impresion` | `nodos_previos` | `fase_affirm_reducir_remordimiento` |
+| `welcome_call_cliente_veterano` | `nodos_previos` | `fase_affirm_reducir_remordimiento` |
+
+> **LAS DIEZ AGUANTAN, y aguantan por la razon fuerte y no por la debil: LAS DIEZ
+> TIENEN SU GEMELA LITERAL AL DESTINO EN EL MISMO CAMPO.** No es que el resolutor
+> las rescate en el ultimo momento: **es que la fusion las reescribio y ademas dejo
+> la referencia vieja.** Si manana se apagara el resolutor, **la fase 3 seguiria
+> conectada igual.**
+
+**LA COMPROBACION DE FONDO: ninguna arista quedo colgando.** La unica referencia
+del destino que apunta a un nodo no vivo es `gestion_de_quejas_y_fidelizacion`, y
+**tampoco es un cabo suelto: resuelve a `sistema_manejo_quejas`.**
+
+> **Y ESO ES LO QUE LA MESA COMPRA O NO COMPRA.** No es un experimento: **es un
+> precedente dentro de la misma serie**, con cuatro ids, diez aristas por alias y
+> cero perdidas. **La pregunta de la mesa no es si el tratamiento funciona: es si se
+> repite en las otras siete fases.**
+
+**LO QUE EL PRECEDENTE NO PRUEBA, dicho aqui para que nadie lo estire:** las diez
+referencias por alias **son redundancia**, no conectividad. Un dedup consciente del
+resolutor las colapsaria. **La fusion salio limpia; la basura que dejo esta medida y
+es la misma que `OP-S-07` trata en su fase.**
+
+---
+
 **QUE SE DECIDE.** Si las **ocho fases** de *Never Lose a Customer Again* reciben el
 tratamiento de **SERIE DECLARADA**: un nodo-programa unico, un nodo por paso
 colgando de el, y el numero en el titulo legitimado porque el programa lo explica.

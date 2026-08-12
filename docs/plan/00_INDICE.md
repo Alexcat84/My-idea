@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA COMPLETO: ONCE FASES, 45 OPERACIONES, 38 LISTAS. LAS SIETE PENDIENTES SON CINCO MESAS, UN RECOMPUTO CON FECHA Y UNA DECISION DE ALCANCE.**
+**EL PLAN ESTA COMPLETO: ONCE FASES, 45 OPERACIONES, 39 LISTAS. LAS SEIS PENDIENTES SON LAS CINCO MESAS Y UN RECOMPUTO CON FECHA.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -27,6 +27,13 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > lecturas***. Las dos nominas que faltaban, **el pivote y la serie de Coleman**,
 > estan medidas y escritas en sus mesas. Y **el puro de la competencia entre
 > inversores DEGRADA a sub-puro** con correccion declarada.
+>
+> **QUINTA PASADA, el mismo dia: se cierran los tres cabos que dejo la cuarta.** La
+> **degradacion queda RECONCILIADA** con las dos decisiones en el registro, la del
+> puesto 878 y la de hoy, **y ninguna se tacha**. **`OP-E-03` se adjudica sin puerta
+> nueva** y pasa a LISTA con su instrumento escrito. Y la mesa de Coleman abre con
+> **el precedente de la fase 3 verificado**: cuatro ids en uno, **diez aristas por
+> alias y las diez con su gemela literal**.
 
 ---
 
@@ -52,8 +59,8 @@ el JSONL discrepan, manda el JSONL.
 | | |
 |---|---:|
 | operaciones | **45** |
-| **LISTAS** | **38** |
-| **DECISION PENDIENTE** | **7** |
+| **LISTAS** | **39** |
+| **DECISION PENDIENTE** | **6** |
 
 | fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
@@ -61,7 +68,7 @@ el JSONL discrepan, manda el JSONL.
 | **01 FUENTES** | 7 | **7** | 0 |
 | **02 DESTEJIDOS** | 6 | **6** | 0 |
 | **03 FUSIONES** | 2 | **1** | 1 |
-| **04 ENLACES** | 3 | **2** | 1 |
+| **04 ENLACES** | 3 | **3** | 0 |
 | **05 SANEO** | 11 | **11** | 0 |
 | **06 MESAS** | 5 | 0 | **5** |
 | **07 ADUANA** | 2 | **2** | 0 |
@@ -69,12 +76,13 @@ el JSONL discrepan, manda el JSONL.
 | **09 LECTURAS DIRIGIDAS** | 3 | **3** | 0 |
 | **10 INVENTARIO** | 1 | **1** | 0 |
 
-> **LAS SIETE PENDIENTES SON CINCO MESAS, UN RECOMPUTO CON FECHA Y UNA DECISION DE
-> ALCANCE.** `OP-U-02` espera al dia en que el cribado llegue al puesto **3.388**, y
-> su disparador esta escrito en `08_VERIFICACION`. La septima es **`OP-E-03`**, y
-> tampoco es un dato que falte: **es una puerta que solo el fundador puede abrir**,
-> porque mete los cuatro dominios sin cribar en el plan por una via nueva.
-> **Ninguna de las siete es un dato que falte.**
+> **LAS SEIS PENDIENTES SON LAS CINCO MESAS Y UN RECOMPUTO CON FECHA.** `OP-U-02`
+> espera al dia en que el cribado llegue al puesto **3.388**, y su disparador esta
+> escrito en `08_VERIFICACION`. **Ninguna es un dato que falte.**
+>
+> **`OP-E-03` dejo de estar pendiente el 11 ago 2026.** El auditor la adjudico **sin
+> puerta nueva**: se escribe como **DIFERENCIA CONTRA LA COLA**, con su instrumento
+> ya probado, y **cuelga del mismo disparador del recomputo**.
 
 ## EL MAPA DE FASES, con sus dependencias
 
@@ -195,9 +203,9 @@ en vez de forzarse.**
 | [`BANCO_DEL_PLAN.md`](BANCO_DEL_PLAN.md) | **P.1** la regla de medicion por el resolutor, y **P.2** la firma posicional del injerto | escrita |
 | [`RECORTE_POSICIONAL.md`](RECORTE_POSICIONAL.md) | el recorte de P.2 corrido sobre **los 55 libros**: 67 nodos candidatos, seis libros | escrita |
 | [`LECTURAS_DIRIGIDAS.md`](LECTURAS_DIRIGIDAS.md) | los pares que la cola **no traera nunca**: 205 medidos, **27 leidos** en dos tandas | escrita |
-| [`10_INVENTARIO.md`](10_INVENTARIO.md) | **el inventario navegable**: 323 entradas por sujeto, con sus huecos nombrados | escrita |
+| [`10_INVENTARIO.md`](10_INVENTARIO.md) | **el inventario navegable**: 324 entradas por sujeto, con sus huecos nombrados | escrita |
 | [`03_FUSIONES.md`](03_FUSIONES.md) | 221 actos sobre 576 nodos, corte 2117, marcado para recomputo | escrita |
-| [`04_ENLACES.md`](04_ENLACES.md) | 624 candidatos, cero podas en 24 lecturas, mas los sueltos de racimos | escrita |
+| [`04_ENLACES.md`](04_ENLACES.md) | 477 candidatos tras calibrar, tasa medida en 46 lecturas, mas los sueltos de racimos | escrita |
 | [`06_MESAS.md`](06_MESAS.md) | cinco mesas con nomina, dependencia y opciones con evidencia | escrita |
 | [`07_ADUANA.md`](07_ADUANA.md) | el control posicional permanente, y la puerta semantica sin especificar | escrita |
 | [`08_VERIFICACION.md`](08_VERIFICACION.md) | verificacion por fase y **el criterio de HECHO** | escrita |

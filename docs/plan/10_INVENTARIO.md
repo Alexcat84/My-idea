@@ -21,8 +21,8 @@ racimo, acto, familia de ids, figura y defecto.
 | **acto** | **221** |
 | **familia_de_ids** | **53** |
 | **figura** | **12** |
-| **defecto** | **14** |
-| **TOTAL** | **323** |
+| **defecto** | **15** |
+| **TOTAL** | **324** |
 
 ---
 
@@ -108,7 +108,7 @@ que se sabe con la cobertura que tiene.**
 | **el efectivo contra la ganancia** | PURO | 3 de 3 | sano, forma cerrada |
 | **la ecuacion de valor** | MEZCLADO | 10 de 10 | repite, forma cerrada |
 | **el sales roadmap** | MEZCLADO | 10 de 15 | repite, cobertura INCOMPLETA |
-| **la competencia entre inversores** | SUB-PURO | 7 de 10 | repite, DEGRADADO el 11 ago 2026, cobertura INCOMPLETA |
+| **la competencia entre inversores** | SUB-PURO | 7 de 10 | repite, DEGRADADO y RECONCILIADO el 11 ago 2026, cobertura INCOMPLETA |
 | **la junta asesora** | MEZCLADO | 6 de 6 | en mesa, forma cerrada |
 | **los cuadrantes de mercado** | MEZCLADO | 15 de 15 | repite, forma cerrada |
 | **build, measure, learn** | SUB-PURO | 9 de 28 | repite, cobertura INCOMPLETA |
@@ -142,8 +142,35 @@ puesto 878), y **los tres pares que faltan son suyos y estan fuera de cola.**
 
 > **La degradacion no desmiente ninguna lectura: los siete pares leidos siguen
 > siendo siete A.** Dice otra cosa, y es la que vale: **la forma se declaro sobre
-> una componente que todavia iba a crecer.** La correccion del banco de la sesion A
-> esta escrita en `CORRECCIONES_A_APLICAR.md`, correccion 6.
+> una componente que todavia iba a crecer.**
+
+**Y LA DEGRADACION QUEDO RECONCILIADA EL MISMO DIA, que es lo que la cierra.** Ese
+quinto miembro **ya se habia mirado y ya se habia dejado fuera con motivo escrito**
+en el puesto **878**, el primer uso del barrido de las A: *su objeto es como
+negociar terminos y no como generar competencia entre inversores*. **La exclusion no
+se borra**, y ademas explica por que el racimo se declaro con cuatro.
+
+**Manda la admision de hoy por tres razones que se suman**, y ninguna es *porque es
+mas nueva*:
+
+| | |
+|---|---|
+| **1** | el propio archivo, en el puesto **1295** y por tanto **despues** de la exclusion y de la declaracion de puro, escribe que ese nodo **tiene una A vigente y ES GEMELO** de `construccion_de_leverage` |
+| **2** | **las dos decisiones no hablan del mismo objeto**: la del 878 decide el **TEMA** del racimo; la de hoy decide el **ACTO**, que por el banco 9.24 es el cierre transitivo de la relacion gemelo **y no admite gusto** |
+| **3** | **la forma publicada se calculo sobre el ACTO**, no sobre el tema: *puro, cuatro miembros, seis pares* es una cuenta de componente conexa, y por el banco 9.17 **manda la medicion** |
+
+> **LO QUE DE VERDAD PASO: se declaro una forma de ACTO sobre una nomina de TEMA.**
+> Mientras el quinto no tuvo A, las dos coincidian. **Desde el puesto 878 dejaron de
+> coincidir, y la etiqueta se quedo con la cuenta vieja.**
+
+> **Y EL DESEMPATE VA EN LOS DOS SENTIDOS.** Si los tres pares fuera de cola salen
+> **A**, vuelve a PURO con cinco. Si salen **D**, el quinto sale del acto y vuelve a
+> PURO con cuatro, **o sea gana la exclusion del 878**. **Tres lecturas lo
+> resuelven**, y por eso las dos decisiones se quedan con su fecha y ninguna se
+> tacha.
+
+La correccion para el banco de la sesion A esta en `CORRECCIONES_A_APLICAR.md`,
+**correccion 6**, con la reconciliacion entera dentro.
 
 ---
 
@@ -201,10 +228,11 @@ el catalogo produce y que hay que saber distinguir.**
 
 | defecto | cuantos | estado | operaciones |
 |---|---:|---|---|
-| **aristas que faltan** | 624 | pendiente | `OP-E-01` |
+| **aristas que faltan** | 477 | pendiente, BOLSA RECALIBRADA y tasa MEDIDA | `OP-E-01`, `OP-E-03` |
 | **grafias no canonicas del campo fuente** | 129 | reparado en el plan | `OP-S-11` |
 | **alias huerfanos** | 77 | reparado en el plan | `OP-S-08` |
 | **marco de un solo pais** | 73 | reparado en el plan | `OP-S-10` |
+| **gemelos que el cribado no ve** | 73 | pendiente, se recoge por DIFERENCIA CONTRA LA COLA | `OP-E-03` |
 | **injertos de fuente** | 67 | reparado en el plan | `OP-F-01`, `OP-F-02`, `OP-F-03` y mas |
 | **costuras internas confirmadas** | 46 | pendiente | `OP-D-01`, `OP-D-02`, `OP-D-03` y mas |
 | **auto-aristas via alias** | 27 | reparado en el plan | `OP-S-07`, `OP-C-04` |
@@ -216,10 +244,20 @@ el catalogo produce y que hay que saber distinguir.**
 | **racimos con miembro de otro dominio** | 3 | pendiente | `OP-E-02` |
 | **tratado extinto en id y titulo** | 1 | reparado en el plan | `OP-S-01` |
 
-> **DIEZ de los catorce ya tienen operacion LISTA en el plan.** Los cuatro
-> pendientes son las **costuras internas** (esperan destejido), las **aristas que
-> faltan** (esperan la calibracion del verbo), los **racimos con miembro ajeno** y
-> el **inventario de injertos**, que esta leido pero cuyo reparto es de la fase 01.
+> **11 de los 15 ya tienen operacion LISTA en el plan.** Los 4 pendientes son: **costuras internas confirmadas** (46), **aristas que faltan** (477), **racimos con miembro de otro dominio** (3), **gemelos que el cribado no ve** (73).
+
+> **Y el mas nuevo de todos es el ultimo de esa lista: los GEMELOS QUE EL CRIBADO NO
+> VE.** Aparecio el 11 ago 2026 leyendo la bolsa calibrada, **no se busco**, y son
+> unos 73 pares con banda de 36 a 135. **Seis de los siete ejemplares medidos estan
+> en `quality`, que no ha entrado nunca al cribado.**
+
+> **LA BOLSA DE LAS ARISTAS QUE FALTAN BAJO DE 624 A 477** con la senal del verbo, y
+> su tasa dejo de ser proyeccion: **32 sanas, 7 gemelos y 7 basura en 46 lecturas
+> pineadas**. **Con su limite escrito al lado, que es la cifra que nadie debe
+> soltar: la senal del verbo SOLO OPINA CUANDO CONOCE LAS DOS FAMILIAS DE ACCION, y
+> sobre los 477 las conoce en 104, el 21,8%.** Los 477 no son una bolsa filtrada del
+> todo: **son una bolsa filtrada en el quinto de sitios donde el instrumento tenia
+> con que comparar.**
 
 ---
 

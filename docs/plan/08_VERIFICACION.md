@@ -120,7 +120,32 @@ cobertura incompleta pudiendo cerrarla con cinco lecturas.**
 
 > **Y la regla que esto deja escrita, que es mas grande que estos cinco: TODA
 > NOMINA QUE SE PUEDA CERRAR CON UNA TANDA CORTA SE CIERRA ANTES DEL INVENTARIO
-> FINAL.** Una nomina con cobertura incompleta en el inventario **no dice lo que
+> FINAL.**
+
+### LO SEGUNDO QUE VIAJA CON EL RECOMPUTO: **`OP-E-03`, LA DIFERENCIA CONTRA LA COLA**
+
+**Enganchada aqui el 11 ago 2026 por adjudicacion del auditor.** El barrido
+calibrado **no abre puerta nueva al cribado**: se corre **el dia en que la cola de
+un dominio cierra**, y solo aporta **lo que no estaba en la cola**.
+
+| cuando | que se corre | sobre que |
+|---|---|---|
+| al cerrar la cola de **cada dominio** | `scripts/plan/diferencia_contra_cola.py --dominio <el que cerro>` | sus candidatos del barrido calibrado |
+| al cerrar **el catalogo entero**, puesto 3.388 | el mismo, sin `--dominio` | los 477 |
+
+**LO QUE SALE Y QUE SE HACE CON ELLO:** `docs/plan/DIFERENCIA_CONTRA_COLA.jsonl`,
+con su cuenta por dominio. **Esa diferencia va a LECTURAS DIRIGIDAS**, se marca como
+tal, **no entra en la cola y no mueve el marcador**, y **sus veredictos se cuentan
+aparte de la tasa por dominio** para no contaminarla.
+
+> **POR QUE NO SE PUEDE CORRER ANTES.** Mientras la cola del dominio no este
+> planificada, **su diferencia es un TECHO y no una cuenta.** El ensayo en vacio del
+> 11 ago 2026 dio 387 de diferencia sobre 477, con `quality` aportando 167 **solo
+> porque su cola todavia no existe.**
+
+> **Y LA COMPROBACION DE QUE CORRIO BIEN ES ARITMETICA: filas igual a pares
+> repetidos mas ya en cola mas diferencia.** Si no cuadra, el resolutor cambio o la
+> cola se movio bajo los pies. Una nomina con cobertura incompleta en el inventario **no dice lo que
 > hay: dice hasta donde se miro.**
 
 ---
