@@ -14819,3 +14819,99 @@ ayuda*, frente a un `cero_defectos` que despliega el programa **por areas**.
 pendientes.** El dominio son **844 pares** y llega al **3.255**.
 
 **El archivo esta en 2.464 sin huecos ni duplicados. Cero nodos tocados.**
+
+
+---
+
+## 90. REPORTE DEL TRAMO 2.465 A 2.467
+
+**Corte: puesto 2.467. Van 56 pares de `quality`** de sus 844.
+
+### 90.1 CIFRAS
+
+| | pares | A | D | **tasa** |
+|---|---:|---:|---:|---:|
+| **`quality`** | **56** | **21** | **35** | **37,5%** |
+| archivo global (corte 2.467) | 2.467 | **475** | **1.896** | **19,3%** (B 89, C 7) |
+
+**Ocho cortes:** 44,4% . 40,6% . 40,5% . 39,0% . 37,8% . 36,7% . 35,8% . **37,5%**.
+
+> **La curva se rompe: sube 1,7 puntos tras seis bajadas.** Y **no es una sorpresa ni un
+> problema: es la bolsa del 9.19 otra vez**, tres pares con **dos A** seguidas. **El
+> precedente esta escrito y medido**: en `health_safety` paso lo mismo entre el 2.388 y el
+> 2.400, y el dominio **cerro igual por debajo**. **Con 56 pares de 844, la tasa sigue sin
+> ser publicable, y esta subida lo demuestra mejor que las seis bajadas.**
+
+### 90.2 LA VARA POR TRAMO
+
+| la vara dijo | pares |
+|---|---:|
+| **CONTINUA** | **7** |
+| **REPITE** | **21** |
+| no se invoco | **28** |
+
+**28 de 56, exactamente la mitad.** **Cero PENDIENTE DE DOCTRINA. 29 ARISTA QUE FALTA
+(52%), 25 SOLAPE DECLARADO.**
+
+### 90.3 LO QUE ANADE ESTE TRAMO
+
+**SEGUNDO EJEMPLAR DE LA SEXTA ENTRADA, SALVAGUARDA (2.467), y llega solo seis pares
+despues del primero.** Muere `regla_todo_o_nada_inspeccion` y se lleva: *anota tu decision
+y **sigue revisando con cartas de control que la fraccion de defectos se mantenga
+estable***.
+
+> **Es lo unico del par que impide que una decision de todo o nada se tome una vez y quede
+> fija para siempre.** El superviviente **supone que p sigue donde estaba y no manda
+> comprobarlo**. **Se adosa al paso de comparar**, que es el que sin el freno se resuelve
+> solo.
+>
+> **Dos ejemplares en seis pares confirman que la sexta entrada no era un caso raro:** el
+> 2.461 protege contra **decidir por tamano de cliente**, este contra **decidir una vez y
+> no volver a mirar.** **Las dos son advertencias contra la salida facil de un paso
+> concreto.**
+
+**UNA PERDIDA DE NOMBRE QUE SE COMPROBO Y NO EXISTIA (2.465).** Muere
+`design_for_six_sigma_dmadv` y **la sospecha era inmediata**: el metodo se busca por
+**DMADV**. **Comprobado contra el texto del superviviente: su titulo dice *DFSS y
+Metodologia DMADV*.** **La denominacion sobrevive y la clase 9.28 no aplica.**
+
+> **Es la tercera vez en el dominio que una comprobacion barata evita un registro falso**,
+> despues del COPQ del 2.414 (la arista ya estaba) y del apoyo al que queda fuera del 2.440
+> (el catalogo lo tenia dos veces). **La regla de la disciplina del dictado esta pagando
+> sola.**
+
+**EL EVENTO KAIZEN, PARTIDO EN CALENDARIO Y ENGANCHE (2.466).**
+
+| `eventos_kaizen_rie` | `kaizen_mejora_continua` |
+|---|---|
+| **lo que pasa ANTES**: datos de una a tres semanas antes, **formacion de los participantes una semana antes** | **de donde sale el area y como se mide**: el desperdicio **identificado en el VSM**, y el impacto **en velocidad y desperdicio antes y despues** |
+
+> **Sin el calendario, la semana del evento se gasta preparandose. Sin el VSM, el area se
+> elige por corazonada.** **ARISTA QUE FALTA.**
+
+### 90.4 LAS 21 A DE `quality`, con las discutibles marcadas
+
+`2.414`, `2.417`, `2.418`, `2.420`, `2.421`, `2.424`, `2.426`, `2.431`, `2.432`, `2.436`,
+`2.437`, `2.438`, `2.440`, `2.445`, `2.447`, `2.451`, `2.453`, `2.458`, `2.461`, **`2.465`**,
+**`2.467`**.
+
+**LAS TRES MAS DISCUTIBLES, y la R54 empieza aqui:**
+
+1. **2.467.** La clase se sostiene con holgura (el superviviente trae la precondicion de
+   control, la prohibicion de muestreos intermedios y la extension a varios proveedores).
+   **Lo que se marca es si la salvaguarda es linea o paso**: *seguir revisando con cartas
+   de control* **se parece a un paso mas que la del 2.461**, y si el auditor la lee asi, el
+   par se voltea.
+2. **2.465.** Muere el nodo cuyo id es **el nombre canonico del metodo** (`dmadv`) y
+   sobrevive el que lo lleva **solo en el titulo**. **La comprobacion dice que la
+   denominacion se conserva**, pero **el id muere**, y el id es por donde entra el grafo,
+   no el lector. **Se marca para que la fusion verifique que el alias queda registrado.**
+3. **2.461**, ya releida y confirmada (R53), **queda marcada como el ejemplar que hizo
+   pasar la tabla a seis motivos.**
+
+### 90.5 LO QUE FALTA
+
+**Faltan 150 pares del encargo, del 2.468 al 2.617.** **Checkpoints 2.500 y 2.600
+pendientes.** El dominio son **844 pares** y llega al **3.255**.
+
+**El archivo esta en 2.467 sin huecos ni duplicados. Cero nodos tocados.**
