@@ -21,8 +21,8 @@ racimo, acto, familia de ids, figura y defecto.
 | **acto** | **221** |
 | **familia_de_ids** | **53** |
 | **figura** | **14** |
-| **defecto** | **16** |
-| **TOTAL** | **327** |
+| **defecto** | **17** |
+| **TOTAL** | **328** |
 
 ---
 
@@ -115,7 +115,7 @@ que se sabe con la cobertura que tiene.**
 | **el compromiso contado tres veces** | PURO | 3 de 3 | sano, forma cerrada |
 | **la seleccion de canal** | MEZCLADO | 10 de 10 | repite, forma cerrada |
 | **la supervision de la IA** | PARTIDO 5 mas 4 mas 1 | 14 de 45 al puesto 1517 | en mesa, particion PROVISIONAL |
-| **la mesa unida de puertas y portafolio** | TRES ACTOS de 13, 2 y 2 bajo UNA nomina de tema de 17 | 49 de 136 | en mesa, 26 LECTURAS DIRIGIDAS EJECUTADAS el 12 ago 2026, y el trio ya decidido |
+| **la mesa unida de puertas y portafolio** | DOS MITADES con frontera declarada, y una sola fusion dentro | 49 de 136 | MESA ADJUDICADA el 12 ago 2026: LAS DOS MITADES QUEDAN, con frontera adoptada |
 | **el racimo del pivote** | SIETE NODOS A TRES: dos puertas y el acto al que las dos llevan | 13 de 21 | MESA ADJUDICADA el 12 ago 2026: DOS PUERTAS MAS UN ACTO |
 | **la serie de Coleman** | MEZCLADO | 41 de 378 | MESA ADJUDICADA el 12 ago 2026, siete operaciones hijas |
 
@@ -221,7 +221,7 @@ el catalogo produce y que hay que saber distinguir.**
 | **LA A DE BLOQUE (P.4)** | 1 ejemplar y 1 contraejemplo | la repeticion vive entre el bloque injertado y el otro nodo entero. Destejido mas fusion parcial, nunca fusion de enteros |
 | **LA COLA DEL DOMINIO SE AGOTA POR DENTRO (9.27)** | 3 dominios medidos | la tasa de A cae dentro de cada dominio: un dominio a medio leer no describe al dominio |
 | **EL PASO DE OFICIO** | medio dominio exportacion | una linea generica que abre media docena de nodos y por si sola no decide ninguna clase |
-| **frontera de disposicion** | 3 ejemplares | Dos nodos que mandan LO CONTRARIO sobre el MISMO gesto, los dos con razon dentro de su doctrina. No es defecto y no se funde: se declara y los dos se quedan. LOS TRES EJEMPLARES: la FRONTERA INTRA LIBRO del puesto 877 (Founder's Dilemmas contra si mismo: autoridad clara contra estructura colegiada); la FRONTERA DE MOMENTO del 221 (Rackham no presionar el cierre contra Weinberg pedir un si o un no), probada por seis lados; y la FRONTERA DE LA DECISION DE PIVOTAR del 1298 (el punto brillante de Ries mas Traction contra decidir rapido y sin miedo de Blank), declarada el 12 ago 2026. LA TERCERA ES LA PRIMERA QUE QUEDA REPARTIDA EN DOS NODOS DISTINTOS del mismo racimo, entre una puerta y el acto que le sigue, lo que la hace mas facil de perder: los dos lados ya no estan uno al lado del otro. UNA FRONTERA SE PIERDE POR PODA, NO POR FUSION. |
+| **frontera de disposicion** | 5 ejemplares | Dos nodos que mandan LO CONTRARIO sobre el MISMO gesto, los dos con razon dentro de su doctrina. No es defecto y no se funde: se declara y los dos se quedan. LOS TRES EJEMPLARES: la FRONTERA INTRA LIBRO del puesto 877 (Founder's Dilemmas contra si mismo: autoridad clara contra estructura colegiada); la FRONTERA DE MOMENTO del 221 (Rackham no presionar el cierre contra Weinberg pedir un si o un no), probada por seis lados; y la FRONTERA DE LA DECISION DE PIVOTAR del 1298 (el punto brillante de Ries mas Traction contra decidir rapido y sin miedo de Blank), declarada el 12 ago 2026. LA TERCERA ES LA PRIMERA QUE QUEDA REPARTIDA EN DOS NODOS DISTINTOS del mismo racimo, entre una puerta y el acto que le sigue, lo que la hace mas facil de perder: los dos lados ya no estan uno al lado del otro. UNA FRONTERA SE PIERDE POR PODA, NO POR FUSION. AMPLIADO EL 12 ago 2026 CON DOS MAS, y las dos de clase distinta a las tres primeras. LA CUARTA, la frontera de los dos niveles, NO ES UNA CONTRADICCION SINO UNA DISTINCION, y es la primera que EL CATALOGO ESCRIBIO SOLO: gestion_portafolio_dos_niveles la lleva dentro de sus pasos, estrategicas contra tacticas y complementarias no sustitutivas, y es madre de las dos mitades tres veces (LD-35, LD-43, LD-51). LA QUINTA, discovery contra validation, es la MAS PROBADA DEL PLAN: quince pares leidos entre los dos actos y LOS QUINCE D, con el 445 y el 1477 citados, uno pregunta y el otro cobra. Ninguna de las dos necesitaba adjudicacion: necesitaba REGISTRO, porque el riesgo no es decidirlas mal sino perderlas por descuido en una fusion futura. |
 | **el nombre que esconde** | 3 ejemplares | TRES VECES el contador dejo fuera a un miembro real porque su NOMBRE no llevaba la palabra del tema, y las tres veces lo cazo el segundo instrumento. (1) el sexto de los cuadrantes de mercado; (2) seis_medios_comunicacion_cliente, la cabeza de la serie de medios de Coleman, levantada por el veredicto 948; (3) decision_factory_mentality, miembro 17 de la mesa unida, levantado por las A de los puestos 1499 y 583, y que se llama Haz menos proyectos pero hazlos bien. EL FALLO ES EL MISMO: el nombre no dice algo falso, CALLA LO QUE EL NODO HACE. SE CITA COMO HISTORIA Y NO COMO RECOMENDACION: el estandar de los dos instrumentos ya estaba en el banco 9.20 antes de los tres casos. Lo que anaden no es la regla: es la cuenta de lo que habria costado no tenerla, tres nominas mal en tres mesas distintas. |
 
 ---
@@ -245,9 +245,10 @@ el catalogo produce y que hay que saber distinguir.**
 | **Incoterms sin version** | 3 | reparado en el plan | `OP-S-02` |
 | **portal caducado export.gov** | 3 | reparado en el plan | `OP-S-03` |
 | **racimos con miembro de otro dominio** | 3 | pendiente | `OP-E-02` |
+| **nodos puente sin desempatar** | 2 | pendiente, con su lectura encargada | `OP-M-01-FUSION`, `OP-M-01-TRIO`, `OP-M-05-APERTURA` |
 | **tratado extinto en id y titulo** | 1 | reparado en el plan | `OP-S-01` |
 
-> **12 de los 16 ya tienen operacion LISTA en el plan.** Los 4 pendientes son: **costuras internas confirmadas** (46), **aristas que faltan** (477), **racimos con miembro de otro dominio** (3), **gemelos que el cribado no ve** (73).
+> **12 de los 17 ya tienen operacion LISTA en el plan.** Los 5 pendientes son: **costuras internas confirmadas** (46), **aristas que faltan** (477), **racimos con miembro de otro dominio** (3), **gemelos que el cribado no ve** (73), **nodos puente sin desempatar** (2).
 
 > **Y el mas nuevo de todos es el ultimo de esa lista: los GEMELOS QUE EL CRIBADO NO
 > VE.** Aparecio el 11 ago 2026 leyendo la bolsa calibrada, **no se busco**, y son

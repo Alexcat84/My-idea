@@ -1,6 +1,6 @@
 # EL REGISTRO DE LAS FRONTERAS DE DISPOSICION
 
-**Abierto el 12 ago 2026 con la tercera.** Hasta hoy las dos primeras vivian sueltas
+**Abierto el 12 ago 2026 con la tercera, y cerrado el mismo dia con CINCO.** Hasta hoy las dos primeras vivian sueltas
 en el informe y **no habia donde mirarlas juntas**, que es justo lo que una frontera
 necesita: **que se pueda comprobar que sigue ahi.**
 
@@ -32,7 +32,7 @@ necesita: **que se pueda comprobar que sigue ahi.**
 
 ---
 
-## LAS TRES
+## LAS CINCO
 
 ### 1. LA FRONTERA INTRA LIBRO . puesto **877**
 
@@ -91,19 +91,82 @@ mas Traction** contra **Blank**.
 > puerta y el acto que le sigue**. **Eso la hace mas facil de perder**, porque los
 > dos lados **ya no estan uno al lado del otro**.
 
+### 4. LA FRONTERA DE LOS DOS NIVELES . adoptada el **12 ago 2026**
+
+**Y ES LA PRIMERA QUE EL CATALOGO ESCRIBIO SOLO.** No se decidio donde ponerla: **se
+encontro ya escrita dentro de un nodo**, y la mesa la **adopto**.
+
+**El nodo es `gestion_portafolio_dos_niveles`**, y lo dice en sus propios pasos:
+
+| | |
+|---|---|
+| **el criterio** | *definir que decisiones son **estrategicas**, de alto nivel, y cuales **tacticas**, de seleccion y priorizacion* |
+| **la relacion** | *usar ambos procesos de forma **complementaria, no sustitutiva*** |
+
+**A cada lado quedan las dos mitades de la mesa unida:** **la puerta**, que decide un
+proyecto en su momento, y **el portafolio**, que decide el conjunto.
+
+**LAS TRES LECTURAS QUE LO PRUEBAN**, y las tres dicen lo mismo por caminos distintos:
+
+| lectura | contra que | que dice |
+|---|---|---|
+| **`LD-35`** | `estructura_gates` | el paso 1 de dos niveles dice *establecer un proceso de gating* **en una linea**, y el otro trae el procedimiento |
+| **`LD-43`** | `requisitos_gates_con_dientes` | **enlace mutuo**: cada uno expande una linea distinta del otro |
+| **`LD-51`** | `gates_go_kill_decision_points` | la misma linea, y el otro trae **la disciplina de decidir** |
+
+> **ES MADRE DE LAS DOS MITADES TRES VECES.** Por eso la frontera no hay que
+> inventarla: **hay que no borrarla.**
+
+> **Y ES DE OTRA CLASE QUE LAS TRES ANTERIORES, y conviene decirlo:** las tres
+> primeras son **contradicciones** entre dos textos que mandan lo contrario. **Esta no
+> es una contradiccion: es una DISTINCION**, y el catalogo la sostiene en un solo
+> nodo. **Se registra aqui igual, porque lo que la protege es lo mismo: que nadie
+> funda los dos lados.**
+
+### 5. LA FRONTERA DE LAS DOS ETAPAS . declarada el **12 ago 2026**
+
+**Customer Discovery contra Customer Validation. QUINCE A CERO.**
+
+**De los 63 pares posibles entre los dos actos hay QUINCE leidos, y LOS QUINCE SON
+D.** **Es la frontera mas probada del plan.**
+
+**LOS DOS VEREDICTOS MAS EXPLICITOS:**
+
+> **PUESTO 445**: *el descubrimiento del cliente contra la validacion con clientes.
+> Son las dos etapas consecutivas del metodo, y el segundo lo dice **en su propia
+> condicion de activacion**: si ya terminaste el descubrimiento y confirmaste el
+> problema. **Ninguna sobra.***
+
+> **PUESTO 1477**: *salir a preguntar contra salir a cobrar. Es la **segunda prueba
+> directa** de la frontera entre las dos componentes mayores del archivo.* **UNO
+> PREGUNTA Y EL OTRO COBRA**, y lo dice en su primer paso: *revisar las hipotesis QUE
+> YA SE CONFIRMARON hablando con clientes*.
+
+> **SE REGISTRA PARA QUE NINGUNA OPERACION POSTERIOR LOS JUNTE.** No hacia falta una
+> mesa para decidirla: **hacia falta escribirla.** Quince lecturas sin una sola
+> excepcion **no dejan nada que adjudicar**, y por eso el riesgo no es que se decida
+> mal: **es que se pierda por descuido en una fusion futura.**
+
 ---
 
 ## LO QUE ESTE REGISTRO OBLIGA
 
 | | |
 |---|---|
-| **1** | **ninguna de las tres se funde**, y cualquier operacion que lo intente **falla contra este registro** |
+| **1** | **ninguna de las cinco se funde**, y cualquier operacion que lo intente **falla contra este registro** |
 | **2** | **cada una lleva escrita la discrepancia**, no solo los dos nodos |
 | **3** | **al recomputar, se comprueba que los dos lados siguen vivos y con su texto**. Una frontera **se pierde por poda, no por fusion** |
 
 > **Y LA CUARTA OBLIGACION, que es la que este registro existe para cumplir: SE
 > MIRAN JUNTAS.** Tres fronteras en tres sitios distintos del informe **no son un
 > registro: son tres notas.**
+
+> **Y UNA DISTINCION QUE LAS CINCO OBLIGAN A HACER: TRES SON CONTRADICCIONES Y DOS
+> SON DISTINCIONES.** Las tres primeras enfrentan dos textos que **mandan lo
+> contrario**; la cuarta y la quinta separan **dos cosas que no son lo mismo**. **Se
+> registran juntas porque lo que las protege es identico**: que nadie funda los dos
+> lados. **Pero se leen distinto**: una contradiccion **hay que explicarla al lector**;
+> una distincion **basta con no borrarla.**
 
 **HUECO NOMBRADO:** el informe habla ademas de **fronteras CANDIDATAS** y de
 **cinco fronteras que aguantan** en otro sentido (las que separan racimos, no

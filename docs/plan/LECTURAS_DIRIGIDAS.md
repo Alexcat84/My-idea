@@ -561,3 +561,39 @@ la frontera** dentro de su texto; y **los tres actos NO son uno**: son **madre e
 
 **LA COBERTURA DE `OP-M-01` PASA DE 23 DE 136 A 49 DE 136**, y **con el 100% de lo que
 decide leido**.
+
+---
+
+# QUINTA TANDA: **LA QUE DESEMPATA EL PUENTE** . `LD-58`
+
+**Encargada el 12 ago 2026 al adjudicar `OP-M-01`.** **UNA sola lectura, y sin ella
+dos operaciones LISTAS no se pueden ejecutar las dos.**
+
+| | |
+|---|---|
+| **`LD-58`** | `gates_go_kill_decision_points` contra `requisitos_gates_con_dientes` |
+
+**POR QUE, y es aritmetica de la relacion gemelo:**
+
+| lo medido | |
+|---|---|
+| `sistema_gates_go_kill` es **A** con `gestion_de_portafolio_gates_go_kill` | puesto **488** |
+| `sistema_gates_go_kill` es **A** con `requisitos_gates_con_dientes` | puesto **801** |
+| **pero `requisitos_gates_con_dientes` es D con `gestion_de_portafolio_gates_go_kill`** | **`LD-44`** |
+
+> **LA TRANSITIVIDAD SE ROMPE: un nodo es A con los dos lados y los dos lados son D
+> entre si.** `sistema_gates_go_kill` **es un NODO PUENTE**, que es exactamente el caso
+> que la regla **P.5** existe para cazar: **la componente puede ser UNA familia o DOS
+> pegadas por un nodo.**
+
+**LA UNICA LECTURA QUE DESEMPATA ES LA QUE FALTA**, porque cierra el cuadrilatero:
+`gates_go_kill_decision_points` contra `requisitos_gates_con_dientes`.
+
+| si sale | entonces |
+|---|---|
+| **A** | los dos bloques son **una sola familia** y las dos fusiones son **una** |
+| **D** | son **dos familias pegadas por `sistema_gates_go_kill`**, y hay que decidir **a cual de las dos se va el puente** |
+
+> **SIN ESTA LECTURA, `OP-M-01-FUSION` y `OP-M-01-TRIO` se pueden ejecutar por
+> separado pero NO LAS DOS SIN VOLVER A MIRAR EL 801.** Esta escrito dentro de las dos
+> operaciones.

@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA COMPLETO: ONCE FASES, 60 OPERACIONES, 57 LISTAS. TRES MESAS ADJUDICADAS, LAS DOS ULTIMAS CON SU EXPEDIENTE ESCRITO Y SU EVIDENCIA PUESTA, Y SOLO TRES PENDIENTES.**
+**EL PLAN ESTA CERRADO: ONCE FASES, 67 OPERACIONES, 66 LISTAS. LAS CINCO MESAS ADJUDICADAS. QUEDA UNA SOLA PENDIENTE, `OP-U-02`, Y NO ES UNA DECISION: ES UNA ESPERA CON DISPARADOR.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -27,6 +27,14 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > lecturas***. Las dos nominas que faltaban, **el pivote y la serie de Coleman**,
 > estan medidas y escritas en sus mesas. Y **el puro de la competencia entre
 > inversores DEGRADA a sub-puro** con correccion declarada.
+>
+> **UNDECIMA PASADA, 12 ago 2026: LAS CINCO MESAS QUEDAN ADJUDICADAS Y EL PLAN SE
+> CIERRA.** **`OP-M-01`**: las dos mitades quedan las dos y **la frontera se ADOPTA de un
+> nodo que ya la llevaba escrita**, con **una sola fusion**, **once enlaces** y **la
+> escalera de los tres eslabones con una sola arista nueva**. **`OP-M-05`**: dos etapas,
+> **quince a cero**, con tres fusiones dentro. El registro de fronteras **cierra en
+> CINCO**, y aparece una clase nueva de defecto: **los NODOS PUENTE**. Y esta pagina
+> gana **el RESUMEN DE EJECUCION**, que es lo que se lee el dia que el cribado cierre.
 >
 > **DECIMA PASADA, 12 ago 2026: SE EJECUTAN 26 LECTURAS DIRIGIDAS Y LA MESA UNIDA
 > DEJA DE ESTAR A CIEGAS.** El auditor mando **no sentarla** con dos de setenta y dos
@@ -97,29 +105,26 @@ el JSONL discrepan, manda el JSONL.
 
 | | |
 |---|---:|
-| operaciones | **60** |
-| **LISTAS** | **57** |
-| **DECISION PENDIENTE** | **3** |
+| operaciones | **67** |
+| **LISTAS** | **66** |
+| **DECISION PENDIENTE** | **1** |
 
 | fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
 | **0 CODIGO** | 5 | **5** | 0 |
 | **01 FUENTES** | 7 | **7** | 0 |
 | **02 DESTEJIDOS** | 7 | **7** | 0 |
-| **03 FUSIONES** | 13 | **12** | 1 |
-| **04 ENLACES** | 4 | **4** | 0 |
+| **03 FUSIONES** | 17 | **16** | 1 |
+| **04 ENLACES** | 7 | **7** | 0 |
 | **05 SANEO** | 12 | **12** | 0 |
-| **06 MESAS** | 5 | **3** | **2** |
+| **06 MESAS** | 5 | **5** | **0** |
 | **07 ADUANA** | 2 | **2** | 0 |
 | **08 VERIFICACION** | 1 | **1** | 0 |
 | **09 LECTURAS DIRIGIDAS** | 3 | **3** | 0 |
 | **10 INVENTARIO** | 1 | **1** | 0 |
 
-> **LAS TRES PENDIENTES SON DOS MESAS Y UN RECOMPUTO CON FECHA.** **`OP-M-04`,
-> `OP-M-02` y `OP-M-03` quedaron ADJUDICADAS** entre el 11 y el 12 de agosto, y con
-> ellas **`OP-M-02-MEDIOS`**, que fijo doctrina: **el cableado desempata, no
-> decide**. Quedan **`OP-M-01`**, la mesa unida, **cuyo expediente ya esta escrito y
-> cuya cola esta AGOTADA**, y **`OP-M-05`**. `OP-U-02`
+> **LA UNICA PENDIENTE ES `OP-U-02`, Y NO ES UN DATO QUE FALTE: ES UNA ESPERA.**
+> **LAS CINCO MESAS QUEDARON ADJUDICADAS** entre el 11 y el 12 de agosto. `OP-U-02`
 > espera al dia en que el cribado llegue al puesto **3.388**, y su disparador esta
 > escrito en `08_VERIFICACION`. **Ninguna es un dato que falte.**
 >
@@ -253,9 +258,107 @@ en vez de forzarse.**
 | [`EXPEDIENTE_MESA_UNIDA.md`](EXPEDIENTE_MESA_UNIDA.md) | **la cuarta mesa y la grande**, con sus dos correcciones de entrada, para adjudicar | escrita |
 | [`FRONTERAS_DECLARADAS.md`](FRONTERAS_DECLARADAS.md) | **el registro de las fronteras de disposicion**: tres ejemplares, y ninguna se funde | escrita |
 | [`LD_MESA_UNIDA.md`](LD_MESA_UNIDA.md) | **las 26 lecturas dirigidas de la mesa unida**, ejecutadas, con su saldo | **ejecutada** |
-| [`EXPEDIENTE_MESA_M05.md`](EXPEDIENTE_MESA_M05.md) | **la quinta y ultima mesa**, con su pregunta mayor ya contestada | escrita |
+| [`EXPEDIENTE_MESA_M05.md`](EXPEDIENTE_MESA_M05.md) | **la quinta y ultima mesa, YA ADJUDICADA**: dos etapas, quince a cero | **cerrada** |
 | [`03_FUSIONES.md`](03_FUSIONES.md) | 221 actos sobre 576 nodos, corte 2117, marcado para recomputo | escrita |
 | [`04_ENLACES.md`](04_ENLACES.md) | 477 candidatos tras calibrar, tasa medida en 46 lecturas, mas los sueltos de racimos | escrita |
 | [`06_MESAS.md`](06_MESAS.md) | cinco mesas con nomina, dependencia y opciones con evidencia | escrita |
 | [`07_ADUANA.md`](07_ADUANA.md) | el control posicional permanente, y la puerta semantica sin especificar | escrita |
 | [`08_VERIFICACION.md`](08_VERIFICACION.md) | verificacion por fase y **el criterio de HECHO** | escrita |
+
+---
+
+# EL RESUMEN DE EJECUCION
+
+**Esta es la pagina que se lee EL DIA QUE EL CRIBADO CIERRE.** Una sola: las fases en
+orden, que espera a que, y **como se sabe que cada una esta HECHA.**
+
+> **LA REGLA DE ORO DEL DIA DE LA PASADA: no se decide nada.** Todo lo que hay que
+> decidir **ya esta decidido y escrito**. Si algo obliga a pensar, **es que falta una
+> operacion, no que haya que improvisarla.**
+
+## EL ORDEN, y las tres ataduras que lo fijan
+
+| # | fase | espera a | **HECHO cuando** |
+|---:|---|---|---|
+| **0** | **CODIGO** | nada. **Va primera y bloquea todo lo que mueve un id** | las **cinco guardas** pasan en verde **y cada una fallo primero en su caso positivo**. Una guarda que nunca fallo no esta probada |
+| **1** | **FUENTES** | fase 0 | los **55 libros canonicos** normalizados, los **67 injertos** repartidos, y **ningun nodo con dos obras sin declarar** |
+| **2** | **DESTEJIDOS** | fase 1 | las **siete cirugias** hechas, cada una con su corte en el paso que la ficha nombra, y **el campo fuente con una sola obra** en cada nodo tocado |
+| **3** | **FUSIONES** | fase 2, **y cada acto su lectura de P.5** | **cada fusion simulada antes**, sus perdidas comprobadas **una por una** en el texto final, y **su alias cargando los ids que mueren** |
+| **4** | **ENLACES** | fase 3 | las aristas escritas **con ids RESUELTOS**, **una sola direccion** salvo los dos enlaces mutuos, y **cero aristas por alias nuevas** |
+| **5** | **SANEO** | fases 1 a 4 **enteras** | `OP-S-12` da **cero duplicadas** y el **vecindario resuelto de cada nodo no cambia** |
+| **6** | **MESAS** | ya no espera: **las cinco estan adjudicadas** | **nada que hacer el dia de la pasada**. Sus operaciones hijas viven en las fases 3 y 4 |
+| **7** | **ADUANA** | fase 1 | el control posicional **corre y no encuentra nada nuevo** |
+| **8** | **VERIFICACION** | todas | el **recomputo** corre entero y **cuadra sin fugas** |
+| **9** | **LECTURAS DIRIGIDAS** | **cada una a su fase** | las cinco tandas **con su veredicto escrito** y **el marcador del cribado sin mover** |
+| **10** | **INVENTARIO** | todas | **cada cifra con su fecha de corte**, y **ningun hueco sin nombre** |
+
+### LAS TRES ATADURAS QUE NO SE PUEDEN SOLTAR
+
+| | la atadura | por que |
+|---:|---|---|
+| **1** | **la FASE 0 va antes que todo lo que mueve un id** | sin las guardas, **una fusion mal hecha no da sintoma**: el resolutor la tapa |
+| **2** | **`OP-S-12` va AL FINAL, despues de la ultima fusion** | **cada fusion fabrica sus duplicadas.** Correrla antes obliga a correrla dos veces. **Medido: las mesas fabrican once entre todas** |
+| **3** | **cada acto se lee ENTERO antes de fundirse** (P.5) | es lo unico que distingue **una familia** de **dos pegadas por un nodo puente**. **Ya cazo dos** |
+
+## LO QUE HAY QUE LEER ANTES DE EMPEZAR, y son cinco paginas
+
+| | |
+|---|---|
+| [`BANCO_DEL_PLAN.md`](BANCO_DEL_PLAN.md) | **las ocho reglas**. Sin P.1, P.5, P.7 y P.8 no se ejecuta nada bien |
+| [`FRONTERAS_DECLARADAS.md`](FRONTERAS_DECLARADAS.md) | **las cinco que no se funden**. Es la lista contra la que se comprueba cada fusion |
+| [`FASE_0_CODIGO.md`](FASE_0_CODIGO.md) | **las cinco guardas**, con su caso positivo |
+| [`08_VERIFICACION.md`](08_VERIFICACION.md) | **el disparador del recomputo** y lo que viaja con el |
+| **este resumen** | el orden y el criterio de HECHO |
+
+## LOS CUATRO HUECOS DE ORDEN QUE ESTE RESUMEN DESTAPA
+
+**Ninguno estaba visto antes de escribirlo, y los cuatro son de ORDEN, no de
+contenido.**
+
+### 1. `OP-E-05` escribe aristas en los dos sentidos, y **la guarda `OP-C-05` las borraria**
+
+**Los dos enlaces mutuos del banco 9.22 son las UNICAS aristas del plan que van en las
+dos direcciones a proposito.** Y la contraorden de la escalera del 12 ago 2026 dice
+que **la vuelta es una instruccion falsa**.
+
+> **LA GUARDA TIENE QUE LLEVAR LA EXCEPCION ESCRITA, o el dia de la pasada borra
+> cuatro aristas que costaron dos lecturas.** **La regla de la escalera vale para las
+> ESCALERAS, no para los enlaces mutuos.**
+
+### 2. `OP-E-04` tiene que escribir **ids RESUELTOS**, y ese dia seis de sus nueve destinos ya han muerto
+
+**Cinco de sus nueve aristas apuntan a `gates_go_kill_decision_points` y una a
+`estructura_gates`**, y **los dos mueren el mismo dia**, en `OP-M-01-FUSION` y en
+`OP-M-01-TRIO`.
+
+> **Si se escriben literales, nacen SEIS aristas por alias el mismo dia en que
+> `OP-S-12` acaba de limpiar mil cincuenta y seis.** Esta escrito en la verificacion
+> de la operacion, **y es la trampa mas facil de pisar de todo el plan.**
+
+### 3. DOS pares hay que **RELEERLOS DESPUES** de su fusion, y eso no es una fase
+
+| el par | tras que operacion | por que |
+|---|---|---|
+| **707**, `customer_development_modelo` contra `customer_discovery_overview` | `OP-M-05-INDICE` | queda en **B** y **su contraparte muere**. Se relee contra el superviviente |
+| **1096**, `earlyvangelists_ventas_tempranas` contra `filosofia_customer_validation` | `OP-M-05-APERTURA` | su **A** se volveria contradiccion con su propia **D** |
+
+> **El banco 9.10 ya manda recomputar del archivo, pero NO dice que una fusion pueda
+> obligar a releer un par ya cerrado.** **Estas dos lo obligan**, y **no hay fase que
+> las recoja**: viven dentro de la verificacion de sus operaciones.
+
+### 4. LA FASE 5 NO PUEDE DAR *HECHO* HASTA QUE LA 3 Y LA 4 TERMINEN, y la 3 depende de lecturas que aun no existen
+
+**`OP-M-01-FUSION` y `OP-M-01-TRIO` esperan a `LD-58`**, y **`OP-M-05-APERTURA` espera
+a la lectura de su sexto par.** **Las dos lecturas estan encargadas y ninguna esta
+hecha.**
+
+> **O sea que el plan esta CERRADO en decisiones y ABIERTO en lecturas.** Son **dos
+> lecturas dirigidas**, y **hasta que no se hagan, la cadena fase 3, fase 4, fase 5 no
+> puede cerrar.** **No es una decision pendiente: es trabajo pendiente, y esa
+> diferencia hay que decirla.**
+
+## LA FRASE QUE RESUME EL DIA
+
+> **Se ejecutan sesenta y seis operaciones LISTAS en el orden de arriba, se comprueba
+> cada una contra su criterio de HECHO, y NO SE DECIDE NADA.** Lo unico que se espera
+> es **`OP-U-02`**, y su disparador es **el puesto 3.388.**
