@@ -497,3 +497,42 @@ dominio que condiciona con un adjetivo en vez de con un pais.**
 | **herramientas** | ningun nodo vivo nombra las seis muertas |
 | **marco** | todo nodo con marco de un solo pais **nombra el pais en `condiciones_activacion`** |
 | **general** | Gate 0 verde, y ningun Expediente ni plan muestra un id crudo |
+
+---
+
+## `OP-S-11`: EL CAMPO `fuente` CANONICO . **LISTA**
+
+**Una sola operacion que sirve a TRES cosas**, y por eso no se deja repartida:
+
+| a quien sirve | por que |
+|---|---|
+| **al CENSO** | hoy **el mismo libro se cuenta dos y tres veces** |
+| **al PREDICTOR** | la senal que mejor separa costuras (**91% en nodos de dos o mas libros contra 4% en los de uno**) **se calcula sobre este campo**, y la propia campana declaro que **su base no esta auditada** |
+| **a la ADUANA** | **sin lista canonica, el control posicional de P.2 cuenta mal**. Es prerrequisito de `OP-A-01` |
+
+**LA TABLA DE MAPEO, medida el 11 ago 2026, y va DENTRO de esta operacion:**
+
+> **129 grafias distintas en primera posicion se reducen a 55 LIBROS CANONICOS.**
+
+| caso probado | grafias | sin normalizar | canonico |
+|---|---:|---:|---:|
+| Hugos | **2** | 23 | **21** |
+| Horowitz | **3** | 16 | **14** |
+
+**EL PATRON DE LA AVERIA, y no es de tecleo**: varias grafias estan **TRUNCADAS a
+unos treinta caracteres** (*Essentials of Supply Chain Mana*, *Co-Intelligence_
+Living and Wor*, *Juran's Quality Handbook_ The C*). **Apunta a un recorte de campo
+en alguna importacion.**
+
+**Y HAY UN NODO QUE DECLARA EL MISMO LIBRO DOS VECES**:
+`decision_de_vender_startup` lleva *The Hard Thing About Hard Thing* y *The Hard
+Thing About Hard Things* **en la misma linea**.
+
+> **La nomina de Hugos del auditor, los 21, SOLO CUADRA CON EL NOMBRE CANONICO.**
+> Es la prueba de que **sin esta operacion las cifras del recorte no son
+> reproducibles.**
+
+**LA CONSECUENCIA QUE MAS IMPORTA, y no es del censo**: **un libro con dos grafias
+puede convertir un nodo de UN libro en uno de DOS**, y el predictor de costuras
+separa justamente por ahi. **Mientras el campo no este limpio, el 91% contra 4% no
+se puede usar para nada que no sea ordenar una cola.**

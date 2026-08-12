@@ -3,7 +3,7 @@
 **La unica fase del plan que ANADE en vez de quitar.** No mueve ids, no funde, no
 desteje: **pone la arista que falta.**
 
-**Operaciones: `OP-E-01` y `OP-E-02`. LAS DOS DECISION PENDIENTE.**
+**Operaciones: `OP-E-01` y `OP-E-02`. LAS DOS LISTAS**, adjudicadas el 11 ago 2026.
 
 ---
 
@@ -43,8 +43,30 @@ de Wilson al 95% **entre 376 y 586**.
 **penalizar cuando los verbos son de familias distintas**. **No se toca el umbral:
 se anade una senal.**
 
-**LA PREGUNTA de `OP-E-01`**: se leen los 624, se lee un lote y se proyecta, o **se
-aplica primero la calibracion y se relee la bolsa reducida**?
+## `OP-E-01`, EL ORDEN ADJUDICADO: TRES PASOS Y NO SE SALTAN
+
+| paso | que se hace |
+|---:|---|
+| **1** | **LA CALIBRACION DEL VERBO** sobre el barrido paso-contra-nodo |
+| **2** | **MUESTRA PINEADA NUEVA** sobre la bolsa reducida, para medir la **tasa residual** |
+| **3** | **SOLO ENTONCES** se decide leer entera o proyectar |
+
+**PASO 2, Y EL SORTEO VA DECLARADO:**
+
+> **La muestra nueva se sortea sobre la bolsa REDUCIDA, con la semilla escrita y
+> guardada ANTES de mirar los candidatos**, como se hizo con el pin de la muestra
+> vieja. **Tamano minimo 24, el mismo de la vieja, para que las dos tasas sean
+> comparables.**
+>
+> **Sin el pin escrito antes, la tasa no vale: se puede elegir la muestra que la
+> confirme.**
+
+**LA CIFRA DE PARTIDA, para comparar contra ella**: 19 jerarquias sanas de 24,
+**cero podas**, 5 falsos positivos, proyeccion de 376 a 586 sobre 624.
+
+> **POR QUE ESTE ORDEN Y NO OTRO.** Leer los 624 antes de calibrar es **leer cinco
+> de cada veinticuatro sabiendo que son falsos**. Y calibrar sin volver a
+> muestrear **deja la tasa vieja aplicada a una bolsa que ya no es la misma.**
 
 ---
 
@@ -58,8 +80,22 @@ aplica primero la calibracion y se relee la bolsa reducida**?
 resto.** El ejemplar medido es **`comprender_alineacion_etica_ia`**, el suelto del
 racimo de la supervision de la IA, cuya particion provisional es **5 mas 4 mas 1**.
 
-> **No hay regla escrita.** Un suelto se **enlaza** al racimo, se **deja fuera** de
-> la nomina, o **se espera** a que el cribado lo conecte? Es la pregunta.
+**LA REGLA, adjudicada el 11 ago 2026, y son tres casos:**
+
+| situacion | que se hace |
+|---|---|
+| el racimo **tiene centro** y el par del suelto con el centro **ya salio SANO** | **se ENLAZA** |
+| el suelto **tiene par A** | **no es enlace: es FUSION**, y va a la fase 03 |
+| el racimo **NO tiene centro** | **no se inventa: va a su MESA** |
+
+> **EL EJEMPLAR MEDIDO CAE EN EL TERCER SUPUESTO.**
+> `comprender_alineacion_etica_ia` es el suelto de un racimo **partido en dos
+> bloques**, o sea **sin centro**: va a mesa y no se enlaza.
+
+> **Por que la regla tiene que nombrar el caso sin centro: es justo donde la
+> tentacion es inventar uno.** Un racimo partido en dos no tiene centro por
+> definicion, y **colgar el suelto de cualquiera de los dos bloques seria adjudicar
+> la particion de contrabando.**
 
 ### 2. LOS RACIMOS CON MIEMBRO DE OTRO DOMINIO
 

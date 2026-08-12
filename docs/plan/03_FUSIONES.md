@@ -3,8 +3,11 @@
 **Aqui se ejecuta lo que el cribado adjudico par a par.** Una A dice *estos dos
 repiten*; **una fusion decide cual sobrevive y que se rescata del que muere.**
 
-**Operacion: `OP-U-01`. DECISION PENDIENTE**, y su pendiente es de metodo, no de
-dato.
+**Operaciones: `OP-U-01` LISTA y `OP-U-02` pendiente del cierre del cribado.**
+
+> **ADJUDICADO el 11 ago 2026: se escriben HOY las fusiones de los actos QUE YA NO
+> PUEDEN CRECER.** El resto queda con su fecha de corte y **una sola
+> recomputacion** al cerrar el cribado.
 
 ---
 
@@ -83,14 +86,51 @@ contando algo.
 
 ---
 
-## LA PENDIENTE, y no es de dato
+## `OP-U-01`: LOS ACTOS CERRADOS . **LISTA**
 
-**La cifra es provisional POR CONSTRUCCION**: 221 actos al puesto 2117, y el
-cribado tiene **3.388**. Cada A nueva puede unir dos componentes.
+**EL CRITERIO, y son DOS condiciones a la vez:**
 
-> **LA PREGUNTA: se abre esta fase con la cifra del cierre del cribado, o se abre
-> por los actos que YA no pueden crecer?**
->
-> **Un acto deja de poder crecer cuando todos los pares de sus miembros estan
-> leidos.** Eso se puede medir hoy y da un subconjunto ejecutable **sin esperar al
-> cierre**.
+> **1. Todos los pares posibles entre miembros del acto ya estan leidos.**
+> **2. Ningun miembro tiene un par PENDIENTE en la cola sin leer.**
+
+**La segunda es la que importa.** Un acto puede tener sus pares internos leidos y
+**aun asi crecer**, porque un miembro tiene un par pendiente **con un nodo de
+fuera** que podria salir A.
+
+**MEDIDO el 11 ago 2026, corte del puesto 2117, con 1.271 pares aun en cola:**
+
+| | actos | nodos |
+|---|---:|---:|
+| **CERRADOS: se ejecutan hoy** | **173** | **371** |
+| ABIERTOS: esperan al recomputo | 48 | 205 |
+
+**LOS CERRADOS POR TAMANO**: **149 de dos**, **23 de tres** y **uno de cuatro**,
+el de SPIN (`framework_spin_selling`, `metodologia_spin_selling`, `modelo_spin`,
+`modelo_spin_preguntas`).
+
+**POR QUE ESTAN ABIERTOS LOS 48:**
+
+| motivo | actos |
+|---|---:|
+| les falta leer un par **INTERNO** | **42** |
+| un miembro tiene par **pendiente en la cola** | **6** |
+| por las dos cosas | **0** |
+
+> **Y LOS GRANDES ESTAN TODOS ABIERTOS**: los de 13, 9, 8, 7, 6 y 5 estan **los
+> veintitres** en la lista de abiertos. **Los cerrados son los pequenos**, y eso
+> tiene sentido: **un acto de dos cierra con un solo par leido.**
+
+---
+
+## `OP-U-02`: LOS ACTOS ABIERTOS . **espera al cierre**
+
+**Quedan con su fecha de corte y UNA SOLA recomputacion** al cerrar el cribado
+(banco 9.21).
+
+> **EL RECOMPUTO NO ABRE 48 FUSIONES: ABRE 44.** Cuatro de los abiertos **no se
+> resuelven aqui nunca**: el de 13 y el de 9 van a mesa (`OP-M-01` y `OP-M-05`), y
+> dos de los grandes van a destejido (`OP-D-03` y `OP-D-04`).
+
+**LO UNICO QUE HAY QUE FIJAR**: quien dispara el recomputo y con que instrumento.
+**Y por la regla P.1, ese instrumento RESUELVE ANTES DE CONTAR**, o contara los ya
+absorbidos como nodos vivos.

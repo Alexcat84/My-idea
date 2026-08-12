@@ -40,24 +40,53 @@ mirar **el ORDEN del campo `fuente`**, que es lo mas barato que se puede mirar.
 
 ---
 
-## `OP-A-02`: LA PUERTA SEMANTICA . **DECISION PENDIENTE**
+## `OP-A-02`: LA PUERTA SEMANTICA . **LISTA**
 
-**No esta especificada en ninguna fuente leida**, y no se inventa aqui: **no hay
-documento que diga que comprueba, con que umbral, ni que hace cuando un nodo nuevo
-se parece demasiado a uno existente.**
+**ESPECIFICADA POR EL AUDITOR el 11 ago 2026, y cabe en una frase:**
 
-**LOS CUATRO CONTROLES QUE SI TIENEN DUENO Y EVIDENCIA, y pueden entrar hoy:**
+> # LA ADUANA NO JUZGA, OBLIGA A JUZGAR.
+
+**EL MECANISMO:**
+
+1. **Al insertar un nodo**, corre el **indice semantico** contra **su dominio** y
+   **el nucleo**.
+2. Si **algun vecino supera el umbral de la cola**, **la insercion se BLOQUEA**.
+3. Se desbloquea cuando **quien inserta escribe el veredicto continua-o-repite
+   CITANDO EL ID del vecino**.
+
+> **NUNCA bloquea por parecido. Solo por VEREDICTO AUSENTE.**
+
+**POR QUE ASI Y NO CON UN FILTRO.** Un filtro que decidiera por parecido
+**rechazaria nodos buenos y aceptaria malos**, porque **el parecido no es la
+clase**: la clase la decide continua-o-repite, y eso lo decide quien lee. **Lo que
+la aduana hace es mas barato y mas fuerte: no deja entrar nada sin que alguien
+haya mirado a los vecinos y lo haya escrito.**
+
+**POR QUE CONTRA SU DOMINIO Y EL NUCLEO, Y NO CONTRA TODO.** Es **exactamente el
+reparto que el cribado midio**: la duplicacion vive **dentro del dominio y contra
+el nucleo**; entre dominios distintos casi no hay. **Correr contra todo
+encareceria la insercion sin subir la captura.**
+
+**Y EL UMBRAL NO ES NUEVO: es el de la cola**, o sea **la misma vara que el
+archivo ya uso 2.117 veces**.
+
+> **EL SINTOMA QUE ESTO IMPIDE ES EL QUE EL CATALOGO YA TIENE: 400 pares en A que
+> nadie vio entrar.** Cada uno habria costado **una linea de veredicto** en el
+> momento de la insercion. **Hoy cuesta una fusion con reparto de perdidas.**
+
+**LA SALIDA QUE NO VALE, escrita para que no se use**: bajar el umbral. **La
+insercion se desbloquea con el veredicto escrito, no con el parecido bajado.**
+
+**LOS CINCO CONTROLES MECANICOS QUE LA ACOMPANAN:**
 
 | control | de donde viene |
 |---|---|
 | **auto-arista CON RESOLUCION** | `OP-C-04` |
 | **lista blanca de claves** del nodo | `OP-C-04` |
 | **control posicional del campo `fuente`** | `OP-A-01` |
+| **campo `fuente` CANONICO** | **`OP-S-11`**, y es prerrequisito de los dos anteriores |
 | **revision de toda nomina por el DOMINIO de sus miembros** | control mecanico del 13 ago 2026 |
 
-> **Los cuatro comparten una propiedad que conviene decir: son MECANICOS Y SIN
-> CRITERIO**, o sea que **no piden juicio para correr**. La puerta semantica si lo
-> pide, **y por eso es la que falta.**
-
-**LA PREGUNTA**: se especifica la puerta semantica en esta pasada, o **la aduana
-entra solo con los cuatro controles que ya tienen dueno**?
+> **La diferencia entre los cinco y la puerta semantica: los cinco son MECANICOS y
+> no piden juicio.** La puerta semantica si lo pide, **y por eso no juzga ella:
+> obliga a que alguien juzgue.**

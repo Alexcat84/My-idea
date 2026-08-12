@@ -204,3 +204,109 @@ patron que hay que buscar en los otros veinte.
 | **`02` entero** | el estandar de pasos contra el que se verifica cada nodo resultante |
 | **`03_FUSIONES`** | la atribucion correcta de cada superviviente, que es lo unico que no se puede corregir despues |
 | **el racimo de la IA** | tres bloques de material que **se reunen** con su familia, y una nomina de diez que hay que **re-medir despues** |
+
+---
+
+## LA TANDA DE LOS INJERTOS: leidos los 43
+
+**Encargo del 11 ago 2026. Fuente primero manda: se resuelven ANTES que los
+destejidos y las fusiones que dependen de ellos.**
+
+### PRIMERO, EL SALDO, y una correccion de la cifra
+
+| | |
+|---|---:|
+| declaraciones en segunda posicion, sin Hugos ni Mollick | **46** |
+| **NODOS DISTINTOS** | **43** |
+| **CONFIRMADOS como injerto** | **43** |
+| **arrastre** (la fuente declara un libro cuyo material no aparece) | **0** |
+
+> **CORRECCION DECLARADA: la tanda es de 43 NODOS, no de 46.** El 46 contaba
+> **declaraciones**, y tres se solapan: `metas_vs_proposito` declara **Horowitz Y
+> Coleman**, `viral_loop_marketing` declara **Coleman Y Weinberg**, y
+> `decision_de_vender_startup` **declara Horowitz DOS VECES con dos grafias
+> distintas**.
+
+> **Ese ultimo caso es evidencia directa para `OP-S-11`**: un solo nodo lleva *The
+> Hard Thing About Hard Thing* y *The Hard Thing About Hard Things* **en la misma
+> linea**. Sin campo canonico, el recorte cuenta dos libros donde hay uno.
+
+### EL RESULTADO: 43 DE 43 CONFIRMADOS, Y CERO ARRASTRE
+
+> **La firma posicional acerto en todos.** En los cuarenta y tres, **el material
+> del libro declarado en segunda posicion ESTA PRESENTE**, y esta siempre de la
+> misma forma: **como BLOQUE APENDICE al final de los pasos.**
+
+**LA FORMA, escrita una vez porque es la misma en los 43:**
+
+> El nodo se extrajo del libro 1 y quedo con sus pasos. **Despues, una segunda
+> extraccion del libro 2 se PEGO AL FINAL en vez de hacerse nodo propio.** La
+> frontera entre los dos bloques **se ve a simple vista**: el ultimo paso del
+> bloque 1 cierra un procedimiento y el primero del bloque 2 abre otro.
+
+**LA EVIDENCIA, por grupo y con la frontera del bloque:**
+
+| grupo | nodos | la frontera tipica |
+|---|---:|---|
+| **COLEMAN** | 15 | el bloque 1 mapea o mide; **el bloque 2 anade el ritual, la celebracion y el seguimiento programado** de los 100 dias |
+| **HOROWITZ** | 13 | el bloque 1 es estructura o dilema del fundador; **el bloque 2 es la conversacion dificil**: como degradar, como vender, como evaluar cada trimestre |
+| **WEINBERG** | 13 | el bloque 1 es metrica o proceso; **el bloque 2 es el Bullseye y los canales de traccion** |
+| **RACKHAM** | 4 | el bloque 1 es metodo de producto; **el bloque 2 es la venta**: preguntas de problema, grupo de control, caracteristicas contra beneficios |
+
+**CUATRO EJEMPLARES CON SU CORTE EXACTO, uno por libro:**
+
+| nodo | libro 1 | corte | bloque 2 |
+|---|---|---|---|
+| `five_whys_inversion_proporcional` | Ries, cinco porques | **pasos 1 a 5 / 6 a 9** | Rackham: causa raiz de un problema **de ventas**, grabaciones de llamadas |
+| `voz_del_cliente_voc` | Cooper, VoC | **1 a 5 / 6 a 10** | Coleman: observar una vez al mes, las pepitas de oro, revisar a los dos dias |
+| `background_startup_vs_corporativo` | Wasserman | **1 a 4 / 5 a 9** | Horowitz: la iniciativa propia, el primer mes, desconfiar del equity como motivo |
+| `enfoque_motor_unico_crecimiento` | Ries, motor unico | **1 a 4 / 5 a 9** | Weinberg: el anillo medio del **Bullseye**, redirigir todo al canal ganador |
+
+### LOS TRES CASOS QUE NO SON UN SIMPLE APENDICE
+
+**Se nombran aparte porque su arreglo es mayor:**
+
+| nodo | que tiene |
+|---|---|
+| **`viral_loop_marketing`** | **30 pasos y TRES libros**. Blank, Coleman y Weinberg apilados, **y con repeticion dentro del propio apendice**: los pasos 14 a 17 y 18 a 21 dicen lo mismo con otras palabras |
+| **`coeficiente_viral`** | **16 pasos**, y el bloque de Weinberg **entra DOS VECES**: los pasos 6 a 11 y los 12 a 16 son la misma cuenta de K |
+| **`decision_de_vender_startup`** | **25 pasos**, Horowitz **declarado dos veces con dos grafias**, y el material repetido tres veces: los pasos 11 a 15, 16 a 20 y 21 a 25 vuelven sobre el precio minimo y la disposicion del equipo |
+
+> **Los tres son costura Y injerto a la vez**, y por eso van con **TOQUE UNICO**:
+> se separa el apendice y se desteje la repeticion **en el mismo acto**.
+
+### QUE DECISIONES DE FUENTE NUEVAS SALEN
+
+**CUATRO, una por libro, y son del mismo tipo que las tres que ya existian:**
+
+| decision | nodos | que se decide |
+|---|---:|---|
+| **`OP-F-04-COL`** | 15 | el bloque de Coleman **se reune** con la serie de los 100 dias, o se poda |
+| **`OP-F-04-HOR`** | 13 | el bloque de Horowitz **va a familia propia** o se poda |
+| **`OP-F-04-WEI`** | 13 | el bloque de Weinberg **se reune con el Bullseye** de traccion, o se poda |
+| **`OP-F-04-RAC`** | 4 | el bloque de Rackham **se reune con SPIN**, o se poda |
+
+> **La aritmetica de las decisiones de fuente pasa de TRES a SIETE, y su alcance
+> de 31 nodos a 74.** No es que hayan aparecido injertos nuevos: **es que la firma
+> posicional los hizo contables.**
+
+> **Y hay una asimetria util con Hugos: alli el material pegado era de OTRO TEMA
+> (cadena de suministro dentro de nodos de producto y de finanzas). Aqui, en los
+> cuatro libros, EL TEMA COINCIDE**: el bloque de Coleman habla del cliente y el
+> nodo tambien; el de Weinberg habla de canal y el nodo tambien. **Eso hace la
+> poda mas peligrosa y el reparto mas obligatorio.**
+
+### LA CONSECUENCIA DE ORDEN, y toca a la fase 02
+
+**SEIS de los 43 ya tienen operacion en otra fase**, y por *fuente primero* esta
+va antes:
+
+| nodo | donde mas aparece |
+|---|---|
+| `voz_del_cliente_voc`, `blueprint_de_experiencia`, `customer_journey_mapping` | **`OP-D-02`**, el destejido de la voz del cliente |
+| `metricas_de_adquisicion_activacion`, `key_partners_hypothesis`, `retention_metrics` | **`OP-D-06`**, los nueve actos de dos |
+
+> **`voz_del_cliente_voc` es el caso que lo prueba entero**: su destejido ya estaba
+> escrito separando **Cooper de Coleman**, y esta tanda **acaba de confirmar por
+> el campo `fuente` la misma frontera que la lectura de pasos habia encontrado
+> sola.** Dos instrumentos independientes, el mismo corte.

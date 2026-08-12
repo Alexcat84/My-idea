@@ -6,7 +6,7 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA COMPLETO: NUEVE FASES ESCRITAS, 34 OPERACIONES.**
+**EL PLAN ESTA COMPLETO: NUEVE FASES ESCRITAS, 40 OPERACIONES, 34 LISTAS.**
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -43,27 +43,27 @@ el JSONL discrepan, manda el JSONL.
 
 | | |
 |---|---:|
-| operaciones | **34** |
-| **LISTAS** | **25** |
-| **DECISION PENDIENTE** | **9** |
+| operaciones | **40** |
+| **LISTAS** | **34** |
+| **DECISION PENDIENTE** | **6** |
 
 **POR FASE, en el orden de ejecucion:**
 
 | fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
 | **0 CODIGO** | 4 | **4** | 0 |
-| **01 FUENTES** | 3 | **3** | 0 |
+| **01 FUENTES** | 7 | **7** | 0 |
 | **02 DESTEJIDOS** | 6 | **6** | 0 |
-| **03 FUSIONES** | 1 | 0 | **1** |
-| **04 ENLACES** | 2 | 0 | **2** |
-| **05 SANEO** | 10 | **10** | 0 |
+| **03 FUSIONES** | 2 | **1** | 1 |
+| **04 ENLACES** | 2 | **2** | 0 |
+| **05 SANEO** | 11 | **11** | 0 |
 | **06 MESAS** | 5 | 0 | **5** |
-| **07 ADUANA** | 2 | **1** | **1** |
+| **07 ADUANA** | 2 | **2** | 0 |
 | **08 VERIFICACION** | 1 | **1** | 0 |
 
-> **Las nueve pendientes no son huecos del plan: son CINCO MESAS, que por
-> definicion son decisiones que se toman con la familia delante, y CUATRO
-> preguntas de metodo.** Ninguna es un dato que falte.
+> **LAS SEIS PENDIENTES SON CINCO MESAS Y UN RECOMPUTO.** Ninguna es un dato que
+> falte: **las mesas son decisiones que se toman con la familia delante, y
+> `OP-U-02` espera al cierre del cribado por el banco 9.21.**
 
 ## EL MAPA DE FASES, con sus dependencias
 
@@ -149,14 +149,22 @@ Ninguna se ha tocado.** Las dos estan escritas como pregunta en su operacion.
 
 ---
 
-## LA UNICA PREGUNTA QUE SIGUE ABIERTA
+## LO QUE SIGUE ABIERTO
 
-**Las otras catorce quedaron cerradas**: doce por las adjudicaciones del 11 ago
-2026, y dos mas al cerrarse `OP-S-07` y `OP-S-08` el mismo dia.
+**Ninguna pregunta de dato.** Lo que queda son **cinco mesas** y **un recomputo con
+fecha**.
 
-| operacion | la pregunta |
+| que | por que sigue abierto |
 |---|---|
-| **`OP-S-10`** | **la medicion muestra ley con alcance real en `franquicias`?** Se cumple si los nodos de marco cablean una norma que OBLIGA a quien opera bajo esa jurisdiccion, y no solo un formato de referencia. **Las cuatro familias medidas son FDD (23), regla federal (9), registro estatal (9) e items del FDD (6): las cuatro son norma obligatoria.** Si eso es ley con alcance real, `franquicias` entra |
+| **`OP-M-01` a `OP-M-05`** | una mesa **es** una decision que se toma con la familia delante. El plan las deja **listas para sentarse**: nomina, dependencia y opciones con evidencia |
+| **`OP-U-02`** | los 48 actos abiertos esperan **una sola recomputacion al cierre del cribado** (banco 9.21). No hay nada que decidir hoy |
+
+**Y DOS DELTAS DECLARADOS, que no son preguntas pero se ven:**
+
+- las familias de ids dan **125 nodos** y el auditor dio 123, **con las 53 familias
+  clavadas**
+- la tanda de injertos son **43 nodos** y no 46: el 46 contaba **declaraciones**, y
+  tres se solapan
 
 **Y UN DELTA DECLARADO, que no es pregunta pero conviene que se vea**: el auditor
 dio **123 nodos** para las familias de ids y **mi recomputo da 125**, con las **53
