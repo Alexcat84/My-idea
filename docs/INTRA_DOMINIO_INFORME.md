@@ -15446,3 +15446,67 @@ recomputa.
 
 ---
 
+## 94. CHECKPOINT 2.800: cien pares casi todo D del cuerpo de `quality`
+
+**Apendice compacto (bucle vuelta 3, 12 ago 2026, corte 2.800).** La prosa vive en
+`docs/loop/REPORTE.md` en git; esta seccion fija cifras y commits. Cifras recomputadas del
+archivo, sin huecos ni duplicados.
+
+### 94.1 MARCADOR (corte 2.800)
+
+| | |
+|---|---:|
+| **veredictos** | **2.800**, hasta el puesto 2.800 |
+| **A** | **563** (20,1 %) |
+| **B** | 89 |
+| **C** | 7 |
+| **D** | **2.141** (76,5 %) |
+
+Tramo 2.701-2.800: **19 A y 81 D (19,0 %)**. Los 100 pares fueron `quality`. Quedan **588
+pares**: `quality` **455**, `risk_management` **106**, `seguridad_digital` **27**.
+
+### 94.2 `quality` y su vara por tramo (2.701-2.800)
+
+`quality` **389 pares, 109 A, 28,0 %** (baja de 31,1 % porque el tramo entrego 19,0 %).
+
+| tramo | pares | A | tasa |
+|---|---:|---:|---:|
+| 2.701-2.725 | 25 | 3 | 12,0 % |
+| 2.726-2.750 | 25 | 6 | 24,0 % |
+| 2.751-2.775 | 25 | 6 | 24,0 % |
+| 2.776-2.800 | 25 | 4 | 16,0 % |
+
+> El cuerpo de `quality` sigue por debajo de su banda historica: ficha contra mapa (2.707,
+> 2.735, 2.758, 2.769, 2.772, 2.778, 2.782, 2.790), metodo contra encuadre (2.765, 2.767) y
+> fase contra fase del roadmap (2.798), cumulos todo D del mismo autor. Es el limite del 9.19.
+
+### 94.3 LA PRECISION DE LA CAPACIDAD (adjudicacion del auditor, acta vuelta 2)
+
+**Contada por raiz la familia de la capacidad lleva 8 pares, los 8 D** (el 2.423, establecer
+contra establecimiento, tambien junta dos nodos de la raiz); el 7 de 7 del checkpoint 2.700
+contaba la cobertura completa del nucleo de cuatro nodos, 6 pares, mas el 2.697. **SIN ACTO se
+sostiene sobre los 8.** Precision del tramo 2.701-2.800, declarada sin retocar lo anterior: la
+cola trajo **dos pares mas de la raiz via el nodo nuevo `capacidad_de_proceso_2`** (2.751 contra
+`capacidad_del_proceso`, 2.779 contra `capacidad_de_proceso`), **ambos D**. La familia queda en
+**10 pares, los 10 D**; no reabre el acto (SIN ACTO), extiende la cobertura, igual que el 2.697
+extendio los seis.
+
+### 94.4 FAMILIAS Y FIGURAS AL DIA
+
+| que | estado (corte 2.800) |
+|---|---|
+| la **capacidad** | **SIN ACTO, sigue cerrada**: 10 de 10 D (extiende con 2.751 y 2.779) |
+| la **distincion comun/especial** | **POR DERECHO**, absorbedor `causas_comunes_vs_especiales`: fusiona 2.736, 2.740, 2.752, 2.766, 2.800 (el cumulo del no culpar cae aqui) |
+| la **responsabilidad gerencial** | **POR ELEGIR provisional, sigue abierto**: la postura gerencial (remover barreras, comunicar responsabilidad) sale D contra el procedimiento (2.741) y contra los lemas (2.732, 2.793) |
+| el **breakthrough / DMAIC** | **POR ELEGIR**: breakthrough_desempeno_actual =A= DMAIC otra vez (2.759, via 2.618 y 2.548) |
+| **make_certain, auditorias, costo de calidad, benchmarking, roadmap** | **D pesada por facetas**: familias que separan cada nodo en cara distinta (2.739, 2.768, 2.778, 2.784, 2.798) |
+| **fusion mutua** | **sin caso nuevo** en 2.701-2.800; los A del tramo son contencion, transitividad de cumulo o fusion mutua ya contada |
+| **senal del idioma (quinta cara)** | **sin aparicion nueva**; cinco denominaciones al corte 2.800; su cota se remidio con el barrido del CUERPO (BANCO 9.28.1): recall pleno del numerador, denominador saturado, 6 de 234 = 2,6 % (piso) |
+
+### 94.5 COMMIT
+
+El archivo llega a 2.800 lineas en los commits del tramo (`Cribado 2701-2725` en adelante); el
+commit del checkpoint fija el estado que el auditor recomputa.
+
+---
+

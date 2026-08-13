@@ -2906,6 +2906,44 @@ dicta una tasa global de catalogo.** Lo que pide adjudicacion (traido, no resuel
 universo de la quinta cara solo tiene sentido restringido a los dominios de nombre largo en
 castellano, y su medicion limpia pide barrer el CUERPO del nodo, no solo title+id.
 
+**EL BARRIDO DEL CUERPO, adjudicado como medicion por el auditor (acta vuelta 2, extension
+del 9.28) y corrido (bucle vuelta 3, corte 2.800).** Comando de solo lectura:
+`python scripts/barrido_quinta_cara_cuerpo.py 2800 --dominio quality`. El hermano del barrido
+title+id ahora barre TAMBIEN el cuerpo (`resumen_teorico` y `pasos_accionables`), restringido
+a los dominios de nombre largo en castellano (fuera `core`), con la lista de tokens curada mas
+la sigla en mayusculas y un conjunto de genericos excluidos (`control`, `quality`, `process`,
+`design`, vocabulario traducido ordinario que vive en la prosa de casi todo nodo). **El
+resultado tiene dos caras y las dos importan.**
+
+> **LA GANANCIA, recall pleno del numerador.** Barrer el cuerpo RECUPERA las dos apariciones
+> que title+id no veia: el **box plot del 2.517**, que vive en el cuerpo de
+> `histogramas_distribucion_frecuencias`, y el **COC del 2.593**, deletreado (*Concerns,
+> Options, Consequences*), que el barrido caza al sumar esos tres tokens. **Las seis parejas
+> de aparicion (cinco denominaciones: ZD, MBO, box plot, VOC, COC) caen ahora DENTRO de la
+> superficie**, verificado par a par (2.464, 2.477, 2.488, 2.517, 2.548, 2.593).
+>
+> **EL COSTO, el denominador se satura.** El universo de denominacion foranea en title+id+cuerpo
+> de `quality` sube a **234 de 389 pares** (corte 2.800), o **204 si se sacan los fragmentos de
+> termino multipalabra** que el regex parte (*total* de *total quality management*, *of* de
+> *cost of quality*, *value* de *value stream*). No es ruido de falso positivo: la prosa de
+> `quality` esta **saturada de nombres foraneos de metodo reales** (benchmarking aparece en 59
+> de los pares fuertes, y les siguen six sigma, lean, pareto, DMAIC, kaizen, poka yoke, KPI,
+> CPK, ROI, QFD, GMP, AQL). Contar cada mencion de un metodo foraneo en la prosa no mide la
+> quinta cara, mide cuanto vocabulario ingles de calidad respira el cuerpo del nodo.
+
+**LO QUE SE PUEDE FIRMAR AL CORTE 2.800, como COTA sobre la superficie title+id+cuerpo de
+`quality`, NO como censo:** sobre los **234** pares con denominacion foranea (o **204** sin los
+fragmentos multipalabra), **6** parejas dieron senal documentada de la quinta cara, o sea
+**6 de 234 = 2,6 %** (o **6 de 204 = 2,9 %**). **Es un PISO mas bajo que el de title+id (4 de
+56 = 7,1 %), y esa diferencia es la leccion, no una caida de la senal:** el barrido title+id da
+un denominador APRETADO pero PIERDE senal (box plot y COC fuera); el barrido del cuerpo da
+RECALL PLENO pero un denominador SATURADO de nombres de metodo. **Las dos cotas acotan la tasa
+verdadera por arriba y por abajo; no existe la tasa unica limpia que la figura pedia.** Por eso
+la senal se firma mejor como CIFRA CRUDA, **cinco denominaciones perdidas al corte 2.800**, que
+como tasa. Limite declarado: los 234 no se curaron par a par a mano (solo se verificaron par a
+par las seis apariciones y a nivel de token los mayores contribuyentes del denominador); 234 es
+COTA SUPERIOR del denominador, asi que 6 de 234 es el piso mas conservador.
+
 ---
 
 ### 9.27 REGLA: LA MEDIA NO DESCRIBE A NADIE. LA TASA SE LEE POR DOMINIO
