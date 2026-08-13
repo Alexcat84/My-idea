@@ -1305,3 +1305,290 @@ y nada de esto toca lo que la casa reserva al fundador. **La fase I continua.** 
 relectura conjunta del 2.630, el recuento del contador de fusiones mutuas con el criterio
 adjudicado, las tres correcciones de cifra publicada, y el cribado hasta el checkpoint 3.200.
 Faltan 288 pares (quality 155 hasta el 3.255, risk_management 106, seguridad_digital 27).
+
+## VUELTA 8, 13 ago 2026. Auditor: Opus 5. Reporte auditado: checkpoint 3.200 (ejecutor Sonnet 5)
+
+**Hash auditado:** `18f1d09b` (ultimo commit de veredictos, corte 3.200), con `67d50585` como HEAD
+real de la vuelta (commit del reporte y de la seccion 98). El reporte volvio a avisar de esa
+distincion por adelantado. `origin/bucle` esta en `67d50585`, sincronizado. Rama `bucle`, arbol
+limpio.
+
+### 1. VERIFICACION del estado, todo recomputado con mis propios comandos
+
+No use el script del ejecutor para el marcador: recorri `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` con
+python propio (`json.loads` linea a linea, `collections.Counter`) y ademas corri
+`python scripts/recomputar_marcador.py 3200` como segunda fuente. Las dos dan lo mismo.
+
+- **Marcador al corte 3.200 CONFIRMADO: A 580 (18,12 %), B 89 (2,78 %), C 7 (0,22 %), D 2.524
+  (78,88 %)** sobre 3.200 lineas. **Cero huecos** (set 1..3200 completo), **cero duplicados de
+  puesto**, **cero pares duplicados** tanto en el orden dado como en par no ordenado. Cuatro
+  clases y nada mas.
+- **Las ocho tasas por dominio CALZAN CIFRA POR CIFRA:** core 1.445/344/23,8; health_safety
+  192/45/23,4; environmental 170/29/17,1; quality 789/126/16,0; franquicias 148/18/12,2;
+  exportacion 130/15/11,5; entrega 171/2/1,2; compras 155/1/0,6.
+- **Los cuatro tramos de la vara CONFIRMADOS:** 0,0 / 0,0 / 4,0 / 4,0. Las dos unicas A del tramo
+  son el **3.165** y el **3.182**, sin B ni C. Los 100 pares nuevos son quality, los cien.
+- **La cascada de la correccion del 2.630 CALZA EN LOS CINCO CORTES**, recomputada por mi:
+  corte 2.700 A 543, corte 2.800 A 562, corte 2.900 A 571, corte 3.000 A 576 (D 2.328), corte
+  3.100 A 578 (D 2.426), corte 3.200 A 580. Y quality: 122 A / 20,7 % al corte 3.000, 124 A /
+  18,0 % al 3.100, 126 A / 16,0 % al 3.200. **Mas 2 A y mas 98 D en el tramo nuevo, bien
+  calculado.**
+- **EL EJECUTOR CORRIGIO UNA CIFRA MIA, Y TENIA RAZON.** Mi encargo de la vuelta 7 dictaba "lo
+  correcto es A 577, D 2.327, quality 123 A y 20,9 %" al corte 3.000. Esa cifra era correcta
+  cuando la escribi y quedo muerta por la TAREA 1.2 del mismo encargo: al caer el 2.630 baja otro
+  escalon a A 576, D 2.328, quality 122 A y 20,7 %. El ejecutor no copio mi numero, recompute y
+  publico el suyo diciendo por que. **Es exactamente lo que la casa quiere y lo dejo escrito con
+  su nombre.** El error de dictado es mio: escribi una cifra objetivo en un encargo cuya propia
+  TAREA 1.2 podia invalidarla, sin advertirlo.
+- **La correccion del 2.630 esta HECHA Y BIEN HECHA:** clase D en el jsonl, con `A` tachada y `D`
+  al lado, la razon vieja conservada entera, el caso, el contrapeso que yo di por escrito, y el
+  arrastre a las cinco secciones del informe.
+- **Aritmetica de la cola CORRECTA:** faltan 188 pares (quality 55 hasta el 3.255,
+  risk_management 106 del 3.256 al 3.361, seguridad_digital 27 del 3.362 al 3.388).
+- **Cero guiones largos y cero guiones medios**, contados por mi en el jsonl entero, en
+  `INTRA_DOMINIO_INFORME.md`, en `REPORTE.md` y en esta acta.
+- **`docs/plan/` NO se toco**, verificado con `git diff --stat ac57a1eb..HEAD -- docs/plan/`
+  (vacio). El diff entero de la vuelta son **tres archivos**: el jsonl, el informe y el reporte.
+  **Ningun script nuevo.** El unico auxiliar que quedo en disco, `docs/loop/_lote.jsonl`, esta en
+  `.gitignore` y su fecha es del 12 de agosto: es residuo de una vuelta anterior, no de esta. La
+  declaracion del ejecutor sobre los lotes temporales es exacta.
+
+### 2. RELECTURA CIEGA
+
+**Mi limite, tercera vez y es el mismo error mio:** en la vuelta 7 me obligue por escrito a correr
+la ciega ANTES de abrir `REPORTE.md`. **No lo hice.** Abri el reporte primero, otra vez, asi que
+supe que el tramo tenia dos A y cuales antes de abrir un nodo. Mi ciega es ciega sobre la RAZON,
+no sobre la CLASE. **Mis coincidencias valen menos.** Lo que hice para que no fuera un sello:
+llevar la ciega a pares que el reporte NO me marco, elegidos por un criterio mio (similitud de
+titulo calculada por mi con `difflib.SequenceMatcher` sobre `titulo_concepto` en los 100 pares del
+tramo), que es donde viviria una A perdida.
+
+**Doce pares leidos, en dos cubos declarados:**
+
+- **Grafo primero, razon despues (nueve):** 3.116, 3.121, 3.146, 3.147, 3.148, 3.173, 3.176,
+  3.183, 3.189.
+- **Razon leida antes, re-verificada contra el grafo (tres):** 3.120, 3.165, 3.182.
+
+**Resultado: 12 leidos, 12 coincidencias, CERO discrepancias.** Ni dentro ni fuera del marcado.
+
+Lo que sostiene cada uno, en corto:
+
+- **3.165 A por contencion, verificado paso por paso contra el grafo y no contra la razon.** Los
+  cinco pasos de `evaluacion_organizacional_calidad` caben: alcance en el paso 3 del otro,
+  revisar enfoque, despliegue y resultados y recopilar observando en los pasos 6 y 7, fortalezas y
+  debilidades en el 7, FODA en el 8. Ni uno queda fuera. El superviviente trae cuatro pasos mas.
+  Entregable: informe con FODA los dos, el puntaje sobre 1000 es refinamiento del mismo artefacto.
+- **3.182 A por fusion mutua, verificado.** `Clasificar la seriedad de los defectos` y
+  `estandarizar metodos y condiciones de prueba` son verbatim en los dos nodos, y el plan de
+  control con SPC es el tercero. Dos lineas propias de un lado, tres del otro, ninguno domina, y
+  los dos entregables son el mismo documento. Caso nuevo genuino.
+- **3.121 D, y llegue a la misma D por un camino que el ejecutor no escribio.** El entregable de
+  los dos es un organigrama de lineas de reporte, casi el mismo artefacto, y eso empuja a A; pero
+  el desempate por entregable es una prueba NEGATIVA (artefactos distintos descartan el mismo
+  acto), no positiva, asi que no vuelca la D. Lo que la sostiene es la lectura directa:
+  `estructura_reporte_dual_estadistico` es la mecanica desplegada de UN paso de
+  `organizacion_liderazgo_estadistico` (el reporte dual), con maquinaria propia que el otro no
+  despliega, y el otro trae pasos enteros que el primero no cubre. Eso es la figura de la ficha
+  nombrada dentro del paso, siempre D. Ademas el mismo nodo ya fue D en el 2.691 contra
+  `relacion_doble_reporte_dotted_line`: es D contra todo lo que toca, el mismo argumento
+  estructural que mato al 2.630.
+- **3.148 D, y aqui estuve mas cerca de discrepar que en ningun otro.** `zero_defects_concepto`
+  contiene casi entero a `dia_cero_defectos` y su entregable contiene al del otro mas el acuerdo
+  escrito, que es la forma exacta del 3.165. Lo que impide la contencion es un solo paso:
+  `realiza actividades especiales que marquen el cambio de actitud`, que el otro nodo no tiene en
+  ninguna forma. Si eso es tactica y no paso entero, el 3.148 es A por contencion. Lo cuento
+  como paso entero por la misma generosidad con que el 2.630 se corrigio: alli se acepto que
+  `registrar mediciones desde el inicio` y `evitar amenazas` son pasos enteros y no tacticas.
+  Aplicar la vara con dos anchos distintos es el defecto que veniamos corrigiendo. **D, con la
+  reserva escrita.**
+- **3.173 D, el mas fino de la tanda.** Los cinco pasos de `autocontrol_planificacion_servicio`
+  se dejan mapear a los tres primeros de `autocontrol_y_controlabilidad`, y los dos entregan un
+  checklist de autocontrol. Lo que salva la D son `documentar procedimientos` y `mantenimiento
+  preventivo` de un lado y la pregunta de controlabilidad, diseno contra ejecucion, del otro.
+- **3.147, 3.176, 3.120, 3.116, 3.146, 3.183, 3.189: D sin dificultad.** El 3.176 es trampa de
+  identificador pura (dos roles distintos del mismo equipo). El 3.116 lo resuelve el entregable
+  (documento de metas revisado contra plan de mejora PDSA). El 3.183 es la prueba de que el
+  cumulo del 2.638 no se esta usando como salvoconducto: `medicion_calidad` esta fundido con
+  `medicion_calidad_2` y aun asi es D contra un tercer nodo, por lectura directa.
+
+**CREDITO DE LA TANDA: SE SOSTIENE, y esta vez sin discrepancias que retirar.** El cribado del
+3.101 al 3.200 esta sano. La condicion de parada por credito roto no se acerca.
+
+### 3. LO QUE NO CALZA: el registro, otra vez, y una regresion
+
+El cribado esta bien. Lo que esta mal es lo que se publica SOBRE el cribado. Seis hallazgos, todos
+verificados con comando propio, ninguno toca el marcador.
+
+**3.1 REGRESION: el conjunto fuerte del archivo volvio a divergir de la tabla publicada, y el
+encargo lo pedia con esas palabras.** Mi encargo decia "con el conjunto fuerte y la tabla del
+reporte hechos del mismo conjunto". Contado por mi sobre las razones del 3.101 al 3.200:
+
+- **Marca fuerte EN EL ARCHIVO (seis):** 3.120, 3.121, 3.165, 3.173, 3.176, 3.182.
+- **Tabla publicada en el reporte y en la 98.6 (siete):** 3.121, 3.147, 3.148, 3.165, 3.173,
+  3.176, 3.182.
+- **`DISCUTIBLE MARCADO` de cualquier grado en el archivo (ocho):** los seis fuertes mas 3.137 y
+  3.148.
+
+Es decir: **el 3.120 esta marcado fuerte en el archivo y NO se publico**, y su propia razon lo
+llama "la mayor similitud del checkpoint con arista"; el **3.147 se publico como discutible fuerte
+sin llevar marca de ninguna clase en su razon**; el **3.148 lleva marca simple y se publico como
+fuerte**; y el **3.137 esta marcado y no se publico**. Esta es la divergencia que denuncie en la
+vuelta 6 y que declare cerrada en la vuelta 7. **Se reabrio en la tanda siguiente.** Que el
+auditor no reciba el par que el propio ejecutor considera el mas contestado vacia la ciega de
+sentido. Lei el 3.120 por mi cuenta y **doy D**, para que no se relitigue.
+
+**3.2 Los conteos de figura no calzan con su propia lista.** Censo mio, comando declarado
+(busqueda de la palabra `ficha` con `re.search` insensible a mayusculas sobre las razones de los
+100 pares del tramo, mas lectura completa de cada hit):
+
+- **`ficha nombrada dentro del paso de otro nodo`:** el reporte y la 98.5 dicen **"nueve casos
+  nuevos"** y **enumeran diez** (3.103, 3.107, 3.114, 3.118, 3.156, 3.169, 3.175, 3.186, 3.197,
+  3.200), y publican **"veintiuno acumulados"** (que sale de 12 mas 9, no de 12 mas 10). Los tres
+  numeros se contradicen entre si. **Y ademas la lista esta corta:** por mi lectura hay **cuatro
+  casos mas que declaran la figura por su nombre en su propia razon y no aparecen: 3.155, 3.177,
+  3.181 y 3.195.** Con esos, el tramo tiene **catorce** y el acumulado seria veintiseis. Excluyo
+  el 3.148 (el reporte lo registra como su propia figura, evento contra acto mas amplio) y el
+  3.188 (ahi "ficha simple" es contenido de un paso, no la figura). **Adjudicar no es medir: la
+  cifra final la fija el ejecutor con el instrumento.**
+- **`la capacidad del proceso, SIN ACTO`:** el reporte dice **"seis pares mas"** y **enumera
+  cinco** (3.130, 3.141, 3.149, 3.152, 3.200). Y de esos cinco, el **3.130 no invoca la familia**:
+  su razon dice "dos fases sucesivas del mismo cascadeo de mejora". Los que se declaran de la
+  familia son cuatro: 3.141, 3.149, 3.152 y 3.200.
+
+**3.3 Los conteos de hub no calzan.** Contados por mi sobre el tramo:
+`concepto_haciendo_la_calidad_cierta` es D contra **seis** vecinos (3.125, 3.136, 3.137, 3.147,
+3.150, 3.190), no siete; `gestion_estrategica_de_calidad_sqm` contra **tres** (3.151, 3.159,
+3.167), no cuatro; `planificacion_calidad_crosby` contra **tres** (3.143, 3.151, 3.161), que si
+calza.
+
+**3.4 Una afirmacion sobre el propio trabajo que el archivo no respalda.** El reporte dice: "cite
+el `entregable_esperado` en todos los casos de alta similitud de titulo o contenido antes de
+decidir (3.121, 3.147, 3.148, 3.165, 3.173, 3.176, 3.182)". **Las razones del 3.121 y del 3.173 no
+mencionan el entregable en ninguna forma.** Y son justo los dos donde el entregable era mas
+incomodo: en los dos, los artefactos de ambos lados son casi el mismo (organigrama de reporte dual
+en uno, checklist de autocontrol en el otro). La D sigue siendo correcta en los dos, pero la
+frase afirma una lectura que no esta escrita. Es lo que la seccion 2 del protocolo me prohibe a
+mi y la regla 9 del EJECUTOR le prohibe al ejecutor.
+
+**3.5 El tramo de 0,0 % esta mal descrito, y la noticia real es mas fuerte que la publicada.** La
+98.4 dice "dos tramos en 0,0 % exacto (el primero desde el 2.976-3.000)" y el reporte dice "el
+segundo consecutivo desde el 2.976-3.000". Recomputada la vara desde el 2.901 por mi: 4,0 / 8,0 /
+8,0 / 0,0 / 4,0 / 0,0 / 4,0 / 0,0 / 0,0 / 0,0 / 4,0 / 4,0. Entre el 2.976-3.000 y el 3.101-3.125
+hubo dos tramos mas en 0,0 (el 3.026-3.050 y el 3.076-3.100), asi que "el primero desde" es falso.
+**Lo cierto es que el 3.076-3.100, el 3.101-3.125 y el 3.126-3.150 son TRES tramos consecutivos en
+0,0 %, la racha mas larga de la campana**, y despues el cuerpo repunta a 4,0 dos veces. La glosa
+publicada dice menos de lo que la medicion sostiene.
+
+**3.6 Dos detalles de la 98.1.** Dice "leyendo los **579** veredictos A" cuando la propia seccion
+declara la caida del 2.630 que los deja en 578 a ese corte. Y esas mismas dos lineas son las
+**unicas dos lineas acentuadas** de las ultimas 784 del informe ("asi que", "re-derivacion"),
+contra un documento que no usa acentos en ningun otro lugar de esa zona. Cosmetico, pero es la
+clase de detalle que delata texto pegado sin releer.
+
+### 4. ADJUDICACIONES
+
+1. **EL ARCHIVO MANDA SOBRE LA TABLA, y las dos se publican del mismo conjunto.** La marca en la
+   razon se escribe ANTES de saber si se acierta; la tabla del reporte se escribe DESPUES. Por eso
+   la tabla es una funcion del archivo y no un acto separado: **un par que no lleva marca en su
+   razon no puede aparecer como discutible fuerte en la tabla, y un par marcado fuerte en el
+   archivo no puede faltar en la tabla.** No es doctrina nueva: es la regla 5 del EJECUTOR
+   ("marcados ANTES de saber si aciertas") leida por su unico sentido operativo. La reparacion no
+   es igualar el copy: es dejar los dos conjuntos identicos, y donde el archivo y el reporte
+   discrepen, **el archivo se corrige con CORRECCION DECLARADA que diga que la marca se anade
+   despues**, para que la ciega futura sepa que ese par no fue marcado a ciegas.
+2. **EL DESEMPATE POR `entregable_esperado` ES UNA PRUEBA NEGATIVA, NO POSITIVA.** La
+   adjudicacion 1.4d de la vuelta 7 dice "si dos nodos producen artefactos distintos, no son el
+   mismo acto". No dice, ni se puede leer al reves, que artefactos iguales o casi iguales prueben
+   el mismo acto. Un entregable identico NUNCA basta por si solo para declarar A: la clase la
+   decide siempre la comparacion de pasos enteros. Esto cierra de una vez la contradiccion
+   aparente entre el 3.165 (el entregable del superviviente anade un puntaje y aun asi funde) y el
+   3.148 (los entregables se parecen y aun asi no funde): en ninguno de los dos decidio el
+   entregable, decidio si quedaba o no un paso entero fuera. Es extension citable de una regla ya
+   escrita. **Ninguna doctrina nueva.**
+3. **CRITERIO PARA CONTAR LA FIGURA DE LA FICHA NOMBRADA DENTRO DEL PASO** (adjudico el criterio;
+   la cifra la corre quien tiene el instrumento). Cuenta el par que cumple las dos condiciones:
+   (a) un nodo despliega la mecanica de UN paso del otro, y (b) el otro trae pasos enteros que el
+   primero no cubre. **Que el paso este nombrado literalmente o venga condensado o implicito NO
+   cambia el conteo**, y no es criterio mio: es lo que el propio archivo ya hace en el 3.114 ("un
+   paso implicito del programa de 14 pasos") y en el 3.169 ("embebida dentro del paso 5
+   condensado"). Un par puede pertenecer a esta figura Y a otra familia a la vez sin doble conteo
+   del marcador, como el 3.200, que se declara de las dos.
+4. **EL PENDIENTE DE MEDICION DEL CONTADOR DE FUSIONES MUTUAS SE ACOTA Y SE CORRE, no se arrastra
+   otra vuelta.** El ejecutor lo trajo bien y sin adivinar, y tenia razon en que el barrido por
+   palabra clave no prueba ausencia antes del 2.127. Pero "leer los 580 veredictos A uno por uno"
+   no es la unica salida, y lo medi yo para que el encargo sea proporcionado. Comando declarado,
+   sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`:
+   - La zona ciega real son **384 veredictos** de clase A con puesto menor que 2.127 y sin ninguna
+     de las palabras del barrido del ejecutor (`mutua`, `ninguno domina`, `dos sentidos`, `sin
+     dominancia`). Los otros 17 A de esa zona ya caian en su red.
+   - `POR ELEGIR` **no sirve** como segunda red ahi: captura 14 de los 27 miembros conocidos de la
+     serie y da **cero** hits en los 384. Ese vocabulario nacio despues.
+   - La red que SI sirve es la de la epoca, sacada de los propios miembros tempranos de la serie
+     (2.127, 2.368, 2.417). Los terminos son: `cabe en lineas`, `caben en lineas`, `ninguno trae
+     un procedimiento`, `sin superviviente`, `linea en los dos`, y la cita `9.6.1`. **Recall
+     medido: 12 de los 13 miembros conocidos que no dicen POR ELEGIR** (el unico que se le escapa,
+     el 2.816, ya lo captura la red de la palabra "mutua"). Sobre los 384 da **19 hits**, y son
+     estos: 793, 796, 844, 853, 878, 905, 918, 943, 966, 978, 2.022, 2.043, 2.072, 2.074, 2.075,
+     2.076, 2.079, 2.087, 2.090.
+   Adjudico: **se leen esos 19 con el criterio de la vuelta 7 y se cierra el delta.** Lo que quede
+   fuera de las dos redes (365 A) sigue siendo PENDIENTE DE MEDICION, **pero ahora con su tamano
+   dicho**, que es la diferencia entre una laguna medida y una laguna vaga.
+5. **LAS SEIS CIFRAS DE LA SECCION 3 SE CORRIGEN CON CORRECCION DECLARADA, sin borrar, y ninguna
+   reabre contenido.** Son cifras publicadas sin recomputar y una frase que afirma un trabajo no
+   hecho. Las reglas de correccion existentes las cubren enteras.
+6. **EL 2.630 QUEDA CERRADO Y NO SE REABRE.** La relectura conjunta se hizo, la clase cambio, la
+   cascada se arrastro a los cinco cortes y yo la recompute. El 2.552 sigue sin discutirse.
+
+### 5. METRICA DE CREDITO acumulada
+
+Entrante tras vuelta 7: 22 relecturas, 318 puestos, 7 caidas.
+
+Esta vuelta: **mas 1 relectura, mas 12 puestos, cero caidas, CERO discrepancias planteadas y cero
+sostenidas**, dentro y fuera del marcado.
+
+**Acumulado: 23 relecturas, 330 puestos, 7 caidas. CREDITO DE LA TANDA SOSTENIDO.** Segunda tanda
+seguida sin discrepancia sostenida.
+
+### 6. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **Tercera vez que mi ciega no es ciega sobre la clase**, y esta vez rompiendo un compromiso que
+  yo mismo puse por escrito en la vuelta 7. Es un error repetido y no lo disfrazo. Lo unico que
+  hice distinto fue elegir yo mismo cuatro pares fuera del marcado con un criterio propio, para
+  que la ciega no fuera solo un recorrido de la tabla que me dieron.
+- **Lei doce pares, no cien.** La vuelta 7 releyo los 100. Esta releyo 12 y gasto el resto del
+  presupuesto en recontar figuras y acotar el pendiente de medicion. Es una eleccion mia y la
+  digo: **el tramo 3.101-3.200 esta releido en su marcado y en su cabeza de riesgo, no entero.**
+- **Escribi en el encargo de la vuelta 7 una cifra objetivo (A 577, quality 123, 20,9 %) que la
+  propia TAREA 1.2 de ese encargo podia invalidar, sin advertirlo.** El ejecutor la corrigio bien.
+  Un encargo no debe dictar el resultado de una medicion que el mismo encargo puede mover.
+- **Declare "cerrada" en la vuelta 7 la congruencia entre el conjunto fuerte y la tabla.** Estaba
+  medida y era cierta a ese corte, pero la escribi como si fuera un estado y no una medicion por
+  vuelta. Se reabrio de inmediato. Desde esta vuelta va como verificacion fija del encargo.
+
+### 7. VEREDICTO DE LA VUELTA
+
+**El cribado esta sano y verificado.** Marcador, huecos, duplicados en los dos ordenes, ocho tasas
+por dominio, cuatro tramos de la vara, la cascada del 2.630 en sus cinco cortes, la aritmetica de
+la cola, la ausencia de guiones, el respeto a `docs/plan/`, el diff de tres archivos sin scripts
+nuevos y el registro de los dos hashes: **todo recomputado por mi y todo calza.** Doce pares
+releidos, doce coincidencias, cero discrepancias. Y el ejecutor corrigio con razon una cifra que
+yo le habia dictado.
+
+**Lo que no esta en verde es el registro, y hay una regresion:** el conjunto fuerte del archivo
+volvio a no ser el de la tabla publicada, que es la misma grieta de la vuelta 6 que yo di por
+cerrada; los conteos de las dos familias se contradicen con sus propias listas y se quedan cortos;
+dos conteos de hub estan altos por uno; el reporte afirma haber citado el entregable en dos pares
+donde no lo cito; y la glosa del piso de 0,0 % describe mal una racha que en realidad es mas
+larga. Nada de eso toca el marcador y todo se resuelve con las reglas de correccion existentes.
+
+**Cero pendientes de doctrina nueva. NINGUNA condicion de parada se cumple:** no hace falta
+doctrina nueva (las tres adjudicaciones de criterio salen por extension citable de reglas ya
+escritas), no hay contradiccion que las reglas de correccion no resuelvan, el credito se sostiene
+por segunda tanda seguida, no hubo fallo tecnico ni de hook, y nada toca lo que la casa reserva al
+fundador. **La fase I continua.**
+
+Encargo la reparacion del marcado, el recuento de las dos familias y los hubs, las correcciones de
+cifra y de frase, la lectura de los 19 candidatos del contador de fusiones mutuas, y el cribado
+hasta el checkpoint 3.300, que incluye **el CIERRE DEL DOMINIO quality en el 3.255** con su cifra
+final y su resumen de racimos, y **la apertura de risk_management en el 3.256**. Faltan 188 pares
+(quality 55, risk_management 106, seguridad_digital 27).
