@@ -15521,30 +15521,35 @@ archivo, sin huecos ni duplicados.
 | | |
 |---|---:|
 | **veredictos** | **2.900**, hasta el puesto 2.900 |
-| **A** | **573** (19,8 %) |
+| **A** | **~~573~~ 572** (~~19,8~~ 19,7 %) |
 | **B** | 89 |
 | **C** | 7 |
-| **D** | **2.231** (76,9 %) |
+| **D** | **~~2.231~~ 2.232** (~~76,9~~ 77,0 %) |
 
-Tramo 2.801-2.900: **10 A y 90 D (10,0 %)**. Los 100 pares fueron `quality`. Quedan **488
-pares**: `quality` **355**, `risk_management` **106**, `seguridad_digital` **27**.
+Tramo 2.801-2.900: **~~10~~ 9 A y ~~90~~ 91 D (~~10,0~~ 9,0 %)**. Los 100 pares fueron `quality`.
+Quedan **488 pares**: `quality` **355**, `risk_management` **106**, `seguridad_digital` **27**.
+**CORRECCION DECLARADA (bucle vuelta 5, relectura conjunta acta vuelta 4, 95.3.1):** el 2.805
+pasa de A a D. Cifras de esta seccion ya recomputadas con la correccion aplicada; ver 95.3.1
+para el caso completo.
 
 ### 95.2 `quality` y su vara por tramo (2.801-2.900)
 
-`quality` **489 pares, 119 A, 24,3 %** (baja de 28,0 % porque el tramo entrego 10,0 %).
+`quality` **489 pares, ~~119~~ 118 A, ~~24,3~~ 24,1 %** (baja de 28,0 % porque el tramo entrego
+~~10,0~~ 9,0 %; corregido por el 2.805, ver 95.3.1).
 
 | tramo | pares | A | tasa |
 |---|---:|---:|---:|
-| 2.801-2.825 | 25 | 4 | 16,0 % |
+| 2.801-2.825 | 25 | ~~4~~ 3 | ~~16,0~~ 12,0 % |
 | 2.826-2.850 | 25 | 1 | 4,0 % |
 | 2.851-2.875 | 25 | 1 | 4,0 % |
 | 2.876-2.900 | 25 | 4 | 16,0 % |
 
 > El cuerpo de `quality` toca su piso mas bajo (4,0 % en los dos tramos centrales): stretch de
 > cumulos cronicos que separan cada nodo (benchmarking, cartas de control, cero defectos,
-> programas de 14 pasos, muestreo, cascadeo de diseno, auditorias, capacidad). Las diez A se
-> concentran en los bordes, donde asoman los cumulos POR DERECHO (la distincion) y las
-> identidades ya doctrina (breakthrough=DMAIC, gemelos del Dia ZD). Es el limite del 9.19.
+> programas de 14 pasos, muestreo, cascadeo de diseno, auditorias, capacidad). Las ~~diez~~
+> nueve A se concentran en los bordes, donde asoman los cumulos POR DERECHO (la distincion) y
+> las identidades ya doctrina (breakthrough=DMAIC, gemelos del Dia ZD). Es el limite del 9.19.
+> El 2.805 (borde del primer tramo) sale del conteo de A por la correccion de 95.3.1.
 
 ### 95.3 CORRECCION DECLARADA DEL 9.28.1 (TAREA 1, acta vuelta 3)
 
@@ -15555,6 +15560,29 @@ corrigieron con tachado sin borrar (BANCO 9.28.1, bloque de correccion declarada
 2.800). Comando declarado al lado: `python scripts/barrido_quinta_cara_cuerpo.py 2800 --dominio
 quality` mas recomputo directo sobre el grafo. **La cota titular (6 de 234 = 2,6 %), la tasa
 secundaria (6 de 209 = 2,9 %, identica) y la leccion de las dos cotas quedaron intactas.**
+
+### 95.3.1 CORRECCION DECLARADA DEL 2.805 (relectura conjunta, encargada en el acta vuelta 4)
+
+**El par 2.805 (`accion_correctiva_crosby` contra `accion_correctiva_sistematica`) pasa de**
+**~~A~~ a D.** El ejecutor lo habia dictaminado A por transitividad del cumulo (crosby =A=
+generico _6 en 2.426, sistematica =A= el mismo _6 en 2.701), pero el auditor senalo la grieta:
+el generico _6 tambien cabe en _5 (2.418) y sin embargo _5 =D= crosby (2.496, "sano, arista que
+falta"), asi que la contencion compartida de un mismo generico no basta para fundir dos nodos
+entre si. Verificado contra el grafo (nodos enteros, no titulos): **crosby trae cuatro pasos
+enteros que sistematica no tiene** (consultar directamente al personal operativo, auditorias
+independientes periodicas por departamento, reportes formales de ingenieria de calidad, planes
+de accion por departamento) y **sistematica trae los suyos que crosby no tiene** (la escalada
+diaria a semanal y de ahi a una revision mensual que decide esfuerzo dedicado, el grupo de
+trabajo puntual con regla de disolucion para los complejos, ordenar por gravedad). Ninguno cabe
+entero en el otro. Ademas, **sistematica es el superviviente de _5** (2.431, pasos uno a uno con
+sistematica), y _5 no fundio con crosby (2.496); por la misma vara, sistematica tampoco funde
+con crosby. **La regla que queda escrita: la transitividad del cumulo solo compone entre
+gemelos (identidad, como el Dia ZD 2.853); con CONTENCION (dos nodos que contienen al mismo
+generico) no compone.** Razon del 2.805 corregida en el jsonl con tachado sin borrar (la razon
+vieja se conserva completa, la correccion se agrega al final). Efecto en el marcador: A 573 a
+572, D 2.231 a 2.232 al corte 2.900; tramo 2.801-2.900 de 10 A a 9 A; tramo 2.801-2.825 de 4 A a
+3 A; `quality` de 119 A (24,3 %) a 118 A (24,1 %). Ver 95.1 y 95.2 para las cifras ya
+recomputadas.
 
 ### 95.4 FAMILIAS Y FIGURAS AL DIA
 
