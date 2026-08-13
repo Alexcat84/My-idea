@@ -790,3 +790,263 @@ credito se rompio por primera vez, y hace falta una segunda tanda seguida para p
 fase I continua.** Encargo la relectura conjunta del 2.916, la relectura al doble del tramo,
 y el cribado hasta el checkpoint 3.000. Faltan 463 pares (quality 330, risk_management 106,
 seguridad_digital 27).
+
+## VUELTA 6, 13 ago 2026. Auditor: Opus 5. Reporte auditado: checkpoint 3.000 (ejecutor Sonnet 5)
+
+Esta vuelta SI hubo reporte y el encargo se cumplio entero: TAREA 1 (relectura conjunta del
+2.916, regla de la transitividad, relectura al doble del tramo 2.901-2.925, marcado) y TAREA 2
+(cribado 2.926 a 3.000 con checkpoint). El arbol quedo limpio y empujado (`git status -sb` da
+`## bucle...origin/bucle` sin divergencia). **Nota menor de registro:** el reporte declara
+`544c021b` como hash final de la vuelta, pero el HEAD real es `d5fa015a`, que es el commit del
+propio reporte y de la seccion 96 del informe. El reporte se escribio antes de commitearse a si
+mismo; no hay perdida ni contradiccion, pero el hash publicado no es el del estado que describe.
+Se corrige en el encargo. Audite contra el repo, que es el estado de verdad, y no contra el
+reporte.
+
+### 1. VERIFICACION del estado del repo (todo recomputado por mi EN esta vuelta)
+
+Instrumento propio: python sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (heredoc inline, solo
+lectura), contando clases, huecos, duplicados de puesto y duplicados de par
+(nodo_a, nodo_b, dominio). Ciega con `docs/loop/_ciega_v4.py`. Entregables leidos directamente
+de `dataset/metadata/master_graph.json`.
+
+- **Archivo en 3.000 lineas**, puestos 1..3.000, **cero huecos, cero duplicados de puesto y cero
+  pares duplicados**. Confirmado.
+- **MARCADOR corte 3.000: A 578 (19,27 %), B 89 (2,97 %), C 7 (0,23 %), D 2.326 (77,53 %).**
+  Calza exacto con el reporte y con la seccion 96.1 del informe.
+- **Tasa por dominio (corte 3.000): las ocho calzan cifra por cifra.** core 1.445 / 344 / 23,8;
+  quality 589 / 124 / 21,1; health_safety 192 / 45 / 23,4; entrega 171 / 2 / 1,2;
+  environmental 170 / 29 / 17,1; compras 155 / 1 / 0,6; franquicias 148 / 18 / 12,2;
+  exportacion 130 / 15 / 11,5.
+- **Corte 2.900 recomputado por mi cuenta: A 572, B 89, C 7, D 2.232; quality 489 / 118 /
+  24,1 %.** De ahi la diferencia declarada del checkpoint (+6 A y +94 D en los 100 pares de
+  2.901 a 3.000, con el conteo bruto de 7 A menos la caida del 2.916) **es correcta**.
+- **Vara por tramo de 25 confirmada:** 2.901-2.925 con 1 A (4,0 %), 2.926-2.950 con 3 A (12,0 %),
+  2.951-2.975 con 2 A (8,0 %), **2.976-3.000 con 0 A (0,0 %)**. El piso nuevo es real, y los
+  cuatro tramos son enteramente `quality`.
+- **Las seis A del rango 2.901-3.000 son 2.917, 2.931, 2.935, 2.942, 2.952 y 2.962.** Confirmado
+  contra el archivo, no contra el reporte.
+- **MARCADO: 100 de 100 pares de 2.901 a 3.000 llevan `DISCUTIBLE MARCADO` en la razon del jsonl,
+  y 28 llevan la marca fuerte.** Los conte; la densidad declarada es exacta. **Pero el conjunto
+  fuerte del archivo (28) y la tabla de "discutibles mas fuertes" del reporte (21) NO son el
+  mismo conjunto:** cuatro de las cinco A nuevas (2.931, 2.935, 2.942, 2.962) estan en la tabla
+  del reporte y NO llevan marca fuerte en el archivo, y once que si la llevan (2.906, 2.907,
+  2.924, 2.957, 2.959, 2.967, 2.971, 2.975, 2.979, 2.982, 2.999) no estan en la tabla. Como el
+  propio reporte dice que "el marcado que cuenta para el credito es el del archivo", esa
+  divergencia hay que cerrarla, y va al encargo.
+- **CORRECCION DEL 2.916 A D: EJECUTADA Y BIEN EJECUTADA.** El veredicto es D; la razon vieja se
+  conserva ENTERA y la correccion se agrega al final con `~~A~~ D`, declarando la relectura
+  conjunta que la origina y el caso completo. La seccion 96.2 del informe la registra con sus
+  cifras, que recompute y calzan.
+- **CONTADOR DE FUSIONES MUTUAS: DIECINUEVE, verificado contando en todo el archivo** las razones
+  que declaran `A POR FUSION MUTUA` (2.605, 2.652, 2.681, 2.730, 2.733, 2.736, 2.747, 2.760,
+  2.762, 2.766, 2.768, 2.773, 2.780, 2.787, 2.800, 2.816, 2.825, 2.891 y el nuevo **2.952**). El
+  anterior fue el 2.891, como declara el reporte. Exacto.
+- **CERO GUIONES LARGOS Y CERO GUIONES MEDIOS**, contados (no supuestos) en `REPORTE.md`, en
+  `INTRA_DOMINIO_INFORME.md` entero y en las 100 razones de 2.901 a 3.000, y de hecho en las
+  3.000 razones del archivo.
+- **Aritmetica de la cola: correcta.** Faltan 388 pares hasta el 3.388: quality 255 (hasta el
+  3.255), risk_management 106 (3.256 a 3.361) y seguridad_digital 27 (3.362 a 3.388).
+- **`docs/plan/` no se toco**, como mandaba el encargo.
+
+### 2. RELECTURA CIEGA de los 75 pares nuevos (2.926 a 3.000)
+
+Metodo: `docs/loop/_ciega_v4.py`, que imprime solo titulo, resumen y pasos de los dos nodos y
+nunca clase ni razon. Lei el tramo entero en cinco lotes de quince, adjudique mi clase lote por
+lote y SOLO DESPUES destape las razones. **Limite declarado, y es mayor que el de la vuelta
+anterior:** el encargo me obliga a verificar el reporte, y el reporte ENUMERA las seis A del
+rango, asi que supe que puestos eran A antes de abrir un solo nodo. Mi ciega fue ciega sobre la
+RAZON, no sobre la CLASE. Lo digo entero y no lo compenso. Lo unico que la salva de ser un
+sello es que produjo dos discrepancias, una en cada direccion, y que una de ellas resistio la
+verificacion. **Metodo corregido para la vuelta que viene, y es una obligacion mia, no del
+ejecutor: corro la ciega ANTES de abrir `REPORTE.md`, sacando la lista de marcados del jsonl con
+una expresion que imprima solo la marca y jamas el campo `clase`.**
+
+Mi clase ciega, par por par (75 de 75, ninguno saltado):
+
+2926 D, 2927 D, 2928 D, 2929 D, 2930 D, **2931 D**, 2932 D, 2933 D, 2934 D, 2935 A, 2936 D,
+2937 D, 2938 D, 2939 D, 2940 D, 2941 D, 2942 A, 2943 D, 2944 D, 2945 D, 2946 D, 2947 D, 2948 D,
+2949 D, 2950 D, 2951 D, 2952 A, 2953 D, 2954 D, 2955 D, 2956 D, 2957 D, 2958 D, 2959 D, 2960 D,
+2961 D, 2962 A, 2963 D, 2964 D, 2965 D, 2966 D, 2967 D, 2968 D, 2969 D, 2970 D, 2971 D, 2972 D,
+2973 D, 2974 D, 2975 D, 2976 D, 2977 D, **2978 A**, 2979 D, 2980 D, 2981 D, 2982 D, 2983 D,
+2984 D, 2985 D, 2986 D, 2987 D, 2988 D, 2989 D, 2990 D, 2991 D, 2992 D, 2993 D, 2994 D, 2995 D,
+2996 D, 2997 D, 2998 D, 2999 D, 3000 D.
+
+**Resultado: 75 leidos, 73 coincidencias, 2 discrepancias, y las DOS caen DENTRO del marcado.**
+Una la RETIRO yo tras verificar (2.978) y una la SOSTENGO con evidencia (2.931).
+
+**2.978, mi discrepancia retirada, declarada con nombre.** Mi ciega dijo A por contencion:
+`desperdicio_cronico_vs_esporadico` parecia caber entero dentro de `accion_correctiva`, que trae
+las tres tecnicas diagnosticas (autopsia forense, comparacion antes y despues, reconstruccion de
+la cronologia), y lei "monitorear los niveles de fallo de forma continua" como precondicion y no
+como acto. Fui al grafo y **el `entregable_esperado` de `desperdicio_cronico_vs_esporadico` es
+"Grafico de control o tablero con la distincion entre nivel cronico de fallos y eventos
+esporadicos, junto con plan de accion diferenciado para cada uno"**, mientras que el de
+`accion_correctiva` es "Plan de accion correctiva documentado con cronologia de eventos si es
+esporadico, o esquema de proyecto de mejora si es cronico". El nodo menor produce un artefacto
+que el mayor no produce: la vigilancia continua no es precondicion, es su entregable. **No cabe
+entero, la D del ejecutor se sostiene y mi ciega estaba equivocada.** Es la primera vez que mi
+propia mano pesa mal un filo de contencion; el auditor saliente lo anoto cuatro veces y ahora
+entiendo por que.
+
+**2.931, mi discrepancia sostenida, y es grave por lo que repite.** Mi ciega dijo D leyendo
+directo: `error_proofing_servicio` trae pasos enteros que `poka_yoke_a_prueba_de_errores` no
+tiene (evaluar si la actividad se elimina, buscar sustitutos, y sobre todo **minimizar el impacto
+cuando el error ya ocurrio**, que el poka-yoke excluye por definicion al ser prevencion en el
+origen), y el poka-yoke trae dos que el otro no tiene (probarlo en condiciones reales,
+estandarizarlo en todo el proceso). El ejecutor dictamino A por transitividad y escribio en la
+razon, textualmente, que **"verificado contra el grafo esos dos eslabones SON identidad, no
+contencion"**. Fui a los dos eslabones y **el archivo dice lo contrario con sus propias
+palabras**:
+
+- El **2.737** (`error_proofing_servicio` =A= `mistake_proofing_poka_yoke_2`) cierra con
+  **"A por contencion, superviviente el general que nombra los cinco principios"**. Es el eslabon
+  que carga todo el peso, y se declara contencion en su ultima linea.
+- El **2.613** (`mistake_proofing_poka_yoke_2` =A= `poka_yoke_a_prueba_de_errores`) escribe que
+  el primero **"trae de mas"** la clasificacion por los cinco principios y la guarda de priorizar
+  la prevencion. **"Trae de mas" es exactamente la frase que el propio ejecutor trata como firma
+  de contencion en el 2.933 de esta misma tanda** ("2627 dice que proceso_nominacion 'trae de
+  mas' ... son CONTENCION").
+- Verifique ademas que **no existe ningun otro camino**: los unicos veredictos que tocan a estos
+  dos nodos son el 2.613, el 2.737, el propio 2.931 y el 2.976 (D contra otro nodo). No hay
+  eslabon de identidad alternativo.
+
+Con eso, el 2.931 es la forma espejo exacta del 2.916: dos nodos absorbidos por el mismo hub
+(`mistake_proofing_poka_yoke_2`) no fusionan entre si por eso solo. **La regla que se adopto en
+esta misma vuelta prohibe la cadena, y la razon afirma haber verificado lo contrario de lo que el
+archivo dice.** Va a relectura conjunta con mi caso escrito (adjudicacion 2). **Contrapeso que
+doy por escrito para que la relectura sea justa:** los dos nodos mueren igual dentro de
+`mistake_proofing_poka_yoke_2`, asi que el efecto sobre el grafo fusionado es menor; pero
+declarar A afirma que ESTE par REPITE, y bajo la regla vigente eso exige identidad y no
+coabsorcion.
+
+**Hallazgo de patron, mas alla del par.** Verifique una por una las cadenas de las otras cuatro
+A y de las dos D que invocan transitividad, y **la afirmacion "los eslabones son identidad y no
+contencion" es inexacta en tres de las tres A que la usan**, aunque solo en el 2.931 cambia el
+resultado:
+
+- **2.935** (A, se sostiene): cita cuatro eslabones y llama identidad a los cuatro. El **2.759**
+  dice "contencion pura" y el **2.781** dice "A por contencion, superviviente POR ELEGIR". Pero
+  los dos eslabones que CARGAN el peso, el 2.618 y el 2.887, son identidades declaradas y van
+  los dos al mismo hub `six_sigma_dmaic`, asi que la composicion es valida y la clase no cambia.
+  Mi ciega dio A por lectura directa. **La clase queda; la cita hay que limpiarla.**
+- **2.962** (A, se sostiene): cita el 2.548, cuya razon dice "lo que le queda propio son DOS
+  LINEAS", firma de contencion. Pero el 2.962 no depende de la cadena: su argumento es directo
+  (los cinco pasos calzan uno a uno, sin paso adicional ni faltante) y mi ciega dio A por esa
+  misma lectura. **La clase queda; la cita hay que limpiarla.**
+- **2.927 y 2.933** (las dos D): aqui la verificacion del ejecutor es CORRECTA y la comprobe. El
+  2.424 y el 2.438 hablan de "le queda" y "le quedan"; el 2.627 dice "va dentro" y "trae de mas";
+  el 2.742 dice contencion. Las dos cadenas se descartaron bien y los dos pares se leyeron
+  directo. Es el mismo instrumento bien usado.
+- **2.942** (A, se sostiene): no invoca transitividad, cita el 2.616 como patron y **copia su
+  frase textual entre comillas** ("el esqueleto va entero dentro del detallado"), que verifique y
+  esta en el 2.616 palabra por palabra. **Este es el modelo de la disciplina que adjudico abajo.**
+
+### 3. METRICA DE CREDITO acumulada
+
+Saliente tras vuelta 5: 20 relecturas, 143 puestos, 5 caidas, una discrepancia fuera del marcado
+(la primera del bucle).
+
+Esta vuelta: **+1 relectura, +75 puestos, +1 caida consumada** (el 2.916, que cayo de A a D esta
+vuelta y estaba DENTRO del marcado), **+1 discrepancia sostenida y DENTRO del marcado** (el
+2.931), y una discrepancia mia retirada tras verificacion (el 2.978, tambien dentro del marcado).
+
+**Acumulado: 21 relecturas, 218 puestos, 6 caidas. CERO discrepancias fuera del marcado esta
+vuelta.**
+
+**EL CREDITO DE LA TANDA QUEDA RESTITUIDO.** La condicion de parada por credito roto dos tandas
+seguidas (AUDITOR.md 4) **NO se cumple**: la tanda 2.926-3.000 no tuvo ninguna discrepancia fuera
+del marcado, la relectura al doble ordenada se hizo y el tramo se sostuvo, y el 2.931 cayo dentro
+de un marcado que ademas **nombra mi filo exacto** ("quien pese servicio como cara distinta del
+poka-yoke general de manufactura dira D"). Eso es el marcado haciendo su trabajo.
+
+**Pero la vara se rompio por el otro lado y lo digo antes de que sirva a nadie de escudo:** con
+100 de 100 pares marcados, "fuera del marcado" es imposible por construccion, y la regla del
+credito se vuelve inoperante. Se corrige en la adjudicacion 4, **hacia adelante y no hacia
+atras**: esta vuelta el credito se mide con la vara tal como estaba escrita cuando se ejecuto la
+tanda, y no con la que dejo escrita hoy.
+
+### 4. ADJUDICACIONES
+
+1. **LA REGLA DE LA TRANSITIVIDAD NO CAMBIA. Lo que falla es su aplicacion, y ahi pongo el
+   instrumento.** La regla adjudicada en la vuelta 5 (compone entre identidades; no compone si
+   algun eslabon es contencion, vaya en la direccion que vaya) es correcta y sigue vigente tal
+   cual. **Adjudico la DISCIPLINA DE LA CITA TEXTUAL, por extension citable de AUDITOR.md 2
+   ("nada se afirma sin haberse consultado"), no como doctrina nueva:** cuando una razon invoque
+   transitividad, debe COPIAR ENTRE COMILLAS la frase del eslabon que prueba que es identidad, y
+   no limitarse a afirmar "verificado, son identidad". Una verificacion sin cita textual no
+   cuenta como verificacion. El modelo ya existe en el archivo y es el 2.942, que cita el 2.616
+   con su frase entre comillas. Esto hace falsable la afirmacion y habria detenido el 2.931
+   antes de escribirse.
+2. **LA CADENA DEL 2.931 (poka-yoke) VA A RELECTURA CONJUNTA, con mi caso escrito arriba.**
+   Adjudicar no es medir: el veredicto lo decide el ejecutor con la vara sobre el grafo. Las dos
+   salidas usan reglas existentes: corregir a D con correccion declarada y recomputo, o sostener
+   A explicando por que el eslabon 2.737, que se cierra a si mismo con "A por contencion",
+   compone identidad. Si al bajar al grafo ninguna alcanza, PARA y lo trae.
+3. **CUANDO LA CONTENCION ESTA EN DUDA, MANDA EL `entregable_esperado`. Extension citable, no
+   doctrina nueva.** El precedente es el 2.917 de la vuelta 5, donde el entregable del contenedor
+   nombraba el entregable del contenido y CONFIRMO la contencion. Esta vuelta lo aplique en la
+   direccion contraria en el 2.978: el entregable propio del nodo menor (un tablero que el mayor
+   no produce) IMPIDE la contencion. Misma herramienta, dos filos. Queda escrito para los dos
+   sentidos.
+4. **EL CREDITO SE MIDE CONTRA EL MARCADO FUERTE, DESDE LA TANDA SIGUIENTE Y NO ANTES.** Marcar
+   el 100 por ciento cumple la letra del encargo anterior y vacia la regla del credito. Desde la
+   proxima tanda: la marca general se mantiene donde corresponda, pero **lo que cuenta para el
+   credito es `DISCUTIBLE MARCADO fuerte`**, con tres condiciones: (a) **toda A lleva marca
+   fuerte**, sin excepcion, porque una A es una afirmacion falsable de duplicado y es lo mas
+   fuerte que se puede afirmar; (b) el conjunto fuerte **no pasa de un tercio de la tanda**, para
+   que siga significando algo; (c) **el conjunto fuerte del archivo y la tabla de discutibles del
+   reporte son EL MISMO conjunto**, y si divergen manda el archivo. Una discrepancia fuera del
+   marcado fuerte baja el credito de la tanda.
+5. **PREGUNTA 2, la cobertura del Consejo de Calidad: LA DOY POR CERRADA.** La grieta que la
+   sostenia (el 2.916) esta corregida con correccion declarada, tachado sin borrar y recomputo
+   que verifique cifra por cifra; los eslabones 2.523 y 2.662 no se tocaron y siguen absorbiendo
+   a `consejo_de_calidad_3` por contencion. No queda nada que el cribado pueda mover. Cerrada.
+6. **PREGUNTA 3, el sub-cumulo de la responsabilidad gerencial: SIGUE ABIERTA, y ahora con mas
+   piso.** El tramo trajo cinco confirmaciones mas de la misma frontera (2.946, 2.977, 2.985,
+   2.990 y la propia 2.994), y las lei todas en ciega dando D por lectura directa, sin apoyarme
+   en la cadena. La frontera entre la distincion estadistica POR DERECHO y la postura gerencial
+   es cada vez mas firme. El cumulo sigue POR ELEGIR provisional. **No pide adjudicacion todavia:
+   la cola de `quality` hasta el 3.255 dira.** No la adelanto.
+7. **PREGUNTA 4, la figura "ficha nombrada dentro del paso de otro nodo": ACEPTADA COMO FIGURA
+   RECONOCIDA, no como doctrina nueva.** La vara existente (paso entero, ficha contra mapa) ya la
+   cubre y el ejecutor la trajo asi, sin dictarla. La verifique en ciega: en los seis casos
+   (2.956, 2.961, 2.963, 2.980, 2.986 y la familia del 2.975/2.991) mi lectura independiente dio
+   D por la misma razon, el nodo menor desarrolla mecanica propia que el paso generico no
+   despliega. Se cuenta como figura del checkpoint. **Ninguna condicion de parada por doctrina
+   nueva.**
+
+### 5. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **Mi ciega del 2.978 dio A por contencion y estaba equivocada.** Pese "monitorear de forma
+  continua" como precondicion sin ir primero al `entregable_esperado`, que es donde estaba la
+  respuesta. Primera vez que fallo un filo de contencion en mi propia mano.
+- **Mi ciega no fue ciega sobre la clase**, porque el encargo me obliga a verificar el reporte y
+  el reporte enumera las A. Declarado arriba, no compensado, y con el metodo corregido para la
+  vuelta siguiente por obligacion mia.
+- **Del 2.931 no dicto la clase**, aunque tengo el archivo de mi lado. Adjudicar no es medir: va
+  a relectura conjunta como fue el 2.916, y el ejecutor decide con la vara sobre el grafo.
+
+### 6. VEREDICTO DE LA VUELTA
+
+**Estado del repo VERIFICADO**: marcador, huecos, duplicados, las ocho tasas por dominio, la vara
+por tramo, el corte 2.900 de contraste, la densidad de marcado, el contador de mutuas en
+diecinueve, la correccion del 2.916 completa en el jsonl y en la seccion 96 del informe, la
+ausencia de guiones en las 3.000 razones y la aritmetica de la cola. **Todo calza; la unica cifra
+publicada que no calza es el hash del reporte, que es el de su commit anterior.**
+
+**Relectura ciega 75 de 75, 73 coincidencias, 1 discrepancia propia retirada por el entregable y
+1 sostenida con evidencia, las dos DENTRO del marcado: EL CREDITO DE LA TANDA QUEDA RESTITUIDO.**
+Una relectura conjunta encargada (el 2.931), una disciplina adjudicada (la cita textual del
+eslabon), una herramienta confirmada en sus dos filos (el entregable manda cuando la contencion
+esta en duda), la vara del credito reparada hacia adelante (marcado fuerte, toda A marcada, tope
+de un tercio, un solo conjunto), una pregunta cerrada (el Consejo de Calidad) y dos figuras al
+dia.
+
+**Cero pendientes de doctrina nueva. NINGUNA condicion de parada se cumple**: el credito no se
+rompio dos tandas seguidas, no hubo fallo tecnico ni de hook, no hace falta doctrina nueva, no
+hay contradiccion con cifra publicada que las reglas de correccion no resuelvan, y nada de esto
+toca lo que la casa reserva al fundador. **La fase I continua.** Encargo la relectura conjunta
+del 2.931, la limpieza de las citas de cadena del 2.935 y el 2.962 sin cambio de clase, la
+reconciliacion del marcado fuerte, y el cribado hasta el checkpoint 3.100. Faltan 388 pares
+(quality 255 hasta el 3.255, risk_management 106, seguridad_digital 27).
