@@ -413,3 +413,169 @@ dentro del marcado, resueltas sin correccion; credito INTACTO. Cero pendientes d
 doctrina nueva; ninguna condicion de parada. La fase I continua: encargo la correccion
 del 9.28.1 y el cribado 2.801 a 2.900. Faltan 588 pares (quality 455, risk_management
 106, seguridad_digital 27).
+
+## VUELTA 4, 12 ago 2026. Auditor: Fable 5. Reporte auditado: checkpoint 2.900 (ejecutor Opus 4.8)
+
+### 1. VERIFICACION, todo con comando propio
+
+- **Hashes**: `ae34e909` (HEAD de `bucle`) contiene el archivo en 2.900 lineas exactas
+  (`git show ae34e909:docs/INTRA_DOMINIO_VEREDICTOS.jsonl | wc -l` da 2900). El diff
+  completo de la vuelta (`git diff --stat 8f594141..ae34e909`) toca solo las seis rutas
+  declaradas (BANCO, jsonl, informe, REPORTE, `_build_lote.py`, `scripts/_ctx_familia.py`);
+  **docs/plan/ intacto** (diff vacio). Los dos auxiliares nuevos verificados: `_ctx_familia.py`
+  solo lee; `_build_lote.py` escribe unicamente el scratch `_lote.jsonl`, que NO esta
+  trackeado. Arbol limpio, remoto al dia.
+- **Marcador recomputado** (python sobre el jsonl, puesto = numero de linea, verificado
+  `puesto_intra == linea` en las 2.900): **A 573 (19,8), B 89, C 7, D 2.231 (76,9); n 2.900;
+  cero huecos y cero pares duplicados** (por tupla nodo_a/nodo_b/dominio; el campo `clave`
+  es la similitud, no un id). Coincide cifra a cifra. Tramo 2.801-2.900: **10 A y 90 D,
+  todos `quality`; las 10 A coinciden puesto a puesto** (2805, 2811, 2816, 2825, 2838,
+  2853, 2887, 2888, 2891, 2897).
+- **Tasa por dominio**: recomputada entera; las ocho filas coinciden (quality 489 pares,
+  119 A, 24,3).
+- **Vara por tramo de 25 (2.801-2.900)**: 16,0 / 4,0 / 4,0 / 16,0; los cuatro coinciden.
+- **Discutibles inline**: los 100 pares del tramo llevan DISCUTIBLE MARCADO y **24 llevan
+  la marca fuerte** (los 20 de la tabla del reporte mas 2805, 2817, 2819 y 2832). El
+  marcado que cuenta es el del archivo, como el reporte declara.
+- **TAREA 1 (correccion del 9.28.1), re-verificada con instrumento propio EN ESTA vuelta**:
+  el comando declarado reproduce el universo fuerte 234; mi recomputo directo sobre
+  `master_graph.json` da **209** sin los fragmentos *total/of/value* con la lista de los
+  **25 removidos identica par a par** a la del BANCO, y **20 pares fuertes de benchmarking**
+  con la lista identica par a par. El tachado sin borrar esta bien hecho (204 y 59 tachados,
+  no borrados; comando al lado; cota titular, tasa de 2,9 y leccion intactas), y la
+  seccion 95 del informe lo registra fiel.
+- **Seccion 95 del informe**: existe y sus cifras calzan todas con mis recomputos.
+- **Citas de transitividad del reporte, verificadas clase a clase contra el archivo**:
+  2816 A, 2516 A, 2450 D, 2564 D (sostienen el 2832); 2416 D, 2557 A (sostienen el 2892);
+  2618 A, 2759 A (sostienen el 2887); 2491 A, 2525 A (sostienen el 2853); 2590 A (sostiene
+  el 2833); 2426 A, 2701 A (citadas por el 2805); 2677 D, 2766 A, 2800 A (la frontera de la
+  responsabilidad gerencial, misma en 2850 y 2881).
+- **La capacidad, verificada**: 2827, 2884 y 2890 estan en el archivo, las tres D; SIN ACTO
+  se sostiene, extiende sin reabrir.
+- **Contador de mutuas**: la unica razon del tramo que numera es la del 2891 (DIECIOCHO,
+  anterior 2.666); 2816, 2825 y 2853 mencionan mutua sin abrir numero, consistente con la
+  convencion de la vuelta 3.
+- **Senal del idioma**: cero razones del tramo mencionan denominacion o 9.28; sin aparicion
+  nueva, cinco al corte 2.900 verifica. El 2852 (consejo_de_calidad_3) es D contra el
+  programa, no contra el hub: la pregunta 2 sigue abierta tal como el reporte la deja.
+- **UN ERROR DE PROSA DEL REPORTE, declarado por mi**: dice que quality "queda debajo de
+  core (23,8) por muy poco"; con 24,3 quality queda ENCIMA de core por muy poco. Las
+  cifras son correctas en todas las fuentes; la frase invierte la direccion. Vive solo en
+  REPORTE.md (que se reescribe por vuelta); informe y BANCO limpios. No es veredicto ni
+  cifra publicada: el credito de la tanda no se toca por esto.
+
+### 2. RELECTURA CIEGA de veintisiete discutibles (los 24 fuertes inline mas las A 2853, 2888, 2897)
+
+Metodo: volcador propio (`docs/loop/_ciega_v4.py`) que imprime SOLO titulo, resumen y
+pasos de los dos nodos, nunca clase ni razon; adjudique mi clase y SOLO DESPUES destape
+las razones. **Limite declarado, el mismo de las vueltas 1 a 3**: el reporte trae la clase
+del ejecutor y sus tablas de mecanismo, asi que el ciego pleno es sobre la RAZON escrita
+en el archivo; adjudique desde el texto de los nodos (y las clases de familia ya
+verificadas en la seccion 1, que son parte de la vara del barrido) antes de leer razon
+alguna del tramo. Ningun par del tramo se contamino esta vez: el volcador no imprime el
+campo razon (el aviso de la vuelta 3, institucionalizado).
+
+| puesto | mi clase ciega | ejecutor | ¿coincide? |
+|---:|---|---|---|
+| 2805 | A (el Paso 6 de Crosby dos veces; vease la grieta en adjudicaciones) | A | si |
+| 2811 | A (mismo DPLES de cinco fases; los pasos calzan fase a fase) | A | si |
+| 2816 | A por fusion mutua (Punto 12; pago por pieza y carteles contra supervisor tecnico y canal de reporte, mismo acto entero) | A | si |
+| 2817 | D (la evaluacion con escalas y puntaje contra el modelo de principios; instrumento contra marco) | D | si |
+| 2819 | D (la ficha del sistema de calidad del proveedor despliega un paso de la especificacion; ficha contra mapa) | D | si |
+| 2825 | A por fusion mutua (los supuestos erroneos de Crosby; redefinir el rol del inspector contra sesiones y testimonios, mismo acto) | A | si |
+| 2826 | D (las medidas son la ficha del panorama que ademas disena muestreo y valida la muestra) | D | si |
+| 2830 | D (el cuestionario es el instrumento del diagnostico; los 14 puntos son el marco) | D | si |
+| 2832 | D (eliminacion cae con orgullo 2816 y remover con barreras 2516, y los subcumulos estan separados 2450/2564; la vista ingenua diria A) | D | si |
+| 2833 | D (la justificacion economica de la carta y la mecanica X barra R de muestras son pasos enteros en direcciones opuestas) | D | si |
+| 2838 | A por contencion (el viaje diagnostico entero cabe en el dual; el Pareto es mano, no paso propio; precedente 2645) | A | si |
+| 2849 | D (la tipologia del concepto contra el documento del programa; concepto contra procedimiento) | D | si |
+| 2850 | D (el acto estadistico de no culpar contra la postura gerencial con lemas y compromiso escrito; la frontera del 2677) | D | si |
+| 2853 | A (gemelos del Dia ZD; ambos fusionan con _2 en 2491 y 2525, mismo evento con manos distintas) | A | si |
+| 2862 | D (DMAIC de proyecto contra DPLES de despliegue; dos roadmaps pese al titulo comun) | D | si |
+| 2865 | D (documentar estaciones para auditoria contra ubicar sujetos de control; mismo instrumento, actos distintos) | D | si |
+| 2868 | D (la estrategia de despliegue de los 14 pasos contra el envoltorio de politica; precedente 2583) | D | si |
+| 2875 | D (seleccionar el proceso capaz contra especificar sus caracteristicas en la hoja; fase contra fase del cascadeo) | D | si |
+| 2880 | D (el compromiso de Juran trae COPQ y tareas no delegables; el de Crosby trae la postura escrita; pasos enteros propios en ambos) | D | si |
+| 2881 | D (el acto estadistico de la distincion contra la postura gerencial; misma frontera del 2850) | D | si |
+| 2883 | D (la comparacion entre instrumentos del metodo de Deming y el 5,15 sigma con Gauge R&R del MSA son pasos enteros en direcciones opuestas) | D | si |
+| 2887 | A (la Secuencia Universal ES el DMAIC: nominar=Definir, viajes=Medir/Analizar/Mejorar, controles=Controlar; la identidad 2618/2759) | A | si |
+| 2888 | A (la distincion aplicada a personas: limites, no calificar dentro, investigar fuera; calza paso a paso) | A | si |
+| 2891 | A por fusion mutua (mismo acto entero, instalar al lider estadistico competente con autoridad transversal; capacitacion para todos y doble linea de reporte son la linea de cada lado) | A | si |
+| 2892 | D (error =D= _2 en 2416 y _4 =A= _2 en 2557: caen a lados distintos; la vista con sim_tit 69,4 diria A) | D | si |
+| 2894 | D (los equipos TPM con mejoras incrementales contra la clasificacion por criticidad del RCM; metodologias distintas) | D | si |
+| 2897 | A (los accidentes son el caso de la distincion; el caso calza paso a paso y el cumulo POR DERECHO absorbe) | A | si |
+
+**Resultado: 27 de 27 coinciden, cero discrepancias, ninguna fuera del marcado. El credito
+de la tanda queda INTACTO.** Las razones destapadas citan pasos que existen en los nodos
+(cotejadas contra mis volcados); ninguna inventa contenido, y sus citas de familia estan
+verificadas clase a clase en la seccion 1.
+
+### 3. METRICA DE CREDITO acumulada
+
+Saliente tras vuelta 3: 18 relecturas, 91 puestos, 4 caidas, todas dentro del marcado.
+Esta vuelta: +1 relectura, +27 puestos, 0 caidas, 0 discrepancias.
+**Acumulado: 19 relecturas, 118 puestos, 4 caidas, TODAS dentro del marcado.**
+
+### 4. ADJUDICACIONES
+
+1. **PREGUNTA 1, el contador de mutuas: adjudicada, el 2891 es A y ABRE numero; el
+   contador queda en DIECIOCHO.** Mi ciega independiente dio A: el acto entero es el
+   mismo en los dos nodos (instalar al lider estadistico competente con autoridad
+   transversal, presente en las decisiones), y la capacitacion para todos y la doble
+   linea de reporte son la linea propia que cada lado pone SOBRE ese mismo acto, la
+   figura de la fusion mutua (2575, 2597, 2816). Se distingue del 2691 (D, vuelta 2)
+   porque alli crear el liderazgo central y seleccionar roles repartiendo el reporte
+   eran actos adyacentes, no el mismo acto con dos plumas. El archivo ya numera
+   DIECIOCHO: nada que retocar.
+2. **LA GRIETA DEL CUMULO accion_correctiva (2805 contra 2496): VA A RELECTURA CONJUNTA,
+   con mi caso escrito.** El ejecutor la declaro inline en el propio 2805, asi que esta
+   dentro del marcado y el credito no se mueve. Mi caso: **la transitividad del cumulo
+   solo compone con IDENTIDAD (gemelos, como el Dia ZD del 2853); con CONTENCION no
+   compone**: que crosby y sistematica contengan cada uno al generico _6 (2426, 2701) no
+   los funde entre si, y el propio archivo lo prueba, porque _6 tambien cabe en _5 (2418)
+   y sin embargo _5 =D= crosby (2496, "sano, arista que falta"). Estructuralmente el 2805
+   es paralelo al 2496: crosby trae pasos enteros propios (el canal de deteccion:
+   consultar al operativo, auditorias independientes por departamento, reportes formales)
+   y sistematica trae pasos enteros propios (los ritmos diario/semanal/mensual con
+   entregas, el grupo con regla de disolucion, el Pareto); ademas sistematica es el
+   superviviente de _5 con sus pasos "uno a uno" (2431), y _5 no fundio con crosby. Por
+   la vara del paso entero (acta vuelta 1; 2747 y 2756 de la vuelta 3) la lectura directa
+   da D. El ejecutor verifica contra el grafo y decide con la vara: **si corrige 2805 a D**,
+   correccion declarada con recomputo (marcador A 573 a 572, D 2.231 a 2.232; tramo 10 a
+   9 A; tasa de quality; tachado sin borrar en la seccion 95 del informe y ajuste del
+   mecanismo en el proximo reporte); **si sostiene A**, escribe en la razon por que
+   sistematica funde con crosby cuando _5, cuyos pasos van uno a uno con sistematica, no
+   fundio. Cualquiera de las dos salidas cierra la grieta con reglas existentes; no pide
+   doctrina nueva.
+3. **El error de prosa del reporte (quality ENCIMA de core, no debajo): registrado.**
+   Sin correccion durable (la frase vive solo en REPORTE.md, que se reescribe); la
+   precision va al encargo para el reporte siguiente.
+4. **Preguntas 2 y 3 del reporte (cobertura del Consejo de Calidad, sub-cumulo de la
+   responsabilidad gerencial): siguen abiertas y no piden adjudicacion.** La cola las
+   trae; POR ELEGIR provisional en ambas. Bien traido y bien dejado.
+
+### 5. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- Mi primer comando de listado fallo por escapes de comillas en bash (ruta con
+  espacios); lo corregi antes de leer nada. Ninguna cifra salio del instrumento roto.
+- **Mi ciega del 2805 dio A pesando el nucleo compartido ("el mismo Paso 6"), y coincidio
+  con el ejecutor; fue DESPUES, al verificar la familia contra el archivo, que la lectura
+  por paso entero me apunto a D.** La declaro con nombre: la coincidencia ciega no la
+  escondo detras del 27 de 27, y la grieta va a relectura conjunta como manda el
+  protocolo (adjudicar no es medir: el veredicto lo decide el ejecutor con la vara sobre
+  el grafo). Es la misma trampa del nucleo compartido contra la que avisa el 2652, por
+  tercera vez en mi propia mano (2747, 2756, ahora 2805).
+- El limite del ciego sobre la clase (reporte leido antes) se declara igual que en las
+  vueltas 1 a 3, no se esconde.
+
+### 6. VEREDICTO DE LA VUELTA
+
+Reporte VERIFICADO en el marcador (cero huecos, cero duplicados), las tasas, la vara por
+tramo, las 10 A puesto a puesto, los discutibles inline, la correccion del 9.28.1
+(reproducida con instrumento propio, listas identicas par a par), la seccion 95, las
+citas de transitividad, la capacidad, el contador en DIECIOCHO y la senal del idioma.
+Relectura ciega 27 de 27, credito INTACTO. UNA relectura conjunta encargada (la grieta
+2805/2496, dentro del marcado) y un error de prosa registrado (quality encima de core).
+Cero pendientes de doctrina nueva; ninguna condicion de parada. La fase I continua:
+encargo la relectura conjunta y el cribado 2.901 a 3.000. Faltan 488 pares (quality 355,
+risk_management 106, seguridad_digital 27).
