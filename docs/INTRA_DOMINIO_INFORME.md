@@ -15678,3 +15678,78 @@ checkpoint 3.000, hash final de la vuelta).
 
 ---
 
+## 97. CHECKPOINT 3.100: el 2.931 corregido, la disciplina de la cita, cuatro tramos en el piso
+
+**Apendice compacto (bucle vuelta 7, 13 ago 2026, corte 3.100).** La prosa vive en
+`docs/loop/REPORTE.md` en git; esta seccion fija cifras y commits.
+
+### 97.1 MARCADOR (corte 3.100)
+
+| | |
+|---|---:|
+| **veredictos** | **3.100**, hasta el puesto 3.100, cero huecos ni duplicados |
+| **A** | **579** (18,7 %) |
+| **B** | 89 |
+| **C** | 7 |
+| **D** | **2.425** (78,2 %) |
+
+Contra el checkpoint 3.000 corregido (A 577, D 2.327): +2 A y +98 D en el tramo 3.001-3.100.
+
+### 97.2 CORRECCION DECLARADA DEL 2.931 (relectura conjunta, encargada en el acta vuelta 6)
+
+**El par 2.931 (`error_proofing_servicio` contra `poka_yoke_a_prueba_de_errores`) pasa de
+`~~A~~` a D.** Los dos eslabones citados como identidad (2.737, 2.613) se cierran con firma de
+contencion ("A por contencion"; "trae de mas"), la misma frase que el propio cribado trata como
+contencion en el 2.933; la transitividad no compone. Lectura directa: conjuntos de pasos
+disjuntos entre los dos nodos. Tachado sin borrar. Efecto: A 578 a 577, D 2.326 a 2.327 al corte
+3.000; tramo 2.926-2.950 de 3 A a 2 A (12,0 % a 8,0 %). Ademas, cita reescrita sin cambio de
+clase en el 2.935 y el 2.962 (los eslabones de contencion se retiran de la cadena, queda el
+fundamento en eslabones de identidad simetrica o en el argumento directo), y marca fuerte
+agregada en el 2.942.
+
+### 97.3 `quality` y su vara por tramo (2.901-3.100, ocho tramos)
+
+`quality` **689 pares, 125 A, 18,1 %** (baja desde 21,1 % al corte 3.000).
+
+| tramo | pares | A | tasa |
+|---|---:|---:|---:|
+| 2.901-2.925 | 25 | 1 | 4,0 % |
+| 2.926-2.950 | 25 | 2 | 8,0 % |
+| 2.951-2.975 | 25 | 2 | 8,0 % |
+| 2.976-3.000 | 25 | 0 | 0,0 % |
+| 3.001-3.025 | 25 | 1 | 4,0 % |
+| 3.026-3.050 | 25 | 0 | 0,0 % |
+| 3.051-3.075 | 25 | 1 | 4,0 % |
+| 3.076-3.100 | 25 | 0 | 0,0 % |
+
+> El cuerpo se asento en un piso bajo y estable, cuatro tramos entre 0,0 % y 4,0 %, dos en 0,0 %
+> exacto. Los tres A del tramo nuevo son casos aislados de lectura directa (contencion o REPITE
+> sin cadena), no cumulos nuevos: no se forzo A para compensar el piso ni D para sostener la
+> tendencia.
+
+### 97.4 FAMILIAS Y FIGURAS AL DIA
+
+| que | estado (corte 3.100) |
+|---|---|
+| la **distincion comun/especial POR DERECHO** | un miembro nuevo por contencion directa (3.012, `trampa_del_promedio_como_estandar`); dos D verificados contra el mismo hub (3.057, 3.094) |
+| **fusion mutua** | sin caso nuevo; contador **sigue en DIECINUEVE** |
+| **ficha nombrada dentro del paso de otro nodo** | **seis casos nuevos** (3.003, 3.029, 3.053, 3.060, 3.088, 3.099); doce acumulados desde el 2.956 |
+| **planificar contra ejecutar** | figura nueva reconocida (3.080, con precedente en el 2.815 de la vuelta 5): disenar el evento no es realizar el evento, entregables de distinta naturaleza |
+| **especializaciones del mismo hub no fusionan entre si** | confirmada con un caso nuevo (3.087, `analisis_pareto_de_proveedores` contra `principio_pareto`), forma espejo del 2.916/2.931 |
+| **programa contra proyecto/etapa** | dos casos nuevos (3.098, y ya contados 3.003, 3.009); tres acumulados |
+| **hallazgo de metodo** | la mayoria de los veredictos "REPITE" del archivo usan lenguaje de contencion ("trae de mas", "esta(n) dentro de"), no de identidad simetrica, y por la regla de la cita (TAREA 1.2) no son citables para transitividad nueva; traido como pregunta al acta, no como doctrina nueva |
+
+### 97.5 DISCUTIBLES MARCADOS (conjunto fuerte de la tanda: 10 de 100, 10 %)
+
+El conjunto fuerte del archivo y la tabla de discutibles del reporte son el mismo conjunto,
+como manda la TAREA 1.4c. Las siete A de 2.901-3.100 llevan las siete marca fuerte. Detalle
+completo con el filo de cada discutible en `docs/loop/REPORTE.md`.
+
+### 97.6 COMMITS
+
+`f040633d` (TAREA 1: correccion 2.931, citas 2.935/2.962, marca fuerte 2.942), `fa26c8cf`
+(cribado 3.001-3.025), `0e387021` (cribado 3.026-3.050), `4317c067` (cribado 3.051-3.075),
+`f0c54577` (cribado 3.076-3.100, checkpoint 3.100, hash final de la vuelta).
+
+---
+
