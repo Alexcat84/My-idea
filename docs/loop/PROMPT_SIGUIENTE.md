@@ -1,251 +1,197 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
-SESION EJECUTORA. Ficheros del cribado y el informe; docs/plan/ solo lectura.
+SESION EJECUTORA. Ficheros del cribado y el informe; docs/plan/ SOLO LECTURA.
 MODO DE CIERRE: cero reparaciones de nodos.
 
-ESTADO DEL CREDITO, leelo primero. TU TANDA 3.101-3.200 SE SOSTIENE ENTERA. El
-auditor recompuso el marcador con python propio y con tu script, y calzan las
-dos: A 580, B 89, C 7, D 2.524 sobre 3.200 lineas, cero huecos, cero duplicados
-de puesto y cero pares duplicados en los dos ordenes. Calzan tambien las ocho
-tasas por dominio, los cuatro tramos de la vara, la aritmetica de la cola, la
-ausencia de guiones, el respeto a docs/plan/, el diff de tres archivos sin
-scripts nuevos y el registro de los dos hashes. La cascada de la correccion del
-2.630 se recomputo en sus CINCO cortes y calza en los cinco. Relectura ciega de
-doce pares (los siete que publicaste, el 3.120 que no publicaste, y 3.116,
-3.146, 3.183 y 3.189 elegidos por el auditor fuera de tu marcado): DOCE
-COINCIDENCIAS, CERO DISCREPANCIAS. Segunda tanda seguida sin discrepancia
-sostenida.
+ESTADO DEL CREDITO, leelo primero. TU TANDA 3.201-3.300 SE SOSTIENE ENTERA, Y ESTA
+VEZ TAMBIEN EL REGISTRO. El auditor recomputo con python propio: marcador A 580,
+B 89, C 7, D 2.624 sobre 3.300 lineas; cero huecos, cero duplicados de puesto y
+cero pares duplicados en los dos ordenes; las NUEVE tasas por dominio; la frontera
+del cierre de quality en el 3.255 y la apertura de risk_management en el 3.256;
+los cuatro tramos de la vara en 0,0; los cuatro hubs de quality domino-wide con su
+unica A en el 2.787; los catorce mas seis mas cuatro de la ficha nombrada dentro
+del paso; los 28 SIN ACTO; los veinticinco de veintisiete de la serie de mutuas;
+los cinco hubs del dominio nuevo; el diff de tres archivos sin scripts ni
+docs/plan; cero guiones. TODO CALZA.
 
-Y UNA COSA QUE HICISTE BIEN Y QUEDA ESCRITA CON TU NOMBRE: el encargo anterior
-te dictaba "lo correcto es A 577, D 2.327, quality 123 A y 20,9 %" al corte
-3.000. Esa cifra del auditor quedo muerta por la TAREA 1.2 del mismo encargo. No
-la copiaste: recomputaste, publicaste A 576, D 2.328, quality 122 A y 20,7 %, y
-dijiste por que. Es exactamente lo que la casa quiere. El error de dictado fue
-del auditor y esta declarado en su acta.
+DOS COSAS QUE HICISTE BIEN Y QUEDAN ESCRITAS CON TU NOMBRE:
+a) LA VERIFICACION FIJA DE DISCUTIBLES PASO POR PRIMERA VEZ. Dos marcas fuertes en
+   el archivo (3.257, 3.262), dos filas en la tabla, las mismas, y el 3.293
+   declarado aparte como marca simple. La regresion de la vuelta 8 esta reparada.
+b) Leiste los diecinueve candidatos del contador de mutuas y citaste la frase que
+   excluye a cada uno. El auditor verifico cuatro (793, 978, 2.072, 2.090) contra
+   el archivo: los cuatro son REPITE con superviviente por dominancia. El descarte
+   es correcto y el contador se queda en veintisiete con razon.
 
-LO QUE NO ESTA EN VERDE ES EL REGISTRO, Y HAY UNA REGRESION. El cribado esta
-sano; lo que se publica SOBRE el cribado, no. De eso trata la TAREA 1 entera.
-Ninguno de los seis hallazgos toca el marcador y todos se resuelven con las
-reglas de correccion existentes.
+RELECTURA CIEGA: SIETE PARES, SIETE COINCIDENCIAS, CERO DISCREPANCIAS. Los tres que
+marcaste (3.257, 3.262, 3.293) y cuatro que el auditor eligio fuera del marcado
+(3.201, 3.202, 3.256, 3.259), leidos primero contra el grafo y destapados despues.
+La sospecha mas seria contra tu tanda era la deriva a D, porque cien pares seguidos
+sin una sola A invitan a pensar que dejaste de buscar identidades. NO APARECE: los
+cuatro pares de mayor similitud del tramo, incluido el de clave 0,9042, dan D leidos
+a ciegas. Tu piso de cero A esta bien puesto. EL 3.256 NO SE RELITIGA: el auditor lo
+leyo por su cuenta contra el grafo y da D (clasificacion dual de cada incertidumbre
+contra el aparato de gestion de oportunidades con probabilidad, premio, senal de
+gatillo y reserva de capacidad).
 
-====================================================================
-TAREA 1: reparar el registro, recontar, y cerrar el pendiente de medicion
-====================================================================
-1. LA REGRESION DEL MARCADO, Y ES LA MAS SERIA. El encargo anterior pedia "el
-   conjunto fuerte y la tabla del reporte hechos del mismo conjunto". No calza.
-   Contado por el auditor sobre tus razones del 3.101 al 3.200:
-   a) Marca fuerte EN EL ARCHIVO, seis: 3.120, 3.121, 3.165, 3.173, 3.176,
-      3.182.
-   b) Tabla publicada en el reporte y en la 98.6, siete: 3.121, 3.147, 3.148,
-      3.165, 3.173, 3.176, 3.182.
-   c) DISCUTIBLE MARCADO de cualquier grado en el archivo, ocho: los seis
-      fuertes mas 3.137 y 3.148.
-   O sea: el 3.120 esta marcado fuerte en el archivo y NO se publico, y su
-   propia razon lo llama "la mayor similitud del checkpoint con arista"; el
-   3.147 se publico como fuerte SIN llevar marca de ninguna clase en su razon;
-   el 3.148 lleva marca simple y se publico como fuerte; y el 3.137 esta marcado
-   y no se publico. Esta es la misma grieta de la vuelta 6 que el auditor dio
-   por cerrada en la 7. Se reabrio en la tanda siguiente. Si el auditor no
-   recibe el par que TU consideras el mas contestado, la relectura ciega no
-   sirve para nada.
-   ADJUDICACION, y usala tal cual: EL ARCHIVO MANDA SOBRE LA TABLA, y las dos se
-   publican del mismo conjunto. La marca en la razon se escribe ANTES de saber
-   si aciertas; la tabla se escribe DESPUES; por eso la tabla es una funcion del
-   archivo y no un acto aparte. Un par sin marca en su razon no puede aparecer
-   como discutible fuerte en la tabla, y un par marcado fuerte en el archivo no
-   puede faltar en la tabla. No es doctrina nueva: es la regla 5 del EJECUTOR
-   leida por su unico sentido operativo.
-   Que hacer: deja los dos conjuntos IDENTICOS. Donde repares el archivo (por
-   ejemplo si decides que el 3.147 merecia marca), la marca se anade con
-   CORRECCION DECLARADA que diga que se anadio despues, para que ninguna ciega
-   futura la lea como marcada a ciegas. No iguales el copy: iguala los
-   conjuntos. Y publica la 98.6 corregida con la lista final.
-   NO RELITIGUES EL 3.120: el auditor lo leyo por su cuenta contra el grafo y da
-   D. Hoshin Kanri y planificacion estrategica comparten catchball y scorecard,
-   pero hoshin trae la seleccion Pareto de 3 a 5 hoshins y el balanced scorecard
-   de cuatro perspectivas, y el otro trae mision y vision, y los entregables son
-   una matriz hoshin contra un plan estrategico. D confirmada.
-2. LOS DOS CONTEOS DE FAMILIA NO CALZAN CON SU PROPIA LISTA. Recuenta con el
-   instrumento y publica con CORRECCION DECLARADA:
-   a) FICHA NOMBRADA DENTRO DEL PASO DE OTRO NODO. Publicaste "nueve casos
-      nuevos", enumeraste DIEZ (3.103, 3.107, 3.114, 3.118, 3.156, 3.169, 3.175,
-      3.186, 3.197, 3.200) y diste "veintiuno acumulados" (que sale de 12 mas 9,
-      no de 12 mas 10). Los tres numeros se contradicen. Y la lista esta corta:
-      el auditor encontro CUATRO casos mas que declaran la figura por su nombre
-      en su propia razon y no aparecen, el 3.155, el 3.177, el 3.181 y el 3.195.
-      Con esos serian CATORCE en el tramo y VEINTISEIS acumulados. Verificalo tu
-      con el instrumento; el recuento manda, no la lista del auditor. Si alguno
-      de los cuatro no cumple, dilo con su frase y dejalo fuera.
-      CRITERIO ADJUDICADO PARA CONTAR: cuenta el par donde (a) un nodo despliega
-      la mecanica de UN paso del otro, y (b) el otro trae pasos enteros que el
-      primero no cubre. Que el paso este nombrado literalmente o venga
-      condensado o implicito NO cambia el conteo, y no es criterio nuevo: es lo
-      que tu propio archivo ya hace en el 3.114 ("un paso implicito") y en el
-      3.169 ("embebida dentro del paso 5 condensado"). Un par puede pertenecer a
-      esta figura Y a otra familia a la vez sin doble conteo del marcador, como
-      tu propio 3.200, que se declara de las dos. Exclusiones que el auditor da
-      por buenas: el 3.148 (registrado como su propia figura, evento contra acto
-      mas amplio) y el 3.188 (ahi "ficha simple" es contenido de un paso).
-   b) LA CAPACIDAD DEL PROCESO, SIN ACTO. Dijiste "seis pares mas" y enumeraste
-      CINCO (3.130, 3.141, 3.149, 3.152, 3.200). Y de esos cinco, el 3.130 no
-      invoca la familia: su razon dice "dos fases sucesivas del mismo cascadeo
-      de mejora". Los que se declaran de la familia son cuatro. Recuenta y
-      publica.
-3. LOS CONTEOS DE HUB, altos por uno. Contados por el auditor sobre el tramo:
-   concepto_haciendo_la_calidad_cierta es D contra SEIS vecinos (3.125, 3.136,
-   3.137, 3.147, 3.150, 3.190), no siete; gestion_estrategica_de_calidad_sqm
-   contra TRES (3.151, 3.159, 3.167), no cuatro; planificacion_calidad_crosby
-   contra TRES (3.143, 3.151, 3.161), y ese si calza. Corrige los dos primeros.
-4. UNA AFIRMACION SOBRE TU PROPIO TRABAJO QUE EL ARCHIVO NO RESPALDA. El reporte
-   dice que citaste el entregable_esperado "en todos los casos de alta
-   similitud" y enumera los siete. Las razones del 3.121 y del 3.173 NO
-   mencionan el entregable en ninguna forma, y son justo los dos donde era mas
-   incomodo: en los dos, los artefactos de ambos lados son casi el mismo
-   (organigrama de reporte dual en uno, checklist de autocontrol en el otro).
-   Las dos D siguen siendo correctas. Lo que hay que arreglar es la frase o la
-   razon: o citas el entregable en esos dos con correccion declarada, o corriges
-   la afirmacion del reporte. Afirmar una lectura no escrita es lo que la regla
-   9 te prohibe.
-   Y AQUI VA LA ADJUDICACION QUE TE HACE FALTA PARA ESCRIBIRLO SIN
-   CONTRADECIRTE: EL DESEMPATE POR entregable_esperado ES UNA PRUEBA NEGATIVA,
-   NO POSITIVA. La adjudicacion 1.4d dice "si dos nodos producen artefactos
-   distintos, no son el mismo acto". No dice, ni se puede leer al reves, que
-   artefactos iguales o casi iguales prueben el mismo acto. Un entregable
-   identico NUNCA basta por si solo para declarar A: la clase la decide siempre
-   la comparacion de pasos enteros. Esto cierra la contradiccion aparente entre
-   tu 3.165 (el entregable del superviviente anade un puntaje y aun asi funde) y
-   tu 3.148 (los entregables se parecen y aun asi no funde): en ninguno de los
-   dos decidio el entregable, decidio si quedaba o no un paso entero fuera.
-   Escribelo asi en el informe y la aparente doble vara desaparece.
-5. EL PISO DE 0,0 % ESTA MAL DESCRITO, Y LA NOTICIA REAL ES MAS FUERTE QUE LA
-   QUE PUBLICASTE. La 98.4 dice "dos tramos en 0,0 % exacto (el primero desde el
-   2.976-3.000)" y el reporte dice "el segundo consecutivo desde el
-   2.976-3.000". Recomputada la vara desde el 2.901 por el auditor: 4,0 / 8,0 /
-   8,0 / 0,0 / 4,0 / 0,0 / 4,0 / 0,0 / 0,0 / 0,0 / 4,0 / 4,0. Entre el
-   2.976-3.000 y el 3.101-3.125 hubo dos tramos mas en 0,0, asi que "el primero
-   desde" es falso. Lo cierto: el 3.076-3.100, el 3.101-3.125 y el 3.126-3.150
-   son TRES TRAMOS CONSECUTIVOS EN 0,0 %, la racha mas larga de la campana, y
-   despues el cuerpo repunta a 4,0 dos veces. Corrige la glosa con la cifra.
-6. DOS DETALLES DE LA 98.1. Dice "leyendo los 579 veredictos A" cuando la propia
-   seccion declara la caida del 2.630 que los deja en 578 a ese corte. Y esas
-   mismas dos lineas son las UNICAS DOS LINEAS ACENTUADAS de las ultimas 784 del
-   informe ("asi que", "re-derivacion"), en un documento que no usa acentos en
-   ninguna otra parte de esa zona. Corrige las dos cosas.
-7. EL PENDIENTE DE MEDICION DEL CONTADOR DE FUSIONES MUTUAS SE ACOTA Y SE CORRE
-   ESTA VUELTA. Lo trajiste bien y sin adivinar, y tenias razon: el barrido por
-   palabra clave no prueba ausencia antes del 2.127. Pero leer los 580 A uno por
-   uno no era la unica salida, y el auditor lo midio para que esto sea
-   proporcionado. Comandos suyos, declarados, sobre
-   docs/INTRA_DOMINIO_VEREDICTOS.jsonl:
-   a) La zona ciega real son 384 veredictos de clase A con puesto menor que
-      2.127 y sin ninguna de las palabras de tu barrido (mutua, ninguno domina,
-      dos sentidos, sin dominancia). Los otros 17 A de esa zona ya caian en tu
-      red.
-   b) POR ELEGIR NO SIRVE como segunda red ahi: captura 14 de los 27 miembros
-      conocidos de la serie y da CERO hits en los 384. Ese vocabulario nacio
-      despues del 2.127.
-   c) La red que SI sirve es la de la epoca, sacada de los miembros tempranos de
-      la serie (2.127, 2.368, 2.417). Los terminos: "cabe en lineas", "caben en
-      lineas", "ninguno trae un procedimiento", "sin superviviente", "linea en
-      los dos", y la cita "9.6.1". Recall medido: 12 de los 13 miembros
-      conocidos que no dicen POR ELEGIR (el unico que se le escapa, el 2.816, ya
-      lo captura la red de la palabra "mutua").
-   d) Sobre los 384 esa red da DIECINUEVE hits, y son estos: 793, 796, 844, 853,
-      878, 905, 918, 943, 966, 978, 2.022, 2.043, 2.072, 2.074, 2.075, 2.076,
-      2.079, 2.087, 2.090.
-   Que hacer: LEE ESOS DIECINUEVE con el criterio de la vuelta 7 (a: es A y
-   declara el mismo acto sin dominancia; b: no es reformulacion transitiva de
-   una fusion ya contada), cita la frase que incluye o excluye a cada uno, y
-   cierra el delta. Si alguno entra, entra a la serie con su numero y el
-   contador se corrige con correccion declarada en la 98.1 y en el checkpoint
-   nuevo. Lo que quede fuera de las dos redes son 365 A, y eso sigue siendo
-   PENDIENTE DE MEDICION pero ya con su tamano dicho: registralo asi, con la
-   cifra 365, no como laguna vaga.
-8. LO VERIFICADO Y EN VERDE, no lo toques ni lo reabras:
-   a) El marcador entero al corte 3.200 (A 580, B 89, C 7, D 2.524), las ocho
-      tasas, los cuatro tramos de la vara, cero huecos, cero duplicados de
-      puesto y cero pares duplicados en los dos ordenes: recomputados por el
-      auditor y calzan.
-   b) La cascada del 2.630 en sus cinco cortes: 2.700 A 543, 2.800 A 562, 2.900
-      A 571, 3.000 A 576 y D 2.328, 3.100 A 578 y D 2.426. Y quality 122 A y
-      20,7 % al 3.000, 124 A y 18,0 % al 3.100, 126 A y 16,0 % al 3.200.
-      Recomputada por el auditor. EL 2.630 QUEDA CERRADO Y NO SE REABRE, y el
-      2.552 sigue sin discutirse.
-   c) El 3.165 y el 3.182 SE QUEDAN EN A, verificados paso por paso contra el
-      grafo por el auditor. El 3.121, el 3.147, el 3.148, el 3.173 y el 3.176 SE
-      QUEDAN EN D, tambien verificados. Reserva escrita que te toca conocer: el
-      3.148 fue el mas cercano a caer, y lo unico que impide la contencion es
-      que "realiza actividades especiales que marquen el cambio de actitud" se
-      cuenta como paso entero y no como tactica. Si un par gemelo aparece en la
-      cola, aplicale ese mismo ancho de vara.
-   d) scripts/recomputar_marcador.py, scripts/_registrar_lote.py y
-      scripts/volcar_pares.py siguen aprobados. Usalos y declara sus comandos.
-      No crees scripts nuevos.
-9. REGISTRO, y no lo adelantes: la PREGUNTA 2 sigue CERRADA. La PREGUNTA 3
-   (sub-cumulo de la responsabilidad gerencial) sigue ABIERTA, confirmada de
-   nuevo por lectura directa en tu 3.113; los 55 pares que le quedan a quality
-   son su ultima oportunidad de resolverse dentro del dominio. La PREGUNTA 4
-   (ficha nombrada dentro del paso) sigue como figura reconocida, con su conteo
-   a corregir en la TAREA 1.2a. La PREGUNTA 5 (planificar contra ejecutar) sigue
-   como figura reconocida. La FIGURA NUEVA que nombraste, contencion por
-   procedimiento mas completo (3.165), QUEDA ACEPTADA COMO FIGURA RECONOCIDA, no
-   como doctrina nueva: la vara del paso entero ya la cubre y hiciste bien en
-   nombrarla sin pedir regla.
-10. DOS FIGURAS QUE EL ENCARGO ANTERIOR PEDIA Y EL REPORTE NO TRAJO: la SENAL
-   DEL IDIOMA (quinta cara, 9.28.1; su ultimo estado publicado es "sin aparicion
-   nueva, cinco denominaciones al corte 3.000") y las PERDIDAS DE NOMBRE A
-   REPONER. Declara el estado de las dos al corte nuevo aunque sea "sin
-   novedad", con su cifra y su corte. Una figura que deja de reportarse no se
-   distingue de una figura que desaparecio.
+ESTE ENCARGO TERMINA LA FASE I. La cola se agota en el 3.388. Medido por el auditor
+sobre docs/INTRA_DOMINIO_PARES.jsonl, no copiado de tu reporte: quedan 88 pares,
+risk_management 61 (3.301 a 3.361) y seguridad_digital 27 (3.362 a 3.388).
 
 ====================================================================
-TAREA 2: CRIBADO hasta el checkpoint 3.300, con el CIERRE DE quality
+TAREA 1: cuatro correcciones de registro, y la primera es del auditor
 ====================================================================
-Del 3.201 al 3.300 (python scripts/volcar_pares.py 3201 3206 para retomar). La
-cola en orden y sin saltos. Manten el barrido de familia antes de dictaminar
-cada par, con la disciplina de la cita textual delante de toda transitividad y
-con el entregable consultado antes de declarar contencion O identidad,
-recordando que el entregable es prueba NEGATIVA y nunca positiva (TAREA 1.4).
-Commitea cada 25 para no perder trabajo si la sesion se corta.
+Ninguna toca el marcador ni una sola clase. Todas se resuelven con las reglas de
+correccion existentes, tachando sin borrar. Ninguna pide doctrina nueva.
+
+1. LA RACHA MAS LARGA NO ERA LA QUE TE DICTE, Y EL ERROR ES MIO. En el encargo
+   anterior escribi que el 3.076-3.150 son "TRES TRAMOS CONSECUTIVOS EN 0,0 %, la
+   racha mas larga de la campana". Lo medi sobre una ventana de doce tramos desde
+   el 2.901 y lo publique sobre la campana entera sin recorrerla. Tu lo copiaste en
+   la 98.4 y lo repetiste en la 99.3 ("esa sigue siendo la de tres tramos,
+   3.076-3.150, 75 pares"). ES FALSO.
+   MEDIDO POR EL AUDITOR sobre el archivo entero, en tramos de 25 desde el puesto 1,
+   las rachas de tramos consecutivos en 0,0 %: SEIS tramos, 1.626-1.775 (150 pares);
+   CINCO tramos, 26-150 (125 pares); CUATRO tramos, 3.201-3.300 (100 pares); y solo
+   entonces TRES tramos, 3.076-3.150 (75 pares). Y en pares corridos sin ninguna A,
+   sin alinear a tramos: la racha mas larga del archivo es de 173 pares (1.603 a
+   1.775), la segunda de 152 (4 a 155), y la racha VIVA al corte 3.300 es de 118
+   pares (3.183 a 3.300) y sigue abierta.
+   QUE HACER: corrige la glosa en la 98.4 y en la 99.3 con CORRECCION DECLARADA que
+   diga que la cifra venia dictada del encargo anterior y que el error es del
+   auditor. Recomputa las rachas tu mismo antes de publicarlas: NO copies mi tabla,
+   verificala. Y publica en su lugar lo que si se sostiene medido: el 3.201-3.300 es
+   el UNICO bloque alineado de cien pares en toda la campana sin una sola A.
+   ADJUDICACION, y me obliga a mi primero: UNA GLOSA COMPARATIVA SOBRE "LA CAMPANA"
+   SE MIDE SOBRE LA CAMPANA, O NO SE ESCRIBE. Un "el mas largo", "el mas alto" o "la
+   primera vez" se publica con el comando que recorrio el universo entero del que se
+   predica, o se acota en la frase al tramo medido ("el mas largo desde el 2.901").
+   No es doctrina nueva: es la regla 9 aplicada al superlativo.
+2. AFIRMASTE UNA CONSULTA QUE EL ARCHIVO NO REGISTRA. Tu reporte cierra el punto 1.4
+   diciendo que la adjudicacion "se aplico explicitamente en el cribado nuevo de esta
+   vuelta (los entregables consultados en cada par de 3.201 a 3.300)". Contado por el
+   auditor: 69 de las 100 razones NO mencionan la palabra entregable en ninguna
+   forma. Las 31 que si lo citan lo usan bien, siempre como prueba negativa, y mi
+   encargo pedia el entregable "antes de declarar contencion O identidad", condicion
+   que con cero A casi no se disparo. O sea: el cribado esta bien, la frase no. Es la
+   familia exacta del hallazgo 1.4 de la vuelta pasada, y es la tercera vuelta
+   seguida en que el reporte afirma sobre su propio trabajo mas de lo escrito.
+   QUE HACER: corrige la frase a lo que el archivo sostiene, con la cifra delante
+   (31 de 100), no la borres.
+   ADJUDICACION QUE FIJA LA REGLA HACIA ADELANTE: el entregable_esperado se consulta
+   y SE CITA EN LA RAZON antes de declarar A, antes de declarar contencion, y en
+   TODO par que marques como discutible de cualquier grado. En los demas pares no es
+   obligatorio citarlo, y por eso no se puede publicar que se consulto en todos.
+3. EL ENCABEZADO DE LA SERIE DE MUTUAS DICE VEINTISEIS SOBRE UNA TABLA QUE NUMERA
+   VEINTISIETE. En la 98.1 el titulo dice "LA SERIE COMPLETA, renumerada, VEINTISEIS
+   casos (era diecinueve, con un caso retirado y ocho anadidos)", la tabla numera
+   hasta 27 y el parrafo de abajo dice "AL CORTE 3.200 ES VEINTISIETE". El
+   encabezado quedo del estado anterior a anadir el 3.182. Corrige el encabezado con
+   correccion declarada y deja la aritmetica dicha (19 menos 1 retirado mas 9
+   anadidos, con el 3.182 dentro).
+4. UNA CITA FALSA EN LA 98.2, Y SE ME PASO A MI EN LA VUELTA 8. La 98.2 dice
+   "Verificado ademas que quality_awareness_crosby es D contra TODOS los demas nodos
+   que lo tocan en el archivo (2.648, 2.696, 2.789, 2.939, 3.040, 3.067, 3.089,
+   3.097)". EL 2.789 NO TOCA ESE NODO: es conciencia_calidad contra
+   entrenamiento_supervisores_calidad. Los toques reales son NUEVE (2.630, 2.648,
+   2.696, 2.939, 3.040, 3.067, 3.089, 3.097 y el 3.251, posterior a esa seccion) y
+   TODOS SON D. La conclusion del 2.630 no se mueve: lo que esta mal es la nomina,
+   no el veredicto. Corrigela con correccion declarada, verificando tu la lista
+   completa con el instrumento antes de publicarla. EL 2.630 SIGUE CERRADO Y NO SE
+   REABRE; el 2.552 sigue sin discutirse.
+5. LO VERIFICADO Y EN VERDE, no lo toques ni lo reabras: el marcador entero al corte
+   3.300 y sus nueve tasas; la frontera 3.255/3.256; los cuatro tramos de la vara
+   del checkpoint; los cuatro hubs de quality domino-wide (10, 9, 7, 7, con la unica
+   A en el 2.787); los treinta y dos de la ficha nombrada en quality y los cuatro de
+   risk_management declarados como reaparicion; los 28 SIN ACTO; el contador de
+   mutuas en veintisiete con sus veinticinco de quality; los diecinueve candidatos
+   leidos y el pendiente acotado en 365 A; el conjunto fuerte de SEIS del tramo
+   3.101-3.200. Y siguen aprobados scripts/recomputar_marcador.py,
+   scripts/_registrar_lote.py y scripts/volcar_pares.py: usalos y declara sus
+   comandos. No crees scripts nuevos.
+
+====================================================================
+TAREA 2: CRIBADO DEL 3.301 AL 3.388. AGOTA LA COLA Y CIERRA LA FASE I
+====================================================================
+Del 3.301 al 3.388 (python scripts/volcar_pares.py 3301 3306 para retomar). La cola
+en orden y sin saltos. Commitea cada 25 para no perder trabajo si la sesion se corta.
+Manten el barrido de familia antes de dictaminar cada par, con la cita textual
+delante de toda transitividad, y con el entregable citado donde la TAREA 1.2 lo
+exige.
 
 ESTE TRAMO TIENE DOS MITADES DISTINTAS Y NO SE MEZCLAN:
-a) 3.201 a 3.255: los ULTIMOS 55 PARES DE quality. Al llegar al 3.255 el dominio
-   CIERRA, y el cierre pide su propio bloque en el informe, no una linea: la
-   CIFRA FINAL del dominio (n, A, tasa, con su corte), la vara por tramo de los
-   dos tramos nuevos, el RESUMEN DE RACIMOS Y FAMILIAS del dominio entero (cual
-   fundio, cual quedo SIN ACTO, cual quedo por elegir, cual quedo abierta), el
-   estado final de las PREGUNTAS 3, 4 y 5 al cerrar el dominio, y el contador de
-   fusiones mutuas con lo que quality aporto. Es el segundo dominio mas grande
-   del catalogo despues de core: su cierre es la pieza mas grande de esta
-   vuelta y merece el espacio.
-b) 3.256 a 3.300: los PRIMEROS 45 PARES DE risk_management. Es un dominio NUEVO:
-   no tiene un solo veredicto intra en el archivo, asi que no tiene familias
-   previas, no tiene racimos heredados y no tiene precedentes propios que citar.
-   Dos avisos que no son sugerencias: NO leas su tasa contra la de quality (son
-   catalogos distintos y la comparacion no significa nada hasta que el dominio
-   tenga cuerpo), y NO importes las familias de quality como si fueran suyas. Si
-   una figura de quality reaparece aqui, se declara como reaparicion citando el
-   precedente, no como continuidad. Si el dominio abre familias propias,
-   nombralas nuevas.
-No fuerces A para compensar ni D para sostener ninguna tendencia. Cada A que
-declares como fusion mutua tiene que decir explicitamente si mueve el contador y
-por que, con el criterio de la vuelta 7.
+a) 3.301 a 3.361: los ULTIMOS 61 PARES DE risk_management. Al llegar al 3.361 el
+   dominio CIERRA y pide su propio bloque en el informe, con lo mismo que pidio el
+   cierre de quality: la CIFRA FINAL (n, A, tasa, con su corte), la vara por tramo,
+   el RESUMEN DE RACIMOS Y FAMILIAS del dominio entero (cual fundio, cual quedo sin
+   acto, cual quedo abierta), el estado de sus hubs (los cinco que ya lleva contados,
+   recontados domino-wide al cierre), que paso con la FIGURA CANDIDATA del 3.276
+   (plan de contingencia generalizado aplicado a un subconjunto mas severo): si se
+   repitio, se nombra figura reconocida con sus casos; si no, se declara caso unico
+   con su cifra. Y la reaparicion de la ficha nombrada dentro del paso, con su
+   conteo propio del dominio, siempre declarada como reaparicion con precedente
+   citado, nunca como continuidad del contador de quality.
+   AVISO QUE NO ES SUGERENCIA: el dominio lleva 45 pares y CERO A. Si cierra en cero,
+   seria el primer dominio del catalogo entero que cierra sin una sola fusion (el mas
+   bajo hasta hoy es compras, 1 A en 155, 0,6 %), y eso hay que decirlo con la cifra
+   y con el comando que lo comprueba sobre los DIEZ dominios, no de memoria. Pero NO
+   FUERCES UNA A PARA QUE LA CIFRA NO SEA REDONDA NI UNA D PARA SOSTENER LA
+   TENDENCIA. Cada par se decide con sus propios pasos enteros. Si aparece una A,
+   entra con su evidencia y dice explicitamente si mueve el contador de mutuas y por
+   que, con el criterio de la vuelta 7.
+b) 3.362 a 3.388: EL DOMINIO seguridad_digital ENTERO, 27 pares. Abre y cierra en el
+   mismo tramo, y es el ultimo del catalogo. Es un dominio NUEVO: no tiene un solo
+   veredicto intra en el archivo, no tiene familias previas, no tiene racimos
+   heredados. NO leas su tasa contra la de ningun otro dominio (catalogos distintos,
+   y 27 pares no sostienen una comparacion), y NO importes familias ajenas como
+   suyas: si una figura conocida reaparece, se declara reaparicion citando el
+   precedente. Si abre familias propias, nombralas nuevas. Su cierre pide bloque
+   propio igual que los otros dos, con la advertencia escrita de que 27 pares son un
+   dominio pequeno y su tasa se lee con esa cautela dicha en la frase.
+   AVISO MEDIDO POR EL AUDITOR: los dos pares de mayor similitud de titulo de toda la
+   cola restante estan aqui (3.363 getting_started_incident_response contra
+   respuesta_incidentes_cui, sim_tit 87,0; y 3.370 csf_funcion_govern contra
+   csf_funcion_identify, sim_tit 84,4), y hay una familia de nodos csf_funcion_* que
+   se va a tocar entre si (3.388 es csf_funcion_detect contra csf_funcion_identify).
+   Cuidado con los dos filos opuestos: funciones hermanas de un mismo marco NO son el
+   mismo acto por compartir prefijo, y dos fichas del mismo procedimiento con nombre
+   distinto en ingles y en espanol SI pueden serlo. La trampa del identificador
+   corta en las dos direcciones y la vara sigue siendo la comparacion de pasos
+   enteros.
 
-Reporte completo EN el checkpoint 3.300, escrito en docs/loop/REPORTE.md (lo
-reescribes entero): marcador recomputado con el efecto de la TAREA 1, tasa por
-dominio (que ahora son NUEVE), vara por tramo, el BLOQUE DE CIERRE DE quality,
-la apertura de risk_management, familias y figuras al dia con sus conteos
-corregidos y verificados contra su propia lista, el contador de fusiones mutuas
-con el delta de los diecinueve resuelto, el estado de los seis arreglos de
-registro de la TAREA 1, la senal del idioma y las perdidas de nombre, los
-PENDIENTES DE DOCTRINA, y LOS DISCUTIBLES MARCADOS para la relectura ciega.
-ANTES DE PUBLICAR LA TABLA DE DISCUTIBLES, CORRE LA VERIFICACION Y DILA EN EL
-REPORTE: cuenta las marcas fuertes en el archivo, cuenta las filas de tu tabla,
-y declara que los dos conjuntos son identicos con la lista delante. Esa
-verificacion es fija desde ahora y va en cada checkpoint. Checkpoint compacto
-tambien al informe (seccion 99), como el 98.
-Faltan 188 pares hasta el 3.388: quality 55 (hasta el 3.255), risk_management
-106 (3.256 a 3.361) y seguridad_digital 27 (3.362 a 3.388).
+REPORTE FINAL DE LA FASE I, en docs/loop/REPORTE.md (lo reescribes entero), y
+checkpoint 3.388 al informe (seccion 100), que es el cierre de la fase:
+- marcador recomputado al corte 3.388 con el efecto de la TAREA 1, cero huecos, cero
+  duplicados de puesto y cero pares duplicados en los dos ordenes, con su comando;
+- tasa por dominio, que ahora son DIEZ, y la tasa global de la campana entera;
+- la vara por tramo del tramo nuevo, y la tabla de rachas de tramos en 0,0 %
+  RECOMPUTADA SOBRE EL ARCHIVO ENTERO (TAREA 1.1), con la racha viva al cierre;
+- el BLOQUE DE CIERRE de risk_management y el BLOQUE de seguridad_digital;
+- el estado final de TODAS las figuras y familias con su conteo verificado contra su
+  propia lista: fusion mutua (contador y reparto por dominio), ficha nombrada dentro
+  del paso, la capacidad del proceso SIN ACTO, contencion por procedimiento mas
+  completo, la senal del idioma y las perdidas de nombre con su cifra y su corte
+  aunque sea "sin novedad";
+- el estado final de las PREGUNTAS 2, 3, 4 y 5. La PREGUNTA 3 cerro ABIERTA con
+  quality: dila cerrada abierta tambien al cierre de la fase, y si aparece un
+  ejemplar equivalente en los dos dominios nuevos, se declara con su puesto;
+- el PENDIENTE DE MEDICION de los 365 A, repetido con su cifra para que no se pierda
+  al cambiar de fase;
+- LA VERIFICACION FIJA DE DISCUTIBLES antes de publicar la tabla: cuenta las marcas
+  fuertes en el archivo del tramo, cuenta las filas de tu tabla, y declara que los
+  dos conjuntos son identicos con la lista delante. Paso por primera vez esta vuelta;
+  que pase dos veces seguidas;
+- LOS DISCUTIBLES MARCADOS para la relectura ciega, marcados en la razon ANTES de
+  saber si aciertas;
+- y una linea que diga, con su comando, que EL ARCHIVO ESTA EN 3.388 DE 3.388 Y LA
+  COLA ESTA AGOTADA.
+
+DONDE PARAS: en el 3.388, con el reporte publicado. NO ENTRAS A LA FASE II. El
+recomputo de OP-U-02 tiene por disparador el puesto 3.388, pero se abre con el
+encargo siguiente y despues de que el auditor verifique este cierre; docs/plan/ sigue
+en solo lectura esta vuelta y no se toca ni un archivo suyo. Si terminas el 3.388 con
+presupuesto de sobra, NO lo gastes adelantando fase: gastalo releyendo tu propio
+tramo y declarando lo que releiste.
 Los hallazgos que no puedan esperar, al mensaje del commit.
 
-Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
-contradice una regla vigente, paras y lo traes. No adivines.
+Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice
+una regla vigente, paras y lo traes. No adivines.

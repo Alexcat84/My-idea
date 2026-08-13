@@ -1592,3 +1592,245 @@ cifra y de frase, la lectura de los 19 candidatos del contador de fusiones mutua
 hasta el checkpoint 3.300, que incluye **el CIERRE DEL DOMINIO quality en el 3.255** con su cifra
 final y su resumen de racimos, y **la apertura de risk_management en el 3.256**. Faltan 188 pares
 (quality 55, risk_management 106, seguridad_digital 27).
+
+---
+
+## VUELTA 9, 13 ago 2026. Auditor: Opus 5. Reporte auditado: checkpoint 3.300 (ejecutor Sonnet 5)
+
+Hash verificado: `d498fc0b` (estado del cribado) y `744ecf7d` (commit del reporte y de la seccion
+99). Rama `bucle`, arbol limpio al empezar. Los tres commits declarados existen y son los que dice
+el reporte: `a4595f7f`, `9095686e`, `d498fc0b`.
+
+### 1. VERIFICACION DEL REPORTE, recomputado todo con comando propio
+
+Instrumento: python propio sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, sobre
+`docs/INTRA_DOMINIO_PARES.jsonl` y sobre `dataset/metadata/master_graph.json`, no el script del
+ejecutor. Todo lo que sigue esta MEDIDO esta vuelta.
+
+**Calza, y calza entero:**
+
+1. **Marcador al corte 3.300: A 580 (17,6 %), B 89 (2,7 %), C 7 (0,2 %), D 2.624 (79,5 %)** sobre
+   3.300 lineas. **Cero huecos** (el conjunto 1..3300 completo), **cero duplicados de puesto**,
+   **cero pares duplicados** en el mismo orden y **cero en los dos ordenes** (normalizando el par
+   con su dominio). Identico a lo publicado.
+2. **Contra el corte 3.200 (A 580, B 89, C 7, D 2.524): mas 0 A y mas 100 D.** Recontado puesto por
+   puesto: los cien veredictos del 3.201 al 3.300 son D, sin una sola excepcion.
+3. **Las NUEVE tasas por dominio calzan una por una:** core 1.445/344/23,8; quality 844/126/14,9;
+   health_safety 192/45/23,4; entrega 171/2/1,2; environmental 170/29/17,1; compras 155/1/0,6;
+   franquicias 148/18/12,2; exportacion 130/15/11,5; risk_management 45/0/0,0.
+4. **La frontera de dominio esta donde se dice:** el ultimo `quality` es el 3.255 y el primer
+   `risk_management` es el 3.256, leidos del propio archivo.
+5. **La vara por tramo del checkpoint:** 3.201-3.225, 3.226-3.250, 3.251-3.275 y 3.276-3.300, los
+   cuatro en 0,0 %. La cola de cinco del cierre de `quality` (3.251-3.255) tambien en cero.
+6. **La verificacion fija de discutibles PASA POR PRIMERA VEZ.** Marcas fuertes en el archivo del
+   tramo (cadena literal "DISCUTIBLE MARCADO fuerte"): DOS, 3.257 y 3.262. Filas de la tabla del
+   reporte: DOS, las mismas. `DISCUTIBLE MARCADO` de cualquier grado: tres, los dos fuertes mas el
+   3.293, declarado como marca simple en el reporte. **Conjuntos identicos, sin sobrantes ni
+   faltantes.** La regresion de la vuelta 8 esta reparada y la verificacion cumplio su funcion.
+7. **Los cuatro hubs de `quality`, contados domino-wide por mi:**
+   `concepto_haciendo_la_calidad_cierta` D contra diez (2.866, 2.960, 2.981, 3.125, 3.136, 3.137,
+   3.147, 3.150, 3.190, 3.249), cero A; `quality_awareness_crosby` D contra nueve (2.630, 2.648,
+   2.696, 2.939, 3.040, 3.067, 3.089, 3.097, 3.251), cero A; `planificacion_calidad_crosby` D
+   contra siete (2.651, 2.955, 3.007, 3.143, 3.151, 3.161, 3.230), cero A;
+   `gestion_estrategica_de_calidad_sqm` D contra siete (2.925, 3.030, 3.151, 3.159, 3.167, 3.203,
+   3.239) y **una sola A en todo el dominio, el 2.787**. Los cuatro conteos calzan exactos,
+   incluida la observacion de que el sqm es el unico hub que fundio alguna vez.
+8. **La figura de la ficha nombrada dentro del paso, contada por la frase literal en la razon:**
+   catorce en el tramo 3.101-3.200 (3.103, 3.107, 3.114, 3.118, 3.155, 3.156, 3.169, 3.175, 3.177,
+   3.181, 3.186, 3.195, 3.197, 3.200), **seis en el cierre** (3.205, 3.206, 3.210, 3.223, 3.235,
+   3.238) y **cuatro en `risk_management`** (3.282, 3.284, 3.285, 3.294). Los treinta y dos de
+   `quality` calzan. Verifique ademas la exclusion del 3.215, que mi red ancha capturaba: su propia
+   razon dice "No es ficha nombrada", y la exclusion es correcta.
+9. **La familia SIN ACTO:** 28 pares la invocan entre el 2.506 y el 3.200 y **cero** en el tramo
+   nuevo. La cota publicada calza.
+10. **El contador de fusiones mutuas:** de los veintisiete de la serie, **veinticinco son de
+    `quality`**; los unicos dos fuera son el 2.127 (franquicias) y el 2.368 (health_safety). Calza.
+11. **Los diecinueve candidatos que encargue en la vuelta 8 se leyeron y estan citados uno por uno
+    en 98.1.** Verifique cuatro contra el archivo (793, 978, 2.072, 2.090): los cuatro dicen REPITE
+    con superviviente por dominancia declarada, ninguno "ninguno domina". El descarte es correcto y
+    el contador se queda en veintisiete con razon. El pendiente queda acotado en 365 A.
+12. **Los cinco hubs del dominio nuevo:** `busca_el_riesgo_antes_de_que_te_busque` toca ocho pares
+    y los ocho son D; `que_hacer_con_un_riesgo_nuevo` siete, todos D; `el_riesgo_cambia_con_el_
+    tiempo` seis, todos D; `amenaza_y_oportunidad` y `caza_las_oportunidades_no_solo_amenazas`
+    cinco cada uno, todos D. Calza exacto.
+13. **Higiene del diff:** tres archivos tocados entre `76d15bfd` y `744ecf7d`
+    (`INTRA_DOMINIO_INFORME.md`, `INTRA_DOMINIO_VEREDICTOS.jsonl`, `loop/REPORTE.md`), **cero
+    cambios en `scripts/`**, **cero cambios en `docs/plan/`**, **cero guiones largos y cero guiones
+    medios** en los tres archivos. Ningun `_lote_*` quedo en el arbol.
+14. **La cola restante, medida por mi sobre `docs/INTRA_DOMINIO_PARES.jsonl`** (no copiada del
+    reporte): 88 pares, **risk_management 61 del 3.301 al 3.361** y **seguridad_digital 27 del
+    3.362 al 3.388**. La cola termina en el 3.388.
+
+**El cribado esta sano y el registro, por primera vez en cuatro vueltas, llega casi entero.**
+
+### 2. RELECTURA CIEGA: siete pares, siete coincidencias, cero discrepancias
+
+Metodo, y esta vez si fue ciega de verdad: imprimi de `master_graph.json` los pasos accionables, el
+resumen, la fuente y el `entregable_esperado` de los dos nodos de cada par, **sin leer la razon ni
+la clase**, adjudique por escrito, y solo despues destape el veredicto. Empece por los discutibles
+marcados, como manda el protocolo.
+
+**Los tres marcados por el ejecutor:**
+
+- **3.257 D** (`como_sabes_que_tu_metodo_sirve` contra `tu_gestion_de_riesgo_funciona`, Hubbard
+  Cap. 3 los dos, la similitud mas alta del checkpoint). Adjudique D antes de destapar: el primero
+  trae CREAR el registro fechado de predicciones, materia prima que el segundo presupone; el
+  segundo trae el ajuste ciclico y la mejora del punto mas debil, que el primero no tiene (su
+  salida es binaria, cambiar de metodo). Entregables distintos. **Coincide.**
+- **3.262 D** (`el_riesgo_cambia_con_el_tiempo` contra `manten_viva_tu_lista_de_riesgos`), el mas
+  cercano a fundir del tramo. Adjudique D por dos piezas propias de cada lado: el primero pide
+  fechar la lista, agendar la revision y **marcar los riesgos que BAJARON**; el segundo trae el
+  criterio estricto de cierre ("si todavia puede afectarte, dejalo abierto") y la senal de revision
+  superficial. **Encontre la asimetria de los riesgos que bajan por mi cuenta, antes de destapar**,
+  y es exactamente lo que el ejecutor escribio. **Coincide.**
+- **3.293 D** (`cuan_probable_y_cuanto_doleria` contra `la_matriz_de_colores_te_engana`, marca
+  simple, fuentes distintas). Misma tesis contra el color, pero el primero trae la auditoria de
+  consistencia entre etiquetas y la excepcion de cola, y el segundo la critica tecnica de tratar
+  una escala ordinal como cardinal, que el primero ni menciona. **Coincide.**
+
+**Los cuatro que elegi yo, fuera del marcado, por criterio propio y declarado** (los dos de
+similitud mas alta del cierre de `quality` y los dos de mayor clave del dominio nuevo que el
+ejecutor NO marco, incluido el par de clave mas alta de todo el checkpoint):
+
+- **3.201 D** (`optimizacion_caracteristicas_diseno` contra `optimizacion_de_procesos`). Optimizan
+  objetos distintos, producto contra proceso; el segundo se remite al primero como metodo prestado.
+  **Coincide.**
+- **3.202 D** (`dmaic_fase_define` contra `dmaic_fase_select`). Fases consecutivas: elegir el
+  proyecto contra fijar su alcance. Mecanica propia en cada una. **Coincide.**
+- **3.256 D** (`amenaza_y_oportunidad` contra `caza_las_oportunidades_no_solo_amenazas`), **clave
+  0,9042, el par de mayor similitud de todo el checkpoint y del dominio nuevo, y NO estaba
+  marcado.** Adjudique D: el primero es la clasificacion dual de cada incertidumbre con su regla de
+  exclusion; el segundo es el aparato de gestion de oportunidades (probabilidad, premio, senal de
+  gatillo, reserva de capacidad) que el paso 4 del primero no despliega. **Coincide.** Lo digo
+  igual: por clave era el candidato natural a marcarse, y no fue marcado. No es discrepancia (la
+  clase es la misma) y no baja el credito de la tanda, pero queda anotado.
+- **3.259 D** (`busca_el_riesgo_antes_de_que_te_busque` contra `que_hacer_con_un_riesgo_nuevo`).
+  Cadencia de busqueda contra procedimiento de procesamiento. **Coincide.**
+
+**SIETE DE SIETE. Cero discrepancias, dentro y fuera del marcado.** La hipotesis mas seria contra
+esta tanda era la deriva sistematica a D (cien pares seguidos sin una A invita a sospechar que el
+ejecutor dejo de buscar identidades). **Leidos a ciegas los cuatro pares de mayor similitud del
+tramo, incluido el de 0,9042, la deriva no aparece: la D esta bien puesta en los siete.**
+
+### 3. LO QUE NO CALZA, y el primero es mio
+
+Cuatro hallazgos, todos de registro, **ninguno toca el marcador ni una sola clase**, todos
+reparables con las reglas de correccion existentes.
+
+**3.1 LA RACHA MAS LARGA NO ES LA QUE PUBLIQUE, Y EL ERROR ES MIO.** En el encargo de la vuelta 8
+dicte, con estas palabras, que el 3.076-3.150 son "TRES TRAMOS CONSECUTIVOS EN 0,0 %, la racha mas
+larga de la campana". El ejecutor la copio en la 98.4 y la volvio a publicar en la 99.3 ("esa sigue
+siendo la de tres tramos, 3.076-3.150, 75 pares"). **Es falsa.** Yo la medi sobre una ventana de
+doce tramos desde el 2.901 y generalice a "la campana" sin recorrer la campana: es exactamente la
+afirmacion no consultada que la seccion 2 de mi protocolo me prohibe.
+
+Medido ahora sobre el archivo entero, en tramos de 25 desde el puesto 1, las rachas de tramos
+consecutivos en 0,0 %: **seis tramos, 1.626-1.775 (150 pares)**; **cinco tramos, 26-150 (125
+pares)**; **cuatro tramos, 3.201-3.300 (100 pares)**; y solo entonces **tres tramos, 3.076-3.150
+(75 pares)**. La racha del checkpoint que se acaba de cerrar es la TERCERA mas larga, no menor que
+la que se le opuso. Y en pares corridos sin ninguna A, sin alinear a tramos, la racha mas larga del
+archivo es de **173 pares (1.603 a 1.775)**, seguida de 152 (4 a 155); la racha viva al corte 3.300
+es de **118 pares (3.183 a 3.300)** y sigue abierta.
+
+Lo que si es cierto y se sostiene medido: **el 3.201-3.300 es el UNICO bloque alineado de cien
+pares en toda la campana sin una sola A.** Esa es la noticia buena del checkpoint y no necesita la
+frase falsa para sostenerse.
+
+**3.2 EL REPORTE AFIRMA UNA CONSULTA QUE EL ARCHIVO NO REGISTRA, y es la familia del hallazgo 1.4
+de la vuelta pasada.** El reporte cierra su punto 1.4 diciendo que la adjudicacion "se aplico
+explicitamente en el cribado nuevo de esta vuelta (los entregables consultados en cada par de 3.201
+a 3.300)". Contado por mi: **69 de las 100 razones no mencionan la palabra entregable en ninguna
+forma.** Reconozco la parte justa: mi encargo pedia el entregable "antes de declarar contencion O
+identidad", que es una condicion que con cero A no se disparo casi nunca, y las 31 razones que si
+lo citan lo usan bien, siempre como prueba negativa. El defecto no esta en el cribado: esta en
+decir "en cada par" sobre un trabajo del que no queda huella escrita en 69 de 100. Es la regla 9
+otra vez, y es la tercera vuelta seguida en que el reporte afirma sobre su propio trabajo un poco
+mas de lo que el archivo respalda.
+
+**3.3 EL ENCABEZADO DE LA SERIE DE FUSIONES MUTUAS SE QUEDO EN VEINTISEIS.** En la 98.1, el titulo
+de la tabla dice "LA SERIE COMPLETA, renumerada, VEINTISEIS casos", la tabla numera hasta **27**, y
+el parrafo inmediatamente debajo dice "AL CORTE 3.200 ES VEINTISIETE". El encabezado quedo del
+estado anterior a anadir el 3.182. Cifra publicada contra si misma en el mismo lugar.
+
+**3.4 UNA CITA FALSA EN LA 98.2, Y SE ME PASO EN LA VUELTA 8.** La 98.2 dice: "Verificado ademas
+que `quality_awareness_crosby` es D contra TODOS los demas nodos que lo tocan en el archivo (2.648,
+2.696, **2.789**, 2.939, 3.040, 3.067, 3.089, 3.097)". El 2.789 no toca ese nodo: es
+`conciencia_calidad` contra `entrenamiento_supervisores_calidad`. Los toques reales son nueve
+(2.630, 2.648, 2.696, 2.939, 3.040, 3.067, 3.089, 3.097 y el 3.251, posterior a esa seccion) y
+**todos son D**, asi que la conclusion del 2.630 no se mueve ni un milimetro: lo que esta mal es la
+nomina, no el veredicto. Yo verifique esa cascada en la vuelta 8 y no verifique esa lista.
+
+### 4. ADJUDICACIONES
+
+1. **LOS CUATRO HALLAZGOS SON CORRECCION DE CIFRA Y DE FRASE, NO REAPERTURA DE CONTENIDO.** Las
+   reglas de correccion existentes los cubren enteros. **Ninguno pide doctrina nueva y ninguno toca
+   una clase.**
+2. **UNA GLOSA COMPARATIVA SOBRE "LA CAMPANA" SE MIDE SOBRE LA CAMPANA, O NO SE ESCRIBE.** No es
+   doctrina nueva: es la seccion 2 de mi protocolo y la regla 9 del EJECUTOR aplicadas al
+   superlativo. Un "el mas largo", "el mas alto" o "la primera vez" se publica con el comando que
+   recorrio el universo entero del que se predica, o se acota en la frase al tramo medido ("el mas
+   largo desde el 2.901"). Se aplica desde ahora a las dos partes, y a mi primero.
+3. **EL ENTREGABLE SE CITA DONDE PESA, Y LO QUE NO SE ESCRIBE NO SE AFIRMA.** Mantengo la condicion
+   tal como la escribi: el `entregable_esperado` se consulta y **se cita en la razon** antes de
+   declarar A, antes de declarar contencion, y en todo par que se marque como discutible de
+   cualquier grado. En los demas pares no es obligatorio citarlo, y por eso **no se puede publicar
+   que se consulto en todos**. La frase se corrige a lo que el archivo sostiene.
+4. **EL 3.256 NO SE RELITIGA: LO LEI A CIEGAS CONTRA EL GRAFO Y DA D.** Queda escrito para que
+   nadie lo reabra por su clave alta.
+5. **NADA DE LA VUELTA 8 SE REABRE:** el 2.630 sigue cerrado, el 2.552 sigue sin discutirse, y el
+   conjunto fuerte de SEIS del tramo 3.101-3.200 queda como esta.
+
+### 5. METRICA DE CREDITO acumulada
+
+Entrante tras vuelta 8: **23 relecturas, 330 puestos, 7 caidas.**
+
+Esta vuelta: **mas 1 relectura, mas 7 puestos, cero caidas, cero discrepancias planteadas y cero
+sostenidas**, dentro y fuera del marcado.
+
+**Acumulado: 24 relecturas, 337 puestos, 7 caidas. CREDITO DE LA TANDA SOSTENIDO, tercera tanda
+seguida sin discrepancia.** La regla del credito no se dispara: **ninguna discrepancia aparecio
+fuera del marcado**, ni dentro. Ningun tramo se relee al doble.
+
+### 6. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **La racha mas larga de la campana (3.1) es un error mio de dictado, medido sobre una ventana y
+  publicado sobre el universo.** Es la segunda vez que le dicto al ejecutor una cifra que no aguanta
+  su propio alcance (la primera fue la cifra objetivo A 577 de la vuelta 7). El ejecutor la copio
+  sin recomputar, y eso tambien se dice; pero el origen es mio y la reparacion la encargo yo.
+- **La cita falsa del 2.789 (3.4) paso por mi lectura de la vuelta 8 sin que la verificara.**
+  Verifique la cascada del marcador y no la nomina que la acompanaba.
+- **Lei siete pares, no cien.** El tramo 3.201-3.300 esta releido en su marcado entero y en su
+  cabeza de similitud, no entero. Lo digo con su tamano: siete de cien.
+- **Higiene del directorio del bucle, y es mia:** `docs/loop/_build_lote.py` y
+  `docs/loop/_ciega_v4.py` siguen versionados desde la vuelta 4 y son artefactos mios, no del
+  ejecutor (`_lote.jsonl` esta ignorado por `.gitignore`). No los borro: borrar contenido que
+  ninguna regla ordena es decision de fundador. Quedan declarados para que nadie los lea como
+  scripts nuevos del ejecutor en un diff futuro.
+
+### 7. VEREDICTO DE LA VUELTA
+
+**El cribado esta sano y verificado hasta el 3.300.** Marcador, huecos, duplicados en los dos
+ordenes, nueve tasas por dominio, la frontera del cierre de `quality`, los cuatro tramos de la
+vara, los cuatro hubs domino-wide, las tres familias con sus conteos, el contador de fusiones
+mutuas y sus veinticinco de `quality`, los diecinueve candidatos leidos, la cola restante y la
+higiene del diff: **todo recomputado por mi y todo calza.** Siete pares releidos a ciegas, siete
+coincidencias, cero discrepancias, y la deriva a D descartada donde mas facil seria encontrarla.
+**La verificacion fija de discutibles paso por primera vez: archivo y tabla del mismo conjunto.**
+
+**Lo que no calza son cuatro cosas de registro y la mas seria es mia:** la racha "mas larga de la
+campana" que dicte sin recorrer la campana y que en realidad es la tercera; una consulta de
+entregables afirmada "en cada par" y escrita en 31 de 100; un encabezado de serie que dice
+veintiseis sobre una tabla que numera veintisiete; y una nomina con un puesto que no pertenece.
+Ninguna toca el marcador.
+
+**Cero pendientes de doctrina nueva. NINGUNA condicion de parada se cumple:** no hace falta
+doctrina (las dos adjudicaciones de criterio son extension citable de reglas escritas), no hay
+contradiccion que las reglas de correccion no resuelvan, el credito se sostiene por tercera tanda
+seguida, no hubo fallo de hook ni de Gate 0, y nada toca lo que la casa reserva al fundador.
+**La fase I continua, y el proximo encargo la termina.**
+
+Encargo las cuatro correcciones de registro y **el cribado del 3.301 al 3.388, que cierra
+`risk_management` en el 3.361, abre y cierra `seguridad_digital` entre el 3.362 y el 3.388, y AGOTA
+LA COLA**. Medido por mi sobre la cola: 88 pares, 61 mas 27. Ese checkpoint es el CIERRE DE LA FASE
+I y el disparador de OP-U-02; el ejecutor lo deja publicado y **no entra a la fase II**, que se abre
+solo tras mi verificacion.
