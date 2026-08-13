@@ -16078,3 +16078,175 @@ checkpoint 3.200, hash final de la vuelta antes del reporte).
 
 ---
 
+## 99. CHECKPOINT 3.300: quality cierra en el 3.255, abre risk_management, seis arreglos de registro
+
+**Apendice compacto (bucle vuelta 9, 13 ago 2026, corte 3.300).** La prosa vive en
+`docs/loop/REPORTE.md` en git; esta seccion fija cifras y commits.
+
+### 99.1 MARCADOR (corte 3.300)
+
+| | |
+|---|---:|
+| **veredictos** | **3.300**, hasta el puesto 3.300, cero huecos ni duplicados |
+| **A** | **580** (17,6 %) |
+| **B** | 89 |
+| **C** | 7 |
+| **D** | **2.624** (79,5 %) |
+
+Contra el checkpoint 3.200 (98.3: A 580, D 2.524): **+0 A y +100 D** en el tramo 3.201-3.300
+(comando `python scripts/recomputar_marcador.py 3300`). Cien pares nuevos y cero A: el primero
+por cerrar `quality` sin ninguna A en sus ultimos 55 pares, el segundo por abrir
+`risk_management` tambien sin ninguna A en sus primeros 45.
+
+### 99.2 TASA POR DOMINIO (corte 3.300, NUEVE dominios)
+
+| dominio | n | A | tasa |
+|---|---:|---:|---:|
+| core | 1.445 | 344 | 23,8 % |
+| health_safety | 192 | 45 | 23,4 % |
+| **quality** | **844** | **126** | **14,9 %** (CERRADO) |
+| environmental | 170 | 29 | 17,1 % |
+| franquicias | 148 | 18 | 12,2 % |
+| exportacion | 130 | 15 | 11,5 % |
+| entrega | 171 | 2 | 1,2 % |
+| compras | 155 | 1 | 0,6 % |
+| **risk_management** | **45** | **0** | **0,0 %** (ABIERTO, sin comparar contra otros dominios) |
+
+Quedan **88 pares** hasta el 3.388: risk_management 61 (3.301 a 3.361), seguridad_digital 27
+(3.362 a 3.388).
+
+### 99.3 BLOQUE DE CIERRE DE `quality` (844 pares, 126 A, 14,9 %, corte 3.255)
+
+**Vara por tramo, ultimos dos tramos completos mas la cola de cinco:**
+
+| tramo | pares | A | tasa |
+|---|---:|---:|---:|
+| 3.201-3.225 | 25 | 0 | 0,0 % |
+| 3.226-3.250 | 25 | 0 | 0,0 % |
+| 3.251-3.255 | 5 | 0 | 0,0 % |
+
+`quality` cierra con **CINCUENTA Y CINCO PARES SEGUIDOS SIN NINGUNA A**, del 3.201 al 3.255. No
+es la racha de tramos completos mas larga (esa sigue siendo la de tres tramos, 3.076-3.150, 75
+pares, corregida en 98.4/TAREA 1.5): es el CIERRE del dominio, y cierra en el mismo piso que
+vino sosteniendo desde el 2.976.
+
+**RESUMEN DE RACIMOS Y FAMILIAS DEL DOMINIO ENTERO, al cerrar:**
+
+- **Fusion mutua:** `quality` aporta **VEINTICINCO de los VEINTISIETE casos** de la serie completa
+  (98.1); solo el 2.127 (franquicias) y el 2.368 (health_safety) quedan fuera de `quality`. Es la
+  familia que SI funde, con superviviente declarado explicito (nombrado) en algunos casos y
+  **POR ELEGIR** en la mayoria (2.760, 2.762, 2.773, 2.780, 2.787, 2.825, 3.182, entre otros: ver
+  la tabla completa en 98.1).
+- **Contencion por procedimiento mas completo:** un solo caso confirmado en todo el dominio, el
+  3.165 (evaluacion_organizacional_calidad =A= evaluacion_riesgo_calidad_organizacional). Figura
+  reconocida, no se repitio en el resto del cribado hasta el cierre.
+- **La capacidad del proceso, SIN ACTO:** la familia que NUNCA funde, la mas grande del dominio
+  que se queda sin acto propio hasta el cierre. Barrido de candidatos por la frase "sin acto"
+  sobre el archivo entero (cota inferior, no censo, misma disciplina del 9.28): al menos 28
+  pares la invocan explicitamente entre el 2.506 y el 3.200; sin casos nuevos en el tramo de
+  cierre 3.201-3.255.
+- **Ficha nombrada dentro del paso de otro nodo:** la figura mas frecuente del dominio.
+  Acumulado corregido en la TAREA 1.2a: 26 al corte 3.200; **seis casos mas en el cierre**
+  (3.205, 3.206, 3.210, 3.223, 3.235, 3.238), **TREINTA Y DOS acumulados al cerrar `quality`**.
+  Siempre D, nunca funde: el nodo mas chico detalla un paso del mas grande sin que el mas
+  grande deje de traer pasos enteros propios adicionales.
+- **Hubs que no funden pese al sim_tit alto, conteo final domino-wide (no solo de la sesion):**
+  `concepto_haciendo_la_calidad_cierta` D contra **DIEZ** vecinos en todo el dominio (2.866,
+  2.960, 2.981, 3.125, 3.136, 3.137, 3.147, 3.150, 3.190, 3.249), cero A;
+  `quality_awareness_crosby` D contra **NUEVE** vecinos (2.630 corregido, 2.648, 2.696, 2.939,
+  3.040, 3.067, 3.089, 3.097, 3.251), cero A;
+  `planificacion_calidad_crosby` D contra **SIETE** vecinos (2.651, 2.955, 3.007, 3.143, 3.151,
+  3.161, 3.230), cero A;
+  `gestion_estrategica_de_calidad_sqm` D contra **SIETE** vecinos (2.925, 3.030, 3.151, 3.159,
+  3.167, 3.203, 3.239) pero con **UNA A** en todo el dominio, el 2.787 (fusion mutua, item 22 de
+  la serie): el unico de los cuatro hubs que fundio, y solo una vez, con un nodo distinto de
+  todos los que le dieron D.
+- **PREGUNTA 5, planificar contra ejecutar:** figura reconocida, sin casos nuevos en el tramo de
+  cierre.
+
+**ESTADO FINAL DE LAS PREGUNTAS 3, 4 y 5 AL CERRAR EL DOMINIO:**
+- **PREGUNTA 3** (sub-cumulo de la responsabilidad gerencial dentro de la distincion
+  comun/especial): confirmada una vez mas en el 3.217, **CIERRA ABIERTA**. El encargo anterior
+  avisaba que los 55 pares finales de `quality` eran su ultima oportunidad de resolverse dentro
+  del dominio; no se resolvio. Con `quality` cerrado, la pregunta **NO TIENE MAS OPORTUNIDAD EN
+  ESTE DOMINIO** y queda registrada como abierta y cerrada sin resolucion, para quien la retome
+  si aparece un ejemplar equivalente en otro dominio.
+- **PREGUNTA 4** (ficha nombrada dentro del paso): **cierra como figura reconocida, TREINTA Y DOS
+  casos acumulados**, y **REAPARECE en `risk_management`** (3.282, 3.284, 3.285, 3.294), declarada
+  como reaparicion con precedente citado, no como continuidad del contador de `quality`.
+- **PREGUNTA 5** (planificar contra ejecutar): cierra como figura reconocida, sin novedad en el
+  tramo final.
+
+### 99.4 APERTURA DE `risk_management` (45 pares, 0 A, corte 3.300)
+
+Dominio nuevo, tres fuentes (Edwards et al *Managing Project Risks*, Hubbard *The Failure of Risk
+Management*, DeMarco y Lister *Waltzing with Bears*). **Cero A en los primeros 45 pares.** No se
+comparo esta tasa contra la de `quality` ni ningun otro dominio (catalogos distintos, comparacion
+sin sentido con el dominio recien abierto, aviso del encargo). No se importaron familias de
+`quality` como propias: donde la figura de ficha nombrada dentro del paso reaparecio (3.282,
+3.284, 3.285, 3.294) se cito como reaparicion con precedente, no como extension del contador de
+`quality`. Sin racimos ni contenciones propias todavia: el dominio es denso (varios nodos actuan
+como hub con 3 a 8 toques cada uno, siempre D: `busca_el_riesgo_antes_de_que_te_busque` toca 8
+pares, `el_riesgo_cambia_con_el_tiempo` 6, `que_hacer_con_un_riesgo_nuevo` 7, todos D), pero
+ninguno fundio. **DOS DISCUTIBLES FUERTES marcados** (99.6) y un tercero de marca simple: el par
+mas cercano a fundir en todo el checkpoint es el 3.262, con la vara aplicada palabra por palabra
+(rastreo de riesgos que BAJAN, ausente en el nodo mas rigoroso).
+
+### 99.5 ESTADO DE LOS SEIS ARREGLOS DE REGISTRO DE LA TAREA 1
+
+| arreglo | estado |
+|---|---|
+| 1.1 discutibles fuertes archivo=tabla | corregido en 98.6: conjunto fuerte SEIS (3.120, 3.121, 3.165, 3.173, 3.176, 3.182), verificado identico archivo/tabla |
+| 1.2a ficha nombrada dentro del paso | corregido: 14 en el tramo 3.101-3.200, 26 acumulados al 3.200, 32 al cerrar `quality` (99.3) |
+| 1.2b capacidad del proceso SIN ACTO | corregido: 4 pares en el tramo 3.101-3.200, no 6 |
+| 1.3 hubs | corregido: concepto_haciendo_la_calidad_cierta 6 vecinos en la sesion (10 domino-wide al cierre), gestion_estrategica_de_calidad_sqm 3 en la sesion (7 D mas 1 A domino-wide al cierre) |
+| 1.4 cita del entregable_esperado | corregido: se cito en 5 de 7 discutibles (3.147, 3.148, 3.165, 3.176, 3.182), no en todos; adjudicado que el entregable es prueba negativa, nunca positiva |
+| 1.5 piso de 0,0 % | corregido: TRES tramos consecutivos (3.076-3.150, 75 pares), no dos |
+| 1.6 cifra 579 y acentos | corregido a 578; quitados los dos acentos de 98.1 |
+| 1.7 pendiente de fusiones mutuas | corrido: 19 candidatos leidos, ninguno entra a la serie (son REPITE/contencion, no mutua), pendiente acotado a 365 A sin verificar antes del 2.127 |
+
+### 99.6 SENAL DEL IDIOMA Y PERDIDAS DE NOMBRE (corte 3.300)
+
+**Sin aparicion nueva de ninguna de las dos figuras entre el 3.001 y el 3.300.** Verificado
+directamente (no por barrido de candidatos): los cuatro pares A del tramo 3.001-3.200 (3.012,
+3.064, 3.165, 3.182) y los CERO pares A del tramo 3.201-3.300 revisados uno por uno; ninguno
+declara perdida de sigla/termino extranjero ni perdida de nombre propio/instrumento con nombre.
+**La senal del idioma sigue en cinco denominaciones al corte 3.000** (ultimo estado publicado,
+96.4/97.4/98.5 no la trajeron; se retoma aqui). **Las perdidas de nombre siguen en dos, Amalberti
+y Taguchi** (BANCO 9.28), sin novedad. Una figura que deja de reportarse no se distingue de una
+que desaparecio: quedan las dos declaradas explicitamente "sin novedad" en este checkpoint, como
+pide la TAREA 1.10 del encargo.
+
+### 99.7 VERIFICACION DE DISCUTIBLES (fija desde ahora, cada checkpoint)
+
+Marcas fuertes contadas en el archivo del tramo 3.201-3.300 (cadena literal "DISCUTIBLE MARCADO
+fuerte"): **DOS** (3.257, 3.262). Filas de la tabla de discutibles fuertes de este checkpoint:
+**DOS**. Lista identica: 3.257, 3.262. Conjuntos iguales, verificado. (Marca simple, fuera del
+conjunto fuerte pero declarada: 3.293.)
+
+### 99.8 DISCUTIBLES MARCADOS (conjunto fuerte del checkpoint 3.201-3.300)
+
+**3.257** (como_sabes_que_tu_metodo_sirve contra tu_gestion_de_riesgo_funciona, D, el mas alto
+sim_tit del checkpoint con 75,7, secuenciales crear-el-registro contra auditar-y-mejorar) y
+**3.262** (el_riesgo_cambia_con_el_tiempo contra manten_viva_tu_lista_de_riesgos, D, el par mas
+cercano a fundir del tramo nuevo: el entregable del segundo dice literalmente "el mismo registro"
+del primero, pero el segundo nunca pregunta por los riesgos que BAJARON, que el primero si marca
+explicitamente). Marca simple: **3.293** (cuan_probable_y_cuanto_doleria contra
+la_matriz_de_colores_te_engana, D, misma tesis contra el color, mecanicas propias en ambos
+lados). Detalle completo de cada uno en `docs/loop/REPORTE.md`.
+
+### 99.9 PENDIENTES DE DOCTRINA
+
+Ninguno nuevo. Los 100 pares del tramo, el cierre de `quality` y la apertura de
+`risk_management` se resolvieron con reglas ya escritas. Una figura candidata anotada sin pedir
+doctrina (3.276, `risk_management`): un patron de plan de contingencia generalizado aplicado
+despues a un subconjunto mas severo con requisito de resiliencia mas duro, sin fundir; se nombra
+para reconocerla si se repite, no como regla nueva.
+
+### 99.10 COMMITS
+
+`a4595f7f` (TAREA 1 completa mas cribado 3.201-3.225), `9095686e` (cribado 3.226-3.255, cierra
+`quality`), `d498fc0b` (cribado 3.256-3.300, abre `risk_management`, checkpoint 3.300).
+
+---
+
