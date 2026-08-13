@@ -15405,22 +15405,26 @@ archivo, sin huecos ni duplicados.
 | | |
 |---|---:|
 | **veredictos** | **2.700**, hasta el puesto 2.700 |
-| **A** | **544** (20,1 %) |
+| **A** | **~~544~~ 543** (~~20,1~~ 20,1 %) |
 | **B** | 89 |
 | **C** | 7 |
-| **D** | **2.060** (76,3 %) |
+| **D** | **~~2.060~~ 2.061** (76,3 %) |
 
-Tramo 2.601-2.700: **22 A y 78 D (22,0 %)**. Quedan **688 pares**: `quality` **555**,
-`risk_management` **106**, `seguridad_digital` **27**.
+Tramo 2.601-2.700: **~~22~~ 21 A y ~~78~~ 79 D (~~22,0~~ 21,0 %)**. Quedan **688 pares**: `quality`
+**555**, `risk_management` **106**, `seguridad_digital` **27**. **CORRECCION DECLARADA (bucle
+vuelta 8, relectura conjunta acta vuelta 7, TAREA 1.2 del PROMPT_SIGUIENTE.md): el 2.630 pasa
+de A a D**, ver 98.2 para el caso completo. Cifras de esta seccion ya recomputadas con la
+correccion aplicada (`python scripts/recomputar_marcador.py 2700`).
 
 ### 93.2 `quality` y su vara por tramo (2.601-2.700)
 
-`quality` **289 pares, 90 A, 31,1 %** (baja de 36,0 % porque el tramo entrego 22,0 %).
+`quality` **289 pares, ~~90~~ 89 A, ~~31,1~~ 30,8 %** (baja de 36,0 % porque el tramo entrego
+21,0 %; corregido por el 2.630, ver 98.2).
 
 | tramo | pares | A | tasa |
 |---|---:|---:|---:|
 | 2.601-2.625 | 25 | 6 | 24,0 % |
-| 2.626-2.650 | 25 | 7 | 28,0 % |
+| 2.626-2.650 | 25 | ~~7~~ 6 | ~~28,0~~ 24,0 % |
 | 2.651-2.675 | 25 | 7 | 28,0 % |
 | 2.676-2.700 | 25 | 2 | **8,0 %** |
 
@@ -15436,7 +15440,7 @@ Tramo 2.601-2.700: **22 A y 78 D (22,0 %)**. Quedan **688 pares**: `quality` **5
 | la **capacidad** | **SIN ACTO, cerrada**: 7 de 7 D (cierra el 2.636, extiende el 2.697) |
 | el **Consejo de Calidad** | **POR ELEGIR** nuevo, hub `consejo_calidad`, 5 pares A (2.523, 2.631, 2.662, 2.663, 2.670); el nodo del rol del director queda fuera |
 | la **regla kp** | **POR DERECHO** se sostiene; `regla_todo_o_nada_2` queda fuera (2.646, 2.690 D) |
-| **fusion mutua** | tres nuevas: **15.a (2.630)**, **16.a (2.638)**, **17.a (2.666)**, todas superviviente POR ELEGIR |
+| **fusion mutua** | ~~tres nuevas: 15.a (2.630), 16.a (2.638), 17.a (2.666), todas superviviente POR ELEGIR~~ **CORREGIDO (bucle vuelta 8): el 2.630 NO es fusion mutua, pasa a D (98.2); el 2.673 (identificar_clientes_diseno =A= identificar_clientes_externos_e_internos) SI es un caso valido que el checkpoint original no conto. El recuento completo y renumerado del contador vive en 98.1** |
 | **senal del idioma** | sin aparicion nueva; cinco al corte 2.700; su tasa medida en 9.28.1 (TAREA 1.3) |
 
 ### 93.4 COMMIT
@@ -15457,17 +15461,20 @@ archivo, sin huecos ni duplicados.
 | | |
 |---|---:|
 | **veredictos** | **2.800**, hasta el puesto 2.800 |
-| **A** | **563** (20,1 %) |
+| **A** | **~~563~~ 562** (20,1 %) |
 | **B** | 89 |
 | **C** | 7 |
-| **D** | **2.141** (76,5 %) |
+| **D** | **~~2.141~~ 2.142** (76,5 %) |
 
-Tramo 2.701-2.800: **19 A y 81 D (19,0 %)**. Los 100 pares fueron `quality`. Quedan **588
-pares**: `quality` **455**, `risk_management` **106**, `seguridad_digital` **27**.
+Tramo 2.701-2.800: **19 A y 81 D (19,0 %)**, sin cambio (el 2.630 no cae en este tramo). Los
+100 pares fueron `quality`. Quedan **588 pares**: `quality` **455**, `risk_management` **106**,
+`seguridad_digital` **27**. **CORRECCION DECLARADA (bucle vuelta 8, TAREA 1.2): el marcador
+global baja por el 2.630 (98.2), aunque el tramo 2.701-2.800 no lo contiene.**
 
 ### 94.2 `quality` y su vara por tramo (2.701-2.800)
 
-`quality` **389 pares, 109 A, 28,0 %** (baja de 31,1 % porque el tramo entrego 19,0 %).
+`quality` **389 pares, ~~109~~ 108 A, ~~28,0~~ 27,8 %** (baja de 30,8 % porque el tramo entrego
+19,0 %; el 108 arrastra la correccion del 2.630, que es anterior a este tramo).
 
 | tramo | pares | A | tasa |
 |---|---:|---:|---:|
@@ -15500,7 +15507,7 @@ extendio los seis.
 | la **responsabilidad gerencial** | **POR ELEGIR provisional, sigue abierto**: la postura gerencial (remover barreras, comunicar responsabilidad) sale D contra el procedimiento (2.741) y contra los lemas (2.732, 2.793) |
 | el **breakthrough / DMAIC** | **POR ELEGIR**: breakthrough_desempeno_actual =A= DMAIC otra vez (2.759, via 2.618 y 2.548) |
 | **make_certain, auditorias, costo de calidad, benchmarking, roadmap** | **D pesada por facetas**: familias que separan cada nodo en cara distinta (2.739, 2.768, 2.778, 2.784, 2.798) |
-| **fusion mutua** | **sin caso nuevo** en 2.701-2.800; los A del tramo son contencion, transitividad de cumulo o fusion mutua ya contada |
+| **fusion mutua** | ~~sin caso nuevo en 2.701-2.800~~ **CORREGIDO (bucle vuelta 8, 98.1): CINCO casos validos que este checkpoint no conto, todos quality: 2.760 (gobierno_corporativo_juntas_directivas =A= planificacion_gobierno_organizaciones_familiares), 2.762 (falacia_recompensa_loteria =A= sistemas_recompensa_aleatorios), 2.773 (comparacion_inspectores_independientes =A= riesgos_consenso_inspeccion), 2.780 (revision_progreso =A= revision_progreso_breakthrough), 2.787 (gestion_estrategica_de_calidad_sqm =A= rol_tactico_estrategico_oficina). El recuento completo y renumerado vive en 98.1** |
 | **senal del idioma (quinta cara)** | **sin aparicion nueva**; cinco denominaciones al corte 2.800; su cota se remidio con el barrido del CUERPO (BANCO 9.28.1): recall pleno del numerador, denominador saturado, 6 de 234 = 2,6 % (piso) |
 
 ### 94.5 COMMIT
@@ -15521,21 +15528,24 @@ archivo, sin huecos ni duplicados.
 | | |
 |---|---:|
 | **veredictos** | **2.900**, hasta el puesto 2.900 |
-| **A** | **~~573~~ 572** (~~19,8~~ 19,7 %) |
+| **A** | **~~573~~ ~~572~~ 571** (~~19,8~~ ~~19,7~~ 19,7 %) |
 | **B** | 89 |
 | **C** | 7 |
-| **D** | **~~2.231~~ 2.232** (~~76,9~~ 77,0 %) |
+| **D** | **~~2.231~~ ~~2.232~~ 2.233** (~~76,9~~ ~~77,0~~ 77,0 %) |
 
-Tramo 2.801-2.900: **~~10~~ 9 A y ~~90~~ 91 D (~~10,0~~ 9,0 %)**. Los 100 pares fueron `quality`.
-Quedan **488 pares**: `quality` **355**, `risk_management` **106**, `seguridad_digital` **27**.
-**CORRECCION DECLARADA (bucle vuelta 5, relectura conjunta acta vuelta 4, 95.3.1):** el 2.805
-pasa de A a D. Cifras de esta seccion ya recomputadas con la correccion aplicada; ver 95.3.1
-para el caso completo.
+Tramo 2.801-2.900: **~~10~~ 9 A y ~~90~~ 91 D (~~10,0~~ 9,0 %)**, sin cambio adicional (el 2.630
+no cae en este tramo). Los 100 pares fueron `quality`. Quedan **488 pares**: `quality` **355**,
+`risk_management` **106**, `seguridad_digital` **27**. **CORRECCION DECLARADA (bucle vuelta 5,
+relectura conjunta acta vuelta 4, 95.3.1):** el 2.805 pasa de A a D. **SEGUNDA CORRECCION
+DECLARADA (bucle vuelta 8, relectura conjunta acta vuelta 7, TAREA 1.2):** el 2.630 pasa de A a
+D (98.2), y baja el marcador global un escalon mas (el 2.630 es anterior a este corte). Cifras
+de esta seccion ya recomputadas con las dos correcciones aplicadas.
 
 ### 95.2 `quality` y su vara por tramo (2.801-2.900)
 
-`quality` **489 pares, ~~119~~ 118 A, ~~24,3~~ 24,1 %** (baja de 28,0 % porque el tramo entrego
-~~10,0~~ 9,0 %; corregido por el 2.805, ver 95.3.1).
+`quality` **489 pares, ~~119~~ ~~118~~ 117 A, ~~24,3~~ ~~24,1~~ 23,9 %** (baja de 27,8 % [corte
+2.800 corregido] porque el tramo entrego 9,0 %; corregido por el 2.805 en 95.3.1 y por el 2.630
+en 98.2).
 
 | tramo | pares | A | tasa |
 |---|---:|---:|---:|
@@ -15593,7 +15603,7 @@ recomputadas.
 | la **responsabilidad gerencial** | **POR ELEGIR provisional, sigue abierto**: la postura gerencial sale D contra la distincion en 2.881 (misma frontera que 2.850) |
 | el **breakthrough / DMAIC** | **POR ELEGIR**: 2.887 secuencia_universal_para_el_breakthrough =A= six_sigma_dmaic, la identidad breakthrough=DMAIC de nuevo (via 2.618, 2.759) |
 | los **roadmaps** | **DMAIC no es DPLES** (2.862): lean_six_sigma_roadmap es el ciclo de proyecto DMAIC, roadmap_despliegue es el despliegue DPLES; juran_transformation_roadmap =A= roadmap_despliegue (2.811, ambos DPLES) |
-| **fusion mutua** | **UN caso nuevo**: 2.891 (lider estadistico competente, superviviente POR ELEGIR fuera de cumulo contado). El contador pasa a **DIECIOCHO** (el anterior fue el 2.666) |
+| **fusion mutua** | ~~UN caso nuevo: 2.891..., el contador pasa a DIECIOCHO~~ **CORREGIDO (bucle vuelta 8, 98.1): este tramo (2.801-2.900) trae en realidad DOS casos validos mas, ademas del 2.891, que el checkpoint original no conto: 2.816 (eliminacion_barreras_orgullo_del_trabajo =A= orgullo_por_el_trabajo, Punto 12 de Deming) y 2.825 (cinco_suposiciones_erroneas_calidad =A= concepto_supuestos_erroneos_sobre_calidad, Crosby). El recuento completo y renumerado (con el 2.891 en su nueva posicion) vive en 98.1** |
 | **senal del idioma (quinta cara)** | **sin aparicion nueva**; cinco denominaciones al corte 2.900; la cota del cuerpo quedo corregida (9.28.1: 6 de 234 = 2,6 %, o 6 de 209 = 2,9 %) |
 
 ### 95.5 COMMIT
@@ -15613,13 +15623,19 @@ commit del checkpoint fija el estado que el auditor recomputa.
 | | |
 |---|---:|
 | **veredictos** | **3.000**, hasta el puesto 3.000, cero huecos ni duplicados |
-| **A** | **578** (19,3 %) |
+| **A** | **~~578~~ ~~577~~ 576** (~~19,3~~ ~~19,2~~ 19,2 %) |
 | **B** | 89 |
 | **C** | 7 |
-| **D** | **2.326** (77,5 %) |
+| **D** | **~~2.326~~ ~~2.327~~ 2.328** (~~77,5~~ ~~77,6~~ 77,6 %) |
 
-Contra el checkpoint 2.900 corregido (95.1: A 572, D 2.232): +6 A y +94 D en el tramo 2.901-3.000
-(el conteo bruto de A nuevas es 7; la correccion del 2.916 resta una).
+**CORRECCION DECLARADA (bucle vuelta 7, TAREA 1 del PROMPT_SIGUIENTE.md de esa vuelta, seccion
+97.2): esta seccion 96.1 NO habia arrastrado la correccion del 2.931 (A a D) cuando se publico.
+Corregido ahora: 578 a 577, 2.326 a 2.327.** **SEGUNDA CORRECCION DECLARADA (bucle vuelta 8,
+TAREA 1.2, ver 98.2): el 2.630 pasa de A a D, y baja el marcador un escalon mas, 577 a 576 y
+2.327 a 2.328.** Cifras ya recomputadas con las dos correcciones aplicadas
+(`python scripts/recomputar_marcador.py 3000`). Contra el checkpoint 2.900 corregido (95.1: A
+571, D 2.233): +5 A y +95 D en el tramo 2.901-3.000 (el conteo bruto de A nuevas es 7; las
+correcciones del 2.916 y el 2.931 restan una cada una).
 
 ### 96.2 CORRECCION DECLARADA DEL 2.916 (relectura conjunta, encargada en el acta vuelta 5)
 
@@ -15635,12 +15651,15 @@ Efecto: A 574 a 573 y D 2.255 a 2.256 al corte 2.925 (previo a los tramos nuevos
 
 ### 96.3 `quality` y su vara por tramo (2.901-3.000)
 
-`quality` **589 pares, 124 A, 21,1 %** (baja desde 24,1 % al corte 2.900 corregido).
+`quality` **589 pares, ~~124~~ ~~123~~ 122 A, ~~21,1~~ ~~20,9~~ 20,7 %** (baja desde 23,9 % al
+corte 2.900 corregido). **CORRECCION DECLARADA (bucle vuelta 7, seccion 97.2): 124 a 123 A
+(21,1 % a 20,9 %) por el 2.931. SEGUNDA CORRECCION (bucle vuelta 8, 98.2): 123 a 122 A (20,9 %
+a 20,7 %) por el 2.630, anterior a este corte.**
 
 | tramo | pares | A | tasa |
 |---|---:|---:|---:|
 | 2.901-2.925 | 25 | 1 | 4,0 % |
-| 2.926-2.950 | 25 | 3 | 12,0 % |
+| 2.926-2.950 | 25 | ~~3~~ 2 | ~~12,0~~ 8,0 % |
 | 2.951-2.975 | 25 | 2 | 8,0 % |
 | 2.976-3.000 | 25 | 0 | 0,0 % |
 
@@ -15656,7 +15675,7 @@ Efecto: A 574 a 573 y D 2.255 a 2.256 al corte 2.925 (previo a los tramos nuevos
 |---|---|
 | la **capacidad** | **SIN ACTO, sigue cerrada**: extiende con 2.984, 2.996, ambas D pese a sim_tit muy alto (68,0 y 64,9) |
 | la **distincion comun/especial** contra **responsabilidad gerencial** | **dos cumulos separados, confirmado tres veces mas** (2.977, 2.985, 2.990), todas D; misma frontera de 2.677, 2.766, 2.800, 2.850, 2.881, 2.906 |
-| **fusion mutua** | **UN caso nuevo**, el 2.952 (cultura de integridad/objetividad contra manejo de problemas, resumenes Crosby casi verbatim). El contador pasa a **DIECINUEVE** (el anterior fue el 2.891) |
+| **fusion mutua** | El 2.952 (cultura de integridad/objetividad contra manejo de problemas, resumenes Crosby casi verbatim) SI es un caso valido nuevo de este tramo. ~~El contador pasa a DIECINUEVE (el anterior fue el 2.891)~~ **CORREGIDO (bucle vuelta 8, 98.1): el ordinal viejo (diecinueve) no calzaba con el archivo (faltaban ocho casos y sobraba el 2.630). El recuento completo y renumerado vive en 98.1** |
 | el **breakthrough / DMAIC** | dos identidades nuevas por transitividad hacia el hub ya contado: 2.935 (secuencia universal = breakthrough) y 2.962 (DMAIC en servicios) |
 | el **Consejo de Calidad** | grieta del 2.916 cerrada a D (96.2); el hub sigue absorbiendo a `consejo_de_calidad_3` por los eslabones de contencion 2.523 y 2.662, no tocados |
 | **ficha nombrada dentro del paso de otro nodo** | figura reconocida esta vuelta, seis casos en 2.901-3.000; siempre D, la vara del paso entero ya la cubre |
@@ -15688,12 +15707,16 @@ checkpoint 3.000, hash final de la vuelta).
 | | |
 |---|---:|
 | **veredictos** | **3.100**, hasta el puesto 3.100, cero huecos ni duplicados |
-| **A** | **579** (18,7 %) |
+| **A** | **~~579~~ 578** (~~18,7~~ 18,6 %) |
 | **B** | 89 |
 | **C** | 7 |
-| **D** | **2.425** (78,2 %) |
+| **D** | **~~2.425~~ 2.426** (~~78,2~~ 78,3 %) |
 
-Contra el checkpoint 3.000 corregido (A 577, D 2.327): +2 A y +98 D en el tramo 3.001-3.100.
+**CORRECCION DECLARADA (bucle vuelta 8, TAREA 1.2, ver 98.2): el 2.630 pasa de A a D**, baja el
+marcador un escalon en todos los cortes posteriores, incluido este. Cifras ya recomputadas
+(`python scripts/recomputar_marcador.py 3100`). Contra el checkpoint 3.000 corregido (96.1: A
+576, D 2.328): +2 A y +98 D en el tramo 3.001-3.100, sin cambio (el 2.630 es anterior a este
+tramo).
 
 ### 97.2 CORRECCION DECLARADA DEL 2.931 (relectura conjunta, encargada en el acta vuelta 6)
 
@@ -15709,7 +15732,10 @@ agregada en el 2.942.
 
 ### 97.3 `quality` y su vara por tramo (2.901-3.100, ocho tramos)
 
-`quality` **689 pares, 125 A, 18,1 %** (baja desde 21,1 % al corte 3.000).
+`quality` **689 pares, ~~125~~ 124 A, ~~18,1~~ 18,0 %** (baja desde ~~21,1~~ 20,7 % al corte
+3.000 corregido). **CORRECCION DECLARADA (bucle vuelta 8, TAREA 1.3b/1.2): el "21,1 %" comparaba
+contra una cifra muerta (el corte 3.000 sin la correccion del 2.931 arrastrada); el corte 3.000
+correcto es 20,7 % (98.2/96.3). Ademas 125 a 124 A por el 2.630 (98.2), anterior a este corte.**
 
 | tramo | pares | A | tasa |
 |---|---:|---:|---:|
@@ -15723,16 +15749,19 @@ agregada en el 2.942.
 | 3.076-3.100 | 25 | 0 | 0,0 % |
 
 > El cuerpo se asento en un piso bajo y estable, cuatro tramos entre 0,0 % y 4,0 %, dos en 0,0 %
-> exacto. Los tres A del tramo nuevo son casos aislados de lectura directa (contencion o REPITE
-> sin cadena), no cumulos nuevos: no se forzo A para compensar el piso ni D para sostener la
-> tendencia.
+> exacto. ~~Los tres A del tramo nuevo son casos aislados de lectura directa (contencion o
+> REPITE sin cadena), no cumulos nuevos~~ **CORREGIDO (bucle vuelta 8, TAREA 1.3c): son DOS, no
+> tres, los A del tramo nuevo (3.001-3.100): 3.012 y 3.064; el 2.917 es de la tanda anterior
+> (2.901-3.000) y ya estaba contado ahi. Los dos son casos aislados de lectura directa
+> (contencion o REPITE sin cadena), no cumulos nuevos.** No se forzo A para compensar el piso
+> ni D para sostener la tendencia.
 
 ### 97.4 FAMILIAS Y FIGURAS AL DIA
 
 | que | estado (corte 3.100) |
 |---|---|
 | la **distincion comun/especial POR DERECHO** | un miembro nuevo por contencion directa (3.012, `trampa_del_promedio_como_estandar`); dos D verificados contra el mismo hub (3.057, 3.094) |
-| **fusion mutua** | sin caso nuevo; contador **sigue en DIECINUEVE** |
+| **fusion mutua** | sin caso nuevo en 3.001-3.100. ~~contador sigue en DIECINUEVE~~ **CORREGIDO (bucle vuelta 8, 98.1): el contador DIECINUEVE no calzaba (el 2.630 no es mutua y faltaban ocho casos entre el 2.673 y el 2.891). El recuento completo y renumerado (VEINTISEIS) vive en 98.1** |
 | **ficha nombrada dentro del paso de otro nodo** | **seis casos nuevos** (3.003, 3.029, 3.053, 3.060, 3.088, 3.099); doce acumulados desde el 2.956 |
 | **planificar contra ejecutar** | figura nueva reconocida (3.080, con precedente en el 2.815 de la vuelta 5): disenar el evento no es realizar el evento, entregables de distinta naturaleza |
 | **especializaciones del mismo hub no fusionan entre si** | confirmada con un caso nuevo (3.087, `analisis_pareto_de_proveedores` contra `principio_pareto`), forma espejo del 2.916/2.931 |
@@ -15750,6 +15779,138 @@ completo con el filo de cada discutible en `docs/loop/REPORTE.md`.
 `f040633d` (TAREA 1: correccion 2.931, citas 2.935/2.962, marca fuerte 2.942), `fa26c8cf`
 (cribado 3.001-3.025), `0e387021` (cribado 3.026-3.050), `4317c067` (cribado 3.051-3.075),
 `f0c54577` (cribado 3.076-3.100, checkpoint 3.100, hash final de la vuelta).
+
+---
+
+## 98. CHECKPOINT 3.200: el recuento del contador de fusiones mutuas, el 2.630 a D, tres cifras corregidas
+
+**Apendice compacto (bucle vuelta 8, 13 ago 2026, corte 3.200).** La prosa vive en
+`docs/loop/REPORTE.md` en git; esta seccion fija cifras y commits.
+
+### 98.1 RECUENTO DEL CONTADOR DE FUSIONES MUTUAS (TAREA 1.1, acta vuelta 7)
+
+**El contador publicado (DIECINUEVE) no calzaba con el archivo. Recontado entero sobre las
+3.100 razones, con el criterio adjudicado en el acta vuelta 7: cuenta como caso nuevo de la
+figura el par que (a) es A y declara por sus propias palabras el mismo acto SIN DOMINANCIA
+(cada uno anade lineas, ninguno domina), y (b) no es reformulacion transitiva de una fusion ya
+contada (al menos uno de sus dos nodos no habia sido fundido todavia hacia el mismo cumulo).**
+
+**METODO.** Barrido con `grep` de "mutua" (57 apariciones, cualquier clase) y de "ninguno
+domina"/"dos sentidos"/"sin dominancia" (33 apariciones en clase A) sobre el archivo entero;
+cada hit en clase A se leyo entero y se resolvio con el criterio, citando la frase; los hits en
+clase D o los que citan una fusion AJENA como antecedente (no la propia) se descartaron sin
+contarlos. **Limite declarado de este metodo, para que no se lea como censo:** el propio 2.127
+(primer caso de la serie, ya verificado en vueltas anteriores) no contiene ni "mutua" ni
+"ninguno domina" en su razon, así que un barrido por palabra clave no es prueba exhaustiva de
+ausencia; una re-derivación completa leyendo los 579 veredictos A uno por uno no se hizo esta
+vuelta, por proporcion con el resto del encargo. Esta vuelta corrige el delta especifico que el
+acta trajo (el 2.630 y los ocho candidatos entre el 2.673 y el 2.891) mas una verificacion
+amplia de palabra clave que no encontro ningun otro caso perdido; no es una garantia de que no
+quede alguno sin la palabra clave en algun punto del archivo anterior al 2.127. Se deja como
+PENDIENTE DE MEDICION, no de doctrina, para quien retome el barrido con mas presupuesto.
+
+**LOS OCHO CANDIDATOS DEL ACTA, verificados uno por uno con cita y con barrido de toques
+previos (ninguno de los ocho toca un nodo ya fundido en un cumulo contado: los unicos toques
+previos de sus nodos, cuando los hay, son D):**
+
+| puesto | par | cita que prueba (a) sin dominancia |
+|---:|---|---|
+| 2.673 | `identificar_clientes_diseno` =A= `identificar_clientes_externos_e_internos` | "Cada uno trae una linea propia" (el propio cuerpo de la razon, antes de nombrar superviviente por elegir) |
+| 2.760 | `gobierno_corporativo_juntas_directivas` =A= `planificacion_gobierno_organizaciones_familiares` | "Los pasos calzan uno a uno. A por fusion mutua, superviviente POR ELEGIR" |
+| 2.762 | `falacia_recompensa_loteria` =A= `sistemas_recompensa_aleatorios` | "Los actos calzan. A por fusion mutua, superviviente POR ELEGIR" |
+| 2.773 | `comparacion_inspectores_independientes` =A= `riesgos_consenso_inspeccion` | "Los pasos calzan. A por fusion mutua, superviviente POR ELEGIR" |
+| 2.780 | `revision_progreso` =A= `revision_progreso_breakthrough` | "A por fusion mutua, superviviente POR ELEGIR" |
+| 2.787 | `gestion_estrategica_de_calidad_sqm` =A= `rol_tactico_estrategico_oficina` | "Los pasos calzan... A por fusion mutua, superviviente POR ELEGIR" |
+| 2.816 | `eliminacion_barreras_orgullo_del_trabajo` =A= `orgullo_por_el_trabajo` | "es el mismo acto, no dos caras. A por fusion mutua" (Punto 12 de Deming, sin superviviente nombrado) |
+| 2.825 | `cinco_suposiciones_erroneas_calidad` =A= `concepto_supuestos_erroneos_sobre_calidad` | "es el acto entero compartido... A por fusion mutua, superviviente POR ELEGIR" |
+
+**LAS TRES EXCLUSIONES DEL ACTA, reverificadas y correctas** (2.736, 2.766, 2.800:
+reformulaciones transitivas del cumulo del no culpar, ya fundidas por un caso contado antes de
+llegar a ellas: fallan la condicion (b)).
+
+**ONCE HITS MAS DEL BARRIDO AMPLIO, verificados y CORRECTAMENTE FUERA los once** (no se cuentan
+como fusion mutua; la palabra "mutua" o "dos sentidos" aparece en su razon por otro motivo: un
+survivor con dominancia declarada, o la palabra dentro de un paso del propio nodo, no como
+figura): 2.253 (REPITE con survivor claro, "mutua" es contenido de un paso del nodo), 2.458
+(REPITE con survivor claro, "mutuas" es contenido de un paso), 2.571 (el propio veredicto
+declara dominancia y se defiende explicitamente de leerse como mutua: "mi defensa es que
+comunicar_politicas cubre mas dimensiones"), 2.577 (survivor claro, "FUSION MUTUA" ahi cita a
+OTRO par, el 2.532, como antecedente, no a si mismo), 2.579 (survivor claro, "REPITE. Sobrevive
+ciclo_shewhart_pdsa"), 2.601 (survivor claro con dos herramientas contra una), 2.627 (survivor
+claro, "el mas completo"), 2.631 (survivor claro, "el de seis pasos"), 2.639 (survivor claro,
+"el bucle completo de ocho pasos"), 2.699 (survivor claro, "el mas completo"), 2.853 (A por
+transitividad de cumulo hacia el 2.525, ya contado; el propio veredicto dice "no mueve el
+contador de mutuas, convencion de la vuelta 3").
+
+**EL 2.630 SALE DE LA SERIE**, corregido a D esta misma vuelta (98.2): declaraba fusion mutua
+pero, verificado, es contencion con supervivencia declarada sobre el mismo contenido que su
+par gemelo 3.067 (mismo nodo `quality_awareness_crosby`) lee como paso entero propio para dar D.
+
+### LA SERIE COMPLETA, renumerada, VEINTISEIS casos (era diecinueve, con un caso retirado y ocho anadidos)
+
+| # | puesto | par |
+|---:|---:|---|
+| 1 | 2.127 | `programa_de_referidos_de_franquiciados` =A= `referidos_franquiciados_existentes` (franquicias) |
+| 2 | 2.368 | `errores_como_consecuencia` =A= `preguntar_que_no_quien` (health_safety) |
+| 3 | 2.417 | `mantener_las_ganancias` =A= `sostener_las_ganancias` |
+| 4 | 2.436 | `enfermedades_mortales_gestion` =A= `las_siete_enfermedades_mortales` |
+| 5 | 2.480 | `economia_de_la_inspeccion` =A= `regla_todo_o_nada_inspeccion` |
+| 6 | 2.484 | `eliminar_slogans_metas` =A= `eliminar_slogans_y_exhortaciones` |
+| 7 | 2.498 | `rol_black_belt` =A= `rol_black_belt_six_sigma` |
+| 8 | 2.512 | `rol_facilitador_black_belt` =A= `rol_facilitador_equipos_mejora` |
+| 9 | 2.516 | `barreras_orgullo_trabajo` =A= `remover_barreras_orgullo_trabajo` |
+| 10 | 2.525 | `dia_cero_defectos_2` =A= `dia_cero_defectos_3` |
+| 11 | 2.532 | `distincion_causas_comunes_especiales_2` =A= `distincion_causas_especiales_comunes` |
+| 12 | 2.552 | `conciencia_calidad` =A= `conciencia_de_calidad_2` |
+| 13 | 2.575 | `pocos_vitales_muchos_utiles` =A= `proyectos_vitales_pocos` |
+| 14 | 2.597 | `enfasis_en_ganancias_corto_plazo` =A= `enfasis_en_utilidades_corto_plazo` |
+| ~~15~~ | ~~2.630~~ | ~~`conciencia_calidad` =A= `quality_awareness_crosby`~~ **RETIRADO, pasa a D (98.2)** |
+| 15 | 2.638 | `medicion_calidad` =A= `medicion_calidad_2` |
+| 16 | 2.666 | `consumidor_como_eje_de_produccion` =A= `consumidor_parte_linea_produccion` |
+| 17 | 2.673 | `identificar_clientes_diseno` =A= `identificar_clientes_externos_e_internos` **(nuevo)** |
+| 18 | 2.760 | `gobierno_corporativo_juntas_directivas` =A= `planificacion_gobierno_organizaciones_familiares` **(nuevo)** |
+| 19 | 2.762 | `falacia_recompensa_loteria` =A= `sistemas_recompensa_aleatorios` **(nuevo)** |
+| 20 | 2.773 | `comparacion_inspectores_independientes` =A= `riesgos_consenso_inspeccion` **(nuevo)** |
+| 21 | 2.780 | `revision_progreso` =A= `revision_progreso_breakthrough` **(nuevo)** |
+| 22 | 2.787 | `gestion_estrategica_de_calidad_sqm` =A= `rol_tactico_estrategico_oficina` **(nuevo)** |
+| 23 | 2.816 | `eliminacion_barreras_orgullo_del_trabajo` =A= `orgullo_por_el_trabajo` **(nuevo)** |
+| 24 | 2.825 | `cinco_suposiciones_erroneas_calidad` =A= `concepto_supuestos_erroneos_sobre_calidad` **(nuevo)** |
+| 25 | 2.891 | `estadistico_competente_organizacion` =A= `organizacion_liderazgo_estadistico` |
+| 26 | 2.952 | `cultura_integridad_objetividad_resolucion_problemas` =A= `manejo_problemas` |
+
+**EL CONTADOR AL CORTE 3.100 ES VEINTISEIS, no diecinueve.** Sin caso nuevo entre el 3.001 y el
+3.100 (confirmado en 97.4). Comando de verificacion: barrido `grep -i "mutua"` mas lectura
+citada de cada hit en clase A, reproducible sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`.
+
+### 98.2 CORRECCION DECLARADA DEL 2.630 (relectura conjunta, encargada en el acta vuelta 7, TAREA 1.2)
+
+**El par 2.630 (`conciencia_calidad` contra `quality_awareness_crosby`) pasa de `~~A~~` a D.**
+El caso del auditor se sostiene, verificado contra el grafo (nodos enteros, no titulos). El
+3.067 (`conciencia_de_calidad_2` contra el MISMO `quality_awareness_crosby`) lee los mismos dos
+pasos de `quality_awareness_crosby` (registrar y mostrar las mediciones desde el inicio; evitar
+amenazas o castigos) como "pasos enteros propios que la campana de reuniones no tiene"; el 2.630
+leia esos mismos pasos como "tactica propia del mismo paso" para declarar identidad. No se
+puede leer el mismo contenido como paso entero propio en un par y como tactica compartida en el
+de al lado. Verificado ademas que `quality_awareness_crosby` es D contra TODOS los demas nodos
+que lo tocan en el archivo (2.648, 2.696, 2.789, 2.939, 3.040, 3.067, 3.089, 3.097); el 2.630 es
+su UNICA A, sin respaldo estructural. El `entregable_esperado` desempata tambien (TAREA 1.4d):
+`conciencia_calidad` entrega un "Programa de comunicacion interna sobre calidad implementado en
+todos los niveles, con supervisores capacitados"; `quality_awareness_crosby` entrega un
+"Registro inicial de mediciones de calidad que compartes con todo tu equipo como punto de
+partida". Artefactos distintos. Leido directo: `conciencia_calidad` trae CUATRO pasos enteros
+propios que el otro no tiene (capacitar supervisores sobre el costo real, producir material
+visible, incluir a personal administrativo y de servicio, fomentar el habito de hablar de
+calidad) y `quality_awareness_crosby` trae los suyos (registrar y mostrar mediciones desde el
+inicio, evitar amenazas o castigos, dejar participar activamente). Conjuntos disjuntos.
+**CONTRAPESO ESCRITO por el auditor, para que la relectura sea justa:** los dos nodos son el
+mismo Paso del programa de Crosby, y el 2.552 (`conciencia_calidad` =A= `conciencia_de_calidad_2`)
+NO esta en discusion y no se reabre; la D en el 2.630 no rompe ese cumulo, le quita un miembro
+(`quality_awareness_crosby`) y resta una unidad al contador de fusiones mutuas (ver 98.1: la
+serie ya se recompuso sin el). Tachado sin borrar en el jsonl; la razon vieja se conserva
+entera. **Efecto en el marcador, arrastrado a TODAS las secciones donde aparecia (93, 94, 95, 96,
+97), ver cada una:** corte 2.700 de A 544 a 543; corte 2.800 de A 563 a 562; corte 2.900 de A
+572 a 571 (segunda correccion sobre la ya aplicada del 2.805); corte 3.000 de A 577 a 576
+(segunda correccion sobre la ya aplicada del 2.931); corte 3.100 de A 579 a 578.
 
 ---
 
