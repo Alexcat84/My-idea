@@ -16295,3 +16295,120 @@ es obligatorio citarlo, y por eso no se puede publicar que se consulto en todos.
 
 ---
 
+## 100. CHECKPOINT 3.388: CIERRE DE LA FASE I. `risk_management` cierra en cero, `seguridad_digital`
+## abre y cierra con tres fusiones reales, veintiocho en el contador de mutuas
+
+**Apendice compacto (bucle vuelta 10, 13 ago 2026, corte 3.388, cierre de la Fase I).** La prosa
+completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commits.
+
+### 100.1 MARCADOR (corte 3.388, catalogo entero cribado)
+
+| | |
+|---|---:|
+| **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
+| **A** | **583** (17,2 %) |
+| **B** | 89 |
+| **C** | 7 |
+| **D** | **2.709** (80,0 %) |
+
+Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 3.301-3.388
+(comando `python scripts/recomputar_marcador.py 3388`). Las tres A son todas de
+`seguridad_digital`.
+
+### 100.2 TASA POR DOMINIO (corte 3.388, DIEZ dominios, catalogo entero)
+
+| dominio | n | A | tasa |
+|---|---:|---:|---:|
+| core | 1.445 | 344 | 23,8 % |
+| health_safety | 192 | 45 | 23,4 % |
+| quality | 844 | 126 | 14,9 % (CERRADO) |
+| environmental | 170 | 29 | 17,1 % |
+| franquicias | 148 | 18 | 12,2 % |
+| exportacion | 130 | 15 | 11,5 % |
+| entrega | 171 | 2 | 1,2 % |
+| compras | 155 | 1 | 0,6 % |
+| **risk_management** | **106** | **0** | **0,0 % (CERRADO, primer dominio del catalogo sin ninguna fusion)** |
+| **seguridad_digital** | **27** | **3** | **11,1 % (CERRADO, dominio pequeno, tasa con cautela)** |
+
+Suma 3.388, calza con el total del archivo. Los diez dominios del catalogo estan cribados.
+
+### 100.3 RACHAS DE 0,0 % RECOMPUTADAS SOBRE EL ARCHIVO ENTERO (TAREA 1.1, verificacion propia)
+
+Tramos de 25 en 0,0 % consecutivos: SEIS, 1.626-1.775 (150 pares, empate); SEIS,
+**3.201-3.350 (150 pares, empate, creció de cuatro a seis esta vuelta)**; CINCO, 26-150 (125
+pares); TRES, 3.076-3.150 (75 pares). Pares corridos sin A sin alinear a tramo: **NUEVO RECORD,
+3.183-3.362, 180 pares**, seguido de 1.603-1.775 (173) y 4-155 (152). **Racha viva al cierre de la
+Fase I: 3.368-3.388, veintiun pares.** Detalle completo en `docs/loop/REPORTE.md`.
+
+### 100.4 BLOQUE DE CIERRE DE `risk_management` (106 pares, 0 A, corte 3.361)
+
+Primer dominio del catalogo entero que cierra sin una sola fusion, verificado sobre los nueve
+dominios con `recomputar_marcador.py 3361` (el mas bajo hasta entonces era `compras`, 0,6 %). Cero
+fusion mutua, cero contencion, SEIS casos de "ficha nombrada dentro del paso" (reaparicion, nunca
+funde). Hubs domino-wide, todos D: `busca_el_riesgo_antes_de_que_te_busque` 20 toques,
+`que_hacer_con_un_riesgo_nuevo` 18, `amenaza_y_oportunidad` y `el_riesgo_cambia_con_el_tiempo` 11
+cada uno. PREGUNTA 3 y PREGUNTA 5 sin ejemplar equivalente en el dominio. Detalle completo en
+`docs/loop/REPORTE.md`.
+
+### 100.5 BLOQUE DE CIERRE DE `seguridad_digital` (27 pares, 3 A, 11,1 %, corte 3.388, ultimo
+### dominio del catalogo, abre y cierra en el mismo tramo)
+
+Cinco fuentes NIST para pequena empresa. **TRES A, primeras fusiones reales de un dominio nuevo en
+toda la campana:** 3.363 (fusion mutua, `getting_started_incident_response` =A=
+`respuesta_incidentes_cui`, sim_tit 87,0, MUEVE EL CONTADOR GLOBAL DE MUTUAS DE 27 A **28**), 3.364
+(REPITE por dominancia, `getting_started_maintenance` =A= `mantenimiento_sistema_cui`, sim_tit
+74,6), 3.367 (REPITE por dominancia, `funcion_protect_politica_seguridad` =A=
+`protect_medidas_tecnicas`, sim_tit 48,1). Figura nueva que SI funde: nodo general de un capitulo
+introductorio contra nodo especifico del mismo documento sobre el mismo subtema. Figura opuesta
+confirmada tres veces (3.370, 3.373, 3.388): funciones hermanas del mismo marco CSF (comparten
+prefijo `csf_funcion_`) nunca son el mismo acto pese al sim_tit altisimo (84,4 el mas alto de toda
+la cola restante, en el 3.370). TRES casos de "ficha nombrada dentro del paso" (reaparicion). Figura
+nueva propia del dominio: pasos adyacentes de un proceso formal numerado (el RMF de siete pasos),
+tres casos (3.385, 3.386, 3.387), nunca el mismo acto. PREGUNTA 3 y PREGUNTA 5 sin ejemplar
+equivalente. Detalle completo con cita de cada A y cada discutible en `docs/loop/REPORTE.md`.
+
+### 100.6 CONTADOR DE FUSIONES MUTUAS (corte 3.388): VEINTIOCHO
+
+27 al cierre del checkpoint anterior, +1 esta vuelta (el 3.363, `seguridad_digital`, primera fusion
+mutua del dominio, criterio de la vuelta 7 aplicado y citado en `docs/loop/REPORTE.md`). Reparto
+por dominio: `quality` 25, `franquicias` 1, `health_safety` 1, `seguridad_digital` 1.
+`risk_management` aporta cero. Total de A en el archivo: 583.
+
+### 100.7 VERIFICACION DE DISCUTIBLES (fija desde ahora, SEGUNDA VEZ CONSECUTIVA QUE PASA)
+
+Marcas fuertes contadas en el archivo del tramo 3.301-3.388 (cadena literal "DISCUTIBLE MARCADO
+fuerte"): **SEIS** (3.332, 3.363, 3.364, 3.367, 3.370, 3.388). Filas de la tabla de discutibles
+fuertes de este checkpoint: **SEIS**. Lista identica. Conjuntos iguales, verificado. Marcas simples:
+CINCO (3.327, 3.362, 3.365, 3.376, 3.382).
+
+### 100.8 DISCUTIBLES MARCADOS (conjunto fuerte del checkpoint 3.301-3.388)
+
+**3.332** (D, guarda_un_colchon_de_tiempo_y_dinero contra plan_b_antes_de_necesitarlo, reserva
+cuantitativa contra accion concreta por riesgo, sim_tit 79,2), **3.363** (A, fusion mutua, paso 1
+casi verbatim, ninguno domina entero), **3.364** (A, REPITE por dominancia, un solo paso de
+diferencia: sanitizacion de equipos con CUI), **3.367** (A, REPITE por dominancia, seis pasos
+verbatim mas dos propios del dominante), **3.370** (D, trampa del identificador, Govern contra
+Identify, sim_tit 84,4 el mas alto de la cola restante), **3.388** (D, misma trampa, Detect contra
+Identify, ultimo par de la fase). Detalle completo de cada uno en `docs/loop/REPORTE.md`.
+
+### 100.9 PENDIENTES DE DOCTRINA
+
+Ninguno nuevo. Las cuatro correcciones de la TAREA 1 y los 88 pares del cribado se resolvieron con
+reglas ya escritas. Dos figuras nuevas nombradas sin pedir doctrina (100.5): "nodo general contra
+nodo especifico del mismo documento" y "pasos adyacentes de un proceso formal numerado".
+
+### 100.10 EL ARCHIVO ESTA EN 3.388 DE 3.388, LA COLA ESTA AGOTADA, CIERRA LA FASE I
+
+Verificado con `python scripts/recomputar_marcador.py 3388`: n = 3.388, huecos: [], duplicados de
+puesto: 0, pares duplicados: 0. Los diez dominios suman exactamente 3.388. No hay mas pares
+intra-dominio que cribar. La Fase II (recomputo de OP-U-02, disparador puesto 3.388) queda para el
+encargo siguiente, despues de que el auditor verifique este cierre.
+
+### 100.11 COMMITS
+
+`8e41d120` (TAREA 1 completa: cuatro correcciones de registro), `5005cbcf` (cribado 3.301-3.350),
+`086dba0a` (cribado 3.351-3.361, cierra `risk_management`), `1c07d53a` (cribado 3.362-3.388, abre y
+cierra `seguridad_digital`, cierra la Fase I).
+
+---
+
