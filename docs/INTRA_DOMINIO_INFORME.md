@@ -15883,7 +15883,7 @@ contador de mutuas, convencion de la vuelta 3").
 pero, verificado, es contencion con supervivencia declarada sobre el mismo contenido que su
 par gemelo 3.067 (mismo nodo `quality_awareness_crosby`) lee como paso entero propio para dar D.
 
-### LA SERIE COMPLETA, renumerada, VEINTISEIS casos (era diecinueve, con un caso retirado y ocho anadidos)
+### LA SERIE COMPLETA, renumerada, ~~VEINTISEIS casos (era diecinueve, con un caso retirado y ocho anadidos)~~ **CORREGIDO (acta vuelta 9, TAREA 1.3 del encargo siguiente): VEINTISIETE casos, no veintiseis.** El encabezado quedo del estado anterior a anadir el 3.182 (la tabla de mas abajo ya numeraba veintisiete y el parrafo de cierre ya decia "AL CORTE 3.200 ES VEINTISIETE"; solo el titulo no se habia actualizado). La aritmetica que si calza: diecinueve menos un retirado (el 2.630, ver 98.2) mas nueve anadidos (los ocho de esta seccion: 2.673, 2.760, 2.762, 2.773, 2.780, 2.787, 2.816, 2.825; mas el 3.182 del checkpoint 3.200) = VEINTISIETE
 
 | # | puesto | par |
 |---:|---:|---|
@@ -15931,9 +15931,16 @@ pasos de `quality_awareness_crosby` (registrar y mostrar las mediciones desde el
 amenazas o castigos) como "pasos enteros propios que la campana de reuniones no tiene"; el 2.630
 leia esos mismos pasos como "tactica propia del mismo paso" para declarar identidad. No se
 puede leer el mismo contenido como paso entero propio en un par y como tactica compartida en el
-de al lado. Verificado ademas que `quality_awareness_crosby` es D contra TODOS los demas nodos
+de al lado. ~~Verificado ademas que `quality_awareness_crosby` es D contra TODOS los demas nodos
 que lo tocan en el archivo (2.648, 2.696, 2.789, 2.939, 3.040, 3.067, 3.089, 3.097); el 2.630 es
-su UNICA A, sin respaldo estructural. El `entregable_esperado` desempata tambien (TAREA 1.4d):
+su UNICA A, sin respaldo estructural.~~ **CORREGIDO (acta vuelta 9, TAREA 1.4 del encargo
+siguiente, hallazgo del auditor): el 2.789 NO TOCA `quality_awareness_crosby`** (el 2.789 es
+`conciencia_calidad` contra `entrenamiento_supervisores_calidad`, un par distinto). Los toques
+reales de `quality_awareness_crosby` en el archivo, verificados con el instrumento, son NUEVE:
+2.630, 2.648, 2.696, 2.939, 3.040, 3.067, 3.089, 3.097 y 3.251 (posterior a esta seccion, del
+checkpoint 3.300). **TODOS SON D.** Lo que estaba mal es la nomina, no el veredicto: el 2.630
+sigue siendo su unica A historica (ya corregida a D en esta misma seccion), sin respaldo
+estructural, y el 2.630 sigue cerrado y no se reabre por esta correccion. El `entregable_esperado` desempata tambien (TAREA 1.4d):
 `conciencia_calidad` entrega un "Programa de comunicacion interna sobre calidad implementado en
 todos los niveles, con supervisores capacitados"; `quality_awareness_crosby` entrega un
 "Registro inicial de mediciones de calidad que compartes con todo tu equipo como punto de
@@ -15985,11 +15992,26 @@ Contra el checkpoint 3.100 corregido (98.2: A 578, D 2.426): **+2 A y +98 D** en
 > primero desde el 2.976-3.000" era falsa. Recomputada la vara entera desde el 2.901 (doce
 > tramos de 25): **4,0 / 8,0 / 8,0 / 0,0 / 4,0 / 0,0 / 4,0 / 0,0 / 0,0 / 0,0 / 4,0 / 4,0**
 > (2.901-2.925 a 3.176-3.200). Hay CINCO tramos en 0,0 % en ese rango, no dos, y entre el
-> 2.976-3.000 (el primer 0,0 %) y el 3.101-3.125 hay otro 0,0 % mas, el 3.026-3.050. **Lo
-> cierto es otra cosa, y es una noticia mas fuerte que la publicada:** el 3.076-3.100, el
-> 3.101-3.125 y el 3.126-3.150 son **TRES TRAMOS CONSECUTIVOS EN 0,0 %**, la racha mas larga
-> de la campana, y despues el cuerpo repunta a 4,0 % dos veces seguidas (3.151-3.175,
+> 2.976-3.000 (el primer 0,0 %) y el 3.101-3.125 hay otro 0,0 % mas, el 3.026-3.050. Lo
+> cierto es otra cosa, y es una noticia mas fuerte que la publicada: el 3.076-3.100, el
+> 3.101-3.125 y el 3.126-3.150 son ~~TRES TRAMOS CONSECUTIVOS EN 0,0 %, la racha mas larga
+> de la campana~~, y despues el cuerpo repunta a 4,0 % dos veces seguidas (3.151-3.175,
 > 3.176-3.200).
+>
+> **CORRECCION DECLARADA (acta vuelta 9, TAREA 1.1 del encargo siguiente, error del auditor,
+> el mismo que dicto la cifra): "la racha mas larga de la campana" se midio sobre una ventana
+> de doce tramos desde el 2.901 y se publico sobre la campana entera sin recorrerla. FALSO.**
+> Recomputada la vara entera desde el puesto 1 en tramos de 25 sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+> (verificacion propia, no copiada): las rachas de tramos consecutivos en 0,0 % son SEIS tramos,
+> 1.626-1.775 (150 pares); CINCO tramos, 26-150 (125 pares); CUATRO tramos, 3.201-3.300 (100
+> pares, ver 99.3); y solo entonces TRES tramos, 3.076-3.150 (75 pares), la CUARTA mas larga, no
+> la primera. En pares corridos sin ninguna A, sin alinear a tramos: la racha mas larga del
+> archivo es de 173 pares (1.603-1.775), la segunda de 152 (4-155). Lo que si se sostiene medido
+> sobre la campana entera: el 3.201-3.300 es el UNICO bloque alineado de cien pares en toda la
+> campana sin una sola A. **ADJUDICACION: una glosa comparativa sobre "la campana" se mide sobre
+> la campana, o no se escribe; un superlativo se publica con el comando que recorrio el universo
+> entero del que se predica, o se acota en la frase al tramo medido. No es doctrina nueva, es la
+> regla 9 del EJECUTOR aplicada al superlativo.**
 
 ### 98.5 FAMILIAS Y FIGURAS AL DIA (corte 3.200)
 
@@ -16125,10 +16147,14 @@ Quedan **88 pares** hasta el 3.388: risk_management 61 (3.301 a 3.361), segurida
 | 3.226-3.250 | 25 | 0 | 0,0 % |
 | 3.251-3.255 | 5 | 0 | 0,0 % |
 
-`quality` cierra con **CINCUENTA Y CINCO PARES SEGUIDOS SIN NINGUNA A**, del 3.201 al 3.255. No
+`quality` cierra con **CINCUENTA Y CINCO PARES SEGUIDOS SIN NINGUNA A**, del 3.201 al 3.255. ~~No
 es la racha de tramos completos mas larga (esa sigue siendo la de tres tramos, 3.076-3.150, 75
-pares, corregida en 98.4/TAREA 1.5): es el CIERRE del dominio, y cierra en el mismo piso que
-vino sosteniendo desde el 2.976.
+pares, corregida en 98.4/TAREA 1.5)~~ **CORREGIDO (acta vuelta 9, TAREA 1.1 del encargo
+siguiente): tampoco el 3.076-3.150 es la racha de tramos mas larga de la campana; recomputada
+sobre el archivo entero, esa racha (75 pares) es la CUARTA, detras de 1.626-1.775 (150 pares),
+26-150 (125 pares) y 3.201-3.300 (100 pares, el CUATRO tramos que cierra quality y abre
+risk_management, ver detalle en 98.4).** Lo que si se sostiene: es el CIERRE del dominio, y
+cierra en el mismo piso que vino sosteniendo desde el 2.976.
 
 **RESUMEN DE RACIMOS Y FAMILIAS DEL DOMINIO ENTERO, al cerrar:**
 
@@ -16247,6 +16273,25 @@ para reconocerla si se repite, no como regla nueva.
 
 `a4595f7f` (TAREA 1 completa mas cribado 3.201-3.225), `9095686e` (cribado 3.226-3.255, cierra
 `quality`), `d498fc0b` (cribado 3.256-3.300, abre `risk_management`, checkpoint 3.300).
+
+### 99.11 CORRECCION DECLARADA (acta vuelta 9, TAREA 1.2 del encargo siguiente): la cita de
+### consulta del entregable no era universal
+
+El `docs/loop/REPORTE.md` de la vuelta 9 (git, superado por el commit del reporte de esta vuelta)
+cerraba el punto 1.4 diciendo que la adjudicacion del entregable como prueba negativa ~~"se aplico
+explicitamente en el cribado nuevo de esta vuelta (los entregables consultados en cada par de
+3.201 a 3.300)"~~. **FALSO, verificado contra el archivo con el instrumento: de las 100 razones
+del tramo 3.201-3.300, SOLO 31 mencionan la palabra "entregable" en cualquier forma; 69 no la
+mencionan en absoluto.** Las 31 que si la citan la usan bien, siempre como prueba negativa (98.7),
+y el encargo de la vuelta 9 pedia consultar el entregable "antes de declarar contencion O
+identidad", condicion que con cero A en todo el tramo casi no se disparo. El cribado esta bien; la
+frase que describia el cribado no. Es la tercera vuelta seguida en que el reporte afirma sobre su
+propio trabajo mas de lo escrito (misma familia que el hallazgo 1.4 de la vuelta 8).
+
+**ADJUDICACION QUE FIJA LA REGLA HACIA ADELANTE (TAREA 1.2 del encargo, vuelta 10): el
+`entregable_esperado` se consulta y SE CITA EN LA RAZON antes de declarar A, antes de declarar
+contencion, y en TODO par que se marque como discutible de cualquier grado. En los demas pares no
+es obligatorio citarlo, y por eso no se puede publicar que se consulto en todos.**
 
 ---
 
