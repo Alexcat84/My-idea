@@ -15603,3 +15603,78 @@ commit del checkpoint fija el estado que el auditor recomputa.
 
 ---
 
+## 96. CHECKPOINT 3.000: la grieta del 2.916 cerrada, la ficha nombrada dentro del paso, piso de 0,0 %
+
+**Apendice compacto (bucle vuelta 6, 13 ago 2026, corte 3.000).** La prosa vive en
+`docs/loop/REPORTE.md` en git; esta seccion fija cifras y commits.
+
+### 96.1 MARCADOR (corte 3.000)
+
+| | |
+|---|---:|
+| **veredictos** | **3.000**, hasta el puesto 3.000, cero huecos ni duplicados |
+| **A** | **578** (19,3 %) |
+| **B** | 89 |
+| **C** | 7 |
+| **D** | **2.326** (77,5 %) |
+
+Contra el checkpoint 2.900 corregido (95.1: A 572, D 2.232): +6 A y +94 D en el tramo 2.901-3.000
+(el conteo bruto de A nuevas es 7; la correccion del 2.916 resta una).
+
+### 96.2 CORRECCION DECLARADA DEL 2.916 (relectura conjunta, encargada en el acta vuelta 5)
+
+**El par 2.916 (`consejo_de_calidad` contra `consejo_de_calidad_3`) pasa de `~~A~~` a D.** Los
+dos eslabones citados como gemelos (2.523, 2.662) son contencion asimetrica (el 2.523 registra
+PERDIDA NOMBRADA motivo DESTINO; el 2.662 se resolvio el mismo por transitividad), no identidad;
+con un eslabon de contencion la transitividad no compone (regla del 2.805, extendida a su forma
+espejo). Lectura directa: `consejo_de_calidad_3` trae dos pasos enteros propios (coordinar la
+repeticion del ciclo, institucionalizar el consejo) y `consejo_de_calidad` trae tres (capacitarse
+en el metodo, Pareto, asignar recursos) que el otro no tiene. Tachado sin borrar en el jsonl.
+Efecto: A 574 a 573 y D 2.255 a 2.256 al corte 2.925 (previo a los tramos nuevos); tramo
+2.901-2.925 de 2 A a 1 A.
+
+### 96.3 `quality` y su vara por tramo (2.901-3.000)
+
+`quality` **589 pares, 124 A, 21,1 %** (baja desde 24,1 % al corte 2.900 corregido).
+
+| tramo | pares | A | tasa |
+|---|---:|---:|---:|
+| 2.901-2.925 | 25 | 1 | 4,0 % |
+| 2.926-2.950 | 25 | 3 | 12,0 % |
+| 2.951-2.975 | 25 | 2 | 8,0 % |
+| 2.976-3.000 | 25 | 0 | 0,0 % |
+
+> El tramo 2.976-3.000 entrega el piso mas bajo del cuerpo hasta ahora (0,0 %, el anterior minimo
+> fue 4,0 %). Filo dominante: dos cumulos separados de siempre (distincion comun/especial contra
+> responsabilidad gerencial) y una figura nueva, la ficha nombrada literalmente dentro del paso
+> de otro nodo (seis casos: 2.956, 2.961, 2.963, 2.980, 2.986, y la familia del 2.975/2.991), que
+> sigue dando D porque el nodo menor desarrolla mecanica propia que el paso generico no despliega.
+
+### 96.4 FAMILIAS Y FIGURAS AL DIA
+
+| que | estado (corte 3.000) |
+|---|---|
+| la **capacidad** | **SIN ACTO, sigue cerrada**: extiende con 2.984, 2.996, ambas D pese a sim_tit muy alto (68,0 y 64,9) |
+| la **distincion comun/especial** contra **responsabilidad gerencial** | **dos cumulos separados, confirmado tres veces mas** (2.977, 2.985, 2.990), todas D; misma frontera de 2.677, 2.766, 2.800, 2.850, 2.881, 2.906 |
+| **fusion mutua** | **UN caso nuevo**, el 2.952 (cultura de integridad/objetividad contra manejo de problemas, resumenes Crosby casi verbatim). El contador pasa a **DIECINUEVE** (el anterior fue el 2.891) |
+| el **breakthrough / DMAIC** | dos identidades nuevas por transitividad hacia el hub ya contado: 2.935 (secuencia universal = breakthrough) y 2.962 (DMAIC en servicios) |
+| el **Consejo de Calidad** | grieta del 2.916 cerrada a D (96.2); el hub sigue absorbiendo a `consejo_de_calidad_3` por los eslabones de contencion 2.523 y 2.662, no tocados |
+| **ficha nombrada dentro del paso de otro nodo** | figura reconocida esta vuelta, seis casos en 2.901-3.000; siempre D, la vara del paso entero ya la cubre |
+| **senal del idioma (quinta cara)** | sin aparicion nueva; cinco denominaciones al corte 3.000 |
+
+### 96.5 DISCUTIBLES MARCADOS (100 de 100, 28 fuertes)
+
+Los 100 pares de 2.901 a 3.000 llevan DISCUTIBLE MARCADO inline en el jsonl, corrigiendo la
+densidad baja senalada por el auditor en la vuelta 5 (5 de 25 en el tramo trunco). Las seis A del
+tramo nuevo (2.931, 2.935, 2.942, 2.952, 2.962) mas el 2.917 relecturado y el 2.916 corregido son
+el riesgo primario. Detalle completo con el filo de cada discutible fuerte en
+`docs/loop/REPORTE.md`.
+
+### 96.6 COMMITS
+
+`9e5dc156` (TAREA 1: correccion 2.916, relectura al doble 2.901-2.925, marcado), `facd7b68`
+(cribado 2.926-2.950), `20ec558b` (cribado 2.951-2.975), `544c021b` (cribado 2.976-3.000,
+checkpoint 3.000, hash final de la vuelta).
+
+---
+

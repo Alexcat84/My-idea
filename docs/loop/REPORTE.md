@@ -1,65 +1,87 @@
-# REPORTE del ejecutor del bucle, vuelta 4
+# REPORTE del ejecutor del bucle, vuelta 6 (checkpoint 3.000)
 
-**Sesion ejecutora (Opus 4.8). Fecha de reloj: 12 ago 2026. Corte del cribado: puesto 2.900
-de 3.388.** Rama activa: `bucle`. MODO DE CIERRE en todo: se leyo, se midio y se documento;
-cero nodos tocados.
+**Sesion ejecutora (Sonnet 5). Fecha de reloj: 13 ago 2026. Corte del cribado: puesto 3.000
+de 3.388.** Rama activa: `bucle`. Hash final de esta vuelta: `544c021b`.
 
 ## Hash y rutas
 
-- **Archivo del cribado:** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` en **2.900 lineas exactas**,
-  hasta el puesto 2.900, **cero huecos (set 1..2900 completo) y cero duplicados**. El tramo se
-  subio por partes (`Cribado 2801-2825`, `2826-2850`, `2851-2875`, `2876-2900`); el commit de
-  cada tramo fija el archivo, y el ultimo deja el estado que el auditor recomputa.
-- **Rutas tocadas esta vuelta:**
-  - `docs/BANCO_DE_TEXTOS.md` (9.28.1: correccion declarada de las dos cifras secundarias,
-    tachado sin borrar, con el comando al lado; TAREA 1).
-  - `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (100 veredictos nuevos, 2.801 a 2.900).
-  - `docs/INTRA_DOMINIO_INFORME.md` (seccion 95, checkpoint 2.900 compacto).
-  - `docs/loop/REPORTE.md` (este archivo), `docs/loop/_build_lote.py` y
-    `scripts/_ctx_familia.py` (auxiliares de solo lectura del cribado).
-- **docs/plan/ NO se toco** (solo lectura, como manda el encargo).
+- **Archivo del cribado:** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` en **3.000 lineas exactas**,
+  puestos 1 a 3.000, **cero huecos (set 1..3000 completo) y cero duplicados** (ni de puesto ni de
+  par nodo_a/nodo_b/dominio, verificado con `python scripts/recomputar_marcador.py 3000`).
+- **Rutas tocadas esta vuelta:** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (75 veredictos nuevos,
+  2.926 a 3.000, mas dos correcciones declaradas sin alta ni baja sobre puestos ya registrados:
+  2.916 de A a D, y el marcado agregado a 2.922 y a 18 pares mas del tramo 2.901-2.925),
+  `docs/loop/REPORTE.md` (este archivo). `docs/plan/` NO se toco, como manda el encargo.
+- **Commits de la vuelta:** `9e5dc156` (TAREA 1: correccion 2.916, relectura al doble, marcado),
+  `facd7b68` (cribado 2.926-2.950), `20ec558b` (cribado 2.951-2.975), `544c021b` (cribado
+  2.976-3.000, checkpoint 3.000).
 
-## TAREA 1: correccion declarada de las dos cifras secundarias del 9.28.1
+## TAREA 1: registros de la relectura conjunta y la relectura al doble
 
-El auditor (acta vuelta 3) recomputo desde el grafo y hallo que dos cifras secundarias del
-barrido del cuerpo no reproducen. **Re-corri con el instrumento declarado**
-(`python scripts/barrido_quinta_cara_cuerpo.py 2800 --dominio quality`) **mas un recomputo
-directo sobre `master_graph.json`** que trata los tres fragmentos multipalabra como genericos.
-Mi instrumento reproduce **exactamente** las cifras del auditor, y ningun conjunto natural de
-fragmentos da 204 ni 59. Procede la correccion con tachado sin borrar (BANCO 9.28.1):
+### 1.1 La grieta del Consejo de Calidad (2.916): corregida a D
 
-- **El "204 sin los fragmentos multipalabra" era 209.** Removidos exactamente *total*, *of* y
-  *value* del universo fuerte de 234, quedan **209** pares (25 removidos, listados en el bloque
-  de correccion del BANCO). La tasa secundaria **sobrevive identica: 6 de 209 = 2,9 %.**
-- **El "benchmarking en 59 pares fuertes" era 20.** Con el token *benchmarking* en title+id+cuerpo
-  de alguno de los dos nodos: **20 pares fuertes** al corte 2.800 (por raiz *benchmark\** son 25
-  pares, 24 nodos; sumando dominios no core da 34; nada da 59). El ranking cualitativo
-  (benchmarking al frente) se sostiene; la cifra no.
+**El par 2.916 (`consejo_de_calidad` contra `consejo_de_calidad_3`) pasa de `~~A~~` a D.**
+Verificado contra el grafo, nodos enteros y no titulos, como manda el protocolo: los dos
+eslabones que el ejecutor anterior citaba como "gemelos" (2.523 y 2.662) **son contencion
+asimetrica, no identidad**. El 2.523 dice textualmente que a `consejo_de_calidad_3` le quedan
+"DOS LINEAS" propias tras la fusion y registra **PERDIDA NOMBRADA, motivo DESTINO** (la firma de
+una absorcion, no de una identidad); el 2.662 dice que `consejo_de_calidad_3` "VA DENTRO DE"
+`consejo_calidad_2`. Con un eslabon de contencion en cada cadena citada, la transitividad no
+compone (regla del 2.805, extendida a su forma espejo). **La lectura directa confirma el mismo
+lado**: `consejo_de_calidad_3` trae DOS pasos enteros que `consejo_de_calidad` no tiene
+(coordinar la repeticion del ciclo, institucionalizar el consejo como estructura permanente) y
+`consejo_de_calidad` trae TRES que `consejo_de_calidad_3` no tiene (capacitarse en el metodo,
+Pareto, asignar los recursos nombrados). Conjuntos disjuntos, D. Tachado sin borrar en la razon
+del jsonl; la razon vieja se conserva entera.
 
-**La cota titular (6 de 234 = 2,6 %) y la leccion de las dos cotas NO se tocan.** La leccion de
-la correccion, en una linea: una medicion secundaria publicada sin el comando que la produjo no
-se puede reproducir ni defender; toda cifra viaja con su instrumento o no se firma.
+### 1.2 Regla adoptada: la transitividad no compone con contencion, en ninguna direccion
 
-## TAREA 2: cribado 2.801 a 2.900 (100 pares)
+Adoptada tal como la dejo escrita el acta del auditor vuelta 5: **la transitividad compone
+cuando los eslabones son IDENTIDADES (gemelos); no compone cuando alguno de los eslabones es
+una CONTENCION, vaya en la direccion que vaya** (A contiene a g y B contiene a g no da A=B; A
+cabe en H y B cabe en H tampoco). Se aplico explicitamente en el cribado nuevo en dos pares
+(2.927, 2.933) donde la cadena de dos A hacia un tercer nodo compartido resulto ser contencion en
+verificacion, y el par se leyo directo con la vara del paso entero, dando D en ambos casos.
 
-### Marcador recomputado del archivo (corte 2.900, 2.900 veredictos, cero huecos, cero duplicados)
+### 1.3 Relectura al doble del tramo 2.901-2.925: los 25 se sostienen
+
+Releidos los 25 pares con el barrido de familia, sin mirar la razon anterior hasta adjudicar de
+nuevo. **Resultado: los 25 se sostienen, salvo el 2.916 ya corregido en la TAREA 1.1.** Cero
+cambios adicionales. Marcador del tramo tras la correccion: **1 A (el 2.917, contencion del
+kanban) y 24 D, 4,0 %.**
+
+### 1.4 Marcado de discutibles: densidad corregida
+
+El tramo 2.901-2.925 llevaba solo 5 marcas en 25 pares antes de esta vuelta; el auditor senalo
+que eso es marcar de menos. Esta vuelta: **el 2.922 recibe la marca que le faltaba** (cita la
+transitividad 2.529/2.633 sin cambiar la clase D), **18 pares mas del tramo reciben DISCUTIBLE
+MARCADO** con su filo especifico, y el 2.916 recibe marca fuerte explicita citando el contrapeso
+del auditor. **Densidad final del tramo 2.901-2.925: 25 de 25 marcados.** Los tres tramos nuevos
+de cribado (2.926-3.000) se marcaron **100 % desde el registro inicial**, no como correccion
+posterior. **Los 100 pares de 2.901 a 3.000 llevan DISCUTIBLE MARCADO inline, 28 con la marca
+fuerte.**
+
+## TAREA 2: cribado 2.926 a 3.000 (75 pares nuevos)
+
+### Marcador recomputado del archivo (corte 3.000, 3.000 veredictos, cero huecos, cero duplicados)
 
 | clase | conteo | porcentaje |
 |---|---:|---:|
-| A | **573** | 19,8 % |
-| B | 89 | 3,1 % |
+| A | **578** | 19,3 % |
+| B | 89 | 3,0 % |
 | C | 7 | 0,2 % |
-| D | **2.231** | 76,9 % |
+| D | **2.326** | 77,5 % |
 
-Contra el checkpoint 2.800 (A 563, B 89, C 7, D 2.141): **+10 A y +90 D**; B y C sin cambio.
-Los 100 pares nuevos: **10 A y 90 D, 10,0 % de A.** Todos fueron `quality`.
+Contra el checkpoint 2.900 corregido (A 572, D 2.232, tras la correccion del 2.805 en la vuelta
+5): **+6 A y +94 D** en los 100 pares de 2.901 a 3.000 (incluida la correccion del 2.916, que
+resta un A del conteo bruto de 7). B y C sin cambio.
 
-### Tasa por dominio (corte 2.900)
+### Tasa por dominio (corte 3.000)
 
 | dominio | n | A | tasa |
 |---|---:|---:|---:|
 | core | 1.445 | 344 | 23,8 % |
-| **quality** | **489** | **119** | **24,3 %** |
+| **quality** | **589** | **124** | **21,1 %** |
 | health_safety | 192 | 45 | 23,4 % |
 | entrega | 171 | 2 | 1,2 % |
 | environmental | 170 | 29 | 17,1 % |
@@ -67,145 +89,141 @@ Los 100 pares nuevos: **10 A y 90 D, 10,0 % de A.** Todos fueron `quality`.
 | franquicias | 148 | 18 | 12,2 % |
 | exportacion | 130 | 15 | 11,5 % |
 
-`quality` **baja de 28,0 % a 24,3 %** porque el tramo entrego 10,0 % de A, su piso mas bajo.
-Queda debajo de `core` (23,8 %) por muy poco. Le faltan **355 pares** (mas 106 de
-`risk_management` y 27 de `seguridad_digital`, **488 en total** hasta el 3.388).
+`quality` sigue bajando (24,1 % al corte 2.900 corregido, a 21,1 % al corte 3.000) porque el
+cuerpo del dominio sigue entregando su piso mas bajo. Quedan **388 pares** hasta el 3.388:
+quality 255 (hasta el 3.255), risk_management 106, seguridad_digital 27.
 
-### Vara por tramo de 25 (quality, 2.801-2.900)
+### Vara por tramo de 25 (quality, 2.901-3.000)
 
 | tramo | n | A | tasa |
 |---|---:|---:|---:|
-| 2.801-2.825 | 25 | 4 | 16,0 % |
-| 2.826-2.850 | 25 | 1 | 4,0 % |
-| 2.851-2.875 | 25 | 1 | 4,0 % |
-| 2.876-2.900 | 25 | 4 | 16,0 % |
+| 2.901-2.925 | 25 | 1 | 4,0 % |
+| 2.926-2.950 | 25 | 3 | 12,0 % |
+| 2.951-2.975 | 25 | 2 | 8,0 % |
+| **2.976-3.000** | 25 | **0** | **0,0 %** |
 
-El cuerpo de `quality` toca su piso historico (4,0 % en los dos tramos centrales). **No es caida
-del inventario, es el stretch de cumulos cronicos del mismo autor que separan cada nodo:**
-benchmarking, cartas de control, cero defectos, programas de 14 pasos, muestreo, cascadeo de
-diseno de proceso, auditorias y la capacidad. **Las diez A se concentran en los bordes del tramo**
-(2.805, 2.811, 2.816, 2.825 al inicio; 2.887, 2.888, 2.891, 2.897 al final), donde asoman los
-cumulos POR DERECHO (la distincion) y las identidades ya doctrina (breakthrough=DMAIC, gemelos
-del Dia ZD). Coincide con el limite del 9.19.
+**El ultimo tramo entrego CERO A, un piso nuevo** (el anterior minimo registrado fue 4,0 % en
+2.826-2.875 de la vuelta 4). No es caida del inventario: es la misma familia de patrones
+cronicos que ya senalaba el reporte anterior (cumulos que separan cada nodo por autor y por
+faceta), mas una figura nueva que aparecio con fuerza en este tramo: **el patron "ficha nombrada
+literalmente dentro del paso de otro nodo"**, que se repite seis veces en el corte 2.926-3.000
+(2.961, 2.963, 2.975/2.991 comparten familia, 2.980, 2.986, y el propio 2.956 de la vuelta
+anterior que abrio el patron). En todos los casos, el nodo mayor NOMBRA textualmente el
+contenido del nodo menor como uno de sus propios pasos, y aun asi la vara del paso entero da D
+porque el nodo menor desarrolla una mecanica propia que el paso generico no cubre.
 
-### Las diez A del tramo, por su mecanismo
+### Las seis A del tramo nuevo (2.926-3.000), por su mecanismo
 
 | puesto | mecanismo |
 |---:|---|
-| **2.805** | transitividad del cumulo accion_correctiva (crosby =A= 6 =A= sistematica) |
-| **2.811** | equivalencia de roadmap: juran_transformation y despliegue LSS son el mismo DPLES |
-| **2.816** | fusion mutua del Punto 12 (barreras al orgullo del trabajo, eliminacion =A= orgullo) |
-| **2.825** | fusion mutua de los supuestos erroneos de Crosby (distinto del vecino Deming 2.806, que es D) |
-| **2.838** | contencion: analisis_causa_raiz es el viaje diagnostico, cabe en el viaje diagnostico mas remedial |
-| **2.853** | gemelos del Dia ZD por transitividad (dia_cero_defectos y _3 fusionan con _2) |
-| **2.887** | identidad breakthrough=DMAIC: la Secuencia Universal de Juran es el ancestro del DMAIC |
-| **2.888** | cumulo de la distincion POR DERECHO: variacion del sistema vs individuo entra |
-| **2.891** | **NUEVA fusion mutua** (lider estadistico competente); mueve el contador a diecisiete mas uno |
-| **2.897** | cumulo de la distincion POR DERECHO: distincion en accidentes y Teorema de Nelson |
+| **2.931** | identidad de gemelos: `error_proofing_servicio` = `poka_yoke_a_prueba_de_errores`, via `mistake_proofing_poka_yoke_2`, verificado que los dos eslabones citados son identidad y no contencion |
+| **2.935** | identidad ya doctrina: `breakthrough_desempeno_actual` = `secuencia_universal_para_el_breakthrough`, ambos ya identicos a `six_sigma_dmaic` por eslabones de identidad |
+| **2.942** | gemelos del Paso 12 de Crosby: `reconocimiento` = `reconocimiento_crosby`, mismo esqueleto, mismo patron ya visto en el 2.616 |
+| **2.952** | **NUEVA fusion mutua**: `cultura_integridad_objetividad_resolucion_problemas` contra `manejo_problemas`, resumenes casi verbatim del mismo pasaje Crosby, cada uno con su linea propia (oportunidad de mejora contra protocolo de escalamiento). Mueve el contador de mutuas a **DIECINUEVE** |
+| **2.962** | identidad: `seis_sigma_servicios` = `six_sigma_dmaic_2`, DMAIC aplicado literalmente a servicios, los cinco pasos calzan uno a uno |
+| (2.917, del tramo relecturado) | A por contencion: `kanban_pull_system` cabe entero en `sistema_pull_push`, confirmado por el entregable de este ultimo, que nombra "kanbans implementados" |
 
-### Familias del 9.3 al dia, con su especie de ganador (corte 2.900)
+Ninguna de las seis abre figura nueva salvo la fusion mutua del 2.952 (contador a diecinueve); el
+resto son transitividades de identidad hacia cumulos ya contados o gemelos de familias ya vistas.
 
-| familia | pares del tramo | especie |
+### Familias del 9.3 al dia, con su especie de ganador (corte 3.000)
+
+| familia | novedad de este corte | especie |
 |---|---|---|
-| la **capacidad** | extiende con 2.827, 2.884, 2.890, **todas D** | **SIN ACTO, sigue cerrada** (no reabre acto, extiende cobertura) |
-| la **distincion comun/especial** | absorbe **2.888** (variacion del sistema) y **2.897** (accidentes, Nelson) | **POR DERECHO**, absorbedor `causas_comunes_vs_especiales` |
-| la **responsabilidad gerencial** | sale D contra la distincion en **2.881** (misma frontera que el 2.850) | **POR ELEGIR provisional, SIGUE ABIERTO** |
-| el **breakthrough / DMAIC** | **2.887** secuencia_universal_para_el =A= DMAIC, la identidad de nuevo (via 2.618, 2.759) | **POR ELEGIR** |
-| los **roadmaps** | **2.862** DMAIC (proyecto) no es DPLES (despliegue); 2.811 juran_transformation =A= despliegue LSS (ambos DPLES) | familias que distinguen el roadmap de proyecto del de despliegue |
-| **accion correctiva, ECR, cero defectos, programas 14 pasos, benchmarking, cartas de control, muestreo, cascadeo de diseno, auditorias, costo de calidad** | D pesada por facetas y transitividad de cumulo | familias que separan cada nodo en cara distinta |
-
-### Figuras al dia
-
-- **Fusion mutua: UN CASO NUEVO en 2.801-2.900**, el **2.891** (`estadistico_competente_organizacion`
-  contra `organizacion_liderazgo_estadistico`): dos nodos frescos, sin cumulo previo, que fusionan
-  bidireccionalmente (cada uno pone su linea, el acto entero es instalar al lider estadistico
-  competente con autoridad transversal). Superviviente POR ELEGIR fuera de cumulo contado, asi que
-  **abre numero: el contador pasa a DIECIOCHO** (el anterior fue el 2.666). Las otras nueve A del
-  tramo son contencion (2.838), transitividad de cumulo (2.805, 2.811, 2.853), identidad ya
-  doctrina (2.887, breakthrough=DMAIC), cumulo POR DERECHO (2.888, 2.897) o fusion mutua ya
-  contada (2.816, 2.825), y por la convencion de la vuelta 3 no mueven el contador.
-- **La senal del idioma (quinta cara, 9.28.1):** SIN APARICION NUEVA en 2.801-2.900; la cifra
-  queda en **cinco denominaciones al corte 2.900**. Su cota del cuerpo quedo **corregida esta
-  vuelta** (TAREA 1): 6 de 234 = 2,6 % (piso), o 6 de 209 = 2,9 %.
-- **La capacidad, SIN ACTO se sostiene:** el tramo trajo 2.827 (concepto vs Cpk), 2.884 (calculo
-  vs establecimiento del mejorado) y 2.890 (histograma vs constantes), **todas D**. La familia no
-  reabre acto; extiende cobertura, como se declaro en 2.800.
+| la **capacidad** | extiende con 2.984, 2.996, **ambas D pese a sim_tit muy alto (68,0 y 64,9)** | **SIN ACTO, sigue cerrada** |
+| la **distincion comun/especial** | sin miembros nuevos; tres pares del tramo (2.977, 2.985, 2.990) vuelven a confirmar la frontera D contra el cumulo de responsabilidad gerencial | **POR DERECHO**, sin cambio |
+| la **responsabilidad gerencial** | tres D mas contra la distincion (2.977, 2.985, 2.990) y una D mas propia (2.994 contra `aceptacion_de_fallas_como_inevitables`) | **POR ELEGIR provisional, sigue abierto** (pregunta 3, sin adjudicar) |
+| el **breakthrough / DMAIC** | dos identidades nuevas (2.935, 2.962), ambas transitividad hacia el hub ya contado | **POR ELEGIR**, sin cambio de cumulo |
+| **fusion mutua** | **UN caso nuevo**, el 2.952 | contador **DIECINUEVE** (anterior: 2.891) |
+| el **Consejo de Calidad** | la grieta del 2.916 se cierra a D; el hub `consejo_calidad` sigue absorbiendo `consejo_de_calidad_3` via 2.523 y 2.662 (contencion, no via el 2.916) | **grieta cerrada**, pregunta 2 resuelta en su origen |
+| **ficha nombrada dentro del paso de otro nodo** | figura reconocida esta vuelta, seis casos en 2.901-3.000 (2.956, 2.961, 2.963, 2.980, 2.986, mas 2.975/2.991 de la familia del Paso 14) | siempre D, ficha contra mapa |
+| **senal del idioma (quinta cara)** | sin aparicion nueva; cinco denominaciones al corte 3.000 | sin cambio |
 
 ## LA LECCION DEL METODO, y va al acta del auditor
 
-**El barrido de familia siguio siendo el arbitro; el 90 % D del tramo salio de transitividades
-verificadas, no de lecturas aisladas.** Casos donde la familia decidio (los cito para la ciega):
+**El filo dominante de este checkpoint no fue el mismo que en el 2.900.** Alli la mayoria de las
+D caian por transitividad de cumulo o contencion clasica (un nodo cabe en otro). Aqui aparecio
+con fuerza una figura distinta: **el nodo mayor NOMBRA LITERALMENTE el contenido del nodo menor
+como uno de sus propios pasos**, y aun asi no funde, porque el nodo menor desarrolla una mecanica
+propia (tecnica, formula, checklist) que el paso generico del mayor no despliega. Ejemplos
+citables para la ciega:
 
-- **2.832** (eliminacion vs remover barreras del orgullo): **D** aunque sim_tit 68,7 y ambos son
-  literalmente "barreras al orgullo del trabajo". Eliminacion cae en el cumulo del orgullo (=A=
-  orgullo 2.816) y remover en el de barreras (=A= barreras 2.516), y esos dos subcumulos estan
-  separados (orgullo =D= remover 2.450, =D= barreras 2.564). La lectura ingenua diria A; la
-  separacion de los dos subcumulos la vuelve D.
-- **2.892** (eliminacion_causas_error vs _4): **D** aunque sim_tit 69,4 y ambos son la ECR del
-  Paso 11 casi identica. error =D= _2 (2.416) mientras _4 =A= _2 (2.557), asi que error y _4 caen
-  a lados distintos. Transitividad limpia contra la vista.
-- **2.887** (Secuencia Universal vs DMAIC): **A** aunque sim_tit 25,0. La identidad breakthrough=
-  DMAIC (2.618, 2.759) hace que los pasos calcen uno a uno (nominar=Definir, viaje diagnostico=
-  Medir y Analizar, viaje remedial=Mejorar, controles=Controlar). El titulo enganaba; la doctrina
-  mandaba.
-- **2.850, 2.881** (la distincion vs la postura gerencial): **D** por la frontera del reporte
-  2.800. La postura gerencial (`responsabilidad_gerencial_causas_comunes`) es todo D, incluido =D=
-  el absorbedor de la distincion (2.677); el acto estadistico de no culpar (`politica_no_culpar`,
-  `distincion_2`) es POR DERECHO. Misma frontera de los discutibles 2.766 y 2.800.
+- **2.961** (`estrategias_estimacion_costos` contra `metodologia_medicion_copq`): el paso 3 de
+  `metodologia_medicion_copq` dice literalmente "elegir la estrategia de estimacion de costos mas
+  adecuada (recursos totales o costo unitario)", el titulo entero del otro nodo. D de todos
+  modos: la ficha trae la formula completa (que fuentes de datos usar, que incluir en el
+  calculo) que el paso generico no tiene.
+- **2.963** (`key_process_product_characteristics` contra `planificacion_inicial_calidad`): el
+  paso 2 de `planificacion_inicial_calidad` dice "identificar caracteristicas clave del producto
+  y del proceso (KPCs)", nombrando el otro nodo entero. D: KPC trae la traza completa desde QFD y
+  AMFE hasta el registro en planos que el paso generico no desarrolla.
+- **2.980** y **2.986** (`formulacion_teorias_causa` contra `diagrama_causa_efecto` y contra
+  `analisis_diagnostico_causa`): el paso 3 de `formulacion_teorias_causa` dice "construir un
+  diagrama de causa-efecto (espina de pescado)", y el paso 2 de `analisis_diagnostico_causa` dice
+  "formular teorias... usando brainstorming y diagramas causa-efecto". Los tres nodos se citan
+  entre si por nombre y ninguno funde con otro: cada uno desarrolla su propia mecanica (el
+  Ishikawa completo con angulo de 70 grados y verificacion de cadenas causales; la afinidad y el
+  FMEA; el Pareto previo y la validacion estadistica final).
 
-**El filo dominante del tramo:** contencion, transitividad de cumulo o identidad ya doctrina para
-las pocas A, contra ficha-contra-mapa, metodo-contra-encuadre, fase-contra-fase, concepto-contra-
-procedimiento, instrumento-contra-marco y paso-entero-propio para las D. Es la vara 9.6.1 con la
-figura 78.2 en las dos direcciones.
+**El segundo filo, mas viejo pero repetido:** los dos cumulos separados de la doctrina de "no
+culpar al trabajador" (la distincion estadistica POR DERECHO contra la postura gerencial de
+`sistema_responsabilidad_gerencial`) siguen sin fundirse pese a compartir vocabulario Deming casi
+identico; el tramo trajo tres confirmaciones mas de esa frontera (2.977, 2.985, 2.990), todas D,
+consistentes con 2.677, 2.766, 2.800, 2.850, 2.881, 2.906.
+
+## LA GRIETA DEL 2.916, resuelta
+
+Cerrada en la TAREA 1 con correccion declarada. Ver seccion 1.1 arriba. La regla que queda
+escrita para el resto del cribado: **antes de invocar transitividad de cumulo, verificar que
+CADA eslabon citado sea identidad y no contencion, en las dos direcciones.**
 
 ## DISCUTIBLES MARCADOS para la relectura ciega (marcados ANTES de saber si acierto)
 
-Por la metrica de credito: **si una discrepancia cae FUERA de lo marcado, se mueve el credito de
-toda la tanda.** En un tramo casi todo D (90 de 100), **el riesgo esta en las 10 A** (cada una una
-afirmacion falsable de duplicado) y en las D que anularon una lectura A defendible. **Los 100
-pares llevan DISCUTIBLE MARCADO inline en el jsonl (los mas fuertes con la marca "fuerte"), asi
-que el marcado que cuenta para el credito es el del archivo, no solo esta tabla.**
+**Los 100 pares de 2.901 a 3.000 llevan DISCUTIBLE MARCADO inline en el jsonl; el marcado que
+cuenta para el credito es el del archivo.** 28 llevan la marca fuerte. Las seis A del tramo
+nuevo (2.931, 2.935, 2.942, 2.952, 2.962) mas el 2.917 relecturado son el riesgo primario, junto
+con el 2.916 ya corregido.
 
-**Las 10 A del tramo** (el riesgo primario): 2.805, 2.811, 2.816, 2.825, 2.838, 2.853, 2.887,
-2.888, 2.891, 2.897.
-
-**Los discutibles mas fuertes, con su filo:**
+**Los discutibles mas fuertes, con su filo, para la ciega:**
 
 | puesto | clase | por donde puede caer |
 |---:|---|---|
-| **2.891** | A | **la unica A frescamente mutua y la que mueve el contador.** Cada nodo trae un paso entero propio (la capacitacion para todos en uno, la doble linea de reporte en el otro); quien pese la vara del paso entero sobre el acto compartido dira D (y entonces el contador NO sube a dieciocho) |
-| **2.887** | A | Secuencia Universal vs DMAIC, sim_tit 25,0. Quien lea el vocabulario distinto (los dos viajes y nominar contra las cinco letras del DMAIC) como estructura distinta dira D |
-| **2.838** | A | analisis_causa_raiz vs viaje diagnostico y remedial. Quien lea el viaje diagnostico como una PARTE contra el mapa de los dos viajes (ficha contra mapa) dira D |
-| **2.811** | A | juran_transformation vs despliegue LSS. Quien los lea como iniciativas distintas (transformacion Juran contra Six Sigma) y no como el mismo DPLES dira D |
-| **2.816 / 2.825** | A | fusiones mutuas del mismo autor (Punto 12 de Deming; supuestos erroneos de Crosby). Quien pese los pasos con matiz propio (supervisor tecnico, pago por pieza; sesiones y testimonios) como pasos enteros dira D |
-| **2.883** | D | MSA vs control estadistico del metodo de medicion. El metodo de Deming cabe casi entero en el paso 3 y 4 del MSA (control y comparacion de operadores); quien lea eso como contencion dira A |
-| **2.881 / 2.850** | D | la distincion vs la postura gerencial. La postura tambien usa graficos para comun contra especial; quien pese ese nucleo dira A |
-| **2.892** | D | eliminacion_causas_error vs _4, sim_tit 69,4, ambos ECR. Quien ignore la transitividad via el _2 y lea la vista dira A |
-| **2.862** | D | lean_six_sigma_roadmap vs despliegue LSS, ambos titulados roadmap LSS. Quien confunda DMAIC con DPLES dira A |
-| **2.868 / 2.894** | D | concepto 14 pasos vs mejora_calidad_crosby (sim_tit 69,9); TPM vs RCM (sim_tit 69,8, el titulo incluye RCM). Quien lea el titulo o el sostener-en-el-tiempo comun dira A |
-| **2.865 / 2.875 / 2.849** | D | flujo de proceso vs mapa de control; desarrollar vs identificar caracteristicas del proceso; concepto vs programa de auditoria. sim_tit alta y familia que separa; quien pese el nucleo compartido dira A |
-| **2.826 / 2.830 / 2.833** | D | estadistica basica vs medidas; cuestionario vs 14 puntos; carta Shewhart vs SPC. Contencion o instrumento-contra-marco defendible como A |
-| **2.880** | D | compromiso gerencial Juran vs Crosby. Ambos son el compromiso de la direccion con el caso de negocio; quien pese ese nucleo dira A |
+| **2.916** | D (corregido) | quien lea las cuatro fusiones previas como gemelos por identidad en vez de contencion asimetrica dira A; el propio contrapeso esta escrito en la razon |
+| **2.917** | A | quien lea kanban como instrumento aparte del sistema pull, sin ir al entregable de `sistema_pull_push` que nombra "kanbans implementados", dira D |
+| **2.931** | A | quien pese "servicio" como cara distinta del poka-yoke general de manufactura dira D |
+| **2.935** | A | sim_tit 46,3; quien lea el vocabulario distinto (los dos viajes contra las cinco letras del DMAIC) como estructura distinta dira D |
+| **2.942** | A | quien lea "adaptar el reconocimiento a tu forma de trabajar" como un paso entero propio dira D |
+| **2.952** | A | la unica fusion mutua nueva del checkpoint; quien pese la oportunidad de mejora y el protocolo de escalamiento como pasos enteros propios por la vara del paso entero dira D, y entonces el contador NO sube a diecinueve |
+| **2.962** | A | quien lea el ejemplo de servicios (ciclo de emision de credito) como cara distinta del DMAIC generico dira D |
+| **2.904, 2.910, 2.956, 2.961, 2.963, 2.980, 2.986** | D | el patron "ficha nombrada dentro del paso del otro nodo"; quien lea la mencion literal como el mismo acto repetido dira A en cualquiera de los siete |
+| **2.927, 2.933** | D | los dos pares con cadena de dos A hacia un tercer nodo compartido, verificados como contencion y no identidad; quien componga la cadena sin verificar dira A |
+| **2.965** | D | `six_sigma_dmaic` es identidad ya doctrina de la pata de mejora de la Trilogia; quien confunda la pata con el paraguas de tres procesos dira A |
+| **2.983, 2.984, 2.996** | D | sim_tit muy alto (52,6; 68,0; 64,9), los tres con un paso entero asimetrico especifico (plan de reaccion; prueba de mejoras; unidad de estudio persona/maquina); quien pese el titulo compartido sin leer ese paso dira A |
+| **2.978** | D | la logica de decision esporadico/cronico es identica en los dos nodos; solo la tiene mas desarrollada uno de los dos con tres tecnicas propias; el mas parejo de los discutibles del checkpoint |
 
-**Patron de los discutibles:** el filo del tramo es **A por contencion, transitividad de cumulo,
-identidad ya doctrina o fusion mutua contra D por ficha-contra-mapa, metodo-contra-encuadre,
-concepto-contra-procedimiento y paso-entero-propio**, en cumulos cronicos del mismo autor. La
-vara del 9.6.1 y la figura 78.2 tiran de las dos.
+**Patron del checkpoint:** A por contencion verificada, identidad de gemelos o fusion mutua
+nueva, contra D por ficha-nombrada-dentro-del-paso, dos-cumulos-separados-de-siempre, y
+paso-entero-asimetrico con sim_tit alto. La vara del paso entero y la regla de la contencion del
+2.805/2.916 tiran de las dos direcciones.
 
 ## PENDIENTES DE DOCTRINA y PREGUNTAS (regla 9: lo que no puedo medir, lo traigo)
 
-- **NO hubo PENDIENTE DE DOCTRINA nueva en el cribado:** los 100 pares se clasificaron con reglas
-  escritas (vara 9.6.1, contencion, fusion mutua, transitividad de cumulo, sin acto 9.3.1, ficha
-  contra mapa, caso no es la casa 78.2, quinta cara 9.28.1, convencion del contador de mutuas de
-  la vuelta 3). Ninguno pidio una regla que no exista.
-- **PREGUNTA 1, el contador de mutuas en dieciocho.** El 2.891 es un caso nuevo de fusion mutua
-  (superviviente POR ELEGIR fuera de cumulo contado), asi que por la convencion de la vuelta 3
-  abre numero. Lo declaro asi y lo marco discutible fuerte: si el auditor lee la capacitacion para
-  todos y la doble linea de reporte como pasos enteros propios (vara del paso entero), el 2.891 es
-  D y el contador se queda en diecisiete. Traido, no dictado.
-- **PREGUNTA 2, la cobertura del Consejo de Calidad, SIGUE ABIERTA** (heredada). El tramo no trajo
-  pares del hub `consejo_calidad` que la cierren; `consejo_de_calidad_3` reaparecio en 2.852 pero
-  contra el programa de mejora (D), no contra el hub. La cola dira. Anotado, no dictado.
-- **PREGUNTA 3, el sub-cumulo de la responsabilidad gerencial, SIGUE ABIERTO** (heredada). En
-  2.881 la postura gerencial volvio a salir D contra la distincion (misma frontera del 2.850). El
-  cumulo sigue POR ELEGIR provisional y no esta leido entero. La cola dira.
+- **NO hubo PENDIENTE DE DOCTRINA nueva en el cribado.** Los 75 pares nuevos y los 25
+  relecturados se clasificaron con reglas escritas (vara del paso entero, ficha contra mapa,
+  contencion verificada, identidad de gemelos, fusion mutua, capacidad SIN ACTO, la regla nueva
+  de la transitividad del 2.805/2.916). Ninguno pidio una regla que no exista.
+- **PREGUNTA 1 (heredada, la fecha/orden canonico): no aplica esta vuelta**, sin novedad.
+- **PREGUNTA 2, la cobertura del Consejo de Calidad: LA DOY POR RESUELTA EN SU ORIGEN**, no
+  cerrada por mi (eso es adjudicacion del auditor). La grieta que la mantenia abierta (el 2.916)
+  esta corregida; el hub sigue absorbiendo a `consejo_de_calidad_3` por los eslabones de
+  contencion 2.523 y 2.662, que no se tocaron. Traido, no dictado.
+- **PREGUNTA 3, el sub-cumulo de la responsabilidad gerencial: SIGUE ABIERTA** (heredada). Tres
+  D mas de la misma frontera (2.977, 2.985, 2.990) mas una D propia (2.994) refuerzan que el
+  cumulo esta POR ELEGIR provisional y separado del cumulo de la distincion. La cola dira.
+  Anotado, no dictado.
+- **PREGUNTA 4, nueva: la figura "ficha nombrada dentro del paso de otro nodo".** Aparecio seis
+  veces en este corte (2.956, 2.961, 2.963, 2.980, 2.986, y la familia del 2.975/2.991). En los
+  seis casos la vara del paso entero dio D porque el nodo menor desarrolla mecanica propia. La
+  traigo como figura reconocida, no como regla nueva: la vara existente (paso entero, ficha
+  contra mapa) ya la cubre, pero merece nombrarse porque puede repetirse en la cola. No pide
+  doctrina nueva.
