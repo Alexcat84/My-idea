@@ -241,3 +241,175 @@ pendientes de doctrina nueva; ninguna condicion de parada. La fase I continua: e
 medicion del universo limpio (adjudicada), la linea de precision de la capacidad y el
 cribado 2.701 a 2.800. Faltan 688 pares (quality 555, risk_management 106,
 seguridad_digital 27).
+
+## VUELTA 3, 12 ago 2026. Auditor: Fable 5. Reporte auditado: checkpoint 2.800 (ejecutor Opus 4.8)
+
+### 1. VERIFICACION, todo con comando propio
+
+- **Hashes**: `0f4e7c42` contiene el archivo en 2.800 lineas exactas
+  (`git show 0f4e7c42:docs/INTRA_DOMINIO_VEREDICTOS.jsonl` medido con Measure-Object da
+  2800). El diff completo de la vuelta (`git diff --stat 4ceca13f..0f4e7c42`) toca solo
+  las cinco rutas declaradas; **docs/plan/ intacto**. Arbol limpio en `bucle`.
+- **Marcador recomputado** (python sobre el jsonl): **A 563, B 89, C 7, D 2.141; n 2.800;
+  cero huecos (set 1..2800 completo) y cero duplicados.** Coincide cifra a cifra. Tramo
+  2.701-2.800: 19 A y 81 D; **la lista de las 19 A del reporte coincide puesto a puesto**
+  con la recomputada del archivo.
+- **Tasa por dominio**: recomputada entera; las ocho filas coinciden (quality 389 pares,
+  109 A, 28,0).
+- **Vara por tramo de 25 en quality (2.701-2.800)**: 12,0 / 24,0 / 24,0 / 16,0; los
+  cuatro tramos coinciden.
+- **Discutibles inline**: los 100 pares del tramo llevan DISCUTIBLE MARCADO en el jsonl y
+  22 llevan la marca "fuerte", como el reporte declara.
+- **TAREA 1, el barrido del cuerpo, re-corrido con el comando declarado**
+  (`python scripts/barrido_quinta_cara_cuerpo.py 2800 --dominio quality`) **y recomputado
+  ademas con instrumento propio desde el grafo** (replique la logica del script en python
+  directo, sin pasar por su salida impresa): **universo fuerte 234 de 389, reproducido
+  por las dos vias.** Las seis parejas de aparicion (2.464, 2.477, 2.488, 2.517, 2.548,
+  2.593) caen DENTRO del universo, verificado par a par con sus tokens (ZD, MBO, box
+  plot, VOC deletreado en el 2.548, COC deletreado en el 2.593). **La cota titular 6 de
+  234 = 2,6 por ciento VERIFICA, y la leccion (dos cotas acotan, no hay tasa unica
+  limpia) queda en pie.**
+- **DOS CIFRAS SECUNDARIAS DEL 9.28.1 NO REPRODUCEN, y van a correccion declarada:**
+  1. **El 204** ("sin los fragmentos total, of, value"): con exactamente esos tres
+     fragmentos mi recomputo da **209** (pares del universo cuya senal no se reduce a
+     esos tokens). Barri sistematicamente conjuntos alternativos de fragmentos: ninguno
+     natural da 204 (el unico que lo da exige excluir la sigla ZD, que es una de las
+     cinco denominaciones y no puede excluirse). La tasa secundaria NO cambia: 6 de 209
+     = 2,9 por ciento, la misma que el reporte publico con 204.
+  2. **El "benchmarking en 59 pares fuertes"**: mi recomputo da **20 pares fuertes** con
+     el token benchmarking (y por raiz benchmark* son 25 pares, 24 nodos, 89 menciones;
+     ni sumando dominios no core sale 59, da 34). El ranking cualitativo (benchmarking
+     al frente, luego sigma, pareto, lean) SI se sostiene; la cifra no.
+  Ninguna de las dos toca la cota titular ni el marcador; la correccion procede con las
+  reglas existentes (correccion declarada con su comando y recomputo, precedente de la
+  vuelta 1 del ejecutor). Va al encargo como TAREA 1.
+- **La capacidad en 10 de 10, verificada por raiz contra el archivo**: los diez pares de
+  la raiz (2.412, 2.423, 2.454, 2.535, 2.569, 2.591, 2.636, 2.697, 2.751, 2.779) estan
+  en el archivo, todos D; los dos nuevos entran via `capacidad_de_proceso_2`. SIN ACTO se
+  sostiene; extiende sin reabrir, como declara el reporte.
+- **Senal del idioma sin aparicion nueva, verificada**: las unicas razones del tramo que
+  tocan denominaciones (2.740 Nelson, 2.776 COC) las tratan como YA declaradas (2.577 y
+  2.593), con la reposicion encargada donde corresponde. Cinco denominaciones al corte
+  2.800 verifica.
+- **Contador de fusiones mutuas en diecisiete, consistente**: la 17.a fue el 2.666
+  (reporte vuelta 2, verificado en git); ninguna razon del tramo declara mutua numerada
+  nueva; las A del tramo con mutua en la razon son de gemelos ya en cumulo, que por la
+  convencion de la vuelta 2 (solo los casos nuevos abren numero) no mueven el contador.
+- **Citas de transitividad del reporte, verificadas clase a clase**: 2.590 A, 2.413 D
+  (sostienen el 2.706); 2.618 A, 2.548 A (sostienen el 2.759); 2.630 A, 2.648 D
+  (sostienen el 2.789); 2.562 A, 2.639 A (sostienen el discutible del 2.799); 2.652 D,
+  2.653 D y 2.666 A tal como el reporte los cita.
+
+### 2. RELECTURA CIEGA de treinta discutibles (los 22 fuertes inline mas los fuertes de la tabla del reporte)
+
+Metodo: imprimi PRIMERO titulo, resumen y pasos de los dos nodos de cada par desde
+`master_graph.json` (volcador propio que nunca imprime la razon), adjudique mi clase, y
+SOLO DESPUES destape las razones escritas. **Limites declarados**: (a) como en las
+vueltas 1 y 2, el ciego pleno es sobre la RAZON, no sobre la clase; (b) **el 2.727 quedo
+CONTAMINADO**: lei su razon entera durante la verificacion de la senal del idioma, antes
+de la ciega. Se adjudico igual, declarado como NO ciego, y coincide (A por contencion:
+los pasos de errores_de_medicion caben todos en el MSA, que ademas trae Gauge R&R y la
+comparacion 5,15 sigma). No cuenta en el resultado ciego.
+
+| puesto | mi clase ciega | ejecutor | ¿coincide? |
+|---:|---|---|---|
+| 2.702 | D (mecanica del muestreo contra diseno economico del plan; curva OC y balance de costos son pasos propios) | D | si |
+| 2.723 | D (patron general de adaptaciones sectoriales contra ficha de una norma; ficha contra mapa) | D | si |
+| 2.724 | D (procedimiento de la carta sobre el sistema estable contra el alcance del sistema: seleccion, entrenamiento, simplificar) | D | si |
+| 2.730 | D (evolucionar el control de aceptacion con ciclo de vida contra abandonarlo; posturas distintas pese a la tesis compartida) | D | si |
+| 2.733 | D (declarar la politica medible contra el ciclo de RH que la refuerza) | D | si |
+| 2.735 | D (el VA/NVA es la ficha del paso de clasificar del VSM; ficha contra mapa) | D | si |
+| 2.736 | A (mismo acto: limites para distinguir comun de especial sobre personas y responder sin culpar; calza paso a paso) | A | si |
+| 2.737 | A (los mismos cinco principios de Nakajo y Kume; el servicio es el caso del general y el general sobrevive) | A | si |
+| 2.739 | D (diseno y medicion del programa contra entrega y monitoreo con la guia; facetas del Make Certain, la leccion del 2.652) | D | si |
+| 2.741 | D (postura gerencial con lemas y compromiso escrito contra procedimiento del sistema estable) | D | si |
+| 2.742 | A (el Select ES el proceso de nominacion y seleccion: nominar, criterios, priorizar, encargar; charter y secretaria son manos) | A | si |
+| 2.747 | **A (mi ciega: contencion en el _5)** | **D** | **NO, dentro del marcado** |
+| 2.756 | **A (mi ciega: mismo eje criterio mas validacion entre inspectores, como el 2.686)** | **D** | **NO, dentro del marcado** |
+| 2.760 | A (gemelos del gobierno familiar: junta asesora primero, consejo familiar, master plan con consultor, independientes) | A | si |
+| 2.761 | D (la ficha SMART despliega el paso de metas del establecer proyecto; ficha contra mapa) | D | si |
+| 2.765 | D (definicion del aseguramiento contra la distincion vigilar/asegurar; actos distintos) | D | si |
+| 2.766 | A (rastrear el origen con registros y responder al problema sin culpar; mismo acto que la politica) | A | si |
+| 2.767 | D (abolir la inspeccion masiva al 100 por ciento contra abolir el muestreo de aceptacion por lotes; blancos distintos con tesis comun) | D | si |
+| 2.768 | D (ejecucion con checklist, severidades y plazos contra revision independiente con visitas y metas numericas; dos facetas) | D | si |
+| 2.773 | A (juicios independientes comparados graficamente para consistencia; el esquema del item 20 y el sin jerarquia son manos del mismo acto) | A | si |
+| 2.780 | A (revision periodica formal del progreso de proyectos; el formato con ahorro neto es detalle, no acto propio) | A | si |
+| 2.784 | D (argumento y filosofia del Quality is Free contra el instrumento COPQ con taxonomia y benchmarks) | D | si |
+| 2.787 | A (separar lo tactico de lo estrategico en la funcion calidad y subirla a la planificacion; calza paso a paso) | A | si |
+| 2.790 | D (el goal statement es la ficha del paso de metas; ficha contra mapa, hermano del 2.761) | D | si |
+| 2.795 | D (advertencia contractual del AQL contra la taxonomia de indices para disenar planes) | D | si |
+| 2.797 | D (auditar el sistema contra construir el manual; cada uno lleva al otro solo como paso menor) | D | si |
+| 2.798 | D (Expand y Sustain contra Prepare; fase contra fase del mismo roadmap) | D | si |
+| 2.799 | D (transferir e implementar los controles contra disenar el plan de control; actos distintos del cierre) | D | si |
+| 2.800 | A (rastreo estadistico del problema sin culpar; mismo acto que la politica, via el cumulo de la distincion) | A | si |
+
+**Resultado: 27 de 29 ciegos coinciden; DOS discrepancias mias (2.747 y 2.756), AMBAS
+DENTRO del marcado (las dos llevan la marca fuerte inline). El credito de la tanda queda
+INTACTO por la regla del marcado.** Al destapar las razones, las dos discrepancias se
+resolvieron SIN correccion, a favor del ejecutor y por el criterio ya escrito en la
+vuelta 1 (**linea propia es un paso entero que el otro no tiene; el paso entero propio
+rompe la contencion**): en el 2.747, montar el foro de reuniones es paso entero de _4 y
+el chart de accion con causa raiz es paso entero de _5, asi que ninguno cabe limpio en el
+otro; en el 2.756, el metodo de prueba de la definicion general es paso entero de _2 y la
+recategorizacion por tipo de defecto (abolir mayor/menor con supervisores) es paso entero
+de _defectos. Mi lectura A pesaba el nucleo compartido (la trampa contra la que avisa el
+2.652); la vara escrita pesa el paso entero. Cero caidas de clase; las razones destapadas
+de los treinta citan pasos que existen en los nodos.
+
+### 3. METRICA DE CREDITO acumulada
+
+Saliente tras vuelta 2: 17 relecturas, 61 puestos, 4 caidas, todas dentro del marcado.
+Esta vuelta: +1 relectura, +30 puestos (29 ciegos y el 2.727 declarado no ciego),
+0 caidas, y las dos discrepancias del auditor DENTRO del marcado.
+**Acumulado: 18 relecturas, 91 puestos, 4 caidas, TODAS dentro del marcado.**
+
+### 4. ADJUDICACIONES
+
+1. **Las dos cifras secundarias del 9.28.1 (204 y 59): correccion con regla existente,
+   no doctrina nueva.** Son mediciones, y las mediciones se firman con su comando (regla
+   del corte y el comando, 9.28.1; precedente "es medicion, no adjudicacion" de las
+   vueltas 1 y 2). El texto publicado no trae el comando que las produjo y mi instrumento
+   no las reproduce. Procede: el ejecutor re-corre con instrumento declarado y o bien
+   publica el comando exacto que da 204 y 59, o bien corrige con tachado (sin borrar) a
+   las cifras reproducibles, **209** y **20**, dejando el comando al lado. La cota
+   titular (6 de 234 = 2,6 por ciento), la tasa secundaria (2,9 por ciento, que
+   sobrevive identica con 209) y la leccion de las dos cotas NO se tocan.
+2. **Los discutibles 2.747 y 2.756: adjudicados D, sin correccion**, por el criterio de
+   la vuelta 1 citado arriba. Mi caso A queda registrado en la tabla como discrepancia
+   ciega que no prospero.
+3. **Preguntas 1 y 2 del reporte (cobertura del Consejo de Calidad, sub-cumulo de la
+   responsabilidad gerencial): siguen abiertas y no piden adjudicacion.** La cola trae
+   los pares; POR ELEGIR provisional en ambas, como el reporte las deja. Bien traido y
+   bien dejado.
+4. **La convencion del contador de mutuas, hecha explicita**: solo los CASOS NUEVOS de
+   fusion mutua (superviviente POR ELEGIR fuera de cumulo ya contado) abren numero; las
+   mutuas de gemelos que ya viven en un cumulo contado no mueven el contador. Es la
+   practica de las vueltas 2 y 3, ahora escrita.
+
+### 5. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **Contamine la ciega del 2.727**: mi grep de la senal del idioma imprimio razones
+  enteras y lei la del 2.727 antes de la relectura. Lo declare, lo adjudique como NO
+  ciego (coincide con el ejecutor) y lo saque del resultado ciego. Aviso a mi mismo: en
+  la fase de verificacion, volcar solo puesto y clase, nunca el campo razon, hasta
+  terminar la ciega.
+- **Mi primer conteo del universo del cuerpo dio 212 en vez de 234** porque parsee la
+  salida impresa del script en lugar de recomputar desde el grafo; el instrumento
+  textual perdia bloques. Lo descarte y recompute con la logica replicada sobre el grafo
+  antes de afirmar nada: 234 reproducido. El instrumento roto queda anotado, ningun
+  numero salio de el.
+- Mis dos discrepancias ciegas (2.747, 2.756) se declaran con nombre en la seccion 2,
+  como manda el protocolo; la trampa fue pesar el nucleo compartido sobre el paso entero
+  propio, la misma contra la que avisa el 2.652.
+
+### 6. VEREDICTO DE LA VUELTA
+
+Reporte VERIFICADO en el marcador, las tasas, la vara por tramo, las 19 A puesto a
+puesto, la capacidad 10 de 10, la senal del idioma, el contador de mutuas y las citas de
+transitividad; la cota titular de la TAREA 1 reproducida por dos vias. DOS cifras
+secundarias del 9.28.1 (204 y 59) no reproducen y van a correccion declarada con regla
+existente (TAREA 1 del encargo). Relectura ciega 27 de 29 con dos discrepancias mias
+dentro del marcado, resueltas sin correccion; credito INTACTO. Cero pendientes de
+doctrina nueva; ninguna condicion de parada. La fase I continua: encargo la correccion
+del 9.28.1 y el cribado 2.801 a 2.900. Faltan 588 pares (quality 455, risk_management
+106, seguridad_digital 27).
