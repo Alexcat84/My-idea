@@ -113,3 +113,131 @@ Reporte VERIFICADO en todas sus cifras; relectura ciega 11 de 11; correccion dec
 bien hecha y bien registrada (tachado sin borrar, leccion contada); cero pendientes de
 doctrina nueva; ninguna condicion de parada. La fase I continua: encargo el cribado
 2.601 a 2.700. Faltan 788 pares (quality 655, risk_management 106, seguridad_digital 27).
+
+## VUELTA 2, 12 ago 2026. Auditor: Fable 5. Reporte auditado: checkpoint 2.700 (ejecutor Opus 4.8)
+
+### 1. VERIFICACION, todo con comando propio
+
+- **Hashes**: `a5d16eee` contiene el archivo en 2.700 lineas exactas
+  (`git show a5d16eee:docs/INTRA_DOMINIO_VEREDICTOS.jsonl | wc -l` da 2700). El commit
+  posterior `4353cbe2` toca exactamente informe y reporte. El diff completo de la vuelta
+  (`git diff --stat a0db3a76..HEAD`) toca solo las seis rutas declaradas; **docs/plan/
+  intacto** (diff vacio). Arbol limpio en `bucle`.
+- **Marcador recomputado** (python sobre el jsonl): **A 544, B 89, C 7, D 2.060; n 2.700;
+  cero huecos (set 1..2700 completo) y cero duplicados.** Coincide cifra a cifra. Tramo
+  2.601-2.700: 22 A y 78 D; **la lista de las 22 A del reporte coincide puesto a puesto**
+  con la recomputada del archivo.
+- **Tasa por dominio**: recomputada entera; las ocho filas coinciden (quality 289 pares,
+  90 A, 31,1).
+- **Vara por tramo de 25 en quality (2.601-2.700)**: 24,0 / 28,0 / 28,0 / 8,0; los cuatro
+  tramos coinciden, incluido el 8,0 del ultimo cuarto.
+- **Discutibles inline**: 68 pares del tramo llevan DISCUTIBLE MARCADO en el jsonl, la
+  cifra que el reporte declara como conjunto completo del marcado.
+- **TAREA 1 verificada**: secciones 92 y 93 del informe existen y sus cifras calzan con lo
+  ya verificado (vuelta 1) y con mi recomputo (corte 2.700); la precision del 9.21 es fiel
+  al acta vuelta 1, con los puntos a, b y c y sin retocar lo escrito; la medicion del
+  9.28.1 la re-corri con el comando declarado (`python scripts/barrido_quinta_cara.py
+  2600`): **863 de 2.600 pares con candidato, core 623, quality 86 crudos**, reproducido.
+  Los hechos falsables de la medicion verifican los tres: las cuatro apariciones dentro de
+  la superficie (2.464, 2.477, 2.488, 2.548) aparecen en el barrido; el box plot del 2.517
+  vive en el CUERPO de `histogramas_distribucion_frecuencias` (no en titulo ni id); el COC
+  del 2.593 esta DELETREADO en el titulo de `plan_de_gestion_de_riesgos` (Concerns,
+  Options, Consequences, sin sigla), invisible al regex. **Limite declarado**: el 56 de
+  189 es curacion a mano que no reproduje entera; verifique el marco crudo (86 candidatos
+  en quality, y 56 cabe en 86) y que el BANCO la firma como cota con su metodo, no como
+  censo. Consistente con 9.28.
+- **Señal del idioma sin aparicion nueva, verificada**: ninguna razon del tramo 2.601-2.700
+  menciona denominacion perdida ni el 9.28; la cifra queda en cinco al corte 2.700.
+- **Precision de la capacidad, verificada y afinada con el grafo**: contada por raiz la
+  familia lleva **8 pares, los 8 D** (el 2.423, establecer contra establecimiento, tambien
+  junta dos nodos de la raiz); el "7 de 7" del reporte cuenta la cobertura completa del
+  nucleo de cuatro nodos (6 pares, C(4,2)) mas el 2.697. **SIN ACTO se sostiene sobre los
+  8**; nada sustantivo cambia. La precision que el ejecutor declaro era exacta y esta linea
+  la completa. Va al encargo como una linea del checkpoint 2.800.
+- **Citas cruzadas de familia** que sostienen las transitividades del tramo, verificadas
+  clase a clase contra el archivo: 2.425 D, 2.513 D, 2.469 A, 2.444 D, 2.455 D, 2.495 D,
+  2.668 D, 2.602 D, 2.498 A, 2.502 D, 2.539 D, 2.422 D, 2.443 D, 2.508 D, 2.556 D,
+  2.335 A. Las seis correcciones del barrido de familia (2.605, 2.609, 2.610, 2.614,
+  2.652, 2.653 en D; 2.620 en A) estan en el archivo como el reporte las cuenta.
+
+### 2. RELECTURA CIEGA de los quince discutibles fuertes
+
+Metodo: imprimi PRIMERO titulo, resumen y pasos de los dos nodos de cada par desde
+`master_graph.json`, adjudique mi clase, y SOLO DESPUES destape las razones escritas.
+**Limite declarado del ciego**, el mismo de la vuelta 1: la tabla del reporte trae la
+clase del ejecutor, asi que el ciego pleno es sobre la RAZON; adjudique desde el texto de
+los nodos antes de leer razon alguna. Los quince estan dentro de los 68 marcados inline.
+
+| puesto | mi clase ciega | ejecutor | ¿coincide? |
+|---:|---|---|---|
+| 2.686 | A (mismos cinco pasos, mismo eje: prueba, criterio, regla de decision, validacion con las partes) | A | si |
+| 2.691 | D (crear el liderazgo estadistico central con su salvaguarda contra seleccionar roles y repartir el reporte; ninguno contiene al otro limpio) | D | si |
+| 2.677 | D (el diagnostico sobre el proceso contra la postura gerencial: lemas, compromiso escrito, comunicar al trabajador) | D | si |
+| 2.618 | A (los cinco pasos del breakthrough SON el DMAIC; contencion) | A | si |
+| 2.641 | A (los accidentes calzan paso a paso como caso del general; el caso no es la casa) | A | si |
+| 2.620 | A (los pasos del caso de la arruga calzan uno a uno con el general; repite y sobrevive el general) | A | si |
+| 2.663 | A (el consejo que elige proyectos, da recursos y reconoce cabe entero en el ejecutivo; politicas y niveles son pasos extra del superviviente) | A | si |
+| 2.670 | A (mismo consejo; carta constitutiva contra capacitacion y Pareto, en el peor caso mutua, la clase no cambia) | A | si |
+| 2.673 | A (mismo segundo paso del diseño: identificar el elenco; clasificar contra listar tipos son manos, no actos) | A | si |
+| 2.645 | A (el reporte cabe en analisis mas reporte; el formato de entrega es detalle, no paso propio) | A | si |
+| 2.700 | D (el lazo probar-cambiar-verificar sobre proceso controlado contra el mapa del sistema y la postura de no culpar) | D | si |
+| 2.678 | D (ficha de Expand y Sustain contra el mapa de cinco fases) | D | si |
+| 2.693 | D (la hoja de necesidades es un paso del paraguas QFD; ficha contra mapa, como el 2.653) | D | si |
+| 2.695 | D (el diseño de metodos es el paso 7 y 8 del plan de 16; paso contra proceso) | D | si |
+| 2.679 | D (enrutar la accion al mecanismo correcto contra proteger al trabajador de la culpa del sistema) | D | si |
+
+**Resultado: 15 de 15 coinciden, cero discrepancias, y ninguna discrepancia fuera del
+marcado. El credito de la tanda queda INTACTO.** Las razones destapadas citan pasos que
+existen en los nodos: ninguna razon inventa contenido, y sus citas de familia estan
+verificadas en la seccion 1.
+
+El filo dominante del tramo, hecho explicito y consistente con el criterio de la vuelta 1:
+**en los cumulos del mismo autor, la contencion funde solo cuando el acto entero de uno
+cabe en el otro (2.618, 2.645, 2.663); la ficha que despliega un paso del mapa NO se
+subsume, es cara distinta (2.678, 2.693, 2.695); y el caso cuyos pasos calzan uno a uno
+con el general repite (2.620, 2.641), pero el que trae un paso de creacion propio no
+(2.691).** Es la vara 9.6.1 pesando contenido, con la figura 78.2 en las dos direcciones.
+
+### 3. METRICA DE CREDITO acumulada
+
+Saliente tras vuelta 1: 16 relecturas, 46 puestos, 4 caidas, todas dentro del marcado.
+Esta vuelta: +1 relectura, +15 puestos, 0 caidas, todo dentro del marcado.
+**Acumulado: 17 relecturas, 61 puestos, 4 caidas, TODAS dentro del marcado.**
+
+### 4. ADJUDICACIONES
+
+1. **PREGUNTA 1, el universo limpio de la quinta cara: adjudicada, procede como MEDICION
+   por extension del 9.28, no pide doctrina nueva.** El 9.28 ya establece que el barrido
+   es buscador de candidatos y que la denominacion vive tambien fuera de title+id; el box
+   plot del 2.517 lo documenta en su propia carne. Por extension citable: el barrido del
+   CUERPO (resumen y pasos), restringido a los dominios de nombre largo en castellano
+   (fuera `core`, ingles por diseño), es la medicion limpia que la figura pide. Se encarga
+   con universo definido, revision a mano y publicacion como cota con corte y comando,
+   igual que el precedente de la vuelta 1 ("es medicion, no adjudicacion").
+2. **PREGUNTA 2, el hub del Consejo de Calidad: no pide adjudicacion.** La cola trae los
+   pares que faltan; la especie queda POR ELEGIR provisional hasta cerrar la cobertura del
+   cumulo, como el propio reporte la deja ("anotado, no dictado"). Bien traido y bien
+   dejado; el encargo prohibe adelantar pares.
+3. **La precision de la capacidad: registrada.** La declaracion del ejecutor ("cerrada era
+   sobre los seis pares que la cola habia traido") era exacta; mi conteo por raiz la
+   completa (8 de 8, todas D, con el 2.423). Una linea al checkpoint 2.800; nada ya
+   escrito se retoca.
+
+### 5. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- Mi primer barrido de la familia de la capacidad uso un grep por raiz demasiado ancho y
+  trajo nodos de otros dominios (capacidades del fundador, capacidades de mercado); lo
+  corregi en el acto restringiendo al patron de la capacidad de proceso de quality antes
+  de afirmar nada. El instrumento ancho queda anotado como aviso a mi mismo.
+- Mi primer volcado de nodos para la ciega uso llaves equivocadas (`resumen`/`pasos` en
+  vez de `resumen_teorico`/`pasos_accionables`) y salio vacio; lo corregi antes de
+  adjudicar. Ningun veredicto se emitio con el instrumento roto.
+
+### 6. VEREDICTO DE LA VUELTA
+
+Reporte VERIFICADO en todas sus cifras, incluidas las citas cruzadas de familia y los
+hechos falsables de la medicion de la quinta cara; relectura ciega 15 de 15; cero
+pendientes de doctrina nueva; ninguna condicion de parada. La fase I continua: encargo la
+medicion del universo limpio (adjudicada), la linea de precision de la capacidad y el
+cribado 2.701 a 2.800. Faltan 688 pares (quality 555, risk_management 106,
+seguridad_digital 27).
