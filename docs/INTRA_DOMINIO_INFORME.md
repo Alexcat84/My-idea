@@ -15877,10 +15877,13 @@ par gemelo 3.067 (mismo nodo `quality_awareness_crosby`) lee como paso entero pr
 | 24 | 2.825 | `cinco_suposiciones_erroneas_calidad` =A= `concepto_supuestos_erroneos_sobre_calidad` **(nuevo)** |
 | 25 | 2.891 | `estadistico_competente_organizacion` =A= `organizacion_liderazgo_estadistico` |
 | 26 | 2.952 | `cultura_integridad_objetividad_resolucion_problemas` =A= `manejo_problemas` |
+| 27 | 3.182 | `control_del_proceso_del_proveedor` =A= `planificacion_tecnologica_conjunta` **(nuevo, bucle vuelta 8, TAREA 2 del cribado 3.101-3.200)** |
 
-**EL CONTADOR AL CORTE 3.100 ES VEINTISEIS, no diecinueve.** Sin caso nuevo entre el 3.001 y el
-3.100 (confirmado en 97.4). Comando de verificacion: barrido `grep -i "mutua"` mas lectura
-citada de cada hit en clase A, reproducible sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`.
+**EL CONTADOR AL CORTE 3.100 ERA VEINTISEIS. AL CORTE 3.200 ES VEINTISIETE**, con el caso nuevo
+del 3.182 (tres pasos casi verbatim compartidos entre las dos fichas de plan de control de
+proceso del proveedor con SPC, ver el registro del 3.182 en el jsonl). Sin otro caso nuevo entre
+el 3.101 y el 3.200. Comando de verificacion: barrido `grep -i "mutua"` mas lectura citada de
+cada hit en clase A, reproducible sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`.
 
 ### 98.2 CORRECCION DECLARADA DEL 2.630 (relectura conjunta, encargada en el acta vuelta 7, TAREA 1.2)
 
@@ -15911,6 +15914,66 @@ entera. **Efecto en el marcador, arrastrado a TODAS las secciones donde aparecia
 97), ver cada una:** corte 2.700 de A 544 a 543; corte 2.800 de A 563 a 562; corte 2.900 de A
 572 a 571 (segunda correccion sobre la ya aplicada del 2.805); corte 3.000 de A 577 a 576
 (segunda correccion sobre la ya aplicada del 2.931); corte 3.100 de A 579 a 578.
+
+### 98.3 MARCADOR (corte 3.200)
+
+| | |
+|---|---:|
+| **veredictos** | **3.200**, hasta el puesto 3.200, cero huecos ni duplicados |
+| **A** | **580** (18,1 %) |
+| **B** | 89 |
+| **C** | 7 |
+| **D** | **2.524** (78,9 %) |
+
+Contra el checkpoint 3.100 corregido (98.2: A 578, D 2.426): **+2 A y +98 D** en el tramo
+3.101-3.200 (comando `python scripts/recomputar_marcador.py 3200`).
+
+### 98.4 `quality` y su vara por tramo (3.101-3.200, cuatro tramos)
+
+`quality` **789 pares, 126 A, 16,0 %** (baja desde 18,0 % al corte 3.100 corregido, ver 97.3).
+
+| tramo | pares | A | tasa |
+|---|---:|---:|---:|
+| 3.101-3.125 | 25 | 0 | 0,0 % |
+| 3.126-3.150 | 25 | 0 | 0,0 % |
+| 3.151-3.175 | 25 | 1 | 4,0 % |
+| 3.176-3.200 | 25 | 1 | 4,0 % |
+
+> El cuerpo sigue en el piso: dos tramos en 0,0 % exacto (el primero desde el 2.976-3.000) y dos
+> en 4,0 %. Las dos A del tramo (3.165 contencion, 3.182 fusion mutua nueva) son casos aislados
+> de lectura directa, no cumulos nuevos. No se forzo A para compensar el piso ni D para sostener
+> la tendencia; cada D trae su comparacion de pasos enteros escrita en la razon.
+
+### 98.5 FAMILIAS Y FIGURAS AL DIA (corte 3.200)
+
+| que | estado (corte 3.200) |
+|---|---|
+| **fusion mutua** | **UN caso nuevo**, el 3.182 (control_del_proceso_del_proveedor =A= planificacion_tecnologica_conjunta, tres pasos casi verbatim compartidos). El contador pasa de **VEINTISEIS a VEINTISIETE** (ver 98.1 para la serie completa renumerada) |
+| **contencion por procedimiento mas completo** | figura nueva reconocida (3.165, evaluacion_organizacional_calidad =A= evaluacion_riesgo_calidad_organizacional): un nodo cabe entero dentro de un procedimiento mas formal del mismo acto, que ademas trae equipo/roles, objetivos, plan de comunicacion y puntaje |
+| **la capacidad del proceso, SIN ACTO** | sigue cerrada, extiende con seis pares mas de esta tanda (3.130, 3.141, 3.149, 3.152, 3.200 via indice_cpk, mas la ficha 3.156/3.169/3.197 del patron general), sim_tit hasta 67,4 sin fundir |
+| **ficha nombrada dentro del paso de otro nodo** | la figura mas frecuente del checkpoint: nueve casos nuevos (3.103, 3.107, 3.114, 3.118, 3.156, 3.169, 3.175, 3.186, 3.197, 3.200); veintiuno acumulados desde el 2.956 |
+| **distincion comun/especial POR DERECHO contra responsabilidad gerencial** | frontera confirmada de nuevo (3.113), PREGUNTA 3 sigue abierta sin resolverse en este tramo |
+| **hubs que no funden con sus vecinos pese al sim_tit alto** | tres casos marcados: concepto_haciendo_la_calidad_cierta (D contra siete vecinos distintos en la sesion), gestion_estrategica_de_calidad_sqm (D contra cuatro vecinos), planificacion_calidad_crosby (D contra tres vecinos) |
+| **trampa del identificador con sim_tit muy alto** | 3.176 (facilitador contra lider de equipo, sim_tit 76,7, roles distintos del mismo equipo) y 3.165 (sim_tit 75,9, resuelto A por contencion) |
+| **breakthrough/RCCA/DMAIC** | frontera confirmada de nuevo (3.139, RCCA carece de Measure independiente) |
+
+### 98.6 DISCUTIBLES MARCADOS (conjunto fuerte de la tanda)
+
+El conjunto fuerte de esta tanda son los pares con marca fuerte inline: **3.121** (estructura de
+reporte dual contra organizacion de liderazgo estadistico, D pese al nucleo compartido con el
+cumulo del 2.891), **3.147** (concepto_haciendo_la_calidad_cierta contra concepto_quality_is_free,
+con arista), **3.148** (dia_cero_defectos contra zero_defects_concepto, entregables parecidos),
+**3.165** (A por contencion, sim_tit 75,9, el mas alto del checkpoint), **3.173** (los dos
+autocontrol de Juran, checklist parecido pero especializaciones distintas), **3.176** (facilitador
+contra lider, sim_tit 76,7, trampa del identificador), **3.182** (A por fusion mutua nueva, tres
+pasos casi verbatim). Detalle completo de cada uno en `docs/loop/REPORTE.md`.
+
+### 98.7 COMMITS
+
+`9c7eab96` (TAREA 1: recuento del contador de fusiones mutuas, correccion del 2.630, tres cifras
+publicadas corregidas, cribado 3.101-3.125), `5603ee40` (cribado 3.126-3.155), `b703adcc`
+(cribado 3.156-3.170), `53782609` (cribado 3.171-3.185), `18f1d09b` (cribado 3.186-3.200,
+checkpoint 3.200, hash final de la vuelta antes del reporte).
 
 ---
 
