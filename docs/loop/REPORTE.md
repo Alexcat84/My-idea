@@ -1,188 +1,189 @@
-# REPORTE del ejecutor del bucle, vuelta 1
+# REPORTE del ejecutor del bucle, vuelta 2
 
-**Sesion ejecutora (Opus 4.8). Fecha de reloj: 12 ago 2026. Corte del cribado: puesto 2.600
+**Sesion ejecutora (Opus 4.8). Fecha de reloj: 12 ago 2026. Corte del cribado: puesto 2.700
 de 3.388.** Rama activa: `bucle`. MODO DE CIERRE en todo: se leyo, se midio y se documento;
 cero nodos tocados.
 
 ## Hash y rutas
 
-- **Hash del archivo del cribado (checkpoint 2.600):** `f3c3750c` (commit "Cribado 2596-2600").
-  Es el estado que el auditor debe checar y recomputar. El presente reporte y la correccion
-  de doctrina de TAREA 1 van en el commit inmediatamente posterior.
+- **Hash del archivo del cribado (checkpoint 2.700):** `a5d16eee` (commit "Cribado 2697-2700").
+  Es el estado que el auditor debe checar y recomputar. Este reporte va en el mismo commit o
+  el inmediatamente posterior.
 - **Rutas tocadas esta vuelta:**
-  - `docs/BANCO_DE_TEXTOS.md` (TAREA 1: nuevo bloque en 9.3.1, nueva sub-regla 9.28.1, y la
-    correccion declarada del 12 ago).
-  - `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (46 veredictos nuevos, 2.555 a 2.600).
-  - `docs/loop/REPORTE.md` (este archivo).
-  - `.gitignore` (artefactos de runtime del orquestador, ver DISCUTIBLE DE INFRA abajo).
+  - `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (100 veredictos nuevos, 2.601 a 2.700).
+  - `docs/INTRA_DOMINIO_INFORME.md` (TAREA 1.1: seccion 92, checkpoint 2.600; y seccion 93,
+    checkpoint 2.700 compacto).
+  - `docs/BANCO_DE_TEXTOS.md` (TAREA 1.2: precision de fecha en 9.21; TAREA 1.3: medicion de la
+    tasa de la quinta cara en 9.28.1).
+  - `scripts/barrido_quinta_cara.py` (nuevo, solo lectura, para TAREA 1.3).
+  - `docs/loop/REPORTE.md` (este archivo) y `.gitignore` (`_lote.jsonl`, scratch por tramo).
 - **docs/plan/ NO se toco** (solo lectura, como manda el encargo).
 
-## TAREA 1: los tres vistos del auditor saliente, escritos
+## TAREA 1 (registros de la vuelta 1 del auditor), hecha
 
-1. **9.3.1, VISTO PRIMERO: SIN ACTO SOLO SE DECLARA CON LA FAMILIA LEIDA ENTERA.** Escrito con
-   sus dos ejemplares (2.517 el histograma, 2.537 la responsabilidad gerencial, dos
-   candidaturas a sin acto que murieron al leer un par mas). Regla: mientras falte un par,
-   "sin acto a la fecha" con cobertura al lado, por 9.26. Etiqueta del histograma corregida a
-   POR DERECHO final; la responsabilidad gerencial anadida.
-2. **9.3.1, VISTO SEGUNDO: LA FUSION MUTUA NUNCA PRODUCE GANADOR POR DERECHO** (2.525).
-   Escrito con su razon: mete a los dos nodos en el acto y deja el superviviente sin fijar por
-   definicion; una familia cuya unica A es mutua es, como minimo, POR ELEGIR.
-3. **9.28.1, SUB-REGLA: LA SIGLA Y EL TERMINO EN OTRO IDIOMA SON DENOMINACIONES APARTE DEL
-   NOMBRE LARGO** (MBO, box plot, VOC): en cada operacion de fusion se comprueban por
-   separado. **La quinta cara pasa de hipotesis a figura con cifra:** la senal del idioma tenia
-   un solo caso (2.464, sin porcentaje) y ahora tiene cuatro apariciones al corte 2.554, una
-   de emparejamiento y tres de perdida de denominacion. Deja de ser hipotesis.
+1. **CHECKPOINT 2.600 AL INFORME:** seccion 92 de `INTRA_DOMINIO_INFORME.md`, compacta,
+   remite a este reporte en git (commits `f3c3750c` y `5834d869`). La fuente de checkpoints
+   del informe ya no queda trunca en el 2.500.
+2. **PRECISION DE LA FECHA en 9.21** (donde vive la regla del corte, la tercera mitad del
+   11 ago): adjudicacion del auditor escrita, EL ORDEN CANONICO ES EL CORTE, NO LA FECHA; lo
+   transcrito conserva la fecha de su adjudicador, lo nuevo se firma con reloj real mas corte.
+   Nada ya escrito se retoco.
+3. **TASA DE LA QUINTA CARA (9.28.1):** medida y anotada con su corte y el comando
+   (`python scripts/barrido_quinta_cara.py 2600`). **La cifra NO se dicto como tasa unica de
+   catalogo, y esa es la leccion:** el universo de catalogo (863 pares con candidato) lo
+   contamina `core`, ingles por diseno (*customer* casa 334 nodos); restringido a `quality`
+   son **56 de 189 pares** con denominacion foranea en title+id (corte 2.600); pero **2 de las
+   5 apariciones caen fuera de esa superficie** (box plot del 2.517 vive en el cuerpo, COC del
+   2.593 esta deletreado en el titulo, no como sigla). Cota firmable sobre la superficie
+   title+id de `quality`: **4 de 56 = 7,1 %**, piso no censo. Traido para adjudicacion: el
+   universo limpio pide barrer el CUERPO del nodo, no solo title+id.
 
-### Correccion declarada dentro de TAREA 1 (12 ago 2026, corte 2.600)
+## TAREA 2: cribado 2.601 a 2.700 (100 pares)
 
-**Mi propia fila de la responsabilidad gerencial estaba mal medida y la corrijo sin borrarla.**
-Al dictaminar el 2.572 pase el cumulo por el resolutor (regla 7) y encontre que la fila
-omitia el **2.453 A** (`sistema_estable_causas_comunes` gana a
-`sistema_estable_responsabilidad_gerencial`), anterior al 2.537. Lo medido:
-
-- El cumulo por raiz pasa de **quince nodos**, no de cinco, y se parte en dos actos: el de
-  **causas comunes contra especiales** y el de **sistema estable / responsabilidad gerencial**.
-- El acto de sistema estable ya tenia **DOS A antes del 2.537** (2.453 y 2.537), mas el
-  **2.572 A** de esta sesion. `sistema_estable_causas_comunes` gano el 2.453 y perdio el 2.537:
-  **firma de POR ELEGIR**, no de por derecho. `mejora_del_sistema_responsabilidad_gerencial`
-  queda arriba, candidato PROVISIONAL, pero el cumulo no esta leido entero.
-- **La cobertura "4 de 10" era falsa por partida doble.** El texto viejo queda tachado por
-  esta correccion, no borrado, porque el error es la leccion: el propio ejemplar que ilustra
-  *no declarar sin leer entero* se declaro sin leer entero.
-- **Resuelto el aviso vivo:** el par que faltaba de la auditoria de producto se leyo en el
-  **2.594 y salio D**; la familia queda **3 de 3, las tres D, FAMILIA SIN ACTO** de verdad. El
-  visto corta en los dos sentidos: el histograma prometia sin acto y salio con acto; la
-  auditoria de producto prometia sin acto y lo cumplio.
-
-## TAREA 2: cribado 2.555 a 2.600 (46 pares)
-
-### Marcador recomputado del archivo (corte 2.600, 2.600 veredictos, cero huecos, cero duplicados)
+### Marcador recomputado del archivo (corte 2.700, 2.700 veredictos, cero huecos, cero duplicados)
 
 | clase | conteo | porcentaje |
 |---|---:|---:|
-| A | **522** | 20,1 % |
-| B | 89 | 3,4 % |
+| A | **544** | 20,1 % |
+| B | 89 | 3,3 % |
 | C | 7 | 0,3 % |
-| D | **1.982** | 76,2 % |
+| D | **2.060** | 76,3 % |
 
-Contra el arranque (2.554: A 508, B 89, C 7, D 1.950): **+14 A y +32 D**; B y C sin cambio.
-Los 46 pares nuevos: **14 A y 32 D, 30,4 % de A.**
+Contra el checkpoint 2.600 (A 522, B 89, C 7, D 1.982): **+22 A y +78 D**; B y C sin cambio.
+Los 100 pares nuevos: **22 A y 78 D, 22,0 % de A.**
 
-### Tasa por dominio (corte 2.600)
+### Tasa por dominio (corte 2.700)
 
 | dominio | n | A | tasa |
 |---|---:|---:|---:|
 | core | 1.445 | 344 | 23,8 % |
+| **quality** | **289** | **90** | **31,1 %** |
 | health_safety | 192 | 45 | 23,4 % |
-| **quality** | **189** | **68** | **36,0 %** |
 | entrega | 171 | 2 | 1,2 % |
 | environmental | 170 | 29 | 17,1 % |
 | compras | 155 | 1 | 0,6 % |
 | franquicias | 148 | 18 | 12,2 % |
 | exportacion | 130 | 15 | 11,5 % |
 
-`quality` sigue siendo el dominio mas repetido del catalogo, 36,0 %. Bajo del 37,8 % del corte
-2.554 porque el tramo nuevo entrego 30,4 %; **le faltan 655 pares (hasta el 3.255).**
+`quality` **baja de 36,0 % a 31,1 %** porque el tramo entrego 22,0 % de A. Sigue al frente del
+catalogo, por encima del 23,8 % de `core`. Le faltan **555 pares** (hasta el 3.255).
 
-### Vara por tramo de 25 (quality)
+### Vara por tramo de 25 (quality, 2.601-2.700)
 
 | tramo | n | A | tasa |
 |---|---:|---:|---:|
-| 2.401-2.425 | 14 | 6 | 42,9 % |
-| 2.426-2.450 | 25 | 9 | 36,0 % |
-| 2.451-2.475 | 25 | 9 | 36,0 % |
-| 2.476-2.500 | 25 | 9 | 36,0 % |
-| 2.501-2.525 | 25 | 11 | 44,0 % |
-| 2.526-2.550 | 25 | 8 | 32,0 % |
-| 2.551-2.575 | 25 | 9 | 36,0 % |
-| **2.576-2.600** | 25 | 7 | **28,0 %** |
+| 2.601-2.625 | 25 | 6 | 24,0 % |
+| 2.626-2.650 | 25 | 7 | 28,0 % |
+| 2.651-2.675 | 25 | 7 | 28,0 % |
+| **2.676-2.700** | 25 | 2 | **8,0 %** |
 
-El cuerpo de `quality` se sostiene entre **28 y 44 %, sin tendencia a la baja al 20 %** de los
-dominios anteriores. El 28,0 % del ultimo tramo es el mas bajo del cuerpo, pero es un tramo
-cargado de cumulos todo-D (benchmarking, estrategia, cartas de control, seriedad), no una
-caida. Confirma el 9.19 y su limite, como el 2.500.
+El cuerpo de `quality` **cae por debajo de su banda 28-44 %** en este tramo, y el ultimo cuarto
+toca **8,0 %**, el mas bajo del dominio hasta la fecha. **No es una caida de la tasa del
+inventario, es un tramo cargado de cumulos todo-D:** consejos y benchmarking (nodos hermanos
+que la cola trae juntos), fases del roadmap, definiciones operacionales, capacidad, costo de
+calidad, make_certain, QFD, y el cumulo de la responsabilidad gerencial. Coincide con lo que
+predijo el 9.19 y su limite: la cabeza de `quality` dio gemelos, el cuerpo entrega familias que
+se separan en caras distintas.
 
-### Familias del 9.3 al dia, con su especie de ganador (corte 2.600)
+### Familias del 9.3 al dia, con su especie de ganador (corte 2.700)
 
 | familia | pares leidos | especie |
 |---|---|---|
-| el **histograma** | 3 de 3 (2.442 D, 2.486 D, 2.517 A) | **POR DERECHO, final** |
-| la **auditoria de producto** | **3 de 3, las tres D** (2.433, 2.478, 2.594) | **SIN ACTO, cerrada** |
-| **causas comunes vs especiales** | `causas_comunes_vs_especiales` gana 2.497, 2.501, 2.577; el 2.532 es fusion mutua entre perdedores | **candidata a POR DERECHO**, a falta de la cola |
-| **sistema estable / resp. gerencial** | 2.453 A y 2.537 A y 2.572 A; `sistema_estable_causas_comunes` gano una y perdio otra | **POR ELEGIR**, provisional (cumulo de 15 nodos sin leer entero) |
-| la **capacidad** | 5 de 6, las cinco D | **SIN ACTO A LA FECHA** (falta `capacidad_de_proceso` vs `analisis_capacidad_proceso`) |
-| la **seriedad** | 5 de 6, las cinco D | **SIN ACTO A LA FECHA** (falta `clasificacion_seriedad` vs `clasificacion_de_seriedad_de_defectos`) |
-| el **lean** | 3 de N, las tres D | **SIN ACTO A LA FECHA** |
-| **dia de cero defectos** | 2.491 A, 2.525 A mutua | **POR ELEGIR** (por el visto segundo) |
+| la **capacidad** | **7 de 7, las siete D** (cierra el 2.636, extiende el 2.697) | **SIN ACTO, cerrada** (establecimiento_capacidad es otro nodo de la familia, tambien D) |
+| el **Consejo de Calidad** | 5 pares A entre `consejo_calidad`, `_2`, `_de_calidad`, `_3` (2.523, 2.631, 2.662, 2.663, 2.670) | **POR ELEGIR**, hub `consejo_calidad`; el nodo `_y_rol_del_director` queda fuera (2.505, 2.549 D) |
+| **causas comunes vs especiales** | gana 2.497, 2.501, 2.577, 2.641; sus relativos de otro eje quedan D (2.677, 2.679) | **candidata a POR DERECHO** del sub-cumulo del metodo |
+| la **regla kp** | POR DERECHO se sostiene: `regla_todo_o_nada_2` queda fuera otra vez (2.646, 2.690 D) | **POR DERECHO** con el 2_ como nodo del fuera-de-control |
+| **sistema estable / resp. gerencial** | actos de `sistema_estable` A (2.453, 2.537, 2.572); el sub-cumulo del mapa y el argumento todo D (2.619, 2.640, 2.656, 2.677, 2.700) | **POR ELEGIR**, provisional, cumulo grande sin leer entero |
+| el **histograma** | 3 de 3 | **POR DERECHO, final** |
+| la **auditoria de producto** | 3 de 3, las tres D | **SIN ACTO, cerrada** |
 
 ### Figuras al dia
 
-- **Fusion mutua:** dos casos nuevos en el tramo, el **decimotercero (2.575**, los vitales
-  pocos) y el **decimocuarto (2.597**, el enfasis en el corto plazo). Conteo verificado contra
-  el archivo: el duodecimo era el 2.552.
-- **La senal del idioma (quinta cara del 9.28.1):** sube a **cinco apariciones al corte 2.600**
-  con **COC, Concerns Options Consequences (2.593)**, sigla en ingles que muere en la fusion y
-  no vive en el texto del superviviente. Es el cuarto ejemplar de perdida de denominacion, tras
-  MBO, box plot y VOC, mas el de emparejamiento (2.464).
-- **Perdidas de nombre nuevas a reponer en su operacion:** COC (2.593), el Teorema de Nelson
-  (2.577, ya visto en el 2.532), el diagrama de Ishikawa (2.600, tecnica nombrada).
-- **Cumulos todo-D confirmados como candidatos a SIN ACTO:** capacidad (5/6), seriedad (5/6),
-  benchmarking (varias caras), estrategia/vision (2.531, 2.573, 2.582, 2.587), y las cartas de
-  control (construccion, interpretacion, retiro son caras distintas, no repeticiones).
+- **Fusion mutua:** tres casos nuevos, el **decimoquinto (2.630**, conciencia de calidad Paso
+  5), el **decimosexto (2.638**, medicion de calidad Paso 3) y el **decimoseptimo (2.666**, el
+  consumidor en la linea de produccion). Los tres con superviviente POR ELEGIR. El
+  decimocuarto era el 2.597.
+- **La senal del idioma (quinta cara, 9.28.1):** SIN APARICION NUEVA en 2.601-2.700; la cifra
+  queda en **cinco al corte 2.700**. Su tasa se midio en TAREA 1.3 (ver arriba).
+- **La familia de la capacidad, SIN ACTO cerrada:** el 2.636 la cerro en 6 de 6 y el 2.697
+  trajo un septimo par, tambien D. Ningun acto de fusion en toda la familia.
+- **El cumulo del Consejo de Calidad, nuevo POR ELEGIR:** cuatro nodos que fusionan entre si
+  (Juran y Crosby cruzados) alrededor del hub `consejo_calidad`, con el nodo del rol del
+  director quedando fuera. Es el ejemplar mas claro de POR ELEGIR del tramo.
 
 ## LA LECCION DEL METODO, y va al acta del auditor
 
-**Leer pares aislados produce error sistematico.** Tres veredictos que aislados daban D se
-corrigieron a A al pasar el cumulo por el resolutor (regla 7, doctrina 9.3): **2.572 y 2.577
-por transitividad de A previas, y 2.570 al reves, de A a D** por la forma todo-D de la familia
-de la seriedad. Desde el 2.567 aplique **barrido de familia antes de dictaminar cada par**, y
-por eso los dictamenes de 2.567 en adelante citan a sus hermanos. Los tramos 2.555-2.566, ya
-committeados antes de sistematizar el barrido, se reverificaron despues (ECR, autocontrol,
-circulos, plan de control): se sostienen. **La misma correccion alcanzo a mi propia TAREA 1.**
+**El barrido de familia siguio corrigiendo la lectura aislada, y esta vez seis veces.** Seis
+veredictos que aislados daban A bajaron a D al leer la familia, y uno subio de D a A:
+
+- **2.605** (comite ZD contra planificacion ZD): A por instinto de mismo Paso 7, D porque no
+  es el mismo acto (arma el quien contra planea el que).
+- **2.609** (rol_black_belt contra roles_six_sigma): A por contencion en aislado, D por
+  transitividad (`rol_black_belt` =A= `rol_black_belt_six_sigma` =D= `roles_six_sigma`, 2.498
+  mas 2.502).
+- **2.610** (definiciones_operacionales _2 contra _3): A por contencion, D por el eje
+  adentro/afuera del 2.455.
+- **2.614** (estandares de trabajo contra cuotas): A por Punto 11a, D por palancas distintas
+  (2.539).
+- **2.652** (Make Certain): A por mismo programa, D por familia D pesada (2.493, 2.541, 2.544).
+- **2.653** (product design spreadsheet contra QFD): A por contencion, D por transitividad
+  (2.469 A con spreadsheet_diseno, 2.425 D contra el mismo).
+- **2.620** (caso de la arruga) subio de D a A por la figura EL CASO NO ES LA CASA (78.2, el
+  2.335): el caso cuyos pasos calzan uno a uno con el general REPITE y sobrevive el general.
+
+**Sin el barrido, seis de estos veredictos habrian salido mal.** Los dictamenes de este tramo
+citan a sus hermanos, como se sistematizo desde el 2.567.
 
 ## DISCUTIBLES MARCADOS para la relectura ciega (marcados ANTES de saber si acierto)
 
-Once, y por la metrica de credito: **si una discrepancia cae FUERA de esta lista, se mueve el
-credito de toda la tanda, no el de un veredicto.**
+Por la metrica de credito: **si una discrepancia cae FUERA de lo marcado, se mueve el credito
+de toda la tanda.** En un tramo casi todo D (78 de 100), **el riesgo esta en las 22 A**, cada
+una una afirmacion falsable de duplicado, y en las D que anularon una lectura A aislada. La
+tabla trae las mas fuertes; **los 68 pares con DISCUTIBLE MARCADO inline en el jsonl son el
+conjunto completo** (leves incluidos), asi que el marcado que cuenta para el credito es el del
+archivo, no solo esta tabla.
+
+**Las 22 A del tramo** (el riesgo primario): 2.601, 2.613, 2.616, 2.618, 2.620, 2.624, 2.627,
+2.630, 2.631, 2.638, 2.639, 2.641, 2.645, 2.662, 2.663, 2.664, 2.666, 2.670, 2.673, 2.674,
+2.686, 2.699.
+
+**Los discutibles mas fuertes, con su filo:**
 
 | puesto | clase | por donde puede caer |
 |---:|---|---|
-| **2.558** | D | Shewhart, dos lecturas del mismo instrumento. Quien pese el nucleo compartido sobre los procedimientos propios (subgrupos, retiro, causa comun vs especial) dira REPITE |
-| **2.571** | A | `comunicar_politicas` domina, dije. Como cada uno trae contenido que al otro le falta, se puede leer FUSION MUTUA y entonces por elegir |
-| **2.575** | A por fusion mutua | quien lea la categoria de incendios como acto aparte y no linea dira que `pocos_vitales` domina, A plana |
-| **2.579** | A | quien no cuente la replicacion de Shewhart como paso propio leera fusion mutua o D |
-| **2.583** | D | envoltorio de politica contra el programa. Quien lea el envoltorio como resumen subsumido dira REPITE con el de catorce pasos |
-| **2.590** | A | el cumulo de cartas ha dado D por caras distintas; este es general contra basico del mismo aspecto, por eso lo lei A por contencion |
-| **2.596** | D | quien lea las siete tecnicas como el desarrollo de remedios del generico dira REPITE con las tecnicas |
-| **2.597** | A por fusion mutua | quien pese los tres anadidos de ganancias sobre los dos de utilidades dira que ganancias domina, A plana |
-| **2.598** | A | el cumulo de cartas ha dado D; este es el mismo grafico de corrida basico contra el detallado, lei A por contencion |
-| **2.599** | D | quien pese el solape de los comites sobre lo propio podria leer A |
-| **2.600** | A | quien lea el diagrama causa-efecto como metodo aparte de generar teorias dira D |
+| **2.686** | A | definiciones_operacionales _3 contra _4. La familia entera es D; quien aplique ese prior sin ver que estos dos NO tienen eje distinto (mismo eje, palabra vaga con validacion externa) dira D |
+| **2.691** | D | estructura estadistica contra doble reporte general. Por EL CASO NO ES LA CASA, quien lea la estructura del estadistico como instancia del patron general dira A por contencion |
+| **2.677** | D | causas_comunes_vs_especiales (ganadora absorbedora) contra responsabilidad_gerencial_causas_comunes. Comparten la distincion; quien pese ese nucleo dira A |
+| **2.618** | A | breakthrough contra DMAIC. Como el 2.602 separo DFSS de DMAIC por proposito, quien lea breakthrough como metodo de marca aparte dira D |
+| **2.641** | A | la distincion causas comunes aplicada a accidentes. Quien lea el angulo de no sancionar al individuo como cara distinta (cultura justa de seguridad) dira D |
+| **2.620** | A | el caso de la arruga. Quien lea el caso como ilustracion que merece quedar aparte dira D |
+| **2.663 / 2.670** | A | motor de proyectos contra consejo ejecutivo. Por el corte del 2.549 (motor contra politica, D), quien los lea como caras distintas del gobierno dira D |
+| **2.673** | A | identificar clientes por dos manos. Quien separe clasificar contra listar-tipos dira D |
+| **2.645** | A | el reporte de benchmarking. La familia es D pesada; quien lea el analisis y la entrega como etapas distintas dira D |
+| **2.700** | D | mejora_del_sistema (absorbedor via sistema_estable) contra el mapa gerencial. Quien pese la responsabilidad compartida sobre el sistema dira A |
+| **2.678 / 2.693 / 2.695** | D | ficha o paso en detalle contra el mapa o el plan entero. Quien los lea subsumidos dira A por contencion |
+| **2.679** | D | enrutamiento de accion de Juran contra responsabilidad del trabajador de Deming. sim_tit 82,5 y ambos distinguen comun de especial; quien pese ese nucleo dira A |
 
-**Patron de los discutibles:** casi todos son de la frontera **A por contencion o fusion mutua
-contra D**, en instrumentos del mismo libro (cartas de control, politicas, benchmarking). La
-vara del 9.6.1 (no contar lineas) tira a A; la lectura de "caras distintas" tira a D. Ahi esta
-el filo de esta tanda.
+**Patron de los discutibles:** el filo del tramo es **A por contencion o fusion mutua contra D
+por caras distintas**, en cumulos del mismo autor (consejos, benchmarking, roadmap,
+definiciones operacionales, capacidad, costo de calidad). La vara del 9.6.1 tira a A; el patron
+del cuerpo de `quality` (ficha contra mapa, paso contra proceso, eje adentro/afuera) tira a D.
 
 ## PENDIENTES DE DOCTRINA y PREGUNTAS (regla 9: lo que no puedo medir, lo traigo)
 
-- **PREGUNTA 1, la fecha.** El reloj del sistema marca **12 ago 2026**, pero la doctrina que
-  extiendo esta fechada **17 y 18 ago 2026** y el arranque del bucle se documento el 12 ago con
-  el cribado en 2.554. Escribi mis vistos como "18 ago" (continuidad con las adjudicaciones que
-  preceden) y mi correccion como "12 ago" (reloj real). **No adivino cual es la cronologia
-  buena; la traigo para que se unifique.**
-- **PREGUNTA 2, la tasa de la quinta cara.** El 9.28.1 quedo con la cifra de apariciones (cinco
-  al 2.600) pero **sin tasa**: cuatro o cinco sobre que universo. Medir eso pide un barrido de
-  pares con id o denominacion en otro idioma, que no corri. Queda anotado, no dictado.
-- **NO hubo PENDIENTE DE DOCTRINA nueva en el cribado:** los 46 pares se clasificaron con
-  reglas escritas (vara 9.6.1, fusion mutua 9.22, sin acto 9.3.1, perdida de nombre 9.28 y
-  9.28.1, cobertura 9.26). Ninguno pidio una regla que no existe.
-
-## DISCUTIBLE DE INFRA (no del cribado)
-
-Aparecieron `docs/loop/loop.log` y `docs/loop/ultimo_ejecutor.json` sin trackear: son
-artefactos de runtime del orquestador (`ultimo_ejecutor.json` es donde el propio orquestador
-vuelca MI salida JSON AL TERMINAR, asi que durante la sesion esta vacio o a medias).
-Committearlos seria versionar estado transitorio que cambia cada vuelta. **Los mande a
-`.gitignore`**, igual que `scripts/rumbos/_ultima_corrida.json` ya lo estaba por la misma
-razon. Lo dejo marcado por si el fundador prefiere versionar el log del bucle: es reversible.
+- **PREGUNTA 1, el universo limpio de la quinta cara.** La medicion de TAREA 1.3 mostro que la
+  superficie title+id no contiene toda la senal (box plot y COC caen fuera). El universo limpio
+  pide **barrer el CUERPO del nodo** (resumen y pasos), no solo title+id, y restringirse a los
+  dominios de nombre largo en castellano (fuera `core`, ingles por diseno). No lo corri; lo
+  traigo para que se adjudique si vale el barrido del cuerpo.
+- **PREGUNTA 2, el hub del Consejo de Calidad.** El cumulo es POR ELEGIR con hub
+  `consejo_calidad`, pero no lo lei entero: falta ver si `consejo_calidad` pierde algun par que
+  lo vuelva POR ELEGIR de verdad o si es POR DERECHO. La cola dira. Anotado, no dictado.
+- **NO hubo PENDIENTE DE DOCTRINA nueva en el cribado:** los 100 pares se clasificaron con
+  reglas escritas (vara 9.6.1, fusion mutua, sin acto 9.3.1, caso no es la casa 78.2, ficha
+  contra mapa, trampa del identificador, perdida de nombre 9.28). Ninguno pidio una regla que
+  no existe.
+- **La familia de la capacidad se declaro cerrada en 6 de 6 (2.636) y luego llego un septimo
+  par (2.697).** No reabre el acto (sigue todo D, SIN ACTO), pero deja claro que "cerrada" era
+  sobre los seis pares que la cola habia traido, no sobre todos los nodos con raiz de capacidad.
+  Lo anoto como precision, no como error.

@@ -15394,3 +15394,55 @@ Detalle en `docs/loop/REPORTE.md` y en `docs/BANCO_DE_TEXTOS.md` 9.3.1.
 
 ---
 
+## 93. CHECKPOINT 2.700: el cuerpo de `quality` entrega familias que se separan
+
+**Apendice compacto (bucle vuelta 2, 12 ago 2026, corte 2.700).** La prosa vive en
+`docs/loop/REPORTE.md` en git; esta seccion fija cifras y commits. Cifras recomputadas del
+archivo, sin huecos ni duplicados.
+
+### 93.1 MARCADOR (corte 2.700)
+
+| | |
+|---|---:|
+| **veredictos** | **2.700**, hasta el puesto 2.700 |
+| **A** | **544** (20,1 %) |
+| **B** | 89 |
+| **C** | 7 |
+| **D** | **2.060** (76,3 %) |
+
+Tramo 2.601-2.700: **22 A y 78 D (22,0 %)**. Quedan **688 pares**: `quality` **555**,
+`risk_management` **106**, `seguridad_digital` **27**.
+
+### 93.2 `quality` y su vara por tramo (2.601-2.700)
+
+`quality` **289 pares, 90 A, 31,1 %** (baja de 36,0 % porque el tramo entrego 22,0 %).
+
+| tramo | pares | A | tasa |
+|---|---:|---:|---:|
+| 2.601-2.625 | 25 | 6 | 24,0 % |
+| 2.626-2.650 | 25 | 7 | 28,0 % |
+| 2.651-2.675 | 25 | 7 | 28,0 % |
+| 2.676-2.700 | 25 | 2 | **8,0 %** |
+
+> El ultimo cuarto toca **8,0 %**, el mas bajo del dominio, por cumulos todo D (consejos,
+> benchmarking, roadmap, definiciones operacionales, capacidad, costo de calidad, make_certain,
+> QFD, responsabilidad gerencial). No es caida de la tasa del inventario: es el cuerpo de
+> `quality` separando familias en caras distintas, el limite del 9.19.
+
+### 93.3 FAMILIAS Y FIGURAS AL DIA
+
+| que | estado (corte 2.700) |
+|---|---|
+| la **capacidad** | **SIN ACTO, cerrada**: 7 de 7 D (cierra el 2.636, extiende el 2.697) |
+| el **Consejo de Calidad** | **POR ELEGIR** nuevo, hub `consejo_calidad`, 5 pares A (2.523, 2.631, 2.662, 2.663, 2.670); el nodo del rol del director queda fuera |
+| la **regla kp** | **POR DERECHO** se sostiene; `regla_todo_o_nada_2` queda fuera (2.646, 2.690 D) |
+| **fusion mutua** | tres nuevas: **15.a (2.630)**, **16.a (2.638)**, **17.a (2.666)**, todas superviviente POR ELEGIR |
+| **senal del idioma** | sin aparicion nueva; cinco al corte 2.700; su tasa medida en 9.28.1 (TAREA 1.3) |
+
+### 93.4 COMMIT
+
+`a5d16eee` (Cribado 2697-2700) fija el archivo en 2.700 lineas, el estado que el auditor
+recomputa.
+
+---
+
