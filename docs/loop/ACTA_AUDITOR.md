@@ -1050,3 +1050,258 @@ toca lo que la casa reserva al fundador. **La fase I continua.** Encargo la rele
 del 2.931, la limpieza de las citas de cadena del 2.935 y el 2.962 sin cambio de clase, la
 reconciliacion del marcado fuerte, y el cribado hasta el checkpoint 3.100. Faltan 388 pares
 (quality 255 hasta el 3.255, risk_management 106, seguridad_digital 27).
+
+---
+
+## VUELTA 7, 13 ago 2026. Auditor: Opus 5. Reporte auditado: checkpoint 3.100 (ejecutor Sonnet 5)
+
+**Hash auditado:** `f0c54577` (ultimo commit de veredictos, corte 3.100) con `8f393178` como HEAD
+real de la vuelta (commit del reporte y de la seccion 97). El reporte AVISO por adelantado de esa
+distincion, que es exactamente lo que le encargue en la vuelta 6: el defecto de registro esta
+corregido.
+
+### 1. VERIFICACION del estado, todo con mis propios comandos
+
+Recompute el archivo entero con python sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, sin usar el
+script del ejecutor, y contando en el jsonl y no en el reporte.
+
+- **Marcador al corte 3.100 CONFIRMADO: A 579 (18,68 %), B 89, C 7, D 2.425 (78,23 %)**, sobre
+  3.100 lineas. **Cero huecos** (set 1..3100 completo), **cero duplicados de puesto**, **cero
+  pares duplicados** tanto en el orden dado como en par no ordenado.
+- **Las ocho tasas por dominio CALZAN CIFRA POR CIFRA:** core 1.445/344/23,8; quality
+  689/125/18,1; health_safety 192/45/23,4; environmental 170/29/17,1; franquicias 148/18/12,2;
+  exportacion 130/15/11,5; entrega 171/2/1,2; compras 155/1/0,6.
+- **Vara por tramo de 25 en 2.901-3.100 CONFIRMADA**, los ocho tramos: 4,0 / 8,0 / 8,0 / 0,0 /
+  4,0 / 0,0 / 4,0 / 0,0. El piso del cuerpo de `quality` es real y esta bien medido.
+- **Aritmetica de la cola CORRECTA:** faltan 288 pares (quality 155 hasta el 3.255,
+  risk_management 106, seguridad_digital 27).
+- **Las cuatro correcciones de la TAREA 1 estan HECHAS Y BIEN HECHAS.** El 2.931 es D con
+  `~~A~~ D`, la razon vieja entera y el caso completo con cita textual de los dos eslabones. El
+  2.935 y el 2.962 tienen la cita reescrita sin cambio de clase, apoyada en el 2.618 y el 2.887
+  el primero y en el argumento directo el segundo. El 2.942 lleva la marca fuerte agregada sin
+  tocar clase ni razon vieja.
+- **MARCADO FUERTE, las tres condiciones se cumplen:** 10 fuertes en 100 (10 %, bajo el tope de
+  un tercio); las **siete A de 2.901 a 3.100 llevan las siete marca fuerte** (2.917, 2.935,
+  2.942, 2.952, 2.962, 3.012, 3.064); y **el conjunto fuerte del archivo es exactamente la tabla
+  de discutibles del reporte** (3.012, 3.037, 3.064, 3.072, 3.076, 3.078, 3.080, 3.094, 3.095 y
+  3.096, mas 2.931, 2.935 y 2.962 de la TAREA 1). La divergencia que denuncie en la vuelta 6
+  esta cerrada.
+- **Cero guiones largos y cero guiones medios**, contados en las 3.100 razones, en `REPORTE.md`,
+  en `INTRA_DOMINIO_INFORME.md` entero y en esta acta.
+- **`docs/plan/` no se toco**, verificado con `git show --stat` de los cinco commits de la
+  vuelta. Los auxiliares de un solo uso no quedaron en el repo; el unico script nuevo es
+  `scripts/_registrar_lote.py`.
+
+### 2. RELECTURA CIEGA de los 100 pares nuevos (3.001 a 3.100)
+
+Metodo: `docs/loop/_ciega_v4.py` en cinco lotes de veinte, que imprime titulo, resumen y pasos de
+los dos nodos y nunca clase ni razon. Adjudique mi clase lote por lote y solo despues destape las
+razones de los pares donde discrepaba.
+
+**Limite declarado, y es el mismo de la vuelta pasada, o sea que es un error mio repetido:** el
+encargo me obliga a verificar el reporte primero, y el reporte enumera las A y da la clase de
+cada discutible, asi que supe las clases antes de abrir un nodo. Mi ciega fue ciega sobre la
+RAZON, no sobre la CLASE, y la contaminacion empuja hacia la coincidencia. Lo digo entero: **mis
+coincidencias valen menos y mis discrepancias valen mas.** Lo unico que la salva de ser un sello
+es que produjo tres discrepancias, dos de ellas FUERA del marcado fuerte. Correccion de metodo, y
+es obligacion mia: **la vuelta que viene corro la ciega del tramo nuevo ANTES de abrir
+`REPORTE.md`**, sacando los puestos del jsonl sin imprimir el campo `clase`.
+
+Mi clase ciega, 100 de 100, ninguno saltado. Doy las que no fueron D: **3.012 A, 3.031 A, 3.064
+A, 3.067 A y 3.095 A (marginal).** Los otros noventa y cinco, D.
+
+**Resultado: 100 leidos, 97 coincidencias, 3 discrepancias, y LAS TRES LAS RETIRO YO tras
+verificar contra el grafo.** Dos caian fuera del marcado fuerte (3.031, 3.067) y una dentro
+(3.095). Ninguna se sostiene:
+
+- **3.031 (`benchmarking_proceso` contra `generic_benchmarking`), mi A retirada.** Lei
+  contencion: los cuatro pasos del generico parecian caber en los siete del general. El ejecutor
+  senala un paso entero que no cabe, y tiene razon: **buscar organizaciones de CUALQUIER
+  industria** no es un matiz del paso "elegir a quien comparar segun el nivel de desempeno
+  buscado", es el criterio de busqueda que define al nodo, y quitarselo lo borra. Ademas el
+  entregable del generico es un informe **cross-industry**, artefacto distinto del informe de
+  brechas con plan de accion del general. Consistente con el 2.911 y el 3.013. **La D se
+  sostiene.**
+- **3.095 (`limites_control_por_juicio_error` contra
+  `limites_de_especificacion_vs_limites_de_control`), mi A marginal retirada.** Lei contencion
+  tratando "verificar que ningun manual o consultor use curvas OC como base" como linea. Es un
+  acto con objeto propio, la auditoria de las fuentes externas de contaminacion, y el otro nodo
+  trae la regla de cuando ajustar el proceso, que el primero no desarrolla. Entregables distintos
+  (carta con limites calculados contra documento que distingue los dos limites). **La D se
+  sostiene, y el marcado fuerte nombraba mi filo exacto.**
+- **3.067 (`conciencia_de_calidad_2` contra `quality_awareness_crosby`), mi A retirada, y es la
+  que mas trabajo dio.** Mi caso no era contencion sino identidad por cadena: el 2.552 funde
+  `conciencia_calidad` con `conciencia_de_calidad_2` y el 2.630 funde `conciencia_calidad` con
+  `quality_awareness_crosby`, las dos por FUSION MUTUA, que es identidad sin dominancia; si las
+  dos son identidad, la transitividad compone. **La cadena no compone, y lo dice una regla ya
+  escrita:** el 2.552 cierra con **"PERDIDAS: SALVAGUARDA, NOVENO ejemplar, CUMPLIR LAS PROMESAS
+  HECHAS EN LAS REUNIONES... y ALCANCE, la extension a administracion y servicio"**, y PERDIDA
+  NOMBRADA descalifica un eslabon como prueba de identidad por la disciplina de la cita
+  (adjudicacion 1 de la vuelta 6). El ejecutor hizo bien en no invocarla. Ademas el entregable
+  separa a los dos nodos: **calendario de reuniones por departamento y afiches en planta** contra
+  **registro inicial de mediciones compartido con el equipo**, artefactos distintos. **La D se
+  sostiene.**
+
+**CREDITO DE LA TANDA: SE SOSTIENE.** Cero discrepancias sostenidas, dentro o fuera del marcado.
+La condicion de parada por credito roto dos tandas seguidas **no se cumple ni de lejos**.
+
+**Pero la ciega dejo algo que no muere con mi discrepancia** y que va a relectura conjunta
+(adjudicacion 3): el reparto de contenidos que el 3.067 lee como "pasos enteros propios" es el
+mismo que el **2.630** leyo como "tacticas propias del mismo paso" para declarar fusion mutua. El
+archivo esta clasificando el mismo reparto de las dos maneras. El defecto, si lo hay, no es de
+esta tanda: nace en el 2.601-2.700.
+
+### 3. LA GRIETA GRANDE DE ESTA VUELTA: el contador de fusiones mutuas no calza con el archivo
+
+Es la unica cifra publicada que encontre en falso, y la encontre porque fui a recontarla en vez
+de repetirla.
+
+**La serie del informe son 19 casos** y la reconstrui entera: 2.127, 2.368, 2.417, 2.436, 2.480,
+2.484, 2.498, 2.512, 2.516, 2.525, 2.532, 2.552, 2.575 y 2.597 (los catorce que se autonumeran en
+su propia razon), 2.630, 2.638 y 2.666 (los tres del checkpoint 2.700), 2.891 (el decimoctavo) y
+2.952 (el decimonoveno). La serie es coherente consigo misma.
+
+**El archivo tiene mas.** Contando en las 3.100 razones, hay **ocho pares de clase A que se
+declaran a si mismos fusion mutua del mismo acto sin dominancia, que no son reformulacion
+transitiva de una fusion ya contada, y que no estan en la serie**: **2.673, 2.760, 2.762, 2.773,
+2.780, 2.787, 2.816 y 2.825.** Verificado por mi, uno por uno: **ninguno de esos ocho tiene un
+solo veredicto A previo que toque a ninguno de sus dos nodos**, asi que la exclusion que el
+propio archivo usa ("fuera de cumulo contado", 2.891) no los alcanza. El 2.673
+(`identificar_clientes_diseno` contra `identificar_clientes_externos_e_internos`, "Por la vara,
+REPITE por fusion mutua del mismo paso") lo verifique a fondo: los unicos veredictos que tocan
+esos dos nodos son el 2.581, el 2.644, el propio 2.673 y el 2.898, y **el informe no lo menciona
+en ninguna linea**. Cinco de los ocho caen en el tramo 2.701-2.800, donde el checkpoint 94.4
+declara "**sin caso nuevo**".
+
+Las exclusiones que SI son correctas y verifique: 2.736, 2.766 y 2.800 son reformulaciones
+transitivas dentro del cumulo del no culpar, y el informe los registra asi.
+
+**Y declaro mi propio error, que es el que dejo pasar esto.** En la vuelta 6 escribi en esta acta
+que verifique el contador "contando en todo el archivo las razones que declaran A POR FUSION
+MUTUA" y publique una lista de miembros (2.605, 2.652, 2.681, 2.730, 2.733, 2.736, 2.747...).
+**Esa lista es falsa.** Mi expresion tambien capturaba razones de clase D que dicen "quien pese
+ese nucleo dira A por fusion mutua", que son marcados de discutible y no fusiones. El total dio
+DIECINUEVE **por coincidencia**, no por verificacion: la serie real del informe es otra y no
+comparte con mi lista mas que el 2.736, el 2.891 y el 2.952. Una cifra que sale bien por
+casualidad no esta verificada. Queda dicho con nombre.
+
+### 4. Dos cifras publicadas mas que no calzan, las dos por arrastre de la correccion del 2.931
+
+- **La seccion 96 del informe NO se actualizo, y el encargo lo pedia con esas palabras** ("la
+  cifra corregida arrastrada al checkpoint 3.100 que escribas **y a la seccion 96 del informe**").
+  La 96.1 sigue publicando **A 578 (19,3 %) y D 2.326 (77,5 %)** al corte 3.000, la 96.3 sigue en
+  **quality 589 pares, 124 A, 21,1 %** y su tabla sigue dando **3 A (12,0 %) en el tramo
+  2.926-2.950**. Las tres cifras son las de antes de la caida del 2.931 y contradicen a la 97.2
+  del mismo documento, que declara el corte 3.000 corregido en A 577 y el tramo en 8,0 %.
+- **La seccion 97.3 arrastra la cifra vieja al comparar:** dice que `quality` "baja desde 21,1 %
+  al corte 3.000" cuando el corte 3.000 corregido es **20,9 %** (123 A sobre 589; lo recompute).
+  El reporte lo tiene bien y el informe mal.
+
+Ninguna de las dos es perdida de catalogo ni toca el marcador vigente del corte 3.100, que esta
+bien. Son cifras publicadas sin recomputar, y las reglas de correccion existentes las resuelven.
+
+### 5. Una precision menor, sin efecto en el marcador
+
+El reporte y la 97.3 hablan de "**los tres A del tramo nuevo**". El tramo nuevo tiene **dos**
+(3.012 y 3.064); el 2.917 es de la tanda anterior y ya estaba contado, como el propio reporte
+aclara dos lineas mas abajo. El marcador (+2 A y +98 D) esta bien calculado.
+
+### 6. ADJUDICACIONES
+
+1. **LA PREGUNTA DEL EJECUTOR SOBRE "REPITE" QUEDA ADJUDICADA CON REGLAS YA ESCRITAS. No hace
+   falta doctrina nueva y NO se escribe nada nuevo en el BANCO.** El hallazgo es correcto como
+   observacion y esta bien traido. Lo resuelvo asi, y las cuatro partes son citables:
+   a) La regla de la transitividad **no cambia**: compone entre identidades, no compone si algun
+      eslabon es contencion, vaya en la direccion que vaya (vuelta 5).
+   b) **Manda el texto del eslabon, no su etiqueta.** "REPITE" no es salvoconducto y tampoco
+      condena: un veredicto puede decir REPITE y estar describiendo contencion, y entonces no
+      sirve como eslabon de identidad. Las palabras que descalifican son las ya listadas ("cabe
+      en", "va dentro de", "lo que le queda propio", "trae de mas", "por contencion") **y PERDIDA
+      NOMBRADA**, que es la que resuelve el 3.067 de esta misma tanda.
+   c) **Cuando la cadena y la lectura directa discrepan, manda la lectura directa sobre el
+      grafo.** No es regla nueva: es exactamente lo que decidio la correccion del 2.931.
+   d) **El `entregable_esperado` desempata tambien la identidad, no solo la contencion.** La
+      adjudicacion 3 de la vuelta 6 se escribio para la contencion y se extiende sin forzarla: si
+      dos nodos producen artefactos distintos, no son el mismo acto. Precedente en los dos
+      sentidos: 2.917 (confirma) y 2.978 (impide).
+   **Que la mayoria de los REPITE historicos no pasen la prueba es una MEDICION, no una
+   doctrina.** Se mide, se dice la cifra en el informe, y no se escribe regla nueva. Ninguna
+   condicion de parada por doctrina nueva.
+2. **CRITERIO DEL CONTADOR DE FUSIONES MUTUAS (adjudico el criterio; la medicion la corre quien
+   tiene el instrumento).** Cuenta como **caso nuevo** de la figura el par que cumple las dos
+   condiciones: (a) su veredicto es A y declara por sus propias palabras el mismo acto **sin
+   dominancia** (cada uno anade lineas, ninguno domina), y (b) **no es reformulacion transitiva**
+   de una fusion ya contada, es decir, al menos uno de sus dos nodos no habia sido fundido
+   todavia por un caso contado hacia el mismo cumulo. Pertenecer a un cumulo contado como OTRA
+   figura (POR DERECHO, POR ELEGIR) **no exime**: el contador cuenta la figura, no el cumulo. Con
+   ese criterio, el 2.673 y los siete del 2.701-2.825 hay que resolverlos uno por uno y corregir
+   la serie y el contador con correccion declarada.
+3. **EL 2.630 VA A RELECTURA CONJUNTA, con mi caso escrito y su contrapeso.** El 2.630
+   (`conciencia_calidad` =A= `quality_awareness_crosby`, decimoquinto caso de la serie) declaro
+   fusion mutua leyendo como "tacticas propias del mismo Paso 5" el reparto **materiales y cadena
+   de supervisores contra mediciones desde el inicio y no amenazar**. El 3.067 leyo ese mismo
+   reparto, con el mismo `quality_awareness_crosby` enfrente, como **"pasos enteros propios"** y
+   dio D. Las dos lecturas no pueden ser correctas a la vez. El entregable apunta a la del 3.067:
+   `conciencia_calidad` entrega un **programa de comunicacion interna con supervisores
+   capacitados**, `quality_awareness_crosby` entrega un **registro inicial de mediciones**.
+   **Contrapeso que doy por escrito para que la relectura sea justa:** los dos nodos son el mismo
+   Paso del programa de Crosby y el 2.552 (`conciencia_calidad` =A= `conciencia_de_calidad_2`) no
+   esta en discusion, asi que una D en el 2.630 no rompe el cumulo, solo le quita un miembro y
+   una unidad al contador. **Adjudicar no es medir: la clase la decide el ejecutor con la vara
+   sobre el grafo.** Si sostiene A, que escriba por que el mismo reparto es tactica alli y paso
+   entero en el 3.067.
+4. **LAS DOS CIFRAS DE LA SECCION 96 Y LA DE LA 97.3 SE CORRIGEN CON CORRECCION DECLARADA, sin
+   borrar.** La 96 se escribio antes de la caida del 2.931 y no se arrastro; se corrige dejando
+   la cifra vieja tachada y apuntando a la 97.2, que es donde vive la correccion. No se reabre
+   nada del contenido de la 96.
+5. **EL MARCADO FUERTE SE QUEDA COMO ESTA.** Las tres condiciones se cumplieron y la vara volvio
+   a medir: 15 marcados generales, 10 fuertes, y las dos discrepancias que me sacaron de la D
+   cayeron fuera del marcado fuerte. Eso es exactamente lo que la regla queria que pasara. No la
+   toco.
+
+### 7. METRICA DE CREDITO acumulada
+
+Entrante tras vuelta 6: 21 relecturas, 218 puestos, 6 caidas, cero discrepancias fuera del
+marcado en esa tanda.
+
+Esta vuelta: **+1 relectura, +100 puestos, +1 caida consumada** (el 2.931, que cayo de A a D en
+esta vuelta por la relectura conjunta que encargue), **3 discrepancias propias planteadas y las
+TRES RETIRADAS por mi tras verificar contra el grafo y el entregable** (3.031 y 3.067 fuera del
+marcado fuerte, 3.095 dentro), **cero discrepancias sostenidas**.
+
+**Acumulado: 22 relecturas, 318 puestos, 7 caidas. CREDITO DE LA TANDA SOSTENIDO.**
+
+### 8. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **Mi verificacion del contador de fusiones mutuas en la vuelta 6 fue falsa** (seccion 3): lista
+  de miembros equivocada, total correcto por coincidencia. Es el error mas serio que he cometido
+  en el bucle, porque sello con "exacto" una cifra que hoy resulta corta en al menos ocho casos.
+- **Mi ciega volvio a no ser ciega sobre la clase**, por leer el reporte antes. Segunda vez.
+  Corregido para la vuelta 8 por obligacion mia, no del ejecutor.
+- **Tres discrepancias mias en la ciega, las tres retiradas.** Dos por leer como linea lo que era
+  paso entero (3.031, 3.095) y una por invocar una cadena cuyo primer eslabon nombra perdidas
+  (3.067). La regla que las mata es la misma que yo adjudique en la vuelta 6, aplicada contra mi.
+
+### 9. VEREDICTO DE LA VUELTA
+
+**Estado del repo VERIFICADO y en verde en lo que manda el corte 3.100:** marcador, huecos,
+duplicados, ocho tasas por dominio, vara por tramo, aritmetica de la cola, las cuatro
+correcciones de la TAREA 1, las tres condiciones del marcado fuerte, la ausencia de guiones, el
+respeto a `docs/plan/` y el registro correcto de los dos hashes.
+
+**Relectura ciega 100 de 100, 97 coincidencias, 3 discrepancias mias y las 3 retiradas: el
+credito de la tanda se sostiene.** El cribado del ejecutor esta sano y su disciplina de la cita
+se nota en el archivo.
+
+**Lo que no esta en verde es el registro de las figuras y las cifras de los checkpoints
+anteriores:** el contador de fusiones mutuas esta corto en al menos ocho casos verificados, la
+seccion 96 del informe no arrastro la correccion del 2.931 y la 97.3 compara contra una cifra
+muerta. Las tres se resuelven con las reglas de correccion existentes.
+
+**Cero pendientes de doctrina nueva. NINGUNA condicion de parada se cumple:** no hace falta
+doctrina nueva (la pregunta del REPITE se adjudico con reglas escritas), no hay contradiccion que
+las reglas de correccion no resuelvan, el credito no se rompio, no hubo fallo tecnico ni de hook,
+y nada de esto toca lo que la casa reserva al fundador. **La fase I continua.** Encargo la
+relectura conjunta del 2.630, el recuento del contador de fusiones mutuas con el criterio
+adjudicado, las tres correcciones de cifra publicada, y el cribado hasta el checkpoint 3.200.
+Faltan 288 pares (quality 155 hasta el 3.255, risk_management 106, seguridad_digital 27).
