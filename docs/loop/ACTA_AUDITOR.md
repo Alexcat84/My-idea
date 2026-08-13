@@ -579,3 +579,214 @@ Relectura ciega 27 de 27, credito INTACTO. UNA relectura conjunta encargada (la 
 Cero pendientes de doctrina nueva; ninguna condicion de parada. La fase I continua:
 encargo la relectura conjunta y el cribado 2.901 a 3.000. Faltan 488 pares (quality 355,
 risk_management 106, seguridad_digital 27).
+
+---
+
+## VUELTA 5, 13 ago 2026. Auditor: Opus 5. SIN REPORTE: tanda trunca 2.901 a 2.925 (ejecutor Sonnet 5)
+
+**Primera vuelta sin `REPORTE.md` que auditar.** La sesion ejecutora murio antes del
+checkpoint: `docs/loop/ultimo_ejecutor.json` de esta vuelta trae `is_error: true`,
+`terminal_reason: "api_error"`, `result: "API Error: Connection lost mid-response"`, a los
+1.182 s, y `loop.log` linea 22 la registra como intento 1 de 7. Alcanzo a commitear su
+trabajo (7e4ce27b) y el arbol quedo limpio y empujado (`git status -sb` da
+`## bucle...origin/bucle` sin divergencia). `REPORTE.md` sigue siendo el de la vuelta 4
+(corte 2.900) y NO se toco: no lo cuento como omision, porque el encargo pedia el reporte
+EN el checkpoint 3.000 y el checkpoint no se alcanzo. **Audite contra el repo, que es el
+estado de verdad, y no contra un reporte.** Cambio de modelo del ejecutor esta vuelta
+(Sonnet 5; las vueltas 1 a 4 fueron Opus 4.8): lo registro como hecho medido en `loop.log`,
+sin atribuirle causa a nada de lo que sigue, que no puedo medir.
+
+### 1. VERIFICACION del estado del repo (todo recomputado por mi EN esta vuelta)
+
+Instrumento propio (python sobre el jsonl) y, por separado, el auxiliar nuevo del ejecutor
+`scripts/recomputar_marcador.py 2925`. **Los dos dan lo mismo.**
+
+- **Archivo en 2.925 lineas**, puestos 1..2.925, **cero huecos, cero duplicados de puesto y
+  cero pares duplicados** por (nodo_a, nodo_b, dominio).
+- **MARCADOR corte 2.925: A 574 (19,6 %), B 89 (3,0 %), C 7 (0,2 %), D 2.255 (77,1 %).**
+- **Tasa por dominio (corte 2.925):** core 1.445 / 344 / 23,8; **quality 514 / 120 / 23,3**;
+  health_safety 192 / 45 / 23,4; entrega 171 / 2 / 1,2; environmental 170 / 29 / 17,1;
+  compras 155 / 1 / 0,6; franquicias 148 / 18 / 12,2; exportacion 130 / 15 / 11,5.
+- **Tramo 2.901 a 2.925: 25 pares, 2 A y 23 D (8,0 % de A).** Todos `quality`.
+- **Faltan 463 pares** hasta el 3.388: quality 330 (hasta el 3.255), risk_management 106,
+  seguridad_digital 27.
+- **TAREA 1, la correccion del 2.805 a D: EJECUTADA Y BIEN EJECUTADA.** El veredicto del
+  2.805 es D; la razon vieja se conserva entera y la correccion se agrega al final con
+  `~~A~~ D`, declarando la relectura conjunta que la origina. **Recompute el corte 2.900 por
+  mi cuenta y calza exacto con la seccion 95 corregida del informe: A 572, B 89, C 7,
+  D 2.232; quality 489 / 118 / 24,1 %; tramo 2.801-2.900 con 9 A; tramo 2.801-2.825 con
+  3 A.** El tachado sin borrar esta en 95.1, 95.2 y en la nueva 95.3.1, que escribe la regla
+  con su caso completo. Cero guiones largos y cero medios en el informe y en las 25 razones
+  nuevas (contados, no supuestos).
+- **CITAS DE FAMILIA: 34 de 34 VERIFICADAS puesto a puesto contra el archivo, clase y par
+  de nodos exactos.** Las cinco cadenas de sanidad que el ejecutor invoca existen tal como
+  las declara: `sistema_responsabilidad_gerencial` D en 2.422, 2.619, 2.700 y 2.814;
+  `rol_director_calidad` D en 2.472, 2.654, 2.764, 2.783, 2.796 y 2.845;
+  `consejo_de_calidad_y_rol_del_director` D en 2.505, 2.549 y 2.764; `auditoria_negocio` D en
+  2.635, 2.749 y 2.841; `mejora_continua_operaciones` D en 2.642, 2.692, 2.829 y 2.848. Y las
+  citadas sueltas: 2.456, 2.603, 2.823, 2.710, 2.502, 2.609, 2.435, 2.757, 2.869, 2.517,
+  2.442, 2.538, 2.720, 2.492, 2.900, 2.856, 2.469, 2.653, 2.626, 2.685, 2.413, 2.529, 2.633,
+  2.441. **Ninguna cita inventada.** Es la parte mas solida de la tanda.
+- **`scripts/recomputar_marcador.py`, leido entero: es de solo lectura** (abre el jsonl, no
+  escribe nada) y reproduce mi recomputo independiente cifra por cifra. Queda como
+  instrumento util, y su corrida se declara con su comando.
+
+### 2. RELECTURA CIEGA de los 25 pares del tramo (los 5 discutibles marcados primero)
+
+Metodo: `docs/loop/_ciega_v4.py`, que imprime solo titulo, resumen y pasos de los dos nodos
+y nunca clase ni razon. Adjudique mi clase y SOLO DESPUES destape las razones. **Limite
+declarado, y esta vuelta es mayor que en las anteriores:** al no haber reporte, saque el
+marcado leyendo el campo razon con una expresion regular que imprime unicamente la marca
+`DISCUTIBLE`, y al recomputar el tramo supe antes de leer que llevaba 2 A y 23 D y en que
+puestos. Ese es el limite: el ciego fue sobre la RAZON escrita, no sobre la clase. Lo digo
+entero y no lo escondo detras del resultado. Como el tramo es de 25, los lei **todos**, no
+solo los marcados.
+
+| puesto | mi clase ciega | ejecutor | coincide |
+|---:|---|---|---|
+| **2906** | D (el mapeo completo del sistema y escuchar advertencias tempranas contra la mecanica estadistica; la frontera del 2850 y 2881) | D | si |
+| **2907** | D (el esquema de muestreo para la fraccion rarisima contra eliminar el screening de lotes; mismo principio, dos casos) | D | si |
+| **2908** | D (Paso 13 contra Paso 4 de Crosby; la red de pares contra el instrumento contable, sim_tit alta por superficie) | D | si |
+| **2916** | **D** (cada uno trae pasos enteros propios: Pareto y asignacion de recursos en uno, coordinar la repeticion del ciclo e institucionalizar en el otro) | **A** | **NO** |
+| **2917** | D en ciega (leido como instrumento contra marco), **RETIRADA tras verificar** | A | si, tras verificar |
+| 2901 | D (PRE-Control declara reemplazar la carta de control; instrumentos distintos) | D | si |
+| 2902 | D (el control plan regulador contra la cascada tecnica del DOE) | D | si |
+| 2903 | D (el juicio de aptitud contra la maquinaria formal de cuarentena y MRB; fase contra fase) | D | si |
+| 2904 | D (la ficha del CTQ contra el encadenamiento de matrices del QFD) | D | si |
+| 2905 | D (Analyze contra Measure; fase contra fase del DMAIC) | D | si |
+| 2909 | D (los reportes de estabilidad estadistica contra el reparto de tareas a la linea) | D | si |
+| 2910 | D (la ficha de un rol contra el mapa de los seis con su sistema de certificacion) | D | si |
+| 2911 | D (la taxonomia para elegir tipo contra el procedimiento de UN tipo) | D | si |
+| 2912 | D (la mecanica de cuartiles y bigotes contra el marco general de linea, barra y pastel) | D | si |
+| 2913 | D (usar el benchmarking para alimentar la Trilogia contra definir el control como proceso universal) | D | si |
+| 2914 | D (auditores imparciales y autoauditoria verificada contra el metodo de preguntas clave) | D | si |
+| 2915 | D (los cuatro ritmos del Paso 6 contra clasificar esporadico o cronico y la cultura) | D | si |
+| 2918 | D (la postura del dueño contra el mecanismo explicito de traspaso con encuestas) | D | si |
+| 2919 | D (replicar los metodos de los altos desempeños es paso entero propio; el cumulo entero es no culpar) | D | si |
+| 2920 | D (verificar hechos en campo contra redactar y clasificar por gravedad; fase contra fase) | D | si |
+| 2921 | D (comparar distribuciones entre grupos contra explicar el patron de una; mecanicas distintas) | D | si |
+| 2922 | D (calcular la capacidad contra autorizar la innovacion y advertir del sobreajuste) | D | si |
+| 2923 | D (el costo interno contra el ingreso externo; focos opuestos, ningun paso se repite) | D | si |
+| 2924 | D (la demostracion estadistica contra el mapeo y costeo punto por punto) | D | si |
+| 2925 | D (formar el cuerpo colegiado contra separar lo tecnico de lo estrategico; el corte del 2549) | D | si |
+
+**Resultado: 25 leidos, 23 coincidencias limpias, 2 discrepancias en ciega. Una la RETIRO
+yo tras verificar (2917) y una la SOSTENGO con evidencia (2916). La sostenida cae FUERA del
+marcado: el credito de la tanda BAJA.**
+
+- **2917, mi discrepancia retirada, declarada con nombre.** Mi ciega dijo D leyendo kanban
+  como instrumento contra el marco del pull. Fui al grafo a verificar la contencion que el
+  ejecutor afirma y **el `entregable_esperado` de `sistema_pull_push` dice literalmente
+  "Sistema de produccion rediseñado bajo logica pull CON KANBANS IMPLEMENTADOS"**. Con el
+  entregable del contenedor nombrando el entregable del contenido, la contencion es la
+  lectura correcta y el precedente es el 2.838 de la vuelta anterior. **La A del ejecutor se
+  sostiene y mi ciega estaba equivocada.** Es la cuarta vez que mi propia mano pesa mal un
+  filo de contencion, y la anoto.
+- **2922, observacion de marcado, no de clase.** Es el par de ids casi identicos
+  (`control_estadistico_del_proceso` contra `control_estadistico_proceso`), comparte el
+  arranque entero y **no lleva marca DISCUTIBLE**. La clase D esta bien sostenida y ademas
+  cierra por transitividad que la razon no cita y yo si verifique: 2.529 dio
+  `control_estadistico_del_proceso` =A= `control_estadistico_no_implica_cero_defectos`, y
+  2.633 dio ese mismo nodo =D= `control_estadistico_proceso`. **Merecia la marca y no la
+  tuvo.** La densidad de marcado del tramo (5 de 25) es muy inferior a la de la tanda
+  anterior (100 de 100 inline); sin reporte no puedo saber que politica de marcado se
+  declaraba, asi que lo dejo como encargo explicito, no como falta.
+
+### 3. METRICA DE CREDITO acumulada
+
+Saliente tras vuelta 4: 19 relecturas, 118 puestos, 4 caidas, todas dentro del marcado.
+Esta vuelta: **+1 relectura, +25 puestos, +1 caida consumada** (el 2.805, que cayo de A a D
+esta vuelta y estaba DENTRO del marcado, marcado fuerte por el propio ejecutor),
+**+1 discrepancia nueva sostenida y FUERA del marcado (el 2.916)**, y una discrepancia mia
+retirada tras verificacion (el 2.917, dentro del marcado).
+
+**Acumulado: 20 relecturas, 143 puestos, 5 caidas. Y por primera vez en el bucle, UNA
+DISCREPANCIA FUERA DEL MARCADO.**
+
+**EL CREDITO DE LA TANDA 2.901-2.925 QUEDA ROTO Y EL TRAMO SE RELEE AL DOBLE**, como manda
+la regla del credito de AUDITOR.md 1.2. Lo digo aqui y lo encargo en la TAREA 1 siguiente:
+el tramo entero vuelve a leerse par por par, con foco en las A y en toda cadena de
+transitividad, y se re-marcan los discutibles. **AVISO FORMAL: una segunda tanda seguida con
+discrepancia fuera del marcado es CONDICION DE PARADA (AUDITOR.md 4) y el bucle se detiene.**
+
+### 4. ADJUDICACIONES
+
+1. **LA REGLA DE LA TRANSITIVIDAD SE EXTIENDE A SU FORMA ESPEJO. Adjudicada por extension
+   citable; NO es doctrina nueva y NO es parada.** La regla que la correccion del 2.805 dejo
+   escrita en el informe 95.3.1 dice: *la transitividad del cumulo solo compone entre gemelos
+   (identidad); con contencion (dos nodos que contienen al mismo generico) no compone*. Su
+   razon escrita es que la contencion es asimetrica y no transmite identidad. **Esa misma
+   razon, sin agregarle nada, cubre la forma espejo: dos nodos ABSORBIDOS POR EL MISMO HUB
+   tampoco fusionan entre si por eso solo.** `A` contiene a `g` y `B` contiene a `g` no da
+   `A` = `B` (el caso 2.805); y `A` cabe en `H` y `B` cabe en `H` tampoco da `A` = `B` (el
+   caso 2.916). Es la misma asimetria leida en las dos direcciones. **Forma general que queda
+   escrita: la transitividad compone cuando los eslabones son IDENTIDADES (gemelos); no
+   compone cuando alguno de los eslabones es una CONTENCION, vaya en la direccion que vaya.**
+2. **LA GRIETA DEL CUMULO consejo de calidad (2.916): VA A RELECTURA CONJUNTA, con mi caso
+   escrito.** Adjudicar no es medir: el veredicto lo decide el ejecutor con la vara sobre el
+   grafo. **Mi caso, con la evidencia:** la razon del 2.916 funda su A en que las cuatro
+   fusiones previas son de GEMELOS "y no un generico compartido por contencion", y el mensaje
+   del commit lo dice mas fuerte todavia ("ya fusionaban ambos con consejo_calidad y
+   consejo_calidad_2 POR IDENTIDAD, NO POR CONTENCION"). **El archivo dice lo contrario, con
+   sus propias palabras, en dos de los cuatro eslabones:** el 2.523
+   (`consejo_calidad` =A= `consejo_de_calidad_3`) escribe *"sus pasos 1 y 2 estan en el otro
+   [...] lo que le queda propio son DOS LINEAS"* y ademas registra **PERDIDA NOMBRADA, motivo
+   DESTINO**, que es la firma de una absorcion asimetrica, no de una identidad; y el 2.662
+   (`consejo_calidad_2` =A= `consejo_de_calidad_3`) escribe *"consejo_de_calidad_3 es el mas
+   simple [...] y VA DENTRO DE consejo_calidad_2"*, y el propio 2.662 se resolvio a su vez
+   por transitividad. Con un eslabon de contencion declarado, la cadena no compone bajo la
+   regla del punto 1. **Y la lectura directa apunta al mismo lado:** el 2.523 nombra lo
+   propio de `consejo_de_calidad_3` (coordinar la repeticion del ciclo de mejora,
+   institucionalizar el consejo como estructura permanente) y el 2.663 y el 2.670 nombran lo
+   propio de `consejo_de_calidad` (capacitarse en el metodo, priorizar con Pareto, asignar
+   recursos, "lineas a reponer"); son conjuntos disjuntos, ninguno cabe entero en el otro, y
+   por la vara del paso entero da D. **Ademas el archivo ya corta dentro de esta misma
+   familia:** el 2.549 separo `consejo_de_calidad` de `consejo_de_calidad_y_rol_del_director`
+   (D), verificado por mi. **Contrapeso que doy por escrito, para que la relectura sea justa:**
+   si los cuatro nodos mueren igual en el hub `consejo_calidad`, el efecto practico sobre el
+   grafo fusionado es menor; pero declarar A afirma que ESTE par REPITE, y eso, bajo la regla
+   del 2.805, exige identidad y no coabsorcion. Cualquiera de las dos salidas (corregir a D
+   con recomputo declarado, o sostener A explicando por que el eslabon 2.523 con perdida
+   nombrada compone identidad) usa reglas existentes. Si al bajar al grafo ninguna alcanza,
+   el ejecutor PARA y lo trae.
+3. **La cobertura del Consejo de Calidad (pregunta 2, heredada de la vuelta 4): NO la doy
+   por cerrada.** El tramo trajo por fin pares del hub (2.916 y 2.925), pero el 2.916 esta en
+   relectura conjunta, asi que la pregunta se resuelve con el, no antes. Sigue abierta.
+4. **El sub-cumulo de la responsabilidad gerencial (pregunta 3, heredada): sigue abierto y
+   la cola lo sostiene.** El 2.906 lo volvio a sacar D contra el acto estadistico, tercera vez
+   con la misma frontera (2.850, 2.881, ahora 2.906), y verifique las cuatro D de sanidad de
+   `sistema_responsabilidad_gerencial`. La frontera es cada vez mas firme; el cumulo sigue POR
+   ELEGIR provisional. No pide adjudicacion todavia.
+
+### 5. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **Mi ciega del 2.917 dio D y estaba equivocada**, y solo el `entregable_esperado` del nodo
+  contenedor me corrigio. Pese el diagnostico previo y el rediseño del flujo como pasos
+  enteros propios sin ir primero al entregable. Cuarta vez que fallo un filo de contencion en
+  mi propia mano; la anoto como las otras.
+- **Mi primer recomputo fallo** porque asumi la clave `puesto` cuando el archivo usa
+  `puesto_intra`; el error fue ruidoso (excepcion, no cifra mala) y ninguna cifra de esta
+  acta salio del instrumento roto.
+- **El ciego de esta vuelta fue mas debil que el de las anteriores** (supe el marcador del
+  tramo antes de leer, por haberlo recomputado). Declarado arriba, no compensado.
+
+### 6. VEREDICTO DE LA VUELTA
+
+**Estado del repo VERIFICADO** en el marcador, los huecos, los duplicados, las tasas, la
+correccion del 2.805 completa (jsonl, 95.1, 95.2, 95.3.1) con sus cifras recomputadas por mi
+al corte 2.900, las 34 citas de familia clase a clase, la ausencia de guiones y el auxiliar
+nuevo de solo lectura. **La tanda es trunca por fallo de API, no por incumplimiento: 25 de
+los 100 pares del encargo, commiteados y empujados.**
+
+**Relectura ciega 25 de 25 leidos, 23 coincidencias, 1 discrepancia propia retirada y 1
+discrepancia sostenida FUERA del marcado (el 2.916): EL CREDITO DE LA TANDA QUEDA ROTO y el
+tramo 2.901-2.925 se relee al doble.** Una relectura conjunta encargada (2.916), una regla
+adjudicada por extension citable (la transitividad no compone con contencion en ninguna de
+las dos direcciones) y una observacion de marcado (el 2.922 merecia marca).
+
+**Cero pendientes de doctrina nueva. NINGUNA condicion de parada se cumple**: el fallo fue de
+API y no de hook ni de Gate 0, y no se repitio por la misma causa dos vueltas seguidas; el
+credito se rompio por primera vez, y hace falta una segunda tanda seguida para parar. **La
+fase I continua.** Encargo la relectura conjunta del 2.916, la relectura al doble del tramo,
+y el cribado hasta el checkpoint 3.000. Faltan 463 pares (quality 330, risk_management 106,
+seguridad_digital 27).
