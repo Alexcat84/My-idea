@@ -15510,3 +15510,68 @@ commit del checkpoint fija el estado que el auditor recomputa.
 
 ---
 
+## 95. CHECKPOINT 2.900: diez A del cuerpo de `quality`, la distincion y el breakthrough=DMAIC
+
+**Apendice compacto (bucle vuelta 4, 12 ago 2026, corte 2.900).** La prosa vive en
+`docs/loop/REPORTE.md` en git; esta seccion fija cifras y commits. Cifras recomputadas del
+archivo, sin huecos ni duplicados.
+
+### 95.1 MARCADOR (corte 2.900)
+
+| | |
+|---|---:|
+| **veredictos** | **2.900**, hasta el puesto 2.900 |
+| **A** | **573** (19,8 %) |
+| **B** | 89 |
+| **C** | 7 |
+| **D** | **2.231** (76,9 %) |
+
+Tramo 2.801-2.900: **10 A y 90 D (10,0 %)**. Los 100 pares fueron `quality`. Quedan **488
+pares**: `quality` **355**, `risk_management` **106**, `seguridad_digital` **27**.
+
+### 95.2 `quality` y su vara por tramo (2.801-2.900)
+
+`quality` **489 pares, 119 A, 24,3 %** (baja de 28,0 % porque el tramo entrego 10,0 %).
+
+| tramo | pares | A | tasa |
+|---|---:|---:|---:|
+| 2.801-2.825 | 25 | 4 | 16,0 % |
+| 2.826-2.850 | 25 | 1 | 4,0 % |
+| 2.851-2.875 | 25 | 1 | 4,0 % |
+| 2.876-2.900 | 25 | 4 | 16,0 % |
+
+> El cuerpo de `quality` toca su piso mas bajo (4,0 % en los dos tramos centrales): stretch de
+> cumulos cronicos que separan cada nodo (benchmarking, cartas de control, cero defectos,
+> programas de 14 pasos, muestreo, cascadeo de diseno, auditorias, capacidad). Las diez A se
+> concentran en los bordes, donde asoman los cumulos POR DERECHO (la distincion) y las
+> identidades ya doctrina (breakthrough=DMAIC, gemelos del Dia ZD). Es el limite del 9.19.
+
+### 95.3 CORRECCION DECLARADA DEL 9.28.1 (TAREA 1, acta vuelta 3)
+
+Dos cifras secundarias del barrido del cuerpo no reproducian con instrumento independiente y se
+corrigieron con tachado sin borrar (BANCO 9.28.1, bloque de correccion declarada): **204 a 209**
+(pares del universo fuerte cuya senal no se reduce a los fragmentos multipalabra *total*, *of*,
+*value*; 25 pares removidos) y **benchmarking 59 a 20** (pares fuertes con el token al corte
+2.800). Comando declarado al lado: `python scripts/barrido_quinta_cara_cuerpo.py 2800 --dominio
+quality` mas recomputo directo sobre el grafo. **La cota titular (6 de 234 = 2,6 %), la tasa
+secundaria (6 de 209 = 2,9 %, identica) y la leccion de las dos cotas quedaron intactas.**
+
+### 95.4 FAMILIAS Y FIGURAS AL DIA
+
+| que | estado (corte 2.900) |
+|---|---|
+| la **capacidad** | **SIN ACTO, sigue cerrada**: extiende con 2.827, 2.884, 2.890, todas D; la familia no reabre acto |
+| la **distincion comun/especial** | **POR DERECHO**, absorbedor `causas_comunes_vs_especiales`: suma 2.888 (variacion del sistema vs individuo) y 2.897 (distincion en accidentes y Teorema de Nelson) |
+| la **responsabilidad gerencial** | **POR ELEGIR provisional, sigue abierto**: la postura gerencial sale D contra la distincion en 2.881 (misma frontera que 2.850) |
+| el **breakthrough / DMAIC** | **POR ELEGIR**: 2.887 secuencia_universal_para_el_breakthrough =A= six_sigma_dmaic, la identidad breakthrough=DMAIC de nuevo (via 2.618, 2.759) |
+| los **roadmaps** | **DMAIC no es DPLES** (2.862): lean_six_sigma_roadmap es el ciclo de proyecto DMAIC, roadmap_despliegue es el despliegue DPLES; juran_transformation_roadmap =A= roadmap_despliegue (2.811, ambos DPLES) |
+| **fusion mutua** | **UN caso nuevo**: 2.891 (lider estadistico competente, superviviente POR ELEGIR fuera de cumulo contado). El contador pasa a **DIECIOCHO** (el anterior fue el 2.666) |
+| **senal del idioma (quinta cara)** | **sin aparicion nueva**; cinco denominaciones al corte 2.900; la cota del cuerpo quedo corregida (9.28.1: 6 de 234 = 2,6 %, o 6 de 209 = 2,9 %) |
+
+### 95.5 COMMIT
+
+El archivo llega a 2.900 lineas en los commits del tramo (`Cribado 2801-2825` en adelante); el
+commit del checkpoint fija el estado que el auditor recomputa.
+
+---
+
