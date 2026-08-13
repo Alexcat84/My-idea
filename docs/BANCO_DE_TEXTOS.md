@@ -2923,18 +2923,18 @@ resultado tiene dos caras y las dos importan.**
 > superficie**, verificado par a par (2.464, 2.477, 2.488, 2.517, 2.548, 2.593).
 >
 > **EL COSTO, el denominador se satura.** El universo de denominacion foranea en title+id+cuerpo
-> de `quality` sube a **234 de 389 pares** (corte 2.800), o **204 si se sacan los fragmentos de
+> de `quality` sube a **234 de 389 pares** (corte 2.800), o **~~204~~ 209 si se sacan los fragmentos de
 > termino multipalabra** que el regex parte (*total* de *total quality management*, *of* de
 > *cost of quality*, *value* de *value stream*). No es ruido de falso positivo: la prosa de
-> `quality` esta **saturada de nombres foraneos de metodo reales** (benchmarking aparece en 59
+> `quality` esta **saturada de nombres foraneos de metodo reales** (benchmarking aparece en ~~59~~ 20
 > de los pares fuertes, y les siguen six sigma, lean, pareto, DMAIC, kaizen, poka yoke, KPI,
 > CPK, ROI, QFD, GMP, AQL). Contar cada mencion de un metodo foraneo en la prosa no mide la
 > quinta cara, mide cuanto vocabulario ingles de calidad respira el cuerpo del nodo.
 
 **LO QUE SE PUEDE FIRMAR AL CORTE 2.800, como COTA sobre la superficie title+id+cuerpo de
-`quality`, NO como censo:** sobre los **234** pares con denominacion foranea (o **204** sin los
+`quality`, NO como censo:** sobre los **234** pares con denominacion foranea (o **~~204~~ 209** sin los
 fragmentos multipalabra), **6** parejas dieron senal documentada de la quinta cara, o sea
-**6 de 234 = 2,6 %** (o **6 de 204 = 2,9 %**). **Es un PISO mas bajo que el de title+id (4 de
+**6 de 234 = 2,6 %** (o **~~6 de 204~~ 6 de 209 = 2,9 %**). **Es un PISO mas bajo que el de title+id (4 de
 56 = 7,1 %), y esa diferencia es la leccion, no una caida de la senal:** el barrido title+id da
 un denominador APRETADO pero PIERDE senal (box plot y COC fuera); el barrido del cuerpo da
 RECALL PLENO pero un denominador SATURADO de nombres de metodo. **Las dos cotas acotan la tasa
@@ -2943,6 +2943,35 @@ la senal se firma mejor como CIFRA CRUDA, **cinco denominaciones perdidas al cor
 como tasa. Limite declarado: los 234 no se curaron par a par a mano (solo se verificaron par a
 par las seis apariciones y a nivel de token los mayores contribuyentes del denominador); 234 es
 COTA SUPERIOR del denominador, asi que 6 de 234 es el piso mas conservador.
+
+**CORRECCION DECLARADA, bucle vuelta 4, 12 ago 2026 (corte 2.800). Dos cifras secundarias
+del 9.28.1 no reproducian con instrumento independiente; se corrigen con tachado sin borrar
+el texto viejo, como manda la casa (una correccion que tapa lo que corrige no se puede
+auditar).** El auditor (acta vuelta 3) recomputo desde el grafo replicando la logica del
+barrido y el ejecutor lo confirmo con el comando de solo lectura declarado
+`python scripts/barrido_quinta_cara_cuerpo.py 2800 --dominio quality` mas un recomputo directo
+sobre `master_graph.json` que trata los tres fragmentos multipalabra (*total*, *of*, *value*)
+como genericos:
+
+> 1. **El "204 sin los fragmentos multipalabra" era 209.** Removidos exactamente *total*, *of*
+>    y *value* del universo fuerte de 234, quedan **209** pares cuya senal no se reduce a esos
+>    tres tokens (25 pares removidos: 2421, 2424, 2432, 2438, 2450, 2459, 2467, 2468, 2473,
+>    2492, 2528, 2530, 2560, 2564, 2589, 2601, 2621, 2625, 2646, 2671, 2685, 2690, 2721, 2745,
+>    2785). Ningun conjunto natural de fragmentos da 204 (el auditor lo barrio; el unico que lo
+>    daria exige excluir la sigla ZD, que es una de las cinco denominaciones y no puede
+>    excluirse). **La tasa secundaria SOBREVIVE IDENTICA: 6 de 209 = 2,9 %, la misma que se
+>    publico con 204.** La cota titular (6 de 234 = 2,6 %) y la leccion de las dos cotas NO se
+>    tocan.
+> 2. **El "benchmarking en 59 pares fuertes" era 20.** Con el token *benchmarking* en el
+>    title+id+cuerpo de alguno de los dos nodos, el recomputo da **20 pares fuertes** al corte
+>    2.800 (2428, 2435, 2446, 2449, 2485, 2520, 2527, 2536, 2545, 2554, 2585, 2586, 2617, 2645,
+>    2649, 2660, 2664, 2694, 2778, 2790); por raiz *benchmark\** son 25 pares y 24 nodos, y
+>    sumando dominios no core da 34; nada da 59. **El ranking cualitativo (benchmarking al
+>    frente, luego six sigma, lean, pareto) SI se sostiene; la cifra 59 no reproduce y se
+>    corrige a 20.**
+
+**LA LECCION EN UNA LINEA:** una medicion secundaria que se publica sin el comando que la
+produjo no se puede reproducir ni defender; toda cifra viaja con su instrumento o no se firma.
 
 ---
 
