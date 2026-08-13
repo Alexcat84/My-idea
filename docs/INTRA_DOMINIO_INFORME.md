@@ -15795,15 +15795,52 @@ figura el par que (a) es A y declara por sus propias palabras el mismo acto SIN 
 (cada uno anade lineas, ninguno domina), y (b) no es reformulacion transitiva de una fusion ya
 contada (al menos uno de sus dos nodos no habia sido fundido todavia hacia el mismo cumulo).**
 
+**CORRECCION DECLARADA (acta vuelta 8, TAREA 1.7 del encargo siguiente): se leyeron los
+DIECINUEVE candidatos que el auditor aislo con la red de epoca sobre los 384 A ciegos
+anteriores al 2.127 (793, 796, 844, 853, 878, 905, 918, 943, 966, 978, 2.022, 2.043, 2.072,
+2.074, 2.075, 2.076, 2.079, 2.087, 2.090). LOS DIECINUEVE SON REPITE/CONTENCION CON
+SUPERVIVIENTE DECLARADO, NINGUNO CUMPLE EL CRITERIO (a): cada uno nombra explicitamente "el
+corto" y "el largo" y declara que el corto "cabe entero" o "cabe casi entero" dentro del
+largo, con el largo como superviviente por dominancia, no "ninguno domina". Cita de cada
+uno, la frase que lo excluye: 793 "duration_estimating_worksheet ofrece TRES metodos...
+REPITE"; 796 "El ciclo desnudo contra el proceso que lo contiene... REPITE"; 844 "El
+principio contra la tecnica que lo ejecuta... REPITE"; 853 "LA ARQUITECTURA DE DOS NIVELES
+CONTRA LA PRACTICA QUE YA LA CONTIENE... REPITE"; 878 "El paso cuatro contado como nodo, y
+no trae procedimiento propio... REPITE"; 905 "LA MISMA TESIS CONTRA EL PLAN DE NEGOCIO...
+REPITE"; 918 "El mapa contado entero contra el mismo mapa contado como secuencia...
+REPITE"; 943 "LA MISMA ALTERNANCIA OTRA VEZ... REPITE"; 966 "EL MISMO MAPA DE QUIEN
+DECIDE... REPITE"; 978 "LA MISMA HIGIENE DE PROPIEDAD INTELECTUAL... tres de los cuatro
+pasos del nodo corto estan dentro del largo... REPITE"; 2.022 "REPITE.
+proteccion_propiedad_intelectual_internacional cabe casi entero dentro de
+licenciamiento_tecnologico... SUBCONJUNTO ESTRICTO"; 2.043 "REPITE.
+consejos_distrito_exportacion_dec cabe ENTERO dentro de uso_del_us_commercial_service...
+SUBCONJUNTO ESTRICTO"; 2.072 "REPITE. terminacion_franquiciado_causas cabe ENTERO dentro de
+gestion_terminacion_franquiciado... SUBCONJUNTO ESTRICTO"; 2.074 "REPITE.
+estimacion_inversion_inicial_franquiciador cabe casi entero dentro de
+cinco_categorias_costos_franquicia... SUBCONJUNTO ESTRICTO"; 2.075 "REPITE.
+costos_preparacion_franquicia cabe ENTERO dentro de cinco_categorias_costos_franquicia...
+SUBCONJUNTO ESTRICTO"; 2.076 "REPITE. contratar_abogado_especializado_franquicias cabe casi
+entero dentro de eleccion_abogado_franquicias... SUBCONJUNTO ESTRICTO"; 2.079 "REPITE.
+estrategia_multicanal_expansion cabe ENTERO dentro de
+franquicia_mas_crecimiento_corporativo_hibrido... SUBCONJUNTO ESTRICTO"; 2.087 "REPITE.
+sitio_web_captura_leads cabe casi entero dentro de sitio_web_franquicia... SUBCONJUNTO
+ESTRICTO"; 2.090 "REPITE, y CIERRA UNA ESTRELLA... SUBCONJUNTO ESTRICTO". **NINGUNO DE LOS
+DIECINUEVE ENTRA A LA SERIE.** El contador se queda en VEINTISIETE (tabla mas abajo). El
+PENDIENTE DE MEDICION se acota: de los 384 A ciegos anteriores al 2.127, 17 ya caian en el
+barrido de palabra clave, 19 se leyeron y descartaron esta vuelta, quedan **365 A sin
+verificar**, cifra dicha y no laguna vaga.
+
 **METODO.** Barrido con `grep` de "mutua" (57 apariciones, cualquier clase) y de "ninguno
 domina"/"dos sentidos"/"sin dominancia" (33 apariciones en clase A) sobre el archivo entero;
 cada hit en clase A se leyo entero y se resolvio con el criterio, citando la frase; los hits en
 clase D o los que citan una fusion AJENA como antecedente (no la propia) se descartaron sin
 contarlos. **Limite declarado de este metodo, para que no se lea como censo:** el propio 2.127
 (primer caso de la serie, ya verificado en vueltas anteriores) no contiene ni "mutua" ni
-"ninguno domina" en su razon, así que un barrido por palabra clave no es prueba exhaustiva de
-ausencia; una re-derivación completa leyendo los 579 veredictos A uno por uno no se hizo esta
-vuelta, por proporcion con el resto del encargo. Esta vuelta corrige el delta especifico que el
+"ninguno domina" en su razon, asi que un barrido por palabra clave no es prueba exhaustiva de
+ausencia; una re-derivacion completa leyendo los ~~579~~ **578** veredictos A uno por uno
+(cifra corregida esta vuelta: el corte de 3.100 razones tenia 578 A, no 579, tras la
+correccion del 2.630 en 98.2) no se hizo esta vuelta, por proporcion con el resto del
+encargo. Esta vuelta corrige el delta especifico que el
 acta trajo (el 2.630 y los ocho candidatos entre el 2.673 y el 2.891) mas una verificacion
 amplia de palabra clave que no encontro ningun otro caso perdido; no es una garantia de que no
 quede alguno sin la palabra clave en algun punto del archivo anterior al 2.127. Se deja como
@@ -15939,10 +15976,20 @@ Contra el checkpoint 3.100 corregido (98.2: A 578, D 2.426): **+2 A y +98 D** en
 | 3.151-3.175 | 25 | 1 | 4,0 % |
 | 3.176-3.200 | 25 | 1 | 4,0 % |
 
-> El cuerpo sigue en el piso: dos tramos en 0,0 % exacto (el primero desde el 2.976-3.000) y dos
-> en 4,0 %. Las dos A del tramo (3.165 contencion, 3.182 fusion mutua nueva) son casos aislados
-> de lectura directa, no cumulos nuevos. No se forzo A para compensar el piso ni D para sostener
-> la tendencia; cada D trae su comparacion de pasos enteros escrita en la razon.
+> El cuerpo sigue en el piso: dos tramos en 0,0 % exacto y dos en 4,0 %. Las dos A del tramo
+> (3.165 contencion, 3.182 fusion mutua nueva) son casos aislados de lectura directa, no
+> cumulos nuevos. No se forzo A para compensar el piso ni D para sostener la tendencia; cada D
+> trae su comparacion de pasos enteros escrita en la razon.
+>
+> **CORRECCION DECLARADA (acta vuelta 8, TAREA 1.5 del encargo siguiente):** la frase "el
+> primero desde el 2.976-3.000" era falsa. Recomputada la vara entera desde el 2.901 (doce
+> tramos de 25): **4,0 / 8,0 / 8,0 / 0,0 / 4,0 / 0,0 / 4,0 / 0,0 / 0,0 / 0,0 / 4,0 / 4,0**
+> (2.901-2.925 a 3.176-3.200). Hay CINCO tramos en 0,0 % en ese rango, no dos, y entre el
+> 2.976-3.000 (el primer 0,0 %) y el 3.101-3.125 hay otro 0,0 % mas, el 3.026-3.050. **Lo
+> cierto es otra cosa, y es una noticia mas fuerte que la publicada:** el 3.076-3.100, el
+> 3.101-3.125 y el 3.126-3.150 son **TRES TRAMOS CONSECUTIVOS EN 0,0 %**, la racha mas larga
+> de la campana, y despues el cuerpo repunta a 4,0 % dos veces seguidas (3.151-3.175,
+> 3.176-3.200).
 
 ### 98.5 FAMILIAS Y FIGURAS AL DIA (corte 3.200)
 
@@ -15950,25 +15997,79 @@ Contra el checkpoint 3.100 corregido (98.2: A 578, D 2.426): **+2 A y +98 D** en
 |---|---|
 | **fusion mutua** | **UN caso nuevo**, el 3.182 (control_del_proceso_del_proveedor =A= planificacion_tecnologica_conjunta, tres pasos casi verbatim compartidos). El contador pasa de **VEINTISEIS a VEINTISIETE** (ver 98.1 para la serie completa renumerada) |
 | **contencion por procedimiento mas completo** | figura nueva reconocida (3.165, evaluacion_organizacional_calidad =A= evaluacion_riesgo_calidad_organizacional): un nodo cabe entero dentro de un procedimiento mas formal del mismo acto, que ademas trae equipo/roles, objetivos, plan de comunicacion y puntaje |
-| **la capacidad del proceso, SIN ACTO** | sigue cerrada, extiende con seis pares mas de esta tanda (3.130, 3.141, 3.149, 3.152, 3.200 via indice_cpk, mas la ficha 3.156/3.169/3.197 del patron general), sim_tit hasta 67,4 sin fundir |
-| **ficha nombrada dentro del paso de otro nodo** | la figura mas frecuente del checkpoint: nueve casos nuevos (3.103, 3.107, 3.114, 3.118, 3.156, 3.169, 3.175, 3.186, 3.197, 3.200); veintiuno acumulados desde el 2.956 |
+| **la capacidad del proceso, SIN ACTO** | ~~seis pares mas de esta tanda (3.130, 3.141, 3.149, 3.152, 3.200...)~~ **CORREGIDO (TAREA 1.2b): CUATRO, no seis.** El 3.130 no invoca la familia ("dos fases sucesivas del mismo cascadeo de mejora", marco distinto); solo 3.141, 3.149, 3.152 y 3.200 la declaran explicitamente ("Familia ya reconocida SIN ACTO"). Sim_tit hasta 67,4 sin fundir |
+| **ficha nombrada dentro del paso de otro nodo** | ~~la figura mas frecuente del checkpoint: nueve casos nuevos... veintiuno acumulados desde el 2.956~~ **CORREGIDO (TAREA 1.2a): CATORCE casos nuevos, VEINTISEIS acumulados.** Los diez ya enumerados (3.103, 3.107, 3.114, 3.118, 3.156, 3.169, 3.175, 3.186, 3.197, 3.200) mas cuatro que declaraban la figura por su nombre y no se habian listado (3.155, 3.177, 3.181, 3.195), verificados los catorce contra la cita literal "ficha (nombrada/detallada) dentro del paso" en su propia razon |
 | **distincion comun/especial POR DERECHO contra responsabilidad gerencial** | frontera confirmada de nuevo (3.113), PREGUNTA 3 sigue abierta sin resolverse en este tramo |
-| **hubs que no funden con sus vecinos pese al sim_tit alto** | tres casos marcados: concepto_haciendo_la_calidad_cierta (D contra siete vecinos distintos en la sesion), gestion_estrategica_de_calidad_sqm (D contra cuatro vecinos), planificacion_calidad_crosby (D contra tres vecinos) |
+| **hubs que no funden con sus vecinos pese al sim_tit alto** | tres casos marcados: concepto_haciendo_la_calidad_cierta (D contra ~~siete~~ **SEIS** vecinos: 3.125, 3.136, 3.137, 3.147, 3.150, 3.190), gestion_estrategica_de_calidad_sqm (D contra ~~cuatro~~ **TRES** vecinos: 3.151, 3.159, 3.167), planificacion_calidad_crosby (D contra tres vecinos: 3.143, 3.151, 3.161, ya calzaba) **[CORREGIDO, TAREA 1.3]** |
 | **trampa del identificador con sim_tit muy alto** | 3.176 (facilitador contra lider de equipo, sim_tit 76,7, roles distintos del mismo equipo) y 3.165 (sim_tit 75,9, resuelto A por contencion) |
 | **breakthrough/RCCA/DMAIC** | frontera confirmada de nuevo (3.139, RCCA carece de Measure independiente) |
 
 ### 98.6 DISCUTIBLES MARCADOS (conjunto fuerte de la tanda)
 
-El conjunto fuerte de esta tanda son los pares con marca fuerte inline: **3.121** (estructura de
-reporte dual contra organizacion de liderazgo estadistico, D pese al nucleo compartido con el
-cumulo del 2.891), **3.147** (concepto_haciendo_la_calidad_cierta contra concepto_quality_is_free,
-con arista), **3.148** (dia_cero_defectos contra zero_defects_concepto, entregables parecidos),
-**3.165** (A por contencion, sim_tit 75,9, el mas alto del checkpoint), **3.173** (los dos
-autocontrol de Juran, checklist parecido pero especializaciones distintas), **3.176** (facilitador
-contra lider, sim_tit 76,7, trampa del identificador), **3.182** (A por fusion mutua nueva, tres
-pasos casi verbatim). Detalle completo de cada uno en `docs/loop/REPORTE.md`.
+~~El conjunto fuerte de esta tanda son los pares con marca fuerte inline: 3.121, 3.147, 3.148,
+3.165, 3.173, 3.176, 3.182 (siete).~~ **CORREGIDO Y REPUBLICADO (acta vuelta 8, TAREA 1.1 del
+encargo siguiente).** La regresion: el conjunto publicado NO era el mismo que el marcado en el
+archivo. Verificacion, contando la cadena literal en la razon de cada puesto del tramo
+3.101-3.200: **"DISCUTIBLE MARCADO fuerte" aparece en SEIS puestos** (3.120, 3.121, 3.165,
+3.173, 3.176, 3.182); **"DISCUTIBLE MARCADO" sin "fuerte" (marca simple) aparece en DOS
+puestos mas** (3.137, 3.148); **3.147 no lleva la cadena "DISCUTIBLE MARCADO" en ningun grado**
+pese a haberse publicado como fuerte.
 
-### 98.7 COMMITS
+**ADJUDICACION APLICADA TAL CUAL (TAREA 1.1): el archivo manda sobre la tabla, y las dos se
+publican del mismo conjunto.** Un par sin marca no puede figurar como discutible fuerte; un par
+marcado fuerte en el archivo no puede faltar. Efecto:
+- **Se anade 3.120** (hoshin_kanri contra planificacion_estrategica_despliegue, D): estaba
+  marcado fuerte en su razon ("la mayor similitud del checkpoint con arista") y no se habia
+  publicado. Verificado por el auditor contra el grafo, D confirmada (hoshin trae la seleccion
+  Pareto de 3 a 5 hoshins y el balanced scorecard de cuatro perspectivas; el otro trae mision y
+  vision; entregables distintos, matriz hoshin contra plan estrategico). No se relitiga.
+- **Se retira 3.147** del conjunto fuerte: no lleva marca de ninguna clase en su razon. La D se
+  sostiene (concepto_haciendo_la_calidad_cierta es un acto definitorio y de postura contra
+  concepto_quality_is_free, contabilidad de costos de falla, entregables distintos), pero no
+  calificaba para la tabla de fuertes: se publico como fuerte sin haber sido marcado a ciegas,
+  el error que esta correccion cierra. No se le agrega marca retroactiva porque, releido, el
+  caso no es el mas contestado del checkpoint (el nucleo compartido es mas debil que en los
+  seis que si quedan).
+- **Se retira 3.148** del conjunto fuerte (queda en el conjunto de marca simple, no en el de
+  fuerte): su razon lleva "DISCUTIBLE MARCADO" sin el calificador "fuerte". La D se sostiene
+  (ficha del evento contra el acto mas amplio de fijar el estandar).
+
+**EL CONJUNTO FUERTE CORREGIDO, IDENTICO entre archivo y tabla, SEIS pares:** **3.120**
+(hoshin_kanri contra planificacion_estrategica_despliegue, D, mismo mecanismo catchball/scorecard
+con arista, doctrina de especializaciones que comparten mecanismo sin fundir), **3.121**
+(estructura de reporte dual contra organizacion de liderazgo estadistico, D pese al nucleo
+compartido con el cumulo del 2.891), **3.165** (A por contencion, sim_tit 75,9, el mas alto del
+checkpoint), **3.173** (los dos autocontrol de Juran, checklist parecido pero especializaciones
+distintas), **3.176** (facilitador contra lider, sim_tit 76,7, trampa del identificador),
+**3.182** (A por fusion mutua nueva, tres pasos casi verbatim).
+
+**VERIFICACION FIJA DESDE AHORA (manda para cada checkpoint en adelante):** marcas fuertes
+contadas en el archivo del tramo = **6**; filas de la tabla republicada = **6**; lista identica
+puesto por puesto: 3.120, 3.121, 3.165, 3.173, 3.176, 3.182. Conjuntos iguales, verificado.
+Detalle completo de cada uno en `docs/loop/REPORTE.md`.
+
+### 98.7 CORRECCION DECLARADA: LA CITA DEL entregable_esperado NO ERA UNIVERSAL (TAREA 1.4)
+
+El reporte de la vuelta 8 (`docs/loop/REPORTE.md`) afirmaba haber citado el
+`entregable_esperado` "en todos los casos de alta similitud" del tramo, enumerando los siete
+discutibles. Verificado contra el archivo: **3.121 y 3.173 NO mencionan la palabra
+"entregable" en ninguna forma dentro de su razon.** Los otros cinco (3.147, 3.148, 3.165,
+3.176, 3.182) si la mencionan. La afirmacion del reporte era una lectura no escrita, lo que la
+regla 9 del EJECUTOR prohibe. **Corregida la afirmacion, no la razon:** en 3.121 y 3.173 la D
+se sostiene por comparacion directa de pasos enteros propios, sin apoyo del entregable; las dos
+D siguen correctas.
+
+**ADJUDICACION ESCRITA PARA CERRAR LA CONTRADICCION APARENTE (TAREA 1.4): EL DESEMPATE POR
+`entregable_esperado` ES UNA PRUEBA NEGATIVA, NO POSITIVA.** La adjudicacion 1.4d dice "si dos
+nodos producen artefactos distintos, no son el mismo acto"; no dice, ni se puede leer al reves,
+que artefactos iguales o casi iguales prueben el mismo acto. Un entregable identico o
+compatible NUNCA basta por si solo para declarar A: la clase la decide siempre la comparacion
+de pasos enteros. Esto es consistente entre el 3.165 (el entregable del superviviente anade un
+puntaje y aun asi funde por contencion, A) y el 3.148 (los entregables se parecen y aun asi no
+funde, D): en ninguno de los dos decidio el entregable, decidio si quedaba o no un paso entero
+fuera.
+
+### 98.8 COMMITS
 
 `9c7eab96` (TAREA 1: recuento del contador de fusiones mutuas, correccion del 2.630, tres cifras
 publicadas corregidas, cribado 3.101-3.125), `5603ee40` (cribado 3.126-3.155), `b703adcc`
