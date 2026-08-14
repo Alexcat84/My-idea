@@ -7,8 +7,42 @@ arregle** (banco 9.24).
 > **La cifra que este calculo aporta no es cuantos pares hay. Es CUANTOS NODOS HAY
 > QUE TENER DELANTE para poder decidir**, que es exactamente lo que faltaba.
 
-**Operaciones: `OP-D-01` a `OP-D-06`. LAS SEIS LISTAS**, tras la adjudicacion del
-11 ago 2026.
+~~**Operaciones: `OP-D-01` a `OP-D-06`. LAS SEIS LISTAS**, tras la adjudicacion del
+11 ago 2026.~~
+
+> **AVISO, 14 ago 2026 (vuelta 17). LA FASE YA NO SON SEIS OPERACIONES: SON NUEVE.** La cifra vieja
+> no se borra, era correcta el 11 ago 2026.
+>
+> | | | |
+> |---|---|---|
+> | `OP-D-07` | `decision_pivote_perseverar` | anadida el 12 ago 2026, destejido previo al acto I de `OP-M-03` |
+> | **`OP-D-08`** | **`lienzo_modelo_negocio`** | **anadida el 14 ago 2026 por DECISION DEL FUNDADOR** |
+> | **`OP-D-09`** | **`planificacion_recoleccion_datos`** | **anadida el 14 ago 2026 por DECISION DEL FUNDADOR** |
+>
+> **LAS NUEVE ESTAN LISTAS. Las dos ultimas son las DOS COSTURAS QUE NO TENIAN DUENO:** estaban
+> declaradas en `docs/plan/RECOMPUTO_3388.md` (TAREA 2.B, punto 4) como las dos unicas de las 31
+> costuras confirmadas sin gemelo vigente que no aparecian en la nomina de ninguna operacion del
+> plan, ni de fuente ni de fusion. **La adjudicacion que decia "NO se crean operaciones nuevas para
+> ellas" queda revertida por el fundador el 14 ago 2026, y no se borra: sigue escrita con su fecha.**
+>
+> **LAS DOS SON DESTEJIDO SOLO, sin fusion acoplada**, y no por comodidad: **ninguna de las dos tiene
+> gemelo con A vigente**, remedido en la vuelta 17 contra `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (cero
+> A en los siete pares de `lienzo_modelo_negocio` y cero en el unico par de
+> `planificacion_recoleccion_datos`). El veredicto del puesto 1434 ya lo tenia escrito para la
+> primera: *"es costura confirmada y no tiene gemelo, asi que su arreglo es un destejido solo"*.
+>
+> **AVISO DE ORDEN, declarado y no arreglado por cuenta propia.** El criterio de orden de esta fase
+> es **CONGELADOS LIBERADOS** (ver la tabla de abajo). Por ese criterio `OP-D-08` libera **uno** (el
+> par 784) y le tocaria ir **entre `OP-D-03` y `OP-D-04`**, y `OP-D-09` libera **cero**. Las dos se
+> escribieron con orden **8 y 9**, al final, **porque renumerar siete operaciones ya adjudicadas no
+> es algo que la vuelta 17 tuviera autorizado.** Queda como discutible marcado.
+>
+> **Y EL HUECO QUE `OP-D-08` TAPA, que es el motivo de fondo:** el par **784** estaba congelado por
+> una costura cuya cirugia **no tenia dueno**, asi que **ese congelado no entraba en la contabilidad
+> de nadie**. Medido en la vuelta 17: **el numero 784 no aparece ni una vez en todo `docs/plan/`**, y
+> la tabla de congelados de abajo no lo cuenta. **Su propia razon se nombra "tercer nodo del archivo
+> que bloquea un par por costura"**, y de los tres, dos ya tenian operacion (`voz_del_cliente_voc` en
+> `OP-D-02`, `ab_testing_optimizacion` en `OP-D-03`) **y este era el que no la tenia.**
 
 > **LA REGLA DE REPARTO, adjudicada, y es lo que desbloqueo las tres que
 > faltaban:** cada perdida se asigna **AL BLOQUE DEL QUE PROVIENE**; la que no

@@ -612,7 +612,37 @@ Comando: `python -c "import json; ops=[json.loads(l) for l in open('docs/plan/OP
 
 **Las 31 son costuras confirmadas SIN gemelo vigente, o sea destejidos que NO son curas acopladas** (no hay fusion en el mismo acto que las acompane).
 
-**Lista declarada de las DOS que ademas no tienen dueno en ninguna operacion del plan** (ni de fuente ni de fusion): `lienzo_modelo_negocio` y `planificacion_recoleccion_datos`. **NO se crean operaciones nuevas para ellas ni para las otras 29: lo adjudica el auditor con esta lista delante.**
+**Lista declarada de las DOS que ademas no tienen dueno en ninguna operacion del plan** (ni de fuente ni de fusion): `lienzo_modelo_negocio` y `planificacion_recoleccion_datos`. ~~**NO se crean operaciones nuevas para ellas ni para las otras 29: lo adjudica el auditor con esta lista delante.**~~
+
+> **REVERTIDO POR DECISION DEL FUNDADOR, 14 ago 2026 (vuelta 17). LAS DOS RECIBEN DUENO.** El texto
+> tachado no se borra: era la adjudicacion vigente del auditor (`docs/loop/ACTA_AUDITOR.md` VUELTA 13
+> seccion 5 punto 5) y sigue siendo cierta de su fecha.
+>
+> | nodo | operacion nueva | forma |
+> |---|---|---|
+> | `lienzo_modelo_negocio` | **`OP-D-08`** | DESTEJIDO SOLO, orden 8 de `02_DESTEJIDOS` |
+> | `planificacion_recoleccion_datos` | **`OP-D-09`** | DESTEJIDO SOLO, orden 9 de `02_DESTEJIDOS` |
+>
+> **EL PLAN PASA DE 69 A 71 OPERACIONES.** Las 69 viejas no se tocan: las dos se anaden al final de
+> `docs/plan/OPERACIONES.jsonl`, con el mismo esquema de dieciocho campos, ids unicos y cero
+> dependencias rotas (verificado tras escribir).
+>
+> **LO QUE SIGUE EN PIE DEL TEXTO TACHADO: las otras 29 NO reciben operacion nueva.** La decision del
+> fundador nombra dos, y solo dos. Las 29 conservan su dueno de FUENTE en una `OP-F-*`, que es lo que
+> esta misma seccion ya precisaba.
+>
+> **REMEDIDO EN LA VUELTA 17, no copiado de esta seccion** (`scripts/loop/vuelta17_dos_costuras.py`,
+> de solo lectura sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `docs/COSTURAS_INTERNAS.jsonl` y
+> `docs/plan/OPERACIONES.jsonl`): las dos siguen con **CERO A vigentes** y **CERO nominas de
+> operacion** en el momento de escribirles la suya. `lienzo_modelo_negocio` tiene **siete** pares en
+> el cribado (543 D, 784 B, 998 D, 999 D, 1123 D, 1136 D, 1434 D) y `planificacion_recoleccion_datos`
+> tiene **uno** (2695 D).
+>
+> **UNA PRECISION QUE SOLO SE PUEDE HACER AHORA Y NO AL CORTE 2.117, y cambia el peso de la
+> evidencia:** `planificacion_recoleccion_datos` es de `quality`, que **al corte 2.117 estaba SIN
+> CRIBAR con cero pares juzgados**. Su "sin gemelo" de entonces no era una medicion, era un hueco de
+> cribado. **Al corte 3.388, `quality` tiene 844 pares juzgados con 126 A** (medido en esta vuelta),
+> asi que **hoy su cero A vigentes SI es una medicion.**
 
 ### 5. Ningun nodo se releyo para decidir si tiene costura
 
