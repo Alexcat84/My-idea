@@ -52,6 +52,20 @@ linea 1 de la lista de arriba no decia.**
 | **1** | `python scripts/run_phase1.py --reaplico-curaduria` | **EXITCODE 0** y `GATE 0: OK` |
 | **2** | `python scripts/etiquetas_de_cara.py --aplicar`, corrido **JUSTO DESPUES** | `dataset/metadata/master_graph.json` **BYTE IDENTICO a HEAD**: el mismo hash de blob |
 
+#### REGISTRO: **`git status` NO ES LA VARA DE ESTE FICHERO** (14 ago 2026)
+
+**En Windows, el simple hecho de tocar `dataset/metadata/master_graph.json` reemplaza
+LF por CRLF, y `git status` lo marca como modificado sin que haya cambiado ni un dato.**
+
+> **ESO NO ES LA VARA. LA VARA ES EL HASH DE BLOB BYTE IDENTICO A HEAD**, que es lo
+> que mide el **comando 2** del ciclo de arriba.
+
+**Quien lea un movimiento en `git status` sobre ese fichero, sin diferencia de contenido
+real, NO esta viendo una regresion.** La comprobacion barata que lo separa: `git diff
+--quiet` sale con **exit 0** y `git hash-object` sobre el fichero del disco devuelve el
+mismo blob que `git rev-parse HEAD:dataset/metadata/master_graph.json`. **Si los dos
+blobs coinciden, no hay movimiento que reportar por mucho que `git status` lo liste.**
+
 **LA INVOCACION A SECAS NO ES UN ROJO QUE CLASIFICAR.** `python scripts/run_phase1.py`
 sin `--reaplico-curaduria` sale con **exit 2 SIEMPRE que haya curaduria viva**, y eso
 **es la alarma del propio instrumento funcionando**, no una regresion. Esta escrito en

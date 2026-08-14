@@ -3537,7 +3537,6 @@
       "entregable_esperado": "Reporte de análisis de cohortes con patrones de retención identificados y estrategias correctivas propuestas por segmento",
       "nodos_previos": [
         "plan_de_adquisicion_acquire",
-        "cohort_analysis_retencion",
         "funnel_get_customers_optimizacion",
         "ab_testing_optimizacion"
       ],
@@ -3947,7 +3946,6 @@
         "mitos_stage_gate",
         "afinar_frente_difuso_innovacion",
         "plan_mejora_procesos",
-        "value_stream_analysis_lean",
         "overlapping_stages_concurrent_execution"
       ],
       "nodos_siguientes": [
@@ -9695,7 +9693,6 @@
       "nodos_siguientes": [
         "aceptar_la_imperfeccion_del_diseno",
         "board_management_buyin",
-        "buyin_customer_development",
         "diseno_intencional_etica",
         "roles_responsabilidades",
         "team_directory",
@@ -9749,7 +9746,6 @@
       ],
       "entregable_esperado": "Checklist firmado de buy-in de junta y equipo fundador, incluyendo el tipo de mercado inicial, número de pivots financiados y criterios de salida por fase.",
       "nodos_previos": [
-        "buy_in_customer_development",
         "comunicacion_aprendizaje_continuo",
         "comunicacion_aprendizaje_startup",
         "plan_gestion_comunicaciones",
@@ -11850,7 +11846,6 @@
       ],
       "entregable_esperado": "Una tabla de análisis de COPQ desglosada por las tres categorías con porcentajes de participación",
       "nodos_previos": [
-        "costo_de_mala_calidad_copq",
         "costo_de_mala_calidad_copq_3"
       ],
       "nodos_siguientes": [
@@ -11908,8 +11903,7 @@
       "entregable_esperado": "Tabla desglosada de costos de calidad por categoría (fallas internas, externas, evaluación, prevención) con porcentajes sobre el total",
       "nodos_previos": [
         "costo_de_mala_calidad",
-        "costo_de_mala_calidad_3",
-        "costo_de_mala_calidad_copq"
+        "costo_de_mala_calidad_3"
       ],
       "nodos_siguientes": [
         "costo_optimo_calidad",
@@ -15348,7 +15342,6 @@
       ],
       "nodos_siguientes": [
         "optimizacion_keep_retencion",
-        "analisis_de_cohortes",
         "hablar_con_clientes_desmontar_supuestos",
         "war_room_pivot_proceed",
         "keep_customers_strategy"
@@ -20217,7 +20210,6 @@
       "entregable_esperado": "Abogado franquiciador contratado y alineado con las decisiones estratégicas ya tomadas",
       "nodos_previos": [
         "criterios_seleccion_consultor_franquicia",
-        "eleccion_abogado_franquicias",
         "otros_terminos_contractuales",
         "seleccion_consultor_franquicias"
       ],
@@ -22516,8 +22508,7 @@
       ],
       "nodos_siguientes": [
         "categorias_costos_calidad",
-        "costos_ocultos_calidad",
-        "costo_de_mala_calidad_copq"
+        "costos_ocultos_calidad"
       ],
       "condiciones_activacion": [
         "Cuando la gerencia subestima el impacto financiero de los problemas de calidad",
@@ -22550,14 +22541,12 @@
         "proyectos_vitales_pocos",
         "alineacion_estrategica_despliegue",
         "evaluacion_organizacional_calidad",
-        "costo_de_mala_calidad_copq_3",
         "rejilla_madurez_gestion_calidad",
         "definicion_calidad_conformidad",
         "definicion_calidad_conformidad_requisitos",
         "capacidad_de_proceso",
         "calidad_de_diseno_vs_produccion",
         "diseno_de_calidad_desde_planificacion",
-        "costo_de_mala_calidad_3",
         "medicion_de_calidad",
         "medicion_calidad",
         "concepto_quality_is_free",
@@ -22574,15 +22563,10 @@
       ],
       "nodos_siguientes": [
         "perfeccionismo_vs_valor",
-        "categorias_copq",
         "estudio_mercado_calidad",
         "modelo_costo_optimo_calidad",
         "perfeccionismo_vs_valor_2",
         "trilogia_de_juran",
-        "costo_de_mala_calidad_copq_2",
-        "costo_de_mala_calidad_copq_3",
-        "categorias_costos_calidad",
-        "costos_ocultos_calidad",
         "metodologia_medicion_copq",
         "roi_breakthrough",
         "secuencia_universal_breakthrough",
@@ -22754,9 +22738,7 @@
         "Usar el cálculo detallado de COPQ como mapa de ruta para eliminar sistemáticamente las fuentes de mala calidad"
       ],
       "entregable_esperado": "Reporte cuantificado de COPQ con desglose por categorías (fallos internos, externos, evaluación, prevención) y plan de reducción",
-      "nodos_previos": [
-        "costo_de_mala_calidad_copq"
-      ],
+      "nodos_previos": [],
       "nodos_siguientes": [
         "trilogia_de_juran",
         "secuencia_universal_breakthrough"
@@ -22782,13 +22764,10 @@
         "Comunicar los resultados a la alta dirección como argumento para iniciar proyectos de mejora"
       ],
       "entregable_esperado": "Un informe cuantificado del COPQ anual de la organización, desglosado por categorías, presentado a la alta dirección",
-      "nodos_previos": [
-        "costo_de_mala_calidad_copq"
-      ],
+      "nodos_previos": [],
       "nodos_siguientes": [
         "categorias_copq",
-        "metodologia_medicion_copq",
-        "costo_de_mala_calidad_copq"
+        "metodologia_medicion_copq"
       ],
       "condiciones_activacion": [
         "Cuando la organización busca justificar la inversión en programas de mejora de calidad",
@@ -23064,8 +23043,7 @@
       "entregable_esperado": "Listado de costos ocultos identificados con estimación cuantitativa cuando sea posible",
       "nodos_previos": [
         "categorias_costos_calidad",
-        "costo_de_mala_calidad_3",
-        "costo_de_mala_calidad_copq"
+        "costo_de_mala_calidad_3"
       ],
       "nodos_siguientes": [
         "costo_optimo_calidad",
@@ -24198,7 +24176,6 @@
       "nodos_previos": [
         "estimacion_tres_puntos",
         "plan_gestion_costos",
-        "project_schedule",
         "wbs_dictionary",
         "activity_list",
         "network_diagram",
@@ -25012,7 +24989,6 @@
         "concepcion_hormica_del_pensamiento",
         "democratizacion_de_herramientas_creativas",
         "triada_restricciones_diseno",
-        "wallas_cuatro_etapas_pensamiento_creativo",
         "fenomeno_del_click",
         "mental_trial_and_error",
         "reglas_brainstorming",
@@ -26129,8 +26105,7 @@
       ],
       "entregable_esperado": "Proceso de verificación de inversionistas acreditados documentado antes de cualquier ronda de financiamiento",
       "nodos_previos": [
-        "seleccion_estructura_corporativa",
-        "inversionistas_acreditados"
+        "seleccion_estructura_corporativa"
       ],
       "nodos_siguientes": [
         "term_sheet_negociacion"
@@ -27140,7 +27115,6 @@
       "entregable_esperado": "Una matriz completa de clientes vs necesidades, correlacionadas con evidencia y priorizadas, lista para guiar el diseño de tu producto o servicio.",
       "nodos_previos": [
         "identificar_clientes_externos_e_internos",
-        "hoja_necesidades_cliente",
         "sipoc",
         "diagrama_afinidad"
       ],
@@ -27339,8 +27313,7 @@
         "get_customers_funnel_webmobile"
       ],
       "nodos_siguientes": [
-        "estrategia_crecimiento_clientes",
-        "customer_retention_tactics"
+        "estrategia_crecimiento_clientes"
       ],
       "condiciones_activacion": [
         "Cuando el startup ya tiene una base inicial de clientes y necesita reducir el churn",
@@ -27368,7 +27341,6 @@
       "nodos_previos": [
         "customer_segments_hypothesis",
         "channels_hypothesis_physical",
-        "customer_retention_strategy",
         "vesting_acciones_fundadores",
         "customer_acquisition_activation_web",
         "embudo_get_keep_grow",
@@ -28743,7 +28715,6 @@
       ],
       "node_id": "decision_pivotar_o_proceder",
       "nodos_previos": [
-        "revalidar_modelo_negocio",
         "validar_modelo_financiero",
         "customer_validation",
         "posicionamiento_de_empresa",
@@ -29850,8 +29821,7 @@
       ],
       "entregable_esperado": "Checklist formal de 'definición de terminado' adaptada al tipo de producto físico, firmada por el equipo y el dueño de producto.",
       "nodos_previos": [
-        "modelo_hibrido_agile_stage_gate",
-        "definicion_sprint_terminado_fisico"
+        "modelo_hibrido_agile_stage_gate"
       ],
       "nodos_siguientes": [
         "protocepto"
@@ -29884,7 +29854,6 @@
         "product_backlog_fisico"
       ],
       "nodos_siguientes": [
-        "definicion_sprint_terminado",
         "spiral_development",
         "espiral_mortal_lotes_grandes",
         "protocepto",
@@ -29938,7 +29907,6 @@
         "aprendizaje_validado",
         "emprendimiento_como_disciplina_de_gestion",
         "definicion_startup_incertidumbre",
-        "search_for_business_model",
         "customer_development_process",
         "marcos_historicos_comunidades_startup",
         "definir_antigoals",
@@ -34649,7 +34617,6 @@
         "identificar_pensadores_de_diseno_internos"
       ],
       "nodos_siguientes": [
-        "diseno_para_el_ciclo_completo",
         "equipo_dedicado_continuo",
         "equipo_multifuncional"
       ],
@@ -35466,7 +35433,6 @@
       "nodos_siguientes": [
         "preparar_contacto_clientes",
         "customer_discovery",
-        "pass_fail_experiment_design",
         "customer_discovery_phase2_problem_test",
         "global_vs_local_maximum"
       ],
@@ -35628,7 +35594,6 @@
       ],
       "nodos_siguientes": [
         "customer_creation",
-        "diseno_landing_page_conversion",
         "herramientas_de_activacion_web",
         "metricas_de_adquisicion_activacion"
       ],
@@ -35665,8 +35630,7 @@
       ],
       "entregable_esperado": "Landing page optimizada con llamadas a la acción claras, contenido persuasivo y navegación simplificada, lista para pruebas A/B",
       "nodos_previos": [
-        "plan_de_activacion",
-        "diseno_landing_page"
+        "plan_de_activacion"
       ],
       "nodos_siguientes": [
         "metricas_de_adquisicion_activacion"
@@ -35890,7 +35854,6 @@
       "entregable_esperado": "Un plan de continuidad de equipo alineado a los hitos y a la duración completa del proyecto.",
       "nodos_previos": [
         "identificar_pensadores_de_diseno_internos",
-        "diseno_ciclo_completo_equipo",
         "identificacion_talento_design_thinking"
       ],
       "nodos_siguientes": [
@@ -39617,7 +39580,6 @@
         "otros_terminos_contractuales"
       ],
       "nodos_siguientes": [
-        "contratacion_abogado_franquicia",
         "criterio_bazooka_peashooter",
         "gestion_tiempo_lanzamiento_franquicia",
         "elaboracion_fdd"
@@ -39996,7 +39958,6 @@
         "programa_proteccion_respiratoria"
       ],
       "nodos_siguientes": [
-        "superficies_elevadas_proteccion_caidas",
         "escaleras_portatiles_seguridad",
         "escaleras_fijas_seguridad",
         "pisos_aberturas_paredes_seguridad"
@@ -49688,8 +49649,7 @@
         "plan_cambio_climatico"
       ],
       "nodos_siguientes": [
-        "realizar_analisis_ciclo_de_vida_lca",
-        "medir_huella_carbono_corporativa"
+        "realizar_analisis_ciclo_de_vida_lca"
       ],
       "condiciones_activacion": [
         "Si la empresa no conoce su nivel actual de emisiones",
@@ -57990,7 +57950,6 @@
         "asignacion_recursos_en_gates",
         "pruning_portafolio",
         "requisitos_gates_con_dientes",
-        "portafolio_formal_management",
         "sistema_gestion_recursos_en_gates",
         "estructura_de_gates"
       ],
@@ -58308,7 +58267,6 @@
         "homework_frontend_loading"
       ],
       "nodos_siguientes": [
-        "reglas_gestion_riesgo_gambling",
         "cadena_suministro_respuesta_desastres",
         "fundamentos_gestion_riesgo"
       ],
@@ -61201,9 +61159,7 @@
       "nodos_previos": [
         "diagrama_afinidad"
       ],
-      "nodos_siguientes": [
-        "customer_needs_spreadsheet"
-      ],
+      "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando se ha recolectado información extensa de la voz del cliente y se necesita priorizar para el diseño"
       ],
@@ -65299,9 +65255,7 @@
       "nodos_previos": [
         "seleccion_estructura_corporativa"
       ],
-      "nodos_siguientes": [
-        "cumplimiento_inversionistas_acreditados"
-      ],
+      "nodos_siguientes": [],
       "condiciones_activacion": [
         "Si el usuario está por levantar capital de inversionistas privados"
       ],
@@ -68969,7 +68923,6 @@
       "entregable_esperado": "Procedimiento LOTO documentado, capacitación certificada y candados/etiquetas personales asignados para cada máquina.",
       "nodos_previos": [
         "machinery_equipment_safety",
-        "procedimientos_lockout_tagout",
         "plan_de_control_de_infecciones",
         "infection_control_plan"
       ],
@@ -71945,7 +71898,6 @@
       "nodos_previos": [
         "construir_mvp_baja_fidelidad",
         "hipotesis_propuesta_de_valor_producto",
-        "medir_comportamiento_y_entusiasmo_del_cliente",
         "prueba_mvp_alta_fidelidad",
         "tacticas_de_ferias_comerciales"
       ],
@@ -71992,8 +71944,7 @@
         "tacticas_de_ferias_comerciales"
       ],
       "nodos_siguientes": [
-        "categorias_entusiasmo_cliente",
-        "medir_comportamiento_cliente_mvp"
+        "categorias_entusiasmo_cliente"
       ],
       "condiciones_activacion": [
         "Cuando el MVP ya está siendo usado por clientes reales invitados",
@@ -72018,7 +71969,6 @@
       ],
       "entregable_esperado": "Un inventario completo de emisiones de gases de efecto invernadero clasificado por alcances (scope 1, 2 y 3).",
       "nodos_previos": [
-        "evaluar_huella_carbono",
         "plan_cambio_climatico"
       ],
       "nodos_siguientes": [
@@ -73194,7 +73144,6 @@
       "nodos_previos": [
         "estrategia_innovacion_producto",
         "lienzo_modelo_negocio",
-        "strategic_buckets",
         "portfolio_management"
       ],
       "nodos_siguientes": [
@@ -73664,7 +73613,6 @@
         "pivotar_o_perseverar",
         "aprendizaje_validado_vs_metricas_vanidad",
         "coraje_para_pivotar",
-        "vanity_metrics_vs_accionables",
         "contabilidad_innovacion_pivote",
         "motor_de_crecimiento",
         "reunion_pivotar_o_perseverar",
@@ -76397,8 +76345,7 @@
       "nodos_previos": [
         "lienzo_modelo_negocio",
         "resegmentacion_mercado_nicho_bajo_costo",
-        "long_tail_pattern",
-        "multi_sided_platforms"
+        "long_tail_pattern"
       ],
       "nodos_siguientes": [
         "patron_freemium",
@@ -76435,7 +76382,6 @@
         "resegmentacion_mercado_nicho_bajo_costo"
       ],
       "nodos_siguientes": [
-        "multi_sided_platform_pattern",
         "customer_scenarios_business_model",
         "priorizar_elementos_a_validar",
         "patron_freemium",
@@ -80219,7 +80165,6 @@
       "nodos_previos": [
         "revenue_pricing_hypothesis",
         "pricing_tactics_models",
-        "diseno_experimentos_pass_fail",
         "seleccion_estrategia_pricing"
       ],
       "nodos_siguientes": [
@@ -84155,7 +84100,6 @@
         "estructura_de_gates"
       ],
       "nodos_siguientes": [
-        "gestion_portafolio_formal",
         "sistema_gates_go_kill",
         "governance_integration_gates_portfolio_roadmap"
       ],
@@ -87465,9 +87409,7 @@
         "plan_de_control_de_infecciones",
         "infection_control_plan"
       ],
-      "nodos_siguientes": [
-        "lockout_tagout_procedures"
-      ],
+      "nodos_siguientes": [],
       "condiciones_activacion": [
         "Si el negocio realiza mantenimiento o servicio de equipos con fuentes de energía peligrosas"
       ],
@@ -89883,7 +89825,6 @@
       ],
       "nodos_siguientes": [
         "activity_duration_estimates",
-        "cronograma_proyecto",
         "requirements_management_plan",
         "innovation_project_canvas",
         "lienzo_proyecto_innovacion"
@@ -94103,9 +94044,7 @@
       "nodos_previos": [
         "probabilidad_falla_ensamblaje_multiple"
       ],
-      "nodos_siguientes": [
-        "redundancia_en_diseno"
-      ],
+      "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando se diseña un componente o sistema crítico donde la falla tiene alto costo o riesgo",
         "Cuando la alta confiabilidad de una sola parte es difícil de lograr"
@@ -94133,7 +94072,6 @@
       ],
       "entregable_esperado": "Decisión documentada sobre si el diseño incluirá redundancia de componentes o se enfocará en mejorar la confiabilidad individual de la parte.",
       "nodos_previos": [
-        "redundancia_diseno_confiabilidad",
         "probabilidad_falla_ensamblaje_multiple"
       ],
       "nodos_siguientes": [
@@ -94846,7 +94784,6 @@
       "entregable_esperado": "Un mapa de riesgo del proyecto que muestre la relación entre incertidumbre y montos invertidos en cada etapa, con puntos de salida definidos",
       "nodos_previos": [
         "open_innovation_ideacion",
-        "gestion_riesgo_incremental",
         "ventaja_competitiva_producto",
         "sistema_gates_go_kill",
         "front_end_homework",
@@ -95864,7 +95801,6 @@
       "entregable_esperado": "Un reporte de estado individual que completas periódicamente para dejar registro de tu avance.",
       "nodos_previos": [
         "plan_gestion_comunicaciones",
-        "team_member_status_report",
         "team_directory"
       ],
       "nodos_siguientes": [
@@ -97484,9 +97420,7 @@
         "market_type_revenue_growth",
         "metrics_that_matter_framework"
       ],
-      "nodos_siguientes": [
-        "decision_pivotar_o_proceder"
-      ],
+      "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando el equipo está a punto de comprometer inversión significativa para escalar",
         "Cuando existen dudas sobre si se ha elegido la mejor apuesta de negocio"
@@ -100376,7 +100310,6 @@
       "entregable_esperado": "Un lienzo de hipótesis de modelo de negocio marcado explícitamente como no probado, junto con evidencia de que el modelo es repetible y escalable o una decisión clara de pivote.",
       "nodos_previos": [
         "lienzo_modelo_negocio",
-        "definicion_startup",
         "arenas_estrategicas",
         "analisis_y_sintesis",
         "diseno_consecuencias_no_intencionadas",
@@ -106271,8 +106204,7 @@
         "portfolio_management"
       ],
       "nodos_siguientes": [
-        "mitos_stage_gate",
-        "metodo_strategic_buckets"
+        "mitos_stage_gate"
       ],
       "condiciones_activacion": [
         "Cuando la estrategia de innovación no se refleja claramente en la asignación real de recursos",
@@ -106428,9 +106360,7 @@
         "Asegurar headroom adecuado y almacenamiento seguro de materiales en alturas"
       ],
       "entregable_esperado": "Superficies elevadas con sistemas de protección contra caídas instalados y verificados mediante checklist.",
-      "nodos_previos": [
-        "elevated_surfaces_fall_protection"
-      ],
+      "nodos_previos": [],
       "nodos_siguientes": [
         "escaleras_portatiles_seguridad",
         "escaleras_fijas_seguridad",
@@ -107138,8 +107068,7 @@
       ],
       "nodos_siguientes": [
         "project_performance_report",
-        "contractor_status_report",
-        "reporte_estado_miembro_equipo"
+        "contractor_status_report"
       ],
       "condiciones_activacion": [
         "Si el proyecto está en ejecución y se requiere seguimiento periódico de tareas individuales"
@@ -112257,7 +112186,6 @@
         "overlapping_stages_concurrent_execution"
       ],
       "nodos_siguientes": [
-        "analisis_flujo_de_valor",
         "pull_no_push",
         "valor_vs_desperdicio"
       ],
@@ -112375,7 +112303,6 @@
       ],
       "entregable_esperado": "Lista de métricas actuales clasificadas como 'vanidad' o 'accionables', con plan de reemplazo de las primeras",
       "nodos_previos": [
-        "metricas_accionables",
         "tres_as_de_metricas",
         "medir_lo_que_importa_no_solo_lo_facil"
       ],
@@ -114081,9 +114008,7 @@
         "Someter toda idea iluminada a un proceso riguroso de Verificación antes de implementarla."
       ],
       "entregable_esperado": "Un mapa o bitácora del proceso creativo del proyecto, identificando en qué etapa se encuentra cada problema o decisión clave.",
-      "nodos_previos": [
-        "cuatro_etapas_del_pensamiento_creativo"
-      ],
+      "nodos_previos": [],
       "nodos_siguientes": [
         "wallas_etapa_preparacion",
         "wallas_etapa_incubacion",
@@ -122499,7 +122424,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3835,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 2,
+    "nodos_sin_enlaces_entrantes": 6,
     "enlaces_rotos_en_grafo": 0
   }
 }

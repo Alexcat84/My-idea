@@ -1,0 +1,18 @@
+== VERIFICACION DE OP-S-07, linea por linea de su campo verificacion ==
+
+1) ningun nodo VIVO se cita a si mismo, NI directamente NI tras resolver
+   auto aristas de vivos tras resolver: 0 en 0 nodos  -> VERDE
+
+2) los 66 enlaces retirados y ningun otro: el conteo de aristas baja en 66
+   ficheros con diferencia real contra HEAD: 59
+   ENLACES RETIRADOS (contra HEAD): 66  -> VERDE
+   CAMPOS DISTINTOS DE previos/siguientes QUE SE MOVIERON: 0  -> VERDE
+
+3) ids_alias intactos en los nodos tocados
+   ids_alias movidos: 0  -> VERDE
+
+4) las 48 alias contra alias siguen intactas (censadas, no tocadas)
+   inertes hoy: 48 en 33 nodos deprecados
+
+5) conteo de aristas del grafo
+   enlaces hoy: 16800

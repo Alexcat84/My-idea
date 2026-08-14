@@ -1,0 +1,70 @@
+NODOS: 3835  (vivos 3521, deprecados 314)
+ENLACES (previos + siguientes): 16866
+
+== A) LAS VIVAS: enlace de nodo VIVO que resuelve al PROPIO nodo ==
+enlaces: 33   nodos: 27
+directas (dest == nid literal): 0   via alias: 33
+  costo_de_mala_calidad_copq                    7  [previos:costo_de_mala_calidad_copq_3, previos:costo_de_mala_calidad_3, siguientes:categorias_copq, siguientes:costo_de_mala_calidad_copq_2, siguientes:costo_de_mala_calidad_copq_3, siguientes:categorias_costos_calidad, siguientes:costos_ocultos_calidad]
+  analisis_de_cohortes                          1  [previos:cohort_analysis_retencion]
+  analisis_flujo_de_valor                       1  [previos:value_stream_analysis_lean]
+  buyin_customer_development                    1  [previos:buy_in_customer_development]
+  cronograma_proyecto                           1  [previos:project_schedule]
+  cuatro_etapas_del_pensamiento_creativo        1  [siguientes:wallas_cuatro_etapas_pensamiento_creativo]
+  cumplimiento_inversionistas_acreditados       1  [previos:inversionistas_acreditados]
+  customer_needs_spreadsheet                    1  [previos:hoja_necesidades_cliente]
+  customer_retention_tactics                    1  [previos:customer_retention_strategy]
+  decision_pivotar_o_proceder                   1  [previos:revalidar_modelo_negocio]
+  definicion_sprint_terminado_fisico            1  [siguientes:definicion_sprint_terminado]
+  diseno_experimentos_pass_fail                 1  [siguientes:pass_fail_experiment_design]
+  diseno_landing_page                           1  [siguientes:diseno_landing_page_conversion]
+  diseno_para_el_ciclo_completo                 1  [previos:diseno_ciclo_completo_equipo]
+  eleccion_abogado_franquicias                  1  [siguientes:contratacion_abogado_franquicia]
+  elevated_surfaces_fall_protection             1  [siguientes:superficies_elevadas_proteccion_caidas]
+  gestion_portafolio_formal                     1  [previos:portafolio_formal_management]
+  lockout_tagout_procedures                     1  [previos:procedimientos_lockout_tagout]
+  medir_comportamiento_cliente_mvp              1  [previos:medir_comportamiento_y_entusiasmo_del_cliente]
+  medir_huella_carbono_corporativa              1  [previos:evaluar_huella_carbono]
+  metodo_strategic_buckets                      1  [previos:strategic_buckets]
+  metricas_accionables                          1  [siguientes:vanity_metrics_vs_accionables]
+  multi_sided_platforms                         1  [siguientes:multi_sided_platform_pattern]
+  redundancia_en_diseno                         1  [previos:redundancia_diseno_confiabilidad]
+  reglas_gestion_riesgo_gambling                1  [previos:gestion_riesgo_incremental]
+  reporte_estado_miembro_equipo                 1  [previos:team_member_status_report]
+  search_for_business_model                     1  [previos:definicion_startup]
+
+== B) LAS RECIPROCAS LITERALES en el gemelo deprecado ==
+enlaces: 33   nodos: 32
+reciprocas que NO estan escritas en el gemelo: 0
+
+== C) LAS ALIAS CONTRA ALIAS, censadas como INERTES (no se tocan) ==
+enlaces: 48   nodos: 33
+  categorias_costos_calidad                     3
+  comunicacion_coordinacion_multiempleador      3
+  establecer_comunicacion_efectiva_contratistas 3
+  comunicacion_coordinacion_multiempleador_2    2
+  costo_de_mala_calidad_3                       2
+  costos_ocultos_calidad                        2
+  establecer_comunicacion_efectiva_hostempleador 2
+  establecer_coordinacion_efectiva_contratistas 2
+  establecer_coordinacion_efectiva_hostempleador 2
+  metabolismo_biologico                         2
+  metabolismo_tecnico                           2
+  verificacion_implementacion_programa_sst      2
+
+== LA PARTICION ==
+lado deprecado bajo criterio B: 81 = 33 reciprocas + 48 inertes
+solape entre las dos mitades: 0
+
+== LO QUE OP-S-07 RETIRA ==
+entradas a retirar: 66  (33 vivas + 33 reciprocas)
+ficheros tocados: 59
+
+EJEMPLAR ESCRITO EN EL PLAN: analisis_flujo_de_valor -> [('analisis_flujo_de_valor', 'nodos_previos', 'value_stream_analysis_lean')]
+  value_stream_analysis_lean existe: True  deprecado: True  resuelve a: analisis_flujo_de_valor
+
+== SIMULACION (P.7): copia en memoria, CERO escrituras ==
+enlaces antes: 16866   despues: 16800   baja: 66
+entradas efectivamente quitadas: 66
+auto aristas de nodo VIVO tras resolver, en la copia: 0 en 0 nodos
+inertes en la copia (no se tocaron): 48
+SIMULACION OK
