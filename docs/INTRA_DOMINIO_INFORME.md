@@ -16450,10 +16450,14 @@ los once discutibles del tramo, ONCE de ONCE citan hoy el `entregable_esperado`.
 ---
 
 
-## 101. CUATRO ADJUDICACIONES DEL AUDITOR (vuelta 11, sobre el cierre de la Fase I), registradas
-## para que la Fase III las tenga disponibles
+## 101. ~~CUATRO~~ **CINCO** ADJUDICACIONES DEL AUDITOR (vuelta 11, sobre el cierre de la Fase I),
+## registradas para que la Fase III las tenga disponibles
 
-**Ninguna de las cuatro toca el marcador ni una sola clase.** Se citan aqui con la regla de la que
+**CORRECCION DECLARADA (vuelta 12): la 101.e se registra esta vuelta**, la propia acta de la
+vuelta 11 (adjudicacion 4.3) traia una quinta adjudicacion que el reporte de esa vuelta no alcanzo
+a registrar aqui; el encargo de la vuelta 12 la cierra.
+
+**Ninguna de las cinco toca el marcador ni una sola clase.** Se citan aqui con la regla de la que
 cuelgan, tal como pide el encargo de la vuelta 11.
 
 ### 101.a El banco 9.6.3 no bloquea la mutua del 3.363
@@ -16487,5 +16491,26 @@ admite en la cola de relectura post fusion solo pares B y C (docs/plan/08_VERIFI
 DE RELECTURA POST FUSION"). Los 96 B y C del catalogo entero viven en `core` (94) y `compras` (2);
 ninguno en `seguridad_digital`. Por tanto las tres fusiones de `seguridad_digital` no anaden filas a
 esa cola.
+
+### 101.e Cuando el acto de quince de `health_safety` se ejecute, el superviviente conserva el
+### CONTRASTE DE SEIS EJES de `vieja_vision_vs_nueva_vision_seguridad`
+
+**Adjudicacion del auditor (Opus 5, acta vuelta 11, seccion 4.3), registrada aqui por el encargo de
+la vuelta 12.** El nodo `vieja_vision_vs_nueva_vision_seguridad` repite CUATRO VECES contra cuatro
+supervivientes distintos dentro del acto de quince de `health_safety` (la familia entera de vieja
+vision contra nueva vision del error humano) y muere en las cuatro. Su contraste de SEIS EJES es
+catalogo:
+
+1. personas como problema o como recurso
+2. actitudes o condiciones
+3. ausencia de eventos o presencia de capacidades
+4. staff o linea
+5. reglas o contexto
+6. hacer imposible el error o dar espacio para hacer lo correcto
+
+**Misma regla que 101.c: una fusion que se lleve solo un lado es perdida de catalogo no
+declarada.** Cuando la fusion del acto de quince se ejecute en la Fase III, el superviviente que
+absorba a `vieja_vision_vs_nueva_vision_seguridad` (en cualquiera de sus cuatro fusiones) tiene que
+llevar los seis ejes; ninguno es prescindible.
 
 ---

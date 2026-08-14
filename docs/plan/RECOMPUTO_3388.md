@@ -38,11 +38,23 @@ no fusiona ningun par de las 583 A en si mismo. **El retrato de las A vigentes a
 
 **COMPROBACION CRUZADA con la evidencia vieja:** las A con `puesto_intra <= 2117`, resueltas y
 deduplicadas, dan **401** pares, contra las **400 A vigentes al puesto 2117** citadas como
-evidencia de `OP-U-01`. **Diferencia de una unidad, no investigada: fuera del alcance de este
+evidencia de `OP-U-01`. ~~**Diferencia de una unidad, no investigada: fuera del alcance de este
 recomputo** (la evidencia vieja no publica su comando ni su lista, asi que no hay con que
 diferenciar). Se deja escrita como pregunta abierta, no como discrepancia que pare la vuelta:
 ninguna cifra publicada con corte se contradice, la vieja no trae instrumento reproducible con el
-que comparar par por par.
+que comparar par por par.~~
+
+**CORRECCION DECLARADA (vuelta 12, auditor Opus 5, verificada por el ejecutor con instrumento
+propio antes de escribirse): la diferencia de una unidad ESTA RESUELTA, PAR POR PAR, Y NO ES UNA
+CONTRADICCION.** El repositorio guarda el archivo al corte exacto (`git show
+c16a24f5:docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, 11 ago 2026, 2.117 lineas). Comparado clase a clase
+contra el archivo de hoy en ese mismo tramo (2.117 primeras lineas): **cambia UNA sola clase, el
+puesto 2.078** (`elaboracion_fdd` contra `preparar_fdd`, dominio `franquicias`), **D el 11 ago 2026
+y A hoy por correccion posterior declarada**. El archivo viejo tiene exactamente **400 A**. **No
+hay descuadre: hay una correccion declarada, y cada cifra es correcta en su corte** (banco 9.21,
+"toda cifra de cruce lleva su fecha de corte"). Verificado por el ejecutor con un script propio de
+comparacion linea a linea contra el blob del commit `c16a24f5`: un solo cambio de clase en las
+2.117 lineas, exactamente el 2.078, exactamente D a A.
 
 ---
 
@@ -174,15 +186,47 @@ mixto) tienen alguna arista anterior al 2.117**, o sea que son continuacion de a
 en alguna forma (abierto o cerrado) al corte viejo; **12 son enteramente nuevos**, formados por
 completo dentro del cribado que corrio despues del 2.117. **Ninguno de los cinco actos grandes
 nombrados en la tabla del paso 3 aparece entre los enteramente nuevos** (los cinco tienen su A mas
-vieja anterior al 2.117, verificado). **Con esa cautela declarada: no se puede decir con certeza
+vieja anterior al 2.117, verificado). ~~**Con esa cautela declarada: no se puede decir con certeza
 cuantos de los 48 antiguos cerraron**, porque un acto abierto viejo pudo haberse partido o fundido
-con otro por una A nueva y el proxy de edad no distingue eso de una simple continuacion. **Lo que
-si se puede decir, medido:** ninguno de los CINCO actos grandes identificables por nombre paso de
-abierto a cerrado, y **113 actos son enteramente producto del cribado que corrio entre el 2.117 y
-el 3.388** (los 1.271 pares que faltaban), de los cuales **101 nacieron ya cerrados** (en su
-mayoria pares de dos de `quality`, que aporta 25 de las 28 fusiones mutuas del catalogo) y **12
-nacieron abiertos** (entre ellos las dos componentes nuevas mas grandes, tamano 15 en
-`health_safety` y tamano 10 en `quality`).
+con otro por una A nueva y el proxy de edad no distingue eso de una simple continuacion. Lo que
+si se puede decir, medido: ninguno de los CINCO actos grandes identificables por nombre paso de
+abierto a cerrado, y 113 actos son enteramente producto del cribado que corrio entre el 2.117 y
+el 3.388 (los 1.271 pares que faltaban), de los cuales 101 nacieron ya cerrados (en su
+mayoria pares de dos de `quality`, que aporta 25 de las 28 fusiones mutuas del catalogo) y 12
+nacieron abiertos (entre ellos las dos componentes nuevas mas grandes, tamano 15 en
+`health_safety` y tamano 10 en `quality`).~~
+
+**CORRECCION DECLARADA (vuelta 12, auditor Opus 5, VERIFICADA POR EL EJECUTOR CON INSTRUMENTO
+PROPIO, no solo transcrita): el mapeo de los 48 antiguos SI se puede hacer 1 a 1, sin proxy.** La
+condicion que lo permite: **la cola `docs/INTRA_DOMINIO_PARES.jsonl` esta completa en 3.388 pares
+desde el 9 ago 2026** (`c442345a`, "la cola completa, 3388 pares ordenados") **y no se ha tocado
+desde entonces** (`git diff --stat c442345a -- docs/INTRA_DOMINIO_PARES.jsonl` vacio), asi que la
+cola contra la que se midio `OP-U-01` el 11 ago 2026 es la misma de hoy. **Metodo:** se vuelve a
+correr la medicion de `OP-U-01` sobre el mismo archivo, truncado al corte viejo (2.117 lineas) y
+**excluyendo la correccion posterior del 2.078** (forzado a D, su clase el 11 ago), con el
+CRITERIO ORIGINAL DE DOS CONDICIONES escrito en la nota de `OP-U-01`/`OP-U-02`: (1) todos los pares
+posibles entre miembros ya leidos, y (2) **ningun miembro tiene un par pendiente en la cola sin
+leer, CONTRA CUALQUIER NODO, no solo contra otro miembro del acto**. Con la condicion (2) medida en
+su forma completa (no solo pares internos al acto, que es la simplificacion valida SOLO cuando la
+cola esta agotada, como al corte 3.388), **el ejecutor reproduce la cifra publicada EXACTA**: 221
+componentes sobre 576 nodos, **173 cerrados sobre 371** (149 de dos, 23 de tres, uno de cuatro),
+**48 abiertos sobre 205**, motivos **42 por par interno mas 6 por miembro pendiente**. Con esa
+membresia:
+
+| los 48 actos abiertos del 2.117 | cuantos | verificado |
+|---|---:|---|
+| **CERRARON** (mismos miembros, hoy CERRADO) | **5** | si |
+| siguen abiertos, identicos, sin crecer | **42** | si |
+| siguen abiertos y CRECIERON | **1** | si (`gestion_terminacion_franquiciado` con `terminacion_franquiciado_causas`, de 2 a 3) |
+
+Y por el otro lado: **114 actos de hoy no contienen ni un nodo que estuviera en un acto del 2.117**;
+**102 de esos nacieron cerrados y 12 nacieron abiertos**. Las cuentas cierran: 173 + 5 + 102 =
+**280**; 42 + 1 + 12 = **55**. **El proxy de edad de arista de arriba (221/1/113, con 101 nacidos
+cerrados y 12 abiertos) difiere en exactamente una unidad, y la unidad es el mismo 2.078**: su
+arista es anterior al 2.117, asi que el proxy lo llama continuacion, pero en el corte viejo ese
+par era D y su acto no existia. Las dos mediciones son coherentes entre si una vez nombrada la
+causa. **Ninguno de los cinco actos grandes identificables por nombre cerro ni cambio de
+tamano**, confirmado con las dos vias.
 
 ---
 
@@ -203,13 +247,48 @@ resolutor no resolvio), y las dos sumas de control (nodos y aristas) cierran exa
 
 ---
 
+## POR QUE LA DIFERENCIA DE `OP-E-03` (387 FILAS) NO BAJO, CERRADO
+
+**Pregunta abierta de la TAREA 3 de la vuelta 11** (`docs/loop/REPORTE.md` de esa vuelta, que se
+sobreescribe por vuelta, y `docs/plan/08_VERIFICACION.md`): el encargo de esa vuelta esperaba que
+la diferencia del barrido calibrado contra la cola BAJARA una vez que `risk_management`,
+`seguridad_digital` y `quality` cerraran su cribado, porque el ensayo en vacio del 11 ago 2026
+(387 de 477) se corrio cuando esos tres dominios (`quality` sobre todo) todavia no tenian cola.
+**No bajo: sigue en 387 de 477, byte por byte identico.**
+
+**CORRECCION DECLARADA (vuelta 12, auditor Opus 5, adjudicacion 2.c de su acta): la expectativa de
+baja fue un error del auditor, no del ejecutor, y la razon decisiva se lee directo en el script.**
+`scripts/plan/diferencia_contra_cola.py` compara cada candidato del barrido contra la **UNION** de
+`docs/INTRA_DOMINIO_PARES.jsonl` (la cola PLANIFICADA) **mas** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+(los pares ya leidos), y **la primera esta completa en 3.388 pares desde el 9 ago 2026** (`c442345a`,
+verificado sin diferencia contra el estado de hoy). **La cola planificada no crece cuando un
+dominio se criba: crece el archivo LEIDO, que ya estaba dentro de la union desde antes.** Por eso
+el 387 no podia moverse pasara lo que pasara con `quality`, `risk_management` o `seguridad_digital`:
+esos tres dominios ya aportaban sus pares a la union por el lado de `INTRA_DOMINIO_PARES.jsonl`
+desde el 9 ago, antes incluso del ensayo en vacio del 11 ago que produjo el 387. **El ejecutor de
+la vuelta 11 hizo bien en publicar la cifra sin forzar la baja**; su explicacion de entonces
+(heuristicas de generacion de candidatos distintas, solape estructuralmente chico) es cierta pero
+no era la razon decisiva. Queda escrita aqui la razon decisiva, para que ningun encargo futuro
+vuelva a pedir una baja imposible.
+
+---
+
 ## LO QUE ESTE RECOMPUTO NO DECIDE
 
-**Ninguna operacion cambia de estado con este documento.** `OP-U-02` queda con la evidencia de
+~~**Ninguna operacion cambia de estado con este documento.** `OP-U-02` queda con la evidencia de
 arriba, a la espera de que el auditor verifique las cuatro comprobaciones y autorice el paso a
 LISTA en el encargo siguiente. `OP-U-01`, `OP-L-02`, las cinco mesas y las seis `OP-D-*` siguen con
 sus cifras del corte 2.117 hasta esa misma autorizacion (banco del plan P.12: el cierre transitivo
-CONVOCA, no decide; una componente medida no es una fusion aprobada).
+CONVOCA, no decide; una componente medida no es una fusion aprobada).~~
+
+**CORRECCION DECLARADA (vuelta 12): la autorizacion ya se dio.** El auditor (Opus 5, acta vuelta
+11, adjudicacion 4.1) verifico las cuatro comprobaciones con instrumento propio, con la prueba
+extra de identidad conjunto a conjunto de las 335 componentes, y autorizo el paso. **Esta misma
+vuelta, `docs/plan/OPERACIONES.jsonl` SI se edita** (TAREA 2.A del encargo): `OP-U-02` pasa a
+LISTA con `fecha_corte` 2026-08-13, y `OP-U-01`, `OP-L-02`, las cinco mesas y las seis `OP-D-*`
+reescriben sus cifras con el corte 3.388 al lado del corte 2.117 (banco 9.21, la vieja no se
+borra). El recomputo en si (este documento) sigue siendo lectura pura: la escritura vive en
+`OPERACIONES.jsonl`, no aqui.
 
 **El fichero de detalle, con las 335 componentes fila por fila (miembros, cobertura, clases
 internas, estado, edad), vive en** `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`, **solo lectura,
