@@ -71,6 +71,30 @@ en `scripts/run_phase1.py`: *primero se reaplica, despues se sincroniza*), y sin
 con que el fichero del dataset calce con HEAD, **tienen que calzar LOS DOS**, el del dataset y
 el de `web/lib/assets/`.
 
+##### REGISTRO QUE FALTABA: **CONTRA QUE HEAD SE MIDE EL COMANDO 3** (14 ago 2026, vuelta 27)
+
+**Encargado por el acta de la vuelta 26 del auditor, y responde a la pregunta 4 del reporte de
+la vuelta 26.** La fila del comando 3 dice *las dos copias byte identicas a HEAD* y no decia
+CUAL HEAD, y el dia que una operacion cambia el grafo esa frase sola es incumplible: antes del
+commit el HEAD todavia es el de la operacion anterior, asi que las dos copias buenas y recien
+sincronizadas **no** calzan con el.
+
+> **LA VARA DEL COMANDO 3 SE MIDE CONTRA EL HEAD QUE TRAE EL COMMIT DE ESTA VUELTA**, no
+> contra un blob citado en una pagina vieja ni contra el HEAD anterior a la operacion. Es
+> **exactamente el mismo motivo** por el que el comando 2 ya lleva su calificador de corte: un
+> blob escrito en una pagina es **registro historico**, y la **vara operativa** es *byte
+> identico al HEAD DEL MOMENTO*, medida con `git hash-object` contra
+> `git rev-parse HEAD:<ruta>` **despues de commitear la operacion**.
+
+| momento | que dice el comando 3 | como se lee |
+|---|---|---|
+| **antes del commit** | las dos copias iguales **entre si**, y distintas de HEAD si la operacion toco el grafo | **no es un rojo**: es la operacion todavia sin commitear |
+| **despues del commit** | las dos copias **byte identicas a HEAD**, mismo blob | **esta es la vara**, y es la que se publica en el reporte |
+
+**LO QUE SIGUE SIENDO ROJO, y por eso el registro no ablanda nada:** que las dos copias
+difieran **ENTRE SI** en cualquier momento, antes o despues del commit. **Esa es la averia que
+el comando 3 vino a cazar**, y no depende de contra que HEAD se mire.
+
 #### REGISTRO: **`git status` NO ES LA VARA DE ESTE FICHERO** (14 ago 2026)
 
 **En Windows, el simple hecho de tocar `dataset/metadata/master_graph.json` reemplaza
