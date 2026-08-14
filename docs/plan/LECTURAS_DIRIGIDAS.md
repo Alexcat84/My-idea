@@ -437,7 +437,9 @@ umbral, *si el problema percibido es pequeno en relacion al costo de tu solucion
 ## LA SUPERVISION DE LA IA, bloque humano: 10 de 10, y cae
 
 **Cinco nodos de Mollick**, el bloque humano de la particion provisional 5 mas 4
-mas 1. Iban 7 de 10, los siete en A.
+mas 1. Iban ~~7 de 10, los siete en A~~ **CORREGIDO EN LA VUELTA 16: 7 en cola, 5 en A y 2 en D**
+(166, 293, 692, 792 y 1.041 en A; 1.496 y 1.541 en D). Ver `docs/loop/ACTA_AUDITOR.md` VUELTA 15
+seccion 3.
 
 | par | clase |
 |---|:---:|
@@ -462,7 +464,9 @@ existen, respuestas dadas con demasiada seguridad) y **a decidir de antemano** e
 que casos la IA actua sola; el segundo trae **la rotacion de tareas y la medicion
 comparativa**.
 
-> **NUEVA FORMA: 10 de 10, 7 en A y 3 en D. MEZCLADO, con cobertura COMPLETA.**
+> **NUEVA FORMA: 10 de 10, ~~7 en A y 3 en D~~ CORREGIDO EN LA VUELTA 16: 5 en A y 5 en D. MEZCLADO,
+> con cobertura COMPLETA.** El conteo de diez pares no cambia; el reparto de clases si (caida del
+> auditor, comparo texto en vez de recomputar, ver `docs/loop/ACTA_AUDITOR.md` VUELTA 15 seccion 3).
 > **Y la particion 5 mas 4 mas 1 no se toca**: estas tres lecturas son internas al
 > bloque humano y **no cruzan al bloque del mapa**, que es lo unico que podria
 > unirlos.
@@ -572,8 +576,13 @@ los ocho del portafolio, mas dos que dicen si los tres actos son uno.**
 **un solo nodo repite** con las puertas; `gestion_portafolio_dos_niveles` **ya escribe
 la frontera** dentro de su texto; y **los tres actos NO son uno**: son **madre e hijo**.
 
-**LA COBERTURA DE `OP-M-01` PASA DE 23 DE 136 A 49 DE 136**, y **con el 100% de lo que
+**LA COBERTURA DE `OP-M-01` PASA DE 23 DE 136 A ~~49 DE 136~~**, y **con el 100% de lo que
 decide leido**.
+
+> **CORREGIDO EN LA VUELTA 16:** contando solo esta tanda de 26. La sexta y septima tanda de abajo
+> (`LD-58` a `LD-65`) trae cinco lecturas mas internas a la mesa unida que esta seccion no sumaba.
+> **LA COBERTURA REAL DE `OP-M-01` ES 54 DE 136.** Ver `docs/loop/ACTA_AUDITOR.md` VUELTA 15 seccion 2
+> y `docs/plan/RECOMPUTO_3388.md` seccion TAREA vuelta 16.
 
 ---
 

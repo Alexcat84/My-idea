@@ -639,7 +639,21 @@ nota de `OP-L-02` en `OPERACIONES.jsonl` ("bloque humano de la IA 10 de 10 con 7
 
 **El bloque humano de la supervision de la IA tiene CINCO nodos y DIEZ pares posibles (no diez nodos
 y cuarenta y cinco pares, que es el racimo entero de la supervision de la IA, otro universo). Los diez
-estan leidos: cobertura COMPLETA, 7 en A y 3 en D.**
+estan leidos: cobertura COMPLETA, ~~7 en A y 3 en D~~.**
+
+**REPARTO DE CLASES CORREGIDO EN LA VUELTA 16 (caida MIA del auditor, no del ejecutor de esta tanda; ver
+`docs/loop/ACTA_AUDITOR.md` VUELTA 15 seccion 3): el "7 A y 3 D" se copio de la nota vieja de `OP-L-02`
+comparando texto en vez de recomputar los diez pares. Remedido contra `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+con instrumento propio: de los siete en cola, `166` `human_in_the_loop_ia`-`principio_humano_en_el_loop`
+A, `293` `mitigar_falling_asleep_wheel`-`riesgo_sobredependencia_ia` A, `692`
+`alineacion_etica_ia_negocio`-`principio_humano_en_el_loop` A, `792`
+`alineacion_etica_ia_negocio`-`human_in_the_loop_ia` A, `1.041`
+`human_in_the_loop_ia`-`mitigar_falling_asleep_wheel` A, `1.496`
+`human_in_the_loop_ia`-`riesgo_sobredependencia_ia` D, `1.541`
+`mitigar_falling_asleep_wheel`-`principio_humano_en_el_loop` D (5 A, 2 D); mas las tres dirigidas, las
+tres D. **EL REPARTO REAL ES 10 DE 10, CINCO A Y CINCO D, no siete y tres.** El conteo de diez pares
+sigue siendo correcto: solo el reparto de clases cambia. No mueve la forma (sigue MEZCLADO) ni el 18 de
+45 del racimo entero.**
 
 ~~El racimo entero (diez nodos, cuarenta y cinco pares) sigue con cobertura 10 de 45: los diez pares
 leidos son justo los internos al bloque humano; los 35 restantes cruzan contra el bloque del mapa y
@@ -844,15 +858,24 @@ correspondiente, y se verifico que esos pares NO estan en la cola (para no conta
 | el compromiso contado tres veces | 3 | 3 | 3 de 3 (todo en cola) | ninguna, cobertura completa |
 | la seleccion de canal | 5 | 10 | 10 de 10 (9 A, 1 D): 8 en cola mas `LD-02` y `LD-03` | `LECTURAS_DIRIGIDAS.md` lineas 95 y 112 |
 | **la supervision de la IA** | 10 | 45 | **18 de 45** (8 A, 10 D): 15 en cola mas 3 lecturas dirigidas | TAREA 1 de esta vuelta |
-| la mesa unida de puertas y portafolio | 17 | 136 | 49 de 136: 23 en cola mas 26 de `LD_MESA_UNIDA.md` | `EXPEDIENTE_MESA_UNIDA.md` linea 291 |
+| la mesa unida de puertas y portafolio | 17 | 136 | ~~49 de 136: 23 en cola mas 26 de `LD_MESA_UNIDA.md`~~ **54 de 136 (23 A, 2 B, 2 C, 27 D): 23 en cola mas 31 dirigidas unicas, corregido vuelta 16** | `EXPEDIENTE_MESA_UNIDA.md` linea 291, corregido en TAREA vuelta 16 punto 1 |
 | el racimo del pivote | 7 | 21 | 13 de 21 (todo en cola) | ninguna encontrada, cobertura incompleta |
 | la serie de Coleman | 28 | 378 | 45 de 378: 41 en cola mas `LD-28` a `LD-31` (4 D) | `EXPEDIENTE_MESA_COLEMAN.md` linea 41 y nota de `INVENTARIO.jsonl` |
 
-**RESULTADO: DOCE de los trece racimos VERIFICAN IDENTICOS a la cifra que ya tenia `INVENTARIO.jsonl`,
+~~**RESULTADO: DOCE de los trece racimos VERIFICAN IDENTICOS a la cifra que ya tenia `INVENTARIO.jsonl`,
 puesto por puesto y clase por clase, sin que ningun pareto nuevo entrara a sus nominas entre el corte en
 que se midieron y el 3.388.** El unico que cambio es **la supervision de la IA**, corregido en la TAREA 1
 de esta misma vuelta (10 de 45 falso, 18 de 45 real). El numero de racimos con nombre sigue en **TRECE**:
-no aparecio ninguno nuevo ni se fusiono ninguno.
+no aparecio ninguno nuevo ni se fusiono ninguno.~~
+
+**FALSO, CORREGIDO EN LA VUELTA 16 (caida de cifra publicada, ver `docs/loop/ACTA_AUDITOR.md` VUELTA 15
+seccion 2 y TAREA vuelta 16 punto 1).** El instrumento de esta tabla cruzaba la nomina contra la cola
+mas solo UNO de los cuatro registros `LD_*.md` (`LD_MESA_UNIDA.md`); no sumaba `LD_CADENA.md` ni
+`LD_ACTO_DE_SEIS.md`, que traen cinco lecturas mas internas a la mesa unida (`LD-58`, `LD-60`, `LD-61`,
+`LD-63`, `LD-64`, ejecutadas el mismo 12 ago 2026). Con el instrumento corregido, **TRECE de trece
+racimos verifican identicos a como estaban ANTES de esta vuelta 16**, pero **la mesa unida no era 49 de
+136: es 54 de 136** (23 en cola mas 31 dirigidas unicas, 23 A, 2 B, 2 C, 27 D). El numero de racimos con
+nombre sigue en **TRECE**: no aparecio ninguno nuevo ni se fusiono ninguno.
 
 #### d. Familias de ids, figuras y defectos: cuales dependen del corte y cuales no
 

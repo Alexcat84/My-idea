@@ -288,8 +288,14 @@ saber si los tres actos son uno.
 | **D** | **23** |
 | B | **0** |
 
-**LA COBERTURA DE LA MESA PASA DE 23 DE 136 A 49 DE 136**, del **17% al 36%**, y con
+**LA COBERTURA DE LA MESA PASA DE 23 DE 136 A ~~49 DE 136~~**, del **17% al 36%**, y con
 **el 100% de lo que decide leido**.
+
+> **CORREGIDO EN LA VUELTA 16:** esta cuenta solo suma las 26 lecturas de este archivo. Sumando ademas
+> las cinco de `LD_CADENA.md` y `LD_ACTO_DE_SEIS.md` que tambien son internas a la mesa unida (`LD-58`,
+> `LD-60`, `LD-61`, `LD-63`, `LD-64`, ejecutadas el mismo dia), **LA COBERTURA REAL ES 54 DE 136**, del
+> 17% al 40%. Ver `docs/loop/ACTA_AUDITOR.md` VUELTA 15 seccion 2 y `docs/plan/RECOMPUTO_3388.md`
+> seccion TAREA vuelta 16.
 
 ## 1. QUE DICEN DEL CRUCE DE LA FRONTERA VIEJA
 

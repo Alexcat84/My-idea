@@ -301,6 +301,11 @@ que decidiste**, con sus cinco salidas.
 | **DOS enlaces mutuos** | `LD-41` y `LD-43`. Se arreglan con **dos aristas cada uno**, no con fusion |
 | **CATORCE enlaces nuevos** | los D con jerarquia madre e hijo, que hoy no tienen arista |
 
-> **LA MESA YA NO SE SIENTA A CIEGAS: SE SIENTA CON 49 DE 136 PARES**, y **con los
+> **LA MESA YA NO SE SIENTA A CIEGAS: SE SIENTA CON ~~49 DE 136 PARES~~**, y **con los
 > veintiseis que cruzan la frontera leidos.** **De un 17% de cobertura a un 36%, y el
 > 100% de lo que decide.**
+
+> **CORREGIDO EN LA VUELTA 16:** esta cifra es solo la de este archivo (26 lecturas). Sumando las cinco
+> lecturas mas de `LD_CADENA.md` y `LD_ACTO_DE_SEIS.md` que tambien viven dentro de la mesa unida
+> (`LD-58`, `LD-60`, `LD-61`, `LD-63`, `LD-64`), **LA COBERTURA REAL ES 54 DE 136**, del 17% al 40%.
+> Ver `docs/loop/ACTA_AUDITOR.md` VUELTA 15 seccion 2.
