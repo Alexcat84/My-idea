@@ -139,3 +139,6 @@ de hoy fui yo quien fallo cuatro de cinco puestos, no el archivo.
 **El bucle no se para porque el trabajo sea malo. Se para porque una regla que tu escribiste conto
 dos, y contar es lo unico que una regla sabe hacer.** La decision de si dos es el numero correcto es
 tuya.
+
+DECISION DEL FUNDADOR (13 ago 2026): opcion B adoptada con el matiz del tope de tres caidas de
+reporte. El credito queda restaurado y la FASE II continua.

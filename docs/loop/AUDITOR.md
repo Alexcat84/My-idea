@@ -100,7 +100,16 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
   repo, tocar produccion fuera de la rama de la pasada).
 - Fallo tecnico repetido (hook o Gate 0 en rojo dos vueltas seguidas por la
   misma causa sin regla que lo resuelva).
-- Credito de tanda roto (discrepancia fuera del marcado) dos tandas seguidas.
+- Credito de tanda roto, con la regla afinada por decision del fundador (13
+  ago 2026):
+  - **Caida de CLASE o de CIFRA PUBLICADA** (un veredicto, el marcador, o una
+    cifra que vive en `docs/plan/` o en el banco): cuenta para el credito y
+    para la parada. **Dos tandas seguidas: PARADA.**
+  - **Caida de REPORTE** (una afirmacion equivocada que vive solo en
+    `REPORTE.md` y no mueve ningun dato): se registra con nombre en el acta
+    y dispara la relectura al doble del tramo, pero **NO** acumula para la
+    parada. **TRES seguidas si son PARADA**: tres de la misma especie ya no
+    son ruido, son un patron de dictado suelto.
 - Campaña consumada: la parada feliz, con el reporte final. Aqui PARA_ALEXIS.md
   PIDE el merge de `pasada-unica` a staging con el estado verde delante; no lo
   hace. El merge a staging o a produccion es siempre decision de fundador.
