@@ -1,0 +1,45 @@
+﻿  [OK] Todos los nodos tienen dominio valido (['compras', 'core', 'entrega', 'environmental', 'exportacion', 'franquicias', 'health_safety', 'quality', 'risk_management', 'seguridad_digital']) (valor: 0)
+  [OK] Archivos con nombre no-ASCII == 0 (valor: 0)
+  [OK] Nodos en master_graph.json == archivos en disco (valor: 3836 vs 3836)
+  [OK] Componentes conexos <= 2 (valor: 1)
+  [OK] Cobertura del componente principal >= 99% (valor: 100.0)
+  [OK] Todos los JSON parsean sin error (valor: 0)
+  [OK] Cero grupos con titulo_concepto exacto duplicado (valor: 0)
+  [OK] Cero aristas con vista reciproca faltante (simetria) (valor: 0 (sin previo reciproco: 0, sin siguiente reciproco: 0))
+  [OK] Universo: activos / deprecados (valor: 3522 activos, 314 deprecados (siguen en el grafo))
+  [OK] Ningun nodo ACTIVO cuya unica entrada este deprecada (valor: 0 fantasmas)
+  [FALLO] Todo nodo ACTIVO tiene vector en el indice semantico (valor: 1 activos sin vector: ['zzz_prueba_vuelta26_nodo_nuevo'] -> corre el reindex ANTES de usar esta copia: python scripts/build_semantic_index_voyage.py && python scripts/sync_assets_web.py)
+  [OK] Ningun nodo lleva su propio id en su ids_alias (auto-alias) (valor: 0 auto-alias)
+  [OK] Ningun alias es reclamado por dos nodos distintos (valor: 0 con dos duenos)
+  [FALLO] Los dos master_graph (dataset y web) dicen lo mismo (valor: 73 nodos divergentes: ['actualizar_business_model_canvas_discovery (etiqueta_arbol)', 'actualizar_business_model_canvas_tuneup (etiqueta_arbol)', 'actualizar_modelo_de_negocio_pivot_o_proceed (etiqueta_arbol)'] -> ANTES de usar esta copia, EN ESTE ORDEN: python scripts/etiquetas_de_cara.py --aplicar && python scripts/sync_assets_web.py)
+  [OK] Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista via alias) (valor: 0 auto-aristas)
+  [OK] Ninguna clave de nodo fuera de la lista blanca del esquema (valor: 0 renegadas)
+  [OK] Ninguna semilla de entrada esta deprecada (valor: 0 deprecadas)
+  [OK] Ningun puente aprobado apunta a un nodo deprecado (valor: 0 rotos)
+  [OK] Alcanzabilidad dirigida >= 99.5% desde entry_seeds.json (valor: 100.0% (3522/3522 activos, semillas validas: 85))
+
+--- Estadisticas del grafo ---
+{
+  "componentes_conexos": 1,
+  "tamano_componente_principal": 3836,
+  "cobertura_componente_principal_pct": 100.0,
+  "nodos_sin_enlaces_entrantes": 6,
+  "enlaces_rotos_en_grafo": 0
+}
+
+--- Warning informativo: pares de titulo con similitud >= 95 (13) ---
+  [99.2] crosby_estilo_ballet_vs_hockey  <->  estilo_gerencial_ballet_vs_hockey
+  [98.7] ciclo_venta_calidad_franquicia  <->  ciclo_ventas_calidad_franquicia
+  [97.6] capacidad_de_proceso  <->  capacidad_del_proceso
+  [97.3] control_estadistico_de_procesos  <->  control_estadistico_del_proceso
+  [97.2] carta_de_credito_letter_of_credit  <->  letters_of_credit
+  [97.1] costo_de_mala_calidad_3  <->  costo_mala_calidad_copq
+  [97.0] vehiculos_combustibles_alternativos  <->  vehiculos_combustibles_alternativos_2
+  [96.8] causas_comunes_causas_especiales  <->  causas_comunes_vs_especiales
+  [96.7] investigacion_incidentes  <->  investigacion_incidentes_2
+  [96.4] definicion_calidad_conformidad_requisitos_2  <->  definicion_calidad_conformidad_requisitos_3
+  [96.3] involucramiento_sindical  <->  involucramiento_sindical_calidad
+  [96.1] decision_aptitud_para_uso  <->  decision_aptitud_uso
+  [95.7] eliminacion_causas_error_3  <->  eliminacion_causas_error_4
+
+GATE 0: FALLIDO

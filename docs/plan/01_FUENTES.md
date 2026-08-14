@@ -187,6 +187,85 @@ de **5 mas 4 mas 1** estan **vigentes al puesto 1517, con cobertura de 14 pares 
 **LO QUE BLOQUEA**: `brainstorming_divergente` es uno de los tres, y es el ancla
 del acto mayor del cierre transitivo. **`OP-F-02` bloquea a `OP-D-04`.**
 
+### LA FRONTERA DE LOS TRES DE MOLLICK, leida del grafo y publicada ANTES de cortar
+
+**Escrita el 14 ago 2026 (vuelta 26) al ejecutar `OP-F-02`, por el mismo metodo de la
+tabla de LOS 14 DE HOROWITZ: se lee cada nodo contra sus `pasos_accionables` y se publica
+el tramo.** Los pasos enteros de los tres estan en la salida del instrumento de la vuelta
+(`docs/loop/SALIDA_V26_OPF02_LECTURA.txt`, `scripts/loop/vuelta26_medir.py opf02`); aqui
+va el saldo de la lectura. **Ningun nodo se toco para escribir esta tabla.**
+
+| # | nodo | libros declarados | pasos | frontera leida | **el bloque de Mollick** |
+|---:|---|---|---:|---|---|
+| 1 | `future_scenarios_planning` | Osterwalder \| **Mollick** | **13** | **1 a 5 / 6 a 13** | **apendice AL FINAL**, y **entra DOS VECES**: 6 a 9 y 10 a 13 |
+| 2 | `gut_check` | IDEO \| **Mollick** | **9** | **1 a 4 / 5 a 9** | **apendice AL FINAL** |
+| 3 | `brainstorming_divergente` | Tim Brown \| **Mollick** | **8** | **1 a 4 / 5 a 8** | **apendice AL FINAL** |
+
+**LO QUE SOSTIENE CADA CORTE, y es el ultimo paso del bloque 1 contra el primero del 2:**
+
+| nodo | cierra el bloque 1 | abre el bloque 2 |
+|---|---|---|
+| `future_scenarios_planning` | paso 5, *formular preguntas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$)*: **Canvas es Osterwalder** | paso 6, *que tareas criticas podrian automatizarse bajo crecimiento lineal de IA* |
+| `gut_check` | paso 4, *estar dispuesto a descartar ideas que no superen la evaluacion critica*: cierra el filtro humano de IDEO | paso 5, *describir el plan o modelo de negocio a la IA con suficiente detalle* |
+| `brainstorming_divergente` | paso 4, *registrar todas las ideas visualmente (post-its, pizarra)*: cierra la sesion de Tim Brown | paso 5, *usar la IA como un participante mas en sesiones de brainstorming* |
+
+> **EL PRIMERO NO ES UN SIMPLE APENDICE, y se dice aparte como se dijo de los otros tres
+> del plan.** En `future_scenarios_planning` el bloque de IA **entra dos veces**: los pasos
+> **6 a 9** (automatizacion lineal, capacidad por 10 o por 100, plan de contingencia,
+> revision trimestral) y los **10 a 13** (dos o tres escenarios de evolucion de la IA,
+> impacto, senales de alerta, revision periodica) **son la misma cuenta escrita dos veces**.
+> Es la misma especie de `coeficiente_viral`, y le toca el mismo remedio: **TOQUE UNICO**,
+> se separa el apendice y se desteje la repeticion en el mismo acto.
+
+> **DISCREPANCIA DECLARADA, y no la resuelvo copiando** (regla 1 de `EJECUTOR.md`).
+> `INTRA_DOMINIO_INFORME.md` publica, con su corte anterior, que
+> `future_scenarios_planning` tiene *trece, de los cuales **nueve** son un bloque de IA
+> entero*. **Leido hoy contra sus pasos, el bloque es de OCHO** (6 a 13), porque el paso 5
+> es el del Canvas y es de Osterwalder. **Los cinco elementos que aquella nota enumera
+> estan todos dentro de mis ocho**, asi que la discrepancia es de conteo y no de contenido.
+> **El texto viejo se queda entero donde esta**; esta linea le pone la medida de hoy al
+> lado.
+
+### EL DESTINO DE CADA BLOQUE, decidido POR LECTURA sobre la nomina vigente
+
+**CORRECCION DECLARADA, 14 ago 2026 (vuelta 26), al ejecutar `OP-F-02` con la regla de
+destino por lectura que el fundador escribio en la nota de la operacion.** La nomina
+contra la que se leyo es la **vigente al puesto 1517, DIEZ miembros**, con su cobertura al
+lado como manda el banco 9.26: **14 de 45 pares**, PROVISIONAL. Los diez se leyeron enteros
+hoy contra sus pasos (`docs/loop/SALIDA_V26_RACIMO_IA.txt`).
+
+**EL OBJETO DEL RACIMO, escrito por el propio informe y no por mi:** *el racimo se definio
+por la SUPERVISION, no por la mencion*, y su particion es **quien decide y quien revisa**
+(bloque humano, 5), **probar la maquina tarea por tarea y anotar donde rinde** (bloque del
+mapa, 4) y **los sesgos y la etica del modelo** (el suelto).
+
+| bloque de IA | su objeto, leido | miembro cuyo objeto coincida | **destino** |
+|---|---|---|---|
+| `future_scenarios_planning` **6 a 13** | **planificar frente a la EVOLUCION FUTURA de la IA**: escenario lineal contra exponencial, impacto en el modelo de negocio, plan de contingencia, senales de alerta, revision periodica | **ninguno**. El bloque del mapa prueba lo que la maquina hace **HOY**; ninguno de los diez proyecta lo que hara | **NODO PROPIO** dentro del racimo |
+| `gut_check` **5 a 9** | **someter TU PLAN a la critica de la IA**: diez formas de fallar, una vision de exito alternativa, personajes que lo critican, documento de riesgos | **ninguno**, y la direccion se invierte: en los diez **el humano supervisa a la IA**; aqui **la IA audita al humano** | **NODO PROPIO** dentro del racimo |
+| `brainstorming_divergente` **5 a 8** | **generar ideas CON la IA en la sesion**: participante mas, personas y estilos, lote grande mas filtrado humano, cruce de conceptos | **ninguno**. El mas cercano es `invitar_ia_a_todo` (con `principio_invitar_ia_siempre`), pero su objeto es **probar la IA en todas las tareas para mapear la frontera**, no generar ideas | **NODO PROPIO** dentro del racimo |
+
+> **LA VARA CON QUE DESCARTE AL MAS CERCANO ES LA DEL PROPIO RACIMO**, y no una mia:
+> `INTRA_DOMINIO_INFORME.md` 11.bis.2 la escribio al decidir dos absorciones opuestas:
+> **una pareja vecina se absorbe cuando HACE LO MISMO que un miembro, y no cuando
+> DESARROLLA UNA LINEA suya.** El bloque de `brainstorming_divergente` **desarrolla una
+> linea** de *invitar la IA a todo*: es una aplicacion a la ideacion, no el mismo acto. Por
+> esa vara **no se absorbe**.
+
+> **Y LO QUE ESTE DESTINO CONFIRMA, dicho porque es lo contrario de lo que parecia:** el
+> aviso del informe de que `future_scenarios_planning` **NO es miembro del racimo** sigue
+> siendo cierto **y ahora se entiende mejor**. El nodo no entra; **su bloque de IA si**, y
+> entra como nodo nuevo, no como miembro reciclado. **Un nodo con pasos de IA no es un nodo
+> del racimo de la IA**, pero un bloque de IA destejido **si puede ser uno**.
+
+**LOS TRES DESTINOS SON NODO PROPIO, Y ESO NO SE PUDO EJECUTAR HOY.** El corte quedo SIN
+HACER y los tres nodos **estan intactos**. El motivo no es de lectura ni de doctrina: es
+que **crear un nodo pone `Gate 0` en ROJO** por el chequeo de vector semantico, y su
+remedio escrito necesita credenciales que estan fuera del repo mientras el bucle corre.
+**Esta medido y reproducido**, y va como PARADA en el reporte de la vuelta 26
+(`docs/loop/REPORTE.md`), con la salida del instrumento en
+`docs/loop/SALIDA_V26_MURO_INDICE.txt`.
+
 ---
 
 ## `OP-F-03`: EL PEGADO DE HUGOS

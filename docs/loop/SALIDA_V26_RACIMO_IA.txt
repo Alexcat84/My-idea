@@ -1,0 +1,163 @@
+﻿RACIMO DE SUPERVISION DE LA IA, nomina vigente al puesto 1517 (10)
+------------------------------------------------------------------------------
+ID      : principio_humano_en_el_loop
+TITULO  : Principio 2: Sé tú quien decide, no la IA (mantente en el ciclo)
+FUENTE  : Co-Intelligence_ Living and Wor - Ethan Mollick
+DOMINIO : core   FASE: ejecucion
+VIVO    : True
+ENTREGABLE: Un protocolo simple donde defines en qué momentos revisas tú lo que hace la IA antes de dejarla actuar
+PASOS   : 4
+   1. Antes de que algo generado por IA llegue a un cliente o se ejecute, revísalo tú mismo, sin excepción
+   2. Aprende a reconocer cuándo la IA está inventando: citas que no existen, datos que no puedes comprobar, respuestas dadas con demasiada seguridad
+   3. Nunca tomes una respuesta de la IA como la única verdad cuando la decisión es importante para tu negocio
+   4. Decide de antemano en qué casos la IA puede actuar sola y en qué casos necesitas revisarlo tú antes
+RESUMEN : La IA generativa no sabe nada en realidad: adivina la palabra más probable que sigue, y muchas veces prioriza sonar convincente antes que ser exacta. Por eso a veces te da respuestas incorrectas dichas con total seguridad (alucinaciones). No le entregues decisiones importantes sin revisarlas tú mismo: verifica y cuestiona lo que te devuelve, sobre todo en lo que más te puede costar si sale mal, como plata, temas legales, salud o el trato con tus clientes.
+PREVIOS : principio_invitar_ia_siempre
+SIGUIENT: gestion_riesgo_seguridad_ia
+ETIQUETA: Sé el Humano en el Loop
+------------------------------------------------------------------------------
+ID      : human_in_the_loop_ia
+TITULO  : Tú sigues al mando de la decisión (Human in the Loop)
+FUENTE  : Co-Intelligence_ Living and Wor - Ethan Mollick
+DOMINIO : core   FASE: ejecucion
+VIVO    : True
+ENTREGABLE: Un protocolo escrito de cómo usas la IA, que diga con claridad qué decisiones necesitan tu revisión obligatoria antes de aplicarse
+PASOS   : 4
+   1. Define en qué tareas de tu negocio la IA solo te va a asistir y en cuáles nunca decide por ti
+   2. Revisa con ojo crítico cada respuesta de la IA antes de usarla en una decisión real
+   3. Anota los casos donde la IA se equivocó (alucinó) para saber cuánto confiar en ella la próxima vez
+   4. Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto
+RESUMEN : Principio central para trabajar con IA: mantén siempre tu propio juicio dentro del proceso de decisión, usando la IA como herramienta que te asiste y no como sustituto de tu pensamiento crítico. Los modelos de lenguaje no saben realmente nada, predicen la siguiente palabra optimizando para complacerte más que para ser exactos. Por eso tienes que supervisar, verificar y corregir lo que la IA te entrega, para no perder tu propia capacidad de juicio y para evitar daños por decisiones que tomaste sin revisar de verdad.
+PREVIOS : oficina_digital_sin_papel, oficina_digital_sin_papel_2
+SIGUIENT: deteccion_alucinaciones_ia, asignacion_persona_ia, construccion_experticia_era_ia, principio_mejora_continua_ia
+ETIQUETA: Sé el Humano en el Circuito
+------------------------------------------------------------------------------
+ID      : alineacion_etica_ia_negocio
+TITULO  : Que tu IA actúe según tus valores (alineación ética)
+FUENTE  : Co-Intelligence_ Living and Wor - Ethan Mollick
+DOMINIO : core   FASE: planificacion
+VIVO    : True
+ENTREGABLE: Un documento simple con las reglas éticas de tu IA y cómo la vas a supervisar.
+PASOS   : 5
+   1. Define con claridad qué objetivos y qué límites éticos tiene el sistema de IA que usas en tu negocio
+   2. Revisa tú mismo, o la persona que te ayuda, las decisiones importantes que tome la IA antes de que se ejecuten
+   3. Crea una forma simple de detectar y corregir sesgos o errores del sistema
+   4. Avisa con transparencia a tus clientes cuando están hablando con una IA
+   5. Revisa cada tanto si el comportamiento de la IA sigue respetando los valores que definiste
+RESUMEN : Alinear tu IA significa asegurarte de que haga lo que tú quieres, y no persiga un objetivo al pie de la letra causando daños que no previste (como en la analogía del 'maximizador de clips'). En tu negocio esto se traduce en dejar claro qué debe buscar la IA que uses, qué límites éticos no puede cruzar, y cómo vas a vigilar su comportamiento para evitar sesgos, desinformación o decisiones que dañen a tus clientes o tu marca.
+PREVIOS : evaluacion_riesgos_legales_ia
+SIGUIENT: desafios_implementacion_ia
+ETIQUETA: Alinea la IA con tus Valores
+------------------------------------------------------------------------------
+ID      : mitigar_falling_asleep_wheel
+TITULO  : Mitigar el Riesgo de 'Dormirse al Volante' con IA
+FUENTE  : Co-Intelligence_ Living and Wor - Ethan Mollick
+DOMINIO : core   FASE: ejecucion
+VIVO    : True
+ENTREGABLE: Protocolo de revisión crítica de resultados de IA para tareas de alto riesgo o impacto en el negocio
+PASOS   : 4
+   1. Establecer puntos de revisión humana obligatoria en tareas de alto riesgo, incluso si la IA parece confiable
+   2. Entrenar al equipo para cuestionar activamente las respuestas de la IA en vez de aceptarlas automáticamente
+   3. Realizar pruebas periódicas con casos diseñados para que la IA falle, y medir si el equipo detecta el error
+   4. Rotar responsabilidades para que nadie dependa exclusivamente de la IA sin ejercitar su propio criterio
+RESUMEN : La investigación muestra que cuando la IA es de alta calidad, las personas tienden a volverse pasivas, dejan de revisar críticamente sus resultados y pierden habilidad propia con el tiempo ('falling asleep at the wheel'). Esto puede llevar a errores graves justo en los casos donde la IA falla (fuera de la frontera irregular). Es crucial mantener revisión crítica activa, especialmente en tareas de alto riesgo o impacto, para evitar la degradación de juicio humano y detectar errores de la IA a tiempo.
+PREVIOS : centaur_cyborg_ia
+SIGUIENT: desafios_implementacion_ia, shadow_ia_organizacional
+ETIQUETA: No te Duermas con la IA
+------------------------------------------------------------------------------
+ID      : riesgo_sobredependencia_ia
+TITULO  : Riesgo de Sobredependencia y Pérdida de Criterio Propio
+FUENTE  : Co-Intelligence_ Living and Wor - Ethan Mollick
+DOMINIO : core   FASE: ejecucion
+VIVO    : True
+ENTREGABLE: Protocolo interno de uso responsable de IA con checkpoints de revisión humana obligatoria.
+PASOS   : 4
+   1. Establecer como norma editar y cuestionar siempre las salidas de la IA antes de usarlas.
+   2. Rotar tareas críticas entre revisión humana pura y asistida por IA para mantener el criterio del equipo.
+   3. Capacitar al equipo en 'pensamiento crítico aplicado a IA': identificar cuándo desconfiar de una respuesta plausible.
+   4. Medir periódicamente la calidad de las decisiones tomadas con y sin apoyo de IA.
+RESUMEN : El uso excesivo de IA sin supervisión crítica puede generar 'pereza cognitiva': los usuarios dejan de pensar profundamente, aceptan la primera respuesta de la IA (efecto ancla) y pierden capacidad de juicio propio. Estudios muestran que profesionales con IA de alta calidad se volvieron menos rigurosos y cometieron peores decisiones que quienes no usaban IA, especialmente en tareas ambiguas o con datos engañosos.
+PREVIOS : descomposicion_tareas_trabajo, jagged_frontier_ia
+SIGUIENT: reconstruccion_significado_trabajo
+ETIQUETA: No Dependas Ciegamente de la IA
+------------------------------------------------------------------------------
+ID      : comprension_capacidades_limitaciones_ia
+TITULO  : Comprensión de las Capacidades y Limitaciones Impredecibles de la IA
+FUENTE  : Co-Intelligence_ Living and Wor - Ethan Mollick
+DOMINIO : core   FASE: ideacion
+VIVO    : True
+ENTREGABLE: Un documento donde anotas, después de probar la IA en tu caso concreto, qué funcionó bien y qué falló.
+PASOS   : 5
+   1. Diseña pruebas específicas para tu propio caso de uso, no te quedes solo con pruebas estándar generales (benchmarks)
+   2. Prueba la IA en los casos límite (edge cases) que más importan en tu negocio
+   3. Anota qué patrones de error y de acierto vas encontrando mientras pruebas
+   4. Revisa tú mismo, o con quien te ayude, cualquier resultado crítico antes de usarlo
+   5. Ajusta la instrucción que le das a la IA o la forma de trabajar según lo que vayas descubriendo
+RESUMEN : Las IA modernas muestran capacidades que ni sus propios creadores anticiparon del todo: pueden sobresalir en tareas complejas, como escribir código funcional, y al mismo tiempo fallar en tareas aparentemente simples, como jugar tic-tac-toe correctamente. Esto significa que lo que es fácil para ti puede ser difícil para la IA, y al revés. Antes de confiar en ella para algo importante de tu negocio, prueba tú mismo qué tan bien resuelve tu caso concreto, en lugar de asumir que funciona bien solo porque el modelo tiene buena fama.
+PREVIOS : seleccion_modelo_ia_adecuado
+SIGUIENT: fine_tuning_ia_para_caso_de_uso
+ETIQUETA: Conoce lo que la IA Ignora
+------------------------------------------------------------------------------
+ID      : jagged_frontier_ia
+TITULO  : El límite irregular de la IA (jagged frontier)
+FUENTE  : Co-Intelligence_ Living and Wor - Ethan Mollick
+DOMINIO : core   FASE: validacion
+VIVO    : True
+ENTREGABLE: Un mapa de qué puede y qué no puede hacer la IA en tu caso concreto (qué tareas sí, qué tareas no)
+PASOS   : 4
+   1. Haz una lista de todas las tareas de tu negocio o producto donde podrías usar IA
+   2. Prueba la IA en cada tarea con casos reales y variados, no solo con ejemplos fáciles
+   3. Anota en qué tareas rinde bien y en cuáles rinde mal
+   4. Usa ese mapa para decidir qué automatizas, qué supervisas de cerca y qué haces tú sin IA
+RESUMEN : La IA no rinde igual en todas las tareas ni de forma predecible: puede ser excelente escribiendo un soneto pero fallar contando palabras o haciendo matemáticas básicas. No hay un manual que te diga qué puede o no hacer la IA en tu caso concreto: tienes que probarlo tú mismo para mapear ese límite invisible, porque de eso depende qué tareas de tu negocio puedes confiarle con seguridad.
+PREVIOS : colaboracion_creador_consumidor, invitar_ia_a_todo, principio_invitar_ia_siempre
+SIGUIENT: riesgo_sobredependencia_ia, framework_tareas_ia_humano, centaur_cyborg_ia, descomposicion_tareas_trabajo
+ETIQUETA: Conoce los Límites de la IA
+------------------------------------------------------------------------------
+ID      : invitar_ia_a_todo
+TITULO  : Principio de Invitar la IA a Todo
+FUENTE  : Co-Intelligence_ Living and Wor - Ethan Mollick
+DOMINIO : core   FASE: ideacion
+VIVO    : True
+ENTREGABLE: Un registro de experimentos con IA aplicados a tareas cotidianas del negocio
+PASOS   : 4
+   1. Probar la IA en cada tarea del flujo de trabajo diario, sin descartar previamente ninguna por asumir que 'no aplica'
+   2. Registrar resultados (buenos y malos) de cada experimento
+   3. Repetir el ejercicio periódicamente ya que las capacidades de la IA cambian con el tiempo
+   4. Compartir hallazgos con el equipo para acelerar el aprendizaje colectivo
+RESUMEN : Antes de decidir qué tareas delegar o automatizar, es necesario experimentar activamente probando la IA en la mayor cantidad de tareas posibles del negocio, incluso las que parecen no aplicables. Solo mediante experimentación amplia y constante se puede aprender la forma real de la Jagged Frontier para el contexto específico de cada persona o empresa, dado que la IA sigue evolucionando rápidamente.
+PREVIOS : desafios_implementacion_ia
+SIGUIENT: jagged_frontier_ia
+ETIQUETA: Prueba la IA en Todo
+------------------------------------------------------------------------------
+ID      : principio_invitar_ia_siempre
+TITULO  : Principio 1: Invitar Siempre a la IA a la Mesa
+FUENTE  : Co-Intelligence_ Living and Wor - Ethan Mollick
+DOMINIO : core   FASE: ejecucion
+VIVO    : True
+ENTREGABLE: Registro de experimentos de uso de IA por área del negocio con resultados y aprendizajes
+PASOS   : 4
+   1. Identificar todas las tareas cotidianas del negocio (marketing, ventas, atención al cliente, análisis)
+   2. Probar sistemáticamente el uso de IA en cada una de ellas, sin descartar tareas por asumir que 'no aplica'
+   3. Documentar qué usos generaron valor real y cuáles fueron frustrantes o inútiles
+   4. Iterar el prompt o flujo de trabajo hasta encontrar la forma óptima de uso para esa tarea específica
+RESUMEN : Mollick propone experimentar activamente con IA en todas las tareas posibles del negocio, ya que la innovación con IA es barata para individuos (comparado con el costo de desarrollo organizacional formal). Un emprendedor o empleado que usa IA constantemente en su trabajo específico puede convertirse en el mejor experto del mundo en aplicarla a esa tarea concreta, generando ventajas competitivas y posibles ideas de nuevos productos o startups.
+PREVIOS : desafios_implementacion_ia
+SIGUIENT: principio_humano_en_el_loop, jagged_frontier_ia
+ETIQUETA: Invita Siempre a la IA
+------------------------------------------------------------------------------
+ID      : comprender_alineacion_etica_ia
+TITULO  : Alineación y Ética de la IA
+FUENTE  : Co-Intelligence_ Living and Wor - Ethan Mollick
+DOMINIO : core   FASE: ideacion
+VIVO    : True
+ENTREGABLE: Un informe propio donde queden anotados los sesgos y riesgos éticos que encontraste al probar el modelo de IA que piensas usar en tu producto o negocio
+PASOS   : 4
+   1. Revisa qué modelo de IA vas a usar y qué sabes sobre sus datos de entrenamiento y su proceso de ajuste
+   2. Pon a prueba el modelo con casos reales de tu negocio buscando sesgos de género, raza o cultura
+   3. Anota los sesgos que encuentres y decide cómo los vas a corregir: instrucciones que compensen el sesgo, revisión humana, o elegir otro modelo
+   4. Pregunta en tu mercado qué implicaciones legales y regulatorias tiene usar IA en tu tipo de decisiones antes de avanzar
+RESUMEN : Antes de meter IA en tu producto o en tu negocio, tienes que entender que los modelos heredan los sesgos de los datos con los que fueron entrenados (en su mayoría web abierta, dominada por perspectivas occidentales y masculinas) y que el ajuste posterior que se les hace (conocido como RLHF) no elimina esos sesgos del todo, solo los esconde o los cambia por otros. Esto te afecta directamente si construyes un producto que use IA generativa para atender usuarios diversos, o para tomar decisiones de contratación, evaluación o generación de contenido.
+PREVIOS : desafios_implementacion_ia
+SIGUIENT: modelo_quality_by_design_juran, juran_quality_by_design
+ETIQUETA: Cuida la Ética de tu IA
