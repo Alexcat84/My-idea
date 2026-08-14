@@ -1,88 +1,106 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
-SESION EJECUTORA. FASE II, RECOMPUTO, VUELTA DE CIERRE DE REGISTROS. MODO:
-cero reparaciones de nodos, cero operaciones ejecutadas, la FASE III no se
-abre y pasada-unica no se crea. El cribado esta CERRADO en 3.388 de 3.388:
-docs/INTRA_DOMINIO_VEREDICTOS.jsonl NO se toca y esta vuelta no lee ningun
-par nuevo, ni de cola ni dirigido.
+SESION EJECUTORA. LA FASE II ESTA CERRADA y LA FASE III ESTA ABIERTA por el
+acta de la vuelta 20 del auditor (seccion 8). LA RAMA ACTIVA ES `pasada-unica`,
+creada desde `bucle` por el auditor: verifica con `git branch --show-current`
+que estas en ella ANTES de la primera edicion; si no lo estas, `git checkout
+pasada-unica` primero. TODO el trabajo de la FASE III se commitea y pushea en
+`pasada-unica` (origin/pasada-unica), incluidos docs/loop/. `bucle` NO se toca
+mas y NADA se funde a staging ni a main: el merge es decision de Alexis.
 
-ESTADO DEL CREDITO: la tanda 19 salio LIMPIA en la auditoria (cero caidas
-de toda especie) y el contador de tandas seguidas con caida esta EN CERO.
-Las reglas no aflojan por eso: toda cifra que publiques se lee de la
-salida de un instrumento corrido EN ESTA VUELTA, toda cifra que contradiga
-una publicada se declara al lado de la vieja sin tocarla, los VIVOS se
-cuentan sin los deprecado, y una busqueda negativa no se cita: se busca en
-TODAS las sedes (archivo, dirigidas, informe, banco, plan) antes de decir
-que algo no existe.
+MODO DE ESTA VUELTA: registros mas FASE 0 DE CODIGO. El cribado sigue CERRADO
+en 3.388: docs/INTRA_DOMINIO_VEREDICTOS.jsonl NO se toca y no se lee ningun
+par nuevo. Las fases 01 a 08 NO se empiezan: la verificacion completa de
+apertura (recomputo mas fase 0 en verde) es del auditor en la vuelta
+siguiente, y SOLO despues arranca el modo de ejecucion continua.
 
-====================================================================
-TAREA 1: registros de las adjudicaciones de la vuelta 19
-(docs/loop/ACTA_AUDITOR.md, VUELTA 19, secciones 3 a 5), cinco
-correcciones, todas aditivas y con el texto viejo conservado entero
-====================================================================
-1. LD-04, el puntero a su relectura (adjudicacion 3.1 y 4.1): en
-   docs/plan/LECTURAS_DIRIGIDAS.md, dentro de la entrada de LD-04, una
-   linea aditiva que diga que el par recibio una relectura independiente
-   y concordante el 14 ago 2026 (vuelta 19), clase D, escrita en
-   LD_ESTRELLA_DISRUPTIVAS.md, y que por la adjudicacion 4.1 de la
-   vuelta 19 NO se acuna numero nuevo: LD-04 es el numero del par. Diff
-   de UNA linea.
-2. La entrada de tipo racimo "el sales roadmap" de
-   docs/plan/INVENTARIO.jsonl (adjudicacion 4.2): correccion aditiva con
-   lo nuevo al frente y el texto viejo entero detras, en cobertura (de
-   10 de 15 a 15 de 15, por LD-66 a LD-70, 14 ago 2026) y en estado (la
-   cobertura ya no es INCOMPLETA; la forma sigue MEZCLADO y no se toca).
-   La nota recibe el motivo: la entrada de acto de la misma nomina ya
-   dice 15 de 15 y dos sedes vivas no pueden diferir sin aviso.
-   RECOMPUTO_3388_COMPONENTES.jsonl NO se toca: es foto del corte 3.388
-   por diseno y su leyenda ya esta en RECOMPUTO_3388.md.
-3. La cota de EL PASO DE OFICIO, regenerada (adjudicaciones 3.3 y 4.4):
-   en su nota de INVENTARIO.jsonl, adicion declarada: la cota VIGENTE
-   pasa a ser la de la cadena corregida, 26 nodos de 141 vivos, 7 con la
-   linea en su paso 1, 40 pares de 130, con el criterio escrito al lado
-   (las pistas de la vuelta 18 con us commercial service reemplazada por
-   commercial service); la cota vieja (6, 2 y 10) queda como contraste
-   con su criterio. Remide las tres cifras con instrumento en esta
-   vuelta, no las copies de la nota ni del reporte 19. Diff de UNA
-   linea.
-4. Horowitz y la tanda de los injertos (adjudicaciones 3.5 y 4.3): en
-   docs/plan/01_FUENTES.md, seccion LA TANDA DE LOS INJERTOS, correccion
-   declarada con fecha: la tanda de los cuatro libros son 44 NODOS
-   DISTINTOS medidos en el grafo (Horowitz 14, no 13; el solape de
-   decision_de_vender_startup es de declaraciones y no reduce nodos), la
-   cifra vieja 43 queda entera con la correccion al lado. Imprime la
-   NOMINA de los 14 de Horowitz en segunda posicion desde el grafo, con
-   instrumento propio, y verifica en cada uno la forma de apendice (el
-   bloque del libro 2 pegado al final de los pasos, la frontera visible)
-   para saldar el cabo: o son 44 de 44 confirmados, o nombras el que no
-   la tiene. Es lectura de grafo con instrumento, no lectura de pares:
-   hazla entera. El desenlace va tambien como adicion breve en la nota
-   de LA FIRMA POSICIONAL DEL INJERTO (P.2) de INVENTARIO.jsonl, con el
-   puntero. 10_INVENTARIO.md NO se toca: su 14 es correcto.
-5. El rotulo de RECOMPUTO_3388.md (acta, seccion 5): en la tabla final
-   de la seccion TAREA (vuelta 19), linea aditiva que aclare que el 9
-   son EDICIONES sobre 8 entradas distintas (EL PASO DE OFICIO recibio
-   dos). Rotulo, no cifra. Diff de UNA linea.
+ESTADO DEL CREDITO: la tanda 20 salio con UNA caida de especie REPORTE (una
+busqueda negativa citada que llego a 01_FUENTES.md: "la nomina de los 13 no
+esta escrita en ninguna parte" es falsa, vive en OPERACIONES.jsonl,
+OP-F-04-HOR, campo nodos). No acumula para la parada de dos tandas; caidas de
+reporte seguidas: UNA (tres seguidas son parada). El contador de clase o
+cifra sigue EN CERO. Las reglas de siempre: toda cifra sale de instrumento
+corrido EN ESTA VUELTA; toda cifra que contradiga una publicada se declara al
+lado de la vieja sin tocarla; los vivos se cuentan sin los deprecado; y una
+busqueda negativa NO se cita sin barrer TODAS las sedes, incluida
+OPERACIONES.jsonl y los campos nodos de las operaciones.
 
 ====================================================================
-TAREA 2: medir la FASE II al cierre, con los registros ya hechos
+TAREA 1: cinco registros de las adjudicaciones del acta de la vuelta
+20 (docs/loop/ACTA_AUDITOR.md, secciones 3 a 5), todos aditivos, de
+una linea o una celda, con el texto viejo conservado entero
 ====================================================================
-Escribe en docs/plan/RECOMPUTO_3388.md la seccion TAREA (vuelta 20), con
-toda cifra salida de instrumento corrido en esta vuelta:
-A. Los cinco bloques de la FASE II remedidos tras los registros (como la
-   tabla de la vuelta 19), mas el marcador, el inventario y lo reservado.
-B. La lista de cifras publicadas con dos lecturas sin adjudicar: tras los
-   registros de TAREA 1 debe quedar VACIA. Si algo queda vivo, lo nombras
-   con sus dos sedes y NO lo arreglas sin regla: lo traes al reporte.
-C. El veredicto de medicion, dicho como medicion y no como cierre: si
-   ningun bloque queda abierto y la lista de B esta vacia, la FASE II
-   queda LISTA PARA VERIFICACION DE CIERRE. El cierre mismo y la apertura
-   de la FASE III son del auditor en la vuelta 21: NO abras la FASE III,
-   NO crees pasada-unica, NO corras el Gate 0 salvo que una guarda tuya
-   lo pida.
+1. La fila 7 queda ADJUDICADA: en docs/plan/01_FUENTES.md, en la celda de
+   decision_de_vender_startup de la tabla LOS TRES CASOS QUE NO SON UN
+   SIMPLE APENDICE, correccion declarada aditiva: MANDA EL 34, medido por
+   el auditor con git (el blob de dataset/metadata/master_graph.json es
+   identico en 0e5e0c60 del 9 ago, en 23f9ac32 del 11 ago que crea
+   01_FUENTES.md, y en HEAD): el nodo ya tenia 34 pasos el 11 ago, asi que
+   el 25 y su tramo eran PARCIALES DE NACIMIENTO, no un nodo que crecio.
+   El 25 y el tramo viejo quedan enteros; la frontera vigente (1 a 10 /
+   11 a 34) ya esta impresa en la tabla de la vuelta 20 y se cita, no se
+   recuenta. El caracter del hallazgo (no es un simple apendice) queda.
+2. La nomina de los 13 SI existe: en docs/plan/01_FUENTES.md, en la
+   subseccion de la vuelta 20 que dice que "no esta escrito en ninguna
+   parte" y que "sigue sin poderse decir cual sobra", correccion declarada
+   aditiva y la frase vieja entera: la nomina de los 13 vive en
+   docs/plan/OPERACIONES.jsonl, OP-F-04-HOR, campo nodos (corte
+   2026-08-11), y el que sobra ES principio_calidad_mvp, que tiene
+   cobertura de plan propia (bloque de Hugos en OP-F-03 y destejido entero
+   en OP-D-01). Adjudicado en el acta de la vuelta 20, secciones 1 y 5.
+3. OP-F-04-HOR recibe su aviso: en docs/plan/OPERACIONES.jsonl, adicion
+   declarada AL FINAL del campo nota de OP-F-04-HOR (el campo nodos NO se
+   toca): su adjudicacion dice que en los 13 el bloque esta "al final de
+   los pasos", y medido en la vuelta 20 uno de sus 13, metas_vs_proposito,
+   tiene el bloque de Horowitz EN MEDIO porque Coleman cierra; la
+   presencia 13 de 13 queda; puntero a la tabla de la vuelta 20 de
+   01_FUENTES.md. Diff de UNA linea del archivo.
+4. OP-S-11 recibe su segundo ejemplar: en el campo nota de OP-S-11,
+   adicion declarada AL FINAL: el nodo que declara el mismo libro dos
+   veces con dos grafias no es uno sino DOS en la tanda
+   (decision_de_vender_startup y plan_mejora_procesos, The Hard Thing
+   About Hard Things / The Hard Thing About Hard Thing), y fuera de la
+   tanda hay DOS de Hugos con grafia truncada en el mismo nodo
+   (asociaciones_clave y transicion_producto_a_experiencia, "Essentials
+   of Supply Chain Mana"), medidos en las vueltas 20 y 21 del bucle. Diff
+   de UNA linea del archivo.
+5. El cierre queda escrito donde se mide: en docs/plan/RECOMPUTO_3388.md,
+   al final de la seccion TAREA (vuelta 20), dos lineas aditivas: que la
+   fila 7 de la lista B quedo ADJUDICADA por el acta de la vuelta 20 del
+   auditor (manda el 34, conteo viejo parcial de nacimiento, medido con
+   git) y la lista B queda VACIA; y que la FASE II queda CERRADA por esa
+   acta, con la FASE III abierta en la rama pasada-unica.
 
-Reporte completo en docs/loop/REPORTE.md con tus discutibles marcados
-ANTES de saber si aciertan, el marcador recomputado, y toda cifra leida
-de la salida de un instrumento corrido EN ESTA VUELTA.
+====================================================================
+TAREA 2: LA FASE 0 DE CODIGO, entera (OP-C-01 a OP-C-05), en
+pasada-unica, tal como esta escrita en el plan
+====================================================================
+A. LINEA BASE PRIMERO, antes de tocar codigo: corre el Gate 0
+   (python scripts/run_phase1.py) tal cual esta y guarda su salida. Es un
+   orquestador idempotente que recompila master_graph.json: si tras
+   correrlo `git status` muestra en dataset/ algo mas que
+   dataset/metadata/phase1_run_log.json, PARAS y lo traes al reporte sin
+   commitear dataset/ (un grafo ya limpio no debe moverse). Corre tambien
+   la suite del web (cd web y pnpm test); si algo falla por el .env
+   ausente, que falle VISIBLE y lo traes: es parada legitima y las
+   credenciales NO vuelven al repo.
+B. Las cinco operaciones de la fase 00_CODIGO (OP-C-01, OP-C-02, OP-C-03,
+   OP-C-04, OP-C-05), cada una TAL COMO ESTA ESCRITA en
+   docs/plan/OPERACIONES.jsonl y con el criterio de HECHO de
+   docs/plan/08_VERIFICACION.md: el CASO POSITIVO de cada guarda se corre
+   ANTES del arreglo y debe CAERSE; despues del arreglo pasa. Una prueba
+   que pasa antes del arreglo no prueba nada y se rehace. Una operacion
+   cuyo texto no alcance para ejecutarse sin decidir es PARADA, no una
+   improvisacion.
+C. Al cerrar la fase: Gate 0 en verde, suite en verde, y el resumen por
+   operacion (guarda, caso positivo que se cayo antes y paso despues,
+   archivos tocados). Commits por tramo, empujados a origin/pasada-unica.
+D. NO empieces la fase 01. La verificacion completa de apertura es del
+   auditor en la vuelta siguiente; de ahi arranca el modo continuo.
+
+Reporte completo en docs/loop/REPORTE.md (en pasada-unica) con tus
+discutibles marcados ANTES de saber si aciertan, el marcador recomputado,
+lo reservado comprobado, y toda cifra leida de la salida de un instrumento
+corrido EN ESTA VUELTA.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
