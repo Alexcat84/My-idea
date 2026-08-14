@@ -309,6 +309,93 @@ patron que hay que buscar en los otros veinte.
 > `OP-D-01` y en `OP-D-06`; `producto_unico_superior` y `propuesta_gasto_capital`
 > estan en `OP-D-06`. **En los tres manda el orden fuente primero.**
 
+### LOS 21 LEIDOS UNO A UNO, con su veredicto y su frontera (14 ago 2026, vuelta 26)
+
+**Es la primera linea de verificacion de `OP-F-03`, ejecutada: *los 21 leidos uno a uno, con
+el veredicto escrito: el bloque es de cadena de suministro, si o no*.** Los 21 se leyeron
+hoy contra sus `pasos_accionables` con `scripts/loop/vuelta26_medir.py bloque`, salida en
+`docs/loop/SALIDA_V26_OPF03_LECTURA.txt`. **Los 21 estan VIVOS y los 21 declaran Hugos en
+segunda o posterior posicion**, reproducido hoy: la nomina de 21 no se movio.
+
+**EL SALDO, y la tercera columna es la que no estaba prevista:**
+
+| veredicto | nodos | que se hace, segun la letra de la operacion |
+|---|---:|---|
+| **SI es de cadena de suministro** | **12** | el bloque se separa, y se decide **poda o reparto** a la subfamilia Hugos del nucleo |
+| **NO: la fuente declara un libro cuyo material no aparece** | **2** | **la fuente se corrige** |
+| **TERCERA CLASE, que la operacion no contempla: es material de Hugos, pero de su parte de SISTEMAS, no de cadena de suministro** | **7** | **ninguno de los dos remedios encaja.** Ver el pendiente de doctrina de abajo |
+
+**LOS DOCE QUE SI, con su frontera leida:**
+
+| nodo | pasos | frontera | **el bloque de Hugos** |
+|---|---:|---|---|
+| `analisis_tco_roi_b2b` | 9 | **1 a 4 / 5 a 9** | evaluacion ponderada de **proveedores**: criterios cualitativos, pesos, costo total por proveedor |
+| `asociaciones_clave` | 12 | **1 a 4 / 5 a 8 / 9 a 12** | alianzas con **compromiso de compra anticipada a cambio de garantia de suministro**; y un segundo bloque de KPIs conjuntos y horizonte de 3 a 5 anos |
+| `co_creation_session` | 9 | **1 a 4 / 5 a 9** | **lo dice con esas palabras**: *invitar a todos los socios relevantes de la cadena de suministro* |
+| `criterios_seleccion_proveedores` | 10 | **1 a 6 / 7 a 10** | sourcing: mirar mas alla del precio, **reducir el numero de proveedores para concentrar volumen**, lista de preferidos |
+| `economia_circular_como_modelo_de_negocio` | 9 | **1 a 5 / 6 a 9** | remanufactura y **costos de materiales y logistica**, y **repite el bloque 1**: el paso 6 vuelve sobre el ciclo de vida del paso 1 |
+| `empoderamiento_de_participantes` | 8 | **1 a 4 / 5 a 8** | coordinacion de **la red operativa**: objetivos comunes, informacion en tiempo real compartida entre nodos |
+| `gestion_cuentas_por_cobrar` | 9 | **1 a 4 / 5 a 9** | credito y cobranza como proceso de entrega: politicas de credito, aprobacion de ventas, **EFT y cartas de credito internacionales** |
+| `gestion_inventario` | 9 | **1 a 5 / 6 a 9** | **inventario ciclico, stock de seguridad, estacionalidad y punto de reorden**: es Hugos puro |
+| `mapa_de_canal_de_ventas` | 8 | **1 a 5 / 6 a 8** | **mapear la cadena entera incluyendo proveedores del proveedor y clientes del cliente** |
+| `producto_unico_superior` | 8 | **1 a 6 / 7 a 8** | **el mas delgado de los doce, dos pasos**: proveedores y socios que innovan contigo como ecosistema |
+| `ratios_eficiencia_inventario` | 8 | **1 a 4 / 5 a 8** | **el ciclo de conversion de efectivo (cash to cash cycle time)**, metrica canonica de Hugos |
+| `transicion_producto_a_experiencia` | 12 | **1 a 4 / 5 a 8 / 9 a 12** | **analizar el impacto en la cadena de suministro**; y un segundo bloque que repite los pasos 5 y 6 y anade las tres interfaces de usuario |
+
+**LOS DOS QUE NO, y su fuente se corrige, que es el remedio escrito:**
+
+| nodo | pasos | que dice la lectura |
+|---|---:|---|
+| `gestion_libro_abierto_obm` | 10 | **el ejemplar de referencia, CONFIRMADO**: los pasos 6 a 10 son cultura de libro abierto (lenguaje de socios, reglas del juego, marcador visible, recompensas). **No hay una linea de cadena de suministro en los diez** |
+| `seleccion_estrategia_pricing` | 6 | **el caso mas limpio de los 21: NO HAY BLOQUE**. Los seis pasos son de Blank de principio a fin (tipo de mercado, precio de la competencia, value contra competitive pricing, ingresos recurrentes, TCO en B2B, validar con clientes) |
+
+**LOS SIETE DE LA TERCERA CLASE, y el patron se repite tan igual que se nombra:**
+
+| nodo | frontera | el bloque, y de donde sale |
+|---|---|---|
+| `bundle_ideas` | **1 a 4 / 5 a 9** | una sola combinacion de tecnologia o proceso que sirva para varios objetivos, y evaluar riesgo y costo antes de decidir |
+| `modelo_hibrido_agile_stage_gate` | **1 a 9 / 10 a 13** | objetivo final ambicioso, **hitos de 30, 60 y 90 dias**, version funcional por ciclo |
+| `principio_calidad_mvp` | **1 a 5 / 6 a 10 / 11 a 14** | el tercer bloque: funcionalidades criticas, excluir las secundarias, lanzar la minima viable, iterar con el uso real |
+| `procesamiento_paralelo_con_espirales` | **1 a 4 / 5 a 9** | partes independientes, tareas en paralelo, plan B, recortar funciones sin perder lo esencial |
+| `propuesta_gasto_capital` | **1 a 5 / 6 a 12** | **costos de hardware y software**, beneficios directos, incrementales, de evitacion e intangibles, VPN trimestral del proyecto |
+| `reduccion_tamano_de_lote_batch_size` | **1 a 5 / 6 a 9** | secuencia de proyectos pequenos, **reutilizar infraestructura existente antes de reemplazarla**, time boxes |
+| `schedule_management_plan` | **1 a 5 / 6 a 10** | seccion por objetivo, tareas de diseno y construccion, dependencias, **time boxes** |
+
+> **POR QUE SON UNA CLASE Y NO SIETE CASOS SUELTOS.** Los siete traen **el mismo material**:
+> *piensa en grande, empieza pequeno, entrega rapido*, hitos de 30, 60 y 90 dias, time boxes,
+> reutilizar lo que ya existe, y justificar la inversion contando beneficios directos,
+> incrementales, de evitacion e intangibles. **Eso es de Hugos, pero de su parte de COMO SE
+> CONSTRUYE UN SISTEMA, no de cadena de suministro.** Y hay una prueba cruzada:
+> `transicion_producto_a_experiencia`, que si tiene bloque de cadena de suministro, trae
+> ademas en su paso 11 **las tres interfaces de usuario (humano computadora, humano maquina,
+> humano humano)**, que es de esa misma parte del libro. **El injerto no vino de un capitulo:
+> vino de dos.**
+
+> **PENDIENTE DE DOCTRINA, y lo registro sin escribir la regla** (regla 4 de `EJECUTOR.md`).
+> `OP-F-03` ofrece **dos** desenlaces y los siete no caben en ninguno: **la fuente NO esta
+> mal** (el material del libro declarado si aparece, asi que corregirla borraria una
+> atribucion cierta) **y el bloque NO es de cadena de suministro** (asi que repartirlo a la
+> subfamilia Hugos del nucleo lo metaria donde no es). **Lo mejor sostenido que puedo dejar
+> escrito es la lectura de arriba, con su frontera por nodo, y la clase nombrada.**
+
+> **SEGUNDO PENDIENTE, y este toca una premisa publicada de `P.3`.** La tabla de `P.3` clasifica
+> el caso Hugos como **de OTRO tema** (*cadena de suministro dentro de nodos de producto y de
+> finanzas*) y de ahi concluye que **la poda era segura**. **Medido hoy nodo por nodo, la
+> premisa falla en al menos cuatro de los doce**: en `gestion_inventario`,
+> `ratios_eficiencia_inventario`, `criterios_seleccion_proveedores` y `analisis_tco_roi_b2b`
+> **el bloque es del MISMO tema que el nodo** (inventario dentro de un nodo de inventario,
+> seleccion de proveedores dentro de un nodo de seleccion de proveedores). **Por la regla de
+> `P.3`, y no contra ella, a esos cuatro les toca REPARTO OBLIGATORIO y la poda deja de ser
+> opcion.** **La regla se sostiene entera; lo que no se sostiene es aplicar su ejemplo a los
+> 21 en bloque.** No lo arreglo yo: va al reporte.
+
+**LO QUE SE EJECUTO HOY DE `OP-F-03`, y lo que NO:**
+
+| | |
+|---|---|
+| **HECHO** | los 21 leidos uno a uno con veredicto y frontera escritos, que es su primera linea de verificacion; y **la fuente corregida en los dos que la tenian mal**, que es su tercera |
+| **NO HECHO** | la separacion del bloque en los doce que si. **Ni un paso se movio**: la eleccion entre poda y reparto no se sostiene mientras la premisa de `P.3` este contradicha por la medicion en cuatro de ellos, y el reparto necesita destinos que hoy chocan con el muro del indice semantico (ver el reporte de la vuelta 26) |
+
 ---
 
 ## LO QUE ESTA FASE LE DEJA A LAS DEMAS

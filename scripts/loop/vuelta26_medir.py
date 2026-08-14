@@ -134,6 +134,21 @@ def main():
                 continue
             imprimir_nodo(d)
 
+    elif modo == "bloque":
+        # Solo id, fuente y pasos numerados. Sin filtros de consola: un filtro
+        # que se traga una linea de paso deja leer un nodo incompleto.
+        for n in sys.argv[2:]:
+            d = nodos.get(n)
+            if d is None:
+                print("AUSENTE DEL GRAFO: %s" % n)
+                continue
+            pasos = d.get("pasos_accionables", []) or []
+            print("-" * 78)
+            print("ID    : %s   PASOS: %d" % (d["node_id"], len(pasos)))
+            print("FUENTE: %s" % d.get("fuente", ""))
+            for i, p in enumerate(pasos, 1):
+                print("  %2d. %s" % (i, p))
+
     elif modo == "pasos":
         for n in sys.argv[2:]:
             d = nodos.get(n)
