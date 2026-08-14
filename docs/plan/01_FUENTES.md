@@ -310,3 +310,90 @@ va antes:
 > escrito separando **Cooper de Coleman**, y esta tanda **acaba de confirmar por
 > el campo `fuente` la misma frontera que la lectura de pasos habia encontrado
 > sola.** Dos instrumentos independientes, el mismo corte.
+
+---
+
+### CORRECCION DECLARADA, 14 ago 2026 (vuelta 20): LA TANDA SON **44 NODOS**, Y NADA DE LO DE ARRIBA SE BORRA
+
+**Adjudicada por el acta de la vuelta 19, seccion 4, pregunta 3: *manda el grafo*.**
+**Toda cifra de esta subseccion sale de `scripts/loop/vuelta20_horowitz.py` corrido HOY sobre
+`dataset/metadata/master_graph.json`, no de una nota ni de un reporte anterior.**
+
+| | lo que publica el saldo de arriba (11 ago 2026) | **medido hoy, 14 ago 2026** |
+|---|---:|---:|
+| declaraciones en segunda o posterior posicion | **46** | **46** |
+| **NODOS DISTINTOS** | **43** | **44** |
+| grupo COLEMAN | **15** | **15** |
+| **grupo HOROWITZ** | **13** | **14** |
+| grupo WEINBERG | **13** | **13** |
+| grupo RACKHAM | **4** | **4** |
+
+**LA DIFERENCIA ENTERA ES HOROWITZ, y el 43 sale de una aritmetica que no se sostiene.** El saldo
+de arriba explica el paso de 46 declaraciones a 43 nodos con **tres** solapes. Medidos hoy, los
+nodos que declaran **dos de los cuatro libros** son **DOS**, no tres: `metas_vs_proposito`
+(Horowitz y Coleman) y `viral_loop_marketing` (Coleman y Weinberg). **El tercero,
+`decision_de_vender_startup`, no es un solape de nodos: declara a Horowitz DOS VECES con dos
+grafias, y un nodo que declara el mismo libro dos veces sigue siendo UN nodo y UN libro.** Con dos
+solapes, 46 menos 2 son **44**. **La cifra vieja 43 y sus grupos 15/13/13/4 quedan enteros arriba,
+con esta correccion al lado; `docs/plan/10_INVENTARIO.md` no se toca porque su 14 es el correcto.**
+
+### LA NOMINA DE LOS 14 DE HOROWITZ, impresa desde el grafo, y su forma verificada UNO POR UNO
+
+**Por que hacia falta imprimirla:** la nomina de los 13 **no esta escrita en ninguna parte** (del
+grupo solo habia conteos), asi que no se puede decir *cual sobra*. Lo que si se puede es imprimir
+los 14 y verificar la forma en cada uno. Los pasos enteros de los catorce estan en la salida del
+instrumento; aqui va el saldo de la lectura.
+
+| # | nodo | libros declarados | frontera leida | **el bloque de Horowitz** |
+|---:|---|---|---|---|
+| 1 | `actualizacion_posiciones_existentes` | Wasserman \| **Horowitz** | pasos **1 a 4 / 5 a 19** | **apendice AL FINAL** |
+| 2 | `background_startup_vs_corporativo` | Wasserman \| **Horowitz** | **1 a 4 / 5 a 9** | **apendice AL FINAL** (ya publicado arriba) |
+| 3 | `contratacion_experiencia_vs_potencial` | Wasserman \| **Horowitz** | **1 a 4 / 5 a 10** | **apendice AL FINAL** |
+| 4 | `decision_de_salir_a_bolsa` | Wasserman \| **Horowitz** | **1 a 5 / 6 a 10** | **apendice AL FINAL** |
+| 5 | `decision_de_vender_startup` | Wasserman \| **Horowitz** \| **Horowitz** | **1 a 10 / 11 a 34** | **apendice AL FINAL**, y es uno de los tres apartados de arriba |
+| 6 | `estrategia_de_innovacion_producto` | Cooper \| **Horowitz** | **1 a 3 / 4 a 7** | **apendice AL FINAL** |
+| 7 | `manejo_empleados_en_adquisicion` | Feld \| **Horowitz** | **1 a 4 / 5 a 9** | **apendice AL FINAL** |
+| 8 | **`metas_vs_proposito`** | Assembling \| **Horowitz** \| Coleman | **1 a 4 / 5 a 9 / 10 a 14** | **presente y con frontera visible, pero NO AL FINAL**: el ultimo bloque es de Coleman |
+| 9 | `organizacion_adaptativa` | Ries \| **Horowitz** | **1 a 4 / 5 a 8** | **apendice AL FINAL** |
+| 10 | `plan_mejora_procesos` | Book of Forms \| **Horowitz** \| **Horowitz** | **1 a 5 / 6 a 10 / 11 a 15** | **apendice AL FINAL**, con el material repetido dos veces |
+| 11 | `posicionamiento_de_empresa` | Blank \| **Horowitz** | **1 a 5 / 6 a 9** | **apendice AL FINAL** |
+| 12 | **`principio_calidad_mvp`** | Ries \| **Horowitz** \| Hugos | **1 a 5 / 6 a 10 / 11 a 14** | **presente y con frontera visible, pero NO AL FINAL**: el ultimo bloque es de Hugos |
+| 13 | `revisiones_regulares_desempeno_ceo` | Wasserman \| **Horowitz** | **1 a 4 / 5 a 10** | **apendice AL FINAL** |
+| 14 | `seleccion_ceo_fundador` | Wasserman \| **Horowitz** | **1 a 4 / 5 a 12** | **apendice AL FINAL** |
+
+**EL CABO QUEDA SALDADO, y en dos mitades que no dicen lo mismo:**
+
+> **POR PRESENCIA DEL MATERIAL: 44 DE 44 CONFIRMADOS.** En los catorce de Horowitz el material del
+> libro declarado en segunda posicion **ESTA PRESENTE y con la frontera visible**. Como los 43 ya
+> estaban confirmados y el catorceavo de Horowitz es el unico que podia faltar, **sea cual sea el
+> que la nomina de 13 dejaba fuera, esta verificado**. Cero arrastre, igual que antes.
+
+> **POR LA FORMA ESTRICTA: 12 DE 14, y los dos que no la tienen se nombran.** El saldo de arriba
+> dice que el bloque esta **siempre** *como BLOQUE APENDICE al final de los pasos*. En
+> **`metas_vs_proposito`** y **`principio_calidad_mvp`** el bloque de Horowitz **esta pegado y se
+> ve, pero queda EN MEDIO**, porque cada uno declara un TERCER libro despues (Coleman y Hugos) y es
+> ese tercer bloque el que cierra los pasos. **No es una forma distinta: es la misma forma aplicada
+> dos veces sobre el mismo nodo.**
+
+> **Y LOS DOS INSTRUMENTOS VUELVEN A DAR EL MISMO CORTE, como en `voz_del_cliente_voc`.** Sin leer
+> un solo paso, la **posicion del libro en el campo `fuente`** ya separa a los mismos dos: un libro
+> que no ocupa la ultima posicion declarada **no puede** tener el bloque final. Medido sobre los
+> **44**, las declaraciones fuera de la ultima posicion son **TRES**: esas dos, mas
+> `viral_loop_marketing` con Coleman, que ya estaba apartado arriba. **La lectura de pasos y la
+> medida posicional coinciden nodo por nodo.**
+
+### DOS COSAS MAS QUE LA MEDICION LEVANTO, DECLARADAS Y **NO** ARREGLADAS
+
+> **PRIMERA, y ensancha la evidencia de `OP-S-11` sin tocarlo:** el saldo de arriba nombra a
+> `decision_de_vender_startup` como **el** caso de un nodo que declara el mismo libro dos veces con
+> dos grafias. Medido hoy sobre los 44 **son DOS**: ese y **`plan_mejora_procesos`**, que trae *The
+> Hard Thing About Hard Things* y *The Hard Thing About Hard Thing* en la misma linea. **El texto de
+> arriba no se corrige: no afirmaba ser exhaustivo, y esta linea le anade el segundo ejemplar.**
+
+> **SEGUNDA, y es una cifra publicada con dos lecturas que esta vuelta NO adjudica:** la tabla de
+> **LOS TRES CASOS QUE NO SON UN SIMPLE APENDICE** publica `decision_de_vender_startup` con **25
+> pasos**, y **medido hoy en el grafo tiene 34**. Los otros dos apartados calzan exactos
+> (`viral_loop_marketing` 30 y `coeficiente_viral` 16). **El 25 se queda entero donde esta:** el
+> encargo de esta vuelta no lo scopeaba y no hay regla que diga cual de las dos lecturas es la
+> vigente sin saber si el nodo crecio despues del 11 ago o si el conteo viejo era parcial. **Va a la
+> lista de cifras con dos lecturas sin adjudicar de `RECOMPUTO_3388.md` (vuelta 20) y al reporte.**

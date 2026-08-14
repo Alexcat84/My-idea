@@ -141,6 +141,8 @@ tempranos**, y el analisis de impacto.
 > (puestos 505 y 513) y **entre si son sanos**: es una **ESTRELLA** del banco 9.23,
 > con centro y dos periferios.
 
+> **ADICION DECLARADA 14 ago 2026 (vuelta 19), y nada de lo de arriba se toca: este par recibio una RELECTURA INDEPENDIENTE Y CONCORDANTE, misma clase D, escrita en [`LD_ESTRELLA_DISRUPTIVAS.md`](LD_ESTRELLA_DISRUPTIVAS.md), y por la adjudicacion 4.1 del acta de la vuelta 19 NO SE ACUNA NUMERO NUEVO: `LD-04` es el numero del par, porque un segundo numero para un veredicto ya adjudicado seria una segunda fuente de verdad para una sola lectura.**
+
 ### `LD-05` . `estrategia_innovacion_producto` contra `estrategia_de_innovacion_producto` . **D**
 
 **Y explica una contradiccion vieja.**

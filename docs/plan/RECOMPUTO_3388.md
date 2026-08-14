@@ -1528,5 +1528,6 @@ como estaban, y la divergencia se escribe en vez de taparse:**
 | **A / B / C / D** | **583 / 89 / 7 / 2.709** |
 | entradas de `docs/plan/INVENTARIO.jsonl` | **671**, y ninguna nace ni muere en esta vuelta |
 | entradas tocadas | **9**: cinco en TAREA 1, una mas en su segunda mitad, y tres en TAREA 2.B |
+| **ACLARACION DE ROTULO, 14 ago 2026 (vuelta 20), y la fila de arriba no se toca** | el **9** de esa fila son **EDICIONES**, y caen sobre **8 entradas DISTINTAS**: `EL PASO DE OFICIO` recibio **dos**, una en TAREA 1 y otra en TAREA 2.B. Rotulo, no cifra: la descomposicion escrita al lado (cinco mas una mas tres) es exacta, y el reporte de la vuelta 19 ya lo decia bien (*ocho lineas y nueve ediciones*) |
 | actos vigentes **CERRADOS / ABIERTOS** | **281 / 54** |
 | **la FASE II** | **las veinte figuras quedan NOMBRADAS. Quien declare el bloque cerrado es el auditor, no esta seccion** |
