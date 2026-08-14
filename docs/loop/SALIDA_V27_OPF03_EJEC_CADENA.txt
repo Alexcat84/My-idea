@@ -1,0 +1,127 @@
+PLAN   : docs/loop/PLAN_V27_OPF03_CADENA.json
+OPERACION: OP-F-03
+MODO   : --ejecutar
+CORTES : 9
+==============================================================================
+
+------------------------------------------------------------------------------
+ORIGEN : asociaciones_clave   frontera 1 a 4 / 5 a 8 / 9 a 12
+  pasos totales 12, salen 4, quedan 8
+  fuente: 'Business Model Generation - Osterwalder | Essentials of Supply Chain Management - Michael H. Hugos | Essentials of Supply Chain Mana - Michael H. Hugos'  ->  'Business Model Generation - Osterwalder'
+    sale   5. Detecta tendencias de mercado emergentes mediante investigación de ventas y comportamiento de client
+    sale   6. Identifica fabricantes con productos alineados a la tendencia emergente
+    sale   7. Negocia alianzas con compromisos de compra anticipada a cambio de garantías de suministro preferenci
+    sale   8. Capacita a la fuerza de ventas y crea incentivos para promover estos productos estratégicos
+  DESTINO: MIEMBRO estrategia_captura_mercado_crecimiento
+  estrategia_captura_mercado_crecimiento: pasos 5 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : asociaciones_clave   frontera 1 a 4 / 5 a 8 / 9 a 12
+  pasos totales 12, salen 4, quedan 4
+  fuente: 'Business Model Generation - Osterwalder'  ->  'Business Model Generation - Osterwalder'
+    sale   9. Evaluar si la relación con el socio requiere una oferta personalizada (no commodity).
+    sale  10. Definir KPIs conjuntos y metas de desempeño medibles para la coordinación.
+    sale  11. Negociar horizonte contractual de 3 a 5 años que permita inversión mutua.
+    sale  12. Establecer mecanismo de reparto de beneficios (costos reducidos y/o ingresos crecientes) para ambas 
+  DESTINO: MIEMBRO gestion_beneficios_alianza_sostenible
+  gestion_beneficios_alianza_sostenible: pasos 4 -> 8
+
+------------------------------------------------------------------------------
+ORIGEN : co_creation_session   frontera 1 a 4 / 5 a 9
+  pasos totales 9, salen 5, quedan 4
+  fuente: 'The field guide to human-centered design | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'The field guide to human-centered design'
+    sale   5. Invitar a todos los socios relevantes de la cadena de suministro a una sesión de diseño conjunto
+    sale   6. Usar simulaciones interactivas para probar distintas configuraciones y visualizar problemas en tiemp
+    sale   7. Iterar el diseño colectivamente hasta alcanzar niveles de desempeño aceptables a un costo operativo 
+    sale   8. Documentar roles, reglas y metas acordadas en los contratos de cada empresa participante
+    sale   9. Establecer una plataforma de colaboración online para dar seguimiento en tiempo real a la implementa
+  DESTINO: MIEMBRO coordinacion_colaboracion_cadena_suministro
+  coordinacion_colaboracion_cadena_suministro: pasos 5 -> 10
+
+------------------------------------------------------------------------------
+ORIGEN : economia_circular_como_modelo_de_negocio   frontera 1 a 5 / 6 a 9
+  pasos totales 9, salen 4, quedan 5
+  fuente: 'Change by Design, Revised and U - Tim Brown | Essentials of Supply Chain Mana - Michael H. Hugos'  ->  'Change by Design, Revised and U - Tim Brown'
+    sale   6. Mapear el ciclo de vida actual de tu producto (lineal vs circular)
+    sale   7. Identificar en cuál de las cinco estrategias circulares tiene mayor potencial tu negocio
+    sale   8. Diseñar un mecanismo de retorno o remanufactura si aplica
+    sale   9. Calcular el impacto en sostenibilidad y en costos de materiales/logística
+  DESTINO: MIEMBRO modelo_simulacion_cadena_suministro_circular
+  modelo_simulacion_cadena_suministro_circular: pasos 5 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : empoderamiento_de_participantes   frontera 1 a 4 / 5 a 8
+  pasos totales 8, salen 4, quedan 4
+  fuente: 'Change by Design, Revised and U - Tim Brown | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'Change by Design, Revised and U - Tim Brown'
+    sale   5. Establecer objetivos comunes claros y compartidos entre los participantes.
+    sale   6. Proveer acceso a información en tiempo real (dashboards, alertas) a todos los involucrados.
+    sale   7. Confiar en la capacidad de auto-organización del equipo en lugar de microgestionar.
+    sale   8. Fomentar la comunicación abierta entre todos los nodos de la red operativa.
+  DESTINO: MIEMBRO requisitos_sistema_retroalimentacion
+  requisitos_sistema_retroalimentacion: pasos 4 -> 8
+
+------------------------------------------------------------------------------
+ORIGEN : gestion_cuentas_por_cobrar   frontera 1 a 4 / 5 a 9
+  pasos totales 9, salen 5, quedan 4
+  fuente: 'Financial Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'Financial Intelligence for Entrepreneurs'
+    sale   5. Definir políticas de crédito basadas en el análisis de cuentas por cobrar (DSO, deuda incobrable)
+    sale   6. Establecer criterios de aceptación de riesgo según condiciones económicas
+    sale   7. Implementar procesos de aprobación de ventas basados en análisis de crédito
+    sale   8. Gestionar cobranzas activas de cuentas vencidas
+    sale   9. Ofrecer múltiples formas de pago (EFT, cartas de crédito internacionales, etc.)
+  DESTINO: MIEMBRO gestion_riesgo_credito
+  gestion_riesgo_credito: pasos 4 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : mapa_de_canal_de_ventas   frontera 1 a 5 / 6 a 8
+  pasos totales 8, salen 3, quedan 5
+  fuente: "The Startup Owner's Manual - Steve Blank | Essentials of Supply Chain Management - Michael H. Hugos"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   6. Identificar en qué categoría(s) participa tu empresa: productor, distribuidor, minorista, proveedor 
+    sale   7. Mapear todos los participantes de tu cadena de suministro actual, incluyendo proveedores del proveed
+    sale   8. Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia o
+  DESTINO: MIEMBRO definicion_alineacion_cadena_suministro
+  definicion_alineacion_cadena_suministro: pasos 4 -> 7
+
+------------------------------------------------------------------------------
+ORIGEN : producto_unico_superior   frontera 1 a 6 / 7 a 8
+  pasos totales 8, salen 2, quedan 6
+  fuente: 'Winning at New Products - Robert G. Cooper | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'Winning at New Products - Robert G. Cooper'
+    sale   7. Identifica qué proveedores o socios podrían ayudarte a innovar junto contigo, como parte de un mismo
+    sale   8. Estudia a competidores que ganaron mercado ofreciendo más valor percibido aunque les costara más pro
+  DESTINO: MIEMBRO coordinacion_colaboracion_cadena_suministro
+  coordinacion_colaboracion_cadena_suministro: pasos 10 -> 12
+
+------------------------------------------------------------------------------
+ORIGEN : ratios_eficiencia_inventario   frontera 1 a 4 / 5 a 8
+  pasos totales 8, salen 4, quedan 4
+  fuente: 'Financial Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'Financial Intelligence for Entrepreneurs'
+    sale   5. Calcular la rotación de inventario actual de la empresa
+    sale   6. Calcular el retorno sobre ventas (return on sales)
+    sale   7. Calcular el ciclo de conversión de efectivo (cash-to-cash cycle time)
+    sale   8. Identificar oportunidades de mejora en cuentas por cobrar/pagar antes que en niveles de inventario
+  DESTINO: MIEMBRO cuatro_categorias_desempeno_cadena_suministro
+  cuatro_categorias_desempeno_cadena_suministro: pasos 6 -> 10
+
+==============================================================================
+RESUMEN
+  cortes aplicados en memoria: 9
+  nodos propios nuevos       : 0 []
+  ficheros que se tocarian   : 16
+
+ESCRITO: 16 fichero(s) en dataset/nodos/.
+  - asociaciones_clave
+  - co_creation_session
+  - coordinacion_colaboracion_cadena_suministro
+  - cuatro_categorias_desempeno_cadena_suministro
+  - definicion_alineacion_cadena_suministro
+  - economia_circular_como_modelo_de_negocio
+  - empoderamiento_de_participantes
+  - estrategia_captura_mercado_crecimiento
+  - gestion_beneficios_alianza_sostenible
+  - gestion_cuentas_por_cobrar
+  - gestion_riesgo_credito
+  - mapa_de_canal_de_ventas
+  - modelo_simulacion_cadena_suministro_circular
+  - producto_unico_superior
+  - ratios_eficiencia_inventario
+  - requisitos_sistema_retroalimentacion

@@ -1,0 +1,95 @@
+PLAN   : docs/loop/PLAN_V27_OPF03_SISTEMAS.json
+OPERACION: OP-F-03
+MODO   : --simular
+CORTES : 7
+==============================================================================
+
+------------------------------------------------------------------------------
+ORIGEN : bundle_ideas   frontera 1 a 5 / 6 a 9  (CORRECCION DECLARADA: la vuelta 26 publico 1 a 4 / 5 a 9)
+  pasos totales 9, salen 4, quedan 5
+  fuente: 'The field guide to human-centered design | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'The field guide to human-centered design'
+    sale   6. Haz una lista de todo lo que tu sistema tiene que lograr
+    sale   7. Busca una sola combinación de tecnología o proceso que te sirva para varios de esos objetivos a la v
+    sale   8. Evita armar una solución distinta para cada objetivo por separado
+    sale   9. Antes de decidir, evalúa el riesgo y el costo de cada combinación que estás considerando
+  DESTINO: MIEMBRO guias_diseno_sistemas_estrategicos
+  guias_diseno_sistemas_estrategicos: pasos 7 -> 11
+
+------------------------------------------------------------------------------
+ORIGEN : modelo_hibrido_agile_stage_gate   frontera 1 a 9 / 10 a 13
+  pasos totales 13, salen 4, quedan 9
+  fuente: 'Winning at New Products - Robert G. Cooper | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'Winning at New Products - Robert G. Cooper'
+    sale  10. Definir el objetivo final a largo plazo (visión ambiciosa).
+    sale  11. Dividir la implementación en hitos de 30, 60 y 90 días.
+    sale  12. Entregar una versión funcional al final de cada ciclo, por mínima que sea.
+    sale  13. Ajustar el plan siguiente basado en el aprendizaje del ciclo anterior.
+  DESTINO: MIEMBRO ejecucion_incremental_transicion_tecnologica
+  ejecucion_incremental_transicion_tecnologica: pasos 4 -> 8
+
+------------------------------------------------------------------------------
+ORIGEN : principio_calidad_mvp   frontera 1 a 5 / 6 a 10 / 11 a 14
+  pasos totales 14, salen 4, quedan 10
+  fuente: 'The Lean Startup - Eric Ries | The Hard Thing About Hard Things | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'The Lean Startup - Eric Ries | The Hard Thing About Hard Things'
+    sale  11. Identificar las funcionalidades críticas que generan el mayor valor.
+    sale  12. Excluir deliberadamente características secundarias en la primera versión.
+    sale  13. Lanzar la solución mínima viable y monitorear su desempeño.
+    sale  14. Iterar y mejorar el sistema en función del uso real y feedback.
+  DESTINO: MIEMBRO ejecucion_incremental_transicion_tecnologica
+  ejecucion_incremental_transicion_tecnologica: pasos 8 -> 12
+
+------------------------------------------------------------------------------
+ORIGEN : procesamiento_paralelo_con_espirales   frontera 1 a 4 / 5 a 9
+  pasos totales 9, salen 5, quedan 4
+  fuente: 'Winning at New Products - Robert G. Cooper | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'Winning at New Products - Robert G. Cooper'
+    sale   5. Divide tu proyecto en partes independientes que dependan lo menos posible entre sí
+    sale   6. Diseña las tareas para que puedas ejecutarlas en paralelo, no en cascada
+    sale   7. Asigna a las personas que trabajan contigo según habilidades que sirvan para más de un objetivo
+    sale   8. Ten un plan B listo por si algo falla o se atrasa
+    sale   9. Diseña tu producto de forma que puedas recortar funciones sin perder lo esencial
+  DESTINO: MIEMBRO definicion_objetivos_proyecto_sistema
+  definicion_objetivos_proyecto_sistema: pasos 5 -> 10
+
+------------------------------------------------------------------------------
+ORIGEN : propuesta_gasto_capital   frontera 1 a 5 / 6 a 12
+  pasos totales 12, salen 7, quedan 5
+  fuente: 'Financial Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'Financial Intelligence for Entrepreneurs'
+    sale   6. Estimar costos de hardware/software, desarrollo y operación por trimestre
+    sale   7. Identificar beneficios directos (ahorros de productividad)
+    sale   8. Identificar beneficios incrementales (nuevos ingresos atribuibles parcialmente al sistema)
+    sale   9. Identificar beneficios de evitación de costos (no contratar personal adicional)
+    sale  10. Listar beneficios intangibles (ventaja competitiva, satisfacción laboral, servicio superior)
+    sale  11. Calcular flujo de caja neto trimestral y el valor presente neto (VPN) del proyecto
+    sale  12. Presentar el análisis a los ejecutivos responsables para validar el proyecto
+  DESTINO: MIEMBRO tecnologia_como_medio_no_fin
+  tecnologia_como_medio_no_fin: pasos 4 -> 11
+
+------------------------------------------------------------------------------
+ORIGEN : reduccion_tamano_de_lote_batch_size   frontera 1 a 5 / 6 a 9
+  pasos totales 9, salen 4, quedan 5
+  fuente: 'The Lean Startup - Eric Ries | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'The Lean Startup - Eric Ries'
+    sale   6. Divide la transformación deseada en una secuencia de proyectos pequeños y manejables
+    sale   7. Comienza reutilizando (repurposing) infraestructura y sistemas existentes antes de reemplazarlos
+    sale   8. Define entregables cortos con 'time boxes' estrictos de diseño y construcción
+    sale   9. Evalúa resultados después de cada paso y ajusta el siguiente según lo aprendido
+  DESTINO: MIEMBRO ejecucion_incremental_transicion_tecnologica
+  ejecucion_incremental_transicion_tecnologica: pasos 12 -> 16
+
+------------------------------------------------------------------------------
+ORIGEN : schedule_management_plan   frontera 1 a 5 / 6 a 10
+  pasos totales 10, salen 5, quedan 5
+  fuente: "A Project Manager's Book of Forms | Essentials of Supply Chain Management - Michael H. Hugos"  ->  "A Project Manager's Book of Forms"
+    sale   6. Crear una sección del plan para cada objetivo definido
+    sale   7. Listar las tareas principales de diseño y construcción para cada objetivo
+    sale   8. Mostrar dependencias entre tareas y entre objetivos
+    sale   9. Asignar 'time boxes' (límites de tiempo) a cada tarea con input del equipo ejecutor
+    sale  10. Ajustar iterativamente tiempo y alcance hasta lograr un plan ambicioso pero factible
+  DESTINO: MIEMBRO complejidad_acorde_capacidad_organizacional
+  complejidad_acorde_capacidad_organizacional: pasos 3 -> 8
+
+==============================================================================
+RESUMEN
+  cortes aplicados en memoria: 7
+  nodos propios nuevos       : 0 []
+  ficheros que se tocarian   : 12
+
+SIMULACION: cero escrituras.

@@ -468,6 +468,77 @@ segunda o posterior posicion**, reproducido hoy: la nomina de 21 no se movio.
 | **HECHO** | los 21 leidos uno a uno con veredicto y frontera escritos, que es su primera linea de verificacion; y **la fuente corregida en los dos que la tenian mal**, que es su tercera |
 | **NO HECHO** | la separacion del bloque en los doce que si. **Ni un paso se movio**: la eleccion entre poda y reparto no se sostiene mientras la premisa de `P.3` este contradicha por la medicion en cuatro de ellos, y el reparto necesita destinos que hoy chocan con el muro del indice semantico (ver el reporte de la vuelta 26) |
 
+### EL REPARTO, EJECUTADO POR `P.18` EN QUINCE DE LOS DIECINUEVE (14 ago 2026, vuelta 27)
+
+**La tabla de arriba se queda entera: era el estado del dia en que se escribio.** Lo que la
+desbloquea son las dos decisiones del fundador del 14 ago 2026: **`P.18` da el metodo para
+elegir destino dentro de la familia**, y **el tercer desenlace escrito manda los siete de la
+tercera clase a la familia `HUGOS-SISTEMAS`**. La nomina contra la que se leyo se midio HOY,
+no se copio: **126 nodos vivos declaran a Hugos y 107 lo declaran como fuente UNICA**
+(`docs/loop/SALIDA_V27_FAMILIA_HUGOS.txt`).
+
+**LOS OCHO DE CADENA QUE SE REPARTIERON, con el miembro elegido y la lectura que lo sostiene:**
+
+| origen | frontera | miembro receptor | por que su objeto coincide |
+|---|---|---|---|
+| `asociaciones_clave` | **5 a 8** | `estrategia_captura_mercado_crecimiento` | los dos hacen el mismo acto: **detectar la tendencia emergente, cerrar alianzas tempranas que aseguren suministro, y capacitar e incentivar a la fuerza de ventas** |
+| `asociaciones_clave` | **9 a 12** | `gestion_beneficios_alianza_sostenible` | KPIs conjuntos, horizonte de 3 a 5 anos y **reparto de beneficios**: es literalmente el objeto del miembro |
+| `co_creation_session` | **5 a 9** | `coordinacion_colaboracion_cadena_suministro` | sus pasos 4 y 5 ya son **la plataforma de colaboracion en tiempo real y la simulacion jugada entre las partes**, que es lo que el bloque monta |
+| `economia_circular_como_modelo_de_negocio` | **6 a 9** | `modelo_simulacion_cadena_suministro_circular` | unico miembro cuyo objeto es la cadena circular, y el ultimo paso del bloque **es su propio entregable**: el impacto en costos de materiales y logistica |
+| `empoderamiento_de_participantes` | **5 a 8** | `requisitos_sistema_retroalimentacion` | objetivos comunes, informacion en tiempo real y auto-organizacion **son sus tres requisitos**, dichos con otras palabras |
+| `gestion_cuentas_por_cobrar` | **5 a 9** | `gestion_riesgo_credito` | politicas de credito, criterios de riesgo y formas de pago internacionales: **el objeto del miembro es la funcion de credito tomando riesgos inteligentes**. Y **el cableado desempata (`P.8`): el miembro ya era nodo siguiente del origen** |
+| `mapa_de_canal_de_ventas` | **6 a 8** | `definicion_alineacion_cadena_suministro` | **identificar tu rol y mapear la cadena entera** son sus dos primeros pasos |
+| `producto_unico_superior` | **7 a 8** | `coordinacion_colaboracion_cadena_suministro` | el mas delgado de los doce: **ecosistema que innova contigo y reputacion por encima del precio** son sus pasos 2 y 3 |
+| `ratios_eficiencia_inventario` | **5 a 8** | `cuatro_categorias_desempeno_cadena_suministro` | rotacion, retorno sobre ventas y ciclo de conversion de efectivo **son las metricas de una de sus cuatro categorias**, la de eficiencia interna |
+
+**LOS SIETE DE LA TERCERA CLASE, repartidos a `HUGOS-SISTEMAS`:**
+
+| origen | frontera | miembro receptor | por que su objeto coincide |
+|---|---|---|---|
+| `bundle_ideas` | **6 a 9** | `guias_diseno_sistemas_estrategicos` | **una sola combinacion de tecnologia y proceso para varios objetivos** es su guia 4, y su objeto es comparar disenos antes de construir |
+| `modelo_hibrido_agile_stage_gate` | **10 a 13** | `ejecucion_incremental_transicion_tecnologica` | hitos de 30, 60 y 90 dias con version funcional por ciclo: **pasos incrementales evaluando el aprendizaje de cada uno** |
+| `principio_calidad_mvp` | **11 a 14** | `ejecucion_incremental_transicion_tecnologica` | lanzar la minima viable y ampliar con el uso real: **el mismo acto** |
+| `procesamiento_paralelo_con_espirales` | **5 a 9** | `definicion_objetivos_proyecto_sistema` | partes independientes ejecutables en paralelo: **su objeto es que ningun objetivo dependa de otro**. El cableado desempata otra vez |
+| `propuesta_gasto_capital` | **6 a 12** | `tecnologia_como_medio_no_fin` | los beneficios directos, incrementales, de evitacion e intangibles **son la evaluacion que ese nodo pide por entregable**, y su paso 3 la manda calcular antes de decidir |
+| `reduccion_tamano_de_lote_batch_size` | **6 a 9** | `ejecucion_incremental_transicion_tecnologica` | **el calce mas literal de los siete**: reutilizar lo existente antes de reemplazarlo y evaluar despues de cada paso |
+| `schedule_management_plan` | **6 a 10** | `complejidad_acorde_capacidad_organizacional` | *ambicioso pero factible*, validado con el equipo ejecutor: **su objeto exacto** |
+
+> **TRES BLOQUES CAEN EN EL MISMO MIEMBRO, y se dice en vez de callarse.**
+> `ejecucion_incremental_transicion_tecnologica` recibe los de `modelo_hibrido_agile_stage_gate`,
+> `principio_calidad_mvp` y `reduccion_tamano_de_lote_batch_size`. **No es un error del
+> reparto: es la medida de que los tres traian el mismo material de Hugos**, que es
+> justamente lo que la tercera clase afirmaba. **La repeticion que esa reunion crea dentro
+> del miembro queda declarada aqui y va a la fase 02**, que es la fase que desteje. **No la
+> podo yo: el verbo de la operacion es repartir, no elegir por cual mitad se queda.**
+
+**CORRECCION DECLARADA, y no la resuelvo copiando (`EJECUTOR.md` regla 1): LA FRONTERA DE
+`bundle_ideas` ES 1 a 5 / 6 a 9, NO 1 a 4 / 5 a 9.** La tabla de los siete de la tercera clase,
+mas arriba en este archivo, publica **1 a 4 / 5 a 9** con su corte de la vuelta 26 **y se queda
+entera**. Medido hoy contra los pasos: **el paso 5 (*identifica los huecos logisticos que
+queden y llenalos con ideas adicionales*) es del bloque de IDEO**, y lo dice el propio
+`resumen_teorico` del nodo, que es de IDEO: *descartando lo que no encaje y completando con
+ideas nuevas los huecos que queden en la logistica*. **El bloque de Hugos empieza en el paso
+6**, y por ahi se corto.
+
+**LOS CUATRO QUE NO SE PUDIERON EJECUTAR, y el motivo es el mismo muro de `OP-F-02`:** su
+destino, leido, **es NODO PROPIO**, y crear un nodo no entra al historial mientras el guardian
+de commit corra la suite del motor con el chequeo del indice semantico dentro.
+
+| origen | frontera | destino leido | por que ningun miembro coincide |
+|---|---|---|---|
+| `analisis_tco_roi_b2b` | **5 a 9** | **nodo propio** `seleccion_de_proveedores_por_costo_total` | la familia tiene el consumo (`gestion_procurement_consumo`), la negociacion (`negociacion_contratos_proveedores`) y el desempeno (`gestion_contratos_desempeno`), **pero no tiene la SELECCION**: ponderar criterios y comparar proveedores por costo total |
+| `criterios_seleccion_proveedores` | **7 a 10** | **el mismo nodo propio** | mismo material de Hugos que el anterior: mirar mas alla del precio y **concentrar volumen reduciendo la base de proveedores**. **Los dos bloques van a UN solo nodo, no a dos** |
+| `gestion_inventario` | **6 a 9** | **nodo propio** `driver_de_inventario` | la familia tiene los drivers de **produccion, transporte, ubicacion e informacion**, y **le falta el de inventario**: ciclico, de seguridad y estacional con punto de reorden |
+| `transicion_producto_a_experiencia` | **5 a 8 y 9 a 12** | **nodo propio** | ningun miembro tiene por objeto **convertir el producto en servicio de acceso**; y su paso 11 (las tres interfaces de usuario) es de la parte de SISTEMAS, como ya senalaba la prueba cruzada |
+
+**LAS GUARDAS DE ESTE REPARTO, corridas todas:** simulacion previa sobre copia en memoria
+(**verde en las dos tandas**, y **la primera version se paro en rojo** porque el segundo corte
+de `asociaciones_clave` leia la fuente ya recortada por el primero: **la guarda hizo su
+trabajo**); guarda de texto por paso y guarda de fuente por nodo; **caso positivo corrido
+antes (33 pruebas, 33 CAEN) y despues (33 PASAN)**; **`GATE 0` ENTERO EN VERDE, sin un solo
+rojo**, 71 etiquetas sin encoger y las dos copias del grafo en el mismo blob; **suites en
+verde**: motor 24 de 24, web 80 ficheros con 1.030 pasadas, `tsc` limpio.
+
 ---
 
 ## LO QUE ESTA FASE LE DEJA A LAS DEMAS

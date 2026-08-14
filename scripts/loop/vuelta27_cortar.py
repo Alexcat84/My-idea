@@ -85,10 +85,20 @@ def main():
 
     # el estado en memoria: un nodo puede recibir de dos cortes distintos
     memoria = {}
+    # UN NODO PUEDE TENER DOS BLOQUES CON DESTINOS DISTINTOS (asociaciones_clave,
+    # transicion_producto_a_experiencia). Los indices de TODOS sus cortes se leen
+    # contra los pasos ORIGINALES, no contra el nodo ya recortado por el corte
+    # anterior: si no, el segundo corte se lleva el paso equivocado y la guarda de
+    # texto no lo veria porque los prefijos tambien se habrian corrido.
+    originales = {}
+    fuentes_originales = {}
+    removidos = {}
 
     def cargar(nid):
         if nid not in memoria:
             memoria[nid] = leer_crudo(nid)
+            originales[nid] = list(memoria[nid][0].get("pasos_accionables") or [])
+            fuentes_originales[nid] = memoria[nid][0].get("fuente")
         return memoria[nid]
 
     for c in plan["cortes"]:
@@ -100,7 +110,7 @@ def main():
             print("  [ROJO] no existe")
             continue
         d, cola = cargar(origen)
-        pasos = list(d.get("pasos_accionables") or [])
+        pasos = originales[origen]
         idx = c["pasos_que_salen"]
 
         # GUARDA DE CONTEO
@@ -123,14 +133,19 @@ def main():
             continue
 
         # GUARDA DE FUENTE
-        if d.get("fuente") != c["fuente_esperada"]:
+        if fuentes_originales[origen] != c["fuente_esperada"]:
             fallos.append("%s: fuente inesperada" % origen)
-            print("  [ROJO] fuente de hoy : %r" % d.get("fuente"))
+            print("  [ROJO] fuente de hoy : %r" % fuentes_originales[origen])
             print("         fuente esperada: %r" % c["fuente_esperada"])
             continue
 
         salen = [pasos[i - 1] for i in idx]
-        quedan = [p for j, p in enumerate(pasos, 1) if j not in idx]
+        ya = removidos.setdefault(origen, set())
+        if ya & set(idx):
+            fallos.append("%s: dos cortes se disputan los pasos %s" % (origen, sorted(ya & set(idx))))
+            print("  [ROJO] pasos disputados: %s" % sorted(ya & set(idx)))
+            continue
+        quedan = [p for j, p in enumerate(pasos, 1) if j not in (ya | set(idx))]
         print("  pasos totales %d, salen %d, quedan %d" % (len(pasos), len(salen), len(quedan)))
         print("  fuente: %r  ->  %r" % (d.get("fuente"), c["fuente_queda"]))
         for i, p in zip(idx, salen):
@@ -209,6 +224,7 @@ def main():
             fallos.append("%s: tipo de destino desconocido %r" % (origen, dest["tipo"]))
             continue
 
+        ya |= set(idx)
         d["pasos_accionables"] = quedan
         d["fuente"] = c["fuente_queda"]
         memoria[origen] = (d, cola)

@@ -1,0 +1,114 @@
+------------------------------------------------------------------------------
+ID    : gestion_cuentas_por_cobrar   PASOS: 9   VIVO: True
+TITULO: Gestión de Cuentas por Cobrar (Accounts Receivable)
+FUENTE: Financial Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Reporte de antigüedad de cuentas por cobrar con acciones de cobranza definidas
+RESUME: Las cuentas por cobrar representan el dinero que los clientes deben a la empresa; es esencialmente un préstamo de la empresa a sus clientes. Es una línea crítica que emprendedores deben vigilar de cerca ya que afecta directamente el flujo de caja futuro. Los acreedores también monitorean este rubro de cerca como indicador de salud financiera.
+PREVIO: clasificacion_tipos_activos, analisis_antiguedad_cuentas_por_cobrar
+SIGUIE: gestion_dso, gestion_riesgo_credito
+ETIQUE: Vigila tus Cuentas por Cobrar
+CONDIC: Si el usuario enfrenta problemas de flujo de caja a pesar de tener ventas saludables
+   1. Revisar periódicamente el saldo total de cuentas por cobrar
+   2. Establecer una política de reserva para cuentas incobrables basada en experiencia histórica
+   3. Monitorear los días promedio de cobro (DSO) para detectar deterioro en la cobranza
+   4. Implementar seguimiento activo con clientes morosos para acelerar conversión a efectivo
+   5. Definir políticas de crédito basadas en el análisis de cuentas por cobrar (DSO, deuda incobrable)
+   6. Establecer criterios de aceptación de riesgo según condiciones económicas
+   7. Implementar procesos de aprobación de ventas basados en análisis de crédito
+   8. Gestionar cobranzas activas de cuentas vencidas
+   9. Ofrecer múltiples formas de pago (EFT, cartas de crédito internacionales, etc.)
+------------------------------------------------------------------------------
+ID    : gestion_inventario   PASOS: 9   VIVO: True
+TITULO: Gestión Eficiente de Inventario
+FUENTE: Financial Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Plan de reducción de inventario con métricas de DII y acciones específicas por área
+RESUME: El inventario representa efectivo congelado que la empresa no puede usar para otros fines. El reto es minimizar el inventario sin generar quiebres de stock que insatisfagan a los clientes. Múltiples áreas de la empresa (ventas, ingeniería, producción) afectan los niveles de inventario a través de decisiones sobre personalización de productos, versiones y eficiencia de planta.
+PREVIO: gestion_capital_trabajo, clasificacion_tipos_activos, clasificacion_mercados_cadena_suministro, metodos_de_pronostico, metricas_servicio_cliente_bts_bto, programacion_produccion
+SIGUIE: ciclo_de_conversion_de_efectivo, milk_run_deliveries, clasifica_tu_inventario
+ETIQUE: Libera Efectivo de tu Inventario
+CONDIC: Cuando la empresa tiene exceso de inventario o capital de trabajo atado en stock
+   1. Calcular los Días de Inventario (DII) actuales
+   2. Evaluar el impacto de personalizaciones de producto ofrecidas por ventas
+   3. Revisar la proliferación de versiones de producto por parte de ingeniería
+   4. Analizar tiempos de inactividad de máquinas y cambios de producción
+   5. Evitar producir por producir cuando la demanda es baja, priorizando el efectivo sobre el costo unitario
+   6. Calcular el inventario cíclico óptimo balanceando costos de ordenar vs. costos de mantener.
+   7. Definir niveles de inventario de seguridad según la variabilidad de la demanda y el costo de quiebre de stock.
+   8. Identificar patrones estacionales de demanda y decidir entre acumular inventario estacional o invertir en flexibilidad de producción.
+   9. Revisar y ajustar puntos de reorden periódicamente con datos reales de demanda.
+------------------------------------------------------------------------------
+ID    : mapa_de_canal_de_ventas   PASOS: 8   VIVO: True
+TITULO: Mapa de Canal de Ventas (Sales Channel Food Chain)
+FUENTE: The Startup Owner's Manual - Steve Blank | Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Un diagrama de canal de ventas con mapa de responsabilidades, descuentos financieros y plan de gestión
+RESUME: Diagrama que describe todas las organizaciones intermedias entre la empresa y el cliente final (mayoristas, distribuidores, minoristas), sus responsabilidades y relaciones financieras. Permite entender cómo fluye el dinero y el producto a través de la cadena, y evitar el error común de asumir que los socios de canal generan demanda por sí mismos.
+PREVIO: partners_hypothesis_physical, scorecard_descubrimiento_cliente, contratar_cerrador_de_ventas
+SIGUIE: hoja_de_ruta_de_ventas, mercados_multilaterales
+ETIQUE: Mapea tu Cadena de Ventas
+CONDIC: Si el startup vende a través de intermediarios (distribuidores, minoristas) | Si se necesita entender la estructura de costos del canal de distribución
+   1. Enfócate en validar un solo canal de distribución antes de expandirte a otros
+   2. Dibuja la cadena completa de organizaciones entre tu empresa y el cliente final
+   3. Documenta las responsabilidades de cada eslabón (quién genera demanda vs quién solo distribuye)
+   4. Calcula los descuentos y márgenes que cada nivel del canal requiere
+   5. Diseña un plan de gestión de canal para monitorear inventario, ventas y posibles retornos
+   6. Identificar en qué categoría(s) participa tu empresa: productor, distribuidor, minorista, proveedor de servicios
+   7. Mapear todos los participantes de tu cadena de suministro actual, incluyendo proveedores del proveedor y clientes del cliente
+   8. Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia operativa
+------------------------------------------------------------------------------
+ID    : producto_unico_superior   PASOS: 8   VIVO: True
+TITULO: Tener un Producto Único y Superior: El Factor Número Uno de Rentabilidad
+FUENTE: Winning at New Products - Robert G. Cooper | Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Un documento con tu propuesta de valor diferenciada, validada hablando directamente con tus clientes
+RESUME: Lo que más determina si tu producto nuevo tiene éxito es que sea diferente y le ofrezca al cliente beneficios únicos con una propuesta de valor convincente. Si logras un producto superior, tienes 5 veces más probabilidad de éxito, 4 veces más participación de mercado y 4 veces más rentabilidad. Define esa superioridad desde la mirada de tu cliente, no desde lo técnico: hay diferencia entre las características (lo que te cuesta a ti fabricar) y los beneficios (lo que el cliente realmente paga por recibir). Evita caer en copiar lo que ya existe sin diferenciarte, y evita también desarrollar una solución técnica que después sale a buscar un mercado que la quiera.
+PREVIO: ocho_factores_exito_criticos
+SIGUIE: voice_of_customer_homework, fit_value_proposition, cliente_disena_producto, estrategia_de_innovacion_de_producto, estrategia_de_innovacion_y_tecnologia
+ETIQUE: Ofrece un Producto Realmente Único
+CONDIC: Si tu producto se parece demasiado a los de la competencia | Si no tienes una propuesta de valor clara y diferenciada
+   1. Haz un estudio de necesidades y deseos con tus clientes desde el inicio del proyecto
+   2. Busca necesidades que tu cliente ni siquiera sabe nombrar, no solo lo obvio que ya te pide
+   3. Descubre qué es lo que realmente le importa a tu cliente a la hora de decidir
+   4. Define tu producto como un conjunto de beneficios para el cliente, no solo como una lista de características técnicas
+   5. Compara directamente lo que ofreces contra la competencia: beneficios percibidos, valor por el dinero y calidad
+   6. Revisa si tu propuesta de valor depende solo del precio bajo o si también conecta con lo que tu cliente siente y necesita, aunque eso cambie con el tiempo
+   7. Identifica qué proveedores o socios podrían ayudarte a innovar junto contigo, como parte de un mismo ecosistema
+   8. Estudia a competidores que ganaron mercado ofreciendo más valor percibido aunque les costara más producirlo
+------------------------------------------------------------------------------
+ID    : ratios_eficiencia_inventario   PASOS: 8   VIVO: True
+TITULO: Ratios de Eficiencia de Inventario (Días de Inventario y Rotación)
+FUENTE: Financial Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Tabla con DII y rotación de inventario comparados con benchmarks de la industria
+RESUME: Miden qué tan eficientemente la empresa gestiona su inventario. Días en Inventario (DII) indica cuántos días permanece el inventario antes de venderse; Rotación de Inventario indica cuántas veces al año se vende y repone el stock. Mientras más rápido rote el inventario, mejor la posición de caja de la empresa.
+PREVIO: ratios_liquidez
+SIGUIE: dso_dpo_gestion_capital_trabajo
+ETIQUE: Mide tu Eficiencia de Inventario
+CONDIC: Negocios con inventario físico significativo (retail, manufactura)
+   1. Calcular inventario promedio dividido entre COGS diario para obtener DII
+   2. Calcular COGS anual dividido entre inventario promedio para obtener rotación
+   3. Comparar resultados con competidores directos del sector
+   4. Identificar oportunidades para acelerar la rotación y liberar efectivo atado en inventario
+   5. Calcular la rotación de inventario actual de la empresa
+   6. Calcular el retorno sobre ventas (return on sales)
+   7. Calcular el ciclo de conversión de efectivo (cash-to-cash cycle time)
+   8. Identificar oportunidades de mejora en cuentas por cobrar/pagar antes que en niveles de inventario
+------------------------------------------------------------------------------
+ID    : transicion_producto_a_experiencia   PASOS: 12   VIVO: True
+TITULO: De Productos a Servicios y Experiencias
+FUENTE: Change by Design | Essentials of Supply Chain Management - Michael H. Hugos | Essentials of Supply Chain Mana - Michael H. Hugos
+ENTREG: Un mapa de experiencia del cliente (Customer Journey Map) que integre puntos de contacto de producto y servicio.
+RESUME: Argumenta que la línea entre 'producto' y 'servicio' se ha difuminado; los consumidores ya no esperan solo rendimiento funcional, sino una experiencia satisfactoria completa. Históricamente, el sector manufacturero invirtió fuertemente en I+D tecnológico, mientras el sector servicios dependía de la interacción persona a persona. La tecnología (Internet) ahora permite a las empresas de servicios innovar sistemáticamente, pero deben evitar que la tecnología deshumanice la experiencia del cliente.
+PREVIO: value_proposition_startup, estrategia_de_innovacion_arenas, prototipar_con_medios_no_convencionales
+SIGUIE: diseno_de_sistemas_a_escala, validar_posicionamiento_con_analistas, calidad_del_servicio, servicio_postventa_internacional
+ETIQUE: Vende Experiencias, no solo Productos
+CONDIC: Si el negocio compite únicamente en atributos funcionales del producto | Si la empresa pertenece al sector servicios y no tiene cultura de I+D
+   1. Auditar el 'producto' actual e identificar los servicios implícitos que lo rodean (mantenimiento, soporte, actualización).
+   2. Mapear el recorrido completo del cliente antes, durante y después de la compra.
+   3. Invertir en innovación de la experiencia de servicio con el mismo rigor que la I+D de producto.
+   4. Verificar que las soluciones tecnológicas mejoren la experiencia humana y no solo la eficiencia operativa.
+   5. Evaluar si tu producto podría transformarse en un modelo de acceso/servicio en lugar de venta de propiedad
+   6. Identificar barreras de adopción específicas (confianza, disponibilidad, conveniencia, costo)
+   7. Diseñar un piloto de modelo Product-as-a-Service y medir métricas de uso y retención
+   8. Analizar el impacto en la cadena de suministro (ej: necesidad de mantenimiento, redistribución, recolección)
+   9. Analizar si tu producto puede reformularse como acceso a un servicio en lugar de venta de un bien
+  10. Identificar barreras de adopción del cliente (propiedad vs. renta, confianza, disponibilidad)
+  11. Diseñar las tres interfaces de usuario: humano-computadora, humano-máquina y humano-humano
+  12. Evaluar el modelo desde la óptica de economía circular (cerrar, ralentizar, intensificar, reducir o desmaterializar ciclos)

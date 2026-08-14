@@ -1,0 +1,118 @@
+------------------------------------------------------------------------------
+ID    : guias_diseno_sistemas_estrategicos   PASOS: 7   VIVO: True
+TITULO: Siete Guías Estratégicas para el Diseño de Sistemas
+FUENTE: Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Checklist de evaluación de diseño de sistema con cumplimiento verificado de las siete guías
+RESUME: Conjunto de siete criterios para evaluar y comparar diseños de sistemas antes de construirlos: (1) alinear con metas de negocio, (2) usar sistemas para cambiar el panorama competitivo, (3) aprovechar infraestructura existente, (4) usar la combinación más simple de tecnología y procesos, (5) estructurar el diseño con flexibilidad en la secuencia de desarrollo, (6) no exceder la capacidad de la organización, y (7) no repetir el mismo enfoque tras un fracaso previo. Un diseño que respeta las siete es el mejor; violar tres o más indica un diseño gravemente defectuoso.
+PREVIO: diseno_conceptual_sistema
+SIGUIE: revision_diseno
+ETIQUE: Diseña Sistemas con Estrategia
+CONDIC: Antes de aprobar la construcción final de un sistema o plataforma tecnológica | Cuando existen múltiples propuestas de diseño y se necesita un criterio objetivo de selección
+   1. Verificar que el diseño esté alineado con las metas y métricas de desempeño del negocio (guía obligatoria, no violable)
+   2. Evaluar si el sistema puede generar una ventaja competitiva difícil de copiar
+   3. Revisar qué infraestructura existente puede reutilizarse en vez de reemplazarse
+   4. Simplificar la combinación tecnología-proceso para maximizar probabilidad de éxito
+   5. Diseñar componentes que puedan desarrollarse en paralelo e independientemente
+   6. Contrastar la complejidad del sistema contra la capacidad real de la organización
+   7. Si un proyecto anterior falló, cambiar sustancialmente el enfoque, no solo repetir el esfuerzo
+------------------------------------------------------------------------------
+ID    : definicion_objetivos_proyecto_sistema   PASOS: 5   VIVO: True
+TITULO: Definición de Objetivos de Proyecto mediante Componentes Cohesivos
+FUENTE: Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Lista de objetivos de proyecto definidos, cada uno con descripción, componente asociado y criterio de valor independiente
+RESUME: Un diseño conceptual efectivo se descompone en 3 a 9 componentes de alto nivel, cada uno altamente cohesivo (realiza un conjunto de tareas relacionadas a una sola actividad bien definida). Cada componente se convierte en un objetivo de proyecto, alcanzable en 3 a 9 meses, que debe aportar valor por sí mismo sin depender de pasos futuros.
+PREVIO: complejidad_acorde_capacidad_organizacional, procesamiento_paralelo_con_espirales, rediseno_tras_fracaso_proyecto
+SIGUIE: plan_gestion_costos, cost_management_plan
+ETIQUE: Divide tu Sistema en Piezas
+CONDIC: Cuando se tiene un diseño conceptual de sistema y se necesita traducirlo en un plan de proyecto ejecutable
+   1. Descomponer el diseño conceptual en componentes de alto nivel (entre 3 y 9)
+   2. Verificar que cada componente sea cohesivo: haga una sola cosa bien definida
+   3. Convertir cada componente en un objetivo de proyecto con valor independiente
+   4. Asegurar que cada objetivo sea alcanzable en un plazo de 3 a 9 meses
+   5. Evitar que un objetivo dependa de la finalización previa de otro
+------------------------------------------------------------------------------
+ID    : ejecucion_incremental_transicion_tecnologica   PASOS: 4   VIVO: True
+TITULO: Transición Tecnológica mediante Pasos Incrementales
+FUENTE: Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Hoja de ruta de implementación tecnológica por fases incrementales, con hitos de aprendizaje definidos
+RESUME: La tecnología es un medio, no un fin: solo importa en la medida en que permite entregar servicio de valor a los clientes de forma rentable. Las transiciones exitosas hacia nuevas capacidades de cadena de suministro casi siempre involucran una serie de pasos incrementales, comenzando con la reutilización de equipos existentes, en lugar de intentar un 'gran salto' arriesgado.
+PREVIO: plan_gestion_costos, cost_management_plan
+SIGUIE: explotacion_tecnologias_disruptivas
+ETIQUE: Avanza Tu Tecnología Paso a Paso
+CONDIC: Cuando la organización planea modernizar su infraestructura tecnológica de cadena de suministro | Si existe la tentación de hacer un cambio tecnológico masivo y arriesgado de una sola vez
+   1. Priorizar la reutilización de infraestructura tecnológica existente antes de invertir en nueva
+   2. Dividir la transición tecnológica en pasos incrementales pequeños y manejables
+   3. Evaluar aprendizajes después de cada paso antes de avanzar al siguiente
+   4. Evitar adoptar tecnología de punta solo por su novedad; enfocarse en el valor real al cliente
+------------------------------------------------------------------------------
+ID    : complejidad_acorde_capacidad_organizacional   PASOS: 3   VIVO: True
+TITULO: Alinear la Complejidad del Sistema con la Capacidad de la Organización
+FUENTE: Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Matriz de capacidades organizacionales vs. requerimientos del sistema propuesto, con ajuste de alcance si es necesario
+RESUME: No intentes construir un sistema más complejo de lo que tú y tu equipo realmente pueden manejar. Cuando defines el alcance, ponte metas que sean un reto pero alcanzables: eso mantiene la confianza del equipo. Si te propones metas imposibles, agotas esa confianza y terminas en el fracaso.
+PREVIO: equipos_alto_desempeno
+SIGUIE: definicion_objetivos_proyecto_sistema
+ETIQUE: Mide la Complejidad que Puedes Asumir
+CONDIC: Cuando se define el alcance de un proyecto de sistema nuevo | Si existe presión para implementar tecnología de punta sin capacidad interna suficiente
+   1. Evaluar honestamente las capacidades técnicas y humanas actuales de la organización
+   2. Definir metas desafiantes pero realistas, no utópicas
+   3. Validar con el equipo si consideran factible el alcance propuesto antes de comprometerse
+------------------------------------------------------------------------------
+ID    : diseno_conceptual_sistema   PASOS: 7   VIVO: True
+TITULO: Diseño Conceptual de Sistema
+FUENTE: Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Diagrama esquemático de alto nivel del sistema propuesto, validado con retroalimentación de stakeholders clave
+RESUME: Es el esbozo de alto nivel de un sistema (o conjunto de sistemas) que expresa la estrategia para lograr las metas del negocio. Se construye primero desde los procesos de negocio, luego se agregan los flujos de datos (volumen, frecuencia, origen/destino) y se define qué operaciones serán automatizadas, manuales o mixtas, priorizando que la tecnología empodere a las personas en tareas de decisión y resolución de problemas.
+PREVIO: creacion_estrategia_cadena_suministro, arquitectura_tecnica_modular
+SIGUIE: guias_diseno_sistemas_estrategicos, limites_autorizacion_sistema
+ETIQUE: Esboza tu Sistema Ideal
+CONDIC: Cuando se ha definido la estrategia y se necesita traducirla en un diseño de sistema tangible | Antes de comprometer recursos de desarrollo técnico significativos
+   1. Bocetar los procesos de negocio y las operaciones que se realizan
+   2. Definir los flujos de datos entrando y saliendo de cada operación (volumen, frecuencia, origen, destino)
+   3. Definir qué tipo de personas y cuántas se requieren para cada operación, y sus niveles de habilidad
+   4. Decidir qué operaciones serán automatizadas, manuales o híbridas
+   5. Evaluar la infraestructura tecnológica existente y buscar cómo construir sobre ella
+   6. Crear diagramas esquemáticos simples (cubos, cilindros, flechas) para comunicar el diseño a audiencias amplias
+   7. Recoger retroalimentación de usuarios, financiadores y constructores del sistema
+------------------------------------------------------------------------------
+ID    : rediseno_tras_fracaso_proyecto   PASOS: 4   VIVO: True
+TITULO: No Repetir el Mismo Enfoque tras un Fracaso de Proyecto
+FUENTE: Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Informe de lecciones aprendidas y nuevo plan de proyecto con cambios estructurales documentados
+RESUME: Después de que un proyecto ha fallado, simplemente reforzar el esfuerzo o intentarlo con más ganas no es suficiente. El equipo está desmoralizado y requiere un enfoque nuevo que refleje claramente lo aprendido del fracaso anterior, ofreciendo una mejor vía hacia la meta de negocio.
+PREVIO: inhibidores_del_breakthrough
+SIGUIE: definicion_objetivos_proyecto_sistema
+ETIQUE: Cambia de Enfoque tras Fallar
+CONDIC: Cuando un proyecto de sistema ha fracasado previamente y se plantea reiniciarlo
+   1. Realizar un análisis post-mortem detallado del proyecto fallido
+   2. Identificar causas raíz específicas, no solo síntomas
+   3. Rediseñar la organización del proyecto y/o el diseño del sistema con cambios sustanciales
+   4. Comunicar al equipo claramente qué se hará diferente esta vez
+------------------------------------------------------------------------------
+ID    : requisitos_sistema_retroalimentacion   PASOS: 4   VIVO: True
+TITULO: Tres Requisitos para Sistemas de Retroalimentación de Alto Desempeño
+FUENTE: Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Un diseño organizacional que especifique quién ve qué datos, qué autoridad tiene cada rol y qué incentivos existen por resultados
+RESUME: Para que un sistema de retroalimentación funcione en un entorno impredecible se necesitan tres condiciones simultáneas: (1) transparencia de datos en tiempo real para que todos vean lo que ocurre, (2) autoridad delegada para actuar dentro de reglas definidas sin esperar aprobación, y (3) un interés personal (stake) en el resultado que motive el aprendizaje y la mejora continua. Cuando estas tres condiciones se combinan, emerge un sistema autoorganizado capaz de responder rápido y con calidad, similar a como el fuego surge de combustible, oxígeno y chispa.
+PREVIO: bucle_retroalimentacion_autoajustable
+SIGUIE: sistema_de_alarma_de_defectos
+ETIQUE: Diseña tu Sistema de Retroalimentación
+CONDIC: Cuando se busca escalar la toma de decisiones descentralizada en operaciones | Cuando los equipos dependen de aprobaciones centralizadas que ralentizan la respuesta
+   1. Implementar plataformas de datos compartidos y visibles para todos los actores relevantes
+   2. Delegar autoridad de decisión a unidades autónomas dentro de reglas claras
+   3. Diseñar incentivos (monetarios, reputacionales, de desarrollo) ligados a los resultados obtenidos
+   4. Revisar periódicamente que las tres condiciones sigan vigentes conforme cambia el entorno
+------------------------------------------------------------------------------
+ID    : arquitectura_flexible_soa   PASOS: 4   VIVO: True
+TITULO: Aprovechar Aplicaciones Existentes (SOA/EAI/API)
+FUENTE: Essentials of Supply Chain Management - Michael H. Hugos
+ENTREG: Mapa de arquitectura tecnológica que distinga componentes externos reutilizables vs. desarrollo propio necesario.
+RESUME: Estrategia tecnológica que consiste en usar arquitecturas orientadas a servicios (SOA), integración de aplicaciones empresariales (EAI) y APIs para construir una infraestructura híbrida y flexible (cloud/SaaS/consumer IT), en lugar de desarrollar todo desde cero. El esfuerzo de desarrollo propio se enfoca solo en el software y procedimientos que generan valor único y diferencial.
+PREVIO: iota_analysis
+SIGUIE: gestion_visual_del_pipeline_de_desarrollo
+ETIQUE: Aprovecha lo que Ya Existe
+CONDIC: Cuando el equipo evalúa construir tecnología propia vs. usar soluciones existentes. | Cuando se busca reducir tiempo y costo de desarrollo tecnológico.
+   1. Auditar las soluciones tecnológicas ya existentes en el mercado (cloud, SaaS).
+   2. Identificar qué funcionalidades pueden resolverse con herramientas existentes vía integración.
+   3. Reservar el desarrollo propio únicamente para el valor diferencial único del negocio.
+   4. Diseñar la arquitectura con APIs abiertas para facilitar integraciones futuras.

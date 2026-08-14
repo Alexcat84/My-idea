@@ -1,0 +1,248 @@
+{
+  "operacion": "OP-F-03",
+  "clase": "LOS SIETE DE LA TERCERA CLASE, familia HUGOS-SISTEMAS",
+  "regla": "Tercer desenlace escrito por el fundador el 14 ago 2026: no se corrige la fuente (la atribucion es cierta) y no van a la subfamilia de cadena (no son de ese tema). Su bloque va a la familia HUGOS-SISTEMAS con destino por P.18. La nomina de esa familia, medida hoy sobre la fuente Hugos con fuente unica, es el grupo de nodos de COMO SE CONSTRUYE UN SISTEMA: diseno conceptual, siete guias de diseno, objetivos por componentes cohesivos, complejidad acorde a la capacidad, transicion incremental, rediseno tras fracaso, requisitos del sistema de retroalimentacion, arquitectura sobre lo existente y la tecnologia como medio.",
+  "cortes": [
+    {
+      "origen": "bundle_ideas",
+      "frontera": "1 a 5 / 6 a 9  (CORRECCION DECLARADA: la vuelta 26 publico 1 a 4 / 5 a 9)",
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "fuente_queda": "The field guide to human-centered design",
+      "huella": "una sola combinación de tecnología o proceso",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "guias_diseno_sistemas_estrategicos",
+        "fuente_esperada_destino": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "motivo_p18": "El bloque manda listar todo lo que el sistema tiene que lograr, buscar UNA sola combinacion de tecnologia o proceso que sirva para varios objetivos a la vez, evitar una solucion distinta por objetivo, y evaluar riesgo y costo de cada combinacion antes de decidir. La guia 4 del miembro es literalmente esa (simplificar la combinacion tecnologia-proceso para maximizar la probabilidad de exito) y el objeto del miembro es evaluar y comparar disenos de sistema antes de construirlos."
+      },
+      "pasos_totales": 9,
+      "fuente_esperada": "The field guide to human-centered design | Essentials of Supply Chain Management - Michael H. Hugos",
+      "prefijos": [
+        "Haz una lista de todo lo que tu si",
+        "Busca una sola combinación de tecn",
+        "Evita armar una solución distinta ",
+        "Antes de decidir, evalúa el riesgo"
+      ],
+      "pasos_que_salen_texto": [
+        "Haz una lista de todo lo que tu sistema tiene que lograr",
+        "Busca una sola combinación de tecnología o proceso que te sirva para varios de esos objetivos a la vez",
+        "Evita armar una solución distinta para cada objetivo por separado",
+        "Antes de decidir, evalúa el riesgo y el costo de cada combinación que estás considerando"
+      ],
+      "discrepancia_declarada": "La frontera publicada en 01_FUENTES.md (vuelta 26) dice 1 a 4 / 5 a 9. Medido hoy contra los pasos, el paso 5 (Identifica los huecos logisticos que queden y llenalos con ideas adicionales) es del bloque de IDEO y no del de Hugos: el propio resumen_teorico del nodo, que es de IDEO, lo enumera (descartando lo que no encaje y completando con ideas nuevas los huecos que queden en la logistica). El bloque de Hugos empieza en el paso 6. No lo resuelvo copiando: corto por la medicion de hoy y declaro la discrepancia sin borrar el texto viejo."
+    },
+    {
+      "origen": "modelo_hibrido_agile_stage_gate",
+      "frontera": "1 a 9 / 10 a 13",
+      "pasos_que_salen": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "fuente_queda": "Winning at New Products - Robert G. Cooper",
+      "huella": "hitos de 30, 60 y 90 días",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "ejecucion_incremental_transicion_tecnologica",
+        "fuente_esperada_destino": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "motivo_p18": "El bloque define un objetivo final ambicioso, lo parte en hitos de 30, 60 y 90 dias, entrega una version funcional al final de cada ciclo y ajusta el plan siguiente con lo aprendido. El objeto del miembro es ese mismo: dividir la transicion en pasos incrementales pequenos y evaluar los aprendizajes despues de cada paso antes de avanzar, en vez de intentar un gran salto."
+      },
+      "pasos_totales": 13,
+      "fuente_esperada": "Winning at New Products - Robert G. Cooper | Essentials of Supply Chain Management - Michael H. Hugos",
+      "prefijos": [
+        "Definir el objetivo final a largo ",
+        "Dividir la implementación en hitos",
+        "Entregar una versión funcional al ",
+        "Ajustar el plan siguiente basado e"
+      ],
+      "pasos_que_salen_texto": [
+        "Definir el objetivo final a largo plazo (visión ambiciosa).",
+        "Dividir la implementación en hitos de 30, 60 y 90 días.",
+        "Entregar una versión funcional al final de cada ciclo, por mínima que sea.",
+        "Ajustar el plan siguiente basado en el aprendizaje del ciclo anterior."
+      ]
+    },
+    {
+      "origen": "principio_calidad_mvp",
+      "frontera": "1 a 5 / 6 a 10 / 11 a 14",
+      "pasos_que_salen": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "fuente_queda": "The Lean Startup - Eric Ries | The Hard Thing About Hard Things",
+      "huella": "Excluir deliberadamente características secundarias",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "ejecucion_incremental_transicion_tecnologica",
+        "fuente_esperada_destino": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "motivo_p18": "El bloque identifica las funcionalidades criticas, excluye a proposito las secundarias en la primera version, lanza la solucion minima viable y mejora con el uso real. Es el mismo acto del miembro: avanzar por pasos incrementales evaluando lo aprendido en cada uno. ES EL SEGUNDO BLOQUE QUE LLEGA A ESTE MIEMBRO, y se dice en vez de callarse: los dos traen el mismo material de Hugos.",
+        "aviso": "El tercer bloque de este nodo. Los pasos 6 a 10 son de Horowitz y los desteje OP-F-04-HOR: aqui NO se tocan, y por eso la fuente que queda conserva The Hard Thing About Hard Things."
+      },
+      "pasos_totales": 14,
+      "fuente_esperada": "The Lean Startup - Eric Ries | The Hard Thing About Hard Things | Essentials of Supply Chain Management - Michael H. Hugos",
+      "prefijos": [
+        "Identificar las funcionalidades cr",
+        "Excluir deliberadamente caracterís",
+        "Lanzar la solución mínima viable y",
+        "Iterar y mejorar el sistema en fun"
+      ],
+      "pasos_que_salen_texto": [
+        "Identificar las funcionalidades críticas que generan el mayor valor.",
+        "Excluir deliberadamente características secundarias en la primera versión.",
+        "Lanzar la solución mínima viable y monitorear su desempeño.",
+        "Iterar y mejorar el sistema en función del uso real y feedback."
+      ]
+    },
+    {
+      "origen": "procesamiento_paralelo_con_espirales",
+      "frontera": "1 a 4 / 5 a 9",
+      "pasos_que_salen": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "fuente_queda": "Winning at New Products - Robert G. Cooper",
+      "huella": "recortar funciones sin perder lo esencial",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "definicion_objetivos_proyecto_sistema",
+        "fuente_esperada_destino": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "motivo_p18": "El bloque divide el proyecto en partes independientes que dependan lo menos posible entre si y disena las tareas para ejecutarlas en paralelo. El objeto del miembro es exactamente ese: descomponer en componentes cohesivos, convertir cada uno en un objetivo con valor propio y evitar que un objetivo dependa de la finalizacion de otro. El cableado desempata (P.8): el miembro ya es nodo siguiente del origen y el origen es previo suyo."
+      },
+      "pasos_totales": 9,
+      "fuente_esperada": "Winning at New Products - Robert G. Cooper | Essentials of Supply Chain Management - Michael H. Hugos",
+      "prefijos": [
+        "Divide tu proyecto en partes indep",
+        "Diseña las tareas para que puedas ",
+        "Asigna a las personas que trabajan",
+        "Ten un plan B listo por si algo fa",
+        "Diseña tu producto de forma que pu"
+      ],
+      "pasos_que_salen_texto": [
+        "Divide tu proyecto en partes independientes que dependan lo menos posible entre sí",
+        "Diseña las tareas para que puedas ejecutarlas en paralelo, no en cascada",
+        "Asigna a las personas que trabajan contigo según habilidades que sirvan para más de un objetivo",
+        "Ten un plan B listo por si algo falla o se atrasa",
+        "Diseña tu producto de forma que puedas recortar funciones sin perder lo esencial"
+      ]
+    },
+    {
+      "origen": "propuesta_gasto_capital",
+      "frontera": "1 a 5 / 6 a 12",
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "fuente_queda": "Financial Intelligence for Entrepreneurs",
+      "huella": "beneficios de evitación de costos",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "tecnologia_como_medio_no_fin",
+        "fuente_esperada_destino": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "motivo_p18": "El bloque estima costos de hardware, software, desarrollo y operacion, y cuenta los beneficios en las cuatro clases de Hugos (directos, incrementales, de evitacion e intangibles) hasta el VPN trimestral. El entregable del miembro es esa misma evaluacion (conectar cada inversion tecnologica con una mejora concreta en servicio o en costo) y su paso 3 la manda calcular antes de decidir."
+      },
+      "pasos_totales": 12,
+      "fuente_esperada": "Financial Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael H. Hugos",
+      "prefijos": [
+        "Estimar costos de hardware/softwar",
+        "Identificar beneficios directos (a",
+        "Identificar beneficios incremental",
+        "Identificar beneficios de evitació",
+        "Listar beneficios intangibles (ven",
+        "Calcular flujo de caja neto trimes",
+        "Presentar el análisis a los ejecut"
+      ],
+      "pasos_que_salen_texto": [
+        "Estimar costos de hardware/software, desarrollo y operación por trimestre",
+        "Identificar beneficios directos (ahorros de productividad)",
+        "Identificar beneficios incrementales (nuevos ingresos atribuibles parcialmente al sistema)",
+        "Identificar beneficios de evitación de costos (no contratar personal adicional)",
+        "Listar beneficios intangibles (ventaja competitiva, satisfacción laboral, servicio superior)",
+        "Calcular flujo de caja neto trimestral y el valor presente neto (VPN) del proyecto",
+        "Presentar el análisis a los ejecutivos responsables para validar el proyecto"
+      ]
+    },
+    {
+      "origen": "reduccion_tamano_de_lote_batch_size",
+      "frontera": "1 a 5 / 6 a 9",
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "fuente_queda": "The Lean Startup - Eric Ries",
+      "huella": "repurposing",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "ejecucion_incremental_transicion_tecnologica",
+        "fuente_esperada_destino": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "motivo_p18": "Es el calce mas literal de los siete: el bloque divide la transformacion en una secuencia de proyectos pequenos, empieza reutilizando la infraestructura existente antes de reemplazarla y evalua resultados despues de cada paso. Los tres primeros pasos del miembro dicen eso con otras palabras. ES EL TERCER BLOQUE QUE LLEGA A ESTE MIEMBRO."
+      },
+      "pasos_totales": 9,
+      "fuente_esperada": "The Lean Startup - Eric Ries | Essentials of Supply Chain Management - Michael H. Hugos",
+      "prefijos": [
+        "Divide la transformación deseada e",
+        "Comienza reutilizando (repurposing",
+        "Define entregables cortos con 'tim",
+        "Evalúa resultados después de cada "
+      ],
+      "pasos_que_salen_texto": [
+        "Divide la transformación deseada en una secuencia de proyectos pequeños y manejables",
+        "Comienza reutilizando (repurposing) infraestructura y sistemas existentes antes de reemplazarlos",
+        "Define entregables cortos con 'time boxes' estrictos de diseño y construcción",
+        "Evalúa resultados después de cada paso y ajusta el siguiente según lo aprendido"
+      ]
+    },
+    {
+      "origen": "schedule_management_plan",
+      "frontera": "1 a 5 / 6 a 10",
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "fuente_queda": "A Project Manager's Book of Forms",
+      "huella": "ambicioso pero factible",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "complejidad_acorde_capacidad_organizacional",
+        "fuente_esperada_destino": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "motivo_p18": "El bloque asigna time boxes con input del equipo ejecutor y ajusta iterativamente tiempo y alcance hasta lograr un plan ambicioso pero factible. El objeto del miembro es ese ajuste: definir metas desafiantes pero realistas y validar con el equipo si consideran factible el alcance antes de comprometerse."
+      },
+      "pasos_totales": 10,
+      "fuente_esperada": "A Project Manager's Book of Forms | Essentials of Supply Chain Management - Michael H. Hugos",
+      "prefijos": [
+        "Crear una sección del plan para ca",
+        "Listar las tareas principales de d",
+        "Mostrar dependencias entre tareas ",
+        "Asignar 'time boxes' (límites de t",
+        "Ajustar iterativamente tiempo y al"
+      ],
+      "pasos_que_salen_texto": [
+        "Crear una sección del plan para cada objetivo definido",
+        "Listar las tareas principales de diseño y construcción para cada objetivo",
+        "Mostrar dependencias entre tareas y entre objetivos",
+        "Asignar 'time boxes' (límites de tiempo) a cada tarea con input del equipo ejecutor",
+        "Ajustar iterativamente tiempo y alcance hasta lograr un plan ambicioso pero factible"
+      ]
+    }
+  ]
+}
