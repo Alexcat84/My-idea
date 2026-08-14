@@ -617,3 +617,87 @@ Comando: `python -c "import json; ops=[json.loads(l) for l in open('docs/plan/OP
 ### 5. Ningun nodo se releyo para decidir si tiene costura
 
 **Ningun nodo de las 31 (ni de las 15) se leyo de nuevo.** Los 46 veredictos CONFIRMADA/FALSA son copia literal de `docs/FICHA_SUBFUSION_GRADIENTE.md`; lo unico medido esta vuelta es la interseccion contra el conjunto de nodos con A vigente y contra las nominas de operaciones, ambas por id resuelto, sin abrir el texto de ningun nodo.
+
+---
+
+## TAREA (vuelta 14): tres correcciones adjudicadas por `docs/loop/PARA_ALEXIS.md` (opcion B, 13 ago 2026)
+
+**Las tres vienen adjudicadas por el fundador via el auditor, seccion 5 punto 4 de la parada archivada
+(`docs/loop/paradas/2026-08-13-credito-vuelta-13.md`) y por `docs/loop/ACTA_AUDITOR.md` seccion 4. No
+son medicion nueva de doctrina: son cierre de lo que la vuelta 13 dejo abierto.**
+
+### 1. La fila del bonus de `OP-L-02`, corregida con tachado
+
+**El `docs/loop/REPORTE.md` de la vuelta 13 publico esta fila, y es la que causo la caida de credito
+de esa vuelta (ACTA_AUDITOR.md seccion 4):**
+
+> ~~bloque humano de la supervision de la IA | 10 (particion provisional 5+4+1) | 45 pares posibles |
+> 10 leidos (cobertura MEZCLADO, no completa)~~ **FILA FALSA, mezclaba dos universos.**
+
+**La fila corregida, verificada contra `docs/plan/LECTURAS_DIRIGIDAS.md` lineas 439 y 465 y contra la
+nota de `OP-L-02` en `OPERACIONES.jsonl` ("bloque humano de la IA 10 de 10 con 7 A y 3 D"):**
+
+**El bloque humano de la supervision de la IA tiene CINCO nodos y DIEZ pares posibles (no diez nodos
+y cuarenta y cinco pares, que es el racimo entero de la supervision de la IA, otro universo). Los diez
+estan leidos: cobertura COMPLETA, 7 en A y 3 en D.**
+
+El racimo entero (diez nodos, cuarenta y cinco pares) sigue con cobertura 10 de 45: los diez pares
+leidos son justo los internos al bloque humano; los 35 restantes cruzan contra el bloque del mapa y
+siguen sin leerse, tal como ya declaraba `OP-F-02`. **Eso si es correcto en el reporte de la vuelta 13
+y no se toca.**
+
+### 2. El backlog de `OP-L-03`, recomputado al corte 3.388
+
+**Medido con `scripts/loop/backlog_l03_vuelta14.py` (instrumento nuevo, solo lectura), por la via del
+archivo de componentes `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`, la misma que se uso para
+`OP-U-02` en la vuelta 13.**
+
+**Metodo, calcado del que el propio `OP-L-03` ya tenia escrito:**
+1. Universo: actos ABIERTOS de tamano 3 a 6 en el archivo de componentes al corte 3.388: **48 actos,
+   107 pares fuera de cola.**
+2. Se excluyen los actos que tocan alguna de las SEIS nominas que `OP-L-02` ya cerro por LECTURA
+   DIRIGIDA (cuadrantes de mercado, ecuacion de valor, bloque humano de la supervision de la IA, sales
+   roadmap, seleccion de canal, junta asesora): esas lecturas no viven en
+   `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, asi que el archivo de componentes las sigue marcando
+   ABIERTAS, y sin excluirlas a mano se cuentan dos veces entre `OP-L-02` y `OP-L-03`. Quedan **42
+   actos, 83 pares.**
+3. Del resto, se excluyen los que ESPERAN destejido o cirugia (banco: "cirugia" es sinonimo de
+   DESTEJIDO, `00_INDICE.md` linea 326, "las siete cirugias hechas" son los siete `OP-D-*`): **DOS
+   actos, 10 pares**, los dos con nomina dentro de una `OP-D-*` todavia sin ejecutar (`OP-D-03`, seis
+   nodos del cierre de ventas A/B, 7 pares; `OP-D-02`, cuatro nodos de la voz del cliente, 3 pares).
+
+**BACKLOG DE `OP-L-03` AL CORTE 3.388: CUARENTA actos, SETENTA Y TRES pares** (contra los VEINTINUEVE
+actos y CINCUENTA Y CINCO pares del corte 2.117, banco 9.21 no borra el corte viejo). Reparto por
+tamano de acto: **dos de SEIS con 14 pares; cuatro de CINCO con 15 pares; diez de CUATRO con 20 pares;
+veinticuatro de TRES con 24 pares.** Lista de los 40 actos, nodo por nodo, en la salida de
+`scripts/loop/backlog_l03_vuelta14.py` (no se repite aqui completa por espacio; el instrumento es
+reproducible y de solo lectura).
+
+**LA SUBIDA ES ESPERABLE, NO UN ERROR:** el backlog crecio de 29 a 40 actos porque el cribado paso de
+2.117 a 3.388 y trajo pares nuevos en `quality`, `health_safety`, `risk_management` y
+`seguridad_digital`, cuatro dominios que al corte viejo no habian entrado (ver punto 3 abajo). Los
+actos nuevos del backlog son de esos dominios.
+
+**DISCUTIBLE MARCADO:** de los 40 actos del backlog, CUATRO tocan ademas la nomina de una operacion NO
+destejido (`OP-S-07` CAMPO_SUCIO dos veces, `OP-M-03-III` FUSION DE MESA mas `OP-M-03-ENLACES` ENLACE
+una vez, `OP-S-04` HERRAMIENTA mas `OP-F-04-WEI` DECISION_DE_FUENTE una vez). La regla escrita de
+`OP-L-02` solo excluye lo que "espera destejido o cirugia", no "cualquier operacion", asi que estos
+cuatro se dejan DENTRO del backlog por lectura literal de la regla. Si el auditor lee "tiene dueno" mas
+ancho (como el criterio ancho que `OP-U-02` uso para otra pregunta), la cuenta bajaria a 36 actos. **No
+se decide aqui: se trae la pregunta.**
+
+### 3. El inventario de `OP-I-01`: 221 actos eran, hoy son 335
+
+**Verificado contra `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`: 335 lineas, o sea 335 componentes de
+tamano 2 o mas al corte 3.388** (280 CERRADOS, 55 ABIERTOS, comprobacion de integridad del propio
+`recomputo_3388.py` en verde). **Contra los 221 actos que la nota de `OP-I-01` declaraba al corte
+2.117.**
+
+**Alcance de esta correccion: SOLO la cifra de actos.** El resto del inventario de 323 entradas (53
+familias de ids, 14 defectos, 13 racimos, 12 figuras, 10 dominios, y el total de 323) no se recomputo:
+el encargo de esta vuelta pedia solo la cifra de actos, y el propio `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`
+no mide familias, defectos, racimos, figuras ni dominios. **Queda declarado, no medido, como
+PENDIENTE DE DOCTRINA para un encargo propio** (ya lo declaraba el discutible 2 del reporte de la
+vuelta 13): con 335 actos en vez de 221, el total de entradas del inventario tambien cambia (de 323 a
+al menos 437), pero esa suma no se escribe aqui porque los otros cinco sumandos siguen sin
+recomputarse.
