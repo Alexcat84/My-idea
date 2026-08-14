@@ -5650,3 +5650,293 @@ delante del proximo encargo.**
 del alcance (cinco, no siete), las adjudicaciones que quedan listas para la reanudacion
 y como retomar. `docs/loop/PROMPT_SIGUIENTE.md` VACIO a proposito. El bucle queda
 detenido esperando la decision de la casa.
+
+## VUELTA 27, 14 ago 2026. Auditor: Fable 5. Reporte auditado: la vuelta 27 del ejecutor (Opus 5), FASE III, rama pasada-unica: la fase 01 avanza de verdad (19 nodos cortados, 20 bloques repartidos) hasta la segunda hilada del muro. ESTA ACTA DETIENE EL BUCLE: la parada del muro (credenciales ausentes y la sede del rojo declarado, pluma del fundador) y PARADA POR PATRON: tercera tanda seguida con caida de reporte, con las dos caidas de hoy reincidiendo en especies ya nombradas en la vuelta 26
+
+### 1. VERIFICACION del reporte, todo con instrumento propio corrido HOY
+
+Todo se midio hoy contra el repo en `ca0c82e5` (HEAD de la rama, con el reporte dentro);
+las cifras del reporte van como contraste, nunca como fuente.
+
+1. **Hashes y rutas: REPRODUCIDOS.** HEAD de partida `03251f9b`; cuatro commits de
+   trabajo (`652851c9`, `72ce3d5c`, `0b151de2`, `407d4d9f`) mas el reporte, todos en
+   `origin/pasada-unica`; arbol limpio. `git diff --stat 03251f9b..407d4d9f` sobre
+   `dataset/nodos/`: **36 ficheros, 138 insertadas, 138 borradas**, exacto.
+2. **El marcador, recomputado del archivo:** n **3.388**, puestos 1 a 3.388, **cero
+   huecos, cero duplicados, cero clases fuera de ABCD**. **A 583 (17,2), B 89 (2,6),
+   C 7 (0,2), D 2.709 (80,0)**. La tabla por dominio del reporte se reproduce **al
+   digito en los diez dominios**.
+3. **El grafo:** 3.835 ficheros, 3.835 ids unicos, **3.521 vivos, 314 deprecados,
+   16.800 enlaces** (previos mas siguientes), 15 claves distintas. Reproducido.
+4. **El indice semantico:** 3.521 activos, 3.521 con vector, **cero activos sin vector,
+   cero vectores sobrantes**. Reproducido.
+5. **Las operaciones:** 71 lineas validas, 71 ids unicos, cero dependencias rotas, las
+   71 en LISTA. Reproducido.
+6. **El ciclo, corrido ENTERO por mi:** `run_phase1.py --reaplico-curaduria` da **exit 0
+   y GATE 0: OK** y deja etiquetas movidas en la copia del dataset; `etiquetas_de_cara.py
+   --aplicar` las devuelve: **71 etiquetas, cero ya en forma final**, y las dos copias
+   del grafo quedan en el blob **`6773e389`, byte identico a HEAD**, arbol limpio al
+   cerrar. Es la conducta que el registro nuevo del comando 3 describe, reproducida.
+7. **Las suites, corridas enteras por mi:** motor **24 de 24, exit 0**; web **80
+   ficheros, 1.030 pasadas y 3 saltadas, exit 0**; `tsc --noEmit` **cero lineas,
+   exit 0**.
+8. **`OP-F-02` deshecha, verificado:** los tres ficheros de nodo nuevos NO existen en
+   `dataset/nodos/`; los tres donantes estan intactos (13, 9 y 8 pasos). El plan sellado
+   `PLAN_V27_OPF02.json` trae los tres cortes con frontera, prefijos por paso, textos
+   enteros y fuente por corte. Los otros tres planes sellados existen
+   (`PLAN_V27_OPF03_CADENA.json`, `PLAN_V27_OPF03_SISTEMAS.json`,
+   `PLAN_V27_OPF04_RAC.json`).
+9. **Los repartos, verificados sobre el diff:** los bloques salieron enteros de los
+   donantes y entraron enteros en los receptores (los pares donante a receptor impresos
+   y cotejados paso a paso). Las fuentes de los donantes quedaron corregidas: cinco
+   muestras leidas antes y despues (`propuesta_gasto_capital`,
+   `economia_circular_como_modelo_de_negocio`, `ratios_eficiencia_inventario`,
+   `co_creation_session`, `five_whys_inversion_proporcional`), en todas la fuente de hoy
+   es la del libro que queda. Los dos desempates por `P.8` son ciertos:
+   `gestion_riesgo_credito` ya era `nodos_siguientes` de `gestion_cuentas_por_cobrar`, y
+   `definicion_objetivos_proyecto_sistema` ya llevaba a
+   `procesamiento_paralelo_con_espirales` entre sus previos.
+10. **Las nominas, con el criterio del instrumento reproducido y medidas al HEAD de
+    partida** (que es el momento en que el ejecutor las midio): **Hugos 126 vivos y 107
+    con fuente unica; Rackham 51 y 47; Coleman 83 y 68; Horowitz (trozo 'Hard Thing')
+    102 y 88; Weinberg 80 y 67**. Al HEAD de cierre: Hugos 111 y 107, Rackham 47 y 47,
+    que es **la resta exacta de los quince y cuatro donantes corregidos**. Coherente.
+    Mi tropiezo propio con el trozo de Horowitz va en la seccion 6.
+11. **Las cinco citas del fundador: 5 de 5 PRESENTES**, leidas por mi donde el reporte
+    dice; las cuatro `OP-F-04` citan `P.18` una a una en `OPERACIONES.jsonl`. El
+    registro del comando 3 esta en `08_VERIFICACION.md` (la vara contra el HEAD que trae
+    el commit). Los casos positivos: las seis salidas (`ANTES` con pruebas que CAEN,
+    `DESPUES` con TODO PASA) para `OP-F-02`, `OP-F-03` y `OP-F-04-RAC`.
+12. **El muro, las tres cerraduras LEIDAS EN CODIGO por mi:** (1) el chequeo del indice
+    en `run_phase1.py`, abierto por la opcion B del fundador; (2)
+    `engine/test_aviso_curaduria.py`, fixture `test_todo_activo_tiene_vector_en_el_indice`,
+    que ademas de exigir que el chequeo del Gate exista y no se autodesactive corre
+    `assert not (activos - ids)` **contra el repo real**; (3) `.githooks/pre-commit`,
+    que corre la suite del motor y la web y **aborta el commit si alguna esta en rojo,
+    sin excepcion escrita**. **CONFIRMADO: con un nodo nuevo en el arbol, ningun commit
+    entra al historial, ni uno que no lo toque.** Y la consecuencia que el reporte mide
+    es cierta: lo bloqueado no es una operacion sino **el caso por defecto de `P.18`**
+    (nodo propio), o sea el fallback de toda la fase 01.
+
+### 2. RELECTURA CIEGA, empezando por los discutibles marcados
+
+**Limite declarado, como en la 26:** lei `REPORTE.md` entero antes de leer un solo paso,
+asi que la ceguera es parcial (las razones en una linea ya estaban vistas). Las lecturas
+POR NODO del ejecutor (`01_FUENTES.md` y los planes sellados) **no se abrieron hasta
+despues de poner mi clase**: los bloques los saque del diff (pasos que salen, marcados
+sobre el donante original) y los objetos de los candidatos de las salidas de nomina, que
+son datos del grafo, no razones.
+
+**Nueve relecturas de fondo: seis dentro del marcado (discutibles 1 a 6) y tres fuera.
+SIETE COINCIDEN, DOS DISCREPAN, y las dos discrepancias estan DENTRO del marcado.**
+
+| # | caso | mi clase antes de destapar | veredicto |
+|---|---|---|---|
+| d1 | `propuesta_gasto_capital` 6 a 12 | `tecnologia_como_medio_no_fin` | **COINCIDE** |
+| d2 | `economia_circular` 6 a 9 | **nodo propio** | **DISCREPO** |
+| d3 | `ratios_eficiencia_inventario` 5 a 8 | `cuatro_categorias_desempeno_cadena_suministro` | **COINCIDE** |
+| d4 | `superioridad_producto_beneficios` 7 a 10 | `framework_caracteristicas_ventajas_beneficios` | **DISCREPO** |
+| d5 | `co_creation_session` 5 a 9 y `producto_unico_superior` 7 a 8 | `coordinacion_colaboracion_cadena_suministro` los dos | **COINCIDE** |
+| d6 | frontera de `bundle_ideas` | **1 a 5 / 6 a 9** (corte por el 6) | **COINCIDE** |
+| f1 | `gestion_cuentas_por_cobrar` 5 a 9 | `gestion_riesgo_credito` | **COINCIDE** |
+| f2 | `empoderamiento_de_participantes` 5 a 8 | `requisitos_sistema_retroalimentacion` | **COINCIDE** |
+| f3 | `five_whys_inversion_proporcional` 6 a 9 | `diagnostico_sintoma_vs_causa_ventas` | **COINCIDE** |
+
+Notas de las coincidencias con peso: en d1, el bloque es el procedimiento del entregable
+del miembro (su paso 3 manda calcular el retorno antes de decidir; el bloque ES ese
+calculo); el desequilibrio de tamano es real pero `P.18` lee objeto, no tamano. En d3,
+rotacion, retorno sobre ventas y ciclo de conversion de efectivo son la definicion
+operativa de la categoria de eficiencia interna del miembro. En d6, el propio
+`resumen_teorico` de `bundle_ideas` (que es de IDEO) dice *completando con ideas nuevas
+los huecos que queden en la logistica*: el paso 5 es de IDEO y el corte por el 6 es el
+que la medicion de hoy sostiene; la correccion declarada 1 del reporte queda CONFIRMADA.
+
+**LAS DOS DISCREPANCIAS, mi caso escrito con evidencia (van a relectura conjunta en la
+reanudacion; el ejecutor verifica contra el grafo y decide con la vara):**
+
+1. **d2, `economia_circular_como_modelo_de_negocio` 6 a 9.** El miembro elegido
+   (`modelo_simulacion_cadena_suministro_circular`) SIMULA: sus cinco pasos originales
+   son definir entidades, centro de gravedad, correr simulaciones, reportes de P y L,
+   comparar disenos. El bloque ELIGE ESTRATEGIA y DISENA EL MECANISMO: identificar en
+   cual de las cinco estrategias circulares tiene mayor potencial el negocio, disenar
+   retorno o remanufactura, calcular impacto. Por la vara que el propio ejecutor aplico
+   en el racimo de la IA de `OP-F-02` (*desarrollar una linea propia* no es *hacer lo
+   mismo*), el bloque desarrolla una linea que el miembro no tiene, y el destino seria
+   **nodo propio**. El propio reporte lo deja dicho en su discutible 2. Si la relectura
+   conjunta lo confirma, el reparto se deshace con correccion declarada y el bloque se
+   suma a los bloqueados por el muro.
+2. **d4, `superioridad_producto_beneficios` 7 a 10.** Los dos candidatos son nodos FAB
+   de la familia Rackham. El eje del bloque es CARACTERISTICAS contra BENEFICIOS segun
+   el posicionamiento del producto (precio bajo enumera, premium habla de necesidades
+   concretas), que es el eje del `framework_caracteristicas_ventajas_beneficios` y su
+   entregable (*clasificacion de mensajes aplicada a la propuesta de valor propia*). El
+   miembro elegido (`diferencia_ventaja_beneficio`) decide el MOMENTO dentro de la
+   conversacion (nada de Ventajas antes de la Necesidad Explicita), y el bloque no
+   decide momentos de conversacion sino estilo global por posicionamiento. El propio
+   reporte llama al segundo *defendible*. Si se confirma, el bloque se muda de miembro
+   con sus guardas (no crea nodo: no toca el muro).
+
+### 3. DOS CAIDAS DE REPORTE, y es la TERCERA TANDA SEGUIDA: PARADA POR PATRON
+
+**1. "treinta y tantas salidas de instrumento": SON 51** al commit `407d4d9f` y 52 con
+el commit del reporte, contadas en `git diff --name-only 03251f9b..407d4d9f`. Es la
+especie EXACTA de la caida 2 de la vuelta 26 (las "nueve salidas" que eran once): contar
+el registro sin contarlo.
+
+**2. La pregunta 5, "es la misma especie de la pregunta 5 de la vuelta 26 y de la 24,
+que sigue sin respuesta": FALSO.** Fue ADJUDICADA en el acta de la vuelta 25 (seccion 4,
+punto 5: el fichero se conserva TAL CUAL, el nombre es la marca) y RE-ADJUDICADA Y
+CERRADA en el acta de la vuelta 26 (seccion 5, punto 2), con la especie entera cerrada
+en estas palabras: *un fallo commiteado como PRUEBA de una parada o de un caso positivo
+se conserva con su nombre y NO SE RE-PREGUNTA*. Citar el estado del registro sin mirarlo
+es la especie exacta de la caida 3 de la vuelta 26, cometida por tercera vez sobre LA
+MISMA adjudicacion.
+
+**Clasificacion por la regla afinada del 13 ago:** las dos viven solo en `REPORTE.md` y
+no mueven ningun dato: **DOS CAIDAS DE REPORTE con nombre**. Las dos aparecen FUERA de
+los discutibles marcados: **el credito de la tanda baja y el tramo se releyo AL DOBLE**
+(hecho: toda cifra publicada del reporte remedida por mi en la seccion 1, y la relectura
+ciega extendida con tres destinos fuera del marcado, cero discrepancias de fondo fuera).
+
+**La racha: la vuelta 24 cargo una, la 26 cargo tres, la 27 carga estas dos. TRES TANDAS
+SEGUIDAS con caida de reporte, el aviso corrio delante del encargo (acta 26, seccion 7,
+y la parada archivada, punto 4 de LO QUE SE NECESITA DE TI), y las dos de hoy reinciden
+en especies ya nombradas con nombre en la 26. Por la regla afinada del 13 ago: tres de
+la misma especie ya no son ruido, son un patron de dictado suelto. PARADA POR PATRON.**
+
+**Y se dice tambien lo otro, porque es verdad y el credito se lleva con las dos manos:
+en las CIFRAS esta tanda fue limpia.** Cero caidas de clase, cero caidas de cifra
+publicada, el marcador al digito, el censo al digito, las nominas coherentes, las
+fronteras sostenidas por la medicion. Las dos caidas son de dictado sobre el registro,
+no de medicion. Eso no cambia la regla; cambia lo que hay que curar, y eso va en
+`PARA_ALEXIS.md`.
+
+### 4. ADJUDICACIONES de esta vuelta
+
+1. **Pregunta 2 (`OP-F-03`): NO se declara HECHA, queda PARCIAL, 15 de 19.** Su
+   verificacion (*los que si: el bloque se separa*) esta en 8 de 12; los cuatro bloques
+   restantes tienen destino decidido (nodo propio) y bloqueado por el muro. El criterio
+   de HECHO de la fase 08 pide la verificacion entera: se declara HECHA el dia que los
+   cuatro nodos existan y su caso positivo pase.
+2. **Pregunta 3 y pendiente de doctrina 2 (la repeticion que crea el reparto),
+   ADJUDICADA POR EXTENSION CITADA:** `P.3` manda repartir y prohibe podar, y la fase 02
+   es la que desteje; la cola de relectura post fusion de `08_VERIFICACION.md` existe
+   para las costuras que las reuniones crean. **La repeticion declarada entra a la
+   nomina de la fase 02 como costura nueva y NO se desteje en el acto** (destejer en el
+   acto seria una operacion que ninguna pagina escribio). La conducta del ejecutor
+   (aplicar la letra y declarar la repeticion) fue la correcta.
+3. **Pendiente de doctrina 3 (dos bloques a UN nodo propio), RATIFICADA POR EXTENSION
+   CITADA:** `P.18` da nodo propio cuando ningun miembro coincide, y el objeto entero de
+   la fase I es fundir gemelos (la clase A). Fabricar DOS nodos propios con el mismo
+   material de Hugos el dia de su creacion seria fabricar el par que la campana existe
+   para deshacer. **UN nodo, con las dos procedencias declaradas en su fuente y su
+   lectura.** No es doctrina nueva: es no contradecir la vara madre.
+4. **Discutible 8 (deshacer `OP-F-02` en vez de dejar el arbol incommitteable):
+   CORRECTO.** La regla 2 del `EJECUTOR.md` (commitear y pushear antes de tocar nada) y
+   el guardian vigente hacen del arbol incommitteable un estado que sacrifica TODO el
+   trabajo restante de la vuelta. El plan sellado preserva la ejecucion entera y su
+   verificacion. Nada se perdio: lo compruebo en la seccion 1, punto 8.
+5. **Discutible 9 (seguir con lo independiente tras hallar la parada): CORRECTO, con la
+   letra del modo continuo.** La guarda roja detuvo exactamente lo que dependia de crear
+   nodos; lo demas corrio CON SUS GUARDAS EN VERDE (verificadas por mi); nada reintento
+   ni rodeo la guarda roja; y el ejecutor convoco al auditor en el reporte, que es lo
+   que la seccion 3 de `AUDITOR.md` manda (*detiene al ejecutor y convoca al auditor en
+   la vuelta siguiente*). Parar en seco habria dejado 20 bloques sin ejecutar sin que
+   ninguna regla lo pidiera.
+6. **Discutible 11 (no escribir `PARA_ALEXIS.md`): CORRECTO.** Esa pluma es del auditor
+   (`AUDITOR.md` seccion 4) y la regla 4 del `EJECUTOR.md` manda escribir la parada en
+   el reporte y no arreglarla: es exactamente lo que hizo, igual que en la 26.
+7. **Pregunta 4 (`HUGOS-SISTEMAS` al inventario): SI, POR EXTENSION CITADA.** El
+   fundador la nombro FAMILIA en su correccion del 14 ago (*su bloque va a la familia
+   HUGOS-SISTEMAS*), y el inventario es el registro de las familias nombradas
+   (`familia_de_ids`). La entrada se hornea en la reanudacion (TAREA 1) citando esa
+   correccion, con la nomina leida (los ocho de la salida de sistemas mas
+   `tecnologia_como_medio_no_fin`, los nueve del conjunto leido).
+8. **Pregunta 5: YA ESTABA ADJUDICADA DOS VECES Y CERRADA.** `SALIDA_V27_MURO_GUARDIAN.txt`
+   se conserva TAL CUAL, por el precedente doble (actas 25 y 26). No se re-adjudica una
+   tercera vez: se registra la caida (seccion 3).
+9. **Discutible 7 (la prosa del destejido de `future_scenarios_planning`): VERIFICADA EN
+   SU GUARDA, sin adjudicar fondo.** El corte esta deshecho; la prosa vive en el plan
+   sellado con el mapa en `01_FUENTES.md` y el caso positivo 6 de 6 corrido. El fondo se
+   relee el dia que el plan se aplique, con el corte en el arbol.
+
+### 5. LO QUE NO ADJUDICO, y por que: la sede del rojo declarado
+
+La pregunta 1 del reporte (pendiente de doctrina 1) es si el rojo declarado de la opcion
+B vale **en la sede que sea** (la suite del motor y el guardian de commit) o solo en el
+chequeo de `Gate 0`. **NO la adjudico, y la mando a la casa, por tres razones citadas:**
+
+1. **La letra:** la correccion del fundador dice *el chequeo del indice semantico* (por
+   objeto) pero su contabilidad nombra a `Gate 0` (*cada reporte que corra Gate 0 con
+   ese rojo los lista*), y se llama a si misma **estricta**. Leerle una sede mas es
+   leerle intencion, no letra.
+2. **El precedente de esta misma acta:** la opcion B llego a la casa porque *correr la
+   fase III con el chequeo del indice en rojo DECLARADO es reescribir una regla vigente
+   del Gate* (acta 26, seccion 5, punto 5). Extenderla a la suite y al guardian
+   reescribe lo que OTRA guarda acepta, y esa es la misma especie de decision.
+3. **El remedio no se ejecuta sin decidir:** hacer que el fixture respete una lista de
+   ids declarados exige decidir DONDE vive esa lista, QUIEN la escribe y COMO muere al
+   cierre. Ninguna pagina lo dice, y *una operacion cuyo texto no alcanza para
+   ejecutarse sin decidir es PARADA, no una improvisacion*.
+
+Mi recomendacion, escrita para que el fundador la decida y no para decidirla, va en
+`PARA_ALEXIS.md`.
+
+### 6. ERRORES PROPIOS de esta vuelta, con nombre
+
+1. **Medi la nomina de Horowitz con el trozo 'Horowitz' (83 y 72) cuando el instrumento
+   del ejecutor uso 'Hard Thing' (102 y 88):** hay fuentes de esa familia que citan el
+   libro sin el apellido. Reproduje el criterio (vivo, fuente, separador de barra) pero
+   no el TROZO, que es la mitad del criterio. Lo cace en la misma corrida contra
+   `SALIDA_V27_FAMILIAS_OPF04.txt` y remedi con el trozo real: exacto. Es la leccion
+   escrita del acta 26, reincidida por mi, y por eso lleva nombre. Ninguna cifra
+   publicada alcanzada.
+2. **Mis primeros comandos de recomputo leyeron claves que no existen** (`puesto` por
+   `puesto_intra`, `id` por `id_op`, `estado` y `relaciones` por `deprecado` y
+   `nodos_previos`): dos fallaron ruidosos y uno dio un censo absurdo (3.835 vivos, 1
+   id) que no pase a ninguna parte. Rehechos contra el esquema real en la misma corrida.
+   Ninguna cifra alcanzada.
+
+### 7. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 26: 36 relecturas, 393 puestos (mas 57 nodos de forma y 24
+sitios de codigo), 7 caidas de clase, mas 9 caidas de reporte del ejecutor, mas 4 caidas
+de cifra publicada del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1
+caida de acta del auditor. Tandas seguidas con caida de clase o cifra: CERO. Caidas de
+reporte seguidas: DOS.
+
+Esta tanda (la vuelta 27 del ejecutor): cero pares y cero puestos, la unidad fue el
+bloque injertado; mas 1 relectura (la tanda entera, al doble); mas **33 nodos leidos de
+forma** (10 donantes con su bloque marcado sobre el diff, 7 receptores enteros despues
+del injerto, 16 candidatos por las salidas de nomina), en unidad propia. Nueve
+adjudicaciones de fondo: siete coinciden, **dos discrepan DENTRO del marcado** (van a
+relectura conjunta). **DOS caidas de REPORTE del ejecutor con nombre, las dos FUERA del
+marcado** (el credito de la tanda baja, el tramo releido al doble, hecho). Caidas de
+clase o de cifra publicada: CERO.
+
+**Acumulado: 37 relecturas, 393 puestos (mas 90 nodos de forma y 24 sitios de codigo),
+7 caidas de clase, mas 11 caidas de reporte del ejecutor, mas 4 caidas de cifra
+publicada del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1 caida de acta
+del auditor. Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte
+seguidas: TRES: LA PARADA POR PATRON DISPARA.**
+
+### 8. CONDICIONES DE PARADA: SE CUMPLEN Y EL BUCLE SE DETIENE
+
+- **CREDENCIALES AUSENTES (segunda hilada del muro):** la suite que el guardian corre
+  exige el indice completo, completarlo exige la credencial que la casa reserva, el
+  fallo es visible y reproducido (`SALIDA_V27_MURO_GUARDIAN.txt` y mi lectura del
+  fixture), y nadie salto el hook, toco el guardian, devolvio el `.env` ni falseo un
+  verde. Bloquea el caso por defecto de `P.18`, o sea el fallback de la fase entera.
+- **DECISION DE FUNDADOR / DOCTRINA sobre la sede del rojo declarado:** seccion 5 de
+  esta acta. La misma causa tuvo en rojo a `Gate 0` en la 26 y al guardian en la 27, dos
+  vueltas seguidas, y la regla que la resuelve en la sede nueva no esta escrita.
+- **PARADA POR PATRON DE DICTADO SUELTO:** tercera tanda seguida con caida de reporte,
+  con las dos de hoy reincidiendo en especies nombradas en la 26 (seccion 3).
+- Las demas, repasadas: nada reservado se toco (dataset solo por las operaciones
+  escritas; cero merges; `OPERACIONES.jsonl` intacto por el ejecutor y con las
+  correcciones del fundador); Gate 0 y suites verdes por su ciclo corrido entero por mi;
+  campana consumada: NO.
+
+`docs/loop/PARA_ALEXIS.md` escrito con los motivos, el estado exacto, lo que se necesita
+y como retomar. `docs/loop/PROMPT_SIGUIENTE.md` VACIO a proposito. El bucle queda
+detenido esperando la decision de la casa.
