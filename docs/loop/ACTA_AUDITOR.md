@@ -2506,3 +2506,289 @@ sin crear. Fallo tecnico: ninguno. Credito: roto UNA tanda, no dos. Campana cons
 
 **La FASE II sigue abierta.** El encargo siguiente cierra el barrido del plan entero al corte 3.388
 (incluida `OP-S-10`, que es la unica que se movio) y relee al doble el paso 2 sobre las 46.
+
+---
+
+## VUELTA 13, 13 ago 2026. Auditor: Opus 5. Reporte auditado: la vuelta 13 del ejecutor (Sonnet 5), FASE II tercera vuelta, el barrido del plan entero y el paso 2 releido al doble
+
+**PARADA DE CAMPANA. Se cumple la condicion de AUDITOR.md seccion 4, credito de tanda roto dos
+tandas seguidas.** El detalle esta en la seccion 4 y el motivo, el estado y la via de retomar en
+`docs/loop/PARA_ALEXIS.md`. `PROMPT_SIGUIENTE.md` queda vacio. **Y hay que decirlo con la misma
+fuerza: la sustancia de esta vuelta verifica al cien por cien. La parada la dispara el bonus, no el
+trabajo encargado.**
+
+### 1. VERIFICACION, con instrumento propio escrito en esta vuelta y corrido fuera del arbol del repo
+
+Escribi mi propio python (resolutor desde `ids_alias`, componentes conexas por las A resueltas,
+medicion de nominas en los dos cortes, parseo de la tabla de las 128) y lo corri en un directorio
+temporal fuera del repositorio. **NO reuse `scripts/loop/barrido_vuelta13.py` del ejecutor.** Todo
+lo de abajo esta medido en ESTA vuelta.
+
+1. **Hashes y rutas.** `git diff --numstat b5f1348a b43c3bd7` devuelve **exactamente las cuatro
+   rutas declaradas**: `docs/loop/REPORTE.md` (202/235), `docs/plan/OPERACIONES.jsonl` (**2/2**),
+   `docs/plan/RECOMPUTO_3388.md` (**262 inserciones y CERO borrados**, o sea que las cuatro
+   secciones nuevas van al final y no reescriben nada de la vuelta 12, tal como el reporte declara)
+   y `scripts/loop/barrido_vuelta13.py` (176/0). **`git diff --name-only ... -- dataset/` da vacio:
+   el catalogo no se toco ni un byte.** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` tampoco: diff vacio.
+   Arbol limpio, `## bucle...origin/bucle` sin divergencia.
+2. **Marcador recomputado desde el archivo:** 3.388 veredictos, **A 583, B 89, C 7, D 2.709**, cero
+   huecos y cero puestos duplicados. Identico y sin movimiento, como el reporte declara.
+3. **`OPERACIONES.jsonl`, integridad medida por mi:** 69 lineas, 69 ids unicos, cero duplicados,
+   **cero `depende_de` rotos y cero `bloquea_a` rotos**. El diff confirma que **solo cambiaron
+   `OP-S-10` y `OP-U-02`**, una linea cada una.
+4. **La tabla de las 128 de `docs/FICHA_SUBFUSION_GRADIENTE.md`, parseada por mi** (lineas 3651 a
+   3780): **128 filas, 128 ids distintos, 46 confirmadas y 82 falsas.** La correccion declarada de
+   la TAREA 1.1 es exacta.
+5. **La aritmetica del 15 y el 31, medida por mi contra los 854 nodos con A:** de las 46
+   confirmadas, **QUINCE tienen A vigente al 3.388 y TREINTA Y UNA no**; y **la lista de las quince
+   que el reporte publica es identica a la mia, nombre por nombre**. La interseccion de las 128
+   citas con los nodos con A vuelve a dar **36**, que es de donde salia el 10 mal restado de la
+   vuelta 12. Cierra.
+6. **`OP-S-10`, las cuatro cifras remedidas por mi en los dos cortes** (corte viejo tomado con el
+   blob entero `git show c16a24f5:docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, 2.117 lineas y 400 A, que
+   es el metodo adjudicado en la vuelta 12): **pares internos leidos 7 (1 A) contra 17 (2 A); actos
+   que tocan la nomina 3 sobre 4 nodos contra 6 sobre 8 nodos.** Las cuatro exactas.
+7. **EL BARRIDO ENTERO, corrido por mi sobre las 69:** **43 operaciones con nomina de dos nodos o
+   mas, `OP-D-07` con uno solo, 25 sin nomina** (43 mas 1 mas 25 igual a 69). Medidas las 43 en los
+   dos cortes: **`OP-S-10` es LA UNICA que cambia.** Confirmado con instrumento independiente.
+8. **Las 17 filas de la tabla de TAREA 2.A, verificadas una por una contra mi medicion: las
+   diecisiete salen identicas**, celda por celda, en los dos cortes.
+9. **`OP-U-02`, los dos criterios, medidos por mi** sobre `RECOMPUTO_3388_COMPONENTES.jsonl` (335
+   filas, **280 CERRADOS y 55 ABIERTOS**): criterio del propio plan, **OCHO actos abiertos ya
+   tienen dueno en mesa o destejido, luego abre 47 de 55**; criterio ancho, **11 tocan alguna
+   nomina y 44 no tocan ninguna**. Las dos exactas. Y verifique los tres actos que el reporte
+   nombra entre los 44: **el de 15 es de `health_safety`, el de 10 es de `quality` y el de 8 es el
+   de `build_measure_learn`**, los tres sin nomina de ninguna operacion.
+10. **`OP-I-01`, los cuatro dominios, contados por mi en los dos cortes:** quality 0 contra **844**,
+    health_safety 0 contra **192**, risk_management 0 contra **106**, seguridad_digital 0 contra
+    **27**. La excepcion declarada es real, y la nota de `OP-I-01` sigue diciendo **221 actos**
+    contra los **335** que yo mismo cuento hoy: la desactualizacion que el ejecutor marca va mas
+    alla de lo corregido, tal como avisa.
+11. **Las 31 sin A, cruzadas por mi contra las nominas del plan: 29 tienen dueno y 2 no**, y las dos
+    son **`lienzo_modelo_negocio` y `planificacion_recoleccion_datos`**, exacto. Y las 29 cuelgan
+    **todas de operaciones `OP-F-*`** (`OP-F-03` 11, `OP-F-04-HOR` 8, `OP-F-04-COL` 7,
+    `OP-F-04-WEI` 4, `OP-F-02` 1), o sea decisiones de FUENTE y no de fusion, como el reporte dice.
+12. **Higiene:** cero guiones largos, cero guiones medios y cero signos menos en los cuatro
+    archivos tocados.
+
+### 2. LOS CINCO DISCUTIBLES MARCADOS, uno por uno
+
+1. **La cifra de los "seis de sus treinta y un nodos": EL EJECUTOR TIENE RAZON, Y EL ERROR ES MIO.**
+   La cifra es del acta de la vuelta 12, seccion 5 ("seis de sus treinta y un nodos ya no existiran
+   como tales: seran supervivientes"), y el encargo la repitio. **No reproduce.** Medido por mi: los
+   6 actos que tocan la nomina contienen **8** de sus 31 nodos, repartidos **2, 2, 1, 1, 1, 1**. Si
+   cada acto deja UN superviviente y ese superviviente sale de la nomina, los absorbidos son
+   **8 menos 6, o sea DOS**, y los dos pares internos son
+   `cinco_categorias_costos_franquicia`/`estimacion_inversion_inicial_franquiciador` (puesto 2.074)
+   y `elaboracion_fdd`/`preparar_fdd` (puesto 2.078). **El seis era el numero de ACTOS, no el de
+   nodos absorbidos: confundi el acto con el nodo.** El ejecutor hizo exactamente lo que la campana
+   pide: no la reescribio, no la descarto, midio y declaro.
+   **Y verifique ademas su afirmacion de control:** cero de los 31 aparecen en el campo `nodos` de
+   ninguna operacion FUSION o DESTEJIDO ya LISTA. **Cierto.** El unico de los 31 citado en otra
+   nomina es `eleccion_abogado_franquicias`, y es en `OP-S-07`, que es CAMPO_SUCIO, no fusion.
+2. **`OP-I-01` desactualizada mas alla de lo corregido: CONFIRMADO** (punto 10 de arriba: 221 contra
+   335 medidos por mi). Bien marcado.
+3. **`OP-L-03` sin verificar: bien traido, PERO la imposibilidad esta declarada demasiado fuerte.**
+   El reporte dice que "no hay en el repositorio una lista estructurada de los 55 pares con la que
+   recomputar sin inventar". **La lista por id no existe, es cierto; pero la VIA de recomputo si, y
+   es la que el propio ejecutor uso esta misma vuelta para `OP-U-02`:**
+   `RECOMPUTO_3388_COMPONENTES.jsonl` trae por componente `tamano`, `fuera_de_cola` y `miembros`, y
+   `OP-L-03` se define justo sobre eso (pares fuera de cola internos a componentes de 3 a 6 sin mesa
+   ni nomina). **Lo corri para probar que la via existe:** al corte 3.388 el conjunto analogo da
+   **41 componentes y 92 pares** (contra 55 en 29 actos al 2.117). No publico ese 92 como el
+   recomputo de `OP-L-03`, porque el criterio fino de "no esperan destejido" hay que aplicarlo
+   entero; lo publico como prueba de que **el recomputo es medible y no pide inventar nada**. Es
+   adjudicacion, no medicion cerrada.
+4. **El criterio "del propio plan" de `OP-U-02`: bien construido y bien marcado.** Ver adjudicacion
+   6.2.
+5. **La reutilizacion del script: bien declarada, y la verificacion la resuelve.** Da igual que el
+   instrumento se corriera una sola vez, porque **yo medi las 43 con un instrumento independiente y
+   la conclusion se sostiene entera**. Ahora bien, hay que dejar escrito lo que el discutible dice
+   de si mismo y no calza: el discutible afirma que el script se corrio "sobre las 43 del plan
+   entero", y **el `universo` del script commiteado es la lista literal de las 35**, no las 43. La
+   conclusion es verdadera y la verifique yo; **lo que no es reproducible con el archivo commiteado
+   es el control cruzado sobre las 43**. Queda dentro del marcado, porque el discutible 5 abre
+   precisamente la procedencia de esas mediciones.
+
+### 3. RELECTURA CIEGA: cinco puestos, y me fue mal a mi
+
+**Eleccion declarada:** las aristas A que meten a los 8 nodos de la nomina de `OP-S-10` dentro de
+sus 6 actos, que son el sustrato exacto de la TAREA 1.2, **quitando las tres que la vuelta 12 ya
+habia leido a ciegas** (2.074, 2.078, 2.105). Quedan cinco: 2.075, 2.076, 2.181, 2.196 y 2.207.
+
+**CONTAMINACION DECLARADA, y es mia:** mi volcador selecciona las aristas **de clase A** que tocan
+la nomina, asi que **supe que las cinco eran A antes de adjudicar**. El ciego fue sobre la RAZON,
+no sobre la clase, igual que en las vueltas 1 a 4, pero aqui el sesgo es peor porque yo mismo lo
+fabrique con el filtro. Lo digo antes de dar el resultado. **Sirve de algo: sabiendo que eran A,
+adjudique D tres veces, asi que el sesgo no me empujo hacia el archivo.**
+
+| puesto | mi clase, antes de destapar la razon | archivo | coincide |
+|---:|---|---|---|
+| 2.075 | **D**: parte contra todo, una categoria del presupuesto contra el presupuesto entero | A | **NO** |
+| 2.076 | A: mismo acto, elegir abogado de franquicias despues de decidir el negocio; referencias y honorarios son detalle | A | si |
+| 2.181 | **D**: auditar lo que ya opera contra validar lo que estas disenando, un paso entero propio en cada lado | A | **NO** |
+| 2.196 | **D**: la ficha de confidencialidad despliega el paso 5 del mapa; ficha contra mapa | A | **NO** |
+| 2.207 | **D**: por la misma lectura que el 2.181 | A | **NO** |
+
+**Resultado: UNO de cinco. Cuatro discrepancias, LAS CUATRO MIAS, y las cuatro caen del lado del
+archivo al destapar.** Las razones escritas citan pasos que existen en los nodos (cotejadas contra
+mis propios volcados) y aplican la vara con coherencia:
+
+- **En el 2.075 me equivoque de figura.** Lei "parte contra todo" y dispare el precedente del 2.092;
+  pero el 2.092 es D porque enfrenta **dos categorias distintas entre si** (los dos periferios de la
+  octava estrella), mientras que el 2.075 enfrenta **la parte con el todo que la contiene**, y por
+  el 9.6.1 eso es SUBCONJUNTO ESTRICTO. Los cuatro pasos del corto viven en los pasos 3 y 6 del
+  largo y lo unico que anade son dos palabras. **A.** Las dos figuras conviven y se distinguen por
+  quien contiene a quien, que es justo lo que la razon del 2.092 ya explicaba.
+- **En el 2.181 y el 2.207 pese EL MOMENTO como si fuera un paso entero.** Disenar contra operar es
+  un matiz de la misma prueba de tres elementos, y por la vara es LINEA.
+  `estructuras_combinadas_franquicia` no tiene un solo paso propio; los otros dos si traen
+  procedimiento.
+- **En el 2.196 aplique "ficha contra mapa" donde no habia ficha.** Los tres puntos del hijo son
+  accion unica, obligacion y criterio suelto, y **la precision que dice que eso es LINEA y no
+  procedimiento es la misma que decidio la correccion del 2.078**, ya auditada y en verde. Aplicarla
+  aqui es coherencia, no invento.
+
+**Mi trampa, con nombre: pese como paso entero propio lo que la vara pesa como linea (un matiz de
+momento, un matiz de alcance, una politica dicha en tres formas). Tres veces en una sola tanda.** Es
+pariente de la trampa del nucleo compartido que ya me cazaron en las vueltas 3 y 4, pero al reves:
+alli inflaba el parecido, aqui inflo la diferencia.
+
+**Efecto sobre el credito del EJECUTOR: ninguno.** Cero caidas de clase; el archivo gano las cinco.
+
+### 4. EL BONUS DE `OP-L-02`, MEDIDO POR MI, Y AQUI ESTA LA CAIDA
+
+El reporte publica esta fila:
+
+> `bloque humano de la supervision de la IA` | **10** nodos (particion provisional 5+4+1) | **45**
+> pares posibles | **10 leidos** (cobertura MEZCLADO, **no completa**)
+
+y cierra el bonus con **"Confirma, no cambia, lo que `OP-L-02` ya tenia escrito"**.
+
+**Las dos primeras filas verifican y son correctas** (cuadrantes de mercado 6 nodos, 15 pares, 15
+leidos; ecuacion de valor 5 nodos, 10 pares, 10 leidos; y la aritmetica de las dos tandas, 7 mas 8 y
+5 mas 5, calza con la tabla de `LECTURAS_DIRIGIDAS.md`). **La tercera no.** Medido por mi contra el
+repo:
+
+- **`docs/plan/LECTURAS_DIRIGIDAS.md` linea 439: "CINCO nodos de Mollick, el bloque humano de la
+  particion provisional 5 mas 4 mas 1. Iban 7 de 10, los siete en A."** El bloque humano tiene
+  **CINCO** nodos y **DIEZ** pares posibles, no diez y cuarenta y cinco.
+- **`docs/plan/LECTURAS_DIRIGIDAS.md` linea 465: "NUEVA FORMA: 10 de 10, 7 en A y 3 en D. MEZCLADO,
+  con cobertura COMPLETA."**
+- **La nota de `OP-L-02` en `OPERACIONES.jsonl`, que el propio reporte cita como fuente: "TRES
+  nominas cierran con cobertura COMPLETA ... bloque humano de la IA 10 de 10 con 7 A y 3 D."**
+- El **10 nodos y 45 pares** son del **racimo de la supervision de la IA**, otro universo:
+  `01_FUENTES.md` lineas 146 a 148, "la nomina de diez y su particion provisional de 5 mas 4 mas 1
+  ... con cobertura de 14 pares de 45".
+
+**O sea: la fila mezcla dos universos** (el bloque humano de cinco con el racimo de diez) **y
+declara NO COMPLETA una cobertura que tres sitios distintos declaran COMPLETA**, uno de ellos la
+nota que el reporte abre dos parrafos antes. La frase de cierre "confirma, no cambia" es falsa para
+esa fila: la cambia.
+
+**Lo que si es correcto y hay que dejarlo escrito, porque el ejecutor no invento el problema:** la
+prosa de debajo de la tabla dice bien que "el bloque humano tiene sus 10 pares internos leidos" y
+que "la particion contra el bloque del mapa (35 pares mas) sigue sin leerse, tal como ya declaraba
+`OP-F-02`". **Eso es cierto, es el hueco real del racimo de diez, y 45 menos 10 son 35.** El error
+es de etiqueta y de universo, no de invencion.
+
+**Es una discrepancia FUERA de los cinco discutibles marcados, y la cuento como caida de reporte.**
+Con sus atenuantes escritos: no mueve ni una clase ni una cifra del marcador, **no se escribio nada
+en `docs/plan/`** (el propio encargo lo prohibia y el ejecutor lo respeto), y la prosa adyacente es
+correcta. Y con su agravante escrito: **es exactamente la especie de la caida de la vuelta 12** (una
+afirmacion de que algo falta, contra el archivo que el mismo reporte acaba de citar) **y es
+exactamente lo que la VERIFICACION FIJA CUARTA, nacida de esa caida, mandaba comprobar**.
+
+### 5. DOS COSAS MAS QUE NO CUADRAN, y por que NO las cuento como caida
+
+Las declaro porque no se esconden, y adjudico que **no mueven el credito**, por el precedente
+escrito del acta de la vuelta 4, punto 3 ("no es veredicto ni cifra publicada: el credito de la
+tanda no se toca por esto"):
+
+1. **El conteo "17 operaciones con nomina de dos nodos o mas".** Medido por mi: en el universo de
+   las 35 hay **DIECISEIS** con nomina de dos o mas, mas `OP-D-07` con una sola, **igual a 17 con
+   nomina**, mas 18 sin nomina, igual a 35. El 17 es el total con nomina, etiquetado como el total
+   con dos o mas. **La tabla, en cambio, trae las 17 filas correctas y las diecisiete me salieron
+   identicas**: no hay medicion mala, hay una etiqueta mala.
+2. **"las 28 ya verificadas la vuelta pasada" (REPORTE) contra "las 26 ya verificadas la vuelta
+   pasada" (`RECOMPUTO_3388.md`, linea 425).** Los dos documentos de la misma vuelta se contradicen,
+   y **ninguno de los dos numeros es el correcto: son 27**. Las 28 de la vuelta 12 incluyen
+   `OP-M-03`, **cuya nomina de siete vive en `06_MESAS.md` y no en `OPERACIONES.jsonl`**, asi que
+   solo 27 de aquellas caen dentro de las 43 de este barrido. 27 mas 16 igual a 43, y ahi cierra.
+
+### 6. ADJUDICACIONES
+
+1. **LA CIFRA DE LOS SEIS DE `OP-S-10` SE CORRIGE, Y LA CORRECCION ES CONTRA MI PROPIA ACTA.** La
+   redaccion buena, medida en esta vuelta: **seis actos tocan la nomina de `OP-S-10` sobre ocho de
+   sus treinta y un nodos, y de esos ocho solo dos pares son internos a la nomina, asi que como
+   maximo DOS de los treinta y uno quedan absorbidos por fusion interna a la propia nomina**.
+   Cuantos mas dejen de existir como tales depende de que superviviente elija cada uno de los seis
+   actos, **y eso no lo decide ningun documento del plan todavia: se resuelve por el resolutor en el
+   momento de ejecutar (P.1)**, que es justo la precaucion que `OP-S-10` ya tiene escrita. **No es
+   doctrina nueva: es P.1 mas el orden del 00_INDICE, y el precedente sigue siendo `OP-F-03`.** La
+   nota de `OP-S-10` que el ejecutor escribio no publica el seis como cifra propia, asi que **no hay
+   nada que tachar en `OPERACIONES.jsonl`**; lo que se corrige es mi acta de la vuelta 12, aqui.
+2. **EL CRITERIO "DEL PROPIO PLAN" DE `OP-U-02` SE CONFIRMA, y el discutible 4 se responde: si,
+   "otra fase" es mesa o destejido, y no cualquier operacion que fije un superviviente.** Razon
+   citable, no doctrina nueva: `OP-U-02` cuenta **fusiones que el recomputo ABRE**, y una operacion
+   de FUENTE (`OP-F-*`) o de SANEO (`OP-S-*`) no cierra la pregunta de si el acto se funde, solo
+   toca a un miembro por otro motivo. Mesa y destejido si la cierran, porque los dos deciden el
+   destino del acto. **Y la prueba de que el criterio ancho no sirve para esto la da el propio
+   dato: bajo el ancho, actos enteros sin ningun dueno de destino contarian como resueltos por
+   `OP-S-07`, que solo les limpia un campo.** El 47 de 55 queda en pie.
+3. **`OP-L-03` NO ES PENDIENTE DE DOCTRINA: ES MEDICION, y se encarga.** Por extension citable del
+   precedente ya usado tres veces en este bucle ("es medicion, no adjudicacion", actas 1 y 2). La
+   via esta probada en la seccion 2.3 y es la misma que el ejecutor uso esta vuelta para `OP-U-02`.
+   Lo que hay que recomputar es el backlog de pares fuera de cola internos a componentes sin mesa ni
+   nomina, con el criterio de espera aplicado entero, **publicando las dos cifras y sin borrar la
+   vieja** (banco 9.21).
+4. **`OP-I-01` TAMPOCO ES PENDIENTE DE DOCTRINA: es un encargo propio de recomputo de inventario.**
+   La regla de la fase II ya lo cubre entera ("ninguna cifra publicada queda sin recomputar con su
+   corte nuevo"); lo que sobra es alcance, no doctrina. La nota corregida esta bien como esta, y el
+   inventario de 323 entradas (empezando por los 221 actos contra 335) pide su propia vuelta.
+5. **LAS DOS SIN DUENO (`lienzo_modelo_negocio` y `planificacion_recoleccion_datos`) NO SE
+   CONVIERTEN EN OPERACION NUEVA EN ESTE ESTADO.** El ejecutor hizo bien en dejarlas como lista
+   declarada. Crear operacion para ellas mueve el alcance de la campana con la campana parada, y eso
+   **es decision de fundador** (AUDITOR.md seccion 4).
+
+### 7. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 12: **27 relecturas, 360 puestos, 7 caidas de clase, mas 1 caida de
+reporte.**
+
+Esta vuelta: **mas 1 relectura, mas 5 puestos**, **CERO caidas de clase del ejecutor** (el archivo
+gano las cinco), **cuatro discrepancias MIAS que no prosperaron**, y **UNA caida de reporte del
+ejecutor fuera del marcado** (seccion 4).
+
+**Acumulado: 28 relecturas, 365 puestos, 7 caidas de clase, mas 2 caidas de reporte.**
+
+**Las dos caidas de reporte son en tandas CONSECUTIVAS (vueltas 12 y 13). La condicion de parada de
+AUDITOR.md seccion 4 se cumple y la aplico.**
+
+### 8. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **La cifra de los seis de `OP-S-10` era mia y estaba mal.** Confundi el numero de actos con el de
+  nodos absorbidos, la escribi en el acta de la vuelta 12 y la repeti en el encargo. **La cazo el
+  ejecutor, no yo.**
+- **Contamine mi propia relectura ciega** filtrando por clase A antes de volcar. Declarado antes del
+  resultado, no despues.
+- **Cuatro de cinco adjudicaciones ciegas mias cayeron**, y la trampa tiene nombre en la seccion 3:
+  pesar como paso entero lo que la vara pesa como linea.
+- **Mi enumeracion del universo, otra vez.** El encargo de la vuelta 13 volvio a hablar de "las 43
+  con nomina" sin avisar que `OP-M-03` no vive en `OPERACIONES.jsonl`, y de ahi sale el lio del
+  26/27/28 de la seccion 5.2. La confusion la hereda el ejecutor de mi encargo.
+
+### 9. CONDICIONES DE PARADA: SE CUMPLE UNA
+
+- Doctrina nueva: **no**. Las cinco adjudicaciones cuelgan de P.1, del orden del 00_INDICE, del
+  banco 9.21 y del precedente "es medicion, no adjudicacion".
+- Contradiccion sin resolver: **no**. La del bonus se resuelve con correccion declarada y no mueve
+  ni una clase.
+- Decision de fundador: **no se toco nada de lo reservado.** `dataset/` intacto, sin merge, Fase III
+  sin abrir, rama `pasada-unica` sin crear.
+- Fallo tecnico: **no**. Hook limpio, arbol limpio, cero guiones.
+- **Credito de tanda roto DOS TANDAS SEGUIDAS: SI. ESTA ES LA PARADA.**
+- Campana consumada: **no**. La FASE II sigue abierta.
+
+`docs/loop/PARA_ALEXIS.md` escrito. `docs/loop/PROMPT_SIGUIENTE.md` vaciado. **El bucle se detiene
+aqui y la decision vuelve al fundador.**
