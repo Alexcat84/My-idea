@@ -1,0 +1,75 @@
+------------------------------------------------------------------------------
+ID    : five_whys_inversion_proporcional   PASOS: 9   VIVO: True
+TITULO: Los Cinco Porqués con Inversión Proporcional
+FUENTE: The Lean Startup - Eric Ries | SPIN Selling - Neil Rackham
+ENTREG: Documento de sesión Five Whys con cadena de causas, responsables asignados y acciones proporcionales implementadas
+RESUME: Técnica de análisis de causa raíz donde cada 'porqué' identificado recibe una inversión de corrección proporcional a su impacto, evitando tanto la sobre-ingeniería como la subinversión. El objetivo es que cada nivel de causa reciba una solución adecuada a su magnitud, generando dos resultados: aprendizaje organizacional y acciones concretas (doing). Aplicado repetidamente, fortalece el 'sistema inmune' del equipo frente a errores recurrentes.
+PREVIO: design_test_repeat, cinco_porques_master
+SIGUIE: mejora_continua_relentless, investigacion_incidentes_2, investigacion_incidentes
+ETIQUE: Invierte Según Cada Causa Raíz
+CONDIC: Cuando ocurre un error o falla técnica/operativa repetible | Cuando el equipo tiende a culpar a personas en lugar de procesos | Cuando se busca prevenir la recurrencia de un problema sistémico
+   1. Ante un incidente o error, preguntar '¿por qué ocurrió?' de forma iterativa (mínimo 5 veces)
+   2. Para cada respuesta, asignar una persona responsable y una acción proporcional al nivel del problema
+   3. Documentar tanto el aprendizaje obtenido como las acciones correctivas tomadas
+   4. Evitar culpar a individuos; enfocar el análisis en procesos y sistemas
+   5. Revisar después de un tiempo si el problema se repitió para validar la efectividad de las correcciones
+   6. Ante un problema recurrente de ventas (objeciones, bajo cierre, etc.), preguntar '¿cuál es la causa raíz, no solo el síntoma?'
+   7. Revisar grabaciones o registros de llamadas/reuniones para identificar patrones de comportamiento que preceden al síntoma.
+   8. Rediseñar el entrenamiento o proceso para atacar la causa, no solo dar 'respuestas rápidas' al síntoma.
+   9. Medir resultados tras el cambio estructural, no solo la reducción aparente del síntoma.
+------------------------------------------------------------------------------
+ID    : preguntas_ipo_dolor_cliente   PASOS: 7   VIVO: True
+TITULO: Preguntas IPO para Descubrir el Dolor del Cliente
+FUENTE: The Startup Owner's Manual - Steve Blank | SPIN Selling - Neil Rackham
+ENTREG: Lista de dolores priorizados por cliente con estimación de costo asociado a cada problema
+RESUME: Técnica de entrevista para identificar el problema más doloroso del cliente usando dos preguntas clave que revelan la verdadera necesidad no satisfecha, junto con el costo cuantificable de ese problema (tiempo, dinero, frustración).
+PREVIO: desarrollo_presentacion_problema, dia_en_la_vida_del_cliente
+SIGUIE: scorecard_descubrimiento_cliente, presentacion_solucion_producto, presentacion_problema_tres_columnas
+ETIQUE: Descubre el Dolor del Cliente
+CONDIC: Cuando se está en fase de customer discovery y se necesita validar la importancia real de un problema
+   1. Preguntar: '¿Cuál es el mayor dolor en cómo trabajas?'
+   2. Preguntar: 'Si pudieras cambiar algo con una varita mágica, qué sería?'
+   3. Preguntar casualmente cuánto le cuesta este problema al cliente en términos monetarios o de tiempo
+   4. Registrar la respuesta para usarla luego en la presentación de validación de clientes
+   5. Identificar de antemano los problemas típicos que el producto/servicio resuelve
+   6. Formular preguntas directas sobre insatisfacciones relacionadas a esos problemas
+   7. Escuchar activamente las respuestas para detectar problemas no mencionados explícitamente
+------------------------------------------------------------------------------
+ID    : split_testing_experimentos_ab   PASOS: 9   VIVO: True
+TITULO: Split-Testing (Pruebas A/B)
+FUENTE: The Lean Startup - Eric Ries | SPIN Selling - Neil Rackham
+ENTREG: Reporte de resultados de al menos un experimento A/B con conclusiones sobre el impacto de una funcionalidad en el comportamiento del cliente
+RESUME: Técnica en la que se ofrecen diferentes versiones de un producto a distintos grupos de clientes simultáneamente, para observar diferencias en el comportamiento y así inferir el impacto real de cada variación. A diferencia del análisis de causa-efecto posterior (que es lento y ambiguo), el split-test genera evidencia científica en tiempo real sobre qué cambios importan realmente a los clientes.
+PREVIO: producto_minimo_viable, vanity_metrics_vs_accionables, metricas_accionables
+SIGUIE: metricas_cohortes, kanban_validacion_aprendizaje
+ETIQUE: Prueba Versiones, Mide Resultados
+CONDIC: Si el equipo no puede determinar con certeza qué causó un cambio en las métricas | Si se quiere decidir entre priorizar nuevas funcionalidades sin desperdiciar recursos de desarrollo
+   1. Definir una hipótesis clara sobre el impacto esperado de una nueva funcionalidad
+   2. Dividir la base de clientes en dos grupos aleatorios (A y B)
+   3. Lanzar la variación nueva solo al grupo B, manteniendo el grupo A con la versión estándar
+   4. Medir comportamiento de ambos grupos usando las mismas métricas
+   5. Comparar resultados para determinar si la variación tuvo impacto real
+   6. Seleccionar un grupo de control con nivel de desempeño inicial similar al grupo que recibirá la intervención
+   7. Medir resultados de ambos grupos en el mismo periodo de tiempo bajo las mismas condiciones de mercado
+   8. Comparar el cambio porcentual de ambos grupos, no solo los valores absolutos
+   9. Reportar la diferencia neta entre grupos como evidencia del impacto de la intervención
+------------------------------------------------------------------------------
+ID    : superioridad_producto_beneficios   PASOS: 10   VIVO: True
+TITULO: La superioridad de tu producto está en los beneficios, no en las características
+FUENTE: Winning at New Products - Robert G. Cooper | SPIN Selling - Neil Rackham
+ENTREG: Un documento donde conviertes las características técnicas de tu producto en beneficios claros para el cliente, validado con lo que aprendiste hablando con ellos y mirando a la competencia
+RESUME: Que tu producto sea superior no depende de sus características técnicas ni de su tecnología, sino de los beneficios únicos que tu cliente percibe y por los que está dispuesto a pagar. Las características (features) te cuestan dinero a ti; los beneficios (benefits) son lo que tu cliente compra. Piensa en tu producto como un conjunto de beneficios para quien lo usa, no como una lista de funciones técnicas.
+PREVIO: customer_gains, alfabetizacion_en_materiales_maliciosos, tecnologia_como_medio_no_fin
+SIGUIE: voz_del_cliente_voc, spiral_development, enfoque_resolucion_problemas_lanzamiento_producto, prevencion_de_objeciones, desarrollo_en_espiral, lanzamiento_nuevos_productos_enfoque_problema, prevencion_objeciones_vs_manejo
+ETIQUE: Enfócate en el Beneficio Percibido
+CONDIC: Cuando defines tu producto solo por sus características técnicas, sin pensar en la mirada del cliente | Cuando tu producto no logra diferenciarse claramente de la competencia
+   1. Diferencia entre las características técnicas (features), que a ti te cuestan dinero, y los beneficios (benefits), que es lo que tu cliente realmente compra
+   2. Desde el inicio, sal a escuchar a tus clientes (haz una investigación de voz del cliente, VoC) para descubrir sus necesidades, no solo sus deseos
+   3. Analiza a la competencia: desarma sus productos y encuentra sus puntos débiles
+   4. No te quedes con la foto de hoy: imagina cómo evolucionará el producto de tu competidor en el futuro
+   5. Traduce lo que encuentres en una definición de tu producto centrada en beneficios y en tu propuesta de valor
+   6. Antes de desarrollar todo, prueba la idea con usuarios reales usando prototipos simples o conceptuales (protocepts)
+   7. Decide si tu producto va a competir por precio bajo con muchas funciones, o como algo premium
+   8. Si eliges precio bajo, arma tu discurso de venta enumerando características
+   9. Si eliges premium, no enumeres características; habla de los beneficios que resuelven necesidades concretas de tu cliente
+  10. Si sumas vendedores que vienen de una empresa con otro posicionamiento de precio, revisa que no repitan el estilo equivocado

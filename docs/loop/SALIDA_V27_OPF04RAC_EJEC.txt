@@ -1,0 +1,64 @@
+PLAN   : docs/loop/PLAN_V27_OPF04_RAC.json
+OPERACION: OP-F-04-RAC
+MODO   : --ejecutar
+CORTES : 4
+==============================================================================
+
+------------------------------------------------------------------------------
+ORIGEN : five_whys_inversion_proporcional   frontera 1 a 5 / 6 a 9
+  pasos totales 9, salen 4, quedan 5
+  fuente: 'The Lean Startup - Eric Ries | SPIN Selling - Neil Rackham'  ->  'The Lean Startup - Eric Ries'
+    sale   6. Ante un problema recurrente de ventas (objeciones, bajo cierre, etc.), preguntar '¿cuál es la causa 
+    sale   7. Revisar grabaciones o registros de llamadas/reuniones para identificar patrones de comportamiento qu
+    sale   8. Rediseñar el entrenamiento o proceso para atacar la causa, no solo dar 'respuestas rápidas' al sínto
+    sale   9. Medir resultados tras el cambio estructural, no solo la reducción aparente del síntoma.
+  DESTINO: MIEMBRO diagnostico_sintoma_vs_causa_ventas
+  diagnostico_sintoma_vs_causa_ventas: pasos 4 -> 8
+
+------------------------------------------------------------------------------
+ORIGEN : preguntas_ipo_dolor_cliente   frontera 1 a 4 / 5 a 7
+  pasos totales 7, salen 3, quedan 4
+  fuente: "The Startup Owner's Manual - Steve Blank | SPIN Selling - Neil Rackham"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   5. Identificar de antemano los problemas típicos que el producto/servicio resuelve
+    sale   6. Formular preguntas directas sobre insatisfacciones relacionadas a esos problemas
+    sale   7. Escuchar activamente las respuestas para detectar problemas no mencionados explícitamente
+  DESTINO: MIEMBRO preparacion_preguntas_problema_precall
+  preparacion_preguntas_problema_precall: pasos 4 -> 7
+
+------------------------------------------------------------------------------
+ORIGEN : split_testing_experimentos_ab   frontera 1 a 5 / 6 a 9
+  pasos totales 9, salen 4, quedan 5
+  fuente: 'The Lean Startup - Eric Ries | SPIN Selling - Neil Rackham'  ->  'The Lean Startup - Eric Ries'
+    sale   6. Seleccionar un grupo de control con nivel de desempeño inicial similar al grupo que recibirá la inte
+    sale   7. Medir resultados de ambos grupos en el mismo periodo de tiempo bajo las mismas condiciones de mercad
+    sale   8. Comparar el cambio porcentual de ambos grupos, no solo los valores absolutos
+    sale   9. Reportar la diferencia neta entre grupos como evidencia del impacto de la intervención
+  DESTINO: MIEMBRO metodologia_evaluacion_entrenamiento_ventas
+  metodologia_evaluacion_entrenamiento_ventas: pasos 5 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : superioridad_producto_beneficios   frontera 1 a 6 / 7 a 10
+  pasos totales 10, salen 4, quedan 6
+  fuente: 'Winning at New Products - Robert G. Cooper | SPIN Selling - Neil Rackham'  ->  'Winning at New Products - Robert G. Cooper'
+    sale   7. Decide si tu producto va a competir por precio bajo con muchas funciones, o como algo premium
+    sale   8. Si eliges precio bajo, arma tu discurso de venta enumerando características
+    sale   9. Si eliges premium, no enumeres características; habla de los beneficios que resuelven necesidades co
+    sale  10. Si sumas vendedores que vienen de una empresa con otro posicionamiento de precio, revisa que no repi
+  DESTINO: MIEMBRO diferencia_ventaja_beneficio
+  diferencia_ventaja_beneficio: pasos 4 -> 8
+
+==============================================================================
+RESUMEN
+  cortes aplicados en memoria: 4
+  nodos propios nuevos       : 0 []
+  ficheros que se tocarian   : 8
+
+ESCRITO: 8 fichero(s) en dataset/nodos/.
+  - diagnostico_sintoma_vs_causa_ventas
+  - diferencia_ventaja_beneficio
+  - five_whys_inversion_proporcional
+  - metodologia_evaluacion_entrenamiento_ventas
+  - preguntas_ipo_dolor_cliente
+  - preparacion_preguntas_problema_precall
+  - split_testing_experimentos_ab
+  - superioridad_producto_beneficios

@@ -1,0 +1,132 @@
+{
+  "operacion": "OP-F-04-RAC",
+  "clase": "TANDA DE INJERTOS, grupo RACKHAM. Cuatro nodos, los cuatro confirmados el 11 ago 2026.",
+  "regla": "P.3 manda REPARTO OBLIGATORIO (el tema coincide) hacia la familia de SPIN. El miembro receptor se decide por P.18, leido sobre la nomina vigente al dia: medida hoy, 51 nodos vivos declaran a Rackham y 47 lo declaran como fuente UNICA.",
+  "cortes": [
+    {
+      "origen": "five_whys_inversion_proporcional",
+      "frontera": "1 a 5 / 6 a 9",
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "fuente_queda": "The Lean Startup - Eric Ries",
+      "huella": "grabaciones o registros de llamadas",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "diagnostico_sintoma_vs_causa_ventas",
+        "fuente_esperada_destino": "SPIN Selling - Neil Rackham",
+        "motivo_p18": "El bloque pregunta por la causa raiz de un problema recurrente de ventas y no por el sintoma, revisa grabaciones de llamadas para encontrar el patron, rediseña el entrenamiento para atacar la causa y mide el resultado del cambio estructural. El objeto del miembro es exactamente ese diagnostico: distinguir el sintoma (las objeciones) de la causa real mirando datos reales de tus conversaciones ANTES de decidir como entrenarte."
+      },
+      "pasos_totales": 9,
+      "fuente_esperada": "The Lean Startup - Eric Ries | SPIN Selling - Neil Rackham",
+      "prefijos": [
+        "Ante un problema recurrente de ven",
+        "Revisar grabaciones o registros de",
+        "Rediseñar el entrenamiento o proce",
+        "Medir resultados tras el cambio es"
+      ],
+      "pasos_que_salen_texto": [
+        "Ante un problema recurrente de ventas (objeciones, bajo cierre, etc.), preguntar '¿cuál es la causa raíz, no solo el síntoma?'",
+        "Revisar grabaciones o registros de llamadas/reuniones para identificar patrones de comportamiento que preceden al síntoma.",
+        "Rediseñar el entrenamiento o proceso para atacar la causa, no solo dar 'respuestas rápidas' al síntoma.",
+        "Medir resultados tras el cambio estructural, no solo la reducción aparente del síntoma."
+      ]
+    },
+    {
+      "origen": "preguntas_ipo_dolor_cliente",
+      "frontera": "1 a 4 / 5 a 7",
+      "pasos_que_salen": [
+        5,
+        6,
+        7
+      ],
+      "fuente_queda": "The Startup Owner's Manual - Steve Blank",
+      "huella": "Identificar de antemano los problemas típicos",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "preparacion_preguntas_problema_precall",
+        "fuente_esperada_destino": "SPIN Selling - Neil Rackham",
+        "motivo_p18": "El bloque manda identificar DE ANTEMANO los problemas tipicos que el producto resuelve y formular preguntas directas sobre esas insatisfacciones. El objeto del miembro es literalmente ese: anticipar antes de la reunion al menos tres problemas potenciales del comprador y redactar las Preguntas de Problema de cada uno."
+      },
+      "pasos_totales": 7,
+      "fuente_esperada": "The Startup Owner's Manual - Steve Blank | SPIN Selling - Neil Rackham",
+      "prefijos": [
+        "Identificar de antemano los proble",
+        "Formular preguntas directas sobre ",
+        "Escuchar activamente las respuesta"
+      ],
+      "pasos_que_salen_texto": [
+        "Identificar de antemano los problemas típicos que el producto/servicio resuelve",
+        "Formular preguntas directas sobre insatisfacciones relacionadas a esos problemas",
+        "Escuchar activamente las respuestas para detectar problemas no mencionados explícitamente"
+      ]
+    },
+    {
+      "origen": "split_testing_experimentos_ab",
+      "frontera": "1 a 5 / 6 a 9",
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "fuente_queda": "The Lean Startup - Eric Ries",
+      "huella": "grupo de control con nivel de desempeño inicial similar",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "metodologia_evaluacion_entrenamiento_ventas",
+        "fuente_esperada_destino": "SPIN Selling - Neil Rackham",
+        "motivo_p18": "El bloque monta un grupo de control de desempeno inicial similar, mide a los dos en el mismo periodo, compara el cambio porcentual y reporta la diferencia neta como evidencia. La tercera prueba del miembro es esa misma: una ganancia de productividad medible FRENTE A UN GRUPO QUE NO FUE ENTRENADO."
+      },
+      "pasos_totales": 9,
+      "fuente_esperada": "The Lean Startup - Eric Ries | SPIN Selling - Neil Rackham",
+      "prefijos": [
+        "Seleccionar un grupo de control co",
+        "Medir resultados de ambos grupos e",
+        "Comparar el cambio porcentual de a",
+        "Reportar la diferencia neta entre "
+      ],
+      "pasos_que_salen_texto": [
+        "Seleccionar un grupo de control con nivel de desempeño inicial similar al grupo que recibirá la intervención",
+        "Medir resultados de ambos grupos en el mismo periodo de tiempo bajo las mismas condiciones de mercado",
+        "Comparar el cambio porcentual de ambos grupos, no solo los valores absolutos",
+        "Reportar la diferencia neta entre grupos como evidencia del impacto de la intervención"
+      ]
+    },
+    {
+      "origen": "superioridad_producto_beneficios",
+      "frontera": "1 a 6 / 7 a 10",
+      "pasos_que_salen": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "fuente_queda": "Winning at New Products - Robert G. Cooper",
+      "huella": "no enumeres características; habla de los beneficios",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "diferencia_ventaja_beneficio",
+        "fuente_esperada_destino": "SPIN Selling - Neil Rackham",
+        "motivo_p18": "El bloque decide CUANDO se enumeran caracteristicas y cuando se habla de beneficios, segun el posicionamiento de precio, y avisa del vendedor que llega con el estilo de otra casa. El entregable del miembro es esa misma decision: los mensajes de venta reclasificados con el momento exacto de la conversacion en que se usa cada uno."
+      },
+      "pasos_totales": 10,
+      "fuente_esperada": "Winning at New Products - Robert G. Cooper | SPIN Selling - Neil Rackham",
+      "prefijos": [
+        "Decide si tu producto va a competi",
+        "Si eliges precio bajo, arma tu dis",
+        "Si eliges premium, no enumeres car",
+        "Si sumas vendedores que vienen de "
+      ],
+      "pasos_que_salen_texto": [
+        "Decide si tu producto va a competir por precio bajo con muchas funciones, o como algo premium",
+        "Si eliges precio bajo, arma tu discurso de venta enumerando características",
+        "Si eliges premium, no enumeres características; habla de los beneficios que resuelven necesidades concretas de tu cliente",
+        "Si sumas vendedores que vienen de una empresa con otro posicionamiento de precio, revisa que no repitan el estilo equivocado"
+      ]
+    }
+  ]
+}

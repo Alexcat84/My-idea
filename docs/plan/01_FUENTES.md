@@ -635,6 +635,36 @@ destejidos y las fusiones que dependen de ellos.**
 > de 31 nodos a 74.** No es que hayan aparecido injertos nuevos: **es que la firma
 > posicional los hizo contables.**
 
+### `OP-F-04-RAC` EJECUTADA ENTERA (14 ago 2026, vuelta 27)
+
+**Es la primera de las cuatro tandas que se ejecuta completa**, y por eso vale como patron de
+las otras tres. `P.3` manda **reparto obligatorio** (el tema coincide) hacia la familia de
+SPIN; el miembro receptor lo elige `P.18` sobre la nomina **medida hoy: 51 nodos vivos
+declaran a Rackham y 47 lo declaran como fuente UNICA**.
+
+| # | origen | frontera leida hoy | miembro receptor | por que su objeto coincide |
+|---:|---|---|---|---|
+| 1 | `five_whys_inversion_proporcional` | **1 a 5 / 6 a 9** | `diagnostico_sintoma_vs_causa_ventas` | el bloque busca la causa raiz de un problema de ventas mirando grabaciones de llamadas antes de rediseñar el entrenamiento; **el objeto del miembro es ese diagnostico**, distinguir el sintoma de la causa con datos reales de conversaciones |
+| 2 | `preguntas_ipo_dolor_cliente` | **1 a 4 / 5 a 7** | `preparacion_preguntas_problema_precall` | identificar **DE ANTEMANO** los problemas tipicos y formular las preguntas: **es literalmente el objeto del miembro**, anticipar tres problemas y redactar sus Preguntas de Problema |
+| 3 | `split_testing_experimentos_ab` | **1 a 5 / 6 a 9** | `metodologia_evaluacion_entrenamiento_ventas` | grupo de control de desempeno inicial similar y diferencia neta como evidencia: **es su tercera prueba**, ganancia medible frente a un grupo que no fue entrenado |
+| 4 | `superioridad_producto_beneficios` | **1 a 6 / 7 a 10** | `diferencia_ventaja_beneficio` | cuando se enumeran caracteristicas y cuando se habla de beneficios: **es su entregable**, los mensajes reclasificados con el momento exacto de usar cada uno |
+
+**LAS CUATRO FRONTERAS SE LEYERON HOY CONTRA LOS PASOS** y **las cuatro calzan con la
+frontera tipica publicada para el grupo** (*el bloque 1 es metodo de producto; el bloque 2 es
+la venta*). **Cero destinos a nodo propio en esta tanda**, asi que el muro del indice no la
+toca.
+
+**GUARDAS:** simulacion previa verde, guarda de texto y de fuente por nodo, **caso positivo
+antes (8 pruebas, 8 CAEN) y despues (8 PASAN)**, **`GATE 0` entero en verde**, 71 etiquetas
+sin encoger, las dos copias en el mismo blob, y **suites verdes** (motor 24 de 24, web 80
+ficheros con 1.030 pasadas, `tsc` limpio).
+
+> **`OP-F-04-COL`, `OP-F-04-HOR` y `OP-F-04-WEI` NO SE EJECUTARON EN ESTA VUELTA**, y el
+> motivo se dice sin adornos: **son 39 bloques mas**, y cada uno pide leer su nomina de
+> familia entera y decidir su destino por `P.18`, que es lectura y no mecanica. **La vuelta
+> gasto su alcance en medir el muro y en cerrar `OP-F-02`, `OP-F-03` y `RAC`.** Las tres
+> quedan **sin tocar un paso**, con su nomina viva medida hoy en el reporte.
+
 > **CORRECCION DECLARADA, 14 ago 2026 (vuelta 26), y la frase de arriba se queda entera:
 > EL ALCANCE MEDIDO HOY ES DE 30 A 73, no de 31 a 74.** La unica pieza que se movio es la
 > misma de siempre: `background_startup_vs_corporativo` salio de `OP-F-01` por `P.17`, y

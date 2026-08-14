@@ -1,0 +1,23 @@
+CASO POSITIVO: opf04
+==============================================================================
+
+PLAN OP-F-04-RAC (4 cortes)
+  [PASA] five_whys_inversion_proporcional ya no declara SPIN
+         fuente: The Lean Startup - Eric Ries
+  [PASA] el material de five_whys_inversion_proporcional vive fuera de el, en la familia de destino
+         huella 'grabaciones o registros de llamadas' -> portadores ['diagnostico_sintoma_vs_causa_ventas'] (en familia: ['diagnostico_sintoma_vs_causa_ventas'])
+  [PASA] preguntas_ipo_dolor_cliente ya no declara SPIN
+         fuente: The Startup Owner's Manual - Steve Blank
+  [PASA] el material de preguntas_ipo_dolor_cliente vive fuera de el, en la familia de destino
+         huella 'Identificar de antemano los problemas típicos' -> portadores ['preparacion_preguntas_problema_precall'] (en familia: ['preparacion_preguntas_problema_precall'])
+  [PASA] split_testing_experimentos_ab ya no declara SPIN
+         fuente: The Lean Startup - Eric Ries
+  [PASA] el material de split_testing_experimentos_ab vive fuera de el, en la familia de destino
+         huella 'grupo de control con nivel de desempeño inicial similar' -> portadores ['metodologia_evaluacion_entrenamiento_ventas'] (en familia: ['metodologia_evaluacion_entrenamiento_ventas'])
+  [PASA] superioridad_producto_beneficios ya no declara SPIN
+         fuente: Winning at New Products - Robert G. Cooper
+  [PASA] el material de superioridad_producto_beneficios vive fuera de el, en la familia de destino
+         huella 'no enumeres características; habla de los beneficios' -> portadores ['diferencia_ventaja_beneficio'] (en familia: ['diferencia_ventaja_beneficio'])
+
+==============================================================================
+RESULTADO: TODO PASA
