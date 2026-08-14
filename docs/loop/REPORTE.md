@@ -7,13 +7,15 @@ verdad, rama `pasada-unica`) sigue sin abrir.
 
 ## Hash y rutas
 
-- **Hash final de esta vuelta:** ver el commit de este mismo archivo (`git log -1`), por encima del
-  commit de contenido.
+- **Hash de contenido de esta vuelta:** `d67ee481` (TAREA 1 y TAREA 2.A) y `594d5569` (TAREA 2.B,
+  primera version de este reporte). Este commit (correccion de precision del propio reporte) queda
+  por encima de los dos.
 - **Commits de la vuelta:**
   - `d67ee481` TAREA 1 y TAREA 2.A: la nomina de las 46 SI existe (correccion declarada), `OP-S-10`
     remedida y confirmada como la unica operacion movida entre los dos cortes, barrido de las 35
     operaciones que quedaron fuera, `OP-U-02` recomputada con el criterio del propio plan.
-  - este commit: TAREA 2.B, comprobacion de integridad final y este reporte.
+  - `594d5569` TAREA 2.B, comprobacion de integridad final y este reporte.
+  - este commit: correccion de precision en el propio reporte (hash final).
 - **Rutas tocadas:**
   - `docs/plan/RECOMPUTO_3388.md`: cuatro secciones nuevas al final (TAREA 1, TAREA 2.A, el
     recomputo de `OP-U-02`, TAREA 2.B), ninguna reescribe lo verificado en la vuelta 12.
