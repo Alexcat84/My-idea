@@ -1,0 +1,97 @@
+﻿MARCADOR: n=3388 max_puesto=3388 huecos=0 dup=0 fuera_ABCD=[]
+  A=583 (17.2%) B=89 (2.6%) C=7 (0.2%) D=2709 (80.0%)
+  core: n=1445 A=344 (23.8%) B=87 C=7 D=1007
+  quality: n=844 A=126 (14.9%) B=0 C=0 D=718
+  health_safety: n=192 A=45 (23.4%) B=0 C=0 D=147
+  entrega: n=171 A=2 (1.2%) B=0 C=0 D=169
+  environmental: n=170 A=29 (17.1%) B=0 C=0 D=141
+  compras: n=155 A=1 (0.6%) B=2 C=0 D=152
+  franquicias: n=148 A=18 (12.2%) B=0 C=0 D=130
+  exportacion: n=130 A=15 (11.5%) B=0 C=0 D=115
+  risk_management: n=106 A=0 (0.0%) B=0 C=0 D=106
+  seguridad_digital: n=27 A=3 (11.1%) B=0 C=0 D=24
+
+GRAFO: nodos=3835 vivos=3521 deprecados=314 enlaces=16800 claves=15
+AUTO-ARISTAS de vivos tras resolver: 0
+
+OPERACIONES: 71 ids_unicos=71 estados={'LISTA': 71} dependencias_rotas=0
+
+OP-F-01 nodos (6): ['seleccion_representante_extranjero', 'internacionalizacion_sitio_web_exportacion', 'elaboracion_pro_forma_invoice', 'elementos_plan_exportacion_ejemplo', 'principios_medicion_efectiva', 'fmea_analisis_de_modos_de_falla']
+background_startup_vs_corporativo en campo nodos de: ['OP-F-04-HOR']
+PASOS de los seis de OP-F-01 hoy:
+  seleccion_representante_extranjero: 9 pasos, deprecado=False
+  internacionalizacion_sitio_web_exportacion: 9 pasos, deprecado=False
+  elaboracion_pro_forma_invoice: 8 pasos, deprecado=False
+  elementos_plan_exportacion_ejemplo: 13 pasos, deprecado=False
+  principios_medicion_efectiva: 10 pasos, deprecado=False
+  fmea_analisis_de_modos_de_falla: 8 pasos, deprecado=False
+
+ARITMETICA fuente: |F01|=6 |F02|=3 |F03|=21 grupo F01+F02+F03 distintos=30
+  las siete: suma_bruta=75 distintos=73 | tanda OP-F-04 distintos=43 | solape entre grupos=0
+
+OPERACIONES cuyo texto nombra crear nodo / nodo propio (5): ['OP-F-02', 'OP-F-04-COL', 'OP-F-04-HOR', 'OP-F-04-WEI', 'OP-F-04-RAC']
+
+OP-F-04-HOR: 13 nodos, muertos_o_ausentes=[]
+familia Horowitz entre vivos: 102 total, fuente_unica=102, con_otro_libro=0
+  ejemplos de fuente combinada: []
+  valores distintos de fuente unica: ["A Project Manager's Book of Forms | The Hard Thing About Hard Things - Ben Horowitz | The Hard Thing About Hard Thing - Ben Horowitz", 'Assembling Tomorrow: A Guide to Designing a Thriving Future | The Hard Thing About Hard Thing - Ben Horowitz | Never Lose a Customer Again - Joey Coleman', "The Founder's Dilemmas - Wasserman, Noam | The Hard Thing About Hard Thing - Ben Horowitz", "The Founder's Dilemmas | The Hard Thing About Hard Thing - Ben Horowitz", "The Founder's Dilemmas | The Hard Thing About Hard Thing - Ben Horowitz | The Hard Thing About Hard Things - Ben Horowitz", "The Founder's Dilemmas | The Hard Thing About Hard Things", "The Founder's Dilemmas | The Hard Thing About Hard Things - Ben Horowitz", 'The Hard Thing About Hard Thing - Ben Horowitz', 'The Hard Thing About Hard Things', 'The Hard Thing About Hard Things - Ben Horowitz', 'The Lean Startup - Eric Ries | The Hard Thing About Hard Things - Ben Horowitz', 'The Lean Startup - Eric Ries | The Hard Thing About Hard Things | Essentials of Supply Chain Management - Michael H. Hugos', "The Startup Owner's Manual - Steve Blank | The Hard Thing About Hard Things - Ben Horowitz", 'Venture Deals - Brad Feld | The Hard Thing About Hard Things', 'Winning at New Products - Robert G. Cooper | The Hard Thing About Hard Things - Ben Horowitz']
+
+INDICE SEMANTICO: modelo=voyage-4-lite dim=512 ids=3521
+  activos sin vector=0 vectores sobrantes=0
+VOYAGE_API_KEY en entorno: NO
+.env en la raiz: NO
+
+gestion_libro_abierto_obm: fuente='Financial Intelligence for Entrepreneurs' pasos=10 deprecado=False
+
+seleccion_estrategia_pricing: fuente="The Startup Owner's Manual - Steve Blank" pasos=6 deprecado=False
+
+LOS TRES de OP-F-02 hoy:
+  future_scenarios_planning: 13 pasos, fuente='Business Model Generation (Osterwalder) | Co-Intelligence_ Living and Wor - Ethan Mollick'
+  gut_check: 9 pasos, fuente='The field guide to human-centered design | Co-Intelligence_ Living and Wor - Ethan Mollick'
+  brainstorming_divergente: 8 pasos, fuente='Change by Design, Revised and U - Tim Brown | Co-Intelligence_ Living and Wor - Ethan Mollick'
+
+=== ADDENDUM DEL AUDITOR, mediciones fuera del instrumento principal (14 ago 2026) ===
+
+1) FAMILIA HOROWITZ con el criterio del separador | (mi primer criterio uso + y era incomparable):
+   fuente UNICA (solo Horowitz, cualquier grafia): 88
+   junto a OTRO libro: 14
+
+2) ALCANCE DEL MURO, remedido con dos criterios:
+   a) frases [nodo propio / nodo nuevo / crear nodo / crea nodo / nodos nuevos]
+      sobre el JSON entero de las 71: casan CINCO: OP-F-02, OP-F-04-COL, OP-F-04-HOR,
+      OP-F-04-WEI, OP-F-04-RAC. Las CINCO son de la fase 01.
+   b) lectura entera de OP-D-08 y OP-D-09: sus casaciones de la palabra crea son NEGACIONES
+      (OP-D-08 verificacion: "ningun alias se crea"; OP-D-08 adjudicacion: "NO SE CREAN
+      OPERACIONES NUEVAS PARA ELLAS"; OP-D-09 verificacion: "ningun alias se crea") y las
+      dos declaran ademas CERO MOVIMIENTO DE GRAFO. NO piden crear nodo.
+
+3) SALIDAS DE INSTRUMENTO COMMITEADAS EN LA VUELTA 26 (git diff 1758706b..e3de957c):
+   SALIDA_V26_*: ESTADO, FAMILIA_HOROWITZ, MURO_ALCANCE, MURO_INDICE, OPF01, OPF02_LECTURA,
+   OPF03_EJECUCION, OPF03_LECTURA, OPF03_SIMULACION, OPF04HOR, RACIMO_IA. TOTAL: ONCE.
+
+4) DIFF DE dataset/ EN LA VUELTA (1758706b..e3de957c): DOS ficheros, solo el campo fuente,
+   quitando " | Essentials of Supply Chain Management - Michael H. Hugos" en
+   gestion_libro_abierto_obm y seleccion_estrategia_pricing. CERO pasos movidos.
+
+5) CICLO DE GATE 0 CORRIDO ENTERO POR EL AUDITOR (14 ago 2026, sobre HEAD e3de957c):
+   comando 1: python scripts/run_phase1.py --reaplico-curaduria -> EXITCODE 0, GATE 0: OK
+   comando 2: python scripts/etiquetas_de_cara.py --aplicar -> 71 etiquetas, 0 encogidas
+   blobs tras el ciclo: dataset/metadata/master_graph.json = 3f5065d337086776b9d8cb48aded65dfce7c3a54
+                        web/lib/assets/master_graph.json   = 3f5065d337086776b9d8cb48aded65dfce7c3a54
+   los dos IDENTICOS a HEAD (git rev-parse HEAD:<ruta> da el mismo blob en las dos copias).
+
+6) SUITES CORRIDAS ENTERAS POR EL AUDITOR:
+   motor: python engine/run_all_tests.py -> exit 0, TODOS LOS TESTS PASARON (24/24)
+   web:   npx vitest run -> exit 0, 80 ficheros, 1030 pasadas, 3 saltadas
+   tipos: npx tsc --noEmit -> exit 0, cero lineas
+
+7) EL MURO, verificado contra el codigo y el entorno:
+   scripts/run_phase1.py: chequeo "Todo nodo ACTIVO tiene vector en el indice semantico",
+   cero tolerancia, se agrega SIEMPRE; el remedio escrito nombra build_semantic_index_voyage.py.
+   scripts/build_semantic_index_voyage.py: exige VOYAGE_API_KEY (lineas 37, 106 a 107).
+   .env en la raiz: NO EXISTE. VOYAGE_API_KEY en el entorno: NO.
+   web/lib/assets/semantic_index.json: modelo voyage-4-lite, dim 512, 3521 ids,
+   0 activos sin vector, 0 vectores sobrantes.
+
+8) P.17 en docs/plan/BANCO_DEL_PLAN.md linea 863 (seccion propia) y BACKLOG POST-CAMPAÃ‘A
+   en docs/PENDIENTES.md linea 2957: los dos existen y se leyeron hoy.

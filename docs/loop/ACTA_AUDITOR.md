@@ -5343,3 +5343,310 @@ UNA (la 23 salio limpia, esta carga una; tres seguidas serian parada y vamos en 
 **`docs/loop/PARA_ALEXIS.md` escrito con los dos casos completos, las adjudicaciones que
 quedan listas para la reanudacion y como retomar. `docs/loop/PROMPT_SIGUIENTE.md` VACIO
 a proposito. El bucle queda detenido esperando la decision de la casa.**
+
+## VUELTA 26, 14 ago 2026. Auditor: Fable 5. Reporte auditado: la vuelta 26 del ejecutor (Opus 5), FASE III, rama pasada-unica: la fase 01 hasta el muro del indice semantico. ESTA ACTA DETIENE EL BUCLE: credenciales ausentes, doctrina nueva y una contradiccion de plan medida
+
+### 0. El contexto de esta acta
+
+El encargo 26 tenia dos tareas: los dos registros del acta de la vuelta 25 con las cinco
+citas, y la fase 01 entera en modo continuo. El ejecutor entrego la TAREA 1 completa,
+ejecuto `OP-F-01` y la declaro HECHA, dejo `OP-F-02` y `OP-F-03` a medias con la mitad
+documental hecha, no ejecuto ninguna `OP-F-04`, y trajo DOS paradas nombradas: crear un
+nodo pone Gate 0 en rojo y su remedio pide una credencial que esta fuera del repo, y ni
+las cuatro `OP-F-04` ni el reparto de `OP-F-03` tienen metodo escrito de destino. Esta
+acta verifica todo con instrumento propio (`scripts/loop/auditor_v26_verifica.py`,
+`auditor_v26_alcance.py`, `auditor_v26_pasos.py`; salida en
+`docs/loop/SALIDA_ACTA26_AUDITOR.txt`; el ciclo de Gate 0 y las tres suites corridos
+enteros por mi), relee a ciegas los diez discutibles y los 21 de `OP-F-03` al doble,
+encuentra TRES caidas de reporte (una con peso: el alcance del muro es de CINCO
+operaciones, no siete), adjudica lo adjudicable, y detiene el bucle con
+`docs/loop/PARA_ALEXIS.md` escrito y `PROMPT_SIGUIENTE.md` vacio.
+
+### 1. VERIFICACION: el instrumento mando en todo
+
+- **HEAD y rama:** `e3de957c` en `pasada-unica`, arbol limpio, identico a
+  `origin/pasada-unica`. Los cuatro commits de trabajo (`79a0bfc7`, `204be669`,
+  `e7b751b8`, `4430e461`) existen y traen lo que el reporte dice. El HEAD de partida
+  `1758706b` es el commit de la decision del fundador, que NO toca `dataset/`.
+- **EL MARCADOR, recomputado del archivo:** n **3.388**, **A 583 (17,2)**, **B 89
+  (2,6)**, **C 7 (0,2)**, **D 2.709 (80,0)**, cero huecos, cero duplicados, cero clases
+  fuera de ABCD. La tabla por dominio del reporte reproduce fila por fila. COINCIDE.
+- **EL GRAFO:** 3.835 nodos, 3.521 vivos, 314 deprecados, 16.800 enlaces, 15 claves,
+  cero auto aristas de vivos tras resolver. COINCIDE, y ninguna cifra de grafo se movio
+  en la vuelta: el diff entero de `dataset/` son DOS ficheros y solo su campo `fuente`.
+- **LAS OPERACIONES:** 71, 71 ids unicos, cero dependencias rotas, las 71 en LISTA.
+  `OPERACIONES.jsonl` sin tocar en la vuelta, como el reporte declara. COINCIDE.
+- **`OP-F-01`, las cuatro lineas remedidas:** la nomina es de SEIS y
+  `background_startup_vs_corporativo` no esta en ella y aparece SOLO en `OP-F-04-HOR`,
+  barrido por mi sobre las 71; los seis vivos con pasos **9, 9, 8, 13, 10, 8**, identicos
+  a lo publicado; la aritmetica **6 mas 3 mas 21 = 30 ids distintos, 73 en las siete, 43
+  en la tanda, cero solape entre grupos**, contada por mi sobre el campo `nodos`; la
+  cifra de 18 reescrita ADITIVA en sus dos sedes (`01_FUENTES.md` y las dos entradas de
+  `COSTURAS_INTERNAS_RESUMEN.md`), leidas por mi en el diff: la correccion del 12 ago
+  queda entera debajo. Gate 0 verde (abajo). TODO COINCIDE.
+- **Las dos fuentes corregidas de `OP-F-03`:** el diff de los dos nodos es UNA linea por
+  fichero, quitando `" | Essentials of Supply Chain Management - Michael H. Hugos"`, con
+  el final de fichero preservado (el diff no marca ruido de salto final: el error 1
+  declarado por el ejecutor quedo efectivamente remediado antes de commitear).
+- **TAREA 1:** el tercer comando condicional esta como fila 3 de la tabla del ciclo en
+  `08_VERIFICACION.md` con su vara doble y su registro, y el calificador del blob
+  `bb423c06` como REGISTRO HISTORICO con la vara operativa y la cifra vigilada, los dos
+  ADITIVOS y tal como el acta 25 los encargo. Las cinco citas existen y las mire una a
+  una: nomina de seis en `OPERACIONES.jsonl`, `P.17` en `BANCO_DEL_PLAN.md` (linea 863,
+  seccion propia, con el alcance sobre los tres cruces de `OP-F-03`), la correccion de
+  LARGO LEGITIMO en `01_FUENTES.md` (commit `1758706b`), la regla de destino por lectura
+  en la nota de `OP-F-02`, y el BACKLOG POST CAMPAÑA en `PENDIENTES.md` (linea 2957).
+- **LA FAMILIA HOROWITZ, remedida con criterio propio** (separador `|`, cualquiera de
+  las dos grafias del titulo): **88 vivos con fuente unica y 14 con otro libro al lado**.
+  COINCIDE exacto.
+- **EL MURO, verificado en sus cuatro patas:** el chequeo *Todo nodo ACTIVO tiene vector
+  en el indice semantico* vive en `run_phase1.py` con cero tolerancia y se agrega SIEMPRE
+  (leido en el codigo, lineas 799 a 838); su remedio escrito nombra
+  `build_semantic_index_voyage.py`, que exige `VOYAGE_API_KEY` (lineas 37 y 106 a 107);
+  no hay `.env` en la raiz ni la variable en el entorno, medido hoy; el indice es
+  `voyage-4-lite` de 512 dimensiones con **3.521 ids, exactamente los 3.521 activos,
+  cero sin vector y cero sobrantes**. La reproduccion del FALLIDO esta commiteada
+  (`SALIDA_V26_MURO_INDICE.txt`, con el nodo de prueba `zzz_prueba_vuelta26_nodo_nuevo`
+  nombrado por el propio Gate) y el estado quedo restaurado: nada de eso vive en el diff.
+- **LA CONTRADICCION DE PLAN ES REAL Y LA LEI HOY:** `08_VERIFICACION.md` manda Gate 0
+  verde entre fases y, cuatro parrafos mas abajo del calificador nuevo, manda el
+  reindexado AL FINAL, despues de mover ids, con su motivo escrito. Las dos reglas no
+  pueden cumplirse a la vez el dia que una operacion cree un nodo. MEDIDA, no supuesta.
+- **GATE 0 POR EL CICLO ESCRITO, corrido entero por mi sobre HEAD:** comando 1 EXITCODE 0
+  y `GATE 0: OK`; comando 2 **71 etiquetas, cero encogidas**; las DOS copias del grafo en
+  el blob **`3f5065d3`**, byte identicas a HEAD las dos (el comando 3 no tocaba correr:
+  ninguna operacion cambio el grafo en MI vuelta, y las copias ya calzaban). Es el mismo
+  blob que el reporte publica: mi medicion lo reproduce, no lo copia.
+- **LAS TRES SUITES, corridas enteras por mi:** motor **24 de 24**; web **80 ficheros,
+  1.030 pasadas, 3 saltadas**; `tsc --noEmit` exit 0 sin salida. COINCIDEN las tres.
+- **Los 13 de `OP-F-04-HOR`:** los 13 en el campo `nodos`, los 13 vivos, medido hoy. Sus
+  fronteras las lei ENTERAS en la vuelta 25 sobre este mismo grafo, y el diff de esta
+  vuelta mueve CERO pasos en todo el dataset: el 13 de 13 se sostiene por cadena
+  declarada (lectura de la 25 mas diff de hoy), ademas de por la remedicion del ejecutor.
+
+### 2. LAS TRES DISCREPANCIAS DE LA TANDA, y la primera esta FUERA del marcado y con peso
+
+**1. "SIETE de las 71 operaciones piden crear nodo" ES FALSO: SON CINCO, y las cinco son
+de la fase 01.** El barrido del ejecutor (`SALIDA_V26_MURO_ALCANCE.txt`) caso `OP-D-08` y
+`OP-D-09` por NEGACIONES: en `OP-D-08` la palabra casa en *"ningun id se mueve, ningun
+alias SE CREA"* (verificacion) y en *"NO SE CREAN OPERACIONES NUEVAS PARA ELLAS"*
+(adjudicacion, citando un acta vieja); en `OP-D-09`, en *"ningun alias SE CREA"*. Los dos
+destejidos declaran ademas CERO MOVIMIENTO DE GRAFO por su propia letra. Remedido por mi
+con dos criterios (barrido de frases y lectura entera de las dos operaciones,
+`auditor_v26_alcance.py`): las que piden crear nodo son **`OP-F-02` y las cuatro
+`OP-F-04`**, ni una mas. **La consecuencia sustantiva:** el muro NO bloquea a `OP-D-08`
+ni a `OP-D-09`, y la pregunta 1 del reporte arrastra el error (*"desatasca cinco
+operaciones de la fase 01 y dos de la 02"*: las dos de la 02 no existen). **La parada
+queda MAS acotada, no menos: sigue siendo real, sigue siendo de la fase 01 entera, y
+sigue siendo parada.** Es la especie exacta del error 3 que el propio ejecutor declaro en
+la vuelta 24: el instrumento con el criterio roto publica su cifra y nadie lee el
+contexto de la casacion.
+
+**2. "este reporte y nueve salidas de instrumento": SON ONCE.** Contadas en el diff
+`1758706b..e3de957c`: ESTADO, FAMILIA_HOROWITZ, MURO_ALCANCE, MURO_INDICE, OPF01,
+OPF02_LECTURA, OPF03_EJECUCION, OPF03_LECTURA, OPF03_SIMULACION, OPF04HOR, RACIMO_IA.
+No encontre criterio bajo el cual nueve sea cierto (salidas de los tres instrumentos
+commiteados serian siete; con las ad hoc, diez u once).
+
+**3. "la pregunta 5 de la vuelta 24, que sigue sin respuesta": FALSO.** El acta de la
+vuelta 25, seccion 4 punto 5, la ADJUDICO Y CERRO (el fichero se conserva tal cual, el
+nombre es la marca). Citar un estado del registro sin mirarlo es la especie que la
+doctrina prohibe, cometida en la frase que precisamente pedia repetir la adjudicacion.
+
+**Clasificacion, por la regla afinada del 13 ago:** las tres viven en `REPORTE.md`, y
+ninguna mueve un veredicto, el marcador ni una cifra de `docs/plan/`: **TRES CAIDAS DE
+REPORTE con nombre, en una misma tanda**. La primera aparece FUERA de los discutibles
+marcados: **el credito de toda la tanda baja y el tramo se releyo AL DOBLE** (seccion 3:
+los 21 de `OP-F-03` enteros y todos los claims de la seccion 8 del reporte remedidos
+contra codigo, indice y entorno). Ninguna acumula para la parada de dos tandas, pero la
+cuenta de **tandas seguidas con caida de reporte queda en DOS** (la 24 cargo una, la 26
+carga estas), y **tres seguidas son parada por patron de dictado suelto**: el proximo
+encargo corre con este aviso delante.
+
+### 3. RELECTURA CIEGA, y al doble
+
+**Limite declarado:** lei `REPORTE.md` entero antes de leer un solo paso, asi que la
+ceguera es parcial (los veredictos en resumen ya estaban vistos). Las lecturas POR NODO
+del ejecutor (`01_FUENTES.md` y las SALIDA de lectura) NO se abrieron hasta despues de
+imprimir yo los pasos con instrumento propio y sin filtros (`auditor_v26_pasos.py`) y
+dejar adjudicada mi clase. Vale como verificacion independiente con contaminacion
+declarada, igual que en la vuelta 20.
+
+- **Los tres de Mollick, fronteras leidas por mi ANTES de destapar la tabla: COINCIDO
+  3 de 3**, incluidos el corte fino (paso 5 de `future_scenarios_planning` es el del
+  Canvas, Osterwalder: **el bloque de IA es de OCHO, no de nueve**) y la doble entrada
+  del bloque (6 a 9 y 10 a 13, la misma cuenta escrita dos veces). Lei ademas la nota
+  vieja del informe (linea 4428: *"trece, de los cuales nueve"*): sus cinco elementos
+  caben todos en los ocho. **La correccion declarada 2 del ejecutor es exacta y esta
+  declarada como manda, no resuelta copiando.**
+- **Los diez del racimo, leidos enteros por mi: COINCIDO con NINGUNO COINCIDE para los
+  tres bloques.** El discutible 1 es de verdad el mas fino de la vuelta y mi lectura cae
+  del mismo lado: el bloque de `brainstorming_divergente` GENERA ideas en la sesion;
+  `invitar_ia_a_todo` y `principio_invitar_ia_siempre` PRUEBAN la IA en todas las tareas
+  para mapear donde rinde, y sus entregables son registros de experimentos, no ideas.
+  Por la vara del propio racimo (11.bis.2: se absorbe cuando HACE LO MISMO, no cuando
+  DESARROLLA UNA LINEA), desarrollar la linea no es hacer lo mismo. Los otros dos son
+  mas claros: la direccion invertida en `gut_check` (la IA audita al humano) y el futuro
+  contra el hoy en `future_scenarios_planning`.
+- **Los 21 de `OP-F-03`, leidos ENTEROS por la relectura al doble: COINCIDO 21 de 21 en
+  el veredicto (12 SI, 2 NO, 7 tercera clase) y frontera por frontera con la tabla
+  publicada.** Dos matices, ninguno discrepancia: en `bundle_ideas` dude el corte entre
+  el paso 4 y el 5, y la palabra *logisticos* del paso 5 decide por la frontera del
+  ejecutor (1 a 4 / 5 a 9); y al re-medir la premisa de `P.3` yo encuentro un **QUINTO
+  candidato del MISMO tema: `gestion_cuentas_por_cobrar`** (credito y cobranza dentro de
+  un nodo de cuentas por cobrar), que cabe en el *"al menos cuatro"* del ejecutor y va
+  nombrado al paquete del fundador. Los dos NO estan confirmados por mi lectura: en
+  `gestion_libro_abierto_obm` no hay una linea de cadena de suministro en los diez
+  pasos, y en `seleccion_estrategia_pricing` los seis pasos son de Blank sin bloque.
+
+**Cuenta de la relectura: diez discutibles marcados, diez coincidencias (dos con matiz
+de argumento). Las tres discrepancias de la tanda estan FUERA del marcado (seccion 2).**
+
+### 4. LOS DIEZ DISCUTIBLES, adjudicados uno por uno
+
+1. **Ninguno de los diez coincide con el bloque de `brainstorming_divergente`: COINCIDO
+   por lectura ciega** (seccion 3). El eco verbal era la trampa y la vara del racimo la
+   deshace. No se voltea: el bloque necesita nodo propio y el muro si lo toca.
+2. **`gestion_cuentas_por_cobrar` como SI: COINCIDO.** El bloque es el proceso de
+   credito y cobranza del ciclo de entrega, con EFT y cartas de credito internacionales
+   como instrumentos de comercio. Y anado el matiz: es ademas candidato al MISMO tema
+   para el re-medido de `P.3` (seccion 3).
+3. **La TERCERA CLASE que la operacion no tiene: CORRECTO no forzar los dos remedios.**
+   Los siete estan bien leidos (coincido 7 de 7): corregir la fuente borraria una
+   atribucion cierta y repartir a la subfamilia Hugos del nucleo los meteria donde no
+   son. Registrar la clase sin escribir la regla es exactamente la disciplina de la
+   regla 4. La regla que falta es DOCTRINA NUEVA: va a la parada.
+4. **Tercera linea de `OP-F-03` sin la segunda: CORRECTO.** La correccion de fuente es
+   completa por si sola, reversible y con guarda de valor esperado; la separacion
+   depende de una premisa contradicha por la medicion y del muro. Ejecutar la mitad
+   ejecutable y declarar la otra es lo que el modo continuo manda.
+5. **Tocar `COSTURAS_INTERNAS_RESUMEN.md` (sede de la SESION A): CORRECTO.** Lo escrito
+   no es la correccion 4 de `CORRECCIONES_A_APLICAR.md` (aplicada desde el 12 ago, y la
+   verifique entera debajo de la nueva): es la tercera linea de `OP-F-01`, que manda
+   reescribir la cifra ALLI DONDE ESTE PUBLICADA, y esa es una de las dos sedes. La
+   correccion es aditiva y no pisa nada.
+6. **Declarar `OP-F-01` HECHA: CORRECTO.** La unica razon del verde-pero-no-hecha de la
+   vuelta 24 era el choque con `OP-F-04-HOR` sobre el septimo, y `P.17` lo cerro por
+   decision de fundador: verificado hoy contra el repo (el nodo salio de la clase, la
+   nomina es de seis, y ninguna otra operacion reclama a los seis). Esperar al cierre de
+   fase habria sido prudencia sin objeto.
+7. **Mirar `OP-F-04-COL`, `WEI` y `RAC` sin que el encargo las nombrara: CORRECTO.** El
+   encargo decia *"con la fase 01 cerrada, sigue"*, y decir si la fase cierra exige
+   mirar sus siete operaciones. No ejecuto ninguna: es lectura de alcance, la misma
+   especie de iniciativa declarada que esta casa ya adjudico bien traida.
+8. **El nodo de prueba REAL en `dataset/nodos/` en vez de simulado en memoria: CORRECTO
+   CON LA DESVIACION DECLARADA, y el ejecutor la declaro.** El valor probatorio de la
+   parada exigia que el Gate lo dijera el mismo (una prediccion no es una guarda en
+   rojo), la sede fue el arbol de trabajo, nada se commiteo (verificado en el diff), y
+   el estado quedo restaurado: mi ciclo de hoy da verde con el blob de HEAD. Es la misma
+   familia del caso positivo de `OP-C-04` en la vuelta 24, ya adjudicada.
+9. **Publicar la frontera sabiendo que el corte no se haria: CORRECTO.** La operacion
+   manda publicarla ANTES de cortar; la lectura queda hecha y la vuelta que corte no la
+   rehace. Trabajo adelantado, no trabajo en vano.
+10. **No escribir `PARA_ALEXIS.md`: CORRECTO.** Esa pluma es del auditor por la seccion
+    4, y el ejecutor hizo lo debido: parada en el reporte y convocatoria. Esta acta la
+    ejerce.
+
+### 5. ADJUDICACIONES de esta vuelta
+
+1. **Pregunta 4 del reporte, ADJUDICADA por extension del calificador del blob: la vara
+   del comando 3 se lee contra el HEAD QUE YA TRAE EL COMMIT DE LA OPERACION.** La vara
+   operativa registrada es *byte identico al HEAD del momento*, y el dia que la
+   operacion cambia el grafo, el HEAD del momento de cierre es el que la trae. La
+   medicion en los dos momentos que el ejecutor hizo esta bien y no hace falta repetirla
+   como rito. REGISTRO ADITIVO de una linea en la fila 3 del ciclo, pendiente de la
+   TAREA 1 de la reanudacion.
+2. **Pregunta 5 del reporte, ADJUDICADA POR SEGUNDA VEZ Y CERRADA:**
+   `SALIDA_V26_MURO_INDICE.txt` se conserva TAL CUAL, por el mismo precedente de la
+   vuelta 25 (adjudicacion 5): el nombre del fichero ES la marca, y renombrar romperia
+   las referencias del reporte, de `01_FUENTES.md` y de esta acta. La especie entera
+   queda cerrada: un `GATE 0: FALLIDO` commiteado como PRUEBA de una parada o de un caso
+   positivo se conserva con su nombre y no se re-pregunta.
+3. **Pregunta 2 del reporte (`P.3` nodo a nodo), ADJUDICADA EN PRINCIPIO por extension
+   citada:** la regla escrita de la propia `P.3` (cuando el bloque pegado es del MISMO
+   tema NO SE PODA, SE REPARTE, citada asi en `OP-D-08`) cubre el caso: en los cuatro
+   medidos (y el quinto candidato mio) **la poda deja de ser opcion y el reparto es
+   obligatorio**. Lo que NO adjudico es la ejecucion: el reparto necesita destino dentro
+   de la subfamilia Hugos (doctrina que no existe, mismo hueco que las `OP-F-04`) y su
+   fallback crea nodo (muro). La adjudicacion de principio viaja con la parada para que
+   el fundador decida sobre el caso ya adjudicado en lo adjudicable.
+4. **Pregunta 3 del reporte (la regla de destino para las cuatro `OP-F-04`) y el remedio
+   de la TERCERA CLASE de `OP-F-03`: DOCTRINA NUEVA, pluma del fundador.** Escribir la
+   regla de destino por lectura para las cuatro tandas seria repetir con mi pluma lo que
+   el fundador escribio con la suya para `OP-F-02`; y la tercera clase necesita un
+   desenlace que la operacion no tiene. PARADA.
+5. **Pregunta 1 del reporte (como se indexan los nodos que la pasada cree): DECISION DE
+   FUNDADOR.** Dar la credencial es traer un secreto al alcance del bucle (la casa lo
+   reserva); correr la fase III con el chequeo del indice en rojo DECLARADO es reescribir
+   una regla vigente del Gate; partir la pasada en dos reordena la campana. Las tres
+   salidas del reporte van a `PARA_ALEXIS.md` con mi recomendacion escrita y la decision
+   entera de Alexis.
+6. **La contradiccion de plan que el reporte destapa (Gate 0 verde entre fases contra
+   reindexado al final), CONFIRMADA por mi lectura de hoy de `08_VERIFICACION.md`:**
+   ninguna regla de correccion existente la resuelve sin reescribir una de las dos. Va a
+   la casa junto con la pregunta 1, porque la salida buena de una probablemente es la
+   salida buena de la otra.
+
+### 6. LA PARADA: tres condiciones de la seccion 4 se cumplen a la vez
+
+- **CREDENCIALES AUSENTES**, nombrada entera en la seccion 4: el chequeo del indice
+  semantico necesita `VOYAGE_API_KEY` para todo nodo nuevo, la credencial esta fuera del
+  repo POR REGLA mientras el bucle corra, el fallo es visible y reproducido, y nadie
+  devolvio el `.env` ni falseo un verde. Bloquea el corte de `OP-F-02`, el fallback de
+  las cuatro `OP-F-04` y parte del reparto de `OP-F-03`. **Con la correccion de esta
+  acta: las operaciones que piden crear nodo son CINCO y las cinco son de la fase 01.**
+- **DOCTRINA NUEVA NECESARIA, dos casos:** el metodo de destino dentro de una familia
+  (las cuatro `OP-F-04` sobre los 88 de Horowitz y el reparto de `OP-F-03` sobre la
+  subfamilia Hugos), y el desenlace de la tercera clase de `OP-F-03` (material del libro
+  declarado pero de otro capitulo: ni corregir fuente ni repartir encajan).
+- **CONTRADICCION CON REGLA VIGENTE que las reglas de correccion no resuelven:** Gate 0
+  verde entre fases contra reindexado al final, medida en `08_VERIFICACION.md`.
+
+Las demas, repasadas: decision de fundador, nada reservado se toco (dataset intacto
+salvo las dos correcciones de fuente que `OP-F-03` ordena; cero merges; el nodo de
+prueba jamas commiteado). Fallo tecnico repetido: NO, Gate 0 verde por su ciclo corrido
+entero por mi. Credito de tanda: TRES caidas de REPORTE que no acumulan para la parada
+de dos tandas (clase y cifra siguen en CERO seguidas), con el aviso de patron en DOS.
+Campana consumada: no.
+
+### 7. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 25: 35 relecturas, 393 puestos (mas 23 nodos de forma y 24
+sitios de codigo), 7 caidas de clase, mas 6 caidas de reporte del ejecutor, mas 4 caidas
+de cifra publicada del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1
+caida de acta del auditor. Tandas seguidas con caida de clase o cifra: CERO. Caidas de
+reporte seguidas: UNA.
+
+Esta tanda (la vuelta 26 del ejecutor): cero pares y cero puestos, la unidad fue la
+operacion; mas 1 relectura (la tanda entera, al doble); mas **34 nodos leidos de forma**
+(3 de Mollick, 10 del racimo, 21 de Hugos), contados en unidad propia. **TRES caidas de
+REPORTE del ejecutor con nombre** (el alcance de siete que son cinco, las nueve salidas
+que son once, y la adjudicacion de la vuelta 25 citada como pendiente), la primera FUERA
+del marcado y con peso: el credito de la tanda baja y el tramo se releyo al doble sin
+segunda discrepancia de fondo. Caidas de clase o de cifra publicada: CERO.
+
+**Acumulado: 36 relecturas, 393 puestos (mas 57 nodos de forma y 24 sitios de codigo),
+7 caidas de clase, mas 9 caidas de reporte del ejecutor, mas 4 caidas de cifra publicada
+del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1 caida de acta del
+auditor. Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte seguidas:
+DOS. Una tercera tanda seguida con caida de reporte es PARADA por patron: el aviso va
+delante del proximo encargo.**
+
+### 8. ERRORES PROPIOS de esta vuelta, con nombre
+
+- **Mi primer criterio de la familia Horowitz uso el separador `+` y dio 102 con fuente
+  unica y 0 combinadas**, que no era comparable con el 88 mas 14 publicado. El separador
+  real del campo es `|`. Lo cace en la misma corrida (el total 102 calzaba pero el
+  reparto no), remedi con el criterio del campo real y dio 88 y 14 exactos. La leccion
+  es la de siempre y ya esta escrita: reproducir el criterio del instrumento ajeno antes
+  de comparar cifras.
+- **Dos comandos de shell fallaron por sintaxis antes de correr** (un `python -c` con
+  comillas anidadas y un encadenado con `Remove-Item`); se rehicieron como fichero de
+  instrumento y comandos sueltos. Ninguna cifra alcanzada.
+
+### 9. CONDICIONES DE PARADA: SE CUMPLEN Y EL BUCLE SE DETIENE
+
+`docs/loop/PARA_ALEXIS.md` escrito con los tres motivos, el estado exacto, la correccion
+del alcance (cinco, no siete), las adjudicaciones que quedan listas para la reanudacion
+y como retomar. `docs/loop/PROMPT_SIGUIENTE.md` VACIO a proposito. El bucle queda
+detenido esperando la decision de la casa.
