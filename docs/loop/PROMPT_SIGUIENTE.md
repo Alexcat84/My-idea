@@ -1,158 +1,154 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
-SESION EJECUTORA, rama `bucle`. **FASE II, SEGUNDA VUELTA: EL PLAN SE REESCRIBE AL CORTE 3.388.**
-MODO DE CIERRE: cero reparaciones de nodos. **`dataset/` NO SE TOCA NI UN BYTE.** Esta vuelta
-sigue midiendo y registrando: la Fase III (mover nodos) va en la rama `pasada-unica` y todavia
-no se abre.
+SESION EJECUTORA, rama `bucle`. **FASE II, TERCERA VUELTA: EL BARRIDO DEL PLAN ENTERO AL CORTE
+3.388, Y EL PASO 2 RELEIDO AL DOBLE.** MODO DE CIERRE: cero reparaciones de nodos. **`dataset/` NO
+SE TOCA NI UN BYTE.** La Fase III (mover nodos) va en la rama `pasada-unica` y todavia no se abre.
 
-ESTADO DEL CREDITO, leelo primero. **EL RECOMPUTO ESTA VERIFICADO ENTERO CON INSTRUMENTO
-INDEPENDIENTE.** No use tu script: escribi el mio (resolutor desde `ids_alias`, componentes
-conexas, criterio doble de `OP-U-01`) y sale identico. 391 alias; 583 A crudas y 583 pares
-tras resolver, cero auto aristas; 854 nodos y 335 componentes con tu misma distribucion;
-CERRADOS 280 sobre 600 y ABIERTOS 55 sobre 254 con tus mismos tamanos; las cuatro
-comprobaciones dan lo mismo. **Y la prueba mas dura que ninguna de las cuatro: compare mis 335
-componentes contra tu `RECOMPUTO_3388_COMPONENTES.jsonl` COMO CONJUNTOS DE CONJUNTOS, y son el
-mismo conjunto, cero de un lado y cero del otro.** Tambien recompute `OP-E-03` sin correr tu
-script: la tabla sale celda por celda igual y 477 = 2 + 88 + 387. Marcador, huecos, duplicados
-y las dos correcciones de razon: verificados, dos lineas cambiadas y ninguna clase movida.
+ESTADO DEL CREDITO, leelo primero, porque esta vuelta tiene las dos caras.
 
-**TRES COSAS QUE HICISTE BIEN Y QUEDAN ESCRITAS CON TU NOMBRE:**
-a) **Verificaste mi correccion antes de aplicarla y me corregiste a mi.** Los hubs de siete
-   toques de `risk_management` son CINCO, no cuatro: lo conte yo mismo sobre los 106 pares y
-   la distribucion no deja lugar a duda, y **no hay un sexto**. La cadena de listas cortadas
-   cierra ahi. Yo corte una lista en un valor dejando fuera un empate, que es exactamente lo
-   que le habia reprochado a tu vuelta 10.
-b) **Declaraste el paso 2 NO CORRIDO en vez de reconstruir una nomina de memoria.** Es la
-   conducta correcta y por eso el paso se puede rescatar hoy (ver TAREA 2.B).
-c) **Publicaste el 387 sin forzar la baja que mi encargo te habia anunciado.** Hiciste bien: la
-   baja era imposible y el error era mio (ver mi acta, seccion 2.c).
+**LO QUE HICISTE BIEN Y QUEDA ESCRITO CON TU NOMBRE:**
+a) **Los CINCO discutibles que marcaste los verifique uno por uno y los cinco caen de tu lado.**
+   El mas importante es el primero: corri las dos variantes del criterio sobre el corte 2.117 y
+   **el simplificado da 179/42 y el de dos condiciones da 173/48**, exacto como avisaste. Tu aviso
+   evito que yo cometiera el error que tu casi cometes. **Y la comprobacion que lo cierra: al corte
+   3.388 las dos variantes dan lo mismo (280 y 55), porque la cola esta agotada.**
+b) **No escribiste la cifra que no reprodujiste: investigaste la causa primero.** Es exactamente la
+   conducta que esta campana pide, y por eso la cifra publicada hoy es correcta.
+c) **Verifique tu TAREA 2.A fila por fila con mi propio instrumento, incluida `OP-M-03`** (cuya
+   nomina de siete esta escrita en `06_MESAS.md`: 7 nodos, 21 posibles, 13 leidos, 4 A en los dos
+   cortes): **tus filas y las mias salen identicas, una por una.** Y la integridad del archivo
+   tambien: 69 y 69, mismo conjunto de ids, cero duplicados, cero `depende_de` y cero `bloquea_a`
+   rotos, y **solo dos operaciones cambiadas**, con la cifra vieja conservada.
+d) **Relectura ciega mia, siete puestos de `franquicias`** (las aristas de los cinco actos que
+   cerraron mas el 2.078, que es la unica clase que se movio en todo el archivo): **siete de siete
+   coinciden.** La correccion del 2.078 se sostiene leida a ciegas, y con ella los cinco cierres.
 
-**DOS COSAS QUE DECLARASTE IMPOSIBLES Y SI SE PODIAN MEDIR. Las medi yo y hay que registrarlas:**
-1. **El 401 contra 400 A vigentes al 2.117 esta RESUELTO PAR POR PAR.** El repo guarda el
-   archivo al corte exacto (`c16a24f5`, 11 ago 2026, 2.117 lineas). Comparado clase a clase
-   contra hoy en ese tramo, **cambio UNA sola clase: el puesto 2.078** (`elaboracion_fdd`
-   contra `preparar_fdd`, `franquicias`), **D el 11 ago y A hoy por correccion posterior
-   declarada**. El archivo viejo tiene exactamente 400 A. **No hay descuadre: hay una
-   correccion declarada, y cada cifra es correcta en su corte.**
-2. **El mapeo de los 48 actos abiertos SI se puede hacer 1 a 1**, porque la cola
-   `docs/INTRA_DOMINIO_PARES.jsonl` **esta completa en 3.388 pares desde el 9 ago 2026**
-   (`c442345a`) y no se ha tocado, asi que la medicion vieja se vuelve a correr sobre el mismo
-   archivo con el corte viejo. Corriendola al 2.117 **excluyendo la correccion posterior del
-   2.078** reproduzco la cifra publicada EXACTA: 221 componentes sobre 576 nodos, 173 cerrados
-   sobre 371 (149 de dos, 23 de tres, uno de cuatro), 48 abiertos sobre 205, motivos 42 mas 6.
-   **Y con esa membresia: de los 48 abiertos, CINCO CERRARON, 42 siguen abiertos identicos y
-   UNO crecio sin cerrar. Ademas 114 actos de hoy no tienen ni un nodo de un acto del 2.117, y
-   de esos 102 nacieron cerrados y 12 abiertos.** Las cuentas cierran: 173 + 5 + 102 = 280 y
-   43 + 12 = 55. **Tu proxy de edad (221 / 1 / 113, con 101 y 12) difiere en una unidad y la
-   unidad es el mismo 2.078**: su arista es vieja, pero en el corte viejo ese par era D.
+**Y LA CAIDA, que es de reporte y esta FUERA de tus discutibles marcados. Es la primera en seis
+tandas y dispara la regla del credito.** Dijiste en LO QUE NO SE MIDIO que "la nomina completa de
+las 46 confirmadas sigue sin estar escrita como lista en ningun sitio" y que faltaban "las 10
+restantes". **Las dos frases son falsas y la prueba esta en el archivo que tu mismo citaste por
+linea.** En `docs/FICHA_SUBFUSION_GRADIENTE.md`, la tabla "Las 128, con su fila y su veredicto"
+(lineas 3651 a 3780) tiene **128 filas, 128 ids distintos, 46 confirmadas y 82 falsas**, y encima de
+ella la fila de totales que ya publicaba **46 / 82 / 128**. La nomina esta a un filtro de distancia.
+**Y la aritmetica: de las 46 confirmadas, QUINCE tienen A vigente (los quince que publicaste) y
+TREINTA Y UNA no. Las que faltan no son 10, son 31.** El 10 sale de restar 46 menos 36, y el 36 es
+la interseccion con las A, no el numero de confirmadas dentro de ella.
 
-**VERIFICACION FIJA NUEVA, y nace de lo de arriba:** junto a la de discutibles y a la de las
-fracciones (que cumpliste, y las tres se quedan), **toda declaracion de "no se puede medir" o
-"no se puede saber" lleva al lado EL INTENTO QUE SI CORRISTE y por que no alcanzo.** Dos de tus
-tres declaraciones de esta vuelta se podian medir con lo que ya estaba en el repo.
+**EFECTO DE LA REGLA DEL CREDITO, y es el corazon de esta vuelta: el tramo que fallo se relee AL
+DOBLE. El tramo aqui no es cribado, es el paso 2 del recomputo: se corre sobre las 46 enteras y no
+solo sobre los 36** (TAREA 2.B). Si la vuelta siguiente trae otra discrepancia fuera del marcado, es
+PARADA de campana.
+
+**VERIFICACION FIJA NUEVA, la cuarta, y nace de esa caida:** junto a la de discutibles marcados, la
+de contar toda fraccion antes de escribirla, y la de acompanar todo "no se puede medir" con el
+intento que si corriste, **toda declaracion de que algo NO ESTA ESCRITO se comprueba contra el
+archivo que acabas de citar, con el comando al lado**. Un "no existe" sobre un archivo abierto dos
+parrafos antes es el error mas barato de evitar.
+
+**LO QUE NO ES TU CULPA Y ES MIA, y por eso abre la TAREA 2.A:** mi encargo anterior enumero el
+universo a recomputar como "`OP-L-02`, las cinco mesas y las seis `OP-D-01` a `OP-D-06`", y **dejo
+fuera las `OP-F-*`, las `OP-S-*`, `OP-D-07` (que existe: los destejidos son SIETE, no seis),
+`OP-E-04` y `OP-E-05`**. Barri yo esas y **exactamente UNA operacion del plan se movio entre los dos
+cortes: `OP-S-10`.**
 
 ====================================================================
 TAREA 1: registros, ninguno toca el marcador ni una sola clase
 ====================================================================
-1. **En `docs/plan/RECOMPUTO_3388.md`, con CORRECCION DECLARADA y sin borrar el texto viejo
-   (tachado), cierra las dos preguntas de arriba:**
-   a) la del 401 contra 400, con el hash `c16a24f5`, el puesto 2.078 nombrado y la frase de que
-      cada cifra es correcta en su corte (banco 9.21);
-   b) la de los 48, sustituyendo el "no se puede decir con certeza" por **las cifras medidas
-      (5 cerraron, 42 identicos abiertos, 1 crecio; 114 nuevos, 102 nacidos cerrados y 12
-      abiertos)**, con el metodo escrito (re correr la medicion vieja al corte viejo excluyendo
-      la correccion del 2.078) y **con la condicion que lo hace valido declarada al lado: la
-      cola esta completa en 3.388 desde `c442345a`**. **VERIFICALO TU con tu propio instrumento
-      antes de escribirlo; si tu cuenta no da lo mismo que la mia, NO la escribas: dilo y
-      traelo.**
-   c) la del 387 que no bajo: anade la razon decisiva (el script compara contra la UNION de
-      `INTRA_DOMINIO_PARES.jsonl` mas `INTRA_DOMINIO_VEREDICTOS.jsonl`, y la primera esta
-      completa desde el 9 ago), **dejando escrito que la expectativa de baja fue un error del
-      auditor, no tuyo.**
-2. **Registra en `docs/INTRA_DOMINIO_INFORME.md` (seccion 101.e, nueva) mi adjudicacion de la
-   relectura:** cuando el acto de quince de `health_safety` se ejecute, **el superviviente
-   conserva el CONTRASTE DE SEIS EJES de `vieja_vision_vs_nueva_vision_seguridad`** (personas
-   como problema o recurso, actitudes o condiciones, ausencia de eventos o presencia de
-   capacidades, staff o linea, reglas o contexto, hacer imposible el error o dar espacio para
-   hacer lo correcto). Ese nodo repite cuatro veces contra cuatro supervivientes distintos y
-   muere en todas; su tabla es catalogo. **Misma regla que la 101.c: una fusion que se lleve
-   solo un lado es perdida de catalogo no declarada.**
-3. **LO VERIFICADO Y EN VERDE, no lo reabras:** el marcador entero al 3.388 y las diez tasas;
-   el retrato de las A; las 335 componentes y sus miembros; los 280 CERRADOS y los 55 ABIERTOS;
-   las cuatro comprobaciones; la tabla entera de `OP-E-03` con su aritmetica; los cinco hubs de
-   siete toques; los once de once que citan el entregable. Siguen aprobados
-   `scripts/recomputar_marcador.py`, `scripts/_registrar_lote.py`, `scripts/volcar_pares.py`,
-   `scripts/corregir_veredicto.py`, `scripts/plan/recomputo_3388.py` y
-   `scripts/plan/diferencia_contra_cola.py`.
+1. **En `docs/plan/RECOMPUTO_3388.md`, paso 2, con CORRECCION DECLARADA y sin borrar el texto viejo
+   (tachado): la nomina de las 46 SI existe.** Escribe donde vive (ficha, tabla de las 128, lineas
+   3651 a 3780), su reparto **46 confirmadas y 82 falsas sobre 128 filas**, y **el corte que
+   importa: 15 con A vigente al 3.388 y 31 sin ella**. **VERIFICALO TU con tu instrumento antes de
+   escribirlo** (contar las filas del bloque, contar veredictos, resolver por alias y cruzar contra
+   los 854 nodos con A); **si tu cuenta no da 46/82 y 15/31, no la escribas: para y dilo.**
+2. **En el mismo archivo, seccion nueva, registra el hallazgo de `OP-S-10`**, que es mio y que
+   **tienes que remedir antes de escribir**: de las 43 operaciones con nomina de dos nodos o mas
+   (`OP-D-07` tiene uno solo y por eso no entra en la comparacion de pares), `OP-S-10`
+   es **la unica** que cambia entre el corte 2.117 y el 3.388. Mi medicion: **pares internos leidos
+   de su nomina de 31, de 7 (1 A) a 17 (2 A); actos que tocan su nomina, de 3 sobre 4 nodos a 6
+   sobre 8 nodos**. La A nueva de dentro es el propio 2.078. **Si tu cuenta difiere en una unidad,
+   para y traelo.**
+3. **LO VERIFICADO Y EN VERDE, no lo reabras:** el marcador entero al 3.388 (583 / 89 / 7 / 2.709,
+   cero huecos); las 335 componentes con sus 280 CERRADOS sobre 600 y 55 ABIERTOS sobre 254; las
+   cuatro comprobaciones; la reconstruccion del corte 2.117 (400 A, 221 componentes, 173/48, motivos
+   42 mas 6) y su mapeo (5 cerraron, 42 identicos, 1 crecio, 114 nuevos con 102 y 12); los cinco
+   discutibles de tu vuelta; la interseccion de 36 y sus 36 veredictos citados linea a linea; los 15
+   CONFIRMADA con dueno en `OP-D-01` a `OP-D-06`; las 55 de 55 abiertas por `fuera_de_cola`; y la
+   integridad de `OPERACIONES.jsonl`. **Todo eso esta verificado por el auditor con instrumento
+   propio en la vuelta 12 y no se vuelve a medir.**
+4. **METODO QUE QUEDA ESCRITO para cualquier corte historico:** la reconstruccion se hace con el
+   blob entero del commit (`git show <hash>:<ruta>`), **no truncando el archivo de hoy y parcheando
+   puestos a mano**. Sale igual, no toca datos y se audita con un comando.
 
 ====================================================================
-TAREA 2.A: EL PLAN SE REESCRIBE AL CORTE 3.388 (autorizado: las cuatro
-comprobaciones estan verificadas por el auditor)
+TAREA 2.A: EL BARRIDO SE COMPLETA SOBRE LAS 69 (adjudicacion del
+auditor: ninguna cifra publicada queda sin su corte nuevo, y eso
+incluye las operaciones que mi encargo anterior no nombro)
 ====================================================================
-**Ahora si se edita `docs/plan/OPERACIONES.jsonl`**, y solo lo que esta aqui:
-1. **`OP-U-02` pasa de DECISION PENDIENTE a LISTA**, con `fecha_corte` 2026-08-13 y su
-   evidencia reescrita con las cifras del recomputo (335 actos, 280 cerrados sobre 600 nodos,
-   55 abiertos sobre 254), **conservando la linea vieja del corte 2.117 con su fecha**, no
-   borrandola (banco 9.21).
-2. **`OP-U-01`**: reescribe sus cifras al corte 3.388 (los cerrados pasan de 173 sobre 371 a
-   280 sobre 600; el desglose por tamano 2: 244, 3: 32, 4: 4), **con la cifra vieja y su corte
-   al lado**, y anade en la nota **cuales de los 48 cerraron (los cinco)**. La verificacion
-   "NINGUN acto de la lista de abiertos se ejecuta antes del recomputo" se actualiza a la lista
-   nueva de 55.
-3. **`OP-L-02`, las cinco mesas (`OP-M-01` a `OP-M-05` y sus sub operaciones) y las seis
-   `OP-D-01` a `OP-D-06`**: para CADA UNA, comprueba si alguna cifra suya cambia con el corte
-   nuevo. **Si cambia, la reescribes con los dos cortes; si NO cambia, lo dices explicitamente
-   en el reporte con la cifra que verificaste.** No basta con dejarlas quietas: la regla es que
-   **ninguna cifra publicada queda sin recomputar con su corte nuevo**, y una cifra que se
-   confirma igual tambien es un resultado.
-4. **CADA edicion lleva su comando al lado en el reporte.** Y al terminar, **una comprobacion de
-   integridad del propio archivo**: 69 operaciones antes y 69 despues, ningun `id_op` duplicado,
-   ningun `depende_de` apuntando a un id que no existe. Escribela con su cifra.
-5. **NO se ejecuta ninguna operacion. NO se toca `dataset/`. NO se crea la rama `pasada-unica`.**
+1. **Recorre las operaciones que quedaron fuera de la vuelta pasada:** `OP-F-01`, `OP-F-02`,
+   `OP-F-03`, las cuatro `OP-F-04-*`, todas las `OP-S-*` (doce), `OP-D-07`, `OP-E-04`, `OP-E-05`,
+   `OP-E-01`, `OP-E-02`, `OP-C-*`, `OP-A-*`, `OP-V-01`, `OP-I-01`, `OP-L-01` y `OP-L-03`. **Para las
+   que tienen nomina de `nodos`: pares posibles, leidos y A en los DOS cortes, y actos que tocan la
+   nomina en los dos cortes.** Para las que no tienen nomina: **el razonamiento escrito de por que
+   su cifra no depende del corte, declarado como razonamiento y no como medicion** (es la regla que
+   ya cumpliste con `OP-L-02`). **Publica la tabla entera, incluidas las que no cambian con su cifra
+   confirmada.**
+2. **`OP-S-10` se reescribe**, con la cifra vieja al lado (banco 9.21) y con **la nota de orden
+   entre fases que hoy no tiene**: es saneo, el saneo corre DESPUES de las fusiones (00_INDICE), y
+   por tanto **seis de sus treinta y un nodos habran sido absorbidos cuando le llegue el turno**.
+   **La nomina se resuelve por el resolutor en el momento de ejecutar (P.1)**, y el precedente
+   citable es `OP-F-03`, que ya escribio la misma precaucion para sus tres cruces ("en los tres
+   manda el orden fuente primero"). **Nombra los seis actos que la tocan y los ocho nodos suyos que
+   caen dentro de un acto.** Esto es adjudicacion del auditor (acta vuelta 12, seccion 6.2): **no
+   estas decidiendo doctrina nueva, estas aplicando P.1 mas el orden ya escrito.**
+3. **`OP-U-02` tiene una cifra publicada sin corte nuevo: "el recomputo no abre 48 fusiones: abre
+   44".** Recomputala **con el criterio del propio plan** (los abiertos que ya tienen dueno en otra
+   fase no se cuentan como fusiones que el recomputo abra) y **publicala con los dos cortes, sin
+   borrar la vieja**. Aviso de trampa, medido por mi con un criterio ANCHO y distinto (que alguna
+   nomina de operacion toque algun miembro): **11 de los 55 tocan alguna nomina y 44 no tocan
+   ninguna**. **Que vuelva a salir 44 es coincidencia: el 44 viejo era 48 menos cuatro grandes con
+   dueno, y ese otro 44 es otra cuenta. Declara con que criterio cuentas antes de dar el numero.**
+   Entre los que no tocan ninguna nomina estan **el de quince de `health_safety`, el de diez de
+   `quality` y el de ocho del ciclo crear medir aprender**.
+4. **CADA edicion lleva su comando al lado en el reporte**, y al terminar **repite la comprobacion de
+   integridad**: 69 antes y 69 despues, cero ids duplicados, cero `depende_de` y cero `bloquea_a`
+   rotos, y la lista exacta de lineas cambiadas.
+5. **NO se ejecuta ninguna operacion. NO se toca `dataset/`. NO se crea la rama `pasada-unica`. NO
+   se crean operaciones nuevas** (si el barrido pide una, la propones en el reporte y la adjudica el
+   auditor).
 
 ====================================================================
-TAREA 2.B: EL PASO 2 DEL RECOMPUTO, POR LA VIA ACOTADA (adjudicacion
-del auditor: se puede correr sin inventar nomina)
+TAREA 2.B: EL PASO 2, RELEIDO AL DOBLE, SOBRE LAS 46 (efecto de la
+regla del credito, acta vuelta 12 seccion 4)
 ====================================================================
-**Tu busqueda de la nomina fue correcta pero se quedo en los `.md`. El instrumento dejo su
-propia salida: `docs/COSTURAS_INTERNAS.jsonl`, 128 filas con `node_id`, `dominio`, `pasos`,
-`corte`, `disparo_bloque` y `disparo_pareja`. NO trae el veredicto, por eso la nomina de las 46
-confirmadas no esta como dato. Pero el paso 2 no necesita la nomina entera: solo necesita saber
-que citas caen dentro del retrato de las A.**
-
-1. **Cruza las 128 citas (resolviendo por alias, P.1) contra los 854 nodos con al menos una A.**
-   **Medido por mi: la interseccion es de TREINTA Y SEIS nodos.** Publica tu cuenta; si no te da
-   36, para y dilo antes de seguir.
-2. **Para esos treinta y seis, y solo esos, busca el veredicto YA ESCRITO** en
-   `docs/FICHA_SUBFUSION_GRADIENTE.md` y `docs/COSTURAS_INTERNAS_RESUMEN.md`. **Cita archivo y
-   linea de cada veredicto que encuentres.** El que no tenga veredicto escrito se declara **SIN
-   VEREDICTO ESCRITO** y **NO SE ADIVINA NI SE DEDUCE DEL TEXTO DEL NODO**: leer el nodo para
-   decidir si tiene costura es reabrir el otro eje, y eso no es esta campana.
-3. **Los que salgan CONFIRMADA son las CURAS ACOPLADAS**: destejido y fusion en el mismo acto,
-   por el toque unico del banco 9.4. **La ficha ya tiene siete ejemplares escritos de esta misma
-   pregunta** (la serie SANO POR DENTRO, GEMELO POR FUERA y LA CURA ACOPLADA): empieza por
-   comprobar cuales de tus resultados ya estan ahi y cuales son nuevos. **Un ejemplar que ya
-   este escrito no se reescribe: se cita.**
-4. **Publica el resultado en `docs/plan/RECOMPUTO_3388.md`, en el hueco del paso 2**, con la
-   correccion declarada de que el paso pasa de NO CORRIDO a corrido por la via acotada, y con
-   **la fraccion al lado** (cuantos de los 36 tienen veredicto escrito, cuantos CONFIRMADA,
-   cuantos FALSA, cuantos sin veredicto).
-
-**Si el presupuesto no alcanza para la TAREA 2.B completa, NO LA CORRAS A MEDIAS: dejala sin
-correr y declaralo con esa frase.** La TAREA 2.A tiene prioridad sobre la 2.B.
+1. **Filtra las 46 confirmadas de la tabla de las 128 y publica la nomina entera**, cada una con su
+   linea, tal como hiciste con los 36. **Cero se reescriben: se citan.**
+2. **Parte la nomina en dos: las 15 con A vigente (ya cerradas la vuelta pasada, con dueno en
+   `OP-D-01` a `OP-D-06`) y las 31 sin A vigente.** Publica las dos listas.
+3. **Para cada una de las 31, dos preguntas y nada mas:** si aparece en la nomina de `nodos` de
+   alguna operacion del plan (cual), y si no aparece en ninguna. **Publica la fraccion: cuantas de
+   las 31 tienen dueno y cuantas no.**
+4. **Las 31 son costuras confirmadas SIN gemelo vigente, o sea destejidos que NO son curas acopladas
+   (no hay fusion en el mismo acto que las acompane).** Dilo con esa frase y **deja la nomina de las
+   que no tienen dueno como lista declarada en `docs/plan/RECOMPUTO_3388.md`. NO crees operaciones
+   nuevas para ellas: eso lo adjudica el auditor con tu lista delante.**
+5. **Ningun nodo se lee de nuevo para decidir si tiene costura.** Leer el nodo para eso es reabrir el
+   otro eje, y no es esta campana. Lo que no tenga veredicto escrito se declara SIN VEREDICTO
+   ESCRITO.
 
 LO QUE NO ENTRA EN ESTA VUELTA, para que no lo adelantes: el lote de cinco lecturas del sales
-roadmap, la cola de relectura post fusion, el criterio del forastero, las lecturas de acto
-entero de P.5, y las 387 filas de LECTURAS DIRIGIDAS. **Cada una tiene su encargo y su orden.**
-Si terminas con presupuesto de sobra, gastalo **midiendo, sin escribir nada en el plan, cuantas
-de las 55 componentes ABIERTAS lo estan por pares que nunca entraron a la cola y cuantas por
-otra razon**, y declara la cuenta: eso alimenta el encargo siguiente.
+roadmap, la cola de relectura post fusion, el criterio del forastero, las lecturas de acto entero de
+P.5, y las 387 filas de LECTURAS DIRIGIDAS. **Cada una tiene su encargo y su orden.** Si terminas
+con presupuesto de sobra, gastalo **midiendo, sin escribir nada en el plan, las tres nominas en
+prosa de `OP-L-02`** (cuadrantes de mercado, ecuacion de valor, bloque humano de la IA): cuantos
+nodos tiene cada una y cuantos de sus pares posibles estan leidos al 3.388. **Ese es un pendiente
+mio declarado en el acta: yo tampoco lo medi.**
 
-REPORTE en `docs/loop/REPORTE.md`, que reescribes entero: hash y rutas, la TAREA 1 con sus tres
-correcciones declaradas, la TAREA 2.A operacion por operacion (incluidas las que NO cambiaron,
-con su cifra confirmada) y su comprobacion de integridad, la TAREA 2.B con sus fracciones, y
-**la lista explicita de lo que NO mediste, cada linea con el intento que si corriste al lado**.
-Los hallazgos que no puedan esperar, al mensaje del commit. Commitea por bloques para no perder
-trabajo si la sesion se corta.
+REPORTE en `docs/loop/REPORTE.md`, que reescribes entero: hash y rutas, la TAREA 1 con sus dos
+correcciones declaradas y su verificacion previa, la TAREA 2.A con la tabla completa de las
+operaciones barridas (las que cambian y las que no) y su comprobacion de integridad, la TAREA 2.B
+con sus fracciones y sus dos listas, y **la lista explicita de lo que NO mediste, cada linea con el
+intento que si corriste al lado**. Marca tus discutibles: son lo primero que el auditor relee, y los
+cinco de tu vuelta pasada te dieron la razon los cinco. Los hallazgos que no puedan esperar, al
+mensaje del commit. Commitea por bloques para no perder trabajo si la sesion se corta.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice una regla
 vigente, paras y lo traes. No adivines.
