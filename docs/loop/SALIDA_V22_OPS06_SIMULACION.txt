@@ -1,0 +1,60 @@
+BARRIDO DEL CATALOGO ENTERO, no de la nomina copiada: 3835 nodos
+
+A. CLAVES DE FASE SUCIAS: 2
+   crosby_habilidad_transmision   clave 'fase_проekto' = 'ejecucion' | fase_proyecto = 'ejecucion' | MISMO VALOR: True
+   mapa_flujo_trabajo_cliente     clave 'fase_project' = 'validacion' | fase_proyecto = 'validacion' | MISMO VALOR: True
+
+B. NODOS CON fuentes_adicionales: 4
+   arquetipos_de_cliente         
+      fuente ANTES   : "The Startup Owner's Manual - Steve Blank"
+      adicionales    : ['The Lean Startup - Eric Ries']
+      ya contenidas  : []
+      fuente DESPUES : "The Startup Owner's Manual - Steve Blank | The Lean Startup - Eric Ries"
+      NADA SE PIERDE : True
+   composicion_board_directors   
+      fuente ANTES   : 'Venture Deals - Brad Feld'
+      adicionales    : ["The Founder's Dilemmas"]
+      ya contenidas  : []
+      fuente DESPUES : "Venture Deals - Brad Feld | The Founder's Dilemmas"
+      NADA SE PIERDE : True
+   definicion_startup            
+      fuente ANTES   : 'The Lean Startup - Eric Ries'
+      adicionales    : ["The Startup Owner's Manual - Steve Blank"]
+      ya contenidas  : []
+      fuente DESPUES : "The Lean Startup - Eric Ries | The Startup Owner's Manual - Steve Blank"
+      NADA SE PIERDE : True
+   preferencia_de_liquidacion    
+      fuente ANTES   : 'Venture Deals - Brad Feld'
+      adicionales    : ["The Founder's Dilemmas"]
+      ya contenidas  : []
+      fuente DESPUES : "Venture Deals - Brad Feld | The Founder's Dilemmas"
+      NADA SE PIERDE : True
+
+C. LA NOMINA ESCRITA EN OP-S-06 CONTRA LA MEDIDA HOY
+   escrita (6): ['crosby_habilidad_transmision', 'mapa_flujo_trabajo_cliente', 'arquetipos_de_cliente', 'composicion_board_directors', 'definicion_startup', 'preferencia_de_liquidacion']
+   medida  (6): ['crosby_habilidad_transmision', 'mapa_flujo_trabajo_cliente', 'arquetipos_de_cliente', 'composicion_board_directors', 'definicion_startup', 'preferencia_de_liquidacion']
+   COINCIDEN EXACTAMENTE: True
+   los seis siguen siendo nodo del grafo: True
+
+D. LO QUE LA OPERACION NO TOCA, declarado
+   merged_originals (269 nodos): NO se toca. OP-C-04 lo mete DENTRO de la
+   lista blanca, como procedencia de fusion junto a ids_alias.
+   deprecado (314) e ids_alias (309): claves de esquema, no se tocan.
+
+E. CLAVES QUE QUEDARIAN EN EL CATALOGO TRAS LA OPERACION
+    condiciones_activacion
+    deprecado
+    dominio
+    entregable_esperado
+    etiqueta_arbol
+    fase_proyecto
+    fuente
+    ids_alias
+    merged_originals
+    node_id
+    nodos_previos
+    nodos_siguientes
+    pasos_accionables
+    resumen_teorico
+    titulo_concepto
+   TOTAL: 15 claves distintas (hoy son 18)

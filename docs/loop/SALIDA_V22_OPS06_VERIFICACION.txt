@@ -1,0 +1,33 @@
+=== dataset/nodos (3835 nodos) ===
+  1. ningun nodo tiene dos claves de fase        : True (0)
+  2. ningun nodo conserva fuentes_adicionales    : True (0)
+  3. el motor sigue leyendo fase_proyecto en TODOS: True (0 sin la clave)
+  4. los cuatro declaran en fuente lo que tenian  : True (0 ausencias)
+  5. los seis siguen siendo nodo                  : True
+  claves del catalogo (15): ['condiciones_activacion', 'deprecado', 'dominio', 'entregable_esperado', 'etiqueta_arbol', 'fase_proyecto', 'fuente', 'ids_alias', 'merged_originals', 'node_id', 'nodos_previos', 'nodos_siguientes', 'pasos_accionables', 'resumen_teorico', 'titulo_concepto']
+
+=== dataset/metadata/master_graph.json (3835 nodos) ===
+  1. ningun nodo tiene dos claves de fase        : True (0)
+  2. ningun nodo conserva fuentes_adicionales    : True (0)
+  3. el motor sigue leyendo fase_proyecto en TODOS: True (0 sin la clave)
+  4. los cuatro declaran en fuente lo que tenian  : True (0 ausencias)
+  5. los seis siguen siendo nodo                  : True
+  claves del catalogo (15): ['condiciones_activacion', 'deprecado', 'dominio', 'entregable_esperado', 'etiqueta_arbol', 'fase_proyecto', 'fuente', 'ids_alias', 'merged_originals', 'node_id', 'nodos_previos', 'nodos_siguientes', 'pasos_accionables', 'resumen_teorico', 'titulo_concepto']
+
+=== web/lib/assets/master_graph.json (3835 nodos) ===
+  1. ningun nodo tiene dos claves de fase        : True (0)
+  2. ningun nodo conserva fuentes_adicionales    : True (0)
+  3. el motor sigue leyendo fase_proyecto en TODOS: True (0 sin la clave)
+  4. los cuatro declaran en fuente lo que tenian  : True (0 ausencias)
+  5. los seis siguen siendo nodo                  : True
+  claves del catalogo (15): ['condiciones_activacion', 'deprecado', 'dominio', 'entregable_esperado', 'etiqueta_arbol', 'fase_proyecto', 'fuente', 'ids_alias', 'merged_originals', 'node_id', 'nodos_previos', 'nodos_siguientes', 'pasos_accionables', 'resumen_teorico', 'titulo_concepto']
+
+LAS TRES SEDES DICEN LO MISMO Y LA VERIFICACION ENTERA PASA: True
+
+=== EL VALOR DE fase_proyecto NO SE MOVIO EN NINGUNO DE LOS SEIS ===
+   crosby_habilidad_transmision   ejecucion | las tres sedes iguales: True
+   mapa_flujo_trabajo_cliente     validacion | las tres sedes iguales: True
+   arquetipos_de_cliente          validacion | las tres sedes iguales: True
+   composicion_board_directors    planificacion | las tres sedes iguales: True
+   definicion_startup             ideacion | las tres sedes iguales: True
+   preferencia_de_liquidacion     planificacion | las tres sedes iguales: True
