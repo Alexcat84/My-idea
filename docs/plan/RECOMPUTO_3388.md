@@ -1431,3 +1431,102 @@ enganaria:**
 figura, y sigue **PENDIENTE DE MEDICION** exactamente como lo dejo la adjudicacion 6.5 de la vuelta 15.
 **Lo unico que cambia es que ahora se sabe cuanto es y donde esta: trece entradas, y entre 98 y 119
 ejemplares segun como se cuenten los dos casos de definicion.**
+
+---
+
+## TAREA (vuelta 19): los cinco registros, la novena estrella, y la FASE II medida bloque por bloque al cierre
+
+**Corte de todas las cifras de esta seccion: 14 ago 2026, sobre el cribado CERRADO en 3.388 de 3.388.**
+**MODO DE CIERRE: cero reparaciones de nodos, cero operaciones ejecutadas, cero pares nuevos encolados.**
+`dataset/` intacto y `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` intacto en sus 3.388 lineas.
+
+**Instrumentos de esta vuelta, los cuatro de solo lectura:** `scripts/loop/vuelta19_medir.py`,
+`scripts/loop/vuelta19_figuras.py` y `scripts/loop/vuelta19_fase2.py`, sobre
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `dataset/metadata/master_graph.json`,
+`docs/plan/INVENTARIO.jsonl` y `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`. **Ninguna cifra de esta
+seccion sale de una nota vieja: todas salen de una corrida de hoy.**
+
+### 1. LOS CINCO BLOQUES DE LA FASE II, con lo que cada uno tenia y lo que tiene hoy
+
+| bloque | tras la vuelta 17 | **tras la vuelta 19** |
+|---|---|---|
+| la cola de relectura post fusion | VERIFICADA ENTERA, 7 de 7 | **sigue verificada**: los siete puestos citados en la entrada `defecto` remedidos hoy, seis en B, el 1096 en A, mas el 751 que cae |
+| el criterio del forastero | VERIFICADOS LOS DOS | **los dos siguen, mas UN CANDIDATO CONDICIONADO** registrado y no contado: `customer_validation_sales_roadmap` |
+| el lote de cinco del sales roadmap | LOS CINCO NOMBRADOS | **LEIDOS Y CERRADO**: `LD-66` a `LD-70`, el acto pasa a 15 de 15 y a CERRADO |
+| las lecturas de acto entero de P.5 | CUANTIFICADA: 280 hechos, 55 pendientes, 329 pares | **REMEDIDA: 281 hechos, 54 pendientes, 324 pares** |
+| los ejemplares de las veinte figuras | medido el tamano, NO cerrado | **LAS VEINTE NOMBRADAS**: ver el punto 2 |
+
+### 2. EL BLOQUE GRANDE: las veinte figuras, nombradas
+
+**Medido con `scripts/loop/vuelta19_fase2.py`, y con las DOS cuentas al lado porque miden cosas
+distintas:**
+
+| cuenta | definicion | resultado |
+|---|---|---:|
+| **de FORMA**, la de la vuelta 17 | la nota trae un id de nodo, un puesto citado o un `LD-nn` | **20 de 20** |
+| **de TANDA**, la sustantiva | la nota trae la marca explicita `EJEMPLARES NOMBRADOS EL` o `SEDES NOMBRADAS EL` de una tanda de nombramiento | **13 de 20** |
+
+> **Las dos cuentas se publican juntas y ninguna sola, porque el acta de la vuelta 18 ya adjudico que
+> la de forma tiene falsos positivos** (su adjudicacion 9, con `EL PASO DE OFICIO` como ejemplar).
+> **Las SIETE que no traen marca de tanda no estan sin nombrar: nacieron nombradas.** Son las ocho del
+> corte 2026-08-12 menos `cobrar una A sin fundir`, que si recibio tanda en la vuelta 18: `frontera de
+> disposicion`, `el nombre que esconde`, `nodo puente`, `la camarilla cerrada por lectura`, `la perdida
+> que cambia de dueno`, `el superviviente es de la nomina, no del nodo` y `el forastero por cableado`.
+> **Sus notas ya citan nodos y puestos desde el dia que se escribieron**, y esta vuelta lo comprobo
+> entrada por entrada.
+
+**LAS TRES QUE FALTABAN, cerradas en esta vuelta y con su discrepancia declarada al lado:**
+
+| figura | lo que se nombro | la discrepancia declarada, con la cifra vieja intacta |
+|---|---|---|
+| **`SUBCONJUNTO ESTRICTO`** | **los 23 puestos**, verificados uno por uno contra el archivo, **cero fallos y los 23 en A** | el 23 cuenta **etiquetas**: el **511** esta declarado en prosa y su razon no la trae. Instancias declaradas: **24** |
+| **`LA FIRMA POSICIONAL DEL INJERTO (P.2)`** | **las dos sedes**, con la tabla de los 67 **reproducida celda por celda**, mas **diez ejemplares citables por nodo** | la tanda de los cuatro libros mide **44 nodos distintos** y el doc publica **43**; la diferencia entera es Horowitz, **14 en una sede y 13 en la otra** |
+| **`EL PASO DE OFICIO`** | **los TRES declarados por su nombre en la razon del propio archivo**: 2045, 2054 y 2070, los tres D | la cota de 6 nodos se midio con la cadena `us commercial service` **sin puntos**; con la cadena corregida son **26 nodos de 141 y 40 pares de 130** |
+
+### 3. LA NOVENA ESTRELLA: no faltaba, no se habia buscado donde estaba
+
+**El encargo mandaba leer el par periferico como `LD-71`. El par YA ESTABA LEIDO**, y esta medido en
+esta vuelta: es **`LD-04`**, de la primera tanda de dirigidas del **11 ago 2026**,
+`evaluacion_tecnologias_disruptivas` contra `explotacion_tecnologias_disruptivas`, **clase D**, y ese
+mismo `LD-04` ya declaraba por escrito ***"es una ESTRELLA del banco 9.23, con centro y dos
+periferios"***.
+
+| la cuenta de 9.23 | estado, medido hoy |
+|---|---|
+| pares con el centro `tecnologias_disruptivas_oportunidad`, todos A | **SI**: 505 y 513, los dos A, y son los dos unicos del archivo que lo tocan |
+| al menos un par entre perifericos, leido y sano | **SI**: `LD-04`, D, desde el 11 ago 2026 |
+
+> **Las estrellas verificadas pasan de OCHO a NUEVE y el campo `cobertura`, que dice 9, queda
+> CONFIRMADO en vez de discrepante.** La relectura independiente esta en
+> [`LD_ESTRELLA_DISRUPTIVAS.md`](LD_ESTRELLA_DISRUPTIVAS.md), con su limite de ceguera declarado. **No
+> se acuno `LD-71`**: un segundo numero para un par ya adjudicado seria una segunda fuente de verdad
+> para un solo veredicto.
+
+### 4. TRES SEDES QUE HOY CUENTAN EL MISMO ACTO Y NO DICEN LO MISMO, declarado y NO arreglado
+
+**El registro de TAREA 1.4 movio una de las tres y el encargo solo nombraba esa. Las otras dos quedan
+como estaban, y la divergencia se escribe en vez de taparse:**
+
+| sede | que dice hoy del acto del sales roadmap | que dice de la deuda total de P.5 |
+|---|---|---:|
+| `docs/plan/INVENTARIO.jsonl`, entrada de tipo `acto` | **15 de 15, CERRADO** | **324** |
+| `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` | 10 de 15, ABIERTO, 5 fuera de cola | **329** |
+| `docs/plan/INVENTARIO.jsonl`, entrada de tipo `racimo` "el sales roadmap" | 10 de 15, MEZCLADO | no la cuenta |
+
+> **La diferencia entre 324 y 329 son EXACTAMENTE los cinco pares de `LD-66` a `LD-70`, y no hay
+> ninguna otra.** Las dos cifras son correctas para lo que cada una mide: el archivo de componentes es
+> una foto del cierre transitivo al corte 3.388 y **no recoge lecturas dirigidas por diseno**; la
+> entrada de `acto` si las recoge. **Quien cite 329 tiene que decir de que sede sale.** La entrada de
+> `racimo` es el caso distinto: mide la misma nomina y no tiene motivo para diferir. **Se trae como
+> pregunta al reporte y no se toca, porque el encargo scopeaba la entrada de tipo `acto`.**
+
+### 5. EL MARCADOR Y LO RESERVADO, al cerrar la vuelta
+
+| | medido hoy |
+|---|---:|
+| lineas de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **3.388**, intacto |
+| **A / B / C / D** | **583 / 89 / 7 / 2.709** |
+| entradas de `docs/plan/INVENTARIO.jsonl` | **671**, y ninguna nace ni muere en esta vuelta |
+| entradas tocadas | **9**: cinco en TAREA 1, una mas en su segunda mitad, y tres en TAREA 2.B |
+| actos vigentes **CERRADOS / ABIERTOS** | **281 / 54** |
+| **la FASE II** | **las veinte figuras quedan NOMBRADAS. Quien declare el bloque cerrado es el auditor, no esta seccion** |

@@ -255,7 +255,8 @@ def main():
     salida = "\n".join(finales) + "\n"
     INV.write_text(salida, encoding="utf-8", newline="\n")
     print("ESCRITO: %s" % INV)
-    for mal in ("—", "–"):
+    prohibidos = (chr(8212), chr(8211))  # guion largo y guion medio
+    for mal in prohibidos:
         if mal in salida:
             print("AVISO: hay guion largo o medio en la salida")
             return 1
