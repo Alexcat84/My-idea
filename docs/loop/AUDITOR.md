@@ -116,6 +116,13 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
 - Credenciales ausentes: el `.env` de la raiz esta FUERA del repo mientras el
   bucle corra. Si una suite del Gate 0 las necesita, que falle visible: eso es
   PARADA legitima, y NO es motivo para devolverlas al repo.
+- APERTURA DE LA FASE III (decision del fundador, 13 ago 2026): cuando la
+  FASE II quede cerrada y verificada, NO abras la FASE III. Escribe
+  docs/loop/PARA_ALEXIS.md con el estado de cierre de la Fase II, la
+  verificacion de la fase 0 si ya la tienes, y el plan de ataque de la
+  Fase III, y deja PROMPT_SIGUIENTE.md VACIO. El fundador cambia el modelo
+  del ejecutor antes de que se toque el primer nodo y relanza el bucle. Al
+  reanudar, el encargo de esa vuelta es la apertura de la Fase III.
 En PARA_ALEXIS.md: motivo, estado exacto (hash, marcador, fase), lo que se
 necesita de Alexis, y como retomar.
 
