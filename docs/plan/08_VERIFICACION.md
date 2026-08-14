@@ -39,6 +39,41 @@ nada.**
 4. **prueba de rumbos** (ya comprueba que ningun ancla este deprecada)
 5. **reindexado semantico**
 
+### QUE ES **GATE 0 EN VERDE**, y es EL CICLO ESCRITO DE DOS COMANDOS
+
+**REGISTRADO el 14 ago 2026 por adjudicacion del auditor** (`docs/loop/ACTA_AUDITOR.md`,
+vuelta 21, seccion 4, puntos 1 y 2). **No borra nada de esta pagina: fija lo que la
+linea 1 de la lista de arriba no decia.**
+
+> **EL CRITERIO ES EL CICLO, NO LA INVOCACION A SECAS DEL VALIDADOR.**
+
+| # | comando | que tiene que dar |
+|---:|---|---|
+| **1** | `python scripts/run_phase1.py --reaplico-curaduria` | **EXITCODE 0** y `GATE 0: OK` |
+| **2** | `python scripts/etiquetas_de_cara.py --aplicar`, corrido **JUSTO DESPUES** | `dataset/metadata/master_graph.json` **BYTE IDENTICO a HEAD**: el mismo hash de blob |
+
+**LA INVOCACION A SECAS NO ES UN ROJO QUE CLASIFICAR.** `python scripts/run_phase1.py`
+sin `--reaplico-curaduria` sale con **exit 2 SIEMPRE que haya curaduria viva**, y eso
+**es la alarma del propio instrumento funcionando**, no una regresion. Esta escrito en
+el comentario fechado **2026-08-07** dentro de `scripts/run_phase1.py`, **lineas 941 a
+958** (verificado contra el archivo el 14 ago 2026): la recompilacion borra la
+curaduria porque las etiquetas de cara **no viven en los nodos**, viven en
+`dataset/metadata/etiquetas_de_cara_v1*.json`, y el script **avisa y falla a proposito
+en vez de auto aplicarlas**, porque auto aplicarlas crearia una segunda fuente de
+curaduria que el remache de `integrar_packs` prohibe.
+
+> **QUIEN RECOMPILA, REAPLICA** (`scripts/run_phase1.py`, **linea 955**). El ejecutor
+> que corra Gate 0 **reaplica la curaduria acto seguido**, y **si el conteo de etiquetas
+> aplicadas ENCOGE al reaplicar, lo declara en el reporte en vez de callarlo**: ese
+> encogimiento es el sintoma de un nodo curado que una operacion de la pasada depreco,
+> renombro o fundio, y callarlo seria exactamente la degradacion silenciosa que el canon
+> de fallar ruidoso prohibe.
+
+**LA CIFRA DE LA LINEA BASE, con su corte:** al 14 ago 2026, sobre `HEAD` de
+`pasada-unica`, el ciclo cierra con **71 etiquetas reaplicadas** y el blob
+`bb423c066f5a961f082b3b70aaff4f98d35d7a1d`, que es el de HEAD. **Esa es la cifra contra
+la que se compara el encogimiento.**
+
 > **EL REINDEXADO VA AL FINAL, DESPUES DE MOVER IDS.** El indice **guarda ids** y
 > es **una de las fuentes externas que `OP-S-08` identifico**. Reindexar antes deja
 > el indice apuntando a la era anterior, **y el sintoma no aparece en el
