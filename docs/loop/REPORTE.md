@@ -1,303 +1,270 @@
-# REPORTE del ejecutor del bucle, vuelta 11 (ABRE LA FASE II: EL RECOMPUTO)
+# REPORTE del ejecutor del bucle, vuelta 12 (FASE II, SEGUNDA VUELTA: EL PLAN SE REESCRIBE AL 3.388)
 
-**Sesion ejecutora (Sonnet 5). Fecha de reloj: 13 ago 2026. Rama activa: `bucle`.** El cribado
-intra-dominio sigue cerrado en el puesto 3.388 (Fase I, verificada y cerrada por el auditor la
-vuelta pasada). Esta vuelta **NO tocó `dataset/` ni un byte**: modo de cierre completo, cero
-reparaciones de nodos, la Fase III (mover nodos de verdad) sigue sin abrir.
+**Sesion ejecutora (Sonnet 5). Fecha de reloj: 13 ago 2026. Rama activa: `bucle`.** MODO DE CIERRE:
+cero reparaciones de nodos. **`dataset/` no se toco ni un byte.** La Fase III (mover nodos de
+verdad, rama `pasada-unica`) sigue sin abrir.
 
 ## Hash y rutas
 
-- **Hash final de esta vuelta:** `7f4ec6d9` (TAREA 2, el recomputo). El commit de este reporte
-  queda por encima.
+- **Hash final de esta vuelta:** `f1f267d4` (TAREA 2.B). Este reporte queda por encima.
+- **Commits de la vuelta:**
+  - `ec57d14b` TAREA 1: dos preguntas que el encargo declaro imposibles quedan medidas, y la
+    adjudicacion 101.e queda registrada.
+  - `5382943c` TAREA 2.A: el plan se reescribe al corte 3.388 (`OP-U-02` a LISTA, `OP-U-01`
+    reescrita, 28 operaciones mas verificadas sin cambio).
+  - `f1f267d4` TAREA 2.B: el paso 2 del recomputo, corrido por la via acotada de los 36.
 - **Rutas tocadas:**
-  - `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: 2 razones corregidas (puestos 3.376 y 3.382), misma
-    clase D en las dos, mismo total de 3.388 veredictos. Via `scripts/corregir_veredicto.py`.
-  - `docs/INTRA_DOMINIO_INFORME.md`: tres secciones nuevas (100.4 ampliada con correccion
-    declarada, 100.12 nueva, 101 nueva).
-  - `scripts/plan/recomputo_3388.py`: **instrumento nuevo, el unico autorizado esta vuelta**,
-    estrictamente de solo lectura.
-  - `docs/plan/RECOMPUTO_3388.md`: documento nuevo con el resultado completo de la TAREA 2.
-  - `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`: salida de detalle del script, las 335
-    componentes fila por fila.
-  - `docs/plan/DIFERENCIA_CONTRA_COLA.jsonl`: **corrido, sin diferencia contra el estado ya
-    commiteado** (ver TAREA 3).
-  - `docs/plan/OPERACIONES.jsonl`: **NO TOCADO**, tal como manda el encargo.
-  - `docs/loop/REPORTE.md`: este archivo.
-- **Commits de la vuelta:** `767d9ca4` (TAREA 1: dos correcciones de registro y cuatro
-  adjudicaciones), `7f4ec6d9` (TAREA 2: el recomputo completo).
+  - `docs/plan/RECOMPUTO_3388.md`: cinco correcciones declaradas (401/400, los 48, el 387, la
+    autorizacion de `OP-U-02`, y el paso 2 completo), todas con tachado sin borrar.
+  - `docs/INTRA_DOMINIO_INFORME.md`: seccion 101.e nueva (la adjudicacion del acto de quince de
+    `health_safety`), con correccion del encabezado de "cuatro" a "cinco" adjudicaciones.
+  - `docs/plan/OPERACIONES.jsonl`: dos lineas editadas, `OP-U-01` y `OP-U-02`. Las otras 67 lineas,
+    sin tocar (verificado por diff: solo 2 de 69 lineas cambiaron).
+  - `docs/loop/REPORTE.md`: este archivo, reescrito entero.
 
 ---
 
-## TAREA 1: dos correcciones de registro y una verificacion fija nueva
+## TAREA 1: dos preguntas que el encargo declaro imposibles, medidas y registradas
 
-### 1.1 Entregable citado en el 3.376 y el 3.382
+### 1.a El 401 contra 400 A vigentes al 2.117
 
-Contado por el auditor sobre las razones del archivo: de los **once** discutibles marcados del
-tramo 3.301-3.388 (seis fuertes mas cinco simples, cifra ya correcta en 100.7/100.8 del informe),
-**nueve citaban el `entregable_esperado` y dos no**, el 3.376 y el 3.382. **Verificado con
-instrumento propio antes de corregir: confirmado, 9 de 11 citaban, 2 no.** Los dos D se sostenian
-sin tocar la razon de fondo: la correccion no fue de lectura, fue de registro.
+**VERIFICADO por el ejecutor con instrumento propio antes de escribir**, no solo transcrito del
+acta del auditor. Comando: `git show c16a24f5:docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (11 ago 2026,
+2.117 lineas exactas) comparado clase a clase, linea a linea, contra las 2.117 primeras lineas del
+archivo de hoy. **Resultado: UN solo cambio de clase, el puesto 2.078**
+(`elaboracion_fdd`/`preparar_fdd`, `franquicias`), **D el 11 ago y A hoy**. El archivo viejo tiene
+exactamente 400 A. **Correccion declarada en `docs/plan/RECOMPUTO_3388.md`**, con el texto viejo
+tachado y sin borrar, citando el hash, el puesto y la frase del banco 9.21 ("cada cifra es correcta
+en su corte").
 
-**Aplicado con `scripts/corregir_veredicto.py`** (sustituye razon, no anade veredicto, no cambia
-clase): se anadio al 3.376 la cita de los dos `entregable_esperado` (`csf_funcion_protect` y
-`funcion_protect_politica_seguridad`, ambos corroborando sin decidir, la vara sigue siendo los
-pasos); y al 3.382 la cita de los de `fundamentos_gestion_riesgo` y `rmf_paso_preparar` (el
-primero nombra "responder" de forma explicita, lo que corrobora el hueco de Respond que ya
-sostenia el D). **Verificado con el instrumento tras la correccion: de los once discutibles del
-tramo, ONCE de ONCE citan hoy el `entregable_esperado`.** Marcador recomputado tras la correccion
-(`scripts/corregir_veredicto.py`, salida directa): sin altas ni bajas, `{'D': 2709, 'A': 583, 'B':
-89, 'C': 7}`, archivo en 3.388 veredictos, tasa de A 17,2%. Sin cambio contra el checkpoint 3.388
-de la vuelta pasada.
+### 1.b El mapeo de los 48 actos abiertos del 2.117
 
-**Correccion de registro en el informe (durable, porque `docs/loop/REPORTE.md` se sobreescribe
-cada vuelta):** `docs/INTRA_DOMINIO_INFORME.md`, seccion **100.12** nueva. Corrige la frase de la
-vuelta 10 ("ocho discutibles marcados") a la cifra correcta, **9 de 11 antes de la correccion**,
-con el texto viejo tachado y no borrado, tal como pide la regla.
+**Este es el hallazgo mas importante de la vuelta, porque el primer intento del ejecutor NO
+reprodujo la cifra del auditor, y el encargo pedia exactamente eso: no escribir lo que no verifica.**
 
-### 1.2 La lista de hubs de `risk_management`, y una quinta correccion no pedida
+Primer intento: reconstruir el estado al corte 2.117 (veredictos truncados a 2.117 lineas, con el
+2.078 forzado a D) usando el MISMO criterio simplificado que `scripts/plan/recomputo_3388.py` usa
+para el corte 3.388 (un acto cierra si sus pares INTERNOS estan todos leidos). Resultado: **179
+cerrados sobre 384 nodos, 42 abiertos sobre 192**. NO coincidia con la cifra publicada (173/371,
+48/205). **Por la instruccion del encargo, no se escribio: se investigo la causa.**
 
-El encargo trajo la correccion del auditor: la lista de hubs de siete toques tenia **dos** nodos
-publicados y debia tener **cuatro** (faltaban `cultura_que_habla_del_riesgo_sin_miedo` y
-`gestionar_el_riesgo_es_de_adultos`, los dos con siete toques y cero A). **Verificado con
-instrumento propio contra los 106 pares de `risk_management` antes de escribir la correccion: la
-cifra correcta no es cuatro, es CINCO.** Falta un quinto nodo que ni la vuelta 10 ni la correccion
-del auditor incluyeron: **`el_riesgo_nunca_se_acaba_se_administra`**, tambien con siete toques y
-cero A. Contado dos veces con el mismo instrumento antes de publicar (una vez para confirmar la
-cuenta del auditor, otra para verificar que no quedaba nada fuera): los CINCO son
-`deja_de_ignorar_el_riesgo`, `vuelve_a_medir_despues_del_susto`,
-`cultura_que_habla_del_riesgo_sin_miedo`, `gestionar_el_riesgo_es_de_adultos`,
-`el_riesgo_nunca_se_acaba_se_administra`.
+**La causa:** el criterio simplificado de `recomputo_3388.py` es valido SOLO cuando la cola esta
+agotada (como al corte 3.388, donde `INTRA_DOMINIO_PARES.jsonl` y `INTRA_DOMINIO_VEREDICTOS.jsonl`
+tienen exactamente los mismos 3.388 pares). Al corte 2.117 la cola NO estaba agotada (quedaban
+1.271 pares sin leer), y el criterio ORIGINAL de `OP-U-01` tiene una segunda condicion mas amplia,
+escrita en su propia nota: "ningun miembro tiene un par PENDIENTE EN LA COLA", contra CUALQUIER
+nodo, no solo contra otro miembro del acto. El script simplificado solo mira pares internos al
+acto y por eso cerraba de mas.
 
-**Es la MISMA regla del superlativo aplicada dos veces seguidas: una lista que corta en un valor
-trae todos los empates de ese valor.** Primero la aplico el auditor a mi lista de dos; ahora la
-aplico yo a la suya de cuatro. Ninguna cifra del dominio se mueve: sigue en 106 pares, 0 A, 0,0%.
-**Corregido en `docs/INTRA_DOMINIO_INFORME.md` seccion 100.4**, con correccion declarada y el
-texto viejo tachado.
+**Corregido el instrumento** (comprobando, para cada miembro de cada componente, si tiene algun par
+en la cola completa de 3.388 sin leer todavia, sin restringir a pares internos) y vuelto a correr:
+**reproduce exacto la cifra publicada**: 221 componentes sobre 576 nodos, **173 cerrados sobre 371**
+(149 de dos, 23 de tres, uno de cuatro), **48 abiertos sobre 205**, motivos **42 por par interno mas
+6 por miembro pendiente**. Coincide cifra a cifra con el acta del auditor.
 
-**DISCUTIBLE MARCADO, para que quede dicho antes de que nadie lo verifique por mi:** esta es una
-correccion sobre una correccion del propio auditor. La marco porque puede caer de dos formas: si
-mi conteo de siete toques esta bien, es un acierto de la disciplina de verificar antes de aplicar;
-si me equivoco yo ahora (por ejemplo si hay un sexto nodo que tampoco vi), la cadena de listas
-cortadas seguiria sin cerrar.
+**Con esa membresia reconstruida, el mapeo contra el corte 3.388:**
 
-### 1.3 Verificacion fija nueva: toda frase de "en cada par/en todos/desde el primero" se cuenta
-### antes de escribirse
+| | cuantos |
+|---|---:|
+| CERRARON (mismos miembros, hoy CERRADO) | **5** |
+| siguen abiertos, identicos, sin crecer | **42** |
+| siguen abiertos y CRECIERON | **1** (`gestion_terminacion_franquiciado` con `terminacion_franquiciado_causas`, de 2 a 3) |
 
-**Aplicada a este mismo reporte.** Frases candidatas que este reporte podria haber escrito sin
-contar, y lo que dice el instrumento:
+Los cinco que cerraron: `cinco_categorias_costos_franquicia`/`costos_preparacion_franquicia`/
+`estimacion_inversion_inicial_franquiciador`; `estrategia_multicanal_expansion`/
+`franquicia_mas_crecimiento_corporativo_hibrido`; `proceso_llamada_inicial_venta`/
+`proceso_primera_llamada`; `sitio_web_captura_leads`/`sitio_web_franquicia`;
+`comprender_definicion_legal_franquicia`/`marco_name_system_fee`.
 
-| frase que se iba a escribir | contada con el instrumento | lo que se escribe en su lugar |
-|---|---|---|
-| "los once discutibles citan el entregable" | **11 de 11**, contado tras la correccion 1.1 (ver arriba) | se escribe la fraccion, arriba |
-| "las cuatro comprobaciones del recomputo cuadran" | **4 de 4**, impreso por `recomputo_3388.py` (ver TAREA 2) | se escribe la fraccion, en la tabla de TAREA 2 |
-| "ninguna de las 583 A colapsa al resolver" | **0 de 583**, contado por el paso 1 del recomputo | ya es una fraccion (0 de 583), se deja como esta |
-| "el marcador no se movio" | comparado A/B/C/D antes y despues de las dos correcciones: identico, `{'D': 2709, 'A': 583, 'B': 89, 'C': 7}` en los dos cortes | se escribe con las dos cifras iguales, no como "no se movio" a secas |
+Y **114 actos de hoy no contienen ni un nodo de un acto del 2.117**, de los cuales **102 nacieron
+cerrados y 12 nacieron abiertos**. Las cuentas cierran: 173+5+102=**280**; 42+1+12=**55**.
+Correccion declarada en `docs/plan/RECOMPUTO_3388.md`, texto viejo tachado sin borrar.
 
-**Esta verificacion queda fija junto a la de discutibles para todo reporte futuro**, tal como pide
-el encargo. No se encontro ninguna frase de la familia "en cada", "en todos" o "desde el primero"
-que se hubiera escrito sin contar en este reporte: las cuatro candidatas de la tabla se contaron
-antes de esta version final.
+### 1.c Por que la diferencia de `OP-E-03` (387) no bajo
 
-### 1.4 Las cuatro adjudicaciones del auditor, registradas
+Leido `scripts/plan/diferencia_contra_cola.py`: compara los candidatos del barrido contra la UNION
+de `INTRA_DOMINIO_PARES.jsonl` (la cola planificada) mas `INTRA_DOMINIO_VEREDICTOS.jsonl` (lo
+leido). La primera esta completa en 3.388 desde el 9 ago 2026 (verificado, `git diff --stat
+c442345a -- docs/INTRA_DOMINIO_PARES.jsonl` vacio). **Cerrar un dominio no mueve la cola
+planificada: mueve el archivo leido, que ya estaba dentro de la union desde antes.** Por eso el 387
+no podia bajar sin importar cuantos dominios cerraran. Registrado en `docs/plan/RECOMPUTO_3388.md`
+con la frase de que la expectativa de baja fue error del auditor, no del ejecutor de la vuelta 11.
 
-Registradas en `docs/INTRA_DOMINIO_INFORME.md`, **seccion 101 nueva**, cada una con la regla de la
-que cuelga: (a) el banco 9.6.3 no bloquea la mutua del 3.363 porque los dos residuos viven dentro
-del mismo entregable (un unico plan de respuesta a incidentes, NIST SP1318); (b) la vara se aplica
-sobre `pasos_accionables`, no sobre `resumen_teorico` (si el resumen contara, la mutua caeria a
-REPITE); (c) cuando el 3.363 se funda, el superviviente conserva LOS DOS residuos, o la fusion
-pierde catalogo sin declararlo; (d) las tres fusiones nuevas de `seguridad_digital` no abren cola
-de relectura post fusion, verificado: de los ocho pares del archivo que tocan los seis nodos de las
-tres A, tres son las propias A y cinco son D, cero B y cero C (los 96 B y C del catalogo viven en
-`core`, 94, y `compras`, 2, ninguno en `seguridad_digital`; verificado con instrumento, coincide
-exacto con la cifra citada por el auditor).
+### 1.d La adjudicacion 101.e
 
-### 1.5 Lo verificado y en verde, no se toco
+Registrada en `docs/INTRA_DOMINIO_INFORME.md`: cuando el acto de quince de `health_safety` se
+ejecute, el superviviente conserva el contraste de seis ejes de
+`vieja_vision_vs_nueva_vision_seguridad` (el nodo repite cuatro veces y muere en las cuatro; su
+tabla es catalogo). El encabezado de la seccion 101 se corrigio de "CUATRO" a "CINCO"
+adjudicaciones, con correccion declarada.
 
-El marcador entero al 3.388 (A 583, B 89, C 7, D 2.709) y las diez tasas por dominio; las cuatro
-fronteras de dominio; la vara por tramo; las cuatro tablas de rachas; el cierre en cero de
-`risk_management`; las tres A de `seguridad_digital` y sus supervivientes; el contador de mutuas en
-veintiocho con su reparto 25/1/1/1; la ficha nombrada 6 y 3; los 28 SIN ACTO de `quality`; el
-pendiente de los 365 A ciegos anteriores al 2.127. Siguen aprobados
-`scripts/recomputar_marcador.py`, `scripts/_registrar_lote.py`, `scripts/volcar_pares.py` y
-`scripts/corregir_veredicto.py`.
+### 1.3 Lo verificado y en verde, no se toco
+
+El marcador entero al 3.388, las 583 A, las 335 componentes y sus miembros, los 280 CERRADOS y los
+55 ABIERTOS, las cuatro comprobaciones, la tabla de `OP-E-03`, los cinco hubs de siete toques, los
+once discutibles del tramo. Siguen aprobados `scripts/plan/recomputo_3388.py` y
+`scripts/plan/diferencia_contra_cola.py` (con la salvedad, ahora escrita, de que su criterio de paso
+4 es una simplificacion valida solo con la cola agotada).
 
 ---
 
-## TAREA 2: EL RECOMPUTO DE LA FASE II, los cuatro pasos en orden
+## TAREA 2.A: el plan se reescribe al corte 3.388
 
-**Detalle completo, con todas las tablas y la lista de las 335 componentes por tamano, en**
-`docs/plan/RECOMPUTO_3388.md` **y** `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`. Resumen con las
-cifras que importan:
+### `OP-U-02`: DECISION PENDIENTE a LISTA
 
-**Instrumento: `scripts/plan/recomputo_3388.py`**, el unico script nuevo autorizado esta vuelta,
-estrictamente de solo lectura (no escribe nodo, veredicto ni operacion). Modelado sobre el
-`comp()` de `scripts/plan/nominas.py` y el `res()` de `scripts/volcar_pares.py`. Comando exacto
-con el que corrio cada paso: `python scripts/plan/recomputo_3388.py` (los cuatro pasos corren en
-la misma pasada, uno detras del otro, cada uno usando la salida del anterior, tal como manda el
-orden del 08_VERIFICACION).
+`fecha_corte` a `2026-08-13`. Evidencia reescrita con 335 componentes, 280/600, 55/254, citando la
+verificacion del auditor (acta vuelta 11, adjudicacion 4.1, con la prueba de identidad conjunto a
+conjunto). La linea vieja del corte 2.117 se conserva, sin borrar (banco 9.21).
 
-### Paso 1: el retrato de las A
+### `OP-U-01`: cifras reescritas al corte 3.388
 
-**583 A crudas, 583 pares distintos tras resolver por alias, CERO colapsan a auto-arista.**
-Ninguna fusion del plan se ha ejecutado contra `dataset/` todavia (verificado:
-`nafta_free_trade_agreements`, el ejemplar de `OP-S-01`, sigue sin `deprecado`), asi que los 391
-alias vigentes son historia previa a esta campana y no fusionan ninguna de las 583 A consigo
-misma. Fecha de corte: puesto 3.388.
+Cerrados de 173/371 a **280/600** (2: 244, 3: 32, 4: 4). Abiertos a **55/254**. Nota ampliada con
+cuales de los 48 cerraron (los cinco de franquicias, nombrados arriba). Verificacion "NINGUN acto de
+la lista de abiertos se ejecuta antes del recomputo" actualizada a la lista de 55, sin borrar la
+referencia a los 48. La vieja cifra (173/371, corte 2.117) queda al lado con su fecha, sin borrar.
 
-### Paso 2: el barrido de confirmadas contra las A
+### Las 28 operaciones restantes, verificadas una por una, CERO CAMBIOS
 
-**NO CORRIDO.** Busqueda declarada, empezando por los dos ficheros que pide el encargo:
-`docs/plan/01_FUENTES.md` (linea 53 y 62) y `docs/plan/CORRECCIONES_A_APLICAR.md` (lineas
-169-174): las dos citan la cifra **11** (costuras confirmadas con pegado de Hugos, de 46 en
-total) **como conteo, nunca como lista**. Busqueda ampliada sobre `docs/` completo
-(`docs/COSTURAS_INTERNAS_RESUMEN.md`, `docs/FICHA_SUBFUSION_GRADIENTE.md`,
-`docs/GRADIENTE_VEREDICTOS.md`): la primera y la segunda repiten el total de 46 sin nomina; la
-tercera tiene una familia de nombre parecido, "costuras confirmadas DE REBOTE" (6 casos, esos si
-nombrados), pero es otro universo (verificaciones post-cirugia de la cola del gradiente semantico,
-no la nomina que el paso 2 necesita). **La nomina no esta escrita como lista en ningun sitio: por
-la instruccion del encargo, no se inventa ni se reconstruye de memoria. El paso 2 queda declarado
-NO CORRIDO**, y se sigue con los pasos 3 y 4.
+**Instrumento propio**: para cada operacion (`OP-L-02`, `OP-M-01` a `OP-M-05` y sus 22 sub
+operaciones, `OP-D-01` a `OP-D-06`), se tomo su nomina de nodos citada (`nodos`, resuelta por
+alias), se calcularon los pares posibles entre ellos, y se contaron cuantos estaban leidos (y
+cuantos en A) al corte 2.117 contra el corte 3.388.
 
-### Paso 3: el cierre transitivo
+| operacion | nodos | pares posibles | leidos 2.117 (A) | leidos 3.388 (A) | cambio |
+|---|---:|---:|---|---|---|
+| OP-D-01 | 2 | 1 | 1 (1) | 1 (1) | ninguno |
+| OP-D-02 | 4 | 6 | 3 (3) | 3 (3) | ninguno |
+| OP-D-03 | 6 | 15 | 8 (7) | 8 (7) | ninguno |
+| OP-D-04 | 7 | 21 | 8 (7) | 8 (7) | ninguno |
+| OP-D-05 | 3 | 3 | 3 (3) | 3 (3) | ninguno |
+| OP-D-06 | 18 | 153 | 9 (9) | 9 (9) | ninguno |
+| OP-M-01 | 17 | 136 | 23 (18) | 23 (18) | ninguno |
+| OP-M-02 | 28 | 378 | 41 (10) | 41 (10) | ninguno |
+| OP-M-03 (7 nodos, nomina en prosa) | 7 | 21 | 13 (4) | 13 (4) | ninguno |
+| OP-M-04 | 4 | 6 | 5 (4) | 5 (4) | ninguno |
+| OP-M-05 | 9 | 36 | 16 (12) | 16 (12) | ninguno |
+| OP-M-02-PROG/MEDIOS/ASSESS/ADMIT/ACTIVATE/ACCLIMATE/ACCOMPLISH (7 sub) | 2 cada una | 1 cada una | 1 (1) cada una | 1 (1) cada una | ninguno |
+| OP-M-03-I/II/III/ENLACES (4 sub) | 2 a 3 | 1 a 3 | igual | igual | ninguno |
+| OP-M-01-FUSION/ESLABONES/SEXTO (3 sub) | 2 a 5 | 1 a 10 | igual | igual | ninguno |
+| OP-M-05-INDICE/EDIFICIO/APERTURA (3 sub) | 3 cada una | 3 cada una | igual | igual | ninguno |
 
-**Sobre el retrato del paso 1, no sobre el archivo crudo.** 854 nodos con al menos una A, **335
-componentes de tamano >= 2** (distribucion: 2: 244, 3: 56, 4: 16, 5: 7, 6: 5, 7: 2, 8: 1, 9: 1,
-10: 1, 13: 1, 15: 1). Las cinco componentes grandes nombradas por `OP-U-01`/`OP-U-02` al corte
-2.117 siguen presentes hoy, **mismo tamano, identificadas por nombre**: la de 13
-(`gestion_de_portafolio_gates_go_kill`, puertas y portafolio), la de 9 (`customer_discovery`), la
-de 8 (`build_measure_learn`), y las dos de 7 (`customer_validation` y `brainstorming_divergente`).
-Dos componentes enteramente nuevas: tamano 15 (`health_safety`, la familia entera de vieja-vision-
-contra-nueva-vision del error humano) y tamano 10 (`quality`, la familia de
-`causas_comunes_vs_especiales`), ninguna existia al corte 2.117 porque esos dos dominios abrieron
-su cribado despues.
+**CERO cambios en las 28.** Ningun veredicto nuevo entre el puesto 2.118 y el 3.388 toca las
+nominas de estas operaciones: sus mesas y destejidos viven en `core` sobre racimos cuya cribado
+interna ya estaba agotado al 2.117 (verificado en cada fila, no supuesto). Los numeros publicados
+(120/136 posibles de `OP-M-01`, 378 de `OP-M-02`, 21 de `OP-M-03`) coinciden exacto con el
+recomputo. **Se dejan sin tocar**, con su cifra confirmada aqui, tal como pide el encargo para las
+que no cambian.
 
-### Paso 4: las nominas y los actos, con cobertura al lado
+**`OP-L-02` no tiene nomina de nodos citada** (su universo son tres nominas de lecturas dirigidas
+descritas en prosa: cuadrantes de mercado, ecuacion de valor, bloque humano de la IA). Razonamiento
+en vez de recomputo directo: su evidencia (205 pares FUERA DE COLA) es por definicion un universo
+que nunca entro a la cola intra-dominio, asi que avanzar el cribado de 2.117 a 3.388 no puede
+tocarla estructuralmente (no hay pares fuera de cola que una cola distinta pueda leer). Queda sin
+tocar con esa razon escrita, no con un recomputo directo: es el intento que se corrio, declarado
+como pide la regla nueva.
 
-**Reclasificados CERRADO/ABIERTO con el mismo criterio de `OP-U-01`.** Aviso metodologico que
-cambia el calculo respecto al 2.117: **la cola intra-dominio esta agotada** (verificado:
-`docs/INTRA_DOMINIO_PARES.jsonl` y `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` tienen exactamente los
-mismos 3.388 pares, cero diferencia en cualquier sentido), asi que la condicion "ningun miembro
-tiene par pendiente en la cola sin leer" es hoy trivialmente cierta para todos; lo unico que deja
-un acto abierto es que existan pares posibles entre miembros que **nunca entraron a la cola**
-(el universo de `OP-L-02`, "fuera de cola").
+### Comprobacion de integridad de `OPERACIONES.jsonl`
 
-| | corte 2.117 (`OP-U-01`/`OP-U-02`) | corte 3.388 (esta vuelta) | diferencia |
-|---|---:|---:|---:|
-| actos totales | 221 | **335** | **+114** |
-| **CERRADOS** | 173 | **280** | **+107** |
-| nodos en CERRADOS | 371 | **600** | **+229** |
-| **ABIERTOS** | 48 | **55** | **+7** |
-| nodos en ABIERTOS | 205 | **254** | **+49** |
+**69 operaciones antes y 69 despues** (`wc -l` y conteo de lineas JSON validas, iguales). **Cero
+`id_op` duplicados.** **Cero `depende_de` apuntando a un id inexistente.** **Cero `bloquea_a`
+apuntando a un id inexistente** (comprobacion extra, no pedida, barata). Comando: script python de
+una linea sobre el archivo, cargando cada linea como JSON y comparando el conjunto de ids.
 
-CERRADOS por tamano: 2: 244, 3: 32, 4: 4 (SPIN sigue siendo uno de los de cuatro, verificado por
-nombre). ABIERTOS por tamano: 3: 24, 4: 12, 5: 7, 6: 5, 7: 2, 8: 1, 9: 1, 10: 1, 13: 1, 15: 1.
+### Lo que NO se ejecuto
 
-**Cuantos de los 48 cerraron y cuantos actos nuevos abrio el cribado de los 1.271 pares que
-faltaban, medido por proxy de edad de arista** (la fecha de la A mas antigua que conecta cada
-componente; **no es un mapeo 1 a 1 contra la membresia de los 48 antiguos, porque esa membresia
-completa nunca se escribio como lista en ningun documento**, solo tamanos y un puñado de nombres):
-de los 335 actos de hoy, **221 tienen todas sus aristas anteriores al 2.117** (continuacion pura),
-**1 es mixto**, y **113 son enteramente posteriores al 2.117**, formados por completo dentro del
-cribado que corrio entre ese corte y el 3.388. De esos 113, **101 nacieron ya cerrados** (en su
-mayoria pares de dos de `quality`, que aporta 25 de las 28 fusiones mutuas del catalogo) y **12
-nacieron abiertos** (incluidas las dos componentes nuevas mas grandes, tamano 15 y tamano 10).
-**Ninguno de los cinco actos grandes nombrados en el paso 3 aparece entre los nuevos**: los cinco
-tienen su A mas vieja anterior al 2.117 y siguen abiertos, sin crecer ni cerrar. **Con esa cautela
-declarada, no se puede decir con certeza cuantos EXACTAMENTE de los 48 antiguos cerraron** (un
-acto abierto viejo pudo partirse o fundirse con otro por una A nueva, y el proxy de edad no
-distingue eso de una simple continuacion): lo que si se puede afirmar, medido, es que los cinco
-actos grandes identificables por nombre siguen abiertos sin cambio de tamano.
-
-### Las cuatro comprobaciones
-
-| # | comprobacion | resultado |
-|---:|---|---|
-| i | nodos en actos (854) == suma de tamanos de las componentes (854) | **OK** |
-| ii | A vigentes resueltas (583) == suma de aristas A internas (583) | **OK** |
-| iii | todo acto CERRADO tiene sus pares internos leidos y ningun miembro con par pendiente | **OK**, sobre los 280 |
-| iv | ningun nodo deprecado aparece dentro de una componente | **OK**, 0 encontrados |
-
-**LAS CUATRO DE CUATRO CUADRAN.** El recomputo esta bien hecho por su propio criterio.
-
-**COMPROBACION CRUZADA adicional, no pedida pero barata:** las A con `puesto_intra <= 2.117`,
-resueltas y deduplicadas, dan **401** pares, contra las **400 A vigentes al puesto 2.117** citadas
-como evidencia de `OP-U-01`. Diferencia de una unidad, **declarada como pregunta abierta y no como
-discrepancia que para la vuelta**: la evidencia vieja no publica su comando ni su lista, asi que no
-hay con que diferenciar par por par, y ninguna cifra publicada con corte se contradice de forma que
-pida parar (regla 3 del EJECUTOR).
-
-### Que NO cambia esta vuelta
-
-`docs/plan/OPERACIONES.jsonl` **no se toco**. `OP-U-02` sigue en DECISION PENDIENTE hasta que el
-auditor verifique las cuatro comprobaciones de arriba. `OP-U-01`, `OP-L-02`, las cinco mesas y las
-seis `OP-D-*` siguen con sus cifras del corte 2.117 hasta esa misma autorizacion, tal como manda
-el encargo.
+Ninguna operacion. `dataset/` no se toco. No se creo la rama `pasada-unica`.
 
 ---
 
-## TAREA 3: `OP-E-03`, la diferencia contra la cola al cierre del catalogo
+## TAREA 2.B: el paso 2 del recomputo, por la via acotada
 
-**Comando:** `python scripts/plan/diferencia_contra_cola.py` (sin `--dominio`, sobre los 477
-candidatos del barrido calibrado).
+**Corrido, con correccion declarada en `docs/plan/RECOMPUTO_3388.md`.**
 
-| dominio | filas | par repetido | ya en la cola | **diferencia** |
-|---|---:|---:|---:|---:|
-| quality | 208 | 1 | 40 | **167** |
-| core | 199 | 1 | 36 | **162** |
-| environmental | 22 | 0 | 0 | **22** |
-| exportacion | 15 | 0 | 2 | **13** |
-| franquicias | 15 | 0 | 2 | **13** |
-| health_safety | 12 | 0 | 5 | **7** |
-| entrega | 4 | 0 | 2 | **2** |
-| risk_management | 1 | 0 | 0 | **1** |
-| seguridad_digital | 1 | 0 | 1 | **0** |
-| **TOTAL** | **477** | **2** | **88** | **387** |
-
-**LA CUENTA NUEVA, corte 3.388 (catalogo entero cribado), CONTRA LA VIEJA, ensayo en vacio del 11
-ago 2026: 387 en las dos, sin cambio.** `docs/plan/DIFERENCIA_CONTRA_COLA.jsonl` salio **byte por
-byte identico** al ya commiteado (`git diff` vacio tras correr el script): ninguna fila nueva,
-ninguna movida de columna.
-
-**Verificado con instrumento independiente antes de publicar** (no solo confiado en el `git diff`
-vacio): de los 208 candidatos de `quality` sin arista, **40 ya estaban en la cola y 167 no**,
-contado por separado con un script de una linea sobre el jsonl fuente, coincide exacto con la
-salida de `diferencia_contra_cola.py`.
-
-**LA COMPROBACION ARITMETICA, escrita como pide el encargo:** filas (477) == pares repetidos (2) +
-ya en cola (88) + diferencia (387). **477 = 2 + 88 + 387. Cuadra.**
-
-**POR QUE NO CAMBIO A PESAR DE QUE TRES DOMINIOS CERRARON DESDE EL ENSAYO** (`risk_management`,
-`seguridad_digital`, y `quality` que en el 11 ago 2026 ni siquiera habia abierto): el barrido
-calibrado y la cola intra-dominio usan heuristicas de generacion de candidatos distintas (similitud
-de paso contra nodo, la primera; vecino mas cercano dentro del dominio, la segunda), asi que el
-solape entre las dos listas es estructuralmente chico y no depende de cuanto haya avanzado el
-cribado. Es una observacion, no una medicion nueva: **se deja escrita para quien lea esta cifra sin
-el contexto de por que el 387 no se movio.**
-
-**LA DIFERENCIA (387 filas) va a LECTURAS DIRIGIDAS, marcada como tal.** No entra en la cola, no
-mueve el marcador del cribado, y sus veredictos (cuando se lean) se cuentan aparte de la tasa por
-dominio, tal como manda el banco 9.27. **Esta vuelta NO SE LEYO NI UNA**, tal como pide el
-encargo: solo se midio la bolsa.
+1. **Cruce de las 128 citas de `docs/COSTURAS_INTERNAS.jsonl` (resueltas por alias) contra los 854
+   nodos con al menos una A.** Verificado: **interseccion de 36**, exacto contra la cifra del
+   auditor.
+2. **Para los 36, el veredicto ya escrito**, buscado en la tabla reconciliada de
+   `docs/FICHA_SUBFUSION_GRADIENTE.md` (lineas 3651-3780, la que declara "cada una de las 128 citas
+   leidas vive en exactamente una fila"). **Fraccion: 36 de 36 tienen veredicto escrito (0 sin
+   veredicto), 15 CONFIRMADA, 21 FALSA.** Cada uno citado con su linea exacta en
+   `docs/plan/RECOMPUTO_3388.md`.
+3. **Los 15 CONFIRMADA son las curas acopladas, y ninguno es nuevo.** Diez tienen ejemplar numerado
+   propio en la serie SANO POR DENTRO, GEMELO POR FUERA (CUARTO a DUODECIMO mas el DECIMOTERCERO Y
+   CUARTO); dos son el precedente citado dentro de esa misma serie (`blueprint_de_experiencia` y
+   `customer_journey_mapping`, puesto 341); tres estan en la tabla "TRES que el goteo no habia
+   encontrado" (`brainstorming_divergente`, `future_scenarios_planning`,
+   `plan_de_adquisicion_acquire`). **Cero se reescribieron: se citaron.**
+4. **Verificacion cruzada barata: los 15 ya tienen dueno en `OP-D-01` a `OP-D-06`.** Cada uno de los
+   15 aparece en la nomina de nodos de alguna de esas seis operaciones. El paso 2, corrido por la
+   via acotada, confirma que los seis destejidos ya son exhaustivos sobre el universo de los 36: no
+   abre ninguna cura acoplada que el plan no tuviera contemplada.
 
 ---
 
-## LO QUE NO SE MIDIO ESTA VUELTA (regla 9: lo que no puedo medir, lo traigo)
+## MIDIENDO SIN ESCRIBIR EN EL PLAN (encargo para la vuelta siguiente)
 
-- **El paso 2 del recomputo (barrido de confirmadas contra las A) queda sin correr**, porque la
-  nomina de las costuras confirmadas nunca se escribio como lista. Si esa lista existe en algun
-  sitio fuera del repositorio (una sesion de chat, un documento externo), traerla resolveria el
-  paso.
-- **La comprobacion cruzada del paso 1 (401 contra 400 A vigentes al 2.117) queda como pregunta
-  abierta, no resuelta**: no hay comando ni lista publicados de la medicion vieja con los que
-  diferenciar par por par.
-- **El mapeo exacto de cuales de los 48 actos abiertos de 2.117 cerraron** no se puede hacer 1 a 1:
-  solo hay proxy de edad de arista, declarado con su limite arriba.
-- **Las 205 lecturas fuera de cola de `OP-L-02`** (126 esperan destejido, 55 resto sin mesa, 5 del
-  sales roadmap, 3 ya leidas) no se remidieron esta vuelta: el encargo las dejo fuera a proposito,
-  para el encargo que corresponde.
-- **Las 387 filas de `LECTURAS DIRIGIDAS` de la TAREA 3 no se leyeron.** Solo se midio la bolsa,
-  tal como pide el encargo.
+**De las 55 componentes ABIERTAS al corte 3.388, TODAS (55 de 55) lo estan exclusivamente por pares
+que nunca entraron a la cola** (`fuera_de_cola`). **Cero estan abiertas por "miembro con par
+pendiente en la cola sin leer"** (`en_cola_sin_leer`), y cero por ambos motivos a la vez. Esto es
+la consecuencia directa, medida y no solo deducida, de que la cola intra-dominio esta agotada al
+3.388 (`INTRA_DOMINIO_PARES.jsonl` y `INTRA_DOMINIO_VEREDICTOS.jsonl` identicos): la segunda
+condicion del criterio de `OP-U-01` es hoy trivialmente cierta para las 335 componentes, y la
+unica via que deja algo abierto es la primera. Nada de esto se escribio en `docs/plan/`, tal como
+pide el encargo: queda aqui para alimentar el encargo siguiente (probablemente `OP-L-02`, que es
+exactamente el universo de "fuera de cola").
+
+---
+
+## LO QUE NO SE MIDIO ESTA VUELTA
+
+- **La nomina completa de las 46 confirmadas (no solo las 36 con A) sigue sin estar escrita como
+  lista en ningun sitio.** El paso 2 se cerro por la via acotada de los 36 (los que SI tienen A), que
+  es lo que el encargo pedia; las 10 restantes de las 46 (las que no tienen A vigente, si las hay)
+  no se buscaron, porque no eran parte de la via acotada.
+- **El lote de cinco lecturas del sales roadmap, la cola de relectura post fusion, el criterio del
+  forastero, las lecturas de acto entero de P.5, y las 387 filas de LECTURAS DIRIGIDAS**: fuera de
+  esta vuelta por instruccion explicita del encargo, cada una con su orden propio.
+- **Las 205 lecturas fuera de cola de `OP-L-02`** no se remidieron: su evidencia (205, 126, 79, 24,
+  55) es estructuralmente inmune al corte del cribado intra-dominio (razonado arriba, seccion TAREA
+  2.A), pero no se corrio un recomputo directo sobre sus tres nominas nombradas en prosa porque el
+  encargo no las incluyo en la lista de operaciones a verificar mas alla de "OP-L-02" como bloque.
 - **El pendiente de los 365 A ciegos anteriores al 2.127** sigue sin verificar, sin cambio esta
-  vuelta (no era parte del encargo).
+  vuelta.
 - **La trampa del identificador** sigue sin censo sobre `core`, `environmental`, `exportacion`,
-  `entrega` ni `compras` (pendiente heredado, sin cambio esta vuelta).
+  `entrega` ni `compras`.
+
+---
+
+## DISCUTIBLES MARCADOS, para la relectura ciega del auditor
+
+1. **La correccion del criterio de paso 4 para el corte viejo (TAREA 1.b) es la pieza mas fuerte de
+   esta vuelta y la mas facil de auditar mal si el auditor no repite el mismo error que el ejecutor
+   casi comete.** El criterio simplificado de `recomputo_3388.py` (solo pares internos al acto) da
+   179/42, NO 173/48. Si el auditor recomputa el corte 2.117 con ese mismo script tal cual esta
+   escrito hoy (sin el ajuste manual de "miembro con pendiente externo"), le va a dar 179/42 tambien,
+   y podria leer eso como una discrepancia del ejecutor cuando es al reves: el ejecutor SI encontro
+   el error y lo corrigio antes de publicar. **La verificacion del auditor tiene que usar el
+   criterio de dos condiciones completo (miembro con CUALQUIER par pendiente, no solo interno), no
+   el script tal cual esta commiteado.**
+2. **`scripts/plan/recomputo_3388.py` queda con una limitacion no corregida esta vuelta**: su paso 4
+   usa el criterio simplificado (valido solo con la cola agotada). Es correcto para el corte 3.388
+   (su unico uso autorizado) pero seria enganoso si alguien lo usa para reconstruir un corte
+   intermedio sin saber esto. No se toco el script esta vuelta porque MODO DE CIERRE no autoriza
+   escribir instrumentos nuevos fuera de lo que el encargo pide, y el encargo no pidio arreglar el
+   script, solo verificar la cifra. **Marcado para que quede escrito y no se pierda.**
+3. **La reconstruccion del corte 2.117 fuerza el puesto 2.078 a D "a mano"** (no hay una forma
+   automatica de re-derivar la clase historica salvo el commit `c16a24f5`, que ya se uso para eso).
+   Es un solo puesto, verificado dos veces (TAREA 1.a y TAREA 1.b), pero es una intervencion manual
+   sobre datos que vale la pena que el auditor recorra el mismo camino antes de dar por buena la
+   cifra.
+4. **La lista de "sin cambio" de las 28 operaciones (TAREA 2.A) se basa en comparar pares posibles
+   entre la nomina de `nodos` citada por cada operacion, no en re-simular las fusiones ni releer las
+   notas completas.** Si alguna operacion tiene una cifra publicada que depende de algo distinto de
+   "cuantos pares entre estos nodos estan leidos" (por ejemplo, una cifra sobre nodos FUERA de la
+   nomina citada, como el "72 pares cruzados" de `OP-M-01` contra el resto del racimo), ese tipo de
+   cifra no quedo verificada por este metodo. Se declara el limite en vez de esconderlo.
+5. **El hallazgo de la seccion "MIDIENDO SIN ESCRIBIR EN EL PLAN" (55 de 55 por fuera_de_cola) se
+   deduce logicamente del aviso metodologico que el propio `docs/plan/RECOMPUTO_3388.md` ya
+   declaraba** (la cola agotada hace trivial la segunda condicion). La medicion directa lo confirma
+   sin sorpresas, pero vale la pena que el auditor la re-corra por su cuenta antes de darla por
+   sentada para el encargo siguiente.
