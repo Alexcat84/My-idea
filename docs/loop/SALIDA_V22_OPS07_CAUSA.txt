@@ -1,0 +1,58 @@
+PASO 5 (simetrizar) de esta corrida: 33 enlaces ANADIDOS
+   analisis_de_cohortes                       nodos_previos      <- cohort_analysis_retencion
+   analisis_flujo_de_valor                    nodos_previos      <- value_stream_analysis_lean
+   buyin_customer_development                 nodos_previos      <- buy_in_customer_development
+   costo_de_mala_calidad_copq                 nodos_siguientes   <- categorias_copq
+   costo_de_mala_calidad_copq                 nodos_siguientes   <- categorias_costos_calidad
+   costo_de_mala_calidad_copq                 nodos_siguientes   <- costo_de_mala_calidad_copq_2
+   costo_de_mala_calidad_copq                 nodos_siguientes   <- costo_de_mala_calidad_copq_3
+   costo_de_mala_calidad_copq                 nodos_siguientes   <- costos_ocultos_calidad
+   costo_de_mala_calidad_copq                 nodos_previos      <- costo_de_mala_calidad_3
+   costo_de_mala_calidad_copq                 nodos_previos      <- costo_de_mala_calidad_copq_3
+   cronograma_proyecto                        nodos_previos      <- project_schedule
+   cuatro_etapas_del_pensamiento_creativo     nodos_siguientes   <- wallas_cuatro_etapas_pensamiento_creativo
+   cumplimiento_inversionistas_acreditados    nodos_previos      <- inversionistas_acreditados
+   customer_needs_spreadsheet                 nodos_previos      <- hoja_necesidades_cliente
+   customer_retention_tactics                 nodos_previos      <- customer_retention_strategy
+   decision_pivotar_o_proceder                nodos_previos      <- revalidar_modelo_negocio
+   definicion_sprint_terminado_fisico         nodos_siguientes   <- definicion_sprint_terminado
+   diseno_experimentos_pass_fail              nodos_siguientes   <- pass_fail_experiment_design
+   diseno_landing_page                        nodos_siguientes   <- diseno_landing_page_conversion
+   diseno_para_el_ciclo_completo              nodos_previos      <- diseno_ciclo_completo_equipo
+   eleccion_abogado_franquicias               nodos_siguientes   <- contratacion_abogado_franquicia
+   elevated_surfaces_fall_protection          nodos_siguientes   <- superficies_elevadas_proteccion_caidas
+   gestion_portafolio_formal                  nodos_previos      <- portafolio_formal_management
+   lockout_tagout_procedures                  nodos_previos      <- procedimientos_lockout_tagout
+   medir_comportamiento_cliente_mvp           nodos_previos      <- medir_comportamiento_y_entusiasmo_del_cliente
+   medir_huella_carbono_corporativa           nodos_previos      <- evaluar_huella_carbono
+   metodo_strategic_buckets                   nodos_previos      <- strategic_buckets
+   metricas_accionables                       nodos_siguientes   <- vanity_metrics_vs_accionables
+   multi_sided_platforms                      nodos_siguientes   <- multi_sided_platform_pattern
+   redundancia_en_diseno                      nodos_previos      <- redundancia_diseno_confiabilidad
+   reglas_gestion_riesgo_gambling             nodos_previos      <- gestion_riesgo_incremental
+   reporte_estado_miembro_equipo              nodos_previos      <- team_member_status_report
+   search_for_business_model                  nodos_previos      <- definicion_startup
+
+=== LA MECANICA, con el ejemplar escrito en OP-S-07 ===
+   value_stream_analysis_lean: deprecado=True
+   value_stream_analysis_lean.nodos_siguientes contiene a analisis_flujo_de_valor: True
+   analisis_flujo_de_valor.nodos_previos contiene a value_stream_analysis_lean   : True
+
+   La auto-arista NO esta escrita a mano en el nodo vivo: es LA VISTA RECIPROCA
+   que el paso 5 de run_phase1.py FABRICA a partir del enlace que el nodo
+   DEPRECADO tiene hacia su propio superviviente. Retirarla del vivo sin tocar
+   al deprecado la repone en la siguiente corrida del Gate 0, siempre.
+
+=== EL ORIGEN DE LAS 33, uno por uno ===
+   de las 33, 33 son la vista reciproca de un enlace del gemelo deprecado
+   las otras 0 no lo son: []
+
+=== EL ALCANCE, medido sobre el grafo entero ===
+  aristas que resuelven al mismo nodo, escritas en un nodo VIVO      : 33 (sobre 27 nodos)
+  aristas que resuelven al mismo nodo, escritas en un nodo DEPRECADO : 81 (sobre 59 nodos)
+  TOTAL de la pareja                                                 : 114
+
+  OP-S-07 escribe: 33 enlaces, y 'el conteo de aristas del grafo baja en 33 EXACTAMENTE'.
+  Medido hoy, retirar SOLO los 33 del lado vivo NO SE SOSTIENE: el paso 5
+  de run_phase1.py los repone los 33, verificado en phase1_run_log.json.
+  Y retirar los dos lados hace bajar el conteo en 114, no en 33.

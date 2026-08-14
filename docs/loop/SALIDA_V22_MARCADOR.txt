@@ -1,0 +1,38 @@
+=== EL MARCADOR (docs/INTRA_DOMINIO_VEREDICTOS.jsonl), corte 14 ago 2026 ===
+filas: 3388
+   A   583  (17.2 por ciento)
+   B    89  (2.6 por ciento)
+   C     7  (0.2 por ciento)
+   D  2709  (80.0 por ciento)
+   otras clases: {}
+puestos 1..3388 | huecos 0 | duplicados 0
+
+=== TASA DE A POR DOMINIO, recomputada ===
+   core                 n=1445 | A  344 (23.8%) B  87 C  7 D 1007
+   quality              n= 844 | A  126 (14.9%) B   0 C  0 D  718
+   health_safety        n= 192 | A   45 (23.4%) B   0 C  0 D  147
+   entrega              n= 171 | A    2 ( 1.2%) B   0 C  0 D  169
+   environmental        n= 170 | A   29 (17.1%) B   0 C  0 D  141
+   compras              n= 155 | A    1 ( 0.6%) B   2 C  0 D  152
+   franquicias          n= 148 | A   18 (12.2%) B   0 C  0 D  130
+   exportacion          n= 130 | A   15 (11.5%) B   0 C  0 D  115
+   risk_management      n= 106 | A    0 ( 0.0%) B   0 C  0 D  106
+   seguridad_digital    n=  27 | A    3 (11.1%) B   0 C  0 D   24
+
+=== EL GRAFO, recomputado del archivo ===
+   nodos 3835 | vivos 3521 | deprecados 314 | ficheros en dataset/nodos 3835
+   enlaces (previos + siguientes) 16866
+   claves distintas del catalogo (15): ['condiciones_activacion', 'deprecado', 'dominio', 'entregable_esperado', 'etiqueta_arbol', 'fase_proyecto', 'fuente', 'ids_alias', 'merged_originals', 'node_id', 'nodos_previos', 'nodos_siguientes', 'pasos_accionables', 'resumen_teorico', 'titulo_concepto']
+
+=== LAS OPERACIONES, recontadas ===
+   operaciones 71 | ids unicos 71
+   por estado: {'LISTA': 71}
+   FASE 0 (00_CODIGO), por su orden nuevo:
+      1. OP-C-01    estado=LISTA    depende_de=[] bloquea_a=['OP-S-01', 'OP-S-09', 'OP-F-01']
+      2. OP-C-02    estado=LISTA    depende_de=[] bloquea_a=['OP-S-01', 'OP-S-09', 'OP-F-01']
+      3. OP-C-03    estado=LISTA    depende_de=[] bloquea_a=['OP-S-01', 'OP-S-09', 'OP-F-01']
+      4. OP-S-06    estado=LISTA    depende_de=[] bloquea_a=['OP-C-04']
+      5. OP-S-07    estado=LISTA    depende_de=[] bloquea_a=['OP-C-04']
+      6. OP-C-04    estado=LISTA    depende_de=['OP-S-06', 'OP-S-07'] bloquea_a=['OP-S-01', 'OP-S-09', 'OP-F-01']
+      7. OP-C-05    estado=LISTA    depende_de=['OP-S-12'] bloquea_a=[]
+   dependencias rotas: []

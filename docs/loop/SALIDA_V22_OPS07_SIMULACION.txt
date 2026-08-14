@@ -1,0 +1,89 @@
+grafo: 3835 nodos, 3521 vivos, 314 deprecados, 391 alias
+
+AUTO-ARISTAS TRAS RESOLVER, en nodos VIVOS: 33 enlaces sobre 27 nodos
+   directas (el nodo se cita por su propio id): 0
+   via alias                                  : 33
+
+LA CIFRA ESCRITA EN OP-S-07: 33 enlaces, 27 nodos, 0 directas, 33 via alias
+LA MEDIDA HOY               : 33 enlaces, 27 nodos, 0 directas, 33 via alias
+COINCIDE: True
+
+LA NOMINA ESCRITA CONTRA LA MEDIDA
+   escrita: 27 | medida: 27 | IDENTICAS: True
+
+EL DETALLE, enlace por enlace (lo que se retira y NADA MAS):
+   costo_de_mala_calidad_copq                 7 enlace(s)
+        nodos_previos      -> costo_de_mala_calidad_copq_3                   (alias propio: True)
+        nodos_previos      -> costo_de_mala_calidad_3                        (alias propio: True)
+        nodos_siguientes   -> categorias_copq                                (alias propio: True)
+        nodos_siguientes   -> costo_de_mala_calidad_copq_2                   (alias propio: True)
+        nodos_siguientes   -> costo_de_mala_calidad_copq_3                   (alias propio: True)
+        nodos_siguientes   -> categorias_costos_calidad                      (alias propio: True)
+        nodos_siguientes   -> costos_ocultos_calidad                         (alias propio: True)
+   analisis_de_cohortes                       1 enlace(s)
+        nodos_previos      -> cohort_analysis_retencion                      (alias propio: True)
+   analisis_flujo_de_valor                    1 enlace(s)
+        nodos_previos      -> value_stream_analysis_lean                     (alias propio: True)
+   buyin_customer_development                 1 enlace(s)
+        nodos_previos      -> buy_in_customer_development                    (alias propio: True)
+   cronograma_proyecto                        1 enlace(s)
+        nodos_previos      -> project_schedule                               (alias propio: True)
+   cuatro_etapas_del_pensamiento_creativo     1 enlace(s)
+        nodos_siguientes   -> wallas_cuatro_etapas_pensamiento_creativo      (alias propio: True)
+   cumplimiento_inversionistas_acreditados    1 enlace(s)
+        nodos_previos      -> inversionistas_acreditados                     (alias propio: True)
+   customer_needs_spreadsheet                 1 enlace(s)
+        nodos_previos      -> hoja_necesidades_cliente                       (alias propio: True)
+   customer_retention_tactics                 1 enlace(s)
+        nodos_previos      -> customer_retention_strategy                    (alias propio: True)
+   decision_pivotar_o_proceder                1 enlace(s)
+        nodos_previos      -> revalidar_modelo_negocio                       (alias propio: True)
+   definicion_sprint_terminado_fisico         1 enlace(s)
+        nodos_siguientes   -> definicion_sprint_terminado                    (alias propio: True)
+   diseno_experimentos_pass_fail              1 enlace(s)
+        nodos_siguientes   -> pass_fail_experiment_design                    (alias propio: True)
+   diseno_landing_page                        1 enlace(s)
+        nodos_siguientes   -> diseno_landing_page_conversion                 (alias propio: True)
+   diseno_para_el_ciclo_completo              1 enlace(s)
+        nodos_previos      -> diseno_ciclo_completo_equipo                   (alias propio: True)
+   eleccion_abogado_franquicias               1 enlace(s)
+        nodos_siguientes   -> contratacion_abogado_franquicia                (alias propio: True)
+   elevated_surfaces_fall_protection          1 enlace(s)
+        nodos_siguientes   -> superficies_elevadas_proteccion_caidas         (alias propio: True)
+   gestion_portafolio_formal                  1 enlace(s)
+        nodos_previos      -> portafolio_formal_management                   (alias propio: True)
+   lockout_tagout_procedures                  1 enlace(s)
+        nodos_previos      -> procedimientos_lockout_tagout                  (alias propio: True)
+   medir_comportamiento_cliente_mvp           1 enlace(s)
+        nodos_previos      -> medir_comportamiento_y_entusiasmo_del_cliente  (alias propio: True)
+   medir_huella_carbono_corporativa           1 enlace(s)
+        nodos_previos      -> evaluar_huella_carbono                         (alias propio: True)
+   metodo_strategic_buckets                   1 enlace(s)
+        nodos_previos      -> strategic_buckets                              (alias propio: True)
+   metricas_accionables                       1 enlace(s)
+        nodos_siguientes   -> vanity_metrics_vs_accionables                  (alias propio: True)
+   multi_sided_platforms                      1 enlace(s)
+        nodos_siguientes   -> multi_sided_platform_pattern                   (alias propio: True)
+   redundancia_en_diseno                      1 enlace(s)
+        nodos_previos      -> redundancia_diseno_confiabilidad               (alias propio: True)
+   reglas_gestion_riesgo_gambling             1 enlace(s)
+        nodos_previos      -> gestion_riesgo_incremental                     (alias propio: True)
+   reporte_estado_miembro_equipo              1 enlace(s)
+        nodos_previos      -> team_member_status_report                      (alias propio: True)
+   search_for_business_model                  1 enlace(s)
+        nodos_previos      -> definicion_startup                             (alias propio: True)
+
+EL EJEMPLAR ESCRITO: analisis_flujo_de_valor lleva value_stream_analysis_lean en sus nodos_previos
+   nodos_previos            : ['mitos_stage_gate', 'afinar_frente_difuso_innovacion', 'plan_mejora_procesos', 'value_stream_analysis_lean', 'overlapping_stages_concurrent_execution']
+   ids_alias                : ['value_stream_analysis_lean']
+   value_stream_analysis_lean resuelve a: analisis_flujo_de_valor
+
+EL PEOR ESCRITO: costo_de_mala_calidad_copq, SIETE enlaces, 2 en previos y 5 en siguientes
+   medido hoy: 7 en total, 2 en previos y 5 en siguientes
+   sus alias : ['costo_de_mala_calidad_3', 'costo_de_mala_calidad_copq_3', 'costo_de_mala_calidad_copq_4', 'costo_mala_calidad_copq', 'costo_pobre_calidad', 'costo_de_mala_calidad_copq_2', 'categorias_copq', 'costo_de_calidad_6', 'cuatro_costos_de_calidad', 'categorias_costos_calidad', 'costo_de_la_calidad_coq', 'concepto_costo_de_calidad', 'costos_ocultos_calidad', 'costo_de_la_no_calidad', 'costo_de_mala_calidad_2', 'categorias_costo_de_calidad', 'costo_de_mala_calidad', 'impacto_calidad_en_costos', 'costo_de_la_mala_calidad']
+
+CONTEO DE ENLACES DEL GRAFO ENTERO (previos + siguientes, todos los nodos): 16866
+   tras la operacion tiene que bajar EXACTAMENTE en 33, a 16833
+
+LO QUE NO SE TOCA, declarado: ids_alias (el alias es correcto y util; lo que
+sobra es la arista que lo usa para volver a casa) y cualquier otro campo.

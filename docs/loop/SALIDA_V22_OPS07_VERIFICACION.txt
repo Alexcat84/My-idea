@@ -1,0 +1,36 @@
+=== dataset/nodos (3835 nodos, 3521 vivos) ===
+  1. ningun nodo vivo se cita a si mismo DIRECTAMENTE : True (0)
+  2. ni TRAS RESOLVER ALIAS                           : False (33)
+  3. enlaces del grafo: 16866 (antes 16866, baja de 0; escrito: 33)
+  4. conteo correcto EXACTO (ni uno mas, ni uno menos): False
+     RESTAN: [('analisis_de_cohortes', 'nodos_previos', 'cohort_analysis_retencion'), ('analisis_flujo_de_valor', 'nodos_previos', 'value_stream_analysis_lean'), ('buyin_customer_development', 'nodos_previos', 'buy_in_customer_development'), ('costo_de_mala_calidad_copq', 'nodos_previos', 'costo_de_mala_calidad_3'), ('costo_de_mala_calidad_copq', 'nodos_previos', 'costo_de_mala_calidad_copq_3')]
+
+=== dataset/metadata/master_graph.json (3835 nodos, 3521 vivos) ===
+  1. ningun nodo vivo se cita a si mismo DIRECTAMENTE : True (0)
+  2. ni TRAS RESOLVER ALIAS                           : False (33)
+  3. enlaces del grafo: 16866 (antes 16866, baja de 0; escrito: 33)
+  4. conteo correcto EXACTO (ni uno mas, ni uno menos): False
+     RESTAN: [('analisis_de_cohortes', 'nodos_previos', 'cohort_analysis_retencion'), ('analisis_flujo_de_valor', 'nodos_previos', 'value_stream_analysis_lean'), ('buyin_customer_development', 'nodos_previos', 'buy_in_customer_development'), ('costo_de_mala_calidad_copq', 'nodos_previos', 'costo_de_mala_calidad_3'), ('costo_de_mala_calidad_copq', 'nodos_previos', 'costo_de_mala_calidad_copq_3')]
+
+=== web/lib/assets/master_graph.json (3835 nodos, 3521 vivos) ===
+  1. ningun nodo vivo se cita a si mismo DIRECTAMENTE : True (0)
+  2. ni TRAS RESOLVER ALIAS                           : False (33)
+  3. enlaces del grafo: 16866 (antes 16866, baja de 0; escrito: 33)
+  4. conteo correcto EXACTO (ni uno mas, ni uno menos): False
+     RESTAN: [('analisis_de_cohortes', 'nodos_previos', 'cohort_analysis_retencion'), ('analisis_flujo_de_valor', 'nodos_previos', 'value_stream_analysis_lean'), ('buyin_customer_development', 'nodos_previos', 'buy_in_customer_development'), ('costo_de_mala_calidad_copq', 'nodos_previos', 'costo_de_mala_calidad_3'), ('costo_de_mala_calidad_copq', 'nodos_previos', 'costo_de_mala_calidad_copq_3')]
+
+LA VERIFICACION ENTERA PASA EN LAS TRES SEDES: False
+
+=== LO QUE NO SE TOCO, comprobado ===
+   los 27 siguen siendo nodo VIVO: True
+   los 27 conservan sus ids_alias: True
+   EJEMPLAR: analisis_flujo_de_valor
+      nodos_previos: ['mitos_stage_gate', 'afinar_frente_difuso_innovacion', 'plan_mejora_procesos', 'overlapping_stages_concurrent_execution', 'value_stream_analysis_lean']
+      ids_alias    : ['value_stream_analysis_lean']   <-- INTACTO
+   EL PEOR: costo_de_mala_calidad_copq
+      previos   : 27 | siguientes: 40
+      ids_alias : 19 entradas   <-- INTACTO
+
+=== BANCO 9.14: todo conteo de grado, vecinos o aislados excluye el propio nodo ===
+   la regla no se mueve: su MOTIVO queda CONFIRMADO, no corregido, porque las
+   27 existian y estan medidas. Lo que cambia es que el grafo ya no las tiene.
