@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { seleccionarAfines } from "../compass";
-import { cargarEntrySeeds, esOfrecible, type Grafo } from "./graph";
+import { cargarEntrySeeds, conceptosDeRuta, esOfrecible, faseDeNodo, type Grafo } from "./graph";
 import { aMaterial, prepararPlan } from "./planRedactor";
 
 /**
@@ -204,5 +204,59 @@ describe("OP-C-01 - el indice semantico no ofrece lo que ya no es nodo", () => {
       minScore: 0.0,
     });
     expect(r.map((c) => c.id)).toEqual(["borrado"]);
+  });
+});
+
+/**
+ * OP-C-02: LOS DOS MAS CAROS DEL INVENTARIO, y no porque rompan: PORQUE CALLAN.
+ * Ninguno lanza un error, ninguno aparece en una prueba verde, y los dos degradan
+ * lo que el usuario ve: uno le quita conceptos a su plan y el otro le retrasa la
+ * fase de su proyecto. Son exactamente el modo de fallo que el canon de fallar
+ * ruidoso prohibe.
+ */
+describe("OP-C-02 - el plan de la sesion no pierde conceptos ni retrasa la fase", () => {
+  it("267: la ruta con ids de otra era entrega UN concepto POR ID, no menos", () => {
+    // El `.filter((nid) => nid in graph)` que vivia aqui dejaba caer de la lista
+    // el id que ya no es nodo, y el estado vivo se comprimia con menos conceptos
+    // de los que la persona recorrio. Sin aviso y sin excepcion.
+    const ruta = ["absorbido", "vecino", "borrado"];
+    const conceptos = conceptosDeRuta(ruta, GRAFO);
+    expect(conceptos, "el plan salio mas corto que la ruta").toHaveLength(ruta.length);
+    for (const nid of ruta) {
+      expect(conceptos, `${nid} salio como id crudo`).not.toContain(nid);
+    }
+  });
+
+  it("267: el concepto que se cita es el VIGENTE, no el que la fusion declaro peor", () => {
+    const conceptos = conceptosDeRuta(["absorbido"], GRAFO);
+    expect(conceptos).toEqual(["El concepto que hoy representa esa historia"]);
+  });
+
+  it("405: el ultimo nodo de otra era da SU fase, no ideacion", () => {
+    // El `?? "ideacion"` no era un defecto razonable: era una degradacion
+    // silenciosa. A la persona se le retrasaba la fase de su proyecto entero por
+    // una referencia historica legitima.
+    expect(faseDeNodo("absorbido", GRAFO)).toBe("validacion");
+    expect(faseDeNodo("borrado", GRAFO)).toBe("validacion");
+  });
+
+  it("405: un id que JAMAS existio si cae al defecto declarado", () => {
+    // El defecto sigue existiendo y sigue siendo el mismo: lo que cambia es que
+    // deja de tragarse las referencias historicas legitimas.
+    expect(faseDeNodo("jamas_fue_un_nodo", GRAFO)).toBe("ideacion");
+  });
+
+  it("el remache: la ruta del plan no lee el grafo a pelo en ninguno de los dos sitios", () => {
+    const src = leer("app/api/session/[id]/plan/route.ts");
+    expect(src).toContain("conceptosDeRuta(");
+    expect(src).toContain("faseDeNodo(");
+    expect(src, "volvio el filtro que dejaba caer conceptos").not.toContain("nid in graph");
+    expect(src, "volvio la degradacion silenciosa de la fase").not.toContain('?? "ideacion"');
+  });
+
+  it("el remache: los dos ayudantes resuelven antes de leer", () => {
+    const src = leer("lib/engine/graph.ts");
+    expect(src).toMatch(/export function conceptosDeRuta[\s\S]{0,200}tituloDeNodo/);
+    expect(src).toMatch(/export function faseDeNodo[\s\S]{0,200}resolverId/);
   });
 });

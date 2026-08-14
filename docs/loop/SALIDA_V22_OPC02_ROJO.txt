@@ -1,4 +1,78 @@
-/**
+
+ RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
+
+ ❯ lib/engine/accesosResueltos.test.ts (18 tests | 4 failed) 13ms
+     × 267: la ruta con ids de otra era entrega UN concepto POR ID, no menos 4ms
+     × 267: el concepto que se cita es el VIGENTE, no el que la fusion declaro peor 1ms
+     × 405: el ultimo nodo de otra era da SU fase, no ideacion 1ms
+     × el remache: los dos ayudantes resuelven antes de leer 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-02 - el plan de la sesion no pierde conceptos ni retrasa la fase > 267: la ruta con ids de otra era entrega UN concepto POR ID, no menos
+AssertionError: el plan salio mas corto que la ruta: expected [ …(2) ] to have a length of 3 but got 2
+
+- Expected
++ Received
+
+- 3
++ 2
+
+ ❯ lib/engine/accesosResueltos.test.ts:224:62
+    222|     const ruta = ["absorbido", "vecino", "borrado"];
+    223|     const conceptos = conceptosDeRuta(ruta, GRAFO);
+    224|     expect(conceptos, "el plan salio mas corto que la ruta").toHaveLen…
+       |                                                              ^
+    225|     for (const nid of ruta) {
+    226|       expect(conceptos, `${nid} salio como id crudo`).not.toContain(ni…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-02 - el plan de la sesion no pierde conceptos ni retrasa la fase > 267: el concepto que se cita es el VIGENTE, no el que la fusion declaro peor
+AssertionError: expected [ Array(1) ] to deeply equal [ Array(1) ]
+
+- Expected
++ Received
+
+  [
+-   "El concepto que hoy representa esa historia",
++   "El concepto viejo que se fundio dentro",
+  ]
+
+ ❯ lib/engine/accesosResueltos.test.ts:232:23
+    230|   it("267: el concepto que se cita es el VIGENTE, no el que la fusion …
+    231|     const conceptos = conceptosDeRuta(["absorbido"], GRAFO);
+    232|     expect(conceptos).toEqual(["El concepto que hoy representa esa his…
+       |                       ^
+    233|   });
+    234|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-02 - el plan de la sesion no pierde conceptos ni retrasa la fase > 405: el ultimo nodo de otra era da SU fase, no ideacion
+AssertionError: expected 'ideacion' to be 'validacion' // Object.is equality
+
+Expected: "validacion"
+Received: "ideacion"
+
+ ❯ lib/engine/accesosResueltos.test.ts:239:44
+    237|     // silenciosa. A la persona se le retrasaba la fase de su proyecto…
+    238|     // una referencia historica legitima.
+    239|     expect(faseDeNodo("absorbido", GRAFO)).toBe("validacion");
+       |                                            ^
+    240|     expect(faseDeNodo("borrado", GRAFO)).toBe("validacion");
+    241|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-02 - el plan de la sesion no pierde conceptos ni retrasa la fase > el remache: los dos ayudantes resuelven antes de leer
+AssertionError: expected '/**\r\n * graph.ts - Fase 3.0: port d…' to match /export function conceptosDeRuta[\s\S]…/
+
+- Expected:
+/export function conceptosDeRuta[\s\S]{0,200}tituloDeNodo/
+
++ Received:
+"/**
  * graph.ts - Fase 3.0: port de las funciones de acceso al grafo de
  * prototipo_motor.py (cargar_grafo, cargar_entry_seeds, sucesores_nivel,
  * resumen_nodo, obtener_pregunta, _dominio_permitido). Los assets ya
@@ -6,13 +80,13 @@
  * esto solo expone las mismas funciones de acceso que el CLI, sin
  * recompilar nada.
  */
-import masterGraphJson from "../assets/master_graph.json";
-import preguntasCacheJson from "../assets/preguntas_cache.json";
-import entrySeedsJson from "../assets/entry_seeds.json";
+import masterGraphJson from \"../assets/master_graph.json\";
+import preguntasCacheJson from \"../assets/preguntas_cache.json\";
+import entrySeedsJson from \"../assets/entry_seeds.json\";
 
 export const MAX_OPCIONES = 6;
 export const MAX_SUCESORES_NIVEL2 = 4;
-export const DOMINIOS_DESBLOQUEADOS_DEFECTO = ["core"];
+export const DOMINIOS_DESBLOQUEADOS_DEFECTO = [\"core\"];
 
 export interface NodoGrafo {
   /** Hygiene v1.3.1: etiqueta corta del arbol (4-5 palabras, segunda persona). */
@@ -73,7 +147,7 @@ export function cargarEntrySeeds(graph?: Grafo): string[] {
 
 // ── EL RESOLUTOR DE LA HISTORIA ──────────────────────────────────────────────
 //
-// LA PROMESA: "la historia resuelve". Cada fusión escribe `ids_alias` en el
+// LA PROMESA: \"la historia resuelve\". Cada fusión escribe `ids_alias` en el
 // superviviente, y la deprecación conserva el nodo absorbido entero (título,
 // resumen, aristas) justamente para que un recorrido viejo siga contando algo.
 //
@@ -163,8 +237,8 @@ export function resolverId(nid: string, graph: GrafoResoluble): string | null {
 /** Fase 3.9: lo que se muestra en las SUPERFICIES DE NAVEGACIÓN (riel del
  * árbol, cintillo de la tarjeta) es la etiqueta_arbol -- 4-5 palabras en
  * segunda persona, generada para enamorar. El titulo_concepto (el nombre del
- * libro) solo respalda en el DETALLE del nodo. "La etiqueta enamora, el título
- * respalda".
+ * libro) solo respalda en el DETALLE del nodo. \"La etiqueta enamora, el título
+ * respalda\".
  *
  * Pasa por el resolutor: una referencia histórica muestra el título de quien la
  * representa hoy. El id crudo ya no lo alcanza ninguna referencia real -- solo
@@ -182,30 +256,15 @@ export function tituloDeNodo(nid: string, graph: Grafo): string {
   return graph[real]?.titulo_concepto ?? real;
 }
 
-/**
- * Los CONCEPTOS de una lista de ids de cualquier era (la ruta conversada mas la
- * cosecha), para comprimir el estado vivo de la sesion.
- *
- * OP-C-02: RESUELVE, no filtra. Aqui vivia un `.filter((nid) => nid in graph)`
- * que dejaba caer de la lista el id de otra era, y el estado vivo se comprimia
- * con MENOS conceptos de los que la persona recorrio. No lanzaba, no aparecia en
- * ninguna prueba, y le quitaba material a su plan: callaba.
- */
+/** Los CONCEPTOS de una lista de ids de cualquier era (la ruta conversada mas la
+ *  cosecha), para comprimir el estado vivo de la sesion. */
 export function conceptosDeRuta(nids: string[], graph: Grafo): string[] {
-  return nids.map((nid) => tituloDeNodo(nid, graph));
+  return nids.filter((nid) => nid in graph).map((nid) => graph[nid].titulo_concepto);
 }
 
-/**
- * La FASE DE PROYECTO de un nodo de cualquier era, con su defecto declarado.
- *
- * OP-C-02: RESUELVE antes de leer. El `?? "ideacion"` de la ruta del plan no era
- * un defecto razonable ante una referencia historica: era una degradacion
- * silenciosa que le RETRASABA la fase del proyecto entero a la persona. El
- * defecto sigue existiendo para el id que jamas fue nodo, que es su unico caso.
- */
-export function faseDeNodo(nid: string, graph: Grafo, porDefecto = "ideacion"): string {
-  const real = resolverId(nid, graph) ?? nid;
-  return graph[real]?.fase_proyecto ?? porDefecto;
+/** La FASE DE PROYECTO de un nodo de cualquier era, con su defecto declarado. */
+export function faseDeNodo(nid: string, graph: Grafo, porDefecto = \"ideacion\"): string {
+  return graph[nid]?.fase_proyecto ?? porDefecto;
 }
 
 /**
@@ -239,7 +298,7 @@ export function esOfrecible(
   const n = graph[nid];
   if (!n) return false;
   if (n.deprecado) return false;
-  return (dominiosDesbloqueados ?? DOMINIOS_DESBLOQUEADOS_DEFECTO).includes(n.dominio ?? "core");
+  return (dominiosDesbloqueados ?? DOMINIOS_DESBLOQUEADOS_DEFECTO).includes(n.dominio ?? \"core\");
 }
 
 export function sucesoresNivel(
@@ -261,9 +320,9 @@ export function obtenerPregunta(nodeId: string, node: NodoGrafo, cache: Pregunta
   const entry = cache[nodeId];
   if (entry?.pregunta) return entry.pregunta;
   return (
-    `Pensando en "${node.titulo_concepto}", cuentame en tus palabras ` +
-    "donde estas parado ahora mismo con tu idea y que es lo que mas " +
-    "te preocupa o te entusiasma."
+    `Pensando en \"${node.titulo_concepto}\", cuentame en tus palabras ` +
+    \"donde estas parado ahora mismo con tu idea y que es lo que mas \" +
+    \"te preocupa o te entusiasma.\"
   );
 }
 
@@ -287,3 +346,22 @@ export function resumenNodo(nid: string, graph: Grafo, preguntasCache?: Pregunta
   }
   return out;
 }
+"
+
+ ❯ lib/engine/accesosResueltos.test.ts:259:17
+    257|   it("el remache: los dos ayudantes resuelven antes de leer", () => {
+    258|     const src = leer("lib/engine/graph.ts");
+    259|     expect(src).toMatch(/export function conceptosDeRuta[\s\S]{0,200}t…
+       |                 ^
+    260|     expect(src).toMatch(/export function faseDeNodo[\s\S]{0,200}resolv…
+    261|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 14 passed (18)
+   Start at  13:41:19
+   Duration  12.02s (transform 4.76s, setup 0ms, import 11.81s, tests 13ms, environment 0ms)
+
+EXITCODE=1

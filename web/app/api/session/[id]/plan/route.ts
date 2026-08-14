@@ -50,7 +50,7 @@ import { enlazarPlanProteccion } from "@/lib/engine/enlazador";
 import { estimarLoteMayoria } from "@/lib/engine/estimacion";
 import { armarSnapshot, type FilaChecklistSnapshot } from "@/lib/engine/snapshotProyecto";
 import { esMundoProteccion } from "@/lib/espacios";
-import { cargarGrafo } from "@/lib/engine/graph";
+import { cargarGrafo, conceptosDeRuta, faseDeNodo } from "@/lib/engine/graph";
 import { evaluarCalidadSesion } from "@/lib/engine/juezSesion";
 import {
   comprimirEstadoVivo,
@@ -262,9 +262,7 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           numerosParaPlan
         );
 
-        const conceptosTitulos = [...recorrido.ruta, ...resultado.cosechaIds]
-          .filter((nid) => nid in graph)
-          .map((nid) => graph[nid].titulo_concepto);
+        const conceptosTitulos = conceptosDeRuta([...recorrido.ruta, ...resultado.cosechaIds], graph);
         const { estadoVivo, acumulado: acumuladoFinal } = await comprimirEstadoVivo(
           client,
           recorrido.estadoVivoPrevio,
@@ -402,7 +400,7 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         });
 
         const proyecto = await obtenerProyecto(supabase, projectId);
-        const faseFinal = graph[recorrido.ruta[recorrido.ruta.length - 1]]?.fase_proyecto ?? "ideacion";
+        const faseFinal = faseDeNodo(recorrido.ruta[recorrido.ruta.length - 1], graph);
         const camposProyecto: Record<string, unknown> = { estado_vivo: estadoVivo, fase_actual: faseFinal };
         const titulo = extraerTitulo(resultado.markdown);
         if (titulo && !proyecto?.titulo) camposProyecto.titulo = titulo;
