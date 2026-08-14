@@ -97,7 +97,16 @@ export function cargarEntrySeeds(graph?: Grafo): string[] {
 let _alias: Record<string, string> | null = null;
 
 /** alias -> el nodo que lo absorbió. Se construye una vez por proceso. */
-function mapaDeAlias(graph: Grafo): Record<string, string> {
+/**
+ * Lo MINIMO que el resolutor necesita mirar, por la misma razon que `esOfrecible`
+ * declara `NodoOfrecible`: asi lo usan igual el motor (que tiene el grafo entero)
+ * y el indice semantico (que solo carga unos campos), sin que ninguno tenga
+ * excusa para escribirse su propia resolucion. `Grafo` lo satisface entero.
+ */
+export type NodoResoluble = { deprecado?: boolean; ids_alias?: string[] };
+export type GrafoResoluble = Record<string, NodoResoluble>;
+
+function mapaDeAlias(graph: GrafoResoluble): Record<string, string> {
   // El cache es por PROCESO y por el grafo de produccion, que es el unico que
   // el motor carga. Un grafo distinto (un test con fixture sintetico) no puede
   // leer el mapa del real: se le construye el suyo y no se cachea.
@@ -128,7 +137,7 @@ function mapaDeAlias(graph: Grafo): Record<string, string> {
  * uno activo; si la cadena entera fue retirada de la selección, el eslabón más
  * RECIENTE que exista (tiene título, y es la versión más nueva de esa historia).
  */
-export function resolverId(nid: string, graph: Grafo): string | null {
+export function resolverId(nid: string, graph: GrafoResoluble): string | null {
   const n = graph[nid];
   if (n && !n.deprecado) return nid;
   const alias = mapaDeAlias(graph);

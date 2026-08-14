@@ -33,7 +33,7 @@
  * relativo importa, y ese orden se preservo.
  */
 import semanticIndexJson from "./assets/semantic_index.json";
-import { esOfrecible } from "./engine/graph";
+import { esOfrecible, resolverId } from "./engine/graph";
 
 export const MIN_SCORE_SALTO = 0.3;
 export const MAX_SALTOS_POSIBLES_OFRECIDOS = 8;
@@ -112,6 +112,10 @@ export interface CandidatoAfin {
 
 export interface NodoConDominio {
   dominio?: string;
+  /** OP-C-01: lo que el resolutor necesita para llevar un id de otra era al nodo
+   *  que hoy lo representa. Los mira `resolverId`, nunca este archivo. */
+  deprecado?: boolean;
+  ids_alias?: string[];
 }
 
 export interface BuscarAfinesOpts {
@@ -136,22 +140,52 @@ export async function buscarAfines(
   const query = await embedQuery(texto);
   if (!query) return [];
 
+  const crudos = index.ids.map((id, i) => ({ id, score: coseno(query, index.embeddings[i]) }));
+  return seleccionarAfines(crudos, excluidos, opts);
+}
+
+/**
+ * La DECISION de la brujula, separada de la llamada a la red: quien entra a la
+ * lista de saltos y con que id. Se exporta porque es lo unico de este archivo
+ * que se puede probar de verdad: `buscarAfines` entero necesita clave y red, y
+ * sin ellas devuelve [] -- una prueba contra la funcion completa pasaria en
+ * verde SIN PROBAR NADA.
+ */
+export function seleccionarAfines(
+  crudos: CandidatoAfin[],
+  excluidos: Set<string>,
+  opts: BuscarAfinesOpts = {}
+): CandidatoAfin[] {
   const k = opts.k ?? 5;
   const minScore = opts.minScore ?? 0.0;
   const dominios = opts.dominiosDesbloqueados ?? DOMINIOS_DESBLOQUEADOS_DEFECTO;
 
-  const puntuados = index.ids
-    .map((id, i) => ({ id, score: coseno(query, index.embeddings[i]) }))
+  // OP-C-01: RESOLVER ANTES DE PUNTUAR. El indice guarda ids y se genera con un
+  // corte del grafo; la pasada mueve ids DESPUES. Un id que ya no significa nada
+  // en ninguna era se descarta aqui, y uno de otra era entra por el nodo que hoy
+  // lo representa. Sin grafo no hay a que resolver: el caller viejo ve lo crudo,
+  // igual que `cargarEntrySeeds` sin grafo.
+  const grafo = opts.graph;
+  const vistos = new Set<string>();
+  const puntuados = crudos
+    .map(({ id, score }) => ({ id: grafo ? resolverId(id, grafo) : id, score }))
+    .filter((c): c is CandidatoAfin => c.id !== null)
     .sort((a, b) => b.score - a.score);
 
   const resultados: CandidatoAfin[] = [];
   for (const { id, score } of puntuados) {
     if (excluidos.has(id)) continue;
+    // Dos entradas del indice pueden resolver al MISMO nodo (el absorbido y su
+    // superviviente estan los dos indexados): sin esto se ofreceria dos veces.
+    if (vistos.has(id)) continue;
     // Por LA PUERTA ÚNICA, no por una copia del filtro. Aquí vivía un chequeo
     // de dominio escrito a mano que ignoraba la deprecación: el índice
-    // semántico habría seguido ofreciendo nodos fundidos.
-    if (opts.graph && opts.graph[id] && !esOfrecible(id, opts.graph, dominios)) continue;
+    // semántico habría seguido ofreciendo nodos fundidos. Y el `opts.graph[id] &&`
+    // que estaba aqui era el unico HUECO AL REVES del inventario: un id
+    // desconocido hacia falsa la condicion entera y PASABA en vez de caer.
+    if (grafo && !esOfrecible(id, grafo, dominios)) continue;
     if (score < minScore) break; // orden descendente: nada mas adelante supera el umbral
+    vistos.add(id);
     resultados.push({ id, score });
     if (resultados.length >= k) break;
   }

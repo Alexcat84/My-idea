@@ -1,4 +1,67 @@
-/**
+
+ RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
+
+ ❯ lib/engine/accesosResueltos.test.ts (12 tests | 8 failed) 17ms
+     × un id DEPRECADO con alias vivo aporta el material del SUPERVIVIENTE, no el suyo 5ms
+     × un id que YA NO ES NODO aporta material en vez de reventar 1ms
+     × la RUTA con un id historico produce un plan con TODOS sus conceptos 2ms
+     × el remache: aMaterial resuelve antes de leer el nodo 1ms
+     × el remache: los DOS organizadores piden las semillas CON el grafo 3ms
+     × un id del indice que ya no es nodo de ninguna era NO se ofrece 0ms
+     × un id del indice de otra era se ofrece RESUELTO, no crudo ni descartado 1ms
+     × lo excluido se excluye tambien cuando el indice lo nombra por su id viejo 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 8 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-01 - aMaterial: el material del plan se arma tras resolver > un id DEPRECADO con alias vivo aporta el material del SUPERVIVIENTE, no el suyo
+AssertionError: expected 'El concepto viejo que se fundio dentro' to be 'El concepto que hoy representa esa hi…' // Object.is equality
+
+Expected: "El concepto que hoy representa esa historia"
+Received: "El concepto viejo que se fundio dentro"
+
+ ❯ lib/engine/accesosResueltos.test.ts:67:24
+     65|     // declaro peor. No rompe nada, y por eso no lo caza ninguna prueb…
+     66|     const m = aMaterial("absorbido", GRAFO, {});
+     67|     expect(m.concepto).toBe("El concepto que hoy representa esa histor…
+       |                        ^
+     68|     expect(m.pasos).toEqual(["paso vigente uno", "paso vigente dos", "…
+     69|     expect(m.entregable).toBe("el entregable vigente");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/8]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-01 - aMaterial: el material del plan se arma tras resolver > un id que YA NO ES NODO aporta material en vez de reventar
+TypeError: Cannot read properties of undefined (reading 'titulo_concepto')
+ ❯ aMaterial lib/engine/planRedactor.ts:56:17
+     54|   return {
+     55|     id: nid,
+     56|     concepto: n.titulo_concepto,
+       |                 ^
+     57|     pasos: n.pasos_accionables ?? [],
+     58|     entregable: n.entregable_esperado ?? "",
+ ❯ lib/engine/accesosResueltos.test.ts:76:15
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/8]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-01 - aMaterial: el material del plan se arma tras resolver > la RUTA con un id historico produce un plan con TODOS sus conceptos
+AssertionError: expected [ …(2) ] to include 'El concepto que hoy representa esa hi…'
+ ❯ lib/engine/accesosResueltos.test.ts:86:23
+     84|     expect(payload.material_principal).toHaveLength(ruta.length);
+     85|     const conceptos = payload.material_principal.map((m) => m.concepto…
+     86|     expect(conceptos).toContain("El concepto que hoy representa esa hi…
+       |                       ^
+     87|     expect(conceptos, "el plan cita el texto que la fusion declaro peo…
+     88|       "El concepto viejo que se fundio dentro"
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/8]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-01 - aMaterial: el material del plan se arma tras resolver > el remache: aMaterial resuelve antes de leer el nodo
+AssertionError: volvio el acceso directo al grafo: expected '/**\r\n * planRedactor.ts - Fase 3.0:…' to match /export function aMaterial[\s\S]{0,300…/
+
+- Expected:
+/export function aMaterial[\s\S]{0,300}resolverId/
+
++ Received:
+"/**
  * planRedactor.ts - Fase 3.0: port de cosechar_vecindario, ensamblar_plan
  * (menos la llamada a Claude en si, que en la web es STREAMING y vive en
  * la ruta) y comprimir_estado_vivo, en prototipo_motor.py.
@@ -13,10 +76,10 @@
  * Mantenerlo puro hace que toda esta logica se pueda probar sin mockear
  * streaming.
  */
-import type Anthropic from "@anthropic-ai/sdk";
-import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
-import { parsearJson } from "../parseJson";
-import { SYSTEM_ESTADO_VIVO } from "../prompts";
+import type Anthropic from \"@anthropic-ai/sdk\";
+import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from \"../costmeter\";
+import { parsearJson } from \"../parseJson\";
+import { SYSTEM_ESTADO_VIVO } from \"../prompts\";
 import {
   coincideKeyword,
   evaluarRuta,
@@ -25,19 +88,19 @@ import {
   normalizarTexto,
   type EvaluacionCobertura,
   type Familia,
-} from "../readiness";
-import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, TEXTO_FAMILIA_FALTANTE } from "./constants";
-import { esOfrecible, resolverId, type Grafo } from "./graph";
-import type { PrioridadDeclarada } from "./interprete";
-import { tokensCosecha } from "./tokens";
+} from \"../readiness\";
+import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, TEXTO_FAMILIA_FALTANTE } from \"./constants\";
+import { esOfrecible, type Grafo } from \"./graph\";
+import type { PrioridadDeclarada } from \"./interprete\";
+import { tokensCosecha } from \"./tokens\";
 import {
   cerraduraAritmetica,
   detectarCifrasDeMercado,
   numerosDeMaterial,
   numerosDeclarados,
   verificarNumerosHuerfanos,
-} from "../verificadorHuerfanos";
-import { detectarFaltaDeAcentos } from "../detectorAcentos";
+} from \"../verificadorHuerfanos\";
+import { detectarFaltaDeAcentos } from \"../detectorAcentos\";
 
 export { SECCION_ECONOMICA_TITULO };
 
@@ -49,27 +112,14 @@ export interface MaterialNodo {
   es_viabilidad_economica: boolean;
 }
 
-/**
- * OP-C-01 de la pasada unica: RESUELVE AL ENTRAR, como ya hacen `etiquetaArbol`
- * y `tituloDeNodo`. El id viene de la RUTA GUARDADA de la sesion, o sea de otra
- * era: si la pasada lo fundio, `graph[nid]` entregaba el texto que la fusion
- * declaro PEOR, y si lo fundio la era en que fusionar borraba, `graph[nid]` era
- * undefined y el plan entero reventaba con TypeError.
- *
- * El `id` que sale sigue siendo el DE LA RUTA, no el resuelto: el contrato de
- * procedencia (`verificarProcedenciaEtapas`, `nodosPorEtapaValidados`) valida lo
- * que el redactor autodeclara contra `ruta + cosecha` crudas, y devolver el
- * resuelto marcaria como alucinacion una procedencia legitima.
- */
 export function aMaterial(nid: string, graph: Grafo, families: Record<string, Familia>): MaterialNodo {
-  const real = resolverId(nid, graph) ?? nid;
-  const n = graph[real];
+  const n = graph[nid];
   return {
     id: nid,
     concepto: n.titulo_concepto,
     pasos: n.pasos_accionables ?? [],
-    entregable: n.entregable_esperado ?? "",
-    es_viabilidad_economica: (families[real] ?? "general") === "viabilidad_economica",
+    entregable: n.entregable_esperado ?? \"\",
+    es_viabilidad_economica: (families[nid] ?? \"general\") === \"viabilidad_economica\",
   };
 }
 
@@ -82,7 +132,7 @@ export function cosecharVecindario(
   ruta: string[],
   graph: Grafo,
   families: Record<string, Familia>,
-  evaluacion: Pick<EvaluacionCobertura, "tiene_accion_clientes" | "tiene_viabilidad_economica">,
+  evaluacion: Pick<EvaluacionCobertura, \"tiene_accion_clientes\" | \"tiene_viabilidad_economica\">,
   perfilSesion: string | null,
   prioridadDeclarada: PrioridadDeclarada | null = null,
   tope = MAX_COSECHA,
@@ -111,8 +161,8 @@ export function cosecharVecindario(
   }
 
   const familiasFaltantes = new Set<string>();
-  if (!evaluacion.tiene_accion_clientes) familiasFaltantes.add("accion_clientes");
-  if (!evaluacion.tiene_viabilidad_economica) familiasFaltantes.add("viabilidad_economica");
+  if (!evaluacion.tiene_accion_clientes) familiasFaltantes.add(\"accion_clientes\");
+  if (!evaluacion.tiene_viabilidad_economica) familiasFaltantes.add(\"viabilidad_economica\");
 
   const perfilTokens = perfilSesion ? tokensCosecha(perfilSesion) : new Set<string>();
 
@@ -126,8 +176,8 @@ export function cosecharVecindario(
       const afinidadPrioridad = (nid: string): number => {
         const n = graph[nid];
         const textoNodo =
-          `${n.titulo_concepto ?? ""} ${(n.resumen_teorico ?? "").slice(0, 300)} ` +
-          `${(n.condiciones_activacion ?? []).join(" ")}`;
+          `${n.titulo_concepto ?? \"\"} ${(n.resumen_teorico ?? \"\").slice(0, 300)} ` +
+          `${(n.condiciones_activacion ?? []).join(\" \")}`;
         let c = 0;
         for (const t of tokensCosecha(textoNodo)) if (prioridadTokens.has(t)) c++;
         return c;
@@ -144,10 +194,10 @@ export function cosecharVecindario(
   const puntaje = (nid: string): number => {
     const n = graph[nid];
     let p = 0;
-    if (familiasFaltantes.has(families[nid] ?? "general")) p += 10;
+    if (familiasFaltantes.has(families[nid] ?? \"general\")) p += 10;
     if (n.fase_proyecto === faseMayoritaria) p += 3;
     if (perfilTokens.size > 0) {
-      const textoNodo = `${n.titulo_concepto ?? ""} ${(n.condiciones_activacion ?? []).join(" ")}`;
+      const textoNodo = `${n.titulo_concepto ?? \"\"} ${(n.condiciones_activacion ?? []).join(\" \")}`;
       let c = 0;
       for (const t of tokensCosecha(textoNodo)) if (perfilTokens.has(t)) c++;
       p += c;
@@ -222,7 +272,7 @@ export function prepararPlan(
   return { payload, cosechaIds, materialPrincipal, materialDeApoyo, tieneMaterialEconomico };
 }
 
-export const MARCADOR_AUTODECLARACION = "===JSON===";
+export const MARCADOR_AUTODECLARACION = \"===JSON===\";
 
 /** Port de _parsear_autodeclaracion: separa el markdown del bloque final
  * ===JSON=== (Fase 2.8). Si el delimitador falta, devuelve (raw completo,
@@ -233,10 +283,10 @@ export const MARCADOR_AUTODECLARACION = "===JSON===";
  * truncado colgando al final de su plan. En ambos casos
  * autodeclaracion=null, y finalizarPlan() cae al respaldo por encabezados
  * (ver familiasDesdeEncabezados). Contrato compacto desde Hotfix v2.2.1:
- * solo familias_tratadas -- se elimino "secciones" (nunca se leia, era
+ * solo familias_tratadas -- se elimino \"secciones\" (nunca se leia, era
  * puro peso extra en la cola que se cortaba primero al agotar max_tokens). */
 /** Fase 3.1: 'etapas' mapea el numero de Etapa (tal como aparece en el
- * markdown, "1", "2", ...) a los node_ids de material_principal/
+ * markdown, \"1\", \"2\", ...) a los node_ids de material_principal/
  * material_de_apoyo cuyo contenido real el redactor uso en esa etapa --
  * ver verificarProcedenciaEtapas. */
 export interface AutodeclaracionPlan {
@@ -292,7 +342,7 @@ export interface FiltroDeltaAutodeclaracion {
 }
 
 export function filtrarDeltaAntesDeAutodeclaracion(onDeltaSeguro: (texto: string) => void): FiltroDeltaAutodeclaracion {
-  let acumulado = "";
+  let acumulado = \"\";
   let enviado = 0;
   let marcadorEncontrado = false;
   return {
@@ -332,12 +382,12 @@ export interface CoberturaPlan {
 /** Port de _evaluacion_desde_autodeclaracion: construye el mismo shape
  * que evaluarRuta, pero a partir de lo que el REDACTOR declaro que el
  * plan realmente trata -- la UNICA fuente para la etiqueta del plan y la
- * seccion "no cubre", coherente por construccion. */
+ * seccion \"no cubre\", coherente por construccion. */
 export function evaluacionDesdeAutodeclaracion(autodeclaracion: AutodeclaracionPlan | null): CoberturaPlan {
   const tratadas = new Set(autodeclaracion?.familias_tratadas ?? []);
-  const tieneAccion = tratadas.has("accion_clientes");
-  const tieneViabilidad = tratadas.has("viabilidad_economica");
-  const faltantes = ["accion_clientes", "viabilidad_economica"]
+  const tieneAccion = tratadas.has(\"accion_clientes\");
+  const tieneViabilidad = tratadas.has(\"viabilidad_economica\");
+  const faltantes = [\"accion_clientes\", \"viabilidad_economica\"]
     .filter((f) => !tratadas.has(f))
     .map((f) => TEXTO_FAMILIA_FALTANTE[f]);
   return {
@@ -354,7 +404,7 @@ export function evaluacionDesdeAutodeclaracion(autodeclaracion: AutodeclaracionP
  * max_tokens en una sesion en vivo). A diferencia del respaldo anterior
  * (evaluarRuta sobre ruta+cosechaIds), esto NO mira los tags de families
  * del material de ENTRADA -- el redactor puede omitir parte de
- * materialDeApoyo si "no encaja con claridad en ninguna etapa" (regla 2),
+ * materialDeApoyo si \"no encaja con claridad en ninguna etapa\" (regla 2),
  * asi que un tag de entrada no garantiza que la familia realmente quedo
  * cubierta en la SALIDA. En vez de eso, escanea los encabezados REALES
  * del markdown ya generado con las mismas palabras clave de readiness.ts.
@@ -364,15 +414,15 @@ export function evaluacionDesdeAutodeclaracion(autodeclaracion: AutodeclaracionP
  */
 export function familiasDesdeEncabezados(cuerpo: string): CoberturaPlan {
   const encabezados = cuerpo
-    .split("\n")
-    .filter((linea) => linea.trim().startsWith("#"))
-    .join(" ");
+    .split(\"\\n\")
+    .filter((linea) => linea.trim().startsWith(\"#\"))
+    .join(\" \");
   const textoEncabezados = normalizarTexto(encabezados);
   const tieneAccion = coincideKeyword(textoEncabezados, KEYWORDS_ACCION_CLIENTES);
   const tieneViabilidad =
     cuerpo.includes(SECCION_ECONOMICA_TITULO) || coincideKeyword(textoEncabezados, KEYWORDS_VIABILIDAD_ECONOMICA);
-  const faltantes = (["accion_clientes", "viabilidad_economica"] as const)
-    .filter((f) => (f === "accion_clientes" ? !tieneAccion : !tieneViabilidad))
+  const faltantes = ([\"accion_clientes\", \"viabilidad_economica\"] as const)
+    .filter((f) => (f === \"accion_clientes\" ? !tieneAccion : !tieneViabilidad))
     .map((f) => TEXTO_FAMILIA_FALTANTE[f]);
   return {
     es_completa: tieneAccion && tieneViabilidad,
@@ -385,7 +435,7 @@ export function familiasDesdeEncabezados(cuerpo: string): CoberturaPlan {
 /** Post-validador MECANICO (Motor v2.2) de la incoherencia etiqueta/
  * contenido: si el material ya traia un concepto de viabilidad economica
  * Y el redactor efectivamente escribio la seccion fija de sostenibilidad,
- * 'viabilidad_economica' NUNCA puede aparecer en "no cubre" -- sin
+ * 'viabilidad_economica' NUNCA puede aparecer en \"no cubre\" -- sin
  * importar lo que el redactor autodeclaro. Ya no depende de que el
  * modelo lo declare bien: se verifica contra el propio markdown
  * generado, en codigo (3a reincidencia de este bug, ver AUD-06). */
@@ -397,7 +447,7 @@ export function corregirCoherenciaCobertura(
 ): CoberturaPlan {
   const seccionPresente = tieneMaterialEconomico && cuerpo.includes(SECCION_ECONOMICA_TITULO);
   if (seccionPresente && !evaluacionCobertura.tiene_viabilidad_economica) {
-    registrarEvento?.({ tipo: "coherencia_cobertura_corregida", familia: "viabilidad_economica" });
+    registrarEvento?.({ tipo: \"coherencia_cobertura_corregida\", familia: \"viabilidad_economica\" });
     return {
       ...evaluacionCobertura,
       tiene_viabilidad_economica: true,
@@ -426,32 +476,32 @@ export function verificarProcedenciaEtapas(
   registrarEvento?: (evento: Record<string, unknown>) => void
 ): void {
   const etapas = autodeclaracion?.etapas;
-  if (!etapas || typeof etapas !== "object" || Object.keys(etapas).length === 0) return;
+  if (!etapas || typeof etapas !== \"object\" || Object.keys(etapas).length === 0) return;
   const materialValido = new Set([...ruta, ...cosechaIds]);
   for (const [etapa, ids] of Object.entries(etapas)) {
     if (!Array.isArray(ids)) continue;
     const invalidos = ids.filter((nid) => !materialValido.has(nid));
     if (invalidos.length > 0) {
-      registrarEvento?.({ tipo: "procedencia_invalida", etapa, ids_invalidos: invalidos });
+      registrarEvento?.({ tipo: \"procedencia_invalida\", etapa, ids_invalidos: invalidos });
     }
   }
 }
 
 /** b1 del panel (migracion 037): el mapa etapa -> node_ids VALIDADO, listo para
- * persistir. Reusa exactamente la misma nocion de "material valido" que
+ * persistir. Reusa exactamente la misma nocion de \"material valido\" que
  * verificarProcedenciaEtapas: si un id no vino en la ruta ni en la cosecha es
  * una alucinacion de procedencia y NO se guarda. El sensor puede quedarse
  * corto; lo que no puede es guardar procedencia falsa.
  *
  * Devuelve null cuando no hubo autodeclaracion, para que el AUSENTE se
- * distinga del VACIO: null es "no autodeclaro" y {} seria "autodeclaro nada". */
+ * distinga del VACIO: null es \"no autodeclaro\" y {} seria \"autodeclaro nada\". */
 export function nodosPorEtapaValidados(
   autodeclaracion: AutodeclaracionPlan | null,
   ruta: string[],
   cosechaIds: string[]
 ): Record<string, string[]> | null {
   const etapas = autodeclaracion?.etapas;
-  if (!etapas || typeof etapas !== "object" || Object.keys(etapas).length === 0) return null;
+  if (!etapas || typeof etapas !== \"object\" || Object.keys(etapas).length === 0) return null;
   const materialValido = new Set([...ruta, ...cosechaIds]);
   const salida: Record<string, string[]> = {};
   for (const [etapa, ids] of Object.entries(etapas)) {
@@ -468,41 +518,41 @@ export function nodosPorEtapaValidados(
  * realmente habla de dinero. Port exacto de _extraer_seccion_economica. */
 export function extraerSeccionEconomica(cuerpo: string): string {
   const idx = cuerpo.indexOf(SECCION_ECONOMICA_TITULO);
-  if (idx === -1) return "";
-  const lineas = cuerpo.slice(idx).split("\n");
+  if (idx === -1) return \"\";
+  const lineas = cuerpo.slice(idx).split(\"\\n\");
   let fin = lineas.length;
   for (let i = 1; i < lineas.length; i++) {
-    if (lineas[i].trim().startsWith("#")) {
+    if (lineas[i].trim().startsWith(\"#\")) {
       fin = i;
       break;
     }
   }
-  return lineas.slice(0, fin).join("\n");
+  return lineas.slice(0, fin).join(\"\\n\");
 }
 
 /** Port de _ensamblar_offline: respaldo sin IA (fallo de red/presupuesto
  * en la llamada al redactor) -- concatena el material sin narrar. */
 export function ensamblarOffline(material: MaterialNodo[], perfilSesion: string | null, textoOriginal: string): string {
-  const out: string[] = ["# Tu plan de accion", ""];
+  const out: string[] = [\"# Tu plan de accion\", \"\"];
   if (textoOriginal || perfilSesion) {
-    out.push("## Contexto");
+    out.push(\"## Contexto\");
     if (textoOriginal) out.push(`Punto de partida: ${textoOriginal}`);
     if (perfilSesion) out.push(`Lo que sabemos de tu idea: ${perfilSesion}`);
-    out.push("");
+    out.push(\"\");
   }
   material.forEach((m, i) => {
     out.push(`## Etapa ${i + 1}: ${m.concepto}`);
     m.pasos.forEach((p, j) => out.push(`  ${i + 1}.${j + 1} ${p}`));
     if (m.entregable) out.push(`  Punto de control: ${m.entregable}`);
-    out.push("");
+    out.push(\"\");
   });
-  return out.join("\n");
+  return out.join(\"\\n\");
 }
 
 export function extraerTitulo(planMd: string): string | null {
-  for (const linea of planMd.split("\n")) {
+  for (const linea of planMd.split(\"\\n\")) {
     const t = linea.trim();
-    if (t.startsWith("# ")) return t.slice(2).trim();
+    if (t.startsWith(\"# \")) return t.slice(2).trim();
   }
   return null;
 }
@@ -523,7 +573,7 @@ export interface ResultadoEnsamblado {
  * llamada a Claude fallo y se debe usar el respaldo offline) y hace todo
  * lo demas: separar la autodeclaracion, decidir la evaluacion de
  * cobertura, el post-validador mecanico, y ensamblar el markdown final
- * con su etiqueta y la seccion "no cubre".
+ * con su etiqueta y la seccion \"no cubre\".
  */
 export function finalizarPlan(
   rawTextoModelo: string | null,
@@ -553,7 +603,7 @@ export function finalizarPlan(
     // Hotfix v2.2.1: ver familiasDesdeEncabezados -- jamas se degrada la
     // etiqueta solo porque el JSON de cola se corto.
     evaluacionCobertura = familiasDesdeEncabezados(cuerpo);
-    registrarEvento?.({ tipo: "autodeclaracion_fallida" });
+    registrarEvento?.({ tipo: \"autodeclaracion_fallida\" });
   }
   evaluacionCobertura = corregirCoherenciaCobertura(evaluacionCobertura, cuerpo, tieneMaterialEconomico, registrarEvento);
   verificarProcedenciaEtapas(autodeclaracion, ruta, cosechaIds, registrarEvento);
@@ -580,30 +630,30 @@ export function finalizarPlan(
   // imita). Un solo evento con la muestra de palabras sospechosas.
   const sinAcentos = detectarFaltaDeAcentos(cuerpo);
   if (sinAcentos.length > 0) {
-    registrarEvento?.({ tipo: "salida_sin_acentos", muestra: sinAcentos.slice(0, 12), total: sinAcentos.length });
+    registrarEvento?.({ tipo: \"salida_sin_acentos\", muestra: sinAcentos.slice(0, 12), total: sinAcentos.length });
   }
 
-  const etiqueta = evaluacionCobertura.es_completa ? "Plan completo" : "Plan inicial";
+  const etiqueta = evaluacionCobertura.es_completa ? \"Plan completo\" : \"Plan inicial\";
   const totalConceptos = ruta.length + cosechaIds.length;
-  const partes: string[] = [`_${etiqueta}_`, "", cuerpo];
+  const partes: string[] = [`_${etiqueta}_`, \"\", cuerpo];
   // CONFIDENCIAL: la cobertura de conceptos (recorrido + vecindario del
   // grafo) es maquinaria nuestra. JAMÁS va en el plan que lee el usuario:
   // ni una pista del sistema. Se registra como evento interno, que es
   // donde sirve (análisis de la beta).
   registrarEvento?.({
-    tipo: "cobertura_conceptos",
+    tipo: \"cobertura_conceptos\",
     total: totalConceptos,
     ruta: ruta.length,
     cosecha: cosechaIds.length,
   });
   if (!evaluacionCobertura.es_completa) {
-    partes.push("", "## Lo que este plan aun no cubre", "");
+    partes.push(\"\", \"## Lo que este plan aun no cubre\", \"\");
     for (const f of evaluacionCobertura.familias_faltantes) partes.push(`- ${f}`);
-    partes.push("", "Para profundizar, continua la conversacion en esta misma sesion.");
+    partes.push(\"\", \"Para profundizar, continua la conversacion en esta misma sesion.\");
   }
 
   return {
-    markdown: partes.join("\n"),
+    markdown: partes.join(\"\\n\"),
     cosechaIds,
     evaluacionCobertura,
     nodosPorEtapa: nodosPorEtapaValidados(autodeclaracion, ruta, cosechaIds),
@@ -628,11 +678,235 @@ export async function comprimirEstadoVivo(
     };
     const r = await llamarClaude(client, SYSTEM_ESTADO_VIVO, JSON.stringify(ctx), MODEL_HAIKU, acumulado, {
       maxTokens: 700,
-      componente: "estado_vivo",
+      componente: \"estado_vivo\",
     });
     return { estadoVivo: r.texto.trim(), acumulado: r.acumulado };
   } catch {
-    const estadoVivo = estadoAnterior ? `${estadoAnterior}\n${perfilSesionNueva}`.trim() : perfilSesionNueva;
+    const estadoVivo = estadoAnterior ? `${estadoAnterior}\\n${perfilSesionNueva}`.trim() : perfilSesionNueva;
     return { estadoVivo, acumulado };
   }
 }
+"
+
+ ❯ lib/engine/accesosResueltos.test.ts:103:54
+    101|   it("el remache: aMaterial resuelve antes de leer el nodo", () => {
+    102|     const src = leer("lib/engine/planRedactor.ts");
+    103|     expect(src, "volvio el acceso directo al grafo").toMatch(
+       |                                                      ^
+    104|       /export function aMaterial[\s\S]{0,300}resolverId/
+    105|     );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/8]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-01 - las semillas del organizador pasan por la puerta unica > el remache: los DOS organizadores piden las semillas CON el grafo
+AssertionError: app/api/organizer/route.ts pide las semillas sin el grafo: expected '/**\r\n * POST /api/organizer - Fase …' to contain 'cargarEntrySeeds(graph)'
+
+- Expected
++ Received
+
+- cargarEntrySeeds(graph)
++ /**
++  * POST /api/organizer - Fase 3.0: port de modo_gratis/organizador_gratuito
++  * en engine/prototipo_motor.py. Capa gratuita: UNA llamada Haiku que
++  * organiza sin instruir, sin entrevista. Persiste projects/sessions/plans
++  * igual que el CLI (el modo --gratis tambien persiste, no es efimero).
++  */
++ import { NextResponse } from "next/server";
++ import { createAnthropicClient } from "@/lib/anthropicClient";
++ import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
++ import {
++   costoAcumuladoUsd,
++   llamarClaude,
++   MODEL_HAIKU,
++   PRESUPUESTO_SESION_USD_DEFAULT,
++   usoVacio,
++   type UsoAcumulado,
++ } from "@/lib/costmeter";
++ import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, guardarPlan } from "@/lib/db";
++ import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
++ import { construirMarkdown, limpiarOrganizador, MAX_TOKENS_ORGANIZADOR, type OrganizadorData } from "@/lib/engine/organizador";
++ import { parsearJson } from "@/lib/parseJson";
++ import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
++ import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
++ import { createClient } from "@/lib/supabase/server";
++ 
++ export async function POST(request: Request) {
++   let body: unknown;
++   try {
++     body = await request.json();
++   } catch {
++     return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
++   }
++   const texto = (body as { texto?: unknown } | null)?.texto;
++   if (typeof texto !== "string" || texto.trim().length === 0) {
++     return NextResponse.json({ error: "falta 'texto'" }, { status: 400 });
++   }
++   if (texto.length > MAX_LARGO_TEXTO_USUARIO) {
++     return NextResponse.json(
++       { error: `'texto' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
++       { status: 400 }
++     );
++   }
++ 
++   const supabase = await createClient();
++   const {
++     data: { user },
++   } = await supabase.auth.getUser();
++   if (!user) {
++     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
++   }
++ 
++   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
++   const fusible = await verificarFusibleGlobal(user.email);
++   if (!fusible.permitido) {
++     return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
++   }
++   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
++   if (!limite.permitido) {
++     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
++   }
++ 
++   const graph = cargarGrafo();
++   const entrySeeds = cargarEntrySeeds();
++   const puertas = entrySeeds.map((s) => ({
++     id: s,
++     fase: graph[s].fase_proyecto,
++     titulo: graph[s].titulo_concepto,
++     resumen: graph[s].resumen_teorico.slice(0, 150),
++   }));
++ 
++   const projectId = await crearProyecto(supabase, user.id, texto);
++   const sessionId = await crearSesion(supabase, user.id, projectId, "gratuito", texto);
++ 
++   const client = createAnthropicClient();
++   let acumulado: UsoAcumulado = usoVacio();
++   let data: OrganizadorData;
++   try {
++     const resultado = await llamarClaude(
++       client,
++       SYSTEM_ORGANIZADOR,
++       JSON.stringify({ texto_usuario: texto, puertas }),
++       MODEL_HAIKU,
++       acumulado,
++       { maxTokens: MAX_TOKENS_ORGANIZADOR, componente: "organizador" }
++     );
++     acumulado = resultado.acumulado;
++     data = parsearJson<OrganizadorData>(resultado.texto);
++   } catch (e) {
++     console.error("[organizer:json] falló", { projectId, error: e });
++     await cerrarSesion(
++       supabase,
++       projectId,
++       sessionId,
++       [],
++       costoAcumuladoUsd(acumulado),
++       acumulado.presupuesto_excedido,
++       acumulado.uso_por_componente,
++       PRESUPUESTO_SESION_USD_DEFAULT
++     );
++     return NextResponse.json(
++       { error: `fallo el organizador con IA: ${e instanceof Error ? e.message : String(e)}`, project_id: projectId },
++       { status: 502 }
++     );
++   }
++ 
++   const limpio = limpiarOrganizador(data);
++   const markdown = construirMarkdown(limpio);
++   await guardarPlan(supabase, user.id, sessionId, "organizador", markdown, 0, []);
++   await cerrarSesion(
++     supabase,
++     projectId,
++     sessionId,
++     [],
++     costoAcumuladoUsd(acumulado),
++     acumulado.presupuesto_excedido,
++     acumulado.uso_por_componente,
++     PRESUPUESTO_SESION_USD_DEFAULT
++   );
++   if (typeof data.etapa_detectada === "string" && (FASES as readonly string[]).includes(data.etapa_detectada)) {
++     await actualizarProyecto(supabase, projectId, { fase_actual: data.etapa_detectada });
++   }
++ 
++   return NextResponse.json({
++     project_id: projectId,
++     markdown,
++     data,
++     costo_usd: costoAcumuladoUsd(acumulado),
++   });
++ }
++
+
+ ❯ lib/engine/accesosResueltos.test.ts:139:61
+    137|     for (const ruta of ["app/api/organizer/route.ts", "app/api/organiz…
+    138|       const src = leer(ruta);
+    139|       expect(src, `${ruta} pide las semillas sin el grafo`).toContain(…
+       |                                                             ^
+    140|       expect(src, `${ruta} conserva la llamada cruda`).not.toContain("…
+    141|     }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/8]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-01 - el indice semantico no ofrece lo que ya no es nodo > un id del indice que ya no es nodo de ninguna era NO se ofrece
+AssertionError: el indice ofrecio un id que no existe: expected [ Array(2) ] to not include 'jamas_fue_un_nodo'
+ ❯ lib/engine/accesosResueltos.test.ts:165:77
+    163|       { graph: comoLoVeElIndice, k: 8, minScore: 0.0 }
+    164|     );
+    165|     expect(r.map((c) => c.id), "el indice ofrecio un id que no existe"…
+       |                                                                             ^
+    166|       "jamas_fue_un_nodo"
+    167|     );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/8]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-01 - el indice semantico no ofrece lo que ya no es nodo > un id del indice de otra era se ofrece RESUELTO, no crudo ni descartado
+AssertionError: expected [ 'borrado' ] to deeply equal [ 'superviviente' ]
+
+- Expected
++ Received
+
+  [
+-   "superviviente",
++   "borrado",
+  ]
+
+ ❯ lib/engine/accesosResueltos.test.ts:177:32
+    175|       minScore: 0.0,
+    176|     });
+    177|     expect(r.map((c) => c.id)).toEqual(["superviviente"]);
+       |                                ^
+    178|   });
+    179|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/8]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-01 - el indice semantico no ofrece lo que ya no es nodo > lo excluido se excluye tambien cuando el indice lo nombra por su id viejo
+AssertionError: expected [ { id: 'borrado', score: 0.9 } ] to deeply equal []
+
+- Expected
++ Received
+
+- []
++ [
++   {
++     "id": "borrado",
++     "score": 0.9,
++   },
++ ]
+
+ ❯ lib/engine/accesosResueltos.test.ts:198:15
+    196|       minScore: 0.0,
+    197|     });
+    198|     expect(r).toEqual([]);
+       |               ^
+    199|   });
+    200|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/8]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  8 failed | 4 passed (12)
+   Start at  13:33:24
+   Duration  11.88s (transform 4.61s, setup 0ms, import 11.68s, tests 17ms, environment 0ms)
+
+EXITCODE=1

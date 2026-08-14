@@ -60,7 +60,11 @@ export async function POST(request: Request) {
   }
 
   const graph = cargarGrafo();
-  const entrySeeds = cargarEntrySeeds();
+  // OP-C-01: CON el grafo, o sea por LA PUERTA UNICA. `cargarEntrySeeds` ya
+  // filtra por `esOfrecible` cuando lo recibe; sin el devuelve la lista cruda del
+  // asset, y una semilla que la pasada fundio abriria el recorrido entero por un
+  // nodo que ya no se ofrece.
+  const entrySeeds = cargarEntrySeeds(graph);
   const puertas = entrySeeds.map((s) => ({
     id: s,
     fase: graph[s].fase_proyecto,
