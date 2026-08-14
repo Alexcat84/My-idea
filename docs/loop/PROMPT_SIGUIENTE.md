@@ -1,116 +1,84 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
-SESION EJECUTORA. FASE II, RECOMPUTO. MODO: cero reparaciones de nodos, cero
-operaciones ejecutadas, la FASE III no se abre y pasada-unica no se crea.
-El cribado esta CERRADO en 3.388 de 3.388: docs/INTRA_DOMINIO_VEREDICTOS.jsonl
-NO se toca; las lecturas nuevas de esta vuelta son DIRIGIDAS y se registran en
-su propio documento, como las LD que ya existen.
+SESION EJECUTORA. FASE II, RECOMPUTO, VUELTA DE CIERRE DE REGISTROS. MODO:
+cero reparaciones de nodos, cero operaciones ejecutadas, la FASE III no se
+abre y pasada-unica no se crea. El cribado esta CERRADO en 3.388 de 3.388:
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl NO se toca y esta vuelta no lee ningun
+par nuevo, ni de cola ni dirigido.
 
-AVISO DE CREDITO, delante de todo: la vuelta 18 dejo DOS caidas de cifra
-publicada (tanda UNA). Si esta tanda deja una caida de clase o de cifra
-publicada, el bucle PARA por credito roto. Toda cifra que publiques se lee
-de la salida de un instrumento corrido EN ESTA VUELTA, y toda cifra que
-contradiga una publicada se declara al lado de la vieja, nunca se resuelve
-copiando. Los nodos VIVOS de un dominio se cuentan SIN los deprecado.
-
-====================================================================
-TAREA 1: registros de las adjudicaciones de la vuelta 18
-(docs/loop/ACTA_AUDITOR.md, VUELTA 18, secciones 3 a 6), cinco
-correcciones, todas aditivas y con el texto viejo conservado
-====================================================================
-1. CORRECCION DECLARADA en la nota de la figura LA BIFURCACION de
-   docs/plan/INVENTARIO.jsonl (caida 1 del acta): el aviso del contador
-   es falso. Remidelo tu con instrumento propio y escribe la cifra que
-   te de: el acta midio la palabra bifurcacion en la razon de SIETE
-   puestos (1054, 1106, 2030, 2050, 2147, 2198, 2478), y DOS de ellos
-   SON los ejemplares (2030 y 2050 la traen de arranque). Solo la forma
-   en mayusculas BIFURCACION es exclusiva del 2198. La frase vieja no se
-   borra: se le pone la correccion declarada al lado, con fecha y con la
-   leccion enderezada (un contador SI encuentra estos dos ejemplares; lo
-   que el contador no da es la figura). Diff de UNA linea.
-2. CORRECCION DECLARADA en la nota de la figura EL PASO DE OFICIO (caida
-   2 del acta): "158 NODOS VIVOS" esta mal medido, el instrumento de la
-   vuelta 18 no filtro deprecado. Remidelo tu: el dominio exportacion
-   tiene 158 nodos en el grafo, 17 deprecado, y los vivos son 141, que
-   es la cifra que la entrada de tipo dominio del propio inventario ya
-   publica. La cota corregida es 6 de 141 vivos; los 10 pares de 130 no
-   cambian. Cifra vieja conservada con su correccion declarada al lado.
-   Diff de UNA linea.
-3. REGISTRO de la novena estrella en la nota de ESTRELLA (9.23)
-   (adjudicacion del pendiente de doctrina 3): el auditor la localizo
-   DECLARADA en docs/INTRA_DOMINIO_INFORME.md, seccion del puesto 513
-   ("Otra estrella, y esta con el centro leido por los dos lados"),
-   centro tecnologias_disruptivas_oportunidad, radios 505 y 513.
-   Verifica la cita tu mismo y añade a la nota: novena DECLARADA con esa
-   sede, sigue sin la segunda cuenta de 9.23 (su par periferico nunca
-   entro a la cola) y su verificacion depende de la LD de TAREA 2.A. La
-   frase "la novena no se encontro" recibe su correccion declarada con
-   fecha. Diff de UNA linea.
-4. REGISTRO adjudicado del acto customer_validation_sales_roadmap
-   (adjudicacion de la propuesta 1; las propuestas 2 y 3 NO se ejecutan):
-   en su entrada de tipo acto vigente, con el patron de las 221 (lo
-   nuevo al frente, el texto viejo conservado entero): cobertura pasa a
-   15 de 15 pares leidos, 0 en cola, 0 fuera de cola (LD-66 a LD-70, 14
-   ago 2026); estado pasa de ABIERTO a CERRADO; y la nota recibe, de
-   forma aditiva: el puntero a LD_SALES_ROADMAP.md, el candidato a
-   particion (nucleo de cuatro mas cola de dos, costura 918 mas 319) y
-   el candidato CONDICIONADO a forastero (customer_validation_sales_
-   roadmap), los dos como candidatos que decide el recomputo de
-   fusiones por P.5 y P.8, no como hechos. En la nota de la figura "el
-   forastero por cableado", adicion aditiva: el candidato condicionado,
-   con su condicion escrita (si el acto se parte, deja de ser
-   forastero) y el puntero. DESPUES del cambio, remide con instrumento:
-   actos CERRADOS y ABIERTOS (el acta espera 281 y 54: mide, no copies)
-   y la deuda total de P.5 en pares (el acta 17 midio 329 antes de este
-   registro: mide la tuya y declara las dos con sus cortes).
-5. PUNTEROS CRUZADOS entre las entradas ESTRELLA (9.23) y nodo puente
-   (adjudicacion del pendiente de doctrina 2): adicion aditiva en las
-   DOS notas diciendo que la forma mecanica de la estrella de dos radios
-   y la del puente coinciden y que lo que las separa es la CONSECUENCIA
-   (arreglese por separado contra puede que sean dos familias), con el
-   puntero de cada una a la otra. Dos diffs de UNA linea.
+ESTADO DEL CREDITO: la tanda 19 salio LIMPIA en la auditoria (cero caidas
+de toda especie) y el contador de tandas seguidas con caida esta EN CERO.
+Las reglas no aflojan por eso: toda cifra que publiques se lee de la
+salida de un instrumento corrido EN ESTA VUELTA, toda cifra que contradiga
+una publicada se declara al lado de la vieja sin tocarla, los VIVOS se
+cuentan sin los deprecado, y una busqueda negativa no se cita: se busca en
+TODAS las sedes (archivo, dirigidas, informe, banco, plan) antes de decir
+que algo no existe.
 
 ====================================================================
-TAREA 2: la FASE II sigue. Dos bloques, en este orden
+TAREA 1: registros de las adjudicaciones de la vuelta 19
+(docs/loop/ACTA_AUDITOR.md, VUELTA 19, secciones 3 a 5), cinco
+correcciones, todas aditivas y con el texto viejo conservado entero
 ====================================================================
-A. LD-71, LA SEGUNDA CUENTA DE LA NOVENA ESTRELLA: lee como dirigida el
-   par evaluacion_tecnologias_disruptivas contra
-   explotacion_tecnologias_disruptivas (el par periferico que el
-   informe declaro que la cola no puede cerrar), con el patron LD de
-   siempre (documento propio o seccion nueva, nodos impresos, clase y
-   razon). Registra el desenlace en la nota de ESTRELLA (9.23): si sale
-   D, la novena queda VERIFICADA con las dos cuentas y son 9 de 9; si
-   sale A, el trio es candidato a puro y NO es estrella, y la cobertura
-   9 recibe su correccion declarada. Cualquiera de los dos desenlaces se
-   escribe, ninguno se esconde.
-B. LAS TRES FIGURAS QUE FALTAN, el resto del bloque que decide el cierre
-   de la FASE II, con el criterio de ejemplar CONFIRMADO por el acta
-   (instancia DECLARADA POR ESCRITO en informe, banco, expediente o
-   lectura dirigida; el criterio queda como esta escrito en las notas de
-   la vuelta 18):
-   1. SUBCONJUNTO ESTRICTO (cobertura declara 23 ejemplares): localiza
-      las 23 declaraciones, verifica cada puesto contra el archivo, y
-      nombralas en su nota de forma ADITIVA. Si las declaradas no son
-      23, la discrepancia se declara al lado de la cifra, sin tocarla.
-   2. LA FIRMA POSICIONAL DEL INJERTO (P.2) (67 candidatos, 43
-      confirmados): nombra en su nota DONDE vive la nomina de los 67 y
-      de los 43 (la sede escrita, no la lista entera si es larga), con
-      los punteros verificados y al menos los ejemplares confirmados
-      que esten declarados con puesto o nodo citables.
-   3. EL PASO DE OFICIO: con la cota ya corregida en TAREA 1.2, nombra
-      sus ejemplares: los nodos declarados por escrito (la nota vieja
-      declaraba media docena y la medicion dio seis nombrados), cada
-      uno verificado contra el grafo, y los DIEZ pares del dominio que
-      los tocan, verificados contra el archivo. Si nombrar exige leer
-      algun par como dirigida, declaralo como deuda con su nomina en el
-      reporte, no lo leas sin encargo.
-   Si el tiempo no alcanza, checkpoint honesto: cuales quedaron y por
-   que.
+1. LD-04, el puntero a su relectura (adjudicacion 3.1 y 4.1): en
+   docs/plan/LECTURAS_DIRIGIDAS.md, dentro de la entrada de LD-04, una
+   linea aditiva que diga que el par recibio una relectura independiente
+   y concordante el 14 ago 2026 (vuelta 19), clase D, escrita en
+   LD_ESTRELLA_DISRUPTIVAS.md, y que por la adjudicacion 4.1 de la
+   vuelta 19 NO se acuna numero nuevo: LD-04 es el numero del par. Diff
+   de UNA linea.
+2. La entrada de tipo racimo "el sales roadmap" de
+   docs/plan/INVENTARIO.jsonl (adjudicacion 4.2): correccion aditiva con
+   lo nuevo al frente y el texto viejo entero detras, en cobertura (de
+   10 de 15 a 15 de 15, por LD-66 a LD-70, 14 ago 2026) y en estado (la
+   cobertura ya no es INCOMPLETA; la forma sigue MEZCLADO y no se toca).
+   La nota recibe el motivo: la entrada de acto de la misma nomina ya
+   dice 15 de 15 y dos sedes vivas no pueden diferir sin aviso.
+   RECOMPUTO_3388_COMPONENTES.jsonl NO se toca: es foto del corte 3.388
+   por diseno y su leyenda ya esta en RECOMPUTO_3388.md.
+3. La cota de EL PASO DE OFICIO, regenerada (adjudicaciones 3.3 y 4.4):
+   en su nota de INVENTARIO.jsonl, adicion declarada: la cota VIGENTE
+   pasa a ser la de la cadena corregida, 26 nodos de 141 vivos, 7 con la
+   linea en su paso 1, 40 pares de 130, con el criterio escrito al lado
+   (las pistas de la vuelta 18 con us commercial service reemplazada por
+   commercial service); la cota vieja (6, 2 y 10) queda como contraste
+   con su criterio. Remide las tres cifras con instrumento en esta
+   vuelta, no las copies de la nota ni del reporte 19. Diff de UNA
+   linea.
+4. Horowitz y la tanda de los injertos (adjudicaciones 3.5 y 4.3): en
+   docs/plan/01_FUENTES.md, seccion LA TANDA DE LOS INJERTOS, correccion
+   declarada con fecha: la tanda de los cuatro libros son 44 NODOS
+   DISTINTOS medidos en el grafo (Horowitz 14, no 13; el solape de
+   decision_de_vender_startup es de declaraciones y no reduce nodos), la
+   cifra vieja 43 queda entera con la correccion al lado. Imprime la
+   NOMINA de los 14 de Horowitz en segunda posicion desde el grafo, con
+   instrumento propio, y verifica en cada uno la forma de apendice (el
+   bloque del libro 2 pegado al final de los pasos, la frontera visible)
+   para saldar el cabo: o son 44 de 44 confirmados, o nombras el que no
+   la tiene. Es lectura de grafo con instrumento, no lectura de pares:
+   hazla entera. El desenlace va tambien como adicion breve en la nota
+   de LA FIRMA POSICIONAL DEL INJERTO (P.2) de INVENTARIO.jsonl, con el
+   puntero. 10_INVENTARIO.md NO se toca: su 14 es correcto.
+5. El rotulo de RECOMPUTO_3388.md (acta, seccion 5): en la tabla final
+   de la seccion TAREA (vuelta 19), linea aditiva que aclare que el 9
+   son EDICIONES sobre 8 entradas distintas (EL PASO DE OFICIO recibio
+   dos). Rotulo, no cifra. Diff de UNA linea.
 
-AL CERRAR: mide la FASE II bloque por bloque (como la TAREA de la vuelta
-17 en RECOMPUTO_3388.md) y di por escrito si el bloque de las veinte
-figuras queda CERRADO o que le falta. NO abras la FASE III ni crees
-pasada-unica: la verificacion de cierre de la FASE II y la apertura de la
-FASE III son del auditor en la vuelta siguiente.
+====================================================================
+TAREA 2: medir la FASE II al cierre, con los registros ya hechos
+====================================================================
+Escribe en docs/plan/RECOMPUTO_3388.md la seccion TAREA (vuelta 20), con
+toda cifra salida de instrumento corrido en esta vuelta:
+A. Los cinco bloques de la FASE II remedidos tras los registros (como la
+   tabla de la vuelta 19), mas el marcador, el inventario y lo reservado.
+B. La lista de cifras publicadas con dos lecturas sin adjudicar: tras los
+   registros de TAREA 1 debe quedar VACIA. Si algo queda vivo, lo nombras
+   con sus dos sedes y NO lo arreglas sin regla: lo traes al reporte.
+C. El veredicto de medicion, dicho como medicion y no como cierre: si
+   ningun bloque queda abierto y la lista de B esta vacia, la FASE II
+   queda LISTA PARA VERIFICACION DE CIERRE. El cierre mismo y la apertura
+   de la FASE III son del auditor en la vuelta 21: NO abras la FASE III,
+   NO crees pasada-unica, NO corras el Gate 0 salvo que una guarda tuya
+   lo pida.
 
 Reporte completo en docs/loop/REPORTE.md con tus discutibles marcados
 ANTES de saber si aciertan, el marcador recomputado, y toda cifra leida

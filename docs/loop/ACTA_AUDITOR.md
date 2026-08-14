@@ -4076,3 +4076,250 @@ Tandas seguidas con caida de clase o cifra: UNA. Caidas de reporte seguidas: una
   de esta acta, y el registro adjudicado del acto del sales roadmap.
 
 **`docs/loop/PROMPT_SIGUIENTE.md` escrito. El bucle sigue.**
+
+## VUELTA 19, 14 ago 2026. Auditor: Fable 5. Reporte auditado: la vuelta 19 del ejecutor (Opus 5), FASE II novena vuelta, la tanda que corria con el aviso de credito delante
+
+### 0. El contexto de esta acta
+
+El encargo de la vuelta 19 tenia dos tareas: los cinco registros de las adjudicaciones de la
+vuelta 18, y el trabajo de FASE II en dos bloques (la segunda cuenta de la novena estrella como
+`LD-71`, y las tres figuras que faltaban). La tanda corria con el aviso de credito delante: una
+caida de clase o de cifra publicada mas, y el bucle paraba. El ejecutor entrego las dos tareas
+completas, midio que la premisa de la TAREA 2.A era falsa, y la declaro en vez de obedecerla.
+Esta acta verifica todo con instrumento propio, relee el par de la novena, adjudica los nueve
+discutibles, las cuatro preguntas y el pendiente de doctrina, y deja el encargo de la vuelta 20.
+
+### 1. VERIFICACION: el instrumento mando en todo, y la tanda sale LIMPIA
+
+**Hash del trabajo `7b21a8d0`, verificado.** El commit posterior (`df34e625`) toca solo
+`docs/loop/REPORTE.md`. Las NUEVE rutas del `git diff --stat 5a7b7d60 7b21a8d0` son exactas y la
+lista esta completa. `dataset/` y `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` INTACTOS (diff vacio,
+corrido por mi). Arbol limpio y sincronizado con `origin/bucle` al abrir esta vuelta.
+
+**El marcador, recomputado con instrumento propio** (`scripts/loop/vuelta20_auditor_medir.py`
+mas comandos declarados en linea, corridos hoy): **A 583 (17,2), B 89 (2,6), C 7 (0,2),
+D 2.709 (80,0); n 3.388, puestos 1 a 3.388, cero huecos y cero duplicados.** La tabla de tasa
+por dominio calza celda por celda, incluido `risk_management` 106 pares cero A.
+
+**El inventario, remedido entero:** 671 entradas antes y despues; tipos dominio 10, acto 556,
+racimo 13, familia_de_ids 53, figura 20, defecto 19; actos 221 superadas mas 335 vigentes;
+vigentes **281 CERRADOS y 54 ABIERTOS**. Deuda de P.5: **324** por el campo `cobertura` de los
+335 vigentes, y **329** recomputada por mi sobre el inventario viejo de `5a7b7d60` (280 y 55 en
+ese corte): la diferencia son exactamente los cinco del sales roadmap. El diff de las lineas
+tocadas: **663 identicas byte a byte y 8 tocadas, las ocho ADITIVAS** (verificado clave por
+clave: el valor nuevo empieza o acaba con el viejo), **cero claves aparecen o desaparecen**; en
+siete cambia solo `nota`, en la del acto cambian `cobertura`, `estado` y `nota`. Las nueve
+ediciones sobre ocho entradas que el reporte declara son exactas.
+
+**TAREA 1, los cinco registros, verificados con instrumento propio:**
+- `LA BIFURCACION`: la palabra en las razones de SIETE puestos exactos (1054, 1106, 2030, 2050,
+  2147, 2198, 2478), el 2030 arranca *La bifurcacion del origen* y el 2050 *La bifurcacion del
+  origen otra vez*, la forma en mayusculas solo en el 2198. Calza entero.
+- `EL PASO DE OFICIO`: exportacion **158 nodos en el grafo, 17 con la clave `deprecado`, 141
+  VIVOS**, la misma cifra de la entrada de tipo `dominio`. La cota de seis verificada nodo por
+  nodo, ninguno deprecado, y los diez pares de 130.
+- `ESTRELLA (9.23)`: los pares que tocan al centro son exactamente **505 y 513, los dos A**, y
+  el par periferico **NO esta** en las 3.388 lineas. `LD-04` existe en `LECTURAS_DIRIGIDAS.md`
+  (tanda del 11 ago 2026), es ese par, es **D**, y ya declaraba por escrito *"es una ESTRELLA
+  del banco 9.23, con centro y dos periferios"*. **La premisa del encargo era falsa y la
+  medicion del ejecutor es correcta.**
+- El acto del sales roadmap: 15 de 15, CERRADO, lo nuevo al frente y el texto viejo entero; los
+  dos candidatos escritos como candidatos, con su condicion y sus punteros; el 281/54 y el 324
+  remedidos por mi por ruta propia.
+- Los punteros cruzados: puestos en las DOS notas, y el caso que citan verifica: **319 A**
+  (`customer_validation_sales_roadmap` con `sales_roadmap_vs_sales_force`), **918 A**
+  (`refinar_sales_roadmap` con el mismo), **1023 D** entre los dos primeros. Estrella de dos
+  radios y puente a la vez, tal como dicen.
+
+**TAREA 2.B, verificada con el instrumento del ejecutor corrido por mi y con contrastes propios:**
+- `SUBCONJUNTO ESTRICTO`: 23 razones con la etiqueta en mayusculas, los 23 puestos listados
+  verificados uno por uno, **cero fallos y los 23 en A**; la aritmetica del informe (12
+  anteriores mas 11 nuevos) reproduce; el **511** declarado en prosa en la tabla de R30 (*"NADA.
+  Es un subconjunto estricto"*), su propia razon sin la etiqueta, y las razones de 1783 y 1943 lo
+  citan. Las dos cuentas (23 etiquetas, 24 instancias) verifican.
+- `LA FIRMA POSICIONAL`: la tabla de `10_INVENTARIO.md` reproducida celda por celda (107/21,
+  68/15, 88/14, 67/13, 47/4, 47/3), suma 70, **nodos distintos 67**, los tres de doble
+  declaracion nombrados, y los 67 salen igual por la via corta. La tanda de los cuatro libros:
+  **44 nodos distintos medidos**; `01_FUENTES.md` publica 43 con grupos 15/13/13/4 y explica el
+  46 a 43 con tres solapes de los que uno (`decision_de_vender_startup`, Horowitz dos veces con
+  dos grafias) **no reduce nodos**. Las dos sedes dicen lo que el reporte dice que dicen.
+- `EL PASO DE OFICIO`: los tres declarados por su nombre en las razones (**2045, 2054, 2070, los
+  tres D**), la frase *media docena* solo en el 2045, y las dos cotas reproducen exactas: 6
+  nodos, 2 en paso 1 y 10 pares con las pistas de la vuelta 18; **26, 7 y 40** con la cadena
+  corregida. La prueba del fallo de cadena la verifique aparte: la cadena vieja `us commercial
+  service` no casa NUNCA contra la grafia del grafo `U.S. Commercial Service` (cero nodos), y el
+  paso 1 de `import_regulations_foreign_governments` la trae literal.
+
+**La FASE II al cierre, remedida:** la cola post fusion es de SIETE (196, 224, 253, 591, 707,
+968 en B y el **1096 en A con su excepcion escrita** en `08_VERIFICACION.md`), y el **751** es
+el que CAE por `LD-59`, hoy en B y fuera de la cola: la frase del RECOMPUTO es exacta. El
+forastero: dos ejemplares mas el candidato condicionado registrado. Figuras: **13 de 20 con
+marca de tanda** (contadas por mi, las mismas trece), 7 sin marca, 20 de 20 de forma.
+
+**Las siete sin marca, verificadas MAS ALLA de lo que el ejecutor declaro** (su discutible 9
+admitia no haber verificado sus ejemplares contra el archivo): frontera de disposicion (877
+existe, D), el nombre que esconde (948 existe, A, con `seis_medios_comunicacion_cliente`), el
+forastero (por instrumento: `tacticas_cierre_ventas` 6 lecturas, 1 A y 5 D, como su nota dice),
+nodo puente (319/918/1023, arriba), y **la camarilla ENTERA: 10 de 10 en A**, seis en el archivo
+(356, 745, 765, 801, 1038, 1524) y CUATRO en lecturas dirigidas (`LD-58`, `LD-60`, `LD-61`,
+`LD-64`, las cuatro A). Las dos restantes (la perdida que cambia de dueno, el superviviente)
+citan pasadas de proceso del 12 ago y no las re-verifique: quedan anotadas, sin señal de falla.
+
+**Cero guiones largos y cero guiones medios en las nueve rutas, contado por mi.**
+
+> **RESULTADO: TODAS las cifras y nombres propios del reporte 19 verifican contra mis
+> instrumentos. La tanda sale LIMPIA: cero caidas de clase, cero de cifra publicada, cero de
+> reporte. La racha de tandas con caida queda ROTA y el contador vuelve a cero.**
+
+### 2. RELECTURA: el par de la novena estrella, COINCIDE
+
+Limite declarado, el mismo de las dos actas anteriores: la clase D ya estaba en el reporte antes
+de mi lectura; la ceguera fue de razones. Imprimi los pasos de los dos nodos desde el grafo,
+adjudique **D** por escrito (el solape es la raiz comun de Cooper, identificar tecnologia
+emergente y estimar su probabilidad; lo que queda fuera es de cada lado: el juicio con su *y
+entonces que hago* en `evaluacion_`, el sistema de vigilancia con nicho, campo e IOTA en
+`explotacion_`; los entregables no se contienen), y solo despues abri
+`LD_ESTRELLA_DISRUPTIVAS.md`: misma clase, mismo corte de mitades, misma vara. **Coincide con la
+relectura del ejecutor y con `LD-04`. 1 de 1, dentro del marcado.** Con las dos cuentas de 9.23
+medidas por mi (505 y 513 en A, `LD-04` en D), **la novena estrella queda VERIFICADA y el campo
+`cobertura` 9 CONFIRMADO: la adjudicacion 3 de mi acta de la vuelta 18, que la dio por
+pendiente de segunda cuenta, queda CORREGIDA por esta.**
+
+### 3. LOS NUEVE DISCUTIBLES, adjudicados uno por uno
+
+1. **NO acunar `LD-71`: CORRECTO.** Un veredicto, un numero: acunar un segundo numero para un
+   par ya adjudicado dejaria dos fuentes de verdad para una sola lectura, que es exactamente lo
+   que la adjudicacion 9 de la vuelta 17 prohibe por extension natural (no dejar dos cifras
+   diciendo lo mismo sin aviso). No es una orden desobedecida: la orden colgaba de una premisa
+   falsa, y el propio encargo cierra con *si algo contradice una regla vigente, paras y lo
+   traes*. Lo trajo. **Al encargo va una linea aditiva en `LD-04`** apuntando a la relectura,
+   para que sea hallable desde el numero.
+2. **El reorden de TAREA 1 y 2.A: CORRECTO.** Escribir *sigue sin la segunda cuenta* sabiendolo
+   falso habria sido publicar una falsedad dictada. La regla 1 del ejecutor pesa mas que el
+   orden de un encargo, y la mitad del error era mio (seccion 5).
+3. **La cota ampliada de `EL PASO DE OFICIO`: ES FALLO DE CADENA, no definicion nueva.**
+   Verificado por mi: la cadena vieja da cero casamientos posibles contra la grafia del grafo,
+   dos de los tres nodos de los ejemplares declarados quedaban fuera de la cota vieja, y la
+   cifra corregida (7 en paso 1) se acerca a la *media docena* declarada donde la vieja (2) no
+   llegaba. Las pistas corregidas son las mismas nociones con la grafia real. **Adjudicado: la
+   cota oficial se regenera (pregunta 4, seccion 4).**
+4. **Las 24 instancias del `SUBCONJUNTO ESTRICTO`: LAS DOS CUENTAS QUEDAN, y la razon del
+   archivo CUENTA como declaracion por escrito.** El archivo de veredictos es el registro
+   primario del cribado; negarle rango de sede dejaria los tres ejemplares de `EL PASO DE
+   OFICIO` sin sede siendo que sus razones nombran la figura POR SU NOMBRE. Extension natural
+   del criterio confirmado en la vuelta 18, no doctrina nueva. Y el 511 suma por el informe de
+   todos modos. 23 etiquetas y 24 instancias se publican juntas, como estan. CERRADO.
+5. **El 44 contra el 43: LA MEDICION MANDA.** 44 nodos distintos en el grafo; el 43 de
+   `01_FUENTES.md` sale de una aritmetica que no se sostiene (el solape de
+   `decision_de_vender_startup` es de declaraciones, no de nodos). Publicar el 44 como medicion
+   con las dos sedes declaradas fue lo correcto. **Correccion declarada al encargo** (seccion 4,
+   pregunta 3).
+6. **La sede nueva en la formula del criterio: CONFIRMADA por esta acta.** Misma adjudicacion
+   que el punto 4: el criterio queda con CINCO sedes (informe, banco, expediente, lectura
+   dirigida, y la razon del archivo de veredictos). No fue el ejecutor ensanchando por su
+   cuenta: fue la extension que esta acta cita y hace suya.
+7. **No tocar la entrada de `racimo`: CORRECTO por scope, y la divergencia se encarga YA.** El
+   scope del encargo mandaba y el ejecutor la trajo como pregunta en vez de callarla, que es lo
+   que la doctrina pide. La correccion va al encargo (seccion 4, pregunta 2).
+8. **Lo nuevo al frente en el acto: CORRECTO.** Era orden expresa del encargo; el patron de las
+   figuras (adicion al final) es costumbre, no regla escrita. Sin consecuencia.
+9. **Las siete que nacieron nombradas: EL 20 DE 20 QUEDA, y ahora con mas suelo del que el
+   ejecutor reclamo.** Cinco de las siete verificadas por mi contra archivo, grafo y dirigidas
+   (seccion 1), incluida la camarilla entera. Las dos de proceso quedan anotadas sin señal de
+   falla. La cautela del ejecutor de marcarlo discutible fue correcta; el hallazgo de mi propia
+   cuenta de camarilla (seccion 6) le da la razon a la cautela y al 20 de 20 a la vez.
+
+### 4. LAS CUATRO PREGUNTAS y el pendiente de doctrina, adjudicados
+
+1. **`LD-71` NO se acuna.** Adjudicado en 3.1. El pendiente de doctrina queda resuelto POR
+   EXTENSION CITADA, no con doctrina nueva: **cuando un encargo mande leer un par ya leido, no
+   se acuna numero nuevo; se registra la relectura como relectura del numero existente, con
+   puntero en los dos sentidos, y la parte del encargo que colgaba de la premisa falsa decae
+   declarandolo** (adjudicacion 9 de la vuelta 17, por extension natural).
+2. **La entrada de `racimo` "el sales roadmap" SE CORRIGE**, aditiva y con el texto viejo
+   entero: la misma nomina que la entrada de `acto` no puede quedar diciendo 10 de 15 a ocho
+   lineas del 15 de 15. `RECOMPUTO_3388_COMPONENTES.jsonl` NO se toca: es foto del cierre
+   transitivo al corte 3.388 por diseno, y su leyenda ya esta escrita en la seccion 4 de la
+   TAREA (vuelta 19) de `RECOMPUTO_3388.md`. Quien cite 329 dice la sede.
+3. **Horowitz: MANDA EL GRAFO, y la nomina se imprime.** La tanda de los cuatro libros son 44
+   nodos distintos; `01_FUENTES.md` recibe correccion declarada con la cifra vieja entera, la
+   nomina de los 14 de Horowitz impresa desde el grafo, y la verificacion de la forma de
+   apendice en los 14 para saldar el unico cabo que la medicion sola no salda: si son 44 de 44
+   confirmados o hay uno sin confirmar, y cual. `10_INVENTARIO.md` no se toca: su 14 es
+   correcto.
+4. **La cota de `EL PASO DE OFICIO` SE REGENERA con la cadena corregida**: la cota vigente pasa
+   a 26 de 141 nodos y 40 de 130 pares, con su criterio al lado, y la vieja (6 y 10) queda como
+   contraste con el suyo. Es el mismo trato que recibio la caida 2 de la vuelta 18 (el
+   instrumento que no filtraba deprecado): instrumento mal calibrado, cifra regenerada con
+   correccion declarada. Reglas de correccion existentes, cero doctrina nueva.
+
+### 5. LAS CAIDAS: cero del ejecutor, UNA DEL AUDITOR, declarada con nombre
+
+**Del ejecutor, en esta tanda: CERO.** Ni de clase, ni de cifra publicada, ni de reporte. Las
+seis discrepancias que su reporte declara son mediciones correctas contra cifras viejas de otros
+cortes, todas con la cifra vieja intacta y el criterio al lado, que es exactamente lo que la
+regla manda.
+
+**DEL AUDITOR (mia, en el acta de la vuelta 18): la premisa de la segunda cuenta.** Escribi que
+a la novena estrella *"le falta la segunda cuenta"* y encargue leer como `LD-71` un par que ya
+estaba leido como `LD-04` desde el 11 ago. Verifique que el par *nunca entro a la cola* y de ahi
+segui a *nunca se leyo* sin buscar en `LECTURAS_DIRIGIDAS.md`: una busqueda de sede unica, la
+misma especie de fallo que mi propia acta 18 le habia contado al ejecutor como caida de reporte.
+**Se cuenta con nombre: UNA caida de acta del auditor.** Especie: como las de reporte (vivia en
+acta y encargo, no movio ningun dato publicado; el ejecutor la cazo antes de que llegara a
+`docs/plan/`). No acumula para la parada, y queda en la metrica.
+
+**Y un rotulo impreciso del ejecutor que NO es caida, adjudicado con la prueba de la vuelta 17**
+(reproducir el criterio de la cifra antes de declararla mala): la TAREA (vuelta 19) de
+`RECOMPUTO_3388.md` dice *"entradas tocadas: 9"* donde las entradas distintas son 8 y las
+EDICIONES son 9 (`EL PASO DE OFICIO` recibio dos). Hay criterio bajo el cual el 9 es cierto, y
+es exactamente la descomposicion escrita en la misma celda (cinco mas una mas tres); el propio
+reporte 19 lo dice bien (*ocho lineas y nueve ediciones*). Rotulo, no cifra: **correccion de una
+linea al encargo, sin caida.**
+
+### 6. ERRORES PROPIOS DE ESTA VUELTA, declarados con nombre
+
+- **Mi cuenta de la camarilla dio 6 de 10 al primer intento**, buscando solo en el archivo de
+  veredictos: la MISMA trampa de sede unica de mi caida de la seccion 5 y del fallo de la vuelta
+  18. Los cuatro que faltaban estaban en las dirigidas (`LD-58`, `LD-60`, `LD-61`, `LD-64`,
+  los cuatro A) y la busqueda completa absolvio la nota. No se publico: queda como el
+  recordatorio de que la leccion *una busqueda negativa no se puede citar* aplica al auditor
+  igual que al ejecutor.
+- **Dos falsos arranques de instrumento, ninguno publicado:** mi primer clasificador de actos
+  conto una superada de mas (buscaba SUPERADA en todo el json y la entrada nueva del acto cita a
+  su superada en la nota; la buena es por el arranque del campo `estado`), y mi primera replica
+  de la cota del oficio uso una sola cadena y un detector de `deprecado` que miraba valores en
+  vez de la clave (27/8/35 contra los 26/7/40 buenos). Las dos veces la remedicion con el
+  criterio del instrumento del ejecutor reprodujo sus cifras exactas.
+
+### 7. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 18: 33 relecturas, 392 puestos, 7 caidas de clase, mas 3 caidas de
+reporte del ejecutor, mas 4 caidas de cifra publicada del ejecutor, mas 2 caidas de cifra
+publicada del auditor. Tandas seguidas con caida: UNA.
+
+Esta vuelta: mas 1 relectura, mas 1 puesto (el par de la novena, ceguera de razones, coincide);
+cero caidas del ejecutor de toda especie; mas 1 caida de acta del auditor (la premisa de la
+segunda cuenta, especie reporte).
+
+**Acumulado: 34 relecturas, 393 puestos, 7 caidas de clase, mas 3 caidas de reporte del
+ejecutor, mas 4 caidas de cifra publicada del ejecutor, mas 2 caidas de cifra publicada del
+auditor, mas 1 caida de acta del auditor. Tandas seguidas con caida de clase o cifra: CERO.
+Caidas de reporte seguidas: cero.**
+
+### 8. CONDICIONES DE PARADA: NINGUNA SE CUMPLE
+
+- Doctrina nueva: **no.** El pendiente se adjudico por extension citada (seccion 4, punto 1).
+- Contradiccion sin resolver: **no.** Las seis discrepancias tienen adjudicacion y correccion
+  declarada encargada por las reglas existentes (secciones 3 y 4).
+- Decision de fundador: **nada reservado se toco.** `dataset/` intacto, veredictos intacto, cero
+  merges, cero operaciones ejecutadas, FASE III sin abrir, `pasada-unica` sin crear.
+- Fallo tecnico: **no.** Arbol limpio, hook verde, cero guiones en las nueve rutas.
+- Credito de tanda: **restaurado.** Tanda 19 limpia; tandas seguidas con caida: cero.
+- Campana consumada: **no.** A la FASE II le quedan los registros adjudicados de esta acta
+  (racimo, Horowitz con su nomina, la cota regenerada, la linea de `LD-04` y el rotulo del
+  RECOMPUTO). Con esos registros hechos y remedidos, la FASE II queda lista para su verificacion
+  de cierre, que es mia en la vuelta 21, y por la regla del 14 ago (la parada de apertura
+  REVOCADA), **tras verificar el cierre el auditor abre la FASE III directamente.**
+
+**`docs/loop/PROMPT_SIGUIENTE.md` escrito. El bucle sigue.**
