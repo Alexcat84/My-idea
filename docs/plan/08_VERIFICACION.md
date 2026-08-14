@@ -129,6 +129,32 @@ dia en que se escribio.**
 > el indice apuntando a la era anterior, **y el sintoma no aparece en el
 > reindexado: aparece semanas despues en el recorrido de una persona.**
 
+#### CORRECCION DECLARADA: **ROJO DECLARADO DEL INDICE SEMANTICO DURANTE LA FASE III, EXCLUSIVO PARA IDS NUEVOS** (14 ago 2026, decision del fundador, opcion B estricta)
+
+**Resuelve la contradiccion medida en el acta de la vuelta 26: el plan mandaba a la vez
+Gate 0 verde entre fases Y reindexado al final, despues de mover ids, y el dia que una
+operacion crea un nodo las dos reglas no se podian cumplir juntas** (el unico instrumento
+que fabrica vectores exige una credencial que esta fuera del repo mientras el bucle
+corre, por regla del fundador). El parrafo de arriba sobre el reindexado al final **se
+queda entero: sigue siendo la regla.** Lo que se anade es la excepcion que la hace
+ejecutable:
+
+> **DURANTE LA FASE III, EL CHEQUEO DEL INDICE SEMANTICO PUEDE ESTAR EN ROJO DECLARADO
+> EXCLUSIVAMENTE PARA LOS IDS QUE LA PASADA ACABA DE CREAR.** Cada reporte que corra Gate
+> 0 con ese rojo **los lista uno a uno, por id**, con la operacion que los creo. **CUALQUIER
+> OTRO id en rojo en el chequeo del indice es PARADA**: no se declara, se trae.
+
+**El reindexado sigue haciendose AL FINAL, tras mover ids, como esta pagina ya manda.**
+Esta correccion no cambia CUANDO se reindexa: cambia que Gate 0 puede correr en verde en
+todo lo demas mientras existan ids nuevos sin vector, en vez de bloquear cada fase de la
+pasada esperando una credencial que la casa reserva.
+
+> **EL CIERRE DE LA FASE III EXIGE REINDEXADO HECHO Y GATE 0 ENTERO EN VERDE, SIN
+> EXCEPCIONES, ANTES DE LA AUDITORIA INTEGRAL Y DEL MERGE.** El rojo declarado es un
+> permiso para avanzar DURANTE la pasada, no una excepcion permanente: **sin el
+> reindexado corrido y el chequeo del indice semantico en verde como todos los demas,
+> la campaña no se declara consumada.**
+
 ---
 
 ## LA COMPROBACION QUE SOLO SE PUEDE HACER AL FINAL

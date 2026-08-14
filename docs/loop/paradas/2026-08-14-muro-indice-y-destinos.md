@@ -108,3 +108,6 @@ de `OP-F-02` con sus tres destinos ya leidos, el reparto o poda de `OP-F-03` por
 remedido, y las cuatro `OP-F-04` con su regla nueva; despues, el modo continuo sigue
 solo. Las lecturas ya publicadas (fronteras de Mollick, los 21 de Hugos, los diez del
 racimo) NO hay que rehacerlas: estan verificadas dos veces.
+
+DECISION DEL FUNDADOR (14 ago 2026): indexado por opcion B estricta; P.18 destino por
+lectura de objeto; tercera clase de OP-F-03 a familia Hugos-sistemas. La fase 01 sigue.

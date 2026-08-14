@@ -890,3 +890,34 @@ clase; quedarse en la clase deja el injerto sin destejer.
 > `propuesta_gasto_capital` con `OP-D-06`), donde ya manda el orden fuente primero,
 > y **cualquier cruce futuro** que el plan descubra entre una operacion de fuente y
 > una de destejido o fusion.
+
+---
+
+## P.18 EL DESTINO SE DECIDE POR LECTURA DE OBJETO
+
+**Adoptada el 14 ago 2026, decision del fundador.**
+
+> **DENTRO DE LA FAMILIA QUE LA FRONTERA NOMBRA, EL BLOQUE VA AL MIEMBRO CUYO
+> OBJETO COINCIDA, DECIDIDO POR LECTURA SOBRE LA NOMINA VIGENTE AL DIA. SI NINGUNO
+> COINCIDE, FORMA NODO PROPIO EN ESA FAMILIA.**
+
+**El motivo:** `P.3` resuelve la separacion de un bloque hasta el nivel de familia;
+no dice a que MIEMBRO de esa familia va. Elegir el miembro es una decision de
+contenido, y esa pluma no era del ejecutor ni del auditor. **Primer ejemplar:
+`OP-F-02`**, donde el fundador escribio la regla el 14 ago 2026 para el racimo de
+supervision de la IA antes de que `P.18` tuviera numero propio.
+
+### LO QUE OBLIGA
+
+| | |
+|---|---|
+| **1** | la lectura se hace sobre la **nomina vigente al dia en que se ejecuta la operacion**, no sobre una nomina publicada en otra fecha: si la familia crecio o se partio desde que se escribio la evidencia, se lee de nuevo |
+| **2** | **el miembro elegido, o la creacion del nodo propio, se escribe como CORRECCION DECLARADA al ejecutar**, con la lectura que lo sostiene: no basta con nombrar el miembro, hay que decir POR QUE su objeto coincide |
+| **3** | si ningun miembro coincide, **el bloque forma nodo propio dentro de la familia**: no se fuerza un encaje que la lectura no sostiene |
+
+> **ALCANCE, escrito el mismo dia de la adopcion:** ademas de `OP-F-02`, `P.18`
+> gobierna el destino de las cuatro `OP-F-04` (`OP-F-04-COL`, `OP-F-04-HOR`,
+> `OP-F-04-WEI`, `OP-F-04-RAC`) cuando su bloque apendice va a una familia y no a
+> nodo propio, y el reparto de `OP-F-03` hacia la subfamilia Hugos del nucleo y
+> hacia la familia HUGOS-SISTEMAS (ver la correccion declarada en la nota de
+> `OP-F-03`).
