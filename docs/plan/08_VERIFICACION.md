@@ -51,6 +51,25 @@ linea 1 de la lista de arriba no decia.**
 |---:|---|---|
 | **1** | `python scripts/run_phase1.py --reaplico-curaduria` | **EXITCODE 0** y `GATE 0: OK` |
 | **2** | `python scripts/etiquetas_de_cara.py --aplicar`, corrido **JUSTO DESPUES** | `dataset/metadata/master_graph.json` **BYTE IDENTICO a HEAD**: el mismo hash de blob |
+| **3**, **CONDICIONAL** | `python scripts/sync_assets_web.py`, corrido **DESPUES del 2** y **SOLO cuando la operacion cambia el grafo** | **LAS DOS COPIAS byte identicas a HEAD**: `dataset/metadata/master_graph.json` y `web/lib/assets/master_graph.json` con el mismo hash de blob que HEAD |
+
+#### REGISTRO: **EL TERCER COMANDO, CONDICIONAL** (14 ago 2026, vuelta 26)
+
+**Encargado por el acta de la vuelta 25 del auditor, y nace de la pregunta 2 del reporte de
+la vuelta 24.** El comando 3 **es el remedio escrito del propio validador** (`REMEDIO_SYNC`
+en `scripts/run_phase1.py`: *primero se reaplica, despues se sincroniza*), y sin correrlo
+`engine/test_gate_alias.py` cae con los nodos divergentes entre las dos copias del grafo.
+
+> **ES CONDICIONAL Y NO SE CORRE SIEMPRE: solo cuando la operacion CAMBIA EL GRAFO.** En una
+> fase que no toca el grafo (una operacion de codigo, un registro documental) **el comando 3
+> no aplica y no correrlo no es un rojo**. En una fase que si lo toca, **saltarselo deja las
+> dos copias divergentes y la que lo caza es la suite del motor, no el Gate**: el chequeo de
+> gemelos del Gate compara el snapshot de **antes** del paso 6 y no puede ver la divergencia
+> que la operacion acaba de crear.
+
+**LA VARA DEL COMANDO 3 ES DOBLE**, y por eso se escribe aparte de la del comando 2: no basta
+con que el fichero del dataset calce con HEAD, **tienen que calzar LOS DOS**, el del dataset y
+el de `web/lib/assets/`.
 
 #### REGISTRO: **`git status` NO ES LA VARA DE ESTE FICHERO** (14 ago 2026)
 
@@ -87,6 +106,23 @@ curaduria que el remache de `integrar_packs` prohibe.
 `pasada-unica`, el ciclo cierra con **71 etiquetas reaplicadas** y el blob
 `bb423c066f5a961f082b3b70aaff4f98d35d7a1d`, que es el de HEAD. **Esa es la cifra contra
 la que se compara el encogimiento.**
+
+#### CALIFICADOR DE CORTE DEL BLOB: **ES REGISTRO HISTORICO, NO LA VARA OPERATIVA** (14 ago 2026, vuelta 26)
+
+**Encargado por el acta de la vuelta 25 del auditor, y responde a la pregunta 1 del reporte
+de la vuelta 24. El parrafo de arriba se queda entero: el blob `bb423c06` era el de HEAD el
+dia en que se escribio.**
+
+| | |
+|---|---|
+| **el blob `bb423c06...`** | **REGISTRO HISTORICO** con su corte. Nombra el HEAD de un dia concreto y **queda desfasado en cuanto una operacion de la fase III toca el grafo**, que es exactamente lo que esa fase hace |
+| **LA VARA OPERATIVA** | **byte identico al HEAD DEL MOMENTO**, sea cual sea ese HEAD. Se mide con `git hash-object` contra `git rev-parse HEAD:<ruta>`, no contra un blob escrito en esta pagina |
+| **LA CIFRA QUE SE VIGILA** | **el conteo de 71 etiquetas**. Esa si es comparable entre vueltas, y **si ENCOGE se declara** en vez de callarse |
+
+> **POR QUE IMPORTA LA DISTINCION: un blob distinto del de esta pagina NO ES UNA REGRESION,
+> y un conteo de etiquetas menor que 71 SI LO ES.** Confundirlos hace las dos averias: obliga
+> a reescribir esta pagina en cada operacion, y deja pasar el unico sintoma que de verdad
+> avisa de un nodo curado que se depreco, se renombro o se fundio.
 
 > **EL REINDEXADO VA AL FINAL, DESPUES DE MOVER IDS.** El indice **guarda ids** y
 > es **una de las fuentes externas que `OP-S-08` identifico**. Reindexar antes deja
