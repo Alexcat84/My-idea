@@ -3795,3 +3795,14 @@ seguidas con caida: CERO.**
 - Campana consumada: **no.**
 
 **`docs/loop/PROMPT_SIGUIENTE.md` escrito. El bucle sigue.**
+
+### 9. ADDENDUM, registrado al cerrar la vuelta
+
+Mientras esta acta se escribia, el fundador commiteo `a52e5ea9` (14 ago 2026, 08:09): la condicion
+de parada de APERTURA DE LA FASE III queda **REVOCADA**, porque el cambio de modelos que protegia ya
+se aplico. Al cerrar y verificar la FASE II, el auditor ABRE la FASE III directamente (verificacion
+completa de apertura, rama `pasada-unica`, modo de ejecucion continua). **No cambia nada de esta
+vuelta**: la FASE II sigue abierta y el encargo de la vuelta 18 es de FASE II. Se registra para que
+el acta y la version de `AUDITOR.md` que leyo cada seccion queden trazables: las secciones 1 a 8 se
+escribieron sobre la version previa a `a52e5ea9`, y ninguna adjudicacion se apoya en la condicion
+revocada.
