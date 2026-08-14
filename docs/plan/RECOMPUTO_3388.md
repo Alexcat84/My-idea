@@ -641,10 +641,39 @@ nota de `OP-L-02` en `OPERACIONES.jsonl` ("bloque humano de la IA 10 de 10 con 7
 y cuarenta y cinco pares, que es el racimo entero de la supervision de la IA, otro universo). Los diez
 estan leidos: cobertura COMPLETA, 7 en A y 3 en D.**
 
-El racimo entero (diez nodos, cuarenta y cinco pares) sigue con cobertura 10 de 45: los diez pares
+~~El racimo entero (diez nodos, cuarenta y cinco pares) sigue con cobertura 10 de 45: los diez pares
 leidos son justo los internos al bloque humano; los 35 restantes cruzan contra el bloque del mapa y
-siguen sin leerse, tal como ya declaraba `OP-F-02`. **Eso si es correcto en el reporte de la vuelta 13
-y no se toca.**
+siguen sin leerse, tal como ya declaraba `OP-F-02`. Eso si es correcto en el reporte de la vuelta 13
+y no se toca.~~ **FALSO, corregido en la vuelta 15.** Esta frase la escribio el auditor en el acta de
+la vuelta 13 y se declaro "cierta"; el ejecutor de la vuelta 14 la copio aqui sin recomputarla, contra
+el propio banco 9.10 (toda tabla que cita un veredicto se recomputa del archivo). El auditor declaro su
+propia caida en `docs/loop/ACTA_AUDITOR.md` VUELTA 14 seccion 4 y encargo remedirla con instrumento
+propio, sin copiar su cifra.
+
+**REMEDIDO EN LA VUELTA 15, con instrumento propio (python sobre el jsonl, corrido fuera del texto del
+acta), sobre la nomina de DIEZ de `docs/INTRA_DOMINIO_INFORME.md` secciones 11.bis.1 y 11.bis.3**
+(bloque humano 5: `principio_humano_en_el_loop`, `human_in_the_loop_ia`, `alineacion_etica_ia_negocio`,
+`mitigar_falling_asleep_wheel`, `riesgo_sobredependencia_ia`; bloque del mapa 4:
+`comprension_capacidades_limitaciones_ia`, `jagged_frontier_ia`, `invitar_ia_a_todo`,
+`principio_invitar_ia_siempre`; suelto 1: `comprender_alineacion_etica_ia`):
+
+| medida | cifra |
+|---|---:|
+| pares posibles (C(10,2)) | 45 |
+| pares de la nomina que estan en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **15**: puestos 166, 177, 293, 456, 692, 792, 993, 1.041, 1.211, 1.239, 1.339, 1.451, 1.496, 1.517, 1.541 (8 A, 7 D) |
+| lecturas dirigidas del bloque humano fuera de cola | **3**: `alineacion_etica_ia_negocio` contra `mitigar_falling_asleep_wheel` (D), `alineacion_etica_ia_negocio` contra `riesgo_sobredependencia_ia` (D), `principio_humano_en_el_loop` contra `riesgo_sobredependencia_ia` (D); `docs/plan/LECTURAS_DIRIGIDAS.md` lineas 437 a 468, verificadas por busqueda directa: los tres pares no aparecen en `INTRA_DOMINIO_VEREDICTOS.jsonl` |
+| **COBERTURA REAL DEL RACIMO AL 3.388** | **18 de 45** (8 A, 10 D) |
+| **sin leer** | **27**, no 35 |
+
+**Tres cosas falsas en la frase vieja:** la cobertura no es 10 de 45; los diez pares del bloque humano
+no son los unicos leidos del racimo (el bloque del mapa aporta 177, 1.211, 1.239, 1.339, 1.451, 1.517,
+y el suelto aporta 993); y los 35 restantes no "siguen sin leerse", porque ocho de ellos (los seis
+cruzados entre bloques mas los dos de `comprender_alineacion_etica_ia`) ya estan leidos, cuatro de ellos
+(1.211, 1.239, 1.339, 1.451) siendo justo los que probaron que el racimo se parte. La cuarta cosa: la
+nota de `OP-F-02` no declara 10 de 45, declara **14 de 45 al puesto 1.517** (correcto para su corte de
+entonces, sin el 1.541 y sin las tres lecturas dirigidas). **No es doctrina nueva: es la regla de la
+FASE II (ninguna cifra publicada queda sin recomputar con su corte nuevo), mas banco 9.10, 9.21 y 9.26
+(la forma se escribe con su cobertura al lado).**
 
 ### 2. El backlog de `OP-L-03`, recomputado al corte 3.388
 
@@ -683,8 +712,30 @@ destejido (`OP-S-07` CAMPO_SUCIO dos veces, `OP-M-03-III` FUSION DE MESA mas `OP
 una vez, `OP-S-04` HERRAMIENTA mas `OP-F-04-WEI` DECISION_DE_FUENTE una vez). La regla escrita de
 `OP-L-02` solo excluye lo que "espera destejido o cirugia", no "cualquier operacion", asi que estos
 cuatro se dejan DENTRO del backlog por lectura literal de la regla. Si el auditor lee "tiene dueno" mas
-ancho (como el criterio ancho que `OP-U-02` uso para otra pregunta), la cuenta bajaria a 36 actos. **No
-se decide aqui: se trae la pregunta.**
+ancho (como el criterio ancho que `OP-U-02` uso para otra pregunta), la cuenta bajaria a 36 actos.
+~~No se decide aqui: se trae la pregunta.~~
+
+**ADJUDICADO EN LA VUELTA 15 (`docs/loop/ACTA_AUDITOR.md` VUELTA 14, seccion 2 y seccion 6 punto 1):
+EL BACKLOG DE `OP-L-03` QUEDA EN CUARENTA ACTOS Y SETENTA Y TRES PARES, por lectura literal y no por
+preferencia.** El auditor aplico el mismo metodo, sin cambiarlo, sobre **las componentes reconstruidas
+del corte 2.117** (corriendo `scripts/plan/recomputo_3388.py` con `--veredictos` apuntando al blob
+`git show c16a24f5:docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, 2.117 lineas, 400 A):
+
+| paso | corte 2.117 reconstruido |
+|---|---|
+| ABIERTOS de tamano 3 a 6 | 37 actos, 89 pares |
+| menos las seis nominas de `OP-L-02` | 31 actos, 65 pares |
+| menos los que esperan destejido | **29 actos, 55 pares** |
+| reparto por tamano | uno de 6 con 6; cuatro de 5 con 15; nueve de 4 con 19; quince de 3 con 15 |
+
+**El 29 y el 55 son EXACTAMENTE la cifra publicada de `OP-L-03` (corte 2.117), con el reparto identico
+al que la nota ya tenia escrito, y en ese corte LOS MISMOS CUATRO ACTOS EN DISPUTA (`OP-S-07`,
+`OP-M-03-III`/`OP-M-03-ENLACES`, `OP-S-04`/`OP-F-04-WEI`) YA VIVIAN DENTRO de aquel 55.** El criterio
+ancho aplicado al mismo corte viejo habria dado **25 actos y 51 pares**, que contradice la cifra
+publicada del banco. **El metodo literal, sin cambios, es el metodo que produjo la cifra vieja: se
+sostiene.** Sin doctrina nueva: banco 9.21 (la cifra vieja no se borra) mas la evidencia del propio
+corte reconstruido. La nota de `OP-L-03` en `docs/plan/OPERACIONES.jsonl` queda puesta al dia con esta
+adjudicacion, sin borrar el discutible.
 
 ### 3. El inventario de `OP-I-01`: 221 actos eran, hoy son 335
 
@@ -697,7 +748,11 @@ tamano 2 o mas al corte 3.388** (280 CERRADOS, 55 ABIERTOS, comprobacion de inte
 familias de ids, 14 defectos, 13 racimos, 12 figuras, 10 dominios, y el total de 323) no se recomputo:
 el encargo de esta vuelta pedia solo la cifra de actos, y el propio `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`
 no mide familias, defectos, racimos, figuras ni dominios. **Queda declarado, no medido, como
-PENDIENTE DE DOCTRINA para un encargo propio** (ya lo declaraba el discutible 2 del reporte de la
+~~PENDIENTE DE DOCTRINA para un encargo propio~~ ENCARGO PROPIO DE RECOMPUTO** (etiqueta corregida en
+la vuelta 15, `docs/loop/ACTA_AUDITOR.md` VUELTA 14 seccion 5 y seccion 6 punto 4: el acta de la vuelta
+13, adjudicacion 6.4, ya dice literalmente que `OP-I-01` **no es pendiente de doctrina**, es un encargo
+propio de recomputo de inventario; no mueve ninguna cifra ni ninguna clase, es correccion de etiqueta,
+no de medicion) (ya lo declaraba el discutible 2 del reporte de la
 vuelta 13): con 335 actos en vez de 221, el total de entradas del inventario tambien cambia (de 323 a
 al menos 437), pero esa suma no se escribe aqui porque los otros cinco sumandos siguen sin
 recomputarse.

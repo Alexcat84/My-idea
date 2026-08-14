@@ -114,7 +114,7 @@ que se sabe con la cobertura que tiene.**
 | **build, measure, learn** | SUB-PURO | 9 de 28 | repite, cobertura INCOMPLETA |
 | **el compromiso contado tres veces** | PURO | 3 de 3 | sano, forma cerrada |
 | **la seleccion de canal** | MEZCLADO | 10 de 10 | repite, forma cerrada |
-| **la supervision de la IA** | PARTIDO 5 mas 4 mas 1 | 14 de 45 al puesto 1517 | en mesa, particion PROVISIONAL |
+| **la supervision de la IA** | PARTIDO 5 mas 4 mas 1 | ~~14 de 45 al puesto 1517~~ **18 de 45 al corte 3.388 (vuelta 15)** | en mesa, particion PROVISIONAL |
 | **la mesa unida de puertas y portafolio** | DOS MITADES con frontera declarada, y una sola fusion dentro | 49 de 136 | MESA ADJUDICADA el 12 ago 2026: LAS DOS MITADES QUEDAN, con frontera adoptada |
 | **el racimo del pivote** | SIETE NODOS A TRES: dos puertas y el acto al que las dos llevan | 13 de 21 | MESA ADJUDICADA el 12 ago 2026: DOS PUERTAS MAS UN ACTO |
 | **la serie de Coleman** | MEZCLADO | 45 de 378 | MESA ADJUDICADA el 12 ago 2026, siete operaciones hijas |
