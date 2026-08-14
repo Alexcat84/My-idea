@@ -2792,3 +2792,254 @@ AUDITOR.md seccion 4 se cumple y la aplico.**
 
 `docs/loop/PARA_ALEXIS.md` escrito. `docs/loop/PROMPT_SIGUIENTE.md` vaciado. **El bucle se detiene
 aqui y la decision vuelve al fundador.**
+
+## VUELTA 14, 13 ago 2026. Auditor: Opus 5. Reporte auditado: la vuelta 14 del ejecutor (Sonnet 5), FASE II cuarta vuelta, las tres correcciones adjudicadas por la parada
+
+**NO HAY PARADA. El bucle sigue.** El trabajo encargado verifica al cien por cien, con instrumento
+propio y con una prueba que la vuelta 13 no tenia: **la reconstruccion del corte viejo**. **La unica
+caida de esta vuelta es MIA**, esta en la seccion 4, y es una cifra que yo mismo declare "cierta" en
+el acta de la vuelta 13.
+
+### 1. VERIFICACION, con mis propios comandos, corridos en ESTA vuelta
+
+Escribi mi propio python (marcador, integridad del plan, universo de componentes, backlog de
+`OP-L-03`, cobertura del racimo de la IA) y lo corri fuera del arbol del repo. **No reuse
+`scripts/loop/backlog_l03_vuelta14.py` del ejecutor para medir**: lo lei para saber que declaraba, y
+volvi a medir con codigo propio.
+
+1. **Hashes y rutas.** `git diff --numstat 0de0ae57 645ab6b0` devuelve **exactamente las tres rutas
+   declaradas**: `docs/plan/OPERACIONES.jsonl` (**2/2**), `docs/plan/RECOMPUTO_3388.md` (**84
+   inserciones y CERO borrados**, o sea que la seccion nueva va al final y no reescribe nada de las
+   vueltas 12 y 13) y `scripts/loop/backlog_l03_vuelta14.py` (135/0). El commit `bdcbac2c` toca solo
+   `docs/loop/REPORTE.md`. **`git diff --name-only 0de0ae57 bdcbac2c -- dataset/` da vacio: el
+   catalogo no se toco ni un byte.** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` tampoco: diff vacio.
+   Arbol limpio, rama `bucle`.
+2. **Marcador recomputado desde el archivo:** 3.388 veredictos, **A 583, B 89, C 7, D 2.709**,
+   puestos 1 a 3.388, **cero huecos y cero duplicados**. Identico y sin movimiento, como declara el
+   reporte.
+3. **`OPERACIONES.jsonl`, integridad medida por mi:** 69 lineas, 69 ids unicos, cero duplicados,
+   **cero `depende_de` rotos y cero `bloquea_a` rotos**, las 69 en LISTA. `git diff -U0` confirma que
+   **solo cambiaron `OP-L-03` y `OP-I-01`**, una linea cada una. Las otras 67 intactas.
+4. **`OP-I-01`, la correccion de los actos, verificada POR LOS DOS EXTREMOS.** El nuevo:
+   `RECOMPUTO_3388_COMPONENTES.jsonl` tiene **335 lineas, 280 CERRADOS y 55 ABIERTOS**, contados por
+   mi. El viejo: **reconstrui el corte 2.117** corriendo `scripts/plan/recomputo_3388.py` con
+   `--veredictos` apuntando al blob `git show c16a24f5:docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (2.117
+   lineas, 400 A) y salida a un temporal fuera del repo: **221 actos exactos**, con las cuatro
+   comprobaciones del 08_VERIFICACION en verde. **El 221 y el 335 salen del mismo instrumento sobre
+   dos cortes: la correccion es exacta.**
+5. **El backlog de `OP-L-03`, remedido por mi con script propio:** ABIERTOS de tamano 3 a 6 al corte
+   3.388, **48 actos y 107 pares fuera de cola**; menos las seis nominas de `OP-L-02`, **42 actos y
+   83 pares**; menos los que esperan destejido, **CUARENTA actos y SETENTA Y TRES pares**. Reparto
+   por tamano, celda por celda: **dos de seis con 14, cuatro de cinco con 15, diez de cuatro con 20,
+   veinticuatro de tres con 24.** **Las cuatro cifras y el reparto entero: identicos al reporte.**
+6. **Las seis nominas excluidas NO son invento del ejecutor, y lo verifique de dos maneras.** Una:
+   los seis componentes que tocan esas nominas contienen **exactamente** los nodos de la nomina, cero
+   miembros extra, asi que excluir el acto entero **no sobre-excluye ni un par**. Dos: sus pares
+   fuera de cola son **8, 5, 3, 5, 2 y 1**, que son **la tabla "LOS VEINTICUATRO QUE CUELGAN" de
+   `docs/plan/LECTURAS_DIRIGIDAS.md` linea 337, fila por fila y suma 24**.
+7. **Los dos actos que esperan destejido, verificados:** el de `OP-D-03` es de tamano 6 con 7 pares
+   (cierre de ventas A/B) y el de `OP-D-02` es de tamano 4 con 3 pares (voz del cliente). Exactos.
+8. **Los cuatro dominios que explican la subida, contados por mi al 3.388:** quality **844**,
+   health_safety **192**, risk_management **106**, seguridad_digital **27**. Exactos.
+9. **La nota de `OP-L-02` ya era correcta antes de esta vuelta** ("bloque humano de la IA 10 de 10
+   con 7 A y 3 D"): el ejecutor tiene razon en no haberla tocado.
+10. **Rastro de la fila falsa (discutible 3), buscado por mi:** `grep -rln` sobre `docs/` por
+    "cobertura MEZCLADO" y por "MEZCLADO, no completa" devuelve **tres archivos y ninguno vivo**:
+    `docs/loop/ACTA_AUDITOR.md` (registro historico), `docs/loop/REPORTE.md` y
+    `docs/plan/RECOMPUTO_3388.md`, las dos ultimas con la fila ya **tachada**. **La fila falsa no
+    sobrevive en ningun documento operativo.** Discutible 3 respondido: nada mas que corregir.
+11. **Higiene:** cero guiones largos, cero guiones medios y cero signos menos en los cuatro archivos
+    tocados.
+
+### 2. EL DISCUTIBLE 1 SE DECIDE CON UNA PRUEBA, NO CON UNA PREFERENCIA
+
+El ejecutor trae la pregunta bien: cuatro de los 40 actos tocan la nomina de una operacion **no**
+destejido (`OP-S-07` dos veces, `OP-M-03-III` mas `OP-M-03-ENLACES` una, `OP-S-04` mas `OP-F-04-WEI`
+una). **Los cuatro me salen identicos a mi.** Con criterio ancho serian **36 actos y 69 pares**.
+
+**No hace falta elegir criterio: hay como preguntarselo al archivo.** Aplique el metodo del ejecutor,
+sin cambiarle nada, sobre **las componentes reconstruidas del corte 2.117**:
+
+| paso | corte 2.117 (reconstruido por mi) |
+|---|---|
+| ABIERTOS de tamano 3 a 6 | 37 actos, 89 pares |
+| menos las seis nominas de `OP-L-02` | 31 actos, 65 pares |
+| menos los que esperan destejido | **29 actos, 55 pares** |
+| reparto por tamano | **uno de 6 con 6; cuatro de 5 con 15; nueve de 4 con 19; quince de 3 con 15** |
+
+**El 29 y el 55 son EXACTAMENTE la cifra publicada de `OP-L-03`, y el reparto es literalmente el que
+su nota tiene escrito** ("uno de SEIS con 6 pares por leer; cuatro de CINCO con 15 pares; nueve de
+CUATRO con 19; y quince de TRES con un par cada uno"). **El metodo del ejecutor es el metodo que
+produjo el 55: reproduce la cifra vieja al cien por cien.**
+
+**Y ahi esta la respuesta al discutible:** en ese corte, **los MISMOS cuatro actos** (los de
+`OP-S-07`, `OP-M-03-III`, `OP-S-04`) **ya estaban DENTRO de los 55 publicados**. Con criterio ancho
+el corte viejo habria dado **25 actos y 51 pares**, que no es lo que dice el banco. **El criterio
+literal no es una lectura del ejecutor: es el criterio que la cifra publicada usa.**
+
+> **Y la lectura de "sin mesa ni nomina" queda fijada por el dato, no por gusto:** en
+> `LECTURAS_DIRIGIDAS.md` linea 325 "nomina" son **las nominas de lectura dirigida** que la seccion
+> acababa de enumerar, no el campo `nodos` de cualquier operacion. Los 24 de esa tabla son esas seis
+> y nada mas, y lo verifique fila por fila (seccion 1.6).
+
+### 3. RELECTURA CIEGA: cinco puestos, tres coinciden y las dos discrepancias son mias
+
+**Eleccion declarada, y empieza por el discutible marcado, como manda el protocolo:** los pares
+internos YA LEIDOS de los cuatro actos del discutible 1, que son el sustrato exacto de la pregunta
+"este acto es una familia o dos". **Seleccione por pertenencia al acto, NO por clase**, asi que esta
+vez **no supe la clase antes de adjudicar** (la contaminacion que declare en la vuelta 13 no se
+repite). Volque titulo, resumen, pasos, entregable y aristas; adjudique; y solo despues destape.
+
+| puesto | mi clase, antes de destapar | archivo | coincide |
+|---:|---|---|---|
+| 1.346 | D: disciplina de diseno contra mecanica de ejecucion, cada lado con procedimiento propio | D | si |
+| 639 | **D**: por la misma lectura que el 1.346 | **A** | **NO** |
+| 306 | A: lo que anade el segundo (separar ajuste de pivote, versionar el lienzo) cabe en lineas | A | si |
+| 916 | **D**: verificar acreditacion contra vender por plataforma, dos universos | **A** | **NO** |
+| 941 | A: el mismo barrido de mercado, lo propio de cada uno cabe en lineas | A | si |
+
+**Resultado: TRES de cinco. Dos discrepancias, LAS DOS MIAS, y las dos caen del lado del archivo.**
+
+- **En el 639 y el 916 medi por LO PROPIO en vez de por EL NUCLEO COMPARTIDO.** La vara del 9.6.1
+  pregunta que queda cuando quitas lo que el otro ya dice, y **pesa el resto**: en el 639 el corazon
+  entero es comun (criterio numerico de antemano, grupo chico real, registrar lo cualitativo) y lo
+  propio de cada lado son lineas; en el 916 el nucleo regulatorio es comun (verificar acreditacion,
+  consultar abogado) y cada uno guarda **dos lineas practicas**. **Que cada lado tenga algo propio no
+  es la prueba: la prueba es si eso propio es un procedimiento o una linea.**
+- **La coherencia interna del archivo se sostiene y es fina:** el 1.346 sale D **porque lo compartido
+  es UNA linea de cinco y de cuatro**, y el 639 sale A **porque lo compartido es el corazon entero**,
+  contra el mismo nodo. Los dos veredictos citan esa frontera por escrito.
+
+**Mi trampa, con nombre, y es la SEGUNDA vuelta seguida que caigo en su familia: inflo la
+diferencia.** En la vuelta 13 pese como paso entero lo que la vara pesa como linea; hoy pese como
+prueba la existencia de material propio, cuando la vara pesa el tamano del nucleo comun.
+
+**Efecto sobre el credito del EJECUTOR: ninguno.** Cero caidas de clase; el archivo gano las cinco
+adjudicaciones en disputa.
+
+### 4. LA CAIDA DE ESTA VUELTA ES MIA: el racimo de la IA no esta en 10 de 45, esta en 18 de 45
+
+`docs/plan/RECOMPUTO_3388.md`, seccion de la vuelta 14, punto 1, dice:
+
+> ~~El racimo entero (diez nodos, cuarenta y cinco pares) sigue con cobertura 10 de 45: los diez pares
+> leidos son justo los internos al bloque humano; los 35 restantes cruzan contra el bloque del mapa y
+> siguen sin leerse, tal como ya declaraba `OP-F-02`.~~ **FALSO, y lo bendije yo.**
+
+**Medido por mi en esta vuelta**, sobre la nomina de diez de `INTRA_DOMINIO_INFORME.md` seccion
+11.bis.1 y 11.bis.3 (bloque humano 5, bloque del mapa 4, suelto 1):
+
+| medida | cifra medida hoy |
+|---|---:|
+| pares posibles del racimo | 45 |
+| **leidos en la cola** | **15** (puestos 166, 177, 293, 456, 692, 792, 993, 1.041, 1.211, 1.239, 1.339, 1.451, 1.496, 1.517, 1.541) |
+| de esos, internos al bloque humano | 7 |
+| **de esos, que tocan el bloque del mapa o el suelto** | **8**, y entre ellos **los cuatro cruzados que decidieron la particion** (1.211, 1.239, 1.339, 1.451) |
+| mas las lecturas dirigidas del bloque humano, fuera de cola | 3 |
+| **COBERTURA REAL DEL RACIMO AL 3.388** | **18 de 45** |
+| **sin leer** | **27**, no 35 |
+
+**Tres cosas falsas en una frase:** la cobertura no es 10 de 45; los diez pares del bloque humano no
+son los unicos leidos del racimo; y los 35 no "siguen sin leerse", porque ocho de ellos estan leidos
+**y son justamente los que probaron que el racimo se parte**. La cuarta, de propina: `OP-F-02` no
+declara 10 de 45, declara **14 de 45 al puesto 1.517**.
+
+**DE QUIEN ES LA CAIDA, y no es del ejecutor.** La frase "45 menos 10 son 35" **la escribi yo en el
+acta de la vuelta 13, seccion 4, ultimo parrafo, y la declare "cierto"**. El ejecutor la copio de la
+adjudicacion que le bajaba el auditor, que es lo que la campana le manda hacer con una adjudicacion.
+**La cuento como caida MIA, de cifra publicada, y no toca el credito de la tanda del ejecutor.**
+
+**La regla que los dos nos saltamos ya estaba escrita: banco 9.10, TODA TABLA QUE CITA UN VEREDICTO
+SE RECOMPUTA DEL ARCHIVO.** Yo cite una resta en vez de recomputar quince puestos que estaban a un
+comando de distancia. De ahi sale la verificacion fija nueva del encargo siguiente.
+
+### 5. UNA ETIQUETA QUE NO CUADRA, y por que NO la cuento como caida
+
+**`OP-I-01` y `RECOMPUTO_3388.md` llaman al resto del inventario "PENDIENTE DE DOCTRINA".** El acta
+de la vuelta 13, adjudicacion 6.4, dice literalmente lo contrario: **"`OP-I-01` TAMPOCO ES PENDIENTE
+DE DOCTRINA: es un encargo propio de recomputo de inventario"**. No mueve ninguna cifra ni ninguna
+clase, y el efecto practico que el texto describe ("un encargo propio") es el correcto. **Por el
+precedente escrito del acta de la vuelta 4 punto 3 y de la vuelta 13 seccion 5, es etiqueta mala y no
+medicion mala: se registra con nombre, se corrige, y el credito de la tanda no se toca.**
+
+### 6. ADJUDICACIONES
+
+1. **EL BACKLOG DE `OP-L-03` QUEDA EN CUARENTA ACTOS Y SETENTA Y TRES PARES.** El discutible 1 se
+   cierra a favor de la lectura literal, **no por preferencia sino por reconstruccion**: el mismo
+   metodo reproduce el 29 y el 55 publicados, con su reparto exacto, y **los cuatro actos en disputa
+   ya vivian dentro de aquel 55**. El criterio ancho habria dado 25 y 51 en el corte viejo, que
+   contradice el banco. **Sin doctrina nueva: es banco 9.21 (la cifra vieja no se borra) mas la
+   evidencia del propio corte.** La nota de `OP-L-03` deja de decir "no se decide aqui" y pasa a
+   decir la adjudicacion, sin borrar el discutible.
+2. **EL CRITERIO ANCHO NO SE EXTIENDE A `OP-L-03`, y el motivo es el mismo que el de la adjudicacion
+   6.2 de la vuelta 13 leido al reves.** Alli `OP-U-02` preguntaba **quien decide el destino del
+   acto** (mesa o destejido). Aqui `OP-L-03` pregunta **que actos se van a fundir sin haberse leido
+   enteros**, y una operacion de campo sucio, de herramienta o de fuente **no lee el acto**: le
+   limpia un campo. **Un acto con `OP-S-07` encima sigue entrando a fusion sin lectura**, que es
+   exactamente lo que `OP-L-03` cuenta.
+3. **LA COBERTURA DEL RACIMO DE LA SUPERVISION DE LA IA SE CORRIGE A 18 DE 45, y la correccion es
+   contra mi propia acta** (seccion 4). Se escribe con tachado en `RECOMPUTO_3388.md`, y arrastra dos
+   cifras publicadas mas que hay que poner al dia con su corte: la nota de `OP-F-02` ("14 de 45 al
+   1.517") y la entrada del racimo en `docs/plan/INVENTARIO.jsonl`, que ademas **lista OCHO miembros
+   cuando la nomina vigente es de DIEZ**. **No es doctrina nueva: es la regla de la FASE II, ninguna
+   cifra publicada queda sin recomputar con su corte nuevo, mas banco 9.26 (la forma se escribe con
+   su cobertura al lado) y 9.21.**
+4. **LA ETIQUETA "PENDIENTE DE DOCTRINA" DE `OP-I-01` SE CORRIGE** a lo que ya adjudico la vuelta 13:
+   **encargo propio de recomputo**. Con tachado, sin borrar.
+5. **EL RECOMPUTO DEL INVENTARIO ES EL TRABAJO DE LA VUELTA 15, y hoy tiene medida de partida.**
+   Medido por mi: `docs/plan/INVENTARIO.jsonl` tiene **336 lineas hoy** (dominio 10, acto 221,
+   racimo 13, familia_de_ids 53, figura 20, defecto 19), **no las 323 que la nota de `OP-I-01`
+   declara** (que dice 14 defectos y 12 figuras). **O sea que la nota esta desactualizada por dos
+   vias a la vez**: por el corte (221 actos contra 335 componentes) y por el propio archivo (323
+   contra 336). **La regeneracion masiva de las 221 entradas de tipo acto NO se encarga todavia**: se
+   encarga la medicion de los seis sumandos, el total con su corte, y el plan escrito de esa
+   regeneracion para que yo lo adjudique. Reescribir 335 lineas de un documento que otros citan **es
+   alcance, y el alcance se trae antes de gastarlo**.
+
+### 7. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 13: **28 relecturas, 365 puestos, 7 caidas de clase, mas 2 caidas de
+reporte** (las dos consecutivas, vueltas 12 y 13, que dispararon la parada).
+
+Esta vuelta: **mas 1 relectura, mas 5 puestos**, **CERO caidas de clase del ejecutor**, **CERO caidas
+de reporte del ejecutor**, **dos discrepancias MIAS que no prosperaron**, y **UNA caida de cifra
+publicada que es MIA** (seccion 4).
+
+**Acumulado: 29 relecturas, 370 puestos, 7 caidas de clase, mas 2 caidas de reporte del ejecutor, mas
+1 caida de cifra publicada del auditor.**
+
+> **LA RACHA DEL EJECUTOR SE ROMPE HOY, y hay que decirlo tan claro como se dijo la parada:** las dos
+> caidas de reporte consecutivas quedan cortadas, **la tanda entra limpia**, y las tres correcciones
+> encargadas verifican al cien por cien con instrumento independiente, incluida la unica que se podia
+> comprobar contra una cifra vieja publicada. **El unico dictado suelto de esta vuelta es el mio.**
+
+### 8. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **La cobertura del racimo de la IA la di por buena con una resta en vez de recomputarla**, y la
+  escribi como "cierto" en el acta de la vuelta 13. El ejecutor la heredo de mi adjudicacion y la
+  llevo a `docs/plan/`. **Es mi caida, y es exactamente el tipo de dictado suelto que el credito
+  castiga en el ejecutor.**
+- **Dos de cinco adjudicaciones ciegas mias cayeron**, y la trampa tiene nombre en la seccion 3:
+  medir por lo propio en vez de por el nucleo compartido. **Es la segunda vuelta seguida que caigo en
+  la familia de inflar la diferencia.**
+- **Mi encargo de la vuelta 14 pedia "recomputa el inventario de OP-I-01: su nota dice 221 actos y
+  hoy son 335"** y no dijo que la nota tambien esta desfasada contra su propio archivo (323 contra
+  336). El ejecutor midio lo que se le pidio; el hueco es de mi encargo, no de su medicion.
+
+### 9. CONDICIONES DE PARADA: NINGUNA SE CUMPLE
+
+- Doctrina nueva: **no**. Las cinco adjudicaciones cuelgan del banco 9.10, 9.21 y 9.26, de la regla
+  de recomputo de la FASE II, del precedente "etiqueta mala no es caida" y de la reconstruccion del
+  corte viejo.
+- Contradiccion sin resolver: **no**. La del racimo se resuelve con correccion declarada y recomputo,
+  y no mueve ni una clase.
+- Decision de fundador: **no se toco nada de lo reservado.** `dataset/` intacto, cero merges, FASE
+  III sin abrir, rama `pasada-unica` sin crear. Las dos costuras sin dueno siguen esperandolo a el.
+- Fallo tecnico: **no**. Arbol limpio, cero guiones.
+- Credito de tanda: **intacto.** Cero caidas del ejecutor esta vuelta; la racha de dos se corta.
+- **Apertura de la FASE III: NO APLICA TODAVIA.** La FASE II sigue abierta: quedan el inventario de
+  `OP-I-01` entero, la cobertura del racimo, el lote de cinco del sales roadmap, la cola de relectura
+  post fusion, el criterio del forastero y las lecturas de acto entero de P.5.
+- Campana consumada: **no**.
+
+`docs/loop/PROMPT_SIGUIENTE.md` escrito con el encargo de la vuelta 15. **No se escribe
+PARA_ALEXIS.md.**
