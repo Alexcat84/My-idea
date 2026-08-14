@@ -1,0 +1,99 @@
+﻿
+==================================================================================================
+0. EL SUELO: el grafo y lo reservado, tal como llegan a esta vuelta
+==================================================================================================
+  nodos en el grafo: 3835, VIVOS: 3521, deprecado: 314
+  operaciones en OPERACIONES.jsonl: 71
+  lineas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl      3388
+  lineas de RECOMPUTO_3388_COMPONENTES.jsonl         335
+  lineas de docs/plan/INVENTARIO.jsonl               671
+  marcador recomputado del archivo: A 583 (17.2), B 89 (2.6), C 7 (0.2), D 2709 (80.0)
+
+==================================================================================================
+1. LA FILA 7: los pasos de decision_de_vender_startup, y su historial con git
+==================================================================================================
+  medido hoy en el grafo:                       34 pasos
+  01_FUENTES.md, tabla de LOS TRES CASOS:       25 pasos (cifra vieja, 11 ago 2026)
+  fuente declarada: The Founder's Dilemmas | The Hard Thing About Hard Thing - Ben Horowitz | The Hard Thing About Hard Things - Ben Horowitz
+
+  Los otros dos apartados de la misma tabla, para saber si el que diverge es uno solo:
+    viral_loop_marketing         publica 30, medido hoy 30  CALZA
+    coeficiente_viral            publica 16, medido hoy 16  CALZA
+
+  EL HISTORIAL DEL BLOB, verificado por mi con git en esta vuelta
+  (la medicion es del auditor, acta de la vuelta 20 seccion 4 punto 1;
+   aqui se REPRODUCE, no se copia):
+    0e5e0c60   9 ago 2026, ultimo commit que toca el grafo    blob bb423c066f5a961f082b3b70aaff4f98d35d7a1d
+    23f9ac32   11 ago 2026, el commit que CREA 01_FUENTES.md  blob bb423c066f5a961f082b3b70aaff4f98d35d7a1d
+    HEAD       hoy                                            blob bb423c066f5a961f082b3b70aaff4f98d35d7a1d
+    LOS TRES BLOBS SON IDENTICOS: True
+
+  Los pasos del nodo EN EL COMMIT QUE CREA 01_FUENTES.md (23f9ac32),
+  leidos de ese blob y no del de hoy:
+    pasos en 23f9ac32: 34
+    CONSECUENCIA: si son 34 el 11 ago, el nodo NO crecio y el conteo
+    viejo era PARCIAL DE NACIMIENTO.
+
+==================================================================================================
+2. LOS 13 DE OP-F-04-HOR CONTRA LOS 14 MEDIDOS: cual sobra, y donde tiene cobertura
+==================================================================================================
+  medidos hoy en el grafo (Horowitz en 2a o posterior posicion): 14
+  en el campo `nodos` de OP-F-04-HOR (fecha_corte 2026-08-11):           13
+  LA NOMINA DE LOS 13 EXISTE Y ES ESA. Sobran en el grafo: ['principio_calidad_mvp']
+  Estan en la operacion y no en el grafo:                  []
+
+  COBERTURA DE PLAN DE principio_calidad_mvp, barrida sobre las 71 operaciones:
+     OP-F-03        01_FUENTES     DECISION_DE_FUENTE nodos: 21
+     OP-D-01        02_DESTEJIDOS  DESTEJIDO        nodos: 2
+     OP-D-06        02_DESTEJIDOS  DESTEJIDO        nodos: 18
+     menciones del id en los campos de texto de otras operaciones:
+        OP-F-03        en 01_FUENTES
+        OP-D-01        en 02_DESTEJIDOS
+        OP-D-06        en 02_DESTEJIDOS
+
+==================================================================================================
+3. LA FORMA EN LOS 13 DE LA OPERACION: donde NO cierra el bloque de Horowitz
+==================================================================================================
+  La adjudicacion de OP-F-04-HOR dice que en los 13 el bloque esta
+  'al final de los pasos'. Lo que el instrumento decide solo es si
+  Horowitz ocupa la ULTIMA posicion declarada del campo fuente: un libro
+  que no es el ultimo NO PUEDE tener el bloque final.
+
+  metas_vs_proposito                       Horowitz en posicion [2] de 3; el ULTIMO declarado es: Never Lose a Customer Again - Joey Coleman   [ESTA EN LOS 13 DE LA OPERACION]
+  principio_calidad_mvp                    Horowitz en posicion [2] de 3; el ULTIMO declarado es: Essentials of Supply Chain Management - Michael H. Hugos
+
+  de los 13 de la operacion, con Horowitz FUERA de la ultima posicion: 1  ['metas_vs_proposito']
+  de los 14 medidos, con Horowitz FUERA de la ultima posicion:        2  ['metas_vs_proposito', 'principio_calidad_mvp']
+  presencia del bloque: la lectura de pasos nodo por nodo esta en la tabla
+  de la vuelta 20 de 01_FUENTES.md y se CITA, no se recuenta aqui.
+
+==================================================================================================
+4. EL MISMO LIBRO DOS VECES CON DOS GRAFIAS: dentro de la tanda y fuera
+==================================================================================================
+  nodos de la tanda de los cuatro (union): 44
+
+  DENTRO DE LA TANDA:
+     decision_de_vender_startup       Horowitz  x2
+        The Hard Thing About Hard Thing - Ben Horowitz
+        The Hard Thing About Hard Things - Ben Horowitz
+     plan_mejora_procesos             Horowitz  x2
+        The Hard Thing About Hard Things - Ben Horowitz
+        The Hard Thing About Hard Thing - Ben Horowitz
+
+  FUERA DE LA TANDA (mismo criterio, sobre los 3521 vivos):
+     asociaciones_clave               Hugos     x2
+        Essentials of Supply Chain Management - Michael H. Hugos
+        Essentials of Supply Chain Mana - Michael H. Hugos
+     transicion_producto_a_experiencia Hugos     x2
+        Essentials of Supply Chain Management - Michael H. Hugos
+        Essentials of Supply Chain Mana - Michael H. Hugos
+
+==================================================================================================
+5. RESUMEN DE LO QUE LOS CINCO REGISTROS VAN A ESCRIBIR
+==================================================================================================
+  1. fila 7: 34 pasos hoy contra 25 publicados; blobs identicos: True
+  2. la nomina de los 13 vive en OP-F-04-HOR campo nodos; sobra: ['principio_calidad_mvp']
+  3. de los 13, con el bloque fuera de la ultima posicion: ['metas_vs_proposito']
+  4. mismo libro dos veces con dos grafias: 2 en la tanda, 2 fuera
+  5. lo reservado NO se toca en esta vuelta: dataset/, veredictos,
+     componentes y el campo `nodos` de las operaciones.

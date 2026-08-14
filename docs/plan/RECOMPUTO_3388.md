@@ -1622,3 +1622,16 @@ seccion sale de una nota, de un acta ni de un reporte anterior: todas salen de u
 > **no un pendiente del cribado ni del recomputo**. Si el auditor adjudica la fila 7 en la vuelta
 > 21, no queda nada. **El cierre y la apertura de la FASE III son suyos: esta vuelta NO abrio la
 > FASE III, NO creo `pasada-unica` y NO corrio el Gate 0.**
+> **ADJUDICADA, 14 ago 2026 (vuelta 21), y nada de lo de arriba se toca: LA FILA 7 QUEDO
+> ADJUDICADA por el acta de la vuelta 20 del auditor (seccion 4, punto 1), MANDA EL 34**, y el
+> conteo viejo era **PARCIAL DE NACIMIENTO** y no un nodo que crecio: el auditor lo midio con git
+> (el blob del grafo es identico en `0e5e0c60`, en `23f9ac32` y en HEAD) y esta vuelta lo
+> reproduce con `scripts/loop/vuelta21_registros.py` (34 pasos hoy, 34 en el blob del 11 ago, los
+> tres blobs `bb423c06`). El registro aditivo esta puesto en la celda de `01_FUENTES.md`. **CON
+> ESTO LA LISTA DE CIFRAS PUBLICADAS CON DOS LECTURAS QUEDA VACIA.**
+
+> **Y LA FASE II QUEDA CERRADA por esa misma acta (seccion 8), CON LA FASE III ABIERTA en la rama
+> `pasada-unica`**, creada desde `bucle` por el auditor: el trabajo de la FASE III, los reportes y
+> las actas viven ahi, `bucle` queda como registro de las fases I y II, y **el merge sigue siendo
+> decision de Alexis**. La medicion de la FASE II que esta seccion publica **no se recomputa aqui**:
+> se cita con su corte del 14 ago 2026.

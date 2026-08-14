@@ -270,7 +270,7 @@ destejidos y las fusiones que dependen de ellos.**
 |---|---|
 | **`viral_loop_marketing`** | **30 pasos y TRES libros**. Blank, Coleman y Weinberg apilados, **y con repeticion dentro del propio apendice**: los pasos 14 a 17 y 18 a 21 dicen lo mismo con otras palabras |
 | **`coeficiente_viral`** | **16 pasos**, y el bloque de Weinberg **entra DOS VECES**: los pasos 6 a 11 y los 12 a 16 son la misma cuenta de K |
-| **`decision_de_vender_startup`** | **25 pasos**, Horowitz **declarado dos veces con dos grafias**, y el material repetido tres veces: los pasos 11 a 15, 16 a 20 y 21 a 25 vuelven sobre el precio minimo y la disposicion del equipo |
+| **`decision_de_vender_startup`** | **25 pasos**, Horowitz **declarado dos veces con dos grafias**, y el material repetido tres veces: los pasos 11 a 15, 16 a 20 y 21 a 25 vuelven sobre el precio minimo y la disposicion del equipo . **CORRECCION DECLARADA ADITIVA, 14 ago 2026 (vuelta 21): MANDA EL 34, y el 25 y su tramo se quedan enteros arriba.** Adjudicada por el acta de la vuelta 20 del auditor (seccion 4, punto 1), **que la midio con git**: el blob de `dataset/metadata/master_graph.json` es IDENTICO en `0e5e0c60` (9 ago, ultimo commit que toca el grafo), en `23f9ac32` (11 ago, el commit que CREA este archivo) y en HEAD, asi que **el nodo YA tenia 34 pasos el 11 ago: el 25 era PARCIAL DE NACIMIENTO, no un nodo que crecio**. Reproducido hoy con instrumento propio (`scripts/loop/vuelta21_registros.py`): **34** pasos en el grafo de hoy, **34** leidos del blob de `23f9ac32`, y los tres blobs con la misma firma `bb423c06`. **La frontera vigente (1 a 10 / 11 a 34) ya esta impresa en la tabla de la vuelta 20 de este archivo y se CITA, no se recuenta; el caracter del hallazgo (no es un simple apendice) queda.** |
 
 > **Los tres son costura Y injerto a la vez**, y por eso van con **TOQUE UNICO**:
 > se separa el apendice y se desteje la repeticion **en el mismo acto**.
@@ -355,6 +355,18 @@ lo estaba, en `RECORTE_POSICIONAL.md`, y esta subseccion la reproduce desde el g
 verificada**, que es lo que aquel doc no hacia (*"NO ADJUDICA. La lista es de candidatos a injerto,
 y su verificacion es por lectura"*, dice el suyo). Los pasos enteros de los catorce estan en la
 salida de `scripts/loop/vuelta20_horowitz.py`; aqui va el saldo de la lectura.
+
+> **CORRECCION DECLARADA ADITIVA, 14 ago 2026 (vuelta 21), y las dos frases de arriba se quedan
+> ENTERAS: LA NOMINA DE LOS 13 SI ESTA ESCRITA, y SI se puede decir cual sobra.** Vive en
+> [`OPERACIONES.jsonl`](OPERACIONES.jsonl), **campo `nodos` de `OP-F-04-HOR`** (fecha_corte
+> 2026-08-11, adjudicacion *LEIDOS LOS 13*). **El que sobra es `principio_calidad_mvp`**: medido
+> hoy con `scripts/loop/vuelta21_registros.py`, los **14** del grafo menos los **13** de la
+> operacion dan exactamente ese nodo, y **ninguno de los 13 falta en el grafo**. No queda
+> descubierto: barridas hoy las **71** operaciones, `principio_calidad_mvp` esta en el campo
+> `nodos` de **TRES** (`OP-F-03`, el bloque de Hugos; `OP-D-01`, su destejido entero; y tambien
+> `OP-D-06`, que el acta no nombra). **Lo de arriba fue una BUSQUEDA NEGATIVA CITADA**, la especie
+> que la doctrina prohibe, **y se declara aqui sin borrar la frase que la contiene**. Adjudicado en
+> el acta de la vuelta 20 del auditor, secciones 1 y 5.
 
 | # | nodo | libros declarados | frontera leida | **el bloque de Horowitz** |
 |---:|---|---|---|---|
