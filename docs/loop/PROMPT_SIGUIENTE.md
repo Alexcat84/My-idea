@@ -1,62 +1,70 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
-SESION EJECUTORA. FASE II, RECOMPUTO. MODO DE CIERRE: cero reparaciones de
-nodos.
+SESION EJECUTORA. FASE II, RECOMPUTO. MODO: cero reparaciones de nodos, cero
+operaciones ejecutadas, la FASE III no se abre y pasada-unica no se crea.
+El cribado esta CERRADO en 3.388 de 3.388: docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+NO se toca; las lecturas nuevas de esta vuelta son DIRIGIDAS y se registran en
+su propio documento, como las LD que ya existen.
 
 ====================================================================
-TAREA 1: los cinco puntos de la seccion 5 de la parada archivada
-(docs/loop/paradas/2026-08-14-credito-vuelta-16.md), en este orden
+TAREA 1: registros de las adjudicaciones de la vuelta 17
+(docs/loop/ACTA_AUDITOR.md, VUELTA 17, secciones 3 y 4), cuatro
+correcciones chicas, todas aditivas y con tachado donde aplique
 ====================================================================
-1. Corrige la caida con tachado y sin borrar, en
-   docs/plan/RECOMPUTO_3388.md linea 1042 y en docs/loop/REPORTE.md: el
-   que crecio es gestion_terminacion_franquiciado, de 2 a 3, y remidelo
-   con instrumento propio, no copies la cifra del acta. En el tachado
-   queda escrito que la caida es del ejecutor y que la fuente correcta
-   ya estaba en la nota de OP-U-02.
-2. Marca las 221 lineas viejas como superadas por el corte 3.388, cada
-   una con el puntero a su sucesora (adjudicacion del discutible 1). La
-   lectura aditiva del ejecutor queda, pero hoy esta a medias:
-   10_INVENTARIO.md linea 311 manda al lector a esas entradas como LA
-   fuente para contestar "si un nodo repite", y hoy contesta dos veces
-   con dos nominas y dos cortes.
-3. Pon el aviso con tachado en docs/plan/10_INVENTARIO.md (adjudicacion
-   del discutible 3): sigue declarando acto 221, TOTAL 336 y corte
-   2.117, y su linea 313 dice "todo el inventario es del 11 ago 2026",
-   que ya es falso para el archivo al que ella misma manda. No se
-   regenera la tabla entera (eso es el disparador de 08_VERIFICACION);
-   se le pone el aviso.
-4. Registra el hueco nombrado del discutible 2 en la entrada de OP-I-01:
-   el campo operaciones de las 335 hereda lo que el campo nodos de las
-   operaciones viejas tenga incompleto, y auditarlo operacion por
-   operacion es trabajo de la FASE III.
-5. Sigue la FASE II por donde estaba: los ejemplares de las veinte
-   figuras, el lote de cinco del sales roadmap, la cola de relectura
-   post fusion, el criterio del forastero y las lecturas de acto entero
-   de P.5.
+1. Aviso en docs/plan/00_INDICE.md (adjudicacion del discutible 10):
+   tachado sobre "se ejecutan sesenta y seis operaciones LISTAS" con la
+   cifra de hoy al lado (71, las 71 en LISTA, remidela tu con
+   instrumento propio, no la copies); y en su tabla de lo que queda, la
+   linea de los "cinco pares" del sales roadmap recibe el puntero a la
+   nomina que la vuelta 17 escribio en docs/plan/RECOMPUTO_3388.md
+   (seccion TAREA vuelta 17, punto 4). Ninguna cifra vieja se borra.
+2. La entrada de tipo defecto "pares que una fusion reabre" de
+   docs/plan/INVENTARIO.jsonl (adjudicacion del pendiente de doctrina
+   3): adicion declarada AL FINAL de su campo nota, con el puntero a
+   docs/plan/08_VERIFICACION.md donde la excepcion del 1096 vive con su
+   motivo. La regla escrita en la entrada no se reescribe; solo se le
+   apunta a la fuente completa. Diff de UNA linea modificada.
+3. Una linea mas en el AVISO que gobierna docs/plan/10_INVENTARIO.md
+   (adjudicacion del pendiente de doctrina 1): la frase "sin pares
+   pendientes: no puede crecer" de las notas de acto mide los pares
+   INTERNOS del acto; una componente tambien crece cuando entra un nodo
+   de fuera por una A nueva (asi crecio gestion_terminacion_
+   franquiciado). Las 335 notas NO se reescriben; quien regenere el
+   inventario escribira "no puede crecer POR DENTRO".
+4. La salida de la heuristica de referencias colgando de
+   scripts/plan/simular_destejido.py (adjudicacion del discutible 6):
+   que la propia salida diga con palabras que es AVISO ORIENTATIVO y no
+   veredicto ni rotura. No cambies ningun criterio del simulador.
 
 ====================================================================
-TAREA 2: DECISION DEL FUNDADOR sobre las dos costuras sin dueño
+TAREA 2: la FASE II sigue. Dos bloques, en este orden
 ====================================================================
-lienzo_modelo_negocio y planificacion_recoleccion_datos RECIBEN DUEÑO.
-Antes estaban declaradas sin operacion propia (docs/plan/RECOMPUTO_3388.md,
-seccion 4: "las 31 son costuras confirmadas SIN gemelo vigente" y la
-"lista declarada de las DOS que ademas no tienen dueno en ninguna
-operacion del plan"; docs/plan/CONTROL_MUESTRA_D.md linea 120 anota que
-lienzo_modelo_negocio es una costura de DIECISIETE pasos). Esa
-adjudicacion queda revertida hoy por decision del fundador.
+A. LOS CINCO DEL SALES ROADMAP, LEIDOS COMO DIRIGIDAS (adjudicacion del
+   pendiente de doctrina 4: P.5 los gobierna y son deuda cuantificada).
+   Lee los cinco pares nombrados en RECOMPUTO_3388.md (cuatro de
+   estrategia_de_ventas mas customer_validation_sales_roadmap contra
+   sales_roadmap), con la vara y el patron de registro de las LD
+   existentes (LD_ADOPT_ADVOCATE.md como modelo): numero LD propio,
+   nodos impresos, clase y razon. La pregunta que estas lecturas
+   contestan y que dejas contestada por escrito: el acto
+   customer_validation_sales_roadmap es UNA familia o DOS, y
+   estrategia_de_ventas pertenece o es forastero. Si el resultado abre
+   una correccion al plan (nomina, operacion o inventario), la DECLARAS
+   con su evidencia y NO la ejecutas: va al reporte como propuesta.
+B. LOS EJEMPLARES DE LAS FIGURAS QUE NO NOMBRAN (el bloque que decide el
+   cierre de la FASE II). De las trece sin nombrar, esta vuelta van las
+   DIEZ chicas: todas menos SUBCONJUNTO ESTRICTO (23), LA FIRMA
+   POSICIONAL DEL INJERTO (67/43) y EL PASO DE OFICIO (sin cifra). Para
+   cada una: localiza sus ejemplares con instrumento mas lectura (el
+   grep solo quedo descartado en la vuelta 15), y nombralo en su campo
+   nota de INVENTARIO.jsonl de forma ADITIVA (id de nodo, puesto o LD,
+   el criterio de forma de la vuelta 17), sin tocar ningun otro campo.
+   Para EL PASO DE OFICIO no nombres todavia: ACOTALA primero (cuantos
+   son y donde estan) y deja la cifra medida en su nota. Si el tiempo no
+   alcanza para las diez, checkpoint honesto: cuales quedaron y por que.
 
-Escribe para cada una su operacion de destejido en
-docs/plan/OPERACIONES.jsonl, con el paquete estandar del plan: nomina,
-superviviente o reparto del bloque (que se preserva), simulacion, caso
-positivo, orden y dependencias dentro de la fase que le corresponda.
-Usa la evidencia que el frente de costuras ya midio (docs/plan/
-RECOMPUTO_3388.md seccion 4 y lo que CONTROL_MUESTRA_D.md ya registro
-sobre lienzo_modelo_negocio); no releas los nodos de cero si la
-evidencia ya esta escrita. El plan pasa de 69 a 71 operaciones.
-
-VALVULA: si al escribir alguna de las dos exige lecturas nuevas amplias
-o una decision no medida, esa operacion NO se fuerza: vuelve a
-docs/PENDIENTES.md con la razon escrita, y el plan se queda en 70 o en
-69, declarandolo en el reporte.
+Reporte completo en docs/loop/REPORTE.md con tus discutibles marcados
+ANTES de saber si aciertan, el marcador recomputado, y toda cifra leida
+de la salida de un instrumento corrido EN ESTA VUELTA.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.

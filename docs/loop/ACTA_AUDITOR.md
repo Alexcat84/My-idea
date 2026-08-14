@@ -3563,3 +3563,235 @@ mas 2 caidas de cifra publicada del ejecutor, mas 2 caidas de cifra publicada de
 - Campaña consumada: **no**.
 
 **`docs/loop/PARA_ALEXIS.md` escrito. `docs/loop/PROMPT_SIGUIENTE.md` VACIO. El bucle se detiene.**
+
+---
+
+## VUELTA 17, 14 ago 2026. Auditor: Fable 5. Reporte auditado: la vuelta 17 del ejecutor (Opus 5), FASE II septima vuelta, la primera tras la parada de credito y el cambio de modelos
+
+### 0. El contexto de esta acta
+
+La vuelta 16 termino en PARADA por credito de tanda roto. El fundador decidio la opcion 2 el 14 ago
+2026 (`db6959b6`): ejecutor a Opus 5, auditor a Fable 5, **credito restaurado**, y las dos costuras
+sin dueno reciben dueno. Esta es la primera acta del auditor nuevo; la metrica se continua desde el
+acumulado del acta de la vuelta 16, y **el contador de tandas seguidas con caida arranca en cero**
+por la decision escrita del fundador.
+
+### 1. VERIFICACION: el instrumento mando en todo, y TODO calza
+
+**Hash del trabajo `0ac78fc9`, verificado.** Los commits posteriores (`0cc723b2`, `08cb135c`) tocan
+solo `docs/loop/REPORTE.md`, medido con `git diff --name-only 0ac78fc9 08cb135c`. La separacion
+entre hash del trabajo y hash del reporte que el reporte declara es exacta.
+
+**Las doce rutas del `git diff --stat db6959b6 0ac78fc9`: exactas, y la lista esta COMPLETA.** La
+racha de listas de rutas cortas (dos vueltas seguidas, con la tercera anunciada como caida de
+reporte) **muere en dos**: esta vuelta no falta ninguna ruta. `dataset/` y
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` salen **INTACTOS** (diff vacio, corrido por mi).
+
+**El marcador, recomputado con instrumento propio:** A 583 (17,2), B 89 (2,6), C 7 (0,2), D 2.709
+(80,0); n 3.388, **cero huecos y cero duplicados** por conjunto de puestos. **La tabla de tasa por
+dominio: las diez filas calzan celda por celda**, incluidas `quality` 844 pares 126 A (14,9) y
+`risk_management` 106 pares **cero A**, que es el unico cero del catalogo, tal como el reporte lo
+dice.
+
+**Las 221 superadas de `INVENTARIO.jsonl`, verificadas enteras con instrumento propio:**
+
+- El archivo sigue en **671 lineas**; el diff contra `db6959b6` es **exactamente 221 lineas
+  modificadas, cero altas, cero bajas**, y las otras **450 son identicas byte a byte** (las 335
+  nuevas restauradas y los 115 de los otros cinco tipos).
+- Las 221 llevan el marcador **al frente del campo `estado`** con el texto viejo conservado palabra
+  por palabra al final, y el puntero **al final del campo `nota`** con la nota vieja conservada al
+  frente. **Ninguna otra clave cambio en ninguna de las 221.**
+- Sucesora **unica** 221 de 221 (cero sin sucesora, cero con mas de una), los 335 nombres nuevos son
+  335 distintos, las 335 con `fecha_corte` 2026-08-13, y el puntero cita esa fecha en las 221.
+
+**El acto que crecio, remedido por CUARTA ruta independiente** (pertenencia nodo a componente sobre
+las 335 entradas nuevas, metodo mio distinto de los tres del ejecutor): **220 identicos y UNO que
+crecio, `gestion_terminacion_franquiciado`, de 2 a 3, ganando `perdida_control_operativo`**;
+`construccion_de_leverage` tiene **cinco miembros en los dos cortes**; los 335 componentes cubren
+**854 nodos con cero nodos en dos componentes**. La correccion de la caida de la vuelta 16 queda
+verificada, con su tachado en `RECOMPUTO_3388.md` y la correccion en el propio reporte, ambos
+leidos.
+
+**Los otros tres puntos de TAREA 1, verificados:** el aviso de `10_INVENTARIO.md` esta puesto en sus
+cinco sedes sin regenerar la tabla, y sus cifras remedidas por mi salen exactas (556 filas de acto,
+671 totales, 280 CERRADOS, 55 ABIERTOS, 854 nodos; el mayor con QUINCE miembros,
+`cultura_de_seguridad_interpretivista_funcionalista`, y el de DIEZ, `causas_comunes_vs_especiales`);
+la diferencia de etiqueta declarada tambien verifica (**173 mas 47 mas 1 son los mismos 221**, y la
+una es la junta asesora con "repite, DECISION TOMADA por `OP-M-04`"); la nota de `OP-I-01` cambio
+**solo** en su clave `nota`, de forma aditiva, con el hueco registrado tal como se encargo.
+
+**El plan de 71, verificado:** ids unicos, cero dependencias rotas, las 71 en LISTA, **18 campos las
+71**, las dos nuevas al final, y de las 69 viejas **solo `OP-I-01` cambio** (la nota). Los pares de
+las dos operaciones, remedidos contra el archivo: `lienzo_modelo_negocio` **7 pares, cero A** (543 D,
+784 B, 998 D, 999 D, 1123 D, 1136 D, 1434 D); `planificacion_recoleccion_datos` **1 par, cero A**
+(2695 D). El **784** es el **unico** de los 3.388 cuya razon lleva "NO SE JUZGA HOY", y su razon si
+se nombra "Tercer nodo del archivo que bloquea un par por costura".
+
+**La FASE II bloque por bloque, remedida entera:**
+
+- **La cola post fusion, 7 de 7 con emparejamiento EXACTO** contra `eliminar` y nominas: dos mueren
+  (707 por `customer_discovery_overview` en `OP-M-05-INDICE`, 196 por
+  `fase_acclimate_mapa_de_proceso` en `OP-M-02-ACCLIMATE`), cuatro cambian de texto (253, 224, 591,
+  968), el 1096 entra porque `filosofia_customer_validation` esta en el `eliminar` de
+  `OP-M-05-APERTURA`, y **la baja del 751 verifica: ninguna de las 71 lo elimina**.
+- **El forastero, los dos:** `tacticas_cierre_ventas` 6 pares, 1 A y 5 D, la A en el puesto 221
+  contra `compromiso_linea_tiempo_cliente`; `incentivos_no_monetarios_advocacy` **cero pares en el
+  cribado** y sus dirigidas `LD-28`, `LD-30`, `LD-31` **las tres D** en `LD_ADOPT_ADVOCATE.md`.
+- **El sales roadmap:** 15 posibles, 10 leidos con **6 A y 4 D**, los **cinco que faltan** son
+  exactamente los cinco nombrados, y **cuatro de los cinco cuelgan de `estrategia_de_ventas`**, que
+  tiene **1 de sus 5** leido (el 966).
+- **P.5:** 280 componentes completos, 55 incompletos, **329 pares faltantes**, y las particiones
+  calzan con los 280 CERRADOS y 55 ABIERTOS componente por componente.
+- **Las figuras:** 20; con el criterio declarado (la `nota` trae id, puesto o LD), **7 nombran y 13
+  no**, y el reparto por fecha es exacto: las doce del 11 ago cero, de las ocho del 12 ago siete
+  nombran y una no (`cobrar una A sin fundir`). La cuenta ingenua **119** sale sumando el primer
+  numero del campo `cobertura` de las trece (la reproduje entera), y la corregida **98** cierra por
+  aritmetica con las dos sustituciones declaradas (119 menos 2 mas 5, menos 67 mas 43).
+- **Las 53 familias: 23 contenidas, 14 partidas, 16 sin arista A**, remedidas con la definicion
+  establecida (un miembro suelto tambien parte a la familia).
+
+**Cero guiones largos y cero guiones medios en todo lo tocado, medido.**
+
+> **RESULTADO DE LA VERIFICACION: TODAS las cifras y nombres propios publicados en el reporte 17
+> verifican contra mis propios instrumentos. CERO caidas de clase, CERO de cifra publicada, CERO de
+> reporte.** La primera vuelta del ejecutor nuevo sale limpia, y lo digo con las mediciones delante,
+> no de cortesia.
+
+### 2. RELECTURA CIEGA: cinco pares del territorio de P.5, tres coinciden, y las dos discrepancias son MIAS
+
+**Eleccion declarada:** cinco pares YA LEIDOS dentro de los cinco actos con mayor deuda de P.5 (el
+territorio que la fase va a tocar con las dirigidas), el par mediano por puesto de cada acto,
+seleccion deterministica sin destapar clases. Imprimi resumen y pasos de los diez nodos, adjudique,
+y solo despues destape.
+
+| puesto | mi clase, antes de destapar | archivo | coincide |
+|---:|---|---|---|
+| 2.311 | **D**: la doctrina del error sistemico en dos gestos, dicotomia contra atribucion | **A** | **NO** |
+| 802 | A: mismo nucleo de recortar proyectos y dedicar gente; lo propio cabe en lineas | A | si |
+| 2.740 | **D**: la misma distincion alimenta dos errores distintos, culpar personas contra ajustar el proceso | **A** | **NO** |
+| 611 | A: la introduccion y el resumen operativo del mismo Customer Discovery | A | si |
+| 796 | A: el bucle disenar probar repetir es el paso 4 del marco completo | A | si |
+
+**Tres de cinco, y las dos discrepancias se resuelven a favor del archivo con la evidencia delante:**
+en el **2311** los tres primeros pasos del nodo de Reason caben en el paso 1 del de Dekker y el
+archivo ademas trae que es la QUINTA repeticion del mismo nodo contra cinco supervivientes distintos;
+en el **2740** hay cumulo por transitividad (2501, 2532, 2577) y **mi lectura exacta ya estaba
+escrita dentro del propio veredicto como "discutible marcado leve"**, o sea que mi discrepancia cayo
+DENTRO del marcado del archivo. Concedo las dos.
+
+**La direccion de mis dos errores es inflar la diferencia, la misma familia que el auditor saliente
+declaro cuatro vueltas seguidas.** Cambio el modelo del auditor y el sesgo reaparecio a la primera:
+eso dice que el sesgo vive en la TAREA (tener dos nodos delante y pesar lo distintivo) mas que en un
+modelo, y la defensa sigue siendo la escrita: **medir si lo propio sobrevive contra ESTE companero
+antes de decir D.** Las discrepancias mias no cuentan contra la tanda del ejecutor.
+
+### 3. ADJUDICACIONES: los diez discutibles marcados
+
+1. **La forma del marcado de las 221: QUEDA COMO ESTA.** El esquema identico entre las 221 y las 335
+   es lo que permitio mi propia verificacion campo a campo, y el marcador es un prefijo fijo que una
+   maquina parsea trivialmente. No se anade la clave `superada_por`.
+2. **El orden 8 y 9: QUEDAN AL FINAL.** Renumerar siete operaciones adjudicadas no lo autoriza un
+   criterio de presentacion de un documento de fase; el aviso de `02_DESTEJIDOS.md` ya deja el
+   contrato escrito, y el orden ejecutable de la FASE III sale del `00_INDICE` y de las
+   dependencias, no de ese campo.
+3. **El reparto de `OP-D-08` por P.3: CONFIRMADO LEYENDO EL NODO ENTERO**, que es la lectura que el
+   ejecutor declaro no haber hecho. Los 17 pasos impresos: las cuatro narraciones son del mismo tema
+   y lo propio de los bloques 1 y 3 (post-its, iterar, pivotar; aceptar vacios, pausar, publicar y
+   actualizar) **no tiene casa en la enumeracion 13 a 17**. La poda de "unos cinco pasos" del 1123
+   perderia contenido; el reparto de doce portadores es el escenario correcto.
+4. **El indice de TRES y no cuatro: CONFIRMADO LEYENDO EL NODO ENTERO.** Ningun paso del 5 al 16
+   establece el objetivo ni la pregunta; el paso 14 apunta al "problema tecnico original"; el paso 1
+   se reparte y no se poda. La inferencia de texto del ejecutor queda convertida en lectura, hecha
+   por mi, y la correccion a la ficha es buena.
+5. **El criterio del invariante del simulador: LEGITIMO Y ACOTADO.** La razon del 998 declara la
+   invariancia con sus palabras ("por DEPENDENCIA el veredicto es invariante: sobreviva la copia que
+   sobreviva"). El criterio vale SOLO para razones que declaren la invariancia asi; no se
+   generaliza, y con ese limite el escrupulo del ejecutor queda mirado dos veces, como pedia.
+6. **La heuristica de referencias colgando: SE ETIQUETA.** Va al encargo: su salida dice con
+   palabras que es aviso orientativo y no veredicto, para que nadie la lea como rotura.
+7. **`OP-D-08` en LISTA con pregunta abierta: CUBIERTO POR EL PRECEDENTE Y MEJOR QUE EL
+   PRECEDENTE.** `OP-D-01` esta LISTA con una decision de narracion abierta en su `preservar` (y de
+   ella depende la clase del par 494); la pregunta de `OP-D-08` ademas trae sus DOS ramas escritas
+   con su regla de decision, o sea el texto alcanza para ejecutarse sin decidir fuera de el.
+8. **El criterio de forma de 119 y 98: VALE COMO TAMANO.** Publicado con doble definicion, y el
+   propio reporte dice que no es la medicion que la fase espera. Nada que corregir.
+9. **El aviso no pedido de `02_DESTEJIDOS.md`: BIEN PUESTO.** Es la misma clase de desfase que el
+   encargo mandaba tapar en `10_INVENTARIO.md`, y la doctrina ya adjudicada dice que una cifra vieja
+   sin aviso es una cifra que miente. La iniciativa fue correcta y declarada.
+10. **`00_INDICE.md` desfasado y dejado a proposito: LA CONTENCION FUE CORRECTA.** El aviso va al
+    encargo de la vuelta 18 como registro, no como iniciativa.
+
+### 4. PENDIENTES DE DOCTRINA: los cuatro, adjudicados SIN doctrina nueva
+
+1. **La frase "no puede crecer" de la formula de las notas de acto: extension del aviso de la
+   vuelta 16** (una formula que promete mas de lo que mide recibe AVISO en el punto de lectura, no
+   regeneracion). Encargo: una linea en el AVISO que ya gobierna `10_INVENTARIO.md`, diciendo que la
+   frase mide los pares INTERNOS y que una componente tambien crece cuando entra un nodo de fuera
+   por una A nueva; y quien regenere las notas escribe "sin pares internos pendientes: no puede
+   crecer POR DENTRO". **Las 335 notas NO se reescriben hoy.**
+2. **P.7 y los destejidos: NO hace falta extender P.7.** El modo de ejecucion continua (decision del
+   fundador, 13 ago 2026, escrita en `AUDITOR.md` y `EJECUTOR.md`) ya obliga **"simulacion previa
+   sobre copia en memoria" POR OPERACION**, sin distinguir mesa de destejido. Las siete `OP-D-*`
+   viejas quedaran simuladas al ejecutarse, con `scripts/plan/simular_destejido.py` como
+   instrumento ya existente. Nada corre hacia atras y P.7 queda como esta.
+3. **La entrada `defecto` que copia la regla sin su excepcion: CARGA EL PUNTERO.** Una copia que
+   leida sola contradice a su fuente recibe una adicion declarada a su `nota` apuntando a
+   `08_VERIFICACION.md`, donde la excepcion del 1096 vive con su motivo. No se reescribe la regla en
+   la entrada: se apunta a la fuente completa. Va al encargo.
+4. **El sales roadmap: las dos preguntas conviven y cada una tiene su regla.** El motivo escrito
+   ("leerlos cierra cobertura, no cambia forma") queda en pie para LA CLASE DEL RACIMO. La pregunta
+   de P.5 (UNA familia o DOS) la gobierna P.5, y sus cinco pares ya estan cuantificados como deuda
+   de P.5. **Se leen como dirigidas antes de cualquier fusion del acto, y van al encargo de esta
+   vuelta.**
+
+### 5. LAS DOS PREGUNTAS del reporte
+
+1. **Los 17 pasos declarados contra los 16 medidos de `planificacion_recoleccion_datos`:** queda
+   como esta, hueco nombrado dentro de `OP-D-09`. Decidirlo exige la fuente, que esta fuera del
+   repo. Nada que encargar.
+2. **Si la FASE II cierra sin los ejemplares de las veinte figuras:** contestada por el registro
+   escrito, sin necesidad del fundador: la parada de la vuelta 16 (seccion 6) dice que ese bloque
+   **"es el que decide cuando cierra la FASE II"**, y no existe decision escrita que lo difiera.
+   **El trabajo continua y el bloque se ataca ya.**
+
+### 6. ERRORES PROPIOS DE ESTA VUELTA, declarados con nombre
+
+- **Dos discrepancias ciegas, las dos inflando la diferencia** (2311 y 2740), concedidas con la
+  evidencia delante. Primera vuelta mia y el patron de la casa ya me alcanzo.
+- **Cuatro falsos positivos de instrumento propio durante la verificacion, ninguno publicado:** el
+  "784" que encontre en `docs/plan/` era el puesto 1784 de environmental (subcadena, no numero); el
+  "tercer nodo" que no encontraba era una mayuscula; mi primera cuenta de familias dio 36, 1 y 16
+  por usar una definicion distinta de la establecida; y mi primera cuenta de figuras dio 8 y 12 por
+  contar el campo `miembros` ademas de la `nota`. **Las cuatro veces la remedicion con el criterio
+  correcto absolvio al ejecutor.** La regla que me salvo es la de siempre: reproducir el criterio de
+  la cifra vieja antes de declararla mala.
+
+### 7. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 16: **31 relecturas, 382 puestos, 7 caidas de clase, mas 2 caidas de reporte
+del ejecutor, mas 2 caidas de cifra publicada del ejecutor, mas 2 caidas de cifra publicada del
+auditor.** Credito de tanda **RESTAURADO** por decision del fundador (14 ago 2026): el contador de
+tandas seguidas arranca en cero.
+
+Esta vuelta: **mas 1 relectura, mas 5 puestos**; **CERO caidas del ejecutor de cualquier especie**;
+dos discrepancias ciegas mias que no prosperaron; y la racha de imprecisiones de rutas **muere en
+dos** (la lista de esta vuelta esta completa, doce de doce).
+
+**Acumulado: 32 relecturas, 387 puestos, 7 caidas de clase, mas 2 caidas de reporte del ejecutor,
+mas 2 caidas de cifra publicada del ejecutor, mas 2 caidas de cifra publicada del auditor. Tandas
+seguidas con caida: CERO.**
+
+### 8. CONDICIONES DE PARADA: NINGUNA SE CUMPLE
+
+- Doctrina nueva: **no.** Los cuatro pendientes se adjudicaron por extension citada (el aviso de la
+  vuelta 16, el modo de ejecucion continua del 13 ago 2026, el puntero a la fuente, y P.5).
+- Contradiccion sin resolver: **no.**
+- Decision de fundador: **nada reservado se toco.** `dataset/` intacto, veredictos intacto, cero
+  merges, cero operaciones ejecutadas, FASE III sin abrir, `pasada-unica` sin crear.
+- Fallo tecnico: **no.** Arbol limpio, hook corrido, cero guiones.
+- Credito de tanda: **restaurado, y esta vuelta CERO caidas.**
+- Apertura de la FASE III: **no aplica.** La FASE II sigue abierta: le quedan los ejemplares de las
+  figuras (el bloque que decide su cierre) y la deuda de P.5.
+- Campana consumada: **no.**
+
+**`docs/loop/PROMPT_SIGUIENTE.md` escrito. El bucle sigue.**
