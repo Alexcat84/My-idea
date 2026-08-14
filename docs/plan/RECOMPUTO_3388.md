@@ -1039,8 +1039,44 @@ componente de `RECOMPUTO_3388_COMPONENTES.jsonl` cuyo `miembros` CONTIENE entero
 viejo (superset). **Resultado: los 221 de 221 tienen exactamente UN sucesor, y ninguno tiene mas de uno.**
 Dicho de otro modo: **la componente conexa nunca se parte entre el corte 2.117 y el 3.388** (esperable,
 porque las aristas A solo se agregan, nunca se retiran, asi que un componente solo puede crecer o quedarse
-igual). **De los 221, 220 son identicos en tamano y 1 crecio** (`construccion_de_leverage`, la
-"competencia entre inversores", de 4 a 5 miembros, ya documentado en la ficha del racimo).
+igual). **De los 221, 220 son identicos en tamano y 1 crecio** (~~`construccion_de_leverage`, la
+"competencia entre inversores", de 4 a 5 miembros, ya documentado en la ficha del racimo~~
+**`gestion_terminacion_franquiciado`, de 2 a 3 miembros, ganando `perdida_control_operativo`**).
+
+> **CORRECCION DECLARADA, vuelta 17, 14 ago 2026. LA CAIDA ES DEL EJECUTOR, no del auditor ni del
+> archivo.** El conteo "220 identicos y 1 crecio" siempre estuvo bien; **el NOMBRE se copio de una nota
+> vieja de otro objeto y de otra epoca en vez de leerse de la salida del instrumento que acababa de
+> correr.** Es la misma especie de fallo que la caida de la vuelta 15 (banco 9.10 y regla 1 de
+> `docs/loop/EJECUTOR.md`, adoptada por esta caida): el instrumento corriendo y la afirmacion saliendo
+> de otro sitio.
+>
+> **LA FUENTE CORRECTA YA ESTABA ESCRITA EN EL PROPIO PLAN, y no se leyo:** la nota de `OP-U-02` en
+> `docs/plan/OPERACIONES.jsonl` dice, con esas palabras, *"CUARENTA Y DOS siguen abiertos identicos y
+> UNO crecio (`gestion_terminacion_franquiciado` con `terminacion_franquiciado_causas`, de 2 a 3)"*.
+>
+> **REMEDIDO EN LA VUELTA 17 CON INSTRUMENTO PROPIO, no copiando la cifra del acta del auditor:**
+> `scripts/loop/vuelta17_acto_que_crecio.py`, de solo lectura, con **tres metodos independientes que
+> tienen que coincidir o se declara la discrepancia**: (A) superset de los 221 viejos contra
+> `RECOMPUTO_3388_COMPONENTES.jsonl`; (B) superset contra las 335 entradas nuevas de tipo `acto` del
+> propio `INVENTARIO.jsonl`, que es el mismo hecho por otra ruta de datos; (C) sin superset, por
+> pertenencia nodo a componente al corte 3.388, preguntando el tamano de hoy de la componente que
+> contiene al primer miembro de cada acto viejo. **Los tres dan 220 identicos, 1 que crecio, cero sin
+> sucesor y cero con mas de un sucesor, y los tres nombran a `gestion_terminacion_franquiciado`, de 2
+> a 3, ganando `perdida_control_operativo`.** Control previo del metodo C: los 335 componentes cubren
+> 854 nodos distintos con **cero** nodos en dos componentes a la vez.
+>
+> **Y el contraste con el nombre caido, medido y no supuesto: `construccion_de_leverage` tiene CINCO
+> miembros en los dos cortes y no tuvo cuatro en ninguno de los dos.** La cifra "de 4 a 5" no describe
+> a ningun objeto de este archivo en ninguno de los dos cortes.
+>
+> **HALLAZGO DE PASO, que no se pidio y se declara porque toca una formula viva:** la nota vieja de
+> `gestion_terminacion_franquiciado` decia literalmente *"tamano 2. Sin pares pendientes: no puede
+> crecer"*, **y crecio.** La formula mecanica no miente sobre lo que mide (los pares INTERNOS del
+> acto, que en efecto no quedaban pendientes) pero su frase **"no puede crecer" promete mas de lo que
+> mide**: una componente tambien crece cuando un nodo de FUERA entra por una arista A nueva, que es
+> exactamente lo que paso aqui. **Esa misma frase se sigue escribiendo hoy en las 335 entradas
+> nuevas.** Va como PENDIENTE DE DOCTRINA al reporte de esta vuelta; no se toca ninguna nota, porque
+> reescribir la formula de 335 entradas no es una correccion, es una regeneracion.
 
 **Esto cambia el alcance de la condicion (c): NINGUNA de las 221 entradas viejas queda "sin componente
 sucesor".** La condicion (c) esta escrita para el caso que no aparecio: se declara medido, no se fuerza.

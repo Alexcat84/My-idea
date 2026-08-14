@@ -7,8 +7,45 @@ racimo, acto, familia de ids, figura y defecto.
 > que se copia lleva su fecha de corte**. Lo que no existe todavia **se escribe
 > como HUECO NOMBRADO, no se rellena.**
 
-**FECHA DE CORTE DE TODO EL INVENTARIO: 11 ago 2026, cribado al puesto 2.117 de
-3.388.** Se recomputa entero con el disparador de `08_VERIFICACION`.
+~~**FECHA DE CORTE DE TODO EL INVENTARIO: 11 ago 2026, cribado al puesto 2.117 de
+3.388.**~~ Se recomputa entero con el disparador de `08_VERIFICACION`.
+
+> ## AVISO QUE GOBIERNA ESTE DOCUMENTO ENTERO, puesto el 14 ago 2026 (vuelta 17)
+>
+> **ESTA VISTA HUMANA ESTA AL CORTE 2.117 Y SU ARCHIVO FUENTE YA NO.** Adjudicacion del
+> discutible 3 de la vuelta 16 (`docs/loop/ACTA_AUDITOR.md` VUELTA 16 seccion 3, y punto 3 de
+> `docs/loop/paradas/2026-08-14-credito-vuelta-16.md`).
+>
+> **LA TABLA NO SE REGENERA AQUI, A PROPOSITO:** la regla de arriba dice que este documento se
+> recomputa ENTERO con el disparador de `08_VERIFICACION`, y regenerarlo es un trabajo de esa
+> escala, no de esta vuelta. **Lo que se le pone es el aviso, no la cifra nueva en el sitio de la
+> vieja.** Nada se borra: todas las cifras del 2.117 siguen escritas y legibles debajo.
+>
+> **LO QUE HAY QUE SABER ANTES DE LEER UNA SOLA FILA, medido en esta vuelta con
+> `scripts/loop/vuelta17_acto_que_crecio.py` y `scripts/loop/vuelta17_marcar_221_superadas.py`
+> sobre `docs/plan/INVENTARIO.jsonl` (corte de la medicion: 14 ago 2026, sobre el cribado cerrado
+> en 3.388 de 3.388):**
+>
+> | | esta vista dice (corte 2.117, 11 ago 2026) | el archivo fuente tiene hoy (corte 3.388, 13 ago 2026) |
+> |---|---:|---:|
+> | filas de tipo `acto` | **221** | **556**, que son **221 SUPERADAS** mas **335 VIGENTES** |
+> | filas totales | **336** | **671** |
+> | los otros cinco tipos | 53 familias, 20 figuras, 19 defectos, 13 racimos, 10 dominios | **identicos, no se movieron** |
+>
+> **LAS 221 FILAS VIEJAS DEL ARCHIVO FUENTE YA ESTAN MARCADAS UNA A UNA** como `SUPERADA POR EL
+> CORTE 3.388`, **cada una con el puntero a su sucesora vigente** (nombre mas `fecha_corte`
+> 2026-08-13), en su campo `estado` y en su campo `nota`. **Ninguna se borro y ninguna cambio de
+> `fecha_corte`.**
+>
+> **QUE SE PUEDE Y QUE NO SE PUEDE SACAR DE ESTE DOCUMENTO MIENTRAS EL AVISO ESTE PUESTO:**
+>
+> | se puede | NO se puede |
+> |---|---|
+> | leerlo como **el retrato del catalogo al puesto 2.117**, que es lo que fue y sigue siendo cierto de aquel corte | leer ninguna de sus cifras **como el estado de hoy** |
+> | usar sus **razonamientos, formas, fronteras y huecos nombrados**, que no caducaron | citar su **conteo de actos, su total, ni su reparto por tamano** sin decir que son del 2.117 |
+>
+> **EL TOTAL DE HOY ES 671 Y NO ES UNA CORRECCION DEL 336: es otro corte.** El 336 sigue siendo la
+> cifra correcta del 11 ago 2026 y no se toca.
 
 ---
 
@@ -18,11 +55,17 @@ racimo, acto, familia de ids, figura y defecto.
 |---|---:|
 | **dominio** | **10** |
 | **racimo** | **13** |
-| **acto** | **221** |
+| **acto** | ~~**221**~~ **221 al corte 2.117. Ver el AVISO: hoy el archivo fuente tiene 556 filas de tipo `acto`, 221 superadas mas 335 vigentes** |
 | **familia_de_ids** | **53** |
 | **figura** | **20** |
 | **defecto** | **19** |
-| **TOTAL** | **336** |
+| **TOTAL** | ~~**336**~~ **336 al corte 2.117. Ver el AVISO: hoy el archivo fuente tiene 671 filas** |
+
+> **Las cifras tachadas de esta tabla NO estan mal: son del corte 2.117 y siguen siendo correctas
+> de ese corte** (banco 9.21, la cifra vieja no se actualiza sola y no se borra). **Lo que esta
+> mal es leerlas como el estado de hoy.** Las tres filas que no llevan tachado (`familia_de_ids`,
+> `figura`, `defecto`) y las dos de arriba (`dominio`, `racimo`) **se remidieron en la vuelta 17 y
+> siguen identicas en el archivo fuente**, por eso no llevan aviso.
 
 ---
 
@@ -60,26 +103,46 @@ y CUATRO no han entrado nunca.**
 **Un ACTO es una componente conexa de la relacion gemelo** (banco 9.24): si A
 repite con B y B con C, los tres se deciden juntos.
 
-| | |
-|---|---:|
-| **actos** | **221** |
-| nodos implicados | **576** |
-| **CERRADOS**, listos para fundir | **173** |
-| **ABIERTOS**, esperan al recomputo | **48** |
+> **TODA ESTA SECCION ESTA AL CORTE 2.117 Y NO SE REGENERA AQUI. Ver el AVISO de la cabecera.**
+> **Las cifras de hoy, remedidas en la vuelta 17 (14 ago 2026) sobre las 335 filas vigentes de
+> `docs/plan/INVENTARIO.jsonl`, van al lado de cada cifra vieja y no en su lugar.**
+
+| | ~~corte 2.117~~ | **corte 3.388, vigente** |
+|---|---:|---:|
+| **actos** | ~~**221**~~ | **335** |
+| nodos implicados | ~~**576**~~ | **854** |
+| **CERRADOS**, listos para fundir | ~~**173**~~ | **280** |
+| **ABIERTOS**, esperan al recomputo | ~~**48**~~ | **55** |
 
 **POR TAMANO:**
 
-| miembros | actos |
-|---:|---:|
-| 2 | 154 |
-| 3 | 39 |
-| 4 | 12 |
-| 5 | 7 |
-| 6 | 4 |
-| 7 | 2 |
-| 8 | 1 |
-| 9 | 1 |
-| 13 | 1 |
+| miembros | ~~actos al 2.117~~ | **actos al 3.388, vigente** |
+|---:|---:|---:|
+| 2 | ~~154~~ | **244** |
+| 3 | ~~39~~ | **56** |
+| 4 | ~~12~~ | **16** |
+| 5 | ~~7~~ | **7** |
+| 6 | ~~4~~ | **5** |
+| 7 | ~~2~~ | **2** |
+| 8 | ~~1~~ | **1** |
+| 9 | ~~1~~ | **1** |
+| 10 | ~~ninguno~~ | **1** |
+| 13 | ~~1~~ | **1** |
+| 15 | ~~ninguno~~ | **1** |
+
+> **LAS DOS COLUMNAS SON CORRECTAS, cada una de su corte, y por eso conviven.** La columna
+> vigente se midio en esta vuelta contando las 335 filas de `fecha_corte` 2026-08-13 por el largo
+> de su campo `miembros` y por la palabra CERRADO u ABIERTO de su campo `estado`; suma 335 en las
+> dos particiones (280 mas 55, y la columna por tamano).
+>
+> **UNA DIFERENCIA DE ETIQUETA QUE APARECE AL REMEDIR Y SE DECLARA EN VEZ DE CUADRARSE:** contando
+> las 221 filas viejas por la palabra de su campo `estado`, salen **173 CERRADOS, 47 ABIERTOS y
+> UNA que no dice ninguna de las dos**, el acto de la junta asesora, cuyo `estado` dice *"repite,
+> DECISION TOMADA por `OP-M-04`"*. **La fila de arriba dice 48 abiertos porque cuenta a esa entre
+> los abiertos.** No es una caida de nadie ni mueve ninguna decision: **173 mas 47 mas 1 son los
+> mismos 221**, y la del `OP-M-04` no esperaba al recomputo, esperaba a una mesa que ya la
+> resolvio. Se deja escrito para que quien recompute esta vista con `08_VERIFICACION` sepa que
+> ese 48 es una etiqueta y no un conteo distinto.
 
 **LOS SEIS MAYORES, y CUATRO no se funden aqui:**
 
@@ -95,6 +158,14 @@ repite con B y B con C, los tres se deciden juntos.
 > **Cuando un acto es grande, casi nunca es una fusion limpia.** Los de 13, 9 y 7
 > llegaron a serlo **porque el catalogo trato el mismo programa de varias
 > maneras**, y eso es una decision de forma.
+
+> **AVISO SOBRE ESTA TABLA EN CONCRETO, vuelta 17: ~~el acto mayor del catalogo tiene 13
+> miembros~~ ya no.** Remedido sobre las 335 filas vigentes (corte 3.388): **el mayor tiene
+> QUINCE**, `cultura_de_seguridad_interpretivista_funcionalista`, y hay otro de **DIEZ**,
+> `causas_comunes_vs_especiales`. **Los dos estan ABIERTOS y los dos cuelgan solo de `OP-U-02`:
+> no aparecen en esta tabla porque no existian al corte 2.117, no porque se hayan omitido.** El
+> resto de la tabla sigue calzando en su corte. **No se regenera aqui** (disparador de
+> `08_VERIFICACION`): se avisa.
 
 ---
 
@@ -308,12 +379,20 @@ el catalogo produce y que hay que saber distinguir.**
 | si busca | mire |
 |---|---|
 | **que hay en un dominio** | la tabla por dominio, y **compruebe si esta cribado**: cuatro no lo estan |
-| **si un nodo repite** | `INVENTARIO.jsonl`, entradas de tipo `acto`, campo `miembros` |
+| **si un nodo repite** | `INVENTARIO.jsonl`, entradas de tipo `acto`, campo `miembros`, **y de las dos familias de filas SOLO las 335 con `fecha_corte` 2026-08-13**. Las 221 con `fecha_corte` 2026-08-11 llevan `SUPERADA POR EL CORTE 3.388` al frente de su `estado` y el puntero a su sucesora en su `nota`: **estan para auditar, no para contestar** |
 | **si una forma es firme** | el campo `cobertura`. **Toda forma con cobertura incompleta es PROVISIONAL** (banco 9.26) |
 | **quien toca un sujeto** | el campo `operaciones` de su entrada |
-| **cuando caduca lo que lee** | el campo `fecha_corte`: **todo el inventario es del 11 ago 2026** |
+| **cuando caduca lo que lee** | el campo `fecha_corte`, **fila por fila y no en bloque**. ~~**todo el inventario es del 11 ago 2026**~~ **YA NO ES CIERTO del archivo al que esta misma tabla manda**: `INVENTARIO.jsonl` tiene hoy DOS cortes conviviendo, 336 filas del 11 ago 2026 (corte 2.117) y 335 filas del 13 ago 2026 (corte 3.388). **ESTE DOCUMENTO si es entero del 11 ago 2026** |
 
 > **LA ADVERTENCIA QUE GOBIERNA TODO EL DOCUMENTO: este inventario describe UN
 > CATALOGO A DOS TERCIOS DE LEER.** 2.117 pares de 3.388, y cuatro dominios sin
 > entrar. **Lo que dice es cierto; lo que no dice es la mayoria.**
+
+> **Y LA SEGUNDA ADVERTENCIA, puesta el 14 ago 2026 (vuelta 17), que no deroga la primera sino
+> que la fecha:** la de arriba sigue describiendo bien **este documento**, que es del corte 2.117.
+> **Pero el cribado se cerro en 3.388 de 3.388 el 13 ago 2026, y el archivo fuente ya lo refleja
+> y este documento no.** O sea que hoy **la advertencia de arriba es el estado de la VISTA, no el
+> del catalogo**. Ver el AVISO de la cabecera. **Cuando `08_VERIFICACION` dispare la regeneracion
+> de este documento, esta segunda advertencia se cae sola y la primera hay que reescribirla con
+> el corte nuevo, no borrarla.**
 
