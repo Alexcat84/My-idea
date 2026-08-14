@@ -16347,7 +16347,27 @@ dominios con `recomputar_marcador.py 3361` (el mas bajo hasta entonces era `comp
 fusion mutua, cero contencion, SEIS casos de "ficha nombrada dentro del paso" (reaparicion, nunca
 funde). Hubs domino-wide, todos D: `busca_el_riesgo_antes_de_que_te_busque` 20 toques,
 `que_hacer_con_un_riesgo_nuevo` 18, `amenaza_y_oportunidad` y `el_riesgo_cambia_con_el_tiempo` 11
-cada uno. PREGUNTA 3 y PREGUNTA 5 sin ejemplar equivalente en el dominio. Detalle completo en
+cada uno, `caza_las_oportunidades_no_solo_amenazas` y `riesgo_no_es_mala_suerte` 9 cada uno,
+`nombra_tus_suposiciones_fragiles` y `cuatro_caminos_ante_un_riesgo` 8 cada uno.
+
+**CORRECCION DECLARADA (vuelta 11, TAREA 1 punto 2 del encargo, sobre la lista de hubs de SIETE
+toques):** `docs/loop/REPORTE.md` de la vuelta 10 (git, superado) publicaba la lista de hubs
+cortando el nivel de siete toques en ~~DOS nodos, `deja_de_ignorar_el_riesgo` y
+`vuelve_a_medir_despues_del_susto`~~. El encargo de esta vuelta, contado por el auditor sobre los
+106 pares, corrigio a CUATRO ("faltan `cultura_que_habla_del_riesgo_sin_miedo` y
+`gestionar_el_riesgo_es_de_adultos`, los dos con siete toques y los dos con cero A"). **Verificado
+aqui con instrumento propio contra el archivo (conteo de apariciones como nodo_a o nodo_b en los
+106 pares de `risk_management`), la cifra correcta es CINCO, no cuatro: falta un quinto nodo que ni
+el reporte original ni la correccion del auditor incluyeron, `el_riesgo_nunca_se_acaba_se_administra`,
+tambien con siete toques y cero A.** Los CINCO nodos con siete toques, todos D en sus siete pares:
+`deja_de_ignorar_el_riesgo`, `vuelve_a_medir_despues_del_susto`, `cultura_que_habla_del_riesgo_sin_miedo`,
+`gestionar_el_riesgo_es_de_adultos`, `el_riesgo_nunca_se_acaba_se_administra`. Ninguna cifra del
+dominio se mueve (sigue en 106 pares, 0 A, 0,0 %): es la MISMA regla del superlativo aplicada dos
+veces, primero por el auditor a mi lista original y ahora por mi a la suya. Ninguna de las dos
+correcciones cerro la lista del todo; esta tercera version, contada con el instrumento sobre el
+archivo entero del dominio, si.
+
+PREGUNTA 3 y PREGUNTA 5 sin ejemplar equivalente en el dominio. Detalle completo en
 `docs/loop/REPORTE.md`.
 
 ### 100.5 BLOQUE DE CIERRE DE `seguridad_digital` (27 pares, 3 A, 11,1 %, corte 3.388, ultimo
@@ -16410,5 +16430,62 @@ encargo siguiente, despues de que el auditor verifique este cierre.
 `086dba0a` (cribado 3.351-3.361, cierra `risk_management`), `1c07d53a` (cribado 3.362-3.388, abre y
 cierra `seguridad_digital`, cierra la Fase I).
 
+### 100.12 CORRECCION DECLARADA (vuelta 11, TAREA 1 punto 1 del encargo): la cita del
+### `entregable_esperado` en los discutibles marcados no era universal
+
+El `docs/loop/REPORTE.md` de la vuelta 10 (git, superado por el commit del reporte de esta vuelta)
+cerraba su punto 1.2 diciendo que en el tramo 3.301-3.388 se cito el `entregable_esperado`
+~~"explicitamente en las tres A (3.363, 3.364, 3.367) y en los ocho discutibles marcados (fuertes y
+simples), como exige la regla"~~. **La cuenta de "ocho" ya estaba mal contra la propia tabla del
+mismo reporte (100.7/100.8 de este informe): el checkpoint 3.301-3.388 tiene ONCE discutibles
+marcados, SEIS fuertes mas CINCO simples, no ocho.** Contado por el auditor con el instrumento sobre
+las razones del archivo: de los once, NUEVE citaban el `entregable_esperado` y DOS NO, el 3.376 y el
+3.382. La aritmetica de la frase original cuadraba (once marcados, tres de ellos A) pero la
+universalidad declarada era falsa. El cribado de los dos pares estaba bien: los dos D se sostienen
+sin tocar la razon de fondo. **Corregido esta vuelta:** se anadio la cita del `entregable_esperado`
+a las razones del 3.376 y del 3.382 con `scripts/corregir_veredicto.py` (sustitucion de razon, misma
+clase D, mismo total de 3.388 veredictos). **Verificado con el instrumento tras la correccion: de
+los once discutibles del tramo, ONCE de ONCE citan hoy el `entregable_esperado`.**
+
 ---
 
+
+## 101. CUATRO ADJUDICACIONES DEL AUDITOR (vuelta 11, sobre el cierre de la Fase I), registradas
+## para que la Fase III las tenga disponibles
+
+**Ninguna de las cuatro toca el marcador ni una sola clase.** Se citan aqui con la regla de la que
+cuelgan, tal como pide el encargo de la vuelta 11.
+
+### 101.a El banco 9.6.3 no bloquea la mutua del 3.363
+
+El 9.6.3 declara sano un par cuando lo que queda fuera del solape es procedimiento en los dos lados
+**que lleva a destinos distintos**. En el 3.363 (`getting_started_incident_response` =A=
+`respuesta_incidentes_cui`) los dos residuos, el criterio general de reporte por cualquier
+ley/regulacion/contrato de un lado y la prueba del plan con ejercicios de mesa (tabletop) del otro,
+**viven dentro del mismo entregable**: un unico plan de respuesta a incidentes del mismo documento
+NIST SP1318. La fusion se sostiene y el contador de mutuas queda en veintiocho.
+
+### 101.b La vara se aplica sobre `pasos_accionables`, no sobre `resumen_teorico`
+
+En el 3.363, el `resumen_teorico` de `respuesta_incidentes_cui` menciona reportar "segun leyes,
+contratos o politicas", mientras su paso 3 solo cubre contratos federales. **Si el resumen contara
+como acto, ese lado dominaria y la mutua caeria a REPITE.** El acto es el paso; el resumen narra y
+el entregable corrobora sin decidir (misma regla que 98.7: el entregable prueba en negativo, nunca
+en positivo).
+
+### 101.c Cuando el 3.363 se funde, el superviviente conserva LOS DOS residuos
+
+Una fusion mutua que se lleve solo un lado es una perdida de catalogo no declarada. Cuando se
+ejecute la fusion del 3.363 en la Fase III, el nodo superviviente tiene que llevar tanto el
+criterio general de reporte como la prueba con ejercicios de mesa: ninguno de los dos es prescindible.
+
+### 101.d Las tres fusiones nuevas de `seguridad_digital` no abren cola de relectura post fusion
+
+Medido: de los ocho pares del archivo que tocan los seis nodos de las tres A del checkpoint
+(3.363, 3.364, 3.367), TRES son las propias A y CINCO son D; cero B y cero C. El 08_VERIFICACION
+admite en la cola de relectura post fusion solo pares B y C (docs/plan/08_VERIFICACION.md, "LA COLA
+DE RELECTURA POST FUSION"). Los 96 B y C del catalogo entero viven en `core` (94) y `compras` (2);
+ninguno en `seguridad_digital`. Por tanto las tres fusiones de `seguridad_digital` no anaden filas a
+esa cola.
+
+---
