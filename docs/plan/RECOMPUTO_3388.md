@@ -756,3 +756,181 @@ no de medicion) (ya lo declaraba el discutible 2 del reporte de la
 vuelta 13): con 335 actos en vez de 221, el total de entradas del inventario tambien cambia (de 323 a
 al menos 437), pero esa suma no se escribe aqui porque los otros cinco sumandos siguen sin
 recomputarse.
+
+---
+
+## TAREA (vuelta 15): el recomputo del inventario de `OP-I-01` al corte 3.388
+
+**Regla que gobierna esta seccion, la de la FASE II: ninguna cifra publicada queda sin recomputar con
+su corte nuevo.** Toda cifra de cobertura o de conteo que aparece abajo se remidio contra el archivo en
+ESTA vuelta, con instrumento propio (python sobre `docs/plan/INVENTARIO.jsonl`,
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` y
+`docs/plan/LECTURAS_DIRIGIDAS.md`), no copiada de ningun acta ni de ningun encargo.
+
+### 1. El archivo vivo, medido primero, y esta desfasado por DOS vias a la vez
+
+**`docs/plan/INVENTARIO.jsonl` tiene HOY 336 entradas, contadas por el campo `tipo`:**
+
+| tipo | cifra medida hoy | cifra que declara la nota vieja de `OP-I-01` |
+|---|---:|---:|
+| dominio | 10 | 10 |
+| acto | 221 | 221 |
+| racimo | 13 | 13 |
+| familia_de_ids | 53 | 53 |
+| figura | **20** | 12 |
+| defecto | **19** | 14 |
+| **total** | **336** | **323** |
+
+**La nota de `OP-I-01` esta desfasada por dos vias independientes:** por el corte (los 221 actos son del
+corte 2.117, hoy son 335 componentes, TAREA vuelta 14 ya corregida) y por el propio archivo (figura y
+defecto crecieron de 12 a 20 y de 14 a 19 entre el 11 ago 2026 y hoy, por trabajo de plan que no toco el
+cribado). **Las dos vias hay que decirlas**, y las cifras de figura y defecto de arriba (20 y 19) son la
+cuenta real del archivo hoy, no la de la nota.
+
+### 2. Los seis sumandos, cada uno con su instrumento y su dependencia del corte declarada
+
+#### a. Dominios: los diez, con pares leidos y tasa de A al 3.388
+
+**Instrumento: conteo directo de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` por campo `dominio`, las 3.388
+lineas.**
+
+| dominio | pares leidos | A | tasa de A |
+|---|---:|---:|---:|
+| core | 1.445 | 344 | 23,8 % |
+| quality | 844 | 126 | 14,9 % |
+| health_safety | 192 | 45 | 23,4 % |
+| entrega | 171 | 2 | 1,2 % |
+| environmental | 170 | 29 | 17,1 % |
+| compras | 155 | 1 | 0,6 % |
+| franquicias | 148 | 18 | 12,2 % |
+| risk_management | 106 | 0 | 0,0 % |
+| exportacion | 130 | 15 | 11,5 % |
+| seguridad_digital | 27 | 3 | 11,1 % |
+| **total** | **3.388** | **583** | **17,2 %** |
+
+**Los diez dominios y el total (3.388 pares, 583 A) coinciden con el marcador recomputado de la vuelta
+14** (`A 583, B 89, C 7, D 2.709`), verificado de nuevo aqui por suma de columna. **La tasa de quality
+cayo de 24,3 % (corte 2.900, acta vuelta 4) a 14,9 % (corte 3.388)** porque los 355 pares que entraron
+despues del corte 2.900 en ese dominio son mayoritariamente D: es la figura 9.27 (la cola del dominio se
+agota por dentro) actuando sobre el propio quality.
+
+#### b. Actos: 335, con su reparto CERRADOS y ABIERTOS
+
+**Ya medido en la vuelta 14 con `scripts/plan/recomputo_3388.py` sobre
+`docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`: 335 componentes, 280 CERRADOS (sobre 600 nodos: 244 de
+dos, 32 de tres, 4 de cuatro) y 55 ABIERTOS (sobre 254 nodos).** Se cita aqui con su corte, no se
+remide: es el mismo instrumento y el mismo archivo que la TAREA 1 de esta vuelta ya volvio a verificar
+(seccion 2, punto 4 de la vuelta 14 y ACTA_AUDITOR.md VUELTA 14 seccion 1 punto 4).
+
+#### c. Racimos: los trece, cada uno con su nomina y su cobertura remedida (banco 9.26)
+
+**Instrumento: para cada racimo, se generaron los pares posibles (C(n,2)) sobre su nomina vigente y se
+cruzaron contra `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`; donde la cobertura declarada no calzaba solo con
+la cola, se busco la lectura dirigida en `docs/plan/LECTURAS_DIRIGIDAS.md` o en el expediente de la mesa
+correspondiente, y se verifico que esos pares NO estan en la cola (para no contarlos dos veces).**
+
+**Empieza por la supervision de la IA, ya remedida en la TAREA 1 de esta vuelta: 18 de 45 (15 en cola mas
+3 lecturas dirigidas del bloque humano fuera de cola), no 10 de 45.**
+
+| racimo | nomina | pares posibles | cobertura remedida al 3.388 | fuente de lo que esta fuera de cola |
+|---|---:|---:|---|---|
+| el efectivo contra la ganancia | 3 | 3 | 3 de 3 (todo en cola) | ninguna, cobertura completa |
+| la ecuacion de valor | 5 | 10 | 10 de 10 (6 A, 4 D): 5 en cola mas 5 lecturas dirigidas | `LECTURAS_DIRIGIDAS.md` linea 408 |
+| el sales roadmap | 6 | 15 | 10 de 15 (todo en cola) | ninguna encontrada, cobertura incompleta |
+| la competencia entre inversores | 5 | 10 | 7 de 10 (todo en cola) | ninguna encontrada, cobertura incompleta |
+| la junta asesora | 4 | 6 | 6 de 6 (4 A, 2 D): 5 en cola mas `LD-01` | `LECTURAS_DIRIGIDAS.md` linea 76 |
+| los cuadrantes de mercado | 6 | 15 | 15 de 15 (8 A, 7 D): 7 en cola mas 8 lecturas dirigidas | `LECTURAS_DIRIGIDAS.md` linea 372 |
+| build, measure, learn | 8 | 28 | 9 de 28 (todo en cola) | ninguna encontrada, cobertura incompleta |
+| el compromiso contado tres veces | 3 | 3 | 3 de 3 (todo en cola) | ninguna, cobertura completa |
+| la seleccion de canal | 5 | 10 | 10 de 10 (9 A, 1 D): 8 en cola mas `LD-02` y `LD-03` | `LECTURAS_DIRIGIDAS.md` lineas 95 y 112 |
+| **la supervision de la IA** | 10 | 45 | **18 de 45** (8 A, 10 D): 15 en cola mas 3 lecturas dirigidas | TAREA 1 de esta vuelta |
+| la mesa unida de puertas y portafolio | 17 | 136 | 49 de 136: 23 en cola mas 26 de `LD_MESA_UNIDA.md` | `EXPEDIENTE_MESA_UNIDA.md` linea 291 |
+| el racimo del pivote | 7 | 21 | 13 de 21 (todo en cola) | ninguna encontrada, cobertura incompleta |
+| la serie de Coleman | 28 | 378 | 45 de 378: 41 en cola mas `LD-28` a `LD-31` (4 D) | `EXPEDIENTE_MESA_COLEMAN.md` linea 41 y nota de `INVENTARIO.jsonl` |
+
+**RESULTADO: DOCE de los trece racimos VERIFICAN IDENTICOS a la cifra que ya tenia `INVENTARIO.jsonl`,
+puesto por puesto y clase por clase, sin que ningun pareto nuevo entrara a sus nominas entre el corte en
+que se midieron y el 3.388.** El unico que cambio es **la supervision de la IA**, corregido en la TAREA 1
+de esta misma vuelta (10 de 45 falso, 18 de 45 real). El numero de racimos con nombre sigue en **TRECE**:
+no aparecio ninguno nuevo ni se fusiono ninguno.
+
+#### d. Familias de ids, figuras y defectos: cuales dependen del corte y cuales no
+
+**Familias de ids (53): NO DEPENDEN DEL CORTE DEL CRIBADO.** Cada familia es un cluster de ids del
+catalogo que comparten raiz (sufijo, particula u orden), medible directo de los ids en
+`master_graph.json` sin abrir ni un veredicto: verificado en esta vuelta que las 53 declaradas siguen
+siendo 53 en el archivo (seccion 1). **Lo que SI depende del corte es si cada familia CONTINUA o REPITE
+(su fusion), y eso YA esta medido, no en esta tabla sino en el recomputo de actos del punto (b):** las 53
+familias de ids son el mismo tipo de objeto que las componentes conexas de `RECOMPUTO_3388_COMPONENTES.jsonl`
+(el propio caso citado en `ACTA_AUDITOR.md` VUELTA 14, la familia `accion_correctiva`, vive en las dos
+fuentes). Remedir aqui su estado uno por uno duplicaria, sin instrumento nuevo, lo que el punto (b) ya
+recomputo. **Se declara: conteo NO remedido por no depender del corte; estado ya cubierto por (b).**
+
+**Defectos (19): NO DEPENDEN DEL CORTE DEL CRIBADO.** Son defectos de estructura del catalogo (alias
+huerfanos, campos sucios, injertos de fuente, grafias no canonicas, etc.), contados sobre el grafo y
+sobre las operaciones de saneamiento (`OP-S-*`) ya ejecutadas; ninguno de los 19 se mide leyendo pares.
+**Se declara: NO se remiden, por no depender del corte.** El conteo de 19 (contra los 14 de la nota
+vieja) es la unica correccion que les toca, y es de archivo desactualizado, no de cribado (seccion 1).
+
+**Figuras (20): SI DEPENDEN DEL CORTE DEL CRIBADO, y NO se remiden esta vuelta.** Las figuras de lectura
+(SUBCONJUNTO ESTRICTO, ESTRELLA, banco 9.22, 9.23, 9.27, P.2, P.4, etc.) cuentan "ejemplares": pares
+concretos cuya razon de veredicto encaja en el patron. Doce de las veinte tienen `fecha_corte` 2026-08-11
+(el corte viejo, 2.117) y el cribado sumo 1.271 pares desde entonces (183 de ellos A). **Probe un
+instrumento mecanico** (grep del nombre de cada figura sobre el campo `razon` de las 3.388 lineas) **y lo
+DESCARTO como cifra publicable**: da conteos que NO calzan con los "ejemplares" declarados en ningun
+sentido fiable (por ejemplo ESTRELLA da 17 menciones de la palabra contra 9 ejemplares declarados, y
+TRIANGULO ABIERTO da 0 contra 2 declarados), porque el patron no se decide por si el texto NOMBRA la
+figura sino por si el PAR CALZA con su forma, que es juicio sobre el contenido del par, no conteo de
+palabra. **Remedir las veinte con fidelidad exige releer y clasificar contra cada patron los pares nuevos
+desde su corte, trabajo de la misma escala que la regeneracion de actos del punto 4 de abajo: no se
+gasta ese alcance sin que se encargue.** Se trae como PENDIENTE DE MEDICION, no como cifra: el conteo de
+20 figuras-tipo (contra las 12 de la nota vieja) SI se corrige en la seccion 1 porque es conteo de filas
+del archivo, no de ejemplares.
+
+### 3. EL TOTAL NUEVO, con las dos cifras viejas al lado y sin fusion oculta
+
+| total | cifras | corte |
+|---|---:|---|
+| la nota vieja de `OP-I-01` | 323 (221 actos, 53 familias, 14 defectos, 13 racimos, 12 figuras, 10 dominios) | 2026-08-11, puesto 2.117 |
+| el archivo medido hoy, tal cual esta escrito | 336 (221 actos, 53 familias, 19 defectos, 13 racimos, 20 figuras, 10 dominios) | 2026-08-13, sin corregir la cifra de actos |
+| **EL TOTAL NUEVO, recomputado al corte 3.388** | **450** (**335** actos, 53 familias, 19 defectos, 13 racimos, 20 figuras, 10 dominios) | **2026-08-13, corte 3.388** |
+
+**El total nuevo (450) sustituye SOLO la cifra de actos (221 a 335) sobre el archivo medido hoy (336);
+los otros cinco sumandos no cambian de conteo porque no dependen del corte del cribado (seccion 2.d).**
+**Parte que NO se midio dentro de este total: los "ejemplares" internos de las veinte figuras** (su
+conteo-de-filas si esta en el 450, pero cuantos ejemplares tiene cada una no se remidio, seccion 2.d).
+**El total de 450 no incluye entradas nuevas escritas al archivo: las 335 lineas de tipo acto NO se
+regeneraron (punto 4).**
+
+### 4. DISCUTIBLE MARCADO: el PLAN de regenerar las 221 entradas de tipo `acto`, sin ejecutar
+
+**No se regeneran esta vuelta, por instruccion expresa del encargo. El plan, para que el auditor lo
+adjudique:**
+
+- **Que campos llevaria cada una de las 335 entradas nuevas**, calcados de la unica entrada de tipo
+  `acto` que hoy existe (`nombre`, `miembros`, `forma`, `cobertura`, `estado`, `operaciones`,
+  `fecha_corte`, `nota`). **Dos campos no salen directo de la fuente y hay que derivarlos**: `nombre`
+  (hoy es el id del primer miembro; `RECOMPUTO_3388_COMPONENTES.jsonl` no trae nombre, solo `miembros`) y
+  `operaciones` (hoy es una busqueda cruzada contra las nominas de las 69 operaciones de
+  `OPERACIONES.jsonl`, no un campo del archivo de componentes).
+- **De que instrumento sale cada campo**: `miembros`, `tamano`/`posibles`/`leidos`/`en_cola_sin_leer`/
+  `fuera_de_cola`/`clases_internas`/`estado` vienen literales de
+  `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`; `cobertura` se arma con esos cinco numeros en el formato
+  de texto que ya usan las 221 entradas viejas; `operaciones` exige el cruce nuevo contra
+  `OPERACIONES.jsonl` descrito arriba; `nota` no tiene fuente mecanica y quedaria vacia o generica si no
+  se escribe a mano.
+- **Cuantas lineas se escriben y se borran**: se BORRAN 221 lineas de tipo `acto` y se ESCRIBEN 335,
+  **neto +114 lineas** en `docs/plan/INVENTARIO.jsonl`; `docs/plan/10_INVENTARIO.md` (la vista humana)
+  tambien cambiaria su tabla de actos si la trae completa (no se verifico si la trae hoy, fuera de
+  alcance de este plan).
+- **Que citas de otros documentos se romperian**: ninguna cita textual por nombre de acto especifico se
+  encontro en la busqueda de esta vuelta (`grep` de "221 actos"; ocho archivos citan la CIFRA, ninguno
+  cita un `nombre` de acto individual de la lista vieja como si fuera a seguir existiendo). **El riesgo
+  no es de citas rotas: es de que la nota `nota` de las 221 entradas viejas (texto escrito a mano en
+  algunos casos) se pierda si se sobrescribe sin copiarla.**
+- **Cuanto cuesta**: generar los 335 registros con los cinco campos mecanicos es un script corto (minutos);
+  el cruce `operaciones` contra 69 nominas es mecanico tambien pero mas lento (recorrer 335 por 69); el
+  campo `nota` no tiene atajo mecanico honesto y, si se quiere con el mismo nivel de detalle que las 221
+  viejas, es trabajo de lectura y redaccion por acto, la misma escala que escribir 335 fichas cortas.
+
+**No se decide aqui: se trae la pregunta, igual que el discutible de `OP-L-03` en la vuelta 14.**
