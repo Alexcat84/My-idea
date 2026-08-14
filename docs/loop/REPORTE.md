@@ -1,352 +1,347 @@
-# REPORTE de la vuelta 23 del ejecutor (Opus 5). FASE III, EJECUCION, rama `pasada-unica`
+# REPORTE de la vuelta 24 del ejecutor (Opus 5). FASE III, EJECUCION, rama `pasada-unica`
 
 **Fecha de corte de TODO lo que va aqui: 14 ago 2026.** Cada cifra y cada nombre propio
-de este reporte salio de un instrumento corrido EN ESTA VUELTA. Donde cito el reporte
-de la vuelta 22 o un acta, lo digo y lo pongo como CONTRASTE, nunca como fuente.
+salio de un instrumento corrido EN ESTA VUELTA. Donde cito un acta o un reporte anterior
+lo digo y lo pongo como CONTRASTE, nunca como fuente (regla 1 de `EJECUTOR.md`).
 
 ---
 
 ## 0. EL TITULAR
 
-**EL ENCARGO QUE RECIBI YA ESTABA EJECUTADO. `docs/loop/PROMPT_SIGUIENTE.md` es BYTE
-IDENTICO al encargo de la vuelta 22, y lo demuestra el hash de blob, no una impresion:
-`362492c3b145e2d1643a3db9b0659fdd03364b7b` en el commit `bd782052`, en `HEAD` y en el
-disco, con CERO commits que lo hayan tocado desde entonces.** La causa esta medida en la
-seccion 1: **la sesion del auditor de la vuelta 22 murio con un error de API antes de
-escribir su acta y antes de escribir el encargo nuevo.**
+**LA FASE 0 ESTA CERRADA.** `OP-S-07` se ejecuto por su letra nueva y `OP-C-04` se
+desbloqueo y se ejecuto detras. Las dos con Gate 0 verde por el ciclo escrito y las tres
+suites en verde.
 
-**Lo que hice, y por que no es rellenar:** por la regla 1 de `EJECUTOR.md` (EL
-INSTRUMENTO MANDA) nada de la vuelta 22 es fuente de una cifra mia. Asi que **corri el
-encargo entero otra vez contra el HEAD de hoy**, midiendo todo desde cero. Resultado:
+| operacion | estado al cerrar esta vuelta |
+|---|---|
+| `OP-C-01`, `OP-C-02`, `OP-C-03`, `OP-S-06` | ya estaban en `HEAD` (vueltas anteriores) |
+| **`OP-S-07`** | **EJECUTADA**: 66 enlaces retirados en 59 ficheros, commit `82ee608a` |
+| **`OP-C-04`** | **EJECUTADA**: las dos guardas en Gate 0, commit `96c14726` |
+| `OP-C-05` | **DIFERIDA** por su `depende_de` (`['OP-S-12']`), como el encargo manda |
 
-- **TAREA 1: los dos registros estan puestos y verificados hoy.** No los duplique.
-- **`OP-C-01`, `OP-C-02`, `OP-C-03`, `OP-S-06`: verificadas vivas en el codigo de hoy**,
-  con Gate 0 verde por el ciclo escrito y las tres suites en verde.
-- **`OP-S-07`: LA PARADA SE REPRODUCE, y la reproduje ejecutandola, no leyendola.**
-  Retire los 33 enlaces, corri Gate 0, y **los 33 volvieron**. La causa quedo medida
-  contra el log del propio validador.
-- **`OP-C-04`: BLOQUEADA por su `depende_de` medido hoy** (`['OP-S-06', 'OP-S-07']`).
-- **`OP-C-05`: DIFERIDA por el suyo** (`['OP-S-12']`), como el encargo manda.
+**LA PRUEBA DE QUE EL CAMINO A ERA EL BUENO, y es una cifra, no un argumento:**
+`dataset/metadata/phase1_run_log.json` traia **33 entradas** en `symmetrize_added` cuando
+la vuelta 23 retiro solo las 33 vivas, y **hoy trae CERO**. El paso 5 del validador ya no
+tiene nada que refabricar porque lo que proyectaba la sombra se retiro con ella.
 
-**`dataset/` termina esta vuelta IDENTICO a HEAD**, verificado por hash de blob tras
-restaurar. **Nada de `OP-S-07` quedo commiteado.**
-
-**Y traigo material NUEVO Y MEDIDO que corrige una lectura del reporte anterior:** la
-cifra de 81 auto aristas del lado deprecado **no existe bajo el criterio que la
-verificacion de `OP-S-07` tiene escrito**. Existe bajo otro criterio, que nadie ha
-escrito todavia. Seccion 5.
+**Y EL MODO CONTINUO SE DETIENE EN LA FASE 01.** Segui a `01_FUENTES` como el encargo
+manda. **`OP-F-01` verifica en verde hoy** (seccion 6). **`OP-F-02` y `OP-F-04-HOR` NO
+alcanzan para ejecutarse sin decidir**, y ademas **chocan entre si sobre un nodo**. Es la
+condicion de parada que el propio encargo nombra. **No elegi ninguna salida.** Seccion 7.
 
 ---
 
-## 1. POR QUE EL ENCARGO LLEGO REPETIDO, MEDIDO
+## 1. HASH, RUTAS Y ESTADO DE PARTIDA
 
-| que mire | comando | resultado de hoy |
-|---|---|---|
-| el encargo en `HEAD` | `git rev-parse HEAD:docs/loop/PROMPT_SIGUIENTE.md` | `362492c3b145e2d1643a3db9b0659fdd03364b7b` |
-| el encargo en `bd782052` (el de la vuelta 22) | `git rev-parse bd782052:...` | **el mismo blob** |
-| el encargo en el disco | `git hash-object ...` | **el mismo blob** |
-| quien lo toco desde `bd782052` | `git log bd782052..HEAD -- ...` | **nadie, cero commits** |
-| el acta de la vuelta 22 | `grep -cin "vuelta 22" docs/loop/ACTA_AUDITOR.md` | **0** |
-| la ultima cabecera del acta | `grep -n "^## "` | **`VUELTA 21`**, linea 4.579 |
+**HEAD al empezar: `ba109e5ea483f32df1b1763a2930ef204343f347` (`ba109e5e`)**, rama
+`pasada-unica`, arbol **limpio** y **ya empujado** (`git log origin/pasada-unica..HEAD`
+salio vacio). **No habia nada pendiente que commitear antes de tocar nada** (regla 2).
 
-**LA CAUSA, leida de `docs/loop/ultimo_auditor.json`:** `"is_error": true`,
-`"terminal_reason": "api_error"`, `"result": "API Error: Connection lost mid-response.
-The response above may be incomplete."`, modelo `claude-fable-5`, `duration_ms` 851.409.
-**El auditor de la vuelta 22 se corto a mitad de respuesta.** Por eso no hay acta 22 y
-por eso `PROMPT_SIGUIENTE.md` sigue siendo el de la 22.
+**HEAD al cerrar: `96c14726`**, empujado a `origin/pasada-unica`, mas el commit de este
+reporte.
 
-`docs/loop/ultimo_ejecutor.json` esta **vacio, cero bytes**, asi que no da informacion.
+**LOS DOS COMMITS DE TRABAJO DE ESTA VUELTA:**
 
-> **ESTO NO ES UNA PARADA POR CONTRADICCION.** Un encargo repetido no contradice ninguna
-> regla vigente ni ninguna cifra publicada. Lo trato por la regla 1: **vuelvo a medirlo
-> todo**, y lo declaro aqui arriba para que nadie lea esta vuelta como una vuelta nueva
-> de trabajo nuevo. **La decision de que hacer con el bucle es de quien tiene esa pluma,
-> no mia** (seccion 8, pregunta 1).
+| commit | que trae |
+|---|---|
+| `82ee608a` | `OP-S-07` ejecutada, mas la TAREA 1 en `docs/plan/08_VERIFICACION.md` |
+| `96c14726` | `OP-C-04` ejecutada, con su caso positivo corrido en los dos sentidos |
 
----
+**RUTAS TOCADAS**, y ninguna otra:
 
-## 2. HASH, RUTAS Y ESTADO DE PARTIDA
+| ruta | que se toco |
+|---|---|
+| `dataset/nodos/` | **59 ficheros**, solo `nodos_previos` y `nodos_siguientes`, solo `OP-S-07` |
+| `dataset/metadata/master_graph.json` | recompilado por el ciclo de Gate 0 |
+| `web/lib/assets/` | `master_graph.json` y `manifest.json`, por `sync_assets_web.py` |
+| `scripts/run_phase1.py` | las dos guardas de `OP-C-04`, dentro de `step7_validate` |
+| `docs/plan/08_VERIFICACION.md` | el registro de la TAREA 1 |
+| `scripts/loop/` | dos instrumentos nuevos de esta vuelta |
+| `docs/loop/` | este reporte y las salidas de instrumento |
 
-**HEAD al empezar y al cerrar el trabajo de medicion: `f151051c75ca61ece33cb25b860c0f3e10ea1584`**
-(`f151051c`), rama `pasada-unica`, **ya empujada a `origin/pasada-unica`** (los dos hashes
-coinciden; `git log origin/pasada-unica..HEAD` sale vacio).
-
-**LO PENDIENTE ANTES DE TOCAR NADA (regla 2):** `git status` marcaba
-`dataset/metadata/master_graph.json` como modificado. **No habia nada que commitear:**
-`git diff --quiet` salio con **exit 0** y el hash de blob del disco es identico al de
-HEAD. Es el artefacto de CRLF que la vuelta 22 ya dejo descrito en su pregunta 3, y hoy
-vuelve a medirse igual.
-
-**RUTAS TOCADAS EN ESTA VUELTA:** ninguna de `dataset/`, ninguna de `web/`, ninguna de
-`scripts/`, ninguna de `docs/plan/`. **Solo `docs/loop/`**: este reporte y las salidas de
-instrumento `SALIDA_V23_GATE0_BASE.txt`, `SALIDA_V23_ETIQUETAS_BASE.txt`,
-`SALIDA_V23_OPS07_SIMULACION.txt`, `SALIDA_V23_OPS07_DEPRECADOS.txt`,
-`SALIDA_V23_OPS07_EJECUCION.txt`, `SALIDA_V23_GATE0_OPS07.txt`,
-`SALIDA_V23_OPS07_VERIFICACION.txt`, `SALIDA_V23_OPS07_CAUSA.txt`,
-`SALIDA_V23_GATE0_TRAS_RESTAURAR.txt`, `SALIDA_V23_SUITE_MOTOR.txt`,
-`SALIDA_V23_SUITE_WEB.txt`, `SALIDA_V23_TSC.txt`, `SALIDA_V23_SITIOS_FASE0.txt`,
-`SALIDA_V23_MARCADOR.txt`.
+**CERO cambios en `docs/plan/OPERACIONES.jsonl`**: la TAREA 1 punto 2 pedia LEER las notas
+corregidas, no escribirlas, y no escribi nada ahi.
 
 ---
 
-## 3. TAREA 1: los dos registros, verificados hoy y NO duplicados
+## 2. TAREA 1: los dos registros
 
-### 3.1. `docs/plan/08_VERIFICACION.md`
+### 2.1. El registro nuevo en `docs/plan/08_VERIFICACION.md`
 
-La seccion **QUE ES GATE 0 EN VERDE, y es EL CICLO ESCRITO DE DOS COMANDOS** esta en la
-pagina, **linea 42**, con los dos comandos en su tabla (**lineas 52 y 53**), la aclaracion
-de que la invocacion a secas sale con **exit 2** por diseño, la cita del comentario
-fechado **2026-08-07** en `run_phase1.py` **lineas 941 a 958**, **QUIEN RECOMPILA,
-REAPLICA** en la **linea 955**, y la linea base de **71 etiquetas** con su blob.
+Añadida, **a continuacion de la tabla de los dos comandos** del GATE 0 EN VERDE, la
+subseccion **`REGISTRO: git status NO ES LA VARA DE ESTE FICHERO`**, con lo que el encargo
+dicta: en Windows tocar `master_graph.json` reemplaza LF por CRLF y `git status` lo marca
+como modificado sin que haya cambiado un dato; **eso no es la vara**; la vara es **el hash
+de blob byte identico a HEAD**, que es el comando 2 del ciclo; y quien lea un movimiento en
+`git status` sobre ese fichero sin diferencia de contenido real **no esta viendo una
+regresion**. Añadi ademas la comprobacion barata que lo separa (`git diff --quiet` en exit
+0 y `git hash-object` contra `git rev-parse HEAD:...`).
 
-**No añadi ni una linea: el registro que la TAREA 1 pide ya esta puesto y lo verifique.**
+> **Y EL REGISTRO SE VERIFICO SOLO EN ESTA MISMA VUELTA.** Al commitear `OP-C-04`,
+> `git status` listaba `dataset/metadata/master_graph.json` como modificado mientras
+> `git diff --name-only HEAD -- dataset/` daba **CERO ficheros** y el blob del disco era
+> `8d47ff32`, el mismo de HEAD. **El artefacto que el registro describe se reprodujo en el
+> mismo dia en que se registro.**
 
-### 3.2. `docs/plan/OPERACIONES.jsonl`
+### 2.2. Las notas corregidas, leidas antes de ejecutar
 
-Las dos notas estan puestas, **aditivas**, y las lei enteras hoy:
+Lei enteras las notas de `OP-S-07` y `OP-C-04` en `docs/plan/OPERACIONES.jsonl` (lineas
+**17** y **23**), con sus correcciones declaradas del 14 ago 2026. **No escribi nada ahi**,
+que es lo que el encargo pide. Lo que gobernó mi ejecucion, citado de la letra vigente:
 
-| operacion | longitud de la nota hoy | lo que trae al final |
-|---|---:|---|
-| `OP-C-04` | **1.842 caracteres** | `REGISTRO DE LA ADJUDICACION (2026-08-14 ... vuelta 21, seccion 4, punto 4): LA SEDE DEL CASO POSITIVO DE ESTA OPERACION ES EL ARBOL DE TRABAJO TEMPORAL, NUNCA COMMITEADO ... Nada del texto anterior se borra: esta linea se añade.` |
-| `OP-C-05` | **1.766 caracteres** | `REGISTRO DE LA ADJUDICACION (2026-08-14 ... vuelta 21, seccion 4, punto 5): SE QUEDA EN LA FASE 0, DIFERIDA POR SU depende_de ESCRITO (OP-S-12), sin bloquear nada y SIN CAMBIO DE FONDO ... Nada del texto anterior se borra: esta linea se añade.` |
-
-**EL FICHERO, remedido hoy:** **71 operaciones, 71 ids unicos, CERO dependencias rotas**,
-todas en estado `LISTA`. Reparto por fase: `00_CODIGO` 7, `01_FUENTES` 7, `02_DESTEJIDOS`
-9, `03_FUSIONES` 16, `04_ENLACES` 10, `05_SANEO` 10, `06_MESAS` 5, `07_ADUANA` 2,
-`08_VERIFICACION` 1, `09_LECTURAS_DIRIGIDAS` 3, `10_INVENTARIO` 1.
-
-> **CORRECCION DE UN ERROR MIO, declarada:** mi primer barrido del fichero uso la clave
-> `id` y **revento con `KeyError`**. La clave es **`id_op`**. Quedo corregido en la
-> corrida siguiente y **no alcanzo ninguna cifra publicada**.
+- `OP-S-07` `eliminar`: **66 enlaces** (33 vivos mas 33 reciprocas literales del gemelo
+  deprecado), en **59 ficheros**; las **48 alias contra alias NO se tocan**.
+- `OP-S-07` `verificacion`: **baja en 66 exactamente**, **Gate 0 verde por el ciclo
+  escrito**, **cero auto aristas tras resolver sobre vivos**.
+- `OP-C-04`: la guarda **mide sobre vivos**, los deprecados **fuera** con motivo escrito;
+  `merged_originals` **dentro** de la lista blanca; el caso positivo **en arbol de trabajo
+  temporal, nunca commiteado**.
 
 ---
 
-## 4. TAREA 2: la fase 0, operacion por operacion, medida hoy
-
-### 4.0. LA LINEA BASE: GATE 0 VERDE POR EL CICLO ESCRITO
+## 3. LA LINEA BASE, medida antes de tocar nada
 
 | # | comando | resultado de hoy |
 |---:|---|---|
-| **1** | `python scripts/run_phase1.py --reaplico-curaduria` | **EXITCODE 0** y **`GATE 0: OK`** |
+| **1** | `python scripts/run_phase1.py --reaplico-curaduria` | **EXITCODE 0**, `GATE 0: OK` |
 | **2** | `python scripts/etiquetas_de_cara.py --aplicar` | **71 etiquetas**, blob `6007c1da864ef625796a47cab126a1d717610ffd`, **identico a HEAD** |
 
-**EL CONTEO DE ETIQUETAS NO ENCOGIO.** El ciclo se corrio **tres veces** en esta vuelta
-(linea base, tras `OP-S-07`, y tras restaurar) y **las tres dieron 71**, que es la cifra
-de la vara registrada en `08_VERIFICACION.md`. Lo declaro porque la definicion registrada
-obliga a declararlo, no porque haya pasado algo.
+**EL CONTEO DE ETIQUETAS NO ENCOGIO EN NINGUNA DE LAS CINCO CORRIDAS DEL CICLO** de esta
+vuelta: **71, 71, 71, 71, 71**. La definicion registrada obliga a declararlo, y lo declaro
+aunque no haya pasado nada.
 
-El validador tambien reporto, las tres veces: **1 componente conexo**, **3.835 nodos** en
-el principal, **cobertura 100,0 por ciento**, **2 nodos sin enlaces entrantes**, **0
-enlaces rotos**, y **13 pares de titulo con similitud igual o mayor que 95** como warning
+> **DISCREPANCIA DECLARADA, y no la resuelvo copiando** (regla 1). `08_VERIFICACION.md`
+> registra su linea base con el blob **`bb423c066f5a961f082b3b70aaff4f98d35d7a1d`**. El
+> blob de HEAD al empezar hoy era **`6007c1da...`** y al cerrar es **`8d47ff32...`**. **No
+> es una regresion: la vara escrita es *byte identico a HEAD*, no *igual a un blob
+> concreto*, y esa vara se cumplio en las cinco corridas.** El blob del registro es de un
+> HEAD anterior y **queda desfasado cada vez que una operacion toca el grafo, que es justo
+> lo que la fase III hace**. Lo traigo como pregunta 1 en vez de reescribirlo yo.
+
+El validador reporto, las cinco veces: **1 componente conexo**, **3.835 nodos** en el
+principal, **cobertura 100,0 por ciento**, **2 nodos sin enlaces entrantes**, **0 enlaces
+rotos**, y **13 pares de titulo con similitud igual o mayor que 95** como warning
 informativo.
 
-### 4.1. `OP-C-01`, `OP-C-02`, `OP-C-03` y `OP-S-06`: verificadas vivas en el codigo de hoy
+---
 
-**No las re ejecute: ya estan en `HEAD`. Verifique que siguen puestas, con el
-instrumento.**
+## 4. `OP-S-07`, ejecutada por su letra nueva
 
-**LOS SITIOS DE LAS NOMINAS, medidos hoy** (`SALIDA_V23_SITIOS_FASE0.txt`):
+### 4.1. La simulacion previa (P.7), copia en memoria y cero escrituras
 
-| sitio | como resuelve hoy |
-|---|---|
-| `web/lib/engine/planRedactor.ts` | **2** apariciones de `resolverId` |
-| `web/lib/compass.ts` | **3** apariciones de `resolverId` |
-| `web/lib/engine/graph.ts` | **6** apariciones de `resolverId` |
-| `web/app/api/organizer/route.ts` | `cargarEntrySeeds(graph)` **si** |
-| `web/app/api/organizer/stream/route.ts` | `cargarEntrySeeds(graph)` **si** |
-| `web/app/api/session/start/route.ts` | `cargarEntrySeeds(graph)` **si** |
-| `web/app/api/project/[id]/world/[pack]/start/route.ts` | **2** apariciones de `resolverId` |
+Reimplemente el resolutor del motor (`mapaDeAlias` y `resolverId` de
+`web/lib/engine/graph.ts`) en `scripts/loop/vuelta24_ops07.py` y barri el catalogo entero.
 
-**Y AQUI ESTUVE A PUNTO DE PUBLICAR UN FALSO ROJO.** `web/lib/engine/recorrido.ts` y
-`web/app/api/session/[id]/plan/route.ts` dan **CERO** apariciones de `resolverId`. **No es
-un hueco: la resolucion es INDIRECTA**, por los tres ayudantes que la vuelta 22 extrajo a
-`graph.ts` (su discutible 5). Lo segui hasta el fondo antes de decir nada:
-
-- `graph.ts:194` `conceptosDeRuta`, `graph.ts:206` `faseDeNodo`, `graph.ts:279`
-  `preguntaDeNodo`.
-- `faseDeNodo` y `preguntaDeNodo` llevan **`resolverId(nid, graph) ?? nid` en su primera
-  linea de cuerpo**, leido del archivo.
-- **Quien los llama, medido:** `recorrido.ts:271` y `recorrido.ts:649` llaman
-  `preguntaDeNodo`; `plan/route.ts:265` llama `conceptosDeRuta` y `plan/route.ts:403`
-  llama `faseDeNodo`.
-
-> **DISCREPANCIA DECLARADA CONTRA EL REPORTE DE LA VUELTA 22.** Ese reporte publica los
-> sitios de `OP-C-02` como **la linea 267 y la 405** de la ruta del plan. **Medido hoy con
-> `grep -n`: son la 265 y la 403.** Es un desfase de dos lineas. **No corrijo el texto
-> viejo y no lo borro: pongo mi medicion al lado con su corte.** Es una cifra que vive
-> solo en `REPORTE.md` y no mueve ningun dato. **Y no afirmo la causa del desfase:** una
-> extraccion a ayudantes mueve lineas, pero **no corri el instrumento sobre ese estado
-> intermedio**, asi que darlo por causa seria adivinar.
-
-**EL FICHERO DE CASOS POSITIVOS de la fase 0 existe:**
-`web/lib/engine/accesosResueltos.test.ts`, 15.956 bytes, **27 lineas `it(`**.
-
-**LAS SUITES, corridas hoy enteras:**
-
-| suite | comando | resultado |
-|---|---|---|
-| motor | `python engine/run_all_tests.py` | **exit 0**, `TODOS LOS TESTS PASARON (24/24)` |
-| web | `npx vitest run` | **exit 0**, **80 ficheros**, **1.030 pasadas, 3 saltadas** (1.033) |
-| tipos | `npx tsc --noEmit` | **exit 0**, **cero lineas de salida** |
-
-### 4.2. `OP-S-07`: LA PARADA, reproducida ejecutandola
-
-**LA SIMULACION PREVIA (P.7), sobre copia en memoria y cero escrituras.** Reimplemente el
-resolutor del motor desde `web/lib/engine/graph.ts` (`mapaDeAlias` **lineas 109 a 129**,
-`resolverId` **lineas 140 a 161**, medidas hoy con `grep -n` y `awk` sobre el archivo) y
-barri **el catalogo entero**:
-
-| | escrito en `OP-S-07` | **medido hoy** | coincide |
+| | escrito en la letra nueva | **medido hoy** | coincide |
 |---|---|---|---|
-| enlaces que resuelven al propio nodo, en vivos | 33 | **33** | si |
-| nodos | 27 | **27** | si |
+| enlaces de nodo VIVO que resuelven al propio nodo | 33 | **33** | si |
+| nodos vivos | 27 | **27** | si |
 | directas (`dest == nid` literal) | 0 | **0** | si |
 | via alias | 33 | **33** | si |
+| reciprocas literales en el gemelo deprecado | 33 | **33**, en **32** nodos | si |
+| reciprocas que faltaban en el gemelo | 0 | **0** | si |
+| **total a retirar** | **66** | **66** | si |
+| **ficheros** | **59** | **59** | si |
+| alias contra alias INERTES | 48, en 33 nodos | **48, en 33 nodos** | si |
+| **la particion del lado deprecado** | **81 = 33 + 48**, sin solape | **81 = 33 + 48, solape 0** | **exacta** |
 | el peor, `costo_de_mala_calidad_copq` | 7 (2 previos, 5 siguientes) | **7 (2 previos, 5 siguientes)** | si |
-| la nomina de 27 ids | escrita en el plan | **identica, id por id** | **exacta** |
 
-**EL EJEMPLAR ESCRITO TAMBIEN CALZA, medido:** `analisis_flujo_de_valor` lleva
-`value_stream_analysis_lean` en sus `nodos_previos`; ese nodo **existe, esta deprecado, y
-resuelve a `analisis_flujo_de_valor`**.
+**EL EJEMPLAR ESCRITO CALZA:** `analisis_flujo_de_valor` lleva `value_stream_analysis_lean`
+en sus `nodos_previos`; ese nodo **existe, esta deprecado y resuelve a
+`analisis_flujo_de_valor`**.
 
-**Y una cosa que la simulacion probo antes de tocar nada:** de las **33**, **las 33
-tienen su vista reciproca escrita en el gemelo deprecado**. Cero excepciones.
+**La simulacion sobre la copia dio la baja de 66 y CERO auto aristas de vivos**, con las 48
+inertes intactas, **antes de escribir un solo byte**.
 
-**LA EJECUCION, tal como `eliminar` esta escrita**, sobre `dataset/nodos` y **solo en el
-arbol de trabajo**:
+### 4.2. La ejecucion y su verificacion
 
-- **33 enlaces retirados** en **27 ficheros**, comprobado despues **contra `HEAD`, campo
-  por campo**: `ENLACES RETIRADOS (contra HEAD): 33`.
-- **`CAMPOS DISTINTOS DE previos/siguientes QUE SE MOVIERON: 0`**, o sea la letra *"no se
-  toca ningun otro campo"* cumplida y medida.
-- **`ids_alias` intactos en los 27**, que es lo que `preservar` manda.
-- Conteo de enlaces del grafo: **de 16.866 a 16.833**, baja de **33 exacta**.
-
-**Y DESPUES CORRI EL GATE 0, Y LOS 33 VOLVIERON.**
+**66 entradas retiradas en 59 ficheros de `dataset/nodos`.** Verificado despues **contra
+`HEAD`, campo por campo**:
 
 | linea de `verificacion` de `OP-S-07` | resultado de hoy |
 |---|---|
-| `ningun nodo vivo se cita a si mismo ... NI tras resolver alias` | **ROJO: 33 enlaces en 27 nodos** |
-| `el conteo de aristas del grafo baja en 33 exactamente` | **ROJO: vuelve a 16.866, variacion neta CERO** |
+| ningun nodo vivo se cita a si mismo, NI directamente NI tras resolver | **0 en 0 nodos, VERDE** |
+| los 66 retirados y ningun otro; el conteo de aristas baja en 66 exactamente | **66 exactos, 16.866 a 16.800, VERDE** |
+| no se toca ningun otro campo | **0 campos distintos de previos/siguientes se movieron, VERDE** |
+| los `ids_alias` NO se tocan (`preservar`) | **0 movidos, VERDE** |
+| las 48 alias contra alias quedan intactas | **48 en 33 nodos deprecados, sin tocar** |
+| GATE 0 VERDE POR EL CICLO ESCRITO tras la retirada | **EXITCODE 0, `GATE 0: OK`, 71 etiquetas** |
 
-El ciclo en si salio **verde** (exit 0, `GATE 0: OK`, 71 etiquetas): **el que sale en rojo
-es el texto de la operacion, no el instrumento.**
+### 4.3. Lo que esta vuelta prueba y la anterior no pudo
 
-### 4.3. LA CAUSA, medida contra el log del propio validador
+`symmetrize_added` en `dataset/metadata/phase1_run_log.json`: **CERO entradas**. La vuelta
+23 documento **33** al retirar solo las vivas. **La sombra no vuelve porque se retiro lo
+que la proyectaba.** Es la letra nueva funcionando, medida en el log del propio validador.
 
-`dataset/metadata/phase1_run_log.json` trae el campo **`symmetrize_added` con exactamente
-33 entradas**, cada una con su nodo y su campo. Y la comparacion que lo cierra:
+### 4.4. El punto fijo contra el HEAD nuevo
 
-- **`COINCIDEN EXACTAMENTE CON symmetrize_added: True`**. Conjunto contra conjunto:
-  **`SOLO EN symmetrize_added: []`**, **`SOLO EN las auto aristas: []`**.
-- **De las 33, las 33 son la vista reciproca de un enlace que el GEMELO DEPRECADO tiene
-  hacia su propio superviviente.** Medido: **33 de 33**.
-
-El **paso 5 de `scripts/run_phase1.py`** (simetrizar, leido hoy en las lineas 396 a 435)
-recorre `succ_needed` y `pred_needed` y **fabrica** la reciproca que falte. Su unica
-defensa contra la auto arista es **`dedupe_and_remove_self`**, que compara **literalmente**
-y por eso no ve ni una de las 33: **ninguna es directa.**
-
-> **La auto arista no esta escrita a mano en el nodo vivo. Es la sombra que el paso 5
-> proyecta desde el nodo deprecado. Retirar la sombra sin tocar lo que la proyecta es
-> trabajo que se deshace solo en la siguiente corrida, siempre.**
-
-### 4.4. Por que esto es PARADA y no una decision mia
-
-`OP-S-07` escribe **dos cosas que hoy no pueden ser verdad a la vez**, y lo demuestra el
-instrumento, no un argumento:
-
-- **(a)** `eliminar`: *"de cada uno de los 27, el enlace ... 33 enlaces en total. **No se
-  toca ningun otro campo**"*. **Ejecutado hoy al pie de la letra y verificado.**
-- **(b)** `verificacion`: *"ningun nodo vivo se cita a si mismo ... NI tras resolver
-  alias"* mas *"el conteo de aristas del grafo baja en **33 exactamente**"*.
-
-**(a) ejecutado al pie de la letra NO produce (b).** Las salidas que si producirian (b)
-reescriben la letra de (a) o tocan lo que ninguna operacion ordena:
-
-| camino | que rompe | cifra medida hoy |
-|---|---|---|
-| retirar tambien el enlace del gemelo deprecado | rompe *"no se toca ningun otro campo"* | son **81 enlaces mas en 59 nodos deprecados**, bajo el criterio B de la seccion 5 |
-| enseñar al paso 5 a no fabricar una reciproca que resuelve al propio nodo | toca `run_phase1.py` sin que ninguna operacion lo ordene: `OP-C-04` ordena **añadir una guarda a Gate 0**, no cambiar el simetrizador | no medida, seria codigo nuevo |
-| diferir `OP-S-07` | contradice su `bloquea_a` escrito (`['OP-C-04']`) y deja la fase 0 sin cerrar | |
-
-**Es la especie exacta que el encargo nombra: "cualquier operacion cuyo texto no alcance
-para ejecutarse sin decidir, te detiene a ti y convoca al auditor".** No elegi ninguno de
-los tres caminos.
-
-### 4.5. Que hice al parar
-
-**Pare `OP-S-07`, no parti la fase.** Restaure con `git checkout -- dataset/
-web/lib/assets/` y lo verifique por dos varas: **`git diff --name-only HEAD` sobre
-`dataset/` y `web/lib/assets/` da CERO ficheros**, y el blob de `master_graph.json` es
-**`6007c1da864ef625796a47cab126a1d717610ffd`, el de HEAD**. Despues volvi a correr el
-ciclo entero sobre el arbol restaurado: **EXITCODE 0, `GATE 0: OK`, 71 etiquetas, blob
-identico a HEAD**. **Nada de `OP-S-07` quedo commiteado; sus salidas si quedan, como
-prueba.**
-
-### 4.6. `OP-C-04` y `OP-C-05`: los dos campos, leidos del plan hoy
-
-| operacion | orden | `depende_de` medido hoy | `bloquea_a` medido hoy | estado en esta vuelta |
-|---|---:|---|---|---|
-| `OP-C-04` | 6 | **`['OP-S-06', 'OP-S-07']`** | `['OP-S-01', 'OP-S-09', 'OP-F-01']` | **BLOQUEADA**: `OP-S-07` no esta hecha |
-| `OP-C-05` | 7 | **`['OP-S-12']`** | **`[]`** | **DIFERIDA**, como el encargo manda |
-
-**`OP-C-04` no se toco, y por eso su caso positivo de arbol temporal (el registro de la
-TAREA 1) no se corrio en esta vuelta.** El registro esta puesto y la ejecucion espera a
-que la operacion se desbloquee. Lo digo en vez de dejar el hueco callado.
+Tras commitear, volvi a correr el ciclo entero: **EXITCODE 0**, `GATE 0: OK`, **71
+etiquetas**, y el blob del disco **`8d47ff32d4376f17a5880d7ba56060569856a04a`**, **identico
+al de HEAD nuevo**, con **cero ficheros con diferencia real**. El ciclo es **punto fijo**
+contra el HEAD que la operacion acaba de crear.
 
 ---
 
-## 5. MATERIAL NUEVO: las 81 del lado deprecado solo existen bajo un criterio que nadie ha escrito
+## 5. `OP-C-04`, ejecutada con su caso positivo en los dos sentidos
 
-El reporte de la vuelta 22, seccion 4.6, publica **81 aristas de la misma especie en 59
-nodos deprecados**. **Fui a remedirlo y con el criterio que `OP-S-07` tiene escrito me dio
-CERO.** En vez de copiar la cifra o desmentirla, medi **los dos criterios posibles**
-(`SALIDA_V23_OPS07_DEPRECADOS.txt`):
+### 5.1. Las dos guardas
 
-| criterio | definicion | en DEPRECADOS | en VIVOS (control) |
-|---|---|---:|---:|
-| **A**, el que `OP-S-07` escribe | el enlace **resuelve al PROPIO id** del nodo | **0 enlaces, 0 nodos** | **33 enlaces, 27 nodos** |
-| **B**, el que hace falta para que la cifra exista | el enlace **resuelve al MISMO destino** al que resuelve el propio nodo | **81 enlaces, 59 nodos** | **33 enlaces, 27 nodos** |
+Escritas en `scripts/run_phase1.py`, dentro de `step7_validate`:
 
-**LO QUE ESTO SIGNIFICA, y es la parte que importa:**
+**1. AUTO ARISTA CON RESOLUCION.** Cada id de `nodos_previos` y `nodos_siguientes` pasa por
+una copia fiel de `resolverId` y se compara con el id del propio nodo. **Mide sobre
+vivos**; los deprecados quedan fuera con el motivo escrito en la correccion declarada.
 
-1. **El criterio A da CERO en deprecados POR CONSTRUCCION, no por limpieza.** El resolutor
-   lleva siempre al superviviente vivo, nunca de vuelta al deprecado: un nodo deprecado no
-   puede resolver a si mismo. **Contar deprecados con el criterio A no mide nada.**
-2. **El criterio B coincide con el A exactamente donde el A esta definido:** sobre nodos
-   vivos, `resolver(nid) == nid`, y B devuelve **33 y 27**, las mismas cifras que la
-   verificacion escrita. **B es la generalizacion honesta, no un criterio rival.**
-3. **La cifra de 81 en 59 nodos de la vuelta 22 SE REPRODUCE, pero solo bajo B.** No hay
-   discrepancia de medicion: **hay un criterio que nadie escribio.**
+**2. LISTA BLANCA DE CLAVES.** **No reescribi la lista.** Existe ya, escrita, en
+`scripts/expansion/validar_esquema.py` (`CAMPOS_PERMITIDOS`, **15 campos**), y **lleva
+dentro la adjudicacion argumentada de `merged_originals`**, que es exactamente lo que la
+nota de `OP-C-04` cierra. La importo. **Dos listas blancas divergentes serian el mismo
+defecto que el chequeo de los dos `master_graph` vino a curar.**
 
-**Los ejemplares, medidos:** `categorias_costos_calidad` con 4,
-`comunicacion_coordinacion_multiempleador` con 3, `costo_de_mala_calidad_3` con 3,
-`costo_de_mala_calidad_copq_3` con 3, `costos_ocultos_calidad` con 3. Y el par
-`6s_lugar_trabajo` con `6s_workplace_organization`, que se citan mutuamente y **ambos
-resuelven a `metodologia_6s`**.
+> **La lista blanca medida contra el catalogo de hoy: 15 claves permitidas, 15 claves
+> presentes, cero renegadas.** Coinciden campo a campo.
 
-> **NO TOQUE NI UNA DE LAS 81 Y NO PROPONGO QUE SE TOQUEN. Las declaro con su criterio
-> delante**, porque `OP-C-04` va a escribir una guarda de auto arista y **la guarda tiene
-> que decir con cual de los dos criterios mide**. Con A, la guarda pasa verde sobre 81
-> aristas de esta especie. Va como PENDIENTE DE DOCTRINA en la seccion 8.
+### 5.2. El caso positivo, corrido en los dos sentidos
+
+El estado malo se inyecto **solo en el arbol de trabajo** y se restauro acto seguido, tal
+como la nota de la operacion lo adjudica. **Nada de esto quedo commiteado.**
+
+- **La auto arista:** el enlace de `analisis_flujo_de_valor` a `value_stream_analysis_lean`,
+  que es el ejemplar que la propia verificacion nombra.
+- **La clave sucia:** `fase_проekto`, con **п, р y о CIRILICAS**, recuperada de su forma
+  original en el commit `fa2e6011` con `git show`, **no retipeada a ojo**. Puntos de
+  codigo medidos: `0x43f`, `0x440`, `0x43e`.
+
+| momento | Gate 0 |
+|---|---|
+| **ANTES del arreglo**, con el estado malo puesto | **EXITCODE 0**, `GATE 0: OK`. **La prueba NO era vacia** |
+| **DESPUES del arreglo**, con el mismo estado malo | **EXITCODE 1**, `GATE 0: FALLIDO` |
+| **DESPUES del arreglo**, catalogo limpio | **EXITCODE 0**, las dos guardas en `[OK]` |
+
+Y las dos guardas **nombran la falla exacta**, que es lo que `OP-C-05` exige de una guarda
+y lo que hace auditable a esta:
+
+```
+[FALLO] Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista via alias)
+        (valor: 1 auto-aristas: ['analisis_flujo_de_valor.nodos_previos -> value_stream_analysis_lean'])
+[FALLO] Ninguna clave de nodo fuera de la lista blanca del esquema
+        (valor: 1 renegadas: ['crosby_habilidad_transmision.fase_проekto'])
+```
+
+### 5.3. La medicion que demuestra la nota de `OP-S-07`
+
+**Sobre el MISMO estado malo**, medido: la guarda **LITERAL** (`dest == nid`) da **0** y
+**pasaria verde**; la guarda **que resuelve** da **1** y **cae**. **Es la nota de
+`OP-S-07` demostrada con instrumento y no repetida de memoria:** una guarda literal no
+guarda.
+
+### 5.4. La restauracion, por dos varas
+
+`git checkout -- dataset/ web/lib/assets/` tras cada inyeccion. Verificado con:
+**cero ficheros con diferencia real** contra HEAD, y blob **`8d47ff32...`**, el de HEAD.
 
 ---
 
-## 6. LAS CIFRAS DE ESTADO, recomputadas HOY (`SALIDA_V23_MARCADOR.txt`)
+## 6. `OP-F-01`, la primera de la fase 01: verifica en verde hoy
 
-**Ninguna sale de un acta ni de un reporte anterior.**
+Es una operacion **documental**: `eliminar`, `preservar` y `aristas_nuevas` estan **vacios**
+y `superviviente` es `null`. Su ejecucion es medir y registrar, no tocar nodos.
 
-**EL MARCADOR** (`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`), corte 14 ago 2026:
-**n 3.388**, **A 583 (17,2 por ciento)**, **B 89 (2,6)**, **C 7 (0,2)**, **D 2.709
-(80,0)**. Puestos **de 1 a 3.388**, **cero huecos**, **cero duplicados**, **cero clases
-fuera de ABCD**.
+| linea de `verificacion` | resultado de hoy |
+|---|---|
+| los SIETE tratados por la misma regla, sin excepciones caso por caso | **7 de 7 existen y estan vivos, cero deprecados, VERDE** |
+| ningun nodo de la clase queda con pasos alterados | **7 de 7 con el conteo de pasos IDENTICO al publicado, VERDE** |
+| la cifra de 18 reescrita con su corte alli donde este publicada | **YA ESTABA, en las dos sedes, VERDE** |
+| Gate 0 verde | **VERDE** |
 
-> **CONTRASTE DECLARADO:** el acta de la vuelta 21 y el reporte de la vuelta 22 publican
-> estas mismas cifras. Mi medicion de hoy **no las copia, las reproduce**. **Cero
-> discrepancia.**
+**LOS SIETE, medidos hoy contra lo publicado en `01_FUENTES.md`:**
 
-**TASA DE A POR DOMINIO**, recomputada del archivo:
+| nodo | pasos hoy | publicado |
+|---|---:|---:|
+| `seleccion_representante_extranjero` | 9 | 9 |
+| `internacionalizacion_sitio_web_exportacion` | 9 | 9 |
+| `elaboracion_pro_forma_invoice` | 8 | 8 |
+| `elementos_plan_exportacion_ejemplo` | 13 | 13 |
+| `principios_medicion_efectiva` | 10 | 10 |
+| `fmea_analisis_de_modos_de_falla` | 8 | 8 |
+| `background_startup_vs_corporativo` | 9 | 9 |
+
+**LA TERCERA LINEA, verificada en vez de rehecha.** `CORRECCIONES_A_APLICAR.md` señala la
+sede como `docs/COSTURAS_INTERNAS_RESUMEN.md` secciones 6 y 7 punto 1, y la asigna a la
+**SESION A**. **Fui a mirar antes de escribir nada: las dos sedes YA llevan la correccion
+declarada con su corte**, aditiva y sin borrar el texto viejo (linea **369** para la
+seccion 6, lineas **402 a 407** para la 7). **No añadi nada: no habia nada que añadir**, y
+no toque un fichero que el plan asigna a otra sesion.
+
+> **NO DECLARO `OP-F-01` HECHA, y digo por que.** Su segunda linea de verificacion es una
+> condicion **de fin de fase**, no de hoy: **se pone en rojo el dia que `OP-F-04-HOR`
+> corra**, y eso es la parada de la seccion 7. **Verde hoy no es lo mismo que hecha.**
+
+---
+
+## 7. LA PARADA: la fase 01 no alcanza para ejecutarse sin decidir
+
+**Son dos paradas distintas y las dos estan medidas.** No elegi salida en ninguna.
+
+### 7.1. `OP-F-02` no dice lo suficiente para ejecutarse
+
+Su adjudicacion es **REUNIR**: el bloque de IA de tres nodos viaja entero al racimo de la
+supervision de la IA. **Para ejecutarla hacen falta dos datos que no estan escritos en
+ninguna sede:**
+
+| lo que falta | como lo comprobe |
+|---|---|
+| **la frontera de paso** del bloque de Mollick en cada uno de los tres | `01_FUENTES.md` publica los tres con su fuente real y *lo pegado: Mollick*, **sin tramo de pasos**. La tanda de los 43 (que si publica fronteras) **excluye a Mollick por definicion**: es *"declaraciones en segunda posicion, SIN Hugos ni Mollick"* |
+| **el nodo del racimo que RECIBE** el bloque | la operacion dice *"el racimo de supervision de la IA, que hoy tiene DIEZ miembros"*. **Diez destinos posibles y ninguno nombrado**; `aristas_nuevas` esta vacio y `superviviente` es `null` |
+
+**Los tres, medidos hoy:** `future_scenarios_planning` 13 pasos,
+`gut_check` 9 pasos, `brainstorming_divergente` 8 pasos, los tres con Mollick declarado en
+segunda posicion en su campo `fuente`.
+
+> **Cortar por donde yo crea que empieza el bloque, y elegir yo a cual de los diez va, son
+> dos decisiones, no dos lecturas.** Y la primera es irreversible sobre el texto de un
+> nodo. **Es la especie exacta que el encargo nombra.**
+
+### 7.2. `OP-F-01` y `OP-F-04-HOR` chocan sobre el mismo nodo
+
+**`background_startup_vs_corporativo` esta en el campo `nodos` de las DOS**, medido hoy
+barriendo las 71 operaciones. Es el **unico** de los siete que aparece en otra operacion.
+
+| | dice |
+|---|---|
+| **`OP-F-01`**, verificacion | *"ningun nodo de la clase queda con pasos alterados"* |
+| **`OP-F-04-HOR`**, verificacion | *"cada bloque apendice separado con su frontera de paso escrita"*, *"el bloque separado va a su familia o a nodo propio: NO se poda"* |
+| **`01_FUENTES.md`**, tabla de los 14 de Horowitz | la frontera de ese nodo es **pasos 1 a 4 / 5 a 9** |
+| **`P.3`** del banco del plan | el bloque de Horowitz es **del MISMO tema**: **REPARTO OBLIGATORIO**, la poda **no es opcion** |
+
+**Separar el bloque 5 a 9 deja el nodo en 4 pasos.** Sus pasos quedan alterados, y la
+segunda verificacion de `OP-F-01` se pone en **rojo**. **Las dos operaciones estan en
+`LISTA`, en la misma fase, y ninguna regla escrita dice cual manda.**
+
+> **Y LA RAIZ ES MAS INCOMODA QUE UN CHOQUE DE ORDEN.** Lo que mete a ese nodo en la clase
+> LARGO LEGITIMO es, en la letra de `01_FUENTES.md`, que *"sale de dos libros de
+> fundadores"* y por eso *"rompe la exclusividad de los manuales"*. **Pero declarar un
+> segundo libro es, por `P.2`, LA FIRMA DEL INJERTO.** O sea que **el mismo hecho** sostiene
+> las dos lecturas: para `OP-F-01` sus 9 pasos son una lista legitima sin repeticion; para
+> `OP-F-04-HOR` son **4 mas 5**, dos libros apilados. **No es que sobre una operacion: es
+> que el nodo esta clasificado dos veces y las dos clasificaciones se excluyen.**
+>
+> **Eso no lo resuelve un ejecutor.** Lo dejo escrito con su medicion delante.
+
+---
+
+## 8. LAS CIFRAS DE ESTADO, recomputadas HOY
+
+**Ninguna sale de un acta ni de un reporte anterior** (`SALIDA_V24_MARCADOR.txt`).
+
+**EL MARCADOR** (`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`), corte 14 ago 2026: **n 3.388**,
+**A 583 (17,2 por ciento)**, **B 89 (2,6)**, **C 7 (0,2)**, **D 2.709 (80,0)**. Puestos
+**1 a 3.388**, **cero huecos**, **cero duplicados**, **cero clases fuera de ABCD**.
+
+> **CONTRASTE DECLARADO:** el reporte de la vuelta 23 publica estas mismas cifras. Mi
+> medicion **no las copia, las reproduce**. **Cero discrepancia.**
+
+**TASA DE A POR DOMINIO:**
 
 | dominio | n | A | tasa | B | C | D |
 |---|---:|---:|---:|---:|---:|---:|
@@ -361,161 +356,185 @@ fuera de ABCD**.
 | risk_management | 106 | 0 | **0,0%** | 0 | 0 | 106 |
 | seguridad_digital | 27 | 3 | **11,1%** | 0 | 0 | 24 |
 
-> **LA BANDA QUE TODA TASA DE A TIENE QUE LLEVAR AL LADO**, citada con **su corte propio,
-> que es anterior al mio** (`08_VERIFICACION.md`, corte 12 ago 2026, archivo al puesto
-> 2.117, autoria del control de la muestra D): el error de dejar pasar es **4,2 por
-> ciento**, banda de **0,7 a 20,2**. **No la remedi en esta vuelta y por eso no la
-> presento como cifra de hoy.**
+> **LA BANDA QUE TODA TASA DE A LLEVA AL LADO (P.15)**, citada **con su corte propio, que es
+> anterior al mio** y con su atribucion: `08_VERIFICACION.md`, corte **12 ago 2026**,
+> archivo al puesto **2.117**, autoria del control de la muestra D. El error de dejar pasar
+> es **4,2 por ciento**, banda de **0,7 a 20,2**. **No la remedi en esta vuelta y por eso no
+> la presento como cifra de hoy.**
 
-**EL GRAFO**, recomputado hoy: **3.835 nodos**, **3.521 vivos**, **314 deprecados**,
-**16.866 enlaces** (previos mas siguientes), **15 claves distintas** en el catalogo:
-`condiciones_activacion`, `deprecado`, `dominio`, `entregable_esperado`, `etiqueta_arbol`,
-`fase_proyecto`, `fuente`, `ids_alias`, `merged_originals`, `node_id`, `nodos_previos`,
-`nodos_siguientes`, `pasos_accionables`, `resumen_teorico`, `titulo_concepto`.
+**EL GRAFO, recomputado hoy:** **3.835 nodos**, **3.521 vivos**, **314 deprecados**,
+**16.800 enlaces** (previos mas siguientes), **15 claves distintas**.
 
-**LAS OPERACIONES: 71, 71 ids unicos, cero dependencias rotas, las 71 en `LISTA`.**
+> **LOS 16.800 SON LA UNICA CIFRA DE ESTADO QUE CAMBIO EN ESTA VUELTA**, y cambio por
+> `OP-S-07`: **16.866 menos 66**. El resto reproduce exacto contra la vuelta 23.
+
+**LAS OPERACIONES: 71, 71 ids unicos, cero dependencias rotas, las 71 en `LISTA`.** Reparto
+por fase: `00_CODIGO` 7, `01_FUENTES` 7, `02_DESTEJIDOS` 9, `03_FUSIONES` 16, `04_ENLACES`
+10, `05_SANEO` 10, `06_MESAS` 5, `07_ADUANA` 2, `08_VERIFICACION` 1,
+`09_LECTURAS_DIRIGIDAS` 3, `10_INVENTARIO` 1.
 
 **VARA POR TRAMO, FIGURAS Y FAMILIAS: no aplican, y lo digo en vez de rellenarlo.** Esta
 vuelta **no leyo un solo par**: el cribado sigue cerrado en 3.388 y ningun veredicto se
-abrio. La unidad de trabajo fue la operacion, no el puesto.
+abrio. La unidad de trabajo fue la operacion.
+
+**LAS SUITES, corridas enteras dos veces (tras `OP-S-07` y tras `OP-C-04`):**
+
+| suite | comando | resultado |
+|---|---|---|
+| motor | `python engine/run_all_tests.py` | **exit 0**, `TODOS LOS TESTS PASARON (24/24)` |
+| web | `npx vitest run` | **exit 0**, **80 ficheros**, **1.030 pasadas, 3 saltadas** |
+| tipos | `npx tsc --noEmit` | **exit 0**, cero lineas de salida |
 
 ---
 
-## 7. CORRECCIONES DECLARADAS
+## 9. CORRECCIONES DECLARADAS Y ERRORES PROPIOS
 
-**NINGUNA CORRECCION DE UNA CIFRA PUBLICADA.** Todo lo que remedi contra el plan o contra
-el reporte de la vuelta 22 salio identico: las 33 auto aristas, los 27 nodos, el 0 de
-directas, el 33 de via alias, el peor con 7, la nomina id por id, el ejemplar, las 33
-entradas de `symmetrize_added`, el marcador entero, el grafo entero, las 71 operaciones y
-las 71 etiquetas.
+**NINGUNA CORRECCION DE UNA CIFRA PUBLICADA.** Todo lo que remedi contra la letra corregida
+del plan salio identico: las 33 vivas, los 27 nodos, el 0 de directas, las 33 reciprocas,
+los 66, los 59 ficheros, las 48 inertes, la particion 81 igual a 33 mas 48 sin solape, el
+peor con 7, el ejemplar, y el marcador entero.
 
-**LAS DOS COSAS QUE SI PONGO AL LADO DEL TEXTO VIEJO, sin borrarlo:**
+**LO QUE PONGO AL LADO DEL TEXTO VIEJO, sin borrarlo:**
 
-1. **Las lineas de los sitios de `OP-C-02`:** la vuelta 22 publica **267 y 405**; medido
-   hoy son **265 y 403**. Cifra de `REPORTE.md`, no mueve datos.
-2. **Las 81 del lado deprecado** solo existen bajo el criterio B (seccion 5). La vuelta 22
-   las publico sin nombrar criterio. **No es un error de medicion suyo: es un criterio sin
-   escribir.**
+1. **El blob de la linea base de `08_VERIFICACION.md`** (`bb423c06...`) es de un HEAD
+   anterior y hoy no coincide con ninguno de los dos blobs de esta vuelta. **La vara
+   escrita (*byte identico a HEAD*) si se cumplio siempre.** Pregunta 1.
 
 **ERRORES PROPIOS DE ESTA VUELTA, con nombre:**
 
-1. **Barri `OPERACIONES.jsonl` con la clave `id`, que no existe;** la clave es **`id_op`**.
-   Revento con `KeyError` y quedo corregido en la corrida siguiente. **No alcanzo una
-   cifra publicada.**
-2. **Mi primer lector del grafo busco la clave `nodes` y el fichero la llama `nodos`.**
-   Revento con `AttributeError` tras imprimir **`NODOS: 6`**, que era el numero de claves
-   de la raiz. **Es exactamente la especie de falso positivo que la regla del instrumento
-   persigue:** un `6` que parecia un conteo de nodos. **No se publico**, quedo cazado y la
-   corrida buena dio 3.835.
-3. **Mi verificacion de "ningun otro campo se movio" comparaba el fichero del nodo contra
-   `master_graph.json` y marco `etiqueta_arbol` en `decision_pivotar_o_proceder`.** **El
-   equivocado era mi chequeo, no el dato:** la curaduria de cara **no vive en los nodos**,
-   vive en `dataset/metadata/etiquetas_de_cara_v1*.json` y se aplica sobre el grafo
-   compilado, tal como el propio registro de Gate 0 deja escrito. Rehice la comprobacion
-   **contra `git show HEAD:<fichero>`**, que es la vara correcta, y dio **0 campos
-   movidos**.
-4. **Estuve a punto de publicar `resolverId: 0` en `recorrido.ts` y en `plan/route.ts`
-   como un hueco.** No lo es: la resolucion es indirecta por los tres ayudantes de
-   `graph.ts`. Lo segui hasta el cuerpo de las funciones antes de escribir nada
-   (seccion 4.1).
+1. **Mi primer script de `OP-S-07` escribia un salto de linea al final de cada nodo**, y los
+   ficheros del dataset **no lo llevan**. Lo cace **antes de ejecutar** comparando los
+   bytes finales de un nodo real contra `save_node` del validador (`run_phase1.py:103`), y
+   lo corregi. **De no haberlo cazado, habria ensuciado 59 ficheros con un cambio de
+   formato que ninguna operacion ordena.**
+2. **Mi script del caso positivo revento con `UnicodeEncodeError`** al imprimir la clave
+   cirilica en la consola `cp1252` de Windows. Lo arregle imprimiendo los puntos de codigo
+   escapados. **No alcanzo ninguna cifra**, y de hecho la salida quedo mejor: la clave se
+   publica como `проekto` y no como algo que parece latino.
+3. **Corri la suite del motor antes de sincronizar los assets de la web y salio en rojo**
+   con 59 nodos divergentes. **No era una regresion: era el remedio escrito del propio
+   validador sin correr.** Lo declaro entero en el discutible 2 en vez de presentar solo la
+   corrida verde.
 
 ---
 
-## 8. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+## 10. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
-**Ocho. Van en el orden en que los decidi.**
+**Nueve. Van en el orden en que los decidi.**
 
-1. **Trate el encargo repetido como "volver a medirlo todo" en vez de parar en seco sin
-   entregar nada.** Razon: la regla 1 dice que nada de una vuelta anterior es fuente, y la
-   regla 4 dice que se para **solo** si algo contradice una regla vigente o una cifra
-   publicada. **Un encargo repetido no contradice nada**, y ejecutarlo de nuevo es
-   justamente lo que la regla 1 pide. **Lo declaro arriba del todo para que nadie lea esta
-   vuelta como trabajo nuevo.**
-2. **Re ejecute `OP-S-07` sabiendo que la vuelta 22 ya habia documentado la parada.**
-   Se puede leer como gasto repetido. Razon: **una parada heredada no es una parada
-   medida**, y la regla 1 me prohibe citar la de la vuelta 22 como fuente. **Y valio la
-   pena: al remedir aparecio lo de las 81** (seccion 5), que sin ejecutar no sale.
-3. **Puse la ejecucion de `OP-S-07` sobre `dataset/nodos` (los 3.835 ficheros) y no sobre
-   `master_graph.json`.** Razon: el grafo compilado es artefacto, y el propio ciclo de
-   Gate 0 lo reconstruye desde los nodos; retirar enlaces del artefacto habria sido una
-   limpieza que la primera recompilacion deshace sin que quede rastro de por que.
-4. **Cuando mi chequeo de campos choco con `etiqueta_arbol`, decidi que el equivocado era
-   mi chequeo y no el dato.** Es la clase de decision que un ejecutor puede tomar para
-   taparse. **La declaro con su prueba:** el registro de Gate 0 dice que las etiquetas no
-   viven en los nodos, y rehice la comprobacion contra `git show HEAD:`, que es una vara
-   independiente de mi criterio.
-5. **Nombre los dos criterios A y B para el lado deprecado, y esos nombres son mios: no
-   estan en el plan.** Podia haber escrito solo "el criterio de la operacion da 0" y
-   dejarlo ahi. Preferi medir los dos y **poner el control sobre vivos** (B da 33 y 27,
-   igual que la verificacion escrita), porque sin ese control mi criterio B seria una
-   invencion mia sin ancla.
-6. **NO escribi `docs/loop/PARA_ALEXIS.md`, aunque el bucle esta detenido de hecho.**
-   Razon: `AUDITOR.md` seccion 4 pone esa pluma **en el auditor**, y `EJECUTOR.md` regla 4
-   me dice que la parada la escribo **en el reporte**. **Que el auditor haya muerto no me
-   traspasa su autoridad.** Va como pregunta 1.
-7. **No movi ninguna operacion de `LISTA`**, igual que la vuelta 22, aunque cuatro ya
-   corrieron y estan en `HEAD`. Ninguna instruccion me manda moverlas.
-8. **Conte los casos positivos de la fase 0 como "27 lineas `it(`" y no como "27
-   pruebas".** Es un `grep`, no una corrida: la cifra que **si** es corrida son las 1.030
-   pasadas de la suite web. Lo separo en vez de presentar el `grep` como resultado de
-   prueba.
+1. **Ejecute `OP-S-07` sobre `dataset/nodos` y no sobre `master_graph.json`.** Razon: el
+   grafo compilado es artefacto y el ciclo lo reconstruye desde los nodos; retirar enlaces
+   del artefacto seria una limpieza que la primera recompilacion deshace sin dejar rastro.
+   Es el mismo criterio que la vuelta 23 declaro, y lo repito por decision, no por inercia.
+2. **Corri `python scripts/sync_assets_web.py`, que NO esta en el ciclo de dos comandos de
+   `08_VERIFICACION.md`.** Es el discutible mas grande de la vuelta y lo pongo entero.
+   **A favor:** es el remedio que el propio validador tiene escrito, con su orden y su
+   motivo (`REMEDIO_SYNC` en `run_phase1.py`: *"primero se reaplica, despues se
+   sincroniza"*), y sin correrlo `engine/test_gate_alias.py` cae con **59 nodos divergentes
+   entre las dos copias del grafo**. **En contra:** el ciclo registrado dice **dos**
+   comandos, y yo corri tres. **Lo que creo que esto destapa, y por eso va tambien como
+   pregunta 2:** el chequeo de gemelos de Gate 0 compara el snapshot de **antes** del paso
+   6, asi que **el dia en que una operacion cambia el grafo, Gate 0 no puede ver la
+   divergencia que esa operacion acaba de crear**; la caza la suite, no el Gate. **No toque
+   el registro del ciclo.**
+3. **Importe la lista blanca de `scripts/expansion/validar_esquema.py` en vez de escribirla
+   en Gate 0.** Podia haber escrito los 15 campos ahi mismo, que es mas explicito y no
+   añade un import entre carpetas. Preferi la fuente unica: **dos listas blancas que puedan
+   divergir son el defecto que el chequeo de los dos `master_graph` vino a curar**, y esa
+   lista ya trae dentro la adjudicacion de `merged_originals` que `OP-C-04` confirma.
+4. **La guarda de auto arista lleva una copia del resolutor en Python, y ya existe otra en
+   `scripts/loop/vuelta24_ops07.py` y la original en TypeScript.** Son **tres**
+   implementaciones de la misma semantica. Lo declaro como deuda en vez de callarlo: si un
+   dia divergen, la guarda vigila un grafo distinto del que el motor sirve. **No lo arregle
+   porque unificarlas no me lo ordena ninguna operacion**, y va como pregunta 3.
+5. **Use `crosby_habilidad_transmision` como sede de la clave sucia**, que es el nodo real
+   que `OP-S-06` limpio, en vez de crear un nodo de prueba sintetico como dice la letra
+   (*"anadir a un nodo de prueba"*). Razon: un nodo nuevo mueve el conteo de ficheros en
+   disco y toca otros chequeos del Gate; reinyectar la averia **en su sede historica** es
+   mas fiel al fallo que la guarda tiene que cazar. **Es una desviacion de la letra y la
+   marco como tal.**
+6. **Fui a buscar la clave cirilica a `git show fa2e6011:` en vez de teclearla.** Parece
+   celo excesivo para dos caracteres. Lo hice porque **el fallo entero de esa averia es que
+   se ve identica a la buena**: una clave retipeada a ojo podia haber salido latina y el
+   caso positivo habria pasado verde probando nada.
+7. **Corri el caso positivo ANTES del arreglo, gastando una corrida entera de Gate 0 para
+   verlo pasar en verde.** Se puede leer como gasto. Razon: `FASE_0_CODIGO.md` dice
+   *"correrla ANTES del arreglo. Si pasa, esta mal escrita"*, y **eso solo se sabe
+   corriendolo**. Sin esa corrida yo tendria una guarda que cae, pero no la prueba de que
+   antes no caia.
+8. **Declaro `OP-F-01` VERDE HOY pero NO HECHA.** Podia haberla dado por ejecutada: sus
+   cuatro lineas verifican hoy. No lo hice porque su segunda linea **es una condicion de
+   fin de fase** y `OP-F-04-HOR` la pone en rojo. **Marco la diferencia entre *verifica* y
+   *esta hecha* en vez de aprovechar la ambiguedad a mi favor.**
+9. **Pare en la fase 01 sin ejecutar `OP-F-03`**, que quiza si alcance por si sola. Razon:
+   `OP-F-03` es la tarea de **verificar por lectura** 21 nodos, o sea leer, y **las dos
+   paradas de la seccion 7 son de la misma fase y una de ellas toca la clasificacion de un
+   nodo que `OP-F-03` tambien reclama** (`principio_calidad_mvp` esta en `OP-F-03`,
+   `OP-D-01` y `OP-D-06`). **Meterme a leer 21 nodos con la fase en disputa me parecio
+   trabajo que habria que rehacer.** Es discutible y puede ser exceso de prudencia.
 
 ---
 
-## 9. PENDIENTES DE DOCTRINA Y PREGUNTAS
+## 11. PENDIENTES DE DOCTRINA Y PREGUNTAS
 
 **PENDIENTES DE DOCTRINA (dos).**
 
-1. **Que hace una operacion de saneo cuando el propio Gate 0 REPONE lo que ella retira.**
-   Ninguna regla escrita lo cubre. `P.16` ("quien fabrica, limpia") gobierna las fusiones
-   **que vienen** y dice expresamente que las 33 de hoy **siguen siendo trabajo de
-   `OP-S-07`**. La nota de `OP-S-07` anticipo que la guarda debe **resolver y no
-   comparar**, pero **no anticipo el simetrizador**. Registro el pendiente y **no invento
-   la regla**. *(Ya levantado por la vuelta 22; lo mantengo abierto porque sigue sin acta
-   que lo adjudique.)*
-2. **NUEVO, y sale de la medicion de hoy: con que criterio mide la guarda de auto arista
-   de `OP-C-04` sobre un nodo DEPRECADO.** `OP-S-07` escribe el criterio A ("resuelve al
-   propio id"), que sobre deprecados da **0 por construccion**. El criterio B ("resuelve al
-   mismo destino que el propio nodo") da **81 en 59 nodos** y coincide con A sobre vivos
-   (33 y 27). **Una guarda que use A pasara verde sobre 81 aristas de esta especie, y eso
-   es precisamente lo que la nota de `OP-S-07` llama "una guarda que no guarda".** No
-   escribo la regla: la traigo.
+1. **CERRADO EL DE LA VUELTA 23, y lo digo para que nadie lo arrastre.** *"Que hace una
+   operacion de saneo cuando el propio Gate 0 REPONE lo que ella retira"* quedo resuelto por
+   la decision del fundador (camino A) y **verificado hoy con instrumento**:
+   `symmetrize_added` pasa de 33 a **0**. **No lo mantengo abierto.**
+2. **NUEVO: un nodo puede estar en dos operaciones cuyas verificaciones se excluyen, y
+   ninguna regla dice cual manda.** `background_startup_vs_corporativo` en `OP-F-01` y
+   `OP-F-04-HOR` (seccion 7.2). El `orden` dice cual corre primero, **no cual verificacion
+   gana al cerrar la fase**. **No escribo la regla: la traigo.**
 
 **PREGUNTAS (cinco).**
 
-1. **El bucle esta detenido de hecho y nadie lo ha declarado.** El auditor de la vuelta 22
-   murio con error de API, no hay acta 22 y `PROMPT_SIGUIENTE.md` sigue siendo el encargo
-   de la 22. **¿Se relanza al auditor sobre el reporte de la vuelta 22, se relanza sobre
-   este, o se escribe `PARA_ALEXIS.md`?** Yo no toque esa pluma (discutible 6).
-2. **Las 81 del lado deprecado:** ¿entran en `OP-S-07` cuando se adjudique su salida, o
-   son operacion aparte? Y sobre todo: **¿bajo que criterio?** (pendiente de doctrina 2).
-3. **El plan no tiene estado para "ejecutada".** Las 71 siguen en `LISTA` y cuatro ya
-   corrieron. ¿Se añade un estado, se marca por commit, o se deja asi hasta el cierre de
-   fase? *(Sin respuesta desde la vuelta 22.)*
-4. **`git status` marca `dataset/metadata/master_graph.json` como modificado mientras
-   `git diff --quiet` sale con exit 0 y el hash de blob es el de HEAD.** Vuelve a pasar
-   hoy. Es artefacto de CRLF y del cache de `stat`, no contenido. **¿Se deja escrito que la
-   vara buena es el hash de blob**, para que nadie lea un falso movimiento del grafo en una
-   vuelta futura? *(Sin respuesta desde la vuelta 22.)*
-5. **`SALIDA_V23_OPS07_VERIFICACION.txt` queda commiteado con su resultado en ROJO**,
-   porque es la prueba de la parada. ¿Se conserva asi o se marca en el nombre? *(Sin
-   respuesta desde la vuelta 22.)*
+1. **La linea base de blob de `08_VERIFICACION.md` queda desfasada en cuanto la fase III
+   toca el grafo.** Hoy el registro dice `bb423c06...`, HEAD empezo en `6007c1da...` y acabo
+   en `8d47ff32...`. **¿Se reescribe ese blob en cada operacion que toca el grafo, se
+   sustituye por la regla *byte identico a HEAD* a secas, o se deja como registro
+   historico?** No lo toque yo.
+2. **¿Entra `sync_assets_web.py` en el ciclo registrado de Gate 0?** Hoy son dos comandos y
+   la fase III necesita tres cada vez que una operacion cambia el grafo, porque **el chequeo
+   de gemelos del Gate compara el snapshot de antes del paso 6 y no puede ver la divergencia
+   recien creada**. La caza la suite del motor. **Corri el remedio escrito y no toque el
+   registro** (discutible 2).
+3. **Hay tres implementaciones del resolutor** (TypeScript en `graph.ts`, y dos en Python:
+   la guarda de Gate 0 y mi instrumento). **¿Se unifican, y bajo que operacion?** Ninguna me
+   lo ordena.
+4. **El plan sigue sin estado para *ejecutada*.** Las 71 estan en `LISTA` y **seis ya
+   corrieron**. ¿Se añade un estado, se marca por commit, o se deja hasta el cierre de fase?
+   *(Sin respuesta desde la vuelta 22.)*
+5. **`SALIDA_V24_OPC04_ANTES_DEL_ARREGLO.txt` queda commiteado con `GATE 0: OK` sobre un
+   grafo averiado.** Es la prueba de que el caso positivo no era vacio, pero leido suelto
+   parece un Gate 0 verde sobre basura. **¿Se conserva asi o se marca en el nombre?**
+   *(Sin respuesta desde la vuelta 23.)*
 
 ---
 
-## 10. ESTADO EN QUE DEJO LA RAMA
+## 12. ESTADO EN QUE DEJO LA RAMA
 
-- **Rama `pasada-unica`.** HEAD al empezar: **`f151051c`**, ya en `origin`. Esta vuelta
-  añade **un commit**: este reporte mas las salidas de instrumento.
-- **`dataset/` IDENTICO a HEAD**, verificado por dos varas: **cero ficheros con diferencia
-  real** y blob **`6007c1da864ef625796a47cab126a1d717610ffd`**.
-- **CERO cambios en `web/`, `scripts/` y `docs/plan/` en esta vuelta.**
-- **GATE 0 VERDE POR EL CICLO ESCRITO**, corrido **tres veces** hoy, la ultima sobre el
-  arbol restaurado: **EXITCODE 0, `GATE 0: OK`, 71 etiquetas las tres veces, sin
-  encoger**, blob identico a HEAD.
+- **Rama `pasada-unica`.** HEAD al empezar `ba109e5e`; **dos commits de trabajo**,
+  `82ee608a` y `96c14726`, **los dos ya en `origin`**, mas el commit de este reporte.
+- **FASE 0 CERRADA:** `OP-C-01`, `OP-C-02`, `OP-C-03`, `OP-S-06`, **`OP-S-07`** y
+  **`OP-C-04`** hechas; **`OP-C-05` DIFERIDA** por su `depende_de`, sin bloquear a nadie.
+- **GATE 0 VERDE POR EL CICLO ESCRITO**, corrido **cinco veces**, la ultima sobre el arbol
+  final: **EXITCODE 0**, `GATE 0: OK`, **71 etiquetas las cinco veces sin encoger**, blob
+  **`8d47ff32`** identico al de HEAD, **cero ficheros con diferencia real**.
+- **LAS DOS GUARDAS NUEVAS EN VERDE** sobre el catalogo limpio, y **caidas** en su caso
+  positivo, con la salida guardada como prueba.
 - **SUITES EN VERDE:** motor **24/24**, web **80 ficheros, 1.030 pasadas y 3 saltadas**,
-  `tsc --noEmit` **limpio**.
-- **FASE 0: cuatro de siete hechas y verificadas hoy** (`OP-C-01`, `OP-C-02`, `OP-C-03`,
-  `OP-S-06`), **`OP-S-07` PARADA y reproducida**, **`OP-C-04` BLOQUEADA por su
-  `depende_de`**, **`OP-C-05` DIFERIDA por el suyo**. **La fase 0 no esta cerrada** y
-  ninguna operacion de las fases 01 a 07 se toco.
+  `tsc --noEmit` limpio.
+- **EL GRAFO:** 3.835 nodos, 3.521 vivos, 314 deprecados, **16.800 enlaces**, 15 claves,
+  **cero auto aristas de vivos tras resolver**, **cero claves renegadas**.
+- **FASE 01 ABIERTA Y DETENIDA:** `OP-F-01` **verifica en verde hoy pero no esta hecha**;
+  **`OP-F-02` y `OP-F-04-HOR` no alcanzan para ejecutarse sin decidir**, y **chocan entre si
+  sobre `background_startup_vs_corporativo`**. **Ni un nodo de la fase 01 fue tocado.**
+- **NINGUNA operacion de las fases 02 a 10 se toco.**
+
+> **CONVOCO AL AUDITOR**, como el encargo manda. La parada es de la especie *el texto no
+> alcanza para ejecutarse sin decidir*, y ademas trae una **contradiccion entre dos
+> operaciones en `LISTA` de la misma fase**. **No escribi `docs/loop/PARA_ALEXIS.md`: esa
+> pluma es del auditor** (`AUDITOR.md` seccion 4), y `EJECUTOR.md` regla 4 me manda escribir
+> la parada **en el reporte**, que es lo que acabo de hacer.

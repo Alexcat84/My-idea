@@ -1,0 +1,36 @@
+== OP-F-01: LA CLASE LARGO LEGITIMO, medida hoy ==
+nodo                                          vive  deprec  pasos_hoy publicado otras operaciones
+seleccion_representante_extranjero            True  False   9         9         -
+internacionalizacion_sitio_web_exportacion    True  False   9         9         -
+elaboracion_pro_forma_invoice                 True  False   8         8         -
+elementos_plan_exportacion_ejemplo            True  False   13        13        -
+principios_medicion_efectiva                  True  False   10        10        -
+fmea_analisis_de_modos_de_falla               True  False   8         8         -
+background_startup_vs_corporativo             True  False   9         9         ['OP-F-04-HOR']
+
+LINEA 1  los SIETE tratados por la misma regla, sin excepciones:
+         los 7 existen, los 7 vivos, cero deprecados -> VERDE HOY
+LINEA 2  ningun nodo de la clase con pasos alterados:
+         7 de 7 con el conteo de pasos IDENTICO al publicado -> VERDE HOY
+LINEA 3  la cifra de 18 reescrita con su corte donde este publicada:
+         docs/COSTURAS_INTERNAS_RESUMEN.md seccion 6 (linea 369) y
+         seccion 7 punto 1 (lineas 402 a 407): las DOS llevan la correccion
+         declarada con su corte, aditiva y sin borrar el texto viejo -> VERDE
+LINEA 4  Gate 0 verde: por el ciclo escrito, en esta vuelta -> VERDE
+
+== LA COLISION, medida y NO resuelta ==
+background_startup_vs_corporativo esta en OP-F-01 y en OP-F-04-HOR.
+  OP-F-01  verificacion: "ningun nodo de la clase queda con pasos alterados"
+  OP-F-04-HOR verificacion: "cada bloque apendice separado con su frontera"
+  frontera publicada (01_FUENTES.md, tabla de los 14): pasos 1 a 4 / 5 a 9
+  pasos hoy: 9. Separar el bloque 5 a 9 los deja en 4.
+  P.3 del banco del plan: el bloque de Horowitz es del MISMO tema ->
+  REPARTO OBLIGATORIO, la poda no es opcion. Asi que el bloque SE MUEVE.
+
+== OP-F-02: lo que su texto NO dice ==
+  future_scenarios_planning    pasos 13  fuente: Business Model Generation (Osterwalder) | Co-Intelligence_ Living and Wor - Ethan Mollick
+  gut_check                    pasos 9   fuente: The field guide to human-centered design | Co-Intelligence_ Living and Wor - Ethan Mollick
+  brainstorming_divergente     pasos 8   fuente: Change by Design, Revised and U - Tim Brown | Co-Intelligence_ Living and Wor - Ethan Mollick
+  frontera de paso del bloque de Mollick: NO PUBLICADA en ninguna sede
+  nodo del racimo que RECIBE el bloque: NO NOMBRADO (el racimo tiene diez)
+  aristas_nuevas: [] ; superviviente: null

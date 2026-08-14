@@ -1,0 +1,27 @@
+== MARCADOR (docs/INTRA_DOMINIO_VEREDICTOS.jsonl), corte 14 ago 2026 ==
+n: 3388
+  A 583 (17.2%)
+  B 89 (2.6%)
+  C 7 (0.2%)
+  D 2709 (80.0%)
+  puestos 1..3388 | huecos 0 | duplicados 0 | clases fuera de ABCD 0
+
+== TASA DE A POR DOMINIO ==
+  core               n 1445   A 344    23.8%  B 87   C 7   D 1007
+  quality            n 844    A 126    14.9%  B 0    C 0   D 718
+  health_safety      n 192    A 45     23.4%  B 0    C 0   D 147
+  entrega            n 171    A 2       1.2%  B 0    C 0   D 169
+  environmental      n 170    A 29     17.1%  B 0    C 0   D 141
+  compras            n 155    A 1       0.6%  B 2    C 0   D 152
+  franquicias        n 148    A 18     12.2%  B 0    C 0   D 130
+  exportacion        n 130    A 15     11.5%  B 0    C 0   D 115
+  risk_management    n 106    A 0       0.0%  B 0    C 0   D 106
+  seguridad_digital  n 27     A 3      11.1%  B 0    C 0   D 24
+
+== EL GRAFO, recomputado hoy ==
+  nodos 3835 | vivos 3521 | deprecados 314 | enlaces 16800 | claves distintas 15
+  claves: condiciones_activacion, deprecado, dominio, entregable_esperado, etiqueta_arbol, fase_proyecto, fuente, ids_alias, merged_originals, node_id, nodos_previos, nodos_siguientes, pasos_accionables, resumen_teorico, titulo_concepto
+
+== LAS OPERACIONES ==
+  71 operaciones | 71 ids unicos | dependencias rotas 0 | en LISTA 71
+  por fase: 00_CODIGO 7, 01_FUENTES 7, 02_DESTEJIDOS 9, 03_FUSIONES 16, 04_ENLACES 10, 05_SANEO 10, 06_MESAS 5, 07_ADUANA 2, 08_VERIFICACION 1, 09_LECTURAS_DIRIGIDAS 3, 10_INVENTARIO 1
