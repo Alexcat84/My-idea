@@ -3,8 +3,12 @@
 **FASE II, RECOMPUTO. MODO DE CIERRE: cero reparaciones de nodos, cero operaciones ejecutadas, cero
 pares nuevos leidos de la cola.** La FASE III no se abre y la rama `pasada-unica` no se crea.
 
-**Hash final: `0ac78fc9`** (push confirmado a `origin/bucle`). Tres commits, uno por tramo:
+**Hash final del trabajo: `0ac78fc9`** (push confirmado a `origin/bucle`). Tres commits, uno por tramo:
 `87d453c6` (TAREA 1 puntos 1 a 4), `2d5b3932` (TAREA 2) y `0ac78fc9` (TAREA 1 punto 5).
+**Este reporte se commitea despues, en `0cc723b2`**, mas este ajuste de la propia linea del hash: **un
+reporte no puede nombrar su propio commit, y por eso se separa el hash del trabajo del hash del
+reporte en vez de dejar la cifra ambigua.** Todas las mediciones de abajo son sobre `0ac78fc9`, que es
+donde el trabajo esta completo; los commits posteriores solo tocan `docs/loop/REPORTE.md`.
 
 **Corte de todas las cifras de este reporte: 14 ago 2026**, sobre el cribado **CERRADO en 3.388 de
 3.388**. Todas se leyeron de la salida de un instrumento corrido EN ESTA VUELTA (regla 1 de
