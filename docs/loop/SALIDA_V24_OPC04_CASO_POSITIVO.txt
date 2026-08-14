@@ -1,0 +1,81 @@
+CLAVE CIRILICA que se va a inyectar: fase_\u043f\u0440\u043eekto
+  puntos de codigo: ['0x66', '0x61', '0x73', '0x65', '0x5f', '0x43f', '0x440', '0x43e', '0x65', '0x6b', '0x74', '0x6f']
+  se ve identica a 'fase_proekto' en pantalla y NO lo es
+
+1) AUTO ARISTA inyectada: analisis_flujo_de_valor . nodos_previos += value_stream_analysis_lean
+2) CLAVE SUCIA inyectada: crosby_habilidad_transmision . fase_\u043f\u0440\u043eekto = 'ejecucion'
+
+ESTADO MALO EN EL ARBOL DE TRABAJO. Restaurar con: git checkout -- dataset/
+auto arista via alias presente: True
+clave cirilica presente:        True
+claves de crosby_habilidad_transmision: ['node_id', 'fase_proyecto', 'dominio', 'titulo_concepto', 'fuente', 'resumen_teorico', 'pasos_accionables', 'entregable_esperado', 'nodos_previos', 'nodos_siguientes', 'condiciones_activacion', 'etiqueta_arbol', 'fase_\\u043f\\u0440\\u043eekto']
+
+=== GATE 0 CON EL ESTADO MALO, TRAS EL ARREGLO ===
+=== Paso 1: Normalizacion ASCII ===
+  0 archivo(s) renombrado(s).
+=== Paso 2: Redireccion de nodos fusionados ===
+  0 nodo(s) actualizado(s).
+=== Paso 3: Aliases restantes (capa B / capa C / auto) ===
+  0 nodo(s) actualizado(s).
+=== Paso 4: Limpieza final de referencias rotas ===
+  0 nodo(s) actualizado(s).
+=== Paso 5: Simetrizacion de enlaces ===
+  1 nodo(s) actualizado(s). Vistas completadas: 1 en nodos_siguientes, 0 en nodos_previos.
+=== Paso 6: Compilacion de master_graph.json ===
+  3835 nodos compilados.
+  Log escrito en dataset\metadata\phase1_run_log.json
+
+=== Paso 7: Validador Gate 0 ===
+
+--- Resumen Gate 0 ---
+  [OK] Enlaces rotos en dataset == 0 (valor: 0)
+  [OK] Todos los nodos tienen dominio valido (['compras', 'core', 'entrega', 'environmental', 'exportacion', 'franquicias', 'health_safety', 'quality', 'risk_management', 'seguridad_digital']) (valor: 0)
+  [OK] Archivos con nombre no-ASCII == 0 (valor: 0)
+  [OK] Nodos en master_graph.json == archivos en disco (valor: 3835 vs 3835)
+  [OK] Componentes conexos <= 2 (valor: 1)
+  [OK] Cobertura del componente principal >= 99% (valor: 100.0)
+  [OK] Todos los JSON parsean sin error (valor: 0)
+  [OK] Cero grupos con titulo_concepto exacto duplicado (valor: 0)
+  [OK] Cero aristas con vista reciproca faltante (simetria) (valor: 0 (sin previo reciproco: 0, sin siguiente reciproco: 0))
+  [OK] Universo: activos / deprecados (valor: 3521 activos, 314 deprecados (siguen en el grafo))
+  [OK] Ningun nodo ACTIVO cuya unica entrada este deprecada (valor: 0 fantasmas)
+  [OK] Todo nodo ACTIVO tiene vector en el indice semantico (valor: 0 activos sin vector)
+  [OK] Ningun nodo lleva su propio id en su ids_alias (auto-alias) (valor: 0 auto-alias)
+  [OK] Ningun alias es reclamado por dos nodos distintos (valor: 0 con dos duenos)
+  [FALLO] Los dos master_graph (dataset y web) dicen lo mismo (valor: 71 nodos divergentes: ['actualizar_business_model_canvas_discovery (etiqueta_arbol)', 'actualizar_business_model_canvas_tuneup (etiqueta_arbol)', 'actualizar_modelo_de_negocio_pivot_o_proceed (etiqueta_arbol)'] -> ANTES de usar esta copia, EN ESTE ORDEN: python scripts/etiquetas_de_cara.py --aplicar && python scripts/sync_assets_web.py)
+  [FALLO] Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista via alias) (valor: 1 auto-aristas: ['analisis_flujo_de_valor.nodos_previos -> value_stream_analysis_lean'])
+  [FALLO] Ninguna clave de nodo fuera de la lista blanca del esquema (valor: 1 renegadas: ['crosby_habilidad_transmision.fase_\\u043f\\u0440\\u043eekto'])
+  [OK] Ninguna semilla de entrada esta deprecada (valor: 0 deprecadas)
+  [OK] Ningun puente aprobado apunta a un nodo deprecado (valor: 0 rotos)
+  [OK] Alcanzabilidad dirigida >= 99.5% desde entry_seeds.json (valor: 100.0% (3521/3521 activos, semillas validas: 85))
+
+--- Estadisticas del grafo ---
+{
+  "componentes_conexos": 1,
+  "tamano_componente_principal": 3835,
+  "cobertura_componente_principal_pct": 100.0,
+  "nodos_sin_enlaces_entrantes": 6,
+  "enlaces_rotos_en_grafo": 0
+}
+
+--- Warning informativo: pares de titulo con similitud >= 95 (13) ---
+  [99.2] crosby_estilo_ballet_vs_hockey  <->  estilo_gerencial_ballet_vs_hockey
+  [98.7] ciclo_venta_calidad_franquicia  <->  ciclo_ventas_calidad_franquicia
+  [97.6] capacidad_de_proceso  <->  capacidad_del_proceso
+  [97.3] control_estadistico_de_procesos  <->  control_estadistico_del_proceso
+  [97.2] carta_de_credito_letter_of_credit  <->  letters_of_credit
+  [97.1] costo_de_mala_calidad_3  <->  costo_mala_calidad_copq
+  [97.0] vehiculos_combustibles_alternativos  <->  vehiculos_combustibles_alternativos_2
+  [96.8] causas_comunes_causas_especiales  <->  causas_comunes_vs_especiales
+  [96.7] investigacion_incidentes  <->  investigacion_incidentes_2
+  [96.4] definicion_calidad_conformidad_requisitos_2  <->  definicion_calidad_conformidad_requisitos_3
+  [96.3] involucramiento_sindical  <->  involucramiento_sindical_calidad
+  [96.1] decision_aptitud_para_uso  <->  decision_aptitud_uso
+  [95.7] eliminacion_causas_error_3  <->  eliminacion_causas_error_4
+
+GATE 0: FALLIDO
+GATE0 EXITCODE=1
+SOBRE EL MISMO ESTADO MALO:
+  guarda LITERAL (dest == nid):  0  -> pasaria VERDE
+  guarda QUE RESUELVE:           1  -> CAE (medida por Gate 0 arriba)
+Es la demostracion de la nota de OP-S-07: una guarda literal no guarda.

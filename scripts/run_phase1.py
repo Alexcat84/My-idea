@@ -889,6 +889,95 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
         checks.append(("Los dos master_graph (dataset y web) dicen lo mismo",
                        not gemelos, detalle))
 
+    # ── OP-C-04: LAS DOS GUARDAS DE LA FASE 0 ───────────────────────────────
+    # Son las que hacen PERMANENTES a OP-S-07 y a OP-S-06. Sin ellas, las dos
+    # limpiezas duran hasta la proxima integracion.
+    #
+    # 1) AUTO ARISTA **CON RESOLUCION**, y la resolucion no es un detalle: es
+    #    toda la guarda. Un chequeo LITERAL (id == id) daba CERO sobre el grafo
+    #    que tenia VEINTISIETE nodos citandose a si mismos, porque ninguna de
+    #    las 33 aristas era directa: el nodo no se citaba por su id, citaba un
+    #    id que era su propio alias. Una guarda asi pasa verde el dia de la
+    #    reparacion y sigue pasando verde si manana vuelve a entrar una.
+    #    "ES UNA GUARDA QUE NO GUARDA" (nota de OP-S-07).
+    #
+    #    MIDE SOBRE VIVOS, y los deprecados quedan FUERA, con motivo escrito
+    #    (correccion declarada del 14 ago 2026, decision del fundador, camino A):
+    #    un nodo deprecado es REGISTRO HISTORICO, no superficie del producto, y
+    #    exigirle la misma guarda que a un vivo no protege a ningun usuario. Su
+    #    censo (81 enlaces en 59 nodos deprecados, particionados en 33 reciprocas
+    #    literales mas 48 alias contra alias inertes) vive en la nota de OP-S-07,
+    #    no aqui.
+    alias_de = {}
+    for _nid, _n in nodos_todos.items():
+        for _a in _n.get("ids_alias") or []:
+            if _a != _nid:
+                alias_de[_a] = _nid
+
+    def _resolver(nid):
+        """Copia fiel de resolverId (web/lib/engine/graph.ts). Las dos
+        resoluciones tienen que decir lo mismo o la guarda vigila otro grafo."""
+        n = nodos_todos.get(nid)
+        if n is not None and not n.get("deprecado"):
+            return nid
+        visto = {nid}
+        cur = nid
+        ultimo_real = nid if n is not None else None
+        while cur in alias_de:
+            cur = alias_de[cur]
+            if cur in visto:
+                break
+            visto.add(cur)
+            c = nodos_todos.get(cur)
+            if c is None:
+                continue
+            ultimo_real = cur
+            if not c.get("deprecado"):
+                return cur
+        return ultimo_real
+
+    auto_aristas = []
+    for nid, n in activos.items():
+        for campo in ("nodos_previos", "nodos_siguientes"):
+            for dest in n.get(campo) or []:
+                if dest in nodos_todos and _resolver(dest) == nid:
+                    auto_aristas.append(f"{nid}.{campo} -> {dest}")
+    checks.append((
+        "Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista via alias)",
+        not auto_aristas,
+        f"{len(auto_aristas)} auto-aristas" + (
+            f": {auto_aristas[:5]}" if auto_aristas else ""),
+    ))
+
+    # 2) LISTA BLANCA DE CLAVES DEL NODO. Es lo que impide que vuelva
+    #    `fase_проekto`, la clave con п, р y о CIRILICAS que convivia con un
+    #    `fase_proyecto` correcto en el mismo nodo: dos strings que se ven
+    #    IDENTICOS en pantalla, la averia mas dificil de diagnosticar que existe.
+    #
+    #    LA LISTA NO SE REESCRIBE AQUI: se importa de scripts/expansion/
+    #    validar_esquema.py, que ya la tiene con su adjudicacion de
+    #    `merged_originals` argumentada dentro. Dos listas blancas divergentes
+    #    serian exactamente el defecto de los dos master_graph que el chequeo de
+    #    gemelos de mas arriba vino a curar.
+    sys.path.insert(0, str(BASE / "scripts" / "expansion"))
+    from validar_esquema import CAMPOS_PERMITIDOS
+
+    claves_renegadas = []
+    for path in sorted(NODOS_DIR.glob("*.json")):
+        try:
+            datos = load_json(path)
+        except json.JSONDecodeError:
+            continue  # ya lo reporta el chequeo de parseo
+        for clave in sorted(set(datos) - CAMPOS_PERMITIDOS):
+            claves_renegadas.append(
+                f"{path.stem}.{clave.encode('unicode_escape').decode('ascii')}")
+    checks.append((
+        "Ninguna clave de nodo fuera de la lista blanca del esquema",
+        not claves_renegadas,
+        f"{len(claves_renegadas)} renegadas" + (
+            f": {claves_renegadas[:5]}" if claves_renegadas else ""),
+    ))
+
     seeds = load_entry_seeds()
     seeds_deprecadas = sorted(set(seeds) & deprecados)
     checks.append((
