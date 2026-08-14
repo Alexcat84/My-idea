@@ -4808,3 +4808,245 @@ con caida de clase o cifra: CERO. Caidas de reporte seguidas: CERO.**
 **`docs/loop/PARA_ALEXIS.md` escrito con el caso completo, los caminos y como retomar.
 `docs/loop/PROMPT_SIGUIENTE.md` VACIO a proposito. El bucle queda detenido esperando la decision
 de la casa.**
+
+## VUELTA 23, 14 ago 2026. Auditor: Fable 5. Reporte auditado: la vuelta 23 del ejecutor (Opus 5), FASE III, la vuelta del encargo repetido: fase 0 en cuatro de siete y la parada de OP-S-07 reproducida ejecutandola. ESTA ACTA CIERRA TAMBIEN LA VUELTA 22 (su auditor murio sin escribir acta) Y DETIENE EL BUCLE: doctrina nueva necesaria sobre OP-S-07
+
+### 0. El contexto de esta acta
+
+El auditor de la vuelta 22 murio sin escribir acta ni encargo nuevo, asi que el ejecutor de la
+vuelta 23 recibio el encargo de la 22 byte identico y, por la regla 1 (el instrumento manda), lo
+corrio entero otra vez midiendo desde cero. Resultado: TAREA 1 verificada puesta sin duplicar,
+cuatro operaciones de la fase 0 verificadas vivas en el codigo, y la parada de OP-S-07
+REPRODUCIDA EJECUTANDOLA: retiro los 33 enlaces, corrio Gate 0, y los 33 volvieron. Ademas trajo
+material nuevo: las 81 aristas del lado deprecado solo existen bajo un criterio que nadie
+escribio. Esta acta verifica todo con instrumento propio corrido hoy, adjudica los ocho
+discutibles y cuatro de las cinco preguntas, absorbe la auditoria de la vuelta 22 (mismo encargo,
+remedido dos veces: por el ejecutor 23 y por mi), y DETIENE el bucle: el texto de OP-S-07 no
+alcanza para ejecutarse sin decidir, y ninguna regla escrita lo cubre por extension citable.
+PARA_ALEXIS.md escrito, PROMPT_SIGUIENTE.md vacio.
+
+### 1. VERIFICACION: el instrumento mando en todo, y la tanda 23 sale LIMPIA
+
+**El encargo repetido, verificado por mi:** blob `362492c3` de PROMPT_SIGUIENTE.md identico en
+`bd782052`, en `ae52df50` (HEAD del reporte) y en el disco; cero commits lo tocaron en ese tramo.
+El acta no tiene una sola mencion de la vuelta 22 (grep da 0) y su ultima cabecera es VUELTA 21,
+linea 4.579. El log del bucle corrobora la muerte: la sesion del auditor tras el reporte 22 duro
+853 segundos y no dejo acta, ni commit, ni encargo; el arnes la dio por lista (intento 1 de 7) y
+siguio. **Discrepancia de fuente, declarada en vez de resuelta copiando:** la cita textual del
+reporte (is_error true, api_error, Connection lost mid-response, 851.409 ms) salio de
+`docs/loop/ultimo_auditor.json`, que HOY tiene CERO bytes: el arnes lo consumio al lanzarme. Ya
+no puedo releer esa cita del fichero; la doy por corroborada por tres varas independientes
+medidas hoy (853s del log contra los 851.409 ms citados, cero acta y cero commit, blob del
+encargo intacto). Lo mismo con `ultimo_ejecutor.json`: el reporte lo midio vacio y HOY trae
+4.420 bytes con el registro de la propia vuelta 23 (terminal_reason completed, 791.512 ms que
+calzan con los 793s del log, y el result cita `ae52df50`). Son artefactos vivos del arnes: la
+cifra del reporte fue cierta en su momento y la de hoy es otra. Ninguna de las dos mueve datos.
+
+**El marcador, recomputado con instrumento propio:** n 3.388; A 583 (17,2), B 89 (2,6), C 7
+(0,2), D 2.709 (80,0); puestos 1 a 3.388, cero huecos, cero duplicados, cero clases fuera de
+ABCD; la tabla por dominio calza celda por celda con el reporte.
+
+**El grafo, recomputado:** 3.835 nodos, 3.521 vivos, 314 deprecados, 16.866 enlaces, 15 claves
+distintas, las mismas quince. **Las operaciones:** 71, 71 ids unicos, cero dependencias rotas,
+las 71 en LISTA; el reparto por fase calza numero a numero; OP-C-04 orden 6, depende_de
+[OP-S-06, OP-S-07], bloquea_a [OP-S-01, OP-S-09, OP-F-01]; OP-C-05 orden 7, depende_de
+[OP-S-12], bloquea_a vacio; notas de 1.842 y 1.766 caracteres con el REGISTRO DE LA
+ADJUDICACION al final, aditivas.
+
+**OP-S-07, remedida entera con resolutor propio reimplementado de graph.ts:** criterio A sobre
+vivos 33 enlaces en 27 nodos, cero directas, 33 via alias, el peor costo_de_mala_calidad_copq
+con 7 (2 previos, 5 siguientes), nomina identica id por id a la del plan. Criterio A sobre
+deprecados: CERO, por construccion. Criterio B sobre deprecados: 81 enlaces en 59 nodos; B sobre
+vivos como control: 33 y 27, identico a A. Los ejemplares calzan (categorias_costos_calidad 4,
+comunicacion_coordinacion_multiempleador 3, costo_de_mala_calidad_3 con 3,
+costo_de_mala_calidad_copq_3 con 3, costos_ocultos_calidad 3; el par 6s resuelve los dos a
+metodologia_6s). De las 33 vivas, las 33 tienen su vista reciproca en el gemelo deprecado: 33 de
+33. **Y una particion NUEVA, medida por mi para la decision que viene:** las 81 se parten EXACTO
+y sin solape en 33 reciprocas literales de las 33 vivas (en 32 nodos deprecados: el enlace
+apunta literal al superviviente) mas 48 alias contra alias (en 33 nodos: el enlace apunta a OTRO
+alias del mismo superviviente). Solo las 33 literales proyectan sobre vivos via el paso 5; las
+48 se simetrizan entre deprecados.
+
+**La causa, leida por mi en el codigo:** el paso 5 de run_phase1.py (lineas 396 a 435) recorre
+succ_needed y pred_needed, fabrica la reciproca que falte y LA ESCRIBE AL FICHERO DEL NODO con
+save_node; su unica defensa es dedupe_and_remove_self (linea 137), que compara LITERAL, y
+ninguna de las 33 es literal. El log de HEAD y el de mi corrida de hoy traen symmetrize_added
+con CERO entradas (el punto fijo); las 33 entradas que el reporte cita son del estado intermedio
+tras retirar y correr Gate 0, y viven commiteadas en SALIDA_V23_OPS07_CAUSA.txt, que lei:
+coincidencia conjunto contra conjunto declarada ahi, con las dos diferencias vacias.
+
+**Los sitios de la fase 0, releidos:** resolverId 2 en planRedactor.ts, 3 en compass.ts, 6 en
+graph.ts, 2 en world/[pack]/start; cero en recorrido.ts y en session/[id]/plan con la resolucion
+INDIRECTA verificada por mi hasta el cuerpo: conceptosDeRuta en graph.ts:194, faseDeNodo en
+graph.ts:206 y preguntaDeNodo en graph.ts:279, los dos ultimos con resolverId(nid, graph) ?? nid
+en su primera linea; llamadores en recorrido.ts:271 y 649, y en plan/route.ts:265 y 403. La
+medicion de hoy confirma al ejecutor 23 y sostiene su discrepancia declarada contra el reporte
+22 (que publico 267 y 405). cargarEntrySeeds(graph) en las tres rutas. El fichero de casos
+positivos existe: 15.956 bytes, 27 lineas it(.
+
+**Los registros de la TAREA 1, releidos:** la cabecera de GATE 0 EN VERDE esta en la linea 42 de
+08_VERIFICACION.md, los dos comandos en la 52 y la 53, la cita del comentario fechado 2026-08-07
+en run_phase1.py lineas 941 a 958 con QUIEN RECOMPILA, REAPLICA en la 955: todo leido por mi en
+los dos ficheros.
+
+**La linea base, corrida POR MI entera:** python scripts/run_phase1.py --reaplico-curaduria
+EXITCODE 0 y GATE 0: OK (1 componente, 3.835 en el principal, cobertura 100,0, 2 sin entrantes,
+0 rotos, 13 pares de titulo en warning); python scripts/etiquetas_de_cara.py --aplicar justo
+despues: 71 etiquetas, y master_graph.json con blob 6007c1da, identico a HEAD. **Las suites,
+corridas POR MI enteras:** motor 24 de 24 en exit 0; web 80 ficheros, 1.030 pasadas y 3 saltadas
+en exit 0; tsc --noEmit exit 0 con cero lineas. **dataset/ identico a HEAD** por las dos varas:
+git diff --quiet en 0 y el blob del grafo el de HEAD; git status vuelve a marcar
+master_graph.json por el artefacto de CRLF, con el warning de git delante (reproducido hoy, es
+la pregunta 4, adjudicada abajo). El commit ae52df50 toca 15 ficheros y los 15 viven en
+docs/loop/: cero fuera. La rama esta empujada: origin/pasada-unica y HEAD coinciden.
+
+**CERO caidas en la tanda 23: ni de clase, ni de cifra, ni de reporte.** Toda cifra y todo
+nombre propio que toque un dato salio identico en mi instrumento. Las dos cifras de artefacto
+vivo (los json del arnes) quedan declaradas arriba como discrepancia de fuente consumida, no
+como caida: eran ciertas con su corte y no mueven ningun dato.
+
+### 2. RELECTURA: declarada, no aplicable a pares
+
+La vuelta no leyo un solo par (cribado cerrado en 3.388, cero veredictos abiertos): no hay
+relectura ciega de clases. Lo releido con ojos propios, evidencia PRIMERO y razon despues, fueron
+los ocho discutibles del reporte: en cada uno medi el estado del repo antes de destapar la razon
+escrita del ejecutor. Ocho de ocho coinciden con mi adjudicacion; cero discrepan.
+
+### 3. LOS OCHO DISCUTIBLES, adjudicados uno por uno: ocho de ocho CORRECTOS
+
+1. **Tratar el encargo repetido como volver a medirlo todo: CORRECTO.** La regla 1 hace de la
+   remedicion el unico trato posible (nada de la vuelta 22 es fuente), y la regla 4 del ejecutor
+   reserva la parada para contradicciones: un encargo repetido no contradice nada. Declararlo en
+   el titular era lo debido y esta hecho.
+2. **Re ejecutar OP-S-07 con la parada de la 22 ya documentada: CORRECTO.** Una parada heredada
+   no es una parada medida, y la remedicion pago: la particion de las 81 (criterios A y B) no
+   existe sin ejecutar. Es ademas la relectura al doble que la caida de la tanda 22 exigia
+   (seccion 4, punto 1).
+3. **Ejecutar sobre dataset/nodos y no sobre master_graph.json: CORRECTO.** El grafo compilado es
+   artefacto: el paso 6 lo reconstruye desde los nodos en cada corrida, leido por mi en el
+   codigo. Retirar del artefacto es trabajo que la primera recompilacion deshace sin rastro.
+4. **Decidir que el equivocado era su chequeo y no el dato (etiqueta_arbol): CORRECTO.** El
+   comentario de run_phase1.py (lineas 941 a 958) escribe que la curaduria no vive en los nodos;
+   comparar el fichero del nodo contra el grafo compilado mezcla dos capas. La vara buena es
+   git show HEAD:, que es independiente del criterio propio, y dio 0 campos movidos.
+5. **Nombrar los criterios A y B con nombres propios: CORRECTO.** No adjudico doctrina: midio los
+   dos criterios y anclo B con el control sobre vivos (33 y 27, identico a la verificacion
+   escrita). Sin ese control B seria invencion; con el, es la generalizacion honesta. La decision
+   de cual rige sigue sin dueño y va a la parada.
+6. **NO escribir PARA_ALEXIS.md: CORRECTO.** La seccion 4 de AUDITOR.md pone esa pluma en el
+   auditor y la regla 4 del ejecutor manda escribir la parada en el reporte. La muerte del
+   auditor no traspasa la pluma. La ejerzo yo en esta acta.
+7. **No mover ninguna operacion de LISTA: CORRECTO.** Ninguna instruccion lo manda, y el estado
+   de verdad es el repo (preambulo de AUDITOR.md): el commit por operacion ES el registro de
+   ejecucion. Adjudicado con regla en la seccion 4, punto 2.
+8. **Contar los casos positivos como lineas it( y no como pruebas: CORRECTO.** Separar el grep de
+   la corrida es la disciplina del instrumento aplicada a si mismo. Las 27 lineas las conte yo;
+   la cifra corrida son las 1.030 pasadas, que tambien corri.
+
+### 4. ADJUDICACIONES: la caida de la tanda 22 y cuatro preguntas con regla escrita
+
+1. **La tanda 22 carga UNA CAIDA DE REPORTE, fuera del marcado, y su relectura al doble ya esta
+   hecha.** El reporte 22 publico los sitios de OP-C-02 en las lineas 267 y 405; medido por el
+   ejecutor 23 y remedido por mi: son 265 y 403. Vive solo en REPORTE.md y no mueve ningun dato:
+   caida de REPORTE con nombre, que NO acumula para la parada. Aparecio FUERA de los discutibles
+   marcados de la 22, asi que el credito de esa tanda baja y el tramo (los sitios de la fase 0)
+   se releyo al doble: lo releyo entero el ejecutor 23 y lo relei entero yo. Cumplido y
+   declarado. **Las 81 sin criterio del reporte 22 NO son caida:** la cifra se reproduce exacta
+   bajo B; lo que falta es doctrina, no medicion.
+2. **Pregunta 3 (el plan no tiene estado ejecutada): SE QUEDA COMO ESTA, con regla citada.** El
+   preambulo de AUDITOR.md escribe que el estado de verdad es EL REPO: el commit por operacion
+   (8b2ba536, 41a9c570, 1578e641, a1c39585 y su punto fijo 9707a67d) es el registro de ejecucion,
+   y ninguna regla ordena mover el campo estado del plan. Añadir un estado nuevo al esquema del
+   plan es cambiar el plan: de la casa. Si el fundador lo quiere, lo dice en la parada; mientras,
+   las 71 siguen en LISTA y nadie las mueve.
+3. **Pregunta 4 (el falso movimiento por CRLF): ADJUDICADA POR EXTENSION CITABLE, con registro
+   encargado.** La vara ya esta escrita: 08_VERIFICACION.md, linea 53, define el criterio como
+   BYTE IDENTICO a HEAD por hash de blob. git status no es vara del Gate 0: git mismo avisa del
+   reemplazo de LF por CRLF al tocar el fichero. Queda encargado (en la reanudacion) añadir una
+   linea de registro en 08_VERIFICACION.md que lo diga expreso, para que nadie lea un falso
+   movimiento.
+4. **Pregunta 5 (la salida en ROJO commiteada): SE CONSERVA TAL CUAL, por precedente citado.** El
+   acta 21, discutible 9: una parada sin prueba es una afirmacion, y docs/loop/ es la sede de las
+   salidas. El nombre ya dice VERIFICACION y el reporte la nombra como prueba de la parada. No se
+   renombra: renombrarla seria editar la prueba.
+5. **Pregunta 1 (el bucle detenido de hecho): RESUELTA POR LOS HECHOS Y POR ESTA ACTA.** El arnes
+   relanzo solo, el ejecutor 23 trato el encargo repetido por la regla 1, y la pluma de la parada
+   la ejerzo yo aqui. El fallo tecnico (api_error) ocurrio UNA vez: la condicion de parada exige
+   dos vueltas seguidas por la misma causa, no se cumple, y no hace falta: el bucle para hoy por
+   doctrina.
+6. **Pregunta 2 y los dos pendientes de doctrina: NO ADJUDICABLES, son la parada.** Seccion 5.
+
+### 5. LO QUE DETIENE EL BUCLE: OP-S-07 no puede ejecutarse tal como esta escrita, y ninguna regla la cubre
+
+**La contradiccion, medida dos veces (ejecutor 23 ejecutando, yo por mecanismo):** (a) su
+eliminar manda retirar los 33 enlaces de los 27 vivos y NO tocar ningun otro campo; (b) su
+verificacion exige que ningun vivo se cite a si mismo tras resolver y que el conteo baje en 33
+exactamente. Ejecutado (a) al pie de la letra, el paso 5 del propio Gate 0 refabrica los 33
+desde la vista reciproca del gemelo deprecado (33 de 33, medido) y los escribe de vuelta a los
+ficheros: (b) no puede darse. El instrumento lo demuestra: tras ejecutar y correr Gate 0, la
+variacion neta es CERO.
+
+**Y ninguna regla escrita lo cubre por extension citable, verificado texto por texto:** P.16
+(quien fabrica limpia) gobierna las fusiones QUE VIENEN y deja escrito que las 33 siguen siendo
+trabajo de OP-S-07 tal como esta escrita, sin tocar el simetrizador. OP-S-12 excluye la
+auto arista a proposito (su nota: la auto arista es OP-S-07) y mide sobre vivos. OP-C-04 ordena
+añadir una guarda a Gate 0, no cambiar el paso 5. Y las reglas de correccion cubren cifras con
+su corte, no reescribir la letra de una operacion. Toda salida reescribe algo: ampliar el
+eliminar a los gemelos rompe el conteo de 33 exacto de la propia verificacion (serian 66
+entradas), enseñar al paso 5 a resolver antes de fabricar es codigo del validador que ninguna
+operacion ordena (y deja la simetria del Gate con esos pares sin vista), y diferir OP-S-07
+contradice su bloquea_a y la decision del fundador de adelantarla a la fase 0. Es la primera
+condicion de la seccion 4 (doctrina nueva) y tambien la tercera (cambiar la letra del plan es de
+la casa). **La decision gemela, tambien sin dueño:** con que criterio mide la guarda de OP-C-04
+sobre deprecados (A da cero por construccion; B da 81, y las 81 se parten en 33 mas 48 de
+especies distintas). El caso completo, con las cifras y los caminos, en PARA_ALEXIS.md.
+
+### 6. ERRORES PROPIOS DE ESTA VUELTA, declarados con nombre
+
+- **Mi primer lector del marcador uso la clave puesto, que no existe: es puesto_intra.**
+  Reventon con KeyError, corregido en la corrida siguiente, cero cifras publicadas alcanzadas.
+  La misma especie que el ejecutor declaro con id contra id_op: leer el esquema antes de barrer.
+- **Mi primer grep de la cabecera de 08_VERIFICACION dio cero por el formato:** busque el texto
+  sin las marcas de negrita que parten la frase. Releida la zona con el fichero abierto, la
+  cabecera esta en la 42. No se publico nada del grep fallido.
+- **Intente leer ultimo_auditor.json sin mirar antes su tamaño** y el parser revento sobre un
+  fichero de cero bytes. El artefacto vivo se mira con wc -c antes de parsearlo. Quedo declarado
+  como fuente consumida en la seccion 1.
+
+### 7. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 21: 35 relecturas, 393 puestos (mas 23 nodos de forma y 24 sitios de
+codigo), 7 caidas de clase, mas 4 caidas de reporte del ejecutor, mas 4 caidas de cifra publicada
+del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1 caida de acta del auditor.
+Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte seguidas: CERO.
+
+Esta acta cubre DOS tandas. La 22: una caida de reporte del ejecutor (267/405), fuera del
+marcado, tramo releido al doble por el ejecutor 23 y por mi. La 23: cero pares y cero puestos;
+en unidad propia, el encargo entero remedido (marcador, grafo, operaciones, sitios, registros,
+ciclo del Gate 0 corrido entero por mi y las tres suites corridas enteras por mi), y CERO caidas
+de cualquier especie.
+
+**Acumulado: 35 relecturas, 393 puestos (mas 23 nodos de forma y 24 sitios de codigo), 7 caidas
+de clase, mas 5 caidas de reporte del ejecutor, mas 4 caidas de cifra publicada del ejecutor,
+mas 2 caidas de cifra publicada del auditor, mas 1 caida de acta del auditor. Tandas seguidas
+con caida de clase o cifra: CERO. Caidas de reporte seguidas: CERO (la 22 cargo una, la 23
+salio limpia).**
+
+### 8. CONDICIONES DE PARADA: UNA SE CUMPLE
+
+- **Doctrina nueva necesaria: SI.** OP-S-07 no puede ejecutarse tal como esta escrita sin decidir
+  entre su letra y su verificacion, el propio Gate 0 deshace su trabajo por diseño, y toda
+  salida reescribe la letra del plan o toca codigo que ninguna operacion ordena (seccion 5).
+  Con ella viaja la decision del criterio de la guarda de OP-C-04 sobre deprecados.
+- Contradiccion sin resolver: la de arriba y ninguna otra: todo lo demas quedo adjudicado.
+- Decision de fundador: nada reservado se toco. dataset/ identico a HEAD verificado por mi,
+  veredictos intactos, cero merges, el experimento de OP-S-07 nunca commiteado.
+- Fallo tecnico repetido: NO. El api_error del auditor 22 ocurrio una vez y el arnes se recupero
+  solo; el Gate 0 esta verde por su ciclo escrito, corrido por mi.
+- Credito de tanda: la caida de la 22 es de REPORTE (no acumula para parada) y la 23 salio
+  limpia. Tandas seguidas con caida de clase o cifra: CERO.
+- Campaña consumada: no.
+
+**`docs/loop/PARA_ALEXIS.md` escrito con el caso completo, las cifras y como retomar.
+`docs/loop/PROMPT_SIGUIENTE.md` VACIO a proposito. El bucle queda detenido esperando la
+decision de la casa.**
