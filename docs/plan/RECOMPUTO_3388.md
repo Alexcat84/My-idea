@@ -973,3 +973,197 @@ adjudique:**
   viejas, es trabajo de lectura y redaccion por acto, la misma escala que escribir 335 fichas cortas.
 
 **No se decide aqui: se trae la pregunta, igual que el discutible de `OP-L-03` en la vuelta 14.**
+
+---
+
+## TAREA (vuelta 16): registro de las cinco adjudicaciones y regeneracion de las 335 entradas de tipo `acto`
+
+**Las cinco adjudicaciones de `docs/loop/ACTA_AUDITOR.md` VUELTA 15 seccion 6, registradas cada una donde
+corresponde, con su cita:**
+
+1. **La cobertura de la mesa unida se corrige a 54 de 136** (adjudicacion 6.1). Ejecutado en TAREA vuelta
+   16 punto 1: tachado sin borrar el 49 en `docs/plan/INVENTARIO.jsonl`, `docs/plan/10_INVENTARIO.md`,
+   `docs/plan/OPERACIONES.jsonl` (nota de `OP-M-01`), `docs/plan/EXPEDIENTE_MESA_UNIDA.md`,
+   `docs/plan/LD_MESA_UNIDA.md`, `docs/plan/LECTURAS_DIRIGIDAS.md` y en la tabla de los trece racimos de
+   esta misma seccion (linea 847 de esta version).
+2. **El bloque humano de la IA se corrige a 5 A y 5 D** (adjudicacion 6.2). Ejecutado en TAREA vuelta 16
+   punto 1: tachado sin borrar en `docs/plan/LECTURAS_DIRIGIDAS.md` (lineas 440 y 465), en la nota de
+   `OP-L-02` de `docs/plan/OPERACIONES.jsonl`, y en la seccion de esta misma pagina que copiaba el "7 A y
+   3 D" (lineas 638 a 642).
+3. **La regeneracion de las entradas de tipo `acto` se aprueba con cinco condiciones** (adjudicacion 6.3).
+   Ejecutada de punta a punta abajo, seccion siguiente.
+4. **El estado de fusion de las 53 familias se publica en tres cubetas con nombre** (adjudicacion 6.4).
+   Publicado en la seccion de mas abajo, "LAS TRES CUBETAS DE LAS 53 FAMILIAS".
+5. **Los ejemplares de las veinte figuras quedan como el ultimo bloque grande de la FASE II** (adjudicacion
+   6.5). **REGISTRADO AQUI FORMALMENTE**: junto al lote de cinco del sales roadmap, la cola de relectura
+   post fusion, el criterio del forastero y las lecturas de acto entero de P.5, **la FASE II no cierra sin
+   los ejemplares de las veinte figuras remedidos, o sin que el fundador los difiera por escrito.** Nada
+   nuevo se mide aqui sobre las figuras: siguen PENDIENTES DE MEDICION (seccion TAREA vuelta 15, punto
+   2.d), el grep queda descartado como instrumento (discutible 3 adjudicado), y remedirlas exige releer y
+   clasificar cada patron contra los pares nuevos desde su corte.
+
+### 1. Condicion (a): la busqueda de los 221 nombres viejos por el repo, con script
+
+**Instrumento: `scripts/vuelta16_buscar_actos.mjs` y `scripts/vuelta16_buscar_actos2.mjs`, ambos de solo
+lectura, corridos sobre `git ls-files` (7.468 archivos rastreados, menos `INVENTARIO.jsonl`).**
+
+**Primer barrido, sobre TODO el repo:** los 221 nombres aparecen citados **los 221 de 221**, porque cada
+`nombre` de acto ES literalmente el id de un nodo real del catalogo, y por eso aparece de forma trivial en
+`dataset/`, `packs/`, `engine/`, `web/` (el nodo existe ahi, no el acto) y en los archivos mecanicos del
+cribado (`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `docs/FRANJA_*`, `docs/GRADIENTE_*`, que listan el nodo
+como miembro de un par, no como acto). **Ese barrido no distingue nada: da 221 de 221 pase lo que pase, asi
+que no es la pregunta util.**
+
+**Segundo barrido, acotado a la CAPA NARRATIVA de planeacion** (`docs/plan/*.md`, `docs/loop/*.md`,
+`docs/BANCO_DE_TEXTOS.md`, y `docs/plan/OPERACIONES.jsonl`; fuera del barrido `INVENTARIO.jsonl`,
+`RECOMPUTO_3388_COMPONENTES.jsonl` y los cuatro jsonl mecanicos de pares/razones que solo listan miembros),
+que es donde tendria sentido citar un acto como objeto que sigue existiendo: **81 de 221 nombres aparecen**,
+casi todos dentro de `OPERACIONES.jsonl` (como miembro de la nomina `nodos` de una operacion) y de los
+expedientes de mesa (`EXPEDIENTE_MESA_*.md`, `LD_*.md`). **Ninguna de las 81 citas es una cita AL ACTO
+COMO OBJETO DE INVENTARIO por su nombre compuesto**: todas citan al NODO individual dentro de una nomina
+mas amplia (una operacion, una mesa, un racimo), que es justo lo que las cinco condiciones de la
+adjudicacion 6.3 protegen sin necesidad de tocar ninguna de esas citas, porque **ningun nodo se borra, se
+renombra ni cambia de id.** Lista completa de los 81, con sitio y conteo, en
+`scripts/_actos_citas_narrativa.json`. **Si alguna cita asumiera que el acto viejo especifico (con esa
+composicion y ese id de acto) sigue existiendo tal cual, no se toca sin decirlo**, pero no se encontro
+ninguna con esa forma: las citas son siempre al nodo, nunca al acto-registro.
+
+### 2. Condiciones (b) a (f): el metodo, y un hallazgo que cambia el alcance de (b) y (c)
+
+**Instrumento: `scripts/vuelta16_generar_actos.mjs`, de solo lectura sobre
+`docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` (335 componentes al corte 3.388) y sobre las 221 entradas
+viejas de `INVENTARIO.jsonl`.**
+
+**Mapeo de sucesion, medido antes de escribir nada:** para cada uno de los 221 actos viejos se busco el
+componente de `RECOMPUTO_3388_COMPONENTES.jsonl` cuyo `miembros` CONTIENE enteros a los miembros del acto
+viejo (superset). **Resultado: los 221 de 221 tienen exactamente UN sucesor, y ninguno tiene mas de uno.**
+Dicho de otro modo: **la componente conexa nunca se parte entre el corte 2.117 y el 3.388** (esperable,
+porque las aristas A solo se agregan, nunca se retiran, asi que un componente solo puede crecer o quedarse
+igual). **De los 221, 220 son identicos en tamano y 1 crecio** (`construccion_de_leverage`, la
+"competencia entre inversores", de 4 a 5 miembros, ya documentado en la ficha del racimo).
+
+**Esto cambia el alcance de la condicion (c): NINGUNA de las 221 entradas viejas queda "sin componente
+sucesor".** La condicion (c) esta escrita para el caso que no aparecio: se declara medido, no se fuerza.
+**Y esto tambien acota la condicion (b):** de las 221 notas viejas, **220 son la MISMA formula mecanica**
+("tamano N. Sin pares pendientes: no puede crecer." o "tamano N. Puede crecer: X en cola y Y fuera de
+cola."), medido por conteo de valores distintos (22 notas unicas sobre 221 filas, y de esas 22 solo
+UNA no sigue la formula). **La UNICA nota escrita a mano de las 221 es la de `formalizar_junta_asesora`**
+(la junta asesora, la decision de fusion en dos con enlace, `OP-M-04`), y es esa la que viaja.
+
+**Condicion (a) de las cinco, NADA SE BORRA: se cumple por construccion.** Las 221 lineas viejas de
+`INVENTARIO.jsonl` **no se tocan, no se editan, no se borran**: siguen exactamente como estaban, con su
+`fecha_corte` de 2026-08-11 intacta. **Se ANADEN 335 lineas nuevas**, una por componente del corte 3.388,
+en vez de sobrescribir las 221: es la lectura mas literal de "nada se borra" y de "no se borra ni una linea
+del archivo" (condicion c), y es MAS estricta que el plan original de la vuelta 15, que proponia BORRAR las
+221 y escribir 335 (discutible 4 de esa vuelta, "se BORRAN 221 lineas... y se ESCRIBEN 335"). **La
+condicion (a) de la adjudicacion deroga esa parte del plan viejo: no se borra ninguna.**
+
+**Condicion (d), la convencion de `nombre`: verificada antes de usarla, no supuesta.** Sobre las 221
+viejas, `nombre` es SIEMPRE el primer elemento de `miembros`, y `miembros` esta SIEMPRE ordenado
+alfabeticamente (221 de 221 en los dos chequeos). `RECOMPUTO_3388_COMPONENTES.jsonl` tambien trae sus 335
+`miembros` ordenados alfabeticamente (335 de 335). **La convencion es la misma y se aplica igual: `nombre`
+= primer id alfabetico de `miembros`.** No hizo falta inventar ninguna.
+
+**Condicion (e), `nota` no se inventa:** las 335 entradas nuevas llevan la MISMA formula mecanica de
+cobertura que usaban las 220 viejas normales (calculada de `leidos`/`posibles`/`en_cola_sin_leer`/
+`fuera_de_cola`), mas una linea de procedencia ("REGENERADO EN LA VUELTA 16..."). **Las 114 sin antecesor
+en los 221** llevan ademas la linea "Sin antecesor... Nota no inventada: hueco nombrado, no rellenado." **La
+unica que lleva prosa mas alla de la formula es la sucesora de `formalizar_junta_asesora`, que carga la
+nota vieja completa, sin tocarla, con su corte viejo (2026-08-11) al lado.**
+
+**Condicion (f), campos mecanicos:** `miembros`, `forma`, `cobertura` y `estado` salen literales de
+`RECOMPUTO_3388_COMPONENTES.jsonl` (`tamano`, `posibles`, `leidos`, `en_cola_sin_leer`, `fuera_de_cola`,
+`estado` CERRADO/ABIERTO), en el mismo formato de texto que usaban las 221 viejas (verificado char a char
+contra dos ejemplos, uno CERRADO y uno ABIERTO). **`operaciones` es el cruce contra las 69 nominas de
+`OPERACIONES.jsonl`, y el metodo se VERIFICO antes de aplicarse**, reproduciendo el campo `operaciones` de
+los 221 viejos con su propia nomina vieja: **189 de 221 identicos**, y las 32 diferencias tienen motivo
+medido, no error: 5 son actos que CERRARON entre el 2.117 y el 3.388 (los mismos cinco que nombra la nota
+de `OP-U-01`, confirmado uno a uno), y el resto son operaciones-hijas creadas DESPUES de que la entrada
+vieja se escribiera (`OP-M-02-*`, `OP-M-03-*`, `OP-M-01-ESLABONES`, `OP-E-04`, `OP-E-05`, etc.), que
+nunca se pudieron reflejar en un campo que no se toca desde el 11 ago 2026 (banco 9.21, la cifra vieja no
+se actualiza sola). **El metodo: `operaciones` de un componente es la union de a) todo `id_op` cuyo
+`nodos` (de las 44 de 69 operaciones que lo traen poblado) comparte AL MENOS UN miembro con el componente;
+b) `OP-U-01` si el componente esta CERRADO o `OP-U-02` si esta ABIERTO (las dos son universales por su
+propia adjudicacion, verificado que las 221 viejas las llevan sin excepcion segun su estado de entonces);
+c) `OP-L-03` si el componente esta en el backlog de 40 actos y 73 pares ya adjudicado en la vuelta 14
+(recalculado aqui con el mismo metodo de `scripts/loop/backlog_l03_vuelta14.py`, y da EXACTAMENTE 40
+actos y 73 pares, identico al adjudicado).**
+
+**LO QUE NO SE REPRODUJO, declarado y no escondido:** el cruce de (a) no intenta reconstruir por que
+narrativa una operacion `DESTEJIDO` o `DECISION_DE_FUENTE` especifica toca un nodo mas alla de su campo
+`nodos`; se tomo el campo `nodos` tal cual esta escrito en `OPERACIONES.jsonl`, sin reinterpretarlo. Si ese
+campo esta incompleto en alguna operacion vieja, el cruce hereda esa incompletud, pero no la agrava: es el
+mismo campo que ya gobernaba el `operaciones` de las 221 entradas viejas.
+
+### 3. Ejecutado: 335 entradas nuevas ANADIDAS a `docs/plan/INVENTARIO.jsonl`
+
+**Las 335 lineas de tipo `acto` estan escritas al final del archivo** (despues de las 336 que ya habia),
+con `fecha_corte` 2026-08-13 (el corte 3.388, no la fecha de hoy). **221 son sucesoras de una entrada
+vieja (con su nota mecanica recalculada, y la de `formalizar_junta_asesora` con su nota vieja transplantada);
+114 son componentes nuevas que no existian como acto en el corte 2.117.**
+
+**MEDIDO EL ARCHIVO OTRA VEZ por campo `tipo`, tras la escritura:**
+
+| tipo | antes de esta vuelta | **despues** |
+|---|---:|---:|
+| dominio | 10 | 10 |
+| acto | 221 | **556** (221 viejos intactos mas 335 nuevos) |
+| racimo | 13 | 13 |
+| familia_de_ids | 53 | 53 |
+| figura | 20 | 20 |
+| defecto | 19 | 19 |
+| **TOTAL** | **336** | **671** |
+
+**EL TOTAL REAL NO ES 450, y el motivo NO es la condicion (c) (cero entradas superadas sin sucesor,
+seccion 2 de arriba): es la condicion (a).** El 450 de la vuelta 15 se proyecto asumiendo REEMPLAZO (borrar
+221, escribir 335: 335+53+19+13+20+10=450). **La adjudicacion 6.3 aprobo la regeneracion con la condicion
+"nada se borra", que prohibe ese reemplazo**: el archivo no sustituye, ANADE. El total real, con los 336
+viejos y los 335 nuevos ambos vivos, es **671** (556 actos, 53 familias, 19 defectos, 13 racimos, 20
+figuras, 10 dominios). **Ninguna cifra vieja se borra: el 323, el 336 y el 450 siguen escritos arriba, y
+el 671 se suma al lado, no los reemplaza.** No se cuadra el numero a la fuerza, tal como pide el punto (g)
+del encargo.
+
+**DISCUTIBLE MARCADO: `docs/plan/10_INVENTARIO.md` (la vista humana) NO se toco.** Su propia regla dice
+"se recomputa entero con el disparador de `08_VERIFICACION`", y esa vista trae hoy la tabla de actos al
+corte 2.117 (221, con reparto por tamano). Con 556 actos vivos en el archivo fuente, esa vista queda
+desactualizada por partida doble (corte y cifra), pero regenerarla entera es un trabajo de la escala de
+`08_VERIFICACION`, no de esta TAREA. **Se trae como pregunta, no se toca sin decirlo.**
+
+### 4. LAS TRES CUBETAS DE LAS 53 FAMILIAS, publicadas con nombre (adjudicacion 6.4)
+
+**Sin leer ni un par, por interseccion de miembros contra los 335 componentes de
+`RECOMPUTO_3388_COMPONENTES.jsonl` (el archivo original de 335, no las 335 lineas nuevas de acto que son
+la misma informacion en otro formato):**
+
+| cubeta | cuantas | familias |
+|---|---:|---|
+| **CONTENIDAS** (un solo componente contiene a la familia entera) | **23** | `defensas_en_profundidad`, `dia_cero_defectos`, `distincion_causas_comunes_especiales`, `ciclo_de_culpa`, `conciencia_calidad`, `confusion_de_modos_automatizacion`, `contacto_con_el_cliente`, `control_estadistico_de_procesos`, `critica_eco_eficiencia`, `definicion_problema_moms`, `descubrir_necesidades_cliente`, `design_for_six_sigma_dmadv`, `diversidad_vs_homogeneidad_equipo`, `drift_hacia_el_fallo`, `equipo_mejora_calidad`, `estilo_gerencial_ballet_vs_hockey`, `estructura_de_gates`, `evitar_greenwashing`, `medicion_calidad`, `obtencion_compromiso`, `secuencia_universal_breakthrough`, `sesgo_retrospectivo_hindsight`, `six_sigma_dmaic` |
+| **PARTIDAS** (miembros repartidos en componentes distintos, ninguno los contiene enteros) | **14** | `accion_correctiva`, `consejo_calidad`, `definiciones_operacionales`, `cultura_justa`, `eliminacion_causas_error`, `estrategia_de_innovacion_de_producto`, `control_estadistico_del_proceso`, `customer_development_modelo`, `eco_efectividad`, `plan_de_gestion_de_riesgos`, `proteccion_propiedad_intelectual`, `regla_todo_o_nada_inspeccion`, `responsabilidad_extendida_productor`, `storytelling_como_herramienta_de_diseno` |
+| **SIN ARISTA A** (ningun miembro aparece en ningun componente al corte 3.388) | **16** | `make_certain_programa`, `auditoria_de_producto`, `capacidad_de_proceso`, `clasificacion_de_seriedad_de_defectos`, `ciclo_ventas_calidad_franquicia`, `costo_de_calidad`, `desarrollar_caracteristicas_proceso`, `dialogo_con_stakeholders`, `establecer_vision_organizacional`, `planificacion_de_la_inspeccion`, `planificacion_estrategica_despliegue`, `reduccion_de_tiempo_de_ciclo`, `sistema_responsabilidad_gerencial`, `triple_bottom_line`, `validacion_sistema_medicion`, `velocidad_crecimiento_franquicia` |
+| **total** | **53** | |
+
+**ESTO ES EL ESTADO, no la falta de estado (adjudicacion 6.4).** Lo que queda abierto, si alguna de las 14
+PARTIDAS es de verdad dos familias distintas, **es materia de mesa, no de recomputo**: se deja escrito
+como tal, no como medicion pendiente.
+
+### 5. La nota de `OP-I-01`, puesta al dia
+
+**Actualizada en `docs/plan/OPERACIONES.jsonl`** con: la correccion de etiqueta del punto 2.d (TAREA vuelta
+16 punto 3 de este mismo documento), y el nuevo total real de 671 con su motivo (regeneracion aditiva, no
+reemplazo), citando esta seccion.
+
+---
+
+**DISCUTIBLES DE ESTA TAREA, marcados para la relectura ciega:**
+
+1. **La lectura de "nada se borra" como ADITIVA (335 lineas nuevas conviviendo con las 221 viejas) en vez
+   de IN-PLACE (actualizar las 221 en su sitio, preservando el valor viejo por tachado, como se hace en el
+   resto de este documento).** Las dos lecturas cumplen "no se borra texto"; la elegida es la mas literal
+   ("no se borra ni una linea del archivo", condicion c) y la mas auditable (diff de solo altas), pero
+   duplica informacion (556 actos describen 335 componentes reales) y deja la vista humana desactualizada.
+   Si el auditor prefiere la lectura in-place, se revierte el append y se reescribe como actualizacion de
+   las 221 lineas existentes.
+2. **El campo `operaciones` de las 335 nuevas no reproduce las operaciones DESTEJIDO/FUENTE que no tienen
+   el nodo relevante en su campo `nodos`** (si alguna lo tiene incompleto). Se declara, no se investigo
+   operacion por operacion si su `nodos` esta completo.
+3. **`10_INVENTARIO.md` no se toco.** Queda desactualizado por partida doble frente al archivo fuente.
