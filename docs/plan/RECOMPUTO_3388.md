@@ -856,15 +856,31 @@ no aparecio ninguno nuevo ni se fusiono ninguno.
 
 #### d. Familias de ids, figuras y defectos: cuales dependen del corte y cuales no
 
-**Familias de ids (53): NO DEPENDEN DEL CORTE DEL CRIBADO.** Cada familia es un cluster de ids del
-catalogo que comparten raiz (sufijo, particula u orden), medible directo de los ids en
+**Familias de ids (53): SU CONTEO NO DEPENDE DEL CORTE DEL CRIBADO.** Cada familia es un cluster de ids
+del catalogo que comparten raiz (sufijo, particula u orden), medible directo de los ids en
 `master_graph.json` sin abrir ni un veredicto: verificado en esta vuelta que las 53 declaradas siguen
 siendo 53 en el archivo (seccion 1). **Lo que SI depende del corte es si cada familia CONTINUA o REPITE
-(su fusion), y eso YA esta medido, no en esta tabla sino en el recomputo de actos del punto (b):** las 53
-familias de ids son el mismo tipo de objeto que las componentes conexas de `RECOMPUTO_3388_COMPONENTES.jsonl`
-(el propio caso citado en `ACTA_AUDITOR.md` VUELTA 14, la familia `accion_correctiva`, vive en las dos
-fuentes). Remedir aqui su estado uno por uno duplicaria, sin instrumento nuevo, lo que el punto (b) ya
-recomputo. **Se declara: conteo NO remedido por no depender del corte; estado ya cubierto por (b).**
+(su fusion), y CORRIJO AQUI MISMO, con tachado, una primera version de esta seccion que daba por
+sentado, sin comprobarlo: ~~"ese estado ya esta cubierto por el recomputo de actos del punto (b)"~~.**
+Lo comprobe con instrumento propio (interseccion de miembros de cada familia contra los `miembros` de
+las 335 componentes de `RECOMPUTO_3388_COMPONENTES.jsonl`) y **NO es cierto para la mayoria**:
+
+| cobertura contra componentes | familias |
+|---|---:|
+| un solo componente contiene a la familia entera | **23** |
+| algun miembro esta en algun componente, pero ninguno los contiene enteros | **14** |
+| ningun miembro de la familia aparece en ningun componente | **16** |
+| **total** | **53** |
+
+**Para las 23, el estado SI esta cubierto por (b)** (la familia es, literal, el mismo objeto que un
+componente). **Para las 30 restantes (14 partidas entre componentes, 16 sin componente alguno), el
+estado de fusion NO esta cubierto por (b) y queda SIN REMEDIR esta vuelta**: las 16 sin overlap son,
+con este instrumento, ids que no tienen ninguna arista A registrada hoy hacia ningun otro nodo (ni
+propio ni ajeno a su familia), y las 14 partidas tienen a sus miembros repartidos en componentes
+distintos, lo que sugiere que la familia no es una sola pieza sino dos o mas. **Verificar cual de las
+dos lecturas es la correcta, familia por familia, es trabajo de la misma naturaleza que el punto 4 de
+abajo (leer y clasificar, no contar) y no se gasta ese alcance aqui: se trae como discutible.** El
+conteo de 53 (estructural, seccion 1) no cambia por este hallazgo.
 
 **Defectos (19): NO DEPENDEN DEL CORTE DEL CRIBADO.** Son defectos de estructura del catalogo (alias
 huerfanos, campos sucios, injertos de fuente, grafias no canonicas, etc.), contados sobre el grafo y
