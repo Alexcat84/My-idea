@@ -5050,3 +5050,296 @@ salio limpia).**
 **`docs/loop/PARA_ALEXIS.md` escrito con el caso completo, las cifras y como retomar.
 `docs/loop/PROMPT_SIGUIENTE.md` VACIO a proposito. El bucle queda detenido esperando la
 decision de la casa.**
+
+---
+
+## VUELTA 25, 14 ago 2026. Auditor: Fable 5. Reporte auditado: la vuelta 24 del ejecutor (Opus 5), FASE III, rama pasada-unica: la fase 0 cerrada (OP-S-07 y OP-C-04) y el modo continuo parado en la fase 01. ESTA ACTA DETIENE EL BUCLE: doctrina nueva necesaria sobre la doble clasificacion de background_startup_vs_corporativo y sobre el destino de la reunion de OP-F-02
+
+### 1. VERIFICACION del reporte, todo con instrumento propio corrido HOY
+
+Instrumentos de esta vuelta: `scripts/loop/auditor_v25_verifica.py`,
+`scripts/loop/auditor_v25_diff_ops07.py`, `scripts/loop/auditor_v25_sin_entrantes.py`,
+mas el ciclo de Gate 0, las tres suites y el caso positivo corridos enteros por mi.
+
+- **HEAD y rama:** `6a4d7042` en `pasada-unica`, arbol limpio, `origin` al dia. Los dos
+  commits de trabajo (`82ee608a`, `96c14726`) existen y traen lo que el reporte dice.
+- **EL MARCADOR, recomputado del archivo:** n **3.388**, **A 583 (17,2)**, **B 89 (2,6)**,
+  **C 7 (0,2)**, **D 2.709 (80,0)**, cero huecos, cero duplicados, cero clases fuera de
+  ABCD. La tabla por dominio del reporte reproduce exacta, fila por fila. COINCIDE.
+- **EL GRAFO:** 3.835 nodos, 3.521 vivos, 314 deprecados, **16.800 enlaces**, 15 claves,
+  **cero auto aristas de vivos tras resolver**. COINCIDE.
+- **OP-S-07, verificada entrada por entrada contra el diff `ba109e5e..82ee608a`:**
+  59 ficheros de `dataset/nodos`, **66 entradas retiradas y CERO anadidas**, cero campos
+  distintos de previos/siguientes tocados. Las 66 parten en **33 de nodo vivo que resolvia
+  a si mismo (27 nodos)** mas **33 reciprocas literales en el gemelo deprecado (32 nodos)**,
+  y las 33 reciprocas citaban LITERAL a su superviviente, 33 de 33. Las **48 alias contra
+  alias** (criterio de la letra: el enlace apunta a OTRO alias del MISMO superviviente)
+  estan **intactas: 48 en 33 nodos**. El peor (`costo_de_mala_calidad_copq`) perdio 7,
+  dos en previos y cinco en siguientes. El ejemplar esta retirado. El conteo bajo
+  **16.866 a 16.800, 66 exactos**. TODO COINCIDE.
+- **La prueba del camino A:** `symmetrize_added` en `phase1_run_log.json` trae **CERO
+  entradas**, medido por mi. El paso 5 de mi corrida del validador simetrizo **0**.
+  El pendiente de doctrina de la vuelta 23 queda CERRADO con instrumento, como el
+  reporte declara.
+- **OP-C-04, contra el codigo real:** las dos guardas viven en `step7_validate` de
+  `scripts/run_phase1.py` (lineas 892 a 979), la de auto arista RESUELVE (copia de
+  `resolverId`) y MIDE SOBRE VIVOS con el motivo escrito; la lista blanca se IMPORTA de
+  `scripts/expansion/validar_esquema.py` (`CAMPOS_PERMITIDOS`, 15 campos,
+  `merged_originals` dentro con su adjudicacion argumentada). Las 15 claves del catalogo
+  de hoy calzan campo a campo con la lista. COINCIDE.
+- **EL CASO POSITIVO, REPRODUCIDO POR MI:** inyecte en el arbol de trabajo la auto arista
+  del ejemplar y una clave renegada propia (`clave_renegada_auditor_v25`), y Gate 0 CAYO
+  con **EXITCODE 1** nombrando las dos fallas exactas; restaure con `git checkout` y el
+  blob volvio a `8d47ff32`, el de HEAD, con cero ficheros con diferencia real. La guarda
+  se cae cuando el fallo vuelve, que es el criterio de HECHO de la fase 08. Nada de mi
+  inyeccion quedo commiteado.
+- **GATE 0 POR EL CICLO ESCRITO, corrido entero por mi:** comando 1 **EXITCODE 0** y
+  `GATE 0: OK` con las DOS guardas nuevas en `[OK]`; comando 2 **71 etiquetas** y blob
+  **`8d47ff32d4376f17a5880d7ba56060569856a04a`**, byte identico a HEAD. Punto fijo
+  confirmado. El conteo de etiquetas no encogio.
+- **LAS TRES SUITES, corridas enteras por mi:** motor **24 de 24**, web **80 ficheros,
+  1.030 pasadas y 3 saltadas**, `tsc --noEmit` **exit 0** sin salida. COINCIDEN las tres.
+- **OP-F-01:** los siete existen, vivos, y sus pasos de hoy calzan uno a uno con lo
+  publicado en `01_FUENTES.md` (9, 9, 8, 13, 10, 8, 9). La cifra de 18 lleva ya su
+  correccion declarada con corte en las dos sedes de `COSTURAS_INTERNAS_RESUMEN.md`
+  (seccion 6, linea 369, y seccion 7 punto 1), aditiva y sin borrar el texto viejo: el
+  ejecutor miro antes de escribir y no anadio nada, verificado por mi contra el fichero.
+  Y **el septimo es el UNICO de los siete que aparece en otra operacion**
+  (`OP-F-04-HOR`), barrido por mi sobre las 71.
+- **OP-F-02, las dos carencias verificadas:** los tres nodos declaran Mollick en segunda
+  posicion en su campo `fuente` (leido por mi), la tabla de `01_FUENTES.md` los publica
+  SIN tramo de pasos, y la tanda de los 43 los excluye por su propia definicion
+  (*"sin Hugos ni Mollick"*, linea 219). La letra de la operacion no nombra receptor:
+  `aristas_nuevas` vacio, `superviviente` null, y la nota deja la nomina de diez como
+  PROVISIONAL. CONFIRMADO: no hay sede escrita ni para la frontera ni para el destino.
+- **El choque de 7.2, verificado en sus cuatro patas:** el nodo esta en el campo `nodos`
+  de las dos operaciones; la verificacion de `OP-F-01` exige pasos inalterados; la de
+  `OP-F-04-HOR` exige el bloque separado con su frontera, publicada DOS veces en
+  `01_FUENTES.md` como **1 a 4 / 5 a 9**; y P.3 hace el reparto OBLIGATORIO para
+  Horowitz. Separar deja el nodo en 4 pasos y tumba la segunda linea de `OP-F-01`.
+  CONFIRMADO con los textos delante.
+- **Lo demas del estado:** 71 operaciones, 71 ids unicos, cero dependencias rotas, las 71
+  en LISTA, reparto por fase identico al del reporte. `OPERACIONES.jsonl` sin tocar en
+  esta vuelta (ultimo toque en `ba109e5e`). `OP-C-05` con `depende_de` `['OP-S-12']`,
+  diferida con razon. El commit `96c14726` no toca `dataset/`: el estado malo del caso
+  positivo no quedo commiteado, como la letra manda.
+
+### 2. LA DISCREPANCIA DE LA TANDA, y esta FUERA del marcado
+
+**El reporte, seccion 3, dice que el validador reporto "las cinco veces" 2 nodos sin
+enlaces entrantes. Es falso en cuatro de las cinco.** Las salidas commiteadas del propio
+ejecutor dicen **2 SOLO en la corrida base** (`SALIDA_V24_GATE0_BASE.txt`) y **6 en las
+cuatro corridas posteriores a OP-S-07** (`SALIDA_V24_GATE0_OPS07.txt`,
+`SALIDA_V24_GATE0_OPC04.txt`, `SALIDA_V24_GATE0_OPC04_LIMPIO.txt`,
+`SALIDA_V24_GATE0_PUNTOFIJO.txt`), y mi corrida de hoy da **6**.
+
+**El fondo es benigno y lo medi** (`auditor_v25_sin_entrantes.py`): los cuatro nuevos sin
+entrantes son gemelos deprecados (`costo_de_mala_calidad_copq_2`, `_3`,
+`superficies_elevadas_proteccion_caidas`, `wallas_cuatro_etapas_pensamiento_creativo`)
+cuya UNICA entrada era una de las 66 retiradas: su gemelo vivo los citaba via alias.
+Es la consecuencia esperada de OP-S-07, no una regresion, y ningun chequeo del Gate
+exige un tope. **Pero la frase del reporte generaliza la linea base a las cinco corridas
+sin haberlas leido, y eso es una CAIDA DE REPORTE con nombre: cifra de instrumento
+publicada sin leer la salida del instrumento.** No vive en `docs/plan/` ni mueve dato:
+por la regla afinada del 13 ago, cuenta como caida de REPORTE, no acumula para la
+parada, y **por aparecer FUERA de los discutibles marcados baja el credito de toda la
+tanda: el tramo se releyo al doble**, que aqui fue leer ENTERAS las cinco salidas del
+ciclo commiteadas y recomputar el estado del grafo con instrumento propio. De esa
+relectura al doble no salio ninguna otra discrepancia.
+
+**Observacion menor que no llega a caida:** el reporte dice 71 etiquetas en las cinco
+corridas, pero solo una de las cinco salidas commiteadas captura el conteo de etiquetas.
+Mi corrida da 71 y el punto fijo se sostiene; queda dicho que la evidencia de esa cifra
+es parcial en cuatro de los cinco ficheros.
+
+### 3. RELECTURA CIEGA de los discutibles: nueve marcados, nueve coinciden
+
+En fase III el discutible es una decision, no un par: la releo contra la letra y las
+reglas, formo mi posicion y despues la comparo con la razon escrita.
+
+1. **Sobre `dataset/nodos` y no sobre el artefacto.** COINCIDO: el ciclo recompila
+   `master_graph.json` desde los nodos; operar el artefacto es trabajo que la primera
+   recompilacion deshace.
+2. **Correr `sync_assets_web.py` fuera del ciclo de dos comandos.** COINCIDO, y lo
+   adjudico abajo (seccion 4, punto 1): es el remedio ESCRITO del propio validador
+   (`REMEDIO_SYNC`), sin el la suite del motor cae con 59 divergentes, y el ejecutor no
+   toco el registro sino que lo trajo como pregunta. Bien traido.
+3. **Importar la lista blanca en vez de reescribirla.** COINCIDO: dos listas blancas que
+   pueden divergir son el defecto que el chequeo de los dos `master_graph` vino a curar,
+   y la adjudicacion de `merged_originals` ya vive en la fuente importada.
+4. **Tres implementaciones del resolutor.** COINCIDO en declararlo deuda y no tocarlo:
+   unificarlas es codigo que ninguna operacion ordena, y esa pluma no es del bucle.
+   Va a la casa (seccion 4, punto 3).
+5. **La clave sucia en su sede historica y no en un nodo sintetico.** COINCIDO con la
+   decision y con marcarla como desviacion: la letra vieja dice "nodo de prueba", pero
+   el registro de la vuelta 21 (que es letra corregida de la operacion) fija la sede en
+   EL ARBOL DE TRABAJO sin exigir nodo sintetico, y un nodo nuevo moveria otros chequeos
+   del Gate. El espiritu del caso positivo (la guarda CAE) se cumplio, y mi propia
+   reproduccion uso la misma sede con una clave distinta y cayo igual.
+6. **La clave cirilica sacada con `git show` y no retipeada.** COINCIDO: el fallo entero
+   de esa averia es que se ve identica a la buena; retipearla podia probar nada.
+7. **El caso positivo corrido ANTES del arreglo.** COINCIDO y subo la apuesta: no era
+   discutible, era la letra (linea 4 de la verificacion de `OP-C-04` y criterio de HECHO
+   de la fase 08). La corrida en verde sobre el estado malo es la prueba de que la
+   prueba no era vacia.
+8. **`OP-F-01` verde hoy pero NO hecha.** COINCIDO: su segunda linea es condicion de fin
+   de fase y `OP-F-04-HOR` la pondria en rojo; declararla hecha habria prejuzgado el
+   choque que esta acta trae como parada. Distinguir *verifica* de *esta hecha* es
+   exactamente la disciplina que el criterio de HECHO pide.
+9. **Parar sin ejecutar `OP-F-03`.** COINCIDO con la decision, con un matiz sobre el
+   argumento: `principio_calidad_mvp` no esta tocado por ninguna de las dos paradas en
+   directo. Lo que sostiene la prudencia es otra cosa, y es mejor razon: la doctrina que
+   esta parada pide (que pasa cuando un nodo vive en operaciones cuyas verificaciones
+   chocan) alcanza a los TRES cruces declarados de `OP-F-03` con `OP-D-01` y `OP-D-06`,
+   asi que leer 21 nodos hoy era arriesgar releerlos manana. La decision fue correcta;
+   el nombre de la razon, impreciso. No es caida: es un matiz dentro del marcado.
+
+**Cuenta de la relectura: 9 de 9 coinciden en la decision, 1 con matiz de argumento,
+CERO discrepancias dentro del marcado. La unica discrepancia de la tanda esta FUERA del
+marcado (seccion 2).**
+
+### 4. ADJUDICACIONES de esta vuelta
+
+1. **Pregunta 2 del reporte, ADJUDICADA: el ciclo registrado de Gate 0 gana un tercer
+   comando CONDICIONAL.** El registro del ciclo es adjudicacion mia (vuelta 21) y lo
+   extiendo por su propia logica: **cuando una operacion de la pasada cambia el grafo,
+   el ciclo es tres comandos: (1) `run_phase1.py --reaplico-curaduria`, (2)
+   `etiquetas_de_cara.py --aplicar` con blob byte identico a HEAD, (3)
+   `sync_assets_web.py`, que es el remedio escrito del propio validador
+   (`REMEDIO_SYNC`: primero se reaplica, despues se sincroniza), con su vara: las DOS
+   copias del grafo (`dataset/metadata` y `web/lib/assets`) byte identicas a HEAD al
+   cerrar el commit de la operacion.** Cuando ninguna operacion toco el grafo, el ciclo
+   sigue siendo de dos. EL REGISTRO EN `08_VERIFICACION.md` QUEDA PENDIENTE DE LA
+   REANUDACION (TAREA 1 del proximo encargo): esta acta es la sede de la adjudicacion,
+   no del registro. Y la ceguera que el ejecutor destapo (el chequeo de gemelos del Gate
+   compara el snapshot de ANTES del paso 6, asi que no ve la divergencia que la propia
+   operacion crea; hoy la caza la suite del motor) queda declarada como DEUDA DE GUARDA:
+   convertirla en chequeo del Gate es codigo que ninguna operacion ordena, y va en
+   PARA_ALEXIS.
+2. **Pregunta 1 del reporte, ADJUDICADA: el blob de la linea base de
+   `08_VERIFICACION.md` es REGISTRO HISTORICO con su corte, no vara.** La vara escrita
+   es *byte identico a HEAD*, y esa se cumplio en todas las corridas de la vuelta 24 y
+   en la mia. El blob `bb423c06...` era el de HEAD del 14 ago por la manana y quedo
+   desfasado en cuanto `OP-S-07` toco el grafo, que es lo que la fase III hace por
+   oficio. NO se reescribe en cada operacion (seria una cifra que hay que perseguir);
+   se le anade UNA VEZ, en la reanudacion y como registro aditivo, el calificador de su
+   corte: *blob del HEAD `ba109e5e` y anteriores; la vara operativa es byte identico al
+   HEAD del momento; la cifra que se vigila es el conteo de 71 etiquetas, que no debe
+   encoger*. Pendiente de TAREA 1 de la reanudacion.
+3. **Pregunta 3 del reporte, a la casa:** tres implementaciones de la misma semantica de
+   resolucion (TypeScript en `graph.ts`, la guarda de Gate 0, el instrumento de la
+   vuelta 24). Si un dia divergen, la guarda vigila un grafo distinto del que el motor
+   sirve. Unificarlas es codigo sin operacion que lo ordene: decision de fundador, con
+   mi recomendacion escrita en PARA_ALEXIS.
+4. **Pregunta 4 del reporte (estado *ejecutada* en el plan), a la casa,** con
+   recomendacion: no anadir estado nuevo en caliente; registrar ejecucion por commit en
+   el campo `evidencia` al cierre de cada fase. Cambiar el vocabulario de estados de
+   `OPERACIONES.jsonl` a mitad de pasada es doctrina de plan, no adjudicacion de
+   auditor. Sin respuesta desde la vuelta 22: que la decision viaje con esta parada.
+5. **Pregunta 5 del reporte, ADJUDICADA y CERRADA: `SALIDA_V24_OPC04_ANTES_DEL_ARREGLO.txt`
+   se conserva TAL CUAL.** El nombre del fichero YA es la marca que la pregunta pide:
+   *antes del arreglo* dice exactamente por que ese `GATE 0: OK` sobre grafo averiado es
+   prueba y no verguenza. Renombrarlo romperia las referencias del reporte y del acta.
+   Quien lo lea suelto tiene el nombre delante.
+6. **El pendiente de doctrina 1 de la vuelta 23 queda CERRADO** tambien por mi lado:
+   `symmetrize_added` en cero, medido por mi instrumento y por mi corrida del validador.
+   Nadie lo arrastre.
+
+### 5. LA PARADA: doctrina nueva necesaria, dos casos y ninguno adjudicable por extension
+
+**CASO 1, el choque de `OP-F-01` con `OP-F-04-HOR` sobre `background_startup_vs_corporativo`.**
+El mismo nodo esta clasificado DOS veces por adjudicaciones del 11 ago 2026, y las dos
+clasificaciones se excluyen: para `OP-F-01` es LARGO LEGITIMO entero (sus 9 pasos son
+una lista sin repeticion y su verificacion exige pasos inalterados); para `OP-F-04-HOR`
+es un injerto confirmado por lectura con frontera publicada (1 a 4 de Wasserman, 5 a 9
+de Horowitz) cuyo bloque, por P.3, SE REPARTE OBLIGATORIAMENTE. Y la raiz que el
+ejecutor destapo es exacta: **el mismo hecho (declarar dos libros) es lo que lo mete en
+la clase de `OP-F-01` (*"rompe la exclusividad de los manuales"*) y lo que lo delata
+como injerto por P.2 (la firma posicional).** Busque la regla que resuelva la
+precedencia y NO EXISTE: el `orden` de la fase dice quien corre primero, no que
+verificacion gana al cerrar; P.13 y su corolario cubren nominas de FUSION, no membresias
+de operaciones de fuente; P.2 dice que la lectura adjudica, y aqui hay DOS lecturas
+adjudicadas en direcciones opuestas. Toda salida reescribe la letra o el alcance de una
+operacion adjudicada (sacarlo de la clase de `OP-F-01`, o sacarlo de la tanda de
+`OP-F-04-HOR`, o partir su verificacion), y el precedente de esta campana es que eso se
+hace por CORRECCION DECLARADA con decision de fundador, como las dos de `OP-S-07`.
+DOCTRINA NUEVA: PARADA.
+
+**CASO 2, `OP-F-02` no dice el destino de la reunion.** El bloque de IA de tres nodos
+viaja entero *"al racimo de supervision de la IA, que hoy tiene DIEZ miembros"*, con
+`aristas_nuevas` vacio, `superviviente` null, la nomina de diez PROVISIONAL por su
+propia nota, y ningun miembro nombrado como receptor ni regla que diga si el bloque se
+funde en un miembro o forma nodo propio dentro del racimo. P.3 resuelve hasta el nivel
+de FAMILIA (*"a su familia o a nodo propio"*), no el de miembro; P.6 dice que la nomina
+de tema se decide leyendo, pero no dice que un bloque reunido vaya al miembro de tema
+coincidente: esa regla NO esta escrita y escribirla seria doctrina nueva de mi pluma.
+**La frontera, en cambio, SI es adjudicable por extension y la dejo adjudicada para
+cuando el bucle reanude:** el metodo de la tanda de los 43 (leer el nodo contra sus
+`pasos_accionables` y ESCRIBIR la frontera en `01_FUENTES.md` antes de cortar, como la
+tabla de los 14 de Horowitz) se aplica identico a los tres de Mollick; medir la frontera
+es lectura con instrumento, no decision. Pero la frontera sola no desbloquea la
+operacion sin el destino. DOCTRINA NUEVA EN LA MITAD QUE IMPORTA: PARADA.
+
+**Las demas condiciones de la seccion 4, repasadas:** contradiccion sin resolver, las
+dos de arriba y ninguna otra. Decision de fundador: nada reservado se toco; `dataset/`
+byte identico a HEAD verificado por mi tras cada corrida; cero merges. Fallo tecnico
+repetido: NO, Gate 0 verde por su ciclo, corrido por mi. Credito de tanda: la unica
+caida es de REPORTE y no acumula (seccion 6). Campana consumada: no.
+
+### 6. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 23: 35 relecturas, 393 puestos (mas 23 nodos de forma y 24
+sitios de codigo), 7 caidas de clase, mas 5 caidas de reporte del ejecutor, mas 4 caidas
+de cifra publicada del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1
+caida de acta del auditor. Tandas seguidas con caida de clase o cifra: CERO. Caidas de
+reporte seguidas: CERO.
+
+Esta tanda (la vuelta 24 del ejecutor): cero pares y cero puestos; la unidad fue la
+operacion y el encargo entero se remidio (marcador, grafo, diff de OP-S-07 entrada por
+entrada, guardas contra el codigo, caso positivo reproducido, ciclo del Gate 0 y las
+tres suites corridos enteros por mi). **UNA caida de REPORTE del ejecutor** (los "2
+nodos sin enlaces entrantes las cinco veces" de la seccion 3 del reporte, que eran 6 en
+cuatro de las cinco salidas), **FUERA del marcado**: el credito de la tanda baja y el
+tramo se releyo al doble (seccion 2), sin segunda discrepancia. Los nueve discutibles
+marcados: nueve coincidencias.
+
+**Acumulado: 35 relecturas, 393 puestos (mas 23 nodos de forma y 24 sitios de codigo),
+7 caidas de clase, mas 6 caidas de reporte del ejecutor, mas 4 caidas de cifra publicada
+del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1 caida de acta del
+auditor. Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte seguidas:
+UNA (la 23 salio limpia, esta carga una; tres seguidas serian parada y vamos en una).**
+
+### 7. ERRORES PROPIOS de esta vuelta, con nombre
+
+- **Mi primer barrido de las 48 inertes uso un criterio propio** (todo enlace de
+  deprecado-alias hacia cualquier otro alias) y dio 218 en 137 nodos. No era el criterio
+  de la letra (alias hacia OTRO alias del MISMO superviviente). Lo cace ANTES de publicar
+  nada, remedi con el criterio escrito y dio 48 en 33, exacto. De no haberlo cazado,
+  habria fabricado una discrepancia falsa contra una cifra publicada correcta: la
+  especie exacta que P.1 llama inventar enfermedad.
+- **Mi primer instrumento revento tres veces por esquema adivinado** (`puesto` por
+  `puesto_intra`, `id` por `node_id`, `status` por `deprecado`). Tres KeyError antes de
+  mirar una linea real del fichero. El remedio fue el obvio: leer un registro antes de
+  escribir el lector. Ninguna cifra alcanzada.
+- **Un intento de parchear un script con heredoc en la shell equivocada fallo por
+  sintaxis.** Se rehizo con la herramienta de edicion. Sin consecuencia.
+
+### 8. CONDICIONES DE PARADA: UNA SE CUMPLE
+
+- **Doctrina nueva necesaria: SI, dos casos** (seccion 5): la doble clasificacion
+  excluyente de `background_startup_vs_corporativo` entre `OP-F-01` y `OP-F-04-HOR`, y
+  el destino sin nombrar de la reunion de `OP-F-02`. Ninguna regla escrita los cubre por
+  extension citable; toda salida reescribe letra adjudicada del plan.
+- Contradiccion sin resolver: las de arriba y ninguna otra.
+- Decision de fundador: nada reservado se toco; cero merges; el estado malo del caso
+  positivo (el del ejecutor y el mio) jamas commiteado, verificado contra los commits.
+- Fallo tecnico repetido: NO. Gate 0 verde por su ciclo, corrido entero por mi.
+- Credito de tanda: una caida de REPORTE, no acumula para parada; clase y cifra en cero
+  tandas seguidas.
+- Campana consumada: no. La fase 0 esta cerrada y verificada; la fase 01 queda abierta
+  con `OP-F-01` verde-no-hecha, `OP-F-03` ejecutable pero prudentemente diferida, y
+  `OP-F-02` y `OP-F-04-HOR` detenidas por esta parada.
+
+**`docs/loop/PARA_ALEXIS.md` escrito con los dos casos completos, las adjudicaciones que
+quedan listas para la reanudacion y como retomar. `docs/loop/PROMPT_SIGUIENTE.md` VACIO
+a proposito. El bucle queda detenido esperando la decision de la casa.**
