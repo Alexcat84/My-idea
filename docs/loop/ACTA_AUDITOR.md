@@ -3303,3 +3303,263 @@ seccion 3); **una discrepancia ciega mia que no prospero** (el 583).
 
 `docs/loop/PROMPT_SIGUIENTE.md` escrito con el encargo de la vuelta 16. **No se escribe
 PARA_ALEXIS.md.**
+
+---
+
+## VUELTA 16, 14 ago 2026. Auditor: Opus 5. Reporte auditado: la vuelta 16 del ejecutor (Sonnet 5), FASE II sexta vuelta, el tramo releido al doble y la regeneracion de los actos
+
+**HAY PARADA, y es de credito de tanda.** El trabajo de esta vuelta es, en volumen, el mas
+verificado de la campaña: **remedi los trece racimos con instrumento propio y los trece calzan
+celda por celda**, el bloque humano calza par por par, las tres cubetas calzan, las 335 entradas
+nuevas calzan una a una contra el archivo de componentes, y el metodo del campo `operaciones` lo
+reproduje entero sobre las 335. **Y aun asi hay UNA caida de cifra publicada, la segunda tanda
+seguida: el acto que crecio entre el corte 2.117 y el 3.388 NO es `construccion_de_leverage`.**
+Por la regla afinada del fundador del 13 ago 2026, dos tandas seguidas son PARADA.
+
+### 1. VERIFICACION, con mis propios comandos, corridos en ESTA vuelta
+
+Escribi mi propio parser de lecturas dirigidas y mi propio python de cobertura, componentes,
+familias y cruce de operaciones. **No reuse ni uno de los cinco scripts del ejecutor para medir.**
+
+1. **Hashes y arbol.** Arbol limpio, rama `bucle`, `HEAD` igual a `origin/bucle` igual a `7bec35eb`.
+   El reporte declara `afeb4933` como hash final porque se escribio antes de su propio commit; el
+   tercer commit lleva solo `REPORTE.md`. **`git diff --name-only d16c714b HEAD -- dataset/
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl` da VACIO.** `dataset/` intacto, veredictos intacto,
+   `pasada-unica` sin crear, cero operaciones ejecutadas, cero creadas: **69 operaciones, 69 ids
+   unicos, cero `depende_de` rotos, cero `bloquea_a` rotos, las 69 en LISTA.**
+2. **Marcador recomputado desde el archivo:** 3.388 lineas, **A 583, B 89, C 7, D 2.709**
+   (17,2 / 2,6 / 0,2 / 80,0), puestos 1 a 3.388, **cero huecos y cero pares duplicados**. Identico.
+   Los diez dominios suman 3.388.
+3. **LA TABLA DE LOS TRECE, remedida entera con instrumento propio: LAS TRECE FILAS CALZAN, CELDA
+   POR CELDA**, nomina, posibles, cola, dirigidas nuevas, cobertura y reparto de clases. Mi parser
+   levanta **65 lecturas dirigidas en cinco archivos, que son 63 parejas unicas** (`LD-62` repite a
+   `LD-36` y `LD-65` repite a `LD-44`, las dos con la misma clase). **Y mido una cosa que el reporte
+   no dijo y que sostiene su metodo: de las 63 parejas dirigidas, CERO estan en la cola**, asi que
+   el cuidado de no sumar dos veces no cambiaba nada, pero estaba bien puesto.
+   **La mesa unida: 23 en cola mas 31 dirigidas unicas, 54 de 136, con 23 A, 2 B, 2 C y 27 D.**
+   Las 31 son `LD-32` a `LD-58`, `LD-60`, `LD-61`, `LD-63` y `LD-64`. **Exacto.**
+4. **La medicion que yo pedi y no afirme, verificada por mi contra la nomina: EL EJECUTOR ACIERTA
+   Y AHORA ESTA PROBADO.** Parti la mesa en sus dos mitades (nueve puertas, ocho portafolio) y cruce
+   las cinco lecturas nuevas: **`LD-58`, `LD-60`, `LD-61` y `LD-64`, las cuatro A, son internas al
+   lado de las puertas; la unica que cruza la frontera es `LD-63`, y es D.** Ademas barri las A de
+   la cola dentro de la mesa: **hay UNA SOLA A que cruza la frontera en todo el archivo, el puesto
+   488, y su extremo del portafolio es `gestion_de_portafolio_gates_go_kill`.** **La forma DOS
+   MITADES no se mueve y la frase UN SOLO NODO REPITE no se mueve.** Confirmadas con el dato.
+5. **El bloque humano de la IA, remedido par por par:** los cinco nodos dan 10 posibles, **siete en
+   cola (166 A, 293 A, 692 A, 792 A, 1.041 A, 1.496 D, 1.541 D)** y **tres fuera de cola, las tres
+   dirigidas y las tres D**. **10 de 10, CINCO A y CINCO D. Exacto, y el tachado esta en los tres
+   sitios vivos con la caida atribuida a mi por escrito.**
+6. **Las siete sedes del 49 a 54, buscadas por mi y no supuestas:** `INVENTARIO.jsonl` (campo
+   `cobertura` a 54 y el 49 conservado dentro de la `nota`), `10_INVENTARIO.md` (tachado),
+   `RECOMPUTO_3388.md` (tachado), `EXPEDIENTE_MESA_UNIDA.md`, `LD_MESA_UNIDA.md`,
+   `LECTURAS_DIRIGIDAS.md` (dos sitios) y la nota de `OP-M-01` en `OPERACIONES.jsonl`. **Las siete
+   estan, con el numero viejo conservado.**
+7. **`INVENTARIO.jsonl` medido por mi: 671 lineas** (acto 556, familia_de_ids 53, figura 20,
+   defecto 19, racimo 13, dominio 10). **221 con corte 2026-08-11 y 335 con corte 2026-08-13.**
+   Identico al reporte.
+8. **Las 335 nuevas contra `RECOMPUTO_3388_COMPONENTES.jsonl`: correspondencia UNO A UNO exacta**,
+   cero componentes sin entrada y cero entradas sin componente. **Convencion de `nombre` (primer id
+   alfabetico de `miembros`): 221 de 221 en las viejas y 335 de 335 en las nuevas.** Las 335 llevan
+   linea de procedencia (335 de 335), **114 llevan "hueco nombrado, no rellenado"** (que son
+   exactamente las 114 sin antecesor, medido por mi) y **una sola lleva prosa, la de
+   `formalizar_junta_asesora`, trasladada con su corte viejo al lado.** Condicion (b) cumplida.
+9. **El campo `operaciones` de las 335, reproducido ENTERO con metodo propio:** union de las
+   operaciones (de las 44 de 69 con `nodos` poblado) que comparten miembro, mas el universal por
+   estado. **Da identico en las 335 salvo por `OP-L-03`, que aparece en 40 y solo en 40**, que es
+   exactamente el backlog adjudicado en la vuelta 15. **El metodo verifica.**
+10. **Las tres cubetas de las 53 familias, con instrumento propio: 23 CONTENIDAS, 14 PARTIDAS,
+    16 SIN NINGUNA ARISTA A al corte 3.388. Identico.**
+11. **El "81 de 221" del barrido de citas: EXACTO, y lo prueba su corte.** Mi barrido sobre `HEAD`
+    daba 84 y no 81. Antes de escribir nada corri el mismo barrido sobre `d16c714b` y sobre
+    `b81919e9`, **y las dos dan 81**: los tres nombres de diferencia los citan el propio
+    `REPORTE.md` y la seccion nueva de `RECOMPUTO_3388.md` que el ejecutor escribio DESPUES de
+    medir. **La cifra es correcta y esta bien cortada (banco 9.21). No es caida y lo digo con los
+    tres numeros delante.**
+12. **Higiene: cero guiones largos, cero guiones medios y cero signos menos** en los ocho archivos
+    tocados, comprobado caracter por caracter.
+
+### 2. LA CAIDA: el acto que crecio no es `construccion_de_leverage`
+
+`docs/plan/RECOMPUTO_3388.md` linea 1042 y `docs/loop/REPORTE.md` linea 137 dicen:
+
+> **De los 221, 220 son identicos en tamano y 1 crecio** (`construccion_de_leverage`, la
+> "competencia entre inversores", de 4 a 5 miembros, ya documentado en la ficha del racimo).
+
+**Lo medi con TRES metodos independientes y los tres dan lo mismo:**
+
+| metodo | resultado |
+|---|---|
+| superset de cada acto viejo contra `RECOMPUTO_3388_COMPONENTES.jsonl` | **`gestion_terminacion_franquiciado`, de 2 a 3**, gana `perdida_control_operativo` |
+| superset contra las 335 entradas nuevas de `INVENTARIO.jsonl` | **el mismo, de 2 a 3** |
+| histograma de tamanos de los 221 y de sus 221 sucesores | **un 2 pasa a 3 (154 a 153, 39 a 40). Nada mas se mueve.** |
+
+**Y el control sobre el nodo nombrado: `construccion_de_leverage` tiene CINCO miembros en la
+entrada del corte 2026-08-11 y CINCO en la del 2026-08-13. No crecio, y nunca fue de cuatro.**
+
+**De donde sale el error, porque importa mas que el error.** El "de 4 a 5" existe, pero es de otro
+objeto y de otra epoca: la nota de `OP-I-01` dice *la competencia entre inversores se declaro PURA
+con 4 miembros al puesto 1030 y la componente de hoy tiene 5*. Eso es una observacion sobre la
+**nomina del racimo** hecha en el corte 2.117. **El ejecutor corrio el instrumento, el instrumento
+conto bien "220 identicos y 1 crecio", y despues fue a NOMBRAR al que crecio buscandolo en una nota
+vieja en vez de leerlo de la salida que acababa de producir.** Y el nombre correcto lo tenia el
+propio plan escrito a dos comandos: **la nota de `OP-U-02` dice, con estas palabras, "UNO crecio
+(gestion_terminacion_franquiciado con terminacion_franquiciado_causas, de 2 a 3)".**
+
+**Por que es caida de CIFRA PUBLICADA y no de reporte.** Vive en `docs/plan/RECOMPUTO_3388.md`, no
+solo en `REPORTE.md`, y la regla del fundador reparte por donde vive la afirmacion. Ademas lleva
+cifras dentro ("de 4 a 5") y **deja el plan diciendo dos cosas incompatibles sobre el mismo hecho**:
+`OP-U-02` nombra a uno y `RECOMPUTO_3388.md` nombra a otro. Un lector de la FASE III que abra el
+recomputo se lleva que un acto de la competencia entre inversores cambio entre cortes (no cambio) y
+no se entera del que si cambio.
+
+> **Es la MISMA especie de fallo que la caida de la vuelta 15**, y por eso cuenta doble como senal:
+> alli la busqueda se detuvo donde el numero declarado cuadraba; aqui **el numero se midio bien y el
+> nombre se copio de una nota**. Las dos veces el instrumento estaba corriendo y la afirmacion salio
+> de otro sitio. Es exactamente lo que la verificacion fija de la vuelta 16 mandaba no hacer.
+
+### 3. LOS CINCO DISCUTIBLES MARCADOS, adjudicados. NINGUNO ES CAIDA
+
+Se marcaron ANTES de saber, y eso es lo que los mantiene fuera del credito.
+
+1. **DISCUTIBLE 1, la lectura ADITIVA de "nada se borra": SE ACEPTA LA LECTURA Y SE COMPLETA, PORQUE
+   ESTA A MEDIAS.** La lectura aditiva es defendible y esta cubierta por regla escrita: **banco 9.17
+   dice que entre dos nominas manda la medicion mas reciente y que el censo viejo se cita como
+   censo, no como medida**, y **banco 9.21 pide que toda cifra de cruce lleve su fecha de corte**,
+   que las 671 lineas llevan. **Pero 9.17 solo funciona si el lector puede saber cual es el censo y
+   cual la medicion, y hoy no puede: medi las 221 lineas viejas y NINGUNA esta marcada como
+   superada ni apunta a su sucesora.** Ahi esta el fallo de razonamiento, y lo nombro: el reporte
+   dice que **"esto vacia la condicion (c)"**. Es al reves. La condicion (b) de mi adjudicacion 6.3
+   ("la entrada vieja que no tenga componente sucesor se queda en el archivo **marcada como
+   superada**, con el puntero a los componentes que hoy tienen sus miembros") estaba escrita para el
+   caso raro; **bajo la lectura aditiva que el ejecutor eligio, las 221 quedan superadas, asi que la
+   obligacion de marcarlas no se vacia: se vuelve universal.** Y el dano es medible:
+   **`10_INVENTARIO.md` linea 311 manda al lector a `INVENTARIO.jsonl`, entradas de tipo `acto`,
+   campo `miembros`, como LA fuente para contestar "si un nodo repite"**, y hoy esa fuente contesta
+   dos veces con dos nominas y dos cortes. **ADJUDICACION: la lectura aditiva queda, y las 221
+   lineas viejas se marcan una a una como superadas por el corte 3.388 con el puntero a su
+   sucesora.** Sin doctrina nueva: es 9.17 mas mi propia condicion (b) aplicada a la lectura
+   elegida.
+2. **DISCUTIBLE 2, el campo `operaciones` hereda la incompletud del campo `nodos`: EL EJECUTOR TIENE
+   RAZON Y LA DECISION ES QUEDARSE ASI, ESCRITO.** Verifique que **44 de las 69 operaciones tienen
+   `nodos` poblado** y que el cruce se hizo contra esas 44. El campo `operaciones` es un indice de
+   navegacion, no una nomina de ejecucion: **la nomina que gobierna una operacion es su propio
+   `nodos`, y esa no se toca aqui.** El riesgo declarado es real pero acotado, y su remedio (auditar
+   operacion por operacion si su `nodos` esta completo) es trabajo de la FASE III, no del indice.
+   **Se registra como hueco nombrado en la entrada de `OP-I-01`, por su propia regla: todo hueco va
+   NOMBRADO, nunca rellenado.**
+3. **DISCUTIBLE 3, `10_INVENTARIO.md` sin tocar: EL EJECUTOR TIENE RAZON EN NO REGENERARLA Y SE
+   EQUIVOCA EN DEJARLA MUDA.** Lo medi: **el documento sigue declarando acto 221, TOTAL 336, corte
+   2.117, y su linea 313 dice "todo el inventario es del 11 ago 2026", que ya es falso** para el
+   archivo al que el mismo documento manda. Regenerar la tabla entera es, como dice el ejecutor,
+   trabajo del disparador de `08_VERIFICACION`. **Pero una cifra vieja sin aviso es una cifra que
+   miente, y para eso existe el tachado, que cuesta tres lineas.** **ADJUDICACION: no se regenera
+   `10_INVENTARIO.md`; se le pone el aviso con tachado en la tabla de tipos, en la linea de corte y
+   en la linea 311**, por banco 9.10 (toda tabla que cita un veredicto se recomputa del archivo) y
+   9.21.
+4. **DISCUTIBLE 4, la frontera medida sin leer pares nuevos: NO HACE FALTA LEER NADA, Y LO VERIFIQUE
+   YO.** Ver seccion 1 punto 4: la pregunta era si cuatro A cruzan una frontera cuya nomina esta
+   escrita, y eso se contesta por cruce de nominas, no por lectura. **El cuidado estaba bien puesto
+   y la respuesta esta bien.**
+5. **DISCUTIBLE 5, el limite de palabra del barrido: SE CIERRA MIDIENDOLO.** Corri el barrido con
+   `(?<![A-Za-z0-9_])` y `(?![A-Za-z0-9_])`, que es la semantica que el ejecutor temia no tener, y
+   **da el mismo 81 sobre el mismo corte** (seccion 1 punto 11). **El riesgo no se materializo.**
+
+### 4. RELECTURA CIEGA: siete puestos contados, cinco coinciden, y las dos discrepancias son MIAS
+
+**Eleccion declarada, y va a los dos territorios de los discutibles:** cinco pares internos EN COLA
+de la mesa unida (indices 0, 4, 8, 12 y 16 de los 18 que no lei en la vuelta 15) y cuatro aristas A
+que construyen componentes NUEVOS del corte 3.388, que es el territorio de la TAREA 2. Imprimi
+titulo, resumen y pasos con `docs/loop/_ciega_v4.py`, adjudique, y solo despues destape la razon.
+
+**DECLARO LA CONTAMINACION Y DESCUENTO LOS DOS PUESTOS QUE ME TOCO:** al verificar la seccion 1 lei
+la nota de `OP-M-01` (que dice "el 488 es A y el 1014 es D") y la tabla de `LD_ACTO_DE_SEIS.md`
+(que muestra el 765 como A). **El 1014 y el 765 salen del recuento aunque acerte los dos.**
+
+| puesto | mi clase, antes de destapar | archivo | coincide |
+|---:|---|---|---|
+| 275 | A: dos redacciones del mismo Stage-Gate, lo propio de cada uno cabe en lineas | A | si |
+| 574 | **D**: los Strategic Buckets son un procedimiento propio, no una linea | **A** | **NO** |
+| 1.399 | D: el paso 5 del primero es LA LINEA y el segundo es EL PROCEDIMIENTO | D | si |
+| 2.221 | A: el mismo contraste dicho al derecho y al reves, mismo paso 1 | A | si |
+| 2.396 | **D**: uno decide que hacer y el otro explica por que persiste el sesgo | **A** | **NO** |
+| 2.631 | A: el mismo Consejo de Calidad de Juran con la misma lista | A | si |
+| 3.012 | A: los mismos limites de control contra la misma comparacion ingenua | A | si |
+| *765* | *A (contaminado, descontado)* | *A* | *fuera* |
+| *1.014* | *D (contaminado, descontado)* | *D* | *fuera* |
+
+**Resultado: CINCO de siete. Las dos discrepancias son MIAS y el archivo esta mejor leido que yo.**
+
+**Mi trampa, con nombre, y es la CUARTA vuelta seguida en la misma familia.** En el 574 tome un
+paso distintivo (los Strategic Buckets) y lo pese como si fuera el nucleo, teniendo delante dos
+nodos del mismo libro y de la misma familia censada. En el 2.396 dije que hacian trabajos distintos
+sin comprobar lo unico que decide: **el paso 3 de uno ES el paso 5 del otro dicho igual**, y el
+archivo hasta trae la prueba de que ese paso era el aporte que salvaba a ese nodo en los puestos
+2.228, 2.331, 2.347 y 2.385, donde el otro lado no lo tenia. **Las cuatro vueltas el error empuja
+en la misma direccion: inflar la diferencia.** En la 13 pese como paso lo que es linea; en la 14
+pese lo propio en vez del nucleo comun; en la 15 descarte la B con el caso de manual delante; hoy
+**pese dos veces lo propio sin medir si sobrevive contra ESTE companero.**
+
+### 5. IMPRECISION DE REPORTE, registrada y NO contada como caida
+
+**La lista de rutas del reporte se queda corta por segunda vuelta seguida.** El reporte cita
+`git diff --stat d16c714b HEAD` y declara ocho rutas de documentacion mas "cinco scripts nuevos";
+el diff real trae ademas **cuatro artefactos de datos en `scripts/`** (`_actos_citas.json`,
+`_actos_citas_narrativa.json`, `_actos_nuevos_335.jsonl`, `_actos_viejos.json`). Uno de ellos lo
+nombra el propio cuerpo del reporte. **Nada se movio sin decirse y ninguna toca `dataset/`**, asi
+que sigue el precedente de la vuelta 15 seccion 1.1: **imprecision, no caida.** Lo dejo escrito con
+su cuenta: **van dos seguidas de la misma especie; una tercera ya no es ruido y entra como caida de
+reporte por la regla del fundador.**
+
+### 6. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 15: **30 relecturas, 375 puestos, 7 caidas de clase, mas 2 caidas de reporte
+del ejecutor, mas 1 caida de cifra publicada del ejecutor, mas 2 caidas de cifra publicada del
+auditor.**
+
+Esta vuelta: **mas 1 relectura, mas 7 puestos** (dos descontados por contaminacion declarada);
+**UNA caida de CIFRA PUBLICADA del ejecutor** (el acto que crecio, seccion 2); **DOS discrepancias
+ciegas mias que no prosperaron** (574 y 2.396); una imprecision de reporte registrada sin contar.
+
+**Acumulado: 31 relecturas, 382 puestos, 7 caidas de clase, mas 2 caidas de reporte del ejecutor,
+mas 2 caidas de cifra publicada del ejecutor, mas 2 caidas de cifra publicada del auditor.**
+
+> **CREDITO DE TANDA: ROTO, y lo digo con el numero delante y sin adornarlo en ninguna de las dos
+> direcciones.** Es la **segunda tanda seguida** con una caida de cifra publicada del ejecutor
+> (vuelta 15: la cobertura de la mesa unida; vuelta 16: el acto que crecio). La regla afinada por el
+> fundador el 13 ago 2026 dice **dos tandas seguidas: PARADA**, y el acta de la vuelta 15 ya dejo
+> escrito por adelantado que la siguiente lo seria. **Se cumple lo escrito.**
+>
+> **Y queda escrito lo otro, porque tambien es medicion:** salvo esa linea, esta vuelta es la mas
+> verificada de la campaña. Trece racimos, diez pares del bloque humano, 335 entradas, 53 familias,
+> siete sedes de tachado y un barrido de 221 nombres, **todo medido por mi con instrumento propio y
+> todo exacto.** La parada no dice que el trabajo sea malo: dice que **el modo de fallo es
+> estable**, dos veces seguidas la afirmacion salio de una nota vieja teniendo el instrumento
+> corriendo.
+
+### 7. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **Dos discrepancias ciegas mias, las dos inflando la diferencia, cuarta vuelta seguida** (574 y
+  2.396). Es mi patron y ya no puedo llamarlo casualidad.
+- **Me contamine dos puestos de mi propio lote** (765 y 1.014) leyendo notas del plan antes de
+  cerrar la eleccion ciega. Los descuento, pero el orden correcto era elegir el lote ANTES de
+  verificar las notas, y no lo hice.
+- **Mi primer barrido de citas dio 84 y no 81**, y estuve a un paso de publicar una caida falsa por
+  segunda vuelta seguida. Lo que me salvo fue volver a correrlo sobre el hash del ejecutor antes de
+  escribir. **Queda escrito porque la regla que me salva es siempre la misma: reproducir el corte de
+  la cifra vieja antes de declararla mala.**
+
+### 8. CONDICIONES DE PARADA: SE CUMPLE UNA
+
+- Doctrina nueva: **no**. Las tres adjudicaciones de la seccion 3 cuelgan de banco 9.10, 9.17 y
+  9.21, de mi propia condicion (b) de la adjudicacion 6.3, y de la regla de `OP-I-01` sobre el hueco
+  nombrado.
+- Contradiccion sin resolver: **no**. La caida se resuelve con correccion declarada y tachado.
+- Decision de fundador: **no se toco nada de lo reservado.** `dataset/` intacto, veredictos intacto,
+  cero merges, FASE III sin abrir, `pasada-unica` sin crear.
+- Fallo tecnico: **no**. Arbol limpio, cero guiones, hook corrido.
+- **Credito de tanda: ROTO. SEGUNDA caida de cifra publicada del ejecutor en dos tandas seguidas.
+  ESTA ES LA PARADA.**
+- Apertura de la FASE III: **no aplica**, la FASE II sigue abierta.
+- Campaña consumada: **no**.
+
+**`docs/loop/PARA_ALEXIS.md` escrito. `docs/loop/PROMPT_SIGUIENTE.md` VACIO. El bucle se detiene.**
