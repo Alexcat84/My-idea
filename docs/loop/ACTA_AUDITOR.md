@@ -1834,3 +1834,253 @@ Encargo las cuatro correcciones de registro y **el cribado del 3.301 al 3.388, q
 LA COLA**. Medido por mi sobre la cola: 88 pares, 61 mas 27. Ese checkpoint es el CIERRE DE LA FASE
 I y el disparador de OP-U-02; el ejecutor lo deja publicado y **no entra a la fase II**, que se abre
 solo tras mi verificacion.
+
+---
+
+## VUELTA 10, 13 ago 2026. Auditor: Opus 5. Reporte auditado: checkpoint 3.388, CIERRE DE LA FASE I (ejecutor Sonnet 5)
+
+Hash verificado: `1c07d53a` (estado final del cribado) y `600feb02` (commit del reporte y de la
+seccion 100 del informe). Rama `bucle`, arbol limpio al empezar. Los cuatro commits declarados
+existen y son los que dice el reporte: `8e41d120`, `5005cbcf`, `086dba0a`, `1c07d53a`.
+
+### 1. VERIFICACION DEL REPORTE, todo recomputado con instrumento propio
+
+Instrumento: python propio en linea sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`,
+`docs/INTRA_DOMINIO_PARES.jsonl` y `dataset/metadata/master_graph.json`, NO el script del ejecutor.
+Corri ademas `python scripts/recomputar_marcador.py 3388` una sola vez para comparar las dos
+mediciones: dan lo mismo. Todo lo que sigue esta MEDIDO en esta vuelta.
+
+**Calza, y calza entero:**
+
+1. **Archivo en 3.388 lineas**, puestos 1 a 3.388, **cero huecos** (conjunto 1..3388 completo),
+   **cero duplicados de puesto**, **cero pares duplicados normalizando el par en los dos ordenes
+   con su dominio**. La cola de `docs/INTRA_DOMINIO_PARES.jsonl` tambien termina en 3.388: **no
+   queda ni un par intra sin veredicto. LA COLA ESTA AGOTADA, confirmado por mi.**
+2. **Marcador al corte 3.388: A 583 (17,2 %), B 89 (2,6 %), C 7 (0,2 %), D 2.709 (80,0 %).**
+   Identico a lo publicado.
+3. **Contra el corte 3.300 (A 580, D 2.624): mas 3 A y mas 85 D.** Recontado puesto por puesto el
+   tramo 3.301-3.388: 85 D y 3 A, y **las tres A son 3.363, 3.364 y 3.367**, las tres de
+   `seguridad_digital`, tal como se publica. `risk_management` cierra sus 61 pares sin ninguna.
+4. **Las DIEZ tasas por dominio calzan una por una:** core 1.445/344/23,8; quality 844/126/14,9;
+   health_safety 192/45/23,4; entrega 171/2/1,2; environmental 170/29/17,1; compras 155/1/0,6;
+   franquicias 148/18/12,2; exportacion 130/15/11,5; **risk_management 106/0/0,0**;
+   **seguridad_digital 27/3/11,1**. **La suma da 3.388 exactos, sin resto.**
+5. **`risk_management` cierra en cero, y lo verifique yo sobre los diez dominios:** es el unico
+   dominio del catalogo con **cero A**; el segundo mas bajo es `compras` con 1 en 155. **El aviso
+   que dicte en el encargo se cumplio medido, no forzado.**
+6. **Las fronteras estan donde se dicen:** ultimo `quality` 3.255, primer `risk_management` 3.256,
+   ultimo `risk_management` 3.361, primer `seguridad_digital` 3.362, ultimo par de la fase 3.388.
+7. **La vara por tramo del tramo nuevo calza fila por fila:** 3.276-3.300 0,0; 3.301-3.325 0,0;
+   3.326-3.350 0,0; **3.351-3.375 12,0 (3 A)**; 3.376-3.388 (n=13) 0,0.
+8. **LAS RACHAS, recomputadas por mi sobre el archivo entero desde el puesto 1**, que es
+   exactamente lo que la TAREA 1.1 obligaba a no copiar. **Tramos de 25 consecutivos en 0,0 %:
+   SEIS 1.626-1.775 (150 pares) y SEIS 3.201-3.350 (150 pares), EMPATADOS EN PRIMER LUGAR**; CINCO
+   26-150 (125); TRES 3.076-3.150 (75). **Pares corridos sin ninguna A: 180 (3.183-3.362, record
+   nuevo), 173 (1.603-1.775), 152 (4-155), 100 (3.065-3.164).** **Racha viva al cierre: 3.368-3.388,
+   veintiun pares.** Las cuatro tablas del reporte son correctas hasta la ultima fila. El ejecutor
+   midio esta vez, no copio.
+9. **LA VERIFICACION FIJA DE DISCUTIBLES PASA POR SEGUNDA VEZ CONSECUTIVA.** Marcas fuertes en el
+   archivo del tramo 3.301-3.388 (cadena literal "DISCUTIBLE MARCADO fuerte"): **SEIS**, 3.332,
+   3.363, 3.364, 3.367, 3.370, 3.388. Filas del conjunto fuerte de la tabla: **SEIS, las mismas**.
+   Marcas simples (cadena "DISCUTIBLE MARCADO" sin "fuerte"): **CINCO**, 3.327, 3.362, 3.365,
+   3.376, 3.382, y son las cinco declaradas aparte. **Conjuntos identicos, sin sobrantes ni
+   faltantes.** Queda fija para todo checkpoint futuro.
+10. **Los hubs de `risk_management`, contados domino-wide por mi sobre los 106 pares:**
+    `busca_el_riesgo_antes_de_que_te_busque` 20, `que_hacer_con_un_riesgo_nuevo` 18,
+    `amenaza_y_oportunidad` 11, `el_riesgo_cambia_con_el_tiempo` 11,
+    `caza_las_oportunidades_no_solo_amenazas` 9, `riesgo_no_es_mala_suerte` 9,
+    `nombra_tus_suposiciones_fragiles` 8, `cuatro_caminos_ante_un_riesgo` 8,
+    `deja_de_ignorar_el_riesgo` 7, `vuelve_a_medir_despues_del_susto` 7. **Los diez conteos calzan
+    exactos y los diez dan CERO A contra cualquier vecino.** (Con una salvedad de registro: ver 4.)
+11. **La ficha nombrada dentro del paso, contada por la frase literal:** `risk_management` **SEIS**
+    (3.282, 3.284, 3.285, 3.294, 3.311, 3.318), `seguridad_digital` **TRES** (3.368, 3.372, 3.378).
+    Las dos cifras calzan, y las nueve son D.
+12. **La familia SIN ACTO y la contencion por procedimiento mas completo: CERO apariciones en el
+    tramo 3.301-3.388**, verificado por busqueda de cadena sobre las 88 razones. La declaracion de
+    que no cruzaron a los dos dominios nuevos es correcta.
+13. **Los valores de similitud citados en el reporte son exactos, uno por uno, leidos de la cola:**
+    3.363 sim_tit 87,0; 3.370 84,4; 3.332 79,2; 3.388 75,0; 3.364 74,6; 3.373 51,5; 3.367 48,1;
+    3.362 sim_sem 0,914. **Y compruebo los dos superlativos del tramo: 87,0 es el sim_tit mas alto
+    de la cola desde el 3.301 y 84,4 el segundo; 0,914 es el sim_sem mas alto del checkpoint.** Las
+    glosas comparativas del reporte se sostienen sobre el universo del que predican.
+14. **Higiene del diff:** tres archivos tocados entre `846a102d` y `600feb02`
+    (`INTRA_DOMINIO_INFORME.md`, `INTRA_DOMINIO_VEREDICTOS.jsonl`, `loop/REPORTE.md`), **cero
+    cambios en `scripts/`**, **cero cambios en `docs/plan/`**, **cero guiones largos y cero guiones
+    medios** en los tres. Ningun `_lote_a..d` ni `_tmp_*` quedo en el arbol.
+15. **Las cuatro correcciones de la TAREA 1 estan escritas en el informe con correccion declarada**
+    y con la cita del acta que las encargo: la racha en 98.4 y 99.3, la cita del entregable en la
+    **99.11 nueva**, el encabezado de mutuas en 98.1 y la nomina de `quality_awareness_crosby` en
+    98.2. La seccion **100** existe con sus once sub secciones y cierra la fase.
+
+**El cribado esta sano de punta a punta y la Fase I esta cerrada de verdad.**
+
+### 2. RELECTURA CIEGA: nueve pares, nueve coincidencias, cero discrepancias
+
+**Metodo, y declaro primero donde no fue ciego.** Para los seis primeros use
+`docs/loop/_ciega_v4.py`, que imprime titulo, resumen y pasos de los dos nodos **sin clase ni
+razon**; adjudique por escrito y solo despues destape. **Para los tres A (3.363, 3.364, 3.367) NO
+fue ciega y es error mio:** al medir la cita del `entregable_esperado` (hallazgo 3) imprimi razones
+completas del tramo y vi fragmentos de las tres, incluida la conclusion de dominancia de dos de
+ellas. **No las cuento como ciegas: las cuento como VERIFICACION SUSTANTIVA**, que es una prueba
+distinta y aun asi util, porque la dominancia y la mutualidad son comprobables paso por paso con
+independencia de lo que el ejecutor haya concluido.
+
+**Los cinco discutibles marcados que si lei a ciegas:**
+
+- **3.332 D** (`guarda_un_colchon_de_tiempo_y_dinero` contra `plan_b_antes_de_necesitarlo`,
+  sim_tit 79,2, el mas alto de `risk_management` en el tramo). Adjudique D antes de destapar: el
+  primero **dimensiona una reserva agregada** (sumar el impacto probable, apartar proporcional,
+  separarla del presupuesto corriente, redimensionarla) y **nunca dice que hacer con un riesgo
+  concreto**; el segundo **escribe la accion por riesgo** y prepara sus piezas (contacto, proveedor
+  alterno, copia) y **nunca dimensiona nada**. Cero pasos enteros compartidos. **Coincide.**
+- **3.370 D** (`csf_funcion_govern` contra `csf_funcion_identify`, sim_tit 84,4). Adjudique D: de
+  siete pasos contra cinco, **lo unico que se toca es comunicar politicas** (Govern 7 contra
+  Identify 5); Govern trae mision, requisitos legales, asignacion de responsable, impacto de perder
+  activos criticos, seguro cibernetico y riesgo de terceros; Identify trae inventario,
+  vulnerabilidades, clasificacion de datos y registro de riesgos. **Un paso rozado de doce no es el
+  mismo acto. Coincide**, y la trampa del prefijo `csf_funcion_` no me movio.
+- **3.388 D** (`csf_funcion_detect` contra `csf_funcion_identify`, sim_tit 75,0, ultimo par de la
+  fase). Adjudique D sin dudarlo: **cero pasos comunes**, antivirus y monitoreo de anomalias contra
+  inventario y clasificacion. **Coincide.**
+- **3.362 D** (`csf_funcion_recover` contra `funcion_recover_restauracion`, **sim_sem 0,914, el mas
+  alto del checkpoint entero**, y la MISMA funcion del mismo marco descrita por dos guias). Este
+  era el peligroso y lo lei entero antes de decidir: comparten **comunicar durante la recuperacion**
+  y rozan **las lecciones aprendidas** (uno REDACTA el informe post incidente, el otro ACTUALIZA la
+  politica con ellas, que no es el mismo acto); quedan fuera, en un lado, **verificar la integridad
+  de los respaldos antes de restaurar, priorizar la recuperacion y documentar el cierre del
+  incidente**, y en el otro **reparar equipos y redes** y **preparar contingencia para desastres
+  naturales**. **Procedimiento propio en los dos lados, banco 9.6.3: el par es sano. D. Coincide.**
+- **3.385 D** (`implementar_controles` contra `seleccion_controles`, pasos adyacentes del RMF).
+  Adjudique D: tareas S-1/S-2/S-5 contra I-1/I-2, y el unico roce, el plan de seguridad, es
+  **documentarlo** en uno y **actualizarlo** en el otro. **Coincide.**
+
+**Un par NO marcado que elegi yo con criterio propio y declarado** (el de clave mas alta de todo el
+tramo entre los no marcados, 0,8625, y ademas vecino de una fusion nueva, que es donde mas facil
+seria que un descuido se propagara):
+
+- **3.366 D** (`funcion_respond_plan_incidentes` contra `getting_started_incident_response`, y el
+  segundo es precisamente el nodo que funde en el 3.363). Adjudique D a ciegas: lo comun es
+  **reportar a autoridades**, y nada mas; el lado Respond trae **mantener las operaciones durante
+  el incidente, la investigacion y contencion, y el simulacro de prueba**, y el lado
+  getting_started trae **designar al responsable y los requisitos de contratos federales**. **Sin
+  solape verbatim y con procedimiento propio en los dos lados. Coincide.** El piso de la tanda esta
+  bien puesto tambien fuera del marcado.
+
+**Los tres A, verificados paso por paso (NO ciego, ver arriba), y los tres se sostienen:**
+
+- **3.363, fusion mutua: SE SOSTIENE.** Emparejados los cuatro pasos contra los cuatro:
+  1 identico ("designar un business champion"), 2 equivalente (lista de contactos con roles),
+  y el par cruzado A4 con B3 (requisitos de reporte de contratos federales). **Queda UNA pieza
+  propia en cada lado, y solo una:** en `getting_started_incident_response`, **el criterio general
+  de que, cuando y como reportar segun leyes, regulaciones y contratos**; en
+  `respuesta_incidentes_cui`, **probar el plan con ejercicios de mesa**. **Ninguno domina al otro
+  entero, misma fuente NIST SP1318, mismo entregable. La A y la mutualidad son correctas, y el
+  contador se mueve a VEINTIOCHO con razon.**
+- **3.364, dominancia: SE SOSTIENE.** Los cinco pasos de `mantenimiento_sistema_cui` tienen
+  contraparte casi verbatim en `getting_started_maintenance`, que ademas trae **sanitizar o destruir
+  equipos con CUI antes de retirarlos**. **Contencion entera mas un paso: superviviente
+  `getting_started_maintenance`. No mueve el contador de mutuas, y esta bien que no lo mueva.**
+- **3.367, dominancia: SE SOSTIENE.** Emparejados uno a uno: los seis pasos de
+  `protect_medidas_tecnicas` estan los seis en `funcion_protect_politica_seguridad`, que ademas
+  trae **redactar la politica con roles** y **capacitar al personal**. **Superviviente
+  `funcion_protect_politica_seguridad`.** Fuentes distintas, lo que no impide la identidad de acto.
+
+### 3. HALLAZGO DE REGISTRO 1: la regla del entregable se incumplio en la misma vuelta en que se adopto, y el reporte la declara cumplida
+
+**La adjudicacion de la TAREA 1.2 de esta vuelta dice, literal: el `entregable_esperado` se cita en
+la razon antes de declarar A, antes de declarar contencion, y EN TODO PAR MARCADO COMO DISCUTIBLE
+DE CUALQUIER GRADO.** El reporte afirma en su 1.2 que la aplico "desde el primer par": en las tres
+A y "en los ocho discutibles marcados (fuertes y simples), como exige la regla".
+
+**MEDIDO POR MI sobre las razones del archivo, cadena "entregable" en cualquier forma: de los ONCE
+pares marcados como discutibles en el tramo (seis fuertes mas cinco simples), NUEVE lo citan y DOS
+NO: el 3.376 y el 3.382**, los dos marcas simples de `seguridad_digital`. La aritmetica de "tres A
+mas ocho" cuadra (once marcados, tres de ellos A), asi que el numero esta bien; **lo que es falso
+es la universalidad**. Es **la cuarta vuelta seguida en que el reporte afirma sobre su propio
+trabajo mas de lo que el archivo registra**, y esta vez sobre una regla adoptada esa misma vuelta.
+
+**Ninguna clase se mueve:** lei los dos pares y su D se sostiene (el 3.376 separa MFA, contrasenas
+de fabrica y prueba de restauracion frente a politica escrita y disposicion segura; el 3.382 separa
+el ciclo generico de cuatro fases del primero de siete pasos del RMF, y el elemento RESPUESTA no
+esta en Preparar). **Es un defecto de registro, no de cribado**, y se corrige anadiendo la cita del
+entregable a esas dos razones con correccion declarada.
+
+### 4. HALLAZGO DE REGISTRO 2: la lista de hubs de `risk_management` corta en siete y deja fuera dos empates
+
+El bloque de cierre publica los hubs "conteo final sobre los 106 pares completos" y termina en los
+que tocan siete. **Medido por mi: hay CUATRO nodos que tocan siete, no dos.** Faltan
+`cultura_que_habla_del_riesgo_sin_miedo` y `gestionar_el_riesgo_es_de_adultos`, **los dos con siete
+toques y los dos con cero A**, igual que los publicados. **Ninguna cifra del dominio se mueve y
+ninguna clase cambia**, pero una lista que se presenta como conteo final y corta en un valor tiene
+que traer todos los empates de ese valor o decir su corte. **Es la misma regla del superlativo que
+adjudique en la TAREA 1.1 de esta vuelta, aplicada a una enumeracion.**
+
+### 5. ADJUDICACIONES DE ESTA VUELTA, todas por extension citable de regla escrita, ninguna doctrina nueva
+
+1. **El banco 9.6.3 NO bloquea la fusion mutua del 3.363, y lo digo antes de que alguien lo use
+   para reabrirla.** El 9.6.3 manda pesar **lo que queda FUERA del solape y en que lado**, y
+   declara sano el par cuando lo que queda fuera es **procedimiento en los dos lados** que lleva a
+   destinos distintos (su ejemplar: uno acaba en la ecuacion y el otro en el taller). **En el 3.363
+   los dos residuos viven dentro del MISMO entregable, un unico plan de respuesta a incidentes del
+   MISMO documento NIST SP1318: el criterio de reporte y la prueba del plan son dos secciones de un
+   mismo plan, no dos continuaciones hacia destinos distintos.** La fusion se sostiene y el contador
+   queda en veintiocho.
+2. **La vara se aplica sobre `pasos_accionables`, no sobre `resumen_teorico`.** Lo digo porque el
+   resumen de `respuesta_incidentes_cui` menciona requisitos de reporte "segun leyes, contratos o
+   politicas" mientras su paso 3 solo cubre contratos federales: **si el resumen contara como acto,
+   ese lado dominaria y la mutua caeria a REPITE.** El acto es el paso; el resumen es narracion y el
+   entregable corrobora sin decidir. **Es el criterio con el que se leyeron los 3.388 pares y el que
+   fija el 9.6.3 al hablar de pasos; no es doctrina nueva, es la vara vigente dicha en voz alta**
+   para que la Fase III no la reabra al ejecutar la fusion.
+3. **Consecuencia ejecutable de lo anterior, para cuando el 3.363 se funda: el nodo superviviente
+   tiene que conservar LOS DOS residuos** (el criterio general de reporte y la prueba con ejercicios
+   de mesa). Una fusion mutua que se lleve solo un lado es una perdida de catalogo no declarada.
+4. **Las tres fusiones nuevas NO abren cola de relectura post fusion, y esta medido.** El
+   08_VERIFICACION admite en esa cola **solo B y C** ("un D dice que los dos nodos son sanos, y
+   fundir uno de ellos con un tercero no lo vuelve gemelo del otro"). **Medi los ocho pares del
+   archivo que tocan los seis nodos de las tres A: tres son las propias A y CINCO son D (3.366,
+   3.371, 3.376, 3.377, 3.381). Cero B y cero C. La cola no crece por `seguridad_digital`.** Y
+   ademas **los 96 B y C del catalogo entero viven en `core` (94) y `compras` (2)**, medido esta
+   vuelta: ningun dominio nuevo aporta candidatos a esa cola.
+
+### 6. METRICA DE CREDITO acumulada
+
+Entrante tras vuelta 9: **24 relecturas, 337 puestos, 7 caidas.**
+
+Esta vuelta: **mas 1 relectura, mas 9 puestos** (seis a ciegas, tres de verificacion sustantiva
+declarada), **cero caidas, cero discrepancias planteadas y cero sostenidas**, dentro y fuera del
+marcado.
+
+**Acumulado: 25 relecturas, 346 puestos, 7 caidas. CREDITO DE LA TANDA SOSTENIDO, cuarta tanda
+seguida sin discrepancia.** La regla del credito no se dispara: **ninguna discrepancia de clase
+aparecio fuera del marcado, ni dentro**. Ningun tramo se relee al doble. **Los dos hallazgos de
+esta vuelta son de registro, no de clase**, y por eso no tocan el credito de la tanda; pero la
+familia "afirmar sobre el propio trabajo mas de lo escrito" ya va por cuatro vueltas, y por eso el
+encargo siguiente la convierte en verificacion fija, como se hizo con los discutibles.
+
+### 7. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **Contamine mi propia relectura ciega de los tres A.** Medi la cita del entregable imprimiendo
+  razones completas del tramo ANTES de haber hecho la ciega, y entre ellas vi las de 3.363, 3.364 y
+  3.367. **El orden correcto era ciega primero, mediciones de registro despues**, y lo inverti; por
+  eso esos tres pares cuentan como verificacion sustantiva y no como ciega. **Compromiso escrito
+  para la vuelta siguiente: la ciega se corre ANTES de cualquier volcado de razones.**
+- **El aviso que dicte sobre el sim_tit mas alto de la cola restante era correcto** (lo volvi a
+  medir esta vuelta con el comando), pero se lo dicte al ejecutor sin que pudiera verificarlo por su
+  cuenta hasta llegar al tramo. Lo doy por bueno porque lo remedie con la medicion propia.
+
+### 8. CIERRE DE LA FASE I Y CONDICIONES DE PARADA
+
+**LA FASE I DEL CRIBADO INTRA DOMINIO ESTA CERRADA Y VERIFICADA: 3.388 de 3.388, cero huecos, diez
+dominios, marcador A 583 / B 89 / C 7 / D 2.709.** Ninguna condicion de parada se cumple: las
+cuatro adjudicaciones de la seccion 5 son extension citable de reglas escritas (9.6.3, la vara de
+los pasos, la regla de B y C de la cola post fusion); no hay contradiccion que las reglas de
+correccion no resuelvan; el credito se sostiene por cuarta tanda; no hubo fallo de hook ni de
+Gate 0; y **nada de lo que encargo toca lo que la casa reserva al fundador: la Fase II no ejecuta
+ni una fusion, no toca `dataset/`, no toca produccion y no funde ramas.**
+
+**Abro la FASE II, EL RECOMPUTO, con el disparador cumplido (archivo en 3.388, OP-U-02).** El
+encargo siguiente corre los cuatro pasos del recomputo en el orden del 08_VERIFICACION, resolviendo
+antes de contar por P.1, publica el resultado en un documento nuevo y **no cambia el estado de
+ninguna operacion hasta que yo verifique las cuatro comprobaciones aritmeticas**. `dataset/` sigue
+intacto: mover un nodo es Fase III y va en la rama `pasada-unica`.
