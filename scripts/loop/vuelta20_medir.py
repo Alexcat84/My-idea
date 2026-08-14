@@ -315,13 +315,47 @@ def main():
     print("      LD-71 buscada en TODAS las sedes de dirigidas: %s" % (
         [nom for nom, t in textos.items() if "LD-71" in t] or "NINGUNA SEDE"))
     print()
-    print("  B7. decision_de_vender_startup: los pasos que publica 01_FUENTES.md")
+    print("  B7. decision_de_vender_startup: cuantos pasos, censo de TODAS las sedes")
     x = vivos.get("decision_de_vender_startup")
     m = re.search(r"decision_de_vender_startup`\*\*\s*\|\s*\*\*(\d+) pasos", fu)
-    print("      01_FUENTES.md publica: %s pasos" % (m.group(1) if m else "no localizado"))
-    print("      medido hoy en el grafo: %d pasos" % len(x["pasos_accionables"]))
-    print("      la nota de LA FIRMA POSICIONAL publica: %s" % (
-        "34 pasos" if "34 pasos" in fig_firma["nota"] else "no dice 34"))
+    print("      MEDIDO HOY en el grafo: %d pasos" % len(x["pasos_accionables"]))
+    print("      01_FUENTES.md, tabla LOS TRES CASOS: %s pasos" % (
+        m.group(1) if m else "no localizado"))
+    # una busqueda negativa no se puede citar: se barre docs/ entero
+    censo = collections.defaultdict(list)
+    for p in sorted((RAIZ / "docs").rglob("*")):
+        if not p.is_file() or p.suffix.lower() not in (".md", ".jsonl"):
+            continue
+        try:
+            t = p.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, OSError):
+            continue
+        if "decision_de_vender_startup" not in t:
+            continue
+        for mm in re.finditer(r"decision_de_vender_startup.{0,160}?(\d+)\s*pasos", t, re.S):
+            censo[mm.group(1)].append(str(p.relative_to(RAIZ)))
+        # y las tablas donde la cifra vive en una columna rotulada pasos: se usa
+        # la cabecera INMEDIATAMENTE ANTERIOR a la fila, no la primera del archivo
+        cabeceras = [(mm.start(),
+                      [c.strip() for c in mm.group(0).strip().strip("|").split("|")])
+                     for mm in re.finditer(r"^\|.*\|\s*$", t, re.M)
+                     if "pasos" in [c.strip()
+                                    for c in mm.group(0).strip().strip("|").split("|")]]
+        for mm in re.finditer(r"^\|.*decision_de_vender_startup.*\|\s*$", t, re.M):
+            celdas = [c.strip() for c in mm.group(0).strip().strip("|").split("|")]
+            previas = [c for pos, c in cabeceras if pos < mm.start()]
+            if not previas:
+                continue
+            cols = previas[-1]
+            if len(cols) != len(celdas):
+                continue
+            celda = celdas[cols.index("pasos")]
+            if celda.isdigit():
+                censo[celda].append(str(p.relative_to(RAIZ)))
+    for cuantos in sorted(censo, key=int):
+        sedes_c = sorted(set(censo[cuantos]))
+        print("      sedes que dicen %s pasos: %d  %s" % (
+            cuantos, len(sedes_c), sedes_c))
 
     # ------------------------------------------------------------------ 6
     titulo("6. LO RESERVADO")

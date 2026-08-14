@@ -1531,3 +1531,94 @@ como estaban, y la divergencia se escribe en vez de taparse:**
 | **ACLARACION DE ROTULO, 14 ago 2026 (vuelta 20), y la fila de arriba no se toca** | el **9** de esa fila son **EDICIONES**, y caen sobre **8 entradas DISTINTAS**: `EL PASO DE OFICIO` recibio **dos**, una en TAREA 1 y otra en TAREA 2.B. Rotulo, no cifra: la descomposicion escrita al lado (cinco mas una mas tres) es exacta, y el reporte de la vuelta 19 ya lo decia bien (*ocho lineas y nueve ediciones*) |
 | actos vigentes **CERRADOS / ABIERTOS** | **281 / 54** |
 | **la FASE II** | **las veinte figuras quedan NOMBRADAS. Quien declare el bloque cerrado es el auditor, no esta seccion** |
+
+---
+
+## TAREA (vuelta 20): los cinco registros de cierre, y la FASE II medida bloque por bloque
+
+**Corte de todas las cifras de esta seccion: 14 ago 2026, sobre el cribado CERRADO en 3.388 de 3.388.**
+**MODO DE CIERRE: cero reparaciones de nodos, cero operaciones ejecutadas, cero pares nuevos leidos.**
+`dataset/` intacto, `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` intacto en sus 3.388 lineas, y
+`RECOMPUTO_3388_COMPONENTES.jsonl` intacto en sus 335 componentes.
+
+**Instrumentos de esta vuelta, los dos de solo lectura:** `scripts/loop/vuelta20_medir.py` y
+`scripts/loop/vuelta20_horowitz.py`, sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`,
+`dataset/metadata/master_graph.json`, `docs/plan/INVENTARIO.jsonl`,
+`docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` y el arbol entero de `docs/`. **Ninguna cifra de esta
+seccion sale de una nota, de un acta ni de un reporte anterior: todas salen de una corrida de hoy.**
+
+### A. LOS CINCO BLOQUES DE LA FASE II, remedidos DESPUES de los registros
+
+| bloque | tras la vuelta 19 | **tras los registros de la vuelta 20** |
+|---|---|---|
+| la cola de relectura post fusion | sigue verificada, 7 de 7 | **SIGUE VERIFICADA, 7 de 7 y remedida hoy**: la nota cita ocho puestos, y quitado el **751** que CAE por `LD-59` quedan los **siete** de la cola, que es lo que su campo `cobertura` dice. Seis en **B** (196, 224, 253, 591, 707, 968) y el **1096 en A**, con su excepcion escrita en `08_VERIFICACION.md`. El 751 esta hoy en **B** y fuera de la cola |
+| el criterio del forastero | los dos, mas un candidato condicionado | **IGUAL, y remedido**: `tacticas_cierre_ventas` con **6 lecturas, 1 A y 5 D**; `incentivos_no_monetarios_advocacy` con **0 pares** en el archivo, que es lo que su nota declara; el candidato condicionado (`customer_validation_sales_roadmap`) sigue registrado y **sin contar** |
+| el lote de cinco del sales roadmap | leidos y acto CERRADO | **CERRADO EN LAS DOS SEDES VIVAS**: los **15** pares posibles de la nomina son **10** en el archivo de veredictos mas **5** en dirigidas, y las cinco (`LD-66` a `LD-70`) estan localizadas hoy en `LD_SALES_ROADMAP.md`. La entrada de `racimo` **pasa a 15 de 15 y a cobertura COMPLETA** en esta vuelta; **la FORMA sigue MEZCLADO y no se toca** |
+| las lecturas de acto entero de P.5 | 281 hechos, 54 pendientes, 324 pares | **IGUAL, remedido hoy**: **556 actos** (221 superadas, **335 vigentes**), vigentes **281 CERRADOS y 54 ABIERTOS**, deuda **324** por el campo `cobertura` (**0 en cola, 324 fuera de cola**) |
+| los ejemplares de las veinte figuras | las veinte nombradas, 20 de forma y 13 de tanda | **IGUAL, y las dos cuentas se siguen publicando juntas**: **20 de 20** de forma y **13 de 20** con marca de tanda. Las **siete** sin marca son las que nacieron nombradas, y el acta de la vuelta 19 verifico cinco de ellas contra archivo, grafo y dirigidas |
+
+**LA COTA DE `EL PASO DE OFICIO`, regenerada en TAREA 1.3 y remedida aqui con las DOS cadenas:**
+
+| cota | criterio | nodos | con la linea en su **paso 1** | pares |
+|---|---|---:|---:|---:|
+| **VIGENTE**, cadena corregida | las pistas de la vuelta 18 con `us commercial service` reemplazada por `commercial service` | **26 de 141 vivos** | **7** | **40 de 130** |
+| contraste, cadena de la vuelta 18 | las pistas tal como estaban, con `us commercial service` sin puntos | **6 de 141 vivos** | **2** | **10 de 130** |
+
+> **Las dos se remidieron HOY y las dos reproducen. Ninguna se borra.** El dominio `exportacion`
+> tiene **158 nodos en el grafo, 17 con la clave `deprecado` y 141 VIVOS**, y **130 pares leidos**.
+
+**EL MARCADOR, EL INVENTARIO Y LO RESERVADO, al cerrar la vuelta:**
+
+| | medido hoy |
+|---|---:|
+| lineas de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **3.388**, intacto |
+| **A / B / C / D** | **583 / 89 / 7 / 2.709** (17,2 / 2,6 / 0,2 / 80,0 por ciento) |
+| puestos | **1 a 3.388, cero huecos y cero duplicados** |
+| entradas de `docs/plan/INVENTARIO.jsonl` | **671**, y ninguna nace ni muere en esta vuelta |
+| tipos del inventario | acto **556**, familia_de_ids **53**, figura **20**, defecto **19**, racimo **13**, dominio **10** |
+| **entradas DISTINTAS tocadas en esta vuelta** | **3**, y el rotulo va dicho entero para no repetir el de la vuelta 19: **4 pasadas de escritura** sobre esas 3 (`LA FIRMA POSICIONAL DEL INJERTO (P.2)` recibio **dos**) y **6 campos** en total (el `racimo` cambia `cobertura`, `estado` y `nota`; `EL PASO DE OFICIO` cambia `nota`; `LA FIRMA POSICIONAL` cambia `nota` dos veces) |
+| actos vigentes **CERRADOS / ABIERTOS** | **281 / 54** |
+| nodos en `dataset/metadata/master_graph.json` | **3.835**, de ellos **3.521 vivos**; **cero tocados** |
+| componentes en `RECOMPUTO_3388_COMPONENTES.jsonl` | **335**, intacto |
+| operaciones en `OPERACIONES.jsonl` | **71**, **cero ejecutadas** |
+
+### B. LAS CIFRAS PUBLICADAS CON DOS LECTURAS: la lista NO queda vacia, queda con UNA
+
+**Barridas las siete que esta vuelta tenia delante, seis quedan cerradas y una queda viva.**
+
+| # | la cifra | sede A | sede B | estado hoy |
+|---:|---|---|---|---|
+| 1 | el acto del sales roadmap | entrada de `acto`: **15 de 15, CERRADO** | entrada de `racimo`: decia **10 de 15, INCOMPLETA** | **CERRADA en esta vuelta** (TAREA 1.2): el racimo pasa a **15 de 15** y a **cobertura COMPLETA**, aditivo y con el texto viejo entero |
+| 2 | la deuda de P.5 | inventario: **324** | `COMPONENTES.jsonl`: **329** | **ADJUDICADA en la vuelta 19 y no reabierta**: las dos son correctas para lo que miden, la diferencia son exactamente los cinco de `LD-66` a `LD-70`, y **quien cite 329 dice la sede** |
+| 3 | la cota de `EL PASO DE OFICIO` | **6** nodos, 2 en paso 1, 10 pares | **26** nodos, 7 en paso 1, 40 pares | **CERRADA en esta vuelta** (TAREA 1.3): la corregida es la **VIGENTE**, la vieja queda de **contraste**, cada una con su criterio al lado |
+| 4 | la tanda de los cuatro libros | `01_FUENTES.md`: **43** nodos, Horowitz **13** | `10_INVENTARIO.md`, `RECORTE_POSICIONAL.md` y el grafo: **14** | **CERRADA en esta vuelta** (TAREA 1.4): **44 nodos distintos**, correccion declarada con la cifra vieja entera, la nomina de los 14 impresa y su forma verificada uno por uno |
+| 5 | el rotulo de la TAREA (vuelta 19) | *entradas tocadas: **9*** | entradas distintas: **8** | **CERRADA en esta vuelta** (TAREA 1.5): el 9 son **EDICIONES** sobre 8 entradas. Rotulo, no cifra |
+| 6 | el numero del par de la novena estrella | `LD-04`, del 11 ago 2026 | el encargo 19 mandaba acunar `LD-71` | **CERRADA en esta vuelta** (TAREA 1.1): `LD-04` es el numero, con puntero a su relectura; **`LD-71` no existe en ninguna sede de dirigidas** salvo como el numero que se decidio no acunar |
+| **7** | **los pasos de `decision_de_vender_startup`** | `01_FUENTES.md`, tabla de LOS TRES CASOS: **25 pasos** | el grafo, `FICHA_SUBFUSION_GRADIENTE.md`, `COSTURAS_INTERNAS_RESUMEN.md` y la nota de `LA FIRMA POSICIONAL`: **34 pasos** | **VIVA Y SIN ADJUDICAR. NO se arregla en esta vuelta** |
+
+> **POR QUE LA 7 NO SE ARREGLA, y se trae en vez de taparse.** La levanto la medicion de TAREA 1.4 y
+> **el encargo de esta vuelta no la scopeaba**. Censadas **todas** las sedes de `docs/` con
+> instrumento, el reparto es de **tres sedes mas el grafo contra una**, y los otros dos apartados de
+> la misma tabla calzan exactos (`viral_loop_marketing` **30**, `coeficiente_viral` **16**), asi que
+> el que diverge es uno solo. **Pero el 25 no es una cifra suelta:** va cosido a un tramo escrito
+> (*los pasos 11 a 15, 16 a 20 y 21 a 25*) que habria que rehacer entero, y eso es **reescribir un
+> hallazgo, no anotar una correccion aditiva**. No hay regla vigente que mande esa reescritura sin
+> saber si el nodo crecio despues del 11 ago o si el conteo viejo era parcial. **Queda declarada al
+> lado de la vieja, sin tocar la vieja, y su adjudicacion es del auditor.**
+
+### C. EL VEREDICTO, dicho como MEDICION y no como cierre
+
+> **LOS CINCO BLOQUES: ninguno queda abierto.** Los cinco se remidieron hoy con instrumento, los
+> cinco reproducen, y el unico que se movio en esta vuelta (el del sales roadmap) se movio **para
+> cerrar la divergencia entre sus dos sedes vivas**, no para abrir nada.
+
+> **LA LISTA DE B: NO queda vacia. Queda con UNA**, la fila 7, nombrada con sus dos sedes y sin
+> arreglar. **Por eso esta seccion NO declara la FASE II lista para verificacion de cierre**: la
+> condicion que el encargo escribio pedia las dos cosas a la vez, y solo se cumple una. **Se dice lo
+> que se midio y no se redondea hacia el cierre.**
+
+> **LO QUE SI SE PUEDE DECIR, medido:** la FASE II queda **con sus cinco bloques cerrados y con UN
+> cabo suelto nombrado**, y ese cabo es una cifra de `01_FUENTES.md` sobre los pasos de un nodo,
+> **no un pendiente del cribado ni del recomputo**. Si el auditor adjudica la fila 7 en la vuelta
+> 21, no queda nada. **El cierre y la apertura de la FASE III son suyos: esta vuelta NO abrio la
+> FASE III, NO creo `pasada-unica` y NO corrio el Gate 0.**

@@ -27,6 +27,7 @@ script pone los pasos delante.
 import collections
 import io
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -111,6 +112,52 @@ def main():
             if nid in NO_SIMPLES else ""))
         for j, p in enumerate(pasos, 1):
             print("        %2d. %s" % (j, p))
+
+    titulo("2b. LA TERCERA SEDE: docs/plan/RECORTE_POSICIONAL.md, del 11 ago 2026")
+    print("  Una busqueda negativa no se puede citar. Buscada la nomina en TODAS")
+    print("  las sedes del plan, resulta que esta ESCRITA desde el 11 ago 2026 en")
+    print("  docs/plan/RECORTE_POSICIONAL.md, seccion LOS TRES QUE MAS APORTAN.")
+    print("  Se coteja aqui nodo por nodo contra la medicion de hoy.")
+    t = (RAIZ / "docs" / "plan" / "RECORTE_POSICIONAL.md").read_text(encoding="utf-8")
+
+    def nomina_del_doc(cabecera):
+        i = t.find(cabecera)
+        if i < 0:
+            return None
+        j = t.find("###", i + 5)
+        j = j if j > 0 else t.find("---", i + 5)
+        cuerpo = t[i + len(cabecera):j]
+        return set(x.strip() for x in re.split(r"[,\n]", cuerpo)
+                   if re.fullmatch(r"[a-z0-9_]{4,}", x.strip()))
+
+    print()
+    for cab, lib in [("Ben Horowitz : 14 candidatos (y 88 en 1a)", "Horowitz"),
+                     ("Joey Coleman : 15 candidatos (y 68 en 1a)", "Coleman"),
+                     ("Michael H. Hugos : 21 candidatos (y 107 en 1a)", "Hugos")]:
+        doc = nomina_del_doc(cab)
+        if doc is None:
+            print("  %-9s la cabecera NO esta en el doc" % lib)
+            continue
+        med = seg[lib] if lib != "Hugos" else set(
+            k for k, x in vivos.items()
+            if any("Essentials of Supply Chain Man" in p
+                   for p in [q.strip() for q in x["fuente"].split(" | ")][1:]))
+        print("  %-9s el doc nombra %2d, medido hoy %2d, NOMINAS IDENTICAS: %s" % (
+            lib, len(doc), len(med), doc == med))
+        if doc != med:
+            print("     solo en el doc: %s" % sorted(doc - med))
+            print("     solo medido:    %s" % sorted(med - doc))
+    print()
+    multi = {k for k, x in vivos.items() if " | " in (x.get("fuente") or "")}
+    total_seg = sum(len(seg[nom]) for nom, _ in CANON)
+    print("  los agregados del mismo doc, remedidos hoy:")
+    print("    nodos vivos:                          %d   (el doc publica 3.521)" % len(vivos))
+    print("    con MAS DE UN libro declarado:        %d   (el doc publica 67)" % len(multi))
+    print("    declaraciones en 2a o posterior:      %d   (el doc publica 70)" % total_seg)
+    print()
+    print("  CONSECUENCIA: el 13 de 01_FUENTES.md ya estaba contradicho EL MISMO DIA")
+    print("  por otro documento del plan, y el 14 tiene TRES sedes (RECORTE_POSICIONAL,")
+    print("  10_INVENTARIO y el grafo) contra UNA.")
 
     titulo("3. LA FORMA, medida por lo que SI se puede medir: la POSICION del bloque")
     print("  La forma que 01_FUENTES.md publica es: el bloque del libro declarado")

@@ -337,12 +337,24 @@ grafias, y un nodo que declara el mismo libro dos veces sigue siendo UN nodo y U
 solapes, 46 menos 2 son **44**. **La cifra vieja 43 y sus grupos 15/13/13/4 quedan enteros arriba,
 con esta correccion al lado; `docs/plan/10_INVENTARIO.md` no se toca porque su 14 es el correcto.**
 
+> **Y HAY UNA TERCERA SEDE, buscada porque una busqueda negativa no se puede citar:**
+> [`RECORTE_POSICIONAL.md`](RECORTE_POSICIONAL.md), **del mismo 11 ago 2026 que el saldo de
+> arriba**, ya publica en su seccion *LOS TRES QUE MAS APORTAN* el grupo de Horowitz con **14
+> candidatos Y SU NOMINA ESCRITA**. Cotejada hoy nodo por nodo contra el grafo, **la nomina de ese
+> doc y la medida hoy son IDENTICAS**, y lo mismo pasa con las otras dos que ese doc nombra
+> (Coleman 15 y Hugos 21, identicas las dos). Sus agregados tambien reproducen exactos: **3.521
+> nodos vivos, 67 con mas de un libro y 70 declaraciones en segunda o posterior posicion.**
+> **O sea que el 13 de arriba ya estaba contradicho EL MISMO DIA por otro documento del plan, y hoy
+> el 14 tiene TRES sedes contra UNA.**
+
 ### LA NOMINA DE LOS 14 DE HOROWITZ, impresa desde el grafo, y su forma verificada UNO POR UNO
 
-**Por que hacia falta imprimirla:** la nomina de los 13 **no esta escrita en ninguna parte** (del
-grupo solo habia conteos), asi que no se puede decir *cual sobra*. Lo que si se puede es imprimir
-los 14 y verificar la forma en cada uno. Los pasos enteros de los catorce estan en la salida del
-instrumento; aqui va el saldo de la lectura.
+**Por que hacia falta imprimirla, dicho con precision:** lo que **no** esta escrito en ninguna
+parte es la nomina de los **13**, asi que sigue sin poderse decir *cual sobra*; la de los **14** si
+lo estaba, en `RECORTE_POSICIONAL.md`, y esta subseccion la reproduce desde el grafo **con la forma
+verificada**, que es lo que aquel doc no hacia (*"NO ADJUDICA. La lista es de candidatos a injerto,
+y su verificacion es por lectura"*, dice el suyo). Los pasos enteros de los catorce estan en la
+salida de `scripts/loop/vuelta20_horowitz.py`; aqui va el saldo de la lectura.
 
 | # | nodo | libros declarados | frontera leida | **el bloque de Horowitz** |
 |---:|---|---|---|---|
@@ -392,8 +404,15 @@ instrumento; aqui va el saldo de la lectura.
 
 > **SEGUNDA, y es una cifra publicada con dos lecturas que esta vuelta NO adjudica:** la tabla de
 > **LOS TRES CASOS QUE NO SON UN SIMPLE APENDICE** publica `decision_de_vender_startup` con **25
-> pasos**, y **medido hoy en el grafo tiene 34**. Los otros dos apartados calzan exactos
-> (`viral_loop_marketing` 30 y `coeficiente_viral` 16). **El 25 se queda entero donde esta:** el
-> encargo de esta vuelta no lo scopeaba y no hay regla que diga cual de las dos lecturas es la
-> vigente sin saber si el nodo crecio despues del 11 ago o si el conteo viejo era parcial. **Va a la
-> lista de cifras con dos lecturas sin adjudicar de `RECOMPUTO_3388.md` (vuelta 20) y al reporte.**
+> pasos**, y **medido hoy en el grafo tiene 34**. Los otros dos apartados de esa misma tabla calzan
+> exactos (`viral_loop_marketing` 30 y `coeficiente_viral` 16), asi que **el que diverge es uno
+> solo**. **Censadas TODAS las sedes de `docs/` con instrumento** (`scripts/loop/vuelta20_medir.py`),
+> el reparto es **TRES a UNA mas el grafo**: dicen **34** [`FICHA_SUBFUSION_GRADIENTE.md`](../FICHA_SUBFUSION_GRADIENTE.md)
+> (*"el peor nodo medido del catalogo"*), [`COSTURAS_INTERNAS_RESUMEN.md`](../COSTURAS_INTERNAS_RESUMEN.md)
+> (fila 9 de sus veinte primeros) y la nota de `LA FIRMA POSICIONAL DEL INJERTO (P.2)` en
+> `INVENTARIO.jsonl`; dice **25** solo esta tabla. **Aun asi el 25 se queda entero donde esta**, y no
+> por duda sobre cual pesa mas: el 25 **no es una cifra suelta**, va cosido a un tramo escrito (*los
+> pasos 11 a 15, 16 a 20 y 21 a 25*) que habria que rehacer, y eso es reescribir un hallazgo, no
+> anotar una correccion aditiva. **El encargo de esta vuelta no lo scopeaba. Va a la lista de cifras
+> con dos lecturas sin adjudicar de `RECOMPUTO_3388.md` (vuelta 20) y al reporte, para que lo
+> adjudique el auditor.**
