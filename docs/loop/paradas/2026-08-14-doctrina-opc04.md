@@ -108,3 +108,6 @@ los 24 sitios siguen en su linea exacta).
 
 El trabajo esta a salvo: nada reservado se toco, el arbol esta limpio, y todo lo medido esta
 commiteado con sus salidas en `docs/loop/`.
+
+DECISION DEL FUNDADOR (14 ago 2026): opcion A ampliada con la regla QUIEN FABRICA LIMPIA.
+Detalle en OPERACIONES.jsonl y el banco del plan. La FASE 0 arranca.

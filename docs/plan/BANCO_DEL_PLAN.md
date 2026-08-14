@@ -822,3 +822,38 @@ no se supo nombrar.
 | **3** | **si la banda es ancha, se dice que es ancha y por que**: casi siempre es que la muestra es chica y el evento raro, **y eso tambien es un resultado** |
 
 > **Y LA FORMA CORTA, para cuando haya prisa: SI NO CABE LA BANDA, NO CABE LA TASA.**
+
+---
+
+## P.16 QUIEN FABRICA, LIMPIA
+
+**Adoptada el 14 ago 2026, decision del fundador.**
+
+> **TODA OPERACION DE FUSION RETIRA, EN SU MISMO COMMIT, LA ARISTA INTERNA DEL PAR
+> QUE SU PROPIA SIMULACION REPORTA COMO AUTO-ARISTA NACIENTE.**
+
+**El motivo esta escrito en `OP-S-07`: las 33 auto-aristas del grafo de hoy no
+nacieron de golpe, nacieron una fusion a la vez, y ninguna se limpio en el momento
+en que se fabrico.** Cada una quedo esperando a una operacion de saneo posterior
+que las barriera todas juntas, y esa espera es lo que las hizo dificiles de
+diagnosticar: el nodo se cita a si mismo, pero via alias, y una guarda literal no
+lo ve.
+
+**Y no es un solo fenomeno: son dos gemelos, con su operacion de saneo cada uno.**
+`OP-S-07` limpia la **AUTO-ARISTA** (el nodo se cita a si mismo tras resolver).
+`OP-S-12` limpia la **ARISTA DUPLICADA** (el alias fundido deja un puntero que,
+tras resolver, repite el que ya tiene el superviviente). Las dos nacen del mismo
+descuido: **una fusion que no retira lo que ella misma vuelve redundante.**
+
+### LO QUE OBLIGA
+
+| | |
+|---|---|
+| **1** | si `P.7` (la simulacion previa a toda operacion de mesa) reporta que el par a fusionar deja una **arista interna sin retirar**, sea AUTO-ARISTA o ARISTA DUPLICADA, **la operacion la retira en el mismo commit que ejecuta la fusion** |
+| **2** | **la limpieza no se aplaza a una operacion de saneo posterior**: aplazarla es exactamente como nacieron las 33 auto-aristas y las 1.056 entradas duplicadas de hoy |
+| **3** | **`OP-S-12` pasa de limpieza a VERIFICACION DE CERO**: ya no borra duplicadas acumuladas, **comprueba que no quede ninguna**, porque cada fusion desde esta fecha retira su propio sobrante al fundirse |
+
+> **LA CONSECUENCIA PARA EL PLAN VIEJO: no se toca.** Las 33 auto-aristas y las
+> 1.056 duplicadas de hoy siguen siendo trabajo de `OP-S-07` y `OP-S-12`, que ya
+> estan escritas y adjudicadas. `P.16` gobierna las fusiones QUE VIENEN, no
+> reescribe las que ya pasaron.
