@@ -1233,3 +1233,201 @@ reemplazo), citando esta seccion.
    el nodo relevante en su campo `nodos`** (si alguna lo tiene incompleto). Se declara, no se investigo
    operacion por operacion si su `nodos` esta completo.
 3. **`10_INVENTARIO.md` no se toco.** Queda desactualizado por partida doble frente al archivo fuente.
+
+---
+
+## TAREA (vuelta 17): las cuatro correcciones, las dos costuras con dueno, y la FASE II medida bloque por bloque
+
+**Corte de todas las cifras de esta seccion: 14 ago 2026, sobre el cribado CERRADO en 3.388 de 3.388.**
+**MODO DE CIERRE: cero reparaciones de nodos, cero operaciones ejecutadas, cero pares nuevos leidos.**
+`dataset/` intacto y `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` intacto en sus 3.388 lineas.
+
+Los puntos 1 a 4 del encargo estan ejecutados arriba, cada uno en su sitio y con su tachado: la caida
+del acto que crecio (seccion "TAREA vuelta 16", punto 2), las 221 lineas marcadas como superadas
+(`docs/plan/INVENTARIO.jsonl`), el aviso de la vista humana (`docs/plan/10_INVENTARIO.md`) y el hueco
+nombrado del campo `operaciones` (nota de `OP-I-01`). Las dos costuras con dueno estan en la seccion
+TAREA 2.B punto 4, con su tachado. **Lo que sigue es el punto 5: seguir la FASE II por donde estaba.**
+
+### 1. Que se midio, con que instrumento, y que NO se cerro
+
+**Instrumento: `scripts/loop/vuelta17_fase2_pendiente.py`, de solo lectura**, sobre
+`docs/plan/INVENTARIO.jsonl`, `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `docs/plan/OPERACIONES.jsonl` (las
+71) y `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`.
+
+**LA FASE II NO CIERRA EN ESTA VUELTA, y se dice antes de dar ninguna cifra.** De los cinco bloques que
+le faltaban, **dos quedan VERIFICADOS ENTEROS, uno queda NOMBRADO, uno queda CUANTIFICADO EXACTO y el
+grande queda MEDIDO EN TAMANO pero sin cerrar**, porque cerrarlo es trabajo de lectura y el `grep` quedo
+descartado como instrumento en la vuelta 15.
+
+| bloque | antes de esta vuelta | despues |
+|---|---|---|
+| la cola de relectura post fusion | siete pares declarados, sin verificar contra el corte 3.388 | **VERIFICADA ENTERA, 7 de 7** |
+| el criterio del forastero | dos ejemplares declarados "con todas sus lecturas hechas" | **VERIFICADOS LOS DOS** |
+| el lote de cinco del sales roadmap | "cinco pares", sin nomina en ningun sitio | **LOS CINCO NOMBRADOS** |
+| las lecturas de acto entero de P.5 | una condicion escrita, sin cifra | **CUANTIFICADA: 280 hechos, 55 pendientes, 329 pares** |
+| los ejemplares de las veinte figuras | PENDIENTES DE MEDICION | **medido el tamano, NO cerrado** |
+
+### 2. La cola de relectura post fusion: VERIFICADA ENTERA, 7 de 7
+
+**La nomina existe y no habia que buscarla en prosa:** esta en `docs/plan/08_VERIFICACION.md` (tabla
+"LA LISTA, barrida el 12 ago 2026 sobre las diecisiete fusiones del plan") y repetida en la entrada de
+tipo `defecto` "pares que una fusion reabre" de `docs/plan/INVENTARIO.jsonl`. Los siete puestos son
+**707, 1096, 196, 253, 224, 591 y 968**, y **una cae, el 751**.
+
+**REMEDIDO CONTRA EL ARCHIVO Y CONTRA EL PLAN DE 71 OPERACIONES, no copiado de la tabla:**
+
+| puesto | clase hoy | su disparador, comprobado en `OPERACIONES.jsonl` | verifica |
+|---:|:--:|---|:--:|
+| **707** | **B** | `customer_discovery_overview` esta en el `eliminar` de `OP-M-05-INDICE`: MUERE | si |
+| **1096** | **A** | su contraparte `filosofia_customer_validation` esta en el `eliminar` de `OP-M-05-APERTURA`: MUERE | si |
+| **196** | **B** | `fase_acclimate_mapa_de_proceso` esta en el `eliminar` de `OP-M-02-ACCLIMATE`: MUERE | si |
+| **253** | **B** | `fase_acclimate_experiencia_cliente` esta en la nomina de `OP-M-02-ACCLIMATE` y NO en su `eliminar`: sobrevive y CAMBIA DE TEXTO | si |
+| **224** | **B** | `fase_assess_ciclo_cliente`, mismo patron en `OP-M-02-ASSESS` | si |
+| **591** | **B** | `pivote_estrategico`, mismo patron en `OP-M-03-III` | si |
+| **968** | **B** | `pivote_o_proceder`, mismo patron en `OP-M-03-II` | si |
+
+**Y LA QUE CAE TAMBIEN SE VERIFICA, porque una baja declarada tambien se comprueba:** el puesto **751**
+(`customer_validation_sell_phase` contra `verificar_product_market_fit`, B) sale de la lista porque su
+nodo ya no muere. **Medido: NINGUNA de las 71 operaciones tiene `customer_validation_sell_phase` en su
+campo `eliminar`.** La baja es correcta.
+
+**UNA DIFERENCIA ENTRE DOS SITIOS QUE DICEN LO MISMO, declarada y NO arreglada aqui.** La entrada de
+tipo `defecto` escribe la regla del disparador asi: *"Solo los B y los C: un D dice que los dos son
+sanos... un A ya esta resuelto"*, **y a continuacion lista un A, el 1096.** Leida sola, esa entrada se
+contradice. **NO es una contradiccion del plan: es que la entrada no carga la excepcion, que si esta
+escrita en `08_VERIFICACION.md` con su motivo** (*"su contraparte muere y su A se volveria contradiccion
+con su propia D"*) y en `00_INDICE.md` con las mismas palabras. **Los dos documentos juntos son
+consistentes; la entrada sola no.** Se trae como pregunta al reporte y no se toca: la fuente de la
+nomina es `08_VERIFICACION.md`, y esa esta completa.
+
+### 3. El criterio del forastero: los DOS ejemplares verificados
+
+**La figura declara "dos ejemplares, y los dos casos con todas sus lecturas hechas".** Remedido:
+
+| ejemplar | lo que dice la figura | lo medido en la vuelta 17 |
+|---|---|---|
+| `tacticas_cierre_ventas` | *"seis lecturas, una sola contra miembros del cierre y sale D, y su unica A es con un nodo que no es del cierre"* | **SEIS pares en el cribado: 1 A y 5 D.** Su unica A es el puesto **221**, contra `compromiso_linea_tiempo_cliente` |
+| `incentivos_no_monetarios_advocacy` | *"CUATRO lecturas contra la serie y LAS CUATRO D"* | **CERO pares en el cribado** |
+
+**Ese CERO es la clase de busqueda negativa que no se puede citar sin re-verificarla (regla 8 del
+ejecutor), asi que se re-verifico: NO es un hueco.** Sus lecturas **no son del cribado, son DIRIGIDAS**,
+y viven en `docs/plan/LD_ADOPT_ADVOCATE.md`: **`LD-28`, `LD-30` y `LD-31`, las tres D**, mas su cruce.
+**Un instrumento que solo mire `INTRA_DOMINIO_VEREDICTOS.jsonl` lo daria por no leido, y estaria mal.**
+Queda escrito para que no se vuelva a levantar como hallazgo falso.
+
+### 4. El lote de cinco del sales roadmap: LOS CINCO, NOMBRADOS por primera vez
+
+**El plan los contaba** (`00_INDICE.md`: "cinco pares"; `LECTURAS_DIRIGIDAS.md`, el backlog documentado)
+**pero no los nombraba en ningun sitio.** Calculados aqui de la nomina de seis nodos del racimo (15
+pares posibles) menos los 10 con veredicto:
+
+| el par que falta |
+|---|
+| `customer_validation_sales_roadmap` contra `estrategia_de_ventas` |
+| `customer_validation_sales_roadmap` contra `sales_roadmap` |
+| `estrategia_de_ventas` contra `hoja_de_ruta_de_ventas` |
+| `estrategia_de_ventas` contra `refinar_sales_roadmap` |
+| `estrategia_de_ventas` contra `sales_roadmap_vs_sales_force` |
+
+**Los diez que si estan, con su clase, remedidos: 6 A y 4 D** (192 A, 200 A, 255 A, 319 A, 872 D, 918 A,
+966 A, 1023 D, 1306 D, 1330 D). **Calza exacto con la tabla de los trece racimos de la vuelta 16.**
+
+> **LO QUE LA NOMINA ENSENA Y EL CONTEO ESCONDIA, y no se pidio: los cinco que faltan no estan
+> repartidos por el racimo. CUATRO DE LOS CINCO CUELGAN DEL MISMO NODO, `estrategia_de_ventas`**, que
+> tiene **uno solo de sus cinco pares leido** (el 966, A contra `sales_roadmap`).
+>
+> **Esto NO desmiente el motivo escrito para no leerlos** (*"su clase ya esta decidida: MEZCLADO desde
+> el 872. Leerlos cierra cobertura, no cambia forma"*), **y hay que decir por que no lo desmiente:** es
+> cierto que leerlos no puede mover la clase del racimo. **Pero la pregunta de P.5 no es la clase del
+> racimo: es si el acto es UNA familia o DOS**, y esa pregunta, en este acto, se contesta entera
+> leyendo los cuatro pares de un solo nodo. **Son dos preguntas distintas sobre los mismos cinco pares,
+> y el plan solo tenia escrita la respuesta a una.** Se trae como pregunta, no se decide.
+
+### 5. Las lecturas de acto entero de P.5: cuantificadas, y con una consecuencia que no estaba escrita
+
+**P.5 dice que cada acto que vaya a fundirse se lee ENTERO antes de fundirse.** Hasta hoy era una
+condicion sin cifra. Medida sobre las 335 componentes del corte 3.388:
+
+| | |
+|---|---:|
+| componentes con **TODOS** sus pares leidos, o sea **P.5 ya es un HECHO** | **280** |
+| componentes con pares sin leer, o sea **P.5 sigue siendo una CONDICION** | **55** |
+| **pares que faltan por leer en total** | **329** |
+| de esos 329, los que estan **EN COLA** sin leer | **0** |
+| de esos 329, los que estan **FUERA DE COLA** | **329** |
+
+**Los 55 son exactamente los 55 actos ABIERTOS** y los 280 exactamente los 280 CERRADOS: las dos
+particiones coinciden componente por componente, no es casualidad de conteo.
+
+> **LA CONSECUENCIA, que es lo que esta cuenta aporta y no estaba escrita en ninguna parte: LOS 329
+> PARES QUE LE FALTAN A P.5 ESTAN TODOS FUERA DE COLA. CERO en cola.** Con el cribado **cerrado en
+> 3.388 de 3.388**, eso significa que **ni uno solo va a llegar por su cuenta**: la cola no los va a
+> traer, porque la cola se acabo. **Cada uno de los 329 es una lectura dirigida o no es nada.**
+>
+> **Y por eso el sales roadmap y P.5 no son dos bloques, son el mismo bloque visto de dos lados:** el
+> acto `customer_validation_sales_roadmap` es uno de los 55, con **10 de 15 leidos y los 5 que faltan
+> fuera de cola**. Los cinco pares nombrados arriba **son su deuda de P.5**.
+
+**Los diez actos mas grandes con deuda de P.5, para que el tamano del trabajo se vea:**
+
+| tamano | acto | leidos de posibles | fuera de cola |
+|---:|---|---:|---:|
+| 15 | `cultura_de_seguridad_interpretivista_funcionalista` | 30 de 105 | 75 |
+| 13 | `decision_factory_mentality` | 20 de 78 | 58 |
+| 10 | `causas_comunes_vs_especiales` | 14 de 45 | 31 |
+| 9 | `customer_development_modelo` | 16 de 36 | 20 |
+| 8 | `build_measure_learn` | 9 de 28 | 19 |
+| 7 | `customer_validation` | 15 de 21 | 6 |
+| 7 | `brainstorming_divergente` | 8 de 21 | 13 |
+| 6 | `customer_validation_sales_roadmap` | 10 de 15 | 5 |
+| 6 | `clasificacion_mercados_cadena_suministro` | 7 de 15 | 8 |
+| 6 | `cierre_segun_complejidad_venta` | 9 de 15 | 6 |
+
+### 6. Los ejemplares de las veinte figuras: medido el TAMANO, no cerrado
+
+**Es el bloque grande y sigue abierto.** Lo que esta vuelta aporta no es su contenido: es **su forma
+exacta**, para que deje de ser "veinte figuras pendientes" y pase a ser una nomina.
+
+**Criterio del instrumento, escrito para que se pueda discutir:** una figura NOMBRA sus ejemplares si su
+propio campo `nota` trae al menos un id de nodo, un puesto citado o un id de lectura dirigida.
+
+| | cuantas |
+|---|---:|
+| figuras que **NOMBRAN** al menos un ejemplar en su nota | **7** |
+| figuras que **NO NOMBRAN** ninguno | **13** |
+| **total** | **20** |
+
+**EL REPARTO NO ES ALEATORIO Y ESO ES EL HALLAZGO: parte casi exacto por fecha de corte.** Las **doce
+del 11 ago 2026 NO nombran ninguno**; de las **ocho del 12 ago 2026, SIETE nombran y UNA no** (`cobrar
+una A sin fundir`). **Las doce viejas se escribieron como doctrina de una linea y las nuevas como ficha
+con casos, y por eso el `grep` de la vuelta 15 daba cero en doce de veinte: no es que los ejemplares no
+existan, es que no estan en la entrada.**
+
+**LAS TRECE SIN NOMBRAR, con lo que cada una declara:** `SUBCONJUNTO ESTRICTO` (23 ejemplares),
+`LA VARA EN LOS DOS SENTIDOS (9.22)` (3 de un polo y 2 del otro), `ESTRELLA (9.23)` (9),
+`TRIANGULO ABIERTO` (2), `EL ESQUELETO COMPARTIDO` (3), `LAS DOS ADUANAS` (5), `LA BIFURCACION` (2),
+`LOS DOS PARES QUE NO SE CRUZAN` (1), `LA FIRMA POSICIONAL DEL INJERTO (P.2)` (67 candidatos, 43
+confirmados), `LA A DE BLOQUE (P.4)` (1 ejemplar y 1 contraejemplo),
+`LA COLA DEL DOMINIO SE AGOTA POR DENTRO (9.27)` (3 dominios), `EL PASO DE OFICIO` (medio dominio
+`exportacion`, sin cifra) y `cobrar una A sin fundir` (1).
+
+**CUANTOS EJEMPLARES SIN NOMBRAR SON, con las DOS cuentas y sus dos definiciones, porque la ingenua
+enganaria:**
+
+| cuenta | definicion | resultado |
+|---|---|---:|
+| **ingenua** | primer numero que aparezca en el campo `cobertura` de cada una de las 13 | **119** |
+| **corregida** | igual, pero `LA VARA` cuenta 5 (3 mas 2, que si son ejemplares) y `LA FIRMA` cuenta 43 (los confirmados) y no 67 (los candidatos, que no son ejemplares) | **98** |
+
+> **LA INGENUA NO SE PUBLICA COMO SI FUERA LA BUENA, y se dice por que: en dos de las trece el primer
+> numero del campo `cobertura` NO es un conteo de ejemplares.** En `LA VARA EN LOS DOS SENTIDOS` el
+> primer numero es **2 polos**, y en `LA FIRMA POSICIONAL DEL INJERTO` es **67 nodos candidatos**.
+> **Las dos cuentas se dejan escritas con su definicion al lado en vez de elegir una**, porque la
+> diferencia entre 119 y 98 es entera de definicion y no de medicion. **`EL PASO DE OFICIO` no aporta a
+> ninguna de las dos: su cobertura no trae numero.**
+
+**LO QUE ESTO NO ES: no es la medicion que la FASE II espera.** La FASE II pide **los ejemplares**, no
+**cuantos faltan por nombrar**. **Lo que cierra el bloque sigue siendo trabajo de lectura**, figura por
+figura, y sigue **PENDIENTE DE MEDICION** exactamente como lo dejo la adjudicacion 6.5 de la vuelta 15.
+**Lo unico que cambia es que ahora se sabe cuanto es y donde esta: trece entradas, y entre 98 y 119
+ejemplares segun como se cuenten los dos casos de definicion.**
