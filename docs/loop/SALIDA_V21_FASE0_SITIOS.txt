@@ -1,0 +1,150 @@
+﻿
+==================================================================================================
+1. LAS CINCO OPERACIONES DE LA FASE 0, con su estado y sus dependencias
+==================================================================================================
+  operaciones de fase 00_CODIGO: 5
+
+  OP-C-01  orden 1  tipo CAMPO_SUCIO  estado LISTA  corte 2026-08-11
+     depende_de: nada
+     bloquea_a:  ['OP-S-01', 'OP-S-09', 'OP-F-01']
+     criterios de verificacion escritos: 5
+        - aMaterial: construir una ruta que contenga un id DEPRECADO con alias vivo y pedir el plan. La prueba se cae hoy y pasa tras el arreglo. Si manana algu
+        - organizer: inyectar en entry_seeds.json de prueba un seed deprecado y comprobar que NO llega a la respuesta. Hoy llega
+        - compass: inyectar en el indice de prueba un id que ya no es nodo y comprobar que NO se ofrece. Hoy SI se ofrece, porque la condicion entera es falsa y
+        - la suite entera verde tras el arreglo
+        - ninguna prueba nueva pasa verde ANTES del arreglo: si pasa, no prueba nada
+
+  OP-C-02  orden 2  tipo CAMPO_SUCIO  estado LISTA  corte 2026-08-11
+     depende_de: nada
+     bloquea_a:  ['OP-S-01', 'OP-S-09', 'OP-F-01']
+     criterios de verificacion escritos: 4
+        - 267: una sesion cuya ruta contiene un id historico con alias vivo tiene que producir un plan con TODOS sus conceptos. Hoy el concepto se cae de la lis
+        - 405: un proyecto cuyo ultimo nodo de ruta es historico tiene que terminar en SU fase, no en ideacion. Hoy degrada en silencio: la prueba fija la fase 
+        - la suite entera verde tras el arreglo
+        - ninguna prueba nueva pasa verde ANTES del arreglo: si pasa, no prueba nada
+
+  OP-C-03  orden 3  tipo CAMPO_SUCIO  estado LISTA  corte 2026-08-11
+     depende_de: nada
+     bloquea_a:  ['OP-S-01', 'OP-S-09', 'OP-F-01']
+     criterios de verificacion escritos: 5
+        - resumenNodo: pedirle el resumen de un id historico. Hoy rompe con TypeError; tras el arreglo devuelve el del superviviente
+        - recorrido: reanudar una sesion cuyo nodo actual es historico. Hoy rompe al pedir la pregunta
+        - start: arrancar un mundo cuya semilla fue renombrada. Hoy avisa y ABORTA cuando podria resolver y seguir
+        - la suite entera verde tras el arreglo
+        - ninguna prueba nueva pasa verde ANTES del arreglo: si pasa, no prueba nada
+
+  OP-C-04  orden 4  tipo CAMPO_SUCIO  estado LISTA  corte 2026-08-11
+     depende_de: nada
+     bloquea_a:  ['OP-S-01', 'OP-S-09', 'OP-F-01']
+     criterios de verificacion escritos: 4
+        - reinyectar el enlace de analisis_flujo_de_valor a value_stream_analysis_lean y comprobar que Gate 0 SE CAE. Una guarda literal pasaria verde
+        - anadir a un nodo de prueba una clave fase_proekto con letras cirilicas y comprobar que Gate 0 se cae
+        - la suite entera verde tras el arreglo
+        - ninguna prueba nueva pasa verde ANTES del arreglo: si pasa, no prueba nada
+
+  OP-C-05  orden 5  tipo GUARDA  estado LISTA  corte 2026-08-12
+     depende_de: ['OP-S-12']
+        OP-S-12 vive en la fase 05_SANEO, estado LISTA  <-- NO es de la fase 0
+     bloquea_a:  nada
+     criterios de verificacion escritos: 7
+        - CASO POSITIVO: en una copia se mete a mano un campo con [destino, alias_de_destino] y la guarda TIENE que fallar nombrando nodo, campo y destino. Si p
+        - caso negativo: el grafo saneado por OP-S-12 pasa en verde
+        - CASO DE BORDE: el mismo destino en nodos_previos y en nodos_siguientes NO debe fallar
+        - la guarda RESUELVE, no compara literal: las 1.056 entradas duplicadas son todas distintas como texto y una guarda literal daria verde sobre todas
+        - CASO POSITIVO DE LA LISTA BLANCA: se mete a mano una arista bidireccional que NO este en la lista y la guarda TIENE que fallar. Si pasa, la lista blan
+        - CASO NEGATIVO DE LA LISTA BLANCA: las cuatro aristas de OP-E-05 pasan en verde
+        - cada entrada de la lista blanca cita su lectura: una entrada sin su C del 9.22 detras no es una excepcion, es un agujero
+
+==================================================================================================
+2. LOS SITIOS DE LA NOTA, medidos contra el codigo de HOY
+==================================================================================================
+  Las notas se escribieron el 11 ago 2026 con archivo y numero de linea.
+  Aqui va la linea que hay HOY en ese numero. El instrumento no juzga:
+  pone la linea delante.
+
+  OP-C-01  web/lib/engine/planRedactor.ts:53   (aMaterial)
+      const n = graph[nid];
+
+  OP-C-01  web/lib/engine/planRedactor.ts:183   (llamada a aMaterial)
+      const materialPrincipal = ruta.map((nid) => aMaterial(nid, graph, families));
+
+  OP-C-01  web/lib/engine/planRedactor.ts:194   (llamada a aMaterial)
+      const materialDeApoyo = cosechaIds.map((nid) => aMaterial(nid, graph, families));
+
+  OP-C-01  web/app/api/organizer/route.ts:66   (entry seeds)
+      fase: graph[s].fase_proyecto,
+
+  OP-C-01  web/app/api/organizer/route.ts:67   (entry seeds)
+      titulo: graph[s].titulo_concepto,
+
+  OP-C-01  web/app/api/organizer/route.ts:68   (entry seeds)
+      resumen: graph[s].resumen_teorico.slice(0, 150),
+
+  OP-C-01  web/app/api/organizer/stream/route.ts:87   (entry seeds)
+      fase: graph[s].fase_proyecto,
+
+  OP-C-01  web/app/api/organizer/stream/route.ts:88   (entry seeds)
+      titulo: graph[s].titulo_concepto,
+
+  OP-C-01  web/app/api/organizer/stream/route.ts:89   (entry seeds)
+      resumen: graph[s].resumen_teorico.slice(0, 150),
+
+  OP-C-01  web/lib/compass.ts:153   (el hueco al reves: un id desconocido PASA)
+      if (opts.graph && opts.graph[id] && !esOfrecible(id, opts.graph, dominios)) continue;
+
+  OP-C-01  web/lib/engine/interprete.ts:331   (hereda de compass)
+      titulo: graph[id].titulo_concepto,
+
+  OP-C-01  web/lib/engine/interprete.ts:332   (hereda de compass)
+      fase_proyecto: graph[id].fase_proyecto,
+
+  OP-C-01  web/lib/engine/interprete.ts:333   (hereda de compass)
+      condiciones_activacion: (graph[id].condiciones_activacion ?? []).slice(0, 2),
+
+  OP-C-02  web/app/api/session/[id]/plan/route.ts:267   (filtra con nid in graph)
+      .map((nid) => graph[nid].titulo_concepto);
+
+  OP-C-02  web/app/api/session/[id]/plan/route.ts:405   (cae al ?? ideacion)
+      const faseFinal = graph[recorrido.ruta[recorrido.ruta.length - 1]]?.fase_proyecto ?? "ideacion";
+
+  OP-C-03  web/lib/engine/graph.ts:244   (resumenNodo)
+      const n = graph[nid];
+
+  OP-C-03  web/lib/engine/recorrido.ts:271   (antes de obtenerPregunta)
+      const plano = obtenerPregunta(nid, graph[nid], preguntasCache);
+
+  OP-C-03  web/lib/engine/recorrido.ts:649   (antes de obtenerPregunta)
+      const pregunta = resultado.preguntaAdaptada || obtenerPregunta(nuevoActualId, graph[nuevoActualId], preguntasCache);
+
+  OP-C-03  web/lib/engine/clasificar.ts:34   (seeds sin puerta unica)
+      fase: graph[s].fase_proyecto,
+
+  OP-C-03  web/lib/engine/clasificar.ts:35   (seeds sin puerta unica)
+      titulo: graph[s].titulo_concepto,
+
+  OP-C-03  web/lib/engine/clasificar.ts:36   (seeds sin puerta unica)
+      resumen: graph[s].resumen_teorico.slice(0, 200),
+
+  OP-C-03  web/app/api/project/[id]/world/[pack]/start/route.ts:149   (la guarda que existe, con console.warn)
+      if (!(brecha.semillaId in graph)) {
+
+  OP-C-03  web/app/api/project/[id]/world/[pack]/start/route.ts:255   (el acceso guardado por la 149)
+      const pregunta = obtenerPregunta(brecha.semillaId, graph[brecha.semillaId], preguntasCache);
+
+  OP-C-03  web/lib/engine/graph.ts:131   (resolverId, la puerta unica)
+      export function resolverId(nid: string, graph: Grafo): string | null {
+      [ya menciona el resolutor]
+
+==================================================================================================
+3. EL RESOLUTOR, la puerta unica: donde esta y quien lo llama
+==================================================================================================
+  web/lib/engine/graph.ts:131  export function resolverId(nid: string, graph: Grafo): string | null {
+  llamadas a resolverId( en web/**/*.ts (sin node_modules): 11
+
+==================================================================================================
+4. SALDO
+==================================================================================================
+  sitios transcritos de las notas: 24
+  sitios que hoy no se pueden leer (archivo o linea ausente): 0
+  NINGUNA operacion se ejecuta en esta vuelta: la TAREA 2 quedo en PARADA
+  por la linea base del Gate 0. Esto es medicion, no ejecucion.
