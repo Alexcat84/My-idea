@@ -1,0 +1,27 @@
+﻿OP-F-01, campo nodos: 6 miembros
+  - seleccion_representante_extranjero
+  - internacionalizacion_sitio_web_exportacion
+  - elaboracion_pro_forma_invoice
+  - elementos_plan_exportacion_ejemplo
+  - principios_medicion_efectiva
+  - fmea_analisis_de_modos_de_falla
+
+VERIFICACION 1 y 2, medidas contra el grafo de hoy:
+nodo                                            pasos  publicado   vivo
+seleccion_representante_extranjero                  9          9   True
+internacionalizacion_sitio_web_exportacion          9          9   True
+elaboracion_pro_forma_invoice                       8          8   True
+elementos_plan_exportacion_ejemplo                 13         13   True
+principios_medicion_efectiva                       10         10   True
+fmea_analisis_de_modos_de_falla                     8          8   True
+
+CRUCE: cada uno de los seis, en que otras operaciones aparece
+  seleccion_representante_extranjero             en ninguna otra
+  internacionalizacion_sitio_web_exportacion     en ninguna otra
+  elaboracion_pro_forma_invoice                  en ninguna otra
+  elementos_plan_exportacion_ejemplo             en ninguna otra
+  principios_medicion_efectiva                   en ninguna otra
+  fmea_analisis_de_modos_de_falla                en ninguna otra
+
+BARRIDO: background_startup_vs_corporativo en que operaciones esta
+  ['OP-F-04-HOR']

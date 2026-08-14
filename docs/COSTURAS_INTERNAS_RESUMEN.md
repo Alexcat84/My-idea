@@ -371,6 +371,17 @@ la copia* sino **decidir donde vive el original**.
 > seccion 7, punto 1. Lo que NO cambia es la decision: siguen siendo TRES decisiones
 > de fuente y no una lista de arreglos sueltos.**
 
+> **CORRECCION DECLARADA ADITIVA, 14 ago 2026 (vuelta 26), al ejecutar `OP-F-01` en la
+> pasada unica, y la de arriba se queda entera: son ~~31~~ TREINTA.** La clase LARGO
+> LEGITIMO paso de SIETE a SEIS miembros por decision del fundador del 14 ago 2026 y la
+> regla `P.17` del banco del plan (*la lectura vence al metadato*):
+> `background_startup_vs_corporativo` estaba clasificado dos veces, aqui como formato
+> lista por su metadato de fuente y en `OP-F-04-HOR` como injerto de Horowitz **leido y
+> confirmado contra sus pasos con frontera escrita (1 a 4 de Wasserman, 5 a 9 de
+> Horowitz)**, y gana la lectura. **6 mas 3 mas 21 = 30**, contado hoy sobre el campo
+> `nodos` de las tres operaciones con `scripts/loop/vuelta26_medir.py`. **La fila de la
+> tabla de abajo que dice *4 de los 7 LARGO LEGITIMO* se lee hoy como 4 de los 6.**
+
 **Tres decisiones de fuente en la pasada unica, en vez de dieciocho arreglos de
 nodo. Es la misma economia de la mesa de racimos.**
 
@@ -405,6 +416,16 @@ nodo. Es la misma economia de la mesa de racimos.**
    > LARGO LEGITIMO, los del *Basic Guide*, y dejaba fuera **tres** que estan en la
    > misma clase: dos de *Juran's Quality Handbook* y uno de `core`. **Con la clase
    > entera, el alcance de las tres decisiones es de 7 mas 3 mas 21 = 31 nodos**, no 18.
+   >
+   > **CORRECCION DECLARADA ADITIVA, 14 ago 2026 (vuelta 26), al ejecutar `OP-F-01`, y el
+   > parrafo de arriba se queda entero: hoy son 6 mas 3 mas 21 = ~~31~~ 30 nodos.** El
+   > uno de `core` que la correccion del 12 ago sumaba a la clase,
+   > `background_startup_vs_corporativo`, **salio de ella el 14 ago 2026** por decision
+   > del fundador y la regla `P.17` (*la lectura vence al metadato*): el mismo nodo estaba
+   > LEIDO Y CONFIRMADO como injerto de Horowitz en `OP-F-04-HOR`, con su frontera de paso
+   > publicada, y la pertenencia leida vence a la argumentada por metadato de fuente.
+   > **El nodo no se pierde: se desteje por `OP-F-04-HOR`.** Medido hoy con
+   > `scripts/loop/vuelta26_medir.py` sobre el campo `nodos` de las tres operaciones.
    >
    > **Y EL SALTO GRANDE NO ES ESE:** la nomina de Hugos, publicada como **11 de las 46
    > confirmadas**, se midio en **21 nodos vivos que declaran Hugos junto a otra

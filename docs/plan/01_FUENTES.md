@@ -13,7 +13,7 @@ depende que atribucion carga el superviviente de cualquier fusion posterior.
 
 | operacion | la adjudicacion, en una linea |
 |---|---|
-| **`OP-F-01`** | **MANDA LA CLASE**, sus SIETE miembros, no la cuenta de 18, que se recomputa con su corte |
+| **`OP-F-01`** | **MANDA LA CLASE**, sus ~~SIETE~~ **SEIS** miembros (correccion declarada del 14 ago 2026, ver abajo), no la cuenta de 18, que se recomputa con su corte |
 | **`OP-F-02`** | el injerto **se desteje** y el bloque de IA **se REUNE** en un solo destino: el racimo de supervision de la IA, diez miembros |
 | **`OP-F-03`** | nomina medida: **VEINTIUN nodos** que declaran Hugos junto a otra fuente. La tarea es verificar en cada uno si el contenido pegado es de cadena de suministro |
 
@@ -62,6 +62,25 @@ FUENTE PRIMERO*.
 > son costuras confirmadas con pegado de Hugos; **21** son todos los nodos vivos
 > con la firma del injerto, o sea los que declaran Hugos **en segundo lugar**
 > junto a otro libro. **El plan usa la de 21, por adjudicacion.**
+
+> **CORRECCION DECLARADA, 14 ago 2026 (vuelta 26), AL EJECUTAR `OP-F-01`: LA FILA DE LOS
+> FORMATOS LISTA ES DE SEIS Y EL TOTAL DE TREINTA. La tabla de arriba se queda entera.**
+> Es la tercera linea de verificacion de `OP-F-01` (*la cifra de 18 se reescribe con su
+> corte alli donde este publicada*) aplicada a la sede de este archivo, despues de que
+> la decision del fundador del 14 ago 2026 sacara a `background_startup_vs_corporativo`
+> de la clase por `P.17`.
+>
+> | decision de fuente | publicado | adjudicado el 11 ago | **medido hoy, 14 ago 2026** |
+> |---|---:|---:|---:|
+> | los **formatos lista** | 4 | ~~7~~ | **6** |
+> | la **tanda de Mollick** | 3 | 3 | **3** |
+> | el **pegado de Hugos** | 11 | 21 | **21** |
+> | **total** | **18** | ~~**31**~~ | **30** |
+>
+> **La cifra sale del campo `nodos` de las tres operaciones en `OPERACIONES.jsonl`, contado
+> hoy con `scripts/loop/vuelta26_medir.py`: 6 mas 3 mas 21, treinta ids distintos y cero
+> solape entre las tres.** **Lo que NO cambia es la adjudicacion: sigue mandando la clase y
+> no la cuenta**, y la cuenta de 18 sigue sin gobernar el alcance.
 
 ---
 
@@ -306,6 +325,18 @@ destejidos y las fusiones que dependen de ellos.**
 > **La aritmetica de las decisiones de fuente pasa de TRES a SIETE, y su alcance
 > de 31 nodos a 74.** No es que hayan aparecido injertos nuevos: **es que la firma
 > posicional los hizo contables.**
+
+> **CORRECCION DECLARADA, 14 ago 2026 (vuelta 26), y la frase de arriba se queda entera:
+> EL ALCANCE MEDIDO HOY ES DE 30 A 73, no de 31 a 74.** La unica pieza que se movio es la
+> misma de siempre: `background_startup_vs_corporativo` salio de `OP-F-01` por `P.17`, y
+> como ese nodo YA estaba dentro de `OP-F-04-HOR`, **la cuenta de las siete baja en uno,
+> no en dos**. Contado hoy sobre el campo `nodos` de las siete operaciones de fuente con
+> `scripts/loop/vuelta26_medir.py`: **73 ids distintos**, de los cuales **30** en las tres
+> primeras y **43** en las cuatro de la tanda, **cero solape entre los dos grupos**.
+> **Los 43 de la tanda salen de 15 mas 13 mas 13 mas 4 igual a 45 declaraciones menos los
+> dos nodos que estan en dos grupos** (`metas_vs_proposito` en COL y HOR,
+> `viral_loop_marketing` en COL y WEI). **La leccion no se toca: la firma posicional es lo
+> que los hizo contables.**
 
 > **Y hay una asimetria util con Hugos: alli el material pegado era de OTRO TEMA
 > (cadena de suministro dentro de nodos de producto y de finanzas). Aqui, en los
