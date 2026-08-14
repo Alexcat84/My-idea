@@ -77,6 +77,18 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
   no una improvisacion. Al terminar todo: reporte final y PARA_ALEXIS.md de
   campaña consumada PIDIENDO el merge de pasada-unica. EL BUCLE NO FUNDE RAMAS.
 
+  MODO DE EJECUCION CONTINUA (decision del fundador, 13 ago 2026): en la
+  fase III el auditor verifica COMPLETO solo en dos puntos: al abrirla
+  (recomputo verificado y fase 0 en verde) y al cerrarla (auditoria
+  integral antes del merge). Entre esos dos puntos el ejecutor corre
+  fases seguidas sin esperar acta, con estas guardas obligatorias por
+  operacion: simulacion previa sobre copia en memoria, Gate 0 y suites en
+  verde tras cada fase, caso positivo de cada operacion, y cero
+  duplicadas o auto-aristas tras resolver. CUALQUIER guarda en rojo, o
+  cualquier operacion cuyo texto no alcance para ejecutarse sin decidir,
+  detiene al ejecutor y convoca al auditor en la vuelta siguiente: ahi la
+  verificacion vuelve a ser completa hasta que la guarda quede verde.
+
 ## 4. Condiciones de PARADA (escribes docs/loop/PARA_ALEXIS.md y vacias
 ##    PROMPT_SIGUIENTE.md; el bucle se detiene)
 - Doctrina NUEVA necesaria (ninguna regla escrita cubre el caso ni por
