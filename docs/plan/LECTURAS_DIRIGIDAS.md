@@ -30,7 +30,7 @@ marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador.**
 | **junta asesora** | 4 | 6 | 5 | **1** |
 | **seleccion de canal** | 5 | 10 | 8 | **2** |
 | ecuacion de valor | 5 | 10 | 5 | 5 |
-| sales roadmap | 6 | 15 | 10 | 5 |
+| sales roadmap | 6 | 15 | ~~10~~ **15, desde el 14 ago 2026** | ~~5~~ **0**, ver [`LD_SALES_ROADMAP.md`](LD_SALES_ROADMAP.md) |
 | cuadrantes de mercado | 6 | 15 | 7 | 8 |
 | build, measure, learn | 8 | 28 | 9 | **19** |
 | customer discovery | 9 | 36 | 16 | **20** |
@@ -481,7 +481,7 @@ comparativa**.
 |---|---:|---|
 | **esperan destejido o cirugia** | **126** | **regla de orden**: leer antes es leer un texto que va a cambiar |
 | **resto sin mesa ni nomina** | **55** | **la evidencia de la adjudicacion**: 9 de 11 sanos en la primera tanda y **ninguno cambio nada**. Son componentes de 3 a 6 sin mesa asociada |
-| **sales roadmap** | **5** | **su clase ya esta decidida**: MEZCLADO desde el 872. Leerlos cierra cobertura, no cambia forma |
+| ~~**sales roadmap**~~ **LEIDOS, 14 ago 2026** | ~~**5**~~ **0** | ~~su clase ya esta decidida: MEZCLADO desde el 872. Leerlos cierra cobertura, no cambia forma~~ **SE LEYERON como `LD-66` a `LD-70` en [`LD_SALES_ROADMAP.md`](LD_SALES_ROADMAP.md), por la adjudicacion del pendiente de doctrina 4 de la vuelta 17: la clase del racimo no era la unica pregunta, la otra era la de P.5.** Saldo **1 A y 4 D**. **El motivo tachado acerto en lo suyo y erro en lo otro: la clase NO se movio, sigue MEZCLADO, y la FORMA si** |
 | **junta asesora y seleccion de canal** | 3 | **ya leidas** en la primera tanda |
 
 > **LOS 55 DEL RESTO SON EL GRUPO QUE MAS PODRIA DOLER, y por eso se cuenta en vez
