@@ -4575,3 +4575,236 @@ tal como esta escrito.
 - Campana consumada: **no.** La FASE II cierra y la FASE III abre; la campana sigue.
 
 **`docs/loop/PROMPT_SIGUIENTE.md` escrito. `pasada-unica` creada y empujada. El bucle sigue.**
+
+## VUELTA 21, 14 ago 2026. Auditor: Fable 5. Reporte auditado: la vuelta 21 del ejecutor (Opus 5), FASE III primera vuelta: la TAREA 1 entera y la FASE 0 parada en su linea base. ESTA ACTA DETIENE EL BUCLE: doctrina nueva necesaria sobre OP-C-04
+
+### 0. El contexto de esta acta
+
+El encargo 21 tenia dos tareas: los cinco registros del acta de la vuelta 20, y la FASE 0 DE
+CODIGO entera. El ejecutor entrego la TAREA 1 completa y PARO la TAREA 2 en su primer paso,
+porque el Gate 0 corrido tal cual movio `dataset/metadata/master_graph.json`, que es la condicion
+de parada que el propio encargo escribio. No ejecuto ninguna operacion, restauro `dataset/` a
+HEAD, guardo el diff como prueba, midio los 24 sitios de la fase 0 sin tocar nada, y trajo cinco
+preguntas y un pendiente de doctrina. Esta acta verifica todo con instrumento propio
+(`scripts/loop/acta21_auditor_medir.py`, salida en `docs/loop/SALIDA_ACTA21_AUDITOR.txt`, todo
+corrido hoy), adjudica los nueve discutibles y cuatro de las cinco preguntas, RESUELVE la parada
+de la curaduria por la regla escrita del propio instrumento, y encuentra debajo de la pregunta 4
+una contradiccion de plan MEDIDA que ninguna regla escrita cubre. El bucle se detiene con
+`docs/loop/PARA_ALEXIS.md` escrito y `PROMPT_SIGUIENTE.md` vacio.
+
+### 1. VERIFICACION: el instrumento mando en todo, y la tanda sale LIMPIA
+
+**Hashes verificados:** `8fe604ef` (registros), `d59a02d1` (sitios), `9d0e1658` (reporte, que
+ademas relleva el instrumento corregido del error declarado del cp1252 y su salida; la lista de
+rutas del reporte lo dice). Arbol limpio y sincronizado con `origin/pasada-unica` al abrir. Lo
+reservado, por diff contra `cbc6ce51`: `dataset/`, veredictos y componentes INTACTOS.
+
+**El marcador, recomputado con instrumento propio:** n 3.388; A 583 (17,2), B 89 (2,6), C 7
+(0,2), D 2.709 (80,0); puestos 1 a 3.388, cero huecos y cero duplicados; la tabla por dominio
+calza celda por celda. Grafo 3.835 nodos, 3.521 vivos, 314 deprecado. Operaciones 71, TODAS en
+estado LISTA (cero ejecutadas). Componentes 335, inventario 671.
+
+**Los cinco registros, remedidos uno a uno:**
+- Registro 1: los tres blobs de `master_graph.json` (`0e5e0c60`, `23f9ac32`, HEAD) son
+  `bb423c06` los tres, leidos por mi con `git ls-tree`; 34 pasos en HEAD y 34 en el blob del 11
+  ago; `viral_loop_marketing` 30 y `coeficiente_viral` 16. La celda de la fila 7 es aditiva: la
+  celda vieja queda entera como prefijo de la nueva.
+- Registro 2: Horowitz en segunda o posterior posicion da 14 con MI matcher (codigo distinto);
+  el campo `nodos` de `OP-F-04-HOR` tiene 13; la diferencia es exactamente
+  `principio_calidad_mvp` y ninguno de los 13 falta en el grafo. Su cobertura de plan, barridas
+  las 71 operaciones por el campo `nodos`: TRES sedes (`OP-F-03`, `OP-D-01`, `OP-D-06`), como el
+  reporte declara, con la tercera fuera del acta 20 y dicha al lado.
+- Registro 3: `nota` de `OP-F-04-HOR` de 104 a 831 caracteres, el valor viejo es prefijo del
+  nuevo, `nodos` intacto con sus 13. `metas_vs_proposito` con Horowitz en posicion 2 de 3, el
+  ultimo es Never Lose a Customer Again, y es el UNICO de los 13 en ese caso: remedido.
+- Registro 4: `nota` de `OP-S-11` de 1.269 a 2.128, aditiva, `nodos` vacio intacto. Los nodos
+  con el mismo libro dos veces con dos grafias, con criterio propio (titulo separado del autor,
+  prefijo): CUATRO y ninguno mas, los mismos cuatro.
+- Registro 5: dos parrafos al final de la seccion TAREA (vuelta 20) de `RECOMPUTO_3388.md`,
+  cero lineas viejas desaparecidas.
+
+**La linea base, reproducida por mi con mis propios comandos:** `python scripts/run_phase1.py` a
+secas sale hoy con EXITCODE 2, el validador imprime `GATE 0: OK` (linea 61, la misma del archivo
+del ejecutor), y el unico movimiento es `master_graph.json` con 72 cambios: 71 pares de
+`etiqueta_arbol` (142 lineas de diff) y el salto de linea final. La suite del web, corrida por
+mi: 79 archivos, 1.003 en verde y 3 saltados. `dataset/` restaurado a HEAD al cerrar cada
+medicion; el arbol queda limpio.
+
+**Los 24 sitios de la fase 0, releidos por mi linea a linea:** los 24 estan exactamente donde
+las notas de `OP-C-01`, `OP-C-02` y `OP-C-03` los ponen (interprete es
+`web/lib/engine/interprete.ts`, la ruta completa que la nota abrevia). El resolutor esta en
+`graph.ts:131` y las llamadas a `resolverId(` en `web/**/*.ts` sin node_modules son 11 con el
+criterio del instrumento del ejecutor, reproducido: 12 lineas menos la definicion.
+
+**Dos notas de convencion, con criterio bajo el cual son ciertas y SIN caida** (el trato del
+rotulo ambiguo del acta 20): los conteos de lineas del reporte (419/431 y 1.625/1.638) usan
+`split` por salto de linea, que cuenta una mas que `splitlines` en archivo terminado en salto;
+los deltas (12 y 13) son identicos bajo las dos convenciones. Y el "prefijo exacto" de la fila 7
+es de la CELDA, no de la linea entera (la adicion va antes del cierre de la celda): el contenido
+viejo queda entero, que es lo que la regla protege.
+
+**CERO caidas en esta tanda: ni de clase, ni de cifra, ni de reporte.** Toda cifra y todo nombre
+propio del reporte que toque un dato salio identico en mi instrumento.
+
+### 2. RELECTURA: declarada, no aplicable a pares
+
+Esta tanda no leyo un solo par (el cribado sigue CERRADO en 3.388 y los veredictos no se
+abrieron), asi que no hay relectura ciega de clases que hacer. Lo releido con ojos propios fue
+la evidencia de los discutibles: los 24 sitios linea a linea, el ciclo entero del Gate 0 corrido
+dos veces, y los cinco registros campo por campo.
+
+### 3. LOS NUEVE DISCUTIBLES, adjudicados uno por uno: nueve de nueve CORRECTOS
+
+1. **Parar la TAREA 2 entera y no partir la fase: CORRECTO.** El encargo dice PARAS sin
+   repartir, y la seccion 3 de AUDITOR.md manda que cualquier guarda en rojo detiene AL
+   EJECUTOR, no a la operacion. Y la medicion de esta acta (seccion 5) lo vuelve ademas
+   afortunado: la fase 0 esconde una contradiccion que habia que traer al auditor entera.
+2. **Restaurar `dataset/` con `git checkout`: CORRECTO.** El estado descartado era generado por
+   maquina y reproducible: lo reproduje hoy identico (72 cambios, 71 etiquetas). Nada
+   irreversible se perdio y la prueba quedo commiteada.
+3. **Medir los 24 sitios sin encargo: CORRECTO.** Iniciativa de solo lectura declarada, la
+   especie ya adjudicada en la vuelta 17 (punto 9) y en la 20 (discutible 2). Esta acta se apoyo
+   en ese mapa y lo verifico entero.
+4. **Ensanchar el registro 2 con `OP-D-06`: CORRECTO.** La regla del instrumento manda publicar
+   lo medido hoy; callar la tercera sede era publicar media cifra. La diferencia quedo declarada
+   al lado sin tocar el acta, que es exactamente el trato escrito.
+5. **Correr la suite tras la parada: CORRECTO.** Es la otra mitad del paso A, es solo lectura, y
+   sin ella la apertura no tendria su mitad verde medida.
+6. **El rotulo (vuelta 21): CORRECTO y sin colision.** Las actas del auditor se titulan por la
+   vuelta del reporte que auditan: esta acta es la VUELTA 21 y no choca con el rotulo del
+   ejecutor; el acta de cierre de la FASE II se cita como acta de la vuelta 20, igual que el
+   ejecutor hace.
+7. **El registro 1 dentro de la celda: CORRECTO.** Siguio la letra del encargo; el coste es
+   estetico y la aditividad quedo verificable campo a campo.
+8. **Reproducir la medicion de blobs con git: CORRECTO.** La regla del instrumento cubre toda
+   cifra que se publique, sin excepcion para las adjudicadas; salio identica y se cita como
+   adjudicacion, no se reabre.
+9. **Commitear el diff de `dataset/` en `docs/loop/`: CORRECTO.** Una parada sin prueba es una
+   afirmacion; `docs/loop/` ya es la sede de las salidas y el texto del grafo ahi es copia de
+   solo lectura, no una segunda fuente.
+
+### 4. LAS PREGUNTAS: cuatro adjudicadas con medicion y regla escrita
+
+1. **Que es "Gate 0 en verde": EL ORQUESTADOR EN CERO, POR LA VIA QUE EL PROPIO INSTRUMENTO
+   ESCRIBE, y esta MEDIDO.** El aviso de curaduria es parte del Gate por diseño (comentario
+   fechado 2026-08-07, `run_phase1.py` lineas 941 a 958; el canon de fallar ruidoso, BANCO linea
+   570), y el mismo archivo escribe el remedio y el modo: el flag `--reaplico-curaduria` es
+   "quien llama reaplica las etiquetas justo despues". Corrido hoy por mi:
+   `python scripts/run_phase1.py --reaplico-curaduria` sale con EXITCODE 0 y `GATE 0: OK`, y
+   `python scripts/etiquetas_de_cara.py --aplicar` acto seguido devuelve `master_graph.json`
+   BYTE-IDENTICO a HEAD: `git hash-object` da `bb423c06`, el blob de HEAD, salto de linea
+   incluido. El ciclo escrito cierra exacto y en verde. La invocacion a secas sale 2 SIEMPRE que
+   haya curaduria viva: eso no es un rojo que clasificar, es la alarma funcionando.
+2. **Quien reaplica la curaduria en la pasada: QUIEN RECOMPILA, con el comando escrito.** Esta
+   en `run_phase1.py` linea 955: "Quien recompila, reaplica". El ejecutor que corra el Gate 0
+   reaplica acto seguido; si al reaplicar el conteo de etiquetas aplicadas encoge (un nodo
+   curado que una operacion depreco o renombro), se declara en el reporte en vez de callarse.
+3. **`dataset/` en la FASE III: SE MUEVE SOLO POR LO QUE UNA OPERACION ORDENA.** La seccion 3 de
+   AUDITOR.md manda ejecutar cada operacion tal como esta escrita, y las operaciones de las
+   fases 01 a 07 escriben el grafo porque su texto lo ordena: eso no es abrir una puerta, es
+   ejecutar el plan. Todo movimiento que ninguna operacion ordena sigue reservado (seccion 4:
+   decision de fundador), y el ciclo del Gate 0 que termina byte-identico no es un movimiento.
+   En la fase 0 ninguna operacion ordena tocar el grafo: `dataset/` debe terminar cada vuelta
+   identico a HEAD.
+4. **La sede del caso positivo de `OP-C-04`: EL ARBOL TEMPORAL, y la pregunta grande estaba
+   debajo.** La mitad de sede se adjudica por extension citada: la reinyeccion va sobre el arbol
+   de trabajo, nunca commiteada, restaurada a HEAD acto seguido con la salida guardada como
+   prueba (la especie de la simulacion sobre copia del modo continuo, y el trato que el encargo
+   dio a la linea base y el ejecutor ejecuto). PERO al medir el caso positivo contra el grafo de
+   hoy aparecio lo que la pregunta tapaba, y va en la seccion 5.
+5. **`OP-C-05`: SE QUEDA EN LA FASE 0, DIFERIDA POR SU DEPENDENCIA ESCRITA.** Su `depende_de`
+   dice `OP-S-12` y su `bloquea_a` esta VACIO: los dos campos estan escritos en el plan. La
+   operacion pertenece al catalogo de la fase 0 y se ejecuta cuando su dependencia lo permita,
+   despues del saneo final, exactamente como su nota manda. La fase 0 cierra con ella DIFERIDA Y
+   DECLARADA, sin encenderla, sin ejecutarla y sin moverla de fase. No bloquea nada: su
+   diferimiento no retrasa una sola operacion.
+
+**El pendiente de doctrina del reporte (rojo de nacimiento contra rojo por regresion en el Gate
+0): ADJUDICADO SIN DOCTRINA NUEVA, con el marco corregido.** Para la curaduria la distincion no
+hace falta: el exit 2 es la alarma del instrumento con su remedio escrito en el mismo archivo, y
+su verde existe y quedo medido (punto 1). Donde la distincion SI haria falta es en la guarda
+nueva de `OP-C-04`, y ahi NO hay regla que la escriba: seccion 5.
+
+### 5. LA MEDICION QUE DETIENE EL BUCLE: OP-C-04 contra el grafo de hoy
+
+**Medido hoy con instrumento propio, reimplementando la resolucion del motor (`ids_alias`, el
+mapa de `graph.ts`):**
+
+- **Auto-aristas tras resolver, en vivos: 33 aristas sobre 27 nodos, cero directas, y el peor es
+  `costo_de_mala_calidad_copq` con 7.** Son EXACTAMENTE las cifras que la nota de `OP-S-07`
+  publica (33, veintisiete, siete, ninguna directa): mi instrumento las reproduce numero por
+  numero. Su reparacion es `OP-S-07`, fase 05_SANEO, no ejecutada.
+- **El enlace del caso positivo (`analisis_flujo_de_valor` a `value_stream_analysis_lean`) SIGUE
+  PUESTO hoy** y ese id es alias del propio nodo: no se puede "reinyectar" lo que no ha salido.
+  El caso positivo de `OP-C-04` esta escrito para un grafo post saneo.
+- **Las claves fuera de esquema, hoy:** `fase_проekto` (cirilica) en un nodo, `fase_project` en
+  otro, `fuentes_adicionales` en cuatro: las mismas que `OP-S-06` (fase 05) documenta y repara.
+  Y `merged_originals` en 269 nodos, cuya pertenencia a la lista blanca NADIE escribio.
+
+**La contradiccion, con los tres textos delante:** (a) `OP-C-04` vive en la fase 0 con
+`depende_de` vacio y `bloquea_a` sobre `OP-S-01`, `OP-S-09` y `OP-F-01`: el plan la quiere ANTES
+de todo lo que mueve un id, y su razon esta escrita (00_INDICE, fila 1: sin las guardas, una
+fusion mal hecha no da sintoma). (b) La seccion 3 de AUDITOR.md manda Gate 0 EN VERDE tras cada
+fase. (c) Medido hoy, la guarda de `OP-C-04` tumba el Gate con 33 mas 6 fallos de ESTADO
+CONOCIDO cuya reparacion (`OP-S-07`, `OP-S-06`) vive en la fase 05, DESPUES de las fusiones. Los
+tres textos no pueden ser verdad a la vez.
+
+**Y ninguna regla escrita lo cubre por extension citable.** La unica candidata es la nota de
+`OP-C-05` (la guarda con estado conocido se enciende tras su saneo), pero el plan DISTINGUIO a
+proposito: a `OP-C-05` le escribio el diferimiento (`depende_de`, nota, `bloquea_a` vacio) y a
+`OP-C-04` le escribio lo contrario (`depende_de` vacio, `bloquea_a` lleno). Extender el
+diferimiento a `OP-C-04` contradice su `bloquea_a` escrito y deja las fusiones sin la guarda que
+la fila 1 del indice exige; toda salida (adelantar `OP-S-07` y `OP-S-06` a la fase 0, una linea
+base declarada dentro de la guarda, o diferir la guarda) REESCRIBE el orden o la letra del plan.
+Eso es doctrina nueva, y la seccion 4 la reserva: PARADA. El caso completo, con los caminos y su
+coste, esta en `docs/loop/PARA_ALEXIS.md`.
+
+### 6. ERRORES PROPIOS DE ESTA VUELTA, declarados con nombre
+
+- **Mi primer criterio de doble grafia dio CERO donde hay cuatro:** comparaba el segmento entero
+  del campo `fuente` con el autor pegado, y ningun segmento entero es prefijo de otro. El
+  criterio bueno separa el titulo del autor. No se publico: quedo cazado en la misma corrida, y
+  el instrumento commiteado lleva el criterio bueno con el error declarado en comentario.
+- **Mi primera lectura de los sitios de `interprete.ts` fallo por ruta:** el barrido fue a
+  `lib/interprete.ts` cuando el archivo es `lib/engine/interprete.ts` (la nota de la operacion
+  abrevia la ruta). Releido en la ruta buena, los tres sitios calzan.
+- **Mi primer conteo de llamadas a `resolverId` dio 10 y luego 2:** una tuberia mal compuesta
+  (un conteo sobre lista de archivos y un filtro de tests que el criterio del ejecutor no usa).
+  El conteo bueno reproduce el criterio publicado: 12 lineas menos la definicion, 11.
+
+Los tres son de la misma leccion que el acta 20 dejo escrita: reproducir el criterio del
+instrumento ajeno antes de comparar cifras. Ninguno alcanzo una cifra publicada.
+
+### 7. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 20: 35 relecturas, 393 puestos (mas 23 nodos de forma), 7 caidas de
+clase, mas 4 caidas de reporte del ejecutor, mas 4 caidas de cifra publicada del ejecutor, mas 2
+caidas de cifra publicada del auditor, mas 1 caida de acta del auditor. Tandas seguidas con
+caida de clase o cifra: CERO. Caidas de reporte seguidas: UNA.
+
+Esta vuelta: cero pares leidos y cero puestos; en unidad propia, 24 sitios de codigo releidos
+linea a linea y el ciclo del Gate 0 corrido dos veces con restauracion verificada. **CERO caidas
+del ejecutor de cualquier especie: la racha de caidas de reporte SE ROMPE.**
+
+**Acumulado: 35 relecturas, 393 puestos (mas 23 nodos de forma y 24 sitios de codigo), 7 caidas
+de clase, mas 4 caidas de reporte del ejecutor, mas 4 caidas de cifra publicada del ejecutor,
+mas 2 caidas de cifra publicada del auditor, mas 1 caida de acta del auditor. Tandas seguidas
+con caida de clase o cifra: CERO. Caidas de reporte seguidas: CERO.**
+
+### 8. CONDICIONES DE PARADA: UNA SE CUMPLE
+
+- **Doctrina nueva necesaria: SI.** `OP-C-04` no puede ejecutarse tal como esta escrita sin
+  decidir entre textos que se contradicen, y toda salida reescribe el plan (seccion 5). Es la
+  especie exacta de la seccion 4, primera condicion, y tambien la tercera: cambiar el orden del
+  plan es de la casa.
+- Contradiccion sin resolver: la de arriba, y ninguna otra: todo lo demas quedo adjudicado.
+- Decision de fundador: nada reservado se toco. `dataset/` termina identico a HEAD (verificado
+  tras cada medicion), veredictos, componentes y campos `nodos` intactos, cero merges.
+- Fallo tecnico: no. El Gate 0 en rojo de la vuelta 21 quedo RESUELTO por la regla escrita del
+  propio instrumento, medido en verde hoy; no hay dos vueltas con la misma causa sin regla.
+- Credito de tanda: intacto. Tanda limpia, contadores en cero.
+- Campaña consumada: no.
+
+**`docs/loop/PARA_ALEXIS.md` escrito con el caso completo, los caminos y como retomar.
+`docs/loop/PROMPT_SIGUIENTE.md` VACIO a proposito. El bucle queda detenido esperando la decision
+de la casa.**

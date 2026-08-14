@@ -1,0 +1,52 @@
+veredictos: 3388 lineas
+clases: {'A': 583, 'B': 89, 'C': 7, 'D': 2709} | pct: {'A': 17.2, 'B': 2.6, 'C': 0.2, 'D': 80.0}
+puestos 1..3388: huecos=0 duplicados=0
+por dominio (pares, A, B, C, D, tasaA%):
+  compras: 155 | 1 2 0 152 | 0.6
+  core: 1445 | 344 87 7 1007 | 23.8
+  entrega: 171 | 2 0 0 169 | 1.2
+  environmental: 170 | 29 0 0 141 | 17.1
+  exportacion: 130 | 15 0 0 115 | 11.5
+  franquicias: 148 | 18 0 0 130 | 12.2
+  health_safety: 192 | 45 0 0 147 | 23.4
+  quality: 844 | 126 0 0 718 | 14.9
+  risk_management: 106 | 0 0 0 106 | 0.0
+  seguridad_digital: 27 | 3 0 0 24 | 11.1
+
+grafo: 3835 nodos, 3521 vivos, 314 deprecado
+operaciones: 71 | estados: {'LISTA': 71}
+componentes: 335 | inventario: 671
+
+Horowitz en 2a+ posicion (vivos): 14
+OP-F-04-HOR campo nodos: 13
+los 14 menos los 13: ['principio_calidad_mvp']
+de los 13, fuera del grafo: []
+principio_calidad_mvp en campo nodos de: ['OP-F-03', 'OP-D-01', 'OP-D-06']
+
+nodos con el mismo libro dos veces (titulos, prefijo): 4
+  asociaciones_clave: [essentials of supply chain management] / [essentials of supply chain mana]
+  decision_de_vender_startup: [the hard thing about hard thing] / [the hard thing about hard things]
+  plan_mejora_procesos: [the hard thing about hard things] / [the hard thing about hard thing]
+  transicion_producto_a_experiencia: [essentials of supply chain management] / [essentials of supply chain mana]
+
+metas_vs_proposito: 3 segmentos; Horowitz en posiciones [2]; ultimo = Never Lose a Customer Again - Joey Coleman
+de los 13, con Horowitz declarado y NO ultimo: ['metas_vs_proposito']
+decision_de_vender_startup: 34 pasos (HEAD)
+viral_loop_marketing: 30 pasos (HEAD)
+coeficiente_viral: 16 pasos (HEAD)
+decision_de_vender_startup en blob 23f9ac32: 34 pasos
+
+guiones docs/plan/01_FUENTES.md: largos=0 medios=0
+guiones docs/plan/OPERACIONES.jsonl: largos=0 medios=0
+guiones docs/plan/RECOMPUTO_3388.md: largos=0 medios=0
+guiones scripts/loop/vuelta21_registros.py: largos=0 medios=0
+guiones scripts/loop/vuelta21_tarea1.py: largos=0 medios=0
+guiones scripts/loop/vuelta21_fase0_sitios.py: largos=0 medios=0
+
+auto-aristas tras resolver, HOY, en vivos: 33 aristas sobre 27 nodos; el peor: [('costo_de_mala_calidad_copq', 7)]
+de ellas, directas (id igual a id): 0
+claves fuera del esquema estandar de doce mas ids_alias/deprecado:
+  merged_originals: 269 nodos -> ['abandonar_arreglos_rapidos', 'abolir_inspeccion_masiva', 'accidentes_individuales_vs_organizacionales', 'accion_correctiva'] ...
+  fuentes_adicionales: 4 nodos -> ['arquetipos_de_cliente', 'composicion_board_directors', 'definicion_startup', 'preferencia_de_liquidacion']
+  fase_проekto: 1 nodos -> ['crosby_habilidad_transmision']
+  fase_project: 1 nodos -> ['mapa_flujo_trabajo_cliente']
