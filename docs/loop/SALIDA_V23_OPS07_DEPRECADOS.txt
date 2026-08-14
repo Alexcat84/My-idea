@@ -1,0 +1,34 @@
+DEPRECADOS EN EL CATALOGO: 314 | VIVOS: 3521
+
+CRITERIO A (el enlace resuelve al PROPIO id del nodo deprecado)
+  ENLACES: 0 | NODOS: 0
+  Nota: para un deprecado esto es casi imposible por construccion:
+  el resolutor lleva SIEMPRE al superviviente vivo, nunca al deprecado.
+
+CRITERIO B (el enlace resuelve al MISMO destino que el propio nodo)
+  ENLACES: 81 | NODOS: 59
+  LOS PEORES: [('categorias_costos_calidad', 4), ('comunicacion_coordinacion_multiempleador', 3), ('costo_de_mala_calidad_3', 3), ('costo_de_mala_calidad_copq_3', 3), ('costos_ocultos_calidad', 3)]
+
+CONTROL: criterio B sobre los VIVOS = 33 enlaces, 27 nodos (tiene que dar 33 y 27)
+
+LAS 20 PRIMERAS DEL CRITERIO B EN DEPRECADOS:
+   6s_lugar_trabajo | nodos_siguientes -> 6s_workplace_organization | ambos resuelven a: metodologia_6s
+   6s_workplace_organization | nodos_previos -> 6s_lugar_trabajo | ambos resuelven a: metodologia_6s
+   busqueda_vs_ejecucion | nodos_previos -> startup_como_busqueda_vs_ejecucion | ambos resuelven a: search_for_business_model
+   buy_in_customer_development | nodos_siguientes -> buyin_customer_development | ambos resuelven a: buyin_customer_development
+   categorias_copq | nodos_previos -> costo_de_mala_calidad_copq | ambos resuelven a: costo_de_mala_calidad_copq
+   categorias_copq | nodos_previos -> costo_de_mala_calidad_copq_3 | ambos resuelven a: costo_de_mala_calidad_copq
+   categorias_costo_de_calidad | nodos_previos -> costo_de_la_calidad_coq | ambos resuelven a: costo_de_mala_calidad_copq
+   categorias_costos_calidad | nodos_previos -> costo_de_mala_calidad | ambos resuelven a: costo_de_mala_calidad_copq
+   categorias_costos_calidad | nodos_previos -> costo_de_mala_calidad_3 | ambos resuelven a: costo_de_mala_calidad_copq
+   categorias_costos_calidad | nodos_previos -> costo_de_mala_calidad_copq | ambos resuelven a: costo_de_mala_calidad_copq
+   categorias_costos_calidad | nodos_siguientes -> costos_ocultos_calidad | ambos resuelven a: costo_de_mala_calidad_copq
+   certificacion_iso_9000 | nodos_previos -> certificacion_registro_sistemas_calidad | ambos resuelven a: certificacion_registro_sistema_calidad
+   certificacion_registro_sistemas_calidad | nodos_siguientes -> certificacion_iso_9000 | ambos resuelven a: certificacion_registro_sistema_calidad
+   cohort_analysis_retencion | nodos_siguientes -> analisis_de_cohortes | ambos resuelven a: analisis_de_cohortes
+   comunicacion_coordinacion_multiempleador | nodos_siguientes -> establecer_comunicacion_efectiva_contratistas | ambos resuelven a: coordinacion_sitios_multiempleador
+   comunicacion_coordinacion_multiempleador | nodos_siguientes -> establecer_comunicacion_efectiva_hostempleador | ambos resuelven a: coordinacion_sitios_multiempleador
+   comunicacion_coordinacion_multiempleador | nodos_siguientes -> establecer_coordinacion_efectiva_hostempleador | ambos resuelven a: coordinacion_sitios_multiempleador
+   comunicacion_coordinacion_multiempleador_2 | nodos_siguientes -> establecer_comunicacion_efectiva_contratistas | ambos resuelven a: coordinacion_sitios_multiempleador
+   comunicacion_coordinacion_multiempleador_2 | nodos_siguientes -> establecer_coordinacion_efectiva_contratistas | ambos resuelven a: coordinacion_sitios_multiempleador
+   contratacion_abogado_franquicia | nodos_previos -> eleccion_abogado_franquicias | ambos resuelven a: eleccion_abogado_franquicias

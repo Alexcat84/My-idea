@@ -1,0 +1,54 @@
+FUENTE: dataset/metadata/master_graph.json
+NODOS: 3835
+VIVOS: 3521 | DEPRECADOS: 314
+ENLACES TOTALES (previos + siguientes, todos los nodos): 16866
+
+=== AUTO ARISTAS EN NODOS VIVOS (tras resolver) ===
+ENLACES: 33
+NODOS: 27
+DIRECTAS (dest == nid literal): 0
+VIA ALIAS: 33
+LOS PEORES: [('costo_de_mala_calidad_copq', 7), ('analisis_de_cohortes', 1), ('analisis_flujo_de_valor', 1)]
+   desglose de costo_de_mala_calidad_copq : {'nodos_previos': 2, 'nodos_siguientes': 5}
+
+NOMINA (27 esperados), ordenada:
+   analisis_de_cohortes
+   analisis_flujo_de_valor
+   buyin_customer_development
+   costo_de_mala_calidad_copq
+   cronograma_proyecto
+   cuatro_etapas_del_pensamiento_creativo
+   cumplimiento_inversionistas_acreditados
+   customer_needs_spreadsheet
+   customer_retention_tactics
+   decision_pivotar_o_proceder
+   definicion_sprint_terminado_fisico
+   diseno_experimentos_pass_fail
+   diseno_landing_page
+   diseno_para_el_ciclo_completo
+   eleccion_abogado_franquicias
+   elevated_surfaces_fall_protection
+   gestion_portafolio_formal
+   lockout_tagout_procedures
+   medir_comportamiento_cliente_mvp
+   medir_huella_carbono_corporativa
+   metodo_strategic_buckets
+   metricas_accionables
+   multi_sided_platforms
+   redundancia_en_diseno
+   reglas_gestion_riesgo_gambling
+   reporte_estado_miembro_equipo
+   search_for_business_model
+
+=== AUTO ARISTAS EN NODOS DEPRECADOS (tras resolver) ===
+ENLACES: 0
+NODOS: 0
+
+=== EL EJEMPLAR ESCRITO EN OP-S-07 ===
+analisis_flujo_de_valor.nodos_previos contiene value_stream_analysis_lean: True
+value_stream_analysis_lean existe: True | deprecado: True | resuelve a: analisis_flujo_de_valor
+value_stream_analysis_lean.nodos_siguientes contiene analisis_flujo_de_valor: True
+
+=== LAS 33: CADA UNA TIENE VISTA RECIPROCA ESCRITA EN EL GEMELO DEPRECADO? ===
+CON reciproca escrita en el gemelo: 33 de 33
+SIN reciproca: 0 []

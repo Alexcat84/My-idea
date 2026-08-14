@@ -1,0 +1,20 @@
+FUENTE: dataset/metadata/master_graph.json
+NODOS: 3835
+VIVOS: 3521 | DEPRECADOS: 314
+ENLACES TOTALES (previos + siguientes, todos los nodos): 16866
+
+=== AUTO ARISTAS EN NODOS VIVOS (tras resolver) ===
+ENLACES: 33
+NODOS: 27
+DIRECTAS (dest == nid literal): 0
+VIA ALIAS: 33
+LOS PEORES: [('costo_de_mala_calidad_copq', 7), ('analisis_de_cohortes', 1), ('analisis_flujo_de_valor', 1)]
+   desglose de costo_de_mala_calidad_copq : {'nodos_previos': 2, 'nodos_siguientes': 5}
+
+NOMINA (27 esperados), ordenada:
+   analisis_de_cohortes
+   analisis_flujo_de_valor
+   buyin_customer_development
+   costo_de_mala_calidad_copq
+   cronograma_proyecto
+   cuatro_etapas_del_pensamiento_creativo

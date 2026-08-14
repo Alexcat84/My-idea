@@ -1,0 +1,73 @@
+=== EL FICHERO DE CASOS POSITIVOS DE LA FASE 0 ===
+-rw-r--r-- 1 AlexDesk 197609 15956 Aug 14 13:48 web/lib/engine/accesosResueltos.test.ts
+PRUEBAS DECLARADAS:
+27
+
+=== LOS SITIOS DE LA NOMINA, RESUELVEN HOY? ===
+web/lib/engine/planRedactor.ts                             resolverId:2  cargarEntrySeeds(graph):0
+web/lib/compass.ts                                         resolverId:3  cargarEntrySeeds(graph):0
+web/lib/engine/recorrido.ts                                resolverId:0  cargarEntrySeeds(graph):0
+web/lib/engine/graph.ts                                    resolverId:6  cargarEntrySeeds(graph):0
+web/app/api/organizer/route.ts                             resolverId:0  cargarEntrySeeds(graph):1
+web/app/api/organizer/stream/route.ts                      resolverId:0  cargarEntrySeeds(graph):1
+web/app/api/session/start/route.ts                         resolverId:0  cargarEntrySeeds(graph):1
+web/app/api/session/[id]/plan/route.ts                     resolverId:0  cargarEntrySeeds(graph):0
+web/app/api/project/[id]/world/[pack]/start/route.ts       resolverId:2  cargarEntrySeeds(graph):0
+=== LA RESOLUCION INDIRECTA: los ayudantes de graph.ts ===
+194:export function conceptosDeRuta(nids: string[], graph: Grafo): string[] {
+206:export function faseDeNodo(nid: string, graph: Grafo, porDefecto = "ideacion"): string {
+279:export function preguntaDeNodo(nid: string, graph: Grafo, cache: PreguntasCache): string {
+
+--- quien los llama ---
+web/lib/engine/recorrido.ts:271:  const plano = preguntaDeNodo(nid, graph, preguntasCache);
+web/lib/engine/recorrido.ts:649:      const pregunta = resultado.preguntaAdaptada || preguntaDeNodo(nuevoActualId, graph, preguntasCache);
+web/app/api/session/[id]/plan/route.ts:265:        const conceptosTitulos = conceptosDeRuta([...recorrido.ruta, ...resultado.cosechaIds], graph);
+web/app/api/session/[id]/plan/route.ts:403:        const faseFinal = faseDeNodo(recorrido.ruta[recorrido.ruta.length - 1], graph);
+
+=== resolverId DENTRO de los tres ayudantes ===
+1:export function conceptosDeRuta(nids: string[], graph: Grafo): string[] {
+13:export function faseDeNodo(nid: string, graph: Grafo, porDefecto = "ideacion"): string {
+14:  const real = resolverId(nid, graph) ?? nid;
+38:export function esOfrecible(
+=== conceptosDeRuta / faseDeNodo ===
+export function conceptosDeRuta(nids: string[], graph: Grafo): string[] {
+  return nids.map((nid) => tituloDeNodo(nid, graph));
+}
+
+/**
+ * La FASE DE PROYECTO de un nodo de cualquier era, con su defecto declarado.
+ *
+ * OP-C-02: RESUELVE antes de leer. El `?? "ideacion"` de la ruta del plan no era
+ * un defecto razonable ante una referencia historica: era una degradacion
+ * silenciosa que le RETRASABA la fase del proyecto entero a la persona. El
+ * defecto sigue existiendo para el id que jamas fue nodo, que es su unico caso.
+ */
+export function faseDeNodo(nid: string, graph: Grafo, porDefecto = "ideacion"): string {
+  const real = resolverId(nid, graph) ?? nid;
+  return graph[real]?.fase_proyecto ?? porDefecto;
+}
+
+/**
+ * LA PUERTA ÚNICA DE OFERTA. Todo camino que le proponga un nodo al usuario
+ * pasa por aquí: los sucesores del recorrido, las semillas de entrada y los
+ * resultados del índice semántico.
+ *
+
+=== preguntaDeNodo ===
+export function preguntaDeNodo(nid: string, graph: Grafo, cache: PreguntasCache): string {
+  const real = resolverId(nid, graph) ?? nid;
+  return obtenerPregunta(real, graph[real], cache);
+}
+
+export interface ResumenNodo {
+  id: string;
+  titulo: string;
+  condiciones_activacion: string[];
+  pregunta_cache?: string;
+  sucesores?: ResumenNodo[];
+}
+
+/**
+ * OP-C-03: RESUELVE AL ENTRAR, como ya hacen `etiquetaArbol` y `tituloDeNodo`
+ * mas arriba. El id llega del NODO ACTUAL de la sesion guardada, o sea de otra
+ * era: con uno de la era en que fusionar borraba, `graph[nid]` era undefined y

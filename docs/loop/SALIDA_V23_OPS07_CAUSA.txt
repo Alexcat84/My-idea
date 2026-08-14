@@ -1,0 +1,22 @@
+CLAVES DEL LOG: ['ascii_renames', 'ascii_rename_collisions', 'merge_redirects', 'alias_redirects', 'alias_unresolved_removed', 'final_cleanup_removed', 'symmetrize_added']
+
+symmetrize_added: list | longitud: 33
+   {'node': 'analisis_de_cohortes', 'key': 'nodos_previos', 'added': 'cohort_analysis_retencion'}
+   {'node': 'analisis_flujo_de_valor', 'key': 'nodos_previos', 'added': 'value_stream_analysis_lean'}
+   {'node': 'buyin_customer_development', 'key': 'nodos_previos', 'added': 'buy_in_customer_development'}
+   {'node': 'costo_de_mala_calidad_copq', 'key': 'nodos_siguientes', 'added': 'categorias_copq'}
+   {'node': 'costo_de_mala_calidad_copq', 'key': 'nodos_siguientes', 'added': 'categorias_costos_calidad'}
+   {'node': 'costo_de_mala_calidad_copq', 'key': 'nodos_siguientes', 'added': 'costo_de_mala_calidad_copq_2'}
+   {'node': 'costo_de_mala_calidad_copq', 'key': 'nodos_siguientes', 'added': 'costo_de_mala_calidad_copq_3'}
+   {'node': 'costo_de_mala_calidad_copq', 'key': 'nodos_siguientes', 'added': 'costos_ocultos_calidad'}
+   ... total 33
+REPUESTOS POR EL PASO 5: 33
+
+=== SON LOS MISMOS 33 QUE RETIRE? ===
+AUTO ARISTAS VIVAS AHORA: 33
+COINCIDEN EXACTAMENTE CON symmetrize_added: True
+SOLO EN symmetrize_added: []
+SOLO EN las auto aristas: []
+
+=== CADA UNA ES LA RECIPROCA DE UN ENLACE DEL GEMELO DEPRECADO? ===
+SI, en 33 de 33

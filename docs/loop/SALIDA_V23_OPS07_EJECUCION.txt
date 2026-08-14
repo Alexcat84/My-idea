@@ -1,0 +1,11 @@
+A RETIRAR: 33 enlaces en 27 nodos
+RETIRADOS: 33 | FICHEROS TOCADOS: 27
+Traceback (most recent call last):
+  File "C:\Users\AlexDesk\AppData\Local\Temp\v23_ejecutar_ops07.py", line 88, in <module>
+    assert doc.get(k) == v, f"{nid}: el campo {k} se movio y no debia"
+           ^^^^^^^^^^^^^^^
+AssertionError: decision_pivotar_o_proceder: el campo etiqueta_arbol se movio y no debia
+FICHEROS MODIFICADOS: 27
+ENLACES RETIRADOS (contra HEAD, campo por campo): 33
+CAMPOS DISTINTOS DE previos/siguientes QUE SE MOVIERON: 0 []
+ids_alias intactos en los 27: True
