@@ -2084,3 +2084,229 @@ encargo siguiente corre los cuatro pasos del recomputo en el orden del 08_VERIFI
 antes de contar por P.1, publica el resultado en un documento nuevo y **no cambia el estado de
 ninguna operacion hasta que yo verifique las cuatro comprobaciones aritmeticas**. `dataset/` sigue
 intacto: mover un nodo es Fase III y va en la rama `pasada-unica`.
+
+---
+
+## VUELTA 11, 13 ago 2026. Auditor: Opus 5. Reporte auditado: la vuelta 11 del ejecutor (Sonnet 5), que ABRE LA FASE II
+
+### 1. VERIFICACION, todo recomputado con instrumento propio, no con el del ejecutor
+
+Corri mi propio python sobre los archivos, sin usar `scripts/plan/recomputo_3388.py` ni
+`scripts/plan/diferencia_contra_cola.py`, y despues compare.
+
+1. **Hashes y rutas.** `767d9ca4` toca exactamente dos archivos (`INTRA_DOMINIO_INFORME.md`,
+   `INTRA_DOMINIO_VEREDICTOS.jsonl`); `7f4ec6d9` toca tres y los tres son nuevos
+   (`docs/plan/RECOMPUTO_3388.md`, `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`,
+   `scripts/plan/recomputo_3388.py`); `ce4d1a4c` solo el reporte. **`docs/plan/OPERACIONES.jsonl`
+   NO fue tocado** y `docs/plan/DIFERENCIA_CONTRA_COLA.jsonl` no aparece en ningun diff, que es
+   justo lo que el reporte declara (salida byte por byte identica). `dataset/` intacto.
+2. **Marcador, recomputado desde el archivo:** 3.388 veredictos, puestos 1 a 3.388, **cero huecos,
+   cero puestos duplicados y cero pares repetidos en cualquiera de los dos ordenes**;
+   **A 583, B 89, C 7, D 2.709**. Calza cifra a cifra.
+3. **Las dos correcciones de razon.** Compare el archivo contra su version previa
+   (`767d9ca4^`) linea por linea: **cambiaron exactamente dos lineas, el 3.376 y el 3.382, y
+   ninguna clase se movio** (D las dos antes y despues); el total sigue en 3.388. Antes de la
+   correccion **nueve de los once discutibles del tramo citaban el `entregable_esperado`; hoy once
+   de once**, contado por mi sobre las razones. Las dos correcciones estan declaradas dentro de la
+   propia razon. El conteo de once se sostiene: seis marcas fuertes mas cinco simples.
+4. **LA CORRECCION SOBRE MI CORRECCION, adjudicada A FAVOR DEL EJECUTOR, y es error mio heredado.**
+   Conte yo mismo los toques sobre los 106 pares de `risk_management`: la distribucion da
+   **CINCO nodos con siete toques**, no cuatro. Los cinco son los que el ejecutor publica, todos con
+   cero A, y **no hay un sexto**: la distribucion de toques del dominio es 20, 18, 11, 11, 9, 9, 8,
+   8, y luego los cinco de siete. **El discutible que el ejecutor marco cae de su lado y la cadena
+   de listas cortadas cierra aqui.** La cifra de cuatro fue mia, la de dos fue suya, y la buena es
+   cinco.
+5. **EL RECOMPUTO, recomputado entero por mi con python propio (resolutor de alias desde
+   `ids_alias` del grafo, componentes conexas, cerrado o abierto por el criterio doble de
+   `OP-U-01`). Sale identico, cifra por cifra y CONJUNTO POR CONJUNTO:**
+   - 391 alias vigentes; **583 A crudas, 583 pares distintos tras resolver, CERO auto aristas**.
+   - **854 nodos, 335 componentes de tamano dos o mas**, distribucion 2: 244, 3: 56, 4: 16, 5: 7,
+     6: 5, 7: 2, 8: 1, 9: 1, 10: 1, 13: 1, 15: 1.
+   - **CERRADOS 280 sobre 600 nodos** (2: 244, 3: 32, 4: 4); **ABIERTOS 55 sobre 254 nodos**
+     (3: 24, 4: 12, 5: 7, 6: 5, 7: 2, 8: 1, 9: 1, 10: 1, 13: 1, 15: 1).
+   - **Las cuatro comprobaciones dan lo mismo con mi instrumento:** i, 854 igual a 854; ii, 583
+     igual a 583; iii, los 280 cerrados sin par interno sin leer y sin miembro pendiente; iv,
+     **cero nodos deprecados dentro de una componente**.
+   - **Prueba mas dura que las cuatro:** compare mi conjunto de 335 componentes contra
+     `RECOMPUTO_3388_COMPONENTES.jsonl` **como conjuntos de conjuntos: son el mismo conjunto, cero
+     de un lado, cero del otro.** El instrumento del ejecutor no solo da los mismos totales, da las
+     mismas familias.
+   - **Los cinco actos grandes viejos siguen con su tamano** (13 puertas y portafolio, 9 customer
+     discovery, 8 build measure learn, 7 customer validation, 7 brainstorming), verificados por
+     nombre y contra el corte 2.117; y **las dos componentes nuevas son las que dice**: la de 15 es
+     `health_safety` entera (vieja vision contra nueva vision del error humano) y la de 10 es
+     `quality` (`causas_comunes_vs_especiales`).
+6. **`OP-E-03`, recomputado por mi sin correr su script:** 575 candidatos, 477 sin arista, y la
+   tabla por dominio sale **celda por celda igual** (quality 208 / 1 / 40 / 167; core 199 / 1 / 36 /
+   162; environmental 22 / 0 / 0 / 22; exportacion y franquicias 15 / 0 / 2 / 13; health_safety 12 /
+   0 / 5 / 7; entrega 4 / 0 / 2 / 2; risk_management 1 / 0 / 0 / 1; seguridad_digital 1 / 0 / 1 / 0).
+   **TOTAL 477 = 2 repetidos + 88 ya en cola + 387 de diferencia. La aritmetica cuadra** y el jsonl
+   commiteado tiene esas 387 filas con ese reparto por dominio.
+7. **Higiene:** cero guiones largos y cero guiones medios en los cinco archivos tocados. Ningun
+   temporal quedo en el arbol. `nafta_free_trade_agreements` sigue sin `deprecado`, o sea que
+   ninguna fusion del plan se ejecuto contra `dataset/`, tal como declara el paso 1.
+
+**El recomputo esta bien hecho y esta verificado con instrumento independiente. Las cuatro
+comprobaciones que `OP-U-02` pedia estan verificadas por el auditor.**
+
+### 2. LO QUE EL REPORTE DECLARO IMPOSIBLE Y SI SE PUDO MEDIR (dos preguntas cerradas)
+
+El reporte dejo dos cosas abiertas con su limite declarado, que es la conducta correcta. **Pero las
+dos se podian medir, y las medi.**
+
+**a) La diferencia de 401 contra 400 A vigentes al 2.117: RESUELTA, PAR POR PAR, Y NO ES UNA
+CONTRADICCION.** El repositorio guarda la version del archivo al corte exacto (`c16a24f5`, 11 ago
+2026, 2.117 lineas). La compare clase a clase contra el archivo de hoy en ese mismo tramo:
+**cambio UNA sola clase desde entonces, el puesto 2.078 (`elaboracion_fdd` contra `preparar_fdd`,
+`franquicias`), que era D el 11 ago y hoy es A por correccion posterior declarada.** El archivo
+viejo tiene **exactamente 400 A**. O sea: la cifra vieja era correcta en su corte y la nueva es
+correcta en el suyo; **la diferencia es una correccion declarada, no un descuadre**.
+
+**b) Cuantos de los 48 actos abiertos del 2.117 cerraron: MEDIDO EXACTO, no por proxy.** El reporte
+dice que no se puede porque la membresia de los 48 nunca se escribio como lista. **Se puede: se
+vuelve a correr la medicion vieja sobre el mismo archivo con el corte viejo.** La condicion que lo
+permite es que **la cola `docs/INTRA_DOMINIO_PARES.jsonl` esta completa en 3.388 pares desde el 9
+ago 2026** (`c442345a`, "la cola completa, 3388 pares ordenados") **y no se ha tocado desde
+entonces**, asi que la cola contra la que se midio el 11 ago es la misma de hoy. Corriendo mi
+instrumento al corte 2.117 **y excluyendo la correccion posterior del 2.078**, reproduzco la cifra
+publicada **exacta**: 221 componentes sobre 576 nodos, **173 cerrados sobre 371** (149 de dos, 23 de
+tres, uno de cuatro), **48 abiertos sobre 205**, y los motivos 42 por par interno mas 6 por miembro
+pendiente. Con la membresia asi reconstruida, el mapeo contra hoy es:
+
+| los 48 actos abiertos del 2.117 | cuantos |
+|---|---:|
+| **CERRARON** (mismos miembros, hoy CERRADO) | **5** |
+| siguen abiertos, identicos, sin crecer | 42 |
+| siguen abiertos y CRECIERON | 1 |
+
+Y por el otro lado: **114 actos de hoy no contienen ni un nodo que estuviera en un acto del 2.117**;
+**102 de esos nacieron cerrados y 12 nacieron abiertos**. Las cuentas cierran solas: 173 viejos
+cerrados mas 5 que cerraron mas 102 nacidos cerrados igual a **280**; 43 viejos que siguen abiertos
+mas 12 nacidos abiertos igual a **55**. **El proxy de edad de arista del reporte (221 / 1 / 113, con
+101 nacidos cerrados y 12 abiertos) difiere en exactamente una unidad, y la unidad es el mismo
+2.078**: su arista es anterior al 2.117 y por eso el proxy lo llama continuacion, pero en el corte
+viejo ese par era D y su acto no existia. **Las dos mediciones son coherentes entre si una vez
+nombrada la causa.**
+
+**c) Por que la diferencia de `OP-E-03` no bajo, y ES ERROR MIO, no del ejecutor.** Mi encargo dijo
+"esa cifra tiene que bajar, y la baja es el resultado". **Era falso y se comprueba leyendo el
+script:** `diferencia_contra_cola.py` compara los candidatos contra la union de
+`INTRA_DOMINIO_PARES.jsonl` **mas** `INTRA_DOMINIO_VEREDICTOS.jsonl`, y la primera esta completa en
+3.388 desde el 9 ago. **La cola planificada no crece cuando un dominio se criba: crece el archivo
+leido, que ya estaba dentro de la union.** Por eso el 387 no podia moverse, y el ejecutor hizo bien
+en publicarlo sin forzar la baja. Su explicacion (heuristicas distintas, solape estructuralmente
+chico) es cierta pero no es la razon decisiva; la razon decisiva es la union de arriba, y queda
+escrita aqui para que nadie vuelva a pedir una baja imposible.
+
+### 3. RELECTURA: tres pares a ciegas y cuatro puentes de acto, siete puestos
+
+**Metodo y limite declarado primero.** Los discutibles marcados de esta vuelta no son pares: el
+unico marcado es la correccion de la lista de hubs, que verifique con instrumento en la seccion 1.
+Asi que la relectura fue a dos bandas, y **declaro donde no fue ciega**: para los cuatro puentes
+**ya sabia que eran A**, porque los saque yo del retrato de las A al buscar aristas de corte; ahi el
+ciego es sobre la RAZON y sobre el superviviente, no sobre la clase. Los tres de `environmental` si
+son ciegos de clase y de razon.
+
+**a) TRES A CIEGAS EN `environmental`, un dominio que ningun auditor del bucle habia releido nunca**
+(se cribo antes de encender el bucle, y el recomputo se apoya en sus A). Criterio de eleccion
+declarado: cabeza, cuerpo y cola del dominio.
+
+| puesto | mi clase ciega | archivo | coincide |
+|---:|---|---|---|
+| 1.772 | D (encontrar la ventaja contra elegir en cuales invertir: el primero mapea la cadena de valor, el segundo evalua y prioriza iniciativas ya existentes) | D | si |
+| 1.850 | D (la auditoria del desperdicio con instrumentos contra el enfoque de ecosistema de la planta; solo se rozan en la eficiencia energetica) | D | si |
+| 1.941 | D (la credibilidad de quien pide contra el proceso que escribe la estrategia; ni un paso se solapa) | D | si |
+
+**Tres de tres, y las razones destapadas despues coinciden hasta en el eje que separa cada par.**
+
+**b) CUATRO PUENTES DE ACTO, que es donde una A mal puesta cuesta mas.** Un puente es una arista A
+cuya caida PARTE la componente en dos: por P.12 el cierre transitivo convoca y la lectura decide, asi
+que un acto de quince que cuelga de un puente falso son dos actos.
+
+| puesto | que partiria | mi lectura antes de destapar | archivo | coincide |
+|---:|---|---|---|---|
+| 2.352 | 2 y 13 | A: los cuatro pasos de `vieja_vision_vs_nueva_vision_seguridad` son diagnosticar, migrar, comunicar y redisenar, y el diagnostico es el paso 1 del otro | A | si |
+| 2.400 | 10 y 5 | **D**, y me equivoque: lei el contraste de seis ejes del `resumen_teorico` como si fuera acto | A | **NO** |
+| 2.736 | 7 y 3 | A: el mismo acto de poner los errores en limites de control y separar comun de especial | A | si |
+| 2.888 | 8 y 2 | A: la misma distincion aplicada a un grupo de personas en vez de a un trabajador | A | si |
+
+**MI ERROR DEL 2.400, con nombre.** Adjudique D porque vi metodo de investigacion de un lado y
+programa de cambio del otro. Al destapar, la razon aplica el 9.6.1 (lo que uno anade cabe en una
+linea, o trae procedimiento propio): los cuatro verbos del nodo que muere no nombran ni un test ni un
+criterio ni un instrumento, mientras el otro trae cuatro lentes con contenido. **El material propio
+que yo estaba pesando vive en el `resumen_teorico`, y la vara se aplica sobre `pasos_accionables`
+(adjudicacion 101.b, mia, de la vuelta pasada). Aplique mi propia adjudicacion al reves.** Retiro la
+discrepancia: **la A del 2.400 se sostiene y el acto de quince no se parte.**
+
+### 4. ADJUDICACIONES DE ESTA VUELTA, todas por extension citable de regla escrita
+
+1. **LAS CUATRO COMPROBACIONES DEL RECOMPUTO ESTAN VERIFICADAS POR EL AUDITOR CON INSTRUMENTO
+   PROPIO, y con la prueba extra de identidad conjunto a conjunto de las 335 componentes. Queda
+   AUTORIZADO el paso que el encargo anterior dejo condicionado:** `OP-U-02` pasa a LISTA con corte
+   3.388, y `OP-U-01`, `OP-L-02`, las cinco mesas y las seis `OP-D-*` reescriben sus cifras **con el
+   corte nuevo al lado del viejo** (banco 9.21: toda cifra de cruce lleva su fecha de corte; la
+   vieja no se borra).
+2. **EL PASO 2 DEL RECOMPUTO SE PUEDE CORRER SIN INVENTAR NI RECONSTRUIR DE MEMORIA NINGUNA NOMINA,
+   y asi se encarga.** El ejecutor busco la lista en los `.md` y no la hallo, y hasta ahi hizo bien.
+   **Lo que falto es el propio archivo de salida del instrumento: `docs/COSTURAS_INTERNAS.jsonl`
+   existe y trae las 128 citas con su `node_id`** (medido por mi: 128 filas, campos `node_id`,
+   `dominio`, `pasos`, `corte`, `disparo_bloque`, `disparo_pareja`). **No trae el veredicto**, y por
+   eso la nomina de las 46 confirmadas no esta como dato; pero **no hace falta la nomina entera**:
+   el paso 2 solo pregunta que citas caen dentro del retrato de las A. **Medido por mi: la
+   interseccion de las 128 citas con los 854 nodos con al menos una A es de TREINTA Y SEIS nodos.**
+   Sobre esos treinta y seis, y solo esos, se busca el veredicto ya escrito en
+   `docs/FICHA_SUBFUSION_GRADIENTE.md` y `docs/COSTURAS_INTERNAS_RESUMEN.md`, citando archivo y
+   linea. **La ficha ya tiene siete ejemplares escritos de esta misma pregunta** (la serie SANO POR
+   DENTRO, GEMELO POR FUERA y LA CURA ACOPLADA), o sea que el paso 2 no es doctrina nueva: es
+   terminar de barrer lo que esa serie venia encontrando de a uno. **Lo que no tenga veredicto
+   escrito se declara SIN VEREDICTO ESCRITO y no se adivina.**
+3. **CUANDO EL ACTO DE QUINCE DE `health_safety` SE EJECUTE, EL SUPERVIVIENTE CONSERVA EL CONTRASTE
+   DE SEIS EJES de `vieja_vision_vs_nueva_vision_seguridad`** (personas como problema o recurso,
+   actitudes o condiciones, ausencia de eventos o presencia de capacidades, staff o linea, reglas o
+   contexto, hacer imposible el error o dar espacio para hacer lo correcto). Ese nodo repite cuatro
+   veces contra cuatro supervivientes distintos y muere, y su tabla es catalogo. **Es la misma regla
+   de la adjudicacion 101.c**: una fusion que se lleve solo un lado es perdida de catalogo no
+   declarada.
+4. **LA VERIFICACION FIJA NUEVA DEL EJECUTOR (toda frase de "en cada" o "en todos" se cuenta antes
+   de escribirse) SE CUMPLIO Y SE QUEDA.** Sus cuatro fracciones son ciertas: 11 de 11, 4 de 4, 0 de
+   583, y el marcador identico antes y despues. **Se le anade una hermana, que sale de la seccion 2
+   de esta acta: toda declaracion de "no se puede medir" lleva al lado el intento que se corrio y
+   por que no alcanzo.** Dos de las tres de esta vuelta si se podian medir.
+
+### 5. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 10: **25 relecturas, 346 puestos, 7 caidas.**
+
+Esta vuelta: **mas 1 relectura, mas 7 puestos** (tres ciegos de clase en `environmental`, cuatro
+puentes de acto verificados sobre la razon y el superviviente), **cero caidas del ejecutor, una
+discrepancia planteada por mi y RETIRADA por error mio declarado (2.400)**.
+
+**Acumulado: 26 relecturas, 353 puestos, 7 caidas. QUINTA TANDA SEGUIDA SIN UNA CAIDA DEL
+EJECUTOR.** La regla del credito no se dispara: **la unica discrepancia de clase de la tanda la puse
+yo y no se sostuvo**. Ningun tramo se relee al doble. **Y el discutible que el ejecutor marco por su
+cuenta le dio la razon a el y me corrigio a mi: es la segunda vuelta seguida en que verificar antes
+de aplicar caza un error, y esta vez el error era del auditor.**
+
+### 6. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+- **Mi correccion de la lista de hubs decia cuatro y eran cinco.** Corte la lista en un valor y deje
+  fuera un empate, que es exactamente lo que yo le habia reprochado al reporte de la vuelta 10. La
+  regla del superlativo me aplica igual.
+- **Dicte en el encargo que la cifra de `OP-E-03` "tiene que bajar".** No podia bajar, y bastaba con
+  leer las dos entradas del script para verlo. Dictar una expectativa numerica sin verificar el
+  instrumento es dictar una trampa.
+- **Adjudique D en el 2.400 aplicando el `resumen_teorico` como acto**, contra mi propia
+  adjudicacion 101.b de la vuelta pasada. Retirada en la seccion 3.
+
+### 7. CONDICIONES DE PARADA: ninguna se cumple
+
+Ninguna adjudicacion de la seccion 4 pide doctrina nueva (las cuatro cuelgan de 9.21, 9.6.1, 101.b,
+101.c y P.12). **La unica contradiccion numerica de la vuelta, el 401 contra 400, quedo resuelta con
+las reglas de correccion existentes** y sin tocar ninguna cifra publicada mas que declarando su
+corte. Nada de lo que encargo toca lo que la casa reserva al fundador: **no se ejecuta ni una
+fusion, `dataset/` no se toca, no hay merge y la Fase III sigue cerrada**. No hubo fallo de hook ni
+de Gate 0. El credito se sostiene.
+
+**La FASE II sigue abierta y avanza.** El encargo siguiente escribe el estado del plan al corte
+3.388 (que es lo que el recomputo existia para permitir) y cierra el paso 2 por la via acotada de
+los treinta y seis.
