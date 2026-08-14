@@ -46,6 +46,21 @@ racimo, acto, familia de ids, figura y defecto.
 >
 > **EL TOTAL DE HOY ES 671 Y NO ES UNA CORRECCION DEL 336: es otro corte.** El 336 sigue siendo la
 > cifra correcta del 11 ago 2026 y no se toca.
+>
+> **UNA LINEA MAS AL AVISO, 14 ago 2026 (vuelta 18), adjudicacion del pendiente de doctrina 1 de la
+> vuelta 17 (`docs/loop/ACTA_AUDITOR.md` VUELTA 17 seccion 4): LA FRASE "SIN PARES PENDIENTES: NO
+> PUEDE CRECER" DE LAS NOTAS DE ACTO MIDE LOS PARES INTERNOS DEL ACTO, Y SOLO ESOS.** Una componente
+> **tambien crece cuando entra un nodo de FUERA por una A nueva**, y eso la formula no lo ve.
+> **Medido en esta vuelta con `scripts/loop/vuelta18_medir.py` sobre `docs/plan/INVENTARIO.jsonl` y
+> `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: 280 de las 335 notas de acto vigentes llevan esa frase**, y
+> **el ejemplar que la desmiente es `gestion_terminacion_franquiciado`**: su entrada del corte 2.117
+> decia "tamano 2. Sin pares pendientes: no puede crecer" con **1 de 1 pares leidos, 0 en cola y 0
+> fuera de cola**, y hoy tiene **TRES miembros**, porque entro `perdida_control_operativo` **por la A
+> del puesto 2190**, que es un par que la formula no contaba porque el tercer nodo estaba fuera.
+>
+> **LAS 335 NOTAS NO SE REESCRIBEN HOY, a proposito, por la misma razon que la tabla:** el arreglo es
+> la regeneracion entera y esa la dispara `08_VERIFICACION`. **QUIEN REGENERE EL INVENTARIO ESCRIBE
+> "SIN PARES INTERNOS PENDIENTES: NO PUEDE CRECER POR DENTRO."**
 
 ---
 

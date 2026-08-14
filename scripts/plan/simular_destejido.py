@@ -21,7 +21,12 @@ QUE PUEDE ROMPER UN DESTEJIDO, y es lo unico que este script mide:
   2. UNA ARISTA PASO A NODO. docs/plan/PASO_NODO_CALIBRADO.jsonl ancla aristas al
      TEXTO de un paso de la madre. Si el paso muere, la arista pierde su ancla.
   3. UNA REFERENCIA INTERNA COLGANDO. Un paso que sobrevive y nombra material que
-     el destejido se llevo ("el problema original", "la pregunta").
+     el destejido se llevo ("el problema original", "la pregunta"). ESTE TERCER
+     PUNTO ES UNA HEURISTICA DE PALABRAS Y SU SALIDA ES UN AVISO ORIENTATIVO: no
+     es un veredicto y no es una rotura, y por eso no entra en el VEREDICTO DEL
+     ESCENARIO. Etiquetado el 14 ago 2026 (vuelta 18) por la adjudicacion del
+     discutible 6 de la vuelta 17. NINGUN CRITERIO DEL SIMULADOR CAMBIO: lo unico
+     que cambia es que la salida ahora lo dice con palabras.
   4. NADA MAS. Un destejido no mueve ids, no crea alias y no toca nodos_previos
      ni nodos_siguientes: el grado del nodo y el de todos sus vecinos tienen que
      salir IDENTICOS antes y despues, y el script lo comprueba en vez de suponerlo.
@@ -212,8 +217,18 @@ def main():
             print("  REFERENCIAS QUE QUEDAN COLGANDO (un paso que sobrevive nombra algo que se va):")
             for i, pista, fuente in colgando:
                 print("    el paso", i, "nombra", repr(pista), "y quien lo establecia eran los pasos", fuente)
+            print("    ESTO ES UN AVISO ORIENTATIVO, NO UN VEREDICTO Y NO UNA ROTURA.")
+            print("    Es una heuristica de PALABRAS: casa una pista literal de una lista corta")
+            print("    entre un paso que vive y un paso que se va, y no lee el sentido de")
+            print("    ninguno de los dos. Puede senalar de mas (la misma palabra en dos temas")
+            print("    distintos) y puede callar de menos (la referencia escrita con otras")
+            print("    palabras). NO cuenta para el VEREDICTO DEL ESCENARIO de abajo, a")
+            print("    proposito. Lo que hace es MANDAR A LEER los pasos que nombra: la")
+            print("    decision es de quien los lea.")
         else:
-            print("  referencias internas colgando: ninguna detectada")
+            print("  referencias internas colgando: ninguna detectada por la heuristica de")
+            print("    palabras. AVISO ORIENTATIVO: ese cero NO es un certificado de que no")
+            print("    haya ninguna. Solo dice que ninguna pista de la lista corta caso.")
 
         print("  VEREDICTO DEL ESCENARIO:", "ROMPE ALGO" if roto else "no rompe ningun apoyo medido")
         print()

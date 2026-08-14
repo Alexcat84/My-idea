@@ -407,9 +407,20 @@ cola de relectura post fusion, que **no bloquea**.
 
 ## LA FRASE QUE RESUME EL DIA
 
-> **Se ejecutan sesenta y seis operaciones LISTAS en el orden de arriba, se comprueba
-> cada una contra su criterio de HECHO, y NO SE DECIDE NADA.** Lo unico que se espera
+> ~~**Se ejecutan sesenta y seis operaciones LISTAS en el orden de arriba**~~, se comprueba
+> cada una contra su criterio de HECHO, y NO SE DECIDE NADA. Lo unico que se espera
 > es **`OP-U-02`**, y su disparador es **el puesto 3.388.**
+>
+> **AVISO, 14 ago 2026 (vuelta 18): la cifra tachada es de la sesion que cerro el plan y
+> no se borra. HOY SON SETENTA Y UNA OPERACIONES, Y LAS 71 ESTAN EN LISTA**, medido en
+> esta vuelta con instrumento propio sobre `OPERACIONES.jsonl`
+> (`scripts/loop/vuelta18_medir.py`): **71 lineas, 71 ids unicos, estado `LISTA` en las
+> 71, cero en DECISION PENDIENTE.** El reparto por fase medido hoy es 5, 7, **9**, 16,
+> 10, 12, 5, 2, 1, 3, 1. **Las dos diferencias contra el marcador de arriba de esta
+> misma pagina, declaradas y no arregladas aqui:** la fase 02 lleva **9** y no 7 (las
+> dos operaciones que la vuelta 17 escribio), y `OP-U-02` **ya no esta pendiente**. El
+> marcador y las tablas de esta pagina son del **12 ago 2026** y siguen sin regenerarse:
+> **quien las regenere escribe 71 y 71.**
 
 > **Y NO QUEDA NI UNA LECTURA POR HACER QUE BLOQUEE ALGO.** Las siete que faltaban se
 > hicieron el 12 ago 2026, y **la cola de relectura post fusion no bloquea: viaja con
@@ -494,7 +505,7 @@ de esas bloquea nada:**
 
 | | |
 |---|---|
-| **el lote del sales roadmap** | cinco pares, para cerrar una nomina con cobertura incompleta |
+| **el lote del sales roadmap** | cinco pares, para cerrar una nomina con cobertura incompleta. **LOS CINCO YA ESTAN NOMBRADOS, 14 ago 2026**: la nomina esta en [`RECOMPUTO_3388.md`](RECOMPUTO_3388.md), seccion "TAREA (vuelta 17)", punto 4 |
 | **la cola de relectura post fusion** | siete pares, con disparador mecanico |
 | **`OP-E-07`** | ciento un lecturas **de frase**, no de par: la clase ya esta decidida |
 | **`OP-E-03`** | la diferencia contra la cola, que se computa el dia que cada dominio cierre |
