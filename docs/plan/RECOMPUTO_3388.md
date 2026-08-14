@@ -355,3 +355,265 @@ borra). El recomputo en si (este documento) sigue siendo lectura pura: la escrit
 **El fichero de detalle, con las 335 componentes fila por fila (miembros, cobertura, clases
 internas, estado, edad), vive en** `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`, **solo lectura,
 salida directa del script.**
+
+---
+
+## TAREA 1 (vuelta 13): dos verificaciones y su cierre
+
+### 1. La nomina de las 46 SI existe (correccion declarada)
+
+**CORRECCION DECLARADA (vuelta 13, sin borrar el texto viejo).** El `docs/loop/REPORTE.md` de la vuelta 12 (commit `77ffde4c`, seccion LO QUE NO SE MIDIO) escribio dos frases que quedan citadas aqui, tachadas, para que la correccion se pueda auditar:
+
+> tachado: "La nomina completa de las 46 confirmadas (no solo las 36 con A) sigue sin estar escrita como lista en ningun sitio."
+> tachado: "las 10 restantes de las 46 (las que no tienen A vigente, si las hay) no se buscaron"
+
+**Las dos frases son falsas y las dos se corrigen aqui, verificadas con instrumento propio antes de escribirse.**
+
+**La nomina SI esta escrita.** Vive en `docs/FICHA_SUBFUSION_GRADIENTE.md`, tabla "Las 128, con su fila y su veredicto" (lineas 3651 a 3780). Comando: parseo de las 128 filas de esa tabla. **Resultado, verificado: 128 filas, 128 ids distintos, 46 confirmadas y 82 falsas** (contra la fila de totales que la propia ficha ya publicaba en la linea 3640: 46 / 82 / 128, exacta).
+
+**La aritmetica correcta: de las 46 confirmadas, QUINCE tienen A vigente al corte 3.388 y TREINTA Y UNA no.** Comando: cada uno de los 46 ids resuelto por alias (P.1) y comparado contra el conjunto de 854 nodos con A del paso 1 del recomputo (script nuevo esta vuelta, `scripts/loop/barrido_vuelta13.py`). **Las QUINCE con A vigente son exactamente las 15 CONFIRMADA ya citadas en el paso 2 de este documento** (la misma lista, verificada dos veces por dos vias: por interseccion contra las 128 citas en el paso 2 original, y ahora por interseccion directa contra las 46 confirmadas), las mismas que ya tienen dueno en `OP-D-01` a `OP-D-06`.
+
+**El 10 de la vuelta pasada salia de restar 46 menos 36 (la interseccion de las 128 citas contra las 854 con A, no el numero de confirmadas dentro de ella). El numero correcto de confirmadas SIN A vigente es 31, no 10.** Las 31 se listan completas en la TAREA 2.B de mas abajo.
+
+### 2. `OP-S-10`, la unica operacion del plan que se mueve entre los dos cortes
+
+**Remedido, tal como pide el encargo, antes de escribirlo.** Comando: `python scripts/loop/barrido_vuelta13.py` (script nuevo esta vuelta, modelado sobre `scripts/plan/recomputo_3388.py`; corte viejo por `git show c16a24f5:docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, el metodo que quedo escrito en el paso 1 de este documento; corte nuevo por el archivo de hoy).
+
+| | corte 2.117 | corte 3.388 |
+|---|---:|---:|
+| pares internos leidos de la nomina de 31 | 7 | 17 |
+| de esos, clase A | 1 | 2 |
+| actos que tocan la nomina | 3 | 6 |
+| nodos de la nomina dentro de un acto | 4 | 8 |
+
+**Exacto contra la medicion del auditor, las cuatro cifras.** Detalle de los seis actos al corte 3.388: `cinco_categorias_costos_franquicia` / `costos_preparacion_franquicia` / `estimacion_inversion_inicial_franquiciador` (3); `contratar_abogado_especializado_franquicias` / `contratar_abogado_franquicias` / `eleccion_abogado_franquicias` (3); `elaboracion_fdd` / `preparar_fdd` (2); `comprender_definicion_legal_franquicia` / `marco_name_system_fee` (2); `deteccion_franquicia_inadvertida` / `estructuras_combinadas_franquicia` / `prevenir_franquicias_inadvertidas` (3); `confidencialidad_manual_operaciones` / `desarrollar_manual_operaciones` (2).
+
+**Verificado contra el universo entero: de las 43 operaciones del plan con nomina de dos nodos o mas (`OP-D-07` tiene una sola y no entra en la comparacion), `OP-S-10` es LA UNICA que cambia entre los dos cortes.** Las otras 42 (incluidas `OP-L-02`, las cinco mesas con sus 22 hijas y las seis `OP-D-01` a `OP-D-06`, ya verificadas en la vuelta pasada) se remidieron esta vuelta como control cruzado y dieron CERO cambios.
+
+**`OPERACIONES.jsonl` se edita: `OP-S-10` reescribe su nota con las dos cifras, el corte viejo al lado del nuevo (banco 9.21), y la nota de orden entre fases: `OP-S-10` es SANEO (fase 05) y el saneo corre DESPUES de las FUSIONES (fase 03, `00_INDICE.md`, seccion EL ORDEN). El precedente citable es `OP-F-03`, que ya escribio la misma precaucion para sus tres cruces ("en los tres manda el orden fuente primero").**
+
+**DISCUTIBLE MARCADO:** la frase del encargo "seis de sus treinta y un nodos habran sido absorbidos cuando le llegue el turno" NO se pudo reproducir con instrumento propio. Verificado: cero de los 31 nodos de la nomina aparecen en el campo `nodos` de ninguna operacion FUSION o DESTEJIDO ya LISTA (comando: interseccion de conjuntos contra las 69 operaciones). Hoy no hay ninguna fusion YA DECIDIDA que absorba a alguno de los 31: los seis actos de la tabla de arriba no tienen operacion propia ni superviviente elegido en ningun documento del plan. Lo unico medible es que 8 de los 31 caen dentro de un acto que algun dia se fundira, y de esos SOLO el par `elaboracion_fdd` / `preparar_fdd` es INTERNO a la propia nomina de `OP-S-10` (fusionar ese par absorbe con certeza a uno de los dos). Cuantos de los otros seis nodos terminan absorbidos depende de que nodo se elija superviviente en cada uno de los otros cinco actos, eleccion que no esta escrita en ningun sitio. Se trae la cifra de seis tal como la dio el encargo, sin reescribirla ni descartarla: la verifica el auditor con lo que tenga a mano.
+
+---
+
+## TAREA 2.A (vuelta 13): el barrido se completa sobre las 69
+
+**Universo: las operaciones que quedaron fuera del barrido de la vuelta pasada** (`OP-F-01` a `OP-F-04-RAC`, las doce `OP-S-*`, `OP-D-07`, `OP-E-01`, `OP-E-02`, `OP-E-04`, `OP-E-05`, las cinco `OP-C-*`, las dos `OP-A-*`, `OP-V-01`, `OP-I-01`, `OP-L-01`, `OP-L-03`; 35 operaciones). Comando: `python scripts/loop/barrido_vuelta13.py` para las 17 con nomina de dos nodos o mas; lectura directa de `adjudicacion` y `nota` en `docs/plan/OPERACIONES.jsonl` para las 18 sin nomina comparable.
+
+### Las operaciones CON nomina de dos nodos o mas (17, mas `OP-D-07` con una sola)
+
+| operacion | nomina | 2.117: leidos (A) / actos sobre nodos | 3.388: leidos (A) / actos sobre nodos | cambia |
+|---|---:|---|---|:--:|
+| `OP-F-01` | 7 | 0 (0) / 0 sobre 0 | 0 (0) / 0 sobre 0 | no |
+| `OP-F-02` | 3 | 0 (0) / 2 sobre 2 | 0 (0) / 2 sobre 2 | no |
+| `OP-F-03` | 21 | 1 (0) / 3 sobre 3 | 1 (0) / 3 sobre 3 | no |
+| `OP-F-04-COL` | 15 | 2 (1) / 3 sobre 4 | 2 (1) / 3 sobre 4 | no |
+| `OP-F-04-HOR` | 13 | 1 (0) / 1 sobre 1 | 1 (0) / 1 sobre 1 | no |
+| `OP-F-04-WEI` | 13 | 1 (1) / 7 sobre 8 | 1 (1) / 7 sobre 8 | no |
+| `OP-F-04-RAC` | 4 | 0 (0) / 3 sobre 3 | 0 (0) / 3 sobre 3 | no |
+| `OP-S-01` | 2 | 1 (1) / 1 sobre 2 | 1 (1) / 1 sobre 2 | no |
+| `OP-S-02` | 3 | 2 (1) / 2 sobre 3 | 2 (1) / 2 sobre 3 | no |
+| `OP-S-03` | 3 | 0 (0) / 0 sobre 0 | 0 (0) / 0 sobre 0 | no |
+| `OP-S-04` | 5 | 1 (1) / 1 sobre 2 | 1 (1) / 1 sobre 2 | no |
+| `OP-S-06` | 6 | 0 (0) / 2 sobre 2 | 0 (0) / 2 sobre 2 | no |
+| `OP-S-07` | 27 | 1 (0) / 9 sobre 9 | 1 (0) / 9 sobre 9 | no |
+| `OP-S-10` | 31 | 7 (1) / 3 sobre 4 | 17 (2) / 6 sobre 8 | SI, ver TAREA 1.2 |
+| `OP-E-04` | 9 | 8 (6) / 1 sobre 9 | 8 (6) / 1 sobre 9 | no |
+| `OP-E-05` | 3 | 1 (0) / 1 sobre 3 | 1 (0) / 1 sobre 3 | no |
+| `OP-D-07` | 1 | sin pares posibles (nomina de un solo nodo) | sin pares posibles | no |
+
+**CERO cambios salvo `OP-S-10`.** Verificado con el mismo instrumento sobre las 43 operaciones del plan entero con nomina de dos o mas (incluidas las 26 ya verificadas la vuelta pasada), la unica que cambia sigue siendo `OP-S-10`.
+
+### Las operaciones SIN nomina comparable (18)
+
+**Regla aplicada:** para cada una, razonamiento de por que su cifra publicada no depende del corte del cribado intra-dominio, salvo dos EXCEPCIONES encontradas y declaradas como tales (no forzadas a la regla).
+
+| operacion | cifra publicada | por que (no) depende del corte |
+|---|---|---|
+| `OP-S-05` | censo de herramientas: 6 muertas, 7 vivas, 1 no verificable, 14 verificadas | medida contra el estado de internet y el texto de los nodos, no contra INTRA_DOMINIO_VEREDICTOS.jsonl ni la cola. No depende del corte. |
+| `OP-S-08` | 42 accesos directos en produccion: 22 internos, 20 externos | medida sobre el codigo fuente (grep sobre web/lib y web/app), ajena al archivo de veredictos. No depende del corte. |
+| `OP-S-09` | 53 familias de ids, 125 nodos vivos | medida sobre los ids VIVOS del grafo por patron (sufijo, particulas, orden de palabras), no sobre veredictos A/D. El grafo no cambia porque se lean mas pares. No depende del corte. |
+| `OP-S-11` | normalizacion del campo `fuente` (grafias repetidas del mismo libro) | medida sobre metadatos del grafo (campo `fuente`), no sobre veredictos. No depende del corte. |
+| `OP-S-12` | 1.056 entradas duplicadas tras resolver, en 802 nodos (core 461, quality 306, health_safety...) | medida sobre `nodos_previos`/`nodos_siguientes` del grafo (estructura de aristas), no sobre el archivo de veredictos del cribado. No depende del corte. |
+| `OP-E-01` | bolsa de candidatos de enlaces: de 742 brutos a 624, calibrada a 477 | universo de generacion DISTINTO (paso del nodo contra titulo del hijo candidato), no INTRA_DOMINIO. La calibracion del verbo ya corrio y esta fija. No depende del corte del cribado intra-dominio. |
+| `OP-E-02` | regla de decision para sueltos (enlaza / funde / mesa), sin cifra propia | es una tabla de reglas, no una cuenta. El ejemplar medido (comprender_alineacion_etica_ia) es un caso ya resuelto. No depende del corte. |
+| `OP-C-01` | sitios de codigo listados con su numero de linea | ubicaciones de codigo, ajenas al archivo de veredictos intra-dominio. No dependen de ningun corte del cribado. |
+| `OP-C-02` | sitios de codigo listados con su numero de linea | igual que OP-C-01: ubicaciones de codigo, sin relacion con el cribado. |
+| `OP-C-03` | sitios de codigo listados con su numero de linea | igual que OP-C-01. |
+| `OP-C-04` | guarda de auto-arista con resolucion en Gate 0 | cambio de codigo, sin cifra ligada al cribado. |
+| `OP-C-05` | lista blanca de aristas bidireccionales (2 enlaces mutuos mas 2 citas LD) | lista fija por evidencia de lectura ya escrita (LD-41 y otra), no por el estado del cribado. No depende del corte. |
+| `OP-A-01` | regla de orden posicional del campo `fuente` (P.2) | regla sobre el orden del campo `fuente`, sin cifra ligada al cribado intra-dominio. |
+| `OP-A-02` | doctrina ("la aduana no juzga, obliga a juzgar") | doctrina pura, sin cifra. |
+| `OP-V-01` | doctrina ("el criterio de HECHO") | doctrina pura, sin cifra. |
+| `OP-L-01` | 11 lecturas dirigidas EJECUTADAS el 11 ago 2026, saldo 2 A y 9 D | hechos pasados ya escritos con su veredicto: no son una cuenta derivada del estado actual del archivo de veredictos, son eventos fijos. No dependen del corte. |
+
+**DOS EXCEPCIONES, declaradas y no forzadas a la regla de arriba:**
+
+**`OP-I-01` SI depende del corte, y su cifra publicada esta desactualizada.** Su nota (11 ago 2026) dice: "CUATRO DOMINIOS no han entrado al cribado intra (quality 792, health_safety 283, risk_management 55 y seguridad_digital 55)". **Verificado contra el archivo de hoy: los cuatro SI tienen pares leidos al corte 3.388.** Comando: contar `dominio` en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, corte 2.117 (`git show c16a24f5:docs/INTRA_DOMINIO_VEREDICTOS.jsonl`) contra corte 3.388.
+
+| dominio | pares leidos al 2.117 | pares leidos al 3.388 |
+|---|---:|---:|
+| quality | 0 | 844 |
+| health_safety | 0 | 192 |
+| risk_management | 0 | 106 |
+| seguridad_digital | 0 | 27 |
+
+**NO se recomputa aqui el inventario entero** (323 entradas de `10_INVENTARIO.md` e `INVENTARIO.jsonl`, incluida la propia cifra de "221 actos" que el mismo `OP-I-01` cita, tambien desactualizada contra los 335 de hoy): esta fuera del alcance de esta TAREA, que es sobre `OPERACIONES.jsonl`, no sobre el inventario navegable. **Se deja como DISCUTIBLE MARCADO y PENDIENTE DE DOCTRINA: el auditor decide si `OP-I-01` se reabre para un recomputo del inventario completo o si esta correccion basta como nota.**
+
+**`OP-L-03` no se pudo verificar en ningun sentido, y se declara asi en vez de forzarse.** Su cifra ("55 pares por leer, repartidos en 29 actos": uno de seis con 6 pares, cuatro de cinco con 15, nueve de cuatro con 19, quince de tres con uno cada uno) describe un backlog de PARES INTERNOS SIN LEER dentro de actos que estaban abiertos alrededor del 12 ago 2026. **El cribado avanzo de 2.117 a 3.388 pares entre ese momento y hoy, y el paso 4 de este documento ya midio que CINCO actos que estaban abiertos cerraron en ese tramo.** Si alguno de esos 55 pares queda dentro de un acto que ya cerro, el backlog de `OP-L-03` esta hoy sobreestimado, y no hay en el repositorio una lista estructurada de los 55 pares (solo prosa en la `nota`, sin `nodos` ni ids linea por linea) con la que recomputar sin inventar. **Se marca DISCUTIBLE y PENDIENTE DE DOCTRINA: la nomina de los 55 pares, si existe en algun sitio no encontrado, o el recomputo entero si no existe.**
+
+---
+
+### `OP-U-02`: "el recomputo no abre 48 fusiones: abre 44", recomputada con los dos criterios
+
+**Criterio del propio plan** (los abiertos que ya tienen dueno en otra fase, mesa o destejido, no se cuentan como fusiones que el recomputo abra), aplicado sobre los 55 abiertos al corte 3.388 (antes 48 al 2.117, sin borrar esa cifra). Comando: cruce de `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` (55 filas ABIERTO) contra el campo `nodos` (resuelto por alias) de toda operacion `OP-M-*` u `OP-D-*` salvo `OP-U-01`/`OP-U-02`.
+
+| tamano del acto | identificado por | dueno (mesa o destejido) |
+|---:|---|---|
+| 13 | `gestion_de_portafolio_gates_go_kill` (portafolio) | `OP-M-01` y sus hijas |
+| 9 | `customer_discovery` | `OP-M-05-INDICE` / `OP-M-05-EDIFICIO` |
+| 7 | `customer_validation` | `OP-M-05-APERTURA` |
+| 7 | `brainstorming_divergente` | `OP-D-04` |
+| 6 | `ab_testing_optimizacion` | `OP-D-03` |
+| 4 | `formalizar_junta_asesora` (junta asesora) | `OP-M-04` |
+| 4 | `enfoque_mercado_voc` (voz del cliente) | `OP-D-02` |
+| 3 | `pivote_estrategico` (pivote) | `OP-M-03-III` / `OP-M-03-ENLACES` |
+
+**OCHO actos ya tienen dueno en mesa o destejido. AL CORTE 3.388, CRITERIO DEL PROPIO PLAN: el recomputo no abre 55, abre 47** (55 menos los ocho).
+
+**AVISO DE TRAMPA, criterio ANCHO y distinto** (que alguna nomina de CUALQUIER operacion, no solo mesa o destejido, toque algun miembro del acto). Comando: mismo cruce, contra el campo `nodos` de TODAS las operaciones (`OP-F-*`, `OP-S-*`, `OP-E-*` incluidas). **Verificado, exacto contra la medicion del auditor: 11 de los 55 tocan alguna nomina y 44 no tocan ninguna.**
+
+**Que este segundo numero tambien de 44 sea coincidencia queda declarado: son dos cuentas distintas, sobre dos universos de tamano distinto (48 actos contra 55 actos) y con dos criterios distintos (dueno en mesa o destejido, contra toca cualquier nomina).** Entre los 44 que no tocan ninguna nomina bajo el criterio ancho estan las dos componentes enteramente nuevas (tamano 15 de `health_safety`, tamano 10 de `quality`) y **el de ocho del ciclo crear medir aprender (`build_measure_learn`), que a diferencia de los otros cuatro grandes citados en el paso 3 de este documento NUNCA tuvo dueno en ninguna operacion del plan, ni con el criterio ancho ni con el del propio plan.**
+
+**`OPERACIONES.jsonl` se edita: `OP-U-02` agrega esta correccion a su nota, sin borrar la cifra vieja del 2.117 (44).**
+
+### Comprobacion de integridad, TAREA 2.A
+
+Comando: `python -c "import json; ops=[json.loads(l) for l in open('docs/plan/OPERACIONES.jsonl',encoding='utf-8') if l.strip()]; ..."` (conteo de lineas, ids unicos, y resolucion de `depende_de`/`bloquea_a` contra el conjunto de ids).
+
+| comprobacion | antes | despues |
+|---|---:|---:|
+| operaciones (lineas) | 69 | 69 |
+| ids unicos | 69 | 69 |
+| ids duplicados | 0 | 0 |
+| `depende_de` rotos (apuntan a un id que no existe) | 0 | 0 |
+| `bloquea_a` rotos | 0 | 0 |
+
+**Lineas exactas cambiadas (`git diff --stat docs/plan/OPERACIONES.jsonl`): 2 de 69** (`OP-S-10` y `OP-U-02`, una linea cada una porque el archivo es JSONL de una operacion por linea). Ninguna otra linea se toco. `dataset/` no se toco ni un byte.
+
+---
+
+## TAREA 2.B (vuelta 13): el paso 2, releido al doble, sobre las 46
+
+**Efecto de la regla del credito (acta vuelta 12, seccion 4): el paso 2 del recomputo se corre sobre las 46 confirmadas enteras, no solo sobre las 36 con A.**
+
+### 1. La nomina de las 46, citada linea a linea (cero se reescriben)
+
+| cita | bloque | linea en FICHA_SUBFUSION_GRADIENTE.md |
+|---|---:|---:|
+| `producto_minimo_viable` | 80,2 | 3653 |
+| `coeficiente_viral` | 74,7 | 3654 |
+| `decision_de_vender_startup` | 69,3 | 3655 |
+| `viral_loop_marketing` | 65,9 | 3656 |
+| `transicion_producto_a_experiencia` | 60,1 | 3657 |
+| `lienzo_modelo_negocio` | 59,2 | 3658 |
+| `plan_mejora_procesos` | 56,7 | 3659 |
+| `ab_testing_optimizacion` | 52,6 | 3660 |
+| `planificacion_recoleccion_datos` | 52,3 | 3661 |
+| `key_partners_hypothesis` | 51,7 | 3663 |
+| `split_testing_experimentos_ab` | 51,5 | 3664 |
+| `project_close_out` | 50,3 | 3670 |
+| `blueprint_de_experiencia` | 50,3 | 3671 |
+| `voz_del_cliente_voc` | 50,2 | 3672 |
+| `cultura_de_experiencia` | 50,2 | 3673 |
+| `future_scenarios_planning` | 50,1 | 3676 |
+| `empoderamiento_de_participantes` | 50,1 | 3677 |
+| `schedule_management_plan` | 49,8 | 3680 |
+| `economia_circular_como_modelo_de_negocio` | 49,7 | 3682 |
+| `metas_vs_proposito` | 49,7 | 3683 |
+| `enfoque_motor_unico_crecimiento` | 49,5 | 3685 |
+| `principio_calidad_mvp` | 49,2 | 3686 |
+| `actualizacion_posiciones_existentes` | 49,0 | 3688 |
+| `analisis_tco_roi_b2b` | 48,9 | 3690 |
+| `customer_journey_mapping` | 48,6 | 3693 |
+| `organizacion_adaptativa` | 48,5 | 3695 |
+| `plan_de_adquisicion_acquire` | 48,3 | 3697 |
+| `ratios_eficiencia_inventario` | 48,3 | 3701 |
+| `modelo_hibrido_agile_stage_gate` | 48,1 | 3703 |
+| `ganar_comprension_del_cliente` | 48,0 | 3708 |
+| `mapa_de_canal_de_ventas` | 47,4 | 3715 |
+| `seleccion_ceo_fundador` | 46,8 | 3743 |
+| `cliente_disena_producto` | 46,6 | 3745 |
+| `asociaciones_clave` | 46,5 | 3746 |
+| `reduccion_tamano_de_lote_batch_size` | 46,0 | 3748 |
+| `sistema_inmune_producto` | 45,9 | 3750 |
+| `sales_funnel_get_keep_grow` | 45,9 | 3751 |
+| `estrategia_de_innovacion_producto` | 45,7 | 3753 |
+| `posicionamiento_de_empresa` | 45,6 | 3757 |
+| `gut_check` | 45,2 | 3762 |
+| `gestion_libro_abierto_obm` | 45,1 | 3763 |
+| `brainstorming_divergente` | 44,8 | 3766 |
+| `producto_unico_superior` | 44,2 | 3773 |
+| `revisiones_regulares_desempeno_ceo` | 44,2 | 3774 |
+| `optimizacion_embudo_get_customers` | 44,1 | 3775 |
+| `propuesta_gasto_capital` | 44,1 | 3776 |
+
+### 2. Partida en dos: las 15 con A vigente y las 31 sin ella
+
+**Las QUINCE con A vigente al corte 3.388, ya cerradas la vuelta pasada, con dueno en `OP-D-01` a `OP-D-06`:**
+
+`ab_testing_optimizacion`, `blueprint_de_experiencia`, `brainstorming_divergente`, `customer_journey_mapping`, `future_scenarios_planning`, `key_partners_hypothesis`, `optimizacion_embudo_get_customers`, `plan_de_adquisicion_acquire`, `principio_calidad_mvp`, `producto_minimo_viable`, `producto_unico_superior`, `propuesta_gasto_capital`, `seleccion_ceo_fundador`, `split_testing_experimentos_ab`, `voz_del_cliente_voc`
+
+**Las TREINTA Y UNA sin A vigente:**
+
+`actualizacion_posiciones_existentes`, `analisis_tco_roi_b2b`, `asociaciones_clave`, `cliente_disena_producto`, `coeficiente_viral`, `cultura_de_experiencia`, `decision_de_vender_startup`, `economia_circular_como_modelo_de_negocio`, `empoderamiento_de_participantes`, `enfoque_motor_unico_crecimiento`, `estrategia_de_innovacion_producto`, `ganar_comprension_del_cliente`, `gestion_libro_abierto_obm`, `gut_check`, `lienzo_modelo_negocio`, `mapa_de_canal_de_ventas`, `metas_vs_proposito`, `modelo_hibrido_agile_stage_gate`, `organizacion_adaptativa`, `plan_mejora_procesos`, `planificacion_recoleccion_datos`, `posicionamiento_de_empresa`, `project_close_out`, `ratios_eficiencia_inventario`, `reduccion_tamano_de_lote_batch_size`, `revisiones_regulares_desempeno_ceo`, `sales_funnel_get_keep_grow`, `schedule_management_plan`, `sistema_inmune_producto`, `transicion_producto_a_experiencia`, `viral_loop_marketing`
+
+### 3. Para cada una de las 31, dos preguntas: aparece en la nomina de alguna operacion, y cual
+
+| nodo | aparece en la nomina de | tipo de esa operacion |
+|---|---|---|
+| `actualizacion_posiciones_existentes` | `OP-F-04-HOR` | DECISION_DE_FUENTE (no fusion) |
+| `analisis_tco_roi_b2b` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `asociaciones_clave` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `cliente_disena_producto` | `OP-F-04-COL` | DECISION_DE_FUENTE (no fusion) |
+| `coeficiente_viral` | `OP-F-04-WEI` | DECISION_DE_FUENTE (no fusion) |
+| `cultura_de_experiencia` | `OP-F-04-COL` | DECISION_DE_FUENTE (no fusion) |
+| `decision_de_vender_startup` | `OP-F-04-HOR` | DECISION_DE_FUENTE (no fusion) |
+| `economia_circular_como_modelo_de_negocio` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `empoderamiento_de_participantes` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `enfoque_motor_unico_crecimiento` | `OP-F-04-WEI` | DECISION_DE_FUENTE (no fusion) |
+| `estrategia_de_innovacion_producto` | `OP-F-04-HOR` | DECISION_DE_FUENTE (no fusion) |
+| `ganar_comprension_del_cliente` | `OP-F-04-COL` | DECISION_DE_FUENTE (no fusion) |
+| `gestion_libro_abierto_obm` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `gut_check` | `OP-F-02` | DECISION_DE_FUENTE (no fusion) |
+| `mapa_de_canal_de_ventas` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `metas_vs_proposito` | `OP-F-04-COL`, `OP-F-04-HOR` | DECISION_DE_FUENTE (no fusion) |
+| `modelo_hibrido_agile_stage_gate` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `organizacion_adaptativa` | `OP-F-04-HOR` | DECISION_DE_FUENTE (no fusion) |
+| `plan_mejora_procesos` | `OP-F-04-HOR` | DECISION_DE_FUENTE (no fusion) |
+| `posicionamiento_de_empresa` | `OP-F-04-HOR` | DECISION_DE_FUENTE (no fusion) |
+| `project_close_out` | `OP-F-04-COL` | DECISION_DE_FUENTE (no fusion) |
+| `ratios_eficiencia_inventario` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `reduccion_tamano_de_lote_batch_size` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `revisiones_regulares_desempeno_ceo` | `OP-F-04-HOR` | DECISION_DE_FUENTE (no fusion) |
+| `sales_funnel_get_keep_grow` | `OP-F-04-WEI` | DECISION_DE_FUENTE (no fusion) |
+| `schedule_management_plan` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `sistema_inmune_producto` | `OP-F-04-COL` | DECISION_DE_FUENTE (no fusion) |
+| `transicion_producto_a_experiencia` | `OP-F-03` | DECISION_DE_FUENTE (no fusion) |
+| `viral_loop_marketing` | `OP-F-04-COL`, `OP-F-04-WEI` | DECISION_DE_FUENTE (no fusion) |
+| `lienzo_modelo_negocio` | NINGUNA | (sin dueno) |
+| `planificacion_recoleccion_datos` | NINGUNA | (sin dueno) |
+
+**Fraccion: de las 31, VEINTINUEVE aparecen en la nomina de alguna operacion (todas `OP-F-*`, decisiones de fuente, NO fusiones) y DOS no aparecen en ninguna.**
+
+**Precision necesaria para no confundir los dos sentidos de "dueno":** las 29 tienen dueno de FUENTE (una operacion que fija su atribucion bibliografica), no dueno de FUSION. Ninguna de las 31 tiene un par con A vigente (por eso estan en esta lista), asi que ninguna tiene gemelo con quien fundirse hoy, tenga o no una `OP-F-*` que le fije la fuente.
+
+### 4. Las 31 son costuras confirmadas SIN gemelo vigente
+
+**Las 31 son costuras confirmadas SIN gemelo vigente, o sea destejidos que NO son curas acopladas** (no hay fusion en el mismo acto que las acompane).
+
+**Lista declarada de las DOS que ademas no tienen dueno en ninguna operacion del plan** (ni de fuente ni de fusion): `lienzo_modelo_negocio` y `planificacion_recoleccion_datos`. **NO se crean operaciones nuevas para ellas ni para las otras 29: lo adjudica el auditor con esta lista delante.**
+
+### 5. Ningun nodo se releyo para decidir si tiene costura
+
+**Ningun nodo de las 31 (ni de las 15) se leyo de nuevo.** Los 46 veredictos CONFIRMADA/FALSA son copia literal de `docs/FICHA_SUBFUSION_GRADIENTE.md`; lo unico medido esta vuelta es la interseccion contra el conjunto de nodos con A vigente y contra las nominas de operaciones, ambas por id resuelto, sin abrir el texto de ningun nodo.
