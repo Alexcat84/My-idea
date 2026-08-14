@@ -95,15 +95,34 @@ def main():
         n = sum(1 for linea in open(ruta, encoding="utf-8") if linea.strip())
         print("  lineas de %-40s %d" % (nombre, n))
     clases = collections.Counter()
+    por_dominio = collections.defaultdict(collections.Counter)
+    puestos = []
     with open(VEREDICTOS, encoding="utf-8") as fh:
         for linea in fh:
             linea = linea.strip()
-            if linea:
-                clases[json.loads(linea).get("clase")] += 1
+            if not linea:
+                continue
+            v = json.loads(linea)
+            clases[v.get("clase")] += 1
+            por_dominio[v.get("dominio")][v.get("clase")] += 1
+            puestos.append(v.get("puesto_intra"))
     total = sum(clases.values())
     print("  marcador recomputado del archivo: " + ", ".join(
         "%s %d (%.1f)" % (c, clases[c], 100.0 * clases[c] / total)
         for c in sorted(clases)))
+    print("  puestos: %d a %d, huecos %d, duplicados %d" % (
+        min(puestos), max(puestos),
+        len(set(range(min(puestos), max(puestos) + 1)) - set(puestos)),
+        len(puestos) - len(set(puestos))))
+    print()
+    print("  LA TASA POR DOMINIO, recomputada hoy (el cribado no se movio en esta vuelta):")
+    print("    %-20s %6s %6s %6s %6s %6s %8s" % (
+        "dominio", "pares", "A", "B", "C", "D", "tasa A"))
+    for d in sorted(por_dominio):
+        c = por_dominio[d]
+        n = sum(c.values())
+        print("    %-20s %6d %6d %6d %6d %6d %7.1f%%" % (
+            d, n, c["A"], c["B"], c["C"], c["D"], 100.0 * c["A"] / n))
 
     titulo("1. LA FILA 7: los pasos de decision_de_vender_startup, y su historial con git")
     nid = "decision_de_vender_startup"
