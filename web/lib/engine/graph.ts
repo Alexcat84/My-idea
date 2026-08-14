@@ -267,6 +267,20 @@ export function obtenerPregunta(nodeId: string, node: NodoGrafo, cache: Pregunta
   );
 }
 
+/**
+ * La PREGUNTA de un nodo de cualquier era: su cacheada si la tiene, y si no la
+ * generica armada con su titulo.
+ *
+ * OP-C-03: RESUELVE antes de leer, y arregla DOS averias de la misma linea. Con
+ * un id de la era en que fusionar borraba, `graph[nid]` era undefined y armar la
+ * generica lanzaba TypeError; y aunque no lanzara, `cache[nid]` no encontraba la
+ * pregunta CURADA del superviviente y entregaba la plantilla.
+ */
+export function preguntaDeNodo(nid: string, graph: Grafo, cache: PreguntasCache): string {
+  const real = resolverId(nid, graph) ?? nid;
+  return obtenerPregunta(real, graph[real], cache);
+}
+
 export interface ResumenNodo {
   id: string;
   titulo: string;
@@ -275,15 +289,25 @@ export interface ResumenNodo {
   sucesores?: ResumenNodo[];
 }
 
+/**
+ * OP-C-03: RESUELVE AL ENTRAR, como ya hacen `etiquetaArbol` y `tituloDeNodo`
+ * mas arriba. El id llega del NODO ACTUAL de la sesion guardada, o sea de otra
+ * era: con uno de la era en que fusionar borraba, `graph[nid]` era undefined y
+ * el turno entero del interprete se caia con TypeError al armar su contexto.
+ *
+ * El `id` que sale es el que se PIDIO, no el resuelto: es el nodo actual de la
+ * sesion, y la sesion guarda su ruta con los ids que recorrio.
+ */
 export function resumenNodo(nid: string, graph: Grafo, preguntasCache?: PreguntasCache | null): ResumenNodo {
-  const n = graph[nid];
+  const real = resolverId(nid, graph) ?? nid;
+  const n = graph[real];
   const out: ResumenNodo = {
     id: nid,
     titulo: n.titulo_concepto,
     condiciones_activacion: (n.condiciones_activacion ?? []).slice(0, 2),
   };
   if (preguntasCache) {
-    out.pregunta_cache = obtenerPregunta(nid, n, preguntasCache);
+    out.pregunta_cache = obtenerPregunta(real, n, preguntasCache);
   }
   return out;
 }

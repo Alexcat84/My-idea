@@ -43,7 +43,7 @@ import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
 import { puedeRePreview } from "@/lib/engine/previewMundos";
-import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta } from "@/lib/engine/graph";
+import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta, resolverId } from "@/lib/engine/graph";
 import { estadoInicial } from "@/lib/engine/recorrido";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
@@ -146,8 +146,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (!brecha) {
     return NextResponse.json({ error: "Ya recorriste todas las puertas de este mundo." }, { status: 409 });
   }
-  if (!(brecha.semillaId in graph)) {
-    console.warn(`world/start: semilla '${brecha.semillaId}' de '${pack}' no está en el grafo (línea de ensamblaje pendiente)`);
+  // OP-C-03: el criterio es RESOLVER, no existir. Este era el unico de los veinte
+  // accesos que YA estaba guardado, y su guarda estaba escrita de mas: una semilla
+  // que la pasada renombro o fundio deja de estar en el grafo con su id viejo, y
+  // el 503 mataba el arranque del mundo que la persona acaba de pagar cuando la
+  // historia resolvia perfectamente.
+  const semillaId = resolverId(brecha.semillaId, graph);
+  if (!semillaId) {
+    console.warn(`world/start: semilla '${brecha.semillaId}' de '${pack}' no resuelve a ningún nodo de ninguna era (línea de ensamblaje pendiente)`);
     return NextResponse.json(
       { error: "Este mundo se está preparando. Muy pronto podrás explorarlo." },
       { status: 503 }
@@ -215,7 +221,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     }
   }
 
-  const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", mensaje, brecha.semillaId, pack);
+  const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", mensaje, semillaId, pack);
 
   // La sesión del preview queda amarrada a la fila: la compra genera el plan
   // DESDE ella sin re-entrevistar. Telemetría §6: preview_iniciado.
@@ -232,7 +238,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const dominios = await dominiosDesbloqueados(supabase, projectId);
 
   const estado = estadoInicial({
-    actualId: brecha.semillaId,
+    actualId: semillaId,
     perfilSesion: estadoVivo ?? "",
     textoOriginal: mensaje,
     nodosCubiertosPrevios: [...cubiertos],
@@ -252,7 +258,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // explorar ESTE mundo) ni preguntaDirigida (el mismo estado_vivo hacía
   // que la reescritura se comiera al nodo). Desde el turno 2, el
   // intérprete manda como siempre.
-  const pregunta = obtenerPregunta(brecha.semillaId, graph[brecha.semillaId], preguntasCache);
+  const pregunta = obtenerPregunta(semillaId, graph[semillaId], preguntasCache);
   const estadoConPregunta = {
     ...estado,
     preguntaPendiente: pregunta,
@@ -267,8 +273,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   };
 
   const puerta = {
-    id: brecha.semillaId,
-    etiqueta: etiquetaArbol(brecha.semillaId, graph),
+    id: semillaId,
+    etiqueta: etiquetaArbol(semillaId, graph),
     modo: "conversado" as const,
   };
   // P2b: en un mundo de protección la primera pregunta ya se ancla a una

@@ -2,7 +2,16 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { seleccionarAfines } from "../compass";
-import { cargarEntrySeeds, conceptosDeRuta, esOfrecible, faseDeNodo, type Grafo } from "./graph";
+import {
+  cargarEntrySeeds,
+  conceptosDeRuta,
+  esOfrecible,
+  faseDeNodo,
+  preguntaDeNodo,
+  resumenNodo,
+  type Grafo,
+  type PreguntasCache,
+} from "./graph";
 import { aMaterial, prepararPlan } from "./planRedactor";
 
 /**
@@ -258,5 +267,91 @@ describe("OP-C-02 - el plan de la sesion no pierde conceptos ni retrasa la fase"
     const src = leer("lib/engine/graph.ts");
     expect(src).toMatch(/export function conceptosDeRuta[\s\S]{0,200}tituloDeNodo/);
     expect(src).toMatch(/export function faseDeNodo[\s\S]{0,200}resolverId/);
+  });
+});
+
+/**
+ * OP-C-03: los accesos que ROMPEN. A diferencia de OP-C-02, estos tres no callan:
+ * lanzan TypeError o abortan el arranque de un mundo ya pagado. Que rompan no los
+ * hace menos caros, los hace mas visibles.
+ */
+const CACHE: PreguntasCache = {
+  superviviente: { pregunta: "La pregunta curada del que hoy representa esa historia" },
+  absorbido: { pregunta: "La pregunta curada del que se fundio dentro" },
+};
+
+describe("OP-C-03 - resumenNodo, la pregunta del recorrido y el arranque de mundo", () => {
+  it("resumenNodo de un id DEPRECADO cuenta la historia vigente", () => {
+    const r = resumenNodo("absorbido", GRAFO, CACHE);
+    expect(r.titulo).toBe("El concepto que hoy representa esa historia");
+    expect(r.pregunta_cache).toBe("La pregunta curada del que hoy representa esa historia");
+  });
+
+  it("resumenNodo de un id que YA NO ES NODO devuelve el del superviviente en vez de reventar", () => {
+    // Hoy `graph[nid]` es undefined y la lectura del titulo lanza TypeError: el
+    // turno entero del interprete se cae al armar su contexto.
+    const r = resumenNodo("borrado", GRAFO, CACHE);
+    expect(r.titulo).toBe("El concepto que hoy representa esa historia");
+    expect(r.pregunta_cache).toBe("La pregunta curada del que hoy representa esa historia");
+  });
+
+  it("la IDENTIDAD del resumen sigue siendo el id que se pidio", () => {
+    // Misma razon que en aMaterial: el id del resumen es el del NODO ACTUAL de la
+    // sesion, y la sesion guarda su ruta con los ids que recorrio.
+    expect(resumenNodo("absorbido", GRAFO, CACHE).id).toBe("absorbido");
+  });
+
+  it("la pregunta de un nodo de otra era es la CURADA del vigente, no la generica", () => {
+    // Dos averias en una linea: `graph[nid]` revienta con el id borrado, y
+    // `cache[nid]` no encuentra la pregunta curada del superviviente, asi que
+    // incluso cuando no reventaba entregaba la plantilla generica.
+    expect(preguntaDeNodo("absorbido", GRAFO, CACHE)).toBe(
+      "La pregunta curada del que hoy representa esa historia"
+    );
+    expect(preguntaDeNodo("borrado", GRAFO, CACHE)).toBe(
+      "La pregunta curada del que hoy representa esa historia"
+    );
+  });
+
+  it("sin pregunta curada, la generica se arma con el titulo VIGENTE y no revienta", () => {
+    expect(preguntaDeNodo("borrado", GRAFO, {})).toContain(
+      "El concepto que hoy representa esa historia"
+    );
+  });
+
+  it("el remache: los dos sitios de recorrido piden la pregunta por el ayudante", () => {
+    const src = leer("lib/engine/recorrido.ts");
+    expect(src).toContain("preguntaDeNodo(nid, graph, preguntasCache)");
+    expect(src).toContain("preguntaDeNodo(nuevoActualId, graph, preguntasCache)");
+  });
+
+  it("el remache: resumenNodo y preguntaDeNodo resuelven antes de leer", () => {
+    const src = leer("lib/engine/graph.ts");
+    expect(src).toMatch(/export function resumenNodo[\s\S]{0,200}resolverId/);
+    expect(src).toMatch(/export function preguntaDeNodo[\s\S]{0,200}resolverId/);
+  });
+
+  it("el remache: clasificar recibe los seeds ya pasados por la puerta unica", () => {
+    // clasificar.ts los lee a pelo en sus lineas 34, 35 y 36. Su texto dice que
+    // los recibe filtrados, asi que quien filtra es quien los carga.
+    const src = leer("app/api/session/start/route.ts");
+    expect(src).toContain("cargarEntrySeeds(graph)");
+    expect(src, "clasificar recibe la lista cruda del asset").not.toContain("cargarEntrySeeds()");
+  });
+
+  it("el remache: el arranque de mundo exige que la semilla RESUELVA, no que exista", () => {
+    // Hoy avisa y ABORTA con un 503 cuando podria resolver y seguir: una semilla
+    // renombrada por la pasada mata el arranque del mundo que la persona acaba de
+    // pagar.
+    const src = leer("app/api/project/[id]/world/[pack]/start/route.ts");
+    expect(src).toContain("resolverId(brecha.semillaId, graph)");
+    expect(src, "volvio el criterio de existir").not.toContain("brecha.semillaId in graph");
+    // Y RESOLVER PARA SEGUIR: el mundo arranca en el nodo que resuelve, no en el
+    // id viejo. Dejar el id viejo de nodo actual cambiaria un 503 ruidoso por un
+    // recorrido mudo sin sucesores, que es peor.
+    expect(src, "el mundo arranca en un id que puede no ser nodo").not.toContain(
+      "graph[brecha.semillaId]"
+    );
+    expect(src).toContain("actualId: semillaId");
   });
 });

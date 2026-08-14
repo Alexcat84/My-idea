@@ -94,7 +94,10 @@ export async function POST(request: Request) {
   }
 
   const graph = cargarGrafo();
-  const entrySeeds = cargarEntrySeeds();
+  // OP-C-03: los seeds llegan a clasificarEntrada YA PASADOS POR LA PUERTA
+  // UNICA. clasificar.ts los lee a pelo (graph[s].fase_proyecto y dos mas), y su
+  // texto dice que los recibe filtrados: quien filtra es quien los carga.
+  const entrySeeds = cargarEntrySeeds(graph);
   const preguntasCache = cargarPreguntasCache();
   const families = cargarFamilies();
 

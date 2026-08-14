@@ -26,7 +26,7 @@ import { parsearJson } from "../parseJson";
 import { SYSTEM_PREGUNTA_DIRIGIDA, SYSTEM_PROFUNDIZAR } from "../prompts";
 import { evaluarRuta, type EvaluacionCobertura, type Familia } from "../readiness";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
-import { esOfrecible, etiquetaArbol, obtenerPregunta, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
+import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
 import {
   interpretarMultiSalto,
@@ -268,7 +268,7 @@ export async function preguntaDirigida(
   ultimasPreguntas: string[],
   acumulado: UsoAcumulado
 ): Promise<{ pregunta: string; acumulado: UsoAcumulado }> {
-  const plano = obtenerPregunta(nid, graph[nid], preguntasCache);
+  const plano = preguntaDeNodo(nid, graph, preguntasCache);
   try {
     const ctx = {
       perfil_sesion: perfilSesion,
@@ -646,7 +646,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     const nuevoActualId = camino[camino.length - 1];
 
     if (preguntaNecesaria) {
-      const pregunta = resultado.preguntaAdaptada || obtenerPregunta(nuevoActualId, graph[nuevoActualId], preguntasCache);
+      const pregunta = resultado.preguntaAdaptada || preguntaDeNodo(nuevoActualId, graph, preguntasCache);
       estado = {
         ...estado,
         preguntaPendiente: pregunta,

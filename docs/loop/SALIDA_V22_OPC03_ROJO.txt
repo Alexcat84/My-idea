@@ -1,0 +1,690 @@
+
+ RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
+
+ ❯ lib/engine/accesosResueltos.test.ts (27 tests | 6 failed) 19ms
+     × resumenNodo de un id DEPRECADO cuenta la historia vigente 4ms
+     × resumenNodo de un id que YA NO ES NODO devuelve el del superviviente en vez de reventar 1ms
+     × la pregunta de un nodo de otra era es la CURADA del vigente, no la generica 1ms
+     × sin pregunta curada, la generica se arma con el titulo VIGENTE y no revienta 0ms
+     × el remache: resumenNodo y preguntaDeNodo resuelven antes de leer 1ms
+     × el remache: el arranque de mundo exige que la semilla RESUELVA, no que exista 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-03 - resumenNodo, la pregunta del recorrido y el arranque de mundo > resumenNodo de un id DEPRECADO cuenta la historia vigente
+AssertionError: expected 'El concepto viejo que se fundio dentro' to be 'El concepto que hoy representa esa hi…' // Object.is equality
+
+Expected: "El concepto que hoy representa esa historia"
+Received: "El concepto viejo que se fundio dentro"
+
+ ❯ lib/engine/accesosResueltos.test.ts:286:22
+    284|   it("resumenNodo de un id DEPRECADO cuenta la historia vigente", () =…
+    285|     const r = resumenNodo("absorbido", GRAFO, CACHE);
+    286|     expect(r.titulo).toBe("El concepto que hoy representa esa historia…
+       |                      ^
+    287|     expect(r.pregunta_cache).toBe("La pregunta curada del que hoy repr…
+    288|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-03 - resumenNodo, la pregunta del recorrido y el arranque de mundo > resumenNodo de un id que YA NO ES NODO devuelve el del superviviente en vez de reventar
+TypeError: Cannot read properties of undefined (reading 'titulo_concepto')
+ ❯ resumenNodo lib/engine/graph.ts:288:15
+    286|   const out: ResumenNodo = {
+    287|     id: nid,
+    288|     titulo: n.titulo_concepto,
+       |               ^
+    289|     condiciones_activacion: (n.condiciones_activacion ?? []).slice(0, …
+    290|   };
+ ❯ lib/engine/accesosResueltos.test.ts:293:15
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-03 - resumenNodo, la pregunta del recorrido y el arranque de mundo > la pregunta de un nodo de otra era es la CURADA del vigente, no la generica
+AssertionError: expected 'La pregunta curada del que se fundio …' to be 'La pregunta curada del que hoy repres…' // Object.is equality
+
+Expected: "La pregunta curada del que hoy representa esa historia"
+Received: "La pregunta curada del que se fundio dentro"
+
+ ❯ lib/engine/accesosResueltos.test.ts:308:55
+    306|     // `cache[nid]` no encuentra la pregunta curada del superviviente,…
+    307|     // incluso cuando no reventaba entregaba la plantilla generica.
+    308|     expect(preguntaDeNodo("absorbido", GRAFO, CACHE)).toBe(
+       |                                                       ^
+    309|       "La pregunta curada del que hoy representa esa historia"
+    310|     );
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-03 - resumenNodo, la pregunta del recorrido y el arranque de mundo > sin pregunta curada, la generica se arma con el titulo VIGENTE y no revienta
+TypeError: Cannot read properties of undefined (reading 'titulo_concepto')
+ ❯ obtenerPregunta lib/engine/graph.ts:264:26
+    262|   if (entry?.pregunta) return entry.pregunta;
+    263|   return (
+    264|     `Pensando en "${node.titulo_concepto}", cuentame en tus palabras `…
+       |                          ^
+    265|     "donde estas parado ahora mismo con tu idea y que es lo que mas " +
+    266|     "te preocupa o te entusiasma."
+ ❯ preguntaDeNodo lib/engine/graph.ts:273:10
+ ❯ lib/engine/accesosResueltos.test.ts:317:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/6]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-03 - resumenNodo, la pregunta del recorrido y el arranque de mundo > el remache: resumenNodo y preguntaDeNodo resuelven antes de leer
+AssertionError: expected '/**\r\n * graph.ts - Fase 3.0: port d…' to match /export function resumenNodo[\s\S]{0,2…/
+
+- Expected:
+/export function resumenNodo[\s\S]{0,200}resolverId/
+
++ Received:
+"/**
+ * graph.ts - Fase 3.0: port de las funciones de acceso al grafo de
+ * prototipo_motor.py (cargar_grafo, cargar_entry_seeds, sucesores_nivel,
+ * resumen_nodo, obtener_pregunta, _dominio_permitido). Los assets ya
+ * estan sincronizados como JSON estatico (scripts/sync_assets_web.py) --
+ * esto solo expone las mismas funciones de acceso que el CLI, sin
+ * recompilar nada.
+ */
+import masterGraphJson from \"../assets/master_graph.json\";
+import preguntasCacheJson from \"../assets/preguntas_cache.json\";
+import entrySeedsJson from \"../assets/entry_seeds.json\";
+
+export const MAX_OPCIONES = 6;
+export const MAX_SUCESORES_NIVEL2 = 4;
+export const DOMINIOS_DESBLOQUEADOS_DEFECTO = [\"core\"];
+
+export interface NodoGrafo {
+  /** Hygiene v1.3.1: etiqueta corta del arbol (4-5 palabras, segunda persona). */
+  etiqueta_arbol?: string;
+  node_id: string;
+  fase_proyecto: string;
+  dominio?: string;
+  titulo_concepto: string;
+  fuente?: string;
+  resumen_teorico: string;
+  pasos_accionables?: string[];
+  entregable_esperado?: string;
+  nodos_previos?: string[];
+  nodos_siguientes?: string[];
+  condiciones_activacion?: string[];
+  /** Fusión de duplicados: el nodo sigue EXISTIENDO (su historia resuelve) pero
+   * ya no se ofrece. Ver esOfrecible: es la única puerta que lo mira. */
+  deprecado?: boolean;
+  /** Los ids que este nodo absorbió al fusionarse. */
+  ids_alias?: string[];
+}
+
+export type Grafo = Record<string, NodoGrafo>;
+
+export interface PreguntaCacheEntry {
+  pregunta?: string;
+  [key: string]: unknown;
+}
+
+export type PreguntasCache = Record<string, PreguntaCacheEntry>;
+
+let _grafo: Grafo | null = null;
+let _preguntasCache: PreguntasCache | null = null;
+let _entrySeeds: string[] | null = null;
+
+export function cargarGrafo(): Grafo {
+  if (!_grafo) {
+    _grafo = (masterGraphJson as { nodos: Grafo }).nodos;
+  }
+  return _grafo;
+}
+
+export function cargarPreguntasCache(): PreguntasCache {
+  if (!_preguntasCache) {
+    _preguntasCache = preguntasCacheJson as PreguntasCache;
+  }
+  return _preguntasCache;
+}
+
+/** Las semillas de entrada. Con el grafo, pasan por la PUERTA ÚNICA: una
+ * semilla deprecada abriría el recorrido por un nodo que ya no se ofrece. */
+export function cargarEntrySeeds(graph?: Grafo): string[] {
+  if (!_entrySeeds) {
+    _entrySeeds = (entrySeedsJson as { seeds: string[] }).seeds;
+  }
+  return graph ? _entrySeeds.filter((nid) => esOfrecible(nid, graph)) : _entrySeeds;
+}
+
+// ── EL RESOLUTOR DE LA HISTORIA ──────────────────────────────────────────────
+//
+// LA PROMESA: \"la historia resuelve\". Cada fusión escribe `ids_alias` en el
+// superviviente, y la deprecación conserva el nodo absorbido entero (título,
+// resumen, aristas) justamente para que un recorrido viejo siga contando algo.
+//
+// LA PROMESA ESTABA A MEDIO CUMPLIR (auditoría del motor, ago 2026): el alias
+// se escribía, se declaraba en el tipo, y NADIE lo leía. 77 de los 285 alias
+// apuntan a ids que ya NO son nodos -- herencia de la era en que fusionar
+// BORRABA en vez de deprecar. Una referencia histórica a uno de ellos caía en
+// `?? nid` y el usuario veía el id crudo en su plan.
+//
+// Tres cosas aprendidas MIRANDO los datos, no suponiéndolas:
+//   1. el superviviente de un alias es SIEMPRE el nodo que lo lista, y ninguno
+//      está listado por dos nodos: la resolución es única, sin ambigüedad;
+//   2. hay CADENAS: 9 alias apuntan a un superviviente que a su vez fue
+//      absorbido después (`costo_de_calidad_5` -> `_6` -> el superviviente de
+//      la ronda 2). Por eso se camina la cadena en vez de dar un salto;
+//   3. hay 10 deprecados SIN sucesor: los que el auditor retiró de la selección
+//      porque no existe equivalente universal (los programas de OSHA, NIOSH,
+//      SBREFA, los programas estatales). Esos NO resuelven a otro nodo, y no
+//      deben: se representan a sí mismos, que conservan título y contenido.
+
+let _alias: Record<string, string> | null = null;
+
+/** alias -> el nodo que lo absorbió. Se construye una vez por proceso. */
+/**
+ * Lo MINIMO que el resolutor necesita mirar, por la misma razon que `esOfrecible`
+ * declara `NodoOfrecible`: asi lo usan igual el motor (que tiene el grafo entero)
+ * y el indice semantico (que solo carga unos campos), sin que ninguno tenga
+ * excusa para escribirse su propia resolucion. `Grafo` lo satisface entero.
+ */
+export type NodoResoluble = { deprecado?: boolean; ids_alias?: string[] };
+export type GrafoResoluble = Record<string, NodoResoluble>;
+
+function mapaDeAlias(graph: GrafoResoluble): Record<string, string> {
+  // El cache es por PROCESO y por el grafo de produccion, que es el unico que
+  // el motor carga. Un grafo distinto (un test con fixture sintetico) no puede
+  // leer el mapa del real: se le construye el suyo y no se cachea.
+  if (graph !== _grafo) {
+    const m: Record<string, string> = {};
+    for (const [nid, n] of Object.entries(graph)) {
+      for (const a of n.ids_alias ?? []) if (a !== nid) m[a] = nid;
+    }
+    return m;
+  }
+  if (_alias) return _alias;
+  const m: Record<string, string> = {};
+  for (const [nid, n] of Object.entries(graph)) {
+    for (const a of n.ids_alias ?? []) {
+      if (a !== nid) m[a] = nid; // el auto-alias (7 nodos) no dice nada
+    }
+  }
+  _alias = m;
+  return m;
+}
+
+/**
+ * Un id CUALQUIERA -- de hoy, de una fusión, o de la era en que se borraba --
+ * al nodo que hoy lo representa. `null` solo si el id no significa nada en
+ * ninguna era, que es el único caso que merece salir a la superficie como tal.
+ *
+ * Orden: el nodo activo si existe; si no, se camina la cadena de alias hasta
+ * uno activo; si la cadena entera fue retirada de la selección, el eslabón más
+ * RECIENTE que exista (tiene título, y es la versión más nueva de esa historia).
+ */
+export function resolverId(nid: string, graph: GrafoResoluble): string | null {
+  const n = graph[nid];
+  if (n && !n.deprecado) return nid;
+  const alias = mapaDeAlias(graph);
+  const visto = new Set<string>([nid]);
+  let cur = nid;
+  // El último nodo REAL que se pisó al caminar. Si la cadena entera fue
+  // retirada de la selección, ése es el representante honesto. Pasa en
+  // `involucramiento_sindical`, cuyo sucesor es el que el auditor retiró:
+  // devolver el punto de partida sería contar una versión más vieja.
+  let ultimoReal: string | null = n ? nid : null;
+  while (alias[cur] !== undefined) {
+    cur = alias[cur];
+    if (visto.has(cur)) break; // un ciclo no existe hoy; si aparece, se corta
+    visto.add(cur);
+    const c = graph[cur];
+    if (!c) continue; // eslabón de la era en que se borraba: se sigue caminando
+    ultimoReal = cur;
+    if (!c.deprecado) return cur;
+  }
+  return ultimoReal;
+}
+
+/** Fase 3.9: lo que se muestra en las SUPERFICIES DE NAVEGACIÓN (riel del
+ * árbol, cintillo de la tarjeta) es la etiqueta_arbol -- 4-5 palabras en
+ * segunda persona, generada para enamorar. El titulo_concepto (el nombre del
+ * libro) solo respalda en el DETALLE del nodo. \"La etiqueta enamora, el título
+ * respalda\".
+ *
+ * Pasa por el resolutor: una referencia histórica muestra el título de quien la
+ * representa hoy. El id crudo ya no lo alcanza ninguna referencia real -- solo
+ * un id que jamás existió. */
+export function etiquetaArbol(nid: string, graph: Grafo): string {
+  const real = resolverId(nid, graph) ?? nid;
+  return graph[real]?.etiqueta_arbol ?? graph[real]?.titulo_concepto ?? real;
+}
+
+/** El TÍTULO de un nodo por su id, de cualquier era. Mismo resolutor que
+ * etiquetaArbol, pero sin la etiqueta: para los sitios donde lo que se cita es
+ * el nombre del concepto (el material del juez, el perfil de sesión). */
+export function tituloDeNodo(nid: string, graph: Grafo): string {
+  const real = resolverId(nid, graph) ?? nid;
+  return graph[real]?.titulo_concepto ?? real;
+}
+
+/**
+ * Los CONCEPTOS de una lista de ids de cualquier era (la ruta conversada mas la
+ * cosecha), para comprimir el estado vivo de la sesion.
+ *
+ * OP-C-02: RESUELVE, no filtra. Aqui vivia un `.filter((nid) => nid in graph)`
+ * que dejaba caer de la lista el id de otra era, y el estado vivo se comprimia
+ * con MENOS conceptos de los que la persona recorrio. No lanzaba, no aparecia en
+ * ninguna prueba, y le quitaba material a su plan: callaba.
+ */
+export function conceptosDeRuta(nids: string[], graph: Grafo): string[] {
+  return nids.map((nid) => tituloDeNodo(nid, graph));
+}
+
+/**
+ * La FASE DE PROYECTO de un nodo de cualquier era, con su defecto declarado.
+ *
+ * OP-C-02: RESUELVE antes de leer. El `?? \"ideacion\"` de la ruta del plan no era
+ * un defecto razonable ante una referencia historica: era una degradacion
+ * silenciosa que le RETRASABA la fase del proyecto entero a la persona. El
+ * defecto sigue existiendo para el id que jamas fue nodo, que es su unico caso.
+ */
+export function faseDeNodo(nid: string, graph: Grafo, porDefecto = \"ideacion\"): string {
+  const real = resolverId(nid, graph) ?? nid;
+  return graph[real]?.fase_proyecto ?? porDefecto;
+}
+
+/**
+ * LA PUERTA ÚNICA DE OFERTA. Todo camino que le proponga un nodo al usuario
+ * pasa por aquí: los sucesores del recorrido, las semillas de entrada y los
+ * resultados del índice semántico.
+ *
+ * Es única a propósito, y es ley de la casa (adjudicada ago 2026). Antes había
+ * dos filtros de dominio: éste y una copia a mano dentro de compass.ts. Un
+ * criterio de elegibilidad repartido en varios sitios no falla de golpe: falla
+ * en el camino que alguien olvidó actualizar, y el síntoma aparece semanas
+ * después en el recorrido de una persona. Si mañana hace falta una condición
+ * nueva para ofrecer un nodo, se escribe AQUÍ o no se escribe.
+ *
+ * Tres cosas mira, en este orden:
+ *   1. que el nodo exista en el grafo,
+ *   2. que NO esté deprecado (fusionado dentro de otro: sigue existiendo para
+ *      que la historia resuelva, pero ya no se ofrece),
+ *   3. que su dominio esté desbloqueado para este proyecto.
+ */
+export type NodoOfrecible = { dominio?: string; deprecado?: boolean };
+
+export function esOfrecible(
+  nid: string,
+  // Lo MÍNIMO que la puerta necesita mirar. Así la usan igual el motor (que
+  // tiene el grafo entero) y el índice semántico (que solo carga dominio), sin
+  // que ninguno tenga excusa para escribirse su propio filtro.
+  graph: Record<string, NodoOfrecible>,
+  dominiosDesbloqueados?: string[] | null,
+): boolean {
+  const n = graph[nid];
+  if (!n) return false;
+  if (n.deprecado) return false;
+  return (dominiosDesbloqueados ?? DOMINIOS_DESBLOQUEADOS_DEFECTO).includes(n.dominio ?? \"core\");
+}
+
+export function sucesoresNivel(
+  nid: string,
+  graph: Grafo,
+  visitados: Set<string>,
+  limite = MAX_OPCIONES,
+  dominiosDesbloqueados?: string[] | null
+): string[] {
+  const siguientes = graph[nid]?.nodos_siguientes ?? [];
+  return siguientes
+    .filter((c) => !visitados.has(c) && esOfrecible(c, graph, dominiosDesbloqueados))
+    .slice(0, limite);
+}
+
+/** Pregunta abierta pregenerada para este nodo, o una generica si no esta
+ * en el cache. */
+export function obtenerPregunta(nodeId: string, node: NodoGrafo, cache: PreguntasCache): string {
+  const entry = cache[nodeId];
+  if (entry?.pregunta) return entry.pregunta;
+  return (
+    `Pensando en \"${node.titulo_concepto}\", cuentame en tus palabras ` +
+    \"donde estas parado ahora mismo con tu idea y que es lo que mas \" +
+    \"te preocupa o te entusiasma.\"
+  );
+}
+
+/** La PREGUNTA de un nodo de cualquier era: su cacheada si la tiene, y si no la
+ *  generica armada con su titulo. */
+export function preguntaDeNodo(nid: string, graph: Grafo, cache: PreguntasCache): string {
+  return obtenerPregunta(nid, graph[nid], cache);
+}
+
+export interface ResumenNodo {
+  id: string;
+  titulo: string;
+  condiciones_activacion: string[];
+  pregunta_cache?: string;
+  sucesores?: ResumenNodo[];
+}
+
+export function resumenNodo(nid: string, graph: Grafo, preguntasCache?: PreguntasCache | null): ResumenNodo {
+  const n = graph[nid];
+  const out: ResumenNodo = {
+    id: nid,
+    titulo: n.titulo_concepto,
+    condiciones_activacion: (n.condiciones_activacion ?? []).slice(0, 2),
+  };
+  if (preguntasCache) {
+    out.pregunta_cache = obtenerPregunta(nid, n, preguntasCache);
+  }
+  return out;
+}
+"
+
+ ❯ lib/engine/accesosResueltos.test.ts:330:17
+    328|   it("el remache: resumenNodo y preguntaDeNodo resuelven antes de leer…
+    329|     const src = leer("lib/engine/graph.ts");
+    330|     expect(src).toMatch(/export function resumenNodo[\s\S]{0,200}resol…
+       |                 ^
+    331|     expect(src).toMatch(/export function preguntaDeNodo[\s\S]{0,200}re…
+    332|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/6]⎯
+
+ FAIL  lib/engine/accesosResueltos.test.ts > OP-C-03 - resumenNodo, la pregunta del recorrido y el arranque de mundo > el remache: el arranque de mundo exige que la semilla RESUELVA, no que exista
+AssertionError: expected '/**\r\n * POST /api/project/[id]/worl…' to contain 'resolverId(brecha.semillaId, graph)'
+
+- Expected
++ Received
+
+- resolverId(brecha.semillaId, graph)
++ /**
++  * POST /api/project/[id]/world/[pack]/start — Fase 3.5, remodelada por la
++  * 4.5 (PREVIEW_MUNDOS_PLAN): arranca el PREVIEW GRATUITO del mundo.
++  *
++  * El muro de pago desapareció: la fila de project_unlocks nace gratis aquí
++  * (preview_at + preview_session_id) y el cobro vive en la ENTREGA del plan.
++  * Requisitos en orden: plan core previo (candado de secuencia: el mundo se
++  * construye SOBRE la idea ya trabajada), un-preview-por-mundo (con
++  * diagnóstico listo y sin compra, solo un ciclo nuevo re-abre), y
++  * evaluacionBrecha determinística (estado_vivo + tipo de oferta + fase →
++  * semilla del pack, cero LLM). La sesión nace tipo 'inicial' con
++  * dominio=pack; sus planes heredan ese dominio y derivan checklist con él
++  * (la ruta del plan ya lo hace sola).
++  *
++  * Pre-integración (línea de ensamblaje pendiente): si la semilla aún no
++  * está en el grafo compilado de la web, 503 con palabras de persona —
++  * el mundo existe comercialmente pero su contenido llega con
++  * integrar_packs.py.
++  */
++ import { NextResponse } from "next/server";
++ import { responderResultadoTurno } from "@/lib/apiSesion";
++ import catalogo from "@/lib/assets/packs_catalog.json";
++ import { usoVacio } from "@/lib/costmeter";
++ import {
++   crearSesion,
++   dominiosDesbloqueados,
++   nodosCubiertos,
++   obtenerItemsDePlan,
++   obtenerProyecto,
++   registrarBitacora,
++ } from "@/lib/db";
++ import { createAnthropicClient } from "@/lib/anthropicClient";
++ import { anclarResultadoTurno } from "@/lib/engine/reformuladorProteccion";
++ import { esMundoProteccion, murallaSinPlan } from "@/lib/espacios";
++ import {
++   armarSnapshot,
++   ERROR_SNAPSHOT_ILEGIBLE,
++   snapshotComoTexto,
++   type FilaChecklistSnapshot,
++ } from "@/lib/engine/snapshotProyecto";
++ import { PACK_CLICKS_PACK } from "@/lib/dbContract";
++ import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
++ import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
++ import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
++ import { puedeRePreview } from "@/lib/engine/previewMundos";
++ import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta } from "@/lib/engine/graph";
++ import { estadoInicial } from "@/lib/engine/recorrido";
++ import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
++ import { createClient } from "@/lib/supabase/server";
++ 
++ export const runtime = "nodejs";
++ 
++ export async function POST(request: Request, { params }: { params: Promise<{ id: string; pack: string }> }) {
++   const { id: projectId, pack } = await params;
++ 
++   const entrada = (catalogo.packs as Array<{ clave: string; nombre: string; promesa: string }>).find(
++     (p) => p.clave === pack
++   );
++   if (!entrada || !(PACK_CLICKS_PACK as readonly string[]).includes(pack)) {
++     return NextResponse.json({ error: "ese mundo no existe" }, { status: 404 });
++   }
++ 
++   const supabase = await createClient();
++   const {
++     data: { user },
++   } = await supabase.auth.getUser();
++   if (!user) {
++     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
++   }
++   // ETAPA 2 (la frontera): motor pagado; cuenta real.
++   if (esInvitadoInvisible(user)) {
++     return NextResponse.json(AVISO_LOGIN, { status: 401 });
++   }
++   if (await faltaSegundoFactor()) {
++     return NextResponse.json(AVISO_2FA, { status: 403 });
++   }
++   const proyecto = await obtenerProyecto(supabase, projectId);
++   if (!proyecto) {
++     return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
++   }
++ 
++   // Fase 4.5 (PREVIEW_MUNDOS_PLAN §4): el muro de PAGO desapareció. La fila
++   // del unlock ya no se compra: nace gratis al arrancar el preview (el muro de
++   // filtros del motor no cambia: sigue leyendo la fila). Lo que sí manda es el
++   // candado de SECUENCIA: el mundo se construye sobre la idea ya trabajada.
++   const { data: sesionesProyecto } = await supabase.from("sessions").select("id").eq("project_id", projectId);
++   const sessionIds = (sesionesProyecto ?? []).map((s: { id: string }) => s.id);
++   const { data: planesCore } = sessionIds.length
++     ? await supabase
++         .from("plans")
++         .select("id, created_at")
++         .in("session_id", sessionIds)
++         .eq("dominio", "core")
++         .in("etiqueta", ["inicial", "completo", "seguimiento"])
++         .order("created_at", { ascending: false })
++         .limit(1)
++     : { data: [] };
++   if (!planesCore || planesCore.length === 0) {
++     // La muralla del sin-plan (BANCO §7.1): un mundo de protección no puede
++     // evaluar sobre nada, así que se dice en persona y se ofrece el camino, en
++     // vez de generar un plan genérico. Copy ÚNICO e interpolado: el mundo se
++     // nombra, para que la frase diga de qué se está hablando.
++     return NextResponse.json({ error: murallaSinPlan(entrada.nombre) }, { status: 409 });
++   }
++   const planCoreMasNuevo = planesCore[0] as { id: string; created_at: string };
++   const planCoreMasNuevoAt = planCoreMasNuevo.created_at;
++ 
++   // Un preview por mundo por proyecto (§4): con diagnóstico listo y sin
++   // compra, solo un ciclo nuevo del proyecto re-abre la mirada gratis.
++   const { data: unlockRows } = await supabase
++     .from("project_unlocks")
++     .select("id, preview_at, resumen_md, resumen_at, plan_pagado_at")
++     .eq("project_id", projectId)
++     .eq("dominio", pack)
++     .limit(1);
++   const unlock = (unlockRows?.[0] ?? null) as {
++     id: string;
++     preview_at: string | null;
++     resumen_md: string | null;
++     resumen_at: string | null;
++     plan_pagado_at: string | null;
++   } | null;
++   if (unlock && !unlock.plan_pagado_at && !puedeRePreview(unlock, planCoreMasNuevoAt)) {
++     return NextResponse.json(
++       {
++         error:
++           `Tu diagnóstico de "${entrada.nombre}" ya está listo: puedes releerlo y generar su plan cuando quieras. ` +
++           "Cuando tu proyecto avance de ciclo, podrás explorarlo de nuevo gratis.",
++       },
++       { status: 409 }
++     );
++   }
++ 
++   const graph = cargarGrafo();
++   const preguntasCache = cargarPreguntasCache();
++   const cubiertos = await nodosCubiertos(supabase, projectId);
++   const estadoVivo = (proyecto.estado_vivo as string | null) ?? null;
++ 
++   const brecha = evaluacionBrecha(
++     pack,
++     estadoVivo,
++     (proyecto.tipo_oferta as string | null) ?? null,
++     (proyecto.fase_actual as string | null) ?? "ideacion",
++     cubiertos
++   );
++   if (!brecha) {
++     return NextResponse.json({ error: "Ya recorriste todas las puertas de este mundo." }, { status: 409 });
++   }
++   if (!(brecha.semillaId in graph)) {
++     console.warn(`world/start: semilla '${brecha.semillaId}' de '${pack}' no está en el grafo (línea de ensamblaje pendiente)`);
++     return NextResponse.json(
++       { error: "Este mundo se está preparando. Muy pronto podrás explorarlo." },
++       { status: 503 }
++     );
++   }
++ 
++   // El límite se cobra al FINAL de las validaciones (hallado por el vuelo:
++   // cobrarlo antes quemaba un arranque en el 503 de pre-integración).
++   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
++   const fusible = await verificarFusibleGlobal(user.email);
++   if (!fusible.permitido) {
++     return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
++   }
++   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
++   if (!limite.permitido) {
++     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
++   }
++ 
++   // Fase 4.5: la fila nace (o refresca su preview) GRATIS. Es la presencia del
++   // mundo en la idea y el sello del preview; el cobro vive en la ENTREGA del
++   // plan (ruta del plan, ancla ETAPA 2), ya no aquí. Tras las validaciones y
++   // los límites a propósito (lección 4.3: no dejar rastro en un 429/503).
++   const ahoraIso = new Date().toISOString();
++   if (!unlock) {
++     const { error: errInsert } = await supabase
++       .from("project_unlocks")
++       .insert({ project_id: projectId, dominio: pack, creditos_pagados: 0, preview_at: ahoraIso });
++     // 23505 = carrera con otro arranque: la fila ya está, seguimos.
++     if (errInsert && errInsert.code !== "23505") {
++       return NextResponse.json({ error: "no pudimos abrir el mundo, intenta de nuevo" }, { status: 500 });
++     }
++   } else if (!unlock.plan_pagado_at) {
++     await supabase.from("project_unlocks").update({ preview_at: ahoraIso }).eq("id", unlock.id);
++   }
++ 
++   const mensaje = `Exploración del mundo "${entrada.nombre}" (${entrada.promesa}) para mi idea. Contexto actual: ${
++     estadoVivo ?? (proyecto.entrada_original as string | null) ?? ""
++   }`;
++   // Mundos de protección (P1): su entrevista y su diagnóstico se aplican SOBRE
++   // las actividades reales del núcleo, así que el snapshot del ciclo vigente
++   // viaja con la sesión. LECTURA pura: nada del núcleo se muda ni se copia.
++   // Los mundos de mejora no lo llevan (su plan sale del contexto del negocio).
++   //
++   // VA ANTES DE crearSesion A PROPÓSITO. Si la lectura falla, el mundo NO
++   // arranca: un mundo de protección sin snapshot es exactamente el plan
++   // genérico que esta campaña existe para matar, y esta misma sesión es de la
++   // que después se compra el plan. Degradar en silencio dejaría al usuario
++   // pagando por lo que vinimos a eliminar (BANCO §9). Es lectura transitoria de
++   // sus propios datos: se falla honesto y reintenta, como el 502 del
++   // diagnóstico. Leerlo aquí garantiza que jamás nazca una sesión sin él.
++   let snapshotNucleo: string | null = null;
++   if (esMundoProteccion(pack)) {
++     try {
++       const filas = await obtenerItemsDePlan(supabase, projectId, planCoreMasNuevo.id);
++       snapshotNucleo =
++         snapshotComoTexto(armarSnapshot(filas as unknown as FilaChecklistSnapshot[], estadoVivo ?? null)) || null;
++     } catch (e) {
++       console.error("[world/start] no se pudo leer el snapshot del núcleo:", e);
++       await registrarBitacora(supabase, projectId, "snapshot_ilegible", {
++         mundo: pack,
++         plan: planCoreMasNuevo.id,
++         motivo: e instanceof Error ? e.message : String(e),
++       });
++       return NextResponse.json({ error: ERROR_SNAPSHOT_ILEGIBLE }, { status: 502 });
++     }
++   }
++ 
++   const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", mensaje, brecha.semillaId, pack);
++ 
++   // La sesión del preview queda amarrada a la fila: la compra genera el plan
++   // DESDE ella sin re-entrevistar. Telemetría §6: preview_iniciado.
++   if (!unlock?.plan_pagado_at) {
++     await supabase
++       .from("project_unlocks")
++       .update({ preview_session_id: sessionId })
++       .eq("project_id", projectId)
++       .eq("dominio", pack)
++       .is("plan_pagado_at", null);
++     await registrarBitacora(supabase, projectId, "preview_iniciado", { mundo: pack });
++   }
++ 
++   const dominios = await dominiosDesbloqueados(supabase, projectId);
++ 
++   const estado = estadoInicial({
++     actualId: brecha.semillaId,
++     perfilSesion: estadoVivo ?? "",
++     textoOriginal: mensaje,
++     nodosCubiertosPrevios: [...cubiertos],
++     dominiosDesbloqueados: dominios,
++     // Fase 4.3: el motor debe saber que esta es una sesion DE MUNDO. Sin esto,
++     // 'salir' cerraria en vez de re-elegir puerta y el usuario que pago por
++     // este mundo se quedaria mirando una pantalla muda.
++     dominioSesion: pack,
++     snapshotNucleo,
++   });
++ 
++   // Fase v1.3.2 (cazado por el vuelo, dos veces): la PRIMERA pregunta del
++   // mundo es la CACHEADA de la semilla que eligió evaluacionBrecha —
++   // determinística, cero LLM, igual que la elección de la semilla. Ni
++   // intérprete (con un estado_vivo cargado de urgencias core juzgaba la
++   // semilla "desalineada" y salía en el turno 0: el usuario pagó por
++   // explorar ESTE mundo) ni preguntaDirigida (el mismo estado_vivo hacía
++   // que la reescritura se comiera al nodo). Desde el turno 2, el
++   // intérprete manda como siempre.
++   const pregunta = obtenerPregunta(brecha.semillaId, graph[brecha.semillaId], preguntasCache);
++   const estadoConPregunta = {
++     ...estado,
++     preguntaPendiente: pregunta,
++     ultimasPreguntas: [pregunta],
++   };
++   const resultado = {
++     tipo: "pregunta" as const,
++     estado: estadoConPregunta,
++     pregunta,
++     acumulado: usoVacio(),
++     nodosNuevos: [],
++   };
++ 
++   const puerta = {
++     id: brecha.semillaId,
++     etiqueta: etiquetaArbol(brecha.semillaId, graph),
++     modo: "conversado" as const,
++   };
++   // P2b: en un mundo de protección la primera pregunta ya se ancla a una
++   // actividad real. Si el anclaje falla, sigue la pregunta del grafo tal cual.
++   const anclado = await anclarResultadoTurno(createAnthropicClient(), resultado, resultado.acumulado);
++   return responderResultadoTurno(supabase, projectId, sessionId, anclado.resultado, anclado.acumulado, [puerta]);
++ }
++
+
+ ❯ lib/engine/accesosResueltos.test.ts:347:17
+    345|     // pagar.
+    346|     const src = leer("app/api/project/[id]/world/[pack]/start/route.ts…
+    347|     expect(src).toContain("resolverId(brecha.semillaId, graph)");
+       |                 ^
+    348|     expect(src, "volvio el criterio de existir").not.toContain("brecha…
+    349|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/6]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  6 failed | 21 passed (27)
+   Start at  13:46:40
+   Duration  12.83s (transform 4.75s, setup 0ms, import 12.63s, tests 19ms, environment 0ms)
+
+EXITCODE=1
