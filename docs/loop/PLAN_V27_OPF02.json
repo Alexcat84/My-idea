@@ -1,0 +1,196 @@
+{
+  "operacion": "OP-F-02",
+  "adjudicacion": "EL INJERTO SE DESTEJE Y EL BLOQUE DE IA SE REUNE EN UN SOLO DESTINO. Destino de los tres decidido por lectura (P.18) y publicado en 01_FUENTES.md en la vuelta 26, releido a ciegas por el auditor: NINGUNO de los diez miembros del racimo coincide en objeto, asi que los tres van a NODO PROPIO dentro del racimo.",
+  "cortes": [
+    {
+      "origen": "future_scenarios_planning",
+      "frontera": "1 a 5 / 6 a 13",
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "fuente_queda": "Business Model Generation (Osterwalder)",
+      "destino": {
+        "tipo": "nodo_propio",
+        "motivo_p18": "Ninguno de los diez miembros del racimo proyecta lo que la IA HARA: el bloque del mapa prueba lo que la maquina hace HOY. Sin miembro que coincida en objeto, P.18 manda nodo propio dentro de la familia.",
+        "mapa_destejido": {
+          "1": [
+            7,
+            10
+          ],
+          "2": [
+            6
+          ],
+          "3": [
+            7,
+            11
+          ],
+          "4": [
+            8
+          ],
+          "5": [
+            12
+          ],
+          "6": [
+            9,
+            13
+          ]
+        },
+        "pasos_destejidos": [
+          "Definir 2-3 escenarios plausibles de evolución de la IA para el sector, desde el crecimiento lineal de mejoras incrementales anuales hasta el exponencial de capacidad multiplicada 10x-100x en pocos años.",
+          "Identificar qué tareas críticas del negocio podrían automatizarse en cada escenario.",
+          "Evaluar el impacto de cada escenario en el modelo de negocio, la fuerza laboral y la propuesta de valor.",
+          "Diseñar un plan de contingencia o pivote que contemple al menos dos de los escenarios, para no quedar desprevenido.",
+          "Establecer señales de alerta temprana (regulatorias, tecnológicas, de mercado) que indiquen hacia qué escenario se está moviendo la realidad.",
+          "Revisar el análisis y ajustar la estrategia de adopción de IA periódicamente en función de esas señales, porque el ritmo real de avance puede cambiar el escenario más probable."
+        ],
+        "nuevo": {
+          "node_id": "escenarios_de_evolucion_de_la_ia",
+          "fase_proyecto": "planificacion",
+          "dominio": "core",
+          "titulo_concepto": "Escenarios de Evolución de la IA para tu Negocio",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+          "resumen_teorico": "Nadie sabe a qué velocidad va a avanzar la IA, y esperar a saberlo es una forma de decidir. En vez de apostar por un solo futuro, se trabaja con dos o tres escenarios plausibles de evolución, desde el avance lento y gradual hasta el salto de capacidad en pocos años, y se mira qué le pasa al negocio en cada uno. Lo que se busca no es acertar el futuro, sino tener escrito de antemano qué se hace en cada caso y qué señales avisan de hacia cuál se está moviendo la realidad.",
+          "pasos_accionables": [],
+          "entregable_esperado": "Dos o tres escenarios de evolución de la IA con su impacto en el modelo de negocio, su plan de contingencia y las señales de alerta que avisan hacia cuál se mueve la realidad",
+          "nodos_previos": [
+            "future_scenarios_planning"
+          ],
+          "nodos_siguientes": [],
+          "condiciones_activacion": [
+            "Cuando el negocio depende de tareas que la IA podría absorber y hay que decidir con qué ritmo de avance contar"
+          ],
+          "etiqueta_arbol": "Anticipa Hasta Dónde Llegará la IA"
+        }
+      },
+      "pasos_totales": 13,
+      "fuente_esperada": "Business Model Generation (Osterwalder) | Co-Intelligence_ Living and Wor - Ethan Mollick",
+      "prefijos": [
+        "Identificar qué tareas críticas de",
+        "Evaluar qué pasaría con tu modelo ",
+        "Diseñar un plan de contingencia o ",
+        "Revisar este análisis trimestralme",
+        "Definir al menos 2-3 escenarios pl",
+        "Evaluar el impacto de cada escenar",
+        "Establecer señales de alerta tempr",
+        "Revisar y ajustar la estrategia de"
+      ],
+      "pasos_que_salen_texto": [
+        "Identificar qué tareas críticas de tu negocio podrían automatizarse bajo un escenario de crecimiento lineal de IA (mejoras incrementales anuales).",
+        "Evaluar qué pasaría con tu modelo de negocio si la capacidad de la IA se multiplicara 10x-100x en pocos años (escenario exponencial).",
+        "Diseñar un plan de contingencia o pivote que contemple al menos dos de los escenarios (lineal vs exponencial) para no quedar desprevenido.",
+        "Revisar este análisis trimestralmente, ya que el ritmo real de avance de la IA puede cambiar el escenario más probable.",
+        "Definir al menos 2-3 escenarios plausibles de evolución de la IA relevantes para el sector del negocio (estancamiento, crecimiento lento, crecimiento acelerado).",
+        "Evaluar el impacto de cada escenario en el modelo de negocio, la fuerza laboral y la propuesta de valor.",
+        "Establecer señales de alerta temprana (regulatorias, tecnológicas, de mercado) que indiquen hacia qué escenario se está moviendo la realidad.",
+        "Revisar y ajustar la estrategia de adopción de IA periódicamente en función de estas señales."
+      ],
+      "huella": "señales de alerta temprana (regulatorias, tecnológicas, de mercado)"
+    },
+    {
+      "origen": "gut_check",
+      "frontera": "1 a 4 / 5 a 9",
+      "pasos_que_salen": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "fuente_queda": "The field guide to human-centered design",
+      "destino": {
+        "tipo": "nodo_propio",
+        "motivo_p18": "Ninguno de los diez coincide, y la direccion se invierte: en los diez el humano supervisa a la IA, aqui la IA audita al humano. Sin miembro que coincida en objeto, P.18 manda nodo propio dentro de la familia.",
+        "nuevo": {
+          "node_id": "critica_del_plan_con_ia",
+          "fase_proyecto": "ideacion",
+          "dominio": "core",
+          "titulo_concepto": "Crítica de tu Plan con IA",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+          "resumen_teorico": "Casi todo el uso de la IA en el negocio va en una dirección: tú le pides y la revisas. Aquí la dirección se invierte y se usa a la IA como crítico del plan propio, que es donde más rinde y donde menos duele equivocarse. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas de fallar, una versión alternativa del éxito, y la voz de personas conocidas que dirían lo que nadie del equipo se atreve a decir. El resultado no se acepta tal cual: se destila en riesgos con su mitigación.",
+          "pasos_accionables": [],
+          "entregable_esperado": "Un documento de riesgos y mitigaciones construido con las críticas que la IA le hizo a tu plan",
+          "nodos_previos": [
+            "gut_check"
+          ],
+          "nodos_siguientes": [],
+          "condiciones_activacion": [
+            "Cuando ya hay un plan o modelo de negocio escrito y conviene encontrarle los fallos antes de invertir en él"
+          ],
+          "etiqueta_arbol": "Deja que la IA te Critique"
+        }
+      },
+      "pasos_totales": 9,
+      "fuente_esperada": "The field guide to human-centered design | Co-Intelligence_ Living and Wor - Ethan Mollick",
+      "prefijos": [
+        "Describir el plan o modelo de nego",
+        "Pedir 10 formas específicas en que",
+        "Solicitar una visión de éxito alte",
+        "Invocar 2-3 personajes conocidos (",
+        "Sintetizar los hallazgos en un doc"
+      ],
+      "pasos_que_salen_texto": [
+        "Describir el plan o modelo de negocio a la IA con suficiente detalle",
+        "Pedir 10 formas específicas en que el plan podría fallar",
+        "Solicitar una visión de éxito alternativa",
+        "Invocar 2-3 personajes conocidos (emprendedores, líderes) para que critiquen el plan en su propia voz",
+        "Sintetizar los hallazgos en un documento de riesgos y mitigaciones"
+      ],
+      "huella": "documento de riesgos y mitigaciones"
+    },
+    {
+      "origen": "brainstorming_divergente",
+      "frontera": "1 a 4 / 5 a 8",
+      "pasos_que_salen": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "fuente_queda": "Change by Design, Revised and U - Tim Brown",
+      "destino": {
+        "tipo": "nodo_propio",
+        "motivo_p18": "El mas cercano es invitar_ia_a_todo (con principio_invitar_ia_siempre), pero su objeto es probar la IA en todas las tareas para mapear la frontera, no generar ideas. Por la vara del propio racimo (una pareja vecina se absorbe cuando HACE LO MISMO, no cuando DESARROLLA UNA LINEA suya) no se absorbe. Sin miembro que coincida en objeto, P.18 manda nodo propio dentro de la familia.",
+        "nuevo": {
+          "node_id": "ideacion_con_ia_en_la_sesion",
+          "fase_proyecto": "ideacion",
+          "dominio": "core",
+          "titulo_concepto": "Ideación con IA dentro de la Sesión",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+          "resumen_teorico": "La IA entra en la sesión de ideas como un participante más, no como sustituto del equipo. Su ventaja es el volumen y la variedad: produce lotes grandes y adopta estilos o puntos de vista que la sala no tiene. Su límite es el criterio, que sigue siendo humano: el lote se filtra después, y las ideas que sobreviven se cruzan entre sí para forzar híbridos que ninguna de las dos partes habría propuesto sola.",
+          "pasos_accionables": [],
+          "entregable_esperado": "Un lote ampliado de ideas generado con IA y ya filtrado por criterio humano",
+          "nodos_previos": [
+            "brainstorming_divergente"
+          ],
+          "nodos_siguientes": [],
+          "condiciones_activacion": [
+            "Cuando la sesión de ideas se queda corta de variedad y hace falta ampliar el abanico antes de converger"
+          ],
+          "etiqueta_arbol": "Suma la IA a tus Ideas"
+        }
+      },
+      "pasos_totales": 8,
+      "fuente_esperada": "Change by Design, Revised and U - Tim Brown | Co-Intelligence_ Living and Wor - Ethan Mollick",
+      "prefijos": [
+        "Usar la IA como un 'participante m",
+        "Solicitar a la IA que adopte perso",
+        "Generar un lote grande de ideas co",
+        "Iterar pidiendo a la IA que combin"
+      ],
+      "pasos_que_salen_texto": [
+        "Usar la IA como un 'participante más' en sesiones de brainstorming, pidiéndole explícitamente ideas alternativas o inusuales.",
+        "Solicitar a la IA que adopte personas o estilos distintos (ej. personajes, expertos, culturas) para forzar variedad de enfoques.",
+        "Generar un lote grande de ideas con IA y luego aplicar filtrado humano experto para seleccionar las más viables.",
+        "Iterar pidiendo a la IA que combine o cruce conceptos ya generados para crear ideas híbridas."
+      ],
+      "huella": "combine o cruce conceptos"
+    }
+  ]
+}

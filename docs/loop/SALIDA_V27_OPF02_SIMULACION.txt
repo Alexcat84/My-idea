@@ -1,0 +1,61 @@
+PLAN   : docs/loop/PLAN_V27_OPF02.json
+OPERACION: OP-F-02
+MODO   : --simular
+CORTES : 3
+==============================================================================
+
+------------------------------------------------------------------------------
+ORIGEN : future_scenarios_planning   frontera 1 a 5 / 6 a 13
+  pasos totales 13, salen 8, quedan 5
+  fuente: 'Business Model Generation (Osterwalder) | Co-Intelligence_ Living and Wor - Ethan Mollick'  ->  'Business Model Generation (Osterwalder)'
+    sale   6. Identificar qué tareas críticas de tu negocio podrían automatizarse bajo un escenario de crecimiento
+    sale   7. Evaluar qué pasaría con tu modelo de negocio si la capacidad de la IA se multiplicara 10x-100x en po
+    sale   8. Diseñar un plan de contingencia o pivote que contemple al menos dos de los escenarios (lineal vs exp
+    sale   9. Revisar este análisis trimestralmente, ya que el ritmo real de avance de la IA puede cambiar el esce
+    sale  10. Definir al menos 2-3 escenarios plausibles de evolución de la IA relevantes para el sector del negoc
+    sale  11. Evaluar el impacto de cada escenario en el modelo de negocio, la fuerza laboral y la propuesta de va
+    sale  12. Establecer señales de alerta temprana (regulatorias, tecnológicas, de mercado) que indiquen hacia qu
+    sale  13. Revisar y ajustar la estrategia de adopción de IA periódicamente en función de estas señales.
+  DESTEJIDO DECLARADO: 8 pasos de origen -> 6 pasos de destino
+    destino 1 <- origen [7, 10]
+    destino 2 <- origen [6]
+    destino 3 <- origen [7, 11]
+    destino 4 <- origen [8]
+    destino 5 <- origen [12]
+    destino 6 <- origen [9, 13]
+  DESTINO: NODO PROPIO escenarios_de_evolucion_de_la_ia
+  arista obligada: future_scenarios_planning.nodos_siguientes += escenarios_de_evolucion_de_la_ia
+  arista reciproca: escenarios_de_evolucion_de_la_ia.nodos_previos = ['future_scenarios_planning']
+
+------------------------------------------------------------------------------
+ORIGEN : gut_check   frontera 1 a 4 / 5 a 9
+  pasos totales 9, salen 5, quedan 4
+  fuente: 'The field guide to human-centered design | Co-Intelligence_ Living and Wor - Ethan Mollick'  ->  'The field guide to human-centered design'
+    sale   5. Describir el plan o modelo de negocio a la IA con suficiente detalle
+    sale   6. Pedir 10 formas específicas en que el plan podría fallar
+    sale   7. Solicitar una visión de éxito alternativa
+    sale   8. Invocar 2-3 personajes conocidos (emprendedores, líderes) para que critiquen el plan en su propia vo
+    sale   9. Sintetizar los hallazgos en un documento de riesgos y mitigaciones
+  DESTINO: NODO PROPIO critica_del_plan_con_ia
+  arista obligada: gut_check.nodos_siguientes += critica_del_plan_con_ia
+  arista reciproca: critica_del_plan_con_ia.nodos_previos = ['gut_check']
+
+------------------------------------------------------------------------------
+ORIGEN : brainstorming_divergente   frontera 1 a 4 / 5 a 8
+  pasos totales 8, salen 4, quedan 4
+  fuente: 'Change by Design, Revised and U - Tim Brown | Co-Intelligence_ Living and Wor - Ethan Mollick'  ->  'Change by Design, Revised and U - Tim Brown'
+    sale   5. Usar la IA como un 'participante más' en sesiones de brainstorming, pidiéndole explícitamente ideas 
+    sale   6. Solicitar a la IA que adopte personas o estilos distintos (ej. personajes, expertos, culturas) para 
+    sale   7. Generar un lote grande de ideas con IA y luego aplicar filtrado humano experto para seleccionar las 
+    sale   8. Iterar pidiendo a la IA que combine o cruce conceptos ya generados para crear ideas híbridas.
+  DESTINO: NODO PROPIO ideacion_con_ia_en_la_sesion
+  arista obligada: brainstorming_divergente.nodos_siguientes += ideacion_con_ia_en_la_sesion
+  arista reciproca: ideacion_con_ia_en_la_sesion.nodos_previos = ['brainstorming_divergente']
+
+==============================================================================
+RESUMEN
+  cortes aplicados en memoria: 3
+  nodos propios nuevos       : 3 ['escenarios_de_evolucion_de_la_ia', 'critica_del_plan_con_ia', 'ideacion_con_ia_en_la_sesion']
+  ficheros que se tocarian   : 6
+
+SIMULACION: cero escrituras.

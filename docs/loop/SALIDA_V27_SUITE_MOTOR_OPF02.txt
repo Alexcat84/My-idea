@@ -1,0 +1,49 @@
+Corredor unico de tests -- 24 archivo(s) encontrado(s)
+
+  OK    test_autocorreccion.py (0.3s)
+  FALLO test_aviso_curaduria.py (0.4s) -- exit code 1
+  OK    test_brujula_desfasada.py (0.7s)
+  OK    test_calculadora.py (0.1s)
+  OK    test_censo_solo_lectura.py (0.1s)
+  OK    test_cifras.py (1.0s)
+  OK    test_conversacion_incremental.py (0.1s)
+  OK    test_extractor_mundos.py (0.1s)
+  OK    test_fixtures_de_patrones.py (0.1s)
+  OK    test_gate_alias.py (0.2s)
+  OK    test_integrar_packs_reanuda.py (0.1s)
+  OK    test_juez_sesion.py (0.1s)
+  OK    test_leer_entrada_decode_error.py (0.1s)
+  OK    test_libro_mayor.py (0.1s)
+  OK    test_precedencia_superviviente.py (0.1s)
+  OK    test_pregunta_adaptada.py (0.2s)
+  OK    test_procedencia_etapas.py (0.1s)
+  OK    test_prueba_rumbos.py (0.2s)
+  OK    test_reporte_tipo_oferta.py (0.2s)
+  OK    test_resume_pregunta_pendiente.py (0.3s)
+  OK    test_salto_semantico.py (0.1s)
+  OK    test_sigamos_salida.py (0.3s)
+  OK    test_validador_esquema.py (0.3s)
+  OK    test_verificador_huerfanos.py (0.0s)
+
+======================================================================
+  1 de 24 test(s) fallaron
+======================================================================
+
+--- test_aviso_curaduria.py (exit 1) ---
+[stdout]
+ok: el nodo-fantasma-con-nombre tiene su chequeo de cero tolerancia
+  ok: la curaduria real trae 71 etiquetas
+  ok: suelto sobre copia revertida grita en rojo y sale con 2
+  ok: via integrar_packs (con e-bis detras) pasa limpio y callado
+  ok: sobre una copia intacta no dice nada
+  ok: el aviso avisa; no toca un solo archivo
+[stderr]
+Traceback (most recent call last):
+  File "C:\Users\AlexDesk\Documents\I have an idea\engine\test_aviso_curaduria.py", line 196, in <module>
+    main()
+  File "C:\Users\AlexDesk\Documents\I have an idea\engine\test_aviso_curaduria.py", line 191, in main
+    f()
+  File "C:\Users\AlexDesk\Documents\I have an idea\engine\test_aviso_curaduria.py", line 175, in test_todo_activo_tiene_vector_en_el_indice
+    assert not (activos - ids), (
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: hay 3 activos sin vector en el repo: ['critica_del_plan_con_ia', 'escenarios_de_evolucion_de_la_ia', 'ideacion_con_ia_en_la_sesion']

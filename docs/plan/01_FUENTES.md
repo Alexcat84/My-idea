@@ -266,6 +266,78 @@ remedio escrito necesita credenciales que estan fuera del repo mientras el bucle
 (`docs/loop/REPORTE.md`), con la salida del instrumento en
 `docs/loop/SALIDA_V26_MURO_INDICE.txt`.
 
+### EL CORTE SE HIZO, SE VERIFICO ENTERO Y SE DESHIZO: **EL MURO TIENE UNA SEGUNDA HILADA QUE NADIE HABIA MEDIDO** (14 ago 2026, vuelta 27)
+
+**El parrafo de arriba se queda entero, y ahora hay que anadirle lo que le faltaba.** La
+decision del fundador (opcion B estricta, registrada en `08_VERIFICACION.md`) levanta la
+primera hilada: permite el **ROJO DECLARADO del indice semantico exclusivamente para los ids
+que la pasada acaba de crear**, y con ella **el corte de `OP-F-02` se ejecuto entero y paso
+todas sus guardas**. Pero **hay una segunda hilada**, medida por primera vez hoy:
+
+> **EL GUARDIAN DE COMMIT (`.githooks/pre-commit`) CORRE LA SUITE DEL MOTOR Y ABORTA EL
+> COMMIT SI ESTA EN ROJO**, y `engine/test_aviso_curaduria.py` contiene **el mismo chequeo
+> del indice semantico**, midiendo el estado real del repo. **Con los tres nodos nuevos en el
+> arbol, NINGUN commit entra al historial**, ni siquiera uno que no los toque.
+
+**El rojo del indice esta permitido en `Gate 0` por decision escrita del fundador, y el
+historial lo rechaza igual.** Las dos reglas son vigentes y no se pueden cumplir juntas el
+dia que una operacion crea un nodo. **Eso es PARADA, y no la resuelve el ejecutor**: la
+salida esta en `docs/loop/SALIDA_V27_MURO_GUARDIAN.txt`, con el hook entero y el commit
+abortado. **El corte quedo deshecho y los tres nodos vuelven a estar intactos**; lo que
+sigue en pie es la medicion, que se publica aqui para que la proxima vuelta solo tenga que
+aplicarla:
+
+| # | origen | frontera aplicada | pasos antes / despues | **nodo propio creado** |
+|---:|---|---|---:|---|
+| 1 | `future_scenarios_planning` | **1 a 5 / 6 a 13** | 13 -> **5** | **`escenarios_de_evolucion_de_la_ia`**, 6 pasos |
+| 2 | `gut_check` | **1 a 4 / 5 a 9** | 9 -> **4** | **`critica_del_plan_con_ia`**, 5 pasos |
+| 3 | `brainstorming_divergente` | **1 a 4 / 5 a 8** | 8 -> **4** | **`ideacion_con_ia_en_la_sesion`**, 4 pasos |
+
+**LA FUENTE DE LOS TRES QUEDA REDUCIDA AL LIBRO QUE LES CORRESPONDE**, que es lo que la
+operacion manda preservar: Osterwalder, IDEO y Tim Brown. **Ninguno de los tres declara ya
+a Mollick**, y **el material de IA no se podo: viaja entero a la familia**, que es el verbo
+de la adjudicacion.
+
+**EL TOQUE UNICO DEL PRIMERO, ejecutado y con su mapa al lado.** Los ocho pasos que salen de
+`future_scenarios_planning` **entran como SEIS** en el nodo nuevo, porque los tramos 6 a 9 y
+10 a 13 eran la misma cuenta escrita dos veces. **Ningun elemento se pierde**, y por eso el
+mapa se publica en vez de resumirse:
+
+| paso del nodo nuevo | de que pasos de origen sale |
+|---:|---|
+| 1, definir dos o tres escenarios de evolucion, del lineal al exponencial | **7 y 10** |
+| 2, que tareas criticas podrian automatizarse en cada escenario | **6** |
+| 3, impacto en modelo de negocio, fuerza laboral y propuesta de valor | **7 y 11** |
+| 4, plan de contingencia o pivote que contemple al menos dos escenarios | **8** |
+| 5, senales de alerta temprana regulatorias, tecnologicas y de mercado | **12** |
+| 6, revisar y ajustar la adopcion periodicamente segun esas senales | **9 y 13** |
+
+> **LA COBERTURA DEL MAPA ES LA GUARDA: los ocho pasos de origen (6 al 13) aparecen todos en
+> la columna derecha.** El instrumento no deja ejecutar un destejido cuyo mapa deje un paso
+> fuera (`scripts/loop/vuelta27_cortar.py`, guarda de cobertura).
+
+**LA UNICA ARISTA QUE SE ESCRIBE ES LA QUE LA CREACION DE UN NODO OBLIGA:** de cada origen a
+su nodo nuevo (`nodos_siguientes` en el origen, `nodos_previos` en el nuevo). **Cero aristas
+mas**, y el campo `aristas_nuevas` de la operacion sigue vacio: **la pertenencia a la familia
+la declara la `fuente`**, que es como este plan nombra a las familias de libro.
+
+**EL CASO POSITIVO, corrido antes y despues** (`scripts/loop/vuelta27_caso_positivo.py opf02`):
+**seis pruebas, las seis CAEN antes del corte y las seis PASAN despues.** Las salidas de las
+dos corridas estan en `docs/loop/SALIDA_V27_OPF02_CASO_ANTES.txt` y
+`docs/loop/SALIDA_V27_OPF02_CASO_DESPUES.txt`.
+
+**Y `GATE 0` SALIO CON UN SOLO ROJO Y FUE EL DECLARADO**, medido con el corte aplicado
+(`docs/loop/SALIDA_V27_GATE0_OPF02.txt`): *3 activos sin vector*, y son exactamente los tres
+ids nuevos, **ninguno mas**; los otros diecinueve chequeos en verde, **71 etiquetas sin
+encoger** y las dos copias del grafo en el mismo blob. **La operacion es ejecutable; lo que
+no es committeable es su resultado.**
+
+> **EL PLAN DEL CORTE QUEDA ESCRITO Y SELLADO** en `docs/loop/PLAN_V27_OPF02.json`, con la
+> frontera, los prefijos de cada paso que sale leidos del grafo de hoy, el mapa del
+> destejido y el cuerpo entero de los tres nodos nuevos. **Aplicarlo es un comando**
+> (`python scripts/loop/vuelta27_cortar.py docs/loop/PLAN_V27_OPF02.json --ejecutar`), y
+> **no hay que volver a leer nada**.
+
 ---
 
 ## `OP-F-03`: EL PEGADO DE HUGOS
