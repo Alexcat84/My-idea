@@ -101,17 +101,34 @@ autor.**
 > frecuente.**
 
 **ADJUDICADO: MANDA LA CLASE.** La unidad de decision es **la clase entera, sus
-siete miembros**, y no los cuatro que la aritmetica de los 18 tomaba. **La cuenta
+~~siete~~ miembros**, y no los cuatro que la aritmetica de los 18 tomaba. **La cuenta
 de 18 se recomputa con su corte y deja de gobernar el alcance.**
 
-> **La consecuencia operativa es exacta: el alcance pasa de CUATRO a SIETE nodos,
+> **La consecuencia operativa es exacta: el alcance pasa de CUATRO a ~~SIETE~~ nodos,
 > y la decision deja de depender de la fuente.** Que el septimo salga de dos libros
 > de fundadores y no de un manual **ya no es una excepcion que discutir**: es la
 > prueba de que la clase, y no el libro, es lo que manda.
 
-**VERIFICACION**: los siete tratados por la misma regla, sin excepciones caso por
+**VERIFICACION**: los ~~siete~~ tratados por la misma regla, sin excepciones caso por
 caso; ningun nodo de la clase con pasos alterados; y **la cifra de 18 reescrita
 con su corte alli donde este publicada**.
+
+> **CORRECCION DECLARADA (14 ago 2026, decision del fundador, camino A, regla P.17
+> del banco del plan): `background_startup_vs_corporativo` SALE de esta clase.** El
+> parrafo de arriba y la tabla de los tres se quedan enteros: el nodo SI declaraba
+> dos libros de fundadores y esa lectura no era falsa. **Lo que cambio es cual de
+> las dos clasificaciones vigentes manda.** El mismo nodo tambien estaba LEIDO Y
+> CONFIRMADO como injerto de Horowitz en `OP-F-04-HOR`, con frontera publicada dos
+> veces en este archivo (1 a 4 de Wasserman, 5 a 9 de Horowitz, ver LA NOMINA DE LOS
+> 14 DE HOROWITZ mas abajo). **Por P.17, LA LECTURA VENCE AL METADATO**: una
+> pertenencia confirmada contra los pasos con frontera escrita pesa mas que una
+> argumentada por la fuente del nodo. El nodo se desteje por `OP-F-04-HOR`.
+> **LA CLASE QUEDA EN SEIS MIEMBROS** (los 4 del Basic Guide mas los 2 de Juran), y
+> el alcance pasa de CUATRO a SEIS, no a SIETE. **La leccion de la clase NO se
+> cae**, cambia de ejemplar: la clase sigue mandando sobre la fuente para los seis
+> que quedan; lo unico que se pierde es este ejemplo particular de que ademas puede
+> mandar sobre un libro de fundadores. `OP-F-01` en `OPERACIONES.jsonl` lleva la
+> misma correccion en su campo `nodos` y en su `verificacion`.
 
 ---
 

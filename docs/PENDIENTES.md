@@ -2953,3 +2953,20 @@ aun asi repiten. **Una de cada nueve A del archivo** (55 de 473).
 - **La cobertura es baja donde hay mas aristas**: el error de mantenimiento va al 19% con
   **6 aristas**; la medicion que corrompe al 19% con **0**. **Donde hay aristas, el grafo
   ya resolvio parte del racimo.**
+
+## BACKLOG POST-CAMPAÑA (decision del fundador, 14 ago 2026)
+
+**Nacida de la parada de la fase 01 sobre `OP-S-07`/`OP-C-04`.** Las dos preguntas de
+codigo que la parada trajo **no bloquean nada del plan**: ninguna operacion las ordena,
+asi que se deciden DESPUES del merge, no dentro de la pasada.
+
+| pregunta | recomendacion que viaja con ella |
+|---|---|
+| **el resolutor unico** | hoy hay TRES implementaciones (el `resolverId` de `graph.ts` en el motor, la guarda de Gate 0, y el instrumento del ejecutor). Una sola fuente en Python para los scripts, la guarda importable desde ahi, y un test de paridad contra el `TypeScript` para que las tres no puedan divergir sin que algo se caiga |
+| **la guarda de gemelos dentro del Gate** | hoy el chequeo de gemelos no ve la divergencia que una operacion recien creo, porque compara contra el snapshot de antes del paso 6; hoy la caza la suite del motor, no el Gate. Meterla dentro del Gate es codigo nuevo |
+
+> **CODIGO QUE NINGUNA OPERACION ORDENA: SE DECIDE TRAS EL MERGE.** Las dos quedan
+> anotadas aqui para no perderlas, no para resolverlas ahora. La tercera pregunta de la
+> misma parada (estado `ejecutada` para las operaciones del plan) **NO entra en este
+> backlog: se decidio SIN estado nuevo**, el estado de verdad sigue siendo el repo y el
+> commit por operacion es su registro de ejecucion.

@@ -857,3 +857,36 @@ descuido: **una fusion que no retira lo que ella misma vuelve redundante.**
 > 1.056 duplicadas de hoy siguen siendo trabajo de `OP-S-07` y `OP-S-12`, que ya
 > estan escritas y adjudicadas. `P.16` gobierna las fusiones QUE VIENEN, no
 > reescribe las que ya pasaron.
+
+---
+
+## P.17 LA LECTURA VENCE AL METADATO
+
+**Adoptada el 14 ago 2026, decision del fundador.**
+
+> **CUANDO UN NODO VIVE EN DOS OPERACIONES, LA PERTENENCIA CONFIRMADA CONTRA LOS
+> PASOS CON FRONTERA ESCRITA VENCE A LA ARGUMENTADA POR METADATO (FUENTE, FORMATO,
+> FAMILIA).**
+
+**El ejemplar que la trajo: `background_startup_vs_corporativo`.** `OP-F-01` lo
+clasificaba en la clase LARGO LEGITIMO por metadato: declara dos libros, y eso
+rompia la exclusividad de los manuales. `OP-F-04-HOR` lo tenia LEIDO Y CONFIRMADO
+como injerto de Horowitz, con su frontera de paso publicada (1 a 4 de Wasserman, 5
+a 9 de Horowitz). **Las dos lecturas eran ciertas el mismo dia, y se contradicen**:
+por `P.3` el bloque del mismo tema se reparte obligatoriamente, y repartir tumba la
+clase; quedarse en la clase deja el injerto sin destejer.
+
+### LO QUE OBLIGA
+
+| | |
+|---|---|
+| **1** | ante la contradiccion, **gana la operacion que confirmo la pertenencia leyendo los pasos del nodo y publico una frontera**, no la que la argumento por un dato del nodo (de que libro sale, que formato tiene, a que familia pertenece) |
+| **2** | **la operacion perdedora corrige su nomina y su verificacion por CORRECCION DECLARADA**, sin borrar el texto viejo: la lectura que la sostenia no era falsa, solo perdio frente a una lectura mas fuerte |
+| **3** | la prosa que citaba al nodo perdedor como ejemplo **se corrige declarada en el mismo lugar**: el argumento general puede sobrevivir con otro ejemplar, y eso se dice, no se calla |
+
+> **ALCANCE, escrito el mismo dia de la adopcion:** ademas del ejemplar que la
+> trajo, `P.17` gobierna **los tres cruces ya declarados de `OP-F-03`**
+> (`principio_calidad_mvp` con `OP-D-01` y `OP-D-06`, `producto_unico_superior` y
+> `propuesta_gasto_capital` con `OP-D-06`), donde ya manda el orden fuente primero,
+> y **cualquier cruce futuro** que el plan descubra entre una operacion de fuente y
+> una de destejido o fusion.

@@ -123,3 +123,7 @@ nodo propio*). Con eso `OP-F-02` queda ejecutable.
 
 Nada de lo reservado se toco: cero merges, `dataset/` byte identico a HEAD tras cada
 corrida, los veredictos intactos, el `.env` fuera del repo.
+
+DECISION DEL FUNDADOR (14 ago 2026): caso 1 por el camino A con la regla P.17; caso 2 por
+regla de destino por lectura. Las tres preguntas: backlog post-campaña las dos de codigo;
+sin estado ejecutada. La fase 01 arranca.
