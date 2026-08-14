@@ -125,3 +125,7 @@ fuera de la guarda con el motivo escrito.
 El trabajo esta a salvo: nada reservado se toco, `dataset/` esta identico a HEAD (verificado
 por hash de blob), el experimento de `OP-S-07` nunca se commiteo, y todo lo medido esta
 commiteado con sus salidas en `docs/loop/`.
+
+DECISION DEL FUNDADOR (14 ago 2026): camino A. La letra de OP-S-07 se amplia a las 66; las 48
+alias-contra-alias quedan censadas como INERTES; la guarda de OP-C-04 mide sobre VIVOS y los
+deprecados quedan fuera con motivo escrito. La fase 0 se cierra.
