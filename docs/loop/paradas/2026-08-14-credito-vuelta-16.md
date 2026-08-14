@@ -137,3 +137,7 @@ en la misma direccion: inflar la diferencia.** Es la cuarta vuelta seguida con e
 14, 15 y 16). No cambia la parada, que es del ejecutor y esta medida tres veces, pero **si eliges
 cambiar de modelo, considera cambiar tambien el del auditor**: mi patron ya no es casualidad y esta
 declarado con nombre en el acta de cada vuelta.
+
+DECISION DEL FUNDADOR (14 ago 2026): opcion 2. Ejecutor a Opus 5, auditor a Fable 5. El credito
+queda restaurado y la FASE II continua. Y las dos costuras sin dueño RECIBEN DUEÑO: entran al plan
+como operaciones propias.

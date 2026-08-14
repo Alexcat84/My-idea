@@ -19,6 +19,13 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
    recomputa el marcador desde el archivo con tus propios comandos (python o
    jq); confirma cero huecos. Nada se acepta sin verificarse: ni del ejecutor
    ni tuyo. Toda perdida de catalogo declarada se re-verifica contra el grafo.
+   CRITERIO DE VERIFICACION, EL INSTRUMENTO MANDA (14 ago 2026; motivo: las
+   caidas de las vueltas 15 y 16 fueron las dos de esta especie): toda cifra
+   o nombre propio que publiques se lee de la salida del instrumento corrido
+   EN ESTA VUELTA. Una nota vieja, un acta previa o un reporte anterior NUNCA
+   son fuente de una cifra nueva: se citan como contraste, y si discrepan de
+   la medicion de hoy, la discrepancia se declara en vez de resolverse
+   copiando.
 2. RELECTURA CIEGA: empieza por los discutibles marcados del reporte. Imprime
    PRIMERO los pasos de los nodos, adjudica tu clase, y SOLO DESPUES destapa la
    razon escrita. Registra en docs/loop/ACTA_AUDITOR.md: cuantos coinciden,
