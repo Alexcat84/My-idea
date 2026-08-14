@@ -60,7 +60,7 @@ comparacion linea a linea contra el blob del commit `c16a24f5`: un solo cambio d
 
 ## PASO 2. EL BARRIDO DE CONFIRMADAS CONTRA LAS A
 
-**NO CORRIDO.**
+~~**NO CORRIDO.**
 
 **LA BUSQUEDA, tal como pide el encargo, empezando por los dos ficheros senalados:**
 
@@ -82,7 +82,69 @@ comparacion linea a linea contra el blob del commit `c16a24f5`: un solo cambio d
 **RESULTADO: la nomina de las 11 (ni la de las 46) no esta escrita como lista en ningun sitio del
 repositorio.** Por la instruccion del encargo, **el paso 2 NO SE CORRE**: no se inventa ni se
 reconstruye de memoria. Queda declarado como pendiente para quien tenga a mano la nomina original
-del cierre de costuras (probablemente en una sesion de trabajo que no dejo el listado en disco).
+del cierre de costuras (probablemente en una sesion de trabajo que no dejo el listado en disco).~~
+
+**CORRECCION DECLARADA (vuelta 12, adjudicacion del auditor: el paso 2 se puede correr sin
+inventar nomina, por la VIA ACOTADA). El paso pasa de NO CORRIDO A CORRIDO.**
+
+**LO QUE FALTABA NO ERA LA NOMINA DE LAS 46: era el archivo de salida del propio instrumento.**
+`docs/COSTURAS_INTERNAS.jsonl` existe, 128 filas con `node_id`, `dominio`, `pasos`, `corte`,
+`disparo_bloque` y `disparo_pareja` (verificado: 128 filas, campos exactos). No trae el veredicto,
+asi que la nomina de las confirmadas no esta ahi como dato directo; pero el paso 2 no necesita la
+nomina entera, solo necesita saber que citas caen dentro del retrato de las A.
+
+**1. Cruce de las 128 citas (resueltas por alias, P.1) contra los 854 nodos con al menos una A del
+paso 1 y 3.** Comando: recorrer `docs/COSTURAS_INTERNAS.jsonl`, resolver cada `node_id` por alias,
+y comparar contra el conjunto de nodos del paso 3. **Verificado por el ejecutor: la interseccion es
+de TREINTA Y SEIS nodos**, exacto contra la cifra del auditor. Las 128 citas resuelven a 128 nodos
+distintos (cero colisiones por alias en este universo), y de esos, 36 tienen al menos una A vigente
+al corte 3.388.
+
+**2. Para esos treinta y seis, y solo esos, el veredicto YA ESCRITO**, buscado en
+`docs/FICHA_SUBFUSION_GRADIENTE.md`. **Los treinta y seis, sin excepcion, aparecen en la tabla
+reconciliada de esa ficha** (lineas 3651 a 3780, "Las 128, con su fila y su veredicto", la misma que
+declara "cada una de las 128 citas leidas vive en exactamente una fila"): **36 de 36 tienen
+veredicto escrito, cero SIN VEREDICTO ESCRITO.** Ningun nodo se leyo de nuevo ni se adivino desde el
+texto: los 36 veredictos son copia literal de esa tabla, citados linea por linea.
+
+| clase | cuantos | nodos, con su linea en FICHA_SUBFUSION_GRADIENTE.md |
+|---|---:|---|
+| **CONFIRMADA** | **15** | `ab_testing_optimizacion` (3660), `blueprint_de_experiencia` (3671), `brainstorming_divergente` (3766), `customer_journey_mapping` (3693), `future_scenarios_planning` (3676), `key_partners_hypothesis` (3663), `optimizacion_embudo_get_customers` (3775), `plan_de_adquisicion_acquire` (3697), `principio_calidad_mvp` (3686), `producto_minimo_viable` (3653), `producto_unico_superior` (3773), `propuesta_gasto_capital` (3776), `seleccion_ceo_fundador` (3743), `split_testing_experimentos_ab` (3664), `voz_del_cliente_voc` (3672) |
+| **FALSA** | **21** | `captura_conocimiento_mercado` (3769), `control_estadistico_de_procesos` (3717), `criterios_equity_split` (3700), `design_for_six_sigma_dfss` (3710), `dso_dpo_gestion_capital_trabajo` (3777), `evaluacion_riesgo_calidad_organizacional` (3723), `eventos_offline_como_canal_traccion` (3764), `export_administration_regulations` (3716), `ferias_comerciales_franquicia` (3740), `founder_ceo_succession_process` (3665), `funcion_protect_politica_seguridad` (3724), `getting_started_maintenance` (3720), `metricas_accionables` (3741), `mix_ubicaciones_corporativas_franquicia` (3666), `modelo_spin_preguntas` (3747), `portfolio_management` (3767), `regalos_estrategicos_sorpresa` (3756), `tipos_innovacion_i_ii` (3779), `verificar_modelo_ingresos` (3692), `vesting_acciones_fundadores` (3759), `viaje_diagnostico_remedial` (3722) |
+| **SIN VEREDICTO ESCRITO** | **0** | (ninguno) |
+
+**3. Los que salen CONFIRMADA son las CURAS ACOPLADAS** (destejido y fusion en el mismo acto, banco
+9.4). **La ficha ya tiene la serie escrita** (SANO POR DENTRO, GEMELO POR FUERA, con sus ejemplares
+CUARTO a DUODECIMO mas el DECIMOTERCERO Y CUARTO, lineas 2899 a 3184) **y ninguno de los 15 es
+nuevo: los 15 ya estan escritos, se citan, no se reescriben:**
+
+- **Diez tienen ejemplar numerado propio** en la serie: `optimizacion_embudo_get_customers`
+  (CUARTO, linea 2940), `producto_unico_superior` (QUINTO, linea 2973),
+  `propuesta_gasto_capital` (SEXTO, linea 2990), `key_partners_hypothesis` (SEPTIMO, linea 3008),
+  `split_testing_experimentos_ab` (OCTAVO, linea 3029), `voz_del_cliente_voc` (NOVENO, linea 3051),
+  `ab_testing_optimizacion` (UNDECIMO, linea 3091), `seleccion_ceo_fundador` (DUODECIMO, linea
+  3111), `producto_minimo_viable` y `principio_calidad_mvp` (DECIMOTERCERO Y CUARTO, LA CURA
+  ACOPLADA MAYOR, linea 3118).
+- **Dos son el precedente citado dentro de esa misma serie**: `blueprint_de_experiencia` y
+  `customer_journey_mapping` (puesto 341, "precedente exacto" nombrado en la linea 3128, con su
+  propia seccion en la ficha, lineas 846 a 1260).
+- **Tres estan en la tabla "TRES que el goteo no habia encontrado"** del recuento completo del 13
+  ago 2026 (linea 3154 a 3163): `brainstorming_divergente` (tres gemelos, 823/834/844),
+  `future_scenarios_planning` (`escenarios_futuros`, 711) y `plan_de_adquisicion_acquire`
+  (`plan_acquire_activate`, 344).
+
+**VERIFICACION CRUZADA, no pedida por el encargo pero barata y decisiva: los 15 CONFIRMADA ya
+tienen operacion propia en `docs/plan/OPERACIONES.jsonl`.** Cada uno de los 15 aparece en la nomina
+de `nodos` de alguna `OP-D-01` a `OP-D-06`: `OP-D-01` (producto_minimo_viable,
+principio_calidad_mvp), `OP-D-02` (voz_del_cliente_voc), `OP-D-03` (ab_testing_optimizacion,
+optimizacion_embudo_get_customers, split_testing_experimentos_ab), `OP-D-04`
+(brainstorming_divergente), `OP-D-05` (seleccion_ceo_fundador), `OP-D-06` (todos los demas:
+blueprint_de_experiencia, customer_journey_mapping, future_scenarios_planning,
+key_partners_hypothesis, plan_de_adquisicion_acquire, producto_unico_superior,
+propuesta_gasto_capital, mas los dos que repite con `OP-D-01`). **Cero de los 15 quedan sin dueno.**
+El paso 2, corrido por la via acotada, no encuentra ninguna cura acoplada nueva que el plan no
+tuviera ya contemplada: confirma que `OP-D-01` a `OP-D-06` son exhaustivas sobre el universo de los
+36.
 
 ---
 
