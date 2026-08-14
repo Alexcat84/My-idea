@@ -123,13 +123,22 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
 - Credenciales ausentes: el `.env` de la raiz esta FUERA del repo mientras el
   bucle corra. Si una suite del Gate 0 las necesita, que falle visible: eso es
   PARADA legitima, y NO es motivo para devolverlas al repo.
-- APERTURA DE LA FASE III (decision del fundador, 13 ago 2026): cuando la
+- ~~APERTURA DE LA FASE III (decision del fundador, 13 ago 2026): cuando la
   FASE II quede cerrada y verificada, NO abras la FASE III. Escribe
   docs/loop/PARA_ALEXIS.md con el estado de cierre de la Fase II, la
   verificacion de la fase 0 si ya la tienes, y el plan de ataque de la
   Fase III, y deja PROMPT_SIGUIENTE.md VACIO. El fundador cambia el modelo
   del ejecutor antes de que se toque el primer nodo y relanza el bucle. Al
-  reanudar, el encargo de esa vuelta es la apertura de la Fase III.
+  reanudar, el encargo de esa vuelta es la apertura de la Fase III.~~
+  REVOCADA (decision del fundador, 14 ago 2026): el cambio de modelo que
+  esta parada protegia ya se aplico (ejecutor Opus 5, auditor Fable 5,
+  commit db6959b6). Al cerrar y verificar la FASE II, el auditor ABRE la
+  FASE III directamente: verificacion completa de apertura (recomputo
+  verificado y fase 0 en verde), creacion de la rama pasada-unica, y de
+  ahi el MODO DE EJECUCION CONTINUA de la seccion 3 tal como esta
+  escrito. Las demas condiciones de parada quedan intactas, incluida la
+  auditoria integral de cierre antes del merge, que sigue siendo de
+  Alexis.
 En PARA_ALEXIS.md: motivo, estado exacto (hash, marcador, fase), lo que se
 necesita de Alexis, y como retomar.
 
