@@ -1,55 +1,64 @@
-# REPORTE DE LA VUELTA 18 . Ejecutor: Opus 5 . 14 ago 2026
+# REPORTE DE LA VUELTA 19 . Ejecutor: Opus 5 . 14 ago 2026
 
 **FASE II, RECOMPUTO. MODO DE CIERRE.** Cero reparaciones de nodos, cero operaciones
-ejecutadas, FASE III sin abrir, `pasada-unica` sin crear.
+ejecutadas, FASE III sin abrir, `pasada-unica` sin crear, cribado sin tocar.
 
 > **REGLA 1 DEL EJECUTOR, aplicada sin excepcion: toda cifra de este reporte se lee de la
-> salida de un instrumento corrido EN ESTA VUELTA.** Las cifras de vueltas anteriores
-> aparecen solo como contraste y con su corte al lado. Donde mi medicion discrepa de una
-> cifra publicada, **la discrepancia se declara y la cifra vieja no se toca.**
+> salida de un instrumento corrido EN ESTA VUELTA.** Las cifras de vueltas anteriores solo
+> aparecen como contraste y con su corte al lado. **Donde mi medicion discrepa de una cifra
+> publicada, la discrepancia se declara y la cifra vieja no se toca.**
+
+> **AVISO DE CREDITO, contestado de frente.** El encargo dijo que si esta tanda deja una
+> caida de clase o de cifra publicada, el bucle PARA. **No conozco ninguna caida mia en
+> esta tanda, y por eso el trabajo va con las cifras remedidas dos veces y con las
+> discrepancias marcadas.** Lo que si trae esta vuelta es **una discrepancia contra una
+> premisa del propio encargo**, medida y declarada: la seccion 4.
 
 ---
 
 ## 0. LO PRIMERO: EL HASH, LAS RUTAS Y LO QUE NO SE TOCO
 
-**Hash del TRABAJO: `d697bc06`.** Este reporte se commitea despues, asi que **el hash del
-reporte es otro y no es el del trabajo**; se dice porque en la vuelta 17 esa distincion ya
-hizo falta.
+**Hash del TRABAJO: `7b21a8d0`.** Este reporte se commitea despues, **asi que el hash del
+reporte es otro y no es el del trabajo.**
 
-**Arbol al empezar: LIMPIO y sincronizado con `origin/bucle`.** No habia nada pendiente que
-commitear antes de tocar nada, y se comprobo antes de la primera edicion.
+**Arbol al empezar: LIMPIO y sincronizado con `origin/bucle`**, comprobado antes de la
+primera edicion. No habia nada pendiente que commitear.
 
-**LAS ONCE RUTAS del `git diff --stat 93203f48 d697bc06`, la lista COMPLETA:**
+**LAS NUEVE RUTAS del `git diff --stat 5a7b7d60 7b21a8d0`, la lista COMPLETA:**
 
 | ruta | que cambio |
 |---|---|
-| `docs/plan/00_INDICE.md` | TAREA 1.1: el tachado de las sesenta y seis mas el puntero del sales roadmap |
-| `docs/plan/10_INVENTARIO.md` | TAREA 1.3: la linea nueva del AVISO |
-| `docs/plan/INVENTARIO.jsonl` | TAREA 1.2 (una linea) mas TAREA 2.B (once lineas) |
-| `docs/plan/LD_SALES_ROADMAP.md` | **NUEVO**: las cinco lecturas dirigidas `LD-66` a `LD-70` |
-| `docs/plan/LECTURAS_DIRIGIDAS.md` | dos lineas: el backlog del sales roadmap pasa a leido, con tachado |
-| `scripts/plan/simular_destejido.py` | TAREA 1.4: la etiqueta de aviso orientativo |
-| `scripts/loop/vuelta18_medir.py` | **NUEVO**, instrumento de solo lectura |
-| `scripts/loop/vuelta18_puntero_defecto.py` | **NUEVO**, escribe una linea de `INVENTARIO.jsonl` |
-| `scripts/loop/vuelta18_sales_roadmap.py` | **NUEVO**, instrumento de solo lectura |
-| `scripts/loop/vuelta18_figuras.py` | **NUEVO**, instrumento de solo lectura |
-| `scripts/loop/vuelta18_nombrar_figuras.py` | **NUEVO**, escribe once lineas de `INVENTARIO.jsonl` |
+| `docs/plan/INVENTARIO.jsonl` | **ocho lineas**: cinco de TAREA 1, una mas de su segunda mitad, tres de TAREA 2.B (`EL PASO DE OFICIO` se toca en las dos, por eso son ocho lineas y nueve ediciones) |
+| `docs/plan/LD_ESTRELLA_DISRUPTIVAS.md` | **NUEVO**: la relectura del par periferico de la novena estrella |
+| `docs/plan/RECOMPUTO_3388.md` | **NUEVO al final**: seccion TAREA (vuelta 19), la FASE II medida bloque por bloque |
+| `scripts/loop/vuelta19_medir.py` | **NUEVO**, instrumento de solo lectura |
+| `scripts/loop/vuelta19_figuras.py` | **NUEVO**, instrumento de solo lectura |
+| `scripts/loop/vuelta19_fase2.py` | **NUEVO**, instrumento de solo lectura |
+| `scripts/loop/vuelta19_tarea1.py` | **NUEVO**, escribe cinco lineas de `INVENTARIO.jsonl` |
+| `scripts/loop/vuelta19_tarea1b.py` | **NUEVO**, escribe una linea de `INVENTARIO.jsonl` |
+| `scripts/loop/vuelta19_tarea2.py` | **NUEVO**, escribe tres lineas de `INVENTARIO.jsonl` |
 
-**LO RESERVADO SIGUE INTACTO, medido y no supuesto:** `git diff --name-only 93203f48
-d697bc06 -- dataset/ docs/INTRA_DOMINIO_VEREDICTOS.jsonl` devuelve **CERO lineas**. El
+**LO RESERVADO SIGUE INTACTO, medido y no supuesto:** `git diff --name-only 5a7b7d60
+7b21a8d0 -- dataset/ docs/INTRA_DOMINIO_VEREDICTOS.jsonl` devuelve **CERO lineas**. El
 archivo de veredictos conserva sus **3.388** lineas y el cribado sigue **CERRADO en 3.388
 de 3.388**.
 
-**Cero guiones largos y cero guiones medios en todo lo tocado**, comprobado archivo por
-archivo con un contador propio antes de cada commit. El hook corrio en los tres commits y
-dio verde las tres veces.
+**EL DIFF DEL INVENTARIO, verificado linea a linea contra `5a7b7d60`:** **671 entradas
+antes y 671 despues**, **663 identicas byte a byte y 8 tocadas**; en las ocho **la adicion
+es ADITIVA** (el valor nuevo empieza o acaba con el viejo, comprobado clave por clave), y
+**en ninguna aparece o desaparece una clave**. En siete solo cambia `nota`; en la del acto
+cambian `cobertura`, `estado` y `nota`, que es lo que el encargo pedia.
+
+**Cero guiones largos y cero guiones medios en las nueve rutas**, contado por mi con un
+lector propio antes de cada commit. **El hook corrio en los tres commits de trabajo y dio
+verde las tres veces.**
 
 ---
 
 ## 1. EL MARCADOR RECOMPUTADO, con instrumento propio de esta vuelta
 
-**Instrumento: `scripts/loop/vuelta18_medir.py`**, de solo lectura, sobre
-`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `docs/plan/OPERACIONES.jsonl` y
+**Instrumento: `scripts/loop/vuelta19_medir.py`**, de solo lectura, sobre
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `dataset/metadata/master_graph.json` y
 `docs/plan/INVENTARIO.jsonl`. **Corte: 14 ago 2026.**
 
 | clase | pares | % |
@@ -77,336 +86,396 @@ dio verde las tres veces.
 | **risk_management** | 106 | **0** | **0,0%** |
 | seguridad_digital | 27 | 3 | 11,1% |
 
-**Las diez filas calzan con el acta de la vuelta 17 celda por celda**, incluido el unico
+**Las diez filas calzan celda por celda con el acta de la vuelta 18**, incluido el unico
 cero del catalogo.
 
 ### La vara por tramo
 
 **No hay tramo nuevo que medir: el cribado esta CERRADO y esta vuelta no leyo ni un par de
-cola.** Las cinco lecturas de la TAREA 2.A son **dirigidas**, no entran en la cola y **no
-mueven el marcador**, exactamente como las 65 anteriores. **Lo unico que se midio por
-tramo es la curva de tres dominios**, y esta en la seccion 5 porque destapo una
-discrepancia.
+cola.** La unica lectura de esta vuelta es una **relectura dirigida** de un par que ya
+estaba adjudicado, y **no mueve el marcador ni entra en la cola**.
 
 ### Figuras y familias al dia
 
-| | medido hoy |
-|---|---:|
-| entradas de `INVENTARIO.jsonl` | **671** |
-| de tipo `acto` | **556** (221 superadas mas **335** vigentes) |
-| actos vigentes **CERRADOS** / **ABIERTOS** | **280** / **55** |
-| `familia_de_ids` | **53**: **23 contenidas, 14 partidas, 16 sin arista A** |
-| `figura` | **20** |
-| `defecto` | **19**, `racimo` **13**, `dominio` **10** |
-| **figuras que NOMBRAN** por el criterio de forma de la vuelta 17 | **18 de 20**, contra **7 de 20** al empezar |
-| **el plan** | **71 operaciones, 71 ids unicos, las 71 en LISTA** |
+| | medido hoy | contraste con la vuelta 18 |
+|---|---:|---|
+| entradas de `INVENTARIO.jsonl` | **671** | igual |
+| de tipo `acto` | **556** (221 superadas mas **335** vigentes) | igual |
+| actos vigentes **CERRADOS** / **ABIERTOS** | **281** / **54** | eran 280 / 55 |
+| deuda total de P.5, desde el inventario | **324 pares** | el acta 17 midio **329** |
+| `familia_de_ids` **53**, `figura` **20**, `defecto` **19**, `racimo` **13**, `dominio` **10** | igual | igual |
+| **figuras que NOMBRAN**, criterio de FORMA de la vuelta 17 | **20 de 20** | eran 18 de 20 |
+| **figuras con marca explicita de tanda de nombramiento** | **13 de 20** | eran 11 de 20 |
+
+**Las dos cuentas de figuras se publican JUNTAS y ninguna sola**, porque el acta de la
+vuelta 18 ya adjudico que la de forma tiene falsos positivos (su adjudicacion 9). **Las
+siete sin marca de tanda no estan sin nombrar: nacieron nombradas**, y esta vuelta lo
+comprobo entrada por entrada.
 
 ---
 
-## 2. TAREA 1: los cuatro registros, los cuatro aditivos
+## 2. TAREA 1: los cinco registros
 
-**1. `00_INDICE.md`.** Tachado sobre *"se ejecutan sesenta y seis operaciones LISTAS"*, con
-la cifra de hoy al lado y **remedida, no copiada**: `OPERACIONES.jsonl` tiene **71 lineas,
-71 ids unicos y estado LISTA en las 71**, cero en DECISION PENDIENTE. **Y se declaran las
-dos diferencias contra el marcador del 12 ago que sigue en esa misma pagina**: la fase 02
-lleva **9 y no 7** (`OP-D-08` y `OP-D-09`, las dos con `fecha_corte` 2026-08-14) y
-`OP-U-02` **ya no esta pendiente**. El marcador viejo **no se regenera**: se le pone el
-aviso. Y la linea de los cinco pares del sales roadmap recibe **el puntero a la nomina** de
-`RECOMPUTO_3388.md`, seccion TAREA vuelta 17, punto 4.
+**Los cinco son aditivos y ninguno borra texto viejo.** Cada cifra sale de
+`scripts/loop/vuelta19_medir.py`, corrido hoy.
 
-**2. `INVENTARIO.jsonl`, la entrada `defecto` "pares que una fusion reabre".** Adicion
-declarada **al final** del campo `nota`, con el puntero a `08_VERIFICACION.md` donde el
-1096 vive con su motivo. **La regla escrita en la entrada no se reescribe.** Diff de **UNA
-linea**: el script comprobo **670 de 671 identicas** antes de escribir y aborta si no lo
-son.
+**1. `LA BIFURCACION`, el aviso del contador: CORREGIDO.** Remedido: la palabra
+`bifurcacion` aparece en la razon de **SIETE puestos, 1054, 1106, 2030, 2050, 2147, 2198 y
+2478**, y **DOS de los siete SON los ejemplares** (el 2030 arranca *La bifurcacion del
+origen* y el 2050 *La bifurcacion del origen otra vez*). **Lo unico exclusivo del 2198 es
+la forma en MAYUSCULAS**, que aparece en **una sola razon**. **La leccion enderezada, y es
+distinta de la que el aviso daba:** un contador **si** encuentra estos dos ejemplares; **lo
+que no da es la figura**, porque de los siete puestos con la palabra solo dos son
+ejemplares y los otros cinco la usan en otro sentido. **Diff de una linea, la frase vieja
+entera.**
 
-**3. `10_INVENTARIO.md`, una linea mas al AVISO.** La frase *"sin pares pendientes: no
-puede crecer"* mide **los pares INTERNOS**. Medido en esta vuelta: **280 de las 335 notas
-de acto vigentes la llevan**, y el ejemplar que la desmiente es
-`gestion_terminacion_franquiciado`, cuya entrada del corte 2.117 decia *"tamano 2. Sin
-pares pendientes: no puede crecer"* con **1 de 1 pares leidos, 0 en cola y 0 fuera de
-cola**, y que hoy tiene **tres miembros** porque entro `perdida_control_operativo` **por la
-A del puesto 2190**, un nodo de fuera. **Las 335 notas NO se reescriben.** Queda escrito
-que quien regenere escribe **"sin pares internos pendientes: no puede crecer POR DENTRO"**.
+**2. `EL PASO DE OFICIO`, los "158 NODOS VIVOS": CORREGIDO.** Remedido sobre el grafo:
+**158 nodos en el dominio, 17 deprecado, 141 VIVOS**, que es la cifra que la entrada de
+tipo `dominio` de este mismo inventario ya publicaba. **La cota corregida es 6 de 141**, y
+**la cota se reconto sobre los 141 y da los mismos seis nodos, ninguno deprecado**; los
+diez pares de 130 no cambian. **Diff de una linea, la cifra vieja entera.**
 
-**4. `simular_destejido.py`.** La salida de la heuristica de referencias colgando **dice
-ahora con palabras que es AVISO ORIENTATIVO, no veredicto y no rotura**, en los dos casos:
-cuando encuentra algo y cuando no encuentra nada (**ese cero tampoco es un certificado**).
-**Ningun criterio del simulador cambio**: la corrida de humo contra `lienzo_modelo_negocio`
-da el mismo VEREDICTO DEL ESCENARIO que antes.
+**3. `ESTRELLA (9.23)`, la novena: REGISTRADA, y VERIFICADA 9 DE 9.** La cita del auditor
+verifica palabra por palabra contra `docs/INTRA_DOMINIO_INFORME.md`. **Pero el registro no
+quedo como el encargo lo escribio, porque la medicion dijo otra cosa: la seccion 4 de este
+reporte.**
 
----
+**4. El acto `customer_validation_sales_roadmap`: CERRADO, con el patron de las 221.**
+`cobertura` pasa a **15 de 15 pares leidos, 0 en cola, 0 fuera de cola**, `estado` de
+ABIERTO a **CERRADO**, y los dos candidatos (particion y forastero condicionado) quedan
+registrados **como candidatos y no como hechos**, con su condicion escrita y su puntero a
+`LD_SALES_ROADMAP.md`. **En los dos campos lo nuevo va al frente y el texto viejo queda
+entero detras.**
 
-## 3. TAREA 2.A: los cinco del sales roadmap, `LD-66` a `LD-70`
+> **REMEDIDO DESPUES DEL CAMBIO, con instrumento y no restando de memoria**, que es lo que
+> el encargo mandaba: **actos vigentes 281 CERRADOS y 54 ABIERTOS** (el acta esperaba 281 y
+> 54: coincide, y la coincidencia es de medicion, no de copia), y **la deuda total de P.5
+> en 324 pares**. **La medicion se hizo por DOS rutas independientes**, el campo `nota` y
+> el campo `cobertura` de las 335 entradas vigentes, **y las dos dan 324**. Antes del
+> cambio las dos daban **329**, que es la cifra del acta 17 con su corte.
 
-**Documento entero en `docs/plan/LD_SALES_ROADMAP.md`**, con el patron de
-`LD_ADOPT_ADVOCATE.md`: numero propio, nodos impresos, clase y razon.
+**5. Los punteros cruzados `ESTRELLA (9.23)` y `nodo puente`: PUESTOS EN LOS DOS SENTIDOS.**
+Cada nota dice que la forma mecanica coincide, que **lo que las separa es la CONSECUENCIA**
+(arreglese por separado sin mesa, contra cuidado que pueden ser dos familias), y apunta a
+la otra. **Y las dos citan el mismo caso que lo prueba:** `sales_roadmap_vs_sales_force`
+es estrella por los puestos 319 y 918 con periferico 1023, **y es a la vez el puente del
+acto**.
 
-| LD | el par | clase |
-|---|---|:--:|
-| `LD-66` | `customer_validation_sales_roadmap` contra `estrategia_de_ventas` | **D** |
-| `LD-67` | `customer_validation_sales_roadmap` contra `sales_roadmap` | **D** |
-| `LD-68` | `estrategia_de_ventas` contra `hoja_de_ruta_de_ventas` | **A** |
-| `LD-69` | `estrategia_de_ventas` contra `refinar_sales_roadmap` | **D** |
-| `LD-70` | `estrategia_de_ventas` contra `sales_roadmap_vs_sales_force` | **D** |
-
-**Saldo 1 A y 4 D. La cobertura del acto cierra en 15 de 15 y su deuda de P.5 baja a
-CERO.**
-
-### La pregunta de P.5, contestada por escrito
-
-**Por la letra del criterio (9.24, componente conexa) el acto es UNO, y ya lo era antes de
-estas lecturas:** medido con las seis A del archivo solas, los seis nodos formaban **una
-sola componente**. Las cinco de hoy anaden una A y **no mueven el conteo**. Lo que mueven
-es la FORMA.
-
-**Por la forma son DOS familias pegadas**, y la prueba se corrio con instrumento
-(`scripts/loop/vuelta18_sales_roadmap.py`), quitando primero cada nodo y despues cada
-arista:
-
-| se quita | componentes que quedan |
-|---|---|
-| `refinar_sales_roadmap` | **2**, de 3 y de 2 |
-| `sales_roadmap_vs_sales_force` | **2**, de 4 y de 1, con `customer_validation_sales_roadmap` **SUELTO** |
-| cualquiera de los otros cuatro nodos | 1 de 5 |
-| **la A del puesto 918** | **2**, de **4** y de **2** |
-| **la A del puesto 319** | **2**, de **5** y de **1** |
-| las otras cinco A (966, `LD-68`, 200, 255, 192) | 1 de 6, **ninguna corta** |
-
-> **UN NUCLEO DE CUATRO** (`sales_roadmap`, `hoja_de_ruta_de_ventas`,
-> `refinar_sales_roadmap`, `estrategia_de_ventas`; **5 de sus 6 pares en A**) **Y UNA COLA
-> DE DOS** (`customer_validation_sales_roadmap` y `sales_roadmap_vs_sales_force`, su unico
-> par en A), **cosidos por la cadena 918 mas 319, las dos por el mismo nodo.**
-
-**`estrategia_de_ventas` PERTENECE, no es forastero**, y falla las tres senales de la
-figura: tiene **dos A dentro del nucleo** (966 y `LD-68`), tiene a `refinar_sales_roadmap`
-**entre sus `nodos_previos`**, y **no entro por el nombre**. **La sospecha del encargo
-apuntaba al nodo equivocado.**
-
-**Y el que SI cumple el perfil del forastero es el nodo que le da NOMBRE al acto**,
-`customer_validation_sales_roadmap`: **cuatro D contra el nucleo**, su unica A hacia la
-cola, y **sus seis aristas apuntando todas fuera del acto**. Esto **no se pidio, sale de la
-medicion, y se declara sin ejecutar.**
-
-### Tres propuestas al plan, DECLARADAS y NO ejecutadas
-
-**Medido: de las 71 operaciones LISTAS, NINGUNA funde este acto.** La unica que nombra a
-alguno de los seis nodos es `OP-M-02-PROG`, y lo nombra **como arista entrante que su
-simulacion redirige**. **Ninguna operacion LISTA queda contradicha.**
-
-| # | la propuesta | su consecuencia si se adjudica |
-|---:|---|---|
-| **1** | la entrada de tipo `acto` pasa de **10 de 15** a **15 de 15** y de ABIERTO a CERRADO | los actos abiertos pasarian de **55 a 54**, los cerrados de **280 a 281**, y la deuda de P.5 de **329 pares a 324** |
-| **2** | el acto es candidato a **partirse en dos**, cuatro mas dos, cosidos por el 918 | cambia la nomina de una fusion futura, no una operacion de hoy |
-| **3** | `customer_validation_sales_roadmap` es candidato a **tercer ejemplar de la figura del forastero** | la figura pasaria de 2 a 3 ejemplares |
-
-> **La 2 y la 3 no son independientes: si el acto se parte, el forastero deja de serlo,
-> porque pasa a ser la mitad de su propia familia de dos.** Se dicen las dos y las adjudica
-> quien pueda.
-
-**Lo que estas cinco NO cambian:** la clase del racimo. Sigue **MEZCLADO** desde el 872.
-**El motivo escrito para no leerlos acerto en lo suyo y erro en lo otro:** la clase no se
-movio, **la forma si**.
+**LA MITAD QUE SE ME OLVIDO Y QUE MI PROPIO INSTRUMENTO DESTAPO.** El punto 4 del encargo
+pedia ademas la adicion en la nota de la figura `el forastero por cableado`, **y mi primer
+pase de TAREA 1 solo la escribio en la entrada del acto.** Lo levanto
+`scripts/loop/vuelta19_fase2.py` al medir el cierre (`candidato condicionado registrado en
+esta vuelta: False`), y se corrigio en `scripts/loop/vuelta19_tarea1b.py`, **en su propio
+script y con el motivo escrito en su cabecera, para que el orden real se pueda auditar en
+vez de quedar disimulado dentro del script anterior.**
 
 ---
 
-## 4. TAREA 2.B: las diez figuras chicas, nombradas
+## 3. TAREA 2.B: las tres figuras que faltaban
 
-**Once entradas de tipo `figura` reciben adicion ADITIVA al final de su `nota`.** Diff de
-**once lineas**: **660 de 671 identicas byte a byte**, y **ninguna otra clave cambia en
-ninguna de las once** (el script compara el resto del objeto antes y despues y aborta si
-difiere). Instrumento de verificacion: `scripts/loop/vuelta18_figuras.py`.
+**Instrumento: `scripts/loop/vuelta19_figuras.py`.** Criterio de ejemplar: el de la vuelta
+18, **CONFIRMADO por el acta de la vuelta 18** (seccion 3, adjudicacion 1).
 
-> **EL CRITERIO DE EJEMPLAR QUE USE, escrito para que se pueda discutir y marcado como
-> discutible mas abajo: un ejemplar es una instancia DECLARADA POR ESCRITO** (en el
-> informe, en el banco, en un expediente o en una lectura dirigida), **no cualquier par que
-> calce con la forma.** Cada puesto citado esta **verificado contra el archivo**: existe,
-> con esa clase y entre esos dos nodos.
+### 1. `SUBCONJUNTO ESTRICTO`: los 23, nombrados y verificados
 
-| figura | ejemplares nombrados | verifica |
-|---|---|:--:|
-| **LA VARA EN LOS DOS SENTIDOS (9.22)** | polo 1: **1077** C, **1240** C y **`LD-02`**; polo 2: **2080** A y **2105** A; mas el contraste **2091** D | 5 de 5 |
-| **ESTRELLA (9.23)** | **ocho** centros con sus radios y su periferico: 467/511/639 mas 636 y 1346; 184/820 mas 1201; 251/799 mas 1348; 507/641 mas 572; 1601/1602 mas 1609; 1966/1967 mas 1972; 2076/2090 mas 2086; 2074/2075 mas 2092 | 8 de 8 |
-| **TRIANGULO ABIERTO** | **1497, 1509, 1558** (los mercados de varios lados) y **377, 854, 855** (el proceso a tres alturas) | 6 de 6 |
-| **EL ESQUELETO COMPARTIDO** | **2001**, **2011** y **`LD-02`** | 3 de 3 |
-| **LAS DOS ADUANAS** | **2008, 2013, 2037, 2054, 2070**, repartidos entre cuatro nodos | 5 de 5 |
-| **LA BIFURCACION** | **2030** y **2050**, los dos colgando de `certificados_genericos_de_origen` | 2 de 2 |
-| **LOS DOS PARES QUE NO SE CRUZAN** | **1942** y **1969** en A, **2034** y **2059** en D, sobre cuatro nodos | 4 de 4 |
-| **LA A DE BLOQUE (P.4)** | ejemplar **`LD-06`**, contraejemplo **`LD-07`**, con la fuente doble verificada contra el grafo | 2 de 2 |
-| **LA COLA DEL DOMINIO SE AGOTA POR DENTRO (9.27)** | los tres dominios con sus rangos de puesto y sus tercios **remedidos hoy** | 3 de 3 |
-| **cobrar una A sin fundir** | la A del **puesto 488**, mas la segunda del mismo nodo, el **801** | 2 de 2 |
+**Las 23 que el campo `cobertura` declara son EXACTAMENTE las 23 razones del archivo que
+traen la etiqueta `SUBCONJUNTO ESTRICTO` en mayusculas**, y no es una coincidencia elegida
+a posteriori: **la aritmetica del informe reproduce exacta sobre ese conjunto.** El informe
+declara *de 12 ejemplares a 23, once nuevos en el tramo*; medido hoy, **los puestos con la
+etiqueta anteriores a ese tramo son DOCE y los once nuevos son esos once. 12 mas 11, 23.**
 
-**Veintidos ejemplares verificados uno por uno contra el archivo, CERO fallos**, y las ocho
-estrellas verificadas **con las DOS cuentas que 9.23 exige**, no con una.
+**Los 23 verificados uno por uno contra el archivo (existe, clase A, entre esos dos nodos):
+CERO FALLOS y LOS 23 EN A.** Core 1182, 1332, 1573; entrega 1601 y 1602; environmental
+1776, 1783, 1794, 1811; **exportacion siete** (1943, 1947, 1952, 1966, 1967, 2022, 2043);
+**franquicias siete** (2072, 2074, 2075, 2076, 2079, 2087, 2090).
 
-**`EL PASO DE OFICIO`: ACOTADA y NO nombrada, como pedia el encargo.** Medido sobre el
-grafo y sobre las 3.388 lineas: el dominio `exportacion` tiene **158 nodos vivos** y **130
-pares leidos**; **SEIS de los 158 nodos** traen la linea generica de la oficina
-(`barreras_comerciales_no_arancelarias` paso 1, `desmitificacion_barreras_exportacion` paso
-2, `ecosistema_global_emprendimiento_gee` paso 1, `investigacion_empresa_extranjera` pasos
-4 y 5, `programas_ex_im_bank` paso 6, `resolucion_problemas_de_pago` paso 2); **DOS** la
-traen en su paso 1; y **DIEZ de los 130 pares** tienen al menos un lado con ella. **El seis
-confirma la media docena** que la nota ya declaraba, que era su unico numero escrito. **El
-criterio es una heuristica de palabras, asi que la salida es una COTA y un aviso
-orientativo, no un veredicto: puede callar de menos.** Nombrar sus ejemplares **sigue
-pendiente**.
+> **DISCREPANCIA DECLARADA, con la cifra vieja intacta: el 23 cuenta ETIQUETAS, no
+> INSTANCIAS.** El puesto **511** esta **declarado por escrito** como subconjunto estricto
+> en el informe (tabla de la tanda R30: *"NADA. Es un subconjunto estricto"*) y ademas **las
+> razones del 1783 y del 1943 lo citan por su numero** dentro de la nomina corriente de la
+> figura. **Su propia razon no trae la etiqueta.** Contando instancias declaradas por
+> escrito son **24**. **El campo `cobertura` no se toca.**
 
-### Por que el grep nunca iba a servir, ahora con cifra en vez de con argumento
+### 2. `LA FIRMA POSICIONAL DEL INJERTO (P.2)`: las dos sedes, con los punteros verificados
 
-**La vuelta 15 descarto el grep y la vuelta 16 lo confirmo sobre las veinte. Esta vuelta
-mide POR QUE, y la cifra es mas fuerte que el argumento:**
+**DONDE VIVEN LOS 67:** `docs/plan/10_INVENTARIO.md`, seccion *LAS FUENTES, ya
+normalizadas*, tabla *LOS SEIS QUE APORTAN INJERTOS*. **Reproducida celda por celda con mi
+instrumento sobre el grafo, y calza entera:**
 
-| figura | ejemplares **declarados** | pares que **calzan con la forma**, contados a maquina |
+| libro | 1a o unica | 2a o posterior |
 |---|---:|---:|
-| **TRIANGULO ABIERTO** | **2** | **1.773** al corte 3.388, y **1.354** ya al corte 2.117 |
-| **ESTRELLA (9.23)** | 9 declarados, **8 localizados** | **33** centros que pasan las dos cuentas |
+| Hugos | **107** | **21** |
+| Coleman | **68** | **15** |
+| Horowitz | **88** | **14** |
+| Weinberg | **67** | **13** |
+| Rackham | **47** | **4** |
+| Mollick | **47** | **3** |
 
-> **La figura no es la forma: es la forma MAS la lectura**, y por eso ni un contador de
-> palabras ni un contador de estructuras la mide. **Y hay una consecuencia practica que no
-> estaba escrita: dos de las trece figuras tienen ejemplares que viven en LECTURAS
-> DIRIGIDAS y no en el archivo de veredictos** (`EL ESQUELETO COMPARTIDO` con `LD-02`, `LA
-> A DE BLOQUE` con `LD-06` y `LD-07`). **Ningun barrido sobre
-> `INTRA_DOMINIO_VEREDICTOS.jsonl` los iba a encontrar nunca, porque no estan ahi.**
+**La columna de segunda posicion suma 70 por libro y los NODOS DISTINTOS son 67**, porque
+tres nodos declaran dos de los seis a la vez: `metas_vs_proposito`, `viral_loop_marketing` y
+`principio_calidad_mvp`. **Y los 67 salen tambien por la via corta y dan el mismo conjunto
+exacto:** los nodos vivos cuyo campo `fuente` trae mas de un libro son **67**.
+
+**DONDE VIVE LA NOMINA DE LOS 43:** `docs/plan/01_FUENTES.md`, seccion *LA TANDA DE LOS
+INJERTOS: leidos los 43*, con su saldo, su tabla por grupo y sus cuatro decisiones de
+fuente. **Los 21 de Hugos estan nombrados uno a uno en `BANCO_DEL_PLAN.md`, ficha P.2.**
+**Diez ejemplares citables por nodo verificados contra el grafo**, los cuatro con corte
+exacto, los tres que no son un simple apendice y los tres de Mollick.
+
+> **DOS DISCREPANCIAS DECLARADAS, con las cifras viejas intactas.** **PRIMERA:** la tanda de
+> los cuatro libros mide **44 nodos distintos** con mi instrumento y el doc publica **43**.
+> **La diferencia entera es Horowitz**, que figura con **14** en la tabla de sede de
+> `10_INVENTARIO.md` y con **13** en la tabla de grupos de `01_FUENTES.md`. **Cual de los 14
+> queda fuera NO se puede decir, porque la nomina de los 13 no esta escrita en ninguna
+> parte:** del grupo solo hay conteos. **SEGUNDA:** `01_FUENTES.md` explica el paso de 46
+> declaraciones a 43 nodos nombrando tres solapes, y uno de los tres es
+> `decision_de_vender_startup` por declarar Horowitz dos veces; **medido hoy ese caso no
+> reduce esa cuenta** (un nodo que declara el mismo libro dos veces sigue siendo un nodo y
+> un libro), y **los nodos que si declaran dos libros distintos de los cuatro son solo DOS**.
+
+### 3. `EL PASO DE OFICIO`: tres ejemplares declarados, y la cota que callaba de menos
+
+**LOS EJEMPLARES DECLARADOS POR ESCRITO SON TRES, Y ESTABAN EN EL SITIO DONDE LA VUELTA 18
+NO MIRO: en la razon de los propios veredictos, que nombran la figura POR SU NOMBRE.**
+
+| puesto | clase | el par | lo que su razon declara |
+|---:|:--:|---|---|
+| **2045** | D | `barreras_comerciales_no_arancelarias` contra `import_regulations_foreign_governments` | *comparten el paso de oficio del dominio*, y define la figura entera, incluida la frase **media docena** |
+| **2054** | D | `export_administration_regulations` contra `import_regulations_foreign_governments` | *lo compartido es el paso de oficio del dominio, preguntarle al servicio comercial. Ni un paso mas se solapa* |
+| **2070** | D | `barreras_comerciales_no_arancelarias` contra `export_administration_regulations` | *lo compartido es el paso de oficio del dominio. Ni un paso mas se solapa* |
+
+**El 2045 es la sede de la frase `media docena`: es el unico puesto del archivo que la
+trae.** Los seis nodos de la cota y los diez pares quedan renombrados en la nota con la
+cota ya corregida a 141 vivos, **los seis verificados vivos y los diez verificados contra
+el archivo** (1963 A, 1984 A, 1989 D, 2007 D, 2011 D, 2013 D, 2026 D, 2045 D, 2047 D,
+2070 D).
+
+> **Y AQUI ESTA LA MEDICION QUE MAS PESA DE ESTA VUELTA. La heuristica de la vuelta 18 no
+> callaba un poco: callaba veinte nodos, y por una cadena mal escrita.** Su lista de pistas
+> trae **`us commercial service` sin puntos**, y el grafo escribe **`U.S. Commercial
+> Service`**: **esa cadena no casa nunca.** Recontado sobre los **mismos 141 vivos**,
+> cambiando solo esa cadena por `commercial service`:
+
+| | criterio de la vuelta 18 | criterio con la cadena corregida |
+|---|---:|---:|
+| nodos con la linea generica | **6** | **26** |
+| de esos, con la linea en su **PASO 1** | **2** | **7** |
+| pares del dominio que tocan a alguno | **10** | **40** |
+
+> **LA PRUEBA DE QUE ESTO ES UN FALLO DE CADENA Y NO UNA DEFINICION MAS ANCHA: de los tres
+> nodos que sostienen los tres ejemplares DECLARADOS, dos no aparecian en la cota de seis**,
+> y uno de esos dos, `import_regulations_foreign_governments`, **trae la linea en su PASO
+> 1**: *Consultar con el U.S. Commercial Service antes de exportar a un nuevo pais*.
+>
+> **Y la cifra corregida se acerca a lo declarado donde la vieja no llegaba:** el 2045 dice
+> **el PRIMER paso de media docena de nodos**, y los nodos con la linea en su paso 1 son
+> **SIETE** con la cadena corregida y eran **DOS** con la vieja.
+
+**Las dos cifras quedan escritas con su criterio al lado y ninguna se borra: 6 de 141 y 26
+de 141.** El campo `cobertura`, que dice *medio dominio exportacion*, **sigue sin tocarse**:
+medido son 26 nodos de 141 vivos y 40 pares de 130.
+
+---
+
+## 4. TAREA 2.A: LA PREMISA DEL ENCARGO NO SE SOSTIENE, Y LA NOVENA ESTRELLA YA ESTABA VERIFICADA
+
+**El encargo mandaba leer como `LD-71` el par periferico *que el informe declaro que la cola
+no puede cerrar*. Medido en esta vuelta: EL PAR YA ESTABA LEIDO.**
+
+> **Es `LD-04`**, de la primera tanda de lecturas dirigidas del **11 ago 2026**, en
+> `docs/plan/LECTURAS_DIRIGIDAS.md`: *`LD-04` . `evaluacion_tecnologias_disruptivas` contra
+> `explotacion_tecnologias_disruptivas` . **D***. **Y ese mismo `LD-04` ya declaraba por
+> escrito, hace tres dias, lo que esta vuelta iba a buscar:** *"es una **ESTRELLA** del
+> banco 9.23, con centro y dos periferios"*.
+
+**LAS DOS CUENTAS DE 9.23, medidas hoy:**
+
+| la cuenta | estado |
+|---|---|
+| **1. pares con el centro `tecnologias_disruptivas_oportunidad`, todos en A** | **SI**: 505 y 513, y son los **dos unicos** pares del archivo que tocan al centro |
+| **2. al menos un par entre perifericos, leido y sano** | **SI**: `LD-04`, **D**, desde el 11 ago 2026 |
+
+> **La novena estrella es EJEMPLAR: las verificadas pasan de OCHO a NUEVE y el campo
+> `cobertura`, que dice 9, queda CONFIRMADO en vez de discrepante.**
+
+**LO QUE ESTO CORRIGE, sin tapar nada.** La vuelta 18 escribio que a esta estrella *"le
+falta la segunda cuenta"* y el acta de la vuelta 18 lo dio por bueno razonando que el par
+*"nunca entro a la cola"*. **Lo segundo es cierto, esta medido, y lo primero no se sigue de
+ello:** el par no entro a la cola **y aun asi estaba leido**, porque para eso existen las
+lecturas dirigidas. **La busqueda no fallo en encontrar el centro: fallo en buscar la
+segunda cuenta en un solo sitio.** Y es exactamente el limite que el propio reporte 18 ya
+habia escrito en su seccion 4 (*"dos de las trece figuras tienen ejemplares que viven en
+LECTURAS DIRIGIDAS y no en el archivo de veredictos"*), **aplicado a una tercera figura y no
+visto.** La regla 8 del ejecutor es la que lo destapa: *una busqueda negativa no se puede
+citar*.
+
+**LA RELECTURA, hecha igual y entera**, esta en `docs/plan/LD_ESTRELLA_DISRUPTIVAS.md`: los
+dos nodos impresos, la vara del **9.6.3** aplicada (procedimiento a los dos lados, y los
+entregables como senal de verificacion del 9.6.2), y **D**. **Coincide con `LD-04` en la
+clase y en el corte de las mitades.**
+
+> **EL LIMITE DE ESA CONCORDANCIA, declarado y no maquillado: no fue una relectura ciega.**
+> Lei los nodos y adjudique D antes de abrir `LECTURAS_DIRIGIDAS.md`, pero **la busqueda de
+> `LD-04` era parte del mismo trabajo y no monte la ceguera como tal.** Vale menos que una
+> ciega de verdad y queda dicho.
+
+**NO ACUNE `LD-71`, y va marcado como discutible.** Un segundo numero para un par ya
+adjudicado seria **una segunda fuente de verdad para un solo veredicto**, y quien cuente
+lecturas dirigidas contaria el mismo par dos veces. **Si el auditor prefiere que el numero
+se acune igual, se acuna en la vuelta 20: no lo decido yo.**
 
 ---
 
 ## 5. CORRECCIONES Y DISCREPANCIAS DECLARADAS, ninguna arreglada por mi
 
-**Las tres salen de remedir cifras publicadas y las tres se dejan escritas al lado de la
-cifra vieja, sin tocarla.**
+**Seis, y las seis con la cifra vieja intacta al lado.**
 
-**1. `ESTRELLA (9.23)` declara NUEVE ejemplares y solo localice OCHO declarados por
-escrito.** La novena no se encontro. **El candidato mas probable es
-`tecnologias_disruptivas_oportunidad`** (dos A, puestos **505** y **513**), y **NO lo cuento
-como ejemplar a proposito**: su par entre perifericos **nunca entro a la cola**, o sea que
-**le falta la segunda cuenta**, y el propio 9.23 dice que sin ella no se puede llamar
-estrella. **El campo `cobertura` no se toca.**
+| # | donde | la cifra vieja | lo medido hoy |
+|---:|---|---|---|
+| 1 | nota de `LA BIFURCACION` | la palabra en **un solo puesto**, el 2198, y no es ejemplar | **siete puestos**, y **dos son los ejemplares**. Solo la forma en mayusculas es del 2198 |
+| 2 | nota de `EL PASO DE OFICIO` | **158 nodos vivos** | **158 en el grafo, 17 deprecado, 141 VIVOS**. Cota corregida **6 de 141** |
+| 3 | nota de `ESTRELLA (9.23)` | *la novena no se encontro* y *le falta la segunda cuenta* | **localizada y VERIFICADA 9 de 9**: `LD-04`, D, del 11 ago 2026 |
+| 4 | `cobertura` de `SUBCONJUNTO ESTRICTO` | **23 ejemplares** | 23 **etiquetas**; instancias declaradas por escrito, **24** (falta el 511) |
+| 5 | `cobertura` y sedes de `LA FIRMA POSICIONAL` | **43 confirmados**, Horowitz 13 en una sede y 14 en otra | **44 nodos distintos** con mi instrumento; el nodo que sobra **no es identificable** porque la nomina de los 13 no esta escrita |
+| 6 | nota de `EL PASO DE OFICIO`, la cota | **6 nodos y 10 pares** | con la cadena corregida, **26 nodos y 40 pares** sobre los mismos 141 vivos |
 
-**2. `LA COLA DEL DOMINIO SE AGOTA POR DENTRO (9.27)`: su tercer dominio se midio
-ABIERTO.** Remedido hoy con mi corte de tercios declarado (n dividido entre 3 sobre el
-orden de puesto):
+**Y UNA SEPTIMA QUE NO ES DE UNA CIFRA SINO DE TRES SEDES QUE CUENTAN LO MISMO.** Tras el
+registro de TAREA 1.4, **el mismo acto se cuenta de tres maneras**:
 
-| dominio | primer tercio | segundo | ultimo | cierre |
-|---|---:|---:|---:|---:|
-| `environmental`, puestos 1772 a 1941, 170 pares | 32,1% | 12,5% | **6,9%** | 17,1% |
-| `exportacion`, puestos 1942 a 2071, 130 pares | 30,2% | 2,3% | **2,3%** | 11,5% |
-| `franquicias`, puestos 2072 a 2219, 148 pares | 20,4% | 4,1% | **12,0%** | 12,2% |
+| sede | el acto del sales roadmap | la deuda total de P.5 |
+|---|---|---:|
+| `INVENTARIO.jsonl`, entrada de tipo `acto` | **15 de 15, CERRADO** | **324** |
+| `RECOMPUTO_3388_COMPONENTES.jsonl` | 10 de 15, ABIERTO, 5 fuera de cola | **329** |
+| `INVENTARIO.jsonl`, entrada de tipo `racimo` *el sales roadmap* | 10 de 15, MEZCLADO | no la cuenta |
 
-> **Los dos primeros bajan. El tercero YA NO.** La figura se escribio el 11 ago 2026 con
-> `franquicias` **abierto y 32 pares leidos**, dando 66,7% en su primer tercio y 0,0% en el
-> ultimo. **Hoy el dominio esta cerrado con 148 pares y su ultimo tercio SUBE a 12,0%.** La
-> cifra vieja era correcta para su corte y no se toca. **Lo que la remedicion dice es que
-> el tercer ejemplar de esta figura se midio abierto, que es exactamente el error contra el
-> que la propia figura avisa.** La figura sigue en pie en sus dos primeros dominios.
-
-**3. `EL PASO DE OFICIO` dice "medio dominio exportacion" y medido son 6 nodos de 158 y 10
-pares de 130.** Cifra vieja intacta.
-
-**Y una diferencia de metodo que declaro para que nadie compare mal:** mis tercios de la
-tabla de arriba **no son los del informe** (el informe daba `environmental` 34,5 / 24,0 /
-7,3). **La direccion es la misma; los numeros no, porque el corte de tercios es distinto.**
-No corrijo el informe: declaro que mi corte es otro y cual es.
+> **La diferencia entre 324 y 329 son EXACTAMENTE los cinco pares de `LD-66` a `LD-70`, y no
+> hay ninguna otra: lo comprobe par por par.** **Las dos primeras son correctas para lo que
+> cada una mide:** el archivo de componentes es una foto del cierre transitivo al corte
+> 3.388 y **no recoge lecturas dirigidas por diseno**. **Quien cite 329 tiene que decir de
+> que sede sale.** **La tercera es el caso distinto:** la entrada de `racimo` mide la misma
+> nomina que la de `acto` y **no tiene motivo para diferir**. **No la toque porque el
+> encargo scopeaba la entrada de tipo `acto`**, y va como pregunta en la seccion 8.
 
 ---
 
 ## 6. PENDIENTES DE DOCTRINA
 
-**Ninguno paro el trabajo. Los tres van registrados y con lo mejor sostenido escrito, como
-manda la regla 4.**
+**Uno, y no paro el trabajo.**
 
-**1. QUE ES UN EJEMPLAR DE UNA FIGURA. No esta escrito en ningun sitio.** Yo use
-**instancia declarada por escrito**, y la alternativa **par que calza con la forma** da
-1.773 contra 2 en una figura y 33 contra 8 en otra. **La eleccion no es cosmetica: decide
-si las cifras de cobertura de las veinte figuras estan bien o estan mal por dos ordenes de
-magnitud.** Lo dejo escrito dentro de cada nota tocada para que se pueda revertir de una
-sola pasada si el auditor prefiere la otra definicion.
+**1. QUE HACER CON UN PAR QUE UN ENCARGO MANDA LEER Y YA ESTA LEIDO.** No esta escrito en
+ninguna parte. **Lo mejor sostenido que encontre y lo que hice: no acunar numero nuevo,
+escribir la relectura entera como relectura, y dejar la decision del numero al auditor.**
+El motivo es la unica regla escrita que toca el caso de lejos, la de no dejar dos cifras
+diciendo lo mismo sin aviso (adjudicacion 9 de la vuelta 17). **Si la casa prefiere acunar
+siempre, la regla se escribe y se acuna en la vuelta 20.**
 
-**2. `ESTRELLA (9.23)` DE DOS RADIOS Y `nodo puente` SON LA MISMA FORMA MECANICA, y son
-dos entradas distintas del inventario.** Medido: la definicion de estrella (un centro con A
-a dos perifericos que entre si no son A) y la de nodo puente (*"el que tiene A con dos
-nodos que entre si son D"*) **coinciden**. Mi propio instrumento levanto
-`sales_roadmap_vs_sales_force` **como estrella** por los puestos 319 y 918 con periferico
-1023, y es **exactamente el nodo puente** que la TAREA 2.A encontro. **La diferencia no
-esta en la forma: esta en la consecuencia** (la estrella dice *arreglese por separado, sin
-mesa*; el puente dice *cuidado, puede que sean dos familias*). **No invento la regla que las
-separe. Se registra y sigue.**
-
-**3. LA NOVENA ESTRELLA no se localizo**, y la salida que sostengo es la del punto 1 de la
-seccion 5: no inventarla y dejar el candidato nombrado con el motivo por el que no cuenta.
+**LOS TRES DE LA VUELTA 18 quedan cerrados por sus adjudicaciones y por este trabajo:** el
+criterio de ejemplar quedo confirmado y esta escrito dentro de las notas; el puntero cruzado
+estrella y puente esta puesto en los dos sentidos; y la novena estrella esta localizada,
+leida y verificada.
 
 ---
 
 ## 7. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
-**Diez, y los marco sin saber como salen.**
+**Nueve, y los marco sin saber como salen.**
 
-1. **El criterio de ejemplar de la vuelta 18.** Elegi *instancia declarada por escrito*. Si
-   la FASE II esperaba *todo par que calce con la forma*, **las diez notas que escribi
-   nombran lo que no era**, y ademas nueve de las diez coberturas estarian mal por mucho.
-2. **`LD-68` en A es la lectura de la que cuelga toda la estructura de la TAREA 2.A.** Es
-   la unica A de mi tanda. Si cae a D, `estrategia_de_ventas` se queda con una sola A (el
-   966), el nucleo pasa de cuatro a tres y **mi conclusion de que pertenece se debilita
-   mucho**. La marque sabiendo que es la pata unica.
-3. **`LD-69` en D contra los puestos 200 y 192, que dieron A con nodos parecidos.** Mi
-   motivo es que a `estrategia_de_ventas` le falta el paso de DOCUMENTAR que hacia repetir
-   a los otros dos con `refinar_sales_roadmap`. **Es una distincion fina y puede que sea
-   demasiado fina.**
-4. **Llamar candidato a forastero al nodo que le da NOMBRE al acto.** No se pidio, sale de
-   la medicion, y **es la clase de hallazgo que resulta ser un artefacto de como se nombran
-   las componentes**. Lo declare como propuesta y no lo ejecute, pero lo escribi con
-   enfasis.
-5. **Nombrar `LD-02` como ejemplar de DOS figuras a la vez** (el esqueleto compartido y el
-   primer polo de la vara). Es la lectura literal de lo que ese `LD` dice de si mismo, pero
-   **puede ser que una figura no admita compartir ejemplar con otra**.
-6. **Contar el puesto 2091 dentro de la nota de LA VARA aunque no sea ejemplar.** Lo escribi
-   aparte y con su motivo, pero **mete un puesto que no es ejemplar en el campo donde
-   alguien va a contar ejemplares**.
-7. **Tocar `LECTURAS_DIRIGIDAS.md`.** El encargo no lo nombraba. Lo hice porque su backlog
-   decia *"sales roadmap, 5 pares, no se lee"* y eso **ya no es cierto desde esta misma
-   vuelta**, y la doctrina adjudicada dice que una cifra vieja sin aviso miente. **Fue
-   iniciativa mia y va declarada.**
-8. **El aviso de `00_INDICE.md` declara dos diferencias de marcador y no regenera el
-   marcador.** Elegi la contencion de la vuelta 17 (aviso, no regeneracion), pero **la
-   pagina queda con un marcador que dice 69 y 68 y un aviso que dice 71 y 71 a diez lineas
-   de distancia**.
-9. **`EL PASO DE OFICIO` ahora PASA el criterio de forma de la vuelta 17 sin que yo haya
-   nombrado ni un ejemplar suyo**, porque su nota trae ids de nodo que son la COTA, no los
-   ejemplares. **Es un falso positivo del criterio de la vuelta 17, y lo produje yo.** Por
-   eso el 18 de 20 de la seccion 1 hay que leerlo con esta linea al lado.
-10. **Publicar mis tercios sabiendo que no son los del informe.** Podia haber reproducido
-    el corte del informe antes de medir, como manda la leccion del auditor de la vuelta 17.
-    **No lo hice: declare mi corte en vez de reproducir el suyo**, y por eso la fila de
-    `environmental` no calza con la publicada.
+1. **NO ACUNAR `LD-71`.** El encargo lo pedia por su nombre y no lo acune, porque el par ya
+   era `LD-04`. **Si la casa entiende que el encargo manda acunar igual, esto es una orden
+   no ejecutada**, y lo escribi sabiendolo.
+2. **REORDENAR EL TRABAJO: escribi `LD_ESTRELLA_DISRUPTIVAS.md` y el registro de la novena
+   en el MISMO tramo de TAREA 1**, cuando el encargo pone esa lectura en TAREA 2.A. Lo hice
+   porque escribir en TAREA 1 la frase *sigue sin la segunda cuenta*, que el encargo dictaba,
+   **habria sido publicar algo que yo ya sabia falso**. **Elegi la regla 1 sobre el orden del
+   encargo.**
+3. **LA COTA AMPLIADA DE `EL PASO DE OFICIO`: 26 nodos.** Cambie una cadena de la lista de
+   pistas y la cota se cuadruplico. **Sostengo que es un fallo de cadena y no una definicion
+   nueva, y la prueba que doy son los dos nodos de ejemplares declarados que la cota vieja no
+   veia.** Pero **es mi criterio contra el de la vuelta 18, que el acta 18 verifico y dio por
+   bueno**, y puede que la casa lea esto como que yo ensanche la definicion.
+4. **CONTAR 24 INSTANCIAS EN `SUBCONJUNTO ESTRICTO` cuando la cobertura dice 23.** Todo
+   depende de si la razon de un veredicto cuenta como *declaracion por escrito*. **Yo digo
+   que si, y por eso el 511 suma**; si la casa dice que solo cuentan informe, banco,
+   expediente y lectura dirigida, **entonces el 511 sigue sumando igual porque esta en el
+   informe**, y el que sobra soy yo contando la etiqueta. **Es el discutible que peor
+   entiendo de los nueve.**
+5. **DECIR QUE LA TANDA DE LOS INJERTOS SON 44 Y NO 43.** Mi cuenta depende entera de contar
+   Horowitz por 14, que es lo que dice una de las dos sedes. **Si la buena es la otra sede,
+   mi 44 es un artefacto de haber elegido la tabla equivocada.** Declare las dos y no arregle
+   ninguna, pero **publique el 44 como mi medicion**.
+6. **NOMBRAR LOS TRES EJEMPLARES DE `EL PASO DE OFICIO` desde la razon del archivo y no desde
+   el informe.** Es una sede que el criterio de la vuelta 18 no listaba entre las cuatro.
+   **La anadi a la formula del criterio dentro de las notas nuevas**, y eso es tocar un
+   criterio que el acta 18 confirmo tal como estaba.
+7. **NO TOCAR LA ENTRADA DE TIPO `racimo` del sales roadmap**, sabiendo que queda diciendo
+   *10 de 15* a ocho lineas de una entrada de `acto` que dice *15 de 15*. **Me acogi al
+   scope del encargo.** Puede que la doctrina de no dejar dos cifras sin aviso pesara mas
+   que el scope, y entonces deje una divergencia viva que podia haber avisado.
+8. **PONER EL TEXTO NUEVO AL FRENTE DEL CAMPO `nota` del acto**, y no al final como en las
+   figuras. Lo hice porque el encargo decia *lo nuevo al frente* y porque **cualquier lector
+   mecanico que busque la primera cifra de cola en esa nota se habria llevado la vieja**.
+   Pero **rompe el patron de adicion al final** que las once notas de la vuelta 18 usaron.
+9. **DECLARAR QUE LAS SIETE FIGURAS SIN MARCA DE TANDA "NACIERON NOMBRADAS".** Lo comprobe
+   entrada por entrada leyendo sus notas, **pero no verifique sus ejemplares contra el
+   archivo uno por uno**, que es lo que si hice con las trece. **Si alguna de las siete cita
+   un puesto que no calza, mi 20 de 20 se cae.**
 
 ---
 
 ## 8. LAS PREGUNTAS QUE TRAIGO, porque no las puedo medir
 
-1. **¿La FASE II cierra con esto, o le falta el bloque grande?** De las trece figuras sin
-   nombrar quedan **tres**: `SUBCONJUNTO ESTRICTO` (23 ejemplares), `LA FIRMA POSICIONAL
-   DEL INJERTO` (67 candidatos, 43 confirmados) y `EL PASO DE OFICIO`, que esta acotada
-   pero no nombrada. **Las tres eran las excluidas del encargo de esta vuelta.** No decido
-   si el bloque que cierra la FASE II se considera hecho con diez de trece.
-2. **¿Las tres propuestas de la TAREA 2.A entran en `OP-U-02` o abren operacion propia?**
-   La primera cambia una entrada de inventario y dos cifras agregadas; la segunda cambia
-   una nomina; la tercera cambia una figura. **Ninguna la ejecuto y ninguna tiene hoy
-   operacion que la recoja.**
-3. **¿La novena estrella existe?** Si el auditor la localiza, mi cifra de ocho es una caida
-   de reporte mia y quiero que se cuente como tal.
+1. **¿Se acuna `LD-71` o no?** El par esta leido, releido y concordante. **Lo unico que
+   falta decidir es si la casa quiere un numero nuevo para la relectura.**
+2. **¿Quien arregla la entrada de tipo `racimo` "el sales roadmap"?** Hoy dice *10 de 15,
+   MEZCLADO* y la entrada de `acto` de la misma nomina dice *15 de 15, CERRADO*. **No la
+   toque por scope. Si la doctrina manda avisar, hace falta encargo.**
+3. **¿Cual de los dos numeros de Horowitz manda, el 14 de `10_INVENTARIO.md` o el 13 de
+   `01_FUENTES.md`?** De eso depende si la tanda de injertos son 43 nodos o 44, **y la
+   nomina de los 13 no esta escrita en ningun sitio, asi que no lo puedo resolver
+   midiendo.**
+4. **¿La cota de `EL PASO DE OFICIO` se regenera con la cadena corregida, o se queda con las
+   dos cifras al lado?** Hoy la deje con las dos y su criterio. **Regenerar la cota es
+   cambiar una cifra publicada y eso no lo hago sin encargo.**
 
 ---
 
-## 9. CONDICIONES DE PARADA: NINGUNA SE CUMPLE
+## 9. AL CERRAR: LA FASE II, BLOQUE POR BLOQUE
+
+**Medido con `scripts/loop/vuelta19_fase2.py` y escrito entero en `RECOMPUTO_3388.md`,
+seccion TAREA (vuelta 19).**
+
+| bloque | tras la vuelta 17 | **tras esta vuelta** |
+|---|---|---|
+| la cola de relectura post fusion | VERIFICADA ENTERA, 7 de 7 | **sigue verificada**, remedida hoy |
+| el criterio del forastero | VERIFICADOS LOS DOS | **los dos, mas un candidato CONDICIONADO** registrado y no contado |
+| el lote de cinco del sales roadmap | LOS CINCO NOMBRADOS | **LEIDOS Y EL ACTO CERRADO** |
+| las lecturas de acto entero de P.5 | 280 hechos, 55 pendientes, 329 pares | **281 hechos, 54 pendientes, 324 pares** |
+| los ejemplares de las veinte figuras | medido el tamano, NO cerrado | **LAS VEINTE NOMBRADAS** |
+
+> **MI LECTURA, y la digo como lectura y no como veredicto porque el cierre es del auditor:
+> el bloque de las veinte figuras QUEDA NOMBRADO, que era lo que faltaba.** Las trece con
+> tanda estan nombradas y verificadas contra el archivo; las siete restantes nacieron
+> nombradas y sus notas citan nodos y puestos. **Lo que NO queda cerrado, y por eso no digo
+> que la FASE II cierre, son las SEIS discrepancias de la seccion 5 y las CUATRO preguntas
+> de la seccion 8: ninguna es una figura sin nombrar, pero todas son cifras publicadas que
+> hoy tienen dos lecturas y una sola de ellas puede ser la buena.**
+
+**NO ABRI LA FASE III y NO CREE `pasada-unica`.** La verificacion del cierre de la FASE II y
+la apertura de la FASE III son del auditor en la vuelta siguiente, tal como el encargo dice.
+
+---
+
+## 10. CONDICIONES DE PARADA: NINGUNA SE CUMPLE
 
 | condicion | estado |
 |---|---|
-| doctrina nueva | **no**: los tres pendientes van registrados, ninguno se resolvio inventando regla |
-| contradiccion con regla vigente o cifra publicada con su corte | **no**: las tres discrepancias medidas se declararon **al lado** de la cifra vieja, sin tocarla |
-| decision de fundador | **nada reservado se toco**: `dataset/` y el archivo de veredictos intactos, cero merges, cero operaciones ejecutadas, FASE III sin abrir, `pasada-unica` sin crear |
-| fallo tecnico | **no**: arbol limpio, hook verde en los tres commits, cero guiones |
-| credito de tanda | **no aplica a esta vuelta** |
+| doctrina nueva | **no**: el unico pendiente va registrado con lo mejor sostenido, y no invente regla |
+| contradiccion con regla vigente o cifra publicada con su corte | **no**: las seis discrepancias medidas se declararon **al lado** de la cifra vieja, sin tocarla. **La premisa del encargo que no se sostiene se declaro entera y no se resolvio copiando** |
+| decision de fundador | **nada reservado se toco**: `dataset/` y el archivo de veredictos intactos (diff vacio, corrido por mi), cero merges, cero operaciones ejecutadas, FASE III sin abrir, `pasada-unica` sin crear |
+| fallo tecnico | **no**: arbol limpio, hook verde en los tres commits, cero guiones largos y cero guiones medios |
+| credito de tanda | **no conozco caida mia en esta tanda.** Si el auditor encuentra una, la cuenta manda y el bucle para |
 | campana consumada | **no** |
 
-**Commit y push por tramo, tres tramos: TAREA 1 (`6b8fd72b`), TAREA 2.A (`12c99b95`) y
-TAREA 2.B (`d697bc06`), los tres empujados a `origin/bucle` segun se cerraban.** Este
-reporte va en el cuarto.
+**Commit y push por tramo, tres tramos: los instrumentos (`26c15781`), TAREA 1 mas la
+relectura (`945a6a16`) y TAREA 2.B mas el cierre de FASE II (`7b21a8d0`), los tres empujados
+a `origin/bucle` segun se cerraban.** Este reporte va en el cuarto.
