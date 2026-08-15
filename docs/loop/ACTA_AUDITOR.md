@@ -6472,3 +6472,249 @@ la racha seria mentir con el marcador.
 `docs/loop/PARA_ALEXIS.md` escrito con los motivos, el estado exacto, lo que se
 necesita y como retomar. `docs/loop/PROMPT_SIGUIENTE.md` VACIO a proposito. El bucle
 queda detenido esperando la decision de la casa.
+
+---
+
+## VUELTA 30, 14 ago 2026. Auditor: Fable 5. Reporte auditado: la vuelta 30 del ejecutor (Opus 5), FASE III, rama pasada-unica: la parada de la 29 caida por la doctrina nueva del fundador, los tres bloques de TOQUE UNICO ejecutados con P.19 y P.20, WEI y HOR enteras, el primer tiempo de COL hecho y el segundo no. ESTA ACTA VERIFICA EL REPORTE ENTERO Y AL DIGITO, la ciega coincide 12 de 12, LA RACHA DE CAIDAS DE REPORTE SE CORTA EN CERO, y el unico pendiente de doctrina de la vuelta queda ADJUDICADO POR EXTENSION CITABLE: el bucle sigue
+
+### 1. VERIFICACION del reporte, todo con instrumento propio corrido HOY
+
+Todo se midio hoy contra el repo en `12e8e074` (HEAD de la rama, con el reporte dentro,
+igual a `origin/pasada-unica`, arbol limpio); las cifras del reporte van como contraste,
+nunca como fuente. Mi instrumento y su salida completa quedan en
+`docs/loop/_auditor_v30_medicion.py`, `docs/loop/_auditor_v30_ciega.py` y
+`docs/loop/SALIDA_ACTA30_AUDITOR.txt`.
+
+1. **Hashes y rutas: REPRODUCIDOS.** Partida `4e0a87ea` (la decision del fundador que
+   escribio P.19, P.20 y la segunda puerta), **siete commits de trabajo** hasta `8c25ebc7`
+   mas el reporte. `git diff 4e0a87ea..8c25ebc7`: **58 ficheros, 4.269 insertadas, 176
+   borradas**; por carpeta docs/loop **40**, scripts/loop **7**, dataset/nodos **5**,
+   docs/plan **3**, web/lib/assets **2**, dataset/metadata **1**: las seis exactas. Cero
+   merges en el tramo. El hook esta activo (`core.hooksPath = .githooks`).
+2. **El instrumento de estado del ejecutor, corrido por mi:** la salida es **byte igual**
+   a `SALIDA_V30_CIERRE.txt` salvo la etiqueta. Y ademas recompute todo con codigo propio:
+   marcador **n 3.388, A 583, B 89, C 7, D 2.709, cero huecos, cero duplicados, cero
+   clases fuera de ABCD**; grafo **3.848 ficheros, 3.848 ids, 3.534 vivos, 314 deprecados,
+   16.832 enlaces, 15 claves**; familias Weinberg **72 y 70**, Horowitz **93 y 91**, Hugos
+   **111 y 111**, Coleman **83 y 68**, Rackham **47 y 47**; operaciones **71, todas LISTA,
+   cero dependencias rotas**; inventario **672** con su reparto exacto; indice rojo **13
+   lineas, cero ids ausentes del grafo e IDENTICO al de la apertura**. Todo al digito.
+3. **La apertura, remedida por mi contra `4e0a87ea` con git show:** los tres nodos de
+   TOQUE UNICO con **16, 30 y 34** pasos y los dos destinos con **4 y 5**; el detector de
+   fronteras sobre el `01_FUENTES.md` de la apertura da **2 de 15** (`metas_vs_proposito`
+   y `voz_del_cliente_voc`). La medicion de apertura del ejecutor esta commiteada en
+   `054847bb`, ANTES de la primera operacion, que es la letra del tercer renglon.
+4. **Los tres cortes de fusion, cotejados por mi contra el plan y el arbol:** cobertura
+   **exactamente 1 a N sin huecos ni repetidos** en los tres (16, 34, 30); los
+   `pasos_originales` de cada plan **byte iguales** a la apertura real; los
+   `pasos_finales` **byte iguales** al arbol de hoy (8, 15, 23); el campo `fuente`
+   **intacto en los tres** (firma de P.19 punto 2); **todos los pasos de un solo origen
+   viajan VERBATIM** (4 de 4, 4 de 4 y 20 de 20); las dos salidas de P.18 (paso 12 a
+   `experiencias_exclusivas_vip`, 4 a 5 pasos; paso 13 a `comunidad_tribu_marca`, 5 a 6)
+   **TEXTUALES en su destino**. La procedencia por bloque declara **3 de 8** pasos con los
+   dos libros en `coeficiente_viral` y **5 de 15** en `decision_de_vender_startup`, como
+   el reporte dice.
+5. **Los casos positivos, RE-CORRIDOS por mi sobre el arbol de hoy:** 5 PASAN 0 CAEN,
+   12 PASAN 0 CAEN, 10 PASAN 0 CAEN, con conservacion 10, 16 y 11 en las dos direcciones.
+   Las salidas ANTES del ejecutor (0 de 5, 0 de 12, 2 de 10) leidas de sus ficheros.
+6. **El ciclo de Gate 0, corrido ENTERO por mi:** `run_phase1.py --reaplico-curaduria`
+   **exit 0, GATE 0: OK**; `etiquetas_de_cara.py --aplicar` **71 etiquetas, sin encoger**;
+   `sync_assets_web.py` deja las dos copias del grafo en el blob **`1c84dfc3`, byte
+   identico a HEAD por las dos rutas** (verificado con git hash-object); el cuarto comando
+   no aplica porque el censo no se movio, y mi recomputo del grafo lo confirma (3.848 en
+   la apertura y al cierre). Arbol limpio al cerrar.
+7. **Las suites, corridas enteras por mi:** motor **24 de 24, exit 0**; web **80 ficheros,
+   1.030 pasadas y 3 saltadas, exit 0**; `tsc --noEmit` **cero lineas, exit 0**. Mi primer
+   intento de la suite del motor dio un rojo que era MIO, no del arbol: seccion 5.
+8. **Los registros de la TAREA 1, leidos en sus lineas:** las notas de `OP-F-02` y
+   `OP-F-03` declaran HECHA citando la adjudicacion 4 del acta 29 con sus palabras, **con
+   el texto viejo entero delante** (verificado por contencion contra `4e0a87ea` en las
+   cinco operaciones tocadas); la evidencia de las notas esta medida contra el grafo (los
+   tres nodo propio de OP-F-02 con 6, 5 y 4 pasos y los cuatro de OP-F-03, vivos y en el
+   indice rojo); la adjudicacion 3 quedo POR CITA en `08_VERIFICACION.md` con la nota
+   TERCERA entera al lado; el barrido *modo continuo* sobre `docs/plan/` da **cero
+   ocurrencias**, como el reporte declara para las adjudicaciones 6 y 7.
+9. **La frontera de los tres libros de `viral_loop_marketing`:** publicada en
+   `c08cf179`, commit propio y ANTERIOR al del corte (`918437f8`), con sus tres evidencias
+   y el punto menos firme declarado; citada por las notas de `OP-F-04-COL` y `OP-F-04-WEI`
+   con correccion declarada, sin que ninguna escriba su propio corte (P.20 puntos 1 a 4).
+10. **El saldo de las tandas y de la fase:** `OP-F-04-WEI` **11 resueltos mas 2 fundidos
+    de 13, cero pendientes**; `OP-F-04-HOR` **12 mas 1 de 13, cero pendientes** (mi
+    conteo propio por el campo `fuente`, nodo por nodo). `OP-F-01` verde: **9, 9, 8, 13,
+    10 y 8** pasos en sus seis. La cifra cazada por la guarda del registro es real:
+    `seleccion_de_proveedores_por_costo_total` tiene **9** pasos. Fronteras de COL al
+    cierre: **13 de 15 por el detector, con `keep_customers_strategy` y
+    `viral_loop_marketing` como los dos NO**, reproducido por mi corrida.
+11. **La cuarta entrada de LA COLA DEL OBJETO AJENO:** leida en `08_VERIFICACION.md`, con
+    nodo, tramo (el paso 15 del resultado fundido), la lectura que la hallo y **el
+    vencimiento de la comprobacion fechado al cierre de la fase 02**; la diferencia entre
+    las dos puertas (la primera la cierra la fase 01, la segunda no puede) declarada.
+12. **La correccion sobre la lectura vieja de la tanda COL, verificada en el historial:**
+    la `adjudicacion` de `OP-F-04-COL` (11 ago) dice *los 15 con bloque apendice*, y
+    `keep_customers_strategy` **no se toca desde el 8 ago** (`git log --follow`): el nodo
+    no cambio, la lectura del 11 ago era floja en ese nodo, y la vuelta 30 la contradijo
+    MIDIENDO y declarando la discrepancia en vez de copiar, que es la letra de la regla 1.
+    Es una correccion sobre evidencia de la fase de plan, anterior al bucle: **no es una
+    caida de esta tanda ni de ninguna tanda del bucle**. El registro que falta (la
+    correccion declarada en la nota de la operacion) va al encargo.
+13. **Una frase del reporte cotejada y sostenida:** *cinco instrumentos nuevos* contra
+    **siete** ficheros nuevos en scripts/loop. Los siete son nuevos; cinco son
+    instrumentos de medida o corte (`estado`, `fundir`, `sellar_toque_unico`,
+    `caso_positivo`, `saldo_opf04`) y dos son escritores de registro (`nota`,
+    `registros`), y el propio reporte publica el 7 por carpeta en su cabecera. La
+    categoria se sostiene y no hay caida.
+
+### 2. RELECTURA CIEGA, empezando por los discutibles marcados
+
+**Limite declarado, como en las actas anteriores:** lei `REPORTE.md` entero antes de leer
+un solo paso, asi que la ceguera es parcial; ademas, al inspeccionar el esquema de
+`salidas` del plan de `viral_loop_marketing` me asomo un tramo del `motivo_p18` del paso
+12 antes de formar mi clase de d4, y se declara. Los pasos los imprimi del grafo y del
+historial con instrumento propio (`_auditor_v30_ciega.py`), los motivos largos del
+ejecutor se destaparon DESPUES de formar cada clase.
+
+**Doce relecturas de fondo, todas dentro del marcado (d1 a d12). LAS DOCE COINCIDEN.**
+
+| # | caso | mi lectura sobre los pasos | veredicto |
+|---|---|---|---|
+| d1 | la frontera `1 a 3 / 4 a 25 / 26 a 30` | lei los 30 de la apertura: 26 a 30 es la taxonomia de viralidad de Traction (inherente, colaborativa, embebida, incentivada, social), que ningun otro libro trae; 22 a 25 habla en la voz del advocacy de Coleman (mas alla del dinero, estatus, acceso, oferta escasa) y la familia Coleman ya trae ese acto escrito dos veces. La costura esta en 26. Y la duda esta bien acotada: en las dos lecturas 22 a 25 se queda dentro | **COINCIDE** |
+| d2 | fundir el nodo ENTERO y no solo el apendice | P.19 dice *material de DOS O MAS FUENTES dentro de un nodo*: la regla nombra el cruce de fuentes a proposito, y su motivo (el gemelo del propio donante) es exactamente lo que dejaria vivo fundir solo dentro del apendice. Las parejas 8 con 26 y 9 con 25 de `decision_de_vender_startup` son el mismo objeto a cada lado de la frontera, leidas por mi | **COINCIDE** |
+| d3 | el texto de los pasos fundidos | coteje los fundidos contra sus origenes por el mapa: cada rastro declarado vive en el destino (mi corrida de conservacion lo prueba mecanicamente), los de un solo origen viajan verbatim (28 de 28 en los tres planes), y las redacciones nuevas no meten claim que los origenes no traigan | **COINCIDE** |
+| d4 | paso 12 a `experiencias_exclusivas_vip`, paso 13 a `comunidad_tribu_marca` | el 12 es literal al objeto del destino (eventos y experiencias exclusivas con canje). El 13 (*darles voz visible dentro de la comunidad*) calza con el nodo que crea espacios de conexion y amplifica las historias del cliente; `construccion_tribu_de_marca` es el ethos y el artefacto simbolico, otro acto. Mi lectura descarto al tercero por lo mismo que la del ejecutor | **COINCIDE** |
+| d5 | solo DOS pasos ajenos | el 10 (agradecer en persona) y el 11 (reconocimiento) son la palanca que activa al promotor para que refiera: son del objeto del nodo, y el 11 ademas repite con 17 y 20, que P.19 manda fundir. El 12 y el 13 son los que cruzan a otro acto | **COINCIDE** |
+| d6 | el salario del CEO declarado AJENO y NO cortado | la letra de la segunda puerta es *destejido ordinario por P.18 como OPERACION NUEVA de la fase que corresponda, nunca poda*, y la propia pagina declara que la fase 01 no puede cerrar esa puerta. Cortarlo en el mismo acto no estaba prohibido, pero la pagina mas especifica manda a la cola, y la entrada quedo con nodo, tramo, lectura y vencimiento | **COINCIDE** |
+| d7 | las once fronteras tipicas de COL, con `cultura_de_experiencia` la mas expuesta | lei seis nodos completos antes de destapar la tabla: cultura `1 a 8 / 9 a 12` con 1 a 4 y 5 a 8 como el mismo libro dos veces (inmersion y herramientas, talleres y autonomia: las dos son Change by Design), retention `1 a 5 / 6 a 9`, ganar_comprension `1 a 6 / 7 a 11`, estrategia_crecimiento `1 a 6 / 7 a 10`, blueprint `1 a 4 / 5 a 17`. Las cinco que forme a ciegas calzan con las publicadas | **COINCIDE** |
+| d8 | el bloque de TRECE pasos de `blueprint_de_experiencia` | leido: 5 a 8 postventa proactiva, 9 a 13 el ritual del si, 14 a 17 los cien dias. Tres actos como minimo, y la advertencia de que la frontera es de LIBROS y el destino de OBJETOS esta publicada en la propia tabla, que es donde el que lea el 5 a 17 se la encuentra | **COINCIDE** |
+| d9 | `keep_customers_strategy` sin frontera | leido paso a paso: el material de Coleman viaja dentro de las frases (el paso 3 es el ejemplar exacto), no hay indice donde cortar sin partir una, y forzar el corte en 3 o en 4 partiria una frase, que ninguna pagina permite. El fondo va en la adjudicacion 2 | **COINCIDE** |
+| d10 | no ejecutar el segundo tiempo | trece lecturas de destino sobre una nomina de 83 al cierre de una vuelta de tres fusiones, dos destejidos y doce fronteras es la especie exacta de las caidas de las vueltas 15 y 16, adjudicada CORRECTA en la 29 punto 7. El precedente cubre, y el primer tiempo dejo el arranque listo | **COINCIDE** |
+| d11 | resueltos y fundidos contados aparte | es la contabilidad que P.19 obliga: el fundido declara su segundo libro POR REGLA, y un solo numero lo haria pasar por resuelto o por pendiente, las dos mentiras. Mi conteo propio salio en las mismas dos columnas | **COINCIDE** |
+| d12 | el detector da 13 y la lectura 14 | verificado por mi corrida: las dos cifras son de dos instrumentos distintos y las dos estan bien medidas. La adjudicacion va en la seccion 4, punto 4 | **COINCIDE, adjudicado** |
+
+### 3. FUERA DEL MARCADO: cero hallazgos
+
+Coteje ademas las cifras del reporte que no estaban marcadas (hashes, rutas, guardas,
+saldos, correcciones, el barrido de *modo continuo*, la frase de los cinco instrumentos):
+**ninguna caida de reporte, de cifra ni de clase en esta tanda.** Las cuatro correcciones
+declaradas del ejecutor (las dos calibraciones del instrumento de estado, la cifra puesta
+sin medir que la guarda del registro paro, la poda cazada por la conservacion y la huella
+`econoc` insatisfacible cambiada a `Reconoc` con el motivo dentro del codigo) estan las
+cuatro verificadas en sus ficheros y commits.
+
+### 4. ADJUDICACIONES de esta vuelta
+
+1. **`OP-F-04-WEI` y `OP-F-04-HOR` SE DECLARAN HECHAS.** Trece de trece cada una por mi
+   conteo propio (11 mas 2 y 12 mas 1), casos positivos verdes re-corridos por mi, cortes
+   y fusiones cotejados, Gate 0 y suites verdes por mi corrida entera. Por la misma vara
+   de las actas 27 y 29. `OP-F-04-RAC` ya era HECHA (actas 27 y 29): a las tres les falta
+   solo el registro en nota, que va al encargo.
+2. **Pendiente de doctrina 1 (`keep_customers_strategy`, el material embebido):
+   ADJUDICADO POR EXTENSION CITABLE DE P.19. NO ES PARADA.** El caso, leido por mi: el
+   material de Coleman comparte EL OBJETO del nodo (retener clientes: el hito celebrado y
+   la inversion en postventa son tacticas de retencion), NO repite (complementa dentro de
+   la frase, no duplica), y no forma bloque. La ratio de P.19 lo cubre a fortiori: *cuando
+   el bloque repite el mismo objeto que ya vive en el nodo, no hay destino que buscar,
+   porque el objeto ya esta en casa*. Si el material con el mismo objeto DEBE acabar
+   fundido en un solo procedimiento multifuente con la fuente intacta, un nodo donde ya
+   vive asi (lo fundio la fusion semantica vieja de la fase 3, anterior al plan) **ya esta
+   en el estado final que P.19 produce: no hay operacion que ejecutar**.
+   `keep_customers_strategy` queda **MULTIFUENTE LEGITIMO, sin corte, con su fuente
+   intacta**, y el saldo de COL lo cuenta como especie propia (EMBEBIDO LEGITIMO), igual
+   que WEI cuenta sus fundidos. **Los limites se dejan escritos:** si una lectura futura
+   declara en el un tramo AJENO al objeto, entra por la segunda puerta de la cola; y
+   separar material embebido AJENO (media frase hacia otro nodo) sigue sin pagina, pero
+   ninguna pagina vigente lo ordena hoy, asi que no bloquea nada. La marca DISCUTIBLE del
+   registro se queda, con esta adjudicacion al lado.
+3. **La adjudicacion vieja de `OP-F-04-COL` (los 15 con bloque apendice) queda corregida
+   por la medicion de hoy: son 14 de 15.** Verificado en el historial (seccion 1, punto
+   12). Correccion declarada en la nota de la operacion, al encargo; el campo viejo se
+   queda entero con la correccion al lado.
+4. **Pregunta 1 (cual cifra manda, 13 o 14): LAS DOS VIVEN, CADA UNA CON SU NOMBRE, y la
+   vara de cierre es la LECTURA.** El detector mide una FORMA (particion en la misma
+   linea) y su letra esta declarada; la frontera de `viral_loop_marketing` EXISTE en la
+   forma que P.20 le dio (subseccion con tabla). La cifra de fronteras publicadas del
+   primer tiempo es **14 de 15**, con `keep_customers_strategy` como el unico sin
+   frontera, y la cifra del detector se publica con su limitacion. Para que instrumento y
+   lectura dejen de discrepar, el encargo manda ampliar el detector a la forma de
+   subseccion P.20, con el cambio declarado dentro del script, y verificar que de 14.
+5. **Pregunta 2 (la cuenta del segundo tiempo): CONFIRMADA. SON 13 DESTINOS**: 15 de la
+   nomina, menos `viral_loop_marketing` (su mitad ya esta hecha por el corte unico de
+   P.20, citado en la nota) menos `keep_customers_strategy` (adjudicado sin corte, punto
+   2). `metas_vs_proposito` entra con su frontera vigente `1 a 4 / 5 a 9`.
+6. **Pregunta 3 (una linea en P.20 para el segundo ejemplar): NO. P.20 no se toca.** Las
+   paginas del banco son doctrina del fundador y citan ejemplares, no llevan censo; el
+   caso de `metas_vs_proposito` ya vive registrado en `01_FUENTES.md` con su correccion
+   declarada, que es su sede. Si la casa quiere el segundo ejemplar en la pagina, esa
+   pluma es del fundador.
+7. **Pendiente de doctrina 2 (el valor HECHA del campo `estado`): NO SE ESTRENA.** El
+   criterio de HECHO vive en `08_VERIFICACION.md` y las declaraciones viven en el campo
+   `nota` con cita del acta, que es donde el encargo las mando y donde las 71 operaciones
+   las pueden llevar sin cambiar el esquema. Estrenar un valor de campo seria doctrina de
+   esquema y no hace falta para nada de lo que sigue: no bloquea. Si la casa lo quiere,
+   es su pluma.
+8. **Las adjudicaciones 6 y 7 del acta 29 sin sede en `docs/plan/`: CORRECTO.** Son
+   juicios de conducta y su sede es el acta; el barrido de *modo continuo* con cero
+   ocurrencias esta verificado. Fabricarles una seccion habria sido inventar una pagina.
+9. **La desviacion del encargo (trece fronteras y son doce): CORRECTA Y BIEN DECLARADA.**
+   La decimotercera la publico P.20 en la misma vuelta, unas horas antes, y la cuenta de
+   la tabla (12 de esta tabla, 2 previas, 1 de P.20) la reproduje contra el archivo.
+
+### 5. ERRORES PROPIOS de esta vuelta, con nombre
+
+1. **Corri la suite del motor EN PARALELO con el ciclo de Gate 0, y el test de paridad de
+   copias dio un rojo falso** (71 nodos divergentes: `sync_assets_web.py` estaba
+   reescribiendo las copias a mitad de la corrida del test). El rojo era de mi
+   orquestacion, no del arbol: re-corri la suite SOLA en la misma corrida y dio 24 de 24,
+   exit 0, y el arbol quedo limpio. Un instrumento que escribe y un instrumento que
+   compara no se corren a la vez. Ninguna cifra publicada alcanzada.
+2. **La ceguera de d4 fue menos que parcial:** un tramo del `motivo_p18` del paso 12 se me
+   asomo al inspeccionar el esquema del plan antes de formar mi clase. Declarado en la
+   seccion 2; la clase del paso 13 (la eleccion entre los dos candidatos de tribu) se
+   formo sobre los pasos sin destapar nada.
+
+### 6. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 29: 39 relecturas, 393 puestos (mas 144 nodos de forma y 26
+sitios de codigo), 7 caidas de clase, mas 13 caidas de reporte del ejecutor, mas 4 caidas
+de cifra publicada del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1 caida
+de acta del auditor. Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte
+seguidas: CINCO (24, 26, 27, 28, 29).
+
+Esta tanda (la vuelta 30 del ejecutor): cero pares y cero puestos; mas 1 relectura (los
+doce discutibles, todos de fondo); mas **15 nodos leidos de fondo o de forma** (los tres
+de TOQUE UNICO en sus dos estados, los seis de COL, los tres candidatos de destino, los
+dos receptores despues del corte y `seleccion_de_proveedores_por_costo_total`); mas 4
+sitios de codigo (el instrumento de estado, el sellador, el caso positivo y el fundidor,
+leidos o re-corridos). Doce adjudicaciones de fondo: **las doce coinciden, cero
+discrepancias**. Caidas del ejecutor en esta tanda: **CERO, de las tres especies.**
+
+**Acumulado: 40 relecturas, 393 puestos (mas 159 nodos de forma y 30 sitios de codigo),
+7 caidas de clase, mas 13 caidas de reporte del ejecutor, mas 4 caidas de cifra publicada
+del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1 caida de acta del
+auditor. Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte seguidas:
+CERO. LA RACHA DE CINCO SE CORTA EN LA VUELTA 30**, que es la primera tanda del ejecutor
+en el bucle con las tres especies en cero, y se corta con la mecanica que la cura del 14
+ago pedia: apertura medida antes de la primera operacion, cierre remedido al cerrar, y
+cuatro correcciones propias declaradas con nombre, tres cazadas por guardas escritas para
+caer. El patron de dictado suelto que las paradas 28 y 29 llevaron a la casa no continua.
+
+### 7. CONDICIONES DE PARADA: NINGUNA SE CUMPLE, EL BUCLE SIGUE
+
+- **Doctrina nueva: NO hace falta.** El unico candidato de la vuelta
+  (`keep_customers_strategy`) queda adjudicado por extension citable de P.19 (seccion 4,
+  punto 2), con sus limites escritos. Los otros dos pendientes quedan adjudicados sin
+  estrenar pagina (puntos 6 y 7).
+- **Contradicciones con reglas vigentes: ninguna.** La unica discrepancia contra cifra
+  publicada (los 15 con apendice de la adjudicacion del 11 ago) se resuelve con la regla
+  de correccion existente (correccion declarada, texto viejo entero), ya ordenada.
+- **Credito de tanda: INTACTO.** Cero caidas de las tres especies; la racha de reporte
+  cortada (seccion 6).
+- Las demas, repasadas: nada reservado se toco (dataset solo por las operaciones
+  escritas: 5 ficheros, los tres cortados y los dos receptores; cero merges; el `.env`
+  fuera del repo; ningun verde falseado: el hook corrio y mis corridas reproducen cada
+  verde); Gate 0, ciclo y suites verdes por mi corrida entera; campana consumada: NO (la
+  fase 01 no cierra hasta el segundo tiempo de COL, y no cerrarla fue lo correcto).
+
+`docs/loop/PROMPT_SIGUIENTE.md` escrito completo con el encargo de la vuelta 31: los
+registros de esta acta, el segundo tiempo de `OP-F-04-COL` (13 destinos por P.18 sobre la
+nomina al dia), el cierre de la fase 01 y la continuacion en modo continuo a la fase 02.
+`PARA_ALEXIS.md` no se escribe: no hay parada.
