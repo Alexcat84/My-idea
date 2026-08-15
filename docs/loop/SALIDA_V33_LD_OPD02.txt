@@ -1,0 +1,144 @@
+==============================================================================
+LECTURA DIRIGIDA DEL ACTO DE OP-D-02 (P.5). LOS CUATRO NODOS, ENTEROS
+==============================================================================
+NOMINA, leida hoy de OPERACIONES.jsonl: 4 nodos
+
+------------------------------------------------------------------------------
+NODO: enfoque_mercado_voc
+  titulo    : Escucha constante al cliente durante todo el proceso (Voice of the Customer o VoC)
+  fuente    : Winning at New Products - Robert G. Cooper
+  dominio   : core   fase: validacion   vivo: True
+  entregable: Un informe con lo que escuchaste de tus clientes (VoC), el análisis competitivo y los resultados de las pruebas de concepto
+  resumen   : La falta de foco en el mercado y de escuchar a tus clientes es una de las causas más citadas de fracaso de nuevos productos. Por eso tienes que integrar diez acciones orientadas al mercado a lo largo de todo el proceso: generación de ideas basada en clientes, evaluación preliminar de mercado, análisis de mercado, estudios de voz del cliente (VoC), análisis competitivo, pruebas de concepto, iteraciones con clientes durante el desarrollo, pruebas de usuario, mercado de prueba y lanzamiento.
+  PASOS (5):
+     1. Convive de cerca con tus clientes más exigentes o hazles entrevistas a fondo para identificar sus problemas y oportunidades
+     2. Haz una evaluación preliminar de mercado antes de comprometer recursos importantes
+     3. Haz un análisis competitivo detallado: revisa productos, precios y tecnologías de quienes compiten contigo
+     4. Prueba tus primeras ideas de concepto con clientes reales antes de empezar el desarrollo formal
+     5. Sigue validando con tus clientes en ciclos cortos durante todo el desarrollo, no solo al principio
+  CONDICIONES (2):
+     1. Cuando no tienes evidencia directa de lo que necesita tu cliente
+     2. Cuando avanzas en el desarrollo de tu producto sin buscar retroalimentación externa
+  previos   : ['procesamiento_paralelo_con_espirales']
+  siguientes: ['ventaja_competitiva_producto', 'front_end_homework', 'homework_frontend_loading']
+------------------------------------------------------------------------------
+NODO: homework_frontend_loading
+  titulo    : Front-End Loading / Homework Predesarrollo
+  fuente    : Winning at New Products - Robert G. Cooper
+  dominio   : core   fase: planificacion   vivo: True
+  entregable: Business Case completo con evaluaciones de mercado, técnica, operaciones y financiera, aprobado antes de iniciar la etapa de Desarrollo
+  resumen   : El homework o diligencia debida antes de entrar a desarrollo (fuzzy front end) es el factor que decide el éxito o fracaso de tu producto, aunque la mayoría invierte poco tiempo aquí a pesar de su alto impacto. Debes completar un conjunto de actividades: screening inicial, evaluación preliminar de mercado y técnica, evaluación de operaciones y suministro, estudio detallado de mercado con voz del cliente, prueba de concepto con clientes reales, determinación del valor económico para el cliente, y análisis financiero para construir el business case. Invertir más tiempo en esta etapa no retrasa el proyecto, en realidad acelera el desarrollo posterior al evitar cambios costosos y tardíos, y reduce las tasas de fracaso atribuibles a mala definición inicial del producto.
+  PASOS (6):
+     1. Realiza un screening inicial de tu idea antes de comprometer recursos significativos
+     2. Ejecuta en paralelo una evaluación preliminar de mercado y una evaluación técnica preliminar identificando riesgos y ruta técnica
+     3. Evalúa fuentes de suministro y aspectos de operaciones o manufactura
+     4. Profundiza con un estudio detallado de mercado, competencia y voz del cliente
+     5. Prueba el concepto de producto con clientes reales y determina el valor económico que perciben
+     6. Construye tu business case con el análisis financiero y el plan de acción antes de pedir aprobación para pasar a Desarrollo
+  CONDICIONES (3):
+     1. Antes de tomar la decisión de pasar a Desarrollo
+     2. Cuando sientes presión de tiempo para saltarte pasos de validación
+     3. Cuando tu proyecto tiende a pasar directo a desarrollo sin validación previa suficiente
+  previos   : ['voz_del_cliente_voc', 'actividades_clave', 'enfoque_mercado_voc', 'calidad_de_ejecucion_proceso_innovacion']
+  siguientes: ['definicion_producto_proyecto', 'ventaja_competitiva_producto', 'gestion_riesgo_incremental', 'reglas_gestion_riesgo_gambling']
+------------------------------------------------------------------------------
+NODO: voice_of_customer_homework
+  titulo    : Trabajo de Front-End y Voz del Cliente (Front-End Homework)
+  fuente    : Winning at New Products - Robert G. Cooper
+  dominio   : core   fase: validacion   vivo: True
+  entregable: Business Case documentado con estudio de mercado, evaluación técnica y análisis financiero completos
+  resumen   : Muchas empresas fallan por hacer superficialmente o no hacer el 'homework' inicial: estudio de mercado, evaluación técnica y análisis financiero antes de desarrollar. Datos muestran que entre 75-96% de las peores empresas ejecutan pobremente estas tareas, resultando en decisiones basadas en supuestos en vez de hechos. La falta de voz del cliente (VoC) es la causa número uno de fracaso de nuevos productos en muchos estudios. Reducir esta etapa para acelerar el time-to-market es contraproducente: alarga el ciclo total y daña las tasas de éxito.
+  PASOS (5):
+     1. Realizar investigación de mercado y VoC antes de comenzar el desarrollo formal
+     2. Ampliar la base de clientes consultados, incluyendo clientes de los clientes (value chain)
+     3. Ejecutar evaluación técnica y de viabilidad antes de aprobar el proyecto
+     4. Construir el Business Case con datos duros, no solo supuestos
+     5. Validar iterativamente el concepto con clientes reales antes de llegar a fases avanzadas
+  CONDICIONES (2):
+     1. Si el equipo quiere saltarse la investigación de mercado para ganar tiempo
+     2. Si las decisiones de Go/Kill se están tomando sin datos de mercado
+  previos   : ['producto_unico_superior']
+  siguientes: ['definicion_estable_producto', 'stage_gate_system', 'mapa_flujo_trabajo_cliente', 'medicion_servicios']
+------------------------------------------------------------------------------
+NODO: voz_del_cliente_voc
+  titulo    : Escucha la voz de tu cliente (Voice of Customer, VoC)
+  fuente    : Winning at New Products - Robert G. Cooper
+  dominio   : core   fase: validacion   vivo: True
+  entregable: Un resumen de lo que aprendiste observando y entrevistando a tu cliente, que alimente directamente cómo diseñas tu producto
+  resumen   : Escuchar la voz de tu cliente es reunir información directa sobre sus necesidades, problemas y preferencias, no solo con entrevistas formales sino también observando cómo vive y trabaja en su propio entorno (observación de campo, a veces llamada camping out). Usa esto como punto de partida para diseñar tu producto, no como algo que revisas al final. Las necesidades que tu cliente no sabe nombrar, o su comportamiento real, te muestran cosas que una entrevista formal no capta.
+  PASOS (5):
+     1. Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos
+     2. Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos
+     3. Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas
+     4. Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final
+     5. Mantén contacto con tu cliente durante todo el desarrollo, no solo al principio y al final
+  CONDICIONES (3):
+     1. Cuando no tienes ideas claras de qué hace diferente a tu producto
+     2. Si estás diseñando tu producto a partir de supuestos propios y no de lo que observas en el terreno
+     3. Antes de avanzar a la etapa de desarrollo formal de tu producto
+  previos   : ['superioridad_producto_beneficios', 'desirability_feasibility_viability']
+  siguientes: ['definicion_producto_proyecto', 'spiral_development', 'customer_discovery_get_out_of_building', 'customer_journey_mapping', 'data_integrity_forecasting', 'estrategia_producto_global_glocal', 'homework_frontend_loading', 'product_backlog_agile', 'reduccion_tiempo_de_mercado_velocidad', 'desarrollo_en_espiral', 'observar_al_cliente_en_su_contexto']
+
+==============================================================================
+LOS TRES PARES A YA LEIDOS DEL ACTO, con su razon entera
+==============================================================================
+
+PUESTO 788, clase A, clave 0.8135: enfoque_mercado_voc contra voice_of_customer_homework
+    La misma voz del cliente hecha deber previo, contada dos veces y del mismo libro, sin arista ent
+    re ellos. Lo comun es el eje: hacer la investigacion de mercado y de voz del cliente ANTES de em
+    pezar el desarrollo formal, y seguir validando el concepto con clientes reales de forma iterativ
+    a y no solo al principio. Lo propio de enfoque_mercado_voc son convivir de cerca con los cliente
+    s mas exigentes o entrevistarlos a fondo, y el analisis competitivo detallado de productos, prec
+    ios y tecnologias. Lo propio de voice_of_customer_homework son dos cosas que amplian el alcance:
+     consultar tambien a los CLIENTES DE TUS CLIENTES, o sea subir un eslabon en la cadena de valor,
+     y construir el caso de negocio con datos duros y no con supuestos antes de aprobar el proyecto.
+     Ese salto a la cadena de valor no esta en ningun otro nodo de la familia. NOTA DE FAMILIA: la v
+    oz del cliente ya lleva cuatro nodos vistos en el cribado, con voz_del_cliente_voc, que es costu
+    ra confirmada y bloquea dos pares, y voice_of_customer_estrategico. Hay que contarla entera ante
+    s de tocarla.
+
+PUESTO 386, clase A, clave 0.8531: enfoque_mercado_voc contra voz_del_cliente_voc
+    REPITE con voz_del_cliente_voc. Los dos mandan la misma escucha de Cooper y con la misma tesis: 
+    acercarse al cliente de verdad en vez de suponer, usar lo que se aprende desde el inicio del dis
+    eno y no solo para verificar al final, y mantener el contacto durante todo el desarrollo y no so
+    lo al principio y al final. El primero anade la evaluacion preliminar de mercado y el analisis c
+    ompetitivo; el segundo insiste en observar en el contexto real porque el cliente no siempre cuen
+    ta sus problemas. LATERAL, no cambia la clase: el segundo tiene diez pasos y del 6 al 10 entra o
+    tro bloque, observar una vez al mes, ponerse en el lugar del cliente, atender a los comentarios 
+    casuales, anotar y releer a los dos dias, buscar patrones. Costura para la otra ficha.
+
+PUESTO 526, clase A, clave 0.8355: homework_frontend_loading contra voice_of_customer_homework
+    REPITE con voice_of_customer_homework. Los dos mandan el mismo trabajo previo de Cooper y contra
+     la misma tentacion, saltarse la validacion por ganar tiempo: investigacion de mercado y voz del
+     cliente ANTES del desarrollo formal, evaluacion tecnica y de viabilidad, validacion iterativa d
+    el concepto con clientes reales, y construir el business case con datos duros antes de pedir apr
+    obacion. El primero anade el screening inicial y la mirada a suministro y manufactura; el segund
+    o anade ampliar la consulta a los clientes de los clientes.
+
+==============================================================================
+LOS TRES PARES POR LEER, con su arista y su prueba de que no estan en la cola
+==============================================================================
+
+PAR: enfoque_mercado_voc contra homework_frontend_loading
+  veredicto en el archivo        : NINGUNO
+  esta en la cola del cribado    : NO, o sea LECTURA DIRIGIDA legitima
+  enfoque_mercado_voc nombra a homework_frontend_loading: True
+  homework_frontend_loading nombra a enfoque_mercado_voc: True
+  HAY ARISTA: True
+
+PAR: homework_frontend_loading contra voz_del_cliente_voc
+  veredicto en el archivo        : NINGUNO
+  esta en la cola del cribado    : NO, o sea LECTURA DIRIGIDA legitima
+  homework_frontend_loading nombra a voz_del_cliente_voc: True
+  voz_del_cliente_voc nombra a homework_frontend_loading: True
+  HAY ARISTA: True
+
+PAR: voice_of_customer_homework contra voz_del_cliente_voc
+  veredicto en el archivo        : NINGUNO
+  esta en la cola del cribado    : NO, o sea LECTURA DIRIGIDA legitima
+  voice_of_customer_homework nombra a voz_del_cliente_voc: False
+  voz_del_cliente_voc nombra a voice_of_customer_homework: False
+  HAY ARISTA: False
+
+==============================================================================
+FIN DE LA LECTURA. Nada se clasifico y nada se escribio.

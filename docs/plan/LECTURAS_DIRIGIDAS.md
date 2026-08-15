@@ -642,3 +642,188 @@ dos operaciones LISTAS no se pueden ejecutar las dos.**
 **LO QUE CAMBIARON:** `LD-58` junto dos operaciones en una; `LD-59` partio la apertura
 de customer validation; y `LD-60` a `LD-65` **partieron el acto de seis en cinco mas
 uno**, que es lo que hoy espera una palabra.
+
+---
+
+# OCTAVA TANDA: **LAS TRES QUE CIERRAN EL ACTO DE `OP-D-02`** . `LD-72` a `LD-74`
+
+**Ejecutadas el 15 ago 2026 (vuelta 33 del bucle), por encargo del fundador, que las adjudico
+como LECTURAS DIRIGIDAS por `P.5`.**
+
+> **POR QUE EMPIEZAN EN EL 72 Y NO EN EL 71, medido y no supuesto.** Barrido hoy `docs/` entero
+> por la cadena `LD-` seguida de digitos: **el numero mas alto usado es el 71**, y el **71 esta
+> tomado por una decision escrita: `LD_ESTRELLA_DISRUPTIVAS.md` y `RECOMPUTO_3388.md` declaran que
+> **NO se acuno**, porque el par ya estaba leido como `LD-04`. **Reciclar ese numero para otro par
+> convertiria tres citas vivas en ambiguas**, asi que se quema y se sigue en el 72. **Y queda
+> anotado, sin arreglarlo, que el rango 12 a 27 esta vacio en todo `docs/`**: no lo investigo,
+> porque no es el encargo de esta vuelta.
+
+**POR QUE SON LECTURA DIRIGIDA Y NO PARES SALTADOS DEL CRIBADO, y no es una etiqueta: esta
+medido.** Los tres se buscaron hoy en `docs/INTRA_DOMINIO_PARES.jsonl` y **ninguno de los tres
+esta en la cola** (`scripts/loop/vuelta33_ld_opd02.py`, salida `docs/loop/SALIDA_V33_LD_OPD02.txt`).
+La cola se construyo por similitud y estos quedaron por debajo del corte. **No entran en la cola y
+NO mueven `n`, que sigue en 3.388.**
+
+**LOS CUATRO NODOS SE IMPRIMIERON ENTEROS ANTES DE DECIDIR NADA**, con titulo, fuente,
+entregable, resumen, los pasos uno a uno, las condiciones y las aristas. Esa salida es la mitad
+del punto de `P.5`: **un par leido sobre un resumen es un par leido sobre otra cosa.**
+
+**LA VARA ES LA DEL CRIBADO, sin cambios:** el banco `9.6.1` (la linea o el procedimiento), con la
+direccion del `9.6.2` (**la vara pregunta que anade el HIJO a la MADRE, nunca al reves**) y la
+precision del `P.11` (una advertencia es linea, no procedimiento).
+
+## `LD-72` . `enfoque_mercado_voc` contra `homework_frontend_loading` . **D. DOS OBJETOS EN SECUENCIA. ENLACE YA PUESTO**
+
+**LO COMPARTIDO, paso contra paso y no en bloque:** la evaluacion preliminar de mercado (paso 2
+del primero contra paso 2 del segundo), el analisis de mercado y competencia (paso 3 contra paso
+4) y probar el concepto con clientes reales antes del desarrollo formal (paso 4 contra paso 5).
+**Tres de los cinco pasos del primero.**
+
+**LO PROPIO DE `homework_frontend_loading`, y es un PROCEDIMIENTO entero:** el screening inicial
+antes de comprometer recursos, la evaluacion TECNICA preliminar con sus riesgos y su ruta, la
+evaluacion de fuentes de SUMINISTRO y de operaciones o manufactura, la determinacion del VALOR
+ECONOMICO que el cliente percibe, y **la construccion del BUSINESS CASE con el analisis financiero
+y el plan de accion antes de pedir aprobacion para pasar a Desarrollo.**
+
+**LO PROPIO DE `enfoque_mercado_voc`, y son DOS LINEAS:** convivir de cerca con los clientes mas
+exigentes o entrevistarlos a fondo, y seguir validando en ciclos cortos **durante todo el
+desarrollo** y no solo antes de la puerta.
+
+**LA PRUEBA DE RECONOCIMIENTO DE MADRE E HIJO DEL `9.6.2` FALLA EN LOS DOS SENTIDOS, y se dice en
+vez de forzar una madre.** La prueba pide que *el hijo quepa entero dentro de UN paso de la
+madre*: `enfoque_mercado_voc` **no cabe** en el paso 4 del otro, porque se derrama sobre sus pasos
+2 y 5 y ademas lo excede por el final (la validacion post puerta, que el otro no tiene en ningun
+paso); y `homework_frontend_loading` no cabe en ningun paso del primero. **No son madre e hijo.**
+
+**LO QUE DECIDE, y son dos cosas medidas y no una impresion.** **PRIMERA, EL ENTREGABLE**, leido
+hoy en los dos ficheros: el primero entrega *un informe con lo que escuchaste de tus clientes
+(VoC), el analisis competitivo y los resultados de las pruebas de concepto*; el segundo entrega
+*Business Case completo con evaluaciones de mercado, tecnica, operaciones y financiera, aprobado
+antes de iniciar la etapa de Desarrollo*. **Dos entregables distintos son dos objetos distintos.**
+**SEGUNDA, EL PESO DE LO PROPIO** por el `9.6.1`, que **pesa y no cuenta**: uno conserva un
+procedimiento, el otro dos lineas. **CONTINUA, no repite: `D`, los dos sanos.**
+
+**LA ARISTA, buscada hoy en los dos sentidos contra el grafo: ESTA PUESTA EN LOS DOS.**
+`enfoque_mercado_voc` nombra a `homework_frontend_loading` en sus siguientes y
+`homework_frontend_loading` nombra a `enfoque_mercado_voc` en sus previos. **El grafo ya los tenia
+modelados como SECUENCIA y no como gemelos**, y el contenido dice lo mismo: **el informe de VoC
+del primero es insumo del business case del segundo.** No hay nada que reparar.
+
+> **DISCUTIBLE MARCADO, y es el mas fuerte de esta tanda, marcado antes de saber si acierto.**
+> **Tres de cinco pasos compartidos es mucho**, y la lectura contraria dice `A`: *la misma
+> investigacion de mercado previa contada dos veces por el mismo autor*. **Y tiene un precedente
+> incomodo a favor: el puesto 788 llamo `A` a un par de esta misma familia** donde lo propio de un
+> lado incluia *construir el caso de negocio con datos duros*. **Lo que separa a los dos casos, y
+> es lo que sostengo:** en el 788 lo propio eran **dos lineas** que *amplian el alcance*, y aqui
+> lo propio es **un procedimiento de cinco piezas con otro entregable**. El `9.6.1` **pesa**.
+
+## `LD-73` . `homework_frontend_loading` contra `voz_del_cliente_voc` . **D. MADRE E HIJO. ENLACE YA PUESTO**
+
+**LA PRUEBA DE RECONOCIMIENTO DEL `9.6.2` SE CUMPLE, y en un solo sentido.**
+`homework_frontend_loading` dice en su **paso 4**, dentro de UNA linea, *profundiza con un estudio
+detallado de mercado, competencia y **voz del cliente***. **`voz_del_cliente_voc` es el
+procedimiento entero de esas tres palabras**: preparar a quien vaya a observar, observar
+directamente al cliente en el lugar donde usa el producto, complementar la entrevista con
+observacion real porque el cliente no siempre cuenta su comportamiento, usar lo observado desde el
+inicio del diseno y no para verificar al final, y mantener el contacto durante todo el desarrollo.
+
+**Y LA MADRE CONSERVA MATERIA PROPIA QUE EL HIJO NO TOCA EN NINGUN PASO**, que es la otra mitad de
+la prueba: el screening, la evaluacion tecnica, el suministro y las operaciones, el valor economico
+percibido y el business case. **La pregunta ya solo se puede hacer en un sentido**, que es
+exactamente lo que el `9.6.2` manda.
+
+**CONTINUA: `D`, los dos sanos, madre `homework_frontend_loading` e hijo `voz_del_cliente_voc`.**
+
+**LA ARISTA, buscada hoy en los dos sentidos: ESTA PUESTA EN LOS DOS.** `voz_del_cliente_voc`
+nombra a `homework_frontend_loading` en sus siguientes y este lo nombra en sus previos. **La
+jerarquia esta cableada y no hay arreglo pendiente.**
+
+> **LO UNICO QUE ROZA EL LIMITE, y va dicho:** el paso 5 del hijo (*manten contacto durante todo el
+> desarrollo*) **se sale del alcance de la madre**, que termina en la puerta de Desarrollo. Por el
+> `P.11` eso es **una linea que califica el acto, no un procedimiento que lo constituya**, asi que
+> no rompe la relacion. **Quien lo lea como alcance propio dira que tampoco aqui hay madre.**
+
+## `LD-74` . `voice_of_customer_homework` contra `voz_del_cliente_voc` . **D. MADRE E HIJO. ARISTA QUE FALTA**
+
+**LA MISMA FIGURA QUE `LD-73`, con otra madre y con el cableado SIN PONER.**
+`voice_of_customer_homework` dice en su **paso 1**, en UNA linea, *realizar investigacion de
+mercado y **VoC** antes de comenzar el desarrollo formal*. **`voz_del_cliente_voc` es el
+procedimiento entero de la parte de VoC de esa linea**, con sus cinco pasos de observacion de
+campo.
+
+**Y LA MADRE CONSERVA MATERIA PROPIA QUE EL HIJO NO TOCA:** ampliar la consulta a **los clientes de
+tus clientes** (subir un eslabon en la cadena de valor), la evaluacion tecnica y de viabilidad, y
+construir el Business Case **con datos duros y no con supuestos**. **La prueba de reconocimiento
+se cumple y solo en un sentido. CONTINUA: `D`, los dos sanos.**
+
+**LA ARISTA, buscada hoy en los dos sentidos contra el grafo: NO HAY NINGUNA.** Ni
+`voice_of_customer_homework` nombra a `voz_del_cliente_voc` ni al reves. **`D`, sano, con ARISTA
+QUE FALTA, con direccion de madre a hijo.** Queda declarada para la **fase 04**, que es donde
+viven los enlaces; **no se pone aqui**.
+
+> **LIMITE DECLARADO SOBRE LA VARA APLICADA, para que nadie le atribuya lo que no midio:** el
+> `9.6.1` tiene una prueba de silueta (*si la madre enlaza a la estricta mayoria de sus hijos, la
+> arista que falta acusa*), y **esa prueba NO se corrio aqui**: pedia censar todos los hijos de
+> paso de `voice_of_customer_homework`, que es trabajo de otra nomina. **No hace falta para el
+> veredicto**, porque el propio `9.6.1` manda que por debajo de la mayoria **decida el contenido**,
+> y el contenido ya dijo CONTINUA. **Se dice para que el `D` no se lea como respaldado por una
+> medicion que no se hizo.**
+
+---
+
+## LA RESPUESTA A LA PREGUNTA DE `P.5`: **NI UNA FAMILIA NI DOS. ES UNA CADENA CON DOS PUENTES**
+
+**Con los SEIS pares del acto leidos (3 del cribado mas estas 3), la pregunta de `P.5` ya tiene
+respuesta medida y no estimada.** El acto de `OP-D-02`, dibujado por sus aristas `A`:
+
+| par | clase | de donde |
+|---|:---:|---|
+| `voz_del_cliente_voc` contra `enfoque_mercado_voc` | **A** | puesto **386**, cribado |
+| `enfoque_mercado_voc` contra `voice_of_customer_homework` | **A** | puesto **788**, cribado |
+| `voice_of_customer_homework` contra `homework_frontend_loading` | **A** | puesto **526**, cribado |
+| `enfoque_mercado_voc` contra `homework_frontend_loading` | **D** | **`LD-72`** |
+| `voz_del_cliente_voc` contra `homework_frontend_loading` | **D** | **`LD-73`** |
+| `voz_del_cliente_voc` contra `voice_of_customer_homework` | **D** | **`LD-74`** |
+
+**LAS TRES `A` FORMAN UN CAMINO, NO UN CUMULO:**
+
+```
+voz_del_cliente_voc --A-- enfoque_mercado_voc --A-- voice_of_customer_homework --A-- homework_frontend_loading
+```
+
+**Y LAS TRES CUERDAS LARGAS DEL CAMINO SON LAS TRES `D`. NO HAY UN SOLO TRIANGULO CERRADO EN TODO
+EL ACTO.**
+
+**POR LA REGLA `P.10`, HAY DOS NODOS PUENTE Y NO UNO:**
+
+| puente | sus dos `A` | la `D` que enfrenta a sus extremos |
+|---|---|---|
+| **`enfoque_mercado_voc`** | 386 y 788 | **`LD-74`**: `voz_del_cliente_voc` contra `voice_of_customer_homework` |
+| **`voice_of_customer_homework`** | 788 y 526 | **`LD-72`**: `enfoque_mercado_voc` contra `homework_frontend_loading` |
+
+> **ES EL SEGUNDO PUENTE DOBLE DEL ARCHIVO**, tras el de `customer_validation` con
+> `filosofia_customer_validation` (tercer ejemplar de `P.10`). Y `P.10` ya escribio lo que eso
+> significa: **una componente con puente doble no tiene un punto debil, tiene una costura.**
+
+**LA SALIDA, y `P.10` la nombra sin que yo tenga que inventarla.** De sus tres, las dos primeras
+estan agotadas: **no queda par por leer** (6 de 6) y **no queda nodo por cambiar** (los cuatro
+estan estables). Queda la tercera, que es la unica que no desmiente ninguna lectura:
+
+> **FUNDIR SOLO EL SUBCONJUNTO CERRADO Y ENLAZAR EL RESTO.**
+
+**Y aqui el subconjunto cerrado de la operacion escrita es el par del puesto 386**,
+`voz_del_cliente_voc` con `enfoque_mercado_voc`: su unico par interno esta leido y es `A`.
+
+> **LO QUE ESTO CONFIRMA, y es lo que hace que la lectura no fuera un tramite:** el ORDEN INTERNO
+> escrito de `OP-D-02` **ya decia esto sin saberlo**. Su punto 2 manda *fundir con
+> `enfoque_mercado_voc`* y su punto 4 manda, de los otros dos, solo **tener delante** a
+> `homework_frontend_loading` y `voice_of_customer_homework`. **No manda fundirlos.** La lectura de
+> `P.5` no cambio el alcance de la operacion: **le dio la medicion que le faltaba.**
+
+> **Y LO QUE ESTO NIEGA, dicho igual de claro:** el cierre transitivo de las `A` cubre a los cuatro
+> nodos, y **fundir los cuatro habria sido el error**. Es literalmente el caso que `P.12` nombra:
+> **el cierre transitivo es la citacion, no la sentencia.**
+
+**SALDO DE LA TANDA: TRES lecturas, TRES `D`, cero `A`.** Dos con el enlace ya puesto (`LD-72`,
+`LD-73`) y **una con ARISTA QUE FALTA** (`LD-74`), declarada para la fase 04. **`n` no se movio:
+sigue en 3.388.**
