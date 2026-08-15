@@ -872,6 +872,78 @@ verde en la suite. **Suites: motor 25 de 25, web 80 ficheros con 1.030 pasadas y
 > seis nodos del acto **dispara en CUATRO**, incluidos **dos que el plan declara SANOS**. **La
 > nomina siguio siendo la escrita, y la vara final fue la lectura.**
 
+### PASO 2 DEL ORDEN INTERNO: **PARADA AL 15 ago 2026 (vuelta 35). CERO NODOS TOCADOS Y CERO VEREDICTOS VOLCADOS**
+
+**El paso 2 dice *solo entonces decidir sobre los SEIS nodos*, o sea la fusion. No se
+ejecuta, y el motivo no es una duda: es `P.5` medida.** `P.5` (`BANCO_DEL_PLAN.md` linea 239)
+manda que **cada acto se lea ENTERO DESPUES de su destejido y ANTES de su fusion**, y escribe su
+motivo en la misma pagina: *leer un par cuyo nodo va a perder la mitad de sus pasos es leer algo
+que va a dejar de existir*.
+
+**MEDIDO HOY CON DOS VARAS INDEPENDIENTES, y la segunda es la que manda.** La de FECHA
+(`scripts/loop/vuelta35_pares_opd03.py`) compara la fecha de la lectura del par contra la del
+ultimo cambio de sus dos ficheros. La de TEXTO (`scripts/loop/vuelta35_rancios.py`) compara los
+**pasos accionables del nodo en el commit de la lectura contra los de hoy**, y hace falta porque
+**un fichero de nodo cambia por cosas que no son su texto** (una redireccion, un reciprocado del
+Gate, un campo de fuente): contar como rancio un par cuyo texto no se movio seria inflar el
+hallazgo. **Las dos varas dan la misma lista.**
+
+**LA TABLA NO ESTA TECLEADA: es la salida del instrumento, pegada entera.** Comando, corrido en
+esta vuelta:
+
+```
+python scripts/loop/vuelta35_rancios.py
+```
+
+salida completa en `docs/loop/SALIDA_V35_RANCIOS.txt`, cierre pegado sin editar una coma:
+
+```
+RANCIOS POR TEXTO: 5
+   277   A    optimizacion_embudo_get_customers de 10 a 5 pasos
+   374   A    split_testing_experimentos_ab de 9 a 5 pasos
+   452   A    ab_testing_optimizacion de 15 a 5 pasos
+   1571  A    split_testing_experimentos_ab de 9 a 5 pasos
+   1575  A    ab_testing_optimizacion de 15 a 5 pasos
+AL DIA: 3 -> [(643, 'A'), (738, 'D'), (1061, 'D')]
+```
+
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 35), y es de una cifra publicada por la vuelta 34.
+> El texto viejo se queda entero arriba y abajo.** El **pendiente de doctrina 3** de la vuelta 34
+> escribio que los pares emitidos contra texto muerto eran **DOS**, el `452` y el `1575`. **Medidos
+> hoy son CINCO, y los cinco son `A`.** Los tres que aquel recuento no vio (`277`, `374`, `1571`)
+> **no envejecieron por el destejido de esta operacion sino por los de la fase 01**, que se
+> llevaron el bloque `6 a 10` de `optimizacion_embudo_get_customers` (`OP-F-04-WEI`) y el `6 a 9`
+> de `split_testing_experimentos_ab` (`OP-F-04-RAC`). **La vuelta 34 miro solo hacia su propio
+> destejido.**
+
+**LO QUE ESTO LE HACE A LA CONCLUSION PUBLICADA.** La vuelta 34 publico que el acto **no es una
+familia de seis sino DOS FAMILIAS CERRADAS**, una de cuatro y una de dos. **Esa forma se dibuja
+con los SEIS pares `A` del acto, y CINCO de los seis estan rancios.** El unico `A` al dia es el
+**643** (`split_testing` contra `test_ab_precio`), **y sus dos nodos no cambiaron de texto**.
+
+**LAS CINCO RELECTURAS ESTAN HECHAS Y NO VOLCADAS**, y las dos mitades de esa frase son a
+proposito. **Hechas**: los seis nodos impresos ENTEROS antes de decidir
+(`SALIDA_V35_NODOS_ENTEROS.txt`), las razones viejas leidas enteras
+(`SALIDA_V35_RAZONES.txt`), las aristas buscadas en los DOS sentidos, y las cinco con su razon
+escrita, sostenida y con su discutible marcado. **No volcadas**: por la **regla 5 de
+`EJECUTOR.md`**, lo que contradice una cifra publicada con su corte **se declara como PARADA y no
+lo arregla el ejecutor**. La propuesta queda **sellada** en
+`docs/loop/PROPUESTA_V35_RELECTURAS.json`, construida por `scripts/loop/vuelta35_relecturas.py`
+con **seis guardas escritas para caer**, las seis verdes (`SALIDA_V35_RELECTURAS.txt`).
+
+**Y LA CONSECUENCIA SE COMPUTA, NO SE DIBUJA** (`P.6`: la nomina de acto se computa y no admite
+gusto). Si las cinco se volcaran, el instrumento mide que quedaria **UN solo par `A` dentro del
+acto**, el `643`, y que el acto de **SEIS** pasaria a ser un acto de **DOS**
+(`split_testing`, `test_ab_precio`), **saliendo del cierre transitivo `ab_testing_optimizacion`,
+`funnel_get_customers_optimizacion`, `optimizacion_embudo_get_customers` y
+`split_testing_experimentos_ab`**. **El paso 2 se quedaria sin los seis sobre los que decidir.**
+
+> **LA PREGUNTA QUE ESTA VUELTA NO SE CONTESTA SOLA, y va al fundador:** el **643** cae bajo el
+> mismo criterio de objeto que voltea a los otros cinco (`test_ab_precio` aplica la prueba al
+> precio; `split_testing` compara alternativas de propuesta de valor), **pero `P.5` no lo
+> alcanza**, porque ninguno de sus dos nodos cambio de texto. **Releerlo seria re cribar, que es
+> otro frente y nadie lo abrio.** Queda declarado en vez de forzado.
+
 ### ~~**PARADA AL 15 ago 2026 (vuelta 33). CERO NODOS TOCADOS.**~~ **SECCION SUPERADA POR LA DE ARRIBA (15 ago 2026, vuelta 34) y CONSERVADA ENTERA:** describe bien el estado del que esta vuelta partio, y su motivo 2 lleva su correccion declarada arriba. El instrumento de costuras se declara MAL CALIBRADO
 
 **El modo continuo llego hasta aqui y se detuvo antes de escribir nada.** Tres motivos medidos

@@ -1,0 +1,48 @@
+﻿==============================================================================
+GUARDA 1: los pasos de hoy, contra lo que las razones nuevas afirman
+==============================================================================
+  ab_testing_optimizacion                 5 pasos (la razon dice 5)  OK
+  funnel_get_customers_optimizacion       7 pasos (la razon dice 7)  OK
+  optimizacion_embudo_get_customers       5 pasos (la razon dice 5)  OK
+  split_testing                           4 pasos (la razon dice 4)  OK
+  split_testing_experimentos_ab           5 pasos (la razon dice 5)  OK
+  test_ab_precio                          5 pasos (la razon dice 5)  OK
+
+==============================================================================
+GUARDA 5: las aristas internas, buscadas EN LOS DOS SENTIDOS
+==============================================================================
+  277   funnel_get_customers_optimizacion    contra optimizacion_embudo_get_customers    arista: NO  OK
+  374   split_testing                        contra split_testing_experimentos_ab        arista: NO  OK
+  452   ab_testing_optimizacion              contra split_testing                        arista: NO  OK
+  1571  split_testing_experimentos_ab        contra test_ab_precio                       arista: NO  OK
+  1575  ab_testing_optimizacion              contra test_ab_precio                       arista: NO  OK
+
+==============================================================================
+GUARDAS 2, 3 y 4: clase esperada, razon vieja copiada por maquina y literal dentro
+==============================================================================
+  277   A -> D   razon vieja   573 caracteres, literal dentro de  4657  OK
+  374   A -> D   razon vieja   664 caracteres, literal dentro de  3721  OK
+  452   A -> D   razon vieja   569 caracteres, literal dentro de  4652  OK
+  1571  A -> D   razon vieja  1574 caracteres, literal dentro de  4945  OK
+  1575  A -> D   razon vieja  1452 caracteres, literal dentro de  4823  OK
+
+ESCRITA LA PROPUESTA: docs\loop\PROPUESTA_V35_RELECTURAS.json (5 filas). NO SE VOLCO NADA.
+
+==============================================================================
+GUARDA 6: el marcador de hoy y el que quedaria, escrito ANTES de que nadie vuelque
+==============================================================================
+  MARCADOR DE HOY, contado aqui:      n 3388, A 581, B 83, C 8, D 2716
+  MARCADOR SI SE VOLCARAN LAS CINCO:  n 3388, A 576, B 83, C 8, D 2721
+  Si el dia del volcado el instrumento diera otra cosa, SE PARA.
+
+==============================================================================
+LA FORMA DEL ACTO SI LAS CINCO SE VOLCARAN, computada y no dibujada
+==============================================================================
+  pares A que quedarian DENTRO del acto: 1
+    643   split_testing contra test_ab_precio
+  nodos que seguirian en el cierre transitivo: 2 -> ['split_testing', 'test_ab_precio']
+  nodos que SALDRIAN del acto: 4 -> ['ab_testing_optimizacion', 'funnel_get_customers_optimizacion', 'optimizacion_embudo_get_customers', 'split_testing_experimentos_ab']
+
+  P.6 manda que la nomina de ACTO se COMPUTA y no admite gusto: si las cinco se
+  vuelcan, el acto de SEIS deja de existir y queda un acto de DOS. El paso 2 del
+  orden interno de OP-D-03, decidir sobre los seis, se quedaria sin los seis.
