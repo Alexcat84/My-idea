@@ -549,6 +549,58 @@ copiado que quedo en el nodo equivocado*, **NO se resolvio por extension**: el a
 PARADA en su adjudicacion 2 (*extender la cola a material sin gemelo es escribir una puerta
 nueva, no citar una*), y **la puerta nueva la escribio el fundador**, y es la seccion siguiente.
 
+#### REGISTRO: **LAS DIECISIETE COSTURAS DE `OP-F-04-COL` ENTRAN A LA COLA** (14 ago 2026, vuelta 31)
+
+**Es la tanda mas grande que ha entrado por esta puerta, y la cifra se dice antes que nada:
+`OP-F-04-COL` reparte trece bloques en VEINTIUN destinos, y DIECISIETE de esos destinos quedan
+con costura.** No es un error del reparto: es la firma de esta tanda en concreto. El material
+que viaja es de Coleman y los nodos que lo reciben **son miembros de la familia Coleman**, o
+sea que emisor y receptor salieron del mismo libro. **Que el solape sea alto era esperable; lo
+que no es admisible es no medirlo.**
+
+**LA MEDICION, con su instrumento y su corte:** `scripts/loop/vuelta31_costuras_col.py`, que a
+diferencia del de la vuelta 29 **no lleva la nomina de receptores escrita a mano: la lee del
+plan sellado**, precisamente para que no se pueda olvidar ninguno, que es la omision que el
+acta de la vuelta 28 adjudico. Salida completa con los pasos impresos uno a uno en
+`docs/loop/SALIDA_V31_COSTURAS_COL.txt`, corte **14 ago 2026**. Los pasos de HOY se leen del
+arbol; **los de ANTES del corte se leen del commit `cc47af3d`**, el ultimo anterior a
+`575be1e3`, que es el que ejecuto los veinticuatro cortes. **No se desteje ninguna: solo se
+declaran.**
+
+| destino | que recibio | la costura, medida hoy |
+|---|---|---|
+| `fase_admit_celebracion` | los pasos 9, 10, 11 y 13 de `blueprint_de_experiencia` | **9 pasos contra 5**. **DOS solapes casi literales**: el nuevo 7 (*disena un ritual o una celebracion especifica para ese momento*) contra su 1 (*disenar un ritual o momento de celebracion compartido al cerrar la compra*), y el nuevo 8 (*crea un recuerdo fisico o digital que tu cliente pueda conservar*) contra su 2 (*crear un artefacto fisico o digital que memorialice el momento*) |
+| `reunion_conclusion_proyecto` | los pasos 6 a 11 de `project_close_out` | **12 pasos contra 6, y es el solape mas alto de la tanda**: el nuevo 7 contra su 1 (los dos dicen *revisar los objetivos y metricas de exito definidas en el kickoff*), el nuevo 12 contra su 5 (los dos son el monitoreo posterior de tres meses) y el nuevo 11 contra su 6 (los testimonios). **Tres de seis** |
+| `investigar_datos_cliente` | los pasos 7 a 10 de `ganar_comprension_del_cliente` | **11 pasos contra 7**. El nuevo 9 (*define entre 5 y 10 datos prioritarios*) contra su 1 (*elige de 5 a 10 datos que vas a empezar a registrar de inmediato*), y el nuevo 11 (*investiga perfiles publicos en redes sociales*) contra su 3 (*revisa LinkedIn, Facebook, el sitio web y Google*). **Dos de cuatro** |
+| `onboarding_comunitario_y_lenguaje_propio` | los pasos 6 a 8 de `relaciones_con_clientes` | **9 pasos contra 6, y los TRES que entraron solapan**: el 7 contra su 4 (rituales de bienvenida), el 8 contra su 3 (la jerga o cultura propia) y el 9 contra su 2 (los mentores compatibles) |
+| `incentivos_no_monetarios_advocacy` | los pasos 7, 8 y 10 de `estrategia_crecimiento_clientes` | **7 pasos contra 4**. El nuevo 5 (*el incentivo de mayor valor percibido que sea de bajo costo marginal*) contra su 1 (*que recurso propio tiene alto valor percibido pero bajo costo marginal*): **el mismo criterio dicho dos veces**. La huella de esa frase ya vivia en el destino, y por eso el caso positivo de este corte tuvo que usar otra (declarado en el plan) |
+| `rediseno_procesos_negocio_cx` | los pasos 9 a 11 de `cultura_de_experiencia` **y** el paso 10 de `customer_journey_mapping` | **9 pasos contra 5, con DOS costuras de clase distinta**. Contra lo que ya tenia: el nuevo 6 contra su 2 (que cada persona sepa su papel en la experiencia) y los nuevos 8 y 9 contra su 3 (reducir herramientas). **Y entre los que entraron: el 8 y el 9 dicen lo mismo con otras palabras**, porque los dos donantes traian el mismo material de Coleman |
+| `rediseno_procesos_negocio_cliente` | el paso 8 de `blueprint_de_experiencia` **y** los pasos 6 a 8 de `customer_journey_mapping` | **9 pasos contra 5**. El nuevo 7 contra su 1 (mapear los procesos internos que generan quejas) y el nuevo 9 contra su 5 (medir el impacto con metricas antes y despues) |
+| `comunicacion_proactiva_puntos_estres` | los pasos 5 a 7 de `blueprint_de_experiencia` | **7 pasos contra 4**. El nuevo 6 contra su 1 (los momentos de alta incertidumbre o ansiedad) y el nuevo 7 contra sus 2 y 3 (los mensajes en los momentos criticos) |
+| `fase_acclimate_mapa_de_proceso` | los pasos 14, 16 y 17 de `blueprint_de_experiencia` | **8 pasos contra 5**. El nuevo 6 contra sus 1 y 2 (mapear todos los pasos y hacer el grafico) y el nuevo 7 contra su 3 (comunicaciones atadas a hitos). **El nuevo 8, el responsable por punto de contacto, NO repite nada** |
+| `fase_accomplish_experiencia_cliente` | los pasos 5 a 9 de `metas_vs_proposito` | **10 pasos contra 5, y el solape es PARCIAL**: los nuevos 6 y 7 afinan su 1 (separar el objetivo declarado del deseo real, donde su 1 solo pide definir el objetivo) y el nuevo 8 se monta sobre su 2 (el sistema de seguimiento). Los nuevos 9 y 10 no repiten nada |
+| `investigar` y `conexion_personal_emocional` | el paso 11 de `ganar_comprension_del_cliente` | **5 pasos contra 4**. El nuevo 5 (*prioriza datos personales y emocionales*) contra sus 1 y 2 (*clasifica los datos en personales, emocionales o ambos* y *da prioridad a los que caen en ambas*): **es el mismo criterio**. La fila lleva los dos nombres porque el bloque del donante se partio entre este destino y el anterior |
+| `calibracion_intensidad_celebracion` | el paso 12 de `blueprint_de_experiencia` | **4 pasos contra 3**. El unico que entro repite sus 1 y 2 (calibrar la celebracion a la categoria de producto y no sobreactuar) |
+| `construccion_tribu_de_marca` | el paso 5 de `relaciones_con_clientes` | **5 pasos contra 4, solape PARCIAL**: el que entro (*rituales o simbolos que representen los valores centrales*) se cruza con su 3 (*elementos visuales o simbolicos que permitan mostrar afiliacion*), pero el suyo es el simbolo del que PERTENECE y el nuevo es el simbolo del VALOR |
+| `handoff_transicion_ventas_cuentas` | el paso 15 de `blueprint_de_experiencia` | **6 pasos contra 5**. El que entro (*redisena el traspaso para que no se pierda informacion ni calidez*) es **el paraguas de sus 1 a 4**, que son ese rediseno en detalle: no repite un paso, repite el conjunto |
+| `persuasion_directivos_prioridad_cliente` | los pasos 6 a 9 de `retention_metrics` | **8 pasos contra 4, solape PARCIAL, uno de cuatro**: el nuevo 8 (*presentar el impacto financiero de la perdida temprana al equipo directivo*) contra su 1 (*reune estadisticas del sector sobre perdida de clientes y su impacto en las ganancias*). Los nuevos 5, 6 y 7 son la cuenta propia y no repiten |
+| `timing_solicitud_referidos` | el paso 9 de `estrategia_crecimiento_clientes` | **5 pasos contra 4, solape PARCIAL**: el que entro (*comunica el programa en la fase Adopt o Advocate*) se cruza con sus 1 y 2 (el punto de logro y el disparador a los 30 dias), que es el mismo momento dicho por otra via |
+| `silla_vacia_del_cliente_en_decisiones` **(NODO NUEVO, no miembro)** | el paso 12 de `cultura_de_experiencia` **y** el paso 9 de `customer_journey_mapping` | **2 pasos, y los dos son el mismo objeto**: *incorporar un simbolo o recordatorio del cliente en las reuniones internas* y *colocar una silla vacia representando al cliente en cada reunion interna*. **El nodo NACE con la costura dentro y con nada mas**, y entra por esta puerta por el registro de arriba (el disparador es la repeticion, no el domicilio). **Los dos pasos fueron al MISMO nodo a proposito**, por la adjudicacion 3 del acta de la vuelta 27: partirlos habria fabricado el gemelo |
+
+> **LOS CUATRO DESTINOS SIN COSTURA, dichos con su nombre para que la cuenta cierre:**
+> `personalizacion_guiada_por_el_cliente`, `incentivos_internos_alineados_a_retencion`,
+> `autoservicio_y_autosanacion_del_producto` y `observar_al_cliente_en_su_contexto`. **Los
+> cuatro son nodos propios que nacen de UN solo donante**, asi que no hay nada con lo que
+> solapar: **21 destinos, 17 con costura y 4 sin ella.**
+
+**Y UNA LECTURA QUE ESTA TANDA OBLIGA A DEJAR ESCRITA, sin resolverla aqui:** cuando el
+receptor y el donante son **del mismo libro**, la costura deja de ser la excepcion y pasa a ser
+lo normal. **La fase 02 se va a encontrar diecisiete de golpe**, y varias de ellas (la de
+`reunion_conclusion_proyecto`, la de `fase_admit_celebracion`, la de
+`incentivos_no_monetarios_advocacy`) **no son un matiz: son el mismo paso escrito dos veces**.
+**La lectura que las decide es de la fase 02**, y esta pagina solo garantiza que ninguna llegue
+ahi sin haber sido medida y nombrada.
+
 ### LA COLA GANA SU SEGUNDA PUERTA: **LA COLA DEL OBJETO AJENO** (14 ago 2026, decision del fundador)
 
 **Resuelve el pendiente de doctrina que la vuelta 29 midio tres veces: la primera puerta

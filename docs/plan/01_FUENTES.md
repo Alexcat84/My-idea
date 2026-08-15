@@ -1129,6 +1129,36 @@ hechas; `WEI` y `HOR` acaban de quedar enteras; `COL` tiene su primer tiempo y l
 segundo.** Y por eso **la vuelta 30 no abre la fase 02**: abrirla con una operacion de fuente a
 medias romperia el *fuente primero* que esta pagina existe para sostener.
 
+> **CORRECCION DECLARADA, 14 ago 2026 (vuelta 31): EL MOTIVO DE ARRIBA CAYO Y LA FASE 01
+> CIERRA.** El parrafo se queda entero donde esta, porque una correccion que tapa lo que
+> corrige no se puede auditar. Lo que cambio es la unica cifra que lo sostenia:
+> **`OP-F-04-COL` ya no esta en 1 de 15, esta en 15 de 15** (13 resueltos, 1 fundido, 1
+> embebido legitimo, **cero pendientes**), medido hoy con `scripts/loop/vuelta31_saldo_col.py`
+> tras ejecutar su segundo tiempo. **Las cuatro `OP-F-04` estan hechas.**
+
+#### **LA FASE 01 QUEDA CERRADA** (14 ago 2026, vuelta 31), y la tabla se recomputa al cerrar
+
+**Ninguna cifra de esta tabla viene de un acta ni de un reporte: todas salen de instrumentos
+corridos en esta misma vuelta, DESPUES de la ultima operacion.**
+
+| operacion | estado al cierre, medido hoy | con que instrumento |
+|---|---|---|
+| `OP-F-01` | **VERDE**, y no toca ningun paso por diseno | verificada en la vuelta 30 (los seis de la clase LARGO LEGITIMO con 9, 9, 8, 13, 10 y 8, identicos a su cifra publicada) |
+| `OP-F-02` | **HECHA** | acta de la vuelta 29, adjudicacion 4; registrada en su nota en la vuelta 30 |
+| `OP-F-03` | **HECHA** | acta de la vuelta 29, adjudicacion 4; registrada en su nota en la vuelta 30 |
+| `OP-F-04-RAC` | **HECHA**, **4 de 4 resueltos, 0 pendientes** | `vuelta30_saldo_opf04.py` corrido hoy (`SALIDA_V31_SALDO_RAC.txt`); registrada en su nota en esta vuelta |
+| `OP-F-04-WEI` | **HECHA**, **13 de 13** (11 resueltos mas 2 fundidos), **0 pendientes** | idem (`SALIDA_V31_SALDO_WEI.txt`) |
+| `OP-F-04-HOR` | **HECHA**, **13 de 13** (12 mas 1), **0 pendientes** | idem (`SALIDA_V31_SALDO_HOR.txt`) |
+| **`OP-F-04-COL`** | **HECHA**, **15 de 15** (13 resueltos, 1 fundido, 1 embebido legitimo), **0 pendientes** | `vuelta31_saldo_col.py` (`SALIDA_V31_SALDO_COL_FINAL.txt`) |
+
+> **LO QUE EL CIERRE DE ESTA FASE SIGNIFICA, dicho sin estirarlo:** *fuente primero* esta
+> cumplido, o sea que **ningun nodo de estas tandas entra a su destejido o a su fusion
+> arrastrando un libro sin declarar**. **No significa que no quede nada que mirar en estos
+> nodos:** las **diecisiete costuras** de `COL`, las **cinco** de `WEI` y las **cuatro entradas
+> de LA COLA DEL OBJETO AJENO** estan declaradas en `08_VERIFICACION.md` **y son trabajo de la
+> fase 02**, con su comprobacion fechada al cierre de esa fase. **Cerrar la 01 es haber puesto
+> cada bloque donde su objeto vive, no haber dejado los nodos perfectos.**
+
 ### `OP-F-04-COL`, PRIMER TIEMPO: LAS FRONTERAS QUE FALTABAN, COMO REGISTRO PURO (14 ago 2026, vuelta 30)
 
 **Es la forma que el acta de la vuelta 29 adjudico** (seccion 4, punto 5): *una vuelta publica
@@ -1228,6 +1258,88 @@ no la tiene se nombra, con su medicion.**
 > dia. **Una regla no juzga hacia atras un corte que se hizo cuando no existia.** Lo que si
 > obliga es la letra de `P.18` punto 1, y se cumple: **la lectura se rehace sobre el nodo de
 > hoy**, no sobre la evidencia de otra fecha.
+
+### `OP-F-04-COL`, SEGUNDO TIEMPO: LOS TRECE DESTINOS EJECUTADOS, Y LA TANDA QUEDA ENTERA (14 ago 2026, vuelta 31)
+
+**LAS FRONTERAS NO SE REHICIERON: son las de arriba**, la tabla de doce de la vuelta 30 mas la
+de `viral_loop_marketing` (`P.20`, vuelta 30), la de `voz_del_cliente_voc` y la de
+`metas_vs_proposito` con su correccion declarada. **Lo que esta vuelta anade es el DESTINO por
+`P.18`**, leido sobre **la nomina de la familia Coleman medida HOY antes de decidir un solo
+destino: 83 nodos vivos, 68 con fuente unica** (`scripts/loop/vuelta27_medir.py familia
+Coleman`, salida en `docs/loop/SALIDA_V31_FAMILIA_COLEMAN.txt`), que es lo que `P.18` punto 1
+obliga.
+
+**LA CUENTA, y viene confirmada:** son **TRECE destinos**, quince de la nomina menos
+`viral_loop_marketing` (su mitad ya la hizo el corte unico de `P.20`) menos
+`keep_customers_strategy` (MULTIFUENTE LEGITIMO sin corte). **Adjudicacion 5 del acta de la
+vuelta 30**, leida hoy en su linea 6639. **Trece bloques, VEINTICUATRO cortes y VEINTIUN nodos
+receptores**, porque cuatro bloques se partieron en subbloques por objeto.
+
+**`blueprint_de_experiencia` SE PARTIO EN SEIS SUBBLOQUES, y el motivo estaba publicado antes
+de partirlo:** la fila de la tabla de arriba ya declaraba que su `5 a 17` es *el mas largo de
+los doce* y que trae *la postventa, el momento del si, el ritual de bienvenida y los cien
+dias*. **La frontera es de LIBROS y el destino es de OBJETOS**, asi que un bloque de trece
+pasos con tres actos dentro no tiene UN destino: tiene los suyos.
+
+| # | origen | tramo | destino por `P.18` | por que su objeto coincide |
+|---:|---|---|---|---|
+| 1 | `blueprint_de_experiencia` | **5 a 7** | miembro `comunicacion_proactiva_puntos_estres` | la postventa que se adelanta: documentar el proceso, localizar los momentos de ansiedad y programar seguimientos sin esperar la queja. **El entregable del miembro es esa lista de puntos de estres con su sistema de notificaciones** |
+| 2 | `blueprint_de_experiencia` | **8** | miembro `rediseno_procesos_negocio_cliente` | simplificar formularios y papeleo es una **friccion autoinfligida**, la que el negocio se causa a si mismo, que es el objeto del miembro (su ejemplar es Comcast) |
+| 3 | `blueprint_de_experiencia` | **9, 10, 11 y 13** | miembro `fase_admit_celebracion` | el ritual del si: el instante exacto en que el prospecto se vuelve cliente, su ritual, el recuerdo que conserva y el equipo dentro. **El miembro es la fase Admit y su entregable es el momento de celebracion tangible en el instante de la compra** |
+| 4 | `blueprint_de_experiencia` | **12** | miembro `calibracion_intensidad_celebracion` | sale del anterior a proposito: **alinear la INTENSIDAD y no sobreactuar** es el objeto entero del miembro, cuyo titulo es *no alcanzar el pico demasiado pronto* |
+| 5 | `blueprint_de_experiencia` | **15** | miembro `handoff_transicion_ventas_cuentas` | el REDISENO del traspaso entre quien vende y quien da soporte. **Descartados dos hermanos con otro objeto**: `desconexion_ventas_experiencia` diagnostica por que ocurre y `traspaso_ventas_cuentas` vigila que lo prometido llegue intacto |
+| 6 | `blueprint_de_experiencia` | **14, 16 y 17** | miembro `fase_acclimate_mapa_de_proceso` | los cien dias: el mapa de puntos de contacto entre la compra y el dia 100, los hitos distribuidos y el responsable por punto. **El entregable del miembro es ese mapa mas su calendario por hito** |
+| 7 | `cliente_disena_producto` | **5 a 8** | **NODO PROPIO** `personalizacion_guiada_por_el_cliente` | **`P.18` punto 3**: en los cuatro pasos quien decide es EL CLIENTE. `micro_experiencias_personalizadas` captura preferencias que recoge el equipo y `personalizar_interacciones_cliente` son mensajes que escribe la empresa: **ningun miembro tiene ese objeto** |
+| 8 | `cultura_de_experiencia` | **9 a 11** | miembro `rediseno_procesos_negocio_cx` | el entregable del miembro es el plan de transformacion **con formacion para tu gente y menos herramientas duplicadas**, y los tres pasos son esas dos cosas |
+| 9 | `cultura_de_experiencia` | **12** | **NODO PROPIO** `silla_vacia_del_cliente_en_decisiones` | **`P.18` punto 3**: un artefacto de gobierno permanente en la reunion interna. `persuasion_directivos_prioridad_cliente` arma un caso con datos UNA vez, que es otra cosa |
+| 10 | `customer_journey_mapping` | **6 a 8** | miembro `rediseno_procesos_negocio_cliente` | el diagnostico exacto de la friccion autoinfligida: los journeys por area, donde los departamentos se pasan la responsabilidad, y el impacto cuantitativo del mal servicio |
+| 11 | `customer_journey_mapping` | **9** | miembro `silla_vacia_del_cliente_en_decisiones` | **MISMO destino que el corte 9, y por la adjudicacion 3 del acta de la vuelta 27**: los dos pasos son el mismo objeto de Coleman en dos anfitriones, y partirlos habria fabricado el gemelo |
+| 12 | `customer_journey_mapping` | **10** | miembro `rediseno_procesos_negocio_cx` | **MISMO destino que el corte 8**: consolidar las herramientas dispersas es la linea *menos herramientas duplicadas* de su entregable |
+| 13 | `diseno_estructura_recompensas_roles` | **4 a 7** | **NODO PROPIO** `incentivos_internos_alineados_a_retencion` | **`P.18` punto 3**: una auditoria y un rediseno del esquema de compensacion. `desconexion_ventas_experiencia` usa esa desalineacion como CAUSA de un traspaso roto, no como objeto |
+| 14 | `estrategia_crecimiento_clientes` | **7, 8 y 10** | miembro `incentivos_no_monetarios_advocacy` | el incentivo de alto valor percibido y bajo costo marginal es su ejemplar literal (el almacenamiento extra de Dropbox), y su entregable pide la estructura **validada con metricas de adopcion y referidos** |
+| 15 | `estrategia_crecimiento_clientes` | **9** | miembro `timing_solicitud_referidos` | **el unico paso del bloque que habla de CUANDO**, y el miembro es exactamente el punto de activacion optimo para pedir la referencia |
+| 16 | `ganar_comprension_del_cliente` | **7 a 10** | miembro `investigar_datos_cliente` | el miembro es el **PRIMER paso del metodo IOPS** y su entregable es tu CRM con los datos personales y emocionales. **Descartado `seguimiento_informacion_cliente`**, que es el mantenimiento de la ficha, no el arranque |
+| 17 | `ganar_comprension_del_cliente` | **11** | miembro `conexion_personal_emocional` | el miembro existe para distinguir el dato PERSONAL del EMOCIONAL: es el criterio de seleccion, no el acto de registrar |
+| 18 | `metas_vs_proposito` | **5 a 9** | miembro `fase_accomplish_experiencia_cliente` | verificar que el cliente logro DE VERDAD el objetivo por el que compro. **Descartado `fase_accomplish`, el nodo generico**, cuyo entregable es solo un indicador; el bloque pide el sistema de tracking y el protocolo. **Su frontera vigente es `1 a 4 / 5 a 9`** y la lectura se rehizo sobre el nodo de hoy |
+| 19 | `project_close_out` | **6 a 11** | miembro `reunion_conclusion_proyecto` | la reunion que **espeja el kickoff**: su propio resumen dice *revisando los objetivos organizacionales y metricas de exito definidas al inicio*, que es el paso 6 palabra por palabra |
+| 20 | `relaciones_con_clientes` | **5** | miembro `construccion_tribu_de_marca` | **el ethos y el artefacto simbolico**, que es como la vuelta 30 delimito el objeto de este miembro cuando lo descarto para otro paso |
+| 21 | `relaciones_con_clientes` | **6 a 8** | miembro `onboarding_comunitario_y_lenguaje_propio` | su entregable pide **mentoria, lenguaje de marca y eventos**, y los tres pasos son esas tres cosas |
+| 22 | `retention_metrics` | **6 a 9** | miembro `persuasion_directivos_prioridad_cliente` | los cuatro pasos construyen el caso economico y **el paso 9 nombra al destinatario** (el equipo directivo), que es lo que desempata |
+| 23 | `sistema_inmune_producto` | **6 a 9** | **NODO PROPIO** `autoservicio_y_autosanacion_del_producto` | **`P.18` punto 3**: que el PRODUCTO resuelva sin humanos. `comunicacion_proactiva_puntos_estres` avisa en el estres emocional y `rediseno_procesos_negocio_cliente` arregla PROCESOS: ninguno es esto |
+| 24 | `voz_del_cliente_voc` | **6 a 10** | **NODO PROPIO** `observar_al_cliente_en_su_contexto` | **`P.18` punto 3, y es el caso mas medible de los cinco:** la familia tiene el PRIMER paso del IOPS (`investigar_datos_cliente`), el TERCERO (`personalizar_interacciones_cliente`) y el CUARTO (`sorprender_cliente_estrategico`) escritos como nodo, **y le falta el SEGUNDO, observar**. Los tres lo declaran en su propio resumen. El bloque tapa el hueco medido |
+
+**LOS CINCO NODOS PROPIOS, con la ausencia que cada uno tapa**, estan declarados en
+`docs/plan/INDICE_ROJO_DECLARADO.jsonl` con su operacion y su fecha, que es el mecanismo que el
+fundador escribio para el rojo del indice semantico durante la fase III.
+
+**GUARDAS, con su cifra y su fichero:** simulacion previa sobre copia en memoria **verde** (24
+cortes, 34 ficheros); guarda de texto por prefijo **24 de 24**; **cobertura por origen exacta
+contra las trece fronteras publicadas, sin huecos ni repetidos**; **caso positivo antes 24
+PASAN y 48 CAEN, despues 72 PASAN y 0 CAEN** (`docs/loop/SALIDA_V31_COL_CASO_ANTES.txt` y
+`_DESPUES.txt`); **viaje verbatim de los 67 pasos**; **cero perdida nodo por nodo contra HEAD,
+con el texto de los que se quedan INTACTO**; **cero auto aristas y cero duplicadas fabricadas**
+(`docs/loop/SALIDA_V31_COL_GUARDAS.txt`). Ciclo de `Gate 0` entero **con el cuarto comando,
+porque el censo se movio de 3.848 a 3.853**, y suites verdes.
+
+> **LAS DIECISIETE COSTURAS QUE ESTE REPARTO CREO ESTAN MEDIDAS Y DECLARADAS** en
+> `08_VERIFICACION.md`, seccion *LAS DIECISIETE COSTURAS DE `OP-F-04-COL` ENTRAN A LA COLA*.
+> **No se destejen aqui: el verbo de esta operacion es repartir**, y la lectura que las decide
+> es de la fase 02.
+
+**EL SALDO, medido con instrumento propio corrido hoy** (`scripts/loop/vuelta31_saldo_col.py`,
+salida en `docs/loop/SALIDA_V31_SALDO_COL_FINAL.txt`), **nodo por nodo sobre el campo `fuente`
+del grafo**:
+
+| tanda | nomina | **resueltos** | **fundidos por `P.19`** | **embebidos legitimos** | pendientes |
+|---|---:|---:|---:|---:|---:|
+| **`OP-F-04-COL`** | 15 | **13** | **1** (`viral_loop_marketing`) | **1** (`keep_customers_strategy`) | **0** |
+
+> **LA TERCERA ESPECIE SE CUENTA APARTE POR LA MISMA RAZON QUE LA SEGUNDA**, y no es
+> contabilidad creativa: el acta de la vuelta 30 lo mando con estas palabras en su
+> adjudicacion 2, *el saldo de COL lo cuenta como especie propia (EMBEBIDO LEGITIMO), igual que
+> WEI cuenta sus fundidos*. **Meterlo en pendientes haria pasar por trabajo sin hacer una
+> adjudicacion escrita; meterlo en resueltos escondería que el nodo sigue declarando dos
+> libros.**
 
 ### LA CONSECUENCIA DE ORDEN, y toca a la fase 02
 
