@@ -1,0 +1,96 @@
+==============================================================================
+EL ACTO DE OP-D-02, MEDIDO OTRA VEZ (vuelta 33, detector de ganador corregido)
+==============================================================================
+
+NOMINA DE LA OPERACION, leida hoy del fichero: 4 nodos
+  voz_del_cliente_voc              pasos  5  vivo True  fuente: Winning at New Products - Robert G. Cooper
+  enfoque_mercado_voc              pasos  5  vivo True  fuente: Winning at New Products - Robert G. Cooper
+  homework_frontend_loading        pasos  6  vivo True  fuente: Winning at New Products - Robert G. Cooper
+  voice_of_customer_homework       pasos  5  vivo True  fuente: Winning at New Products - Robert G. Cooper
+
+--- 1. COBERTURA DEL ACTO: los pares internos, uno por uno ---
+  [SIN VEREDICTO] enfoque_mercado_voc            contra homework_frontend_loading     
+  [A puesto  788] enfoque_mercado_voc            contra voice_of_customer_homework    
+  [A puesto  386] enfoque_mercado_voc            contra voz_del_cliente_voc           
+  [A puesto  526] homework_frontend_loading      contra voice_of_customer_homework    
+  [SIN VEREDICTO] homework_frontend_loading      contra voz_del_cliente_voc           
+  [SIN VEREDICTO] voice_of_customer_homework     contra voz_del_cliente_voc           
+
+  PARES POSIBLES 6, CON VEREDICTO 3, SIN VEREDICTO 3
+  LA VERIFICACION DE LA OPERACION PIDE CERO SIN VEREDICTO EN LA COLA: NO CUMPLE
+
+--- 2. EL CIERRE TRANSITIVO DE LAS A, y quien gana cada par A ---
+  pares A dentro de la nomina: 3
+
+    PUESTO 788: enfoque_mercado_voc contra voice_of_customer_homework
+      DETECTOR VIEJO (substring 'gana')      : NO
+      DETECTOR NUEVO (vocabulario, palabra)  : NO
+      LA RAZON ENTERA, para que la lectura mande sobre el lexico:
+        La misma voz del cliente hecha deber previo, contada dos veces y del mismo libro, sin arista ent
+        re ellos. Lo comun es el eje: hacer la investigacion de mercado y de voz del cliente ANTES de em
+        pezar el desarrollo formal, y seguir validando el concepto con clientes reales de forma iterativ
+        a y no solo al principio. Lo propio de enfoque_mercado_voc son convivir de cerca con los cliente
+        s mas exigentes o entrevistarlos a fondo, y el analisis competitivo detallado de productos, prec
+        ios y tecnologias. Lo propio de voice_of_customer_homework son dos cosas que amplian el alcance:
+         consultar tambien a los CLIENTES DE TUS CLIENTES, o sea subir un eslabon en la cadena de valor,
+         y construir el caso de negocio con datos duros y no con supuestos antes de aprobar el proyecto.
+         Ese salto a la cadena de valor no esta en ningun otro nodo de la familia. NOTA DE FAMILIA: la v
+        oz del cliente ya lleva cuatro nodos vistos en el cribado, con voz_del_cliente_voc, que es costu
+        ra confirmada y bloquea dos pares, y voice_of_customer_estrategico. Hay que contarla entera ante
+        s de tocarla.
+
+    PUESTO 386: enfoque_mercado_voc contra voz_del_cliente_voc
+      DETECTOR VIEJO (substring 'gana')      : NO
+      DETECTOR NUEVO (vocabulario, palabra)  : NO
+      LA RAZON ENTERA, para que la lectura mande sobre el lexico:
+        REPITE con voz_del_cliente_voc. Los dos mandan la misma escucha de Cooper y con la misma tesis: 
+        acercarse al cliente de verdad en vez de suponer, usar lo que se aprende desde el inicio del dis
+        eno y no solo para verificar al final, y mantener el contacto durante todo el desarrollo y no so
+        lo al principio y al final. El primero anade la evaluacion preliminar de mercado y el analisis c
+        ompetitivo; el segundo insiste en observar en el contexto real porque el cliente no siempre cuen
+        ta sus problemas. LATERAL, no cambia la clase: el segundo tiene diez pasos y del 6 al 10 entra o
+        tro bloque, observar una vez al mes, ponerse en el lugar del cliente, atender a los comentarios 
+        casuales, anotar y releer a los dos dias, buscar patrones. Costura para la otra ficha.
+
+    PUESTO 526: homework_frontend_loading contra voice_of_customer_homework
+      DETECTOR VIEJO (substring 'gana')      : SI
+        FALSO POSITIVO, y aqui esta la palabra: 'ganar'
+      DETECTOR NUEVO (vocabulario, palabra)  : NO
+      LA RAZON ENTERA, para que la lectura mande sobre el lexico:
+        REPITE con voice_of_customer_homework. Los dos mandan el mismo trabajo previo de Cooper y contra
+         la misma tentacion, saltarse la validacion por ganar tiempo: investigacion de mercado y voz del
+         cliente ANTES del desarrollo formal, evaluacion tecnica y de viabilidad, validacion iterativa d
+        el concepto con clientes reales, y construir el business case con datos duros antes de pedir apr
+        obacion. El primero anade el screening inicial y la mirada a suministro y manufactura; el segund
+        o anade ampliar la consulta a los clientes de los clientes.
+
+  PARES A QUE NOMBRAN GANADOR, detector VIEJO: 1 de 3
+  PARES A QUE NOMBRAN GANADOR, detector NUEVO: 0 de 3
+
+  nodos dentro del cierre transitivo de las A: 4 de 4 de la nomina
+    ['enfoque_mercado_voc', 'homework_frontend_loading', 'voice_of_customer_homework', 'voz_del_cliente_voc']
+  nodos de la nomina FUERA del cierre: ninguno
+  campo superviviente de la operacion, leido hoy: None
+
+  LA PRUEBA CORREGIDA DEL BANCO 9.3.1 (gano TODOS los pares A que lo tocan,
+  contando SOLO las A), nodo por nodo:
+    enfoque_mercado_voc              pares A que lo tocan 2, con ganador citable 0  -> NO hay victoria citable
+    homework_frontend_loading        pares A que lo tocan 1, con ganador citable 0  -> NO hay victoria citable
+    voice_of_customer_homework       pares A que lo tocan 2, con ganador citable 0  -> NO hay victoria citable
+    voz_del_cliente_voc              pares A que lo tocan 1, con ganador citable 0  -> NO hay victoria citable
+
+--- 3. CENSO POR NOMBRE DE LA FAMILIA (banco 9.5.1) ---
+  marcas buscadas: ['voc', 'voice_of_customer', 'voz_del_cliente']
+  nodos vivos que llevan alguna marca: 9
+    advocacy_customer_journey              fuera  Never Lose a Customer Again - Joey Coleman
+    centro_asesoria_advocacy_center        fuera  A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+    enfoque_mercado_voc                    EN LA NOMINA  Winning at New Products - Robert G. Cooper
+    incentivos_no_monetarios_advocacy      fuera  Never Lose a Customer Again - Joey Coleman
+    voc_temprano_en_agile_stage_gate       fuera  Winning at New Products - Robert G. Cooper
+    voces_externas_credibles               fuera  The Green to Gold Business Play - Daniel C. Esty
+    voice_of_customer_estrategico          fuera  Winning at New Products - Robert G. Cooper
+    voice_of_customer_homework             EN LA NOMINA  Winning at New Products - Robert G. Cooper
+    voz_del_cliente_voc                    EN LA NOMINA  Winning at New Products - Robert G. Cooper
+
+==============================================================================
+FIN DE LA MEDICION. Nada se fundio y nada se escribio.

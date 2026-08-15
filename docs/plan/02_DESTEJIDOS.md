@@ -387,10 +387,48 @@ porque una ausencia no se afirma en bloque:
 `OP-D-02` esta en **`null`**, leido hoy en el fichero. Y no se puede fijar por el banco `9.3.1`
 (GANADOR POR DERECHO contra GANADOR POR ELEGIR, con la correccion del 18 ago 2026 que define el
 acto como el cierre transitivo de las A): la prueba es *gano todos los pares A que lo tocan*, y
-**medido hoy, DOS de los tres pares A no nombran ganador en su razon** (386 y 788). **Ningun
-nodo del acto tiene una victoria citable**, asi que no hay ganador por derecho; y la otra
-especie, **por elegir, exige `P.8` sobre la nomina entera CON EL ACTO COMPLETO delante**, que es
-justamente lo que el motivo 1 dice que no hay.
+~~**medido hoy, DOS de los tres pares A no nombran ganador en su razon** (386 y 788)~~ **FRASE
+VIEJA, TACHADA Y NO BORRADA: ver la correccion declarada debajo**. **Ningun nodo del acto tiene
+una victoria citable**, asi que no hay ganador por derecho; y la otra especie, **por elegir,
+exige `P.8` sobre la nomina entera CON EL ACTO COMPLETO delante**, que es justamente lo que el
+motivo 1 dice que no hay.
+
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 33). LA CIFRA BUENA ES CERO DE TRES, NO DOS DE
+> TRES: NINGUNO de los tres pares A nombra ganador.** La conclusion que la frase sostenia
+> (*ningun nodo del acto tiene una victoria citable*) **no cambia; cambia la cuenta que la
+> sostiene, y una cuenta mal publicada se corrige aunque apunte al mismo sitio.**
+>
+> **LA CAUSA, MEDIDA Y NO SUPUESTA, y es de la misma especie que la del origen 16.** El detector
+> de ganador de `scripts/loop/vuelta32_acto_opd02.py` preguntaba `"gana" not in razon.lower()`:
+> **un SUBSTRING**. Y el substring `gana` vive dentro de `ganar`. **La razon del puesto 526 dice
+> *saltarse la validacion por GANAR TIEMPO***, y el detector leyo ahi un ganador que no existe.
+> El instrumento nuevo (`scripts/loop/vuelta33_acto_opd02.py`) **imprime la palabra culpable por
+> su nombre**: `FALSO POSITIVO, y aqui esta la palabra: 'ganar'`.
+>
+> **LAS DOS CORRIDAS SE PUBLICAN Y LA DIFERENCIA SE DECLARA, en vez de resolverse sustituyendo**
+> (salida entera en `docs/loop/SALIDA_V33_OPD02_ACTO.txt`, corrida en esta vuelta):
+>
+> | detector | pares A que nombran ganador |
+> |---|---:|
+> | **VIEJO**, substring `gana` | **1 de 3** |
+> | **NUEVO**, vocabulario de adjudicacion con frontera de palabra | **0 de 3** |
+>
+> **Y LA PRUEBA DEL 9.3.1, NODO POR NODO, con la cifra corregida:** `enfoque_mercado_voc` 2
+> pares A y 0 victorias citables; `voice_of_customer_homework` 2 y 0;
+> `homework_frontend_loading` 1 y 0; `voz_del_cliente_voc` 1 y 0. **NO HAY GANADOR POR DERECHO,
+> y ahora se puede decir con los tres pares contados y no con dos.**
+>
+> **DOS COSAS QUE NO SE TOCAN, y se dice por que.** La `nota` de `OP-D-02` en
+> `OPERACIONES.jsonl` **queda como esta**: leida hoy entera, **no afirma que el 526 nombre
+> ganador**, nombra al 386 y al 788 y concluye *ningun nodo del acto tiene una victoria
+> citable*, que es la conclusion correcta. Y `docs/loop/SALIDA_V32_PARADA_OPD02.txt` **tampoco
+> se reescribe**: es la salida de un instrumento corrido aquel dia, **y una salida vieja se
+> contrasta, no se maquilla**. La corrigen las dos corridas de la tabla de arriba.
+>
+> **EL LIMITE DEL DETECTOR NUEVO, declarado donde se lee:** sigue siendo una busqueda **lexica**
+> y no un lector de espanol. Una razon puede adjudicar sin usar ninguna de las palabras del
+> vocabulario. **Por eso el instrumento imprime la razon ENTERA de cada par A**: la vara final
+> es la lectura, y la lectura necesita el texto delante.
 
 **MOTIVO 3: LA NOMINA PUEDE ESTAR CORTA, y el aviso ya estaba escrito.** La razon del puesto
 **788**, leida hoy, cierra asi: *la voz del cliente ya lleva cuatro nodos vistos en el cribado
