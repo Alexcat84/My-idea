@@ -466,10 +466,45 @@ de arriba se queda entera: nace de las fusiones y esto no la toca.**
 | miembro | que recibio | medido hoy |
 |---|---|---|
 | `ejecucion_incremental_transicion_tecnologica` | los bloques de `modelo_hibrido_agile_stage_gate`, `principio_calidad_mvp` y `reduccion_tamano_de_lote_batch_size`, los tres de `OP-F-03` por `P.18` | **16 pasos**, contra los 4 que tenia antes del reparto |
+| `fases_traccion_producto` | los pasos 4 a 6 de `fit_problema_solucion`, de `OP-F-04-WEI` por `P.18` | **7 pasos**, contra los 4 que tenia antes del reparto. **Los tres que entraron repiten sus pasos 1, 2 y 4** casi literales: identificar la fase, mandar en Fase I un flujo pequeno y constante para ver por donde se fuga el producto, y escalar marketing solo al confirmar el ajuste. **El unico de los cuatro viejos sin gemelo es su paso 3**, el del feedback de los clientes tempranos |
+| `clasificacion_leads_abc` | los pasos 5 a 9 de `sales_funnel_get_keep_grow`, de `OP-F-04-WEI` por `P.18` | **10 pasos**, contra los 5 que tenia antes del reparto. **Tres de los cinco que entraron repiten**: el nuevo 7 dice las mismas tres categorias con las mismas cifras que sus pasos 1 y 2, el nuevo 8 el mismo 66 a 75 por ciento de su paso 3, y el nuevo 9 el mismo pase de los C a marketing de su paso 4. **Los otros dos no tienen gemelo**: generar leads por marketing antes de aplicar ventas, y coordinar el collateral con marketing |
+| `bullseye_framework` | los pasos 8 a 12 de `plan_de_adquisicion_acquire`, de `OP-F-04-WEI` por `P.18` | **11 pasos**, contra los 6 que tenia antes del reparto. **Cuatro de los cinco que entraron repiten**: listar los 19 canales (su paso 1), disenar la prueba barata y corta por canal (su paso 3), medir resultados concretos (sus pasos 3 y 4) y comparar entre canales para elegir donde invertir mas (su paso 5). **El quinto no tiene gemelo**: anotar lo aprendido de cada prueba, incluidas las que fallaron |
+| `publicidad_offline_pruebas_locales` | los pasos 5 a 8 de `earned_vs_paid_media`, de `OP-F-04-WEI` por `P.18` | **9 pasos**, contra los 5 que tenia antes del reparto, y **el solape es PARCIAL, uno de cuatro**: solo el nuevo 9 (empezar con pruebas pequenas y economicas antes de escalar) repite sus pasos 1 y 4. **Los otros tres traen material que el miembro no tenia**: preguntar que medios se consumen fuera de internet, pedir a cada medio su prospecto de audiencia y comparar alcance contra precio. Es la ELECCION del medio, y el miembro PRUEBA |
+| `compromiso_linea_tiempo_cliente` | el paso 10 de `sales_funnel_get_keep_grow`, de `OP-F-04-WEI` por `P.18` | **6 pasos**, contra los 5 que tenia antes del reparto. **El unico que entro repite sus pasos 2 y 3**, comunicar el cronograma y pedir el si o el no explicito, que es la MISMA lectura con la que el acta de la vuelta 28 sostuvo el destino (discutible 9: *palabra por palabra el objeto del miembro*) |
 
 **No es un error del reparto: es la medida de que los tres traian el mismo material de
 Hugos**, que es justamente lo que la tercera clase de `OP-F-03` afirmaba. **La lectura que
 lo decide es de la fase 02, no de la 01.**
+
+#### REGISTRO: **LAS CINCO COSTURAS DE `OP-F-04-WEI` ENTRAN A LA COLA** (14 ago 2026, vuelta 29)
+
+**Encargado por el acta de la vuelta 28 del auditor (seccion 3, punto 2), que las adjudico
+a correccion y no a caida:** el registro de esta misma puerta se escribio en la MISMA vuelta
+que ejecuto `OP-F-04-WEI`, y **las costuras que ese reparto creo no entraron**. La primera
+fila de la tabla, la de la vuelta 28, se queda tal como se escribio; **las cinco filas
+nuevas son de la vuelta 29 y traen su medicion propia**.
+
+**LA MEDICION, con su instrumento y su corte:** `scripts/loop/vuelta29_costuras.py`, salida
+completa con los pasos impresos uno a uno en `docs/loop/SALIDA_V29_COSTURAS.txt`, corte
+**14 ago 2026**. Los pasos de HOY se leen del arbol de trabajo; **los de ANTES del reparto
+se leen del commit `4e6349ea`**, el ultimo anterior a `f69f4819`, que es el que ejecuto los
+cinco cortes. **No se desteje ninguna: solo se declaran.**
+
+**DOS COSAS QUE LA MEDICION LEVANTO Y EL ENCARGO NO NOMBRABA, declaradas y NO arregladas:**
+
+> **PRIMERA, `publicidad_offline_pruebas_locales`: el solape es PARCIAL y la cifra lo dice,
+> uno de cuatro.** El acta lo sospechaba y la medicion lo confirma: tres de los cuatro pasos
+> que entraron traen material nuevo. **Entra igual a la cola**, porque la regla de esta
+> puerta habla de *una repeticion*, no de un bloque entero repetido, **y entra con su cifra
+> al lado para que la fase 02 no la lea como las otras cuatro.**
+
+> **SEGUNDA, `compromiso_linea_tiempo_cliente` es una QUINTA costura que el acta no nombro.**
+> El acta nombro tres y mando revisar una cuarta; el instrumento midio los cinco receptores
+> del reparto y este tambien repite. **La regla de esta puerta es mecanica** (*una repeticion
+> que un reparto de la fase 01 crea dentro de un miembro entra a la nomina de la fase 02*),
+> y el propio acta de la vuelta 28 ya habia leido esa repeticion al sostener el destino.
+> **Declararla es aplicar la regla; callarla porque el encargo no la nombraba seria la misma
+> omision que esta correccion viene a reparar.**
 
 ---
 
