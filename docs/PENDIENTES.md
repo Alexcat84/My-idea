@@ -17,7 +17,7 @@ caería sobre un texto que va a cambiar (banco 9.4 y 9.9).
 | ~~**`voz_del_cliente_voc`**~~ | ~~**3**~~ **0** | ~~724, 755, 827~~ **LIBERADOS EL 15 ago 2026 por la fusion de `OP-D-02`: los tres a `D`** |
 | ~~**`producto_minimo_viable`**~~ | ~~**2**~~ | ~~592, 830~~ **LIBERADOS EL 15 ago 2026: ver la correccion declarada al final de esta seccion** |
 | `lienzo_modelo_negocio` | 1 | 784 |
-| `ab_testing_optimizacion` + `split_testing_experimentos_ab` | 1 | 738 |
+| ~~`ab_testing_optimizacion` + `split_testing_experimentos_ab`~~ | ~~1~~ | ~~738~~ **LIBERADO EL 15 ago 2026 (vuelta 34): el 738 paso de `B` a `D` tras el destejido de `ab_testing_optimizacion`, y con el se volteo tambien el `1061`, de `A` a `D`** |
 | `preguntas_ipo_dolor_cliente` | 1 | 798 |
 | `key_partners_hypothesis` + `asociaciones_clave` | 1 | 599 |
 | **`estrategia_crecimiento_clientes`** | **1** | 831 |
@@ -38,8 +38,8 @@ son grandes y por eso entran a muchos pares.
 
 | cuenta | qué significa | hoy | lista |
 |---|---|---:|---|
-| **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | ~~**13**~~ ~~**10**~~ **7** | ~~592,~~ 599, ~~724,~~ 738, ~~755,~~ 784, 798, ~~827,~~ ~~830,~~ 831, 835, 851, ~~**494**~~ |
-| **EN COLA** | el texto va a cambiar, se relee igual | ~~**19**~~ ~~**16**~~ **13** | los ~~trece~~ ~~diez~~ **siete** de arriba **más 361, 374, 386, 392, 492 y 915** |
+| **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | ~~**13**~~ ~~**10**~~ ~~**7**~~ **6** | ~~592,~~ 599, ~~724,~~ ~~738,~~ ~~755,~~ 784, 798, ~~827,~~ ~~830,~~ 831, 835, 851, ~~**494**~~ |
+| **EN COLA** | el texto va a cambiar, se relee igual | ~~**19**~~ ~~**16**~~ ~~**13**~~ **12** | los ~~trece~~ ~~diez~~ ~~siete~~ **seis** de arriba **más 361, 374, 386, 392, 492 y 915** |
 
 > **CORRECCION DECLARADA (15 ago 2026, vuelta 33 del bucle). TRES CONGELADOS SALEN DE LA LISTA, y
 > las cifras viejas se quedan tachadas y no borradas.** El destejido de `producto_minimo_viable`
@@ -2627,8 +2627,8 @@ lo averiado que este: es **cuantos pares desbloquea su destejido.**
 
 | par | contra que nodo | clase hoy |
 |---:|---|:---:|
-| **738** | `split_testing_experimentos_ab` | B |
-| **1061** | `optimizacion_embudo_get_customers` | **A** |
+| **738** | `split_testing_experimentos_ab` | ~~B~~ **D** (15 ago 2026, vuelta 34) |
+| **1061** | `optimizacion_embudo_get_customers` | ~~**A**~~ **D** (15 ago 2026, vuelta 34) |
 
 > **VA TERCERA porque es la mas enredada de las tres.** El **1061 es el TERCER
 > ACTO DE TRES del archivo**, costurada contra costurada, y el **738 tiene los DOS

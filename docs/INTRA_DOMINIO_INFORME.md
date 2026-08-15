@@ -16306,10 +16306,10 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 | | |
 |---|---:|
 | **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
-| **A** | ~~**583** (17,2 %)~~ **582**, ver la correccion declarada debajo |
-| **B** | ~~89~~ ~~87~~ **84** |
+| **A** | ~~**583** (17,2 %)~~ ~~582~~ **581** (17,1 %), ver las correcciones declaradas debajo |
+| **B** | ~~89~~ ~~87~~ ~~84~~ **83** |
 | **C** | ~~7~~ **8** |
-| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ **2.714** |
+| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ **2.716** |
 
 > **CORRECCION DECLARADA (15 ago 2026, vuelta 33 del bucle). LAS CIFRAS VIEJAS SE QUEDAN
 > TACHADAS Y NO BORRADAS: son el marcador del checkpoint del 13 ago y fueron correctas ese dia.**
@@ -16337,6 +16337,21 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 > Segundo lote por el mismo carril (`docs/loop/_lote_v33b.jsonl`, salida
 > `docs/loop/SALIDA_V33_MARCADOR_B.txt`): **n 3.388, A 582, B 84, C 8, D 2.714**, sin altas ni
 > bajas, y otra vez la cifra esperada se escribio ANTES de correr el instrumento.
+>
+> **TERCER VOLTEO, DE OTRA VUELTA (15 ago 2026, vuelta 34), y por eso las cifras llevan TRES
+> tachados.** Tras el **destejido de `ab_testing_optimizacion`** (`OP-D-03`, de diez pasos a
+> cinco), los **dos** veredictos que el orden interno de esa operacion mandaba releer se
+> releyeron contra el texto ya estable y **los dos pasaron a `D`**:
+>
+> | puesto | par | antes | ahora | por que |
+> |---:|---|:---:|:---:|---|
+> | **738** | `ab_testing_optimizacion` contra `split_testing_experimentos_ab` | **B** | **D** | cayo la causa del congelamiento (TOQUE UNICO, `9.4`): **los DOS nodos estaban averiados y hoy ninguno tiene juntura**. Uno optimiza una pagina, el otro decide si una funcionalidad merece existir |
+> | **1061** | `ab_testing_optimizacion` contra `optimizacion_embudo_get_customers` | **A** | **D** | **la prediccion de su propia razon acerto al pie de la letra**: el destejido dejo a la madre con el A/B en UNA linea y al otro como su procedimiento entero. Madre e hijo del `9.6.2` |
+>
+> **Tercer lote por el mismo carril** (`docs/loop/_lote_v34.jsonl`, salida
+> `docs/loop/SALIDA_V34_MARCADOR.txt`): **n 3.388, A 581, B 83, C 8, D 2.716, tasa de A 17,1 por
+> ciento**, sin altas ni bajas, **y la cifra esperada escrita ANTES de correr el instrumento por
+> tercera vez** (`SALIDA_V34_LOTE.txt`).
 
 Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 3.301-3.388
 (comando `python scripts/recomputar_marcador.py 3388`). Las tres A son todas de
@@ -16346,7 +16361,7 @@ Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 
 
 | dominio | n | A | tasa |
 |---|---:|---:|---:|
-| core | 1.445 | ~~344~~ **343** | ~~23,8 %~~ **23,7 %** |
+| core | 1.445 | ~~344~~ ~~343~~ **342** | ~~23,8 %~~ **23,7 %** |
 | health_safety | 192 | 45 | 23,4 % |
 | quality | 844 | 126 | 14,9 % (CERRADO) |
 | environmental | 170 | 29 | 17,1 % |
@@ -16371,6 +16386,20 @@ Suma 3.388, calza con el total del archivo. Los diez dominios del catalogo estan
 >
 > **La suma sigue siendo 3.388** y `n` de `core` sigue siendo 1.445: **lo que cambio es el
 > reparto, no el censo.**
+>
+> **SEGUNDA CORRECCION DECLARADA (15 ago 2026, vuelta 34), y otra vez SOLO `core`:** los dos
+> veredictos volteados tras el destejido de `OP-D-03` (**738** y **1061**) **son los dos de
+> `core`**, y **los otros nueve dominios quedan identicos al digito** (medido hoy, dominio por
+> dominio, en `docs/loop/SALIDA_V34_TASA_DOMINIO.txt`):
+>
+> | | n | A | tasa | B | C | D |
+> |---|---:|---:|---:|---:|---:|---:|
+> | `core` **tras los dos volteos de la vuelta 33** | 1.445 | 343 | 23,7 % | 82 | 8 | 1.012 |
+> | `core` **hoy** (15 ago, tras el volteo de la vuelta 34) | 1.445 | **342** | **23,7 %** | **81** | **8** | **1.014** |
+>
+> **LA TASA NO SE MUEVE Y LA CIFRA SI, y se dice para que nadie lea el 23,7 como *no paso nada*:**
+> 343 de 1.445 es 23,74 y 342 de 1.445 es 23,67, **y los dos redondean a 23,7**. **El conteo de
+> `A` es el dato; la tasa redondeada, no.**
 >
 > **LO QUE ESTA CORRECCION NO HACE, y va dicho porque callarlo seria peor que no hacerlo.**
 > **Contadas hoy, quedan TRECE filas mas** en este informe que citan `core` con **1.445 pares y A
@@ -16445,7 +16474,10 @@ por dominio: `quality` 25, `franquicias` 1, `health_safety` 1, `seguridad_digita
 2026, vuelta 33): el total de A en el archivo es 582**, porque el **494** paso de `A` a `C` en el
 volteo del `9.10` de esa vuelta (ver la correccion de la seccion 100.1). **El contador de fusiones
 mutuas NO se mueve y sigue en veintiocho:** el 494 no era una fusion mutua, y ninguna de las
-veintiocho esta entre los tres volteados.
+veintiocho esta entre los tres volteados. **SEGUNDA CORRECCION DECLARADA (15 ago 2026, vuelta
+34): el total de A en el archivo es 581**, porque el **1061** paso de `A` a `D` tras el destejido
+de `ab_testing_optimizacion`. **El contador de fusiones mutuas sigue en veintiocho por la misma
+razon: el 1061 no era una fusion mutua.**
 
 ### 100.7 VERIFICACION DE DISCUTIBLES (fija desde ahora, SEGUNDA VEZ CONSECUTIVA QUE PASA)
 

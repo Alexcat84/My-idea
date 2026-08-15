@@ -827,3 +827,201 @@ estan estables). Queda la tercera, que es la unica que no desmiente ninguna lect
 **SALDO DE LA TANDA: TRES lecturas, TRES `D`, cero `A`.** Dos con el enlace ya puesto (`LD-72`,
 `LD-73`) y **una con ARISTA QUE FALTA** (`LD-74`), declarada para la fase 04. **`n` no se movio:
 sigue en 3.388.**
+
+---
+
+# NOVENA TANDA: **LAS SIETE QUE CIERRAN EL ACTO DE `OP-D-03`** . `LD-75` a `LD-81`
+
+**Ejecutadas el 15 ago 2026 (vuelta 34 del bucle), por encargo del fundador, que las adjudico
+como LECTURAS DIRIGIDAS por `P.5` y fijo el momento: DESPUES del destejido** (decision 3 del 15
+ago 2026, `docs/loop/paradas/2026-08-15-cableado-deprecado-y-costuras.md`).
+
+> **EL RELOJ DE `P.5` NO SE FIA DE LA MEMORIA: ES UNA GUARDA.** `scripts/loop/vuelta34_ld_opd03.py`
+> **aborta antes de imprimir nada** si `ab_testing_optimizacion` no tiene todavia los pasos que el
+> plan sellado deja. Corrido hoy: *el destejido ESTA HECHO (5 pasos, los del plan sellado). Se
+> puede leer.* **Leer antes seria leer texto que va a cambiar**, que es lo que la regla existe
+> para impedir.
+
+**POR QUE EMPIEZAN EN EL 75, medido y no supuesto.** Barrido hoy `docs/` entero por la cadena
+`LD-` seguida de digitos: **el numero mas alto escrito es el 74**, en `docs/loop/ACTA_AUDITOR.md`.
+La medicion la hace el propio instrumento y la imprime antes de nada, porque en la vuelta 33 el
+ejecutor casi acuna tres numeros ya tomados y lo cazo su guard.
+
+**POR QUE SON LECTURA DIRIGIDA Y NO PARES SALTADOS, y esta medido:** los siete se buscaron hoy en
+`docs/INTRA_DOMINIO_PARES.jsonl` y **ninguno de los siete esta en la cola**
+(`docs/loop/SALIDA_V34_LD_OPD03.txt`). **No entran en la cola y NO mueven `n`, que sigue en
+3.388.**
+
+**LOS SEIS NODOS SE IMPRIMIERON ENTEROS ANTES DE DECIDIR NADA**, y las aristas se buscaron **en
+los dos sentidos** contra el grafo de hoy. **La vara es la del cribado, sin cambios:** el banco
+`9.6.1` (la linea o el procedimiento) con la direccion del `9.6.2` y la precision del `P.11`.
+
+**Y EL CRITERIO DE LA ARISTA QUE FALTA ES EL ESCRITO EL 15 ago 2026** en
+`docs/plan/02_DESTEJIDOS.md`, bajo la tabla de la tanda de `OP-D-02`: **se declara donde lo
+compartido es un BLOQUE que uno expande de una LINEA del otro; no se declara donde el solape es
+LINEA contra LINEA y los dos ya tienen cableado propio.**
+
+## `LD-75` . `ab_testing_optimizacion` contra `funnel_get_customers_optimizacion` . **D. DOS OBJETOS DISTINTOS. ENLACE YA PUESTO**
+
+**LO COMPARTIDO ES EL PROPOSITO, no el procedimiento:** los dos mejoran la conversion del embudo
+de adquisicion. **Y ahi se acaba.**
+
+**LO PROPIO DE `ab_testing_optimizacion`** es el metodo de UNA prueba: elegir la metrica y los
+elementos de la pagina, disenar dos versiones cambiando un solo elemento, repartir el trafico,
+medir cada version e implementar la ganadora. **LO PROPIO DE `funnel_get_customers_optimizacion`
+es la GESTION DE UNA CARTERA DE PROGRAMAS:** revisar los resultados de cada programa `get` (SEO,
+anuncios, referidos), escalar primero el mas productivo, disenar tests pass/fail para los mas
+decepcionantes, buscar mas clientes parecidos a los de alto `LTV`, revisar a diario **con el
+`data chief`** las diez o doce metricas clave, y **no optimizar demasiados programas a la vez**.
+
+**LOS ENTREGABLES LO DICEN SIN AMBIGUEDAD, leidos hoy:** *plan de pruebas A/B con elementos
+priorizados y decision sobre la version ganadora* contra *plan de optimizacion secuencial del
+funnel con metricas diarias monitoreadas y dashboard*. **Uno prueba una pagina; el otro dirige una
+cartera. CONTINUA: `D`, los dos sanos.**
+
+**LA ARISTA, buscada hoy en los dos sentidos: ESTA PUESTA EN LOS DOS.** `ab_testing_optimizacion`
+lo nombra en sus siguientes y el otro lo nombra en sus previos. **El grafo ya los tenia modelados
+como secuencia**, y el contenido dice lo mismo: la prueba alimenta la decision de cartera.
+
+## `LD-76` . `funnel_get_customers_optimizacion` contra `split_testing` . **D. MADRE E HIJO. ARISTA QUE FALTA**
+
+**LA PRUEBA DE RECONOCIMIENTO DEL `9.6.2` SE CUMPLE, y en un solo sentido.**
+`funnel_get_customers_optimizacion` dice en su **paso 5**, en UNA linea, *probar variedad de
+ofertas, incentivos, descuentos y limites de tiempo*. **`split_testing` es el metodo entero de esa
+linea**: definir las variaciones (precio, copy, features, packaging), repartir el trafico entre
+control y challenge, medir la conversion del `CTA` de cada variante y **exigir significancia
+estadistica superior al 95 por ciento antes de concluir**.
+
+**Y LA MADRE CONSERVA MATERIA PROPIA QUE EL HIJO NO TOCA EN NINGUN PASO**, que es la otra mitad de
+la prueba: la cartera de programas `get`, el `LTV`, el `data chief` y la regla de no optimizar
+demasiados a la vez. **CONTINUA: `D`, los dos sanos.**
+
+**LA ARISTA, buscada hoy en los dos sentidos: NO HAY NINGUNA.** **`D`, sano, con ARISTA QUE FALTA,
+con direccion de madre a hijo.** Queda declarada para la **fase 04**.
+
+## `LD-77` . `funnel_get_customers_optimizacion` contra `split_testing_experimentos_ab` . **D. SIN ARISTA DECLARADA**
+
+**AQUI NO HAY MADRE, y se dice en vez de forzarla.** El paso 3 de la madre candidata habla de
+*tests pass/fail para los programas mas decepcionantes*: **la pregunta es si un PROGRAMA sirve o
+no**. `split_testing_experimentos_ab` pregunta otra cosa: **si una FUNCIONALIDAD NUEVA cambia el
+comportamiento del cliente**, partiendo **la base de clientes** (no el trafico) y dejando al grupo
+A con la version estandar.
+
+**Su entregable lo confirma:** *reporte de un experimento A/B con conclusiones sobre el impacto de
+una funcionalidad en el comportamiento del cliente*. **Un programa de adquisicion no es una
+funcionalidad del producto. CONTINUA: `D`, los dos sanos.**
+
+**ARISTA: NO HAY, y NO SE DECLARA.** Por el criterio escrito, lo compartido aqui es **la palabra
+*test*, no un bloque**: linea contra linea entre dos objetos que viven en fases distintas del
+proyecto. **Declararla inflaria el grafo sin ensenarle nada al lector.**
+
+## `LD-78` . `funnel_get_customers_optimizacion` contra `test_ab_precio` . **D. SIN ARISTA DECLARADA**
+
+**LA TENTACION ES EL PASO 5 DE LA MADRE CANDIDATA** (*ofertas, incentivos, descuentos*), y por eso
+hay que decir por que no basta. **`test_ab_precio` no prueba una promocion: elige el MODELO DE
+INGRESOS**, y su primer paso lo dice con su propio ejemplo, *precio de venta contra modelo de
+renta*. Su entregable es *un precio o modelo de monetizacion validado*. **Un descuento temporal es
+una palanca de adquisicion; el modelo de monetizacion es una decision de negocio.**
+
+**CONTINUA: `D`, los dos sanos. ARISTA: NO HAY, y NO SE DECLARA.**
+
+> **DISCUTIBLE MARCADO, y es el mas debil de la tanda, marcado antes de saber si acierto.** El
+> `LD-76` SI declara arista desde ese mismo paso 5, y aqui no. **Lo que los separa, y es lo que
+> sostengo:** `split_testing` es **el metodo** de probar la variacion que el paso 5 manda probar;
+> `test_ab_precio` es **otro objeto** que usa el mismo metodo para otra decision. **Quien lea el
+> paso 5 como *precio incluido* dira que aqui tambien falta la arista.**
+
+## `LD-79` . `optimizacion_embudo_get_customers` contra `split_testing` . **D. MADRE E HIJO. ARISTA QUE FALTA**
+
+**LA MISMA FIGURA QUE `LD-76`, con otra madre.** `optimizacion_embudo_get_customers` dice en su
+**paso 3**, en UNA linea, *ejecutar pruebas A/B controladas cambiando no mas de dos variables a la
+vez*. **`split_testing` es el metodo entero de esa linea**, con la significancia del 95 por ciento
+que la madre no menciona en ningun paso.
+
+**Y LA MADRE CONSERVA MATERIA PROPIA QUE EL HIJO NO TOCA:** exigir el `MVP` de alta fidelidad y el
+dashboard funcionando antes de empezar, definir las metricas **segun el tipo de negocio web**
+(e-commerce, mercado multi-lado, marketplace), y **calcular el `LTV` y compararlo con el `CAQ`
+antes de escalar la inversion**. **CONTINUA: `D`, los dos sanos.**
+
+**LA ARISTA, buscada hoy en los dos sentidos: NO HAY NINGUNA. `D`, sano, con ARISTA QUE FALTA**,
+de madre a hijo, declarada para la **fase 04**.
+
+## `LD-80` . `optimizacion_embudo_get_customers` contra `split_testing_experimentos_ab` . **D. MADRE E HIJO. ARISTA QUE FALTA**
+
+**LA MISMA LINEA DE LA MISMA MADRE, con el otro hijo**, y por eso se lee distinto que el `LD-77`:
+alli la madre candidata hablaba de programas y aqui **la madre nombra la prueba A/B literalmente**.
+`split_testing_experimentos_ab` es un metodo entero de esa linea, con lo suyo propio: **la
+hipotesis previa sobre el impacto esperado**, partir **la base de clientes** en dos grupos
+aleatorios y dejar al grupo A con la version estandar.
+
+**Y LA MADRE CONSERVA SU MATERIA PROPIA, la misma del `LD-79`.** **CONTINUA: `D`, los dos sanos.
+ARISTA: NO HAY NINGUNA. `D`, sano, con ARISTA QUE FALTA**, de madre a hijo.
+
+> **LO QUE ESTO DEJA A LA VISTA, y es material para la fusion de la operacion, no para esta
+> lectura:** la misma linea de `optimizacion_embudo_get_customers` tiene **TRES hijos** en el
+> propio acto (`ab_testing_optimizacion` por el puesto 1061 releido, `split_testing` y
+> `split_testing_experimentos_ab`). **Esa es la figura que la operacion tiene que resolver.**
+
+## `LD-81` . `optimizacion_embudo_get_customers` contra `test_ab_precio` . **D. SIN ARISTA DECLARADA**
+
+**LA MADRE NO MANDA PROBAR PRECIOS EN NINGUN PASO.** Lo mas cerca que llega es *calcular el `LTV`
+y compararlo con el `CAQ` antes de escalar la inversion*, que es **una cuenta de rentabilidad, no
+un experimento de precio**. `test_ab_precio` elige el precio o el modelo probandolo con usuarios
+en un canal real. **Dos objetos distintos y dos entregables distintos. CONTINUA: `D`, los dos
+sanos. ARISTA: NO HAY, y NO SE DECLARA.**
+
+---
+
+## LA RESPUESTA A LA PREGUNTA DE `P.5` PARA `OP-D-03`: **NO ES UNA FAMILIA DE SEIS. SON DOS FAMILIAS CERRADAS**
+
+**Con los QUINCE pares del acto leidos (8 del cribado mas estas 7), la pregunta de `P.5` tiene
+respuesta medida.** Y hay que decir de entrada que **dos de los ocho del cribado se releyeron HOY
+y cambiaron de clase** (el **1061** de `A` a `D` y el **738** de `B` a `D`), que es justo el paso
+3 del orden interno de la operacion.
+
+| par | clase | de donde |
+|---|:---:|---|
+| `funnel_get_customers_optimizacion` contra `optimizacion_embudo_get_customers` | **A** | puesto **277**, cribado |
+| `ab_testing_optimizacion` contra `split_testing` | **A** | puesto **452**, cribado |
+| `split_testing` contra `test_ab_precio` | **A** | puesto **643**, cribado |
+| `split_testing` contra `split_testing_experimentos_ab` | **A** | puesto **374**, cribado |
+| `split_testing_experimentos_ab` contra `test_ab_precio` | **A** | puesto **1571**, cribado |
+| `ab_testing_optimizacion` contra `test_ab_precio` | **A** | puesto **1575**, cribado |
+| `ab_testing_optimizacion` contra `optimizacion_embudo_get_customers` | ~~**A**~~ **D** | puesto **1061**, **releido hoy** |
+| `ab_testing_optimizacion` contra `split_testing_experimentos_ab` | ~~**B**~~ **D** | puesto **738**, **releido hoy** |
+| las siete de esta tanda | **D** | `LD-75` a `LD-81` |
+
+**EL DIBUJO QUE DEJAN LAS `A`:**
+
+```
+funnel --A(277)-- optimizacion_embudo          ab_testing --A(452)-- split_testing
+                                                     \                  /      \
+                                                  A(1575)           A(374)   A(643)
+                                                       \              /          \
+                                                     test_ab_precio --A(1571)-- split_testing_experimentos_ab
+```
+
+**SON DOS COMPONENTES Y NO UNA, y la que las cosia era el `1061`.** Al pasar ese par a `D`, la
+componente unica se **PARTE EN DOS**, y las dos quedan **CERRADAS**:
+
+| componente | miembros | pares internos | estado |
+|---|---|---|---|
+| **el nucleo de las pruebas A/B** | `ab_testing_optimizacion`, `split_testing`, `test_ab_precio`, `split_testing_experimentos_ab` | **6 de 6 leidos**: cinco `A` y el 738 `D` | **CERRADA** |
+| **el par del embudo** | `funnel_get_customers_optimizacion`, `optimizacion_embudo_get_customers` | **1 de 1 leido**, el 277 `A` | **CERRADA** |
+
+> **Y ESO LO CONFIRMA EL INSTRUMENTO DE LA CASA, no mi dibujo:** el recomputo re corrido hoy
+> (`scripts/plan/recomputo_3388.py`) pasa de **334 a 335 componentes** y de **279 a 281 cerradas**
+> **quitando una `A`**. Un acto que se parte en dos es un acto mas de cuenta, y ninguno de los dos
+> queda abierto.
+
+> **LO QUE ESTO LE DICE A LA OPERACION, y no lo decide esta lectura.** `P.10` manda **fundir el
+> subconjunto cerrado y enlazar el resto**, y aqui hay **DOS subconjuntos cerrados**. El nucleo de
+> cuatro tiene **cinco `A` de seis pares** y su unica `D` interna (el 738) **separa justamente a
+> los dos extremos**: `ab_testing_optimizacion` y `split_testing_experimentos_ab` no son el mismo
+> objeto aunque los dos sean `A` con `split_testing` y con `test_ab_precio`. **Esa es la decision
+> del paso 2 del orden interno, y esta vuelta no la toma.**
+
+**SALDO DE LA TANDA: SIETE lecturas, SIETE `D`, cero `A`.** Una con el enlace ya puesto
+(`LD-75`), **tres con ARISTA QUE FALTA** (`LD-76`, `LD-79`, `LD-80`) declaradas para la fase 04, y
+tres sin arista con su motivo escrito (`LD-77`, `LD-78`, `LD-81`). **`n` no se movio: sigue en
+3.388.**

@@ -1,0 +1,280 @@
+﻿GUARDA DEL RELOJ DE P.5: el destejido de ab_testing_optimizacion ESTA HECHO (5 pasos, los del plan sellado). Se puede leer.
+SIGUIENTE NUMERO DE LECTURA DIRIGIDA: LD-75 (el mayor escrito en docs/ es LD-74, en docs\loop\ACTA_AUDITOR.md)
+
+==============================================================================
+LECTURA DIRIGIDA DEL ACTO DE OP-D-03 (P.5). LOS SEIS NODOS, ENTEROS
+==============================================================================
+NOMINA, leida hoy de OPERACIONES.jsonl: 6 nodos
+
+------------------------------------------------------------------------------
+NODO: ab_testing_optimizacion
+  titulo    : A/B Testing para Optimización Web/Mobile
+  fuente    : The Startup Owner's Manual - Steve Blank
+  dominio   : core   fase: validacion   vivo: True
+  entregable: Plan de pruebas A/B con elementos priorizados, resultados documentados y decisión sobre la versión ganadora
+  resumen   : El A/B testing es el método más usado para optimizar actividades de 'get, keep and grow' en negocios web y móviles. Consiste en comparar dos versiones de una página web (o elemento) para determinar cuál produce mejores resultados, mostrando la versión 'A' a la mitad de los visitantes y la versión 'B' a la otra mitad, de forma alternada y secuencial.
+  PASOS (5):
+     1. Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro) y contando también la ubicación de CTA, el copy, la prueba social y el número de campos de formulario.
+     2. Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipótesis de cambios grandes antes que las de pequeños ajustes.
+     3. Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba durante semanas enfocándose en una sola métrica a la vez.
+     4. Medir resultados de conversión/activación para cada versión
+     5. Implementar la versión ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente métrica cuando se agoten las ideas.
+  CONDICIONES (2):
+     1. Cuando el startup ya tiene tráfico web/mobile pero necesita mejorar tasas de conversión
+     2. Cuando se busca optimizar continuamente cualquier paso del funnel de adquisición
+  previos   : ['hipotesis_relacion_clientes_web', 'customer_jobs', 'copy_testing', 'heat_maps_eye_tracking', 'usability_testing_producto']
+  siguientes: ['cohort_analysis_retencion', 'optimizacion_grow_customers', 'funnel_get_customers_optimizacion', 'analisis_de_cohortes', 'optimizacion_metricas_crecimiento']
+------------------------------------------------------------------------------
+NODO: funnel_get_customers_optimizacion
+  titulo    : Optimización del Embudo 'Get Customers' (Adquisición y Activación)
+  fuente    : The Startup Owner's Manual - Steve Blank
+  dominio   : core   fase: validacion   vivo: True
+  entregable: Plan de optimización secuencial del funnel 'get' con métricas diarias monitoreadas y dashboard de seguimiento
+  resumen   : Es el proceso sistemático de mejorar cada paso del embudo de adquisición de clientes (acquire y activate). Dado que hasta el 98% de los visitantes nunca regresan, es crítico optimizar constantemente. El proceso consiste en revisar qué programas funcionan mejor, cuáles decepcionan, cuáles traen mejores clientes (LTV), y testear variaciones de ofertas, incentivos y mensajes.
+  PASOS (7):
+     1. Revisar resultados de cada programa 'get' implementado (SEO, ads, referidos, etc.)
+     2. Identificar el programa más productivo y escalarlo primero
+     3. Diseñar tests pass/fail para los programas más decepcionantes
+     4. Identificar comportamiento de clientes de alto LTV y buscar más similares
+     5. Probar variedad de ofertas, incentivos, descuentos y límites de tiempo
+     6. Revisar diariamente las 10-12 métricas clave con el 'data chief'
+     7. No optimizar demasiados programas a la vez para evitar resultados confusos
+  CONDICIONES (2):
+     1. Cuando el startup ya tiene tráfico pero necesita convertir más visitantes en clientes activados
+     2. Cuando se requiere escalar los canales de adquisición más efectivos
+  previos   : ['ab_testing_optimizacion', 'customer_jobs', 'metricas_de_adquisicion_activacion']
+  siguientes: ['optimizacion_keep_retencion', 'optimizacion_grow_customers', 'cohort_analysis_retencion', 'analisis_de_cohortes', 'keep_customers_strategy', 'optimizacion_metricas_crecimiento']
+------------------------------------------------------------------------------
+NODO: optimizacion_embudo_get_customers
+  titulo    : Optimización del Embudo 'Conseguir Clientes'
+  fuente    : The Startup Owner's Manual - Steve Blank
+  dominio   : core   fase: validacion   vivo: True
+  entregable: Plan de optimización activo con métricas de volumen, costo y conversión mejorando iterativamente, y validación de que LTV supera al CAQ
+  resumen   : Proceso continuo de 'test, medir, ajustar' enfocado en mejorar volumen, costo y conversión en cada etapa del embudo (adquisición, activación, compra). Requiere pruebas controladas tipo A/B, foco en pocas variables a la vez, y mantener siempre en mente el valor de vida del cliente (LTV) comparado con el costo de adquisición (CAQ), asegurando que LTV > CAQ.
+  PASOS (5):
+     1. Asegurar que existan MVP de alta fidelidad, plan de adquisición/activación y dashboard funcionando
+     2. Definir métricas específicas a optimizar (volumen, costo, conversión) según el tipo de negocio web (e-commerce, mercado multi-lado, marketplace)
+     3. Ejecutar pruebas A/B controladas cambiando no más de dos variables a la vez
+     4. Calcular LTV y compararlo con CAQ antes de escalar inversión en adquisición
+     5. Iterar continuamente: testear, medir, ajustar y volver a testear
+  CONDICIONES (1):
+     1. Cuando ya existen datos reales de comportamiento de usuarios y se busca mejorar la eficiencia del embudo de ventas
+  previos   : ['customer_validation_sell_phase', 'build_metrics_toolset', 'hire_data_analytics_chief']
+  siguientes: ['customer_creation']
+------------------------------------------------------------------------------
+NODO: split_testing
+  titulo    : Split Testing (A/B Testing)
+  fuente    : Value Proposition Design
+  dominio   : core   fase: validacion   vivo: True
+  entregable: Resultados comparativos de conversión entre variantes con significancia estadística.
+  resumen   : Técnica para comparar el desempeño de dos o más opciones (propuestas de valor, precios, textos) enviando tráfico similar a cada variante y midiendo cuál genera mejor tasa de conversión en el CTA. Popularizada por Google, LinkedIn y campañas políticas.
+  PASOS (4):
+     1. Define las variaciones a testear (precio, copy, features, packaging).
+     2. Divide el tráfico equitativamente entre las opciones (control vs. challenge).
+     3. Mide la tasa de conversión del CTA para cada variante.
+     4. Asegura significancia estadística superior al 95% antes de concluir.
+  CONDICIONES (1):
+     1. Cuando existen múltiples alternativas de propuesta de valor, precio o mensaje que se necesitan comparar
+  previos   : ['landing_page_mvp', 'ad_tracking', 'call_to_action_cta']
+  siguientes: ['mock_sales', 'presales']
+------------------------------------------------------------------------------
+NODO: split_testing_experimentos_ab
+  titulo    : Split-Testing (Pruebas A/B)
+  fuente    : The Lean Startup - Eric Ries
+  dominio   : core   fase: validacion   vivo: True
+  entregable: Reporte de resultados de al menos un experimento A/B con conclusiones sobre el impacto de una funcionalidad en el comportamiento del cliente
+  resumen   : Técnica en la que se ofrecen diferentes versiones de un producto a distintos grupos de clientes simultáneamente, para observar diferencias en el comportamiento y así inferir el impacto real de cada variación. A diferencia del análisis de causa-efecto posterior (que es lento y ambiguo), el split-test genera evidencia científica en tiempo real sobre qué cambios importan realmente a los clientes.
+  PASOS (5):
+     1. Definir una hipótesis clara sobre el impacto esperado de una nueva funcionalidad
+     2. Dividir la base de clientes en dos grupos aleatorios (A y B)
+     3. Lanzar la variación nueva solo al grupo B, manteniendo el grupo A con la versión estándar
+     4. Medir comportamiento de ambos grupos usando las mismas métricas
+     5. Comparar resultados para determinar si la variación tuvo impacto real
+  CONDICIONES (2):
+     1. Si el equipo no puede determinar con certeza qué causó un cambio en las métricas
+     2. Si se quiere decidir entre priorizar nuevas funcionalidades sin desperdiciar recursos de desarrollo
+  previos   : ['producto_minimo_viable', 'vanity_metrics_vs_accionables', 'metricas_accionables']
+  siguientes: ['metricas_cohortes', 'kanban_validacion_aprendizaje']
+------------------------------------------------------------------------------
+NODO: test_ab_precio
+  titulo    : Test A/B de Precio
+  fuente    : Value Proposition Design
+  dominio   : core   fase: validacion   vivo: True
+  entregable: Un precio o modelo de monetización validado con datos de conversión reales de al menos cientos de usuarios testeados.
+  resumen   : Técnica de experimentación para determinar el modelo de monetización óptimo (ej. venta vs alquiler) y el punto de precio ideal, mostrando variantes a distintos segmentos de usuarios y midiendo la tasa de conversión o preferencia por cada opción.
+  PASOS (5):
+     1. Definir las variantes a testear (ej. precio de venta vs. modelo de renta)
+     2. Implementar el test en un canal real (sitio web, landing page)
+     3. Ejecutar múltiples rondas para afinar el precio óptimo
+     4. Medir el porcentaje de usuarios que prefieren cada variante
+     5. Seleccionar el precio o modelo validado con mayor conversión
+  CONDICIONES (2):
+     1. Cuando existe incertidumbre sobre el precio o modelo de ingresos adecuado
+     2. Cuando se tienen múltiples opciones de monetización viables
+  previos   : ['biblioteca_experimentos_validacion', 'get_out_building_test_sell', 'mvp_catalogo_tecnicas']
+  siguientes: ['lienzo_modelo_negocio']
+
+==============================================================================
+LOS PARES DEL ACTO YA LEIDOS, con su clase y su razon entera
+==============================================================================
+
+PUESTO 1061, clase A, clave None: ab_testing_optimizacion contra optimizacion_embudo_get_customers
+    TERCERA COSTURADA CONTRA COSTURADA, y aparece el mismo dia en que el barrido conto dos. Los dos 
+    nodos son costuras CONFIRMADAS: ab_testing_optimizacion, quince pasos y TRES narraciones del mis
+    mo A/B, y optimizacion_embudo_get_customers, diez pasos con EL TESTEO DICHO DOS VECES, Blank en 
+    el 1 a 5 y Weinberg en el 6 a 10. Lo comun es el A/B entero: partir el trafico entre versiones c
+    ambiando pocas variables, medir la conversion de cada una, implementar la ganadora y volver a em
+    pezar, correr pruebas semanales sobre textos, imagenes y paginas de aterrizaje, y trabajar dentr
+    o del canal ya validado. Lo propio de ab_testing_optimizacion son la regla de una sola metrica a
+     la vez, el catalogo de elementos a probar, botones, ubicacion de la llamada a la accion, prueba
+     social y numero de campos, y la confianza estadistica. Lo propio de optimizacion_embudo_get_cus
+    tomers son el valor de vida contra el costo de adquisicion antes de escalar, las herramientas no
+    mbradas, y explorar como otros canales alimentan al principal. CONGELADO por la regla de la depe
+    ndencia: los dos van a cirugia, y si el destejido deja a optimizacion_embudo con el A/B en una s
+    ola linea y a ab_testing como su procedimiento, el par pasa a D. No se puede saber antes.
+
+PUESTO 452, clase A, clave 0.8434: ab_testing_optimizacion contra split_testing
+    REPITE con split_testing. Los dos mandan la misma prueba: definir las variaciones cambiando un e
+    lemento a la vez, repartir el trafico al azar entre las dos versiones, medir la conversion de ca
+    da una, exigir confianza estadistica antes de concluir, e implantar la ganadora y volver a empez
+    ar. LATERAL, no cambia la clase: el primero tiene QUINCE pasos y se parte en tres narraciones de
+    l mismo test, la 1 a 5, la 6 a 10 y la 11 a 15, cada una con su propio vocabulario. Con el puest
+    o 374, la familia del test A/B llega a TRES nodos del nucleo. Costura para la otra ficha.
+
+PUESTO 738, clase B, clave 0.8168: ab_testing_optimizacion contra split_testing_experimentos_ab
+    LOS DOS NODOS ESTAN AVERIADOS POR DENTRO Y EL SOLAPE CRUZA LAS DOS JUNTURAS, asi que por el TOQU
+    E UNICO del banco 9.4 con el refinamiento del puesto 673 este par se lee DESPUES del arreglo. ab
+    _testing_optimizacion tiene QUINCE pasos en tres bloques que dicen tres veces la misma prueba A/
+    B: del 1 al 5 la landing con un solo elemento cambiado, del 6 al 10 la metrica clave y las seman
+    as de prueba, del 11 al 15 las variables del canal nucleo con grupo de control y confianza estad
+    istica. split_testing_experimentos_ab tiene NUEVE en dos bloques y es costura CONFIRMADA en la f
+    icha con bloque 51,5, ademas de declarar dos libros en el campo de fuente, The Lean Startup y SP
+    IN Selling: del 1 al 5 la division en dos grupos y la comparacion, del 6 al 9 la eleccion de un 
+    grupo de control con desempeno inicial parecido y el reporte de la diferencia neta. El solape es
+     la mecanica A/B, que vive en TODOS los bloques de los dos, o sea que cruza las junturas por los
+     dos lados. LO QUE SI QUEDA ANOTADO: la familia de A/B tiene por lo menos CUATRO nodos vivos con
+     split_testing y test_ab_precio del puesto 643, y ninguno enlaza a otro.
+
+PUESTO 1575, clase A, clave None: ab_testing_optimizacion contra test_ab_precio
+    EL MANUAL DE OPTIMIZACION CONTRA LA MISMA PRUEBA APLICADA AL PRECIO, libros distintos y sin aris
+    ta entre ellos, y es el segundo par interno del acto de las pruebas A/B en cinco puestos. Los ci
+    nco pasos de test_ab_precio tienen su correspondiente dentro de los quince de ab_testing_optimiz
+    acion: definir las variables clave a testear, implementarlo en el canal real, dividir el trafico
+    , medir la conversion de cada version, e implementar la ganadora. PERDIDAS PROPUESTAS, con la ve
+    rificacion hecha y repartidas por lado. De test_ab_precio se pierden las dos ya anotadas en el p
+    uesto 1571, el objeto precio contra modelo de renta y las MULTIPLES RONDAS para afinar un valor 
+    optimo. De ab_testing_optimizacion se perderia el manual entero: cambiar UN SOLO ELEMENTO A LA V
+    EZ, la division ochenta veinte en paginas de alto trafico, GENERAR HIPOTESIS DE CAMBIOS GRANDES 
+    ANTES QUE AJUSTES PEQUENOS, correr las pruebas durante semanas enfocandose en una sola metrica, 
+    la lista de elementos a probar, botones, ubicacion de la llamada a la accion, texto, prueba soci
+    al y numero de campos del formulario; MEDIR CON CONFIANZA ESTADISTICA antes de concluir, y docum
+    entar las tacticas exitosas para escalarlas hasta la saturacion. NOTA DE NOMINA: los dos ya esta
+    ban en el acto de las pruebas A/B, asi que el acto NO crece. Con el 643 y el 1571, test_ab_preci
+    o lleva TRES A contra tres nodos generales distintos: la aplicacion al precio repite con todos l
+    os manuales.
+
+PUESTO 277, clase A, clave 0.8723: funnel_get_customers_optimizacion contra optimizacion_embudo_get_customers
+    REPITE con optimizacion_embudo_get_customers. Los dos mandan optimizar el mismo embudo de adquis
+    icion con los mismos gestos: revisar los programas ya corriendo, escalar primero el mas producti
+    vo, correr pruebas A/B controladas sin tocar demasiadas variables a la vez, comparar LTV contra 
+    el costo de adquisicion antes de escalar la inversion, e iterar. Los ids son el mismo nombre en 
+    dos idiomas. NOTA LATERAL, no cambia la clase: el segundo es el nodo que nombra Visual Website O
+    ptimizer, marca muerta desde el rebautizo a VWO en 2014, censada en la ficha de herramientas.
+
+PUESTO 374, clase A, clave 0.855: split_testing contra split_testing_experimentos_ab
+    REPITE con split_testing_experimentos_ab. Los dos mandan la misma prueba: definir la variacion o
+     la hipotesis, partir el trafico o la base en dos grupos comparables, medir los dos con las mism
+    as metricas y en el mismo periodo, y comparar antes de concluir. El primero exige significancia 
+    estadistica por encima del 95% y el segundo insiste en comparar el cambio porcentual y no los va
+    lores absolutos, que son dos maneras de pedir lo mismo. LATERAL, no cambia la clase: el segundo 
+    tiene nueve pasos y se parte por la mitad, del 6 al 9 vuelve a decir lo del 2 al 5 con otras pal
+    abras, grupo de control, medir los dos, comparar y reportar. Costura para la otra ficha.
+
+PUESTO 643, clase A, clave 0.8244: split_testing contra test_ab_precio
+    El metodo contra el metodo aplicado a una variable, sin arista entre ellos y los dos de Value Pr
+    oposition Design. split_testing es la prueba A/B en general: definir las variaciones a probar, y
+     nombra cuatro, precio, texto, funciones y empaquetado, dividir el trafico en partes iguales ent
+    re control y retador, medir la tasa de conversion de la llamada a la accion de cada variante, y 
+    no concluir sin significancia estadistica por encima del noventa y cinco por ciento. test_ab_pre
+    cio es esa misma prueba con el precio de variable: definir las variantes, por ejemplo venta cont
+    ra renta, implementarla en un canal real como el sitio o una landing, correr varias rondas para 
+    afinar, medir que porcentaje prefiere cada una y quedarse con la validada. No es una tecnica dis
+    tinta, es la misma con una de sus cuatro variables. Lo propio de test_ab_precio son las RONDAS M
+    ULTIPLES para afinar hasta el precio optimo, que el general no pide. Lo propio de split_testing 
+    es el umbral del noventa y cinco por ciento, que es lo que impide declarar ganador a un ruido, y
+     es lo mas caro de perder de los dos.
+
+PUESTO 1571, clase A, clave None: split_testing_experimentos_ab contra test_ab_precio
+    LA PRUEBA A/B GENERAL CONTRA LA MISMA PRUEBA APLICADA AL PRECIO, libros distintos y sin arista e
+    ntre ellos, y es par INTERNO del acto de las pruebas A/B. CUATRO de los cinco pasos de test_ab_p
+    recio tienen su correspondiente: definir las variantes a testear es definir la hipotesis y las d
+    os versiones; implementarlo en un canal real es lanzar la variacion a uno de los grupos; medir e
+    l porcentaje que prefiere cada variante es medir el comportamiento de ambos grupos con las misma
+    s metricas; y seleccionar la variante con mayor conversion es comparar resultados y quedarse con
+     la ganadora. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De test_ab_p
+    recio se perderian dos: el OBJETO, que la variante sea el precio de venta contra el modelo de re
+    nta, que es la unica linea del catalogo que aplica una prueba A/B a la forma de cobrar; y EJECUT
+    AR MULTIPLES RONDAS PARA AFINAR EL PRECIO OPTIMO, que es la unica que usa la prueba como busqued
+    a iterativa de un valor y no como duelo de dos versiones. De split_testing_experimentos_ab se pe
+    rderia el RIGOR ESTADISTICO entero: elegir un grupo de control con desempeno inicial similar, me
+    dir en el mismo periodo bajo las mismas condiciones de mercado, COMPARAR EL CAMBIO PORCENTUAL Y 
+    NO LOS VALORES ABSOLUTOS, y reportar la diferencia neta entre grupos. NOTA DE NOMINA: los dos ya
+     estaban en el acto de las pruebas A/B, la TERCERA CIRUGIA del orden de la pasada, asi que el ac
+    to NO crece. Y esta A refuerza lo que el puesto 643 ya habia mostrado: la repeticion de ese acto
+     tambien esta entre sus nodos limpios.
+
+==============================================================================
+LOS PARES POR LEER: 7 de 15. Con su arista y su prueba de que NO estan en la cola
+==============================================================================
+
+PAR: ab_testing_optimizacion contra funnel_get_customers_optimizacion
+  veredicto en el archivo        : NINGUNO
+  esta en la cola del cribado    : NO, o sea LECTURA DIRIGIDA legitima
+  ab_testing_optimizacion nombra a funnel_get_customers_optimizacion: True
+  funnel_get_customers_optimizacion nombra a ab_testing_optimizacion: True
+  HAY ARISTA: True
+
+PAR: funnel_get_customers_optimizacion contra split_testing
+  veredicto en el archivo        : NINGUNO
+  esta en la cola del cribado    : NO, o sea LECTURA DIRIGIDA legitima
+  funnel_get_customers_optimizacion nombra a split_testing: False
+  split_testing nombra a funnel_get_customers_optimizacion: False
+  HAY ARISTA: False
+
+PAR: funnel_get_customers_optimizacion contra split_testing_experimentos_ab
+  veredicto en el archivo        : NINGUNO
+  esta en la cola del cribado    : NO, o sea LECTURA DIRIGIDA legitima
+  funnel_get_customers_optimizacion nombra a split_testing_experimentos_ab: False
+  split_testing_experimentos_ab nombra a funnel_get_customers_optimizacion: False
+  HAY ARISTA: False
+
+PAR: funnel_get_customers_optimizacion contra test_ab_precio
+  veredicto en el archivo        : NINGUNO
+  esta en la cola del cribado    : NO, o sea LECTURA DIRIGIDA legitima
+  funnel_get_customers_optimizacion nombra a test_ab_precio: False
+  test_ab_precio nombra a funnel_get_customers_optimizacion: False
+  HAY ARISTA: False
+
+PAR: optimizacion_embudo_get_customers contra split_testing
+  veredicto en el archivo        : NINGUNO
+  esta en la cola del cribado    : NO, o sea LECTURA DIRIGIDA legitima
+  optimizacion_embudo_get_customers nombra a split_testing: False
+  split_testing nombra a optimizacion_embudo_get_customers: False
+  HAY ARISTA: False
+
+PAR: optimizacion_embudo_get_customers contra split_testing_experimentos_ab
+  veredicto en el archivo        : NINGUNO
+  esta en la cola del cribado    : NO, o sea LECTURA DIRIGIDA legitima
+  optimizacion_embudo_get_customers nombra a split_testing_experimentos_ab: False
+  split_testing_experimentos_ab nombra a optimizacion_embudo_get_customers: False
+  HAY ARISTA: False
+
+PAR: optimizacion_embudo_get_customers contra test_ab_precio
+  veredicto en el archivo        : NINGUNO
+  esta en la cola del cribado    : NO, o sea LECTURA DIRIGIDA legitima
+  optimizacion_embudo_get_customers nombra a test_ab_precio: False
+  test_ab_precio nombra a optimizacion_embudo_get_customers: False
+  HAY ARISTA: False
+
+==============================================================================
+FIN DE LA LECTURA. Nada se clasifico y nada se escribio.

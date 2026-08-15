@@ -84,7 +84,7 @@ arregle** (banco 9.24).
 |---:|---|---|---:|---:|---:|
 | **1** | `OP-D-01` | `producto_minimo_viable` | ~~**3** (494, 592, 830)~~ **3 LIBERADOS EL 15 ago 2026: 494 a `C`, 592 a `D`, 830 a `D`** | **2** | 2 |
 | **2** | `OP-D-02` | `voz_del_cliente_voc` | ~~**3** (724, 755, 827)~~ **3 LIBERADOS EL 15 ago 2026: los tres a `D`** | 1 | 4 |
-| **3** | `OP-D-03` | `ab_testing_optimizacion` | **2** (738, 1061) | **3** | **6** |
+| **3** | `OP-D-03` | `ab_testing_optimizacion` | ~~**2** (738, 1061)~~ **2 LIBERADOS EL 15 ago 2026 (vuelta 34): los dos a `D`** | ~~**3**~~ **3, de las cuales DOS estaban CONSUMIDAS por la fase 01 y una se ejecuto** | **6** |
 | 4 | `OP-D-04` | `brainstorming_divergente` | 0 | 1 mas la decision de fuente | **7** |
 | 5 | `OP-D-05` | `seleccion_ceo_fundador` | 0 | 1 | 3 |
 | 6 | `OP-D-06` | los nueve actos de dos | 0 | 9 | 2 cada uno |
@@ -959,6 +959,11 @@ impedir.
 | `optimizacion_embudo_get_customers` contra `split_testing_experimentos_ab` |
 | `optimizacion_embudo_get_customers` contra `test_ab_precio` |
 
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 34): las dos cifras de este recuadro envejecieron
+> el mismo dia en que se escribieron.** Tras el destejido, el **1061** paso de `A` a `D` y el
+> **738** de `B` a `D`: el acto tiene hoy **SEIS pares `A`** (277, 452, 643, 1571, 1575 y 374) y
+> **CERO congelados**. El texto viejo se queda entero.
+>
 > **LO QUE SI QUEDA MEDIDO Y APROVECHABLE para quien retome:** el acto tiene **SIETE pares `A`**
 > (277, 452, 643, 1061, 1571, 1575 y el 374) y **un congelado**, el **738**. El campo
 > `superviviente` esta en **`null`**, leido hoy. **Los seis nodos estan vivos y son de TRES libros
