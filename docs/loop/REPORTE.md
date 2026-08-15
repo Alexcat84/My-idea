@@ -1,415 +1,386 @@
-# REPORTE DE LA VUELTA 33 (ejecutor Opus 5). FASE III, rama `pasada-unica`
+# REPORTE DE LA VUELTA 34 (ejecutor Opus 5). FASE III, rama `pasada-unica`
 
-**LAS TRES CORRECCIONES DEL REGISTRO ESTAN HECHAS, LAS TRES CLASES RELEIDAS ESTAN VOLCADAS CON SU
-BARRIDO, EL ACTO DE `OP-D-02` SE LEYO ENTERO Y SU FUSION SE EJECUTO: es la PRIMERA fusion del plan
-de la pasada unica que se escribe contra `dataset/`. Los tres congelados que ese nodo bloqueaba
-salieron de la lista. Y el modo continuo se detuvo en `OP-D-03` con una PARADA de tres motivos
-medidos y CERO nodos tocados: el instrumento de costuras se declara a si mismo MAL CALIBRADO.**
+**LAS TRES DECISIONES DEL FUNDADOR ESTAN APLICADAS, LA CAIDA `6.1` DE LA VUELTA 33 ESTA CERRADA
+CON `23 DE 23` ESTABLE, Y `OP-D-03` DEJO DE ESTAR PARADA. Pero no la desbloqueo el instrumento
+recalibrado, que sigue sin pasar su propia puerta: la desbloqueo UNA CAIDA DE REPORTE DE LA VUELTA
+33 que este reporte corrige. Dos de las tres costuras que la operacion declara ya estaban
+consumidas por la fase 01, la tercera se destejio, los quince pares del acto estan leidos y el
+acto resulto no ser una familia de seis sino DOS familias cerradas.**
 
-- **Hash de partida:** `3f196b73` (el commit del fundador con la decision).
-- **Hash final:** ver el ultimo commit de `origin/pasada-unica`. **Siete commits de trabajo**, el
-  primero de ellos la APERTURA medida antes de tocar nada (`e1105299`).
-- **Rutas tocadas** (`git diff --stat e1105299..HEAD`, corrido hoy): **67 ficheros, 6.539
-  insertadas, 138 borradas**. Por carpeta: `docs/loop` **38**, `scripts/loop` **12**, `docs/plan`
-  **5**, `dataset/nodos` **5**, `docs` **3**, `web/lib/assets` **2**, `dataset/metadata` **2**.
-  **Cero merges.** El hook corrio verde en los siete commits.
-- **`dataset/nodos` son CINCO ficheros y ninguno mas:** `voz_del_cliente_voc`,
-  `enfoque_mercado_voc`, `homework_frontend_loading`, `procesamiento_paralelo_con_espirales` y
-  `ventaja_competitiva_producto`. **Ningun nodo nacio, ninguno se borro, y uno murio**
-  (deprecado), que es exactamente lo que una fusion hace.
+- **Hash de partida:** `270ef4ea` (el commit del fundador con la decision).
+- **Hash final:** `801c59f9`. **CINCO commits**, el primero de ellos la **APERTURA** medida antes
+  de tocar nada y commiteada antes de tocar nada (`a25d21f5`). **Cinco contando la apertura, y se
+  dice asi a proposito: el acta 33 conto una caida de reporte del ejecutor por esa misma cuenta.**
+- **Rutas tocadas** (`git diff --stat a25d21f5..HEAD`, corrido hoy): **83 ficheros, 6.016
+  insertadas, 154 borradas**. Por carpeta: `docs/loop` **49**, `scripts/loop` **14**, `docs/plan`
+  **6**, `dataset/nodos` **4**, `web/lib` **2**, `dataset/metadata` **2**, y **seis ficheros
+  sueltos** (`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `docs/INTRA_DOMINIO_INFORME.md`,
+  `docs/PENDIENTES.md`, `scripts/run_phase1.py`, `scripts/costuras_internas.py`,
+  `engine/test_gate_deprecado_reciproco.py`). **Cero merges.** El hook corrio verde en los cinco.
+- **`dataset/nodos` son CUATRO ficheros y ninguno mas:** `ab_testing_optimizacion` (el destejido) y
+  `homework_frontend_loading`, `procesamiento_paralelo_con_espirales`, `ventaja_competitiva_producto`
+  (la redireccion rehecha). **Ningun nodo nacio, ninguno murio, ninguno se borro.**
 
 ---
 
 ## 1. EL ESTADO, APERTURA CONTRA CIERRE
 
 **Las dos columnas son de dos corridas del MISMO instrumento** (`scripts/loop/vuelta31_estado.py`,
-el mismo que cerro la vuelta 32): la de **APERTURA** corrida **antes de la primera operacion** y
-commiteada antes de tocar nada (`e1105299`, salida `SALIDA_V33_APERTURA.txt`), y la de **CIERRE**
-corrida **al cerrar** (`SALIDA_V33_CIERRE.txt`). **El instrumento no cambio entre columnas.**
+el que abrio y cerro la vuelta 33, **sin tocarlo**): la de **APERTURA** corrida **antes de la
+primera operacion** y commiteada antes de tocar nada (`a25d21f5`, salida
+`SALIDA_V34_APERTURA.txt`), y la de **CIERRE** corrida **al cerrar** (`SALIDA_V34_CIERRE.txt`).
 Ninguna cifra viene de un acta ni de un reporte anterior.
 
 | | **APERTURA** | **CIERRE** |
 |---|---:|---:|
-| marcador: n / A / B / C / D | 3.388 / 583 / 89 / 7 / 2.709 | **3.388 / 582 / 84 / 8 / 2.714** |
+| marcador: n / A / B / C / D | 3.388 / 582 / 84 / 8 / 2.714 | **3.388 / 581 / 83 / 8 / 2.716** |
 | huecos / duplicados / clases fuera de ABCD | 0 / 0 / 0 | **0 / 0 / 0** |
-| grafo: ficheros / ids / vivos / deprecados | 3.853 / 3.853 / 3.539 / 314 | **3.853 / 3.853 / 3.538 / 315** |
-| enlaces / claves distintas | 16.848 / 15 | **16.852 / 15** |
+| grafo: ficheros / ids / vivos / deprecados | 3.853 / 3.853 / 3.538 / 315 | **identicos** |
+| enlaces / claves distintas | 16.852 / 15 | **16.849 / 15** |
 | familias Weinberg / Horowitz / Hugos / Coleman / Rackham (vivos) | 72 / 93 / 111 / 75 / 47 | **identicas** |
 | operaciones / estados / dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
 | inventario | 672 | **672** |
 | indice rojo declarado | 18 lineas, 0 ausentes | **18 lineas, 0 ausentes** |
 | fronteras de `OP-F-04-COL` | 14 de 15 | **14 de 15** |
-| **superviviente de `OP-D-02`** | **`null`** | **`voz_del_cliente_voc`** |
+| **congelados de `OP-D-03`** | **2** (738, 1061) | **0** |
 
-> **EL MARCADOR SE MOVIO POR PRIMERA VEZ EN SEIS VUELTAS, y esa es la firma de esta.** Se movio
-> **dos veces y en dos actos separados**, y las dos con **la cifra esperada escrita ANTES de
-> correr el instrumento**, con orden de PARAR si daba otra cosa. **Las dos veces dio exactamente
-> lo escrito.** `n` **no se movio**: las tres lecturas dirigidas nuevas **no entran en la cola**.
+> **EL MARCADOR SE MOVIO UNA VEZ, y con la cifra esperada escrita ANTES de correr el
+> instrumento**, con orden de PARAR si daba otra cosa (`SALIDA_V34_LOTE.txt`). **Dio exactamente
+> lo escrito.** `n` **no se movio**: las siete lecturas dirigidas nuevas **no entran en la cola**.
 
-> **EL GRAFO SE MOVIO EN UN NODO, Y ESO TAMBIEN ES LA FIRMA.** Vivos **3.539 a 3.538** y
-> deprecados **314 a 315**: **la fusion, y nada mas que la fusion.** El censo de ficheros **no se
-> mueve** porque **una fusion depreca, no borra**.
+> **LOS TRES ENLACES DE MENOS SON LA REDIRECCION REHECHA, y nada mas.** 16.852 a **16.849**: los
+> tres sitios vivos de los que se quito el id del absorbido de `OP-D-02`. **Ninguna arista se
+> escribio a mano en esta vuelta**, y el paso 5 del `Gate 0` reporta **0 nodos actualizados**
+> despues, que es la prueba de que ya no las devuelve.
 
-> **LOS CUATRO ENLACES DE MAS ESTAN MEDIDOS Y NO SE PASAN POR ALTO** (`SALIDA_V33_ENLACES.txt`).
-> Yo esperaba **menos uno** (la duplicada que la fusion limpia) y el instrumento da **mas cuatro**.
-> **Nacen del RECIPROCADO de `Gate 0`**: al redirigir dos entradas hacia el superviviente, la
-> pasada de curaduria escribio la arista de vuelta dentro del propio superviviente. **Ninguna
-> arista se escribio a mano en esta vuelta.** Y eso abre la caida de la seccion 6, que va
-> declarada y sin arreglar.
-
-> **La tasa por dominio SI se movio, y solo en `core`**, porque los seis veredictos volteados son
-> los seis de `core`: de `A 344, B 87, C 7, D 1.007` a **`A 343, B 82, C 8, D 1.012`**. **Los
-> otros nueve dominios, identicos al digito** (`SALIDA_V33_TASA_DOMINIO_B.txt`). **La vara por
-> tramo es cifra del cribado y esta vuelta no leyo ningun par de la cola: no se mueve, y no se
-> copia de ningun lado para rellenar la tabla.**
+> **La tasa por dominio se movio SOLO en `core`**, porque los dos veredictos volteados son los dos
+> de `core`: de `A 343, B 82, C 8, D 1.012` a **`A 342, B 81, C 8, D 1.014`**. **Los otros nueve
+> dominios, identicos al digito** (`SALIDA_V34_TASA_DOMINIO.txt`). **La tasa redondeada NO se
+> mueve (23,7 % las dos veces) y la cifra SI**, y va dicho para que nadie lea el 23,7 como *no
+> paso nada*: 343 de 1.445 es 23,74 y 342 es 23,67. **La vara por tramo es cifra del cribado y
+> esta vuelta no leyo ningun par de la cola: no se mueve, y no se copia de ningun lado.**
 
 ---
 
-## 2. TAREA 1.1, LA CELDA DEL ORIGEN 16. **EL MOTIVO TENIA RAZON Y LA CELDA ESTABA MAL**
+## 2. DECISION 1 APLICADA: **el deprecado es archivo tambien en el reciprocado**
 
-**La medicion del dia, impresa ANTES de tocar nada** (`vuelta33_corregir_16.py`): el paso 16
-original dice *Desarrolla tu primera version de forma incremental, en ciclos cortos e iterativos*.
-**Es la CADENCIA**, que es el paso 6 del resultado, **no el conjunto minimo** del paso 2. Los tres
-que si son el conjunto minimo (**6**, **15** y **19**) empiezan los tres por *Define el conjunto
-minimo de caracteristicas*, y el 16 no.
+**El cambio es UNA regla en DOS funciones.** Nace `aristas_a_simetrizar(nodes)` en
+`scripts/run_phase1.py`, **funcion pura** como las tres barandas del alias: **entra la arista que
+declara un nodo VIVO**, en cualquiera de sus dos vistas. `step5_symmetrize` y
+`count_asymmetric_edges` **leen las dos la misma funcion**, porque un Gate que exigiera simetria
+en aristas que el paso 5 ya no simetriza **se pondria rojo por su propia politica**, y la salida
+barata seria aflojar la comprobacion.
 
-**EL TEXTO DEL NODO NO SE TOCO, y no es una opinion: es una INVARIANTE QUE EL INSTRUMENTO
-COMPRUEBA Y QUE LE HACE ABORTAR SI NO SE CUMPLE.** `vuelta32_podar.py` toma el superviviente por
-el **primer origen del grupo** y el texto por `pasos_finales`. **`min` del grupo del paso 2 sigue
-en 2 y el del paso 6 sigue en 8** con el 16 dentro o fuera, y la cobertura sigue en **22 de 22**.
+**LA LECTURA ES POR DECLARACION, NO POR ORIGEN TOPOLOGICO**, y la diferencia decide: por origen,
+una arista declarada por un vivo **hacia** un deprecado seguiria escribiendo el id del muerto
+dentro del vivo, que es el sintoma exacto que la decision manda cerrar.
 
-**TRES CAMPOS DEL PLAN SELLADO CARGABAN LA MISMA PARTICION Y LOS TRES SE CORRIGIERON**, con las
-particiones viejas enteras dentro de un bloque `correcciones_declaradas` del propio JSON:
-`grupos_pasos` (el que el encargo nombra), **`mapa_pasos` (el campo OPERATIVO, el que el ejecutor
-consume)** y `pruebas_repeticion`. **Corregir solo el primero habria dejado el plan
-contradiciendose consigo mismo y al verificador en verde encima de la contradiccion.**
+**MEDIDO ANTES DE TOCAR CODIGO** (`vuelta34_reciprocado.py`, sobre `dataset/nodos`): **110**
+aristas con su unica declaracion en un deprecado, **las 110 de deprecado a deprecado**, **0**
+tocando a un vivo. **Eso ultimo no es que no hubiera problema: es que el Gate ya se las habia
+devuelto**, y por eso el censo se corre y se publica en vez de suponerse.
 
-> **UN LIMITE DICHO PARA QUE NADIE LE ATRIBUYA AL VERDE LO QUE NO MIDIO:** la huella de la prueba
-> de repeticion de ese grupo es *conjunto minimo de caracteristicas*, **que el paso 16 nunca
-> contuvo**. La prueba **jamas midio al 16**, porque cuenta la huella sobre el nodo resultante y
-> solo IMPRIME los origenes. **La celda mala no falseo ningun verde: no habia instrumento que la
-> leyera.** Ese es el hueco exacto que el verificador de mapas cierra.
-
-**Y LA TABLA YA NO ESTA TECLEADA: ESTA IMPRESA**, con `vuelta33_tabla_mapa.py`, instrumento nuevo,
-y el comando citado al lado en el documento. La tabla vieja **se queda entera y tachada, cabecera
-incluida**, y eso ultimo no es cosmetica: **asi el verificador no lee como vigente una tabla
-retirada**.
-
----
-
-## 3. TAREA 1.2, EL MOTIVO 2 DE LA PARADA: **CERO DE TRES, NO DOS DE TRES**
-
-**La causa esta medida y es de la misma especie que la del origen 16.** El detector de ganador de
-`vuelta32_acto_opd02.py` preguntaba `"gana" not in razon.lower()`: **un SUBSTRING**. Y el substring
-`gana` vive dentro de `ganar`. **La razon del puesto 526 dice *saltarse la validacion por GANAR
-TIEMPO***, y el detector leyo ahi un ganador que no existe.
-
-**LAS DOS CORRIDAS SE PUBLICAN Y LA DIFERENCIA SE DECLARA**, en vez de resolverse sustituyendo:
-
-| detector | pares A que nombran ganador |
-|---|---:|
-| **VIEJO**, substring `gana` | **1 de 3** |
-| **NUEVO**, vocabulario de adjudicacion con frontera de palabra | **0 de 3** |
-
-**El instrumento nuevo imprime la palabra culpable por su nombre** (`FALSO POSITIVO, y aqui esta
-la palabra: 'ganar'`) **y la razon ENTERA de cada par A**, porque su vara sigue siendo lexica y no
-un lector de espanol, y eso va escrito dentro.
-
-**DOS COSAS QUE NO SE TOCARON, con su motivo.** La `nota` de `OP-D-02` en `OPERACIONES.jsonl`
-**leida hoy entera**: no afirma que el 526 nombre ganador, nombra al 386 y al 788 y concluye bien.
-Y `SALIDA_V32_PARADA_OPD02.txt` tampoco se reescribe: **una salida vieja se contrasta, no se
-maquilla.**
-
----
-
-## 4. TAREA 1.3, EL VOLCADO Y EL BARRIDO DEL `9.10`
-
-**Las tres clases releidas en la vuelta 32 y dejadas sin escribir se volcaron**, con la
-adjudicacion del fundador y el `9.10` como mecanismo: **494 de `A` a `C`** (banco `9.22`, tercer
-ejemplar del archivo, con **enlace mutuo** declarado y sin poner), **592 de `B` a `D`** y **830 de
-`B` a `D`** (arista que falta).
-
-**LA RAZON VIEJA NO SE TECLEO: SE COPIO POR MAQUINA**, y `vuelta33_volcado_910.py` **aborta si la
-razon vieja no queda literalmente dentro de la nueva**. Conservados **865, 1.359 y 962**
-caracteres.
-
-**EL BARRIDO, EN EL MISMO ACTO** (`vuelta33_barrido_910.py`, **77 candidatos listados sin ocultar
-ninguno**). Lo corregido:
-
-| documento | que se corrigio |
+| medicion | resultado |
 |---|---|
-| `INTRA_DOMINIO_INFORME.md` | el marcador de `100.1`, la tasa por dominio de `100.2` y el *total de A en el archivo* de `100.6` |
-| `PENDIENTES.md` | congelados **13 a 10**, cola **19 a 16**, la tabla de pares que libera el emblema y la de *clase hoy* |
-| `RECOMPUTO_3388.md` | **el instrumento se volvio a correr entero**: A **583 a 582**, nodos con A **854 a 852**, componentes **335 a 334**, cerradas **280 a 279**. **Las cuatro comprobaciones vuelven a dar OK** |
-| `RECOMPUTO_3388_COMPONENTES.jsonl` | **reescrito por el propio instrumento**: muere la componente de tamano 2 del 494 |
-| `02_DESTEJIDOS.md` | la tabla del orden, el bloque del 494 congelado, la tabla del movimiento 4 y el bloque de *lo que esta vuelta NO escribe* |
+| **caso positivo EN ROJO y EN VERDE** (`engine/test_gate_deprecado_reciproco.py`, cinco pruebas) | la **regla vieja** (copiada literal dentro de la prueba) devuelve **2 aristas** del muerto a los vivos; la **nueva**, **ninguna**. **La prueba EXIGE que la vieja falle** |
+| redireccion rehecha (`vuelta34_redirigir.py`, seis guardas) | **3 sitios vivos**, **0** que sigan nombrando al absorbido; cableado del archivo **intacto** y sus **5 pasos** sin tocar |
+| **caso positivo de `OP-D-02` ANTES** | **22 PASAN, 1 CAE** (el mismo rojo que la vuelta 33 publico) |
+| `Gate 0`, **paso 5** | **0 nodos actualizados, 0 vistas completadas** |
+| **caso positivo DESPUES del ciclo entero de `Gate 0`** | **23 PASAN, 0 CAEN**. **Es la cifra que prueba estabilidad, porque se mide donde la otra caia** |
 
-> **EL BARRIDO SE ARREGLO A SI MISMO A MITAD DE CAMINO, y se dice:** su primera version **no veia
-> la tabla del marcador del informe**, porque la fila se escribe `| **A** | **583** (17,2 %) |`,
-> sin ninguna de las palabras que buscaba. **Una tabla derivada que el barrido de tablas derivadas
-> no ve es exactamente la averia que el `9.10` nombra.** Se le anadio la vara de las filas de
-> tabla, y entonces aparecio.
-
-> **LO QUE EL BARRIDO NO TOCO, con su motivo y no callado:** las **trece** filas de checkpoints
-> anteriores del informe que citan `core` con **A 344**, y las salidas viejas de `docs/loop`.
-> **Cada una es la foto de su propio corte**, y reescribirlas fabricaria corridas que nunca
-> existieron. **Va como pendiente de doctrina.**
+**Ciclo de `Gate 0` entero:** comando 1 **exit 0**, `GATE 0: OK`, **20 `[OK]` y 0 `[FALLO]`**;
+comando 2, **71 etiquetas**; comando 3, verde, las dos copias con **0 divergentes**. **Suites:
+motor 25 de 25** (el fixture nuevo es el 25), **web 80 ficheros con 1.030 pasadas y 3 saltadas**,
+**`tsc` cero lineas**. Correccion declarada **dentro del plan sellado**, con la cifra vieja de
+22 de 23 escrita dentro.
 
 ---
 
-## 5. TAREA 2.1, LAS TRES LECTURAS DIRIGIDAS: **`LD-72`, `LD-73` y `LD-74`, las tres `D`**
+## 3. DECISION 2 APLICADA: **el instrumento de costuras, recalibrado a la letra. Y SIGUE SIN PASAR SU PUERTA**
 
-**Los cuatro nodos se imprimieron ENTEROS antes de decidir nada** y **se verifico contra
-`INTRA_DOMINIO_PARES.jsonl` que ninguno de los tres pares esta en la cola**, que es lo que los
-hace lectura dirigida y no par saltado. **`n` no se movio.**
+**Se aplico exactamente lo que la letra dice:** `MIN_BLOQUE` de 3 a **2** (senal para todo nodo de
+**cuatro** pasos o mas); por debajo, **`NO APLICA` EXPLICITO**, que es un objeto que **revienta si
+alguien lo compara con un umbral** en vez de un cero silencioso; **recalibracion declarada en el
+docstring con los ids y las cifras de hoy**, con el texto viejo entero al lado; y **la puerta de
+calibracion mudada a las senales**.
 
-> **UN GUARD PROPIO ATRAPO UN ERROR MIO ANTES DE ESCRIBIRLO:** iba a numerarlas `LD-66` a `LD-68`
-> **y esos numeros estaban tomados** (el lote del sales roadmap, en otro fichero que mi primer
-> barrido no miro). Medido despues sobre `docs/` entero, el maximo es **71**, **y el 71 esta
-> tomado por una decision escrita de NO acunarlo**. Se quema y se empieza en **72**.
+**LA PUERTA HEREDADA, PROBADA CONTRA EL CULPABLE.** `scripts/loop/vuelta32_costura_opd01.py`, el
+script que publico la cifra mala importando por debajo de la puerta vieja, **hoy MUERE al llamar a
+la senal**: `CalibracionRota: INSTRUMENTO MAL CALIBRADO: plan_mejora_procesos`
+(`SALIDA_V34_PUERTA_HEREDADA.txt`). **El pendiente de doctrina 3 queda cerrado en el codigo, no en
+una nota.**
 
-**LA RESPUESTA A `P.5`, y no es la que la operacion esperaba: NI UNA FAMILIA NI DOS.** Las tres
-`A` (386, 788, 526) forman **un CAMINO** y **las tres cuerdas largas son `D`**: **cero triangulos
-cerrados** y **DOS nodos puente**, que es el **segundo puente doble del archivo** por `P.10`. La
-salida que `P.10` nombra es **fundir solo el subconjunto cerrado y enlazar el resto**, y ese
-subconjunto es **el par del puesto 386**.
+**Y LO QUE LA RECALIBRACION NO ARREGLA, medido ANTES de aplicar nada y publicado sin maquillar**
+(`vuelta34_calibrar_costuras.py`, `SALIDA_V34_CALIBRACION.txt`):
 
-> **Y lo que eso confirma:** el ORDEN INTERNO escrito de `OP-D-02` **ya decia esto sin saberlo**.
-> Manda *fundir con `enfoque_mercado_voc`* y de los otros dos solo **tener delante**. **La lectura
-> no cambio el alcance: le dio la medicion que le faltaba.**
+| | resultado |
+|---|---|
+| **la puerta sigue ROJA**, ahora por UNO y no por dos | `plan_mejora_procesos` da **43,1** contra 44. **Se queda fuera por 0,9 puntos**, que es exactamente la distancia del falso negativo que en su dia bajo el umbral de 45 a 44 |
+| **el costo** | la cola pasaria de **122 a 1.497** nodos, el **42,3 por ciento** del catalogo |
+| **la causa del costo** | `MIN_BLOQUE` **no es un solo dial**: tambien es la K del promedio de las K mejores, asi que promediar DOS en vez de TRES sube el puntaje de todo el catalogo con el umbral quieto. **El p50 de la senal nueva es 45,8: el umbral quedo POR DEBAJO DE LA MEDIANA** |
+
+> **Con 24 por ciento esta casa ya adjudico que una baranda asi esta rota. Con 42,3 tampoco.** Que
+> umbral acompana a `MIN_BLOQUE = 2`, o contra que nodos se recalibra la puerta, **es doctrina de
+> medicion y NO la invento yo**: va como **pendiente de doctrina 1**.
+
+**RECOMPUTO DEL APOYO DEL MOVIMIENTO 2 DE `OP-D-01`, con el nodo impreso ENTERO delante**
+(`vuelta34_mov2.py`):
+
+| pata | vuelta 32 | medido hoy |
+|---|---|---|
+| senal 1, pareja | **51,2** contra 80 | **51,2. SE REPRODUCE AL DIGITO** y sigue sin disparar |
+| senal 2, bloque | **0,0** contra 44 | con la regla nueva, **45,8 con corte tras el 5. DISPARA** |
+| **lectura del nodo entero** | (no se publico) | **NO hay costura**: los pasos 6 y 7 son la continuacion, no un reinicio |
+
+**La pata instrumental queda EN SUSPENSO, no volteada**, y el motivo es una cifra: **45,8 es
+exactamente la mediana del catalogo con la regla nueva.** Y **la causa del `0,0` no era la que se
+dijo**: el reporte de la vuelta 33 la atribuyo al **rango vacio**, que vale para los nodos de
+cinco pasos pero **no para este, que tiene siete**; medida hoy corte por corte, **el
+emparejamiento monotono lograba UNO donde el promedio exigia TRES**. **Dos averias con el mismo
+sintoma.**
 
 ---
 
-## 6. TAREAS 2.2 y 2.3, EL SUPERVIVIENTE Y **LA PRIMERA FUSION DEL PLAN**
+## 4. **LA CAIDA DE REPORTE DE LA VUELTA 33 QUE DESBLOQUEO `OP-D-03`**
 
-**No hay GANADOR POR DERECHO** (0 de 3 pares A con victoria citable). **GANADOR POR ELEGIR por
-`P.8`, contenido primero, y el contenido habla en TRES sitios:** el campo `preservar` de la propia
-operacion declara la direccion; el procedimiento del objeto que da nombre al acto vive entero en
-`voz_del_cliente_voc`; y la verificacion escrita exige releer 724, 755 y 827 **contra el
-superviviente**, y los tres son pares contra el. **El cableado solo confirma**: 13 aristas contra
-4, y 12 nodos vivos que lo nombran contra 3.
+**El MOTIVO 2 de la parada decia:** *la nomina de esas tres no esta escrita en ninguna parte por
+su nombre: sale del instrumento*. **ESTA ESCRITA, en el mismo documento y ochenta lineas mas abajo
+del propio motivo**, desde la primera entrega del plan (`23f9ac32`, medido hoy con `git log -L`):
 
-**LA FUSION, con nueve guardas escritas para caer, todas verdes.** El superviviente pasa de
-**cinco pasos a SEIS** con el `preservar` **INTEGRO** (las tres piezas verificadas **literales**),
-tres condiciones, entregable y resumen absorbidos, alias y `merged_originals` puestos. **El
-absorbido queda deprecado con su TEXTO INTACTO y su fichero en pie.**
+```
+**Acto 2. SEIS nodos y TRES destejidos.** Costuras: `ab_testing_optimizacion`,
+`optimizacion_embudo_get_customers`, `split_testing_experimentos_ab`.
+```
+
+**Y la cita ya no depende de que alguien la recuerde:** `vuelta34_costuras_opd03.py` **aborta si
+esa linea no esta en el documento o si le falta uno de los tres nombres.**
+
+**MEDIDAS LAS TRES, DOS YA ESTABAN CONSUMIDAS POR LA FASE 01**, igual que le paso al paso 1 de
+`OP-D-02`, y cada una con su huella medida en el nodo de hoy:
+
+| costura declarada | frontera escrita | pasos hoy | huella del bloque | estado |
+|---|---|---:|---|---|
+| `optimizacion_embudo_get_customers` | 1 a 5 / 6 a 10 sobre 10 | **5** | *middle ring testing*: **ya no esta** | **CONSUMIDA** por `OP-F-04-WEI` |
+| `split_testing_experimentos_ab` | 1 a 5 / 6 a 9 sobre 9 | **5** | *cambio porcentual*: **ya no esta** | **CONSUMIDA** por `OP-F-04-RAC` |
+| `ab_testing_optimizacion` | 1 a 10 / 11 a 15 sobre 15 | **10** | *punto de saturacion*: **ya no esta** | **EN PIE** |
+
+**EL `preservar` DE LA OPERACION, COMPROBADO DONDE VIVE HOY y no dado por bueno:** la
+significancia del 95 por ciento en `split_testing`; el **cambio porcentual** y el **grupo de
+control de desempeno inicial similar** en `metodologia_evaluacion_entrenamiento_ventas`. **Los
+tres, en UN solo nodo vivo cada uno.**
+
+---
+
+## 5. EL DESTEJIDO: **`ab_testing_optimizacion`, de DIEZ pasos a CINCO**
+
+**Su frontera tampoco se adivina:** la escribio la tabla de fronteras de `OP-F-04-WEI` en
+`01_FUENTES.md` linea 947. **El criterio del superviviente es el de `OP-D-01`, citado y no
+inventado** (de cada grupo sobrevive el de indice mas bajo), y cae entero sobre el bloque **1 a
+5**, que es **la narracion del unico libro que el nodo declara como fuente**.
 
 | guarda | resultado |
 |---|---|
-| simulacion previa sobre copia en memoria (`P.7`) | **verde**, mas la del instrumento sellado de la casa |
-| guarda de texto sobre los DOS nodos | **15 de 15** calzan con su prefijo sellado |
-| cobertura exacta | **10 de 10** en pasos, **5 de 5** en condiciones |
-| el `preservar`, literal | **3 de 3** |
-| **caso positivo ANTES** | **10 PASAN, 13 CAEN** |
-| **caso positivo DESPUES** | **23 PASAN, 0 CAEN** |
-| conservacion (aparte) | **de 3 a 10 rastros vivos de 10** |
-| cero auto arista y cero duplicada, en TODO el grafo | **OK** |
-| el censo no se mueve | **3.853 antes y despues** |
+| las **siete** guardas del constructor, escritas para caer | **7 de 7 verdes** |
+| simulacion previa sobre copia en memoria (`P.7`) | **verde** |
+| guarda de texto sobre TODOS los pasos | **10 de 10** calzan con su prefijo sellado |
+| cero perdida, cobertura exacta | **10 de 10** origenes, sin huecos ni repetidos |
+| **caso positivo ANTES** | **0 PASAN, 7 CAEN** |
+| **caso positivo DESPUES** | **7 PASAN, 0 CAEN** |
+| conservacion (aparte) | **17 rastros vivos de 17** |
+| fuente / censo | **sin cambio** / **3.853 ficheros** |
 
-**`Gate 0` exit 0 con `GATE 0: OK`**, 3.853 compilados, universo **3.538 activos y 315
-deprecados**; etiquetas **71**; `plan_readiness` 3.853; sync verde; **motor 24 de 24**, **web 80
-ficheros con 1.030 pasadas y 3 saltadas**, **`tsc` cero lineas**.
+**Ciclo de `Gate 0` entero: exit 0, `GATE 0: OK`, 20 `[OK]` y 0 `[FALLO]`; motor 25 de 25, web
+1.030 pasadas, `tsc` cero lineas.** El **comando 4 NO se corre y se dice por que: el censo no
+cambia**, y su vara (`readiness.test.ts`) queda verde en la suite. **La tabla del mapa esta
+IMPRESA desde el plan sellado**, con el comando citado al lado.
 
-> **UNA GUARDA CAZO UNA DISCREPANCIA REAL Y POR ESO SE SABE QUE SIRVEN.** El plan esperaba **TRES**
-> redirecciones (las que da el instrumento de la casa sobre el grafo compilado) y el ejecutor,
-> contando sobre `dataset/nodos`, **encontro CUATRO y ABORTO SIN ESCRIBIR**. La cuarta es
-> `front_end_homework`, **que esta DEPRECADO**. Se adopta el criterio del instrumento sellado
-> (**solo se redirige lo vivo**) y **la cuarta va DECLARADA en el plan, no filtrada en silencio**.
-
-### 6.1 **UNA CAIDA MIA, MEDIDA AL CIERRE Y DEJADA CAYENDO A PROPOSITO**
-
-> **EL RECIPROCADO DE `Gate 0` DESHACE PARTE DE LA REDIRECCION DE UNA FUSION.** Medido al cerrar
-> (`SALIDA_V33_ENLACES.txt`): `enfoque_mercado_voc` **volvio a aparecer**, al final de la lista, en
-> los tres nodos vivos de los que lo habia quitado. **La causa es que el absorbido conserva sus
-> propias aristas** (que es lo que hace auditable la fusion) **y `Gate 0` las reciproca.**
->
-> **Corri el caso positivo OTRA VEZ, ya despues de `Gate 0`, y lo publico cayendo**
-> (`SALIDA_V33_OPD02_CASO_TRAS_GATE0.txt`): **22 PASAN, 1 CAE**, y el que cae es
-> *ningun nodo VIVO sigue nombrando a `enfoque_mercado_voc`* (**quedan 3**).
->
-> **NO LO ARREGLO Y NO AFLOJO LA PRUEBA, y digo las dos razones.** Volver a redirigir **lo
-> desharia el siguiente `Gate 0`**, asi que seria un verde que dura hasta la proxima corrida; y
-> aflojar la prueba seria **la segunda guarda que toco en el mismo dia**, que es justo de lo que
-> mas hay que desconfiar. **Dano medido: NINGUNO hoy**, porque el resolutor manda
-> `enfoque_mercado_voc` a `voz_del_cliente_voc` por su alias, y `Gate 0` y las tres suites estan
-> verdes. **Pero es una deuda que envejece y va como pendiente de doctrina 1.**
->
-> **Y hay que decir el orden en que paso, porque es la leccion:** el caso positivo se corrio
-> **antes** del ciclo de `Gate 0` y dio 23 de 23. **Si no lo llego a correr otra vez al cerrar, la
-> vuelta publica un verde que ya no era verdad.** Es el mismo renglon de la regla 1 del
-> `EJECUTOR.md`: **el estado al cierre se mide al cierre.**
+> **LO QUE LA SENAL RECALIBRADA DICE DE ESTE NODO, y mide al instrumento y no al destejido:** su
+> mejor corte es **tras el paso 8 con 49,5**, y **en el corte de la frontera escrita (tras el 5)
+> da 42,1, POR DEBAJO DE SU PROPIO UMBRAL**. El docstring presume de *acertar el corte exacto*;
+> **sobre esta costura no lo acierta**. Y dispara en **4 de los 6** nodos del acto, **incluidos
+> DOS que el plan declara SANOS**.
 
 ---
 
-## 7. TAREA 2.4, LOS TRES CONGELADOS, RELEIDOS Y VOLCADOS
+## 6. **EL VERIFICADOR DE MAPAS ENSENO UN HUECO PROPIO**, y salio porque se probo en rojo
 
-**Los tres estaban en `B` por el TOQUE UNICO del banco `9.4` y esa causa cayo.** Releidos contra
-los SEIS pasos de hoy del superviviente y volcados en el mismo acto: **724, 755 y 827, los tres a
-`D`**. **`voz_del_cliente_voc` sale entero del orden de la cirugia: no le queda ningun par
-congelado.**
+**Ensucie a proposito una celda de la tabla nueva** (meter el origen **4** en el grupo del paso 1)
+**y el instrumento siguio imprimiendo `0 discrepancias` y exit 0.** La causa esta en su `main()`:
+**la `vara 2` corre SOLO `if args.jsons`**, o sea solo si quien lo invoca se acuerda de pasar
+`--json`.
 
-**LA GUARDA DEL ENCARGO, COMPROBADA Y NO SUPUESTA:** si el **724** hubiera dado **`A`**,
-`voice_of_customer_estrategico` entraba al acto por `P.6` y **habia que PARAR**. **NO da `A`**, y
-el motivo esta medido: trae un protocolo de interrogacion y registro (*que los mantiene despiertos
-por la noche*, el *porque* de cada peticion, las *necesidades futuras*, los *ahas*) que el
-superviviente no tiene en ninguno de sus seis pasos.
+> **Y eso alcanza a un verde ya publicado:** el *2 tablas, 12 filas, 0 discrepancias* de la vuelta
+> 33 **se corrio sin `--json`**. **La cifra era cierta y la vara 1 corrio de verdad; lo que no
+> corrio fue la vara 2.**
 
-> **UNA LECCION DE METODO QUE LA VUELTA NO BUSCABA:** **antes de la fusion, el 724 estaba mucho
-> mas cerca de `A`**, porque el superviviente era solo la observacion de campo. **Fue la fusion la
-> que lo separo.** Es exactamente por lo que el `9.4` congela: **el mismo par da dos clases
-> distintas segun el dia en que se lea.**
-
-**EL RECOMPUTO SE VOLVIO A CORRER, y la FUSION si lo mueve aunque el volteo no:** el par 386
-**COLAPSA a auto arista** al resolver por alias, **el primer colapso de la campana**, y el
-instrumento lo nombra. Retrato **582 a 581**, nodos con A **852 a 851**, abiertas **254 a 253**
-nodos. **Las cuatro comprobaciones, OK.** Corregida la frase del cuerpo que decia que *ninguna
-fusion del plan se ha ejecutado*, **que era cierta el 13 ago**.
+**QUE SE ARREGLA: el silencio.** La salida **nombra las dos varas y dice cual corrio**, y sin
+`--json` escribe que *este resultado mide solo la vara 1*. **NO se le pone descubrimiento
+automatico de planes**, porque hay planes sellados **sin tabla en el documento** y eso daria un
+**rojo falso**, que es peor que un verde parcial anunciado. **Con los tres planes y la celda
+sucia: exit 1, 2 discrepancias. Restaurada: exit 0, 3 tablas, 17 filas, LAS DOS VARAS CORRIDAS.**
 
 ---
 
-## 8. TAREA 2.5, **PARADA EN `OP-D-03`**. Cero nodos tocados
+## 7. EL PASO 3 DEL ORDEN INTERNO: **738 y 1061 releidos y volcados**
 
-**`scripts/costuras_internas.py` SE DECLARA A SI MISMO MAL CALIBRADO Y SALE SIN ENTREGAR.** Su
-propio encabezado escribio la regla que ahora lo detiene. **La baranda funciono; lo que hay que
-decir es que llevaba tiempo funcionando y nadie lo habia corrido entero.**
+**Con la cifra esperada escrita ANTES de correr el instrumento y orden de parar si daba otra cosa.
+Dio exactamente lo escrito.**
 
-**LA CAUSA, ESTRUCTURAL Y MEDIDA:** la senal de bloque recorre `range(MIN_BLOQUE, n - MIN_BLOQUE +
-1)` con `MIN_BLOQUE = 3`. **Con CINCO pasos ese rango es VACIO y la senal devuelve `(0,0)`
-siempre**, diga lo que diga el texto. **Y los DOS nodos de calibracion tienen cinco pasos hoy.**
-Su docstring declara parejas de **60,0** y **54,7**; medidas hoy dan **47,1** y **54,3**.
+| puesto | antes | ahora | por que |
+|---:|:---:|:---:|---|
+| **738** | `B` | **`D`** | cayo el TOQUE UNICO: **los dos nodos estaban averiados y hoy ninguno tiene juntura**. Uno optimiza una pagina, el otro decide **si una funcionalidad merece existir** |
+| **1061** | `A` | **`D`** | **la prediccion de su propia razon acerto al pie de la letra**: el destejido dejo a la madre con el A/B en UNA linea y al otro como su procedimiento entero |
 
-> **CAIDA DE CIFRA PUBLICADA QUE ESTO ARRASTRA, declarada y NO arreglada por mi.** El **MOVIMIENTO
-> 2 de `OP-D-01`** (acta 32) concluye que `principio_calidad_mvp` *no tiene costura interna* y lo
-> sostiene en **pareja 51,2 contra 80** y **bloque 0,0 contra 44**. **La primera sigue en pie. LA
-> SEGUNDA NO MIDE LO QUE DICE MEDIR:** ese 0,0 **no es un nodo sin bloque, es una senal que hoy
-> devuelve 0,0 para todo**, incluidos los dos nodos que el instrumento sabe que son costura.
->
-> **Y hay que decir COMO paso:** `vuelta32_costura_opd01.py` **importa** las senales y los
-> umbrales, que es mas honesto que copiarlos, **y ademas pasa POR ENCIMA de la puerta de
-> calibracion**, que vive en el `main()`. **Una guarda que se saltea importando por debajo es un
-> test verde y mal.**
->
-> **LO QUE ESTA CAIDA NO DICE:** no dice que la conclusion sea falsa. Su otra pata es **textual** y
-> no depende del instrumento. **Lo que cae es la mitad instrumental de su apoyo.**
+**La razon vieja se copia del archivo POR MAQUINA en las dos** (1.128 y 1.241 caracteres) **y el
+script aborta si no queda literal dentro de la nueva.**
 
-**Los otros dos motivos:** no se puede saber **cuales son las TRES costuras** que el orden interno
-manda destejer (**ninguno de los seis nodos dispara ninguna senal hoy**, y ese 0,0 no se puede
-leer como *no hay bloque*); y el acto esta a **8 de 15** pares, que **esta vez no se puede
-resolver leyendo**, porque `P.5` manda leer **despues** del destejido y el destejido es lo que
-esta bloqueado.
+**EL BARRIDO DEL `9.10` EN EL MISMO ACTO**, con instrumento **sucesor declarado** (cambian las
+cifras del marcador viejo, no la maquinaria): **65 candidatos listados sin ocultar ninguno**.
+Corregidos `INTRA_DOMINIO_INFORME` (marcador con **tres** tachados, tasa por dominio, total de A),
+`PENDIENTES` (congelados **7 a 6**, cola **13 a 12**), `RECOMPUTO_3388` (**siete celdas** con su
+cifra vieja tachada dentro) y `02_DESTEJIDOS`.
+
+> **Y EL RECOMPUTO SE VOLVIO A CORRER ENTERO. Su cifra pide explicacion y se da:** los actos
+> **SUBEN de 334 a 335** y las cerradas **de 279 a 281 QUITANDO una `A`**. **No es
+> contradiccion:** el 1061 era la arista que cosia dos mitades, y al caer **la componente se parte
+> en dos, las dos CERRADAS**. Retrato 581 a **580**, nodos con A **quietos en 851**, abiertas 55 a
+> **54** y de 253 a **247** nodos. **Las cuatro comprobaciones, OK.**
 
 ---
 
-## 9. INSTRUMENTOS NUEVOS Y CORREGIDOS, todos con su motivo dentro
+## 8. LAS SIETE LECTURAS DIRIGIDAS `LD-75` a `LD-81`, y la respuesta de `P.5`
+
+**EL RELOJ DE `P.5` ES UNA GUARDA DE CODIGO, no una promesa:** el instrumento **aborta antes de
+imprimir nada** si el destejido no esta hecho. **Los seis nodos impresos ENTEROS antes de decidir,
+las aristas buscadas en los DOS sentidos, y ninguno de los siete pares esta en la cola: `n` no se
+movio.** El numero de partida (**75**) **se midio sobre `docs/` entero**, no se recordo.
+
+**Las siete `D`.** Una con el enlace ya puesto (`LD-75`), **tres con `ARISTA QUE FALTA`**
+(`LD-76`, `LD-79`, `LD-80`) declaradas para la fase 04, y **tres sin arista con su motivo
+escrito** (`LD-77`, `LD-78`, `LD-81`).
+
+> **LA RESPUESTA DE `P.5`: el acto NO es una familia de seis. Son DOS FAMILIAS CERRADAS**, una de
+> cuatro (`ab_testing_optimizacion`, `split_testing`, `test_ab_precio`,
+> `split_testing_experimentos_ab`) y una de dos (`funnel_get_customers_optimizacion`,
+> `optimizacion_embudo_get_customers`), **y el 1061 era el unico hilo que las cosia**. **Lo
+> confirma el instrumento de la casa, no mi dibujo.**
+
+**LO QUE ESTA VUELTA NO TOMA, y se dice:** el **paso 2** del orden interno (decidir sobre los
+seis, o sea la fusion). **El campo `superviviente` sigue en `null` a proposito.**
+
+---
+
+## 9. TAREA 1.4: el criterio de la `ARISTA QUE FALTA`, escrito UNA vez
+
+Va **bajo la tabla que junta a los tres** (724, 755, 827) y **no dentro de cada razon**: escribirlo
+tres veces seria escribirlo tres veces distintas. **La vara es el TAMANO de lo compartido: se
+declara donde es un BLOQUE que uno expande de una LINEA del otro; no se declara donde es LINEA
+contra LINEA y los dos tienen cableado propio denso.**
+
+> **Y UNA PRECISION QUE EL ENUNCIADO DEL ENCARGO NO CUBRE, dicha en vez de forzar el calce:** el
+> encargo lo escribio como *madre e hijo del `9.6.2`* contra *linea contra linea*. **Eso nombra
+> los dos extremos (el 724 y el 827) y deja fuera al 755**, que **no tiene madre e hijo** y sin
+> embargo **lleva arista**. **Madre e hijo es UN CASO de bloque compartido, el mas nitido, no la
+> condicion.**
+
+---
+
+## 10. INSTRUMENTOS NUEVOS Y CORREGIDOS, todos con su motivo dentro
 
 | instrumento | que es | el motivo |
 |---|---|---|
-| `vuelta33_tabla_mapa.py` | **NUEVO**, imprime la tabla desde el plan sellado | la cura de adelante de la regla del 15 ago: el verificador valida lo escrito, este lo **escribe desde la fuente** |
-| `vuelta33_corregir_16.py` | **NUEVO** | corrige los tres campos y **aborta si la invariante que protege al nodo no se cumple** |
-| `vuelta33_acto_opd02.py` | **SUCESOR** de `vuelta32_acto_opd02.py` | detector de ganador por **vocabulario con frontera de palabra**; publica **las dos corridas** y la razon entera |
-| `vuelta33_volcado_910.py` y `_b.py` | **NUEVOS** | copian la razon vieja **por maquina** y **abortan si no queda dentro**. **No escriben el archivo**: eso lo hace el instrumento de la casa |
-| `vuelta33_barrido_910.py` | **NUEVO** | el barrido del `9.10`, **sin tope y sin ocultar nada**, con su limite lexico declarado |
-| `vuelta33_ld_opd02.py` | **NUEVO**, solo lectura | imprime los cuatro nodos **enteros** y prueba que los tres pares **no estan en la cola** |
-| `vuelta33_superviviente.py` | **NUEVO** | escribe la eleccion con el `null` viejo dentro; **aborta si el campo ya no esta en `null`** |
-| `vuelta33_plan_opd02.py` | **NUEVO**, constructor | **lee del grafo** los textos, prefijos y fuentes; cuatro guardas, una de ellas que el `preservar` quede **literal** |
-| `vuelta33_fundir.py` | **NUEVO** | la maquinaria de fusion que no existia: **nueve guardas**, y **aborto sin escribir** si las redirecciones no son las del plan |
-| `vuelta33_caso_positivo.py` | **SUCESOR** de `vuelta32_caso_positivo.py` | anade **muerte del absorbido**, **alias y ficha** y **redirecciones**, que en un destejido no tenian sentido |
-| `verificar_mapas_destejido.py` | **CORREGIDO** | vara 2 generalizada a **N tablas contra N planes** (*toda tabla calza con algun plan y todo plan tiene su tabla*), y el **limite de la forma de fusion declarado en el codigo** |
-
-**Y el verificador se probo EN ROJO, dos veces, para que el verde signifique algo** (`P.14`): con
-la caida del acta 32 reintroducida **cae**, y con un motivo que cita un origen ajeno **cae**.
-**Verde vigente: 2 tablas, 12 filas, 0 discrepancias.**
+| `scripts/run_phase1.py` | **CORREGIDO**, funcion pura `aristas_a_simetrizar` | la decision 1, con las dos funciones leyendo la misma regla |
+| `engine/test_gate_deprecado_reciproco.py` | **NUEVO**, entra a la suite (24 a **25**) | guarda la regla **en rojo y en verde**, con la regla vieja dentro |
+| `scripts/costuras_internas.py` | **RECALIBRADO** | la decision 2 entera: `MIN_BLOQUE`, `NO APLICA` explicito, puerta en las senales |
+| `vuelta34_reciprocado.py` | **NUEVO**, solo lectura | el censo del cableado del deprecado **antes** de tocar codigo |
+| `vuelta34_redirigir.py` | **NUEVO** | rehace la redireccion con **seis guardas**; no toca texto de nodo |
+| `vuelta34_declarar_plan.py` | **NUEVO** | la correccion declarada dentro del plan sellado |
+| `vuelta34_calibrar_costuras.py` | **NUEVO**, solo lectura | mide el **costo** de la recalibracion antes de aplicarla |
+| `vuelta34_mov2.py` | **NUEVO**, solo lectura | el recomputo del apoyo del acta 32, **corte por corte**, con el nodo entero |
+| `vuelta34_leer_opd03.py` / `vuelta34_ld_opd03.py` | **NUEVOS**, solo lectura | los nodos enteros y el **reloj de `P.5`** como guarda |
+| `vuelta34_costuras_opd03.py` | **NUEVO**, solo lectura | **aborta** si la nomina de las tres no esta citable en el plan |
+| `vuelta34_plan_opd03.py` | **NUEVO**, constructor | **siete guardas**, los textos leidos del grafo |
+| `vuelta34_volcado_910.py` / `vuelta34_barrido_910.py` | **NUEVOS**, sucesores declarados | la razon vieja copiada por maquina; el barrido con las cifras de hoy |
+| `verificar_mapas_destejido.py` | **CORREGIDO** | **dice que varas corrio**; el verde parcial deja de ser mudo |
 
 ---
 
-## 10. CORRECCIONES DECLARADAS DE ESTA VUELTA
+## 11. CORRECCIONES DECLARADAS DE ESTA VUELTA
 
-1. **La celda del origen 16**, en los tres campos del plan sellado, con las particiones viejas
-   dentro y la tabla impresa.
-2. **El motivo 2 de la parada**, de *dos de tres* a **cero de tres**, con la palabra culpable
-   nombrada y las dos corridas publicadas.
-3. **El marcador y sus tablas derivadas**, dos veces, con el recomputo re corrido entero las dos.
-4. **La frase de `RECOMPUTO_3388.md`** que decia que ninguna fusion se habia ejecutado.
-5. **Mi propio caso positivo**: su prueba de redirecciones contaba deprecados y contradecia la
-   politica de la operacion. **Se ajusto y se volvio MAS estricta**, exigiendo que los deprecados
-   que quedan sean exactamente los declarados.
-6. **El motivo de la fila 6 de la tabla de fusion**, que citaba *un paso 6* ajeno en una tabla de
-   **dos fuentes**. **Se reescribio la prosa, no se aflojo el chequeo.**
-7. **La vara 2 del verificador**, que comparaba cada tabla contra cada plan.
-8. **Mi numeracion de las lecturas dirigidas**, atrapada por mi propio guard antes de escribirse.
-9. **TROPIEZOS DE HERRAMIENTA, sin efecto en ninguna cifra pero declarados:** un heredoc de bash
-   que murio por comillas (se rehizo con el escritor de ficheros), un `%d` sin argumento en la
-   coletilla del barrido (arreglado), y **dos invocaciones fallidas del medidor de costuras** por
-   no leer su firma antes de llamarlo.
+1. **La caida `6.1` de la vuelta 33**, cerrada con el instrumento cambiado y **23 de 23 estable**,
+   con la cifra vieja de 22 de 23 escrita dentro del plan sellado.
+2. **La cifra de bloque del movimiento 2 de `OP-D-01`** (0,0 contra 44), **recomputada**: hoy da
+   45,8 y **dispara**, y por eso la pata instrumental queda **en suspenso, no volteada**.
+3. **La causa que la vuelta 33 le atribuyo a ese 0,0**: no era el rango vacio, era el
+   emparejamiento monotono. **Dos averias con el mismo sintoma.**
+4. **El MOTIVO 2 de la parada de la vuelta 33**: la nomina de las tres costuras **si estaba
+   escrita**, y en el mismo documento.
+5. **El verde del verificador de mapas de la vuelta 33**: midio **una** de sus dos varas.
+6. **La cifra del recuadro *lo que queda medido y aprovechable*** de `OP-D-03` (siete `A` y un
+   congelado): hoy son **seis `A` y cero congelados**.
+7. **El marcador y sus tablas derivadas**, con el recomputo re corrido entero.
+8. **El enunciado del criterio de la arista que falta**, que nombraba dos extremos y dejaba fuera
+   el caso de en medio.
 
 ---
 
-## 11. PENDIENTES DE DOCTRINA
+## 12. PENDIENTES DE DOCTRINA
 
-1. **NUEVO Y ES EL MAS CARO: `Gate 0` deshace parte de la redireccion de una fusion.** El
-   absorbido conserva sus aristas y el reciprocado se las devuelve a los vivos. **Ninguna pagina
-   dice si un nodo deprecado debe conservar su cableado**, y de eso depende que la redireccion de
-   toda fusion futura sea estable. **Hoy no hace dano** (el alias resuelve) **pero envejece.**
-2. **NUEVO: `scripts/costuras_internas.py` esta MAL CALIBRADO y lo dice.** Su senal de bloque
-   devuelve 0,0 para todo. **Bloquea `OP-D-03` entero** y **deja sin la mitad de su apoyo al
-   movimiento 2 de `OP-D-01`**. No lo arreglo yo.
-3. **NUEVO: una guarda que se saltea importando por debajo.** `vuelta32_costura_opd01.py` importa
-   las senales y **no la puerta de calibracion**. **Ninguna pagina dice que quien importe un
-   instrumento tiene que importar tambien su baranda.**
-4. **NUEVO: hasta donde atras alcanza el barrido del `9.10`.** Trece filas de checkpoints cerrados
-   citan una cifra que hoy es otra, y ninguna pagina dice si se tocan.
-5. **NUEVO: un acto con puente doble y cero triangulos cerrados.** `P.10` da la salida (fundir el
-   subconjunto cerrado) **pero no dice que se hace con los puentes despues**: aqui quedaron dos
-   nodos en la nomina que no entran en la fusion y no tienen operacion propia.
-6. **CERRADO por la adjudicacion del fundador, y se dice para no repetirlo:** el carril de
-   recomputo de las clases releidas **era el `9.10`**, y funciono dos veces.
+1. **NUEVO Y ES EL MAS CARO: que umbral acompana a `MIN_BLOQUE = 2`.** La recalibracion aplicada a
+   la letra **deja la puerta roja por 0,9 puntos** y **llevaria la cola al 42,3 por ciento del
+   catalogo**. El propio instrumento tiene escrito que **una baranda que caza lo correcto esta
+   rota**. **No lo decido yo.**
+2. **NUEVO: contra que nodos se recalibra la puerta.** Los dos de la calibracion **fueron
+   destejidos por esta misma campana**, asi que la calibracion historica **ya no es reproducible
+   por construccion**. Ninguna pagina dice como se elige una calibracion nueva.
+3. **NUEVO: la cola de relectura tras un DESTEJIDO.** El **452** y el **1575** se emitieron contra
+   los **quince** pasos de `ab_testing_optimizacion` y hoy ese texto tiene **cinco**. Por el `9.4`
+   deberian releerse; **el orden interno de la operacion solo nombraba al 738 y al 1061**. Van
+   **declarados** aqui y **no releidos**, porque extender el alcance de un orden interno escrito
+   es del fundador.
+4. **NUEVO: un verificador que mide media vara si no le pasan un argumento.** Se arreglo el
+   silencio, **no el diseno**: sigue siendo el operador quien tiene que acordarse del `--json`.
+   Ninguna pagina dice que una guarda opcional sea guarda.
+5. **CERRADO EN EL CODIGO (era el 3 de la vuelta 33):** la guarda que se salteaba importando por
+   debajo. **La puerta vive ahora en las senales y el script culpable muere al llamarlas.**
+6. **SIGUE VIVO (era el 4 de la vuelta 33):** hasta donde atras alcanza el barrido del `9.10`. Las
+   filas de checkpoints cerrados **no se tocan** (adjudicado por el acta 33), y esta vuelta anadio
+   **tres tachados** a las mismas celdas: **una celda con tres tachados es legible hoy y sera
+   ilegible a los seis.**
 7. **SIGUE VIVO:** los nodos propios de esta pasada **escritos sin acentos**, con cura escrita en
    `05_SANEO.md` linea 660 y sin numero de operacion.
 
 ---
 
-## 12. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+## 13. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
 | # | que | por que es discutible |
 |---:|---|---|
-| **d1** | **Corregir `mapa_pasos` y `pruebas_repeticion`, que el encargo NO nombraba** | el encargo decia `grupos_pasos`. Toque dos campos mas. **Lo sostengo con que dejarlos habria puesto al verificador en verde encima de una contradiccion**, pero es alcance que me tome yo |
-| **d2** | **Tachar la CABECERA de la tabla vieja** | es lo que hace que el verificador deje de leerla. **Un auditor puede decir que eso es adaptar el texto al instrumento** en vez de al reves |
-| **d3** | **El 494 leido `C` y no `D`** | heredado de la vuelta 32 y ahora **escrito en el archivo**. Solo hay DOS ejemplares del `9.22` en 3.388 pares y este es el tercero |
-| **d4** | **`LD-72` leido `D` y no `A`** | **el mas fuerte de la tanda**. Tres de cinco pasos compartidos es mucho, y **el puesto 788 llamo `A` a un par de la misma familia** con lo propio parecido. Lo separo porque alli eran dos lineas y aqui es un procedimiento con otro entregable |
-| **d5** | **Declarar DOS nodos puente y no uno** | se sigue de las tres `D`, pero **las tres `D` son mias**. Si `LD-72` fuera `A`, el acto seria una familia y la fusion tendria que ser de cuatro |
-| **d6** | **`voz_del_cliente_voc` como superviviente** | el contenido tiene un argumento en contra que no escondo: **`enfoque_mercado_voc` tiene el ALCANCE mas ancho** (*todo el proceso*), y `P.8` cuenta el alcance del rol como contenido. Lo vencen los otros tres apoyos, pero es una lectura contraria seria |
-| **d7** | **Juntar la evaluacion preliminar de mercado y el analisis competitivo en UN paso** | son dos actos y los meti en uno **para caber en el estandar de 3 a 6**. La lectura contraria los separa y acepta siete pasos con la excepcion de clase |
-| **d8** | **Llamar `SALVAGUARDA` a *los mas exigentes*** | encaja en la firma (protege un paso de decision) **pero tambien se puede leer como `ALCANCE`**, y el propio banco dice que la clase nacio de dos ejemplares |
-| **d9** | **Que el `preservar` no cuente como perdida en la tabla de seis motivos** | escribi *NO ES PERDIDA* en dos filas. **La tabla de seis motivos es de perdidas**, y un auditor puede decir que entonces esas filas no van en esa tabla |
-| **d10** | **Dejar el caso positivo CAYENDO tras `Gate 0`** | es lo contrario de lo que suele pedirse. **Lo sostengo con que arreglarlo daria un verde que dura hasta la proxima corrida**, pero deja la vuelta cerrada con una prueba en rojo publicada |
-| **d11** | **No declarar `ARISTA QUE FALTA` en el 827 y si en el 724 y el 755** | apliqué tres criterios distintos a tres pares de la misma tanda. Lo sostengo con que alli el solape es **una linea contra una linea**, pero es el arreglo mas debil de las tres |
-| **d12** | **Redirigir solo lo vivo** | lo tome del instrumento sellado de la casa, **no de una pagina de doctrina**. Un auditor puede decir que un deprecado que apunta a un id que ya no es nadie es una arista rota |
-| **d13** | **PARAR en `OP-D-03` en vez de arreglar el instrumento de costuras** | el arreglo puede ser de una linea (`MIN_BLOQUE` o el rango). **No lo toco porque toca una cifra publicada de la vuelta 32** y la regla 5 manda traerlo. La lectura contraria es que un instrumento roto se arregla y punto |
-| **d14** | **Aplicar a `OP-D-03` la doctrina de lecturas dirigidas que el fundador adjudico para `OP-D-02`** | **no lo hice**, y por eso hay siete pares sin leer. Lo sostengo con `P.5` (se lee **despues** del destejido), pero **es una decision mia sobre el alcance de una adjudicacion** |
-| **d15** | **Tocar DOS guardas en el mismo dia** (el caso positivo y la vara 2 del verificador) | las dos las hice **mas estrictas** y las dos van declaradas, **pero es el patron exacto del que la vuelta 32 se marco a si misma en su `d15`** |
+| **d1** | **Leer *aristas que nacen en deprecados* como DECLARACION y no como origen topologico** | el fundador escribio *nacen en*, y **nacer en un nodo** se puede leer como *el nodo es el extremo `antes`*. **Lo sostengo con que la otra lectura no cierra el sintoma**, pero es una interpretacion mia de la letra |
+| **d2** | **Que el chequeo de simetria del `Gate` deje de exigir 110 aristas** | es una guarda que se AFLOJA, y esta casa desconfia de eso con razon. Lo sostengo con que **exigir lo que el paso 5 ya no hace es un rojo por construccion**, pero un auditor puede decir que la simetria del archivo tambien importa |
+| **d3** | **Aplicar `MIN_BLOQUE = 2` a los TRES sitios**, incluida la K del promedio | la letra dice *`MIN_BLOQUE` pasa a 2* y el constante vive en tres sitios. **Si la K se queda en 3, un nodo de cinco pasos NUNCA puntua**, asi que la senal para `n >= 4` no existiria. Es la unica lectura coherente que encontre, **pero es una lectura** |
+| **d4** | **Ejecutar el destejido con la puerta del instrumento ROJA** | la nomina viene del plan sellado y no del instrumento, y eso lo sostengo. **Pero un auditor puede decir que destejer con el medidor descalibrado es exactamente lo que la parada queria impedir** |
+| **d5** | **El grupo 1 del mapa: meter el paso 6 (la metrica) con el 1 y el 9** | la metrica **no es un elemento de la pagina**. Los junte porque el paso 1 ya nombra la metrica (*impulsan la activacion*) y el 6 la vuelve elegible. **La lectura contraria hace del 6 un paso propio y deja SEIS** |
+| **d6** | **Llamar `DESTINO` al motivo del grupo 5** | *documentar los resultados* encaja en *que hacer con el resultado* y entra en el paso final, **pero tambien se puede leer como `ALCANCE`**, y ademas el inciso trae dos cosas y no una |
+| **d7** | **El `738` leido `D` y no `A`** | **es el mas fuerte de la tanda.** El archivo llama `A` al 452 y al 374; **quien encadene esas dos dira que esta tambien lo es**. Lo separo por el objeto (la funcionalidad nueva no es un elemento de la pagina), pero es una cadena que no cierro |
+| **d8** | **El `1061` leido `D`** | lo sostengo con la prediccion literal de su propia razon vieja, **que es el apoyo mas fuerte que se puede tener**. Pero **la prediccion la escribio la misma casa**, y un auditor puede decir que cumplir tu propia profecia no es medir |
+| **d9** | **`LD-78` sin arista y `LD-76` con arista, desde el MISMO paso 5** | separo *el metodo de probar la variacion* de *otro objeto que usa el mismo metodo*. **Es el arreglo mas debil de la tanda** |
+| **d10** | **Declarar TRES aristas que faltan en una sola tanda** | tres enlaces nuevos hacia dos hijos de la misma madre **puede ser exactamente el inflado que el propio criterio dice evitar** |
+| **d11** | **Volcar el `738` y el `1061` en esta vuelta** | mueve una cifra publicada por la vuelta 33 el mismo dia. Lo sostengo con que **el orden interno de la operacion lo manda como su paso 3**, pero es la segunda vez en dos vueltas que el marcador se mueve |
+| **d12** | **Dejar el `452` y el `1575` SIN releer** | los dos se emitieron contra un texto que hoy tiene la mitad de pasos. **Lo sostengo con que el orden interno nombra dos y no cuatro**, pero es una decision mia sobre el alcance de un plan escrito |
+| **d13** | **Tocar TRES instrumentos en la misma vuelta** (`run_phase1`, `costuras_internas`, el verificador) | los tres por encargo o por hallazgo, y los tres declarados. **Pero es el patron que la vuelta 33 se marco a si misma en su `d15`, y aqui son tres y no dos** |
+| **d14** | **Publicar la medicion de contraste de costuras con las senales REIMPLEMENTADAS** | es literalmente *importar por debajo de la puerta*, que es lo que el pendiente 3 castigaba. **Lo sostengo con que medir la propia descalibracion es lo unico que no se puede hacer con la puerta puesta**, y va dicho en cada linea de salida |
+| **d15** | **Contar CINCO commits incluyendo la apertura** | la vuelta 33 recibio una caida de reporte por esta cuenta exacta. **Lo escribo como *cinco contando la apertura* a proposito**, pero si el auditor cuenta *commits de trabajo* dira que son cuatro |
 
 ---
 
-## 13. PREGUNTAS
+## 14. PREGUNTAS
 
-1. **Un nodo deprecado, conserva su cableado o no?** De esto depende que la redireccion de toda
-   fusion futura sea estable, y **hay una fusion ya ejecutada esperando la respuesta**.
-2. **Quien arregla `costuras_internas.py`, y con que autoridad?** Su senal de bloque esta muerta,
-   **bloquea `OP-D-03`** y **deja a medias el apoyo del movimiento 2 de `OP-D-01`**. El arreglo
-   parece pequeno; el efecto sobre cifras ya publicadas, no.
-3. **Los siete pares internos de `OP-D-03` se leen como dirigidas, igual que los tres de
-   `OP-D-02`?** Si la respuesta es si, hay que decir **si antes o despues del destejido**, porque
-   `P.5` dice despues y el destejido esta bloqueado por la pregunta 2.
-
----
-
-## 14. LA RACHA DE DICTADO, dicha por mi
-
-**El acta 32 conto una PARADA DE CREDITO por segunda tanda seguida con caida de cifra publicada
-fuera del marcado.** Esta vuelta **midio la apertura antes de la primera operacion y la commiteo
-antes de tocar nada** (`e1105299`); **midio el cierre al cerrar con el mismo instrumento**;
-**escribio la cifra esperada del marcador ANTES de correr el instrumento, las dos veces, con orden
-de parar si daba otra cosa**; **publico las dos corridas cada vez que dos instrumentos
-discreparon**; y **dejo una prueba propia cayendo en vez de maquillarla**. **Cuatro de mis
-correcciones de la seccion 10 las cazaron guardas que yo mismo escribi, y una me obligo a abortar
-sin escribir.** **No me corresponde decir si la racha sigue cortada: eso lo mide el auditor.**
+1. **Que umbral de bloque acompana a `MIN_BLOQUE = 2`?** Con 44, la puerta sigue roja por 0,9
+   puntos y la cola se va al 42,3 por ciento. **Sin esa decision, el instrumento de costuras no
+   vuelve a entregar.**
+2. **Contra que nodos se recalibra la puerta**, si los dos historicos ya no son reproducibles
+   porque esta campana los destejio?
+3. **El `452` y el `1575` se releen?** Se emitieron contra los quince pasos de
+   `ab_testing_optimizacion`. **Si la respuesta es si, el nucleo cerrado de cuatro puede dejar de
+   serlo antes de la fusion.**
