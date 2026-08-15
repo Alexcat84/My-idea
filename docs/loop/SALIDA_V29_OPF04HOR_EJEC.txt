@@ -1,0 +1,209 @@
+PLAN   : docs/loop/PLAN_V29_OPF04_HOR.json
+OPERACION: OP-F-04-HOR (menos decision_de_vender_startup, que va con TOQUE UNICO)
+MODO   : --ejecutar
+CORTES : 13
+==============================================================================
+
+------------------------------------------------------------------------------
+ORIGEN : actualizacion_posiciones_existentes   frontera los pasos [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] de 19
+  pasos totales 19, salen 15, quedan 4
+  fuente: "The Founder's Dilemmas | The Hard Thing About Hard Thing - Ben Horowitz"  ->  "The Founder's Dilemmas"
+    sale   5. Evaluar honestamente si el empleado leal puede crecer con el puesto o no
+    sale   6. Decidir con firmeza antes de iniciar la conversación (no entrar con decisión abierta)
+    sale   7. Anticipar las emociones de vergüenza y traición que sentirá el empleado
+    sale   8. Ofrecer alternativas de rol en otra área de la empresa si es posible
+    sale   9. Usar lenguaje decisivo y admitir la realidad de las limitaciones propias como líder
+    sale  10. Considerar acompañar la degradación con un aumento de compensación si aplica
+    sale  11. Comunicar desde el inicio que los roles cambiarán conforme la empresa crezca
+    sale  12. Evaluar a cada ejecutivo según su desempeño actual, no su reputación pasada
+    sale  13. Verificar si el CEO está ganando apalancamiento real delegando en el ejecutivo
+    sale  14. Detectar si el ejecutivo sigue haciendo su 'trabajo viejo' en lugar de adaptarse al nuevo rol
+    sale  15. Priorizar el bienestar del equipo operativo sobre la lealtad personal a un ejecutivo que ya no rinde
+    sale  16. Evalúa a tu equipo ejecutivo al menos una vez por trimestre en todas las dimensiones
+    sale  17. No separes la 'capacidad de escalar' del resto de la evaluación de desempeño actual
+    sale  18. Pregúntate: ¿existe alguien mejor que pueda contratar ahora mismo para este puesto en este momento e
+    sale  19. Evita hacer juicios sobre el desempeño futuro basados en teorías sin datos
+  DESTINO: MIEMBRO evaluacion_balanceada_de_ejecutivos
+  evaluacion_balanceada_de_ejecutivos: pasos 4 -> 19
+
+------------------------------------------------------------------------------
+ORIGEN : background_startup_vs_corporativo   frontera los pasos [5, 6, 7, 8, 9] de 9
+  pasos totales 9, salen 5, quedan 4
+  fuente: "The Founder's Dilemmas | The Hard Thing About Hard Thing - Ben Horowitz"  ->  "The Founder's Dilemmas"
+    sale   5. Evalúa si está acostumbrado a actuar por iniciativa propia o si espera que le asignen las tareas
+    sale   6. Pregúntale qué hará en su primer mes contigo y desconfía si solo habla de 'aprender'
+    sale   7. Verifica que tenga conciencia real de en qué se diferencia su rol anterior de este nuevo
+    sale   8. Pregúntale por qué quiere unirse a un negocio pequeño y desconfía si la única motivación es la parti
+    sale   9. Busca a alguien motivado por crear más que por administrar
+  DESTINO: MIEMBRO contratar_ambicion_correcta
+  contratar_ambicion_correcta: pasos 5 -> 10
+
+------------------------------------------------------------------------------
+ORIGEN : contratacion_experiencia_vs_potencial   frontera los pasos [5, 6, 7, 8, 9, 10] de 10
+  pasos totales 10, salen 6, quedan 4
+  fuente: "The Founder's Dilemmas - Wasserman, Noam | The Hard Thing About Hard Thing - Ben Horowitz"  ->  "The Founder's Dilemmas - Wasserman, Noam"
+    sale   5. Define la razón concreta y específica por la que necesitas experiencia senior, no una razón abstract
+    sale   6. Pregúntate: ¿este puesto necesita más conocimiento de cómo funciona tu negocio por dentro, o más con
+    sale   7. Si pesa más el conocimiento externo (por ejemplo, ventas a grandes empresas o desarrollo de marca), 
+    sale   8. Si pesa más el conocimiento interno (por ejemplo, ingeniería sobre un sistema complejo que ya constr
+    sale   9. Exige que quien entra con experiencia senior se adapte a tu cultura, sin dejar que imponga sin filtr
+    sale  10. Establece un estándar de desempeño alto y claro: investiga qué hacen los mejores del mundo en ese ti
+  DESTINO: MIEMBRO contratar_por_fortaleza
+  contratar_por_fortaleza: pasos 5 -> 11
+
+------------------------------------------------------------------------------
+ORIGEN : decision_de_salir_a_bolsa   frontera los pasos [6, 7, 8, 9, 10] de 10
+  pasos totales 10, salen 5, quedan 5
+  fuente: "The Founder's Dilemmas | The Hard Thing About Hard Things"  ->  "The Founder's Dilemmas"
+    sale   6. Evalúa con honestidad si tu negocio cumple lo mínimo para ser público: procesos ordenados, proyeccio
+    sale   7. Haz una lista clara de ventajas y desventajas de salir a bolsa según el momento actual del mercado
+    sale   8. Habla con personas que hayan sido directores generales de empresas públicas y pídeles su experiencia
+    sale   9. Prepara a tu equipo para la realidad de la valuación y lo que implica, por ejemplo si hay que dividi
+    sale  10. Ajusta el precio de la oferta según lo que valen negocios comparables en el mercado, aunque sea meno
+  DESTINO: NODO PROPIO estar_listo_para_ser_publica
+  arista obligada: decision_de_salir_a_bolsa.nodos_siguientes += estar_listo_para_ser_publica
+  arista reciproca: estar_listo_para_ser_publica.nodos_previos = ['decision_de_salir_a_bolsa']
+
+------------------------------------------------------------------------------
+ORIGEN : estrategia_de_innovacion_producto   frontera los pasos [4, 5, 6, 7] de 7
+  pasos totales 7, salen 4, quedan 3
+  fuente: 'Winning at New Products - Robert G. Cooper | The Hard Thing About Hard Things - Ben Horowitz'  ->  'Winning at New Products - Robert G. Cooper'
+    sale   4. Reconoce que lo que tus clientes actuales piden no siempre es el camino para ganar frente a la compe
+    sale   5. Decide reinventar el producto aunque eso contradiga lo que el feedback documentado, las opiniones re
+    sale   6. Dile con claridad a quien te ayuda con el producto que la visión pesa más que la lista de pendientes
+    sale   7. Asume tú la responsabilidad y el riesgo de esta decisión si hay resistencia.
+  DESTINO: MIEMBRO coraje_en_decisiones_dificiles
+  coraje_en_decisiones_dificiles: pasos 4 -> 8
+
+------------------------------------------------------------------------------
+ORIGEN : manejo_empleados_en_adquisicion   frontera los pasos [5, 6, 7, 8, 9] de 9
+  pasos totales 9, salen 5, quedan 4
+  fuente: 'Venture Deals - Brad Feld | The Hard Thing About Hard Things'  ->  'Venture Deals - Brad Feld'
+    sale   5. Antes de cualquier anuncio externo o público, informar primero y directamente a los empleados afecta
+    sale   6. Comunicar de forma honesta el estado real de la empresa, sin edulcorar la situación
+    sale   7. Dar a las personas la opción de irse con dignidad si deciden que no quieren continuar
+    sale   8. Emitir nuevas condiciones (ej. nuevas acciones, contratos) a quienes decidan quedarse como señal de 
+    sale   9. Priorizar la claridad interna sobre la conveniencia de relaciones públicas externas
+  DESTINO: MIEMBRO comunicacion_honesta_en_crisis_al_equipo
+  comunicacion_honesta_en_crisis_al_equipo: pasos 4 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : metas_vs_proposito   frontera los pasos [5, 6, 7, 8, 9] de 14
+  pasos totales 14, salen 5, quedan 9
+  fuente: 'Assembling Tomorrow: A Guide to Designing a Thriving Future | The Hard Thing About Hard Thing - Ben Horowitz | Never Lose a Customer Again - Joey Coleman'  ->  'Assembling Tomorrow: A Guide to Designing a Thriving Future | Never Lose a Customer Again - Joey Coleman'
+    sale   5. Antes de fijar una métrica, define primero el objetivo cualitativo real que persigues
+    sale   6. Pregúntate qué comportamientos generará esa métrica en el equipo antes de implementarla
+    sale   7. Complementa métricas cuantitativas con evaluaciones cualitativas (ej: satisfacción del cliente, opin
+    sale   8. Evita sacrificar el largo plazo (R&D, calidad) para cumplir números de corto plazo
+    sale   9. Aplica el concepto de 'white box': entiende cómo se producen los números, no solo el resultado final
+  DESTINO: MIEMBRO diseno_metricas_lideres_rezagados
+  diseno_metricas_lideres_rezagados: pasos 4 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : organizacion_adaptativa   frontera los pasos [5, 6, 7, 8] de 8
+  pasos totales 8, salen 4, quedan 4
+  fuente: 'The Lean Startup - Eric Ries | The Hard Thing About Hard Things - Ben Horowitz'  ->  'The Lean Startup - Eric Ries'
+    sale   5. Detecta el momento en que sumar personas te genera más trabajo del que ahorra; ahí toca ceder terren
+    sale   6. Agrega especialización solo cuando la curva de aprendizaje de la gente nueva se vuelve muy empinada
+    sale   7. Evalúa si tu negocio necesita una nueva forma de organizarse o procesos más formales
+    sale   8. No metas estructura demasiado pronto, porque te vuelves lento, ni demasiado tarde, porque colapsas b
+  DESTINO: MIEMBRO contratacion_acelerada_hipercrecimiento
+  contratacion_acelerada_hipercrecimiento: pasos 4 -> 8
+
+------------------------------------------------------------------------------
+ORIGEN : plan_mejora_procesos   frontera los pasos [6, 7, 8, 9, 10] de 15
+  pasos totales 15, salen 5, quedan 10
+  fuente: "A Project Manager's Book of Forms | The Hard Thing About Hard Things - Ben Horowitz | The Hard Thing About Hard Thing - Ben Horowitz"  ->  "A Project Manager's Book of Forms"
+    sale   6. Identificar los procesos ad hoc que cruzan fronteras organizacionales y son críticos (ej. contrataci
+    sale   7. Pedir a las personas que ya ejecutan el proceso informalmente que lo formalicen
+    sale   8. Definir el output esperado del proceso antes de diseñar los pasos
+    sale   9. Establecer métricas de éxito en cada etapa del proceso
+    sale  10. Asignar responsabilidad clara (individuo/equipo) por cada paso del proceso
+  DESTINO: NODO PROPIO formalizar_un_proceso_ad_hoc
+  arista obligada: plan_mejora_procesos.nodos_siguientes += formalizar_un_proceso_ad_hoc
+  arista reciproca: formalizar_un_proceso_ad_hoc.nodos_previos = ['plan_mejora_procesos']
+
+------------------------------------------------------------------------------
+ORIGEN : plan_mejora_procesos   frontera los pasos [11, 12, 13, 14, 15] de 15
+  pasos totales 15, salen 5, quedan 5
+  fuente: "A Project Manager's Book of Forms"  ->  "A Project Manager's Book of Forms"
+    sale  11. Define el resultado final que el proceso debe producir (ej: un empleado excelente en el proceso de c
+    sale  12. Diseña las etapas necesarias para llegar a ese resultado
+    sale  13. Establece métricas para cada etapa del proceso (¿estás obteniendo suficientes candidatos? ¿los corre
+    sale  14. Asigna responsabilidad clara a una organización o individuo por cada paso
+    sale  15. Aumenta la visibilidad del desempeño de cada responsable
+  DESTINO: MIEMBRO formalizar_un_proceso_ad_hoc
+  (destino creado por este mismo plan, corte anterior)
+  formalizar_un_proceso_ad_hoc: pasos 5 -> 10
+
+------------------------------------------------------------------------------
+ORIGEN : posicionamiento_de_empresa   frontera los pasos [6, 7, 8, 9] de 9
+  pasos totales 9, salen 4, quedan 5
+  fuente: "The Startup Owner's Manual - Steve Blank | The Hard Thing About Hard Things - Ben Horowitz"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   6. Redacta la historia completa de tu empresa (no un eslogan) respondiendo: por qué existe, por qué imp
+    sale   7. Usa como referencia cartas fundacionales como la de Jeff Bezos a los accionistas de Amazon en 1997.
+    sale   8. Verifica que las personas clave (empleados, inversionistas, prensa, clientes) puedan contar la misma
+    sale   9. Revisa si las quejas recurrentes ('no nos entienden', 'necesitamos mejor marketing') señalan que tu 
+  DESTINO: NODO PROPIO la_historia_de_la_empresa
+  arista obligada: posicionamiento_de_empresa.nodos_siguientes += la_historia_de_la_empresa
+  arista reciproca: la_historia_de_la_empresa.nodos_previos = ['posicionamiento_de_empresa']
+
+------------------------------------------------------------------------------
+ORIGEN : revisiones_regulares_desempeno_ceo   frontera los pasos [5, 6, 7, 8, 9, 10] de 10
+  pasos totales 10, salen 6, quedan 4
+  fuente: "The Founder's Dilemmas | The Hard Thing About Hard Things - Ben Horowitz"  ->  "The Founder's Dilemmas"
+    sale   5. Articular la 'historia' de la empresa: por qué existe, por qué unirse, por qué comprar, más allá de 
+    sale   6. Auditar la velocidad y calidad de las decisiones tomadas recientemente con información incompleta.
+    sale   7. Evaluar si el equipo ejecutivo y los procesos de contratación están alineados con los desafíos actua
+    sale   8. Preguntar a empleados individuales qué tan fácil es para ellos ejecutar su trabajo sin fricciones po
+    sale   9. Establecer objetivos calibrados a la oportunidad real de la empresa, no a benchmarks externos irrele
+    sale  10. Revisar resultados contra esos objetivos periódicamente.
+  DESTINO: MIEMBRO framework_excelencia_operacional
+  framework_excelencia_operacional: pasos 4 -> 10
+
+------------------------------------------------------------------------------
+ORIGEN : seleccion_ceo_fundador   frontera los pasos [5, 6, 7, 8, 9, 10, 11, 12] de 12
+  pasos totales 12, salen 8, quedan 4
+  fuente: "The Founder's Dilemmas | The Hard Thing About Hard Thing - Ben Horowitz"  ->  "The Founder's Dilemmas"
+    sale   5. Evalúa si tienes la visión de producto e innovación necesaria para seguir liderando
+    sale   6. Identifica tus brechas específicas de habilidades de CEO, como gestión organizacional, ventas o rela
+    sale   7. Busca mentores con experiencia real fundando y dirigiendo empresas, no solo asesores teóricos
+    sale   8. Si no quieres ser CEO, enfócate en encontrar al CEO profesional adecuado e integrarlo preservando tu
+    sale   9. Evalúa si tu equipo directivo actual tiene conocimiento profundo del producto y la tecnología
+    sale  10. Antes de aceptar inversión, negocia cláusulas que preserven tu control operativo
+    sale  11. Si contratas a un CEO externo, asegura una transición gradual en la que sigas involucrado en las dec
+    sale  12. Detecta señales tempranas de desalineación entre la dirección profesional y la visión de producto
+  DESTINO: MIEMBRO planificacion_sucesion_ceo
+  planificacion_sucesion_ceo: pasos 5 -> 13
+
+==============================================================================
+RESUMEN
+  cortes aplicados en memoria: 13
+  nodos propios nuevos       : 3 ['estar_listo_para_ser_publica', 'formalizar_un_proceso_ad_hoc', 'la_historia_de_la_empresa']
+  ficheros que se tocarian   : 24
+
+ESCRITO: 24 fichero(s) en dataset/nodos/.
+  - actualizacion_posiciones_existentes
+  - background_startup_vs_corporativo
+  - comunicacion_honesta_en_crisis_al_equipo
+  - contratacion_acelerada_hipercrecimiento
+  - contratacion_experiencia_vs_potencial
+  - contratar_ambicion_correcta
+  - contratar_por_fortaleza
+  - coraje_en_decisiones_dificiles
+  - decision_de_salir_a_bolsa
+  - diseno_metricas_lideres_rezagados
+  - estar_listo_para_ser_publica  [NUEVO]
+  - estrategia_de_innovacion_producto
+  - evaluacion_balanceada_de_ejecutivos
+  - formalizar_un_proceso_ad_hoc  [NUEVO]
+  - framework_excelencia_operacional
+  - la_historia_de_la_empresa  [NUEVO]
+  - manejo_empleados_en_adquisicion
+  - metas_vs_proposito
+  - organizacion_adaptativa
+  - plan_mejora_procesos
+  - planificacion_sucesion_ceo
+  - posicionamiento_de_empresa
+  - revisiones_regulares_desempeno_ceo
+  - seleccion_ceo_fundador

@@ -1,0 +1,88 @@
+CASO POSITIVO: OP-F-04-HOR (menos decision_de_vender_startup, que va con TOQUE UNICO)
+==============================================================================
+
+actualizacion_posiciones_existentes -> evaluacion_balanceada_de_ejecutivos   huella 'apalancamiento real'
+  [CAE ] actualizacion_posiciones_existentes ya no lleva la huella
+  [CAE ] evaluacion_balanceada_de_ejecutivos si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['actualizacion_posiciones_existentes']
+
+background_startup_vs_corporativo -> contratar_ambicion_correcta   huella 'primer mes contigo'
+  [CAE ] background_startup_vs_corporativo ya no lleva la huella
+  [CAE ] contratar_ambicion_correcta si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['background_startup_vs_corporativo']
+
+contratacion_experiencia_vs_potencial -> contratar_por_fortaleza   huella 'sistema complejo que ya construiste'
+  [CAE ] contratacion_experiencia_vs_potencial ya no lleva la huella
+  [CAE ] contratar_por_fortaleza si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['contratacion_experiencia_vs_potencial']
+
+decision_de_salir_a_bolsa -> estar_listo_para_ser_publica   huella 'rondas privadas anteriores'
+  [CAE ] decision_de_salir_a_bolsa ya no lleva la huella
+  [CAE ] estar_listo_para_ser_publica si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['decision_de_salir_a_bolsa']
+
+estrategia_de_innovacion_producto -> coraje_en_decisiones_dificiles   huella 'responsabilidad y el riesgo de esta decisi'
+  [CAE ] estrategia_de_innovacion_producto ya no lleva la huella
+  [CAE ] coraje_en_decisiones_dificiles si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['estrategia_de_innovacion_producto']
+
+manejo_empleados_en_adquisicion -> comunicacion_honesta_en_crisis_al_equipo   huella 'irse con dignidad'
+  [CAE ] manejo_empleados_en_adquisicion ya no lleva la huella
+  [CAE ] comunicacion_honesta_en_crisis_al_equipo si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['manejo_empleados_en_adquisicion']
+
+metas_vs_proposito -> diseno_metricas_lideres_rezagados   huella 'white box'
+  [CAE ] metas_vs_proposito ya no lleva la huella
+  [CAE ] diseno_metricas_lideres_rezagados si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['metas_vs_proposito']
+
+organizacion_adaptativa -> contratacion_acelerada_hipercrecimiento   huella 'curva de aprendizaje de la gente nueva'
+  [CAE ] organizacion_adaptativa ya no lleva la huella
+  [CAE ] contratacion_acelerada_hipercrecimiento si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['organizacion_adaptativa']
+
+plan_mejora_procesos -> formalizar_un_proceso_ad_hoc   huella 'formalicen'
+  [CAE ] plan_mejora_procesos ya no lleva la huella
+  [CAE ] formalizar_un_proceso_ad_hoc si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['plan_mejora_procesos']
+
+plan_mejora_procesos -> formalizar_un_proceso_ad_hoc   huella 'visibilidad del desempe'
+  [CAE ] plan_mejora_procesos ya no lleva la huella
+  [CAE ] formalizar_un_proceso_ad_hoc si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['plan_mejora_procesos']
+
+posicionamiento_de_empresa -> la_historia_de_la_empresa   huella 'Bezos'
+  [CAE ] posicionamiento_de_empresa ya no lleva la huella
+  [CAE ] la_historia_de_la_empresa si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['posicionamiento_de_empresa']
+
+revisiones_regulares_desempeno_ceo -> framework_excelencia_operacional   huella 'fricciones pol'
+  [CAE ] revisiones_regulares_desempeno_ceo ya no lleva la huella
+  [CAE ] framework_excelencia_operacional si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['revisiones_regulares_desempeno_ceo']
+
+seleccion_ceo_fundador -> planificacion_sucesion_ceo   huella 'preserven tu control operativo'
+  [CAE ] seleccion_ceo_fundador ya no lleva la huella
+  [CAE ] planificacion_sucesion_ceo si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['seleccion_ceo_fundador']
+
+==============================================================================
+RESULTADO: 13 PASAN, 26 CAEN
+HAY PRUEBAS QUE CAEN

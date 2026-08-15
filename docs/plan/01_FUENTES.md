@@ -910,6 +910,63 @@ censo; 71 etiquetas sin encoger; suites verdes.
 > texto no alcanza para ejecutarse sin decidir lo que ninguna pagina escribio.** Van al
 > reporte de la vuelta 29 como **PARADA**, con la lectura de hoy escrita entera.
 
+### `OP-F-04-HOR` EJECUTADA EN CASI TODO: DOCE NODOS EN TRECE CORTES (14 ago 2026, vuelta 29)
+
+**DESBLOQUEADA POR CITA, y la cita es del acta de la vuelta 28 del auditor (adjudicacion 3),
+que leyo el REGISTRO del fundador en la nota de la propia `OP-F-04-HOR` de
+`OPERACIONES.jsonl`.** El parrafo de la vuelta 28 que decia que *va a familia propia, o sea
+nodo propio, y eso choca con la tercera hilada del muro* **se queda entero: era la lectura de
+ese dia**. Lo que la adjudicacion establecio es que *familia propia* es **la familia del
+propio libro**, en paralelo exacto con *se reune con SPIN*, *con el Bullseye* y *con los 100
+dias*, **asi que HOR se ejecuta como WEI**: miembro por `P.18`, y nodo propio solo donde
+ninguno coincide.
+
+**LA NOMINA DE LA FAMILIA, MEDIDA HOY y no copiada: 102 nodos vivos declaran el trozo *Hard
+Thing* y 88 lo declaran como fuente UNICA** (`docs/loop/SALIDA_V29_FAMILIA_HOROWITZ.txt`).
+**Las fronteras NO se rehicieron:** son las publicadas en la tabla `LA NOMINA DE LOS 14 DE
+HOROWITZ` de este mismo archivo, de la vuelta 20.
+
+| origen | frontera | destino por `P.18` |
+|---|---|---|
+| `actualizacion_posiciones_existentes` | 5 a 19 | miembro `evaluacion_balanceada_de_ejecutivos` |
+| `background_startup_vs_corporativo` | 5 a 9 | miembro `contratar_ambicion_correcta` |
+| `contratacion_experiencia_vs_potencial` | 5 a 10 | miembro `contratar_por_fortaleza` |
+| `decision_de_salir_a_bolsa` | 6 a 10 | **nodo propio** `estar_listo_para_ser_publica` |
+| `estrategia_de_innovacion_producto` | 4 a 7 | miembro `coraje_en_decisiones_dificiles` |
+| `manejo_empleados_en_adquisicion` | 5 a 9 | miembro `comunicacion_honesta_en_crisis_al_equipo` |
+| `metas_vs_proposito` | 5 a 9 | miembro `diseno_metricas_lideres_rezagados` |
+| `organizacion_adaptativa` | 5 a 8 | miembro `contratacion_acelerada_hipercrecimiento` |
+| `plan_mejora_procesos` | **6 a 10 y 11 a 15** | **nodo propio** `formalizar_un_proceso_ad_hoc`, **los dos bloques a UNO** |
+| `posicionamiento_de_empresa` | 6 a 9 | **nodo propio** `la_historia_de_la_empresa` |
+| `revisiones_regulares_desempeno_ceo` | 5 a 10 | miembro `framework_excelencia_operacional` |
+| `seleccion_ceo_fundador` | 5 a 12 | miembro `planificacion_sucesion_ceo` |
+
+**LOS TRES NODOS PROPIOS, con la ausencia que cada uno tapa, medida sobre los 102 de hoy:**
+la familia **no tiene ningun miembro sobre la salida a bolsa** (el unico nodo del catalogo con
+ese objeto es el propio donante, que sale de la familia al quedarse con Wasserman); **no tiene
+ninguno que FORMALICE un proceso ad hoc que cruza areas** (`hr_calidad_gestion` y
+`hr_como_control_de_calidad_gerencial` miden el ciclo de vida del EMPLEADO,
+`proceso_de_promocion_disciplinado` es el de ascensos, y `framework_excelencia_operacional`
+AUDITA procesos que ya existen); y **no tiene ninguno cuyo objeto sea la historia completa de
+la empresa** (`atributos_liderazgo_ceo` trata la narrativa de vision como uno de tres
+atributos del lider, y su entregable es un plan personal).
+
+> **`plan_mejora_procesos` ES EL SEGUNDO EJEMPLAR MEDIDO DE LA AVERIA DE `OP-S-11`, y por eso
+> sus dos bloques van a UN nodo:** declara a Horowitz **dos veces con dos grafias** (*The Hard
+> Thing About Hard Things* y *The Hard Thing About Hard Thing*), y sus dos bloques dicen lo
+> mismo cuatro veces de cinco: definir el resultado final, disenar las etapas, metrica por
+> etapa y responsable por paso. **Adjudicacion 3 del acta de la vuelta 27: se funden en UNO.**
+
+**GUARDAS:** simulacion previa verde (13 cortes, 24 ficheros); conteo, texto, fuente, destino
+y huella; **caso positivo antes 26 CAEN de 39, despues 39 de 39 PASAN**. Ciclo de `GATE 0`
+entero, los cuatro comandos, el cuarto por censo; **71 etiquetas sin encoger**; suites verdes
+(motor 24 de 24, web 80 ficheros con 1.030 pasadas y 3 saltadas, `tsc` limpio).
+
+> **LO QUE DE `OP-F-04-HOR` NO SE EJECUTO, y es UNO: `decision_de_vender_startup`.** Es uno de
+> **LOS TRES CASOS QUE NO SON UN SIMPLE APENDICE** de este mismo archivo, va con **TOQUE
+> UNICO**, y su material esta repetido **TRES veces** (11 a 15, 16 a 20 y 21 a 25). **Va al
+> reporte de la vuelta 29 como PARADA, junto con los dos de WEI.**
+
 ### LA CONSECUENCIA DE ORDEN, y toca a la fase 02
 
 **SEIS de los 43 ya tienen operacion en otra fase**, y por *fuente primero* esta
