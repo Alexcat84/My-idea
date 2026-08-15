@@ -5,5 +5,21 @@
   "alias_redirects": [],
   "alias_unresolved_removed": [],
   "final_cleanup_removed": [],
-  "symmetrize_added": []
+  "symmetrize_added": [
+    {
+      "node": "customer_journey_mapping",
+      "key": "nodos_siguientes",
+      "added": "silla_vacia_del_cliente_en_decisiones"
+    },
+    {
+      "node": "investigar_datos_cliente",
+      "key": "nodos_siguientes",
+      "added": "observar_al_cliente_en_su_contexto"
+    },
+    {
+      "node": "personalizar_interacciones_cliente",
+      "key": "nodos_previos",
+      "added": "observar_al_cliente_en_su_contexto"
+    }
+  ]
 }

@@ -1,0 +1,25 @@
+﻿DUPLICADAS TRAS RESOLVER, en la version de HEAD (antes del corte de hoy)
+==============================================================================
+  autoservicio_y_autosanacion_del_producto   NO EXISTIA EN HEAD (nodo propio de hoy)
+  calibracion_intensidad_celebracion         nodos_siguientes  duplicadas 1  auto 0
+       fase_affirm_buyers_remorse  <-  ['fase_affirm_reduccion_incertidumbre', 'fase_affirm_buyers_remorse']
+  estrategia_crecimiento_clientes            nodos_previos     duplicadas 3  auto 0
+       get_customers_funnel_webmobile  <-  ['customer_acquisition_activation_web', 'get_customers_funnel_webmobile']
+       customer_retention_tactics  <-  ['customer_retention_strategy', 'customer_retention_tactics']
+       embudo_get_keep_grow  <-  ['embudo_get_keep_grow', 'framework_get_keep_grow']
+  fase_acclimate_mapa_de_proceso             nodos_previos     duplicadas 1  auto 0
+       shock_and_awe_kit_bienvenida  <-  ['kit_shock_and_awe_bienvenida', 'shock_and_awe_kit_bienvenida']
+  fase_admit_celebracion                     nodos_siguientes  duplicadas 1  auto 0
+       fase_affirm_buyers_remorse  <-  ['fase_affirm', 'fase_affirm_buyers_remorse']
+  incentivos_internos_alineados_a_retencion  NO EXISTIA EN HEAD (nodo propio de hoy)
+  investigar_datos_cliente                   nodos_previos     duplicadas 1  auto 0
+       tipos_de_clientes  <-  ['customer_types_mapping', 'tipos_de_clientes']
+  observar_al_cliente_en_su_contexto         NO EXISTIA EN HEAD (nodo propio de hoy)
+  personalizacion_guiada_por_el_cliente      NO EXISTIA EN HEAD (nodo propio de hoy)
+  relaciones_con_clientes                    nodos_previos     duplicadas 1  auto 0
+       decision_pivotar_o_proceder  <-  ['revalidacion_modelo_negocio', 'decision_pivotar_o_proceder']
+  silla_vacia_del_cliente_en_decisiones      NO EXISTIA EN HEAD (nodo propio de hoy)
+  voz_del_cliente_voc                        nodos_siguientes  duplicadas 1  auto 0
+       desarrollo_en_espiral  <-  ['spiral_development', 'desarrollo_en_espiral']
+==============================================================================
+TOTAL DUPLICADAS EN HEAD, sobre los nodos tocados: 9

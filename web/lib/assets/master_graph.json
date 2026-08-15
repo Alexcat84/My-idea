@@ -1,6 +1,6 @@
 {
   "version": "0.2.0",
-  "total_nodos": 3848,
+  "total_nodos": 3853,
   "nodos": {
     "6s_lugar_trabajo": {
       "node_id": "6s_lugar_trabajo",
@@ -7426,6 +7426,30 @@
       ],
       "etiqueta_arbol": "Define tus Propias Reglas de Seguridad"
     },
+    "autoservicio_y_autosanacion_del_producto": {
+      "node_id": "autoservicio_y_autosanacion_del_producto",
+      "fase_proyecto": "ejecucion",
+      "dominio": "core",
+      "titulo_concepto": "Autoservicio y Autosanacion del Producto",
+      "fuente": "Never Lose a Customer Again - Joey Coleman",
+      "resumen_teorico": "Cada llamada de soporte es un sintoma: en algun punto tu producto le pidio a tu cliente algo que no supo resolver solo. La cura no empieza por reforzar el soporte sino por mirar que puntos de friccion generan esas llamadas, y despues por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalia y le avisa el primero, con lo que ya esta haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanacion, para que el problema se resuelva sin que nadie tenga que intervenir. Y todo esto se mide con una sola cifra honesta: que porcentaje de los problemas se resuelve sin intervencion humana.",
+      "pasos_accionables": [
+        "Revisar los puntos de fricción del producto que generan llamadas de soporte",
+        "Diseñar mecanismos de detección proactiva de errores con notificación automática al cliente",
+        "Desarrollar herramientas de autoservicio y autosanación dentro del producto",
+        "Medir el porcentaje de problemas resueltos sin intervención humana"
+      ],
+      "entregable_esperado": "El inventario de las fricciones de tu producto que generan llamadas de soporte, los mecanismos de deteccion proactiva con aviso automatico a tu cliente, las herramientas de autoservicio construidas, y el porcentaje de problemas resueltos sin intervencion humana",
+      "nodos_previos": [
+        "sistema_inmune_producto"
+      ],
+      "nodos_siguientes": [],
+      "condiciones_activacion": [
+        "Cuando el volumen de soporte crece al mismo ritmo que los clientes y no hay forma de contratar a esa velocidad",
+        "Cuando tu cliente se entera de los fallos de tu producto antes que tu"
+      ],
+      "etiqueta_arbol": "Resuelve sin que te Llamen"
+    },
     "background_startup_vs_corporativo": {
       "node_id": "background_startup_vs_corporativo",
       "fase_proyecto": "ejecucion",
@@ -8192,26 +8216,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "El Mapa de Experiencia del Cliente (Blueprint)",
-      "fuente": "Change by Design | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "Change by Design",
       "resumen_teorico": "Un mapa de experiencia (blueprint) es el documento donde trazas el recorrido emocional de tu cliente a través del tiempo, identificando los puntos más significativos de la interacción (los 'momentos de verdad') para convertirlos en oportunidades de diseño. A diferencia de un manual operativo, este mapa conecta la experiencia de tu cliente con la oportunidad de negocio y te revela ideas que a veces contradicen lo que suponías al principio (como el momento de exhalar que descubrió Marriott, en lugar del check-in).",
       "pasos_accionables": [
         "Acompaña a tu cliente en todo su recorrido (shadowing) sin limitarte al punto de contacto que asumiste como el más importante",
         "Mapea cada etapa de la experiencia identificando los momentos emocionales clave",
         "Distingue entre los puntos que solo evitan una mala experiencia y los que generan una experiencia memorable",
-        "Documenta el mapa de experiencia con la estrategia general y también con el detalle operativo, al mismo tiempo",
-        "Documenta el proceso actual de atención postventa, paso a paso, desde el primer contacto hasta el seguimiento final",
-        "Identifica los momentos de mayor ansiedad o incertidumbre de tu cliente y diseña acciones proactivas para esos momentos",
-        "Establece seguimientos programados (por ejemplo a las 2 horas, a las 24 horas, a los 7 días) sin esperar a que tu cliente se queje",
-        "Simplifica los procesos administrativos (formularios, papeleo) con herramientas digitales para reducir la fricción",
-        "Identifica el momento exacto en que tu prospecto se convierte oficialmente en cliente (el pago, la firma del contrato, etc.)",
-        "Diseña un ritual o una celebración específica para ese momento (un anuncio público, mencionarlo por nombre, entregarle algo simbólico)",
-        "Crea un recuerdo físico o digital que tu cliente pueda conservar de la decisión que tomó",
-        "Alinea la intensidad emocional de la celebración con la naturaleza de tu producto o servicio (evita sobreactuar si es algo de bajo involucramiento)",
-        "Involucra a las personas que trabajan contigo en la celebración para reforzar el mensaje de bienvenida",
-        "Haz una lista de todos los puntos de contacto que atraviesa un cliente nuevo entre la compra y el día 100",
-        "Rediseña el traspaso (handoff) entre quien vende y quien da soporte, para que no se pierda información ni calidez",
-        "Establece hitos de comunicación proactiva (bienvenida, chequeos de progreso, celebración de logros tempranos) distribuidos en ese periodo",
-        "Asigna un responsable claro para cada punto de contacto y mide qué tan consistente es la ejecución"
+        "Documenta el mapa de experiencia con la estrategia general y también con el detalle operativo, al mismo tiempo"
       ],
       "entregable_esperado": "Un mapa de experiencia (blueprint) que recorra el camino completo de tu cliente con los momentos clave identificados",
       "nodos_previos": [
@@ -10136,7 +10147,8 @@
       "pasos_accionables": [
         "Evaluar el nivel de involucramiento emocional típico del cliente al comprar el producto/servicio",
         "Diseñar una celebración proporcional (ni insuficiente ni excesiva) para esa categoría de producto",
-        "Reservar elementos sorpresa adicionales para fases posteriores del ciclo de vida del cliente (Affirm, Adopt, etc.)"
+        "Reservar elementos sorpresa adicionales para fases posteriores del ciclo de vida del cliente (Affirm, Adopt, etc.)",
+        "Alinea la intensidad emocional de la celebración con la naturaleza de tu producto o servicio (evita sobreactuar si es algo de bajo involucramiento)"
       ],
       "entregable_esperado": "Una guía de 'niveles de celebración' según tipo de producto/servicio y ticket promedio.",
       "nodos_previos": [
@@ -14886,17 +14898,13 @@
       "fase_proyecto": "ideacion",
       "dominio": "core",
       "titulo_concepto": "Deja que tu cliente diseñe el producto (co-creación digital)",
-      "fuente": "Winning at New Products - Robert G. Cooper | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "Winning at New Products - Robert G. Cooper",
       "resumen_teorico": "Con herramientas digitales e internet puedes invitar a tus clientes o usuarios a diseñar directamente el producto, usando plataformas simples (por ejemplo, LEGO Digital Designer). Los estudios muestran que los consumidores pueden llegar a ser hasta 2.4 veces más eficientes que los propios productores generando innovaciones significativas, sobre todo en las primeras etapas de una categoría.",
       "pasos_accionables": [
         "Evalúa si tu producto es apto para esto: tu cliente debe poder entender la tecnología que hay detrás",
         "Desarrolla una herramienta digital simple de diseño (tipo CAD) que le permita a tus usuarios crear sus propios diseños",
         "Crea una galería o comunidad donde tus usuarios compartan lo que crearon y reciban comentarios de otros",
-        "Revisa y analiza los diseños que te envían: ahí puedes encontrar ideas para nuevos productos",
-        "Identifica en qué partes de tu producto o servicio tu cliente puede tomar decisiones de personalización",
-        "Diseña un proceso guiado y sencillo para que co-crear no lo abrume",
-        "Entrégale algo tangible o simbólico que represente la decisión que tomó",
-        "Cuando tenga sentido, muestra de forma visible lo que tu cliente logró o decidió"
+        "Revisa y analiza los diseños que te envían: ahí puedes encontrar ideas para nuevos productos"
       ],
       "entregable_esperado": "Una plataforma de co-creación activa, con un repositorio de diseños hechos por tus usuarios, lista para que evalúes cuáles pueden convertirse en nuevas ideas de producto.",
       "nodos_previos": [
@@ -14905,7 +14913,8 @@
         "biblioteca_experimentos_validacion"
       ],
       "nodos_siguientes": [
-        "design_thinking_proceso"
+        "design_thinking_proceso",
+        "personalizacion_guiada_por_el_cliente"
       ],
       "condiciones_activacion": [
         "Tu producto no requiere conocimiento técnico o científico avanzado (por ejemplo, no aplica si vendes algo farmacéutico o aeroespacial)",
@@ -17060,7 +17069,10 @@
         "Mapear el recorrido del cliente e identificar momentos de alta incertidumbre o ansiedad.",
         "Diseñar mensajes automáticos o manuales que confirmen que todo va según lo planeado en esos momentos críticos.",
         "Implementar tecnología (apps, SMS, notificaciones) que permita comunicación en tiempo real.",
-        "Medir el impacto de estas comunicaciones en la satisfacción del cliente."
+        "Medir el impacto de estas comunicaciones en la satisfacción del cliente.",
+        "Documenta el proceso actual de atención postventa, paso a paso, desde el primer contacto hasta el seguimiento final",
+        "Identifica los momentos de mayor ansiedad o incertidumbre de tu cliente y diseña acciones proactivas para esos momentos",
+        "Establece seguimientos programados (por ejemplo a las 2 horas, a las 24 horas, a los 7 días) sin esperar a que tu cliente se queje"
       ],
       "entregable_esperado": "Lista de puntos de estrés identificados y sistema de notificaciones proactivas implementado para cada uno.",
       "nodos_previos": [
@@ -18188,7 +18200,8 @@
         "Clasifica los datos que tienes de tus clientes en personales, emocionales, o ambos a la vez",
         "Da prioridad a recolectar los datos que caen en ambas categorías",
         "Usa siempre el nombre del cliente en tus interacciones, nunca un número de cliente",
-        "Crea pequeños rituales de reconocimiento con esos datos, por ejemplo felicitarlo cuando gana su equipo favorito"
+        "Crea pequeños rituales de reconocimiento con esos datos, por ejemplo felicitarlo cuando gana su equipo favorito",
+        "Prioriza datos que sean personales (únicos de cada persona) y emocionales (con una carga afectiva positiva)"
       ],
       "entregable_esperado": "Una lista de al menos 3 tipos de datos personales o emocionales por cada segmento de cliente, con un plan concreto de cómo vas a usarlos",
       "nodos_previos": [
@@ -19467,7 +19480,8 @@
         "Define el ethos y backstory de tu marca más allá del producto funcional",
         "Identifica qué transformación de identidad experimenta el cliente al usar tu producto",
         "Crea elementos visuales o simbólicos (merchandising, insignias) que permitan a clientes mostrar su afiliación",
-        "Facilita espacios donde los miembros de la tribu puedan reconocerse entre sí"
+        "Facilita espacios donde los miembros de la tribu puedan reconocerse entre sí",
+        "Identificar rituales o símbolos que representen los valores centrales de la marca/comunidad"
       ],
       "entregable_esperado": "Un statement de ethos de marca y al menos un artefacto simbólico de pertenencia para clientes leales",
       "nodos_previos": [
@@ -25363,7 +25377,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Construcción de una Cultura de Experiencia",
-      "fuente": "Change by Design | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "Change by Design",
       "resumen_teorico": "Una experiencia de marca auténtica y consistente no puede lograrse solo con manuales operativos o guiones; requiere que los empleados mismos vivan y entiendan la experiencia que ofrecen, empoderándolos para la improvisación y la personalización. Casos como Four Seasons (empleados hospedándose en sus propios hoteles) y Ritz-Carlton (programa 'Scenography') muestran cómo transformar a todo el personal en 'pensadores de diseño'.",
       "pasos_accionables": [
         "Diseñar programas de inmersión donde los empleados experimenten el servicio desde la perspectiva del cliente",
@@ -25373,11 +25387,7 @@
         "Invitar a empleados de distintas áreas a talleres de diseño de experiencia del cliente.",
         "Dar autonomía para que propongan sus propias iniciativas de mejora.",
         "Recoger y priorizar ideas antes de implementar cambios estructurales.",
-        "Comunicar el rol de cada empleado en la experiencia global del cliente.",
-        "Diagnosticar si los empleados saben que la experiencia del cliente es parte de su trabajo",
-        "Diseñar un programa de capacitación peer-to-peer a gran escala con plazos definidos",
-        "Unificar las herramientas internas de información del cliente para reducir errores y fricción",
-        "Incorporar un símbolo o recordatorio del cliente en las reuniones internas de decisión"
+        "Comunicar el rol de cada empleado en la experiencia global del cliente."
       ],
       "entregable_esperado": "Un programa de capacitación o toolkit cultural que empodere a los empleados como diseñadores de experiencia en cada punto de contacto",
       "nodos_previos": [
@@ -25389,7 +25399,8 @@
       ],
       "nodos_siguientes": [
         "blueprint_de_experiencia",
-        "experiencia_del_cliente_proactiva"
+        "experiencia_del_cliente_proactiva",
+        "silla_vacia_del_cliente_en_decisiones"
       ],
       "condiciones_activacion": [
         "Cuando el servicio depende en gran medida de la interacción humana",
@@ -27114,19 +27125,14 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Mapeo del Customer Journey (Viaje del Cliente)",
-      "fuente": "Change by Design, Revised and U - Tim Brown | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "Change by Design, Revised and U - Tim Brown",
       "resumen_teorico": "Estructura de escenario simple que traza las etapas por las que pasa un cliente imaginado desde el inicio hasta el final de una experiencia de servicio. Permite identificar 'touchpoints' (puntos de contacto) donde el cliente interactúa con la marca o servicio, revelando oportunidades de valor u ocasiones de perder al cliente que podrían pasarse por alto si se enfoca solo en el producto final.",
       "pasos_accionables": [
         "Observar directamente a clientes reales durante toda su experiencia de servicio",
         "Documentar cada etapa del viaje, desde el primer contacto hasta el cierre",
         "Identificar todos los 'touchpoints' donde el cliente interactúa con la marca/servicio",
         "Evaluar cada touchpoint como oportunidad de crear valor positivo o de perder al cliente",
-        "Priorizar mejoras en los puntos de mayor impacto, no solo en el producto central",
-        "Identificar y mapear los distintos journeys del cliente (facturación, soporte, onboarding, percepción)",
-        "Diagnosticar en qué punto los departamentos se pasan la responsabilidad del cliente sin resolución",
-        "Medir el impacto cuantitativo del mal servicio (llamadas repetidas, visitas técnicas, tasa de abandono)",
-        "Colocar una silla vacía representando al cliente en cada reunión interna como recordatorio simbólico",
-        "Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas"
+        "Priorizar mejoras en los puntos de mayor impacto, no solo en el producto central"
       ],
       "entregable_esperado": "Un mapa visual con todas las etapas y touchpoints del viaje del cliente, identificando oportunidades de mejora",
       "nodos_previos": [
@@ -27139,7 +27145,8 @@
         "economia_de_la_experiencia",
         "prototipado_experiencial_servicios",
         "rediseno_procesos_negocio_cx",
-        "seguimiento_informacion_cliente"
+        "seguimiento_informacion_cliente",
+        "silla_vacia_del_cliente_en_decisiones"
       ],
       "condiciones_activacion": [
         "Cuando se está diseñando o rediseñando un servicio con múltiples puntos de interacción",
@@ -35330,23 +35337,20 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Alineación de Recompensas con Tipos de Rol",
-      "fuente": "The Founder's Dilemmas | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "The Founder's Dilemmas",
       "resumen_teorico": "Las estructuras de compensación deben alinearse con la naturaleza del rol: bonos altos ligados a desempeño individual funcionan bien para ventas pero pueden ser contraproducentes para roles de desarrollo colaborativo. Un diseño correcto de incentivos también facilita la autoselección de salida para contrataciones débiles ('hire fast, fire fast').",
       "pasos_accionables": [
         "Clasificar los roles del equipo según si requieren desempeño individual o colaborativo.",
         "Diseñar estructuras de compensación contingente para roles individuales (ej. ventas).",
-        "Diseñar estructuras de compensación estable para roles colaborativos (ej. desarrollo de producto).",
-        "Auditar los esquemas de compensación e incentivos actuales: ¿premian solo adquisición o también retención?",
-        "Dar al líder de experiencia del cliente un asiento en las decisiones ejecutivas.",
-        "Crear métricas y bonos ligados a retención, satisfacción y valor vitalicio, no solo a cierre de ventas.",
-        "Eliminar incentivos que premien rapidez en atención al cliente por encima de calidad de la relación."
+        "Diseñar estructuras de compensación estable para roles colaborativos (ej. desarrollo de producto)."
       ],
       "entregable_esperado": "Documento de políticas de compensación diferenciadas por tipo de rol.",
       "nodos_previos": [
         "riesgo_contratar_amigos_familia"
       ],
       "nodos_siguientes": [
-        "decision_autofinanciamiento_vs_inversion"
+        "decision_autofinanciamiento_vs_inversion",
+        "incentivos_internos_alineados_a_retencion"
       ],
       "condiciones_activacion": [
         "Cuando se diseña la estructura de incentivos del equipo.",
@@ -46100,7 +46104,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Estrategia de Crecimiento de Clientes (Grow)",
-      "fuente": "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
       "resumen_teorico": "Dos vías principales para crecer aprovechando la base de clientes existente: lograr que gasten más (venta cruzada, venta adicional, desagregación del producto) o que refieran a nuevos clientes (marketing viral, programas de referidos). Estas tácticas maximizan el valor de los clientes actuales antes de invertir en adquirir clientes nuevos, que suele ser más costoso. Para priorizarlas correctamente conviene calcular el valor de vida del cliente -cuánto ingreso genera un cliente a lo largo de toda su relación con el negocio- en vez de enfocarse solo en la primera venta.",
       "pasos_accionables": [
         "Calcular el valor de vida del cliente de la base de clientes actual",
@@ -46108,11 +46112,7 @@
         "Crear motores de recomendación tipo 'si compraste X, te gustará Y'",
         "Diseñar mecanismos de marketing viral y programas de referidos que incentiven a los clientes actuales a invitar a nuevos",
         "Probar estas tácticas con clientes reales, incluyendo ofertas y promociones exclusivas",
-        "Revisar tácticas específicas de canales web o móviles para identificar ideas adicionales de crecimiento",
-        "Identifica el incentivo de mayor valor percibido para tu cliente que sea de bajo costo marginal para ti",
-        "Define una mecánica simple de referido (código, link, proceso de verificación)",
-        "Comunica el programa en momentos clave del ciclo de vida (ej: fase Adopt/Advocate)",
-        "Mide la tasa de conversión de referidos y el costo de adquisición resultante"
+        "Revisar tácticas específicas de canales web o móviles para identificar ideas adicionales de crecimiento"
       ],
       "entregable_esperado": "Plan de tácticas de crecimiento (venta cruzada, venta adicional, referidos) con el valor de vida del cliente calculado y las hipótesis a testear con clientes reales",
       "condiciones_activacion": [
@@ -51932,7 +51932,10 @@
         "Crear un documento o gráfico visual (mapa) que muestre en qué etapa está el cliente en cada momento",
         "Establecer comunicaciones recurrentes atadas a micro-logros o hitos del proceso",
         "Detectar señales silenciosas de desconexión del cliente antes de que se quejen o abandonen",
-        "Simplificar procesos complejos dividiéndolos en pasos pequeños y digeribles"
+        "Simplificar procesos complejos dividiéndolos en pasos pequeños y digeribles",
+        "Haz una lista de todos los puntos de contacto que atraviesa un cliente nuevo entre la compra y el día 100",
+        "Establece hitos de comunicación proactiva (bienvenida, chequeos de progreso, celebración de logros tempranos) distribuidos en ese periodo",
+        "Asigna un responsable claro para cada punto de contacto y mide qué tan consistente es la ejecución"
       ],
       "entregable_esperado": "Un mapa visual del proceso de onboarding/entrega y un calendario de comunicaciones por hito",
       "nodos_previos": [
@@ -51994,7 +51997,12 @@
         "Implementar un sistema de seguimiento (automatizado o manual) para saber cuándo el cliente alcanza ese objetivo",
         "Clasificar cada relación con cliente en uno de los tres escenarios: Mission Accomplished, Lukewarm Bath o Mission Failure",
         "Diseñar un momento de celebración específico para cuando el cliente logra su objetivo",
-        "Reservar al menos 5% de las ganancias del proyecto para invertir en mejoras de experiencia del cliente"
+        "Reservar al menos 5% de las ganancias del proyecto para invertir en mejoras de experiencia del cliente",
+        "Identificar el objetivo superficial que el cliente dice buscar",
+        "Investigar el deseo o motivación real detrás de ese objetivo declarado",
+        "Diseñar un punto de seguimiento posterior al logro del objetivo aparente (ej. pedir una foto, confirmar el resultado real)",
+        "Mantener contacto y apoyo del equipo más allá del cumplimiento nominal del contrato",
+        "Evitar que el equipo 'desacelere' el esfuerzo justo cuando el cliente cree haber terminado"
       ],
       "entregable_esperado": "Sistema de tracking de logros de clientes y protocolo de celebración definido para el momento en que se alcanza el objetivo",
       "nodos_previos": [
@@ -52116,7 +52124,11 @@
         "Crear un artefacto físico o digital que memorialice el momento (certificado, mensaje personalizado, video)",
         "Involucrar al cliente en la co-creación de su producto/servicio cuando sea posible",
         "Alinear la comunicación de celebración interna de la empresa con una comunicación externa hacia el cliente",
-        "Evitar que la única interacción de celebración provenga únicamente del vendedor (para no generar desconfianza)"
+        "Evitar que la única interacción de celebración provenga únicamente del vendedor (para no generar desconfianza)",
+        "Identifica el momento exacto en que tu prospecto se convierte oficialmente en cliente (el pago, la firma del contrato, etc.)",
+        "Diseña un ritual o una celebración específica para ese momento (un anuncio público, mencionarlo por nombre, entregarle algo simbólico)",
+        "Crea un recuerdo físico o digital que tu cliente pueda conservar de la decisión que tomó",
+        "Involucra a las personas que trabajan contigo en la celebración para reforzar el mensaje de bienvenida"
       ],
       "entregable_esperado": "Diseño de un momento de celebración/bienvenida tangible para el cliente en el instante de la compra",
       "nodos_previos": [
@@ -55932,7 +55944,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Ganar Comprensión Profunda del Cliente",
-      "fuente": "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
       "resumen_teorico": "Ve más allá de validar que el problema existe: entiende en profundidad cómo tu cliente vive su día a día. Su flujo de trabajo, cómo gasta su tiempo y su dinero, con quién interactúa, qué solución usa hoy y qué cambiaría su comportamiento actual. Lo logras saliendo a observarlo directamente: asiste a sus eventos, lee sus publicaciones, sigue a las personas que lo influencian, y hasta pasa un día haciendo lo que él hace. El objetivo es conocerlo tan bien que te perciba como 'uno de ellos', y así consigas información que va más allá de datos superficiales.",
       "pasos_accionables": [
         "Investiga el flujo de trabajo actual de tu cliente y sus interacciones con otras personas o áreas",
@@ -55940,12 +55952,7 @@
         "Explora qué haría cambiar su comportamiento de compra: el precio, las características, o un nuevo estándar",
         "Pasa un día haciendo lo que hace tu cliente (por ejemplo, detrás de un mostrador o en una feria) y asiste a sus eventos",
         "Identifica qué publicaciones lee y a quién sigue tu cliente",
-        "Documenta todos tus hallazgos de forma ordenada, con criterios claros de qué cuenta como validado",
-        "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar",
-        "Define entre 5 y 10 datos prioritarios que empieces a registrar desde ahora",
-        "Revisa y completa la información que ya conoces pero no has registrado",
-        "Investiga perfiles públicos en redes sociales para obtener datos personales y emocionales",
-        "Prioriza datos que sean personales (únicos de cada persona) y emocionales (con una carga afectiva positiva)"
+        "Documenta todos tus hallazgos de forma ordenada, con criterios claros de qué cuenta como validado"
       ],
       "entregable_esperado": "Un documento con la comprensión profunda de tu cliente: su flujo de trabajo, sus influenciadores, sus hábitos de consumo de información, su comportamiento de compra y tus criterios de validación",
       "condiciones_activacion": [
@@ -60274,7 +60281,8 @@
         "Grabar o realizar una llamada/video conjunta inmediatamente después del cierre de venta",
         "Reiterar en el traspaso las expectativas, necesidades y objetivos que el cliente compartió durante la venta",
         "Compartir datos de contacto directos del nuevo responsable en el mismo momento del traspaso",
-        "Mostrar evidencia social (ej: muro de firmas, testimonios) que refuerce la decisión del cliente"
+        "Mostrar evidencia social (ej: muro de firmas, testimonios) que refuerce la decisión del cliente",
+        "Rediseña el traspaso (handoff) entre quien vende y quien da soporte, para que no se pierda información ni calidez"
       ],
       "entregable_esperado": "Un protocolo estandarizado de traspaso vendedor-cuenta con guion o checklist replicable",
       "nodos_previos": [
@@ -63464,6 +63472,30 @@
       "etiqueta_arbol": "Premia lo Sostenible",
       "deprecado": true
     },
+    "incentivos_internos_alineados_a_retencion": {
+      "node_id": "incentivos_internos_alineados_a_retencion",
+      "fase_proyecto": "ejecucion",
+      "dominio": "core",
+      "titulo_concepto": "Alineacion de los Incentivos Internos con la Retencion del Cliente",
+      "fuente": "Never Lose a Customer Again - Joey Coleman",
+      "resumen_teorico": "La gente hace aquello por lo que se le paga, y en la mayoria de los negocios se paga por cerrar cuentas nuevas y por atender rapido. Las dos cosas suenan bien y las dos empujan en contra de la relacion: la primera deja al cliente recien firmado sin dueno, y la segunda premia despachar la llamada antes que resolver el problema. Corregirlo pide auditar los esquemas que ya tienes y preguntarles a que premian de verdad, poner metricas y bonos ligados a retencion, satisfaccion y valor vitalicio del cliente, quitar los incentivos que premian la rapidez por encima de la calidad de la relacion, y sentar a quien responde por la experiencia del cliente donde se toman las decisiones ejecutivas, que es la unica forma de que esa voz no dependa de la buena voluntad ajena.",
+      "pasos_accionables": [
+        "Auditar los esquemas de compensación e incentivos actuales: ¿premian solo adquisición o también retención?",
+        "Dar al líder de experiencia del cliente un asiento en las decisiones ejecutivas.",
+        "Crear métricas y bonos ligados a retención, satisfacción y valor vitalicio, no solo a cierre de ventas.",
+        "Eliminar incentivos que premien rapidez en atención al cliente por encima de calidad de la relación."
+      ],
+      "entregable_esperado": "La auditoria de tus incentivos actuales con lo que premian hoy, y el esquema corregido: metricas y bonos ligados a retencion, satisfaccion y valor vitalicio, los incentivos daninos retirados, y el asiento ejecutivo de quien responde por la experiencia",
+      "nodos_previos": [
+        "diseno_estructura_recompensas_roles"
+      ],
+      "nodos_siguientes": [],
+      "condiciones_activacion": [
+        "Cuando tu equipo cobra por vender y nadie cobra por que el cliente se quede",
+        "Cuando la atencion al cliente se mide por tiempo de llamada y no por problema resuelto"
+      ],
+      "etiqueta_arbol": "Premia Retener, no solo Vender"
+    },
     "incentivos_no_monetarios_advocacy": {
       "node_id": "incentivos_no_monetarios_advocacy",
       "fase_proyecto": "ejecucion",
@@ -63475,7 +63507,10 @@
         "Analizar qué recurso propio del negocio (almacenamiento, status, servicio adicional) tiene alto valor percibido pero bajo costo marginal",
         "Diseñar el incentivo de manera que beneficie tanto al referente como al nuevo cliente referido",
         "Comunicar el incentivo de forma clara vinculada a una acción simple de referencia",
-        "Monitorear el efecto de fidelización adicional generado por el incentivo (aumento de dependencia/uso del producto)"
+        "Monitorear el efecto de fidelización adicional generado por el incentivo (aumento de dependencia/uso del producto)",
+        "Identifica el incentivo de mayor valor percibido para tu cliente que sea de bajo costo marginal para ti",
+        "Define una mecánica simple de referido (código, link, proceso de verificación)",
+        "Mide la tasa de conversión de referidos y el costo de adquisición resultante"
       ],
       "entregable_esperado": "Estructura de incentivos no monetarios definida y validada con métricas de adopción y referidos",
       "nodos_previos": [
@@ -65962,7 +65997,11 @@
         "Guarda las URLs de los perfiles sociales en el CRM para facilitar futuras búsquedas",
         "Usa encuestas breves solo cuando no consigas la información de otra forma",
         "Aplica la técnica de contar tú algo primero para animar a que te cuenten, cuando necesites preguntar directamente",
-        "Practica la escucha enfocada para captar datos que surjan espontáneamente en las conversaciones"
+        "Practica la escucha enfocada para captar datos que surjan espontáneamente en las conversaciones",
+        "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar",
+        "Define entre 5 y 10 datos prioritarios que empieces a registrar desde ahora",
+        "Revisa y completa la información que ya conoces pero no has registrado",
+        "Investiga perfiles públicos en redes sociales para obtener datos personales y emocionales"
       ],
       "entregable_esperado": "Tu CRM con los datos personales y emocionales clave de cada cliente, listos para usarlos más adelante en la personalización",
       "nodos_previos": [
@@ -65971,7 +66010,8 @@
         "tipos_de_clientes"
       ],
       "nodos_siguientes": [
-        "personalizar_interacciones_cliente"
+        "personalizar_interacciones_cliente",
+        "observar_al_cliente_en_su_contexto"
       ],
       "condiciones_activacion": [
         "Ya tienes clientes activos pero te falta conocerlos a fondo",
@@ -73273,18 +73313,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Distinguir Metas (Goals) de Propósito (Ley de Goodhart)",
-      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
       "resumen_teorico": "Las metas son objetivos medibles (puntos, likes, ventas) mientras que el propósito es la razón profunda detrás de la acción (diversión, conexión, impacto). Cuando confundimos metas con propósito, corremos el riesgo de optimizar el indicador en vez del valor real que representa —la Ley de Goodhart: 'cuando una medida se convierte en objetivo, deja de ser una buena medida'—. Esto puede generar comportamiento no ético, toma de riesgo excesiva y pérdida de motivación intrínseca (caso 'Goals Gone Wild').",
       "pasos_accionables": [
         "Lista explícitamente las métricas/KPIs actuales de tu proyecto",
         "Para cada métrica, pregúntate: ¿esta métrica realmente representa el valor/propósito que queremos lograr?",
         "Identifica si alguna métrica podría ser 'hackeada' (como el AI de Q*bert) sin cumplir el propósito real",
-        "Ajusta o complementa las métricas con indicadores cualitativos que capturen mejor el propósito",
-        "Identificar el objetivo superficial que el cliente dice buscar",
-        "Investigar el deseo o motivación real detrás de ese objetivo declarado",
-        "Diseñar un punto de seguimiento posterior al logro del objetivo aparente (ej. pedir una foto, confirmar el resultado real)",
-        "Mantener contacto y apoyo del equipo más allá del cumplimiento nominal del contrato",
-        "Evitar que el equipo 'desacelere' el esfuerzo justo cuando el cliente cree haber terminado"
+        "Ajusta o complementa las métricas con indicadores cualitativos que capturen mejor el propósito"
       ],
       "entregable_esperado": "Una tabla de métricas actuales junto con el propósito que cada una debería representar, señalando discrepancias o riesgos de 'gaming the metric'",
       "nodos_previos": [
@@ -78195,6 +78230,34 @@
       ],
       "etiqueta_arbol": "Define un Objetivo de Avance"
     },
+    "observar_al_cliente_en_su_contexto": {
+      "node_id": "observar_al_cliente_en_su_contexto",
+      "fase_proyecto": "ejecucion",
+      "dominio": "core",
+      "titulo_concepto": "Observar a tu cliente en su contexto (segundo paso del metodo IOPS)",
+      "fuente": "Never Lose a Customer Again - Joey Coleman",
+      "resumen_teorico": "Es el segundo paso del metodo IOPS (investigar, observar, personalizar, sorprender), y el que casi siempre se salta. Investigar te da datos que tu cliente te conto; observar te da lo que hace cuando nadie le pregunta. Se practica yendo a verlo usar tu producto en su contexto real con una cadencia fija, y poniendote tu mismo en su lugar para recorrer tu producto desde cero como si fueras el, que es cuando aparecen las asperezas que dejaste de ver por costumbre. Lo que vale casi nunca es la respuesta a una pregunta: son los detalles pequenos y los comentarios casuales, las pepitas de oro que ninguna encuesta captura. Por eso se anota en caliente y se relee uno o dos dias despues, cuando ya se puede buscar el patron en vez del episodio.",
+      "pasos_accionables": [
+        "Observa a un cliente usando tu producto o servicio en su contexto real al menos una vez al mes",
+        "Ponte en el lugar de tu cliente y experimenta tu producto desde cero, como si fueras él",
+        "Presta atención a los detalles pequeños y a los comentarios casuales que se te escapan, esas pepitas de oro que valen más que cualquier encuesta",
+        "Anota tus observaciones apenas las tengas y revísalas uno o dos días después",
+        "Busca patrones o momentos clave que puedan mejorar la experiencia de tu cliente"
+      ],
+      "entregable_esperado": "Tu cuaderno de observacion con lo que viste en el contexto real de tu cliente, anotado en caliente y releido a los dos dias, y los patrones o momentos clave que salieron de ahi para mejorar su experiencia",
+      "nodos_previos": [
+        "voz_del_cliente_voc",
+        "investigar_datos_cliente"
+      ],
+      "nodos_siguientes": [
+        "personalizar_interacciones_cliente"
+      ],
+      "condiciones_activacion": [
+        "Cuando ya reuniste los datos de tu cliente y no sabes que hacer con ellos",
+        "Cuando tus decisiones de producto salen de encuestas y de lo que el cliente dice, y nunca de verlo usarlo"
+      ],
+      "etiqueta_arbol": "Observa a tu Cliente de Verdad"
+    },
     "observar_lo_ordinario": {
       "node_id": "observar_lo_ordinario",
       "fase_proyecto": "ideacion",
@@ -78785,7 +78848,10 @@
         "Enseñar la jerga o cultura propia de la empresa desde el inicio para generar pertenencia.",
         "Crear rituales grupales (presentaciones, bienvenida) en cada interacción para generar cohesión.",
         "Organizar eventos sociales recurrentes que fortalezcan el vínculo comunitario.",
-        "Medir tasas de conversión de prueba a membresía y retención a largo plazo."
+        "Medir tasas de conversión de prueba a membresía y retención a largo plazo.",
+        "Crear un momento de iniciación público o semi-público donde el nuevo cliente sea presentado a la comunidad existente",
+        "Desarrollar un vocabulario o identidad compartida para los miembros/clientes (ej. 'creed', apodos, insignias)",
+        "Facilitar la conexión entre clientes nuevos y clientes veteranos (mentoría, foros, eventos)"
       ],
       "entregable_esperado": "Programa de onboarding con etapas definidas de introducción, mentoría personalizada, lenguaje de marca y calendario de eventos comunitarios.",
       "nodos_previos": [
@@ -81435,6 +81501,30 @@
       ],
       "etiqueta_arbol": "Da Protección a tu Equipo"
     },
+    "personalizacion_guiada_por_el_cliente": {
+      "node_id": "personalizacion_guiada_por_el_cliente",
+      "fase_proyecto": "ejecucion",
+      "dominio": "core",
+      "titulo_concepto": "Personalizacion Guiada y el Simbolo de la Decision del Cliente",
+      "fuente": "Never Lose a Customer Again - Joey Coleman",
+      "resumen_teorico": "Dejar que tu cliente decida sobre tu producto no es lo mismo que dejarlo solo delante de un catalogo de opciones. Primero eliges en que partes de tu producto o servicio la decision es suya de verdad, y despues disenas el camino para que tomarla sea facil en vez de abrumador: demasiadas opciones sin guia paralizan y el cliente abandona a mitad. La segunda mitad es la que casi nadie hace: cuando tu cliente ya decidio, devuelvele esa decision convertida en algo que pueda tocar o ensenar. Un objeto tangible o simbolico que represente lo que eligio, y cuando tenga sentido, mostrarlo de forma visible, convierte una eleccion privada en un compromiso que el cliente reconoce como propio.",
+      "pasos_accionables": [
+        "Identifica en qué partes de tu producto o servicio tu cliente puede tomar decisiones de personalización",
+        "Diseña un proceso guiado y sencillo para que co-crear no lo abrume",
+        "Entrégale algo tangible o simbólico que represente la decisión que tomó",
+        "Cuando tenga sentido, muestra de forma visible lo que tu cliente logró o decidió"
+      ],
+      "entregable_esperado": "El mapa de las decisiones de personalizacion que tu cliente puede tomar, el proceso guiado que se las hace faciles, y el objeto tangible o simbolico con el que le devuelves esa decision",
+      "nodos_previos": [
+        "cliente_disena_producto"
+      ],
+      "nodos_siguientes": [],
+      "condiciones_activacion": [
+        "Cuando tu producto admite decisiones de personalizacion y no sabes cuales dejar en manos de tu cliente sin abrumarlo",
+        "Cuando tu cliente elige algo importante y no recibe nada tangible que se lo recuerde"
+      ],
+      "etiqueta_arbol": "Deja Decidir a tu Cliente"
+    },
     "personalizacion_investigacion_prospecto": {
       "node_id": "personalizacion_investigacion_prospecto",
       "fase_proyecto": "validacion",
@@ -81477,7 +81567,8 @@
       ],
       "entregable_esperado": "Plan de comunicaciones personalizadas organizado por cliente o por grupo de interés, con ejemplos de mensajes y acciones concretas",
       "nodos_previos": [
-        "investigar_datos_cliente"
+        "investigar_datos_cliente",
+        "observar_al_cliente_en_su_contexto"
       ],
       "nodos_siguientes": [
         "sorprender_cliente_estrategico"
@@ -81551,7 +81642,11 @@
         "Reúne estadísticas de tu sector sobre pérdida de clientes y su impacto en las ganancias",
         "Expón a quien decide a interacciones reales y sin filtros con clientes (llamadas, quejas)",
         "Implementa mejoras pequeñas sin pedir permiso previo y documenta los resultados",
-        "Comparte recursos externos (libros, guías) que respalden tu propuesta desde fuera de la cadena de mando"
+        "Comparte recursos externos (libros, guías) que respalden tu propuesta desde fuera de la cadena de mando",
+        "Calcular el Costo de Adquisición de Cliente (CAC) exacto por canal.",
+        "Calcular el tiempo promedio necesario para recuperar esa inversión (breakeven point).",
+        "Medir el porcentaje real de clientes que abandonan antes de alcanzar ese punto de equilibrio.",
+        "Presentar el impacto financiero de la pérdida temprana de clientes al equipo directivo."
       ],
       "entregable_esperado": "Un caso con datos numéricos y ejemplos reales que demuestre el retorno de invertir en experiencia del cliente, listo para presentar a quien decide",
       "nodos_previos": [
@@ -89940,20 +90035,14 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Cierre de Proyecto o Fase",
-      "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
       "resumen_teorico": "El Cierre de Proyecto o Fase documenta el desempeño final del proyecto comparado con los objetivos establecidos en el Acta de Constitución. Se revisan los criterios de finalización de alcance, calidad, cronograma y costo, documentando evidencias de cumplimiento o variaciones. También incorpora información del Cierre de Contrato y requiere aprobaciones formales.",
       "pasos_accionables": [
         "Revisar los objetivos del proyecto o fase definidos en el Acta de Constitución",
         "Documentar los criterios de finalización y evidencia de cumplimiento para alcance, calidad, cronograma y costo",
         "Registrar cualquier variación respecto a los objetivos originales",
         "Incorporar información del Cierre de Contrato si aplica",
-        "Obtener las aprobaciones formales de cierre",
-        "Revisar los objetivos organizacionales y métricas de éxito definidas en el kickoff",
-        "Realizar una evaluación honesta del nivel de éxito en cada métrica",
-        "Solicitar feedback del cliente sobre esas métricas",
-        "Atender cualquier deficiencia pendiente antes de cerrar",
-        "Compartir testimonios y reconocimientos mutuos",
-        "Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)"
+        "Obtener las aprobaciones formales de cierre"
       ],
       "entregable_esperado": "Informe de Cierre de Proyecto o Fase con desempeño final, variaciones y aprobaciones",
       "nodos_previos": [
@@ -93792,7 +93881,11 @@
         "Identificar políticas o estructuras internas que crean fricción sin beneficio para el cliente",
         "Rediseñar procesos clave (ej: agendamiento, atención telefónica) para resolución en un solo contacto",
         "Implementar compensaciones automáticas cuando la empresa incumple su promesa de servicio",
-        "Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)"
+        "Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)",
+        "Simplifica los procesos administrativos (formularios, papeleo) con herramientas digitales para reducir la fricción",
+        "Identificar y mapear los distintos journeys del cliente (facturación, soporte, onboarding, percepción)",
+        "Diagnosticar en qué punto los departamentos se pasan la responsabilidad del cliente sin resolución",
+        "Medir el impacto cuantitativo del mal servicio (llamadas repetidas, visitas técnicas, tasa de abandono)"
       ],
       "entregable_esperado": "Mapa de procesos rediseñados con métricas de impacto esperado y mecanismos de compensación automática",
       "nodos_previos": [
@@ -93820,7 +93913,11 @@
         "Enseña a todas las personas que trabajan contigo, no solo a quien atiende al cliente, cuál es su papel en la experiencia que vive",
         "Reduce la cantidad de herramientas o sistemas que usas para atender a tu cliente",
         "Ponte tú, o quien tenga visión de todo el proceso, a cargo de la experiencia del cliente, no solo para reaccionar cuando algo falla",
-        "Destina presupuesto sostenido durante varios años para esta transformación, en lugar de soluciones rápidas y parciales"
+        "Destina presupuesto sostenido durante varios años para esta transformación, en lugar de soluciones rápidas y parciales",
+        "Diagnosticar si los empleados saben que la experiencia del cliente es parte de su trabajo",
+        "Diseñar un programa de capacitación peer-to-peer a gran escala con plazos definidos",
+        "Unificar las herramientas internas de información del cliente para reducir errores y fricción",
+        "Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas"
       ],
       "entregable_esperado": "Un plan de transformación de tus procesos, con formación para tu gente, menos herramientas duplicadas y presupuesto pensado para varios años",
       "nodos_previos": [
@@ -95594,17 +95691,13 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Bloque de Relaciones con Clientes",
-      "fuente": "Business Model Generation - Osterwalder | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "Business Model Generation - Osterwalder",
       "resumen_teorico": "Describe el tipo de relación que una empresa establece con cada Segmento de Clientes, motivada por adquisición, retención o venta adicional (upselling). Categorías: asistencia personal, asistencia personal dedicada, autoservicio, servicios automatizados, comunidades y co-creación.",
       "pasos_accionables": [
         "Definir la motivación principal por segmento: ¿adquisición, retención o upselling?",
         "Seleccionar el tipo de relación adecuado (personal, dedicada, autoservicio, automatizada, comunidad, co-creación)",
         "Evaluar el costo de mantener cada tipo de relación",
-        "Diseñar mecanismos de co-creación o comunidad si aplica al modelo (ej. reviews, foros)",
-        "Identificar rituales o símbolos que representen los valores centrales de la marca/comunidad",
-        "Crear un momento de iniciación público o semi-público donde el nuevo cliente sea presentado a la comunidad existente",
-        "Desarrollar un vocabulario o identidad compartida para los miembros/clientes (ej. 'creed', apodos, insignias)",
-        "Facilitar la conexión entre clientes nuevos y clientes veteranos (mentoría, foros, eventos)"
+        "Diseñar mecanismos de co-creación o comunidad si aplica al modelo (ej. reviews, foros)"
       ],
       "entregable_esperado": "Definición del tipo de relación por segmento de cliente y su costo estimado",
       "nodos_previos": [
@@ -97303,18 +97396,14 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Métricas de Retención",
-      "fuente": "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "The Startup Owner's Manual - Steve Blank",
       "resumen_teorico": "Indicadores clave para monitorear la salud de la retención de clientes, organizados por cohortes (grupos con características temporales comunes). Permiten detectar señales tempranas de churn y evaluar el valor de vida del cliente.",
       "pasos_accionables": [
         "Medir visitas, page views y tiempo en sitio/app por cohorte",
         "Calcular tiempo promedio entre visitas",
         "Estimar vida promedio del cliente y lifetime value",
         "Monitorear quejas, tickets de soporte y tasas de respuesta a e-mails",
-        "Agrupar clientes por cohortes (mes de ingreso) para comparar comportamiento",
-        "Calcular el Costo de Adquisición de Cliente (CAC) exacto por canal.",
-        "Calcular el tiempo promedio necesario para recuperar esa inversión (breakeven point).",
-        "Medir el porcentaje real de clientes que abandonan antes de alcanzar ese punto de equilibrio.",
-        "Presentar el impacto financiero de la pérdida temprana de clientes al equipo directivo."
+        "Agrupar clientes por cohortes (mes de ingreso) para comparar comportamiento"
       ],
       "entregable_esperado": "Dashboard de métricas de retención segmentado por cohortes",
       "nodos_previos": [
@@ -97496,7 +97585,13 @@
         "Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos",
         "Ramificar las preguntas según el puntaje recibido (alta satisfacción → pedir testimonio; baja satisfacción → espacio para desahogo y solución)",
         "Establecer un periodo de monitoreo posterior (ej. 3 meses) para mitigar el 'remordimiento post-lanzamiento' del cliente",
-        "Solicitar testimonios y referidos solo después de dar valor y feedback positivo primero"
+        "Solicitar testimonios y referidos solo después de dar valor y feedback positivo primero",
+        "Revisar los objetivos organizacionales y métricas de éxito definidas en el kickoff",
+        "Realizar una evaluación honesta del nivel de éxito en cada métrica",
+        "Solicitar feedback del cliente sobre esas métricas",
+        "Atender cualquier deficiencia pendiente antes de cerrar",
+        "Compartir testimonios y reconocimientos mutuos",
+        "Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)"
       ],
       "entregable_esperado": "Protocolo de cierre de proyecto con encuestas internas/externas y plan de monitoreo post-entrega documentado",
       "nodos_previos": [
@@ -103740,6 +103835,29 @@
       ],
       "etiqueta_arbol": "Sigue Operando Pese al Golpe"
     },
+    "silla_vacia_del_cliente_en_decisiones": {
+      "node_id": "silla_vacia_del_cliente_en_decisiones",
+      "fase_proyecto": "ejecucion",
+      "dominio": "core",
+      "titulo_concepto": "La Silla Vacia del Cliente en las Reuniones de Decision",
+      "fuente": "Never Lose a Customer Again - Joey Coleman",
+      "resumen_teorico": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Amazon usa, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
+      "pasos_accionables": [
+        "Incorporar un símbolo o recordatorio del cliente en las reuniones internas de decisión",
+        "Colocar una silla vacía representando al cliente en cada reunión interna como recordatorio simbólico"
+      ],
+      "entregable_esperado": "Un simbolo del cliente instalado en tus reuniones internas de decision, con la regla escrita de quien lo ocupa y en que momento de la reunion se le pregunta",
+      "nodos_previos": [
+        "cultura_de_experiencia",
+        "customer_journey_mapping"
+      ],
+      "nodos_siguientes": [],
+      "condiciones_activacion": [
+        "Cuando las decisiones internas se toman por comodidad operativa y el cliente aparece solo al final, si aparece",
+        "Cuando quieres instalar un recordatorio permanente en vez de una campana de una vez"
+      ],
+      "etiqueta_arbol": "Sienta al Cliente en tu Mesa"
+    },
     "simulacion_clientes_ia": {
       "node_id": "simulacion_clientes_ia",
       "fase_proyecto": "validacion",
@@ -104405,25 +104523,22 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Sistema Inmune del Producto (Andon Cord adaptado)",
-      "fuente": "The Lean Startup - Eric Ries | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "The Lean Startup - Eric Ries",
       "resumen_teorico": "Inspirado en el cordón andon de Toyota (que permite a cualquier trabajador detener la línea de producción al detectar un defecto), el 'sistema inmune del producto' es un conjunto de mecanismos automáticos de defensa que monitorean tanto el funcionamiento técnico del producto como la salud del negocio (métricas clave). Cuando se detecta un problema —incluso uno sutil que las pruebas automatizadas no capturarían, como un botón de compra invisible por error de diseño— el sistema puede revertir automáticamente el cambio defectuoso, notificar al equipo responsable y bloquear nuevos cambios hasta resolver la causa raíz.",
       "pasos_accionables": [
         "Definir métricas de negocio críticas que deben monitorearse continuamente (ej: tasa de conversión, ventas)",
         "Implementar pruebas automatizadas funcionales y de negocio para cada despliegue",
         "Configurar alertas automáticas que notifiquen al equipo ante cualquier anomalía detectada",
         "Establecer un protocolo de reversión automática del cambio defectuoso",
-        "Bloquear nuevos despliegues del equipo responsable hasta encontrar y corregir la causa raíz del problema",
-        "Revisar los puntos de fricción del producto que generan llamadas de soporte",
-        "Diseñar mecanismos de detección proactiva de errores con notificación automática al cliente",
-        "Desarrollar herramientas de autoservicio y autosanación dentro del producto",
-        "Medir el porcentaje de problemas resueltos sin intervención humana"
+        "Bloquear nuevos despliegues del equipo responsable hasta encontrar y corregir la causa raíz del problema"
       ],
       "entregable_esperado": "Un sistema de monitoreo y alertas automáticas que protege al producto y al negocio de cambios defectuosos, permitiendo detección y corrección casi inmediata",
       "nodos_previos": [
         "despliegue_continuo"
       ],
       "nodos_siguientes": [
-        "tecnica_cinco_porques"
+        "tecnica_cinco_porques",
+        "autoservicio_y_autosanacion_del_producto"
       ],
       "condiciones_activacion": [
         "Cuando la empresa practica despliegue continuo y necesita salvaguardas automáticas",
@@ -108799,7 +108914,8 @@
         "Identificar el 'punto de logro' donde el cliente obtiene el beneficio prometido del producto/servicio",
         "Configurar un disparador automatizado (ej. email a los 30 días) que se active después de este punto de logro",
         "Evitar solicitudes de referido en el momento inmediato de la compra o registro",
-        "Validar mediante datos (aperturas, clics) que el timing elegido genera mejores tasas de respuesta que el promedio de la industria"
+        "Validar mediante datos (aperturas, clics) que el timing elegido genera mejores tasas de respuesta que el promedio de la industria",
+        "Comunica el programa en momentos clave del ciclo de vida (ej: fase Adopt/Advocate)"
       ],
       "entregable_esperado": "Definición documentada del punto de activación óptimo para solicitudes de referencia/testimonio con automatización configurada",
       "nodos_previos": [
@@ -114113,19 +114229,14 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Escucha la voz de tu cliente (Voice of Customer, VoC)",
-      "fuente": "Winning at New Products - Robert G. Cooper | Never Lose a Customer Again - Joey Coleman",
+      "fuente": "Winning at New Products - Robert G. Cooper",
       "resumen_teorico": "Escuchar la voz de tu cliente es reunir información directa sobre sus necesidades, problemas y preferencias, no solo con entrevistas formales sino también observando cómo vive y trabaja en su propio entorno (observación de campo, a veces llamada camping out). Usa esto como punto de partida para diseñar tu producto, no como algo que revisas al final. Las necesidades que tu cliente no sabe nombrar, o su comportamiento real, te muestran cosas que una entrevista formal no capta.",
       "pasos_accionables": [
         "Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos",
         "Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos",
         "Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas",
         "Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final",
-        "Mantén contacto con tu cliente durante todo el desarrollo, no solo al principio y al final",
-        "Observa a un cliente usando tu producto o servicio en su contexto real al menos una vez al mes",
-        "Ponte en el lugar de tu cliente y experimenta tu producto desde cero, como si fueras él",
-        "Presta atención a los detalles pequeños y a los comentarios casuales que se te escapan, esas pepitas de oro que valen más que cualquier encuesta",
-        "Anota tus observaciones apenas las tengas y revísalas uno o dos días después",
-        "Busca patrones o momentos clave que puedan mejorar la experiencia de tu cliente"
+        "Mantén contacto con tu cliente durante todo el desarrollo, no solo al principio y al final"
       ],
       "entregable_esperado": "Un resumen de lo que aprendiste observando y entrevistando a tu cliente, que alimente directamente cómo diseñas tu producto",
       "nodos_previos": [
@@ -114142,7 +114253,8 @@
         "homework_frontend_loading",
         "product_backlog_agile",
         "reduccion_tiempo_de_mercado_velocidad",
-        "desarrollo_en_espiral"
+        "desarrollo_en_espiral",
+        "observar_al_cliente_en_su_contexto"
       ],
       "condiciones_activacion": [
         "Cuando no tienes ideas claras de qué hace diferente a tu producto",
@@ -115080,6 +115192,7 @@
       "automatizacion_tareas_aburridas",
       "autoresponders_drip_campaigns",
       "autorizar_sistema",
+      "autoservicio_y_autosanacion_del_producto",
       "background_startup_vs_corporativo",
       "barreras_orgullo_trabajo",
       "batna_definicion",
@@ -115861,6 +115974,7 @@
       "importancia_de_la_capacitacion",
       "impresion_inteligente",
       "incentivar_reconocer_recompensar",
+      "incentivos_internos_alineados_a_retencion",
       "incentivos_no_monetarios_advocacy",
       "incentivos_reconocimiento_sostenibilidad",
       "incentivos_transparencia_ia",
@@ -116052,6 +116166,7 @@
       "normalizacion_de_la_desviacion",
       "noticing_non_events",
       "nueva_vision_organizacion_linea_seguridad",
+      "observar_al_cliente_en_su_contexto",
       "obstaculos_innovacion_modelo_negocio",
       "obtencion_compromiso",
       "obtencion_compromiso_venta",
@@ -116105,6 +116220,7 @@
       "perdida_control_junta_directiva",
       "perfeccionismo_vs_valor_2",
       "personal_protective_equipment",
+      "personalizacion_guiada_por_el_cliente",
       "personalizar_interacciones_cliente",
       "personas_productos_ganancias_orden",
       "perspectiva_dentro_del_tunel",
@@ -116419,6 +116535,7 @@
       "shareholder_representative_role",
       "shock_and_awe_kit_bienvenida",
       "sigue_operando_pese_al_golpe",
+      "silla_vacia_del_cliente_en_decisiones",
       "sistema_de_alarma_de_defectos",
       "sistema_gestion_ambiental",
       "sistema_gestion_cumplimiento_ambiental",
@@ -118974,6 +119091,7 @@
       "automatic_conversion",
       "automatizacion_software_gestion_innovacion",
       "automatizacion_tareas_aburridas",
+      "autoservicio_y_autosanacion_del_producto",
       "background_startup_vs_corporativo",
       "backlog_evolutivo_y_cronograma_flexible",
       "balance_eficiencia_responsividad",
@@ -119796,6 +119914,7 @@
       "identificar_junta_asesores",
       "identificar_pensadores_de_diseno_internos",
       "impacto_estado_resultados_en_balance",
+      "incentivos_internos_alineados_a_retencion",
       "incentivos_no_monetarios_advocacy",
       "incentivos_transparencia_ia",
       "indemnification_clause",
@@ -119999,6 +120118,7 @@
       "nombrar_los_monstruos",
       "nueve_pecados_capitales_lanzamiento",
       "objetivos_de_llamada_orientados_a_avance",
+      "observar_al_cliente_en_su_contexto",
       "observar_lo_ordinario",
       "obstaculos_innovacion_modelo_negocio",
       "obtencion_compromiso",
@@ -120053,6 +120173,7 @@
       "perdida_control_junta_directiva",
       "periodo_incubacion_mental",
       "perseguir_multiples_nortes",
+      "personalizacion_guiada_por_el_cliente",
       "personalizacion_investigacion_prospecto",
       "personalizar_interacciones_cliente",
       "personas_productos_ganancias_orden",
@@ -120397,6 +120518,7 @@
       "shareholder_representative_role",
       "shock_and_awe_kit_bienvenida",
       "siete_razones_fracaso_productos",
+      "silla_vacia_del_cliente_en_decisiones",
       "simulacion_clientes_ia",
       "simulacion_de_operaciones_supply_chain",
       "simulacion_diseno_cadena_suministro",
@@ -122690,7 +122812,7 @@
   },
   "stats": {
     "componentes_conexos": 1,
-    "tamano_componente_principal": 3848,
+    "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
     "nodos_sin_enlaces_entrantes": 6,
     "enlaces_rotos_en_grafo": 0

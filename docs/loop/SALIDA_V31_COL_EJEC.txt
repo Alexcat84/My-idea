@@ -1,0 +1,288 @@
+﻿PLAN   : docs/loop/PLAN_V31_OPF04_COL.json
+OPERACION: OP-F-04-COL, SEGUNDO TIEMPO: los trece destinos por P.18
+MODO   : --ejecutar
+CORTES : 24
+==============================================================================
+
+------------------------------------------------------------------------------
+ORIGEN : blueprint_de_experiencia   frontera los pasos [5, 6, 7] de 17
+  pasos totales 17, salen 3, quedan 14
+  fuente: 'Change by Design | Never Lose a Customer Again - Joey Coleman'  ->  'Change by Design'
+    sale   5. Documenta el proceso actual de atención postventa, paso a paso, desde el primer contacto hasta el se
+    sale   6. Identifica los momentos de mayor ansiedad o incertidumbre de tu cliente y diseña acciones proactivas
+    sale   7. Establece seguimientos programados (por ejemplo a las 2 horas, a las 24 horas, a los 7 días) sin esp
+  DESTINO: MIEMBRO comunicacion_proactiva_puntos_estres
+  comunicacion_proactiva_puntos_estres: pasos 4 -> 7
+
+------------------------------------------------------------------------------
+ORIGEN : blueprint_de_experiencia   frontera los pasos [8] de 17
+  pasos totales 17, salen 1, quedan 13
+  fuente: 'Change by Design'  ->  'Change by Design'
+    sale   8. Simplifica los procesos administrativos (formularios, papeleo) con herramientas digitales para reduc
+  DESTINO: MIEMBRO rediseno_procesos_negocio_cliente
+  rediseno_procesos_negocio_cliente: pasos 5 -> 6
+
+------------------------------------------------------------------------------
+ORIGEN : blueprint_de_experiencia   frontera los pasos [9, 10, 11, 13] de 17
+  pasos totales 17, salen 4, quedan 9
+  fuente: 'Change by Design'  ->  'Change by Design'
+    sale   9. Identifica el momento exacto en que tu prospecto se convierte oficialmente en cliente (el pago, la f
+    sale  10. Diseña un ritual o una celebración específica para ese momento (un anuncio público, mencionarlo por 
+    sale  11. Crea un recuerdo físico o digital que tu cliente pueda conservar de la decisión que tomó
+    sale  13. Involucra a las personas que trabajan contigo en la celebración para reforzar el mensaje de bienveni
+  DESTINO: MIEMBRO fase_admit_celebracion
+  fase_admit_celebracion: pasos 5 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : blueprint_de_experiencia   frontera los pasos [12] de 17
+  pasos totales 17, salen 1, quedan 8
+  fuente: 'Change by Design'  ->  'Change by Design'
+    sale  12. Alinea la intensidad emocional de la celebración con la naturaleza de tu producto o servicio (evita 
+  DESTINO: MIEMBRO calibracion_intensidad_celebracion
+  calibracion_intensidad_celebracion: pasos 3 -> 4
+
+------------------------------------------------------------------------------
+ORIGEN : blueprint_de_experiencia   frontera los pasos [15] de 17
+  pasos totales 17, salen 1, quedan 7
+  fuente: 'Change by Design'  ->  'Change by Design'
+    sale  15. Rediseña el traspaso (handoff) entre quien vende y quien da soporte, para que no se pierda informaci
+  DESTINO: MIEMBRO handoff_transicion_ventas_cuentas
+  handoff_transicion_ventas_cuentas: pasos 5 -> 6
+
+------------------------------------------------------------------------------
+ORIGEN : blueprint_de_experiencia   frontera los pasos [14, 16, 17] de 17
+  pasos totales 17, salen 3, quedan 4
+  fuente: 'Change by Design'  ->  'Change by Design'
+    sale  14. Haz una lista de todos los puntos de contacto que atraviesa un cliente nuevo entre la compra y el dí
+    sale  16. Establece hitos de comunicación proactiva (bienvenida, chequeos de progreso, celebración de logros t
+    sale  17. Asigna un responsable claro para cada punto de contacto y mide qué tan consistente es la ejecución
+  DESTINO: MIEMBRO fase_acclimate_mapa_de_proceso
+  fase_acclimate_mapa_de_proceso: pasos 5 -> 8
+
+------------------------------------------------------------------------------
+ORIGEN : cliente_disena_producto   frontera los pasos [5, 6, 7, 8] de 8
+  pasos totales 8, salen 4, quedan 4
+  fuente: 'Winning at New Products - Robert G. Cooper | Never Lose a Customer Again - Joey Coleman'  ->  'Winning at New Products - Robert G. Cooper'
+    sale   5. Identifica en qué partes de tu producto o servicio tu cliente puede tomar decisiones de personalizac
+    sale   6. Diseña un proceso guiado y sencillo para que co-crear no lo abrume
+    sale   7. Entrégale algo tangible o simbólico que represente la decisión que tomó
+    sale   8. Cuando tenga sentido, muestra de forma visible lo que tu cliente logró o decidió
+  DESTINO: NODO PROPIO personalizacion_guiada_por_el_cliente
+  arista obligada: cliente_disena_producto.nodos_siguientes += personalizacion_guiada_por_el_cliente
+  arista reciproca: personalizacion_guiada_por_el_cliente.nodos_previos = ['cliente_disena_producto']
+
+------------------------------------------------------------------------------
+ORIGEN : cultura_de_experiencia   frontera los pasos [9, 10, 11] de 12
+  pasos totales 12, salen 3, quedan 9
+  fuente: 'Change by Design | Never Lose a Customer Again - Joey Coleman'  ->  'Change by Design'
+    sale   9. Diagnosticar si los empleados saben que la experiencia del cliente es parte de su trabajo
+    sale  10. Diseñar un programa de capacitación peer-to-peer a gran escala con plazos definidos
+    sale  11. Unificar las herramientas internas de información del cliente para reducir errores y fricción
+  DESTINO: MIEMBRO rediseno_procesos_negocio_cx
+  rediseno_procesos_negocio_cx: pasos 5 -> 8
+
+------------------------------------------------------------------------------
+ORIGEN : cultura_de_experiencia   frontera los pasos [12] de 12
+  pasos totales 12, salen 1, quedan 8
+  fuente: 'Change by Design'  ->  'Change by Design'
+    sale  12. Incorporar un símbolo o recordatorio del cliente en las reuniones internas de decisión
+  DESTINO: NODO PROPIO silla_vacia_del_cliente_en_decisiones
+  arista obligada: cultura_de_experiencia.nodos_siguientes += silla_vacia_del_cliente_en_decisiones
+  arista reciproca: silla_vacia_del_cliente_en_decisiones.nodos_previos = ['cultura_de_experiencia', 'customer_journey_mapping']
+
+------------------------------------------------------------------------------
+ORIGEN : customer_journey_mapping   frontera los pasos [6, 7, 8] de 10
+  pasos totales 10, salen 3, quedan 7
+  fuente: 'Change by Design, Revised and U - Tim Brown | Never Lose a Customer Again - Joey Coleman'  ->  'Change by Design, Revised and U - Tim Brown'
+    sale   6. Identificar y mapear los distintos journeys del cliente (facturación, soporte, onboarding, percepció
+    sale   7. Diagnosticar en qué punto los departamentos se pasan la responsabilidad del cliente sin resolución
+    sale   8. Medir el impacto cuantitativo del mal servicio (llamadas repetidas, visitas técnicas, tasa de abando
+  DESTINO: MIEMBRO rediseno_procesos_negocio_cliente
+  rediseno_procesos_negocio_cliente: pasos 6 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : customer_journey_mapping   frontera los pasos [9] de 10
+  pasos totales 10, salen 1, quedan 6
+  fuente: 'Change by Design, Revised and U - Tim Brown'  ->  'Change by Design, Revised and U - Tim Brown'
+    sale   9. Colocar una silla vacía representando al cliente en cada reunión interna como recordatorio simbólico
+  DESTINO: MIEMBRO silla_vacia_del_cliente_en_decisiones
+  (destino creado por este mismo plan, corte anterior)
+  silla_vacia_del_cliente_en_decisiones: pasos 1 -> 2
+
+------------------------------------------------------------------------------
+ORIGEN : customer_journey_mapping   frontera los pasos [10] de 10
+  pasos totales 10, salen 1, quedan 5
+  fuente: 'Change by Design, Revised and U - Tim Brown'  ->  'Change by Design, Revised and U - Tim Brown'
+    sale  10. Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas
+  DESTINO: MIEMBRO rediseno_procesos_negocio_cx
+  rediseno_procesos_negocio_cx: pasos 8 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : diseno_estructura_recompensas_roles   frontera los pasos [4, 5, 6, 7] de 7
+  pasos totales 7, salen 4, quedan 3
+  fuente: "The Founder's Dilemmas | Never Lose a Customer Again - Joey Coleman"  ->  "The Founder's Dilemmas"
+    sale   4. Auditar los esquemas de compensación e incentivos actuales: ¿premian solo adquisición o también rete
+    sale   5. Dar al líder de experiencia del cliente un asiento en las decisiones ejecutivas.
+    sale   6. Crear métricas y bonos ligados a retención, satisfacción y valor vitalicio, no solo a cierre de vent
+    sale   7. Eliminar incentivos que premien rapidez en atención al cliente por encima de calidad de la relación.
+  DESTINO: NODO PROPIO incentivos_internos_alineados_a_retencion
+  arista obligada: diseno_estructura_recompensas_roles.nodos_siguientes += incentivos_internos_alineados_a_retencion
+  arista reciproca: incentivos_internos_alineados_a_retencion.nodos_previos = ['diseno_estructura_recompensas_roles']
+
+------------------------------------------------------------------------------
+ORIGEN : estrategia_crecimiento_clientes   frontera los pasos [7, 8, 10] de 10
+  pasos totales 10, salen 3, quedan 7
+  fuente: "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   7. Identifica el incentivo de mayor valor percibido para tu cliente que sea de bajo costo marginal para
+    sale   8. Define una mecánica simple de referido (código, link, proceso de verificación)
+    sale  10. Mide la tasa de conversión de referidos y el costo de adquisición resultante
+  DESTINO: MIEMBRO incentivos_no_monetarios_advocacy
+  incentivos_no_monetarios_advocacy: pasos 4 -> 7
+
+------------------------------------------------------------------------------
+ORIGEN : estrategia_crecimiento_clientes   frontera los pasos [9] de 10
+  pasos totales 10, salen 1, quedan 6
+  fuente: "The Startup Owner's Manual - Steve Blank"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   9. Comunica el programa en momentos clave del ciclo de vida (ej: fase Adopt/Advocate)
+  DESTINO: MIEMBRO timing_solicitud_referidos
+  timing_solicitud_referidos: pasos 4 -> 5
+
+------------------------------------------------------------------------------
+ORIGEN : ganar_comprension_del_cliente   frontera los pasos [7, 8, 9, 10] de 11
+  pasos totales 11, salen 4, quedan 7
+  fuente: "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   7. Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar
+    sale   8. Define entre 5 y 10 datos prioritarios que empieces a registrar desde ahora
+    sale   9. Revisa y completa la información que ya conoces pero no has registrado
+    sale  10. Investiga perfiles públicos en redes sociales para obtener datos personales y emocionales
+  DESTINO: MIEMBRO investigar_datos_cliente
+  investigar_datos_cliente: pasos 7 -> 11
+
+------------------------------------------------------------------------------
+ORIGEN : ganar_comprension_del_cliente   frontera los pasos [11] de 11
+  pasos totales 11, salen 1, quedan 6
+  fuente: "The Startup Owner's Manual - Steve Blank"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale  11. Prioriza datos que sean personales (únicos de cada persona) y emocionales (con una carga afectiva po
+  DESTINO: MIEMBRO conexion_personal_emocional
+  conexion_personal_emocional: pasos 4 -> 5
+
+------------------------------------------------------------------------------
+ORIGEN : metas_vs_proposito   frontera los pasos [5, 6, 7, 8, 9] de 9
+  pasos totales 9, salen 5, quedan 4
+  fuente: 'Assembling Tomorrow: A Guide to Designing a Thriving Future | Never Lose a Customer Again - Joey Coleman'  ->  'Assembling Tomorrow: A Guide to Designing a Thriving Future'
+    sale   5. Identificar el objetivo superficial que el cliente dice buscar
+    sale   6. Investigar el deseo o motivación real detrás de ese objetivo declarado
+    sale   7. Diseñar un punto de seguimiento posterior al logro del objetivo aparente (ej. pedir una foto, confir
+    sale   8. Mantener contacto y apoyo del equipo más allá del cumplimiento nominal del contrato
+    sale   9. Evitar que el equipo 'desacelere' el esfuerzo justo cuando el cliente cree haber terminado
+  DESTINO: MIEMBRO fase_accomplish_experiencia_cliente
+  fase_accomplish_experiencia_cliente: pasos 5 -> 10
+
+------------------------------------------------------------------------------
+ORIGEN : project_close_out   frontera los pasos [6, 7, 8, 9, 10, 11] de 11
+  pasos totales 11, salen 6, quedan 5
+  fuente: "A Project Manager's Book of Forms - Cynthia Stackpole Snyder | Never Lose a Customer Again - Joey Coleman"  ->  "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+    sale   6. Revisar los objetivos organizacionales y métricas de éxito definidas en el kickoff
+    sale   7. Realizar una evaluación honesta del nivel de éxito en cada métrica
+    sale   8. Solicitar feedback del cliente sobre esas métricas
+    sale   9. Atender cualquier deficiencia pendiente antes de cerrar
+    sale  10. Compartir testimonios y reconocimientos mutuos
+    sale  11. Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)
+  DESTINO: MIEMBRO reunion_conclusion_proyecto
+  reunion_conclusion_proyecto: pasos 6 -> 12
+
+------------------------------------------------------------------------------
+ORIGEN : relaciones_con_clientes   frontera los pasos [5] de 8
+  pasos totales 8, salen 1, quedan 7
+  fuente: 'Business Model Generation - Osterwalder | Never Lose a Customer Again - Joey Coleman'  ->  'Business Model Generation - Osterwalder'
+    sale   5. Identificar rituales o símbolos que representen los valores centrales de la marca/comunidad
+  DESTINO: MIEMBRO construccion_tribu_de_marca
+  construccion_tribu_de_marca: pasos 4 -> 5
+
+------------------------------------------------------------------------------
+ORIGEN : relaciones_con_clientes   frontera los pasos [6, 7, 8] de 8
+  pasos totales 8, salen 3, quedan 4
+  fuente: 'Business Model Generation - Osterwalder'  ->  'Business Model Generation - Osterwalder'
+    sale   6. Crear un momento de iniciación público o semi-público donde el nuevo cliente sea presentado a la com
+    sale   7. Desarrollar un vocabulario o identidad compartida para los miembros/clientes (ej. 'creed', apodos, i
+    sale   8. Facilitar la conexión entre clientes nuevos y clientes veteranos (mentoría, foros, eventos)
+  DESTINO: MIEMBRO onboarding_comunitario_y_lenguaje_propio
+  onboarding_comunitario_y_lenguaje_propio: pasos 6 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : retention_metrics   frontera los pasos [6, 7, 8, 9] de 9
+  pasos totales 9, salen 4, quedan 5
+  fuente: "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   6. Calcular el Costo de Adquisición de Cliente (CAC) exacto por canal.
+    sale   7. Calcular el tiempo promedio necesario para recuperar esa inversión (breakeven point).
+    sale   8. Medir el porcentaje real de clientes que abandonan antes de alcanzar ese punto de equilibrio.
+    sale   9. Presentar el impacto financiero de la pérdida temprana de clientes al equipo directivo.
+  DESTINO: MIEMBRO persuasion_directivos_prioridad_cliente
+  persuasion_directivos_prioridad_cliente: pasos 4 -> 8
+
+------------------------------------------------------------------------------
+ORIGEN : sistema_inmune_producto   frontera los pasos [6, 7, 8, 9] de 9
+  pasos totales 9, salen 4, quedan 5
+  fuente: 'The Lean Startup - Eric Ries | Never Lose a Customer Again - Joey Coleman'  ->  'The Lean Startup - Eric Ries'
+    sale   6. Revisar los puntos de fricción del producto que generan llamadas de soporte
+    sale   7. Diseñar mecanismos de detección proactiva de errores con notificación automática al cliente
+    sale   8. Desarrollar herramientas de autoservicio y autosanación dentro del producto
+    sale   9. Medir el porcentaje de problemas resueltos sin intervención humana
+  DESTINO: NODO PROPIO autoservicio_y_autosanacion_del_producto
+  arista obligada: sistema_inmune_producto.nodos_siguientes += autoservicio_y_autosanacion_del_producto
+  arista reciproca: autoservicio_y_autosanacion_del_producto.nodos_previos = ['sistema_inmune_producto']
+
+------------------------------------------------------------------------------
+ORIGEN : voz_del_cliente_voc   frontera los pasos [6, 7, 8, 9, 10] de 10
+  pasos totales 10, salen 5, quedan 5
+  fuente: 'Winning at New Products - Robert G. Cooper | Never Lose a Customer Again - Joey Coleman'  ->  'Winning at New Products - Robert G. Cooper'
+    sale   6. Observa a un cliente usando tu producto o servicio en su contexto real al menos una vez al mes
+    sale   7. Ponte en el lugar de tu cliente y experimenta tu producto desde cero, como si fueras él
+    sale   8. Presta atención a los detalles pequeños y a los comentarios casuales que se te escapan, esas pepitas
+    sale   9. Anota tus observaciones apenas las tengas y revísalas uno o dos días después
+    sale  10. Busca patrones o momentos clave que puedan mejorar la experiencia de tu cliente
+  DESTINO: NODO PROPIO observar_al_cliente_en_su_contexto
+  arista obligada: voz_del_cliente_voc.nodos_siguientes += observar_al_cliente_en_su_contexto
+  arista reciproca: observar_al_cliente_en_su_contexto.nodos_previos = ['voz_del_cliente_voc', 'investigar_datos_cliente']
+
+==============================================================================
+RESUMEN
+  cortes aplicados en memoria: 24
+  nodos propios nuevos       : 5 ['personalizacion_guiada_por_el_cliente', 'silla_vacia_del_cliente_en_decisiones', 'incentivos_internos_alineados_a_retencion', 'autoservicio_y_autosanacion_del_producto', 'observar_al_cliente_en_su_contexto']
+  ficheros que se tocarian   : 34
+
+ESCRITO: 34 fichero(s) en dataset/nodos/.
+  - autoservicio_y_autosanacion_del_producto  [NUEVO]
+  - blueprint_de_experiencia
+  - calibracion_intensidad_celebracion
+  - cliente_disena_producto
+  - comunicacion_proactiva_puntos_estres
+  - conexion_personal_emocional
+  - construccion_tribu_de_marca
+  - cultura_de_experiencia
+  - customer_journey_mapping
+  - diseno_estructura_recompensas_roles
+  - estrategia_crecimiento_clientes
+  - fase_acclimate_mapa_de_proceso
+  - fase_accomplish_experiencia_cliente
+  - fase_admit_celebracion
+  - ganar_comprension_del_cliente
+  - handoff_transicion_ventas_cuentas
+  - incentivos_internos_alineados_a_retencion  [NUEVO]
+  - incentivos_no_monetarios_advocacy
+  - investigar_datos_cliente
+  - metas_vs_proposito
+  - observar_al_cliente_en_su_contexto  [NUEVO]
+  - onboarding_comunitario_y_lenguaje_propio
+  - personalizacion_guiada_por_el_cliente  [NUEVO]
+  - persuasion_directivos_prioridad_cliente
+  - project_close_out
+  - rediseno_procesos_negocio_cliente
+  - rediseno_procesos_negocio_cx
+  - relaciones_con_clientes
+  - retention_metrics
+  - reunion_conclusion_proyecto
+  - silla_vacia_del_cliente_en_decisiones  [NUEVO]
+  - sistema_inmune_producto
+  - timing_solicitud_referidos
+  - voz_del_cliente_voc

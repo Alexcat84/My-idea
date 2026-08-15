@@ -1,0 +1,150 @@
+﻿CASO POSITIVO: OP-F-04-COL, SEGUNDO TIEMPO: los trece destinos por P.18
+==============================================================================
+
+blueprint_de_experiencia -> comunicacion_proactiva_puntos_estres   huella 'a las 2 horas, a las 24 horas'
+  [PASA] blueprint_de_experiencia ya no lleva la huella
+  [PASA] comunicacion_proactiva_puntos_estres si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['comunicacion_proactiva_puntos_estres']
+
+blueprint_de_experiencia -> rediseno_procesos_negocio_cliente   huella 'formularios, papeleo'
+  [PASA] blueprint_de_experiencia ya no lleva la huella
+  [PASA] rediseno_procesos_negocio_cliente si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['rediseno_procesos_negocio_cliente']
+
+blueprint_de_experiencia -> fase_admit_celebracion   huella 'se convierte oficialmente en cliente'
+  [PASA] blueprint_de_experiencia ya no lleva la huella
+  [PASA] fase_admit_celebracion si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['fase_admit_celebracion']
+
+blueprint_de_experiencia -> calibracion_intensidad_celebracion   huella 'evita sobreactuar'
+  [PASA] blueprint_de_experiencia ya no lleva la huella
+  [PASA] calibracion_intensidad_celebracion si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['calibracion_intensidad_celebracion']
+
+blueprint_de_experiencia -> handoff_transicion_ventas_cuentas   huella 'no se pierda información ni calidez'
+  [PASA] blueprint_de_experiencia ya no lleva la huella
+  [PASA] handoff_transicion_ventas_cuentas si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['handoff_transicion_ventas_cuentas']
+
+blueprint_de_experiencia -> fase_acclimate_mapa_de_proceso   huella 'entre la compra y el día 100'
+  [PASA] blueprint_de_experiencia ya no lleva la huella
+  [PASA] fase_acclimate_mapa_de_proceso si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['fase_acclimate_mapa_de_proceso']
+
+cliente_disena_producto -> personalizacion_guiada_por_el_cliente   huella 'co-crear no lo abrume'
+  [PASA] cliente_disena_producto ya no lleva la huella
+  [PASA] personalizacion_guiada_por_el_cliente si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['personalizacion_guiada_por_el_cliente']
+
+cultura_de_experiencia -> rediseno_procesos_negocio_cx   huella 'peer-to-peer a gran escala'
+  [PASA] cultura_de_experiencia ya no lleva la huella
+  [PASA] rediseno_procesos_negocio_cx si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['rediseno_procesos_negocio_cx']
+
+cultura_de_experiencia -> silla_vacia_del_cliente_en_decisiones   huella 'símbolo o recordatorio del cliente'
+  [PASA] cultura_de_experiencia ya no lleva la huella
+  [PASA] silla_vacia_del_cliente_en_decisiones si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['silla_vacia_del_cliente_en_decisiones']
+
+customer_journey_mapping -> rediseno_procesos_negocio_cliente   huella 'se pasan la responsabilidad del cliente'
+  [PASA] customer_journey_mapping ya no lleva la huella
+  [PASA] rediseno_procesos_negocio_cliente si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['rediseno_procesos_negocio_cliente']
+
+customer_journey_mapping -> silla_vacia_del_cliente_en_decisiones   huella 'silla vacía representando al cliente'
+  [PASA] customer_journey_mapping ya no lleva la huella
+  [PASA] silla_vacia_del_cliente_en_decisiones si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['silla_vacia_del_cliente_en_decisiones']
+
+customer_journey_mapping -> rediseno_procesos_negocio_cx   huella 'sistema unificado de gestión de cuentas'
+  [PASA] customer_journey_mapping ya no lleva la huella
+  [PASA] rediseno_procesos_negocio_cx si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['rediseno_procesos_negocio_cx']
+
+diseno_estructura_recompensas_roles -> incentivos_internos_alineados_a_retencion   huella 'premian solo adquisición'
+  [PASA] diseno_estructura_recompensas_roles ya no lleva la huella
+  [PASA] incentivos_internos_alineados_a_retencion si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['incentivos_internos_alineados_a_retencion']
+
+estrategia_crecimiento_clientes -> incentivos_no_monetarios_advocacy   huella 'mecánica simple de referido'
+  [PASA] estrategia_crecimiento_clientes ya no lleva la huella
+  [PASA] incentivos_no_monetarios_advocacy si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['incentivos_no_monetarios_advocacy']
+
+estrategia_crecimiento_clientes -> timing_solicitud_referidos   huella 'fase Adopt/Advocate'
+  [PASA] estrategia_crecimiento_clientes ya no lleva la huella
+  [PASA] timing_solicitud_referidos si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['timing_solicitud_referidos']
+
+ganar_comprension_del_cliente -> investigar_datos_cliente   huella 'entre 5 y 10 datos prioritarios'
+  [PASA] ganar_comprension_del_cliente ya no lleva la huella
+  [PASA] investigar_datos_cliente si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['investigar_datos_cliente']
+
+ganar_comprension_del_cliente -> conexion_personal_emocional   huella 'carga afectiva positiva'
+  [PASA] ganar_comprension_del_cliente ya no lleva la huella
+  [PASA] conexion_personal_emocional si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['conexion_personal_emocional']
+
+metas_vs_proposito -> fase_accomplish_experiencia_cliente   huella 'objetivo superficial que el cliente dice buscar'
+  [PASA] metas_vs_proposito ya no lleva la huella
+  [PASA] fase_accomplish_experiencia_cliente si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['fase_accomplish_experiencia_cliente']
+
+project_close_out -> reunion_conclusion_proyecto   huella 'métricas de éxito definidas en el kickoff'
+  [PASA] project_close_out ya no lleva la huella
+  [PASA] reunion_conclusion_proyecto si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['reunion_conclusion_proyecto']
+
+relaciones_con_clientes -> construccion_tribu_de_marca   huella 'rituales o símbolos que representen'
+  [PASA] relaciones_con_clientes ya no lleva la huella
+  [PASA] construccion_tribu_de_marca si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['construccion_tribu_de_marca']
+
+relaciones_con_clientes -> onboarding_comunitario_y_lenguaje_propio   huella 'momento de iniciación público'
+  [PASA] relaciones_con_clientes ya no lleva la huella
+  [PASA] onboarding_comunitario_y_lenguaje_propio si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['onboarding_comunitario_y_lenguaje_propio']
+
+retention_metrics -> persuasion_directivos_prioridad_cliente   huella 'breakeven point'
+  [PASA] retention_metrics ya no lleva la huella
+  [PASA] persuasion_directivos_prioridad_cliente si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['persuasion_directivos_prioridad_cliente']
+
+sistema_inmune_producto -> autoservicio_y_autosanacion_del_producto   huella 'autoservicio y autosanación'
+  [PASA] sistema_inmune_producto ya no lleva la huella
+  [PASA] autoservicio_y_autosanacion_del_producto si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['autoservicio_y_autosanacion_del_producto']
+
+voz_del_cliente_voc -> observar_al_cliente_en_su_contexto   huella 'pepitas de oro'
+  [PASA] voz_del_cliente_voc ya no lleva la huella
+  [PASA] observar_al_cliente_en_su_contexto si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['observar_al_cliente_en_su_contexto']
+
+==============================================================================
+RESULTADO: 72 PASAN, 0 CAEN
+TODO PASA

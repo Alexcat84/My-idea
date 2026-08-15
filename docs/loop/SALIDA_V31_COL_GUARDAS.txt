@@ -1,0 +1,44 @@
+﻿GUARDAS DE CIERRE: OP-F-04-COL, SEGUNDO TIEMPO: los trece destinos por P.18
+==============================================================================
+
+--- 1. VIAJE VERBATIM: cada paso que salio vive TEXTUAL en su destino ---
+  pasos que viajaron: 67, todos verbatim: SI
+
+--- 2. CERO PERDIDA, nodo por nodo contra la version de HEAD ---
+  [OK  ] blueprint_de_experiencia               17 antes =  4 ahora + 13 salen   texto de los que quedan: INTACTO
+  [OK  ] cliente_disena_producto                 8 antes =  4 ahora +  4 salen   texto de los que quedan: INTACTO
+  [OK  ] cultura_de_experiencia                 12 antes =  8 ahora +  4 salen   texto de los que quedan: INTACTO
+  [OK  ] customer_journey_mapping               10 antes =  5 ahora +  5 salen   texto de los que quedan: INTACTO
+  [OK  ] diseno_estructura_recompensas_roles     7 antes =  3 ahora +  4 salen   texto de los que quedan: INTACTO
+  [OK  ] estrategia_crecimiento_clientes        10 antes =  6 ahora +  4 salen   texto de los que quedan: INTACTO
+  [OK  ] ganar_comprension_del_cliente          11 antes =  6 ahora +  5 salen   texto de los que quedan: INTACTO
+  [OK  ] metas_vs_proposito                      9 antes =  4 ahora +  5 salen   texto de los que quedan: INTACTO
+  [OK  ] project_close_out                      11 antes =  5 ahora +  6 salen   texto de los que quedan: INTACTO
+  [OK  ] relaciones_con_clientes                 8 antes =  4 ahora +  4 salen   texto de los que quedan: INTACTO
+  [OK  ] retention_metrics                       9 antes =  5 ahora +  4 salen   texto de los que quedan: INTACTO
+  [OK  ] sistema_inmune_producto                 9 antes =  5 ahora +  4 salen   texto de los que quedan: INTACTO
+  [OK  ] voz_del_cliente_voc                    10 antes =  5 ahora +  5 salen   texto de los que quedan: INTACTO
+
+--- 3. CERO DUPLICADAS Y CERO AUTO-ARISTAS TRAS RESOLVER (P.1) ---
+  se mide la DIFERENCIA contra HEAD: lo que ESTA operacion fabrica.
+  el total absoluto es la poblacion de OP-S-12 (00_INDICE.md), y se imprime aparte.
+  [VIEJA] calibracion_intensidad_celebracion.nodos_siguientes: 1 duplicada(s), las mismas que en HEAD (OP-S-12)
+  [VIEJA] estrategia_crecimiento_clientes.nodos_previos: 3 duplicada(s), las mismas que en HEAD (OP-S-12)
+  [VIEJA] fase_acclimate_mapa_de_proceso.nodos_previos: 1 duplicada(s), las mismas que en HEAD (OP-S-12)
+  [VIEJA] fase_admit_celebracion.nodos_siguientes: 1 duplicada(s), las mismas que en HEAD (OP-S-12)
+  [VIEJA] investigar_datos_cliente.nodos_previos: 1 duplicada(s), las mismas que en HEAD (OP-S-12)
+  [VIEJA] relaciones_con_clientes.nodos_previos: 1 duplicada(s), las mismas que en HEAD (OP-S-12)
+  [VIEJA] voz_del_cliente_voc.nodos_siguientes: 1 duplicada(s), las mismas que en HEAD (OP-S-12)
+  nodos tocados: 34
+  duplicadas tras resolver: 9 en HEAD, 9 ahora, FABRICADAS POR ESTA OPERACION: 0
+  auto aristas: 0
+
+--- 4. LOS NODOS PROPIOS ---
+  [OK  ] personalizacion_guiada_por_el_cliente      pasos  4  campos 12  vivo True  arista ida True vuelta True
+  [OK  ] silla_vacia_del_cliente_en_decisiones      pasos  2  campos 12  vivo True  arista ida True vuelta True
+  [OK  ] incentivos_internos_alineados_a_retencion  pasos  4  campos 12  vivo True  arista ida True vuelta True
+  [OK  ] autoservicio_y_autosanacion_del_producto   pasos  4  campos 12  vivo True  arista ida True vuelta True
+  [OK  ] observar_al_cliente_en_su_contexto         pasos  5  campos 12  vivo True  arista ida True vuelta True
+
+==============================================================================
+VERDE: las cuatro guardas pasan.
