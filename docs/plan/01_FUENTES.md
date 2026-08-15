@@ -1104,6 +1104,31 @@ nodo espere adjudicacion**, ejecute quien ejecute el resto.
 > tambien dejo dicho, en su punto 7, por que no leerlas al cierre de una vuelta de treinta
 > cortes: *es la especie exacta de las caidas de las vueltas 15 y 16*.
 
+### `OP-F-04-WEI` Y `OP-F-04-HOR` QUEDAN ENTERAS, Y LA FASE 01 NO CIERRA (14 ago 2026, vuelta 30)
+
+**Medido con instrumento propio corrido hoy** (`scripts/loop/vuelta30_saldo_opf04.py`, salidas
+en `docs/loop/SALIDA_V30_SALDO_WEI.txt` y `_HOR.txt`), **nodo por nodo sobre el campo `fuente`
+del grafo, no sobre el acta**:
+
+| tanda | nomina | **resueltos** | **fundidos por `P.19`** | pendientes |
+|---|---:|---:|---:|---:|
+| **`OP-F-04-WEI`** | 13 | **11** | **2** (`coeficiente_viral`, `viral_loop_marketing`) | **0** |
+| **`OP-F-04-HOR`** | 13 | **12** | **1** (`decision_de_vender_startup`) | **0** |
+
+> **LOS DOS ESTADOS SE CUENTAN APARTE A PROPOSITO, y no es contabilidad creativa.** *Resuelto*
+> quiere decir que el nodo **ya no declara el libro de la tanda**, porque el bloque se fue a su
+> destino. *Fundido* quiere decir que **lo sigue declarando y esta bien que lo haga**: `P.19`
+> punto 2 manda que el nodo quede **MULTIFUENTE LEGITIMO**. **Dar un solo numero escondiendo
+> esa diferencia haria pasar por resuelto lo que en realidad es multifuente por regla**, y el
+> dia que alguien barra la fase 01 buscando libros pegados los tres saldrian como pendientes.
+
+**LA FASE 01 NO CIERRA, y el motivo es uno solo con su cifra:** `OP-F-04-COL` esta en **1 de
+15**. Las cuatro `OP-F-04` tenian que estar hechas y son tres. **`OP-F-01` (verificada verde
+hoy, cero nodos de la clase con pasos alterados), `OP-F-02`, `OP-F-03` y `OP-F-04-RAC` estan
+hechas; `WEI` y `HOR` acaban de quedar enteras; `COL` tiene su primer tiempo y le falta el
+segundo.** Y por eso **la vuelta 30 no abre la fase 02**: abrirla con una operacion de fuente a
+medias romperia el *fuente primero* que esta pagina existe para sostener.
+
 ### `OP-F-04-COL`, PRIMER TIEMPO: LAS FRONTERAS QUE FALTABAN, COMO REGISTRO PURO (14 ago 2026, vuelta 30)
 
 **Es la forma que el acta de la vuelta 29 adjudico** (seccion 4, punto 5): *una vuelta publica
