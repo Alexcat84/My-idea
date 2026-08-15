@@ -1,0 +1,66 @@
+PLAN   : docs/loop/PLAN_V28_OPF04_WEI.json
+OPERACION: OP-F-04-WEI
+MODO   : --simular
+CORTES : 5
+==============================================================================
+
+------------------------------------------------------------------------------
+ORIGEN : plan_de_adquisicion_acquire   frontera 1 a 7 / 8 y 9 y 10 y 11 y 12
+  pasos totales 12, salen 5, quedan 7
+  fuente: "The Startup Owner's Manual - Blank, Steve | Traction - Gabriel Weinberg"  ->  "The Startup Owner's Manual - Blank, Steve"
+    sale   8. Haz una lista de los 19 canales de tracción posibles para tu negocio
+    sale   9. Diseña una prueba barata y corta para cada canal que te haga sentido, por ejemplo contactar a diez b
+    sale  10. Corre las pruebas en paralelo o por lotes y mide resultados concretos, no solo clics o vistas
+    sale  11. Compara los resultados entre canales y elige el o los que más prometan para invertirles más recursos
+    sale  12. Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos
+  DESTINO: MIEMBRO bullseye_framework
+  bullseye_framework: pasos 6 -> 11
+
+------------------------------------------------------------------------------
+ORIGEN : earned_vs_paid_media   frontera 1 a 4 / 5 y 6 y 7 y 8
+  pasos totales 8, salen 4, quedan 4
+  fuente: "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   5. Pregunta a tus clientes qué medios consumen fuera de internet (revistas, radio, etc.)
+    sale   6. Pide a cada medio que te interese su prospecto de audiencia (paquete de anuncio) para saber a quién 
+    sale   7. Compara la gente a la que llega cada medio, su alcance y su precio
+    sale   8. Empieza con pruebas pequeñas y económicas antes de escalar (radio local, prensa local, vallas pequeñ
+  DESTINO: MIEMBRO publicidad_offline_pruebas_locales
+  publicidad_offline_pruebas_locales: pasos 5 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : fit_problema_solucion   frontera 1 a 3 / 4 y 5 y 6
+  pasos totales 6, salen 3, quedan 3
+  fuente: 'Value Proposition Design | Traction - Gabriel Weinberg'  ->  'Value Proposition Design'
+    sale   4. Identifica en qué fase se encuentra tu negocio actualmente (I, II o III).
+    sale   5. En Fase I, envía un flujo pequeño y constante de clientes fríos a través de canales de tracción para
+    sale   6. Solo escala inversión en marketing una vez que el producto muestra baja fuga de clientes (Fase II en
+  DESTINO: MIEMBRO fases_traccion_producto
+  fases_traccion_producto: pasos 4 -> 7
+
+------------------------------------------------------------------------------
+ORIGEN : sales_funnel_get_keep_grow   frontera 1 a 4 / 5 y 6 y 7 y 8 y 9
+  pasos totales 10, salen 5, quedan 5
+  fuente: "The Startup Owner's Manual - Blank, Steve | Traction - Gabriel Weinberg"  ->  "The Startup Owner's Manual - Blank, Steve"
+    sale   5. Generar leads primero vía canales de marketing antes de aplicar ventas como conversión
+    sale   6. Calificar leads en categorías A (cierre en 3 meses), B (3-12 meses), C (+12 meses)
+    sale   7. Asignar 66-75% del tiempo del equipo de ventas a leads tipo A
+    sale   8. Delegar leads tipo C a marketing, no a ventas
+    sale   9. Coordinar con marketing para armar (collateral) y apuntar (filtrar) leads calificados
+  DESTINO: MIEMBRO clasificacion_leads_abc
+  clasificacion_leads_abc: pasos 5 -> 10
+
+------------------------------------------------------------------------------
+ORIGEN : sales_funnel_get_keep_grow   frontera 1 a 9 / 10
+  pasos totales 10, salen 1, quedan 4
+  fuente: "The Startup Owner's Manual - Blank, Steve"  ->  "The Startup Owner's Manual - Blank, Steve"
+    sale  10. Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto
+  DESTINO: MIEMBRO compromiso_linea_tiempo_cliente
+  compromiso_linea_tiempo_cliente: pasos 5 -> 6
+
+==============================================================================
+RESUMEN
+  cortes aplicados en memoria: 5
+  nodos propios nuevos       : 0 []
+  ficheros que se tocarian   : 9
+
+SIMULACION: cero escrituras.

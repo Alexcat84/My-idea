@@ -758,6 +758,54 @@ ficheros con 1.030 pasadas, `tsc` limpio).
 > nodo tambien; el de Weinberg habla de canal y el nodo tambien. **Eso hace la
 > poda mas peligrosa y el reparto mas obligatorio.**
 
+### `OP-F-04-WEI` EJECUTADA EN PARTE: CINCO CORTES SOBRE CUATRO NODOS (14 ago 2026, vuelta 28)
+
+**La frase de arriba se queda entera: era cierta el dia en que se escribio.** Lo que se
+ejecuta hoy es la parte de la tanda de Weinberg **cuyo destino esta LEIDO**, y la nomina
+contra la que se leyo se midio hoy, no se copio: **80 nodos vivos declaran `Traction` y 67
+lo declaran como fuente UNICA** (`docs/loop/SALIDA_V28_FAMILIA_WEINBERG.txt`). Plan sellado
+en `docs/loop/PLAN_V28_OPF04_WEI.json`.
+
+| origen | frontera | miembro receptor | por que su objeto coincide | saldo medido hoy |
+|---|---|---|---|---|
+| `plan_de_adquisicion_acquire` | **1 a 7 / 8 a 12** | `bullseye_framework` | el bloque es la diana ENTERA paso por paso: listar los 19 canales sin descartar, prueba barata y corta por canal, correrlas en paralelo o por lotes, comparar y elegir donde invertir mas. **`middle_ring_testing` NO tiene el paso de listar los 19**, que es el anillo exterior y es el primer paso del bloque | 12 pasos a **7**; el miembro 6 a **11** |
+| `earned_vs_paid_media` | **1 a 4 / 5 a 8** | `publicidad_offline_pruebas_locales` | preguntar que medios se consumen fuera de internet, pedir a cada medio su prospecto de audiencia, comparar alcance contra precio y empezar por radio, prensa y vallas **locales**. El objeto del miembro es probar barato en un mercado local antes de escalar, con la misma cuenta de precio contra alcance | 8 pasos a **4**; el miembro 5 a **9** |
+| `fit_problema_solucion` | **1 a 3 / 4 a 6** | `fases_traccion_producto` | **el calce mas literal de los cinco**: identificar la fase, en Fase I mandar un flujo pequeno y constante de clientes para ver por donde se fuga el producto, y escalar marketing solo al confirmar el ajuste producto mercado. El miembro se llama *Las Tres Fases de Traccion* y el bloque nombra las tres | 6 pasos a **3**; el miembro 4 a **7** |
+| `sales_funnel_get_keep_grow` | **1 a 4 / 5 a 9 / 10** | `clasificacion_leads_abc` | clasificar leads en A, B y C por tiempo de cierre, dar de 66 a 75 por ciento del tiempo de venta a los A y pasar los C a marketing: **las mismas categorias y las mismas cifras** que el miembro | 10 pasos a **4**; el miembro 5 a **10** |
+| `sales_funnel_get_keep_grow` | **el paso 10, aparte** | `compromiso_linea_tiempo_cliente` | **SE SEPARA, y se dice por que:** el paso 10 no clasifica ni reparte tiempo, **PACTA UN PLAZO**. Establecer un timeline claro de compra y pedir un si o un no explicito es palabra por palabra el objeto del miembro. Meterlo en la clasificacion A B C seria forzar un encaje que la lectura no sostiene, y `P.18` punto 3 lo prohibe | el miembro 5 a **6** |
+
+**LAS GUARDAS, corridas todas:** simulacion previa sobre copia en memoria (verde, cinco
+cortes, cero nodos nuevos); guarda de texto por paso, de fuente por nodo y de huella (la
+huella de cada bloque se comprobo AUSENTE del destino antes de sellar: una huella que ya
+vive en el destino no probaria nada); **caso positivo corrido antes (15 pruebas, 15 CAEN) y
+despues (15 PASAN)**; `GATE 0` entero en verde, **71 etiquetas sin encoger**, las dos copias
+del grafo en el mismo blob; **suites en verde**: motor 24 de 24, web 80 ficheros con 1.030
+pasadas y 3 saltadas, `tsc` limpio.
+
+**LO QUE DE `OP-F-04-WEI` NO SE EJECUTO, con su frontera ya leida hoy y su destino
+PENDIENTE de leer la nomina.** No se adivina un destino: se deja escrita la frontera.
+
+| origen | pasos | frontera leida hoy | el bloque de Weinberg |
+|---|---:|---|---|
+| `ab_testing_optimizacion` | 15 | **1 a 10 / 11 a 15** | variables a testear **dentro de tu canal nucleo**, grupo de control, confianza estadistica, y escalar las tacticas ganadoras **hasta el punto de saturacion**. **Nota de costura: los pasos 1 a 5 y 6 a 10 dicen la misma prueba A/B dos veces**, y eso es material de la fase 02, no de esta |
+| `analisis_trafico_competitivo` | 8 | **1 a 4 / 5 a 8** | los anuncios que corre la competencia (MixRank, Adbeat), el perfil de audiencia de esos sitios, si esa audiencia encaja, y tests A/B nacidos de esos anuncios |
+| `decision_pivote_perseverar` | 9 | **1 a 4 / 5 a 9** | buscar los clientes genuinamente comprometidos aunque sean pocos, que tienen en comun, si son adoptadores tempranos o valores atipicos, y si el problema es el momento del mercado |
+| `enfoque_motor_unico_crecimiento` | 9 | **1 a 4 / 5 a 9** (ya publicada arriba, **reproducida hoy**) | el canal que gana en el anillo medio, redirigir todo hacia el, no distraerse, y repetir Bullseye cuando se sature |
+| `key_partners_hypothesis` | 14 | **1 a 5 / 6 a 14**, y **el tramo de cola trae DOS sub bloques distinguibles** (6 a 10, meta de traccion y `Critical Path`; 11 a 14, tipos de alianza por cuello de botella). **Si son uno o dos es lectura pendiente, y no la resuelvo adivinando** | el objetivo de traccion, el tipo de alianza que mueve la metrica clave, y rechazar acuerdos atractivos no alineados |
+| `metricas_de_adquisicion_activacion` | 9 | **1 a 5 / 6 a 9** | definir que es una conversion, `CTR`, `CPC` y `CPA` por campana, comparar el costo de adquisicion contra el valor de vida, y usar buscadores para aprender el mensaje |
+| `optimizacion_embudo_get_customers` | 10 | **1 a 5 / 6 a 10** | dedicar recursos solo al canal validado en el anillo medio, pruebas A/B semanales, herramientas de test, tacticas nuevas dentro del canal principal, y otros canales alimentandolo |
+| `coeficiente_viral` | 16 | **ya nombrado arriba como uno de los tres que NO son un simple apendice**: el bloque de Weinberg entra DOS VECES (6 a 11 y 12 a 16) | va con **TOQUE UNICO**: separar y destejer en el mismo acto |
+| `viral_loop_marketing` | 30 | **ya nombrado arriba**: tres libros apilados y repeticion dentro del propio apendice (14 a 17 y 18 a 21) | va con **TOQUE UNICO** |
+
+> **`OP-F-04-COL` y `OP-F-04-HOR` NO SE TOCARON EN ESTA VUELTA, ni un paso**, y sus nominas
+> se midieron hoy contra el grafo (`SALIDA_V28_NOMINA_COL.txt`, **15 nodos, los 15 vivos**;
+> `SALIDA_V28_NOMINA_HOR.txt`, **13 nodos, los 13 vivos**), con sus familias de destino:
+> **Coleman 83 nodos vivos y 68 con fuente unica; Horowitz (trozo *Hard Thing*) 102 y 88.**
+> **El motivo es el mismo que dio la vuelta 27 y no ha cambiado: cada bloque pide leer su
+> nomina de familia entera y decidir por `P.18`, que es lectura y no mecanica.** Y hay uno
+> nuevo: **`OP-F-04-HOR` tiene escrito *va a familia propia*, o sea nodo propio, y eso choca
+> hoy con la tercera hilada del muro** que este mismo dia se midio.
+
 ### LA CONSECUENCIA DE ORDEN, y toca a la fase 02
 
 **SEIS de los 43 ya tienen operacion en otra fase**, y por *fuente primero* esta

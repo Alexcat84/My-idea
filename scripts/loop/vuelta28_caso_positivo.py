@@ -57,6 +57,31 @@ def main():
     print("CASO POSITIVO: %s" % plan["operacion"])
     print("=" * 78)
     todo = True
+
+    # ESQUEMA DE CORTES (el de vuelta27_cortar.py): un bloque sale de su nodo de
+    # origen hacia un miembro. Las tres pruebas son las mismas de la tanda RAC:
+    # el origen ya no declara el libro injertado, el material vive en el destino,
+    # y el origen ya no lo lleva.
+    if "cortes" in plan:
+        for c in plan["cortes"]:
+            origen, huella = c["origen"], c["huella"]
+            destino = c["destino"]["nodo"]
+            print("\n%s pasos %s -> %s   huella %r"
+                  % (origen, c["pasos_que_salen"], destino, huella))
+            d = nodos.get(origen)
+            fuente = (d or {}).get("fuente") or ""
+            ok0 = d is not None and fuente == c["fuente_queda"]
+            todo = comprobar("%s declara solo %r" % (origen, c["fuente_queda"]),
+                             ok0, "fuente de hoy: %r" % fuente) and todo
+            ok1 = d is not None and huella.lower() not in texto_pasos(d).lower()
+            todo = comprobar("%s ya no lleva la huella" % origen, ok1) and todo
+            t = nodos.get(destino)
+            ok2 = t is not None and vivo(t) and huella.lower() in texto_pasos(t).lower()
+            todo = comprobar("%s si la lleva" % destino, ok2) and todo
+        print("\n" + "=" * 78)
+        print("RESULTADO: %s" % ("TODO PASA" if todo else "HAY PRUEBAS QUE CAEN"))
+        return 0 if todo else 1
+
     for m in plan["mudanzas"]:
         huella = m["huella"]
         desde = m["desde"]

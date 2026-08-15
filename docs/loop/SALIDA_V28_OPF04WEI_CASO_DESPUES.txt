@@ -1,0 +1,35 @@
+CASO POSITIVO: OP-F-04-WEI
+==============================================================================
+
+plan_de_adquisicion_acquire pasos [8, 9, 10, 11, 12] -> bullseye_framework   huella 'contactar a diez blogs de tu nicho'
+  [PASA] plan_de_adquisicion_acquire declara solo "The Startup Owner's Manual - Blank, Steve"
+         fuente de hoy: "The Startup Owner's Manual - Blank, Steve"
+  [PASA] plan_de_adquisicion_acquire ya no lleva la huella
+  [PASA] bullseye_framework si la lleva
+
+earned_vs_paid_media pasos [5, 6, 7, 8] -> publicidad_offline_pruebas_locales   huella 'prospecto de audiencia'
+  [PASA] earned_vs_paid_media declara solo "The Startup Owner's Manual - Steve Blank"
+         fuente de hoy: "The Startup Owner's Manual - Steve Blank"
+  [PASA] earned_vs_paid_media ya no lleva la huella
+  [PASA] publicidad_offline_pruebas_locales si la lleva
+
+fit_problema_solucion pasos [4, 5, 6] -> fases_traccion_producto   huella 'canales de tracci'
+  [PASA] fit_problema_solucion declara solo 'Value Proposition Design'
+         fuente de hoy: 'Value Proposition Design'
+  [PASA] fit_problema_solucion ya no lleva la huella
+  [PASA] fases_traccion_producto si la lleva
+
+sales_funnel_get_keep_grow pasos [5, 6, 7, 8, 9] -> clasificacion_leads_abc   huella 'leads tipo C a marketing'
+  [PASA] sales_funnel_get_keep_grow declara solo "The Startup Owner's Manual - Blank, Steve"
+         fuente de hoy: "The Startup Owner's Manual - Blank, Steve"
+  [PASA] sales_funnel_get_keep_grow ya no lleva la huella
+  [PASA] clasificacion_leads_abc si la lleva
+
+sales_funnel_get_keep_grow pasos [10] -> compromiso_linea_tiempo_cliente   huella 'timeline claro de compra'
+  [PASA] sales_funnel_get_keep_grow declara solo "The Startup Owner's Manual - Blank, Steve"
+         fuente de hoy: "The Startup Owner's Manual - Blank, Steve"
+  [PASA] sales_funnel_get_keep_grow ya no lleva la huella
+  [PASA] compromiso_linea_tiempo_cliente si la lleva
+
+==============================================================================
+RESULTADO: TODO PASA
