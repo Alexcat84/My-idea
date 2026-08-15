@@ -125,3 +125,7 @@ fusion nueva sin operacion escrita no se improvisa.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice una regla
 vigente, paras y lo traes. No adivines.
+
+DECISION DEL FUNDADOR (15 ago 2026): parada vista; visto a las tres adjudicaciones del acta 32
+y a la correccion de la celda del 16; cura del patron ordenada: el verificador de mapas y el
+renglon LA TABLA SE IMPRIME, NO SE TECLEA. El credito queda restaurado y la fase 02 sigue.

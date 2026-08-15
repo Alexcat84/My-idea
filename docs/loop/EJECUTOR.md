@@ -23,6 +23,15 @@ lo que diga el encargo.
    estado tras la primera operacion de la propia vuelta). El estado TRAS la
    primera operacion ya es estado intermedio, no apertura, y se cita como
    tal: con el nombre de la operacion que ya lo movio.
+   LA TABLA SE IMPRIME, NO SE TECLEA (15 ago 2026; motivo: las paradas de
+   credito de las vueltas 31 y 32, las dos por celdas manuales en tablas de
+   prosa de docs/plan/ que ningun instrumento validaba: un nombre trunco, un
+   numero de origen en el grupo equivocado). Toda tabla o mapa cuyo
+   contenido exista en un instrumento o en un plan sellado se genera desde
+   el instrumento y se pega entera, con el comando citado al lado. Toda
+   tabla de particion (fila = destino, origenes, motivo) se pasa por
+   scripts/loop/verificar_mapas_destejido.py antes del commit, con su
+   salida citada en el reporte.
 2. EL INSTRUMENTO MANDA (14 ago 2026; motivo: las caidas de las vueltas 15
    y 16 fueron las dos de esta especie). Toda cifra o nombre propio que se
    publique se lee de la salida del instrumento corrido EN ESTA VUELTA. Una
