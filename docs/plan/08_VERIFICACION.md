@@ -524,6 +524,38 @@ cinco cortes. **No se desteje ninguna: solo se declaran.**
 > **Declararla es aplicar la regla; callarla porque el encargo no la nombraba seria la misma
 > omision que esta correccion viene a reparar.**
 
+### LA COLA GANA SU SEGUNDA PUERTA: **LA COLA DEL OBJETO AJENO** (14 ago 2026, decision del fundador)
+
+**Resuelve el pendiente de doctrina que la vuelta 29 midio tres veces: la primera puerta
+dispara con REPETICION** (*una repeticion que un reparto crea dentro de un miembro*), **y
+hay un material distinto que ninguna puerta cazaba: sano, sin gemelo, pero AJENO al
+objeto del nodo donde quedo.** No es un error del reparto (el paso se copio bien, entero
+y textual): es que el paso bien copiado **cayo en el nodo equivocado**, porque la
+frontera que lo puso ahi era la unica publicada y no partia donde el objeto cambia.
+
+> **ENTRA A LA COLA DEL OBJETO AJENO todo nodo donde una medicion declare material SANO,
+> SIN REPETICION, pero AJENO AL OBJETO del nodo que lo contiene.** El disparador no es la
+> repeticion (esa es la primera puerta): es la LECTURA que encuentra un tramo cuyo objeto
+> no es el del resto del nodo.
+
+**LA CURA ES DESTEJIDO ORDINARIO POR `P.18`, COMO OPERACION NUEVA DE LA FASE QUE
+CORRESPONDA, NUNCA PODA.** El tramo ajeno se separa como cualquier bloque apendice: al
+miembro cuyo objeto coincida, o a nodo propio si ninguno coincide. **No se descarta**: es
+material sano, solo esta en el sitio equivocado.
+
+**CADA ENTRADA LLEVA NODO, TRAMO Y LA LECTURA QUE LO HALLO.** Los tres ejemplares que la
+midieron, entrando ya con esta puerta:
+
+| nodo | tramo ajeno | la lectura que lo hallo |
+|---|---|---|
+| `producto_como_servicio_de_acceso` | **pasos 7 y 8** | las tres interfaces de usuario son de la parte de SISTEMAS de Hugos (`01_FUENTES.md`, vuelta 27), y el ultimo mira el modelo desde la economia circular: ninguno de los dos es el objeto del nodo, *reformular el producto como acceso en vez de propiedad* |
+| `evaluacion_balanceada_de_ejecutivos` | **pasos 5 a 11**, de `actualizacion_posiciones_existentes` | el bloque trae dos actos: la conversacion de la degradacion (5 a 11) y la evaluacion del ejecutivo (12 a 19); solo el segundo calza con el objeto del miembro. La frontera publicada era UNA y no partia ahi (acta de la vuelta 29, discutible d1) |
+| `contratar_por_fortaleza` | **pasos 6 a 8**, de `contratacion_experiencia_vs_potencial` | el paso 5 es literal al objeto del miembro; los pasos 6 a 8, promover de adentro contra traer de afuera, son otro objeto que viaja arrimado (acta de la vuelta 29, discutible d11) |
+
+> **Y LA COMPROBACION DE QUE ESTA PUERTA SE USO: al cerrar, ningun tramo declarado como
+> ajeno sigue viviendo dentro del nodo que la lectura senalo.** Si uno sigue ahi, es que
+> el destejido no se ejecuto.
+
 ---
 
 ## EL ERROR DE DEJAR PASAR, **YA TIENE TASA MEDIDA**

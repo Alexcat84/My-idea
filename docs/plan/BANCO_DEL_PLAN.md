@@ -921,3 +921,71 @@ supervision de la IA antes de que `P.18` tuviera numero propio.
 > nodo propio, y el reparto de `OP-F-03` hacia la subfamilia Hugos del nucleo y
 > hacia la familia HUGOS-SISTEMAS (ver la correccion declarada en la nota de
 > `OP-F-03`).
+
+---
+
+## P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE
+
+**Adoptada el 14 ago 2026, decision del fundador.**
+
+> **CUANDO MATERIAL DE DOS O MAS FUENTES DENTRO DE UN NODO REPITE EL MISMO
+> OBJETO, NO VA A NINGUN DESTINO: SE FUNDE EN UN SOLO PROCEDIMIENTO DENTRO DEL
+> NODO.**
+
+**El motivo:** `P.18` decide DONDE VA un bloque cuando su objeto no repite el del
+nodo que lo contiene (a un miembro de la familia, o a nodo propio). Pero cuando el
+bloque repite EL MISMO OBJETO que ya vive en el nodo, `P.18` no tiene pregunta que
+contestar: no hay destino que buscar, porque **el objeto ya esta en casa**. Mandarlo
+a nodo propio fabrica el gemelo exacto del propio donante; forzarlo a un miembro
+ajeno es el encaje que `P.18` punto 3 ya prohibe. **Las dos salidas de `P.18`
+chocaban porque la pregunta no era de `P.18`.**
+
+### LO QUE OBLIGA
+
+| | |
+|---|---|
+| **1** | el material repetido se funde **en un solo procedimiento dentro del nodo**, con el mapa de destejido (cada paso destino declara sus origenes, nada se poda) |
+| **2** | el nodo queda **MULTIFUENTE LEGITIMO**, con la **procedencia declarada por bloque**: de que libro sale cada tramo del procedimiento fundido |
+| **3** | las diferencias entre versiones (una mas completa, un paso que solo una version trae) **se reparten por la tabla de seis motivos de perdida de linea**, igual que cualquier fusion |
+| **4** | el destejido con destino de `P.18` **sigue vigente para el material AJENO al objeto** del nodo: esta regla no lo reemplaza, lo complementa. Un mismo nodo puede tener un bloque que se funde (mismo objeto) y otro que se desteje a otro destino (objeto ajeno) |
+
+**EJEMPLARES: `coeficiente_viral` y `decision_de_vender_startup`.** Los dos traian el
+mismo calculo (K, el precio minimo, la disposicion del equipo) repetido varias veces
+dentro del propio nodo, de mas de un libro. Ninguno tenia destino: los dos se funden.
+
+---
+
+## P.20 UN NODO, UN CORTE
+
+**Adoptada el 14 ago 2026, decision del fundador.**
+
+> **CUANDO UN NODO PERTENECE A DOS OPERACIONES DE DESTEJIDO, NO SE CORTA DOS
+> VECES NI EN ORDEN: LA FRONTERA COMPLETA (TODOS LOS LIBROS) SE PUBLICA COMO
+> REGISTRO UNICO, Y EL CORTE SE EJECUTA UNA VEZ, CITADO POR LAS DOS OPERACIONES
+> CON CORRECCION DECLARADA.**
+
+**El motivo:** el precedente de `fuente primero` (`01_FUENTES.md`) resuelve el orden
+entre decisiones de fuente y destejidos que dependen de ellas, pero no dice que
+pasa cuando el MISMO nodo tiene material de tres libros repartido entre DOS
+operaciones de destejido distintas: cortar dos veces partiria el mismo bloque en
+pedazos incompatibles, y cortar en orden dejaria a la segunda operacion leyendo un
+nodo que la primera ya movio.
+
+### LO QUE OBLIGA
+
+| | |
+|---|---|
+| **1** | la frontera se lee **entera, los tres o mas libros a la vez**, antes de cortar nada |
+| **2** | se publica **como registro unico** (en `01_FUENTES.md`, con el metodo de la tabla de los 14 de Horowitz) |
+| **3** | el corte se ejecuta **UNA sola vez** |
+| **4** | las dos operaciones **citan el mismo corte** con correccion declarada en su nota, en vez de cada una escribir el suyo |
+
+**Y donde `P.19` y `P.18` entran, en el mismo corte:** lo que repite el mismo objeto
+entre los libros **se funde** por `P.19`; lo que es ajeno al objeto del nodo **se
+desteje con destino** por `P.18`. Un nodo de dos operaciones puede necesitar las dos
+reglas a la vez, cada una sobre su propio tramo.
+
+**EJEMPLAR: `viral_loop_marketing`** (30 pasos, tres libros, pertenece a
+`OP-F-04-COL` y a `OP-F-04-WEI`). Primero se publica la frontera de los tres libros
+como registro unico; en el corte, el material del promotor que repite entre 9 a 13,
+14 a 17 y 18 a 21 se funde por `P.19`, y lo ajeno al objeto se desteje por `P.18`.

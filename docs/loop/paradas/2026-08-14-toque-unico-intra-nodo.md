@@ -98,3 +98,7 @@ pondera la casa.
    HOR. Con eso cierra la fase 01 y el modo continuo sigue a la fase 02.
 3. `PROMPT_SIGUIENTE.md` queda VACIO a proposito: el bucle no debe correr hasta que la
    doctrina este escrita.
+
+DECISION DEL FUNDADOR (14 ago 2026): la repeticion interna se funde con multifuente
+declarada; un nodo un corte; la cola del objeto ajeno; y la apertura se mide antes de
+la primera operacion. La fase 01 va a su cierre.

@@ -18,6 +18,11 @@ lo que diga el encargo.
    describa el estado al cerrar la vuelta se RECOMPUTA AL CIERRE si algo de
    la propia vuelta pudo haberla movido: medir temprano y publicar tarde sin
    remedir es la misma especie de caida que citar sin mirar.
+   LA APERTURA SE MIDE ANTES DE LA PRIMERA OPERACION (14 ago 2026; motivo:
+   la caida de la vuelta 29, donde la cifra citada como apertura era el
+   estado tras la primera operacion de la propia vuelta). El estado TRAS la
+   primera operacion ya es estado intermedio, no apertura, y se cita como
+   tal: con el nombre de la operacion que ya lo movio.
 2. EL INSTRUMENTO MANDA (14 ago 2026; motivo: las caidas de las vueltas 15
    y 16 fueron las dos de esta especie). Toda cifra o nombre propio que se
    publique se lee de la salida del instrumento corrido EN ESTA VUELTA. Una
