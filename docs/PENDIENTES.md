@@ -15,7 +15,7 @@ caería sobre un texto que va a cambiar (banco 9.4 y 9.9).
 | nodo a operar | pares que libera | puestos |
 |---|---:|---|
 | **`voz_del_cliente_voc`** | **3** | 724, 755, 827 |
-| **`producto_minimo_viable`** | **2** | 592, 830 |
+| ~~**`producto_minimo_viable`**~~ | ~~**2**~~ | ~~592, 830~~ **LIBERADOS EL 15 ago 2026: ver la correccion declarada al final de esta seccion** |
 | `lienzo_modelo_negocio` | 1 | 784 |
 | `ab_testing_optimizacion` + `split_testing_experimentos_ab` | 1 | 738 |
 | `preguntas_ipo_dolor_cliente` | 1 | 798 |
@@ -38,8 +38,35 @@ son grandes y por eso entran a muchos pares.
 
 | cuenta | qué significa | hoy | lista |
 |---|---|---:|---|
-| **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | **13** | 592, 599, 724, 738, 755, 784, 798, 827, 830, 831, 835, 851, **494** |
-| **EN COLA** | el texto va a cambiar, se relee igual | **19** | los trece de arriba **más 361, 374, 386, 392, 492 y 915** |
+| **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | ~~**13**~~ **10** | ~~592,~~ 599, 724, 738, 755, 784, 798, 827, ~~830,~~ 831, 835, 851, ~~**494**~~ |
+| **EN COLA** | el texto va a cambiar, se relee igual | ~~**19**~~ **16** | los ~~trece~~ **diez** de arriba **más 361, 374, 386, 392, 492 y 915** |
+
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 33 del bucle). TRES CONGELADOS SALEN DE LA LISTA, y
+> las cifras viejas se quedan tachadas y no borradas.** El destejido de `producto_minimo_viable`
+> (`OP-D-01` movimiento 1, vuelta 32: de 22 pasos a **6** y de 10 condiciones a **5**) **tumbo la
+> causa de los tres**, y el volteo se ejecuto el 15 ago 2026 por el banco `9.10` con la
+> adjudicacion del fundador:
+>
+> | puesto | contra que nodo | antes | ahora | arreglo que queda |
+> |---:|---|:---:|:---:|---|
+> | **494** | `principio_calidad_mvp` | **A** | **C** | **ENLACE MUTUO, dos aristas** (banco `9.22`, tercer ejemplar), **sin poner**: es fase 04 |
+> | **592** | `mvp_catalogo_tecnicas` | **B** | **D** | **ARISTA QUE FALTA** hacia `mvp_catalogo_tecnicas`, sin poner |
+> | **830** | `prueba_mvp_alta_fidelidad` | **B** | **D** | **ARISTA QUE FALTA** hacia `prueba_mvp_alta_fidelidad`, sin poner |
+>
+> **`producto_minimo_viable` sale entero del orden de la cirugia: no le queda ningun par
+> congelado.** Los que siguen congelados por `voz_del_cliente_voc` (**724**, **755**, **827**)
+> **no se mueven aqui**, y su suerte se decide en `OP-D-02`.
+>
+> **La cuenta EN COLA baja de 19 a 16 por los mismos tres**, y es aritmetica de la propia tabla
+> (10 congelados mas los 6 de cola sin congelar). Y se dice lo que esta correccion **no** hace:
+> **no toca el `851` ni el `835`**, que dependen de otras cirugias.
+>
+> **DISCREPANCIA DECLARADA Y NO RESUELTA COPIANDO, y es previa a esta vuelta:** el parrafo de la
+> *Actualizacion del 13 ago 2026*, dos lineas mas abajo, **ya decia `Cola a 16`** cuando la tabla
+> de arriba decia **19**. Que mi correccion aterrice tambien en 16 **es una coincidencia
+> aritmetica, no una confirmacion**: las dos cifras cuentan cosas distintas y ninguna de las dos
+> se recomputo hoy. **Queda anotado para quien audite; no lo arreglo yo, porque arreglarlo pide
+> recontar la cola y eso es trabajo de la fase I, cerrada.**
 
 **Actualización del 13 ago 2026**: el **915** entra en cola sin congelar, y es el primero donde el test de POSICIÓN y el de DEPENDENCIA se contradicen (ver informe §37.1). Cola a **16**.
 
@@ -2562,9 +2589,17 @@ lo averiado que este: es **cuantos pares desbloquea su destejido.**
 
 | par | contra que nodo | clase hoy |
 |---:|---|:---:|
-| **494** | `principio_calidad_mvp` | **A** |
-| **592** | `mvp_catalogo_tecnicas` | B |
-| **830** | `prueba_mvp_alta_fidelidad` | B |
+| **494** | `principio_calidad_mvp` | ~~**A**~~ **C** |
+| **592** | `mvp_catalogo_tecnicas` | ~~B~~ **D** |
+| **830** | `prueba_mvp_alta_fidelidad` | ~~B~~ **D** |
+
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 33): LA COLUMNA DECIA *clase hoy* Y HABIA DEJADO DE
+> SER HOY.** Las tres clases se voltearon por el banco `9.10` tras el destejido, y **el encabezado
+> `(22 pasos)` de esta seccion tambien envejecio: el nodo tiene SEIS pasos desde el 15 ago 2026**.
+> La cabecera vieja se deja escrita porque describe el estado que motivo el orden de la cirugia.
+> **El orden interno que este bloque prescribia se cumplio tal cual**: se destejio
+> `producto_minimo_viable`, se midio que `principio_calidad_mvp` ya no tenia costura que destejer,
+> y **solo entonces** se releyeron el 494, el 592 y el 830.
 
 > **VA PRIMERA, y no solo por la cuenta.** El **494 es la CURA ACOPLADA MAYOR**:
 > los dos nodos estan costurados, asi que es un **acto de tres**, destejer uno,

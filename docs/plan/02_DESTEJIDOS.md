@@ -82,7 +82,7 @@ arregle** (banco 9.24).
 
 | orden | operacion | el nodo ancla | congelados que libera | destejidos | nodos en la decision |
 |---:|---|---|---:|---:|---:|
-| **1** | `OP-D-01` | `producto_minimo_viable` | **3** (494, 592, 830) | **2** | 2 |
+| **1** | `OP-D-01` | `producto_minimo_viable` | ~~**3** (494, 592, 830)~~ **3 LIBERADOS EL 15 ago 2026: 494 a `C`, 592 a `D`, 830 a `D`** | **2** | 2 |
 | **2** | `OP-D-02` | `voz_del_cliente_voc` | **3** (724, 755, 827) | 1 | 4 |
 | **3** | `OP-D-03` | `ab_testing_optimizacion` | **2** (738, 1061) | **3** | **6** |
 | 4 | `OP-D-04` | `brainstorming_divergente` | 0 | 1 mas la decision de fuente | **7** |
@@ -127,9 +127,15 @@ juicio y pasa a ser **una lista de borrados**.
 - del destejido del pariente: **decidir si conserva la narracion de LA CALIDAD
   (pasos 1 a 5) o la del CONJUNTO MINIMO (pasos 11 a 14)**
 
-> **Por eso el par 494 esta CONGELADO por dependencia directa:** si conserva la
+> ~~**Por eso el par 494 esta CONGELADO por dependencia directa:** si conserva la
 > narracion de la calidad, el par **deja de repetir**; si conserva la del conjunto
-> minimo, **sigue repitiendo**. **No se puede saber antes de la cirugia.**
+> minimo, **sigue repitiendo**. **No se puede saber antes de la cirugia.**~~
+>
+> **RESUELTO EL 15 ago 2026 (vuelta 33), y la prediccion acerto:** la cirugia
+> **conservo la narracion de la CALIDAD** (`principio_calidad_mvp` quedo en siete
+> pasos, con el bloque 11 a 14 ya llevado por `OP-F-03`), **el par dejo de
+> repetir**, y el 494 paso de `A` a **`C`**, sano con figura por el banco `9.22`.
+> El congelamiento queda levantado. Detalle en el movimiento 3, mas abajo.
 
 **PRECEDENTE EXACTO DE LA FORMA**: el puesto **341**, `blueprint_de_experiencia`
 contra `customer_journey_mapping`, donde los dos estaban costurados y el solape era
@@ -293,7 +299,12 @@ repetir*. **La conserva.**
 contamina todos los pares en los que entra, porque el veredicto se emite contra un texto que va
 a cambiar* (banco 9.4, el TOQUE UNICO). **El texto ya cambio y ya es estable.**
 
-| puesto | contra quien | lo que el otro trae y el emblema sigue sin decir, medido contra sus SEIS pasos de hoy | clase que sostengo |
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 33): LA COLUMNA SE LLAMABA *clase que sostengo* Y
+> HOY SE LLAMA *clase VOLCADA*.** Cuando esta tabla se escribio, las dos clases estaban leidas y
+> sin escribir en el archivo; **el 15 ago 2026 se volcaron las dos por el banco `9.10`**, y el
+> archivo dice hoy lo que esta tabla sostenia. La columna se deja con su nombre viejo tachado.
+
+| puesto | contra quien | lo que el otro trae y el emblema sigue sin decir, medido contra sus SEIS pasos de hoy | ~~clase que sostengo~~ **clase VOLCADA el 15 ago 2026** |
 |---:|---|---|---|
 | **592** | `mvp_catalogo_tecnicas` | **la ESCALERA DE COSTO**: empezar por el MVP mas barato (hoja de datos, folleto, storyboard), subir en sofisticacion solo si lo primero promete, y usar herramientas a mano antes de pagar produccion profesional. **Ninguno de los seis pasos del emblema nombra el coste, el tipo de prototipo ni la herramienta.** Comparten el arranque (identificar la hipotesis critica) | **`D`, sano, con ARISTA QUE FALTA** hacia `mvp_catalogo_tecnicas` |
 | **830** | `prueba_mvp_alta_fidelidad` | **el AISLAMIENTO DE LA PRUEBA**: numero limitado de clientes invitados, llamada a la accion clara, cuantas visitas antes del primer uso, cuantos lo recomiendan y que tan rapido, y evitar publicidad, prensa o demostraciones publicas. **Ninguno de los seis pasos lo dice.** El solape (mostrar solo a los earlyvangelists) **era una de las ordenes que el emblema repetia CUATRO veces y ahora vive en UNA** | **`D`, sano, con ARISTA QUE FALTA** hacia `prueba_mvp_alta_fidelidad` |
@@ -306,19 +317,77 @@ a cambiar* (banco 9.4, el TOQUE UNICO). **El texto ya cambio y ya es estable.**
 
 #### LO QUE ESTA VUELTA **NO** ESCRIBE, y por que
 
-> **LAS TRES CLASES NUEVAS NO SE ESCRIBEN EN `INTRA_DOMINIO_VEREDICTOS.jsonl` EN ESTA VUELTA, y
+> ~~**LAS TRES CLASES NUEVAS NO SE ESCRIBEN EN `INTRA_DOMINIO_VEREDICTOS.jsonl` EN ESTA VUELTA, y
 > no es timidez: es la letra de la propia operacion.** El campo `preservar` de `OP-D-01`, en su
 > correccion declarada del 15 ago 2026, dice: *si la relectura diera par nuevo, **entra por el
 > recomputo (banco 9.10)**, no se decide aqui de antemano*. **Volcarlas movería el marcador
 > publicado** (`A 583, B 89, C 7, D 2709` medido hoy al abrir esta vuelta) **y obligaria a
 > barrer en el mismo acto todas las tablas derivadas que citan esos tres numeros**, que es
 > exactamente lo que el 9.10 exige y lo que ninguna operacion de la fase 02 tiene escrito.
-> **Las tres lecturas quedan publicadas aqui con su evidencia, y la escritura va al recomputo.**
+> **Las tres lecturas quedan publicadas aqui con su evidencia, y la escritura va al recomputo.**~~
+
+#### LO QUE LA VUELTA 33 **SI** ESCRIBIO: EL VOLCADO, POR EL CARRIL QUE FALTABA
+
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 33). EL PARRAFO DE ARRIBA SE QUEDA ENTERO Y
+> TACHADO: describia bien la situacion del 15 ago por la manana, y lo que cambio no fue la
+> lectura sino que APARECIO EL CARRIL.** El `preservar` mandaba las tres clases *al recomputo
+> (banco 9.10)* y **ninguna operacion de la fase 02 lo tenia escrito**; eso quedo publicado como
+> pendiente de doctrina, y **el fundador lo adjudico: el `9.10` ES el mecanismo**, sin operacion
+> nueva. Con esa letra, esta vuelta **volco las tres y barrio en el mismo acto**.
+>
+> | puesto | par | antes | ahora | el arreglo que queda escrito |
+> |---:|---|:---:|:---:|---|
+> | **494** | `principio_calidad_mvp` contra `producto_minimo_viable` | **A** | **C** | **ENLACE MUTUO, dos aristas** (banco `9.22`, **tercer ejemplar** del archivo) |
+> | **592** | `mvp_catalogo_tecnicas` contra `producto_minimo_viable` | **B** | **D** | **ARISTA QUE FALTA** hacia `mvp_catalogo_tecnicas` |
+> | **830** | `producto_minimo_viable` contra `prueba_mvp_alta_fidelidad` | **B** | **D** | **ARISTA QUE FALTA** hacia `prueba_mvp_alta_fidelidad` |
+>
+> **EL MARCADOR, RECOMPUTADO CON EL INSTRUMENTO DE LA CASA Y NO TECLEADO** (`python
+> scripts/corregir_veredicto.py docs/loop/_lote_v33.jsonl`, salida
+> `docs/loop/SALIDA_V33_MARCADOR.txt`):
+>
+> | | apertura de la vuelta 33 | tras el volcado |
+> |---|---:|---:|
+> | n | 3.388 | **3.388** |
+> | A | 583 | **582** |
+> | B | 89 | **87** |
+> | C | 7 | **8** |
+> | D | 2.709 | **2.711** |
+>
+> **La cifra esperada se escribio ANTES de correr el instrumento** (`SALIDA_V33_LOTE.txt`, ultima
+> linea: *n 3388, A 582, B 87, C 8, D 2711*) **para que la comprobacion valiera algo**, con la
+> orden de PARAR si daba otra cosa. **Dio exactamente eso.**
+>
+> **LAS TRES RAZONES SE REESCRIBIERON CON LA VIEJA DENTRO, copiada por maquina y no transcrita**
+> (`scripts/loop/vuelta33_volcado_910.py`, que **aborta si la razon vieja no queda literalmente
+> dentro de la nueva**): 865, 1.359 y 962 caracteres de razon vieja conservados.
+>
+> **EL BARRIDO DEL `9.10`, EN EL MISMO ACTO** (`scripts/loop/vuelta33_barrido_910.py`, salida
+> `docs/loop/SALIDA_V33_BARRIDO_910.txt`, **77 candidatos listados sin ocultar ninguno**). Lo
+> corregido, por documento:
+>
+> | documento | que se corrigio |
+> |---|---|
+> | `docs/INTRA_DOMINIO_INFORME.md` | el marcador de `100.1`, la tasa por dominio de `100.2` (fila `core`, la unica que se mueve) y el *total de A en el archivo* de `100.6` |
+> | `docs/PENDIENTES.md` | la tabla de congelados (13 a **10**), la de cola (19 a **16**), la de pares que libera `producto_minimo_viable` y la de *clase hoy* de los tres |
+> | `docs/plan/RECOMPUTO_3388.md` | **el instrumento se volvio a correr entero** y se publico el delta: A 583 a **582**, nodos con A 854 a **852**, componentes 335 a **334**, cerradas 280 a **279**. **Las cuatro comprobaciones vuelven a dar OK** |
+> | `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` | **reescrito por el propio instrumento**: muere la componente de tamano 2 de `principio_calidad_mvp` con `producto_minimo_viable` |
+> | `docs/plan/02_DESTEJIDOS.md` | esta seccion, la tabla del orden, el bloque del 494 congelado y la tabla del movimiento 4 |
+>
+> **Y LO QUE EL BARRIDO **NO** TOCO, dicho con su motivo y no callado:** las **trece** filas de
+> checkpoints anteriores del informe que citan `core` con **A 344**, y las salidas viejas de
+> `docs/loop/`. **Cada una es la foto de su propio corte**, y reescribirlas fabricaria corridas
+> que nunca existieron. **Queda como PENDIENTE DE DOCTRINA: ninguna pagina dice hasta donde atras
+> alcanza el barrido del `9.10`.**
+>
+> **LAS TRES ARISTAS SIGUEN SIN PONERSE**, y eso no cambia: el campo `aristas_nuevas` de
+> `OP-D-01` sigue **vacio** y los enlaces son la **fase 04**. Lo que esta vuelta cerro es la
+> CLASE, no el CABLEADO.
 
 > **LAS TRES ARISTAS TAMPOCO SE PONEN**, por el mismo motivo de letra: el campo `aristas_nuevas`
 > de `OP-D-01` esta **VACIO**, y los enlaces son la **fase 04** del indice, que va despues de
 > los destejidos y de las fusiones. **Quedan declaradas aqui, con su sentido y su motivo, para
-> que la fase 04 las encuentre escritas y no las tenga que redescubrir.**
+> que la fase 04 las encuentre escritas y no las tenga que redescubrir.** **(SIGUE VIGENTE AL 15
+> ago 2026, vuelta 33: el volcado de clases NO puso ninguna arista.)**
 
 ---
 

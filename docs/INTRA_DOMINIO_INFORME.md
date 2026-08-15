@@ -7485,7 +7485,7 @@ pares quedo bloqueada. **El checkpoint de los 900 es el proximo.**
 | nodo costurado | pares que bloquea | puestos |
 |---|---:|---|
 | `voz_del_cliente_voc` | **3** | 724, 755, **827** |
-| `producto_minimo_viable` | **2** | 592, **830** |
+| ~~`producto_minimo_viable`~~ | ~~**2**~~ **0** | ~~592, **830**~~ **[LIBERADOS EL 15 ago 2026 por el volteo del 9.10: 592 a `D`, 830 a `D`]** |
 | `lienzo_modelo_negocio` | 1 | 784 |
 | los dos de A/B | 1 | 738 |
 | `preguntas_ipo_dolor_cliente` | 1 | 798 |
@@ -7511,7 +7511,7 @@ montaje del CRM.
 |---:|---|---|
 | **825** | la vara (9.6.1) | el hijo trae el procedimiento de crear mercado: **CONTINUA**, D |
 | **827** | la posicion del solape (9.9) | el solape toca juntura **por los dos lados**: **bloquea**, B |
-| **830** | la posicion del solape (9.9) | el solape es una orden que el emblema **repite cuatro veces**: **bloquea**, B |
+| **830** | la posicion del solape (9.9) | ~~el solape es una orden que el emblema **repite cuatro veces**: **bloquea**, B~~ **CORREGIDO EL 15 ago 2026: tras el destejido esa orden vive en UN solo paso y el nodo ya no tiene junturas. Releido: CONTINUA, `D`, con arista que falta** |
 | 829 | ninguna, lectura directa | programa contra pieza: **D** |
 
 > **Antes de que las dos reglas existieran, estos cuatro habrian sido cuatro
@@ -7569,7 +7569,7 @@ necesitan **cura acoplada**: destejido y fusion en el mismo acto.
 
 | causa | regla | ejemplares |
 |---|---|---|
-| el solape **toca la juntura** | banco 9.9 | 724, 755, 784, 798, 827, 830, 831, 599, 738 |
+| el solape **toca la juntura** | banco 9.9 | 724, 755, 784, 798, 827, ~~830,~~ 831, 599, 738 **[el 830 sale el 15 ago 2026: el destejido le quito las junturas]** |
 | el nodo va a **cura acoplada** | esta seccion | **835** |
 | **ninguna**: el solape cae en un bloque que sobrevive | banco 9.9 | 823, 834, **344** |
 
@@ -7582,7 +7582,7 @@ necesitan **cura acoplada**: destejido y fusion en el mismo acto.
 | nodo a operar | pares que libera |
 |---|---:|
 | `voz_del_cliente_voc` | **3** (724, 755, 827) |
-| `producto_minimo_viable` | **2** (592, 830) |
+| ~~`producto_minimo_viable`~~ | ~~**2** (592, 830)~~ **0** **[LIBERADOS EL 15 ago 2026 por el volteo del 9.10: 592 a `D`, 830 a `D`]** |
 | `lienzo_modelo_negocio` | 1 (784) |
 | `ab_testing_optimizacion` + `split_testing_experimentos_ab` | 1 (738) |
 | `preguntas_ipo_dolor_cliente` | 1 (798) |
@@ -16306,10 +16306,28 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 | | |
 |---|---:|
 | **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
-| **A** | **583** (17,2 %) |
-| **B** | 89 |
-| **C** | 7 |
-| **D** | **2.709** (80,0 %) |
+| **A** | ~~**583** (17,2 %)~~ **582**, ver la correccion declarada debajo |
+| **B** | ~~89~~ **87** |
+| **C** | ~~7~~ **8** |
+| **D** | ~~**2.709** (80,0 %)~~ **2.711** |
+
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 33 del bucle). LAS CIFRAS VIEJAS SE QUEDAN
+> TACHADAS Y NO BORRADAS: son el marcador del checkpoint del 13 ago y fueron correctas ese dia.**
+> **`n` NO SE MUEVE: sigue en 3.388**, y por eso el marcador viejo no se distingue del vigente a
+> simple vista, que es justo lo que el banco `9.10` dice de las tablas que envejecen.
+>
+> **TRES VEREDICTOS SE VOLTEARON EL 15 ago 2026**, adjudicado por el fundador con el `9.10` como
+> mecanismo, tras el destejido del emblema `producto_minimo_viable` (`OP-D-01`, vuelta 32):
+>
+> | puesto | par | antes | ahora | por que |
+> |---:|---|:---:|:---:|---|
+> | **494** | `principio_calidad_mvp` contra `producto_minimo_viable` | **A** | **C** | el unico apoyo de la A eran *los pasos 11 al 14 del primero*, **y esos pasos ya no existen**; queda la vara en los dos sentidos, banco `9.22`, **tercer ejemplar** |
+> | **592** | `mvp_catalogo_tecnicas` contra `producto_minimo_viable` | **B** | **D** | cayo la causa del congelamiento (TOQUE UNICO, `9.4`): el texto ya cambio y es estable |
+> | **830** | `producto_minimo_viable` contra `prueba_mvp_alta_fidelidad` | **B** | **D** | la misma causa caida; el solape ya no toca juntura porque **no quedan junturas** |
+>
+> **Recomputado con el instrumento de la casa** (`python scripts/corregir_veredicto.py
+> docs/loop/_lote_v33.jsonl`, salida en `docs/loop/SALIDA_V33_MARCADOR.txt`): **n 3.388, A 582,
+> B 87, C 8, D 2.711, tasa de A 17,2 por ciento**, sin altas ni bajas.
 
 Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 3.301-3.388
 (comando `python scripts/recomputar_marcador.py 3388`). Las tres A son todas de
@@ -16319,7 +16337,7 @@ Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 
 
 | dominio | n | A | tasa |
 |---|---:|---:|---:|
-| core | 1.445 | 344 | 23,8 % |
+| core | 1.445 | ~~344~~ **343** | ~~23,8 %~~ **23,7 %** |
 | health_safety | 192 | 45 | 23,4 % |
 | quality | 844 | 126 | 14,9 % (CERRADO) |
 | environmental | 170 | 29 | 17,1 % |
@@ -16331,6 +16349,28 @@ Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 
 | **seguridad_digital** | **27** | **3** | **11,1 % (CERRADO, dominio pequeno, tasa con cautela)** |
 
 Suma 3.388, calza con el total del archivo. Los diez dominios del catalogo estan cribados.
+
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 33): LA FILA DE `core` SE MOVIO, y solo esa.** Los
+> tres veredictos volteados por el `9.10` (494, 592, 830) **son los tres de `core`**, asi que
+> **los otros nueve dominios quedan identicos al digito**. Medido hoy, dominio por dominio
+> (`docs/loop/SALIDA_V33_TASA_DOMINIO.txt`):
+>
+> | | n | A | tasa | B | C | D |
+> |---|---:|---:|---:|---:|---:|---:|
+> | `core` **antes** (13 ago) | 1.445 | **344** | **23,8 %** | 87 | 7 | 1.007 |
+> | `core` **hoy** (15 ago) | 1.445 | **343** | **23,7 %** | **85** | **8** | **1.009** |
+>
+> **La suma sigue siendo 3.388** y `n` de `core` sigue siendo 1.445: **lo que cambio es el
+> reparto, no el censo.**
+>
+> **LO QUE ESTA CORRECCION NO HACE, y va dicho porque callarlo seria peor que no hacerlo.**
+> **Contadas hoy, quedan TRECE filas mas** en este informe que citan `core` con **1.445 pares y A
+> 344**, todas de checkpoints anteriores (`99.2` corte 3.300, y las de los tramos 156-1600 en
+> adelante). **NO SE REESCRIBEN**, y el motivo es que cada una es la foto de **su propio corte**:
+> reescribirlas fabricaria corridas que nunca existieron. **Queda anotado como PENDIENTE DE
+> DOCTRINA:** ninguna pagina dice hasta donde atras alcanza el barrido del `9.10` cuando la cifra
+> volteada vivia ya en checkpoints cerrados y fechados. **Lo que si se corrige es toda tabla que
+> se presenta como el estado VIGENTE del archivo**, y esas son las dos de la seccion 100.
 
 ### 100.3 RACHAS DE 0,0 % RECOMPUTADAS SOBRE EL ARCHIVO ENTERO (TAREA 1.1, verificacion propia)
 
@@ -16392,7 +16432,11 @@ equivalente. Detalle completo con cita de cada A y cada discutible en `docs/loop
 27 al cierre del checkpoint anterior, +1 esta vuelta (el 3.363, `seguridad_digital`, primera fusion
 mutua del dominio, criterio de la vuelta 7 aplicado y citado en `docs/loop/REPORTE.md`). Reparto
 por dominio: `quality` 25, `franquicias` 1, `health_safety` 1, `seguridad_digital` 1.
-`risk_management` aporta cero. Total de A en el archivo: 583.
+`risk_management` aporta cero. ~~Total de A en el archivo: 583.~~ **CORRECCION DECLARADA (15 ago
+2026, vuelta 33): el total de A en el archivo es 582**, porque el **494** paso de `A` a `C` en el
+volteo del `9.10` de esa vuelta (ver la correccion de la seccion 100.1). **El contador de fusiones
+mutuas NO se mueve y sigue en veintiocho:** el 494 no era una fusion mutua, y ninguna de las
+veintiocho esta entre los tres volteados.
 
 ### 100.7 VERIFICACION DE DISCUTIBLES (fija desde ahora, SEGUNDA VEZ CONSECUTIVA QUE PASA)
 
