@@ -6910,3 +6910,240 @@ reservado se toco: cero nodos en la parada, cero merges, el `.env` fuera del rep
 `docs/loop/PARA_ALEXIS.md` escrito con el motivo, el estado exacto, las decisiones que se
 piden y como retomar. `docs/loop/PROMPT_SIGUIENTE.md` VACIADO, como manda la seccion 4 de
 `AUDITOR.md`.
+
+---
+
+# ACTA DE LA VUELTA 32 DEL AUDITOR (15 ago 2026, Fable 5). EL REPORTE VERIFICADO ENTERO Y AL DIGITO, LA CIEGA COINCIDE 15 DE 15 EN EL FONDO, LOS TRES PENDIENTES DE DOCTRINA ADJUDICADOS POR LETRA CITABLE, Y PARADA DE CREDITO: SEGUNDA TANDA SEGUIDA CON CAIDA DE CIFRA PUBLICADA
+
+## 1. VERIFICACION, todo por corrida propia de hoy
+
+**Git:** cinco commits de trabajo de `ec6eefa4` a `c0cc10b3`, cero merges, `git diff --stat`
+da **59 ficheros, 4.855 insertadas, 128 borradas**, exacto contra el reporte. La apertura
+`38a0a321` esta commiteada antes de la primera operacion, con su salida dentro.
+
+**El instrumento del estado** (`vuelta31_estado.py`, corrido hoy por mi): **cada fila de la
+columna CIERRE reproduce identica**. Marcador **3.388 / A 583 / B 89 / C 7 / D 2.709**, cero
+huecos, cero duplicados, cero clases fuera; grafo **3.853 / 3.853 / 3.539 / 314**; enlaces
+**16.848 / 15**; familias **72 / 93 / 111 / 75 / 47**; operaciones **71 todas LISTA, 0 rotas**;
+inventario **672**; indice rojo **18 / 0**; fronteras COL **14 de 15**; nomina HOR **14** con
+`principio_calidad_mvp` el ultimo; nota HOR **8.536**.
+
+**Los dos nodos tocados, medidos en el fichero:** `producto_minimo_viable` **6 pasos y 5
+condiciones**; `principio_calidad_mvp` **7 pasos**. `dataset/nodos` del diff son esos dos y
+ninguno mas.
+
+**Los registros de la TAREA 1:** `investigar.json` **NO EXISTE**; `conexion_personal_emocional`
+**5 pasos** Coleman; `investigar_datos_cliente` **11 pasos** Coleman; la fila vieja de
+`08_VERIFICACION.md` **tachada y no borrada** con la corregida debajo (**UN destino**); el plan
+sellado `PLAN_V31_OPF04_COL.json` declara los **dos cortes con dos destinos** tal como el
+reporte los cita; `05_SANEO.md` linea 660 y `00_INDICE.md` linea 102 dicen hoy lo que el
+reporte cita; la nota de `OP-D-01` con el `preservar` corregido tachado y la correccion
+Hugos a Horowitz; la nota de `OP-D-02` readjudicada con `tipo` y `preservar` intactos.
+
+**La fase 01 re-cerrada:** las DOS corridas de saldo reproducidas al digito por mi
+(`vuelta30_saldo_opf04.py`: **14 / 12 / 1 / 1, LA TANDA SIGUE PARCIAL**;
+`vuelta32_saldo_opf04.py`: **14 / 12 / 2 / 0, LA TANDA ESTA ENTERA**), la diferencia es la
+entrada del 14vo y nada mas.
+
+**Las guardas, re-corridas enteras:** ciclo de Gate 0 completo con **`GATE 0: OK`** y el
+derivado **byte igual a HEAD** al cerrar el ciclo; motor **24 de 24**; web **80 ficheros,
+1.030 pasadas, 3 saltadas**; `tsc --noEmit` **cero lineas**. El instrumento de costura
+re-corrido: **51,2 contra 80 y 0,0 contra 44, ninguna senal dispara** (el emblema 50,3 y 0,0).
+
+**El archivo de veredictos:** los **207** cuya razon nombra ARISTA QUE FALTA son **D, los
+207**; `494` sigue **A**, `592` y `830` siguen **B**, `724`, `755` y `827` siguen **B**: las
+tres clases nuevas **NO se volcaron**, tal como el reporte declara. **Sin arista en ninguno de
+los dos sentidos** en los tres pares, medido por mi sobre `nodos_previos` y `nodos_siguientes`.
+
+**La parada de `OP-D-02`, remedida entera:** pares posibles **6, con veredicto 3** (386, 526,
+788, los tres A), **sin veredicto los tres que el reporte nombra**; cierre transitivo de las A
+cubre **4 de 4**; `superviviente` en **null**; el censo por nombre reproducido con su
+instrumento: **9 vivos, 4 falsos positivos del substring, 5 reales, 2 fuera de la nomina**.
+
+## 2. LA RELECTURA CIEGA, con su limite declarado
+
+**El limite primero:** para verificar el reporte tuve que leerlo, asi que la ceguera de esta
+vuelta es la del GRAFO: imprimi los textos de los nodos (los 22 pasos viejos y los 6 de hoy
+del emblema, los 10 viejos y los 7 de hoy del 14vo, los contrarios de 592 y 830, las razones
+enteras de los tres A del acto) y adjudique sobre ellos ANTES de destapar las razones
+detalladas de `02_DESTEJIDOS.md`, que no habia leido.
+
+**Los quince discutibles: COINCIDO EN EL FONDO EN LOS QUINCE.** Por numero:
+
+- **d1** (`P.19` y no `P.18`): COINCIDO por la letra del motivo de `P.19`: el nodo propio
+  fabricaria el gemelo exacto del donante. La cobertura 10 a 7 calza sin huecos.
+- **d2** (el 7 contra el 3): COINCIDO, y es el mas flojo, como el propio marcado dice: los dos
+  son una fuente falsa del estandar, y el inciso *ni los requerimientos heredados* conserva la
+  distincion sin perder linea.
+- **d3** (9 y 10 verbatim): COINCIDO: el 5 decide una inversion, el 9 captura, el 10 itera.
+  Tres objetos, no uno.
+- **d4** (el indice mas bajo): ADJUDICADO VALIDO PARA ESTE CASO: la ficha declaro los grupos
+  equivalentes, y entre equivalentes cualquier criterio deterministico, auditable y que no
+  invente texto cumple; este ademas deja el orden del nodo en pie. **NO lo elevo a regla
+  general**: si una operacion futura lo necesita sobre grupos NO declarados equivalentes, ahi
+  no decide solo y se trae.
+- **d5** (seis y no cinco): COINCIDO: la medicion manda, la discrepancia declarada y no
+  resuelta copiando, y el sexto grupo (iterar o cambiar de rumbo) no vive en la narracion 1.
+  Seis dentro del estandar que la propia ficha cita.
+- **d6** (los incisos): COINCIDO con la eleccion: la tabla de seis motivos es letra vigente
+  del protocolo y de `P.19` obliga 3; la frase de la ficha era prosa de proyeccion, no regla
+  numerada. **PERO en este mismo campo esta la caida de la seccion 3.1.**
+- **d7** (condiciones 1, 3, 4, 6, 8): COINCIDO: pura repeticion declarada, verbatim exigido,
+  el de indice mas bajo.
+- **d8** (la excepcion de clase): COINCIDO: la verificacion dice *excepcion de CLASE*, y la
+  clase se aplica por su firma escrita (superar el estandar SIN narracion repetida dentro),
+  que es lo que el instrumento midio y yo re-corri. La pertenencia a la nomina es de otra
+  operacion.
+- **d9** (494 en C por `9.22`): COINCIDO por mi propia lectura de los dos nodos: procedimiento
+  en los DOS sentidos sobre DOS lineas distintas, el primer polo exacto de la figura. El
+  *seria D* del informe era una prediccion condicional anterior al destejido, y la condicion
+  que el propio informe escribio (*si conserva la narracion de la calidad, deja de repetir*)
+  se cumplio.
+- **d10** (592 y 830 en D): COINCIDO: la escalera de costo y el aislamiento de la prueba no
+  viven en los seis pasos de hoy, medido por mi contra los contrarios impresos; sin arista en
+  ningun sentido; y la practica del archivo es 207 de 207.
+- **d11** (no volcar): LA CONDUCTA FUE CORRECTA (texto sin carril escrito detiene al ejecutor)
+  **y el carril queda adjudicado en la seccion 4.2**: el volcado procede.
+- **d12** (no poner las aristas): COINCIDO: los enlaces son la fase 04 por el orden del
+  00_INDICE, y quedan declaradas con sentido y motivo en `02_DESTEJIDOS.md`.
+- **d13** (la parada en vez de leer los tres pares): LA CONDUCTA FUE CORRECTA, **y la lectura
+  contraria del propio d13 es la que la regla escrita ya dice**: seccion 4.1 de esta acta.
+- **d14** (no saltar a `OP-D-03`): COINCIDO: la letra del encargo condicionaba el punto 4 a
+  las dos hechas.
+- **d15** (la prueba de convergencia): COINCIDO con la especie: anadio una guarda donde la
+  vieja no alcanzaba, sin sustituirla, y las dos se corren y publican. Es la especie buena
+  del movimiento, y queda mirada como el propio marcado pide.
+
+## 3. LAS CAIDAS DE ESTA TANDA, las dos del ejecutor y las mias aparte
+
+### 3.1 CAIDA DE CIFRA PUBLICADA, FUERA del marcado: el origen 16 del mapa del emblema
+
+**El cuadro publicado se contradice a si mismo.** `docs/plan/02_DESTEJIDOS.md`, tabla del
+movimiento 1: la fila del paso **2** lista los origenes **2, 6, 11, 15, 16, 19**, y la fila
+del paso **6** (origenes **8, 14, 17, 22**) dice en su motivo *los pasos **14 y 16** traen la
+cadencia (ciclos cortos, incremental)*. **Con cobertura exacta un origen vive en UN grupo:
+las dos filas no pueden ser verdad a la vez.** La misma contradiccion vive en el plan sellado
+(`PLAN_V32_OPD01_EMBLEMA.json`, `grupos_pasos` contra el `motivo` del sexto grupo) y en la
+tabla de la seccion 4.1 del reporte.
+
+**La mitad equivocada es la celda, y lo digo con el texto delante:** el paso 16 viejo es
+*Desarrolla tu primera version de forma incremental, en ciclos cortos e iterativos*: su
+objeto ES la cadencia. El paso 2 de hoy no lleva nada del 16; el inciso del paso 6 de hoy
+(*en ciclos cortos y de forma incremental*) lleva exactamente lo que solo el 14 y el 16
+traen. **El 16 pertenece al grupo del paso 6.**
+
+**Lo que NO mueve, medido:** el texto del nodo es correcto tal como esta; los supervivientes
+no cambian (el 2 y el 8 son los de indice mas bajo de sus grupos con el 16 en cualquiera de
+los dos); la cobertura sigue exacta (22 de 22, el 16 aparece una sola vez); ninguna guarda
+corrio sobre la pertenencia (la prueba de huella solo exige repeticion en maximo un paso, lo
+lei en `vuelta32_caso_positivo.py`). **Lo que SI es: una celda equivocada publicada en
+`docs/plan/`, la misma especie exacta que el nombre `investigar` de la vuelta 31.** No esta
+en ningun discutible marcado (el d6 marca los incisos, no el mapa).
+
+**Tramo releido al doble, como manda la regla del credito:** el mapa entero del emblema (los
+22 origenes contra los 6 pasos y las 10 condiciones contra las 5) y el mapa del 14vo (los 10
+contra los 7). **No aparecio ninguna otra celda equivocada.**
+
+### 3.2 CAIDA DE REPORTE: *dos de los tres* que son tres de tres
+
+El reporte (motivo 2 de la parada) y `SALIDA_V32_PARADA_OPD02.txt` dicen *DOS de los tres
+pares A (386 y 788) NO NOMBRAN GANADOR en su razon*, lo que afirma que el **526 si lo
+nombra**. **Medido hoy con las tres razones enteras delante: el 526 TAMPOCO nombra ganador.
+Ninguno de los tres lo nombra.** La nota de `OP-D-02` en `OPERACIONES.jsonl` esta bien
+escrita (no dice *dos de los tres*) y la conclusion del motivo (*ningun nodo del acto tiene
+una victoria citable*) es verdadera y sale REFORZADA, no debilitada. Es dictado suelto que
+vive solo en el reporte y su salida: **caida de REPORTE**, tramo releido al doble (el acto
+entero, hecho en la seccion 1).
+
+### 3.3 ERRORES PROPIOS, con nombre
+
+1. **Corri el comando 1 del ciclo de Gate 0 suelto**, y la suite del motor cayo en
+   `test_gate_alias` (71 divergentes) por MI medio ciclo: las 71 etiquetas de cara estaban
+   revertidas en el derivado. Complete el ciclo (comandos 2 y 3), el arbol volvio byte igual
+   a HEAD, y la suite dio 24 de 24. **Es la MISMA especie que el error 1 del acta 31: la
+   reincidencia es del puesto de auditor y la dejo escrita como patron a matar:** el ciclo se
+   corre entero o no se corre.
+2. **Mi primer censo por nombre dio 13 y no 9** porque use `fase_proyecto` como criterio de
+   vivo cuando la convencion del repo es el campo `deprecado` (`homework_voc_previo_agile`
+   lo lleva en `True`), y porque busque tambien en el titulo. Cazado contra el instrumento
+   del ejecutor antes de publicar nada; ninguna cifra salio de mi censo malo.
+
+## 4. ADJUDICACIONES: los tres pendientes de doctrina NO son doctrina nueva
+
+### 4.1 Los tres pares internos que faltan: los lee el ejecutor de la fusion, por P.5, como LECTURAS DIRIGIDAS, y NO mueven n
+
+**La autoridad es `P.5` por su letra**, no por extension: *cada acto se lee entero despues de
+su destejido y antes de su fusion*, y su seccion de cuenta dice de los pares internos fuera
+de cola que *no es trabajo nuevo: es trabajo que ya estaba y no tenia dueno. Antes se iba a
+fundir sin leerlo; ahora se lee, y se lee en el unico momento en que la respuesta vale*. Ese
+momento es ESTE. **Y el carril de registro ya existe y esta escrito en
+`docs/plan/LECTURAS_DIRIGIDAS.md`:** *se leen con la MISMA VARA y el mismo formato de
+veredicto que el cribado, y van marcadas LECTURA DIRIGIDA: **no entran en la cola ni mueven
+su marcador***. **El miedo del pendiente (mover n de 3.388) lo resuelve la letra: n no se
+toca.** Precedente vivo: el lote de sales roadmap paso de 10 a 15 leidos por esta via el 14
+ago sin mover la cola.
+
+### 4.2 El carril de las tres clases releidas: el banco 9.10 es un MECANISMO, no una fase
+
+El `preservar` corregido manda que el par nuevo *entra por el recomputo (banco 9.10)*. **Esa
+correccion es del 15 ago, posterior al cierre de la fase II: leida como fase, seria mandar a
+un lugar que ya no existe, y el fundador no escribe hacia atras.** Se lee como lo que el 9.10
+es: **el volteo se vuelca al archivo y barre las tablas derivadas EN EL MISMO ACTO.** Y la
+verificacion escrita de la fase 02 lo exige ademas por su letra: *los pares congelados de esa
+operacion se releen contra el superviviente y **salen de la lista***. Salir de la lista es
+volcarse. Precedente de forma: los volteos del 13 ago (*REESCRITA EL ... POR ...* en la
+razon). **El volcado de 494 a C, 592 a D y 830 a D procede, con su barrido 9.10 en el mismo
+acto.** El marcador quedaria **A 582 / B 87 / C 8 / D 2.711**, n intacto en 3.388.
+
+### 4.3 La nomina de OP-D-02: se computa, no se amplia por censo
+
+**`P.6` por su letra:** la nomina de ACTO es el cierre transitivo de las A y no admite gusto.
+Hoy cubre a los cuatro, 4 de 4, ninguno fuera: **la nomina de la operacion queda en cuatro.**
+Los dos del censo (`voice_of_customer_estrategico`, `voc_temprano_en_agile_stage_gate`)
+entran el dia que una A los meta, y la unica A posible hoy pasa por el congelado 724, cuya
+relectura espera al superviviente por el toque unico del 9.4, como el ejecutor bien dejo.
+**La nota de familia del 788 queda cumplida con el censo 9.5.1 corrido y citado.** Y las
+aristas del d12 quedan como estan: declaradas para la fase 04.
+
+## 5. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 31: 41 relecturas, 393 puestos (mas 191 nodos de forma y 35 sitios de
+codigo), 7 caidas de clase, mas 13 caidas de reporte del ejecutor, mas 5 caidas de cifra
+publicada del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1 caida de acta del
+auditor. Tandas seguidas con caida de clase o cifra: UNA. Caidas de reporte seguidas: CERO.
+
+Esta tanda (la vuelta 32 del ejecutor): mas 1 relectura (los quince discutibles, de fondo);
+mas 9 puestos releidos (494, 592, 830, 386, 526, 788, 724, 755, 827, los tres ultimos solo
+en su clase); mas 9 nodos leidos de fondo (el emblema en sus dos estados, el 14vo en sus dos
+estados, `mvp_catalogo_tecnicas`, `prueba_mvp_alta_fidelidad`, `conexion_personal_emocional`,
+`investigar_datos_cliente`, `homework_voc_previo_agile`) y los dos mapas releidos al doble;
+mas 8 sitios de codigo re-corridos o leidos (estado, acto, costura, poda, caso positivo, los
+dos saldos, el ciclo de Gate 0 con las tres suites). Quince adjudicaciones de fondo: **LAS
+QUINCE COINCIDEN.** Caidas del ejecutor en esta tanda: **UNA de CIFRA PUBLICADA** (seccion
+3.1), **fuera del marcado**, y **UNA de REPORTE** (seccion 3.2).
+
+**Acumulado: 42 relecturas, 402 puestos (mas 200 nodos de forma y 43 sitios de codigo), 7
+caidas de clase, mas 14 caidas de reporte del ejecutor, mas 6 caidas de cifra publicada del
+ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1 caida de acta del auditor.**
+
+**Tandas seguidas con caida de clase o cifra: DOS** (la vuelta 31 con el nombre `investigar`,
+la vuelta 32 con el origen 16). **Caidas de reporte seguidas: UNA.**
+
+## 6. CONDICION DE PARADA: SE CUMPLE LA DE CREDITO, EL BUCLE SE DETIENE
+
+**La regla afinada por el fundador el 13 ago es mecanica a proposito:** caida de clase o de
+cifra publicada, **dos tandas seguidas: PARADA.** La vuelta 31 tuvo una (el nombre
+`investigar`, y su acta dejo el aviso armado con estas palabras: *otra caida de estas
+especies en la proxima tanda es PARADA de credito*). Esta tanda tiene una (el origen 16).
+**Son dos seguidas y de la misma especie ademas: la celda tecleada a mano en una tabla de
+prosa de `docs/plan/` que ningun instrumento valida.** No decido que las dos sean chicas ni
+que ninguna mueva un nodo: la regla no pesa el dano, cuenta las tandas, y contarlas es todo
+mi mandato aqui.
+
+No es parada de doctrina (los tres pendientes quedaron adjudicados con letra citable, seccion
+4) ni de fallo tecnico (todo verde por corrida propia) ni de fundador por contenido (cero
+nodos tocados en la parada, cero merges, el `.env` fuera). `docs/loop/PARA_ALEXIS.md` escrito
+con el motivo, el estado exacto, las dos caidas con su cura propuesta, las tres
+adjudicaciones listas, y el encargo siguiente COMPLETO dentro, listo para copiar a
+`PROMPT_SIGUIENTE.md` al relanzar. `docs/loop/PROMPT_SIGUIENTE.md` VACIADO, como manda la
+seccion 4 de `AUDITOR.md`.
