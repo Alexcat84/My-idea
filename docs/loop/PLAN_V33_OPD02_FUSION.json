@@ -95,7 +95,7 @@
         "A5"
       ],
       "texto": "Mantén contacto con tu cliente durante todo el desarrollo, en ciclos cortos, no solo al principio y al final.",
-      "motivo": "ALCANCE: el superviviente manda mantener el contacto durante todo el desarrollo y no dice a que cadencia. El absorbido la trae (ciclos cortos) y entra a la enumeracion que el superviviente ya tiene. Es la misma lectura de cadencia que OP-D-01 aplico en su paso 6, y se cita para que el criterio sea el mismo."
+      "motivo": "ALCANCE: el superviviente manda mantener el contacto durante todo el desarrollo y no dice a que cadencia. El absorbido la trae (ciclos cortos) y entra a la enumeracion que el superviviente ya tiene. Es la misma lectura de cadencia que OP-D-01 aplico en el sexto paso de su propia tabla, y se cita para que el criterio sea el mismo."
     }
   ],
   "grupos_condiciones": [
@@ -177,6 +177,16 @@
       "nodo": "front_end_homework",
       "campo": "nodos_previos",
       "motivo": "esta DEPRECADO, medido hoy en dataset/nodos y en master_graph.json. Solo se redirige lo vivo, que es el criterio del instrumento sellado de la casa scripts/plan/simular_fusion.py (salta los deprecados al listar entradas). Su cableado se conserva por la misma razon por la que se conserva el texto del absorbido: para que la fusion se pueda auditar."
+    }
+  ],
+  "correcciones_declaradas": [
+    {
+      "fecha": "2026-08-15",
+      "vuelta": 33,
+      "campo": "grupos_pasos[5].motivo (solo prosa; el ejecutor no lo consume)",
+      "que_se_corrige": "el motivo decia 'OP-D-01 aplico en su paso 6' y en una tabla de DOS FUENTES un 'paso 6' suelto no dice de que nodo viene. El verificador de mapas lo marco como MOTIVO AJENO y tenia razon: la prosa era ambigua. Se reescribe a 'el sexto paso de su propia tabla'.",
+      "efecto_sobre_el_nodo": "NINGUNO. El campo motivo es documentacion: vuelta33_fundir.py escribe desde pasos_finales, no desde los motivos. El nodo ya estaba escrito y no se vuelve a tocar.",
+      "texto_viejo": "OP-D-01 aplico en su paso 6"
     }
   ]
 }

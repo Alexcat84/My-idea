@@ -33,6 +33,15 @@ SEPARADOR = "|---:|---|---|"
 
 
 def filas_del_plan(ruta, campo):
+    """Lee las DOS formas de plan sellado que la campana tiene hoy.
+
+    FORMA A, el DESTEJIDO: los grupos cuelgan de `nodos[]`, y los origenes son
+    enteros, porque un destejido colapsa DENTRO de un nodo.
+    FORMA B, la FUSION (estrenada por OP-D-02 el 15 ago 2026): los grupos cuelgan
+    de la RAIZ del plan, y los origenes llevan PREFIJO DE NODO (`S1` el paso 1 del
+    superviviente, `A1` el del absorbido), porque una fusion tiene DOS fuentes y un
+    numero suelto no diria de cual viene.
+    """
     d = json.loads(Path(ruta).read_text(encoding="utf-8"))
     filas = []
     for nodo in d.get("nodos", []):
@@ -42,6 +51,18 @@ def filas_del_plan(ruta, campo):
             filas.append(
                 {
                     "nodo": nodo.get("nodo"),
+                    "paso": destino,
+                    "origenes": list(g["origenes"]),
+                    "motivo": (g.get("motivo") or "").strip(),
+                }
+            )
+    if not filas:
+        destino = 0
+        for g in d.get(campo, []) or []:
+            destino += 1
+            filas.append(
+                {
+                    "nodo": d.get("superviviente"),
                     "paso": destino,
                     "origenes": list(g["origenes"]),
                     "motivo": (g.get("motivo") or "").strip(),

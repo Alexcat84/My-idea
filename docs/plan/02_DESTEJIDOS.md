@@ -83,7 +83,7 @@ arregle** (banco 9.24).
 | orden | operacion | el nodo ancla | congelados que libera | destejidos | nodos en la decision |
 |---:|---|---|---:|---:|---:|
 | **1** | `OP-D-01` | `producto_minimo_viable` | ~~**3** (494, 592, 830)~~ **3 LIBERADOS EL 15 ago 2026: 494 a `C`, 592 a `D`, 830 a `D`** | **2** | 2 |
-| **2** | `OP-D-02` | `voz_del_cliente_voc` | **3** (724, 755, 827) | 1 | 4 |
+| **2** | `OP-D-02` | `voz_del_cliente_voc` | ~~**3** (724, 755, 827)~~ **3 LIBERADOS EL 15 ago 2026: los tres a `D`** | 1 | 4 |
 | **3** | `OP-D-03` | `ab_testing_optimizacion` | **2** (738, 1061) | **3** | **6** |
 | 4 | `OP-D-04` | `brainstorming_divergente` | 0 | 1 mas la decision de fuente | **7** |
 | 5 | `OP-D-05` | `seleccion_ceo_fundador` | 0 | 1 | 3 |
@@ -423,7 +423,145 @@ Diez pasos, **doble de la observacion**: Cooper en 1 a 5, Coleman en 6 a 10, con
 > relectura R31 sin que nadie notara que colgaban de la misma costura.** La
 > relectura ve **pares**; el alcance se decide sobre la **componente**.
 
+### `OP-D-02` EJECUTADA (15 ago 2026, vuelta 33). **LA PARADA DE LA VUELTA 32 QUEDA LEVANTADA**
+
+**Nada de esta seccion viene de un acta ni de un reporte: todas las cifras salen de instrumentos
+corridos en esta misma vuelta, con su salida en `docs/loop/`.** La seccion de la parada se queda
+entera debajo, sin tocar, porque describe bien el estado del que se partio.
+
+#### LO QUE DESTRABO LA PARADA: sus tres motivos, uno por uno
+
+| motivo de la parada (vuelta 32) | como se resolvio |
+|---|---|
+| **1.** el acto tenia **3 de 6** pares internos leidos, y `P.5` no se puede contestar con eso | **LEIDOS LOS TRES QUE FALTABAN** como lecturas dirigidas `LD-72`, `LD-73` y `LD-74`, adjudicadas por el fundador. **6 de 6.** Ninguno estaba en la cola, asi que **`n` no se movio**: sigue en 3.388 |
+| **2.** no habia superviviente ni escrito ni deducible | **FIJADO en `voz_del_cliente_voc`** por `P.8`, contenido primero. Y la cifra del motivo se corrigio antes: **cero de tres pares A nombran ganador**, no dos de tres |
+| **3.** la nomina podia estar corta | **MEDIDO Y RESUELTO SIN AMPLIARLA**, y por lectura: los dos de fuera (`voice_of_customer_estrategico` y `voc_temprano_en_agile_stage_gate`) no entran, porque el primero se releyo hoy en el **724** y dio **`D`**, no `A`. **`P.6` no se dispara** |
+
+#### LA RESPUESTA DE `P.5`, y cambia el ALCANCE de la fusion
+
+**El acto NO es una familia.** Con los seis pares leidos, sus tres `A` forman **un CAMINO** (386,
+788, 526) y **las tres cuerdas largas son `D`**: **cero triangulos cerrados**, y **DOS nodos
+puente** (`enfoque_mercado_voc` y `voice_of_customer_homework`), que es el **segundo puente doble
+del archivo** por `P.10`. La salida que `P.10` nombra para ese caso es **fundir solo el
+subconjunto cerrado y enlazar el resto**, y el subconjunto cerrado es **el par del puesto 386**.
+
+> **`homework_frontend_loading` y `voice_of_customer_homework` NO ENTRAN EN LA FUSION**, y eso no
+> reduce la operacion: **es lo que su punto 4 siempre dijo**, *tener delante*. El campo `nodos`
+> **no se toca**, porque la nomina es el universo del acto que hay que leer junto (`9.24` con
+> `P.12`), no la lista de lo que se funde. **El cierre transitivo es la citacion, no la
+> sentencia.** El desarrollo entero esta en `LECTURAS_DIRIGIDAS.md`, octava tanda.
+
+#### LA FUSION, y es **LA PRIMERA DEL PLAN QUE SE ESCRIBE CONTRA `dataset/`**
+
+**`voz_del_cliente_voc` pasa de CINCO pasos a SEIS y absorbe a `enfoque_mercado_voc`**, que queda
+**deprecado con su texto INTACTO y su fichero en pie**. Plan sellado en
+`docs/loop/PLAN_V33_OPD02_FUSION.json`, construido por `scripts/loop/vuelta33_plan_opd02.py` (los
+textos originales, los prefijos y las fuentes **se leen del grafo, no se teclean**) y ejecutado
+con `scripts/loop/vuelta33_fundir.py`.
+
+**EL `preservar` ENTRO INTEGRO, y el instrumento aborta si alguna pieza falta**: la evaluacion
+preliminar de mercado, el analisis competitivo detallado, y probar los conceptos con clientes
+reales antes del desarrollo formal. **Las tres verificadas LITERALES en el resultado.**
+
+**LA TABLA DE LOS SEIS MOTIVOS. Solo DOS de los cinco pasos del absorbido producen perdida**, y se
+dice por que: **tres son el `preservar`**, y el `preservar` no es perdida repartida, es material
+salvado por mandato de la operacion.
+
+**NO ESTA TECLEADA: esta IMPRESA desde el plan sellado** (`EJECUTOR.md` regla 1, cuarto
+renglon). **Comando, corrido en esta vuelta:**
+
+```
+python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V33_OPD02_FUSION.json
+```
+
+salida entera en `docs/loop/SALIDA_V33_TABLA_OPD02.txt`, pegada aqui sin editar una coma.
+**Los origenes llevan PREFIJO porque aqui hay DOS fuentes**: `S` el superviviente, `A` el
+absorbido. Un numero suelto no diria de cual viene.
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | S1, A1 | SALVAGUARDA: el superviviente manda observar a tus clientes y no dice a CUALES, asi que el paso se resuelve solo por el sesgo por defecto, observar a los que estan mas a mano. El absorbido dice contra que sesgo se elige (los mas exigentes) y el inciso se adosa al paso que protege, que es un paso de DECISION y no de ejecucion, que es la firma escrita de la clase. |
+| **2** | S2 | VERBATIM: el superviviente conserva su paso entero y el absorbido no le anade nada. |
+| **3** | S3 | VERBATIM: el superviviente conserva su paso entero. Aqui vive el 'hazles entrevistas a fondo' del absorbido, que ya decia lo mismo. |
+| **4** | A2, A3 | NO ES PERDIDA: es PRESERVAR. El campo preservar de OP-D-02 manda salvar de enfoque_mercado_voc la evaluacion preliminar de mercado y el analisis competitivo detallado, y el superviviente no dice ninguna de las dos en ninguno de sus cinco pasos. Entra como PASO NUEVO porque no hay paso del superviviente al que adosarlo sin cambiarle el objeto. |
+| **5** | S4, A4 | NO ES PERDIDA: es PRESERVAR, la tercera pieza. El campo preservar manda salvar probar los conceptos con clientes reales antes del desarrollo formal, y se adosa al paso del superviviente que ya habla de usar lo observado para disenar, que es el mismo momento del proceso. |
+| **6** | S5, A5 | ALCANCE: el superviviente manda mantener el contacto durante todo el desarrollo y no dice a que cadencia. El absorbido la trae (ciclos cortos) y entra a la enumeracion que el superviviente ya tiene. Es la misma lectura de cadencia que OP-D-01 aplico en el sexto paso de su propia tabla, y se cita para que el criterio sea el mismo. |
+
+**`NOMBRE`, `DESTINO`, `METODO ALTERNATIVO` y `DIRECCION` no aplican, y por eso no se nombran.**
+
+**Y las condiciones pasan de 3 mas 2 a TRES**, con **`ALCANCE`** en la tercera (el superviviente
+nombraba un solo momento, *antes de la etapa formal*, y el absorbido trae el otro, *mientras
+avanzas sin retroalimentacion externa*). **El entregable absorbe lo que el nodo ahora si produce**:
+la evaluacion preliminar de mercado, el analisis competitivo y los resultados de las pruebas de
+concepto. **La fuente NO cambia: los dos eran del mismo libro.**
+
+| guarda | resultado |
+|---|---|
+| simulacion previa sobre copia en memoria (`P.7`) | **verde**, y ademas la del instrumento sellado de la casa `scripts/plan/simular_fusion.py` |
+| guarda de texto sobre pasos **y** condiciones de los DOS nodos | **15 de 15** calzan con su prefijo sellado |
+| cero perdida, cobertura exacta | **10 de 10** origenes en pasos, **5 de 5** en condiciones |
+| el `preservar`, literal en el resultado | **3 de 3** |
+| **caso positivo ANTES** | **10 PASAN, 13 CAEN** (`SALIDA_V33_OPD02_CASO_ANTES.txt`) |
+| **caso positivo DESPUES** | **23 PASAN, 0 CAEN** (`SALIDA_V33_OPD02_CASO_DESPUES.txt`) |
+| conservacion (pasa las dos veces a proposito, contada aparte) | **de 3 a 10 rastros vivos de 10** |
+| cero auto arista y cero duplicada, en TODO el grafo | **OK** |
+| **el censo no se mueve** | **3.853 ficheros antes y despues**: una fusion **depreca, no borra** |
+
+> **UNA GUARDA CAZO UNA DISCREPANCIA REAL Y SE DECLARA, porque es lo unico que prueba que las
+> guardas sirven.** El plan sellado esperaba **TRES** redirecciones, que son las que da el
+> instrumento de la casa sobre el grafo compilado; **el ejecutor, contando sobre `dataset/nodos`,
+> encontro CUATRO**, y **aborto sin escribir**. La cuarta es `front_end_homework`, que **esta
+> DEPRECADO**. Se adopta el criterio del instrumento sellado (**solo se redirige lo vivo**, su
+> linea 87) y **la cuarta va DECLARADA en el plan, no filtrada en silencio**: el cableado de un
+> nodo deprecado es registro historico, y se conserva por la misma razon por la que se conserva el
+> texto del absorbido.
+
+**Ciclo de `Gate 0`, entero y en su orden:** `run_phase1.py --reaplico-curaduria` **exit 0,
+`GATE 0: OK`**, **3.853 nodos compilados**, y el universo pasa a **3.538 activos y 315 deprecados**
+(antes 3.539 y 314), **que es exactamente la fusion y nada mas**; `etiquetas_de_cara.py --aplicar`
+**71 etiquetas**; `plan_readiness.py` **3.853 nodos**; `sync_assets_web.py` verde. **Suites: motor
+24 de 24, web 80 ficheros con 1.030 pasadas y 3 saltadas, `tsc --noEmit` cero lineas.**
+
+#### LOS TRES CONGELADOS, RELEIDOS Y VOLCADOS por el carril del `9.10`
+
+**Los tres estaban en `B` por el TOQUE UNICO del banco `9.4` y esa causa cayo hoy**: el
+superviviente quedo estable. **Releidos contra sus SEIS pasos de hoy y volcados en el mismo acto**
+(`scripts/loop/vuelta33_volcado_910_b.py`, con la razon vieja copiada por maquina dentro de la
+nueva y el script abortando si no queda):
+
+| puesto | contra quien | lo que el otro trae y el superviviente sigue sin decir | clase volcada |
+|---:|---|---|:---:|
+| **724** | `voice_of_customer_estrategico` | el **PROTOCOLO DE INTERROGACION Y REGISTRO**: que problemas enfrentan y **que los mantiene despiertos por la noche**, el **porque** detras de cada peticion, las **necesidades FUTURAS**, y documentar los **ahas**. Madre e hijo, con **ARISTA QUE FALTA** | **`D`** |
+| **755** | `dia_en_la_vida_del_cliente` | **PROYECTAR** como cambiaria el dia con el producto, repetir por **CADA figura de la decision**, y **presentar al equipo** el antes y el despues en narrativa o storyboard. Dos objetos distintos, con **ARISTA QUE FALTA** | **`D`** |
+| **827** | `ganar_comprension_del_cliente` | el **flujo de trabajo**, que otras soluciones usa, **que haria cambiar su comportamiento de compra**, que publicaciones lee y **criterios claros de que cuenta como validado**. **SIN arista declarada**, y se dice por que | **`D`** |
+
+> **LA GUARDA DEL ENCARGO, COMPROBADA Y NO SUPUESTA:** si el **724** hubiera dado **`A`**,
+> `voice_of_customer_estrategico` habria entrado al acto por `P.6` y **habia que PARAR**, porque
+> una fusion nueva sin operacion escrita no se improvisa. **NO DA `A`**, y por eso la vuelta sigue.
+
+> **Y AQUI HAY UNA LECCION DE METODO QUE LA VUELTA NO BUSCABA:** **antes de la fusion, el 724
+> estaba mucho mas cerca de `A`**, porque el superviviente era solo la observacion de campo. **Fue
+> la fusion la que lo separo**, al darle el tramo de mercado. **Es exactamente por lo que el banco
+> `9.4` congela: el mismo par da dos clases distintas segun el dia en que se lea.**
+
+**EL MARCADOR, recomputado con el instrumento y con la cifra esperada escrita ANTES de correrlo,
+las dos veces** (`SALIDA_V33_MARCADOR.txt` y `SALIDA_V33_MARCADOR_B.txt`):
+
+| | apertura de la vuelta 33 | tras la tarea 1.3 | **al cierre** |
+|---|---:|---:|---:|
+| n | 3.388 | 3.388 | **3.388** |
+| A | 583 | 582 | **582** |
+| B | 89 | 87 | **84** |
+| C | 7 | 8 | **8** |
+| D | 2.709 | 2.711 | **2.714** |
+
+---
+
 ### `OP-D-02`, ESTADO AL 15 ago 2026 (vuelta 32): **PASO 1 CONSUMIDO, FUSION EN PARADA**
+
+> **SECCION SUPERADA POR LA DE ARRIBA (15 ago 2026, vuelta 33), y NO SE BORRA: describe bien el
+> estado del que esta vuelta partio, y sus tres motivos son los que la vuelta 33 tuvo que
+> levantar uno por uno.** Su cifra del motivo 2 lleva su propia correccion declarada, mas abajo.
 
 **El paso 1 del orden interno esta HECHO y no lo hizo esta operacion: lo hizo `OP-F-04-COL`
 en la vuelta 31.** Medido hoy sobre el arbol: `voz_del_cliente_voc` tiene **5 pasos y fuente

@@ -1,0 +1,50 @@
+==============================================================================
+NODO voice_of_customer_estrategico   vivo=True
+  titulo: Voz del Cliente (VoC) a Nivel Estratégico
+  fuente: Winning at New Products - Robert G. Cooper
+  entregable: Reporte de insights de clientes con necesidades explícitas e implícitas documentadas, incluyendo hallazgos inesperados ('ahas')
+    1. Observar a los clientes usando productos similares en su contexto real (no solo encuestas)
+    2. Preguntar qué problemas enfrentan y qué los mantiene despiertos por la noche
+    3. Indagar el 'porqué' detrás de cualquier característica o producto que soliciten
+    4. Buscar necesidades futuras y planes de los clientes, no solo las actuales
+    5. Documentar los 'ahas' o descubrimientos inesperados durante la observación
+  previos: ['analisis_competitivo']
+  siguientes: ['seleccion_arenas_estrategicas', 'homework_voc_previo_agile', 'voc_temprano_en_agile_stage_gate']
+==============================================================================
+NODO dia_en_la_vida_del_cliente   vivo=True
+  titulo: Un Día en la Vida del Cliente
+  fuente: The Startup Owner's Manual - Steve Blank
+  entregable: Documento narrativo o storyboard de 'antes y después' de un día típico de cada tipo de cliente relevante
+    1. Observar o entrevistar directamente a los usuarios en su entorno real (oficina, tienda, hogar, planta)
+    2. Documentar cómo resuelven el problema actualmente, sin el producto
+    3. Proyectar y describir cómo cambiaría su día con el nuevo producto
+    4. Repetir el ejercicio para cada tipo de persona relevante en la decisión (usuario final, gerente, ejecutivo, tecnología, etc.)
+    5. Presentar una imagen vívida y específica del antes y el después al equipo de desarrollo de producto, en forma de narrativa o storyboard
+  previos: ['customer_archetypes', 'arquetipos_de_cliente', 'problem_recognition_scale']
+  siguientes: ['mapa_organizacional_influencia', 'channels_hypothesis_physical', 'preguntas_ipo_dolor_cliente']
+==============================================================================
+NODO ganar_comprension_del_cliente   vivo=True
+  titulo: Ganar Comprensión Profunda del Cliente
+  fuente: The Startup Owner's Manual - Steve Blank
+  entregable: Un documento con la comprensión profunda de tu cliente: su flujo de trabajo, sus influenciadores, sus hábitos de consumo de información, su comportamiento de compra y tus criterios de validación
+    1. Investiga el flujo de trabajo actual de tu cliente y sus interacciones con otras personas o áreas
+    2. Pregunta qué otras soluciones usa hoy y si el problema lo comparten más personas en su entorno de trabajo
+    3. Explora qué haría cambiar su comportamiento de compra: el precio, las características, o un nuevo estándar
+    4. Pasa un día haciendo lo que hace tu cliente (por ejemplo, detrás de un mostrador o en una feria) y asiste a sus eventos
+    5. Identifica qué publicaciones lee y a quién sigue tu cliente
+    6. Documenta todos tus hallazgos de forma ordenada, con criterios claros de qué cuenta como validado
+  previos: ['scorecard_descubrimiento_cliente', 'customer_discovery', 'prueba_mvp_problema_baja_fidelidad']
+  siguientes: ['captura_conocimiento_mercado', 'capturar_conocimiento_de_mercado', 'actualizar_modelo_de_negocio_pivot_o_proceed', 'analisis_trafico_competitivo']
+==============================================================================
+NODO voz_del_cliente_voc   vivo=True
+  titulo: Escucha la voz de tu cliente (Voice of Customer, VoC)
+  fuente: Winning at New Products - Robert G. Cooper
+  entregable: Un resumen de lo que aprendiste observando y entrevistando a tu cliente, con la evaluación preliminar de mercado, el análisis competitivo y los resultados de las pruebas de concepto, que alimente directamente cómo diseñas tu producto
+    1. Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos, y empieza por los más exigentes.
+    2. Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos.
+    3. Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas.
+    4. Haz una evaluación preliminar de mercado y un análisis competitivo detallado de productos, precios y tecnologías antes de comprometer recursos importantes.
+    5. Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final, y prueba tus primeras ideas de concepto con clientes reales antes de empezar el desarrollo formal.
+    6. Mantén contacto con tu cliente durante todo el desarrollo, en ciclos cortos, no solo al principio y al final.
+  previos: ['superioridad_producto_beneficios', 'desirability_feasibility_viability', 'procesamiento_paralelo_con_espirales']
+  siguientes: ['definicion_producto_proyecto', 'spiral_development', 'customer_discovery_get_out_of_building', 'customer_journey_mapping', 'data_integrity_forecasting', 'estrategia_producto_global_glocal', 'homework_frontend_loading', 'product_backlog_agile', 'reduccion_tiempo_de_mercado_velocidad', 'desarrollo_en_espiral', 'observar_al_cliente_en_su_contexto', 'ventaja_competitiva_producto']

@@ -51,6 +51,49 @@
 > varios sitios **335 actos** contra los 221 del inventario de `OP-I-01`. **Hoy son 334**, y el
 > desfase del inventario **sigue siendo un pendiente de doctrina abierto**, no algo que esta
 > correccion cierre.
+>
+> ## SEGUNDA CORRECCION DEL MISMO DIA: **LA PRIMERA FUSION DEL PLAN SE EJECUTO, Y ESTE DOCUMENTO DECIA QUE NO**
+>
+> **El 15 ago 2026, la misma vuelta 33, ejecuto la FUSION de `OP-D-02`:
+> `voz_del_cliente_voc` absorbe a `enfoque_mercado_voc`.** Es **la primera fusion del plan de la
+> pasada unica escrita contra `dataset/`**, y por eso mueve este documento por un camino distinto
+> al del volteo: **no cambia ninguna clase, cambia el RESOLUTOR.**
+>
+> **LA FRASE DEL CUERPO QUE ENVEJECIO, y va tachada abajo en su sitio:** el paso 1 decia *ninguna
+> de las 583 A colapsa* y lo sostenia en que *ninguna fusion del plan de la pasada unica se ha
+> ejecutado contra `dataset/`*. **Eso era verdad el 13 ago y dejo de serlo el 15.**
+>
+> **AHORA COLAPSA UNA, Y EL INSTRUMENTO LA NOMBRA:** `puesto 386: enfoque_mercado_voc <->
+> voz_del_cliente_voc (resuelven al mismo id)`. Al quedar el absorbido como alias del
+> superviviente, **el par 386 se vuelve una auto arista y sale del retrato.**
+>
+> **Y EN LA MISMA VUELTA, UN SEGUNDO VOLTEO POR EL `9.10`:** con el superviviente ya estable, los
+> TRES congelados que `voz_del_cliente_voc` bloqueaba se releyeron por el banco `9.4` y pasaron de
+> `B` a `D`: **724**, **755** y **827**. **Ese volteo NO toca este documento**, y se dice por que:
+> **`B` y `D` no entran en el retrato de las A**, que es lo unico que el recomputo mira.
+>
+> **Comando, corrido otra vez al cierre** (salida `docs/loop/SALIDA_V33_RECOMPUTO_3388_B.txt`),
+> con el fichero de componentes reescrito de nuevo por el propio instrumento:
+>
+> | cifra | 13 ago | 15 ago, tras el volteo | 15 ago, tras la FUSION | delta total |
+> |---|---:|---:|---:|---:|
+> | A crudas en el archivo | **583** | **582** | **582** | **menos 1** |
+> | colapsos a auto arista al resolver | **0** | **0** | **1** | **mas 1** |
+> | pares distintos del retrato | **583** | **582** | **581** | **menos 2** |
+> | nodos con al menos una A | **854** | **852** | **851** | **menos 3** |
+> | componentes de tamano 2 o mas | **335** | **334** | **334** | **menos 1** |
+> | componentes CERRADAS | **280** sobre **600** | **279** sobre **598** | **279** sobre **598** | **menos 1 y menos 2** |
+> | componentes ABIERTAS | **55** sobre **254** | **55** sobre **254** | **55** sobre **253** | **menos 1 nodo** |
+>
+> **LAS CUATRO COMPROBACIONES VUELVEN A DAR OK, las cuatro**, con las cifras nuevas: nodos en
+> actos **851** igual a la suma de tamanos; A vigentes resueltas **581** igual a la suma de
+> aristas A internas; todo acto cerrado con sus pares internos leidos; y **cero nodos deprecados
+> dentro de una componente**, que es justo la comprobacion que una fusion podria haber roto y no
+> rompio.
+>
+> **EL MARCADOR AL CIERRE DE LA VUELTA 33**, medido tras los dos volteos: **n 3.388, A 582, B 84,
+> C 8, D 2.714**. `core` pasa de `A 344, B 87, C 7, D 1.007` a **`A 343, B 82, C 8, D 1.012`**, y
+> los otros nueve dominios quedan identicos al digito.
 
 **Vuelta 11 del bucle (Sonnet 5), 13 ago 2026. Disparador cumplido: el cribado intra-dominio
 llego al puesto 3.388 (banco 9.21, `OP-U-02`).** Es la unica recomputacion general del plan.
@@ -82,11 +125,19 @@ que el auditor verifique las cuatro comprobaciones de mas abajo.
 | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ **582** **[CORREGIDA 15 ago 2026, ver la correccion declarada al principio del documento]** |
 | pares con mas de un veredicto crudo apuntando al mismo par resuelto | **0** |
 
-**Ninguna de las 583 A colapsa.** Los 391 alias vigentes hoy son historia previa a esta campana
+~~**Ninguna de las 583 A colapsa.** Los 391 alias vigentes hoy son historia previa a esta campana
 (ninguna fusion del plan de la pasada unica se ha ejecutado contra `dataset/`: verificado que
 `nafta_free_trade_agreements`, el ejemplar de `OP-S-01`, sigue sin `deprecado`), asi que resolver
 no fusiona ningun par de las 583 A en si mismo. **El retrato de las A vigentes al cierre, corte
-3.388, es de 583 pares distintos.**
+3.388, es de 583 pares distintos.**~~
+
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 33). EL PARRAFO DE ARRIBA ERA CIERTO EL 13 ago Y
+> DEJO DE SERLO EL 15**, y no por una relectura: **porque se ejecuto la primera fusion del plan**
+> (`OP-D-02`, `voz_del_cliente_voc` absorbe a `enfoque_mercado_voc`). **AHORA COLAPSA UNA**, y el
+> propio instrumento la nombra al correrlo: *puesto 386: `enfoque_mercado_voc` con
+> `voz_del_cliente_voc` (resuelven al mismo id)*. **El retrato pasa de 582 A crudas a 581 pares
+> distintos.** La comprobacion de `nafta_free_trade_agreements` sigue siendo cierta y no se toca:
+> lo que cambio no es esa, es que **ya hay una fusion ejecutada que aquel dia no habia.**
 
 **COMPROBACION CRUZADA con la evidencia vieja:** las A con `puesto_intra <= 2117`, resueltas y
 deduplicadas, dan **401** pares, contra las **400 A vigentes al puesto 2117** citadas como

@@ -36,7 +36,10 @@ CARPETAS = [
     os.path.join(RAIZ, "docs", "plan"),
 ]
 
-PUESTOS = (494, 592, 830)
+# Los puestos volteados se pasan por linea de comandos para que el barrido sirva a
+# cualquier volteo y no solo al primero. Por defecto, los tres de la tarea 1.3.
+PUESTOS = tuple(int(x) for x in (
+    [a for a in sys.argv[1:] if a.isdigit()] or [494, 592, 830]))
 
 # Cifras del marcador viejo. El 7 y el 89 solos son demasiado comunes para buscarlos
 # sueltos, asi que la vara es: la linea trae el 583 o el 2709/2.709, O trae dos o mas

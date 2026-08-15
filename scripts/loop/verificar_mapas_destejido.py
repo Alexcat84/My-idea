@@ -79,9 +79,14 @@ def extraer_tablas(texto):
                 if m:
                     paso = int(m.group(1))
                     origenes = [int(x) for x in RE_NUM.findall(m.group(2))]
+                    # Las fichas CRUDAS conservan el prefijo de nodo de las tablas de
+                    # FUSION (`S1`, `A2`). La vara 2 compara con estas, no con los
+                    # enteros, porque en una tabla de dos fuentes el prefijo ES el dato.
+                    crudos = [x.strip() for x in m.group(2).split(",") if x.strip()]
                     motivo = m.group(3)
                     filas.append(
-                        {"paso": paso, "origenes": origenes, "motivo": motivo, "linea": j + 1}
+                        {"paso": paso, "origenes": origenes, "origenes_crudos": crudos,
+                         "motivo": motivo, "linea": j + 1}
                     )
                 j += 1
             tablas.append({"titulo": titulo_actual, "linea_header": i + 1, "filas": filas})
@@ -104,6 +109,21 @@ def numeros_citados_en_motivo(motivo):
 
 
 def verificar_motivo_contra_grupo(tabla):
+    """Vara 1. Ojo con la SEGUNDA FORMA DE TABLA, estrenada el 15 ago 2026.
+
+    Las tablas de DESTEJIDO tienen origenes enteros (1, 10) porque colapsan dentro
+    de un nodo. Las tablas de FUSION tienen origenes con PREFIJO DE NODO (`S1`,
+    `A2`) porque tienen DOS fuentes. `RE_NUM` se queda con los digitos, asi que en
+    una fila de fusion `S5, A5` da el conjunto {5}: el prefijo se pierde.
+
+    LIMITE DECLARADO PARA LA FORMA DE FUSION, y va escrito aqui para que nadie le
+    atribuya al verde lo que no mide: en una tabla de dos fuentes esta vara sigue
+    cazando el numero que NO pertenece a la fila, que es el error que la trajo,
+    pero NO puede distinguir el paso 5 del superviviente del paso 5 del absorbido.
+    La cura de eso no es una regex mas lista: es no escribir en el motivo un
+    "paso N" suelto cuando la tabla tiene dos fuentes, y por eso el motivo de la
+    fila 6 de OP-D-02 se reescribio en vez de relajar este chequeo.
+    """
     discrepancias = []
     for fila in tabla["filas"]:
         origenes = set(fila["origenes"])
@@ -123,28 +143,71 @@ def verificar_motivo_contra_grupo(tabla):
 
 
 def cargar_grupos_json(ruta_json):
+    """Devuelve la particion del plan como FICHAS DE TEXTO, no como enteros.
+
+    Entiende las DOS formas de plan sellado de la campana: la de DESTEJIDO (grupos
+    colgando de `nodos[]`, origenes enteros) y la de FUSION (grupos en la raiz,
+    origenes con prefijo de nodo). En las dos, la ficha se compara tal como se
+    escribe en la tabla.
+    """
     d = json.loads(Path(ruta_json).read_text(encoding="utf-8"))
     grupos = []
     for nodo in d.get("nodos", []):
         for g in nodo.get("grupos_pasos", []):
-            grupos.append(sorted(g["origenes"]))
+            grupos.append([str(x) for x in g["origenes"]])
+    if not grupos:
+        for g in d.get("grupos_pasos", []) or []:
+            grupos.append([str(x) for x in g["origenes"]])
     return grupos
 
 
-def verificar_tabla_contra_json(tabla, ruta_json):
-    grupos_md = [sorted(f["origenes"]) for f in tabla["filas"]]
-    grupos_json = cargar_grupos_json(ruta_json)
-    if grupos_md == grupos_json:
-        return []
-    return [
-        {
-            "tipo": "PARTICION DISTINTA",
-            "tabla": tabla["titulo"],
-            "json": str(ruta_json),
-            "particion_md": grupos_md,
-            "particion_json": grupos_json,
-        }
-    ]
+def particion_md(tabla):
+    return [f["origenes_crudos"] for f in tabla["filas"]]
+
+
+def emparejar(tablas, rutas_json):
+    """Vara 2, generalizada el 15 ago 2026 y SIN AFLOJARLA.
+
+    La version vieja comparaba CADA tabla contra CADA plan, que con una sola tabla y
+    un solo plan era correcto y con dos de cada cosa daba falsos positivos por pura
+    construccion. La vara sigue siendo la misma y sigue siendo dura, dicha bien:
+
+      TODA TABLA TIENE QUE CALZAR CELDA A CELDA CON ALGUNO DE LOS PLANES DADOS,
+      Y TODO PLAN DADO TIENE QUE TENER SU TABLA.
+
+    Asi ninguna tabla puede divergir de su plan y ningun plan puede quedarse sin
+    tabla que lo publique, que son las dos cosas que la vara existe para impedir.
+    """
+    discrepancias = []
+    planes = {str(r): cargar_grupos_json(r) for r in rutas_json}
+    casados = set()
+    for tabla in tablas:
+        md = particion_md(tabla)
+        pareja = next((r for r, g in planes.items() if g == md), None)
+        if pareja is None:
+            discrepancias.append(
+                {
+                    "tipo": "PARTICION DISTINTA",
+                    "tabla": tabla["titulo"],
+                    "json": "NINGUNO de los %d planes dados calza" % len(planes),
+                    "particion_md": md,
+                    "particion_json": list(planes.values()),
+                }
+            )
+        else:
+            casados.add(pareja)
+    for r in planes:
+        if r not in casados:
+            discrepancias.append(
+                {
+                    "tipo": "PARTICION DISTINTA",
+                    "tabla": "(ninguna tabla publica este plan)",
+                    "json": r,
+                    "particion_md": [],
+                    "particion_json": planes[r],
+                }
+            )
+    return discrepancias
 
 
 def imprimir(d):
@@ -179,8 +242,8 @@ def main():
     todas = []
     for tabla in tablas:
         todas.extend(verificar_motivo_contra_grupo(tabla))
-        for ruta_json in args.jsons:
-            todas.extend(verificar_tabla_contra_json(tabla, ruta_json))
+    if args.jsons:
+        todas.extend(emparejar(tablas, args.jsons))
 
     for d in todas:
         imprimir(d)

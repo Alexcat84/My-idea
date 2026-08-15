@@ -1,0 +1,21 @@
+==============================================================================
+PUESTO 724: B -> D   voice_of_customer_estrategico contra voz_del_cliente_voc
+  razon vieja: 1268 caracteres, copiada verbatim dentro de la nueva
+  razon nueva: 4608 caracteres
+==============================================================================
+PUESTO 755: B -> D   dia_en_la_vida_del_cliente contra voz_del_cliente_voc
+  razon vieja: 1071 caracteres, copiada verbatim dentro de la nueva
+  razon nueva: 3609 caracteres
+==============================================================================
+PUESTO 827: B -> D   ganar_comprension_del_cliente contra voz_del_cliente_voc
+  razon vieja: 988 caracteres, copiada verbatim dentro de la nueva
+  razon nueva: 4002 caracteres
+==============================================================================
+LOTE ESCRITO: C:\Users\AlexDesk\Documents\I have an idea\docs\loop\_lote_v33b.jsonl  (3 entradas)
+GUARDA DEL ENCARGO: el 724 NO da A, asi que NO hay parada.
+Siguiente paso, con este comando exacto:
+  python scripts/corregir_veredicto.py docs/loop/_lote_v33b.jsonl
+
+MARCADOR ESPERADO TRAS ESTE SEGUNDO VOLCADO, escrito ANTES de correrlo:
+  n 3388, A 582, B 84, C 8, D 2714.
+Si el instrumento da otra cosa, se PARA y se trae.

@@ -7484,7 +7484,7 @@ pares quedo bloqueada. **El checkpoint de los 900 es el proximo.**
 
 | nodo costurado | pares que bloquea | puestos |
 |---|---:|---|
-| `voz_del_cliente_voc` | **3** | 724, 755, **827** |
+| ~~`voz_del_cliente_voc`~~ | ~~**3**~~ **0** | ~~724, 755, **827**~~ **LIBERADOS EL 15 ago 2026: los tres a `D` tras la fusion de `OP-D-02`** |
 | ~~`producto_minimo_viable`~~ | ~~**2**~~ **0** | ~~592, **830**~~ **[LIBERADOS EL 15 ago 2026 por el volteo del 9.10: 592 a `D`, 830 a `D`]** |
 | `lienzo_modelo_negocio` | 1 | 784 |
 | los dos de A/B | 1 | 738 |
@@ -7569,7 +7569,7 @@ necesitan **cura acoplada**: destejido y fusion en el mismo acto.
 
 | causa | regla | ejemplares |
 |---|---|---|
-| el solape **toca la juntura** | banco 9.9 | 724, 755, 784, 798, 827, ~~830,~~ 831, 599, 738 **[el 830 sale el 15 ago 2026: el destejido le quito las junturas]** |
+| el solape **toca la juntura** | banco 9.9 | ~~724,~~ ~~755,~~ 784, 798, ~~827,~~ ~~830,~~ 831, 599, 738 **[salen el 15 ago 2026: al 830 el destejido le quito las junturas; al 724, 755 y 827 se las quito la fusion de `OP-D-02`, y al 827 por los DOS lados]** |
 | el nodo va a **cura acoplada** | esta seccion | **835** |
 | **ninguna**: el solape cae en un bloque que sobrevive | banco 9.9 | 823, 834, **344** |
 
@@ -7581,7 +7581,7 @@ necesitan **cura acoplada**: destejido y fusion en el mismo acto.
 
 | nodo a operar | pares que libera |
 |---|---:|
-| `voz_del_cliente_voc` | **3** (724, 755, 827) |
+| ~~`voz_del_cliente_voc`~~ | ~~**3** (724, 755, 827)~~ **0, liberados el 15 ago 2026** |
 | ~~`producto_minimo_viable`~~ | ~~**2** (592, 830)~~ **0** **[LIBERADOS EL 15 ago 2026 por el volteo del 9.10: 592 a `D`, 830 a `D`]** |
 | `lienzo_modelo_negocio` | 1 (784) |
 | `ab_testing_optimizacion` + `split_testing_experimentos_ab` | 1 (738) |
@@ -16307,9 +16307,9 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 |---|---:|
 | **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
 | **A** | ~~**583** (17,2 %)~~ **582**, ver la correccion declarada debajo |
-| **B** | ~~89~~ **87** |
+| **B** | ~~89~~ ~~87~~ **84** |
 | **C** | ~~7~~ **8** |
-| **D** | ~~**2.709** (80,0 %)~~ **2.711** |
+| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ **2.714** |
 
 > **CORRECCION DECLARADA (15 ago 2026, vuelta 33 del bucle). LAS CIFRAS VIEJAS SE QUEDAN
 > TACHADAS Y NO BORRADAS: son el marcador del checkpoint del 13 ago y fueron correctas ese dia.**
@@ -16328,6 +16328,15 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 > **Recomputado con el instrumento de la casa** (`python scripts/corregir_veredicto.py
 > docs/loop/_lote_v33.jsonl`, salida en `docs/loop/SALIDA_V33_MARCADOR.txt`): **n 3.388, A 582,
 > B 87, C 8, D 2.711, tasa de A 17,2 por ciento**, sin altas ni bajas.
+>
+> **SEGUNDO VOLTEO DE LA MISMA VUELTA, y por eso las cifras de la tabla llevan DOS tachados.**
+> Tras ejecutarse la FUSION de `OP-D-02` el mismo dia, los TRES congelados que
+> `voz_del_cliente_voc` bloqueaba se releyeron contra el superviviente ya estable (banco `9.4`,
+> el TOQUE UNICO) y **los tres pasaron de `B` a `D`**: **724** (`voice_of_customer_estrategico`),
+> **755** (`dia_en_la_vida_del_cliente`) y **827** (`ganar_comprension_del_cliente`).
+> Segundo lote por el mismo carril (`docs/loop/_lote_v33b.jsonl`, salida
+> `docs/loop/SALIDA_V33_MARCADOR_B.txt`): **n 3.388, A 582, B 84, C 8, D 2.714**, sin altas ni
+> bajas, y otra vez la cifra esperada se escribio ANTES de correr el instrumento.
 
 Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 3.301-3.388
 (comando `python scripts/recomputar_marcador.py 3388`). Las tres A son todas de
@@ -16358,7 +16367,7 @@ Suma 3.388, calza con el total del archivo. Los diez dominios del catalogo estan
 > | | n | A | tasa | B | C | D |
 > |---|---:|---:|---:|---:|---:|---:|
 > | `core` **antes** (13 ago) | 1.445 | **344** | **23,8 %** | 87 | 7 | 1.007 |
-> | `core` **hoy** (15 ago) | 1.445 | **343** | **23,7 %** | **85** | **8** | **1.009** |
+> | `core` **hoy** (15 ago, tras los DOS volteos) | 1.445 | **343** | **23,7 %** | **82** | **8** | **1.012** |
 >
 > **La suma sigue siendo 3.388** y `n` de `core` sigue siendo 1.445: **lo que cambio es el
 > reparto, no el censo.**
