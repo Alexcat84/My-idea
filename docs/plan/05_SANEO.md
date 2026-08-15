@@ -639,3 +639,30 @@ estado final **se hace cuando el estado es final.**
 | **el vecindario resuelto de cada nodo NO CAMBIA** | conjunto de destinos distintos antes igual a despues, nodo por nodo. **Es la prueba de que la operacion no perdio ninguna arista** |
 | **cero solape con `OP-S-07`** | ningun grupo con destino igual al propio nodo |
 | **el numero de entradas baja en exactamente 1.056** | si baja mas, se borro algo que no era duplicado |
+
+---
+
+## REGISTRO: LA PASADA DE FORMA UNICA PARA LOS IDS SIN ACENTOS (15 ago 2026, decision del fundador)
+
+**Nace de un hallazgo de la vuelta 31 (`ACTA_AUDITOR.md`, discutible d13):** los nodos
+propios que `P.18` punto 3 fue creando durante la pasada (por `OP-F-02`, `OP-F-03` y las
+tandas `OP-F-04`) llevan sus ids **sin acentos** (`critica_del_plan_con_ia`,
+`ideacion_con_ia_en_la_sesion`, `estrategia_circular_y_mecanismo_de_retorno`, y los
+demas del indice rojo declarado). **No es una averia de una operacion sola: es la forma
+que TODAS comparten**, con precedente ya vivo desde la primera tanda
+(`estar_listo_para_ser_publica`, sin acentos desde su nacimiento).
+
+> **DENTRO DE LA PASADA, NO FABRICAR DOS ESTILOS ERA LO CORRECTO** (adjudicacion del
+> auditor, acta de la vuelta 31, discutible d13): cada nodo propio se creo siguiendo la
+> forma que el nodo propio anterior ya tenia. **La deuda es real y se declara aqui: no
+> se arregla nodo por nodo mientras la fase III sigue creando ids nuevos.**
+
+**CORRECCION DECLARADA: LA CURA ES UNA PASADA DE FORMA UNICA, DENTRO DE ESTA FASE
+(05_SANEO), AL FINAL DE LA PASADA.** Cuando la fase III termine de crear nodos propios
+(la lista de `docs/plan/INDICE_ROJO_DECLARADO.jsonl` deja de crecer), una sola pasada
+recorre todos los ids que la propia pasada creo y los normaliza a la forma con acentos
+que el resto del catalogo ya usa, con su verificacion de que ningun otro nodo, arista o
+alias quedo apuntando al id viejo sin resolver. **No es `OP-S-12` ni ninguna de las doce
+operaciones ya escritas de esta fase: es trabajo nuevo, adjudicado hoy y sin numero
+propio todavia**, porque su nomina exacta depende de cuantos nodos propios existan al
+cierre de la fase III.

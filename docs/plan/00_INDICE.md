@@ -99,6 +99,17 @@ el JSONL discrepan, manda el JSONL.
 | **LISTA** | se puede ejecutar sin volver a decidir: nodos, superviviente, perdidas, orden y verificacion estan escritos | nadie: se ejecuta |
 | **DECISION PENDIENTE** | falta un dato o falta una adjudicacion. **Lleva la pregunta exacta escrita en el campo `pregunta_pendiente`** | el auditor o el fundador |
 
+> **REGISTRO: EL VALOR `HECHA` NO SE ESTRENA** (15 ago 2026, decision del fundador,
+> citando las dos adjudicaciones previas). Una operacion terminada **no cambia su
+> `estado`**: se queda en `LISTA` y su ejecucion se declara en el campo `nota`, con la
+> cita del acta que la verifico. **Adjudicado dos veces antes de hoy**: acta de la
+> vuelta 21, pregunta 3 (*el plan no tiene estado ejecutada: se queda como esta, con
+> regla citada; ninguna regla ordena mover el campo estado del plan*), y acta de la
+> vuelta 30, pendiente de doctrina 2 (*el criterio de HECHO vive en `08_VERIFICACION.md`
+> y las declaraciones viven en el campo `nota`; estrenar un valor de campo seria
+> doctrina de esquema y no hace falta para nada de lo que sigue*). **La tercera vez que
+> se pregunta, la respuesta sigue siendo la misma: NO.**
+
 ---
 
 ## EL MARCADOR

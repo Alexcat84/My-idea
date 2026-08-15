@@ -95,3 +95,8 @@ estrenarse (adjudicado NO dos veces; siete operaciones ya declaran en su nota).
    fase 02).
 3. `PROMPT_SIGUIENTE.md` queda VACIO a proposito: el bucle no arranca solo hasta que tu
    decision este escrita.
+
+DECISION DEL FUNDADOR (15 ago 2026): decision 1 por la opcion a (la nomina de OP-F-04-HOR
+vuelve a 14); decision 2 por correccion del campo preservar (el nodo preserva su objeto
+restante por lectura y el par 494 se re-lee con la vara sobre el nodo estable); acentos a
+la fase de saneo; HECHA no se estrena. La fase 02 sigue.
