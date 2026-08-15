@@ -1,0 +1,41 @@
+==============================================================================
+PLAN     : PLAN_V27_OPF02.json
+OPERACION: OP-F-02
+CORTES   : 3
+                 future_scenarios_planning                  -> nodo_propio  escenarios_de_evolucion_de_la_ia (NO EXISTE)   [PENDIENTE (origen con 13 pasos, los 13 esperados)]
+                 gut_check                                  -> nodo_propio  critica_del_plan_con_ia (NO EXISTE)            [PENDIENTE (origen con 9 pasos, los 9 esperados)]
+                 brainstorming_divergente                   -> nodo_propio  ideacion_con_ia_en_la_sesion (NO EXISTE)       [PENDIENTE (origen con 8 pasos, los 8 esperados)]
+  RESUMEN: 3 cortes, 3 con destino nodo_propio, 3 pendientes
+==============================================================================
+PLAN     : PLAN_V27_OPF03_SISTEMAS.json
+OPERACION: OP-F-03
+CORTES   : 7
+                 bundle_ideas                               -> miembro      guias_diseno_sistemas_estrategicos (existe)    [APLICADO   (origen con 5 pasos, 9 menos los 4 que salieron)]
+                 modelo_hibrido_agile_stage_gate            -> miembro      ejecucion_incremental_transicion_tecnologica (existe) [APLICADO   (origen con 9 pasos, 13 menos los 4 que salieron)]
+                 principio_calidad_mvp                      -> miembro      ejecucion_incremental_transicion_tecnologica (existe) [APLICADO   (origen con 10 pasos, 14 menos los 4 que salieron)]
+                 procesamiento_paralelo_con_espirales       -> miembro      definicion_objetivos_proyecto_sistema (existe) [APLICADO   (origen con 4 pasos, 9 menos los 5 que salieron)]
+                 propuesta_gasto_capital                    -> miembro      tecnologia_como_medio_no_fin (existe)          [APLICADO   (origen con 5 pasos, 12 menos los 7 que salieron)]
+                 reduccion_tamano_de_lote_batch_size        -> miembro      ejecucion_incremental_transicion_tecnologica (existe) [APLICADO   (origen con 5 pasos, 9 menos los 4 que salieron)]
+                 schedule_management_plan                   -> miembro      complejidad_acorde_capacidad_organizacional (existe) [APLICADO   (origen con 5 pasos, 10 menos los 5 que salieron)]
+  RESUMEN: 7 cortes, 0 con destino nodo_propio, 0 pendientes
+==============================================================================
+PLAN     : PLAN_V27_OPF03_CADENA.json
+OPERACION: OP-F-03
+CORTES   : 9
+                 asociaciones_clave                         -> miembro      estrategia_captura_mercado_crecimiento (existe) [NO CUADRA  (origen con 4 pasos; el plan esperaba 12 y saca 4)]
+                 asociaciones_clave                         -> miembro      gestion_beneficios_alianza_sostenible (existe) [NO CUADRA  (origen con 4 pasos; el plan esperaba 12 y saca 4)]
+                 co_creation_session                        -> miembro      coordinacion_colaboracion_cadena_suministro (existe) [APLICADO   (origen con 4 pasos, 9 menos los 5 que salieron)]
+                 economia_circular_como_modelo_de_negocio   -> miembro      modelo_simulacion_cadena_suministro_circular (existe) [APLICADO   (origen con 5 pasos, 9 menos los 4 que salieron)]
+                 empoderamiento_de_participantes            -> miembro      requisitos_sistema_retroalimentacion (existe)  [APLICADO   (origen con 4 pasos, 8 menos los 4 que salieron)]
+                 gestion_cuentas_por_cobrar                 -> miembro      gestion_riesgo_credito (existe)                [APLICADO   (origen con 4 pasos, 9 menos los 5 que salieron)]
+                 mapa_de_canal_de_ventas                    -> miembro      definicion_alineacion_cadena_suministro (existe) [APLICADO   (origen con 5 pasos, 8 menos los 3 que salieron)]
+                 producto_unico_superior                    -> miembro      coordinacion_colaboracion_cadena_suministro (existe) [APLICADO   (origen con 6 pasos, 8 menos los 2 que salieron)]
+                 ratios_eficiencia_inventario               -> miembro      cuatro_categorias_desempeno_cadena_suministro (existe) [APLICADO   (origen con 4 pasos, 8 menos los 4 que salieron)]
+  RESUMEN: 9 cortes, 0 con destino nodo_propio, 0 pendientes
+==============================================================================
+PLAN     : PLAN_V28_RELECTURA.json
+OPERACION: OP-F-03 (recomputo de la relectura conjunta del acta 27)
+CORTES   : 2
+                 modelo_simulacion_cadena_suministro_circular -> nodo_propio  estrategia_circular_y_mecanismo_de_retorno (NO EXISTE) [PENDIENTE (origen con 9 pasos, los 9 esperados)]
+                 diferencia_ventaja_beneficio               -> miembro      framework_caracteristicas_ventajas_beneficios (existe) [APLICADO   (origen con 4 pasos, 8 menos los 4 que salieron)]
+  RESUMEN: 2 cortes, 1 con destino nodo_propio, 1 pendientes
