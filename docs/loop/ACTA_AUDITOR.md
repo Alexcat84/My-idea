@@ -7147,3 +7147,209 @@ con el motivo, el estado exacto, las dos caidas con su cura propuesta, las tres
 adjudicaciones listas, y el encargo siguiente COMPLETO dentro, listo para copiar a
 `PROMPT_SIGUIENTE.md` al relanzar. `docs/loop/PROMPT_SIGUIENTE.md` VACIADO, como manda la
 seccion 4 de `AUDITOR.md`.
+
+
+# ACTA DE LA VUELTA 33 DEL AUDITOR (15 ago 2026, Fable 5). EL REPORTE VERIFICADO ENTERO Y AL DIGITO POR CORRIDA PROPIA, LA CIEGA COINCIDE 7 DE 7 EN EL FONDO, DOS PENDIENTES ADJUDICADOS POR LETRA, Y PARADA DE DOCTRINA: DOS PREGUNTAS QUE NINGUNA PAGINA CONTESTA
+
+## 1. VERIFICACION, todo por corrida propia de hoy
+
+- Rama `pasada-unica`, HEAD `d5058140`. Desde la decision del fundador (`3f196b73`):
+  la APERTURA `e1105299`, siete commits de tarea y el del reporte. `git diff --stat
+  e1105299..78ea7799` da **67 ficheros, 6.539 insertadas, 138 borradas**, identico
+  al reporte; el reparto por carpeta calza al fichero (38/12/5/5/3/2/2) y
+  `dataset/nodos` son exactamente los cinco nombrados.
+- **Marcador recomputado del archivo con comando propio**: n 3.388, A 582, B 84,
+  C 8, D 2.714; cero huecos, cero duplicados, rango 1 a 3.388. Identico al CIERRE
+  y al instrumento de la casa re-corrido por mi.
+- **Los UNICOS seis puestos cambiados desde la apertura son los seis volcados**
+  (494, 592, 724, 755, 827, 830), medido por diff propio del archivo entero contra
+  `e1105299`; la razon vieja queda LITERAL dentro de la nueva en los seis (865,
+  1.359, 962, 1.268, 1.071, 988 caracteres). La aritmetica del marcador cierra
+  exacta: A menos 1, B menos 5, C mas 1, D mas 5.
+- **Grafo por conteo propio sobre `dataset/nodos`**: 3.853 ficheros, 3.538 vivos,
+  315 deprecados. La fusion esta en el arbol: superviviente con SEIS pasos e
+  `ids_alias` `['enfoque_mercado_voc']`, `merged_originals` con la ficha; el
+  absorbido `deprecado: true` con sus CINCO pasos intactos. `OP-D-02` con
+  `superviviente: voz_del_cliente_voc` en `OPERACIONES.jsonl` (apertura: `null`,
+  verificado en la salida commiteada).
+- **Tasa core por conteo propio**: A 343, B 82, C 8, D 1.012. Identica a la del
+  reporte.
+- **Gate 0 corrido por mi con el ciclo entero** (`run_phase1`, `etiquetas_de_cara
+  --aplicar`, `sync_assets_web`): `GATE 0: OK`, 20 comprobaciones `[OK]`, 0
+  `[FALLO]`, y el derivado queda **BYTE IGUAL al commiteado** (solo el log de
+  corrida difiere, restaurado). **Suites por corrida propia**: motor 24 de 24 exit
+  0, web 1.030 pasadas y 3 saltadas exit 0, `tsc` cero lineas exit 0.
+- **El verificador de mapas corrido por mi**: 2 tablas, 12 filas, 0 discrepancias,
+  exit 0. Y **PROBADO EN ROJO POR MI**: reintroduje la celda del 16 en el arbol y
+  cayo con exit 1 nombrando fila y linea exacta (la especie del acta 32);
+  restaurado, verde exit 0, arbol limpio.
+- **El detector de ganador re-corrido**: viejo 1 de 3 con el falso positivo
+  `ganar` del 526 impreso; nuevo 0 de 3.
+- **La celda del 16 leida por mi contra `pasos_originales`**: el paso 16 ES la
+  cadencia y los pasos 6, 15 y 19 SI empiezan por el conjunto minimo; los tres
+  campos del plan sellado traen la particion nueva y las viejas enteras en
+  `correcciones_declaradas`; min del grupo 2 sigue en 2 y el del 6 en 8.
+- **La parada de OP-D-03 verificada**: `costuras_internas.py` con **exit 1 REAL**
+  declarandose mal calibrado, y pareja 47,1 y 54,3 con bloque 0,0 reproducidos por
+  corrida propia; la causa estructural leida en el codigo (`range(MIN_BLOQUE,
+  n - MIN_BLOQUE + 1)` vacio con cinco pasos, mas la puerta de
+  `len(pasos) >= MIN_BLOQUE * 2`), y los DOS nodos de calibracion tienen CINCO
+  pasos hoy, contados por mi. `vuelta32_costura_opd01.py` importa las senales
+  (linea 29) y la puerta de calibracion vive en el `main()`: **la guarda se
+  saltea importando, confirmado**.
+- **La caida 6.1 verificada**: exactamente TRES vivos nombran hoy a
+  `enfoque_mercado_voc` (`homework_frontend_loading`,
+  `procesamiento_paralelo_con_espirales`, `ventaja_competitiva_producto`, que son
+  justo los otros tres ficheros tocados de `dataset/nodos`), y el caso positivo
+  re-corrido por mi da **22 PASAN, 1 CAE** con el que cae siendo el declarado. El
+  mas cuatro de enlaces (16.848 a 16.852) es coherente con el paso 5 del Gate 0
+  del ejecutor: cinco vistas repuestas menos la duplicada que la fusion limpio.
+
+## 2. RELECTURA CIEGA, empezando por los discutibles marcados
+
+Los nodos impresos ENTEROS antes de destapar razon alguna: los cuatro del acto mas
+el absorbido, los tres pares contra el superviviente y el par 494. Adjudique mi
+clase y SOLO DESPUES lei lo escrito.
+
+| pieza | mi clase a ciegas | la escrita | resultado |
+|---|---|:---:|---|
+| 494 | C por el 9.22, con las dos lineas encontradas por mi: el lanzamiento en `principio_calidad_mvp` paso 3 y la simplicidad en `producto_minimo_viable` pasos 2 y 3, cada una expandida por el procedimiento entero del otro | C | **COINCIDE, y las dos lineas son las mismas** |
+| 724 | D, solape de una a dos lineas con colas a otro sitio | D | **COINCIDE** |
+| 755 | D, procedimiento propio con otro entregable | D | **COINCIDE** |
+| 827 | D, solape linea contra linea | D | **COINCIDE** |
+| LD-72 | D, el mas apretado de la tanda | D | **COINCIDE** |
+| LD-73 | D, madre e hijo | D | **COINCIDE** |
+| LD-74 | D, madre e hijo, con arista que falta | D | **COINCIDE** |
+
+**SIETE DE SIETE COINCIDEN EN EL FONDO.** En LD-73 y LD-74 mi lectura ciega
+encontro la misma figura (el procedimiento entero de `voz_del_cliente_voc`
+expandiendo UNA linea de la madre) y en LD-72 el mismo peso (tres lineas
+compartidas contra un procedimiento de cinco piezas con otro entregable). `d5`
+(dos puentes) se sigue de las tres D, y las tres D quedan confirmadas por lectura
+propia.
+
+## 3. LAS CAIDAS DE ESTA TANDA, con nombre
+
+**3.1 CAIDA DE REPORTE DEL EJECUTOR, FUERA DEL MARCADO**: *"Siete commits de
+trabajo, el primero de ellos la APERTURA"*. No hay conteo que lo haga verdad: la
+apertura mas las tareas son OCHO commits (`e1105299` mas siete), y con el del
+reporte nueve; el siete calza solo si la apertura NO es uno de ellos. No mueve
+ningun dato. Por la regla del credito, **el tramo se releyo AL DOBLE**: el
+encabezado entero quedo verificado al digito (rutas por carpeta, los cinco
+ficheros, hashes, la columna de apertura contra la salida commiteada) y todo lo
+demas es exacto.
+
+**3.2 CAIDA DE CIFRA PUBLICADA ATRIBUIDA A LA VUELTA 32**, declarada por el propio
+ejecutor en la 33 y verificada por mi: la pata instrumental del movimiento 2 de
+`OP-D-01` (bloque 0,0 contra 44) no mide lo que dice medir, porque la senal de
+bloque devuelve 0,0 para todo nodo de cinco pasos. La conclusion conserva su pata
+textual. La caida pertenece al dictado de la tanda 32, que ya fue parada y
+restaurada por el fundador; la tanda 33 no tecleo esa cifra. **NO reabre la
+racha.**
+
+**3.3 LA CAIDA 6.1 DEL RECIPROCADO NO SE CUENTA COMO CAIDA DE DICTADO**, y el
+criterio va escrito: ninguna cifra publicada era falsa al medirse; el estado
+cambio debajo por un hueco de doctrina, el ejecutor lo midio AL CIERRE, lo publico
+EN ROJO y no lo maquillo. Es el sintoma de la pregunta 1, no dictado suelto. Lo
+contrario de esta conducta es lo que el credito castiga.
+
+## 4. ADJUDICACIONES
+
+1. **d1 PROCEDE** por extension del 9.10: el volteo barre las tablas derivadas EN
+   EL MISMO ACTO, y `mapa_pasos` y `pruebas_repeticion` son la misma particion
+   escrita tres veces; corregir una y dejar dos es fabricar la tabla que dice que
+   si. El alcance tomado era el unico compatible con la regla.
+2. **d2 PROCEDE**: la tabla vieja queda ENTERA y tachada; un verificador de tablas
+   vigentes no debe leer una retirada, y el tachado es el unico gesto que lo dice
+   sin borrar historia.
+3. **d3, d4 y d5 COINCIDEN** por ciega propia (seccion 2).
+4. **d6 COINCIDE**: P.8 con el contenido primero. El argumento del alcance de
+   `enfoque_mercado_voc` es serio y pierde contra los tres apoyos medidos; el
+   cableado no decide, confirma.
+5. **d7 y d8 QUEDAN**: la conservacion midio 10 de 10 rastros vivos (las dos
+   piezas de d7 vivas las dos, verificado en mi corrida del caso positivo), y la
+   etiqueta de d8 no mueve datos. Las lecturas contrarias quedan anotadas donde
+   deben vivir: en el reporte.
+6. **d9 QUEDA CON NOTA**: declarar de mas en la tabla de perdidas es mas barato
+   que perder callado. Si alguna vez estorba, es cosmetica, no correccion.
+7. **d10 CORRECTO Y ES DOCTRINA DE LA CASA**: fallar ruidoso. Arreglar el rojo
+   daria un verde que dura hasta la proxima corrida de Gate 0, que es exactamente
+   el verde y mal contra el que esta escrito el BANCO seccion 9.
+8. **d11 COINCIDE EN EL FONDO, con encargo diferido**: el criterio (arista que
+   falta donde hay madre e hijo del 9.6.2; nada donde el solape es linea contra
+   linea) es el 9.6.1 y el 9.6.2 aplicados, no doctrina nueva, pero debe quedar
+   escrito UNA VEZ donde las tres razones lo compartan. Va en el encargo de
+   reanudacion.
+9. **d13 CORRECTO POR LETRA**: regla 5 del EJECUTOR (*paras SOLO si algo
+   contradice una regla vigente o una cifra publicada con su corte: lo escribes
+   como PARADA y no lo arreglas tu*). Es exactamente lo que hizo.
+10. **d14 CORRECTO**: P.5 manda leer DESPUES del destejido, y extender una
+    adjudicacion del fundador es del fundador. Pregunta 3.
+11. **d15 REGISTRADO COMO PATRON VIGILADO, sin sancion**: las dos guardas se
+    hicieron MAS estrictas, las dos declaradas, y el verificador ademas probado en
+    rojo dos veces por el ejecutor y una tercera por mi.
+12. **PENDIENTE 4 ADJUDICADO por extension citable**: los checkpoints cerrados NO
+    se reescriben. El CRITERIO del 14 ago (AUDITOR seccion 1) manda citar lo viejo
+    como contraste y declarar la discrepancia en vez de resolverla copiando; el
+    9.10 apunta a tablas derivadas VIGENTES, que *hacen creer* algo hoy. Una fila
+    de checkpoint es la foto de su corte y reescribirla fabrica corridas que no
+    existieron.
+13. **PENDIENTE 5 ADJUDICADO por letra**: P.10 manda fundir el subconjunto cerrado
+    y ENLAZAR EL RESTO, y los enlaces son fase 04. LD-72 y LD-73 tienen las
+    aristas puestas, LD-74 la deja declarada. Los puentes no necesitan operacion
+    propia: su tratamiento ya esta escrito.
+14. **PENDIENTES 1, 2 y 3 NO SON ADJUDICABLES por extension**: seccion 6.
+
+## 5. METRICA DE CREDITO acumulada
+
+Entrante tras la restauracion del fundador (15 ago): 42 relecturas, 402 puestos
+(mas 200 nodos de forma y 43 sitios de codigo), 7 caidas de clase, 14 de reporte
+del ejecutor, 6 de cifra publicada del ejecutor, 2 de cifra del auditor, 1 de acta
+del auditor. Tandas seguidas: CERO (restauradas).
+
+Esta tanda (la vuelta 33 del ejecutor): mas 1 relectura (los quince discutibles,
+de fondo); mas 7 puestos releidos a ciegas (494, 724, 755, 827, LD-72, LD-73,
+LD-74, **los siete coinciden**); mas 9 nodos leidos enteros; mas 10 sitios de
+codigo re-corridos o leidos (estado, marcador propio, el ciclo de Gate 0 con las
+tres suites, caso positivo, verificador en verde y en rojo, detector, costuras y
+su causa en el codigo, el import de la v32, la celda 16 contra
+`pasos_originales`). Caidas: mas 1 de REPORTE del ejecutor (3.1, fuera del
+marcado, tramo releido al doble); mas 1 de CIFRA PUBLICADA del ejecutor atribuida
+a la vuelta 32 (3.2).
+
+**Acumulado: 43 relecturas, 409 puestos (mas 209 nodos de forma y 53 sitios de
+codigo), 7 caidas de clase, 15 de reporte del ejecutor, 7 de cifra publicada del
+ejecutor, 2 de cifra del auditor, 1 de acta del auditor.**
+
+**Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte seguidas:
+DOS** (la 32 y esta; a la tercera seguida, parada de patron).
+
+## 6. CONDICION DE PARADA: DOCTRINA NUEVA, y son dos preguntas trabadas entre si
+
+La primera condicion de la seccion 4 del AUDITOR se cumple dos veces y ninguna se
+resuelve citando:
+
+- **PREGUNTA 1** (pendiente 1, d12): un nodo deprecado, conserva su cableado o
+  no. Ninguna pagina lo dice. De la respuesta depende que la redireccion de TODA
+  fusion futura sea estable (la fase 03 entera es de fusiones), y hay una fusion
+  ya ejecutada con su caso positivo publicado en rojo esperandola. Cualquier
+  salida toca un instrumento sellado o la letra de una guarda: eso es del
+  fundador.
+- **PREGUNTA 2** (pendiente 2, d13): quien arregla `costuras_internas.py` y con
+  que autoridad. El arreglo tecnico puede ser chico; su efecto no: recalibra un
+  instrumento cuya cifra sostiene la mitad del apoyo del movimiento 2 del acta 32
+  (regla 5 del EJECUTOR: parada), y los dos nodos de calibracion del docstring ya
+  no miden lo declarado porque esta misma campana los destejio. Elegir la
+  recalibracion es doctrina de medicion, no una linea de codigo.
+- La **PREGUNTA 3** cuelga de la 2 (P.5 manda leer despues del destejido y el
+  destejido esta bloqueado).
+
+Ademas el MODO DE EJECUCION CONTINUA manda que una guarda en rojo detiene y
+convoca, y esta guarda no puede quedar verde sin decision de fundador. No es
+parada de credito (seccion 5: racha en cero) ni de fallo tecnico (todo lo demas
+verde por corrida propia).
+
+`docs/loop/PARA_ALEXIS.md` escrito con el motivo, el estado exacto, las tres
+preguntas con opciones y costo, y el encargo siguiente COMPLETO dentro, listo para
+copiar a `PROMPT_SIGUIENTE.md` al relanzar. `docs/loop/PROMPT_SIGUIENTE.md`
+VACIADO, como manda la seccion 4 de `AUDITOR.md`.
