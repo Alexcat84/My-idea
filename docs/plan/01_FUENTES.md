@@ -1177,6 +1177,43 @@ no la tiene se nombra, con su medicion.**
 > el reporte de la vuelta 30 y NO se corta**: es el unico de los quince de `OP-F-04-COL` cuyo
 > texto no alcanza para ejecutarse sin decidir.
 
+> **ADJUDICADO (14 ago 2026, acta de la vuelta 30, seccion 4, punto 2, leida hoy en la linea
+> 6610 de `docs/loop/ACTA_AUDITOR.md`). LA MARCA DISCUTIBLE DE ARRIBA SE QUEDA, con esta
+> adjudicacion al lado.** El texto del auditor, **con sus palabras**:
+>
+> > **Pendiente de doctrina 1 (`keep_customers_strategy`, el material embebido): ADJUDICADO
+> > POR EXTENSION CITABLE DE P.19. NO ES PARADA.** El caso, leido por mi: el material de
+> > Coleman comparte EL OBJETO del nodo (retener clientes: el hito celebrado y la inversion
+> > en postventa son tacticas de retencion), NO repite (complementa dentro de la frase, no
+> > duplica), y no forma bloque. La ratio de P.19 lo cubre a fortiori: *cuando el bloque
+> > repite el mismo objeto que ya vive en el nodo, no hay destino que buscar, porque el
+> > objeto ya esta en casa*. Si el material con el mismo objeto DEBE acabar fundido en un
+> > solo procedimiento multifuente con la fuente intacta, un nodo donde ya vive asi (lo
+> > fundio la fusion semantica vieja de la fase 3, anterior al plan) **ya esta en el estado
+> > final que P.19 produce: no hay operacion que ejecutar**. `keep_customers_strategy` queda
+> > **MULTIFUENTE LEGITIMO, sin corte, con su fuente intacta**, y el saldo de COL lo cuenta
+> > como especie propia (EMBEBIDO LEGITIMO), igual que WEI cuenta sus fundidos. **Los limites
+> > se dejan escritos:** si una lectura futura declara en el un tramo AJENO al objeto, entra
+> > por la segunda puerta de la cola; y separar material embebido AJENO (media frase hacia
+> > otro nodo) sigue sin pagina, pero ninguna pagina vigente lo ordena hoy, asi que no
+> > bloquea nada. La marca DISCUTIBLE del registro se queda, con esta adjudicacion al lado.
+>
+> **LO QUE ESO SIGNIFICA PARA LA EJECUCION, dicho al pie:** `keep_customers_strategy` **NO
+> ENTRA a los destinos del segundo tiempo de `OP-F-04-COL`**, porque no hay operacion que
+> ejecutar sobre el: **su fuente queda INTACTA** (medida hoy: *The Startup Owner's Manual -
+> Steve Blank | Never Lose a Customer Again - Joey Coleman*, **6 pasos**) y **no se le hace
+> corte alguno**. Es, junto con `viral_loop_marketing` (cuya mitad ya la hizo el corte unico
+> de `P.20`), **una de las dos restas que dejan la cuenta del segundo tiempo en TRECE
+> destinos**.
+>
+> **LOS LIMITES, escritos donde se van a leer:** la puerta que este nodo tiene abierta es
+> **la segunda de LA COLA DEL OBJETO AJENO** (`08_VERIFICACION.md`, seccion *LA COLA GANA SU
+> SEGUNDA PUERTA*). Si una lectura futura declara dentro de el **un tramo AJENO al objeto**
+> *retener clientes*, ese tramo **entra por esa puerta** y su cura es **destejido ordinario
+> por `P.18` como operacion nueva de la fase que corresponda, nunca poda**. Lo que sigue **sin
+> pagina** es separar material embebido AJENO (media frase hacia otro nodo), **y hoy ninguna
+> pagina vigente lo ordena**: por eso no bloquea nada y no es parada.
+
 > **CORRECCION DECLARADA sobre una frontera YA PUBLICADA: `metas_vs_proposito` ya no tiene la
 > que dice la tabla de los 14.** Ahi esta escrita como **`1 a 4 / 5 a 9 / 10 a 14`** con tres
 > libros (Assembling, Horowitz, Coleman), **y esa linea se queda entera donde esta**. Medido
