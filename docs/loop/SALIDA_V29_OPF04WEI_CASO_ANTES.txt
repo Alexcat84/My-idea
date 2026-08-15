@@ -1,0 +1,59 @@
+CASO POSITIVO: OP-F-04-WEI, los bloques con destino leido (los dos de TOQUE UNICO NO entran)
+==============================================================================
+
+enfoque_motor_unico_crecimiento -> anillo_interior_explotar_el_canal_nucleo   huella 'anillo medio (Bullseye)'
+  [CAE ] enfoque_motor_unico_crecimiento ya no lleva la huella
+  [CAE ] anillo_interior_explotar_el_canal_nucleo si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['enfoque_motor_unico_crecimiento']
+
+optimizacion_embudo_get_customers -> anillo_interior_explotar_el_canal_nucleo   huella 'Optimizely'
+  [CAE ] optimizacion_embudo_get_customers ya no lleva la huella
+  [CAE ] anillo_interior_explotar_el_canal_nucleo si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['optimizacion_embudo_get_customers']
+
+ab_testing_optimizacion -> anillo_interior_explotar_el_canal_nucleo   huella 'confianza estad'
+  [CAE ] ab_testing_optimizacion ya no lleva la huella
+  [CAE ] anillo_interior_explotar_el_canal_nucleo si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['ab_testing_optimizacion']
+
+analisis_trafico_competitivo -> inteligencia_de_anuncios_de_la_competencia   huella 'Quantcast'
+  [CAE ] analisis_trafico_competitivo ya no lleva la huella
+  [CAE ] inteligencia_de_anuncios_de_la_competencia si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['analisis_trafico_competitivo']
+
+decision_pivote_perseverar -> puntos_brillantes_antes_del_pivote   huella 'punto brillante'
+  [CAE ] decision_pivote_perseverar ya no lleva la huella
+  [CAE ] puntos_brillantes_antes_del_pivote si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['decision_pivote_perseverar']
+
+key_partners_hypothesis -> alineacion_bd_metricas_core   huella 'capacidad de mover la m'
+  [CAE ] key_partners_hypothesis ya no lleva la huella
+  [CAE ] alineacion_bd_metricas_core si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['key_partners_hypothesis']
+
+key_partners_hypothesis -> pipeline_alianzas_bd   huella 'supply partnerships'
+  [CAE ] key_partners_hypothesis ya no lleva la huella
+  [CAE ] pipeline_alianzas_bd si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['key_partners_hypothesis']
+
+metricas_de_adquisicion_activacion -> sem_estrategia_ejecucion   huella 'CTR, CPC y CPA'
+  [CAE ] metricas_de_adquisicion_activacion ya no lleva la huella
+  [CAE ] sem_estrategia_ejecucion si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['metricas_de_adquisicion_activacion']
+
+==============================================================================
+RESULTADO: 8 PASAN, 16 CAEN
+HAY PRUEBAS QUE CAEN

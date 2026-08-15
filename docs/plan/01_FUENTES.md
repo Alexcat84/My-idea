@@ -864,6 +864,52 @@ PENDIENTE de leer la nomina.** No se adivina un destino: se deja escrita la fron
 > nuevo: **`OP-F-04-HOR` tiene escrito *va a familia propia*, o sea nodo propio, y eso choca
 > hoy con la tercera hilada del muro** que este mismo dia se midio.
 
+### `OP-F-04-WEI`, SEGUNDA TANDA: OCHO CORTES MAS, Y QUEDA PARCIAL POR DOS (14 ago 2026, vuelta 29)
+
+**La tabla de arriba se queda entera: sus nueve filas eran el estado del dia en que se
+escribio.** Hoy se ejecutan **siete de esos nueve nodos, en ocho cortes**, porque
+`key_partners_hypothesis` da **dos**, tal como el acta de la vuelta 28 dejo SOSTENIDO en su
+discutible 11. **La nomina de la familia se midio HOY y no se copio: 76 nodos vivos declaran
+`Traction` y 67 lo declaran como fuente UNICA** (`docs/loop/SALIDA_V29_FAMILIA_WEINBERG.txt`).
+**Esa cifra coincide con la medicion de CIERRE del auditor en el acta de la vuelta 28, y no
+con la de apertura (80 y 67), que es la caida de reporte que esa acta nombro.**
+
+| origen | frontera | destino por `P.18` | por que |
+|---|---|---|---|
+| `enfoque_motor_unico_crecimiento` | 5 a 9 | **nodo propio** `anillo_interior_explotar_el_canal_nucleo` | ver el recuadro de abajo |
+| `optimizacion_embudo_get_customers` | 6 a 10 | **el mismo nodo propio** | ver el recuadro de abajo |
+| `ab_testing_optimizacion` | 11 a 15 | **el mismo nodo propio** | ver el recuadro de abajo |
+| `analisis_trafico_competitivo` | 5 a 8 | **nodo propio** `inteligencia_de_anuncios_de_la_competencia` | ningun miembro parte de los anuncios AJENOS: `seleccion_plataforma_social_ads` decide por audiencia y objetivo propios, `retargeting_display` y `quality_score_optimizacion` son de campana propia ya corriendo, y `sem_estrategia_ejecucion` es el lanzamiento de la busqueda. `P.18` punto 3 |
+| `decision_pivote_perseverar` | 5 a 9 | **nodo propio** `puntos_brillantes_antes_del_pivote` | `identificacion_bolsas_virales` segmenta por COEFICIENTE VIRAL y el bloque no habla de viralidad; `leaky_bucket_metaphor` y `fases_traccion_producto` miran por donde se FUGAN los clientes. **El bloque hace la pregunta contraria a la fuga: quienes se quedaron.** `P.18` punto 3 |
+| `key_partners_hypothesis` | **6 a 10** | miembro `alineacion_bd_metricas_core` | el entregable del miembro lo dice con las mismas palabras, *checklist de evaluacion de partnerships basado en METRICAS CORE*, y el bloque evalua socios por su capacidad de mover la metrica clave y no por tamano ni prestigio |
+| `key_partners_hypothesis` | **11 a 14** | miembro `pipeline_alianzas_bd` | **se separa del anterior a proposito**: este no filtra por metrica, **CLASIFICA POR TIPO** segun el cuello de botella (marca, distribucion o inventario), y el entregable del miembro es esa tabla con **categorizacion** y prioridad |
+| `metricas_de_adquisicion_activacion` | 6 a 9 | miembro `sem_estrategia_ejecucion` | el bloque entero es la cuenta de una campana de busqueda y su ultimo paso nombra el canal; el entregable del miembro es la campana activa **con el seguimiento de conversiones**, y el bloque es la definicion y la lectura de ese seguimiento |
+
+> **LOS TRES PRIMEROS VAN AL MISMO NODO PROPIO, y el motivo es una ausencia medida en la
+> familia: LA DIANA NO TIENE ANILLO INTERIOR.** `canales_de_traccion_19` es el anillo
+> exterior (listar los 19), `middle_ring_testing` es el anillo medio (probar los candidatos y
+> comparar costo, volumen y calidad), `bullseye_framework` es la diana entera, **y ningun
+> miembro dice que se hace con el canal DESPUES de que gana.** Los tres bloques describen ese
+> mismo acto: concentrar todos los recursos en el canal ganador, no distraerse con los
+> secundarios, probar A/B dentro de el con grupo de control y confianza estadistica, y
+> repetir la diana **cuando se sature**. **Fabricar tres nodos con ese material seria fabricar
+> el trio que la campana existe para deshacer**, asi que se funden en UNO por la adjudicacion
+> 3 del acta de la vuelta 27. **La repeticion que eso deja dentro del nodo nuevo esta
+> declarada en la cola de `08_VERIFICACION.md` con su medicion, y no se desteje aqui.**
+
+**GUARDAS:** simulacion previa verde (8 cortes, 13 ficheros); guarda de conteo, de texto, de
+fuente, de destino y **de huella, que PARO CINCO VECES** y obligo a cambiar el trozo elegido
+(`MixRank` vivia ya en `retargeting_display`, `Critical Path` en el propio
+`alineacion_bd_metricas_core`, y otras tres): **una huella que ya vive fuera del origen no
+prueba nada, y la guarda lo cazo antes de sellar**. **Caso positivo antes: 16 CAEN de 24.
+Despues: 24 de 24 PASAN.** Ciclo de `GATE 0` entero, los cuatro comandos, el cuarto por
+censo; 71 etiquetas sin encoger; suites verdes.
+
+> **`OP-F-04-WEI` SIGUE PARCIAL, y ahora por DOS y no por nueve: `coeficiente_viral` y
+> `viral_loop_marketing`, los dos de TOQUE UNICO.** No se ejecutan y no se adivinan: **su
+> texto no alcanza para ejecutarse sin decidir lo que ninguna pagina escribio.** Van al
+> reporte de la vuelta 29 como **PARADA**, con la lectura de hoy escrita entera.
+
 ### LA CONSECUENCIA DE ORDEN, y toca a la fase 02
 
 **SEIS de los 43 ya tienen operacion en otra fase**, y por *fuente primero* esta

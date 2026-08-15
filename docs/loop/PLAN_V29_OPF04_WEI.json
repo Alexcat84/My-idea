@@ -1,0 +1,328 @@
+{
+  "operacion": "OP-F-04-WEI, los bloques con destino leido (los dos de TOQUE UNICO NO entran)",
+  "fecha_corte": "2026-08-14",
+  "nomina_de_la_familia": "Medida HOY, no copiada: 76 nodos vivos declaran Traction y 67 lo declaran como fuente UNICA (docs/loop/SALIDA_V29_FAMILIA_WEINBERG.txt). Coincide con la medicion de cierre del auditor en el acta de la vuelta 28, y NO con la de apertura de esa vuelta (80 y 67), que es la caida de reporte que el acta nombro.",
+  "lo_que_no_entra": "coeficiente_viral y viral_loop_marketing, los dos de TOQUE UNICO. Van al reporte como PARADA con su lectura escrita: su texto no alcanza para ejecutarse sin decidir lo que ninguna pagina escribio.",
+  "cortes": [
+    {
+      "origen": "enfoque_motor_unico_crecimiento",
+      "frontera": "los pasos [5, 6, 7, 8, 9] de 9",
+      "pasos_que_salen": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "fuente_queda": "The Lean Startup - Eric Ries",
+      "destino": {
+        "tipo": "nodo_propio",
+        "motivo_p18": "P.18 PUNTO 3. La familia Traction tiene el anillo EXTERIOR (canales_de_traccion_19, listar los 19) y el anillo MEDIO (middle_ring_testing, probar los candidatos y comparar costo, volumen y calidad), y tiene la diana entera (bullseye_framework), pero NO TIENE EL ANILLO INTERIOR: que se hace con el canal una vez que gano. El bloque es exactamente ese acto: identificar el canal que gana en el anillo medio, redirigir todos los recursos hacia el, no distraerse con los secundarios, y repetir la diana cuando se sature.",
+        "nuevo": {
+          "node_id": "anillo_interior_explotar_el_canal_nucleo",
+          "fase_proyecto": "ejecucion",
+          "dominio": "core",
+          "titulo_concepto": "El Anillo Interior del Bullseye: Explotar tu Canal Nucleo",
+          "fuente": "Traction - Gabriel Weinberg",
+          "resumen_teorico": "La diana de traccion tiene tres anillos y el ultimo no es elegir: es exprimir. Cuando las pruebas del anillo medio ya dijeron cual canal funciona, el trabajo cambia de forma. Deja de ser abrir frentes y pasa a ser concentrar: todos los recursos de marketing van al canal que gano, y los canales secundarios que dieron resultados apenas moderados se sueltan, por prometedores que parezcan. Dentro de ese canal unico el metodo es la prueba continua, con grupo de control y confianza estadistica antes de sacar conclusiones, sobre las variables que el canal permite mover. Las tacticas que ganan se documentan y se escalan hasta que el canal se satura, y ese es el momento, y no antes, de volver a correr la diana entera para encontrar el siguiente.",
+          "entregable_esperado": "Tu canal nucleo con todos los recursos concentrados en el, un calendario de pruebas sobre sus variables clave con sus resultados documentados, y el criterio escrito de cuando lo consideras saturado para repetir el Bullseye",
+          "nodos_previos": [
+            "middle_ring_testing",
+            "bullseye_framework"
+          ],
+          "nodos_siguientes": [],
+          "condiciones_activacion": [
+            "Cuando las pruebas del anillo medio ya senalaron un canal ganador y hay que decidir cuanto le pones encima",
+            "Cuando tu canal principal empieza a dar rendimientos decrecientes y hay que decidir si se sigue optimizando o se vuelve a la diana"
+          ],
+          "etiqueta_arbol": "Exprime tu Canal Ganador"
+        }
+      },
+      "pasos_totales": 9,
+      "fuente_esperada": "The Lean Startup - Eric Ries | Traction - Gabriel Weinberg",
+      "huella": "anillo medio (Bullseye)",
+      "prefijos": [
+        "Identifica el canal que gana en tu",
+        "Redirige todos tus recursos de mar",
+        "No te distraigas con canales secun",
+        "Explora tácticas de apoyo en otros",
+        "Cuando tu canal principal se satur"
+      ],
+      "pasos_que_salen_texto": [
+        "Identifica el canal que gana en tus pruebas del anillo medio (Bullseye)",
+        "Redirige todos tus recursos de marketing hacia ese canal principal",
+        "No te distraigas con canales secundarios que dieron resultados apenas moderados",
+        "Explora tácticas de apoyo en otros canales solo si refuerzan directamente a tu canal principal",
+        "Cuando tu canal principal se sature, repite el proceso Bullseye para encontrar el siguiente"
+      ]
+    },
+    {
+      "origen": "optimizacion_embudo_get_customers",
+      "frontera": "los pasos [6, 7, 8, 9, 10] de 10",
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "fuente_queda": "The Startup Owner's Manual - Steve Blank",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "anillo_interior_explotar_el_canal_nucleo",
+        "motivo_p18": "MISMO destino que el corte anterior, por la ADJUDICACION 3 DEL ACTA DE LA VUELTA 27: dos bloques que caen en el mismo nodo propio se funden en UNO, nunca dos gemelos. El objeto es el mismo anillo interior paso por paso: dedicar recursos SOLO al canal validado en el anillo medio, pruebas A/B continuas dentro de el, herramientas para correrlas, tacticas nuevas dentro del canal principal, y otros canales solo si lo alimentan.",
+        "creado_por_este_plan": true
+      },
+      "pasos_totales": 10,
+      "fuente_esperada": "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg",
+      "huella": "Optimizely",
+      "prefijos": [
+        "Dedica tiempo y recursos significa",
+        "Ejecuta pruebas A/B continuas (mín",
+        "Usa herramientas como Optimizely, ",
+        "Busca nuevas tácticas dentro del c",
+        "Explora cómo otros canales de trac"
+      ],
+      "pasos_que_salen_texto": [
+        "Dedica tiempo y recursos significativos solo al canal validado en middle ring testing",
+        "Ejecuta pruebas A/B continuas (mínimo una por semana) sobre variables como copy, imágenes, landing pages",
+        "Usa herramientas como Optimizely, Visual Website Optimizer o Unbounce para facilitar las pruebas",
+        "Busca nuevas tácticas dentro del canal principal para mantenerte por delante de la competencia",
+        "Explora cómo otros canales de tracción pueden alimentar tu canal principal"
+      ]
+    },
+    {
+      "origen": "ab_testing_optimizacion",
+      "frontera": "los pasos [11, 12, 13, 14, 15] de 15",
+      "pasos_que_salen": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "fuente_queda": "The Startup Owner's Manual - Steve Blank",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "anillo_interior_explotar_el_canal_nucleo",
+        "motivo_p18": "MISMO destino que los dos cortes anteriores, por la ADJUDICACION 3. El bloque no es una prueba A/B cualquiera: dice DENTRO DE TU CANAL NUCLEO en su primer paso, y cierra documentando las tacticas ganadoras para escalarlas HASTA EL PUNTO DE SATURACION, que es la senal con la que el mismo anillo interior manda repetir la diana. Es el metodo de prueba del anillo interior, no del embudo en general.",
+        "creado_por_este_plan": true
+      },
+      "pasos_totales": 15,
+      "fuente_esperada": "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg",
+      "huella": "confianza estad",
+      "prefijos": [
+        "Define las variables clave a teste",
+        "Diseña experimentos A/B con grupo ",
+        "Mide resultados con confianza esta",
+        "Itera continuamente ajustando la e",
+        "Documenta tácticas exitosas para e"
+      ],
+      "pasos_que_salen_texto": [
+        "Define las variables clave a testear dentro de tu canal núcleo (copy, targeting, landing page, etc.)",
+        "Diseña experimentos A/B con grupo de control y grupo experimental, dividiendo usuarios aleatoriamente",
+        "Mide resultados con confianza estadística antes de sacar conclusiones",
+        "Itera continuamente ajustando la estrategia según los resultados",
+        "Documenta tácticas exitosas para escalarlas hasta el punto de saturación"
+      ]
+    },
+    {
+      "origen": "analisis_trafico_competitivo",
+      "frontera": "los pasos [5, 6, 7, 8] de 8",
+      "pasos_que_salen": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "fuente_queda": "The Startup Owner's Manual - Steve Blank",
+      "destino": {
+        "tipo": "nodo_propio",
+        "motivo_p18": "P.18 PUNTO 3. Barrida la nomina de hoy, ningun miembro tiene por objeto MIRAR LOS ANUNCIOS QUE PAGA LA COMPETENCIA para decidir donde anunciarse: seleccion_plataforma_social_ads decide plataforma social por audiencia propia y objetivo propio; retargeting_display y quality_score_optimizacion son de campana propia ya corriendo; sem_estrategia_ejecucion es el lanzamiento de la campana de busqueda. El bloque parte de los anuncios AJENOS, mide el perfil de audiencia de los sitios donde corren, juzga el encaje y saca de ahi sus propias pruebas A/B.",
+        "nuevo": {
+          "node_id": "inteligencia_de_anuncios_de_la_competencia",
+          "fase_proyecto": "validacion",
+          "dominio": "core",
+          "titulo_concepto": "Que Anuncios Corre tu Competencia, y Donde",
+          "fuente": "Traction - Gabriel Weinberg",
+          "resumen_teorico": "Los anuncios que tu competencia paga son informacion publica, y son la unica pista gratis de que le esta funcionando a alguien que vende a tu mismo cliente. Se pueden ver con herramientas de inteligencia publicitaria, que dicen que anuncios corre cada empresa y en que sitios los coloca. La lectura no termina en el anuncio: hay que mirar el perfil de audiencia de esos sitios y preguntarse si esa gente es de verdad tu cliente, porque un buen sitio para el competidor puede ser un mal sitio para ti. Y lo que sale de ahi no es una conclusion sino una lista de hipotesis: los angulos y los mensajes que la competencia ya paga se convierten en tus propias pruebas A/B, en vez de inventarlas desde cero.",
+          "entregable_esperado": "El inventario de los anuncios y los sitios que corre tu competencia, con el perfil de audiencia de cada sitio y tu veredicto de encaje, y la lista de pruebas A/B que sacas de esos anuncios",
+          "nodos_previos": [
+            "analisis_trafico_competitivo"
+          ],
+          "nodos_siguientes": [],
+          "condiciones_activacion": [
+            "Cuando quieres saber donde anunciarte y prefieres partir de lo que ya le funciona a alguien que vende a tu mismo cliente",
+            "Cuando se te acabaron las ideas propias de mensaje y necesitas hipotesis de prueba que no salgan de tu cabeza"
+          ],
+          "etiqueta_arbol": "Mira los Anuncios de tu Competencia"
+        }
+      },
+      "pasos_totales": 8,
+      "fuente_esperada": "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg",
+      "huella": "Quantcast",
+      "prefijos": [
+        "Usar MixRank o Adbeat para identif",
+        "Analizar con Alexa o Quantcast el ",
+        "Determinar si esa audiencia es un ",
+        "Diseñar tests A/B basados en las i"
+      ],
+      "pasos_que_salen_texto": [
+        "Usar MixRank o Adbeat para identificar qué anuncios corren tus competidores y en qué sitios",
+        "Analizar con Alexa o Quantcast el perfil de audiencia de esos sitios",
+        "Determinar si esa audiencia es un buen fit para tu producto",
+        "Diseñar tests A/B basados en las ideas observadas en anuncios de competidores"
+      ]
+    },
+    {
+      "origen": "decision_pivote_perseverar",
+      "frontera": "los pasos [5, 6, 7, 8, 9] de 9",
+      "pasos_que_salen": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "fuente_queda": "The Lean Startup - Eric Ries",
+      "destino": {
+        "tipo": "nodo_propio",
+        "motivo_p18": "P.18 PUNTO 3. Barrida la nomina de hoy, ningun miembro tiene por objeto BUSCAR LOS CLIENTES COMPROMETIDOS QUE QUEDAN ANTES DE PIVOTAR: identificacion_bolsas_virales segmenta por COEFICIENTE VIRAL y el bloque no habla de viralidad; leaky_bucket_metaphor y fases_traccion_producto miran por donde se FUGAN los clientes, no quienes se quedaron; traccion_como_metrica_clave define la metrica. El bloque hace la pregunta contraria a la fuga: quienes se quedaron, que tienen en comun, y si son adoptadores tempranos o valores atipicos.",
+        "nuevo": {
+          "node_id": "puntos_brillantes_antes_del_pivote",
+          "fase_proyecto": "validacion",
+          "dominio": "core",
+          "titulo_concepto": "Buscar los Puntos Brillantes Antes de Pivotar",
+          "fuente": "Traction - Gabriel Weinberg",
+          "resumen_teorico": "Antes de cambiar de rumbo hay una busqueda que casi nadie hace: mirar si en medio de los malos numeros hay clientes de verdad comprometidos, aunque sean poquisimos. Si los hay, la pregunta siguiente no es cuantos son sino que tienen en comun, porque de ese parecido sale la unica pista util. Y ahi hay una bifurcacion que decide el destino del negocio: esos pocos pueden ser adoptadores tempranos de un mercado grande que todavia no llego, o pueden ser valores atipicos que no representan a nadie. La misma duda tiene una tercera cara, que es el momento: a veces el producto esta bien y lo que fallo fue llegar temprano. Solo cuando la busqueda no encuentra un solo punto brillante, el pivote deja de ser una salida y pasa a ser la decision.",
+          "entregable_esperado": "El analisis de tus clientes mas comprometidos con lo que tienen en comun, tu veredicto escrito de si son adoptadores tempranos o valores atipicos, y la decision de pivotar o perseverar que sale de el",
+          "nodos_previos": [
+            "decision_pivote_perseverar"
+          ],
+          "nodos_siguientes": [],
+          "condiciones_activacion": [
+            "Cuando las metricas no acompanan y el pivote esta sobre la mesa, antes de decidirlo",
+            "Cuando tienes unos pocos clientes muy fieles y no sabes si son la punta de un mercado o una casualidad"
+          ],
+          "etiqueta_arbol": "Busca tus Puntos Brillantes"
+        }
+      },
+      "pasos_totales": 9,
+      "fuente_esperada": "The Lean Startup - Eric Ries | Traction - Gabriel Weinberg",
+      "huella": "punto brillante",
+      "prefijos": [
+        "Busca evidencia de clientes genuin",
+        "Analiza qué característica común t",
+        "Evalúa si son adoptadores temprano",
+        "Considera si el timing de mercado ",
+        "Solo pivota si no encuentras ningú"
+      ],
+      "pasos_que_salen_texto": [
+        "Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos",
+        "Analiza qué característica común tienen esos clientes leales",
+        "Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos",
+        "Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto",
+        "Solo pivota si no encuentras ningún punto brillante tras análisis profundo"
+      ]
+    },
+    {
+      "origen": "key_partners_hypothesis",
+      "frontera": "los pasos [6, 7, 8, 9, 10] de 14",
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "fuente_queda": "The Startup Owner's Manual - Steve Blank",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "alineacion_bd_metricas_core",
+        "motivo_p18": "P.18: el objeto coincide y el entregable del miembro lo dice con las mismas palabras (checklist de evaluacion de partnerships basado en METRICAS CORE del negocio). El bloque define el objetivo de traccion y sus metricas clave, elige el tipo de alianza que se alinea con ese objetivo, evalua a los socios POR SU CAPACIDAD DE MOVER LA METRICA y no por su tamano o prestigio, y rechaza los acuerdos atractivos que no esten alineados: es el mismo acto de filtrar alianzas contra la metrica.",
+        "fuente_esperada_destino": "Traction - Gabriel Weinberg"
+      },
+      "pasos_totales": 14,
+      "fuente_esperada": "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg",
+      "huella": "capacidad de mover la m",
+      "prefijos": [
+        "Definir claramente el objetivo de ",
+        "Determinar qué tipo de partnership",
+        "Evaluar potenciales socios según s",
+        "Negociar el acuerdo asegurando ben",
+        "Rechazar o posponer acuerdos atrac"
+      ],
+      "pasos_que_salen_texto": [
+        "Definir claramente el objetivo de tracción y las métricas clave que se necesitan alcanzar",
+        "Determinar qué tipo de partnership (estándar, joint venture, licencia, distribución, suministro) se alinea con ese objetivo",
+        "Evaluar potenciales socios según su capacidad de mover la métrica clave (no solo por su tamaño o prestigio)",
+        "Negociar el acuerdo asegurando beneficio mutuo y alineación con el Critical Path",
+        "Rechazar o posponer acuerdos atractivos que no estén alineados con los objetivos de tracción"
+      ]
+    },
+    {
+      "origen": "key_partners_hypothesis",
+      "frontera": "los pasos [11, 12, 13, 14] de 14",
+      "pasos_que_salen": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "fuente_queda": "The Startup Owner's Manual - Steve Blank",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "pipeline_alianzas_bd",
+        "motivo_p18": "P.18, Y SE SEPARA DEL ANTERIOR A PROPOSITO: el acta de la vuelta 28 dejo SOSTENIDA la lectura de que el tramo de cola trae DOS sub bloques distinguibles, y leidos hoy se distinguen. Este no filtra por metrica: CLASIFICA POR TIPO segun el cuello de botella (marca, distribucion o inventario), y recorre licensing, socios de distribucion con acceso al cliente objetivo y supply partnerships. El entregable del miembro es exactamente esa tabla: el pipeline de partners CON CATEGORIZACION y prioridad.",
+        "fuente_esperada_destino": "Traction - Gabriel Weinberg"
+      },
+      "pasos_totales": 14,
+      "fuente_esperada": "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg",
+      "huella": "supply partnerships",
+      "prefijos": [
+        "Identificar qué tipo de alianza re",
+        "Evaluar si necesitas licensing par",
+        "Buscar socios de distribución que ",
+        "Asegurar supply partnerships si tu"
+      ],
+      "pasos_que_salen_texto": [
+        "Identificar qué tipo de alianza resuelve tu cuello de botella actual (marca, distribución o inventario)",
+        "Evaluar si necesitas licensing para usar contenido/marca de terceros",
+        "Buscar socios de distribución que ya tengan acceso a tu cliente objetivo",
+        "Asegurar supply partnerships si tu negocio depende de inventario o insumos críticos"
+      ]
+    },
+    {
+      "origen": "metricas_de_adquisicion_activacion",
+      "frontera": "los pasos [6, 7, 8, 9] de 9",
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "fuente_queda": "The Startup Owner's Manual",
+      "destino": {
+        "tipo": "miembro",
+        "nodo": "sem_estrategia_ejecucion",
+        "motivo_p18": "P.18: el bloque entero es la cuenta de una campana de anuncios de busqueda, y su ultimo paso nombra el canal (usa la publicidad en buscadores para aprender el mensaje). Define que cuenta como conversion ANTES de lanzar, calcula CTR, CPC y CPA por campana de prueba y compara el costo de adquisicion contra el valor de vida. El entregable del miembro es la campana activa con sus variantes, sus paginas de destino y EL SEGUIMIENTO DE CONVERSIONES: el bloque es la definicion y la lectura de ese seguimiento.",
+        "fuente_esperada_destino": "Traction - Gabriel Weinberg"
+      },
+      "pasos_totales": 9,
+      "fuente_esperada": "The Startup Owner's Manual | Traction - Gabriel Weinberg",
+      "huella": "CTR, CPC y CPA",
+      "prefijos": [
+        "Antes de lanzar cualquier campaña,",
+        "Calcula en cada campaña de prueba ",
+        "Compara lo que te cuesta conseguir",
+        "Usa la publicidad en buscadores (S"
+      ],
+      "pasos_que_salen_texto": [
+        "Antes de lanzar cualquier campaña, define qué es una conversión para ti: una compra, un registro o un contacto interesado",
+        "Calcula en cada campaña de prueba cuántos hacen clic sobre los que la ven, cuánto pagas por cada clic y cuánto te cuesta cada cliente conseguido (CTR, CPC y CPA)",
+        "Compara lo que te cuesta conseguir un cliente con lo que ese cliente te va a dar durante toda su relación contigo (LTV), para saber si el negocio es rentable",
+        "Usa la publicidad en buscadores (SEM) para aprender temprano qué mensaje funciona y qué dice tu producto, no solo como un canal para vender"
+      ]
+    }
+  ]
+}

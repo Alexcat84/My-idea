@@ -1,0 +1,124 @@
+PLAN   : docs/loop/PLAN_V29_OPF04_WEI.json
+OPERACION: OP-F-04-WEI, los bloques con destino leido (los dos de TOQUE UNICO NO entran)
+MODO   : --ejecutar
+CORTES : 8
+==============================================================================
+
+------------------------------------------------------------------------------
+ORIGEN : enfoque_motor_unico_crecimiento   frontera los pasos [5, 6, 7, 8, 9] de 9
+  pasos totales 9, salen 5, quedan 4
+  fuente: 'The Lean Startup - Eric Ries | Traction - Gabriel Weinberg'  ->  'The Lean Startup - Eric Ries'
+    sale   5. Identifica el canal que gana en tus pruebas del anillo medio (Bullseye)
+    sale   6. Redirige todos tus recursos de marketing hacia ese canal principal
+    sale   7. No te distraigas con canales secundarios que dieron resultados apenas moderados
+    sale   8. Explora tácticas de apoyo en otros canales solo si refuerzan directamente a tu canal principal
+    sale   9. Cuando tu canal principal se sature, repite el proceso Bullseye para encontrar el siguiente
+  DESTINO: NODO PROPIO anillo_interior_explotar_el_canal_nucleo
+  arista obligada: enfoque_motor_unico_crecimiento.nodos_siguientes += anillo_interior_explotar_el_canal_nucleo
+  arista reciproca: anillo_interior_explotar_el_canal_nucleo.nodos_previos = ['middle_ring_testing', 'bullseye_framework']
+
+------------------------------------------------------------------------------
+ORIGEN : optimizacion_embudo_get_customers   frontera los pasos [6, 7, 8, 9, 10] de 10
+  pasos totales 10, salen 5, quedan 5
+  fuente: "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   6. Dedica tiempo y recursos significativos solo al canal validado en middle ring testing
+    sale   7. Ejecuta pruebas A/B continuas (mínimo una por semana) sobre variables como copy, imágenes, landing p
+    sale   8. Usa herramientas como Optimizely, Visual Website Optimizer o Unbounce para facilitar las pruebas
+    sale   9. Busca nuevas tácticas dentro del canal principal para mantenerte por delante de la competencia
+    sale  10. Explora cómo otros canales de tracción pueden alimentar tu canal principal
+  DESTINO: MIEMBRO anillo_interior_explotar_el_canal_nucleo
+  (destino creado por este mismo plan, corte anterior)
+  anillo_interior_explotar_el_canal_nucleo: pasos 5 -> 10
+
+------------------------------------------------------------------------------
+ORIGEN : ab_testing_optimizacion   frontera los pasos [11, 12, 13, 14, 15] de 15
+  pasos totales 15, salen 5, quedan 10
+  fuente: "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale  11. Define las variables clave a testear dentro de tu canal núcleo (copy, targeting, landing page, etc.)
+    sale  12. Diseña experimentos A/B con grupo de control y grupo experimental, dividiendo usuarios aleatoriament
+    sale  13. Mide resultados con confianza estadística antes de sacar conclusiones
+    sale  14. Itera continuamente ajustando la estrategia según los resultados
+    sale  15. Documenta tácticas exitosas para escalarlas hasta el punto de saturación
+  DESTINO: MIEMBRO anillo_interior_explotar_el_canal_nucleo
+  (destino creado por este mismo plan, corte anterior)
+  anillo_interior_explotar_el_canal_nucleo: pasos 10 -> 15
+
+------------------------------------------------------------------------------
+ORIGEN : analisis_trafico_competitivo   frontera los pasos [5, 6, 7, 8] de 8
+  pasos totales 8, salen 4, quedan 4
+  fuente: "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   5. Usar MixRank o Adbeat para identificar qué anuncios corren tus competidores y en qué sitios
+    sale   6. Analizar con Alexa o Quantcast el perfil de audiencia de esos sitios
+    sale   7. Determinar si esa audiencia es un buen fit para tu producto
+    sale   8. Diseñar tests A/B basados en las ideas observadas en anuncios de competidores
+  DESTINO: NODO PROPIO inteligencia_de_anuncios_de_la_competencia
+  arista obligada: analisis_trafico_competitivo.nodos_siguientes += inteligencia_de_anuncios_de_la_competencia
+  arista reciproca: inteligencia_de_anuncios_de_la_competencia.nodos_previos = ['analisis_trafico_competitivo']
+
+------------------------------------------------------------------------------
+ORIGEN : decision_pivote_perseverar   frontera los pasos [5, 6, 7, 8, 9] de 9
+  pasos totales 9, salen 5, quedan 4
+  fuente: 'The Lean Startup - Eric Ries | Traction - Gabriel Weinberg'  ->  'The Lean Startup - Eric Ries'
+    sale   5. Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos
+    sale   6. Analiza qué característica común tienen esos clientes leales
+    sale   7. Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos
+    sale   8. Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto
+    sale   9. Solo pivota si no encuentras ningún punto brillante tras análisis profundo
+  DESTINO: NODO PROPIO puntos_brillantes_antes_del_pivote
+  arista obligada: decision_pivote_perseverar.nodos_siguientes += puntos_brillantes_antes_del_pivote
+  arista reciproca: puntos_brillantes_antes_del_pivote.nodos_previos = ['decision_pivote_perseverar']
+
+------------------------------------------------------------------------------
+ORIGEN : key_partners_hypothesis   frontera los pasos [6, 7, 8, 9, 10] de 14
+  pasos totales 14, salen 5, quedan 9
+  fuente: "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   6. Definir claramente el objetivo de tracción y las métricas clave que se necesitan alcanzar
+    sale   7. Determinar qué tipo de partnership (estándar, joint venture, licencia, distribución, suministro) se 
+    sale   8. Evaluar potenciales socios según su capacidad de mover la métrica clave (no solo por su tamaño o pre
+    sale   9. Negociar el acuerdo asegurando beneficio mutuo y alineación con el Critical Path
+    sale  10. Rechazar o posponer acuerdos atractivos que no estén alineados con los objetivos de tracción
+  DESTINO: MIEMBRO alineacion_bd_metricas_core
+  alineacion_bd_metricas_core: pasos 4 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : key_partners_hypothesis   frontera los pasos [11, 12, 13, 14] de 14
+  pasos totales 14, salen 4, quedan 5
+  fuente: "The Startup Owner's Manual - Steve Blank"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale  11. Identificar qué tipo de alianza resuelve tu cuello de botella actual (marca, distribución o inventar
+    sale  12. Evaluar si necesitas licensing para usar contenido/marca de terceros
+    sale  13. Buscar socios de distribución que ya tengan acceso a tu cliente objetivo
+    sale  14. Asegurar supply partnerships si tu negocio depende de inventario o insumos críticos
+  DESTINO: MIEMBRO pipeline_alianzas_bd
+  pipeline_alianzas_bd: pasos 5 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : metricas_de_adquisicion_activacion   frontera los pasos [6, 7, 8, 9] de 9
+  pasos totales 9, salen 4, quedan 5
+  fuente: "The Startup Owner's Manual | Traction - Gabriel Weinberg"  ->  "The Startup Owner's Manual"
+    sale   6. Antes de lanzar cualquier campaña, define qué es una conversión para ti: una compra, un registro o u
+    sale   7. Calcula en cada campaña de prueba cuántos hacen clic sobre los que la ven, cuánto pagas por cada cli
+    sale   8. Compara lo que te cuesta conseguir un cliente con lo que ese cliente te va a dar durante toda su rel
+    sale   9. Usa la publicidad en buscadores (SEM) para aprender temprano qué mensaje funciona y qué dice tu prod
+  DESTINO: MIEMBRO sem_estrategia_ejecucion
+  sem_estrategia_ejecucion: pasos 8 -> 12
+
+==============================================================================
+RESUMEN
+  cortes aplicados en memoria: 8
+  nodos propios nuevos       : 3 ['anillo_interior_explotar_el_canal_nucleo', 'inteligencia_de_anuncios_de_la_competencia', 'puntos_brillantes_antes_del_pivote']
+  ficheros que se tocarian   : 13
+
+ESCRITO: 13 fichero(s) en dataset/nodos/.
+  - ab_testing_optimizacion
+  - alineacion_bd_metricas_core
+  - analisis_trafico_competitivo
+  - anillo_interior_explotar_el_canal_nucleo  [NUEVO]
+  - decision_pivote_perseverar
+  - enfoque_motor_unico_crecimiento
+  - inteligencia_de_anuncios_de_la_competencia  [NUEVO]
+  - key_partners_hypothesis
+  - metricas_de_adquisicion_activacion
+  - optimizacion_embudo_get_customers
+  - pipeline_alianzas_bd
+  - puntos_brillantes_antes_del_pivote  [NUEVO]
+  - sem_estrategia_ejecucion
