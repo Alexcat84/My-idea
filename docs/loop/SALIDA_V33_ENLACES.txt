@@ -1,0 +1,24 @@
+ARISTAS DE LOS CINCO NODOS TOCADOS, contadas como (nodo, campo, destino).
+  antes de la vuelta (commit e1105299): 40
+  hoy                                 : 44
+
+  LAS QUE MURIERON:
+  LAS QUE NACIERON:
+    procesamiento_paralelo_con_espirales     nodos_siguientes   -> voz_del_cliente_voc
+    ventaja_competitiva_producto             nodos_previos      -> voz_del_cliente_voc
+    voz_del_cliente_voc                      nodos_previos      -> procesamiento_paralelo_con_espirales
+    voz_del_cliente_voc                      nodos_siguientes   -> ventaja_competitiva_producto
+=== homework_frontend_loading ===
+  nodos_previos ANTES (4): ['voz_del_cliente_voc', 'actividades_clave', 'enfoque_mercado_voc', 'calidad_de_ejecucion_proceso_innovacion']
+  nodos_previos HOY   (4): ['voz_del_cliente_voc', 'actividades_clave', 'calidad_de_ejecucion_proceso_innovacion', 'enfoque_mercado_voc']
+=== procesamiento_paralelo_con_espirales ===
+  nodos_siguientes ANTES (2): ['enfoque_mercado_voc', 'definicion_objetivos_proyecto_sistema']
+  nodos_siguientes HOY   (3): ['voz_del_cliente_voc', 'definicion_objetivos_proyecto_sistema', 'enfoque_mercado_voc']
+=== ventaja_competitiva_producto ===
+  nodos_previos ANTES (4): ['front_end_homework', 'enfoque_mercado_voc', 'estrategia_de_balas_de_plomo', 'homework_frontend_loading']
+  nodos_previos HOY   (5): ['front_end_homework', 'voz_del_cliente_voc', 'estrategia_de_balas_de_plomo', 'homework_frontend_loading', 'enfoque_mercado_voc']
+
+CONCLUSION MEDIDA: el conteo de enlaces del estado sube de 16.848 a 16.852 (+4).
+Las cuatro nacen del RECIPROCADO que Gate 0 aplica: al redirigir dos entradas
+hacia voz_del_cliente_voc, la pasada de curaduria escribio la arista de vuelta
+en el propio superviviente. Ninguna arista se creo a mano en esta vuelta.

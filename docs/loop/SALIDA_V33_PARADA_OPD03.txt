@@ -1,0 +1,42 @@
+==============================================================================
+PARADA EN OP-D-03: EL INSTRUMENTO DE COSTURAS SE DECLARA MAL CALIBRADO
+==============================================================================
+
+1. EL INSTRUMENTO, CORRIDO ENTERO Y SIN TOCARLO, SALE SIN ENTREGAR:
+   comando: python scripts/costuras_internas.py
+   codigo de salida distinto de 0 y esta salida:
+     INSTRUMENTO MAL CALIBRADO. No entrega nada.
+       La calibracion conocida no aparece en la cola: ['plan_mejora_procesos', 'economia_circular_como_modelo_de_negocio']
+         plan_mejora_procesos: mejor pareja 47.1 (pasos 1 y 3), mejor bloque 0.0 (corte tras 0)
+         economia_circular_como_modelo_de_negocio: mejor pareja 54.3 (pasos 4 y 5), mejor bloque 0.0 (corte tras 0)
+       Umbrales usados: pareja 80, bloque 44
+
+2. LOS DOS NODOS DE CALIBRACION, MEDIDOS HOY contra lo que su docstring declara:
+   plan_mejora_procesos                       pasos HOY 5 | pareja declarada 60.0 | pareja HOY 47.1 | bloque HOY 0.0
+   economia_circular_como_modelo_de_negocio   pasos HOY 5 | pareja declarada 54.7 | pareja HOY 54.3 | bloque HOY 0.0
+
+3. POR QUE EL BLOQUE DA 0,0, y es ESTRUCTURAL y no una casualidad del texto:
+   mejor_bloque recorre range(MIN_BLOQUE, n - MIN_BLOQUE + 1) con MIN_BLOQUE=3.
+     con n= 5 pasos el rango de cortes es []
+     con n= 6 pasos el rango de cortes es [3]
+     con n=10 pasos el rango de cortes es [3, 4, 5, 6, 7]
+   CON CINCO PASOS EL RANGO ES VACIO: la senal 2 devuelve (0.0, 0) SIEMPRE,
+   diga lo que diga el texto. Y los DOS nodos de calibracion tienen CINCO pasos hoy.
+
+4. Y CON DIEZ PASOS TAMPOCO DISPARA, por otro motivo, medido paso a paso
+   sobre ab_testing_optimizacion (el ancla de OP-D-03):
+     corte 3: emparejamientos monotonos logrados 2, hacen falta 3 -> SIN SCORE
+     corte 4: emparejamientos monotonos logrados 2, hacen falta 3 -> SIN SCORE
+     corte 5: emparejamientos monotonos logrados 2, hacen falta 3 -> SIN SCORE
+     corte 6: emparejamientos monotonos logrados 2, hacen falta 3 -> SIN SCORE
+     corte 7: emparejamientos monotonos logrados 2, hacen falta 3 -> SIN SCORE
+
+5. LOS SEIS NODOS DE OP-D-03, medidos hoy: NINGUNO dispara ninguna senal.
+   Su ORDEN INTERNO escrito empieza por 'destejer las TRES costuras', y
+   NO HAY INSTRUMENTO CALIBRADO QUE DIGA CUALES SON LAS TRES.
+
+6. LA COBERTURA DEL ACTO: 15 pares posibles, 8 con veredicto, 7 SIN.
+   Y P.5 manda leer el acto DESPUES del destejido, que es lo que esta bloqueado.
+
+==============================================================================
+CERO NODOS TOCADOS EN OP-D-03. Nada se escribio.

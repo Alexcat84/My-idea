@@ -1,0 +1,22 @@
+SENALES Y UMBRALES, IMPORTADOS de scripts/costuras_internas.py y no copiados:
+   {'UMBRAL_PAREJA': 80, 'UMBRAL_BLOQUE': 44, 'MIN_BLOQUE': 3}
+  funciones disponibles: ['Path', 'main', 'mejor_bloque', 'peor_pareja']
+
+LAS SEIS COSTURAS INTERNAS, medidas hoy con las senales y umbrales del instrumento:
+  nodo                                   pareja  bloque  dispara
+Traceback (most recent call last):
+  File "<stdin>", line 15, in <module>
+TypeError: peor_pareja() missing 1 required positional argument: 'pasos'
+
+LAS SEIS COSTURAS INTERNAS, medidas hoy. Senales, umbrales Y la funcion de
+similitud IMPORTADOS de scripts/costuras_internas.py, no copiados.
+  nodo                                   mejor pareja     mejor bloque     dispara
+  ab_testing_optimizacion                 55.1 (8,10)     0.0 (corte 0)   ninguna
+  optimizacion_embudo_get_customers       48.6 (1,4)     0.0 (corte 0)   ninguna
+  split_testing_experimentos_ab           45.6 (3,5)     0.0 (corte 0)   ninguna
+  funnel_get_customers_optimizacion       50.4 (2,3)     0.0 (corte 0)   ninguna
+  split_testing                           48.8 (1,3)     0.0 (corte 0)   ninguna
+  test_ab_precio                          54.5 (1,4)     0.0 (corte 0)   ninguna
+
+UMBRALES: pareja 80, bloque 44, minimo de pasos para bloque 6
+NODOS QUE DISPARAN ALGUNA SENAL: 0  -> []

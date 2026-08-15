@@ -1,0 +1,51 @@
+CASO POSITIVO: OP-D-02: la FUSION de la voz del cliente. voz_del_cliente_voc absorbe a enfoque_mercado_voc
+==============================================================================
+
+EL SUPERVIVIENTE, voz_del_cliente_voc
+  [PASA] tiene 6 pasos, los 6 que el plan deja
+  [PASA] tiene 3 condiciones, las 3 que el plan deja
+  [PASA] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [PASA] sus condiciones son exactamente las del plan
+  [PASA] su entregable es el del plan (absorbe el analisis competitivo y las pruebas de concepto)
+  [PASA] su titulo NO cambio
+  [PASA] su fuente NO cambio (los dos eran del mismo libro)
+
+EL PRESERVAR, las tres piezas que la operacion manda salvar
+  [PASA] esta literal en los pasos: 'evaluación preliminar de mercado'
+  [PASA] esta literal en los pasos: 'análisis competitivo detallado'
+  [PASA] esta literal en los pasos: 'clientes reales antes de empezar el desarrollo formal'
+
+EL ALIAS Y LA FICHA DEL ABSORBIDO
+  [PASA] 'enfoque_mercado_voc' esta en ids_alias del superviviente
+  [PASA] 'enfoque_mercado_voc' tiene su entrada en merged_originals
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, enfoque_mercado_voc
+  [PASA] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 5 pasos, los mismos que antes
+
+LAS REDIRECCIONES
+  [CAE ] ningun nodo VIVO sigue nombrando a enfoque_mercado_voc (quedan 3)
+  [PASA] los deprecados que aun lo nombran son EXACTAMENTE los declarados en el plan: hoy [('front_end_homework', 'nodos_previos')], plan [('front_end_homework', 'nodos_previos')]
+  [PASA] homework_frontend_loading.nodos_previos ya apunta a voz_del_cliente_voc
+  [PASA] procesamiento_paralelo_con_espirales.nodos_siguientes ya apunta a voz_del_cliente_voc
+  [PASA] ventaja_competitiva_producto.nodos_previos ya apunta a voz_del_cliente_voc
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'observar' sigue vivo
+  (conservacion) [SI] el rastro 'su propio entorno' sigue vivo
+  (conservacion) [SI] el rastro 'más exigentes' sigue vivo
+  (conservacion) [SI] el rastro 'evaluación preliminar de mercado' sigue vivo
+  (conservacion) [SI] el rastro 'análisis competitivo detallado' sigue vivo
+  (conservacion) [SI] el rastro 'productos, precios y tecnologías' sigue vivo
+  (conservacion) [SI] el rastro 'clientes reales' sigue vivo
+  (conservacion) [SI] el rastro 'desarrollo formal' sigue vivo
+  (conservacion) [SI] el rastro 'ciclos cortos' sigue vivo
+  (conservacion) [SI] el rastro 'todo el desarrollo' sigue vivo
+
+==============================================================================
+RESULTADO: 22 PASAN, 1 CAEN
+CONSERVACION (aparte, no suma): 10 vivos, 0 muertos

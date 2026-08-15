@@ -1,0 +1,12 @@
+id_op: OP-D-03
+tipo: DESTEJIDO
+nodos: ['ab_testing_optimizacion', 'optimizacion_embudo_get_customers', 'split_testing_experimentos_ab', 'funnel_get_customers_optimizacion', 'split_testing', 'test_ab_precio']
+superviviente: None
+preservar: ['del nodo chico de split_testing: la significancia estadistica del 95 por ciento', 'el cambio porcentual y el grupo de control similar VIVEN en el bloque de Rackham (pasos 6 a 9) y se van CON EL DESTEJIDO: no se pierden en la fusion']
+eliminar: []
+aristas_nuevas: []
+verificacion: ['Gate 0 verde', 'los congelados 738, 1061 se releen contra el superviviente y salen de la lista', 'cada nodo resultante dentro del estandar, o dentro de la excepcion de clase de OP-F-01', 'recomputo del cierre transitivo tras el acto (banco 9.21)', 'el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto']
+estado: LISTA
+depende_de: []
+
+NOTA: ACTO 2 del cierre transitivo. El plan lo escribio como UNA cirugia. Medido por componentes es la mas cara en cirugias (tres) y la segunda en nodos (seis). NO se reordena: el criterio sigue siendo congelados liberados. ORDEN INTERNO: 1. destejer las TRES costuras. 2. SOLO ENTONCES decidir sobre los SEIS nodos. 3. releer 738 y 1061. REGLA P.5 DEL BANCO DEL PLAN, adjudicada el 11 ago 2026: ESTE ACTO SE LEE ENTERO DESPUES DE SU DESTEJIDO Y ANTES DE SU FUSION. La pregunta que contesta es si el acto es UNA familia o DOS, y solo se contesta bien con el texto ya estable.

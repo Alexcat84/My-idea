@@ -661,6 +661,99 @@ de hoy (`SALIDA_V32_OPD02_RELECTURA.txt`), **y sin clase**.
 
 ## `OP-D-03`: LAS PRUEBAS A/B · **LISTA**
 
+### **PARADA AL 15 ago 2026 (vuelta 33). CERO NODOS TOCADOS.** El instrumento de costuras se declara MAL CALIBRADO
+
+**El modo continuo llego hasta aqui y se detuvo antes de escribir nada.** Tres motivos medidos
+hoy, ninguno adivinado (`docs/loop/SALIDA_V33_PARADA_OPD03.txt` y
+`SALIDA_V33_OPD03_COSTURAS.txt`, las dos de solo lectura).
+
+**MOTIVO 1, Y ES EL QUE BLOQUEA: `scripts/costuras_internas.py` SE NIEGA A ENTREGAR.** Corrido
+entero y sin tocarlo, sale con codigo distinto de cero y este texto suyo:
+
+```
+INSTRUMENTO MAL CALIBRADO. No entrega nada.
+  La calibracion conocida no aparece en la cola: ['plan_mejora_procesos', 'economia_circular_como_modelo_de_negocio']
+```
+
+**Su propio encabezado escribio la regla que ahora lo detiene:** *los dos nodos de arriba TIENEN
+que aparecer en la cola. Si falta alguno, el instrumento esta mal calibrado, lo dice y SALE CON
+CODIGO 1 SIN ENTREGAR.* **La baranda funciono. Lo que hay que decir es que llevaba tiempo
+funcionando y nadie la habia corrido entera.**
+
+**LA CAUSA, MEDIDA Y ESTRUCTURAL, no una casualidad del texto.** La segunda senal, la del bloque
+reiniciado, recorre `range(MIN_BLOQUE, n - MIN_BLOQUE + 1)` con `MIN_BLOQUE = 3`:
+
+| pasos del nodo | rango de cortes que recorre | puede dar score |
+|---:|---|---|
+| **5** | **vacio** | **NO: devuelve (0,0) siempre** |
+| 6 | [3] | si |
+| 10 | [3, 4, 5, 6, 7] | si |
+
+**Y LOS DOS NODOS DE CALIBRACION TIENEN CINCO PASOS HOY.** Su docstring declara que sus mejores
+parejas eran **60,0** y **54,7**; **medidas hoy dan 47,1 y 54,3**, y su senal de bloque, que era
+la que los cazaba (*los pone en los puestos 7 y 32 de 567 y acierta el corte exacto en las dos*),
+**da 0,0 en los dos, por el rango vacio.**
+
+> **CAIDA DE CIFRA PUBLICADA QUE ESTO ARRASTRA, y va declarada aqui aunque no sea de esta
+> operacion.** El **MOVIMIENTO 2 de `OP-D-01`** (acta y reporte de la vuelta 32, publicado mas
+> arriba en este mismo documento) concluye que `principio_calidad_mvp` *no tiene costura interna
+> que destejer* y lo sostiene en dos cifras: **mejor pareja 51,2 contra un umbral de 80** y
+> **mejor alineacion de bloques 0,0 contra un umbral de 44**. **La primera sigue en pie. LA
+> SEGUNDA NO MIDE LO QUE DICE MEDIR:** ese 0,0 no es un nodo sin bloque, es **una senal que hoy
+> devuelve 0,0 para todo**, incluidos los dos nodos que el propio instrumento sabe que son
+> costura.
+>
+> **Y hay que decir COMO paso, porque es la leccion:** `vuelta32_costura_opd01.py` **importa las
+> senales y los umbrales** de `costuras_internas.py`, que es mas honesto que copiarlos **y ademas
+> pasa POR ENCIMA de la puerta de calibracion**, que vive en el `main()`. **Una guarda que se
+> saltea importando por debajo es un test verde y mal**, que es el canon del banco 9 aplicado a
+> los instrumentos.
+>
+> **LO QUE ESTA CAIDA NO DICE:** no dice que la conclusion del movimiento 2 sea falsa. Su otra
+> pata es TEXTUAL y no depende del instrumento: las tres narraciones que la ficha le contaba **ya
+> no estan**, la tercera se la llevo `OP-F-03` y la segunda se fundio con la primera por `P.19`.
+> **Lo que cae es la mitad instrumental de su apoyo, no su conclusion.** No lo arreglo yo.
+
+**MOTIVO 2: NO SE PUEDE SABER CUALES SON LAS TRES COSTURAS QUE HAY QUE DESTEJER.** El `ORDEN
+INTERNO` escrito de `OP-D-03` empieza por *destejer las TRES costuras*, y **la nomina de esas tres
+no esta escrita en ninguna parte por su nombre**: sale del instrumento. **Medidos hoy los seis
+nodos con las senales y los umbrales importados, NINGUNO dispara ninguna de las dos:**
+
+| nodo | pasos | mejor pareja (umbral 80) | mejor bloque (umbral 44) | dispara |
+|---|---:|---:|---:|---|
+| `ab_testing_optimizacion` | 10 | 55,1 | 0,0 | ninguna |
+| `funnel_get_customers_optimizacion` | 7 | 50,4 | 0,0 | ninguna |
+| `optimizacion_embudo_get_customers` | 5 | 48,6 | 0,0 | ninguna |
+| `split_testing` | 4 | 48,8 | 0,0 | ninguna |
+| `split_testing_experimentos_ab` | 5 | 45,6 | 0,0 | ninguna |
+| `test_ab_precio` | 5 | 54,5 | 0,0 | ninguna |
+
+**Y el 0,0 de esta tabla NO se puede leer como *no hay bloque*: es la senal muerta.** Medido paso
+a paso sobre el ancla de diez pasos, `ab_testing_optimizacion`, **los cinco cortes posibles logran
+2 emparejamientos monotonos y hacen falta 3**, asi que ninguno llega a puntuar.
+
+**MOTIVO 3: EL ACTO ESTA A 8 DE 15, y esta vez NO se puede resolver leyendo.** Los siete que
+faltan **se leerian igual que los tres de `OP-D-02`**, por `P.5` y como lecturas dirigidas, **pero
+`P.5` manda leer el acto DESPUES de su destejido**, y el destejido es justo lo que el motivo 1
+bloquea. **Leerlos hoy seria leer texto que va a cambiar**, que es lo que la regla existe para
+impedir.
+
+| par interno **sin veredicto** |
+|---|
+| `ab_testing_optimizacion` contra `funnel_get_customers_optimizacion` |
+| `funnel_get_customers_optimizacion` contra `split_testing` |
+| `funnel_get_customers_optimizacion` contra `split_testing_experimentos_ab` |
+| `funnel_get_customers_optimizacion` contra `test_ab_precio` |
+| `optimizacion_embudo_get_customers` contra `split_testing` |
+| `optimizacion_embudo_get_customers` contra `split_testing_experimentos_ab` |
+| `optimizacion_embudo_get_customers` contra `test_ab_precio` |
+
+> **LO QUE SI QUEDA MEDIDO Y APROVECHABLE para quien retome:** el acto tiene **SIETE pares `A`**
+> (277, 452, 643, 1061, 1571, 1575 y el 374) y **un congelado**, el **738**. El campo
+> `superviviente` esta en **`null`**, leido hoy. **Los seis nodos estan vivos y son de TRES libros
+> distintos** (Blank, Ries y Value Proposition Design), cosa que `OP-D-02` no tenia: alli los
+> cuatro eran de Cooper. **Ese detalle va a decidir su fusion y conviene tenerlo escrito antes.**
+
 **Acto 2. SEIS nodos y TRES destejidos.** Costuras: `ab_testing_optimizacion`,
 `optimizacion_embudo_get_customers`, `split_testing_experimentos_ab`. Sanos:
 `funnel_get_customers_optimizacion`, `split_testing`, `test_ab_precio`.
