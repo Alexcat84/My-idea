@@ -1,0 +1,35 @@
+PLAN     : C:\Users\AlexDesk\Documents\I have an idea\docs\loop\PLAN_V33_OPD02_FUSION.json
+OPERACION: OP-D-02: la FUSION de la voz del cliente. voz_del_cliente_voc absorbe a enfoque_mercado_voc
+MODO     : --simular
+==============================================================================
+censo de ficheros ANTES: 3853
+guarda 1, fuente y vida de los dos nodos: OK
+guarda 2, conteos (5, 5, 3, 2) contra (5, 5, 3, 2): OK
+guarda 3, texto contra los prefijos sellados: 15 de 15 calzan
+guarda 4, cobertura de pasos: 10 de 10, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones: 5 de 5, repetidos [], faltan [], sobran []
+guarda 5, las tres piezas del preservar, literales: 3 de 3 presentes
+guarda 6, rastros vivos en el resultado: 10 de 10
+redirecciones medidas hoy sobre nodos VIVOS: 3
+    homework_frontend_loading                nodos_previos      -> voz_del_cliente_voc
+    procesamiento_paralelo_con_espirales     nodos_siguientes   -> voz_del_cliente_voc
+    ventaja_competitiva_producto             nodos_previos      -> voz_del_cliente_voc
+nodos DEPRECADOS que nombran al absorbido y NO se tocan: 1
+    front_end_homework                       nodos_previos      (deprecado: se deja como registro historico)
+guarda de redirecciones contra el plan: OK
+guarda 7, cero auto-arista: OK
+guarda 8, cero duplicada: OK
+
+EL RESULTADO, sobre copia en memoria:
+  voz_del_cliente_voc: 6 pasos, 3 condiciones, alias ['enfoque_mercado_voc']
+    1. Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos, y empieza por los más exigentes.
+    2. Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos.
+    3. Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas.
+    4. Haz una evaluación preliminar de mercado y un análisis competitivo detallado de productos, precios y tecnologías antes de comprometer recursos importantes.
+    5. Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final, y prueba tus primeras ideas de concepto con clientes reales antes de empezar el desarrollo formal.
+    6. Mantén contacto con tu cliente durante todo el desarrollo, en ciclos cortos, no solo al principio y al final.
+  entregable: Un resumen de lo que aprendiste observando y entrevistando a tu cliente, con la evaluación preliminar de mercado, el análisis competitivo y los resultados de las pruebas de concepto, que alimente directamente cómo diseñas tu producto
+  enfoque_mercado_voc: deprecado True, texto INTACTO (5 pasos, 2 condiciones)
+  ficheros que se tocarian: 5
+
+SIMULACION: cero escrituras.

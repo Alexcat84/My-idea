@@ -1,0 +1,182 @@
+{
+  "operacion": "OP-D-02: la FUSION de la voz del cliente. voz_del_cliente_voc absorbe a enfoque_mercado_voc",
+  "regla": "OP-D-02 (docs/plan/02_DESTEJIDOS.md), con la perdida repartida por LA TABLA DE LOS SEIS MOTIVOS DE PERDIDA DE LINEA y el alcance fijado por P.10 y P.12",
+  "motivo": "El acto se leyo ENTERO por P.5 (LD-72, LD-73 y LD-74, 15 ago 2026) y resulto ser una CADENA de tres A con DOS nodos puente y cero triangulos cerrados. La salida que P.10 nombra para ese caso es FUNDIR SOLO EL SUBCONJUNTO CERRADO Y ENLAZAR EL RESTO, y el subconjunto cerrado es el par del puesto 386. homework_frontend_loading y voice_of_customer_homework NO entran en la fusion.",
+  "fecha_corte": "2026-08-15",
+  "superviviente": "voz_del_cliente_voc",
+  "absorbido": "enfoque_mercado_voc",
+  "fuente_esperada": "Winning at New Products - Robert G. Cooper",
+  "pasos_totales_superviviente": 5,
+  "pasos_totales_absorbido": 5,
+  "condiciones_totales_superviviente": 3,
+  "condiciones_totales_absorbido": 2,
+  "origenes": {
+    "S1": "Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos",
+    "S2": "Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos",
+    "S3": "Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas",
+    "S4": "Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final",
+    "S5": "Mantén contacto con tu cliente durante todo el desarrollo, no solo al principio y al final",
+    "A1": "Convive de cerca con tus clientes más exigentes o hazles entrevistas a fondo para identificar sus problemas y oportunidades",
+    "A2": "Haz una evaluación preliminar de mercado antes de comprometer recursos importantes",
+    "A3": "Haz un análisis competitivo detallado: revisa productos, precios y tecnologías de quienes compiten contigo",
+    "A4": "Prueba tus primeras ideas de concepto con clientes reales antes de empezar el desarrollo formal",
+    "A5": "Sigue validando con tus clientes en ciclos cortos durante todo el desarrollo, no solo al principio",
+    "SC1": "Cuando no tienes ideas claras de qué hace diferente a tu producto",
+    "SC2": "Si estás diseñando tu producto a partir de supuestos propios y no de lo que observas en el terreno",
+    "SC3": "Antes de avanzar a la etapa de desarrollo formal de tu producto",
+    "AC1": "Cuando no tienes evidencia directa de lo que necesita tu cliente",
+    "AC2": "Cuando avanzas en el desarrollo de tu producto sin buscar retroalimentación externa"
+  },
+  "prefijos_superviviente": [
+    "Prepárate (o prepara a quien te ay",
+    "Observa directamente a tu cliente ",
+    "Complementa tus entrevistas con ob",
+    "Usa lo que observas desde el inici",
+    "Mantén contacto con tu cliente dur"
+  ],
+  "prefijos_absorbido": [
+    "Convive de cerca con tus clientes ",
+    "Haz una evaluación preliminar de m",
+    "Haz un análisis competitivo detall",
+    "Prueba tus primeras ideas de conce",
+    "Sigue validando con tus clientes e"
+  ],
+  "prefijos_condiciones_superviviente": [
+    "Cuando no tienes ideas claras de q",
+    "Si estás diseñando tu producto a p",
+    "Antes de avanzar a la etapa de des"
+  ],
+  "prefijos_condiciones_absorbido": [
+    "Cuando no tienes evidencia directa",
+    "Cuando avanzas en el desarrollo de"
+  ],
+  "grupos_pasos": [
+    {
+      "origenes": [
+        "S1",
+        "A1"
+      ],
+      "texto": "Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos, y empieza por los más exigentes.",
+      "motivo": "SALVAGUARDA: el superviviente manda observar a tus clientes y no dice a CUALES, asi que el paso se resuelve solo por el sesgo por defecto, observar a los que estan mas a mano. El absorbido dice contra que sesgo se elige (los mas exigentes) y el inciso se adosa al paso que protege, que es un paso de DECISION y no de ejecucion, que es la firma escrita de la clase."
+    },
+    {
+      "origenes": [
+        "S2"
+      ],
+      "texto": "Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos.",
+      "motivo": "VERBATIM: el superviviente conserva su paso entero y el absorbido no le anade nada."
+    },
+    {
+      "origenes": [
+        "S3"
+      ],
+      "texto": "Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas.",
+      "motivo": "VERBATIM: el superviviente conserva su paso entero. Aqui vive el 'hazles entrevistas a fondo' del absorbido, que ya decia lo mismo."
+    },
+    {
+      "origenes": [
+        "A2",
+        "A3"
+      ],
+      "texto": "Haz una evaluación preliminar de mercado y un análisis competitivo detallado de productos, precios y tecnologías antes de comprometer recursos importantes.",
+      "motivo": "NO ES PERDIDA: es PRESERVAR. El campo preservar de OP-D-02 manda salvar de enfoque_mercado_voc la evaluacion preliminar de mercado y el analisis competitivo detallado, y el superviviente no dice ninguna de las dos en ninguno de sus cinco pasos. Entra como PASO NUEVO porque no hay paso del superviviente al que adosarlo sin cambiarle el objeto."
+    },
+    {
+      "origenes": [
+        "S4",
+        "A4"
+      ],
+      "texto": "Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final, y prueba tus primeras ideas de concepto con clientes reales antes de empezar el desarrollo formal.",
+      "motivo": "NO ES PERDIDA: es PRESERVAR, la tercera pieza. El campo preservar manda salvar probar los conceptos con clientes reales antes del desarrollo formal, y se adosa al paso del superviviente que ya habla de usar lo observado para disenar, que es el mismo momento del proceso."
+    },
+    {
+      "origenes": [
+        "S5",
+        "A5"
+      ],
+      "texto": "Mantén contacto con tu cliente durante todo el desarrollo, en ciclos cortos, no solo al principio y al final.",
+      "motivo": "ALCANCE: el superviviente manda mantener el contacto durante todo el desarrollo y no dice a que cadencia. El absorbido la trae (ciclos cortos) y entra a la enumeracion que el superviviente ya tiene. Es la misma lectura de cadencia que OP-D-01 aplico en su paso 6, y se cita para que el criterio sea el mismo."
+    }
+  ],
+  "grupos_condiciones": [
+    {
+      "origenes": [
+        "SC1"
+      ],
+      "texto": "Cuando no tienes ideas claras de qué hace diferente a tu producto",
+      "motivo": "VERBATIM."
+    },
+    {
+      "origenes": [
+        "SC2",
+        "AC1"
+      ],
+      "texto": "Si estás diseñando tu producto a partir de supuestos propios y no de lo que observas en el terreno",
+      "motivo": "VERBATIM, y ABSORBE sin cambiar una letra: la condicion 1 del absorbido (cuando no tienes evidencia directa de lo que necesita tu cliente) es esta misma dicha al reves. No hay perdida que repartir."
+    },
+    {
+      "origenes": [
+        "SC3",
+        "AC2"
+      ],
+      "texto": "Antes de avanzar a la etapa de desarrollo formal de tu producto, o mientras avanzas en él sin buscar retroalimentación externa",
+      "motivo": "ALCANCE: el superviviente nombra UN solo momento (antes de la etapa formal) y el absorbido trae el otro (mientras avanzas sin retroalimentacion externa). El segundo momento entra a la enumeracion que el superviviente ya tiene."
+    }
+  ],
+  "pasos_finales": [
+    "Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos, y empieza por los más exigentes.",
+    "Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos.",
+    "Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas.",
+    "Haz una evaluación preliminar de mercado y un análisis competitivo detallado de productos, precios y tecnologías antes de comprometer recursos importantes.",
+    "Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final, y prueba tus primeras ideas de concepto con clientes reales antes de empezar el desarrollo formal.",
+    "Mantén contacto con tu cliente durante todo el desarrollo, en ciclos cortos, no solo al principio y al final."
+  ],
+  "condiciones_finales": [
+    "Cuando no tienes ideas claras de qué hace diferente a tu producto",
+    "Si estás diseñando tu producto a partir de supuestos propios y no de lo que observas en el terreno",
+    "Antes de avanzar a la etapa de desarrollo formal de tu producto, o mientras avanzas en él sin buscar retroalimentación externa"
+  ],
+  "entregable_final": "Un resumen de lo que aprendiste observando y entrevistando a tu cliente, con la evaluación preliminar de mercado, el análisis competitivo y los resultados de las pruebas de concepto, que alimente directamente cómo diseñas tu producto",
+  "entregable_viejo": "Un resumen de lo que aprendiste observando y entrevistando a tu cliente, que alimente directamente cómo diseñas tu producto",
+  "resumen_final": "Escuchar la voz de tu cliente es reunir información directa sobre sus necesidades, problemas y preferencias, no solo con entrevistas formales sino también observando cómo vive y trabaja en su propio entorno (observación de campo, a veces llamada camping out). Usa esto como punto de partida para diseñar tu producto, no como algo que revisas al final. Las necesidades que tu cliente no sabe nombrar, o su comportamiento real, te muestran cosas que una entrevista formal no capta. Y la escucha no se agota en observar: antes de comprometer recursos importantes conviene hacer la evaluación preliminar de mercado y el análisis competitivo detallado, y probar tus primeras ideas de concepto con clientes reales antes de empezar el desarrollo formal.",
+  "resumen_viejo": "Escuchar la voz de tu cliente es reunir información directa sobre sus necesidades, problemas y preferencias, no solo con entrevistas formales sino también observando cómo vive y trabaja en su propio entorno (observación de campo, a veces llamada camping out). Usa esto como punto de partida para diseñar tu producto, no como algo que revisas al final. Las necesidades que tu cliente no sabe nombrar, o su comportamiento real, te muestran cosas que una entrevista formal no capta.",
+  "titulo_sin_cambio": "Escucha la voz de tu cliente (Voice of Customer, VoC)",
+  "preservar_literal": [
+    "evaluación preliminar de mercado",
+    "análisis competitivo detallado",
+    "clientes reales antes de empezar el desarrollo formal"
+  ],
+  "rastros": [
+    "observar",
+    "su propio entorno",
+    "más exigentes",
+    "evaluación preliminar de mercado",
+    "análisis competitivo detallado",
+    "productos, precios y tecnologías",
+    "clientes reales",
+    "desarrollo formal",
+    "ciclos cortos",
+    "todo el desarrollo"
+  ],
+  "redirecciones_esperadas": [
+    {
+      "nodo": "homework_frontend_loading",
+      "campo": "nodos_previos"
+    },
+    {
+      "nodo": "procesamiento_paralelo_con_espirales",
+      "campo": "nodos_siguientes"
+    },
+    {
+      "nodo": "ventaja_competitiva_producto",
+      "campo": "nodos_previos"
+    }
+  ],
+  "redirecciones_no_tocadas_por_deprecadas": [
+    {
+      "nodo": "front_end_homework",
+      "campo": "nodos_previos",
+      "motivo": "esta DEPRECADO, medido hoy en dataset/nodos y en master_graph.json. Solo se redirige lo vivo, que es el criterio del instrumento sellado de la casa scripts/plan/simular_fusion.py (salta los deprecados al listar entradas). Su cableado se conserva por la misma razon por la que se conserva el texto del absorbido: para que la fusion se pueda auditar."
+    }
+  ]
+}

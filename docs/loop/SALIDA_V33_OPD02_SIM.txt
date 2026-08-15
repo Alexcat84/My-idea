@@ -1,0 +1,27 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### voz_del_cliente_voc  <==  enfoque_mercado_voc
+  1. DESEMPATE POR CABLEADO
+     voz_del_cliente_voc                          pasos  5 | nombra 12 | LO NOMBRAN 12
+     enfoque_mercado_voc                          pasos  5 | nombra  3 | LO NOMBRAN  3
+     >>> gana voz_del_cliente_voc por 12 contra 3
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['enfoque_mercado_voc']
+  3. ENTRADAS QUE SE REDIRIGEN
+     homework_frontend_loading                    nodos_previos     -> voz_del_cliente_voc
+     procesamiento_paralelo_con_espirales         nodos_siguientes  -> voz_del_cliente_voc
+     ventaja_competitiva_producto                 nodos_previos     -> voz_del_cliente_voc
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     homework_frontend_loading                    nodos_previos     -> voz_del_cliente_voc
+     TOTAL NUEVAS: 1
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     homework_frontend_loading     .nodos_previos      voz_del_cliente_voc -> homework_frontend_loading
+     voz_del_cliente_voc           .nodos_siguientes   voz_del_cliente_voc -> homework_frontend_loading
