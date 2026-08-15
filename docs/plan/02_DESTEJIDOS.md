@@ -257,6 +257,34 @@ copiarlos: **mejor pareja de pasos 51,2 contra un umbral de 80; mejor alineacion
 contra un umbral de 44. NINGUNA SENAL DISPARA.** (El emblema, ya destejido, da 50,3 y 0,0: los
 dos quedan por debajo de las dos varas.)
 
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 34). LA CIFRA DE BLOQUE DE ESTE PARRAFO NO MEDIA LO
+> QUE DECIA MEDIR, Y SE RECOMPUTA. La conclusion NO cambia; cambia una de sus dos patas.** El
+> parrafo de arriba se queda entero: la caida la declaro el ejecutor de la vuelta 33 y la
+> confirmo el acta 33 del auditor (seccion 3.2), y el fundador la mando arreglar el 15 ago 2026.
+>
+> **RECOMPUTO CORRIDO HOY, con el nodo impreso ENTERO delante** (`scripts/loop/vuelta34_mov2.py`,
+> salida en `docs/loop/SALIDA_V34_MOV2_RECOMPUTO.txt`):
+>
+> | pata del apoyo | vuelta 32 | medido hoy |
+> |---|---|---|
+> | **senal 1, pareja de pasos** | **51,2** contra 80, no dispara | **51,2**, pasos 2 y 3. **SE REPRODUCE AL DIGITO** y sigue sin disparar |
+> | **senal 2, alineacion de bloques** | **0,0** contra 44, no dispara | con la regla NUEVA: **45,8 con corte tras el paso 5. DISPARA** |
+> | **lectura del nodo entero** | (no se publico) | **NO hay costura**: los pasos 6 y 7 son la CONTINUACION (decidir con el feedback, iterar), no un reinicio del bloque 1 a 5 |
+>
+> **Y LA CAUSA DEL 0,0 NO ERA LA QUE SE DIJO, y esto tambien se corrige.** El reporte de la vuelta
+> 33 la atribuyo al **rango vacio** (`range(MIN_BLOQUE, n - MIN_BLOQUE + 1)` con cinco pasos). Eso
+> es cierto **para los dos nodos de calibracion, que tienen cinco pasos, pero NO para este**, que
+> tiene **siete** y cuyo rango no estaba vacio. **Medida hoy corte por corte, la causa real es
+> otra:** el emparejamiento monotono solo lograba **UN** emparejamiento donde el promedio exigia
+> **TRES**. **Dos averias distintas con el mismo sintoma**, y la del acta 33 no cubria a esta.
+>
+> **LO QUE EL 45,8 NO AUTORIZA A CONCLUIR, y por eso la conclusion no se voltea:** con
+> `MIN_BLOQUE` en 2 el umbral 44 quedo **por debajo de la mediana** de la senal (**p50 45,8**,
+> medido sobre 2.245 nodos en `docs/loop/SALIDA_V34_CALIBRACION.txt`). **Este nodo puntua
+> exactamente la mediana del catalogo.** Disparar ahi no distingue a un nodo costurado de la mitad
+> del archivo. **La pata instrumental de esta conclusion queda EN SUSPENSO, no volteada, y la que
+> la sostiene hoy es la lectura**, que es la vara que el propio instrumento declara superior.
+
 **LAS TRES NARRACIONES QUE LA FICHA LE CONTABA YA NO ESTAN, y cada una tiene su fecha y su
 operacion:** la **TERCERA** (el conjunto minimo, pasos 11 a 14) **se la llevo `OP-F-03`**, y la
 **SEGUNDA** (lanzar rapido y aceptar el fallo, pasos 6 a 10) **se fundio con la PRIMERA en esta

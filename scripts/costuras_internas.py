@@ -44,6 +44,59 @@ LA CALIBRACION CONOCIDA: los dos nodos de arriba TIENEN que aparecer en la cola.
 Si falta alguno, el instrumento esta mal calibrado, lo dice y SALE CON CODIGO 1
 SIN ENTREGAR.
 
+===========================================================================
+RECALIBRACION DECLARADA (15 ago 2026, vuelta 34, decision del fundador)
+===========================================================================
+
+NADA DE LO DE ARRIBA SE BORRA: describe el instrumento tal como se calibro en
+su dia, y una correccion que tapa lo que corrige no se puede auditar. Lo que
+sigue es lo que se midio HOY, con sus ids y sus cifras.
+
+LO QUE SE ROMPIO, medido en la vuelta 33: la senal de bloque recorria
+`range(MIN_BLOQUE, n - MIN_BLOQUE + 1)` con `MIN_BLOQUE = 3`, y con CINCO pasos
+ese rango es VACIO: devolvia 0,0 diga lo que diga el texto. Y LOS DOS NODOS DE
+CALIBRACION TIENEN CINCO PASOS HOY, porque esta misma campana los destejio.
+El 0,0 no era un nodo sin bloque: era la senal muerta.
+
+EL CAMBIO, tal como lo decidio el fundador: `MIN_BLOQUE` pasa a 2, o sea senal
+para todo nodo de CUATRO pasos o mas; por debajo de eso la senal devuelve
+`NO APLICA` EXPLICITO en vez de un cero silencioso, y ese valor REVIENTA si
+alguien lo compara con un umbral, en vez de dejarse leer como "no hay bloque".
+
+LAS CIFRAS DE HOY, medidas sobre el grafo del 15 ago 2026 (los nodos, no el
+recuerdo), con la regla vieja al lado para que la discrepancia se vea:
+
+  plan_mejora_procesos                     5 pasos  pareja 47,1  (docstring: 60,0)
+      bloque VIEJO NO APLICA (n<6)   ->    bloque NUEVO 43,1 con corte tras 2
+  economia_circular_como_modelo_de_negocio 5 pasos  pareja 54,3  (docstring: 54,7)
+      bloque VIEJO NO APLICA (n<6)   ->    bloque NUEVO 44,2 con corte tras 3
+
+LO QUE LA RECALIBRACION **NO** ARREGLA, y va escrito aqui porque callarlo seria
+la degradacion silenciosa contra la que existe la propia puerta:
+
+  1. LA PUERTA SIGUE ROJA. `plan_mejora_procesos` da 43,1 contra un umbral de
+     44: se queda fuera de la cola POR 0,9 PUNTOS, que es exactamente la
+     distancia del falso negativo que en su dia bajo el umbral de 45 a 44. El
+     instrumento sigue negandose a entregar, y ahora tambien se niega a que le
+     importen las senales, que es lo que la decision manda.
+  2. EL COSTO, medido sobre el catalogo entero antes de aplicar nada
+     (scripts/loop/vuelta34_calibrar_costuras.py, salida en
+     docs/loop/SALIDA_V34_CALIBRACION.txt): la cola pasaria de 122 a 1.497
+     nodos, el 42,3 por ciento del catalogo activo. La causa es que
+     `MIN_BLOQUE` no es un solo dial: tambien es la K del promedio de las K
+     mejores parejas, y promediar las DOS mejores en vez de las TRES sube el
+     puntaje de todo el catalogo con el umbral quieto en 44. Medido: el p50 de
+     la senal nueva es 45,8, o sea que el umbral quedo POR DEBAJO DE LA
+     MEDIANA. Disparar deja de ser noticia.
+  3. Y por eso la frase que este mismo encabezado escribio sigue mandando:
+     una baranda que caza lo correcto no es estricta, esta rota. Con 24 por
+     ciento esta casa ya adjudico que no. Con 42,3 tampoco.
+
+QUEDA COMO PENDIENTE DE DOCTRINA, no como arreglo silencioso: que umbral
+acompana a `MIN_BLOQUE = 2`, o contra que nodos se recalibra la puerta, es
+doctrina de medicion y la decide el fundador. Lo que esta vuelta hace es
+aplicar la letra, medir el efecto y publicarlo.
+
 Uso:
   python scripts/costuras_internas.py
   python scripts/costuras_internas.py --umbral-pareja 75 --umbral-bloque 50
@@ -78,17 +131,81 @@ UMBRAL_PAREJA = 80
 # señal). Adjudicado como barato frente al mandato de leerlas todas.
 UMBRAL_BLOQUE = 44
 
-# Minimo de pasos para que un bloque signifique algo: con menos de tres pasos por
-# lado, "el segundo bloque repite al primero" no es una afirmacion, es ruido.
-MIN_BLOQUE = 3
+# Minimo de pasos POR LADO para que un bloque signifique algo.
+#
+# ~~MIN_BLOQUE = 3~~ BAJADO A 2 el 15 ago 2026 por decision del fundador (ver la
+# RECALIBRACION DECLARADA del encabezado). El comentario viejo decia: "con menos
+# de tres pasos por lado, 'el segundo bloque repite al primero' no es una
+# afirmacion, es ruido". Se queda escrito porque es el argumento que el cambio
+# contradice, y quien lo revise tiene que poder leerlo.
+#
+# Y LO QUE ESTE NUMERO MUEVE NO ES SOLO EL RANGO DE CORTES: es tambien la K del
+# promedio de las K mejores parejas de mas abajo, o sea LA ESCALA DEL PUNTAJE.
+# Medido antes de aplicarlo: la cola pasa de 122 a 1.497 nodos con el umbral
+# quieto en 44, y el p50 de la senal nueva es 45,8.
+MIN_BLOQUE = 2
+# El minimo de pasos para que la senal APLIQUE. Con MIN_BLOQUE = 2 son cuatro.
+MIN_PASOS_BLOQUE = MIN_BLOQUE * 2
+
+
+class NoAplica(object):
+    """LO QUE LA SENAL DEVUELVE CUANDO EL NODO NO LLEGA AL MINIMO, y no es cero.
+
+    CERO ES UNA MEDICION; ESTO ES LA AUSENCIA DE MEDICION. La averia de la
+    vuelta 33 vivio meses porque la senal muerta devolvia 0,0 y ese 0,0 se
+    publico como si dijera "este nodo no tiene bloque repetido". No lo decia.
+
+    Por eso este valor NO se deja comparar con un umbral: cualquier `>=`, `<`,
+    `float()` o `if` sobre el REVIENTA con el motivo escrito. Un instrumento
+    que no puede medir tiene que decirlo, no devolver un numero comodo.
+    """
+
+    def __repr__(self):
+        return "NO APLICA"
+
+    def __str__(self):
+        return "NO APLICA"
+
+    def _revienta(self, *_a, **_k):
+        raise TypeError(
+            "NO APLICA no es un numero: la senal de bloque no aplica a este nodo "
+            "(menos de %d pasos). Trata el caso, no lo compares con un umbral."
+            % MIN_PASOS_BLOQUE)
+
+    __ge__ = __gt__ = __le__ = __lt__ = __float__ = __bool__ = _revienta
+
+
+NO_APLICA = NoAplica()
+
+
+class CalibracionRota(RuntimeError):
+    """La puerta de calibracion, que ahora vive en las senales.
+
+    LLEVA LA MEDICION DENTRO (`detalle`) para que quien la cace pueda imprimir
+    por que fallo sin volver a medir."""
+
+    def __init__(self, faltan, detalle):
+        self.faltan = faltan
+        self.detalle = detalle
+        RuntimeError.__init__(
+            self, "INSTRUMENTO MAL CALIBRADO: %s" % ", ".join(faltan))
+
 
 # Los dos nodos que dieron origen a la clase. Si el instrumento no los caza, no
 # sirve para lo que se construyo y no entrega nada.
 CALIBRACION = ("plan_mejora_procesos", "economia_circular_como_modelo_de_negocio")
 
+# LA PUERTA SE MUDA A LAS SENALES (15 ago 2026, decision del fundador). Vivia en
+# el `main()`, y por eso `scripts/loop/vuelta32_costura_opd01.py` pudo importar
+# las senales POR DEBAJO de ella y publicar una cifra de una senal muerta. Una
+# guarda que se saltea importando es un test verde y mal. Desde hoy la heredan
+# `peor_pareja` y `mejor_bloque`, o sea TODA importacion.
+_CALIBRACION = None   # None = sin comprobar todavia; se comprueba UNA vez
 
-def peor_pareja(ratio, pasos):
-    """La pareja de pasos mas parecida del nodo: (similitud, i, j) en base 1."""
+
+def _peor_pareja(ratio, pasos):
+    """La senal 1, cruda y SIN puerta. Uso interno: la puerta la usa para
+    medirse a si misma, y llamarla desde fuera se saltaria la baranda."""
     mejor = (0.0, 0, 0)
     for a in range(len(pasos)):
         for b in range(a + 1, len(pasos)):
@@ -98,10 +215,12 @@ def peor_pareja(ratio, pasos):
     return mejor
 
 
-def mejor_bloque(ratio, pasos):
-    """El corte que mejor explica la lista como DOS bloques, uno repitiendo al
-    otro: (score, corte). El corte es en base 1: 'los pasos 1 a corte contra el
-    resto'. Devuelve (0, 0) si la lista es demasiado corta para afirmarlo."""
+def _mejor_bloque(ratio, pasos):
+    """La senal 2, cruda y SIN puerta. Devuelve (NO_APLICA, 0) si la lista no
+    llega al minimo, y (0.0, 0) si llega pero ningun corte puntua: son dos cosas
+    distintas y desde hoy se distinguen."""
+    if len(pasos) < MIN_PASOS_BLOQUE:
+        return (NO_APLICA, 0)
     mejor = (0.0, 0)
     n = len(pasos)
     for corte in range(MIN_BLOQUE, n - MIN_BLOQUE + 1):
@@ -124,6 +243,77 @@ def mejor_bloque(ratio, pasos):
     return mejor
 
 
+def medir_calibracion(ratio=None):
+    """Mide los nodos de calibracion con las senales CRUDAS y dice quien entra.
+
+    Devuelve (faltan, detalle): `faltan` son los ids que NO entran en la cola con
+    los umbrales por defecto, y `detalle` trae la medicion de cada uno para que
+    quien la imprima no tenga que volver a medir.
+    """
+    if ratio is None:
+        from rapidfuzz.fuzz import token_sort_ratio as ratio
+    nodos = json.loads(GRAFO.read_text(encoding="utf-8"))["nodos"]
+    faltan, detalle = [], {}
+    for nid in CALIBRACION:
+        pasos = (nodos.get(nid) or {}).get("pasos_accionables") or []
+        sp = _peor_pareja(ratio, pasos)
+        sb = _mejor_bloque(ratio, pasos)
+        entra = sp[0] >= UMBRAL_PAREJA
+        if not isinstance(sb[0], NoAplica):
+            entra = entra or (bool(sb[1]) and sb[0] >= UMBRAL_BLOQUE)
+        detalle[nid] = {"pasos": len(pasos), "pareja": sp, "bloque": sb, "entra": entra}
+        if not entra:
+            faltan.append(nid)
+    return faltan, detalle
+
+
+def _asegurar_calibracion():
+    """LA PUERTA. Se comprueba UNA vez por proceso y la hereda toda importacion.
+
+    No es cosmetica: `scripts/loop/vuelta32_costura_opd01.py` importo las senales
+    por debajo de la puerta vieja (que vivia en el `main()`) y publico como
+    medicion un 0,0 de una senal muerta. Desde hoy, importar las senales de un
+    instrumento descalibrado LEVANTA `CalibracionRota`.
+    """
+    global _CALIBRACION
+    if _CALIBRACION is None:
+        _CALIBRACION = medir_calibracion()
+    faltan, detalle = _CALIBRACION
+    if faltan:
+        raise CalibracionRota(faltan, detalle)
+
+
+def peor_pareja(ratio, pasos):
+    """La pareja de pasos mas parecida del nodo: (similitud, i, j) en base 1.
+    CON LA PUERTA DE CALIBRACION DELANTE."""
+    _asegurar_calibracion()
+    return _peor_pareja(ratio, pasos)
+
+
+def mejor_bloque(ratio, pasos):
+    """El corte que mejor explica la lista como DOS bloques, uno repitiendo al
+    otro: (score, corte), con el corte en base 1 ('los pasos 1 a corte contra el
+    resto'). Devuelve (NO_APLICA, 0) si la lista no llega a MIN_PASOS_BLOQUE.
+    CON LA PUERTA DE CALIBRACION DELANTE."""
+    _asegurar_calibracion()
+    return _mejor_bloque(ratio, pasos)
+
+
+def imprimir_calibracion_rota(err, umbral_pareja=UMBRAL_PAREJA,
+                              umbral_bloque=UMBRAL_BLOQUE):
+    """El texto que el instrumento lleva dando desde que la puerta existe, con la
+    medicion de hoy al lado. No se maquilla ninguna cifra."""
+    print("INSTRUMENTO MAL CALIBRADO. No entrega nada.")
+    print("  La calibracion conocida no aparece en la cola: %s" % err.faltan)
+    for nid, d in sorted(err.detalle.items()):
+        sp, sb = d["pareja"], d["bloque"]
+        print("    %s: %d pasos, mejor pareja %.1f (pasos %d y %d), mejor bloque %s"
+              % (nid, d["pasos"], sp[0], sp[1], sp[2],
+                 ("NO APLICA" if isinstance(sb[0], NoAplica)
+                  else "%.1f (corte tras %d)" % (sb[0], sb[1]))))
+    print("  Umbrales usados: pareja %s, bloque %s" % (umbral_pareja, umbral_bloque))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -132,6 +322,16 @@ def main():
     args = ap.parse_args()
 
     from rapidfuzz.fuzz import token_sort_ratio as ratio
+
+    # LA PUERTA, PRIMERO Y NO AL FINAL. Antes se comprobaba despues de barrer el
+    # catalogo entero; ahora vive en las senales, asi que la primera llamada la
+    # dispara igual. Se pregunta aqui para poder imprimir el diagnostico entero
+    # en vez de una traza.
+    try:
+        _asegurar_calibracion()
+    except CalibracionRota as err:
+        imprimir_calibracion_rota(err, args.umbral_pareja, args.umbral_bloque)
+        return 1
 
     nodos = json.loads(GRAFO.read_text(encoding="utf-8"))["nodos"]
     activos = {k: v for k, v in nodos.items() if not v.get("deprecado")}
@@ -143,12 +343,12 @@ def main():
             continue
         s_par, i, j = peor_pareja(ratio, pasos)
         sc_pareja.append(s_par)
-        s_blo, corte = (mejor_bloque(ratio, pasos) if len(pasos) >= MIN_BLOQUE * 2
-                        else (0.0, 0))
-        if corte:
+        s_blo, corte = mejor_bloque(ratio, pasos)
+        aplica_bloque = not isinstance(s_blo, NoAplica)
+        if aplica_bloque and corte:
             sc_bloque.append(s_blo)
         disparo_p = s_par >= args.umbral_pareja
-        disparo_b = bool(corte) and s_blo >= args.umbral_bloque
+        disparo_b = aplica_bloque and bool(corte) and s_blo >= args.umbral_bloque
         if not (disparo_p or disparo_b):
             continue
         filas.append({
@@ -160,7 +360,10 @@ def main():
             "pareja": [i, j],
             "paso_a": pasos[i - 1],
             "paso_b": pasos[j - 1],
-            "sim_bloque": round(s_blo, 1),
+            # NO APLICA no se escribe como 0.0: se escribe como null con su
+            # texto al lado, para que ningun lector lo sume ni lo compare.
+            "sim_bloque": round(s_blo, 1) if aplica_bloque else None,
+            "sim_bloque_texto": ("%.1f" % s_blo) if aplica_bloque else "NO APLICA",
             "corte": corte,
             "disparo_pareja": disparo_p,
             "disparo_bloque": disparo_b,
@@ -170,23 +373,9 @@ def main():
         })
 
     # Ordena por la señal MAS FUERTE de las dos, normalizando ambas a 0-1.
-    filas.sort(key=lambda f: max(f["sim_pareja"] / 100, f["sim_bloque"] / 100),
+    filas.sort(key=lambda f: max(f["sim_pareja"] / 100,
+                                 (f["sim_bloque"] or 0.0) / 100),
                reverse=True)
-
-    encontrados = {f["node_id"] for f in filas}
-    faltan = [c for c in CALIBRACION if c not in encontrados]
-    if faltan:
-        print("INSTRUMENTO MAL CALIBRADO. No entrega nada.")
-        print(f"  La calibracion conocida no aparece en la cola: {faltan}")
-        for c in faltan:
-            pasos = activos.get(c, {}).get("pasos_accionables") or []
-            if pasos:
-                sp = peor_pareja(ratio, pasos)
-                sb = mejor_bloque(ratio, pasos)
-                print(f"    {c}: mejor pareja {sp[0]:.1f} (pasos {sp[1]} y {sp[2]}), "
-                      f"mejor bloque {sb[0]:.1f} (corte tras {sb[1]})")
-        print(f"  Umbrales usados: pareja {args.umbral_pareja}, bloque {args.umbral_bloque}")
-        return 1
 
     L = []
     A = L.append
@@ -224,12 +413,22 @@ def main():
       "copias. La señal de bloques las pone en los **puestos 7 y 32 de 567** y "
       "**acierta el corte exacto en las dos**.")
     A("")
+    A("> **CORRECCION DECLARADA (15 ago 2026, vuelta 34).** Las cifras del parrafo "
+      "de arriba **son las del dia en que se calibro y se quedan escritas**, pero "
+      "**hoy no se reproducen**: esta misma campaña destejio los dos nodos, y "
+      "medidos contra el grafo de hoy dan **pareja 47,1 y 54,3** con **cinco pasos "
+      "cada uno**. La señal de bloque se recalibro (`MIN_BLOQUE` de 3 a 2, señal "
+      "para todo nodo de cuatro pasos o mas, `NO APLICA` explicito por debajo), y "
+      "**la puerta de calibracion se mudo a las señales para que toda importacion "
+      "la herede**. Detalle entero, con el costo medido, en el encabezado de "
+      "`scripts/costuras_internas.py`.")
+    A("")
     A("## La calibracion conocida")
     A("")
     for c in CALIBRACION:
         f = next(x for x in filas if x["node_id"] == c)
         A(f"**CAZADO** `{c}`: pareja **{f['sim_pareja']}**, bloque "
-          f"**{f['sim_bloque']}** con el corte **tras el paso {f['corte']}**.")
+          f"**{f['sim_bloque_texto']}** con el corte **tras el paso {f['corte']}**.")
         A("")
     A("## Conteos")
     A("")
@@ -253,7 +452,8 @@ def main():
         A(f"| {etiqueta} | {qp[k - 1]:.1f} | {qb[k - 1]:.1f} |")
     A(f"| maximo | {max(sc_pareja):.1f} | {max(sc_bloque):.1f} |")
     A("")
-    A(f"Nodos evaluados por bloques (6 pasos o mas): **{len(sc_bloque)}**.")
+    A(f"Nodos evaluados por bloques ({MIN_PASOS_BLOQUE} pasos o mas): "
+      f"**{len(sc_bloque)}**. Los de menos dan **NO APLICA**, que no es cero.")
     A("")
     franja = [f for f in filas if f["franja_44_45"]]
     A("## La franja 44 a 45: lo que el umbral viejo dejaba fuera")
@@ -308,7 +508,7 @@ def main():
         if f["disparo_bloque"]:
             por.append("bloque")
         A(f"| {i} | {f['dominio']} | `{f['node_id']}` | {f['pasos']} | "
-          f"{f['sim_pareja']} | {f['sim_bloque']} | {f['corte'] or ''} | "
+          f"{f['sim_pareja']} | {f['sim_bloque_texto']} | {f['corte'] or ''} | "
           f"{' y '.join(por)} |")
     A("")
     A(f"La cola completa, con los dos pasos de cada pareja, en `{SALIDA.name}`.")

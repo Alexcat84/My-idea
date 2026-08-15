@@ -1,0 +1,35 @@
+﻿EL NODO ENTERO, que es la vara final
+==============================================================================
+  id        : principio_calidad_mvp
+  titulo    : Calidad y Diseño en el MVP
+  fuente    : The Lean Startup - Eric Ries | The Hard Thing About Hard Things
+  deprecado : False
+  PASOS (7):
+     1. Antes de invertir en pulir una característica, pregúntate si contribuye directamente al aprendizaje que buscas, y usa esa pregunta para resistir la presión del equipo de completar todas las funcionalidades 'ideales' antes de lanzar.
+     2. No asumas que el estándar de calidad de la industria, ni los requerimientos heredados de un cliente anterior, son lo que el mercado amplio valora; pruébalo empíricamente contra las necesidades reales de tus clientes.
+     3. Lanza al mercado real, lo antes posible, versiones simplificadas o 'hacky' de las features complejas, aceptando que fallarán en algunos aspectos, y mide la reacción real de los clientes.
+     4. Distingue entre defectos que dificultan el aprendizaje (inaceptables) y baja fidelidad estética (aceptable si permite aprender).
+     5. Capturar y priorizar el aprendizaje obtenido de los primeros clientes reales
+     6. Usa el feedback del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.
+     7. Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones internas
+  cond 1: Cuando el equipo duda en lanzar un MVP por temor a que sea de 'baja calidad'.
+  cond 2: Cuando hay presión interna (profesional o de diseño) por perfeccionar una funcionalidad antes de validarla con clientes.
+  entregable: Criterio validado y basado en evidencia sobre qué nivel de calidad/diseño es realmente necesario para satisfacer al cliente, evitando sobre-inversión prematura.
+
+LA MEDICION DE CONTRASTE (senales REIMPLEMENTADAS, no importadas:
+el instrumento sellado se niega a entregar y a ser importado)
+==============================================================================
+  SENAL 1, pareja de pasos : 51.2 (pasos 2 y 3) contra umbral 80  -> no dispara
+     (la vuelta 32 publico 51,2: SE REPRODUCE)
+
+  SENAL 2 con la regla VIEJA (MIN_BLOQUE 3), CORTE POR CORTE:
+     corte tras  3: SIN PUNTAJE (solo 1 emparejamientos monotonos, hacen falta 3)
+     corte tras  4: SIN PUNTAJE (solo 1 emparejamientos monotonos, hacen falta 3)
+     MEJOR: 0.0 con corte tras 0  contra umbral 44  -> no dispara
+
+  SENAL 2 con la regla NUEVA (MIN_BLOQUE 2), CORTE POR CORTE:
+     corte tras  2: SIN PUNTAJE (solo 1 emparejamientos monotonos, hacen falta 2)
+     corte tras  3: SIN PUNTAJE (solo 1 emparejamientos monotonos, hacen falta 2)
+     corte tras  4: SIN PUNTAJE (solo 1 emparejamientos monotonos, hacen falta 2)
+     corte tras  5: 45.8  (2 emparejamientos)
+     MEJOR: 45.8 con corte tras 5  contra umbral 44  -> DISPARA

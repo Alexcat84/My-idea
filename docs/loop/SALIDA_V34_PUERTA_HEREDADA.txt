@@ -1,0 +1,33 @@
+﻿==============================================================================
+COSTURA INTERNA QUE QUEDA EN PIE, medida HOY
+umbrales importados de scripts/costuras_internas.py: PAREJA 80, BLOQUE 44
+==============================================================================
+
+------------------------------------------------------------------------------
+NODO producto_minimo_viable
+  fuente     : The Lean Startup - Eric Ries
+  pasos      : 6      condiciones: 5
+     1. Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.
+     2. Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.
+     3. Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.
+     4. Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.
+     5. Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.
+     6. Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental.
+python : Traceback (most recent call last):
+At line:1 char:302
++ ... tch {} } }; python scripts/loop/vuelta32_costura_opd01.py *> "docs\lo ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta32_costura_opd01.py", line 77, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta32_costura_opd01.py", line 60, in main
+    pareja = CI.peor_pareja(ratio, pasos)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\costuras_internas.py", line 289, in peor_pareja
+    _asegurar_calibracion()
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\costuras_internas.py", line 283, in _asegurar_calibracion
+    raise CalibracionRota(faltan, detalle)
+costuras_internas.CalibracionRota: INSTRUMENTO MAL CALIBRADO: plan_mejora_procesos
