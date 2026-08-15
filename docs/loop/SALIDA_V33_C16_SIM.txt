@@ -1,0 +1,32 @@
+PLAN  : C:\Users\AlexDesk\Documents\I have an idea\docs\loop\PLAN_V32_OPD01_EMBLEMA.json
+NODO  : producto_minimo_viable
+MODO  : solo medir
+==============================================================================
+--- MEDICION DEL DIA, los pasos en disputa, leidos del plan sellado ---
+  paso  2: Diseña la versión más simple del producto que te permita probar esa hipótesis.
+  paso  6: Define el conjunto mínimo de características basándote en tu propia visión, no en una lista larga de pedidos.
+  paso  8: Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución.
+  paso 14: Itera tu primera versión en ciclos cortos, basándote en lo que realmente aprendes de tus clientes.
+  paso 15: Define el conjunto mínimo de características a partir de tu propia visión, no de una lista larga de requerimientos.
+  paso 16: Desarrolla tu primera versión de forma incremental, en ciclos cortos e iterativos.
+  paso 17: Itera o cambia de rumbo si nadie considera interesante o suficiente tu primera versión.
+  paso 19: Define el conjunto mínimo de características a partir de tu visión inicial.
+  paso 22: Itera o cambia de rumbo si nadie encuentra útil o suficiente tu primera versión.
+
+--- LA INVARIANTE QUE PROTEGE AL NODO ---
+  primer origen del grupo del paso 2: viejo 2, nuevo 2
+  primer origen del grupo del paso 6: viejo 8, nuevo 8
+  cobertura nueva: 22 origenes, rango 1 a 22, repetidos [], faltan []
+  INVARIANTE: SE CUMPLE
+
+--- LO QUE QUEDA ESCRITO ---
+  grupo del paso 1: [1, 10]
+  grupo del paso 2: [2, 6, 11, 15, 19]
+  grupo del paso 3: [3, 9, 13, 18]
+  grupo del paso 4: [4, 7, 12, 20]
+  grupo del paso 5: [5, 21]
+  grupo del paso 6: [8, 14, 16, 17, 22]
+  mapa_pasos: {"1": [1, 10], "2": [2, 6, 11, 15, 19], "3": [3, 9, 13, 18], "4": [4, 7, 12, 20], "5": [5, 21], "6": [8, 14, 16, 17, 22]}
+  correcciones_declaradas: 1 bloque(s)
+
+SIN --aplicar: cero escrituras.

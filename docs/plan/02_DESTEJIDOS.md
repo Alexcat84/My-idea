@@ -155,14 +155,73 @@ unico criterio que no obliga a elegir entre frases que la ficha ya declaro equiv
 el orden propio del nodo en pie. **El resultado cae exactamente sobre la NARRACION 1 (pasos 1 a
 5), que es la que el propio `entregable_esperado` del nodo ya narraba**, mas el paso 8.
 
+**TABLA VIEJA (15 ago 2026, vuelta 32), CONSERVADA ENTERA Y TACHADA, NO BORRADA.** Su celda
+del paso 2 traia el origen **16** y por eso la fila del paso 6 contradecia a su propio motivo.
+**La cabecera va tachada tambien, y no es cosmetica: asi el verificador de mapas no la lee como
+tabla vigente**, que es lo que una tabla retirada no debe ser.
+
+| ~~paso del resultado~~ | ~~de que origenes salia~~ | ~~el motivo de perdida de linea que lo modifica~~ |
+|---:|---|---|
+| ~~**1**~~ | ~~1, 10~~ | ~~**SALVAGUARDA**: el paso 10 trae la prueba de que alguien PAGARIA por resolverlo, y el inciso se adosa al paso que protege~~ |
+| ~~**2**~~ | ~~2, 6, 11, 15, **16**, 19~~ | ~~**SALVAGUARDA**: los pasos 6, 15 y 19 nombran el sesgo (la lista larga de pedidos) que el superviviente no nombraba~~ |
+| ~~**3**~~ | ~~3, 9, 13, 18~~ | ~~**ALCANCE**: el paso 13 trae el segundo criterio de la excepcion (que sin ella no se pueda vender) y entra a la enumeracion~~ |
+| ~~**4**~~ | ~~4, 7, 12, 20~~ | ~~**NOMBRE** (banco 9.28): el superviviente decia *early adopters* y no *earlyvangelists*, que es la palabra por la que se busca y la que da nombre a dos nodos vecinos~~ |
+| ~~**5**~~ | ~~5, 21~~ | ~~**SALVAGUARDA**: el paso 21 dice contra que sesgo se lee la medicion (no para expandir funciones)~~ |
+| ~~**6**~~ | ~~8, 14, 17, 22~~ | ~~**ALCANCE**: los pasos 14 y 16 traen la cadencia (ciclos cortos, incremental)~~ |
+
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 33), y es la caida de CIFRA PUBLICADA que el
+> acta 32 marco.** **EL ORIGEN 16 PASA DEL GRUPO DEL PASO 2 AL GRUPO DEL PASO 6.**
+>
+> **QUIEN TENIA RAZON, MEDIDO HOY Y NO SUPUESTO** (`scripts/loop/vuelta33_corregir_16.py`,
+> salida `docs/loop/SALIDA_V33_C16_SIM.txt`, que imprime los pasos en disputa ANTES de tocar
+> nada): **el MOTIVO tenia razon y la CELDA estaba mal.** El paso 16 original dice *Desarrolla
+> tu primera version de forma incremental, en ciclos cortos e iterativos*: **es la cadencia**,
+> que es el paso 6 del resultado, **no el conjunto minimo** del paso 2. Los tres que si son el
+> conjunto minimo (**6**, **15** y **19**) empiezan los tres por *Define el conjunto minimo de
+> caracteristicas*, y el 16 no.
+>
+> **EL TEXTO DEL NODO NO SE TOCA, y tampoco es una opinion:** `vuelta32_podar.py` toma el
+> superviviente por el **primer origen del grupo** y el texto por `pasos_finales`, escrito
+> aparte. **`min` del grupo del paso 2 sigue siendo 2 y el del paso 6 sigue siendo 8** con el 16
+> dentro o fuera, **y la cobertura sigue en 22 de 22 sin huecos ni repetidos**. El instrumento
+> comprueba esa invariante y **se niega a escribir si no se cumple**. `dataset/nodos` intacto.
+>
+> **TRES CAMPOS DEL PLAN SELLADO CARGABAN LA MISMA PARTICION Y LOS TRES SE CORRIGEN**, con las
+> particiones viejas escritas enteras en el bloque `correcciones_declaradas` del propio
+> `PLAN_V32_OPD01_EMBLEMA.json`: `grupos_pasos` (el que el encargo nombra y el que el
+> verificador compara), **`mapa_pasos` (el campo OPERATIVO, el que `vuelta32_podar.py`
+> consume)** y `pruebas_repeticion` (el que `vuelta32_caso_positivo.py` imprime al lado de cada
+> huella). **Corregir solo el primero habria dejado el plan contradiciendose consigo mismo y al
+> verificador en verde encima de la contradiccion.**
+>
+> **Y UN LIMITE, dicho para que nadie le atribuya al verde lo que no midio:** la huella de la
+> prueba de repeticion de ese grupo es *conjunto minimo de caracteristicas*, **que el paso 16
+> nunca contuvo**. La prueba **jamas midio al 16**, porque cuenta la huella sobre el NODO
+> RESULTANTE y solo IMPRIME los origenes. **La celda mala no falseo ningun verde: no habia
+> instrumento que la leyera.** Ese es exactamente el hueco que el verificador de mapas cierra.
+
+**TABLA VIGENTE. NO ESTA TECLEADA: esta IMPRESA desde el plan sellado**, que es la regla del 15
+ago 2026 (`EJECUTOR.md` regla 1, cuarto renglon). **Comando, corrido en esta vuelta:**
+
+```
+python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V32_OPD01_EMBLEMA.json
+```
+
+salida entera en `docs/loop/SALIDA_V33_TABLA_OPD01.txt`, y pegada aqui sin editar una coma:
+
 | paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
 |---:|---|---|
-| **1** | 1, 10 | **SALVAGUARDA**: el paso 10 trae la prueba de que alguien PAGARIA por resolverlo, y el inciso se adosa al paso que protege |
-| **2** | 2, 6, 11, 15, 16, 19 | **SALVAGUARDA**: los pasos 6, 15 y 19 nombran el sesgo (la lista larga de pedidos) que el superviviente no nombraba |
-| **3** | 3, 9, 13, 18 | **ALCANCE**: el paso 13 trae el segundo criterio de la excepcion (que sin ella no se pueda vender) y entra a la enumeracion |
-| **4** | 4, 7, 12, 20 | **NOMBRE** (banco 9.28): el superviviente decia *early adopters* y no *earlyvangelists*, que es la palabra por la que se busca y la que da nombre a dos nodos vecinos |
-| **5** | 5, 21 | **SALVAGUARDA**: el paso 21 dice contra que sesgo se lee la medicion (no para expandir funciones) |
-| **6** | 8, 14, 17, 22 | **ALCANCE**: los pasos 14 y 16 traen la cadencia (ciclos cortos, incremental) |
+| **1** | 1, 10 | SALVAGUARDA: el superviviente manda identificar la hipotesis y no dice contra que sesgo se decide cual es la critica. El paso 10 trae la prueba (que alguien PAGARIA por resolverlo) y el inciso se adosa al paso que protege. |
+| **2** | 2, 6, 11, 15, 19 | SALVAGUARDA: el superviviente manda disenar lo mas simple y no dice contra que sesgo (la lista larga de pedidos). Los pasos 6, 15 y 19 nombran el sesgo y el inciso se adosa al paso que protege. |
+| **3** | 3, 9, 13, 18 | ALCANCE: el superviviente trae UN criterio para la excepcion (que sirva para aprender) y el paso 13 trae el segundo (que sin ella no se pueda vender). El segundo entra a la enumeracion que el superviviente ya tiene, que es el remedio escrito del motivo. |
+| **4** | 4, 7, 12, 20 | NOMBRE: el superviviente dice early adopters y no dice earlyvangelists, que es la palabra por la que se busca y la que da nombre a dos nodos vecinos del grafo. El nombre viaja como DENOMINACION dentro del paso. |
+| **5** | 5, 21 | SALVAGUARDA: el superviviente manda medir para validar y no dice contra que sesgo se lee la medicion. El paso 21 lo dice (no para expandir funciones) y el inciso se adosa al paso que protege. |
+| **6** | 8, 14, 16, 17, 22 | ALCANCE: el superviviente manda iterar y no dice a que cadencia. Los pasos 14 y 16 traen la cadencia (ciclos cortos, incremental) y entra a la enumeracion del superviviente. |
+
+> **La columna del motivo cambia de redaccion respecto de la tabla vieja, y se dice por que:**
+> la vieja era un resumen tecleado a mano y **esta es la frase entera del plan sellado**. El
+> banco `9.28` que la fila 4 citaba no se pierde: **vive en el campo `motivo` del plan** y en el
+> parrafo del criterio, arriba.
 
 **`DESTINO`, `METODO ALTERNATIVO` y `DIRECCION` no aplican, y por eso no se nombran.**
 

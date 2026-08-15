@@ -106,7 +106,6 @@
           6,
           11,
           15,
-          16,
           19
         ],
         "3": [
@@ -128,6 +127,7 @@
         "6": [
           8,
           14,
+          16,
           17,
           22
         ]
@@ -170,7 +170,6 @@
             6,
             11,
             15,
-            16,
             19
           ],
           "cosa": "disenar la version mas simple, con el conjunto minimo definido desde la vision",
@@ -212,6 +211,7 @@
           "origenes": [
             8,
             14,
+            16,
             17,
             22
           ],
@@ -277,7 +277,6 @@
             6,
             11,
             15,
-            16,
             19
           ],
           "huella_repetida": "conjunto mínimo de características"
@@ -286,6 +285,7 @@
           "origenes": [
             8,
             14,
+            16,
             17,
             22
           ],
@@ -347,6 +347,165 @@
         "conjunto mínimo de características"
       ],
       "salidas": []
+    }
+  ],
+  "correcciones_declaradas": [
+    {
+      "fecha": "2026-08-15",
+      "vuelta": 33,
+      "campo": "particion de origenes de producto_minimo_viable (grupos_pasos, mapa_pasos, pruebas_repeticion)",
+      "que_se_corrige": "EL ORIGEN 16 ESTABA EN EL GRUPO DEL PASO 2 Y PERTENECE AL DEL PASO 6. Es la caida de cifra publicada del acta 32: el motivo de la fila del paso 6 cita 'los pasos 14 y 16 traen la cadencia' mientras la celda del grupo ponia el 16 en la fila del paso 2. Las dos no pueden ser verdad a la vez.",
+      "quien_tenia_razon": "EL MOTIVO. El paso 16 original dice 'Desarrolla tu primera version de forma incremental, en ciclos cortos e iterativos', que es la cadencia del paso 6 del resultado, no el conjunto minimo del paso 2. Medido contra pasos_originales en esta misma vuelta, no copiado de un acta.",
+      "efecto_sobre_el_nodo": "NINGUNO, y se comprueba antes de escribir: vuelta32_podar.py toma el superviviente por el PRIMER origen del grupo y el texto por pasos_finales. min(grupo del paso 2) sigue siendo 2 y min(grupo del paso 6) sigue siendo 8 con el 16 dentro o fuera. La cobertura sigue en 22 de 22 sin huecos ni repetidos. dataset/nodos NO se toca.",
+      "particion_vieja_grupos_pasos": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          6,
+          11,
+          15,
+          16,
+          19
+        ],
+        [
+          3,
+          9,
+          13,
+          18
+        ],
+        [
+          4,
+          7,
+          12,
+          20
+        ],
+        [
+          5,
+          21
+        ],
+        [
+          8,
+          14,
+          17,
+          22
+        ]
+      ],
+      "particion_nueva_grupos_pasos": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          6,
+          11,
+          15,
+          19
+        ],
+        [
+          3,
+          9,
+          13,
+          18
+        ],
+        [
+          4,
+          7,
+          12,
+          20
+        ],
+        [
+          5,
+          21
+        ],
+        [
+          8,
+          14,
+          16,
+          17,
+          22
+        ]
+      ],
+      "mapa_pasos_viejo": {
+        "1": [
+          1,
+          10
+        ],
+        "2": [
+          2,
+          6,
+          11,
+          15,
+          16,
+          19
+        ],
+        "3": [
+          3,
+          9,
+          13,
+          18
+        ],
+        "4": [
+          4,
+          7,
+          12,
+          20
+        ],
+        "5": [
+          5,
+          21
+        ],
+        "6": [
+          8,
+          14,
+          17,
+          22
+        ]
+      },
+      "pruebas_repeticion_viejas": [
+        {
+          "origenes": [
+            2,
+            6,
+            11,
+            15,
+            16,
+            19
+          ],
+          "huella_repetida": "conjunto mínimo de características"
+        },
+        {
+          "origenes": [
+            8,
+            14,
+            17,
+            22
+          ],
+          "huella_repetida": "Itera o cambia de rumbo si nadie"
+        },
+        {
+          "origenes": [
+            4,
+            7,
+            12,
+            20
+          ],
+          "huella_repetida": "earlyvangelists"
+        },
+        {
+          "origenes": [
+            3,
+            9,
+            13,
+            18
+          ],
+          "huella_repetida": "Agrega funciones nuevas solo"
+        }
+      ],
+      "limite_declarado": "La huella de la prueba de repeticion del grupo del paso 2 es 'conjunto minimo de caracteristicas' y el paso 16 nunca la contuvo: la prueba jamas midio al 16, porque vuelta32_caso_positivo.py cuenta la huella sobre el NODO RESULTANTE y solo IMPRIME los origenes. O sea que la celda mala no falseo ningun verde: no habia instrumento que la leyera. Ese es exactamente el hueco que el verificador de mapas cierra."
     }
   ]
 }
