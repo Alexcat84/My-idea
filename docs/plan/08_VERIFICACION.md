@@ -576,10 +576,25 @@ midieron, entrando ya con esta puerta:
 | `producto_como_servicio_de_acceso` | **pasos 7 y 8** | las tres interfaces de usuario son de la parte de SISTEMAS de Hugos (`01_FUENTES.md`, vuelta 27), y el ultimo mira el modelo desde la economia circular: ninguno de los dos es el objeto del nodo, *reformular el producto como acceso en vez de propiedad* |
 | `evaluacion_balanceada_de_ejecutivos` | **pasos 5 a 11**, de `actualizacion_posiciones_existentes` | el bloque trae dos actos: la conversacion de la degradacion (5 a 11) y la evaluacion del ejecutivo (12 a 19); solo el segundo calza con el objeto del miembro. La frontera publicada era UNA y no partia ahi (acta de la vuelta 29, discutible d1) |
 | `contratar_por_fortaleza` | **pasos 6 a 8**, de `contratacion_experiencia_vs_potencial` | el paso 5 es literal al objeto del miembro; los pasos 6 a 8, promover de adentro contra traer de afuera, son otro objeto que viaja arrimado (acta de la vuelta 29, discutible d11) |
+| `decision_de_vender_startup` | **paso 15 del resultado fundido**, *ajusta tu salario como CEO a valores de mercado una vez que tu empresa se convierta en un negocio real y consolidado, y en un objetivo atractivo de adquisicion* | **CUARTA ENTRADA, 14 ago 2026 (vuelta 30), y la primera que entra por una FUSION y no por un reparto.** Los origenes 27 y 32 decian lo mismo dos veces y `P.19` los fundio en un paso; **fundido y sano, su objeto sigue sin ser el del nodo**, que es *decidir si vendes tu empresa* (su entregable, medido hoy: *un analisis de escenarios que compare el valor esperado de vender ahora contra seguir operando, incluyendo tu punto de inflexion de control*). **La compensacion del CEO no es esa decision**: es una consecuencia de que la empresa se volvio un objetivo de adquisicion, y ninguno de los otros catorce pasos del resultado la toca. **Se declara y NO se poda**, que es la letra de esta puerta |
 
 > **Y LA COMPROBACION DE QUE ESTA PUERTA SE USO: al cerrar, ningun tramo declarado como
 > ajeno sigue viviendo dentro del nodo que la lectura senalo.** Si uno sigue ahi, es que
 > el destejido no se ejecuto.
+
+**ESTADO DE LAS CUATRO ENTRADAS, medido el 14 ago 2026 al cerrar la vuelta 30:** las
+**CUATRO siguen dentro de su nodo**, y eso **no es un rojo de esta comprobacion todavia**:
+la cura que esta misma pagina escribe es *destejido ordinario por `P.18`, COMO OPERACION
+NUEVA DE LA FASE QUE CORRESPONDA*, y esas operaciones son de la **fase 02**, que la vuelta
+30 abre y no cierra. **La comprobacion vence cuando la fase 02 cierre, no antes**, y se
+escribe aqui para que ese vencimiento tenga fecha en vez de quedar al recuerdo.
+
+**Y UNA DIFERENCIA ENTRE LAS DOS PUERTAS QUE LA VUELTA 30 MIDIO, dicha porque la letra no
+la traia:** la primera puerta (repeticion) **la cierra la propia fase 01 cuando `P.19`
+aplica**, porque fundir mata la repeticion en el acto; la segunda (objeto ajeno) **no la
+puede cerrar la fase 01**, porque separar un tramo sano hacia otro nodo es una operacion de
+destejido con destino, y esa es de la fase 02. **Por eso la cuarta entrada nace declarada y
+no resuelta, aunque la vuelta que la hallo tuviera el instrumento para cortarla.**
 
 ---
 

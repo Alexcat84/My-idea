@@ -812,6 +812,46 @@ una de otra:**
 > 22 a 25 se queda dentro del nodo en las dos lecturas, porque su objeto **es** el mecanismo de
 > referidos, que es el objeto del nodo.
 
+#### EL SALDO DE LOS TRES BLOQUES DE TOQUE UNICO, EJECUTADOS (14 ago 2026, vuelta 30)
+
+**Los tres corrieron con el mismo instrumento nuevo** (`scripts/loop/vuelta30_fundir.py`), que
+es el que faltaba: `vuelta27_cortar.py` sabe SACAR un bloque a su destino y **`P.19` no manda
+sacar nada, manda refundir dentro**. Sus guardas son las de la vuelta 27 mas dos que la fusion
+pide: **la guarda de texto corre sobre TODOS los pasos del nodo**, no solo sobre los que salen,
+y **la cobertura tiene que ser exactamente 1 a N, sin huecos y sin repetidos** (un paso o se
+funde o se va, nunca las dos cosas y nunca ninguna).
+
+| nodo | regla | pasos | que se hizo |
+|---|---|---:|---|
+| **`coeficiente_viral`** | **`P.19`** | **16 a 8** | los pasos 6 a 11 y 12 a 16 eran la misma cuenta de K de *Traction* dicha dos veces, y los 1 a 3 de Blank el mismo coeficiente. **Fundidos en un procedimiento**: la i, la conversion (agregada o descompuesta en click-through y signup), la K, el tiempo de ciclo, el eslabon debil, el incentivo, la reduccion del ciclo y el monitoreo |
+| **`decision_de_vender_startup`** | **`P.19`** | **34 a 15** | el peor nodo medido del catalogo. **La repeticion cruzaba la frontera publicada** (`1 a 10` Wasserman, `11 a 34` Horowitz): las parejas **8 con 26** y **9 con 25** tienen un origen a cada lado, que es el caso literal que `P.19` nombra al decir *material de DOS O MAS FUENTES dentro de un nodo* |
+| **`viral_loop_marketing`** | **`P.20`** mas `P.19` mas `P.18` | **30 a 23**, y **dos pasos que salen** | **UN solo corte**, con la frontera de los tres libros ya publicada arriba. El material del promotor de los tramos **9 a 13, 14 a 17 y 18 a 21** se fundio (**once origenes en seis pasos**); los pasos **12 y 13**, ajenos al objeto, salieron por `P.18` a `experiencias_exclusivas_vip` (**4 a 5 pasos**) y a `comunidad_tribu_marca` (**5 a 6**) |
+
+**LOS TRES QUEDAN MULTIFUENTE LEGITIMO Y SU CAMPO `fuente` NO SE TOCA**, que es lo que `P.19`
+punto 2 obliga y lo que los distingue de un destejido ordinario: **ahi la fuente se reduce
+porque el material se fue; aqui el material se queda y solo deja de estar dicho dos veces.** La
+procedencia va declarada por bloque dentro de cada plan (`docs/loop/PLAN_V30_*.json`), y en los
+dos nodos de `P.19` hay pasos que declaran **los dos libros a la vez**, porque estan fundidos de
+los dos: tres en `coeficiente_viral` y cinco en `decision_de_vender_startup`.
+
+**GUARDAS, con su cifra:** simulacion previa verde en los tres; guarda de texto sobre **16, 34 y
+30 pasos** y las tres al completo; cobertura **1 a N** sin huecos ni repetidos; **caso positivo
+corrido antes y despues**, con **0 de 5, 0 de 12 y 2 de 10 PASAN antes** y **5, 12 y 10 PASAN
+despues**; ciclo de `GATE 0` (comandos 1, 2 y 3; **el 4 no aplica porque el censo no se movio**:
+esta tanda no crea ni deprecia ningun nodo) con **71 etiquetas sin encoger** y las dos copias
+del grafo en el blob `1c84dfc3`, byte identico a `HEAD`; suites verdes (motor **24 de 24**, web
+**80 ficheros con 1.030 pasadas y 3 saltadas**, `tsc` limpio).
+
+> **UNA PODA QUE LA GUARDA CAZO CON EL NODO YA ESCRITO, declarada porque callarla seria el
+> verde falseado que la casa prohibe.** La primera redaccion del paso fundido del promotor de
+> `viral_loop_marketing` **perdio *activalos como embajadores***, que el origen 15 traia. **No
+> lo vio la simulacion ni la guarda de texto** (las dos miran los origenes, y el texto de
+> destino de una fusion es nuevo por definicion): **lo vio la prueba de CONSERVACION del caso
+> positivo**, que exige que cada rastro declarado siga vivo despues. **El corte se revirtio con
+> `git checkout`, se rehizo el plan y se volvio a ejecutar**, y de ahi salio la segunda guarda
+> nueva del sellador: **una huella que no viva hoy en dos o mas de sus origenes no se puede
+> sellar**, porque una prueba que no cae no prueba nada.
+
 ### QUE DECISIONES DE FUENTE NUEVAS SALEN
 
 **CUATRO, una por libro, y son del mismo tipo que las tres que ya existian:**
