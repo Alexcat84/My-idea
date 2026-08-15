@@ -1,0 +1,67 @@
+﻿(a) LA NOMINA DE LAS TRES, COMPROBADA EN EL PLAN SELLADO
+==============================================================================
+  CITADA LITERAL del plan:
+    **Acto 2. SEIS nodos y TRES destejidos.** Costuras: `ab_testing_optimizacion`,
+    `optimizacion_embudo_get_customers`, `split_testing_experimentos_ab`. Sanos:
+    `funnel_get_customers_optimizacion`, `split_testing`, `test_ab_precio`.
+  LAS TRES ESTAN ESCRITAS POR SU NOMBRE. La nomina NO sale del instrumento.
+
+(b) EL ESTADO DE CADA COSTURA HOY, contra su frontera escrita en 01_FUENTES.md
+==============================================================================
+
+  ab_testing_optimizacion
+    frontera escrita        : 1 a 10 / 11 a 15   (sobre 15 pasos)
+    frontera hallada en 01_FUENTES.md: SI
+    pasos HOY               : 10
+    huella del bloque ido   : 'punto de saturación' -> YA NO ESTA
+    se lo llevo             : OP-F-04-WEI (bloque 11 a 15, a anillo_interior_explotar_el_canal_nucleo)
+    QUEDA COSTURA           : SI, y su frontera esta escrita: los pasos 1 a 5 y 6 a 10 dicen la misma prueba A/B dos veces
+
+  optimizacion_embudo_get_customers
+    frontera escrita        : 1 a 5 / 6 a 10   (sobre 10 pasos)
+    frontera hallada en 01_FUENTES.md: SI
+    pasos HOY               : 5
+    huella del bloque ido   : 'middle ring testing' -> YA NO ESTA
+    se lo llevo             : OP-F-04-WEI (bloque 6 a 10, a anillo_interior_explotar_el_canal_nucleo)
+    QUEDA COSTURA           : NO: el bloque que la formaba ya salio
+
+  split_testing_experimentos_ab
+    frontera escrita        : 1 a 5 / 6 a 9   (sobre 9 pasos)
+    frontera hallada en 01_FUENTES.md: SI
+    pasos HOY               : 5
+    huella del bloque ido   : 'cambio porcentual' -> YA NO ESTA
+    se lo llevo             : OP-F-04-RAC (bloque 6 a 9, a metodologia_evaluacion_entrenamiento_ventas)
+    QUEDA COSTURA           : NO: el bloque que la formaba ya salio
+
+(c) EL CAMPO preservar DE OP-D-03, comprobado donde vive HOY
+==============================================================================
+  [OK  ] la significancia estadistica del 95 por ciento, del nodo chico de split_testing
+        huella 'significancia estadística superior al 95', esperada en split_testing
+        vive hoy en los nodos vivos: ['split_testing']
+  [OK  ] el cambio porcentual, que se fue con el bloque de Rackham
+        huella 'cambio porcentual', esperada en metodologia_evaluacion_entrenamiento_ventas
+        vive hoy en los nodos vivos: ['metodologia_evaluacion_entrenamiento_ventas']
+  [OK  ] el grupo de control con desempeno inicial similar, idem
+        huella 'nivel de desempeño inicial similar', esperada en metodologia_evaluacion_entrenamiento_ventas
+        vive hoy en los nodos vivos: ['metodologia_evaluacion_entrenamiento_ventas']
+
+(d) LA SENAL RECALIBRADA SOBRE LOS SEIS. ES CONTRASTE, NO NOMINA
+    (senales reimplementadas: el instrumento sellado no entrega con la puerta rota)
+==============================================================================
+    nodo                                   pasos  pareja   bloque  corte   dispara
+    ab_testing_optimizacion                   10    55.1     49.5      8        SI
+    funnel_get_customers_optimizacion          7    50.4     45.0      3        SI
+    optimizacion_embudo_get_customers          5    48.6     44.4      3        SI
+    split_testing                              4    48.8     43.0      2        no
+    split_testing_experimentos_ab              5    45.6     44.7      3        SI
+    test_ab_precio                             5    54.5     49.2      3        SI
+
+    CORTE POR CORTE del nodo que se desteje, para poder comparar el corte
+    que propone la senal con el que dice la frontera escrita (tras el 5):
+      corte tras  2: SIN PUNTAJE
+      corte tras  3: 42.3
+      corte tras  4: 45.5
+      corte tras  5: 42.1   <-- el corte de la FRONTERA ESCRITA
+      corte tras  6: 46.7
+      corte tras  7: 45.1
+      corte tras  8: 49.5

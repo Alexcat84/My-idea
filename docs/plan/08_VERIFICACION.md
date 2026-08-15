@@ -305,6 +305,37 @@ deprecado**.
 entra a la suite del motor (que pasa de 24 a **25 ficheros**) y **guarda la regla en rojo y en
 verde**: la regla vieja vive dentro de la prueba, copiada literal, **y se exige que falle**.
 
+#### CORRECCION DECLARADA: **EL VERIFICADOR DE MAPAS PUBLICABA UN VERDE DE UNA SOLA VARA** (15 ago 2026, vuelta 34)
+
+**No es una cifra mal escrita: es un verde que medía menos de lo que su lector supone**, y sale a
+la luz porque esta vuelta lo probo EN ROJO contra una celda de particion, que es justo lo que la
+`vara 2` existe para cazar.
+
+**LO MEDIDO, en el acto:** se ensucio a proposito una celda de la tabla nueva de `OP-D-03`
+(meter el origen **4** en el grupo del paso **1**) y el instrumento **siguio imprimiendo
+`0 discrepancias` y exit 0**. **La causa esta en su `main()`: la `vara 2` corre SOLO
+`if args.jsons`**, o sea solo si quien lo invoca se acuerda de pasar `--json`. **Sin ese
+argumento, el instrumento mide UNA de sus dos varas y no lo dice.**
+
+> **Y eso alcanza a un verde ya publicado:** el *2 tablas, 12 filas, 0 discrepancias* de la vuelta
+> 33 **se corrio sin `--json`** (su salida commiteada no nombra ningun plan). **La cifra era
+> cierta y la vara 1 corrio de verdad; lo que no corrio fue la vara 2.** La prueba en rojo del
+> auditor tambien era de la vara 1 (la celda del 16 se caza por el motivo que la cita).
+
+**QUE SE ARREGLA, y que NO.** Se arregla **el silencio**: la salida ahora **nombra las dos varas y
+dice cual corrio**, y cuando falta `--json` escribe que *este resultado mide solo la vara 1*.
+**NO se le pone descubrimiento automatico de planes**, y el motivo va escrito: hay planes sellados
+que legitimamente **no tienen tabla en este documento**, y descubrirlos a ciegas daria un **rojo
+falso**, que es peor que un verde parcial ANUNCIADO.
+
+> **LA VARA OPERATIVA, desde hoy:** el verificador se corre **con los planes sellados de las
+> operaciones que la vuelta toca**, y **la salida citada en el reporte tiene que mostrar la
+> `vara 2` CORRIDA**. Un verde sin esa linea no cuenta como verificado.
+
+**PROBADO EN ROJO Y RESTAURADO EN EL MISMO ACTO** (`P.14`): con los tres planes y la celda
+ensuciada, **exit 1 con 2 discrepancias**, nombrando el plan que se quedo sin tabla; restaurada la
+celda, **exit 0 con 3 tablas, 17 filas, 0 discrepancias y las dos varas CORRIDAS**.
+
 ---
 
 ## LA COMPROBACION QUE SOLO SE PUEDE HACER AL FINAL

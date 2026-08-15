@@ -1,0 +1,34 @@
+﻿CASO POSITIVO: OP-D-03: el destejido que queda del acto de las pruebas A/B. ab_testing_optimizacion dice la misma prueba A/B dos veces
+REGLA        : OP-D-03 (docs/plan/02_DESTEJIDOS.md), con la frontera escrita en docs/plan/01_FUENTES.md linea 947 y la perdida repartida por LA TABLA DE LOS SEIS MOTIVOS DE PERDIDA DE LINEA. Superviviente por el criterio de OP-D-01: de cada grupo sobrevive el de INDICE MAS BAJO.
+==============================================================================
+
+NODO ab_testing_optimizacion
+  [CAE ] el nodo tiene 10 pasos, los 5 que el plan deja
+  [CAE ] la repeticion 'botones' vive en 2 paso(s), maximo 1  (origenes [1, 9])
+  [CAE ] convergencia: 'impulsan la activación' y 'tasa de registro' viven juntos en 0 paso(s), se espera 1  (origenes [1, 6])
+  [CAE ] convergencia: 'titulares' y 'prueba social' viven juntos en 0 paso(s), se espera 1  (origenes [1, 9])
+  [CAE ] convergencia: 'un solo elemento a la vez' y 'cambios grandes' viven juntos en 0 paso(s), se espera 1  (origenes [2, 7])
+  [CAE ] convergencia: '80/20' y 'durante semanas' viven juntos en 0 paso(s), se espera 1  (origenes [3, 8])
+  [CAE ] convergencia: 'versión ganadora' y 'se agoten las ideas' viven juntos en 0 paso(s), se espera 1  (origenes [5, 10])
+  (conservacion) [SI] el rastro 'impulsan la activación' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'botones, titulares, imágenes, ofertas' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'tasa de registro' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'ubicación de CTA' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'prueba social' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'número de campos de formulario' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'un solo elemento a la vez' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'cambios grandes' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'pequeños ajustes' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'aleatoria y equitativa' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro '80/20' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'durante semanas' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'una sola métrica a la vez' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'conversión/activación' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'versión ganadora' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'nuevos elementos' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'se agoten las ideas' sigue vivo en 1 paso(s)
+
+==============================================================================
+RESULTADO: 0 PASAN, 7 CAEN
+CONSERVACION (pasa las dos veces a proposito): 17 si, 0 no
+HAY PRUEBAS QUE CAEN

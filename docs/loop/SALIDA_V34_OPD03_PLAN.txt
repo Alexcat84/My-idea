@@ -1,0 +1,22 @@
+﻿CONSTRUCTOR DEL PLAN DE OP-D-03
+==============================================================================
+  nodo   : ab_testing_optimizacion
+  fuente : "The Startup Owner's Manual - Steve Blank"
+  pasos  : 10
+  condiciones: 2  (NO se tocan: no hay repeticion medida entre ellas)
+  guarda 1 OK: el mapa cubre los 10 origenes, sin huecos ni repetidos
+  guarda 2 OK: los 5 destinos llevan motivo y cosa
+  guarda 3 OK: las 5 convergencias caen HOY y ninguna esta ya cumplida
+  guarda 4 OK: las 1 huellas de repeticion viven hoy en dos pasos o mas
+  guarda 5 OK: los 17 rastros sobreviven LITERALES en los pasos finales
+  guarda 6 OK: los 5 finales conservan la cabeza de su superviviente
+  guarda 7 OK: el resultado tiene 5 pasos, dentro del estandar de 3 a 6
+
+ESCRITO: docs\loop\PLAN_V34_OPD03_AB.json
+
+EL MAPA, destino <- origenes:
+  1 <- [1, 6, 9]    Identificar los elementos clave de la landing page que impulsan la activación (botones, 
+  2 <- [2, 7]       Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipótes
+  3 <- [3, 8]       Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en pá
+  4 <- [4]          Medir resultados de conversión/activación para cada versión
+  5 <- [5, 10]      Implementar la versión ganadora y repetir el proceso con nuevos elementos, documentando 

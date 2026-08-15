@@ -249,7 +249,28 @@ def main():
         imprimir(d)
 
     total_filas = sum(len(t["filas"]) for t in tablas)
+    # QUE VARAS CORRIERON DE VERDAD, DICHO EN LA SALIDA (15 ago 2026, vuelta 34).
+    # LO QUE ESTO CIERRA, medido en el acto: la vara 2 solo corre si alguien se
+    # acuerda de pasar --json, y sin ella este instrumento imprimia
+    # "0 discrepancias" con una particion cambiada delante. Se probo ensuciando
+    # una celda de la tabla nueva (meter el origen 4 en el grupo del paso 1): sin
+    # --json el verde SEGUIA saliendo, porque el motivo de esa fila no cita el 4
+    # y la vara 1 solo mira los numeros CITADOS en el motivo.
+    #
+    # No se le pone descubrimiento automatico de planes, y se dice por que: hay
+    # planes sellados que legitimamente NO tienen tabla en este documento (los de
+    # otras fases), y descubrirlos a ciegas daria un rojo falso, que es peor que
+    # un verde parcial ANUNCIADO. Lo que se arregla es el silencio.
     print(f"\n{len(tablas)} tabla(s), {total_filas} fila(s), {len(todas)} discrepancia(s).")
+    print("  vara 1 (todo numero citado en el motivo pertenece a su fila): CORRIDA")
+    if args.jsons:
+        print("  vara 2 (la particion de la tabla calza celda a celda con el plan "
+              "sellado): CORRIDA sobre %d plan(es)" % len(args.jsons))
+    else:
+        print("  vara 2 (la particion de la tabla calza celda a celda con el plan "
+              "sellado): **NO CORRIDA**, no se paso ningun --json.")
+        print("  ESTE RESULTADO MIDE SOLO LA VARA 1. Una particion cambiada a mano "
+              "pasaria por aqui sin que este instrumento la vea.")
     if todas:
         print("VERIFICADOR DE MAPAS DE DESTEJIDO: FALLIDO")
         return 1

@@ -610,6 +610,40 @@ nueva y el script abortando si no queda):
 | **755** | `dia_en_la_vida_del_cliente` | **PROYECTAR** como cambiaria el dia con el producto, repetir por **CADA figura de la decision**, y **presentar al equipo** el antes y el despues en narrativa o storyboard. Dos objetos distintos, con **ARISTA QUE FALTA** | **`D`** |
 | **827** | `ganar_comprension_del_cliente` | el **flujo de trabajo**, que otras soluciones usa, **que haria cambiar su comportamiento de compra**, que publicaciones lee y **criterios claros de que cuenta como validado**. **SIN arista declarada**, y se dice por que | **`D`** |
 
+##### EL CRITERIO DE LA `ARISTA QUE FALTA` DE ESTA TANDA, ESCRITO UNA SOLA VEZ (15 ago 2026, vuelta 34)
+
+**Encargado por el acta de la vuelta 33 del auditor** (seccion 4, punto 8: *el criterio es el
+`9.6.1` y el `9.6.2` aplicados, no doctrina nueva, pero debe quedar escrito UNA VEZ donde las
+tres razones lo compartan*), **y por el punto 1.4 del encargo del 15 ago 2026.** Va aqui, bajo la
+tabla que junta a los tres, **y no dentro de cada razon**: escribirlo tres veces seria escribirlo
+tres veces distintas, que es de donde salen las divergencias.
+
+> **LA VARA ES EL TAMANO DE LO COMPARTIDO, no la formula.** Se declara `ARISTA QUE FALTA` cuando
+> lo compartido es un **BLOQUE**: un procedimiento entero que uno de los dos expande de una linea
+> del otro. **No se declara cuando lo compartido es UNA LINEA contra UNA LINEA** y los dos nodos
+> ya tienen cableado propio denso, porque un enlace por una sola linea infla el grafo sin
+> ensenarle nada al lector.
+
+**Y LOS TRES CASOS DE LA TANDA, con lo que cada uno midio, porque el criterio se lee mejor en sus
+ejemplares que en su enunciado:**
+
+| puesto | que es lo compartido, medido | arista |
+|---:|---|:---:|
+| **724** | **madre e hijo del `9.6.2`**: el paso 1 del superviviente enuncia en UNA LINEA el prepararse para observar, y el otro trae **el protocolo entero** de esa linea | **SE DECLARA** |
+| **755** | **NO hay madre e hijo** (se midio y se dijo: el hijo no cabe entero dentro de un paso del otro), pero lo compartido **sigue siendo un bloque**: el arranque de campo cubre **tres pasos** del superviviente | **SE DECLARA** |
+| **827** | **UNA linea contra UNA linea**: *pasar un dia haciendo lo que hace tu cliente* contra *observar acompanandolo durante su trabajo real*, y los dos con cableado propio denso | **NO se declara** |
+
+> **UNA PRECISION QUE EL ENUNCIADO DEL ENCARGO NO CUBRE, y se dice en vez de forzar el calce.** El
+> encargo escribio el criterio como *se declara donde hay madre e hijo del `9.6.2`; no se declara
+> donde el solape es linea contra linea*. **Eso nombra los dos EXTREMOS, el 724 y el 827, y deja
+> fuera al 755**, que no tiene madre e hijo y sin embargo lleva arista. **La vara que cubre a los
+> tres es la de arriba: bloque contra linea.** Madre e hijo es **un caso** de bloque compartido,
+> **el mas nitido**, no la condicion.
+
+> **Y LA PRACTICA MEDIDA DEL ARCHIVO SIGUE SIENDO LA MISMA** (barrido de la vuelta 33 sobre
+> `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`): **los 207 veredictos cuya razon nombra `ARISTA QUE
+> FALTA` son `D`, los 207.** La arista que falta **no cambia la clase**: la acompana.
+
 > **LA GUARDA DEL ENCARGO, COMPROBADA Y NO SUPUESTA:** si el **724** hubiera dado **`A`**,
 > `voice_of_customer_estrategico` habria entrado al acto por `P.6` y **habia que PARAR**, porque
 > una fusion nueva sin operacion escrita no se improvisa. **NO DA `A`**, y por eso la vuelta sigue.
@@ -736,7 +770,109 @@ de hoy (`SALIDA_V32_OPD02_RELECTURA.txt`), **y sin clase**.
 
 ## `OP-D-03`: LAS PRUEBAS A/B · **LISTA**
 
-### **PARADA AL 15 ago 2026 (vuelta 33). CERO NODOS TOCADOS.** El instrumento de costuras se declara MAL CALIBRADO
+### PASO 1 DEL ORDEN INTERNO **HECHO** (15 ago 2026, vuelta 34): **DOS costuras estaban CONSUMIDAS y la tercera se destejio**
+
+**La parada de la vuelta 33 queda levantada, y no por donde se esperaba.** Se levanta por la
+decision del fundador del 15 ago 2026 (`docs/loop/paradas/2026-08-15-cableado-deprecado-y-
+costuras.md`), que mando recalibrar el instrumento; **pero el destejido no lo desbloqueo el
+instrumento recalibrado, que sigue sin pasar su propia puerta. Lo desbloqueo una CAIDA DE
+REPORTE de la vuelta 33 que se corrige aqui.**
+
+> **CORRECCION DECLARADA (15 ago 2026, vuelta 34), y es una caida de REPORTE de la vuelta 33. El
+> texto viejo se queda entero debajo.** El **MOTIVO 2** de la parada dice: *la nomina de esas
+> tres no esta escrita en ninguna parte por su nombre: sale del instrumento*. **ESTA ESCRITA, y
+> en este mismo documento, ochenta lineas mas abajo del propio motivo**, desde la primera entrega
+> del plan (commit `23f9ac32`, medido hoy con `git log -L`):
+>
+> ```
+> **Acto 2. SEIS nodos y TRES destejidos.** Costuras: `ab_testing_optimizacion`,
+> `optimizacion_embudo_get_customers`, `split_testing_experimentos_ab`. Sanos:
+> `funnel_get_customers_optimizacion`, `split_testing`, `test_ab_precio`.
+> ```
+>
+> **La cita la comprueba un instrumento, no un recuerdo:** `scripts/loop/vuelta34_costuras_
+> opd03.py` **aborta si esa linea no esta en el documento o si le falta uno de los tres nombres**
+> (salida en `docs/loop/SALIDA_V34_OPD03_COSTURAS.txt`). **El instrumento de costuras nunca fue
+> la fuente de la nomina: era el contraste.**
+
+**Y MEDIDAS HOY LAS TRES, DOS YA ESTABAN CONSUMIDAS POR LA FASE 01**, exactamente como le paso al
+paso 1 de `OP-D-02`. **Cada una con su frontera escrita, su huella medida en el nodo de hoy y la
+operacion que se llevo el bloque:**
+
+| costura declarada | frontera escrita (`01_FUENTES.md`) | pasos hoy | la huella del bloque | estado |
+|---|---|---:|---|---|
+| `optimizacion_embudo_get_customers` | **1 a 5 / 6 a 10** sobre 10 pasos | **5** | *middle ring testing*: **YA NO ESTA** | **CONSUMIDA** por `OP-F-04-WEI` |
+| `split_testing_experimentos_ab` | **1 a 5 / 6 a 9** sobre 9 pasos | **5** | *cambio porcentual*: **YA NO ESTA** | **CONSUMIDA** por `OP-F-04-RAC` |
+| `ab_testing_optimizacion` | **1 a 10 / 11 a 15** sobre 15 pasos | **10** | *punto de saturacion*: **YA NO ESTA** | **EN PIE**: le queda la costura de dentro del tramo 1 a 10 |
+
+**EL CAMPO `preservar` DE LA OPERACION, COMPROBADO DONDE VIVE HOY y no dado por bueno:** la
+significancia estadistica del 95 por ciento vive en `split_testing`; el **cambio porcentual** y el
+**grupo de control con nivel de desempeno inicial similar** viven en
+`metodologia_evaluacion_entrenamiento_ventas`, **que es a donde `OP-F-04-RAC` los mando**. **Los
+tres, en UN solo nodo vivo cada uno.** El `preservar` decia *se van CON EL DESTEJIDO: no se
+pierden*, y **medido hoy no se perdieron**.
+
+#### EL DESTEJIDO QUE QUEDABA: `ab_testing_optimizacion`, **de DIEZ pasos a CINCO**
+
+**Su frontera tampoco se adivina: la escribio la tabla de fronteras de `OP-F-04-WEI`** en
+`01_FUENTES.md` linea 947, en la misma fila del nodo: *Nota de costura: **los pasos 1 a 5 y 6 a 10
+dicen la misma prueba A/B dos veces**, y eso es material de la fase 02, no de esta*.
+
+**EL CRITERIO DEL SUPERVIVIENTE ES EL DE `OP-D-01`, citado y no inventado: de cada grupo de
+repeticion sobrevive EL DE INDICE MAS BAJO.** Aqui cae entero sobre el bloque **1 a 5**, que es
+ademas **la narracion del unico libro que el nodo declara como fuente**. Plan sellado en
+`docs/loop/PLAN_V34_OPD03_AB.json`, construido por `scripts/loop/vuelta34_plan_opd03.py` (**los
+textos, los prefijos y la fuente se leen del grafo**) y ejecutado con el instrumento sellado de la
+casa `scripts/loop/vuelta32_podar.py`.
+
+**LA TABLA NO ESTA TECLEADA: esta IMPRESA desde el plan sellado** (`EJECUTOR.md` regla 1, cuarto
+renglon). **Comando, corrido en esta vuelta:**
+
+```
+python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V34_OPD03_AB.json
+```
+
+salida entera en `docs/loop/SALIDA_V34_TABLA_OPD03.txt`, pegada aqui sin editar una coma:
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | 1, 6, 9 | ALCANCE: el superviviente SI nombra los elementos que impulsan la metrica (botones, titulares, imagenes, ofertas) pero trae UN solo juego de ejemplos y la metrica ya fijada de antemano. El paso 6 trae la metrica como ELECCION (ej. tasa de registro) y el paso 9 trae cuatro elementos mas (ubicacion de CTA, copy, prueba social, numero de campos de formulario). Los dos entran a la enumeracion que el superviviente ya tiene, que es el remedio escrito del motivo. |
+| **2** | 2, 7 | SALVAGUARDA: el superviviente manda disenar dos versiones cambiando un solo elemento a la vez y NO dice contra que sesgo se elige QUE cambiar; sin eso el paso se resuelve por el sesgo por defecto, probar el ajuste mas pequeno y mas facil. El paso 7 dice contra que (hipotesis de cambios grandes antes que pequenos ajustes) y el inciso se adosa al paso que protege, que es un paso de DECISION y no de ejecucion, que es la firma escrita de la clase. |
+| **3** | 3, 8 | ALCANCE: el superviviente dice como se reparte el trafico y no dice CUANTO dura la prueba ni sobre cuantas metricas a la vez se lee. El paso 8 lo trae (durante semanas, una sola metrica a la vez) y entra al paso. Es la misma lectura de cadencia que OP-D-01 aplico en el sexto paso de su tabla, y se cita para que el criterio sea el mismo. |
+| **4** | 4 | VERBATIM: el superviviente conserva su paso entero y el bloque repetido no le anade nada. |
+| **5** | 5, 10 | DESTINO: el superviviente produce el resultado (implementar la ganadora y repetir) y NO dice que hacer con el. El paso 10 lo dice, y son las dos cosas que el entregable del nodo ya prometia sin que ningun paso las mandara: DOCUMENTAR los resultados, y el criterio de cuando se pasa a la siguiente metrica (cuando se agoten las ideas). La linea de destino entra en el paso FINAL, que es el remedio escrito del motivo. |
+
+**`NOMBRE`, `METODO ALTERNATIVO` y `DIRECCION` no aplican, y por eso no se nombran. Las DOS
+condiciones NO se tocan**, y se dice por que: **no hay repeticion medida entre ellas**.
+
+| guarda | resultado |
+|---|---|
+| las siete guardas del constructor, escritas para caer | **7 de 7 verdes** (cobertura 1..10 exacta, motivos completos, convergencias que caen hoy, huellas repetidas vivas, rastros literales, cabeza del superviviente conservada, resultado dentro del estandar) |
+| simulacion previa sobre copia en memoria (`P.7`) | **verde** (`SALIDA_V34_OPD03_SIM.txt`) |
+| guarda de texto sobre TODOS los pasos | **10 de 10** calzan con su prefijo sellado |
+| cero perdida, cobertura exacta sin huecos ni repetidos | **10 de 10** origenes |
+| **caso positivo ANTES** | **0 PASAN, 7 CAEN** (`SALIDA_V34_OPD03_CASO_ANTES.txt`) |
+| **caso positivo DESPUES** | **7 PASAN, 0 CAEN** (`SALIDA_V34_OPD03_CASO_DESPUES.txt`) |
+| conservacion (pasa las dos veces a proposito, aparte) | **17 rastros vivos de 17** |
+| fuente | **sin cambio**, Blank, unica |
+| el censo no se mueve | **3.853 ficheros**: un destejido de fuente unica **no crea ni depreca nada** |
+
+**Ciclo de `Gate 0` entero, en su orden:** `run_phase1.py --reaplico-curaduria` **exit 0, `GATE 0:
+OK`**, **20 comprobaciones `[OK]` y 0 `[FALLO]`**, 3.853 compilados, **3.538 activos y 315
+deprecados**; `etiquetas_de_cara.py --aplicar` **71**; `sync_assets_web.py` verde. **El comando 4
+NO se corre y se dice por que: el censo no cambia**, y su vara (`web/lib/readiness.test.ts`) queda
+verde en la suite. **Suites: motor 25 de 25, web 80 ficheros con 1.030 pasadas y 3 saltadas,
+`tsc --noEmit` cero lineas.**
+
+> **LO QUE LA SENAL RECALIBRADA DICE DE ESTE NODO, y va aqui porque es lo que mide el valor del
+> instrumento, no el del destejido.** Con `MIN_BLOQUE = 2` la senal **si aplica** y da **49,5 con
+> el corte tras el paso 8**. **La frontera escrita, y la lectura, ponen la costura tras el paso
+> 5, y ahi la senal da 42,1: POR DEBAJO DE SU PROPIO UMBRAL.** El docstring del instrumento
+> presume de *acertar el corte exacto*; **medido hoy sobre esta costura, no lo acierta**. Y de los
+> seis nodos del acto **dispara en CUATRO**, incluidos **dos que el plan declara SANOS**. **La
+> nomina siguio siendo la escrita, y la vara final fue la lectura.**
+
+### ~~**PARADA AL 15 ago 2026 (vuelta 33). CERO NODOS TOCADOS.**~~ **SECCION SUPERADA POR LA DE ARRIBA (15 ago 2026, vuelta 34) y CONSERVADA ENTERA:** describe bien el estado del que esta vuelta partio, y su motivo 2 lleva su correccion declarada arriba. El instrumento de costuras se declara MAL CALIBRADO
 
 **El modo continuo llego hasta aqui y se detuvo antes de escribir nada.** Tres motivos medidos
 hoy, ninguno adivinado (`docs/loop/SALIDA_V33_PARADA_OPD03.txt` y

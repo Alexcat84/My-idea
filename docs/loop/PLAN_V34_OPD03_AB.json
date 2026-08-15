@@ -1,0 +1,196 @@
+{
+  "operacion": "OP-D-03: el destejido que queda del acto de las pruebas A/B. ab_testing_optimizacion dice la misma prueba A/B dos veces",
+  "regla": "OP-D-03 (docs/plan/02_DESTEJIDOS.md), con la frontera escrita en docs/plan/01_FUENTES.md linea 947 y la perdida repartida por LA TABLA DE LOS SEIS MOTIVOS DE PERDIDA DE LINEA. Superviviente por el criterio de OP-D-01: de cada grupo sobrevive el de INDICE MAS BAJO.",
+  "motivo": "De las TRES costuras que OP-D-03 declara, dos estan CONSUMIDAS por la fase 01 y medidas hoy (optimizacion_embudo_get_customers perdio su bloque 6 a 10 con OP-F-04-WEI, split_testing_experimentos_ab perdio su bloque 6 a 9 con OP-F-04-RAC). Queda esta, que ninguna operacion de la fase 01 podia tocar porque no es material ajeno con destino: es el mismo nodo diciendo su procedimiento dos veces, y su propia tabla de fronteras lo mando a la fase 02.",
+  "fecha_corte": "2026-08-15",
+  "nodos": [
+    {
+      "nodo": "ab_testing_optimizacion",
+      "fuente_esperada": "The Startup Owner's Manual - Steve Blank",
+      "pasos_totales": 10,
+      "prefijos_pasos": [
+        "Identificar los elementos clave de",
+        "Diseñar dos versiones (A y B) camb",
+        "Dividir el tráfico de manera aleat",
+        "Medir resultados de conversión/act",
+        "Implementar la versión ganadora y ",
+        "Elegir una métrica clave a mejorar",
+        "Generar hipótesis de cambios grand",
+        "Ejecutar pruebas A/B durante seman",
+        "Probar elementos como botones, ubi",
+        "Documentar resultados y pasar a la"
+      ],
+      "pasos_originales": [
+        "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas)",
+        "Diseñar dos versiones (A y B) cambiando un solo elemento a la vez",
+        "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico)",
+        "Medir resultados de conversión/activación para cada versión",
+        "Implementar la versión ganadora y repetir el proceso con nuevos elementos",
+        "Elegir una métrica clave a mejorar (ej. tasa de registro)",
+        "Generar hipótesis de cambios grandes antes que pequeños ajustes",
+        "Ejecutar pruebas A/B durante semanas enfocándose en una sola métrica a la vez",
+        "Probar elementos como botones, ubicación de CTA, copy, prueba social, número de campos de formulario",
+        "Documentar resultados y pasar a la siguiente métrica cuando se agoten las ideas"
+      ],
+      "pasos_finales": [
+        "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro) y contando también la ubicación de CTA, el copy, la prueba social y el número de campos de formulario.",
+        "Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipótesis de cambios grandes antes que las de pequeños ajustes.",
+        "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba durante semanas enfocándose en una sola métrica a la vez.",
+        "Medir resultados de conversión/activación para cada versión",
+        "Implementar la versión ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente métrica cuando se agoten las ideas."
+      ],
+      "mapa_pasos": {
+        "1": [
+          1,
+          6,
+          9
+        ],
+        "2": [
+          2,
+          7
+        ],
+        "3": [
+          3,
+          8
+        ],
+        "4": [
+          4
+        ],
+        "5": [
+          5,
+          10
+        ]
+      },
+      "grupos_pasos": [
+        {
+          "origenes": [
+            1,
+            6,
+            9
+          ],
+          "cosa": "elegir que se prueba y contra que metrica",
+          "texto": "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro) y contando también la ubicación de CTA, el copy, la prueba social y el número de campos de formulario.",
+          "motivo": "ALCANCE: el superviviente SI nombra los elementos que impulsan la metrica (botones, titulares, imagenes, ofertas) pero trae UN solo juego de ejemplos y la metrica ya fijada de antemano. El paso 6 trae la metrica como ELECCION (ej. tasa de registro) y el paso 9 trae cuatro elementos mas (ubicacion de CTA, copy, prueba social, numero de campos de formulario). Los dos entran a la enumeracion que el superviviente ya tiene, que es el remedio escrito del motivo."
+        },
+        {
+          "origenes": [
+            2,
+            7
+          ],
+          "cosa": "disenar la variacion",
+          "texto": "Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipótesis de cambios grandes antes que las de pequeños ajustes.",
+          "motivo": "SALVAGUARDA: el superviviente manda disenar dos versiones cambiando un solo elemento a la vez y NO dice contra que sesgo se elige QUE cambiar; sin eso el paso se resuelve por el sesgo por defecto, probar el ajuste mas pequeno y mas facil. El paso 7 dice contra que (hipotesis de cambios grandes antes que pequenos ajustes) y el inciso se adosa al paso que protege, que es un paso de DECISION y no de ejecucion, que es la firma escrita de la clase."
+        },
+        {
+          "origenes": [
+            3,
+            8
+          ],
+          "cosa": "repartir el trafico y dejar correr la prueba",
+          "texto": "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba durante semanas enfocándose en una sola métrica a la vez.",
+          "motivo": "ALCANCE: el superviviente dice como se reparte el trafico y no dice CUANTO dura la prueba ni sobre cuantas metricas a la vez se lee. El paso 8 lo trae (durante semanas, una sola metrica a la vez) y entra al paso. Es la misma lectura de cadencia que OP-D-01 aplico en el sexto paso de su tabla, y se cita para que el criterio sea el mismo."
+        },
+        {
+          "origenes": [
+            4
+          ],
+          "cosa": "medir el resultado de cada version",
+          "texto": "Medir resultados de conversión/activación para cada versión",
+          "motivo": "VERBATIM: el superviviente conserva su paso entero y el bloque repetido no le anade nada."
+        },
+        {
+          "origenes": [
+            5,
+            10
+          ],
+          "cosa": "cerrar el ciclo y volver a empezar",
+          "texto": "Implementar la versión ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente métrica cuando se agoten las ideas.",
+          "motivo": "DESTINO: el superviviente produce el resultado (implementar la ganadora y repetir) y NO dice que hacer con el. El paso 10 lo dice, y son las dos cosas que el entregable del nodo ya prometia sin que ningun paso las mandara: DOCUMENTAR los resultados, y el criterio de cuando se pasa a la siguiente metrica (cuando se agoten las ideas). La linea de destino entra en el paso FINAL, que es el remedio escrito del motivo."
+        }
+      ],
+      "procedencia": [
+        {
+          "libro": "The Startup Owner's Manual - Steve Blank (fuente UNICA declarada por el nodo hoy; la atribucion a Traction salio con el bloque 11 a 15 en OP-F-04-WEI, y eso va DECLARADO como discutible en el reporte de la vuelta 34, no escondido aqui)",
+          "pasos_del_resultado": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "pruebas_repeticion": [
+        {
+          "origenes": [
+            1,
+            9
+          ],
+          "huella_repetida": "botones"
+        }
+      ],
+      "pruebas_convergencia": [
+        {
+          "origenes": [
+            1,
+            6
+          ],
+          "trozo_a": "impulsan la activación",
+          "trozo_b": "tasa de registro"
+        },
+        {
+          "origenes": [
+            1,
+            9
+          ],
+          "trozo_a": "titulares",
+          "trozo_b": "prueba social"
+        },
+        {
+          "origenes": [
+            2,
+            7
+          ],
+          "trozo_a": "un solo elemento a la vez",
+          "trozo_b": "cambios grandes"
+        },
+        {
+          "origenes": [
+            3,
+            8
+          ],
+          "trozo_a": "80/20",
+          "trozo_b": "durante semanas"
+        },
+        {
+          "origenes": [
+            5,
+            10
+          ],
+          "trozo_a": "versión ganadora",
+          "trozo_b": "se agoten las ideas"
+        }
+      ],
+      "rastros": [
+        "impulsan la activación",
+        "botones, titulares, imágenes, ofertas",
+        "tasa de registro",
+        "ubicación de CTA",
+        "prueba social",
+        "número de campos de formulario",
+        "un solo elemento a la vez",
+        "cambios grandes",
+        "pequeños ajustes",
+        "aleatoria y equitativa",
+        "80/20",
+        "durante semanas",
+        "una sola métrica a la vez",
+        "conversión/activación",
+        "versión ganadora",
+        "nuevos elementos",
+        "se agoten las ideas"
+      ],
+      "salidas": []
+    }
+  ]
+}

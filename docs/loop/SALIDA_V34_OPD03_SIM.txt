@@ -1,0 +1,25 @@
+﻿PLAN     : docs/loop/PLAN_V34_OPD03_AB.json
+OPERACION: OP-D-03: el destejido que queda del acto de las pruebas A/B. ab_testing_optimizacion dice la misma prueba A/B dos veces
+REGLA    : OP-D-03 (docs/plan/02_DESTEJIDOS.md), con la frontera escrita en docs/plan/01_FUENTES.md linea 947 y la perdida repartida por LA TABLA DE LOS SEIS MOTIVOS DE PERDIDA DE LINEA. Superviviente por el criterio de OP-D-01: de cada grupo sobrevive el de INDICE MAS BAJO.
+MODO     : --simular
+==============================================================================
+
+------------------------------------------------------------------------------
+NODO: ab_testing_optimizacion
+  guarda de texto sobre pasos: 10 de 10 calzan
+  cero perdida en pasos: 10 origenes cubiertos de 10
+  EL MAPA DE PASOS, destino <- origenes:
+     1 <- [1, 6, 9]        Identificar los elementos clave de la landing page que impulsan la activación (b  (con remedio)
+     2 <- [2, 7]           Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las  (con remedio)
+     3 <- [3, 8]           Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/  (con remedio)
+     4 <- [4]              Medir resultados de conversión/activación para cada versión  (VERBATIM)
+     5 <- [5, 10]          Implementar la versión ganadora y repetir el proceso con nuevos elementos, docum  (con remedio)
+    procedencia: pasos [1, 2, 3, 4, 5] del resultado <- The Startup Owner's Manual - Steve Blank (fuente UNICA declarada por el nodo hoy; la atribucion a Traction salio con el bloque 11 a 15 en OP-F-04-WEI, y eso va DECLARADO como discutible en el reporte de la vuelta 34, no escondido aqui)
+  pasos 10 -> 5
+  fuente: "The Startup Owner's Manual - Steve Blank"  (SIN CAMBIO)
+
+==============================================================================
+RESUMEN
+  ficheros que se tocarian: 1
+
+SIMULACION: cero escrituras.
