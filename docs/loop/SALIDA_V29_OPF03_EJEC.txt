@@ -1,0 +1,81 @@
+PLAN   : docs/loop/PLAN_V29_OPF03_PROPIOS.json
+OPERACION: OP-F-03, LOS BLOQUES CON DESTINO NODO PROPIO que el muro tenia presos
+MODO   : --ejecutar
+CORTES : 5
+==============================================================================
+
+------------------------------------------------------------------------------
+ORIGEN : analisis_tco_roi_b2b   frontera los pasos [5, 6, 7, 8, 9] de 9
+  pasos totales 9, salen 5, quedan 4
+  fuente: "The Startup Owner's Manual - Steve Blank | Essentials of Supply Chain Management - Michael H. Hugos"  ->  "The Startup Owner's Manual - Steve Blank"
+    sale   5. Definir criterios cualitativos relevantes (calidad, cumplimiento, control de procesos)
+    sale   6. Asignar pesos relativos entre costo monetario y criterios cualitativos (ej. 75/25)
+    sale   7. Calcular el costo total ponderado para cada proveedor usando la fórmula de TCO
+    sale   8. Comparar proveedores en base al costo total analizado, no solo el precio unitario
+    sale   9. Ajustar los pesos según la importancia estratégica de cada factor
+  DESTINO: NODO PROPIO seleccion_de_proveedores_por_costo_total
+  arista obligada: analisis_tco_roi_b2b.nodos_siguientes += seleccion_de_proveedores_por_costo_total
+  arista reciproca: seleccion_de_proveedores_por_costo_total.nodos_previos = ['analisis_tco_roi_b2b', 'criterios_seleccion_proveedores']
+
+------------------------------------------------------------------------------
+ORIGEN : criterios_seleccion_proveedores   frontera los pasos [7, 8, 9, 10] de 10
+  pasos totales 10, salen 4, quedan 6
+  fuente: "A Project Manager's Book of Forms | Essentials of Supply Chain Management - Michael H. Hugos"  ->  "A Project Manager's Book of Forms"
+    sale   7. Define qué necesitas comprar o contratar según tu plan de negocio
+    sale   8. Mira más allá del precio: revisa también la calidad, el servicio y el soporte técnico de cada provee
+    sale   9. Reduce el número de proveedores con los que trabajas para concentrar tu volumen de compra y ganar po
+    sale  10. Anota tu lista de proveedores preferidos
+  DESTINO: MIEMBRO seleccion_de_proveedores_por_costo_total
+  (destino creado por este mismo plan, corte anterior)
+  seleccion_de_proveedores_por_costo_total: pasos 5 -> 9
+
+------------------------------------------------------------------------------
+ORIGEN : gestion_inventario   frontera los pasos [6, 7, 8, 9] de 9
+  pasos totales 9, salen 4, quedan 5
+  fuente: 'Financial Intelligence for Entrepreneurs | Essentials of Supply Chain Management - Michael H. Hugos'  ->  'Financial Intelligence for Entrepreneurs'
+    sale   6. Calcular el inventario cíclico óptimo balanceando costos de ordenar vs. costos de mantener.
+    sale   7. Definir niveles de inventario de seguridad según la variabilidad de la demanda y el costo de quiebre
+    sale   8. Identificar patrones estacionales de demanda y decidir entre acumular inventario estacional o invert
+    sale   9. Revisar y ajustar puntos de reorden periódicamente con datos reales de demanda.
+  DESTINO: NODO PROPIO driver_de_inventario
+  arista obligada: gestion_inventario.nodos_siguientes += driver_de_inventario
+  arista reciproca: driver_de_inventario.nodos_previos = ['gestion_inventario']
+
+------------------------------------------------------------------------------
+ORIGEN : transicion_producto_a_experiencia   frontera los pasos [5, 6, 7, 8] de 12
+  pasos totales 12, salen 4, quedan 8
+  fuente: 'Change by Design | Essentials of Supply Chain Management - Michael H. Hugos | Essentials of Supply Chain Mana - Michael H. Hugos'  ->  'Change by Design'
+    sale   5. Evaluar si tu producto podría transformarse en un modelo de acceso/servicio en lugar de venta de pro
+    sale   6. Identificar barreras de adopción específicas (confianza, disponibilidad, conveniencia, costo)
+    sale   7. Diseñar un piloto de modelo Product-as-a-Service y medir métricas de uso y retención
+    sale   8. Analizar el impacto en la cadena de suministro (ej: necesidad de mantenimiento, redistribución, reco
+  DESTINO: NODO PROPIO producto_como_servicio_de_acceso
+  arista obligada: transicion_producto_a_experiencia.nodos_siguientes += producto_como_servicio_de_acceso
+  arista reciproca: producto_como_servicio_de_acceso.nodos_previos = ['transicion_producto_a_experiencia']
+
+------------------------------------------------------------------------------
+ORIGEN : transicion_producto_a_experiencia   frontera los pasos [9, 10, 11, 12] de 12
+  pasos totales 12, salen 4, quedan 4
+  fuente: 'Change by Design'  ->  'Change by Design'
+    sale   9. Analizar si tu producto puede reformularse como acceso a un servicio en lugar de venta de un bien
+    sale  10. Identificar barreras de adopción del cliente (propiedad vs. renta, confianza, disponibilidad)
+    sale  11. Diseñar las tres interfaces de usuario: humano-computadora, humano-máquina y humano-humano
+    sale  12. Evaluar el modelo desde la óptica de economía circular (cerrar, ralentizar, intensificar, reducir o 
+  DESTINO: MIEMBRO producto_como_servicio_de_acceso
+  (destino creado por este mismo plan, corte anterior)
+  producto_como_servicio_de_acceso: pasos 4 -> 8
+
+==============================================================================
+RESUMEN
+  cortes aplicados en memoria: 5
+  nodos propios nuevos       : 3 ['seleccion_de_proveedores_por_costo_total', 'driver_de_inventario', 'producto_como_servicio_de_acceso']
+  ficheros que se tocarian   : 7
+
+ESCRITO: 7 fichero(s) en dataset/nodos/.
+  - analisis_tco_roi_b2b
+  - criterios_seleccion_proveedores
+  - driver_de_inventario  [NUEVO]
+  - gestion_inventario
+  - producto_como_servicio_de_acceso  [NUEVO]
+  - seleccion_de_proveedores_por_costo_total  [NUEVO]
+  - transicion_producto_a_experiencia

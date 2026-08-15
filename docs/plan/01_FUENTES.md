@@ -614,6 +614,64 @@ deshacer.** Aplica hoy a **un solo caso medido**: `analisis_tco_roi_b2b` (5 a 9)
 `criterios_seleccion_proveedores` (7 a 10) van **a UN nodo, no a dos**, con **las dos
 procedencias declaradas en su fuente y en su lectura**.
 
+### `OP-F-02` EJECUTADA ENTERA y `OP-F-03` CERRADA: EL MURO CAYO (14 ago 2026, vuelta 29)
+
+**La decision del fundador del 14 ago 2026 (paridad de censo contra `total_nodos`, cuarto
+comando del ciclo) levanto la pared que tenia presos a los planes sellados.** Todo lo escrito
+mas arriba se queda entero: era el estado de los dias en que se escribio.
+
+**`OP-F-02`, los tres nodo propio del racimo de supervision de la IA**, aplicados desde
+`docs/loop/PLAN_V27_OPF02.json` **sin reescribir una linea del sello de la vuelta 27**:
+
+| origen | frontera | pasos | nodo propio nuevo |
+|---|---|---|---|
+| `future_scenarios_planning` | 1 a 5 / 6 a 13 | **13 a 5**, con destejido declarado de 8 a 6 y su mapa | `escenarios_de_evolucion_de_la_ia` |
+| `gut_check` | 1 a 4 / 5 a 9 | **9 a 4** | `critica_del_plan_con_ia` |
+| `brainstorming_divergente` | 1 a 4 / 5 a 8 | **8 a 4** | `ideacion_con_ia_en_la_sesion` |
+
+**`OP-F-03`: LOS CINCO BLOQUES QUE FALTABAN, EJECUTADOS. La operacion pasa de PARCIAL a
+HECHA**, y con eso se cierra la cuenta que la vuelta 28 dejo escrita (*catorce de diecinueve
+bloques en el arbol, cinco pendientes*): **hoy son DIECINUEVE de diecinueve.**
+
+| origen | frontera | destino | de donde sale la lectura |
+|---|---|---|---|
+| `economia_circular_como_modelo_de_negocio` (via `modelo_simulacion_cadena_suministro_circular`) | 6 a 9 | nodo propio `estrategia_circular_y_mecanismo_de_retorno` | sellado en la vuelta 28, `PLAN_V28_RELECTURA.json`, correccion declarada 1 de la relectura conjunta |
+| `analisis_tco_roi_b2b` | 5 a 9 | nodo propio `seleccion_de_proveedores_por_costo_total` | leido y publicado en la vuelta 27, en la tabla de arriba |
+| `criterios_seleccion_proveedores` | 7 a 10 | **EL MISMO nodo propio** | la misma tabla, mas la **adjudicacion 3 del acta de la vuelta 27** |
+| `gestion_inventario` | 6 a 9 | nodo propio `driver_de_inventario` | leido y publicado en la vuelta 27, en la tabla de arriba |
+| `transicion_producto_a_experiencia` | 5 a 8 **y** 9 a 12 | nodo propio `producto_como_servicio_de_acceso`, **los dos bloques a UNO** | la misma tabla, mas la **adjudicacion 3** |
+
+**LO QUE LA VUELTA 29 ANADIO A ESA LECTURA, dicho sin adornos, porque no estaba escrito:**
+**el CUERPO de los tres nodos propios nuevos** (titulo, resumen, entregable, condiciones y
+etiqueta) y **el `node_id` de uno de ellos**. Las tablas de la vuelta 27 publicaban
+`seleccion_de_proveedores_por_costo_total` y `driver_de_inventario` con su id escrito, **pero
+el de `transicion_producto_a_experiencia` decia solo *nodo propio*, sin nombre**:
+`producto_como_servicio_de_acceso` **es un nombre de esta vuelta**, y va marcado como
+discutible en el reporte. Plan sellado en `docs/loop/PLAN_V29_OPF03_PROPIOS.json`, con los
+prefijos y las huellas leidos del grafo de hoy.
+
+> **LOS DOS BLOQUES DE `transicion_producto_a_experiencia` VAN A UN SOLO NODO, y el motivo
+> es la adjudicacion 3 leida al pie:** salen del MISMO nodo, declaran al MISMO libro (Hugos,
+> con las dos grafias que ese nodo trae, la misma averia que `OP-S-11` ya registro) y **dicen
+> casi lo mismo**: su paso 9 repite al 5 y su paso 10 al 6. **Partirlos habria fabricado el
+> gemelo que la campana existe para deshacer.** La repeticion que quedo DENTRO del nodo nuevo
+> **no se desteje aqui**, y esta declarada en la cola de relectura de `08_VERIFICACION.md`
+> con su medicion.
+
+**LAS GUARDAS DE LAS TRES OPERACIONES, corridas todas:** simulacion previa sobre copia en
+memoria (verde en las tres); guarda de conteo, de texto por paso, de fuente por nodo, de
+procedencia, de destino (ningun id ni titulo repetido) y de huella (**ausente del destino
+antes de sellar, y por eso la prueba prueba algo**); **casos positivos corridos antes y
+despues**: `OP-F-02` **6 CAEN y 6 PASAN**, la relectura **2 de 3 CAEN y 3 de 3 PASAN**,
+`OP-F-03` **10 CAEN y 15 PASAN**. **CICLO DE `GATE 0` ENTERO tras cada una, los cuatro
+comandos en el orden escrito (1, 2, 4, 3)**, el cuarto porque las tres cambian el censo; **71
+etiquetas sin encoger en las tres**; **suites verdes**: motor 24 de 24, web 80 ficheros con
+1.030 pasadas y 3 saltadas, `tsc` limpio.
+
+**LOS SIETE IDS NUEVOS ESTAN DECLARADOS** en `docs/plan/INDICE_ROJO_DECLARADO.jsonl`, que
+pasa de **vacia a siete lineas**, y las sedes los imprimen uno a uno: **0 activos sin vector
+y 7 en ROJO DECLARADO**.
+
 ---
 
 ## LO QUE ESTA FASE LE DEJA A LAS DEMAS

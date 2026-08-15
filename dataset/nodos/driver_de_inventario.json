@@ -1,0 +1,24 @@
+{
+  "node_id": "driver_de_inventario",
+  "fase_proyecto": "ejecucion",
+  "dominio": "core",
+  "titulo_concepto": "Driver de Inventario: Ciclico, de Seguridad y Estacional",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "El inventario es uno de los drivers de la cadena de suministro, y se dimensiona en tres partes que responden a preguntas distintas. El inventario ciclico sale de balancear lo que cuesta ordenar contra lo que cuesta mantener: pedir mas seguido encarece las ordenes y pedir de mas encarece el almacen. El inventario de seguridad no depende del promedio de la demanda sino de su variabilidad y de lo que te cuesta quedarte sin stock. Y el estacional obliga a una eleccion de fondo: acumular antes del pico o invertir en flexibilidad de produccion para no acumular. Las tres se sostienen sobre los puntos de reorden, y esos se ajustan con datos reales de demanda, no con los del plan original.",
+  "pasos_accionables": [
+    "Calcular el inventario cíclico óptimo balanceando costos de ordenar vs. costos de mantener.",
+    "Definir niveles de inventario de seguridad según la variabilidad de la demanda y el costo de quiebre de stock.",
+    "Identificar patrones estacionales de demanda y decidir entre acumular inventario estacional o invertir en flexibilidad de producción.",
+    "Revisar y ajustar puntos de reorden periódicamente con datos reales de demanda."
+  ],
+  "entregable_esperado": "Los tres niveles de inventario dimensionados, ciclico, de seguridad y estacional, con sus puntos de reorden y la fecha en que se vuelven a revisar con demanda real",
+  "nodos_previos": [
+    "gestion_inventario"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando ya sabes cuanto inventario tienes y hay que decidir cuanto DEBERIAS tener",
+    "Cuando la demanda varia o tiene estacionalidad y el nivel unico de stock deja de servir"
+  ],
+  "etiqueta_arbol": "Dimensiona tu Inventario"
+}

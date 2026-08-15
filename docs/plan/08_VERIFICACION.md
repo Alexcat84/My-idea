@@ -471,6 +471,7 @@ de arriba se queda entera: nace de las fusiones y esto no la toca.**
 | `bullseye_framework` | los pasos 8 a 12 de `plan_de_adquisicion_acquire`, de `OP-F-04-WEI` por `P.18` | **11 pasos**, contra los 6 que tenia antes del reparto. **Cuatro de los cinco que entraron repiten**: listar los 19 canales (su paso 1), disenar la prueba barata y corta por canal (su paso 3), medir resultados concretos (sus pasos 3 y 4) y comparar entre canales para elegir donde invertir mas (su paso 5). **El quinto no tiene gemelo**: anotar lo aprendido de cada prueba, incluidas las que fallaron |
 | `publicidad_offline_pruebas_locales` | los pasos 5 a 8 de `earned_vs_paid_media`, de `OP-F-04-WEI` por `P.18` | **9 pasos**, contra los 5 que tenia antes del reparto, y **el solape es PARCIAL, uno de cuatro**: solo el nuevo 9 (empezar con pruebas pequenas y economicas antes de escalar) repite sus pasos 1 y 4. **Los otros tres traen material que el miembro no tenia**: preguntar que medios se consumen fuera de internet, pedir a cada medio su prospecto de audiencia y comparar alcance contra precio. Es la ELECCION del medio, y el miembro PRUEBA |
 | `compromiso_linea_tiempo_cliente` | el paso 10 de `sales_funnel_get_keep_grow`, de `OP-F-04-WEI` por `P.18` | **6 pasos**, contra los 5 que tenia antes del reparto. **El unico que entro repite sus pasos 2 y 3**, comunicar el cronograma y pedir el si o el no explicito, que es la MISMA lectura con la que el acta de la vuelta 28 sostuvo el destino (discutible 9: *palabra por palabra el objeto del miembro*) |
+| `producto_como_servicio_de_acceso` **(NODO NUEVO, no miembro)** | los DOS bloques de `transicion_producto_a_experiencia`, pasos 5 a 8 y 9 a 12, de `OP-F-03` por `P.18` punto 3 mas la adjudicacion 3 del acta de la vuelta 27 | **nace con 8 pasos y con la costura dentro**, medida hoy: **su paso 5 repite al 1** (reformular el producto como acceso en vez de venta de propiedad) y **su paso 6 repite al 2** (identificar barreras de adopcion). **No es un error del reparto: los dos bloques ya venian repetidos DENTRO del donante**, que declara a Hugos dos veces con dos grafias, y partirlos en dos nodos habria fabricado el gemelo que la adjudicacion 3 prohibe |
 
 **No es un error del reparto: es la medida de que los tres traian el mismo material de
 Hugos**, que es justamente lo que la tercera clase de `OP-F-03` afirmaba. **La lectura que
@@ -497,6 +498,19 @@ cinco cortes. **No se desteje ninguna: solo se declaran.**
 > que entraron traen material nuevo. **Entra igual a la cola**, porque la regla de esta
 > puerta habla de *una repeticion*, no de un bloque entero repetido, **y entra con su cifra
 > al lado para que la fase 02 no la lea como las otras cuatro.**
+
+> **TERCERA, y es de `OP-F-03` y no de WEI: `producto_como_servicio_de_acceso` NACE con la
+> costura dentro, y la fila lo dice.** Es el primer caso de esta puerta en que la repeticion
+> no cae dentro de un miembro que ya existia, **sino dentro de un nodo que la propia
+> operacion acaba de crear**. La regla escrita habla de *un miembro*; la extension es natural
+> y no inventa doctrina (el disparador es la repeticion, no el domicilio), pero **se declara
+> como lo que es, y va marcada en el reporte de la vuelta 29 para que el auditor la
+> adjudique**. **Y hay un cabo que la fase 02 tendra que mirar aparte: sus pasos 7 y 8 no
+> repiten nada y tampoco son del objeto del nodo** (las tres interfaces de usuario son de la
+> parte de SISTEMAS de Hugos, como `01_FUENTES.md` ya senalaba en la vuelta 27, y el ultimo
+> mira el modelo desde la economia circular). **No se destejen aqui: el verbo de la operacion
+> que los movio es repartir.** Queda **PENDIENTE DE DOCTRINA**: la cola tiene disparador para
+> la repeticion y no lo tiene para el paso bien copiado que quedo en el nodo equivocado.
 
 > **SEGUNDA, `compromiso_linea_tiempo_cliente` es una QUINTA costura que el acta no nombro.**
 > El acta nombro tres y mando revisar una cuarta; el instrumento midio los cinco receptores

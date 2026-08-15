@@ -206,10 +206,21 @@ def main():
         elif dest["tipo"] == "miembro":
             mid = dest["nodo"]
             print("  DESTINO: MIEMBRO %s" % mid)
-            if not os.path.exists(ruta(mid)):
+            # AMPLIACION DECLARADA (14 ago 2026, vuelta 29): el destino vale si
+            # existe en disco O si este MISMO plan acaba de crearlo como nodo
+            # propio en un corte anterior. Sin esto, la adjudicacion 3 del acta
+            # de la vuelta 27 (DOS BLOQUES QUE CAEN EN EL MISMO NODO PROPIO SE
+            # FUNDEN EN UNO, nunca dos gemelos) no se puede ejecutar: el segundo
+            # corte chocaba con la guarda de "ya existe" del nodo propio, y la
+            # unica salida habria sido fabricar el par que la campana existe
+            # para deshacer. No ablanda ninguna guarda: si mid no esta ni en
+            # disco ni en memoria, sigue siendo rojo.
+            if not os.path.exists(ruta(mid)) and mid not in memoria:
                 fallos.append("%s: el miembro destino %s no existe" % (origen, mid))
                 print("  [ROJO] no existe %s" % mid)
                 continue
+            if mid in nuevos:
+                print("  (destino creado por este mismo plan, corte anterior)")
             m, mcola = cargar(mid)
             if dest.get("fuente_esperada_destino") is not None \
                     and m.get("fuente") != dest["fuente_esperada_destino"]:

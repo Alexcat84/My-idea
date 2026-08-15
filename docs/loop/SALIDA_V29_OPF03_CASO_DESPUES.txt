@@ -1,0 +1,36 @@
+CASO POSITIVO: OP-F-03, LOS BLOQUES CON DESTINO NODO PROPIO que el muro tenia presos
+==============================================================================
+
+analisis_tco_roi_b2b -> seleccion_de_proveedores_por_costo_total   huella 'costo total ponderado'
+  [PASA] analisis_tco_roi_b2b ya no lleva la huella
+  [PASA] seleccion_de_proveedores_por_costo_total si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['seleccion_de_proveedores_por_costo_total']
+
+criterios_seleccion_proveedores -> seleccion_de_proveedores_por_costo_total   huella 'concentrar tu volumen de compra'
+  [PASA] criterios_seleccion_proveedores ya no lleva la huella
+  [PASA] seleccion_de_proveedores_por_costo_total si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['seleccion_de_proveedores_por_costo_total']
+
+gestion_inventario -> driver_de_inventario   huella 'inventario de seguridad'
+  [PASA] gestion_inventario ya no lleva la huella
+  [PASA] driver_de_inventario si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['driver_de_inventario']
+
+transicion_producto_a_experiencia -> producto_como_servicio_de_acceso   huella 'Product-as-a-Service'
+  [PASA] transicion_producto_a_experiencia ya no lleva la huella
+  [PASA] producto_como_servicio_de_acceso si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['producto_como_servicio_de_acceso']
+
+transicion_producto_a_experiencia -> producto_como_servicio_de_acceso   huella 'tres interfaces de usuario'
+  [PASA] transicion_producto_a_experiencia ya no lleva la huella
+  [PASA] producto_como_servicio_de_acceso si la lleva
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['producto_como_servicio_de_acceso']
+
+==============================================================================
+RESULTADO: 15 PASAN, 0 CAEN
+TODO PASA

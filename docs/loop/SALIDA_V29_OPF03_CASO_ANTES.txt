@@ -1,0 +1,41 @@
+CASO POSITIVO: OP-F-03, LOS BLOQUES CON DESTINO NODO PROPIO que el muro tenia presos
+==============================================================================
+
+analisis_tco_roi_b2b -> seleccion_de_proveedores_por_costo_total   huella 'costo total ponderado'
+  [CAE ] analisis_tco_roi_b2b ya no lleva la huella
+  [CAE ] seleccion_de_proveedores_por_costo_total si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['analisis_tco_roi_b2b']
+
+criterios_seleccion_proveedores -> seleccion_de_proveedores_por_costo_total   huella 'concentrar tu volumen de compra'
+  [CAE ] criterios_seleccion_proveedores ya no lleva la huella
+  [CAE ] seleccion_de_proveedores_por_costo_total si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['criterios_seleccion_proveedores']
+
+gestion_inventario -> driver_de_inventario   huella 'inventario de seguridad'
+  [CAE ] gestion_inventario ya no lleva la huella
+  [CAE ] driver_de_inventario si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['gestion_inventario']
+
+transicion_producto_a_experiencia -> producto_como_servicio_de_acceso   huella 'Product-as-a-Service'
+  [CAE ] transicion_producto_a_experiencia ya no lleva la huella
+  [CAE ] producto_como_servicio_de_acceso si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['transicion_producto_a_experiencia']
+
+transicion_producto_a_experiencia -> producto_como_servicio_de_acceso   huella 'tres interfaces de usuario'
+  [CAE ] transicion_producto_a_experiencia ya no lleva la huella
+  [CAE ] producto_como_servicio_de_acceso si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['transicion_producto_a_experiencia']
+
+==============================================================================
+RESULTADO: 5 PASAN, 10 CAEN
+HAY PRUEBAS QUE CAEN

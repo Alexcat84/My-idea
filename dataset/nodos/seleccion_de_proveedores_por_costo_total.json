@@ -1,0 +1,30 @@
+{
+  "node_id": "seleccion_de_proveedores_por_costo_total",
+  "fase_proyecto": "planificacion",
+  "dominio": "core",
+  "titulo_concepto": "Seleccion de Proveedores por Costo Total Ponderado",
+  "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "resumen_teorico": "Elegir proveedor por el precio unitario mas bajo es decidir con la mitad de la informacion. Lo que de verdad cuesta trabajar con un proveedor incluye la calidad que entrega, su cumplimiento y el control que tiene sobre sus procesos, y esos criterios no pesan igual en todos los negocios. El acto propio es armar la comparacion antes de firmar: definir que criterios cualitativos importan, repartir el peso entre el costo monetario y esos criterios, calcular el costo total ponderado de cada proveedor y compararlos con esa cifra en vez de con el precio de lista. Y hay una decision que va con la misma logica: concentrar el volumen en menos proveedores da poder de negociacion, asi que la lista de preferidos se arma a proposito y no por acumulacion.",
+  "pasos_accionables": [
+    "Definir criterios cualitativos relevantes (calidad, cumplimiento, control de procesos)",
+    "Asignar pesos relativos entre costo monetario y criterios cualitativos (ej. 75/25)",
+    "Calcular el costo total ponderado para cada proveedor usando la fórmula de TCO",
+    "Comparar proveedores en base al costo total analizado, no solo el precio unitario",
+    "Ajustar los pesos según la importancia estratégica de cada factor",
+    "Define qué necesitas comprar o contratar según tu plan de negocio",
+    "Mira más allá del precio: revisa también la calidad, el servicio y el soporte técnico de cada proveedor",
+    "Reduce el número de proveedores con los que trabajas para concentrar tu volumen de compra y ganar poder de negociación",
+    "Anota tu lista de proveedores preferidos"
+  ],
+  "entregable_esperado": "La comparacion ponderada de tus proveedores por costo total, con los criterios y sus pesos escritos, y la lista de proveedores preferidos que sale de ella",
+  "nodos_previos": [
+    "analisis_tco_roi_b2b",
+    "criterios_seleccion_proveedores"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando tienes varias propuestas de proveedor sobre la mesa y el precio unitario no alcanza para decidir",
+    "Cuando quieres reducir el numero de proveedores para concentrar volumen de compra y ganar poder de negociacion"
+  ],
+  "etiqueta_arbol": "Elige por Costo Total"
+}
