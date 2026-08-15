@@ -1,0 +1,106 @@
+﻿==============================================================================
+RELECTURA DE LOS CONGELADOS DE OP-D-01, con el texto de HOY delante
+==============================================================================
+
+------------------------------------------------------------------------------
+PUESTO 494: principio_calidad_mvp contra producto_minimo_viable
+  CLASE EN EL ARCHIVO HOY: A   clave 0.8385
+  RAZON EN EL ARCHIVO HOY (contraste, no fuente de la clase nueva):
+    REPITE con producto_minimo_viable. Los dos mandan lo mismo: identificar las funcionalidades criticas y excluir a proposito las secundarias en la primera version, lanzar cuanto antes al mercado real aceptando que fallara, medir la reaccion real y no la opinion, e iterar con lo aprendido y no con suposiciones internas. Los pasos 11 al 14 del primero son el nucleo del segundo dicho otra vez. Lo unico propio del primero es la distincion util entre el defecto que estorba el aprendizaje, que es inaceptable, y la baja fidelidad estetica, que no lo es. LATERAL, no cambia la clase: el primero tiene CATORCE pasos y se parte en al menos tres bloques, del 1 al 5 la doctrina de la calidad en el MVP, del 6 al 10 el lanzamiento y la iteracion, y del 11 al 14 otra vez lo minimo viable con otro vocabulario. Con el, la familia del MVP llega a OCHO nodos vivos del nucleo.
+
+  LOS DOS NODOS, HOY:
+    principio_calidad_mvp
+      titulo    : Calidad y Diseño en el MVP
+      fuente    : The Lean Startup - Eric Ries | The Hard Thing About Hard Things
+      entregable: Criterio validado y basado en evidencia sobre qué nivel de calidad/diseño es realmente necesario para satisfacer al cliente, evitando sobre-inversión prematura.
+       1. Antes de invertir en pulir una característica, pregúntate si contribuye directamente al aprendizaje que buscas, y usa esa pregunta para resistir la presión del equipo de completar todas las funcionalidades 'ideales' antes de lanzar.
+       2. No asumas que el estándar de calidad de la industria, ni los requerimientos heredados de un cliente anterior, son lo que el mercado amplio valora; pruébalo empíricamente contra las necesidades reales de tus clientes.
+       3. Lanza al mercado real, lo antes posible, versiones simplificadas o 'hacky' de las features complejas, aceptando que fallarán en algunos aspectos, y mide la reacción real de los clientes.
+       4. Distingue entre defectos que dificultan el aprendizaje (inaceptables) y baja fidelidad estética (aceptable si permite aprender).
+       5. Capturar y priorizar el aprendizaje obtenido de los primeros clientes reales
+       6. Usa el feedback del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.
+       7. Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones internas
+
+    producto_minimo_viable
+      titulo    : Producto Mínimo Viable (MVP)
+      fuente    : The Lean Startup - Eric Ries
+      entregable: Tienes tu primera versión del producto, funcional o simulada, lanzada a un grupo reducido de primeros usuarios (early adopters), con las métricas de su respuesta real registradas.
+       1. Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.
+       2. Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.
+       3. Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.
+       4. Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.
+       5. Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.
+       6. Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental.
+
+  ARISTA, buscada en los dos sentidos contra el grafo de hoy:
+    principio_calidad_mvp nombra a producto_minimo_viable: False
+    producto_minimo_viable nombra a principio_calidad_mvp: False
+    HAY ARISTA: False
+
+------------------------------------------------------------------------------
+PUESTO 592: mvp_catalogo_tecnicas contra producto_minimo_viable
+  CLASE EN EL ARCHIVO HOY: B   clave 0.8282
+  RAZON EN EL ARCHIVO HOY (contraste, no fuente de la clase nueva):
+    NO PUEDO JUZGAR ESTE PAR CON JUSTICIA Y DIGO POR QUE: uno de los dos nodos esta averiado por dentro, y es el EMBLEMA de la averia. producto_minimo_viable tiene VEINTIDOS pasos y no son veintidos cosas: define el conjunto minimo de caracteristicas a partir de tu propia vision cuatro veces, manda mostrar la primera version solo a los earlyvangelists cuatro veces, y manda iterar o cambiar de rumbo si nadie la encuentra suficiente tres veces. Esta registrado asi en docs/FICHA_SUBFUSION_GRADIENTE.md, veintidos pasos y diez condiciones para cinco cosas distintas. Contra ese nodo, mvp_catalogo_tecnicas aporta algo que el otro NO dice en ninguno de sus veintidos pasos: la ESCALERA DE COSTO, empezar por el MVP mas barato posible, hoja de datos, folleto o storyboard, subir en sofisticacion solo si lo primero promete, y usar herramientas a mano como un telefono antes de pagar produccion profesional. Y comparten el arranque, identificar la hipotesis critica antes de elegir. FIGURA NUEVA Y ES DE METODO: un nodo averiado por dentro CONTAMINA todos los pares en los que entra, porque el veredicto se emite contra un texto que va a cambiar. Por el TOQUE UNICO del banco 9.4, el orden aqui es al reves del habitual: primero el arreglo interno del emblema, despues este par. Libros distintos ademas, Value Proposition Design contra The Lean Startup, sin arista.
+
+  LOS DOS NODOS, HOY:
+    mvp_catalogo_tecnicas
+      titulo    : Catálogo de MVPs (Producto Mínimo Viable)
+      fuente    : Value Proposition Design
+      entregable: Un prototipo tangible (documento, video, landing page o maqueta) listo para ser mostrado a clientes potenciales.
+       1. Identifica la hipótesis específica que necesitas validar antes de elegir el tipo de MVP.
+       2. Comienza con el MVP más barato posible (data sheet, brochure, storyboard).
+       3. Escala la sofisticación del MVP solo si los resultados iniciales son prometedores.
+       4. Usa herramientas accesibles (ej. smartphone) antes de invertir en producción profesional.
+
+    producto_minimo_viable
+      titulo    : Producto Mínimo Viable (MVP)
+      fuente    : The Lean Startup - Eric Ries
+      entregable: Tienes tu primera versión del producto, funcional o simulada, lanzada a un grupo reducido de primeros usuarios (early adopters), con las métricas de su respuesta real registradas.
+       1. Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.
+       2. Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.
+       3. Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.
+       4. Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.
+       5. Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.
+       6. Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental.
+
+  ARISTA, buscada en los dos sentidos contra el grafo de hoy:
+    mvp_catalogo_tecnicas nombra a producto_minimo_viable: False
+    producto_minimo_viable nombra a mvp_catalogo_tecnicas: False
+    HAY ARISTA: False
+
+------------------------------------------------------------------------------
+PUESTO 830: producto_minimo_viable contra prueba_mvp_alta_fidelidad
+  CLASE EN EL ARCHIVO HOY: B   clave 0.8108
+  RAZON EN EL ARCHIVO HOY (contraste, no fuente de la clase nueva):
+    EL EMBLEMA OTRA VEZ, y sigue sin poder juzgarse. producto_minimo_viable es el nodo de VEINTIDOS pasos registrado en la ficha como emblema de la averia, con la misma orden repetida hasta cuatro veces. Contra el, prueba_mvp_alta_fidelidad trae algo que el emblema no dice en ninguno de sus veintidos pasos: decidir un NUMERO LIMITADO de clientes invitados a probar, incluir una llamada a la accion clara, medir cuantas visitas hacen falta antes de que alguien empiece a usarlo, medir cuantos usuarios lo recomiendan a amigos y que tan rapido empiezan, y EVITAR publicidad, prensa o demostraciones publicas durante la prueba. Ese aislamiento de la prueba es lo mas valioso del par. Y el solape, mostrar la primera version solo a los earlyvangelists y no al mercado masivo, es justamente una de las ordenes que el emblema repite CUATRO VECES, o sea que toca todas sus junturas. Por el banco 9.9 bloquea, igual que en el puesto 592. Segundo par que este nodo congela.
+
+  LOS DOS NODOS, HOY:
+    producto_minimo_viable
+      titulo    : Producto Mínimo Viable (MVP)
+      fuente    : The Lean Startup - Eric Ries
+      entregable: Tienes tu primera versión del producto, funcional o simulada, lanzada a un grupo reducido de primeros usuarios (early adopters), con las métricas de su respuesta real registradas.
+       1. Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.
+       2. Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.
+       3. Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.
+       4. Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.
+       5. Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.
+       6. Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental.
+
+    prueba_mvp_alta_fidelidad
+      titulo    : Prueba de alta fidelidad de tu producto mínimo (MVP)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      entregable: Un reporte de tu prueba con clientes reales, con las métricas de velocidad de uso y los criterios que usaste para decidir si pasa o no pasa
+       1. Decide un número limitado de clientes a quienes invitarás a probar tu producto (MVP)
+       2. Incluye una llamada a la acción clara: comprar, registrarse o saber más
+       3. Mide cuántas visitas necesitas antes de que alguien empiece a usarlo
+       4. Mide cuántos usuarios recomiendan tu producto a amigos y qué tan rápido empiezan a usarlo
+       5. Evita publicidad, prensa o demostraciones públicas durante esta prueba
+
+  ARISTA, buscada en los dos sentidos contra el grafo de hoy:
+    producto_minimo_viable nombra a prueba_mvp_alta_fidelidad: False
+    prueba_mvp_alta_fidelidad nombra a producto_minimo_viable: False
+    HAY ARISTA: False
+
+==============================================================================
+FIN. La clase nueva se escribe fuera de este script, con su razon.

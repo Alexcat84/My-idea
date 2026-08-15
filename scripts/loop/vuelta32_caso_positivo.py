@@ -23,6 +23,16 @@ docs/plan/08_VERIFICACION.md. No se afloja ninguna prueba vieja y no se mete
 ninguna excepcion por nombre de nodo: un plan sin pruebas_convergencia se mide
 exactamente como lo medía el instrumento de la vuelta 30.
 
+SEGUNDA AMPLIACION, DECLARADA APARTE Y EN LA MISMA VUELTA (OP-D-01): EL CAMPO
+condiciones_activacion. El motivo es el mismo que el del ejecutor
+scripts/loop/vuelta32_podar.py: la ficha del emblema mide 'veintidos pasos y DIEZ
+CONDICIONES para cinco cosas', asi que un caso positivo que solo mirara pasos
+daria TODO PASA con la mitad de la costura medida todavia en pie. Se anaden dos
+lecturas, las dos con la misma vara: el conteo de condiciones que el plan deja, y
+las huellas repetidas medidas sobre condiciones_activacion en vez de sobre
+pasos_accionables. Un plan sin condiciones_finales ni
+pruebas_repeticion_condiciones se mide exactamente igual que antes.
+
 Uso:
     python scripts/loop/vuelta32_caso_positivo.py <plan.json>
 """
@@ -48,8 +58,8 @@ def vivo(d):
     return not d.get("deprecado") and not d.get("deprecated")
 
 
-def cuantos(d, huella):
-    return sum(1 for p in (d.get("pasos_accionables") or []) if huella in p)
+def cuantos(d, huella, campo="pasos_accionables"):
+    return sum(1 for p in (d.get(campo) or []) if huella in p)
 
 
 def juntos(d, a, b):
@@ -89,6 +99,22 @@ def main():
             c = cuantos(d, h)
             ok = c <= 1
             print("  [%s] la repeticion %r vive en %d paso(s), maximo 1  (origenes %s)"
+                  % ("PASA" if ok else "CAE ", h, c, grupo["origenes"]))
+            pasan, caen = (pasan + 1, caen) if ok else (pasan, caen + 1)
+
+        if f.get("condiciones_finales") is not None:
+            nc = len(d.get("condiciones_activacion") or [])
+            ec = len(f["condiciones_finales"])
+            ok = nc == ec
+            print("  [%s] el nodo tiene %d condiciones, las %d que el plan deja"
+                  % ("PASA" if ok else "CAE ", nc, ec))
+            pasan, caen = (pasan + 1, caen) if ok else (pasan, caen + 1)
+
+        for grupo in f.get("pruebas_repeticion_condiciones") or []:
+            h = grupo["huella_repetida"]
+            c = cuantos(d, h, "condiciones_activacion")
+            ok = c <= 1
+            print("  [%s] la repeticion %r vive en %d condicion(es), maximo 1  (origenes %s)"
                   % ("PASA" if ok else "CAE ", h, c, grupo["origenes"]))
             pasan, caen = (pasan + 1, caen) if ok else (pasan, caen + 1)
 

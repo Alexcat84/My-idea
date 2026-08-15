@@ -1,0 +1,32 @@
+﻿CASO POSITIVO: OP-D-01, movimiento 1: el destejido de producto_minimo_viable, el emblema
+REGLA        : OP-D-01 (docs/plan/02_DESTEJIDOS.md), con la perdida repartida por la TABLA DE LOS SEIS MOTIVOS DE PERDIDA DE LINEA
+==============================================================================
+
+NODO producto_minimo_viable
+  [CAE ] el nodo tiene 22 pasos, los 6 que el plan deja
+  [CAE ] la repeticion 'conjunto mínimo de características' vive en 3 paso(s), maximo 1  (origenes [2, 6, 11, 15, 16, 19])
+  [CAE ] la repeticion 'Itera o cambia de rumbo si nadie' vive en 3 paso(s), maximo 1  (origenes [8, 14, 17, 22])
+  [CAE ] la repeticion 'earlyvangelists' vive en 3 paso(s), maximo 1  (origenes [4, 7, 12, 20])
+  [CAE ] la repeticion 'Agrega funciones nuevas solo' vive en 2 paso(s), maximo 1  (origenes [3, 9, 13, 18])
+  [CAE ] el nodo tiene 10 condiciones, las 5 que el plan deja
+  [CAE ] la repeticion 'construir un producto completo' vive en 2 condicion(es), maximo 1  (origenes [3, 5, 7, 9])
+  [CAE ] la repeticion 'antes de validar' vive en 2 condicion(es), maximo 1  (origenes [3, 5, 7, 9])
+  (conservacion) [SI] el rastro 'hipótesis' sigue vivo en 3 paso(s)
+  (conservacion) [SI] el rastro 'pagaría por resolver' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'tu propia visión' sigue vivo en 2 paso(s)
+  (conservacion) [SI] el rastro 'para aprender' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'posible vender' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'early adopters' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'earlyvangelists' sigue vivo en 3 paso(s)
+  (conservacion) [SI] el rastro 'reacción real' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'expandir funciones' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'ciclos cortos' sigue vivo en 2 paso(s)
+  (conservacion) [SI] el rastro 'incremental' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'cambia de rumbo' sigue vivo en 3 paso(s)
+  (conservacion) [SI] el rastro 'mercado masivo' sigue vivo en 2 paso(s)
+  (conservacion) [SI] el rastro 'conjunto mínimo de características' sigue vivo en 3 paso(s)
+
+==============================================================================
+RESULTADO: 0 PASAN, 8 CAEN
+CONSERVACION (pasa las dos veces a proposito): 14 si, 0 no
+HAY PRUEBAS QUE CAEN

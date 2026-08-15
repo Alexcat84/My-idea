@@ -1,0 +1,35 @@
+﻿PLAN     : docs/loop/PLAN_V32_OPD01_EMBLEMA.json
+OPERACION: OP-D-01, movimiento 1: el destejido de producto_minimo_viable, el emblema
+REGLA    : OP-D-01 (docs/plan/02_DESTEJIDOS.md), con la perdida repartida por la TABLA DE LOS SEIS MOTIVOS DE PERDIDA DE LINEA
+MODO     : --simular
+==============================================================================
+
+------------------------------------------------------------------------------
+NODO: producto_minimo_viable
+  guarda de texto sobre pasos: 22 de 22 calzan
+  cero perdida en pasos: 22 origenes cubiertos de 22
+  EL MAPA DE PASOS, destino <- origenes:
+     1 <- [1, 10]          Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o  (con remedio)
+     2 <- [2, 6, 11, 15, 16, 19] Diseña la versión más simple del producto que te permita probar esa hipótesis, d  (con remedio)
+     3 <- [3, 9, 13, 18]   Evita agregar funciones extra que no sean estrictamente necesarias para aprender  (con remedio)
+     4 <- [4, 7, 12, 20]   Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelis  (con remedio)
+     5 <- [5, 21]          Mide la reacción real de los usuarios, no solo su opinión, para validar o descar  (con remedio)
+     6 <- [8, 14, 17, 22]  Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución,  (con remedio)
+  guarda de texto sobre condiciones: 10 de 10 calzan
+  cero perdida en condiciones: 10 origenes cubiertos de 10
+  EL MAPA DE CONDICIONES, destino <- origenes:
+     1 <- [1, 2]           Cuando tienes una hipótesis de negocio sin validar y no sabes cuándo dejar de an  (VERBATIM)
+     2 <- [3, 5, 7, 9]     Si tú o quien te ayuda con el desarrollo quieren construir un producto completo   (VERBATIM)
+     3 <- [4]              Cuando ya identificaste a tus primeros usuarios apasionados (earlyvangelists) li  (VERBATIM)
+     4 <- [6, 10]          Cuando todavía no validaste si el producto resuelve el problema real del cliente  (VERBATIM)
+     5 <- [8]              Si no tienes claro qué características priorizar.  (VERBATIM)
+    procedencia: pasos [1, 2, 3, 4, 5, 6] del resultado <- The Lean Startup - Eric Ries (fuente UNICA: la costura de este nodo es de un solo libro consigo mismo, cinco narraciones en fila)
+  pasos 22 -> 6
+  condiciones 10 -> 5
+  fuente: 'The Lean Startup - Eric Ries'  (SIN CAMBIO)
+
+==============================================================================
+RESUMEN
+  ficheros que se tocarian: 1
+
+SIMULACION: cero escrituras.

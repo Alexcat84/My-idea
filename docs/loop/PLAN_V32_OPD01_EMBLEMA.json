@@ -1,0 +1,352 @@
+{
+  "operacion": "OP-D-01, movimiento 1: el destejido de producto_minimo_viable, el emblema",
+  "regla": "OP-D-01 (docs/plan/02_DESTEJIDOS.md), con la perdida repartida por la TABLA DE LOS SEIS MOTIVOS DE PERDIDA DE LINEA",
+  "motivo": "OP-D-01, MOVIMIENTO 1 DE 4: el destejido del emblema. El nodo es COSTURA CONFIRMADA de fuente UNICA (bloque 80,2, el mas alto del archivo): sus 22 pasos son CINCO NARRACIONES del mismo MVP en fila (1 a 5, 6 a 9, 10 a 14, 15 a 18, 19 a 22) y sus 10 condiciones dicen CINCO cosas. No hay reparto que negociar y no se parte en dos nodos: SE PODA A UNO, que es lo que la ficha y la operacion mandan. CRITERIO DEL SUPERVIVIENTE, escrito antes de aplicarlo: de cada grupo de repeticion sobrevive EL DE INDICE MAS BAJO. El resultado cae sobre la NARRACION 1 entera (pasos 1 a 5), que es la que el propio entregable del nodo ya narra, mas el paso 8, que es la SEXTA cosa (iterar o cambiar de rumbo) y no esta en la narracion 1. LAS PERDIDAS, REPARTIDAS POR LA TABLA DE LOS SEIS MOTIVOS: SALVAGUARDA en los pasos 1, 2 y 5 del resultado; ALCANCE en el 3 y en el 6; NOMBRE en el 4. DESTINO, METODO ALTERNATIVO y DIRECCION no aplican y por eso no se nombran. La fuente NO se toca (Ries, unica) y ningun bloque sale del nodo: este destejido no tiene destino, porque no hay material ajeno, solo repetido.",
+  "fecha_corte": "2026-08-15",
+  "nodos": [
+    {
+      "nodo": "producto_minimo_viable",
+      "fuente_esperada": "The Lean Startup - Eric Ries",
+      "pasos_totales": 22,
+      "condiciones_totales": 10,
+      "prefijos_pasos": [
+        "Identifica la hipótesis de negocio",
+        "Diseña la versión más simple del p",
+        "Evita agregar funciones extra que ",
+        "Lanza tu primera versión a tus pri",
+        "Mide la reacción real de los usuar",
+        "Define el conjunto mínimo de carac",
+        "Muestra tu primera versión solo a ",
+        "Itera o cambia de rumbo si nadie e",
+        "Agrega funciones nuevas solo como ",
+        "Define el problema central más peq",
+        "Construye la versión mínima que de",
+        "Entrega tu primera versión a un gr",
+        "Recoge las respuestas y agrega fun",
+        "Itera tu primera versión en ciclos",
+        "Define el conjunto mínimo de carac",
+        "Desarrolla tu primera versión de f",
+        "Itera o cambia de rumbo si nadie c",
+        "Agrega funciones nuevas solo por e",
+        "Define el conjunto mínimo de carac",
+        "Muestra tu primera versión solo a ",
+        "Recoge las respuestas para confirm",
+        "Itera o cambia de rumbo si nadie e"
+      ],
+      "prefijos_condiciones": [
+        "Cuando tienes una hipótesis de neg",
+        "Si corres el riesgo de quedarte pa",
+        "Si tú o quien te ayuda con el desa",
+        "Cuando ya identificaste a tus prim",
+        "Cuando tú o quien te ayuda con el ",
+        "Cuando todavía no validaste si el ",
+        "Si tú o quien te ayuda con el desa",
+        "Si no tienes claro qué característ",
+        "Cuando estás tentado a construir u",
+        "Si todavía no tienes evidencia de "
+      ],
+      "pasos_originales": [
+        "Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento.",
+        "Diseña la versión más simple del producto que te permita probar esa hipótesis.",
+        "Evita agregar funciones extra que no sean estrictamente necesarias para aprender.",
+        "Lanza tu primera versión a tus primeros usuarios (early adopters), no al mercado masivo.",
+        "Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis.",
+        "Define el conjunto mínimo de características basándote en tu propia visión, no en una lista larga de pedidos.",
+        "Muestra tu primera versión solo a los usuarios más entusiastas y visionarios (earlyvangelists), no al cliente masivo.",
+        "Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución.",
+        "Agrega funciones nuevas solo como excepción, no como regla.",
+        "Define el problema central más pequeño que un cliente pagaría por resolver.",
+        "Construye la versión mínima que demuestre valor, no la más completa.",
+        "Entrega tu primera versión a un grupo pequeño de usuarios apasionados y visionarios (earlyvangelists).",
+        "Recoge las respuestas y agrega funciones solo si sin ellas no es posible vender.",
+        "Itera tu primera versión en ciclos cortos, basándote en lo que realmente aprendes de tus clientes.",
+        "Define el conjunto mínimo de características a partir de tu propia visión, no de una lista larga de requerimientos.",
+        "Desarrolla tu primera versión de forma incremental, en ciclos cortos e iterativos.",
+        "Itera o cambia de rumbo si nadie considera interesante o suficiente tu primera versión.",
+        "Agrega funciones nuevas solo por excepción, cuando ningún cliente confirme que las características más importantes ya están cubiertas.",
+        "Define el conjunto mínimo de características a partir de tu visión inicial.",
+        "Muestra tu primera versión solo a tus usuarios más entusiastas (earlyvangelists), no al mercado masivo.",
+        "Recoge las respuestas para confirmar si entendiste bien el problema, no para expandir funciones.",
+        "Itera o cambia de rumbo si nadie encuentra útil o suficiente tu primera versión."
+      ],
+      "condiciones_originales": [
+        "Cuando tienes una hipótesis de negocio sin validar y no sabes cuándo dejar de analizar y empezar a construir.",
+        "Si corres el riesgo de quedarte paralizado analizando, o de construir de más sin datos reales.",
+        "Si tú o quien te ayuda con el desarrollo quieren construir un producto completo antes de validar.",
+        "Cuando ya identificaste a tus primeros usuarios apasionados (earlyvangelists) listos para probar algo.",
+        "Cuando tú o quien te ayuda con el desarrollo quieren agregar demasiadas funciones antes de lanzar.",
+        "Cuando todavía no validaste si el producto resuelve el problema real del cliente.",
+        "Si tú o quien te ayuda con el desarrollo insisten en construir un producto completo, con todas las funciones, antes de lanzar.",
+        "Si no tienes claro qué características priorizar.",
+        "Cuando estás tentado a construir un producto con todas las funciones antes de validar el mercado.",
+        "Si todavía no tienes evidencia de que el problema es real y relevante."
+      ],
+      "pasos_finales": [
+        "Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.",
+        "Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.",
+        "Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.",
+        "Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.",
+        "Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.",
+        "Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental."
+      ],
+      "condiciones_finales": [
+        "Cuando tienes una hipótesis de negocio sin validar y no sabes cuándo dejar de analizar y empezar a construir.",
+        "Si tú o quien te ayuda con el desarrollo quieren construir un producto completo antes de validar.",
+        "Cuando ya identificaste a tus primeros usuarios apasionados (earlyvangelists) listos para probar algo.",
+        "Cuando todavía no validaste si el producto resuelve el problema real del cliente.",
+        "Si no tienes claro qué características priorizar."
+      ],
+      "mapa_pasos": {
+        "1": [
+          1,
+          10
+        ],
+        "2": [
+          2,
+          6,
+          11,
+          15,
+          16,
+          19
+        ],
+        "3": [
+          3,
+          9,
+          13,
+          18
+        ],
+        "4": [
+          4,
+          7,
+          12,
+          20
+        ],
+        "5": [
+          5,
+          21
+        ],
+        "6": [
+          8,
+          14,
+          17,
+          22
+        ]
+      },
+      "mapa_condiciones": {
+        "1": [
+          1,
+          2
+        ],
+        "2": [
+          3,
+          5,
+          7,
+          9
+        ],
+        "3": [
+          4
+        ],
+        "4": [
+          6,
+          10
+        ],
+        "5": [
+          8
+        ]
+      },
+      "grupos_pasos": [
+        {
+          "origenes": [
+            1,
+            10
+          ],
+          "cosa": "identificar la hipotesis critica y el problema minimo que se valida",
+          "texto": "Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.",
+          "motivo": "SALVAGUARDA: el superviviente manda identificar la hipotesis y no dice contra que sesgo se decide cual es la critica. El paso 10 trae la prueba (que alguien PAGARIA por resolverlo) y el inciso se adosa al paso que protege."
+        },
+        {
+          "origenes": [
+            2,
+            6,
+            11,
+            15,
+            16,
+            19
+          ],
+          "cosa": "disenar la version mas simple, con el conjunto minimo definido desde la vision",
+          "texto": "Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.",
+          "motivo": "SALVAGUARDA: el superviviente manda disenar lo mas simple y no dice contra que sesgo (la lista larga de pedidos). Los pasos 6, 15 y 19 nombran el sesgo y el inciso se adosa al paso que protege."
+        },
+        {
+          "origenes": [
+            3,
+            9,
+            13,
+            18
+          ],
+          "cosa": "no agregar funciones extra, y la excepcion que las justifica",
+          "texto": "Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.",
+          "motivo": "ALCANCE: el superviviente trae UN criterio para la excepcion (que sirva para aprender) y el paso 13 trae el segundo (que sin ella no se pueda vender). El segundo entra a la enumeracion que el superviviente ya tiene, que es el remedio escrito del motivo."
+        },
+        {
+          "origenes": [
+            4,
+            7,
+            12,
+            20
+          ],
+          "cosa": "lanzar solo a los primeros usuarios y no al mercado masivo",
+          "texto": "Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.",
+          "motivo": "NOMBRE: el superviviente dice early adopters y no dice earlyvangelists, que es la palabra por la que se busca y la que da nombre a dos nodos vecinos del grafo. El nombre viaja como DENOMINACION dentro del paso."
+        },
+        {
+          "origenes": [
+            5,
+            21
+          ],
+          "cosa": "medir la reaccion real para validar o descartar",
+          "texto": "Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.",
+          "motivo": "SALVAGUARDA: el superviviente manda medir para validar y no dice contra que sesgo se lee la medicion. El paso 21 lo dice (no para expandir funciones) y el inciso se adosa al paso que protege."
+        },
+        {
+          "origenes": [
+            8,
+            14,
+            17,
+            22
+          ],
+          "cosa": "iterar o cambiar de rumbo si nadie la encuentra suficiente",
+          "texto": "Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental.",
+          "motivo": "ALCANCE: el superviviente manda iterar y no dice a que cadencia. Los pasos 14 y 16 traen la cadencia (ciclos cortos, incremental) y entra a la enumeracion del superviviente."
+        }
+      ],
+      "grupos_condiciones": [
+        {
+          "origenes": [
+            1,
+            2
+          ],
+          "cosa": "no se sabe cuando dejar de analizar y empezar a construir"
+        },
+        {
+          "origenes": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "cosa": "alguien quiere construir el producto completo con todas las funciones antes de validar"
+        },
+        {
+          "origenes": [
+            4
+          ],
+          "cosa": "ya hay earlyvangelists listos para probar"
+        },
+        {
+          "origenes": [
+            6,
+            10
+          ],
+          "cosa": "no hay evidencia todavia de que el problema sea real"
+        },
+        {
+          "origenes": [
+            8
+          ],
+          "cosa": "no esta claro que caracteristicas priorizar"
+        }
+      ],
+      "procedencia": [
+        {
+          "libro": "The Lean Startup - Eric Ries (fuente UNICA: la costura de este nodo es de un solo libro consigo mismo, cinco narraciones en fila)",
+          "pasos_del_resultado": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "pruebas_repeticion": [
+        {
+          "origenes": [
+            2,
+            6,
+            11,
+            15,
+            16,
+            19
+          ],
+          "huella_repetida": "conjunto mínimo de características"
+        },
+        {
+          "origenes": [
+            8,
+            14,
+            17,
+            22
+          ],
+          "huella_repetida": "Itera o cambia de rumbo si nadie"
+        },
+        {
+          "origenes": [
+            4,
+            7,
+            12,
+            20
+          ],
+          "huella_repetida": "earlyvangelists"
+        },
+        {
+          "origenes": [
+            3,
+            9,
+            13,
+            18
+          ],
+          "huella_repetida": "Agrega funciones nuevas solo"
+        }
+      ],
+      "pruebas_repeticion_condiciones": [
+        {
+          "origenes": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "huella_repetida": "construir un producto completo"
+        },
+        {
+          "origenes": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "huella_repetida": "antes de validar"
+        }
+      ],
+      "rastros": [
+        "hipótesis",
+        "pagaría por resolver",
+        "tu propia visión",
+        "para aprender",
+        "posible vender",
+        "early adopters",
+        "earlyvangelists",
+        "reacción real",
+        "expandir funciones",
+        "ciclos cortos",
+        "incremental",
+        "cambia de rumbo",
+        "mercado masivo",
+        "conjunto mínimo de características"
+      ],
+      "salidas": []
+    }
+  ]
+}

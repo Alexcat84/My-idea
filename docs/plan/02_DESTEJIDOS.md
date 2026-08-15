@@ -136,6 +136,131 @@ contra `customer_journey_mapping`, donde los dos estaban costurados y el solape 
 mapa contra mapa. **Es la segunda vez que aparece, y esta cae sobre el nodo que
 abre el plan.**
 
+### `OP-D-01` EJECUTADA (15 ago 2026, vuelta 32), y sus cuatro movimientos con su medicion
+
+**Nada de esta seccion viene de un acta ni de un reporte: todas las cifras salen de instrumentos
+corridos en esta misma vuelta, con su salida en `docs/loop/`.**
+
+#### MOVIMIENTO 1: el destejido del emblema, **HECHO**
+
+**`producto_minimo_viable` pasa de 22 pasos a SEIS y de 10 condiciones a CINCO**, sin que salga
+un solo bloque del nodo: su costura es de **fuente unica** (Ries consigo mismo, cinco
+narraciones en fila), asi que no hay material ajeno que destejer con destino, solo repetido que
+colapsar. Plan sellado en `docs/loop/PLAN_V32_OPD01_EMBLEMA.json`, ejecutado con
+`scripts/loop/vuelta32_podar.py`.
+
+**EL CRITERIO DEL SUPERVIVIENTE, escrito antes de aplicarlo para que se pueda auditar: de cada
+grupo de repeticion sobrevive EL DE INDICE MAS BAJO.** No es una preferencia estetica: es el
+unico criterio que no obliga a elegir entre frases que la ficha ya declaro equivalentes, y deja
+el orden propio del nodo en pie. **El resultado cae exactamente sobre la NARRACION 1 (pasos 1 a
+5), que es la que el propio `entregable_esperado` del nodo ya narraba**, mas el paso 8.
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | 1, 10 | **SALVAGUARDA**: el paso 10 trae la prueba de que alguien PAGARIA por resolverlo, y el inciso se adosa al paso que protege |
+| **2** | 2, 6, 11, 15, 16, 19 | **SALVAGUARDA**: los pasos 6, 15 y 19 nombran el sesgo (la lista larga de pedidos) que el superviviente no nombraba |
+| **3** | 3, 9, 13, 18 | **ALCANCE**: el paso 13 trae el segundo criterio de la excepcion (que sin ella no se pueda vender) y entra a la enumeracion |
+| **4** | 4, 7, 12, 20 | **NOMBRE** (banco 9.28): el superviviente decia *early adopters* y no *earlyvangelists*, que es la palabra por la que se busca y la que da nombre a dos nodos vecinos |
+| **5** | 5, 21 | **SALVAGUARDA**: el paso 21 dice contra que sesgo se lee la medicion (no para expandir funciones) |
+| **6** | 8, 14, 17, 22 | **ALCANCE**: los pasos 14 y 16 traen la cadencia (ciclos cortos, incremental) |
+
+**`DESTINO`, `METODO ALTERNATIVO` y `DIRECCION` no aplican, y por eso no se nombran.**
+
+> **UNA DISCREPANCIA DECLARADA EN VEZ DE RESUELTA COPIANDO, y es contra una cifra ya publicada.**
+> La ficha (`docs/FICHA_SUBFUSION_GRADIENTE.md`, seccion a) proyectaba **de veintidos pasos a
+> CINCO**. **La medicion de hoy, grupo por grupo, da SEIS**, y el sexto tiene nombre: *iterar o
+> cambiar de rumbo* (pasos 8, 14, 17 y 22) **es una cosa que la narracion 1 no contiene**. La
+> proyeccion de la ficha se queda escrita donde esta; **seis sigue dentro del estandar de 3 a
+> 6** que la propia ficha cita.
+
+| guarda | resultado |
+|---|---|
+| simulacion previa sobre copia en memoria | **verde** (`SALIDA_V32_OPD01_SIM.txt`) |
+| guarda de texto sobre TODOS los pasos y TODAS las condiciones | **22 de 22** y **10 de 10** calzan con su prefijo |
+| cero perdida, cobertura exacta sin huecos ni repetidos | **22 de 22** origenes en pasos, **10 de 10** en condiciones |
+| **caso positivo ANTES** | **0 PASAN, 8 CAEN** (`SALIDA_V32_OPD01_CASO_ANTES.txt`) |
+| **caso positivo DESPUES** | **8 PASAN, 0 CAEN** (`SALIDA_V32_OPD01_CASO_DESPUES.txt`) |
+| conservacion (pasa las dos veces a proposito, se cuenta aparte) | **14 rastros vivos, 0 muertos** |
+| fuente | **sin cambio**, Ries, unica |
+
+#### MOVIMIENTO 2: el destejido del pariente, **CONSUMIDO, y se dice con su medicion**
+
+**`principio_calidad_mvp` no tiene costura interna que destejer hoy, y no porque yo lo diga:
+porque el instrumento no dispara.** Medido con `scripts/loop/vuelta32_costura_opd01.py`, que
+importa las dos senales y los dos umbrales de `scripts/costuras_internas.py` en vez de
+copiarlos: **mejor pareja de pasos 51,2 contra un umbral de 80; mejor alineacion de bloques 0,0
+contra un umbral de 44. NINGUNA SENAL DISPARA.** (El emblema, ya destejido, da 50,3 y 0,0: los
+dos quedan por debajo de las dos varas.)
+
+**LAS TRES NARRACIONES QUE LA FICHA LE CONTABA YA NO ESTAN, y cada una tiene su fecha y su
+operacion:** la **TERCERA** (el conjunto minimo, pasos 11 a 14) **se la llevo `OP-F-03`**, y la
+**SEGUNDA** (lanzar rapido y aceptar el fallo, pasos 6 a 10) **se fundio con la PRIMERA en esta
+misma vuelta por `P.19`**, dentro de `OP-F-04-HOR`. **Queda UNA narracion, la de la calidad, y
+el destejido que esta operacion pedia ya esta consumido por esas dos operaciones.**
+
+> **EL NODO QUEDA EN SIETE PASOS, uno por encima del estandar de 3 a 6, y eso entra por la
+> puerta que la propia verificacion de esta operacion nombra:** *cada nodo resultante dentro del
+> estandar, **o dentro de la excepcion de clase de `OP-F-01`***. La firma escrita de esa clase
+> (`01_FUENTES.md`) es **superar el estandar SIN narracion repetida dentro**, y eso es
+> exactamente lo que el instrumento midio. **La excepcion se aplica por su criterio escrito, no
+> por pertenencia a la nomina de `OP-F-01`**, que es de otra operacion.
+
+#### MOVIMIENTO 3: el par **494**, releido con la vara ordinaria. **NO SE FUNDE**
+
+**La razon publicada del 494 apoyaba la clase A en una sola cosa**, y esta leida hoy en el
+archivo (`SALIDA_V32_OPD01_RELECTURA.txt`): *los pasos 11 al 14 del primero son el nucleo del
+segundo dicho otra vez*. **Esos pasos ya no existen.** Y el informe (§494) habia escrito la
+condicion por adelantado: *si el destejido conserva la narracion de la CALIDAD, el par deja de
+repetir*. **La conserva.**
+
+**LA VARA, aplicada en los DOS SENTIDOS y sobre LINEAS DISTINTAS:**
+
+| sentido | la linea | quien trae el procedimiento entero |
+|---|---|---|
+| **1** | `principio_calidad_mvp` paso 3, en UNA linea: *lanza al mercado real versiones simplificadas y mide la reaccion real* | **`producto_minimo_viable`**, con sus seis pasos: hipotesis, version minima, sin extras, early adopters, medir, iterar o pivotar |
+| **2** | `producto_minimo_viable` pasos 2 y 3, en UNA linea: *la version mas simple, sin funciones extra* (cuan simple es bastante simple) | **`principio_calidad_mvp`**, con su procedimiento de calidad: si sirve al aprendizaje, no asumir el estandar de la industria, distinguir el defecto de la fealdad, y decidir con el feedback si invertir en alta calidad |
+
+> **Es el banco 9.22, LA VARA EN LOS DOS SENTIDOS**, y por su letra el par es **`C`, sano CON
+> FIGURA, no `D`**: *ninguno de los dos es la madre, y fundirlos seria el error caro porque
+> borraria los dos procedimientos para dejar un nodo con dos lineas sueltas*. **El arreglo es
+> ENLACE MUTUO, dos aristas**, y **medido hoy en los dos sentidos NO HAY NINGUNA**: ni
+> `principio_calidad_mvp` nombra a `producto_minimo_viable` ni al reves.
+> **Seria el TERCER ejemplar del 9.22**, tras el 1077 y el 1240, y el primero que nace con el
+> enlace sin poner.
+
+#### MOVIMIENTO 4: **592** y **830**, releidos contra el superviviente
+
+**Los dos estaban en `B` por la MISMA causa y esa causa cayo hoy:** *un nodo averiado por dentro
+contamina todos los pares en los que entra, porque el veredicto se emite contra un texto que va
+a cambiar* (banco 9.4, el TOQUE UNICO). **El texto ya cambio y ya es estable.**
+
+| puesto | contra quien | lo que el otro trae y el emblema sigue sin decir, medido contra sus SEIS pasos de hoy | clase que sostengo |
+|---:|---|---|---|
+| **592** | `mvp_catalogo_tecnicas` | **la ESCALERA DE COSTO**: empezar por el MVP mas barato (hoja de datos, folleto, storyboard), subir en sofisticacion solo si lo primero promete, y usar herramientas a mano antes de pagar produccion profesional. **Ninguno de los seis pasos del emblema nombra el coste, el tipo de prototipo ni la herramienta.** Comparten el arranque (identificar la hipotesis critica) | **`D`, sano, con ARISTA QUE FALTA** hacia `mvp_catalogo_tecnicas` |
+| **830** | `prueba_mvp_alta_fidelidad` | **el AISLAMIENTO DE LA PRUEBA**: numero limitado de clientes invitados, llamada a la accion clara, cuantas visitas antes del primer uso, cuantos lo recomiendan y que tan rapido, y evitar publicidad, prensa o demostraciones publicas. **Ninguno de los seis pasos lo dice.** El solape (mostrar solo a los earlyvangelists) **era una de las ordenes que el emblema repetia CUATRO veces y ahora vive en UNA** | **`D`, sano, con ARISTA QUE FALTA** hacia `prueba_mvp_alta_fidelidad` |
+
+> **LA CLASE SE SOSTIENE CON LA PRACTICA MEDIDA DEL ARCHIVO, no con mi gusto:** barrido hoy
+> `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` entero, **los 207 veredictos cuya razon nombra ARISTA QUE
+> FALTA son `D`, los 207**. Y **medido hoy en los dos sentidos, ninguno de los dos pares tiene
+> arista**, que es lo que la razon del 592 ya decia (*sin arista*) y lo que el 830 no habia
+> mirado.
+
+#### LO QUE ESTA VUELTA **NO** ESCRIBE, y por que
+
+> **LAS TRES CLASES NUEVAS NO SE ESCRIBEN EN `INTRA_DOMINIO_VEREDICTOS.jsonl` EN ESTA VUELTA, y
+> no es timidez: es la letra de la propia operacion.** El campo `preservar` de `OP-D-01`, en su
+> correccion declarada del 15 ago 2026, dice: *si la relectura diera par nuevo, **entra por el
+> recomputo (banco 9.10)**, no se decide aqui de antemano*. **Volcarlas movería el marcador
+> publicado** (`A 583, B 89, C 7, D 2709` medido hoy al abrir esta vuelta) **y obligaria a
+> barrer en el mismo acto todas las tablas derivadas que citan esos tres numeros**, que es
+> exactamente lo que el 9.10 exige y lo que ninguna operacion de la fase 02 tiene escrito.
+> **Las tres lecturas quedan publicadas aqui con su evidencia, y la escritura va al recomputo.**
+
+> **LAS TRES ARISTAS TAMPOCO SE PONEN**, por el mismo motivo de letra: el campo `aristas_nuevas`
+> de `OP-D-01` esta **VACIO**, y los enlaces son la **fase 04** del indice, que va despues de
+> los destejidos y de las fusiones. **Quedan declaradas aqui, con su sentido y su motivo, para
+> que la fase 04 las encuentre escritas y no las tenga que redescubrir.**
+
 ---
 
 ## `OP-D-02`: LA VOZ DEL CLIENTE · **LISTA**
