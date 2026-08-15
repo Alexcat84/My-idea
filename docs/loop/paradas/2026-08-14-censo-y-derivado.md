@@ -105,3 +105,7 @@ reanudacion con este contenido, en tu orden:
 
 El bucle queda detenido. `PROMPT_SIGUIENTE.md` esta VACIO a proposito: nada corre
 hasta que tu decidas.
+
+DECISION DEL FUNDADOR (14 ago 2026): la prueba de censo pasa a PARIDAD contra el dato
+(camino a); plan_readiness.py entra al ciclo como cuarto comando condicional; y LA CITA
+LLEVA SU LINEA gana el renglon EL ESTADO AL CIERRE SE MIDE AL CIERRE. La fase 01 sigue.

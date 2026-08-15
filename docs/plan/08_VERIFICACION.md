@@ -52,6 +52,7 @@ linea 1 de la lista de arriba no decia.**
 | **1** | `python scripts/run_phase1.py --reaplico-curaduria` | **EXITCODE 0** y `GATE 0: OK` |
 | **2** | `python scripts/etiquetas_de_cara.py --aplicar`, corrido **JUSTO DESPUES** | `dataset/metadata/master_graph.json` **BYTE IDENTICO a HEAD**: el mismo hash de blob |
 | **3**, **CONDICIONAL** | `python scripts/sync_assets_web.py`, corrido **DESPUES del 2** y **SOLO cuando la operacion cambia el grafo** | **LAS DOS COPIAS byte identicas a HEAD**: `dataset/metadata/master_graph.json` y `web/lib/assets/master_graph.json` con el mismo hash de blob que HEAD |
+| **4**, **CONDICIONAL** | `python engine/plan_readiness.py`, corrido **DESPUES del 2 y ANTES del 3**, **SOLO cuando la operacion cambia el CENSO del grafo** | regenera `engine/node_families.json` desde `dataset/metadata/master_graph.json` fresco; la vara es la suite web (`web/lib/readiness.test.ts`, paridad exacta) **en verde despues del 3**, que es lo que sincroniza el derivado al asset que la suite lee |
 
 #### REGISTRO: **EL TERCER COMANDO, CONDICIONAL** (14 ago 2026, vuelta 26)
 
@@ -94,6 +95,36 @@ sincronizadas **no** calzan con el.
 **LO QUE SIGUE SIENDO ROJO, y por eso el registro no ablanda nada:** que las dos copias
 difieran **ENTRE SI** en cualquier momento, antes o despues del commit. **Esa es la averia que
 el comando 3 vino a cazar**, y no depende de contra que HEAD se mire.
+
+#### REGISTRO: **EL CUARTO COMANDO, CONDICIONAL** (14 ago 2026, decision del fundador)
+
+**Encargado por el acta de la vuelta 28 del auditor. Misma forma que el comando 3:
+condicional, y con su propio motivo escrito.** `python engine/plan_readiness.py`
+**regenera `engine/node_families.json`**, un artefacto DERIVADO que clasifica cada nodo
+en familias por palabra clave (el docstring de la herramienta lo dice con esas
+palabras: *regenera engine/node_families.json*). `web/lib/readiness.test.ts` exige
+**paridad exacta** contra ese derivado, y **el ciclo de dos comandos no lo regeneraba**:
+un nodo nuevo o deprecado cambiaba el censo del grafo, el derivado quedaba viejo, y la
+suite web caia por el desfase aunque el grafo mismo estuviera perfecto.
+
+> **ES CONDICIONAL Y NO SE CORRE SIEMPRE: solo cuando la operacion CAMBIA EL CENSO** (crea
+> o deprecia un nodo). En una operacion que no toca el censo (un reparto de bloque sin
+> nodo propio, un registro documental) **el comando 4 no aplica y no correrlo no es un
+> rojo**. En una que si lo toca, **saltarselo deja el derivado viejo y la que lo caza es
+> `readiness.test.ts`**, no el Gate: ninguna de las guardas de `Gate 0` mide familias.
+
+**EL ORDEN IMPORTA, y por eso el comando 4 corre ANTES del 3 aunque sea el ultimo en
+numero:** `plan_readiness.py` lee `dataset/metadata/master_graph.json` (fresco tras el
+comando 1) y escribe `engine/node_families.json`; `sync_assets_web.py` (comando 3) es
+quien copia ese fichero a `web/lib/assets/node_families.json`, que es lo que la suite
+web lee. Correr el 3 antes del 4 sincroniza el derivado VIEJO.
+
+**IMPLEMENTADO Y VERIFICADO (14 ago 2026), con caso positivo en arbol de trabajo
+temporal nunca commiteado:** un nodo nuevo en el censo, `readiness.test.ts` en ROJO
+(1 fallo, 3835 contra 3836) antes de correr el comando 4; corrido `plan_readiness.py`
+seguido de `sync_assets_web.py`, la suite pasa **3 de 3**. Ciclo completo corrido
+despues, con el nodo de prueba borrado: `Gate 0` OK, motor 24 de 24, web 80 ficheros con
+1.030 pasadas y 3 saltadas, `tsc` limpio, `dataset/` byte identico a HEAD.
 
 #### REGISTRO: **`git status` NO ES LA VARA DE ESTE FICHERO** (14 ago 2026)
 
@@ -215,6 +246,33 @@ pasada esperando una credencial que la casa reserva.
 > permiso para avanzar DURANTE la pasada, no una excepcion permanente: **sin el
 > reindexado corrido y el chequeo del indice semantico en verde como todos los demas,
 > la campaña no se declara consumada.**
+
+#### CORRECCION DECLARADA: **LA CIFRA DE CENSO DE LA SUITE WEB PASA A PARIDAD CONTRA EL DATO** (14 ago 2026, decision del fundador, camino a)
+
+**Resuelve la tercera hilada del muro, medida en el acta de la vuelta 28: la
+correccion del rojo declarado cubre el chequeo del indice semantico, no el censo.**
+`web/lib/engine/graph.test.ts` **clavaba `toBe(3835)` a mano** (*carga los 3835 nodos
+reales*), y cada nodo propio de la pasada la rompia, dejando el arbol incommitteable
+por una cifra que la campaña entera existe para mover.
+
+> ~~`expect(Object.keys(graph).length).toBe(3835)`~~ **LA PRUEBA MIDE PARIDAD CONTRA
+> `total_nodos`**, el campo que el compilador Python escribe en el mismo asset que
+> `cargarGrafo()` ya lee (`web/lib/assets/master_graph.json`). Verifica que el parser de
+> TypeScript no pierda un nodo en silencio, **sin pedir una edicion manual por
+> operacion**: un censo que se mueve legitimamente en `dataset/` mueve las dos cifras a
+> la vez, y la prueba queda verde sin tocarla.
+
+**IMPLEMENTADO Y VERIFICADO (14 ago 2026), con caso positivo en las DOS direcciones,
+en arbol de trabajo temporal nunca commiteado:**
+
+| direccion | como se probo | resultado |
+|---|---|---|
+| **un nodo quitado del grafo cargado la tumba** | se borro un id de `nodos` en `web/lib/assets/master_graph.json`, dejando `total_nodos` intacto en 3835 | **FALLO**, nombrando la diferencia exacta: *cargados 3834 vs total_nodos 3835* |
+| **un censo movido legitimamente la deja verde, sin editar la prueba** | se creo un nodo real en `dataset/nodos/` y se corrio el ciclo completo (comandos 1, 2 y 3), que mueve `nodos` y `total_nodos` juntos, a 3836 | **PASO**, sin tocar `graph.test.ts` |
+
+Ciclo completo corrido despues, con el nodo de prueba borrado: `Gate 0` OK, motor 24 de
+24, web 80 ficheros con 1.030 pasadas y 3 saltadas, `tsc` limpio, `dataset/` byte
+identico a HEAD.
 
 ---
 

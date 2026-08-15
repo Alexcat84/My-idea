@@ -12,6 +12,12 @@ lo que diga el encargo.
    se escribe CON LA MEDICION DEL DIA AL LADO: la linea del acta leida hoy, o
    el conteo corrido en esta vuelta. Si no hay linea que citar, la afirmacion
    no se escribe.
+   EL ESTADO AL CIERRE SE MIDE AL CIERRE (14 ago 2026; motivo: la caida de la
+   vuelta 28, donde la tabla del cierre traia la medicion de APERTURA
+   despues de que la propia vuelta la moviera). Toda tabla o cifra que
+   describa el estado al cerrar la vuelta se RECOMPUTA AL CIERRE si algo de
+   la propia vuelta pudo haberla movido: medir temprano y publicar tarde sin
+   remedir es la misma especie de caida que citar sin mirar.
 2. EL INSTRUMENTO MANDA (14 ago 2026; motivo: las caidas de las vueltas 15
    y 16 fueron las dos de esta especie). Toda cifra o nombre propio que se
    publique se lee de la salida del instrumento corrido EN ESTA VUELTA. Una

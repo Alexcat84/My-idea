@@ -1,5 +1,6 @@
 // Fase 3.0: verifica graph.ts contra el dataset real ya sincronizado.
 import { describe, expect, it } from "vitest";
+import masterGraphJson from "../assets/master_graph.json";
 import {
   cargarEntrySeeds,
   cargarGrafo,
@@ -11,9 +12,20 @@ import {
 } from "./graph";
 
 describe("cargarGrafo / cargarEntrySeeds / cargarPreguntasCache", () => {
-  it("carga los 3835 nodos reales (3742 + 46 compras + 47 entrega)", () => {
+  it("carga TODOS los nodos reales, paridad contra total_nodos (decision del fundador, 14 ago 2026)", () => {
+    // Antes clavaba 3835 a mano: cada nodo propio del plan la rompia y el
+    // guardian dejaba el arbol incommitteable. total_nodos lo escribe el
+    // compilador Python (step6_compile_master_graph) en el mismo asset que
+    // cargarGrafo() ya lee via masterGraphJson: mide que el parser de
+    // TypeScript no pierda un nodo en silencio, sin pedir edicion manual
+    // por operacion. Un censo que se mueve legitimamente en dataset/ (y por
+    // tanto en las dos cifras del asset a la vez) deja esta prueba verde
+    // sin tocarla; un nodo que se cae SOLO del lado cargado (grafo != total)
+    // la tumba nombrando la diferencia.
     const graph = cargarGrafo();
-    expect(Object.keys(graph).length).toBe(3835);
+    const total = (masterGraphJson as { total_nodos: number }).total_nodos;
+    const cargados = Object.keys(graph).length;
+    expect(cargados, `cargados ${cargados} vs total_nodos ${total}`).toBe(total);
   });
 
   it("carga las 20 puertas de entrada", () => {
