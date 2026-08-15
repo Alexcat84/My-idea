@@ -1,0 +1,29 @@
+﻿GRAFO LEIDO DE dataset/nodos: 3853 nodos, 3538 vivos, 315 deprecados
+==============================================================================
+
+--- CENSO DE ARISTAS ---
+  aristas distintas (union de las dos vistas): 8426
+  aristas cuya UNICA declaracion vive en un deprecado: 110
+  ... de esas, las que tocan a un VIVO en el otro extremo: 0
+  ... y las que son de deprecado a deprecado: 110
+
+  LAS QUE TOCAN A UN VIVO, una por linea (son las que el cambio deja
+  de escribir dentro de un nodo vivo):
+
+--- LOS CUATRO NODOS DE LA CAIDA 6.1 DE LA VUELTA 33 ---
+  enfoque_mercado_voc  (deprecado=True)
+     nodos_previos      ['procesamiento_paralelo_con_espirales']
+     nodos_siguientes   ['ventaja_competitiva_producto', 'front_end_homework', 'homework_frontend_loading']
+  homework_frontend_loading  (deprecado=False)
+     nodos_previos      ['voz_del_cliente_voc', 'actividades_clave', 'calidad_de_ejecucion_proceso_innovacion', 'enfoque_mercado_voc']
+     nodos_siguientes   ['definicion_producto_proyecto', 'ventaja_competitiva_producto', 'gestion_riesgo_incremental', 'reglas_gestion_riesgo_gambling']
+  procesamiento_paralelo_con_espirales  (deprecado=False)
+     nodos_previos      ['sistema_gates_go_kill', 'equipo_multifuncional_real']
+     nodos_siguientes   ['voz_del_cliente_voc', 'definicion_objetivos_proyecto_sistema', 'enfoque_mercado_voc']
+  ventaja_competitiva_producto  (deprecado=False)
+     nodos_previos      ['front_end_homework', 'voz_del_cliente_voc', 'estrategia_de_balas_de_plomo', 'homework_frontend_loading', 'enfoque_mercado_voc']
+     nodos_siguientes   ['gestion_riesgo_incremental', 'herramientas_computacionales_business_model', 'construccion_valor_intangible', 'apertura_llamada_venta_grande', 'reduccion_riesgo_percibido', 'valor_intangible_sostenibilidad', 'reglas_gestion_riesgo_gambling']
+
+--- QUE PASA HOY CON enfoque_mercado_voc ---
+  nodos VIVOS que lo nombran   : 3 ['homework_frontend_loading', 'procesamiento_paralelo_con_espirales', 'ventaja_competitiva_producto']
+  nodos MUERTOS que lo nombran : 1 ['front_end_homework']

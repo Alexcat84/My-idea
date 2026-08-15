@@ -274,6 +274,37 @@ Ciclo completo corrido despues, con el nodo de prueba borrado: `Gate 0` OK, moto
 24, web 80 ficheros con 1.030 pasadas y 3 saltadas, `tsc` limpio, `dataset/` byte
 identico a HEAD.
 
+#### REGISTRO: **EL DEPRECADO ES ARCHIVO, TAMBIEN EN EL RECIPROCADO** (15 ago 2026, decision del fundador, opcion a)
+
+**Encargado por el acta de la vuelta 33 del auditor** (`docs/loop/ACTA_AUDITOR.md`, seccion 6,
+PREGUNTA 1: *un nodo deprecado, conserva su cableado o no. Ninguna pagina lo dice*), **y decidido
+por el fundador el 15 ago 2026** en `docs/loop/paradas/2026-08-15-cableado-deprecado-y-costuras.md`.
+**Toca el comando 1 del ciclo por dentro, y por eso se registra aqui y no solo en la fase 02.**
+
+**LA AVERIA, medida en la vuelta 33 y publicada en rojo por el propio ejecutor:** una fusion
+depreca al absorbido **conservando su cableado** (que es lo que la hace auditable) y redirige a
+los vivos que lo nombraban. El **paso 5** del comando 1 leia entonces las listas del muerto, veia
+aristas *sin vista reciproca* y **devolvia el id del deprecado a los tres vivos**. El caso
+positivo de la fusion daba **23 de 23 antes del Gate y 22 de 23 despues**.
+
+> **LA REGLA, tal como queda escrita en el codigo:** una arista se simetriza **si la declara un
+> nodo VIVO**, en cualquiera de sus dos vistas. La que solo vive en las listas de un deprecado
+> **se conserva tal cual y no se le escribe a nadie**.
+
+**Y EL CHEQUEO DE SIMETRIA MIDE EL MISMO CONJUNTO QUE EL PASO 5 COMPLETA**, leyendo los dos la
+misma funcion pura (`aristas_a_simetrizar`). **No es comodidad: un Gate que exigiera simetria en
+aristas que el paso 5 ya no simetriza se pondria rojo por su propia politica, y la salida barata
+seria aflojar la comprobacion.**
+
+**LO QUE EL CHEQUEO DEJA DE EXIGIR, dicho para que nadie lo descubra tarde:** las aristas cuya
+unica declaracion vive en un deprecado. **Censo del dia en que se aplico** (`scripts/loop/
+vuelta34_reciprocado.py`, sobre `dataset/nodos`): **110**, y **las 110 son de deprecado a
+deprecado**.
+
+**LA GUARDA PERMANENTE ES UN FIXTURE, no una nota:** `engine/test_gate_deprecado_reciproco.py`
+entra a la suite del motor (que pasa de 24 a **25 ficheros**) y **guarda la regla en rojo y en
+verde**: la regla vieja vive dentro de la prueba, copiada literal, **y se exige que falle**.
+
 ---
 
 ## LA COMPROBACION QUE SOLO SE PUEDE HACER AL FINAL

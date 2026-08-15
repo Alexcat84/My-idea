@@ -1,0 +1,61 @@
+﻿GRAFO: 3853 nodos, 3538 activos
+Umbrales SIN TOCAR: pareja 80, bloque 44
+==============================================================================
+
+--- EL COSTO DEL CAMBIO, medido sobre el catalogo entero ---
+  nodos evaluados (2 pasos o mas)        : 3538
+  con senal de bloque VIEJA (n>=6)       : 561
+  con senal de bloque NUEVA (n>=4)       : 3285
+  NO APLICA con la nueva (n<4)           : 253
+  cola por PAREJA sola (no cambia)       : 5
+  COLA CON LA REGLA VIEJA (MIN_BLOQUE 3) : 122
+  COLA CON LA REGLA NUEVA (MIN_BLOQUE 2) : 1497   (42.3 por ciento del catalogo activo)
+  citas NUEVAS que entran                : 1375
+  citas que SALEN                        : 0
+
+--- LA ESCALA DEL PUNTAJE, que es lo que de verdad se mueve ---
+  VIEJA (media de las 3 mejores)   n= 165  p50 45.9  p90 51.4  p99 62.7  max 68.5
+  NUEVA (media de las 2 mejores)   n=2245  p50 45.8  p90 51.4  p99 56.7  max 72.6
+
+--- LOS NODOS QUE MANDA MIRAR LA DECISION, uno por uno ---
+  nodo                                           pasos  pareja   bloque VIEJO   bloque NUEVO
+  --- LA CALIBRACION CONOCIDA
+  plan_mejora_procesos                               5    47.1      NO APLICA 43.1 (corte 2)
+  economia_circular_como_modelo_de_negocio           5    54.3      NO APLICA 44.2 (corte 3)
+  --- EL APOYO DEL MOVIMIENTO 2 DEL ACTA 32
+  principio_calidad_mvp                              7    51.2  0.0 (corte 0) 45.8 (corte 5)
+  --- EL FALSO NEGATIVO QUE BAJO EL UMBRAL A 44
+  propuesta_gasto_capital                            5    53.2      NO APLICA  0.0 (corte 0)
+  --- LOS SEIS NODOS DE OP-D-03
+  ab_testing_optimizacion                           10    55.1  0.0 (corte 0) 49.5 (corte 8)
+  funnel_get_customers_optimizacion                  7    50.4  0.0 (corte 0) 45.0 (corte 3)
+  optimizacion_embudo_get_customers                  5    48.6      NO APLICA 44.4 (corte 3)
+  split_testing                                      4    48.8      NO APLICA 43.0 (corte 2)
+  split_testing_experimentos_ab                      5    45.6      NO APLICA 44.7 (corte 3)
+  test_ab_precio                                     5    54.5      NO APLICA 49.2 (corte 3)
+
+--- LA PUERTA DE CALIBRACION, con la regla nueva ---
+  plan_mejora_procesos                           NO ENTRA: la puerta seguiria roja
+  economia_circular_como_modelo_de_negocio       ENTRA EN LA COLA
+
+--- LOS VEINTE PRIMEROS DE LA COLA NUEVA, por la senal mas fuerte ---
+   1 diseno_de_procesos_por_caracteristicas         pasos  5 pareja  86.6 bloque   0.0 corte 0
+   2 ratios_eficiencia_inventario                   pasos  4 pareja  85.1 bloque  46.3 corte 2
+   3 tipos_innovacion_i_ii                          pasos  6 pareja  84.1 bloque  57.1 corte 3
+   4 dso_dpo_gestion_capital_trabajo                pasos  4 pareja  81.5 bloque  43.6 corte 2
+   5 control_estadistico_metodo_medicion            pasos  6 pareja  80.9 bloque  46.4 corte 2
+   6 customer_development_weekly_lessons_learned    pasos  6 pareja  76.4 bloque  60.8 corte 4
+   7 fases_traccion_producto                        pasos  7 pareja  76.3 bloque  72.6 corte 4
+   8 escenarios_futuros                             pasos  7 pareja  73.6 bloque  51.4 corte 5
+   9 reunion_conclusion_proyecto                    pasos 12 pareja  72.6 bloque  52.8 corte 6
+  10 producto_como_servicio_de_acceso               pasos  8 pareja  71.0 bloque  67.0 corte 4
+  11 investigar_datos_cliente                       pasos 11 pareja  70.5 bloque  63.2 corte 8
+  12 efecto_bullwhip                                pasos  6 pareja  69.7 bloque  53.0 corte 3
+  13 blue_ocean_four_actions                        pasos  7 pareja  68.4 bloque  66.1 corte 3
+  14 smed_setup_reduction                           pasos  5 pareja  67.9 bloque  54.0 corte 3
+  15 objetivos_de_llamada_orientados_a_avance       pasos  4 pareja  67.9 bloque  49.5 corte 2
+  16 reporte_estado_miembro_equipo                  pasos  6 pareja  67.2 bloque  57.8 corte 4
+  17 modelo_transformacion_juran                    pasos  4 pareja  67.1 bloque  51.2 corte 2
+  18 activity_attributes                            pasos  5 pareja  66.7 bloque  58.1 corte 3
+  19 ejecucion_incremental_transicion_tecnologica   pasos 16 pareja  66.7 bloque  55.9 corte 7
+  20 implementacion_monitoreo_controles             pasos  6 pareja  66.7 bloque  46.6 corte 3

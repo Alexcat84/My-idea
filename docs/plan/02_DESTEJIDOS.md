@@ -522,6 +522,53 @@ concepto. **La fuente NO cambia: los dos eran del mismo libro.**
 **71 etiquetas**; `plan_readiness.py` **3.853 nodos**; `sync_assets_web.py` verde. **Suites: motor
 24 de 24, web 80 ficheros con 1.030 pasadas y 3 saltadas, `tsc --noEmit` cero lineas.**
 
+#### LA CAIDA `6.1` **CERRADA** (15 ago 2026, vuelta 34), y con ella la redireccion queda ESTABLE
+
+**REGISTRO DE LAS DOS PIEZAS QUE LA CERRARON, cada una por su fecha.** El **acta de la vuelta 33
+del auditor** (15 ago 2026, Fable 5, `docs/loop/ACTA_AUDITOR.md`, seccion 6) declaro la
+**PREGUNTA 1** no adjudicable por extension: *un nodo deprecado, conserva su cableado o no.
+Ninguna pagina lo dice*. Y la **decision del fundador** (15 ago 2026,
+`docs/loop/paradas/2026-08-15-cableado-deprecado-y-costuras.md`, ultimo parrafo) la contesta por
+la **opcion a**: *el deprecado conserva su cableado como archivo y `Gate 0` deja de reciprocar
+aristas que nacen en deprecados*.
+
+**QUE SE TOCO DEL INSTRUMENTO SELLADO, y es una sola regla en dos funciones.** En
+`scripts/run_phase1.py` nace `aristas_a_simetrizar(nodes)`, funcion **pura**, que es la que
+decide que arista se completa: **entra la que declara un nodo VIVO**, en cualquiera de sus dos
+vistas. `step5_symmetrize` y `count_asymmetric_edges` **leen las dos la misma funcion**, y eso no
+es comodidad: un Gate que exigiera simetria en aristas que el paso 5 ya no simetriza se pondria
+rojo por su propia politica, **y la salida barata seria aflojar la comprobacion**.
+
+> **LA LECTURA ES POR DECLARACION, NO POR ORIGEN TOPOLOGICO, y la diferencia se dice porque es lo
+> unico que resuelve el sintoma:** si se leyera por el extremo *antes*, una arista declarada por
+> un vivo **hacia** un deprecado seguiria escribiendo el id del muerto dentro del vivo. **Lo que
+> se exime es lo que UNICAMENTE dice un muerto.**
+
+**EL CASO POSITIVO, EN ROJO Y EN VERDE, con la regla vieja viviendo dentro de la prueba**
+(`engine/test_gate_deprecado_reciproco.py`, corrido hoy, salida en
+`docs/loop/SALIDA_V34_CASO_RECIPROCADO.txt`): sobre el fixture con la figura exacta de una fusion,
+**la regla vieja devuelve 2 aristas del muerto a los vivos** y **la nueva ninguna**; y la prueba
+**exige que la vieja falle**, porque una prueba que solo mira la version nueva no distingue *la
+regla esta puesta* de *la averia nunca existio*.
+
+| medicion de hoy | resultado |
+|---|---|
+| censo previo sobre `dataset/nodos` (`scripts/loop/vuelta34_reciprocado.py`) | **110** aristas con su unica declaracion en un deprecado, **las 110 de deprecado a deprecado** y **0 tocando a un vivo**: al correr el censo, el Gate ya habia devuelto las tres |
+| redireccion rehecha (`scripts/loop/vuelta34_redirigir.py`, seis guardas) | **3 sitios vivos**, **0** que quedaran nombrando al absorbido; el cableado del archivo, **intacto**, y sus **5 pasos** sin tocar |
+| **caso positivo ANTES de rehacerla** | **22 PASAN, 1 CAE** (`SALIDA_V34_OPD02_CASO_ANTES.txt`), el mismo rojo que la vuelta 33 publico |
+| `Gate 0` tras el arreglo, **paso 5** | **0 nodos actualizados, 0 vistas completadas**: ya no hay nada que devolver |
+| **caso positivo DESPUES del ciclo entero de `Gate 0`** | **23 PASAN, 0 CAEN** (`SALIDA_V34_OPD02_CASO_TRAS_GATE0.txt`). **Esta es la cifra que prueba estabilidad**, porque se mide donde la otra caia |
+
+**Ciclo de `Gate 0` entero:** `GATE 0: OK`, **20 comprobaciones `[OK]`, 0 `[FALLO]`**, 3.853
+compilados, **3.538 activos y 315 deprecados**, simetria **0**; `etiquetas_de_cara --aplicar` 71;
+`sync_assets_web` verde. **Suites: motor 25 de 25** (el fixture nuevo es el 25), **web 80 ficheros
+con 1.030 pasadas y 3 saltadas**, **`tsc --noEmit` cero lineas**. La correccion va tambien
+**dentro del plan sellado**, en su bloque `correcciones_declaradas`, **con la cifra vieja de 22 de
+23 escrita dentro** (`scripts/loop/vuelta34_declarar_plan.py`).
+
+> **LO QUE ESTO NO DICE:** no dice que el caso positivo de la vuelta 33 estuviera mal medido.
+> **Estaba bien medido, y por eso se publico en rojo.** Lo que cambio es el instrumento de debajo.
+
 #### LOS TRES CONGELADOS, RELEIDOS Y VOLCADOS por el carril del `9.10`
 
 **Los tres estaban en `B` por el TOQUE UNICO del banco `9.4` y esa causa cayo hoy**: el

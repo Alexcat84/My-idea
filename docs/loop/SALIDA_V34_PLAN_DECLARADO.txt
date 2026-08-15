@@ -1,0 +1,17 @@
+﻿PLAN: PLAN_V33_OPD02_FUSION.json
+correcciones declaradas ANTES: 1
+  - vuelta 33, campo grupos_pasos[5].motivo (solo prosa; el ejecutor no lo consume)
+
+ENTRADA NUEVA:
+{
+  "fecha": "2026-08-15",
+  "vuelta": 34,
+  "campo": "redirecciones_esperadas (la medicion que las acompanaba, no el campo)",
+  "que_se_corrige": "El plan se sello con TRES redirecciones vivas y su caso positivo dio 23 de 23 ANTES de correr el Gate 0 y 22 de 23 DESPUES (la prueba que caia era 'ningun nodo VIVO sigue nombrando a enfoque_mercado_voc: quedan 3'). LA CIFRA VIEJA SE QUEDA ESCRITA: 22 de 23 tras Gate 0, publicada en rojo por el reporte de la vuelta 33, seccion 6.1.",
+  "la_causa_no_era_del_plan": "El paso 5 de scripts/run_phase1.py reciprocaba las aristas que nacen en nodos deprecados, y el absorbido conserva las suyas: el Gate devolvia el id del muerto a los tres vivos de los que la fusion lo habia quitado.",
+  "que_se_hizo": "Decision del fundador del 15 ago 2026, opcion a de docs/loop/paradas/2026-08-15-cableado-deprecado-y-costuras.md: el deprecado conserva su cableado como archivo y el Gate deja de reciprocar lo que nace en el. Con el paso 5 ya corregido se rehizo la redireccion con scripts/loop/vuelta34_redirigir.py (seis guardas, ninguna toca texto de nodo).",
+  "la_cifra_de_hoy": "23 PASAN, 0 CAEN, medido DESPUES del ciclo entero de Gate 0 (docs/loop/SALIDA_V34_OPD02_CASO_TRAS_GATE0.txt), y el paso 5 de esa corrida reporta 0 nodos actualizados: ya no hay nada que devolver.",
+  "lo_que_esto_no_dice": "No dice que el caso positivo de la vuelta 33 estuviera mal medido. Estaba bien medido y por eso se publico en rojo. Lo que cambio es el instrumento debajo."
+}
+
+VERIFICADO TRAS ESCRIBIR: 30 claves, 2 correcciones declaradas, y los campos operativos intactos (superviviente=voz_del_cliente_voc, absorbido=enfoque_mercado_voc, redirecciones_esperadas=3)

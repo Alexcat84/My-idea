@@ -366,21 +366,56 @@ def step4_cleanup_remaining(log):
 # sola vista. Si falta una de las dos, se completa aqui; el contenido
 # teorico no se toca, solo se agregan entradas a las listas existentes
 # (nunca se reordenan ni eliminan las ya declaradas).
+#
+# EL DEPRECADO ES ARCHIVO, TAMBIEN EN EL RECIPROCADO (decision del fundador,
+# 15 ago 2026, opcion a de docs/loop/paradas/2026-08-15-cableado-deprecado-y
+# -costuras.md). LA AVERIA QUE ESTO CIERRA, medida en la vuelta 33: una fusion
+# depreca al absorbido CONSERVANDO su cableado (eso es lo que la hace
+# auditable) y redirige a los vivos que lo nombraban. Acto seguido, este paso
+# leia las listas del absorbido, veia aristas "sin la vista reciproca" y
+# DEVOLVIA el id del muerto a los tres vivos de los que se acababa de quitar:
+# la redireccion de toda fusion duraba hasta la siguiente corrida del Gate.
+# Desde hoy, una arista cuya UNICA declaracion vive en un nodo deprecado no se
+# reciproca: el deprecado conserva su cableado tal cual, y no se lo escribe a
+# nadie.
 # ---------------------------------------------------------------------------
 
-def step5_symmetrize(log):
-    nodes, _ = load_all_nodes()
-    existing_ids = set(nodes)
+def aristas_a_simetrizar(nodes):
+    """Las aristas que este paso completa y que el Gate exige simetricas.
 
-    # Union de "antes -> despues" visto desde cualquiera de los dos extremos
+    Una arista entra si LA DECLARA UN NODO VIVO, en cualquiera de sus dos
+    vistas. Las que solo viven en las listas de un deprecado quedan fuera.
+
+    LA LECTURA ES POR DECLARACION, NO POR ORIGEN TOPOLOGICO, y la diferencia
+    importa: si se leyera por el extremo "antes", una arista declarada por un
+    vivo hacia un deprecado seguiria escribiendo el id del muerto dentro del
+    vivo, que es exactamente el sintoma que la decision manda cerrar.
+
+    Funcion PURA a proposito, como las tres barandas del alias: recibe el
+    diccionario de nodos y devuelve el conjunto, para que los fixtures la
+    prueben con grafos sinteticos sin recompilar nada
+    (engine/test_gate_deprecado_reciproco.py).
+    """
+    existing_ids = set(nodes)
     edges = set()
     for node_id, data in nodes.items():
+        if data.get("deprecado"):
+            continue
         for after in data.get("nodos_siguientes") or []:
             if after in existing_ids and after != node_id:
                 edges.add((node_id, after))
         for before in data.get("nodos_previos") or []:
             if before in existing_ids and before != node_id:
                 edges.add((before, node_id))
+    return edges
+
+
+def step5_symmetrize(log):
+    nodes, _ = load_all_nodes()
+
+    # Union de "antes -> despues" visto desde cualquiera de los dos extremos,
+    # DECLARADA POR UN VIVO (ver el recuadro de arriba).
+    edges = aristas_a_simetrizar(nodes)
 
     succ_needed = collections.defaultdict(set)
     pred_needed = collections.defaultdict(set)
@@ -436,23 +471,25 @@ def step5_symmetrize(log):
 
 
 def count_asymmetric_edges(nodes):
-    """Cuenta cuantas aristas siguen sin la vista reciproca completa."""
-    existing_ids = set(nodes)
+    """Cuenta cuantas aristas siguen sin la vista reciproca completa.
+
+    MIDE EXACTAMENTE EL MISMO CONJUNTO QUE `aristas_a_simetrizar` COMPLETA, y
+    eso no es una comodidad: un Gate que exigiera simetria en aristas que el
+    paso 5 ya no simetriza se pondria rojo por su propia politica, y la salida
+    barata seria aflojar la comprobacion. Las dos leen la misma funcion.
+
+    Lo que el chequeo deja de exigir queda dicho para que nadie lo descubra
+    tarde: las aristas cuya UNICA declaracion vive en un nodo deprecado. Esas
+    se conservan como estan (archivo), simetricas o no.
+    """
+    edges = aristas_a_simetrizar(nodes)
     missing_previo = 0
     missing_siguiente = 0
-    for node_id, data in nodes.items():
-        sig = set(data.get("nodos_siguientes") or [])
-        prev = set(data.get("nodos_previos") or [])
-        for after in sig:
-            if after in existing_ids:
-                other = nodes[after]
-                if node_id not in (other.get("nodos_previos") or []):
-                    missing_previo += 1
-        for before in prev:
-            if before in existing_ids:
-                other = nodes[before]
-                if node_id not in (other.get("nodos_siguientes") or []):
-                    missing_siguiente += 1
+    for antes, despues in edges:
+        if antes not in (nodes[despues].get("nodos_previos") or []):
+            missing_previo += 1
+        if despues not in (nodes[antes].get("nodos_siguientes") or []):
+            missing_siguiente += 1
     return missing_previo, missing_siguiente
 
 
