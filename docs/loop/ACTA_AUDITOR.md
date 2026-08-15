@@ -5940,3 +5940,268 @@ seguidas: TRES: LA PARADA POR PATRON DISPARA.**
 `docs/loop/PARA_ALEXIS.md` escrito con los motivos, el estado exacto, lo que se necesita
 y como retomar. `docs/loop/PROMPT_SIGUIENTE.md` VACIO a proposito. El bucle queda
 detenido esperando la decision de la casa.
+
+## VUELTA 28, 14 ago 2026. Auditor: Fable 5. Reporte auditado: la vuelta 28 del ejecutor (Opus 5), FASE III, rama pasada-unica: la relectura conjunta vuelca las dos discrepancias, HUGOS-SISTEMAS horneada, OP-F-04-WEI en parte, y una TERCERA hilada del muro medida en codigo. ESTA ACTA DETIENE EL BUCLE: la cifra de censo de la suite web es doctrina nueva, y la racha de caidas de reporte llega a cuatro tandas con la primera tras la cura del fundador
+
+### 1. VERIFICACION del reporte, todo con instrumento propio corrido HOY
+
+Todo se midio hoy contra el repo en `a9c88beb` (HEAD de la rama, con el reporte dentro);
+las cifras del reporte van como contraste, nunca como fuente.
+
+1. **Hashes y rutas: REPRODUCIDOS.** HEAD de partida `7563c85e` (la decision del
+   fundador); dos commits de trabajo (`4e6349ea`, `f69f4819`) mas el reporte, los tres
+   en `origin/pasada-unica`; arbol limpio. `git diff --stat 7563c85e..a9c88beb` sobre
+   `dataset/nodos/`: **11 ficheros, 37 insertadas, 37 borradas**, exacto. Salidas de
+   instrumento: **50 `SALIDA_V28_*` en los dos commits de trabajo mas 1 con el reporte,
+   51 en total**, contadas con `git diff --name-only`; la particion del reporte cuadra
+   al digito. `docs/loop/` en el tramo de trabajo: **52 ficheros**, exacto (54 con el
+   commit del reporte, que el propio reporte declara aparte).
+2. **El marcador, recomputado del archivo con script propio:** n **3.388**, puestos 1 a
+   3.388, **cero huecos, cero duplicados, cero clases fuera de ABCD**. **A 583 (17,2),
+   B 89 (2,6), C 7 (0,2), D 2.709 (80,0)**. La tabla por dominio del reporte se
+   reproduce **al digito en los diez dominios**. `SALIDA_V28_ESTADO.txt` y
+   `SALIDA_V28_ESTADO_FINAL.txt` son **byte identicas**, como el reporte dice.
+3. **El grafo:** 3.835 ficheros, 3.835 ids unicos, **3.521 vivos, 314 deprecados,
+   16.800 enlaces, 15 claves distintas**. Reproducido, y identico al de apertura:
+   la vuelta no creo ni deprecio nodos en el historial. El nodo deshecho
+   (`estrategia_circular_y_mecanismo_de_retorno`) **NO existe** en `dataset/nodos/`.
+   `docs/plan/INDICE_ROJO_DECLARADO.jsonl`: **0 bytes**, vacia.
+4. **Las operaciones:** 71 lineas, 71 ids unicos, cero dependencias rotas, las 71 en
+   LISTA. Reproducido.
+5. **El inventario:** 671 entradas al HEAD de partida, **672 hoy** (dominio 10, acto
+   556, racimo 13, familia_de_ids 54, figura 20, defecto 19). La entrada nueva es
+   `HUGOS-SISTEMAS`, tipo `familia_de_ids`, con **la nomina de nueve verificada por mi:
+   9 de 9 vivos y con fuente unica Hugos**, la cita de la adjudicacion 7 del acta 27 y
+   **la nota de alcance DENTRO de la entrada**, tal como el reporte dice.
+6. **Las familias, medidas hoy con el criterio del instrumento reproducido** (fuente
+   contiene el trozo, vivo; unica = sin separador de barra): Hugos **111 y 107**,
+   Rackham **47 y 47**, Coleman **83 y 68**, Horowitz (trozo `Hard Thing`) **102 y
+   88**: las cuatro exactas. **Weinberg (trozo `Traction`): HOY SON 76 y 67, no 80 y
+   67.** El hallazgo va en la seccion 3.
+7. **Los cinco cortes de WEI y la mudanza d4, verificados paso a paso contra el diff:**
+   los bloques salieron ENTEROS de los donantes, entraron TEXTUALES en los receptores,
+   y el resto de cada donante quedo intacto (el donante doble,
+   `sales_funnel_get_keep_grow`, quedo exactamente con sus pasos 1 a 4 originales).
+   Saldos al digito: 12 a 7 con 6 a 11; 8 a 4 con 5 a 9; 6 a 3 con 4 a 7; 10 a 4 con
+   5 a 10; y 5 a 6 en `compromiso_linea_tiempo_cliente`. La mudanza d4: 8 a 4 y 4 a 8,
+   y la huella *otro posicionamiento de precio* vive en **exactamente un nodo vivo**
+   (`framework_caracteristicas_ventajas_beneficios`). Las fuentes de los cuatro
+   donantes de WEI quedaron reducidas al libro que queda, que es el precedente
+   verificado en el acta 27, punto 9.
+8. **El muro, la tercera hilada LEIDA EN CODIGO por mi:** `web/lib/engine/graph.test.ts`
+   linea 16 clava **`toBe(3835)`** a mano (*carga los 3835 nodos reales*): mide el
+   CENSO, no el indice. `web/lib/readiness.test.ts` exige paridad exacta contra
+   `node_families.json`, que es un artefacto DERIVADO que `engine/plan_readiness.py`
+   regenera, y **el docstring de la herramienta lo dice con esas palabras** (*regenera
+   engine/node_families.json*). `.githooks/pre-commit` corre motor y web sin excepcion
+   escrita. Las dos salidas del muro calzan: con el nodo en el arbol, 2 ficheros y 2
+   pruebas en rojo (`SALIDA_V28_SUITE_WEB_RELECTURA.txt`); tras regenerar el derivado,
+   **1 y 1** (`SALIDA_V28_MURO_SUITE_WEB.txt`): el remedio mecanico cura la paridad y
+   deja el censo, exactamente lo que el reporte mide.
+9. **El ciclo de `GATE 0`, corrido ENTERO por mi:** `run_phase1.py --reaplico-curaduria`
+   da **exit 0 y GATE 0: OK**; `etiquetas_de_cara.py --aplicar` devuelve **71
+   etiquetas, cero ya en forma final** (no encoge); `sync_assets_web.py` deja las dos
+   copias del grafo en el blob **`0c284bc9`, byte identico a HEAD por las dos rutas**,
+   arbol limpio al cerrar. El blob del primer tramo tambien cuadra: **`05bab97f`** en
+   las dos copias de `4e6349ea`.
+10. **Las suites, corridas enteras por mi:** motor **24 de 24, exit 0**; web **80
+    ficheros, 1.030 pasadas y 3 saltadas, exit 0**; `tsc --noEmit` **cero lineas,
+    exit 0**.
+11. **Las cinco citas del fundador: 5 de 5 PRESENTES, FALLOS 0**, con `P.18` en las
+    cuatro `OP-F-04` una por una (instrumento corrido hoy). Los registros de la TAREA 1
+    estan donde el reporte dice: la relectura conjunta y las tres adjudicaciones en
+    `01_FUENTES.md`, el registro de la cola en `08_VERIFICACION.md` con su primera
+    costura (`ejecucion_incremental_transicion_tecnologica`, **16 pasos medidos por
+    mi**), y los casos positivos con sus salidas ANTES que caen y DESPUES que pasan.
+    Los planes sellados existen y `PLAN_V28_RELECTURA.json` es **ejecutable contra el
+    arbol de hoy**: sus prefijos calzan con los pasos 6 a 9 que hoy viven en
+    `modelo_simulacion_cadena_suministro_circular`.
+
+### 2. RELECTURA CIEGA, empezando por los discutibles marcados
+
+**Limite declarado, como en la 26 y la 27:** lei `REPORTE.md` entero antes de leer un
+solo paso, asi que la ceguera es parcial. Los pasos los lei del grafo y del diff con
+instrumento propio; las razones largas del ejecutor (`01_FUENTES.md`, planes sellados)
+se destaparon despues de formar mi clase, pero las razones en una linea ya estaban
+vistas.
+
+**Ocho relecturas de fondo: siete dentro del marcado (discutibles 1, 2, 7, 8, 9, 10,
+11) y una fuera (el corte de `fit_problema_solucion`). LAS OCHO COINCIDEN. Los otros
+seis discutibles (3, 4, 5, 6, 12, 13) son de conducta o doctrina y van en la seccion 4.**
+
+| # | caso | mi lectura sobre los pasos | veredicto |
+|---|---|---|---|
+| d1 | `economia_circular` 6 a 9 a nodo propio | el miembro SIMULA (sus cinco pasos originales) y el bloque ELIGE y DISENA; era mi propio caso del acta 27 y la medicion de hoy lo sostiene; la frase del entregable que el reporte se refuta a si mismo la verifique contra el nodo: el entregable del miembro ES el modelo de simulacion con P y L | **COINCIDE** |
+| d2 | `superioridad_producto_beneficios` 7 a 10 a `framework_...` | los cuatro pasos que quedan en `diferencia_ventaja_beneficio` son todos de momento; el entregable del miembro nuevo es la clasificacion de mensajes y su paso 3 es el paso premium del bloque; era mi caso del acta 27, aplicado y verificado en el grafo | **COINCIDE** |
+| d7 | `plan_de_adquisicion_acquire` 8 a 12 a `bullseye_framework` | lei `middle_ring_testing` entero: **no tiene el paso de listar los 19 canales**, su objeto es el anillo medio; el bloque es la diana entera | **COINCIDE** |
+| d8 | `earned_vs_paid_media` 5 a 8 a `publicidad_offline_pruebas_locales` | el mas debil de los cinco, y el ejecutor lo marco: los pasos 5 a 7 seleccionan medio y el miembro PRUEBA. El objeto compartido (probar barato el medio offline antes de escalar, con la cuenta de alcance contra precio) lo sostiene, y ningun otro miembro de la familia esta mas cerca | **COINCIDE, con la nota** |
+| d9 | partir el apendice de `sales_funnel` en 5 a 9 y el 10 | el paso 10 (*timeline claro de compra y compromiso explicito si o no*) es palabra por palabra el objeto de `compromiso_linea_tiempo_cliente` (sus pasos 2 y 3); meterlo en la clasificacion ABC seria el encaje que `P.18` punto 3 prohibe | **COINCIDE** |
+| d10 | frontera 1 a 10 / 11 a 15 de `ab_testing_optimizacion` | verificada la firma de persona sobre los pasos: 1 a 10 en infinitivo, 11 a 15 tutean; el vocabulario de 11 a 15 es Weinberg (canal nucleo, saturacion). La duda del tercer bloque (6 a 10) es real y esta bien dejada a la fase 02 con su nota de costura | **SOSTENIDA** |
+| d11 | frontera 1 a 5 / 6 a 14 de `key_partners_hypothesis` | 1 a 5 es Canvas; 6 a 14 es Weinberg, y los dos sub bloques (6 a 10 meta de traccion y Critical Path; 11 a 14 alianza por cuello de botella) se distinguen leyendo; declarar que no se sabe si son uno o dos, en vez de elegir, es la conducta que la regla 11 manda | **SOSTENIDA** |
+| f1 | `fit_problema_solucion` 4 a 6 a `fases_traccion_producto` (fuera del marcado) | el calce es casi gemelo literal: los pasos del bloque repiten 1, 2 y 4 del miembro con otras palabras; el destino es el correcto y la repeticion que crea va a la seccion 3 | **COINCIDE** |
+
+**Nota del barrido de d1, con mi instrumento y mi cifra:** mi barrido propio sobre los
+111 vivos de Hugos (titulo, resumen y entregable, claves *circular*, *sostenib*,
+*verde*) da **cuatro nodos con la palabra, no tres**: los dos incidentales del reporte,
+el miembro, y `scor_model_operaciones` (*sostenibilidad* en el resumen del marco SCOR).
+Lo lei: su objeto es el modelo SCOR de operaciones, incidental tambien. **La conclusion
+de fondo no se mueve: ningun miembro de Hugos tiene por objeto elegir la estrategia
+circular y disenar el retorno.** La cifra *tres aciertos* del reporte es de un barrido
+cuyo criterio no quedo publicado; la mia queda aqui con el suyo.
+
+### 3. DOS HALLAZGOS FUERA DEL MARCADO: una caida de reporte y una omision de registro
+
+**1. CAIDA DE REPORTE, con nombre: LAS FAMILIAS *AL DIA* DEL REPORTE TRAEN A WEINBERG
+EN 80 VIVOS, Y AL CIERRE DE LA VUELTA ERAN 76.** La tabla de la seccion 2 del reporte
+(*LAS FAMILIAS AL DIA, medidas hoy*) publica **80 y 67**, que es la medicion de
+APERTURA de la tanda WEI (`SALIDA_V28_FAMILIA_WEINBERG.txt`, corrida antes del
+reparto). El reparto de ESA MISMA VUELTA corrigio la fuente de los cuatro donantes
+(el apendice de Traction salio y la fuente se redujo al libro que queda), y la cuenta
+bajo a **76 vivos y 67 con fuente unica, medidos por mi al HEAD del reporte**. Es la
+misma aritmetica de resta de donantes que el reporte SI declaro como contraste para
+Hugos y Rackham frente a la vuelta 27, no declarada para su propia tanda. La cifra
+vive solo en `REPORTE.md` y no mueve ningun dato: **caida de REPORTE por la regla
+afinada del 13 ago**, FUERA de los discutibles marcados: **el credito de la tanda baja
+y el tramo se releyo AL DOBLE** (hecho: toda cifra publicada del reporte remedida en la
+seccion 1, y la relectura de fondo extendida fuera del marcado).
+
+**2. OMISION DE REGISTRO, adjudicada a correccion: LAS COSTURAS QUE LOS PROPIOS CORTES
+DE WEI CREARON NO ENTRARON A LA COLA.** El registro que ESTA MISMA vuelta escribio en
+`08_VERIFICACION.md` dice: *una repeticion que un reparto de la fase 01 crea dentro de
+un miembro entra a la nomina de la fase 02 como costura nueva*. La vuelta declaro la
+primera costura (la de la 27) y despues ejecuto WEI, que crea al menos tres: medidas
+por mi, `fases_traccion_producto` (7 pasos; los tres injertados repiten sus pasos 1, 2
+y 4 casi literales), `clasificacion_leads_abc` (10 pasos; mismas categorias y mismas
+cifras dos veces) y `bullseye_framework` (11 pasos; listar los 19 y comparar viven dos
+veces). Ninguna quedo en la cola. **No es afirmacion falsa (el reporte no dice que no
+las hubiera): es la regla recien registrada aplicada a medias.** No mueve cifra ni
+clase; la correccion queda ENCARGADA para la reanudacion: declarar las tres (y revisar
+`publicidad_offline_pruebas_locales`, solape parcial) en la cola con su medicion, sin
+destejer nada.
+
+### 4. ADJUDICACIONES de esta vuelta
+
+1. **Pregunta 1, pendiente 2 y discutible 3 (la cifra de censo de
+   `web/lib/engine/graph.test.ts`): PARADA CONFIRMADA, doctrina nueva.** La correccion
+   del fundador del 14 ago cubre *el chequeo del indice semantico* y sus tres sedes;
+   esta prueba no mide el indice, mide el censo, y leerle una guarda mas seria leerle
+   intencion, no letra: las tres razones de la seccion 5 del acta 27 aplican enteras.
+   Decidir si la cifra se actualiza a mano, se deriva del dato, o entra a un mecanismo
+   como la lista versionada, es pluma del fundador. **Declararla en vez de editarla un
+   minuto fue lo correcto: el minuto no es el problema, la regla que falta lo es.**
+2. **Pregunta 2, pendiente 1 y discutible 4 (correr `engine/plan_readiness.py` sin
+   pagina que lo mande): CONDUCTA CORRECTA, y el cuarto comando va a la casa.** El
+   remedio es mecanico, esta escrito en el docstring de la propia herramienta,
+   regenera un artefacto derivado sin decidir ningun dato, y quedo declarado con su
+   salida. Y NO escribirlo en `08_VERIFICACION.md` fue igual de correcto: anadir un
+   comando a la pagina de la vara es doctrina, y es la misma pared que la
+   adjudicacion 1 (las dos preguntas se contestan juntas o el muro vuelve).
+3. **Pregunta 3 y pendiente 3 (`OP-F-04-HOR`, *va a familia propia*): ADJUDICADA POR
+   CITA, Y LA TANDA NO ESTA BLOQUEADA EN BLOQUE.** El REGISTRO del fundador (14 ago
+   2026) escrito en la nota de la propia `OP-F-04-HOR` en `OPERACIONES.jsonl` dice:
+   *cuando el bloque apendice de esta tanda va a su familia y no a nodo propio, el
+   miembro receptor se decide por P.18... y si ninguno coincide el bloque forma nodo
+   propio dentro de la familia*. La familia de Horowitz EXISTE (102 vivos, 88 con
+   fuente unica, medidos hoy). *Familia propia* en la tabla de decisiones de
+   `01_FUENTES.md` es la familia del propio libro, en paralelo exacto con *se reune
+   con SPIN*, *con el Bullseye*, *con los 100 dias* de las otras tres tandas. **HOR se
+   ejecuta como WEI: miembro por `P.18` sobre la nomina medida al dia; solo el bloque
+   sin miembro coincidente toca el muro.** La prediccion del reporte (*previsiblemente
+   bloqueada*) queda corregida por la letra citada; traer la pregunta en vez de
+   adivinar fue la conducta correcta.
+4. **Pregunta 4 (`OP-F-04-WEI` PARCIAL): SI, POR EXTENSION CITADA** de la adjudicacion
+   1 del acta 27: una operacion con bloques bloqueados o pendientes de lectura queda
+   PARCIAL con su cuenta medida (hoy: cinco cortes sobre 4 de sus 13 nodos, nueve
+   bloques con frontera leida y destino por leer). Se declara HECHA cuando su
+   verificacion este entera.
+5. **Discutible 5 (deshacer el nodo propio por segunda vuelta consecutiva): CORRECTO,
+   por el precedente del acta 27 (adjudicacion 4).** La diferencia real (aqui ya se
+   habia parado dos veces por muro) no cambia el calculo: el plan sellado preserva la
+   ejecucion entera con su caso positivo probado, y el arbol commiteable preserva todo
+   lo demas de la vuelta. Nada se perdio: lo compruebo en la seccion 1.
+6. **Discutible 6 (ejecutar WEI en parte pese al orden del encargo): CORRECTO, por la
+   letra del modo continuo y el precedente del acta 27 (adjudicacion 5).** La guarda
+   roja detuvo exactamente lo que crea nodos; lo ejecutado no dependia de `OP-F-02` ni
+   de `OP-F-03`, corrio con sus guardas en verde (verificadas por mi), y la
+   reordenacion quedo declarada como tal en el reporte.
+7. **Discutible 12 (la nota de alcance de `HUGOS-SISTEMAS`): CORRECTO.** La nomina
+   leida no se presenta como barrido exhaustivo, y la nota vive DENTRO de la entrada,
+   donde el que la lea de mas se la encuentra.
+8. **Discutible 13 (no escribir `PARA_ALEXIS.md`): CORRECTO,** por el precedente doble
+   (actas 26 y 27): esa pluma es del auditor.
+9. **Discutible 1, el texto nuevo del nodo propuesto: VERIFICADO EN SU GUARDA, fondo
+   diferido.** El plan sellado trae el corte, los prefijos leidos del grafo de hoy y el
+   motivo por `P.18`; el caso positivo esta probado en las dos direcciones. Mi lectura
+   ligera de hoy: el titulo, el resumen y el entregable son sintesis fiel de los cuatro
+   pasos, sin claim inventado. **El fondo se relee el dia que el plan se aplique, con
+   el corte en el arbol** (precedente: acta 27, adjudicacion 9).
+
+### 5. ERRORES PROPIOS de esta vuelta, con nombre
+
+1. **Mi primer conteo de la familia Weinberg a la apertura filtro por `git grep` sobre
+   el fichero ENTERO y no por el campo `fuente`:** dio 81 y 68, contando a
+   `identificar_earlyvangelists`, que nombra Traction en su cuerpo y no en su fuente.
+   Cazado cotejando contra el roster del instrumento y remedido en la misma corrida
+   contra el campo real: 80 y 67 exactos a la apertura, 76 y 67 al cierre. Es la
+   especie del error 1 del acta 27 (reproducir el criterio a medias), reincidida por
+   mi, y por eso lleva nombre. Ninguna cifra publicada alcanzada.
+2. **Mi primer script del grafo leyo la clave `id` donde el esquema dice `node_id`:**
+   fallo ruidoso, rehecho contra el esquema real en la misma corrida. Especie del
+   error 2 del acta 27. Ninguna cifra alcanzada.
+3. **Mi primer cotejo de bloques comparo texto decodificado en dos codificaciones
+   distintas** (la salida de `git show` en cp1252 contra el fichero en utf-8) y dio un
+   falso *no textual* en todo paso con acento. Cazado leyendo el detalle antes de
+   publicar, remedido decodificando utf-8: los seis movimientos son textuales. Ninguna
+   cifra alcanzada.
+
+### 6. METRICA DE CREDITO acumulada
+
+Entrante tras la vuelta 27: 37 relecturas, 393 puestos (mas 90 nodos de forma y 24
+sitios de codigo), 7 caidas de clase, mas 11 caidas de reporte del ejecutor, mas 4
+caidas de cifra publicada del ejecutor, mas 2 caidas de cifra publicada del auditor,
+mas 1 caida de acta del auditor. Tandas seguidas con caida de clase o cifra: CERO.
+Caidas de reporte seguidas: TRES, con la parada por patron disparada en la 27 y curada
+por el fundador con la regla 1 del `EJECUTOR.md`.
+
+Esta tanda (la vuelta 28 del ejecutor): cero pares y cero puestos; mas 1 relectura (la
+tanda entera, al doble); mas **18 nodos leidos de forma** (donantes con su bloque,
+receptores antes y despues, candidatos y los dos FAB), en unidad propia. Ocho
+adjudicaciones de fondo: **las ocho coinciden, cero discrepancias de fondo**. **UNA
+caida de REPORTE del ejecutor con nombre, FUERA del marcado** (Weinberg *al dia* con la
+medicion de apertura): el credito de la tanda baja, el tramo releido al doble, hecho.
+**UNA omision de registro adjudicada a correccion** (las costuras de WEI a la cola),
+fuera del marcado, sin mover dato. Caidas de clase o de cifra publicada: CERO.
+
+**Acumulado: 38 relecturas, 393 puestos (mas 108 nodos de forma y 24 sitios de
+codigo), 7 caidas de clase, mas 12 caidas de reporte del ejecutor, mas 4 caidas de
+cifra publicada del ejecutor, mas 2 caidas de cifra publicada del auditor, mas 1 caida
+de acta del auditor. Tandas seguidas con caida de clase o cifra: CERO. Caidas de
+reporte seguidas: CUATRO (24, 26, 27, 28), la de hoy la PRIMERA TRAS LA CURA del 14
+ago.** La de hoy es de especie vecina, no identica: el ejecutor SI midio en la vuelta
+(la regla nueva se cumplio en su letra), pero presento la medicion de apertura como
+estado *al dia* despues de que su propio reparto la moviera. El peso de esa racha, con
+la cura recien puesta, se lleva a `PARA_ALEXIS.md`: re-disparar la parada por patron
+por mi cuenta seria re-litigar lo que el fundador acaba de decidir, y callarme la racha
+seria mentir con el marcador.
+
+### 7. CONDICIONES DE PARADA: SE CUMPLEN Y EL BUCLE SE DETIENE
+
+- **DOCTRINA NUEVA NECESARIA (tercera hilada del muro):** la cifra de censo clavada en
+  `web/lib/engine/graph.test.ts` (adjudicacion 1) y, con ella, la pregunta del cuarto
+  comando condicional del ciclo (`engine/node_families.json`, adjudicacion 2). Ninguna
+  regla escrita las cubre por extension citable; la pasada entera existe para mover el
+  censo y cada nodo propio del plan choca con la misma pared. Bloquea `OP-F-02`
+  entera, cinco bloques de `OP-F-03`, la correccion 1 de la relectura conjunta, y el
+  cierre de la fase 01.
+- **LA RACHA DE DICTADO, registrada con su peso:** cuarta tanda seguida con caida de
+  reporte, la primera despues de la regla nueva del fundador (seccion 6). Se registra
+  como condicion tocada por la letra de la regla afinada y se deja a la casa la
+  ponderacion de si la cura necesita refuerzo.
+- Las demas, repasadas: nada reservado se toco (dataset solo por las operaciones
+  escritas; cero merges; el guardian intacto; el `.env` fuera del repo; ningun verde
+  falseado: el hook corrio en los dos commits); Gate 0, ciclo y suites verdes por su
+  corrida entera mia; campana consumada: NO.
+
+`docs/loop/PARA_ALEXIS.md` escrito con los motivos, el estado exacto, lo que se
+necesita y como retomar. `docs/loop/PROMPT_SIGUIENTE.md` VACIO a proposito. El bucle
+queda detenido esperando la decision de la casa.
