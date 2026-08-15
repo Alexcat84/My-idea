@@ -579,13 +579,33 @@ declaran.**
 | `comunicacion_proactiva_puntos_estres` | los pasos 5 a 7 de `blueprint_de_experiencia` | **7 pasos contra 4**. El nuevo 6 contra su 1 (los momentos de alta incertidumbre o ansiedad) y el nuevo 7 contra sus 2 y 3 (los mensajes en los momentos criticos) |
 | `fase_acclimate_mapa_de_proceso` | los pasos 14, 16 y 17 de `blueprint_de_experiencia` | **8 pasos contra 5**. El nuevo 6 contra sus 1 y 2 (mapear todos los pasos y hacer el grafico) y el nuevo 7 contra su 3 (comunicaciones atadas a hitos). **El nuevo 8, el responsable por punto de contacto, NO repite nada** |
 | `fase_accomplish_experiencia_cliente` | los pasos 5 a 9 de `metas_vs_proposito` | **10 pasos contra 5, y el solape es PARCIAL**: los nuevos 6 y 7 afinan su 1 (separar el objetivo declarado del deseo real, donde su 1 solo pide definir el objetivo) y el nuevo 8 se monta sobre su 2 (el sistema de seguimiento). Los nuevos 9 y 10 no repiten nada |
-| `investigar` y `conexion_personal_emocional` | el paso 11 de `ganar_comprension_del_cliente` | **5 pasos contra 4**. El nuevo 5 (*prioriza datos personales y emocionales*) contra sus 1 y 2 (*clasifica los datos en personales, emocionales o ambos* y *da prioridad a los que caen en ambas*): **es el mismo criterio**. La fila lleva los dos nombres porque el bloque del donante se partio entre este destino y el anterior |
+| ~~`investigar` y `conexion_personal_emocional`~~ **FILA VIEJA, TACHADA, no borrada: ver la correccion declarada debajo de la tabla** | ~~el paso 11 de `ganar_comprension_del_cliente`~~ | ~~**5 pasos contra 4**. El nuevo 5 (*prioriza datos personales y emocionales*) contra sus 1 y 2 (*clasifica los datos en personales, emocionales o ambos* y *da prioridad a los que caen en ambas*): **es el mismo criterio**. La fila lleva los dos nombres porque el bloque del donante se partio entre este destino y el anterior~~ |
+| **`conexion_personal_emocional`** (fila corregida, 15 ago 2026, vuelta 32) | el paso 11 de `ganar_comprension_del_cliente` | **5 pasos contra 4**. El nuevo 5 (*prioriza datos personales y emocionales*) contra sus 1 y 2 (*clasifica los datos en personales, emocionales o ambos* y *da prioridad a los que caen en ambas*): **es el mismo criterio**. **UN SOLO DESTINO**: la otra mitad del bloque partido (los pasos 7 a 10) ya tiene su propia fila arriba, bajo `investigar_datos_cliente` |
 | `calibracion_intensidad_celebracion` | el paso 12 de `blueprint_de_experiencia` | **4 pasos contra 3**. El unico que entro repite sus 1 y 2 (calibrar la celebracion a la categoria de producto y no sobreactuar) |
 | `construccion_tribu_de_marca` | el paso 5 de `relaciones_con_clientes` | **5 pasos contra 4, solape PARCIAL**: el que entro (*rituales o simbolos que representen los valores centrales*) se cruza con su 3 (*elementos visuales o simbolicos que permitan mostrar afiliacion*), pero el suyo es el simbolo del que PERTENECE y el nuevo es el simbolo del VALOR |
 | `handoff_transicion_ventas_cuentas` | el paso 15 de `blueprint_de_experiencia` | **6 pasos contra 5**. El que entro (*redisena el traspaso para que no se pierda informacion ni calidez*) es **el paraguas de sus 1 a 4**, que son ese rediseno en detalle: no repite un paso, repite el conjunto |
 | `persuasion_directivos_prioridad_cliente` | los pasos 6 a 9 de `retention_metrics` | **8 pasos contra 4, solape PARCIAL, uno de cuatro**: el nuevo 8 (*presentar el impacto financiero de la perdida temprana al equipo directivo*) contra su 1 (*reune estadisticas del sector sobre perdida de clientes y su impacto en las ganancias*). Los nuevos 5, 6 y 7 son la cuenta propia y no repiten |
 | `timing_solicitud_referidos` | el paso 9 de `estrategia_crecimiento_clientes` | **5 pasos contra 4, solape PARCIAL**: el que entro (*comunica el programa en la fase Adopt o Advocate*) se cruza con sus 1 y 2 (el punto de logro y el disparador a los 30 dias), que es el mismo momento dicho por otra via |
 | `silla_vacia_del_cliente_en_decisiones` **(NODO NUEVO, no miembro)** | el paso 12 de `cultura_de_experiencia` **y** el paso 9 de `customer_journey_mapping` | **2 pasos, y los dos son el mismo objeto**: *incorporar un simbolo o recordatorio del cliente en las reuniones internas* y *colocar una silla vacia representando al cliente en cada reunion interna*. **El nodo NACE con la costura dentro y con nada mas**, y entra por esta puerta por el registro de arriba (el disparador es la repeticion, no el domicilio). **Los dos pasos fueron al MISMO nodo a proposito**, por la adjudicacion 3 del acta de la vuelta 27: partirlos habria fabricado el gemelo |
+
+> **CORRECCION DECLARADA, 15 ago 2026 (vuelta 32): EL NOMBRE `investigar` NO EXISTE EN EL
+> GRAFO, y la fila vieja se queda entera arriba, tachada.** La caida la conto el acta de la
+> vuelta 31 en su seccion 3, como caida de CIFRA PUBLICADA fuera del marcado: el destino que
+> esa fila nombraba en primer lugar no es un id del catalogo. **Medido hoy, nodo por nodo,
+> sobre `dataset/nodos/`:** `dataset/nodos/investigar.json` **NO EXISTE**;
+> `conexion_personal_emocional` **SI existe**, con **5 pasos** y fuente unica *Never Lose a
+> Customer Again - Joey Coleman*; `investigar_datos_cliente` **SI existe**, con **11 pasos** y
+> la misma fuente unica. **Y el plan sellado de la operacion lo dice sin ambiguedad**
+> (`docs/loop/PLAN_V31_OPF04_COL.json`, leido hoy): el bloque de
+> `ganar_comprension_del_cliente` se partio en **DOS cortes con DOS destinos distintos**, *los
+> pasos [7, 8, 9, 10] de 11* a **`investigar_datos_cliente`** y *los pasos [11] de 11* a
+> **`conexion_personal_emocional`**. **La fila de esta costura tiene UN destino, no dos**: la
+> otra mitad ya esta contada en su propia fila. **La cuenta de la tanda no se mueve** (21
+> destinos, 17 con costura, 4 sin ella): lo que estaba mal era el NOMBRE de un destino, no su
+> numero. **Lo que la caida ensena, y por eso se escribe aqui:** el nombre de un destino que
+> se escribe a mano en una tabla de prosa no pasa por el resolutor, y `investigar` es
+> justamente el nombre que el motivo `P.18` del corte hermano usa para el PRIMER paso del
+> metodo IOPS de Coleman, no para un nodo.
 
 > **LOS CUATRO DESTINOS SIN COSTURA, dichos con su nombre para que la cuenta cierre:**
 > `personalizacion_guiada_por_el_cliente`, `incentivos_internos_alineados_a_retencion`,
