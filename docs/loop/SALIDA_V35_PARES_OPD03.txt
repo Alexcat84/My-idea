@@ -1,0 +1,64 @@
+﻿GUARDA DE NOMINA: la linea del plan esta, literal. Los seis se leen de ahi.
+
+--- LOS SEIS NODOS HOY, con sus pasos y la fecha de su ultimo cambio ---
+  ab_testing_optimizacion                 5 pasos   ultimo cambio: 2026-08-15 2a45f346
+  optimizacion_embudo_get_customers       5 pasos   ultimo cambio: 2026-08-14 1eef1c6b
+  split_testing_experimentos_ab           5 pasos   ultimo cambio: 2026-08-14 407d4d9f
+  funnel_get_customers_optimizacion       7 pasos   ultimo cambio: 2026-08-08 33265c05
+  split_testing                           4 pasos   ultimo cambio: 2026-07-11 fa2e6011
+  test_ab_precio                          5 pasos   ultimo cambio: 2026-07-11 fa2e6011
+
+--- LOS QUINCE PARES INTERNOS, uno por uno ---
+puesto clase id_a                                 id_b                                 leido / cambio
+1061   D     ab_testing_optimizacion              optimizacion_embudo_get_customers    leido 2026-08-15 801c59f9
+                                                  a: cambio 2026-08-15 2a45f346
+                                                  b: cambio 2026-08-14 1eef1c6b
+738    D     ab_testing_optimizacion              split_testing_experimentos_ab        leido 2026-08-15 801c59f9
+                                                  a: cambio 2026-08-15 2a45f346
+                                                  b: cambio 2026-08-14 407d4d9f
+452    A     ab_testing_optimizacion              split_testing                        leido 2026-08-10 9748e6df
+                                                  a: cambio 2026-08-15 2a45f346
+                                                  b: cambio 2026-07-11 fa2e6011
+1575   A     ab_testing_optimizacion              test_ab_precio                       leido 2026-08-11 d4f97f72
+                                                  a: cambio 2026-08-15 2a45f346
+                                                  b: cambio 2026-07-11 fa2e6011
+277    A     funnel_get_customers_optimizacion    optimizacion_embudo_get_customers    leido 2026-08-10 0ba1718c
+                                                  a: cambio 2026-08-08 33265c05
+                                                  b: cambio 2026-08-14 1eef1c6b
+374    A     split_testing                        split_testing_experimentos_ab        leido 2026-08-10 49153bfe
+                                                  a: cambio 2026-07-11 fa2e6011
+                                                  b: cambio 2026-08-14 407d4d9f
+1571   A     split_testing_experimentos_ab        test_ab_precio                       leido 2026-08-11 d4f97f72
+                                                  a: cambio 2026-08-14 407d4d9f
+                                                  b: cambio 2026-07-11 fa2e6011
+643    A     split_testing                        test_ab_precio                       leido 2026-08-10 6e3dcc6e
+                                                  a: cambio 2026-07-11 fa2e6011
+                                                  b: cambio 2026-07-11 fa2e6011
+
+pares encontrados: 8 de 15
+PARES SIN REGISTRO EN EL ARCHIVO (7):
+   ab_testing_optimizacion contra funnel_get_customers_optimizacion
+   optimizacion_embudo_get_customers contra split_testing_experimentos_ab
+   optimizacion_embudo_get_customers contra split_testing
+   optimizacion_embudo_get_customers contra test_ab_precio
+   split_testing_experimentos_ab contra funnel_get_customers_optimizacion
+   funnel_get_customers_optimizacion contra split_testing
+   funnel_get_customers_optimizacion contra test_ab_precio
+
+--- EL VEREDICTO DE P.5, par por par ---
+  al dia   1061  D   leido 2026-08-15
+  al dia   738   D   leido 2026-08-15
+  RANCIO   452   A   leido 2026-08-10, y cambiaron DESPUES: ab_testing_optimizacion
+  RANCIO   1575  A   leido 2026-08-11, y cambiaron DESPUES: ab_testing_optimizacion
+  RANCIO   277   A   leido 2026-08-10, y cambiaron DESPUES: optimizacion_embudo_get_customers
+  RANCIO   374   A   leido 2026-08-10, y cambiaron DESPUES: split_testing_experimentos_ab
+  RANCIO   1571  A   leido 2026-08-11, y cambiaron DESPUES: split_testing_experimentos_ab
+  al dia   643   A   leido 2026-08-10
+
+RANCIOS: 5 de 8. Puestos: [277, 374, 452, 1571, 1575]
+de ellos con clase A: [277, 374, 452, 1571, 1575]
+
+--- CONTRASTE CONTRA EL REPORTE DE LA VUELTA 34 (no es fuente, es contraste) ---
+el reporte nombro DOS: 452 y 1575.
+medidos hoy: [277, 374, 452, 1571, 1575]
+DISCREPA. La discrepancia se declara, no se resuelve copiando (regla 2).

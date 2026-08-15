@@ -1,0 +1,142 @@
+﻿==============================================================================
+ab_testing_optimizacion   [COSTURA declarada por el plan]
+==============================================================================
+  dominio    : core
+  titulo     : A/B Testing para Optimización Web/Mobile
+  fuente     : The Startup Owner's Manual - Steve Blank
+  deprecado  : False
+  alias      : []
+  etiqueta   : Compara Versiones, Mejora Resultados
+  PASOS (5):
+     1. Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro) y contando también la ubicación de CTA, el copy, la prueba social y el número de campos de formulario.
+     2. Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipótesis de cambios grandes antes que las de pequeños ajustes.
+     3. Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba durante semanas enfocándose en una sola métrica a la vez.
+     4. Medir resultados de conversión/activación para cada versión
+     5. Implementar la versión ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente métrica cuando se agoten las ideas.
+  CONDICIONES (2):
+     1. Cuando el startup ya tiene tráfico web/mobile pero necesita mejorar tasas de conversión
+     2. Cuando se busca optimizar continuamente cualquier paso del funnel de adquisición
+  ENTREGABLE : Plan de pruebas A/B con elementos priorizados, resultados documentados y decisión sobre la versión ganadora
+  RESUMEN    : 
+  previos    : ['hipotesis_relacion_clientes_web', 'customer_jobs', 'copy_testing', 'heat_maps_eye_tracking', 'usability_testing_producto']
+  siguientes : ['cohort_analysis_retencion', 'optimizacion_grow_customers', 'funnel_get_customers_optimizacion', 'analisis_de_cohortes', 'optimizacion_metricas_crecimiento']
+
+==============================================================================
+funnel_get_customers_optimizacion   [SANO segun el plan]
+==============================================================================
+  dominio    : core
+  titulo     : Optimización del Embudo 'Get Customers' (Adquisición y Activación)
+  fuente     : The Startup Owner's Manual - Steve Blank
+  deprecado  : False
+  alias      : []
+  etiqueta   : Optimiza tu Embudo de Clientes
+  PASOS (7):
+     1. Revisar resultados de cada programa 'get' implementado (SEO, ads, referidos, etc.)
+     2. Identificar el programa más productivo y escalarlo primero
+     3. Diseñar tests pass/fail para los programas más decepcionantes
+     4. Identificar comportamiento de clientes de alto LTV y buscar más similares
+     5. Probar variedad de ofertas, incentivos, descuentos y límites de tiempo
+     6. Revisar diariamente las 10-12 métricas clave con el 'data chief'
+     7. No optimizar demasiados programas a la vez para evitar resultados confusos
+  CONDICIONES (2):
+     1. Cuando el startup ya tiene tráfico pero necesita convertir más visitantes en clientes activados
+     2. Cuando se requiere escalar los canales de adquisición más efectivos
+  ENTREGABLE : Plan de optimización secuencial del funnel 'get' con métricas diarias monitoreadas y dashboard de seguimiento
+  RESUMEN    : 
+  previos    : ['ab_testing_optimizacion', 'customer_jobs', 'metricas_de_adquisicion_activacion']
+  siguientes : ['optimizacion_keep_retencion', 'optimizacion_grow_customers', 'cohort_analysis_retencion', 'analisis_de_cohortes', 'keep_customers_strategy', 'optimizacion_metricas_crecimiento']
+
+==============================================================================
+optimizacion_embudo_get_customers   [COSTURA declarada por el plan]
+==============================================================================
+  dominio    : core
+  titulo     : Optimización del Embudo 'Conseguir Clientes'
+  fuente     : The Startup Owner's Manual - Steve Blank
+  deprecado  : False
+  alias      : []
+  etiqueta   : Prueba, Mide y Ajusta Etapas
+  PASOS (5):
+     1. Asegurar que existan MVP de alta fidelidad, plan de adquisición/activación y dashboard funcionando
+     2. Definir métricas específicas a optimizar (volumen, costo, conversión) según el tipo de negocio web (e-commerce, mercado multi-lado, marketplace)
+     3. Ejecutar pruebas A/B controladas cambiando no más de dos variables a la vez
+     4. Calcular LTV y compararlo con CAQ antes de escalar inversión en adquisición
+     5. Iterar continuamente: testear, medir, ajustar y volver a testear
+  CONDICIONES (1):
+     1. Cuando ya existen datos reales de comportamiento de usuarios y se busca mejorar la eficiencia del embudo de ventas
+  ENTREGABLE : Plan de optimización activo con métricas de volumen, costo y conversión mejorando iterativamente, y validación de que LTV supera al CAQ
+  RESUMEN    : 
+  previos    : ['customer_validation_sell_phase', 'build_metrics_toolset', 'hire_data_analytics_chief']
+  siguientes : ['customer_creation']
+
+==============================================================================
+split_testing   [SANO segun el plan]
+==============================================================================
+  dominio    : core
+  titulo     : Split Testing (A/B Testing)
+  fuente     : Value Proposition Design
+  deprecado  : False
+  alias      : []
+  etiqueta   : Compara Opciones con Datos Reales
+  PASOS (4):
+     1. Define las variaciones a testear (precio, copy, features, packaging).
+     2. Divide el tráfico equitativamente entre las opciones (control vs. challenge).
+     3. Mide la tasa de conversión del CTA para cada variante.
+     4. Asegura significancia estadística superior al 95% antes de concluir.
+  CONDICIONES (1):
+     1. Cuando existen múltiples alternativas de propuesta de valor, precio o mensaje que se necesitan comparar
+  ENTREGABLE : Resultados comparativos de conversión entre variantes con significancia estadística.
+  RESUMEN    : 
+  previos    : ['landing_page_mvp', 'ad_tracking', 'call_to_action_cta']
+  siguientes : ['mock_sales', 'presales']
+
+==============================================================================
+split_testing_experimentos_ab   [COSTURA declarada por el plan]
+==============================================================================
+  dominio    : core
+  titulo     : Split-Testing (Pruebas A/B)
+  fuente     : The Lean Startup - Eric Ries
+  deprecado  : False
+  alias      : []
+  etiqueta   : Prueba Versiones, Mide Resultados
+  PASOS (5):
+     1. Definir una hipótesis clara sobre el impacto esperado de una nueva funcionalidad
+     2. Dividir la base de clientes en dos grupos aleatorios (A y B)
+     3. Lanzar la variación nueva solo al grupo B, manteniendo el grupo A con la versión estándar
+     4. Medir comportamiento de ambos grupos usando las mismas métricas
+     5. Comparar resultados para determinar si la variación tuvo impacto real
+  CONDICIONES (2):
+     1. Si el equipo no puede determinar con certeza qué causó un cambio en las métricas
+     2. Si se quiere decidir entre priorizar nuevas funcionalidades sin desperdiciar recursos de desarrollo
+  ENTREGABLE : Reporte de resultados de al menos un experimento A/B con conclusiones sobre el impacto de una funcionalidad en el comportamiento del cliente
+  RESUMEN    : 
+  previos    : ['producto_minimo_viable', 'vanity_metrics_vs_accionables', 'metricas_accionables']
+  siguientes : ['metricas_cohortes', 'kanban_validacion_aprendizaje']
+
+==============================================================================
+test_ab_precio   [SANO segun el plan]
+==============================================================================
+  dominio    : core
+  titulo     : Test A/B de Precio
+  fuente     : Value Proposition Design
+  deprecado  : False
+  alias      : []
+  etiqueta   : Compara Precios con Experimentos
+  PASOS (5):
+     1. Definir las variantes a testear (ej. precio de venta vs. modelo de renta)
+     2. Implementar el test en un canal real (sitio web, landing page)
+     3. Ejecutar múltiples rondas para afinar el precio óptimo
+     4. Medir el porcentaje de usuarios que prefieren cada variante
+     5. Seleccionar el precio o modelo validado con mayor conversión
+  CONDICIONES (2):
+     1. Cuando existe incertidumbre sobre el precio o modelo de ingresos adecuado
+     2. Cuando se tienen múltiples opciones de monetización viables
+  ENTREGABLE : Un precio o modelo de monetización validado con datos de conversión reales de al menos cientos de usuarios testeados.
+  RESUMEN    : 
+  previos    : ['biblioteca_experimentos_validacion', 'get_out_building_test_sell', 'mvp_catalogo_tecnicas']
+  siguientes : ['lienzo_modelo_negocio']
+
+==============================================================================
+LAS ARISTAS INTERNAS DEL ACTO, buscadas en LOS DOS SENTIDOS
+==============================================================================
+  ab_testing_optimizacion nombra a funnel_get_customers_optimizacion   (siguientes=True, previos=False)
+  funnel_get_customers_optimizacion nombra a ab_testing_optimizacion   (siguientes=False, previos=True)

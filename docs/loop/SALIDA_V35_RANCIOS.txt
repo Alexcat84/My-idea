@@ -1,0 +1,62 @@
+﻿--- LOS PARES REGISTRADOS DEL ACTO, con la vara de TEXTO ---
+
+puesto 1061  clase D    ab_testing_optimizacion contra optimizacion_embudo_get_customers
+   leido en 801c59f9 (2026-08-15)
+   ab_testing_optimizacion                pasos entonces  5, hoy  5  -> IDENTICOS
+   optimizacion_embudo_get_customers      pasos entonces  5, hoy  5  -> IDENTICOS
+   VEREDICTO: al dia
+
+puesto 738   clase D    ab_testing_optimizacion contra split_testing_experimentos_ab
+   leido en 801c59f9 (2026-08-15)
+   ab_testing_optimizacion                pasos entonces  5, hoy  5  -> IDENTICOS
+   split_testing_experimentos_ab          pasos entonces  5, hoy  5  -> IDENTICOS
+   VEREDICTO: al dia
+
+puesto 452   clase A    ab_testing_optimizacion contra split_testing
+   leido en 9748e6df (2026-08-10)
+   ab_testing_optimizacion                pasos entonces 15, hoy  5  -> CAMBIARON
+   split_testing                          pasos entonces  4, hoy  4  -> IDENTICOS
+   VEREDICTO: RANCIO por texto
+
+puesto 1575  clase A    ab_testing_optimizacion contra test_ab_precio
+   leido en d4f97f72 (2026-08-11)
+   ab_testing_optimizacion                pasos entonces 15, hoy  5  -> CAMBIARON
+   test_ab_precio                         pasos entonces  5, hoy  5  -> IDENTICOS
+   VEREDICTO: RANCIO por texto
+
+puesto 277   clase A    optimizacion_embudo_get_customers contra funnel_get_customers_optimizacion
+   leido en 0ba1718c (2026-08-10)
+   funnel_get_customers_optimizacion      pasos entonces  7, hoy  7  -> IDENTICOS
+   optimizacion_embudo_get_customers      pasos entonces 10, hoy  5  -> CAMBIARON
+   VEREDICTO: RANCIO por texto
+
+puesto 374   clase A    split_testing_experimentos_ab contra split_testing
+   leido en 49153bfe (2026-08-10)
+   split_testing                          pasos entonces  4, hoy  4  -> IDENTICOS
+   split_testing_experimentos_ab          pasos entonces  9, hoy  5  -> CAMBIARON
+   VEREDICTO: RANCIO por texto
+
+puesto 1571  clase A    split_testing_experimentos_ab contra test_ab_precio
+   leido en d4f97f72 (2026-08-11)
+   split_testing_experimentos_ab          pasos entonces  9, hoy  5  -> CAMBIARON
+   test_ab_precio                         pasos entonces  5, hoy  5  -> IDENTICOS
+   VEREDICTO: RANCIO por texto
+
+puesto 643   clase A    split_testing contra test_ab_precio
+   leido en 6e3dcc6e (2026-08-10)
+   split_testing                          pasos entonces  4, hoy  4  -> IDENTICOS
+   test_ab_precio                         pasos entonces  5, hoy  5  -> IDENTICOS
+   VEREDICTO: al dia
+
+==============================================================================
+RANCIOS POR TEXTO: 5
+   277   A    optimizacion_embudo_get_customers de 10 a 5 pasos
+   374   A    split_testing_experimentos_ab de 9 a 5 pasos
+   452   A    ab_testing_optimizacion de 15 a 5 pasos
+   1571  A    split_testing_experimentos_ab de 9 a 5 pasos
+   1575  A    ab_testing_optimizacion de 15 a 5 pasos
+AL DIA: 3 -> [(643, 'A'), (738, 'D'), (1061, 'D')]
+
+RANCIOS DE CLASE A: [277, 374, 452, 1571, 1575]
+Y SON LOS QUE SOSTIENEN LAS FAMILIAS: una A rancia es una arista de familia
+dibujada sobre un texto que ya no existe.
