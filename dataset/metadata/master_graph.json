@@ -1,6 +1,6 @@
 {
   "version": "0.2.0",
-  "total_nodos": 3838,
+  "total_nodos": 3839,
   "nodos": {
     "6s_lugar_trabajo": {
       "node_id": "6s_lugar_trabajo",
@@ -38630,7 +38630,8 @@
         "business_model_environment_mapping"
       ],
       "nodos_siguientes": [
-        "escalamiento_prematuro"
+        "escalamiento_prematuro",
+        "estrategia_circular_y_mecanismo_de_retorno"
       ],
       "condiciones_activacion": [
         "Cuando la empresa opera bajo un modelo lineal de extracción-producción-desecho y busca sostenibilidad",
@@ -45978,6 +45979,30 @@
         "Cuando la ventana de oportunidad es limitada y necesitas priorizar la velocidad sobre la perfección."
       ],
       "etiqueta_arbol": "Muévete Rápido en Mercados Nuevos"
+    },
+    "estrategia_circular_y_mecanismo_de_retorno": {
+      "node_id": "estrategia_circular_y_mecanismo_de_retorno",
+      "fase_proyecto": "planificacion",
+      "dominio": "core",
+      "titulo_concepto": "Elección de Estrategia Circular y Diseño del Mecanismo de Retorno",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+      "resumen_teorico": "Decidir que tu negocio será circular no dice todavía por dónde empieza. Antes de simular nada y antes de invertir, hay un acto propio: mirar el ciclo de vida que tu producto tiene HOY, compararlo con las cinco estrategias circulares y elegir en cuál de ellas tu negocio tiene más potencial real. Elegida la estrategia, hay que diseñar el mecanismo que la hace posible, el retorno del producto o su remanufactura, y recién entonces poner números: cuánto mejora la sostenibilidad y cuánto mueve tus costos de materiales y de logística. La elección y el mecanismo son el insumo de la simulación, no su resultado.",
+      "pasos_accionables": [
+        "Mapear el ciclo de vida actual de tu producto (lineal vs circular)",
+        "Identificar en cuál de las cinco estrategias circulares tiene mayor potencial tu negocio",
+        "Diseñar un mecanismo de retorno o remanufactura si aplica",
+        "Calcular el impacto en sostenibilidad y en costos de materiales/logística"
+      ],
+      "entregable_esperado": "La estrategia circular elegida para tu negocio, con el mecanismo de retorno o remanufactura diseñado y el impacto calculado en sostenibilidad y en costos de materiales y logística",
+      "nodos_previos": [
+        "economia_circular_como_modelo_de_negocio"
+      ],
+      "nodos_siguientes": [],
+      "condiciones_activacion": [
+        "Cuando ya decidiste que tu modelo de negocio será circular y hay que elegir por cuál de las cinco estrategias empezar",
+        "Antes de simular o dimensionar la cadena, porque la simulación necesita una estrategia y un mecanismo ya elegidos para comparar"
+      ],
+      "etiqueta_arbol": "Elige tu Estrategia Circular"
     },
     "estrategia_competencia_vcs": {
       "node_id": "estrategia_competencia_vcs",
@@ -75430,11 +75455,7 @@
         "Usar el método del centro de gravedad para ubicar instalaciones de recolección/hubs",
         "Correr simulaciones de al menos 14 días con distintos supuestos de oferta y demanda",
         "Generar reportes de P&L y KPIs a partir de los datos simulados",
-        "Comparar diseños alternativos de cadena de suministro antes de la inversión real",
-        "Mapear el ciclo de vida actual de tu producto (lineal vs circular)",
-        "Identificar en cuál de las cinco estrategias circulares tiene mayor potencial tu negocio",
-        "Diseñar un mecanismo de retorno o remanufactura si aplica",
-        "Calcular el impacto en sostenibilidad y en costos de materiales/logística"
+        "Comparar diseños alternativos de cadena de suministro antes de la inversión real"
       ],
       "entregable_esperado": "Modelo de simulación funcional con reporte de P&L y KPIs para al menos dos escenarios de diseño de cadena de suministro",
       "nodos_previos": [
@@ -117330,6 +117351,7 @@
       "estimacion_costos_actividad",
       "estimacion_inversion_inicial_franquiciador",
       "estimacion_tres_puntos",
+      "estrategia_circular_y_mecanismo_de_retorno",
       "estrategia_competencia_vcs",
       "estrategia_cuatro_capacidades_mercado",
       "estrategia_de_innovacion_arenas",
@@ -119313,6 +119335,7 @@
       "estimate_at_completion_eac",
       "estrategia_anuncios_sociales_respuesta_indirecta",
       "estrategia_captura_mercado_crecimiento",
+      "estrategia_circular_y_mecanismo_de_retorno",
       "estrategia_competencia_vcs",
       "estrategia_crecimiento_clientes",
       "estrategia_cuatro_capacidades_mercado",
@@ -122486,7 +122509,7 @@
   },
   "stats": {
     "componentes_conexos": 1,
-    "tamano_componente_principal": 3838,
+    "tamano_componente_principal": 3839,
     "cobertura_componente_principal_pct": 100.0,
     "nodos_sin_enlaces_entrantes": 6,
     "enlaces_rotos_en_grafo": 0

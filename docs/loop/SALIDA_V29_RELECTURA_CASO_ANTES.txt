@@ -1,0 +1,12 @@
+CASO POSITIVO: OP-F-03 (recomputo de la relectura conjunta del acta 27) [REBANADA de la vuelta 29: solo la mudanza PENDIENTE]
+==============================================================================
+
+d2 del acta 27: modelo_simulacion_cadena_suministro_circular -> estrategia_circular_y_mecanismo_de_retorno   huella 'cinco estrategias circulares'
+  [CAE ] modelo_simulacion_cadena_suministro_circular ya no lleva la huella
+  [CAE ] estrategia_circular_y_mecanismo_de_retorno si la lleva
+         el destino AUN NO EXISTE
+  [PASA] la huella vive en exactamente UN nodo vivo
+         portadores: ['modelo_simulacion_cadena_suministro_circular']
+
+==============================================================================
+RESULTADO: HAY PRUEBAS QUE CAEN

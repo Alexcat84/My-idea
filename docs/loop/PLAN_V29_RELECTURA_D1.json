@@ -1,0 +1,50 @@
+{
+  "operacion": "OP-F-03 (recomputo de la relectura conjunta del acta 27) [REBANADA de la vuelta 29: solo la mudanza PENDIENTE]",
+  "motivo": "RELECTURA CONJUNTA de las dos discrepancias del acta de la vuelta 27, seccion 2. Las dos VOLTEAN. Correccion declarada en docs/plan/01_FUENTES.md: el texto de la lectura anterior se queda entero.",
+  "fecha_corte": "2026-08-14",
+  "mudanzas": [
+    {
+      "caso": "d2 del acta 27",
+      "huella": "cinco estrategias circulares",
+      "desde": "modelo_simulacion_cadena_suministro_circular",
+      "procedencia": "economia_circular_como_modelo_de_negocio",
+      "pasos_totales": 9,
+      "pasos_que_salen": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "prefijos": [
+        "Mapear el ciclo de vida actual de tu producto",
+        "Identificar en cuál de las cinco estrategias ",
+        "Diseñar un mecanismo de retorno o remanufactu",
+        "Calcular el impacto en sostenibilidad y en co"
+      ],
+      "fuente_esperada_desde": "Essentials of Supply Chain Management - Michael H. Hugos",
+      "destino": {
+        "tipo": "nodo_propio",
+        "nuevo": {
+          "node_id": "estrategia_circular_y_mecanismo_de_retorno",
+          "fase_proyecto": "planificacion",
+          "dominio": "core",
+          "titulo_concepto": "Elección de Estrategia Circular y Diseño del Mecanismo de Retorno",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
+          "resumen_teorico": "Decidir que tu negocio será circular no dice todavía por dónde empieza. Antes de simular nada y antes de invertir, hay un acto propio: mirar el ciclo de vida que tu producto tiene HOY, compararlo con las cinco estrategias circulares y elegir en cuál de ellas tu negocio tiene más potencial real. Elegida la estrategia, hay que diseñar el mecanismo que la hace posible, el retorno del producto o su remanufactura, y recién entonces poner números: cuánto mejora la sostenibilidad y cuánto mueve tus costos de materiales y de logística. La elección y el mecanismo son el insumo de la simulación, no su resultado.",
+          "entregable_esperado": "La estrategia circular elegida para tu negocio, con el mecanismo de retorno o remanufactura diseñado y el impacto calculado en sostenibilidad y en costos de materiales y logística",
+          "nodos_previos": [
+            "economia_circular_como_modelo_de_negocio"
+          ],
+          "nodos_siguientes": [],
+          "condiciones_activacion": [
+            "Cuando ya decidiste que tu modelo de negocio será circular y hay que elegir por cuál de las cinco estrategias empezar",
+            "Antes de simular o dimensionar la cadena, porque la simulación necesita una estrategia y un mecanismo ya elegidos para comparar"
+          ],
+          "etiqueta_arbol": "Elige tu Estrategia Circular"
+        },
+        "motivo_p18": "MEDIDO HOY sobre los 111 nodos vivos que declaran a Hugos: modelo_simulacion_cadena_suministro_circular es el UNICO cuyo objeto es la cadena circular, y su objeto NO coincide con el del bloque. El miembro SIMULA y COMPARA disenos (sus cinco pasos son definir entidades, centro de gravedad, correr simulaciones, reportes de P y L, comparar disenos) y su entregable es un modelo de simulacion con P y L y KPIs para al menos dos escenarios. El bloque ELIGE la estrategia y DISENA el mecanismo (mapear el ciclo de vida actual, identificar en cual de las cinco estrategias hay mas potencial, disenar el retorno o la remanufactura, calcular el impacto). Ningun paso del miembro hace eso y ningun paso del bloque simula. Sin miembro cuyo objeto coincida, P.18 punto 3 manda NODO PROPIO dentro de la familia."
+      }
+    }
+  ],
+  "procedencia_de_la_rebanada": "docs/loop/PLAN_V28_RELECTURA.json, sellado en la vuelta 28. La mudanza d2 (diferencia_ventaja_beneficio 5 a 8 hacia framework_caracteristicas_ventajas_beneficios) YA ESTA EN EL ARBOL desde la vuelta 28 y su guarda de conteo para en rojo, como debe. Esta rebanada NO reescribe una sola linea de la mudanza que queda: es el mismo dict, copiado por instrumento."
+}
