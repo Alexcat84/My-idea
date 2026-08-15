@@ -1104,6 +1104,69 @@ nodo espere adjudicacion**, ejecute quien ejecute el resto.
 > tambien dejo dicho, en su punto 7, por que no leerlas al cierre de una vuelta de treinta
 > cortes: *es la especie exacta de las caidas de las vueltas 15 y 16*.
 
+### `OP-F-04-COL`, PRIMER TIEMPO: LAS FRONTERAS QUE FALTABAN, COMO REGISTRO PURO (14 ago 2026, vuelta 30)
+
+**Es la forma que el acta de la vuelta 29 adjudico** (seccion 4, punto 5): *una vuelta publica
+las fronteras como registro, lectura pura y sin cortes, y la siguiente decide los destinos por
+`P.18` sobre la nomina al dia*. **Aqui no se corta nada.** Los pasos se leyeron hoy del grafo
+con `scripts/loop/vuelta27_medir.py bloque`, salidas completas en
+`docs/loop/SALIDA_V30_COL_BLOQUES_A.txt`, `_B.txt` y `_C.txt`.
+
+**LA CUENTA DE LO QUE FALTABA, medida hoy y no copiada:** la nomina son **15**; tenian frontera
+publicada **2** (`voz_del_cliente_voc` y `metas_vs_proposito`, barrido de la vuelta 29);
+`viral_loop_marketing` recibio la suya **en esta misma vuelta**, arriba, por `P.20`. **Quedaban
+12, y son las 12 de esta tabla.** El encargo decia *trece*, que era la cifra correcta antes de
+que `P.20` publicara la de `viral_loop_marketing`: **la diferencia se declara en vez de
+callarse.**
+
+| # | nodo | libros declarados | pasos hoy | **frontera leida** | **el bloque de Coleman** |
+|---:|---|---|---:|---|---|
+| 1 | `blueprint_de_experiencia` | Change by Design \| **Coleman** | **17** | **1 a 4 / 5 a 17** | **apendice AL FINAL**, y es el mas largo de los doce: la postventa, el momento del si, el ritual de bienvenida y los cien dias |
+| 2 | `cliente_disena_producto` | Cooper \| **Coleman** | **8** | **1 a 4 / 5 a 8** | **apendice AL FINAL**: donde puede personalizar el cliente, el proceso guiado, el simbolo tangible y mostrar lo que logro |
+| 3 | `cultura_de_experiencia` | Change by Design \| **Coleman** | **12** | **1 a 8 / 9 a 12** | **apendice AL FINAL**. **Y trae una particion interna que se declara:** los tramos **1 a 4** y **5 a 8** son **el mismo libro dos veces** (inmersion y herramientas, y despues talleres y autonomia), no dos libros |
+| 4 | `customer_journey_mapping` | Brown \| **Coleman** | **10** | **1 a 5 / 6 a 10** | **apendice AL FINAL**: los journeys por area, el traspaso entre departamentos, el costo del mal servicio, la silla vacia y la herramienta unificada |
+| 5 | `diseno_estructura_recompensas_roles` | Wasserman \| **Coleman** | **7** | **1 a 3 / 4 a 7** | **apendice AL FINAL**: la auditoria de incentivos, el asiento ejecutivo del lider de experiencia, los bonos ligados a retencion y quitar el premio a la rapidez |
+| 6 | `estrategia_crecimiento_clientes` | Blank \| **Coleman** | **10** | **1 a 6 / 7 a 10** | **apendice AL FINAL**: el incentivo de alto valor percibido y bajo costo marginal, la mecanica simple de referido, el momento del ciclo y la medicion |
+| 7 | `ganar_comprension_del_cliente` | Blank \| **Coleman** | **11** | **1 a 6 / 7 a 11** | **apendice AL FINAL**: el CRM, los cinco a diez datos prioritarios, completar lo que ya se sabe y los datos personales y emocionales |
+| 8 | **`keep_customers_strategy`** | Blank \| **Coleman** | **6** | **NO TIENE FRONTERA**, y es el hallazgo de esta tabla | **el material de Coleman NO es un bloque apendice: esta EMBEBIDO dentro de los pasos.** Ver el registro de abajo |
+| 9 | `project_close_out` | Snyder \| **Coleman** | **11** | **1 a 5 / 6 a 11** | **apendice AL FINAL**: los objetivos del kickoff, la evaluacion honesta, el feedback del cliente, las deficiencias, los testimonios y el monitoreo posterior |
+| 10 | `relaciones_con_clientes` | Osterwalder \| **Coleman** | **8** | **1 a 4 / 5 a 8** | **apendice AL FINAL**: los rituales y simbolos, el momento de iniciacion publico, el vocabulario compartido y conectar al nuevo con el veterano |
+| 11 | `retention_metrics` | Blank \| **Coleman** | **9** | **1 a 5 / 6 a 9** | **apendice AL FINAL**: el CAC exacto por canal, el breakeven, el porcentaje que abandona antes de alcanzarlo y presentarlo a la direccion |
+| 12 | `sistema_inmune_producto` | Ries \| **Coleman** | **9** | **1 a 5 / 6 a 9** | **apendice AL FINAL**: los puntos de friccion que generan llamadas, la deteccion proactiva con aviso al cliente, el autoservicio y el porcentaje resuelto sin humano |
+
+**ONCE DE DOCE TIENEN LA FORMA TIPICA DEL GRUPO** (el bloque del segundo libro, pegado al
+final), que es la misma forma que la tabla de los 14 de Horowitz verifico en su dia. **La que
+no la tiene se nombra, con su medicion.**
+
+> **EL HALLAZGO: `keep_customers_strategy` NO TIENE FRONTERA QUE PUBLICAR, y decirlo es el
+> registro.** Sus **seis** pasos no se parten en dos tramos porque **el material de Coleman
+> viaja DENTRO de los pasos de Blank en vez de detras de ellos**. El ejemplar que lo prueba es
+> su **paso 3**, medido hoy: *crea un paquete de bienvenida u onboarding especial con
+> beneficios exclusivos para ese segmento **y comunica el logro como un hito celebrado***. La
+> primera mitad es el umbral de gasto de Blank y **la cola es el hito celebrado de Coleman,
+> cosido al mismo paso**. **No hay indice donde cortar sin partir una frase.**
+>
+> **LO QUE ESTO OBLIGA, dicho sin decidirlo aqui:** `P.3` manda repartir y prohibe podar, y
+> `P.18` decide el destino **de un bloque**; **un material embebido dentro de un paso no es un
+> bloque**, y ninguna pagina dice como se separa media frase. **Va marcado como DISCUTIBLE en
+> el reporte de la vuelta 30 y NO se corta**: es el unico de los quince de `OP-F-04-COL` cuyo
+> texto no alcanza para ejecutarse sin decidir.
+
+> **CORRECCION DECLARADA sobre una frontera YA PUBLICADA: `metas_vs_proposito` ya no tiene la
+> que dice la tabla de los 14.** Ahi esta escrita como **`1 a 4 / 5 a 9 / 10 a 14`** con tres
+> libros (Assembling, Horowitz, Coleman), **y esa linea se queda entera donde esta**. Medido
+> hoy, el nodo tiene **9 pasos** y su `fuente` declara **dos** libros: **`OP-F-04-HOR` le corto
+> el bloque de Horowitz en la vuelta 29**, y el bloque de Coleman, que era `10 a 14`, hoy es
+> **`5 a 9` de 9**. **Su frontera vigente es `1 a 4 / 5 a 9`.**
+>
+> **Y ES EXACTAMENTE LO QUE `P.20` VINO A EVITAR** (*cortar en orden dejaria a la segunda
+> operacion leyendo un nodo que la primera ya movio*): `metas_vs_proposito` **tambien pertenece
+> a dos operaciones**, `OP-F-04-COL` y `OP-F-04-HOR`. **No es una infraccion y no para nada:**
+> el corte de `HOR` es del **14 ago 2026, vuelta 29**, y `P.20` se adopto **despues**, el mismo
+> dia. **Una regla no juzga hacia atras un corte que se hizo cuando no existia.** Lo que si
+> obliga es la letra de `P.18` punto 1, y se cumple: **la lectura se rehace sobre el nodo de
+> hoy**, no sobre la evidencia de otra fecha.
+
 ### LA CONSECUENCIA DE ORDEN, y toca a la fase 02
 
 **SEIS de los 43 ya tienen operacion en otra fase**, y por *fuente primero* esta
