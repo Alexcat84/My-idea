@@ -1,0 +1,104 @@
+﻿==============================================================================
+RELECTURA DE CONGELADOS, con el texto de HOY delante
+puestos leidos en esta corrida: [724, 755, 827]
+==============================================================================
+
+------------------------------------------------------------------------------
+PUESTO 724: voice_of_customer_estrategico contra voz_del_cliente_voc
+  CLASE EN EL ARCHIVO HOY: B   clave 0.8181
+  RAZON EN EL ARCHIVO HOY (contraste, no fuente de la clase nueva):
+    NO PUEDO JUZGAR ESTE PAR HOY, y el motivo es la regla del puesto 592 con el refinamiento del 673: uno de los dos nodos es costura confirmada Y EL SOLAPE CRUZA LA JUNTURA. voz_del_cliente_voc esta registrado en docs/FICHA_SUBFUSION_GRADIENTE.md como confirmada de bloque 50,2 y con la anatomia escrita, DOBLE DE LA OBSERVACION, diez pasos en dos mitades que hablan las dos de observar al cliente en su contexto. Contra ese nodo, voice_of_customer_estrategico manda observar a los clientes usando productos similares en su contexto real y no por encuesta, preguntar que problemas enfrentan y que los mantiene despiertos por la noche, indagar el porque detras de cada caracteristica que piden, buscar necesidades FUTURAS y no solo las actuales, y documentar los descubrimientos inesperados. El solape es la observacion en contexto, que es justamente lo que el otro nodo tiene REPETIDO en sus dos mitades: o sea que el veredicto de este par se emitiria contra un texto que va a perder la mitad de su masa en la cirugia. Por el TOQUE UNICO del banco 9.4, primero el arreglo interno y despues el par. Lo que si queda anotado desde ya: la busqueda de necesidades futuras y el que los mantiene despiertos por la noche no estan en el nodo largo, y son lo que habria que salvar.
+
+  LOS DOS NODOS, HOY:
+    voice_of_customer_estrategico
+      titulo    : Voz del Cliente (VoC) a Nivel Estratégico
+      fuente    : Winning at New Products - Robert G. Cooper
+      entregable: Reporte de insights de clientes con necesidades explícitas e implícitas documentadas, incluyendo hallazgos inesperados ('ahas')
+       1. Observar a los clientes usando productos similares en su contexto real (no solo encuestas)
+       2. Preguntar qué problemas enfrentan y qué los mantiene despiertos por la noche
+       3. Indagar el 'porqué' detrás de cualquier característica o producto que soliciten
+       4. Buscar necesidades futuras y planes de los clientes, no solo las actuales
+       5. Documentar los 'ahas' o descubrimientos inesperados durante la observación
+
+    voz_del_cliente_voc
+      titulo    : Escucha la voz de tu cliente (Voice of Customer, VoC)
+      fuente    : Winning at New Products - Robert G. Cooper
+      entregable: Un resumen de lo que aprendiste observando y entrevistando a tu cliente, que alimente directamente cómo diseñas tu producto
+       1. Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos
+       2. Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos
+       3. Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas
+       4. Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final
+       5. Mantén contacto con tu cliente durante todo el desarrollo, no solo al principio y al final
+
+  ARISTA, buscada en los dos sentidos contra el grafo de hoy:
+    voice_of_customer_estrategico nombra a voz_del_cliente_voc: False
+    voz_del_cliente_voc nombra a voice_of_customer_estrategico: False
+    HAY ARISTA: False
+
+------------------------------------------------------------------------------
+PUESTO 755: dia_en_la_vida_del_cliente contra voz_del_cliente_voc
+  CLASE EN EL ARCHIVO HOY: B   clave 0.8157
+  RAZON EN EL ARCHIVO HOY (contraste, no fuente de la clase nueva):
+    EL SOLAPE VUELVE A CRUZAR LA JUNTURA, igual que en el puesto 724, asi que este par tampoco se juzga hoy. voz_del_cliente_voc es costura CONFIRMADA en docs/FICHA_SUBFUSION_GRADIENTE.md con la anatomia escrita, DOBLE DE LA OBSERVACION, diez pasos en dos mitades que hablan las dos de observar al cliente en su contexto. dia_en_la_vida_del_cliente solapa justo con eso: observar o entrevistar a los usuarios en su entorno real, oficina, tienda u hogar, y documentar como resuelven hoy el problema sin tu producto. Lo propio del nodo de Blank, y es lo que hay que salvar, son tres cosas que el otro no tiene: PROYECTAR como cambiaria el dia del cliente con el producto nuevo, repetir el ejercicio para CADA figura de la decision, usuario final, gerente y quien paga, y presentar al equipo de desarrollo una imagen viva del antes y el despues. Libros distintos ademas, The Startup Owner's Manual contra Winning at New Products, y sin arista entre ellos. Por el TOQUE UNICO del banco 9.4, primero la cirugia del nodo largo y despues este par. Segundo par que este nodo bloquea.
+
+  LOS DOS NODOS, HOY:
+    dia_en_la_vida_del_cliente
+      titulo    : Un Día en la Vida del Cliente
+      fuente    : The Startup Owner's Manual - Steve Blank
+      entregable: Documento narrativo o storyboard de 'antes y después' de un día típico de cada tipo de cliente relevante
+       1. Observar o entrevistar directamente a los usuarios en su entorno real (oficina, tienda, hogar, planta)
+       2. Documentar cómo resuelven el problema actualmente, sin el producto
+       3. Proyectar y describir cómo cambiaría su día con el nuevo producto
+       4. Repetir el ejercicio para cada tipo de persona relevante en la decisión (usuario final, gerente, ejecutivo, tecnología, etc.)
+       5. Presentar una imagen vívida y específica del antes y el después al equipo de desarrollo de producto, en forma de narrativa o storyboard
+
+    voz_del_cliente_voc
+      titulo    : Escucha la voz de tu cliente (Voice of Customer, VoC)
+      fuente    : Winning at New Products - Robert G. Cooper
+      entregable: Un resumen de lo que aprendiste observando y entrevistando a tu cliente, que alimente directamente cómo diseñas tu producto
+       1. Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos
+       2. Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos
+       3. Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas
+       4. Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final
+       5. Mantén contacto con tu cliente durante todo el desarrollo, no solo al principio y al final
+
+  ARISTA, buscada en los dos sentidos contra el grafo de hoy:
+    dia_en_la_vida_del_cliente nombra a voz_del_cliente_voc: False
+    voz_del_cliente_voc nombra a dia_en_la_vida_del_cliente: False
+    HAY ARISTA: False
+
+------------------------------------------------------------------------------
+PUESTO 827: ganar_comprension_del_cliente contra voz_del_cliente_voc
+  CLASE EN EL ARCHIVO HOY: B   clave 0.8109
+  RAZON EN EL ARCHIVO HOY (contraste, no fuente de la clase nueva):
+    TERCER PAR QUE `voz_del_cliente_voc` BLOQUEA, y este ademas tiene los DOS nodos costurados. voz_del_cliente_voc es costura confirmada con anatomia DOBLE DE LA OBSERVACION, y ganar_comprension_del_cliente esta tambien en la cola de las 128 y es uno de los ocho ejemplares de LA FORMA QUE PARTE, con once pasos que se ven partidos: del 1 al 6 la comprension del cliente, entender su flujo de trabajo, preguntar que otras soluciones usa, pasar un dia haciendo lo que el hace, y del 7 al 11 el montaje del CRM, elegir herramienta, definir de cinco a diez datos prioritarios, completar lo que ya sabes y buscar perfiles publicos. EL SOLAPE del par cae en la observacion en contexto, que en un nodo esta REPETIDA en sus dos mitades y en el otro es su primer bloque: toca juntura por los dos lados. Por el banco 9.9, bloquea. Lo que si queda anotado para el redactor: pasar un dia haciendo lo que hace el cliente, y preguntar que publicaciones lee y a quien sigue, no estan en el nodo de Cooper.
+
+  LOS DOS NODOS, HOY:
+    ganar_comprension_del_cliente
+      titulo    : Ganar Comprensión Profunda del Cliente
+      fuente    : The Startup Owner's Manual - Steve Blank
+      entregable: Un documento con la comprensión profunda de tu cliente: su flujo de trabajo, sus influenciadores, sus hábitos de consumo de información, su comportamiento de compra y tus criterios de validación
+       1. Investiga el flujo de trabajo actual de tu cliente y sus interacciones con otras personas o áreas
+       2. Pregunta qué otras soluciones usa hoy y si el problema lo comparten más personas en su entorno de trabajo
+       3. Explora qué haría cambiar su comportamiento de compra: el precio, las características, o un nuevo estándar
+       4. Pasa un día haciendo lo que hace tu cliente (por ejemplo, detrás de un mostrador o en una feria) y asiste a sus eventos
+       5. Identifica qué publicaciones lee y a quién sigue tu cliente
+       6. Documenta todos tus hallazgos de forma ordenada, con criterios claros de qué cuenta como validado
+
+    voz_del_cliente_voc
+      titulo    : Escucha la voz de tu cliente (Voice of Customer, VoC)
+      fuente    : Winning at New Products - Robert G. Cooper
+      entregable: Un resumen de lo que aprendiste observando y entrevistando a tu cliente, que alimente directamente cómo diseñas tu producto
+       1. Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos
+       2. Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos
+       3. Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas
+       4. Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final
+       5. Mantén contacto con tu cliente durante todo el desarrollo, no solo al principio y al final
+
+  ARISTA, buscada en los dos sentidos contra el grafo de hoy:
+    ganar_comprension_del_cliente nombra a voz_del_cliente_voc: False
+    voz_del_cliente_voc nombra a ganar_comprension_del_cliente: False
+    HAY ARISTA: False
+
+==============================================================================
+FIN. La clase nueva se escribe fuera de este script, con su razon.

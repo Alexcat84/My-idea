@@ -15,10 +15,14 @@ QUE IMPRIME, por cada par congelado:
     aristas, y afirmar que falta una sin haberla buscado seria citar una busqueda
     negativa que nadie corrio.
 
-Uso: python scripts/loop/vuelta32_relectura_opd01.py
+Uso: python scripts/loop/vuelta32_relectura_opd01.py [puesto ...]
+Sin argumentos lee los tres congelados de OP-D-01 (494, 592, 830). Con
+argumentos lee los puestos que se le pasen, que es como se leyeron los tres de
+OP-D-02 (724, 755, 827) sin emitirles clase.
 """
 import json
 import os
+import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 NODOS = os.path.join(RAIZ, "dataset", "nodos")
@@ -55,10 +59,12 @@ def main():
                 v = json.loads(linea)
                 ver[v["puesto_intra"]] = v
 
+    pares = [int(x) for x in sys.argv[1:]] or PARES
     print("=" * 78)
-    print("RELECTURA DE LOS CONGELADOS DE OP-D-01, con el texto de HOY delante")
+    print("RELECTURA DE CONGELADOS, con el texto de HOY delante")
+    print("puestos leidos en esta corrida: %s" % pares)
     print("=" * 78)
-    for p in PARES:
+    for p in pares:
         v = ver.get(p)
         print()
         print("-" * 78)

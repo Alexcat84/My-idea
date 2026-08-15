@@ -295,6 +295,64 @@ Diez pasos, **doble de la observacion**: Cooper en 1 a 5, Coleman en 6 a 10, con
 > relectura R31 sin que nadie notara que colgaban de la misma costura.** La
 > relectura ve **pares**; el alcance se decide sobre la **componente**.
 
+### `OP-D-02`, ESTADO AL 15 ago 2026 (vuelta 32): **PASO 1 CONSUMIDO, FUSION EN PARADA**
+
+**El paso 1 del orden interno esta HECHO y no lo hizo esta operacion: lo hizo `OP-F-04-COL`
+en la vuelta 31.** Medido hoy sobre el arbol: `voz_del_cliente_voc` tiene **5 pasos y fuente
+UNICA** (*Winning at New Products - Robert G. Cooper*), y el bloque 6 a 10 que el campo
+`preservar` manda hacer viajar entero vive en `observar_al_cliente_en_su_contexto`, nodo propio
+nacido en esa vuelta con **5 pasos y fuente unica Coleman**. **El destejido NO se repite**, y la
+readjudicacion esta escrita como correccion declarada en la `nota` de la operacion.
+
+**LA FUSION NO SE EJECUTA, y son TRES motivos medidos hoy, ninguno adivinado**
+(`scripts/loop/vuelta32_acto_opd02.py`, de solo lectura; salidas en
+`SALIDA_V32_OPD02_ACTO.txt` y `SALIDA_V32_PARADA_OPD02.txt`). **Cero nodos tocados.**
+
+**MOTIVO 1, y lo exige la verificacion de la propia operacion**, que pide con estas palabras
+*el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto*. **Medido par por
+par: PARES POSIBLES 6, CON VEREDICTO 3, SIN VEREDICTO 3.** Los tres que faltan, por su nombre,
+porque una ausencia no se afirma en bloque:
+
+| par interno sin veredicto |
+|---|
+| `enfoque_mercado_voc` contra `homework_frontend_loading` |
+| `homework_frontend_loading` contra `voz_del_cliente_voc` |
+| `voice_of_customer_homework` contra `voz_del_cliente_voc` |
+
+> **Y `P.5`, que la nota de la operacion cita, dice que la pregunta que el acto leido entero
+> contesta es SI EL ACTO ES UNA FAMILIA O DOS. Con 3 de 6 esa pregunta no tiene respuesta
+> medida.** Los tres que si tienen veredicto son los **tres pares A** del acto: **386, 526 y
+> 788**, y su cierre transitivo cubre a los **cuatro** nodos de la nomina, sin ninguno fuera.
+
+**MOTIVO 2: NO HAY SUPERVIVIENTE, ni escrito ni deducible.** El campo `superviviente` de
+`OP-D-02` esta en **`null`**, leido hoy en el fichero. Y no se puede fijar por el banco `9.3.1`
+(GANADOR POR DERECHO contra GANADOR POR ELEGIR, con la correccion del 18 ago 2026 que define el
+acto como el cierre transitivo de las A): la prueba es *gano todos los pares A que lo tocan*, y
+**medido hoy, DOS de los tres pares A no nombran ganador en su razon** (386 y 788). **Ningun
+nodo del acto tiene una victoria citable**, asi que no hay ganador por derecho; y la otra
+especie, **por elegir, exige `P.8` sobre la nomina entera CON EL ACTO COMPLETO delante**, que es
+justamente lo que el motivo 1 dice que no hay.
+
+**MOTIVO 3: LA NOMINA PUEDE ESTAR CORTA, y el aviso ya estaba escrito.** La razon del puesto
+**788**, leida hoy, cierra asi: *la voz del cliente ya lleva cuatro nodos vistos en el cribado
+(...). Hay que contarla entera antes de tocarla*. **Censo por nombre corrido hoy (banco 9.5.1),
+y se dice lo que es: una CITA, no una prueba de pertenencia.** De los 9 nodos vivos que
+contienen alguna marca buscada, **cuatro son falsos positivos del substring `voc`**
+(`advocacy_customer_journey`, `centro_asesoria_advocacy_center`,
+`incentivos_no_monetarios_advocacy`, `voces_externas_credibles`). Quedan **cinco** con la marca
+de verdad y **DOS estan FUERA de la nomina**: `voice_of_customer_estrategico` y
+`voc_temprano_en_agile_stage_gate`, **los dos del mismo libro que los cuatro de la nomina**, y
+el primero es ademas el contrario del congelado **724**.
+
+**Y POR ESO LAS RELECTURAS DE 724, 755 Y 827 SE LEEN PERO NO SE CLASIFICAN.** Los tres estan
+congelados por el **TOQUE UNICO del banco `9.4`**: *un veredicto emitido contra un texto que va
+a cambiar no vale*. **La mitad de esa causa ya cayo** (`voz_del_cliente_voc` esta destejido y
+estable), **pero la otra mitad sigue en pie**: si la fusion de este acto se ejecuta, el
+superviviente **puede no ser `voz_del_cliente_voc`**, y las tres relecturas se habrian emitido
+contra un texto que iba a cambiar otra vez. **Emitirlas hoy seria romper la misma regla por la
+que estan congelados.** Quedan leidas, con lo que cada contrario aporta medido contra el texto
+de hoy (`SALIDA_V32_OPD02_RELECTURA.txt`), **y sin clase**.
+
 ---
 
 ## `OP-D-03`: LAS PRUEBAS A/B · **LISTA**

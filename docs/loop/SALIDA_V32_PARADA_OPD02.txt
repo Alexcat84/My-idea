@@ -1,0 +1,92 @@
+==============================================================================
+PARADA EN OP-D-02, vuelta 32. CERO NODOS TOCADOS: SOLO MEDICION.
+==============================================================================
+
+Esta salida es el resumen; la medicion entera esta en
+docs/loop/SALIDA_V32_OPD02_ACTO.txt, corrida hoy con
+scripts/loop/vuelta32_acto_opd02.py, que no escribe nada.
+
+LO QUE SI SE PUDO HACER Y ESTA HECHO (TAREA 1.2 del encargo): la nota de
+OP-D-02 quedo readjudicada por correccion declarada, con su medicion del dia
+al lado. El destejido de su paso 1 NO se repitio: voz_del_cliente_voc tiene
+hoy 5 pasos y fuente unica Cooper, y el bloque de Coleman vive en
+observar_al_cliente_en_su_contexto.
+
+LO QUE NO SE PUEDE HACER HOY: LA FUSION. Tres motivos, los tres medidos.
+
+------------------------------------------------------------------------------
+MOTIVO 1: EL ACTO NO ESTA LEIDO ENTERO, y es la propia verificacion de la
+operacion la que lo exige con esas palabras.
+------------------------------------------------------------------------------
+La verificacion escrita de OP-D-02 pide "el acto se leyo ENTERO antes de
+fundirse: cero pares internos sin veredicto".
+
+MEDIDO HOY sobre docs/INTRA_DOMINIO_VEREDICTOS.jsonl, par por par:
+  PARES POSIBLES 6, CON VEREDICTO 3, SIN VEREDICTO 3.
+
+Los tres que faltan, POR SU NOMBRE, porque una ausencia no se afirma en
+bloque (banco 9.26 y el visto primero del 9.3.1):
+  - enfoque_mercado_voc        contra homework_frontend_loading
+  - homework_frontend_loading  contra voz_del_cliente_voc
+  - voice_of_customer_homework contra voz_del_cliente_voc
+
+Los tres que si tienen veredicto son los tres A del acto: 386, 526 y 788.
+
+Y P.5 del BANCO_DEL_PLAN, que la nota de la operacion cita, dice que la
+pregunta que el acto leido entero contesta es SI EL ACTO ES UNA FAMILIA O DOS.
+Con 3 de 6 esa pregunta no tiene respuesta medida.
+
+------------------------------------------------------------------------------
+MOTIVO 2: NO HAY SUPERVIVIENTE, ni escrito ni deducible.
+------------------------------------------------------------------------------
+El campo superviviente de OP-D-02 esta en null, leido hoy en el fichero.
+
+Y no se puede fijar por la via del banco 9.3.1 (GANADOR POR DERECHO contra
+GANADOR POR ELEGIR, con la correccion del 18 ago 2026 que define el acto como
+el cierre transitivo de las A): la prueba es "gano todos los pares A que lo
+tocan", y MEDIDO HOY, de los tres pares A del acto, DOS NO NOMBRAN GANADOR EN
+SU RAZON (386 y 788). Ninguno de los cuatro nodos ha ganado nada que se pueda
+citar, asi que no hay ganador por derecho; y la otra especie, GANADOR POR
+ELEGIR, exige P.8 sobre la nomina entera CON EL ACTO COMPLETO delante, que es
+justamente lo que el motivo 1 dice que no hay.
+
+El cierre transitivo de las A si cubre a los cuatro nodos de la nomina, 4 de 4,
+y ninguno queda fuera: el acto es uno solo por esa cuenta.
+
+------------------------------------------------------------------------------
+MOTIVO 3: LA NOMINA PUEDE ESTAR CORTA, y el aviso ya estaba escrito.
+------------------------------------------------------------------------------
+La razon del puesto 788, leida hoy, termina con esta nota de familia: "la voz
+del cliente ya lleva cuatro nodos vistos en el cribado, con voz_del_cliente_voc,
+que es costura confirmada y bloquea dos pares, y voice_of_customer_estrategico.
+Hay que contarla entera antes de tocarla."
+
+CENSO POR NOMBRE CORRIDO HOY (banco 9.5.1), y se dice lo que es: una CITA, no
+una prueba de pertenencia. De los 9 nodos vivos que contienen alguna de las
+marcas buscadas, CUATRO son falsos positivos del substring "voc"
+(advocacy_customer_journey, centro_asesoria_advocacy_center,
+incentivos_no_monetarios_advocacy, voces_externas_credibles). Quedan CINCO con
+la marca de verdad, y DOS de ellos estan FUERA de la nomina de la operacion:
+  - voice_of_customer_estrategico   (Winning at New Products - Cooper)
+  - voc_temprano_en_agile_stage_gate (Winning at New Products - Cooper)
+Los dos del MISMO libro que los cuatro de la nomina. El primero es ademas el
+contrario del congelado 724.
+
+------------------------------------------------------------------------------
+Y POR ESO LAS RELECTURAS DE 724, 755 Y 827 TAMPOCO SE EMITEN HOY
+------------------------------------------------------------------------------
+Los tres estan congelados por el TOQUE UNICO del banco 9.4: un veredicto
+emitido contra un texto que va a cambiar no vale. La mitad de esa causa YA
+CAYO (voz_del_cliente_voc esta destejido y estable desde la vuelta 31), pero
+la otra mitad sigue en pie: si la fusion de este acto se ejecuta, el
+superviviente puede no ser voz_del_cliente_voc, y entonces las tres relecturas
+se habrian emitido contra un texto que iba a cambiar OTRA VEZ, que es
+exactamente lo que la regla que los congelo prohibe.
+
+Emitirlas hoy seria romper la misma regla por la que estan congelados. Se
+dejan LEIDAS y publicadas en el reporte, con lo que cada contrario aporta
+medido contra el texto de hoy, y SIN CLASE.
+
+==============================================================================
+CERO NODOS TOCADOS EN ESTA PARADA. Ninguna operacion se improvisa.
+==============================================================================

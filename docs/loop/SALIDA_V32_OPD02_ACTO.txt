@@ -1,0 +1,49 @@
+﻿==============================================================================
+EL ACTO DE OP-D-02, MEDIDO ANTES DE FUNDIR NADA
+==============================================================================
+
+NOMINA DE LA OPERACION, leida hoy del fichero: 4 nodos
+  voz_del_cliente_voc              pasos  5  vivo True  fuente: Winning at New Products - Robert G. Cooper
+  enfoque_mercado_voc              pasos  5  vivo True  fuente: Winning at New Products - Robert G. Cooper
+  homework_frontend_loading        pasos  6  vivo True  fuente: Winning at New Products - Robert G. Cooper
+  voice_of_customer_homework       pasos  5  vivo True  fuente: Winning at New Products - Robert G. Cooper
+
+--- 1. COBERTURA DEL ACTO: los pares internos, uno por uno ---
+  [SIN VEREDICTO] enfoque_mercado_voc            contra homework_frontend_loading     
+  [A puesto  788] enfoque_mercado_voc            contra voice_of_customer_homework    
+  [A puesto  386] enfoque_mercado_voc            contra voz_del_cliente_voc           
+  [A puesto  526] homework_frontend_loading      contra voice_of_customer_homework    
+  [SIN VEREDICTO] homework_frontend_loading      contra voz_del_cliente_voc           
+  [SIN VEREDICTO] voice_of_customer_homework     contra voz_del_cliente_voc           
+
+  PARES POSIBLES 6, CON VEREDICTO 3, SIN VEREDICTO 3
+  LA VERIFICACION DE LA OPERACION PIDE CERO SIN VEREDICTO: NO CUMPLE
+
+--- 2. EL CIERRE TRANSITIVO DE LAS A, y quien gana cada par A ---
+  pares A dentro de la nomina: 3
+    puesto 788: enfoque_mercado_voc contra voice_of_customer_homework
+      GANADOR DECLARADO EN LA RAZON: NO, la razon no nombra superviviente
+    puesto 386: enfoque_mercado_voc contra voz_del_cliente_voc
+      GANADOR DECLARADO EN LA RAZON: NO, la razon no nombra superviviente
+    puesto 526: homework_frontend_loading contra voice_of_customer_homework
+      GANADOR DECLARADO EN LA RAZON: SI, la razon dice 'gana'
+  nodos dentro del cierre transitivo de las A: 4 de 4 de la nomina
+    ['enfoque_mercado_voc', 'homework_frontend_loading', 'voice_of_customer_homework', 'voz_del_cliente_voc']
+  nodos de la nomina FUERA del cierre: ninguno
+  campo superviviente de la operacion, leido hoy: None
+
+--- 3. CENSO POR NOMBRE DE LA FAMILIA (banco 9.5.1) ---
+  marcas buscadas: ['voc', 'voice_of_customer', 'voz_del_cliente']
+  nodos vivos que llevan alguna marca: 9
+    advocacy_customer_journey              fuera  Never Lose a Customer Again - Joey Coleman
+    centro_asesoria_advocacy_center        fuera  A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)
+    enfoque_mercado_voc                    EN LA NOMINA  Winning at New Products - Robert G. Cooper
+    incentivos_no_monetarios_advocacy      fuera  Never Lose a Customer Again - Joey Coleman
+    voc_temprano_en_agile_stage_gate       fuera  Winning at New Products - Robert G. Cooper
+    voces_externas_credibles               fuera  The Green to Gold Business Play - Daniel C. Esty
+    voice_of_customer_estrategico          fuera  Winning at New Products - Robert G. Cooper
+    voice_of_customer_homework             EN LA NOMINA  Winning at New Products - Robert G. Cooper
+    voz_del_cliente_voc                    EN LA NOMINA  Winning at New Products - Robert G. Cooper
+
+==============================================================================
+FIN DE LA MEDICION. Nada se fundio y nada se escribio.
