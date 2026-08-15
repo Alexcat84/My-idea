@@ -117,3 +117,11 @@ obligatorias de siempre por operacion.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice
 una regla vigente, paras y lo traes. No adivines.
+
+DECISION DEL FUNDADOR (15 ago 2026): decision 1 por la opcion a (Gate 0 no reciproca
+aristas nacidas en deprecados; el deprecado conserva su cableado como archivo); decision
+2 con la letra: MIN_BLOQUE a 2, señal para todo n mayor o igual a 4, NO APLICA explicito
+bajo eso en vez de cero silencioso, recalibracion contra los nodos de hoy con ids y
+cifras en el docstring, correccion de la cifra del acta 32 con su recomputo, y la puerta
+de calibracion mudada a las señales para que toda importacion la herede; decision 3: las
+dirigidas de OP-D-03 se leen DESPUES del destejido por P.5. La fase 02 sigue.
