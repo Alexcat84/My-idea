@@ -778,6 +778,40 @@ su propia subseccion.** La cifra de **25 pasos** de `decision_de_vender_startup`
 arriba **sigue teniendo su correccion declarada al lado** (manda el 34) y esta vuelta la vuelve
 a medir: **es el 34 el que se corta.**
 
+#### LA FRONTERA COMPLETA DE `viral_loop_marketing`, REGISTRO UNICO DE LOS TRES LIBROS (14 ago 2026, vuelta 30)
+
+**Lo manda `P.20` punto 2, y esta escrito ANTES de cortar nada**, que es el punto entero de la
+regla: *la frontera se lee entera, los tres o mas libros a la vez, antes de cortar nada*. **Es
+el mismo metodo de la tabla de los 14 de Horowitz de este archivo**, y **la citan las DOS
+operaciones a las que el nodo pertenece, `OP-F-04-COL` y `OP-F-04-WEI`, con correccion
+declarada: ninguna de las dos escribe su propio corte.** Los treinta pasos se leyeron hoy del
+grafo (`scripts/loop/vuelta27_medir.py bloque viral_loop_marketing`, salida completa en
+`docs/loop/SALIDA_V30_TU_VIRAL_LOOP.txt`).
+
+| # | libro declarado | posicion en `fuente` | **tramo** | que dice ese tramo |
+|---:|---|---|---|---|
+| 1 | **The Startup Owner's Manual, Blank** | **primera**, y por `P.2` es de donde salio el nodo | **1 a 3** | los mecanismos de referido dentro del producto, la medida del coeficiente viral y la optimizacion de los incentivos |
+| 2 | **Never Lose a Customer Again, Coleman** | **segunda** | **4 a 25** | la peticion de referido (4 a 8), los promotores espontaneos (9 a 13), el programa de referidos (14 a 17), **el mismo programa otra vez en voz de tu** (18 a 21) y las recompensas mas alla del dinero (22 a 25) |
+| 3 | **Traction, Weinberg** | **tercera** | **26 a 30** | los cinco tipos de viralidad (inherente, colaborativa, embebida, incentivada y social), los mecanismos de invitacion en el flujo de uso, el incentivo por invitar, el registro simplificado del invitado y la combinacion de tipos |
+
+**LA FRONTERA ES `1 a 3 / 4 a 25 / 26 a 30`, y se sostiene en tres evidencias que no dependen
+una de otra:**
+
+| evidencia | que dice |
+|---|---|
+| **el orden del campo `fuente`** (`P.2`) | *el primero es de donde salio el nodo, y lo que viene detras es lo que se le pego*: Blank primero, Coleman segundo, Weinberg tercero, y la particion corre en ese mismo orden, **igual que en `metas_vs_proposito`** (`1 a 4 / 5 a 9 / 10 a 14`), el otro nodo de tres libros de esta pagina |
+| **la lectura de bloques ya publicada y verificada** | [`FICHA_SUBFUSION_GRADIENTE.md`](../FICHA_SUBFUSION_GRADIENTE.md) parte los treinta en **SIETE bloques apilados** con estos mismos cortes, y esa ficha dice de si misma que sus repeticiones estan *verificadas contra el grafo antes de escribirlas*. **Los siete bloques caen enteros dentro de los tres tramos: ninguno los cruza** |
+| **la lectura de objeto, hecha hoy** | 4 a 25 es material de Coleman de punta a punta: el *journey* y el *logro del objetivo del cliente* (4), la fase **Adopt hacia Advocate** nombrada con esas palabras (21), el promotor espontaneo y su reconocimiento (9 a 13, 18 a 20). 26 a 30 es la taxonomia de viralidad de *Traction*, que ningun otro de los tres libros trae |
+
+> **EL PUNTO MENOS FIRME SE DICE, no se esconde: la costura entre Coleman y Weinberg podria
+> estar en 22 en vez de en 26.** El tramo 22 a 25 (recompensas mas alla del dinero, segmentar
+> por tipo de recompensa, oferta escasa) **se lee como Coleman** porque la familia Coleman ya
+> tiene ese acto escrito dos veces (`programa_referidos_exclusividad`, *exclusividad y escasez*;
+> `incentivos_no_monetarios_advocacy`, *mas del propio producto en vez de efectivo*) y Weinberg
+> no lo trae en su capitulo viral. **La duda no mueve el corte**, y por eso no detiene nada:
+> 22 a 25 se queda dentro del nodo en las dos lecturas, porque su objeto **es** el mecanismo de
+> referidos, que es el objeto del nodo.
+
 ### QUE DECISIONES DE FUENTE NUEVAS SALEN
 
 **CUATRO, una por libro, y son del mismo tipo que las tres que ya existian:**
