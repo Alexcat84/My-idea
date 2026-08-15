@@ -19,6 +19,7 @@ Uso:
 """
 import json
 import os
+import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 NODOS = os.path.join(RAIZ, "dataset", "nodos")
@@ -59,6 +60,16 @@ COEFICIENTE = {
         ([5], VERBATIM),
     ],
     "salidas": [],
+    # La huella de cada grupo fundido: un trozo literal que HOY vive en dos o mas
+    # de sus origenes. Es lo que hace que el caso positivo CAIGA antes de fundir.
+    "pruebas_repeticion": [
+        {"origenes": [1, 6, 12], "huella_repetida": "invitaciones enviadas por usuario"},
+        {"origenes": [2, 7, 13, 14], "huella_repetida": "porcentaje de conversión"},
+        {"origenes": [3, 8, 15], "huella_repetida": "K ="},
+        {"origenes": [10, 16], "huella_repetida": "más débil"},
+    ],
+    "rastros": ["usuarios actuales", "(i)", "click-through", "signup", "coeficiente",
+                "A/B", "ciclo viral", "urgencia", "semanalmente", "referido"],
     "procedencia": [
         {"libro": "The Startup Owner's Manual - Steve Blank (pasos 1 a 5 del original)",
          "pasos_del_resultado": [6, 8]},
@@ -128,6 +139,23 @@ VENDER = {
                    "atractivo de adquisición"),
     ],
     "salidas": [],
+    "pruebas_repeticion": [
+        {"origenes": [2, 6, 7, 12], "huella_repetida": "tecnológic"},
+        {"origenes": [3, 11, 13, 17], "huella_repetida": "equipo cercano"},
+        {"origenes": [16, 22, 23, 24], "huella_repetida": "mercado real"},
+        {"origenes": [8, 26], "huella_repetida": "fusiones y adquisiciones (M&A)"},
+        {"origenes": [14, 18], "huella_repetida": "precio mínimo"},
+        {"origenes": [15, 19, 20], "huella_repetida": "Comunica ese precio con firmeza"},
+        {"origenes": [9, 25], "huella_repetida": "proyección de valor a 3 o 5 años"},
+        {"origenes": [28, 29], "huella_repetida": "criterios"},
+        {"origenes": [30, 33], "huella_repetida": "situación financiera personal"},
+        {"origenes": [10, 31, 34], "huella_repetida": "emocional"},
+        {"origenes": [27, 32], "huella_repetida": "salario como CEO a valores de mercado"},
+    ],
+    "rastros": ["runway", "burnout", "camino difícil", "punto de inflexión", "diez veces",
+                "número uno", "por talento y tecnología", "discreto", "precio máximo",
+                "primera oferta", "sobre el precio actual", "esperar", "independiente",
+                "traicionaste", "board", "se combinen o se fusionen"],
     "procedencia": [
         {"libro": "The Founder's Dilemmas - Noam Wasserman (pasos 1 a 10 del original)",
          "pasos_del_resultado": [1, 4, 5]},
@@ -149,9 +177,13 @@ VIRAL = {
     "pasos": [
         ([1], VERBATIM), ([2], VERBATIM), ([3], VERBATIM),
         ([4], VERBATIM), ([5], VERBATIM), ([6], VERBATIM), ([7], VERBATIM), ([8], VERBATIM),
-        ([9, 15, 18], "Identifica a los clientes que ya actúan como promotores espontáneos: "
-                      "menciones, reseñas y referidos orgánicos, y los clientes más "
-                      "satisfechos de tu base"),
+        # "y actívalos como embajadores" NO es adorno: el origen 15 lo trae y la
+        # primera redaccion lo habia perdido. Lo caso la prueba de conservacion
+        # del caso positivo, con el nodo ya escrito, y por eso el corte se
+        # revirtio y se rehizo. Queda declarado en el reporte.
+        ([9, 15, 18], "Identifica a los clientes que ya actúan como promotores espontáneos "
+                      "(menciones, reseñas y referidos orgánicos) y a los más satisfechos "
+                      "de tu base, y actívalos como embajadores"),
         ([10], VERBATIM),
         ([14], VERBATIM),
         ([16, 19], "Crea contenido y facilita herramientas para que el cliente recomiende "
@@ -164,9 +196,25 @@ VIRAL = {
         ([26], VERBATIM), ([27], VERBATIM), ([28], VERBATIM), ([29], VERBATIM),
         ([30], VERBATIM),
     ],
+    "pruebas_repeticion": [
+        {"origenes": [9, 15, 18], "huella_repetida": "espontáne"},
+        {"origenes": [16, 19], "huella_repetida": "herramientas"},
+        # "Reconoc" con mayuscula y no "econoc": en minuscula la huella tambien
+        # vive en el paso 22 (valoran mas alla del dinero: estatus, acceso,
+        # RECONOCIMIENTO), que no es de este grupo ni entra a la fusion, asi que
+        # la prueba era insatisfacible por construccion y no por un defecto del
+        # corte. Con mayuscula solo vive en los origenes 17 y 20.
+        {"origenes": [11, 17, 20], "huella_repetida": "Reconoc"},
+    ],
+    # "(viral coefficient)" y no "coeficiente viral": el paso 2 lo escribe en
+    # ingles, y la guarda del sellado lo caso antes de sellar nada.
+    "rastros": ["(viral coefficient)", "un solo clic", "win-win", "embajadores",
+                "links, códigos", "VIP", "en privado", "Adopt", "escaso",
+                "inherente, colaborativa, embebida, incentivada, social", "créditos"],
     "salidas": [
         {
             "pasos_que_salen": [12],
+            "huella": "eventos exclusivos",
             "destino": {
                 "tipo": "miembro",
                 "nodo": "experiencias_exclusivas_vip",
@@ -186,6 +234,7 @@ VIRAL = {
         },
         {
             "pasos_que_salen": [13],
+            "huella": "voz visible",
             "destino": {
                 "tipo": "miembro",
                 "nodo": "comunidad_tribu_marca",
@@ -242,6 +291,22 @@ def sellar(ficha, operacion, regla, motivo, destino):
         raise SystemExit("%s: cobertura rota, faltan %s, repetidos %s"
                          % (ficha["nodo"], faltan, repes))
 
+    # GUARDA DEL CASO POSITIVO: una huella que no viva HOY en dos o mas de sus
+    # origenes no hace caer nada, y una prueba que no cae no prueba nada. Se
+    # comprueba al sellar, no al ejecutar, que es cuando todavia se puede
+    # corregir la lectura.
+    for g in (ficha.get("pruebas_repeticion") or []):
+        h = g["huella_repetida"]
+        cuantos = sum(1 for i in g["origenes"] if h in pasos[i - 1])
+        if cuantos < 2:
+            raise SystemExit("%s: la huella %r vive en %d de sus origenes %s, y hacen "
+                             "falta 2 para que el caso positivo caiga"
+                             % (ficha["nodo"], h, cuantos, g["origenes"]))
+    for r in (ficha.get("rastros") or []):
+        if not any(r in p for p in pasos):
+            raise SystemExit("%s: el rastro %r no vive en ningun paso de HOY"
+                             % (ficha["nodo"], r))
+
     plan = {
         "operacion": operacion,
         "regla": regla,
@@ -257,6 +322,8 @@ def sellar(ficha, operacion, regla, motivo, destino):
             "pasos_finales": finales,
             "mapa_destejido": mapa,
             "procedencia": ficha["procedencia"],
+            "pruebas_repeticion": ficha.get("pruebas_repeticion") or [],
+            "rastros": ficha.get("rastros") or [],
             "salidas": [dict(s, pasos_que_viajan=[pasos[i - 1] for i in s["pasos_que_salen"]])
                         for s in ficha["salidas"]],
         }],
@@ -271,7 +338,13 @@ def sellar(ficha, operacion, regla, motivo, destino):
 
 
 def main():
-    sellar(
+    # SELLA SOLO LO QUE SE PIDE. El sellado lee los pasos del grafo de HOY, asi
+    # que un plan ya ejecutado no se puede volver a sellar: sus origenes ya no
+    # estan. Sin este filtro, rehacer UN plan obligaba a rehacerlos los tres.
+    cuales = set(sys.argv[1:]) or {"coeficiente", "vender", "viral"}
+
+    if "coeficiente" in cuales:
+        sellar(
         COEFICIENTE,
         "OP-F-04-WEI, el bloque de TOQUE UNICO de coeficiente_viral",
         "P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE",
@@ -287,7 +360,8 @@ def main():
         "paso 5). Los otros tres motivos no aplican y por eso no se nombran.",
         "PLAN_V30_P19_COEFICIENTE.json")
 
-    sellar(
+    if "vender" in cuales:
+        sellar(
         VENDER,
         "OP-F-04-HOR, el bloque de TOQUE UNICO de decision_de_vender_startup",
         "P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE",
@@ -305,7 +379,8 @@ def main():
         "segunda puerta de la cola de relectura post fusion: no se poda, se declara.",
         "PLAN_V30_P19_VENDER.json")
 
-    sellar(
+    if "viral" in cuales:
+        sellar(
         VIRAL,
         "OP-F-04-COL y OP-F-04-WEI, el corte UNICO de viral_loop_marketing",
         "P.20 UN NODO, UN CORTE (mas P.19 en la repeticion y P.18 en lo ajeno)",

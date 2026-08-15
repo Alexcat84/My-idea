@@ -1,0 +1,34 @@
+﻿PLAN     : docs/loop/PLAN_V30_P19_COEFICIENTE.json
+OPERACION: OP-F-04-WEI, el bloque de TOQUE UNICO de coeficiente_viral
+REGLA    : P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE
+MODO     : --ejecutar
+NODOS    : 1
+==============================================================================
+
+------------------------------------------------------------------------------
+NODO: coeficiente_viral
+  guarda de texto: 16 de 16 pasos calzan con su prefijo
+  cero perdida: 16 origenes fundidos, 0 que salen, 16 en total
+  pasos 16 -> 8, y la procedencia declara 3 bloque(s)
+  fuente: "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg"
+          -> "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg"  (SIN CAMBIO: multifuente legitimo)
+
+  EL MAPA DEL DESTEJIDO, destino <- origenes:
+     1 <- [1, 6, 12]         Cuenta tus usuarios actuales y mide el número promedio de invitaciones o referidos que e
+     2 <- [2, 7, 13, 14]     Mide qué porcentaje de esas invitaciones se convierte en usuarios activados, y descompón
+     3 <- [3, 8, 15]         Calcula el coeficiente: K = invitaciones x tasa de conversión, o invitaciones x click-th
+     4 <- [9]                Mide el tiempo promedio del ciclo viral (invitación a conversión)
+     5 <- [10, 16]           Identifica cuál de las variables es la más débil (invitaciones, click-through o signup) 
+     6 <- [4]                Testear incentivos para quien refiere y para el referido
+     7 <- [11]               Trabaja en reducir el ciclo viral simplificando pasos y creando urgencia
+     8 <- [5]                Monitorear el coeficiente semanalmente y iterar sobre tácticas de referencia
+    procedencia: pasos [6, 8] del resultado <- The Startup Owner's Manual - Steve Blank (pasos 1 a 5 del original)
+    procedencia: pasos [4, 5, 7] del resultado <- Traction - Gabriel Weinberg (pasos 6 a 11 y 12 a 16 del original, sus dos versiones de la misma cuenta)
+    procedencia: pasos [1, 2, 3] del resultado <- MULTIFUENTE LEGITIMO: los dos libros dentro del mismo paso fundido (Blank aporta el coeficiente y la activacion, Weinberg la i, la K y la descomposicion en click-through y signup)
+
+==============================================================================
+RESUMEN
+  ficheros que se tocarian: 1
+
+ESCRITO: 1 fichero(s) en dataset/nodos/.
+  - coeficiente_viral

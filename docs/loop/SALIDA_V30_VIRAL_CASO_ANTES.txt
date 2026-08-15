@@ -1,0 +1,31 @@
+﻿CASO POSITIVO: OP-F-04-COL y OP-F-04-WEI, el corte UNICO de viral_loop_marketing
+REGLA        : P.20 UN NODO, UN CORTE (mas P.19 en la repeticion y P.18 en lo ajeno)
+==============================================================================
+
+NODO viral_loop_marketing
+  [CAE ] el nodo tiene 30 pasos, los 23 que el plan deja
+  [CAE ] la repeticion 'espontáne' vive en 2 paso(s), maximo 1  (origenes [9, 15, 18])
+  [CAE ] la repeticion 'herramientas' vive en 2 paso(s), maximo 1  (origenes [16, 19])
+  [CAE ] la repeticion 'Reconoc' vive en 2 paso(s), maximo 1  (origenes [11, 17, 20])
+  (conservacion) [SI] el rastro '(viral coefficient)' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'un solo clic' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'win-win' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'embajadores' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'links, códigos' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'VIP' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'en privado' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'Adopt' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'escaso' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'inherente, colaborativa, embebida, incentivada, social' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'créditos' sigue vivo en 1 paso(s)
+  [CAE ] viral_loop_marketing ya no lleva 'eventos exclusivos'
+  [CAE ] experiencias_exclusivas_vip si la lleva
+  [PASA] la huella vive en UN solo nodo vivo: ['viral_loop_marketing']
+  [CAE ] viral_loop_marketing ya no lleva 'voz visible'
+  [CAE ] comunidad_tribu_marca si la lleva
+  [PASA] la huella vive en UN solo nodo vivo: ['viral_loop_marketing']
+
+==============================================================================
+RESULTADO: 2 PASAN, 8 CAEN
+CONSERVACION (pasa las dos veces a proposito): 11 si, 0 no
+HAY PRUEBAS QUE CAEN

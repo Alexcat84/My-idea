@@ -1,0 +1,307 @@
+{
+  "operacion": "OP-F-04-HOR, el bloque de TOQUE UNICO de decision_de_vender_startup",
+  "regla": "P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE",
+  "motivo": "El peor nodo medido del catalogo: seis parejas duplicadas verificadas contra el grafo en docs/FICHA_SUBFUSION_GRADIENTE.md (lote C2, punto 1), mas el equipo en 11, 13 y 17 y el mercado real en 16, 22 y 24. La repeticion cruza la frontera publicada (1 a 10 Wasserman, 11 a 34 Horowitz): las parejas 8 con 26 y 9 con 25 tienen un origen a cada lado, que es exactamente el caso que P.19 nombra al decir material de DOS O MAS FUENTES dentro de un nodo. Se funde entero y el nodo queda MULTIFUENTE LEGITIMO. Perdidas por la tabla de los seis motivos: ALCANCE (las amenazas de 2, 6, 7 y 12 entran a una sola enumeracion en el paso 2; lo mismo el mercado real en el paso 6) y DESTINO (el paso 12 del resultado se queda con a quien hay que comunicar los criterios, que solo traia el origen 29). El paso 15 del resultado NO es del objeto del nodo y entra a LA COLA DEL OBJETO AJENO, la segunda puerta de la cola de relectura post fusion: no se poda, se declara.",
+  "fecha_corte": "2026-08-14",
+  "nodos": [
+    {
+      "nodo": "decision_de_vender_startup",
+      "pasos_totales": 34,
+      "fuente_esperada": "The Founder's Dilemmas | The Hard Thing About Hard Thing - Ben Horowitz | The Hard Thing About Hard Things - Ben Horowitz",
+      "fuente_queda": "The Founder's Dilemmas | The Hard Thing About Hard Thing - Ben Horowitz | The Hard Thing About Hard Things - Ben Horowitz",
+      "prefijos": [
+        "Evalúa cuánto efectivo te queda (runwa",
+        "Analiza si hay cambios en la industria",
+        "Diagnostica cómo están las relaciones ",
+        "Determina tu punto de inflexión: ¿en q",
+        "Compara el valor de vender ahora contr",
+        "Evalúa tu posición competitiva frente ",
+        "Identifica cambios tecnológicos disrup",
+        "Corre un proceso corto y discreto de s",
+        "Compara el precio que te ofrecen contr",
+        "Toma la decisión con análisis financie",
+        "Evalúa con honestidad tu energía y la ",
+        "Analiza las amenazas tecnológicas o co",
+        "Pregunta a las personas más cercanas d",
+        "Define un precio mínimo aceptable basa",
+        "Comunica ese precio con firmeza a todo",
+        "Evalúa con honestidad el tamaño de tu ",
+        "Pregunta a tu equipo cercano si está d",
+        "Define un precio mínimo basado en el v",
+        "Comunica ese precio con firmeza a todo",
+        "Mantente dispuesto a esperar y sostene",
+        "Clasifica la posible adquisición: es p",
+        "Determina si tu mercado real es mucho ",
+        "Evalúa con honestidad las probabilidad",
+        "Redefine cuál es tu mercado real (no e",
+        "Compara las ofertas de adquisición con",
+        "Corre un proceso corto de fusiones y a",
+        "Ajusta tu salario como CEO a valores d",
+        "Define criterios objetivos y fáciles d",
+        "Comunica estos criterios a tu equipo d",
+        "Separa la decisión estratégica de tu s",
+        "Reconoce abiertamente la parte emocion",
+        "Ajusta tu salario como CEO a valores d",
+        "Separa la discusión sobre vender de tu",
+        "Consulta con tu consejo (board) y ases"
+      ],
+      "pasos_originales": [
+        "Evalúa cuánto efectivo te queda (runway) y las perspectivas de conseguir más financiamiento",
+        "Analiza si hay cambios en la industria que amenacen tu modelo de negocio",
+        "Diagnostica cómo están las relaciones dentro de tu equipo fundador (agotamiento o burnout, conflictos)",
+        "Determina tu punto de inflexión: ¿en qué momento perderás el control necesario para negociar buenos términos?",
+        "Compara el valor de vender ahora contra esperar y arriesgar que se diluya tu influencia en la decisión",
+        "Evalúa tu posición competitiva frente a competidores que se combinen o se fusionen",
+        "Identifica cambios tecnológicos disruptivos que te exigirían reinvertir por mucho tiempo sin retorno inmediato",
+        "Corre un proceso corto y discreto de sondeo de fusiones y adquisiciones (M&A) con varios compradores potenciales",
+        "Compara el precio que te ofrecen contra tu proyección de valor a 3 o 5 años si sigues independiente",
+        "Toma la decisión con análisis financiero y estratégico, no solo con la emoción",
+        "Evalúa con honestidad tu energía y la de tu equipo cercano para enfrentar otro ciclo de lucha",
+        "Analiza las amenazas tecnológicas o competitivas de mediano plazo que puedan erosionar el valor de tu empresa",
+        "Pregunta a las personas más cercanas de tu equipo qué tan dispuestas están realmente a seguir o a vender",
+        "Define un precio mínimo aceptable basado en el valor real, no en la primera oferta que te hagan",
+        "Comunica ese precio con firmeza a todos los compradores potenciales y sostenlo aunque no haya respuesta inmediata",
+        "Evalúa con honestidad el tamaño de tu mercado y cómo va a evolucionar",
+        "Pregunta a tu equipo cercano si está dispuesto a seguir el camino difícil",
+        "Define un precio mínimo basado en el valor real de tu negocio, no solo en el extra que te ofrecen sobre el precio actual",
+        "Comunica ese precio con firmeza a todos los posibles compradores",
+        "Mantente dispuesto a esperar y sostener tu posición aunque no lleguen ofertas de inmediato",
+        "Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo",
+        "Determina si tu mercado real es mucho más grande, al menos diez veces más, que el que ya explotaste",
+        "Evalúa con honestidad las probabilidades reales de convertirte en el jugador número uno del mercado",
+        "Redefine cuál es tu mercado real (no el que crees que es) y quiénes serán tus competidores futuros",
+        "Compara las ofertas de adquisición con tu proyección de valor a 3 o 5 años si sigues independiente",
+        "Corre un proceso corto de fusiones y adquisiciones (M&A) para detectar cuál es el precio máximo que el mercado te puede dar en este momento, si tienes dudas",
+        "Ajusta tu salario como CEO a valores de mercado una vez que tu empresa se convierta en un negocio real y un objetivo atractivo de adquisición",
+        "Define criterios objetivos y fáciles de comunicar sobre cuándo mantendrías tu empresa independiente y cuándo la venderías",
+        "Comunica estos criterios a tu equipo de forma consistente para evitar que sientan que los traicionaste",
+        "Separa la decisión estratégica de tu situación financiera personal",
+        "Reconoce abiertamente la parte emocional que hay en la decisión de vender",
+        "Ajusta tu salario como CEO a valores de mercado una vez que tu empresa sea un negocio consolidado",
+        "Separa la discusión sobre vender de tu situación financiera personal",
+        "Consulta con tu consejo (board) y asesores de confianza para equilibrar la parte emocional con el análisis racional"
+      ],
+      "pasos_finales": [
+        "Evalúa cuánto efectivo te queda (runway) y las perspectivas de conseguir más financiamiento",
+        "Analiza las amenazas de mediano plazo que pueden erosionar el valor de tu empresa: cambios en la industria que golpeen tu modelo de negocio, competidores que se combinen o se fusionen, y cambios tecnológicos disruptivos que te obligarían a reinvertir mucho tiempo sin retorno inmediato",
+        "Diagnostica el estado de tu equipo fundador: cómo están las relaciones (agotamiento o burnout, conflictos), cuánta energía les queda a ti y a tus cercanos para enfrentar otro ciclo de lucha, y pregúntales de frente qué tan dispuestos están realmente a seguir el camino difícil o a vender",
+        "Determina tu punto de inflexión: ¿en qué momento perderás el control necesario para negociar buenos términos?",
+        "Compara el valor de vender ahora contra esperar y arriesgar que se diluya tu influencia en la decisión",
+        "Redefine cuál es tu mercado real (no el que crees que es) y quiénes serán tus competidores futuros, evalúa con honestidad su tamaño y cómo va a evolucionar, si es al menos diez veces más grande que el que ya explotaste, y qué probabilidades reales tienes de convertirte en el jugador número uno",
+        "Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo",
+        "Corre un proceso corto y discreto de sondeo de fusiones y adquisiciones (M&A) con varios compradores potenciales, para detectar cuál es el precio máximo que el mercado te puede dar en este momento",
+        "Define un precio mínimo aceptable basado en el valor real de tu negocio, no en la primera oferta que te hagan ni en el extra que te ofrezcan sobre el precio actual",
+        "Comunica ese precio con firmeza a todos los compradores potenciales y sostenlo, dispuesto a esperar aunque no lleguen ofertas de inmediato",
+        "Compara las ofertas de adquisición contra tu proyección de valor a 3 o 5 años si sigues independiente",
+        "Define criterios objetivos y fáciles de comunicar sobre cuándo mantendrías tu empresa independiente y cuándo la venderías, y comunícalos a tu equipo de forma consistente para evitar que sientan que los traicionaste",
+        "Separa la decisión estratégica y la discusión sobre vender de tu situación financiera personal",
+        "Toma la decisión con análisis financiero y estratégico: reconoce abiertamente la parte emocional que hay en vender y consulta con tu consejo (board) y asesores de confianza para equilibrarla con el análisis racional",
+        "Ajusta tu salario como CEO a valores de mercado una vez que tu empresa se convierta en un negocio real y consolidado, y en un objetivo atractivo de adquisición"
+      ],
+      "mapa_destejido": {
+        "1": [
+          1
+        ],
+        "2": [
+          2,
+          6,
+          7,
+          12
+        ],
+        "3": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "4": [
+          4
+        ],
+        "5": [
+          5
+        ],
+        "6": [
+          16,
+          22,
+          23,
+          24
+        ],
+        "7": [
+          21
+        ],
+        "8": [
+          8,
+          26
+        ],
+        "9": [
+          14,
+          18
+        ],
+        "10": [
+          15,
+          19,
+          20
+        ],
+        "11": [
+          9,
+          25
+        ],
+        "12": [
+          28,
+          29
+        ],
+        "13": [
+          30,
+          33
+        ],
+        "14": [
+          10,
+          31,
+          34
+        ],
+        "15": [
+          27,
+          32
+        ]
+      },
+      "procedencia": [
+        {
+          "libro": "The Founder's Dilemmas - Noam Wasserman (pasos 1 a 10 del original)",
+          "pasos_del_resultado": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "libro": "The Hard Thing About Hard Things - Ben Horowitz (pasos 11 a 34 del original, el libro declarado DOS VECES con dos grafias)",
+          "pasos_del_resultado": [
+            6,
+            7,
+            9,
+            10,
+            12,
+            13,
+            15
+          ]
+        },
+        {
+          "libro": "MULTIFUENTE LEGITIMO: los dos libros dentro del mismo paso fundido",
+          "pasos_del_resultado": [
+            2,
+            3,
+            8,
+            11,
+            14
+          ]
+        }
+      ],
+      "pruebas_repeticion": [
+        {
+          "origenes": [
+            2,
+            6,
+            7,
+            12
+          ],
+          "huella_repetida": "tecnológic"
+        },
+        {
+          "origenes": [
+            3,
+            11,
+            13,
+            17
+          ],
+          "huella_repetida": "equipo cercano"
+        },
+        {
+          "origenes": [
+            16,
+            22,
+            23,
+            24
+          ],
+          "huella_repetida": "mercado real"
+        },
+        {
+          "origenes": [
+            8,
+            26
+          ],
+          "huella_repetida": "fusiones y adquisiciones (M&A)"
+        },
+        {
+          "origenes": [
+            14,
+            18
+          ],
+          "huella_repetida": "precio mínimo"
+        },
+        {
+          "origenes": [
+            15,
+            19,
+            20
+          ],
+          "huella_repetida": "Comunica ese precio con firmeza"
+        },
+        {
+          "origenes": [
+            9,
+            25
+          ],
+          "huella_repetida": "proyección de valor a 3 o 5 años"
+        },
+        {
+          "origenes": [
+            28,
+            29
+          ],
+          "huella_repetida": "criterios"
+        },
+        {
+          "origenes": [
+            30,
+            33
+          ],
+          "huella_repetida": "situación financiera personal"
+        },
+        {
+          "origenes": [
+            10,
+            31,
+            34
+          ],
+          "huella_repetida": "emocional"
+        },
+        {
+          "origenes": [
+            27,
+            32
+          ],
+          "huella_repetida": "salario como CEO a valores de mercado"
+        }
+      ],
+      "rastros": [
+        "runway",
+        "burnout",
+        "camino difícil",
+        "punto de inflexión",
+        "diez veces",
+        "número uno",
+        "por talento y tecnología",
+        "discreto",
+        "precio máximo",
+        "primera oferta",
+        "sobre el precio actual",
+        "esperar",
+        "independiente",
+        "traicionaste",
+        "board",
+        "se combinen o se fusionen"
+      ],
+      "salidas": []
+    }
+  ]
+}

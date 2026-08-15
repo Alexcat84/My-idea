@@ -1,0 +1,56 @@
+﻿PLAN     : docs/loop/PLAN_V30_P20_VIRAL_LOOP.json
+OPERACION: OP-F-04-COL y OP-F-04-WEI, el corte UNICO de viral_loop_marketing
+REGLA    : P.20 UN NODO, UN CORTE (mas P.19 en la repeticion y P.18 en lo ajeno)
+MODO     : --simular
+NODOS    : 1
+==============================================================================
+
+------------------------------------------------------------------------------
+NODO: viral_loop_marketing
+  guarda de texto: 30 de 30 pasos calzan con su prefijo
+  cero perdida: 28 origenes fundidos, 2 que salen, 30 en total
+  pasos 30 -> 23, y la procedencia declara 3 bloque(s)
+  fuente: "The Startup Owner's Manual - Blank, Steve | Never Lose a Customer Again - Joey Coleman | Traction - Gabriel Weinberg"
+          -> "The Startup Owner's Manual - Blank, Steve | Never Lose a Customer Again - Joey Coleman | Traction - Gabriel Weinberg"  (SIN CAMBIO: multifuente legitimo)
+
+  EL MAPA DEL DESTEJIDO, destino <- origenes:
+     1 <- [1]                Diseñar mecanismos dentro del producto que incentiven a los clientes a referir a otros.
+     2 <- [2]                Medir la tasa de referidos (viral coefficient).
+     3 <- [3]                Optimizar los incentivos de referencia para maximizar el crecimiento exponencial.
+     4 <- [4]                Definir el momento óptimo en el journey para activar la solicitud de referido (después d
+     5 <- [5]                Diseñar un incentivo que sea significativo pero no necesariamente monetario (ej. benefic
+     6 <- [6]                Simplificar el proceso de referencia a un solo clic o acción mínima (link, email)
+     7 <- [7]                Asegurar que el incentivo beneficie tanto al referente como al referido (modelo win-win)
+     8 <- [8]                Medir la tasa de conversión de referidos y ajustar el incentivo según resultados
+     9 <- [9, 15, 18]        Identifica a los clientes que ya actúan como promotores espontáneos (menciones, reseñas 
+    10 <- [10]               Contactarlos personalmente para agradecerles (email, mensaje directo)
+    11 <- [14]               Diseñar un programa de referidos que facilite y recompense la recomendación.
+    12 <- [16, 19]           Crea contenido y facilita herramientas para que el cliente recomiende sin fricción (link
+    13 <- [11, 17, 20]       Reconoce a quienes refieren activamente, en público o en privado según el cliente, con r
+    14 <- [21]               Diseña una progresión clara desde Adopt hacia Advocate
+    15 <- [22]               Identificar qué es lo que tus mejores clientes valoran más allá del dinero (estatus, acc
+    16 <- [23]               Segmentar a los clientes según el tipo de recompensa que resonaría más con ellos
+    17 <- [24]               Diseñar una oferta de referido que otorgue algo escaso o de difícil acceso
+    18 <- [25]               Comunicar la oferta rápidamente después de identificar el perfil ideal de cliente referi
+    19 <- [26]               Identifica qué tipo de viralidad (inherente, colaborativa, embebida, incentivada, social
+    20 <- [27]               Diseña mecanismos de invitación integrados en el flujo natural de uso del producto
+    21 <- [28]               Incentiva a los usuarios a invitar a otros (créditos, espacio extra, descuentos)
+    22 <- [29]               Simplifica al máximo el proceso de registro para los invitados
+    23 <- [30]               Combina múltiples tipos de virality para fortalecer el loop
+    procedencia: pasos [1, 2, 3] del resultado <- The Startup Owner's Manual - Blank, Steve (pasos 1 a 3 del original)
+    procedencia: pasos [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] del resultado <- Never Lose a Customer Again - Joey Coleman (pasos 4 a 25 del original, menos los dos que salen por P.18)
+    procedencia: pasos [19, 20, 21, 22, 23] del resultado <- Traction - Gabriel Weinberg (pasos 26 a 30 del original)
+
+  SALE por P.18: pasos [12] -> experiencias_exclusivas_vip
+    experiencias_exclusivas_vip: pasos 4 -> 5
+      viaja 12. Invitarlos a eventos exclusivos o experiencias diferenciadas
+
+  SALE por P.18: pasos [13] -> comunidad_tribu_marca
+    comunidad_tribu_marca: pasos 5 -> 6
+      viaja 13. Escuchar su feedback y darles voz visible dentro de la comunidad
+
+==============================================================================
+RESUMEN
+  ficheros que se tocarian: 3
+
+SIMULACION: cero escrituras.

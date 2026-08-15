@@ -1,0 +1,16 @@
+﻿python : Traceback (most recent call last):
+At line:1 char:351
++ ... e an idea"; python scripts/loop/vuelta30_sellar_toque_unico.py 2>&1 | ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta30_sellar_toque_unico.py", line 394, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta30_sellar_toque_unico.py", line 340, in main
+    sellar(
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta30_sellar_toque_unico.py", line 278, in sellar
+    texto = pasos[origenes[0] - 1]
+            ~~~~~^^^^^^^^^^^^^^^^^
+IndexError: list index out of range

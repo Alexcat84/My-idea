@@ -1,0 +1,38 @@
+﻿CASO POSITIVO: OP-F-04-HOR, el bloque de TOQUE UNICO de decision_de_vender_startup
+REGLA        : P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE
+==============================================================================
+
+NODO decision_de_vender_startup
+  [CAE ] el nodo tiene 34 pasos, los 15 que el plan deja
+  [CAE ] la repeticion 'tecnológic' vive en 2 paso(s), maximo 1  (origenes [2, 6, 7, 12])
+  [CAE ] la repeticion 'equipo cercano' vive en 2 paso(s), maximo 1  (origenes [3, 11, 13, 17])
+  [CAE ] la repeticion 'mercado real' vive en 2 paso(s), maximo 1  (origenes [16, 22, 23, 24])
+  [CAE ] la repeticion 'fusiones y adquisiciones (M&A)' vive en 2 paso(s), maximo 1  (origenes [8, 26])
+  [CAE ] la repeticion 'precio mínimo' vive en 2 paso(s), maximo 1  (origenes [14, 18])
+  [CAE ] la repeticion 'Comunica ese precio con firmeza' vive en 2 paso(s), maximo 1  (origenes [15, 19, 20])
+  [CAE ] la repeticion 'proyección de valor a 3 o 5 años' vive en 2 paso(s), maximo 1  (origenes [9, 25])
+  [CAE ] la repeticion 'criterios' vive en 2 paso(s), maximo 1  (origenes [28, 29])
+  [CAE ] la repeticion 'situación financiera personal' vive en 2 paso(s), maximo 1  (origenes [30, 33])
+  [CAE ] la repeticion 'emocional' vive en 2 paso(s), maximo 1  (origenes [10, 31, 34])
+  [CAE ] la repeticion 'salario como CEO a valores de mercado' vive en 2 paso(s), maximo 1  (origenes [27, 32])
+  (conservacion) [SI] el rastro 'runway' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'burnout' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'camino difícil' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'punto de inflexión' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'diez veces' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'número uno' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'por talento y tecnología' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'discreto' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'precio máximo' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'primera oferta' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'sobre el precio actual' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'esperar' sigue vivo en 2 paso(s)
+  (conservacion) [SI] el rastro 'independiente' sigue vivo en 3 paso(s)
+  (conservacion) [SI] el rastro 'traicionaste' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'board' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'se combinen o se fusionen' sigue vivo en 1 paso(s)
+
+==============================================================================
+RESULTADO: 0 PASAN, 12 CAEN
+CONSERVACION (pasa las dos veces a proposito): 16 si, 0 no
+HAY PRUEBAS QUE CAEN

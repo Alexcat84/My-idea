@@ -1,0 +1,166 @@
+{
+  "operacion": "OP-F-04-WEI, el bloque de TOQUE UNICO de coeficiente_viral",
+  "regla": "P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE",
+  "motivo": "Los pasos 6 a 11 y 12 a 16 son la MISMA cuenta de K de Traction dicha dos veces, y los pasos 1 a 3 de Blank calculan el mismo coeficiente. No hay destino que buscar: el objeto ya estaba en el nodo. Se funde en un solo procedimiento y el nodo queda MULTIFUENTE LEGITIMO, con la procedencia declarada por bloque. Las diferencias entre versiones se reparten por la tabla de los seis motivos de perdida de linea: NOMBRE (la K de Weinberg y el coeficiente de Blank conviven en el paso 3), METODO ALTERNATIVO (la conversion agregada o descompuesta en click-through y signup entra como variante condicional dentro del paso 2) y ALCANCE (la enumeracion del eslabon debil pasa de dos variables a tres en el paso 5). Los otros tres motivos no aplican y por eso no se nombran.",
+  "fecha_corte": "2026-08-14",
+  "nodos": [
+    {
+      "nodo": "coeficiente_viral",
+      "pasos_totales": 16,
+      "fuente_esperada": "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg",
+      "fuente_queda": "The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg",
+      "prefijos": [
+        "Contar usuarios actuales y promedio de",
+        "Calcular porcentaje de referidos que s",
+        "Calcular coeficiente: (nuevos usuarios",
+        "Testear incentivos para quien refiere ",
+        "Monitorear el coeficiente semanalmente",
+        "Mide el número promedio de invitacione",
+        "Mide el porcentaje de conversión de es",
+        "Calcula K = i * conversión; descompón ",
+        "Mide el tiempo promedio del ciclo vira",
+        "Identifica el eslabón más débil (invit",
+        "Trabaja en reducir el ciclo viral simp",
+        "Medir el número promedio de invitacion",
+        "Medir el porcentaje de conversión de i",
+        "Medir el porcentaje de conversión de c",
+        "Calcular K = invitaciones x click-thro",
+        "Identificar cuál de las tres variables"
+      ],
+      "pasos_originales": [
+        "Contar usuarios actuales y promedio de referidos por usuario",
+        "Calcular porcentaje de referidos que se activan (compran/se registran)",
+        "Calcular coeficiente: (nuevos usuarios activados) / (usuarios originales)",
+        "Testear incentivos para quien refiere y para el referido",
+        "Monitorear el coeficiente semanalmente y iterar sobre tácticas de referencia",
+        "Mide el número promedio de invitaciones enviadas por usuario (i)",
+        "Mide el porcentaje de conversión de esas invitaciones en nuevos usuarios",
+        "Calcula K = i * conversión; descompón la conversión en click-through y signup si es necesario",
+        "Mide el tiempo promedio del ciclo viral (invitación a conversión)",
+        "Identifica el eslabón más débil (invites o conversión) y enfoca esfuerzos de A/B testing ahí",
+        "Trabaja en reducir el ciclo viral simplificando pasos y creando urgencia",
+        "Medir el número promedio de invitaciones enviadas por usuario",
+        "Medir el porcentaje de conversión de invitaciones en clics",
+        "Medir el porcentaje de conversión de clics en registros (signup)",
+        "Calcular K = invitaciones x click-through % x signup %",
+        "Identificar cuál de las tres variables es más débil y enfocar esfuerzos ahí"
+      ],
+      "pasos_finales": [
+        "Cuenta tus usuarios actuales y mide el número promedio de invitaciones o referidos que envía cada uno (i)",
+        "Mide qué porcentaje de esas invitaciones se convierte en usuarios activados, y descompón la conversión en sus dos tramos cuando el dato lo permita: de invitación a clic (click-through) y de clic a registro o compra (signup)",
+        "Calcula el coeficiente: K = invitaciones x tasa de conversión, o invitaciones x click-through x signup si la descompusiste. Es el mismo número, los nuevos usuarios activados que genera cada usuario existente",
+        "Mide el tiempo promedio del ciclo viral (invitación a conversión)",
+        "Identifica cuál de las variables es la más débil (invitaciones, click-through o signup) y enfoca ahí tus pruebas A/B",
+        "Testear incentivos para quien refiere y para el referido",
+        "Trabaja en reducir el ciclo viral simplificando pasos y creando urgencia",
+        "Monitorear el coeficiente semanalmente y iterar sobre tácticas de referencia"
+      ],
+      "mapa_destejido": {
+        "1": [
+          1,
+          6,
+          12
+        ],
+        "2": [
+          2,
+          7,
+          13,
+          14
+        ],
+        "3": [
+          3,
+          8,
+          15
+        ],
+        "4": [
+          9
+        ],
+        "5": [
+          10,
+          16
+        ],
+        "6": [
+          4
+        ],
+        "7": [
+          11
+        ],
+        "8": [
+          5
+        ]
+      },
+      "procedencia": [
+        {
+          "libro": "The Startup Owner's Manual - Steve Blank (pasos 1 a 5 del original)",
+          "pasos_del_resultado": [
+            6,
+            8
+          ]
+        },
+        {
+          "libro": "Traction - Gabriel Weinberg (pasos 6 a 11 y 12 a 16 del original, sus dos versiones de la misma cuenta)",
+          "pasos_del_resultado": [
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "libro": "MULTIFUENTE LEGITIMO: los dos libros dentro del mismo paso fundido (Blank aporta el coeficiente y la activacion, Weinberg la i, la K y la descomposicion en click-through y signup)",
+          "pasos_del_resultado": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "pruebas_repeticion": [
+        {
+          "origenes": [
+            1,
+            6,
+            12
+          ],
+          "huella_repetida": "invitaciones enviadas por usuario"
+        },
+        {
+          "origenes": [
+            2,
+            7,
+            13,
+            14
+          ],
+          "huella_repetida": "porcentaje de conversión"
+        },
+        {
+          "origenes": [
+            3,
+            8,
+            15
+          ],
+          "huella_repetida": "K ="
+        },
+        {
+          "origenes": [
+            10,
+            16
+          ],
+          "huella_repetida": "más débil"
+        }
+      ],
+      "rastros": [
+        "usuarios actuales",
+        "(i)",
+        "click-through",
+        "signup",
+        "coeficiente",
+        "A/B",
+        "ciclo viral",
+        "urgencia",
+        "semanalmente",
+        "referido"
+      ],
+      "salidas": []
+    }
+  ]
+}

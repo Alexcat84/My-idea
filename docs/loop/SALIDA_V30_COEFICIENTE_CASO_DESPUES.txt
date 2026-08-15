@@ -1,0 +1,25 @@
+﻿CASO POSITIVO: OP-F-04-WEI, el bloque de TOQUE UNICO de coeficiente_viral
+REGLA        : P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE
+==============================================================================
+
+NODO coeficiente_viral
+  [PASA] el nodo tiene 8 pasos, los 8 que el plan deja
+  [PASA] la repeticion 'invitaciones enviadas por usuario' vive en 0 paso(s), maximo 1  (origenes [1, 6, 12])
+  [PASA] la repeticion 'porcentaje de conversión' vive en 0 paso(s), maximo 1  (origenes [2, 7, 13, 14])
+  [PASA] la repeticion 'K =' vive en 1 paso(s), maximo 1  (origenes [3, 8, 15])
+  [PASA] la repeticion 'más débil' vive en 1 paso(s), maximo 1  (origenes [10, 16])
+  (conservacion) [SI] el rastro 'usuarios actuales' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro '(i)' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'click-through' sigue vivo en 3 paso(s)
+  (conservacion) [SI] el rastro 'signup' sigue vivo en 3 paso(s)
+  (conservacion) [SI] el rastro 'coeficiente' sigue vivo en 2 paso(s)
+  (conservacion) [SI] el rastro 'A/B' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'ciclo viral' sigue vivo en 2 paso(s)
+  (conservacion) [SI] el rastro 'urgencia' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'semanalmente' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'referido' sigue vivo en 2 paso(s)
+
+==============================================================================
+RESULTADO: 5 PASAN, 0 CAEN
+CONSERVACION (pasa las dos veces a proposito): 10 si, 0 no
+TODO PASA
