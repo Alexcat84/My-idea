@@ -1,433 +1,475 @@
-# REPORTE DE LA VUELTA 28. Ejecutor: Opus 5. FASE III, EJECUCION. Rama `pasada-unica`
+# REPORTE DE LA VUELTA 29 (ejecutor Opus 5). FASE III, EJECUCION. Rama `pasada-unica`
 
-**14 ago 2026.** Encargo: `docs/loop/PROMPT_SIGUIENTE.md` de la vuelta 27 del auditor.
-**Toda cifra de este reporte sale de un instrumento corrido EN ESTA VUELTA** (`EJECUTOR.md`
-regla 2). Las cifras de actas y reportes anteriores aparecen **solo como contraste**, y
-cuando discrepan de la medicion de hoy la discrepancia se declara en vez de resolverse
-copiando.
+**El muro cayo y la fase 01 avanzo casi entera: `OP-F-02` cerrada, `OP-F-03` cerrada,
+`OP-F-04-WEI` y `OP-F-04-HOR` ejecutadas en casi todo, TRECE nodos propios nacidos y
+declarados. Y PARADA por TRES bloques de TOQUE UNICO cuyo texto no alcanza para
+ejecutarse sin decidir. `OP-F-04-COL` no se ejecuto, y el motivo se mide aqui.**
 
 ---
 
-## 0. LA CABECERA
+## 0. CABECERA, con su medicion
 
 | | |
 |---|---|
-| **HEAD de partida** | `7563c85e` (el commit de la decision del fundador), arbol limpio, cero pendiente que pushear al empezar |
-| **commits de la vuelta** | `4e6349ea` (TAREA 1) y `f69f4819` (`OP-F-04-WEI` en parte), **los dos en `origin/pasada-unica`**, mas el commit de este reporte |
-| **rutas tocadas** | `docs/loop/` **52 ficheros**, `dataset/nodos/` **11**, `scripts/loop/` **6**, `docs/plan/` **3**, `web/lib/assets/` **2**, `dataset/metadata/` **1** |
-| **diff sobre `dataset/nodos/`** | `git diff --stat 7563c85e..HEAD`: **11 ficheros, 37 insertadas, 37 borradas.** La simetria es la firma del reparto: nada se creo ni se perdio, todo se movio |
-| **salidas de instrumento** | **51 ficheros `docs/loop/SALIDA_V28_*`**, y la cuenta va partida para que cuadre al digito: **50 ya commiteadas** en `4e6349ea` y `f69f4819` (`git diff --name-only 7563c85e..HEAD`, contado hoy) **mas 1 que entra con este reporte**, `SALIDA_V28_ESTADO_FINAL.txt`. **Se cuenta asi a proposito:** las dos vueltas anteriores cayeron por contar el registro sin contarlo |
-| **nodos creados** | **CERO en el historial.** Uno se creo, se probo entero y se deshizo: ver la seccion 3 |
+| **HEAD de partida** | `dc8ef3a2` (la decision del fundador: paridad de censo, cuarto comando, estado al cierre) |
+| **HEAD al escribir esto** | el commit de este reporte, sobre `2bd8dd76` |
+| **commits de trabajo** | **SEIS**, todos empujados a `origin/pasada-unica` |
+| **rutas tocadas** (`git diff --name-only dc8ef3a2..HEAD`) | `docs/loop/` **68**, `dataset/nodos/` **55**, `scripts/loop/` **7**, `web/lib/` **3**, `docs/plan/` **3**, `engine/node_families.json` **1**, `dataset/metadata/` **1** |
+| **`dataset/nodos/`** | **55 ficheros, 510 insertadas, 236 borradas**; **13 ficheros NUEVOS** (`git diff --name-status`, contados hoy) |
+| **salidas de instrumento** | **63 ficheros `SALIDA_V29_*`** |
+| **cortes ejecutados** | **TREINTA**: 3 de `OP-F-02`, 1 de la relectura, 5 de `OP-F-03`, 8 de `OP-F-04-WEI`, 13 de `OP-F-04-HOR` |
 
----
+**LOS SEIS COMMITS:**
 
-## 1. LA PARADA, y va primero porque manda sobre todo lo demas
-
-> **HAY UNA TERCERA HILADA DEL MURO, y no es la misma de las dos anteriores.**
-
-**Como se encontro, y se dice el orden porque importa:** la relectura conjunta de la TAREA 1
-mando crear un nodo propio. Se creo, con sus guardas en verde, su caso positivo en las dos
-direcciones y su linea en `docs/plan/INDICE_ROJO_DECLARADO.jsonl`. **`GATE 0` cerro en OK e
-imprimio el rojo declarado uno a uno**, tal como la decision del fundador del 14 ago 2026
-manda, y la **suite del motor paso 24 de 24**: las dos hiladas que el fundador abrio ese dia
-quedaron abiertas y funcionando. **La que se cayo fue la suite WEB**, que el guardian de
-commit corre igual que las otras (`.githooks/pre-commit`, verificado hoy leyendo el fichero).
-
-**Y se cayo por DOS causas distintas, separadas corriendo el instrumento y no razonando:**
-
-| # | prueba que cae | que es realmente | remedio |
-|---|---|---|---|
-| **a** | `web/lib/readiness.test.ts`, *paridad exacta contra `node_families.json`*: `expected 3836 to be 3835` | **un artefacto DERIVADO que se quedo viejo.** `engine/node_families.json` lo genera `engine/plan_readiness.py` desde el grafo, y el ciclo escrito de `GATE 0` (los tres comandos de `08_VERIFICACION.md`) **no lo regenera** | **MECANICO Y ESCRITO EN LA PROPIA HERRAMIENTA** (*Uso: python engine/plan_readiness.py, regenera engine/node_families.json*). Corrido mas `sync`: **cura esta y solo esta** |
-| **b** | `web/lib/engine/graph.test.ts`, *carga los 3835 nodos reales*: `expected 3836 to be 3835` | **una CIFRA DE CENSO CLAVADA en una prueba.** No es un artefacto que se regenere: es un numero escrito a mano | **NO LO HAY SIN DECIDIR.** Ver abajo |
-
-**MEDIDO, no supuesto:** tras correr el remedio (a), la suite web paso de **2 ficheros y 2
-pruebas en rojo** a **1 y 1** (`SALIDA_V28_SUITE_WEB_RELECTURA.txt` contra
-`SALIDA_V28_MURO_SUITE_WEB.txt`).
-
-### POR QUE (b) ES PARADA Y NO LA ARREGLO YO
-
-**No es una prueba envejecida cualquiera: es la que vigila el censo del grafo**, y la pasada
-entera existe para moverlo. **Arreglarla exige decidir**, y ninguna pagina lo dice:
-
-1. **si la cifra se actualiza a mano en cada operacion** (y entonces quien la actualiza, y
-   con que evidencia), **o si la prueba deja de clavar un numero** (y entonces la guarda
-   deja de vigilar lo que vino a vigilar);
-2. **cuantas veces va a moverse**: hoy la mueve un nodo creado; la fase 03 depreca por
-   fusion en dieciseis operaciones, y **cada una la mueve otra vez**;
-3. **si el mecanismo del rojo declarado le sirve o no**, que es la pregunta que el fundador
-   ya contesto para el indice semantico y que aqui **no esta contestada**.
-
-> **Es la misma especie que el auditor se nego a adjudicar en el acta de la vuelta 27,
-> seccion 5, y por las mismas tres razones que escribio alli** (*la letra*, *el precedente*,
-> *el remedio no se ejecuta sin decidir*). La correccion del fundador del 14 ago nombra
-> **el chequeo del indice semantico** y sus tres sedes; **esta prueba no mide el indice: mide
-> el censo.** Leerle una guarda mas seria leerle intencion, no letra. Y `AUDITOR.md` seccion
-> 3 es explicita: *una operacion cuyo texto no alcance para ejecutarse sin decidir es PARADA,
-> no una improvisacion*.
-
-### QUE BLOQUEA EXACTAMENTE, medido operacion por operacion
-
-| bloqueado | por que |
+| hash | que |
 |---|---|
-| **`OP-F-02` entera** | sus **tres** cortes son nodo propio (plan sellado `PLAN_V27_OPF02.json`) |
-| **`OP-F-03`, los CINCO bloques que le faltan** | los cinco tienen destino NODO PROPIO leido |
-| **la correccion 1 de la relectura conjunta** | nodo propio |
-| **`OP-F-04-HOR`, previsiblemente** | su texto dice *va a familia propia*, o sea nodo propio |
-| **la fase 01 entera, por tanto** | no se puede declarar cerrada |
-| **el punto 4 del encargo (modo continuo a las fases siguientes)** | depende de la fase 01 cerrada |
-
-**LO QUE NO BLOQUEA, y por eso esta vuelta no se paro en seco:** todo bloque cuyo destino es
-un **miembro**. Eso es lo que se ejecuto (seccion 4), con la letra del modo continuo y con el
-precedente que el acta de la vuelta 27 adjudico CORRECTO en su discutible 9.
-
-**Nada se salto, nada se rodeo:** el hook corrio en los dos commits y los dos lo pasaron en
-verde; el guardian no se toco; el `.env` no volvio al repo; ningun verde se falseo.
+| `f4ad6d45` | TAREA 1: las cinco costuras de WEI a la cola, medidas |
+| `2d96e3d3` | `OP-F-02` entera: los tres nodo propio de Mollick |
+| `7521f039` | la correccion 1 de la relectura conjunta: el nodo de economia circular |
+| `9d4a8eb1` | `OP-F-03` CERRADA: los cinco bloques con destino nodo propio |
+| `1eef1c6b` | `OP-F-04-WEI` segunda tanda: ocho cortes, el anillo interior |
+| `2bd8dd76` | `OP-F-04-HOR`: doce nodos en trece cortes |
 
 ---
 
-## 2. EL ESTADO, RECOMPUTADO DEL ARCHIVO HOY
+## 1. TAREA 1: LOS REGISTROS
 
-`python scripts/loop/vuelta26_estado.py`, salidas `SALIDA_V28_ESTADO.txt` (al abrir) y
-`SALIDA_V28_ESTADO_FINAL.txt` (al cerrar). **Las dos dan lo mismo: esta vuelta no toco un
-solo veredicto.**
+### 1.1 Las costuras de `OP-F-04-WEI`, declaradas: son CINCO, no tres
 
-**EL MARCADOR:** n **3.388**, puestos **1 a 3.388**, **cero huecos, cero duplicados, cero
-clases fuera de ABCD**.
+**Instrumento propio corrido en esta vuelta:** `scripts/loop/vuelta29_costuras.py`, salida con
+los pasos impresos uno a uno en `docs/loop/SALIDA_V29_COSTURAS.txt`. Los pasos de HOY salen
+del arbol; **los de ANTES del reparto salen del commit `4e6349ea`**, el ultimo anterior a
+`f69f4819`, que es el que ejecuto los cinco cortes de la vuelta 28. Todas en la MISMA tabla de
+`docs/plan/08_VERIFICACION.md`, seccion `LA COLA DE RELECTURA POST FUSION`, con el formato de
+la primera costura. **La fila de la vuelta 28 se quedo entera.**
 
-| clase | n | por ciento |
-|---|---:|---:|
-| **A** | **583** | **17,2** |
-| **B** | **89** | **2,6** |
-| **C** | **7** | **0,2** |
-| **D** | **2.709** | **80,0** |
-
-**LA TASA DE A POR DOMINIO, corte 14 ago 2026:**
-
-| dominio | n | A | tasa | B | C | D |
-|---|---:|---:|---:|---:|---:|---:|
-| core | 1.445 | 344 | 23,8% | 87 | 7 | 1.007 |
-| quality | 844 | 126 | 14,9% | 0 | 0 | 718 |
-| health_safety | 192 | 45 | 23,4% | 0 | 0 | 147 |
-| entrega | 171 | 2 | 1,2% | 0 | 0 | 169 |
-| environmental | 170 | 29 | 17,1% | 0 | 0 | 141 |
-| compras | 155 | 1 | 0,6% | 2 | 0 | 152 |
-| franquicias | 148 | 18 | 12,2% | 0 | 0 | 130 |
-| exportacion | 130 | 15 | 11,5% | 0 | 0 | 115 |
-| risk_management | 106 | 0 | 0,0% | 0 | 0 | 106 |
-| seguridad_digital | 27 | 3 | 11,1% | 0 | 0 | 24 |
-
-> **LA BANDA QUE `P.15` OBLIGA A LLEVAR AL LADO, citada con su corte y no recomputada:**
-> el error de dejar pasar medido el 12 ago 2026 sobre el archivo al puesto 2.117 es de
-> **4,2 por ciento, banda de 0,7 a 20,2** (`08_VERIFICACION.md`). **No se remide aqui: esta
-> vuelta no leyo ni un par.**
-
-**LA VARA POR TRAMO NO APLICA EN ESTA VUELTA, y se dice en vez de callarlo:** cero pares
-leidos, cero puestos movidos. **La unidad de esta vuelta fue el bloque injertado y el
-registro.**
-
-**EL GRAFO, al cerrar:** **3.835 ficheros de nodo**, **3.521 vivos**, **314 deprecados**,
-**16.800 enlaces** (previos mas siguientes), **15 claves distintas**. **Identico al de
-apertura: esta vuelta no creo ni deprecio ningun nodo en el historial.**
-
-**LAS OPERACIONES:** **71**, 71 ids unicos, **cero dependencias rotas**, las **71 en
-`LISTA`**. `OPERACIONES.jsonl` **no se toco**.
-
-**EL INVENTARIO:** **671 entradas al abrir, 672 al cerrar** (dominio 10, acto 556, racimo 13,
-**familia_de_ids 53 a 54**, figura 20, defecto 19). **La entrada nueva es `HUGOS-SISTEMAS`.**
-
-**LAS FAMILIAS AL DIA, medidas hoy** (`scripts/loop/vuelta27_medir.py familia`):
-
-| familia | vivos | con fuente UNICA |
-|---|---:|---:|
-| Hugos | **111** | **107** |
-| Rackham (`SPIN`) | **47** | **47** |
-| Weinberg (`Traction`) | **80** | **67** |
-| Coleman (`Never Lose a Customer`) | **83** | **68** |
-| Horowitz (trozo `Hard Thing`) | **102** | **88** |
-
-> **CONTRASTE DECLARADO con el acta de la vuelta 27, que las midio al HEAD de partida de
-> aquella vuelta:** Hugos 126 y 107 entonces, **111 y 107 hoy**; Rackham 51 y 47 entonces,
-> **47 y 47 hoy**. **No es discrepancia: es la resta exacta de los donantes cuya fuente
-> aquella vuelta corrigio**, y el acta ya la habia reproducido al HEAD de cierre con esos
-> mismos numeros.
-
-**LAS CINCO CITAS DEL FUNDADOR, comprobadas hoy contra el repo** (`vuelta27_medir.py
-citas`, `SALIDA_V28_CITAS.txt`): **5 de 5 PRESENTES, FALLOS 0**, y `P.18` citada en las
-**cuatro** `OP-F-04` una por una.
-
----
-
-## 3. TAREA 1: LOS REGISTROS
-
-### 3.1 `HUGOS-SISTEMAS` horneada al inventario
-
-**Adjudicacion 7 del acta de la vuelta 27** (`ACTA_AUDITOR.md`, seccion 4, punto 7, leida
-hoy: *SI, POR EXTENSION CITADA*). Entrada `familia_de_ids` escrita con
-`scripts/loop/vuelta28_registros.py --ejecutar` (`SALIDA_V28_REGISTROS_INVENTARIO.txt`).
-
-**LA NOMINA SE MIDIO, NO SE COPIO:** los **nueve** ids (los ocho de la salida de sistemas
-mas `tecnologia_como_medio_no_fin`) salieron **vivos** y con **fuente UNICA** *Essentials of
-Supply Chain Management - Michael H. Hugos*, **9 de 9**. El instrumento **para y no escribe**
-si uno falla. Contraste medido en la misma corrida: **111 vivos declaran a Hugos, 107 con
-fuente unica**; la nomina es **9 de esos 107**.
-
-**LA LECTURA QUE LOS JUNTA**, escrita en la entrada: los nueve son **el mismo capitulo de
-Hugos, el de como se construye un sistema**. Cuatro dicen el **ciclo de diseno**
-(`diseno_conceptual_sistema` esboza, `guias_diseno_sistemas_estrategicos` compara disenos con
-siete criterios, `definicion_objetivos_proyecto_sistema` parte el diseno en componentes
-cohesivos, `complejidad_acorde_capacidad_organizacional` mide el alcance contra la capacidad
-real). Tres dicen **como se ejecuta** (`ejecucion_incremental_transicion_tecnologica`,
-`rediseno_tras_fracaso_proyecto`, `arquitectura_flexible_soa`). Dos dicen **para que**
-(`tecnologia_como_medio_no_fin`, `requisitos_sistema_retroalimentacion`).
-
-**Y LA NOTA DE ALCANCE VA DENTRO DE LA ENTRADA, para que nadie la lea de mas:** los nueve son
-**la nomina LEIDA**, no un barrido exhaustivo del capitulo sobre los 107. **Si la familia
-crece, `P.18` manda releerla al dia de la operacion que la use.**
-
-### 3.2 LA RELECTURA CONJUNTA: LAS DOS DISCREPANCIAS VUELCAN
-
-**Las dos que el auditor marco en el acta 27, seccion 2, verificadas hoy contra el grafo con
-la vara de `P.18`** (`SALIDA_V28_RELECTURA_CONJUNTA.txt`). **Las dos vuelcan: el auditor
-tenia razon en las dos y mi lectura de la vuelta 27 cae en las dos.** El texto de la lectura
-anterior **queda entero** en `01_FUENTES.md` con la correccion escrita encima.
-
-**d2, `economia_circular_como_modelo_de_negocio` 6 a 9: NO va al miembro, VA A NODO PROPIO.**
-
-- **El miembro SIMULA y COMPARA** (definir entidades, centro de gravedad, correr
-  simulaciones de 14 dias, reportes de P y L, comparar disenos). **El bloque ELIGE la
-  estrategia y DISENA el mecanismo** (mapear el ciclo de vida de hoy, identificar en cual de
-  las cinco estrategias circulares hay mas potencial, disenar el retorno o la remanufactura,
-  calcular el impacto). **Ningun paso del miembro elige ni disena; ningun paso del bloque
-  simula.**
-- **Y LA FRASE QUE YO PUBLIQUE EN LA VUELTA 27 NO SE SOSTIENE MEDIDA HOY:** dije que *el
-  ultimo paso del bloque es su propio entregable*. **El entregable del miembro, leido hoy, es
-  un modelo de simulacion con reporte de P y L y KPIs para al menos dos escenarios**, no el
-  impacto en costos de materiales y logistica. **Yo nombre una clausula del `resumen_teorico`
-  y la llame entregable.**
-- **Ningun otro miembro coincide**, y no es una busqueda negativa citada: barrido corrido hoy
-  sobre los **111 vivos de Hugos**, con **tres aciertos** de los cuales dos son incidentales
-  (`estrategia_captura_mercado_crecimiento` cita *productos verdes* como ejemplo de mercado
-  emergente; `gestion_beneficios_alianza_sostenible` usa *sostenible* en el sentido de alianza
-  duradera). **Queda uno, y es el que no coincide.**
-- **`P.18` punto 3: NODO PROPIO.** `estrategia_circular_y_mecanismo_de_retorno`, con
-  `economia_circular_como_modelo_de_negocio` de procedencia y previo.
-
-**d4, `superioridad_producto_beneficios` 7 a 10: se MUDA de `diferencia_ventaja_beneficio` a
-`framework_caracteristicas_ventajas_beneficios`. APLICADA Y EN EL ARBOL.**
-
-- **El bloque no nombra la Ventaja ni una sola vez** y **no decide ningun momento de
-  conversacion**: opone CARACTERISTICAS y BENEFICIOS y decide el estilo global del discurso
-  segun el posicionamiento de precio.
-- El miembro que lo recibio decide **el momento** (su entregable lo dice con esas palabras:
-  *el momento exacto de la conversacion en que debes usar cada uno*) y sus cuatro pasos
-  propios son todos de momento. **El objeto no coincide alli.**
-- El miembro nuevo tiene por entregable **la guia de clasificacion de mensajes de venta
-  aplicada a la propuesta de valor propia**, y su paso 3 pide que el Beneficio responda a una
-  Necesidad Explicita, **que es el paso premium del bloque**. **Coincide aqui.**
-- **Saldo medido:** `diferencia_ventaja_beneficio` **8 pasos a 4**;
-  `framework_caracteristicas_ventajas_beneficios` **4 a 8**. **Cero perdida:** la huella *otro
-  posicionamiento de precio* vive hoy en **exactamente un nodo vivo**.
-
-**EL RECOMPUTO QUE ESTO OBLIGA, y es una correccion de cifra:** los **quince** repartidos de
-`OP-F-03` en la vuelta 27 pasan a **CATORCE en el arbol**, y **los bloques que le faltan a
-`OP-F-03` para declararse HECHA suben de CUATRO a CINCO.** El encargo decia *los cuatro nodos
-propios que le faltan*; **medido hoy son cinco bloques**, y el encargo mismo lo previo
-(*con el ajuste que traiga la relectura conjunta si economia_circular voltea*).
-
-**LA CORRECCION 1 SE EJECUTO ENTERA Y SE DESHIZO, y se dice entero en vez de callarse.** El
-nodo se creo, se declaro en la lista del rojo, `GATE 0` cerro en OK imprimiendolo, el motor
-paso 24 de 24, y el **caso positivo corrio en las dos direcciones: 4 de 6 pruebas CAEN antes,
-6 de 6 PASAN despues**. **Se deshizo porque la suite web lo dejo incommitteable** (seccion 1).
-El plan queda **SELLADO** en `docs/loop/PLAN_V28_RELECTURA.json`, con su corte, sus prefijos
-de guarda leidos del grafo de hoy y su motivo por `P.18`. **`INDICE_ROJO_DECLARADO.jsonl`
-vuelve a quedar VACIA**, porque el nodo que declaraba ya no existe.
-
-### 3.3 LAS TRES ADJUDICACIONES REGISTRADAS
-
-| # | adjudicacion | donde quedo escrita |
+| miembro | medido hoy | veredicto |
 |---|---|---|
-| **1** | **`OP-F-03` NO se declara HECHA: queda PARCIAL** hasta que existan sus nodos propios y su caso positivo pase | `01_FUENTES.md`, con la cuenta medida hoy: **14 de 19 bloques en el arbol, 5 pendientes** |
-| **2** | **la repeticion que un reparto crea entra a la cola de relectura post fusion de la fase 02 y NO se desteje en el acto** | `08_VERIFICACION.md`, que es donde vive la cola, con su **primera costura declarada**: `ejecucion_incremental_transicion_tecnologica`, que recibio tres bloques y **mide 16 pasos hoy** contra los 4 que tenia. Y en `01_FUENTES.md` |
-| **3** | **dos bloques que caen en el mismo nodo propio se funden en UNO**, con las dos procedencias declaradas en su fuente, nunca dos gemelos | `01_FUENTES.md`, aplicada al **unico caso medido**: `analisis_tco_roi_b2b` y `criterios_seleccion_proveedores` van a **un** nodo |
+| `fases_traccion_producto` | **7 pasos contra 4** | los tres que entraron repiten sus pasos 1, 2 y 4 |
+| `clasificacion_leads_abc` | **10 contra 5** | tres de los cinco repiten (categorias, 66 a 75 por ciento, pase de los C) |
+| `bullseye_framework` | **11 contra 6** | cuatro de los cinco repiten (los 19 canales, la prueba barata, medir, comparar) |
+| `publicidad_offline_pruebas_locales` | **9 contra 5** | **SOLAPE PARCIAL, uno de cuatro.** El acta lo sospechaba y la cifra lo confirma |
+| `compromiso_linea_tiempo_cliente` | **6 contra 5** | **QUINTA costura, que el acta no nombro.** El unico paso que entro repite sus pasos 2 y 3 |
+
+**LO QUE EL INSTRUMENTO LEVANTO Y EL ENCARGO NO PEDIA, declarado y no arreglado:** la quinta
+costura. El acta nombro tres y mando revisar una cuarta; **medi los CINCO receptores del
+reparto y este tambien repite.** La regla de esa puerta es mecanica (*una repeticion que un
+reparto de la fase 01 crea dentro de un miembro entra a la nomina de la fase 02*), y el propio
+acta de la vuelta 28 ya habia leido esa repeticion al sostener el destino en su discutible 9.
+**Callarla porque el encargo no la nombraba habria sido la misma omision que esta correccion
+viene a reparar.**
+
+### 1.2 Las tres correcciones del commit del fundador, citadas con su linea (no reescritas)
+
+**Leidas hoy contra los ficheros, no recordadas:**
+
+| correccion | donde vive | linea leida hoy |
+|---|---|---|
+| **paridad de censo contra `total_nodos`** | `web/lib/engine/graph.test.ts` | **linea 15**: *carga TODOS los nodos reales, paridad contra total_nodos (decision del fundador, 14 ago 2026)*. Su registro con el caso positivo en las dos direcciones esta en `docs/plan/08_VERIFICACION.md` **linea 250** |
+| **el cuarto comando condicional del ciclo** | `docs/plan/08_VERIFICACION.md` | **linea 55** (la fila del comando 4: `python engine/plan_readiness.py`, *corrido DESPUES del 2 y ANTES del 3, SOLO cuando la operacion cambia el CENSO*) y su registro completo en **linea 99** |
+| **`EL ESTADO AL CIERRE SE MIDE AL CIERRE`** | `docs/loop/EJECUTOR.md` | **linea 15** |
+
+**LA PRIMERA TIENE SU PRIMER EJEMPLAR EN EL HISTORIAL EN ESTA VUELTA:** el censo se movio de
+**3.835 a 3.848** en cinco operaciones, y `graph.test.ts` **quedo verde las cinco veces sin
+tocarse una sola linea**. La regla que el fundador escribio hizo exactamente lo que decia.
 
 ---
 
-## 4. TAREA 2: LO QUE SE PUDO EJECUTAR
+## 2. TAREA 2: LOS PLANES SELLADOS QUE EL MURO TENIA PRESOS
 
-**Los puntos 1, 2 y 4 del encargo estan BLOQUEADOS ENTEROS por la parada** (seccion 1): los
-tres cortes de `OP-F-02` y los cinco bloques que le faltan a `OP-F-03` son **todos** nodo
-propio. **Ni un paso de ellos se movio.**
+### 2.1 `OP-F-02` EJECUTADA ENTERA
 
-**Lo que se ejecuto es la parte de `OP-F-04-WEI` cuyo destino es un MIEMBRO**, o sea la que
-no toca el muro. Plan sellado `docs/loop/PLAN_V28_OPF04_WEI.json`. La nomina de destino se
-midio hoy: **80 nodos vivos declaran `Traction`, 67 con fuente UNICA**.
+Aplicada desde `docs/loop/PLAN_V27_OPF02.json` **sin reescribir una linea del sello de la
+vuelta 27**.
 
-| origen | frontera | miembro receptor | saldo medido |
-|---|---|---|---|
-| `plan_de_adquisicion_acquire` | **1 a 7 / 8 a 12** | `bullseye_framework` | 12 pasos a **7**; miembro 6 a **11** |
-| `earned_vs_paid_media` | **1 a 4 / 5 a 8** | `publicidad_offline_pruebas_locales` | 8 a **4**; miembro 5 a **9** |
-| `fit_problema_solucion` | **1 a 3 / 4 a 6** | `fases_traccion_producto` | 6 a **3**; miembro 4 a **7** |
-| `sales_funnel_get_keep_grow` | **1 a 4 / 5 a 9** | `clasificacion_leads_abc` | 10 a **4**; miembro 5 a **10** |
-| `sales_funnel_get_keep_grow` | **el paso 10, aparte** | `compromiso_linea_tiempo_cliente` | miembro 5 a **6** |
+| origen | pasos | nodo propio nuevo |
+|---|---|---|
+| `future_scenarios_planning` | **13 a 5**, con destejido declarado de 8 a 6 y su mapa | `escenarios_de_evolucion_de_la_ia` |
+| `gut_check` | **9 a 4** | `critica_del_plan_con_ia` |
+| `brainstorming_divergente` | **8 a 4** | `ideacion_con_ia_en_la_sesion` |
 
-**LAS LECTURAS QUE SOSTIENEN LOS DESTINOS**, en una linea cada una:
+**Caso positivo: 6 CAEN antes, 6 PASAN despues.**
 
-- **`bullseye_framework` y no `middle_ring_testing`**: el bloque **empieza por listar los 19
-  canales**, que es el anillo EXTERIOR, y el miembro del anillo medio no tiene ese paso.
-- **`publicidad_offline_pruebas_locales`**: pedir a cada medio su prospecto de audiencia,
-  comparar alcance contra precio y empezar por radio, prensa y vallas **locales** es su
-  objeto. Los otros dos nodos offline no coinciden: uno **mide** lo ya lanzado y el bloque no
-  mide, elige; el otro es una tactica de compra, no la eleccion del medio.
-- **`fases_traccion_producto`**: el calce mas literal de los cinco, paso por paso. El miembro
-  se llama *Las Tres Fases de Traccion* y el bloque nombra las tres.
-- **`clasificacion_leads_abc`**: las mismas categorias (A menos de 3 meses, B de 3 a 12, C mas
-  de 12) y **las mismas cifras** (66 a 75 por ciento del tiempo a los A).
-- **`compromiso_linea_tiempo_cliente`**, y por eso el apendice se **parte en dos**: el paso 10
-  no clasifica ni reparte tiempo, **pacta un plazo**, que es palabra por palabra el objeto de
-  ese miembro. **Forzarlo dentro de la clasificacion seria el encaje que `P.18` punto 3
-  prohibe.**
+### 2.2 La correccion 1 de la relectura conjunta, APLICADA
 
-**LAS GUARDAS DE ESTE REPARTO, corridas todas:** simulacion previa sobre copia en memoria
-(**verde**, 5 cortes, **cero nodos nuevos**, 9 ficheros); guarda de texto por paso, de fuente
-por nodo, y **guarda de huella nueva de esta vuelta** (cada huella se comprobo **AUSENTE del
-destino ANTES de sellar**: una huella que ya vive en el destino no probaria nada); **caso
-positivo 15 de 15 CAEN antes y 15 de 15 PASAN despues**.
+`estrategia_circular_y_mecanismo_de_retorno` nace de `modelo_simulacion_cadena_suministro_circular`
+(**9 pasos a 5**), con `economia_circular_como_modelo_de_negocio` como procedencia y previo.
+**Caso positivo: 2 de 3 CAEN antes, 3 de 3 PASAN despues.**
 
-**LO QUE DE `OP-F-04` NO SE EJECUTO, con su frontera LEIDA HOY y su destino declarado
-PENDIENTE en vez de adivinado** (tabla entera en `01_FUENTES.md`): los otros **nueve** bloques
-de WEI, de los cuales dos (`coeficiente_viral` y `viral_loop_marketing`) la propia pagina ya
-llama *no son un simple apendice* y piden TOQUE UNICO. **`OP-F-04-COL` y `OP-F-04-HOR` no se
-tocaron ni un paso**, con sus nominas medidas hoy (**15 nodos vivos** y **13 nodos vivos**) y
-sus familias de destino medidas (**Coleman 83 y 68**, **Horowitz 102 y 88**).
+> **REBANADA DECLARADA, y hace falta decirlo:** el plan sellado trae DOS mudanzas y la segunda
+> (`diferencia_ventaja_beneficio` a `framework_caracteristicas_ventajas_beneficios`) **ya estaba
+> en el arbol desde la vuelta 28**. Su guarda de conteo paro en rojo, **como debe**. Se ejecuto
+> `docs/loop/PLAN_V29_RELECTURA_D1.json`, la rebanada con la mudanza pendiente, **copiada del
+> sello POR INSTRUMENTO y verificada identica al dict original** (`LA MUDANZA ES IDENTICA AL
+> SELLO: True`): no se reescribio una sola linea de lo sellado.
+
+### 2.3 CORRECCION DECLARADA: la cita del encargo sobre `OP-F-03` no calza con lo medido
+
+**El encargo dice:** *los cinco bloques nodo propio de `OP-F-03` (`PLAN_V27_OPF03_SISTEMAS.json`
+y lo que falte de `PLAN_V27_OPF03_CADENA.json`)*. **Medido hoy con instrumento propio**
+(`scripts/loop/vuelta29_estado_planes.py`, salida en `docs/loop/SALIDA_V29_ESTADO_PLANES.txt`):
+
+| plan | cortes | con destino nodo propio | pendientes |
+|---|---:|---:|---:|
+| `PLAN_V27_OPF03_SISTEMAS.json` | 7 | **0** | **0** |
+| `PLAN_V27_OPF03_CADENA.json` | 9 | **0** | **0** |
+
+**Los dos planes estan APLICADOS ENTEROS desde la vuelta 27, y ninguno de sus dieciseis cortes
+tiene destino nodo propio.** La discrepancia **se declara en vez de resolverse copiando**
+(regla 2 del ejecutor), y **se ejecuto sobre lo que el registro SI dice**: los cinco bloques
+estan nombrados en `docs/plan/01_FUENTES.md`, en la tabla `LOS CUATRO QUE NO SE PUDIERON
+EJECUTAR` (vuelta 27) mas el de la relectura (vuelta 28). **La cifra CINCO del encargo es
+correcta; lo que no calza son los dos ficheros citados.**
+
+### 2.4 `OP-F-03` CERRADA: los cinco bloques ejecutados
+
+| origen | frontera | destino |
+|---|---|---|
+| `economia_circular_...` (via `modelo_simulacion_...`) | 6 a 9 | nodo propio `estrategia_circular_y_mecanismo_de_retorno` |
+| `analisis_tco_roi_b2b` | 5 a 9 | nodo propio `seleccion_de_proveedores_por_costo_total` |
+| `criterios_seleccion_proveedores` | 7 a 10 | **EL MISMO nodo** (adjudicacion 3 del acta 27) |
+| `gestion_inventario` | 6 a 9 | nodo propio `driver_de_inventario` |
+| `transicion_producto_a_experiencia` | **5 a 8 y 9 a 12** | nodo propio `producto_como_servicio_de_acceso`, **los dos a UNO** |
+
+**La cuenta que la vuelta 28 dejo escrita (*catorce de diecinueve bloques en el arbol, cinco
+pendientes*) queda en DIECINUEVE de diecinueve. Caso positivo: 10 CAEN antes, 15 PASAN
+despues.**
+
+**LO QUE ESTA VUELTA ANADIO A LA LECTURA PUBLICADA, dicho sin adornos:** el **cuerpo** de los
+tres nodos propios (titulo, resumen, entregable, condiciones, etiqueta) y **el `node_id` de
+uno de ellos**: la tabla de la vuelta 27 publicaba `seleccion_de_proveedores_por_costo_total` y
+`driver_de_inventario` con su id escrito, **pero la de `transicion_producto_a_experiencia`
+decia solo *nodo propio*, sin nombre.** `producto_como_servicio_de_acceso` es un nombre de esta
+vuelta, **y va marcado como discutible 1**.
+
+### 2.5 AMPLIACION DECLARADA DEL INSTRUMENTO
+
+`scripts/loop/vuelta27_cortar.py`: el destino de tipo `miembro` vale ahora **si existe en disco
+O si este mismo plan acaba de crearlo como nodo propio en un corte anterior**. **Sin eso, la
+adjudicacion 3 del acta 27 no se podia ejecutar**: el segundo corte chocaba con la guarda de
+*ya existe*, y la unica salida habria sido **fabricar el par que la campana existe para
+deshacer**. **Ninguna guarda se ablanda:** si el destino no esta ni en disco ni en memoria,
+sigue siendo rojo. Se uso en tres sitios (`seleccion_de_proveedores_por_costo_total`,
+`producto_como_servicio_de_acceso`, `anillo_interior_explotar_el_canal_nucleo`,
+`formalizar_un_proceso_ad_hoc`).
 
 ---
 
-## 5. LAS GUARDAS TRANSVERSALES, corridas tras cada operacion
+## 3. TAREA 3: `OP-F-04`
 
-**El ciclo de `GATE 0` entero, los tres comandos de `08_VERIFICACION.md`, corrido CUATRO
-veces esta vuelta** (base, tras la relectura, tras deshacer, tras WEI):
+### 3.1 `OP-F-04-WEI`, segunda tanda: ocho cortes sobre siete nodos
 
-| | |
+**Nomina de la familia MEDIDA HOY, no copiada: 76 nodos vivos declaran `Traction` y 67 con
+fuente UNICA** (`SALIDA_V29_FAMILIA_WEINBERG.txt`). **Coincide con la medicion de CIERRE del
+auditor en el acta 28 y NO con la de apertura (80 y 67), que es la caida de reporte que esa
+acta nombro.** Las fronteras son las publicadas en la vuelta 28: **no se rehicieron.**
+
+| origen | frontera | destino por `P.18` |
+|---|---|---|
+| `enfoque_motor_unico_crecimiento` | 5 a 9 | **nodo propio** `anillo_interior_explotar_el_canal_nucleo` |
+| `optimizacion_embudo_get_customers` | 6 a 10 | **el mismo** |
+| `ab_testing_optimizacion` | 11 a 15 | **el mismo** |
+| `analisis_trafico_competitivo` | 5 a 8 | **nodo propio** `inteligencia_de_anuncios_de_la_competencia` |
+| `decision_pivote_perseverar` | 5 a 9 | **nodo propio** `puntos_brillantes_antes_del_pivote` |
+| `key_partners_hypothesis` | **6 a 10** | miembro `alineacion_bd_metricas_core` |
+| `key_partners_hypothesis` | **11 a 14** | miembro `pipeline_alianzas_bd` |
+| `metricas_de_adquisicion_activacion` | 6 a 9 | miembro `sem_estrategia_ejecucion` |
+
+> **LA AUSENCIA QUE DECIDE LOS TRES PRIMEROS, medida sobre los 76: LA DIANA NO TIENE ANILLO
+> INTERIOR.** `canales_de_traccion_19` es el exterior, `middle_ring_testing` el medio,
+> `bullseye_framework` la diana entera, **y ningun miembro dice que se hace con el canal
+> DESPUES de que gana.** Los tres bloques son ese mismo acto. Fundidos en UNO por la
+> adjudicacion 3.
+
+**`key_partners_hypothesis` da DOS cortes**, resolviendo lo que el acta 28 dejo SOSTENIDO en su
+discutible 11: **leidos hoy, los dos sub bloques se distinguen.** El de 6 a 10 filtra alianzas
+**por la metrica**; el de 11 a 14 **clasifica por TIPO** segun el cuello de botella.
+
+**LA GUARDA DE HUELLA PARO CINCO VECES** y obligo a cambiar el trozo elegido: `MixRank` ya
+vivia en `retargeting_display`, `Critical Path` **en el propio destino**
+`alineacion_bd_metricas_core`, `valores at` en `medidas_tendencia_dispersion`, `cuello de
+botella` en dos nodos mas y `joint venture` en cuatro. **Una huella que ya vive fuera del
+origen no prueba nada, y la guarda lo cazo antes de sellar.** *(El caso de `Critical Path` es
+evidencia a favor del destino, no en contra.)*
+
+**Caso positivo: 16 CAEN de 24 antes, 24 de 24 PASAN despues.**
+
+### 3.2 `OP-F-04-HOR`: doce nodos en trece cortes, DESBLOQUEADA POR CITA
+
+**La cita, leida hoy:** acta de la vuelta 28, **adjudicacion 3**, que cito el REGISTRO del
+fundador en la nota de `OP-F-04-HOR` de `OPERACIONES.jsonl`. *Familia propia* es **la familia
+del propio libro**, en paralelo exacto con *se reune con SPIN*, *con el Bullseye* y *con los
+100 dias*. **HOR se ejecuta como WEI.** El parrafo de la vuelta 28 que preveia el choque con el
+muro **se quedo entero**: era la lectura de ese dia.
+
+**Nomina MEDIDA HOY: 102 vivos declaran el trozo `Hard Thing`, 88 con fuente UNICA.** Las
+fronteras son las publicadas en la vuelta 20: **no se rehicieron.**
+
+| origen | frontera | destino por `P.18` |
+|---|---|---|
+| `actualizacion_posiciones_existentes` | 5 a 19 | miembro `evaluacion_balanceada_de_ejecutivos` |
+| `background_startup_vs_corporativo` | 5 a 9 | miembro `contratar_ambicion_correcta` |
+| `contratacion_experiencia_vs_potencial` | 5 a 10 | miembro `contratar_por_fortaleza` |
+| `decision_de_salir_a_bolsa` | 6 a 10 | **nodo propio** `estar_listo_para_ser_publica` |
+| `estrategia_de_innovacion_producto` | 4 a 7 | miembro `coraje_en_decisiones_dificiles` |
+| `manejo_empleados_en_adquisicion` | 5 a 9 | miembro `comunicacion_honesta_en_crisis_al_equipo` |
+| `metas_vs_proposito` | 5 a 9 | miembro `diseno_metricas_lideres_rezagados` |
+| `organizacion_adaptativa` | 5 a 8 | miembro `contratacion_acelerada_hipercrecimiento` |
+| `plan_mejora_procesos` | **6 a 10 y 11 a 15** | **nodo propio** `formalizar_un_proceso_ad_hoc`, **los dos a UNO** |
+| `posicionamiento_de_empresa` | 6 a 9 | **nodo propio** `la_historia_de_la_empresa` |
+| `revisiones_regulares_desempeno_ceo` | 5 a 10 | miembro `framework_excelencia_operacional` |
+| `seleccion_ceo_fundador` | 5 a 12 | miembro `planificacion_sucesion_ceo` |
+
+> **`plan_mejora_procesos` ES EL SEGUNDO EJEMPLAR MEDIDO DE LA AVERIA DE `OP-S-11`:** declara a
+> Horowitz **dos veces con dos grafias** (*Hard Things* y *Hard Thing*), y sus dos bloques dicen
+> lo mismo **cuatro veces de cinco**. Van a UN nodo por la adjudicacion 3.
+
+**Caso positivo: 26 CAEN de 39 antes, 39 de 39 PASAN despues.**
+
+### 3.3 `OP-F-04-COL` NO SE EJECUTO, y el motivo se mide
+
+| | medido hoy |
 |---|---|
-| **comando 1** | `run_phase1.py --reaplico-curaduria`: **exit 0 y `GATE 0: OK`** las cuatro veces |
-| **comando 2** | `etiquetas_de_cara.py --aplicar` justo despues: **71 etiquetas** las cuatro veces. **NO ENCOGE**, que es la cifra que `08_VERIFICACION.md` manda vigilar |
-| **comando 3** | `sync_assets_web.py`: **las dos copias del grafo en el MISMO blob** cada vez, y **byte identicas al HEAD del commit de su tramo**: `05bab97f` en `4e6349ea`, `0c284bc9` en `f69f4819`, medido con `git hash-object` contra `git rev-parse HEAD:<ruta>` **despues de commitear**, que es la vara escrita el 14 ago (vuelta 27) |
-| **el rojo declarado** | con el nodo en el arbol, `GATE 0` cerro **OK** e **imprimio el id uno a uno con su operacion y su fecha**. Al cierre la lista esta **VACIA** y `GATE 0` da **0 activos sin vector** sin excepcion ninguna |
-| **suites** | motor **24 de 24**; web **80 ficheros, 1.030 pasadas y 3 saltadas**; `tsc --noEmit` **cero lineas** |
-| **el hook** | corrio en los dos commits, **verde los dos**, y no se salto ni una vez |
+| nomina | **15 nodos, los 15 vivos** |
+| familia de destino | **83 vivos declaran a Coleman, 68 con fuente UNICA** |
+| **fronteras publicadas** | **2 de 15**, barrido corrido hoy (`SALIDA_V29_FRONTERAS_COL.txt`): solo `voz_del_cliente_voc` y `metas_vs_proposito`. **Los otros trece no aparecen con frontera en ninguna linea de `01_FUENTES.md`** |
 
-**UN PASO DEL CICLO QUE NO ESTA ESCRITO Y QUE HUBO QUE CORRER:** `python
-engine/plan_readiness.py` mas `sync`, para regenerar `engine/node_families.json` cuando el
-censo cambia. **Va como pendiente de doctrina 1.**
+**Esa es la diferencia entera con `WEI` y con `HOR`:** en las dos, las fronteras estaban
+publicadas y esta vuelta solo tuvo que anadir el destino. **En `COL` habria que leer TRECE
+fronteras nuevas ademas de quince destinos**, que es exactamente el motivo que las vueltas 27 y
+28 dieron para no tocarla (*lectura y no mecanica*). **Leer trece fronteras al final de una
+vuelta que ya ejecuto treinta cortes seria adivinar, y la regla 11 lo prohibe.**
 
----
+**Y hay una segunda razon, de dependencia y no de alcance:** `viral_loop_marketing` esta
+**DENTRO de los 15 de COL**, y es uno de los tres bloques de la PARADA. **`OP-F-04-COL` no se
+puede declarar ENTERA mientras ese nodo espere adjudicacion, ejecute quien ejecute el resto.**
 
-## 6. CORRECCIONES DECLARADAS DE ESTA VUELTA
+### 3.4 LA FASE 01 NO CIERRA, y por eso no se paso a las fases siguientes
 
-**Ninguna borra el texto que corrige.**
-
-1. **`economia_circular_como_modelo_de_negocio` 6 a 9 va a NODO PROPIO, no al miembro.**
-   Vuelca mi propia lectura de la vuelta 27, y con ella **la frase publicada sobre el
-   entregable del miembro, que medida hoy no se sostiene**.
-2. **`superioridad_producto_beneficios` 7 a 10 se muda de miembro.** Vuelca el motivo por
-   `P.18` que quedo sellado en `PLAN_V27_OPF04_RAC.json`, **que se queda entero**.
-3. **`OP-F-03` pasa de 15 repartidos a 14 en el arbol, y de 4 bloques pendientes a 5.**
-   Es el recomputo aritmetico de la correccion 1.
+El punto 4 del encargo (seguir en modo continuo a las fases siguientes del `00_INDICE`) tiene
+como condicion escrita *con las cuatro `OP-F-04` hechas*. **Hoy son dos hechas (`RAC`, y `HOR`
+salvo un nodo), una parcial (`WEI`, por dos) y una sin ejecutar (`COL`).** No se avanzo a la
+fase 02.
 
 ---
 
-## 7. PENDIENTES DE DOCTRINA (registrados, no resueltos, `EJECUTOR.md` regla 5)
+## 4. PARADA: TRES BLOQUES DE TOQUE UNICO CUYO TEXTO NO ALCANZA
 
-1. **EL CICLO ESCRITO DE `GATE 0` NO REGENERA `engine/node_families.json`.** Es un artefacto
-   derivado del grafo, lo genera `engine/plan_readiness.py`, y **el dia que una operacion
-   cambia el censo la suite web se cae por ahi**. Es exactamente la misma especie que el
-   comando 3 (*saltarselo deja las dos copias divergentes y la que lo caza es la suite, no el
-   Gate*). **Lo mejor sostenido que puedo dejar escrito: el remedio es mecanico y esta en el
-   docstring de la propia herramienta, y lo corri.** No lo escribo en `08_VERIFICACION.md`
-   como cuarto comando porque **esa pagina es la vara y anadirle un comando es escribir
-   doctrina**.
-2. **QUIEN MUEVE LA CIFRA DE CENSO DE LA SUITE WEB, Y CON QUE REGLA.** Es la parada de la
-   seccion 1.
-3. **`OP-F-04-HOR` DICE *va a familia propia*, Y NO ESTA ESCRITO SI ESO ES NODO PROPIO**
-   (y por tanto bloqueado hoy) **o si es un miembro de una familia que ya existe.** No lo
-   adivino: lo traigo.
+**El encargo lo dice con esas palabras: *cualquier operacion cuyo texto no alcance para
+ejecutarse sin decidir, te detiene a ti y convoca al auditor*. Son estos tres, los tres
+declarados en `01_FUENTES.md` como `LOS TRES CASOS QUE NO SON UN SIMPLE APENDICE`, los tres
+con TOQUE UNICO. Leidos hoy paso por paso, y NO ejecutados.**
+
+### 4.1 `coeficiente_viral` (16 pasos, `OP-F-04-WEI`)
+
+**Lo leido hoy:** 1 a 5 son de Blank (contar usuarios y referidos, calcular el coeficiente,
+testear incentivos, monitorear). **6 a 11 y 12 a 16 son el bloque de Weinberg DOS VECES**: los
+dos miden invitaciones por usuario, conversion y K; el primero anade el tiempo de ciclo viral y
+como reducirlo.
+
+**LO QUE NO ALCANZA:** el destino esta declarado **PENDIENTE de leer la nomina** en la tabla de
+la vuelta 28, y leida hoy la nomina, **el unico nodo del catalogo cuyo objeto es descomponer K
+en sus variables es el propio donante**, que **SALE de la familia** al quedarse con Blank como
+fuente unica. Los vecinos no coinciden: `tiempo_ciclo_viral` tiene por objeto el TIEMPO del
+ciclo (solo dos pasos del bloque), `identificacion_bolsas_virales` mide K **por segmento**, y
+`seeding_canal_viral` es el seeding.
+
+> **Y AQUI ESTA LA CONTRADICCION QUE ME DETIENE, y por eso no elijo:** si el bloque va a **nodo
+> propio**, la campana **fabrica un nodo que es gemelo evidente de su propio donante el dia de
+> su creacion**, que es literalmente lo que la ratio de la adjudicacion 3 del acta 27 prohibe
+> (*fabricar el par que la campana existe para deshacer*). Si va a un **miembro**, se fuerza un
+> encaje que la lectura no sostiene, que es lo que `P.18` punto 3 prohibe. **Las dos salidas
+> chocan con una regla vigente, asi que no es una lectura dificil: es una decision que no me
+> toca.**
+
+### 4.2 `viral_loop_marketing` (30 pasos, TRES libros, en `OP-F-04-WEI` **y** en `OP-F-04-COL`)
+
+**Lo leido hoy:** no son dos bloques sino **seis tramos** de tres libros entrelazados: 1 a 3
+(Blank, mecanismo de referidos), 4 a 8 (momento e incentivo del referido), 9 a 13 (identificar
+promotores espontaneos, agradecer, reconocimiento VIP), 14 a 17 (programa de referidos,
+embajadores, contenido compartible), 18 a 21 (senales de promotor, herramientas, reconocimiento,
+progresion Adopt a Advocate), 22 a 25 (que valoran mas alla del dinero, segmentar, oferta
+escasa), 26 a 30 (tipos de viralidad, mecanismos de invitacion, simplificar el registro).
+
+**LO QUE NO ALCANZA, y son tres cosas a la vez:**
+
+1. **La frontera NO esta publicada.** Lo unico escrito es que *los pasos 14 a 17 y 18 a 21
+   dicen lo mismo con otras palabras*, que es una nota sobre una repeticion, **no un corte
+   entre tres libros.**
+2. **El nodo pertenece a DOS operaciones** (`OP-F-04-COL` y `OP-F-04-WEI`, verificado hoy en el
+   campo `nodos` de las dos), y ninguna pagina dice cual corta primero ni como se reparte entre
+   las dos.
+3. **La repeticion cruza libros**: los tramos que se repiten son de Coleman, y el TOQUE UNICO
+   manda destejer en el mismo acto, **pero destejer entre bloques de autores distintos no es lo
+   que ese verbo describe en ninguna pagina.**
+
+### 4.3 `decision_de_vender_startup` (34 pasos, `OP-F-04-HOR`)
+
+**Frontera publicada: 1 a 10 / 11 a 34.** Declara a Horowitz **dos veces con dos grafias** y su
+material esta repetido **TRES veces** (11 a 15, 16 a 20, 21 a 25), como esa misma pagina dice.
+
+**LO QUE NO ALCANZA:** el TOQUE UNICO manda separar y destejer en el mismo acto, **y con 24
+pasos y tres repeticiones el destejido no es mecanico**: hay que decidir cual de las tres
+versiones sobrevive y que se hace con los pasos 26 a 34, que **ninguna pagina describe**. **La
+adjudicacion 3 cubre dos bloques que caen en el mismo destino; no cubre tres versiones del
+mismo material dentro de un solo bloque.**
+
+> **NO ESCRIBO `docs/loop/PARA_ALEXIS.md`**, por el precedente triple que el acta 28 ratifico en
+> su adjudicacion 8 (actas 26, 27 y 28): **esa pluma es del auditor.**
+
+---
+
+## 5. EL ESTADO AL CIERRE, RECOMPUTADO AL CIERRE
+
+**Regla 1, segundo renglon, aplicada al pie: toda cifra de esta seccion se remidio DESPUES del
+ultimo corte, no al abrir la vuelta.** Instrumento: `scripts/loop/vuelta26_estado.py` y
+`scripts/loop/vuelta27_medir.py familia`, corridos hoy sobre `2bd8dd76`. Salidas en
+`SALIDA_V29_ESTADO_FINAL.txt` y `SALIDA_V29_FAMILIAS_CIERRE.txt`.
+
+### 5.1 El marcador: NO SE MOVIO, y era lo esperado
+
+**n 3.388; A 583 (17,2), B 89 (2,6), C 7 (0,2), D 2.709 (80,0); puestos 1 a 3.388; cero huecos,
+cero duplicados, cero clases fuera de ABCD.** **Esta vuelta no leyo un solo par**, asi que el
+marcador y la tasa por dominio (diez filas, recomputadas) **quedan identicos a los del acta 28**.
+**Vara por tramo: NO APLICA**, no hubo cribado.
+
+### 5.2 El grafo, y el censo que se movio
+
+| | apertura (acta 28) | **cierre, medido hoy** |
+|---|---:|---:|
+| nodos en disco | 3.835 | **3.848** |
+| vivos | 3.521 | **3.534** |
+| deprecados | 314 | **314** |
+| enlaces | 16.800 | **16.832** |
+| claves distintas | 15 | **15** |
+
+**Trece nodos nuevos, cero deprecados: el censo subio en exactamente los trece que se crearon.**
+
+### 5.3 Las familias AL DIA, medidas al cierre, con la resta de donantes declarada
+
+**Esta es la tabla que la vuelta 28 publico con la medicion de apertura, y por eso lleva aqui
+su aritmetica al lado:**
+
+| familia | apertura de esta vuelta | **cierre, medido hoy** | la aritmetica |
+|---|---|---|---|
+| **Weinberg** (`Traction`) | 76 vivos, 67 unica | **72 vivos, 70 unica** | **menos 7 donantes** que perdieron su segunda fuente y salieron de la familia, **mas 3 nodos nuevos**: 76 menos 7 mas 3 igual 72. Unica: 67 mas 3 igual 70 |
+| **Horowitz** (`Hard Thing`) | 102 vivos, 88 unica | **93 vivos, 91 unica** | **menos 12 donantes, mas 3 nuevos**: 102 menos 12 mas 3 igual 93. Unica: 88 mas 3 igual 91 |
+| **Hugos** | 111 vivos, 107 unica | **111 vivos, 111 unica** | **menos 4 donantes, mas 4 nuevos**: 111 menos 4 mas 4 igual 111. **Unica sube a 111 porque los 4 que salieron eran MULTIFUENTE y los 4 que entraron tienen fuente unica** |
+| **Coleman** | 83 vivos, 68 unica | **83 vivos, 68 unica** | **sin mover**: `COL` no se ejecuto, y `metas_vs_proposito` sigue MULTI tras perder a Horowitz |
+| **Rackham** | 47 vivos, 47 unica | **47 vivos, 47 unica** | **sin mover** |
+
+### 5.4 Inventario, operaciones e indice rojo
+
+- **Inventario: 672 entradas** (dominio 10, acto 556, racimo 13, familia_de_ids 54, figura 20,
+  defecto 19). **Sin mover**: esta vuelta no anadio entradas.
+- **Operaciones: 71, 71 ids unicos, cero dependencias rotas, las 71 en LISTA.**
+- **`docs/plan/INDICE_ROJO_DECLARADO.jsonl`: de 3 lineas a 13**, contadas hoy. **Los trece ids
+  nuevos estan declarados uno a uno con su operacion y su fecha**, y las sedes los imprimen:
+  **0 activos sin vector, 13 en ROJO DECLARADO.**
+
+### 5.5 Las guardas, corridas enteras tras CADA una de las cinco operaciones
+
+| guarda | resultado |
+|---|---|
+| **ciclo de `GATE 0`, los CUATRO comandos** (1, 2, **4**, 3) | **exit 0 y `GATE 0: OK` las cinco veces.** El cuarto corrio siempre porque **las cinco cambian el censo** |
+| **comando 2, etiquetas** | **71 etiquetas, cero ya en forma final, las cinco veces. CERO ENCOGIMIENTO** |
+| **comando 4, `plan_readiness.py`** | `node_families.json` regenerado: 3838, 3839, 3842, 3845, **3848** |
+| **comando 3, las dos copias** | **byte identicas a HEAD por las dos rutas**, blob **`e1a584c6`** al cierre (medido con `git hash-object` contra `git rev-parse HEAD:<ruta>` **despues** de commitear, que es la vara escrita) |
+| **suite del motor** | **24 de 24, exit 0**, las cinco veces |
+| **suite web** | **80 ficheros, 1.030 pasadas y 3 saltadas, exit 0**, las cinco veces |
+| **`tsc --noEmit`** | **cero lineas, exit 0**, las cinco veces |
+| **simulacion previa** | verde en las cinco, sobre copia en memoria, cero escrituras |
+| **guarda de huella** | **paro 5 veces en WEI** y obligo a cambiar el trozo |
+| **guarda de conteo** | **paro 1 vez** (la mudanza ya aplicada del plan sellado de la vuelta 28) |
+| **el guardian de commit** | corrio en los **seis** commits: *verde. Commit permitido.* |
+
+---
+
+## 6. PENDIENTES DE DOCTRINA (regla 5: no paro por esto, lo registro y sigo)
+
+1. **El paso bien copiado que quedo en el nodo equivocado no tiene puerta.** Los pasos 7 y 8 de
+   `producto_como_servicio_de_acceso` (las tres interfaces de usuario, que `01_FUENTES.md` ya
+   senalaba en la vuelta 27 como material de SISTEMAS; y la mirada de economia circular) **no
+   repiten nada y tampoco son del objeto del nodo**. La cola de relectura tiene disparador para
+   **la repeticion**, y no lo tiene para esto. **No se destejio: el verbo de la operacion que
+   los movio es repartir.**
+2. **La costura dentro de un nodo RECIEN CREADO.** El registro dice *una repeticion que un
+   reparto crea dentro de un MIEMBRO*. Dos de las costuras nuevas
+   (`producto_como_servicio_de_acceso`, `anillo_interior_explotar_el_canal_nucleo`) caen dentro
+   de nodos que la propia operacion acaba de crear. **La extension me parece natural (el
+   disparador es la repeticion, no el domicilio) y por eso las declare, pero es extension y va
+   marcada.**
+
+---
+
+## 7. CORRECCIONES DECLARADAS DE ESTA VUELTA
+
+1. **La cita del encargo sobre los planes de `OP-F-03`** (seccion 2.3). Los dos ficheros
+   citados estan aplicados enteros y tienen cero destinos nodo propio; los cinco bloques viven
+   en `01_FUENTES.md`. **La cifra cinco es correcta.**
+2. **Las familias al cierre, con la resta de donantes** (seccion 5.3). **Es la leccion de la
+   caida de reporte que el acta 28 me puso con nombre**, aplicada por adelantado a mi propia
+   tanda: la medicion de apertura de una familia **deja de ser el estado al dia en cuanto el
+   reparto le quita donantes.**
+3. **`OP-F-04-WEI` pasa de nueve bloques pendientes a DOS**, y sigue PARCIAL.
+4. **La ampliacion del instrumento** (seccion 2.5), declarada con su motivo dentro del codigo.
 
 ---
 
 ## 8. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
-**Trece, para la relectura ciega del auditor.**
+**Ordenados del mas debil al mas firme dentro de cada bloque. Los cinco primeros son los que yo
+mismo releeria primero.**
 
-1. **`economia_circular` a nodo propio.** Coincido con el auditor, pero **vuelco mi propia
-   lectura publicada**, y el nodo nuevo que propongo (`estrategia_circular_y_mecanismo_de_retorno`)
-   lo escribi yo: su titulo, su resumen y su etiqueta son **texto nuevo mio**, no del libro.
-2. **`superioridad_producto_beneficios` a `framework_...`.** El bloque decide por
-   **posicionamiento de precio** y el miembro clasifica por **tipo de mensaje**; sostengo que
-   coinciden en objeto, **pero ninguno de los dos nodos habla de precio**.
-3. **Declarar PARADA por la cifra de censo en vez de actualizarla a 3.836.** Es un numero en
-   una prueba y cambiarlo cuesta un minuto. **Sostengo que el minuto no es el problema: la
-   regla que falta lo es.**
-4. **Correr `engine/plan_readiness.py` sin que ninguna pagina lo mande.** Lo cuento como
-   remedio mecanico escrito en la herramienta; **se puede leer como improvisacion.**
-5. **Deshacer el nodo propio por segunda vuelta consecutiva**, en vez de dejar el arbol
-   incommitteable y parar en seco. Me apoyo en el discutible 8 de la vuelta 27, **adjudicado
-   CORRECTO**, pero la situacion no es identica: alli el muro era nuevo, aqui **ya se habia
-   parado dos veces por muro**.
-6. **Ejecutar `OP-F-04-WEI` en parte pese a que el encargo la condiciona a `OP-F-02` y
-   `OP-F-03` cerradas.** Me apoyo en el discutible 9 de la vuelta 27; **es una reordenacion
-   del encargo y la marco como tal.**
-7. **`plan_de_adquisicion_acquire` 8 a 12 a `bullseye_framework` y no a
-   `middle_ring_testing`.** Los dos calzan mucho; decido por el paso 8 (listar los 19), que
-   es del anillo exterior.
-8. **`earned_vs_paid_media` 5 a 8 a `publicidad_offline_pruebas_locales`.** Los pasos 5 a 7
-   son **seleccion de medio** (audiencia, alcance, precio) y solo el 8 es prueba local. **El
-   miembro es de prueba local.**
-9. **Partir el apendice de `sales_funnel_get_keep_grow` en dos cortes** (5 a 9 y el 10 solo).
-   Es el primer apendice de `OP-F-04` que se parte, y **la particion la decido yo leyendo**,
-   no la trae escrita ninguna pagina.
-10. **La frontera 1 a 10 / 11 a 15 de `ab_testing_optimizacion`** (declarada, no ejecutada):
-    la decido por la **firma posicional y de persona** (los pasos 11 a 15 tutean y los 1 a 10
-    van en infinitivo), y **los pasos 6 a 10 podrian ser un tercer bloque**.
-11. **La frontera 1 a 5 / 6 a 14 de `key_partners_hypothesis` con dos sub bloques sin
-    resolver.** Digo que no se si son uno o dos **en vez de elegir**, y eso deja la operacion
-    a medias a proposito.
-12. **La nota de alcance de `HUGOS-SISTEMAS`**: declaro los nueve como **nomina leida** y no
-    como barrido del capitulo sobre los 107. **Alguien puede leer la entrada del inventario
-    como si fuera exhaustiva**, y por eso la nota va DENTRO de la entrada.
-13. **No escribir `PARA_ALEXIS.md`.** Esa pluma es del auditor (`AUDITOR.md` seccion 4) y la
-    regla 4 del `EJECUTOR.md` me manda escribir la parada en el reporte y no arreglarla.
+### Los mas debiles, y digo por que
+
+| # | discutible | por que dudo |
+|---:|---|---|
+| **1** | **`actualizacion_posiciones_existentes` 5 a 19 entero a `evaluacion_balanceada_de_ejecutivos`** | **es el mas debil de los treinta.** Sus quince pasos traen **tres objetos distintos**: la conversacion de la degradacion (5 a 10), la evaluacion del ejecutivo que no escala (11 a 15) y la revision trimestral (16 a 19). **Solo los ultimos dos calzan con el miembro.** Ejecute sobre la frontera publicada, que es UNA, porque el encargo prohibe rehacer lecturas publicadas; **si el auditor lee que ahi habia dos o tres cortes y no uno, tiene razon y yo no** |
+| **2** | **`producto_como_servicio_de_acceso` es un NOMBRE DE ESTA VUELTA** | la tabla de la vuelta 27 publicaba *nodo propio* sin id, a diferencia de los otros dos. El nombre, el cuerpo y la fase son mios |
+| **3** | **fundir TRES bloques de TRES donantes distintos en `anillo_interior_explotar_el_canal_nucleo`** | la adjudicacion 3 habla de **DOS** bloques. Extendi a tres por la misma ratio. **Y el nodo nace con 15 pasos y una costura grande dentro** |
+| **4** | **`analisis_trafico_competitivo` 5 a 8 a nodo propio** | `seleccion_plataforma_social_ads` tambien elige donde anunciarse por audiencia. Lo descarte porque el bloque parte de los anuncios **AJENOS** y no de la audiencia propia, **pero es un pelo** |
+| **5** | **`decision_pivote_perseverar` 5 a 9 a nodo propio** | `identificacion_bolsas_virales` usa el mismo metodo (segmentar para encontrar el bolson). Lo descarte por objeto (viralidad contra decision de pivote), **no por metodo** |
+
+### Los demas, marcados igual
+
+| # | discutible |
+|---:|---|
+| **6** | **el CUERPO de los 13 nodos nuevos** (titulo, resumen, entregable, condiciones, etiqueta, fase, dominio) es texto de esta vuelta. El precedente es la adjudicacion 9 del acta 28 (*el fondo se relee el dia que el plan se aplique*): **ese dia es hoy, para los cuatro que venian sellados y para los nueve que sella esta vuelta** |
+| **7** | **`key_partners_hypothesis` 11 a 14 a `pipeline_alianzas_bd`**: el eje de coincidencia es la **categorizacion**, que es una columna del entregable del miembro y no su acto entero |
+| **8** | **`metricas_de_adquisicion_activacion` 6 a 9 a `sem_estrategia_ejecucion`**: tres de los cuatro pasos son metrica de campana en general; **solo el ultimo nombra el canal de busqueda** |
+| **9** | **`organizacion_adaptativa` 5 a 8 a `contratacion_acelerada_hipercrecimiento`**: el bloque decide **cuando meter estructura**, y el miembro es de **contratacion** en hipercrecimiento. Comparten el umbral, no el sujeto |
+| **10** | **`background_startup_vs_corporativo` 5 a 9 a `contratar_ambicion_correcta`** y no a `screening_ambicion_organizacional`: los dos son de ambicion, y elegi el del **TIPO** de ambicion |
+| **11** | **`contratacion_experiencia_vs_potencial` 5 a 10 a `contratar_por_fortaleza`**: el paso 5 calza exacto, **pero los pasos 6 a 8 (promover adentro contra traer de afuera) no tienen miembro y viajan de arrimados** |
+| **12** | **los tres nodos propios de HOR**: la ausencia se midio leyendo **titulos y entregables** de los 102, no los pasos de los 102 uno a uno. **Es un barrido mas barato que el de Hugos de la vuelta 28** |
+| **13** | **declarar `compromiso_linea_tiempo_cliente` como quinta costura** que el acta no nombro |
+| **14** | **declarar en la cola las costuras que caen dentro de nodos recien creados** (pendiente de doctrina 2) |
+| **15** | **la ampliacion de `vuelta27_cortar.py`**: toco un instrumento que vueltas anteriores usaron |
+| **16** | **ejecutar la rebanada `PLAN_V29_RELECTURA_D1.json`** en vez del plan sellado entero |
+| **17** | **no ejecutar `OP-F-04-COL`** pese a que el encargo la pedia entera |
+| **18** | **declarar los tres TOQUE UNICO como PARADA** en vez de ejecutarlos |
+| **19** | **seguir trabajando despues de detectar la PARADA** en vez de parar en seco: los tres bloques no bloqueaban a `HOR` ni al resto de `WEI`, y la regla 5 manda no parar lo que se sostiene. **Si el auditor lee que *te detiene a ti* significaba parar la vuelta entera ahi, entonces las secciones 3.2 y siguientes sobran** |
+| **20** | **no escribir `PARA_ALEXIS.md`** (precedente triple, adjudicacion 8 del acta 28) |
 
 ---
 
-## 9. PREGUNTAS (`EJECUTOR.md` regla 11: lo que no puedo medir, lo traigo)
+## 9. PREGUNTAS (regla 11: lo que no puedo medir, lo traigo)
 
-1. **La cifra de censo de `web/lib/engine/graph.test.ts`: se actualiza, se deriva del dato, o
-   entra en un mecanismo como el del rojo declarado?** Es la parada. **La casa decide.**
-2. **`engine/node_families.json` debe entrar al ciclo escrito de `GATE 0` como cuarto
-   comando condicional**, con la misma forma que el comando 3 (*solo cuando la operacion
-   cambia el censo*)? Lo corri; **no lo escribi en la pagina de la vara.**
-3. **`OP-F-04-HOR`: *familia propia* es nodo propio?** De la respuesta depende si esa tanda
-   esta bloqueada o no.
-4. **`OP-F-04-WEI` puede quedarse PARCIAL como `OP-F-03`**, o una tanda de `OP-F-04` se
-   ejecuta entera o nada? Hoy quedo en **cinco cortes sobre 4 de sus 13 nodos**, con los
-   otros nueve nodos con su frontera leida y su destino pendiente. **No escribo cuantos
-   cortes son esos nueve porque no lo se:** dos de ellos traen el bloque repetido y uno tiene
-   dos sub bloques sin resolver.
-
----
-
-## 10. LO QUE LA VUELTA DEJA LISTO PARA LA SIGUIENTE
-
-- **Dos planes sellados esperando a que el muro se abra:** `PLAN_V28_RELECTURA.json` (el nodo
-  propio de `economia_circular`, con su caso positivo ya probado en las dos direcciones) y
-  `PLAN_V27_OPF02.json` (los tres de Mollick, sellado en la vuelta 27 y **verificado por el
-  auditor**).
-- **Tres instrumentos nuevos**, todos con simulacion por defecto y parada en rojo:
-  `vuelta28_mudanza.py` (saca un bloque YA repartido y lo lleva a su destino nuevo, que es lo
-  que el recomputo de una relectura conjunta necesita y no existia),
-  `vuelta28_declarar.py` (escribe la lista del rojo declarado con sus tres guardas) y
-  `vuelta28_caso_positivo.py` (lee los dos esquemas de plan).
-- **Las fronteras de nueve bloques de WEI leidas y publicadas**, para que la vuelta que las
-  ejecute solo tenga que leer la nomina de destino.
-- **`INDICE_ROJO_DECLARADO.jsonl` vacia y `GATE 0` en verde sin excepciones**, que es el
-  estado en que la fase III tiene que cerrar segun `08_VERIFICACION.md`.
+1. **`OP-F-04-COL`**: la vuelta siguiente, la lee entera (trece fronteras mas quince destinos en
+   una tanda), o **se parte en dos**: una vuelta que publica las trece fronteras como registro y
+   otra que decide los destinos? **La segunda es la forma que `WEI` y `HOR` acabaron teniendo, y
+   funciono.**
+2. **Los tres TOQUE UNICO**: cuando el destejido deja **una sola version** de un material
+   repetido dos o tres veces, **que se hace con la version que no sobrevive**? `P.3` prohibe
+   podar. **Y para `coeficiente_viral`, cual de las dos reglas cede: la que prohibe fabricar un
+   gemelo o la que prohibe forzar el encaje?**
+3. **`viral_loop_marketing` esta en DOS operaciones**: cual corta primero, y el segundo corte se
+   lee contra los pasos originales o contra los ya recortados? (El instrumento lee siempre
+   contra los originales, por la leccion de la vuelta 27, **pero eso es dentro de un plan, no
+   entre dos operaciones**.)
+4. **El paso bien copiado en el nodo equivocado** (pendiente de doctrina 1): entra a la cola de
+   la fase 02 por extension, o eso es doctrina nueva?
+5. **`OP-F-03` se declara HECHA?** Sus diecinueve bloques estan en el arbol y su caso positivo
+   pasa. La vuelta 28 la dejo PARCIAL por los cinco que faltaban, **y ya no faltan.** Lo digo
+   como medicion, no como adjudicacion: **la pluma de declarar HECHA una operacion es del
+   auditor.**

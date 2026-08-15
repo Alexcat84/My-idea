@@ -967,6 +967,32 @@ entero, los cuatro comandos, el cuarto por censo; **71 etiquetas sin encoger**; 
 > UNICO**, y su material esta repetido **TRES veces** (11 a 15, 16 a 20 y 21 a 25). **Va al
 > reporte de la vuelta 29 como PARADA, junto con los dos de WEI.**
 
+### `OP-F-04-COL` NO SE EJECUTO, y el motivo se mide en vez de afirmarse (14 ago 2026, vuelta 29)
+
+**El encargo de la vuelta 29 pedia la tanda ENTERA. No se ejecuto, y se dice por que con
+cifras corridas hoy, no con una impresion.**
+
+| | medido hoy |
+|---|---|
+| **su nomina** | **15 nodos, los 15 vivos** (`scripts/loop/vuelta27_medir.py nomina OP-F-04-COL`) |
+| **su familia de destino** | **83 nodos vivos declaran a Coleman, 68 con fuente UNICA** |
+| **sus fronteras publicadas** | **2 de 15**, barrido corrido hoy sobre este mismo archivo (`docs/loop/SALIDA_V29_FRONTERAS_COL.txt`): solo `voz_del_cliente_voc` (1 a 5 / 6 a 10) y `metas_vs_proposito` (1 a 4 / 5 a 9 / 10 a 14) tienen su frontera escrita. **Los otros trece no aparecen con frontera en ninguna linea** |
+
+> **ESA ES LA DIFERENCIA CON `WEI` Y CON `HOR`, y es la razon entera.** Las nueve fronteras de
+> `WEI` estaban publicadas desde la vuelta 28 y las catorce de `HOR` desde la vuelta 20: en
+> las dos, esta vuelta solo tuvo que anadir el DESTINO por `P.18`. **En `COL` habria que leer
+> TRECE fronteras nuevas ademas de quince destinos**, y eso es exactamente lo que las vueltas
+> 27 y 28 declararon como motivo para no tocarla, con estas mismas palabras: *cada bloque pide
+> leer su nomina de familia entera y decidir su destino por `P.18`, que es lectura y no
+> mecanica*. **Leer trece fronteras al final de una vuelta que ya ejecuto TREINTA cortes
+> sobre 55 ficheros de `dataset/nodos/` seria adivinar, y la regla 11 del ejecutor lo
+> prohibe.**
+
+**Y HAY UNA SEGUNDA RAZON, que es de dependencia y no de alcance:** `viral_loop_marketing`
+esta **DENTRO de los 15 de `COL`** (medido hoy en la nomina), y es **uno de los tres bloques
+que esta vuelta trae como PARADA**. **`OP-F-04-COL` no se puede declarar ENTERA mientras ese
+nodo espere adjudicacion**, ejecute quien ejecute el resto.
+
 ### LA CONSECUENCIA DE ORDEN, y toca a la fase 02
 
 **SEIS de los 43 ya tienen operacion en otra fase**, y por *fuente primero* esta
