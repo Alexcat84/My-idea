@@ -28,7 +28,9 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE / "scripts"))
 
-from run_phase1 import avisar_curaduria, curaduria_revertida, etiquetas_curadas  # noqa: E402
+from run_phase1 import (  # noqa: E402
+    avisar_curaduria, curaduria_revertida, etiquetas_curadas, indice_rojo_declarado,
+)
 
 
 def capturar(fn):
@@ -141,6 +143,13 @@ def test_todo_activo_tiene_vector_en_el_indice():
     cuerpo = src[src.index("REMEDIO = ("):src.index("seeds = load_entry_seeds()")]
     assert "set(activos) - con_vector" in cuerpo, "no compara contra los ACTIVOS"
     assert "not sin_vector" in cuerpo, "el chequeo tolera activos sin vector"
+    # ROJO DECLARADO (opcion B extendida, 14 ago 2026): un id nuevo de la
+    # pasada, declarado en INDICE_ROJO_DECLARADO.jsonl, se resta ANTES de
+    # fallar; cualquier OTRO id sin vector sigue sin tolerancia.
+    assert "rojo_declarado = indice_rojo_declarado()" in cuerpo, (
+        "el chequeo no consulta la lista de rojo declarado")
+    assert "nid in rojo_declarado" in cuerpo, (
+        "el chequeo no resta los ids declarados de los que fallan")
     # y el mensaje tiene que decir QUE HACER, no solo que algo esta mal
     assert "corre el reindex ANTES de usar esta copia" in cuerpo, (
         "el aviso no dice que hacer: un fallo sin remedio a la vista se ignora")
@@ -165,6 +174,9 @@ def test_todo_activo_tiene_vector_en_el_indice():
 
     # (2) NO CAZA: con el indice presente y completo, pasa. Se comprueba contra
     # el estado real del repo, que es la unica prueba que no se puede fingir.
+    # SALVO los ids que la FASE III declaro al crearlos (opcion B extendida,
+    # 14 ago 2026): esos se restan e IMPRIMEN, no tumban el fixture; cualquier
+    # otro activo sin vector si lo tumba, sin excepcion.
     import json as _json
     idx = BASE / "web" / "lib" / "assets" / "semantic_index.json"
     assert idx.exists(), "no hay indice en el repo: este fixture no puede correr"
@@ -172,8 +184,18 @@ def test_todo_activo_tiene_vector_en_el_indice():
     grafo = _json.loads(
         (BASE / "dataset" / "metadata" / "master_graph.json").read_text(encoding="utf-8"))["nodos"]
     activos = {k for k, n in grafo.items() if not n.get("deprecado")}
-    assert not (activos - ids), (
-        f"hay {len(activos - ids)} activos sin vector en el repo: {sorted(activos - ids)[:5]}")
+    faltan = activos - ids
+    rojo_declarado = indice_rojo_declarado()
+    declarados = sorted(nid for nid in faltan if nid in rojo_declarado)
+    sin_declarar = sorted(nid for nid in faltan if nid not in rojo_declarado)
+    if declarados:
+        print(f"  rojo declarado, {len(declarados)} id(s) (INDICE_ROJO_DECLARADO.jsonl):")
+        for nid in declarados:
+            operacion, fecha = rojo_declarado[nid]
+            print(f"    {nid} ({operacion}, {fecha})")
+    assert not sin_declarar, (
+        f"hay {len(sin_declarar)} activos sin vector y sin declarar en el repo: "
+        f"{sin_declarar[:5]}")
 
     # Y el chequeo se agrega SIEMPRE, en las dos ramas.
     assert cuerpo.count('"Todo nodo ACTIVO tiene vector en el indice semantico"') == 2, (

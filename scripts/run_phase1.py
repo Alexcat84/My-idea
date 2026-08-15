@@ -688,6 +688,32 @@ def load_entry_seeds():
     return seeds
 
 
+INDICE_ROJO_DECLARADO_PATH = BASE / "docs" / "plan" / "INDICE_ROJO_DECLARADO.jsonl"
+
+
+def indice_rojo_declarado():
+    """Los ids que una operacion de la FASE III declaro al crearlos, {id: (operacion, fecha)}.
+
+    Decision del fundador, 14 ago 2026: la opcion B extendida. SOLO las
+    operaciones de la pasada escriben aqui, una linea por id, al crear un
+    nodo. El chequeo del indice semantico (aqui y en
+    engine/test_aviso_curaduria.py) resta EXACTAMENTE estos ids de los
+    activos sin vector: cualquier OTRO id sin vector sigue siendo rojo que
+    para. Al cierre de la FASE III esta lista tiene que quedar VACIA, con
+    el reindexado hecho y Gate 0 entero en verde (docs/plan/08_VERIFICACION.md)."""
+    if not INDICE_ROJO_DECLARADO_PATH.exists():
+        return {}
+    declarados = {}
+    with open(INDICE_ROJO_DECLARADO_PATH, encoding="utf-8") as fh:
+        for linea in fh:
+            linea = linea.strip()
+            if not linea:
+                continue
+            entrada = json.loads(linea)
+            declarados[entrada["id"]] = (entrada["operacion"], entrada["fecha"])
+    return declarados
+
+
 def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
     stats = master["stats"]
     checks = []
@@ -827,13 +853,22 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
                        f"sin vector -> {REMEDIO}"))
     else:
         con_vector = set(json.loads(ruta_indice.read_text(encoding="utf-8"))["ids"])
-        sin_vector = sorted(set(activos) - con_vector)
+        faltan_vector = sorted(set(activos) - con_vector)
+        rojo_declarado = indice_rojo_declarado()
+        declarados = [nid for nid in faltan_vector if nid in rojo_declarado]
+        sin_vector = [nid for nid in faltan_vector if nid not in rojo_declarado]
         sobran = sorted(con_vector - set(activos))
         detalle = f"{len(sin_vector)} activos sin vector"
         if sin_vector:
             detalle += f": {sin_vector[:5]} -> {REMEDIO}"
         if sobran:
             detalle += f" | {len(sobran)} vectores de nodos que ya no son ofrecibles"
+        if declarados:
+            detalle += (f" | {len(declarados)} ROJO DECLARADO "
+                        f"({INDICE_ROJO_DECLARADO_PATH.relative_to(BASE)}):")
+            for nid in declarados:
+                operacion, fecha = rojo_declarado[nid]
+                detalle += f"\n      {nid} ({operacion}, {fecha})"
         checks.append(("Todo nodo ACTIVO tiene vector en el indice semantico",
                        not sin_vector, detalle))
 

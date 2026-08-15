@@ -109,3 +109,7 @@ ciegas en esta acta salvo las dos discrepancias) NO hay que rehacerlas.
 
 `docs/loop/PROMPT_SIGUIENTE.md` queda VACIO a proposito: el bucle esta detenido
 esperando tu decision.
+
+DECISION DEL FUNDADOR (14 ago 2026): sede del rojo por opcion B extendida a TODAS las
+sedes con la lista INDICE_ROJO_DECLARADO; patron de dictado curado con la regla LA CITA
+LLEVA SU LINEA en EJECUTOR.md; sin cambio de modelo. La fase 01 sigue.

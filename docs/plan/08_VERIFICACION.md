@@ -164,9 +164,46 @@ queda entero: sigue siendo la regla.** Lo que se anade es la excepcion que la ha
 ejecutable:
 
 > **DURANTE LA FASE III, EL CHEQUEO DEL INDICE SEMANTICO PUEDE ESTAR EN ROJO DECLARADO
-> EXCLUSIVAMENTE PARA LOS IDS QUE LA PASADA ACABA DE CREAR.** Cada reporte que corra Gate
-> 0 con ese rojo **los lista uno a uno, por id**, con la operacion que los creo. **CUALQUIER
+> EXCLUSIVAMENTE PARA LOS IDS QUE LA PASADA ACABA DE CREAR.** ~~Cada reporte que corra Gate
+> 0 con ese rojo los lista uno a uno, por id, con la operacion que los creo.~~ **CUALQUIER
 > OTRO id en rojo en el chequeo del indice es PARADA**: no se declara, se trae.
+
+#### CORRECCION DECLARADA: **LA OPCION B SE EXTIENDE A TODAS LAS SEDES** (14 ago 2026, decision del fundador)
+
+**Resuelve el motivo 1 de la parada del acta de la vuelta 27: el MISMO chequeo (todo
+activo tiene vector) vive en TRES sedes, no en una, y la correccion de arriba solo
+nombraba `Gate 0`.** El auditor lo leyo en codigo: `engine/test_aviso_curaduria.py`
+(fixture `test_todo_activo_tiene_vector_en_el_indice`, que mide `activos - ids` **contra
+el repo real**) y `.githooks/pre-commit` (aborta el commit si la suite del motor esta en
+rojo, sin excepcion escrita). Con un nodo nuevo en el arbol, **ningun commit entraba al
+historial**, ni uno que no lo tocara: la cerradura bloqueaba el fallback entero de `P.18`
+(nodo propio), no una operacion.
+
+> ~~Cada reporte que corra Gate 0 con ese rojo los lista uno a uno~~ **CADA SEDE QUE MIDA
+> EL INDICE SEMANTICO RESTA LOS IDS DECLARADOS Y LOS IMPRIME UNO A UNO**, en las tres:
+> `Gate 0` (`scripts/run_phase1.py`), el fixture del motor
+> (`engine/test_aviso_curaduria.py`) y, por herencia, `.githooks/pre-commit` (que solo
+> corre las suites y no tiene chequeo propio del indice).
+
+**MECANISMO: lista versionada `docs/plan/INDICE_ROJO_DECLARADO.jsonl`**, una linea por
+id declarado, `{"id": ..., "operacion": ..., "fecha": ...}`. **SOLO las operaciones de la
+pasada escriben ahi, al crear un nodo.** Las sedes RESTAN exactamente esos ids de los
+activos sin vector y los imprimen; **cualquier otro id sin vector sigue siendo rojo que
+para**, sin excepcion. Hoy, sin ninguna operacion ejecutada, **la lista esta VACIA**.
+
+**IMPLEMENTADO Y VERIFICADO (14 ago 2026), con caso positivo en arbol de trabajo temporal
+nunca commiteado:**
+
+| sede | que se toco | caso positivo |
+|---|---|---|
+| `scripts/run_phase1.py` | nueva funcion `indice_rojo_declarado()`; el chequeo del indice resta sus ids antes de fallar y los imprime con operacion y fecha | un id nuevo SIN declarar: `GATE 0: FALLIDO`. El MISMO id DECLARADO: `GATE 0: OK`, con la linea impresa |
+| `engine/test_aviso_curaduria.py` | `test_todo_activo_tiene_vector_en_el_indice` importa `indice_rojo_declarado` y resta antes del `assert`; nuevas aserciones de forma sobre el codigo de `run_phase1.py` | mismo id, sin declarar: el fixture CAE con `AssertionError` nombrando el id. Declarado: pasa e imprime la linea |
+| `.githooks/pre-commit` | **sin cambio de codigo**: solo corre las suites, no tiene chequeo propio del indice; hereda el arreglo de la sede anterior | la suite del motor entera, `engine/run_all_tests.py`, corrida con el id declarado: **24 de 24** |
+
+**Corrido entero tras el arreglo, con el nodo de prueba borrado y la lista vacia de
+nuevo:** `Gate 0` OK, blob byte identico a HEAD; motor 24 de 24; web 80 ficheros, 1.030
+pasadas y 3 saltadas; `tsc` limpio; `dataset/` byte identico a HEAD. **`docs/plan/` gana
+un archivo nuevo, `INDICE_ROJO_DECLARADO.jsonl`, vacio.**
 
 **El reindexado sigue haciendose AL FINAL, tras mover ids, como esta pagina ya manda.**
 Esta correccion no cambia CUANDO se reindexa: cambia que Gate 0 puede correr en verde en
