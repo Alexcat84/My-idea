@@ -1,0 +1,128 @@
+# -*- coding: utf-8 -*-
+"""vuelta33_superviviente.py
+
+TAREA 2.2 de la vuelta 33: fija el campo `superviviente` de OP-D-02, que estaba en
+`null`, y escribe en la `nota` la CORRECCION DECLARADA con el porque.
+
+EL ORDEN DE LA DECISION ES EL QUE EL ENCARGO MANDA, y no otro:
+
+  1. PRIMERO la prueba corregida del banco 9.3.1 (GANADOR POR DERECHO): gano todos
+     los pares A que lo tocan, CONTANDO SOLO LAS A. Medida en esta vuelta con
+     scripts/loop/vuelta33_acto_opd02.py: CERO de los tres pares A nombran ganador,
+     asi que NINGUN nodo tiene una victoria citable. NO HAY GANADOR POR DERECHO.
+  2. ENTONCES, y solo entonces, GANADOR POR ELEGIR por P.8 sobre la nomina de
+     cuatro: CONTENIDO PRIMERO, y el cableado SOLO como desempate.
+
+EL TEXTO VIEJO NO SE BORRA (EJECUTOR.md regla 8): el valor viejo del campo era
+`null` y queda escrito como tal dentro de la correccion, y la `nota` no se
+reescribe, se le anade el bloque al final.
+
+Uso: python scripts/loop/vuelta33_superviviente.py [--aplicar]
+Sin --aplicar solo mide e imprime lo que escribiria.
+"""
+import io
+import json
+import os
+import sys
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+OPS = os.path.join(RAIZ, "docs", "plan", "OPERACIONES.jsonl")
+NODOS = os.path.join(RAIZ, "dataset", "nodos")
+
+ELEGIDO = "voz_del_cliente_voc"
+ABSORBIDO = "enfoque_mercado_voc"
+
+CORRECCION = (
+    " ||| CORRECCION DECLARADA (2026-08-15, vuelta 33): EL CAMPO superviviente PASA DE null A "
+    "voz_del_cliente_voc. El valor viejo era null y se deja escrito aqui para que la correccion "
+    "se pueda auditar. "
+    "EL ORDEN DE LA DECISION, y es el del encargo. PRIMERO la prueba corregida del banco 9.3.1, "
+    "GANADOR POR DERECHO, que pregunta si un nodo gano TODOS los pares A que lo tocan contando "
+    "SOLO las A: medido hoy con scripts/loop/vuelta33_acto_opd02.py, CERO de los tres pares A del "
+    "acto (386, 526, 788) nombran ganador en su razon, y por tanto ninguno de los cuatro nodos "
+    "tiene una victoria citable. NO HAY GANADOR POR DERECHO, y ahora se dice con los TRES pares "
+    "contados y no con dos: la cifra de la vuelta 32 decia dos de tres por un detector que "
+    "buscaba el substring gana y leyo ganar tiempo en la razon del 526. "
+    "SEGUNDO, GANADOR POR ELEGIR POR P.8, CONTENIDO PRIMERO Y EL CABLEADO SOLO COMO DESEMPATE. "
+    "EL CONTENIDO HABLA, y son tres cosas, no una. "
+    "(a) PADRE DECLARADO POR EL ARCHIVO, que P.8 cuenta como contenido con el mismo peso que el "
+    "texto: el campo preservar de esta misma operacion dice EN LA FUSION, DE enfoque_mercado_voc, "
+    "y enumera lo que hay que salvar de el. Un preservar nombra lo que se rescata del nodo que se "
+    "absorbe: el plan ya habia declarado la direccion. "
+    "(b) EL OBJETO DEL ACTO: la operacion se llama LA VOZ DEL CLIENTE y el procedimiento de esa "
+    "voz, la observacion de campo, es lo que voz_del_cliente_voc trae entero en sus cinco pasos. "
+    "enfoque_mercado_voc lo enuncia en UNA LINEA, su paso 1 (convive de cerca con tus clientes "
+    "mas exigentes o hazles entrevistas a fondo). Quien conserva el procedimiento del objeto que "
+    "da nombre al acto es el superviviente. "
+    "(c) LA VERIFICACION ESCRITA DE ESTA OPERACION lo exige sin nombrarlo: dice que los "
+    "congelados 724, 755 y 827 SE RELEEN CONTRA EL SUPERVIVIENTE, y los tres son pares contra "
+    "voz_del_cliente_voc. Si sobreviviera enfoque_mercado_voc, los tres no se releerian: se "
+    "evaporarian con su nodo. "
+    "Y EL CABLEADO, SOLO COMO DESEMPATE Y EN EL MISMO SENTIDO, medido hoy sobre los 3539 nodos "
+    "vivos (salida docs/loop/SALIDA_V33_P8_CABLEADO.txt): voz_del_cliente_voc tiene 13 aristas "
+    "propias (2 previos, 11 siguientes) y lo nombran 12 nodos vivos; enfoque_mercado_voc tiene 4 "
+    "(1 previo, 3 siguientes) y lo nombran 3. P.8 dice que el cableado no decide donde el "
+    "contenido habla: aqui no decide, confirma. "
+    "EL ALCANCE DE LA FUSION, Y NO ES LA NOMINA ENTERA: por P.10 y P.12, con los SEIS pares del "
+    "acto ya leidos (LD-72, LD-73 y LD-74 el 15 ago 2026), el acto resulto ser una CADENA de tres "
+    "A con DOS nodos puente y CERO triangulos cerrados. La salida que P.10 nombra para ese caso "
+    "es FUNDIR SOLO EL SUBCONJUNTO CERRADO Y ENLAZAR EL RESTO, y el subconjunto cerrado es el par "
+    "del puesto 386: voz_del_cliente_voc con enfoque_mercado_voc. homework_frontend_loading y "
+    "voice_of_customer_homework NO ENTRAN EN LA FUSION y se quedan en la nomina como lo que el "
+    "punto 4 del orden interno siempre dijo, TENER DELANTE. El campo nodos NO se toca: la nomina "
+    "es el universo del acto que hay que leer y simular junto (banco 9.24 con P.12), no la lista "
+    "de lo que se funde."
+)
+
+
+def main():
+    aplicar = "--aplicar" in sys.argv
+    lineas = [l for l in io.open(OPS, encoding="utf-8").read().split("\n")]
+    ops = []
+    for l in lineas:
+        if l.strip():
+            ops.append(json.loads(l))
+
+    op = next(o for o in ops if o["id_op"] == "OP-D-02")
+    print("OPERACION: %s" % op["id_op"])
+    print("  superviviente HOY : %r" % op["superviviente"])
+    print("  nomina            : %s" % op["nodos"])
+    print("  preservar[0]      : %s" % op["preservar"][0])
+    print()
+
+    if op["superviviente"] is not None:
+        print("EL CAMPO YA NO ESTA EN null. Se aborta para no pisar una decision escrita.")
+        return 1
+    for nid in (ELEGIDO, ABSORBIDO):
+        if not os.path.exists(os.path.join(NODOS, nid + ".json")):
+            print("ABORTA: %s no existe en el grafo" % nid)
+            return 1
+        if nid not in op["nodos"]:
+            print("ABORTA: %s no esta en la nomina de la operacion" % nid)
+            return 1
+
+    op["superviviente"] = ELEGIDO
+    op["nota"] = op["nota"] + CORRECCION
+
+    print("LO QUE QUEDARIA ESCRITO:")
+    print("  superviviente: %r" % op["superviviente"])
+    print("  nota          : +%d caracteres (la vieja entera delante)" % len(CORRECCION))
+    print()
+    print(CORRECCION.strip(" |"))
+
+    if not aplicar:
+        print()
+        print("SIN --aplicar: cero escrituras.")
+        return 0
+
+    with io.open(OPS, "w", encoding="utf-8", newline="\n") as fh:
+        for o in ops:
+            fh.write(json.dumps(o, ensure_ascii=False) + "\n")
+    print()
+    print("ESCRITO: %s  (%d operaciones, ninguna alta ni baja)" % (OPS, len(ops)))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.stdout.reconfigure(encoding="utf-8")
+    raise SystemExit(main())
