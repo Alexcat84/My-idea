@@ -1,0 +1,33 @@
+
+ RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
+
+ ❯ lib/engine/graph.test.ts (11 tests | 1 failed) 55ms
+     × carga los 3835 nodos reales (3742 + 46 compras + 47 entrega) 17ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/engine/graph.test.ts > cargarGrafo / cargarEntrySeeds / cargarPreguntasCache > carga los 3835 nodos reales (3742 + 46 compras + 47 entrega)
+AssertionError: expected 3836 to be 3835 // Object.is equality
+
+- Expected
++ Received
+
+- 3835
++ 3836
+
+ ❯ lib/engine/graph.test.ts:16:39
+     14|   it("carga los 3835 nodos reales (3742 + 46 compras + 47 entrega)", (…
+     15|     const graph = cargarGrafo();
+     16|     expect(Object.keys(graph).length).toBe(3835);
+       |                                       ^
+     17|   });
+     18|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 79 passed (80)
+      Tests  1 failed | 1029 passed | 3 skipped (1033)
+   Start at  20:24:25
+   Duration  17.86s (transform 40.06s, setup 0ms, import 125.97s, tests 8.79s, environment 15ms)
+

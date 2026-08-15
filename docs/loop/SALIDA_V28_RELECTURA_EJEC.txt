@@ -1,0 +1,44 @@
+PLAN     : docs/loop/PLAN_V28_RELECTURA.json
+OPERACION: OP-F-03 (recomputo de la relectura conjunta del acta 27)
+MOTIVO   : RELECTURA CONJUNTA de las dos discrepancias del acta de la vuelta 27, seccion 2. Las dos VOLTEAN. Correccion declarada en docs/plan/01_FUENTES.md: el texto de la lectura anterior se queda entero.
+MODO     : --ejecutar
+MUDANZAS : 2
+==============================================================================
+
+------------------------------------------------------------------------------
+DESDE    : modelo_simulacion_cadena_suministro_circular   pasos que salen [6, 7, 8, 9]
+PROCEDENC: economia_circular_como_modelo_de_negocio
+  pasos totales 9, salen 4, quedan 5
+    sale   6. Mapear el ciclo de vida actual de tu producto (lineal vs circular)
+    sale   7. Identificar en cuál de las cinco estrategias circulares tiene mayor potencial tu negocio
+    sale   8. Diseñar un mecanismo de retorno o remanufactura si aplica
+    sale   9. Calcular el impacto en sostenibilidad y en costos de materiales/logística
+  DESTINO: NODO PROPIO estrategia_circular_y_mecanismo_de_retorno
+  arista obligada : economia_circular_como_modelo_de_negocio.nodos_siguientes += estrategia_circular_y_mecanismo_de_retorno
+  arista reciproca: estrategia_circular_y_mecanismo_de_retorno.nodos_previos = ['economia_circular_como_modelo_de_negocio']
+
+------------------------------------------------------------------------------
+DESDE    : diferencia_ventaja_beneficio   pasos que salen [5, 6, 7, 8]
+PROCEDENC: superioridad_producto_beneficios
+  pasos totales 8, salen 4, quedan 4
+    sale   5. Decide si tu producto va a competir por precio bajo con muchas funciones, o como algo premium
+    sale   6. Si eliges precio bajo, arma tu discurso de venta enumerando características
+    sale   7. Si eliges premium, no enumeres características; habla de los beneficios que resuelven necesidades co
+    sale   8. Si sumas vendedores que vienen de una empresa con otro posicionamiento de precio, revisa que no repi
+  DESTINO: MIEMBRO framework_caracteristicas_ventajas_beneficios
+  framework_caracteristicas_ventajas_beneficios: pasos 4 -> 8
+
+==============================================================================
+RESUMEN
+  nodos propios nuevos    : 1 ['estrategia_circular_y_mecanismo_de_retorno']
+  ficheros que se tocarian: 5
+
+ESCRITO: 5 fichero(s) en dataset/nodos/.
+  - diferencia_ventaja_beneficio
+  - economia_circular_como_modelo_de_negocio
+  - estrategia_circular_y_mecanismo_de_retorno  [NUEVO]
+  - framework_caracteristicas_ventajas_beneficios
+  - modelo_simulacion_cadena_suministro_circular
+
+RECORDATORIO: cada nodo nuevo va a docs/plan/INDICE_ROJO_DECLARADO.jsonl
+  python scripts/loop/vuelta28_declarar.py <OPERACION> <fecha> estrategia_circular_y_mecanismo_de_retorno

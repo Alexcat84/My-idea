@@ -391,6 +391,28 @@ su clase nueva esta adjudicada. **Releerlos seria decidir dos veces lo mismo.**
 > sigue con su clase vieja apuntando a un nodo que ya no existe.** **Si uno la
 > conserva, es que la relectura no se hizo.**
 
+### REGISTRO: **LA COLA TAMBIEN RECIBE LAS COSTURAS QUE UN REPARTO CREA** (14 ago 2026, vuelta 28)
+
+**Adjudicado por el acta de la vuelta 27 del auditor (seccion 4, punto 2), POR EXTENSION
+CITADA y sin doctrina nueva:** `P.3` manda repartir y prohibe podar, la fase 02 es la que
+desteje, y esta cola existe para las costuras que las reuniones crean. **La lista de siete
+de arriba se queda entera: nace de las fusiones y esto no la toca.**
+
+> **UNA REPETICION QUE UN REPARTO DE LA FASE 01 CREA DENTRO DE UN MIEMBRO ENTRA A LA
+> NOMINA DE LA FASE 02 COMO COSTURA NUEVA, Y NO SE DESTEJE EN EL ACTO.** Destejer en el
+> acto seria una operacion que ninguna pagina escribio, y el verbo de la operacion que la
+> creo es **repartir**, no elegir por cual mitad se queda.
+
+**LA PRIMERA COSTURA QUE ENTRA POR ESTA PUERTA, con su medicion de hoy:**
+
+| miembro | que recibio | medido hoy |
+|---|---|---|
+| `ejecucion_incremental_transicion_tecnologica` | los bloques de `modelo_hibrido_agile_stage_gate`, `principio_calidad_mvp` y `reduccion_tamano_de_lote_batch_size`, los tres de `OP-F-03` por `P.18` | **16 pasos**, contra los 4 que tenia antes del reparto |
+
+**No es un error del reparto: es la medida de que los tres traian el mismo material de
+Hugos**, que es justamente lo que la tercera clase de `OP-F-03` afirmaba. **La lectura que
+lo decide es de la fase 02, no de la 01.**
+
 ---
 
 ## EL ERROR DE DEJAR PASAR, **YA TIENE TASA MEDIDA**

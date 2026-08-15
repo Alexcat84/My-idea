@@ -539,6 +539,81 @@ antes (33 pruebas, 33 CAEN) y despues (33 PASAN)**; **`GATE 0` ENTERO EN VERDE, 
 rojo**, 71 etiquetas sin encoger y las dos copias del grafo en el mismo blob; **suites en
 verde**: motor 24 de 24, web 80 ficheros con 1.030 pasadas, `tsc` limpio.
 
+### LA RELECTURA CONJUNTA DE LAS DOS DISCREPANCIAS: LAS DOS VUELCAN (14 ago 2026, vuelta 28)
+
+**Encargada por el acta de la vuelta 27 del auditor (seccion 2), que marco dos
+discrepancias DENTRO de los discutibles y las mando a relectura conjunta.** El ejecutor
+las verifico hoy contra el grafo con la vara de `P.18` (*el objeto coincide, si o no*),
+salida en `docs/loop/SALIDA_V28_RELECTURA_CONJUNTA.txt`. **Las dos lecturas del ejecutor
+de la vuelta 27, que estan impresas mas arriba en este archivo, SE QUEDAN ENTERAS: eran
+el estado del dia en que se escribieron, y una correccion que tapa lo que corrige no se
+puede auditar.**
+
+**CORRECCION DECLARADA 1: `economia_circular_como_modelo_de_negocio` 6 a 9 NO va a
+`modelo_simulacion_cadena_suministro_circular`. VA A NODO PROPIO.**
+
+| | |
+|---|---|
+| **lo publicado en la vuelta 27** | *unico miembro cuyo objeto es la cadena circular, y el ultimo paso del bloque es su propio entregable: el impacto en costos de materiales y logistica* |
+| **lo medido hoy** | el entregable del miembro, leido hoy, es **un modelo de simulacion con reporte de P y L y KPIs para al menos dos escenarios**, no el impacto en costos de materiales y logistica. La frase publicada nombraba una clausula del `resumen_teorico`, no el entregable |
+| **la vara** | `P.18` decide por **OBJETO**, no por tema. El miembro **SIMULA y COMPARA** (definir entidades, centro de gravedad, correr simulaciones de 14 dias, reportes de P y L, comparar disenos). El bloque **ELIGE la estrategia y DISENA el mecanismo** (mapear el ciclo de vida de hoy, identificar en cual de las cinco estrategias circulares hay mas potencial, disenar el retorno o la remanufactura, calcular el impacto). **Ningun paso del miembro elige ni disena, y ningun paso del bloque simula** |
+| **por que no hay otro miembro** | barrido corrido hoy sobre los **111 nodos vivos que declaran a Hugos** (`docs/loop/SALIDA_V28_FAMILIA_HUGOS.txt`): solo **uno** tiene por objeto la cadena circular, y es ese. Los otros dos aciertos del barrido son incidentales (`estrategia_captura_mercado_crecimiento` cita *productos verdes* como ejemplo de mercado emergente; `gestion_beneficios_alianza_sostenible` usa *sostenible* en el sentido de alianza duradera) |
+| **el destino** | **NODO PROPIO** por `P.18` punto 3, `estrategia_circular_y_mecanismo_de_retorno`, con `economia_circular_como_modelo_de_negocio` como procedencia y previo. Plan sellado en `docs/loop/PLAN_V28_RELECTURA.json` |
+
+> **EJECUTADA Y DESHECHA EN LA MISMA VUELTA, y se dice entero.** La mudanza corrio con
+> sus guardas en verde y su caso positivo (`SALIDA_V28_RELECTURA_CASO_ANTES.txt`: 4 de 6
+> pruebas CAEN; `SALIDA_V28_RELECTURA_CASO_DESPUES.txt`: 6 de 6 PASAN), y **se deshizo
+> porque el nodo nuevo dejo el arbol incommitteable por una TERCERA hilada del muro**
+> (ver abajo). El bloque vuelve a quedar donde la vuelta 27 lo puso, **con esta
+> correccion escrita encima y el plan sellado esperando**: es el mismo remedio que el
+> acta de la vuelta 27 adjudico CORRECTO en su discutible 8.
+
+**CORRECCION DECLARADA 2, APLICADA Y EN EL ARBOL: `superioridad_producto_beneficios`
+7 a 10 se MUDA de `diferencia_ventaja_beneficio` a
+`framework_caracteristicas_ventajas_beneficios`.**
+
+| | |
+|---|---|
+| **lo publicado en la vuelta 27** | el plan sellado de `OP-F-04-RAC` decia: *el entregable del miembro es esa misma decision: los mensajes de venta reclasificados con el momento exacto de la conversacion en que se usa cada uno* |
+| **lo medido hoy** | **el bloque no decide ningun momento de conversacion**, y **no nombra la Ventaja ni una sola vez**: opone CARACTERISTICAS y BENEFICIOS y decide el estilo global del discurso segun el posicionamiento de precio |
+| **la vara** | el objeto de `diferencia_ventaja_beneficio` es la distincion Ventaja contra Beneficio **y el momento** de usarlas (sus cuatro pasos propios son todos de momento: revisar si ya hay Necesidad Explicita, volver a preguntas de Implicacion, guardar el *esto le ayudara a*, no abrir con Ventajas genericas). El objeto de `framework_caracteristicas_ventajas_beneficios` es **de que clase son los mensajes de tu discurso**, y su entregable lo dice con esas palabras: *guia de clasificacion de mensajes de venta aplicada a la propuesta de valor propia*. Su paso 3 pide que el Beneficio responda a una Necesidad Explicita, que es exactamente el paso premium del bloque |
+| **el resultado medido** | `diferencia_ventaja_beneficio` **8 pasos a 4**; `framework_caracteristicas_ventajas_beneficios` **4 pasos a 8**. Cero perdida: la huella *otro posicionamiento de precio* vive hoy en **exactamente un nodo vivo** |
+
+**EL SALDO DE `OP-F-03` TRAS LA RELECTURA, contado hoy:** los quince repartidos de la
+vuelta 27 pasan a **CATORCE en el arbol**, porque el de `economia_circular` se deshizo y
+espera al muro junto a los cuatro que ya esperaban. **La cuenta de bloques que le faltan
+a `OP-F-03` para declararse HECHA sube de cuatro a CINCO**, y los cinco tienen destino
+NODO PROPIO leido: `analisis_tco_roi_b2b` y `criterios_seleccion_proveedores` (a UN solo
+nodo), `gestion_inventario`, `transicion_producto_a_experiencia` y ahora
+`economia_circular_como_modelo_de_negocio`.
+
+### LAS TRES ADJUDICACIONES DEL ACTA 27 QUE ESTA PAGINA REGISTRA (14 ago 2026, vuelta 28)
+
+**1. `OP-F-03` NO SE DECLARA HECHA: queda PARCIAL** (acta de la vuelta 27, seccion 4,
+punto 1). Su verificacion escrita (*los que si: el bloque se separa*) no esta entera
+mientras existan bloques con destino decidido y sin ejecutar. **El criterio de HECHO de
+la fase 08 pide la verificacion entera, y se declara HECHA el dia en que los nodos
+propios existan y su caso positivo pase.** Medido hoy: **catorce de diecinueve bloques
+en el arbol, cinco pendientes**, los cinco bloqueados por el muro.
+
+**2. LA REPETICION QUE UN REPARTO CREA NO SE DESTEJE EN EL ACTO: entra a la cola de
+relectura post fusion de la fase 02** (acta de la vuelta 27, seccion 4, punto 2,
+adjudicada POR EXTENSION CITADA de `P.3` mas la cola escrita en `08_VERIFICACION.md`).
+**La costura concreta que esta fase crea y deja declarada:**
+`ejecucion_incremental_transicion_tecnologica` recibio los bloques de
+`modelo_hibrido_agile_stage_gate`, `principio_calidad_mvp` y
+`reduccion_tamano_de_lote_batch_size`, y hoy mide **16 pasos**. **No se poda aqui: el
+verbo de la operacion es repartir.** Registrada tambien en `08_VERIFICACION.md`, que es
+donde vive la cola.
+
+**3. DOS BLOQUES QUE CAEN EN EL MISMO NODO PROPIO SE FUNDEN EN UNO** (acta de la vuelta
+27, seccion 4, punto 3, RATIFICADA POR EXTENSION CITADA de `P.18` y de la vara madre de
+la campana: el objeto de la fase I es fundir gemelos). **Fabricar dos nodos propios con
+el mismo material el dia de su creacion seria fabricar el par que la campana existe para
+deshacer.** Aplica hoy a **un solo caso medido**: `analisis_tco_roi_b2b` (5 a 9) y
+`criterios_seleccion_proveedores` (7 a 10) van **a UN nodo, no a dos**, con **las dos
+procedencias declaradas en su fuente y en su lectura**.
+
 ---
 
 ## LO QUE ESTA FASE LE DEJA A LAS DEMAS

@@ -1,0 +1,54 @@
+
+ RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
+
+ ❯ lib/readiness.test.ts (3 tests | 1 failed) 233ms
+     × reclasifica cada nodo real identico a lo que ya calculo Python 228ms
+ ❯ lib/engine/graph.test.ts (11 tests | 1 failed) 53ms
+     × carga los 3835 nodos reales (3742 + 46 compras + 47 entrega) 16ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  lib/readiness.test.ts > clasificarGrafo: paridad exacta contra node_families.json (1266 nodos reales) > reclasifica cada nodo real identico a lo que ya calculo Python
+AssertionError: expected 3836 to be 3835 // Object.is equality
+
+- Expected
++ Received
+
+- 3835
++ 3836
+
+ ❯ lib/readiness.test.ts:25:47
+     23|     }
+     24|     expect(divergencias).toEqual([]);
+     25|     expect(Object.keys(reclasificado).length).toBe(Object.keys(groundT…
+       |                                               ^
+     26|   });
+     27| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  lib/engine/graph.test.ts > cargarGrafo / cargarEntrySeeds / cargarPreguntasCache > carga los 3835 nodos reales (3742 + 46 compras + 47 entrega)
+AssertionError: expected 3836 to be 3835 // Object.is equality
+
+- Expected
++ Received
+
+- 3835
++ 3836
+
+ ❯ lib/engine/graph.test.ts:16:39
+     14|   it("carga los 3835 nodos reales (3742 + 46 compras + 47 entrega)", (…
+     15|     const graph = cargarGrafo();
+     16|     expect(Object.keys(graph).length).toBe(3835);
+       |                                       ^
+     17|   });
+     18|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 78 passed (80)
+      Tests  2 failed | 1028 passed | 3 skipped (1033)
+   Start at  20:22:30
+   Duration  18.22s (transform 41.14s, setup 0ms, import 128.73s, tests 9.04s, environment 15ms)
+

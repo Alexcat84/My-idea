@@ -1,0 +1,668 @@
+FAMILIA por fuente que contiene 'Hugos': 111 nodos VIVOS, 107 con fuente UNICA
+==============================================================================
+
+alineacion_cadena_estrategia_negocio
+  T: Alineación de la Cadena de Suministro con la Estrategia de Negocio
+  E: Documento estratégico de cadena de suministro alineado con el modelo de negocio, incluyendo decisiones específicas por driver
+  R: Para que una cadena de suministro sea exitosa debe alinearse con la estrategia de negocio en tres pasos: (1) entender el mercado que se sirve mediante atributos como cantidad de producto por lote, tiempo de respuesta tolerado, variedad de productos, nivel de s
+  dominio=core fase=planificacion pasos=4
+
+alineacion_incentivos_desempeno
+  T: Alineación de Incentivos de Desempeño en la Cadena de Suministro
+  E: Diagnóstico de incentivos en conflicto y propuesta de nuevo esquema de incentivos alineado
+  R: Los incentivos de ventas por cuotas mensuales o trimestrales generan compras forzadas al final de cada periodo, empujando producto sin demanda real hacia la cadena. Del mismo modo, incentivos internos en conflicto (ej. minimizar costos de transporte a costa de
+  dominio=core fase=planificacion pasos=3
+
+analisis_tco_roi_b2b  [MULTIFUENTE]
+  T: Análisis de TCO y ROI en Ventas B2B
+  E: Documento o white paper con análisis de TCO y ROI para clientes B2B
+  R: En ventas business-to-business, los compradores evalúan no solo el precio sino el Costo Total de Propiedad (TCO: capacitación, infraestructura, cambios organizacionales) y el Retorno de Inversión (ROI: beneficios esperados frente a la inversión). Preparar esto
+  dominio=core fase=validacion pasos=9
+
+arquitectura_flexible_soa
+  T: Aprovechar Aplicaciones Existentes (SOA/EAI/API)
+  E: Mapa de arquitectura tecnológica que distinga componentes externos reutilizables vs. desarrollo propio necesario.
+  R: Estrategia tecnológica que consiste en usar arquitecturas orientadas a servicios (SOA), integración de aplicaciones empresariales (EAI) y APIs para construir una infraestructura híbrida y flexible (cloud/SaaS/consumer IT), en lugar de desarrollar todo desde ce
+  dominio=core fase=ejecucion pasos=4
+
+arquitectura_tecnica_modular
+  T: Arquitectura Técnica Modular Basada en la Nube
+  E: Diagrama de arquitectura modular mostrando servicios de terceros integrados vía API y el componente propietario central
+  R: Estrategia de construir sistemas de negocio combinando servicios de computación en la nube y aplicaciones de software ya existentes (APIs, SaaS), escribiendo código nuevo solo para las funciones únicas que generan valor diferencial. Ejemplo: Uber usa AWS, Goog
+  dominio=core fase=ejecucion pasos=5
+
+atributos_mercado_chopra_meindl
+  T: Atributos del Mercado para Definir Requerimientos de Cadena de Suministro
+  E: Perfil de requerimientos del mercado documentado con los 6 atributos evaluados
+  R: Chopra y Meindl definieron seis atributos clave para entender qué necesita un mercado de su cadena de suministro: cantidad de producto por lote, tiempo de respuesta tolerado, variedad de productos requerida, nivel de servicio esperado, sensibilidad al precio, 
+  dominio=core fase=validacion pasos=3
+
+balance_eficiencia_responsividad
+  T: Balance entre Eficiencia y Responsividad en la Cadena de Suministro
+  E: Definición estratégica documentada de dónde se ubica la empresa en el continuum eficiencia-responsividad, con justificación basada en volatilidad del mercado
+  R: Las cadenas de suministro no pueden maximizar eficiencia y responsividad simultáneamente; son extremos de un espectro. Cuanto más estable y predecible es el entorno, más se puede enfocar en eficiencia y bajo costo; cuanto más volátil e incierto, más se necesit
+  dominio=core fase=planificacion pasos=6
+
+big_data_ia_cadena_suministro
+  T: Big Data e IA Predictiva en la Cadena de Suministro
+  E: Un pipeline de datos con al menos un modelo predictivo activo y un dashboard de KPIs de cadena de suministro
+  R: Basado en el caso de Microsoft, este concepto describe cómo centralizar datos en la nube (data lake), aplicar machine learning y visualizar resultados en dashboards permite pasar de una gestión reactiva a una predictiva. Esto habilita anticipar devoluciones de
+  dominio=core fase=ejecucion pasos=5
+
+bpm_gestion_excepciones
+  T: Gestión de Excepciones con Business Process Management (BPM)
+  E: Sistema BPM configurado con reglas de negocio y alertas automáticas de excepciones
+  R: El uso de software BPM interfaced con los sistemas transaccionales permite definir reglas de negocio y detectar automáticamente excepciones (errores en pedidos, retrasos, facturación) para alertar al personal correspondiente, permitiendo una atención al client
+  dominio=core fase=ejecucion pasos=4
+
+bucle_retroalimentacion_autoajustable
+  T: Bucle de Retroalimentación Autoajustable en la Cadena de Suministro
+  E: Un sistema de monitoreo con indicadores en tiempo real y reglas de ajuste automático definidas para al menos un proceso clave de la cadena de suministro
+  R: Un mecanismo donde el sistema compara continuamente su estado actual con el objetivo deseado y toma acciones correctivas para minimizar la diferencia, como un termostato o el control de crucero de un auto. Aplicado a cadenas de suministro, permite que empresas
+  dominio=core fase=ejecucion pasos=4
+
+business_intelligence_niveles_datos
+  T: Sistema de inteligencia de negocio en tres niveles
+  E: Un sistema de reportes y paneles (dashboards) organizado en tres niveles (estratégico, operativo, táctico) conectado a un almacén de datos (data warehouse)
+  R: Cuando todo cambia rápido, necesitas un sistema de inteligencia de negocio (business intelligence, BI) que te muestre datos en tres niveles: uno estratégico, para que decidas qué hacer, con datos históricos y del mercado externo; uno operativo, para que decida
+  dominio=core fase=ejecucion pasos=4
+
+cadena_suministro_respuesta_desastres
+  T: Cadenas de Suministro para Respuesta a Desastres
+  E: Plan de preparación pre-desastre con inventario de contingencia, proveedores identificados y ejercicios de entrenamiento colaborativo diseñados
+  R: Las cadenas de suministro de respuesta a desastres (DR) enfrentan alta imprevisibilidad y organización ad hoc, sin autoridad centralizada clara. A diferencia de las cadenas comerciales, requieren mayores niveles de inventario de contingencia (surge capacity), 
+  dominio=core fase=planificacion pasos=5
+
+ciclo_virtuoso_datos_electronicos
+  T: Ciclo Virtuoso de Conexiones Electrónicas de Datos
+  E: Infraestructura básica de conexión de datos entre la empresa y sus socios clave de cadena de suministro, con flujo continuo y validado
+  R: La estrategia efectiva de cadena de suministro comienza con mejorar la precisión y flujo de datos entre empresas. Las conexiones electrónicas simples de datos (vs. EDI/XML costosos y complejos) son la base de un ciclo virtuoso de mejora continua, especialmente
+  dominio=core fase=ejecucion pasos=5
+
+ciclos_retroalimentacion_autoajuste
+  T: Ciclos de Retroalimentación Auto-ajustables
+  E: Sistema de métricas e incentivos con retroalimentación en tiempo real para los equipos operativos.
+  R: Mecanismo mediante el cual se motiva a las personas con recompensas (monetarias o psicológicas) por alcanzar metas de desempeño predefinidas, y se les provee información en tiempo real sobre su avance hacia esas metas. Esto genera un bucle de retroalimentación
+  dominio=core fase=ejecucion pasos=4
+
+cinco_pasos_enfoque_restricciones
+  T: Los Cinco Pasos de Enfoque para Gestionar Restricciones
+  E: Mapa de flujo de trabajo con cuellos de botella identificados y plan de acción por cada uno de los cinco pasos
+  R: Metodología práctica derivada de la Teoría de Restricciones para identificar y gestionar los cuellos de botella de un sistema (fábrica o cadena de suministro) de forma iterativa: identificar, explotar, subordinar, elevar y repetir el ciclo cuando la restricció
+  dominio=core fase=ejecucion pasos=5
+
+clasificacion_mercados_cadena_suministro
+  T: Clasificación de Mercados por Oferta y Demanda
+  E: Diagnóstico escrito del cuadrante de mercado en que opera cada negocio o mercado atendido, con la estrategia correspondiente asociada
+  R: Los mercados se clasifican en cuatro cuadrantes según la relación oferta-demanda: mercados en desarrollo (oferta y demanda bajas e impredecibles), mercados de crecimiento (demanda mayor que oferta), mercados estables (oferta y demanda altas y predecibles) y me
+  dominio=core fase=planificacion pasos=5
+
+cloud_computing_supply_chain
+  T: Cloud Computing como Infraestructura Habilitadora
+  E: Plan de migración o adopción de infraestructura cloud para operaciones de supply chain
+  R: El cloud computing combina tecnologías (Internet, virtualización, software open source) para entregar recursos computacionales a demanda, sin compromisos de largo plazo y con pago por uso. Es el componente central que hace accesibles y asequibles las demás tec
+  dominio=core fase=planificacion pasos=4
+
+colaboracion_cadena_suministro
+  T: Iniciar la Colaboración en la Cadena de Suministro
+  E: Gráfico de medición del efecto látigo propio y acuerdo inicial de intercambio de datos con al menos un socio clave
+  R: El primer paso para reducir el efecto látigo es medirlo dentro de la propia empresa, comparando el volumen y frecuencia de pedidos recibidos de clientes contra los pedidos realizados a proveedores. Compartir datos de inventario y demanda con socios comerciales
+  dominio=core fase=ejecucion pasos=5
+
+colaboracion_transporte_ctm
+  T: Gestión Colaborativa de Transporte (CTM)
+  E: Acuerdo de colaboración de transporte (CTM) con socios definidos, modelo de red optimizado y métricas de ahorro esperado
+  R: La gestión colaborativa de transporte (CTM) permite a empresas más pequeñas, incluso competidoras, unir fuerzas para consolidar embarques y reducir costos de transporte significativamente (hasta 25% según el caso Just Born). El éxito depende de habilitadores h
+  dominio=core fase=ejecucion pasos=5
+
+collaboration_enablers
+  T: Habilitadores Clave para la Colaboración en Supply Chain
+  E: Checklist de habilitadores presentes/ausentes y plan de acción para fortalecer los débiles
+  R: Para que las iniciativas colaborativas tengan éxito se requieren habilitadores humanos y tecnológicos: interés común, apertura, reconocimiento de prioridades, expectativas claras, liderazgo, cooperación (no castigo), confianza, reparto de beneficios y TI avanz
+  dominio=core fase=ejecucion pasos=5
+
+collaboration_roadblocks
+  T: Obstáculos a la Colaboración en la Cadena de Suministro
+  E: Documento de riesgos y mitigaciones para la iniciativa colaborativa
+  R: Existen obstáculos recurrentes que dificultan la colaboración exitosa: falta de confianza y control sobre la propiedad intelectual compartida, riesgo de fuga de información propietaria a competidores, cuestiones éticas no resueltas, dificultades de integración
+  dominio=core fase=planificacion pasos=5
+
+collaborative_transportation_management
+  T: Collaborative Transportation Management (CTM)
+  E: Mapa de red colaborativa con socios identificados y plan de hub de información compartida
+  R: CTM es un enfoque donde múltiples empresas (embarcadores, receptores, transportistas) integran sus redes de transporte y comparten información a través de un hub común para aumentar el valor generado. A mayor nivel de colaboración, mayor es el intercambio de i
+  dominio=core fase=ejecucion pasos=4
+
+combinacion_humano_ia_decision
+  T: Combinación Óptima de Personas y Tecnología (Humano + IA)
+  E: Definición clara de qué decisiones toman personas y cuáles automatiza la tecnología en el proceso operativo.
+  R: Basado en el estudio de Brynjolfsson y McAfee sobre torneos de ajedrez, se demuestra que equipos de personas con habilidades moderadas usando IA simple y simulaciones superan tanto a expertos humanos sin tecnología como a sistemas de IA complejos sin intervenc
+  dominio=core fase=ejecucion pasos=4
+
+compartir_datos_cadena_suministro
+  T: Compartición de Datos entre Empresas de la Cadena de Suministro
+  E: Acuerdo de intercambio de datos con al menos un socio clave de la cadena de suministro
+  R: Compartir datos de demanda, decisiones y métricas de desempeño entre las empresas de una cadena de suministro mejora la toma de decisiones colectiva y reduce distorsiones como el efecto látigo (bullwhip effect). Aunque existe reticencia por temor a filtrar inf
+  dominio=core fase=ejecucion pasos=4
+
+complejidad_acorde_capacidad_organizacional
+  T: Alinear la Complejidad del Sistema con la Capacidad de la Organización
+  E: Matriz de capacidades organizacionales vs. requerimientos del sistema propuesto, con ajuste de alcance si es necesario
+  R: No intentes construir un sistema más complejo de lo que tú y tu equipo realmente pueden manejar. Cuando defines el alcance, ponte metas que sean un reto pero alcanzables: eso mantiene la confianza del equipo. Si te propones metas imposibles, agotas esa confian
+  dominio=core fase=planificacion pasos=8
+
+coordinacion_colaboracion_cadena_suministro
+  T: Coordinación y Colaboración como Ventaja Competitiva
+  E: Estrategia de relación con proveedores/socios basada en colaboración mutua, con plataforma o mecanismo de coordinación implementado
+  R: En economías de alto cambio, la coordinación entre empresas de una cadena de suministro es más poderosa que el control unilateral. Las ganancias vienen de conectarse a redes de cadena de suministro y desarrollar reputación de buen servicio y buenos productos a
+  dominio=core fase=ejecucion pasos=12
+
+creacion_data_warehouse
+  T: Crea un repositorio central de datos para tu cadena de suministro (data warehouse)
+  E: Un repositorio de datos (data warehouse) que funciona, conectado automáticamente a tus sistemas de origen, con reportes básicos de tu operación
+  R: Un repositorio central de datos (data warehouse) junta la información de los distintos sistemas que usas para operar y llevar las cuentas de tu negocio, capturándola automáticamente desde la fuente para que no tengas que ingresarla a mano. Combina una base de 
+  dominio=core fase=ejecucion pasos=5
+
+creacion_estrategia_cadena_suministro
+  T: Creación de Estrategia mediante Brainstorming Estructurado (Plan-Source-Make-Deliver)
+  E: Lista priorizada de iniciativas estratégicas organizadas en fases con entregables de valor en cada una
+  R: Proceso de generar una lista extensa de ideas de mejora organizadas en las cuatro categorías operativas de la cadena de suministro (Planificar, Abastecer, Fabricar, Entregar), preguntando '¿qué parece imposible pero cambiaría radicalmente el negocio si se logr
+  dominio=core fase=planificacion pasos=5
+
+criterios_seleccion_proveedores  [MULTIFUENTE]
+  T: Criterios para Elegir a tus Proveedores (Source Selection Criteria)
+  E: Una tabla donde comparas a cada proveedor con la importancia que le diste a cada punto, la calificación que le pusiste y el puntaje total que obtuvo.
+  R: Es la lista de puntos que le pides a un proveedor para trabajar contigo en un contrato. Te sirve para comparar propuestas sin dejarte llevar solo por la primera impresión: le das más peso a lo que más te importa y calificas a cada proveedor en cada punto para 
+  dominio=core fase=planificacion pasos=10
+
+crossdocking
+  T: Crossdocking en Centros de Distribución
+  E: Proceso documentado de crossdocking con horarios de sincronización y layout del centro de distribución
+  R: El crossdocking es una técnica logística en la que los envíos de carga completa llegan a un centro de distribución y se descargan, y al mismo tiempo se fragmentan y combinan con otros productos para cargarse directamente en camiones de salida, minimizando el a
+  dominio=core fase=ejecucion pasos=5
+
+cuatro_capacidades_mercado
+  T: Las Cuatro Capacidades de Mercado en la Cadena de Suministro
+  E: Matriz de las cuatro capacidades con evaluación comparativa frente a competidores y decisión de dónde invertir
+  R: Toda empresa de cadena de suministro compite en cuatro capacidades: servicio al cliente, flexibilidad de demanda, eficiencia interna y desarrollo de producto. La clave estratégica es identificar en cuáles ya se tiene ventaja y reforzarlas (apalancar fortalezas
+  dominio=core fase=planificacion pasos=4
+
+cuatro_categorias_desempeno_cadena_suministro
+  T: Cuatro Categorías de Desempeño de la Cadena de Suministro
+  E: Un tablero de control con métricas y metas definidas para las cuatro categorías de desempeño según tu tipo de mercado.
+  R: El desempeño de una cadena de suministro se mide en cuatro categorías: servicio al cliente (capacidad de cumplir expectativas de entrega y disponibilidad), eficiencia interna (rentabilidad y uso de recursos en las operaciones), flexibilidad de demanda (capacid
+  dominio=core fase=planificacion pasos=10
+
+data_transmission_edi_xml
+  T: Transmisión de Datos: EDI y XML
+  E: Especificación de formato de intercambio de datos con socios comerciales clave
+  R: EDI (Electronic Data Interchange) es una tecnología para transmitir datos estandarizados entre empresas (órdenes de compra, facturas, notificaciones de envío). XML es una tecnología más flexible y extensible que permite comunicación entre computadoras y entre 
+  dominio=core fase=ejecucion pasos=4
+
+data_warehouse_como_fundamento
+  T: Data Warehouse Empresarial como Fundamento de Mejora Operativa
+  E: Data warehouse funcional interfaced con sistemas transaccionales existentes
+  R: Antes de implementar mejoras en pronóstico de demanda, gestión de inventario, gestión de pedidos o programación de entregas, es necesario consolidar los datos transaccionales dispersos (órdenes, facturas, inventario) en un data warehouse central que sirva de f
+  dominio=core fase=ejecucion pasos=4
+
+definicion_alineacion_cadena_suministro
+  T: Definición y Alineación de la Cadena de Suministro con la Estrategia
+  E: Mapa de cadena de suministro con el rol de la empresa identificado y una declaración clara de la estrategia competitiva (costo vs. servicio) que guiará las decisiones operativas.
+  R: Una cadena de suministro es la red de empresas y actividades necesarias para diseñar, fabricar, entregar y usar un producto o servicio. Toda empresa participa en una o más cadenas de suministro y debe entender el rol que juega en ellas. La gestión de la cadena
+  dominio=core fase=planificacion pasos=7
+
+definicion_objetivos_proyecto_sistema
+  T: Definición de Objetivos de Proyecto mediante Componentes Cohesivos
+  E: Lista de objetivos de proyecto definidos, cada uno con descripción, componente asociado y criterio de valor independiente
+  R: Un diseño conceptual efectivo se descompone en 3 a 9 componentes de alto nivel, cada uno altamente cohesivo (realiza un conjunto de tareas relacionadas a una sola actividad bien definida). Cada componente se convierte en un objetivo de proyecto, alcanzable en 
+  dominio=core fase=planificacion pasos=10
+
+desafios_implementacion_ia
+  T: Desafíos en la Implementación de IA (Calidad de Datos y Confianza)
+  E: Marco de gobernanza de datos e IA con protocolos de auditoría y niveles definidos de autonomía/escalamiento humano
+  R: Adoptar IA exitosamente requiere abordar dos grandes retos: la calidad de los datos (garbage in, garbage out) y la confianza en las decisiones autónomas de la IA. Los modelos de deep learning suelen operar como 'cajas negras', generando desconfianza y riesgo d
+  dominio=core fase=planificacion pasos=4
+
+diagnostico_efecto_latigo
+  T: Diagnóstico del Efecto Látigo (Bullwhip Effect)
+  E: Informe de diagnóstico que evidencie la presencia y magnitud del efecto látigo en la cadena propia
+  R: El efecto látigo describe cómo pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores conforme se transmiten hacia atrás en la cadena de suministro (minorista, distribuidor, fabricante), generando ciclos de escasez y
+  dominio=core fase=validacion pasos=4
+
+diseno_conceptual_sistema
+  T: Diseño Conceptual de Sistema
+  E: Diagrama esquemático de alto nivel del sistema propuesto, validado con retroalimentación de stakeholders clave
+  R: Es el esbozo de alto nivel de un sistema (o conjunto de sistemas) que expresa la estrategia para lograr las metas del negocio. Se construye primero desde los procesos de negocio, luego se agregan los flujos de datos (volumen, frecuencia, origen/destino) y se d
+  dominio=core fase=planificacion pasos=7
+
+diseno_dashboards
+  T: Diseño de Dashboards por Audiencia
+  E: Set de dashboards personalizados por nivel jerárquico, con capacidad de detalle progresivo
+  R: Los dashboards son despliegues de una página que muestran a cada usuario, de un vistazo, los indicadores clave que le competen. Difieren según el nivel: alta dirección necesita ver el cumplimiento de metas globales, gerencia media requiere detalle de las opera
+  dominio=core fase=ejecucion pasos=4
+
+diseno_producto_cadena_suministro
+  T: Diseño de Producto Orientado a la Cadena de Suministro
+  E: Diseño de producto modular validado por equipo multifuncional con lista de proveedores requeridos
+  R: El diseño del producto determina la forma de la cadena de suministro necesaria para fabricarlo, impactando fuertemente en costo y disponibilidad. Diseñar productos con menos partes, diseños simples y construcción modular a partir de subensambles genéricos perm
+  dominio=core fase=planificacion pasos=5
+
+division_trabajo_humano_ia
+  T: División del Trabajo entre Humanos e IA
+  E: Matriz de asignación de tareas indicando cuáles son automatizables por IA y cuáles requieren intervención humana.
+  R: Principio estratégico que establece que las computadoras y la IA deben automatizar las tareas repetitivas, rutinarias y de monitoreo (donde no fallan ni se cansan), mientras que las personas deben enfocarse en actividades creativas, de resolución de problemas 
+  dominio=core fase=ejecucion pasos=4
+
+driver_produccion
+  T: Driver de Producción: Enfoque de Producto vs Funcional
+  E: Plan de producción y almacenamiento con el enfoque (producto/funcional) y método de almacenaje definidos, junto con un cronograma maestro de producción.
+  R: La producción se refiere a la capacidad de fabricar y almacenar productos. Las fábricas pueden diseñarse con enfoque de producto (realizan todas las operaciones para una línea de producto, generando expertise en ese producto) o enfoque funcional (se especializ
+  dominio=core fase=ejecucion pasos=4
+
+driver_transporte
+  T: Driver de Transporte: Selección de Modo según Valor del Producto
+  E: Matriz de decisión de modo de transporte por línea de producto, junto con el diseño de rutas y red logística.
+  R: El transporte mueve materiales y productos entre instalaciones. Existen seis modos básicos: barco y ferrocarril (bajo costo, lento), tuberías (eficiente pero limitado a líquidos/gases), camiones (flexible, costo variable), avión (rápido y costoso) y transporte
+  dominio=core fase=ejecucion pasos=4
+
+driver_ubicacion
+  T: Driver de Ubicación: Centralización vs Descentralización de Instalaciones
+  E: Análisis comparativo de ubicaciones candidatas con la decisión final de número, tamaño y localización de instalaciones.
+  R: La ubicación se refiere al sitio geográfico de las instalaciones de producción y almacenamiento, y a qué actividades se realizan en cada una. El trade-off central es centralizar (economías de escala y eficiencia) vs. descentralizar (mayor cercanía a clientes/p
+  dominio=core fase=planificacion pasos=4
+
+drum_buffer_rope
+  T: Modelo Drum-Buffer-Rope para Sincronizar la Cadena de Suministro
+  E: Diagrama de flujo de inventario sincronizado con buffers definidos y acuerdo de intercambio de datos de demanda
+  R: Modelo que sincroniza toda la cadena de suministro como una sola entidad, alineada al ritmo real de la demanda del mercado (el 'tambor'). Cada empresa gestiona la incertidumbre mediante buffers de inventario o capacidad productiva, y comparten datos de demanda
+  dominio=core fase=ejecucion pasos=4
+
+efecto_bullwhip
+  T: Detectar y calcular el costo del efecto látigo en tu cadena de suministro
+  E: Un cálculo claro de cuánto te cuesta el efecto látigo en tu negocio, que te sirva para decidir si conviene invertir en mejor visibilidad de datos con tus proveedores
+  R: El efecto látigo (bullwhip) pasa cuando un cambio pequeño en lo que pide el cliente final se va agrandando a medida que sube por tu cadena de proveedores, y cada eslabón termina con una idea distinta de cuánta demanda real hay. Primero te quedas corto de inven
+  dominio=core fase=validacion pasos=6
+
+ejecucion_incremental_transicion_tecnologica
+  T: Transición Tecnológica mediante Pasos Incrementales
+  E: Hoja de ruta de implementación tecnológica por fases incrementales, con hitos de aprendizaje definidos
+  R: La tecnología es un medio, no un fin: solo importa en la medida en que permite entregar servicio de valor a los clientes de forma rentable. Las transiciones exitosas hacia nuevas capacidades de cadena de suministro casi siempre involucran una serie de pasos in
+  dominio=core fase=ejecucion pasos=16
+
+erp_systems
+  T: Sistemas ERP (Enterprise Resource Planning)
+  E: Plan de implementación ERP con módulos priorizados
+  R: Los sistemas ERP recopilan datos de múltiples funciones de la empresa (finanzas, procura, manufactura, cumplimiento de órdenes, RRHH, logística) y ofrecen una vista orientada a procesos que atraviesa departamentos funcionales. Se enfocan principalmente en ejec
+  dominio=core fase=ejecucion pasos=4
+
+estandar_gtin_epc
+  T: Estandarización de Identificación de Producto (GTIN/EPC)
+  E: Catálogo de productos codificado bajo estándar GTIN/EPC, registrado en GS1
+  R: Para que la información de productos sea utilizable globalmente, se requiere un protocolo de identificación estándar. GS1 unificó los sistemas UPC y EAN en el Global Trade Item Number (GTIN), y lo extendió con el Electronic Product Code (EPC), que añade un núm
+  dominio=core fase=ejecucion pasos=4
+
+estandarizacion_codigos_producto_epc
+  T: Estandarización de Datos de Producto (EPC y GDSN)
+  E: Catálogo de productos con códigos EPC/GPC asignados y conexión activa a la red GDSN
+  R: El uso de números de parte internos distintos entre empresas genera errores costosos de traducción, facturación y pronóstico. El Electronic Product Code (EPC) y redes como el Global Data Synchronization Network (GDSN) permiten un identificador único compartido
+  dominio=core fase=planificacion pasos=4
+
+estrategia_captura_mercado_crecimiento
+  T: Muévete rápido cuando un mercado empieza a crecer fuerte (captura rápida)
+  E: Tu plan de acción para los próximos 12 meses, con hitos de alianzas, capacitación, inventario e indicadores de percepción de marca.
+  R: Cuando detectas un mercado emergente en fuerte crecimiento (por ejemplo, productos verdes), tienes que moverte rápido y con tácticas simples, sin complicarte (rápido y ligero), antes de que la oferta alcance a la demanda y el mercado se vuelva maduro y competi
+  dominio=core fase=ejecucion pasos=9
+
+estrategia_cuatro_capacidades_mercado
+  T: Las Cuatro Capacidades de Mercado (Customer Service, Product Development, Internal Efficiency, Demand Flexibility)
+  E: Documento de estrategia de cadena de suministro que defina la capacidad de mercado prioritaria y la justificación basada en la etapa del mercado.
+  R: Toda empresa debe elegir en qué capacidad de mercado competir según la etapa de madurez del mercado: en mercados de crecimiento, el servicio al cliente y el desarrollo de producto son decisivos; en mercados maduros/estables, la eficiencia interna y precios baj
+  dominio=core fase=planificacion pasos=4
+
+estrategia_expansion_centros_distribucion
+  T: Estrategia de Expansión Alrededor de Centros de Distribución (Modelo Walmart)
+  E: Plan de expansión geográfica basado en centros de distribución que sirvan como base para múltiples puntos de venta.
+  R: Walmart popularizó una estrategia de entrada a nuevos mercados geográficos basada en construir primero un Centro de Distribución (DC) central que sirva como cabeza de puente, y luego abrir múltiples tiendas alrededor de esa área en lugar de una sola tienda ais
+  dominio=core fase=planificacion pasos=4
+
+framework_scor_plan_source_make_deliver
+  T: Framework SCOR: Plan, Source, Make, Deliver
+  E: Mapa operativo de la cadena de suministro estructurado según el framework SCOR con métricas asociadas
+  R: El modelo SCOR (Supply-Chain Operations Reference) organiza las operaciones de la cadena de suministro en cuatro categorías: Plan (planificación y pronósticos), Source (abastecimiento/compras), Make (producción/fabricación) y Deliver (entrega/distribución). Ca
+  dominio=core fase=ejecucion pasos=4
+
+gestion_beneficios_alianza_sostenible
+  T: Gestión Sostenible de Beneficios en Alianzas (Costo/Beneficio Compartido)
+  E: Tablero de métricas compartidas con valores monetarios asignados y frecuencia de revisión definida.
+  R: Una alianza sostenible no busca solo reducir costos al socio, sino generar una relación de costo/beneficio favorable donde ambas partes crecen. Los costos operativos pueden subir siempre que el ratio beneficio/costo se mantenga favorable; ese crecimiento en co
+  dominio=core fase=ejecucion pasos=8
+
+gestion_contratos_desempeno
+  T: Gestión y Seguimiento del Desempeño de Proveedores
+  E: Sistema de seguimiento de KPIs de proveedores con reportes periódicos de cumplimiento
+  R: Una vez firmados los contratos, es necesario medir y gestionar el desempeño de los proveedores contra lo acordado. Dado que las empresas reducen su base de proveedores, cada uno se vuelve crítico. El Vendor-Managed Inventory (VMI) es un ejemplo donde el provee
+  dominio=core fase=ejecucion pasos=4
+
+gestion_instalaciones
+  T: Gestión de Instalaciones (Facility Management)
+  E: Documento de estrategia de instalaciones con rol, capacidad asignada y mapa de proveedores/mercados por instalación
+  R: Una vez decidida la ubicación de una instalación (decisión costosa y difícil de revertir), la gestión continua se enfoca en tres decisiones clave: el rol que jugará cada instalación (qué actividades realiza, lo que afecta la flexibilidad de la cadena de sumini
+  dominio=core fase=planificacion pasos=4
+
+gestion_inventario  [MULTIFUENTE]
+  T: Gestión Eficiente de Inventario
+  E: Plan de reducción de inventario con métricas de DII y acciones específicas por área
+  R: El inventario representa efectivo congelado que la empresa no puede usar para otros fines. El reto es minimizar el inventario sin generar quiebres de stock que insatisfagan a los clientes. Múltiples áreas de la empresa (ventas, ingeniería, producción) afectan 
+  dominio=core fase=ejecucion pasos=9
+
+gestion_pedidos_order_management
+  T: Gestión de Pedidos (Order Management)
+  E: Sistema o flujo documentado de gestión de pedidos con automatización de rutina y protocolo de excepciones
+  R: Proceso de transmitir información de pedidos desde clientes hacia atrás en la cadena de suministro (minoristas, distribuidores, proveedores de servicios, productores) y devolver información de fechas de entrega, sustituciones y pedidos pendientes. Se rige por 
+  dominio=core fase=ejecucion pasos=5
+
+gestion_procurement_consumo
+  T: Cuánto y qué compras en tu negocio (procurement)
+  E: Un reporte de tu consumo por categoría de producto y lugar de operación, con el análisis de las desviaciones.
+  R: Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar
+  dominio=core fase=ejecucion pasos=5
+
+gestion_rationing_shortage_gaming
+  T: Gestión del Racionamiento y Shortage Gaming
+  E: Política de racionamiento basada en histórico y protocolo de comunicación anticipada de escasez
+  R: Cuando la demanda supera la oferta, los fabricantes racionan producto según pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en t
+  dominio=core fase=ejecucion pasos=3
+
+gestion_riesgo_cadena_suministro
+  T: Cómo manejar el riesgo natural y operativo en tu cadena de suministro
+  E: Un plan de contingencia escrito con los niveles de stock de seguridad que necesitas, los proveedores duplicados donde haga falta, y un mapa de riesgo por instalación o país.
+  R: Manejar el riesgo en tu cadena de suministro es un equilibrio constante entre lograr buen desempeño a bajo costo y cuidarte de eventos que puedan interrumpir tu operación. Si eliminas proveedores duplicados, instalaciones extra o stock de seguridad, bajas cost
+  dominio=core fase=planificacion pasos=8
+
+gestion_riesgo_credito
+  T: Gestión Inteligente del Riesgo de Crédito
+  E: Programas de crédito diferenciados por segmento con mecanismos de mitigación de riesgo
+  R: La función de crédito debe ayudar a la empresa a tomar riesgos inteligentes que apoyen su plan de negocio. Una decisión de crédito aparentemente mala desde una perspectiva puede ser una buena decisión de negocio desde otra (por ejemplo, ganar cuota de mercado)
+  dominio=core fase=planificacion pasos=9
+
+guias_diseno_sistemas_estrategicos
+  T: Siete Guías Estratégicas para el Diseño de Sistemas
+  E: Checklist de evaluación de diseño de sistema con cumplimiento verificado de las siete guías
+  R: Conjunto de siete criterios para evaluar y comparar diseños de sistemas antes de construirlos: (1) alinear con metas de negocio, (2) usar sistemas para cambiar el panorama competitivo, (3) aprovechar infraestructura existente, (4) usar la combinación más simpl
+  dominio=core fase=planificacion pasos=11
+
+ia_en_supply_chain
+  T: Inteligencia Artificial Aplicada a la Cadena de Suministro
+  E: Un plan piloto de IA implementado en un área de tu cadena de suministro, con métricas de mejora documentadas para decidir si escalarlo.
+  R: La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando his
+  dominio=core fase=ejecucion pasos=6
+
+industrial_robots_automation
+  T: Automatización con Robots Industriales
+  E: Plan de automatización robótica con ROI estimado
+  R: Los robots industriales son manipuladores diseñados para mover materiales, partes y herramientas, y realizar tareas programadas en manufactura y producción. Su sofisticación y asequibilidad crecientes permiten que empresas de todos los tamaños los adopten para
+  dominio=core fase=ejecucion pasos=4
+
+information_driver_supply_chain
+  T: El Rol de la Información como Driver de la Cadena de Suministro
+  E: Mapa de flujo de información en tu cadena de suministro, con los puntos de mejora identificados, que alimente tus decisiones de producción, inventario, ubicación y transporte
+  R: La información es el conector entre todas las actividades de tu cadena de suministro y la base para tomar decisiones sobre los otros drivers: producción, inventario, ubicación y transporte. Cuanto más precisa, oportuna y completa sea la información que compart
+  dominio=core fase=planificacion pasos=5
+
+iot_big_data_supply_chain
+  T: IoT y Big Data para Trazabilidad de Supply Chain
+  E: Infraestructura de captura de datos IoT integrada con un repositorio central listo para análisis
+  R: El Internet de las Cosas (IoT) conecta dispositivos embebidos en productos y equipos para enviar y recibir datos en tiempo real, generando volúmenes masivos de 'big data' que alimentan el análisis de patrones y tendencias en la cadena de suministro. Esta evolu
+  dominio=core fase=ejecucion pasos=4
+
+jerarquia_datos_scor
+  T: Los tres niveles de datos de tu negocio: estratégicos, operativos y tácticos (modelo SCOR)
+  E: Mapa de tus métricas clasificado en los tres niveles del modelo SCOR, con claridad de quién usa cada uno
+  R: El modelo SCOR (Supply Chain Operations Reference) clasifica los datos de tu negocio en tres niveles según para qué los usas: los datos estratégicos te sirven a ti para ver el desempeño global en atención al cliente, eficiencia interna, capacidad de responder 
+  dominio=core fase=planificacion pasos=4
+
+logistica_inversa_retornos
+  T: Procesamiento de Retornos (Logística Inversa)
+  E: Reporte de causas raíz de devoluciones y plan de mejora para reducir tasa de retornos
+  R: La logística inversa gestiona el flujo de productos devueltos por clientes debido a errores de entrega, daños, defectos o excesos. Aunque necesaria, un alto volumen de retornos suele indicar ineficiencias en otras partes de la cadena de suministro que deberían
+  dominio=core fase=ejecucion pasos=5
+
+manufactura_aditiva_bajo_demanda
+  T: Manufactura Aditiva (Impresión 3D) para Producción Bajo Demanda
+  E: Análisis de viabilidad de manufactura aditiva para una línea de productos, con proyección de ahorro en inventario
+  R: La impresión 3D o manufactura aditiva permite crear productos por capas a partir de materia prima común (plástico, polvo metálico), fabricando bajo demanda en lugar de predecir y almacenar inventario de múltiples variantes. Esto reduce costos de inventario y m
+  dominio=core fase=planificacion pasos=4
+
+marco_analisis_mercado_cadena_suministro
+  T: Cómo entender tu mercado para encontrar oportunidades en tu cadena de suministro
+  E: Un mapa claro de en qué necesitas destacar frente a tu competencia, con metas de desempeño definidas para cada una de las cuatro áreas
+  R: Antes de decidir dónde enfocar tus esfuerzos, necesitas entender en qué tipo de mercado te mueves: uno maduro, uno en desarrollo o uno estable. Cada tipo te exige destacar en algo distinto: atención al cliente, eficiencia interna, capacidad de adaptarte a la d
+  dominio=core fase=planificacion pasos=5
+
+metodos_de_pronostico
+  T: Métodos de Pronóstico: Cualitativo, Causal, Series de Tiempo y Simulación
+  E: Pronóstico de demanda documentado con método(s) utilizados, margen de error estimado y plan de contingencia
+  R: Existen cuatro métodos básicos de pronóstico que suelen combinarse: (1) Cualitativo, basado en intuición y comparación con productos similares, útil cuando hay poca data histórica; (2) Causal, que asume relación fuerte entre demanda y factores externos como pr
+  dominio=core fase=planificacion pasos=4
+
+metricas_servicio_cliente_bts_bto
+  T: Métricas de Servicio al Cliente: Build-to-Stock vs Build-to-Order
+  E: Sistema de medición de servicio al cliente implementado según el modelo operativo (BTS o BTO)
+  R: Existen dos modelos operativos con métricas de servicio distintas. Build-to-Stock (BTS) aplica a productos commodity que deben estar disponibles de inmediato (medido por fill rate de orden completa y de línea de producto). Build-to-Order (BTO) aplica a product
+  dominio=core fase=ejecucion pasos=4
+
+milk_run_deliveries
+  T: Entregas Milk Run
+  E: Plan de ruta de entrega consolidada (milk run) con secuencia de paradas, cantidades por parada y técnica de ruteo seleccionada
+  R: Las entregas milk run consolidan múltiples orígenes o destinos en una sola ruta de transporte, en lugar de hacer entregas directas punto a punto. Permiten combinar cantidades menores a carga completa (LTL) en cargas completas (TL), reduciendo costos de transpo
+  dominio=core fase=ejecucion pasos=5
+
+mission_and_operations_planning
+  T: Planificación de Misión y Operaciones (M&OP)
+  E: Plan de operaciones de cinco pasos (CONOPS, demanda, transporte, modelo, simulación) validado antes de su ejecución
+  R: El M&OP es una adaptación del proceso comercial de Sales and Operations Planning (S&OP) para cadenas de suministro ad hoc como las de respuesta a desastres. Es un proceso de cinco pasos que comienza con la definición de la misión (CONOPS), sigue con planificac
+  dominio=core fase=planificacion pasos=5
+
+mitigacion_efecto_latigo
+  T: Mitigación del Efecto Látigo: Cinco Factores Causales
+  E: Plan de acción con al menos una intervención implementada por cada uno de los cinco factores causales del efecto látigo
+  R: Existen cinco factores que generan el efecto látigo y sus respectivas estrategias de mitigación: (1) pronóstico de demanda basado en pedidos en lugar de datos de punto de venta reales; (2) agrupamiento de pedidos (order batching) por costos de procesamiento/tr
+  dominio=core fase=ejecucion pasos=5
+
+modelado_simulacion_cadena_suministro
+  T: Modelado y Simulación de Cadena de Suministro con Cuatro Entidades
+  E: Modelo de simulación de la cadena de suministro con métricas base de desempeño (inventario, costos, tiempos).
+  R: Cualquier cadena de suministro puede modelarse definiendo cuatro tipos de entidades: Productos (costo, peso, volumen), Instalaciones (ubicación, costos operativos, tasas de producción/demanda), Vehículos (velocidad, capacidad, costos, rutas) y Rutas (destinos,
+  dominio=core fase=planificacion pasos=4
+
+modelo_cuadrantes_mercado
+  T: Modelo de los Cuatro Cuadrantes de Mercado (Desarrollo, Crecimiento, Estable, Maduro)
+  E: Un diagnóstico escrito del cuadrante en que está tu mercado y un plan de las capacidades que vas a desarrollar
+  R: Tu mercado cae en uno de cuatro momentos según cómo se comparan la oferta y la demanda. En Desarrollo, ambas son bajas e inciertas y necesitas atender bien a tus clientes mientras terminas de definir tu producto. En Crecimiento, la demanda supera la oferta y l
+  dominio=core fase=validacion pasos=4
+
+modelo_simulacion_cadena_suministro_circular
+  T: Simulación de Cadenas de Suministro Circulares y Sostenibles
+  E: Modelo de simulación funcional con reporte de P&L y KPIs para al menos dos escenarios de diseño de cadena de suministro
+  R: Antes de implementar una cadena de suministro física, es posible construir un modelo de simulación compuesto por entidades clave (productos, instalaciones, vehículos, rutas) para probar diferentes escenarios de oferta, demanda, costos y ubicaciones. Esto permi
+  dominio=core fase=validacion pasos=9
+
+negociacion_contratos_proveedores
+  T: Negociación de Contratos con Proveedores
+  E: Contrato firmado con proveedor especificando precios, términos de servicio, penalizaciones y condiciones de pago
+  R: La negociación de contratos con proveedores debe equilibrar precio unitario con otros servicios de valor agregado como conexiones electrónicas, entregas frecuentes y precisión en pedidos. Deben especificarse metas de desempeño, penalizaciones y formas de pago 
+  dominio=core fase=ejecucion pasos=5
+
+ooda_loop_decision
+  T: Ciclo OODA para Decisiones Rápidas en Entornos Cambiantes
+  E: Un protocolo operativo documentado que defina las fases de observación, orientación, decisión y acción para el equipo
+  R: El ciclo OODA (Observar, Orientar, Decidir, Actuar), originado en el ámbito militar, es un proceso iterativo y no lineal centrado en la 'orientación' como núcleo de comprensión de la situación. En entornos bien entendidos se puede saltar la fase de 'decidir' y
+  dominio=core fase=ejecucion pasos=4
+
+outsourcing_cadena_suministro
+  T: Outsourcing de Operaciones de Cadena de Suministro
+  E: Matriz de decisión de outsourcing con operaciones clasificadas como núcleo vs. tercerizables y análisis costo-beneficio
+  R: La presión sobre los márgenes de utilidad impulsa el outsourcing de operaciones que no son núcleo competitivo de una empresa. Actividades como crédito y cobranzas, diseño de producto o gestión de pedidos pueden no ser competencia central de ningún participante
+  dominio=core fase=planificacion pasos=5
+
+plataforma_colaboracion_masiva
+  T: Plataforma de Colaboración Masiva Basada en la Nube
+  E: Un prototipo funcional de plataforma colaborativa con al menos una integración de datos y un mapa/dashboard visible para los participantes
+  R: Una plataforma tecnológica accesible vía internet (usando tecnología COTS: laptops, smartphones) que permite a miles de usuarios de distintas organizaciones colaborar simultáneamente en tiempo real, visualizando datos operativos sobre un mapa digital. Se compo
+  dominio=core fase=ejecucion pasos=4
+
+plataforma_colaboracion_tiempo_real
+  T: Plataforma de Colaboración en Tiempo Real para Cadena de Suministro
+  E: Plataforma o sistema de visibilidad compartida activa entre los socios de la cadena de suministro, con métricas base y alertas de desviación.
+  R: Una plataforma basada en la nube que ofrece visibilidad casi en tiempo real a todos los actores de la cadena de suministro (fabricantes, logística, distribuidores, retailers) permite que cada parte identifique problemas y actúe sin esperar instrucciones de una
+  dominio=core fase=ejecucion pasos=5
+
+precios_todos_los_dias_bajos
+  T: Estrategia de Precios Estables (Everyday Low Prices)
+  E: Política de pricing estable documentada con proyección de impacto en demanda
+  R: Las fluctuaciones de precio (promociones, descuentos) generan compras anticipadas (forward buying) y oleadas de demanda difíciles de gestionar. Mantener precios estables y predecibles hace que los clientes compren según necesidad real, facilitando el pronóstic
+  dominio=core fase=planificacion pasos=3
+
+proceso_sop_mop
+  T: Planeación Colaborativa S&OP / M&OP (Sales & Operations / Mission & Operations Planning)
+  E: Un modelo de cadena de suministro simulado (mapa con entidades: productos, instalaciones, vehículos, rutas) validado contra desajustes de oferta-demanda
+  R: El S&OP (Sales & Operations Planning) es una práctica empresarial de planeación colaborativa cíclica (cada 15-30 días) que se puede adaptar como M&OP (Mission & Operations Planning) para respuesta a desastres. Consta de cinco pasos: (1) órdenes de misión/CONOP
+  dominio=core fase=planificacion pasos=5
+
+produccion_scheduling_balance_objetivos
+  T: Programación de Producción: Balance entre Objetivos Competitivos
+  E: Un calendario de producción documentado con lotes económicos calculados y secuencia de corridas basada en run-out time
+  R: La programación de producción asigna la capacidad disponible (equipo, mano de obra, instalaciones) al trabajo que debe realizarse, buscando el equilibrio óptimo entre tres objetivos que compiten entre sí: altas tasas de utilización (economías de escala mediant
+  dominio=core fase=ejecucion pasos=4
+
+programacion_entregas_delivery_scheduling
+  T: Programación de Entregas: Directas vs. Milk Run
+  E: Plan de logística de entregas con método seleccionado (directo/milk run) y rutas optimizadas
+  R: Existen dos métodos principales de entrega: las entregas directas (de un origen a un destino, simples pero eficientes solo cuando el EOQ del receptor coincide con la carga de transporte completa) y las entregas milk run (de un origen a múltiples destinos o vic
+  dominio=core fase=ejecucion pasos=5
+
+programacion_produccion
+  T: Programación de Producción y Lote Económico
+  E: Calendario de producción con lotes económicos y secuencia basada en run-out time
+  R: La programación de producción asigna la capacidad disponible (equipo, mano de obra, instalaciones) balanceando altas tasas de utilización, bajos niveles de inventario y altos niveles de servicio al cliente. Para instalaciones multi-producto, se calcula el tama
+  dominio=core fase=ejecucion pasos=4
+
+pronostico_de_demanda_variables
+  T: Pronóstico de Demanda: Cuatro Variables Clave
+  E: Ficha de análisis de las cuatro variables de mercado como insumo para el pronóstico
+  R: Todo pronóstico de demanda depende de cuatro variables: Oferta (número de proveedores y lead times), Demanda (crecimiento, estacionalidad, madurez del mercado), Características del producto (si es sustituible, complementario, nuevo o maduro) y Entorno competit
+  dominio=core fase=planificacion pasos=4
+
+rediseno_tras_fracaso_proyecto
+  T: No Repetir el Mismo Enfoque tras un Fracaso de Proyecto
+  E: Informe de lecciones aprendidas y nuevo plan de proyecto con cambios estructurales documentados
+  R: Después de que un proyecto ha fallado, simplemente reforzar el esfuerzo o intentarlo con más ganas no es suficiente. El equipo está desmoralizado y requiere un enfoque nuevo que refleje claramente lo aprendido del fracaso anterior, ofreciendo una mejor vía hac
+  dominio=core fase=ejecucion pasos=4
+
+requisitos_sistema_retroalimentacion
+  T: Tres Requisitos para Sistemas de Retroalimentación de Alto Desempeño
+  E: Un diseño organizacional que especifique quién ve qué datos, qué autoridad tiene cada rol y qué incentivos existen por resultados
+  R: Para que un sistema de retroalimentación funcione en un entorno impredecible se necesitan tres condiciones simultáneas: (1) transparencia de datos en tiempo real para que todos vean lo que ocurre, (2) autoridad delegada para actuar dentro de reglas definidas s
+  dominio=core fase=ejecucion pasos=8
+
+roadmap_proyectos_operacionales_12_meses
+  T: Plan de proyectos para mejorar tus operaciones en 12 meses (roadmap)
+  E: Un cronograma de proyectos a 12 meses con responsables, las operaciones de tu negocio que se verán impactadas y las métricas de éxito.
+  R: Para convertir tu estrategia de capacidades de mercado en acciones concretas, identifica las operaciones específicas de tu negocio (pronóstico de demanda, gestión de inventario, gestión de pedidos, programación de entregas, procesamiento de devoluciones) y def
+  dominio=core fase=planificacion pasos=4
+
+sales_operations_planning
+  T: Planificación de Ventas y Operaciones (S&OP)
+  E: Proceso mensual de S&OP documentado con roles, calendario y KPIs de balance oferta-demanda
+  R: El S&OP es un proceso de negocio cross-funcional (ventas, operaciones, finanzas, desarrollo de producto) que se ejecuta mensualmente para mantener el balance entre oferta y demanda a nivel agregado. Toma un enfoque 'outside-in', considerando primero factores e
+  dominio=core fase=planificacion pasos=5
+
+scor_model_operaciones
+  T: Modelo SCOR: Marco de Operaciones de Cadena de Suministro
+  E: Mapa de procesos de cadena de suministro clasificado bajo el modelo SCOR con métricas base definidas
+  R: El modelo SCOR (Supply Chain Operations Reference) es un marco estandarizado y reconocido mundialmente para analizar y mejorar el desempeño de la cadena de suministro. Organiza las operaciones en seis procesos de alto nivel: Planificar, Abastecer, Fabricar, En
+  dominio=core fase=planificacion pasos=4
+
+scorecard_desempeno_cadena_suministro
+  T: Scorecard de Desempeño y Bucle de Retroalimentación Autocorrectivo
+  E: Scorecard funcional compartido entre los miembros de la cadena de suministro con métricas actualizadas regularmente
+  R: Cuando los datos fluyen continuamente entre empresas, es posible generar scorecards actualizados que muestren el desempeño de toda la cadena y de cada empresa individual. La transparencia total (todos ven el desempeño de todos) crea un bucle de retroalimentaci
+  dominio=core fase=ejecucion pasos=5
+
+simulacion_de_operaciones_supply_chain
+  T: Modelado de Simulación para Decisiones de Supply Chain
+  E: Modelo de simulación validado con recomendación de diseño de red, layout o política de inventario respaldada por datos
+  R: La simulación permite crear un prototipo digital de una fábrica, almacén o red de suministro completa para probar diferentes condiciones antes de implementar cambios reales. Se aplica en tres horizontes: estratégico (1-5 años, ej. dónde construir una planta), 
+  dominio=core fase=planificacion pasos=6
+
+simulacion_diseno_cadena_suministro
+  T: Simulación para Diseño de Cadena de Suministro
+  E: Un modelo de simulación de cadena de suministro con al menos dos escenarios alternativos comparados contra el estado actual
+  R: La simulación continua de diferentes diseños y operaciones de cadena de suministro permite a las empresas romper con ideas preconcebidas y probar nuevos enfoques, en lugar de extrapolar estrategias desde la experiencia diaria incremental. Las cadenas de sumini
+  dominio=core fase=planificacion pasos=5
+
+sistema_visibilidad_cadena_suministro_low_cost
+  T: Sistema de Visibilidad End-to-End con Componentes IT Simples
+  E: Sistema funcional de bajo costo (construido en semanas, no meses) que ofrece visibilidad end-to-end de inventario y demanda entre múltiples actores de la cadena de suministro
+  R: Ante restricciones de tiempo y presupuesto, es posible construir un sistema de visibilidad de cadena de suministro combinando componentes IT básicos y accesibles (hojas de cálculo, archivos de texto, email, páginas web, bases de datos relacionales, scripts sim
+  dominio=core fase=ejecucion pasos=7
+
+sop_colaborativo
+  T: Proceso Colaborativo S&OP (Sales and Operations Planning) en 5 Pasos
+  E: Plan operativo S&OP validado y consensuado para el próximo ciclo (ej. 30 días).
+  R: Un proceso simplificado de S&OP guiado por simulaciones, ejecutado en ciclos (ej. cada 30 días): (1) Pronóstico de demanda y precios, (2) Plan de demanda por instalación, (3) Plan de suministro (producción/rutas), (4) Modelado y simulación para detectar discre
+  dominio=core fase=ejecucion pasos=5
+
+supply_chain_management_systems
+  T: Sistemas de Gestión de Cadena de Suministro (SCM)
+  E: Arquitectura de sistemas SCM integrada con ERP
+  R: Los sistemas SCM son suites de aplicaciones integradas (planificación avanzada, planificación de transporte, planificación de demanda, gestión de inventario) que dependen de datos de sistemas ERP y ofrecen capacidades analíticas para la toma de decisiones estr
+  dominio=core fase=ejecucion pasos=4
+
+tecnologia_como_medio_no_fin
+  T: La tecnología es un medio, no un fin
+  E: Una evaluación propia donde conectas cada inversión tecnológica que consideras con una mejora concreta en servicio o en costo
+  R: La tecnología en tu cadena de suministro solo vale si te permite entregar el servicio y los precios que tus clientes valoran. No inviertas en tecnología porque sea sofisticada o nueva. Evalúa cada inversión tecnológica según su capacidad real de mejorar el ser
+  dominio=core fase=planificacion pasos=11
+
+tecnologias_emergentes_cadena_suministro
+  T: Combinación de Tecnologías Emergentes para Cadenas Ágiles
+  E: Un plan de implementación tecnológica combinada con al menos 2 tecnologías integradas y métricas de impacto esperado
+  R: El verdadero potencial de tecnologías como robots industriales, manufactura aditiva (impresión 3D), vehículos autónomos, drones e IoT se logra cuando se combinan entre sí, no usándolas aisladamente. Empresas como Walmart y Amazon lograron ventajas competitivas
+  dominio=core fase=ejecucion pasos=4
+
+teoria_de_restricciones
+  T: Teoría de Restricciones (Theory of Constraints)
+  E: Documento de objetivo del sistema con métricas de throughput, inventario y gasto operativo definidas
+  R: Desarrollada por Eliyahu Goldratt, sostiene que todo sistema tiene al menos una restricción (cuello de botella) que determina su rendimiento total. En vez de intentar eliminar constantemente nuevas restricciones, es mejor identificarlas y gestionarlas delibera
+  dominio=core fase=ejecucion pasos=3
+
+trade_off_responsividad_eficiencia
+  T: Balance entre Capacidad de Respuesta y Eficiencia
+  E: Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.
+  R: Cada decisión en la cadena de suministro (producción, inventario, ubicación, transporte, información) implica un trade-off entre ser más responsivo (rápido, flexible, capaz de atender picos de demanda) o más eficiente (bajo costo, alta utilización de activos).
+  dominio=core fase=planificacion pasos=4
+
+transicion_producto_a_experiencia  [MULTIFUENTE]
+  T: De Productos a Servicios y Experiencias
+  E: Un mapa de experiencia del cliente (Customer Journey Map) que integre puntos de contacto de producto y servicio.
+  R: Argumenta que la línea entre 'producto' y 'servicio' se ha difuminado; los consumidores ya no esperan solo rendimiento funcional, sino una experiencia satisfactoria completa. Históricamente, el sector manufacturero invirtió fuertemente en I+D tecnológico, mien
+  dominio=core fase=planificacion pasos=12
+
+vehiculos_autonomos_drones_supply_chain
+  T: Drones y Vehículos Autónomos en la Cadena de Suministro
+  E: Plan de automatización logística con piloto probado que identifica tramos candidatos, tipo de vehículo autónomo, sistema de coordinación central y métricas de desempeño
+  R: Un dron es cualquier vehículo sin conductor que opera de forma remota o autónoma, ya sea volando, caminando, conduciendo, flotando o nadando. Puedes usarlo para mover productos en distintos tramos de tu cadena de suministro: camiones autónomos entre fábricas y
+  dominio=core fase=ejecucion pasos=5
+
+vertical_vs_virtual_integracion
+  T: Integración Vertical vs. Integración Virtual
+  E: Lista de core competencies definidas y mapa de actividades a outsourcear vs. mantener in-house
+  R: La integración vertical (como el modelo Ford de principios del 1900) consiste en poseer la mayor parte de la cadena de suministro para lograr economías de escala, pero sacrifica flexibilidad y capacidad de respuesta al cliente. La integración virtual, dominant
+  dominio=core fase=planificacion pasos=4
+
+warehouse_management_system
+  T: Sistema de Gestión de Almacén (WMS)
+  E: WMS implementado y operando con seguimiento de inventario en tiempo real
+  R: Los WMS soportan las operaciones diarias de almacén, gestionando niveles de inventario, ubicaciones de almacenamiento, y las actividades de picking, packing y envío para cumplir con las órdenes de los clientes de manera eficiente.
+  dominio=core fase=ejecucion pasos=4
