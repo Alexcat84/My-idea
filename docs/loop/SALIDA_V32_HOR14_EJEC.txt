@@ -1,0 +1,33 @@
+﻿PLAN     : docs/loop/PLAN_V32_P19_CALIDAD_MVP.json
+OPERACION: OP-F-04-HOR, el 14vo nodo: el bloque de Horowitz de principio_calidad_mvp
+REGLA    : P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE
+MODO     : --ejecutar
+NODOS    : 1
+==============================================================================
+
+------------------------------------------------------------------------------
+NODO: principio_calidad_mvp
+  guarda de texto: 10 de 10 pasos calzan con su prefijo
+  cero perdida: 10 origenes fundidos, 0 que salen, 10 en total
+  pasos 10 -> 7, y la procedencia declara 3 bloque(s)
+  fuente: 'The Lean Startup - Eric Ries | The Hard Thing About Hard Things'
+          -> 'The Lean Startup - Eric Ries | The Hard Thing About Hard Things'  (SIN CAMBIO: multifuente legitimo)
+
+  EL MAPA DEL DESTEJIDO, destino <- origenes:
+     1 <- [1, 6]             Antes de invertir en pulir una característica, pregúntate si contribuye directamente al 
+     2 <- [3, 7]             No asumas que el estándar de calidad de la industria, ni los requerimientos heredados de
+     3 <- [2, 8]             Lanza al mercado real, lo antes posible, versiones simplificadas o 'hacky' de las featur
+     4 <- [4]                Distingue entre defectos que dificultan el aprendizaje (inaceptables) y baja fidelidad e
+     5 <- [9]                Capturar y priorizar el aprendizaje obtenido de los primeros clientes reales
+     6 <- [5]                Usa el feedback del cliente sobre la versión simple para decidir si invertir en una solu
+     7 <- [10]               Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones in
+    procedencia: pasos [4, 6] del resultado <- The Lean Startup - Eric Ries (pasos 1 a 5 del original)
+    procedencia: pasos [5, 7] del resultado <- The Hard Thing About Hard Things - Ben Horowitz (pasos 6 a 10 del original, el bloque del 14vo)
+    procedencia: pasos [1, 2, 3] del resultado <- MULTIFUENTE LEGITIMO: los dos libros dentro del mismo paso fundido (Ries pone el criterio del aprendizaje y Horowitz el sesgo que lo estorba, la segunda fuente del estandar falso y la escala de producto del lanzamiento)
+
+==============================================================================
+RESUMEN
+  ficheros que se tocarian: 1
+
+ESCRITO: 1 fichero(s) en dataset/nodos/.
+  - principio_calidad_mvp

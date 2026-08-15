@@ -1159,6 +1159,52 @@ corridos en esta misma vuelta, DESPUES de la ultima operacion.**
 > fase 02**, con su comprobacion fechada al cierre de esa fase. **Cerrar la 01 es haber puesto
 > cada bloque donde su objeto vive, no haber dejado los nodos perfectos.**
 
+#### **LA FASE 01 SE RE-CIERRA CON 14 DE 14 EN `OP-F-04-HOR`** (15 ago 2026, vuelta 32), y la tabla de arriba se queda entera
+
+> **CORRECCION DECLARADA, y no borra nada de lo de arriba.** La fila de `OP-F-04-HOR` de la
+> tabla del cierre de la vuelta 31 dice **13 de 13** y **esa cifra era correcta para la nomina
+> de trece que la operacion tenia ese dia**. Lo que cambio es la NOMINA: la decision del
+> fundador del 15 ago 2026 (archivada en `docs/loop/paradas/2026-08-15-el-14vo-de-horowitz.md`)
+> **devolvio `principio_calidad_mvp` a la operacion y la nomina volvio a CATORCE**, porque la
+> premisa de la exclusion de la vuelta 21 (que `OP-D-01` destejeria el nodo entero) quedo rota.
+> **La fase 01 no estaba mal cerrada: estaba cerrada sobre una nomina que despues crecio.**
+
+**EL SALDO RE-MEDIDO AL CERRAR ESTA VUELTA, con las dos corridas publicadas y su contraste
+declarado** (`EJECUTOR.md` regla 2: el instrumento manda, y si dos instrumentos discrepan la
+discrepancia se declara en vez de resolverse copiando):
+
+| corrida | instrumento | resultado |
+|---|---|---|
+| **con el instrumento de la vuelta 31, sin tocar** | `scripts/loop/vuelta30_saldo_opf04.py` (`SALIDA_V32_SALDO_HOR_VIEJO.txt`) | **NOMINA 14, RESUELTOS 12, FUNDIDOS 1, PENDIENTES 1**, *LA TANDA SIGUE PARCIAL* |
+| **con el sucesor declarado** | `scripts/loop/vuelta32_saldo_opf04.py` (`SALIDA_V32_SALDO_HOR.txt`) | **NOMINA 14, RESUELTOS 12, FUNDIDOS por `P.19` 2, PENDIENTES 0**, *LA TANDA ESTA ENTERA* |
+
+> **LA DIFERENCIA ENTRE LAS DOS CORRIDAS ES UNA SOLA ENTRADA, y se dice antes de leer la
+> tabla:** el censo de nodos que `P.19` dejo a proposito MULTIFUENTE se escribe A MANO en el
+> instrumento, y el sucesor le anade su cuarta entrada, `principio_calidad_mvp`. **Ese censo no
+> se puede deducir**: un nodo que sigue declarando el libro de la tanda o no se toco, o se
+> fundio por `P.19`, y las dos cosas se ven IGUAL en el campo `fuente`. Un instrumento que
+> dedujera *fundido* de la sola presencia del libro convertiria cada bloque sin tocar en un
+> falso verde. **Por eso los fundidos se nombran uno por uno y se cuentan aparte**, que es lo
+> que el instrumento de la vuelta 30 ya hacia con los tres primeros.
+
+| operacion | estado al re-cierre, medido hoy | con que instrumento |
+|---|---|---|
+| ~~`OP-F-04-HOR` **HECHA, 13 de 13**~~ **`OP-F-04-HOR`** | **HECHA, 14 de 14** (12 resueltos mas **2** fundidos por `P.19`), **0 pendientes** | `vuelta32_saldo_opf04.py` corrido hoy, tras ejecutar el bloque del 14vo (`SALIDA_V32_SALDO_HOR.txt`) |
+
+**EL 14vo SE RESOLVIO POR `P.19`, NO POR `P.18`**, y la lectura entera esta en la nota de la
+operacion y en `docs/loop/SALIDA_V32_HOR14_LECTURA.txt`: el bloque 6 a 10 de Horowitz **repite
+el objeto** de los pasos 1 a 5 de Ries, asi que no tenia destino que buscar. **Ninguno de los
+93 miembros vivos de la familia Horowitz tiene este objeto** (los candidatos descartados van
+por su nombre en la nota), y la salida de nodo propio de `P.18` punto 3 **habria fabricado el
+gemelo exacto del propio donante**, que es el caso que el motivo de `P.19` nombra para existir.
+**El nodo pasa de 10 pasos a 7 y queda MULTIFUENTE LEGITIMO con la procedencia declarada por
+bloque.**
+
+> **Y LA FRASE DEL CIERRE DE LA VUELTA 31 SE MANTIENE, con una linea mas:** *fuente primero*
+> esta cumplido **ahora si para la nomina de catorce**, y con eso `OP-D-01` puede leer
+> `principio_calidad_mvp` como un nodo estable, sin segundo libro pendiente. **Eso era lo unico
+> que la parada de la vuelta 31 pedia para poder ejecutarse.**
+
 ### `OP-F-04-COL`, PRIMER TIEMPO: LAS FRONTERAS QUE FALTABAN, COMO REGISTRO PURO (14 ago 2026, vuelta 30)
 
 **Es la forma que el acta de la vuelta 29 adjudico** (seccion 4, punto 5): *una vuelta publica

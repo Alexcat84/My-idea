@@ -1,0 +1,145 @@
+{
+  "operacion": "OP-F-04-HOR, el 14vo nodo: el bloque de Horowitz de principio_calidad_mvp",
+  "regla": "P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE",
+  "motivo": "P.19. EL BLOQUE 6 A 10 DE HOROWITZ REPITE EL OBJETO QUE LOS PASOS 1 A 5 DE RIES YA TRAEN, asi que no hay destino que buscar: el objeto ya esta en casa. LA LECTURA, par por par, hecha con el texto delante y no de antemano: el 6 (resistir la presion del equipo de completar todas las funcionalidades ideales antes de lanzar) es el 1 (antes de invertir en pulir, preguntate si contribuye al aprendizaje) con el sesgo nombrado; el 7 (distinguir requerimientos heredados de un cliente anterior de las necesidades reales del mercado amplio) es el 3 (no asumas que el estandar de la industria es lo que el cliente valora) con otra fuente del estandar falso; y el 8 (lanzar al mercado real lo antes posible aceptando que fallara) es el 2 (lanza versiones simplificadas y mide la reaccion real) dicho a escala de producto. LOS OTROS TRES PASOS DEL BLOQUE (9 y 10 de Horowitz, y el 4 y el 5 de Ries) NO REPITEN A NADIE Y SE QUEDAN VERBATIM: capturar y priorizar el aprendizaje de los primeros clientes reales, e iterar con el feedback de mercado y no con suposiciones internas, son pasos propios del mismo procedimiento, no copias. POR QUE NO P.18: la nomina vigente al dia de la familia Horowitz se leyo entera hoy (93 miembros vivos, salida en docs/loop/SALIDA_V32_HOR14_LECTURA.txt) y NINGUN miembro tiene este objeto; los candidatos mas cercanos, descartados por su nombre, son framework_good_bad_product_manager (su objeto es el ROL del product manager y su entregable un documento de expectativas del puesto), lead_bullets_no_silver_bullets y estrategia_de_balas_de_plomo (su objeto es cerrar una desventaja competitiva sin atajos, y su consejo es el contrario: trabajo sostenido de producto, no lanzar antes), respuesta_estrategica_a_amenaza_competitiva (su objeto es el pivote ante un competidor dominante, con cronograma y adquisiciones), descubrir_valor_inesperado_cliente (el dolor no contractual de UN cliente critico) y toma_decisiones_bajo_incertidumbre (decidir con informacion incompleta, que es el genero y no este objeto). Y P.18 punto 3 mandaria nodo propio, que aqui fabricaria el gemelo exacto del propio donante: es literalmente el caso que el motivo de P.19 nombra para existir. LAS DIFERENCIAS ENTRE VERSIONES, por la tabla de los SEIS MOTIVOS DE PERDIDA DE LINEA: SALVAGUARDA en el paso 1 del resultado (Ries manda decidir si el pulido sirve al aprendizaje y no dice contra que sesgo; Horowitz nombra el sesgo, la presion del equipo por las funcionalidades ideales, y el inciso se adosa al paso que protege); ALCANCE en el paso 2 (Ries trae UN ejemplo de estandar falso, el de la industria, y el de Horowitz entra a la enumeracion como segundo ejemplo, los requerimientos heredados de un cliente anterior); y ALCANCE otra vez en el paso 3 (la version de Ries lanza FEATURES y la de Horowitz lanza EL PRODUCTO al mercado real, mas la salvaguarda de aceptar que fallara). NOMBRE, DESTINO, METODO ALTERNATIVO y DIRECCION no aplican y por eso no se nombran. EL NODO QUEDA MULTIFUENTE LEGITIMO, como manda P.19 punto 2, con la procedencia declarada por bloque, igual que decision_de_vender_startup en la vuelta 30.",
+  "fecha_corte": "2026-08-15",
+  "nodos": [
+    {
+      "nodo": "principio_calidad_mvp",
+      "pasos_totales": 10,
+      "fuente_esperada": "The Lean Startup - Eric Ries | The Hard Thing About Hard Things",
+      "fuente_queda": "The Lean Startup - Eric Ries | The Hard Thing About Hard Things",
+      "prefijos": [
+        "Antes de invertir en pulir una car",
+        "Lanza versiones simplificadas o 'h",
+        "No asumas que el estándar de calid",
+        "Distingue entre defectos que dific",
+        "Usa el feedback del cliente sobre ",
+        "Resistir la presión del equipo téc",
+        "Distinguir entre requerimientos he",
+        "Lanzar el producto al mercado real",
+        "Capturar y priorizar el aprendizaj",
+        "Iterar rápidamente el producto con"
+      ],
+      "pasos_originales": [
+        "Antes de invertir en pulir una característica, pregúntate si contribuye directamente al aprendizaje que buscas.",
+        "Lanza versiones simplificadas o 'hacky' de features complejas y mide la reacción real de los clientes.",
+        "No asumas que el estándar de calidad de la industria es lo que el cliente valora; pruébalo empíricamente.",
+        "Distingue entre defectos que dificultan el aprendizaje (inaceptables) y baja fidelidad estética (aceptable si permite aprender).",
+        "Usa el feedback del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.",
+        "Resistir la presión del equipo técnico de completar todas las funcionalidades 'ideales' antes de lanzar",
+        "Distinguir entre requerimientos heredados de un cliente anterior y necesidades reales del mercado amplio",
+        "Lanzar el producto al mercado real lo antes posible, aceptando que fallará en algunos aspectos",
+        "Capturar y priorizar el aprendizaje obtenido de los primeros clientes reales",
+        "Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones internas"
+      ],
+      "pasos_finales": [
+        "Antes de invertir en pulir una característica, pregúntate si contribuye directamente al aprendizaje que buscas, y usa esa pregunta para resistir la presión del equipo de completar todas las funcionalidades 'ideales' antes de lanzar.",
+        "No asumas que el estándar de calidad de la industria, ni los requerimientos heredados de un cliente anterior, son lo que el mercado amplio valora; pruébalo empíricamente contra las necesidades reales de tus clientes.",
+        "Lanza al mercado real, lo antes posible, versiones simplificadas o 'hacky' de las features complejas, aceptando que fallarán en algunos aspectos, y mide la reacción real de los clientes.",
+        "Distingue entre defectos que dificultan el aprendizaje (inaceptables) y baja fidelidad estética (aceptable si permite aprender).",
+        "Capturar y priorizar el aprendizaje obtenido de los primeros clientes reales",
+        "Usa el feedback del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.",
+        "Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones internas"
+      ],
+      "mapa_destejido": {
+        "1": [
+          1,
+          6
+        ],
+        "2": [
+          3,
+          7
+        ],
+        "3": [
+          2,
+          8
+        ],
+        "4": [
+          4
+        ],
+        "5": [
+          9
+        ],
+        "6": [
+          5
+        ],
+        "7": [
+          10
+        ]
+      },
+      "procedencia": [
+        {
+          "libro": "The Lean Startup - Eric Ries (pasos 1 a 5 del original)",
+          "pasos_del_resultado": [
+            4,
+            6
+          ]
+        },
+        {
+          "libro": "The Hard Thing About Hard Things - Ben Horowitz (pasos 6 a 10 del original, el bloque del 14vo)",
+          "pasos_del_resultado": [
+            5,
+            7
+          ]
+        },
+        {
+          "libro": "MULTIFUENTE LEGITIMO: los dos libros dentro del mismo paso fundido (Ries pone el criterio del aprendizaje y Horowitz el sesgo que lo estorba, la segunda fuente del estandar falso y la escala de producto del lanzamiento)",
+          "pasos_del_resultado": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "pruebas_repeticion": [
+        {
+          "origenes": [
+            2,
+            8
+          ],
+          "huella_repetida": "Lanza"
+        }
+      ],
+      "pruebas_convergencia": [
+        {
+          "origenes": [
+            1,
+            6
+          ],
+          "trozo_a": "aprendizaje que buscas",
+          "trozo_b": "funcionalidades"
+        },
+        {
+          "origenes": [
+            3,
+            7
+          ],
+          "trozo_a": "estándar de calidad de la industria",
+          "trozo_b": "requerimientos heredados"
+        },
+        {
+          "origenes": [
+            2,
+            8
+          ],
+          "trozo_a": "versiones simplificadas",
+          "trozo_b": "mercado real"
+        }
+      ],
+      "rastros": [
+        "aprendizaje que buscas",
+        "funcionalidades",
+        "estándar de calidad de la industria",
+        "requerimientos heredados",
+        "versiones simplificadas",
+        "mercado real",
+        "baja fidelidad estética",
+        "primeros clientes reales",
+        "alta calidad tradicional",
+        "suposiciones internas"
+      ],
+      "salidas": []
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+﻿CASO POSITIVO: OP-F-04-HOR, el 14vo nodo: el bloque de Horowitz de principio_calidad_mvp
+REGLA        : P.19 LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE
+==============================================================================
+
+NODO principio_calidad_mvp
+  [CAE ] el nodo tiene 10 pasos, los 7 que el plan deja
+  [CAE ] la repeticion 'Lanza' vive en 2 paso(s), maximo 1  (origenes [2, 8])
+  [CAE ] convergencia: 'aprendizaje que buscas' y 'funcionalidades' viven juntos en 0 paso(s), se espera 1  (origenes [1, 6])
+  [CAE ] convergencia: 'estándar de calidad de la industria' y 'requerimientos heredados' viven juntos en 0 paso(s), se espera 1  (origenes [3, 7])
+  [CAE ] convergencia: 'versiones simplificadas' y 'mercado real' viven juntos en 0 paso(s), se espera 1  (origenes [2, 8])
+  (conservacion) [SI] el rastro 'aprendizaje que buscas' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'funcionalidades' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'estándar de calidad de la industria' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'requerimientos heredados' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'versiones simplificadas' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'mercado real' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'baja fidelidad estética' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'primeros clientes reales' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'alta calidad tradicional' sigue vivo en 1 paso(s)
+  (conservacion) [SI] el rastro 'suposiciones internas' sigue vivo en 1 paso(s)
+
+==============================================================================
+RESULTADO: 0 PASAN, 5 CAEN
+CONSERVACION (pasa las dos veces a proposito): 10 si, 0 no
+HAY PRUEBAS QUE CAEN
