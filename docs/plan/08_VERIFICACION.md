@@ -524,6 +524,31 @@ cinco cortes. **No se desteje ninguna: solo se declaran.**
 > **Declararla es aplicar la regla; callarla porque el encargo no la nombraba seria la misma
 > omision que esta correccion viene a reparar.**
 
+#### REGISTRO: **LA COSTURA DENTRO DE UN NODO RECIEN CREADO ENTRA POR LA PRIMERA PUERTA** (14 ago 2026, vuelta 30)
+
+**ADOPTADA POR CITA, sin doctrina nueva. Adjudicada por el acta de la vuelta 29 del auditor
+(`docs/loop/ACTA_AUDITOR.md`, seccion 4, punto 3), que la concede POR EXTENSION CITABLE.** La
+letra de la primera puerta dice *dentro de un miembro*, y los dos casos que la vuelta 29 midio
+(`producto_como_servicio_de_acceso` y `anillo_interior_explotar_el_canal_nucleo`, filas de la
+tabla de arriba) son nodos que la propia operacion acababa de crear. **La pregunta era si esa
+letra los alcanza, y la respuesta esta escrita en el banco, no aqui.**
+
+> **`P.18` PUNTO 3 DICE QUE EL BLOQUE SIN MIEMBRO COINCIDENTE FORMA NODO PROPIO *DENTRO DE LA
+> FAMILIA*: EL NODO PROPIO NACE MIEMBRO DE SU FAMILIA.** Y **EL DISPARADOR DE ESTA PUERTA ES LA
+> REPETICION, NO EL DOMICILIO.** Un nodo creado hoy es miembro hoy, asi que la costura que nace
+> dentro de el entra por la misma puerta que la costura de un miembro viejo, y entra igual.
+
+**LO QUE ESTO CIERRA, dicho con su nombre:** el *PENDIENTE DE DOCTRINA* que la TERCERA nota del
+registro de arriba dejo abierto sobre `producto_como_servicio_de_acceso`. **La nota se queda
+entera donde esta**, porque una correccion que tapa lo que corrige no se puede auditar; esta
+linea le pone al lado la adjudicacion que la resuelve. **Las dos costuras quedan bien declaradas
+y no se vuelven a declarar.**
+
+**LO QUE ESTO NO CIERRA, y va aparte a proposito:** el otro cabo de esa misma nota, *el paso bien
+copiado que quedo en el nodo equivocado*, **NO se resolvio por extension**: el acta 29 lo mando a
+PARADA en su adjudicacion 2 (*extender la cola a material sin gemelo es escribir una puerta
+nueva, no citar una*), y **la puerta nueva la escribio el fundador**, y es la seccion siguiente.
+
 ### LA COLA GANA SU SEGUNDA PUERTA: **LA COLA DEL OBJETO AJENO** (14 ago 2026, decision del fundador)
 
 **Resuelve el pendiente de doctrina que la vuelta 29 midio tres veces: la primera puerta

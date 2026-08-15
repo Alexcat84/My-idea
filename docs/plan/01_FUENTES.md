@@ -753,6 +753,31 @@ destejidos y las fusiones que dependen de ellos.**
 > **Los tres son costura Y injerto a la vez**, y por eso van con **TOQUE UNICO**:
 > se separa el apendice y se desteje la repeticion **en el mismo acto**.
 
+#### EL TOQUE UNICO YA TIENE SUS DOS PAGINAS, y los tres se ejecutan (14 ago 2026, vuelta 30)
+
+**La frase de arriba nombraba el remedio y no decia como se hace, y esa era la falta entera.**
+El acta de la vuelta 29 del auditor (`docs/loop/ACTA_AUDITOR.md`, seccion 4, punto 1) confirmo
+la PARADA sobre los tres con la lectura hecha nodo por nodo: *sus dos salidas chocan con una
+regla vigente* (a nodo propio fabrica el gemelo del propio donante, que la adjudicacion 3 del
+acta 27 prohibe; a miembro fuerza el encaje que `P.18` punto 3 prohibe), **y decidir cual regla
+cede no es extension, es doctrina.** **El fundador la escribio el mismo dia**, y son dos reglas
+nuevas del banco del plan, no una interpretacion de esta pagina:
+
+| regla | que resuelve | sobre cual de los tres |
+|---|---|---|
+| **`P.19` LA REPETICION INTERNA SE FUNDE, NO SE DESTEJE** | el material que repite **el mismo objeto** dentro del nodo **no tiene destino que buscar: se funde en un solo procedimiento dentro del nodo**, que queda **MULTIFUENTE LEGITIMO** con la procedencia declarada por bloque | **`coeficiente_viral`** y **`decision_de_vender_startup`**, sus dos ejemplares escritos |
+| **`P.20` UN NODO, UN CORTE** | un nodo que pertenece a **DOS** operaciones de destejido **no se corta dos veces ni en orden**: la frontera completa de todos sus libros se publica como **registro unico** y el corte se ejecuta **una sola vez**, citado por las dos operaciones con correccion declarada | **`viral_loop_marketing`**, su ejemplar escrito |
+
+> **Y LA TERCERA PAGINA, que no es del banco sino de la verificacion:** el material **sano, sin
+> gemelo, pero AJENO al objeto del nodo** entra a **LA COLA DEL OBJETO AJENO**
+> ([`08_VERIFICACION.md`](08_VERIFICACION.md)), la segunda puerta de la cola de relectura post
+> fusion. **No se poda: se desteje por `P.18` como operacion de la fase que corresponda.**
+
+**LO QUE SE EJECUTA EN LA VUELTA 30 CON ESTAS TRES PAGINAS, y su saldo esta abajo, cada uno en
+su propia subseccion.** La cifra de **25 pasos** de `decision_de_vender_startup` en la tabla de
+arriba **sigue teniendo su correccion declarada al lado** (manda el 34) y esta vuelta la vuelve
+a medir: **es el 34 el que se corta.**
+
 ### QUE DECISIONES DE FUENTE NUEVAS SALEN
 
 **CUATRO, una por libro, y son del mismo tipo que las tres que ya existian:**
@@ -992,6 +1017,18 @@ cifras corridas hoy, no con una impresion.**
 esta **DENTRO de los 15 de `COL`** (medido hoy en la nomina), y es **uno de los tres bloques
 que esta vuelta trae como PARADA**. **`OP-F-04-COL` no se puede declarar ENTERA mientras ese
 nodo espere adjudicacion**, ejecute quien ejecute el resto.
+
+> **REGISTRO, 14 ago 2026 (vuelta 30): `OP-F-04-COL` SE EJECUTA EN DOS TIEMPOS, y las dos
+> razones de arriba se quedan enteras.** Adjudicado por el acta de la vuelta 29 del auditor
+> (`docs/loop/ACTA_AUDITOR.md`, seccion 4, punto 5): *es la forma que `WEI` y `HOR` acabaron
+> teniendo y esta verificada dos veces: una vuelta publica las trece fronteras como registro
+> (lectura pura, sin cortes) y la siguiente decide los destinos por `P.18` sobre la nomina al
+> dia*. **PRIMER TIEMPO: las trece fronteras que faltan, como registro puro.** **SEGUNDO
+> TIEMPO: los destinos por `P.18` sobre la nomina de Coleman medida AL DIA de la operacion, y
+> el corte.** La dependencia de `viral_loop_marketing` **ya no bloquea**: su doctrina la
+> escribio el fundador (`P.20`, y entra a `COL` por su mitad del corte unico). El acta 29
+> tambien dejo dicho, en su punto 7, por que no leerlas al cierre de una vuelta de treinta
+> cortes: *es la especie exacta de las caidas de las vueltas 15 y 16*.
 
 ### LA CONSECUENCIA DE ORDEN, y toca a la fase 02
 
