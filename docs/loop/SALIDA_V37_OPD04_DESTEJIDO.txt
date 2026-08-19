@@ -1,0 +1,116 @@
+
+==============================================================================
+1. LAS COSTURAS DEL ACTO, CONTADAS HOY SOBRE EL REGISTRO PUBLICADO
+==============================================================================
+registros totales en docs/COSTURAS_INTERNAS.jsonl: 128
+  COSTURADO  brainstorming_divergente               pasos 8  corte 5  sim_bloque 44.8  disparo_bloque True
+  sano       brainstorming_efectivo
+  sano       reglas_brainstorming
+  sano       generar_multiples_opciones
+  sano       construir_sobre_ideas_ajenas
+  sano       pensamiento_convergente_divergente
+  sano       design_attitude_vs_decision_attitude
+
+costurados: 1   sanos: 6   (la seccion 54.3 del informe declara 1 y 6)
+
+==============================================================================
+2. LOS SIETE NODOS DE HOY, CON SUS PASOS
+==============================================================================
+  brainstorming_divergente               pasos  4   vivo True   fuente: Change by Design, Revised and U - Tim Brown
+  brainstorming_efectivo                 pasos  4   vivo True   fuente: Change by Design
+  reglas_brainstorming                   pasos  5   vivo True   fuente: Business Model Generation (Osterwalder)
+  generar_multiples_opciones             pasos  3   vivo True   fuente: Change by Design
+  construir_sobre_ideas_ajenas           pasos  3   vivo True   fuente: Change by Design
+  pensamiento_convergente_divergente     pasos  4   vivo True   fuente: Change by Design
+  design_attitude_vs_decision_attitude   pasos  4   vivo True   fuente: Business Model Generation (Osterwalder)
+
+==============================================================================
+3. EL CORTE REGISTRADO CONTRA EL CORTE EJECUTADO POR OP-F-02
+==============================================================================
+  costura registrada : brainstorming_divergente tenia 8 pasos, corte tras el 4
+    o sea el bloque   : pasos 5 a 8
+  frontera publicada por OP-F-02 en 01_FUENTES.md: 1 a 4 / 5 a 8
+  pasos de brainstorming_divergente HOY: 4
+
+  CALZAN: el corte registrado es el 5 y el nodo de hoy tiene
+  exactamente los 4 pasos del lado izquierdo. UN SOLO CORTE, NO DOS.
+
+==============================================================================
+4. LOS OCHO PASOS VIEJOS, LEIDOS POR GIT DE ANTES DE OP-F-02
+==============================================================================
+  commit que ejecuto OP-F-02 : 2d96e3d3
+  se lee su padre            : 2d96e3d3~1
+  pasos del nodo entonces    : 8  (el registro de costuras dice 8)
+
+   viejo 1. Reunir al equipo en un espacio dedicado sin distracciones
+   viejo 2. Establecer reglas claras: cantidad sobre calidad, diferir el juicio, construir sobre ideas de otros
+   viejo 3. Generar el mayor número de ideas posible sin filtrar prematuramente
+   viejo 4. Registrar todas las ideas visualmente (post-its, pizarra)
+   viejo 5. Usar la IA como un 'participante más' en sesiones de brainstorming, pidiéndole explícitamente ideas alternativas o inusuales.
+   viejo 6. Solicitar a la IA que adopte personas o estilos distintos (ej. personajes, expertos, culturas) para forzar variedad de enfoques.
+   viejo 7. Generar un lote grande de ideas con IA y luego aplicar filtrado humano experto para seleccionar las más viables.
+   viejo 8. Iterar pidiendo a la IA que combine o cruce conceptos ya generados para crear ideas híbridas.
+
+==============================================================================
+5. LOS 1 A 4 VIEJOS CONTRA EL NODO DE HOY, UNO A UNO
+==============================================================================
+   1. IDENTICO
+      entonces: Reunir al equipo en un espacio dedicado sin distracciones
+      hoy     : Reunir al equipo en un espacio dedicado sin distracciones
+   2. IDENTICO
+      entonces: Establecer reglas claras: cantidad sobre calidad, diferir el juicio, construir sobre ideas de otros
+      hoy     : Establecer reglas claras: cantidad sobre calidad, diferir el juicio, construir sobre ideas de otros
+   3. IDENTICO
+      entonces: Generar el mayor número de ideas posible sin filtrar prematuramente
+      hoy     : Generar el mayor número de ideas posible sin filtrar prematuramente
+   4. IDENTICO
+      entonces: Registrar todas las ideas visualmente (post-its, pizarra)
+      hoy     : Registrar todas las ideas visualmente (post-its, pizarra)
+
+  identicos: 4 de 4
+
+==============================================================================
+6. LOS 5 A 8 VIEJOS CONTRA EL DESTINO QUE EL PLAN LES ESCRIBIO
+==============================================================================
+  destino escrito en 01_FUENTES.md: ideacion_con_ia_en_la_sesion
+  pasos del destino HOY           : 4
+  pasos del bloque 5 a 8          : 4
+
+   viejo 5 -> destino 1 : IDENTICO
+      entonces: Usar la IA como un 'participante más' en sesiones de brainstorming, pidiéndole explícitamente ideas alternativas o inusuales.
+      destino : Usar la IA como un 'participante más' en sesiones de brainstorming, pidiéndole explícitamente ideas alternativas o inusuales.
+   viejo 6 -> destino 2 : IDENTICO
+      entonces: Solicitar a la IA que adopte personas o estilos distintos (ej. personajes, expertos, culturas) para forzar variedad de enfoques.
+      destino : Solicitar a la IA que adopte personas o estilos distintos (ej. personajes, expertos, culturas) para forzar variedad de enfoques.
+   viejo 7 -> destino 3 : IDENTICO
+      entonces: Generar un lote grande de ideas con IA y luego aplicar filtrado humano experto para seleccionar las más viables.
+      destino : Generar un lote grande de ideas con IA y luego aplicar filtrado humano experto para seleccionar las más viables.
+   viejo 8 -> destino 4 : IDENTICO
+      entonces: Iterar pidiendo a la IA que combine o cruce conceptos ya generados para crear ideas híbridas.
+      destino : Iterar pidiendo a la IA que combine o cruce conceptos ya generados para crear ideas híbridas.
+
+  identicos: 4 de 4
+
+==============================================================================
+7. EL BLOQUE NO SE BORRO: EL CABLEADO LO DICE
+==============================================================================
+  brainstorming_divergente siguientes: ['butterfly_test_convergencia', 'prototipado_rapido', 'ideacion_con_ia_en_la_sesion']
+  el destino esta entre ellos: True
+
+==============================================================================
+VEREDICTO DEL PASO 2, EL DESTEJIDO
+==============================================================================
+EL DESTEJIDO DE OP-D-04 ESTA CONSUMADO, Y NO POR RENUNCIA: PORQUE SU UNICA
+COSTURA Y EL INJERTO DE FUENTE ERAN EL MISMO BLOQUE, Y UN SOLO CORTE SIRVIO
+A LOS DOS FRENTES.
+
+  - de los SIETE nodos del acto, UNO estaba costurado y SEIS sanos, contado
+    hoy sobre docs/COSTURAS_INTERNAS.jsonl (128 registros leidos).
+  - el corte registrado de esa costura es el 5, y la frontera que OP-F-02
+    publico en 01_FUENTES.md es 1 a 4 / 5 a 8: EL MISMO SITIO.
+  - los cuatro pasos de hoy son IDENTICOS a los cuatro viejos de la
+    izquierda, y los cuatro de la derecha estan ENTEROS e IDENTICOS en
+    ideacion_con_ia_en_la_sesion, que ademas cuelga del cableado.
+  - CERO material perdido: 4 mas 4 igual a 8.
+
+PASO 2 VERDE, SIN NADA QUE CORTAR. El acto entra a P.5 con texto estable.

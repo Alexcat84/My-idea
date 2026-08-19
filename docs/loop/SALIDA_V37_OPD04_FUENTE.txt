@@ -1,0 +1,71 @@
+
+==============================================================================
+EL ORDEN QUE MANDA, LEIDO DEL PLAN DE HOY
+==============================================================================
+OP-D-04 depende_de : ['OP-F-02', 'OP-F-03']
+OP-D-04 nodos (7) :
+    brainstorming_divergente
+    brainstorming_efectivo
+    reglas_brainstorming
+    generar_multiples_opciones
+    construir_sobre_ideas_ajenas
+    pensamiento_convergente_divergente
+    design_attitude_vs_decision_attitude
+OP-F-02 estado del campo: LISTA
+OP-F-03 estado del campo: LISTA
+(los dos campos siguen en LISTA porque el esquema no define otro valor;
+ la declaracion de HECHA vive en la nota, y es lo que aqui se contrasta)
+
+==============================================================================
+A. OP-F-02: LOS TRES NODO PROPIO, MEDIDOS HOY CONTRA EL GRAFO
+==============================================================================
+ids declarados en el indice rojo para OP-F-02: ['critica_del_plan_con_ia', 'escenarios_de_evolucion_de_la_ia', 'ideacion_con_ia_en_la_sesion']
+  critica_del_plan_con_ia                pasos 5 (nota dice 5)  vivo True  en indice rojo True   OK
+  escenarios_de_evolucion_de_la_ia       pasos 6 (nota dice 6)  vivo True  en indice rojo True   OK
+  ideacion_con_ia_en_la_sesion           pasos 4 (nota dice 4)  vivo True  en indice rojo True   OK
+
+==============================================================================
+B. OP-F-02: MOLLICK FUERA DE LOS TRES NODOS DE ORIGEN
+==============================================================================
+  future_scenarios_planning        Mollick en el fichero entero: False
+      fuente de hoy: Business Model Generation (Osterwalder)
+  gut_check                        Mollick en el fichero entero: False
+      fuente de hoy: The field guide to human-centered design
+  brainstorming_divergente         Mollick en el fichero entero: False
+      fuente de hoy: Change by Design, Revised and U - Tim Brown
+
+==============================================================================
+C. brainstorming_divergente ENTRA A OP-D-04 CON LA FUENTE FIJADA
+==============================================================================
+  fuente medida hoy : Change by Design, Revised and U - Tim Brown
+  la fuente fijada por 01_FUENTES.md nombra a: Tim Brown
+  la contiene: True
+  fuentes distintas declaradas: 1
+
+==============================================================================
+D. OP-F-03: LOS CUATRO NODO PROPIO, MEDIDOS HOY CONTRA EL GRAFO
+==============================================================================
+ids declarados en el indice rojo para OP-F-03: ['driver_de_inventario', 'estrategia_circular_y_mecanismo_de_retorno', 'producto_como_servicio_de_acceso', 'seleccion_de_proveedores_por_costo_total']
+  driver_de_inventario                           pasos 4 (nota dice 4)  vivo True  en indice rojo True   OK
+  estrategia_circular_y_mecanismo_de_retorno     pasos 4 (nota dice 4)  vivo True  en indice rojo True   OK
+  producto_como_servicio_de_acceso               pasos 8 (nota dice 8)  vivo True  en indice rojo True   OK
+  seleccion_de_proveedores_por_costo_total       pasos 9 (nota dice 9)  vivo True  en indice rojo True   OK
+
+==============================================================================
+E. EL CRUCE MEDIDO: QUE NODOS DE OP-D-04 TOCAN LA FASE 01
+==============================================================================
+  de los SIETE de OP-D-04, en la nomina de OP-F-02: 1  ['brainstorming_divergente']
+  de los SIETE de OP-D-04, en la nomina de OP-F-03: 0  []
+  OP-F-03 tiene 21 nodos en su nomina.
+  Si la segunda lista sale vacia, la dependencia OP-D-04 -> OP-F-03 es de
+  ORDEN DE FASE y no de nodo compartido, y asi queda medido.
+
+==============================================================================
+VEREDICTO DEL PASO 1
+==============================================================================
+LAS DOS OPERACIONES DE FUENTE ESTAN EJECUTADAS, MEDIDO HOY CONTRA EL GRAFO.
+Tres nodo propio de OP-F-02 y cuatro de OP-F-03, vivos, con los pasos que
+sus notas declaran y declarados en el indice rojo; Mollick fuera de los tres
+origenes; brainstorming_divergente con UNA sola fuente, la fijada.
+
+PASO 1 VERDE: se puede apoyar OP-D-04 en la fase 01.

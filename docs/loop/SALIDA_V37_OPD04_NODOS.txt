@@ -1,0 +1,111 @@
+==============================================================================
+NODO: brainstorming_divergente
+titulo   : Brainstorming como Generador de Divergencia
+dominio  : core   fase: ideacion
+fuente   : Change by Design, Revised and U - Tim Brown
+etiqueta : Abre Posibilidades sin Filtro
+resumen  : El brainstorming es una técnica clave para abrir un amplio espectro de ideas durante la fase divergente del design thinking. No es la única técnica de generación de ideas, pero es insuperable para crear opciones antes de pasar a la fase de convergencia donde se toman decisiones.
+activacion: ['Cuando el equipo necesita explorar múltiples soluciones posibles antes de comprometerse con una', 'Cuando el problema aún no tiene una dirección clara de solución']
+PASOS (4):
+   1. Reunir al equipo en un espacio dedicado sin distracciones
+   2. Establecer reglas claras: cantidad sobre calidad, diferir el juicio, construir sobre ideas de otros
+   3. Generar el mayor número de ideas posible sin filtrar prematuramente
+   4. Registrar todas las ideas visualmente (post-its, pizarra)
+entregable: Una colección amplia de ideas divergentes documentadas visualmente, lista para ser filtrada en fase de convergencia
+previos   : ['buscar_armonia_diseno']
+siguientes: ['butterfly_test_convergencia', 'prototipado_rapido', 'ideacion_con_ia_en_la_sesion']
+==============================================================================
+NODO: brainstorming_efectivo
+titulo   : Reglas para un Brainstorming Efectivo
+dominio  : core   fase: ideacion
+fuente   : Change by Design
+etiqueta : Sigue Reglas para Idear Mejor
+resumen  : El brainstorming es una forma estructurada de romper la estructura habitual del pensamiento; requiere reglas claras para funcionar bien, de lo contrario degenera en reunión ordenada o caos improductivo. La regla más importante es 'construir sobre las ideas de los demás', lo cual genera un efecto acumulativo de creatividad superior al trabajo individual.
+activacion: ['Cuando se necesita abrir un espectro amplio de ideas antes de tomar decisiones.', 'Cuando el equipo no se conoce bien o carece de confianza para colaborar espontáneamente.']
+PASOS (4):
+   1. Establecer y visibilizar reglas claras: diferir el juicio, fomentar ideas descabelladas, mantenerse enfocado en el tema.
+   2. Priorizar la regla de 'construir sobre las ideas de otros' por encima de generar ideas propias de forma aislada.
+   3. Formar grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.
+   4. Dedicar sesiones específicas solo para generar opciones (divergencia), separadas de las sesiones de selección (convergencia).
+entregable: Una sesión de brainstorming documentada con un conjunto amplio de ideas generadas colaborativamente, listas para ser filtradas en fase convergente.
+previos   : ['pensamiento_convergente_divergente', 'cultura_de_optimismo', 'esfuerzo_voluntario_vs_urge_espontaneo', 'how_might_we_briefs', 'intimation_illumination', 'periodo_incubacion_mental', 'sentido_del_humor_como_herramienta_de_pensamiento']
+siguientes: ['pensamiento_visual', 'prototipado_rapido', 'deriva_deliberada', 'etnografia_investigacion_usuario', 'tecnica_perder_objeto', 'brainstorming']
+==============================================================================
+NODO: reglas_brainstorming
+titulo   : Reglas de Brainstorming Efectivo
+dominio  : core   fase: ideacion
+fuente   : Business Model Generation (Osterwalder)
+etiqueta : Organiza tu Lluvia de Ideas
+resumen  : Conjunto de reglas para maximizar la generación de ideas útiles en sesiones de lluvia de ideas: mantener el foco en un problema bien definido (idealmente centrado en la necesidad del cliente), diferir el juicio crítico, mantener una sola conversación a la vez, priorizar cantidad, pensar visualmente (Post-it) y fomentar ideas alocadas. Incluye un ejercicio de calentamiento ('Silly Cow') para desbloquear la creatividad.
+activacion: ['Cuando el equipo necesita generar gran volumen de ideas en poco tiempo', 'Si las discusiones se estancan en crítica prematura de ideas']
+PASOS (5):
+   1. Definir un enunciado claro del problema centrado en necesidad del cliente
+   2. Establecer y hacer cumplir reglas: diferir juicio, una conversación a la vez, ir por cantidad, ser visual, fomentar ideas locas
+   3. Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)
+   4. Usar Post-it notes para capturar y mover ideas visualmente
+   5. Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo
+entregable: Sesión de brainstorming documentada con ideas capturadas en Post-its y agrupadas por tema
+previos   : ['equipo_diverso_ideacion', 'cuatro_etapas_del_pensamiento_creativo', 'equipos_visita_cliente', 'etnografia_investigacion_usuario', 'how_might_we_hmw']
+siguientes: ['pensamiento_visual_modelos_negocio', 'bundle_ideas', 'co_creation_session', 'get_visual', 'gut_check', 'mash_ups']
+==============================================================================
+NODO: generar_multiples_opciones
+titulo   : Exigir Múltiples Opciones (Demand Options)
+dominio  : core   fase: ideacion
+fuente   : Change by Design
+etiqueta : Exige Muchas Opciones Primero
+resumen  : No conformarse con la primera buena idea o solución prometedora. Explorar muchas opciones ('divergencia') antes de converger es lo que separa las soluciones incrementales y fácilmente copiables de las verdaderamente creativas. Los plazos (deadlines) ayudan a poner un límite productivo a esta exploración.
+activacion: ['Cuando el equipo tiende a converger prematuramente en la primera idea', 'En la fase de ideación de un proyecto de diseño']
+PASOS (3):
+   1. Generar deliberadamente múltiples alternativas de solución antes de elegir una.
+   2. Fijar un deadline claro para la fase de divergencia, evitando la parálisis por análisis.
+   3. Permitir la 'polinización cruzada' entre ideas distintas antes de converger en una.
+entregable: Un set documentado de al menos 3-5 alternativas de solución evaluadas antes de la decisión final.
+previos   : ['construir_sobre_ideas_ajenas', 'pensamiento_visual']
+siguientes: ['portafolio_de_diseno']
+==============================================================================
+NODO: construir_sobre_ideas_ajenas
+titulo   : Construir Sobre las Ideas de Otros
+dominio  : core   fase: ideacion
+fuente   : Change by Design
+etiqueta : Construye Sobre Ideas de Otros
+resumen  : Las ideas que se convierten en 'propiedad privada' de una persona tienden a estancarse. Las ideas que migran por la organización, sufriendo permutaciones y combinaciones, tienden a florecer. Se necesita una cultura de ideas en competencia y colaboración, similar a la improvisación del jazz.
+activacion: ['Durante sesiones de brainstorming o co-creación en equipo']
+PASOS (3):
+   1. Compartir ideas abiertamente en el equipo en lugar de guardarlas como propiedad individual.
+   2. Fomentar sesiones de construcción colectiva ('yes, and...') sobre ideas presentadas por otros.
+   3. Evitar atribuir ideas exclusivamente a una sola persona para promover su evolución.
+entregable: Un repositorio de ideas compartido y en evolución continua accesible a todo el equipo.
+previos   : ['pensamiento_visual', 'asociacion_de_ideas']
+siguientes: ['generar_multiples_opciones']
+==============================================================================
+NODO: pensamiento_convergente_divergente
+titulo   : Pensamiento Convergente y Divergente
+dominio  : core   fase: ideacion
+fuente   : Change by Design
+etiqueta : Abre y Cierra tus Opciones
+resumen  : El design thinking se experimenta como una danza entre cuatro estados mentales, siendo el más fundamental el intercambio rítmico entre pensamiento divergente (multiplicar opciones, crear posibilidades) y pensamiento convergente (elegir entre alternativas existentes, eliminar opciones). La cultura occidental tiende a favorecer la convergencia rápida, pero la innovación requiere primero divergir ampliamente antes de converger. Cada iteración del proceso es menos amplia y más detallada que la anterior.
+activacion: ['Cuando el equipo converge demasiado rápido en una única solución sin explorar alternativas.', 'Cuando se necesita generar innovación disruptiva en lugar de mejoras incrementales.']
+PASOS (4):
+   1. Antes de buscar la solución, dedicar tiempo explícito a generar múltiples opciones sin juzgarlas (fase divergente).
+   2. Usar la metáfora del embudo: abrir posibilidades ampliamente y luego estrechar hacia soluciones concretas.
+   3. Alternar conscientemente entre fases de generación de ideas y fases de selección/eliminación de ideas.
+   4. Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso.
+entregable: Un mapa o registro de iteraciones mostrando ciclos de divergencia (generación de opciones) y convergencia (selección de opciones) a lo largo del proyecto.
+previos   : ['usuarios_extremos_insights', 'analisis_y_sintesis']
+siguientes: ['analisis_y_sintesis', 'prototipado_rapido', 'brainstorming_efectivo']
+==============================================================================
+NODO: design_attitude_vs_decision_attitude
+titulo   : Actitud de Diseño vs. Actitud de Decisión
+dominio  : core   fase: ideacion
+fuente   : Business Model Generation (Osterwalder)
+etiqueta : Elige Diseñar o Decidir
+resumen  : Concepto de Collopy y Boland que contrasta dos enfoques mentales: la 'actitud de decisión', que asume que generar alternativas es fácil pero elegir entre ellas es difícil (típica de la gestión tradicional basada en análisis y optimización); y la 'actitud de diseño', que asume que diseñar una alternativa sobresaliente es difícil, pero una vez lograda, la decisión de elegirla es trivial. La innovación de modelos de negocio requiere actitud de diseño: exploración iterativa, prototipado y tolerancia a la ambigüedad, representada visualmente en el 'Design Squiggle' de Damien Newman.
+activacion: ['Cuando el equipo tiende a converger prematuramente en una única idea sin explorar alternativas']
+PASOS (4):
+   1. Acepta la ambigüedad e incertidumbre como parte natural del proceso creativo
+   2. Dedica tiempo y energía a explorar múltiples posibilidades antes de converger
+   3. Alterna entre investigación de mercado, prototipado y generación de ideas de forma no lineal
+   4. Evita adoptar la primera solución razonable; prioriza la exploración divergente
+entregable: Mentalidad y proceso de trabajo del equipo orientado a exploración divergente antes de convergencia en una solución
+previos   : ['analisis_y_sintesis']
+siguientes: ['fase_entender_modelo_negocio', 'fase_entendimiento_investigacion_mercado']
