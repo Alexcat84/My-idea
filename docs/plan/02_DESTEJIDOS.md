@@ -1947,3 +1947,44 @@ La tabla de orden de este mismo fichero le cuenta a `OP-D-05` **UN destejido** y
 - **Su via es el precedente de `OP-D-01`**: cura acoplada mayor, exactamente como el **aviso de solape** de esta misma pagina lo advierte, y **no una eleccion de superviviente**.
 
 **LO CORRECTO, y es lo que rige desde aqui: OCHO piden `P.8`. El noveno pide su DECLARACION.** La caida **no mueve ningun dato**: ninguna cifra publicada cambia, solo la via de un acto.
+
+### EL ACTA DE LA VUELTA 41 VERIFICA LO COMMITEADO Y ADJUDICA LA REANUDACION DEL ACTO 285 (19 ago 2026, vuelta 42)
+
+**Esta seccion no reescribe ninguna de las de arriba.** Va **lo que el auditor hizo con la vuelta 41**, leido hoy de `docs/loop/ACTA_AUDITOR.md` con su linea al lado, como manda la regla 1 del `EJECUTOR.md`. El acta empieza en la linea **8651**.
+
+#### LA VUELTA 41 QUEDO INTERRUMPIDA POR LIMITE DE SESION DE LA API, MEDIDO Y NO SUPUESTO (acta, seccion 1, linea 8662)
+
+| lo medido | como lo dice el acta, con su linea |
+|---|---|
+| **la causa** | `docs/loop/ultimo_ejecutor.json` leido por el auditor: `terminal_reason` **api_error**, status **429**, *"You've hit your session limit"*, **869 segundos**, **56 turnos**. **Murio por LIMITE DE SESION, no por decision ni por guarda en rojo** (linea **8664**) |
+| **lo commiteado y pusheado** | **9f9fc182** (la apertura, sola) y **aaa15cbd** (la TAREA 1 entera), con `origin/pasada-unica` en `aaa15cbd` comprobado por `git fetch` del propio auditor (linea **8677**) |
+| **lo sellado en disco SIN commit** | **seis rutas**: `SALIDA_V41_ACTO285_LECTURA.txt`, `SALIDA_V41_ACTO285_PLAN.txt`, `PLAN_V41_ACTO285.json`, `vuelta41_lectura_acto.py`, `vuelta41_plan_acto.py` y `scripts/loop/v41_actos/`. **La fusion del 285 NO se ejecuto** (linea **8680**) |
+| **el grafo** | **INTACTO**: `git status` sobre `dataset/`, `web/`, `engine/` y `docs/plan/` limpio. **El acto a medias es de REGISTRO, no de datos: ni un nodo tocado** (linea **8685**) |
+
+#### LO COMMITEADO, VERIFICADO POR CORRIDA PROPIA DEL AUDITOR (acta, seccion 2, linea 8691)
+
+| lo re-corrido | como salio, segun el acta |
+|---|---|
+| **la apertura** (`vuelta31_estado.py` por su via) | **BYTE IGUAL** a `SALIDA_V41_APERTURA.txt` **salvo la etiqueta del encabezado**, que es el parametro del instrumento. n **3.388**, A **575**, B **83**, C **8**, D **2.722**, tasa **17,0**; **cero huecos y cero duplicados**; grafo **3.853** ficheros, **3.532** vivos, **321** deprecados, **16.871** enlaces; **71** operaciones LISTA y **0** rotas (linea **8693**) |
+| **la seccion de registros de la TAREA 1** | **54 lineas anadidas, cero borradas**, leida entera contra su propia acta de la vuelta 40: **las OCHO lineas citadas** (**8524**, **8535**, **8542**, **8549**, **8557**, **8567**, **8574**, **8578**) impresas hoy con `sed` **dicen exactamente lo que la seccion les atribuye** (linea **8705**) |
+| **el parche de `scripts/costuras_internas.py`** | numstat **24 anadidas y 0 borradas**, diff entero leido: **solo lineas de impresion** al final de `main()`, **`UMBRAL_PAREJA` 80 y `UMBRAL_BLOQUE` 44 intactos**, ningun fixture tocado, y el porcentaje **calculado en la corrida** y no tecleado (linea **8712**) |
+| **el instrumento de costuras entero** | re-corrido por el auditor: **exit 0**, y su cola calza **LINEA A LINEA** con `SALIDA_V41_COSTURAS_LIMITE.txt`. **1.496 sobre 3.532 es 42,36, publicado 42,4**: la **discrepancia declarada** del commit (42,4 contra el 42,3 del acta) esta **bien declarada y bien explicada**, misma cola con dos activos menos por `OP-D-05` (linea **8717**) |
+| **el ciclo Gate 0 y las suites** | los **tres comandos** (`run_phase1 --reaplico-curaduria`, `etiquetas_de_cara --aplicar`, `sync_assets_web`) **exit 0 los tres**, **GATE 0: OK**, **71 etiquetas**, **seis assets** sincronizados, **las dos copias del grafo byte iguales a HEAD**; motor **25 de 25**, web **1.030 pasadas** y 3 saltadas, `tsc` **cero lineas**. El `phase1_run_log.json` **restaurado con `git restore`** para no pisar la evidencia commiteada de la vuelta 40, y **el arbol quedo byte igual** (linea **8724**) |
+
+**Y LA CIEGA SOBRE EL ACTO 285 COINCIDIO 2 DE 2 EN EL FONDO** (acta, seccion 3, linea 8758): el auditor imprimio **primero** los dos nodos enteros de `dataset/nodos`, adjudico por escrito, y **solo despues** abrio la lectura y el plan del ejecutor. Su adjudicacion ciega: **ninguno de los dos tiene costura interna** y el superviviente es **`producto_unico_superior` por contenido**; anoto ademas que **el cableado crudo favorecia al ABSORBIDO** (10 contra 6), asi que si el ejecutor elegia por contenido **tenia que decirlo**. Al destapar: el plan sella eso mismo, con el cableado **impreso DESPUES del contenido** y medido por `P.1` en **6 contra 7**. **La prelacion se cumplio: el cableado favorecia al perdedor y NO decidio.**
+
+**Y LA ARITMETICA DEL PLAN, RE-CONTADA POR EL AUDITOR CONTRA LOS FICHEROS** (linea **8767**): **7 redirecciones** (3 en `nodos_previos` vivos, 4 en `nodos_siguientes` vivos), **3 deprecados** que nombran y no se tocan, **0 duplicadas** fabricadas, **16 origenes verbatim**, **7 aristas** de simetrizacion esperadas, **6 pasos finales** dentro del estandar de 3 a 6, y la tabla de `P.13` con **16 de 16 que VIAJAN**.
+
+#### **CERO CAIDAS, Y NINGUNA CASILLA QUE RELLENAR** (acta, seccion 5, linea 8837)
+
+**No hay caida de reporte que corregir en esta vuelta, y se dice asi en vez de rellenar la casilla.** La razon esta medida, no supuesta: **la vuelta 41 no dejo reporte** (`REPORTE.md` seguia siendo el de la 40, ya auditada, acta linea **8687**), asi que **no habia material del ejecutor con discutibles que adjudicar**; y **lo que si commiteo salio limpio**: el acta cierra con **"Caidas: CERO del ejecutor en lo commiteado, CERO de clase o cifra, CERO del auditor"** (linea **8837**). La racha de caidas de reporte **se queda en UNA y no se rompe**, porque **una racha no se rompe con material ausente**: la rompe un reporte limpio, y ese sera el de esta vuelta 42 si sale limpio.
+
+#### LAS ADJUDICACIONES DE LA VUELTA 41, QUE RIGEN DESDE AQUI (acta, seccion 4, linea 8783)
+
+| | la adjudicacion, con su linea |
+|---|---|
+| **1** | **EL ACTO 285 SE RETOMA DESDE SU PLAN SELLADO, no se rehace de cero** (linea **8785**). Letra citable: todo encargo abre con *"Commitea y pushea lo pendiente en la rama activa antes de tocar nada"*, y **lo pendiente se incorpora, no se tira**; el precedente de `OP-D-05` es que una fusion **se ejecuta tal como esta sellada tras verificarse**. **CON UNA CONDICION, que es la regla 1 y no una regla nueva**: la vuelta 42 **re-corre los dos instrumentos** (`vuelta41_lectura_acto.py` y `vuelta41_plan_acto.py`) y comprueba que **REPRODUCEN** las dos salidas y el plan sellados. **Cualquier diferencia se declara y detiene la ejecucion del sellado hasta adjudicarse** |
+| **2** | **EL CORTE POR LIMITE DE SESION NO ES CAIDA DE DICTADO NI CONDICION DE PARADA** (linea **8796**). La letra de *fallo tecnico repetido* pide **hook o Gate 0 en rojo dos vueltas seguidas por la misma causa**: aqui el Gate 0 esta **verde por corrida propia** y el corte vino de la **cuota de la API**, que el propio bucle ya maneja esperando y reintentando. **Se registra con nombre y no acumula credito contra nadie** |
+| **3** | **DOS COMMITS POR ACTO DESDE LA VUELTA 42** (linea **8802**), adjudicado **por extension y no como doctrina nueva**: **el plan sellado con su lectura en un commit pusheado ANTES de fundir; la fusion ejecutada en otro**. Extiende el *commit y push por acto* del encargo 41 por su propia logica y por la leccion de hoy: **un corte de sesion no debe poder dejar un sellado sin commit**. Es la misma especie que la regla del hueco de acta: **lo no registrado no existe** |
+
+**LOS SEIS FICHEROS SIN COMMIT SE COMMITEARON EN ESTA VUELTA 42, TAL COMO QUEDARON**, que es lo que el propio auditor dejo escrito como discutible **(iii)** de su acta (linea **8815**): los dejo sin commitear **a proposito**, porque **son obra del ejecutor y los commitea el ejecutor de la 42 con su mensaje declarado**. Hecho en el commit **2414e7d9**, sin retocar una linea, y con la declaracion de que **la fusion del 285 no se ejecuto**.
