@@ -1580,3 +1580,31 @@ python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V38_OPD04_ALTERNANCIA.
    `FAMILIA DECLARADA` gobierna sobre los tres pares del cuarto miembro, las tres lecturas se
    registran con la clase de su familia, que en los tres pares ya escritos es **`A`**, y entonces
    **estas dos fusiones no se ejecutan.**
+
+---
+
+#### `OP-D-04`, EL ACTA DEL AUDITOR DE LA VUELTA 38, LEIDA EL 19 ago 2026 (vuelta 39): **LAS DOS FUSIONES QUEDAN AUTORIZADAS**
+
+**Linea de registro, con las lineas del acta citadas porque la regla 1 del `EJECUTOR.md` no admite
+afirmar el estado del registro sin la medicion del dia al lado.** El acta vive en
+`docs/loop/ACTA_AUDITOR.md` y se leyo hoy entera en su ultimo bloque (lineas 7.995 a 8.126, la
+seccion 4 de adjudicaciones, la 5 de pendientes y la 7 de condiciones de parada).
+
+| lo que el acta resuelve | donde lo dice, leido hoy |
+|---|---|
+| **LAS TRES LECTURAS DEL CUARTO MIEMBRO SE CONFIRMAN EN `D`.** `LD-96` sostenida en `D` por letra (el segundo polo del `9.22` no aplica porque la direccion de Juran hacia divergente devuelve procedimiento; el `9.6.3` prohibe pesar el solape) y `LD-98` sostenida en `D` por letra (el `67.6` mas la prueba del `9.6.2`). **La condicion de parada de la `DECISION 3` del fundador no se dispara.** | `ACTA_AUDITOR.md` seccion 4, puntos **a1** y **a2** (lineas 7.997 a 8.015) |
+| **LAS DOS ELECCIONES DE `P.8` SE CONFIRMAN**, y ademas coinciden **5 de 5** con la relectura ciega del auditor junto a las tres `LD`. | `ACTA_AUDITOR.md` seccion 6, *Esta tanda (vuelta 38): mas 8 puestos de fondo (LD-96, LD-97, LD-98 y las dos elecciones de P.8 a ciegas...)* (lineas 8.094 y 8.095) |
+| **`FAMILIA DECLARADA` NO GOBIERNA LAS TRES LECTURAS AUTORIZADAS**, adjudicado como choque entre reglas por el **orden de fuentes de `AUDITOR.md` seccion 0**: la excepcion del fundador vive en `docs/plan/BANCO_DEL_PLAN.md`, fuente de **rango 1**, y `FAMILIA DECLARADA` vive en `docs/INTRA_DOMINIO_INFORME.md`, fuente de **rango 3**. **Los tres pares `A` ya escritos del racimo (234, 823 y 834) NO SE TOCAN**: la regla sigue entera para los pares de cola de racimos declarados. | `ACTA_AUDITOR.md` seccion 4, punto **a3** (lineas 8.016 a 8.048) |
+| **CONSECUENCIA ESCRITA POR EL AUDITOR: *LAS DOS FUSIONES QUEDAN AUTORIZADAS*.** | `ACTA_AUDITOR.md` linea 8.046, dentro de la `CONSECUENCIA` de **a3** (lineas 8.043 a 8.048) |
+| **El campo `superviviente` de `OP-D-04` QUEDA EN `null`** y la verdad va en la nota de cierre nombrando los dos supervivientes y los dos planes sellados. Resuelve el punto 5 de *LO QUE QUEDA PARA LA VUELTA QUE EJECUTE*, que lo dejaba como pregunta. | `ACTA_AUDITOR.md` seccion 4, punto **a4** (lineas 8.049 a 8.056) |
+| **Titulo y etiqueta del nodo del taller NO SE TOCAN** en esta fusion; el aviso de `P.8` va como pendiente de catalogo al fundador y no bloquea. | `ACTA_AUDITOR.md` seccion 4, punto **a6** (lineas 8.062 a 8.066) |
+
+**LA PARADA DE DOCTRINA DEL PIE DE LA UNDECIMA TANDA, la del punto 6 de *LO QUE QUEDA PARA LA
+VUELTA QUE EJECUTE*, QUEDA CERRADA:** el acta la recorre en su seccion 7 y la declara *adjudicado
+por letras ya escritas (a3)*, con **ninguna condicion de parada cumplida** (linea 8.115).
+
+> **Y va dicho lo que el acta NO hace, porque un registro que solo cuenta lo favorable no se puede
+> auditar:** el acta deja **dos recomendaciones al fundador que no bloquean** (una linea general de
+> prelacion para este choque, y el esquema de `OPERACIONES.jsonl` frente a operaciones con dos
+> supervivientes, mas el titulo del nodo del taller), y **cuatro pendientes heredados vivos**
+> (`ACTA_AUDITOR.md` seccion 5, cabecera en la 8.073 y cuerpo en las 8.074 a 8.086).

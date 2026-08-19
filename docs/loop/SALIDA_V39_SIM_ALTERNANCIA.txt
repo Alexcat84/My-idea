@@ -1,0 +1,41 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### pensamiento_convergente_divergente  <==  generar_multiples_opciones
+  1. DESEMPATE POR CABLEADO
+     pensamiento_convergente_divergente           pasos  4 | nombra  4 | LO NOMBRAN  5
+     generar_multiples_opciones                   pasos  3 | nombra  3 | LO NOMBRAN  3
+     >>> gana pensamiento_convergente_divergente por 5 contra 3
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['generar_multiples_opciones']
+  3. ENTRADAS QUE SE REDIRIGEN
+     construir_sobre_ideas_ajenas                 nodos_siguientes  -> pensamiento_convergente_divergente
+     pensamiento_visual                           nodos_siguientes  -> pensamiento_convergente_divergente
+     portafolio_de_diseno                         nodos_previos     -> pensamiento_convergente_divergente
+
+### pensamiento_convergente_divergente  <==  design_attitude_vs_decision_attitude
+  1. DESEMPATE POR CABLEADO
+     pensamiento_convergente_divergente           pasos  4 | nombra  4 | LO NOMBRAN  5
+     design_attitude_vs_decision_attitude         pasos  4 | nombra  2 | LO NOMBRAN  2
+     >>> gana pensamiento_convergente_divergente por 5 contra 2
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['design_attitude_vs_decision_attitude']
+  3. ENTRADAS QUE SE REDIRIGEN
+     analisis_y_sintesis                          nodos_siguientes  -> pensamiento_convergente_divergente
+     fase_entendimiento_investigacion_mercado     nodos_previos     -> pensamiento_convergente_divergente
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     analisis_y_sintesis                          nodos_siguientes  -> pensamiento_convergente_divergente
+     TOTAL NUEVAS: 1
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     brainstorming                 .nodos_previos      brainstorming_efectivo -> brainstorming
+     brainstorming_efectivo        .nodos_previos      pensamiento_convergente_divergente -> brainstorming_efectivo
+     brainstorming_efectivo        .nodos_siguientes   brainstorming_efectivo -> brainstorming
+     construir_sobre_ideas_ajenas  .nodos_siguientes   construir_sobre_ideas_ajenas -> pensamiento_convergente_divergente
+     pensamiento_convergente_divergente.nodos_siguientes   pensamiento_convergente_divergente -> brainstorming_efectivo
