@@ -392,8 +392,9 @@ tramo que publicar. **Se dice en vez de rellenar la casilla.**
 
 **Los commits de la vuelta, en orden:** `03e8e0e8` (apertura), `7cb10c63` (tarea 1 y la guarda
 previa), `4fd51e4a` (el taller), `d406059c` (la alternancia), `e5f7bdbd` (`OP-D-04` cerrada),
-`fc7b0d08` (`OP-D-05` abierta). **El hash del commit de este reporte va aparte y medido, no
-anticipado.**
+`fc7b0d08` (`OP-D-05` abierta) y **`f070617c`** (este reporte). **El hash de este reporte se
+anade DESPUES de commitear, medido con `git log` y no anticipado, que es la unica forma de
+citarlo sin inventarlo.**
 
 ---
 
