@@ -1,0 +1,55 @@
+PLAN SELLADO: docs/loop/PLAN_V41_ACTO285.json
+  acto          : puesto 285 de OP-D-06
+  superviviente : producto_unico_superior
+  absorbidos    : superioridad_producto_beneficios
+  fuente del superviviente: Winning at New Products - Robert G. Cooper
+  ACTO DE FUENTE UNICA (1 fuente(s) distinta(s) medida(s)):
+      producto_unico_superior                      superviviente  Winning at New Products - Robert G. Cooper
+      superioridad_producto_beneficios             absorbido      Winning at New Products - Robert G. Cooper
+  origenes generados VERBATIM del fichero: 16
+  pasos finales : 6 (estandar 3 a 6: DENTRO)
+  condiciones finales: 2
+  redirecciones esperadas: 7
+      alfabetizacion_en_materiales_maliciosos        nodos_siguientes   superioridad_producto_beneficios
+      customer_gains                                 nodos_siguientes   superioridad_producto_beneficios
+      desarrollo_en_espiral                          nodos_previos      superioridad_producto_beneficios
+      lanzamiento_nuevos_productos_enfoque_problema  nodos_previos      superioridad_producto_beneficios
+      prevencion_objeciones_vs_manejo                nodos_previos      superioridad_producto_beneficios
+      tecnologia_como_medio_no_fin                   nodos_siguientes   superioridad_producto_beneficios
+      voz_del_cliente_voc                            nodos_previos      superioridad_producto_beneficios
+  deprecados que nombran y no se tocan: 3
+      enfoque_resolucion_problemas_lanzamiento_producto nodos_previos      superioridad_producto_beneficios
+      prevencion_de_objeciones                       nodos_previos      superioridad_producto_beneficios
+      spiral_development                             nodos_previos      superioridad_producto_beneficios
+  duplicadas que la fusion fabrica: 0
+  simetrizacion esperada: 7 aristas
+      producto_unico_superior.nodos_previos      += alfabetizacion_en_materiales_maliciosos
+      producto_unico_superior.nodos_previos      += customer_gains
+      producto_unico_superior.nodos_previos      += tecnologia_como_medio_no_fin
+      producto_unico_superior.nodos_siguientes   += desarrollo_en_espiral
+      producto_unico_superior.nodos_siguientes   += lanzamiento_nuevos_productos_enfoque_problema
+      producto_unico_superior.nodos_siguientes   += prevencion_objeciones_vs_manejo
+      producto_unico_superior.nodos_siguientes   += voz_del_cliente_voc
+
+  LA TABLA DE PERDIDAS, DERIVADA de los grupos y no tecleada:
+      B1    superioridad_producto_beneficios         VIAJA      paso 3 del resultado
+      B2    superioridad_producto_beneficios         VIAJA      paso 1 del resultado
+      B3    superioridad_producto_beneficios         VIAJA      paso 4 del resultado
+      B4    superioridad_producto_beneficios         VIAJA      paso 4 del resultado
+      B5    superioridad_producto_beneficios         VIAJA      paso 5 del resultado
+      B6    superioridad_producto_beneficios         VIAJA      paso 6 del resultado
+      BC1   superioridad_producto_beneficios         VIAJA      condicion 2 del resultado
+      BC2   superioridad_producto_beneficios         VIAJA      condicion 1 del resultado
+      P1    producto_unico_superior                  VIAJA      paso 1 del resultado
+      P2    producto_unico_superior                  VIAJA      paso 2 del resultado
+      P3    producto_unico_superior                  VIAJA      paso 2 del resultado
+      P4    producto_unico_superior                  VIAJA      paso 3 del resultado
+      P5    producto_unico_superior                  VIAJA      paso 4 del resultado
+      P6    producto_unico_superior                  VIAJA      paso 5 del resultado
+      PC1   producto_unico_superior                  VIAJA      condicion 1 del resultado
+      PC2   producto_unico_superior                  VIAJA      condicion 2 del resultado
+      VIAJAN 16 de 16. SE PIERDEN 0.
+      LECTURA: la regla de reparto de OP-D-06 manda cada perdida al
+      bloque del que proviene, y la que no tenga bloque al
+      superviviente. Con CERO perdidas no hay nada que repartir, y eso
+      es lo que hay que comprobar al cierre, no suponerlo.

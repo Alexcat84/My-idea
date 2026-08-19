@@ -1,0 +1,135 @@
+
+==============================================================================
+(a) LA NOMINA DEL ACTO 285, LEIDA DE LA TABLA SELLADA
+==============================================================================
+  nodo A: producto_unico_superior
+  nodo B: superioridad_producto_beneficios
+  la tabla sellada trae 9 actos; este es el numero 1 de los nueve
+  los dos estan en la nomina de OPERACIONES.jsonl: SI
+
+  EL AVISO DE SOLAPE DEL PLAN, comprobado contra el fichero y no recordado:
+    > **AVISO DE SOLAPE, y hay que verlo antes de contar dos veces:**
+    > `producto_minimo_viable` y `principio_calidad_mvp` **aparecen aqui Y en
+    > `OP-D-01`**. La seccion 54.3 los cuenta como uno de los nueve actos de dos; el
+    > plan de cirugia los trata como **cura acoplada mayor**. **Es la MISMA pareja
+    > vista por dos instrumentos, no dos trabajos.**
+
+  ESTE ACTO ESTA NOMBRADO EN EL AVISO DE SOLAPE: NO
+
+  EL REPARTO YA ESCRITO PARA ESTE ACTO, si lo tiene:
+    NINGUNO ESCRITO. Se resuelve con la regla adjudicada: cada
+    perdida al bloque del que proviene, y la que no tenga bloque
+    al superviviente.
+
+==============================================================================
+(b) QUE CITA EL INSTRUMENTO DE COSTURAS SOBRE LOS DOS NODOS
+==============================================================================
+  Fuente: docs/COSTURAS_INTERNAS.jsonl, LA COLA QUE EL INSTRUMENTO YA
+  ENTREGO. No se recalcula ni una cifra. EL INSTRUMENTO CITA Y NO JUZGA,
+  y desde la vuelta 41 su salida declara ademas que LA COLA GLOBAL NO ES
+  BASE DE LECTURA mientras el MIN_BLOQUE siga pendiente del fundador.
+  nodos en la cola entregada: 1496
+
+  producto_unico_superior                      CITADO por el instrumento
+      pasos 6 | pareja 52.7 (pasos [2, 3]) | bloque 45.4 | corte tras 3
+      disparo por pareja: False | por bloque: True | franja 44-45: False
+      paso A de la pareja citada: Busca necesidades que tu cliente ni siquiera sabe nombrar, no solo lo obvio que ya te pide
+      paso B de la pareja citada: Descubre qué es lo que realmente le importa a tu cliente a la hora de decidir
+
+  superioridad_producto_beneficios             CITADO por el instrumento
+      pasos 6 | pareja 48.4 (pasos [3, 5]) | bloque 44.7 | corte tras 4
+      disparo por pareja: False | por bloque: True | franja 44-45: True
+      paso A de la pareja citada: Analiza a la competencia: desarma sus productos y encuentra sus puntos débiles
+      paso B de la pareja citada: Traduce lo que encuentres en una definición de tu producto centrada en beneficios y en tu propuesta de valor
+
+==============================================================================
+(c) EL TEXTO ENTERO DE LOS DOS NODOS, que es lo unico que decide
+==============================================================================
+
+------------------------------------------------------------------------------
+  producto_unico_superior   VIVO
+------------------------------------------------------------------------------
+  titulo    : Tener un Producto Único y Superior: El Factor Número Uno de Rentabilidad
+  etiqueta  : Ofrece un Producto Realmente Único
+  dominio   : core
+  fuente    : Winning at New Products - Robert G. Cooper
+  alias     : []
+  PASOS (6):
+    1. Haz un estudio de necesidades y deseos con tus clientes desde el inicio del proyecto
+    2. Busca necesidades que tu cliente ni siquiera sabe nombrar, no solo lo obvio que ya te pide
+    3. Descubre qué es lo que realmente le importa a tu cliente a la hora de decidir
+    4. Define tu producto como un conjunto de beneficios para el cliente, no solo como una lista de características técnicas
+    5. Compara directamente lo que ofreces contra la competencia: beneficios percibidos, valor por el dinero y calidad
+    6. Revisa si tu propuesta de valor depende solo del precio bajo o si también conecta con lo que tu cliente siente y necesita, aunque eso cambie con el tiempo
+  CONDICIONES (2):
+    c1. Si tu producto se parece demasiado a los de la competencia
+    c2. Si no tienes una propuesta de valor clara y diferenciada
+  ENTREGABLE: Un documento con tu propuesta de valor diferenciada, validada hablando directamente con tus clientes
+  RESUMEN   : Lo que más determina si tu producto nuevo tiene éxito es que sea diferente y le ofrezca al cliente beneficios únicos con una propuesta de valor convincente. Si logras un producto superior, tienes 5 veces más probabilidad de éxito, 4 veces más participación de mercado y 4 veces más rentabilidad. Define esa superioridad desde la mirada de tu cliente, no desde lo técnico: hay diferencia entre las características (lo que te cuesta a ti fabricar) y los beneficios (lo que el cliente realmente paga por recibir). Evita caer en copiar lo que ya existe sin diferenciarte, y evita también desarrollar una solución técnica que después sale a buscar un mercado que la quiera.
+  previos   (1): ['ocho_factores_exito_criticos']
+  siguientes(5): ['voice_of_customer_homework', 'fit_value_proposition', 'cliente_disena_producto', 'estrategia_de_innovacion_de_producto', 'estrategia_de_innovacion_y_tecnologia']
+
+------------------------------------------------------------------------------
+  superioridad_producto_beneficios   VIVO
+------------------------------------------------------------------------------
+  titulo    : La superioridad de tu producto está en los beneficios, no en las características
+  etiqueta  : Enfócate en el Beneficio Percibido
+  dominio   : core
+  fuente    : Winning at New Products - Robert G. Cooper
+  alias     : []
+  PASOS (6):
+    1. Diferencia entre las características técnicas (features), que a ti te cuestan dinero, y los beneficios (benefits), que es lo que tu cliente realmente compra
+    2. Desde el inicio, sal a escuchar a tus clientes (haz una investigación de voz del cliente, VoC) para descubrir sus necesidades, no solo sus deseos
+    3. Analiza a la competencia: desarma sus productos y encuentra sus puntos débiles
+    4. No te quedes con la foto de hoy: imagina cómo evolucionará el producto de tu competidor en el futuro
+    5. Traduce lo que encuentres en una definición de tu producto centrada en beneficios y en tu propuesta de valor
+    6. Antes de desarrollar todo, prueba la idea con usuarios reales usando prototipos simples o conceptuales (protocepts)
+  CONDICIONES (2):
+    c1. Cuando defines tu producto solo por sus características técnicas, sin pensar en la mirada del cliente
+    c2. Cuando tu producto no logra diferenciarse claramente de la competencia
+  ENTREGABLE: Un documento donde conviertes las características técnicas de tu producto en beneficios claros para el cliente, validado con lo que aprendiste hablando con ellos y mirando a la competencia
+  RESUMEN   : Que tu producto sea superior no depende de sus características técnicas ni de su tecnología, sino de los beneficios únicos que tu cliente percibe y por los que está dispuesto a pagar. Las características (features) te cuestan dinero a ti; los beneficios (benefits) son lo que tu cliente compra. Piensa en tu producto como un conjunto de beneficios para quien lo usa, no como una lista de funciones técnicas.
+  previos   (3): ['customer_gains', 'alfabetizacion_en_materiales_maliciosos', 'tecnologia_como_medio_no_fin']
+  siguientes(7): ['voz_del_cliente_voc', 'spiral_development', 'enfoque_resolucion_problemas_lanzamiento_producto', 'prevencion_de_objeciones', 'desarrollo_en_espiral', 'lanzamiento_nuevos_productos_enfoque_problema', 'prevencion_objeciones_vs_manejo']
+
+==============================================================================
+(d) P.5: EL PAR, SU CLASE, SU RAZON ENTERA, Y EL CIERRE DEL SUBCONJUNTO
+==============================================================================
+  puesto 285 | clase A | producto_unico_superior con superioridad_producto_beneficios
+  RAZON ENTERA (508 caracteres):
+    REPITE con superioridad_producto_beneficios. Los dos mandan lo mismo y con el mismo argumento de Cooper: salir a investigar necesidades y deseos del cliente desde el inicio del proyecto, definir el producto como un conjunto de beneficios y no como una lista de caracteristicas, comparar de frente contra la competencia, y decidir si se compite por precio bajo o como premium en vez de dejarlo al azar. El segundo desarrolla mas el discurso de venta segun ese posicionamiento, pero la instruccion es la misma.
+  9.3.1, LA VARA DEL VERBO: nombra ganador en su razon: NO, es POR ELEGIR
+
+  EL SUBCONJUNTO, CERRADO O NO: todo par del ARCHIVO que meta a un
+  tercero con cualquiera de los dos (P.5 pide el acto entero).
+    puesto 163   clase D   producto_unico_superior con ventaja_competitiva_producto
+    puesto 461   clase D   superioridad_producto_beneficios con ventaja_competitiva_producto
+    puesto 835   clase B   brief_competitivo con producto_unico_superior
+    puesto 1390  clase D   brief_competitivo con superioridad_producto_beneficios
+    4 par(es) con tercero.
+
+    LA GUARDA QUE DECIDE SI EL ACTO ES DE DOS: un acto se construye
+    por TRANSITIVIDAD SOBRE LAS A. Un tercero unido por B o por D NO
+    entra en el acto; uno unido por A SI, y entonces el acto no seria
+    de dos y habria que PARAR.
+    terceros de clase A: 0  ->  el acto ES de dos, como la tabla sellada dice
+
+    Y LOS QUE VUELVEN A LA COLA DE RELECTURA POST FUSION (08_VERIFICACION:
+    un par vuelve cuando uno de sus dos nodos MUERE o CAMBIA DE TEXTO, y
+    solo los B y los C, porque son los que estaban en el filo):
+      puesto 835   clase B   brief_competitivo con producto_unico_superior
+      1 par(es) a releer al cierre de este acto.
+
+==============================================================================
+(e) P.8: EL CABLEADO, QUE ACOMPANA Y NO DECIDE
+==============================================================================
+  producto_unico_superior                      cableado (grado por P.1): 6    | aristas propias sin reciproco: 0 
+  superioridad_producto_beneficios             cableado (grado por P.1): 7    | aristas propias sin reciproco: 0 
+
+  EL COSTE MEDIDO DE LA ELECCION: elegir a uno u otro solo pierde
+  aristas si el que muere tiene aristas SIN RECIPROCO, porque las
+  reciprocas las reescribe la simetrizacion de run_phase1, paso 5.
+
+  Y LA PRELACION, dicha antes de mirar: MANDA EL CONTENIDO. Este bloque
+  se lee DESPUES del (c) y del (d), y si apunta al lado contrario del
+  contenido, PIERDE. Se imprime para poder decir que no hizo falta.
