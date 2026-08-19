@@ -7353,3 +7353,254 @@ verde por corrida propia).
 preguntas con opciones y costo, y el encargo siguiente COMPLETO dentro, listo para
 copiar a `PROMPT_SIGUIENTE.md` al relanzar. `docs/loop/PROMPT_SIGUIENTE.md`
 VACIADO, como manda la seccion 4 de `AUDITOR.md`.
+
+
+# ACTA DE LAS VUELTAS 34, 35 Y 36 DEL AUDITOR (18 ago 2026, Fable 5). HUECO DE ACTA DECLARADO Y CUBIERTO: ESTA ACTA AUDITA LAS TRES VUELTAS SIN ACTA (34, 35 Y 36), TODO POR CORRIDA PROPIA, LA CIEGA COINCIDE 6 DE 6, CERO CAIDAS DE EJECUTOR EN LAS TRES TANDAS, UNA CAIDA DE ACTA DEL AUDITOR (LA 34, EL MUDO) CON NOMBRE, Y EL BUCLE REANUDA EL MODO CONTINUO CON OP-D-04
+
+## 0. EL HUECO DE ACTA, declarado en cabecera como manda el paso 0
+
+La ultima acta escrita es la de la vuelta 33. Esta acta cubre TRES vueltas, nombradas:
+- **la 34** (reciprocado de deprecados con el Gate corregido, costuras recalibrado y
+  publicado en rojo, pasos 1 y 3 del orden interno de OP-D-03, lecturas dirigidas
+  LD-75 a LD-81, y las relecturas del 738 y el 1061),
+- **la 35** (la medicion de P.5 sobre el acto de OP-D-03: CINCO rancios y no dos, las
+  cinco relecturas selladas y NO volcadas, PARADA de fundador),
+- **la 36** (el volcado de las cinco por decision del fundador, la LD-82 del 643, y el
+  cierre de OP-D-03 sin fusion porque el acto dejo de existir).
+
+Las dos caidas del bucle, leidas por mi del loop.log de hoy (las ocho lineas que el
+reporte cita son LITERALES, cotejadas contra el fichero): el auditor de la 34 corrio
+1.089 segundos, gasto 12,43 USD y NO ESCRIBIO NADA (el auditor mudo, la especie que el
+parche del fundador en el orquestador ya caza); el de la 35 fallo a los 4 segundos y el
+reintento de 30 minutos que el orquestador anuncio NUNCA aparece en el log: la linea
+siguiente es del 18 de agosto. Son dos especies distintas y la segunda sigue sin
+sintoma instrumentado (seccion 5, pendiente de bucle).
+
+Gate 0 y las suites fueron RE-CORRIDOS POR MI en esta vuelta, como manda el paso 0
+para un hueco. Nada de esta acta se hereda de un acta previa.
+
+## 1. VERIFICACION, todo por corrida propia de hoy (18 ago 2026)
+
+**De la vuelta 36 (el reporte en la mesa):**
+- Rama pasada-unica, HEAD 279745e7. CUATRO commits desde la decision del fundador
+  3a7d1549: la apertura 10615460, c8c4e0b3 (TAREA 1), 97552714 (TAREA 2) y el del
+  reporte. git diff --stat 10615460..97552714: **41 ficheros, 4.360 insertadas, 30
+  borradas**, identico al reporte; por carpeta 27 de docs/loop, 6 de scripts/loop, 5 de
+  docs/plan y los tres sueltos, que suman 41. **dataset/ y web/ con CERO ficheros
+  tocados**, medido por name-only filtrado.
+- **Marcador recomputado del archivo con comando propio**: n 3.388, A 575, B 83, C 8,
+  D 2.722; cero huecos, cero duplicados, rango 1 a 3.388. Identico al CIERRE.
+- **Diff propio del archivo de veredictos entero contra la apertura**: n 3.388 en los
+  dos, cero altas, cero bajas, y los UNICOS seis registros cambiados son los seis
+  volcados (277, 374, 452, 643, 1571, 1575), los seis de A a D, los seis con SOLO
+  clase y razon movidos, y la razon vieja LITERAL dentro de la nueva en los seis
+  (573/4.657, 664/3.721, 569/4.652, 1.093/8.456, 1.574/4.945, 1.452/4.823 caracteres).
+  La aritmetica cierra exacta: A menos 6, D mas 6.
+- **Tasa por dominio por conteo propio**: identica al digito a la tabla del reporte
+  (core 336 de 1.445, y los otros nueve dominios quietos).
+- **Grafo por conteo propio sobre dataset/nodos**: 3.853 ficheros, 3.538 vivos, 315
+  deprecados.
+- **El instrumento de estado re-corrido por mi** (vuelta31_estado.py): 84 lineas, y
+  contra SALIDA_V36_CIERRE.txt las unicas diferencias son el rotulo. Enlaces 16.849 y
+  15 claves, 71 operaciones LISTA con 0 dependencias rotas, inventario 672, indice
+  rojo 18 lineas con 0 ausentes, fronteras 14 de 15: todo quieto y verificado.
+- **Gate 0 corrido por mi con el ciclo entero** (run_phase1 --reaplico-curaduria,
+  etiquetas_de_cara --aplicar con 71 etiquetas, sync_assets_web con seis assets):
+  exit 0, GATE 0: OK, 20 [OK] y 0 [FALLO], y el derivado queda **BYTE IGUAL** (git
+  status limpio tras el ciclo entero). **Suites por corrida propia**: motor 25 de 25
+  exit 0; web 80 ficheros, 1.030 pasadas, 3 saltadas, exit 0; tsc cero lineas exit 0.
+- **El verificador de mapas corrido por mi CON LOS TRES PLANES** (EMBLEMA, OPD02_FUSION,
+  OPD03_AB): 3 tablas, 17 filas, 0 discrepancias, OK. Y la media vara del pendiente 7
+  comprobada: sin --json el instrumento corre solo la vara 1, y HOY LO DECLARA EN VOZ
+  ALTA en su propia salida, que es la mitad buena del pendiente.
+- **El recomputo re-corrido ENTERO por mi** (scripts/plan/recomputo_3388.py): salida
+  IDENTICA a la commiteada salvo la primera linea. A crudas 575, pares distintos del
+  retrato 574, nodos con al menos una A 845, actos 333, CERRADOS 279 sobre 598,
+  ABIERTOS 54 sobre 247, y las cuatro comprobaciones del 08_VERIFICACION: TODAS OK.
+- **OP-D-03 contra la apertura por diff propio**: 71 operaciones, ninguna alta ni baja,
+  UNA SOLA operacion con UN SOLO campo movido (la nota), la vieja de 2.283 caracteres
+  LITERAL dentro de la nueva de 5.200, superviviente en null y eliminar vacio.
+- **La decision del fundador leida del fichero de paradas**: los tres puntos (volcar
+  las cinco; el 643 como dirigida dentro de OP-D-03 con alcance dentro del acto en
+  operacion; D cierra sin fusion, A replantea) cubren EXACTAMENTE lo ejecutado. El
+  ejecutor no piso ni un centimetro fuera de la letra.
+- **El sello de la 35 comprobado**: PROPUESTA_V35_RELECTURAS.json conserva su campo
+  estado diciendo PROPUESTA NO VOLCADA (discutible d6, adjudicado abajo).
+
+**De la vuelta 34 (sin acta, auditada aqui):**
+- **La aritmetica de su marcador cierra exacta**: del cierre de la 33 (A 582, B 84,
+  C 8, D 2.714) al cierre de la 34 (A 581, B 83, C 8, D 2.716) van exactamente las dos
+  relecturas que declaro: el 738 de B a D y el 1061 de A a D, cotejadas en su salida y
+  en el archivo de hoy.
+- **El caso positivo del reciprocado**: 23 PASAN, 0 CAEN medido DESPUES del ciclo
+  entero de Gate 0 (SALIDA_V34_OPD02_CASO_TRAS_GATE0.txt), y la correccion declarada
+  del plan conserva la cifra vieja (23 de 23 antes del Gate, 22 de 23 despues) con su
+  causa: el paso 5 del Gate reciprocaba lo que nace en deprecados, corregido por
+  decision del fundador (opcion a). La cifra de hoy la sostiene mi propia corrida del
+  Gate: paso 5 con 0 nodos actualizados.
+- **Costuras recalibrado**: umbrales pareja 80 y bloque 44, y el instrumento se declara
+  MAL CALIBRADO en su salida (la calibracion conocida no aparece en la cola). LA PUERTA
+  SIGUE ROJA Y PUBLICADA, que es la conducta que la casa manda: fallar ruidoso.
+- **Las lecturas dirigidas LD-75 a LD-81 medidas hoy**: 5, 4, 3, 2, 3, 2 y 5
+  apariciones en LECTURAS_DIRIGIDAS.md, identico al reporte.
+- **El criterio del 738 LEIDO Y AUDITADO** (discutible d4, abajo).
+
+**De la vuelta 35 (sin acta, auditada aqui):**
+- **La medicion de rancios verificada contra los ficheros de hoy**: los cinco rancios
+  (277, 374, 452, 1571, 1575) con las cuentas de pasos entonces/hoy que la salida
+  declara (10 a 5, 9 a 5, 15 a 5, 9 a 5, 15 a 5), y los tres AL DIA (643, 738, 1061).
+  Los numeros de pasos de hoy los conte yo sobre dataset/nodos: calzan todos.
+- **La 35 no volco nada**: su apertura y su cierre son identicos en cifras (diff propio
+  de las dos salidas), y la apertura de la 36 arranca en el mismo marcador
+  (581/83/8/2.716). El sello quedo sellado y la PARADA fue limpia.
+
+## 2. RELECTURA CIEGA, empezando por los discutibles marcados
+
+Los SEIS nodos del acto impresos ENTEROS por mi (titulo, resumen, activacion, pasos,
+entregable) ANTES de destapar razon alguna. Adjudique mi clase por par y SOLO DESPUES
+lei lo escrito.
+
+| par | mi clase a ciegas | la escrita | resultado |
+|---|---|:---:|---|
+| 277 | D: triaje de programas (revisar, escalar el productivo, matar el decepcionante) contra bucle de metricas con LTV mayor que CAQ; los procedimientos ya no se pisan | D | **COINCIDE** |
+| 374 | D: alternativas de propuesta de valor con umbral del 95 contra impacto de una funcionalidad por cohortes con hipotesis primero | D | **COINCIDE** |
+| 452 | D: manual de optimizacion de elementos de landing (un elemento a la vez, semanas, ganadora e iterar) contra duelo de variantes con significancia | D | **COINCIDE** |
+| **643** | **D**, y es el apretado de verdad: ni un texto contiene al otro, los entregables son dos productos distintos, y lo mas caro de perder vive en un lado (el 95) mientras la busqueda iterativa vive en el otro | D | **COINCIDE, y es el discutible d1** |
+| 1571 | D: rigor de cohortes de Ries contra rondas de precio de VPD | D | **COINCIDE** |
+| 1575 | D: manual de elementos web contra validacion de monetizacion | D | **COINCIDE** |
+
+**SEIS DE SEIS COINCIDEN EN EL FONDO.** Y de fondo, con los mismos seis nodos delante:
+las siete LD-75 a LD-81 releidas (las siete D confirmadas por lectura propia; las
+figuras de madre e hijo de LD-76, LD-79 y LD-80 son reales: el procedimiento del hijo
+expande UNA linea de la madre), y el 738 y el 1061 leidos razon contra texto de hoy
+(D las dos). **La medicion de contencion del 643 verificada declaracion por
+declaracion**: las dos parejas declaradas son reales (definir contra definir casi
+verbatim; medir contra medir con metrica distinta) y las tres ausencias son ausencias
+(equitativo y 95 no estan en test_ab_precio; canal real, rondas multiples y seleccion
+de ganadora no estan en split_testing).
+
+**Las cinco razones viejas, leidas despues de adjudicar**: las cinco afirman gestos
+compartidos que HOY no existen en los ficheros. El caso extremo es el 277: los CINCO
+gestos que su razon vieja daba por comunes, hoy NINGUNO esta en los dos nodos, y lo
+comprobe gesto por gesto contra los pasos. El volteo no es una opinion nueva: es el
+texto nuevo.
+
+## 3. LAS CAIDAS, con nombre
+
+- **Del ejecutor: CERO en las tres tandas.** Ni de clase, ni de cifra publicada, ni de
+  reporte. Toda cifra y toda afirmacion que coteje (y fueron todas las del reporte de
+  la 36 mas las nucleares de la 34 y la 35) calza al digito. **La racha de caidas de
+  reporte (la 32 y la 33, DOS seguidas) queda ROTA: cuenta en CERO.**
+- **Del auditor: UNA, y es de las gordas aunque no sea de dictado: el auditor de la
+  vuelta 34 corrio entero, gasto 12,43 USD y no escribio acta.** Se registra como
+  caida de acta del auditor, la segunda del acumulado. La caida de la 35 (fallo
+  instantaneo y reintento que no volvio) es del ORQUESTADOR, no de dictado: no se
+  cuenta en el credito y va como pendiente de bucle (seccion 5).
+
+## 4. ADJUDICACIONES de los once discutibles
+
+1. **d1 (el 643 leido D) COINCIDE POR CIEGA PROPIA.** Tres medidas que no dependen del
+   razonamiento del ejecutor: ninguno contiene al otro (verificado paso a paso);
+   los entregables son dos productos distintos (resultados comparativos con
+   significancia contra un precio validado); y una A manda fundir, y un par que
+   repite tiene un superviviente capaz de absorber sin perdida, cosa que aqui no
+   existe porque el 95 vive en un lado y las rondas en el otro. La frase literal del
+   catalogo (precio dentro del paso 1 del general) es real y es lo que hace honesto
+   el marcado, pero una palabra dentro de un parentesis no es un procedimiento: la
+   prueba de madre e hijo del 9.6.2 se corrio y NO se cumple (tres de cinco pasos del
+   hijo sin casa).
+2. **d2 (voltear con razon vieja exacta) PROCEDE POR LETRA DEL FUNDADOR.** La decision
+   del 15 ago, punto 2, manda leer el 643 como dirigida dentro de OP-D-03, con el
+   alcance escrito: dentro del acto en operacion, nunca fuera. Una lectura mandada que
+   cambia el veredicto no es re-cribar: es el resultado de leer. La frontera la fijo
+   el fundador y este par esta dentro.
+3. **d3 (sin arista) COINCIDE POR CRITERIO YA ESCRITO.** El criterio adjudicado en el
+   acta 33 (d11): arista que falta donde hay madre e hijo del 9.6.2, nada donde el
+   solape es linea contra linea. Aqui madre e hijo NO se cumple y el solape son dos
+   parejas linea contra linea, la figura del 827. Sin arista es aplicar el criterio.
+4. **d4 (cinco volcados sobre el criterio del 738) RESUELTO POR ESTA ACTA.** La 34
+   queda auditada aqui y el criterio del 738 (la mecanica compartida no basta, el
+   objeto decide) LEIDO: es el 9.6.1 y el 9.6.2 dichos para esta familia, no doctrina
+   nueva. Y las cinco no cuelgan solo de el: cayeron porque sus razones viejas
+   afirmaban gestos que ya no existen, verificado par a par, y mi ciega da D en las
+   cinco sin usar ese criterio.
+5. **d5 (cerrar con estado LISTA) PROCEDE CON PENDIENTE ANOTADO.** La regla 5 prohibe
+   inventar vocabulario, el esquema no tiene otro estado, y OP-D-01 y OP-D-02 sientan
+   el precedente. El pendiente de doctrina (un estado HECHA en el esquema) es del
+   fundador y NO bloquea: la nota registra el hecho y esta acta la leyo.
+6. **d6 (el sello NO VOLCADA de la propuesta) PROCEDE CON CORRECCION CHICA ENCARGADA.**
+   El sello de otra vuelta no se reescribe (criterio del 14 ago), pero un fichero de
+   estado que dice NO VOLCADA cuando ya se volco es exactamente el papel que envejece
+   del 9.10. La figura ya existe en esta misma vuelta: el AVISO DE CORTE que el
+   ejecutor puso al apartado b del RECOMPUTO_3388 sin remedirlo. Se encarga el mismo
+   gesto: un campo nuevo FECHADO que apunte al volcado, sin tocar el campo estado ni
+   las filas selladas. Va en la TAREA 1 del encargo.
+7. **d7 (tramos del cribado sin corregir) PROCEDE POR CRITERIO YA ADJUDICADO** (acta
+   33, pendiente 4): las fotos de corte no se reescriben, se citan y la discrepancia
+   se declara. El pendiente 8 (la regla escrita del alcance del barrido) sigue vivo.
+8. **d8 (reutilizar el instrumento de la 34) PROCEDE Y EL RIESGO QUEDO CERRADO**: esta
+   acta audita la 34, y la salida de los nodos enteros la contraste contra los
+   ficheros de hoy.
+9. **d9 (la correspondencia declarada a mano) COINCIDE**: las parejas las verifique yo
+   contra el texto de los pasos, una por una. La correspondencia queda leida por dos.
+10. **d10 (la figura propuesta en el plan) PROCEDE CON NOTA**: esta escrita como
+    propuesta sin adoptarse (linea 1234 de 02_DESTEJIDOS.md) y proponerla donde el
+    caso vive es mejor que perderla en un cajon. La adopcion es del fundador.
+11. **d11 (tres commits y el reporte cuatro) CORRECTO**: cuatro commits contados por
+    mi. Las dos cifras escritas evitan exactamente la ambiguedad por la que cayo la
+    33. Cero caida.
+
+## 5. PENDIENTES DE DOCTRINA, adjudicados o nombrados
+
+- **Pendientes 1, 2 y 3 del reporte (estado HECHA en el esquema; que hace el plan con
+  un acto disuelto; la figura del acto que muere de su propio destejido): REALES, DEL
+  FUNDADOR, Y NO BLOQUEAN.** Ninguno impide OP-D-04 ni ninguna operacion del orden.
+  Sobre el 2 dejo MEDIDA la deriva para cuando se conteste: el inventario tiene 556
+  filas de tipo acto (221 superadas mas 335 vigentes, contadas por mi en
+  INVENTARIO.jsonl) y el censo de hoy da 333 actos: dos de diferencia, que son los
+  dos actos que esta campana disolvio o partio despues del corte del inventario. Si
+  una operacion futura pisa cualquiera de los tres, ahi es PARADA, no improvisacion.
+- **Pendiente 4 (el orquestador no ve al proceso que anuncia una espera y no vuelve):
+  DE BUCLE Y DE FUNDADOR.** No detiene el bucle (esta acta es la prueba de que
+  volvio a andar), pero la especie existe y costo tres dias. Recomendacion concreta
+  para cuando Alexis lo tome: que el orquestador escriba el reintento prometido en el
+  log ANTES de dormirse, con hora; un hueco entre la promesa y la hora se vuelve
+  sintoma medible.
+- **Pendientes 5 a 9 del reporte: SIGUEN VIVOS y ninguno bloquea.** El 6 (costuras)
+  lleva su guarda natural: si una operacion necesita la cifra del instrumento que se
+  declara mal calibrado, eso es guarda en rojo y convoca, no se improvisa umbral.
+
+## 6. METRICA DE CREDITO acumulada
+
+Entrante (acta 33): 43 relecturas, 409 puestos (mas 209 nodos de forma y 53 sitios de
+codigo), 7 caidas de clase, 15 de reporte del ejecutor, 7 de cifra publicada del
+ejecutor, 2 de cifra del auditor, 1 de acta del auditor.
+
+Esta acta (TRES tandas: 34, 35 y 36): mas 3 relecturas; mas 6 puestos releidos a
+ciegas (los seis volcados, SEIS DE SEIS COINCIDEN) y 9 de fondo (LD-75 a LD-81, 738,
+1061); mas 6 nodos leidos enteros; mas 14 sitios de codigo o instrumentos re-corridos
+(el ciclo entero de Gate 0 con byte igual, motor, web, tsc, verificador de mapas con
+los tres planes, estado, recomputo entero, marcador propio, diff de veredictos, diff
+de OPERACIONES, la salida del 643 contra los ficheros, loop.log, tasa por dominio,
+inventario). Caidas: CERO del ejecutor en las tres tandas; mas 1 de acta del auditor
+(la 34, el mudo, con nombre).
+
+**Acumulado: 46 relecturas, 424 puestos (mas 215 nodos de forma y 67 sitios de
+codigo), 7 caidas de clase, 15 de reporte del ejecutor, 7 de cifra publicada del
+ejecutor, 2 de cifra del auditor, 2 de acta del auditor.**
+
+**Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte seguidas: CERO,
+racha rota.**
+
+## 7. LAS CONDICIONES DE PARADA, recorridas una a una: NINGUNA SE CUMPLE
+
+Doctrina nueva necesaria: NO (nada de lo pendiente bloquea la siguiente operacion;
+lo que la pise, para). Contradiccion sin regla de correccion: NO. Decision de fundador
+pisada: NO (la del 15 ago se ejecuto a la letra). Fallo tecnico repetido: NO (todo
+verde por corrida propia hoy). Credito roto: NO (racha en cero; la unica caida es de
+acta del auditor y esta declarada). Campana consumada: NO. Credenciales: no hicieron
+falta. El hueco de acta queda CUBIERTO por esta acta.
+
+**El bucle REANUDA EL MODO DE EJECUCION CONTINUA con OP-D-04.** El encargo esta en
+PROMPT_SIGUIENTE.md: TAREA 1 el aviso fechado de d6, TAREA 2 el modo continuo desde
+OP-D-04 por el orden del 00_INDICE con las guardas de la seccion 3 del AUDITOR.

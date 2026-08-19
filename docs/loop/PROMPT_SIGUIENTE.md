@@ -1,24 +1,30 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
-TAREA 1: volcar las cinco relecturas de PROPUESTA_V35_RELECTURAS.json por el
-carril del banco 9.10 (REESCRITA EL ... POR ..., razon vieja dentro, barrido de
-toda tabla derivada en el mismo acto, marcador recomputado con el instrumento:
-esperado A 576 / B 83 / C 8 / D 2721 con n 3388; si da otra cosa, PARAR).
+TAREA 1, registros (adjudicacion d6 del acta de las vueltas 34-36): anadir a
+docs/loop/PROPUESTA_V35_RELECTURAS.json UN campo nuevo fechado (por ejemplo
+"aviso_posterior") que diga que las cinco relecturas se volcaron el 18 ago 2026
+en la vuelta 36 por scripts/loop/vuelta36_volcado_910.py (lote
+docs/loop/_lote_v36.jsonl) y que el 643 fue por su propio carril
+(docs/loop/_lote_v36_643.jsonl). SIN tocar el campo "estado" ni las filas
+selladas: es la figura del AVISO DE CORTE, el sello se conserva y el aviso se
+fecha. Nada mas de registro: las adjudicaciones viven en el acta.
 
-TAREA 2: leer el 643 como lectura dirigida por P.5 con los dos nodos impresos
-ENTEROS antes de decidir y las aristas buscadas en los dos sentidos; registrarla
-en LECTURAS_DIRIGIDAS.md; si D, volcarla por el mismo carril y cerrar OP-D-03
-con destejido hecho y sin fusion, correccion declarada; si A, replantear OP-D-03
-como fusion de dos por correccion declarada (superviviente por 9.3.1 y P.8), y
-ejecutarla con simulacion previa, plan sellado, tabla de perdidas, caso positivo
-antes y despues, P.16 y el ciclo de Gate 0 con las suites.
-
-TAREA 3: DETENERSE AHI. NO seguir el modo continuo en esta vuelta. El REPORTE
-abre con la seccion VUELTAS 34 Y 35 SIN ACTA, listando lo que cada una hizo (la
-34: reciprocado de deprecados fuera de Gate 0 con 23 de 23, costuras
-recalibrado, pasos 1 y 3 de OP-D-03, LD-75 a LD-81; la 35: medicion de P.5 y las
-cinco relecturas selladas) y pidiendo verificacion completa de 34, 35 y 36 antes
-de reanudar el modo continuo.
+TAREA 2, el trabajo: REANUDAR EL MODO DE EJECUCION CONTINUA (AUDITOR.md seccion
+3) con OP-D-04 y las operaciones que sigan segun el orden del 00_INDICE. Para
+OP-D-04 rige su nota tal como esta escrita: la fuente primero (verificar que
+OP-F-02 y OP-F-03 estan ejecutadas antes de apoyarse en ellas), el destejido
+despues, los tres gemelos 823, 834 y 844 al final y en un solo acto, y P.5 con
+su alcance adjudicado: el acto se lee ENTERO despues de su destejido y antes de
+su fusion, dentro del acto en operacion y nunca fuera. Guardas obligatorias por
+operacion: simulacion previa sobre copia en memoria, Gate 0 y las suites en
+verde tras cada fase con el derivado byte igual, caso positivo de cada
+operacion, cero duplicadas o auto-aristas tras resolver, barrido del 9.10 de
+toda tabla derivada en el mismo acto de cada volcado, y el criterio del
+instrumento: toda cifra publicada sale de una corrida de ESTA vuelta. Si una
+operacion necesita la cifra de costuras_internas.py mientras el instrumento se
+declare mal calibrado, eso es guarda en rojo: PARAR y convocar, no improvisar
+umbral. Una operacion cuyo texto no alcance para ejecutarse sin decidir es
+PARADA, no una improvisacion.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
-contradice una regla vigente, paras y lo traes.
+contradice una regla vigente, paras y lo traes. No adivines.
