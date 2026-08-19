@@ -2346,3 +2346,56 @@ El par **341** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 | censo esperado | ficheros **3.853** sin moverse, vivos **3.530 menos 1**, deprecados **323 mas 1** |
 
 **Y EL CASO POSITIVO ANTES, que TIENE que caer:** `python scripts/loop/vuelta39_caso_positivo.py docs/loop/PLAN_V41_ACTO341.json`, sellado en `docs/loop/SALIDA_V43_ACTO341_CASO_ANTES.txt`: **13 PASAN y 22 CAEN**, **exit 1**, con la conservacion aparte en **4 vivos y 1 muerto**. El rastro muerto es *manual operativo*, que hoy vive solo en el resumen del donante.
+
+### `OP-D-06` ACTO 341 CERRADO: **LA FUSION EJECUTADA** (19 ago 2026, vuelta 43)
+
+`python scripts/loop/vuelta39_fundir.py --plan docs/loop/PLAN_V41_ACTO341.json --ejecutar`, salida sellada en `docs/loop/SALIDA_V43_ACTO341_EJEC.txt` con **exit 0** y **LAS TRECE GUARDAS EN VERDE**. Las doce primeras ya salieron verdes en la simulacion previa; **la trece solo puede correr en `--ejecutar`**, porque es el censo.
+
+| lo medido al ejecutar | como salio |
+|---|---|
+| **censo (guarda 13)** | ANTES **3.853** ficheros, **3.530** vivos, **323** deprecados; DESPUES **3.853**, **3.529**, **324**. *El censo no se movio y los vivos bajaron en 1*: **OK** |
+| **enlaces** | **16.880** antes, **16.885** despues, **mas 5 exactos**. La aritmetica cierra sin resto: las **5 redirecciones** son CAMBIOS de id en la lista del vecino (neto **cero**), el absorbido conserva su lista intacta (**cero**), y los **mas 5** son las **5 vistas reciprocas** que la simetrizacion le escribe al superviviente |
+| **el contenido (guardas 1 a 7)** | **VERBATIM 13 de 13** con 0 sobrantes, cobertura de pasos **9 de 9** y de condiciones **4 de 4** sin repetidos ni faltantes ni sobrantes, `preservar_literal` **10 de 10** y rastros **5 de 5** en el resultante entero |
+| **el cableado (guardas 8 a 12)** | redirecciones **5 de 5** sobre vivos, deprecados que nombran **0**, `P.16` **CERO duplicadas fabricadas**, cero auto-arista y cero duplicada tras resolver, **titulo y etiqueta SIN TOCAR** |
+| **`reanclar_por_resolutor.py` ENTRE la fusion y `run_phase1`** | corrido, **EN BLANCO**: *nada que re-anclar: ninguna referencia apunta a un absorbido*. Se corrio igual |
+| **la simetrizacion, EXACTA** | `vuelta39_guarda_simetrizacion.py`: **5 entradas en el log del ciclo, las 5 del superviviente, 0 de otros nodos, faltan 0 y sobran 0**, y las **5 releidas en el fichero** del superviviente. Las dos guardas verdes |
+| **ciclo Gate 0 de TRES comandos** | `run_phase1 --reaplico-curaduria` **GATE 0: OK** con sus **veinte** renglones en `[OK]` y **cero en rojo** (paso 5: **1 nodo actualizado, 2 vistas en `nodos_siguientes` y 3 en `nodos_previos`**; universo **3.529 activos y 324 deprecados**), `etiquetas_de_cara --aplicar` **71 etiquetas**, `sync_assets_web` **seis assets** con `master_graph.json` de **8.136.519 bytes** y sha256 **`a770a7f7953f`** |
+| **las suites** | motor **25 de 25**, web **80 ficheros con 1.030 pasadas** y 3 saltadas, `tsc` **cero lineas**. Los tres **exit 0** |
+| **caso positivo antes y despues, mismo instrumento** | ANTES **13 PASAN y 22 CAEN** (exit 1, y **tiene que caer**); DESPUES **36 PASAN y 0 CAEN** (exit 0), conservacion **5 vivos y 0 muertos** |
+
+### LOS REGISTROS QUE NO SON EL GRAFO: **CINCO VIVOS, Y CUATRO NOMBRAN AL SUPERVIVIENTE**
+
+`scripts/loop/vuelta40_registros_no_grafo.py`, corrido **ANTES** de fundir, salida en `docs/loop/SALIDA_V43_ACTO341_REGISTROS.txt`. **Son CINCO, y hay que separarlos porque no son de la misma especie: cuatro nombran al que SOBREVIVE, y en esos no hay absolutamente nada que redirigir.**
+
+| el registro vivo | a quien nombra | que pasa con el |
+|---|---|---|
+| `dataset/metadata/alias_map_capa_b.json` | al **superviviente** (`mapeo_recorrido_cliente` apunta a el) | **nada**: el id al que apunta sigue vivo |
+| `dataset/metadata/alias_map_capa_c.json` | al **superviviente** | **nada**, por lo mismo |
+| `dataset/metadata/review_candidates.json` | al **superviviente** | **nada**, por lo mismo |
+| `dataset/metadata/unresolved.json` | al **superviviente** | **nada**, por lo mismo |
+| `docs/_censo_duplicacion.json` | al **ABSORBIDO** | es **salida de su propio instrumento con su corte**: lo escribe `scripts/censo_duplicacion.py`, lo lee solo `scripts/preparar_poda.py`, y **su corte es viejo** (dice **3.835** nodos, cuando el grafo mide 3.853 hoy). Misma especie residual que `docs/GRADIENTE_PARES.jsonl` del acto 331. **Se regenera solo cuando su instrumento vuelva a correr, y no se toca dentro de un acto de fusion** |
+
+**Y LA COMPROBACION DIRIGIDA sobre la especie que si tumbo el Gate 0 en la vuelta 39 da CERO: los NUEVE `bridges_aprobados.json` nombran a los nodos 0 veces.** El Gate 0 de hoy lo confirma por su lado: *Ningun puente aprobado apunta a un nodo deprecado (valor: 0 rotos)*.
+
+### EL INSTRUMENTO DE COSTURAS SOBRE EL RESULTANTE: **CITA, Y LA FUSION BAJO LA SENAL EN VEZ DE SUBIRLA**
+
+`python scripts/costuras_internas.py` corrido DESPUES de fundir (`docs/loop/SALIDA_V43_COSTURAS_TRAS_FUSION_341.txt`, **exit 0**): la cola se queda en **1.495** nodos, ahora sobre **3.529** activos, el **42,4 por ciento**. **La cola no se movio ni un nodo, y el motivo esta medido: el absorbido ya estaba FUERA antes de fundirse**, asi que al deprecarse no habia sitio del que sacarlo.
+
+`python scripts/loop/vuelta42_senal_antes_despues.py --nodo customer_journey_mapping --commit 5bb0106f --nombre "OP-D-06 acto 341"`, sellado en `docs/loop/SALIDA_V43_ACTO341_SENAL.txt`:
+
+| | pasos | pareja | bloque | contra el umbral 44 |
+|---|---:|---:|---:|---|
+| **antes**, leido de git `5bb0106f` | 5 | 51,2 | **49,4** (corte tras **2**) | **SOBRE** por **mas 5,4**: **YA ESTABA DENTRO** |
+| **despues**, del fichero de hoy | 5 | 50,0 | **48,7** (corte tras **3**) | **SOBRE** por **mas 4,7**: **sigue DENTRO** |
+
+**LA FUSION NO ENCENDIO LA SENAL: el nodo ya estaba dentro antes de fundirse y sigue dentro. La cita no es nueva.**
+
+> **Y HAY UN HALLAZGO QUE SE DECLARA PORQUE CONTRADICE EL PATRON PUBLICADO, no porque convenga:** el movimiento es de **MENOS 0,7 puntos**. **Es la primera fusion de la campana en la que la senal de bloque BAJA.** Las cuatro medidas anteriores con este instrumento y su hermano mayor subieron todas (la vuelta 40 midio tres casos y el acto 285 de esta operacion subio **mas 5,2**), y de ahi salio la glosa de que *fundir sube la senal por un mecanismo mecanico*. **La glosa sigue siendo cierta como tendencia y ya no como ley**, y la propia salida del instrumento la sigue imprimiendo tal cual, asi que **la contradiccion queda a la vista en vez de taparse.** El motivo medido esta en el corte: **se movio de 2 a 3**, o sea que el bloque que el instrumento compara **ya no es el mismo**; con los pasos 1 a 3 contra los 4 y 5, el solape sale menor que con los 1 y 2 contra los 3, 4 y 5. **La fusion no diluyo el solape: cambio donde el instrumento parte el nodo.**
+
+**Y LA LECTURA TEXTUAL, que es la que decide: NO HAY COSTURA.** La cita de hoy es **pareja 3 y 5** (*Identifica todos los touchpoints* contra *Prioriza las mejoras en los puntos de mayor impacto*, **50,0**, muy por debajo del umbral de 80) y **bloque con corte tras 3**: los pasos **1 a 3** levantan el mapa (observar, documentar las etapas con sus momentos, abrir las etapas en touchpoints) y los pasos **4 y 5** lo juzgan y deciden (evaluar cada touchpoint con las dos varas, y priorizar por impacto). **El paso 4 empieza evaluando el objeto que el paso 3 acaba de fabricar: CONTINUA en vez de volver a contar.** Comparten vocabulario (*touchpoint*, *cliente*, *puntos*), no narracion. **La cita queda registrada en la cola y no despachada, y el auditor la relee.**
+
+### LAS RELECTURAS POST FUSION: **CERO PARES, Y ESTA VEZ SIN NI SIQUIERA UN TERCERO QUE MIRAR**
+
+**CERO pares B o C vuelven a la cola por este acto.** La medicion es la de la lectura sellada (`docs/loop/SALIDA_V43_ACTO341_LECTURA.txt`, bloque (d)) y es mas fuerte que la del acto 331: alli habia **cuatro** terceros y habia que comprobar la clase de los cuatro; **aqui NINGUN par del archivo mete a un tercero con cualquiera de los dos**, asi que no hay ni un candidato que releer. **El marcador de clases NO se mueve en este acto** y por eso no se imprime tabla de marcador.
+
+**Y LA COMPROBACION DEL REPARTO, hecha al cierre y no supuesta** (que es lo que el plan dejo encargado): la tabla de `P.13` del plan sellado da **13 de 13 piezas que VIAJAN y CERO que se pierden**, y la guarda 3 de la ejecucion lo confirma contra `dataset/nodos` con **13 de 13 verbatim que calzan y 0 sobrantes**. **Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026, y el reparto escrito del acto (*mapa contra mapa*) se cumplio en su forma: los dos destejidos los hizo `OP-F-04-COL` y este acto ejecuto el tercer movimiento.**
