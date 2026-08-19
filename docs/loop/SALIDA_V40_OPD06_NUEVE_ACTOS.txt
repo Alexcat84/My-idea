@@ -1,0 +1,61 @@
+OP-D-06 ABIERTA Y MEDIDA, ACTO POR ACTO. 19 ago 2026, vuelta 40
+==============================================================================
+LA PARTICION, leida de la tabla sellada de docs/plan/02_DESTEJIDOS.md:
+  actos hallados en la tabla: 9
+  nodos en la nomina de OPERACIONES.jsonl: 18
+  nodos nombrados por la tabla: 18
+  GUARDA, la tabla y la nomina son el MISMO conjunto: OK (faltan [], sobran [])
+
+POR QUE ESTO Y NO EL HERMANO MAYOR: vuelta39_acto.py --op OP-D-06 aborta
+con 144 pares sin clase sobre 153 posibles. NO faltan 144 veredictos:
+es que los pares CRUZADOS entre actos distintos nunca fueron un par.
+OP-D-06 son NUEVE actos de dos, y asi lo dice su propio titulo.
+
+==============================================================================
+LOS NUEVE ACTOS, MEDIDOS UNO A UNO
+==============================================================================
+puesto  clase nodo A                                       nodo B                                       pasos   cableado  cojas     misma fuente
+285     A     producto_unico_superior                      superioridad_producto_beneficios             6/6     6/7       0/0       SI
+331     A     propuesta_gasto_capital                      analisis_de_gastos_de_capital                5/5     2/5       0/0       NO
+341     A     blueprint_de_experiencia                     customer_journey_mapping                     4/5     5/9       0/0       NO
+344     A     plan_de_adquisicion_acquire                  plan_acquire_activate                        7/7     8/3       0/0       NO
+361     A     key_partners_hypothesis                      partners_hypothesis_physical                 5/5     6/6       0/0       SI
+392     A     metricas_de_adquisicion_activacion           build_metrics_toolset                        5/5     7/6       0/0       NO
+494     C     principio_calidad_mvp                        producto_minimo_viable                       7/6     7/56      0/0       NO
+711     A     future_scenarios_planning                    escenarios_futuros                           5/7     10/3      0/0       NO
+969     A     retention_metrics                            customer_retention_metrics_webmobile         5/6     4/4       0/0       SI
+
+  reparto de clases: {'A': 8, 'C': 1}
+  actos con los DOS nodos vivos: 9 de 9
+  actos de la MISMA fuente: 3 de 9
+
+==============================================================================
+9.3.1 SOBRE LOS PARES A: quien nombra ganador en su razon
+==============================================================================
+  285    A     producto_unico_superior con superioridad_producto_beneficios   nombra ganador: NO
+        razon (508 caracteres): REPITE con superioridad_producto_beneficios. Los dos mandan lo mismo y con el mismo argumento de Cooper: salir a investigar necesidades y deseos del cliente desde el inicio del proyecto, definir el producto como un conju
+  331    A     propuesta_gasto_capital con analisis_de_gastos_de_capital   nombra ganador: NO
+        razon (652 caracteres): REPITE con propuesta_gasto_capital. Los dos mandan lo mismo para decidir una inversion de capital: reunir todos los costos incluyendo envio e instalacion, proyectar los beneficios, calcular el NPV con la tasa de corte de
+  341    A     blueprint_de_experiencia con customer_journey_mapping   nombra ganador: NO
+        razon (697 caracteres): REPITE con customer_journey_mapping. Los dos mandan lo mismo y con el mismo aviso de partida: acompanar al cliente por todo su recorrido en vez de quedarse en el punto de contacto que uno supone critico, mapear cada etap
+  344    A     plan_de_adquisicion_acquire con plan_acquire_activate   nombra ganador: NO
+        razon (609 caracteres): REPITE con plan_de_adquisicion_acquire. Los dos mandan el mismo plan de adquisicion y en el mismo orden: partir de las hipotesis de segmento ya trazadas, elegir las tacticas, poner un tope bajo de gasto por prueba, decid
+  361    A     key_partners_hypothesis con partners_hypothesis_physical   nombra ganador: NO
+        razon (574 caracteres): REPITE con partners_hypothesis_physical. Los cinco primeros pasos del primero son el segundo entero: listar socios primarios y suplentes por tipo, definir que aporta cada uno y que recibe a cambio, evaluar la flexibilida
+  392    A     metricas_de_adquisicion_activacion con build_metrics_toolset   nombra ganador: NO
+        razon (687 caracteres): REPITE con metricas_de_adquisicion_activacion. Los dos mandan lo mismo y hasta con la misma cifra: partir de que relacion se quiere con el cliente para decidir que medir, quedarse en menos de doce metricas y que todas si
+  494    C     principio_calidad_mvp con producto_minimo_viable   (la prueba de 9.3.1 solo corre sobre A)
+  711    A     future_scenarios_planning con escenarios_futuros   nombra ganador: NO
+        razon (1314 caracteres): El mismo metodo de escenarios contado por dos libros, sin arista entre ellos, y con el solape entero de un solo lado de la costura. escenarios_futuros, de Cooper, manda describir en detalle el mejor y el peor escenario d
+  969    A     retention_metrics con customer_retention_metrics_webmobile   nombra ganador: NO
+        razon (1174 caracteres): EL MISMO TABLERO DE RETENCION, del mismo libro y sin arista entre ellos. Lo comun es el instrumento: rastrear la actividad individual de cada cliente, frecuencia y duracion de visitas y tiempo en sitio, detectar el aband
+
+==============================================================================
+LO QUE FALTA, y por que no se hizo hoy
+==============================================================================
+Cada uno de los nueve es UN ACTO que pide su P.5, su P.8 y su plan
+sellado antes de fundirse, mas los tres cruces con la fase 01 que el
+propio plan avisa (producto_unico_superior y propuesta_gasto_capital en
+OP-F-03, future_scenarios_planning en OP-F-02: en los tres manda fuente
+primero). Esta corrida DEJA LA OPERACION ABIERTA Y MEDIDA, no la
+ejecuta, y lo dice en vez de dar por hecho lo que no se hizo.
