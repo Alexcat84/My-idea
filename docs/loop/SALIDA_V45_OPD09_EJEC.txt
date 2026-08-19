@@ -1,0 +1,34 @@
+PLAN     : docs/loop/PLAN_V45_OPD09.json
+OPERACION: OP-D-09: el destejido de planificacion_recoleccion_datos, DESTEJIDO SOLO, quitar el indice que se colo como pasos
+REGLA    : OP-D-09 de docs/plan/OPERACIONES.jsonl, leida ENTERA hoy antes de tocar nada. REMEDIO: QUITAR EL INDICE, tal como la ficha del gradiente lo tenia escrito, PERO CON LA CORRECCION QUE LA VUELTA 17 MIDIO Y LA FICHA NO DECIA: el indice son los pasos 2, 3 y 4, NO los cuatro. El paso 1 no tiene casa en el metodo de 5 a 16 y ademas sostiene al paso 14, asi que por la REGLA DE REPARTO de la fase (la perdida que no tenga bloque va AL SUPERVIVIENTE) sobrevive como CABECERA del metodo en vez de podarse. EL METODO COMPLETO, pasos 5 a 16, NO SE TOCA.
+MODO     : --ejecutar
+==============================================================================
+
+------------------------------------------------------------------------------
+NODO: planificacion_recoleccion_datos
+  guarda de texto sobre pasos: 16 de 16 calzan
+  cero perdida en pasos: 16 origenes cubiertos de 16
+  EL MAPA DE PASOS, destino <- origenes:
+     1 <- [1]              Establecer objetivos de recolección de datos y formular la pregunta específica  (VERBATIM)
+     2 <- [5]              Definir puntos de recolección de datos comprensivos  (VERBATIM)
+     3 <- [4, 6]           Seleccionar y capacitar recolectores de datos imparciales  (con remedio)
+     4 <- [3, 7]           Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (  (con remedio)
+     5 <- [8]              Auditar el proceso de recolección y validar resultados  (VERBATIM)
+     6 <- [2, 9]           Filtrar y analizar los datos  (con remedio)
+     7 <- [10]             Evaluar supuestos del tamaño de muestra y del análisis  (VERBATIM)
+     8 <- [11]             Aplicar técnicas gráficas y estadísticas al problema original  (VERBATIM)
+     9 <- [12]             Determinar si se necesitan más datos y análisis  (VERBATIM)
+    10 <- [13]             Considerar un análisis de sensibilidad  (VERBATIM)
+    11 <- [14]             Revisar que las conclusiones respondan al problema técnico original  (VERBATIM)
+    12 <- [15]             Presentar los resultados en un informe claro con resumen ejecutivo  (VERBATIM)
+    13 <- [16]             Determinar si las conclusiones aplican a otros problemas  (VERBATIM)
+    procedencia: pasos [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] del resultado <- Juran's Quality Handbook_ The C - Joseph A. Defeo
+  pasos 16 -> 13
+  fuente: "Juran's Quality Handbook_ The C - Joseph A. Defeo"  (SIN CAMBIO)
+
+==============================================================================
+RESUMEN
+  ficheros que se tocarian: 1
+
+ESCRITO: 1 fichero(s) en dataset/nodos/.
+  - planificacion_recoleccion_datos
