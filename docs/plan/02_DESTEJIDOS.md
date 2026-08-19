@@ -3318,3 +3318,84 @@ El par **969** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 **EL VERIFICADOR DE MAPAS con la vara 2**, sobre los **CATORCE** planes sellados que hoy tienen tabla publicada: `docs/loop/SALIDA_V44_VERIFICADOR_MAPAS_969.txt`.
 
 **ESTE PRIMER COMMIT DEJA EL GRAFO INTACTO: cero nodos tocados.**
+
+### `OP-D-06` ACTO 969 CERRADO: **LA ULTIMA FUSION DE LA OPERACION Y LA SEGUNDA RELECTURA QUE VUELVE** (19 ago 2026, vuelta 44)
+
+**LAS TRECE GUARDAS EN VERDE** (`docs/loop/SALIDA_V44_ACTO969_EJEC.txt`, **exit 0**):
+
+| | antes | despues | la cuenta |
+|---|---:|---:|---|
+| **ficheros** | 3.853 | **3.853** | nada |
+| **vivos** | 3.525 | **3.524** | **menos 1**, guarda 13 OK |
+| **deprecados** | 328 | **329** | **mas 1** |
+| **enlaces** | 16.894 | **16.898** | **mas 4 EXACTOS y sin resto**: las cuatro vistas reciprocas de la simetrizacion, **con CERO duplicadas fabricadas que restar** |
+
+**LA GUARDA DE SIMETRIZACION, EXACTA:** **4 de 4** en el log, 0 de otros nodos, faltan 0 y sobran 0, y las cuatro **releidas en el fichero del superviviente**.
+
+**EL CICLO DE GATE 0, DE CUATRO COMANDOS Y CON EL 4 ANTES DEL 3, los cuatro exit 0:** `GATE 0: OK` con **veinte** renglones en `[OK]`; **71** etiquetas; `plan_readiness` con **151 / 3.584 / 118**; `sync_assets_web` con `master_graph` en **sha256 7dc7e9ad2bf2**.
+
+> **LA DERIVA DE FAMILIA, MEDIDA POR TERCERA VEZ EN LA VUELTA: CERO nodos cambian**, y `node_families` repite **sha256 7a98d1852fd0** en los tres actos. **Los tres corrieron el comando 4 y los tres lo dejaron identico**, que es lo que correrlo sirve para saber: **la regla es condicional al CENSO, no al resultado**.
+
+**LOS REGISTROS QUE NO SON EL GRAFO: 4 vivos, y se parten porque la cifra sola no decide.**
+
+| cuantos | quienes | que se hace |
+|---:|---|---|
+| **2** | `dataset/metadata/merged_originals/customer_growth_tactics.json` y `docs/PASO_NODO_CANDIDATOS.jsonl` | **nombran SOLO AL SUPERVIVIENTE, que sigue vivo: no hay nada que redirigir.** Los dos estan **mal clasificados por la heuristica de prefijo** y se dice: la lista ARCHIVO trae `dataset/metadata/merged_originals_v11/` **pero no** `merged_originals/`. `PASO_NODO_CANDIDATOS.jsonl` **ya venia declarado sin lectores en el acto 344**, y su corte viejo se ve al digito otra vez (*pasos_madre 9* cuando el nodo mide **5** desde `OP-F-04-COL`) |
+| **2** | `packs/seguridad_digital/metadata/bridges_candidatos_core_only.json` y `bridges_curaduria.json` | **SI nombran al absorbido, y son LOS MISMOS DOS DEL ACTO 711.** Misma medicion y mismo trato: **cero lectores de codigo**, y la mencion vive dentro de `rechazados_individuales` con su motivo escrito (*Trampa semantica: homonimo 'monitoreo', metricas de retencion no son postura de seguridad*). **Registro de una DECISION con su corte: reescribirlo seria falsificar lo que se rechazo aquel dia** |
+
+**Los NUEVE `bridges_aprobados.json`: 0 veces cada uno**, y re-contado aparte sobre el de `seguridad_digital`, **0 tambien**.
+
+**`reanclar_por_resolutor.py`: EN BLANCO.** **CASO POSITIVO: ANTES 13 PASAN y 21 CAEN** (exit 1); **DESPUES 35 PASAN y 0 CAEN** (exit 0), conservacion **6 vivos y 0 muertos**. **LAS SUITES:** motor **25 de 25**, web **1.030 pasadas y 3 saltadas**, `tsc` **cero lineas**, los tres exit 0.
+
+### LA COSTURA POST FUSION
+
+`python scripts/costuras_internas.py` DESPUES de fundir (`docs/loop/SALIDA_V44_COSTURAS_TRAS_FUSION_969.txt`, **exit 0**): la cola **se queda en 1.494** nodos, sobre **3.524** activos, el **42,4 por ciento**. **Misma compensacion exacta que en el 711**, y se dice otra vez en vez de dejarla como coincidencia: **el absorbido estaba DENTRO y salio al deprecarse (menos 1), y el superviviente estaba FUERA y entro (mas 1)**.
+
+`python scripts/loop/vuelta42_senal_antes_despues.py --nodo retention_metrics --commit 15b3fc54 --nombre "OP-D-06 acto 969"`, sellado en `docs/loop/SALIDA_V44_ACTO969_SENAL.txt`:
+
+| | pasos | pareja | bloque | contra el umbral 44 |
+|---|---:|---:|---:|---|
+| **antes**, leido de git `15b3fc54` | 5 | 53,6 | **42,1** (corte tras 3) | **BAJO** por **menos 1,9**: **FUERA por poco** |
+| **despues**, del fichero de hoy | 6 | 50,8 | **50,6** (corte tras 2) | **SOBRE** por **mas 6,6**: **DENTRO** |
+
+**LA FUSION ENCENDIO LA SENAL**, **mas 8,5 puntos**, y **el corte se movio de 3 a 2**, asi que **la comparacion cambia de objeto** (la advertencia del acto 344). **Y hay que anadir lo que el numero de la izquierda dice y nadie deberia esconder: el nodo YA ESTABA A MENOS DE DOS PUNTOS DEL UMBRAL antes de fundirse.** No paso de limpio a citado: **paso de estar justo debajo a estar encima**, que es una diferencia de grado y no de especie.
+
+**LA LECTURA TEXTUAL, que es la que decide: NO HAY COSTURA.** La ficha de hoy: **pareja 4 y 6** con **50,8** (el umbral de pareja es 80: **no dispara**) y **bloque con corte tras 2**.
+
+- **Pasos 1 y 2:** montar el registro (fecha de inicio, fuente, cohortes por mes de ingreso) y medir la actividad.
+- **Pasos 3 a 6:** mirar el comportamiento dentro del sitio, detectar las senales de salida, convertir todo eso en dinero (valor de vida) y medir lo que la retencion devuelve.
+
+**Cada paso mide algo que ninguno de los anteriores midio, y el 5 solo se puede calcular con lo que el 4 acaba de detectar: es una escalera, no un bucle.** Lo que los dos bloques comparten es **vocabulario de medicion** (*mide*, *monitorea*, *cada cliente*, *retencion*), **y lo comparten porque el nodo entero es un tablero de metricas**: si no lo compartieran, el nodo estaria roto. **La cita queda registrada en la cola y no despachada, y el auditor la relee.**
+
+### LA RELECTURA DEL PAR 233: **DE `B` A `D`, Y ES LA SEGUNDA DE TODA LA OPERACION**
+
+**El puesto 233, `analisis_de_cohortes` contra `retention_metrics`, volvio a la cola por `08_VERIFICACION`** porque el superviviente **cambio de texto al absorber**. Releido con los dos textos delante (`docs/loop/SALIDA_V44_ACTO969_RELECTURA_233.txt`) y corregido con `scripts/corregir_veredicto.py` (`docs/loop/SALIDA_V44_ACTO969_VEREDICTO_233.txt`).
+
+**LA RAZON VIEJA SE CONSERVA ENTERA Y A LA VISTA**, porque una correccion que tapa lo que corrige no se puede auditar:
+
+> ~~*DUDOSO. `analisis_de_cohortes` y `retention_metrics`: el nodo entero del primero, agrupar por cohorte y comparar el comportamiento en el tiempo, es el paso 5 del segundo, que ademas trae CAC, payback de adquisicion y churn temprano. El primero profundiza una linea del segundo.*~~
+
+**ESA RAZON ESTABA RANCIA POR PARTIDA DOBLE, y la primera mitad ni siquiera es culpa de esta fusion:** el **CAC**, el **payback** y el **churn temprano** que atribuia a `retention_metrics` **se fueron con `OP-F-04-COL`** al miembro `persuasion_directivos_prioridad_cliente` (frontera **1 a 5 / 6 a 9** en `01_FUENTES.md` linea **1235**, corte medido en el commit **`575be1e3`**, de 9 pasos a 5).
+
+**LO QUE LOS DOS TEXTOS DE HOY DICEN, y es lo que decide:**
+
+| | `analisis_de_cohortes` (5 pasos) | `retention_metrics` (6 pasos, ya fundido) |
+|---|---|---|
+| **como agrupa** | por **cualquier atributo relevante**: fuente de referencia, fecha de activacion o tipo de oferta | por **mes de ingreso** |
+| **que hace con las cohortes** | las **compara ENTRE SI** y **determina que canal trae clientes mas leales** | las **mide** |
+| **como termina** | **DISENANDO Y AJUSTANDO** estrategias de retencion por cohorte problematica | **MIDIENDO** el resultado de las campanas |
+| **entregable** | un **REPORTE con estrategias correctivas propuestas por segmento** | un **TABLERO de metricas** |
+
+**Ninguno de los seis pasos de `retention_metrics` disena una estrategia, y ninguno determina que canal trae clientes mas leales.** Los entregables **no son intercambiables: uno prescribe y el otro mide.**
+
+> **Y SE DICE LO QUE INCOMODA EN VEZ DE ELEGIR EL DATO QUE CONVIENE: LA FUSION DE HOY LOS ACERCO EN DOS DE LOS TRES PUNTOS.** El paso 1 del resultante ahora **REGISTRA la fuente de cada cliente** y el paso 6 **MIDE el resultado de cada promocion**, que son los dos terrenos de los pasos 4 y 5 del otro. **Aun asi el veredicto es `D`**, y por la misma frontera que el acta de la vuelta 43 dejo adjudicada en el acto 344: **registrar una fuente no es determinar que canal es mas leal, y medir el resultado de una campana no es disenarla ni ajustarla.** **La relacion no es de gemelos sino de ALIMENTACION:** `retention_metrics` produce el dato de cohorte que `analisis_de_cohortes` analiza para decidir.
+
+**CERO ARISTA, buscada hoy en los dos sentidos contra el grafo**, asi que **queda declarada como ARISTA QUE FALTA para la fase 04**, igual que el par **599** en la vuelta 43. **Misma fuente los dos**, lo que descarta el argumento de libro y deja la decision entera en el procedimiento.
+
+**EL MARCADOR SE MUEVE, y se publica recomputado por el propio instrumento:** **A 575, B 80, C 8, D 2.725** sobre **n 3.388**, tasa de A **17,0**. **Cero altas y cero bajas: el total de veredictos se queda en 3.388.**
+
+### EL REPARTO, comprobado al cierre
+
+La tabla de `P.13` da **14 de 14 piezas que VIAJAN y CERO que se pierden**, confirmado por la guarda 3 con **14 de 14 verbatim y 0 sobrantes**. **Y LAS SIETE PIEZAS QUE LA RAZON DEL ARCHIVO REPARTIO A CADA LADO ESTAN EN CASA, comprobadas POR GUARDA y no por lectura:** del donante `fuente de cada cliente`, `clics`, `referidos` y `promoción`; del superviviente `mes de ingreso`, `lifetime value` y `tickets de soporte`. **Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026.**
+
+**EL ACTO 969 QUEDA CERRADO ENTERO: sus TRES commits pusheados. Y CON EL, LOS OCHO ACTOS DE FUSION DE `OP-D-06` ESTAN EJECUTADOS.**

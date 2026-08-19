@@ -1,0 +1,40 @@
+==============================================================================
+RELECTURA DE CONGELADOS, con el texto de HOY delante
+puestos leidos en esta corrida: [233]
+==============================================================================
+
+------------------------------------------------------------------------------
+PUESTO 233: analisis_de_cohortes contra retention_metrics
+  CLASE EN EL ARCHIVO HOY: B   clave 0.8828
+  RAZON EN EL ARCHIVO HOY (contraste, no fuente de la clase nueva):
+    DUDOSO. analisis_de_cohortes y retention_metrics: el nodo entero del primero, agrupar por cohorte y comparar el comportamiento en el tiempo, es el paso 5 del segundo, que ademas trae CAC, payback de adquisicion y churn temprano. El primero profundiza una linea del segundo.
+
+  LOS DOS NODOS, HOY:
+    analisis_de_cohortes
+      titulo    : Análisis de Cohortes para Retención
+      fuente    : The Startup Owner's Manual - Steve Blank
+      entregable: Reporte de análisis de cohortes con patrones de retención identificados y estrategias correctivas propuestas por segmento
+       1. Agrupa tus usuarios según un atributo relevante: fuente de referencia, fecha de activación o tipo de oferta aceptada
+       2. Mide el comportamiento de cada cohorte a lo largo del tiempo: frecuencia de uso, duración, gasto
+       3. Compara las cohortes entre sí para detectar patrones de abandono y señales de alerta temprana
+       4. Determina si algún canal de adquisición te está trayendo clientes más leales que otros
+       5. Diseña y ajusta tus estrategias de retención según los hallazgos de cada cohorte problemática
+
+    retention_metrics
+      titulo    : Métricas de Retención
+      fuente    : The Startup Owner's Manual - Steve Blank
+      entregable: Un tablero de métricas de retención segmentado por cohortes de mes de ingreso y con el comportamiento individual de cada cliente, que incluya su valor de vida, las señales y la causa del abandono, los referidos que genera y el resultado de cada campaña de retención
+       1. Registra la fecha de inicio y la fuente de cada cliente, y agrúpalos en cohortes por mes de ingreso para poder comparar su comportamiento
+       2. Mide la actividad de cada cliente y de cada cohorte: visitas, páginas vistas, tiempo en el sitio o la aplicación, frecuencia y duración de cada visita, y el tiempo promedio que pasa entre una y la siguiente
+       3. Monitorea el comportamiento dentro del sitio: qué clics hace cada cliente y cuáles no
+       4. Detecta el momento y la causa del abandono, y monitorea las quejas, los tickets de soporte y las tasas de respuesta a tus correos
+       5. Estima la vida promedio del cliente y su valor de vida (lifetime value)
+       6. Mide lo que tu retención produce: los referidos que genera cada cliente y el resultado de cada promoción o campaña de retención
+
+  ARISTA, buscada en los dos sentidos contra el grafo de hoy:
+    analisis_de_cohortes nombra a retention_metrics: False
+    retention_metrics nombra a analisis_de_cohortes: False
+    HAY ARISTA: False
+
+==============================================================================
+FIN. La clase nueva se escribe fuera de este script, con su razon.
