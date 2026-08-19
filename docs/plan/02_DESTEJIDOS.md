@@ -1737,3 +1737,27 @@ auditor.**
   distingue una operacion HECHA de una pendiente.**
 - **No borra un solo fichero.** Los cuatro absorbidos **conservan su texto entero**, que es lo que
   hace auditable la fusion.
+
+### `OP-D-04`, EL ACTA DEL AUDITOR DE LA VUELTA 39, LEIDA EL 19 ago 2026 (vuelta 40): **EL CIERRE VERIFICADO ENTERO Y LOS CUATRO DISCUTIBLES ADJUDICADOS**
+
+**19 ago 2026 (vuelta 40).** El acta del auditor de la vuelta 39
+(`docs/loop/ACTA_AUDITOR.md`, cabecera en la linea 8.128, leida hoy) **verifica este cierre entero
+por corrida propia y cierra con `CERO DISCREPANCIAS: todo lo cotejado calza al digito`** (linea
+8.217): marcador recomputado por via propia, estado y tasa por dominio `BYTE IGUAL`, ciclo de
+`Gate 0` re-corrido con el arbol limpio, motor, web y `tsc`, los dos `md5` de las simulaciones, el
+recomputo del cierre transitivo, las fusiones releidas en el fichero, el puente re-anclado leido en
+su `json` y la arista de `P.10` leida en sus dos ficheros. **Y adjudica los cuatro discutibles que
+este cierre marco** (seccion 3, linea 8.250):
+
+| discutible | adjudicacion del acta, con su linea leida hoy |
+|---|---|
+| **`d1`**, el re-anclaje del puente de `quality` | **PROCEDE** (linea 8.252). No fue recalcular una decision: el destino del ancla lo fijaba el plan sellado al fijar el superviviente. Lo cubren por extension `P.1`, **la regla escrita del propio `Gate 0`** (ningun puente aprobado apunta a un deprecado) y el **precedente triple medido en git**: `a2902995`, `06dd2922` y `33265c05`, el tercero el commit que creo el instrumento |
+| **`d2`**, los dos resultantes de **siete pasos** | **PROCEDEN LOS DOS** (linea 8.267), por la **excepcion de clase de `OP-F-01` aplicada por su criterio escrito** (`01_FUENTES.md` linea 90, superar el estandar sin narracion repetida dentro; precedente en la linea 294 de este mismo fichero), con **lectura textual propia del auditor** de los siete pasos de cada uno. **La senal de bloque de `reglas_brainstorming` (50,6 contra 44) queda REGISTRADA COMO CITA, no como veredicto**, y **se encarga** (linea 8.275): cuando el instrumento de costuras vuelva a entregar, **ese nodo entra en su cola de lectura como cualquier citado, sin trato especial ni excepcion** |
+| **`d3`**, la arista `reglas_brainstorming` hacia `construir_sobre_ideas_ajenas` y el ciclo dirigido que cierra | **PROCEDE Y SE QUEDA** (linea 8.278). Ninguna pagina fija direccion ni prohibe ciclos, y el auditor **lo midio**: el grafo vivo ya contiene **134 ciclos dirigidos de tres entre nodos vivos** (linea 8.283), o sea **especie corriente del catalogo y no un estreno** |
+| **`d4`**, restaurar y rehacer el taller para no citar un log pisado | **PROCEDE** (linea 8.290). Ningun contenido commiteado se descarto, y rehacer en el orden correcto es lo que permite que la guarda cite **el log de verdad** en vez de una reconstruccion, que es lo que la regla 2 del `EJECUTOR` exige |
+
+**NINGUNA CAIDA QUE CORREGIR: el reporte de la vuelta 39 salio limpio** (acta, seccion 6: *Caidas:
+CERO del ejecutor, CERO del auditor*), y la caida de la vuelta 38 quedo corregida en su sitio.
+**Nada de este registro se borra ni se reescribe: el discutible del punto 3 y el bloque de lo que
+el cierre hizo fuera del plan se quedan tal como se escribieron, y esta seccion dice como se
+adjudicaron.**
