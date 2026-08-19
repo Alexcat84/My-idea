@@ -515,8 +515,9 @@ pendientes 5 a 9 de la vuelta 36.
 **Los commits de la vuelta, en orden:** `513267db` (tarea 1), `55811eb5` (la puerta reparada),
 `002edf43` (la apertura, sola), `bdd7a82a` (el destejido leido), `764de090` (el plan sellado),
 `7e8c1f36` (la fusion ejecutada), `70878328` (`OP-D-05` cerrada), `d9ec5481` (`OP-D-06` abierta),
-`960de876` (el estado al cierre) y **este reporte**, cuyo hash se anade **DESPUES de commitear,
-medido con `git log`**, que es la unica forma de citarlo sin inventarlo.
+`960de876` (el estado al cierre) y **`6a6544e0`** (este reporte). **El hash de este reporte se
+anade DESPUES de commitear, medido con `git log` y no anticipado**, que es la unica forma de
+citarlo sin inventarlo.
 
 **INSTRUMENTOS NUEVOS, todos con su sucesion declarada dentro del codigo:**
 
