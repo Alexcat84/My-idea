@@ -1,0 +1,40 @@
+==============================================================================
+EL PLAN DE OP-D-09, CONSTRUIDO CONTRA EL GRAFO (vuelta 45)
+==============================================================================
+
+  nodo   : planificacion_recoleccion_datos  (dominio quality)
+  fuente : Juran's Quality Handbook_ The C - Joseph A. Defeo  (UNICA, sin cambio)
+  pasos  : 16  ->  13
+  condiciones: 2  ->  2  (NO SE TOCAN)
+
+  EL MAPA DEL REPARTO, destino <- origenes:
+
+  1    [1]        verbatim del paso 1   Establecer objetivos de recolección de datos y formular la pregunt
+  2    [5]        verbatim del paso 5   Definir puntos de recolección de datos comprensivos
+  3    [4, 6]     verbatim del paso 6   Seleccionar y capacitar recolectores de datos imparciales
+  4    [3, 7]     verbatim del paso 7   Diseñar, preparar y probar métodos, formularios e instrucciones de
+  5    [8]        verbatim del paso 8   Auditar el proceso de recolección y validar resultados
+  6    [2, 9]     verbatim del paso 9   Filtrar y analizar los datos
+  7    [10]       verbatim del paso 10  Evaluar supuestos del tamaño de muestra y del análisis
+  8    [11]       verbatim del paso 11  Aplicar técnicas gráficas y estadísticas al problema original
+  9    [12]       verbatim del paso 12  Determinar si se necesitan más datos y análisis
+  10   [13]       verbatim del paso 13  Considerar un análisis de sensibilidad
+  11   [14]       verbatim del paso 14  Revisar que las conclusiones respondan al problema técnico origina
+  12   [15]       verbatim del paso 15  Presentar los resultados en un informe claro con resumen ejecutivo
+  13   [16]       verbatim del paso 16  Determinar si las conclusiones aplican a otros problemas
+
+  GUARDA DEL CONSTRUCTOR, cobertura exacta de 1 a 16:
+    origenes cubiertos: 16 | faltan: ninguno | repetidos: ninguno | sobran: ninguno
+
+  EL METODO 5 A 16, comprobado INTACTO, CONTIGUO Y EN ORDEN:
+    destinos que lo llevan: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    origenes en orden     : [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    los doce, contiguos y en orden: True
+
+  EL INDICE QUE SE VA, y con quien viaja cada uno:
+    paso 2 del indice -> destino 6, que es el paso 9 del metodo: Filtrar y analizar los datos
+    paso 3 del indice -> destino 4, que es el paso 7 del metodo: Diseñar, preparar y probar métodos, formularios e in
+    paso 4 del indice -> destino 3, que es el paso 6 del metodo: Seleccionar y capacitar recolectores de datos imparc
+
+  PLAN SELLADO en docs\loop\PLAN_V45_OPD09.json
+==============================================================================

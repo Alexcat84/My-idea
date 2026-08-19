@@ -1,0 +1,39 @@
+==============================================================================
+GUARDAS DE OP-D-09, MEDICION DE ANTES
+==============================================================================
+
+  nodo: planificacion_recoleccion_datos | pasos: 16 | condiciones: 2
+
+### (A) EL CASO POSITIVO: tiene que CAER antes y PASAR despues
+
+  [CAE ] A1 EL INDICE QUE SE COLO COMO PASOS YA NO ESTA
+         pasos de indice presentes: [2, 3, 4] (son 3)
+  [CAE ] A2 EL NODO ES UN METODO Y NO UN RESUMEN MAS UN METODO
+         pasos: 16 (13 es cabecera mas los doce del metodo)
+
+  RESULTADO DEL CASO POSITIVO: 0 PASAN y 2 CAEN
+
+### (B) LAS INVARIANTES: tienen que PASAR las dos veces
+
+  [OK  ] B1 CERO MOVIMIENTO: los vecinos del nodo
+         previos 2 + siguientes 3 = 5 (la operacion declara 5: 2 y 3)
+  [OK  ] B2 CERO MOVIMIENTO: las entradas de arista del grafo entero
+         16898 entradas. La cifra escrita en la operacion (16.866) es del corte de la vuelta 17 y se cita como contraste
+  [OK  ] B3 EL PASO 7 VIVO PALABRA POR PALABRA, CON SU MSA DENTRO
+         Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (incluir MSA)
+  [OK  ] B4 EL PASO 10 VIVO (ancla de las dos candidatas paso a nodo)
+         supuestos del tamano de muestra: presente
+  [OK  ] B5 EL PASO 14 NO QUEDA COLGANDO: el nodo sigue diciendo cual era el problema
+         el 14 esta: True | la pregunta del paso 1 esta: True
+  [OK  ] B6 EL ENTREGABLE SIGUE SIENDO CIERTO: preguntas, muestreo y presentacion
+         preguntas True | muestreo True | presentacion True
+  [OK  ] B7 LA FUENTE NO SE TOCA
+         "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  [OK  ] B8 LAS CONDICIONES NO SE TOCAN
+         2 condiciones
+  [OK  ] B9 EL DESAJUSTE 17 CONTRA 16 NO SE RELLENA: sigue siendo hueco nombrado
+         el resumen sigue diciendo 17 y el nodo tiene 16 pasos: NO se toca ninguno de los dos, porque decidirlo exige la fuente, fuera del repo
+
+  RESULTADO DE LAS INVARIANTES: 9 en OK y 0 en ROJO
+
+==============================================================================

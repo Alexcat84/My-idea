@@ -1,0 +1,158 @@
+{
+ "operacion": "OP-D-09: el destejido de planificacion_recoleccion_datos, DESTEJIDO SOLO, quitar el indice que se colo como pasos",
+ "regla": "OP-D-09 de docs/plan/OPERACIONES.jsonl, leida ENTERA hoy antes de tocar nada. REMEDIO: QUITAR EL INDICE, tal como la ficha del gradiente lo tenia escrito, PERO CON LA CORRECCION QUE LA VUELTA 17 MIDIO Y LA FICHA NO DECIA: el indice son los pasos 2, 3 y 4, NO los cuatro. El paso 1 no tiene casa en el metodo de 5 a 16 y ademas sostiene al paso 14, asi que por la REGLA DE REPARTO de la fase (la perdida que no tenga bloque va AL SUPERVIVIENTE) sobrevive como CABECERA del metodo en vez de podarse. EL METODO COMPLETO, pasos 5 a 16, NO SE TOCA.",
+ "motivo": "PODAR LOS CUATRO PASOS DEL INDICE PIERDE LA PREGUNTA, y esta medido: el paso 1 no es indice de nada, es el marco del que cuelga todo el metodo (el propio resumen_teorico del nodo dice 'empezar con el fin en mente, trabajando hacia atras DESDE LA PREGUNTA'), y el paso 14, que sobrevive, apunta al PROBLEMA TECNICO ORIGINAL que solo el paso 1 establece. Por eso el indice son TRES pasos y no cuatro. LOS TRES QUE SE VAN SE COMPRUEBAN UNO A UNO EN SU CASA ANTES DE QUITARLOS Y NO DESPUES, que es lo que el eliminar de la operacion exige, y la comprobacion se ve EN EL MAPA, que es donde se puede auditar: cada uno de los tres viaja CON el paso del metodo que ya lo dice. El paso 2 (decidir QUE medir considerando como se comunicaran y analizaran los datos) viaja con el 9 (filtrar y analizar), y su mitad de comunicacion la dice ademas el 15 (presentar los resultados en un informe claro). El paso 3 (decidir COMO medir la poblacion o muestra: herramienta, estrategia de muestreo, tamano) viaja con el 7 (disenar, preparar y probar metodos, formularios e instrucciones, incluir MSA), y su mitad de tamano de muestra la dice ademas el 10 (evaluar supuestos del tamano de muestra). El paso 4 (recolectar los datos con MINIMO SESGO) viaja con el 6 (seleccionar y capacitar recolectores IMPARCIALES), que es donde el sesgo se ataca de raiz, y lo respaldan ademas el 5 (definir puntos de recoleccion comprensivos) y el 8 (auditar el proceso de recoleccion y validar resultados). NINGUNO DE LOS TRES DEJA RESTO SIN CASA, y por eso ninguno abre paso nuevo. LAS DOS ANCLAS QUE LA OPERACION DECLARA INTOCABLES SE QUEDAN VERBATIM Y SIN MOVERSE DE SU SITIO RELATIVO: el paso 7, ancla del UNICO veredicto de este nodo en todo el cribado (el 2695), con su MSA dentro palabra por palabra; y el paso 10, ancla de las DOS candidatas paso a nodo hacia analisis_pareto y analisis_pareto_proyectos_elefante, que siguen SIN escribirse y NO se escriben aqui (aristas_nuevas de esta operacion esta VACIO y los enlaces son la fase 04). LAS CONDICIONES NO SE TOCAN: la operacion legisla PASOS y solo pasos. EL DESAJUSTE DE 17 CONTRA 16 NO SE RELLENA, y se dice por que: el resumen_teorico declara que el proceso INVOLUCRA 17 PASOS y el nodo tiene 16 pasos_accionables. Es HUECO NOMBRADO y decidirlo exige la fuente, que esta FUERA DEL REPO. La propia operacion lo dejo ANOTADO y no preguntado, y esta vuelta lo deja igual: rellenarlo seria inventar un paso. LA DISCREPANCIA DE CORTE, declarada y no cuadrada, tal como la nota de la operacion la dejo: el instrumento mecanico pone el corte en el paso 11 y la lectura de la ficha lo pone en el 4. NO SE ELIGE UNO Y SE BORRA EL OTRO. Esta operacion opera sobre el corte LEIDO, y el mecanico queda escrito al lado como lo que es, la senal que llevo a mirar. LA FUENTE NO SE TOCA: es UNICA (Juran, Defeo) y ningun bloque sale del nodo.",
+ "fecha_corte": "2026-08-19",
+ "correcciones_declaradas": [
+  "LA CIFRA DE ARISTAS DE LA OPERACION ES DE OTRO CORTE Y SE DECLARA EN VEZ DE COPIARSE (regla 2): su verificacion dice 'el grafo entero tiene 16.866 entradas de arista antes y despues', cifra de la vuelta 17. MEDIDO HOY, ANTES DEL ACTO: 16.898. La guarda es CERO MOVIMIENTO, o sea que la cifra de HOY no se mueva, y asi se comprueba.",
+  "LA CIFRA DE VECINOS SI CALZA AL DIGITO: la operacion dice 5 vecinos (2 previos y 3 siguientes) y hoy son 5 (2 previos y 3 siguientes)."
+ ],
+ "nodos": [
+  {
+   "nodo": "planificacion_recoleccion_datos",
+   "fuente_esperada": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "pasos_totales": 16,
+   "condiciones_totales": 2,
+   "prefijos_pasos": [
+    "Establecer objetivos de recolecció",
+    "Decidir qué medir considerando cóm",
+    "Decidir cómo medir la población o ",
+    "Recolectar los datos con mínimo se",
+    "Definir puntos de recolección de d",
+    "Seleccionar y capacitar recolector",
+    "Diseñar, preparar y probar métodos",
+    "Auditar el proceso de recolección ",
+    "Filtrar y analizar los datos",
+    "Evaluar supuestos del tamaño de mu",
+    "Aplicar técnicas gráficas y estadí",
+    "Determinar si se necesitan más dat",
+    "Considerar un análisis de sensibil",
+    "Revisar que las conclusiones respo",
+    "Presentar los resultados en un inf",
+    "Determinar si las conclusiones apl"
+   ],
+   "prefijos_condiciones": [
+    "Antes de iniciar cualquier esfuerz",
+    "Cuando se detecta que la organizac"
+   ],
+   "pasos_originales": [
+    "Establecer objetivos de recolección de datos y formular la pregunta específica",
+    "Decidir qué medir considerando cómo se comunicarán y analizarán los datos",
+    "Decidir cómo medir la población o muestra (herramienta, estrategia de muestreo, tamaño)",
+    "Recolectar los datos con mínimo sesgo",
+    "Definir puntos de recolección de datos comprensivos",
+    "Seleccionar y capacitar recolectores de datos imparciales",
+    "Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (incluir MSA)",
+    "Auditar el proceso de recolección y validar resultados",
+    "Filtrar y analizar los datos",
+    "Evaluar supuestos del tamaño de muestra y del análisis",
+    "Aplicar técnicas gráficas y estadísticas al problema original",
+    "Determinar si se necesitan más datos y análisis",
+    "Considerar un análisis de sensibilidad",
+    "Revisar que las conclusiones respondan al problema técnico original",
+    "Presentar los resultados en un informe claro con resumen ejecutivo",
+    "Determinar si las conclusiones aplican a otros problemas"
+   ],
+   "condiciones_originales": [
+    "Antes de iniciar cualquier esfuerzo de recolección de datos para resolver un problema de calidad",
+    "Cuando se detecta que la organización practica 'buceo de datos' sin un objetivo claro"
+   ],
+   "mapa_pasos": {
+    "1": [
+     1
+    ],
+    "2": [
+     5
+    ],
+    "3": [
+     4,
+     6
+    ],
+    "4": [
+     3,
+     7
+    ],
+    "5": [
+     8
+    ],
+    "6": [
+     2,
+     9
+    ],
+    "7": [
+     10
+    ],
+    "8": [
+     11
+    ],
+    "9": [
+     12
+    ],
+    "10": [
+     13
+    ],
+    "11": [
+     14
+    ],
+    "12": [
+     15
+    ],
+    "13": [
+     16
+    ]
+   },
+   "pasos_finales": [
+    "Establecer objetivos de recolección de datos y formular la pregunta específica",
+    "Definir puntos de recolección de datos comprensivos",
+    "Seleccionar y capacitar recolectores de datos imparciales",
+    "Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (incluir MSA)",
+    "Auditar el proceso de recolección y validar resultados",
+    "Filtrar y analizar los datos",
+    "Evaluar supuestos del tamaño de muestra y del análisis",
+    "Aplicar técnicas gráficas y estadísticas al problema original",
+    "Determinar si se necesitan más datos y análisis",
+    "Considerar un análisis de sensibilidad",
+    "Revisar que las conclusiones respondan al problema técnico original",
+    "Presentar los resultados en un informe claro con resumen ejecutivo",
+    "Determinar si las conclusiones aplican a otros problemas"
+   ],
+   "condiciones_finales": null,
+   "mapa_condiciones": null,
+   "procedencia": [
+    {
+     "pasos_del_resultado": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+     ],
+     "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+   ],
+   "motivos_por_destino": {
+    "1": "LA CABECERA, Y ES LA UNICA PIEZA DEL INDICE QUE NO SE VA. Establecer los objetivos y FORMULAR LA PREGUNTA ESPECIFICA no tiene casa en el metodo de 5 a 16: ninguno de sus doce pasos formula la pregunta. Sostiene ademas al paso 14, que manda revisar que las conclusiones respondan AL PROBLEMA TECNICO ORIGINAL, y sin ella el 14 apuntaria a algo que el nodo ya no dice. Sobrevive VERBATIM y de PRIMERA, como cabecera del metodo, que es lo que preservar manda.",
+    "2": "METODO, VERBATIM. Primero de los doce que no se tocan.",
+    "3": "METODO, VERBATIM, Y AQUI SE COMPRUEBA EL PRIMERO DE LOS TRES PASOS DEL INDICE ANTES DE QUITARLO. El paso 4 decia 'Recolectar los datos con minimo sesgo' y este 6 manda seleccionar y capacitar recolectores IMPARCIALES, que es donde el sesgo se ataca de raiz y no como advertencia. Lo respaldan ademas el 5 (puntos de recoleccion comprensivos) y el 8 (auditar el proceso y validar), los dos a la vista en este mismo mapa. El paso 4 no deja resto sin casa.",
+    "4": "METODO, VERBATIM, Y ES EL PASO INTOCABLE: ancla del 2695, el UNICO veredicto de este nodo en todo el cribado, CON SU MSA DENTRO palabra por palabra. Aqui se comprueba el SEGUNDO paso del indice antes de quitarlo: el 3 decia 'decidir COMO medir la poblacion o muestra (herramienta, estrategia de muestreo, tamano)' y este 7 manda disenar, preparar y PROBAR metodos, formularios e instrucciones; la mitad del tamano de muestra la dice ademas el 10, dos destinos mas abajo. El paso 3 no deja resto sin casa.",
+    "5": "METODO, VERBATIM.",
+    "6": "METODO, VERBATIM, Y AQUI SE COMPRUEBA EL TERCERO Y ULTIMO PASO DEL INDICE. El paso 2 decia 'decidir QUE medir considerando como se comunicaran y analizaran los datos': el analisis lo hace este 9 (filtrar y analizar los datos) y la comunicacion la hace el 15 (presentar los resultados en un informe claro con resumen ejecutivo), tambien a la vista en este mapa. El paso 2 no deja resto sin casa, y con el los TRES del indice quedan comprobados uno a uno EN SU CASA antes de quitarlos, que es lo que el eliminar exige.",
+    "7": "METODO, VERBATIM, Y LA SEGUNDA ANCLA INTOCABLE: de este paso salen las DOS candidatas paso a nodo hacia analisis_pareto y analisis_pareto_proyectos_elefante (docs/plan/PASO_NODO_CALIBRADO.jsonl), las dos con arista TODAVIA NO ESCRITA. Ni se toca ni se escribe ninguna de las dos aqui: aristas_nuevas de esta operacion esta VACIO y los enlaces son la fase 04.",
+    "8": "METODO, VERBATIM.",
+    "9": "METODO, VERBATIM.",
+    "10": "METODO, VERBATIM.",
+    "11": "METODO, VERBATIM, Y ES EL PASO QUE NO PUEDE QUEDAR COLGANDO: revisar que las conclusiones respondan AL PROBLEMA TECNICO ORIGINAL solo se sostiene si el nodo sigue diciendo en algun sitio cual era ese problema, y lo dice el destino 1, la cabecera que sobrevive. Si la cirugia se hubiera llevado el paso 1, este se quedaria apuntando al vacio.",
+    "12": "METODO, VERBATIM, y sostiene la tercera de las tres piezas que el entregable nombra: la presentacion de resultados.",
+    "13": "METODO, VERBATIM. Ultimo de los doce que no se tocan."
+   }
+  }
+ ]
+}

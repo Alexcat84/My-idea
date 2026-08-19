@@ -1,0 +1,80 @@
+==============================================================================
+EL NODO planificacion_recoleccion_datos, LEIDO DE CERO Y ENTERO (vuelta 45)
+==============================================================================
+
+node_id           : planificacion_recoleccion_datos
+titulo_concepto   : Planificación para Recolección y Análisis de Datos
+dominio           : quality
+fase_proyecto     : planificacion
+etiqueta_arbol    : Planifica tu Recolección de Datos
+fuente            : Juran's Quality Handbook_ The C - Joseph A. Defeo
+deprecado         : False
+
+entregable_esperado:
+  Plan documentado de recolección y análisis de datos con preguntas formuladas, método de muestreo definido y plan de presentación de resultados
+
+resumen_teorico:
+  El proceso de planificación de datos sigue el principio de 'empezar con el fin en mente', trabajando hacia atrás desde la pregunta que se desea responder hasta el método de recolección. Involucra 17 pasos que van desde formular la pregunta específica, decidir qué medir, cómo medir, recolectar con mínimo sesgo, hasta presentar los resultados y determinar si las conclusiones aplican a otros problemas. Evita la práctica ineficiente de 'buceo de datos' sin objetivo claro.
+
+condiciones_activacion (2):
+  (1) Antes de iniciar cualquier esfuerzo de recolección de datos para resolver un problema de calidad
+  (2) Cuando se detecta que la organización practica 'buceo de datos' sin un objetivo claro
+
+pasos_accionables: 16
+------------------------------------------------------------------------------
+PASO  1: Establecer objetivos de recolección de datos y formular la pregunta específica
+
+PASO  2: Decidir qué medir considerando cómo se comunicarán y analizarán los datos
+
+PASO  3: Decidir cómo medir la población o muestra (herramienta, estrategia de muestreo, tamaño)
+
+PASO  4: Recolectar los datos con mínimo sesgo
+
+PASO  5: Definir puntos de recolección de datos comprensivos
+
+PASO  6: Seleccionar y capacitar recolectores de datos imparciales
+
+PASO  7: Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (incluir MSA)
+
+PASO  8: Auditar el proceso de recolección y validar resultados
+
+PASO  9: Filtrar y analizar los datos
+
+PASO 10: Evaluar supuestos del tamaño de muestra y del análisis
+
+PASO 11: Aplicar técnicas gráficas y estadísticas al problema original
+
+PASO 12: Determinar si se necesitan más datos y análisis
+
+PASO 13: Considerar un análisis de sensibilidad
+
+PASO 14: Revisar que las conclusiones respondan al problema técnico original
+
+PASO 15: Presentar los resultados en un informe claro con resumen ejecutivo
+
+PASO 16: Determinar si las conclusiones aplican a otros problemas
+
+------------------------------------------------------------------------------
+
+### LA LINEA BASE DE CERO MOVIMIENTO DE GRAFO, MEDIDA HOY
+
+  vecinos declarados por el nodo: previos 2 + siguientes 3 = 5
+  ficheros del grafo            : 3853
+  entradas de arista del grafo  : 16898 (previos mas siguientes de todos)
+
+  CONTRASTE con lo que la operacion trae ESCRITO (corte de la vuelta 17,
+  14 ago 2026), que se cita y NO se usa como fuente (EJECUTOR.md regla 2):
+    la operacion dice 91 vecinos y 16.866 entradas de arista.
+    Si mi medicion de hoy difiere, la DISCREPANCIA se declara, no se copia:
+    lo que la guarda exige es CERO MOVIMIENTO, o sea que el par de cifras
+    de HOY sea el MISMO antes y despues del acto.
+
+### LAS ARISTAS PASO A NODO EN LAS QUE ESTE NODO ES HIJO
+
+  madre tipo_de_mercado_estrategia_competitiva     pasos 5   paso 5 existe: True | la madre cita a planificacion_recoleccion_datos: False
+  madre customer_discovery_overview                pasos 4   paso 1 existe: True | la madre cita a planificacion_recoleccion_datos: False
+  madre unbundling_business_models                 pasos 4   paso 4 existe: True | la madre cita a planificacion_recoleccion_datos: False
+
+==============================================================================
+FIN DE LA LECTURA
+==============================================================================
