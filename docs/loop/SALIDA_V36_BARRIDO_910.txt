@@ -1,0 +1,220 @@
+==============================================================================
+BARRIDO DEL BANCO 9.10, vuelta 36: el volteo de 277, 374, 452, 1571, 1575
+==============================================================================
+
+--- FAMILIA 1: EL MARCADOR VIEJO (A 581, B 83, C 8, D 2716) ---
+  candidatos: 17
+  docs/FRANJA_VEREDICTOS.jsonl:581
+      {"puesto_franja": 581, "nodo_mundo": "escucha_activa_requisitos", "nodo_nucleo": "senales_de_compra_reales", "clave": 0.7216, "clase": "D", "razon": "Escuchar activamente para captar el requisito real...
+  docs/FRANJA_VEREDICTOS.jsonl:1183
+      {"puesto_franja": 1183, "nodo_mundo": "escucha_activa_requisitos", "nodo_nucleo": "senales_de_compra_en_venta_grande", "clave": 0.7063, "clase": "C", "razon": "Escuchar activamente para captar el requ...
+  docs/INTRA_DOMINIO_INFORME.md:6141
+      | **581** | `cumplimiento_magnuson_moss` | **4 de 5** | `prohibicion_tie_in_sales` |
+  docs/INTRA_DOMINIO_INFORME.md:6311
+      | **581** | `prohibicion_tie_in_sales` contra `cumplimiento_magnuson_moss` | **3 de 5 radios**, estricta mayoria | D provisional | **D firme** |
+  docs/INTRA_DOMINIO_INFORME.md:16309
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ **581** (17,1 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16312
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ **2.716** |
+  docs/INTRA_DOMINIO_INFORME.md:16352
+      > `docs/loop/SALIDA_V34_MARCADOR.txt`): **n 3.388, A 581, B 83, C 8, D 2.716, tasa de A 17,1 por
+  docs/INTRA_DOMINIO_INFORME.md:16478
+      34): el total de A en el archivo es 581**, porque el **1061** paso de `A` a `D` tras el destejido
+  docs/plan/OPERACIONES.jsonl:6
+      {"id_op": "OP-D-03", "fase": "02_DESTEJIDOS", "tipo": "DESTEJIDO", "nodos": ["ab_testing_optimizacion", "optimizacion_embudo_get_customers", "split_testing_experimentos_ab", "funnel_get_customers_opti...
+  docs/plan/RECOMPUTO_3388.md:31
+      > | A crudas en el archivo | **583** | ~~**582**~~ **581** al cierre de la vuelta 34 | **menos 2** |
+  docs/plan/RECOMPUTO_3388.md:108
+      > | A crudas en el archivo | **582** | **581** | **menos 1** |
+  docs/plan/RECOMPUTO_3388.md:127
+      > **EL MARCADOR AL CIERRE DE LA VUELTA 34:** **n 3.388, A 581, B 83, C 8, D 2.716**. `core` pasa
+  docs/plan/RECOMPUTO_3388.md:156
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ **581** **[CORREGIDA DOS VECES el 15 ago 2026, ver las correcciones declaradas al principio del documento]** |
+  docs/plan/RECOMPUTO_3388.md:171
+      > `voz_del_cliente_voc` (resuelven al mismo id)*. **El retrato pasa de 582 A crudas a 581 pares
+  docs/plan/RECOMPUTO_3388.md:989
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ **581** | ~~**17,2 %**~~ **17,1 %** |
+  docs/plan/RECOMPUTO_3388.md:1670
+      | **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ **581 / 83 / 8 / 2.716** **[CORREGIDA VARIAS VECES el 15 ago 2026, ver las correcciones declaradas al principio del docu...
+  docs/plan/RECOMPUTO_3388.md:1717
+      | **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ **581 / 83 / 8 / 2.716** (17,1 / 2,4 / 0,2 / 80,2 por ciento) **[CORREGIDA VARIAS VECES el 15 ago 2026, ver las correcci...
+
+--- FAMILIA 2: LOS PUESTOS VOLTEADOS ---
+  PUESTO 277: 25 candidatos
+    docs/BANCO_DE_TEXTOS.md:1296
+        **3 en la cola** y los tres **A** (puestos 277, 292 y 624).
+    docs/FICHA_SUBFUSION_GRADIENTE.md:2940
+        > | **`optimizacion_embudo_get_customers`** (puesto 277 del intra) | **CONFIRMADA**, tanda 14, diez pasos, Blank y Weinberg: **EL TESTEO DICHO DOS VECES** | **A**, repite con `funnel_get_customers_opt...
+    docs/FICHA_SUBFUSION_GRADIENTE.md:2960
+        > **Lo que hay que salvar, medido en el puesto 277 y anotado alli**: el
+    docs/FRANJA_PARES.jsonl:277
+        {"puesto_franja": 277, "mundo": "health_safety", "nodo_mundo": "principios_gestion_error", "titulo_mundo": "Principios de Gestión del Error (Error Management)", "nodo_nucleo": "regla_simplificada_tole...
+    docs/FRANJA_VEREDICTOS.jsonl:277
+        {"puesto_franja": 277, "nodo_mundo": "principios_gestion_error", "nodo_nucleo": "regla_simplificada_tolerancia_errores", "clave": 0.7326, "clase": "D", "razon": "Los principios de gestion del error (c...
+    docs/FRANJA_VEREDICTOS.jsonl:361
+        {"puesto_franja": 361, "nodo_mundo": "gestion_de_errores", "nodo_nucleo": "regla_simplificada_tolerancia_errores", "clave": 0.729, "clase": "C", "razon": "Reducir y contener el error por diseno contra...
+    docs/FRANJA_VEREDICTOS.jsonl:460
+        {"puesto_franja": 460, "nodo_mundo": "falla_sistemica_vs_error_individual", "nodo_nucleo": "five_whys_inversion_proporcional", "clave": 0.7259, "clase": "C", "razon": "Mapear la cadena organizacional ...
+    docs/GRADIENTE_VEREDICTOS.md:2568
+        ## LOTE 20, puestos 277 a 297 sin el del adelanto (veinte pares)
+    docs/GRADIENTE_VEREDICTOS.md:2577
+        | **277** | OK funcional | `compras/negocia_por_intereses_no_posiciones` contra `nucleo/orden_negociacion_puntos` **(t38.4)** |
+    docs/INTRA_DOMINIO_INFORME.md:1385
+        | **277** | `funnel_get_customers_optimizacion` contra `optimizacion_embudo_get_customers` | **data-chief**, revisar a diario las diez o doce metricas clave con esa figura; **escala-el-mas-productivo*...
+    docs/INTRA_DOMINIO_INFORME.md:1553
+        > `optimizacion_embudo_get_customers` del puesto 277. **Los otros tres del grupo
+    docs/INTRA_DOMINIO_INFORME.md:1870
+        | `optimizacion_embudo_get_customers` | **confirmada** | 277 |
+    docs/INTRA_DOMINIO_INFORME.md:4083
+        | **pares A que lo sostienen** | 277, 374, 452, **643**, 1061 |
+    docs/INTRA_DOMINIO_INFORME.md:4504
+        | **coinciden** | 2.137, 2.166, 2.242, 2.261, 2.277, 2.292 | **6 de 8** |
+    docs/INTRA_DOMINIO_INFORME.md:6649
+        | **clases** | **A, A, A** (puestos 277, 292, 624) |
+    docs/INTRA_DOMINIO_INFORME.md:10236
+        | **2** | **6** | **3** | 3 | 277, 374, 452, 643, **1061** | 1 |
+    docs/INTRA_DOMINIO_INFORME.md:10367
+        | **GLOBAL** | **1.277** de 3.388 | 320 | 88 | 7 | 862 | **25,1%** |
+    docs/INTRA_DOMINIO_PARES.jsonl:277
+        {"dominio": "core", "nodo_a": "funnel_get_customers_optimizacion", "titulo_a": "Optimización del Embudo 'Get Customers' (Adquisición y Activación)", "nodo_b": "optimizacion_embudo_get_customers", "tit...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:277
+        {"puesto_intra": 277, "dominio": "core", "nodo_a": "funnel_get_customers_optimizacion", "nodo_b": "optimizacion_embudo_get_customers", "clave": 0.8723, "banda_078_080": false, "clase": "A", "razon": "...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:690
+        {"puesto_intra": 690, "dominio": "core", "nodo_a": "embudo_get_keep_grow", "nodo_b": "hipotesis_relacion_clientes_web", "clave": 0.8207, "banda_078_080": false, "clase": "B", "razon": "El embudo gener...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:915
+        {"puesto_intra": 915, "dominio": "core", "nodo_a": "optimizacion_embudo_get_customers", "nodo_b": "optimizacion_metricas_crecimiento", "clave": null, "banda_078_080": false, "clase": "D", "razon": "CO...
+    docs/plan/02_DESTEJIDOS.md:1040
+        > (277, 452, 643, 1061, 1571, 1575 y el 374) y **un congelado**, el **738**. El campo
+    docs/plan/LECTURAS_DIRIGIDAS.md:984
+        | `funnel_get_customers_optimizacion` contra `optimizacion_embudo_get_customers` | **A** | puesto **277**, cribado |
+    docs/plan/LECTURAS_DIRIGIDAS.md:1010
+        | **el par del embudo** | `funnel_get_customers_optimizacion`, `optimizacion_embudo_get_customers` | **1 de 1 leido**, el 277 `A` | **CERRADA** |
+    docs/plan/OPERACIONES.jsonl:6
+        {"id_op": "OP-D-03", "fase": "02_DESTEJIDOS", "tipo": "DESTEJIDO", "nodos": ["ab_testing_optimizacion", "optimizacion_embudo_get_customers", "split_testing_experimentos_ab", "funnel_get_customers_opti...
+
+  PUESTO 374: 20 candidatos
+    docs/BANCO_DE_TEXTOS.md:1978
+        **Adoptada el 13 ago 2026.** Ejemplares: puestos **344**, **374** y **386**.
+    docs/BANCO_DE_TEXTOS.md:1992
+        | **374** | la significancia del 95% | el cambio porcentual, el grupo de control similar (**bloque Rackham**) |
+    docs/FICHA_SUBFUSION_GRADIENTE.md:3029
+        > | **`split_testing_experimentos_ab`** (puesto 374 del intra) | **CONFIRMADA**, nueve pasos, corte 6, **DOBLE**: el A/B de Ries en 1 a 5 y el grupo de control de Rackham en 6 a 9 | **A**, repite con ...
+    docs/FICHA_SUBFUSION_GRADIENTE.md:3036
+        > **Lo que hay que salvar, medido en el puesto 374**: del nodo chico, la
+    docs/FRANJA_PARES.jsonl:374
+        {"puesto_franja": 374, "mundo": "quality", "nodo_mundo": "sistema_medicion_kpi", "titulo_mundo": "Sistema de Medición con Indicadores Clave de Desempeño (KPI)", "nodo_nucleo": "mantener_puntaje_innova...
+    docs/FRANJA_VEREDICTOS.jsonl:374
+        {"puesto_franja": 374, "nodo_mundo": "sistema_medicion_kpi", "nodo_nucleo": "mantener_puntaje_innovacion", "clave": 0.7286, "clase": "D", "razon": "Montar el sistema de KPI del negocio contra llevar e...
+    docs/INTRA_DOMINIO_INFORME.md:2221
+        | **374** | `split_testing` contra `split_testing_experimentos_ab` | **una sola**: la **significancia del 95%**. Las otras dos se van con el destejido | de **lector** |
+    docs/INTRA_DOMINIO_INFORME.md:2285
+        | **el intra** | **A** en este mismo puesto 374, gemelo `split_testing` |
+    docs/INTRA_DOMINIO_INFORME.md:2768
+        > `split_testing_experimentos_ab` (el octavo ejemplar, puesto 374) **se leen
+    docs/INTRA_DOMINIO_INFORME.md:4083
+        | **pares A que lo sostienen** | 277, 374, 452, **643**, 1061 |
+    docs/INTRA_DOMINIO_INFORME.md:10236
+        | **2** | **6** | **3** | 3 | 277, 374, 452, 643, **1061** | 1 |
+    docs/INTRA_DOMINIO_INFORME.md:11652
+        | global | **A 374, B 89, C 7, D 1.434** |
+    docs/INTRA_DOMINIO_PARES.jsonl:374
+        {"dominio": "core", "nodo_a": "split_testing", "titulo_a": "Split Testing (A/B Testing)", "nodo_b": "split_testing_experimentos_ab", "titulo_b": "Split-Testing (Pruebas A/B)", "sim_titulo": 63.0, "sim...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:374
+        {"puesto_intra": 374, "dominio": "core", "nodo_a": "split_testing", "nodo_b": "split_testing_experimentos_ab", "clave": 0.855, "banda_078_080": false, "clase": "A", "razon": "REPITE con split_testing_...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:452
+        {"puesto_intra": 452, "dominio": "core", "nodo_a": "ab_testing_optimizacion", "nodo_b": "split_testing", "clave": 0.8434, "banda_078_080": false, "clase": "A", "razon": "REPITE con split_testing. Los ...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:738
+        {"puesto_intra": 738, "dominio": "core", "nodo_a": "ab_testing_optimizacion", "nodo_b": "split_testing_experimentos_ab", "clave": 0.8168, "banda_078_080": false, "clase": "D", "razon": "REESCRITA EL 1...
+    docs/PENDIENTES.md:42
+        | **EN COLA** | el texto va a cambiar, se relee igual | ~~**19**~~ ~~**16**~~ ~~**13**~~ **12** | los ~~trece~~ ~~diez~~ ~~siete~~ **seis** de arriba **más 361, 374, 386, 392, 492 y 915** |
+    docs/plan/02_DESTEJIDOS.md:1040
+        > (277, 452, 643, 1061, 1571, 1575 y el 374) y **un congelado**, el **738**. El campo
+    docs/plan/LECTURAS_DIRIGIDAS.md:987
+        | `split_testing` contra `split_testing_experimentos_ab` | **A** | puesto **374**, cribado |
+    docs/plan/OPERACIONES.jsonl:6
+        {"id_op": "OP-D-03", "fase": "02_DESTEJIDOS", "tipo": "DESTEJIDO", "nodos": ["ab_testing_optimizacion", "optimizacion_embudo_get_customers", "split_testing_experimentos_ab", "funnel_get_customers_opti...
+
+  PUESTO 452: 18 candidatos
+    docs/BANCO_DE_TEXTOS.md:1878
+        > el puesto **452**, donde el solape cruza dos junturas de tres narraciones y el
+    docs/FICHA_SUBFUSION_GRADIENTE.md:3091
+        > | **`ab_testing_optimizacion`** (puesto 452 del intra) | **CONFIRMADA**, quince pasos, corte 10, **TRES NARRACIONES**: landing page 1 a 5, metrica unica 6 a 10, canal nucleo 11 a 15 | **A**, repite ...
+    docs/FRANJA_PARES.jsonl:452
+        {"puesto_franja": 452, "mundo": "health_safety", "nodo_mundo": "enfoque_situacional_vs_personal", "titulo_mundo": "Enfoque Situacional vs. Personal en la Gestión de Errores", "nodo_nucleo": "regla_sim...
+    docs/FRANJA_VEREDICTOS.jsonl:452
+        {"puesto_franja": 452, "nodo_mundo": "enfoque_situacional_vs_personal", "nodo_nucleo": "regla_simplificada_tolerancia_errores", "clave": 0.7262, "clase": "D", "razon": "Priorizar el rediseno de la tar...
+    docs/FRANJA_VEREDICTOS.jsonl:460
+        {"puesto_franja": 460, "nodo_mundo": "falla_sistemica_vs_error_individual", "nodo_nucleo": "five_whys_inversion_proporcional", "clave": 0.7259, "clase": "C", "razon": "Mapear la cadena organizacional ...
+    docs/INTRA_DOMINIO_INFORME.md:2734
+        | **452** | `ab_testing_optimizacion` contra `split_testing` | **una sola**: la **significancia estadistica del 95%**. Lo demas viaja con el destejido, ver abajo | de **lector** |
+    docs/INTRA_DOMINIO_INFORME.md:2762
+        | **el intra** | **A** en este puesto 452, gemelo `split_testing` |
+    docs/INTRA_DOMINIO_INFORME.md:4083
+        | **pares A que lo sostienen** | 277, 374, 452, **643**, 1061 |
+    docs/INTRA_DOMINIO_INFORME.md:10236
+        | **2** | **6** | **3** | 3 | 277, 374, 452, 643, **1061** | 1 |
+    docs/INTRA_DOMINIO_INFORME.md:14440
+        **Corte: puesto 2.452. Van 41 pares de `quality`** de sus 844.
+    docs/INTRA_DOMINIO_INFORME.md:14447
+        | archivo global (corte 2.452) | 2.452 | **470** | **1.886** | **19,2%** (B 89, C 7) |
+    docs/INTRA_DOMINIO_INFORME.md:14487
+        | **2.452** | **estar donde se hace el trabajo** y **escribir tu mismo los reportes** | **sostener el compromiso durante anos** y **no dejar la calidad en un area aislada** |
+    docs/INTRA_DOMINIO_PARES.jsonl:452
+        {"dominio": "core", "nodo_a": "ab_testing_optimizacion", "titulo_a": "A/B Testing para Optimización Web/Mobile", "nodo_b": "split_testing", "titulo_b": "Split Testing (A/B Testing)", "sim_titulo": 50....
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:452
+        {"puesto_intra": 452, "dominio": "core", "nodo_a": "ab_testing_optimizacion", "nodo_b": "split_testing", "clave": 0.8434, "banda_078_080": false, "clase": "A", "razon": "REPITE con split_testing. Los ...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:738
+        {"puesto_intra": 738, "dominio": "core", "nodo_a": "ab_testing_optimizacion", "nodo_b": "split_testing_experimentos_ab", "clave": 0.8168, "banda_078_080": false, "clase": "D", "razon": "REESCRITA EL 1...
+    docs/plan/02_DESTEJIDOS.md:1040
+        > (277, 452, 643, 1061, 1571, 1575 y el 374) y **un congelado**, el **738**. El campo
+    docs/plan/LECTURAS_DIRIGIDAS.md:985
+        | `ab_testing_optimizacion` contra `split_testing` | **A** | puesto **452**, cribado |
+    docs/plan/OPERACIONES.jsonl:6
+        {"id_op": "OP-D-03", "fase": "02_DESTEJIDOS", "tipo": "DESTEJIDO", "nodos": ["ab_testing_optimizacion", "optimizacion_embudo_get_customers", "split_testing_experimentos_ab", "funnel_get_customers_opti...
+
+  PUESTO 1571: 9 candidatos
+    docs/FRANJA_PARES.jsonl:1571
+        {"puesto_franja": 1571, "mundo": "health_safety", "nodo_mundo": "identificacion_recopilacion_informacion_peligros", "titulo_mundo": "Recopilación y Revisión de Información sobre Peligros", "nodo_nucle...
+    docs/FRANJA_VEREDICTOS.jsonl:1571
+        {"puesto_franja": 1571, "nodo_mundo": "identificacion_recopilacion_informacion_peligros", "nodo_nucleo": "registro_de_riesgos", "clave": 0.7003, "clase": "D", "razon": "Recopilar y revisar la informac...
+    docs/INTRA_DOMINIO_INFORME.md:11288
+        | las pruebas A/B | 6 | 6 | el **1571** y el **1575** son **internos** |
+    docs/INTRA_DOMINIO_INFORME.md:11516
+        | 1571 | `split_testing_experimentos_ab` contra `test_ab_precio` | core |
+    docs/INTRA_DOMINIO_PARES.jsonl:1571
+        {"dominio": "core", "nodo_a": "split_testing_experimentos_ab", "titulo_a": "Split-Testing (Pruebas A/B)", "nodo_b": "test_ab_precio", "titulo_b": "Test A/B de Precio", "sim_titulo": 40.0, "sim_semanti...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:1571
+        {"puesto_intra": 1571, "dominio": "core", "nodo_a": "split_testing_experimentos_ab", "nodo_b": "test_ab_precio", "clave": null, "banda_078_080": true, "clase": "A", "razon": "LA PRUEBA A/B GENERAL CON...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:1575
+        {"puesto_intra": 1575, "dominio": "core", "nodo_a": "ab_testing_optimizacion", "nodo_b": "test_ab_precio", "clave": null, "banda_078_080": true, "clase": "A", "razon": "EL MANUAL DE OPTIMIZACION CONTR...
+    docs/plan/02_DESTEJIDOS.md:1040
+        > (277, 452, 643, 1061, 1571, 1575 y el 374) y **un congelado**, el **738**. El campo
+    docs/plan/LECTURAS_DIRIGIDAS.md:988
+        | `split_testing_experimentos_ab` contra `test_ab_precio` | **A** | puesto **1571**, cribado |
+
+  PUESTO 1575: 9 candidatos
+    docs/FRANJA_PARES.jsonl:1575
+        {"puesto_franja": 1575, "mundo": "quality", "nodo_mundo": "costo_de_uso_life_cycle", "titulo_mundo": "Costo de Uso y Costeo de Ciclo de Vida", "nodo_nucleo": "demand_curve_pricing", "titulo_nucleo": "...
+    docs/FRANJA_VEREDICTOS.jsonl:1575
+        {"puesto_franja": 1575, "nodo_mundo": "costo_de_uso_life_cycle", "nodo_nucleo": "demand_curve_pricing", "clave": 0.7003, "clase": "D", "razon": "El costo de uso a lo largo del ciclo de vida contra la ...
+    docs/INTRA_DOMINIO_INFORME.md:11288
+        | las pruebas A/B | 6 | 6 | el **1571** y el **1575** son **internos** |
+    docs/INTRA_DOMINIO_INFORME.md:11518
+        | 1575 | `ab_testing_optimizacion` contra `test_ab_precio` | core |
+    docs/INTRA_DOMINIO_PARES.jsonl:1575
+        {"dominio": "core", "nodo_a": "ab_testing_optimizacion", "titulo_a": "A/B Testing para Optimización Web/Mobile", "nodo_b": "test_ab_precio", "titulo_b": "Test A/B de Precio", "sim_titulo": 44.8, "sim_...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:738
+        {"puesto_intra": 738, "dominio": "core", "nodo_a": "ab_testing_optimizacion", "nodo_b": "split_testing_experimentos_ab", "clave": 0.8168, "banda_078_080": false, "clase": "D", "razon": "REESCRITA EL 1...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:1575
+        {"puesto_intra": 1575, "dominio": "core", "nodo_a": "ab_testing_optimizacion", "nodo_b": "test_ab_precio", "clave": null, "banda_078_080": true, "clase": "A", "razon": "EL MANUAL DE OPTIMIZACION CONTR...
+    docs/plan/02_DESTEJIDOS.md:1040
+        > (277, 452, 643, 1061, 1571, 1575 y el 374) y **un congelado**, el **738**. El campo
+    docs/plan/LECTURAS_DIRIGIDAS.md:989
+        | `ab_testing_optimizacion` contra `test_ab_precio` | **A** | puesto **1575**, cribado |
+
+==============================================================================
+CANDIDATOS TOTALES: 98. Ninguno se oculta y ninguno se corrige aqui:
+este instrumento LISTA, y la adjudicacion de cada sitio es de lectura.
+LIMITE DECLARADO: es una busqueda lexica. Una tabla puede citar el
+marcador con otras palabras y este barrido no la veria; y una cifra con
+su fecha de corte declarada aparece aqui sin estar envejecida.

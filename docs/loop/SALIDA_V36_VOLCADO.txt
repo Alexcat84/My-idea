@@ -1,0 +1,44 @@
+==============================================================================
+LA PROPUESTA SELLADA, leida y no reescrita: docs/loop/PROPUESTA_V35_RELECTURAS.json
+  vuelta 35, fecha 15 ago 2026, filas 5
+  estado que traia: PROPUESTA NO VOLCADA. Espera decision del fundador (PARADA de la vuelta 35).
+
+  GUARDA 5: el 643 NO esta en el lote. OK
+
+==============================================================================
+GUARDA 1: los pasos de HOY, contra lo que las razones de la propuesta afirman
+==============================================================================
+  ab_testing_optimizacion                 5 pasos (la razon dice 5)  OK
+  funnel_get_customers_optimizacion       7 pasos (la razon dice 7)  OK
+  optimizacion_embudo_get_customers       5 pasos (la razon dice 5)  OK
+  split_testing                           4 pasos (la razon dice 4)  OK
+  split_testing_experimentos_ab           5 pasos (la razon dice 5)  OK
+  test_ab_precio                          5 pasos (la razon dice 5)  OK
+
+==============================================================================
+GUARDA 4: las aristas internas, buscadas EN LOS DOS SENTIDOS contra el grafo
+==============================================================================
+  277   funnel_get_customers_optimizacion    contra optimizacion_embudo_get_customers    arista: NO  OK
+  374   split_testing                        contra split_testing_experimentos_ab        arista: NO  OK
+  452   ab_testing_optimizacion              contra split_testing                        arista: NO  OK
+  1571  split_testing_experimentos_ab        contra test_ab_precio                       arista: NO  OK
+  1575  ab_testing_optimizacion              contra test_ab_precio                       arista: NO  OK
+
+==============================================================================
+GUARDAS 2 y 3: la clase de hoy, y la razon vieja DEL ARCHIVO DE HOY dentro
+==============================================================================
+  277   A -> D  funnel_get_customers_optimizacion    contra optimizacion_embudo_get_customers     vieja   573 car. literal dentro de  4657  OK
+  374   A -> D  split_testing                        contra split_testing_experimentos_ab         vieja   664 car. literal dentro de  3721  OK
+  452   A -> D  ab_testing_optimizacion              contra split_testing                         vieja   569 car. literal dentro de  4652  OK
+  1571  A -> D  split_testing_experimentos_ab        contra test_ab_precio                        vieja  1574 car. literal dentro de  4945  OK
+  1575  A -> D  ab_testing_optimizacion              contra test_ab_precio                        vieja  1452 car. literal dentro de  4823  OK
+
+==============================================================================
+GUARDA 6: el marcador, contado AQUI y contrastado con la cifra del encargo
+==============================================================================
+  MARCADOR DE AHORA, contado aqui:  n 3388, A 581, B 83, C 8, D 2716
+  MARCADOR TRAS EL VOLCADO:         n 3388, A 576, B 83, C 8, D 2721
+  EL QUE FIJA EL ENCARGO:           n 3388, A 576, B 83, C 8, D 2721
+  COINCIDEN. OK
+
+ESCRITO el lote: docs/loop/_lote_v36.jsonl (5 filas). El archivo lo escribe scripts/corregir_veredicto.py, y despues se recomputa el marcador con scripts/loop/vuelta31_estado.py. Si aquel diera otra cosa que la de arriba, SE PARA.

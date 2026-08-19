@@ -1038,7 +1038,16 @@ impedir.
 >
 > **LO QUE SI QUEDA MEDIDO Y APROVECHABLE para quien retome:** el acto tiene **SIETE pares `A`**
 > (277, 452, 643, 1061, 1571, 1575 y el 374) y **un congelado**, el **738**. El campo
-> `superviviente` esta en **`null`**, leido hoy. **Los seis nodos estan vivos y son de TRES libros
+> `superviviente` esta en **`null`**, leido hoy.
+
+> **SEGUNDA CORRECCION DECLARADA (18 ago 2026, vuelta 36): LAS DOS CIFRAS DE ARRIBA VOLVIERON A
+> ENVEJECER, y esta vez de golpe.** `P.5` mando releer el acto entero antes de fundirlo, la vuelta
+> 35 midio que **CINCO de esos seis pares `A` se habian emitido contra texto que las cirugias ya se
+> habian llevado**, y el fundador adjudico el volcado
+> (`docs/loop/paradas/2026-08-15-p5-rancios-opd03-DECISION.md`). **Volcados hoy: 277, 374, 452,
+> 1571 y 1575, los cinco de `A` a `D`** (`docs/loop/_lote_v36.jsonl`, marcador recomputado
+> `n 3.388, A 576, B 83, C 8, D 2.721`). **El acto tiene hoy UN solo par `A`, el 643**, y sigue con
+> **cero congelados**. **El texto viejo se queda entero.** **Los seis nodos estan vivos y son de TRES libros
 > distintos** (Blank, Ries y Value Proposition Design), cosa que `OP-D-02` no tenia: alli los
 > cuatro eran de Cooper. **Ese detalle va a decidir su fusion y conviene tenerlo escrito antes.**
 

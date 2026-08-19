@@ -39,7 +39,7 @@ son grandes y por eso entran a muchos pares.
 | cuenta | qué significa | hoy | lista |
 |---|---|---:|---|
 | **CONGELADOS** | el **veredicto depende** de qué quede tras la cirugía | ~~**13**~~ ~~**10**~~ ~~**7**~~ **6** | ~~592,~~ 599, ~~724,~~ ~~738,~~ ~~755,~~ 784, 798, ~~827,~~ ~~830,~~ 831, 835, 851, ~~**494**~~ |
-| **EN COLA** | el texto va a cambiar, se relee igual | ~~**19**~~ ~~**16**~~ ~~**13**~~ **12** | los ~~trece~~ ~~diez~~ ~~siete~~ **seis** de arriba **más 361, 374, 386, 392, 492 y 915** |
+| **EN COLA** | el texto va a cambiar, se relee igual | ~~**19**~~ ~~**16**~~ ~~**13**~~ ~~**12**~~ **11** | los ~~trece~~ ~~diez~~ ~~siete~~ **seis** de arriba **más 361, ~~374,~~ 386, 392, 492 y 915** |
 
 > **CORRECCION DECLARADA (15 ago 2026, vuelta 33 del bucle). TRES CONGELADOS SALEN DE LA LISTA, y
 > las cifras viejas se quedan tachadas y no borradas.** El destejido de `producto_minimo_viable`
@@ -67,6 +67,24 @@ son grandes y por eso entran a muchos pares.
 > aritmetica, no una confirmacion**: las dos cifras cuentan cosas distintas y ninguna de las dos
 > se recomputo hoy. **Queda anotado para quien audite; no lo arreglo yo, porque arreglarlo pide
 > recontar la cola y eso es trabajo de la fase I, cerrada.**
+
+> **SEGUNDA CORRECCION DECLARADA (18 ago 2026, vuelta 36): EL 374 SALE DE LA COLA, Y NO POR UNA
+> CIRUGIA NUEVA SINO PORQUE YA SE RELEYO.** La cola dice *el texto va a cambiar, se relee igual*, y
+> el texto del **374** ya cambio (`split_testing_experimentos_ab` paso de nueve pasos a cinco con
+> `OP-F-04-RAC`) **y el par ya se releyo contra el texto de hoy** por `P.5`, dentro del acto de
+> `OP-D-03`: **paso de `A` a `D`** el 18 ago 2026, con la razon vieja entera dentro de la nueva
+> (`docs/loop/_lote_v36.jsonl`, marcador recomputado `n 3.388, A 576, B 83, C 8, D 2.721` en
+> `docs/loop/SALIDA_V36_MARCADOR.txt`). **La cuenta EN COLA baja de 12 a 11 por ese solo par**, y
+> es aritmetica de la propia tabla: los **seis** congelados mas los **cinco** de cola sin congelar
+> que quedan (361, 386, 392, 492 y 915).
+> 
+> **LO QUE ESTA CORRECCION NO HACE, y va dicho:** los otros cuatro pares que `P.5` volteo el mismo
+> dia (**277**, **452**, **1571** y **1575**) **no estaban en esta cola**, asi que la cuenta no
+> baja por ellos. **Y la fila CONGELADOS no se mueve**: ninguno de los cinco estaba congelado.
+> 
+> **DISCREPANCIA QUE ESTA CORRECCION HEREDA Y NO TAPA:** el parrafo de la *Actualizacion del 13
+> ago 2026* de mas abajo sigue nombrando al **374** entre *los TRES que estan en cola sin
+> congelar*, y esa prosa es de su corte y no se reescribe. **La cuenta viva es la de la tabla.**
 
 **Actualización del 13 ago 2026**: el **915** entra en cola sin congelar, y es el primero donde el test de POSICIÓN y el de DEPENDENCIA se contradicen (ver informe §37.1). Cola a **16**.
 

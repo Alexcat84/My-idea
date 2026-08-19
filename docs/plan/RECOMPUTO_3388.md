@@ -128,6 +128,55 @@
 > de `A 343, B 82, C 8, D 1.012` a **`A 342, B 81, C 8, D 1.014`**, y **los otros nueve dominios
 > quedan identicos al digito** (`docs/loop/SALIDA_V34_TASA_DOMINIO.txt`).
 
+> ### TERCERA CORRECCION DECLARADA (18 ago 2026, vuelta 36): **`P.5` QUITA CINCO `A` DE GOLPE Y UN ACTO ENTERO DESAPARECE**
+>
+> **Y esta vez el disparador no es una cirugia, es una RELECTURA.** La vuelta 35 midio que **cinco
+> de los seis pares `A` del acto de `OP-D-03`** se habian emitido contra texto que las cirugias de
+> la fase 01 y de la propia operacion ya se habian llevado; escribio las cinco relecturas, las
+> sello y **paro sin volcarlas** (regla 5 de `docs/loop/EJECUTOR.md`). El fundador las adjudico el
+> 15 ago 2026 y esta vuelta las volco: **277, 374, 452, 1571 y 1575, los cinco de `A` a `D`.**
+>
+> **Comando corrido otra vez** (`python scripts/plan/recomputo_3388.py`, salida
+> `docs/loop/SALIDA_V36_RECOMPUTO_3388.txt`), con el fichero de componentes **reescrito por el
+> propio instrumento**:
+>
+> | cifra | al cierre de la vuelta 34 | **al cierre de la vuelta 36** | delta |
+> |---|---:|---:|---:|
+> | A crudas en el archivo | **581** | **576** | **menos 5** |
+> | colapsos a auto arista al resolver | **1** | **1** | sin cambio |
+> | pares distintos del retrato | **580** | **575** | **menos 5** |
+> | nodos con al menos una A | **851** | **847** | **menos 4** |
+> | componentes de tamano 2 o mas (actos) | **335** | **334** | **menos 1** |
+> | componentes CERRADAS | **281** sobre **604** | **280** sobre **600** | **menos 1 y menos 4** |
+> | componentes ABIERTAS | **54** sobre **247** | **54** sobre **247** | **sin cambio** |
+> | CERRADAS de tamano 2 | **243** | **244** | **mas 1** |
+>
+> **LAS DOS CIFRAS QUE HAY QUE EXPLICAR, y ninguna se pasa por alto.**
+>
+> **Primera: cinco `A` menos quitan solo CUATRO nodos del cierre transitivo.** No es un descuadre:
+> los seis nodos del acto pierden cinco de sus seis aristas internas, y el `643`
+> (`split_testing` contra `test_ab_precio`) **sigue siendo `A`**, asi que esos dos nodos siguen
+> dentro y solo salen los otros cuatro (`ab_testing_optimizacion`,
+> `funnel_get_customers_optimizacion`, `optimizacion_embudo_get_customers`,
+> `split_testing_experimentos_ab`).
+>
+> **Segunda: los actos bajan de 335 a 334 quitando cinco `A`, y la vuelta 34 los habia SUBIDO
+> quitando una.** Tampoco es contradiccion, y es la misma figura vista desde el otro lado. La
+> vuelta 34 corto la arista que unia dos mitades y **una componente se partio en dos**. Esta
+> vuelta corta las demas: **la mitad del embudo (`funnel` contra `optimizacion_embudo`) se queda
+> sin ninguna `A` y DESAPARECE del censo de actos**, mientras la mitad de las pruebas A/B
+> **encoge de cuatro nodos a dos** y sigue cerrada. Un acto menos, cuatro nodos menos, y una
+> componente de tamano 2 mas.
+>
+> **LAS CUATRO COMPROBACIONES DEL `08_VERIFICACION.md` VUELVEN A DAR OK, las cuatro**, con las
+> cifras nuevas: nodos en actos **847** igual a la suma de tamanos; A vigentes resueltas **575**
+> igual a la suma de aristas A internas; todo acto cerrado con sus pares internos leidos; y **cero
+> nodos deprecados dentro de una componente**.
+>
+> **EL MARCADOR AL CIERRE DE LA VUELTA 36:** **n 3.388, A 576, B 83, C 8, D 2.721**. `core` pasa
+> de `A 342, B 81, C 8, D 1.014` a **`A 337, B 81, C 8, D 1.019`**, y **los otros nueve dominios
+> quedan identicos al digito** (`docs/loop/SALIDA_V36_TASA_DOMINIO.txt`).
+
 **Vuelta 11 del bucle (Sonnet 5), 13 ago 2026. Disparador cumplido: el cribado intra-dominio
 llego al puesto 3.388 (banco 9.21, `OP-U-02`).** Es la unica recomputacion general del plan.
 
@@ -153,9 +202,9 @@ que el auditor verifique las cuatro comprobaciones de mas abajo.
 
 | | |
 |---|---:|
-| A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ **581** **[CORREGIDA DOS VECES el 15 ago 2026, ver las correcciones declaradas al principio del documento]** |
-| de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | **0** |
-| pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ **580** **[CORREGIDA DOS VECES el 15 ago 2026, ver las correcciones declaradas al principio del documento]** |
+| A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ **576** **[CORREGIDA TRES VECES, el 15 y el 18 ago 2026, ver las correcciones declaradas al principio del documento]** |
+| de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | ~~**0**~~ **1** **[CORREGIDA el 15 ago 2026: la fusion de `OP-D-02` la produjo, ver la correccion declarada al principio del documento]** |
+| pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ **575** **[CORREGIDA TRES VECES, el 15 y el 18 ago 2026, ver las correcciones declaradas al principio del documento]** |
 | pares con mas de un veredicto crudo apuntando al mismo par resuelto | **0** |
 
 ~~**Ninguna de las 583 A colapsa.** Los 391 alias vigentes hoy son historia previa a esta campana
@@ -986,7 +1035,7 @@ lineas.**
 | risk_management | 106 | 0 | 0,0 % |
 | exportacion | 130 | 15 | 11,5 % |
 | seguridad_digital | 27 | 3 | 11,1 % |
-| **total** | **3.388** | ~~**583**~~ ~~**582**~~ **581** | ~~**17,2 %**~~ **17,1 %** |
+| **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ **576** | ~~**17,2 %**~~ ~~**17,1 %**~~ **17,0 %** |
 
 ~~**Los diez dominios y el total (3.388 pares, 583 A) coinciden con el marcador recomputado de la vuelta
 14** (`A 583, B 89, C 7, D 2.709`), verificado de nuevo aqui por suma de columna.~~ **CORRECCION
@@ -995,12 +1044,24 @@ Hoy el total es `A 582, B 87, C 8, D 2.711` sobre los mismos 3.388 pares, y el U
 cambia es `core`, porque los tres volteados son los tres de `core`. Medido hoy dominio por dominio
 (`docs/loop/SALIDA_V33_TASA_DOMINIO.txt`): `core` pasa de `n 1445, A 344, B 87, C 7, D 1007` a
 `n 1445, A 343 (23,7 por ciento), B 85, C 8, D 1009`. Los otros nueve dominios, identicos al
-digito.** **La tasa de quality
+digito.** **SEGUNDA CORRECCION DECLARADA (18 ago 2026, vuelta 36): el total es hoy
+`A 576, B 83, C 8, D 2.721` sobre los mismos 3.388 pares, y el UNICO dominio que cambia vuelve a
+ser `core`, porque los CINCO pares que `P.5` volteo (277, 374, 452, 1571 y 1575) son los cinco de
+`core`. Medido hoy dominio por dominio (`docs/loop/SALIDA_V36_TASA_DOMINIO.txt`): `core` queda en
+`n 1445, A 337 (23,3 por ciento), B 81, C 8, D 1019`. Los otros nueve dominios, identicos al
+digito. LA FILA `core` DE LA TABLA DE ARRIBA SIGUE DICIENDO 344 Y NO SE REESCRIBE: es la foto del
+13 ago, y reescribirla fabricaria una corrida que nunca existio.** **La tasa de quality
 cayo de 24,3 % (corte 2.900, acta vuelta 4) a 14,9 % (corte 3.388)** porque los 355 pares que entraron
 despues del corte 2.900 en ese dominio son mayoritariamente D: es la figura 9.27 (la cola del dominio se
 agota por dentro) actuando sobre el propio quality.
 
 #### b. Actos: 335, con su reparto CERRADOS y ABIERTOS
+
+> **AVISO DE CORTE (18 ago 2026, vuelta 36): las cifras de este apartado son las de la vuelta 14 y
+> se citan con su corte, no se remiden aqui. EL DATO VIGENTE ESTA ARRIBA**, en la tercera
+> correccion declarada del principio del documento: **334 actos, 280 CERRADOS sobre 600 nodos y 54
+> ABIERTOS sobre 247**, con el instrumento re corrido en
+> `docs/loop/SALIDA_V36_RECOMPUTO_3388.txt`.
 
 **Ya medido en la vuelta 14 con `scripts/plan/recomputo_3388.py` sobre
 `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`: 335 componentes, 280 CERRADOS (sobre 600 nodos: 244 de
@@ -1667,7 +1728,7 @@ como estaban, y la divergencia se escribe en vez de taparse:**
 | | medido hoy |
 |---|---:|
 | lineas de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **3.388**, intacto |
-| **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ **581 / 83 / 8 / 2.716** **[CORREGIDA VARIAS VECES el 15 ago 2026, ver las correcciones declaradas al principio del documento]** |
+| **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ **576 / 83 / 8 / 2.721** **[CORREGIDA VARIAS VECES, el 15 y el 18 ago 2026, ver las correcciones declaradas al principio del documento]** |
 | entradas de `docs/plan/INVENTARIO.jsonl` | **671**, y ninguna nace ni muere en esta vuelta |
 | entradas tocadas | **9**: cinco en TAREA 1, una mas en su segunda mitad, y tres en TAREA 2.B |
 | **ACLARACION DE ROTULO, 14 ago 2026 (vuelta 20), y la fila de arriba no se toca** | el **9** de esa fila son **EDICIONES**, y caen sobre **8 entradas DISTINTAS**: `EL PASO DE OFICIO` recibio **dos**, una en TAREA 1 y otra en TAREA 2.B. Rotulo, no cifra: la descomposicion escrita al lado (cinco mas una mas tres) es exacta, y el reporte de la vuelta 19 ya lo decia bien (*ocho lineas y nueve ediciones*) |
@@ -1714,7 +1775,7 @@ seccion sale de una nota, de un acta ni de un reporte anterior: todas salen de u
 | | medido hoy |
 |---|---:|
 | lineas de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **3.388**, intacto |
-| **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ **581 / 83 / 8 / 2.716** (17,1 / 2,4 / 0,2 / 80,2 por ciento) **[CORREGIDA VARIAS VECES el 15 ago 2026, ver las correcciones declaradas al principio del documento]** |
+| **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ **576 / 83 / 8 / 2.721** (17,0 / 2,4 / 0,2 / 80,3 por ciento) **[CORREGIDA VARIAS VECES, el 15 y el 18 ago 2026, ver las correcciones declaradas al principio del documento]** |
 | puestos | **1 a 3.388, cero huecos y cero duplicados** |
 | entradas de `docs/plan/INVENTARIO.jsonl` | **671**, y ninguna nace ni muere en esta vuelta |
 | tipos del inventario | acto **556**, familia_de_ids **53**, figura **20**, defecto **19**, racimo **13**, dominio **10** |

@@ -16306,10 +16306,10 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 | | |
 |---|---:|
 | **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
-| **A** | ~~**583** (17,2 %)~~ ~~582~~ **581** (17,1 %), ver las correcciones declaradas debajo |
+| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ **576** (17,0 %), ver las correcciones declaradas debajo |
 | **B** | ~~89~~ ~~87~~ ~~84~~ **83** |
 | **C** | ~~7~~ **8** |
-| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ **2.716** |
+| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ **2.721** |
 
 > **CORRECCION DECLARADA (15 ago 2026, vuelta 33 del bucle). LAS CIFRAS VIEJAS SE QUEDAN
 > TACHADAS Y NO BORRADAS: son el marcador del checkpoint del 13 ago y fueron correctas ese dia.**
@@ -16352,6 +16352,28 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 > `docs/loop/SALIDA_V34_MARCADOR.txt`): **n 3.388, A 581, B 83, C 8, D 2.716, tasa de A 17,1 por
 > ciento**, sin altas ni bajas, **y la cifra esperada escrita ANTES de correr el instrumento por
 > tercera vez** (`SALIDA_V34_LOTE.txt`).
+>
+> **CUARTO VOLTEO, DE OTRA VUELTA (18 ago 2026, vuelta 36), y por eso las cifras de `A` y de `D`
+> llevan CUATRO tachados.** No nace de una cirugia nueva sino de **`P.5`**: la vuelta 35 midio que
+> **CINCO de los seis pares `A` del acto de `OP-D-03` se habian emitido contra texto que las
+> cirugias de la fase 01 y de la propia operacion ya se habian llevado**, escribio las cinco
+> relecturas y **paro sin volcarlas** por la regla 5 de `docs/loop/EJECUTOR.md`. **El fundador las
+> adjudico el 15 ago 2026** (`docs/loop/paradas/2026-08-15-p5-rancios-opd03-DECISION.md`) y esta
+> vuelta las vuelca **sin reescribir una letra del texto sellado**:
+>
+> | puesto | par | antes | ahora | por que |
+> |---:|---|:---:|:---:|---|
+> | **277** | `funnel_get_customers_optimizacion` contra `optimizacion_embudo_get_customers` | **A** | **D** | la razon vieja listaba **CINCO gestos compartidos y hoy ninguno de los cinco esta en los dos nodos**: vivian en el bloque 6 a 10 que `OP-F-04-WEI` se llevo |
+> | **374** | `split_testing` contra `split_testing_experimentos_ab` | **A** | **D** | la simetria que la sostenia (significancia del 95 % contra cambio porcentual) **esta rota por un lado**: el cambio porcentual salio con `OP-F-04-RAC` |
+> | **452** | `ab_testing_optimizacion` contra `split_testing` | **A** | **D** | el quinto gesto compartido, **exigir confianza estadistica**, ya no existe en `ab_testing_optimizacion`; y *quince pasos en tres narraciones* ya no describe nada |
+> | **1571** | `split_testing_experimentos_ab` contra `test_ab_precio` | **A** | **D** | el **rigor estadistico entero** que la razon vieja ponia en el platillo (grupo de control, mismo periodo, cambio porcentual, diferencia neta) **no esta: las cuatro salieron con `OP-F-04-RAC`** |
+> | **1575** | `ab_testing_optimizacion` contra `test_ab_precio` | **A** | **D** | la frase que la sostiene, *dentro de los QUINCE pasos*, **es falsa hoy**, y dos de las perdidas que proponia ya no estan en el nodo |
+>
+> **Cuarto lote por el mismo carril** (`docs/loop/_lote_v36.jsonl`, salida
+> `docs/loop/SALIDA_V36_MARCADOR.txt`): **n 3.388, A 576, B 83, C 8, D 2.721, tasa de A 17,0 por
+> ciento**, sin altas ni bajas, **y la cifra esperada escrita ANTES de correr el instrumento por
+> cuarta vez** (`docs/loop/SALIDA_V36_VOLCADO.txt`, guarda 6, que **aborta** si el conteo no da
+> exactamente esa). **El `643` NO entra en este lote:** va por su propia lectura dirigida.
 
 Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 3.301-3.388
 (comando `python scripts/recomputar_marcador.py 3388`). Las tres A son todas de
@@ -16361,7 +16383,7 @@ Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 
 
 | dominio | n | A | tasa |
 |---|---:|---:|---:|
-| core | 1.445 | ~~344~~ ~~343~~ **342** | ~~23,8 %~~ **23,7 %** |
+| core | 1.445 | ~~344~~ ~~343~~ ~~342~~ **337** | ~~23,8 %~~ ~~23,7 %~~ **23,3 %** |
 | health_safety | 192 | 45 | 23,4 % |
 | quality | 844 | 126 | 14,9 % (CERRADO) |
 | environmental | 170 | 29 | 17,1 % |
@@ -16400,6 +16422,20 @@ Suma 3.388, calza con el total del archivo. Los diez dominios del catalogo estan
 > **LA TASA NO SE MUEVE Y LA CIFRA SI, y se dice para que nadie lea el 23,7 como *no paso nada*:**
 > 343 de 1.445 es 23,74 y 342 de 1.445 es 23,67, **y los dos redondean a 23,7**. **El conteo de
 > `A` es el dato; la tasa redondeada, no.**
+>
+> **TERCERA CORRECCION DECLARADA (18 ago 2026, vuelta 36), y por TERCERA vez SOLO `core`:** los
+> **cinco** veredictos volteados por `P.5` (**277**, **374**, **452**, **1571** y **1575**) **son
+> los cinco de `core`**, y **los otros nueve dominios quedan identicos al digito** (medido hoy,
+> dominio por dominio, en `docs/loop/SALIDA_V36_TASA_DOMINIO.txt`):
+>
+> | | n | A | tasa | B | C | D |
+> |---|---:|---:|---:|---:|---:|---:|
+> | `core` **tras el volteo de la vuelta 34** | 1.445 | 342 | 23,7 % | 81 | 8 | 1.014 |
+> | `core` **hoy** (18 ago, tras el volteo de la vuelta 36) | 1.445 | **337** | **23,3 %** | **81** | **8** | **1.019** |
+>
+> **Y AQUI LA TASA SI SE MUEVE, al reves que en la correccion anterior:** 342 de 1.445 es 23,67 y
+> 337 de 1.445 es 23,32, **y ya no redondean al mismo sitio**. Es la primera vez en la campana que
+> un volteo mueve el porcentaje publicado de `core`.
 >
 > **LO QUE ESTA CORRECCION NO HACE, y va dicho porque callarlo seria peor que no hacerlo.**
 > **Contadas hoy, quedan TRECE filas mas** en este informe que citan `core` con **1.445 pares y A
@@ -16477,7 +16513,11 @@ mutuas NO se mueve y sigue en veintiocho:** el 494 no era una fusion mutua, y ni
 veintiocho esta entre los tres volteados. **SEGUNDA CORRECCION DECLARADA (15 ago 2026, vuelta
 34): el total de A en el archivo es 581**, porque el **1061** paso de `A` a `D` tras el destejido
 de `ab_testing_optimizacion`. **El contador de fusiones mutuas sigue en veintiocho por la misma
-razon: el 1061 no era una fusion mutua.**
+razon: el 1061 no era una fusion mutua.** **TERCERA CORRECCION DECLARADA (18 ago 2026, vuelta 36):
+el total de A en el archivo es 576**, porque los **cinco** pares rancios del acto de `OP-D-03`
+(**277**, **374**, **452**, **1571** y **1575**) pasaron de `A` a `D` al releerse por `P.5` contra
+el texto de hoy. **El contador de fusiones mutuas sigue en veintiocho por la misma razon de
+siempre, verificada de nuevo: ninguno de los cinco era una fusion mutua.**
 
 ### 100.7 VERIFICACION DE DISCUTIBLES (fija desde ahora, SEGUNDA VEZ CONSECUTIVA QUE PASA)
 

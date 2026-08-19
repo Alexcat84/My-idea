@@ -981,15 +981,15 @@ y cambiaron de clase** (el **1061** de `A` a `D` y el **738** de `B` a `D`), que
 
 | par | clase | de donde |
 |---|:---:|---|
-| `funnel_get_customers_optimizacion` contra `optimizacion_embudo_get_customers` | **A** | puesto **277**, cribado |
-| `ab_testing_optimizacion` contra `split_testing` | **A** | puesto **452**, cribado |
+| `funnel_get_customers_optimizacion` contra `optimizacion_embudo_get_customers` | ~~**A**~~ **D** | puesto **277**, cribado, **releido por `P.5` el 18 ago 2026** |
+| `ab_testing_optimizacion` contra `split_testing` | ~~**A**~~ **D** | puesto **452**, cribado, **releido por `P.5` el 18 ago 2026** |
 | `split_testing` contra `test_ab_precio` | **A** | puesto **643**, cribado |
-| `split_testing` contra `split_testing_experimentos_ab` | **A** | puesto **374**, cribado |
-| `split_testing_experimentos_ab` contra `test_ab_precio` | **A** | puesto **1571**, cribado |
-| `ab_testing_optimizacion` contra `test_ab_precio` | **A** | puesto **1575**, cribado |
-| `ab_testing_optimizacion` contra `optimizacion_embudo_get_customers` | ~~**A**~~ **D** | puesto **1061**, **releido hoy** |
-| `ab_testing_optimizacion` contra `split_testing_experimentos_ab` | ~~**B**~~ **D** | puesto **738**, **releido hoy** |
-| las siete de esta tanda | **D** | `LD-75` a `LD-81` |
+| `split_testing` contra `split_testing_experimentos_ab` | ~~**A**~~ **D** | puesto **374**, cribado, **releido por `P.5` el 18 ago 2026** |
+| `split_testing_experimentos_ab` contra `test_ab_precio` | ~~**A**~~ **D** | puesto **1571**, cribado, **releido por `P.5` el 18 ago 2026** |
+| `ab_testing_optimizacion` contra `test_ab_precio` | ~~**A**~~ **D** | puesto **1575**, cribado, **releido por `P.5` el 18 ago 2026** |
+| `ab_testing_optimizacion` contra `optimizacion_embudo_get_customers` | ~~**A**~~ **D** | puesto **1061**, **releido el 15 ago 2026** |
+| `ab_testing_optimizacion` contra `split_testing_experimentos_ab` | ~~**B**~~ **D** | puesto **738**, **releido el 15 ago 2026** |
+| las siete de la tanda del 15 ago | **D** | `LD-75` a `LD-81` |
 
 **EL DIBUJO QUE DEJAN LAS `A`:**
 
@@ -1025,3 +1025,50 @@ componente unica se **PARTE EN DOS**, y las dos quedan **CERRADAS**:
 (`LD-75`), **tres con ARISTA QUE FALTA** (`LD-76`, `LD-79`, `LD-80`) declaradas para la fase 04, y
 tres sin arista con su motivo escrito (`LD-77`, `LD-78`, `LD-81`). **`n` no se movio: sigue en
 3.388.**
+
+---
+
+## CORRECCION DECLARADA (18 ago 2026, vuelta 36): **LA RESPUESTA DE ARRIBA SE DIBUJO CON SEIS `A` Y CINCO DE ELLAS NO SE SOSTENIAN**
+
+**EL TEXTO DE ARRIBA NO SE BORRA, y esta correccion no lo tapa: lo fecha.** Aquella respuesta era
+la mejor lectura posible el 15 ago 2026 con lo que ese dia estaba medido. **Lo que faltaba medir
+era si los seis pares `A` del cribado seguian hablando del texto de hoy.**
+
+**LA MEDICION QUE FALTABA, hecha por la vuelta 35 con dos varas independientes** (fecha de la
+lectura contra fecha del ultimo cambio de los dos ficheros, y comparacion del texto de los pasos
+en el commit de la lectura contra el de hoy, `docs/loop/SALIDA_V35_RANCIOS.txt`): **CINCO de los
+seis `A` se emitieron contra texto que las cirugias ya se habian llevado.** Solo el **643** estaba
+al dia, porque **ninguno de sus dos nodos cambio de texto**.
+
+**LAS CINCO SE RELEYERON, SE SELLARON Y EL FUNDADOR LAS ADJUDICO** el 15 ago 2026
+(`docs/loop/paradas/2026-08-15-p5-rancios-opd03-DECISION.md`), **y esta vuelta las volco**:
+**277, 374, 452, 1571 y 1575, las cinco de `A` a `D`**, con la razon vieja entera dentro de la
+nueva (`docs/loop/_lote_v36.jsonl`) y el marcador recomputado con el instrumento de la casa,
+**n 3.388, A 576, B 83, C 8, D 2.721** (`docs/loop/SALIDA_V36_MARCADOR.txt`).
+
+**Y LA MISMA DECISION FIJO EL ALCANCE DE `P.5`, escrito ya en `BANCO_DEL_PLAN.md`: la relectura de
+pares rancios vale SOLO DENTRO DEL ACTO EN OPERACION.** Ningun par de fuera del acto se relee por
+esta puerta.
+
+### LO QUE QUEDA DEL ACTO, COMPUTADO Y NO DIBUJADO
+
+**`P.6` manda que la nomina de acto se COMPUTE.** Corrido hoy sobre el archivo ya volcado
+(`python scripts/plan/recomputo_3388.py`, salida `docs/loop/SALIDA_V36_RECOMPUTO_3388.txt`):
+
+| | antes (15 ago, tras la tanda `LD-75` a `LD-81`) | **hoy** (18 ago, tras el volcado de las cinco) |
+|---|---|---|
+| pares `A` dentro del acto | **6** | **1**, el `643` |
+| componentes que deja | **DOS**, las dos cerradas | **UNA**, cerrada |
+| **el nucleo de las pruebas A/B** | 4 nodos, 6 pares internos leidos, 5 `A` | **2 nodos**, `split_testing` y `test_ab_precio`, **1 de 1 leido, el 643 `A`** |
+| **el par del embudo** | 2 nodos, 1 de 1 leido, el 277 `A` | **DESAPARECE del censo de actos**: su unica `A` era el 277 |
+| nodos que salen del cierre transitivo | | **4**: `ab_testing_optimizacion`, `funnel_get_customers_optimizacion`, `optimizacion_embudo_get_customers`, `split_testing_experimentos_ab` |
+
+**Y EL INSTRUMENTO LO CONFIRMA AL DIGITO, no mi dibujo:** actos de **335 a 334**, cerradas de
+**281 sobre 604 nodos** a **280 sobre 600**, nodos con al menos una `A` de **851 a 847**, y **las
+cuatro comprobaciones del `08_VERIFICACION.md` dan OK las cuatro**.
+
+> **LA RESPUESTA DE `P.5` PARA `OP-D-03`, REESCRITA CON EL TEXTO DE HOY: NO ES UNA FAMILIA DE
+> SEIS, Y TAMPOCO SON DOS FAMILIAS. ES UN SOLO PAR VIVO Y CUATRO NODOS QUE SE FUERON.** El acto
+> existia **porque los nodos repetian**, y lo que repetia **eran los bloques que las cirugias de
+> la fase 01 y de esta misma operacion se llevaron**. Eso no es un fracaso de la operacion: **es
+> el destejido haciendo su trabajo.**
