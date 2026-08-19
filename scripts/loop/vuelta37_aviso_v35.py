@@ -72,11 +72,21 @@ def cargar_puestos(ruta):
 
 
 def clases_de_hoy(puestos):
-    # EL ARCHIVO DE VEREDICTOS NOMBRA EL PUESTO 'puesto_intra' Y LO GUARDA COMO
-    # CADENA, no como entero: medido hoy sobre la primera linea del fichero. La
+    # EL ARCHIVO DE VEREDICTOS NOMBRA EL PUESTO 'puesto_intra', no 'puesto': la
     # primera version de este instrumento leyo 'puesto' y la guarda 3 lo canto
     # con SEIS AUSENTES en vez de callarse y dar por bueno el volcado. Queda
     # escrito porque la casa manda fallar ruidoso (banco 9.10).
+    #
+    # CORRECCION DECLARADA (19 ago 2026, la misma vuelta 37, y el texto malo no
+    # se borra). ESTE COMENTARIO DECIA ADEMAS, Y ERA FALSO: 'Y LO GUARDA COMO
+    # CADENA, no como entero: medido hoy sobre la primera linea del fichero'.
+    # NO ES CADENA. Contadas hoy las 3.388 lineas del archivo, las 3.388 traen
+    # puesto_intra como ENTERO. La causa del error propio: la 'medicion' que lo
+    # sostenia no medio el fichero, imprimio los valores pasados por str() en el
+    # propio comando de inspeccion, asi que TODO salio cadena por construccion.
+    # Un instrumento que mide su propia impresion no mide nada. La comparacion
+    # de abajo se hace por str() en los dos lados y por eso funciona igual, pero
+    # la afirmacion que la acompanaba estaba mal y se corrige aqui.
     buscados = set(str(p) for p in puestos)
     hallados = {}
     with open(VER, encoding="utf-8") as fh:

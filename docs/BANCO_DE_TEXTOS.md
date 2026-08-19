@@ -1836,6 +1836,24 @@ pares.**
 > se puede contestar **antes** de la cirugía, mirando la anatomía que la ficha ya
 > tiene escrita.
 
+> **AVISO DE CORTE (19 ago 2026, vuelta 37). LA CUARTA FILA DE LA TABLA DE ARRIBA
+> DESCRIBE UNA COSTURA QUE YA NO EXISTE, Y NO SE TOCA: la fila era exacta el 12 de
+> agosto y sigue siendo el ejemplar bueno de la regla.** `brainstorming_divergente`
+> tiene **CUATRO pasos desde el 14 ago 2026** y **ninguna juntura**: `OP-F-02` se
+> llevo su bloque 5 a 8 entero a `ideacion_con_ia_en_la_sesion`, y con eso el
+> destejido de `OP-D-04` quedo consumado (medido hoy en
+> `scripts/loop/vuelta37_destejido_opd04.py`, salida
+> `docs/loop/SALIDA_V37_OPD04_DESTEJIDO.txt`: 4 mas 4 igual a 8, cero material
+> perdido).
+>
+> **Y LA REGLA SALE REFORZADA, no herida, porque su prediccion se pudo comprobar.**
+> El **823** se juzgo antes de la cirugia confiando en que el bloque 1 a 4 iba a
+> sobrevivir intacto. **Sobrevivio, y la relectura de `P.5` del 19 ago 2026 lo midio
+> paso por paso: el nucleo compartido que aquella razon listaba esta entero y la
+> clase `A` no se movio.** Es la primera vez que un ejemplar del `9.9` se verifica
+> **despues** de la cirugia que anticipaba.
+
+
 ##### PRECISIÓN: hay una TERCERA causa de bloqueo, y no es el solape
 
 **Añadida el 12 ago 2026, puesto 835 del cribado.**

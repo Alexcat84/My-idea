@@ -2294,6 +2294,17 @@ ideas con IA y luego aplicar filtrado humano experto*). **Es la misma
 instruccion, generar mucho y filtrar despues, dicha una vez para el taller y otra
 para la maquina.**
 
+> **AVISO DE CORTE (19 ago 2026, vuelta 37). ESTA ANATOMIA ES LA DEL 12 ago 2026 Y
+> SE CONSERVA ENTERA, porque es la prueba de la que salio el corte.** El nodo **ya
+> no tiene ocho pasos: tiene cuatro**. `OP-F-02` ejecuto el corte que esta misma
+> ficha dibujo, y el bloque **5 a 8** vive desde el 14 ago 2026 en
+> `ideacion_con_ia_en_la_sesion`, con sus cuatro pasos identicos uno a uno (medido
+> hoy por `git` contra el padre del commit de `OP-F-02`, salida
+> `docs/loop/SALIDA_V37_OPD04_DESTEJIDO.txt`). **El calco verificado que esta ficha
+> nombra, el paso 3 volviendo en el paso 7, es exactamente lo que la cirugia
+> deshizo.**
+
+
 > **EL NUCLEO QUEDA AGOTADO DE VERDAD.** Era la ultima cita de `core` en la cola
 > de 128. Las 33 que restan son todas de mundos: 16 de `quality`, 5 de
 > `exportacion`, 4 de `health_safety`, 4 de `seguridad_digital`, 2 de

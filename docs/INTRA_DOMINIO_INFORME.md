@@ -7470,6 +7470,15 @@ se juzgo igual.**
 > pares, **tres bloquearon y este no**. La diferencia no es el nodo: **es donde
 > cae el solape.**
 
+> **AVISO DE CORTE (19 ago 2026, vuelta 37), y esta seccion no se reescribe: era
+> cierta y ahora ademas esta comprobada.** `brainstorming_divergente` **ya no es
+> costura**: tiene **cuatro pasos** desde el 14 ago 2026 y el bloque de Mollick vive
+> en `ideacion_con_ia_en_la_sesion`. **La apuesta que esta seccion hizo se pudo
+> cobrar:** la relectura de `P.5` dentro de `OP-D-04` midio el par **823** contra el
+> texto de hoy y el solape sigue entero en los pasos 1 a 4, con la `A` en pie. **Lo
+> que aqui se llamo contraejemplo util es hoy un contraejemplo verificado.**
+
+
 ---
 
 ## 27. EL TRAMO 825 a 830: los nodos costurados empiezan a costar de verdad

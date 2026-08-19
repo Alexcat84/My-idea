@@ -1,0 +1,100 @@
+
+==============================================================================
+1. LA NUMERACION LIBRE: cual es el LD mas alto escrito en docs/
+==============================================================================
+  LD mas alto escrito: LD-82   (en docs\INTRA_DOMINIO_INFORME.md)
+  la tanda de esta vuelta empieza en LD-83
+
+==============================================================================
+2. LOS SIETE NODOS DE HOY
+==============================================================================
+  brainstorming_divergente               4 pasos   vivo True
+  brainstorming_efectivo                 4 pasos   vivo True
+  reglas_brainstorming                   5 pasos   vivo True
+  generar_multiples_opciones             3 pasos   vivo True
+  construir_sobre_ideas_ajenas           3 pasos   vivo True
+  pensamiento_convergente_divergente     4 pasos   vivo True
+  design_attitude_vs_decision_attitude   4 pasos   vivo True
+
+==============================================================================
+3. LOS 21 PARES: cual tiene veredicto y cual no
+==============================================================================
+  CON veredicto: 8
+     234   A   brainstorming_efectivo contra reglas_brainstorming
+     585   D   brainstorming_divergente contra pensamiento_convergente_divergente
+     586   A   brainstorming_efectivo contra construir_sobre_ideas_ajenas
+     823   A   brainstorming_divergente contra brainstorming_efectivo
+     834   A   brainstorming_divergente contra reglas_brainstorming
+     844   A   brainstorming_divergente contra generar_multiples_opciones
+     885   A   pensamiento_convergente_divergente contra design_attitude_vs_decision_attitude
+     943   A   generar_multiples_opciones contra pensamiento_convergente_divergente
+  SIN veredicto: 13
+      1. brainstorming_divergente contra construir_sobre_ideas_ajenas
+      2. brainstorming_divergente contra design_attitude_vs_decision_attitude
+      3. brainstorming_efectivo contra generar_multiples_opciones
+      4. brainstorming_efectivo contra pensamiento_convergente_divergente
+      5. brainstorming_efectivo contra design_attitude_vs_decision_attitude
+      6. reglas_brainstorming contra generar_multiples_opciones
+      7. reglas_brainstorming contra construir_sobre_ideas_ajenas
+      8. reglas_brainstorming contra pensamiento_convergente_divergente
+      9. reglas_brainstorming contra design_attitude_vs_decision_attitude
+     10. generar_multiples_opciones contra construir_sobre_ideas_ajenas
+     11. generar_multiples_opciones contra design_attitude_vs_decision_attitude
+     12. construir_sobre_ideas_ajenas contra pensamiento_convergente_divergente
+     13. construir_sobre_ideas_ajenas contra design_attitude_vs_decision_attitude
+
+==============================================================================
+4. NINGUNO DE LOS SIN VEREDICTO ESTA EN LA COLA
+==============================================================================
+  docs/INTRA_DOMINIO_PARES.jsonl leido: 3388 filas, 3388 parejas indexadas
+  brainstorming_divergente               contra construir_sobre_ideas_ajenas           en la cola: no
+  brainstorming_divergente               contra design_attitude_vs_decision_attitude   en la cola: no
+  brainstorming_efectivo                 contra generar_multiples_opciones             en la cola: no
+  brainstorming_efectivo                 contra pensamiento_convergente_divergente     en la cola: no
+  brainstorming_efectivo                 contra design_attitude_vs_decision_attitude   en la cola: no
+  reglas_brainstorming                   contra generar_multiples_opciones             en la cola: no
+  reglas_brainstorming                   contra construir_sobre_ideas_ajenas           en la cola: no
+  reglas_brainstorming                   contra pensamiento_convergente_divergente     en la cola: no
+  reglas_brainstorming                   contra design_attitude_vs_decision_attitude   en la cola: no
+  generar_multiples_opciones             contra construir_sobre_ideas_ajenas           en la cola: no
+  generar_multiples_opciones             contra design_attitude_vs_decision_attitude   en la cola: no
+  construir_sobre_ideas_ajenas           contra pensamiento_convergente_divergente     en la cola: no
+  construir_sobre_ideas_ajenas           contra design_attitude_vs_decision_attitude   en la cola: no
+
+  GUARDA OK: los 13 son fuera de cola. Son LECTURA DIRIGIDA y NO mueven n.
+
+==============================================================================
+5. LAS 21 ARISTAS INTERNAS, EN LOS DOS SENTIDOS, RESUELTAS POR ALIAS (P.1)
+==============================================================================
+  nodos en el grafo compilado: 3853    alias indexados: 392
+
+  brainstorming_divergente               brainstorming_efectivo                 NINGUNA              [823 A]
+  brainstorming_divergente               reglas_brainstorming                   NINGUNA              [834 A]
+  brainstorming_divergente               generar_multiples_opciones             NINGUNA              [844 A]
+  brainstorming_divergente               construir_sobre_ideas_ajenas           NINGUNA              [sin veredicto]
+  brainstorming_divergente               pensamiento_convergente_divergente     NINGUNA              [585 D]
+  brainstorming_divergente               design_attitude_vs_decision_attitude   NINGUNA              [sin veredicto]
+  brainstorming_efectivo                 reglas_brainstorming                   NINGUNA              [234 A]
+  brainstorming_efectivo                 generar_multiples_opciones             NINGUNA              [sin veredicto]
+  brainstorming_efectivo                 construir_sobre_ideas_ajenas           NINGUNA              [586 A]
+  brainstorming_efectivo                 pensamiento_convergente_divergente     EN LOS DOS SENTIDOS  [sin veredicto]
+  brainstorming_efectivo                 design_attitude_vs_decision_attitude   NINGUNA              [sin veredicto]
+  reglas_brainstorming                   generar_multiples_opciones             NINGUNA              [sin veredicto]
+  reglas_brainstorming                   construir_sobre_ideas_ajenas           NINGUNA              [sin veredicto]
+  reglas_brainstorming                   pensamiento_convergente_divergente     NINGUNA              [sin veredicto]
+  reglas_brainstorming                   design_attitude_vs_decision_attitude   NINGUNA              [sin veredicto]
+  generar_multiples_opciones             construir_sobre_ideas_ajenas           EN LOS DOS SENTIDOS  [sin veredicto]
+  generar_multiples_opciones             pensamiento_convergente_divergente     NINGUNA              [943 A]
+  generar_multiples_opciones             design_attitude_vs_decision_attitude   NINGUNA              [sin veredicto]
+  construir_sobre_ideas_ajenas           pensamiento_convergente_divergente     NINGUNA              [sin veredicto]
+  construir_sobre_ideas_ajenas           design_attitude_vs_decision_attitude   NINGUNA              [sin veredicto]
+  pensamiento_convergente_divergente     design_attitude_vs_decision_attitude   NINGUNA              [885 A]
+
+  pares con alguna arista: 2 de 21
+
+==============================================================================
+VEREDICTO DE LA GUARDA
+==============================================================================
+numeracion libre desde LD-83; 13 pares sin veredicto, los 13 fuera de cola;
+los siete nodos vivos; las 21 aristas internas medidas en los dos sentidos.
+SE PUEDE LEER.
