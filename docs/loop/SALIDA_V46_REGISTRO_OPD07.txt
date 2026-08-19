@@ -1,0 +1,69 @@
+==============================================================================
+VUELTA 46: EL REGISTRO DE OP-D-07 Y EL CIERRE MEDIDO DE LA FASE 02
+==============================================================================
+
+--- LAS TRES VERIFICACIONES ---
+| # | lo que la `verificacion` de `OP-D-07` exige, copiado del fichero | como sale MEDIDO HOY |
+|---:|---|---|
+| **1** | el corte cae entre el paso 4 y el 5, no en otro sitio | **CUMPLE**. El nodo pasa de **9** pasos a **4**, con prefijo VERBATIM comun de **4** pasos. Los cuatro que quedan son los de Ries |
+| **2** | EL BLOQUE DEL PUNTO BRILLANTE NO SE PIERDE: viaja entero al superviviente del acto I, que es la puerta de metricas, y es ademas un lado de la FRONTERA DECLARADA del 1298. Si el destejido lo deja fuera, la frontera se queda sin uno de sus dos lados | **MITAD Y MITAD, MEDIDO.** El bloque **NO se perdio**: sus **5** pasos viven byte a byte en `puntos_brillantes_antes_del_pivote`. **Pero de viajar al superviviente del acto I, nada**: en `pivotar_o_perseverar` viven **0 de 5**, y en `decision_pivote_perseverar` **0 de 5** |
+| **3** | el campo fuente del nodo queda con UNA sola obra tras el corte | **CUMPLE**. De **2** obras (`The Lean Startup - Eric Ries \| Traction - Gabriel Weinberg`) a **1** (`The Lean Startup - Eric Ries`) |
+
+--- EL BLOQUE, PASO POR PASO ---
+| # en el nodo viejo | el paso, verbatim | # donde vive HOY en `puntos_brillantes_antes_del_pivote` |
+|---:|---|---:|
+| **5** | Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos | **1** |
+| **6** | Analiza qué característica común tienen esos clientes leales | **2** |
+| **7** | Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos | **3** |
+| **8** | Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto | **4** |
+| **9** | Solo pivota si no encuentras ningún punto brillante tras análisis profundo | **5** |
+
+--- LAS NUEVE OPERACIONES DE LA FASE 02 ---
+| operacion | nodos | puntos de `verificacion` | registro de cierre escrito en esta pagina |
+|---|---:|---:|---|
+| `OP-D-01` | 2 | 5 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3581** |
+| `OP-D-02` | 4 | 5 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3581** |
+| `OP-D-03` | 6 | 5 | **SI**, con el encabezado de la forma anterior, linea **1197**: *`OP-D-03` CERRADA: **DESTEJIDO HECHO Y SIN FUSION** (18 ago 2026, vuelta 36)* |
+| `OP-D-04` | 7 | 6 | **SI**, con el encabezado de la forma anterior, linea **1614**: *`OP-D-04` CERRADA: **LAS DOS FUSIONES EJECUTADAS Y EL RESTO ENLAZADO** (19 ag* |
+| `OP-D-05` | 3 | 4 | **SI**, con el encabezado de la forma anterior, linea **1765**: *`OP-D-05` SELLADA: **LA FUSION UNICA DE LA SELECCION DEL CEO** (19 ago 2026, * |
+| `OP-D-06` | 18 | 5 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3403** |
+| `OP-D-07` | 1 | 3 | **NINGUNO** |
+| `OP-D-08` | 1 | 9 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3829** |
+| `OP-D-09` | 1 | 7 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **4115** |
+  operaciones de la fase: 9
+  SIN registro de cierre: OP-D-07
+
+--- LOS CONGELADOS ---
+| puesto | clase | los dos nodos | de que fase es |
+|---:|---|---|---|
+| **1190** | **`D`** | `formalize_advisory_board` contra `identificar_consejo_asesores` | **de la junta asesora, NO de la fase 02** |
+  congelados hoy: 1 sobre 3388 veredictos
+
+--- EL MARCADOR DEL 00_INDICE, CONTRASTADO ---
+| fila del marcador del `00_INDICE` | lo que el indice publica | lo que MIDO hoy | calza |
+|---|---:|---:|---|
+| **operaciones (total)** | **69** | **71** | **NO** |
+| **0 CODIGO** | 5 | **7** | **NO** |
+| **01 FUENTES** | 7 | **7** | SI |
+| **02 DESTEJIDOS** | 7 | **9** | **NO** |
+| **03 FUSIONES** | 16 | **16** | SI |
+| **04 ENLACES** | 10 | **10** | SI |
+| **05 SANEO** | 12 | **10** | **NO** |
+| **06 MESAS** | 5 | **5** | SI |
+| **07 ADUANA** | 2 | **2** | SI |
+| **08 VERIFICACION** | 1 | **1** | SI |
+| **09 LECTURAS DIRIGIDAS** | 3 | **3** | SI |
+| **10 INVENTARIO** | 1 | **1** | SI |
+  filas que NO calzan: 4
+
+--- EL TEXTO DE OP-M-03-I QUE LA MEDICION CONTRADICE ---
+  preservar 1: del que muere: evaluar si el equipo esta RACIONALIZANDO EL FRACASO en vez de aceptarlo
+  preservar 2: del que muere, ya destejido: EL BLOQUE DEL PUNTO BRILLANTE entero, pasos 5 a 9
+  preservar 3: VIVEN DENTRO, no son perdidas: la LINEA BASE NUEVA es el paso 4 del superviviente y la COMPROBACION POSTERIOR es su paso 5. Se reclasifican como PIEZAS QUE NO SE TOCAN, y el destejido tiene prohibido llevarselas
+  verificacion 1: SIMULADA (P.7): 4 entradas se redirigen (catalogo_pivotes, ciclo_crear_medir_aprender, contabilidad_innovacion_pivote y reunion_pivotar_o_perseverar), CERO duplicadas nuevas y CERO auto aristas. Es la fusion mas limpia de las tres
+  verificacion 2: LAS TRES PIEZAS PROPIAS DEL PAR ESTAN EN EL TEXTO FINAL: racionalizacion del fracaso, linea base nueva y comprobacion posterior. Las dos ultimas ya son del superviviente y hay que comprobar que siguen ahi
+  verificacion 3: el bloque del punto brillante esta entero y es identificable como bloque: la frontera del 1298 lo necesita nombrado
+  verificacion 4: el alias del superviviente carga decision_pivote_perseverar
+  verificacion 5: PASADA DE PERDIDAS RECOMPUTADAS (P.13), 12 ago 2026: cada perdida listada comprobada contra la nomina COMPLETA de esta fusion y contra el texto del superviviente. Las que viven dentro estan reclasificadas y no se injertan
+
+ESCRITO al final de docs/plan/02_DESTEJIDOS.md: 11168 caracteres

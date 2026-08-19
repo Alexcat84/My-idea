@@ -4376,3 +4376,170 @@ DECLARA MIDIENDO, no se supone.**
 correcciones declaradas como correctas**, con la frase que cierra el punto: **NINGUNA afirmacion del
 reporte resulto falsa contra mi corrida**. **El reporte de la vuelta 45 salio limpio contra la
 corrida entera del auditor**, y esa es la tercera vez seguida (linea **10136**).
+
+---
+
+## `OP-D-07`: **LA CIRUGIA YA ESTABA HECHA, Y NO LA HIZO ESTA FASE** (19 ago 2026, vuelta 46)
+
+**Nodo: `decision_pivote_perseverar`. `superviviente` nulo, `eliminar` vacio, `aristas_nuevas`
+vacio.** La operacion se leyo **ENTERA** de `OPERACIONES.jsonl` y el nodo **DE CERO** antes de
+tocar nada, con `python scripts/loop/vuelta46_lectura_opd07.py`
+(`docs/loop/SALIDA_V46_OPD07_LECTURA.txt`, exit 0, **instrumento de solo lectura**).
+
+> **EL HALLAZGO, y cambia la vuelta entera: EL DESTEJIDO QUE `OP-D-07` LEGISLA YA ESTABA
+> EJECUTADO, DESDE EL 14 DE AGOSTO DE 2026, Y LO EJECUTO LA FASE 01.** Fue `OP-F-04-WEI`,
+> segunda tanda, **commit `1eef1c6b`**, hallado hoy con `git log --follow` sobre el fichero del
+> nodo. **Esta escrito**: `docs/plan/01_FUENTES.md` **linea 982** lo registra con su frontera
+> (`decision_pivote_perseverar`, **5 a 9**, destino **nodo propio**
+> `puntos_brillantes_antes_del_pivote`, por `P.18` punto 3), y el nodo nuevo figura en
+> `INDICE_ROJO_DECLARADO.jsonl` con esa misma fecha. **`OP-D-07` tiene `fecha_corte`
+> 2026-08-12: se escribio DOS DIAS ANTES de que otra fase se le adelantara.**
+
+**NI UN NODO SE TOCO EN ESTA VUELTA.** Volver a cortar un nodo ya cortado no es ejecutar la
+operacion: es **fabricar**. Lo que se hace aqui es **medir las tres verificaciones contra el
+archivo de hoy y publicarlas**, que es lo unico que queda por hacer.
+
+### LAS TRES VERIFICACIONES, MEDIDAS UNA POR UNA
+
+| # | lo que la `verificacion` de `OP-D-07` exige, copiado del fichero | como sale MEDIDO HOY |
+|---:|---|---|
+| **1** | el corte cae entre el paso 4 y el 5, no en otro sitio | **CUMPLE**. El nodo pasa de **9** pasos a **4**, con prefijo VERBATIM comun de **4** pasos. Los cuatro que quedan son los de Ries |
+| **2** | EL BLOQUE DEL PUNTO BRILLANTE NO SE PIERDE: viaja entero al superviviente del acto I, que es la puerta de metricas, y es ademas un lado de la FRONTERA DECLARADA del 1298. Si el destejido lo deja fuera, la frontera se queda sin uno de sus dos lados | **MITAD Y MITAD, MEDIDO.** El bloque **NO se perdio**: sus **5** pasos viven byte a byte en `puntos_brillantes_antes_del_pivote`. **Pero de viajar al superviviente del acto I, nada**: en `pivotar_o_perseverar` viven **0 de 5**, y en `decision_pivote_perseverar` **0 de 5** |
+| **3** | el campo fuente del nodo queda con UNA sola obra tras el corte | **CUMPLE**. De **2** obras (`The Lean Startup - Eric Ries \| Traction - Gabriel Weinberg`) a **1** (`The Lean Startup - Eric Ries`) |
+
+### EL BLOQUE DEL PUNTO BRILLANTE, PASO POR PASO Y VERBATIM
+
+**Los cinco pasos son byte a byte los mismos**, solo que ahora son los pasos **1 a 5** de su
+propio nodo en vez de los **5 a 9** del sujeto. **CERO contenido perdido.**
+
+| # en el nodo viejo | el paso, verbatim | # donde vive HOY en `puntos_brillantes_antes_del_pivote` |
+|---:|---|---:|
+| **5** | Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos | **1** |
+| **6** | Analiza qué característica común tienen esos clientes leales | **2** |
+| **7** | Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos | **3** |
+| **8** | Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto | **4** |
+| **9** | Solo pivota si no encuentras ningún punto brillante tras análisis profundo | **5** |
+
+**Y la arista existe con su espejo**, medida en los dos sentidos:
+`decision_pivote_perseverar` nombra a `puntos_brillantes_antes_del_pivote` en
+`nodos_siguientes` **y este lo nombra en `nodos_previos`**.
+
+### LA PARADA, QUE NO SE ARREGLA AQUI (regla 5)
+
+**La SEGUNDA MITAD de la verificacion 2 ya no se puede cumplir por la ruta que el plan
+escribio**, y no por un descuido de hoy sino porque **el adelanto de la fase 01 movio el
+bloque fuera del nodo que muere en el acto I**. Los tres textos que la medicion contradice,
+citados enteros y sin reescribir ninguno:
+
+| donde esta escrito | que dice, copiado | que mide el archivo HOY |
+|---|---|---|
+| `OP-D-07`, `verificacion` punto 2 | *EL BLOQUE DEL PUNTO BRILLANTE NO SE PIERDE: viaja entero al superviviente del acto I, que es la puerta de metricas, y es ademas un lado de la FRONTERA DECLARADA del 1298. Si el destejido lo deja fuera, la frontera se queda sin uno de sus dos lados* | el bloque **no esta** en el nodo que muere: esta en un tercero |
+| `OP-M-03-I`, `preservar` | *del que muere, ya destejido: EL BLOQUE DEL PUNTO BRILLANTE entero, pasos 5 a 9* | **el que muere ya NO lo trae**: `decision_pivote_perseverar` tiene hoy **0 de 5** |
+| `OP-M-03-I`, `verificacion` punto 3 | *el bloque del punto brillante esta entero y es identificable como bloque: la frontera del 1298 lo necesita nombrado* | el bloque **es identificable como bloque**, pero **en `puntos_brillantes_antes_del_pivote`**, que **no es** ninguno de los dos nodos de `OP-M-03-I` |
+
+**Y un cuarto, en su propia pagina:** `docs/plan/FRONTERAS_DECLARADAS.md` **linea 82**,
+del **12 ago 2026**, dice que el bloque *llega por el destejido `OP-D-07` y se conserva entero
+en el superviviente del acto I*. **Hoy no llega por ahi, porque ya no sale de ahi.**
+
+> **LA FRONTERA DEL 1298 NO ESTA PERDIDA: ESTA EN OTRO SITIO DEL QUE EL PLAN DICE.** Su lado
+> del punto brillante vive entero, con fuente `Traction` sola, en un nodo propio y enlazado.
+> **Lo que ya no se sostiene es la RUTA escrita, no el contenido.** Decidir si el lado se
+> queda donde esta, si viaja al superviviente en el acto I, o si la frontera se re-declara
+> entre otros dos nodos, **es una decision de la fase 03 y de la mesa, no de este registro**:
+> se trae **PARADA** y **no se arregla aqui**.
+
+### EL REGISTRO DE `OP-D-07`, ESCRITO CON LO QUE HAY Y NO CON LO QUE SE ESPERABA
+
+**Las verificaciones 1 y 3 CUMPLEN medidas, y la 2 cumple en su mitad material** (el bloque
+entero, verbatim, no perdido) **y NO cumple en su mitad diferida** (el viaje al superviviente,
+que era materia del acto I). **Por eso este registro NO dice `REGISTRO DE OPERACION HECHA`.**
+El campo `estado` **se queda quieto en `LISTA`**, como en todos los cierres desde la vuelta 30,
+y **lo que se declara es exactamente lo medido**: *la cirugia de `OP-D-07` esta hecha, la hizo
+`OP-F-04-WEI` el 14 ago 2026, y la mitad diferida de su verificacion 2 queda en PARADA*.
+**Si el auditor lee que eso basta para HECHA, la palabra se escribe en la vuelta siguiente con
+su acta detras. No se estrena aqui.**
+
+---
+
+## EL CIERRE DE LA FASE 02, DECLARADO MIDIENDO (19 ago 2026, vuelta 46)
+
+**Medido con `python scripts/loop/vuelta46_cierre_fase02.py`
+(`docs/loop/SALIDA_V46_CIERRE_FASE02.txt`, exit 0) y con el generador de esta seccion.**
+
+### LAS 9 OPERACIONES DE LA FASE, CON SU REGISTRO
+
+| operacion | nodos | puntos de `verificacion` | registro de cierre escrito en esta pagina |
+|---|---:|---:|---|
+| `OP-D-01` | 2 | 5 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3581** |
+| `OP-D-02` | 4 | 5 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3581** |
+| `OP-D-03` | 6 | 5 | **SI**, con el encabezado de la forma anterior, linea **1197**: *`OP-D-03` CERRADA: **DESTEJIDO HECHO Y SIN FUSION** (18 ago 2026, vuelta 36)* |
+| `OP-D-04` | 7 | 6 | **SI**, con el encabezado de la forma anterior, linea **1614**: *`OP-D-04` CERRADA: **LAS DOS FUSIONES EJECUTADAS Y EL RESTO ENLAZADO** (19 ag* |
+| `OP-D-05` | 3 | 4 | **SI**, con el encabezado de la forma anterior, linea **1765**: *`OP-D-05` SELLADA: **LA FUSION UNICA DE LA SELECCION DEL CEO** (19 ago 2026, * |
+| `OP-D-06` | 18 | 5 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3403** |
+| `OP-D-07` | 1 | 3 | **NINGUNO** |
+| `OP-D-08` | 1 | 9 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3829** |
+| `OP-D-09` | 1 | 7 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **4115** |
+
+**8 de 9 tienen registro de cierre escrito en esta pagina**, en una de las dos
+formas que la campana ha usado: la frase `REGISTRO DE OPERACION HECHA` acunada en la vuelta 30,
+o el encabezado `CERRADA` o `SELLADA` de la forma anterior. **La unica sin registro previo era
+`OP-D-07`, y lo acaba de recibir arriba.**
+
+### EL CRITERIO DE HECHO DE `08_VERIFICACION`, CONTRA LA FASE
+
+> **`08_VERIFICACION.md` linea 25:** *02 DESTEJIDOS: los quince congelados releidos; cada
+> perdida en el bloque del que proviene.*
+> **Y el criterio general, linea 9:** *UNA FASE ESTA HECHA CUANDO SU VERIFICACION SE CAERIA SI
+> EL FALLO VOLVIERA.*
+
+**LOS CONGELADOS, CONTADOS HOY SOBRE EL ARCHIVO ENTERO** (detector: la razon ABRE con *NO SE
+JUZGA*, *NO PUEDO JUZGAR* o *CONGELAD*, el mismo de
+`scripts/loop/vuelta45_verificar_opd01_opd02.py`):
+
+| puesto | clase | los dos nodos | de que fase es |
+|---:|---|---|---|
+| **1190** | **`D`** | `formalize_advisory_board` contra `identificar_consejo_asesores` | **de la junta asesora, NO de la fase 02** |
+
+**Queda 1 congelado sobre 3388 veredictos, y NO es de esta fase.** Los quince que
+el criterio nombra estan releidos.
+
+### GATE 0 Y SUITES, CORRIDOS EN ESTA VUELTA
+
+| que | como salio |
+|---|---|
+| **Gate 0**, ciclo de **TRES** comandos | los tres **exit 0**: `GATE 0: OK`, **71** etiquetas reaplicadas, **6** assets sincronizados. El comando **4 NO corre**: el censo no se movio |
+| **arbol tras el ciclo** | **byte igual a `HEAD`**. `phase1_run_log.json` respaldado antes y **comprobado byte igual despues** |
+| **suite del motor** | **25 de 25**, exit 0 |
+| **suite web** | **80** ficheros, **1.030** pasadas y **3** saltadas, exit 0 |
+| **`tsc --noEmit`** | **CERO** lineas, exit 0 |
+
+### LO QUE NO CIERRA, DECLARADO CON LA MEDICION DELANTE
+
+**El encargo manda declarar lo que no cierre en vez de declararlo cerrado. Son dos cosas:**
+
+1. **LA MITAD DIFERIDA DE LA VERIFICACION 2 DE `OP-D-07`**, arriba, en **PARADA**. Es de la
+   fase 03 y de la mesa, no de esta pagina.
+2. **EL MARCADOR DEL `00_INDICE` ESTA RANCIO, y no lo toco yo.** Es una tabla de prosa que
+   **ningun instrumento valida**, que es la especie exacta contra la que se escribio el cuarto
+   renglon de la regla 1. **Contrastada hoy, fila por fila, contra `OPERACIONES.jsonl`:**
+
+| fila del marcador del `00_INDICE` | lo que el indice publica | lo que MIDO hoy | calza |
+|---|---:|---:|---|
+| **operaciones (total)** | **69** | **71** | **NO** |
+| **0 CODIGO** | 5 | **7** | **NO** |
+| **01 FUENTES** | 7 | **7** | SI |
+| **02 DESTEJIDOS** | 7 | **9** | **NO** |
+| **03 FUSIONES** | 16 | **16** | SI |
+| **04 ENLACES** | 10 | **10** | SI |
+| **05 SANEO** | 12 | **10** | **NO** |
+| **06 MESAS** | 5 | **5** | SI |
+| **07 ADUANA** | 2 | **2** | SI |
+| **08 VERIFICACION** | 1 | **1** | SI |
+| **09 LECTURAS DIRIGIDAS** | 3 | **3** | SI |
+| **10 INVENTARIO** | 1 | **1** | SI |
+
+   **4 filas no calzan**, y la de esta fase es la que mas importa: **el indice dice
+   que la fase 02 tiene SIETE operaciones y el fichero tiene NUEVE**, porque `OP-D-08` y
+   `OP-D-09` nacieron despues. **Se declara y no se reescribe**, que es como una correccion se
+   puede auditar: **rehacer ese marcador es un encargo propio, con su instrumento, no un
+   apano al margen de esta seccion.**
