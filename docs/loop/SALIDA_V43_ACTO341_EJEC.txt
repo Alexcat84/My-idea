@@ -1,0 +1,69 @@
+PLAN     : docs/loop/PLAN_V41_ACTO341.json
+OPERACION: OP-D-06, ACTO 3 DE NUEVE (puesto 341): customer_journey_mapping absorbe a blueprint_de_experiencia
+SELLADO  : SELLADO en la vuelta 43, 19 ago 2026, ANTES de ejecutar. EL DESTEJIDO DE ESTE ACTO YA SE HIZO, y no aqui: lo hizo OP-F-04-COL, la mesa de Coleman. La razon del archivo describe DOS costuras gordas, diecisiete pasos el primero y diez el segundo, con bloques enteros pegados que no son mapeo (el ritual de celebracion del momento de la compra en uno y la silla vacia del cliente en las reuniones en el otro), y esa razon esta RANCIA EN ESE DETALLE: docs/plan/01_FUENTES.md publica las dos fronteras leidas en su tabla de los doce (linea 1225 para blueprint_de_experiencia, 1 a 4 contra 5 a 17; linea 1228 para customer_journey_mapping, 1 a 5 contra 6 a 10) y el reparto de los seis subbloques del primero (lineas 1332 a 1337) y de los tres del segundo (lineas 1341 a 1343). LA MEDICION DE HOY LO CONFIRMA: blueprint_de_experiencia tiene CUATRO pasos y customer_journey_mapping tiene CINCO, que son exactamente los tramos que aquellas fronteras dejaban en pie. La regla de fuente primero queda satisfecha POR PRECEDENCIA, con OP-F-04-COL HECHA en su nota 7981 SI segun la apertura de esta vuelta. Y LO QUE EL INSTRUMENTO SIGUE CITANDO HOY SE DICE EN VEZ DE CALLARSE: blueprint_de_experiencia esta FUERA de la cola de 1.495, pero customer_journey_mapping sigue DENTRO con bloque 49,4 y corte tras 2. Esa cita NO es la costura vieja de Coleman, que ya no existe en el fichero: es el residuo del bloque original de Brown, y la lectura textual con el texto delante dice que NO hay costura, porque los pasos 3 a 5 CONTINUAN a los 1 y 2 en vez de volver a contarlos (el 1 y el 2 observan y documentan las ETAPAS, el 3 abre cada etapa en sus TOUCHPOINTS, el 4 los juzga y el 5 prioriza). Comparten vocabulario, no narracion. LA CITA QUEDA REGISTRADA EN LA COLA Y NO DESPACHADA, y el auditor la relee: es la guarda contra el juez y parte.
+MODO     : --ejecutar
+==============================================================================
+censo ANTES: 3853 ficheros, 3530 vivos, 323 deprecados
+guarda 1, fuente del superviviente contra el plan y vida de los TRES: OK
+  ACTO DE FUENTE MIXTA (2 fuente(s) distinta(s) medida(s)), las tres impresas y ninguna escondida:
+    customer_journey_mapping               superviviente  Change by Design, Revised and U - Tim Brown
+    blueprint_de_experiencia               absorbido      Change by Design
+guarda 2, customer_journey_mapping               pasos y condiciones (5, 2) contra (5, 2): OK
+guarda 2, blueprint_de_experiencia               pasos y condiciones (4, 2) contra (4, 2): OK
+guarda 3, VERBATIM contra dataset/nodos: 13 de 13 calzan, 0 sobrantes en el plan
+guarda 4, cobertura de pasos        9 de 9, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones  4 de 4, repetidos [], faltan [], sobran []
+guarda 5, los finales derivados de los grupos calzan con el campo sellado: OK
+guarda 6, preservar_literal en el nodo resultante entero:
+    'touchpoints'                              ['pasos', 'entregable', 'resumen']
+    'shadowing'                                ['pasos']
+    'momentos emocionales clave'               ['pasos', 'entregable', 'resumen']
+    'momentos de verdad'                       ['pasos', 'resumen']
+    'memorable'                                ['pasos', 'entregable', 'resumen']
+    'estrategia general'                       ['pasos', 'entregable', 'resumen']
+    'detalle operativo'                        ['pasos', 'entregable', 'resumen']
+    'Marriott'                                 ['resumen']
+    'observación real'                         ['condiciones']
+    'no solo en el producto central'           ['pasos', 'resumen']
+    10 de 10
+guarda 7, rastros en el nodo resultante entero:
+    'primer contacto'                          ['pasos', 'resumen']
+    'etapa'                                    ['pasos', 'condiciones', 'entregable', 'resumen']
+    'mayor impacto'                            ['pasos', 'resumen']
+    'manual operativo'                         ['resumen']
+    'clientes reales'                          ['pasos', 'resumen']
+    5 de 5
+redirecciones medidas hoy sobre nodos VIVOS: 5
+    cultura_de_experiencia                           nodos_siguientes   blueprint_de_experiencia -> customer_journey_mapping
+    diseno_de_experiencias_participativas            nodos_siguientes   blueprint_de_experiencia -> customer_journey_mapping
+    ejecucion_de_touchpoints                         nodos_previos      blueprint_de_experiencia -> customer_journey_mapping
+    investigacion_etnografica_ideacion               nodos_siguientes   blueprint_de_experiencia -> customer_journey_mapping
+    storytelling_para_el_cambio                      nodos_previos      blueprint_de_experiencia -> customer_journey_mapping
+nodos DEPRECADOS que nombran y NO se tocan: 0
+guarda 8, redirecciones contra el plan sellado (5 esperadas): OK
+guarda 8b, deprecados que nombran contra el plan (0 esperados): OK
+
+### P.16, LAS DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas
+    TOTAL FABRICADAS: 0
+guarda 9, duplicadas fabricadas contra el plan (0 esperadas): OK
+guarda 10, cero auto-arista tras resolver: OK (0)
+guarda 11, cero duplicada tras resolver: OK (0)
+guarda 12, a6 del acta, titulo y etiqueta SIN TOCAR ('Mapeo del Customer Journey (Viaje del Cliente)' / 'Traza el Viaje del Cliente'): OK
+
+EL RESULTADO, sobre copia en memoria:
+  customer_journey_mapping: 5 pasos, 3 condiciones, alias ['blueprint_de_experiencia']
+    1. Observa directamente a clientes reales durante toda su experiencia de servicio, acompañándolos en todo su recorrido (shadowing) y sin limitarte al punto de contacto que asumiste como el más importante
+    2. Documenta cada etapa del viaje, desde el primer contacto hasta el cierre, identificando en cada una los momentos emocionales clave (los 'momentos de verdad'), y levanta el mapa con la estrategia general y el detalle operativo al mismo tiempo
+    3. Identifica todos los 'touchpoints' donde el cliente interactúa con la marca o el servicio
+    4. Evalúa cada touchpoint con dos varas distintas: si crea valor positivo o pierde al cliente, y si solo evita una mala experiencia o genera una experiencia memorable
+    5. Prioriza las mejoras en los puntos de mayor impacto, no solo en el producto central
+    c1. Cuando estás diseñando o rediseñando un servicio complejo, con múltiples etapas y múltiples puntos de interacción
+    c2. Cuando el foco inicial del proyecto se ha limitado erróneamente a un solo producto o a una sola etapa
+    c3. Cuando has invertido en un punto de contacto que asumiste como crítico sin validarlo con observación real
+  entregable: Un mapa visual del viaje del cliente con todas sus etapas y todos sus touchpoints, los momentos emocionales clave identificados, cada punto evaluado por el valor que crea y por lo memorable que resulta, levantado con la estrategia general y el detalle operativo al mismo tiempo, y con las mejoras priorizadas por impacto
+  blueprint_de_experiencia: deprecado True, texto INTACTO (4 pasos, 2 condiciones)
+  ficheros que se tocarian: 7
+
+ESCRITO. censo DESPUES: 3853 ficheros, 3529 vivos, 324 deprecados
+         censo ANTES  : 3853 ficheros, 3530 vivos, 323 deprecados
+guarda 13, el censo no se movio y los vivos bajaron en 1: OK

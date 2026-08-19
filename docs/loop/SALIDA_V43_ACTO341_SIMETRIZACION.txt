@@ -1,0 +1,22 @@
+PLAN        : docs/loop/PLAN_V41_ACTO341.json
+SUPERVIVIENTE: customer_journey_mapping
+LA GUARDA, tal como el plan la dejo escrita:
+  symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos
+==============================================================================
+### 1. symmetrize_added DEL LOG DEL CICLO
+  entradas totales en el log        : 5
+  entradas para customer_journey_mapping: 5
+  entradas para OTROS nodos         : 0
+  el plan esperaba                  : 5
+    [OK ] nodos_previos      cultura_de_experiencia
+    [OK ] nodos_previos      diseno_de_experiencias_participativas
+    [OK ] nodos_previos      investigacion_etnografica_ideacion
+    [OK ] nodos_siguientes   ejecucion_de_touchpoints
+    [OK ] nodos_siguientes   storytelling_para_el_cambio
+  GUARDA 1, simetrizacion EXACTA (faltan 0, sobran 0, de otros nodos 0): OK
+
+### 2. LAS ARISTAS RELEIDAS EN EL FICHERO DEL SUPERVIVIENTE
+  GUARDA 2, 5 de 5 aristas presentes en dataset/nodos/customer_journey_mapping.json: OK
+
+==============================================================================
+RESULTADO: TODAS LAS GUARDAS VERDES

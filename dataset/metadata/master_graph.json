@@ -8246,7 +8246,8 @@
         "Cuando has invertido en un punto de contacto que asumiste como crítico sin validarlo con observación real",
         "Si necesitas rediseñar una experiencia de servicio compleja con múltiples etapas"
       ],
-      "etiqueta_arbol": "Mapea el Viaje de tu Cliente"
+      "etiqueta_arbol": "Mapea el Viaje de tu Cliente",
+      "deprecado": true
     },
     "board_control_etapas_tardias": {
       "node_id": "board_control_etapas_tardias",
@@ -25408,7 +25409,7 @@
         "transparencia_facturacion"
       ],
       "nodos_siguientes": [
-        "blueprint_de_experiencia",
+        "customer_journey_mapping",
         "experiencia_del_cliente_proactiva",
         "silla_vacia_del_cliente_en_decisiones"
       ],
@@ -27136,18 +27137,21 @@
       "dominio": "core",
       "titulo_concepto": "Mapeo del Customer Journey (Viaje del Cliente)",
       "fuente": "Change by Design, Revised and U - Tim Brown",
-      "resumen_teorico": "Estructura de escenario simple que traza las etapas por las que pasa un cliente imaginado desde el inicio hasta el final de una experiencia de servicio. Permite identificar 'touchpoints' (puntos de contacto) donde el cliente interactúa con la marca o servicio, revelando oportunidades de valor u ocasiones de perder al cliente que podrían pasarse por alto si se enfoca solo en el producto final.",
+      "resumen_teorico": "El mapa del viaje del cliente traza el recorrido completo por el que pasa un cliente en una experiencia de servicio, desde el primer contacto hasta el cierre, para ver dónde se crea valor y dónde se pierde al cliente. Se levanta observando a clientes reales durante toda su experiencia, sin limitarse al punto de contacto que uno asumió como el más importante, y se documenta etapa por etapa marcando los momentos emocionales clave: los 'momentos de verdad'. Dentro de esas etapas se identifican los 'touchpoints', los puntos concretos donde el cliente interactúa con la marca o el servicio, y cada uno se evalúa con dos varas que no son la misma: si crea valor o pierde al cliente, y si solo evita una mala experiencia o genera una memorable. A diferencia de un manual operativo, este mapa lleva la estrategia general y el detalle operativo al mismo tiempo, conecta la experiencia del cliente con la oportunidad de negocio y revela ideas que a veces contradicen lo que se suponía al principio, como el momento de exhalar que descubrió Marriott en lugar del check-in. Termina priorizando las mejoras en los puntos de mayor impacto, no solo en el producto central.",
       "pasos_accionables": [
-        "Observar directamente a clientes reales durante toda su experiencia de servicio",
-        "Documentar cada etapa del viaje, desde el primer contacto hasta el cierre",
-        "Identificar todos los 'touchpoints' donde el cliente interactúa con la marca/servicio",
-        "Evaluar cada touchpoint como oportunidad de crear valor positivo o de perder al cliente",
-        "Priorizar mejoras en los puntos de mayor impacto, no solo en el producto central"
+        "Observa directamente a clientes reales durante toda su experiencia de servicio, acompañándolos en todo su recorrido (shadowing) y sin limitarte al punto de contacto que asumiste como el más importante",
+        "Documenta cada etapa del viaje, desde el primer contacto hasta el cierre, identificando en cada una los momentos emocionales clave (los 'momentos de verdad'), y levanta el mapa con la estrategia general y el detalle operativo al mismo tiempo",
+        "Identifica todos los 'touchpoints' donde el cliente interactúa con la marca o el servicio",
+        "Evalúa cada touchpoint con dos varas distintas: si crea valor positivo o pierde al cliente, y si solo evita una mala experiencia o genera una experiencia memorable",
+        "Prioriza las mejoras en los puntos de mayor impacto, no solo en el producto central"
       ],
-      "entregable_esperado": "Un mapa visual con todas las etapas y touchpoints del viaje del cliente, identificando oportunidades de mejora",
+      "entregable_esperado": "Un mapa visual del viaje del cliente con todas sus etapas y todos sus touchpoints, los momentos emocionales clave identificados, cada punto evaluado por el valor que crea y por lo memorable que resulta, levantado con la estrategia general y el detalle operativo al mismo tiempo, y con las mejoras priorizadas por impacto",
       "nodos_previos": [
         "prototipado_rapido",
-        "voz_del_cliente_voc"
+        "voz_del_cliente_voc",
+        "cultura_de_experiencia",
+        "diseno_de_experiencias_participativas",
+        "investigacion_etnografica_ideacion"
       ],
       "nodos_siguientes": [
         "prototipado_de_experiencias",
@@ -27156,13 +27160,26 @@
         "prototipado_experiencial_servicios",
         "rediseno_procesos_negocio_cx",
         "seguimiento_informacion_cliente",
-        "silla_vacia_del_cliente_en_decisiones"
+        "silla_vacia_del_cliente_en_decisiones",
+        "ejecucion_de_touchpoints",
+        "storytelling_para_el_cambio"
       ],
       "condiciones_activacion": [
-        "Cuando se está diseñando o rediseñando un servicio con múltiples puntos de interacción",
-        "Cuando el foco inicial del proyecto se ha limitado erróneamente a un solo producto/etapa"
+        "Cuando estás diseñando o rediseñando un servicio complejo, con múltiples etapas y múltiples puntos de interacción",
+        "Cuando el foco inicial del proyecto se ha limitado erróneamente a un solo producto o a una sola etapa",
+        "Cuando has invertido en un punto de contacto que asumiste como crítico sin validarlo con observación real"
       ],
-      "etiqueta_arbol": "Traza el Viaje del Cliente"
+      "etiqueta_arbol": "Traza el Viaje del Cliente",
+      "ids_alias": [
+        "blueprint_de_experiencia"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "blueprint_de_experiencia",
+          "titulo": "El Mapa de Experiencia del Cliente (Blueprint)",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "customer_needs_spreadsheet": {
       "node_id": "customer_needs_spreadsheet",
@@ -34985,7 +35002,7 @@
         "analisis_y_sintesis"
       ],
       "nodos_siguientes": [
-        "blueprint_de_experiencia",
+        "customer_journey_mapping",
         "cultura_de_experiencia"
       ],
       "condiciones_activacion": [
@@ -39264,7 +39281,7 @@
       ],
       "entregable_esperado": "Una lista de especificaciones detalladas por touchpoint, verificada mediante pruebas de consistencia",
       "nodos_previos": [
-        "blueprint_de_experiencia",
+        "customer_journey_mapping",
         "hoja_de_ruta_de_ventas"
       ],
       "nodos_siguientes": [
@@ -65759,7 +65776,7 @@
         "equipos_visita_cliente",
         "voc_temprano_en_agile_stage_gate",
         "analisis_y_sintesis",
-        "blueprint_de_experiencia",
+        "customer_journey_mapping",
         "diseno_basado_en_comportamientos_existentes",
         "metodologia_deep_dive",
         "prototipado_experiencial_servicios",
@@ -106552,7 +106569,7 @@
       ],
       "entregable_esperado": "Una narrativa de campaña con acciones concretas asociadas y un plan de demostración pública del cambio deseado",
       "nodos_previos": [
-        "blueprint_de_experiencia"
+        "customer_journey_mapping"
       ],
       "nodos_siguientes": [
         "storytelling_como_herramienta_de_diseno",
@@ -122917,7 +122934,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 15,
+    "nodos_sin_enlaces_entrantes": 16,
     "enlaces_rotos_en_grafo": 0
   }
 }

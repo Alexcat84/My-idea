@@ -7,14 +7,29 @@
   "final_cleanup_removed": [],
   "symmetrize_added": [
     {
-      "node": "analisis_de_gastos_de_capital",
+      "node": "customer_journey_mapping",
       "key": "nodos_siguientes",
-      "added": "gestion_capital_trabajo"
+      "added": "ejecucion_de_touchpoints"
     },
     {
-      "node": "analisis_de_gastos_de_capital",
+      "node": "customer_journey_mapping",
+      "key": "nodos_siguientes",
+      "added": "storytelling_para_el_cambio"
+    },
+    {
+      "node": "customer_journey_mapping",
       "key": "nodos_previos",
-      "added": "comparacion_metodos_inversion"
+      "added": "cultura_de_experiencia"
+    },
+    {
+      "node": "customer_journey_mapping",
+      "key": "nodos_previos",
+      "added": "diseno_de_experiencias_participativas"
+    },
+    {
+      "node": "customer_journey_mapping",
+      "key": "nodos_previos",
+      "added": "investigacion_etnografica_ideacion"
     }
   ]
 }
