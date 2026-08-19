@@ -4543,7 +4543,7 @@
         "customer_insights_design",
         "definir_tesoro_con_perspectiva_temporal",
         "desafios_de_diseno_competitivos",
-        "design_attitude_vs_decision_attitude",
+        "pensamiento_convergente_divergente",
         "disciplina_atencion_dirigida",
         "diseno_basado_en_comportamientos_existentes",
         "diseno_de_experiencias_participativas",
@@ -4563,7 +4563,6 @@
         "framework_ppph_flujos",
         "mash_ups",
         "netnografia_social_media",
-        "pensamiento_convergente_divergente",
         "perseguir_multiples_nortes",
         "preguntar_por_que_no_que",
         "reformular_problema_mas_alla_del_producto",
@@ -19653,7 +19652,7 @@
         "asociacion_de_ideas"
       ],
       "nodos_siguientes": [
-        "generar_multiples_opciones"
+        "pensamiento_convergente_divergente"
       ],
       "condiciones_activacion": [
         "Durante sesiones de brainstorming o co-creación en equipo"
@@ -31927,7 +31926,8 @@
       "condiciones_activacion": [
         "Cuando el equipo tiende a converger prematuramente en una única idea sin explorar alternativas"
       ],
-      "etiqueta_arbol": "Elige Diseñar o Decidir"
+      "etiqueta_arbol": "Elige Diseñar o Decidir",
+      "deprecado": true
     },
     "design_for_assembly": {
       "node_id": "design_for_assembly",
@@ -52558,7 +52558,7 @@
       "nodos_previos": [
         "fase_mobilizacion_equipo_multifuncional",
         "fase_mobilizar_modelo_negocio",
-        "design_attitude_vs_decision_attitude",
+        "pensamiento_convergente_divergente",
         "proceso_diseno_modelo_negocio_5_fases"
       ],
       "nodos_siguientes": [
@@ -56516,7 +56516,8 @@
         "Cuando el equipo tiende a converger prematuramente en la primera idea",
         "En la fase de ideación de un proyecto de diseño"
       ],
-      "etiqueta_arbol": "Exige Muchas Opciones Primero"
+      "etiqueta_arbol": "Exige Muchas Opciones Primero",
+      "deprecado": true
     },
     "generic_benchmarking": {
       "node_id": "generic_benchmarking",
@@ -80931,28 +80932,52 @@
       "dominio": "core",
       "titulo_concepto": "Pensamiento Convergente y Divergente",
       "fuente": "Change by Design",
-      "resumen_teorico": "El design thinking se experimenta como una danza entre cuatro estados mentales, siendo el más fundamental el intercambio rítmico entre pensamiento divergente (multiplicar opciones, crear posibilidades) y pensamiento convergente (elegir entre alternativas existentes, eliminar opciones). La cultura occidental tiende a favorecer la convergencia rápida, pero la innovación requiere primero divergir ampliamente antes de converger. Cada iteración del proceso es menos amplia y más detallada que la anterior.",
+      "resumen_teorico": "El design thinking se experimenta como una danza entre cuatro estados mentales, siendo el más fundamental el intercambio rítmico entre pensamiento divergente (multiplicar opciones, crear posibilidades) y pensamiento convergente (elegir entre alternativas existentes, eliminar opciones). La cultura occidental tiende a favorecer la convergencia rápida, pero la innovación requiere primero divergir ampliamente antes de converger. Cada iteración del proceso es menos amplia y más detallada que la anterior. No conformarse con la primera buena idea es lo que separa las soluciones incrementales y fácilmente copiables de las verdaderamente creativas, y los plazos ayudan a poner un límite productivo a esa exploración. Detrás hay un contraste que Collopy y Boland nombraron: la actitud de decisión asume que generar alternativas es fácil y elegir entre ellas es difícil, mientras que la actitud de diseño asume que diseñar una alternativa sobresaliente es difícil pero que, una vez lograda, elegirla es trivial. Innovar pide actitud de diseño: exploración iterativa, prototipado y tolerancia a la ambigüedad, representada visualmente en el Design Squiggle de Damien Newman.",
       "pasos_accionables": [
-        "Antes de buscar la solución, dedicar tiempo explícito a generar múltiples opciones sin juzgarlas (fase divergente).",
+        "Antes de buscar la solución, dedicar tiempo y energía explícitos a generar deliberadamente múltiples alternativas sin juzgarlas (fase divergente).",
+        "Fijar un deadline claro para la fase de divergencia, evitando la parálisis por análisis.",
         "Usar la metáfora del embudo: abrir posibilidades ampliamente y luego estrechar hacia soluciones concretas.",
-        "Alternar conscientemente entre fases de generación de ideas y fases de selección/eliminación de ideas.",
-        "Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso."
+        "Permitir la 'polinización cruzada' entre ideas distintas antes de converger en una.",
+        "Alternar conscientemente entre fases de generación de ideas y fases de selección o eliminación de ideas, de forma no lineal entre investigación de mercado, prototipado y generación.",
+        "Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso, y evitar adoptar la primera solución razonable.",
+        "Aceptar la ambigüedad y la incertidumbre como parte natural del proceso creativo."
       ],
-      "entregable_esperado": "Un mapa o registro de iteraciones mostrando ciclos de divergencia (generación de opciones) y convergencia (selección de opciones) a lo largo del proyecto.",
+      "entregable_esperado": "Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de al menos 3-5 alternativas de solución evaluadas antes de cada decisión final",
       "nodos_previos": [
         "usuarios_extremos_insights",
-        "analisis_y_sintesis"
+        "analisis_y_sintesis",
+        "construir_sobre_ideas_ajenas",
+        "pensamiento_visual"
       ],
       "nodos_siguientes": [
         "analisis_y_sintesis",
         "prototipado_rapido",
-        "reglas_brainstorming"
+        "reglas_brainstorming",
+        "fase_entendimiento_investigacion_mercado",
+        "portafolio_de_diseno"
       ],
       "condiciones_activacion": [
-        "Cuando el equipo converge demasiado rápido en una única solución sin explorar alternativas.",
-        "Cuando se necesita generar innovación disruptiva en lugar de mejoras incrementales."
+        "Cuando el equipo converge demasiado rápido en una única idea sin explorar alternativas.",
+        "Cuando se necesita generar innovación disruptiva en lugar de mejoras incrementales.",
+        "En la fase de ideación de un proyecto de diseño."
       ],
-      "etiqueta_arbol": "Abre y Cierra tus Opciones"
+      "etiqueta_arbol": "Abre y Cierra tus Opciones",
+      "ids_alias": [
+        "generar_multiples_opciones",
+        "design_attitude_vs_decision_attitude"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "generar_multiples_opciones",
+          "titulo": "Exigir Múltiples Opciones (Demand Options)",
+          "fuente": "Change by Design"
+        },
+        {
+          "node_id": "design_attitude_vs_decision_attitude",
+          "titulo": "Actitud de Diseño vs. Actitud de Decisión",
+          "fuente": "Business Model Generation (Osterwalder)"
+        }
+      ]
     },
     "pensamiento_de_conexiones_ripple_effect": {
       "node_id": "pensamiento_de_conexiones_ripple_effect",
@@ -81171,7 +81196,7 @@
         "mapeo_de_patrones"
       ],
       "nodos_siguientes": [
-        "generar_multiples_opciones",
+        "pensamiento_convergente_divergente",
         "get_visual",
         "butterfly_test_convergencia",
         "construir_sobre_ideas_ajenas"
@@ -84379,7 +84404,7 @@
       ],
       "entregable_esperado": "Un portafolio documentado (físico o digital) del proceso completo de diseño del proyecto.",
       "nodos_previos": [
-        "generar_multiples_opciones"
+        "pensamiento_convergente_divergente"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -122835,7 +122860,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 9,
+    "nodos_sin_enlaces_entrantes": 11,
     "enlaces_rotos_en_grafo": 0
   }
 }

@@ -4,26 +4,50 @@
   "dominio": "core",
   "titulo_concepto": "Pensamiento Convergente y Divergente",
   "fuente": "Change by Design",
-  "resumen_teorico": "El design thinking se experimenta como una danza entre cuatro estados mentales, siendo el más fundamental el intercambio rítmico entre pensamiento divergente (multiplicar opciones, crear posibilidades) y pensamiento convergente (elegir entre alternativas existentes, eliminar opciones). La cultura occidental tiende a favorecer la convergencia rápida, pero la innovación requiere primero divergir ampliamente antes de converger. Cada iteración del proceso es menos amplia y más detallada que la anterior.",
+  "resumen_teorico": "El design thinking se experimenta como una danza entre cuatro estados mentales, siendo el más fundamental el intercambio rítmico entre pensamiento divergente (multiplicar opciones, crear posibilidades) y pensamiento convergente (elegir entre alternativas existentes, eliminar opciones). La cultura occidental tiende a favorecer la convergencia rápida, pero la innovación requiere primero divergir ampliamente antes de converger. Cada iteración del proceso es menos amplia y más detallada que la anterior. No conformarse con la primera buena idea es lo que separa las soluciones incrementales y fácilmente copiables de las verdaderamente creativas, y los plazos ayudan a poner un límite productivo a esa exploración. Detrás hay un contraste que Collopy y Boland nombraron: la actitud de decisión asume que generar alternativas es fácil y elegir entre ellas es difícil, mientras que la actitud de diseño asume que diseñar una alternativa sobresaliente es difícil pero que, una vez lograda, elegirla es trivial. Innovar pide actitud de diseño: exploración iterativa, prototipado y tolerancia a la ambigüedad, representada visualmente en el Design Squiggle de Damien Newman.",
   "pasos_accionables": [
-    "Antes de buscar la solución, dedicar tiempo explícito a generar múltiples opciones sin juzgarlas (fase divergente).",
+    "Antes de buscar la solución, dedicar tiempo y energía explícitos a generar deliberadamente múltiples alternativas sin juzgarlas (fase divergente).",
+    "Fijar un deadline claro para la fase de divergencia, evitando la parálisis por análisis.",
     "Usar la metáfora del embudo: abrir posibilidades ampliamente y luego estrechar hacia soluciones concretas.",
-    "Alternar conscientemente entre fases de generación de ideas y fases de selección/eliminación de ideas.",
-    "Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso."
+    "Permitir la 'polinización cruzada' entre ideas distintas antes de converger en una.",
+    "Alternar conscientemente entre fases de generación de ideas y fases de selección o eliminación de ideas, de forma no lineal entre investigación de mercado, prototipado y generación.",
+    "Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso, y evitar adoptar la primera solución razonable.",
+    "Aceptar la ambigüedad y la incertidumbre como parte natural del proceso creativo."
   ],
-  "entregable_esperado": "Un mapa o registro de iteraciones mostrando ciclos de divergencia (generación de opciones) y convergencia (selección de opciones) a lo largo del proyecto.",
+  "entregable_esperado": "Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de al menos 3-5 alternativas de solución evaluadas antes de cada decisión final",
   "nodos_previos": [
     "usuarios_extremos_insights",
-    "analisis_y_sintesis"
+    "analisis_y_sintesis",
+    "construir_sobre_ideas_ajenas",
+    "pensamiento_visual"
   ],
   "nodos_siguientes": [
     "analisis_y_sintesis",
     "prototipado_rapido",
-    "reglas_brainstorming"
+    "reglas_brainstorming",
+    "fase_entendimiento_investigacion_mercado",
+    "portafolio_de_diseno"
   ],
   "condiciones_activacion": [
-    "Cuando el equipo converge demasiado rápido en una única solución sin explorar alternativas.",
-    "Cuando se necesita generar innovación disruptiva en lugar de mejoras incrementales."
+    "Cuando el equipo converge demasiado rápido en una única idea sin explorar alternativas.",
+    "Cuando se necesita generar innovación disruptiva en lugar de mejoras incrementales.",
+    "En la fase de ideación de un proyecto de diseño."
   ],
-  "etiqueta_arbol": "Abre y Cierra tus Opciones"
+  "etiqueta_arbol": "Abre y Cierra tus Opciones",
+  "ids_alias": [
+    "generar_multiples_opciones",
+    "design_attitude_vs_decision_attitude"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "generar_multiples_opciones",
+      "titulo": "Exigir Múltiples Opciones (Demand Options)",
+      "fuente": "Change by Design"
+    },
+    {
+      "node_id": "design_attitude_vs_decision_attitude",
+      "titulo": "Actitud de Diseño vs. Actitud de Decisión",
+      "fuente": "Business Model Generation (Osterwalder)"
+    }
+  ]
 }

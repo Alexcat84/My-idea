@@ -1,0 +1,21 @@
+PLAN        : docs/loop/PLAN_V38_OPD04_ALTERNANCIA.json
+SUPERVIVIENTE: pensamiento_convergente_divergente
+LA GUARDA, tal como el plan la dejo escrita:
+  symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos
+==============================================================================
+### 1. symmetrize_added DEL LOG DEL CICLO
+  entradas totales en el log        : 4
+  entradas para pensamiento_convergente_divergente: 4
+  entradas para OTROS nodos         : 0
+  el plan esperaba                  : 4
+    [OK ] nodos_previos      construir_sobre_ideas_ajenas
+    [OK ] nodos_previos      pensamiento_visual
+    [OK ] nodos_siguientes   fase_entendimiento_investigacion_mercado
+    [OK ] nodos_siguientes   portafolio_de_diseno
+  GUARDA 1, simetrizacion EXACTA (faltan 0, sobran 0, de otros nodos 0): OK
+
+### 2. LAS ARISTAS RELEIDAS EN EL FICHERO DEL SUPERVIVIENTE
+  GUARDA 2, 4 de 4 aristas presentes en dataset/nodos/pensamiento_convergente_divergente.json: OK
+
+==============================================================================
+RESULTADO: TODAS LAS GUARDAS VERDES
