@@ -1,0 +1,38 @@
+PLAN        : docs/loop/PLAN_V38_OPD04_TALLER.json
+SUPERVIVIENTE: reglas_brainstorming
+LA GUARDA, tal como el plan la dejo escrita:
+  symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos
+==============================================================================
+### 1. symmetrize_added DEL LOG DEL CICLO
+  entradas totales en el log        : 16
+  entradas para reglas_brainstorming  : 16
+  entradas para OTROS nodos         : 0
+  el plan esperaba                  : 16
+    [OK ] nodos_previos      buscar_armonia_diseno
+    [OK ] nodos_previos      cultura_de_optimismo
+    [OK ] nodos_previos      esfuerzo_voluntario_vs_urge_espontaneo
+    [OK ] nodos_previos      how_might_we_briefs
+    [OK ] nodos_previos      intimation_illumination
+    [OK ] nodos_previos      pensamiento_convergente_divergente
+    [OK ] nodos_previos      periodo_incubacion_mental
+    [OK ] nodos_previos      sentido_del_humor_como_herramienta_de_pensamiento
+    [OK ] nodos_siguientes   brainstorming
+    [OK ] nodos_siguientes   butterfly_test_convergencia
+    [OK ] nodos_siguientes   deriva_deliberada
+    [OK ] nodos_siguientes   etnografia_investigacion_usuario
+    [OK ] nodos_siguientes   ideacion_con_ia_en_la_sesion
+    [OK ] nodos_siguientes   pensamiento_visual
+    [OK ] nodos_siguientes   prototipado_rapido
+    [OK ] nodos_siguientes   tecnica_perder_objeto
+  GUARDA 1, simetrizacion EXACTA (faltan 0, sobran 0, de otros nodos 0): OK
+
+### 2. LAS ARISTAS RELEIDAS EN EL FICHERO DEL SUPERVIVIENTE
+  GUARDA 2, 16 de 16 aristas presentes en dataset/nodos/reglas_brainstorming.json: OK
+
+### 3. EL CUARTO MIEMBRO, brainstorming, DECLARADO EN LOS DOS EXTREMOS
+    reglas_brainstorming                   nombra a brainstorming                  en ['nodos_siguientes']
+    brainstorming                          nombra a reglas_brainstorming           en ['nodos_previos']
+  GUARDA 3, la arista esta en los dos ficheros y en campos opuestos: OK
+
+==============================================================================
+RESULTADO: TODAS LAS GUARDAS VERDES

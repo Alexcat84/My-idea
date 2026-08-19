@@ -8399,7 +8399,7 @@
       "entregable_esperado": "Lista de ideas generadas por el grupo, procesada y lista para su categorización",
       "nodos_previos": [
         "fijacion_de_metas",
-        "brainstorming_efectivo"
+        "reglas_brainstorming"
       ],
       "nodos_siguientes": [
         "diagrama_afinidad",
@@ -8436,7 +8436,8 @@
         "Cuando el equipo necesita explorar múltiples soluciones posibles antes de comprometerse con una",
         "Cuando el problema aún no tiene una dirección clara de solución"
       ],
-      "etiqueta_arbol": "Abre Posibilidades sin Filtro"
+      "etiqueta_arbol": "Abre Posibilidades sin Filtro",
+      "deprecado": true
     },
     "brainstorming_efectivo": {
       "node_id": "brainstorming_efectivo",
@@ -8473,7 +8474,8 @@
         "Cuando se necesita abrir un espectro amplio de ideas antes de tomar decisiones.",
         "Cuando el equipo no se conoce bien o carece de confianza para colaborar espontáneamente."
       ],
-      "etiqueta_arbol": "Sigue Reglas para Idear Mejor"
+      "etiqueta_arbol": "Sigue Reglas para Idear Mejor",
+      "deprecado": true
     },
     "branding_etiquetado_empaque_internacional": {
       "node_id": "branding_etiquetado_empaque_internacional",
@@ -9175,7 +9177,7 @@
       "nodos_siguientes": [
         "ser_buen_jig",
         "abrazar_la_incomodidad",
-        "brainstorming_divergente",
+        "reglas_brainstorming",
         "definicion_startup_busqueda_modelo_negocio",
         "diseno_como_plataforma_expansiva",
         "fracaso_como_aprendizaje_startup",
@@ -9639,7 +9641,7 @@
       ],
       "entregable_esperado": "Lista reducida y priorizada de ideas seleccionadas por consenso grupal para avanzar a prototipado",
       "nodos_previos": [
-        "brainstorming_divergente",
+        "reglas_brainstorming",
         "pensamiento_visual"
       ],
       "nodos_siguientes": [
@@ -25524,7 +25526,7 @@
         "gestion_intraemprendedora_experimentacion"
       ],
       "nodos_siguientes": [
-        "brainstorming_efectivo",
+        "reglas_brainstorming",
         "adn_de_innovacion_organizacional",
         "automatizacion_software_gestion_innovacion",
         "calidad_de_ejecucion_proceso_innovacion",
@@ -30899,7 +30901,7 @@
       "entregable_esperado": "Registro de observaciones de una sesión de deriva (fotos, notas, mapas sensoriales) con insights de diseño identificados",
       "nodos_previos": [
         "metodologia_deep_dive",
-        "brainstorming_efectivo"
+        "reglas_brainstorming"
       ],
       "nodos_siguientes": [
         "sintesis_de_insights_en_principios_de_diseno"
@@ -44337,7 +44339,7 @@
       ],
       "nodos_siguientes": [
         "periodo_incubacion_mental",
-        "brainstorming_efectivo",
+        "reglas_brainstorming",
         "deteccion_efecto_hawthorne"
       ],
       "condiciones_activacion": [
@@ -48189,7 +48191,7 @@
       "entregable_esperado": "Un reporte de insights etnográficos con problemas de usuario identificados y no articulados, listo para alimentar sesiones de ideación.",
       "nodos_previos": [
         "arenas_estrategicas",
-        "brainstorming_efectivo",
+        "reglas_brainstorming",
         "seleccion_arenas_estrategicas"
       ],
       "nodos_siguientes": [
@@ -61566,7 +61568,7 @@
         "search_for_business_model"
       ],
       "nodos_siguientes": [
-        "brainstorming_efectivo",
+        "reglas_brainstorming",
         "prototipado_rapido",
         "how_might_we_framing",
         "fallar_rapido_prototipado"
@@ -61991,7 +61993,7 @@
       ],
       "entregable_esperado": "Un lote ampliado de ideas generado con IA y ya filtrado por criterio humano",
       "nodos_previos": [
-        "brainstorming_divergente"
+        "reglas_brainstorming"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -65318,7 +65320,7 @@
       ],
       "nodos_siguientes": [
         "wallas_etapa_verificacion",
-        "brainstorming_efectivo",
+        "reglas_brainstorming",
         "control_voluntario_del_pensamiento",
         "emocion_e_imagen_en_el_pensamiento",
         "proteccion_del_tren_asociativo",
@@ -80944,7 +80946,7 @@
       "nodos_siguientes": [
         "analisis_y_sintesis",
         "prototipado_rapido",
-        "brainstorming_efectivo"
+        "reglas_brainstorming"
       ],
       "condiciones_activacion": [
         "Cuando el equipo converge demasiado rápido en una única solución sin explorar alternativas.",
@@ -81165,7 +81167,7 @@
       "entregable_esperado": "Una colección visual (sketchbook, mapa mental o board) de ideas y observaciones del proyecto.",
       "nodos_previos": [
         "observar_lo_ordinario",
-        "brainstorming_efectivo",
+        "reglas_brainstorming",
         "mapeo_de_patrones"
       ],
       "nodos_siguientes": [
@@ -81404,7 +81406,7 @@
       ],
       "nodos_siguientes": [
         "sistema_captura_ideas",
-        "brainstorming_efectivo",
+        "reglas_brainstorming",
         "second_wind_energia_mental"
       ],
       "condiciones_activacion": [
@@ -91050,8 +91052,7 @@
         "butterfly_test_convergencia",
         "pensamiento_integrador",
         "actitud_de_experimentacion_organizacional",
-        "brainstorming_divergente",
-        "brainstorming_efectivo",
+        "reglas_brainstorming",
         "ciclo_circunstancias_sentimientos_ideas",
         "cuatro_etapas_del_pensamiento_creativo",
         "deadlines_como_herramienta_convergencia",
@@ -94981,21 +94982,31 @@
       "dominio": "core",
       "titulo_concepto": "Reglas de Brainstorming Efectivo",
       "fuente": "Business Model Generation (Osterwalder)",
-      "resumen_teorico": "Conjunto de reglas para maximizar la generación de ideas útiles en sesiones de lluvia de ideas: mantener el foco en un problema bien definido (idealmente centrado en la necesidad del cliente), diferir el juicio crítico, mantener una sola conversación a la vez, priorizar cantidad, pensar visualmente (Post-it) y fomentar ideas alocadas. Incluye un ejercicio de calentamiento ('Silly Cow') para desbloquear la creatividad.",
+      "resumen_teorico": "Conjunto de reglas para maximizar la generación de ideas útiles en sesiones de lluvia de ideas: mantener el foco en un problema bien definido (idealmente centrado en la necesidad del cliente), diferir el juicio crítico, mantener una sola conversación a la vez, priorizar cantidad, pensar visualmente (Post-it) y fomentar ideas alocadas. Incluye un ejercicio de calentamiento ('Silly Cow') para desbloquear la creatividad. Las reglas no son decorado: sin ellas la sesión degenera en reunión ordenada o en caos improductivo, y la más importante de todas es construir sobre las ideas de los demás, que genera un efecto acumulativo de creatividad superior al trabajo individual. La sesión pertenece a la fase divergente: abre el espectro de opciones y su cosecha se filtra después, en la fase de convergencia.",
       "pasos_accionables": [
+        "Reunir al equipo en un espacio dedicado sin distracciones, formando grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.",
         "Definir un enunciado claro del problema centrado en necesidad del cliente",
-        "Establecer y hacer cumplir reglas: diferir juicio, una conversación a la vez, ir por cantidad, ser visual, fomentar ideas locas",
+        "Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada.",
         "Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)",
-        "Usar Post-it notes para capturar y mover ideas visualmente",
-        "Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo"
+        "Usar Post-it notes o pizarra para capturar y mover las ideas visualmente",
+        "Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo",
+        "Generar el mayor número de ideas posible sin filtrar prematuramente, en sesiones dedicadas solo a generar opciones (divergencia) y separadas de las sesiones de selección (convergencia)."
       ],
-      "entregable_esperado": "Sesión de brainstorming documentada con ideas capturadas en Post-its y agrupadas por tema",
+      "entregable_esperado": "Sesión de brainstorming documentada con una colección amplia de ideas generadas colaborativamente, capturadas en Post-its y agrupadas por tema, lista para ser filtrada en la fase de convergencia",
       "nodos_previos": [
         "equipo_diverso_ideacion",
         "cuatro_etapas_del_pensamiento_creativo",
         "equipos_visita_cliente",
         "etnografia_investigacion_usuario",
-        "how_might_we_hmw"
+        "how_might_we_hmw",
+        "buscar_armonia_diseno",
+        "cultura_de_optimismo",
+        "esfuerzo_voluntario_vs_urge_espontaneo",
+        "how_might_we_briefs",
+        "intimation_illumination",
+        "pensamiento_convergente_divergente",
+        "periodo_incubacion_mental",
+        "sentido_del_humor_como_herramienta_de_pensamiento"
       ],
       "nodos_siguientes": [
         "pensamiento_visual_modelos_negocio",
@@ -95003,13 +95014,39 @@
         "co_creation_session",
         "get_visual",
         "gut_check",
-        "mash_ups"
+        "mash_ups",
+        "brainstorming",
+        "butterfly_test_convergencia",
+        "deriva_deliberada",
+        "etnografia_investigacion_usuario",
+        "ideacion_con_ia_en_la_sesion",
+        "pensamiento_visual",
+        "prototipado_rapido",
+        "tecnica_perder_objeto"
       ],
       "condiciones_activacion": [
-        "Cuando el equipo necesita generar gran volumen de ideas en poco tiempo",
-        "Si las discusiones se estancan en crítica prematura de ideas"
+        "Cuando el equipo necesita generar gran volumen de ideas en poco tiempo, antes de tomar decisiones",
+        "Si las discusiones se estancan en crítica prematura de ideas",
+        "Cuando el equipo necesita explorar múltiples soluciones posibles antes de comprometerse con una, o el problema aún no tiene una dirección clara de solución",
+        "Cuando el equipo no se conoce bien o carece de confianza para colaborar espontáneamente"
       ],
-      "etiqueta_arbol": "Organiza tu Lluvia de Ideas"
+      "etiqueta_arbol": "Organiza tu Lluvia de Ideas",
+      "ids_alias": [
+        "brainstorming_divergente",
+        "brainstorming_efectivo"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "brainstorming_divergente",
+          "titulo": "Brainstorming como Generador de Divergencia",
+          "fuente": "Change by Design, Revised and U - Tim Brown"
+        },
+        {
+          "node_id": "brainstorming_efectivo",
+          "titulo": "Reglas para un Brainstorming Efectivo",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "reglas_de_origen_fta_2": {
       "node_id": "reglas_de_origen_fta_2",
@@ -103045,7 +103082,7 @@
         "cuatro_etapas_del_pensamiento_creativo"
       ],
       "nodos_siguientes": [
-        "brainstorming_efectivo",
+        "reglas_brainstorming",
         "equipo_diverso_ideacion"
       ],
       "condiciones_activacion": [
@@ -107660,7 +107697,7 @@
       "entregable_esperado": "Notas de observación sobre interacciones humanas ocultas, con propuestas de rediseño basadas en los patrones detectados",
       "nodos_previos": [
         "investigacion_etnografica_ideacion",
-        "brainstorming_efectivo"
+        "reglas_brainstorming"
       ],
       "nodos_siguientes": [
         "cultura_de_experiencia"
@@ -122798,7 +122835,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 7,
+    "nodos_sin_enlaces_entrantes": 9,
     "enlaces_rotos_en_grafo": 0
   }
 }

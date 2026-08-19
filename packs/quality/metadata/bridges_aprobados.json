@@ -2,9 +2,10 @@
   "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; regla max 2 por ancla core aplicada; rechazados: 4 usos extra de calidad_de_ejecucion_proceso_innovacion, 2 pares de seed_deals por trampa semantica, 1 redundante de ROI, 1 vago de capacidad). | 2026-08-07: un puente apuntaba a un nodo deprecado por la fusion y se REDIRIGIO a su superviviente. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | ronda 2 de fusion: puente redirigido a su superviviente.",
   "aprobados": [
     {
-      "core": "brainstorming_efectivo",
+      "core": "reglas_brainstorming",
       "dominio": "brainstorming",
-      "score": 0.89
+      "score": 0.89,
+      "ancla_original": "brainstorming_efectivo"
     },
     {
       "core": "data_integrity_forecasting",

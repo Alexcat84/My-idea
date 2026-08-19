@@ -1,0 +1,69 @@
+PLAN     : docs/loop/PLAN_V38_OPD04_ALTERNANCIA.json
+OPERACION: OP-D-04, FUSION 2 de 2: LA ALTERNANCIA. pensamiento_convergente_divergente absorbe a generar_multiples_opciones y a design_attitude_vs_decision_attitude
+SELLADO  : SELLADO Y SIN EJECUTAR. La fusion espera el acta del auditor (decision del fundador, 19 ago 2026): no se ejecuta en la misma vuelta que la decide.
+MODO     : --simular
+==============================================================================
+censo ANTES: 3853 ficheros, 3538 vivos, 315 deprecados
+guarda 1, fuente del superviviente contra el plan y vida de los TRES: OK
+  ACTO DE FUENTE MIXTA, las tres fuentes impresas y ninguna escondida:
+    pensamiento_convergente_divergente     superviviente  Change by Design
+    generar_multiples_opciones             absorbido      Change by Design
+    design_attitude_vs_decision_attitude   absorbido      Business Model Generation (Osterwalder)
+guarda 2, pensamiento_convergente_divergente     pasos y condiciones (4, 2) contra (4, 2): OK
+guarda 2, generar_multiples_opciones             pasos y condiciones (3, 2) contra (3, 2): OK
+guarda 2, design_attitude_vs_decision_attitude   pasos y condiciones (4, 1) contra (4, 1): OK
+guarda 3, VERBATIM contra dataset/nodos: 16 de 16 calzan, 0 sobrantes en el plan
+guarda 4, cobertura de pasos        11 de 11, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones  5 de 5, repetidos [], faltan [], sobran []
+guarda 5, los finales derivados de los grupos calzan con el campo sellado: OK
+guarda 6, preservar_literal en el nodo resultante entero:
+    'matar a los hijos favoritos'              ['pasos']
+    'polinización cruzada'                     ['pasos']
+    'deadline'                                 ['pasos']
+    'ambigüedad'                               ['pasos', 'resumen']
+    '3-5 alternativas'                         ['entregable']
+    5 de 5
+guarda 7, rastros en el nodo resultante entero:
+    'embudo'                                   ['pasos']
+    'divergencia'                              ['pasos', 'entregable']
+    'convergencia'                             ['entregable', 'resumen']
+    'iteraciones'                              ['entregable']
+    'prototipado'                              ['pasos', 'resumen']
+    5 de 5
+redirecciones medidas hoy sobre nodos VIVOS: 5
+    analisis_y_sintesis                              nodos_siguientes   design_attitude_vs_decision_attitude -> pensamiento_convergente_divergente
+    construir_sobre_ideas_ajenas                     nodos_siguientes   generar_multiples_opciones -> pensamiento_convergente_divergente
+    fase_entendimiento_investigacion_mercado         nodos_previos      design_attitude_vs_decision_attitude -> pensamiento_convergente_divergente
+    pensamiento_visual                               nodos_siguientes   generar_multiples_opciones -> pensamiento_convergente_divergente
+    portafolio_de_diseno                             nodos_previos      generar_multiples_opciones -> pensamiento_convergente_divergente
+nodos DEPRECADOS que nombran y NO se tocan: 1
+    fase_entender_modelo_negocio                     nodos_previos      design_attitude_vs_decision_attitude (deprecado: registro historico)
+guarda 8, redirecciones contra el plan sellado (5 esperadas): OK
+guarda 8b, deprecados que nombran contra el plan (1 esperados): OK
+
+### P.16, LAS DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas
+    analisis_y_sintesis                              nodos_siguientes   -> pensamiento_convergente_divergente
+    TOTAL FABRICADAS: 1
+guarda 9, duplicadas fabricadas contra el plan (1 esperadas): OK
+guarda 10, cero auto-arista tras resolver: OK (0)
+guarda 11, cero duplicada tras resolver: OK (0)
+guarda 12, a6 del acta, titulo y etiqueta SIN TOCAR ('Pensamiento Convergente y Divergente' / 'Abre y Cierra tus Opciones'): OK
+
+EL RESULTADO, sobre copia en memoria:
+  pensamiento_convergente_divergente: 7 pasos, 3 condiciones, alias ['generar_multiples_opciones', 'design_attitude_vs_decision_attitude']
+    1. Antes de buscar la solución, dedicar tiempo y energía explícitos a generar deliberadamente múltiples alternativas sin juzgarlas (fase divergente).
+    2. Fijar un deadline claro para la fase de divergencia, evitando la parálisis por análisis.
+    3. Usar la metáfora del embudo: abrir posibilidades ampliamente y luego estrechar hacia soluciones concretas.
+    4. Permitir la 'polinización cruzada' entre ideas distintas antes de converger en una.
+    5. Alternar conscientemente entre fases de generación de ideas y fases de selección o eliminación de ideas, de forma no lineal entre investigación de mercado, prototipado y generación.
+    6. Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso, y evitar adoptar la primera solución razonable.
+    7. Aceptar la ambigüedad y la incertidumbre como parte natural del proceso creativo.
+    c1. Cuando el equipo converge demasiado rápido en una única idea sin explorar alternativas.
+    c2. Cuando se necesita generar innovación disruptiva en lugar de mejoras incrementales.
+    c3. En la fase de ideación de un proyecto de diseño.
+  entregable: Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de al menos 3-5 alternativas de solución evaluadas antes de cada decisión final
+  generar_multiples_opciones: deprecado True, texto INTACTO (3 pasos, 2 condiciones)
+  design_attitude_vs_decision_attitude: deprecado True, texto INTACTO (4 pasos, 1 condiciones)
+  ficheros que se tocarian: 8
+
+SIMULACION: cero escrituras.

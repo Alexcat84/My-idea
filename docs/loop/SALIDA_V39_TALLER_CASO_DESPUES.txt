@@ -1,0 +1,75 @@
+CASO POSITIVO: OP-D-04, FUSION 1 de 2: EL TALLER. reglas_brainstorming absorbe a brainstorming_divergente y a brainstorming_efectivo
+==============================================================================
+
+EL SUPERVIVIENTE, reglas_brainstorming
+  [PASA] tiene 7 pasos, los 7 que el plan deja
+  [PASA] tiene 4 condiciones, las 4 que el plan deja
+  [PASA] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [PASA] sus condiciones son exactamente las del plan
+  [PASA] su entregable es el del plan
+  [PASA] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Reglas de Brainstorming Efectivo'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Organiza tu Lluvia de Ideas'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['pasos']: 'inmersión previa'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'Silly Cow'
+  [PASA] sobrevive literal en ['pasos']: 'construir sobre las ideas de otros'
+  [PASA] sobrevive literal en ['pasos']: 'sin distracciones'
+  [PASA] sobrevive literal en ['pasos']: 'confianza mutua'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [PASA] 'brainstorming_divergente' esta en ids_alias del superviviente
+  [PASA] 'brainstorming_divergente' tiene su entrada en merged_originals
+  [PASA] la ficha de 'brainstorming_divergente' guarda su fuente verbatim: 'Change by Design, Revised and U - Tim Brown'
+  [PASA] 'brainstorming_efectivo' esta en ids_alias del superviviente
+  [PASA] 'brainstorming_efectivo' tiene su entrada en merged_originals
+  [PASA] la ficha de 'brainstorming_efectivo' guarda su fuente verbatim: 'Change by Design'
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, brainstorming_divergente
+  [PASA] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 4 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LA MUERTE DEL ABSORBIDO, brainstorming_efectivo
+  [PASA] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 4 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LAS REDIRECCIONES
+  [PASA] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 0)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [PASA] brainstorming.nodos_previos ya apunta a reglas_brainstorming
+  [PASA] buscar_armonia_diseno.nodos_siguientes ya apunta a reglas_brainstorming
+  [PASA] butterfly_test_convergencia.nodos_previos ya apunta a reglas_brainstorming
+  [PASA] cultura_de_optimismo.nodos_siguientes ya apunta a reglas_brainstorming
+  [PASA] deriva_deliberada.nodos_previos ya apunta a reglas_brainstorming
+  [PASA] esfuerzo_voluntario_vs_urge_espontaneo.nodos_siguientes ya apunta a reglas_brainstorming
+  [PASA] etnografia_investigacion_usuario.nodos_previos ya apunta a reglas_brainstorming
+  [PASA] how_might_we_briefs.nodos_siguientes ya apunta a reglas_brainstorming
+  [PASA] ideacion_con_ia_en_la_sesion.nodos_previos ya apunta a reglas_brainstorming
+  [PASA] intimation_illumination.nodos_siguientes ya apunta a reglas_brainstorming
+  [PASA] pensamiento_convergente_divergente.nodos_siguientes ya apunta a reglas_brainstorming
+  [PASA] pensamiento_visual.nodos_previos ya apunta a reglas_brainstorming
+  [PASA] periodo_incubacion_mental.nodos_siguientes ya apunta a reglas_brainstorming
+  [PASA] prototipado_rapido.nodos_previos ya apunta a reglas_brainstorming
+  [PASA] prototipado_rapido.nodos_previos ya apunta a reglas_brainstorming
+  [PASA] sentido_del_humor_como_herramienta_de_pensamiento.nodos_siguientes ya apunta a reglas_brainstorming
+  [PASA] tecnica_perder_objeto.nodos_previos ya apunta a reglas_brainstorming
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'Post-it' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'cliente' sigue vivo en ['pasos', 'resumen']
+  (conservacion) [SI] el rastro 'divergencia' sigue vivo en ['pasos']
+  (conservacion) [SI] el rastro 'convergencia' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'cantidad' sigue vivo en ['pasos', 'resumen']
+
+==============================================================================
+RESULTADO: 50 PASAN, 0 CAEN
+CONSERVACION (aparte, no suma): 5 vivos, 0 muertos

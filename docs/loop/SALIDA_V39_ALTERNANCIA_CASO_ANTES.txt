@@ -1,0 +1,61 @@
+CASO POSITIVO: OP-D-04, FUSION 2 de 2: LA ALTERNANCIA. pensamiento_convergente_divergente absorbe a generar_multiples_opciones y a design_attitude_vs_decision_attitude
+==============================================================================
+
+EL SUPERVIVIENTE, pensamiento_convergente_divergente
+  [CAE ] tiene 4 pasos, los 7 que el plan deja
+  [CAE ] tiene 2 condiciones, las 3 que el plan deja
+  [CAE ] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [CAE ] sus condiciones son exactamente las del plan
+  [CAE ] su entregable es el del plan
+  [CAE ] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Pensamiento Convergente y Divergente'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Abre y Cierra tus Opciones'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['pasos']: 'matar a los hijos favoritos'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'polinización cruzada'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'deadline'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'ambigüedad'
+  [CAE ] sobrevive literal en NINGUN CAMPO: '3-5 alternativas'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [CAE ] 'generar_multiples_opciones' esta en ids_alias del superviviente
+  [CAE ] 'generar_multiples_opciones' tiene su entrada en merged_originals
+  [CAE ] 'design_attitude_vs_decision_attitude' esta en ids_alias del superviviente
+  [CAE ] 'design_attitude_vs_decision_attitude' tiene su entrada en merged_originals
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, generar_multiples_opciones
+  [CAE ] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 3 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LA MUERTE DEL ABSORBIDO, design_attitude_vs_decision_attitude
+  [CAE ] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 4 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 1
+
+LAS REDIRECCIONES
+  [CAE ] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 5)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [('fase_entender_modelo_negocio', 'nodos_previos', 'design_attitude_vs_decision_attitude')], plan [('fase_entender_modelo_negocio', 'nodos_previos', 'design_attitude_vs_decision_attitude')]
+  [PASA] analisis_y_sintesis.nodos_siguientes ya apunta a pensamiento_convergente_divergente
+  [CAE ] construir_sobre_ideas_ajenas.nodos_siguientes ya apunta a pensamiento_convergente_divergente
+  [CAE ] fase_entendimiento_investigacion_mercado.nodos_previos ya apunta a pensamiento_convergente_divergente
+  [CAE ] pensamiento_visual.nodos_siguientes ya apunta a pensamiento_convergente_divergente
+  [CAE ] portafolio_de_diseno.nodos_previos ya apunta a pensamiento_convergente_divergente
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'embudo' sigue vivo en ['pasos']
+  (conservacion) [SI] el rastro 'divergencia' sigue vivo en ['entregable']
+  (conservacion) [SI] el rastro 'convergencia' sigue vivo en ['entregable', 'resumen']
+  (conservacion) [SI] el rastro 'iteraciones' sigue vivo en ['entregable']
+  (conservacion) [NO] el rastro 'prototipado' sigue vivo en NINGUN CAMPO
+
+==============================================================================
+RESULTADO: 15 PASAN, 21 CAEN
+CONSERVACION (aparte, no suma): 4 vivos, 1 muertos
