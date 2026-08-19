@@ -1,0 +1,49 @@
+==============================================================================
+EL PLAN DE OP-D-08, CONSTRUIDO CONTRA EL GRAFO (vuelta 45)
+==============================================================================
+
+  nodo   : lienzo_modelo_negocio
+  fuente : Business Model Generation - Osterwalder  (UNICA, sin cambio)
+  pasos  : 17  ->  12
+  condiciones: 7  ->  7  (NO SE TOCAN, ver el motivo del plan)
+
+  EL MAPA DEL REPARTO, destino <- origenes:
+
+  dst  origenes     que es                         texto del resultado
+  1    [1, 9]       con remedio                    Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+  2    [10]         con remedio                    Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+  3    [2]          con remedio                    Escribir cada bloque en notas post-it sobre el lienzo
+  4    [13]         VERBATIM del paso 13           Identificar los segmentos de clientes a los que se dirige la organización
+  5    [14]         VERBATIM del paso 14           Definir la propuesta de valor para cada segmento
+  6    [7, 15]      VERBATIM del paso 15           Mapear canales, relaciones y fuentes de ingresos
+  7    [6, 16]      VERBATIM del paso 16           Mapear recursos, actividades y asociaciones clave
+  8    [8, 17]      VERBATIM del paso 17           Calcular la estructura de costos y el profit resultante
+  9    [11]         VERBATIM del paso 11           Pausar para investigar más información donde haya vacíos importantes
+  10   [3]          VERBATIM del paso 3            Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+  11   [12]         VERBATIM del paso 12           Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+  12   [4, 5]       con remedio (el marco resuelto) Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+
+  GUARDA DEL CONSTRUCTOR, cobertura exacta de 1 a 17:
+    origenes cubiertos : 17
+    faltan             : ninguno
+    repetidos          : ninguno
+    sobran             : ninguno
+
+  LA COLUMNA VERTEBRAL, comprobada CONTIGUA Y EN ORDEN en el resultado:
+    destinos que la llevan: [4, 5, 6, 7, 8]
+    contigua: True | en orden de origen: True
+
+  LOS NUEVE BLOQUES DEL CANVAS, contados sobre la columna que sobrevive:
+    segmento             en la columna que sobrevive: True
+    propuesta de valor   en la columna que sobrevive: True
+    canales              en la columna que sobrevive: True
+    relaciones           en la columna que sobrevive: True
+    ingresos             en la columna que sobrevive: True
+    recursos             en la columna que sobrevive: True
+    actividades          en la columna que sobrevive: True
+    asociaciones         en la columna que sobrevive: True
+    costos               en la columna que sobrevive: True
+    LOS NUEVE BLOQUES VIVOS EN LA COLUMNA: 9 de 9
+
+  PLAN SELLADO en docs\loop\PLAN_V45_OPD08.json
+==============================================================================
