@@ -1,0 +1,92 @@
+==============================================================================
+VUELTA 46, TAREA 1: EL REGISTRO DE LA AUDITORIA DE LA VUELTA 45
+==============================================================================
+
+--- (a) EL ACTA, LEIDA HOY ---
+  fichero: docs/loop/ACTA_AUDITOR.md
+  lineas totales del fichero: 10158
+  el acta de la vuelta 45 abre en la 9794 y cierra en la 10157
+  linea 9794 verbatim: # ACTA DE LA VUELTA 45 DEL AUDITOR (19 ago 2026, Fable 5)
+
+--- LAS LINEAS QUE CADA PUNTO CITA, IMPRESAS VERBATIM ---
+  [el alcance de la auditoria] linea 9801:
+      verificacion de esta acta es COMPLETA de todos modos, con Gate 0 y las
+  [caidas del ejecutor] linea 10127:
+      ejecutor en esta vuelta: CERO de clase o cifra, CERO de reporte. Caidas
+  [la relectura ciega] linea 9941:
+      CUENTA DE LA CIEGA: 5 de 5 coincidencias en lo adjudicable, CERO
+  [los ONCE discutibles marcados] linea 9946:
+      ## 3. LOS ONCE DISCUTIBLES, ADJUDICADOS UNO A UNO
+  [las SEIS correcciones declaradas] linea 10028:
+      ## 4. LAS CORRECCIONES DEL REPORTE, ADJUDICADAS
+  [la racha de reporte] linea 10136:
+      Rachas: clase o cifra CERO. Reporte CERO, y ya son TRES reportes limpios
+  [la ceguera] linea 9901:
+      ## 2. LA RELECTURA CIEGA, con la ceguera parcial DECLARADA
+  [las condiciones de parada] linea 10139:
+      ## 8. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+--- LA SECCION 5 DEL ACTA, LA ADJUDICACION DEL depende_de ---
+  10046: ## 5. LA PREGUNTA DE LA SECCION 10, ADJUDICADA CON EL EXPEDIENTE DELANTE
+  10047: 
+  10048: La lectura que la vuelta 44 dejo anotada (seccion 4, punto 4) se hace
+  10049: aqui, con OPERACIONES.jsonl, el 00_INDICE y el expediente leidos hoy:
+  10050: 
+  10051: OP-D-07 ES EJECUTABLE: SU depende_de SE SATISFACE CON LA MESA ADJUDICADA.
+  10052: Cuatro apoyos escritos, ninguno nuevo:
+  10053: 1. LA ESTRUCTURA DEL PROPIO PLAN LO EXIGE. OP-M-03 es fase 06_MESAS y
+  10054:    bloquea, entre otras, a OP-M-03-I, que es fase 03_FUSIONES. Si el
+  10055:    depende_de exigiera OP-M-03 EJECUTADA ENTERA, ninguna fusion del
+  10056:    racimo podria correr antes de la fase 06 y el orden de fases del
+  10057:    00_INDICE (destejidos, fusiones, enlaces, saneo, mesas) quedaria en
+  10058:    bloqueo. El propio indice lo niega con letra: NO QUEDA NI UNA LECTURA
+  10059:    POR HACER QUE BLOQUEE ALGO (12 ago 2026). La unica lectura coherente
+  10060:    con el plan entero es que el depende_de sobre una MESA se satisface
+  10061:    con su ADJUDICACION.
+  10062: 2. LA MESA ESTA ADJUDICADA Y CERRADA: la adjudicacion entera vive en el
+  10063:    campo adjudicacion de OP-M-03 (dos puertas mas un acto, probado por
+  10064:    tres vias), el EXPEDIENTE_MESA_PIVOTE figura como cerrada en el
+  10065:    00_INDICE, y la nota de la mesa dice con letra que la clase de los
+  10066:    pares depende de esta decision Y NO AL REVES.
+  10067: 3. TODO LO QUE OP-D-07 CONSUME DE LA MESA ESTA ESCRITO EN SU PROPIO
+  10068:    TEXTO: el corte entre el paso 4 y el 5 (Ries contra Traction), el
+  10069:    bloque del punto brillante en preservar, y el orden (el destejido
+  10070:    ANTES de la fusion, dicho en su nota y en la de OP-M-03-I).
+  10071: 4. LO QUE LA MESA AUN DEBE NO ALIMENTA EL DESTEJIDO, Y QUEDA MEDIDO PARA
+  10072:    QUE NADIE LO DE POR HECHO: las reescrituras de los seis dudosos y el
+  10073:    753 citando el criterio (puntos 1 y 2 de la verificacion de OP-M-03)
+  10074:    NO se han ejecutado: los siete estan HOY en B, medidos por mi (668,
+  10075:    737, 771, 843, 957, 1298, 753). Son trabajo de OP-M-03 en su fase, no
+  10076:    precondicion del corte.
+  10077: CERO DOCTRINA NUEVA: extension citable de la estructura escrita.
+  10078: 
+  10079: Y EL ORDEN: OP-D-07 libera CERO congelados (la lista de hoy tiene UN solo
+  10080: puesto, el 1190, que es de la junta asesora y no de este racimo), asi que
+  10081: su orden es libre por el criterio de la fase, con el precedente escrito
+  10082: de OP-D-05 y OP-D-09. Es la ULTIMA operacion de la fase 02 sin ejecutar:
+  10083: tras ella, el cierre de la fase se DECLARA MIDIENDO, no se supone.
+  10084: 
+  10085: AVISO PARA LA EJECUCION, del expediente leido: la verificacion 2 de
+  10086: OP-D-07 (el bloque viaja entero al superviviente del acto I) es materia
+  10087: de OP-M-03-I y se cita como DEFERIDA; lo material de OP-D-07 hoy es que
+  10088: el corte caiga entre el 4 y el 5, que el bloque del punto brillante quede
+  10089: entero y declarado, y que el campo fuente quede con UNA sola obra. Si el
+  10090: texto de la operacion, leido entero, no alcanza para ejecutar ese reparto
+  10091: sin decidir (donde vive el bloque de Traction entre el corte y la fusion
+  10092: del acto I), eso es PARADA del modo continuo, no una improvisacion.
+
+--- (b) LOS SIETE PUESTOS DE LA MESA, RE-MEDIDOS POR MI HOY ---
+  fuente: docs/INTRA_DOMINIO_VEREDICTOS.jsonl (no el acta)
+  puesto 668   clase B   pivote_o_proceder  contra  pivote_startup
+  puesto 737   clase B   pivotar_o_perseverar  contra  pivote_startup
+  puesto 771   clase B   pivotar_o_perseverar  contra  pivote_o_proceder
+  puesto 843   clase B   decision_pivote_perseverar  contra  pivote_o_proceder
+  puesto 957   clase B   decision_pivote_perseverar  contra  pivotar_o_proceder
+  puesto 1298  clase B   decision_pivote_perseverar  contra  pivote_startup
+  puesto 753   clase B   pivot_como_hipotesis_estrategica  contra  pivote_startup
+
+  LOS SIETE EN B: SI (clases medidas: B, B, B, B, B, B, B)
+  CONTRASTE CON EL ACTA (linea 10074): dice que los siete estan HOY en B.
+  MI MEDICION: COINCIDE AL DIGITO
+
+ESCRITO al final de docs/plan/02_DESTEJIDOS.md: 6308 caracteres
