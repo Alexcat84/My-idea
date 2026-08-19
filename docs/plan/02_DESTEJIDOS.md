@@ -2181,3 +2181,87 @@ El par **331** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 | aristas de simetrizacion que el paso 5 tiene que anadir | **2**, ni una mas ni una menos |
 | pasos del resultado | **5**, **DENTRO del estandar de 3 a 6** |
 | censo esperado | ficheros **3.853** sin moverse, vivos **3.531 menos 1**, deprecados **322 mas 1** |
+
+### `OP-D-06` ACTO 331 CERRADO: **LA FUSION LA EJECUTO LA VUELTA 42 Y EL 521 LA DEJO SIN COMMIT; LA VUELTA 43 LA COMMITEA TAL COMO QUEDO** (19 ago 2026, vuelta 43)
+
+**ESTE REGISTRO DE CIERRE ES EL QUE EL CORTE IMPIDIO ESCRIBIR, y va dicho asi antes que ninguna cifra.** La fusion se ejecuto en la **vuelta 42** con su ciclo y sus suites en verde y **sellados en disco**; el error **521** de la API cayo **entre la fusion verificada y su segundo commit**. La vuelta 43 **no re-ejecuta ni recalcula nada**: commitea el arbol tal como quedo, y **quien responde por el es el acta de la vuelta 42**, que lo verifico entero por corrida propia. **Las lineas del acta que aqui se usan se leyeron HOY** (`docs/loop/ACTA_AUDITOR.md`, el acta de la vuelta 42 empieza en la linea **8869**), como manda la regla 1 del `EJECUTOR.md`.
+
+`python scripts/loop/vuelta39_fundir.py --plan docs/loop/PLAN_V41_ACTO331.json --ejecutar`, sellado en `docs/loop/SALIDA_V42_ACTO331_EJEC.txt` con **exit 0** y **LAS TRECE GUARDAS EN VERDE**. Las doce primeras ya salieron verdes en la simulacion previa; **la trece solo puede correr en `--ejecutar`** porque es el censo, y se dice asi en vez de decir trece en verde cuando la simulacion alcanza doce.
+
+| lo medido al ejecutar | como salio | quien lo verifico despues |
+|---|---|---|
+| **censo (guarda 13)** | ANTES **3.853** ficheros, **3.531** vivos, **322** deprecados; DESPUES **3.853**, **3.530**, **323**. *El censo no se movio y los vivos bajaron en 1*: **OK** | acta de la vuelta 42, linea **8981**: *"Censo: 3.853 ficheros, 3.530 vivos, 323 deprecados, dos fusiones y menos 2 vivos desde la apertura"* |
+| **enlaces** | **mas 2 exactos**: apertura de la vuelta 42 **16.871**, tras los dos actos **16.880**. La aritmetica cierra sin resto: **mas 7** del acto 285 y **mas 2** de este, y **16.871 mas 9 es 16.880** | acta, linea **8981**, por corrida propia del auditor |
+| **guardas 1 a 7, el contenido** | fuente de los tres impresa (**FUENTE MIXTA, 2 fuentes distintas medidas**, y las dos cadenas nombran el mismo libro), pasos y condiciones **(5, 1)** contra **(5, 1)** en los dos, **VERBATIM 12 de 12** con 0 sobrantes, cobertura de pasos **10 de 10** y de condiciones **2 de 2** sin repetidos ni faltantes ni sobrantes, finales derivados que calzan, `preservar_literal` **10 de 10** y rastros **5 de 5** en el resultante entero | acta, linea **8985** |
+| **guardas 8 a 12, el cableado** | redirecciones sobre vivos **2 de 2** (`comparacion_metodos_inversion` en `nodos_siguientes`, `gestion_capital_trabajo` en `nodos_previos`), deprecados que nombran **0**, `P.16` **CERO duplicadas fabricadas**, cero auto-arista y cero duplicada tras resolver, **a6 con titulo y etiqueta SIN TOCAR** | acta, linea **8985**: *"a6 con titulo y etiqueta sin tocar, resultado de 5 pasos DENTRO del estandar"* |
+| **`reanclar_por_resolutor.py` ENTRE la fusion y `run_phase1`** | corrido, **salio EN BLANCO**: *nada que re-anclar: ninguna referencia apunta a un absorbido* (`docs/loop/SALIDA_V42_ACTO331_REANCLAR.txt`, exit 0). **El barrido previo lo predijo y se corrio igual**: una guarda que solo se corre cuando se sospecha no es una guarda | acta, linea **8985** |
+| **la simetrizacion, EXACTA y RELEIDA EN EL FICHERO** | `vuelta39_guarda_simetrizacion.py`: **2 entradas en el log del ciclo, las 2 del superviviente, 0 de otros nodos, faltan 0 y sobran 0**; y **2 de 2 aristas presentes en `dataset/nodos/analisis_de_gastos_de_capital.json`**. Las dos guardas verdes, exit 0 | acta, linea **8972**: *"sus enlaces traen las DOS simetrizaciones del plan"* |
+| **ciclo Gate 0 de TRES comandos** | `run_phase1 --reaplico-curaduria` **GATE 0: OK** con sus veinte renglones en `[OK]`, `etiquetas_de_cara --aplicar` **71 etiquetas**, `sync_assets_web` **seis assets** y `master_graph.json` de **8.134.490 bytes** con sha256 **`c120f5d663b9`** | acta, linea **8991**: el auditor **re-corrio el ciclo entero** y obtuvo el **mismo sha256 `c120f5d663b9`**, con las dos copias del grafo **byte iguales entre si y byte iguales a las que el ejecutor dejo** |
+| **las suites** | motor **25 de 25**, web **80 ficheros con 1.030 pasadas** y 3 saltadas, `tsc` **cero lineas**. Los tres **exit 0** | acta, linea **8991**: **re-corridas por el auditor** con las mismas cifras |
+| **caso positivo antes y despues, mismo instrumento** | ANTES **17 PASAN y 15 CAEN** (exit 1, y **tiene que caer**); DESPUES **33 PASAN y 0 CAEN** (exit 0), **conservacion 5 vivos y 0 muertos** | acta, linea **8985**: *"Caso positivo despues: 33 pasan, 0 caen, conservacion 5 vivos"* |
+| **los registros que no son el grafo** | **1 vivo** (`docs/GRADIENTE_PARES.jsonl`, que nadie lee y su propio instrumento reescribe) y la comprobacion dirigida sobre la especie que tumbo el Gate 0 en la vuelta 39: **los NUEVE `bridges_aprobados.json` nombran a los nodos 0 veces** | acta, linea **8985**: *"reanclar_por_resolutor en blanco tras enumerar los registros no grafo (0 VIVOS, los nueve bridges en cero)"* |
+
+> **UNA DIFERENCIA CONTRA EL ACTA QUE SE DECLARA EN VEZ DE RESOLVERSE COPIANDO** (regla 2 del `EJECUTOR.md`): el acta escribe en su linea **8985** *"0 VIVOS"* para los registros no grafo, y la salida sellada `docs/loop/SALIDA_V42_ACTO331_REGISTROS.txt`, **leida hoy**, cierra con **"LOS REGISTROS VIVOS QUE NOMBRAN A ALGUNO DE LOS TRES: 1"** y nombra a `docs/GRADIENTE_PARES.jsonl`. **Se publica la del instrumento, que es UNO, y se deja la del acta a la vista.** No cambia ni una consecuencia: ese fichero es de la misma especie residual que el acto 285 ya declaro (salida de su propio instrumento con su corte, **cero lectores** medidos entonces en `scripts/`, `web/lib`, `web/app` y `engine/`), y por eso **el re-anclaje sale en blanco igual**. Lo que la comprobacion dirigida mide, que es lo que puede romper el Gate 0, si da **cero en los nueve**.
+
+#### LA COSTURA POST FUSION SOBRE EL RESULTANTE: **NI CITA, NI ANTES NI DESPUES**
+
+`python scripts/costuras_internas.py` corrido DESPUES de fundir (`docs/loop/SALIDA_V43_COSTURAS_TRAS_FUSION_331.txt`, **exit 0**): la cola se queda en **1.495** nodos, ahora sobre **3.530** activos, el **42,4 por ciento**.
+
+**Y LA COLA NO SE MOVIO NI UN NODO, que es lo que este acto tenia de particular desde su lectura:** los DOS nodos ya estaban **FUERA** de la cola antes de fundir, asi que el absorbido no tenia sitio del que salir. Medido hoy sobre `docs/COSTURAS_INTERNAS.jsonl` recien reescrito: `analisis_de_gastos_de_capital` aparece **0 veces** y `propuesta_gasto_capital` aparece **0 veces**, en un fichero de **1.495** lineas.
+
+`python scripts/loop/vuelta42_senal_antes_despues.py --nodo analisis_de_gastos_de_capital --commit d1dcd26f --nombre "OP-D-06 acto 331"`, sellado en `docs/loop/SALIDA_V43_ACTO331_SENAL.txt`:
+
+| | pasos | pareja | bloque | contra el umbral 44 |
+|---|---:|---:|---:|---|
+| **antes**, leido de git `d1dcd26f` | 5 | 51,0 | **0,0** (corte tras 0) | **BAJO** por **menos 44,0**: **FUERA de la cola** |
+| **despues**, del fichero de hoy | 5 | 50,2 | **0,0** (corte tras 0) | **BAJO** por **menos 44,0**: **FUERA de la cola** |
+
+**MOVIMIENTO DE LA SENAL: mas 0,0 puntos. FUERA ANTES, FUERA DESPUES.** El instrumento **no cita al resultante**, asi que **no hay lectura textual que hacer** y no se hace: leer con el texto delante es la guarda para cuando el instrumento cita, y **fabricar una lectura sobre una cita que no existe seria rellenar una casilla**.
+
+> **EL CONTRASTE CON EL ACTO 285, medido en esta misma operacion y no recordado:** alli el resultante **si estaba citado** y la senal se movio **mas 5,2** (45,4 antes, 50,6 despues), **dentro antes y dentro despues**. Aqui la senal **no se movio en absoluto** porque el bloque da **0,0** en los dos lados: con **5 pasos y corte tras 0**, no hay dos bloques que solapar. **Dos actos, dos comportamientos distintos, y ninguno de los dos es la fusion encendiendo una senal.**
+
+#### LAS RELECTURAS POST FUSION: **CERO PARES, Y LA CIFRA SE CITA EN VEZ DE REHACERSE**
+
+**CERO pares B o C vuelven a la cola por este acto**, y la medicion es **la de la lectura sellada de la vuelta 42**, no una nueva: los **cuatro** pares del archivo que meten un tercero con alguno de estos dos nodos son **869**, **1225**, **1406** y **1533**, y **los cuatro son clase D**. La medicion esta en `docs/loop/SALIDA_V42_ACTO331_LECTURA.txt` y la seccion `P.5` de este mismo acto ya la publico. **No se rehace: rehacer una medicion sellada para volver a obtenerla es gastar credito en no aprender nada**, y el acta de la vuelta 42 lo dice en su linea **9007**: *"La relectura post fusion sale en CERO pares por la medicion ya sellada de la lectura"*.
+
+**Por eso el marcador de clases NO se mueve en este acto**, y no se imprime tabla de marcador: la ultima que lo movio fue la del acto 285 con la relectura del 835, que ya esta publicada arriba con sus dos filas.
+
+#### LA CIEGA DEL AUDITOR SOBRE ESTE ACTO: **3 DE 3 EN EL FONDO**
+
+El acta de la vuelta 42 (linea **9017**, leida hoy) hizo la relectura **ciega de verdad**: saco el par de la linea 331 del archivo, imprimio los **dos nodos enteros desde git en `d1dcd26f`** (antes de la fusion), adjudico **por escrito**, y **solo despues** abrio la lectura y el plan. Su adjudicacion ciega: **(a)** ninguno tiene costura interna, **(b)** `P.5` **una** familia, **(c)** superviviente **`analisis_de_gastos_de_capital` por contenido**, con el cableado **5 contra 2 a favor y no decisorio**. **Al destapar: COINCIDE 3 DE 3 EN EL FONDO** (linea **9027**), y las piezas que el auditor exigio que viajaran **viajaron**, que es la **guarda 6** del sellado con sus **10 literales**.
+
+#### EL CORTE DEL 521, DECLARADO DENTRO DEL ACTO
+
+**La fusion de este acto quedo EN EL ARBOL SIN COMMIT** (acta, linea **8904**) porque el ejecutor de la vuelta 42 murio a las **14:15:39** por un **error 521** de la API. **El corte cayo EXACTAMENTE en la ventana entre la fusion verificada y su segundo commit: la ventana que la regla de dos commits ya habia reducido de un acto entero a un tramo de minutos.** El acta lo verifico todo **como si fuera a commitearse** (seccion 3, linea **8972**) y **adjudico que se commitea tal como quedo** (linea **9042**). Hecho en la vuelta 43, en el commit **`8cc3681f`**, con los **ocho** ficheros y las **once** salidas selladas y **sin retocar una linea**.
+
+> **Y DE ESE CORTE SALE EL AFINAMIENTO QUE ESTE ACTO ES EL ULTIMO EN NO TENER** (acta, linea **9061**): desde el acto **341**, el **SEGUNDO COMMIT** se hace **apenas la fusion, el reanclar, el ciclo y las suites esten verdes**, y **la costura post fusion, las relecturas y el registro de cierre van en un TERCER commit**. Este acto 331 **se cierra ya con esa forma**: su segundo commit fue la fusion sola, y este registro es su **tercero**.
+
+## LA VUELTA 42 SE INTERRUMPIO: **UN 521 DE LA API, CON TODO LO HECHO INTACTO Y CERO CAIDAS** (19 ago 2026, vuelta 43)
+
+**La vuelta 42 no llego a su cierre y hay que decir donde murio y con que en la mano**, leido hoy del acta de la vuelta 42 (`docs/loop/ACTA_AUDITOR.md`, linea **8869** en adelante).
+
+| lo que la interrupcion fue | medido, no supuesto |
+|---|---|
+| **la causa** | `docs/loop/ultimo_ejecutor.json` (acta, linea **8882**): `terminal_reason` **api_error**, status **521**, literal *"Error 521: Web server is down ... The origin is down"* (Cloudflare, zona `api.anthropic.com`), timestamp **2026-08-19T18:15:39Z**, **1.986 segundos** de vuelta y **141 turnos**. **El servidor de la API se cayo: NO fue la cuota** |
+| **la hora** | **14:15:39** hora del log; el ejecutor corrio de **13:42:33** a **14:15:40** segun `docs/loop/loop.log` |
+| **que quedo cerrado y pusheado** | el **acto 285 entero**, en sus dos commits (`b563e7a5` y `7ea4cf27`), y el **primer commit del acto 331** (`d1dcd26f`) |
+| **que quedo en el arbol sin commit** | la **fusion del acto 331 ejecutada**: 8 ficheros y 11 salidas selladas (acta, linea **8904**). **Commiteada en la vuelta 43** en `8cc3681f` |
+
+**Y LO QUE IMPORTA DE VERDAD: EL ACTA VERIFICO TODO POR CORRIDA PROPIA Y NO HALLO NI UNA CAIDA.**
+
+- **La apertura, BYTE IGUAL en disco** (acta, linea **8913**): los dos ficheros dan `5781ee694cc04a75c0f58316256e0b06`. **El auditor declaro ademas su propio tropiezo**, que su primera comparacion cotejaba el blob de git (LF) contra el fichero en disco (CRLF); lo cerro midiendo en disco **antes de publicar cifra**.
+- **La TAREA 1 al `numstat`** (linea **8921**): **41 lineas anadidas y cero borradas**, con las lineas del acta 41 comprobadas una a una.
+- **El acto 285 de punta a punta** (lineas **8926** en adelante): la **reproduccion del sellado** con `md5` identicos y `diff` vacio en las tres piezas, las **trece guardas**, la **costura post fusion que NO se encendio** (45,4 dentro antes, 50,6 dentro despues), y la **relectura del 835 de B a D verificada en el archivo** con el marcador movido al digito (linea **8947**).
+- **El acto 331 sin commit, nodo a nodo** (linea **8972**): deprecado, alias, redirecciones, **simetrizacion 2 de 2**, **cero vivos nombran al absorbido** por barrido propio de los 3.853 ficheros; la **aritmetica de enlaces reconciliada** (linea **8981**); el **ciclo Gate 0 re-corrido** con `sha256` **identico** y las suites re-corridas (linea **8991**).
+- **La ciega del acto 331: 3 DE 3 EN EL FONDO** (linea **9027**). La del par **835** se hizo con **ceguera parcial declarada** (linea **9030**: el triage le mostro el veredicto antes que los nodos) y **coincide en el fondo** igual.
+- **Caidas: CERO** (linea **9102**): *"CERO del ejecutor en lo commiteado y en lo sellado, CERO de clase o cifra, CERO del auditor"*. Los **tres tropiezos propios** que el auditor declara (el `md5` mal apuntado, un respaldo plano que aplastaba los dos `master_graph.json` y la ceguera parcial del 835) **no publicaron cifra ni pisaron dato**, y por eso **se declaran y no acumulan**.
+
+**EL PATRON DE DOS VUELTAS SEGUIDAS CORTADAS POR LA API QUEDA REGISTRADO AQUI, CON SUS CAUSAS DISTINTAS** (acta, linea **9056**): la **41** murio por **429** (limite de sesion, la cuota) y la **42** por **521** (el servidor de la API caido). **Las dos son EXTERNAS y de causa distinta**, y por eso **ninguna cumple la condicion de parada por fallo tecnico repetido**, cuya letra pide hook o Gate 0 en rojo **dos vueltas seguidas POR LA MISMA CAUSA** (acta, linea **9051**), con el Gate 0 **verde por corrida propia** las dos veces.
+
+> **EL UMBRAL QUEDA ESCRITO PARA QUE NO HAYA QUE DECIDIRLO EN CALIENTE: SI UNA TERCERA VUELTA SEGUIDA MUERE POR UN CORTE EXTERNO, el auditor de esa vuelta lo lleva a `PARA_ALEXIS.md` como PATRON OPERATIVO** (no como caida de nadie), *"porque tres cortes seguidos ya no son ruido: son una cadencia que la casa debe conocer"*. **Hoy el contador va en DOS.**
+
+### NO HAY CAIDA DE REPORTE QUE CORREGIR, y se dice asi en vez de rellenar la casilla
+
+**La vuelta 42 no dejo reporte**, medido y no supuesto: el acta lo comprueba en su regla 0 (linea **8875**, leida hoy) y escribe que *"REPORTE.md sigue siendo el de la vuelta 40, ya auditada"*. **Sin reporte no hay discutibles del ejecutor que adjudicar ni cifra publicada que corregir.** Y lo que la 42 **si** commiteo y sello **salio limpio**: el acta cierra con **CERO caidas del ejecutor en lo commiteado y en lo sellado** (linea **9102**).
+
+**La racha de caidas de reporte se queda en UNA y no se rompe** (acta, linea **9112**), por la misma letra que el acta 41 ya habia usado: **una racha no se rompe con material ausente**, la rompe **el primer reporte limpio**. Ese sera el de esta vuelta 43 si sale limpio.
