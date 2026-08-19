@@ -1608,3 +1608,132 @@ por letras ya escritas (a3)*, con **ninguna condicion de parada cumplida** (line
 > prelacion para este choque, y el esquema de `OPERACIONES.jsonl` frente a operaciones con dos
 > supervivientes, mas el titulo del nodo del taller), y **cuatro pendientes heredados vivos**
 > (`ACTA_AUDITOR.md` seccion 5, cabecera en la 8.073 y cuerpo en las 8.074 a 8.086).
+
+---
+
+## `OP-D-04` CERRADA: **LAS DOS FUSIONES EJECUTADAS Y EL RESTO ENLAZADO** (19 ago 2026, vuelta 39)
+
+**CORRECCION DECLARADA sobre TODO lo de arriba, y no se borra ni una linea.** Los dos estados
+anteriores de `OP-D-04` (el de la vuelta 37, *FUSION EN PARADA*, y el de la vuelta 38, *LOS DOS
+SUPERVIVIENTES ELEGIDOS Y LOS DOS PLANES SELLADOS*) se escribieron con la fusion **EN ESPERA**, y
+la fusion **YA ESTA HECHA**. Los dos se quedan enteros donde estan, porque una correccion que tapa
+lo que corrige no se puede auditar; esta seccion dice que cambio y que lo movio.
+
+**QUE LO DESBLOQUEO, y son dos cosas distintas que no se confunden.** La `DECISION 2` del fundador
+mandaba que la fusion **esperara el acta del auditor**. El acta de la vuelta 38 llego, y en su
+seccion 4 **confirma las tres lecturas dirigidas en `D`** (`a1` y `a2`), **confirma las dos
+elecciones de `P.8`**, y **adjudica en `a3` que `FAMILIA DECLARADA` no gobierna esas tres
+lecturas**, por el orden de fuentes de `AUDITOR.md` seccion 0. Su `CONSECUENCIA`, textual: *LAS DOS
+FUSIONES QUEDAN AUTORIZADAS* (linea 8.046, leida hoy). **Esta vuelta no volvio a decidir nada: solo
+ejecuto lo sellado.**
+
+**Y ANTES DE ESCRIBIR NADA, LAS DOS SIMULACIONES SELLADAS SE RE-CORRIERON: `BYTE IGUAL` las dos**
+contra `SALIDA_V38_SIM_TALLER.txt` y `SALIDA_V38_SIM_ALTERNANCIA.txt` (`md5` `e3a3c927` y
+`ff115810`). **Nada del grafo se habia movido desde el sellado, y eso se comprobo en vez de
+suponerse.**
+
+### TABLA 1: LOS SIETE NODOS DEL ACTO, ANTES Y DESPUES
+
+| nodo | papel | fuente | pasos antes | pasos despues | condiciones | vivo hoy |
+|---|---|---|---:|---:|---:|:---:|
+| `reglas_brainstorming` | **superviviente de EL TALLER** | Business Model Generation (Osterwalder) | 5 | 7 | 4 | **si** |
+| `brainstorming_divergente` | absorbido por `reglas_brainstorming` | Change by Design, Revised and U - Tim Brown | 4 | 4 | 2 | no, **deprecado** |
+| `brainstorming_efectivo` | absorbido por `reglas_brainstorming` | Change by Design | 4 | 4 | 2 | no, **deprecado** |
+| `pensamiento_convergente_divergente` | **superviviente de LA ALTERNANCIA** | Change by Design | 4 | 7 | 3 | **si** |
+| `generar_multiples_opciones` | absorbido por `pensamiento_convergente_divergente` | Change by Design | 3 | 3 | 2 | no, **deprecado** |
+| `design_attitude_vs_decision_attitude` | absorbido por `pensamiento_convergente_divergente` | Business Model Generation (Osterwalder) | 4 | 4 | 1 | no, **deprecado** |
+| `construir_sobre_ideas_ajenas` | **el colgado, NO se funde** | Change by Design | 3 | 3 | 1 | **si** |
+
+### TABLA 2: EL CUARTO MIEMBRO DEL RACIMO MIXTO, QUE NO ES DEL ACTO
+
+| nodo | dominio | fuente | vivo | como quedo enlazado |
+|---|---|---|:---:|---|
+| `brainstorming` | quality | Juran's Quality Handbook_ The C - Joseph A. Defeo | **si** | `reglas_brainstorming` lo nombra en `nodos_siguientes` y el nombra a `reglas_brainstorming` en `nodos_previos` |
+
+### TABLA 3: LOS TRES VIVOS Y SUS TRES PARES (`P.10`, tercera salida)
+
+| par | como llego | extremo A lo declara en | extremo B lo declara en |
+|---|---|---|---|
+| `reglas_brainstorming` con `pensamiento_convergente_divergente` | **solo**, redirigido por la fusion del taller y simetrizado por el paso 5 | `nodos_previos` | `nodos_siguientes` |
+| `reglas_brainstorming` con `construir_sobre_ideas_ajenas` | **escrito por `P.10` en esta vuelta**, con los dos extremos de una vez | `nodos_siguientes` | `nodos_previos` |
+| `pensamiento_convergente_divergente` con `construir_sobre_ideas_ajenas` | **solo**, redirigido por la fusion de la alternancia y simetrizado por el paso 5 | `nodos_previos` | `nodos_siguientes` |
+
+### TABLA 4: EL CENSO, TRAMO A TRAMO
+
+| momento | ficheros | vivos | deprecados |
+|---|---:|---:|---:|
+| apertura de la vuelta 39 | 3.853 | 3.538 | 315 |
+| tras EL TALLER | 3.853 | 3.536 | 317 |
+| tras LA ALTERNANCIA | 3.853 | 3.534 | 319 |
+| **recontado al cierre, ahora mismo** | **3.853** | **3.534** | **319** |
+
+(las tres primeras filas son las que imprimio cada corrida de
+`scripts/loop/vuelta39_fundir.py`; la cuarta la recuenta este script AL CIERRE)
+
+**LAS CUATRO TABLAS NO ESTAN TECLEADAS:** las imprime `scripts/loop/vuelta39_tabla_cierre.py`
+leyendo `dataset/nodos`, los dos planes sellados y `git show 03e8e0e8` para el *antes*. Salida
+entera en `docs/loop/SALIDA_V39_TABLA_CIERRE.txt`.
+
+### LO QUE SE VERIFICO, punto por punto de la propia `verificacion` de la operacion
+
+| punto, tal como lo escribe `OPERACIONES.jsonl` | como quedo |
+|---|---|
+| **1**, `Gate 0 verde` | **`GATE 0: OK`, exit 0**, en las tres corridas del ciclo (tras el taller, tras la alternancia, tras el enlace). 3.853 compilados, 3.534 activos, 319 deprecados, alcanzabilidad **100 por ciento** |
+| **2**, `sin congelados que liberar` | no aplica, y ya lo decia la propia operacion |
+| **3**, `cada nodo resultante dentro del estandar, o dentro de la excepcion de clase de OP-F-01` | **LOS DOS QUEDAN EN SIETE PASOS**, uno por encima del estandar de 3 a 6, y entran por la puerta que la propia verificacion nombra. **PERO el instrumento de la casa NO ENTREGA HOY** y hay **UNA SENAL QUE DISPARA**: ver el bloque de abajo, que es un DISCUTIBLE |
+| **4**, `recomputo del cierre transitivo tras el acto (banco 9.21)` | **CORRIDO** (`scripts/plan/recomputo_3388.py`, `SALIDA_V39_RECOMPUTO_3388.txt`): actos **333** sin cambio, ABIERTOS de **54 sobre 247** nodos a **54 sobre 243** (los cuatro absorbidos), el acto de **siete pasa a ser uno de tres** (`ABIERTOS por tamano` de `7: 2` a `7: 1` y de `3: 25` a `3: 26`), nodos en actos de **845 a 841**, `A` vigentes resueltas de **574 a 569**. **Las cuatro comprobaciones del `08_VERIFICACION.md`: OK las cuatro** |
+| **5**, `cada perdida quedo en el bloque del que proviene, o en el superviviente` | **CORRIDO** (`scripts/loop/verificar_mapas_destejido.py` con los cinco planes sellados, `SALIDA_V39_VERIFICADOR_MAPAS.txt`): **5 tablas, 31 filas, 0 discrepancias**, varas 1 y 2 CORRIDAS |
+| **6**, `el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto` | **hecho en la vuelta 37**, 21 de 21 por `P.5`, y el acta de la vuelta 38 lo re-verifico |
+
+### EL DISCUTIBLE DEL PUNTO 3, y va escrito porque callarlo seria la peor version de este cierre
+
+**El instrumento de la casa se niega a entregar.** `scripts/costuras_internas.py` cae en **su
+propia puerta de calibracion**: `INSTRUMENTO MAL CALIBRADO. No entrega nada`, porque
+`plan_mejora_procesos`, que es su fixture, ya no aparece en la cola (mejor bloque **43,1** contra
+un umbral de **44**). **La averia es ANTERIOR a esta vuelta y ajena a ella**, y **el umbral no se
+afloja para que entregue**: eso seria arreglar la vara en vez de la pieza.
+
+**Con la puerta caida, las dos senales se calcularon a mano sobre estos dos nodos, con las mismas
+funciones y los mismos umbrales, y UNA DISPARA:**
+
+| nodo | pasos | peor pareja (umbral 80) | mejor bloque (umbral 44) | dispara |
+|---|---:|---:|---:|---|
+| `reglas_brainstorming` **antes** | 5 | 54,3 | **47,7** | **BLOQUE** |
+| `reglas_brainstorming` **despues** | 7 | 54,3 | **50,6** | **BLOQUE** |
+| `pensamiento_convergente_divergente` **antes** | 4 | 46,2 | 0,0 | ninguna |
+| `pensamiento_convergente_divergente` **despues** | 7 | 48,1 | 43,8 | ninguna |
+
+> **LO QUE ESA TABLA DICE, Y LO QUE NO.** La senal de bloque de `reglas_brainstorming` **dispara**,
+> **pero NO la enciende la fusion: ya disparaba antes**, con **47,7** sobre sus cinco pasos viejos,
+> medido contra `git 03e8e0e8`. **La fusion la sube de 47,7 a 50,6 y no la crea**, y el corte que
+> senala es el mismo de antes, tras el paso 2. Y el propio instrumento declara que **CITA, NO
+> JUZGA**: un nodo en la cola es *una cita para leer, no una costura probada*. **Asi que esto no
+> decide la clase por si solo y NO SE RESUELVE AQUI: va como DISCUTIBLE MARCADO al auditor.**
+> **Y el margen del otro se dice igual:** `pensamiento_convergente_divergente` se queda en **43,8
+> contra 44**, o sea **por dos decimas**.
+
+### LO QUE ESTE CIERRE HACE Y NO ESTABA EN EL PLAN SELLADO, declarado y no silenciado
+
+**`Gate 0` cayo en rojo a la primera**, con **un puente aprobado de `quality` apuntando al recien
+deprecado `brainstorming_efectivo`**. El plan enumeraba las **17 referencias de NODO** y **no las
+del registro de puentes**. Se resolvio con el instrumento de la casa,
+`scripts/reanclar_por_resolutor.py`, **que mueve REFERENCIAS y jamas nodos** y va **por el
+resolutor** (`P.1`): el ancla pasa a `reglas_brainstorming` con **`ancla_original`** guardando de
+donde venia. **No es una decision recalculada, es la misma redireccion**, y el precedente esta
+**medido tres veces en git**: `a2902995`, `06dd2922` y `33265c05`, que es el que creo el
+instrumento precisamente para no cazar el mismo pez cuatro veces. **Va como DISCUTIBLE al
+auditor.**
+
+### LO QUE ESTE CIERRE NO HACE
+
+- **No fija `superviviente`.** El campo **se queda en `null`**, y aqui **no por falta sino por
+  sobra**: la operacion produce **DOS** y el esquema tiene **UN** campo. Lo adjudica el acta de la
+  vuelta 38, punto **`a4`**. **Es el mismo `null` que `OP-D-03` pero por el motivo contrario, y por
+  eso se dice.** La verdad vive en la nota, con los dos supervivientes y los dos planes nombrados.
+- **No toca titulo ni etiqueta** de ninguno de los dos supervivientes (adjudicacion **`a6`**). El
+  aviso de `P.8` sobre el nombre del nodo del taller **sigue vivo como pendiente de catalogo**.
+- **No cambia el estado de la operacion.** Sigue en `LISTA`, **igual que `OP-D-01`, `OP-D-02` y
+  `OP-D-03`, que tambien estan ejecutadas**. **PENDIENTE DE DOCTRINA heredado: el esquema no
+  distingue una operacion HECHA de una pendiente.**
+- **No borra un solo fichero.** Los cuatro absorbidos **conservan su texto entero**, que es lo que
+  hace auditable la fusion.

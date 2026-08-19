@@ -1,0 +1,60 @@
+PUNTO 3 DE LA VERIFICACION DE OP-D-04: cada nodo resultante DENTRO DEL ESTANDAR,
+o dentro de la EXCEPCION DE CLASE DE OP-F-01, cuya firma escrita (01_FUENTES.md,
+leida hoy) es SUPERAR EL ESTANDAR SIN NARRACION REPETIDA DENTRO.
+
+LOS DOS RESULTANTES SUPERAN EL ESTANDAR DE 3 A 6: los dos quedan en SIETE pasos.
+El precedente de esa puerta esta escrito en 02_DESTEJIDOS linea 294, leida hoy:
+un nodo de siete entro por esta misma clase, y la clase se aplica POR SU CRITERIO
+ESCRITO y no por pertenencia a la nomina de OP-F-01.
+
+==========================================================================
+PRIMERO: EL INSTRUMENTO DE LA CASA NO ENTREGA HOY, Y ESO NO SE TAPA.
+scripts/costuras_internas.py se niega en su propia puerta de calibracion:
+    INSTRUMENTO MAL CALIBRADO. No entrega nada.
+    La calibracion conocida no aparece en la cola: ['plan_mejora_procesos']
+    plan_mejora_procesos: 5 pasos, mejor pareja 47.1, mejor bloque 43.1
+La averia es ANTERIOR a esta vuelta y ajena a ella: esta vuelta no toco ese nodo.
+NO SE AFLOJA EL UMBRAL para que entregue. Va como PENDIENTE al fundador.
+==========================================================================
+
+LO QUE SIGUE NO ES EL VEREDICTO DEL INSTRUMENTO, y por eso se etiqueta: son sus
+DOS SENALES calculadas con sus funciones internas y sus MISMOS umbrales, sobre
+estos dos nodos y nada mas. Con la puerta caida, una senal que NO dispara puede
+ser un falso negativo: sirve de INDICIO, no de prueba.
+umbrales de la casa: pareja 80, bloque 44
+
+nodo                                 pasos  pareja    bloque    dispara
+reglas_brainstorming (ANTES)         5      54.3      47.7 (c2) BLOQUE
+reglas_brainstorming (DESPUES)       7      54.3      50.6 (c2) BLOQUE
+pensamiento_convergente_ (ANTES)     4      46.2      0.0 (c0)  ninguna
+pensamiento_convergente_ (DESPUES)   7      48.1      43.8 (c4) ninguna
+
+EL HALLAZGO, y va primero porque es el que incomoda:
+  LA SENAL DE BLOQUE DE reglas_brainstorming DISPARA, 50,6 contra un umbral de 44.
+  PERO NO LA ENCIENDE LA FUSION: YA DISPARABA ANTES, con 47,7 sobre sus CINCO
+  pasos viejos, medido sobre git 03e8e0e8 (el commit anterior a tocar dataset).
+  La fusion la sube de 47,7 a 50,6 y NO la crea. El corte que la senal senala es
+  el mismo de antes: tras el paso 2.
+  Y el propio instrumento dice que esto es UNA CITA PARA LEER Y NO UNA COSTURA
+  PROBADA ('ESTE INSTRUMENTO CITA, NO JUZGA'), asi que NO decide la clase por si
+  solo: el veredicto es lectura textual del auditor con visto del fundador.
+  VA COMO DISCUTIBLE MARCADO, y no se resuelve aqui.
+
+  pensamiento_convergente_divergente NO dispara ninguna de las dos: 48,1 y 43,8.
+  Su bloque sube de 0,0 (con cuatro pasos no habia corte que medir) a 43,8, que
+  se queda por debajo del 44 por dos decimas. Se dice el margen y no se calla.
+
+LOS 7 PASOS DE reglas_brainstorming CON EL CORTE QUE LA SENAL SENALA:
+   1. Reunir al equipo en un espacio dedicado sin distracciones, formando grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.
+   2. Definir un enunciado claro del problema centrado en necesidad del cliente
+   ---------------- CORTE QUE LA SENAL PROPONE ----------------
+   3. Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada.
+   4. Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)
+   5. Usar Post-it notes o pizarra para capturar y mover las ideas visualmente
+   6. Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo
+   7. Generar el mayor número de ideas posible sin filtrar prematuramente, en sesiones dedicadas solo a generar opciones (divergencia) y separadas de las sesiones de selección (convergencia).
+
+LA VARA QUE SI ESTA ENTERA HOY, y es del propio plan sellado: la guarda de
+COBERTURA EXACTA probo que cada uno de los 13 origenes cae en EXACTAMENTE UN
+grupo, y que cada grupo es UN objeto con su motivo escrito. Eso NO sustituye al
+instrumento: dice otra cosa, y se ofrece como otra cosa.

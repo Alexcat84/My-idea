@@ -1,0 +1,37 @@
+### TABLA 1: LOS SIETE NODOS DEL ACTO, ANTES Y DESPUES
+
+| nodo | papel | fuente | pasos antes | pasos despues | condiciones | vivo hoy |
+|---|---|---|---:|---:|---:|:---:|
+| `reglas_brainstorming` | **superviviente de EL TALLER** | Business Model Generation (Osterwalder) | 5 | 7 | 4 | **si** |
+| `brainstorming_divergente` | absorbido por `reglas_brainstorming` | Change by Design, Revised and U - Tim Brown | 4 | 4 | 2 | no, **deprecado** |
+| `brainstorming_efectivo` | absorbido por `reglas_brainstorming` | Change by Design | 4 | 4 | 2 | no, **deprecado** |
+| `pensamiento_convergente_divergente` | **superviviente de LA ALTERNANCIA** | Change by Design | 4 | 7 | 3 | **si** |
+| `generar_multiples_opciones` | absorbido por `pensamiento_convergente_divergente` | Change by Design | 3 | 3 | 2 | no, **deprecado** |
+| `design_attitude_vs_decision_attitude` | absorbido por `pensamiento_convergente_divergente` | Business Model Generation (Osterwalder) | 4 | 4 | 1 | no, **deprecado** |
+| `construir_sobre_ideas_ajenas` | **el colgado, NO se funde** | Change by Design | 3 | 3 | 1 | **si** |
+
+### TABLA 2: EL CUARTO MIEMBRO DEL RACIMO MIXTO, QUE NO ES DEL ACTO
+
+| nodo | dominio | fuente | vivo | como quedo enlazado |
+|---|---|---|:---:|---|
+| `brainstorming` | quality | Juran's Quality Handbook_ The C - Joseph A. Defeo | **si** | `reglas_brainstorming` lo nombra en `nodos_siguientes` y el nombra a `reglas_brainstorming` en `nodos_previos` |
+
+### TABLA 3: LOS TRES VIVOS Y SUS TRES PARES (`P.10`, tercera salida)
+
+| par | como llego | extremo A lo declara en | extremo B lo declara en |
+|---|---|---|---|
+| `reglas_brainstorming` con `pensamiento_convergente_divergente` | **solo**, redirigido por la fusion del taller y simetrizado por el paso 5 | `nodos_previos` | `nodos_siguientes` |
+| `reglas_brainstorming` con `construir_sobre_ideas_ajenas` | **escrito por `P.10` en esta vuelta**, con los dos extremos de una vez | `nodos_siguientes` | `nodos_previos` |
+| `pensamiento_convergente_divergente` con `construir_sobre_ideas_ajenas` | **solo**, redirigido por la fusion de la alternancia y simetrizado por el paso 5 | `nodos_previos` | `nodos_siguientes` |
+
+### TABLA 4: EL CENSO, TRAMO A TRAMO
+
+| momento | ficheros | vivos | deprecados |
+|---|---:|---:|---:|
+| apertura de la vuelta 39 | 3.853 | 3.538 | 315 |
+| tras EL TALLER | 3.853 | 3.536 | 317 |
+| tras LA ALTERNANCIA | 3.853 | 3.534 | 319 |
+| **recontado al cierre, ahora mismo** | **3.853** | **3.534** | **319** |
+
+(las tres primeras filas son las que imprimio cada corrida de
+`scripts/loop/vuelta39_fundir.py`; la cuarta la recuenta este script AL CIERRE)

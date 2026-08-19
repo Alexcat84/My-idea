@@ -1,0 +1,26 @@
+CIERRE DE OP-D-04
+MODO: --ejecutar
+==============================================================================
+guarda 1, la operacion existe: OK
+guarda 1b, estado 'LISTA' contra el esperado 'LISTA': OK
+guarda 4, los CUATRO absorbidos y los TRES vivos, medidos hoy en dataset/nodos:
+    brainstorming_divergente                 absorbido  deprecado=True OK
+    brainstorming_efectivo                   absorbido  deprecado=True OK
+    generar_multiples_opciones               absorbido  deprecado=True OK
+    design_attitude_vs_decision_attitude     absorbido  deprecado=True OK
+    reglas_brainstorming                     vivo       deprecado=False OK
+    pensamiento_convergente_divergente       vivo       deprecado=False OK
+    construir_sobre_ideas_ajenas             vivo       deprecado=False OK
+guarda 5, los TRES pares entre los vivos, declarados en LOS DOS EXTREMOS (P.10):
+    reglas_brainstorming                 pensamiento_convergente_divergente   OK ['nodos_previos'] / ['nodos_siguientes']
+    reglas_brainstorming                 construir_sobre_ideas_ajenas         OK ['nodos_siguientes'] / ['nodos_previos']
+    pensamiento_convergente_divergente   construir_sobre_ideas_ajenas         OK ['nodos_previos'] / ['nodos_siguientes']
+guarda 2, el texto viejo (7053 caracteres) queda LITERAL dentro de la nueva (11493): OK
+guarda 3, el campo superviviente SIGUE EN null (a4 del acta): OK
+guarda 6, 71 operaciones antes y 71 despues, lineas distintas: [6]: OK
+
+LA COLA DE LA NOTA NUEVA, 4440 caracteres anadidos:
+  ...por el resolutor (P.1): el ancla pasa a reglas_brainstorming con ancla_original guardando de donde venia. No es una decision recalculada, es la misma redireccion, y el precedente esta medido tres veces en git (a2902995, 06dd2922 y 33265c05, que fue el que creo el instrumento). Va como DISCUTIBLE al auditor. EL ESTADO SE QUEDA EN LISTA porque el esquema de OPERACIONES.jsonl no tiene otro, igual que en OP-D-01, OP-D-02 y OP-D-03, que tambien estan ejecutadas. Sigue como PENDIENTE DE DOCTRINA heredado: el esquema no distingue una operacion HECHA de una pendiente, y hoy eso solo se lee en la nota.
+
+ESCRITO en C:\Users\AlexDesk\Documents\I have an idea\docs\plan\OPERACIONES.jsonl
+RELEIDO DEL FICHERO: 71 operaciones, OP-D-04 con superviviente=None y nota de 11493 caracteres

@@ -1,0 +1,33 @@
+P.10, TERCERA SALIDA: fundido el subconjunto cerrado, SE ENLAZA EL RESTO
+MODO: --ejecutar
+==============================================================================
+### LOS TRES VIVOS, comprobados vivos antes de nada
+  reglas_brainstorming                 deprecado=False  alias=['brainstorming_divergente', 'brainstorming_efectivo']
+  pensamiento_convergente_divergente   deprecado=False  alias=['generar_multiples_opciones', 'design_attitude_vs_decision_attitude']
+  construir_sobre_ideas_ajenas         deprecado=False  alias=None
+
+### LOS TRES PARES, ANTES
+  reglas_brainstorming                 pensamiento_convergente_divergente   ENLAZADO en los dos extremos   ['nodos_previos'] / ['nodos_siguientes']
+  reglas_brainstorming                 construir_sobre_ideas_ajenas         SIN ENLACE                     - / -
+  pensamiento_convergente_divergente   construir_sobre_ideas_ajenas         ENLAZADO en los dos extremos   ['nodos_previos'] / ['nodos_siguientes']
+
+### P.9, LOS IDS RESUELTOS AL DIA DE SU ESCRITURA
+  reglas_brainstorming                 resuelve a reglas_brainstorming                 OK
+  construir_sobre_ideas_ajenas         resuelve a construir_sobre_ideas_ajenas         OK
+
+### LA ARISTA: reglas_brainstorming .nodos_siguientes -> construir_sobre_ideas_ajenas
+  motivo: El superviviente del taller ENUNCIA la regla de construir sobre las ideas de otros (paso 3 del nodo fundido) y NO trae su procedimiento, porque el procedimiento vive entero en el otro nodo. La condicion de activacion del destino cierra la direccion: 'Durante sesiones de brainstorming o co-creacion en equipo'.
+  ya declarada en el origen : False
+  ya declarada en el destino: False
+  SE ESCRIBEN LOS DOS EXTREMOS.
+
+guarda, cero auto-arista y cero duplicada en lo escrito: OK
+
+ESCRITO: 2 fichero(s), 1 arista(s) nueva(s).
+
+### LOS TRES PARES, DESPUES
+  reglas_brainstorming                 pensamiento_convergente_divergente   ENLAZADO en los dos extremos   ['nodos_previos'] / ['nodos_siguientes']
+  reglas_brainstorming                 construir_sobre_ideas_ajenas         ENLAZADO en los dos extremos   ['nodos_siguientes'] / ['nodos_previos']
+  pensamiento_convergente_divergente   construir_sobre_ideas_ajenas         ENLAZADO en los dos extremos   ['nodos_previos'] / ['nodos_siguientes']
+
+RESULTADO: 0 par(es) sin enlace, 0 cojo(s). LOS TRES PARES ENLAZADOS EN LOS DOS EXTREMOS.
