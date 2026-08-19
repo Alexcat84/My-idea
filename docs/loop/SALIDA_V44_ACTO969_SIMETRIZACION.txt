@@ -1,0 +1,21 @@
+PLAN        : docs/loop/PLAN_V41_ACTO969.json
+SUPERVIVIENTE: retention_metrics
+LA GUARDA, tal como el plan la dejo escrita:
+  symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos
+==============================================================================
+### 1. symmetrize_added DEL LOG DEL CICLO
+  entradas totales en el log        : 4
+  entradas para retention_metrics     : 4
+  entradas para OTROS nodos         : 0
+  el plan esperaba                  : 4
+    [OK ] nodos_previos      customer_activation_tactics
+    [OK ] nodos_previos      get_customers_funnel_webmobile
+    [OK ] nodos_previos      keep_customers_strategy
+    [OK ] nodos_siguientes   lienzo_modelo_negocio
+  GUARDA 1, simetrizacion EXACTA (faltan 0, sobran 0, de otros nodos 0): OK
+
+### 2. LAS ARISTAS RELEIDAS EN EL FICHERO DEL SUPERVIVIENTE
+  GUARDA 2, 4 de 4 aristas presentes en dataset/nodos/retention_metrics.json: OK
+
+==============================================================================
+RESULTADO: TODAS LAS GUARDAS VERDES

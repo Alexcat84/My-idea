@@ -1,0 +1,59 @@
+CASO POSITIVO: OP-D-06, ACTO 8 DE NUEVE (puesto 969): retention_metrics absorbe a customer_retention_metrics_webmobile
+==============================================================================
+
+EL SUPERVIVIENTE, retention_metrics
+  [PASA] tiene 6 pasos, los 6 que el plan deja
+  [PASA] tiene 3 condiciones, las 3 que el plan deja
+  [PASA] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [PASA] sus condiciones son exactamente las del plan
+  [PASA] su entregable es el del plan
+  [PASA] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Métricas de Retención'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Mide la Retención de Clientes'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['pasos', 'entregable']: 'mes de ingreso'
+  [PASA] sobrevive literal en ['pasos']: 'fuente de cada cliente'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'clics'
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'referidos'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'promoción'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'lifetime value'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'tickets de soporte'
+  [PASA] sobrevive literal en ['resumen']: 'privacidad'
+  [PASA] sobrevive literal en ['pasos', 'condiciones', 'entregable', 'resumen']: 'abandono'
+  [PASA] sobrevive literal en ['pasos']: 'páginas vistas'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [PASA] 'customer_retention_metrics_webmobile' esta en ids_alias del superviviente
+  [PASA] 'customer_retention_metrics_webmobile' tiene su entrada en merged_originals
+  [PASA] la ficha de 'customer_retention_metrics_webmobile' guarda su fuente verbatim: "The Startup Owner's Manual - Steve Blank"
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, customer_retention_metrics_webmobile
+  [PASA] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 6 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LAS REDIRECCIONES
+  [PASA] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 0)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [PASA] customer_activation_tactics.nodos_siguientes ya apunta a retention_metrics
+  [PASA] get_customers_funnel_webmobile.nodos_siguientes ya apunta a retention_metrics
+  [PASA] keep_customers_strategy.nodos_siguientes ya apunta a retention_metrics
+  [PASA] lienzo_modelo_negocio.nodos_previos ya apunta a retention_metrics
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'cohortes' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'retención' sigue vivo en ['pasos', 'condiciones', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'comportamiento' sigue vivo en ['pasos', 'condiciones', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'visitas' sigue vivo en ['pasos']
+  (conservacion) [SI] el rastro 'churn' sigue vivo en ['resumen']
+  (conservacion) [SI] el rastro 'tablero' sigue vivo en ['entregable']
+
+==============================================================================
+RESULTADO: 35 PASAN, 0 CAEN
+CONSERVACION (aparte, no suma): 6 vivos, 0 muertos

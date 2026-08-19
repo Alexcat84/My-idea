@@ -1,0 +1,159 @@
+LOS TRES NODOS BUSCADOS FUERA DEL GRAFO, 19 ago 2026 (vuelta 40)
+  - retention_metrics
+  - customer_retention_metrics_webmobile
+
+CARPETAS SALTADAS, con su motivo:
+  .git               no es contenido
+  .next              compilado
+  __pycache__        binario
+  dataset/nodos      ES el grafo, y esa parte la cubren la simulacion y el ejecutor
+  docs/loop          prosa de las vueltas del bucle, no un registro que el motor lea
+  node_modules       dependencias
+
+ficheros de texto barridos: 173991
+
+==============================================================================
+retention_metrics: 152 apariciones
+==============================================================================
+  [ARCHIVO   ] books/General/metadata/aristas_rematch.json                    1 linea(s)
+  [ARCHIVO   ] books/General/metadata/evc_candidatos.json                     4 linea(s)
+  [ARCHIVO   ] books/General/metadata/tejido_never_lose.json                  1 linea(s)
+  [ARCHIVO   ] dataset/metadata/enriquecimientos_v13.json                     1 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/aristas_rematch.json            1 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/evc_candidatos.json             4 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/tejido_never_lose.json          1 linea(s)
+  [ARCHIVO   ] dataset/metadata/ghost_decisions_v11.json                      1 linea(s)
+  [ARCHIVO   ] dataset/metadata/ghost_report_v11.json                         1 linea(s)
+  [REGENERADO] dataset/metadata/master_graph.json                             16 linea(s)
+  [VIVO      ] dataset/metadata/merged_originals/customer_growth_tactics.json 1 linea(s)
+  [REGENERADO] dataset/metadata/phase1_7_log.json                             1 linea(s)
+  [mencion   ] docs/BANCO_DE_TEXTOS.md                                        1 linea(s)
+  [REGENERADO] docs/COSTURAS_INTERNAS.jsonl                                   1 linea(s)
+  [mencion   ] docs/COSTURAS_INTERNAS_RESUMEN.md                              1 linea(s)
+  [mencion   ] docs/FICHA_SUBFUSION_GRADIENTE.md                              4 linea(s)
+  [mencion   ] docs/INTRA_DOMINIO_INFORME.md                                  20 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_PARES.jsonl                                 6 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_VEREDICTOS.jsonl                            7 linea(s)
+  [VIVO      ] docs/PASO_NODO_CANDIDATOS.jsonl                                1 linea(s)
+  [mencion   ] docs/plan/01_FUENTES.md                                        3 linea(s)
+  [mencion   ] docs/plan/02_DESTEJIDOS.md                                     5 linea(s)
+  [mencion   ] docs/plan/08_VERIFICACION.md                                   1 linea(s)
+  [ARCHIVO   ] docs/plan/COSECHA_RAZONES_D.jsonl                              2 linea(s)
+  [ARCHIVO   ] docs/plan/DIFERENCIA_CONTRA_COLA.jsonl                         1 linea(s)
+  [mencion   ] docs/plan/EXPEDIENTE_MESA_COLEMAN.md                           1 linea(s)
+  [ARCHIVO   ] docs/plan/INVENTARIO.jsonl                                     2 linea(s)
+  [ARCHIVO   ] docs/plan/OPERACIONES.jsonl                                    2 linea(s)
+  [ARCHIVO   ] docs/plan/PASO_NODO_CALIBRADO.jsonl                            1 linea(s)
+  [ARCHIVO   ] docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl                     1 linea(s)
+  [mencion   ] docs/plan/RECORTE_POSICIONAL.md                                1 linea(s)
+  [REGENERADO] engine/node_families.json                                      2 linea(s)
+  [REGENERADO] engine/preguntas_cache.json                                    6 linea(s)
+  [mencion   ] examples/salud_nodos_nunca_tocados.txt                         1 linea(s)
+  [ARCHIVO   ] packs/_core/poda/_censo_escala.jsonl                           1 linea(s)
+  [VIVO      ] packs/seguridad_digital/metadata/bridges_candidatos_core_only.json 1 linea(s)
+  [VIVO      ] packs/seguridad_digital/metadata/bridges_curaduria.json        1 linea(s)
+  [ARCHIVO   ] scripts/_actos_citas.json                                      2 linea(s)
+  [ARCHIVO   ] scripts/_actos_citas_narrativa.json                            1 linea(s)
+  [ARCHIVO   ] scripts/_actos_nuevos_335.jsonl                                1 linea(s)
+  [ARCHIVO   ] scripts/_actos_viejos.json                                     1 linea(s)
+  [mencion   ] scripts/ids_existentes.txt                                     2 linea(s)
+  [mencion   ] scripts/loop/vuelta31_sellar_col.py                            2 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0op2gcx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0ph4ucx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_1nlnfy4._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_master_graph_json_[json]_cjs_1eo-ozs._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_node_families_json_[json]_cjs_0v2y982._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_preguntas_cache_json_[json]_cjs_1r406eu._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_semantic_index_json_[json]_cjs_0i7l55t._.js 1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_00g9337._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_05-1q-3._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0_zdcws._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0cm7609._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_1cqkv8s._.js                       1 linea(s)
+  [REGENERADO] web/lib/assets/master_graph.json                               16 linea(s)
+  [REGENERADO] web/lib/assets/node_families.json                              2 linea(s)
+  [REGENERADO] web/lib/assets/preguntas_cache.json                            6 linea(s)
+  [REGENERADO] web/lib/assets/semantic_index.json                             1 linea(s)
+
+==============================================================================
+customer_retention_metrics_webmobile: 64 apariciones
+==============================================================================
+  [REGENERADO] dataset/metadata/master_graph.json                             8 linea(s)
+  [REGENERADO] docs/COSTURAS_INTERNAS.jsonl                                   1 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_PARES.jsonl                                 3 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_VEREDICTOS.jsonl                            3 linea(s)
+  [mencion   ] docs/plan/02_DESTEJIDOS.md                                     4 linea(s)
+  [ARCHIVO   ] docs/plan/COSECHA_RAZONES_D.jsonl                              1 linea(s)
+  [ARCHIVO   ] docs/plan/INVENTARIO.jsonl                                     2 linea(s)
+  [ARCHIVO   ] docs/plan/OPERACIONES.jsonl                                    1 linea(s)
+  [ARCHIVO   ] docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl                     1 linea(s)
+  [REGENERADO] engine/node_families.json                                      1 linea(s)
+  [REGENERADO] engine/preguntas_cache.json                                    4 linea(s)
+  [ARCHIVO   ] packs/_core/poda/_censo_escala.jsonl                           1 linea(s)
+  [VIVO      ] packs/seguridad_digital/metadata/bridges_candidatos_core_only.json 1 linea(s)
+  [VIVO      ] packs/seguridad_digital/metadata/bridges_curaduria.json        1 linea(s)
+  [ARCHIVO   ] scripts/_actos_citas.json                                      2 linea(s)
+  [ARCHIVO   ] scripts/_actos_citas_narrativa.json                            1 linea(s)
+  [ARCHIVO   ] scripts/_actos_nuevos_335.jsonl                                1 linea(s)
+  [ARCHIVO   ] scripts/_actos_viejos.json                                     1 linea(s)
+  [mencion   ] scripts/ids_existentes.txt                                     1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0op2gcx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0ph4ucx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_1nlnfy4._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_master_graph_json_[json]_cjs_1eo-ozs._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_node_families_json_[json]_cjs_0v2y982._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_preguntas_cache_json_[json]_cjs_1r406eu._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_semantic_index_json_[json]_cjs_0i7l55t._.js 1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_00g9337._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_05-1q-3._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0_zdcws._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0cm7609._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_1cqkv8s._.js                       1 linea(s)
+  [REGENERADO] web/lib/assets/master_graph.json                               8 linea(s)
+  [REGENERADO] web/lib/assets/node_families.json                              1 linea(s)
+  [REGENERADO] web/lib/assets/preguntas_cache.json                            4 linea(s)
+  [REGENERADO] web/lib/assets/semantic_index.json                             1 linea(s)
+
+==============================================================================
+EL REPARTO POR CLASE, que es lo que decide
+==============================================================================
+  REGENERADO  79 apariciones
+  ARCHIVO     60 apariciones
+  VIVO        6 apariciones
+  mencion     71 apariciones
+
+  REGENERADO: lo reescribe el ciclo. No se toca a mano.
+  ARCHIVO   : medicion con su corte. NO se reescribe: seria falsificarla.
+  VIVO      : el motor lo lee y lo mantiene una mano. ES EL QUE HAY QUE
+              REDIRIGIR, y es la clase de bridges_aprobados.json.
+
+==============================================================================
+LOS REGISTROS VIVOS QUE NOMBRAN A ALGUNO DE LOS TRES: 4
+==============================================================================
+  dataset/metadata/merged_originals/customer_growth_tactics.json
+      retention_metrics:16  "retention_metrics"
+  docs/PASO_NODO_CANDIDATOS.jsonl
+      retention_metrics:248  {"dominio": "core", "madre": "retention_metrics", "paso": 3, "pasos_madre": 9, "texto_paso": "Estimar vida promedio del cliente y lifetime value", "hi
+  packs/seguridad_digital/metadata/bridges_candidatos_core_only.json
+      retention_metrics:100  "core": "customer_retention_metrics_webmobile",
+      customer_retention_metrics_webmobile:100  "core": "customer_retention_metrics_webmobile",
+  packs/seguridad_digital/metadata/bridges_curaduria.json
+      retention_metrics:154  "core": "customer_retention_metrics_webmobile",
+      customer_retention_metrics_webmobile:154  "core": "customer_retention_metrics_webmobile",
+
+LA COMPROBACION DIRIGIDA sobre la clase que fallo en la vuelta 39:
+  packs/compras/metadata/bridges_aprobados.json        nombra a los tres: 0 veces
+  packs/entrega/metadata/bridges_aprobados.json        nombra a los tres: 0 veces
+  packs/environmental/metadata/bridges_aprobados.json  nombra a los tres: 0 veces
+  packs/exportacion/metadata/bridges_aprobados.json    nombra a los tres: 0 veces
+  packs/franquicias/metadata/bridges_aprobados.json    nombra a los tres: 0 veces
+  packs/health_safety/metadata/bridges_aprobados.json  nombra a los tres: 0 veces
+  packs/quality/metadata/bridges_aprobados.json        nombra a los tres: 0 veces
+  packs/risk_management/metadata/bridges_aprobados.json nombra a los tres: 0 veces
+  packs/seguridad_digital/metadata/bridges_aprobados.json nombra a los tres: 0 veces
+
+Si los VIVOS son CERO, la fusion no tiene ningun registro fuera del
+grafo que redirigir, y el re-anclaje posterior tiene que salir en
+blanco. Eso NO exime de correrlo: el acta de la vuelta 39 lo adjudico
+como practica para TODA fusion futura, y una guarda que solo se corre
+cuando se sospecha no es una guarda.

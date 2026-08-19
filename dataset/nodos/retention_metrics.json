@@ -4,25 +4,42 @@
   "dominio": "core",
   "titulo_concepto": "Métricas de Retención",
   "fuente": "The Startup Owner's Manual - Steve Blank",
-  "resumen_teorico": "Indicadores clave para monitorear la salud de la retención de clientes, organizados por cohortes (grupos con características temporales comunes). Permiten detectar señales tempranas de churn y evaluar el valor de vida del cliente.",
+  "resumen_teorico": "Los programas de retención dependen de mirar de cerca el comportamiento del cliente para saber quién se queda, quién se va y por qué. En canales digitales se puede rastrear el comportamiento individual de cada usuario (su fecha de inicio, su fuente, su actividad, su abandono, sus clics) sin violar su privacidad, y eso permite personalizar los esfuerzos de retención con datos reales en vez de suposiciones. Los indicadores se organizan por cohortes, grupos de clientes que entraron el mismo mes, para poder comparar su comportamiento entre sí y detectar señales tempranas de abandono (churn). Al lado del comportamiento se miden las quejas, los tickets de soporte y las respuestas a los correos, se estima la vida promedio del cliente y su valor de vida (lifetime value), y se cierra midiendo lo que la retención devuelve: los referidos que genera cada cliente y el resultado de cada promoción o campaña.",
   "pasos_accionables": [
-    "Medir visitas, page views y tiempo en sitio/app por cohorte",
-    "Calcular tiempo promedio entre visitas",
-    "Estimar vida promedio del cliente y lifetime value",
-    "Monitorear quejas, tickets de soporte y tasas de respuesta a e-mails",
-    "Agrupar clientes por cohortes (mes de ingreso) para comparar comportamiento"
+    "Registra la fecha de inicio y la fuente de cada cliente, y agrúpalos en cohortes por mes de ingreso para poder comparar su comportamiento",
+    "Mide la actividad de cada cliente y de cada cohorte: visitas, páginas vistas, tiempo en el sitio o la aplicación, frecuencia y duración de cada visita, y el tiempo promedio que pasa entre una y la siguiente",
+    "Monitorea el comportamiento dentro del sitio: qué clics hace cada cliente y cuáles no",
+    "Detecta el momento y la causa del abandono, y monitorea las quejas, los tickets de soporte y las tasas de respuesta a tus correos",
+    "Estima la vida promedio del cliente y su valor de vida (lifetime value)",
+    "Mide lo que tu retención produce: los referidos que genera cada cliente y el resultado de cada promoción o campaña de retención"
   ],
-  "entregable_esperado": "Dashboard de métricas de retención segmentado por cohortes",
+  "entregable_esperado": "Un tablero de métricas de retención segmentado por cohortes de mes de ingreso y con el comportamiento individual de cada cliente, que incluya su valor de vida, las señales y la causa del abandono, los referidos que genera y el resultado de cada campaña de retención",
   "nodos_previos": [
-    "customer_retention_tactics"
+    "customer_retention_tactics",
+    "customer_activation_tactics",
+    "get_customers_funnel_webmobile",
+    "keep_customers_strategy"
   ],
   "nodos_siguientes": [
     "estrategia_crecimiento_clientes",
     "factores_valoracion_startup",
-    "experiencia_del_cliente_proactiva"
+    "experiencia_del_cliente_proactiva",
+    "lienzo_modelo_negocio"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita cuantificar el éxito de las tácticas de retención"
+    "Cuando necesitas cuantificar el éxito de tus tácticas de retención",
+    "Si tu startup ya cuenta con una base de usuarios activos en web o en móvil",
+    "Si buscas reducir el abandono con datos de comportamiento en lugar de suposiciones"
   ],
-  "etiqueta_arbol": "Mide la Retención de Clientes"
+  "etiqueta_arbol": "Mide la Retención de Clientes",
+  "ids_alias": [
+    "customer_retention_metrics_webmobile"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "customer_retention_metrics_webmobile",
+      "titulo": "Monitoreo de Métricas de Retención Web/Mobile",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }
