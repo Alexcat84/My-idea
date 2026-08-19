@@ -1,0 +1,511 @@
+LOS TRES NODOS BUSCADOS FUERA DEL GRAFO, 19 ago 2026 (vuelta 40)
+  - future_scenarios_planning
+  - escenarios_futuros
+
+CARPETAS SALTADAS, con su motivo:
+  .git               no es contenido
+  .next              compilado
+  __pycache__        binario
+  dataset/nodos      ES el grafo, y esa parte la cubren la simulacion y el ejecutor
+  docs/loop          prosa de las vueltas del bucle, no un registro que el motor lea
+  node_modules       dependencias
+
+ficheros de texto barridos: 173982
+
+==============================================================================
+future_scenarios_planning: 277 apariciones
+==============================================================================
+  [ARCHIVO   ] books/General/metadata/aristas_rematch.json                    2 linea(s)
+  [ARCHIVO   ] books/General/metadata/evc_candidatos.json                     9 linea(s)
+  [ARCHIVO   ] books/General/metadata/tejido_co_intelligence.json             1 linea(s)
+  [ARCHIVO   ] dataset/metadata/enriquecimientos_v13.json                     2 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/aristas_rematch.json            2 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/evc_candidatos.json             9 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/tejido_co_intelligence.json     1 linea(s)
+  [ARCHIVO   ] dataset/metadata/ghost_decisions_v11.json                      1 linea(s)
+  [ARCHIVO   ] dataset/metadata/ghost_report_v11.json                         2 linea(s)
+  [REGENERADO] dataset/metadata/master_graph.json                             14 linea(s)
+  [REGENERADO] dataset/metadata/phase1_7_log.json                             1 linea(s)
+  [mencion   ] docs/FICHA_SUBFUSION_GRADIENTE.md                              10 linea(s)
+  [VIVO      ] docs/GRADIENTE_PARES.jsonl                                     1 linea(s)
+  [mencion   ] docs/GRADIENTE_VEREDICTOS.md                                   1 linea(s)
+  [mencion   ] docs/INTRA_DOMINIO_INFORME.md                                  7 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_PARES.jsonl                                 1 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_VEREDICTOS.jsonl                            1 linea(s)
+  [mencion   ] docs/plan/01_FUENTES.md                                        10 linea(s)
+  [mencion   ] docs/plan/02_DESTEJIDOS.md                                     14 linea(s)
+  [ARCHIVO   ] docs/plan/INVENTARIO.jsonl                                     3 linea(s)
+  [ARCHIVO   ] docs/plan/OPERACIONES.jsonl                                    2 linea(s)
+  [mencion   ] docs/plan/RECOMPUTO_3388.md                                    5 linea(s)
+  [ARCHIVO   ] docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl                     1 linea(s)
+  [REGENERADO] engine/node_families.json                                      1 linea(s)
+  [REGENERADO] engine/preguntas_cache.json                                    7 linea(s)
+  [VIVO      ] engine/sessions/01a16d5c.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/05bd7c36.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/078b2a23.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/08401c62.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/08e9a013.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/0b0dcc2e.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/0e8af1d0.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/0fdc6f53.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/0ff797da.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/140e5857.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/15e84bb0.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/168131db.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/1916b72f.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/1ad0fb03.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/1e7711a3.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/219ceb70.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/228a2271.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/23dd04f8.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/2a639386.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/2bc025c5.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/2e7dc80b.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/2f0dfd62.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/2fba420b.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/32500202.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/333a6705.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/339488d3.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/34476f2d.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/353c7edb.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/3bffedef.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/3c6e7a5f.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/40bc562d.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/45439d8c.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/46353b5b.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/4a3ccfbc.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/4ac674e0.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/4e35b3d7.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/5073ffee.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/5313f58c.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/56cc8ff0.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/59b23b94.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/59bf4da5.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/5d164a07.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/624f6f50.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/6bf8a33c.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/6e6784de.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/71e722c5.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/72de94e0.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/745e6f60.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/75b7c7ee.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/76cc3008.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/791d98f5.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/7c03def1.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/7db32314.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/7ecd9be8.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/804d1b01.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/84bc938f.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/84ce9e99.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/8e0266b6.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/91b713c5.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/9311b7c4.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/9390c350.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/9930a3a8.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/a22d53ef.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/a305d882.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/a8841967.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/a8b2260a.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/a946cc24.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/a9b4e82a.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/aa3c920d.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/ac281ef1.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/ae95bed8.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/aefe9be6.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/af666ce5.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/afab099b.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/b1856368.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/b19005d4.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/b1f7c04f.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/b7013fcf.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/b778992c.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/b7d09f30.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/b99000d1.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/bd04d06b.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/bdebf968.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/bf562690.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/c9f68bdf.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/cc916357.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d071d7ba.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d3f8df69.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d42a11bd.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d465bb68.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d4dd654b.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d64770cc.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d690e0e7.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d7805e84.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d821a1e6.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d86d037e.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/d9017aac.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/de9b964f.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/e13d07aa.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/e19ce247.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/e4d27ab9.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/e6194fc2.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/e660a6b4.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/e9ca9cd9.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/ea3cf75a.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/ecce9bea.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/ed874d3e.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/ef9ea7fe.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/f8babb90.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/f982813b.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/f98e1b4d.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/faa4a1ad.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/fad5506f.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/fcbbad5b.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/ff014a15.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/ff33ea7d.json                                  1 linea(s)
+  [VIVO      ] engine/sessions/fff8f951.json                                  1 linea(s)
+  [mencion   ] examples/salud_nodos_nunca_tocados.txt                         1 linea(s)
+  [ARCHIVO   ] scripts/_actos_nuevos_335.jsonl                                1 linea(s)
+  [mencion   ] scripts/ids_existentes.txt                                     1 linea(s)
+  [mencion   ] scripts/loop/auditor_v25_verifica.py                           1 linea(s)
+  [mencion   ] scripts/loop/auditor_v26_verifica.py                           1 linea(s)
+  [mencion   ] scripts/loop/v41_actos/acto_711.py                             9 linea(s)
+  [mencion   ] scripts/loop/vuelta19_figuras.py                               1 linea(s)
+  [mencion   ] scripts/loop/vuelta19_tarea2.py                                1 linea(s)
+  [mencion   ] scripts/loop/vuelta40_acto_opd06.py                            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0op2gcx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0ph4ucx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_1nlnfy4._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_master_graph_json_[json]_cjs_1eo-ozs._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_node_families_json_[json]_cjs_0v2y982._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_preguntas_cache_json_[json]_cjs_1r406eu._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_semantic_index_json_[json]_cjs_0i7l55t._.js 1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_00g9337._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_05-1q-3._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0_zdcws._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0cm7609._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_1cqkv8s._.js                       1 linea(s)
+  [REGENERADO] web/lib/assets/master_graph.json                               14 linea(s)
+  [REGENERADO] web/lib/assets/node_families.json                              1 linea(s)
+  [REGENERADO] web/lib/assets/preguntas_cache.json                            7 linea(s)
+  [REGENERADO] web/lib/assets/semantic_index.json                             1 linea(s)
+
+==============================================================================
+escenarios_futuros: 85 apariciones
+==============================================================================
+  [ARCHIVO   ] books/General/metadata/aristas_rematch.json                    1 linea(s)
+  [ARCHIVO   ] books/General/metadata/evc_candidatos.json                     3 linea(s)
+  [ARCHIVO   ] books/General/nodos_absorbidos/planificacion_escenarios_futuros_ia.json 1 linea(s)
+  [ARCHIVO   ] dataset/metadata/enriquecimientos_v13.json                     1 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/aristas_rematch.json            1 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/evc_candidatos.json             3 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/nodos_absorbidos/planificacion_escenarios_futuros_ia.json 1 linea(s)
+  [REGENERADO] dataset/metadata/master_graph.json                             7 linea(s)
+  [REGENERADO] docs/COSTURAS_INTERNAS.jsonl                                   1 linea(s)
+  [mencion   ] docs/COSTURAS_INTERNAS_RESUMEN.md                              1 linea(s)
+  [mencion   ] docs/FICHA_SUBFUSION_GRADIENTE.md                              1 linea(s)
+  [ARCHIVO   ] docs/FRANJA_PARES.jsonl                                        1 linea(s)
+  [ARCHIVO   ] docs/FRANJA_VEREDICTOS.jsonl                                   1 linea(s)
+  [mencion   ] docs/INTRA_DOMINIO_INFORME.md                                  4 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_PARES.jsonl                                 1 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_VEREDICTOS.jsonl                            1 linea(s)
+  [mencion   ] docs/plan/02_DESTEJIDOS.md                                     7 linea(s)
+  [ARCHIVO   ] docs/plan/INVENTARIO.jsonl                                     2 linea(s)
+  [ARCHIVO   ] docs/plan/OPERACIONES.jsonl                                    1 linea(s)
+  [mencion   ] docs/plan/RECOMPUTO_3388.md                                    1 linea(s)
+  [ARCHIVO   ] docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl                     1 linea(s)
+  [REGENERADO] engine/node_families.json                                      1 linea(s)
+  [REGENERADO] engine/preguntas_cache.json                                    3 linea(s)
+  [mencion   ] examples/salud_nodos_nunca_tocados.txt                         1 linea(s)
+  [ARCHIVO   ] packs/_core/poda/_censo_escala.jsonl                           1 linea(s)
+  [VIVO      ] packs/seguridad_digital/metadata/bridges_candidatos_core_only.json 1 linea(s)
+  [VIVO      ] packs/seguridad_digital/metadata/bridges_curaduria.json        1 linea(s)
+  [ARCHIVO   ] scripts/_actos_citas.json                                      2 linea(s)
+  [ARCHIVO   ] scripts/_actos_citas_narrativa.json                            1 linea(s)
+  [ARCHIVO   ] scripts/_actos_nuevos_335.jsonl                                1 linea(s)
+  [ARCHIVO   ] scripts/_actos_viejos.json                                     1 linea(s)
+  [mencion   ] scripts/ids_existentes.txt                                     1 linea(s)
+  [mencion   ] scripts/loop/v41_actos/acto_711.py                             6 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0op2gcx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0ph4ucx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_1nlnfy4._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_master_graph_json_[json]_cjs_1eo-ozs._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_node_families_json_[json]_cjs_0v2y982._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_preguntas_cache_json_[json]_cjs_1r406eu._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_semantic_index_json_[json]_cjs_0i7l55t._.js 1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_00g9337._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_05-1q-3._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0_zdcws._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0cm7609._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_1cqkv8s._.js                       1 linea(s)
+  [REGENERADO] web/lib/assets/master_graph.json                               7 linea(s)
+  [REGENERADO] web/lib/assets/node_families.json                              1 linea(s)
+  [REGENERADO] web/lib/assets/preguntas_cache.json                            3 linea(s)
+  [REGENERADO] web/lib/assets/semantic_index.json                             1 linea(s)
+
+==============================================================================
+EL REPARTO POR CLASE, que es lo que decide
+==============================================================================
+  REGENERADO  70 apariciones
+  ARCHIVO     63 apariciones
+  VIVO        120 apariciones
+  mencion     109 apariciones
+
+  REGENERADO: lo reescribe el ciclo. No se toca a mano.
+  ARCHIVO   : medicion con su corte. NO se reescribe: seria falsificarla.
+  VIVO      : el motor lo lee y lo mantiene una mano. ES EL QUE HAY QUE
+              REDIRIGIR, y es la clase de bridges_aprobados.json.
+
+==============================================================================
+LOS REGISTROS VIVOS QUE NOMBRAN A ALGUNO DE LOS TRES: 120
+==============================================================================
+  docs/GRADIENTE_PARES.jsonl
+      future_scenarios_planning:229  {"mundo": "environmental", "nodo_mundo": "seguimiento_tendencias_sostenibilidad", "titulo_mundo": "Seguimiento de Tendencias Futuras", "nodo_nucleo": 
+  engine/sessions/01a16d5c.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/05bd7c36.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/078b2a23.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/08401c62.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/08e9a013.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/0b0dcc2e.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/0e8af1d0.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/0fdc6f53.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/0ff797da.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/140e5857.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/15e84bb0.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/168131db.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/1916b72f.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/1ad0fb03.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/1e7711a3.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/219ceb70.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/228a2271.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/23dd04f8.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/2a639386.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/2bc025c5.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/2e7dc80b.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/2f0dfd62.json
+      future_scenarios_planning:31  "id": "future_scenarios_planning",
+  engine/sessions/2fba420b.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/32500202.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/333a6705.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/339488d3.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/34476f2d.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/353c7edb.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/3bffedef.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/3c6e7a5f.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/40bc562d.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/45439d8c.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/46353b5b.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/4a3ccfbc.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/4ac674e0.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/4e35b3d7.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/5073ffee.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/5313f58c.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/56cc8ff0.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/59b23b94.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/59bf4da5.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/5d164a07.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/624f6f50.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/6bf8a33c.json
+      future_scenarios_planning:31  "id": "future_scenarios_planning",
+  engine/sessions/6e6784de.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/71e722c5.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/72de94e0.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/745e6f60.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/75b7c7ee.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/76cc3008.json
+      future_scenarios_planning:31  "id": "future_scenarios_planning",
+  engine/sessions/791d98f5.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/7c03def1.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/7db32314.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/7ecd9be8.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/804d1b01.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/84bc938f.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/84ce9e99.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/8e0266b6.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/91b713c5.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/9311b7c4.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/9390c350.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/9930a3a8.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/a22d53ef.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/a305d882.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/a8841967.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/a8b2260a.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/a946cc24.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/a9b4e82a.json
+      future_scenarios_planning:31  "id": "future_scenarios_planning",
+  engine/sessions/aa3c920d.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/ac281ef1.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/ae95bed8.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/aefe9be6.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/af666ce5.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/afab099b.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/b1856368.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/b19005d4.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/b1f7c04f.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/b7013fcf.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/b778992c.json
+      future_scenarios_planning:31  "id": "future_scenarios_planning",
+  engine/sessions/b7d09f30.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/b99000d1.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/bd04d06b.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/bdebf968.json
+      future_scenarios_planning:31  "id": "future_scenarios_planning",
+  engine/sessions/bf562690.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/c9f68bdf.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/cc916357.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d071d7ba.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d3f8df69.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d42a11bd.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d465bb68.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d4dd654b.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d64770cc.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d690e0e7.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d7805e84.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d821a1e6.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d86d037e.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/d9017aac.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/de9b964f.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/e13d07aa.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/e19ce247.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/e4d27ab9.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/e6194fc2.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/e660a6b4.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/e9ca9cd9.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/ea3cf75a.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/ecce9bea.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/ed874d3e.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/ef9ea7fe.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/f8babb90.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/f982813b.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/f98e1b4d.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/faa4a1ad.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/fad5506f.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/fcbbad5b.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/ff014a15.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/ff33ea7d.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  engine/sessions/fff8f951.json
+      future_scenarios_planning:32  "id": "future_scenarios_planning",
+  packs/seguridad_digital/metadata/bridges_candidatos_core_only.json
+      escenarios_futuros:70  "core": "escenarios_futuros",
+  packs/seguridad_digital/metadata/bridges_curaduria.json
+      escenarios_futuros:130  "core": "escenarios_futuros",
+
+LA COMPROBACION DIRIGIDA sobre la clase que fallo en la vuelta 39:
+  packs/compras/metadata/bridges_aprobados.json        nombra a los tres: 0 veces
+  packs/entrega/metadata/bridges_aprobados.json        nombra a los tres: 0 veces
+  packs/environmental/metadata/bridges_aprobados.json  nombra a los tres: 0 veces
+  packs/exportacion/metadata/bridges_aprobados.json    nombra a los tres: 0 veces
+  packs/franquicias/metadata/bridges_aprobados.json    nombra a los tres: 0 veces
+  packs/health_safety/metadata/bridges_aprobados.json  nombra a los tres: 0 veces
+  packs/quality/metadata/bridges_aprobados.json        nombra a los tres: 0 veces
+  packs/risk_management/metadata/bridges_aprobados.json nombra a los tres: 0 veces
+  packs/seguridad_digital/metadata/bridges_aprobados.json nombra a los tres: 0 veces
+
+Si los VIVOS son CERO, la fusion no tiene ningun registro fuera del
+grafo que redirigir, y el re-anclaje posterior tiene que salir en
+blanco. Eso NO exime de correrlo: el acta de la vuelta 39 lo adjudico
+como practica para TODA fusion futura, y una guarda que solo se corre
+cuando se sospecha no es una guarda.

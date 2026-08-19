@@ -1,0 +1,58 @@
+CASO POSITIVO: OP-D-06, ACTO 7 DE NUEVE (puesto 711): future_scenarios_planning absorbe a escenarios_futuros
+==============================================================================
+
+EL SUPERVIVIENTE, future_scenarios_planning
+  [PASA] tiene 6 pasos, los 6 que el plan deja
+  [PASA] tiene 3 condiciones, las 3 que el plan deja
+  [PASA] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [PASA] sus condiciones son exactamente las del plan
+  [PASA] su entregable es el del plan
+  [PASA] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Planificación de Escenarios Futuros (Scenario Planning)'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Construye Escenarios con Drivers Clave'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['resumen']: 'AT&T'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'matriz'
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'Canvas'
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'peor'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: '5 a 10 años'
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'probabilidad'
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'decisiones primarias'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'marcadores tempranos'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'creatividad'
+  [PASA] sobrevive literal en ['entregable', 'resumen']: 'titula'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [PASA] 'escenarios_futuros' esta en ids_alias del superviviente
+  [PASA] 'escenarios_futuros' tiene su entrada en merged_originals
+  [PASA] la ficha de 'escenarios_futuros' guarda su fuente verbatim: 'Winning at New Products - Robert G. Cooper'
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, escenarios_futuros
+  [PASA] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 7 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LAS REDIRECCIONES
+  [PASA] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 0)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [PASA] evaluacion_megatendencias.nodos_siguientes ya apunta a future_scenarios_planning
+  [PASA] iota_analysis.nodos_previos ya apunta a future_scenarios_planning
+  [PASA] vision_periferica.nodos_siguientes ya apunta a future_scenarios_planning
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'incertidumbre' sigue vivo en ['pasos', 'condiciones', 'resumen']
+  (conservacion) [SI] el rastro 'escenarios alternativos' sigue vivo en ['pasos', 'resumen']
+  (conservacion) [SI] el rastro 'taller' sigue vivo en ['pasos', 'resumen']
+  (conservacion) [SI] el rastro 'inversión' sigue vivo en ['pasos', 'condiciones', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'entorno externo' sigue vivo en ['pasos', 'resumen']
+  (conservacion) [SI] el rastro 'modelo de negocio' sigue vivo en ['pasos', 'condiciones', 'entregable', 'resumen']
+
+==============================================================================
+RESULTADO: 34 PASAN, 0 CAEN
+CONSERVACION (aparte, no suma): 6 vivos, 0 muertos

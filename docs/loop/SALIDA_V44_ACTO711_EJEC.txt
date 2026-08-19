@@ -1,0 +1,69 @@
+PLAN     : docs/loop/PLAN_V41_ACTO711.json
+OPERACION: OP-D-06, ACTO 7 DE NUEVE (puesto 711): future_scenarios_planning absorbe a escenarios_futuros
+SELLADO  : SELLADO en la vuelta 44, 19 ago 2026, ANTES de ejecutar. EL DESTEJIDO QUE LA RAZON PEDIA YA SE HIZO, y no aqui: lo hizo OP-F-02, el injerto de Mollick. La razon del archivo dice que future_scenarios_planning es COSTURA CONFIRMADA EN LA FICHA con TRECE pasos y su juntura en el 6, donde arranca un bloque entero de IA, y esta RANCIA EN ESE DETALLE. docs/plan/01_FUENTES.md linea 200 publica la frontera leida (1 a 5 contra 6 a 13) y advierte que el apendice ENTRA DOS VECES (6 a 9 y 10 a 13); la linea 292 publica el destino, un NODO PROPIO nuevo llamado escenarios_de_evolucion_de_la_ia de 6 pasos, y la 244 su motivo. LA MEDICION DE HOY LO CONFIRMA POR PARTIDA DOBLE: future_scenarios_planning tiene CINCO pasos, que son exactamente los cinco primeros, y el commit que lo corto es 2d96e3d3 (OP-F-02 EJECUTADA ENTERA), medido con git show sobre el fichero, 13 pasos antes y 5 despues. Fuente primero satisfecha POR PRECEDENCIA, con OP-F-02 HECHA en su nota 2869 SI segun la apertura de esta vuelta. Y HAY UN SEGUNDO DETALLE RANCIO DE LA MISMA RAZON, que se declara con la cita delante porque cambia el reparto: la razon atribuye a future_scenarios_planning el 'establecer senales de alerta temprana', y ESA PIEZA YA NO ESTA EN EL. Se fue con el bloque de IA y hoy es el paso 5 de escenarios_de_evolucion_de_la_ia, leido hoy del grafo. Dentro de este par, la UNICA linea de senales tempranas que queda viva es el paso 6 del donante, asi que viaja con grupo propio en vez de darse por cubierta. LO QUE EL INSTRUMENTO DE COSTURAS CITA HOY SE DICE EN VEZ DE CALLARSE: future_scenarios_planning esta FUERA de la cola de 1.494 y escenarios_futuros esta DENTRO, con bloque 51,4 y corte tras 5 (la pareja, 73,6 sobre los pasos 1 y 2, NO dispara: el umbral de pareja es 80). LA CITA ES DEL DONANTE Y NO DEL SUPERVIVIENTE, y la lectura textual con el texto delante dice que tampoco alli hay costura: los pasos 1 a 5 construyen los escenarios y deciden con ellos, y los 6 y 7 vigilan y generan ideas bajo cada uno. CONTINUAN en vez de volver a contar. La cita queda REGISTRADA en la cola y no despachada, y el auditor la relee.
+MODO     : --ejecutar
+==============================================================================
+censo ANTES: 3853 ficheros, 3526 vivos, 327 deprecados
+guarda 1, fuente del superviviente contra el plan y vida de los TRES: OK
+  ACTO DE FUENTE MIXTA (2 fuente(s) distinta(s) medida(s)), las tres impresas y ninguna escondida:
+    future_scenarios_planning              superviviente  Business Model Generation (Osterwalder)
+    escenarios_futuros                     absorbido      Winning at New Products - Robert G. Cooper
+guarda 2, future_scenarios_planning              pasos y condiciones (5, 2) contra (5, 2): OK
+guarda 2, escenarios_futuros                     pasos y condiciones (7, 2) contra (7, 2): OK
+guarda 3, VERBATIM contra dataset/nodos: 16 de 16 calzan, 0 sobrantes en el plan
+guarda 4, cobertura de pasos        12 de 12, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones  4 de 4, repetidos [], faltan [], sobran []
+guarda 5, los finales derivados de los grupos calzan con el campo sellado: OK
+guarda 6, preservar_literal en el nodo resultante entero:
+    'AT&T'                                     ['resumen']
+    'matriz'                                   ['pasos', 'resumen']
+    'Canvas'                                   ['pasos', 'entregable', 'resumen']
+    'peor'                                     ['pasos', 'entregable', 'resumen']
+    '5 a 10 años'                              ['pasos', 'resumen']
+    'probabilidad'                             ['pasos', 'entregable', 'resumen']
+    'decisiones primarias'                     ['pasos', 'entregable', 'resumen']
+    'marcadores tempranos'                     ['pasos', 'resumen']
+    'creatividad'                              ['pasos', 'resumen']
+    'titula'                                   ['entregable', 'resumen']
+    10 de 10
+guarda 7, rastros en el nodo resultante entero:
+    'incertidumbre'                            ['pasos', 'condiciones', 'resumen']
+    'escenarios alternativos'                  ['pasos', 'resumen']
+    'taller'                                   ['pasos', 'resumen']
+    'inversión'                                ['pasos', 'condiciones', 'entregable', 'resumen']
+    'entorno externo'                          ['pasos', 'resumen']
+    'modelo de negocio'                        ['pasos', 'condiciones', 'entregable', 'resumen']
+    6 de 6
+redirecciones medidas hoy sobre nodos VIVOS: 3
+    evaluacion_megatendencias                        nodos_siguientes   escenarios_futuros -> future_scenarios_planning
+    iota_analysis                                    nodos_previos      escenarios_futuros -> future_scenarios_planning
+    vision_periferica                                nodos_siguientes   escenarios_futuros -> future_scenarios_planning
+nodos DEPRECADOS que nombran y NO se tocan: 0
+guarda 8, redirecciones contra el plan sellado (3 esperadas): OK
+guarda 8b, deprecados que nombran contra el plan (0 esperados): OK
+
+### P.16, LAS DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas
+    TOTAL FABRICADAS: 0
+guarda 9, duplicadas fabricadas contra el plan (0 esperadas): OK
+guarda 10, cero auto-arista tras resolver: OK (0)
+guarda 11, cero duplicada tras resolver: OK (0)
+guarda 12, a6 del acta, titulo y etiqueta SIN TOCAR ('Planificación de Escenarios Futuros (Scenario Planning)' / 'Construye Escenarios con Drivers Clave'): OK
+
+EL RESULTADO, sobre copia en memoria:
+  future_scenarios_planning: 6 pasos, 3 condiciones, alias ['escenarios_futuros']
+    1. Identifica dos o más impulsores de incertidumbre clave que puedan transformar tu industria (por ejemplo la tecnología o la regulación): son las dimensiones que van a caracterizar a tus escenarios
+    2. Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios distintos, y asegúrate de que entre ellos estén descritos en detalle, a 5 a 10 años, el mejor y el peor escenario posible para el entorno externo de tu empresa
+    3. Titula y narra cada escenario con una historia breve que describa sus elementos principales
+    4. Organiza un taller donde los participantes desarrollen un modelo de negocio apropiado para cada escenario, usando lluvia de ideas y técnicas de creatividad, y formula preguntas específicas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$) para cada uno
+    5. Identifica las decisiones primarias que enfrenta tu empresa (nuevos negocios, tecnologías, productos), asigna una probabilidad pequeña a los escenarios alternativos y reconsidera con ella tus decisiones de inversión
+    6. Identifica las señales y marcadores tempranos que indiquen hacia qué escenario se está moviendo el mundo
+    c1. Si la industria enfrenta alta incertidumbre o disrupción inminente
+    c2. Cuando tu empresa depende fuertemente de un solo modelo de futuro esperado
+    c3. Si necesitas anticipar cómo adaptar tu modelo de negocio a futuros cambios y qué decisiones estratégicas de inversión en tecnología o negocio tomar
+  entregable: Documento con 2 a 4 escenarios futuros titulados y narrados, entre ellos el mejor y el peor caso descritos en detalle, con un modelo de negocio (Canvas) propuesto para cada uno, las decisiones primarias y de inversión asociadas con su probabilidad, y las señales de alerta temprana identificadas
+  escenarios_futuros: deprecado True, texto INTACTO (7 pasos, 2 condiciones)
+  ficheros que se tocarian: 5
+
+ESCRITO. censo DESPUES: 3853 ficheros, 3525 vivos, 328 deprecados
+         censo ANTES  : 3853 ficheros, 3526 vivos, 327 deprecados
+guarda 13, el censo no se movio y los vivos bajaron en 1: OK

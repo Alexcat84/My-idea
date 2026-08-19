@@ -44265,7 +44265,8 @@
         "Cuando la empresa depende fuertemente de un solo modelo de futuro esperado",
         "Cuando se necesita anticipar decisiones estratégicas de inversión en tecnología o negocio"
       ],
-      "etiqueta_arbol": "Imagina Varios Futuros Posibles"
+      "etiqueta_arbol": "Imagina Varios Futuros Posibles",
+      "deprecado": true
     },
     "escepticismo_sano_ante_el_riesgo": {
       "node_id": "escepticismo_sano_ante_el_riesgo",
@@ -49061,7 +49062,7 @@
         "evaluacion_competencias_centrales"
       ],
       "nodos_siguientes": [
-        "escenarios_futuros",
+        "future_scenarios_planning",
         "iota_analysis",
         "ficcion_especulativa_como_metodo"
       ],
@@ -55912,34 +55913,49 @@
       "dominio": "core",
       "titulo_concepto": "Planificación de Escenarios Futuros (Scenario Planning)",
       "fuente": "Business Model Generation (Osterwalder)",
-      "resumen_teorico": "Técnica de estrategia que consiste en imaginar posibles futuros concretos (no predecirlos) basados en dos o más criterios/drivers de incertidumbre clave de una industria. Se construyen entre 2 y 4 escenarios detallados que sirven como contexto para diseñar modelos de negocio apropiados para cada futuro posible, ayudando a la organización a prepararse y reflexionar sobre cómo su modelo debería evolucionar.",
+      "resumen_teorico": "Técnica de estrategia que consiste en imaginar futuros concretos, no en predecirlos, a partir de dos o más impulsores de incertidumbre clave de la industria. Se cruzan esos impulsores en una matriz para construir entre 2 y 4 escenarios detallados, cuidando que entre ellos estén el mejor y el peor caso posible del entorno externo a 5 a 10 años, y no solo el futuro que la empresa ya da por esperado. Cada escenario se titula y se narra, y luego un taller desarrolla con lluvia de ideas y técnicas de creatividad un modelo de negocio apropiado para cada uno, con preguntas específicas por bloque del Canvas. Con los escenarios ya construidos se nombran las decisiones primarias que la empresa enfrenta, se asigna una probabilidad pequeña a los escenarios alternativos para reconsiderar con ella las decisiones de inversión, y se identifican las señales y marcadores tempranos que dicen hacia qué escenario se está moviendo el mundo. El caso clásico es AT&T rechazando el control gratuito de internet por no haber considerado escenarios alternativos a su tecnología dominante.",
       "pasos_accionables": [
-        "Identificar 2 o más drivers de incertidumbre clave que puedan transformar la industria (ej: tecnología, regulación)",
-        "Construir una matriz cruzando los drivers para generar entre 2 y 4 escenarios distintos",
-        "Titular y narrar cada escenario con una historia breve que describa sus elementos principales",
-        "Organizar un workshop donde los participantes desarrollen un modelo de negocio apropiado para cada escenario",
-        "Formular preguntas específicas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$) para cada escenario"
+        "Identifica dos o más impulsores de incertidumbre clave que puedan transformar tu industria (por ejemplo la tecnología o la regulación): son las dimensiones que van a caracterizar a tus escenarios",
+        "Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios distintos, y asegúrate de que entre ellos estén descritos en detalle, a 5 a 10 años, el mejor y el peor escenario posible para el entorno externo de tu empresa",
+        "Titula y narra cada escenario con una historia breve que describa sus elementos principales",
+        "Organiza un taller donde los participantes desarrollen un modelo de negocio apropiado para cada escenario, usando lluvia de ideas y técnicas de creatividad, y formula preguntas específicas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$) para cada uno",
+        "Identifica las decisiones primarias que enfrenta tu empresa (nuevos negocios, tecnologías, productos), asigna una probabilidad pequeña a los escenarios alternativos y reconsidera con ella tus decisiones de inversión",
+        "Identifica las señales y marcadores tempranos que indiquen hacia qué escenario se está moviendo el mundo"
       ],
-      "entregable_esperado": "Documento con 2-4 escenarios futuros narrados y un modelo de negocio (Canvas) propuesto para cada uno",
+      "entregable_esperado": "Documento con 2 a 4 escenarios futuros titulados y narrados, entre ellos el mejor y el peor caso descritos en detalle, con un modelo de negocio (Canvas) propuesto para cada uno, las decisiones primarias y de inversión asociadas con su probabilidad, y las señales de alerta temprana identificadas",
       "nodos_previos": [
         "lienzo_modelo_negocio",
         "iota_analysis",
         "acuerdo_de_co_venta_y_votacion",
         "business_model_environment_mapping",
         "vesting_acciones_fundadores",
-        "habilidad_prompting_como_experticia"
+        "habilidad_prompting_como_experticia",
+        "evaluacion_megatendencias",
+        "vision_periferica"
       ],
       "nodos_siguientes": [
         "business_model_environment_mapping",
         "caso_taobao_evolucion_modelo",
         "diseno_de_eucatastrofe_organizacional",
-        "escenarios_de_evolucion_de_la_ia"
+        "escenarios_de_evolucion_de_la_ia",
+        "iota_analysis"
       ],
       "condiciones_activacion": [
         "Si la industria enfrenta alta incertidumbre o disrupción inminente",
-        "Si el equipo necesita anticipar cómo adaptar su modelo de negocio a futuros cambios"
+        "Cuando tu empresa depende fuertemente de un solo modelo de futuro esperado",
+        "Si necesitas anticipar cómo adaptar tu modelo de negocio a futuros cambios y qué decisiones estratégicas de inversión en tecnología o negocio tomar"
       ],
-      "etiqueta_arbol": "Construye Escenarios con Drivers Clave"
+      "etiqueta_arbol": "Construye Escenarios con Drivers Clave",
+      "ids_alias": [
+        "escenarios_futuros"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "escenarios_futuros",
+          "titulo": "Desarrollo de Escenarios Futuros Alternativos",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        }
+      ]
     },
     "gamificacion_onboarding_visual": {
       "node_id": "gamificacion_onboarding_visual",
@@ -66271,7 +66287,7 @@
         "explotacion_tecnologias_disruptivas",
         "vision_periferica",
         "evaluacion_megatendencias",
-        "escenarios_futuros",
+        "future_scenarios_planning",
         "analisis_competitivo_deconstruccion"
       ],
       "nodos_siguientes": [
@@ -114129,7 +114145,7 @@
       ],
       "nodos_siguientes": [
         "seleccion_arenas_estrategicas",
-        "escenarios_futuros",
+        "future_scenarios_planning",
         "iota_analysis"
       ],
       "condiciones_activacion": [
@@ -122977,7 +122993,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 19,
+    "nodos_sin_enlaces_entrantes": 20,
     "enlaces_rotos_en_grafo": 0
   }
 }
