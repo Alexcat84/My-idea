@@ -308,6 +308,35 @@ cribado entero.
 > toca por esta puerta**; si alguna vez hay que abrirla, sera con su propia operacion
 > escrita y su propia adjudicacion, no como efecto lateral de una fusion.
 
+### EXCEPCION DE UNA VEZ, AUTORIZADA POR EL FUNDADOR: **EL CUARTO MIEMBRO DEL RACIMO MIXTO DE `OP-D-04`** (19 ago 2026)
+
+**La regla de arriba se queda entera y su frontera no se mueve.** Lo que sigue es **UNA
+autorizacion expresa, para UN racimo, de UNA sola vez**, y se escribe aqui precisamente
+para que **no valga como precedente**.
+
+**EL CASO:** el triangulo del taller de `OP-D-04` (`brainstorming_divergente`,
+`brainstorming_efectivo`, `reglas_brainstorming`) es **tres de los cuatro miembros del
+racimo mixto** *Las reglas del brainstorming*. **El cuarto, `brainstorming`, es de
+`quality` y esta FUERA del acto.** Ahi chocan dos cosas escritas: `MESA_RACIMOS.md`
+advierte que **podar el lado del nucleo de un racimo mixto cambia el gradiente del mundo
+que lo acompana**, y el alcance de `P.5` **no da puerta para leer un par de fuera del
+acto**. Y ninguna operacion de la fase 06 nombra a estos nodos: **esa mesa no esta
+escrita.**
+
+> **AUTORIZADO, POR ESTA VEZ Y SOLO PARA ESTE RACIMO: `brainstorming` se lee contra cada
+> uno de los tres del taller, en TRES lecturas dirigidas (`LD-96` a `LD-98`), FUERA DEL
+> ALCANCE DE `P.5`.**
+
+| resultado | que pasa |
+|---|---|
+| **las tres dan `D`** | **el racimo queda decidido** y el cuarto **se ENLAZA** al superviviente del taller. La fusion sigue |
+| **alguna da `A`** | **EL BUCLE PARA** con la lectura delante. Una `A` ahi mete a un nodo de `quality` dentro del acto, y eso es **alcance de campaña, no de operacion** |
+
+> **POR QUE ES EXCEPCION Y NO REGLA NUEVA:** la puerta se abre porque **fundir a ciegas
+> el lado del nucleo de un racimo mixto es peor que leer tres pares**, no porque el
+> alcance de `P.5` estuviera mal. **Cualquier otro racimo mixto que aparezca vuelve a
+> necesitar autorizacion**, o su mesa escrita en la fase 06.
+
 ---
 
 ## P.6 EL TEMA SE LEE, EL ACTO SE COMPUTA

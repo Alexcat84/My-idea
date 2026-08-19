@@ -29,8 +29,8 @@ ciega coincide 7 de 7, y la parada es legitima. Es tu decision, no del bucle.
 ## LO QUE LA AUDITORIA ANADE A LO QUE EL EJECUTOR TE DEJO
 
 El detalle de las tres decisiones, con opciones y recomendacion del ejecutor, esta
-en docs/loop/paradas/2026-08-19-fusion-opd04.md y sigue valido. Lo que esta acta
-suma:
+en [`docs/loop/paradas/2026-08-19-fusion-opd04.md`](2026-08-19-fusion-opd04.md) y
+sigue valido. Lo que esta acta suma:
 
 1. **LD-93 QUEDA AUDITADA Y SOSTENIDA EN A.** Era la unica A nueva de la tanda y
    el discutible mas fuerte; la lei a ciegas, corri la letra del 9.6.2 (la senal
@@ -70,8 +70,9 @@ decision 3 opcion A, y decision 2 tras las lecturas.
 
 ## COMO RETOMAR
 
-Escribe tu decision en docs/loop/paradas/2026-08-19-fusion-opd04-DECISION.md
-(el precedente es 2026-08-15-p5-rancios-opd03-DECISION.md) y relanza el bucle.
+Escribe tu decision en este mismo fichero, al final
+(el precedente es [`2026-08-15-p5-rancios-opd03-DECISION.md`](2026-08-15-p5-rancios-opd03-DECISION.md))
+y relanza el bucle.
 El encargo de la vuelta siguiente sera ejecutar tu decision a la letra: si
 autorizas las lecturas del cuarto miembro, primero esas tres (LD-96 a LD-98),
 luego la eleccion P.8 por triangulo, y solo entonces la fusion con su simulacion
@@ -81,3 +82,11 @@ PROMPT_SIGUIENTE.md queda VACIO, como manda AUDITOR.md seccion 4. Los pendientes
 de doctrina que NO bloquean (el recomputo ciego a las dirigidas, el estado HECHA,
 el acto que se parte en dos) quedan listados en el acta, seccion 5, para cuando
 quieras tomarlos.
+
+DECISION DEL FUNDADOR (19 ago 2026): decision 1 opcion A, siete a tres. Decision 3
+opcion A: tres lecturas dirigidas del cuarto miembro por autorizacion expresa, de una
+sola vez y solo para este racimo, fuera del alcance de P.5; si las tres dan D, el racimo
+queda decidido y el cuarto se enlaza al superviviente; si alguna da A, el bucle PARA con
+la lectura delante. Decision 2 despues, por P.8 con el contenido delante: el superviviente
+de cada triangulo se elige por lectura de contenido, el cableado solo desempata; la
+eleccion se publica sellada y la fusion ESPERA el acta del auditor.
