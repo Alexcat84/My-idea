@@ -2986,3 +2986,67 @@ El par **392** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 **EL VERIFICADOR DE MAPAS con la vara 2**, sobre los **DOCE** planes sellados que hoy tienen tabla publicada: `docs/loop/SALIDA_V44_VERIFICADOR_MAPAS_392.txt`.
 
 **ESTE PRIMER COMMIT DEJA EL GRAFO INTACTO: cero nodos tocados.**
+
+### `OP-D-06` ACTO 392 CERRADO: **LA FUSION EJECUTADA Y LA PRIMERA SENAL QUE SE ENCIENDE EN LA OPERACION** (19 ago 2026, vuelta 44)
+
+**LAS TRECE GUARDAS EN VERDE** (`docs/loop/SALIDA_V44_ACTO392_EJEC.txt`, **exit 0**), y la aritmetica al digito:
+
+| | antes | despues | la cuenta |
+|---|---:|---:|---|
+| **ficheros** | 3.853 | **3.853** | nada: el deprecado sigue en el grafo |
+| **vivos** | 3.527 | **3.526** | **menos 1**, guarda 13 OK |
+| **deprecados** | 326 | **327** | **mas 1**, el mismo |
+| **enlaces** | 16.880 y pico, **16.887** | **16.891** | **mas 4 netos y SIN RESTO**: **menos 1** por la unica duplicada que la fusion fabrica (`mvp_alta_fidelidad` nombraba a los dos y tras redirigir quedaba con el mismo destino dos veces; el ejecutor la deduplica) **mas 5** por las vistas reciprocas de la simetrizacion |
+
+**LA GUARDA DE SIMETRIZACION, EXACTA:** **5 de 5** en el log del ciclo, **0** de otros nodos, **faltan 0 y sobran 0**, y las cinco **releidas en el fichero del superviviente** (`docs/loop/SALIDA_V44_ACTO392_SIMETRIZACION.txt`).
+
+**EL CICLO DE GATE 0, DE CUATRO COMANDOS Y CON EL 4 ANTES DEL 3, los cuatro exit 0:** `run_phase1 --reaplico-curaduria` con **GATE 0: OK** y sus **veinte** renglones en `[OK]`; `etiquetas_de_cara --aplicar` con **71** etiquetas; **`engine/plan_readiness.py`**, que aplica porque **toda fusion deprecia un nodo y eso cambia el censo**; y `sync_assets_web` con los seis assets, `master_graph` en **sha256 191a83903e41**.
+
+> **LA DERIVA DE FAMILIA SE MIDIO EN VEZ DE SUPONERSE**, con el fichero respaldado antes y comparado despues: **CERO nodos cambian de familia**, cero nuevos y cero idos sobre los 3.853, y el reparto sigue en **151 / 3.584 / 118**. `engine/node_families.json` sale con el **mismo sha256 que en el acto 344 (`7a98d1852fd0`)** y **ni siquiera aparece en el diff del commit**. **El comando 4 se corrio igual**, porque la regla es condicional **al censo** y no al resultado: correrlo y que no cambie nada **es la prueba de que el derivado estaba al dia**, no la excusa para saltarselo.
+
+**LOS REGISTROS QUE NO SON EL GRAFO, enumerados ANTES de escribir:** **3 vivos**, y **dos ni siquiera estan en el repositorio** (`engine/projects_local/2931a2f9.json` y `engine/sessions/c8b59f32.json`, ignorados por `.gitignore` lineas 9 y 8, comprobado hoy con `git check-ignore -v`). **Los NUEVE `bridges_aprobados.json`: 0 veces cada uno.**
+
+> **EL TERCERO SE DECLARA EN VEZ DE PASARLO:** `docs/GRADIENTE_PARES.jsonl`, que el instrumento clasifica **VIVO por su heuristica de prefijo** (bajo `docs/` solo estan declarados ARCHIVO los prefijos `INTRA_DOMINIO_`, `FRANJA_` y `plan/`). **Medido hoy y no supuesto:** es **la salida de su propio instrumento** (`scripts/gradiente_pares.py`, que declara `SALIDA = docs/GRADIENTE_PARES.jsonl` en su linea 40) y un `grep` sobre `scripts`, `engine` y `web` da **CERO lectores fuera de quien lo escribe**. Es **una medicion con su corte**, y reescribirla a mano seria falsificarla, que es exactamente lo que la regla ARCHIVO prohibe. **Misma especie que `docs/PASO_NODO_CANDIDATOS.jsonl` en el acto 344.** Su linea **282** empareja `sistema_medicion_kpi` del mundo `quality` con `build_metrics_toolset` por semantica **0,7559**, y **ese par lo re-mide su instrumento cuando corra, no esta fusion**.
+
+**`reanclar_por_resolutor.py` ENTRE la fusion y `run_phase1`: EN BLANCO** (*nada que re-anclar*). **Se corre igual**, porque una guarda que solo se corre cuando se sospecha no es una guarda.
+
+**EL CASO POSITIVO:** **ANTES 16 PASAN y 20 CAEN** (exit 1); **DESPUES 37 PASAN y 0 CAEN** (exit 0), conservacion **6 vivos y 0 muertos**.
+
+**LAS SUITES:** motor **25 de 25**, web **80 ficheros con 1.030 pasadas y 3 saltadas**, `tsc --noEmit` **cero lineas**. **Los tres exit 0**, y **la suite web paso a la primera**, sin el rojo de `readiness` que el acto 344 encontro, que es lo esperado cuando el comando 4 va en su sitio.
+
+### LA COSTURA POST FUSION: **LA PRIMERA SENAL QUE SE ENCIENDE EN TODA `OP-D-06`**
+
+`python scripts/costuras_internas.py` corrido DESPUES de fundir (`docs/loop/SALIDA_V44_COSTURAS_TRAS_FUSION_392.txt`, **exit 0**): la cola **sube de 1.493 a 1.494** nodos, sobre **3.526** activos, el **42,4 por ciento**. **Sube, y por el motivo limpio: el absorbido ya estaba FUERA de la cola, asi que deprecarlo no saco a nadie, y el superviviente ENTRO.**
+
+`python scripts/loop/vuelta42_senal_antes_despues.py --nodo metricas_de_adquisicion_activacion --commit d809eaac --nombre "OP-D-06 acto 392"`, sellado en `docs/loop/SALIDA_V44_ACTO392_SENAL.txt`:
+
+| | pasos | pareja | bloque | contra el umbral 44 |
+|---|---:|---:|---:|---|
+| **antes**, leido de git `d809eaac` | 5 | 56,1 | **41,9** (corte tras 2) | **BAJO** por **menos 2,1**: **FUERA** |
+| **despues**, del fichero de hoy | 6 | 57,6 | **46,0** (corte tras 3) | **SOBRE** por **mas 2,0**: **DENTRO** |
+
+**LA FUSION ENCENDIO LA SENAL: estaba FUERA de la cola y quedo DENTRO**, y hay que decirlo antes que ninguna otra cosa, como el acta de la vuelta 40 mando. El movimiento es de **mas 4,1 puntos**, y **el corte SE MOVIO, de 2 a 3**, asi que **la comparacion cambia de objeto**: no es la misma particion medida dos veces, que es la advertencia que el acto **344** dejo escrita y que el **341** ilustro por el otro lado.
+
+> **Y ESTA ES LA QUINTA MEDICION QUE LA GLOSA CORREGIDA DE ESTA MISMA VUELTA NECESITABA.** La glosa vieja decia que la senal **SUBE** con la fusion; la corregida dice que **puede subir o bajar y que no hay ley que diga cual**, con 331 quieto en `+0.0`, 341 en `-0,7`, 344 en `+1,7` y 361 en `-9,4`. **Este acto suma un `+4,1` que ENCIENDE**, el primero de la operacion, y **la glosa corregida lo cubre sin tener que tocarse otra vez**: aqui las piezas que entraron **repartieron** vocabulario entre los dos bloques en vez de concentrarlo, que es lo que la glosa nueva dice que hace subir la senal.
+
+**Y LA LECTURA TEXTUAL, que es la que decide: NO HAY COSTURA.** La cita es **bloque con corte tras 3** (la pareja, **57,6** sobre los pasos 1 y 6, **no dispara**: el umbral de pareja es 80):
+
+- **Pasos 1 a 3:** decidir que medir (la relacion con el cliente y las metricas que salen de ella), **quedarse en menos de doce accionables** organizadas en adquisicion, activacion y referidos, e **instrumentar el producto** para poder capturarlas.
+- **Pasos 4 a 6:** **medir** la adquisicion, **medir** la activacion, y **publicar** el resultado en un tablero que ademas pueda crecer.
+
+**El paso 4 mide exactamente el grupo que el paso 2 acaba de nombrar y que el paso 3 acaba de instrumentar: CONTINUA en vez de volver a contar.** Los dos bloques comparten **vocabulario** (*metricas*, *adquisicion*, *activacion*, *decidir*) **y no narracion**, y comparten ese vocabulario **precisamente porque el segundo bloque mide lo que el primero eligio**: si no lo compartieran, el nodo estaria roto. **La cita queda REGISTRADA en la cola y no despachada, y el auditor la relee.**
+
+### LAS RELECTURAS POST FUSION Y EL REPARTO, comprobados al cierre
+
+**CERO pares B o C vuelven a la cola por este acto**: los **ocho** terceros del archivo (**681**, **699**, **900**, **990**, **1011**, **1226**, **1282**, **1545**) son **los ocho D**, medido en la lectura sellada. **El marcador de clases NO se mueve: sigue en A 575, B 81, C 8, D 2.724 sobre n 3.388.**
+
+**EL REPARTO, comprobado y no supuesto:** la tabla de `P.13` da **14 de 14 piezas que VIAJAN y CERO que se pierden**, y la guarda 3 lo confirma contra `dataset/nodos` con **14 de 14 verbatim y 0 sobrantes**. **Y LAS DOS MITADES DEL REPARTO ESCRITO ESTAN EN CASA, cada una comprobada por su lado:**
+
+| la mitad | quien la descarga | como se comprueba hoy |
+|---|---|---|
+| *en la fusion*: **que el sistema escale luego a retencion y cohortes, de `build_metrics_toolset`** | **este acto** | `retención` y `cohortes` en `preservar_literal`, halladas por la **guarda 6** en **`['pasos', 'entregable', 'resumen']`** las dos |
+| *con el destejido*: **definir que es una conversion, comparar el CAC contra el LTV, y usar SEM** | **`OP-F-04-WEI`**, ya hecha | los pasos **9 a 12** de `sem_estrategia_ejecucion`, leidos hoy del grafo, son las piezas una a una |
+
+**Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026**, y **el reparto escrito de la tabla sellada queda cumplido tal como esta**, que es lo que el encargo de esta vuelta mandaba.
+
+**EL ACTO 392 QUEDA CERRADO ENTERO: sus TRES commits pusheados.**

@@ -1,0 +1,27 @@
+LA SENAL DE BLOQUE ANTES Y DESPUES DE LA FUSION
+Medida con las senales CRUDAS de scripts/costuras_internas.py.
+Umbral de bloque vigente y no tocado: 44
+
+OP-D-06 acto 392: metricas_de_adquisicion_activacion
+  ANTES, leido de git d809eaac:
+    antes      5 pasos | pareja  56.1 | bloque  41.9 (corte tras 2) | BAJO  el umbral 44 por -2.1
+  DESPUES, leido del fichero de hoy:
+    despues    6 pasos | pareja  57.6 | bloque  46.0 (corte tras 3) | SOBRE el umbral 44 por +2.0
+  MOVIMIENTO DE LA SENAL: +4.1 puntos
+  LA COLA: fuera antes -> DENTRO despues
+
+==============================================================================
+LA FUSION ENCENDIO LA SENAL: estaba FUERA de la cola y quedo DENTRO.
+Hay que decirlo antes que ninguna otra cosa, como el acta 40 mando.
+==============================================================================
+Y LO QUE LA CIFRA SOSTIENE Y NADA MAS: con el umbral quieto en 44, la
+fusion puede SUBIR O BAJAR la senal de bloque, y NO HAY LEY que diga
+cual de las dos. Las cuatro mediciones de la vuelta 43, selladas en
+docs/loop/SALIDA_V43_ACTO{331,341,344,361}_SENAL.txt: el 331 quieto en
++0.0, el 341 en -0.7, el 344 en +1.7 y el 361 en -9.4, este ultimo
+APAGANDO la senal. Lo que la mueve es MECANICO y no semantico: la
+senal mide solape de tokens entre los dos bloques, asi que SUBE si las
+piezas que entran REPARTEN vocabulario entre los dos bloques y BAJA si
+lo CONCENTRAN en uno solo. UNA CITA SOBRE UN NODO RECIEN FUNDIDO ES,
+POR CONSTRUCCION, MENOS INFORMATIVA QUE LA MISMA CITA SOBRE UN NODO
+QUE NADIE TOCO. Cita y no juzga: quien decide es la lectura del texto.
