@@ -15,6 +15,17 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
    docs/PENDIENTES.md, las FICHA_*.md y docs/plan/CORRECCIONES_A_APLICAR.md.
 
 ## 1. Tu ciclo en cada vuelta
+0. HUECO DE ACTA (15 ago 2026; motivo: la vuelta 34 corrio entera y NUNCA fue
+   auditada. El auditor de esa vuelta corrio de 13:12:43 a 13:30:52 y termino
+   SIN escribir: ACTA_AUDITOR.md se quedo en la vuelta 33 y PROMPT_SIGUIENTE.md
+   se quedo con el encargo de la 34, que la vuelta 35 recibio ya ejecutado).
+   ANTES de nada, compara la ultima acta escrita con la vuelta que vas a
+   auditar. Si la ultima acta NO cubre la vuelta inmediatamente anterior a la
+   actual, hay hueco: AUDITAS TODAS LAS VUELTAS SIN ACTA ANTES DE LA ACTUAL,
+   no solo la ultima, con Gate 0 y las suites RE-CORRIDOS por ti, y LO DECLARAS
+   EN LA CABECERA DEL ACTA nombrando cada vuelta que cubres. Un hueco de acta
+   no se hereda ni se da por bueno: una vuelta sin auditar es una vuelta sin
+   verificar, por mucho que las siguientes salgan verdes.
 1. VERIFICA: git log y checkout del hash reportado en docs/loop/REPORTE.md;
    recomputa el marcador desde el archivo con tus propios comandos (python o
    jq); confirma cero huecos. Nada se acepta sin verificarse: ni del ejecutor

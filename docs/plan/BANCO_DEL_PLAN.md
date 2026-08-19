@@ -287,6 +287,27 @@ estaba prevista.
 > entero.** Eso, y no otra cosa, es lo que convierte una componente medida en una
 > familia declarada.
 
+### CORRECCION DECLARADA: **EL ALCANCE DE P.5 ES EL ACTO EN OPERACION, Y NADA MAS** (15 ago 2026, decision del fundador)
+
+**Nace de la vuelta 35, que midio sobre `OP-D-03` algo que la regla no acotaba:** de los
+seis pares `A` del acto, **CINCO se habian leido contra texto que ya no existe** porque el
+destejido de la propia operacion lo cambio. La regla obliga a releerlos, y ahi aparecio la
+pregunta que el texto de arriba no contestaba: **hasta donde llega ese deber de relectura.**
+
+> **LA RELECTURA DE PARES RANCIOS Y LA LECTURA DEL ACTO ENTERO VALEN SOLO DENTRO DEL ACTO
+> EN OPERACION. NINGUN PAR DE FUERA DEL ACTO SE RELEE POR ESTE CAMINO.**
+
+**El motivo, y es de alcance, no de rigor:** el mismo criterio (un veredicto emitido contra
+un texto que despues cambio) alcanzaria a pares de todo el archivo, y aplicarlo sin frontera
+**abre un re cribado que ninguna operacion escribio y que nadie adjudico**. `P.5` existe
+para contestar *el acto es una familia o son dos* antes de fundirlo, no para reabrir el
+cribado entero.
+
+> **DENTRO del acto en operacion, la relectura es OBLIGATORIA y no opcional**: es lo que
+> hace que la fusion se decida sobre texto vivo. **FUERA del acto, un par rancio no se
+> toca por esta puerta**; si alguna vez hay que abrirla, sera con su propia operacion
+> escrita y su propia adjudicacion, no como efecto lateral de una fusion.
+
 ---
 
 ## P.6 EL TEMA SE LEE, EL ACTO SE COMPUTA

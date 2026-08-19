@@ -22,7 +22,7 @@ la decision es tuya.
 
 **Estan escritas enteras, y en un solo sitio, en:**
 
-> **[`docs/loop/paradas/2026-08-15-p5-rancios-opd03.md`](paradas/2026-08-15-p5-rancios-opd03.md)**
+> **[`docs/loop/paradas/2026-08-15-p5-rancios-opd03.md`](2026-08-15-p5-rancios-opd03.md)**
 
 En una linea cada una:
 
@@ -44,5 +44,11 @@ del 15 ago 2026 y terminando **sin escribir**: `ACTA_AUDITOR.md` sigue en la vue
 la unica parte viva de ese encargo, *seguir el modo continuo*, y **no re ejecuto las
 demas**: re destejer lo ya destejido habria sido destructivo.
 
-**Todo el detalle esta en [`docs/loop/REPORTE.md`](REPORTE.md), con los discutibles
+**Todo el detalle esta en [`docs/loop/REPORTE.md`](../REPORTE.md), con los discutibles
 marcados antes de saber si acierto.**
+
+DECISION DEL FUNDADOR (15 ago 2026): 1) se vuelcan las cinco relecturas; 2) el 643 SI se
+lee como dirigida dentro de OP-D-03: P.5 dice acto ENTERO, y su alcance queda escrito como
+solo dentro del acto en operacion, nunca fuera; 3) OP-D-03 se resuelve por el 643: D cierra
+la operacion con destejido hecho y sin fusion, A la replantea como fusion de dos por
+correccion declarada. La vuelta 34 queda por auditar junto con la 35 y la 36.
