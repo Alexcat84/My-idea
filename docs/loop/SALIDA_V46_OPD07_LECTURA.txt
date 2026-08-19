@@ -1,0 +1,254 @@
+
+==============================================================================
+A. LA OPERACION OP-D-07, LEIDA ENTERA DEL FICHERO
+==============================================================================
+------------------------------------------------------------------------------
+CAMPO id_op:
+  OP-D-07
+------------------------------------------------------------------------------
+CAMPO fase:
+  02_DESTEJIDOS
+------------------------------------------------------------------------------
+CAMPO tipo:
+  DESTEJIDO
+------------------------------------------------------------------------------
+CAMPO nodos:
+[
+  "decision_pivote_perseverar"
+]
+------------------------------------------------------------------------------
+CAMPO superviviente:
+  None
+------------------------------------------------------------------------------
+CAMPO preservar:
+[
+  "el bloque de Traction, pasos 5 a 9: buscar evidencia de clientes genuinamente comprometidos aunque sean pocos, analizar que caracteristica comun tienen, evaluar si son adoptantes tempranos de un mercado grande o valores atipicos, considerar si el problema es el momento del mercado, y PIVOTAR SOLO SI NO APARECE NINGUN PUNTO BRILLANTE"
+]
+------------------------------------------------------------------------------
+CAMPO eliminar:
+[]
+------------------------------------------------------------------------------
+CAMPO aristas_nuevas:
+[]
+------------------------------------------------------------------------------
+CAMPO orden:
+  7
+------------------------------------------------------------------------------
+CAMPO depende_de:
+[
+  "OP-M-03"
+]
+------------------------------------------------------------------------------
+CAMPO bloquea_a:
+[
+  "OP-M-03-I"
+]
+------------------------------------------------------------------------------
+CAMPO verificacion:
+[
+  "el corte cae entre el paso 4 y el 5, no en otro sitio",
+  "EL BLOQUE DEL PUNTO BRILLANTE NO SE PIERDE: viaja entero al superviviente del acto I, que es la puerta de metricas, y es ademas un lado de la FRONTERA DECLARADA del 1298. Si el destejido lo deja fuera, la frontera se queda sin uno de sus dos lados",
+  "el campo fuente del nodo queda con UNA sola obra tras el corte"
+]
+------------------------------------------------------------------------------
+CAMPO evidencia:
+[
+  "puesto 843: decision_pivote_perseverar es una de las veinte costuras fuera de cola, con dos obras declaradas, y su corte se ve a simple vista entre el paso 4 y el 5",
+  "puesto 860: el solape del par cae en los pasos 1 y 3, DENTRO del bloque de Ries, asi que el destejido no toca el solape"
+]
+------------------------------------------------------------------------------
+CAMPO estado:
+  LISTA
+------------------------------------------------------------------------------
+CAMPO fecha_corte:
+  2026-08-12
+------------------------------------------------------------------------------
+CAMPO adjudicacion:
+  DESTEJIDO PREVIO AL ACTO I, adjudicado el 12 ago 2026. decision_pivote_perseverar declara DOS OBRAS, The Lean Startup mas Traction, y es una de las veinte costuras fuera de cola. EL CORTE SE VE A SIMPLE VISTA ENTRE EL PASO 4 Y EL 5: del 1 al 4 es Ries, la comparacion de metricas contra las expectativas cuantitativas; del 5 al 9 es Traction, LA BUSQUEDA DEL PUNTO BRILLANTE.
+------------------------------------------------------------------------------
+CAMPO pregunta_pendiente:
+  None
+------------------------------------------------------------------------------
+CAMPO nota:
+  SE HACE ANTES DE LA FUSION Y NO DESPUES, y el motivo es exacto: el par 860 se juzgo con el nodo entero, y su solape cae en el bloque de Ries. Si se fundiera primero, el bloque de Traction quedaria dentro de un nodo de Ries sin que nadie lo hubiera declarado.
+
+==============================================================================
+B. LA FASE 02 ENTERA, SUS OPERACIONES Y SU ESTADO
+==============================================================================
+  operaciones de fase 02_DESTEJIDOS: 9
+    OP-D-01    orden 1   estado LISTA    nodos 2  verificacion 5 puntos  depende_de ['OP-F-03']
+    OP-D-02    orden 2   estado LISTA    nodos 4  verificacion 5 puntos  depende_de []
+    OP-D-03    orden 3   estado LISTA    nodos 6  verificacion 5 puntos  depende_de []
+    OP-D-04    orden 4   estado LISTA    nodos 7  verificacion 6 puntos  depende_de ['OP-F-02', 'OP-F-03']
+    OP-D-05    orden 5   estado LISTA    nodos 3  verificacion 4 puntos  depende_de []
+    OP-D-06    orden 6   estado LISTA    nodos 18 verificacion 5 puntos  depende_de []
+    OP-D-07    orden 7   estado LISTA    nodos 1  verificacion 3 puntos  depende_de ['OP-M-03']
+    OP-D-08    orden 8   estado LISTA    nodos 1  verificacion 9 puntos  depende_de []
+    OP-D-09    orden 9   estado LISTA    nodos 1  verificacion 7 puntos  depende_de []
+
+==============================================================================
+C. EL NODO SUJETO, DE CERO: HOY Y ANTES DEL COMMIT DE OP-F-04-WEI
+==============================================================================
+  El commit lo hallo git log --follow sobre el fichero del nodo, HOY:
+    1eef1c6b OP-F-04-WEI segunda tanda: ocho cortes mas sobre siete nodos, y la diana gana su ANILLO INTERIOR
+    33265c05 Fase 3, primer tramo: los CUATRO LOTES de fusion del nucleo
+    fa2e6011 Hygiene v1.3.1: backfill etiqueta_arbol 3260/3260 ($3.44) + validador con test permanente + hallazgo 1 de auditoria refutado con datos
+    722bfa5d Expansion v1.3 (F5): OLA 1 tejida al core — 455 nodos nuevos + 99 enriquecidos, Gate 0 VERDE entre libros (2805 -> 3260)
+    32e2d06f Hotfix v2.1.1: overdemand semantics (revenue vs margin), domain field groundwork
+    c2af9a02 Phase 1.8: symmetrize edges, enforce directed reachability in validator
+    4c1b1bcf Phase 1.6: semantic merge into unified knowledge, sources kept as internal metadata
+    6730ca14 Complete Phase 1: ASCII norm, orphans, and final compilation
+    eadb65cf Initial commit
+
+  --- decision_pivote_perseverar ANTES (1eef1c6b^) ---
+      fuente          : The Lean Startup - Eric Ries | Traction - Gabriel Weinberg
+      obras en fuente : 2
+      pasos           : 9
+         1. Revisar si las métricas accionables muestran mejora suficiente hacia un modelo de negocio sostenible
+         2. Evaluar si el equipo puede racionalizar el fracaso en lugar de aceptarlo
+         3. Comparar el progreso actual con las expectativas cuantitativas definidas al inicio
+         4. Decidir con datos concretos en la sala, no solo con intuición
+         5. Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos
+         6. Analiza qué característica común tienen esos clientes leales
+         7. Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos
+         8. Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto
+         9. Solo pivota si no encuentras ningún punto brillante tras análisis profundo
+      nodos_previos   : ['contabilidad_innovacion_pivote', 'ciclo_crear_medir_aprender']
+      nodos_siguientes: ['tipos_de_pivote', 'reunion_pivotar_o_perseverar', 'catalogo_pivotes']
+
+  --- decision_pivote_perseverar DESPUES (1eef1c6b) ---
+      fuente          : The Lean Startup - Eric Ries
+      obras en fuente : 1
+      pasos           : 4
+         1. Revisar si las métricas accionables muestran mejora suficiente hacia un modelo de negocio sostenible
+         2. Evaluar si el equipo puede racionalizar el fracaso en lugar de aceptarlo
+         3. Comparar el progreso actual con las expectativas cuantitativas definidas al inicio
+         4. Decidir con datos concretos en la sala, no solo con intuición
+      nodos_previos   : ['contabilidad_innovacion_pivote', 'ciclo_crear_medir_aprender']
+      nodos_siguientes: ['tipos_de_pivote', 'reunion_pivotar_o_perseverar', 'catalogo_pivotes', 'puntos_brillantes_antes_del_pivote']
+
+  --- decision_pivote_perseverar HOY (arbol de trabajo) ---
+      fuente          : The Lean Startup - Eric Ries
+      obras en fuente : 1
+      pasos           : 4
+         1. Revisar si las métricas accionables muestran mejora suficiente hacia un modelo de negocio sostenible
+         2. Evaluar si el equipo puede racionalizar el fracaso en lugar de aceptarlo
+         3. Comparar el progreso actual con las expectativas cuantitativas definidas al inicio
+         4. Decidir con datos concretos en la sala, no solo con intuición
+      nodos_previos   : ['contabilidad_innovacion_pivote', 'ciclo_crear_medir_aprender']
+      nodos_siguientes: ['tipos_de_pivote', 'reunion_pivotar_o_perseverar', 'catalogo_pivotes', 'puntos_brillantes_antes_del_pivote']
+
+==============================================================================
+D. EL NODO DONDE EL BLOQUE VIVE HOY, MEDIDO Y NO SUPUESTO
+==============================================================================
+  --- puntos_brillantes_antes_del_pivote HOY ---
+      fuente          : Traction - Gabriel Weinberg
+      obras en fuente : 1
+      pasos           : 5
+         1. Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos
+         2. Analiza qué característica común tienen esos clientes leales
+         3. Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos
+         4. Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto
+         5. Solo pivota si no encuentras ningún punto brillante tras análisis profundo
+      nodos_previos   : ['decision_pivote_perseverar']
+      nodos_siguientes: []
+
+==============================================================================
+E. VERIFICACION 1: EL CORTE CAE ENTRE EL PASO 4 Y EL 5
+==============================================================================
+  pasos antes del corte : 9
+  pasos hoy             : 4
+  pasos que se fueron   : 5
+  prefijo VERBATIM comun: 4 pasos (indices 1 a 4)
+  VERIFICACION 1: CUMPLE (quedan los 4 de Ries verbatim, se fueron los 5 del 5 al 9)
+
+==============================================================================
+F. VERIFICACION 2: EL BLOQUE DEL PUNTO BRILLANTE NO SE PIERDE
+==============================================================================
+  EL BLOQUE, tal como vivia en el sujeto antes del corte (5 pasos):
+    5. Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos
+    6. Analiza qué característica común tienen esos clientes leales
+    7. Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos
+    8. Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto
+    9. Solo pivota si no encuentras ningún punto brillante tras análisis profundo
+
+  EL BLOQUE, tal como vive HOY en puntos_brillantes_antes_del_pivote (5 pasos):
+    1. Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos
+    2. Analiza qué característica común tienen esos clientes leales
+    3. Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos
+    4. Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto
+    5. Solo pivota si no encuentras ningún punto brillante tras análisis profundo
+
+  IDENTIDAD BYTE A BYTE de los cinco pasos: VERBATIM, los cinco
+
+  Y CONTRA EL TEXTO DEL CAMPO preservar de la operacion:
+    el bloque de Traction, pasos 5 a 9: buscar evidencia de clientes genuinamente comprometidos aunque sean pocos, analizar que caracteristica comun tienen, evaluar si son adoptantes tempranos de un mercado grande o valores atipicos, considerar si el problema es el momento del mercado, y PIVOTAR SOLO SI NO APARECE NINGUN PUNTO BRILLANTE
+    LA MECANICA (raices de 5 letras sobre las 4 primeras palabras):
+      cubiertos por emparejamiento mecanico: 3 de 5
+        MECANICO: Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos
+        MECANICO: Analiza qué característica común tienen esos clientes leales
+        MECANICO: Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos
+    LO QUE NINGUNA MECANICA ADJUDICA, porque la parafrasis REORDENA,
+    y va como LECTURA MIA con los dos textos delante:
+        PASO      : Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto
+        PASO      : Solo pivota si no encuentras ningún punto brillante tras análisis profundo
+        PRESERVAR dice, en el mismo orden y para esos dos:
+          ...considerar si el problema es el momento del mercado,
+          y PIVOTAR SOLO SI NO APARECE NINGUN PUNTO BRILLANTE
+        MI LECTURA: los dos estan, reordenados y en infinitivo.
+    TOTAL CUBIERTO (mecanica mas lectura declarada): 5 de 5
+
+  DONDE ESTA HOY, contra donde la operacion dice que tiene que ir:
+    la operacion (verificacion 2) dice: viaja entero al SUPERVIVIENTE DEL ACTO I,
+    que es pivotar_o_perseverar
+    pivotar_o_perseverar tiene HOY 5 pasos:
+       1. Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio
+       2. Si las metricas se acercan a ese ideal, sigue con tu estrategia actual (perseveras)
+       3. Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote)
+       4. Si pivotas, establece una nueva línea base y vuelve a empezar el ciclo de ajuste de tu negocio
+       5. Comprueba que, después del cambio, tus nuevas acciones den mejores resultados que las anteriores
+    pasos del bloque que HOY viven en pivotar_o_perseverar: 0 de 5
+    pasos del bloque que HOY viven en decision_pivote_perseverar: 0 de 5
+    pasos del bloque que HOY viven en puntos_brillantes_antes_del_pivote: 5 de 5
+
+==============================================================================
+G. VERIFICACION 3: EL CAMPO fuente QUEDA CON UNA SOLA OBRA
+==============================================================================
+  antes del corte                        obras 2 : The Lean Startup - Eric Ries | Traction - Gabriel Weinberg
+  hoy                                    obras 1 : The Lean Startup - Eric Ries
+  puntos_brillantes_antes_del_pivote hoy obras 1 : Traction - Gabriel Weinberg
+  VERIFICACION 3: CUMPLE
+
+==============================================================================
+H. LAS ARISTAS ENTRE LOS TRES NODOS, MEDIDAS EN LOS DOS SENTIDOS
+==============================================================================
+  decision_pivote_perseverar           -> puntos_brillantes_antes_del_pivote   siguiente True / previo espejo True
+  decision_pivote_perseverar           <- puntos_brillantes_antes_del_pivote   previo False / siguiente espejo False
+  decision_pivote_perseverar           -> pivotar_o_perseverar                 siguiente False / previo espejo False
+  decision_pivote_perseverar           <- pivotar_o_perseverar                 previo False / siguiente espejo False
+  puntos_brillantes_antes_del_pivote   -> pivotar_o_perseverar                 siguiente False / previo espejo False
+  puntos_brillantes_antes_del_pivote   <- pivotar_o_perseverar                 previo False / siguiente espejo False
+
+==============================================================================
+I. LOS PARES DEL CASO, LEIDOS DEL ARCHIVO
+==============================================================================
+  --- puesto 843 ---
+      decision_pivote_perseverar  contra  pivote_o_proceder
+      dominio core  clave None  clase B
+      razon: DOS ENTRADAS A LA MISMA DECISION, libros distintos y sin arista entre ellos, y es la MISMA forma del puesto 771, que quedo dudoso por lo mismo. decision_pivote_perseverar entra por las METRICAS y por los puntos brillantes: revisar si las metricas accionables muestran mejora suficiente hacia un modelo sostenible, evaluar si el equipo esta racionalizando el fracaso en vez de aceptarlo, comparar el progreso contra las expectativas cuantitativas definidas al inicio, decidir con datos concretos en la sala, buscar evidencia de clientes genuinamente comprometidos aunque sean pocos, analizar que caracteristica comun tienen esos leales, evaluar si son adoptadores tempranos de un mercado grande o simples valores atipicos, considerar si el problema es el timing y no el producto, y pivotar SOLO si no aparece ningun punto brillante. pivote_o_proceder entra por la REUNION al final de la prueba del problema: sentarse con quien te acompana y no decidirlo solo en tu cabeza, dibujar como trabaja de verdad el cliente tipico con los datos recogidos, comparar ese mapa contra lo supuesto, preguntarse que tan bien resuelve el problema real lo que se esta construyendo, decidir si el error fue de cliente o de funciones, reducir la lista de funciones a algo que se cuente en un parrafo, y anotar la decision. Lo unico que se solapa es comparar la realidad contra lo que se habia supuesto: un paso de siete contra uno de nueve. Queda B, y esta vez con el censo en la mano: la familia del pivote tiene SIETE miembros por lectura contra CINCO censados, 21 pares posibles, 10 en cola y solo 5 leidos, y el saldo de los leidos dice que dentro de Blank la misma puerta repite (268 A) y puertas distintas no (594 D, 598 D), mientras que el cruce Ries contra Blank sigue sin resolverse (771 B y este). Lo que la mesa tiene que decidir esta ahora nombrado: si el catalogo quiere UN nodo de decision por LIBRO o UN nodo por PUERTA del proceso. Ademas decision_pivote_perseverar es una de las veinte costuras fuera de cola, con dos obras declaradas, Lean Startup mas Traction, y su corte se ve a simple vista entre el paso 4 y el 5.
+  --- puesto 860 ---
+      decision_pivote_perseverar  contra  pivotar_o_perseverar
+      dominio core  clave None  clase A
+      razon: LA MISMA DECISION DE RIES CONTADA DOS VECES, y el solape cae entero en su bloque. Lo comun es el mecanismo: comparar el progreso de las metricas actuales contra el modelo ideal o contra las expectativas cuantitativas fijadas al inicio, perseverar si se acercan, y reconocer que no funciona si no mejoran tras varios intentos. Lo propio de pivotar_o_perseverar son dos: establecer una linea base NUEVA despues de pivotar, y comprobar que las acciones nuevas rinden mas que las viejas. Lo propio del bloque de Ries del otro es evaluar si el equipo esta racionalizando el fracaso en vez de aceptarlo. Sin arista entre ellos. Y por el banco 9.9 el par se juzga HOY pese a que decision_pivote_perseverar es una de las veinte costuras fuera de cola: su corte esta entre el paso 4 y el 5, del 1 al 4 Ries y del 5 al 9 el bloque de puntos brillantes de Weinberg, y el solape cae en los pasos 1 y 3, dentro del bloque de Ries. Sexto de los veinte leido desde que la lista se midio, y el segundo que no bloquea. LO QUE ESTO LE DA A LA MESA DEL PIVOTE: dentro de Blank la misma puerta ya repetia, puesto 268, y ahora dentro de Ries la misma decision tambien repite. La duplicacion esta DENTRO de cada libro, y los unicos pares sin resolver son los cruzados.
+  --- puesto 1298 ---
+      decision_pivote_perseverar  contra  pivote_startup
+      dominio core  clave None  clase B
+      razon: LA MISMA PUERTA EN DOS LIBROS, Y CON DISPOSICIONES OPUESTAS: es la pregunta abierta de la mesa del pivote y le traigo la evidencia mas afilada que ha salido. Los dos nodos deciden lo mismo, si se pivota o se sigue, y comparten el arranque, revisar los resultados de las pruebas y decidir con ellos. decision_pivote_perseverar, de Ries y Traction, trae ademas una BUSQUEDA DEL PUNTO BRILLANTE de cinco pasos: buscar evidencia de clientes genuinamente comprometidos aunque sean pocos, analizar que caracteristica comun tienen esos leales, evaluar si son adoptantes tempranos de un mercado grande o simples valores atipicos, considerar si el problema es el momento del mercado y no el producto, y PIVOTAR SOLO SI NO APARECE NINGUN PUNTO BRILLANTE tras el analisis. pivote_startup, de Blank, dice lo contrario en su paso 3: DECIDIR CON RAPIDEZ Y SIN MIEDO AL FRACASO. POR QUE ES B Y NO A NI D, dicho entero: no son dos entradas distintas a la misma puerta, que es lo que la mesa sospechaba; son DOS DISPOSICIONES OPUESTAS sobre la misma decision, una que empuja a quedarse hasta agotar la busqueda y otra que empuja a moverse sin miedo. Si eso cuenta como que los libros DISCREPAN DE VERDAD, la mesa debe declarar frontera y quedan los dos nodos; si cuenta como matiz, es A y sobra uno. LA CUENTA DE LA FAMILIA, medida antes de escribir: pivote_startup lleva TRES B (668, 737, 753) y decision_pivote_perseverar lleva DOS (843, 957). Con esta son SEIS B en la misma familia y todas sobre la misma pregunta. La mesa del pivote lleva seis avisos y no se ha sentado.
+
+==============================================================================
+J. RESUMEN DE LO MEDIDO, SIN GLOSA
+==============================================================================
+  verificacion 1 (corte entre 4 y 5)          : CUMPLE
+  verificacion 2 (bloque entero, no perdido)  : EL BLOQUE ESTA ENTERO Y VERBATIM, pero en puntos_brillantes_antes_del_pivote y NO en decision_pivote_perseverar
+  verificacion 3 (fuente con una sola obra)   : CUMPLE
+  nodos tocados por ESTA corrida              : 0 (instrumento de solo lectura)
