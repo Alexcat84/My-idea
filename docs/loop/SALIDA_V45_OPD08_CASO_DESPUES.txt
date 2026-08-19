@@ -1,0 +1,45 @@
+==============================================================================
+GUARDAS DE OP-D-08, MEDICION DE DESPUES
+==============================================================================
+
+  nodo: lienzo_modelo_negocio | pasos: 12 | condiciones: 7
+
+### (A) EL CASO POSITIVO: tiene que CAER antes y PASAR despues
+
+  [PASA] A1 UNA SOLA ORDEN DE COMPLETAR LOS NUEVE BLOQUES (el recuento que cierra la cirugia)
+         narraciones que la dan: 1 (post-it 0, solucion disenada 0, sesion de equipo 0, enumeracion 1)
+  [PASA] A2 EL LITERAL 'cada uno de los 9 bloques' YA NO SE REPITE
+         pasos que lo llevan: ninguno (son 0)
+  [PASA] A3 EL LIENZO SE MANDA IMPRIMIR UNA SOLA VEZ
+         pasos que lo mandan: [1] (son 1)
+  [PASA] A4 CERO JUNTURAS ENTRE NARRACIONES, que es lo que el 784 declara como causa de no poder juzgarse
+         junturas entre narraciones: 0
+
+  RESULTADO DEL CASO POSITIVO: 4 PASAN y 0 CAEN
+
+### (B) LAS INVARIANTES: tienen que PASAR las dos veces
+
+  [OK  ] B1 CERO MOVIMIENTO: los vecinos del nodo
+         previos 25 + siguientes 66 = 91 (la operacion declara 91)
+  [OK  ] B2 CERO MOVIMIENTO: las entradas de arista del grafo entero
+         16898 entradas sobre 3853 ficheros. LA CIFRA ESCRITA EN LA OPERACION (16.866) ES DE OTRO CORTE, el de la vuelta 17, y se cita como contraste: la guarda es que la de HOY no se mueva
+  [OK  ] B3 EL ANCLA DEL VEREDICTO 1434 SIGUE VIVA (paso intocable)
+         'definir la propuesta de valor para cada segmento': presente
+  [OK  ] B4 EL ANCLA DEL VEREDICTO 1136 SIGUE VIVA (las notas adhesivas)
+         clausula de las notas post-it: presente
+  [OK  ] B5 LAS TRES ARISTAS PASO A NODO EN LAS QUE ESTE NODO ES HIJO
+         tipo_de_mercado_estrategia_competitiva paso 5 existe True y cita True | customer_discovery_overview paso 1 existe True y cita True | unbundling_business_models paso 4 existe True y cita True
+  [OK  ] B6 EL ENTREGABLE SIGUE SIENDO CIERTO: los 9 bloques definidos
+         bloques nombrados en los pasos: 9 de 9 (segmento, propuesta de valor, canales, relaciones, ingresos, recursos, actividades, asociaciones, costos)
+  [OK  ] B7 EL ENTREGABLE SIGUE SIENDO CIERTO: y coherentes entre si
+         linea de coherencia entre bloques: presente
+  [OK  ] B8 LA FUENTE NO SE TOCA
+         'Business Model Generation - Osterwalder'
+  [OK  ] B9 LAS CONDICIONES NO SE TOCAN
+         7 condiciones, y la 3 (la que sostiene la lectura del marco) dice: 'Cuando una solución de diseño necesita convertirse en un modelo de negocio viable'
+
+  RESULTADO DE LAS INVARIANTES: 9 en OK y 0 en ROJO
+
+==============================================================================
+FIN DE LAS GUARDAS, MEDICION DE DESPUES
+==============================================================================
