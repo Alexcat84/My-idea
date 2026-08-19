@@ -1,0 +1,45 @@
+PLAN SELLADO: docs/loop/PLAN_V41_ACTO344.json
+  acto          : puesto 344 de OP-D-06
+  superviviente : plan_de_adquisicion_acquire
+  absorbidos    : plan_acquire_activate
+  fuente del superviviente: The Startup Owner's Manual - Blank, Steve
+  ACTO DE FUENTE MIXTA (2 fuente(s) distinta(s) medida(s)):
+      plan_de_adquisicion_acquire                  superviviente  The Startup Owner's Manual - Blank, Steve
+      plan_acquire_activate                        absorbido      The Startup Owner's Manual - Steve Blank
+  origenes generados VERBATIM del fichero: 17
+  pasos finales : 6 (estandar 3 a 6: DENTRO)
+  condiciones finales: 2
+  redirecciones esperadas: 3
+      craft_positioning_statement                    nodos_siguientes   plan_acquire_activate
+      customer_activation_tactics                    nodos_previos      plan_acquire_activate
+      herramientas_adquisicion_viral                 nodos_previos      plan_acquire_activate
+  deprecados que nombran y no se tocan: 0
+  duplicadas que la fusion fabrica: 0
+  simetrizacion esperada: 3 aristas
+      plan_de_adquisicion_acquire.nodos_previos      += craft_positioning_statement
+      plan_de_adquisicion_acquire.nodos_siguientes   += customer_activation_tactics
+      plan_de_adquisicion_acquire.nodos_siguientes   += herramientas_adquisicion_viral
+
+  LA TABLA DE PERDIDAS, DERIVADA de los grupos y no tecleada:
+      A1    plan_acquire_activate                    VIAJA      paso 1 del resultado
+      A2    plan_acquire_activate                    VIAJA      paso 2 del resultado
+      A3    plan_acquire_activate                    VIAJA      paso 5 del resultado
+      A4    plan_acquire_activate                    VIAJA      paso 3 del resultado
+      A5    plan_acquire_activate                    VIAJA      paso 4 del resultado
+      A6    plan_acquire_activate                    VIAJA      paso 6 del resultado
+      A7    plan_acquire_activate                    VIAJA      paso 5 del resultado
+      AC1   plan_acquire_activate                    VIAJA      condicion 2 del resultado
+      D1    plan_de_adquisicion_acquire              VIAJA      paso 1 del resultado
+      D2    plan_de_adquisicion_acquire              VIAJA      paso 2 del resultado
+      D3    plan_de_adquisicion_acquire              VIAJA      paso 3 del resultado
+      D4    plan_de_adquisicion_acquire              VIAJA      paso 4 del resultado
+      D5    plan_de_adquisicion_acquire              VIAJA      paso 5 del resultado
+      D6    plan_de_adquisicion_acquire              VIAJA      paso 5 del resultado
+      D7    plan_de_adquisicion_acquire              VIAJA      paso 6 del resultado
+      DC1   plan_de_adquisicion_acquire              VIAJA      condicion 1 del resultado
+      DC2   plan_de_adquisicion_acquire              VIAJA      condicion 2 del resultado
+      VIAJAN 17 de 17. SE PIERDEN 0.
+      LECTURA: la regla de reparto de OP-D-06 manda cada perdida al
+      bloque del que proviene, y la que no tenga bloque al
+      superviviente. Con CERO perdidas no hay nada que repartir, y eso
+      es lo que hay que comprobar al cierre, no suponerlo.

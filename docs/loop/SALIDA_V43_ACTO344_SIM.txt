@@ -1,0 +1,65 @@
+PLAN     : docs/loop/PLAN_V41_ACTO344.json
+OPERACION: OP-D-06, ACTO 4 DE NUEVE (puesto 344): plan_de_adquisicion_acquire absorbe a plan_acquire_activate
+SELLADO  : SELLADO en la vuelta 43, 19 ago 2026, ANTES de ejecutar. EL DESTEJIDO QUE LA RAZON PEDIA YA SE HIZO, y no aqui: lo hizo OP-F-04-WEI. La razon del archivo dice que uno de los dos se parte por la mitad y que del paso 8 al 12 entra el bloque de los 19 canales de traccion de Weinberg, y esta RANCIA EN ESE DETALLE: docs/plan/01_FUENTES.md linea 928 publica la frontera leida (1 a 7 contra 8 a 12) y el miembro receptor (bullseye_framework), con el saldo medido entonces de 12 pasos a 7. LA MEDICION DE HOY LO CONFIRMA: plan_de_adquisicion_acquire tiene SIETE pasos. Fuente primero satisfecha POR PRECEDENCIA, con OP-F-04-WEI HECHA en su nota 3541 SI segun la apertura de esta vuelta. Y EL PROPIO ARCHIVO YA HABIA DICHO POR QUE ESTA FUSION SE PUEDE HACER PESE A LA COSTURA: docs/INTRA_DOMINIO_INFORME.md linea 1996 dice que el solape con plan_acquire_activate cae ENTERO en el bloque 1 a 7, el de Blank, y NO TOCA LA JUNTURA. LO QUE EL INSTRUMENTO SIGUE CITANDO HOY SE DICE EN VEZ DE CALLARSE: los DOS estan DENTRO de la cola, plan_de_adquisicion_acquire con bloque 48,4 y corte tras 4, y plan_acquire_activate con bloque 47,3 y corte tras 5. Ninguna de las dos citas es la costura vieja de Weinberg, que ya no existe en el fichero, y la lectura textual con el texto delante dice que NO hay costura en ninguno de los dos: los dos son UNA sola narracion que va de preparar la prueba a correrla, y los bloques que el instrumento parte CONTINUAN en vez de volver a contar. Las dos citas quedan REGISTRADAS en la cola y no despachadas, y el auditor las relee.
+MODO     : --simular
+==============================================================================
+censo ANTES: 3853 ficheros, 3529 vivos, 324 deprecados
+guarda 1, fuente del superviviente contra el plan y vida de los TRES: OK
+  ACTO DE FUENTE MIXTA (2 fuente(s) distinta(s) medida(s)), las tres impresas y ninguna escondida:
+    plan_de_adquisicion_acquire            superviviente  The Startup Owner's Manual - Blank, Steve
+    plan_acquire_activate                  absorbido      The Startup Owner's Manual - Steve Blank
+guarda 2, plan_de_adquisicion_acquire            pasos y condiciones (7, 2) contra (7, 2): OK
+guarda 2, plan_acquire_activate                  pasos y condiciones (7, 1) contra (7, 1): OK
+guarda 3, VERBATIM contra dataset/nodos: 17 de 17 calzan, 0 sobrantes en el plan
+guarda 4, cobertura de pasos        14 de 14, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones  3 de 3, repetidos [], faltan [], sobran []
+guarda 5, los finales derivados de los grupos calzan con el campo sellado: OK
+guarda 6, preservar_literal en el nodo resultante entero:
+    'escalonada'                               ['pasos', 'resumen']
+    'SEO'                                      ['pasos', 'resumen']
+    'PPC'                                      ['pasos', 'resumen']
+    'referidos'                                ['pasos', 'resumen']
+    'customer validation'                      ['condiciones']
+    'customer discovery'                       ['pasos', 'resumen']
+    'mapa del modelo de negocio'               ['pasos', 'resumen']
+    'pasar o fracasar'                         ['pasos', 'entregable', 'resumen']
+    'correos de confirmación'                  ['pasos', 'resumen']
+    'local físico'                             ['condiciones']
+    10 de 10
+guarda 7, rastros en el nodo resultante entero:
+    'presupuesto'                              ['pasos', 'entregable', 'resumen']
+    'meta medible'                             ['pasos', 'entregable']
+    'cada acción del cliente'                  ['pasos', 'entregable']
+    'de verdad funcione'                       ['pasos']
+    'antes de lanzar la adquisición'           ['pasos']
+    5 de 5
+redirecciones medidas hoy sobre nodos VIVOS: 3
+    craft_positioning_statement                      nodos_siguientes   plan_acquire_activate -> plan_de_adquisicion_acquire
+    customer_activation_tactics                      nodos_previos      plan_acquire_activate -> plan_de_adquisicion_acquire
+    herramientas_adquisicion_viral                   nodos_previos      plan_acquire_activate -> plan_de_adquisicion_acquire
+nodos DEPRECADOS que nombran y NO se tocan: 0
+guarda 8, redirecciones contra el plan sellado (3 esperadas): OK
+guarda 8b, deprecados que nombran contra el plan (0 esperados): OK
+
+### P.16, LAS DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas
+    TOTAL FABRICADAS: 0
+guarda 9, duplicadas fabricadas contra el plan (0 esperadas): OK
+guarda 10, cero auto-arista tras resolver: OK (0)
+guarda 11, cero duplicada tras resolver: OK (0)
+guarda 12, a6 del acta, titulo y etiqueta SIN TOCAR ('Plan para conseguir clientes (Acquire Plan)' / 'Atrae Clientes a Bajo Costo'): OK
+
+EL RESULTADO, sobre copia en memoria:
+  plan_de_adquisicion_acquire: 6 pasos, 2 condiciones, alias ['plan_acquire_activate']
+    1. Revisa las hipótesis de segmentos de clientes, relaciones y propuesta de valor que trazaste en tu mapa del modelo de negocio, y define a qué segmento le vas a hablar con lo que aprendiste hablando con clientes (customer discovery)
+    2. Para cada actividad define quién la hace, qué táctica usas (posicionamiento en buscadores SEO, anuncios pagos PPC, correo, referidos), cuánto presupuesto le das, en cuánto tiempo la corres y qué meta medible persigues
+    3. Establece antes de cada prueba qué resultado la hace pasar o fracasar, con el número concreto que lo decide
+    4. Instrumenta tu sitio, tu app o tu producto para capturar cada acción del cliente antes de lanzar cualquier prueba
+    5. Lanza las pruebas de forma escalonada, no todas a la vez, para poder medir cada resultado por separado, con el gasto de cada prueba limitado a una cifra que puedas permitirte y preguntada en tu mercado antes de comprometerte, y escala con más fuerza y más presupuesto solo lo que de verdad funcione
+    6. Asegúrate de que todo lo que activa a un cliente (el sistema detrás, los pagos, los correos de confirmación) esté listo antes de lanzar la adquisición
+    c1. Cuando entras en la fase de validar clientes (customer validation) y necesitas probar qué canales de adquisición funcionan
+    c2. Si todavía no sabes qué canal te trae clientes al menor costo, sea por internet, por celular o en un local físico
+  entregable: Tu plan de adquisición de una página, con las tácticas nombradas, el presupuesto, quién hace qué, el cronograma y la meta medible de cada prueba, con su número de pasar o fracasar decidido de antemano, más tu sistema de datos ya activo para medir cada acción del cliente
+  plan_acquire_activate: deprecado True, texto INTACTO (7 pasos, 1 condiciones)
+  ficheros que se tocarian: 5
+
+SIMULACION: cero escrituras.

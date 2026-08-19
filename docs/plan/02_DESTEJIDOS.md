@@ -2399,3 +2399,88 @@ El par **341** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 **CERO pares B o C vuelven a la cola por este acto.** La medicion es la de la lectura sellada (`docs/loop/SALIDA_V43_ACTO341_LECTURA.txt`, bloque (d)) y es mas fuerte que la del acto 331: alli habia **cuatro** terceros y habia que comprobar la clase de los cuatro; **aqui NINGUN par del archivo mete a un tercero con cualquiera de los dos**, asi que no hay ni un candidato que releer. **El marcador de clases NO se mueve en este acto** y por eso no se imprime tabla de marcador.
 
 **Y LA COMPROBACION DEL REPARTO, hecha al cierre y no supuesta** (que es lo que el plan dejo encargado): la tabla de `P.13` del plan sellado da **13 de 13 piezas que VIAJAN y CERO que se pierden**, y la guarda 3 de la ejecucion lo confirma contra `dataset/nodos` con **13 de 13 verbatim que calzan y 0 sobrantes**. **Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026, y el reparto escrito del acto (*mapa contra mapa*) se cumplio en su forma: los dos destejidos los hizo `OP-F-04-COL` y este acto ejecuto el tercer movimiento.**
+
+## `OP-D-06`, ACTO 4 DE NUEVE (puesto 344): **`plan_de_adquisicion_acquire` ABSORBE A `plan_acquire_activate`** (19 ago 2026, vuelta 43)
+
+### EL DESTEJIDO DEL ACTO: **YA ESTABA HECHO, y el archivo ya habia dicho por que la fusion se puede hacer igual**
+
+`scripts/loop/vuelta41_lectura_acto.py --puesto 344`, bloque (b), sobre la cola que el instrumento ya entrego (**1.495** nodos): **los DOS estan DENTRO de la cola**. `plan_de_adquisicion_acquire` con **bloque 48,4** y **corte tras 4**; `plan_acquire_activate` con **bloque 47,3** y **corte tras 5**. **Ninguna de las dos parejas dispara** (52,6 y 48,5 contra el umbral de 80).
+
+**Y NINGUNA DE LAS DOS CITAS ES LA COSTURA QUE LA RAZON DESCRIBIA**, leida entera hoy:
+
+> *LATERAL, no cambia la clase: el segundo se parte por la mitad, del paso 8 al 12 entra el bloque de los 19 canales de traccion de Weinberg con su propio vocabulario. Costura para la otra ficha.*
+
+**ESA COSTURA YA SE DESTEJIO, y la desteji `OP-F-04-WEI`.** `docs/plan/01_FUENTES.md` linea **928** publica la frontera con su miembro receptor: `plan_de_adquisicion_acquire`, frontera **1 a 7 / 8 a 12**, miembro **`bullseye_framework`**, *el bloque es la diana ENTERA paso por paso: listar los 19 canales sin descartar, prueba barata y corta por canal, correrlas en paralelo o por lotes, comparar y elegir donde invertir mas*, con el saldo de entonces medido en **12 pasos a 7**. **Y LA MEDICION DE HOY LO CONFIRMA: el nodo tiene SIETE pasos.** `OP-F-04-WEI` esta **HECHA en su nota 3541 SI** segun la apertura de esta vuelta. **Fuente primero, satisfecha POR PRECEDENCIA.**
+
+**Y HAY UNA SEGUNDA CITA QUE NO SE PUEDE OMITIR, porque adelanta la pregunta que este acto tendria que contestar:** `docs/INTRA_DOMINIO_INFORME.md` linea **1996** ya habia escrito que *el solape con `plan_acquire_activate` cae ENTERO en el bloque 1 a 7*, el de Blank, y que **no toca la juntura**. O sea que el archivo ya sabia que la costura de Weinberg y la repeticion entre los dos nodos **son dos cosas distintas y separables**, y que fundir por la repeticion no pisaba el destejido. **Se cita y no se rehace.**
+
+**LAS DOS CITAS QUE QUEDAN, LEIDAS CON EL TEXTO DELANTE: NO HAY COSTURA EN NINGUNO DE LOS DOS.**
+
+| nodo | donde parte el instrumento | que dicen los dos lados | veredicto |
+|---|---|---|---|
+| `plan_de_adquisicion_acquire` | **tras el paso 4** | **1 a 4** preparan la prueba (revisar hipotesis, definir quien y con que presupuesto, fijar el pasa o falla, instrumentar el sitio) y **5 a 7** la corren (lanzar escalonado, limitar el gasto y escalar, dejar lista la plomeria de activacion) | **CONTINUA**: el paso 5 lanza lo que los cuatro anteriores prepararon. **NO hay costura** |
+| `plan_acquire_activate` | **tras el paso 5** | **1 a 5** preparan (segmento, tacticas, tope de gasto, el numero del pasa o falla, preparar el producto para medir) y **6 y 7** son la vispera y el despues (dejar lista la activacion antes de atraer, y poner mas fuerza a lo que funciono) | **CONTINUA** por lo mismo. **NO hay costura** |
+
+**Comparten vocabulario, no narracion, en los dos casos.** Las dos citas **quedan REGISTRADAS en la cola y no despachadas**, y el auditor las relee.
+
+### `P.5`: **UNA FAMILIA DE DOS**, y CERO relecturas post fusion
+
+El par **344** es **clase A** y su razon **NO nombra ganador**: la vara del verbo de `9.3.1` da **NO, es POR ELEGIR**. Los **cuatro** pares del archivo que meten un tercero son **1131**, **1276**, **1287** y **1403**, **los cuatro D**: **CERO terceros de clase A**, asi que **el acto ES de dos**. **Y CERO pares vuelven a la cola de relectura post fusion**, porque entre los cuatro terceros **no hay ni un B ni un C**.
+
+**LA FUENTE, DICHA COMO SE MIDE Y NO COMO CONVIENE:** el instrumento imprime **FUENTE MIXTA (2 fuentes distintas medidas)**, y esta vez la diferencia es aun mas fina que en los dos actos anteriores: *The Startup Owner's Manual - Blank, Steve* contra *The Startup Owner's Manual - Steve Blank*. **Mismo libro, mismo autor, y lo unico que cambia es el ORDEN DEL NOMBRE.** **Es la tercera vez seguida en esta operacion que la etiqueta FUENTE MIXTA sale de una diferencia de forma y no de libro** (el 331 por los autores anadidos, el 341 por la edicion, el 344 por el orden del nombre), **y se deja escrito para que se pueda auditar como patron del instrumento y no como tres casualidades.**
+
+### `P.8` EN ORDEN: **manda el CONTENIDO, y la vara del alcance cae contra el titulo mas ambicioso**
+
+**EL CONTENIDO, leido primero, y los cinco puntos se sostienen SIN el cableado:**
+
+1. **EL ALCANCE DEL ROL**, que `P.8` cuenta como contenido **con el mismo peso que el texto**. `plan_acquire_activate` se titula *Plan para atraer y activar clientes (Acquire/Activate)* y **nombra DOS fases**, pero **ninguno de sus siete pasos describe como se activa a un cliente**: su unico paso de activacion, el 6, es **la plomeria lista antes de atraer**, que es exactamente lo que el otro nodo dice en su paso 7. **La mitad ACTIVATE de su nombre no esta respaldada por su propio texto.** Y el grafo ya tiene esa fase con **nodo propio y vivo**, `plan_de_activacion`, que el archivo declara **DISTINTO** de el en el puesto **1276** con clase **D**. El ejemplar de `P.8` dice que *una cabeza que vale para las ocho fases no puede llamarse como una sola*; **aqui es la misma vara al reves: un nodo no puede llamarse por dos fases cuando la segunda ni la ejecuta ni le pertenece.**
+2. **LAS CONDICIONES DE ENTRADA, que son donde un nodo declara su sitio en el metodo.** El superviviente **nombra la fase** (*cuando entras en la fase de validar clientes, customer validation*) y nombra el problema exacto (*si todavia no sabes que canal de marketing te trae clientes al menor costo*); el donante dice *cuando estas listo para probar como atraer clientes*, **que no ubica a nadie**.
+3. **EL ENTREGABLE DEL SUPERVIVIENTE CONTIENE AL DEL DONANTE Y ANADE UNA PIEZA**: los dos entregan un plan de una pagina con tacticas, presupuesto, responsable y metrica, y el superviviente entrega ademas *tu sistema de datos ya activo para medir cada prueba*.
+4. **LA PIEZA QUE EL ARCHIVO MANDO SALVAR VIVE SOLO EN EL SUPERVIVIENTE.** `docs/INTRA_DOMINIO_INFORME.md` (lineas **1999 a 2003**) corrige la lectura de las cuatro perdidas anotadas del par: **dos son del bloque Bullseye** (los 19 canales y anotar lo que falla) y **se fueron con el destejido**, y **las que de verdad hay que salvar aqui son las otras dos**, el tope bajo por prueba y **las pruebas escalonadas**. El tope existe en los dos; **las escalonadas existen SOLO en el superviviente**, y son la unica linea del acto que dice **cuantas pruebas corren a la vez**, sin la cual ningun resultado se puede atribuir a ninguna tactica.
+5. **PIEZAS PROPIAS DEL DONANTE QUE NADIE MAS TIENE** y que por eso viajan enteras: las **cuatro tacticas nombradas** (SEO, PPC, correo, referidos), **el numero concreto** del pasa o falla, la instrumentacion dicha sobre **el producto** y sobre **cada accion** del cliente, **preguntar el precio de la tactica en tu mercado** antes de comprometerte, el escalado dicho **con mas fuerza y mas presupuesto**, el ancla a **customer discovery**, y los **tres terrenos** de su condicion (internet, celular, local fisico).
+
+**Superviviente: `plan_de_adquisicion_acquire`.**
+
+**EL CABLEADO, citado DESPUES y NO usado para decidir:** grado por `P.1` de **8** contra **3**.
+
+> **LA MISMA LIMITACION DECLARADA DEL ACTO 341, y un patron que ya va por tres actos seguidos:** el instrumento imprime los cinco bloques en una sola salida, asi que la adjudicacion **no es ciega respecto del cableado**. Y **el cableado ha ido a favor del elegido por contenido en el 331, el 341 y el 344**, con margenes de **5 contra 2**, **9 contra 5** y **8 contra 3**. **Un patron asi es comodo, y por eso se declara: cuanto mas seguido coinciden las dos varas, menos evidencia hay de que la primera este haciendo el trabajo.** El contraejemplo esta en la misma operacion: el acto **285**, donde se separaron y **el cableado PERDIO**. **Este acto va MARCADO COMO DISCUTIBLE por lo mismo que el 341.**
+
+> **Y EL COSTE DE LA ELECCION ESTA MEDIDO: CERO aristas.** Los dos nodos tienen **CERO aristas propias sin reciproco**.
+
+### EL MAPA DE MOVIMIENTO, celda a celda
+
+**Prefijos:** `D` = `plan_de_adquisicion_acquire` (superviviente), `A` = `plan_acquire_activate` (absorbido).
+
+**Las dos tablas se IMPRIMEN y no se teclean**, generadas del plan sellado con `python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V41_ACTO344.json` y `... --campo grupos_condiciones`:
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | D1, A1 | EL MISMO ARRANQUE CON SUS DOS ANCLAS, y ninguna de las dos era completa sola. El superviviente ancla al papel (las hipotesis que YA ESCRIBISTE en el mapa del modelo de negocio) y el donante ancla a la calle (lo que te DIJERON los clientes en customer discovery). El metodo de Blank pide las dos: la hipotesis sin la calle es una suposicion y la calle sin la hipotesis no se puede contrastar contra nada. Y la accion es la misma en los dos, decidir a que segmento le hablas antes de gastar un peso. |
+| **2** | D2, A2 | LA MISMA TABLA CON SUS TACTICAS NOMBRADAS. El superviviente da las CINCO columnas (quien, que tactica, cuanto, en cuanto tiempo y que meta) y NO nombra ni una tactica; el donante nombra cuatro (SEO, PPC, correo, referidos) y no da las columnas. Una columna que se llama tactica y no trae ni un ejemplo es un hueco para el que la rellena, y una lista de tacticas sin presupuesto ni plazo ni meta no es un plan. Juntas son la fila entera. |
+| **3** | D3, A4 | EL MISMO PASA O FALLA CON SU NUMERO. El superviviente manda establecer que resultado la hace pasar o fracasar y no dice en que se expresa; el donante dice que se decide CON UN NUMERO. Un pasa o falla sin numero se convierte en una opinion despues del hecho, que es exactamente lo que este paso existe para impedir. Y los dos coinciden en lo que de verdad importa: se decide ANTES de lanzar. |
+| **4** | D4, A5 | LA MISMA INSTRUMENTACION CON SU OBJETO AMPLIADO. El superviviente dice SITIO O APP y el donante dice TU PRODUCTO, que cubre lo que no es ni un sitio ni una app; y donde el superviviente dice datos de COMPORTAMIENTO el donante dice CADA ACCION QUE HACE EL CLIENTE, que es lo mismo dicho con la unidad que se mide. Se toman las dos ampliaciones porque no se estorban: la instruccion queda buena para un local fisico igual que para una web. |
+| **5** | D5, D6, A3, A7 | LA DISCIPLINA ENTERA DE CORRER LAS PRUEBAS, en un solo paso porque son una sola decision: cuantas a la vez, con cuanto dinero y que se hace con lo que gana. AQUI ESTAN LAS DOS PIEZAS QUE EL ARCHIVO MANDO SALVAR EN ESTA FUSION (docs/INTRA_DOMINIO_INFORME.md lineas 1999 a 2003): las pruebas ESCALONADAS y el TOPE BAJO por prueba, y las dos viajan literales. El donante anade dos cosas que el superviviente no tenia: PREGUNTAR cuanto cuesta cada tactica en tu mercado antes de comprometerte, y que el escalado es CON MAS FUERZA Y MAS PRESUPUESTO y no solo un permiso de seguir. Se agrupan y no se parten porque separar el tope del escalado deja el tope sin su premio y el escalado sin su freno. |
+| **6** | D7, A6 | LA MISMA PLOMERIA DE ACTIVACION, y los dos la dicen casi con las mismas palabras y en el mismo sitio: la ULTIMA, aunque sea un requisito PREVIO. Se respeta ese orden porque es deliberado en los dos originales: se escribe al final para que quien ya tiene el plan hecho no lance sin la plomeria. Es la unica pieza del acto que trae el nombre ACTIVAR, y por eso viaja entera y con sus tres ejemplares nombrados (sistema, pagos, correos de confirmacion). |
+
+| condicion del resultado | de que origenes sale | el motivo que la modifica |
+|---:|---|---|
+| **1** | DC1 | EL DISPARADOR QUE NOMBRA LA FASE DEL METODO, propio del superviviente. Se queda solo porque es el unico de los tres origenes de condicion que dice DONDE del metodo de Blank esta parado el que lee, y esa ubicacion es lo que distingue este plan de un plan de marketing cualquiera. |
+| **2** | DC2, AC1 | EL MISMO DESCONOCIMIENTO CON SUS TRES TERRENOS, y fundir aqui NO borra una senal: le anade la que faltaba. El superviviente dice QUE no sabes (que canal te trae clientes al menor costo) y el donante dice DONDE se prueba (internet, celular o local fisico), que el superviviente no nombraba en ninguna de sus dos condiciones. La vara es la misma que en el acto 341: se funde lo que es el mismo momento y se separa lo que no, y este es el mismo momento con mas terreno. |
+
+**LA TABLA DE PERDIDAS DE `P.13`, derivada de los grupos y no tecleada: 17 de 17 piezas VIAJAN y CERO se pierden** (salida de `vuelta41_plan_acto.py`, sellada en `docs/loop/SALIDA_V43_ACTO344_PLAN.txt`). **Este acto NO tiene reparto escrito** en la tabla de `OP-D-06` (solo lo tienen el 392 y el 341), asi que rige la regla adjudicada el 11 ago 2026; **pero el archivo SI dejo escrito que hay que salvar DOS piezas aqui, y las dos quedan en el paso 5 del resultado**: `escalonada` va en `preservar_literal` para que **una guarda lo compruebe en vez de confiarlo**, y el tope bajo por prueba viaja en el mismo grupo. **Con cero perdidas no hay nada que repartir, y eso se comprueba al cierre en vez de suponerse.**
+
+### LO QUE LA SIMULACION DICE QUE VA A PASAR, sellado antes de ejecutar
+
+`python scripts/loop/vuelta39_fundir.py --plan docs/loop/PLAN_V41_ACTO344.json --simular`, sellado en `docs/loop/SALIDA_V43_ACTO344_SIM.txt` con **exit 0** y **LAS DOCE GUARDAS DE SIMULACION EN VERDE**.
+
+| | esperado |
+|---|---|
+| redirecciones sobre nodos vivos | **3** (`craft_positioning_statement` en `nodos_siguientes`; `customer_activation_tactics` y `herramientas_adquisicion_viral` en `nodos_previos`) |
+| deprecados que nombran y NO se tocan | **0** |
+| duplicadas que la fusion fabrica (`P.16`) | **0**, y aun asi se mide antes de darlo por bueno |
+| aristas de simetrizacion que el paso 5 tiene que anadir | **3**, ni una mas ni una menos |
+| pasos del resultado | **6**, **DENTRO del estandar de 3 a 6**, en su borde alto |
+| condiciones del resultado | **2** |
+| censo esperado | ficheros **3.853** sin moverse, vivos **3.529 menos 1**, deprecados **324 mas 1** |
+
+**Y EL CASO POSITIVO ANTES, que TIENE que caer:** `python scripts/loop/vuelta39_caso_positivo.py docs/loop/PLAN_V41_ACTO344.json`, sellado en `docs/loop/SALIDA_V43_ACTO344_CASO_ANTES.txt`: **16 PASAN y 17 CAEN**, **exit 1**, con la conservacion aparte en **4 vivos y 1 muerto**.
