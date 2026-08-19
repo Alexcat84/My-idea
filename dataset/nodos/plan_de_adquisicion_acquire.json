@@ -4,32 +4,44 @@
   "dominio": "core",
   "titulo_concepto": "Plan para conseguir clientes (Acquire Plan)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Es un documento táctico de una página donde detallas experimentos para atraer clientes de forma predecible y a bajo costo hacia tu embudo de ventas. Te apoyas en las hipótesis que ya trazaste sobre tus segmentos de clientes, cómo te relacionas con ellos y tu propuesta de valor, usando tu mapa del modelo de negocio (Business Model Canvas). En esta etapa tu meta es aprender qué canales funcionan, no generar ingresos ni lanzar el producto de forma oficial.",
+  "resumen_teorico": "Es un documento táctico de una página donde detallas los experimentos con los que vas a atraer clientes de forma predecible y a bajo costo hacia tu embudo de ventas, y con los que vas a convertirlos en usuarios activos o compradores. Te apoyas en dos anclas y no en una: las hipótesis de segmentos, relaciones y propuesta de valor que ya trazaste en tu mapa del modelo de negocio, y lo que aprendiste hablando con clientes (customer discovery). Cada prueba lleva su táctica nombrada (SEO, PPC, correo, referidos), su responsable, su presupuesto con tope, su plazo y el número que decide si va a pasar o fracasar, fijado antes de lanzarla. Las pruebas se lanzan de forma escalonada y no todas a la vez, para poder medir cada resultado por separado, y solo se escala con más fuerza y más presupuesto lo que de verdad funcionó. Nada de esto se lanza antes de que esté lista la plomería que activa al cliente: el sistema detrás, los pagos y los correos de confirmación. En esta etapa tu meta es aprender qué canales funcionan, no generar ingresos ni lanzar el producto de forma oficial.",
   "pasos_accionables": [
-    "Revisa las hipótesis de segmentos de clientes, relaciones y propuesta de valor que trazaste en tu mapa del modelo de negocio",
-    "Para cada actividad define quién la hace, qué táctica usas, cuánto presupuesto le das, en cuánto tiempo la corres y qué meta medible persigues",
-    "Establece antes de cada prueba qué resultado la hace pasar o fracasar",
-    "Instrumenta todo tu sitio o app para capturar datos de comportamiento antes de lanzar cualquier prueba",
-    "Lanza las pruebas de forma escalonada, no todas a la vez, para poder medir cada resultado por separado",
-    "Limita el gasto por prueba a una cifra que puedas permitirte y escala solo lo que de verdad funcione (pregunta cifras razonables en tu mercado)",
+    "Revisa las hipótesis de segmentos de clientes, relaciones y propuesta de valor que trazaste en tu mapa del modelo de negocio, y define a qué segmento le vas a hablar con lo que aprendiste hablando con clientes (customer discovery)",
+    "Para cada actividad define quién la hace, qué táctica usas (posicionamiento en buscadores SEO, anuncios pagos PPC, correo, referidos), cuánto presupuesto le das, en cuánto tiempo la corres y qué meta medible persigues",
+    "Establece antes de cada prueba qué resultado la hace pasar o fracasar, con el número concreto que lo decide",
+    "Instrumenta tu sitio, tu app o tu producto para capturar cada acción del cliente antes de lanzar cualquier prueba",
+    "Lanza las pruebas de forma escalonada, no todas a la vez, para poder medir cada resultado por separado, con el gasto de cada prueba limitado a una cifra que puedas permitirte y preguntada en tu mercado antes de comprometerte, y escala con más fuerza y más presupuesto solo lo que de verdad funcione",
     "Asegúrate de que todo lo que activa a un cliente (el sistema detrás, los pagos, los correos de confirmación) esté listo antes de lanzar la adquisición"
   ],
-  "entregable_esperado": "Tu plan de adquisición de una página, con tácticas, presupuesto, cronograma y metas de éxito definidas, más tu sistema de datos ya activo para medir cada prueba",
+  "entregable_esperado": "Tu plan de adquisición de una página, con las tácticas nombradas, el presupuesto, quién hace qué, el cronograma y la meta medible de cada prueba, con su número de pasar o fracasar decidido de antemano, más tu sistema de datos ya activo para medir cada acción del cliente",
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "customer_discovery",
     "customer_segments_hypothesis",
     "herramientas_online_canal_fisico",
-    "plan_de_materiales_colaterales"
+    "plan_de_materiales_colaterales",
+    "craft_positioning_statement"
   ],
   "nodos_siguientes": [
     "plan_de_activacion",
     "analisis_de_cohortes",
-    "push_vs_pull_marketing"
+    "push_vs_pull_marketing",
+    "customer_activation_tactics",
+    "herramientas_adquisicion_viral"
   ],
   "condiciones_activacion": [
     "Cuando entras en la fase de validar clientes (customer validation) y necesitas probar qué canales de adquisición funcionan",
-    "Si todavía no sabes qué canal de marketing te trae clientes al menor costo"
+    "Si todavía no sabes qué canal te trae clientes al menor costo, sea por internet, por celular o en un local físico"
   ],
-  "etiqueta_arbol": "Atrae Clientes a Bajo Costo"
+  "etiqueta_arbol": "Atrae Clientes a Bajo Costo",
+  "ids_alias": [
+    "plan_acquire_activate"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "plan_acquire_activate",
+      "titulo": "Plan para atraer y activar clientes (Acquire/Activate)",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

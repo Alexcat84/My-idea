@@ -1,0 +1,20 @@
+PLAN        : docs/loop/PLAN_V41_ACTO344.json
+SUPERVIVIENTE: plan_de_adquisicion_acquire
+LA GUARDA, tal como el plan la dejo escrita:
+  symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos
+==============================================================================
+### 1. symmetrize_added DEL LOG DEL CICLO
+  entradas totales en el log        : 3
+  entradas para plan_de_adquisicion_acquire: 3
+  entradas para OTROS nodos         : 0
+  el plan esperaba                  : 3
+    [OK ] nodos_previos      craft_positioning_statement
+    [OK ] nodos_siguientes   customer_activation_tactics
+    [OK ] nodos_siguientes   herramientas_adquisicion_viral
+  GUARDA 1, simetrizacion EXACTA (faltan 0, sobran 0, de otros nodos 0): OK
+
+### 2. LAS ARISTAS RELEIDAS EN EL FICHERO DEL SUPERVIVIENTE
+  GUARDA 2, 3 de 3 aristas presentes en dataset/nodos/plan_de_adquisicion_acquire.json: OK
+
+==============================================================================
+RESULTADO: TODAS LAS GUARDAS VERDES

@@ -1,0 +1,57 @@
+CASO POSITIVO: OP-D-06, ACTO 4 DE NUEVE (puesto 344): plan_de_adquisicion_acquire absorbe a plan_acquire_activate
+==============================================================================
+
+EL SUPERVIVIENTE, plan_de_adquisicion_acquire
+  [PASA] tiene 6 pasos, los 6 que el plan deja
+  [PASA] tiene 2 condiciones, las 2 que el plan deja
+  [PASA] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [PASA] sus condiciones son exactamente las del plan
+  [PASA] su entregable es el del plan
+  [PASA] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Plan para conseguir clientes (Acquire Plan)'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Atrae Clientes a Bajo Costo'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'escalonada'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'SEO'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'PPC'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'referidos'
+  [PASA] sobrevive literal en ['condiciones']: 'customer validation'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'customer discovery'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'mapa del modelo de negocio'
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'pasar o fracasar'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'correos de confirmación'
+  [PASA] sobrevive literal en ['condiciones']: 'local físico'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [PASA] 'plan_acquire_activate' esta en ids_alias del superviviente
+  [PASA] 'plan_acquire_activate' tiene su entrada en merged_originals
+  [PASA] la ficha de 'plan_acquire_activate' guarda su fuente verbatim: "The Startup Owner's Manual - Steve Blank"
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, plan_acquire_activate
+  [PASA] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 7 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 1
+
+LAS REDIRECCIONES
+  [PASA] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 0)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [PASA] craft_positioning_statement.nodos_siguientes ya apunta a plan_de_adquisicion_acquire
+  [PASA] customer_activation_tactics.nodos_previos ya apunta a plan_de_adquisicion_acquire
+  [PASA] herramientas_adquisicion_viral.nodos_previos ya apunta a plan_de_adquisicion_acquire
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'presupuesto' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'meta medible' sigue vivo en ['pasos', 'entregable']
+  (conservacion) [SI] el rastro 'cada acción del cliente' sigue vivo en ['pasos', 'entregable']
+  (conservacion) [SI] el rastro 'de verdad funcione' sigue vivo en ['pasos']
+  (conservacion) [SI] el rastro 'antes de lanzar la adquisición' sigue vivo en ['pasos']
+
+==============================================================================
+RESULTADO: 34 PASAN, 0 CAEN
+CONSERVACION (aparte, no suma): 5 vivos, 0 muertos

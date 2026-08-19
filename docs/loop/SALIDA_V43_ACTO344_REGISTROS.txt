@@ -1,0 +1,157 @@
+LOS TRES NODOS BUSCADOS FUERA DEL GRAFO, 19 ago 2026 (vuelta 40)
+  - plan_de_adquisicion_acquire
+  - plan_acquire_activate
+
+CARPETAS SALTADAS, con su motivo:
+  .git               no es contenido
+  .next              compilado
+  __pycache__        binario
+  dataset/nodos      ES el grafo, y esa parte la cubren la simulacion y el ejecutor
+  docs/loop          prosa de las vueltas del bucle, no un registro que el motor lea
+  node_modules       dependencias
+
+ficheros de texto barridos: 173920
+
+==============================================================================
+plan_de_adquisicion_acquire: 135 apariciones
+==============================================================================
+  [ARCHIVO   ] books/General/metadata/aristas_rematch.json                    2 linea(s)
+  [ARCHIVO   ] books/General/metadata/evc_candidatos.json                     5 linea(s)
+  [ARCHIVO   ] dataset/metadata/enriquecimientos_v13.json                     1 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/aristas_rematch.json            2 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/evc_candidatos.json             5 linea(s)
+  [ARCHIVO   ] dataset/metadata/ghost_report_v11.json                         1 linea(s)
+  [REGENERADO] dataset/metadata/master_graph.json                             12 linea(s)
+  [REGENERADO] docs/COSTURAS_INTERNAS.jsonl                                   1 linea(s)
+  [mencion   ] docs/FICHA_SUBFUSION_GRADIENTE.md                              10 linea(s)
+  [mencion   ] docs/INTRA_DOMINIO_INFORME.md                                  6 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_PARES.jsonl                                 4 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_VEREDICTOS.jsonl                            5 linea(s)
+  [VIVO      ] docs/PASO_NODO_CANDIDATOS.jsonl                                2 linea(s)
+  [mencion   ] docs/plan/01_FUENTES.md                                        1 linea(s)
+  [mencion   ] docs/plan/02_DESTEJIDOS.md                                     8 linea(s)
+  [mencion   ] docs/plan/08_VERIFICACION.md                                   1 linea(s)
+  [ARCHIVO   ] docs/plan/DIFERENCIA_CONTRA_COLA.jsonl                         2 linea(s)
+  [ARCHIVO   ] docs/plan/INVENTARIO.jsonl                                     2 linea(s)
+  [ARCHIVO   ] docs/plan/OPERACIONES.jsonl                                    2 linea(s)
+  [ARCHIVO   ] docs/plan/PASO_NODO_CALIBRADO.jsonl                            2 linea(s)
+  [mencion   ] docs/plan/RECOMPUTO_3388.md                                    5 linea(s)
+  [ARCHIVO   ] docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl                     1 linea(s)
+  [REGENERADO] engine/node_families.json                                      1 linea(s)
+  [REGENERADO] engine/preguntas_cache.json                                    6 linea(s)
+  [VIVO      ] engine/projects_local/97140470.json                            1 linea(s)
+  [mencion   ] examples/forense/87d3464a-65cc-4943-8ccf-7e90b55ff8b9.md       1 linea(s)
+  [mencion   ] examples/forense/vuelo_2026-07-15.md                           1 linea(s)
+  [ARCHIVO   ] packs/_core/poda/_voz_validacion.json                          1 linea(s)
+  [ARCHIVO   ] scripts/_actos_citas.json                                      2 linea(s)
+  [ARCHIVO   ] scripts/_actos_nuevos_335.jsonl                                1 linea(s)
+  [mencion   ] scripts/ids_existentes.txt                                     1 linea(s)
+  [mencion   ] scripts/loop/v41_actos/acto_344.py                             6 linea(s)
+  [mencion   ] scripts/loop/vuelta28_sellar_wei.py                            1 linea(s)
+  [mencion   ] scripts/loop/vuelta29_costuras.py                              1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0op2gcx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0ph4ucx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_1nlnfy4._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_master_graph_json_[json]_cjs_1eo-ozs._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_node_families_json_[json]_cjs_0v2y982._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_preguntas_cache_json_[json]_cjs_1r406eu._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_semantic_index_json_[json]_cjs_0i7l55t._.js 1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_00g9337._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_05-1q-3._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0_zdcws._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0cm7609._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_1cqkv8s._.js                       1 linea(s)
+  [REGENERADO] web/lib/assets/master_graph.json                               12 linea(s)
+  [REGENERADO] web/lib/assets/node_families.json                              1 linea(s)
+  [REGENERADO] web/lib/assets/preguntas_cache.json                            6 linea(s)
+  [REGENERADO] web/lib/assets/semantic_index.json                             1 linea(s)
+
+==============================================================================
+plan_acquire_activate: 81 apariciones
+==============================================================================
+  [ARCHIVO   ] books/General/metadata/evc_candidatos.json                     2 linea(s)
+  [ARCHIVO   ] dataset/metadata/expansion_v13/evc_candidatos.json             2 linea(s)
+  [REGENERADO] dataset/metadata/master_graph.json                             7 linea(s)
+  [REGENERADO] docs/COSTURAS_INTERNAS.jsonl                                   1 linea(s)
+  [mencion   ] docs/FICHA_SUBFUSION_GRADIENTE.md                              1 linea(s)
+  [mencion   ] docs/INTRA_DOMINIO_INFORME.md                                  4 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_PARES.jsonl                                 2 linea(s)
+  [ARCHIVO   ] docs/INTRA_DOMINIO_VEREDICTOS.jsonl                            4 linea(s)
+  [VIVO      ] docs/PASO_NODO_CANDIDATOS.jsonl                                1 linea(s)
+  [mencion   ] docs/plan/02_DESTEJIDOS.md                                     7 linea(s)
+  [ARCHIVO   ] docs/plan/COSECHA_RAZONES_D.jsonl                              1 linea(s)
+  [ARCHIVO   ] docs/plan/DIFERENCIA_CONTRA_COLA.jsonl                         1 linea(s)
+  [ARCHIVO   ] docs/plan/INVENTARIO.jsonl                                     2 linea(s)
+  [ARCHIVO   ] docs/plan/OPERACIONES.jsonl                                    1 linea(s)
+  [ARCHIVO   ] docs/plan/PASO_NODO_CALIBRADO.jsonl                            1 linea(s)
+  [mencion   ] docs/plan/RECOMPUTO_3388.md                                    1 linea(s)
+  [ARCHIVO   ] docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl                     1 linea(s)
+  [REGENERADO] engine/node_families.json                                      1 linea(s)
+  [REGENERADO] engine/preguntas_cache.json                                    2 linea(s)
+  [VIVO      ] engine/sessions/2947a1a5.json                                  1 linea(s)
+  [mencion   ] examples/salud_nodos_nunca_tocados.txt                         1 linea(s)
+  [ARCHIVO   ] packs/_core/poda/_voz_validacion.json                          1 linea(s)
+  [ARCHIVO   ] scripts/_actos_citas.json                                      2 linea(s)
+  [ARCHIVO   ] scripts/_actos_citas_narrativa.json                            1 linea(s)
+  [ARCHIVO   ] scripts/_actos_nuevos_335.jsonl                                1 linea(s)
+  [ARCHIVO   ] scripts/_actos_viejos.json                                     1 linea(s)
+  [mencion   ] scripts/ids_existentes.txt                                     1 linea(s)
+  [mencion   ] scripts/loop/v41_actos/acto_344.py                             7 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0op2gcx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_0ph4ucx._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_1nlnfy4._.js            1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_master_graph_json_[json]_cjs_1eo-ozs._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_node_families_json_[json]_cjs_0v2y982._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_preguntas_cache_json_[json]_cjs_1r406eu._.js 1 linea(s)
+  [mencion   ] web/.next/dev/server/chunks/lib_assets_semantic_index_json_[json]_cjs_0i7l55t._.js 1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_00g9337._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_05-1q-3._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0_zdcws._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_0cm7609._.js                       1 linea(s)
+  [mencion   ] web/.next/server/chunks/lib_1cqkv8s._.js                       1 linea(s)
+  [REGENERADO] web/lib/assets/master_graph.json                               7 linea(s)
+  [REGENERADO] web/lib/assets/node_families.json                              1 linea(s)
+  [REGENERADO] web/lib/assets/preguntas_cache.json                            2 linea(s)
+  [REGENERADO] web/lib/assets/semantic_index.json                             1 linea(s)
+
+==============================================================================
+EL REPARTO POR CLASE, que es lo que decide
+==============================================================================
+  REGENERADO  62 apariciones
+  ARCHIVO     61 apariciones
+  VIVO        5 apariciones
+  mencion     88 apariciones
+
+  REGENERADO: lo reescribe el ciclo. No se toca a mano.
+  ARCHIVO   : medicion con su corte. NO se reescribe: seria falsificarla.
+  VIVO      : el motor lo lee y lo mantiene una mano. ES EL QUE HAY QUE
+              REDIRIGIR, y es la clase de bridges_aprobados.json.
+
+==============================================================================
+LOS REGISTROS VIVOS QUE NOMBRAN A ALGUNO DE LOS TRES: 3
+==============================================================================
+  docs/PASO_NODO_CANDIDATOS.jsonl
+      plan_de_adquisicion_acquire:17  {"dominio": "core", "madre": "plan_de_adquisicion_acquire", "paso": 8, "pasos_madre": 12, "texto_paso": "Haz una lista de los 19 canales de tracción p
+      plan_de_adquisicion_acquire:405  {"dominio": "core", "madre": "plan_de_adquisicion_acquire", "paso": 8, "pasos_madre": 12, "texto_paso": "Haz una lista de los 19 canales de tracción p
+      plan_acquire_activate:412  {"dominio": "core", "madre": "plan_acquire_activate", "paso": 1, "pasos_madre": 7, "texto_paso": "Define a qué segmento de clientes le vas a hablar, s
+  engine/projects_local/97140470.json
+      plan_de_adquisicion_acquire:226  "node_id": "plan_de_adquisicion_acquire",
+  engine/sessions/2947a1a5.json
+      plan_acquire_activate:10  "plan_acquire_activate"
+
+LA COMPROBACION DIRIGIDA sobre la clase que fallo en la vuelta 39:
+  packs/compras/metadata/bridges_aprobados.json        nombra a los tres: 0 veces
+  packs/entrega/metadata/bridges_aprobados.json        nombra a los tres: 0 veces
+  packs/environmental/metadata/bridges_aprobados.json  nombra a los tres: 0 veces
+  packs/exportacion/metadata/bridges_aprobados.json    nombra a los tres: 0 veces
+  packs/franquicias/metadata/bridges_aprobados.json    nombra a los tres: 0 veces
+  packs/health_safety/metadata/bridges_aprobados.json  nombra a los tres: 0 veces
+  packs/quality/metadata/bridges_aprobados.json        nombra a los tres: 0 veces
+  packs/risk_management/metadata/bridges_aprobados.json nombra a los tres: 0 veces
+  packs/seguridad_digital/metadata/bridges_aprobados.json nombra a los tres: 0 veces
+
+Si los VIVOS son CERO, la fusion no tiene ningun registro fuera del
+grafo que redirigir, y el re-anclaje posterior tiene que salir en
+blanco. Eso NO exime de correrlo: el acta de la vuelta 39 lo adjudico
+como practica para TODA fusion futura, y una guarda que solo se corre
+cuando se sospecha no es una guarda.
