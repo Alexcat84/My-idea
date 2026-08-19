@@ -3050,3 +3050,108 @@ El par **392** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 **Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026**, y **el reparto escrito de la tabla sellada queda cumplido tal como esta**, que es lo que el encargo de esta vuelta mandaba.
 
 **EL ACTO 392 QUEDA CERRADO ENTERO: sus TRES commits pusheados.**
+
+## `OP-D-06`, ACTO 7 DE NUEVE (puesto 711): **`future_scenarios_planning` ABSORBE A `escenarios_futuros`** (19 ago 2026, vuelta 44)
+
+### EL DESTEJIDO DEL ACTO: **YA ESTABA HECHO, y la razon esta RANCIA EN DOS DETALLES, no en uno**
+
+`scripts/loop/vuelta41_lectura_acto.py --puesto 711`, sellado en `docs/loop/SALIDA_V44_ACTO711_LECTURA.txt`, bloque (d). **La razon del archivo, leida entera hoy**, dice de `future_scenarios_planning`:
+
+> *NOTA DE COSTURA, con el refinamiento del puesto 673: `future_scenarios_planning` es costura CONFIRMADA en la ficha, trece pasos, y su juntura esta en el paso 6, donde arranca un bloque entero de IA. EL SOLAPE DE ESTE PAR NO CRUZA LA JUNTURA, cae completo en sus pasos 1 a 5, asi que el veredicto se puede emitir hoy.*
+
+**SE DESTEJIO, y lo desteji `OP-F-02`, el injerto de Mollick.** `docs/plan/01_FUENTES.md` linea **200** publica la frontera leida (**1 a 5 / 6 a 13**) y advierte que el apendice **entra DOS VECES** (6 a 9 y 10 a 13); la linea **292** publica el destino, que **no fue un miembro de familia sino un NODO PROPIO nuevo**, `escenarios_de_evolucion_de_la_ia` de **6 pasos**, y la **244** su motivo (*ninguno de los diez del racimo proyecta lo que la maquina hara*).
+
+**LA MEDICION DE HOY LO CONFIRMA POR PARTIDA DOBLE:**
+
+| lo medido | el instrumento | como salio |
+|---|---|---|
+| **el nodo hoy** | `vuelta41_lectura_acto.py --puesto 711`, bloque (c) | `future_scenarios_planning` tiene **CINCO** pasos, que son **exactamente los cinco primeros** de los trece |
+| **el commit que lo corto** | `git log --follow` mas `git show <commit>:<fichero>` | **`2d96e3d3`**, *OP-F-02 EJECUTADA ENTERA*: **13 pasos antes, 5 despues** |
+
+`OP-F-02` figura **HECHA en su nota 2869 SI** en la apertura de esta vuelta. **Fuente primero, satisfecha POR PRECEDENCIA.**
+
+> **Y HAY UN SEGUNDO DETALLE RANCIO EN LA MISMA RAZON, que se declara con la cita delante porque CAMBIA EL REPARTO.** La razon describe a `future_scenarios_planning` como el que *establece senales de alerta temprana*. **ESA PIEZA YA NO ESTA EN EL:** se fue con el bloque de IA y **hoy vive dentro de `escenarios_de_evolucion_de_la_ia`**, leido hoy del grafo (*Establecer senales de alerta temprana (regulatorias, tecnologicas, de mercado) que indiquen hacia que escenario se esta moviendo la realidad*). **Dentro de este par, la UNICA linea de vigilancia que queda viva es la del donante**, y por eso **viaja con grupo propio en vez de darse por cubierta**. Si nadie hubiera medido esto, la fusion habria podido plegarla como redundante y el nodo se habria quedado sin ojos.
+
+**LO QUE EL INSTRUMENTO DE COSTURAS CITA HOY, dicho en vez de callarse:** sobre la cola de **1.494**, `future_scenarios_planning` esta **FUERA** y `escenarios_futuros` esta **DENTRO**, con **bloque 51,4** y **corte tras 5** (la pareja, **73,6** sobre sus pasos 1 y 2, **no dispara**: el umbral de pareja es 80). **LA CITA ES DEL DONANTE Y NO DEL SUPERVIVIENTE.** Leida con el texto delante, **tampoco alli hay costura**: los pasos 1 a 5 del donante construyen los escenarios y deciden con ellos, y los 6 y 7 vigilan y generan ideas bajo cada uno. **CONTINUAN en vez de volver a contar.** La cita queda **registrada en la cola y no despachada**.
+
+### `P.5`: **LA FAMILIA MAS LIMPIA DE TODA LA OPERACION**
+
+El par **711** es **clase A** y su razon **NO nombra ganador**: la vara del verbo de `9.3.1` da **NO, es POR ELEGIR**. Y el subconjunto sale **CERRADO SIN NECESIDAD DE GUARDA**: **NINGUN par del archivo mete un tercero** con ninguno de los dos.
+
+> **CERO terceros, contra los OCHO del 392, los CUATRO del 344 y los DOS del 361.** Es el unico acto de los siete abiertos hasta hoy en el que **ni siquiera hace falta la guarda de transitividad sobre las A** para decir que el acto es de dos: no hay nada que rechazar. Y por lo mismo, **CERO pares vuelven a la cola de relectura post fusion**, porque no hay ningun par que pudiera volver. **El marcador de clases NO se movera por este acto.**
+
+**LA FUENTE, DICHA COMO SE MIDE Y NO COMO CONVIENE, y esta vez la etiqueta NO MIENTE:** el instrumento imprime **FUENTE MIXTA (2 fuentes distintas medidas)** y **son DOS LIBROS DE VERDAD**: *Business Model Generation (Osterwalder)* contra *Winning at New Products - Robert G. Cooper*. **ES EL PRIMER ACTO DE `OP-D-06` EN EL QUE LA FUENTE MIXTA ES REAL.** Los cinco anteriores (331, 341, 344, 361 y 392) salieron mixtos **por diferencias de forma dentro del mismo libro**, y cada vez se dejo escrito que eran forma. **Aqui no.**
+
+> **EL PRECEDENTE ESTA MEDIDO Y NO SE INVENTA NADA:** `OP-D-04` fundio a traves de libros distintos **en LOS DOS SENTIDOS**, y su **TABLA 1** de cierre lo publica nodo por nodo: `reglas_brainstorming` (Osterwalder) absorbio a `brainstorming_divergente` y `brainstorming_efectivo` (los dos de Tim Brown), y `pensamiento_convergente_divergente` (Tim Brown) absorbio a `design_attitude_vs_decision_attitude` (Osterwalder). **En los dos casos el campo `fuente` del superviviente NO se toco**, que es ademas lo que la **guarda 1** del ejecutor comprueba contra el plan.
+>
+> **Y SE DECLARA LO QUE NINGUNA REGLA DICE, en vez de darlo por legislado** (`PENDIENTE DE DOCTRINA`): **`P.19` punto 2** manda que el nodo quede **MULTIFUENTE LEGITIMO con la procedencia declarada por bloque**, pero **`P.19` gobierna la REPETICION INTERNA de un nodo, no la fusion de dos nodos de dos libros**, y **ninguna regla escrita dice hoy que hace el campo `fuente` en ese caso**. **Lo mejor sostenido, y es lo que se hace:** el campo del superviviente **queda intacto** por el precedente de `OP-D-04`, y **la procedencia por bloque queda declarada en el MAPA DE MOVIMIENTO de este acto**, que dice de cual de los dos sale cada pieza del resultado. **Si el fundador quiere legislarlo, es un renglon.**
+
+### `P.8` EN ORDEN: **manda el CONTENIDO, y aqui el cableado es el margen mas ancho de la operacion**
+
+**EL CONTENIDO, leido primero:**
+
+1. **UNO NOMBRA LA TECNICA Y EL OTRO NOMBRA UNO DE SUS PRODUCTOS.** *Planificacion de Escenarios Futuros (Scenario Planning)* es el nombre del metodo entero; *Desarrollo de Escenarios Futuros **ALTERNATIVOS*** nombra el subconjunto que se saca de el, **y el propio donante lo confirma en su resumen** al distinguir el *futuro oficial* de los alternativos. **Es el ejemplar escrito de `P.8` dicho con otras palabras: la cabeza de una serie no se llama como uno de sus pasos.** Y la vara **aguanta la prueba inversa** que el acta de la vuelta 43 adjudico en su **D3**: el procedimiento del resultado **titula, narra, corre un taller y amarra al Canvas**, y **nada de eso es *desarrollar alternativos***, asi que el nombre del donante **se le quedaria corto al nodo fundido** mientras que el del superviviente **le calza entero**.
+2. **EL MOTOR CONSTRUCTIVO ES DEL SUPERVIVIENTE**, y es la pieza que ninguno de los dos podria reponer del otro lado. **La matriz de impulsores cruzados es la unica linea de los dos nodos que dice COMO se generan los escenarios de forma sistematica.** El donante dice **cuales no pueden faltar** (el mejor y el peor) pero **no da mecanismo para los de en medio**, y un procedimiento que solo sabe describir extremos no puede ser la cabeza de uno que sabe generarlos.
+3. **EL AMARRE AL ARTEFACTO DEL METODO ES DEL SUPERVIVIENTE**, y es el mismo argumento que decidio el acto **361**. Su quinto paso formula preguntas por bloque del Canvas **nombrando los siete bloques** (KP, KA, VP, CR, CS, C$, R$). Este catalogo tiene el **Business Model Canvas** como artefacto central y **este es el unico de los dos que cierra contra el**. **La razon del archivo lo nombra ademas como LO PROPIO de este lado**: *el amarre al lienzo bloque por bloque*.
+4. **LA CITA DEL INSTRUMENTO CAE SOBRE EL DONANTE Y NO SOBRE EL SUPERVIVIENTE**, y se dice aunque el instrumento **cite y no juzgue**. La lectura textual dice que **tampoco alli hay costura**, asi que **esto NO es un argumento de calidad del texto**: se registra porque elegir como base el nodo que el instrumento cita **obligaria a explicar la cita dos veces**, y elegir el que no cita no.
+5. **PIEZAS PROPIAS DEL DONANTE QUE NADIE MAS TIENE** y que por eso viajan enteras: **el mejor y el peor caso** explicitos del entorno externo a cinco o diez anos, **las decisiones primarias** que la empresa enfrenta, **la probabilidad pequena** asignada a los alternativos para reconsiderar la inversion, **las senales y marcadores tempranos** (la unica linea de vigilancia que queda viva en el par), la lluvia de ideas y las tecnicas de creatividad dentro del taller, **su condicion del futuro unico esperado**, y **el ejemplar de AT&T**.
+
+**Superviviente: `future_scenarios_planning`.**
+
+**EL CABLEADO, citado DESPUES:** grado por `P.1` de **10** contra **3**.
+
+> **ES EL MARGEN MAS ANCHO DE TODA LA OPERACION, y eso obliga a decir con MAS cuidado que no decidio.** La **segunda aplicacion escrita de `P.8`** es exactamente el caso contrario (**diez contra cinco Y AUN ASI pierde el de diez**), asi que la regla ya tiene demostrado que un margen ancho no compra nada. Aqui va **a favor** del elegido por contenido, y por eso **no suma**: la eleccion la sostienen **el nombre, el motor de la matriz y el amarre al Canvas**, y **los tres se sostendrian igual con el cableado al reves**. **SE DECLARA ADEMAS LA LIMITACION QUE LA VUELTA 43 YA SE DECLARO: esta lectura NO es ciega respecto del cableado, y VA MARCADA COMO DISCUTIBLE.**
+
+> **Y EL COSTE DE LA ELECCION ESTA MEDIDO: CERO aristas.** Los dos nodos tienen **CERO aristas propias sin reciproco**.
+
+### EL MAPA DE MOVIMIENTO, celda a celda
+
+**Prefijos:** `F` = `future_scenarios_planning` (superviviente), `E` = `escenarios_futuros` (absorbido).
+
+**Las dos tablas se IMPRIMEN y no se teclean**, generadas del plan sellado con `python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V41_ACTO711.json` y `... --campo grupos_condiciones`:
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | F1, E3 | LA MISMA IDENTIFICACION CON SU NOMBRE Y SU EJEMPLO. El superviviente manda identificar dos o mas drivers de incertidumbre clave y da los ejemplos (tecnologia, regulacion); el donante manda identificar las dimensiones relevantes que caracterizan a los escenarios. SON LA MISMA ACCION dicha con dos vocabularios, y se funden porque separarlas dejaria dos pasos que mandan hacer lo mismo con distinta palabra, que es exactamente lo que esta fusion existe para quitar. Se toma el vocabulario de los dos porque 'dimension' dice lo que el eje ES y 'driver de incertidumbre' dice por que se elige. |
+| **2** | F2, E1, E2 | EL MOTOR QUE GENERA LOS ESCENARIOS Y LOS DOS QUE NO PUEDEN FALTAR. El superviviente da el mecanismo (cruzar los impulsores en una matriz para sacar de dos a cuatro escenarios) y el donante da el contenido obligatorio de esa lista (el mejor y el peor del entorno externo, en detalle y a cinco o diez anos). Las tres piezas producen UNA sola lista de escenarios y por eso van juntas: el mecanismo sin el minimo deja una matriz que puede salir toda de casos medios, y el minimo sin el mecanismo deja dos extremos sin nada en medio. EL MEJOR Y EL PEOR SON UNA DE LAS DOS PIEZAS QUE LA RAZON DEL ARCHIVO NOMBRA COMO PROPIAS DE COOPER, y viajan con esas palabras. |
+| **3** | F3 | PIEZA PROPIA DEL SUPERVIVIENTE, sin equivalente en el donante, y va con grupo propio porque es la que convierte una casilla de la matriz en algo que un equipo puede discutir. El donante describe el mejor y el peor pero nunca manda TITULAR ni NARRAR, y un escenario sin nombre ni historia no se puede citar en la reunion siguiente. |
+| **4** | F4, F5, E7 | EL MISMO TALLER CON SU HERRAMIENTA Y SU TECNICA. Las tres piezas son el mismo momento: el superviviente pone el taller y las preguntas por bloque del Canvas, y el donante pone la tecnica con la que se generan las ideas dentro de el. EL AMARRE AL LIENZO BLOQUE POR BLOQUE ES LA OTRA PIEZA QUE LA RAZON DEL ARCHIVO NOMBRA COMO PROPIA DEL SUPERVIVIENTE, y se queda dentro del taller en vez de en un paso aparte porque las preguntas del Canvas son el guion del taller y no un ejercicio posterior: separarlas dejaria un taller sin materiales y unas preguntas sin sala. |
+| **5** | E4, E5 | LAS DOS PIEZAS DEL DONANTE QUE CONVIERTEN EL EJERCICIO EN UNA DECISION, y van juntas porque la segunda opera sobre la primera: primero se nombra que se esta decidiendo y despues se pesa esa decision contra los escenarios alternativos. LA PROBABILIDAD ASIGNADA ES LA TERCERA PIEZA QUE LA RAZON DEL ARCHIVO NOMBRA COMO PROPIA DE COOPER. El superviviente no tiene ninguna de las dos: llega hasta el modelo de negocio por escenario y ahi se para, sin decir que se hace con ellos. |
+| **6** | E6 | PIEZA PROPIA DEL DONANTE Y LA MAS CARA DE PERDER DE TODO EL ACTO, por una razon MEDIDA y no supuesta: la razon del archivo se la atribuia tambien al superviviente, y ya no la tiene. Se fue con el bloque de IA que OP-F-02 desteji, y hoy vive dentro de escenarios_de_evolucion_de_la_ia, leido hoy del grafo. DENTRO DE ESTE PAR ES LA UNICA LINEA DE VIGILANCIA QUE QUEDA VIVA: sin ella el procedimiento construye escenarios, decide con ellos y nunca se entera de cual esta pasando. Va la ultima a proposito, porque es lo que sigue vivo despues de cerrar el documento. |
+
+| condicion del resultado | de que origenes sale | el motivo que la modifica |
+|---:|---|---|
+| **1** | FC1 | EL DISPARADOR DEL ENTORNO, propio del superviviente: se enciende por lo que LA INDUSTRIA es, sin importar como este mirando la empresa. Se queda solo porque es el unico de los cuatro origenes que no habla de la casa. |
+| **2** | EC1 | EL DISPARADOR DE LA CASA, propio del donante, y NO se funde con el anterior aunque los dos hablen de futuro. Es exactamente el contrario del de arriba: aquel se enciende porque el mundo es incierto y este porque LA EMPRESA se comporta como si no lo fuera. Es ademas la puerta del ejemplar que el resumen del donante trae, AT&T rechazando el control de internet por no considerar alternativas a su tecnologia dominante, y disolverla dentro de la general dejaria ese caso sin la puerta que lo explica. |
+| **3** | FC2, EC2 | LA MISMA ANTICIPACION CON SUS DOS OBJETOS, y fundir aqui NO borra una senal: le anade la que faltaba. Los dos origenes dicen ANTICIPAR y se separan solo en QUE se anticipa: el superviviente la adaptacion del modelo de negocio y el donante las decisiones de inversion en tecnologia o negocio. Es la misma vara del acto 344, donde el mismo desconocimiento con tres terrenos distintos se fundio en una sola condicion: se funde lo que es el mismo momento y se separa lo que no. |
+
+**LA TABLA DE PERDIDAS DE `P.13`, derivada de los grupos y no tecleada: 16 de 16 piezas VIAJAN y CERO se pierden** (`docs/loop/SALIDA_V44_ACTO711_PLAN.txt`). **Este acto NO tiene reparto escrito**, asi que rige la regla adjudicada el 11 ago 2026 y **con cero perdidas no hay nada que repartir**. **Pero la razon del archivo SI dejo escrito que es lo propio de cada lado**, y se cumple: *lo propio de Cooper son el mejor y el peor caso explicitos y la probabilidad asignada; lo propio del otro es el amarre al lienzo bloque por bloque*. **Las tres piezas viajan, y `peor`, `probabilidad` y `Canvas` van en `preservar_literal` para que una guarda lo compruebe en vez de confiarlo.**
+
+### LA SIMULACION, EN VERDE Y SIN `P.16`: **las DOCE guardas OK y CERO escrituras**
+
+`python scripts/loop/vuelta39_fundir.py --plan docs/loop/PLAN_V41_ACTO711.json --simular`, sellado en `docs/loop/SALIDA_V44_ACTO711_SIM.txt`, **exit 0**:
+
+| guarda | como salio |
+|---|---|
+| **1**, fuente y vida de los tres | **OK**, con las **dos fuentes reales** impresas y ninguna escondida |
+| **2**, conteos | **OK** los dos: (5, 2) y (7, 2) |
+| **3**, VERBATIM contra `dataset/nodos` | **16 de 16 calzan, 0 sobrantes** |
+| **4**, cobertura de origenes | **12 de 12** en pasos y **4 de 4** en condiciones, cero repetidos, faltantes o sobrantes |
+| **5**, finales derivados de los grupos | **OK** |
+| **6**, `preservar_literal` | **10 de 10**, con `AT&T` en el resumen y `peor`, `probabilidad` y `Canvas` (las tres que la razon manda salvar) en pasos, entregable y resumen |
+| **7**, `rastros` | **6 de 6** |
+| **8** y **8b**, redirecciones | **3 esperadas OK**, **0 deprecados que nombran OK** |
+| **9**, `P.16` duplicadas fabricadas | **0 esperadas OK** |
+| **10**, auto-arista tras resolver | **OK (0)** |
+| **11**, duplicada tras resolver | **OK (0)** |
+| **12**, titulo y etiqueta sin tocar | **OK** |
+
+> **`P.16` NO DISPARA, y esta vez ni siquiera de refilon:** **cero** duplicadas fabricadas y **cero** auto-aristas. **El superviviente y el absorbido no son vecinos y no comparten ni un vecino** que quedara con el destino repetido. Es el acto mas limpio de la operacion tambien por este lado.
+
+**LA SIMETRIZACION ESPERADA, medida y no supuesta: TRES aristas**, ni una mas ni una menos, y la guarda exacta se corre aparte sobre el log del ciclo.
+
+**EL CASO POSITIVO ANTES, que TIENE que caer:** `docs/loop/SALIDA_V44_ACTO711_CASO_ANTES.txt`, **exit 1**, **12 PASAN y 21 CAEN**, conservacion **2 vivos y 4 muertos**.
+
+**EL VERIFICADOR DE MAPAS con la vara 2**, sobre los **TRECE** planes sellados que hoy tienen tabla publicada: `docs/loop/SALIDA_V44_VERIFICADOR_MAPAS_711.txt`.
+
+**ESTE PRIMER COMMIT DEJA EL GRAFO INTACTO: cero nodos tocados.**

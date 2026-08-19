@@ -1,0 +1,44 @@
+PLAN SELLADO: docs/loop/PLAN_V41_ACTO711.json
+  acto          : puesto 711 de OP-D-06
+  superviviente : future_scenarios_planning
+  absorbidos    : escenarios_futuros
+  fuente del superviviente: Business Model Generation (Osterwalder)
+  ACTO DE FUENTE MIXTA (2 fuente(s) distinta(s) medida(s)):
+      future_scenarios_planning                    superviviente  Business Model Generation (Osterwalder)
+      escenarios_futuros                           absorbido      Winning at New Products - Robert G. Cooper
+  origenes generados VERBATIM del fichero: 16
+  pasos finales : 6 (estandar 3 a 6: DENTRO)
+  condiciones finales: 3
+  redirecciones esperadas: 3
+      evaluacion_megatendencias                      nodos_siguientes   escenarios_futuros
+      iota_analysis                                  nodos_previos      escenarios_futuros
+      vision_periferica                              nodos_siguientes   escenarios_futuros
+  deprecados que nombran y no se tocan: 0
+  duplicadas que la fusion fabrica: 0
+  simetrizacion esperada: 3 aristas
+      future_scenarios_planning.nodos_previos      += evaluacion_megatendencias
+      future_scenarios_planning.nodos_previos      += vision_periferica
+      future_scenarios_planning.nodos_siguientes   += iota_analysis
+
+  LA TABLA DE PERDIDAS, DERIVADA de los grupos y no tecleada:
+      E1    escenarios_futuros                       VIAJA      paso 2 del resultado
+      E2    escenarios_futuros                       VIAJA      paso 2 del resultado
+      E3    escenarios_futuros                       VIAJA      paso 1 del resultado
+      E4    escenarios_futuros                       VIAJA      paso 5 del resultado
+      E5    escenarios_futuros                       VIAJA      paso 5 del resultado
+      E6    escenarios_futuros                       VIAJA      paso 6 del resultado
+      E7    escenarios_futuros                       VIAJA      paso 4 del resultado
+      EC1   escenarios_futuros                       VIAJA      condicion 2 del resultado
+      EC2   escenarios_futuros                       VIAJA      condicion 3 del resultado
+      F1    future_scenarios_planning                VIAJA      paso 1 del resultado
+      F2    future_scenarios_planning                VIAJA      paso 2 del resultado
+      F3    future_scenarios_planning                VIAJA      paso 3 del resultado
+      F4    future_scenarios_planning                VIAJA      paso 4 del resultado
+      F5    future_scenarios_planning                VIAJA      paso 4 del resultado
+      FC1   future_scenarios_planning                VIAJA      condicion 1 del resultado
+      FC2   future_scenarios_planning                VIAJA      condicion 3 del resultado
+      VIAJAN 16 de 16. SE PIERDEN 0.
+      LECTURA: la regla de reparto de OP-D-06 manda cada perdida al
+      bloque del que proviene, y la que no tenga bloque al
+      superviviente. Con CERO perdidas no hay nada que repartir, y eso
+      es lo que hay que comprobar al cierre, no suponerlo.

@@ -1,0 +1,312 @@
+# -*- coding: utf-8 -*-
+"""ACTO 711 de OP-D-06: future_scenarios_planning con escenarios_futuros.
+
+LO UNICO TECLEADO: los grupos, sus motivos y la lectura. La medicion la hace
+scripts/loop/vuelta41_plan_acto.py contra el grafo.
+"""
+
+SUP = "future_scenarios_planning"
+ABS = ["escenarios_futuros"]
+PREF = {"F": SUP, "E": ABS[0]}
+
+OPERACION = ("OP-D-06, ACTO 7 DE NUEVE (puesto 711): future_scenarios_planning "
+             "absorbe a escenarios_futuros")
+
+ESTADO = (
+    "SELLADO en la vuelta 44, 19 ago 2026, ANTES de ejecutar. EL DESTEJIDO QUE LA "
+    "RAZON PEDIA YA SE HIZO, y no aqui: lo hizo OP-F-02, el injerto de Mollick. La "
+    "razon del archivo dice que future_scenarios_planning es COSTURA CONFIRMADA EN "
+    "LA FICHA con TRECE pasos y su juntura en el 6, donde arranca un bloque entero "
+    "de IA, y esta RANCIA EN ESE DETALLE. docs/plan/01_FUENTES.md linea 200 publica "
+    "la frontera leida (1 a 5 contra 6 a 13) y advierte que el apendice ENTRA DOS "
+    "VECES (6 a 9 y 10 a 13); la linea 292 publica el destino, un NODO PROPIO nuevo "
+    "llamado escenarios_de_evolucion_de_la_ia de 6 pasos, y la 244 su motivo. LA "
+    "MEDICION DE HOY LO CONFIRMA POR PARTIDA DOBLE: future_scenarios_planning tiene "
+    "CINCO pasos, que son exactamente los cinco primeros, y el commit que lo corto "
+    "es 2d96e3d3 (OP-F-02 EJECUTADA ENTERA), medido con git show sobre el fichero, "
+    "13 pasos antes y 5 despues. Fuente primero satisfecha POR PRECEDENCIA, con "
+    "OP-F-02 HECHA en su nota 2869 SI segun la apertura de esta vuelta. Y HAY UN "
+    "SEGUNDO DETALLE RANCIO DE LA MISMA RAZON, que se declara con la cita delante "
+    "porque cambia el reparto: la razon atribuye a future_scenarios_planning el "
+    "'establecer senales de alerta temprana', y ESA PIEZA YA NO ESTA EN EL. Se fue "
+    "con el bloque de IA y hoy es el paso 5 de escenarios_de_evolucion_de_la_ia, "
+    "leido hoy del grafo. Dentro de este par, la UNICA linea de senales tempranas "
+    "que queda viva es el paso 6 del donante, asi que viaja con grupo propio en vez "
+    "de darse por cubierta. LO QUE EL INSTRUMENTO DE COSTURAS CITA HOY SE DICE EN "
+    "VEZ DE CALLARSE: future_scenarios_planning esta FUERA de la cola de 1.494 y "
+    "escenarios_futuros esta DENTRO, con bloque 51,4 y corte tras 5 (la pareja, "
+    "73,6 sobre los pasos 1 y 2, NO dispara: el umbral de pareja es 80). LA CITA ES "
+    "DEL DONANTE Y NO DEL SUPERVIVIENTE, y la lectura textual con el texto delante "
+    "dice que tampoco alli hay costura: los pasos 1 a 5 construyen los escenarios y "
+    "deciden con ellos, y los 6 y 7 vigilan y generan ideas bajo cada uno. "
+    "CONTINUAN en vez de volver a contar. La cita queda REGISTRADA en la cola y no "
+    "despachada, y el auditor la relee.")
+
+REGLA = (
+    "OP-D-06 de docs/plan/02_DESTEJIDOS.md, LOS NUEVE ACTOS DE DOS, acto del "
+    "puesto 711 de su tabla sellada. Este acto NO tiene reparto escrito en esa "
+    "tabla (solo lo tienen el 392 y el 341), asi que se resuelve con la regla "
+    "adjudicada el 11 ago 2026: cada perdida al bloque del que proviene, y la que "
+    "no tenga bloque al superviviente. PERO LA RAZON DEL ARCHIVO SI DEJO ESCRITO "
+    "QUE ES LO PROPIO DE CADA UNO, y se cumple: 'Lo propio de Cooper son el mejor y "
+    "el peor caso explicitos y la probabilidad asignada; lo propio del otro es el "
+    "amarre al lienzo bloque por bloque'. Las tres piezas nombradas viajan al "
+    "resultado, y 'peor', 'probabilidad' y 'Canvas' van en preservar_literal para "
+    "que una guarda lo compruebe en vez de confiarlo.")
+
+MOTIVO = (
+    "El acto se leyo ENTERO por P.5 y es LA FAMILIA MAS LIMPIA DE LA OPERACION: "
+    "NINGUN par del archivo mete un tercero con ninguno de los dos. Cero terceros, "
+    "asi que ni siquiera hace falta la guarda de transitividad sobre las A para "
+    "decir que el acto es de dos, y CERO pares vuelven a la cola de relectura post "
+    "fusion porque no hay ningun par que pudiera volver. El marcador no se mueve. "
+    "LA FUENTE, DICHA COMO SE MIDE Y NO COMO CONVIENE, y esta vez la etiqueta NO "
+    "MIENTE: el instrumento imprimira FUENTE MIXTA y son DOS LIBROS DE VERDAD, "
+    "'Business Model Generation (Osterwalder)' contra 'Winning at New Products - "
+    "Robert G. Cooper'. ES EL PRIMER ACTO DE OP-D-06 EN EL QUE LA FUENTE MIXTA ES "
+    "REAL: los cinco anteriores (331, 341, 344, 361 y 392) salieron mixtos por "
+    "diferencias de forma dentro del mismo libro, y se dejo escrito cada vez que "
+    "eran forma. Aqui no. EL PRECEDENTE MEDIDO EXISTE Y NO SE INVENTA NADA: "
+    "OP-D-04 fundio a traves de libros distintos en LOS DOS SENTIDOS "
+    "(reglas_brainstorming, de Osterwalder, absorbio dos nodos de Tim Brown; "
+    "pensamiento_convergente_divergente, de Tim Brown, absorbio uno de "
+    "Osterwalder), y su TABLA 1 de cierre lo publica nodo por nodo con la fuente de "
+    "cada uno. En los dos casos el campo fuente del superviviente NO se toco, que "
+    "es ademas lo que la guarda 1 del ejecutor comprueba contra el plan. AQUI SE "
+    "HACE IGUAL, y va como PENDIENTE DE DOCTRINA en vez de darse por legislado: P.19 "
+    "punto 2 manda MULTIFUENTE LEGITIMO con la procedencia declarada por bloque, "
+    "pero P.19 gobierna la REPETICION INTERNA de un nodo, no la fusion de dos "
+    "nodos de dos libros, y ninguna regla escrita dice hoy que hace el campo fuente "
+    "en ese caso. Lo mejor sostenido: se deja el campo del superviviente intacto "
+    "por el precedente de OP-D-04, y LA PROCEDENCIA POR BLOQUE QUEDA DECLARADA EN "
+    "EL MAPA DE MOVIMIENTO DE ESTE ACTO, que dice de cual de los dos sale cada "
+    "pieza del resultado.")
+
+# ---------------------------------------------------------------------------
+# LOS GRUPOS. Doce origenes de paso en SEIS pasos, dentro del estandar de 3 a 6,
+# y cuatro origenes de condicion en TRES condiciones.
+# ---------------------------------------------------------------------------
+GRUPOS_PASOS = [
+    (["F1", "E3"],
+     "Identifica dos o más impulsores de incertidumbre clave que puedan "
+     "transformar tu industria (por ejemplo la tecnología o la regulación): son "
+     "las dimensiones que van a caracterizar a tus escenarios",
+     "LA MISMA IDENTIFICACION CON SU NOMBRE Y SU EJEMPLO. El superviviente manda "
+     "identificar dos o mas drivers de incertidumbre clave y da los ejemplos "
+     "(tecnologia, regulacion); el donante manda identificar las dimensiones "
+     "relevantes que caracterizan a los escenarios. SON LA MISMA ACCION dicha con "
+     "dos vocabularios, y se funden porque separarlas dejaria dos pasos que mandan "
+     "hacer lo mismo con distinta palabra, que es exactamente lo que esta fusion "
+     "existe para quitar. Se toma el vocabulario de los dos porque 'dimension' "
+     "dice lo que el eje ES y 'driver de incertidumbre' dice por que se elige."),
+    (["F2", "E1", "E2"],
+     "Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios "
+     "distintos, y asegúrate de que entre ellos estén descritos en detalle, a 5 a "
+     "10 años, el mejor y el peor escenario posible para el entorno externo de tu "
+     "empresa",
+     "EL MOTOR QUE GENERA LOS ESCENARIOS Y LOS DOS QUE NO PUEDEN FALTAR. El "
+     "superviviente da el mecanismo (cruzar los impulsores en una matriz para "
+     "sacar de dos a cuatro escenarios) y el donante da el contenido obligatorio "
+     "de esa lista (el mejor y el peor del entorno externo, en detalle y a cinco o "
+     "diez anos). Las tres piezas producen UNA sola lista de escenarios y por eso "
+     "van juntas: el mecanismo sin el minimo deja una matriz que puede salir toda "
+     "de casos medios, y el minimo sin el mecanismo deja dos extremos sin nada en "
+     "medio. EL MEJOR Y EL PEOR SON UNA DE LAS DOS PIEZAS QUE LA RAZON DEL ARCHIVO "
+     "NOMBRA COMO PROPIAS DE COOPER, y viajan con esas palabras."),
+    (["F3"],
+     "Titula y narra cada escenario con una historia breve que describa sus "
+     "elementos principales",
+     "PIEZA PROPIA DEL SUPERVIVIENTE, sin equivalente en el donante, y va con "
+     "grupo propio porque es la que convierte una casilla de la matriz en algo que "
+     "un equipo puede discutir. El donante describe el mejor y el peor pero nunca "
+     "manda TITULAR ni NARRAR, y un escenario sin nombre ni historia no se puede "
+     "citar en la reunion siguiente."),
+    (["F4", "F5", "E7"],
+     "Organiza un taller donde los participantes desarrollen un modelo de negocio "
+     "apropiado para cada escenario, usando lluvia de ideas y técnicas de "
+     "creatividad, y formula preguntas específicas por bloque del Canvas (KP, KA, "
+     "VP, CR, CS, C$, R$) para cada uno",
+     "EL MISMO TALLER CON SU HERRAMIENTA Y SU TECNICA. Las tres piezas son el "
+     "mismo momento: el superviviente pone el taller y las preguntas por bloque "
+     "del Canvas, y el donante pone la tecnica con la que se generan las ideas "
+     "dentro de el. EL AMARRE AL LIENZO BLOQUE POR BLOQUE ES LA OTRA PIEZA QUE LA "
+     "RAZON DEL ARCHIVO NOMBRA COMO PROPIA DEL SUPERVIVIENTE, y se queda dentro "
+     "del taller en vez de en un paso aparte porque las preguntas del Canvas son "
+     "el guion del taller y no un ejercicio posterior: separarlas dejaria un taller "
+     "sin materiales y unas preguntas sin sala."),
+    (["E4", "E5"],
+     "Identifica las decisiones primarias que enfrenta tu empresa (nuevos "
+     "negocios, tecnologías, productos), asigna una probabilidad pequeña a los "
+     "escenarios alternativos y reconsidera con ella tus decisiones de inversión",
+     "LAS DOS PIEZAS DEL DONANTE QUE CONVIERTEN EL EJERCICIO EN UNA DECISION, y "
+     "van juntas porque la segunda opera sobre la primera: primero se nombra que "
+     "se esta decidiendo y despues se pesa esa decision contra los escenarios "
+     "alternativos. LA PROBABILIDAD ASIGNADA ES LA TERCERA PIEZA QUE LA RAZON DEL "
+     "ARCHIVO NOMBRA COMO PROPIA DE COOPER. El superviviente no tiene ninguna de "
+     "las dos: llega hasta el modelo de negocio por escenario y ahi se para, sin "
+     "decir que se hace con ellos."),
+    (["E6"],
+     "Identifica las señales y marcadores tempranos que indiquen hacia qué "
+     "escenario se está moviendo el mundo",
+     "PIEZA PROPIA DEL DONANTE Y LA MAS CARA DE PERDER DE TODO EL ACTO, por una "
+     "razon MEDIDA y no supuesta: la razon del archivo se la atribuia tambien al "
+     "superviviente, y ya no la tiene. Se fue con el bloque de IA que OP-F-02 "
+     "desteji, y hoy vive dentro de escenarios_de_evolucion_de_la_ia, leido "
+     "hoy del grafo. DENTRO DE ESTE PAR ES LA UNICA LINEA DE VIGILANCIA QUE QUEDA "
+     "VIVA: sin ella el procedimiento construye escenarios, decide con ellos y "
+     "nunca se entera de cual esta pasando. Va la ultima a proposito, porque es lo "
+     "que sigue vivo despues de cerrar el documento."),
+]
+
+GRUPOS_CONDICIONES = [
+    (["FC1"],
+     "Si la industria enfrenta alta incertidumbre o disrupción inminente",
+     "EL DISPARADOR DEL ENTORNO, propio del superviviente: se enciende por lo que "
+     "LA INDUSTRIA es, sin importar como este mirando la empresa. Se queda solo "
+     "porque es el unico de los cuatro origenes que no habla de la casa."),
+    (["EC1"],
+     "Cuando tu empresa depende fuertemente de un solo modelo de futuro esperado",
+     "EL DISPARADOR DE LA CASA, propio del donante, y NO se funde con el anterior "
+     "aunque los dos hablen de futuro. Es exactamente el contrario del de arriba: "
+     "aquel se enciende porque el mundo es incierto y este porque LA EMPRESA se "
+     "comporta como si no lo fuera. Es ademas la puerta del ejemplar que el "
+     "resumen del donante trae, AT&T rechazando el control de internet por no "
+     "considerar alternativas a su tecnologia dominante, y disolverla dentro de la "
+     "general dejaria ese caso sin la puerta que lo explica."),
+    (["FC2", "EC2"],
+     "Si necesitas anticipar cómo adaptar tu modelo de negocio a futuros cambios y "
+     "qué decisiones estratégicas de inversión en tecnología o negocio tomar",
+     "LA MISMA ANTICIPACION CON SUS DOS OBJETOS, y fundir aqui NO borra una senal: "
+     "le anade la que faltaba. Los dos origenes dicen ANTICIPAR y se separan solo "
+     "en QUE se anticipa: el superviviente la adaptacion del modelo de negocio y "
+     "el donante las decisiones de inversion en tecnologia o negocio. Es la misma "
+     "vara del acto 344, donde el mismo desconocimiento con tres terrenos distintos "
+     "se fundio en una sola condicion: se funde lo que es el mismo momento y se "
+     "separa lo que no."),
+]
+
+ENTREGABLE = (
+    "Documento con 2 a 4 escenarios futuros titulados y narrados, entre ellos el "
+    "mejor y el peor caso descritos en detalle, con un modelo de negocio (Canvas) "
+    "propuesto para cada uno, las decisiones primarias y de inversión asociadas con "
+    "su probabilidad, y las señales de alerta temprana identificadas")
+
+RESUMEN = (
+    "Técnica de estrategia que consiste en imaginar futuros concretos, no en "
+    "predecirlos, a partir de dos o más impulsores de incertidumbre clave de la "
+    "industria. Se cruzan esos impulsores en una matriz para construir entre 2 y 4 "
+    "escenarios detallados, cuidando que entre ellos estén el mejor y el peor caso "
+    "posible del entorno externo a 5 a 10 años, y no solo el futuro que la empresa "
+    "ya da por esperado. Cada escenario se titula y se narra, y luego un taller "
+    "desarrolla con lluvia de ideas y técnicas de creatividad un modelo de negocio "
+    "apropiado para cada uno, con preguntas específicas por bloque del Canvas. Con "
+    "los escenarios ya construidos se nombran las decisiones primarias que la "
+    "empresa enfrenta, se asigna una probabilidad pequeña a los escenarios "
+    "alternativos para reconsiderar con ella las decisiones de inversión, y se "
+    "identifican las señales y marcadores tempranos que dicen hacia qué escenario "
+    "se está moviendo el mundo. El caso clásico es AT&T rechazando el control "
+    "gratuito de internet por no haber considerado escenarios alternativos a su "
+    "tecnología dominante.")
+
+PRESERVAR = [
+    "AT&T",
+    "matriz",
+    "Canvas",
+    "peor",
+    "5 a 10 años",
+    "probabilidad",
+    "decisiones primarias",
+    "marcadores tempranos",
+    "creatividad",
+    "titula",
+]
+
+RASTROS = [
+    "incertidumbre",
+    "escenarios alternativos",
+    "taller",
+    "inversión",
+    "entorno externo",
+    "modelo de negocio",
+]
+
+ELECCION_P8 = {
+    "regla": ("P.8, EL CABLEADO DESEMPATA, NO DECIDE. Donde el contenido dice algo "
+              "manda el contenido, aunque el margen de aristas apunte al otro lado."),
+    "decide": "EL CONTENIDO",
+    "elegido": SUP,
+    "especie_de_9_3_1": ("POR ELEGIR. La razon del unico par A del acto (el 711) NO "
+                         "nombra ganador: la vara del verbo da NO. Lo que si hace, y "
+                         "es mas util que nombrar uno, es REPARTIR LO PROPIO DE CADA "
+                         "LADO con nombre, y esas tres piezas son las que este plan "
+                         "manda comprobar por guarda."),
+    "lectura_de_contenido": [
+        "1. UNO NOMBRA LA TECNICA Y EL OTRO NOMBRA UNO DE SUS PRODUCTOS. "
+        "'Planificacion de Escenarios Futuros (Scenario Planning)' es el nombre del "
+        "metodo entero; 'Desarrollo de Escenarios Futuros ALTERNATIVOS' nombra el "
+        "subconjunto que se saca de el, y el propio donante lo confirma en su "
+        "resumen al distinguir el 'futuro oficial' de los alternativos. Es el "
+        "ejemplar escrito de P.8 dicho con otras palabras: LA CABEZA DE UNA SERIE NO "
+        "SE LLAMA COMO UNO DE SUS PASOS. Y la vara aguanta la prueba inversa que el "
+        "acta de la vuelta 43 adjudico en su D3: el procedimiento del resultado "
+        "titula, narra, corre un taller y amarra al Canvas, y NADA de eso es "
+        "'desarrollar alternativos', asi que el nombre del donante se le quedaria "
+        "corto al nodo fundido, mientras que el del superviviente le calza entero.",
+        "2. EL MOTOR CONSTRUCTIVO ES DEL SUPERVIVIENTE, y es la pieza que ninguno "
+        "de los dos podria reponer del otro lado. LA MATRIZ DE IMPULSORES CRUZADOS "
+        "es la unica linea de los dos nodos que dice COMO se generan los escenarios "
+        "de forma sistematica. El donante dice CUALES no pueden faltar (el mejor y "
+        "el peor) pero no da mecanismo para los de en medio, y un procedimiento que "
+        "solo sabe describir extremos no puede ser la cabeza de uno que sabe "
+        "generarlos.",
+        "3. EL AMARRE AL ARTEFACTO DEL METODO ES DEL SUPERVIVIENTE, y es el mismo "
+        "argumento que decidio el acto 361. Su paso 5 formula preguntas por bloque "
+        "del Canvas nombrando los siete bloques (KP, KA, VP, CR, CS, C$, R$). Este "
+        "catalogo tiene el Business Model Canvas como artefacto central, y este es "
+        "el unico de los dos nodos que cierra contra el. La razon del archivo lo "
+        "nombra ademas como LO PROPIO de este lado: 'el amarre al lienzo bloque por "
+        "bloque'.",
+        "4. LA CITA DEL INSTRUMENTO DE COSTURAS CAE SOBRE EL DONANTE Y NO SOBRE EL "
+        "SUPERVIVIENTE, y se dice aunque el instrumento CITE Y NO JUZGUE: "
+        "escenarios_futuros esta DENTRO de la cola con bloque 51,4 y corte tras 5, "
+        "y future_scenarios_planning esta FUERA. La lectura textual dice que "
+        "tampoco alli hay costura, asi que esto NO es un argumento de calidad del "
+        "texto: se registra porque elegir como base el nodo que el instrumento cita "
+        "obligaria a explicar la cita dos veces, y elegir el que no cita no.",
+        "5. PIEZAS PROPIAS DEL DONANTE QUE NADIE MAS TIENE, y por eso viajan "
+        "enteras: EL MEJOR Y EL PEOR CASO explicitos del entorno externo a cinco o "
+        "diez anos, LAS DECISIONES PRIMARIAS que la empresa enfrenta, LA "
+        "PROBABILIDAD PEQUENA asignada a los alternativos para reconsiderar la "
+        "inversion, LAS SENALES Y MARCADORES TEMPRANOS (la unica linea de "
+        "vigilancia que queda viva en el par, porque la que el superviviente tenia "
+        "se fue con el destejido de OP-F-02), la lluvia de ideas y las tecnicas de "
+        "creatividad dentro del taller, su condicion del futuro unico esperado, y "
+        "el ejemplar de AT&T. Doce origenes de paso entran y doce viajan: CERO se "
+        "pierden.",
+    ],
+    "cableado_solo_como_desempate": {
+        "usado_para_decidir": False,
+        "va_a_favor_del_elegido": True,
+        "por_que_se_cita": (
+            "PORQUE ES EL MARGEN MAS ANCHO DE TODA LA OPERACION Y ESO OBLIGA A "
+            "DECIR CON MAS CUIDADO QUE NO DECIDIO. Medido hoy: "
+            "future_scenarios_planning tiene grado 10 y escenarios_futuros tiene "
+            "grado 3. La segunda aplicacion escrita de P.8 es exactamente el caso "
+            "contrario (diez contra cinco Y AUN ASI pierde el de diez), asi que la "
+            "regla ya tiene demostrado que un margen ancho no compra nada. Aqui va "
+            "a favor del elegido por contenido, y por eso NO SUMA: la eleccion la "
+            "sostienen el nombre, el motor de la matriz y el amarre al Canvas, y "
+            "los tres se sostendrian igual con el cableado al reves. SE DECLARA "
+            "ADEMAS LA LIMITACION QUE LA VUELTA 43 YA SE DECLARO: esta lectura NO "
+            "es ciega respecto del cableado, y va marcada como discutible."),
+        "instrumento": ("scripts/loop/vuelta41_lectura_acto.py --puesto 711, salida "
+                        "docs/loop/SALIDA_V44_ACTO711_LECTURA.txt, bloque (e)"),
+        "grados_medidos_hoy": {SUP: 10, ABS[0]: 3},
+        "coste_medido_de_la_eleccion": ("CERO aristas. Los dos nodos tienen CERO "
+                                        "aristas propias sin reciproco, asi que "
+                                        "elegir a cualquiera de los dos no pierde "
+                                        "ni una arista: las reciprocas las "
+                                        "reescribe la simetrizacion de run_phase1 "
+                                        "paso 5."),
+    },
+}

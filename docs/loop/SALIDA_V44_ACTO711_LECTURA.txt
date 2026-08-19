@@ -1,0 +1,115 @@
+
+==============================================================================
+(a) LA NOMINA DEL ACTO 711, LEIDA DE LA TABLA SELLADA
+==============================================================================
+  nodo A: future_scenarios_planning
+  nodo B: escenarios_futuros
+  la tabla sellada trae 9 actos; este es el numero 8 de los nueve
+  los dos estan en la nomina de OPERACIONES.jsonl: SI
+
+  EL AVISO DE SOLAPE DEL PLAN, comprobado contra el fichero y no recordado:
+    > **AVISO DE SOLAPE, y hay que verlo antes de contar dos veces:**
+    > `producto_minimo_viable` y `principio_calidad_mvp` **aparecen aqui Y en
+    > `OP-D-01`**. La seccion 54.3 los cuenta como uno de los nueve actos de dos; el
+    > plan de cirugia los trata como **cura acoplada mayor**. **Es la MISMA pareja
+    > vista por dos instrumentos, no dos trabajos.**
+
+  ESTE ACTO ESTA NOMBRADO EN EL AVISO DE SOLAPE: NO
+
+  EL REPARTO YA ESCRITO PARA ESTE ACTO, si lo tiene:
+    NINGUNO ESCRITO. Se resuelve con la regla adjudicada: cada
+    perdida al bloque del que proviene, y la que no tenga bloque
+    al superviviente.
+
+==============================================================================
+(b) QUE CITA EL INSTRUMENTO DE COSTURAS SOBRE LOS DOS NODOS
+==============================================================================
+  Fuente: docs/COSTURAS_INTERNAS.jsonl, LA COLA QUE EL INSTRUMENTO YA
+  ENTREGO. No se recalcula ni una cifra. EL INSTRUMENTO CITA Y NO JUZGA,
+  y desde la vuelta 41 su salida declara ademas que LA COLA GLOBAL NO ES
+  BASE DE LECTURA mientras el MIN_BLOQUE siga pendiente del fundador.
+  nodos en la cola entregada: 1494
+
+  future_scenarios_planning                    FUERA DE LA COLA: el instrumento NO lo cita
+
+  escenarios_futuros                           CITADO por el instrumento
+      pasos 7 | pareja 73.6 (pasos [1, 2]) | bloque 51.4 | corte tras 5
+      disparo por pareja: False | por bloque: True | franja 44-45: False
+      paso A de la pareja citada: Describir el mejor escenario futuro posible en detalle (5-10 años) para el entorno externo
+      paso B de la pareja citada: Describir el peor escenario posible para el entorno externo de la empresa
+
+==============================================================================
+(c) EL TEXTO ENTERO DE LOS DOS NODOS, que es lo unico que decide
+==============================================================================
+
+------------------------------------------------------------------------------
+  future_scenarios_planning   VIVO
+------------------------------------------------------------------------------
+  titulo    : Planificación de Escenarios Futuros (Scenario Planning)
+  etiqueta  : Construye Escenarios con Drivers Clave
+  dominio   : core
+  fuente    : Business Model Generation (Osterwalder)
+  alias     : []
+  PASOS (5):
+    1. Identificar 2 o más drivers de incertidumbre clave que puedan transformar la industria (ej: tecnología, regulación)
+    2. Construir una matriz cruzando los drivers para generar entre 2 y 4 escenarios distintos
+    3. Titular y narrar cada escenario con una historia breve que describa sus elementos principales
+    4. Organizar un workshop donde los participantes desarrollen un modelo de negocio apropiado para cada escenario
+    5. Formular preguntas específicas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$) para cada escenario
+  CONDICIONES (2):
+    c1. Si la industria enfrenta alta incertidumbre o disrupción inminente
+    c2. Si el equipo necesita anticipar cómo adaptar su modelo de negocio a futuros cambios
+  ENTREGABLE: Documento con 2-4 escenarios futuros narrados y un modelo de negocio (Canvas) propuesto para cada uno
+  RESUMEN   : Técnica de estrategia que consiste en imaginar posibles futuros concretos (no predecirlos) basados en dos o más criterios/drivers de incertidumbre clave de una industria. Se construyen entre 2 y 4 escenarios detallados que sirven como contexto para diseñar modelos de negocio apropiados para cada futuro posible, ayudando a la organización a prepararse y reflexionar sobre cómo su modelo debería evolucionar.
+  previos   (6): ['lienzo_modelo_negocio', 'iota_analysis', 'acuerdo_de_co_venta_y_votacion', 'business_model_environment_mapping', 'vesting_acciones_fundadores', 'habilidad_prompting_como_experticia']
+  siguientes(4): ['business_model_environment_mapping', 'caso_taobao_evolucion_modelo', 'diseno_de_eucatastrofe_organizacional', 'escenarios_de_evolucion_de_la_ia']
+
+------------------------------------------------------------------------------
+  escenarios_futuros   VIVO
+------------------------------------------------------------------------------
+  titulo    : Desarrollo de Escenarios Futuros Alternativos
+  etiqueta  : Imagina Varios Futuros Posibles
+  dominio   : core
+  fuente    : Winning at New Products - Robert G. Cooper
+  alias     : []
+  PASOS (7):
+    1. Describir el mejor escenario futuro posible en detalle (5-10 años) para el entorno externo
+    2. Describir el peor escenario posible para el entorno externo de la empresa
+    3. Identificar las dimensiones relevantes que caracterizan estos escenarios
+    4. Identificar las decisiones primarias que enfrenta la empresa (nuevos negocios, tecnologías, productos)
+    5. Asignar una probabilidad pequeña a los escenarios alternativos y reconsiderar decisiones de inversión
+    6. Identificar señales/marcadores tempranos que indiquen hacia qué escenario se mueve el mundo
+    7. Usar brainstorming y técnicas de creatividad para generar ideas bajo cada escenario
+  CONDICIONES (2):
+    c1. Cuando la empresa depende fuertemente de un solo modelo de futuro esperado
+    c2. Cuando se necesita anticipar decisiones estratégicas de inversión en tecnología o negocio
+  ENTREGABLE: Documento con escenario oficial y al menos un escenario alternativo, con señales de alerta identificadas y decisiones estratégicas asociadas
+  RESUMEN   : Técnica estratégica que consiste en desarrollar no solo el escenario futuro más probable ('futuro oficial') sino también escenarios alternativos (mejor caso y peor caso) para sensibilizar a los tomadores de decisiones ante señales de cambio. El caso clásico es AT&T rechazando el control gratuito de Internet por no considerar escenarios alternativos a su tecnología dominante.
+  previos   (2): ['evaluacion_megatendencias', 'vision_periferica']
+  siguientes(1): ['iota_analysis']
+
+==============================================================================
+(d) P.5: EL PAR, SU CLASE, SU RAZON ENTERA, Y EL CIERRE DEL SUBCONJUNTO
+==============================================================================
+  puesto 711 | clase A | escenarios_futuros con future_scenarios_planning
+  RAZON ENTERA (1314 caracteres):
+    El mismo metodo de escenarios contado por dos libros, sin arista entre ellos, y con el solape entero de un solo lado de la costura. escenarios_futuros, de Cooper, manda describir en detalle el mejor y el peor escenario del entorno a cinco o diez anos, identificar las dimensiones que los caracterizan, identificar las decisiones primarias que la empresa enfrenta, asignar probabilidad pequena a los alternativos y reconsiderar la inversion, identificar senales tempranas de hacia donde se mueve el mundo, y usar brainstorming bajo cada escenario. future_scenarios_planning hace lo mismo con la matriz de Osterwalder, identificar dos o mas drivers de incertidumbre, cruzarlos para generar de dos a cuatro escenarios, titular y narrar cada uno, correr un taller que desarrolle un modelo de negocio por escenario, y establecer senales de alerta temprana. Lo propio de Cooper son el mejor y el peor caso explicitos y la probabilidad asignada; lo propio del otro es el amarre al lienzo bloque por bloque. NOTA DE COSTURA, con el refinamiento del puesto 673: future_scenarios_planning es costura CONFIRMADA en la ficha, trece pasos, y su juntura esta en el paso 6, donde arranca un bloque entero de IA. EL SOLAPE DE ESTE PAR NO CRUZA LA JUNTURA, cae completo en sus pasos 1 a 5, asi que el veredicto se puede emitir hoy.
+  9.3.1, LA VARA DEL VERBO: nombra ganador en su razon: NO, es POR ELEGIR
+
+  EL SUBCONJUNTO, CERRADO O NO: todo par del ARCHIVO que meta a un
+  tercero con cualquiera de los dos (P.5 pide el acto entero).
+    NINGUNO. El subconjunto de los dos es CERRADO: UNA familia de dos.
+
+==============================================================================
+(e) P.8: EL CABLEADO, QUE ACOMPANA Y NO DECIDE
+==============================================================================
+  future_scenarios_planning                    cableado (grado por P.1): 10   | aristas propias sin reciproco: 0 
+  escenarios_futuros                           cableado (grado por P.1): 3    | aristas propias sin reciproco: 0 
+
+  EL COSTE MEDIDO DE LA ELECCION: elegir a uno u otro solo pierde
+  aristas si el que muere tiene aristas SIN RECIPROCO, porque las
+  reciprocas las reescribe la simetrizacion de run_phase1, paso 5.
+
+  Y LA PRELACION, dicha antes de mirar: MANDA EL CONTENIDO. Este bloque
+  se lee DESPUES del (c) y del (d), y si apunta al lado contrario del
+  contenido, PIERDE. Se imprime para poder decir que no hizo falta.
