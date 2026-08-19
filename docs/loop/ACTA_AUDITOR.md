@@ -8865,3 +8865,270 @@ EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: la vuelta 42
 commitea lo pendiente del 285 con su mensaje declarado, reproduce el
 sellado por instrumento, ejecuta la fusion con las trece guardas y sigue
 OP-D-06 acto por acto con DOS commits por acto y ninguno a medias.
+
+# ACTA DE LA VUELTA 42 DEL AUDITOR (19 ago 2026, Fable 5). CONVOCADO POR OTRA VUELTA QUE NO TERMINO: EL EJECUTOR MURIO POR UN ERROR 521 DE LA API (EL SERVIDOR CAIDO, NO LA CUOTA) A LAS 14:15:39, CON EL ACTO 285 CERRADO Y PUSHEADO ENTERO, EL PRIMER COMMIT DEL ACTO 331 PUSHEADO, Y LA FUSION DEL 331 EJECUTADA EN EL ARBOL CON GATE 0 Y SUITES VERDES SELLADAS PERO SIN SU SEGUNDO COMMIT. TODO LO COMMITEADO Y TODO LO SIN COMMIT VERIFICADO POR CORRIDA PROPIA, LA CIEGA DEL ACTO 331 COINCIDE 3 DE 3 EN EL FONDO, CERO CAIDAS HALLADAS, Y LA REANUDACION ADJUDICADA: LA FUSION DEL 331 SE COMMITEA TAL COMO QUEDO, VERIFICADA HOY, Y EL ACTO SE TERMINA ANTES DE ABRIR EL SIGUIENTE
+
+## 0. EL HUECO DE ACTA, COMPROBADO PRIMERO (regla 0 del ciclo)
+
+La ultima acta escrita es la de la vuelta 41 y cubre la vuelta 41. La
+vuelta inmediatamente anterior a esta acta es la 42, que corrio PARCIAL
+y NUNCA escribio reporte: REPORTE.md sigue siendo el de la vuelta 40, ya
+auditada. No hay vuelta completa sin auditar; esta acta cubre lo que la
+42 alcanzo a hacer, que es MUCHO mas que lo que alcanzo la 41: un acto
+entero cerrado y otro fundido a falta de su commit.
+
+## 1. LA INTERRUPCION, MEDIDA Y NO SUPUESTA
+
+- docs/loop/ultimo_ejecutor.json, leido hoy: terminal_reason api_error,
+  status 521, resultado literal "Error 521: Web server is down ... The
+  origin is down" (Cloudflare, zona api.anthropic.com), timestamp
+  2026-08-19T18:15:39Z, 1.986 segundos de vuelta, 141 turnos. NO es la
+  especie de la vuelta 41 (429, limite de sesion): esta vez el servidor
+  de la API se cayo. Las dos son EXTERNAS y las dos las maneja el bucle
+  reintentando; el patron de dos vueltas seguidas cortadas por la API se
+  REGISTRA aqui con sus dos causas distintas, como el acta 41 pidio.
+- docs/loop/loop.log, leido hoy: el ejecutor corrio de 13:42:33 a
+  14:15:40 (VUELTA 5 del log de hoy). Esta acta es la vuelta del auditor
+  que arranco a las 14:15:40, sobre la sesion del ejecutor ya muerta.
+
+DONDE QUEDO EL TRABAJO, medido con git fetch, git log y git status:
+- COMMITEADO Y PUSHEADO (origin/pasada-unica en d1dcd26f, comprobado con
+  git fetch hoy): 2414e7d9 (lo pendiente de la 41, las rutas TAL COMO
+  QUEDARON), a1e57a25 (la apertura, sola), e239bcb9 (la TAREA 1),
+  b563e7a5 (acto 285, PRIMER commit: plan reproducido y verificado),
+  7ea4cf27 (acto 285, SEGUNDO commit: LA FUSION ejecutada, con el ciclo,
+  las suites, la costura post fusion, la senal y la relectura del 835),
+  d1dcd26f (acto 331, PRIMER commit: lectura, plan sellado, simulacion y
+  verificador). La practica de DOS COMMITS POR ACTO adjudicada en el
+  acta 41 SE CUMPLIO y FUNCIONO: ningun plan quedo sin commit.
+- EN EL ARBOL SIN COMMIT: la fusion del acto 331 EJECUTADA (8 ficheros
+  modificados: los 2 nodos del acto, sus 2 vecinos redirigidos, los dos
+  master_graph, el manifest y el run_log) y 11 salidas selladas
+  SALIDA_V42_*_331. El corte cayo EXACTAMENTE en la ventana entre la
+  fusion verificada y su segundo commit: la ventana que la regla de dos
+  commits ya habia reducido de un acto entero a un tramo de minutos.
+
+## 2. LO COMMITEADO, VERIFICADO POR CORRIDA PROPIA (regla 1)
+
+1. LA APERTURA (a1e57a25): el commit declara BYTE IGUAL a la apertura de
+   la vuelta 41 con md5 5781ee694cc04a75c0f58316256e0b06. COMPROBADO EN
+   DISCO: los dos ficheros dan ese md5 y son byte iguales. MI PROPIO
+   TROPIEZO DECLARADO: mi primera comparacion cotejo el blob de git (LF)
+   contra el fichero en disco (CRLF) y dio md5 distintos; el diff linea
+   a linea salio VACIO y la medicion en disco cerro la duda. No publique
+   la cifra errada y la declaro igual, porque un instrumento mal
+   apuntado es la especie de averia que mas cuesta ver.
+2. LA TAREA 1 (e239bcb9): 41 lineas anadidas y cero borradas en
+   docs/plan/02_DESTEJIDOS.md, numstat comprobado. La seccion cita mi
+   acta de la 41 con sus lineas (8651 a 8837) y las tres adjudicaciones
+   estan bien traidas: reanudacion con reproduccion previa, el corte no
+   es caida, dos commits por acto.
+3. EL ACTO 285, DE PUNTA A PUNTA:
+   - LA REPRODUCCION DEL SELLADO (la condicion de mi adjudicacion 1 del
+     acta 41): SALIDA_V42_ACTO285_REPRODUCCION.txt trae md5 IDENTICOS de
+     las tres piezas antes y despues de re-correr los dos instrumentos,
+     diff vacio en las tres, y la aritmetica calza al digito con la que
+     yo mismo reconte en el acta 41 (7 redirecciones, 3 deprecados, 0
+     duplicadas, 16 origenes, 7 simetrizaciones, 6 pasos finales, 16 de
+     16 que viajan). LA CONDICION SE CUMPLIO TAL COMO SE ESCRIBIO.
+   - LA FUSION (7ea4cf27): trece guardas en verde en el sellado, censo
+     3.853 con vivos 3.532 a 3.531 y deprecados 321 a 322, verbatim 16
+     de 16, coberturas 12 de 12 y 4 de 4, redirecciones 7 de 7, reanclar
+     en blanco, simetrizacion 7 exacta releida en el fichero. El
+     registro del acto en 02_DESTEJIDOS.md leido: destejido sin costura,
+     P.5 una familia, P.8 por contenido con el cableado que PIERDE y se
+     dice que perdio.
+   - LA COSTURA POST FUSION Y LA SENAL: el instrumento cita al
+     resultante (bloque 50,6) y la salida DEMUESTRA que la fusion NO
+     encendio la senal: 45,4 antes (ya DENTRO de la cola) y 50,6
+     despues, mas 5,2 por el mecanismo mecanico ya adjudicado. Es el
+     caso que el discutible 1 de la vuelta 40 no podia decir de si
+     mismo, y aqui esta bien dicho.
+   - LA RELECTURA DEL PAR 835, B a D, VERIFICADA EN EL ARCHIVO POR MI:
+     la linea 835 de docs/INTRA_DOMINIO_VEREDICTOS.jsonl dice hoy clase
+     D con una razon que cita la razon vieja VERBATIM, el porque de la
+     vuelta a cola (el nodo cambio de texto al absorber) y el porque del
+     cambio (la B existia porque el texto iba a cambiar; ya cambio y
+     quedo estable). El archivo sigue en 3.388 lineas, sin altas ni
+     bajas; el lote _lote_v42_835.jsonl calza; el marcador movio B 83 a
+     82 y D 2.722 a 2.723 y MI corrida del estado lo confirma al digito.
+4. EL ACTO 331, PRIMER COMMIT (d1dcd26f): la lectura imprime la nomina
+   de la tabla sellada, la cola entregada (1.495 nodos, y NINGUNO de los
+   dos citados), la razon entera del archivo, el subconjunto cerrado con
+   4 terceros todos D (el acto ES de dos), CERO pares B o C que vuelvan
+   a la cola, y el cableado 5 contra 2 impreso DESPUES del contenido. El
+   plan sellado: superviviente analisis_de_gastos_de_capital, 12
+   origenes verbatim, 5 pasos finales, 2 redirecciones, 0 deprecados que
+   nombran, 0 duplicadas, 2 simetrizaciones, 12 de 12 que VIAJAN. El
+   verificador de mapas con el plan nuevo: 8 tablas, 48 filas, 0
+   discrepancias. Y la cita historica de la razon (doce pasos partidos
+   por la mitad) esta BIEN declarada como rancia: 01_FUENTES.md linea
+   502 confirma que OP-F-03 mando el bloque 6 a 12 a
+   tecnologia_como_medio_no_fin, y el nodo mide hoy 5 pasos. Fuente
+   primero POR PRECEDENCIA, citada y no rehecha.
+
+## 3. LO SIN COMMIT, VERIFICADO COMO SI FUERA A COMMITEARSE (regla 1)
+
+LA FUSION DEL 331, contra el arbol y contra el plan, TODO por corrida
+propia de hoy:
+- dataset/nodos/propuesta_gasto_capital.json: deprecado true, texto
+  INTACTO (5 pasos). El superviviente carga el alias
+  propuesta_gasto_capital, 5 pasos, y sus enlaces traen las DOS
+  simetrizaciones del plan (comparacion_metodos_inversion en previos,
+  gestion_capital_trabajo en siguientes). Los dos vecinos redirigidos
+  tal como el plan lo sello. CERO vivos nombran al absorbido, medido por
+  barrido propio de los 3.853 ficheros.
+- LA ARITMETICA DE LOS ENLACES: apertura 16.871, hoy 16.880 por mi
+  corrida; mas 7 de la simetrizacion del 285 y mas 2 de la del 331, y
+  16.871 mas 9 es 16.880. Censo: 3.853 ficheros, 3.530 vivos, 323
+  deprecados, dos fusiones y menos 2 vivos desde la apertura.
+- EL SELLADO DE LA EJECUCION (SALIDA_V42_ACTO331_EJEC.txt): trece
+  guardas en verde, verbatim 12 de 12, coberturas 10 de 10 y 2 de 2, a6
+  con titulo y etiqueta sin tocar, resultado de 5 pasos DENTRO del
+  estandar. reanclar_por_resolutor en blanco tras enumerar los registros
+  no grafo (0 VIVOS, los nueve bridges en cero). Caso positivo despues:
+  33 pasan, 0 caen, conservacion 5 vivos.
+- EL CICLO GATE 0 RE-CORRIDO ENTERO POR MI: run_phase1 con GATE 0: OK,
+  etiquetas_de_cara 71, sync_assets_web con sha256 c120f5d663b9 del
+  master_graph IDENTICO al sellado del ejecutor, las dos copias del
+  grafo byte iguales entre si y byte iguales a las que el ejecutor dejo
+  (comparadas contra respaldo previo). Las suites RE-CORRIDAS POR MI:
+  motor 25 de 25 exit 0, web 80 ficheros con 1.030 pasadas y 3 saltadas
+  exit 0, tsc cero lineas exit 0.
+- DOS NOTAS DE MANEJO MIAS, declaradas: (i) mi corrida de run_phase1
+  reescribe phase1_run_log.json y le vacia las dos entradas de
+  simetrizacion que son evidencia SIN COMMIT del ejecutor; lo respalde
+  ANTES de correr y lo RESTAURE byte igual despues. (ii) mi primer
+  respaldo copiaba los ocho ficheros a una carpeta PLANA y los dos
+  master_graph.json (dataset y web) se aplastaban entre si; lo vi antes
+  de correr nada y lo rehice con rutas separadas. Se declara porque un
+  respaldo que aplasta es peor que no respaldar.
+
+LO QUE AL ACTO 331 LE FALTA, dicho al digito: el instrumento de
+costuras sobre el resultante DESPUES de fundir (la practica del acta
+40) con su lectura si cita y su antes y despues, el registro de cierre
+del acto en 02_DESTEJIDOS.md, y el SEGUNDO COMMIT. La relectura post
+fusion sale en CERO pares por la medicion ya sellada de la lectura, y
+el recomputo del cierre transitivo y el estado al cierre son del cierre
+de vuelta, que no llego.
+
+## 4. LA RELECTURA CIEGA, EN EL ORDEN DE LA REGLA
+
+EL ACTO 331, CIEGO DE VERDAD: saque el par de la linea 331 del archivo,
+imprimi los DOS nodos enteros desde git en d1dcd26f (antes de la
+fusion), adjudique por escrito, y SOLO DESPUES abri la lectura y el
+plan del ejecutor. MI ADJUDICACION CIEGA: (a) NINGUNO tiene costura
+interna, cada uno es una progresion unica; (b) P.5 UNA familia, la
+misma ensenanza de Berman y Knight; (c) P.8 por contenido el
+superviviente es analisis_de_gastos_de_capital, el concepto canonico
+que declara el proceso entero en su resumen y alimenta a los tres nodos
+de metodo, con las piezas propias del otro (hurdle rate, sensibilidad,
+banco o inversionista) obligadas a viajar; el cableado 5 contra 2 va a
+favor y no decide. AL DESTAPAR: COINCIDE 3 DE 3 EN EL FONDO, y las
+piezas que exigi viajaron (guarda 6 del sellado: las 10 literales).
+
+EL PAR 835, CON LA CEGUERA PARCIAL DECLARADA: vi el veredicto (B a D)
+en el triage ANTES de leer los nodos, asi que esta relectura NO es
+ciega en la clase; la hice igual con el texto delante y juzgue por mi
+cuenta ANTES de leer la razon nueva: son dos ensenanzas distintas (el
+documento de analisis competitivo de Blank contra la doctrina del
+producto de Cooper), libros distintos, sin arista, cruzadas en dos
+instrucciones: D es la clase correcta y la B vieja ya no tiene el
+motivo que la sostenia. La razon nueva del archivo dice eso mismo con
+la vieja citada verbatim. COINCIDE EN EL FONDO.
+
+## 5. ADJUDICACIONES de esta vuelta
+
+1. LA FUSION DEL 331 SE COMMITEA TAL COMO QUEDO, como SEGUNDO COMMIT
+   del acto, SIN re-ejecutarse ni recalcularse. Letra citable: la
+   primera linea de todo encargo (lo pendiente se commitea antes de
+   tocar nada), el precedente de 2414e7d9 (lo de la 41 commiteado TAL
+   COMO QUEDO), y la regla 1 satisfecha HOY: esta acta verifico la
+   fusion contra el plan sellado, contra el arbol y con el ciclo y las
+   suites re-corridos en verde. El mensaje del commit declara que la
+   ejecuto la vuelta 42, que el 521 cayo antes del commit, y que el
+   acta de la vuelta 42 la verifico entera.
+2. EL CORTE POR 521 NO ES CAIDA DE DICTADO NI CONDICION DE PARADA, por
+   la misma letra que el 429 de la 41: "fallo tecnico repetido" pide
+   hook o Gate 0 en rojo dos vueltas seguidas POR LA MISMA CAUSA, y
+   aqui Gate 0 esta verde por corrida propia y las dos interrupciones
+   son de la API y de causas DISTINTAS (cuota una, servidor caido la
+   otra). EL PATRON QUEDA REGISTRADO: dos vueltas seguidas cortadas por
+   la API en plena fase III. Si una TERCERA vuelta seguida muere por
+   corte externo, el auditor de esa vuelta lo trae a PARA_ALEXIS.md
+   como patron operativo (no como caida de nadie), porque tres cortes
+   seguidos ya no son ruido: son una cadencia que la casa debe conocer.
+3. AFINAMIENTO DE LA PRACTICA DE DOS COMMITS, por extension y no
+   doctrina nueva: dentro del acto, el SEGUNDO COMMIT se hace APENAS la
+   fusion, el reanclar, el ciclo Gate 0 y las suites queden verdes; la
+   costura post fusion, la senal, las relecturas B o C y el registro de
+   cierre van DESPUES y se commitean en un TERCER commit del acto. Es
+   la misma logica del acta 41 (un corte no debe poder dejar un sellado
+   sin commit) aplicada a la ventana que el corte de hoy encontro: lo
+   que muta el grafo se registra apenas esta verde, y la prosa que lo
+   lee viene detras.
+
+## 6. ERRORES PROPIOS DE ESTA VUELTA, declarados
+
+1. El md5 del blob contra el disco (seccion 2.1): instrumento mal
+   apuntado, cerrado midiendo en disco antes de publicar nada.
+2. El respaldo plano que aplastaba los dos master_graph.json (seccion
+   3): rehecho con rutas separadas antes de correr el ciclo.
+3. La ceguera parcial del 835 (seccion 4): el triage me mostro el
+   veredicto antes que los nodos. La proxima vuelta con relecturas post
+   fusion, la ciega del auditor lee los nodos ANTES de abrir cualquier
+   SALIDA de veredicto.
+
+## 7. METRICA DE CREDITO acumulada
+
+Entrante (acta de la vuelta 41): 51 relecturas, 446 puestos (mas 242
+nodos de forma y 164 sitios de codigo), 7 caidas de clase, 18 de
+reporte del ejecutor, 7 de cifra publicada del ejecutor, 2 de cifra del
+auditor, 2 de acta del auditor, 1 de procedimiento del auditor.
+
+Esta tanda (vuelta 42 parcial): mas 2 relecturas (el acto 331 ciego de
+verdad, el 835 con ceguera parcial declarada); mas 2 puestos de fondo;
+mas 4 nodos de forma (los dos del 331 impresos enteros desde git, los
+dos del 835 leidos con su texto de hoy); mas 24 sitios de codigo o
+instrumentos re-corridos o leidos al digito (ultimo_ejecutor y
+loop.log, los seis commits con su numstat, el md5 de las aperturas en
+disco, la tarea 1 contra mi acta, la reproduccion del 285, el EJEC del
+285 y el del 331, la linea 835 del archivo y su lote, el estado
+re-corrido, la aritmetica de enlaces reconciliada, la fusion del 331
+nodo a nodo en el arbol, los tres comandos del ciclo re-corridos, las
+tres suites re-corridas, la byte igualdad contra respaldo, los dos
+verificadores de mapas, los registros no grafo, el caso positivo, la
+cita de 01_FUENTES linea 502, la costura post fusion del 285 y su
+senal). Caidas: CERO del ejecutor en lo commiteado y en lo sellado,
+CERO de clase o cifra, CERO del auditor (los tres tropiezos de la
+seccion 6 no publicaron cifra ni pisaron dato: se declaran y no
+acumulan).
+
+Acumulado: 53 relecturas, 448 puestos (mas 246 nodos de forma y 188
+sitios de codigo), 7 caidas de clase, 18 de reporte del ejecutor, 7 de
+cifra publicada del ejecutor, 2 de cifra del auditor, 2 de acta del
+auditor, 1 de procedimiento del auditor.
+
+Rachas: clase o cifra CERO. La de reporte SIGUE EN UNA por la misma
+letra del acta 41: la 42 tampoco entrego reporte y una racha no se
+rompe con material ausente; la rompera el primer reporte limpio.
+
+## 8. CONDICIONES DE PARADA, recorridas: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. Las tres adjudicaciones son extension citable.
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NO. El MIN_BLOQUE sigue del fundador y nadie lo
+  toco; ningun contenido se borro fuera de regla.
+- Fallo tecnico repetido: NO por su letra (seccion 5.2). El patron de
+  cortes queda registrado con su umbral de tres.
+- Credito roto: NO. Cero caidas esta tanda.
+- Campana consumada: NO. Faltan siete actos de OP-D-06 (341, 344, 361,
+  392, 711, 969 por P.8 y el 494 por declaracion) y el cierre de la
+  operacion, mas lo que el 00_INDICE tenga detras.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: la vuelta 43
+commitea la fusion del 331 TAL COMO QUEDO con su mensaje declarado,
+termina el acto (costuras post fusion, registro de cierre, tercer
+commit), y sigue los actos restantes con dos commits por acto y el
+afinamiento del orden adjudicado en esta acta.
