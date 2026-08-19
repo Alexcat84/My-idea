@@ -1,0 +1,67 @@
+CASO POSITIVO: OP-D-05, FUSION UNICA: LA SELECCION DEL CEO. seleccion_ceo_fundador absorbe a asignacion_de_titulos_ejecutivos y a errores_comunes_asignacion_roles
+==============================================================================
+
+EL SUPERVIVIENTE, seleccion_ceo_fundador
+  [CAE ] tiene 4 pasos, los 6 que el plan deja
+  [CAE ] tiene 2 condiciones, las 3 que el plan deja
+  [CAE ] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [CAE ] sus condiciones son exactamente las del plan
+  [CAE ] su entregable es el del plan
+  [CAE ] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Decidir con intención quién será el CEO fundador'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Elige con Cuidado a Tu CEO'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['pasos']: 'presidente de la junta (Chairman)'
+  [PASA] sobrevive literal en ['pasos']: 'Chief Scientific Officer'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'capital humano, social y financiero'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'full-time vs part-time'
+  [CAE ] sobrevive literal en NINGUN CAMPO: '47%'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'inercia de títulos'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'junta directiva solo por lealtad'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'compatibilidad de motivaciones'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [CAE ] 'asignacion_de_titulos_ejecutivos' esta en ids_alias del superviviente
+  [CAE ] 'asignacion_de_titulos_ejecutivos' tiene su entrada en merged_originals
+  [CAE ] 'errores_comunes_asignacion_roles' esta en ids_alias del superviviente
+  [CAE ] 'errores_comunes_asignacion_roles' tiene su entrada en merged_originals
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, asignacion_de_titulos_ejecutivos
+  [CAE ] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 5 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 3
+
+LA MUERTE DEL ABSORBIDO, errores_comunes_asignacion_roles
+  [CAE ] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 5 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LAS REDIRECCIONES
+  [CAE ] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 8)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [PASA] criterios_equity_split.nodos_previos ya apunta a seleccion_ceo_fundador
+  [CAE ] decision_egalitaria_vs_jerarquica.nodos_previos ya apunta a seleccion_ceo_fundador
+  [PASA] decision_fundador_solo_vs_equipo.nodos_siguientes ya apunta a seleccion_ceo_fundador
+  [PASA] decision_fundador_solo_vs_equipo.nodos_siguientes ya apunta a seleccion_ceo_fundador
+  [CAE ] division_de_labor_vs_roles_superpuestos.nodos_previos ya apunta a seleccion_ceo_fundador
+  [CAE ] founder_ceo_succession_process.nodos_previos ya apunta a seleccion_ceo_fundador
+  [CAE ] reparto_inicial_equity.nodos_previos ya apunta a seleccion_ceo_fundador
+  [CAE ] seleccion_relaciones_cofundadores.nodos_siguientes ya apunta a seleccion_ceo_fundador
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [NO] el rastro 'títulos ambiguos' sigue vivo en NINGUN CAMPO
+  (conservacion) [NO] el rastro 'C-level' sigue vivo en NINGUN CAMPO
+  (conservacion) [NO] el rastro 'inversionistas' sigue vivo en NINGUN CAMPO
+  (conservacion) [NO] el rastro 'checklist' sigue vivo en NINGUN CAMPO
+  (conservacion) [SI] el rastro 'capacidad de ejecución' sigue vivo en ['pasos']
+
+==============================================================================
+RESULTADO: 18 PASAN, 24 CAEN
+CONSERVACION (aparte, no suma): 1 vivos, 4 muertos

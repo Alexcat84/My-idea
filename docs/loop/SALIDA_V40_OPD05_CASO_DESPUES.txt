@@ -1,0 +1,69 @@
+CASO POSITIVO: OP-D-05, FUSION UNICA: LA SELECCION DEL CEO. seleccion_ceo_fundador absorbe a asignacion_de_titulos_ejecutivos y a errores_comunes_asignacion_roles
+==============================================================================
+
+EL SUPERVIVIENTE, seleccion_ceo_fundador
+  [PASA] tiene 6 pasos, los 6 que el plan deja
+  [PASA] tiene 3 condiciones, las 3 que el plan deja
+  [PASA] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [PASA] sus condiciones son exactamente las del plan
+  [PASA] su entregable es el del plan
+  [PASA] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Decidir con intención quién será el CEO fundador'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Elige con Cuidado a Tu CEO'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['pasos']: 'presidente de la junta (Chairman)'
+  [PASA] sobrevive literal en ['pasos']: 'Chief Scientific Officer'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'capital humano, social y financiero'
+  [PASA] sobrevive literal en ['pasos']: 'full-time vs part-time'
+  [PASA] sobrevive literal en ['resumen']: '47%'
+  [PASA] sobrevive literal en ['resumen']: 'inercia de títulos'
+  [PASA] sobrevive literal en ['pasos']: 'junta directiva solo por lealtad'
+  [PASA] sobrevive literal en ['pasos']: 'compatibilidad de motivaciones'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [PASA] 'asignacion_de_titulos_ejecutivos' esta en ids_alias del superviviente
+  [PASA] 'asignacion_de_titulos_ejecutivos' tiene su entrada en merged_originals
+  [PASA] la ficha de 'asignacion_de_titulos_ejecutivos' guarda su fuente verbatim: "The Founder's Dilemmas"
+  [PASA] 'errores_comunes_asignacion_roles' esta en ids_alias del superviviente
+  [PASA] 'errores_comunes_asignacion_roles' tiene su entrada en merged_originals
+  [PASA] la ficha de 'errores_comunes_asignacion_roles' guarda su fuente verbatim: "The Founder's Dilemmas"
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, asignacion_de_titulos_ejecutivos
+  [PASA] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 5 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 3
+
+LA MUERTE DEL ABSORBIDO, errores_comunes_asignacion_roles
+  [PASA] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 5 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LAS REDIRECCIONES
+  [PASA] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 0)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [PASA] criterios_equity_split.nodos_previos ya apunta a seleccion_ceo_fundador
+  [PASA] decision_egalitaria_vs_jerarquica.nodos_previos ya apunta a seleccion_ceo_fundador
+  [PASA] decision_fundador_solo_vs_equipo.nodos_siguientes ya apunta a seleccion_ceo_fundador
+  [PASA] decision_fundador_solo_vs_equipo.nodos_siguientes ya apunta a seleccion_ceo_fundador
+  [PASA] division_de_labor_vs_roles_superpuestos.nodos_previos ya apunta a seleccion_ceo_fundador
+  [PASA] founder_ceo_succession_process.nodos_previos ya apunta a seleccion_ceo_fundador
+  [PASA] reparto_inicial_equity.nodos_previos ya apunta a seleccion_ceo_fundador
+  [PASA] seleccion_relaciones_cofundadores.nodos_siguientes ya apunta a seleccion_ceo_fundador
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'títulos ambiguos' sigue vivo en ['pasos']
+  (conservacion) [SI] el rastro 'C-level' sigue vivo en ['pasos', 'resumen']
+  (conservacion) [SI] el rastro 'inversionistas' sigue vivo en ['condiciones']
+  (conservacion) [SI] el rastro 'checklist' sigue vivo en ['entregable']
+  (conservacion) [SI] el rastro 'capacidad de ejecución' sigue vivo en ['pasos']
+
+==============================================================================
+RESULTADO: 44 PASAN, 0 CAEN
+CONSERVACION (aparte, no suma): 5 vivos, 0 muertos

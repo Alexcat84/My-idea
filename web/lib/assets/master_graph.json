@@ -5649,7 +5649,8 @@
         "Si hay tensión sobre quién debe ser CEO",
         "Cuando se está preparando documentación para inversionistas"
       ],
-      "etiqueta_arbol": "Negocia los Títulos con Cuidado"
+      "etiqueta_arbol": "Negocia los Títulos con Cuidado",
+      "deprecado": true
     },
     "asignacion_persona_ia": {
       "node_id": "asignacion_persona_ia",
@@ -23746,12 +23747,11 @@
       "nodos_previos": [
         "timing_equity_split",
         "decision_fundador_solo_vs_equipo",
-        "asignacion_de_titulos_ejecutivos",
+        "seleccion_ceo_fundador",
         "cofundar_con_amigos_familia_riesgos",
         "evaluar_motivaciones_cofundadores",
         "homogeneidad_vs_diversidad_equipo",
         "rotacion_equipo_fundador",
-        "seleccion_ceo_fundador",
         "compatibilidad_motivaciones_riqueza_control"
       ],
       "nodos_siguientes": [
@@ -28367,7 +28367,7 @@
         "seleccion_relaciones_cofundadores",
         "compatibilidad_motivaciones_riqueza_control",
         "duos_vs_trios_fundadores",
-        "errores_comunes_asignacion_roles"
+        "seleccion_ceo_fundador"
       ],
       "nodos_siguientes": [
         "founder_ceo_succession_process",
@@ -28571,19 +28571,17 @@
       ],
       "nodos_siguientes": [
         "seleccion_relaciones_cofundadores",
-        "errores_comunes_asignacion_roles",
+        "seleccion_ceo_fundador",
         "evaluacion_capital_para_cofundadores",
         "cuantos_cofundadores_agregar",
         "evaluar_motivaciones_cofundadores",
         "relacion_previa_y_estructura_roles",
-        "asignacion_de_titulos_ejecutivos",
         "busqueda_cofundador_complementario",
         "convertir_unknown_unknowns_en_known_unknowns",
         "criterios_equity_split",
         "motivaciones_psicologicas_cofundadores",
         "reparto_inicial_equity",
         "seesaw_salario_equity",
-        "seleccion_ceo_fundador",
         "contratar_por_fortaleza",
         "framework_ones_and_twos",
         "compatibilidad_motivaciones_riqueza_control"
@@ -37092,7 +37090,7 @@
       ],
       "entregable_esperado": "Matriz de responsabilidades (RACI simplificado) que defina dominios de decisión por fundador",
       "nodos_previos": [
-        "asignacion_de_titulos_ejecutivos"
+        "seleccion_ceo_fundador"
       ],
       "nodos_siguientes": [
         "decision_egalitaria_vs_jerarquica"
@@ -43929,7 +43927,8 @@
         "En las primeras etapas de formación del equipo fundador, antes de asignar títulos formales",
         "Si el equipo está evitando una conversación difícil sobre quién lidera"
       ],
-      "etiqueta_arbol": "Evita Errores al Asignar Roles"
+      "etiqueta_arbol": "Evita Errores al Asignar Roles",
+      "deprecado": true
     },
     "errores_comunes_fundraising": {
       "node_id": "errores_comunes_fundraising",
@@ -54568,7 +54567,7 @@
         "dilema_riqueza_vs_control",
         "tamano_junta_directiva_vc",
         "transicion_post_sucesion",
-        "asignacion_de_titulos_ejecutivos",
+        "seleccion_ceo_fundador",
         "busqueda_ceo_sucesor_externo",
         "control_del_board_startup",
         "decision_egalitaria_vs_jerarquica",
@@ -95984,7 +95983,7 @@
         "alineacion_motivacional_cofundadores",
         "compatibilidad_motivaciones_riqueza_control",
         "decision_egalitaria_vs_jerarquica",
-        "errores_comunes_asignacion_roles"
+        "seleccion_ceo_fundador"
       ],
       "nodos_siguientes": [
         "vesting_dinamico",
@@ -101967,33 +101966,57 @@
       "dominio": "core",
       "titulo_concepto": "Decidir con intención quién será el CEO fundador",
       "fuente": "The Founder's Dilemmas",
-      "resumen_teorico": "La decisión de quién será CEO suele tomarse de forma casual o por defecto: la persona con la idea, o la que tiene la voz más fuerte, sin que evalúes realmente quién es el mejor candidato. Esta decisión pesa simbólica y realmente, y por la inercia propia de cualquier organización, es muy difícil revertirla sin causar disrupción. Tienes que evaluar activamente quién tiene la capacidad de liderar en las distintas etapas cambiantes de tu startup, no solo quién tiene pasión y visión inicial.",
+      "resumen_teorico": "La decisión de quién será CEO suele tomarse de forma casual o por defecto: la persona con la idea, o la que tiene la voz más fuerte, sin que evalúes realmente quién es el mejor candidato. Esta decisión pesa simbólica y realmente, y por la inercia propia de cualquier organización, es muy difícil revertirla sin causar disrupción. Tienes que evaluar activamente quién tiene la capacidad de liderar en las distintas etapas cambiantes de tu startup, no solo quién tiene pasión y visión inicial. La asignación de títulos ejecutivos (CEO, CTO, COO, etc.) entre cofundadores es una de las negociaciones más críticas y difíciles al inicio de un startup: los títulos tienen significado simbólico y traducen en autoridad real, afectando tanto la motivación interna como la percepción externa (inversores, empleados), y los factores que determinan quién recibe qué título incluyen el nivel de compromiso de cada fundador, si es la 'persona de la idea' original, y su capital humano, social y financiero (experiencia previa fundando, años de experiencia laboral, capital semilla invertido). Las 'personas de la idea' tienen 47% de probabilidad de convertirse en CEO vs 12% de los no-idea, pero este ajuste inicial puede debilitarse conforme la startup madura. Y existen 'caminos fáciles' que los equipos fundadores toman por evitar conflicto inmediato pero que generan problemas mayores a largo plazo: evitar el conflicto nombrando múltiples líderes, subestimar la 'inercia de títulos' (es difícil revertir un título mal asignado), inflar títulos C-level sin justificación real, querer aliados en la junta directiva, e ignorar motivaciones incompatibles entre socios.",
       "pasos_accionables": [
-        "Reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente",
-        "Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión",
-        "Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer)",
-        "Documenta el acuerdo formalmente para evitar ambigüedad futura"
+        "Evalúa la compatibilidad de motivaciones con tus socios antes de fundar juntos, y reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente: confronta el conflicto de frente en lugar de evitarlo con títulos ambiguos",
+        "Identifica quién es la 'persona de la idea' original en el equipo y evalúa objetivamente si es realmente la mejor opción para CEO",
+        "Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión, midiendo el nivel de compromiso (full-time vs part-time) de cada cofundador y mapeando el capital humano, social y financiero que aporta cada fundador",
+        "Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer), y sé cauteloso al asignar títulos C-level tempranamente, considerando el crecimiento futuro",
+        "Negocia explícitamente el título de CEO antes de que surjan conflictos, y evita colocar automáticamente a cofundadores en la junta directiva solo por lealtad",
+        "Documenta el acuerdo formalmente para evitar ambigüedad futura, dejando por escrito por qué se asignó cada título para futura referencia"
       ],
-      "entregable_esperado": "Un acuerdo fundacional por escrito que designe formalmente al CEO y explique la decisión con base en la capacidad de liderazgo de cada persona",
+      "entregable_esperado": "Un acuerdo fundacional por escrito que designe formalmente al CEO y los demás títulos ejecutivos, con la decisión de cada uno justificada por la capacidad de liderazgo y el aporte de cada persona, revisado antes de firmarlo contra un checklist de los errores comunes al asignar roles",
       "nodos_previos": [
         "decision_fundador_solo_vs_equipo",
         "decision_cuando_fundar",
         "evaluacion_dispassionate_idea",
         "evaluar_motivaciones_cofundadores",
         "coraje_en_decisiones_dificiles",
-        "compatibilidad_motivaciones_riqueza_control"
+        "compatibilidad_motivaciones_riqueza_control",
+        "seleccion_relaciones_cofundadores"
       ],
       "nodos_siguientes": [
         "criterios_equity_split",
         "composicion_board_directors",
         "riesgo_titulos_inflados",
-        "embrace_the_struggle_liderazgo_autentico"
+        "embrace_the_struggle_liderazgo_autentico",
+        "decision_egalitaria_vs_jerarquica",
+        "division_de_labor_vs_roles_superpuestos",
+        "founder_ceo_succession_process",
+        "reparto_inicial_equity"
       ],
       "condiciones_activacion": [
-        "Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO",
-        "Si existe ambigüedad o conflicto latente sobre quién lidera tu equipo"
+        "Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO, o están por definir roles formales en las primeras etapas de formación del equipo, antes de asignar títulos formales",
+        "Si existe ambigüedad o conflicto latente sobre quién lidera tu equipo, hay tensión sobre quién debe ser CEO, o el equipo está evitando una conversación difícil sobre quién lidera",
+        "Cuando se está preparando documentación para inversionistas"
       ],
-      "etiqueta_arbol": "Elige con Cuidado a Tu CEO"
+      "etiqueta_arbol": "Elige con Cuidado a Tu CEO",
+      "ids_alias": [
+        "asignacion_de_titulos_ejecutivos",
+        "errores_comunes_asignacion_roles"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "asignacion_de_titulos_ejecutivos",
+          "titulo": "Asignación de Títulos Ejecutivos en el Equipo Fundador",
+          "fuente": "The Founder's Dilemmas"
+        },
+        {
+          "node_id": "errores_comunes_asignacion_roles",
+          "titulo": "Errores Comunes al Asignar Roles entre Cofundadores",
+          "fuente": "The Founder's Dilemmas"
+        }
+      ]
     },
     "seleccion_consultor_franquicias": {
       "node_id": "seleccion_consultor_franquicias",
@@ -102744,7 +102767,7 @@
         "decision_de_vender_startup",
         "decision_egalitaria_vs_jerarquica",
         "duos_vs_trios_fundadores",
-        "errores_comunes_asignacion_roles"
+        "seleccion_ceo_fundador"
       ],
       "condiciones_activacion": [
         "Cuando el fundador está evaluando a candidatos específicos para incorporar como cofundadores.",
@@ -122862,7 +122885,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 11,
+    "nodos_sin_enlaces_entrantes": 13,
     "enlaces_rotos_en_grafo": 0
   }
 }
