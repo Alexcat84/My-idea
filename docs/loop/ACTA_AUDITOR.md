@@ -7855,3 +7855,272 @@ credenciales, no hicieron falta.
 
 **EL BUCLE SE DETIENE. PARA_ALEXIS.md escrito con las tres decisiones, el estado
 exacto y como retomar. PROMPT_SIGUIENTE.md queda VACIO.**
+
+# ACTA DE LA VUELTA 38 DEL AUDITOR (19 ago 2026, Fable 5). CONVOCADO POR LA DECISION 2 DEL FUNDADOR Y POR EL REPORTE QUE PIDE VERIFICACION COMPLETA, TODO RE-CORRIDO POR CORRIDA PROPIA Y BYTE IGUAL DONDE APLICA, LA CIEGA COINCIDE 5 DE 5, UNA CAIDA DE REPORTE DEL EJECUTOR CON NOMBRE, Y LA PARADA DE DOCTRINA ADJUDICADA POR LETRA CITABLE: LA AUTORIZACION DEL FUNDADOR GOBIERNA Y LAS DOS FUSIONES QUEDAN AUTORIZADAS PARA LA VUELTA 39
+
+## 0. SIN HUECO DE ACTA, y la convocatoria dicha con su regla
+
+La ultima acta escrita cubre la vuelta 37, que es la inmediatamente anterior.
+Esta acta audita LA VUELTA 38 y no hay hueco.
+
+La convocatoria es doble y las dos vias mandan lo mismo: la DECISION 2 del
+fundador (19 ago 2026, registrada en la nota de OP-D-04 y en BANCO_DEL_PLAN
+junto a P.5, leidas hoy) dice que la fusion ESPERA EL ACTA DEL AUDITOR, y el
+reporte abre pidiendo verificacion completa de las tres lecturas y de las dos
+elecciones, con una PARADA DE DOCTRINA declarada en su seccion 7 que solo el
+auditor adjudica. Verificacion COMPLETA, re-corrida por mi, no heredada.
+
+## 1. VERIFICACION, todo por corrida propia de hoy (19 ago 2026)
+
+- Rama pasada-unica, HEAD 9ebb9fbd, arbol limpio. TRES commits desde el acta
+  97d2474d: f734ab67 (la decision del fundador, previa a la vuelta, leida
+  entera), 1b2f3dd5 (el commit unico de la vuelta) y 9ebb9fbd (el hash final
+  anadido al reporte: +4/-2 sobre REPORTE.md y nada mas, medido con git show
+  --stat). El mecanismo del tercer commit es el que el propio reporte declara:
+  el hash se anade despues de commitear, que es la unica forma de citarlo sin
+  inventarlo.
+- git diff f734ab67..1b2f3dd5 --stat corrido hoy: 26 ficheros y 366 borradas
+  IDENTICOS al reporte; insertadas 4.044 contra las 4.043 publicadas. LA CIFRA
+  NO REPRODUCE POR UNA LINEA y va a la seccion 3 como caida de reporte.
+- dataset/ y web/: diff vacio contra f734ab67, CERO ficheros tocados. Los
+  cuatro archivos (INTRA_DOMINIO_VEREDICTOS.jsonl, INTRA_DOMINIO_PARES.jsonl,
+  RACIMOS_MIEMBROS.jsonl, plan/OPERACIONES.jsonl) con diff vacio: intactos.
+- EL ESTADO RE-CORRIDO POR MI (vuelta31_estado.py): 3.388 / A 575 / B 83 / C 8
+  / D 2.722, tasa 17,0, huecos 0, duplicados 0, fuera de ABCD 0; grafo 3.853
+  ficheros, 3.853 ids, 3.538 vivos, 315 deprecados; enlaces 16.849 con 15
+  claves; familias 72 / 93 / 111 / 75 / 47; 71 operaciones LISTA con 0
+  dependencias rotas; inventario 672. IDENTICO AL DIGITO a la tabla del
+  reporte.
+- EL MARCADOR POR SEGUNDA VIA (vuelta38_marcador.py re-corrido): n 3.388, A
+  575, B 83, C 8, D 2.722, y la suma cuadra. Identico al de la vuelta 37, que
+  es lo que tenia que dar: esta vuelta no emitio ni un veredicto.
+- LA APERTURA NO MEDIDA POR SEPARADO: la falta la declara el propio ejecutor
+  contra la regla 1 de EJECUTOR.md (tercer parrafo, leido hoy), con la
+  mitigacion medida: los cuatro insumos del instrumento intactos contra
+  f734ab67, verificado por diff propio. Falta de procedimiento declarada con
+  cero cifras contaminadas: se registra con nombre y no puntua como caida.
+- LA GUARDA DE LA TANDA RE-CORRIDA (vuelta38_ld_racimo.py): racimo mixto
+  confirmado por medicion (brainstorming de quality, los tres del taller de
+  core), los tres pares SIN veredicto sobre 3.388 filas, los tres FUERA de
+  cola (n no se mueve), los cuatro nodos vivos. LA NUMERACION: el instrumento
+  propone LD-99 porque cuenta el encargo como escrito; el ejecutor uso 96 a
+  98, que son los que la decision del fundador nombra, con la salvedad
+  declarada en el reporte y en la tanda; el LD mas alto escrito como LECTURA
+  antes de esta vuelta era el 95, verificado por barrido propio. Discrepancia
+  instrumento contra letra DECLARADA en vez de copiada: conforme a la regla 2.
+- LOS TRES PARES PREVIOS DEL RACIMO leidos del archivo por comando propio:
+  234, 823 y 834, los tres A, y ninguno toca a brainstorming; 823 y 834 citan
+  FAMILIA DECLARADA por nombre y 234 no. Identico a la tabla del reporte.
+- LAS DOS SIMULACIONES RE-CORRIDAS POR MI con el acto entero en el parametro
+  del acto: BYTE IGUAL las dos contra SALIDA_V38_SIM_TALLER.txt y
+  SALIDA_V38_SIM_ALTERNANCIA.txt. Las cifras del reporte (17 y 5
+  redirecciones, 0 y 1 deprecados nombrados sin tocar, 1 y 1 duplicadas
+  nuevas, 0 y 0 auto aristas, 16 y 4 cojas) salen de esas salidas y ademas
+  cuadran entre si: 17 menos 1 duplicada da 16, y 5 menos 1 da 4.
+- EL TRIANGULO RE-CORRIDO (vuelta38_triangulos.py): BYTE IGUAL. Cableados 13 /
+  11 / 4 y 5 / 3 / 2, cotejados ademas a mano contra los ficheros de nodos.
+- EL VERIFICADOR DE MAPAS RE-CORRIDO CON LOS CINCO PLANES SELLADOS: 5 tablas,
+  31 filas, 0 discrepancias, vara 1 y vara 2 CORRIDAS. Identico a la salida.
+- LAS TABLAS DE PERDIDAS IMPRESAS DEL PLAN por comando propio: 14 piezas (9
+  VIAJA, 4 VIVE DENTRO, 1 YA NO APLICA) en el taller y 11 (8, 2, 1) en la
+  alternancia. Identicas a la salida guardada y al reporte.
+- EL SELLADO NO TECLEADO, verificado de las dos puntas: los 13 pasos de origen
+  del plan del taller son VERBATIM contra dataset/nodos (13 de 13 por
+  comparacion propia), y la particion coloca cada origen EXACTAMENTE una vez
+  (2+1+4+1+2+1+2 = 13 en 7 grupos), con el orden relativo del superviviente
+  conservado y lo que viaja en cabeza y cola, tal como el plan declara.
+- EL PRECEDENTE DE LA SIMETRIZACION IDO A MIRAR POR MI: git show de
+  72c718ea:dataset/metadata/phase1_run_log.json trae symmetrize_added con las
+  aristas que el superviviente de OP-D-02 gano. Los dos planes llevan
+  simetrizacion_esperada con 16 y 4 aristas y su guarda de exactitud. La
+  reciprocidad re-medida hoy: 99,59 por ciento (15.448), identica.
+- EL INSTRUMENTO TOCADO (vuelta33_tabla_mapa.py) leido en diff propio: UNA
+  cabecera alterna para tablas de condiciones, el motivo escrito dentro del
+  codigo, y un cambio de una linea en el flujo. La vara no se afloja: las
+  condiciones dejan de poder disfrazarse de tabla de pasos.
+- OPERACIONES.jsonl leido hoy: OP-D-04 con superviviente en null y nota de
+  7.053 caracteres; OP-D-02 con superviviente unico escrito; OP-D-03 en null
+  con la verdad en su nota. El precedente que usa la adjudicacion a4 esta
+  medido, no recordado.
+- GATE 0 CORRIDO POR MI CON EL CICLO ENTERO (run_phase1 con reaplico de
+  curaduria, etiquetas_de_cara aplicadas con 71 etiquetas, sync_assets_web con
+  seis assets): exit 0, GATE 0 OK, 3.853 compilados, 3.538 activos y 315
+  deprecados, y el arbol BYTE IGUAL (git status vacio tras el ciclo).
+- SUITES POR CORRIDA PROPIA: motor 25 de 25, exit 0; web 80 ficheros, 1.030
+  pasadas y 3 saltadas, exit 0; tsc sin emitir, cero lineas, exit 0.
+- LA DOCTRINA LEIDA DE SUS PAGINAS HOY: la excepcion de una vez junto a P.5
+  con su tabla de dos filas, FAMILIA DECLARADA en INTRA_DOMINIO_INFORME.md,
+  P.7, P.8 (prelacion, no desprecio, y el alcance del rol), P.10, P.13, 9.6.1
+  a 9.6.3, los dos polos del 9.22 con su caso corriente, el 67.6, y el
+  criterio de la arista del 15 ago en 02_DESTEJIDOS. Todas dicen lo que el
+  reporte les atribuye.
+
+## 2. RELECTURA CIEGA, empezando por los discutibles marcados
+
+Los siete nodos de los dos triangulos mas el cuarto miembro impresos ENTEROS
+por mi (titulo, resumen, pasos, entregable, aristas) ANTES de destapar la
+undecima tanda de LECTURAS_DIRIGIDAS.md y los campos eleccion_p8 de los
+planes. Adjudique clase y superviviente por mi cuenta y SOLO DESPUES lei lo
+escrito.
+
+| pieza | mi lectura a ciegas | la escrita | resultado |
+|---|---|---|---|
+| LD-96, discutible 1 | D: el residuo de Juran fuera del solape es procedimiento (turnos, corte por fatiga, y el despues de procesar y desduplicar) y el residuo de brainstorming_divergente son dos calificativos; procedimiento en UN sentido, caso corriente del 9.22 | D | COINCIDE |
+| LD-97 | D: el residuo de brainstorming_efectivo son criterios (composicion del grupo, separacion de sesiones), linea por el 67.6; la arista mutua ya vive en los dos ficheros, vista por mi | D | COINCIDE |
+| LD-98, discutible 2 | D: la inmersion previa es un puntero cuyos procedimientos viven en equipos_visita_cliente y etnografia_investigacion_usuario, ya cableados como previos del propio nodo; el resto de Juran es procedimiento | D | COINCIDE |
+| eleccion del taller | reglas_brainstorming: el unico que cubre los cinco momentos de la sesion y el que entrega mas lejos, con el cableado 13 a 11 EN CONTRA y sin usarse | reglas_brainstorming | COINCIDE |
+| eleccion de la alternancia | pensamiento_convergente_divergente: el unico con los dos movimientos (el embudo y el descarte) y con entregable que dura | pensamiento_convergente_divergente | COINCIDE |
+
+CINCO DE CINCO EN EL FONDO, CERO DISCREPANCIAS, CERO FUERA DEL MARCADO. Y las
+razones escritas usan las mismas varas que yo use a ciegas, punto por punto.
+
+## 3. LAS CAIDAS, con nombre
+
+- DEL EJECUTOR, UNA, DE REPORTE: las insertadas del diff publicadas en 4.043
+  cuando el diff del commit da 4.044 (los 26 ficheros y las 366 borradas
+  calzan). Vive solo en REPORTE.md y no mueve ningun dato. La especie es la
+  del autoconteo: medir un diff con el propio reporte dentro y seguir
+  escribiendo encima. La relectura al doble del tramo que la regla manda quedo
+  cubierta con creces: TODAS las cifras del reporte se re-corrieron en la
+  seccion 1 y las demas calzan al digito. NO acumula para la parada (regla del
+  13 ago 2026). Racha de caidas de reporte: UNA.
+- La apertura no medida por separado: falta de procedimiento DECLARADA por el
+  propio ejecutor con su mitigacion medida. Registrada arriba, no puntua.
+- DEL AUDITOR: CERO. Una nota de metodo que se declara sola: mi primera
+  corrida de la simulacion paso solo el triangulo en el parametro del acto y
+  difirio de la salida guardada; la causa era mi invocacion, no el
+  instrumento, y la corrida con el acto entero dio byte igual. Nada de la
+  corrida coja se publico.
+
+## 4. ADJUDICACIONES
+
+1. **a1, LD-96 SOSTENIDA EN D POR LETRA.** El argumento de la A invoca el
+   segundo polo del 9.22, y ese polo exige LINEA EN LOS DOS SENTIDOS: aqui la
+   direccion de Juran hacia divergente devuelve PROCEDIMIENTO (el arco de
+   conduccion y el despues de procesar), asi que el polo no aplica. El 9.6.3
+   prohibe pesar el solape (lo que se pesa es el resto, y el resto de Juran es
+   procedimiento). Y el precedente del 823 NO VIAJA: alli el residuo era linea
+   en los dos lados (dos listas de reglas del mismo libro), otra anatomia.
+   Contar los gestos propios del nodo compacto es la pregunta invertida que el
+   9.6.2 prohibe. NO HAY A: la condicion de parada de la DECISION 3 no se
+   dispara.
+2. **a2, LD-98 SOSTENIDA EN D POR LETRA, y el pendiente 3 del reporte (la
+   clase de un puntero con casa propia) ADJUDICADO POR EXTENSION CITABLE:** el
+   67.6 dice que un puntero es LINEA, y la prueba del 9.6.2 dice que un paso
+   es procedimiento cuando existe el hijo que lo ejecuta. Cuando ese hijo
+   existe como NODO VIVO YA CABLEADO como vecino del propio nodo, el paso es
+   el puntero y el procedimiento vive en el vecino: dentro del par no hay
+   procedimiento nuevo que pesar. No es doctrina nueva: son dos letras
+   escritas aplicadas juntas. Elevarlo a regla numerada queda como
+   recomendacion de registro, no como necesidad.
+3. **a3, LA PARADA DE DOCTRINA DE LA SECCION 7 DEL REPORTE: FAMILIA DECLARADA
+   NO GOBIERNA LAS TRES LECTURAS.** Lo adjudico como choque entre reglas, que
+   es potestad escrita del auditor (AUDITOR.md seccion 2: resuelves choques
+   entre reglas), con TRES letras citables y ninguna nueva:
+   - EL ORDEN DE LAS FUENTES YA ESTA ESCRITO. AUDITOR.md seccion 0 fija las
+     fuentes de verdad EN ESTE ORDEN, y la excepcion del fundador con su tabla
+     de resultados vive en docs/plan/BANCO_DEL_PLAN.md, fuente de rango 1,
+     mientras FAMILIA DECLARADA vive en docs/INTRA_DOMINIO_INFORME.md, fuente
+     de rango 3. El ejecutor dice que no hay regla escrita que ordene una
+     autorizacion especifica posterior frente a una regla general anterior:
+     para ESTE choque no hace falta, porque las dos paginas ya estan ordenadas
+     por el protocolo mismo.
+   - LA TABLA DEL FUNDADOR TIENE DOS FILAS (las tres dan D, o alguna da A), y
+     una tabla de dos resultados solo tiene sentido si la clase sale de la
+     LECTURA. Leerla bajo FAMILIA DECLARADA dejaria una sola fila posible y
+     vaciaria la autorizacion entera: interpretar una decision expresa del
+     fundador como letra muerta no esta al alcance del bucle.
+   - LA PROPIA LETRA DE LA REGLA SE SOSTIENE, NO SE PISA. La regla no pelea la
+     clase PORQUE la decision ya esta tomada en otro sitio, y ella misma dice
+     que ahorra discusion, no observacion. El ejecutor midio que ese otro
+     sitio (una mesa de la fase 06) no existe para este racimo; el UNICO otro
+     sitio que hoy existe es la decision del fundador del 19 ago, y su
+     contenido ES ordenar las tres lecturas. Aplicada por su propio
+     fundamento, la regla apunta a la decision. Y su clausula operativa (se
+     registra con la clase que la silueta indique) gobierna el REGISTRO de
+     pares de cola: las tres LD estan fuera de cola, sin veredicto y sin mover
+     n, medido hoy.
+   CONSECUENCIA: las tres D valen, el racimo queda decidido por la tabla del
+   fundador, el cuarto miembro se enlaza al superviviente del taller (y el
+   enlace lo pone la fusion sola, medido en el bloque 6 de la simulacion), y
+   LAS DOS FUSIONES QUEDAN AUTORIZADAS. Los tres pares A ya escritos del
+   racimo (234, 823, 834) NO SE TOCAN: FAMILIA DECLARADA sigue entera para los
+   pares de cola de racimos declarados.
+4. **a4, EL CAMPO superviviente CON DOS SUPERVIVIENTES (pendiente 2 del
+   reporte): EL CAMPO QUEDA EN NULL** y la verdad va en la nota de cierre de
+   OP-D-04 nombrando los dos supervivientes y los dos planes sellados. Letra:
+   el precedente de OP-D-03, que cerro sin fusion con superviviente en null y
+   la verdad en su nota (leido hoy del archivo), y la disciplina de no
+   estrenar formato sin pagina. Escribir uno solo mentiria por omision;
+   estrenar una lista es decision de esquema, o sea de la casa: va como
+   recomendacion al fundador y no bloquea.
+5. **a5, EL ORDEN DEL NODO DEL TALLER: PROCEDE.** Conserva el orden relativo
+   del superviviente entero, y la rareza de capturar antes de calentar ya
+   vivia en el superviviente (sus pasos 4 y 5 iban en ese orden). Reordenar
+   seria fabricar una secuencia que ningun origen dice, la especie contra la
+   que P.13 avisa.
+6. **a6, TITULO Y ETIQUETA SIN CAMBIO: PROCEDE PARA ESTA FUSION.** Ninguna
+   operacion escribe un renombre y tocar titulo de catalogo es de la casa. El
+   aviso de P.8 (una cabeza que vale para la sesion entera no deberia llamarse
+   como una sola de sus partes) es real y va como pendiente de catalogo al
+   fundador; no bloquea.
+7. **a7, NO PARAR LA VUELTA A MEDIAS (seccion 7 del reporte, que el ejecutor
+   dejo dicho para discutirse): CONFORME.** La regla 5 de EJECUTOR.md dice tal
+   cual: lo escribes en el reporte como PARADA y no lo arreglas tu; no ordena
+   abortar la vuelta. Con cero nodos tocados el coste de seguir fue cero y la
+   parada llego entera al auditor, que es lo que la regla busca.
+
+## 5. PENDIENTES, nombrados
+
+1. RECOMENDACION AL FUNDADOR, no bloquea: una linea general de prelacion (una
+   autorizacion expresa posterior y especifica gobierna sobre una regla
+   general anterior) evitaria la tercera aparicion de este choque; hoy se
+   resolvio por el orden de fuentes de AUDITOR.md seccion 0, que alcanza para
+   este caso.
+2. RECOMENDACION AL FUNDADOR, no bloquea: el esquema de OPERACIONES.jsonl
+   frente a operaciones con dos supervivientes (a4), y el titulo del nodo del
+   taller (a6).
+3. Heredados de actas previas: el recomputo no ve las dirigidas (pertinente al
+   cierre de OP-D-04, hoy inocuo porque las tres son D y no unen componentes),
+   el estado HECHA que no existe, el acto que se parte en dos, y los
+   pendientes 5 a 9 de la vuelta 36. Siguen vivos y ninguno bloquea.
+
+## 6. METRICA DE CREDITO acumulada
+
+Entrante (acta de la vuelta 37): 50 relecturas, 431 puestos (mas 223 nodos de
+forma y 81 sitios de codigo), 7 caidas de clase, 15 de reporte del ejecutor, 7
+de cifra publicada del ejecutor, 2 de cifra del auditor, 2 de acta del auditor.
+
+Esta tanda (vuelta 38): mas 8 puestos de fondo (LD-96, LD-97, LD-98 y las dos
+elecciones de P.8 a ciegas; 234, 823 y 834 releidos razon contra archivo); mas
+7 nodos leidos enteros; mas 20 sitios de codigo o instrumentos re-corridos
+(los dos diffs propios, el estado, el marcador por segunda via, la guarda del
+racimo, familia declarada, la reciprocidad, el triangulo byte igual, las dos
+simulaciones byte igual, las dos tablas de perdidas, el verificador con los
+cinco planes, el verbatim y la particion del sellado, el precedente en git,
+OPERACIONES, el diff del instrumento tocado, el ciclo entero de Gate 0 con
+byte igual, motor, web y tsc). Caidas: UNA de reporte del ejecutor, CERO del
+auditor.
+
+**Acumulado: 50 relecturas, 439 puestos (mas 230 nodos de forma y 101 sitios
+de codigo), 7 caidas de clase, 16 de reporte del ejecutor, 7 de cifra
+publicada del ejecutor, 2 de cifra del auditor, 2 de acta del auditor.**
+
+**Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte
+seguidas: UNA.**
+
+## 7. CONDICIONES DE PARADA, recorridas: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. El unico candidato era la seccion 7 del reporte y quedo
+  adjudicado por letras ya escritas (a3).
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NO. Las tres decisiones que la vuelta 37 le pidio
+  estan tomadas y registradas; ejecutar las fusiones tras el acta es
+  EXACTAMENTE lo que su DECISION 2 escribe.
+- Fallo tecnico repetido: NO, todo verde por corrida propia.
+- Credito roto: NO. Rachas de clase o cifra en cero; una caida de reporte,
+  primera de su racha.
+- Campana consumada: NO. Credenciales: no hicieron falta.
+
+**EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: la vuelta 39 ejecuta
+las dos fusiones selladas, cierra OP-D-04 y retoma el modo continuo.**
