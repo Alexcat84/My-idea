@@ -2882,3 +2882,107 @@ Y su punto **1** reparte el trabajo con nombre: *si `P.7` (la simulacion previa 
 4. **Enlace mutuo del 494**: **pendiente vivo de la fase 04**, re-medido por el auditor en los dos sentidos y sigue sin haber ninguna de las dos aristas.
 
 **NINGUNA CONDICION DE PARADA SE CUMPLE** (acta, seccion 7, linea 9431), y su renglon de *campana consumada* nombra exactamente lo que esta vuelta 44 tiene por delante: **faltan 392, 711 y 969, el cierre de `OP-D-06`, y todo lo que el `00_INDICE` tiene detras** (linea **9443**).
+
+## `OP-D-06`, ACTO 6 DE NUEVE (puesto 392): **`metricas_de_adquisicion_activacion` ABSORBE A `build_metrics_toolset`** (19 ago 2026, vuelta 44)
+
+### EL DESTEJIDO DEL ACTO: **YA ESTABA HECHO, y esta vez se comprueba POR PARTIDA DOBLE**
+
+`scripts/loop/vuelta41_lectura_acto.py --puesto 392`, sellado en `docs/loop/SALIDA_V44_ACTO392_LECTURA.txt`, bloque (b), sobre la cola que el instrumento ya entrego (**1.493** nodos): **LOS DOS NODOS ESTAN FUERA DE LA COLA**. El instrumento **no cita a ninguno de los dos**, asi que **no hay cita que registrar ni que despachar**, y es el primer acto de `OP-D-06` en el que eso pasa. Los cinco anteriores trajeron al menos una cita.
+
+**Y ESA AUSENCIA NO ES LA COSTURA QUE LA RAZON DESCRIBIA**, leida entera hoy en el bloque (d) de la misma salida:
+
+> *LATERAL, no cambia la clase: el segundo tiene nueve pasos y del 6 al 9 entra otro bloque, definir que es una conversion, calcular clics y costo por campana, comparar costo de adquisicion contra valor de vida, y usar SEM para aprender que mensaje funciona. Costura para la otra ficha.*
+
+**SE DESTEJIO, y lo desteji `OP-F-04-WEI`.** `docs/plan/01_FUENTES.md` linea **952** publica la frontera leida (**1 a 5 / 6 a 9**) con el bloque nombrado pieza a pieza, y la linea **985** publica el miembro receptor: `sem_estrategia_ejecucion`, *porque el bloque entero es la cuenta de una campana de busqueda y su ultimo paso nombra el canal*.
+
+**LA MEDICION DE HOY LO CONFIRMA POR PARTIDA DOBLE, y las dos mediciones son de esta vuelta:**
+
+| lo medido | el instrumento | como salio |
+|---|---|---|
+| **el nodo hoy** | `vuelta41_lectura_acto.py --puesto 392`, bloque (c) | `metricas_de_adquisicion_activacion` tiene **CINCO** pasos, que son **exactamente los cinco primeros** de los nueve |
+| **el commit que lo corto** | `git log --follow` sobre el fichero mas `git show <commit>:<fichero>` | **`1eef1c6b`**, *OP-F-04-WEI segunda tanda*: **9 pasos antes, 5 despues**. Los cuatro commits anteriores del fichero miden **9** |
+| **el bloque, que NO se perdio** | lectura directa de `dataset/nodos/sem_estrategia_ejecucion.json` | sus pasos **9 a 12** son las cuatro piezas una a una: definir que es una conversion, **CTR** y **CPC** y **CPA** por campana, comparar el costo de adquisicion contra el **LTV**, y usar **SEM** para aprender que mensaje funciona |
+
+`OP-F-04-WEI` figura **HECHA en su nota 3541 SI** en la apertura de esta vuelta (`docs/loop/SALIDA_V44_APERTURA.txt`). **Fuente primero, satisfecha POR PRECEDENCIA**, con la misma comprobacion que el 344 y el 361.
+
+### `P.5`: **UNA FAMILIA DE DOS**, y es el acto con MAS terceros de toda la operacion
+
+El par **392** es **clase A** y su razon **NO nombra ganador**: la vara del verbo de `9.3.1` da **NO, es POR ELEGIR**. Los pares del archivo que meten un tercero son **OCHO** (**681**, **699**, **900**, **990**, **1011**, **1226**, **1282**, **1545**) y **los ocho son D**: **CERO terceros de clase A**, asi que **el acto ES de dos**, como la tabla sellada dice.
+
+> **OCHO TERCEROS CONTRA LOS CUATRO DEL 344 Y LOS DOS DEL 361.** Este par vive en el barrio mas poblado del catalogo (las metricas), y **la guarda de transitividad sobre las A es justo la que impide que ese barrio se cuele en el acto**. Se deja escrito porque es la primera vez en la operacion que la guarda tiene tanto que rechazar.
+
+**CERO pares vuelven a la cola de relectura post fusion**, porque entre los ocho terceros **no hay ni un B ni un C**. **El marcador de clases no se movera por este acto.**
+
+**LA FUENTE, DICHA COMO SE MIDE Y NO COMO CONVIENE:** el instrumento imprime **FUENTE MIXTA (2 fuentes distintas medidas)**, pero las dos cadenas nombran **EL MISMO LIBRO**: *The Startup Owner's Manual* contra *The Startup Owner's Manual - Steve Blank*. **Es la CUARTA vez en esta operacion que la etiqueta sale mixta por forma y no por libro** (el 331 por los autores, el 341 por la edicion, el 344 por el orden del nombre, y este por la ausencia del autor). La fuente del superviviente **no se toca**.
+
+### `P.8` EN ORDEN: **manda el CONTENIDO, y el reparto escrito apunta al mismo lado**
+
+**EL CONTENIDO, leido primero:**
+
+1. **UNO DICE QUE MEDIR Y EL OTRO SOLO DICE QUE HAY QUE MEDIR**, y esa es la diferencia entera. `build_metrics_toolset` nombra los grupos (*adquisicion, activacion, referidos*) y **no da una sola metrica**; `metricas_de_adquisicion_activacion` da **SIETE con nombre** en dos pasos: visitas totales, de donde vienen, cuantas convierten, cuanto cuesta conseguir cada cliente, que porcentaje se activa segun la fuente, cuanto cuesta cada activacion, y que tan buena es la calidad de esos usuarios. **Es exactamente la SEGUNDA APLICACION escrita de `P.8`**, la del acto II del racimo del pivote, donde sobrevivio el que llevaba el material propio **aunque el cableado fuera diez contra cinco**.
+2. **EL REPARTO ESCRITO DE LA TABLA SELLADA NOMBRA AL DONANTE SIN NOMBRARLO.** La linea **1143** de este mismo fichero, leida hoy, manda preservar *en la fusion: que el sistema escale luego a retencion y cohortes, **DE `build_metrics_toolset`***. **Una pieza solo se manda rescatar DE alguien cuando ese alguien deja de existir**: si `build_metrics_toolset` sobreviviera, su quinto paso no necesitaria que nadie lo preservara. Y la otra mitad de la misma linea (*con el destejido: definir que es una conversion, comparar el CAC contra el LTV, y usar SEM*) es el bloque **6 a 9 del superviviente**, que es de quien habla la fila entera. **Esto es contenido del plan sellado, no cableado.**
+3. **LA VARA DEL ALCANCE DEL ROL, Y AQUI ES DONDE APRIETA, asi que se dice entera en vez de elegir el lado comodo.** `P.8` cuenta como contenido *el ALCANCE DEL ROL*, y el acta de la vuelta 43 extendio la vara a la direccion inversa en su **D3**: *un nodo tampoco se llama por dos fases cuando su procedimiento solo ejecuta una*. El titulo del superviviente dice **(adquisicion y activacion)** y el resultado nombrara ademas **referidos**.
+   > **LA LECTURA FINA, medida sobre los seis pasos del resultado:** los unicos **DOS** que **MIDEN** son el de adquisicion y el de activacion. **Ninguno manda medir referidos, ni retencion, ni cohortes**: los referidos entran como **CATEGORIA de la seleccion** y las cohortes como **CAPACIDAD FUTURA del tablero**. La frontera entre **preparar** y **ejecutar** es la que el acto **344** dejo adjudicada por el acta (*los dos la DEJAN LISTA, que no es lo mismo*). **El titulo nombra lo que el procedimiento MIDE, y eso sigue siendo adquisicion y activacion.** **LA TENSION SE DECLARA IGUAL Y VA MARCADA COMO DISCUTIBLE.**
+4. **EL TITULO DEL DONANTE NO SE PUEDE ARREGLAR EN UNA FUSION, y eso importa para elegir.** La **guarda 12** del ejecutor (a6 del acta) obliga a dejar **titulo y etiqueta del superviviente INTACTOS**, asi que lo que se elige aqui es **el nombre definitivo del resultante**. El del donante es *Construir un Toolset de Metricas Clave* con etiqueta *Arma tu Set de Metricas*: **dos anglicismos crudos** en un catalogo cuyo canon de voz prohibe la jerga (`docs/BANCO_DE_TEXTOS.md`), y sus cinco pasos estan **en infinitivo** (*Identificar*, *Seleccionar*, *Instrumentar*), que es la voz vieja anterior al redactor, mientras el superviviente ya esta en la voz de hoy (*Define*, *Quedate*, *Mide*, *Arma*). **Elegir al donante congelaria esa jerga en el grafo para siempre.** Es argumento de forma y **va el cuarto a proposito: no decide, acompana**.
+5. **PIEZAS PROPIAS DEL DONANTE QUE NADIE MAS TIENE** y que por eso viajan enteras: **INSTRUMENTAR EL PRODUCTO** para capturar cada clic y su fuente de trafico (**la unica linea de los dos nodos que dice de donde salen los datos**, y la mas cara de perder), la hipotesis de relacion como pieza **del modelo de negocio**, los **referidos** como tercer grupo de la seleccion, el *o comprar* del tablero y su *en tiempo real*, y la escalabilidad a **retencion y cohortes**, que es la que el reparto escrito manda preservar.
+
+**Superviviente: `metricas_de_adquisicion_activacion`.**
+
+**EL CABLEADO, citado DESPUES:** grado por `P.1` de **7** contra **6**.
+
+> **UNA ARISTA DE MARGEN, que es exactamente el ejemplar escrito de `P.8` (3 contra 2) y exactamente el caso en el que la propia regla dice que UNA ARISTA DE MARGEN NO VENCE A NINGUNA de las dos cosas que cuentan como contenido.** Va **a favor** del elegido, y **por eso no suma nada**: si hubiera ido en contra, tampoco habria movido la eleccion. **El acto que llevo el peso de verdad fue el 361**, donde el cableado empato 6 a 6 y el contenido decidio solo.
+
+> **Y EL COSTE DE LA ELECCION ESTA MEDIDO: CERO aristas.** Los dos nodos tienen **CERO aristas propias sin reciproco**.
+
+### EL MAPA DE MOVIMIENTO, celda a celda
+
+**Prefijos:** `M` = `metricas_de_adquisicion_activacion` (superviviente), `B` = `build_metrics_toolset` (absorbido).
+
+**Las dos tablas se IMPRIMEN y no se teclean**, generadas del plan sellado con `python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V41_ACTO392.json` y `... --campo grupos_condiciones`:
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | M1, B1 | EL MISMO ARRANQUE CON SU PROCEDENCIA. Los dos empiezan por la relacion con el cliente: el superviviente manda definirla y sacar de ahi las metricas, y el donante manda identificarla como HIPOTESIS DEL MODELO DE NEGOCIO. La pieza del donante no es otra accion, es de donde sale la del superviviente, y separarlas dejaria un primer paso que manda definir una relacion sin decir de que documento se saca. Se funden porque son el mismo momento, que es la vara del 344 y del 341. |
+| **2** | M2, B2 | EL MISMO TOPE CON SUS TRES GRUPOS NOMBRADOS. Los dos mandan quedarse en menos de doce y los dos piden que sirvan para decidir; el donante ademas NOMBRA en el paso los tres grupos en que se organizan, y el superviviente solo nombraba dos y en su resumen, no en el paso, que es justo donde hacen falta. LOS REFERIDOS SON LA UNICA PIEZA DE ESTE ACTO QUE ENSANCHA EL ALCANCE Y SE DICE ASI EN VEZ DE COLARLA: entran como CATEGORIA de la seleccion, no como medicion propia, porque ningun paso del acto manda medir referidos. Perderla seria borrar en la fusion lo unico que el donante nombraba de mas. |
+| **3** | B3 | PIEZA PROPIA DEL DONANTE, sin equivalente en ningun paso del superviviente, y es la mas cara de perder del acto: es el UNICO paso que dice como se consiguen los datos. El superviviente lo daba por hecho (su resumen dice 'mide cada clic', pero su procedimiento arranca ya con los datos puestos), y un tablero de metricas sin el producto instrumentado detras es un tablero vacio. Va en tercer lugar a proposito, entre elegir que medir y medirlo, porque es lo que hay que hacer en medio. |
+| **4** | M3 | PIEZA PROPIA DEL SUPERVIVIENTE, y es la mitad del corazon del acto. El donante nombra el grupo 'adquisicion' y no dice ni una sola metrica suya; aqui estan las cuatro con nombre. Va en grupo propio porque medir la adquisicion y medir la activacion son dos mediciones distintas sobre dos poblaciones distintas, y juntarlas en un paso convertiria el paso mas util del acto en una lista de ocho cosas. |
+| **5** | M4 | PIEZA PROPIA DEL SUPERVIVIENTE, y es la otra mitad del corazon. Misma razon que el anterior y una mas: esta es la que cruza la activacion CON LA FUENTE, que es lo que permite comparar canales, y es la unica linea de los dos nodos que habla de la CALIDAD de los usuarios y no solo de su numero. |
+| **6** | M5, B4, B5 | EL MISMO CIERRE CON SU FORMA, SU PLAZO Y SU FUTURO. Las tres piezas hablan del MISMO artefacto y por eso van juntas: el superviviente dice QUE tiene que resumir el tablero (comportamiento clave y tendencias), el donante dice que se puede COMPRAR en vez de construir y que va EN TIEMPO REAL, y su ultima pieza dice que el sistema tiene que poder crecer a retencion y cohortes. ESTA ULTIMA ES LA QUE EL REPARTO ESCRITO DE LA TABLA SELLADA MANDA PRESERVAR EN LA FUSION, con esas palabras, y por eso 'retención' y 'cohortes' van ademas en preservar_literal. Y NO ENSANCHA EL ALCANCE DEL NODO: manda que el sistema PUEDA escalar, no que se midan hoy la retencion ni las cohortes, que es la misma frontera entre preparar y ejecutar que el acto 344 dejo adjudicada. |
+
+| condicion del resultado | de que origenes sale | el motivo que la modifica |
+|---:|---|---|
+| **1** | MC1 | EL DISPARADOR DE LA DECISION DE DINERO, propio del superviviente. Se queda solo porque es el unico de los cuatro que dice PARA QUE se monta todo esto: no para tener un tablero, sino para decidir donde va el dinero. |
+| **2** | BC1 | EL DISPARADOR QUE NOMBRA LA FASE DEL METODO, propio del donante, y NO se funde con el anterior. Es la misma vara del 344: el unico de los cuatro que dice DONDE del metodo de Blank esta parado el que lee, y esa ubicacion es lo que distingue este tablero de un panel de analitica cualquiera. Disolverlo en el de arriba borraria la unica puerta que abre por fase. |
+| **3** | MC2 | LA CARENCIA DE INSTRUMENTO, propia del superviviente: no es que no sepas que mirar, es que NO PUEDES medir. Es la puerta que atiende el paso de instrumentar el producto, y por eso no se funde con la de abajo, que atiende a otro paso. |
+| **4** | BC2 | LA CARENCIA DE CRITERIO, propia del donante: aqui SI puedes medir y lo que falta es saber QUE. Es la puerta que atiende el paso de quedarse en menos de doce metricas accionables, y es una carencia distinta de la de arriba, no un caso suyo. LAS CUATRO CONDICIONES SE QUEDAN SEPARADAS Y SE DICE POR QUE: son DOS momentos (decidir inversion, entrar en validacion) y DOS carencias (no poder medir, no saber que medir), y ninguna es un caso particular de otra. Es la misma lectura que el acta de la vuelta 43 adjudico a favor en su D6, donde tres condiciones eran tres entradas distintas al mismo procedimiento. |
+
+**LA TABLA DE PERDIDAS DE `P.13`, derivada de los grupos y no tecleada: 14 de 14 piezas VIAJAN y CERO se pierden** (salida de `vuelta41_plan_acto.py`, sellada en `docs/loop/SALIDA_V44_ACTO392_PLAN.txt`). **Y ESTE ACTO SI TIENE REPARTO ESCRITO**, uno de los dos unicos que lo tienen: **sus dos mitades se verifican por separado**, la del destejido ya descargada por `OP-F-04-WEI` y comprobada contra el grafo, y la de la fusion en el ultimo paso del resultado con `retención` y `cohortes` en `preservar_literal` **para que una guarda lo compruebe en vez de confiarlo**.
+
+### LA SIMULACION, EN VERDE Y SIN `P.16`: **las DOCE guardas OK y CERO escrituras**
+
+`python scripts/loop/vuelta39_fundir.py --plan docs/loop/PLAN_V41_ACTO392.json --simular`, sellado en `docs/loop/SALIDA_V44_ACTO392_SIM.txt`, **exit 0**:
+
+| guarda | como salio |
+|---|---|
+| **1**, fuente y vida de los tres | **OK**, con las dos fuentes impresas y ninguna escondida |
+| **2**, conteos | **OK** los dos: (5, 2) contra (5, 2) cada uno |
+| **3**, VERBATIM contra `dataset/nodos` | **14 de 14 calzan, 0 sobrantes** |
+| **4**, cobertura de origenes | **10 de 10** en pasos y **4 de 4** en condiciones, cero repetidos, cero faltan, cero sobran |
+| **5**, finales derivados de los grupos | **OK** |
+| **6**, `preservar_literal` | **10 de 10**, con `referidos`, `retención` y `cohortes` hallados en pasos, entregable y resumen |
+| **7**, `rastros` | **6 de 6** |
+| **8** y **8b**, redirecciones | **6 esperadas OK**, **0 deprecados que nombran OK** |
+| **9**, `P.16` duplicadas fabricadas | **1 esperada OK**: `mvp_alta_fidelidad` en `nodos_siguientes` |
+| **10**, auto-arista tras resolver | **OK (0)** |
+| **11**, duplicada tras resolver | **OK (0)** |
+| **12**, titulo y etiqueta sin tocar | **OK** |
+
+> **`P.16` NO DISPARA EN ESTE ACTO, y se dice por que en vez de callarlo.** La regla manda retirar **la arista interna DEL PAR** que la simulacion reporte como auto-arista o como duplicada. Aqui **la guarda 10 sale OK (0)**: el superviviente y el absorbido **no son vecinos directos**, al contrario que en el 361. La unica duplicada que la fusion fabrica esta **en un tercero** (`mvp_alta_fidelidad`, que nombraba a los dos) y **el propio ejecutor la deduplica**, con la **guarda 11 en OK (0)** sobre la copia ya construida. **Es el mismo caso del 361, donde las DOS duplicadas fabricadas vivian en terceros (`key_resources_hypothesis` y `revenue_pricing_hypothesis`) y `P.16` se aplico SOLO a la auto-arista del par.** Precedente citado, no inventado.
+
+**LA SIMETRIZACION ESPERADA, medida y no supuesta: CINCO aristas** que `run_phase1` paso 5 tendra que escribir para el superviviente, **ni una mas ni una menos**, y la guarda exacta se corre aparte sobre el log del ciclo.
+
+**EL CASO POSITIVO ANTES, que TIENE que caer:** `docs/loop/SALIDA_V44_ACTO392_CASO_ANTES.txt`, **exit 1**, **16 PASAN y 20 CAEN**, conservacion **5 vivos y 1 muerto**. Cae porque el grafo todavia no se ha tocado, que es exactamente lo que este primer commit deja escrito.
+
+**EL VERIFICADOR DE MAPAS con la vara 2**, sobre los **DOCE** planes sellados que hoy tienen tabla publicada: `docs/loop/SALIDA_V44_VERIFICADOR_MAPAS_392.txt`.
+
+**ESTE PRIMER COMMIT DEJA EL GRAFO INTACTO: cero nodos tocados.**

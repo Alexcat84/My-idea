@@ -1,0 +1,48 @@
+PLAN SELLADO: docs/loop/PLAN_V41_ACTO392.json
+  acto          : puesto 392 de OP-D-06
+  superviviente : metricas_de_adquisicion_activacion
+  absorbidos    : build_metrics_toolset
+  fuente del superviviente: The Startup Owner's Manual
+  ACTO DE FUENTE MIXTA (2 fuente(s) distinta(s) medida(s)):
+      metricas_de_adquisicion_activacion           superviviente  The Startup Owner's Manual
+      build_metrics_toolset                        absorbido      The Startup Owner's Manual - Steve Blank
+  origenes generados VERBATIM del fichero: 14
+  pasos finales : 6 (estandar 3 a 6: DENTRO)
+  condiciones finales: 4
+  redirecciones esperadas: 6
+      customer_validation_sell_phase                 nodos_previos      build_metrics_toolset
+      hire_data_analytics_chief                      nodos_previos      build_metrics_toolset
+      mvp_alta_fidelidad                             nodos_siguientes   build_metrics_toolset
+      optimizacion_embudo_get_customers              nodos_previos      build_metrics_toolset
+      sales_roadmap_vs_sales_force                   nodos_siguientes   build_metrics_toolset
+      sintesis_hipotesis_modelo_negocio              nodos_siguientes   build_metrics_toolset
+  deprecados que nombran y no se tocan: 0
+  duplicadas que la fusion fabrica: 1
+      mvp_alta_fidelidad                             nodos_siguientes
+  simetrizacion esperada: 5 aristas
+      metricas_de_adquisicion_activacion.nodos_previos      += sales_roadmap_vs_sales_force
+      metricas_de_adquisicion_activacion.nodos_previos      += sintesis_hipotesis_modelo_negocio
+      metricas_de_adquisicion_activacion.nodos_siguientes   += customer_validation_sell_phase
+      metricas_de_adquisicion_activacion.nodos_siguientes   += hire_data_analytics_chief
+      metricas_de_adquisicion_activacion.nodos_siguientes   += optimizacion_embudo_get_customers
+
+  LA TABLA DE PERDIDAS, DERIVADA de los grupos y no tecleada:
+      B1    build_metrics_toolset                    VIAJA      paso 1 del resultado
+      B2    build_metrics_toolset                    VIAJA      paso 2 del resultado
+      B3    build_metrics_toolset                    VIAJA      paso 3 del resultado
+      B4    build_metrics_toolset                    VIAJA      paso 6 del resultado
+      B5    build_metrics_toolset                    VIAJA      paso 6 del resultado
+      BC1   build_metrics_toolset                    VIAJA      condicion 2 del resultado
+      BC2   build_metrics_toolset                    VIAJA      condicion 4 del resultado
+      M1    metricas_de_adquisicion_activacion       VIAJA      paso 1 del resultado
+      M2    metricas_de_adquisicion_activacion       VIAJA      paso 2 del resultado
+      M3    metricas_de_adquisicion_activacion       VIAJA      paso 4 del resultado
+      M4    metricas_de_adquisicion_activacion       VIAJA      paso 5 del resultado
+      M5    metricas_de_adquisicion_activacion       VIAJA      paso 6 del resultado
+      MC1   metricas_de_adquisicion_activacion       VIAJA      condicion 1 del resultado
+      MC2   metricas_de_adquisicion_activacion       VIAJA      condicion 3 del resultado
+      VIAJAN 14 de 14. SE PIERDEN 0.
+      LECTURA: la regla de reparto de OP-D-06 manda cada perdida al
+      bloque del que proviene, y la que no tenga bloque al
+      superviviente. Con CERO perdidas no hay nada que repartir, y eso
+      es lo que hay que comprobar al cierre, no suponerlo.

@@ -1,0 +1,60 @@
+CASO POSITIVO: OP-D-06, ACTO 6 DE NUEVE (puesto 392): metricas_de_adquisicion_activacion absorbe a build_metrics_toolset
+==============================================================================
+
+EL SUPERVIVIENTE, metricas_de_adquisicion_activacion
+  [CAE ] tiene 5 pasos, los 6 que el plan deja
+  [CAE ] tiene 2 condiciones, las 4 que el plan deja
+  [CAE ] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [CAE ] sus condiciones son exactamente las del plan
+  [CAE ] su entregable es el del plan
+  [CAE ] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Cuántos llegan y cuántos se quedan usando (adquisición y activación)'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Mide Cómo Llegan tus Clientes'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'referidos'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'retención'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'cohortes'
+  [PASA] sobrevive literal en ['resumen']: 'cada clic'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'fuente de tráfico'
+  [PASA] sobrevive literal en ['pasos']: 'visitas totales'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'calidad de esos usuarios'
+  [PASA] sobrevive literal en ['pasos', 'entregable']: 'menos de 12'
+  [PASA] sobrevive literal en ['entregable']: 'tiempo real'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'modelo de negocio'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [CAE ] 'build_metrics_toolset' esta en ids_alias del superviviente
+  [CAE ] 'build_metrics_toolset' tiene su entrada en merged_originals
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, build_metrics_toolset
+  [CAE ] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 5 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LAS REDIRECCIONES
+  [CAE ] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 6)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [CAE ] customer_validation_sell_phase.nodos_previos ya apunta a metricas_de_adquisicion_activacion
+  [CAE ] hire_data_analytics_chief.nodos_previos ya apunta a metricas_de_adquisicion_activacion
+  [PASA] mvp_alta_fidelidad.nodos_siguientes ya apunta a metricas_de_adquisicion_activacion
+  [CAE ] optimizacion_embudo_get_customers.nodos_previos ya apunta a metricas_de_adquisicion_activacion
+  [CAE ] sales_roadmap_vs_sales_force.nodos_siguientes ya apunta a metricas_de_adquisicion_activacion
+  [CAE ] sintesis_hipotesis_modelo_negocio.nodos_siguientes ya apunta a metricas_de_adquisicion_activacion
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [NO] el rastro 'accionables' sigue vivo en NINGUN CAMPO
+  (conservacion) [SI] el rastro 'embudo' sigue vivo en ['resumen']
+  (conservacion) [SI] el rastro 'tablero' sigue vivo en ['pasos', 'entregable']
+  (conservacion) [SI] el rastro 'adquisición' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'activación' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'tendencias' sigue vivo en ['pasos']
+
+==============================================================================
+RESULTADO: 16 PASAN, 20 CAEN
+CONSERVACION (aparte, no suma): 5 vivos, 1 muertos

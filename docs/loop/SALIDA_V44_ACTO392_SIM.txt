@@ -1,0 +1,72 @@
+PLAN     : docs/loop/PLAN_V41_ACTO392.json
+OPERACION: OP-D-06, ACTO 6 DE NUEVE (puesto 392): metricas_de_adquisicion_activacion absorbe a build_metrics_toolset
+SELLADO  : SELLADO en la vuelta 44, 19 ago 2026, ANTES de ejecutar. EL DESTEJIDO QUE LA RAZON PEDIA YA SE HIZO, y no aqui: lo hizo OP-F-04-WEI. La razon del archivo dice que el segundo de los dos tiene NUEVE pasos y que del 6 al 9 entra otro bloque (definir que es una conversion, calcular clics y costo por campana, comparar costo de adquisicion contra valor de vida, y usar SEM para aprender que mensaje funciona), y esta RANCIA EN ESE DETALLE. docs/plan/01_FUENTES.md linea 952 publica la frontera leida (1 a 5 contra 6 a 9) y la linea 985 publica el miembro receptor (sem_estrategia_ejecucion) con su motivo. LA MEDICION DE HOY LO CONFIRMA POR PARTIDA DOBLE: metricas_de_adquisicion_activacion tiene CINCO pasos, que son exactamente los cinco primeros, y el commit que lo corto es 1eef1c6b (OP-F-04-WEI segunda tanda), medido con git show sobre el fichero, 9 pasos antes y 5 despues. Y EL BLOQUE NO SE PERDIO: los pasos 9 a 12 de sem_estrategia_ejecucion, leidos hoy del grafo, son las cuatro piezas una a una (definir que es una conversion, CTR y CPC y CPA por campana, comparar el costo de adquisicion contra el LTV, y usar SEM para aprender que mensaje funciona). Fuente primero satisfecha POR PRECEDENCIA, con OP-F-04-WEI HECHA en su nota 3541 SI segun la apertura de esta vuelta. LO QUE EL INSTRUMENTO DE COSTURAS CITA HOY SE DICE EN VEZ DE CALLARSE, y esta vez es lo mas simple que ha dado la operacion: LOS DOS NODOS ESTAN FUERA de la cola de 1.493. El instrumento NO cita a ninguno de los dos, asi que no hay cita que registrar ni que despachar.
+MODO     : --simular
+==============================================================================
+censo ANTES: 3853 ficheros, 3527 vivos, 326 deprecados
+guarda 1, fuente del superviviente contra el plan y vida de los TRES: OK
+  ACTO DE FUENTE MIXTA (2 fuente(s) distinta(s) medida(s)), las tres impresas y ninguna escondida:
+    metricas_de_adquisicion_activacion     superviviente  The Startup Owner's Manual
+    build_metrics_toolset                  absorbido      The Startup Owner's Manual - Steve Blank
+guarda 2, metricas_de_adquisicion_activacion     pasos y condiciones (5, 2) contra (5, 2): OK
+guarda 2, build_metrics_toolset                  pasos y condiciones (5, 2) contra (5, 2): OK
+guarda 3, VERBATIM contra dataset/nodos: 14 de 14 calzan, 0 sobrantes en el plan
+guarda 4, cobertura de pasos        10 de 10, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones  4 de 4, repetidos [], faltan [], sobran []
+guarda 5, los finales derivados de los grupos calzan con el campo sellado: OK
+guarda 6, preservar_literal en el nodo resultante entero:
+    'referidos'                                ['pasos', 'entregable', 'resumen']
+    'retención'                                ['pasos', 'entregable', 'resumen']
+    'cohortes'                                 ['pasos', 'entregable', 'resumen']
+    'cada clic'                                ['pasos', 'resumen']
+    'fuente de tráfico'                        ['pasos']
+    'visitas totales'                          ['pasos', 'resumen']
+    'calidad de esos usuarios'                 ['pasos', 'resumen']
+    'menos de 12'                              ['pasos', 'entregable']
+    'tiempo real'                              ['pasos', 'entregable', 'resumen']
+    'modelo de negocio'                        ['pasos', 'resumen']
+    10 de 10
+guarda 7, rastros en el nodo resultante entero:
+    'accionables'                              ['pasos', 'resumen']
+    'embudo'                                   ['resumen']
+    'tablero'                                  ['pasos', 'entregable', 'resumen']
+    'adquisición'                              ['pasos', 'entregable', 'resumen']
+    'activación'                               ['pasos', 'entregable', 'resumen']
+    'tendencias'                               ['pasos', 'resumen']
+    6 de 6
+redirecciones medidas hoy sobre nodos VIVOS: 6
+    customer_validation_sell_phase                   nodos_previos      build_metrics_toolset -> metricas_de_adquisicion_activacion
+    hire_data_analytics_chief                        nodos_previos      build_metrics_toolset -> metricas_de_adquisicion_activacion
+    mvp_alta_fidelidad                               nodos_siguientes   build_metrics_toolset -> metricas_de_adquisicion_activacion
+    optimizacion_embudo_get_customers                nodos_previos      build_metrics_toolset -> metricas_de_adquisicion_activacion
+    sales_roadmap_vs_sales_force                     nodos_siguientes   build_metrics_toolset -> metricas_de_adquisicion_activacion
+    sintesis_hipotesis_modelo_negocio                nodos_siguientes   build_metrics_toolset -> metricas_de_adquisicion_activacion
+nodos DEPRECADOS que nombran y NO se tocan: 0
+guarda 8, redirecciones contra el plan sellado (6 esperadas): OK
+guarda 8b, deprecados que nombran contra el plan (0 esperados): OK
+
+### P.16, LAS DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas
+    mvp_alta_fidelidad                               nodos_siguientes   -> metricas_de_adquisicion_activacion
+    TOTAL FABRICADAS: 1
+guarda 9, duplicadas fabricadas contra el plan (1 esperadas): OK
+guarda 10, cero auto-arista tras resolver: OK (0)
+guarda 11, cero duplicada tras resolver: OK (0)
+guarda 12, a6 del acta, titulo y etiqueta SIN TOCAR ('Cuántos llegan y cuántos se quedan usando (adquisición y activación)' / 'Mide Cómo Llegan tus Clientes'): OK
+
+EL RESULTADO, sobre copia en memoria:
+  metricas_de_adquisicion_activacion: 6 pasos, 4 condiciones, alias ['build_metrics_toolset']
+    1. Define qué relación quieres tener con tus clientes, que es una de las hipótesis de tu modelo de negocio, y a partir de ahí decide qué métricas te dirán si vas bien
+    2. Quédate con menos de 12 métricas accionables, todas deben ayudarte a decidir algo, y organízalas en adquisición, activación y referidos
+    3. Instrumenta tu producto para capturar cada clic y de qué fuente de tráfico viene
+    4. Mide tus métricas de adquisición: visitas totales, de dónde vienen, cuántas convierten y cuánto te cuesta conseguir cada cliente
+    5. Mide tus métricas de activación: cuántos o qué porcentaje se activa según la fuente, cuánto cuesta cada activación y qué tan buena es la calidad de esos usuarios
+    6. Arma o compra un tablero en tiempo real que resuma el comportamiento clave de tus usuarios y las tendencias que te ayuden a decidir, y móntalo de forma que pueda crecer luego a métricas de retención y de cohortes
+    c1. Cuando necesitas decidir en qué invertir basándote en datos reales de comportamiento
+    c2. Cuando tu producto ya está en la fase de validar clientes y necesitas medir el comportamiento real de tus usuarios
+    c3. Si todavía no tienes forma de medir el camino completo que recorre alguien hasta convertirse en cliente
+    c4. Si tu equipo no tiene claro qué datos son los relevantes para decidir en el negocio
+  entregable: Un tablero en tiempo real con menos de 12 indicadores que te ayuden a decidir, cubriendo adquisición, activación y referidos, alimentado por tu producto ya instrumentado y montado de forma que pueda crecer luego a retención y cohortes
+  build_metrics_toolset: deprecado True, texto INTACTO (5 pasos, 2 condiciones)
+  ficheros que se tocarian: 8
+
+SIMULACION: cero escrituras.

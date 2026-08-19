@@ -1,0 +1,126 @@
+
+==============================================================================
+(a) LA NOMINA DEL ACTO 392, LEIDA DE LA TABLA SELLADA
+==============================================================================
+  nodo A: metricas_de_adquisicion_activacion
+  nodo B: build_metrics_toolset
+  la tabla sellada trae 9 actos; este es el numero 6 de los nueve
+  los dos estan en la nomina de OPERACIONES.jsonl: SI
+
+  EL AVISO DE SOLAPE DEL PLAN, comprobado contra el fichero y no recordado:
+    > **AVISO DE SOLAPE, y hay que verlo antes de contar dos veces:**
+    > `producto_minimo_viable` y `principio_calidad_mvp` **aparecen aqui Y en
+    > `OP-D-01`**. La seccion 54.3 los cuenta como uno de los nueve actos de dos; el
+    > plan de cirugia los trata como **cura acoplada mayor**. **Es la MISMA pareja
+    > vista por dos instrumentos, no dos trabajos.**
+
+  ESTE ACTO ESTA NOMBRADO EN EL AVISO DE SOLAPE: NO
+
+  EL REPARTO YA ESCRITO PARA ESTE ACTO, si lo tiene:
+    | `metricas_de_adquisicion_activacion` (puesto 392) | **en la fusion**: que el sistema escale luego a retencion y cohortes, de `build_metrics_toolset`. **Con el destejido**: definir que es una conversion, comparar el CAC contra el LTV, y usar SEM para aprender que mensaje funciona |
+
+==============================================================================
+(b) QUE CITA EL INSTRUMENTO DE COSTURAS SOBRE LOS DOS NODOS
+==============================================================================
+  Fuente: docs/COSTURAS_INTERNAS.jsonl, LA COLA QUE EL INSTRUMENTO YA
+  ENTREGO. No se recalcula ni una cifra. EL INSTRUMENTO CITA Y NO JUZGA,
+  y desde la vuelta 41 su salida declara ademas que LA COLA GLOBAL NO ES
+  BASE DE LECTURA mientras el MIN_BLOQUE siga pendiente del fundador.
+  nodos en la cola entregada: 1493
+
+  metricas_de_adquisicion_activacion           FUERA DE LA COLA: el instrumento NO lo cita
+
+  build_metrics_toolset                        FUERA DE LA COLA: el instrumento NO lo cita
+
+==============================================================================
+(c) EL TEXTO ENTERO DE LOS DOS NODOS, que es lo unico que decide
+==============================================================================
+
+------------------------------------------------------------------------------
+  metricas_de_adquisicion_activacion   VIVO
+------------------------------------------------------------------------------
+  titulo    : Cuántos llegan y cuántos se quedan usando (adquisición y activación)
+  etiqueta  : Mide Cómo Llegan tus Clientes
+  dominio   : core
+  fuente    : The Startup Owner's Manual
+  alias     : []
+  PASOS (5):
+    1. Define qué relación quieres tener con tus clientes y a partir de ahí decide qué métricas te dirán si vas bien
+    2. Quédate con menos de 12 métricas, todas deben ayudarte a decidir algo
+    3. Mide tus métricas de adquisición: visitas totales, de dónde vienen, cuántas convierten y cuánto te cuesta conseguir cada cliente
+    4. Mide tus métricas de activación: cuántos o qué porcentaje se activa según la fuente, cuánto cuesta cada activación y qué tan buena es la calidad de esos usuarios
+    5. Arma un tablero que resuma el comportamiento clave de tus usuarios y las tendencias que te ayuden a decidir
+  CONDICIONES (2):
+    c1. Cuando necesitas decidir en qué invertir basándote en datos reales de comportamiento
+    c2. Si todavía no tienes forma de medir el camino completo que recorre alguien hasta convertirse en cliente
+  ENTREGABLE: Un tablero con menos de 12 indicadores que te ayuden a decidir, cubriendo adquisición y activación, actualizado en tiempo real
+  RESUMEN   : Si tienes un negocio web o de aplicación, mide cada clic para ver el camino completo que recorre alguien hasta convertirse en cliente (el embudo de conversión). Elige menos de una docena de métricas que te ayuden a decidir, organizadas en cuántos llegan, qué tan rápido, cuánto te cuesta y qué tan buenos son esos clientes. Divide tus métricas en dos grupos: adquisición (visitas, de dónde vienen, cuánto te cuesta conseguir cada uno) y activación (cuántos activan, cuánto cuesta cada activación, qué tan buena es la calidad de esos usuarios).
+  previos   (6): ['plan_de_activacion', 'mvp_alta_fidelidad', 'acquisicion_viral_engineering', 'diseno_landing_page_conversion', 'analisis_trafico_competitivo', 'diseno_landing_page']
+  siguientes(2): ['funnel_get_customers_optimizacion', 'reunion_pivotar_o_perseverar']
+
+------------------------------------------------------------------------------
+  build_metrics_toolset   VIVO
+------------------------------------------------------------------------------
+  titulo    : Construir un Toolset de Métricas Clave
+  etiqueta  : Arma tu Set de Métricas
+  dominio   : core
+  fuente    : The Startup Owner's Manual - Steve Blank
+  alias     : []
+  PASOS (5):
+    1. Identificar hipótesis de relación con clientes del modelo de negocio
+    2. Seleccionar menos de 12 métricas accionables (adquisición, activación, referidos)
+    3. Instrumentar el producto para capturar cada clic y fuente de tráfico
+    4. Construir o comprar un dashboard que muestre las métricas en tiempo real
+    5. Asegurar que el sistema pueda escalar para incluir métricas de retención y cohortes más adelante
+  CONDICIONES (2):
+    c1. Cuando el producto ya está en fase de validación de clientes y necesita medir comportamiento real de usuarios
+    c2. Si el equipo no tiene claridad sobre qué datos son relevantes para decisiones de negocio
+  ENTREGABLE: Lista de métricas clave de adquisición, activación y referidos, y un sistema/dashboard funcional para monitorearlas casi en tiempo real
+  RESUMEN   : Consiste en instrumentar el producto (web/app) para medir cada clic y acción del usuario, y luego seleccionar un pequeño conjunto de métricas accionables (menos de una docena) que respondan a 'cuánto, qué tan rápido, cuánto cuesta y qué tan bueno' es el comportamiento del cliente. Estas métricas se organizan típicamente según el embudo de adquisición y activación, y deben mostrarse en un dashboard accesible en tiempo real para el equipo directivo.
+  previos   (3): ['mvp_alta_fidelidad', 'sintesis_hipotesis_modelo_negocio', 'sales_roadmap_vs_sales_force']
+  siguientes(3): ['hire_data_analytics_chief', 'optimizacion_embudo_get_customers', 'customer_validation_sell_phase']
+
+==============================================================================
+(d) P.5: EL PAR, SU CLASE, SU RAZON ENTERA, Y EL CIERRE DEL SUBCONJUNTO
+==============================================================================
+  puesto 392 | clase A | build_metrics_toolset con metricas_de_adquisicion_activacion
+  RAZON ENTERA (687 caracteres):
+    REPITE con metricas_de_adquisicion_activacion. Los dos mandan lo mismo y hasta con la misma cifra: partir de que relacion se quiere con el cliente para decidir que medir, quedarse en menos de doce metricas y que todas sirvan para decidir algo, instrumentar el producto para capturar el comportamiento y su fuente, y montar un tablero. El primero anade que el sistema escale luego a retencion y cohortes. LATERAL, no cambia la clase: el segundo tiene nueve pasos y del 6 al 9 entra otro bloque, definir que es una conversion, calcular clics y costo por campana, comparar costo de adquisicion contra valor de vida, y usar SEM para aprender que mensaje funciona. Costura para la otra ficha.
+  9.3.1, LA VARA DEL VERBO: nombra ganador en su razon: NO, es POR ELEGIR
+
+  EL SUBCONJUNTO, CERRADO O NO: todo par del ARCHIVO que meta a un
+  tercero con cualquiera de los dos (P.5 pide el acto entero).
+    puesto 681   clase D   build_metrics_toolset con medir_comportamiento_cliente_mvp
+    puesto 699   clase D   build_metrics_toolset con checkpoints_validacion
+    puesto 900   clase D   build_metrics_toolset con medicion_monitoreo_desempeno
+    puesto 990   clase D   build_metrics_toolset con metricas_accionables
+    puesto 1011  clase D   metricas_cohortes con metricas_de_adquisicion_activacion
+    puesto 1226  clase D   metricas_accionables con metricas_de_adquisicion_activacion
+    puesto 1282  clase D   medir_comportamiento_cliente_mvp con metricas_de_adquisicion_activacion
+    puesto 1545  clase D   build_metrics_toolset con metricas_cohortes
+    8 par(es) con tercero.
+
+    LA GUARDA QUE DECIDE SI EL ACTO ES DE DOS: un acto se construye
+    por TRANSITIVIDAD SOBRE LAS A. Un tercero unido por B o por D NO
+    entra en el acto; uno unido por A SI, y entonces el acto no seria
+    de dos y habria que PARAR.
+    terceros de clase A: 0  ->  el acto ES de dos, como la tabla sellada dice
+
+    Y LOS QUE VUELVEN A LA COLA DE RELECTURA POST FUSION (08_VERIFICACION:
+    un par vuelve cuando uno de sus dos nodos MUERE o CAMBIA DE TEXTO, y
+    solo los B y los C, porque son los que estaban en el filo):
+      0 par(es) a releer al cierre de este acto.
+
+==============================================================================
+(e) P.8: EL CABLEADO, QUE ACOMPANA Y NO DECIDE
+==============================================================================
+  metricas_de_adquisicion_activacion           cableado (grado por P.1): 7    | aristas propias sin reciproco: 0 
+  build_metrics_toolset                        cableado (grado por P.1): 6    | aristas propias sin reciproco: 0 
+
+  EL COSTE MEDIDO DE LA ELECCION: elegir a uno u otro solo pierde
+  aristas si el que muere tiene aristas SIN RECIPROCO, porque las
+  reciprocas las reescribe la simetrizacion de run_phase1, paso 5.
+
+  Y LA PRELACION, dicha antes de mirar: MANDA EL CONTENIDO. Este bloque
+  se lee DESPUES del (c) y del (d), y si apunta al lado contrario del
+  contenido, PIERDE. Se imprime para poder decir que no hizo falta.
