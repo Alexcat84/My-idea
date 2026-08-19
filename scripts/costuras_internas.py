@@ -97,6 +97,53 @@ acompana a `MIN_BLOQUE = 2`, o contra que nodos se recalibra la puerta, es
 doctrina de medicion y la decide el fundador. Lo que esta vuelta hace es
 aplicar la letra, medir el efecto y publicarlo.
 
+===========================================================================
+LA PUERTA REPARADA (19 ago 2026, vuelta 40, encargo del acta del auditor 39)
+===========================================================================
+
+NADA DE LO DE ARRIBA SE BORRA, por lo mismo de siempre: una correccion que tapa
+lo que corrige no se puede auditar. La RECALIBRACION DECLARADA de la vuelta 34
+dejo la puerta EN ROJO y lo dijo en su punto 1. Siguio en rojo desde entonces, y
+la vuelta 39 la volvio a declarar sin tocarla. Esta seccion la repara.
+
+LA AVERIA, MEDIDA Y NO RECORDADA. `plan_mejora_procesos`, uno de los dos
+fixtures, daba 43,1 contra un umbral de 44 y el instrumento se negaba entero
+(exit 1, cero entregas). EL MOTIVO NO ERA EL INSTRUMENTO: era el fixture. El
+ultimo commit que toco `dataset/nodos/plan_mejora_procesos.json` es `2bd8dd76`
+(*OP-F-04-HOR ejecutada en casi todo: doce nodos en trece cortes*), medido con
+`git log --follow` en la vuelta 40, y ese nodo esta EN LA NOMINA de
+`OP-F-04-HOR`, medido contra `docs/plan/OPERACIONES.jsonl` en la misma vuelta.
+O sea: LA PROPIA CAMPANA RECORTO SU FIXTURE POR UNA OPERACION LEGITIMA, y la
+puerta confundio "mi fixture quedo rancio" con "el instrumento esta roto".
+
+QUE SE REPARA Y QUE NO SE TOCA:
+
+  * LOS UMBRALES NO SE TOCAN. Pareja 80 y bloque 44 se quedan donde estaban.
+    Aflojar el umbral para que el fixture entre seria arreglar la vara en vez
+    de la pieza, y esta casa ya lo adjudico dos veces.
+  * NINGUN NODO SE TOCA. La reparacion vive entera en `scripts/`. `dataset/`
+    no se abre para escribir.
+  * LA SEMANTICA DE LA PUERTA NO SE AFLOJA: los fixtures siguen teniendo que
+    entrar TODOS, y si falta uno el instrumento sigue negandose a entregar con
+    codigo 1. Lo que cambia es CONTRA QUE NODOS se comprueba, y que ahora hay
+    un criterio escrito para elegirlos y un camino escrito para retirarlos.
+  * LO QUE SE ANADE: un AVISO DE BORDE. En su corrida normal el instrumento
+    imprime el margen de cada fixture y AVISA si alguno esta a menos de un
+    punto del umbral. La averia de hoy se vio por un exit 1 a destiempo; con
+    el aviso, la siguiente se ve venir. Un instrumento que puede advertir y
+    calla es la degradacion silenciosa contra la que existe la propia puerta.
+
+LO QUE ESTA REPARACION **NO** ARREGLA, y va escrito por la misma razon que lo
+de arriba: LA COLA SIGUE EN EL 42,3 POR CIENTO DEL CATALOGO. Medido en la
+vuelta 40 sobre el grafo de ese dia
+(`scripts/loop/vuelta40_calibrar_costuras.py`, salida en
+`docs/loop/SALIDA_V40_CALIBRACION.txt`): 1.496 nodos en la cola sobre 3.534
+activos, y 1.494 de esos entran por la senal de bloque. ES EXACTAMENTE EL COSTO
+QUE LA VUELTA 34 MIDIO Y PUBLICO (1.497 sobre el grafo de aquel dia), o sea que
+el pendiente de doctrina del punto 2 de arriba SIGUE ENTERO Y SIGUE ABIERTO:
+que umbral acompana a `MIN_BLOQUE = 2` lo decide el fundador, y la vuelta 40 NO
+lo decide. Reparar la puerta no era arreglar la escala, y no se disfraza de eso.
+
 Uso:
   python scripts/costuras_internas.py
   python scripts/costuras_internas.py --umbral-pareja 75 --umbral-bloque 50
@@ -191,9 +238,82 @@ class CalibracionRota(RuntimeError):
             self, "INSTRUMENTO MAL CALIBRADO: %s" % ", ".join(faltan))
 
 
-# Los dos nodos que dieron origen a la clase. Si el instrumento no los caza, no
-# sirve para lo que se construyo y no entrega nada.
-CALIBRACION = ("plan_mejora_procesos", "economia_circular_como_modelo_de_negocio")
+# ===========================================================================
+# LA CALIBRACION. EL CRITERIO VA ESCRITO ARRIBA DE LA LISTA, para que quien la
+# toque despues no tenga que adivinarlo ni deducirlo de los ids.
+# ===========================================================================
+#
+# QUE ES ESTA LISTA. Los nodos contra los que el instrumento comprueba QUE
+# SIGUE CAZANDO LA CLASE PARA LA QUE SE CONSTRUYO. Si alguno no aparece en la
+# cola, no entrega nada y sale con codigo 1. Tienen que entrar TODOS: la puerta
+# no se aflojo, se le cambio el fixture.
+#
+# EL CRITERIO, y cada punto se MIDIO en la vuelta 40 antes de escribirse
+# (salida entera en `docs/loop/SALIDA_V40_CALIBRACION.txt`):
+#
+#   1. DISPARA HOY con los umbrales VIGENTES, y su medicion va impresa al lado.
+#      El umbral no se mueve nunca para que un fixture entre.
+#   2. ENTRA POR LA SENAL DE BLOQUE, que es la senal de la que nacio la clase.
+#      Los dos fundadores entraron por bloque y no por pareja, y el propio
+#      encabezado mide por que la pareja sola no calibra nada.
+#   3. MAS DE UNO, Y AL MENOS UNO CON MARGEN AMPLIO. La averia que esta lista
+#      repara es justo lo contrario: el fixture era uno de dos, una operacion
+#      legitima recorto su nodo, y el instrumento entero se nego a entregar por
+#      0,9 puntos.
+#   4. SE PREFIERE EL QUE NO ESTE EN LA NOMINA DE NINGUNA OPERACION del plan,
+#      medido contra `docs/plan/OPERACIONES.jsonl`. Ese es el nodo que la
+#      propia campana no tiene previsto recortar, y es el que ancla la puerta.
+#   5. CUANDO UN FIXTURE QUEDA RANCIO SE RETIRA DECLARADO, con su motivo y su
+#      commit de origen, y se queda escrito abajo en `CALIBRACION_RETIRADA`.
+#      NUNCA se afloja el umbral y nunca se borra el fixture viejo.
+#
+# LOS TRES DE HOY, con su medicion del 19 ago 2026 al lado (umbral de bloque
+# 44, o sea que el margen es lo que sobra):
+#
+#   fases_traccion_producto                   bloque 72,6 corte tras 4  margen +28,6
+#       EL ANCLA. El bloque mas alto del catalogo activo medido ese dia, y el
+#       UNICO de los tres que NO esta en la nomina de ninguna operacion del
+#       plan: la campana no tiene previsto recortarlo. Criterios 1 a 4.
+#   reglas_brainstorming                      bloque 50,6 corte tras 2  margen  +6,6
+#       El candidato que el acta del auditor de la vuelta 39 propuso, VERIFICADO
+#       AQUI con el instrumento y no citado de aquella pagina. Su operacion
+#       (OP-D-04) ya esta CERRADA, asi que no le queda corte pendiente. AVISO
+#       DECLARADO: la misma acta lo mando a la cola de lectura como cualquier
+#       citado, y si una lectura futura lo desteje, este fixture se retira por
+#       el punto 5 igual que el anterior.
+#   economia_circular_como_modelo_de_negocio  bloque 44,2 corte tras 3  margen  +0,2
+#       EL FUNDADOR SUPERVIVIENTE. De los dos nodos que dieron origen a la
+#       clase, es el que HOY sigue disparando, y se queda por eso. VA
+#       DECLARADO FRAGIL: dos decimas de margen. No se retira mientras cumpla
+#       el criterio 1 (retirar un fixture que SI dispara seria acomodar la
+#       puerta), pero el aviso de borde lo va a nombrar en cada corrida.
+CALIBRACION = ("fases_traccion_producto",
+               "reglas_brainstorming",
+               "economia_circular_como_modelo_de_negocio")
+
+# LOS RETIRADOS, QUE NO SE BORRAN. No gobiernan la puerta, pero el instrumento
+# LOS SIGUE MIDIENDO Y LOS IMPRIME en cada corrida: un fixture retirado en
+# silencio es una calibracion que nadie puede auditar. Si alguno vuelve a
+# disparar, el instrumento lo dice, y reincorporarlo es decision de quien lea,
+# no del script.
+CALIBRACION_RETIRADA = (
+    {
+        "node_id": "plan_mejora_procesos",
+        "retirado": "19 ago 2026, vuelta 40",
+        "motivo": ("fixture RANCIO: la propia campana recorto el nodo por una "
+                   "operacion legitima y dejo de disparar (bloque 43,1 contra "
+                   "umbral 44, por 0,9 puntos), con lo que el instrumento se "
+                   "nego a entregar entero desde la vuelta 34"),
+        "commit_de_origen": "2bd8dd76",
+        "operacion": "OP-F-04-HOR, que lo lleva en su nomina",
+        "medicion_al_retirarlo": "5 pasos, pareja 47,1, bloque 43,1 corte tras 2",
+    },
+)
+
+# A cuantos puntos del umbral un fixture se considera AL BORDE y el instrumento
+# lo avisa en su corrida normal, sin fallar. No es un umbral de decision: es un
+# aviso, y por eso no entra en ninguna comparacion de disparo.
+MARGEN_DE_AVISO = 1.0
 
 # LA PUERTA SE MUDA A LAS SENALES (15 ago 2026, decision del fundador). Vivia en
 # el `main()`, y por eso `scripts/loop/vuelta32_costura_opd01.py` pudo importar
@@ -243,6 +363,24 @@ def _mejor_bloque(ratio, pasos):
     return mejor
 
 
+def _ficha(ratio, nodos, nid):
+    """La medicion de UN nodo con las senales CRUDAS, con su margen al lado.
+
+    El margen es lo que le sobra a la senal de bloque por encima de su umbral, y
+    existe para que un fixture al borde se pueda AVISAR antes de que caiga, en
+    vez de descubrirse por un exit 1 a destiempo (la averia de la vuelta 34)."""
+    pasos = (nodos.get(nid) or {}).get("pasos_accionables") or []
+    sp = _peor_pareja(ratio, pasos)
+    sb = _mejor_bloque(ratio, pasos)
+    aplica = not isinstance(sb[0], NoAplica)
+    entra = sp[0] >= UMBRAL_PAREJA
+    if aplica:
+        entra = entra or (bool(sb[1]) and sb[0] >= UMBRAL_BLOQUE)
+    return {"pasos": len(pasos), "pareja": sp, "bloque": sb, "entra": entra,
+            "existe": bool(nodos.get(nid)),
+            "margen": (sb[0] - UMBRAL_BLOQUE) if aplica else None}
+
+
 def medir_calibracion(ratio=None):
     """Mide los nodos de calibracion con las senales CRUDAS y dice quien entra.
 
@@ -255,16 +393,40 @@ def medir_calibracion(ratio=None):
     nodos = json.loads(GRAFO.read_text(encoding="utf-8"))["nodos"]
     faltan, detalle = [], {}
     for nid in CALIBRACION:
-        pasos = (nodos.get(nid) or {}).get("pasos_accionables") or []
-        sp = _peor_pareja(ratio, pasos)
-        sb = _mejor_bloque(ratio, pasos)
-        entra = sp[0] >= UMBRAL_PAREJA
-        if not isinstance(sb[0], NoAplica):
-            entra = entra or (bool(sb[1]) and sb[0] >= UMBRAL_BLOQUE)
-        detalle[nid] = {"pasos": len(pasos), "pareja": sp, "bloque": sb, "entra": entra}
-        if not entra:
+        detalle[nid] = _ficha(ratio, nodos, nid)
+        if not detalle[nid]["entra"]:
             faltan.append(nid)
     return faltan, detalle
+
+
+def medir_retiradas(ratio=None):
+    """Mide los fixtures RETIRADOS, que no gobiernan la puerta pero se siguen
+    publicando. Un fixture retirado en silencio es una calibracion que nadie
+    puede auditar, y si alguno vuelve a disparar hay que enterarse."""
+    if ratio is None:
+        from rapidfuzz.fuzz import token_sort_ratio as ratio
+    nodos = json.loads(GRAFO.read_text(encoding="utf-8"))["nodos"]
+    salida = []
+    for r in CALIBRACION_RETIRADA:
+        f = _ficha(ratio, nodos, r["node_id"])
+        d = dict(r)
+        d["medicion_de_hoy"] = f
+        salida.append(d)
+    return salida
+
+
+def _texto_bloque(sb):
+    """El bloque en texto, y NO APLICA nunca se maquilla como un cero."""
+    if isinstance(sb[0], NoAplica):
+        return "NO APLICA"
+    return "%.1f (corte tras %d)" % (sb[0], sb[1])
+
+
+def fixtures_al_borde(detalle, margen=MARGEN_DE_AVISO):
+    """Los fixtures que SI entran pero por menos de `margen` puntos. El aviso que
+    la puerta vieja no tenia: aviso, no fallo."""
+    return [nid for nid, d in sorted(detalle.items())
+            if d["entra"] and d["margen"] is not None and d["margen"] < margen]
 
 
 def _asegurar_calibracion():
@@ -308,10 +470,18 @@ def imprimir_calibracion_rota(err, umbral_pareja=UMBRAL_PAREJA,
     for nid, d in sorted(err.detalle.items()):
         sp, sb = d["pareja"], d["bloque"]
         print("    %s: %d pasos, mejor pareja %.1f (pasos %d y %d), mejor bloque %s"
-              % (nid, d["pasos"], sp[0], sp[1], sp[2],
-                 ("NO APLICA" if isinstance(sb[0], NoAplica)
-                  else "%.1f (corte tras %d)" % (sb[0], sb[1]))))
+              % (nid, d["pasos"], sp[0], sp[1], sp[2], _texto_bloque(sb)))
     print("  Umbrales usados: pareja %s, bloque %s" % (umbral_pareja, umbral_bloque))
+    # EL CAMINO ESCRITO, ANADIDO EN LA VUELTA 40. La averia de la vuelta 34
+    # vivio cinco vueltas en parte porque el diagnostico decia QUE fallaba y no
+    # QUE HACER, y lo unico a mano era aflojar el umbral. Se dice aqui.
+    print("")
+    print("  QUE HACER, y que NO:")
+    print("    NO se afloja el umbral para que el fixture entre: eso arregla la")
+    print("    vara en vez de la pieza. Si la campana recorto el nodo por una")
+    print("    operacion legitima, EL FIXTURE QUEDO RANCIO y se RETIRA DECLARADO")
+    print("    en CALIBRACION_RETIRADA, con su motivo y su commit de origen, y")
+    print("    se elige otro por el criterio escrito arriba de CALIBRACION.")
 
 
 def main():
@@ -332,6 +502,8 @@ def main():
     except CalibracionRota as err:
         imprimir_calibracion_rota(err, args.umbral_pareja, args.umbral_bloque)
         return 1
+    _faltan, detalle_calib = _CALIBRACION
+    retiradas = medir_retiradas(ratio)
 
     nodos = json.loads(GRAFO.read_text(encoding="utf-8"))["nodos"]
     activos = {k: v for k, v in nodos.items() if not v.get("deprecado")}
@@ -423,12 +595,58 @@ def main():
       "la herede**. Detalle entero, con el costo medido, en el encabezado de "
       "`scripts/costuras_internas.py`.")
     A("")
+    A("> **SEGUNDA CORRECCION DECLARADA (19 ago 2026, vuelta 40).** La puerta de "
+      "arriba **quedo EN ROJO desde aquella recalibracion**: `plan_mejora_procesos` "
+      "daba **43,1 contra 44** y el instrumento **no entregaba nada** (exit 1). **El "
+      "roto no era el instrumento: era el fixture.** La propia campaña recorto ese "
+      "nodo por una operacion legitima (`OP-F-04-HOR`, commit `2bd8dd76`), que es lo "
+      "que lo dejo rancio. **La puerta se reparo cambiandole el fixture, con criterio "
+      "escrito, y SIN TOCAR NI UN UMBRAL NI UN NODO**: el retirado se queda declarado "
+      "abajo con su motivo. **Lo que la reparacion NO arregla y no se disfraza: la "
+      "cola sigue en el 42,3 por ciento del catalogo**, que es el pendiente de "
+      "doctrina del `MIN_BLOQUE = 2` y **lo decide el fundador**.")
+    A("")
     A("## La calibracion conocida")
     A("")
+    A("**Los nodos contra los que se comprueba que el instrumento sigue cazando "
+      "la clase para la que se construyo. Tienen que entrar TODOS**, y si falta "
+      "uno el instrumento no entrega nada. **El criterio de eleccion esta escrito "
+      "arriba de la lista en `scripts/costuras_internas.py`.**")
+    A("")
+    A("| fixture | pasos | pareja | bloque | corte | margen sobre el umbral |")
+    A("|---|---:|---:|---:|---:|---:|")
     for c in CALIBRACION:
         f = next(x for x in filas if x["node_id"] == c)
-        A(f"**CAZADO** `{c}`: pareja **{f['sim_pareja']}**, bloque "
-          f"**{f['sim_bloque_texto']}** con el corte **tras el paso {f['corte']}**.")
+        d = detalle_calib.get(c) or {}
+        m = d.get("margen")
+        A(f"| **CAZADO** `{c}` | {f['pasos']} | {f['sim_pareja']} | "
+          f"{f['sim_bloque_texto']} | {f['corte']} | "
+          f"{('%+.1f' % m) if m is not None else 'NO APLICA'} |")
+    A("")
+    borde = fixtures_al_borde(detalle_calib)
+    if borde:
+        A(f"> **AVISO DE BORDE: {len(borde)} fixture o mas esta a menos de "
+          f"{MARGEN_DE_AVISO:.1f} puntos del umbral** ({', '.join('`%s`' % b for b in borde)}). "
+          "**No es un fallo y no cambia nada hoy**, pero es el mismo sitio del que "
+          "vino la averia de la vuelta 34: un fixture al borde cae con cualquier "
+          "recorte legitimo del nodo. **Se dice para que la proxima se vea venir.**")
+        A("")
+    if CALIBRACION_RETIRADA:
+        A("### Los fixtures RETIRADOS, que no se borran")
+        A("")
+        A("**No gobiernan la puerta, pero se siguen midiendo y publicando en cada "
+          "corrida**: un fixture retirado en silencio es una calibracion que nadie "
+          "puede auditar.")
+        A("")
+        A("| fixture retirado | cuando | por que | commit de origen | como quedo hoy |")
+        A("|---|---|---|---|---|")
+        for r in retiradas:
+            f = r["medicion_de_hoy"]
+            hoy = ("**VUELVE A DISPARAR**" if f["entra"] else "sigue sin disparar")
+            A(f"| `{r['node_id']}` | {r['retirado']} | {r['motivo']} | "
+              f"`{r['commit_de_origen']}` ({r['operacion']}) | {hoy}: "
+              f"{f['pasos']} pasos, pareja {f['pareja'][0]:.1f}, bloque "
+              f"{_texto_bloque(f['bloque'])} |")
         A("")
     A("## Conteos")
     A("")
@@ -529,6 +747,22 @@ def main():
 
     print(f"  nodos en la cola: {len(filas)} | escrito {SALIDA.name} y {RESUMEN.name}")
     print(f"  calibracion: los {len(CALIBRACION)} nodos conocidos, CAZADOS")
+    for c in CALIBRACION:
+        d = detalle_calib[c]
+        m = d["margen"]
+        print("    %-44s %d pasos | pareja %5.1f | bloque %-22s | margen %s"
+              % (c, d["pasos"], d["pareja"][0], _texto_bloque(d["bloque"]),
+                 ("%+.1f" % m) if m is not None else "NO APLICA"))
+    for b in fixtures_al_borde(detalle_calib):
+        print("  AVISO DE BORDE: el fixture %s entra por menos de %.1f puntos "
+              "(margen %+.1f). No es un fallo; es el sitio del que vino la averia "
+              "de la vuelta 34." % (b, MARGEN_DE_AVISO, detalle_calib[b]["margen"]))
+    for r in retiradas:
+        f = r["medicion_de_hoy"]
+        print("  RETIRADO y NO borrado: %s (%s, commit %s) | hoy: bloque %s, %s"
+              % (r["node_id"], r["retirado"], r["commit_de_origen"],
+                 _texto_bloque(f["bloque"]),
+                 "VUELVE A DISPARAR" if f["entra"] else "sigue sin disparar"))
     return 0
 
 

@@ -1,0 +1,53 @@
+CASO POSITIVO DE LA PUERTA DE CALIBRACION, vuelta 40, 19 ago 2026
+Umbrales VIGENTES y no tocados: pareja 80, bloque 44
+
+1. CON LOS FIXTURES DE HOY, LA PUERTA TIENE QUE ABRIR
+  [OK ] los 3 fixtures entran en la cola | faltan: ninguno
+  [OK ]   fixture fases_traccion_producto dispara | bloque 72.6 (corte tras 4), margen +28.6
+  [OK ]   fixture reglas_brainstorming dispara | bloque 50.6 (corte tras 2), margen +6.6
+  [OK ]   fixture economia_circular_como_modelo_de_negocio dispara | bloque 44.2 (corte tras 3), margen +0.2
+  [OK ] criterio 3, al menos un fixture con margen amplio (10 puntos o mas) | los que cumplen: ['fases_traccion_producto']
+  [OK ] criterio 3, mas de un fixture | son 3
+  [OK ] criterio 2, todos entran por la senal de BLOQUE | 3 de 3
+
+2. CON UN FIXTURE QUE NO DISPARA, LA PUERTA TIENE QUE CERRAR
+   (se empuja con el RETIRADO plan_mejora_procesos: la averia de
+    verdad, REPRODUCIDA a proposito y no recordada)
+  [OK ] la puerta CIERRA y nombra al que falta | faltan: ['plan_mejora_procesos']
+  [OK ] la excepcion lleva la medicion dentro | bloque 43.1 (corte tras 2)
+   EL DIAGNOSTICO ENTERO, tal como lo veria quien lo corra:
+   --------------------------------------------------------------------
+   | INSTRUMENTO MAL CALIBRADO. No entrega nada.
+   |   La calibracion conocida no aparece en la cola: ['plan_mejora_procesos']
+   |     economia_circular_como_modelo_de_negocio: 5 pasos, mejor pareja 54.3 (pasos 4 y 5), mejor bloque 44.2 (corte tras 3)
+   |     fases_traccion_producto: 7 pasos, mejor pareja 76.3 (pasos 1 y 5), mejor bloque 72.6 (corte tras 4)
+   |     plan_mejora_procesos: 5 pasos, mejor pareja 47.1 (pasos 1 y 3), mejor bloque 43.1 (corte tras 2)
+   |     reglas_brainstorming: 7 pasos, mejor pareja 54.3 (pasos 2 y 4), mejor bloque 50.6 (corte tras 2)
+   |   Umbrales usados: pareja 80, bloque 44
+   | 
+   |   QUE HACER, y que NO:
+   |     NO se afloja el umbral para que el fixture entre: eso arregla la
+   |     vara en vez de la pieza. Si la campana recorto el nodo por una
+   |     operacion legitima, EL FIXTURE QUEDO RANCIO y se RETIRA DECLARADO
+   |     en CALIBRACION_RETIRADA, con su motivo y su commit de origen, y
+   |     se elige otro por el criterio escrito arriba de CALIBRACION.
+   --------------------------------------------------------------------
+  [OK ] el diagnostico dice QUE HACER (anadido en la vuelta 40)
+  [OK ] el diagnostico manda RETIRAR DECLARADO, no bajar el umbral
+  [OK ] la puerta NO se dejo pasar
+
+3. LA PUERTA SE HEREDA POR IMPORTACION (guarda de la vuelta 34)
+  [OK ] la senal publica peor_pareja revienta con la puerta cerrada
+  [OK ] la senal publica mejor_bloque revienta con la puerta cerrada
+
+4. NO APLICA SIGUE SIN DEJARSE COMPARAR (guarda de la vuelta 34)
+  [OK ] NO APLICA revienta al comparar con >=
+  [OK ] NO APLICA revienta al convertir a float
+  [OK ] NO APLICA revienta al usar como booleano
+  [OK ] y NO APLICA se sigue imprimiendo con su texto | NO APLICA
+
+5. LA PUERTA VUELVE A ESTAR COMO ESTABA tras el empuje
+  [OK ] los fixtures de hoy siguen entrando | faltan: ninguno
+  [OK ] la lista de fixtures quedo intacta | ('fases_traccion_producto', 'reglas_brainstorming', 'economia_circular_como_modelo_de_negocio')
+
+TODAS LAS COMPROBACIONES EN VERDE. La puerta abre cuando debe y cierra cuando debe.
