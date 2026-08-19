@@ -1893,3 +1893,57 @@ La tabla de orden de este mismo fichero le cuenta a `OP-D-05` **UN destejido** y
 - **No cambia el estado de la operacion.** Sigue en `LISTA`, **igual que `OP-D-01` a `OP-D-04`, que tambien estan ejecutadas**. **PENDIENTE DE DOCTRINA heredado: el esquema no distingue una operacion HECHA.**
 - **No borra un solo fichero.** Los dos absorbidos **conservan su texto entero**, que es lo que hace auditable la fusion.
 
+
+### EL ACTA DE LA VUELTA 40 VERIFICA ESTE CIERRE Y ADJUDICA SUS CINCO DISCUTIBLES (19 ago 2026, vuelta 41)
+
+**Esta seccion no reescribe ninguna de las dos de arriba.** El plan sellado y el cierre ejecutado se quedan enteros donde estan, y aqui va **lo que el auditor hizo con ellos**, leido hoy de `docs/loop/ACTA_AUDITOR.md` con su linea al lado, como manda la regla 1 del `EJECUTOR.md`.
+
+#### LO QUE EL AUDITOR RE-CORRIO POR SU CUENTA (acta de la vuelta 40, seccion 1, linea 8389)
+
+**No dio por bueno un solo numero de este cierre: lo volvio a medir entero.** La lista, tal como la escribe el acta:
+
+| lo re-corrido | como salio, segun el acta |
+|---|---|
+| **estado y marcador** (`vuelta31_estado.py` por su via) | n **3.388**, A **575**, B **83**, C **8**, D **2.722**, tasa **17,0**; grafo **3.853** ficheros, **3.532** vivos, **321** deprecados, **16.871** enlaces. *CALZA AL DIGITO* con la tabla de cierre |
+| **los huecos, por su propio comando** | numeracion contigua por bloques de dominio: **CERO huecos, CERO duplicados** |
+| **la apertura que se midio tarde** | md5 propio: `SALIDA_V40_APERTURA.txt` y `SALIDA_V39_CIERRE.txt` **BYTE IGUAL** (`9331c557163d522c98ebd8ba03dbdccf` las dos) |
+| **la puerta de costuras** | `scripts/costuras_internas.py` **exit 0** con los tres fixtures al digito, el aviso de borde y el retirado declarado; **umbrales 80 y 44 intactos** |
+| **la fusion, contra el grafo** | superviviente vivo con 6 pasos, absorbidos deprecados con su texto, **cero vivos nombran a un absorbido**, y **la aritmetica de enlaces nodo a nodo leida de git**: menos 1, menos 2, mas 5, igual mas 2, de **16.869 a 16.871** |
+| **el ciclo Gate 0 entero** | `run_phase1` mas etiquetas mas sync, **sha256 de los seis assets IDENTICOS** a los sellados (`master_graph 56ebc5a616f1`) |
+| **las suites** | motor **25 de 25**, web **1.030 pasadas** y 3 saltadas, `tsc` cero lineas, **los tres exit 0** |
+| **el recomputo del cierre transitivo** | **332 actos**, `CERRADOS` **278 sobre 595**, nodos en actos **838**, A vigentes **566**, **las cuatro comprobaciones OK** y el jsonl escrito **identico al commiteado** |
+| **el verificador de mapas con la vara 2** | los **seis** planes sellados via `--json`: **6 tablas, 37 filas, 0 discrepancias**. Identico al sellado |
+| **`OP-D-06` re-medida** | **9 actos**, tabla y nomina el **mismo conjunto**, **8 A y 1 C**, **9 de 9 con los dos nodos vivos**, y de las ocho razones A **ninguna nombra ganador** |
+
+**Y LA CIEGA COINCIDIO 2 DE 2 EN EL FONDO** (acta, seccion 2, linea 8466): leyo el nodo fundido paso a paso **antes** de destapar razon alguna.
+
+#### LOS CINCO DISCUTIBLES, ADJUDICADOS: **LOS CINCO PROCEDEN** (acta, seccion 4, linea 8522)
+
+| | el discutible | la adjudicacion, con su linea |
+|---|---|---|
+| **d1** | la declaracion de **no costura** sobre el resultante, hecha por quien lo fundio | **PROCEDE** (linea **8524**). Y no por confianza: *la relei yo*. La relectura ciega del auditor **coincide**, los pasos 4 a 6 **continuan** a los 1 a 3, comparten **vocabulario** y **no narracion**. La guarda contra el juez y parte **ya existe y se cumplio**: la cita queda **registrada en la cola** como cualquier citado y el auditor la relee a la vuelta siguiente. **Precedente citable: el d2 del acta 39** (la cita de `reglas_brainstorming` registrada, no despachada) |
+| **d2** | el **fixture fragil** de la puerta de costuras | **SE QUEDA con su aviso de borde** (linea **8535**). Retirar un fixture que **hoy** cumple el criterio **seria acomodar la puerta**, que es la especie que el banco 9 prohibe. Si `economia_circular` cae, **cae ruidosa**, y la reparacion **ya esta escrita en el criterio 5** |
+| **d3** | usar **la cola que la casa llama rota** | **PROCEDE EN SU USO NODO A NODO** (linea **8542**). La medida de un nodo concreto **no depende de la tasa de la cola**; lo roto es el **ranking global** como criterio de lectura, y eso **espera el `MIN_BLOQUE` del fundador** |
+| **d4** | el ancla `fases_traccion_producto`, que **ninguna pagina nombraba** | **PROCEDE** (linea **8549**). El encargo pedia criterio **escrito**, no criterio **preexistente**: quedo escrito, **medido antes de escribirse** y comprobable por cualquiera que corra el instrumento |
+| **d5** | **no ejecutar** `OP-D-06` y convocar al auditor | **PROCEDE, y no es decision de alcance** (linea **8557**). Es **la letra del modo continuo**: una operacion cuyo texto no alcanza para ejecutarse sin decidir **detiene al ejecutor y convoca al auditor** |
+
+#### LAS TRES PREGUNTAS, CONTESTADAS (acta, seccion 5, linea 8565)
+
+1. **Un fixture que vive en la cola de lectura: NO SE PROHIBE** (linea **8567**). Los **criterios 4 y 5** del propio instrumento **ya cubren la caida entera**: si la lectura desteje al nodo, el fixture **queda rancio y se retira declarado**, con la puerta cayendo ruidosa un ciclo, **que es su comportamiento de diseno**. Elevarlo a prohibicion **seria doctrina nueva que ninguna caida real pide todavia**.
+2. **La cola global NO es base de lectura** (linea **8574**), y **debe decirlo el propio instrumento**. Adjudicado por extension de su regla escrita (*cita y no juzga*). **Queda encargado y hecho en esta vuelta 41**: la linea va al final de la salida, sellada en `docs/loop/SALIDA_V41_COSTURAS_LIMITE.txt` con **exit 0**, y **la cifra la mide la propia corrida en vez de teclearse**.
+   > **DISCREPANCIA DECLARADA, no resuelta copiando** (regla 2 del `EJECUTOR.md`): el encargo y el acta hablan del **42,3 por ciento**; **la corrida de hoy da 42,4** (**1.496** nodos en la cola sobre **3.532** activos). **La cola no se movio: se movio el catalogo.** El 42,3 se midio contra **3.534** activos, antes de que `OP-D-05` deprecara sus **dos** absorbidos en la vuelta 40. **Misma cola, dos activos menos, una decima arriba.** Se publica la de hoy y se deja la vieja a la vista.
+3. **`OP-D-06` se ejecuta como UNA OPERACION CON NUEVE ACTOS, y el registro NO se toca** (linea **8578**). Citable: **su propio titulo** (*LOS NUEVE ACTOS DE DOS*), **su tabla sellada** con los nueve puestos, y **`P.5`**, que define el acto por el **subconjunto cerrado** y no por la fila del registro. Partirla en nueve `id_op` **moveria una cifra publicada (71 operaciones) sin que ninguna regla lo ordene**.
+
+#### UNA CAIDA DE REPORTE QUE CORREGIR, DECLARADA SIN BORRAR LO VIEJO (acta, seccion 3, linea 8491)
+
+**El texto viejo no se toca, para que la correccion se pueda auditar.** Lo que el reporte de la vuelta 40 escribio fue:
+
+> ~~*los nueve son POR ELEGIR y los nueve piden `P.8`*~~
+
+**Y esa frase SOBREPASA LA MEDICION.** El acta lo halla con nombre en su linea **8497**:
+
+- El puesto **494** (`principio_calidad_mvp` con `producto_minimo_viable`) es **clase C**, no A.
+- **La prueba de `9.3.1` no corre sobre el**, y **el propio instrumento lo imprime**: *la prueba de 9.3.1 solo corre sobre A* (`docs/loop/SALIDA_V40_OPD06_NUEVE_ACTOS.txt`).
+- **Su via es el precedente de `OP-D-01`**: cura acoplada mayor, exactamente como el **aviso de solape** de esta misma pagina lo advierte, y **no una eleccion de superviviente**.
+
+**LO CORRECTO, y es lo que rige desde aqui: OCHO piden `P.8`. El noveno pide su DECLARACION.** La caida **no mueve ningun dato**: ninguna cifra publicada cambia, solo la via de un acto.
