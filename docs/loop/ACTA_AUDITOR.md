@@ -8378,3 +8378,271 @@ seguidas: CERO, la racha de una se corto con esta tanda limpia.**
 **EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: la vuelta 40 repara
 la puerta de calibracion del instrumento de costuras y ejecuta OP-D-05 con
 el instrumento vivo.**
+
+# ACTA DE LA VUELTA 40 DEL AUDITOR (19 ago 2026, Fable 5). CONVOCADO POR LA GUARDA DEL MODO CONTINUO (OP-D-06 NO ALCANZA PARA EJECUTARSE SIN DECIDIR) Y POR LOS CINCO DISCUTIBLES, VERIFICACION COMPLETA RE-CORRIDA ENTERA POR CORRIDA PROPIA Y BYTE IGUAL DONDE APLICA, LA CIEGA COINCIDE 2 DE 2 EN EL FONDO, UNA CAIDA DE REPORTE DEL EJECUTOR HALLADA CON NOMBRE Y UNA AUTODECLARADA, UNA CAIDA DE PROCEDIMIENTO DEL AUDITOR DECLARADA, LOS CINCO DISCUTIBLES ADJUDICADOS Y LAS TRES PREGUNTAS CONTESTADAS: EL BUCLE SIGUE CON OP-D-06 COMO UNA OPERACION DE NUEVE ACTOS
+
+## 0. HUECO DE ACTA: NO HAY
+
+La ultima acta escrita es la de la vuelta 39 y la vuelta que audito es la 40,
+inmediatamente siguiente. Cero vueltas sin acta.
+
+## 1. LA VERIFICACION, todo por corrida propia de hoy
+
+El reporte es 6a6544e0 (mas 80102d93 con el hash anadido despues de medirlo,
+como declara). Rama pasada-unica, arbol limpio al empezar y al terminar.
+
+1. ESTADO Y MARCADOR: vuelta31_estado.py corrido por mi: n 3.388, A 575,
+   B 83, C 8, D 2.722, tasa 17,0; grafo 3.853 ficheros, 3.532 vivos, 321
+   deprecados, 16.871 enlaces; 71 operaciones LISTA, 0 dependencias rotas;
+   inventario 672 con el mismo reparto; familias 72/70, 93/91, 111/111,
+   75/73, 47/47. CALZA AL DIGITO con la tabla de cierre del reporte.
+2. MARCADOR POR VIA PROPIA: conteo directo del archivo con python: 3.388
+   lineas, A 575, B 83, C 8, D 2.722. Y LOS HUECOS POR MI COMANDO: la
+   numeracion es contigua por bloques de dominio (compras 1 a 155, core a
+   1.600, entrega a 1.771, environmental a 1.941, exportacion a 2.071,
+   franquicias a 2.219, health_safety a 2.411, quality a 3.255,
+   risk_management a 3.361, seguridad_digital a 3.388): CERO huecos, CERO
+   duplicados. Los n por dominio calzan con la tabla de tasa del reporte.
+3. LA APERTURA QUE SE MIDIO TARDE: md5 corrido por mi,
+   SALIDA_V40_APERTURA.txt y SALIDA_V39_CIERRE.txt son BYTE IGUAL
+   (9331c557163d522c98ebd8ba03dbdccf las dos). La prueba del ejecutor de que
+   su medicion tardia sirve de apertura QUEDA VERIFICADA.
+4. LA PUERTA DE COSTURAS: scripts/costuras_internas.py corrido por mi,
+   exit 0. Los tres fixtures al digito (fases_traccion_producto 72,6 margen
+   mas 28,6; reglas_brainstorming 50,6 mas 6,6; economia_circular 44,2 mas
+   0,2), el aviso de borde impreso, el retirado plan_mejora_procesos
+   declarado con motivo y commit e IMPRESO en cada corrida (hoy 43,1, sigue
+   sin disparar), cola 1.496. Mi re-corrida no movio un byte de los ficheros
+   entregados (git limpio tras correrla). Umbrales 80 y 44 intactos en el
+   codigo.
+5. LA FUSION DE OP-D-05, contra el grafo: superviviente vivo con 6 pasos y
+   3 condiciones; los dos absorbidos deprecados con su texto intacto; CERO
+   nodos vivos nombran a un absorbido (barrido propio de los 3.853); cero
+   auto arista y cero duplicada en el superviviente. LA ARITMETICA DE
+   ENLACES ENTRADA POR ENTRADA, leida de git en 764de090 contra HEAD:
+   superviviente previos 6 a 7 y siguientes 4 a 8 (la simetrizacion de 5
+   exacta), criterios_equity_split previos 9 a 8, decision_fundador_solo
+   siguientes 17 a 15; menos 1, menos 2, mas 5 igual mas 2, y 16.869 a
+   16.871. CALZA. Y git log --follow confirma: el ultimo toque del
+   superviviente antes de esta vuelta fue 2bd8dd76 (OP-F-04-HOR), la costura
+   de doce pasos que las razones declaraban YA ESTABA CONSUMIDA (el nodo en
+   764de090 tiene 4 pasos, no 12).
+6. CICLO GATE 0 RE-CORRIDO ENTERO POR MI: run_phase1 (GATE 0: OK, 3.853
+   compilados, alcanzabilidad 100, simetria 0 faltantes), etiquetas 71,
+   sync con los SEIS assets y sha256 IDENTICOS a los sellados
+   (master_graph 56ebc5a616f1), arbol byte igual al terminar.
+7. LAS SUITES POR MI: motor 25 de 25 exit 0; web 80 ficheros, 1.030
+   pasadas, 3 saltadas, exit 0; tsc cero lineas exit 0.
+8. EL RECOMPUTO DEL CIERRE TRANSITIVO RE-CORRIDO POR MI
+   (scripts/plan/recomputo_3388.py): 332 actos, CERRADOS 278 sobre 595,
+   nodos en actos 838, A vigentes 566, LAS CUATRO COMPROBACIONES OK, y el
+   jsonl escrito quedo identico al commiteado (git limpio). CALZA con el
+   punto 2 del cierre del reporte.
+9. EL VERIFICADOR DE MAPAS CON LAS DOS VARAS, corrido por mi con los seis
+   planes sellados via --json: 6 tablas, 37 filas, 0 discrepancias, vara 2
+   CORRIDA sobre 6 planes. Identico al sellado.
+10. OP-D-06 RE-MEDIDA POR MI (vuelta40_acto_opd06.py, exit 0): 9 actos de
+    la tabla sellada, tabla y nomina el MISMO conjunto (faltan cero, sobran
+    cero), 8 A y 1 C (el 494), 9 de 9 con los dos nodos vivos, 3 de 9 de la
+    misma fuente, y de las ocho razones A ninguna nombra ganador. La
+    simetria global del Gate 0 (cero reciprocas faltantes) cubre las cero
+    cojas de los dieciocho. OPERACIONES.jsonl leido por mi: OP-D-05 con
+    superviviente escrito seleccion_ceo_fundador, OP-D-06 con 18 nodos.
+11. LA SENAL ANTES Y DESPUES RE-CORRIDA POR MI: sube en 3 de 3, y la salida
+    trae escrita la clausula de no coartada (no autoriza a descartar la
+    cita; la lectura se hace con el texto delante).
+12. TAREA 1 Y CITAS DE LINEA: la seccion nueva existe en 02_DESTEJIDOS.md
+    (linea 1741) bajo el cierre de OP-D-04; las siete lineas del acta
+    citadas (8217, 8252, 8267, 8275, 8278, 8283, 8290) dicen lo que el
+    reporte dice que dicen, igual que 01_FUENTES linea 90 y 02_DESTEJIDOS
+    linea 294. El numstat e7623461..960de876 da 71 ficheros, 8.830
+    insertadas, 278 borradas: el reporte lo corrio antes de su propio
+    commit, como declara. El plan sellado PLAN_V40_OPD05.json trae 2
+    absorbidos, 6 grupos de pasos, 3 de condiciones, 8 preservar, 5
+    rastros y 21 piezas en la tabla de P.13. Los nueve
+    bridges_aprobados.json barridos por mi: cero apariciones de los
+    absorbidos.
+
+## 2. LA RELECTURA CIEGA, con lo que en esta vuelta puede ser ciego
+
+Esta vuelta no emitio veredictos: la ciega es sobre el fondo de los
+discutibles, pasos impresos ANTES de destapar razones.
+
+1. EL NODO FUNDIDO, leido entero paso a paso: los pasos 1 a 3 deliberan
+   (abrir la conversacion, evaluar a la persona de la idea, medir capacidad
+   de ejecucion y compromiso) y los 4 a 6 ejecutan (roles alternativos,
+   negociar el titulo, documentar). El paso 5 negocia el titulo y limpia la
+   junta; el paso 1 abre la conversacion antes de fundar. Comparten
+   vocabulario (conflicto, titulo, CEO), NO narracion. MI CLASE: NO HAY
+   COSTURA. Coincide con el ejecutor.
+2. EL DONANTE DE P.11, leido entero: cinco advertencias sin secuencia
+   (confrontar en vez de evitar, evaluar si realmente, ser cautelosos,
+   evitar por lealtad, evaluar antes de fundar). MI CLASE: LINEA, no
+   procedimiento. Coincide.
+3. DESTAPADAS LAS RAZONES 492, 673 y 833 del archivo: dicen literalmente lo
+   que el reporte cita (el 673 nombra ganador con el corto cabe entero, el
+   492 describe la costura 1 a 4 contra 5 a 12 para la otra ficha, el 833
+   el positivo y negativo del mismo reparto).
+
+CIEGA: COINCIDE 2 DE 2 en el fondo, las dos DENTRO del marcado.
+
+## 3. CAIDAS, con nombre
+
+1. CAIDA DE REPORTE DEL EJECUTOR, HALLADA POR MI, FUERA DEL MARCADO: la
+   frase "los nueve son POR ELEGIR y los nueve piden P.8" (seccion 4 del
+   reporte, repetida en el discutible 5 como "cada uno de los nueve pide su
+   P.5, su P.8 y su plan sellado"). El 494 es clase C, la prueba de 9.3.1
+   no corre sobre el (el propio instrumento lo imprime) y su via es el
+   precedente de OP-D-01 (cura acoplada mayor, aviso de solape del plan),
+   no una eleccion de superviviente. OCHO piden P.8; el noveno pide su
+   declaracion. No mueve ningun dato. POR LA REGLA DEL CREDITO el tramo se
+   releyo al doble: el instrumento de OP-D-06 re-corrido dos veces por mi,
+   la tabla del plan leida contra el registro, y el 494 leido en su clase,
+   su razon y su aviso. El encargo siguiente corrige la via del 494.
+2. CAIDA DE REPORTE DEL EJECUTOR, AUTODECLARADA: la cifra 3.538 de vivos en
+   la tabla de apertura, corregida a 3.534 y dejada tachada en su sitio
+   (correccion 3 del reporte). El tramo (la tabla de apertura) quedo
+   re-verificado al doble por md5 byte igual mas mi corrida propia del
+   estado.
+3. CAIDA DE PROCEDIMIENTO DEL AUDITOR, MIA Y CON NOMBRE: al re-correr el
+   ciclo de Gate 0 corri run_phase1 DESPUES de reaplicar etiquetas (orden
+   equivocado, revierte la curaduria) y ademas mate el sync a medias al
+   truncar su salida con Select-Object -First (PowerShell corta el proceso),
+   dejando un manifest viejo en el arbol de trabajo. Detectada en la misma
+   vuelta por los sha256, reparada re-corriendo etiquetas y sync en el
+   orden del ciclo, y el arbol quedo BYTE IGUAL al commiteado (verificado
+   con git status y con los sha de los seis assets). No publico cifra, no
+   toco dato commiteado, y queda declarada como lo manda la seccion 2.
+
+Las otras tres correcciones declaradas del reporte (el 9.3.1 del
+instrumento nuevo corregido antes de publicar, la etiqueta MIXTA que ahora
+se mide, la salida ilegible re-corrida en utf-8) son el proceso funcionando,
+no caidas: nada falso quedo publicado.
+
+## 4. LOS CINCO DISCUTIBLES, ADJUDICADOS
+
+1. d1, LA NO COSTURA DEL RESULTANTE DECLARADA POR QUIEN LO FUNDIO: PROCEDE.
+   No por confianza sino porque LA RELEI YO: mi lectura ciega coincide (el
+   segundo bloque continua al primero), y la medicion de 3 de 3 explica la
+   cita sin absolverla. La guarda contra el juez y parte YA EXISTE y se
+   cumplio: la cita queda REGISTRADA en la cola del instrumento (leida por
+   mi en COSTURAS_INTERNAS.jsonl, pareja 1 y 5, corte 3) y el auditor la
+   relee en la vuelta siguiente, que es esta. Precedente citable: el d2 del
+   acta 39 (la cita de reglas_brainstorming registrada, no despachada). El
+   argumento general de que la senal sube al fundir NO absuelve resultantes
+   futuros: cada cita se lee con el texto delante, y el propio instrumento
+   del ejecutor lo deja escrito en su salida.
+2. d2, EL FIXTURE FRAGIL SE QUEDA: PROCEDE. Retirar un fixture que HOY
+   cumple el criterio seria acomodar la puerta, que es la especie de
+   degradacion que el banco 9 prohibe (fallar ruidoso antes que mentir
+   calladito). Si economia_circular cae, la puerta cae VISIBLE, el aviso de
+   borde ya lo anuncia en cada corrida, y la reparacion esta escrita en el
+   criterio 5 (retirar declarado, nunca aflojar). Una puerta que puede caer
+   ruidosa con reparacion escrita es mejor que una lista acomodada.
+3. d3, USAR LA COLA QUE LA CASA LLAMA ROTA: PROCEDE EN SU USO NODO A NODO.
+   La medida de un nodo concreto (bloque, corte, pareja) no depende de la
+   tasa de la cola; lo roto es el RANKING global como criterio de lectura,
+   y eso espera el MIN_BLOQUE del fundador, declarado desde la vuelta 34 y
+   no tocado. SE ENCARGA (tarea 1 del encargo): que el instrumento declare
+   ese limite en su propia salida, para que nadie herede la cola como base
+   de lectura sin leerlo.
+4. d4, EL ANCLA QUE NINGUNA PAGINA NOMBRA: PROCEDE. El encargo pedia
+   criterio escrito, no criterio preexistente: quedo escrito DENTRO del
+   instrumento, medido antes de escribirse, comprobable por cualquiera que
+   lo corra, y el candidato que el acta 39 si nombraba fue verificado e
+   incluido. La alternativa (solo los dos nombrados) dejaba la puerta
+   apoyada en un fixture a dos decimas del umbral. El criterio 4 (preferir
+   el nodo sin nomina de operacion) es ademas la leccion exacta de la
+   averia: el fixture rancio LO RECORTO una operacion legitima.
+5. d5, NO EJECUTAR OP-D-06: PROCEDE, Y NO ES DECISION DE ALCANCE. La letra
+   del modo continuo dice: cualquier operacion cuyo texto no alcance para
+   ejecutarse sin decidir DETIENE al ejecutor y convoca al auditor.
+   OPERACIONES.jsonl guarda como un acto lo que el plan sella como nueve, y
+   el instrumento del acto ABORTA con 144 pares sin clase: eso ES el texto
+   no alcanzando. Parar, medir entero y traerlo es el cumplimiento de la
+   guarda, no una improvisacion. La adjudicacion que faltaba va abajo.
+
+## 5. LAS TRES PREGUNTAS, CONTESTADAS, Y LOS PENDIENTES
+
+1. UN FIXTURE EN LA COLA DE LECTURA: NO SE PROHIBE. Los criterios 4 y 5 ya
+   cubren la caida entera: la preferencia por nodos sin nomina reduce el
+   riesgo, y si la lectura desteje a reglas_brainstorming el fixture queda
+   rancio y SE RETIRA DECLARADO, con la puerta cayendo ruidosa un ciclo,
+   que es su comportamiento de diseno. Elevarlo a prohibicion seria
+   doctrina nueva que ninguna caida real pide todavia; si el fundador la
+   quiere, la casa la reserva.
+2. LA COLA AL 42,3 COMO BASE DE LECTURA: NO LO ES, y debe decirlo el propio
+   instrumento. Adjudicado por extension de su regla escrita (cita y no
+   juzga) y de la practica de limites declarados. QUEDA ENCARGADO: una
+   linea al final de la salida.
+3. OP-D-06, NUEVE OPERACIONES O UNA CON NUEVE ACTOS: UNA OPERACION CON
+   NUEVE ACTOS, Y EL REGISTRO NO SE TOCA. Citable: el titulo propio de la
+   operacion (LOS NUEVE ACTOS DE DOS), su tabla sellada con los nueve
+   puestos, y P.5, que define el acto por el subconjunto cerrado y no por
+   la fila del registro. Partirla en nueve id_op moveria una cifra
+   publicada (71 operaciones) sin que ninguna regla lo ordene. La particion
+   se lee de la tabla sellada con el instrumento que el ejecutor ya
+   escribio, que es exactamente lo que hizo. El pendiente nuevo 2 queda
+   CERRADO con esta adjudicacion; su primo (el acto que se parte en dos)
+   sigue siendo otro caso y sigue vivo.
+
+PENDIENTE NUEVO 1 (la senal no es neutral a la fusion): NO pide doctrina
+nueva. La practica que el ejecutor aplico y dejo escrita en la salida del
+instrumento (la cita se lee siempre con el texto delante; que la fusion la
+encendio se declara) ES la regla de uso, adjudicada por extension de cita
+y no juzga. Registrada; el MIN_BLOQUE sigue siendo del fundador.
+HEREDADOS: siguen vivos y ninguno bloquea, como el reporte los lista.
+
+## 6. METRICA DE CREDITO acumulada
+
+Entrante (acta de la vuelta 39): 50 relecturas, 442 puestos (mas 236 nodos
+de forma y 125 sitios de codigo), 7 caidas de clase, 16 de reporte del
+ejecutor, 7 de cifra publicada del ejecutor, 2 de cifra del auditor, 2 de
+acta del auditor. Rachas: clase o cifra CERO, reporte CERO.
+
+Esta tanda (vuelta 40): mas 3 puestos de fondo (las razones 492, 673 y 833
+releidas contra el archivo); mas 4 nodos de forma (el resultante y el
+donante de P.11 leidos enteros, los dos absorbidos comprobados en su
+fichero); mas 24 sitios de codigo o instrumentos re-corridos (estado,
+marcador y huecos por via propia, los dos md5, costuras con sus fixtures y
+su retirado, la cola jsonl del resultante, el ciclo entero de Gate 0 con
+etiquetas y sync y los sha de los seis assets, motor, web, tsc, el
+recomputo del cierre transitivo con su jsonl identico, el verificador de
+mapas con la vara 2 sobre seis planes, el acto de OP-D-06 dos veces, la
+senal antes y despues, los nueve bridges, el barrido de vivos contra
+absorbidos, la aritmetica de enlaces en git nodo a nodo, el follow del
+superviviente, el numstat, las siete lineas de acta citadas mas las dos del
+plan, la seccion de tarea 1, los campos de OPERACIONES.jsonl, el plan
+sellado). Caidas: DOS de reporte del ejecutor (una hallada, una
+autodeclarada), CERO de clase o cifra, y UNA de procedimiento del auditor,
+especie nueva, declarada arriba.
+
+Acumulado: 50 relecturas, 445 puestos (mas 240 nodos de forma y 149 sitios
+de codigo), 7 caidas de clase, 18 de reporte del ejecutor, 7 de cifra
+publicada del ejecutor, 2 de cifra del auditor, 2 de acta del auditor, 1 de
+procedimiento del auditor.
+
+Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte
+seguidas: UNA (esta tanda; la 39 salio limpia). Tres seguidas serian
+parada: quedan registradas y el dictado del reporte se vigila.
+
+## 7. CONDICIONES DE PARADA, recorridas: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. Los tres candidatos (fixture en cola de lectura, cola
+  como base, la particion de OP-D-06) quedaron adjudicados por letra
+  citable (criterios 4 y 5 del instrumento, cita y no juzga, el titulo y la
+  tabla sellada de la operacion mas P.5).
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NO. Nada de lo encargado borra contenido, cambia
+  alcance, gasta fuera del repo ni toca produccion. El MIN_BLOQUE sigue
+  esperando al fundador y nadie lo toco.
+- Fallo tecnico repetido: NO. Gate 0 y las suites verdes dos corridas (la
+  del ejecutor y la mia).
+- Credito roto: NO. Racha de clase o cifra CERO; la de reporte queda en UNA
+  y no acumula para parada por si sola.
+- Campana consumada: NO. Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: la vuelta 41 registra
+las adjudicaciones, anade la linea de limite a la salida del instrumento de
+costuras, y ejecuta OP-D-06 como UNA operacion de nueve actos, acto por
+acto y ninguno a medias.
