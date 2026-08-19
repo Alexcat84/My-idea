@@ -4,26 +4,39 @@
   "dominio": "core",
   "titulo_concepto": "Análisis de Gastos de Capital (Capital Expenditure Analysis)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Proceso estructurado en tres pasos para decidir si vale la pena realizar una inversión grande de capital: (1) determinar el desembolso inicial de efectivo, (2) proyectar los flujos de efectivo futuros generados por la inversión, y (3) evaluar esos flujos usando métodos como payback, NPV o IRR para decidir si la inversión es rentable.",
+  "resumen_teorico": "Proceso estructurado para decidir si vale la pena una inversión grande de capital y para pedir el financiamiento que necesita: (1) determinar el desembolso inicial de efectivo con todos sus costos, (2) proyectar de forma conservadora los flujos de efectivo futuros que generará, y (3) evaluar esos flujos con payback, NPV o IRR para decidir si la inversión es rentable. El mismo análisis, redactado con sus riesgos, supuestos y análisis de sensibilidad, es la propuesta que se lleva a un banco o inversionista. Y la regla que ordena todo lo demás: la decisión se toma con el análisis, no al revés.",
   "pasos_accionables": [
-    "Determinar el desembolso inicial de efectivo incluyendo todos los costos asociados (compra, instalación, capacitación, interrupciones operativas)",
-    "Proyectar de forma conservadora los flujos de efectivo futuros que generará la inversión",
-    "Evaluar los flujos proyectados usando payback, NPV y/o IRR",
-    "Involucrar a empleados y gerentes con conocimiento técnico en las proyecciones",
-    "Tomar la decisión de inversión basada en el análisis, no al revés"
+    "Determina el desembolso inicial de efectivo incluyendo todos los costos asociados de la inversión: compra, envío, instalación, capacitación e interrupciones operativas (downtime)",
+    "Proyecta de forma conservadora los flujos de efectivo futuros que generará la inversión, en términos de ahorro de costos o de ingresos adicionales, e involucra en esas proyecciones a los empleados y gerentes con conocimiento técnico",
+    "Evalúa los flujos proyectados con métodos financieros: calcula el NPV usando el hurdle rate de tu empresa, y respáldalo con el payback y el IRR",
+    "Redacta la propuesta de inversión incluyendo los riesgos, los supuestos y un análisis de sensibilidad",
+    "Toma la decisión de inversión basada en el análisis, no al revés: el análisis no se hace para justificar una decisión que ya estaba tomada"
   ],
-  "entregable_esperado": "Un análisis completo de gasto de capital con desembolso inicial, flujos proyectados y evaluación de retorno mediante al menos un método financiero",
+  "entregable_esperado": "Un análisis completo de gasto de capital con el desembolso inicial, los flujos proyectados y la evaluación de retorno por NPV, payback e IRR, redactado como propuesta de inversión con sus riesgos, supuestos y análisis de sensibilidad, listo para presentar a un banco o inversionista",
   "nodos_previos": [
     "valor_del_dinero_en_el_tiempo",
-    "tasa_de_retorno_requerida"
+    "tasa_de_retorno_requerida",
+    "comparacion_metodos_inversion"
   ],
   "nodos_siguientes": [
     "metodo_payback",
     "metodo_valor_presente_neto",
-    "tasa_interna_retorno_irr"
+    "tasa_interna_retorno_irr",
+    "gestion_capital_trabajo"
   ],
   "condiciones_activacion": [
-    "Cuando la empresa debe decidir sobre la compra de equipo, expansión, adquisición o desarrollo de nuevo producto que involucre inversión significativa de efectivo"
+    "Cuando tu empresa debe decidir sobre la compra de equipo, una expansión, una adquisición o el desarrollo de un nuevo producto que involucre una inversión significativa de efectivo",
+    "Cuando necesitas solicitar financiamiento para un activo o un proyecto de capital"
   ],
-  "etiqueta_arbol": "Evalúa tu Gran Inversión"
+  "etiqueta_arbol": "Evalúa tu Gran Inversión",
+  "ids_alias": [
+    "propuesta_gasto_capital"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "propuesta_gasto_capital",
+      "titulo": "Guía paso a paso para analizar gastos de capital (ROI)",
+      "fuente": "Financial Intelligence for Entrepreneurs"
+    }
+  ]
 }

@@ -1,0 +1,20 @@
+PLAN        : docs/loop/PLAN_V41_ACTO331.json
+SUPERVIVIENTE: analisis_de_gastos_de_capital
+LA GUARDA, tal como el plan la dejo escrita:
+  symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos
+==============================================================================
+### 1. symmetrize_added DEL LOG DEL CICLO
+  entradas totales en el log        : 2
+  entradas para analisis_de_gastos_de_capital: 2
+  entradas para OTROS nodos         : 0
+  el plan esperaba                  : 2
+    [OK ] nodos_previos      comparacion_metodos_inversion
+    [OK ] nodos_siguientes   gestion_capital_trabajo
+  GUARDA 1, simetrizacion EXACTA (faltan 0, sobran 0, de otros nodos 0): OK
+
+### 2. LAS ARISTAS RELEIDAS EN EL FICHERO DEL SUPERVIVIENTE
+  GUARDA 2, 2 de 2 aristas presentes en dataset/nodos/analisis_de_gastos_de_capital.json: OK
+
+==============================================================================
+RESULTADO: TODAS LAS GUARDAS VERDES
+EXIT=0
