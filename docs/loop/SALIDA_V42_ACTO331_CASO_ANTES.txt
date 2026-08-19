@@ -1,0 +1,56 @@
+CASO POSITIVO: OP-D-06, ACTO 2 DE NUEVE (puesto 331): analisis_de_gastos_de_capital absorbe a propuesta_gasto_capital
+==============================================================================
+
+EL SUPERVIVIENTE, analisis_de_gastos_de_capital
+  [PASA] tiene 5 pasos, los 5 que el plan deja
+  [CAE ] tiene 1 condiciones, las 2 que el plan deja
+  [CAE ] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [CAE ] sus condiciones son exactamente las del plan
+  [CAE ] su entregable es el del plan
+  [CAE ] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Análisis de Gastos de Capital (Capital Expenditure Analysis)'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Evalúa tu Gran Inversión'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'hurdle rate'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'downtime'
+  [PASA] sobrevive literal en ['pasos']: 'capacitación'
+  [PASA] sobrevive literal en ['pasos']: 'interrupciones operativas'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'análisis de sensibilidad'
+  [PASA] sobrevive literal en ['pasos']: 'no al revés'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'banco o inversionista'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'payback'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'NPV'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'IRR'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [CAE ] 'propuesta_gasto_capital' esta en ids_alias del superviviente
+  [CAE ] 'propuesta_gasto_capital' tiene su entrada en merged_originals
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, propuesta_gasto_capital
+  [CAE ] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 5 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 1
+
+LAS REDIRECCIONES
+  [CAE ] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 2)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [CAE ] comparacion_metodos_inversion.nodos_siguientes ya apunta a analisis_de_gastos_de_capital
+  [CAE ] gestion_capital_trabajo.nodos_previos ya apunta a analisis_de_gastos_de_capital
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'desembolso inicial' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'flujos de efectivo' sigue vivo en ['pasos', 'resumen']
+  (conservacion) [SI] el rastro 'conservadora' sigue vivo en ['pasos']
+  (conservacion) [NO] el rastro 'propuesta' sigue vivo en NINGUN CAMPO
+  (conservacion) [NO] el rastro 'sensibilidad' sigue vivo en NINGUN CAMPO
+
+==============================================================================
+RESULTADO: 17 PASAN, 15 CAEN
+CONSERVACION (aparte, no suma): 3 vivos, 2 muertos
+EXIT=1

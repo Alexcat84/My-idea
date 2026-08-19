@@ -1,0 +1,64 @@
+PLAN     : docs/loop/PLAN_V41_ACTO331.json
+OPERACION: OP-D-06, ACTO 2 DE NUEVE (puesto 331): analisis_de_gastos_de_capital absorbe a propuesta_gasto_capital
+SELLADO  : SELLADO en la vuelta 42, 19 ago 2026, ANTES de ejecutar. El destejido del acto quedo declarado SIN COSTURA QUE DESTEJER en los dos nodos, y aqui la declaracion es MAS FUERTE que en el acto 285: los DOS estan FUERA de la cola de 1.495 que el instrumento entrego, o sea que el instrumento NO CITA a ninguno de los dos. Y la razon del archivo, que SI describia una costura en propuesta_gasto_capital (doce pasos partidos por la mitad, del seis al doce un caso de negocio de sistemas de hardware y software), esta RANCIA EN ESE DETALLE porque esa costura YA SE DESTEJIO: OP-F-03 mando su bloque 6 a 12 a tecnologia_como_medio_no_fin (docs/plan/01_FUENTES.md, tabla del tercer desenlace) y el nodo mide HOY CINCO pasos, que son exactamente los cinco primeros que aquella razon llamaba el analisis generico de capex. La regla de fuente primero queda satisfecha POR PRECEDENCIA, con OP-F-03 HECHA en su nota 3376 SI segun la apertura de esta vuelta.
+MODO     : --simular
+==============================================================================
+censo ANTES: 3853 ficheros, 3531 vivos, 322 deprecados
+guarda 1, fuente del superviviente contra el plan y vida de los TRES: OK
+  ACTO DE FUENTE MIXTA (2 fuente(s) distinta(s) medida(s)), las tres impresas y ninguna escondida:
+    analisis_de_gastos_de_capital          superviviente  Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe
+    propuesta_gasto_capital                absorbido      Financial Intelligence for Entrepreneurs
+guarda 2, analisis_de_gastos_de_capital          pasos y condiciones (5, 1) contra (5, 1): OK
+guarda 2, propuesta_gasto_capital                pasos y condiciones (5, 1) contra (5, 1): OK
+guarda 3, VERBATIM contra dataset/nodos: 12 de 12 calzan, 0 sobrantes en el plan
+guarda 4, cobertura de pasos        10 de 10, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones  2 de 2, repetidos [], faltan [], sobran []
+guarda 5, los finales derivados de los grupos calzan con el campo sellado: OK
+guarda 6, preservar_literal en el nodo resultante entero:
+    'hurdle rate'                              ['pasos']
+    'downtime'                                 ['pasos']
+    'capacitación'                             ['pasos']
+    'interrupciones operativas'                ['pasos']
+    'análisis de sensibilidad'                 ['pasos', 'entregable', 'resumen']
+    'no al revés'                              ['pasos', 'resumen']
+    'banco o inversionista'                    ['entregable', 'resumen']
+    'payback'                                  ['pasos', 'entregable', 'resumen']
+    'NPV'                                      ['pasos', 'entregable', 'resumen']
+    'IRR'                                      ['pasos', 'entregable', 'resumen']
+    10 de 10
+guarda 7, rastros en el nodo resultante entero:
+    'desembolso inicial'                       ['pasos', 'entregable', 'resumen']
+    'flujos de efectivo'                       ['pasos', 'resumen']
+    'conservadora'                             ['pasos', 'resumen']
+    'propuesta'                                ['pasos', 'entregable', 'resumen']
+    'sensibilidad'                             ['pasos', 'entregable', 'resumen']
+    5 de 5
+redirecciones medidas hoy sobre nodos VIVOS: 2
+    comparacion_metodos_inversion                    nodos_siguientes   propuesta_gasto_capital -> analisis_de_gastos_de_capital
+    gestion_capital_trabajo                          nodos_previos      propuesta_gasto_capital -> analisis_de_gastos_de_capital
+nodos DEPRECADOS que nombran y NO se tocan: 0
+guarda 8, redirecciones contra el plan sellado (2 esperadas): OK
+guarda 8b, deprecados que nombran contra el plan (0 esperados): OK
+
+### P.16, LAS DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas
+    TOTAL FABRICADAS: 0
+guarda 9, duplicadas fabricadas contra el plan (0 esperadas): OK
+guarda 10, cero auto-arista tras resolver: OK (0)
+guarda 11, cero duplicada tras resolver: OK (0)
+guarda 12, a6 del acta, titulo y etiqueta SIN TOCAR ('Análisis de Gastos de Capital (Capital Expenditure Analysis)' / 'Evalúa tu Gran Inversión'): OK
+
+EL RESULTADO, sobre copia en memoria:
+  analisis_de_gastos_de_capital: 5 pasos, 2 condiciones, alias ['propuesta_gasto_capital']
+    1. Determina el desembolso inicial de efectivo incluyendo todos los costos asociados de la inversión: compra, envío, instalación, capacitación e interrupciones operativas (downtime)
+    2. Proyecta de forma conservadora los flujos de efectivo futuros que generará la inversión, en términos de ahorro de costos o de ingresos adicionales, e involucra en esas proyecciones a los empleados y gerentes con conocimiento técnico
+    3. Evalúa los flujos proyectados con métodos financieros: calcula el NPV usando el hurdle rate de tu empresa, y respáldalo con el payback y el IRR
+    4. Redacta la propuesta de inversión incluyendo los riesgos, los supuestos y un análisis de sensibilidad
+    5. Toma la decisión de inversión basada en el análisis, no al revés: el análisis no se hace para justificar una decisión que ya estaba tomada
+    c1. Cuando tu empresa debe decidir sobre la compra de equipo, una expansión, una adquisición o el desarrollo de un nuevo producto que involucre una inversión significativa de efectivo
+    c2. Cuando necesitas solicitar financiamiento para un activo o un proyecto de capital
+  entregable: Un análisis completo de gasto de capital con el desembolso inicial, los flujos proyectados y la evaluación de retorno por NPV, payback e IRR, redactado como propuesta de inversión con sus riesgos, supuestos y análisis de sensibilidad, listo para presentar a un banco o inversionista
+  propuesta_gasto_capital: deprecado True, texto INTACTO (5 pasos, 1 condiciones)
+  ficheros que se tocarian: 4
+
+SIMULACION: cero escrituras.
+EXIT=0

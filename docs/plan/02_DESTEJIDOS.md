@@ -2123,3 +2123,61 @@ El par **285** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 |---|---:|---:|---:|---:|---:|---:|
 | **apertura de la vuelta 42** (`SALIDA_V42_APERTURA.txt`) | 3.388 | 575 | **83** | 8 | **2.722** | 17,0 |
 | **tras la relectura del 835**, recomputado por el instrumento | 3.388 | 575 | **82** | 8 | **2.723** | 17,0 |
+
+## `OP-D-06`, ACTO 2 DE NUEVE (puesto 331): **`analisis_de_gastos_de_capital` ABSORBE A `propuesta_gasto_capital`** (19 ago 2026, vuelta 42)
+
+### EL DESTEJIDO DEL ACTO: **NI SIQUIERA CITADOS**, y la razon del archivo esta RANCIA EN UN DETALLE
+
+`scripts/loop/vuelta41_lectura_acto.py --puesto 331`, bloque (b), sobre la cola que el instrumento ya entrego (**1.495** nodos tras el acto 285): **los DOS nodos estan FUERA de la cola**. **El instrumento no cita a ninguno de los dos**, que es una declaracion mas fuerte que la del acto 285, donde citaba a los dos por bloque.
+
+**Y HAY QUE DECIR POR QUE, porque la razon del archivo si describia una costura**, leida entera hoy:
+
+> *LATERAL, no cambia la clase: `propuesta_gasto_capital` tiene doce pasos y se parte en dos por la mitad, los cinco primeros son el analisis generico de capex y del seis al doce son un caso de negocio de sistemas de hardware y software con su propio vocabulario. Es candidato claro de la ficha de costuras internas, no de este eje.*
+
+**ESA COSTURA YA SE DESTEJIO, y no en esta vuelta: la desteji `OP-F-03`.** La tabla del tercer desenlace de `docs/plan/01_FUENTES.md` (linea **502**) lo escribe con su frontera: `propuesta_gasto_capital`, bloque **6 a 12**, miembro receptor `tecnologia_como_medio_no_fin`. **Y la medicion de hoy lo confirma: el nodo tiene CINCO pasos**, que son exactamente los *cinco primeros, el analisis generico de capex* que aquella razon nombraba. **La regla de fuente primero queda satisfecha POR PRECEDENCIA**, con `OP-F-03` **HECHA en su nota 3376 SI** segun la apertura de esta vuelta.
+
+### `P.5`: **UNA FAMILIA DE DOS**, y CERO relecturas post fusion
+
+El par **331** es **clase A** y su razon **NO nombra ganador**: la vara del verbo de `9.3.1` da **NO, es POR ELEGIR**. Los **cuatro** pares del archivo que meten un tercero son **869**, **1225**, **1406** y **1533**, **los cuatro D**: **CERO terceros de clase A**, asi que **el acto ES de dos**. **Y CERO pares vuelven a la cola de relectura post fusion**, porque entre los cuatro terceros **no hay ni un B ni un C**.
+
+**LA FUENTE, DICHA COMO SE MIDE Y NO COMO CONVIENE:** el instrumento imprimira **FUENTE MIXTA (2 fuentes distintas medidas)**, y es cierto **como cadena de texto**: el superviviente declara *Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe* y el absorbido declara *Financial Intelligence for Entrepreneurs*. **Las dos cadenas nombran EL MISMO LIBRO**; lo unico que las separa es que una trae ademas a sus autores. **No es un cruce de libros: es la misma pagina citada con dos precisiones distintas.** Se publica la medicion del instrumento y se publica la lectura al lado, sin retocar ninguna de las dos.
+
+### `P.8` EN ORDEN: **manda el CONTENIDO, y esta vez el cableado VA A FAVOR y por eso no se luce**
+
+**EL CONTENIDO, leido primero:** el titulo de uno **es el concepto** (*Analisis de Gastos de Capital, Capital Expenditure Analysis*) y el del otro **apunta al del primero con la preposicion delante** (*Guia paso a paso PARA ANALIZAR gastos de capital*), la misma forma que decidio el acto 285; **el grafo ya lo tiene de eje de su familia**, colgado de `valor_del_dinero_en_el_tiempo` y `tasa_de_retorno_requerida` y con `metodo_payback`, `metodo_valor_presente_neto` y `tasa_interna_retorno_irr` colgando de el, que son **los tres metodos que el propio paso 3 del acto nombra**; **la pieza que ordena a todas las demas es suya** (*tomar la decision basada en el analisis, no al reves*); y **el analisis existe sin la propuesta, pero la propuesta no existe sin el analisis**. **Superviviente: `analisis_de_gastos_de_capital`.**
+
+**EL CABLEADO, citado DESPUES y NO usado para decidir:** grado por `P.1` de **5** contra **2**. **Esta vez las dos varas COINCIDEN, y cuando coinciden la regla no se luce**: se deja escrito para que nadie le atribuya al cableado una decision que **ya estaba tomada por el contenido**. **Contraste util con el acto 285, medido hace unas horas en esta misma vuelta: alli las dos varas se separaron y el cableado PERDIO.**
+
+> **Y EL COSTE DE LA ELECCION ESTA MEDIDO: CERO aristas.** Los dos nodos tienen **CERO aristas propias sin reciproco**.
+
+### EL MAPA DE MOVIMIENTO, celda a celda
+
+**Prefijos:** `A` = `analisis_de_gastos_de_capital` (superviviente), `P` = `propuesta_gasto_capital` (absorbido).
+
+**Las dos tablas se IMPRIMEN y no se teclean**, generadas del plan sellado con `python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V41_ACTO331.json` y `... --campo grupos_condiciones`:
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | A1, P1 | LA MISMA ACCION CON LAS DOS LISTAS DE COSTOS, y ninguna de las dos era completa sola: el superviviente traia la capacitacion y las interrupciones operativas, el donante traia el envio y el downtime. La accion es literal en los dos (reunir TODOS los costos, no solo el precio de compra) y lo que viaja del donante son las dos partidas que al superviviente le faltaban. Juntas, la lista deja de tener huecos, que es justo lo que este paso existe para evitar. |
+| **2** | A2, P2, A4 | LA MISMA PROYECCION CON SU CAUTELA, SU CONTENIDO Y SU AUTOR. El superviviente decia COMO proyectar (de forma conservadora) y no decia EN QUE se miden los flujos; el donante dice que se miden en ahorro o ingresos adicionales. Y la tercera pieza es del superviviente y modifica esta misma accion y ninguna otra: QUIEN proyecta. Por P.11 involucrar a quien tiene el conocimiento tecnico califica el procedimiento de proyectar en vez de anadir un paso suelto, y por eso entra aqui y no tiene grupo propio. |
+| **3** | A3, P3, P4 | EL MISMO PASO CON SU UMBRAL Y SU JERARQUIA. El superviviente nombraba los tres metodos (payback, NPV y/o IRR) y los dejaba al mismo nivel y sin vara; el donante trae las dos cosas que faltaban: CONTRA QUE se calcula el NPV (el hurdle rate de la empresa, que es el numero sin el cual el NPV no decide nada) y QUE PAPEL juegan los otros dos (respaldo adicional, no criterio principal). Un metodo sin su umbral es una cuenta, no una decision. |
+| **4** | P5 | PIEZA PROPIA DEL DONANTE, sin equivalente en el superviviente: es el UNICO paso del acto que convierte el analisis en un DOCUMENTO que alguien de fuera puede leer y juzgar, y el unico que nombra la sensibilidad. Viaja entero y solo, y por eso tiene grupo propio en vez de disolverse dentro de otro. |
+| **5** | A5 | PIEZA PROPIA DEL SUPERVIVIENTE, y es una ADVERTENCIA y no un procedimiento: por P.11 viaja ENTERA, porque una advertencia es lo mas facil de perder en una fusion y lo mas caro de recuperar. Va la ultima a proposito: es la regla que ordena a las otras cuatro, y sin ella los cuatro pasos anteriores se pueden hacer enteros al servicio de una decision ya tomada. |
+
+| condicion del resultado | de que origenes sale | el motivo que la modifica |
+|---:|---|---|
+| **1** | AC1 | EL DISPARADOR DE DECISION, y es propio del superviviente. Se queda solo porque NO es la misma condicion que la del donante: esta se enciende cuando hay que DECIDIR si se invierte. |
+| **2** | PC1 | EL DISPARADOR DE FINANCIAMIENTO, y es propio del donante. Se resiste la tentacion de juntarlo con el anterior: decidir si conviene invertir y necesitar que alguien te preste para hacerlo son DOS momentos distintos, y el segundo puede llegar con la decision ya tomada. Fundirlos borraria una senal en vez de resumirla. |
+
+**LA TABLA DE PERDIDAS DE `P.13`, derivada de los grupos y no tecleada: 12 de 12 piezas VIAJAN y CERO se pierden** (salida de `vuelta41_plan_acto.py`, sellada en `docs/loop/SALIDA_V42_ACTO331_PLAN.txt`). **Este acto no tiene reparto escrito** en la tabla de `OP-D-06` (solo lo tienen el **392** y el **341**), y **con cero perdidas no hay nada que repartir**, lo que se comprueba al cierre en vez de suponerse.
+
+### LO QUE LA SIMULACION DICE QUE VA A PASAR, sellado antes de ejecutar
+
+| | esperado |
+|---|---|
+| redirecciones sobre nodos vivos | **2** (`comparacion_metodos_inversion` en `nodos_siguientes`, `gestion_capital_trabajo` en `nodos_previos`) |
+| deprecados que nombran y NO se tocan | **0** |
+| duplicadas que la fusion fabrica (`P.16`) | **0**, y aun asi se mide antes de darlo por bueno |
+| aristas de simetrizacion que el paso 5 tiene que anadir | **2**, ni una mas ni una menos |
+| pasos del resultado | **5**, **DENTRO del estandar de 3 a 6** |
+| censo esperado | ficheros **3.853** sin moverse, vivos **3.531 menos 1**, deprecados **322 mas 1** |

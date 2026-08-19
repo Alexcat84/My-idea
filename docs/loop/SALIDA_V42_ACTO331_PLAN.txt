@@ -1,0 +1,38 @@
+PLAN SELLADO: docs/loop/PLAN_V41_ACTO331.json
+  acto          : puesto 331 de OP-D-06
+  superviviente : analisis_de_gastos_de_capital
+  absorbidos    : propuesta_gasto_capital
+  fuente del superviviente: Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe
+  ACTO DE FUENTE MIXTA (2 fuente(s) distinta(s) medida(s)):
+      analisis_de_gastos_de_capital                superviviente  Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe
+      propuesta_gasto_capital                      absorbido      Financial Intelligence for Entrepreneurs
+  origenes generados VERBATIM del fichero: 12
+  pasos finales : 5 (estandar 3 a 6: DENTRO)
+  condiciones finales: 2
+  redirecciones esperadas: 2
+      comparacion_metodos_inversion                  nodos_siguientes   propuesta_gasto_capital
+      gestion_capital_trabajo                        nodos_previos      propuesta_gasto_capital
+  deprecados que nombran y no se tocan: 0
+  duplicadas que la fusion fabrica: 0
+  simetrizacion esperada: 2 aristas
+      analisis_de_gastos_de_capital.nodos_previos      += comparacion_metodos_inversion
+      analisis_de_gastos_de_capital.nodos_siguientes   += gestion_capital_trabajo
+
+  LA TABLA DE PERDIDAS, DERIVADA de los grupos y no tecleada:
+      A1    analisis_de_gastos_de_capital            VIAJA      paso 1 del resultado
+      A2    analisis_de_gastos_de_capital            VIAJA      paso 2 del resultado
+      A3    analisis_de_gastos_de_capital            VIAJA      paso 3 del resultado
+      A4    analisis_de_gastos_de_capital            VIAJA      paso 2 del resultado
+      A5    analisis_de_gastos_de_capital            VIAJA      paso 5 del resultado
+      AC1   analisis_de_gastos_de_capital            VIAJA      condicion 1 del resultado
+      P1    propuesta_gasto_capital                  VIAJA      paso 1 del resultado
+      P2    propuesta_gasto_capital                  VIAJA      paso 2 del resultado
+      P3    propuesta_gasto_capital                  VIAJA      paso 3 del resultado
+      P4    propuesta_gasto_capital                  VIAJA      paso 3 del resultado
+      P5    propuesta_gasto_capital                  VIAJA      paso 4 del resultado
+      PC1   propuesta_gasto_capital                  VIAJA      condicion 2 del resultado
+      VIAJAN 12 de 12. SE PIERDEN 0.
+      LECTURA: la regla de reparto de OP-D-06 manda cada perdida al
+      bloque del que proviene, y la que no tenga bloque al
+      superviviente. Con CERO perdidas no hay nada que repartir, y eso
+      es lo que hay que comprobar al cierre, no suponerlo.
