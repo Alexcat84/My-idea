@@ -81,7 +81,7 @@ def main():
         return bool(d) and not (d.get("deprecado") or d.get("deprecated"))
 
     print("=" * 78)
-    print("EL CIERRE DE OP-D-06, MEDIDO EN LA VUELTA 43 (19 ago 2026)")
+    print("EL CIERRE DE OP-D-06, MEDIDO HOY CONTRA EL ARCHIVO Y EL GRAFO")
     print("=" * 78)
 
     # ---------------------------------------------------------------

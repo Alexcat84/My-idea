@@ -3399,3 +3399,124 @@ El par **969** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 La tabla de `P.13` da **14 de 14 piezas que VIAJAN y CERO que se pierden**, confirmado por la guarda 3 con **14 de 14 verbatim y 0 sobrantes**. **Y LAS SIETE PIEZAS QUE LA RAZON DEL ARCHIVO REPARTIO A CADA LADO ESTAN EN CASA, comprobadas POR GUARDA y no por lectura:** del donante `fuente de cada cliente`, `clics`, `referidos` y `promoción`; del superviviente `mes de ingreso`, `lifetime value` y `tickets de soporte`. **Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026.**
 
 **EL ACTO 969 QUEDA CERRADO ENTERO: sus TRES commits pusheados. Y CON EL, LOS OCHO ACTOS DE FUSION DE `OP-D-06` ESTAN EJECUTADOS.**
+
+## `OP-D-06` CERRADA: **LOS NUEVE ACTOS, OCHO FUNDIDOS Y UNO DECLARADO** (19 ago 2026, vuelta 44)
+
+**La operacion queda CERRADA y se dice al principio en vez de al final.** De los nueve actos, **OCHO tienen su fusion ejecutada** (285 en la vuelta 42; 331, 341, 344 y 361 en la vuelta 43; **392, 711 y 969 en esta**) y **uno esta cerrado por declaracion** (494, sin fundir y **sin tocar un solo nodo**, por el aviso de solape con `OP-D-01` que la propia nota de la operacion ya traia escrito). **Ninguno quedo a medias: los ocho llegaron a su tercer commit pusheado.**
+
+### EL CIERRE MEDIDO, PEGADO ENTERO Y SIN RETECLEAR
+
+**Salida verbatim de `python scripts/loop/vuelta43_cierre_opd06.py`, sellada en `docs/loop/SALIDA_V44_CIERRE_OPD06.txt` (exit 0).** Va **como bloque literal y no reformateada a tabla**, que es la unica forma de que la regla 1 del `EJECUTOR.md` (*la tabla se imprime, no se teclea*) no dependa de que quien la copie no se equivoque:
+
+```
+==============================================================================
+EL CIERRE DE OP-D-06, MEDIDO HOY CONTRA EL ARCHIVO Y EL GRAFO
+==============================================================================
+
+### (1) EL RECOMPUTO DEL CIERRE TRANSITIVO, sobre las A del archivo HOY
+  Banco 9.24: una familia es el CIERRE TRANSITIVO de la relacion gemelo.
+  Se construye con las A VIGENTES de docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+  medidas HOY, no al corte del puesto 2117.
+
+  pares de clase A vigentes en el archivo hoy: 575
+
+  puesto  el par del acto                                                componente hoy
+  285     producto_unico_superior con superioridad_producto_beneficios   de DOS
+  331     analisis_de_gastos_de_capital con propuesta_gasto_capital      de DOS
+  341     blueprint_de_experiencia con customer_journey_mapping          de DOS
+  344     plan_acquire_activate con plan_de_adquisicion_acquire          de DOS
+  361     key_partners_hypothesis con partners_hypothesis_physical       de DOS
+  392     build_metrics_toolset con metricas_de_adquisicion_activacion   de DOS
+  494     principio_calidad_mvp con producto_minimo_viable               de DOS (clase C hoy, ya no aporta arista)
+  711     escenarios_futuros con future_scenarios_planning               de DOS
+  969     customer_retention_metrics_webmobile con retention_metrics     de DOS
+
+  GUARDA: actos cuya componente CRECIO por encima de dos: 0
+  LOS NUEVE SIGUEN SIENDO DE DOS, medido hoy. Ninguno crecio.
+
+### (2) LOS PARES DE LA OPERACION, RELEIDOS CONTRA SU SUPERVIVIENTE
+
+  puesto  cl   nodo A                                       estado A   nodo B                                       estado B
+  285     A    producto_unico_superior                      VIVO       superioridad_producto_beneficios             DEPR->OK
+  331     A    analisis_de_gastos_de_capital                VIVO       propuesta_gasto_capital                      DEPR->OK
+  341     A    blueprint_de_experiencia                     DEPR->OK   customer_journey_mapping                     VIVO
+  344     A    plan_acquire_activate                        DEPR->OK   plan_de_adquisicion_acquire                  VIVO
+  361     A    key_partners_hypothesis                      VIVO       partners_hypothesis_physical                 DEPR->OK
+  392     A    build_metrics_toolset                        DEPR->OK   metricas_de_adquisicion_activacion           VIVO
+  494     C    principio_calidad_mvp                        VIVO       producto_minimo_viable                       VIVO
+  711     A    escenarios_futuros                           DEPR->OK   future_scenarios_planning                    VIVO
+  969     A    customer_retention_metrics_webmobile         DEPR->OK   retention_metrics                            VIVO
+
+  actos con una fusion ya ejecutada (uno de los dos deprecado con alias sano): 8 de 9
+
+### (3) LA VERIFICACION DE OP-D-06, PUNTO POR PUNTO
+
+  1. Gate 0 verde
+  2. recomputo del cierre transitivo
+  3. los nueve pares releidos contra su superviviente
+  4. cada perdida quedo en el bloque del que proviene, o en el superviviente si no tenia bloque
+  5. el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto
+
+  estado declarado en OPERACIONES.jsonl: LISTA | fecha_corte: 2026-08-11
+  nodos declarados en la nomina: 18
+  nodos de la nomina AUSENTES del grafo: 0 
+
+### (4) EL ESTADO AL CIERRE, recomputado (regla 1)
+
+  ficheros    : 3853
+  vivos       : 3524
+  deprecados  : 329
+  enlaces     : 16898 (previos mas siguientes)
+  cola de costuras: 1494 nodos sobre 3524 activos (42.4 por ciento)
+  marcador    : n 3388 | A 575 B 80 C 8 D 2725 | tasa de A 17.0 por ciento
+
+==============================================================================
+FIN DEL CIERRE MEDIDO
+```
+
+> **CORRECCION DECLARADA SOBRE EL PROPIO INSTRUMENTO, y es de prosa y no de logica:** su cabecera tenia **tecleada** la cadena `EL CIERRE DE OP-D-06, MEDIDO EN LA VUELTA 43 (19 ago 2026)`, que **habria salido mintiendo en cuanto alguien lo corriera en otra vuelta**, que es exactamente lo que paso hoy. Se cambio por `EL CIERRE DE OP-D-06, MEDIDO HOY CONTRA EL ARCHIVO Y EL GRAFO`. **Es la unica linea tocada: ni una cifra, ni una medicion, ni un umbral.** El texto viejo queda a la vista en el mensaje del commit.
+
+### LO QUE ESE BLOQUE CONTESTA, punto por punto de la `verificacion` de `OP-D-06`
+
+| # | el punto, copiado de `OPERACIONES.jsonl` | como esta hoy, MEDIDO |
+|---:|---|---|
+| **1** | *Gate 0 verde* | **CUMPLIDO EN LOS OCHO ACTOS**, con los **veinte** renglones en `[OK]` y **cero en rojo** cada vez. Desde el 344 el ciclo es **de CUATRO comandos**, con el 4 antes del 3, y **los tres actos de esta vuelta lo corrieron asi** |
+| **2** | *recomputo del cierre transitivo* | **CORRIDO HOY** sobre las **575 A vigentes**: **los nueve puestos siguen de DOS y CERO actos crecieron**. La adjudicacion del 11 ago 2026 los midio al corte del puesto 2.117; **ocho dias, ocho fusiones y dos relecturas despues, sigue siendo cierto, y ahora esta medido contra el archivo de hoy** |
+| **3** | *los nueve pares releidos contra su superviviente* | **CUMPLIDO Y COMPLETO POR PRIMERA VEZ**: **8 de 9** con uno de los dos **deprecado con alias que resuelve al superviviente vivo**, comprobado **por el resolutor nodo a nodo y no por el nombre**, y el noveno (**494**) con sus dos nodos vivos, **que es lo correcto porque no se funde** |
+| **4** | *cada perdida quedo en el bloque del que proviene, o en el superviviente si no tenia bloque* | **CUMPLIDO Y COMPROBADO POR GUARDA EN LOS OCHO**: `P.13` dio **16, 12, 13, 17, 12, 14, 16 y 14** piezas que VIAJAN, **CIENTO CATORCE en total y CERO que se pierden**, confirmado cada vez por la **guarda 3** contra `dataset/nodos`. **Con cero perdidas no hubo nada que repartir en ninguno**, y eso se comprobo al cierre de cada acto en vez de suponerse |
+| **5** | *el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto* | **CUMPLIDO EN LOS OCHO**, con la lectura sellada y su bloque (d) publicando el **subconjunto cerrado por transitividad sobre las A**. El acto con mas terceros que rechazar fue el **392** (ocho, los ocho `D`) y el mas limpio el **711** (**cero terceros**) |
+
+**Y DOS COMPROBACIONES DE FORMA, tambien del bloque de arriba:** el estado declarado sigue en **`LISTA`** con `fecha_corte` **2026-08-11**, la nomina trae **18 nodos** y **CERO estan ausentes del grafo**.
+
+### EL ESTADO AL CIERRE, RECOMPUTADO AL CIERRE (regla 1)
+
+**Las dos columnas se midieron con el MISMO instrumento en dos momentos distintos**: la apertura con `vuelta31_estado.py` y `costuras_internas.py` antes del primer acto (`SALIDA_V44_APERTURA.txt` y `SALIDA_V44_APERTURA_COLA.txt`), y el cierre con `vuelta43_cierre_opd06.py` **despues del ultimo commit del acto 969**.
+
+| | apertura de la vuelta 44 | **al cierre, recomputado** | lo que lo movio |
+|---|---:|---:|---|
+| ficheros | 3.853 | **3.853** | nada: los deprecados siguen en el grafo |
+| vivos | 3.527 | **3.524** | **menos 3**, una por cada fusion de esta vuelta (392, 711, 969) |
+| deprecados | 326 | **329** | **mas 3**, los mismos |
+| enlaces | 16.887 | **16.898** | **mas 11 netos**, con el desglose por acto: **mas 4** del 392 (menos 1 duplicada fabricada, mas 5 de simetrizacion), **mas 3** del 711 y **mas 4** del 969 |
+| cola de costuras | 1.493 sobre 3.527 (42,3 por ciento) | **1.494 sobre 3.524 (42,4 por ciento)** | **mas 1**: el 392 metio al superviviente sin sacar a nadie (el absorbido ya estaba fuera), y en el 711 y el 969 la cuenta se compenso exacta (entro el superviviente, salio el absorbido) |
+| marcador `n` | 3.388 | **3.388** | nada: sin altas ni bajas |
+| marcador A | 575 | **575** | nada |
+| marcador B | 81 | **80** | la relectura del **233** al cierre del acto 969 |
+| marcador C | 8 | **8** | nada |
+| marcador D | 2.724 | **2.725** | la misma relectura |
+| tasa de A | 17,0 | **17,0** | nada |
+
+### EL REGISTRO DE OPERACION HECHA, escrito en la nota y no en el campo `estado`
+
+**Se sigue el patron adjudicado en la vuelta 30 y no se estrena nada:** el campo `estado` **se queda en `LISTA`**, porque el esquema de `OPERACIONES.jsonl` **no tiene el valor `HECHA`** y estrenarlo seria doctrina de esquema, **adjudicado NO en el punto 7 del acta de la vuelta 30**. La declaracion vive **en la nota, con su evidencia y con el texto viejo entero delante**, escrita con `python scripts/loop/vuelta30_nota.py` (`docs/loop/SALIDA_V44_NOTA_OPD06.txt`): la nota pasa de **1.271** a **5.283** caracteres y el fichero sigue teniendo **71** lineas.
+
+> **Y SE DECLARA LO QUE FALTA EN VEZ DE DARLO POR HECHO:** esta declaracion **NO tiene todavia un acta del auditor detras**, porque es la vuelta 44 la que la escribe. **La evidencia que la sostiene es la medicion propia sellada de hoy y los VEINTICUATRO commits de acto** de las vueltas 42, 43 y 44 que la produjeron, contados hoy con `git log` sobre el rango que abre el primer commit del acto 285. **El auditor la verifica en la vuelta siguiente, y hasta entonces se lee como lo que es: una declaracion del ejecutor con su medicion al lado.**
+
+### LO QUE `OP-D-06` DEJA ABIERTO Y NO SE LLEVA CONSIGO
+
+| que queda | donde va |
+|---|---|
+| **El par 494** (`principio_calidad_mvp` con `producto_minimo_viable`) | **`OP-D-01`**, como cura acoplada mayor. `OP-D-06` lo cerro **por declaracion** y no lo toco |
+| **El enlace mutuo que falta entre los dos del 494** | **fase 04**, re-medido en las vueltas 43 y 44 y sigue sin existir en ninguno de los dos sentidos |
+| **DOS aristas que faltan**, declaradas por las dos relecturas | **fase 04**: la del par **599** (`asociaciones_clave` con `key_partners_hypothesis`) y la del par **233** (`analisis_de_cohortes` con `retention_metrics`). **Los dos pasaron de `B` a `D` porque la relacion es de alimentacion y no de gemelos, y una alimentacion pide arista** |
+| **La duplicada vieja del catalogo** | **`OP-S-12`**, que desde `P.16` pasa de limpieza a **verificacion de cero**. **Las ocho fusiones de `OP-D-06` no fabricaron ninguna**: la unica que aparecio (en el 392, sobre un tercero) la deduplico el propio ejecutor, con la guarda 11 en `OK (0)` |
