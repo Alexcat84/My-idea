@@ -1,0 +1,128 @@
+
+==============================================================================
+(a) LA NOMINA: QUE NOMBRA EL PLAN SELLADO DE OP-D-05, comprobado
+==============================================================================
+  LA SECCION ENTERA, citada literal:
+  | ## `OP-D-05`: LA SELECCION DEL CEO · **LISTA**
+  | 
+  | **Acto 4. Tres nodos**: `seleccion_ceo_fundador`,
+  | `asignacion_de_titulos_ejecutivos`, `errores_comunes_asignacion_roles`. Pares que
+  | lo sostienen: **492, 673, 833**.
+  | 
+  | **Sin congelados: su orden es libre respecto de los tres primeros.**
+  | 
+  | **ADJUDICADO: misma regla de reparto.** Cada perdida al bloque del que proviene;
+  | la que no tenga bloque, al superviviente. **Ya no necesita relectura previa.**
+  | 
+  | > **Nota util para quien se siente**: su par **492** es uno de los **doce
+  | > ejemplares de cura acoplada encontrados de uno en uno**, y **se podia declarar
+  | > desde el 673 sin que nadie lo declarara.** Es el argumento de por que el barrido
+  | > de confirmadas existe.
+  | 
+  | ---
+
+  contiene la palabra 'Costuras:' : NO
+  nombra alguno de los tres por su id como costura:
+    seleccion_ceo_fundador                   aparece en la seccion: SI
+    asignacion_de_titulos_ejecutivos         aparece en la seccion: SI
+    errores_comunes_asignacion_roles         aparece en la seccion: SI
+
+  LECTURA: el plan LISTA los tres nodos del acto y sus tres pares, y
+  NO declara ninguna costura por su id. Contra OP-D-03, cuyo plan si
+  escribia 'Costuras: ab_testing_optimizacion, ...'. O sea que aqui
+  el destejido NO viene dado por el plan: lo decide la lectura, con
+  la cita del instrumento delante.
+
+==============================================================================
+(b) QUE CITA EL INSTRUMENTO YA VIVO, leido de su cola entregada
+==============================================================================
+  fichero leido : docs/COSTURAS_INTERNAS.jsonl
+  citas en la cola: 1496
+
+  seleccion_ceo_fundador
+      CITADO POR: bloque
+      pasos 6 | pareja 52.1 (pasos 1 y 5) | bloque 48.4 | corte tras 3
+      franja 44 a 45: NO
+      LA PAREJA QUE CITA, literal:
+        paso 1: Evalúa la compatibilidad de motivaciones con tus socios antes de fundar juntos, y reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente: confronta el conflicto de frente en lugar de evitarlo con títulos ambiguos
+        paso 5: Negocia explícitamente el título de CEO antes de que surjan conflictos, y evita colocar automáticamente a cofundadores en la junta directiva solo por lealtad
+
+  asignacion_de_titulos_ejecutivos
+      NO ESTA EN LA COLA. El instrumento no lo cita.
+
+  errores_comunes_asignacion_roles
+      NO ESTA EN LA COLA. El instrumento no lo cita.
+
+  RESUMEN: CITADOS 1 de 3 (seleccion_ceo_fundador). NO CITADOS: asignacion_de_titulos_ejecutivos, errores_comunes_asignacion_roles
+  Y LO QUE ESO NO DICE: el instrumento CITA Y NO JUZGA. Una cita es
+  una lectura obligada, no una costura probada; y un silencio suyo no
+  es un certificado de sanidad (su propio encabezado declara el limite
+  del comparador de tokens, que no ve equivalencias semanticas).
+
+==============================================================================
+(c) EL TEXTO ENTERO DE LOS TRES, que es lo que decide
+==============================================================================
+
+------------------------------------------------------------------------------
+seleccion_ceo_fundador   [core]
+------------------------------------------------------------------------------
+  titulo    : Decidir con intención quién será el CEO fundador
+  fuente    : The Founder's Dilemmas
+  vivo      : True
+  resumen   : 
+  entregable: Un acuerdo fundacional por escrito que designe formalmente al CEO y los demás títulos ejecutivos, con la decisión de cada uno justificada por la capacidad de liderazgo y el aporte de cada persona, revisado antes de firmarlo contra un checklist de los errores comunes al asignar roles
+  PASOS (6):
+     1. Evalúa la compatibilidad de motivaciones con tus socios antes de fundar juntos, y reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente: confronta el conflicto de frente en lugar de evitarlo con títulos ambiguos
+     2. Identifica quién es la 'persona de la idea' original en el equipo y evalúa objetivamente si es realmente la mejor opción para CEO
+     3. Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión, midiendo el nivel de compromiso (full-time vs part-time) de cada cofundador y mapeando el capital humano, social y financiero que aporta cada fundador
+     4. Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer), y sé cauteloso al asignar títulos C-level tempranamente, considerando el crecimiento futuro
+     5. Negocia explícitamente el título de CEO antes de que surjan conflictos, y evita colocar automáticamente a cofundadores en la junta directiva solo por lealtad
+     6. Documenta el acuerdo formalmente para evitar ambigüedad futura, dejando por escrito por qué se asignó cada título para futura referencia
+  CONDICIONES DE ACTIVACION (3):
+    - Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO, o están por definir roles formales en las primeras etapas de formación del equipo, antes de asignar títulos formales
+    - Si existe ambigüedad o conflicto latente sobre quién lidera tu equipo, hay tensión sobre quién debe ser CEO, o el equipo está evitando una conversación difícil sobre quién lidera
+    - Cuando se está preparando documentación para inversionistas
+  nodos_previos   : ['decision_fundador_solo_vs_equipo', 'decision_cuando_fundar', 'evaluacion_dispassionate_idea', 'evaluar_motivaciones_cofundadores', 'coraje_en_decisiones_dificiles', 'compatibilidad_motivaciones_riqueza_control', 'seleccion_relaciones_cofundadores']
+  nodos_siguientes: ['criterios_equity_split', 'composicion_board_directors', 'riesgo_titulos_inflados', 'embrace_the_struggle_liderazgo_autentico', 'decision_egalitaria_vs_jerarquica', 'division_de_labor_vs_roles_superpuestos', 'founder_ceo_succession_process', 'reparto_inicial_equity']
+
+------------------------------------------------------------------------------
+asignacion_de_titulos_ejecutivos   [core]
+------------------------------------------------------------------------------
+  titulo    : Asignación de Títulos Ejecutivos en el Equipo Fundador
+  fuente    : The Founder's Dilemmas
+  vivo      : False
+  resumen   : 
+  entregable: Documento de acuerdo de fundadores con títulos ejecutivos claramente asignados y justificados
+  PASOS (5):
+     1. Identificar quién es la 'persona de la idea' original en el equipo
+     2. Evaluar el nivel de compromiso (full-time vs part-time) de cada cofundador
+     3. Mapear el capital humano, social y financiero que aporta cada fundador
+     4. Negociar explícitamente el título de CEO antes de que surjan conflictos
+     5. Documentar por qué se asignó cada título para futura referencia
+  CONDICIONES DE ACTIVACION (3):
+    - Cuando el equipo fundador está por definir roles formales
+    - Si hay tensión sobre quién debe ser CEO
+    - Cuando se está preparando documentación para inversionistas
+  nodos_previos   : ['decision_fundador_solo_vs_equipo']
+  nodos_siguientes: ['criterios_equity_split', 'founder_ceo_succession_process', 'division_de_labor_vs_roles_superpuestos']
+
+------------------------------------------------------------------------------
+errores_comunes_asignacion_roles   [core]
+------------------------------------------------------------------------------
+  titulo    : Errores Comunes al Asignar Roles entre Cofundadores
+  fuente    : The Founder's Dilemmas
+  vivo      : False
+  resumen   : 
+  entregable: Checklist de asignación de roles que el equipo fundador revisa antes de definir títulos y estructura de poder
+  PASOS (5):
+     1. Confrontar directamente el conflicto sobre quién será CEO en lugar de evitarlo con títulos ambiguos
+     2. Evaluar objetivamente si la persona con la idea original es realmente la mejor opción para CEO
+     3. Ser cautelosos al asignar títulos C-level tempranamente, considerando el crecimiento futuro
+     4. Evitar colocar automáticamente a cofundadores en la junta directiva solo por lealtad
+     5. Evaluar compatibilidad de motivaciones antes de fundar juntos
+  CONDICIONES DE ACTIVACION (2):
+    - En las primeras etapas de formación del equipo fundador, antes de asignar títulos formales
+    - Si el equipo está evitando una conversación difícil sobre quién lidera
+  nodos_previos   : ['seleccion_relaciones_cofundadores', 'decision_fundador_solo_vs_equipo']
+  nodos_siguientes: ['decision_egalitaria_vs_jerarquica', 'reparto_inicial_equity']
+

@@ -1835,3 +1835,61 @@ La tabla de orden de este mismo fichero le cuenta a `OP-D-05` **UN destejido** y
 
 **LOS REGISTROS QUE NO SON EL GRAFO, ENUMERADOS ANTES Y NO DESPUES.** La leccion de la vuelta 39: su plan enumero 17 referencias de NODO, no miro el registro de puentes, y Gate 0 cayo en rojo DESPUES de escribir. Aqui se enumera ANTES. El barrido (`scripts/loop/vuelta40_registros_no_grafo.py`) da **CERO registros vivos** que nombren a alguno de los tres, y la comprobacion dirigida sobre **los nueve `bridges_aprobados.json`** da **cero apariciones en los nueve**. **Aun asi se corre `reanclar_por_resolutor.py` entre la fusion y `run_phase1`**: es la practica que el acta de la vuelta 39 adjudico para toda fusion futura, y **una guarda que solo se corre cuando se sospecha no es una guarda.**
 
+
+### `OP-D-05` CERRADA: **LA FUSION EJECUTADA** (19 ago 2026, vuelta 40)
+
+**Esta seccion NO reescribe la de arriba.** El plan sellado se queda entero donde esta, y aqui va lo que paso al ejecutarlo, para que los dos se puedan comparar sin que uno tape al otro.
+
+#### EL RESULTADO, releido en `dataset/nodos` y no copiado del plan
+
+| | |
+|---|---|
+| superviviente | `seleccion_ceo_fundador`, **vivo**, **6 pasos** y **3 condiciones** |
+| titulo y etiqueta | **sin tocar** (`a6`): *Decidir con intención quién será el CEO fundador* / *Elige con Cuidado a Tu CEO* |
+| alias | `asignacion_de_titulos_ejecutivos`, `errores_comunes_asignacion_roles` |
+| absorbidos | `asignacion_de_titulos_ejecutivos`, `errores_comunes_asignacion_roles`, **deprecados y con su texto entero** |
+| estandar de pasos | **6, DENTRO del estandar de 3 a 6.** Esta operacion **no usa la excepcion de clase** de `OP-F-01` |
+| campo `superviviente` | **ESCRITO** con `seleccion_ceo_fundador`, por el precedente **medido** de `OP-D-02`, que es la otra fusion de un solo superviviente y lo tiene escrito. **No es el `null` de `OP-D-03` ni el de `OP-D-04`** |
+
+#### EL CENSO, RECONTADO AL CIERRE
+
+| momento | ficheros | vivos | deprecados | enlaces |
+|---|---:|---:|---:|---:|
+| antes de la fusion (commit `002edf43`) | 3.853 | 3.534 | 319 | 16.869 |
+| **recontado al cierre, ahora mismo** | **3.853** | **3.532** | **321** | **16.871** |
+
+**LA ARITMETICA DE LOS ENLACES, comprobada entrada por entrada y no publicada a ojo:** `criterios_equity_split.nodos_previos` **menos 1**, `decision_fundador_solo_vs_equipo.nodos_siguientes` **menos 2** (nombraba a los DOS absorbidos y ademas ya al superviviente, asi que tres entradas colapsan en una), y `seleccion_ceo_fundador` **mas 1** en `nodos_previos` y **mas 4** en `nodos_siguientes` por la simetrizacion del paso 5. **Menos 1, menos 2, mas 1, mas 4, igual mas 2; y 16.871 menos 16.869 es 2.**
+
+#### LA VERIFICACION DE LA PROPIA OPERACION, punto por punto
+
+| punto, tal como lo escribe `OPERACIONES.jsonl` | como quedo |
+|---|---|
+| **1**, `Gate 0 verde` | **`GATE 0: OK`, exit 0** (`docs/loop/SALIDA_V40_GATE0.txt`), mas **71 etiquetas** y **seis assets** |
+| **2**, `recomputo del cierre transitivo` | **CORRIDO** (`docs/loop/SALIDA_V40_RECOMPUTO_3388.txt`): actos de **333 a 332**, `CERRADOS` de **279 sobre 598** nodos a **278 sobre 595**, `ABIERTOS` **quietos en 54 sobre 243** porque el acto estaba CERRADO, nodos en actos de **841 a 838** y `A` vigentes de **569 a 566**. **Las cuatro comprobaciones del `08_VERIFICACION.md`: OK las cuatro.** El acto de tres **deja de existir**, porque sus tres nodos son ahora uno |
+| **3**, `cada perdida quedo en el bloque del que proviene, o en el superviviente` | **CORRIDO** (`scripts/loop/verificar_mapas_destejido.py` con los SEIS planes sellados, `docs/loop/SALIDA_V40_VERIFICADOR_MAPAS.txt`): **6 tablas, 37 filas, 0 discrepancias**, varas 1 y 2 CORRIDAS. Y la tabla de `P.13`: **21 de 21 piezas VIAJAN y CERO se pierden**, o sea que **la regla de reparto se cumple POR VACIO**, y se dice asi en vez de darla por cumplida |
+| **4**, `el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto` | **3 de 3 con clase, los tres del ARCHIVO** y **cero lecturas dirigidas** (`docs/loop/SALIDA_V40_OPD05_ACTO.txt`). **No hizo falta releer ninguno: no hubo destejido que los dejara rancios** |
+
+#### EL PUNTO DEL ESTANDAR DE PASOS, CERRADO CON EL INSTRUMENTO YA VIVO
+
+**El resultado queda en SEIS pasos**, dentro del estandar de 3 a 6, asi que **no hace falta la excepcion de clase**. Pero el instrumento de costuras, reparado en esta misma vuelta y **corrido otra vez DESPUES de la fusion**, **CITA al resultado**: bloque **48,4**, corte tras el paso 3. **Y hay que decir lo que la vuelta 39 si pudo decir de su caso y esta NO puede: LA FUSION ENCENDIO LA SENAL.** Antes de fundir, `seleccion_ceo_fundador` daba **43,6** y estaba **fuera** de la cola.
+
+**ESO SE MIDIO EN VEZ DE SOSTENERSE** (`scripts/loop/vuelta40_senal_antes_despues.py`, salida en `docs/loop/SALIDA_V40_SENAL_ANTES_DESPUES.txt`), sobre los **tres** resultantes de fusion que esta campaña lleva:
+
+| resultante | bloque ANTES | bloque DESPUES | movimiento | la cola |
+|---|---:|---:|---:|---|
+| `reglas_brainstorming` (`OP-D-04`, el taller) | 47,7 | **50,6** | **mas 2,9** | DENTRO antes y despues |
+| `pensamiento_convergente_divergente` (`OP-D-04`) | 0,0 | **43,8** | **mas 43,8** | fuera antes y despues |
+| **`seleccion_ceo_fundador`** (`OP-D-05`) | **43,6** | **48,4** | **mas 4,8** | **fuera antes, DENTRO despues** |
+
+> **SUBE EN 3 DE 3, y el mecanismo es mecanico y no semantico:** fundir mete el vocabulario de tres nodos en menos pasos y mas densos, y la senal de bloque mide **solape de tokens** entre los dos bloques de la lista. **Una cita sobre un nodo recien fundido es lo esperable.** **Y LO QUE ESO NO AUTORIZA: descartar la cita.** El instrumento **cita y no juzga**, y una cita es **una lectura obligada**.
+
+**LA LECTURA, hecha con el texto delante.** El corte que la senal propone es **tras el paso 3**: los pasos 1 a 3 contra los 4 a 6. **Los pasos 1 a 3 son la DELIBERACION** (con quien hablarlo, quien es la persona de la idea, con que vara se evalua) **y los 4 a 6 son la EJECUCION** (que rol alternativo darle, como se negocia el titulo, como se documenta). **El segundo bloque no vuelve a contar el primero: lo continua.** Y la pareja que el instrumento cita, los pasos 1 y 5, comparte **el vocabulario del acto** (CEO, titulos, conflicto) **y no su narracion**: el 1 es la conversacion que hay que tener y el 5 es la negociacion del titulo y la junta. **Es el limite que el propio instrumento declara en su encabezado, visto por el otro lado: un comparador de tokens no distingue tema de narracion.**
+
+**VA COMO DISCUTIBLE MARCADO AL AUDITOR**, porque quien declara que no hay costura es el mismo que hizo la fusion que encendio la senal.
+
+#### LO QUE ESTE CIERRE NO HACE
+
+- **No enlaza nada por `P.10`.** El acto era **UNA familia entera de tres** y **los tres se funden**: no queda colgado ni tercera salida que escribir. **Se dice en vez de callarlo**, porque `OP-D-04` si la tuvo.
+- **No cambia el estado de la operacion.** Sigue en `LISTA`, **igual que `OP-D-01` a `OP-D-04`, que tambien estan ejecutadas**. **PENDIENTE DE DOCTRINA heredado: el esquema no distingue una operacion HECHA.**
+- **No borra un solo fichero.** Los dos absorbidos **conservan su texto entero**, que es lo que hace auditable la fusion.
+
