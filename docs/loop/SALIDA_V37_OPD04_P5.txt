@@ -1,0 +1,108 @@
+GUARDA DE NOMINA: la linea del plan esta, literal. Los siete se leen de ahi.
+
+==============================================================================
+1. LOS SIETE NODOS HOY, con sus pasos y la fecha de su ultimo cambio
+==============================================================================
+  brainstorming_divergente                4 pasos   ultimo cambio: 2026-08-14 2d96e3d3
+  brainstorming_efectivo                  4 pasos   ultimo cambio: 2026-07-11 fa2e6011
+  reglas_brainstorming                    5 pasos   ultimo cambio: 2026-07-11 fa2e6011
+  generar_multiples_opciones              3 pasos   ultimo cambio: 2026-07-11 fa2e6011
+  construir_sobre_ideas_ajenas            3 pasos   ultimo cambio: 2026-07-11 fa2e6011
+  pensamiento_convergente_divergente      4 pasos   ultimo cambio: 2026-07-11 fa2e6011
+  design_attitude_vs_decision_attitude    4 pasos   ultimo cambio: 2026-08-08 33265c05
+
+==============================================================================
+2. LOS 21 PARES INTERNOS POSIBLES: cuales tienen veredicto
+==============================================================================
+  puesto 823   A    brainstorming_divergente               contra brainstorming_efectivo
+  puesto 834   A    brainstorming_divergente               contra reglas_brainstorming
+  puesto 844   A    brainstorming_divergente               contra generar_multiples_opciones
+  SIN REGISTRO   brainstorming_divergente               contra construir_sobre_ideas_ajenas
+  puesto 585   D    brainstorming_divergente               contra pensamiento_convergente_divergente
+  SIN REGISTRO   brainstorming_divergente               contra design_attitude_vs_decision_attitude
+  puesto 234   A    brainstorming_efectivo                 contra reglas_brainstorming
+  SIN REGISTRO   brainstorming_efectivo                 contra generar_multiples_opciones
+  puesto 586   A    brainstorming_efectivo                 contra construir_sobre_ideas_ajenas
+  SIN REGISTRO   brainstorming_efectivo                 contra pensamiento_convergente_divergente
+  SIN REGISTRO   brainstorming_efectivo                 contra design_attitude_vs_decision_attitude
+  SIN REGISTRO   reglas_brainstorming                   contra generar_multiples_opciones
+  SIN REGISTRO   reglas_brainstorming                   contra construir_sobre_ideas_ajenas
+  SIN REGISTRO   reglas_brainstorming                   contra pensamiento_convergente_divergente
+  SIN REGISTRO   reglas_brainstorming                   contra design_attitude_vs_decision_attitude
+  SIN REGISTRO   generar_multiples_opciones             contra construir_sobre_ideas_ajenas
+  puesto 943   A    generar_multiples_opciones             contra pensamiento_convergente_divergente
+  SIN REGISTRO   generar_multiples_opciones             contra design_attitude_vs_decision_attitude
+  SIN REGISTRO   construir_sobre_ideas_ajenas           contra pensamiento_convergente_divergente
+  SIN REGISTRO   construir_sobre_ideas_ajenas           contra design_attitude_vs_decision_attitude
+  puesto 885   A    design_attitude_vs_decision_attitude   contra pensamiento_convergente_divergente
+
+  con veredicto: 8 de 21    sin registro: 13 de 21
+
+==============================================================================
+3. CONTRASTE CONTRA LA SECCION 54.3 DEL INFORME (contraste, no fuente)
+==============================================================================
+  el informe atribuye al acto 1 estos pares A: [234, 586, 823, 834, 844, 885, 943]
+  medidos hoy en el archivo, todos los pares del acto: [234, 585, 586, 823, 834, 844, 885, 943]
+  clase A: [234, 586, 823, 834, 844, 885, 943]
+  clase D: [585]
+  COINCIDE: los siete pares A del informe son los siete A de hoy.
+
+==============================================================================
+4. VARA DE FECHA: que par se leyo antes de que su nodo cambiara
+==============================================================================
+  MARCADO  823   A   leido 2026-08-11 (fd1138e2), y cambiaron DESPUES: brainstorming_divergente el 2026-08-14
+  MARCADO  834   A   leido 2026-08-11 (fd1138e2), y cambiaron DESPUES: brainstorming_divergente el 2026-08-14
+  MARCADO  844   A   leido 2026-08-11 (af9add41), y cambiaron DESPUES: brainstorming_divergente el 2026-08-14
+  MARCADO  585   D   leido 2026-08-10 (6e3dcc6e), y cambiaron DESPUES: brainstorming_divergente el 2026-08-14
+  al dia   234   A   leido 2026-08-09 (c12d5522)
+  al dia   586   A   leido 2026-08-11 (1d8da3f3)
+  al dia   943   A   leido 2026-08-11 (db89f5ce)
+  al dia   885   A   leido 2026-08-11 (727ae5fe)
+
+  marcados por fecha: 4 -> [585, 823, 834, 844]
+
+==============================================================================
+5. VARA DE TEXTO: de los marcados, cuales movieron sus pasos de verdad
+==============================================================================
+  puesto 823   A    brainstorming_divergente contra brainstorming_efectivo
+     brainstorming_divergente               pasos entonces  8, hoy  4  -> CAMBIARON
+     brainstorming_efectivo                 pasos entonces  4, hoy  4  -> IDENTICOS
+     VEREDICTO: RANCIO por las dos varas
+  puesto 834   A    brainstorming_divergente contra reglas_brainstorming
+     brainstorming_divergente               pasos entonces  8, hoy  4  -> CAMBIARON
+     reglas_brainstorming                   pasos entonces  5, hoy  5  -> IDENTICOS
+     VEREDICTO: RANCIO por las dos varas
+  puesto 844   A    brainstorming_divergente contra generar_multiples_opciones
+     brainstorming_divergente               pasos entonces  8, hoy  4  -> CAMBIARON
+     generar_multiples_opciones             pasos entonces  3, hoy  3  -> IDENTICOS
+     VEREDICTO: RANCIO por las dos varas
+  puesto 585   D    brainstorming_divergente contra pensamiento_convergente_divergente
+     brainstorming_divergente               pasos entonces  8, hoy  4  -> CAMBIARON
+     pensamiento_convergente_divergente     pasos entonces  4, hoy  4  -> IDENTICOS
+     VEREDICTO: RANCIO por las dos varas
+
+==============================================================================
+VEREDICTO DE P.5 SOBRE OP-D-04
+==============================================================================
+pares internos posibles      : 21
+con veredicto en el archivo  : 8
+sin registro                 : 13
+marcados por la vara de fecha: 4 -> [585, 823, 834, 844]
+RANCIOS por las DOS varas    : 4 -> [585, 823, 834, 844]
+
+  585   D   brainstorming_divergente contra pensamiento_convergente_divergente
+        brainstorming_divergente de 8 a 4 pasos
+  823   A   brainstorming_divergente contra brainstorming_efectivo
+        brainstorming_divergente de 8 a 4 pasos
+  834   A   brainstorming_divergente contra reglas_brainstorming
+        brainstorming_divergente de 8 a 4 pasos
+  844   A   brainstorming_divergente contra generar_multiples_opciones
+        brainstorming_divergente de 8 a 4 pasos
+
+RANCIOS DE CLASE A: [823, 834, 844]
+Y SON LOS QUE SOSTIENEN LA FAMILIA: una A rancia es una arista de familia
+dibujada sobre un texto que ya no existe.
+
+LOS TRES GEMELOS QUE LA NOTA DE OP-D-04 MANDA AL FINAL: [823, 834, 844]
+  de ellos rancios: [823, 834, 844]
+  de ellos al dia : []
