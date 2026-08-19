@@ -3155,3 +3155,67 @@ El par **711** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 **EL VERIFICADOR DE MAPAS con la vara 2**, sobre los **TRECE** planes sellados que hoy tienen tabla publicada: `docs/loop/SALIDA_V44_VERIFICADOR_MAPAS_711.txt`.
 
 **ESTE PRIMER COMMIT DEJA EL GRAFO INTACTO: cero nodos tocados.**
+
+### `OP-D-06` ACTO 711 CERRADO: **LA FUSION EJECUTADA Y LA SENAL QUE MAS SE HA MOVIDO EN TODA LA CAMPANA** (19 ago 2026, vuelta 44)
+
+**LAS TRECE GUARDAS EN VERDE** (`docs/loop/SALIDA_V44_ACTO711_EJEC.txt`, **exit 0**):
+
+| | antes | despues | la cuenta |
+|---|---:|---:|---|
+| **ficheros** | 3.853 | **3.853** | nada |
+| **vivos** | 3.526 | **3.525** | **menos 1**, guarda 13 OK |
+| **deprecados** | 327 | **328** | **mas 1** |
+| **enlaces** | 16.891 | **16.894** | **mas 3 EXACTOS y sin resto**: las tres vistas reciprocas de la simetrizacion, **con CERO duplicadas fabricadas que restar** |
+
+**LA GUARDA DE SIMETRIZACION, EXACTA:** **3 de 3** en el log, **0** de otros nodos, faltan 0 y sobran 0, y las tres **releidas en el fichero del superviviente**.
+
+**EL CICLO DE GATE 0, DE CUATRO COMANDOS Y CON EL 4 ANTES DEL 3, los cuatro exit 0:** `GATE 0: OK` con sus **veinte** renglones en `[OK]`; **71** etiquetas; `plan_readiness` con **151 / 3.584 / 118**; `sync_assets_web` con `master_graph` en **sha256 6b10fde6def9**. **LA DERIVA DE FAMILIA, medida otra vez con respaldo y comparacion: CERO nodos cambian**, y `node_families` repite **sha256 7a98d1852fd0** por segunda vez en la vuelta.
+
+**LOS REGISTROS QUE NO SON EL GRAFO: 120 vivos, Y LA CIFRA ENGANA SI NO SE PARTE, asi que se parte.**
+
+| cuantos | quienes | que se hace |
+|---:|---|---|
+| **117** | `engine/sessions/*.json` | **ignorados por `.gitignore` linea 8**, comprobado hoy con `git check-ignore -v`: **ninguno esta en el repositorio**. Y los 117 nombran **al SUPERVIVIENTE**, que sigue vivo: **no hay nada que redirigir** |
+| **1** | `docs/GRADIENTE_PARES.jsonl` | la salida de su propio instrumento, **ya declarada sin lectores en el acto 392 de esta misma vuelta**. Nombra al superviviente |
+| **2** | `packs/seguridad_digital/metadata/bridges_candidatos_core_only.json` y `bridges_curaduria.json` | **SI NOMBRAN AL ABSORBIDO, estan en el repositorio, y por eso se miran uno a uno** |
+
+> **LOS DOS QUE NOMBRAN AL ABSORBIDO, medidos y no despachados:** un `grep` de sus nombres sobre todo el repositorio fuera de `node_modules` da **CERO ficheros de codigo que los lean**, y **la mencion vive dentro de la lista de RECHAZADOS**, con su motivo escrito al lado: *Trampa semantica: escenarios futuros alternativos no conectan con la accion de implementar controles*. **Es un registro de una DECISION con su corte**, y reescribirlo seria falsificar que fue lo que se rechazo aquel dia, que es justo lo que la regla ARCHIVO prohibe. **La heuristica del instrumento los llama VIVO** porque bajo `packs/` solo tiene declarado ARCHIVO el prefijo `packs/_core/poda/`, **y la discrepancia se declara en vez de taparse**.
+>
+> **Y LA CLASE QUE FALLO EN LA VUELTA 39 SE COMPROBO APARTE:** los **NUEVE** `bridges_aprobados.json`, que son los que el motor si lee, dan **0 veces cada uno**, y re-medido con un conteo propio sobre el de `seguridad_digital`: `escenarios_futuros` **0** y `future_scenarios_planning` **0**. **Gate 0 no tenia por donde caer, y no cayo.**
+
+**`reanclar_por_resolutor.py`: EN BLANCO.** **CASO POSITIVO: ANTES 12 PASAN y 21 CAEN** (exit 1); **DESPUES 34 PASAN y 0 CAEN** (exit 0), conservacion **6 vivos y 0 muertos**. **LAS SUITES:** motor **25 de 25**, web **1.030 pasadas y 3 saltadas**, `tsc` **cero lineas**, los tres exit 0.
+
+### LA COSTURA POST FUSION: **LA SENAL SALTA DE CERO A 48,9 Y SE EXPLICA EN VEZ DE CELEBRARSE**
+
+`python scripts/costuras_internas.py` DESPUES de fundir (`docs/loop/SALIDA_V44_COSTURAS_TRAS_FUSION_711.txt`, **exit 0**): la cola **se queda en 1.494** nodos, sobre **3.525** activos, el **42,4 por ciento**. **No se mueve, y por una compensacion exacta que se dice en vez de dejarse como coincidencia:** el absorbido estaba **DENTRO** y salio al deprecarse (**menos 1**), y el superviviente estaba **FUERA** y entro (**mas 1**).
+
+`python scripts/loop/vuelta42_senal_antes_despues.py --nodo future_scenarios_planning --commit 07f3a258 --nombre "OP-D-06 acto 711"`, sellado en `docs/loop/SALIDA_V44_ACTO711_SENAL.txt`:
+
+| | pasos | pareja | bloque | contra el umbral 44 |
+|---|---:|---:|---:|---|
+| **antes**, leido de git `07f3a258` | 5 | 53,7 | **0,0** (**corte tras 0**) | **BAJO** por **menos 44,0**: **FUERA** |
+| **despues**, del fichero de hoy | 6 | 54,6 | **48,9** (corte tras 4) | **SOBRE** por **mas 4,9**: **DENTRO** |
+
+**LA FUSION ENCENDIO LA SENAL**, y el movimiento que el instrumento imprime es de **mas 48,9 puntos**, **el mas grande de toda la campana**. **Y AQUI HAY QUE DESINFLAR LA CIFRA EN VEZ DE LUCIRLA, porque el 0,0 de la izquierda NO ES UNA MEDICION DE LA MISMA PARTICION:**
+
+> El propio instrumento distingue **dos ceros distintos** en su codigo (`scripts/costuras_internas.py`, `_mejor_bloque`): devuelve `NO_APLICA` si la lista **no llega al minimo de pasos**, y `(0.0, 0)` si **llega pero NINGUN corte puntua**. El *antes* es el segundo caso: con cinco pasos **habia cortes posibles y ninguno encontro ni un emparejamiento monotono con puntaje**, por eso el **corte es 0**. **Comparar un 0,0 sin corte contra un 48,9 con corte tras 4 no es medir la misma particion dos veces: es pasar de no tener particion a tenerla.** El `+48,9` es aritmeticamente cierto y **narrativamente enganoso si se cita solo**, asi que se cita con esta linea al lado. Es la misma advertencia del acto **344** (*cuando el corte se mueve, la comparacion cambia de objeto*) llevada a su caso extremo.
+
+**LA LECTURA TEXTUAL, que es la que decide: NO HAY COSTURA. Y LA CITA SE MIRA CON MAS CUIDADO QUE NUNCA, porque el corte cae EXACTAMENTE EN LA FRONTERA DE PROCEDENCIA.**
+
+La ficha de hoy: **pareja 1 y 5** con **54,6** (el umbral de pareja es 80: **no dispara**) y **bloque con corte tras 4**. **El bloque A son los pasos 1 a 4 y el bloque B los pasos 5 y 6, y el bloque B sale ENTERO del donante.** Eso hay que decirlo antes de defender nada.
+
+**Lo que la senal midio, leido en el texto:** los pasos que empareja son el **1** (*Identifica dos o mas impulsores de incertidumbre clave...*) y el **5** (*Identifica las decisiones primarias que enfrenta tu empresa...*). **Lo que comparten es el verbo `Identifica` y la palabra `escenarios`**, no la narracion. **El emparejamiento es LEXICO y MECANICO**, que es exactamente lo que la glosa corregida de esta misma vuelta dice que mueve la senal.
+
+**Y lo que la lectura dice, con los seis pasos delante:** los pasos **5 y 6 no vuelven a contar** lo que hacen los **1 a 4**: **operan sobre su producto**. El 5 pesa **los escenarios alternativos** que el 2 genero; el 6 vigila **hacia que escenario** de los que el 2 genero se esta moviendo el mundo. **Sin los pasos 1 a 4 no hay nada sobre lo que el 5 y el 6 puedan trabajar, y eso es continuidad y no repeticion.**
+
+> **PERO SE MARCA COMO DISCUTIBLE Y NO SE DESPACHA, y va con las dos cosas que lo agravan dichas por su nombre:** (1) **el corte cae en la juntura de los dos libros**, asi que un lector podria decir con razon que el nodo se lee como *el metodo de Osterwalder y despues el apendice de Cooper*; y (2) **el verbo repetido `Identifica` en los pasos 1, 5 y 6 es una eleccion de redaccion de este mismo ejecutor**, y bajarlo ahora que la senal disparo **seria acomodar la puerta**, que es la especie que el banco 9 prohibe. **Se deja tal cual, se declara, y lo relee el auditor.** La cita queda **registrada en la cola y no despachada**.
+
+### LAS RELECTURAS POST FUSION Y EL REPARTO, comprobados al cierre
+
+**CERO pares vuelven a la cola por este acto, y esta vez ni siquiera habia candidatos**: el subconjunto era cerrado **sin un solo tercero**. **El marcador de clases NO se mueve: sigue en A 575, B 81, C 8, D 2.724 sobre n 3.388.**
+
+**EL REPARTO, comprobado y no supuesto:** la tabla de `P.13` da **16 de 16 piezas que VIAJAN y CERO que se pierden**, confirmado por la guarda 3 con **16 de 16 verbatim y 0 sobrantes**. **Y LAS TRES PIEZAS QUE LA RAZON DEL ARCHIVO NOMBRO COMO PROPIAS ESTAN EN CASA, comprobadas POR GUARDA y no por lectura:** `peor` y `probabilidad` (lo propio de Cooper) y `Canvas` (el amarre al lienzo bloque por bloque), las tres halladas por la **guarda 6**. Y **`AT&T`**, el ejemplar que solo vivia en el resumen del donante, sobrevive en el resumen del resultante.
+
+**Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026.**
+
+**EL ACTO 711 QUEDA CERRADO ENTERO: sus TRES commits pusheados.**

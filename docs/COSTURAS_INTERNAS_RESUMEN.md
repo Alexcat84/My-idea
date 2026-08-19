@@ -47,7 +47,7 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 
 ## Conteos
 
-**1494 nodos** en la cola, sobre 3526 activos.
+**1494 nodos** en la cola, sobre 3525 activos.
 
 | dominio | nodos |
 |---|---:|
@@ -68,7 +68,7 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 |---|---:|---:|
 | p50 | 50.5 | 45.8 |
 | p90 | 57.7 | 51.4 |
-| p99 | 66.3 | 56.7 |
+| p99 | 66.1 | 56.7 |
 | maximo | 86.6 | 72.6 |
 
 Nodos evaluados por bloques (4 pasos o mas): **2239**. Los de menos dan **NO APLICA**, que no es cero.
@@ -328,19 +328,19 @@ Nodos evaluados por bloques (4 pasos o mas): **2239**. Los de menos dan **NO APL
 | 5 | quality | `control_estadistico_metodo_medicion` | 6 | 80.9 | 46.4 | 2 | pareja y bloque |
 | 6 | core | `customer_development_weekly_lessons_learned` | 6 | 76.4 | 60.8 | 4 | bloque |
 | 7 | core | `fases_traccion_producto` | 7 | 76.3 | 72.6 | 4 | bloque |
-| 8 | core | `escenarios_futuros` | 7 | 73.6 | 51.4 | 5 | bloque |
-| 9 | core | `reunion_conclusion_proyecto` | 12 | 72.6 | 52.8 | 6 | bloque |
-| 10 | core | `producto_como_servicio_de_acceso` | 8 | 71.0 | 67.0 | 4 | bloque |
-| 11 | core | `investigar_datos_cliente` | 11 | 70.5 | 63.2 | 8 | bloque |
-| 12 | core | `efecto_bullwhip` | 6 | 69.7 | 53.0 | 3 | bloque |
-| 13 | core | `blue_ocean_four_actions` | 7 | 68.4 | 66.1 | 3 | bloque |
-| 14 | core | `objetivos_de_llamada_orientados_a_avance` | 4 | 67.9 | 49.5 | 2 | bloque |
-| 15 | quality | `smed_setup_reduction` | 5 | 67.9 | 54.0 | 3 | bloque |
-| 16 | core | `reporte_estado_miembro_equipo` | 6 | 67.2 | 57.8 | 4 | bloque |
-| 17 | quality | `modelo_transformacion_juran` | 4 | 67.1 | 51.2 | 2 | bloque |
-| 18 | core | `activity_attributes` | 5 | 66.7 | 58.1 | 3 | bloque |
-| 19 | core | `ejecucion_incremental_transicion_tecnologica` | 16 | 66.7 | 55.9 | 7 | bloque |
-| 20 | quality | `implementacion_monitoreo_controles` | 6 | 66.7 | 46.6 | 3 | bloque |
+| 8 | core | `reunion_conclusion_proyecto` | 12 | 72.6 | 52.8 | 6 | bloque |
+| 9 | core | `producto_como_servicio_de_acceso` | 8 | 71.0 | 67.0 | 4 | bloque |
+| 10 | core | `investigar_datos_cliente` | 11 | 70.5 | 63.2 | 8 | bloque |
+| 11 | core | `efecto_bullwhip` | 6 | 69.7 | 53.0 | 3 | bloque |
+| 12 | core | `blue_ocean_four_actions` | 7 | 68.4 | 66.1 | 3 | bloque |
+| 13 | core | `objetivos_de_llamada_orientados_a_avance` | 4 | 67.9 | 49.5 | 2 | bloque |
+| 14 | quality | `smed_setup_reduction` | 5 | 67.9 | 54.0 | 3 | bloque |
+| 15 | core | `reporte_estado_miembro_equipo` | 6 | 67.2 | 57.8 | 4 | bloque |
+| 16 | quality | `modelo_transformacion_juran` | 4 | 67.1 | 51.2 | 2 | bloque |
+| 17 | core | `activity_attributes` | 5 | 66.7 | 58.1 | 3 | bloque |
+| 18 | core | `ejecucion_incremental_transicion_tecnologica` | 16 | 66.7 | 55.9 | 7 | bloque |
+| 19 | quality | `implementacion_monitoreo_controles` | 6 | 66.7 | 46.6 | 3 | bloque |
+| 20 | quality | `product_design_spreadsheet` | 5 | 66.3 | 49.7 | 2 | bloque |
 
 La cola completa, con los dos pasos de cada pareja, en `COSTURAS_INTERNAS.jsonl`.
 <!-- MANUAL -->
