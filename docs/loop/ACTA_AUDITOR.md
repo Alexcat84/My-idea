@@ -9790,3 +9790,368 @@ seguidos contra corrida completa del auditor.
 EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: registros y la
 verificacion punto por punto de OP-D-01 y OP-D-02 (TAREA 1), y OP-D-08
 con su lectura resolutoria y, si hay cuerda, OP-D-09 (TAREA 2).
+
+# ACTA DE LA VUELTA 45 DEL AUDITOR (19 ago 2026, Fable 5)
+# ==========================================================================
+
+CABECERA. SIN HUECO DE ACTA: la ultima acta escrita cubre la vuelta 44
+(commit 8daaee70) y la vuelta inmediatamente anterior a la actual es la 45,
+que es exactamente la que esta acta audita. El ejecutor NO paro: cerro las
+dos operaciones del encargo y trajo once discutibles y dos preguntas. La
+verificacion de esta acta es COMPLETA de todos modos, con Gate 0 y las
+suites re-corridos por corrida propia, porque la vuelta escribio CUATRO
+registros de OPERACION HECHA y la pregunta que trae abre la ultima
+operacion de la fase 02: lo que esta acta adjudica merece el instrumento
+entero detras.
+
+## 1. VERIFICACION DEL REPORTE, TODO POR CORRIDA PROPIA DE HOY
+
+- EL HASH Y LOS COMMITS: HEAD de pasada-unica es 868352c7 (el commit del
+  reporte); el ultimo de trabajo es 92d0b957, como el reporte dice. git log
+  8daaee70..868352c7 da NUEVE commits: los OCHO de la tabla del reporte con
+  los hashes y el orden EXACTOS, mas el del reporte. Arbol limpio y todo
+  pusheado a origin/pasada-unica, verificado al abrir y al cerrar.
+- LAS RUTAS: git diff --shortstat 8daaee70..92d0b957 da 64 ficheros, 5.447
+  anadidas y 80 borradas, LAS TRES CIFRAS AL DIGITO. El conteo por carpeta
+  reproducido entero por mi comando: docs/loop 43, scripts/loop 10, docs
+  raiz 3, docs/plan 2, dataset/nodos 2, dataset/metadata 2, web/lib 2.
+  Total 64. Y SOLO DOS NODOS TOCADOS, los dos sujetos:
+  lienzo_modelo_negocio y planificacion_recoleccion_datos.
+- EL MARCADOR, RECOMPUTADO POR MI DESDE EL ARCHIVO (python propio sobre
+  docs/INTRA_DOMINIO_VEREDICTOS.jsonl): cierre A 575, B 79, C 8, D 2.726,
+  n 3.388, puestos 1 a 3.388, CERO huecos, CERO duplicados, CERO clases
+  fuera de ABCD, tasa 16,97 que publicada a un decimal es 17,0. Apertura
+  re-medida desde git (8daaee70): A 575, B 80, C 8, D 2.725. El diff entero
+  de los 3.388 puestos entre apertura y cierre da UN SOLO movimiento: el
+  784 de B a D, exactamente el que OP-D-08 mandaba producir. Cero altas y
+  cero bajas de n.
+- EL GRAFO, MEDIDO POR MI SOBRE dataset/nodos: 3.853 ficheros, 3.524 vivos,
+  329 deprecados, 16.898 enlaces (nodos_previos mas nodos_siguientes de
+  todos los ficheros). La cola de costuras re-corrida por mi con
+  scripts/costuras_internas.py: 1.494 sobre 3.524 (42,4 por ciento) y el
+  arbol quedo LIMPIO tras la corrida, o sea que reprodujo BYTE IGUAL los
+  ficheros commiteados.
+- EL CICLO GATE 0 RE-CORRIDO ENTERO POR MI, con phase1_run_log.json
+  respaldado ANTES y restaurado DESPUES: comando 1 GATE 0: OK con VEINTE
+  renglones en [OK] y cero rojos; comando 2 con las 71 etiquetas
+  reaplicadas (--aplicar); comando 3 sincroniza los assets; git status
+  LIMPIO tras el ciclo entero, que es arbol byte igual a HEAD. MANEJO
+  DECLARADO: mi comando 1 corrio SIN --reaplico-curaduria y dio exit 2 por
+  la guarda de curaduria de etiquetas, que es el comportamiento escrito
+  del script (el recompilado revierte las 71 y la guarda exige
+  reaplicar); la salida sellada del ejecutor termina en GATE 0: OK sin ese
+  aviso porque corrio CON la bandera, que existe exactamente para el
+  ciclo cuyo comando 2 reaplica. El exit 0 del reporte es del comando con
+  su bandera; el gate en si dio OK en las dos formas.
+- LAS SUITES RE-CORRIDAS POR MI: motor 25 de 25 exit 0; web 80 ficheros,
+  1.030 pasadas y 3 saltadas, exit 0; tsc --noEmit cero lineas exit 0.
+- EL INSTRUMENTO DE LA TAREA 1 RE-CORRIDO
+  (scripts/loop/vuelta45_verificar_opd01_opd02.py, exit 0): reproduce la
+  salida sellada en TODO salvo UNA diferencia, y es TEMPORAL Y ESPERADA:
+  la sellada corrio ANTES de OP-D-08 y lista el 784 (clase B) aun
+  congelado, total 2; mi corrida de hoy da total 1, solo el 1190 de la
+  junta asesora. Esa diferencia es exactamente el efecto medido de la
+  operacion, no una discrepancia. Lo demas calza: congelados de OP-D-01
+  (494 hoy C, 592 D, 830 D) y de OP-D-02 (724, 755, 827, los tres D)
+  FUERA de la lista los seis; cierre transitivo con componente de UNO por
+  nodo en OP-D-01 y UNA componente de TRES en OP-D-02
+  (voz_del_cliente_voc, homework_frontend_loading,
+  voice_of_customer_homework, con el deprecado enfoque_mercado_voc
+  resolviendo dentro); pares internos 1 de 1 (el 494) y, en OP-D-02, DOS
+  sin veredicto en el archivo que son exactamente los pares de LD-72 y
+  LD-73, con LD-74 al lado, los tres escritos en
+  docs/plan/LECTURAS_DIRIGIDAS.md (octava tanda, las tres que cierran el
+  acto de OP-D-02).
+- LOS DOS DESTEJIDOS LEIDOS ENTEROS, antes y despues desde git:
+  lienzo_modelo_negocio de 17 a 12 con la enumeracion 13 a 17 verbatim
+  como columna vertebral (pasos 4 a 8 de hoy), los pasos 11, 3 y 12
+  viejos verbatim en el 9, 10 y 11 de hoy, condiciones_activacion y
+  fuente INTACTAS (byte iguales); planificacion_recoleccion_datos de 16 a
+  13 con el paso 1 verbatim de cabecera y el metodo 5 a 16 verbatim,
+  contiguo y en orden (2 a 13 de hoy), condiciones y fuente INTACTAS.
+- LAS SENALES, LEIDAS DEL REGISTRO QUE MI CORRIDA REPRODUJO BYTE IGUAL:
+  lienzo 46,0 con corte tras el 8 (12 pasos); planificacion 56,7 con
+  corte tras el 11 (13 pasos); principio_calidad_mvp 45,8 con corte tras
+  el 5 y disparo de bloque VERDADERO. Las tres cifras del reporte, al
+  decimo.
+- LAS GUARDAS DE LOS EJEC: 17 de 17 prefijos en OP-D-08 y 16 de 16 en
+  OP-D-09, CERO ROJO en las dos salidas. Los casos positivos: 0 PASAN y 4
+  CAEN antes contra 4 PASAN y 0 CAEN despues (OP-D-08), 0 y 2 contra 2 y
+  0 (OP-D-09), con las NUEVE invariantes en OK las dos veces en las
+  cuatro salidas.
+- OPERACIONES.jsonl: 71 lineas, CERO dependencias rotas, aristas_nuevas
+  VACIO en OP-D-08 y OP-D-09, estado LISTA en las cuatro tocadas, notas
+  de OP-D-01 en 11.739 y OP-D-02 en 14.355 caracteres, al digito.
+- LA ARISTA DEL 784, MEDIDA EN LOS DOS SENTIDOS: lienzo_modelo_negocio
+  nombra a swot_business_model_canvas en nodos_siguientes y este lo
+  nombra en nodos_previos: EXISTE con su espejo, como la razon nueva
+  publica. EL ENLACE MUTUO DEL 494, re-medido: sigue sin existir en
+  ningun sentido.
+- EL REGISTRO DE LA TAREA 1.1: la auditoria de la vuelta 44 esta escrita
+  en docs/plan/02_DESTEJIDOS.md (linea 3.524) con la linea del acta
+  citada en cada punto, verificadas contra el acta real.
+- LAS TRES CITAS DE LA EXCEPCION DE CLASE, LEIDAS HOY: 01_FUENTES.md
+  linea 90 (la firma: superar el estandar de 3 a 6 SIN narracion repetida
+  dentro), 02_DESTEJIDOS.md linea 294 (el precedente de siete pasos) y
+  linea 1755 (la senal de bloque registrada como cita en OP-D-04, con los
+  resultantes de siete procediendo). Las tres dicen lo que el registro
+  les atribuye.
+- LA CODIFICACION CORREGIDA: spot check de las salidas conversas, UTF-8.
+
+## 2. LA RELECTURA CIEGA, con la ceguera parcial DECLARADA
+
+Lei REPORTE.md entero antes de leer un solo paso, como las actas 42 a 44
+declararon de si mismas. La mitigacion fue la misma: imprimir PRIMERO los
+textos desde git (los dos nodos antes y despues de cada cirugia, los dos
+nodos pareja, y los dos de la excepcion), adjudicar, y SOLO DESPUES
+destapar las razones escritas.
+
+- EL 784, clase: MI ADJUDICACION D, antes de destapar. El lienzo
+  CONSTRUYE el canvas (identificar, definir, mapear, calcular, publicar)
+  y el SWOT por bloque lo INTERROGA (preguntar fortalezas, debilidades,
+  oportunidades y amenazas, documentar propagacion): procedimientos
+  disjuntos, entregables no intercambiables (el lienzo completo contra la
+  matriz de hallazgos), y el paso 1 del donante TOMA los bloques hechos,
+  no los construye. Relacion de alimentacion con la arista YA puesta.
+  COINCIDE con la correccion de B a D.
+- EL 2695, clase: MI ADJUDICACION D, antes de destapar. El hijo detalla
+  el diseno del metodo y se derrama sobre mas de un paso del plan (el
+  diseno con su MSA en el 4 de hoy, la validacion en el 5, las fuentes
+  rozando el 2) y trae contenido propio sin casa en los trece (su paso 3,
+  la informacion de rastreo). Madre e hijo, no gemelos. COINCIDE con el D
+  sostenido.
+- LA LECTURA TEXTUAL DE principio_calidad_mvp (7 pasos): UN SOLO ARCO
+  (replantear la calidad, probar empirico, lanzar simple, distinguir
+  defectos, capturar aprendizaje, decidir inversion, iterar), sin
+  narracion repetida dentro: capturar, decidir e iterar son actos
+  distintos y consecutivos, no un recuento. COINCIDE con la excepcion
+  sostenida.
+- EL REPARTO DEL LIENZO, releido origen por origen: los 17 cubiertos. En
+  los tres destinos con redaccion propia lo unico caido es la orden de
+  completar duplicada, cuya casa es la enumeracion; los 9 bloques con su
+  nomina viven en el resumen_teorico. CERO perdida leida. COINCIDE.
+- EL REPARTO DE PLANIFICACION, releido: el 2 viejo reparte su decidir que
+  medir en el 5 viejo (los puntos de recoleccion) con sus mitades de
+  analisis y comunicacion en el 9 y el 15 viejos; el 3 en el 7
+  (herramienta) y el 10 (muestra); el 4 en el 6 (imparciales, el minimo
+  sesgo) con el acto de recolectar presupuesto por el 8 (auditar EL
+  PROCESO de recoleccion). Indice que se colo como pasos, como la
+  operacion legisla. COINCIDE.
+
+CUENTA DE LA CIEGA: 5 de 5 coincidencias en lo adjudicable, CERO
+discrepancias, y CERO discrepancias FUERA de los discutibles marcados en
+todo lo verificado al digito. La regla del credito no dispara relectura
+al doble de ningun tramo.
+
+## 3. LOS ONCE DISCUTIBLES, ADJUDICADOS UNO A UNO
+
+- D1 (la excepcion sostenida CONTRA una senal que dispara): ADJUDICADO A
+  FAVOR. Una senal que dispara NO tumba la excepcion por ninguna regla
+  escrita: la firma de la clase (01_FUENTES linea 90) es narracion
+  repetida DENTRO, no senal en la cola; el limite del propio instrumento
+  (la cola cita y no juzga, acta 40) y el precedente medido de OP-D-04
+  (linea 1755, senal registrada como cita con los resultantes de siete
+  procediendo) cubren el caso por extension citable. Mi lectura textual
+  coincide: un solo arco. El registro de OP-D-01 queda EN PIE por este
+  punto, con la senal como cita y el nodo en la cola como cualquier
+  citado.
+- D2 (la A del 788 sobre el par que LD-74 leyo D): ADJUDICADO A FAVOR de
+  anotar y NO releer. La regla escrita de la cola post fusion admite B y
+  C; el 788 es A y no entra, y ninguna regla ordena releerlo hoy. MEDIDO
+  POR MI: voz_del_cliente_voc vive con ids_alias [enfoque_mercado_voc] y
+  el deprecado resuelve dentro, o sea que el par del 788 y el de LD-74
+  son HOY el mismo par resuelto con dos registros que dicen cosas
+  distintas (A gemelos sin arista contra D madre e hijo con arista que
+  falta). La tension es REAL, esta bien anotada en 02_DESTEJIDOS (lineas
+  3.775 a 3.790, leidas) y viaja a la fase 04, que es donde el cableado
+  se decide con el expediente delante. No tocarla hoy es la regla, no una
+  omision.
+- D3 (contar los pares internos contra DOS registros): ADJUDICADO A
+  FAVOR. Las LD son registro de veredictos POR DISENO del propio plan
+  (octava tanda de LECTURAS_DIRIGIDAS, las tres que cierran el acto de
+  OP-D-02, verificadas hoy), asi que 6 de 6 contra los dos registros es
+  la cuenta honesta, y dejar el 2 del instrumento sin tocar en la salida
+  es la conducta correcta: la salida dice lo que el archivo dice y el
+  registro explica el resto.
+- D4 (la resolucion de la pregunta como MARCO PROPIO): ADJUDICADO A
+  FAVOR. La condicion_activacion 3 del nodo, leida por mi, legisla
+  exactamente ese momento (cuando una solucion de diseno necesita
+  convertirse en modelo de negocio viable); ninguna de las otras
+  narraciones del origen trae acotacion de momento; y la rama contraria
+  habria BORRADO la unica huella de ese momento en los pasos, que es lo
+  que P.3 prohibe podar. La operacion legislaba las dos ramas y la
+  lectura eligio con la cita delante, como el acta 44 adjudico que debia
+  hacerse.
+- D5 (adosado al paso 4 y no paso nuevo): ADJUDICADO A FAVOR. El objeto
+  del paso 4 viejo es USAR el lienzo como base para algo, y el destino 12
+  le anade un segundo para que sin cambiarle el verbo ni el objeto. Paso
+  nuevo habria fabricado un decimotercero sin material propio, contra la
+  condicion escrita de adosar cuando el objeto no cambia.
+- D6 (las tres lineas no verbatim): ADJUDICADO A FAVOR. Las tres
+  comparadas palabra por palabra contra sus origenes por mi: el destino 1
+  carga enteros el 1 y el 9 viejos; el 2 pierde solo para completar las
+  secciones del canvas y el 3 pierde solo completar cada uno de los 9,
+  que son las dos apariciones de la orden duplicada cuya casa es la
+  enumeracion sobreviviente. CERO contenido propio caido.
+- D7 (el 784 en D cuando el destejido ACERCO los textos): ADJUDICADO A
+  FAVOR de D, arriba en la ciega. Recorrer los bloques para construirlos
+  no es recorrerlos para evaluarlos; ningun paso del lienzo pregunta
+  nada. Publicar el dato en contra es la letra del canon del banco 9, no
+  una debilidad.
+- D8 (el 2695 en D contra el aviso escrito): ADJUDICADO A FAVOR de D,
+  arriba en la ciega. El aviso de la operacion era CONDICIONAL (si se
+  vuelve A, se escribe como resultado): no se volvio, y la medicion del
+  9.6.2 que el ejecutor publica esta bien hecha. Contradecir un aviso
+  condicional con la medicion delante es cumplirlo.
+- D9 (la senal de OP-D-09 que no cae y la operacion HECHA): ADJUDICADO A
+  FAVOR. El criterio de HECHO es el campo verificacion de la operacion
+  (SIETE puntos, leidos por mi: ninguno pide que la senal caiga), y la
+  operacion tenia PROHIBIDO tocar el metodo, que es donde el bloque
+  detectado vive. La costura queda anotada SIN DUENO y el instrumento la
+  sirve nodo a nodo; si alguna operacion futura la reclama, ahi se
+  ejecuta. Declarar HECHA con la senal intacta y publicada es exacto.
+- D10 (el REGISTRO DE OPERACION HECHA sin la palabra literal en el
+  encargo): ADJUDICADO A FAVOR. El registro de cierre que el encargo pide
+  y el registro de OPERACION HECHA del patron de la vuelta 30 son EL
+  MISMO ARTEFACTO cuando todo lo material cumple: es la forma asentada de
+  los cierres de OP-D-03 a OP-D-06, la vara la fija el propio encargo (si
+  y solo si todo lo material cumple, medido 9 de 9 y 7 de 7 con la salida
+  delante) y el estado quieto en LISTA respeta el esquema. Los dos
+  parrafos SE QUEDAN.
+- D11 (las condiciones_activacion intactas): ADJUDICADO A FAVOR, y era
+  OBLIGATORIO. Las dos operaciones legislan pasos y solo pasos; tocar un
+  campo que el texto no nombra habria sido ejecutar mas alla de lo
+  escrito, que la seccion 3 del protocolo convierte en parada. Y la
+  condicion 3 es ademas la evidencia de D4: borrarla habria destruido la
+  prueba de la resolucion.
+
+## 4. LAS CORRECCIONES DEL REPORTE, ADJUDICADAS
+
+Las seis leidas contra mi corrida: (1) el 16.866 de las evidencias es de
+otro corte (vuelta 17, antes de las fusiones de OP-D-06) y la guarda que
+manda es CERO MOVIMIENTO con la cifra de hoy, 16.898 antes y despues,
+declarado y no reescrito, correcto; (2) el 52,3 con corte 11 de la
+evidencia de OP-D-09 es de otro corte y la coincidencia del 11 de hoy
+esta bien deshecha; (3) las dos correcciones del constructor de plan se
+vieron ANTES de sellar y la salida vieja quedo en el commit, que es la
+conducta pedida; (4) la cita rancia del 2695 (el ancla como paso 7 que
+hoy es el 4) declarada y no reescrita, por el precedente del 711; (5) las
+nueve salidas en cp1252 convertidas a utf-8 sin tocar contenido: MANEJO
+DECLARADO CON NOMBRE del ejecutor, cero cifras movidas, se registra y no
+acumula para ninguna racha; (6) el limite del instrumento reutilizado
+(dos bloques cableados para el otro nodo) declarado como resto de
+lectura. NINGUNA de las seis es caida de clase o de cifra, y NINGUNA
+afirmacion del reporte resulto falsa contra mi corrida.
+
+## 5. LA PREGUNTA DE LA SECCION 10, ADJUDICADA CON EL EXPEDIENTE DELANTE
+
+La lectura que la vuelta 44 dejo anotada (seccion 4, punto 4) se hace
+aqui, con OPERACIONES.jsonl, el 00_INDICE y el expediente leidos hoy:
+
+OP-D-07 ES EJECUTABLE: SU depende_de SE SATISFACE CON LA MESA ADJUDICADA.
+Cuatro apoyos escritos, ninguno nuevo:
+1. LA ESTRUCTURA DEL PROPIO PLAN LO EXIGE. OP-M-03 es fase 06_MESAS y
+   bloquea, entre otras, a OP-M-03-I, que es fase 03_FUSIONES. Si el
+   depende_de exigiera OP-M-03 EJECUTADA ENTERA, ninguna fusion del
+   racimo podria correr antes de la fase 06 y el orden de fases del
+   00_INDICE (destejidos, fusiones, enlaces, saneo, mesas) quedaria en
+   bloqueo. El propio indice lo niega con letra: NO QUEDA NI UNA LECTURA
+   POR HACER QUE BLOQUEE ALGO (12 ago 2026). La unica lectura coherente
+   con el plan entero es que el depende_de sobre una MESA se satisface
+   con su ADJUDICACION.
+2. LA MESA ESTA ADJUDICADA Y CERRADA: la adjudicacion entera vive en el
+   campo adjudicacion de OP-M-03 (dos puertas mas un acto, probado por
+   tres vias), el EXPEDIENTE_MESA_PIVOTE figura como cerrada en el
+   00_INDICE, y la nota de la mesa dice con letra que la clase de los
+   pares depende de esta decision Y NO AL REVES.
+3. TODO LO QUE OP-D-07 CONSUME DE LA MESA ESTA ESCRITO EN SU PROPIO
+   TEXTO: el corte entre el paso 4 y el 5 (Ries contra Traction), el
+   bloque del punto brillante en preservar, y el orden (el destejido
+   ANTES de la fusion, dicho en su nota y en la de OP-M-03-I).
+4. LO QUE LA MESA AUN DEBE NO ALIMENTA EL DESTEJIDO, Y QUEDA MEDIDO PARA
+   QUE NADIE LO DE POR HECHO: las reescrituras de los seis dudosos y el
+   753 citando el criterio (puntos 1 y 2 de la verificacion de OP-M-03)
+   NO se han ejecutado: los siete estan HOY en B, medidos por mi (668,
+   737, 771, 843, 957, 1298, 753). Son trabajo de OP-M-03 en su fase, no
+   precondicion del corte.
+CERO DOCTRINA NUEVA: extension citable de la estructura escrita.
+
+Y EL ORDEN: OP-D-07 libera CERO congelados (la lista de hoy tiene UN solo
+puesto, el 1190, que es de la junta asesora y no de este racimo), asi que
+su orden es libre por el criterio de la fase, con el precedente escrito
+de OP-D-05 y OP-D-09. Es la ULTIMA operacion de la fase 02 sin ejecutar:
+tras ella, el cierre de la fase se DECLARA MIDIENDO, no se supone.
+
+AVISO PARA LA EJECUCION, del expediente leido: la verificacion 2 de
+OP-D-07 (el bloque viaja entero al superviviente del acto I) es materia
+de OP-M-03-I y se cita como DEFERIDA; lo material de OP-D-07 hoy es que
+el corte caiga entre el 4 y el 5, que el bloque del punto brillante quede
+entero y declarado, y que el campo fuente quede con UNA sola obra. Si el
+texto de la operacion, leido entero, no alcanza para ejecutar ese reparto
+sin decidir (donde vive el bloque de Traction entre el corte y la fusion
+del acto I), eso es PARADA del modo continuo, no una improvisacion.
+
+## 6. MIS PROPIOS MANEJOS Y TROPIEZOS, declarados con nombre
+
+- (i) Mi primer conteo de enlaces uso un esquema supuesto (conexiones) y
+  dio cero; leido el esquema real (nodos_previos y nodos_siguientes) en
+  la misma corrida, 16.898 al digito. Visto antes de publicar nada.
+- (ii) Mi primer recomputo del marcador uso la clave veredicto y el campo
+  se llama clase: KeyError a la vista, corregido en la corrida siguiente,
+  antes de medir nada.
+- (iii) Mi comando 1 del Gate corrio sin --reaplico-curaduria y dio exit
+  2 por la guarda de curaduria: comportamiento escrito del script, no
+  rojo del gate. El ciclo completo con el comando 2 en --aplicar dejo el
+  arbol byte igual a HEAD.
+- (iv) phase1_run_log.json respaldado antes y restaurado despues, la
+  maniobra de las actas 42 a 44.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 5 relecturas ciegas (la clase del 784, la del 2695, la
+lectura textual de principio_calidad_mvp, el reparto del lienzo origen
+por origen, el reparto de planificacion), 2 puestos de fondo (784, 2695),
+8 nodos de forma (los dos sujetos antes y despues desde git, swot, diseno
+de metodos, principio_calidad_mvp, producto_minimo_viable), 31 sitios
+re-corridos o leidos al digito (commits y shortstat con carpetas,
+marcador en dos estados con su diff puesto a puesto, grafo, cola byte
+igual, ciclo Gate 0 de tres comandos, tres suites, el verificador de la
+TAREA 1 re-corrido con su diff contra la sellada, OPERACIONES.jsonl
+entero con dependencias, las notas y evidencias de las seis operaciones
+del caso, 01_FUENTES 90, 02_DESTEJIDOS 294 y 1755 y 3524 y 3775,
+LECTURAS_DIRIGIDAS octava tanda, las tres senales del registro de
+costuras, las aristas del 784 y del 494 en los dos sentidos, los alias
+del racimo de la voz del cliente, las cuatro salidas de caso positivo,
+las dos EJEC, las razones del 784, 788 y 2695, los once veredictos del
+racimo del pivote medidos, el 00_INDICE, y la codificacion). Caidas del
+ejecutor en esta vuelta: CERO de clase o cifra, CERO de reporte. Caidas
+del auditor: CERO (los manejos de la seccion 6 se vieron antes de
+publicar).
+
+Acumulado: 71 relecturas, 452 puestos (mas 277 nodos de forma y 295
+sitios de codigo), 7 caidas de clase, 18 de reporte del ejecutor, 7 de
+cifra publicada del ejecutor, 2 de cifra del auditor, 3 de acta del
+auditor, 1 de procedimiento del auditor.
+
+Rachas: clase o cifra CERO. Reporte CERO, y ya son TRES reportes limpios
+seguidos contra corrida completa del auditor.
+
+## 8. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. La unica adjudicacion de fondo (el depende_de de
+  OP-D-07) se resolvio por extension citable de la estructura escrita
+  del plan (seccion 5).
+- Contradiccion sin regla de correccion: NO. La tension del 788 contra
+  LD-74 esta anotada con su regla y su destino (fase 04).
+- Decision de fundador: NO. MIN_BLOQUE intacto, cero contenido borrado
+  fuera de regla, cero ramas fundidas.
+- Fallo tecnico repetido: NO. Cero rojos en la vuelta 45 y cero en mi
+  re-corrida entera.
+- Credito roto: NO. Cero caidas de clase o cifra en la tanda.
+- Campana consumada: NO. La fase 02 tiene a OP-D-07 por delante y el
+  00_INDICE el resto.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: registros (TAREA 1)
+y OP-D-07 con el cierre medido de la fase 02 y, si hay cuerda, la primera
+operacion de la fase 03 por su orden escrito (TAREA 2).
