@@ -8646,3 +8646,222 @@ EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: la vuelta 41 registra
 las adjudicaciones, anade la linea de limite a la salida del instrumento de
 costuras, y ejecuta OP-D-06 como UNA operacion de nueve actos, acto por
 acto y ninguno a medias.
+
+
+# ACTA DE LA VUELTA 41 DEL AUDITOR (19 ago 2026, Fable 5). CONVOCADO POR UNA VUELTA QUE NO TERMINO: EL EJECUTOR MURIO POR LIMITE DE SESION DE LA API A MITAD DEL ACTO 285, CON DOS COMMITS BUENOS PUSHEADOS Y EL PLAN DEL ACTO SELLADO EN DISCO SIN COMMIT. LO COMMITEADO VERIFICADO POR CORRIDA PROPIA Y BYTE IGUAL DONDE APLICA, EL GRAFO INTACTO, LA CIEGA SOBRE EL ACTO 285 COINCIDE 2 DE 2 EN EL FONDO, CERO CAIDAS HALLADAS, Y LA REANUDACION ADJUDICADA: EL ACTO 285 SE RETOMA DESDE SU PLAN SELLADO, REPRODUCIDO POR INSTRUMENTO ANTES DE EJECUTARSE
+
+## 0. EL HUECO DE ACTA, COMPROBADO PRIMERO (regla 0 del ciclo)
+
+La ultima acta escrita es la de la vuelta 40 y cubre la vuelta 40. La
+vuelta inmediatamente anterior a esta acta es la 41, que corrio PARCIAL y
+NUNCA escribio reporte: no hay vuelta completa sin auditar, y ESTA acta
+cubre lo que la 41 alcanzo a hacer. No es la especie del hueco del 15 de
+agosto (una vuelta entera corrida y sin acta): es una vuelta cortada por
+fuera, y se audita entera tal como quedo.
+
+## 1. LA INTERRUPCION, MEDIDA Y NO SUPUESTA
+
+- docs/loop/ultimo_ejecutor.json, leido hoy: terminal_reason api_error,
+  status 429, resultado literal "You've hit your session limit / resets
+  1:10pm (America/Toronto)", 869 segundos, 56 turnos. El ejecutor de la
+  vuelta 41 (Opus 5) murio por LIMITE DE SESION, no por decision ni por
+  guarda en rojo.
+- docs/loop/loop.log, leido hoy: el ejecutor corrio de 11:40:57 a
+  11:55:26; el auditor fallo INSTANTANEO tres veces por el mismo limite
+  (11:55:32, 12:25:37, 12:55:41, costo 0 las tres). Esta acta es el
+  reintento que si entro, corrido despues del reset de la 1:10pm.
+- El mismo remedio que el bucle ya uso el 15 ago a las 13:57 (fallo
+  instantaneo por limite, espera y reintento). No es especie nueva.
+
+DONDE QUEDO EL TRABAJO, medido con git status y git log:
+- COMMITEADO Y PUSHEADO (origin/pasada-unica en aaa15cbd, comprobado con
+  git fetch hoy): 9f9fc182 (la apertura, sola) y aaa15cbd (la TAREA 1
+  entera: registros mas la linea de limite de costuras).
+- EN DISCO SIN COMMIT, seis rutas: docs/loop/SALIDA_V41_ACTO285_LECTURA.txt,
+  docs/loop/SALIDA_V41_ACTO285_PLAN.txt, docs/loop/PLAN_V41_ACTO285.json,
+  scripts/loop/vuelta41_lectura_acto.py, scripts/loop/vuelta41_plan_acto.py
+  y scripts/loop/v41_actos/ (el modulo del acto 285). Es la lectura y el
+  plan sellado del acto 285: la fusion NO se ejecuto.
+- EL GRAFO INTACTO: git status sobre dataset/, web/, engine/ y docs/plan/
+  limpio. El acto a medias es de REGISTRO, no de datos: ni un nodo tocado.
+- NO HAY REPORTE de la vuelta 41: REPORTE.md sigue siendo el de la 40, ya
+  auditada. Esta acta no tiene discutibles del ejecutor que adjudicar, y
+  la ciega se hizo sobre el material del acto 285 (seccion 3).
+
+## 2. LO COMMITEADO, VERIFICADO POR CORRIDA PROPIA (regla 1)
+
+1. LA APERTURA (9f9fc182): vuelta31_estado.py re-corrido por mi hoy, y la
+   salida es BYTE IGUAL a docs/loop/SALIDA_V41_APERTURA.txt salvo la
+   etiqueta del encabezado (MEDICION DE APERTURA contra SIN ETIQUETA, que
+   es el parametro del instrumento). Marcador n 3.388, A 575, B 83, C 8,
+   D 2.722, tasa 17,0; CERO huecos y CERO duplicados impresos por la
+   corrida; grafo 3.853 ficheros, 3.532 vivos, 321 deprecados, 16.871
+   enlaces; 71 operaciones LISTA y 0 rotas; inventario 672. CALZA AL
+   DIGITO con el mensaje del commit. Y la comprobacion citable de OP-D-06
+   salio en MI corrida: OP-F-02 HECHA en su nota 2869 SI y OP-F-03 HECHA
+   en su nota 3376 SI, asi que la regla de fuente primero de los tres
+   cruces queda satisfecha POR PRECEDENCIA, tal como la apertura lo dijo.
+2. LA TAREA 1 (aaa15cbd), pieza por pieza:
+   - La seccion nueva de docs/plan/02_DESTEJIDOS.md (54 lineas anadidas,
+     cero borradas) leida entera contra MI acta de la vuelta 40: las OCHO
+     lineas citadas (8524, 8535, 8542, 8549, 8557, 8567, 8574, 8578) las
+     imprimi hoy con sed y dicen EXACTAMENTE lo que la seccion les
+     atribuye, los cinco discutibles PROCEDEN y las tres respuestas
+     calzan. La caida de reporte quedo corregida SIN borrar lo viejo (la
+     frase tachada a la vista, OCHO piden P.8 y el noveno su DECLARACION).
+   - El parche de scripts/costuras_internas.py: numstat 24 anadidas y 0
+     borradas, y el diff entero leido: SOLO lineas de impresion al final
+     de main(), UMBRAL_PAREJA 80 y UMBRAL_BLOQUE 44 intactos, ningun
+     fixture tocado, y la cifra del porcentaje SE CALCULA en la corrida
+     (len(filas) sobre len(activos)), no se teclea.
+   - EL INSTRUMENTO ENTERO RE-CORRIDO POR MI: exit 0, y la cola de mi
+     salida calza LINEA A LINEA con SALIDA_V41_COSTURAS_LIMITE.txt (la
+     unica diferencia es la linea EXIT=0 que el sellado anota). 1.496
+     nodos sobre 3.532 activos es 42,36, publicado 42,4: la DISCREPANCIA
+     DECLARADA del commit (42,4 contra el 42,3 del acta) esta bien
+     declarada y bien explicada: misma cola, dos activos menos por
+     OP-D-05, una decima arriba. No se resolvio copiando: se midio.
+3. EL CICLO GATE 0 Y LAS SUITES, RE-CORRIDOS POR MI: los tres comandos
+   (run_phase1 --reaplico-curaduria, etiquetas_de_cara --aplicar,
+   sync_assets_web) exit 0 los tres, GATE 0: OK, 71 etiquetas, los seis
+   assets sincronizados y las dos copias del grafo byte iguales a HEAD.
+   Motor 25 de 25 (los veinticinco scripts planos corridos uno a uno),
+   web 80 ficheros con 1.030 pasadas y 3 saltadas exit 0, tsc cero lineas
+   exit 0. UNA NOTA DE MANEJO, declarada: mi corrida de run_phase1
+   reescribe dataset/metadata/phase1_run_log.json y le vacia las cinco
+   entradas de simetrizacion que la fusion de la vuelta 40 dejo (mi
+   corrida no simetriza nada nuevo y el log registra la ultima corrida).
+   Lo RESTAURE con git restore antes de terminar: una verificacion mia no
+   pisa la evidencia commiteada del ejecutor. El arbol quedo byte igual.
+4. Mis corridas de verificacion se declararon aqui con su comando y sus
+   ficheros temporales se BORRARON: lo sellado es del ejecutor, lo mio se
+   declara y no se sella.
+
+## 3. LA RELECTURA CIEGA, SOBRE EL ACTO 285 Y ANTES DE DESTAPAR
+
+No hay discutibles marcados porque no hay reporte; la ciega se hizo sobre
+la decision central del material sin commit, EN EL ORDEN DE LA REGLA:
+imprimi PRIMERO los dos nodos enteros de dataset/nodos (pasos, condiciones,
+entregable, enlaces), adjudique por escrito, y SOLO DESPUES abri la lectura
+y el plan del ejecutor.
+
+MI ADJUDICACION CIEGA, tal como quedo escrita antes de destapar: los dos
+nodos son la misma ensenanza de Cooper; NINGUNO tiene costura interna (cada
+uno es una progresion unica, sin narracion repetida); P.5 dice UNA familia;
+y por P.8 el superviviente es producto_unico_superior, porque su paso 4
+(define tu producto como conjunto de beneficios y no lista de
+caracteristicas) ES la tesis entera del otro nodo, y ademas carga la pieza
+propia del factor numero uno con sus cifras 5x/4x/4x. Anote tambien que el
+cableado crudo favorecia al ABSORBIDO (10 enlaces contra 6), asi que si el
+ejecutor elegia por contenido tenia que decirlo.
+
+AL DESTAPAR: COINCIDE 2 DE 2 EN EL FONDO. El plan sella superviviente
+producto_unico_superior por contenido, con la lectura de no costura escrita
+dentro del modulo del acto (el segundo bloque CONTINUA al primero en los
+dos nodos, la cita del instrumento registrada y no despachada), y el
+cableado impreso DESPUES del contenido y medido por P.1 en 6 contra 7 (los
+tres vecinos deprecados descontados: yo reconte los crudos, 10, y los
+vivos, 7, y calza). La prelacion del acta se cumplio: el cableado
+favorecia al perdedor y NO decidio.
+
+Y LA ARITMETICA DEL PLAN, RE-CONTADA POR MI CONTRA LOS FICHEROS: 7
+redirecciones (3 en nodos_previos vivos, 4 en nodos_siguientes vivos), 3
+deprecados que nombran y no se tocan, 0 duplicadas fabricadas (el
+superviviente no enlaza hoy a ninguno de los 7), 16 origenes verbatim (6
+mas 6 pasos, 2 mas 2 condiciones), 7 aristas de simetrizacion esperadas, 6
+pasos finales DENTRO del estandar de 3 a 6, y la tabla de P.13 con 16 de 16
+que VIAJAN. El subconjunto del acto quedo cerrado en la lectura del
+ejecutor con la guarda de transitividad sobre las A (cero terceros de clase
+A entre los 4 pares con tercero), y el par 835 (clase B, brief_competitivo
+con producto_unico_superior) queda marcado para la cola de relectura post
+fusion, como 08_VERIFICACION manda.
+
+LO QUE EL ACTO 285 NO TIENE TODAVIA, dicho al digito: verificar_mapas
+sobre el plan nuevo, simulacion previa sellada, la fusion, el ciclo, el
+caso positivo, la costura post fusion y la relectura del 835. Murio antes.
+
+## 4. ADJUDICACIONES de esta vuelta
+
+1. EL ACTO 285 SE RETOMA DESDE SU PLAN SELLADO, no se rehace de cero.
+   Letra citable: el encargo abre siempre con "Commitea y pushea lo
+   pendiente en la rama activa antes de tocar nada" (lo pendiente se
+   incorpora, no se tira), y el precedente de OP-D-05 es que una fusion se
+   ejecuta TAL COMO ESTA SELLADA tras verificarse. La condicion que pongo,
+   y es la regla 1 y no una nueva: la vuelta 42 RE-CORRE los dos
+   instrumentos del ejecutor (vuelta41_lectura_acto.py y
+   vuelta41_plan_acto.py) y comprueba que REPRODUCEN las dos salidas y el
+   plan sellados; cualquier diferencia se declara y detiene la ejecucion
+   del sellado hasta adjudicarse. Mi propia verificacion de hoy (seccion
+   3) ya calza con el sellado.
+2. EL CORTE POR LIMITE DE SESION NO ES CAIDA DE DICTADO NI CONDICION DE
+   PARADA. La letra de "fallo tecnico repetido" pide hook o Gate 0 en rojo
+   dos vueltas seguidas por la misma causa: aqui el Gate 0 esta verde por
+   mi corrida y el corte vino de la cuota de la API, que el propio bucle
+   ya maneja esperando y reintentando. Se REGISTRA con nombre y no acumula
+   credito contra nadie.
+3. PRACTICA NUEVA ADJUDICADA POR EXTENSION, no doctrina nueva: DOS COMMITS
+   POR ACTO desde la vuelta 42 (el plan sellado con su lectura en un
+   commit pusheado ANTES de fundir; la fusion ejecutada en otro). Extiende
+   "commit y push POR ACTO" del encargo 41 por su propia logica y por la
+   leccion de hoy: un corte de sesion no debe poder dejar un sellado sin
+   commit. Es la misma especie que la regla del hueco de acta: lo no
+   registrado no existe.
+
+LO DISCUTIBLE DE ESTA ACTA, marcado antes de saber si acierto: (i) le doy
+acta a una vuelta INCOMPLETA en vez de esperar a que termine; lo sostengo
+porque la sesion que la corria esta muerta y la regla del hueco manda no
+dar por buena ninguna vuelta sin auditar. (ii) Ordeno ejecutar un plan
+sellado por una sesion muerta; lo sostengo por la reproduccion por
+instrumento que la adjudicacion 1 exige antes de fundir. (iii) Los seis
+ficheros sin commit los dejo SIN COMMITEAR a proposito: son obra del
+ejecutor y los commitea el ejecutor de la 42 con su mensaje declarado,
+como la primera linea de todo encargo manda; el riesgo de perderlos queda
+declarado y es bajo (la maquina es la misma y el bucle reintenta ahi).
+
+## 5. METRICA DE CREDITO acumulada
+
+Entrante (acta de la vuelta 40): 50 relecturas, 445 puestos (mas 240 nodos
+de forma y 149 sitios de codigo), 7 caidas de clase, 18 de reporte del
+ejecutor, 7 de cifra publicada del ejecutor, 2 de cifra del auditor, 2 de
+acta del auditor, 1 de procedimiento del auditor.
+
+Esta tanda (vuelta 41 parcial): mas 1 puesto de fondo (el par 285 releido
+ciego con su razon entera); mas 2 nodos de forma (los dos nodos del acto
+leidos enteros de su fichero); mas 15 sitios de codigo o instrumentos
+re-corridos (estado byte igual, costuras entero linea a linea, numstat y
+diff del parche con los umbrales, las ocho lineas del acta citadas, la
+seccion de tarea 1, loop.log y ultimo_ejecutor.json, el ciclo Gate 0 de
+tres comandos, motor, web, tsc, la aritmetica del plan contra los
+ficheros, el cableado por P.1 recontado, el estado del push en origin, los
+tres instrumentos sueltos leidos, el plan JSON con sus seis pasos tejidos).
+Caidas: CERO del ejecutor en lo commiteado, CERO de clase o cifra, CERO
+del auditor.
+
+Acumulado: 51 relecturas, 446 puestos (mas 242 nodos de forma y 164 sitios
+de codigo), 7 caidas de clase, 18 de reporte del ejecutor, 7 de cifra
+publicada del ejecutor, 2 de cifra del auditor, 2 de acta del auditor, 1
+de procedimiento del auditor.
+
+Rachas: clase o cifra CERO. La de reporte SE QUEDA EN UNA y se dice por
+que: esta vuelta no entrego reporte, y una racha no se rompe con material
+ausente; la rompe un reporte limpio, que sera el de la 42 si sale limpio.
+
+## 6. CONDICIONES DE PARADA, recorridas: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. La reanudacion y los dos commits por acto quedaron
+  adjudicados por extension citable (seccion 4).
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NO. Nada borra contenido, cambia alcance, gasta
+  fuera del repo ni toca produccion. El MIN_BLOQUE sigue del fundador.
+- Fallo tecnico repetido: NO por su letra (hook o Gate 0 en rojo dos
+  vueltas por la misma causa): Gate 0 verde por corrida propia y el corte
+  es de cuota, ya manejado por el bucle. SI el limite corta la 42 en el
+  mismo punto y vuelve a dejar sellados sin commit pese a los dos commits
+  por acto, el auditor de esa vuelta lo trae como patron.
+- Credito roto: NO. Cero caidas esta tanda.
+- Campana consumada: NO. Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: la vuelta 42
+commitea lo pendiente del 285 con su mensaje declarado, reproduce el
+sellado por instrumento, ejecuta la fusion con las trece guardas y sigue
+OP-D-06 acto por acto con DOS commits por acto y ninguno a medias.
