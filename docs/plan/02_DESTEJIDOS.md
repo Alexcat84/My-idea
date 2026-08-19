@@ -2742,3 +2742,79 @@ Y su punto **1** reparte el trabajo con nombre: *si `P.7` (la simulacion previa 
 ### EL ACTO 494 QUEDA CERRADO: **CERO nodos tocados, CERO fusiones, UN commit propio**
 
 **El instrumento tambien cita a los dos nodos en la cola de costuras hoy** (`principio_calidad_mvp` bloque **45,8** con corte tras 5, `producto_minimo_viable` bloque **45,8** con corte tras 2, ninguna pareja dispara). **No se leen aqui ni se despachan**: los dos son citas sobre nodos que **`OP-D-01` ya destejio**, la cola las registra, y **este acto no tiene mandato para juzgarlas** porque no funde nada. **Se dejan registradas y a la vista, que es lo que la cola es.**
+
+## `OP-D-06`, EL CIERRE DE LA VUELTA 43: **CINCO ACTOS FUNDIDOS, UNO DECLARADO, TRES ABIERTOS** (19 ago 2026)
+
+**La operacion NO se cierra en esta vuelta y se dice al principio en vez de al final.** De los nueve actos, **cinco tienen su fusion ejecutada** (285 en la vuelta 42, y **331, 341, 344 y 361** aqui), **uno esta cerrado por declaracion** (494) y **tres quedan sin abrir** (392, 711, 969). **Ninguno queda a medias: todos los que se abrieron llegaron a su ultimo commit pusheado.**
+
+**Las cuatro tablas de abajo se IMPRIMEN y no se teclean**, generadas con `python scripts/loop/vuelta43_cierre_opd06.py` y selladas en `docs/loop/SALIDA_V43_CIERRE_OPD06.txt`.
+
+### EL RECOMPUTO DEL CIERRE TRANSITIVO, corrido HOY y no heredado del corte del 2.117
+
+**Es el punto 2 de la `verificacion` de `OP-D-06` en `OPERACIONES.jsonl`, y es el que podia tumbar la forma de la operacion entera.** Se construye con las **575 A vigentes** del archivo medidas hoy, resolviendo cada id por alias antes de contar (regla 9), y se mide la componente de cada acto por la relacion gemelo (banco `9.24`).
+
+| puesto | el par del acto | componente hoy |
+|---:|---|---|
+| **285** | `producto_unico_superior` con `superioridad_producto_beneficios` | **de DOS** |
+| **331** | `analisis_de_gastos_de_capital` con `propuesta_gasto_capital` | **de DOS** |
+| **341** | `blueprint_de_experiencia` con `customer_journey_mapping` | **de DOS** |
+| **344** | `plan_acquire_activate` con `plan_de_adquisicion_acquire` | **de DOS** |
+| **361** | `key_partners_hypothesis` con `partners_hypothesis_physical` | **de DOS** |
+| **392** | `build_metrics_toolset` con `metricas_de_adquisicion_activacion` | **de DOS** |
+| **494** | `principio_calidad_mvp` con `producto_minimo_viable` | **de DOS** (clase **C** hoy, ya no aporta arista) |
+| **711** | `escenarios_futuros` con `future_scenarios_planning` | **de DOS** |
+| **969** | `customer_retention_metrics_webmobile` con `retention_metrics` | **de DOS** |
+
+**GUARDA: actos cuya componente CRECIO por encima de dos: CERO. LOS NUEVE SIGUEN SIENDO DE DOS, medido hoy.** La adjudicacion del 11 ago 2026 los midio al corte del puesto 2.117 y dijo que ninguno crecia; **ocho dias, cinco fusiones y dos relecturas despues, sigue siendo cierto, y ahora esta medido contra el archivo de hoy en vez de citado.**
+
+### LOS PARES DE LA OPERACION, RELEIDOS CONTRA SU SUPERVIVIENTE
+
+| puesto | clase | nodo A | estado | nodo B | estado |
+|---:|:---:|---|---|---|---|
+| **285** | A | `producto_unico_superior` | **VIVO** | `superioridad_producto_beneficios` | **DEPR, alias sano** |
+| **331** | A | `analisis_de_gastos_de_capital` | **VIVO** | `propuesta_gasto_capital` | **DEPR, alias sano** |
+| **341** | A | `blueprint_de_experiencia` | **DEPR, alias sano** | `customer_journey_mapping` | **VIVO** |
+| **344** | A | `plan_acquire_activate` | **DEPR, alias sano** | `plan_de_adquisicion_acquire` | **VIVO** |
+| **361** | A | `key_partners_hypothesis` | **VIVO** | `partners_hypothesis_physical` | **DEPR, alias sano** |
+| **392** | A | `build_metrics_toolset` | **VIVO** | `metricas_de_adquisicion_activacion` | **VIVO** |
+| **494** | **C** | `principio_calidad_mvp` | **VIVO** | `producto_minimo_viable` | **VIVO** |
+| **711** | A | `escenarios_futuros` | **VIVO** | `future_scenarios_planning` | **VIVO** |
+| **969** | A | `customer_retention_metrics_webmobile` | **VIVO** | `retention_metrics` | **VIVO** |
+
+**Cinco actos con su fusion ejecutada y el absorbido DEPRECADO CON ALIAS QUE RESUELVE AL SUPERVIVIENTE**, comprobado nodo por nodo por el resolutor y no por el nombre. **Los cuatro restantes tienen sus dos nodos vivos**, que es lo correcto: tres no se han abierto y el 494 no se funde por adjudicacion de `OP-D-01`.
+
+### LA VERIFICACION DE `OP-D-06`, PUNTO POR PUNTO
+
+| # | el punto, copiado de `OPERACIONES.jsonl` | como esta hoy |
+|---:|---|---|
+| **1** | *Gate 0 verde* | **CUMPLIDO EN LOS CUATRO ACTOS DE ESTA VUELTA**, con los **veinte** renglones en `[OK]` y **cero en rojo** cada vez, y con el ciclo **de CUATRO comandos** desde el 344 |
+| **2** | *recomputo del cierre transitivo* | **CORRIDO HOY**, tabla de arriba: **los nueve siguen de dos, cero crecieron** |
+| **3** | *los nueve pares releidos contra su superviviente* | **PARCIAL Y SE DICE ASI**: releidos contra su superviviente **los cinco fundidos**, mas el **494** contra la adjudicacion de `OP-D-01`. **Los tres sin abrir (392, 711, 969) NO se han releido, porque su superviviente todavia no existe** |
+| **4** | *cada perdida quedo en el bloque del que proviene, o en el superviviente si no tenia bloque* | **CUMPLIDO Y COMPROBADO POR GUARDA EN LOS CUATRO ACTOS**: `P.13` dio **13 de 13**, **17 de 17**, **12 de 12** y (del 331) **12 de 12** piezas que VIAJAN y **CERO** que se pierden, confirmado cada vez por la guarda 3 contra `dataset/nodos`. **Con cero perdidas no hubo nada que repartir en ninguno**, y eso se comprobo al cierre de cada acto en vez de suponerse |
+| **5** | *el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto* | **CUMPLIDO EN LOS CUATRO**, con la lectura sellada y su bloque (d) publicando el subconjunto cerrado por transitividad sobre las A |
+
+**Y DOS COMPROBACIONES DE FORMA:** el estado declarado sigue en **`LISTA`** con `fecha_corte` **2026-08-11**, la nomina trae **18 nodos** y **CERO estan ausentes del grafo**.
+
+### EL ESTADO AL CIERRE, RECOMPUTADO AL CIERRE (regla 1)
+
+| | apertura de la vuelta 43 | **al cierre, recomputado** | lo que lo movio |
+|---|---:|---:|---|
+| ficheros | 3.853 | **3.853** | nada: los deprecados siguen en el grafo |
+| vivos | 3.530 | **3.527** | **menos 3**, una por cada fusion de esta vuelta (341, 344, 361) |
+| deprecados | 323 | **326** | **mas 3**, los mismos tres |
+| enlaces | 16.880 | **16.887** | **mas 7 netos**, y el desglose esta en cada acto: **mas 5** del 341, **mas 3** del 344, **menos 1** del 361 |
+| cola de costuras | 1.495 sobre 3.530 (42,4 por ciento) | **1.493 sobre 3.527 (42,3 por ciento)** | **menos 2**: el absorbido del 344 salio al deprecarse, y en el 361 **el que salio fue el superviviente**, porque la fusion le apago la senal |
+| marcador `n` | 3.388 | **3.388** | nada: sin altas ni bajas |
+| marcador A | 575 | **575** | nada |
+| marcador B | 82 | **81** | la relectura del **599** al cierre del acto 361 |
+| marcador C | 8 | **8** | nada |
+| marcador D | 2.723 | **2.724** | la misma relectura |
+| tasa de A | 17,0 | **17,0** | nada |
+
+### LOS TRES ACTOS QUE QUEDAN, con lo que ya se sabe de cada uno
+
+| puesto | el par | en que estado queda | lo que ya esta escrito y le espera |
+|---:|---|---|---|
+| **392** | `metricas_de_adquisicion_activacion` con `build_metrics_toolset` | **SIN ABRIR**. Cero ficheros suyos tocados, cero plan sellado | **TIENE REPARTO ESCRITO** en la tabla de `OP-D-06` y hay que cumplirlo tal como esta: *en la fusion*, que el sistema escale luego a retencion y cohortes, de `build_metrics_toolset`; *con el destejido*, definir que es una conversion, comparar el CAC contra el LTV, y usar SEM para aprender que mensaje funciona. Y `metricas_de_adquisicion_activacion` esta en `OP-F-04-WEI`, asi que **fuente primero** manda y hay que comprobar la precedencia como en el 344 y el 361 |
+| **711** | `future_scenarios_planning` con `escenarios_futuros` | **SIN ABRIR** | **CRUCE CON LA FASE 01 DECLARADO EN LA NOTA DE `OPERACIONES.jsonl`**: `future_scenarios_planning` es **uno de los tres injertos de `OP-F-02`**, y ahi manda **fuente primero**. `OP-F-02` figura **HECHA en su nota 2869 SI** en la apertura de esta vuelta |
+| **969** | `retention_metrics` con `customer_retention_metrics_webmobile` | **SIN ABRIR** | `retention_metrics` esta en la nomina de `OP-F-04-COL`, que **bloquea a `OP-D-06`** segun su propio campo `bloquea_a`, y esta **HECHA en su nota 7981 SI**. Misma comprobacion de precedencia que el 341 |

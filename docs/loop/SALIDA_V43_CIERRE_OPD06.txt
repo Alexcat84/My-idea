@@ -1,0 +1,63 @@
+==============================================================================
+EL CIERRE DE OP-D-06, MEDIDO EN LA VUELTA 43 (19 ago 2026)
+==============================================================================
+
+### (1) EL RECOMPUTO DEL CIERRE TRANSITIVO, sobre las A del archivo HOY
+  Banco 9.24: una familia es el CIERRE TRANSITIVO de la relacion gemelo.
+  Se construye con las A VIGENTES de docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+  medidas HOY, no al corte del puesto 2117.
+
+  pares de clase A vigentes en el archivo hoy: 575
+
+  puesto  el par del acto                                                componente hoy
+  285     producto_unico_superior con superioridad_producto_beneficios   de DOS
+  331     analisis_de_gastos_de_capital con propuesta_gasto_capital      de DOS
+  341     blueprint_de_experiencia con customer_journey_mapping          de DOS
+  344     plan_acquire_activate con plan_de_adquisicion_acquire          de DOS
+  361     key_partners_hypothesis con partners_hypothesis_physical       de DOS
+  392     build_metrics_toolset con metricas_de_adquisicion_activacion   de DOS
+  494     principio_calidad_mvp con producto_minimo_viable               de DOS (clase C hoy, ya no aporta arista)
+  711     escenarios_futuros con future_scenarios_planning               de DOS
+  969     customer_retention_metrics_webmobile con retention_metrics     de DOS
+
+  GUARDA: actos cuya componente CRECIO por encima de dos: 0
+  LOS NUEVE SIGUEN SIENDO DE DOS, medido hoy. Ninguno crecio.
+
+### (2) LOS PARES DE LA OPERACION, RELEIDOS CONTRA SU SUPERVIVIENTE
+
+  puesto  cl   nodo A                                       estado A   nodo B                                       estado B
+  285     A    producto_unico_superior                      VIVO       superioridad_producto_beneficios             DEPR->OK
+  331     A    analisis_de_gastos_de_capital                VIVO       propuesta_gasto_capital                      DEPR->OK
+  341     A    blueprint_de_experiencia                     DEPR->OK   customer_journey_mapping                     VIVO
+  344     A    plan_acquire_activate                        DEPR->OK   plan_de_adquisicion_acquire                  VIVO
+  361     A    key_partners_hypothesis                      VIVO       partners_hypothesis_physical                 DEPR->OK
+  392     A    build_metrics_toolset                        VIVO       metricas_de_adquisicion_activacion           VIVO
+  494     C    principio_calidad_mvp                        VIVO       producto_minimo_viable                       VIVO
+  711     A    escenarios_futuros                           VIVO       future_scenarios_planning                    VIVO
+  969     A    customer_retention_metrics_webmobile         VIVO       retention_metrics                            VIVO
+
+  actos con una fusion ya ejecutada (uno de los dos deprecado con alias sano): 5 de 9
+
+### (3) LA VERIFICACION DE OP-D-06, PUNTO POR PUNTO
+
+  1. Gate 0 verde
+  2. recomputo del cierre transitivo
+  3. los nueve pares releidos contra su superviviente
+  4. cada perdida quedo en el bloque del que proviene, o en el superviviente si no tenia bloque
+  5. el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto
+
+  estado declarado en OPERACIONES.jsonl: LISTA | fecha_corte: 2026-08-11
+  nodos declarados en la nomina: 18
+  nodos de la nomina AUSENTES del grafo: 0 
+
+### (4) EL ESTADO AL CIERRE, recomputado (regla 1)
+
+  ficheros    : 3853
+  vivos       : 3527
+  deprecados  : 326
+  enlaces     : 16887 (previos mas siguientes)
+  cola de costuras: 1493 nodos sobre 3527 activos (42.3 por ciento)
+  marcador    : n 3388 | A 575 B 81 C 8 D 2724 | tasa de A 17.0 por ciento
+
+==============================================================================
+FIN DEL CIERRE MEDIDO
