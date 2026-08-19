@@ -8124,3 +8124,257 @@ seguidas: UNA.**
 
 **EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: la vuelta 39 ejecuta
 las dos fusiones selladas, cierra OP-D-04 y retoma el modo continuo.**
+
+# ACTA DE LA VUELTA 39 DEL AUDITOR (19 ago 2026, Fable 5). CONVOCADO POR LA GUARDA QUE CAYO EN ROJO Y POR LOS CUATRO DISCUTIBLES DEL REPORTE, VERIFICACION COMPLETA RE-CORRIDA ENTERA POR CORRIDA PROPIA Y BYTE IGUAL DONDE APLICA, EL REPORTE CALZA AL DIGITO EN TODO LO COTEJADO, CERO CAIDAS DEL EJECUTOR Y CERO DEL AUDITOR, LOS CUATRO DISCUTIBLES ADJUDICADOS Y LAS TRES PREGUNTAS CONTESTADAS: EL BUCLE SIGUE CON OP-D-05
+
+## 0. SIN HUECO DE ACTA, y la convocatoria dicha con su regla
+
+La ultima acta escrita cubre la vuelta 38, que es la inmediatamente anterior.
+Esta acta audita LA VUELTA 39 y no hay hueco.
+
+La convocatoria es del MODO DE EJECUCION CONTINUA (AUDITOR.md seccion 3):
+durante la vuelta el Gate 0 CAYO EN ROJO una vez (seccion 3.1 del reporte, el
+puente de quality apuntando a un recien deprecado), y ademas el reporte trae
+cuatro discutibles marcados y tres preguntas. Guarda en rojo convoca al
+auditor con verificacion COMPLETA, y eso es esta acta: re-corrida por mi, no
+heredada.
+
+## 1. VERIFICACION, todo por corrida propia de hoy (19 ago 2026)
+
+- Rama pasada-unica, HEAD d2cfd2cf, arbol limpio. OCHO commits desde el acta
+  29a1acf1, en el orden que el reporte lista: 03e8e0e8 (apertura), 7cb10c63
+  (tarea 1 y guarda previa), 4fd51e4a (el taller), d406059c (la alternancia),
+  e5f7bdbd (cierre de OP-D-04), fc7b0d08 (OP-D-05 abierta), f070617c (el
+  reporte) y d2cfd2cf (el hash del reporte anadido despues de commitear, que
+  es la unica forma de citarlo sin inventarlo).
+- EL MARCADOR RECOMPUTADO POR MI, python propio sobre
+  INTRA_DOMINIO_VEREDICTOS.jsonl: 3.388 filas, A 575, B 83, C 8, D 2.722,
+  rango de puestos 1 a 3.388, CERO huecos. Identico al reporte.
+- EL ESTADO POR CORRIDA PROPIA (vuelta31_estado.py): BYTE IGUAL contra
+  SALIDA_V39_CIERRE.txt, con diff vacio. Grafo 3.853 ficheros, 3.534 vivos,
+  319 deprecados, 16.869 enlaces; 71 operaciones LISTA con 0 rotas;
+  inventario 672 (acto 556, figura 20); familias 72/70, 93/91, 111/111,
+  75/73, 47/47. LA TASA POR DOMINIO tambien BYTE IGUAL contra
+  SALIDA_V39_TASA_DOMINIO.txt.
+- git diff --numstat 29a1acf1..fc7b0d08 corrido hoy: 81 ficheros, 5.116
+  insertadas, 151 borradas, y el reparto por carpeta identico al del reporte
+  (docs/loop 42, dataset/nodos 25, scripts/loop 7, docs/plan 3, web 2,
+  packs/quality 1, dataset/metadata 1). LA CORRECCION DE LA CAIDA DE LA
+  VUELTA 38 quedo publicada tal como el acta la encargo: 4.044, con el texto
+  viejo intacto en el acta.
+- EL CICLO ENTERO RE-CORRIDO POR MI: run_phase1 --reaplico-curaduria exit 0
+  con GATE 0: OK (3.853 compilados, alcanzabilidad 100 por ciento),
+  etiquetas_de_cara --aplicar con 71 etiquetas, sync_assets_web con seis
+  assets, y EL ARBOL QUEDO LIMPIO tras el ciclo: byte igual de facto. Motor
+  25 de 25 exit 0. Web 80 ficheros, 1.030 pasadas, 3 saltadas, exit 0. tsc
+  --noEmit cero lineas, exit 0.
+- LAS DOS SIMULACIONES: md5 corrido por mi da e3a3c927ac9a442a1d70aaa90609d2ce
+  identico entre SALIDA_V38_SIM_TALLER.txt y SALIDA_V39_SIM_TALLER.txt, y
+  ff1158100310dec30e34fc53cf2bcced identico entre las dos de la alternancia.
+  BYTE IGUAL confirmado por instrumento propio.
+- LAS FUSIONES RELEIDAS EN EL FICHERO: los cuatro absorbidos deprecados con
+  su texto entero (pasos 4, 4, 3 y 4 y sus resumenes intactos); los dos
+  supervivientes con SIETE pasos_accionables cada uno; merged_originals con
+  node_id, titulo y fuente de cada absorbido (las fuentes mixtas tal como el
+  reporte las declara); ids_alias de cada superviviente con sus dos
+  absorbidos; y CERO nodos vivos apuntando a un absorbido, barrido propio de
+  dataset/nodos entero.
+- EL PUENTE RE-ANCLADO leido en packs/quality/metadata/bridges_aprobados.json:
+  core reglas_brainstorming con ancla_original brainstorming_efectivo, score
+  0.89. Y el re-anclaje de la alternancia dio nada que re-anclar, leido en su
+  salida sellada.
+- LA ARISTA DE P.10 leida en los dos ficheros y en campos opuestos:
+  reglas_brainstorming la lleva en nodos_siguientes y
+  construir_sobre_ideas_ajenas en nodos_previos, y NO existe duplicada en el
+  sentido contrario.
+- EL RECOMPUTO RE-CORRIDO POR MI (recomputo_3388.py): 333 actos, ABIERTOS 54
+  sobre 243 nodos, tamanos con 7: 1 y 3: 26, nodos en actos 841, A vigentes
+  569, LAS CUATRO COMPROBACIONES OK. Identico a la tabla del reporte.
+- OP-D-04 EN OPERACIONES.jsonl, medido contra d406059c: superviviente queda
+  null, la nota pasa de 7.053 a 11.493 caracteres (gana 4.440 EXACTOS), y se
+  movio UNA sola linea de 71. Las tres cifras del reporte reproducen.
+- EL ACTO DE OP-D-05 RE-CORRIDO POR MI (vuelta39_acto.py): 3 nodos vivos, los
+  tres de The Founder's Dilemmas, 3 pares A del archivo (puestos 492, 673 y
+  833), cero nodos puente, UN subconjunto cerrado que es el acto entero, y de
+  los tres pares solo el 673 nombra ganador. Identico al reporte.
+- costuras_internas.py CORRIDO POR MI: exit 1, INSTRUMENTO MAL CALIBRADO,
+  plan_mejora_procesos 5 pasos, mejor bloque 43,1 contra umbral 44. La averia
+  reproduce tal cual. Y SU ORIGEN LO MEDI YO: el ultimo commit que toco
+  dataset/nodos/plan_mejora_procesos.json es 2bd8dd76 (OP-F-04-HOR, doce
+  nodos en trece cortes), o sea que el fixture quedo rancio porque una
+  operacion legitima recorto ese nodo. Averia ANTERIOR a la vuelta 39 y ajena
+  a ella, confirmado con git log --follow.
+- LOS CASOS POSITIVOS leidos de sus cuatro salidas selladas: el taller 15
+  pasan y 33 caen ANTES contra 50 pasan y 0 caen DESPUES; la alternancia 15 y
+  21 contra 38 y 0; conservacion 5 de 5 en los dos. Identicos.
+- EL PRECEDENTE TRIPLE DEL RE-ANCLAJE visto en git por mi: a2902995,
+  06dd2922 y 33265c05 existen con los mensajes que el reporte cita, y el
+  tercero es el commit que creo el instrumento.
+- LA FIRMA DE LA EXCEPCION DE CLASE leida hoy: 01_FUENTES.md linea 90
+  (narracion repetida dentro) y el precedente del nodo de siete en
+  02_DESTEJIDOS linea 294, tal como el reporte y su salida los citan.
+
+CERO DISCREPANCIAS: todo lo cotejado calza al digito. La caida de reporte de
+la vuelta 38 queda corregida y esta tanda sale limpia.
+
+## 2. LA RELECTURA CIEGA, con lo que en esta vuelta puede ser ciego
+
+Esta vuelta NO emitio veredictos (cero vara de tramo, dicho en el reporte y
+confirmado en el marcador quieto), asi que la ciega se hace sobre la lectura
+textual que los discutibles piden. Lo declaro derecho: las razones del
+ejecutor ya estaban leidas al leer el reporte, de modo que lo ciego aqui es
+la lectura de LOS FICHEROS, hecha por mi sobre dataset/nodos antes de
+adjudicar:
+
+- reglas_brainstorming, SIETE pasos leidos enteros por mi. El corte que la
+  senal de bloque propone (tras el paso 2) separa la preparacion de la
+  ejecucion DE LA MISMA tecnica, no dos conceptos cosidos: los pasos 1 y 2
+  montan la sesion, los pasos 3 a 7 la corren. El paso 3 enumera reglas y el
+  paso 7 estructura la sesion en divergencia separada de convergencia:
+  comparten tema, NO narracion. MI CLASE: dentro de la excepcion, sin
+  narracion repetida.
+- pensamiento_convergente_divergente, SIETE pasos leidos enteros por mi:
+  generar sin juzgar (1), deadline (2), embudo (3), polinizacion cruzada (4),
+  alternancia no lineal (5), matar favoritos (6), ambiguedad (7). Ninguna
+  historia contada dos veces. MI CLASE: dentro de la excepcion, y el margen
+  de su bloque (43,8 contra 44) queda dicho como el reporte lo dijo.
+- Las tres razones del acto de OP-D-05 (puestos 492, 673 y 833) releidas
+  contra el archivo en la salida del instrumento: las tres sostienen su A y
+  la del 673 es la unica que nombra ganador, con la costura del largo ya
+  advertida dentro de la razon.
+
+COINCIDENCIA: 2 de 2 en la lectura textual de los resultantes y 4 de 4 en los
+discutibles. DISCREPANCIAS FUERA DEL MARCADO: CERO. El credito de la tanda se
+mantiene.
+
+## 3. LOS CUATRO DISCUTIBLES, adjudicados
+
+1. **d1, EL RE-ANCLAJE DEL PUENTE: PROCEDE.** No fue recalcular una decision:
+   el destino del ancla lo fijaba el plan sellado al fijar el superviviente,
+   y mover REFERENCIAS del absorbido al superviviente es la misma semantica
+   que la fusion ya ejecuta sobre el grafo, aplicada a un registro que el
+   plan no enumero. La letra que lo cubre por extension: P.1 (todo lo que
+   toque ids pasa por el resolutor, y el instrumento va por el resolutor), el
+   propio Gate 0 (cuya regla escrita es que ningun puente aprobado apunte a
+   un deprecado: dejarlo en rojo seria elegir el estado que la regla prohibe)
+   y el precedente triple medido en git (a2902995, 06dd2922, 33265c05, el
+   tercero CREO el instrumento para esto). Sobre el modo continuo: su letra
+   dice que la guarda en rojo detiene y convoca al auditor HASTA QUE LA
+   GUARDA QUEDE VERDE; la guarda quedo verde dentro de la misma operacion con
+   el instrumento de la casa, el ejecutor NO avanzo la parte decidible de
+   OP-D-05, lo marco discutible, y esta acta es la verificacion completa que
+   la convocatoria pide. El proposito de la clausula se cumplio entero.
+2. **d2, LOS SIETE PASOS: PROCEDEN LOS DOS**, por la excepcion de clase de
+   OP-F-01 aplicada por su criterio escrito (01_FUENTES.md linea 90, superar
+   el estandar SIN narracion repetida dentro; precedente 02_DESTEJIDOS linea
+   294, leidos hoy los dos por mi), con mi lectura textual de la seccion 2
+   coincidiendo con la del ejecutor. La senal de bloque de
+   reglas_brainstorming (50,6 contra 44) queda REGISTRADA como cita, no como
+   veredicto: ya disparaba antes de la fusion (47,7 sobre los cinco pasos
+   viejos, medido contra 03e8e0e8), el corte propuesto es el mismo, y el
+   instrumento declara que cita y no juzga. SE ENCARGA: cuando el instrumento
+   vuelva a entregar, reglas_brainstorming entra en su cola de lectura como
+   cualquier citado, sin trato especial ni excepcion.
+3. **d3, LA ARISTA DE P.10 Y EL CICLO DIRIGIDO: PROCEDE Y SE QUEDA.** P.10
+   manda enlazar el resto y P.9 gobierna la forma de la arista (resuelta, dos
+   extremos, despues de las fusiones): NINGUNA pagina fija direccion ni
+   prohibe ciclos, y la direccion elegida se sostiene en letra del plan
+   sellado (el motivo del grupo 3) mas la condicion de activacion del
+   destino. Y LO MEDI: el grafo vivo ya contiene 134 ciclos dirigidos de tres
+   entre nodos vivos (barrido propio de dataset/nodos sobre nodos_siguientes,
+   comando en python declarado en esta vuelta), o sea que el ciclo que esta
+   arista cierra es ESPECIE CORRIENTE del catalogo, no un estreno. Gate 0 no
+   lo objeta porque no hay regla que objetar. No hace falta doctrina nueva:
+   lo que ninguna regla prohibe y el propio grafo practica 134 veces no se
+   convierte en defecto por haberse preguntado.
+4. **d4, RESTAURAR Y REHACER PARA NO CITAR UN LOG PISADO: PROCEDE.** Ningun
+   contenido commiteado se descarto: lo restaurado era escritura de la propia
+   vuelta aun sin commitear, y rehacer en el orden correcto es lo que permite
+   que la guarda 3 cite el log DE VERDAD en vez de una reconstruccion, que es
+   exactamente lo que la regla 2 del EJECUTOR (el instrumento manda) exige.
+   El estado final quedo verificado por mi en la seccion 1. Declararlo en vez
+   de callarlo es la conducta que el bucle quiere.
+
+## 4. LAS TRES PREGUNTAS DEL REPORTE, contestadas
+
+1. **La direccion de la arista y el ciclo:** contestada en d3, por medicion y
+   por ausencia de regla que lo prohiba. La arista se queda.
+2. **OP-D-05 y el destejido con el instrumento caido: EL DESTEJIDO NO AVANZA
+   SOBRE SENALES CALCULADAS APARTE.** La regla 2 del EJECUTOR manda leer las
+   cifras de la salida del instrumento corrido, y un instrumento cuya puerta
+   de calibracion falla no puede dar fe ni de sus silencios (falso negativo
+   posible, el propio reporte lo dice). PERO ESPERAR AL FUNDADOR TAMPOCO
+   HACE FALTA: la averia esta medida (fixture rancio porque OP-F-04-HOR
+   recorto plan_mejora_procesos, commit 2bd8dd76) y su reparacion NO toca
+   umbrales, NO toca nodos y NO decide doctrina: es mantenimiento de
+   instrumento, la misma especie de trabajo que los siete instrumentos que
+   la vuelta 39 estreno. QUEDA ENCARGADA en PROMPT_SIGUIENTE.md con sus
+   guardas (umbral intacto, fixture nuevo con su medicion declarada,
+   calibracion vieja conservada como correccion declarada). OP-D-05 avanza
+   en la vuelta 40 CON el instrumento vivo, no antes.
+3. **El re-anclaje, dentro o fuera del ciclo: DENTRO COMO PRACTICA.** Toda
+   fusion futura corre reanclar_por_resolutor.py entre la fusion y
+   run_phase1, encargado desde ya. Y VA COMO RECOMENDACION AL FUNDADOR, no
+   bloquea: que los planes sellados de fusion enumeren tambien los registros
+   que no son el grafo (bridges_aprobados.json y equivalentes), porque eso
+   si es letra de plan y no practica de ciclo.
+
+## 5. PENDIENTES, nombrados
+
+1. ENCARGADO (deja de esperar al fundador): la puerta de calibracion de
+   costuras_internas.py, con la condicion escrita de que si la reparacion
+   pide decidir algo que ninguna pagina escribe, es PARADA.
+2. RECOMENDACIONES AL FUNDADOR, no bloquean: el esquema de OPERACIONES.jsonl
+   frente a dos supervivientes (a4), el titulo del nodo del taller (a6), la
+   linea general de prelacion (acta 38), y NUEVA: los planes de fusion
+   enumeran los registros que no son el grafo.
+3. Heredados, vivos y ninguno bloquea: el recomputo no ve las dirigidas, el
+   estado HECHA que no existe en el esquema, el acto que se parte en dos, y
+   los pendientes 5 a 9 de la vuelta 36.
+
+## 6. METRICA DE CREDITO acumulada
+
+Entrante (acta de la vuelta 38): 50 relecturas, 439 puestos (mas 230 nodos de
+forma y 101 sitios de codigo), 7 caidas de clase, 16 de reporte del ejecutor,
+7 de cifra publicada del ejecutor, 2 de cifra del auditor, 2 de acta del
+auditor. Rachas: clase o cifra CERO, reporte UNA.
+
+Esta tanda (vuelta 39): mas 3 puestos de fondo (las tres razones del acto de
+OP-D-05 releidas contra el archivo); mas 6 nodos de forma (los dos
+resultantes leidos enteros paso a paso y los cuatro absorbidos comprobados
+con su texto); mas 24 sitios de codigo o instrumentos re-corridos (marcador
+por via propia, estado y tasa byte igual, numstat con reparto, ciclo entero
+de Gate 0 con etiquetas y sync y arbol limpio, motor, web, tsc, los dos md5
+de simulaciones, recomputo, acto de OP-D-05, costuras con su averia, el
+origen del fixture en git, el precedente triple en git, la nota de OP-D-04
+antes y despues, el puente en su json, la arista en sus dos ficheros, el
+barrido de vivos contra absorbidos, alias y merged_originals, los 134 ciclos
+dirigidos, las cuatro salidas de caso positivo, las salidas de
+simetrizacion, la firma de la clase con su linea, el precedente de la linea
+294). Caidas: CERO del ejecutor, CERO del auditor.
+
+**Acumulado: 50 relecturas, 442 puestos (mas 236 nodos de forma y 125 sitios
+de codigo), 7 caidas de clase, 16 de reporte del ejecutor, 7 de cifra
+publicada del ejecutor, 2 de cifra del auditor, 2 de acta del auditor.**
+
+**Tandas seguidas con caida de clase o cifra: CERO. Caidas de reporte
+seguidas: CERO, la racha de una se corto con esta tanda limpia.**
+
+## 7. CONDICIONES DE PARADA, recorridas: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. Los tres candidatos (ciclo dirigido, destejido con
+  instrumento caido, re-anclaje en el ciclo) quedaron adjudicados por letra
+  citable mas medicion propia (d3, pregunta 2, pregunta 3).
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NO. Nada de lo encargado borra contenido, cambia
+  alcance, gasta fuera del repo ni toca produccion; la reparacion del
+  instrumento no toca umbrales ni nodos.
+- Fallo tecnico repetido: NO. El Gate 0 rojo fue uno, quedo verde en la misma
+  operacion, y la averia de costuras esta declarada UNA vuelta y queda
+  encargada su reparacion antes de que haga racha.
+- Credito roto: NO. Rachas en cero las dos.
+- Campana consumada: NO. Credenciales: no hicieron falta.
+
+**EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: la vuelta 40 repara
+la puerta de calibracion del instrumento de costuras y ejecuta OP-D-05 con
+el instrumento vivo.**
