@@ -17,8 +17,10 @@ medido y no supuesto.
 ## 1. LO QUE ESTA VUELTA MOVIO, MEDIDO Y NO NARRADO
 
 - **Hash de partida:** `f734ab67` (la decision del fundador sobre `OP-D-04`).
-- **Hash final:** el commit de este reporte, unico de la vuelta. **La vuelta entera cabe en un
-  commit porque no toca nodos**: no hay tramo que proteger contra una sesion que se caiga.
+- **Hash final:** `1b2f3dd5`, **commit unico de la vuelta**, con el hook verde (motor y web). **La
+  vuelta entera cabe en un commit porque no toca nodos**: no hay tramo que proteger contra una
+  sesion que se caiga. **El hash se anade aqui despues de commitear**, que es la unica forma de
+  citarlo sin inventarlo.
 - **Rutas tocadas** (`git diff --cached --stat` contra `f734ab67`, corrido hoy con este reporte ya
   dentro): **26 ficheros, 4.043 insertadas, 366 borradas**. Por carpeta: `docs/loop` **15**,
   `scripts/loop` **9**, `docs/plan` **2**. **Cero merges.** **Las 366 borradas son UNA sola cosa: el
