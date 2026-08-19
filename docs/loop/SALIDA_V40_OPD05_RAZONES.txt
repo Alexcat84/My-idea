@@ -1,0 +1,25 @@
+LAS TRES RAZONES DEL ARCHIVO, ENTERAS Y SIN CORTAR
+fuente: docs/INTRA_DOMINIO_VEREDICTOS.jsonl, leido hoy 19 ago 2026
+
+==============================================================================
+PUESTO 492 | CLASE A | dominio core | clave 0.8386 | banda_078_080 False
+  A: asignacion_de_titulos_ejecutivos
+  B: seleccion_ceo_fundador
+------------------------------------------------------------------------------
+REPITE con seleccion_ceo_fundador. Los dos mandan decidir con intencion quien es el CEO en vez de darlo por hecho: identificar a la persona de la idea y considerar que quiza no sea el mejor CEO, hablarlo abiertamente con el equipo antes de que haya conflicto, y dejar el acuerdo documentado. El primero anade evaluar el compromiso de cada cofundador y mapear el capital humano, social y financiero que aporta. LATERAL, no cambia la clase: el segundo tiene DOCE pasos y se parte con claridad, del 1 al 4 la decision compartida y del 5 al 12 otro asunto entero, la autoevaluacion del fundador, sus brechas de habilidad, los mentores, la llegada de un CEO profesional y las clausulas para preservar el control. Costura para la otra ficha.
+
+==============================================================================
+PUESTO 673 | CLASE A | dominio core | clave 0.8217 | banda_078_080 False
+  A: errores_comunes_asignacion_roles
+  B: seleccion_ceo_fundador
+------------------------------------------------------------------------------
+El corto cabe entero dentro del primer bloque del largo, y hay que decir por que la costura del largo NO contamina este veredicto. errores_comunes_asignacion_roles dice: confrontar de frente el conflicto sobre quien sera CEO en vez de taparlo con titulos ambiguos, evaluar con objetividad si la persona de la idea original es realmente la mejor opcion, ser cauteloso al repartir titulos de nivel C temprano pensando en el crecimiento futuro, no meter cofundadores en la junta solo por lealtad, y evaluar la compatibilidad de motivaciones antes de fundar juntos. seleccion_ceo_fundador dice lo mismo en sus pasos 1 a 4, discutir abiertamente sin asumir que es el de la idea, evaluar por capacidad de ejecucion y no solo por pasion, considerar roles alternativos para el de la idea, y documentar el acuerdo formalmente. LA COSTURA Y POR QUE NO CONTAMINA: seleccion_ceo_fundador es costura CONFIRMADA en docs/FICHA_SUBFUSION_GRADIENTE.md, doce pasos y dos libros declarados en el campo fuente, The Founder's Dilemmas y The Hard Thing About Hard Things. Su segundo bloque, del 5 al 12, es otro asunto entero: las brechas propias del fundador, los mentores, el CEO externo, las clausulas de control. Pero EL SOLAPE DE ESTE PAR NO CRUZA LA COSTURA: cae completo dentro del bloque 1 a 4, que es el que sobrevive a la cirugia. REFINAMIENTO DE LA REGLA DEL PUESTO 592: un nodo averiado contamina el par solo cuando el solape CRUZA la juntura. Si el solape vive entero de un lado, el veredicto se puede emitir hoy.
+
+==============================================================================
+PUESTO 833 | CLASE A | dominio core | clave 0.8106 | banda_078_080 False
+  A: asignacion_de_titulos_ejecutivos
+  B: errores_comunes_asignacion_roles
+------------------------------------------------------------------------------
+El mismo reparto de titulos contado en positivo y en negativo, del mismo libro y sin arista entre ellos. Lo comun es el eje entero: mirar si la persona de la idea original es de verdad la mejor opcion para dirigir, negociar el titulo de CEO de forma explicita en vez de taparlo con ambiguedad, y dejar por escrito por que se decidio asi. Lo propio de errores_comunes_asignacion_roles son dos avisos que el otro no da: ser cauteloso al repartir titulos de nivel C pensando en el crecimiento futuro, y NO meter cofundadores en la junta directiva solo por lealtad. Lo propio de asignacion_de_titulos_ejecutivos son evaluar el compromiso de cada uno entre tiempo completo y parcial, y mapear el capital humano, social y financiero que aporta cada fundador. Nota de familia: errores_comunes_asignacion_roles ya habia repetido con seleccion_ceo_fundador en el puesto 673, o sea que este nodo lleva dos gemelos y la familia de los titulos pide contador.
+
+pares del acto hallados: 3

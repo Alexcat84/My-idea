@@ -1,0 +1,95 @@
+OPERACION : OP-D-05, DESTEJIDO, estado LISTA
+NOMINA    : 3 nodos, leidos de OPERACIONES.jsonl y no del codigo
+   seleccion_ceo_fundador
+   asignacion_de_titulos_ejecutivos
+   errores_comunes_asignacion_roles
+PARES POSIBLES: 3
+
+==============================================================================
+0. GUARDA: LOS NODOS EXISTEN Y ESTAN VIVOS
+==============================================================================
+  seleccion_ceo_fundador                       vivo=True  pasos=4   condiciones=2   fuente=The Founder's Dilemmas
+  asignacion_de_titulos_ejecutivos             vivo=True  pasos=5   condiciones=3   fuente=The Founder's Dilemmas
+  errores_comunes_asignacion_roles             vivo=True  pasos=5   condiciones=2   fuente=The Founder's Dilemmas
+
+==============================================================================
+1. LOS PARES DEL ACTO, CON SU CLASE Y SU FUENTE
+==============================================================================
+  A    seleccion_ceo_fundador                       asignacion_de_titulos_ejecutivos              archivo, puesto 492
+  A    seleccion_ceo_fundador                       errores_comunes_asignacion_roles              archivo, puesto 673
+  A    asignacion_de_titulos_ejecutivos             errores_comunes_asignacion_roles              archivo, puesto 833
+
+  3 de 3 con clase. Reparto: {'A': 3}
+
+==============================================================================
+2. EL DETECTOR DE NODOS PUENTE (P.10)
+==============================================================================
+Un nodo puente es el que tiene A con dos nodos que entre si son D.
+
+  seleccion_ceo_fundador                       A con 2: asignacion_de_titulos_ejecutivos, errores_comunes_asignacion_roles
+        no es puente: sus A cierran triangulo entre si (o tiene menos de dos)
+  asignacion_de_titulos_ejecutivos             A con 2: errores_comunes_asignacion_roles, seleccion_ceo_fundador
+        no es puente: sus A cierran triangulo entre si (o tiene menos de dos)
+  errores_comunes_asignacion_roles             A con 2: asignacion_de_titulos_ejecutivos, seleccion_ceo_fundador
+        no es puente: sus A cierran triangulo entre si (o tiene menos de dos)
+
+  NODOS PUENTE: 0 -> []
+
+==============================================================================
+3. LOS SUBCONJUNTOS CERRADOS: todos sus pares internos en A
+==============================================================================
+  cerrados maximales encontrados: 1
+     tamano 3: seleccion_ceo_fundador, asignacion_de_titulos_ejecutivos, errores_comunes_asignacion_roles
+        seleccion_ceo_fundador con asignacion_de_titulos_ejecutivos: A (archivo, puesto 492)
+        seleccion_ceo_fundador con errores_comunes_asignacion_roles: A (archivo, puesto 673)
+        asignacion_de_titulos_ejecutivos con errores_comunes_asignacion_roles: A (archivo, puesto 833)
+
+  EL ACTO ENTERO ES UN SUBCONJUNTO CERRADO: todos sus pares internos son A.
+
+==============================================================================
+4. LA ESPECIE DE 9.3.1, SOBRE LOS PARES A UNICAMENTE
+==============================================================================
+La correccion del 18 ago 2026: una D no es sobrevivir a un duelo, es que no
+hubo duelo. La prueba se hace SOLO sobre los pares A.
+
+  A  seleccion_ceo_fundador                       asignacion_de_titulos_ejecutivos              nombra ganador: NO
+       razon: REPITE con seleccion_ceo_fundador. Los dos mandan decidir con intencion quien es el CEO en vez de darlo por hecho: identificar a la persona de la idea y considerar que quiza no sea el mejor CEO, hablarlo abiertamente con el equipo antes de que haya conflicto, y dejar el acuerdo documentado. El primero anade evaluar el compromiso de cada cofundador y mapear el capital humano, social y financiero qu
+  A  seleccion_ceo_fundador                       errores_comunes_asignacion_roles              nombra ganador: SI
+       razon: El corto cabe entero dentro del primer bloque del largo, y hay que decir por que la costura del largo NO contamina este veredicto. errores_comunes_asignacion_roles dice: confrontar de frente el conflicto sobre quien sera CEO en vez de taparlo con titulos ambiguos, evaluar con objetividad si la persona de la idea original es realmente la mejor opcion, ser cauteloso al repartir titulos de nivel C te
+  A  asignacion_de_titulos_ejecutivos             errores_comunes_asignacion_roles              nombra ganador: NO
+       razon: El mismo reparto de titulos contado en positivo y en negativo, del mismo libro y sin arista entre ellos. Lo comun es el eje entero: mirar si la persona de la idea original es de verdad la mejor opcion para dirigir, negociar el titulo de CEO de forma explicita en vez de taparlo con ambiguedad, y dejar por escrito por que se decidio asi. Lo propio de errores_comunes_asignacion_roles son dos avisos q
+
+  pares A: 3.  Con ganador nombrado en su razon: 1.
+
+==============================================================================
+5. EL CABLEADO DE P.8, resuelto por alias y sin contarse a si mismo
+==============================================================================
+  nodo                                            pasos  previos  siguien LO NOMBRAN
+  seleccion_ceo_fundador                              4        6        4        9
+  asignacion_de_titulos_ejecutivos                    5        1        3        4
+  errores_comunes_asignacion_roles                    5        2        2        4
+
+==============================================================================
+6. LA RECIPROCIDAD ARISTA POR ARISTA, y es lo que dice cuanto cuesta cada eleccion
+==============================================================================
+El ejecutor de fusiones DEPRECA al absorbido y redirige solo lo que lo NOMBRA
+desde fuera. Las aristas que el absorbido declara y que el otro extremo NO
+devuelve se quedan dentro de un nodo deprecado, o sea SE PIERDEN.
+
+  seleccion_ceo_fundador                       aristas propias sin reciproco: 0
+  asignacion_de_titulos_ejecutivos             aristas propias sin reciproco: 0
+  errores_comunes_asignacion_roles             aristas propias sin reciproco: 0
+
+  LECTURA: elegir superviviente a X cuesta las aristas cojas de los OTROS, que
+  son las que su fichero declara y nadie devuelve.
+
+==============================================================================
+7. LO QUE LA OPERACION TIENE ESCRITO
+==============================================================================
+  preservar: ["por la regla de reparto: cada perdida al bloque del que proviene; la que no tenga bloque, al superviviente"]
+  verificacion: ["Gate 0 verde", "recomputo del cierre transitivo", "cada perdida quedo en el bloque del que proviene, o en el superviviente si no tenia bloque", "el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto"]
+  evidencia: ["INTRA_DOMINIO_INFORME.md seccion 54.3, acto 4: tres nodos, pares 492, 673 y 833", "adjudicacion del auditor, 11 ago 2026: regla de reparto"]
+  adjudicacion: "REGLA DE REPARTO ADJUDICADA (11 ago 2026): cada perdida se asigna AL BLOQUE DEL QUE PROVIENE; la que no tenga bloque va AL SUPERVIVIENTE. Con eso el reparto deja de necesitar una relectura previa y se resuelve en el acto."
+  superviviente: null
+  nota (565 caracteres):
+    ACTO 4 del cierre transitivo. Sin congelados: su orden es libre. Con la regla de reparto YA NO NECESITA relectura previa. Su par 492 es uno de los doce ejemplares de cura acoplada encontrados de uno en uno, y se podia declarar desde el 673 sin que nadie lo declarara: es el argumento de por que existe el barrido de confirmadas. REGLA P.5 DEL BANCO DEL PLAN, adjudicada el 11 ago 2026: ESTE ACTO SE LEE ENTERO DESPUES DE SU DESTEJIDO Y ANTES DE SU FUSION. La pregunta que contesta es si el acto es UNA familia o DOS, y solo se contesta bien con el texto ya estable.

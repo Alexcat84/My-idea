@@ -1,0 +1,93 @@
+
+==============================================================================
+0. CUANTOS DESTEJIDOS ESPERABA EL PLAN, citado de su tabla de orden
+==============================================================================
+  CABECERA: | orden | operacion | el nodo ancla | congelados que libera | destejidos | nodos en la decision |
+  FILA    : | 5 | `OP-D-05` | `seleccion_ceo_fundador` | 0 | 1 | 3 |
+
+  LECTURA: la tabla de orden del plan le cuenta a OP-D-05 UN destejido
+  y nombra a seleccion_ceo_fundador como EL NODO ANCLA. O sea que el
+  destejido de esta operacion SI tenia sujeto escrito, y es el mismo
+  que las razones de sus pares declaran. Precedente de la misma tabla:
+  a OP-D-03 le contaba TRES y su propia celda dice hoy que DOS estaban
+  CONSUMIDAS por la fase 01. La pregunta de esta vuelta es si la de
+  OP-D-05 tambien lo esta.
+
+==============================================================================
+1. LO QUE EL ARCHIVO DECLARA, releido hoy de las razones (no tecleado)
+==============================================================================
+  puesto 492 (asignacion_de_titulos_ejecutivos con seleccion_ceo_fundador):
+      CITA: ...tal humano, social y financiero que aporta. LATERAL, no cambia la clase: el segundo tiene DOCE pasos y se parte con claridad, del 1 al 4 la decision compartida y del 5 al 12 otro asunto entero, la autoevaluacion del fund...
+      CITA: ...los mentores, la llegada de un CEO profesional y las clausulas para preservar el control. Costura para la otra ficha....
+      CITA: ...aporta. LATERAL, no cambia la clase: el segundo tiene DOCE pasos y se parte con claridad, del 1 al 4 la decision compartida y del 5 al 12 otro asunto entero, la autoevaluacion del fundador, sus brechas de habilidad, los ...
+      CITA: ... el segundo tiene DOCE pasos y se parte con claridad, del 1 al 4 la decision compartida y del 5 al 12 otro asunto entero, la autoevaluacion del fundador, sus brechas de habilidad, los mentores, la llegada de un CEO profe...
+      CITA: ...segundo tiene DOCE pasos y se parte con claridad, del 1 al 4 la decision compartida y del 5 al 12 otro asunto entero, la autoevaluacion del fundador, sus brechas de habilidad, los mentores, la llegada de un CEO profesion...
+  puesto 673 (errores_comunes_asignacion_roles con seleccion_ceo_fundador):
+      CITA: ...ntar el acuerdo formalmente. LA COSTURA Y POR QUE NO CONTAMINA: seleccion_ceo_fundador es costura CONFIRMADA en docs/FICHA_SUBFUSION_GRADIENTE.md, doce pasos y dos libros declarados en el campo fuente, The Founder's Dile...
+      CITA: ...AMINA: seleccion_ceo_fundador es costura CONFIRMADA en docs/FICHA_SUBFUSION_GRADIENTE.md, doce pasos y dos libros declarados en el campo fuente, The Founder's Dilemmas y The Hard Thing About Hard Things. Su segundo bloqu...
+      CITA: ...mpo fuente, The Founder's Dilemmas y The Hard Thing About Hard Things. Su segundo bloque, del 5 al 12, es otro asunto entero: las brechas propias del fundador, los mentores, el CEO externo, las clausulas de control. Pero...
+      CITA: ...fuente, The Founder's Dilemmas y The Hard Thing About Hard Things. Su segundo bloque, del 5 al 12, es otro asunto entero: las brechas propias del fundador, los mentores, el CEO externo, las clausulas de control. Pero EL ...
+  puesto 833 (asignacion_de_titulos_ejecutivos con errores_comunes_asignacion_roles):
+
+  LA FICHA QUE LA RAZON NOMBRA: docs/FICHA_SUBFUSION_GRADIENTE.md
+      existe hoy: True
+      nombra a seleccion_ceo_fundador: SI
+      | ### `core/seleccion_ceo_fundador`, 12 pasos, corte 5: DOBLE DE LA DECISION DE CEO
+      | | 46,8 | 5 | 12 | `seleccion_ceo_fundador` |
+      | > (`seleccion_ceo_fundador`, `posicionamiento_de_empresa`,
+      | > | **`seleccion_ceo_fundador`** (puestos 492 y 673 del intra) | **CONFIRMADA**, bloque 46,8, doce pasos, corte 5, **DOBLE DE LA DECISION DE CEO** | **A** con `asignacion_de_titulos_ejecutivos` (492) 
+      | 46,6, `seleccion_ceo_fundador` 46,8, `mapa_de_canal_de_ventas` 47,4) y tres falsas
+      | | por debajo de 51,0 | `seleccion_ceo_fundador` | 46,8 | confirmada |
+      | `mapa_de_canal_de_ventas` 47,4, `seleccion_ceo_fundador` 46,8,
+
+==============================================================================
+2. EL NODO DE HOY, medido contra lo declarado
+==============================================================================
+  seleccion_ceo_fundador
+    pasos cuando se escribio la razon : 12
+    pasos HOY                         : 4
+    frontera escrita                  : 1 a 4 (la decision compartida) / 5 a 12 (otro asunto entero)
+    fuente declarada en la razon      : The Founder's Dilemmas y The Hard Thing About Hard Things
+    fuente HOY                        : The Founder's Dilemmas
+
+    LAS HUELLAS DEL BLOQUE 5 A 12, buscadas en el texto de hoy:
+      mentor             YA NO ESTA
+      brecha             YA NO ESTA
+      CEO profesional    YA NO ESTA
+      control            YA NO ESTA
+      autoevaluacion     YA NO ESTA
+      clausula           YA NO ESTA
+
+    HUELLAS QUE SIGUEN DENTRO: 0 de 6 -> ninguna
+
+    LOS PASOS DE HOY, enteros:
+       1. Reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente
+       2. Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión
+       3. Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer)
+       4. Documenta el acuerdo formalmente para evitar ambigüedad futura
+
+==============================================================================
+3. QUIEN SE LO LLEVO, medido en git y no supuesto
+==============================================================================
+  2bd8dd76 2026-08-14 OP-F-04-HOR ejecutada en casi todo: doce nodos en trece cortes, desbloqueada por la cita del acta 28
+  ef4e50e0 2026-08-08 TANDA 1 CERRADA: el nucleo de 394 hallazgos a 36
+  33265c05 2026-08-08 Fase 3, primer tramo: los CUATRO LOTES de fusion del nucleo
+  fa2e6011 2026-07-11 Hygiene v1.3.1: backfill etiqueta_arbol 3260/3260 ($3.44) + validador con test permanente + hallazgo 1 de auditoria refutado con datos
+  722bfa5d 2026-07-11 Expansion v1.3 (F5): OLA 1 tejida al core — 455 nodos nuevos + 99 enriquecidos, Gate 0 VERDE entre libros (2805 -> 3260)
+  32e2d06f 2026-07-07 Hotfix v2.1.1: overdemand semantics (revenue vs margin), domain field groundwork
+
+  Y EN QUE NOMINAS ESTA EL NODO, medido contra OPERACIONES.jsonl:
+    OP-D-05        LISTA      tipo DESTEJIDO
+    OP-F-04-HOR    LISTA      tipo DECISION_DE_FUENTE
+
+==============================================================================
+4. EL VEREDICTO DEL DESTEJIDO, y quien lo emite
+==============================================================================
+  QUEDA COSTURA EN seleccion_ceo_fundador: NO
+  Vara usada, la misma de vuelta34_costuras_opd03.py: la costura
+  sigue en pie si sus HUELLAS siguen en el texto. Cero huellas y el
+  nodo en 4 pasos contra los 12 de la razon: el bloque ya salio.
+
+  LOS OTROS DOS, para que el acto quede medido entero:
+    asignacion_de_titulos_ejecutivos   5 pasos, fuente: The Founder's Dilemmas
+    errores_comunes_asignacion_roles   5 pasos, fuente: The Founder's Dilemmas
