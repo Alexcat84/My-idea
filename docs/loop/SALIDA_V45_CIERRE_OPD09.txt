@@ -1,0 +1,44 @@
+==============================================================================
+EL CIERRE DE OP-D-09, MEDIDO HOY CONTRA EL ARCHIVO Y EL GRAFO
+==============================================================================
+
+### (1) LA SENAL DE COSTURA DEL NODO, re-medida tras el acto
+
+  EN LA COLA: pasos 13 | bloque 56.7 (corte tras 11) | pareja 63.4 | disparo_bloque True
+  ANTES del acto: pasos 16 | bloque 52.3 declarado por la operacion, 56.7 medido
+               por mi en la apertura | corte tras 14 | disparo por bloque
+  nodos en la cola: 1494
+
+### (2) EL CASO POSITIVO: EL PAR 2695, RELEIDO CONTRA EL NODO DESTEJIDO
+
+  puesto 2695 | clase HOY: D | diseno_de_metodos_de_recoleccion_de_datos contra planificacion_recoleccion_datos
+  el plan tiene 13 pasos y el diseno del metodo 5
+
+  LA PRUEBA DEL 9.6.2, medida: en cuantos pasos DEL PLAN se derrama el hijo
+    paso 1 del hijo -> paso 2 (puntos de recoleccion) de la madre
+    paso 2 del hijo -> paso 4 (disenar formularios e instrucciones) de la madre
+    paso 3 del hijo -> paso NINGUNO de la madre
+    paso 4 del hijo -> paso 4 (el MSA, dentro del mismo paso) de la madre
+    paso 5 del hijo -> paso 5 (auditar y validar) de la madre
+    pasos DISTINTOS de la madre que el hijo toca: 3 (el 2, el 4 y el 5)
+    LA PRUEBA PIDE QUE EL HIJO QUEPA ENTERO DENTRO DE UN SOLO PASO: NO CABE
+    y ademas su paso 3 no tiene casa: es material propio del hijo
+
+  LOS ENTREGABLES, leidos hoy en los dos ficheros:
+    madre: Plan documentado de recolección y análisis de datos con preguntas formuladas, método de muestreo definido y plan de presentación de resultados
+    hijo : Formularios y procedimientos de recolección de datos probados y validados, listos para usar
+
+  LA ARISTA DEL 2695, buscada hoy en los DOS sentidos (regla 9):
+    planificacion_recoleccion_datos            previos False | siguientes False
+    diseno_de_metodos_de_recoleccion_de_datos  previos False | siguientes False
+    NO EXISTE EN NINGUNO DE LOS DOS SENTIDOS: ARISTA QUE FALTA, fase 04
+
+### (3) EL ESTADO AL CIERRE, RECOMPUTADO AL CIERRE (regla 1)
+
+  ficheros 3853 | vivos 3524 | deprecados 329 | enlaces 16898
+  cola de costuras: 1494 sobre 3524 activos (42.4 por ciento)
+  marcador: n 3388 | A 575 B 79 C 8 D 2726 | tasa de A 17.0 por ciento
+
+==============================================================================
+FIN DEL CIERRE MEDIDO
+==============================================================================
