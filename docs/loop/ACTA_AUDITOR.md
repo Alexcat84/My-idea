@@ -9132,3 +9132,318 @@ commitea la fusion del 331 TAL COMO QUEDO con su mensaje declarado,
 termina el acto (costuras post fusion, registro de cierre, tercer
 commit), y sigue los actos restantes con dos commits por acto y el
 afinamiento del orden adjudicado en esta acta.
+
+
+# ==========================================================================
+# ACTA DE LA VUELTA 43 DEL AUDITOR (19 ago 2026, Fable 5)
+# ==========================================================================
+
+CABECERA. SIN HUECO DE ACTA: la ultima acta escrita cubre la vuelta 42
+(commit e75b20d1) y la vuelta inmediatamente anterior a la actual es la
+43, que es exactamente la que esta acta audita. No hay vuelta sin
+auditar en el medio. La vuelta 43 corrio ENTERA y dejo REPORTE, el
+primero despues de dos vueltas sin reporte.
+
+## 1. VERIFICACION DEL REPORTE, TODO POR CORRIDA PROPIA
+
+- EL HASH Y LOS COMMITS: HEAD de pasada-unica es 7f8bdcbc (el commit
+  del reporte); el ultimo antes del reporte es c184b2d6, tal como el
+  reporte lo cita y por la razon que da. git log e75b20d1..HEAD da
+  CATORCE commits, los trece de la tabla mas el del cierre, con los
+  hashes y el orden EXACTOS de la tabla del reporte. Arbol limpio,
+  todo pusheado a origin/pasada-unica.
+- LAS RUTAS: git diff --shortstat e75b20d1..c184b2d6 da 116 ficheros,
+  6.988 anadidas y 247 borradas, LAS TRES CIFRAS AL DIGITO. El conteo
+  por carpeta reproducido entero: docs/loop 79, dataset/nodos 23,
+  web/lib/assets 3, scripts/loop/v41_actos 3, docs raiz 3,
+  dataset/metadata 2, docs/plan 1, scripts/loop 1, engine 1. El rango
+  hasta HEAD da 119 ficheros porque incluye el commit del propio
+  reporte, y el reporte declara ese limite correctamente.
+- EL MARCADOR, RECOMPUTADO POR MI DESDE EL ARCHIVO (python propio
+  sobre docs/INTRA_DOMINIO_VEREDICTOS.jsonl): n 3.388, CERO huecos
+  (los puestos 1 a 3.388 completos, cero duplicados), A 575, B 81,
+  C 8, D 2.724, tasa 16,97 que publicada a un decimal es 17,0.
+  IDENTICO al cierre del reporte. La apertura re-medida desde git
+  (811bc480): A 575, B 82, C 8, D 2.723. El movimiento es UNA
+  relectura, el 599 de B a D, y mi barrido propio confirma que era LA
+  UNICA que podia moverse: en el estado pre relectura (a93c7c43) los
+  B y C del archivo que nombran a alguno de los ocho nodos tocados
+  por las cuatro fusiones son EXACTAMENTE uno, el 599. Hoy son cero.
+- EL GRAFO, MEDIDO POR MI SOBRE dataset/nodos: 3.853 ficheros, 3.527
+  vivos, 326 deprecados, 16.887 enlaces (16.880 de la apertura mas 5
+  del 341 mas 3 del 344 menos 1 del 361), cola 1.493 sobre 3.527
+  (42,3 por ciento), node_families 151 accion_clientes, 3.584
+  general, 118 viabilidad_economica sobre 3.853. TODAS las cifras de
+  la seccion 2 del reporte calzan.
+- LAS FUSIONES, NODO A NODO POR MI: los cuatro absorbidos
+  (propuesta_gasto_capital, blueprint_de_experiencia,
+  plan_acquire_activate, partners_hypothesis_physical) deprecados con
+  alias sano que resuelve al superviviente vivo; CERO vivos nombran a
+  ninguno de los tres absorbidos de esta vuelta; CERO auto-aristas de
+  vivos tras resolver en el grafo entero; la arista interna del par
+  361 retirada EN LOS DOS SENTIDOS (la salida sellada de P.16 la
+  midio en 2 entradas antes y 0 despues, con los textos de los dos
+  nodos intactos por su guarda B), y la retirada y la fusion viven en
+  EL MISMO COMMIT a93c7c43, que es la letra de P.16.
+- EL CIERRE TRANSITIVO, RECOMPUTADO POR MI sobre las A vigentes de
+  hoy: los NUEVE puestos de OP-D-06 son de dos. Cero actos crecieron.
+- EL CICLO GATE 0 RE-CORRIDO ENTERO POR MI, con el run_log respaldado
+  ANTES y restaurado byte igual DESPUES: run_phase1 con GATE 0: OK y
+  sus veinte renglones en [OK]; etiquetas_de_cara 71 reaplicadas;
+  comando 4 (plan_readiness) regenera el derivado con el MISMO
+  reparto 151/3.584/118; sync_assets_web deja el master_graph en
+  sha256 e6d52671b60b, byte igual en las dos copias y byte igual a
+  HEAD: git diff vacio tras el ciclo entero. El derivado esta al dia:
+  mi corrida lo reprodujo identico, que es la prueba de que el
+  comando 4 del acto 344 quedo bien echado.
+- LAS SUITES RE-CORRIDAS POR MI: motor 25 de 25 exit 0; web 80
+  ficheros, 1.030 pasadas y 3 saltadas exit 0; tsc --noEmit cero
+  lineas exit 0.
+- LA VARA POR TRAMO CONTRA LAS SALIDAS SELLADAS: guardas de fusion en
+  verde y CERO ROJO en los tres EJEC de la vuelta (13 guardas cada
+  uno) y en el del 331 sellado en la 42; verbatim de P.13 12 de 12
+  (331), 13 de 13 (341), 17 de 17 (344) y 12 de 12 (361), cero
+  sobrantes; casos positivos 17/15 a 33/0, 13/22 a 36/0, 16/17 a
+  34/0, 16/19 a 36/0; la tabla de la senal reproducida al decimo en
+  los cuatro actos, incluido el corte que solo se movio en el 341 (2
+  a 3) y la senal del 361 que APAGO (50,8 dentro a 41,4 fuera).
+- EL 494: git show c184b2d6 --stat toca DOS ficheros de docs y CERO
+  nodos, como el reporte dice. El arreglo del 9.22 (enlace mutuo del
+  par) RE-MEDIDO POR MI en los dos sentidos: sigue sin haber ninguna
+  de las dos aristas, y dejarlo a la fase 04 es lo que el registro de
+  OP-D-01 manda.
+- LOS TRES SIN ABRIR: de dos por mi recomputo; y los tres cruces de
+  fuente estan HECHOS, verificado por mi propio grep sobre las notas
+  de OPERACIONES.jsonl (OP-F-02, OP-F-04-COL y OP-F-04-WEI declaran
+  HECHA en su nota con el estado en LISTA, que es el patron
+  adjudicado en la vuelta 30). Los bloqueos de bloquea_a sobre
+  OP-D-06 quedan levantados.
+- LAS CORRECCIONES DEL REPORTE, VERIFICADAS: (1) la salida sellada
+  SALIDA_V42_ACTO331_REGISTROS.txt cierra con REGISTROS VIVOS QUE
+  NOMBRAN: 1, y publicar la del instrumento dejando la del acta a la
+  vista es la forma correcta; mi acta de la 42 cargo un 0 que el
+  instrumento no dice, y esa caida es MIA y se cuenta abajo. (2) la
+  linea 1397 de 01_FUENTES.md existe tal como se cita, la nomina real
+  de OP-D-02 son otros cuatro nodos, y el bloque 422 a 770 nombra
+  cero veces a los dos atribuidos y una vez a voz_del_cliente_voc,
+  medido por mi; dejar la fila senalada sin corregirla aqui es lo que
+  corresponde, porque es de la fase 01. (3) el tropiezo del reporter
+  de vitest se declara solo y no publico cifra.
+
+DOS CITAS DEL REPORTE QUE TRAZAN CON LUPA, y no son caidas: la cita
+"linea 8985" del acta de la 42 apunta al arranque del renglon
+compuesto cuyo texto 0 VIVOS vive cuatro lineas abajo (8989); resuelve
+al mismo parrafo y la afirmacion es verdadera. Y "HECHA en su nota
+2869 SI" es la fila de la tabla de la apertura (SALIDA_V43_APERTURA
+.txt linea 39), donde 2869 y 7981 son EL LARGO de la nota de OP-F-02 y
+de OP-F-04-COL: re-medidos por mi, len(nota) da exactamente 2869 y
+7981. Cifras trazables al instrumento, formula comprimida al citarlas.
+
+## 2. LA RELECTURA CIEGA, con la ceguera parcial DECLARADA
+
+El reporte argumenta sus propias elecciones, asi que quien lo leyo ya
+no esta ciego del todo: la mitigacion fue imprimir PRIMERO los textos
+de los nodos desde git (los pares de los actos 341, 344 y 361 tal como
+estaban ANTES de fundir, y el par del 599 como esta hoy), adjudicar, y
+SOLO DESPUES destapar los planes y las salidas. Se declara igual que
+la 42 declaro la del 835.
+
+- ACTO 341, superviviente: MI ADJUDICACION customer_journey_mapping,
+  ANTES de destapar. Nombra la practica que produce al artefacto, su
+  procedimiento cubre el ciclo entero y termina en decision
+  (priorizar), y el blueprint es el documento que la practica
+  entrega. COINCIDE con el ejecutor.
+- ACTO 344, superviviente: MI ADJUDICACION
+  plan_de_adquisicion_acquire, antes de destapar. Los dos nodos
+  ejecutan LA MISMA prueba de adquisicion (siete pasos casi espejo) y
+  ninguno ejecuta la activacion: los dos la DEJAN LISTA, que no es lo
+  mismo. El titulo que calza con lo que el procedimiento hace es
+  Acquire. COINCIDE.
+- ACTO 361, superviviente: MI ADJUDICACION key_partners_hypothesis,
+  antes de destapar. El general sobrevive y el de canal fisico es su
+  instancia. COINCIDE.
+- EL 599, clase: MI ADJUDICACION D, antes de destapar la razon vieja
+  y la nueva. Lo que se solapa es la clasificacion en cuatro tipos,
+  un paso contra un paso, dentro de procedimientos de cuatro y seis
+  pasos, de dos libros, con entregables no intercambiables y cero
+  arista (re-medida por mi en los dos sentidos); y el paso 5 del de
+  Blank ALIMENTA el lienzo del otro, que es secuencia y no gemelos.
+  Destapada la razon vieja: la B era explicitamente condicional al
+  arreglo de costuras de LOS DOS nodos, y los dos textos de hoy ya
+  pasaron por el (asociaciones_clave quedo en 4 pasos, key_partners
+  en 6). La causa del congelamiento CAYO y la relectura era
+  obligatoria por 08_VERIFICACION. COINCIDE: D.
+- D6, condiciones: leidas las condiciones vigentes de los dos
+  resultantes. En el 341 las tres condiciones son tres entradas
+  distintas al mismo procedimiento (servicio complejo, foco
+  estrechado por error, touchpoint asumido sin validar) y en el 361
+  la del canal fisico es la identidad entera del absorbido. Donde
+  cae la frontera de mismo momento es lectura, y esta lectura es
+  defendible. COINCIDE, sin correccion.
+- D7, costuras: lei los tres resultantes con el texto delante
+  (customer_journey_mapping 5 pasos, plan_de_adquisicion_acquire 6,
+  key_partners_hypothesis 6). Los tres leen como UN procedimiento
+  continuo, sin juntura; el material absorbido entro plegado en los
+  pasos, no cosido en bloque aparte. COINCIDE: no hay costura en los
+  citados.
+
+CUENTA DE LA CIEGA: 6 de 6 coincidencias en lo adjudicable, CERO
+discrepancias, y CERO discrepancias FUERA de los discutibles marcados
+en todo lo verificado al digito. La regla del credito no dispara
+relectura al doble de ningun tramo.
+
+## 3. LOS SIETE DISCUTIBLES, ADJUDICADOS UNO A UNO
+
+- D1 (la lectura no ciega respecto del cableado): ADJUDICADO SIN
+  ACCION. La coincidencia de las dos varas en 331, 341 y 344 no es
+  evidencia de contaminacion sino de corroboracion, SIEMPRE QUE el
+  caso de contenido se sostenga solo, y en mi ciega se sostuvo: elegi
+  los mismos supervivientes sin mirar las cifras de cableado. La
+  guarda estructural contra este riesgo es exactamente esta ciega del
+  auditor en cada vuelta, y existe. El 361 (empate 6 a 6 resuelto por
+  contenido) confirma que la primera vara trabaja.
+- D2 (superviviente del 341): ADJUDICADO A FAVOR. P.8 pone el
+  contenido primero y el contenido dice algo: la practica sobre el
+  artefacto, el alcance entero, el final en decision. La doctrina
+  rica del blueprint VIAJA con las piezas (13 de 13), asi que elegir
+  cabeza no boto nada. Opinable y bien resuelto.
+- D3 (la vara de P.8 en direccion inversa): ADJUDICADO COMO EXTENSION
+  NATURAL CITABLE, no doctrina nueva. La letra del ejemplar de P.8 es
+  que el nombre de la cabeza debe calzar con el alcance real del rol
+  (BIENVENIDA, que es UNA fase, no puede nombrar la doctrina de las
+  OCHO). Esa vara corta en las dos direcciones: un nodo tampoco se
+  llama por dos fases cuando su procedimiento solo ejecuta una, y la
+  medicion lo sostiene (ninguno de los siete pasos del donante activa
+  a un cliente; plan_de_activacion existe vivo y el 1276 lo declara
+  D). UNA TENSION SE DECLARA para que nadie la descubra despues: la
+  razon del 1276 llama al donante el plan de las dos mitades; la
+  lectura fina es que CUBRE la segunda mitad como preparacion (su
+  paso de dejar listo pagos, correos y backend), no como ejecucion, y
+  esa preparacion viajo entera al paso 6 del resultante. Nada se
+  perdio y el nombre quedo honesto.
+- D4 (P.16 antes de fundir, e instrumento nuevo en mitad de un acto):
+  ADJUDICADO A FAVOR, no es parada. P.16 nombra al responsable (LA
+  OPERACION) y a la unidad (EL MISMO COMMIT); el orden interno del
+  commit no esta legislado y los dos ordenes cumplen la letra, porque
+  el estado que el repo registra es el del commit entero. Hacerla
+  ANTES ademas dejo al ejecutor de fusiones sellado correr sin
+  tocarle la logica, que es la eleccion conservadora: apagar la
+  alarma habria sido la falta. El instrumento nuevo tiene guardas
+  propias, salida sellada y quedo pusheado ANTES de fundir. La
+  eleccion de orden queda como precedente registrado del ejecutor,
+  esta acta la respalda, y si el fundador quiere legislarla es un
+  renglon en P.16.
+- D5 (el dato en contra del 599): ADJUDICADO A FAVOR DE D. Que la
+  fusion acercara el solape (los cuatro tipos entraron al paso 1) es
+  verdad y esta bien publicado, pero no alcanza: un paso compartido
+  no hace gemelos a dos procedimientos con entregables distintos, y
+  la relacion es de alimentacion (Blank llena el bloque de
+  Osterwalder), que pide arista, no fusion. Queda declarada como
+  ARISTA QUE FALTA para la fase 04 si la lectura de esa fase la pide.
+- D6: ADJUDICADO A FAVOR, arriba.
+- D7: ADJUDICADO A FAVOR, arriba. El ejecutor es juez y parte en esas
+  lecturas por construccion del modo continuo, y la compensacion es
+  esta relectura, que se hizo.
+
+## 4. PENDIENTES DE DOCTRINA DEL REPORTE, RESUELTOS O ENCARGADOS
+
+1. Orden de la retirada de P.16: RESUELTO por extension (D4).
+2. LA GLOSA DE LA SENAL: ENCARGO ESCRITO EN ESTA ACTA. La glosa fija
+   de scripts/loop/vuelta42_senal_antes_despues.py (linea 116 y
+   siguientes) afirma que la senal SUBE con la fusion, y en la salida
+   sellada del 361 esa frase convive con la medicion que dos renglones
+   arriba dice LA FUSION APAGO LA SENAL, menos 9,4. Una glosa que se
+   presenta como LO QUE LA CIFRA SOSTIENE Y NADA MAS no puede decir lo
+   que la cifra de su propia corrida contradice: es la especie de
+   degradacion callada que el canon del banco 9 prohibe. La correccion
+   va con correccion declarada (el texto viejo a la vista en el
+   commit), NO toca ni una linea de la logica de medicion ni el
+   umbral, y se verifica re-corriendo el instrumento sobre el acto 361
+   con los mismos refs: cifras identicas, glosa nueva. El detalle va
+   en PROMPT_SIGUIENTE.md, TAREA 1.
+3. MIN_BLOQUE 2: del fundador, nadie lo toco, sigue igual.
+4. Enlace mutuo del 494: pendiente vivo de la fase 04, re-medido hoy.
+
+## 5. MIS PROPIOS MANEJOS Y TROPIEZOS, declarados con nombre
+
+- (i) Mi primer conteo de lineas del acta uso Measure-Object -Line,
+  que en PowerShell NO cuenta las lineas vacias y dio 8.019 contra
+  las 9.134 reales; lo vi antes de publicar nada y re-conte con
+  .Count. Se declara porque una cifra de instrumento mal invocado se
+  parece demasiado a una discrepancia real.
+- (ii) Medi por mi cuenta una metrica que NINGUNA guarda escrita
+  define: listas de enlaces de nodos vivos con duplicado TRAS
+  RESOLVER alias, y dio 900 listas (con 1.111 aristas de vivos hacia
+  ids deprecados; comando: barrido python de dataset/nodos
+  resolviendo ids_alias). ANTES de publicarla verifique su alcance:
+  las guardas 10 y 11 del ejecutor de fusiones miden sobre los nodos
+  tocados y listas crudas (0 las dos), el Gate 0 mide auto-aristas
+  tras resolver (0) y duplicados crudos (0), y P.16 ya nombra esta
+  especie exacta (las 1.056 entradas duplicadas de hoy) como trabajo
+  de OP-S-12, que paso de limpieza a verificacion de cero PARA LAS
+  FUSIONES NUEVAS. Las fusiones de esta vuelta no fabricaron ninguna
+  (cero vivos citan a los absorbidos). NO es caida de nadie ni guarda
+  en rojo: es el backlog viejo que OP-S-12 tiene escrito, y queda
+  medido aqui como contraste para esa operacion.
+- (iii) Mi corrida de run_phase1 pisa phase1_run_log.json: respaldado
+  antes y restaurado byte igual despues, misma maniobra que la 42.
+- (iv) Los dos node_families.json difieren en bytes SOLO por CRLF
+  contra LF, contenido JSON identico, misma especie que el registro
+  de CRLF del 08_VERIFICACION. No es divergencia.
+
+Y UNA CAIDA MIA DE ACTA, ya nombrada en la seccion 1: el 0 VIVOS del
+acta de la 42 contra el 1 del instrumento sellado. La consecuencia no
+cambio (los nueve bridges en cero, re-anclaje en blanco), pero la
+cifra del acta no era la del instrumento y la regla del criterio de
+verificacion existe exactamente para esto. Suma a caidas de acta del
+auditor.
+
+## 6. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 6 relecturas ciegas (341, 344, 361, 599, D6, D7), 1
+puesto de fondo (599), 12 nodos de forma (los seis pre fusion
+impresos desde git, los tres resultantes, asociaciones_clave, el par
+del 494 via su commit y lectura), 40 sitios de codigo o instrumentos
+re-corridos o leidos al digito (commits y numstat, marcador apertura y
+cierre, grafo entero, cierre transitivo, barrido B/C en dos estados,
+ciclo Gate 0 de cuatro comandos, tres suites, byte igualdades, trece
+guardas por tres EJEC mas el del 331, retiradas de P.16, cuatro
+senales, cinco casos positivos, comando 4 y su deriva sellada,
+08_VERIFICACION 99 a 120, 01_FUENTES 1397 y su bloque, OPERACIONES
+jsonl con notas y largos, P.8, P.16, vuelta39_fundir, el instrumento
+del cierre, la apertura, el veredicto 1276, plan_de_activacion, la
+glosa en el script y en las salidas, el prompt vigente). Caidas del
+ejecutor en esta vuelta: CERO de clase o cifra, CERO de reporte (las
+dos citas con lupa trazan al instrumento y no son afirmaciones
+equivocadas). Caidas del auditor: UNA de acta (el 0 VIVOS de la 42,
+descubierta por el ejecutor y confirmada por mi contra la salida
+sellada).
+
+Acumulado: 59 relecturas, 449 puestos (mas 258 nodos de forma y 228
+sitios de codigo), 7 caidas de clase, 18 de reporte del ejecutor, 7 de
+cifra publicada del ejecutor, 2 de cifra del auditor, 3 de acta del
+auditor, 1 de procedimiento del auditor.
+
+Rachas: clase o cifra CERO. LA RACHA DE CAIDAS DE REPORTE SE ROMPE Y
+QUEDA EN CERO: el reporte de la 43 salio limpio contra mi corrida
+entera, que es lo que el acta de la 42 dijo que la romperia.
+
+## 7. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. D3 y D4 son extension citable; la glosa se
+  corrige con las reglas de correccion existentes y encargo escrito.
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NO. MIN_BLOQUE intacto; cero contenido
+  borrado fuera de regla; el bucle no fundio ramas.
+- Fallo tecnico repetido: NO. La vuelta corrio entera; los dos rojos
+  (suite web del 344, guarda 10 del 361) eran guardas CORRECTAS
+  atendidas por regla escrita en la misma vuelta, y el modo continuo
+  queda cumplido con la verificacion completa de esta acta.
+- Credito roto: NO. Cero caidas de clase o cifra en la tanda.
+- Campana consumada: NO. Faltan 392, 711 y 969, el cierre de OP-D-06,
+  y todo lo que el 00_INDICE tiene detras.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: registros y la
+correccion encargada de la glosa (TAREA 1), y los tres actos restantes
+de OP-D-06 con su cierre de operacion (TAREA 2).
