@@ -9447,3 +9447,346 @@ entera, que es lo que el acta de la 42 dijo que la romperia.
 EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: registros y la
 correccion encargada de la glosa (TAREA 1), y los tres actos restantes
 de OP-D-06 con su cierre de operacion (TAREA 2).
+
+# ==========================================================================
+# ACTA DE LA VUELTA 44 DEL AUDITOR (19 ago 2026, Fable 5)
+# ==========================================================================
+
+CABECERA. SIN HUECO DE ACTA: la ultima acta escrita cubre la vuelta 43
+(commit ea44b928) y la vuelta inmediatamente anterior a la actual es la 44,
+que es exactamente la que esta acta audita. CONVOCADO POR LA GUARDA DEL MODO
+CONTINUO: la vuelta 44 cerro OP-D-06 entera y PARO ante la operacion
+siguiente (seccion 9 del reporte), asi que la verificacion de esta acta es
+COMPLETA, como el modo continuo manda cuando el ejecutor se detiene.
+
+## 1. VERIFICACION DEL REPORTE, TODO POR CORRIDA PROPIA DE HOY
+
+- EL HASH Y LOS COMMITS: HEAD de pasada-unica es c0041109 (el commit del
+  reporte); el ultimo antes del reporte es 9a09e8d7, como el reporte dice.
+  git log ea44b928..9a09e8d7 da DOCE commits con los hashes y el orden
+  EXACTOS de la tabla del reporte. Arbol limpio, todo pusheado a
+  origin/pasada-unica, verificado al abrir y al cerrar esta auditoria.
+- LAS RUTAS: git diff --shortstat ea44b928..9a09e8d7 da 101 ficheros, 6.596
+  anadidas y 183 borradas, LAS TRES CIFRAS AL DIGITO. El conteo por carpeta
+  reproducido entero por mi comando: docs/loop 68, dataset/nodos 19,
+  scripts/loop 5 (3 de v41_actos mas 2 sueltos), docs raiz 3, web/lib 2,
+  docs/plan 2, dataset/metadata 2. Total 101.
+- EL MARCADOR, RECOMPUTADO POR MI DESDE EL ARCHIVO (python propio sobre
+  docs/INTRA_DOMINIO_VEREDICTOS.jsonl): n 3.388, puestos 1 a 3.388 en
+  bloques contiguos por dominio, CERO huecos, CERO duplicados, CERO clases
+  fuera de ABCD. Cierre: A 575, B 80, C 8, D 2.725, tasa 16,97 que publicada
+  a un decimal es 17,0. Apertura re-medida desde git (ecc39804): A 575,
+  B 81, C 8, D 2.724. El diff entero de los 3.388 puestos entre apertura y
+  cierre da UN SOLO movimiento: el 233 de B a D, exactamente el que el
+  reporte declara. Cero altas y cero bajas de n.
+- EL GRAFO, MEDIDO POR MI SOBRE dataset/nodos: 3.853 ficheros, 3.524 vivos,
+  329 deprecados, 16.898 enlaces (previos mas siguientes de todos los
+  ficheros), cola de costuras 1.494 sobre 3.524 (42,4 por ciento) por
+  re-corrida propia de scripts/costuras_internas.py que ademas reprodujo
+  BYTE IGUAL los dos ficheros commiteados (git limpio tras correrla).
+  node_families 151 accion_clientes, 3.584 general, 118 viabilidad_economica
+  y sha256 del blob 7a98d1852fd0, el mismo que el reporte publica; mi copia
+  de trabajo da otro sha SOLO por CRLF del checkout, misma especie que el
+  punto (iv) del acta 43, verificado normalizando a LF.
+- EL DESGLOSE DE LOS ONCE ENLACES, RE-MEDIDO POR MI acto por acto sobre los
+  nodos tocados de cada commit de fusion: 392 mas 4, 711 mas 3, 969 mas 4.
+  Once netos, sin resto, como la tabla del reporte.
+- LAS FUSIONES, NODO A NODO POR MI: los tres absorbidos
+  (build_metrics_toolset, escenarios_futuros,
+  customer_retention_metrics_webmobile) deprecados, cada uno resolviendo por
+  ids_alias a su superviviente vivo (metricas_de_adquisicion_activacion,
+  future_scenarios_planning, retention_metrics); CERO vivos nombran a alguno
+  de los tres; CERO auto-aristas de vivos tras resolver; CERO aristas de
+  siguientes sin su previo espejo tras resolver, en el grafo entero. La
+  duplicada fabricada del 392 en mvp_alta_fidelidad quedo deduplicada: sus
+  listas de hoy no tienen duplicados, citan al superviviente una vez y al
+  absorbido cero.
+- EL CICLO GATE 0 RE-CORRIDO ENTERO POR MI, con phase1_run_log.json
+  respaldado ANTES y restaurado DESPUES: comando 1 GATE 0: OK exit 0;
+  comando 2 con 71 etiquetas reaplicadas; comando 4 regenera el derivado con
+  el MISMO reparto 151/3.584/118; comando 3 sincroniza los assets; git
+  status limpio tras el ciclo entero, que es arbol byte igual a HEAD.
+- LAS SUITES RE-CORRIDAS POR MI: motor 25 de 25 exit 0; web 80 ficheros,
+  1.030 pasadas y 3 saltadas, exit 0; tsc --noEmit cero lineas exit 0.
+- LA VARA POR TRAMO CONTRA LAS SALIDAS SELLADAS: las trece guardas
+  distintas presentes y CERO ROJO en los tres EJEC; verbatim de guarda 3
+  14 de 14 (392), 16 de 16 (711) y 14 de 14 (969), cero sobrantes; la
+  guarda 9 del 392 con 1 duplicada esperada en tercero y la guarda 11 en
+  OK (0). Los textos resultantes leidos enteros por mi cargan el material
+  de los dos origenes de cada par.
+- LA SENAL, RE-CORRIDA POR MI EN LOS TRES ACTOS con
+  vuelta42_senal_antes_despues.py y los refs de cada fusion: 392 de 41,9
+  (corte 2) a 46,0 (corte 3), mas 4,1; 711 de 0,0 con CORTE 0 a 48,9
+  (corte 4), mas 48,9; 969 de 42,1 (corte 3) a 50,6 (corte 2), mas 8,5.
+  Las tres ENCENDIERON, al decimo de la tabla del reporte. Y el desinfle
+  del 711 esta sostenido por el codigo: _mejor_bloque en
+  scripts/costuras_internas.py distingue NO_APLICA de (0.0, 0), leido por
+  mi en el fuente, asi que el antes del 711 era llegar al minimo sin que
+  ningun corte puntuara, y compararlo con un 48,9 con corte es pasar de no
+  tener particion a tenerla, tal como el reporte lo publica.
+- LA GLOSA CORREGIDA, VERIFICADA POR RE-CORRIDA PROPIA: el instrumento
+  sobre el acto 361 con los MISMOS refs (antes ed61c8f0) reproduce
+  SALIDA_V44_GLOSA_VERIFICADA.txt en todas sus lineas con cifra; las 15
+  lineas de medicion antes de la glosa son BYTE IGUALES entre la salida
+  V44 y SALIDA_V43_ACTO361_SENAL.txt (md5 identico entre las dos por mi
+  formula); las unicas lineas nuevas son la glosa, que cita las cuatro
+  mediciones de la 43 y conserva entera la advertencia de cita y no juzga.
+  El md5 1160702f del reporte no es el de mi formula (la mia da 384a8d29
+  con mi corte de lineas), pero la afirmacion que ese md5 sostiene, que las
+  quince lineas salen byte iguales en las dos salidas, la verifique
+  directamente y es VERDADERA: cifra trazable a su instrumento, no caida.
+- LA CABECERA DEL INSTRUMENTO DE CIERRE: MEDIDO EN LA VUELTA 43 ya no
+  existe en vuelta43_cierre_opd06.py (grep propio), y mi re-corrida entera
+  del instrumento reproduce el estado del registro: 8 de 9 actos fundidos
+  con alias sano, el 494 VIVO con VIVO, nomina de 18 con cero ausentes,
+  y el estado al cierre identico al de arriba.
+- EL VERIFICADOR DE MAPAS: re-corrido, 14 tablas, 83 filas, 0
+  discrepancias, con su limite impreso (vara 2 no corrida sin --json).
+- EL ENLACE MUTUO DEL 494: re-medido por mi en los dos sentidos, sigue sin
+  existir ninguna de las dos aristas.
+- LOS CINCO VIVO QUE SON ARCHIVO (seccion 4.4): el unico lector de
+  GRADIENTE_PARES en codigo es su propio productor (grep por mi); la
+  clasificacion es del rotulo del instrumento y ningun dato se movio.
+- LA SECCION 9, HECHO POR HECHO CONTRA OPERACIONES.jsonl: OP-D-07 declara
+  depende_de OP-M-03 y bloquea_a OP-M-03-I; OP-D-08 tiene pregunta_pendiente
+  NO vacia; OP-D-09 declara NINGUNA para escribir la operacion; OP-D-01 y
+  OP-D-02 NO traen HECHA en su nota y OP-D-03, 04, 05 y 06 SI. Los cuatro
+  hechos del reporte calzan con mi lectura directa del JSONL.
+
+## 2. LA RELECTURA CIEGA, con la ceguera parcial DECLARADA
+
+Lei REPORTE.md entero antes de leer un solo paso, como las actas 42 y 43
+declararon de si mismas. La mitigacion fue la misma: imprimir PRIMERO los
+textos desde git (los pares de los actos 392, 711 y 969 tal como estaban
+ANTES de cada fusion, los tres resultantes de hoy y analisis_de_cohortes),
+adjudicar, y SOLO DESPUES contrastar con las razones escritas.
+
+- ACTO 392, superviviente: MI ADJUDICACION
+  metricas_de_adquisicion_activacion, antes de contrastar. Los unicos pasos
+  que MIDEN son el de adquisicion y el de activacion; los referidos del
+  donante entran como categoria de la seleccion (su paso 2) y la retencion
+  como capacidad futura del tablero (su paso 5, dejar listo, que es
+  preparar y no ejecutar, el precedente del 344). El nombre que calza con
+  el alcance real es el del superviviente elegido. COINCIDE.
+- ACTO 711, superviviente: MI ADJUDICACION future_scenarios_planning,
+  antes de contrastar. Tiene el motor del metodo (la matriz de drivers),
+  el arco completo hasta el Canvas por bloque, y el de Cooper es la
+  version difusa del mismo ejercicio: mejor y peor caso, dimensiones y
+  senales, que entran plegados como detalle del metodo. COINCIDE.
+- ACTO 969, superviviente: MI ADJUDICACION retention_metrics, antes de
+  contrastar. El general sobrevive y el de web/mobile es su instancia,
+  la misma figura del 361. COINCIDE.
+- EL 233, clase: MI ADJUDICACION D, antes de destapar la razon nueva.
+  retention_metrics CONSTRUYE el tablero (registra, mide, monitorea,
+  estima) y analisis_de_cohortes CONSUME ese tablero para comparar
+  cohortes y disenar estrategias correctivas; entregables no
+  intercambiables (tablero contra reporte con estrategias); la relacion
+  es de alimentacion, que pide arista y no fusion, la misma figura del
+  599. COINCIDE: D, con la arista que falta declarada a la fase 04.
+- D2, las cuatro condiciones del 392: leidas las cuatro vigentes. Dos
+  momentos (decidir inversion, entrar en validacion) y dos carencias (no
+  poder medir, no saber que medir): ninguna es caso particular de otra.
+  La vara de fundir condiciones es dentro de cada acto, no entre actos:
+  que el 344 y el 711 fundieran un par no obliga a fundir aqui donde no
+  hay par que fundir. COINCIDE, sin correccion.
+- D4, la costura del 711: leido el resultante entero con el texto
+  delante. Los pasos 5 y 6 operan sobre los escenarios que los pasos 1 a
+  4 producen (el 5 reconsidera inversiones CON los escenarios, el 6
+  vigila hacia CUAL se mueve el mundo): es el pivote natural de construir
+  a usar, no un apendice cosido. El corte tras 4 de la senal cae ahi
+  porque ahi cambia el trabajo, no porque haya bloque reiniciado. La cita
+  queda en la cola y la lectura la contesta; el agravante del verbo
+  Identifica repetido esta bien declarado y no altera la lectura de
+  fondo. COINCIDE: no hay costura leida, con la tension declarada.
+- D7, los grupos del 969: W1 con R5 es fuerte (la cohorte por mes de
+  ingreso se construye con la fecha de inicio registrada y con ninguna
+  otra cosa). W3 con R4 es opinable y se sostiene: quejas y tickets son
+  el aviso y la deteccion del abandono es la confirmacion de la misma
+  salida del cliente, y el paso fundido conserva los dos textos enteros,
+  asi que separarlos despues seria un destejido de una linea y no una
+  perdida. COINCIDE, sin correccion.
+
+CUENTA DE LA CIEGA: 7 de 7 coincidencias en lo adjudicable, CERO
+discrepancias, y CERO discrepancias FUERA de los discutibles marcados en
+todo lo verificado al digito. La regla del credito no dispara relectura al
+doble de ningun tramo.
+
+## 3. LOS NUEVE DISCUTIBLES, ADJUDICADOS UNO A UNO
+
+- D1 (superviviente del 392 y la vara del alcance del rol): ADJUDICADO A
+  FAVOR. La vara del D3 de la 43 corta en las dos direcciones y aqui corta
+  A FAVOR de la eleccion: un nodo se nombra por lo que su procedimiento
+  MIDE, y los referidos no tienen paso que los mida; entran como categoria
+  y como capacidad futura, y la doctrina viaja entera (14 de 14). La
+  guarda 12 hace ademas que elegir base sea elegir nombre, y el nombre
+  elegido es el honesto.
+- D2 (cuatro condiciones sin fundir): ADJUDICADO A FAVOR, arriba en la
+  ciega. La coherencia que se mide es dentro del acto.
+- D3 (margen de cableado 10 contra 3 y lectura no ciega): ADJUDICADO SIN
+  ACCION, misma figura que el D1 de la 43: el caso de contenido se
+  sostiene solo (mi ciega eligio igual sin mirar cableado), y la guarda
+  estructural contra la contaminacion es exactamente esta ciega.
+- D4 (NO hay costura en el 711 con el corte en la frontera de los libros):
+  ADJUDICADO A FAVOR, arriba en la ciega, con las dos agravantes bien
+  declaradas. Que el ejecutor firme su propia redaccion y la marque es lo
+  que el marcado existe para hacer.
+- D5 (el mas 48,9 publicado y desinflado): ADJUDICADO A FAVOR. El codigo
+  del instrumento distingue los dos ceros (leido por mi), la comparacion
+  antes despues ahi no mide la misma particion dos veces, y publicar la
+  cifra CON esa linea es la letra del canon del banco 9: lo contrario,
+  omitirla o publicarla sola, seria elegir el dato.
+- D6 (el 233 de B a D con el dato en contra publicado): ADJUDICADO A FAVOR
+  DE D, arriba en la ciega. Registrar no es determinar y medir no es
+  disenar; la cercania nueva es real, esta bien publicada, y pide arista,
+  no fusion. La arista que falta va a la fase 04 con la del 599.
+- D7 (los dos grupos del 969): ADJUDICADO A FAVOR, arriba en la ciega.
+- D8 (OPERACION HECHA sin acta detras): ADJUDICADO A FAVOR. El encargo de
+  la vuelta 44 (PROMPT_SIGUIENTE, TAREA 2 punto 6) ORDENO escribir el
+  registro EN ESTA VUELTA con el patron de la vuelta 30, asi que
+  esperar un acta habria sido desobedecer el encargo escrito. La
+  declaracion cita su evidencia medida y ESTA ACTA, que verifico esa
+  evidencia entera, es ahora el acta que la respalda. El campo estado en
+  LISTA es correcto (adjudicado NO estrenar HECHA en el esquema, vuelta
+  30).
+- D9 (la parada sobre la operacion siguiente): LA PARADA PROCEDE COMO
+  CONDUCTA, por la letra del modo continuo y el precedente d5 del acta de
+  la vuelta 40 (parar, medir entero y traerlo es cumplimiento de la
+  guarda). La adjudicacion de fondo va en la seccion 4.
+
+## 4. LA OPERACION SIGUIENTE, ADJUDICADA CON REGLAS ESCRITAS, SIN DOCTRINA
+##    NUEVA
+
+La pregunta del reporte tiene tres partes y las tres se contestan citando:
+
+1. EL ORDEN DE LA FASE 02 NO ES EL CAMPO orden: ES CONGELADOS LIBERADOS.
+   Esta escrito en docs/plan/02_DESTEJIDOS.md, aviso de la vuelta 17: el
+   criterio de orden de esta fase es CONGELADOS LIBERADOS, a OP-D-08 le
+   tocaria ir entre OP-D-03 y OP-D-04 (libera el par 784) y OP-D-09 libera
+   cero; los numeros 8 y 9 son el artefacto declarado de no renumerar. Y
+   el precedente escrito del propio fichero: OP-D-05, sin congelados, su
+   orden es libre respecto de los tres primeros. Por el criterio escrito
+   de la fase, de las tres candidatas la que va PRIMERO es OP-D-08, que
+   ademas esta atrasada por ese criterio; OP-D-09 va despues, con orden
+   libre; y saltarse el campo orden no es decision de alcance porque el
+   campo orden no es el criterio de la fase.
+2. OP-D-08 ES EJECUTABLE SIN DECIDIR NADA NUEVO. Tres citas: (a) el
+   fundador la declaro LISTA con las otras ocho (02_DESTEJIDOS, LAS NUEVE
+   ESTAN LISTAS, 14 ago 2026); (b) su pregunta_pendiente, LEIDA ENTERA, es
+   un condicional con LAS DOS RAMAS LEGISLADAS (si la frase es MARCO
+   propio, es material del bloque 2 y se reparte como el resto; si es
+   encabezado repetido, se va con su bloque) y su propio texto dice que
+   decidirla exige leer el nodo con el ojo puesto en esa frase: el NO SE
+   DECIDE AQUI es del momento de ESCRIBIR la operacion (la vuelta 17
+   escribio sin releer el nodo de cero), no del de ejecutarla, y la
+   lectura entera del acto que P.5 y el modo continuo ya obligan es
+   exactamente la lectura que la resuelve; (c) la especie es DISTINTA del
+   d5 de la vuelta 40: alla el instrumento ABORTABA con 144 pares sin
+   clase (el texto no alcanzaba), aca el texto trae la vara y solo falta
+   leer. El ejecutor cito ese d5 por extension y la extension no aplica:
+   se registra como lectura corregida por adjudicacion, no como caida,
+   porque parar a traerlo es lo que la guarda manda ante la duda.
+3. EL REGISTRO DE OP-D-01 Y OP-D-02 NO BLOQUEA Y NO SE ADIVINA: SE
+   VERIFICA. El patron de la vuelta 30 es declaracion en la nota CON SU
+   EVIDENCIA; la evidencia se produce verificando la operacion punto por
+   punto contra su campo verificacion, que es exactamente lo que el cierre
+   de OP-D-06 acaba de modelar. Queda ENCARGADO como TAREA 1: verificar
+   OP-D-01 y OP-D-02 contra su verificacion escrita, con lo deferido
+   declarado citandose como deferido (el par nuevo entra POR EL RECOMPUTO
+   y las aristas son la fase 04, que es la letra de sus propias notas), y
+   escribir el registro si y solo si todo lo material cumple. Ninguna
+   regla ordena ese registro como precondicion de seguir la fase, asi que
+   no bloquea el orden de arriba.
+4. OP-D-07 NO SE ABRE TODAVIA y queda ANOTADO, no adivinado: su depende_de
+   nombra a OP-M-03, cuya nota dice ADJUDICADA y cuyo expediente esta
+   escrito, pero no trae registro de HECHA, y si la adjudicacion de una
+   mesa satisface un depende_de es una lectura que nadie ha hecho con el
+   expediente delante. No hace falta hacerla hoy: hay dos operaciones
+   ejecutables por delante. Se hara cuando OP-D-07 sea la siguiente por el
+   criterio de la fase.
+
+## 5. PENDIENTES DE DOCTRINA DEL REPORTE, RESUELTOS O ANOTADOS
+
+1. EL CAMPO fuente TRAS FUSION QUE CRUZA DOS LIBROS: ADJUDICADO SIN
+   ACCION por el precedente medido de OP-D-04 (fundio a traves de libros
+   en los dos sentidos con el campo intacto) y la procedencia por bloque
+   declarada en el mapa del acto. P.19 gobierna la repeticion interna, no
+   esta figura. Verificado por mi que el campo del 711 quedo intacto
+   (Business Model Generation). Si el fundador quiere legislarlo, es un
+   renglon; nada lo necesita hoy.
+2. LA HEURISTICA DE vuelta40_registros_no_grafo.py: SIN ACCION Y ANOTADO.
+   Ningun rojo, los cinco medidos uno a uno, el instrumento sellado no se
+   toca sin encargo escrito. Si vuelve a salir, el encargo de ampliar su
+   lista de ARCHIVO se escribe entonces.
+3. MIN_BLOQUE 2: del fundador, intacto, y su umbral acompanante sigue
+   pendiente de el.
+4. EL ENLACE MUTUO DEL 494: re-medido hoy en los dos sentidos, sigue sin
+   existir, fase 04.
+5. LAS DOS ARISTAS QUE FALTAN (599 y 233): fase 04, anotadas con su motivo
+   comun (alimentacion, no gemelos).
+6. LA OPERACION SIGUIENTE: RESUELTA ARRIBA, seccion 4.
+
+## 6. MIS PROPIOS MANEJOS Y TROPIEZOS, declarados con nombre
+
+- (i) Mi primer barrido de huecos supuso que puesto_intra reinicia por
+  dominio y marco nueve dominios con huecos falsos; el campo es el puesto
+  GLOBAL en bloques contiguos (compras 1 a 155 ... seguridad_digital 3.362
+  a 3.388). Lo vi en la misma corrida, re-medi con el supuesto correcto y
+  CERO huecos reales. Instrumento mal invocado, visto antes de publicar
+  nada; se declara porque se parece demasiado a una discrepancia real.
+- (ii) Mi md5 de la glosa no reproduce el del reporte porque mi corte de
+  lineas es otro; la afirmacion de fondo quedo verificada por comparacion
+  directa byte a byte, que es mejor que el md5. No es caida de nadie.
+- (iii) Mi corrida de run_phase1 pisa phase1_run_log.json: respaldado
+  antes y restaurado despues, la maniobra de las actas 42 y 43.
+- (iv) node_families.json de mi copia de trabajo da sha distinto por CRLF
+  del checkout; normalizado a LF y contra el blob de git calza con el
+  publicado. Misma especie que el (iv) del acta 43. No es divergencia.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 7 relecturas ciegas (supervivientes 392, 711 y 969, la D del
+233, las condiciones del 392, la costura del 711, los grupos del 969), 1
+puesto de fondo (233), 11 nodos de forma (los seis pre fusion impresos
+desde git, los tres resultantes, analisis_de_cohortes, mvp_alta_fidelidad),
+36 sitios de codigo o instrumentos re-corridos o leidos al digito (commits
+y shortstat con carpetas, marcador en dos estados y su diff puesto a
+puesto, grafo entero con alias, citas, auto-aristas y simetria, familias
+con su sha en tres formas, costuras re-corrida byte igual, ciclo Gate 0 de
+cuatro comandos, tres suites, glosa re-corrida y comparada contra las dos
+selladas, tres senales al decimo, _mejor_bloque en el fuente, cierre de
+OP-D-06 re-corrido, verificador de mapas, tres EJEC con sus guardas,
+deltas de enlaces por acto, la cabecera corregida, lectores de
+GRADIENTE_PARES, OPERACIONES.jsonl con OP-D-01 a 09 y OP-M-03 y OP-M-03-I
+y las dependencias inversas, 00_INDICE, 02_DESTEJIDOS con su tabla y su
+aviso de orden, 08_VERIFICACION, el d5 del acta 40, el enlace mutuo del
+494). Caidas del ejecutor en esta vuelta: CERO de clase o cifra, CERO de
+reporte. Caidas del auditor: CERO (los manejos de la seccion 6 se vieron
+antes de publicar).
+
+Acumulado: 66 relecturas, 450 puestos (mas 269 nodos de forma y 264 sitios
+de codigo), 7 caidas de clase, 18 de reporte del ejecutor, 7 de cifra
+publicada del ejecutor, 2 de cifra del auditor, 3 de acta del auditor, 1 de
+procedimiento del auditor.
+
+Rachas: clase o cifra CERO. Reporte CERO, y ya son DOS reportes limpios
+seguidos contra corrida completa del auditor.
+
+## 8. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. La operacion siguiente se adjudico entera con reglas
+  y precedentes citados (seccion 4); los demas pendientes, sin accion o
+  anotados.
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NO. MIN_BLOQUE intacto, cero contenido borrado
+  fuera de regla, el bucle no fundio ramas, los avisos que la casa reserva
+  siguen anotados con su fecha.
+- Fallo tecnico repetido: NO. Cero rojos en la vuelta 44 y cero en mi
+  re-corrida entera.
+- Credito roto: NO. Cero caidas de clase o cifra en la tanda.
+- Campana consumada: NO. La fase 02 tiene a OP-D-08, OP-D-09 y OP-D-07
+  por delante, y el 00_INDICE el resto.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: registros y la
+verificacion punto por punto de OP-D-01 y OP-D-02 (TAREA 1), y OP-D-08
+con su lectura resolutoria y, si hay cuerda, OP-D-09 (TAREA 2).
