@@ -1,0 +1,134 @@
+
+==============================================================================
+0. GUARDA: LAS TRECE DIRIGIDAS ESTAN ESCRITAS CON SU CLASE
+==============================================================================
+  LD-83  D   brainstorming_divergente               contra construir_sobre_ideas_ajenas           escrita: SI
+  LD-84  D   brainstorming_divergente               contra design_attitude_vs_decision_attitude   escrita: SI
+  LD-85  D   brainstorming_efectivo                 contra generar_multiples_opciones             escrita: SI
+  LD-86  D   brainstorming_efectivo                 contra pensamiento_convergente_divergente     escrita: SI
+  LD-87  D   brainstorming_efectivo                 contra design_attitude_vs_decision_attitude   escrita: SI
+  LD-88  D   reglas_brainstorming                   contra generar_multiples_opciones             escrita: SI
+  LD-89  D   reglas_brainstorming                   contra construir_sobre_ideas_ajenas           escrita: SI
+  LD-90  D   reglas_brainstorming                   contra pensamiento_convergente_divergente     escrita: SI
+  LD-91  D   reglas_brainstorming                   contra design_attitude_vs_decision_attitude   escrita: SI
+  LD-92  D   generar_multiples_opciones             contra construir_sobre_ideas_ajenas           escrita: SI
+  LD-93  A   generar_multiples_opciones             contra design_attitude_vs_decision_attitude   escrita: SI
+  LD-94  D   construir_sobre_ideas_ajenas           contra pensamiento_convergente_divergente     escrita: SI
+  LD-95  D   construir_sobre_ideas_ajenas           contra design_attitude_vs_decision_attitude   escrita: SI
+  las trece, con su clase, literales en el fichero.
+
+==============================================================================
+1. LOS 21 PARES DEL ACTO, CON SU CLASE Y SU FUENTE
+==============================================================================
+  A    brainstorming_divergente               brainstorming_efectivo                  archivo, puesto 823
+  A    brainstorming_divergente               reglas_brainstorming                    archivo, puesto 834
+  A    brainstorming_divergente               generar_multiples_opciones              archivo, puesto 844
+  D    brainstorming_divergente               construir_sobre_ideas_ajenas            lectura dirigida LD-83
+  D    brainstorming_divergente               pensamiento_convergente_divergente      archivo, puesto 585
+  D    brainstorming_divergente               design_attitude_vs_decision_attitude    lectura dirigida LD-84
+  A    brainstorming_efectivo                 reglas_brainstorming                    archivo, puesto 234
+  D    brainstorming_efectivo                 generar_multiples_opciones              lectura dirigida LD-85
+  A    brainstorming_efectivo                 construir_sobre_ideas_ajenas            archivo, puesto 586
+  D    brainstorming_efectivo                 pensamiento_convergente_divergente      lectura dirigida LD-86
+  D    brainstorming_efectivo                 design_attitude_vs_decision_attitude    lectura dirigida LD-87
+  D    reglas_brainstorming                   generar_multiples_opciones              lectura dirigida LD-88
+  D    reglas_brainstorming                   construir_sobre_ideas_ajenas            lectura dirigida LD-89
+  D    reglas_brainstorming                   pensamiento_convergente_divergente      lectura dirigida LD-90
+  D    reglas_brainstorming                   design_attitude_vs_decision_attitude    lectura dirigida LD-91
+  D    generar_multiples_opciones             construir_sobre_ideas_ajenas            lectura dirigida LD-92
+  A    generar_multiples_opciones             pensamiento_convergente_divergente      archivo, puesto 943
+  A    generar_multiples_opciones             design_attitude_vs_decision_attitude    lectura dirigida LD-93
+  D    construir_sobre_ideas_ajenas           pensamiento_convergente_divergente      lectura dirigida LD-94
+  D    construir_sobre_ideas_ajenas           design_attitude_vs_decision_attitude    lectura dirigida LD-95
+  A    pensamiento_convergente_divergente     design_attitude_vs_decision_attitude    archivo, puesto 885
+
+  21 de 21 con clase. Reparto: {'A': 8, 'D': 13}
+
+==============================================================================
+2. EL DETECTOR DE NODOS PUENTE (P.10)
+==============================================================================
+Un nodo puente es el que tiene A con dos nodos que entre si son D.
+
+  brainstorming_divergente               A con 3: brainstorming_efectivo, generar_multiples_opciones, reglas_brainstorming
+        PUENTE: brainstorming_efectivo contra generar_multiples_opciones da D (lectura dirigida LD-85)
+        PUENTE: generar_multiples_opciones contra reglas_brainstorming da D (lectura dirigida LD-88)
+  brainstorming_efectivo                 A con 3: brainstorming_divergente, construir_sobre_ideas_ajenas, reglas_brainstorming
+        PUENTE: brainstorming_divergente contra construir_sobre_ideas_ajenas da D (lectura dirigida LD-83)
+        PUENTE: construir_sobre_ideas_ajenas contra reglas_brainstorming da D (lectura dirigida LD-89)
+  reglas_brainstorming                   A con 2: brainstorming_divergente, brainstorming_efectivo
+        no es puente: sus A cierran triangulo entre si (o tiene menos de dos)
+  generar_multiples_opciones             A con 3: brainstorming_divergente, design_attitude_vs_decision_attitude, pensamiento_convergente_divergente
+        PUENTE: brainstorming_divergente contra design_attitude_vs_decision_attitude da D (lectura dirigida LD-84)
+        PUENTE: brainstorming_divergente contra pensamiento_convergente_divergente da D (archivo, puesto 585)
+  construir_sobre_ideas_ajenas           A con 1: brainstorming_efectivo
+        no es puente: sus A cierran triangulo entre si (o tiene menos de dos)
+  pensamiento_convergente_divergente     A con 2: design_attitude_vs_decision_attitude, generar_multiples_opciones
+        no es puente: sus A cierran triangulo entre si (o tiene menos de dos)
+  design_attitude_vs_decision_attitude   A con 2: generar_multiples_opciones, pensamiento_convergente_divergente
+        no es puente: sus A cierran triangulo entre si (o tiene menos de dos)
+
+  NODOS PUENTE: 3 -> ['brainstorming_divergente', 'brainstorming_efectivo', 'generar_multiples_opciones']
+
+==============================================================================
+3. LOS SUBCONJUNTOS CERRADOS: todos sus pares internos en A
+==============================================================================
+  cerrados maximales encontrados: 4
+     tamano 3: brainstorming_divergente, brainstorming_efectivo, reglas_brainstorming
+        sus pares internos: 823(A), 834(A), 234(A)
+     tamano 3: generar_multiples_opciones, pensamiento_convergente_divergente, design_attitude_vs_decision_attitude
+        sus pares internos: 943(A), LD-93(A), 885(A)
+     tamano 2: brainstorming_divergente, generar_multiples_opciones
+        sus pares internos: 844(A)
+     tamano 2: brainstorming_efectivo, construir_sobre_ideas_ajenas
+        sus pares internos: 586(A)
+
+==============================================================================
+4. LA ESPECIE DE 9.3.1, SOBRE LOS PARES A UNICAMENTE
+==============================================================================
+La correccion del 18 ago 2026 dice: una D no es sobrevivir a un duelo, es
+que no hubo duelo. La prueba se hace SOLO sobre los pares A.
+
+  A  brainstorming_divergente               brainstorming_efectivo                  archivo, puesto 823          nombra ganador: NO
+  A  brainstorming_divergente               reglas_brainstorming                    archivo, puesto 834          nombra ganador: NO
+  A  brainstorming_divergente               generar_multiples_opciones              archivo, puesto 844          nombra ganador: NO
+  A  brainstorming_efectivo                 reglas_brainstorming                    archivo, puesto 234          nombra ganador: NO
+  A  brainstorming_efectivo                 construir_sobre_ideas_ajenas            archivo, puesto 586          nombra ganador: NO
+  A  generar_multiples_opciones             pensamiento_convergente_divergente      archivo, puesto 943          nombra ganador: NO
+  A  generar_multiples_opciones             design_attitude_vs_decision_attitude    lectura dirigida LD-93       nombra ganador: NO
+  A  pensamiento_convergente_divergente     design_attitude_vs_decision_attitude    archivo, puesto 885          nombra ganador: NO
+
+  pares A: 8.  Con ganador nombrado en su razon: 0.
+  NINGUN PAR A NOMBRA GANADOR: no hay GANADOR POR DERECHO posible, porque
+  la prueba de 9.3.1 (gano todos los pares A que lo tocan) no tiene ni una
+  victoria citable de la que tirar. LA ESPECIE ES POR ELEGIR.
+
+==============================================================================
+5. EL CABLEADO DE P.8, resuelto por alias y sin contarse a si mismo
+==============================================================================
+  nodo                                    previos  siguien  entrant
+  brainstorming_divergente                      1        3        1
+  brainstorming_efectivo                        7        6        7
+  reglas_brainstorming                          5        6        5
+  generar_multiples_opciones                    2        1        2
+  construir_sobre_ideas_ajenas                  2        1        2
+  pensamiento_convergente_divergente            2        3        2
+  design_attitude_vs_decision_attitude          1        2        1
+
+==============================================================================
+6. EL RACIMO DECLARADO, con su nomina entera
+==============================================================================
+  racimo: Las reglas del brainstorming
+     dominio censado : nucleo (3) + quality (1)
+     miembros        : 4 -> ['reglas_brainstorming', 'brainstorming_divergente', 'brainstorming_efectivo', 'brainstorming']
+     DENTRO del acto : 3 -> ['brainstorming_divergente', 'brainstorming_efectivo', 'reglas_brainstorming']
+     FUERA del acto  : 1 -> ['brainstorming']
+
+==============================================================================
+7. LO QUE LA OPERACION TIENE ESCRITO
+==============================================================================
+  superviviente : None
+  eliminar      : []
+  aristas_nuevas: []
+  preservar:
+     - por la regla de reparto: el bloque de IA va al racimo de supervision (OP-F-02); lo que quede de taller va al superviviente del acto
+     - de cada uno de los tres gemelos (823, 834, 844): lo propio que no este en el destejido va al superviviente

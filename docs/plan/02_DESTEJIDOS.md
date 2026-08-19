@@ -1236,3 +1236,91 @@ comprobaciones del `08_VERIFICACION.md` dan OK las cuatro**.
 > lo que hacia repetir a esos pares eran **bloques ajenos que una cirugia anterior se llevo**,
 > entonces destejer **no prepara la fusion: la cancela**. `OP-D-03` es el primer ejemplar medido de
 > la campana.
+
+
+---
+
+### `OP-D-04`, ESTADO AL 19 ago 2026 (vuelta 37): **PASOS 1 Y 2 HECHOS, ACTO LEIDO ENTERO, FUSION EN PARADA**
+
+**EL PASO 1 DEL ORDEN INTERNO ESTA HECHO Y NO LO HIZO ESTA OPERACION: lo hizo `OP-F-02`.** Medido
+hoy contra el grafo y no leido de su nota (`scripts/loop/vuelta37_fuente_primero.py`, salida
+`docs/loop/SALIDA_V37_OPD04_FUENTE.txt`): sus **tres nodo propio** estan vivos con 6, 5 y 4 pasos y
+los tres declarados en `INDICE_ROJO_DECLARADO.jsonl`; **Mollick no aparece ya en ninguno de los
+tres origenes**; y `brainstorming_divergente` entra con **una sola fuente**, Tim Brown, que es la
+fijada. `OP-F-03` tambien verificada: sus **cuatro nodo propio** vivos con 4, 9, 4 y 8 pasos. **Del
+cruce medido: de los siete nodos de `OP-D-04`, UNO esta en la nomina de `OP-F-02` y CERO en la de
+`OP-F-03`**, asi que esa segunda dependencia es **de orden de fase y no de nodo compartido.**
+
+**EL PASO 2, EL DESTEJIDO, ESTA CONSUMADO, Y NO POR RENUNCIA: porque su unica costura y el injerto
+de fuente eran EL MISMO BLOQUE, y un solo corte sirvio a los dos frentes**
+(`scripts/loop/vuelta37_destejido_opd04.py`, salida `docs/loop/SALIDA_V37_OPD04_DESTEJIDO.txt`).
+
+| medicion de hoy | resultado |
+|---|---|
+| costurados del acto sobre los 128 registros de `docs/COSTURAS_INTERNAS.jsonl` | **1 de 7**, `brainstorming_divergente`; los otros seis sanos. La seccion 54.3 del informe declara 1 y 6 |
+| corte registrado de esa costura | **el 5**, bloque **5 a 8** |
+| frontera que `OP-F-02` publico en `01_FUENTES.md` | **1 a 4 / 5 a 8**: **el mismo sitio** |
+| pasos de `brainstorming_divergente` hoy | **4**, exactamente el lado izquierdo del corte |
+| los ocho pasos viejos, leidos por `git` del padre del commit de `OP-F-02` | **8**, tal como el registro de costuras dice |
+| los 1 a 4 viejos contra el nodo de hoy | **4 de 4 IDENTICOS** |
+| los 5 a 8 viejos contra `ideacion_con_ia_en_la_sesion` | **4 de 4 IDENTICOS**, y el destino cuelga del cableado |
+| material perdido | **CERO**: 4 mas 4 igual a 8 |
+
+> **LO QUE NO SE HIZO Y SE DICE EN VOZ ALTA: no se volvio a correr `scripts/costuras_internas.py`.**
+> Ese instrumento **se declara MAL CALIBRADO en su propia salida** desde la vuelta 34
+> (`docs/loop/SALIDA_V34_COSTURAS_RECALIBRADO.txt`: *INSTRUMENTO MAL CALIBRADO. No entrega nada*).
+> **`OP-D-04` no necesita su cifra**: su frontera esta **publicada** en `01_FUENTES.md` y su corte
+> **registrado con fecha** en `COSTURAS_INTERNAS.jsonl`. Preguntar si hoy nacio una costura que
+> nadie registro seria abrir alcance que ninguna operacion escribio. **Va como discutible marcado
+> del reporte, no como cifra.**
+
+**EL PASO 3 SE PARTE EN DOS, Y SOLO LA PRIMERA MITAD SE PUDO HACER.** `P.5` manda leer el acto
+entero **antes** de la fusion, y eso esta hecho: **21 de 21 pares leidos**, cuatro de ellos
+releidos hoy por rancios (585, 823, 834 y 844, **ninguno cambia de clase**) y trece leidos como
+lecturas dirigidas **`LD-83` a `LD-95`**. **La respuesta a la pregunta de `P.5` esta escrita entera
+en `docs/plan/LECTURAS_DIRIGIDAS.md`**: no es una familia de siete, son **dos triangulos cerrados,
+un nodo colgado y TRES puentes.**
+
+**LA FUSION NO SE EJECUTA, y son TRES motivos medidos hoy, ninguno adivinado. Cero nodos tocados.**
+
+**MOTIVO 1: NO HAY SUPERVIVIENTE, ni escrito ni deducible, y esta vez el hueco es mayor que en
+`OP-D-02`.** El campo `superviviente` de `OP-D-04` esta en **`null`**, leido hoy en el fichero. Y
+la especie de `9.3.1`, **con su correccion del 18 ago 2026 que manda hacer la prueba SOLO sobre los
+pares `A`**, sale **POR ELEGIR** por el peor de los caminos: **de los OCHO pares `A` del acto,
+CERO nombran ganador en su razon.** No es que un nodo gane unos y pierda otros: **es que no hay ni
+una victoria citable de la que tirar.** Y dos de esas ocho, el **823** y el **834**, dicen
+literalmente que **no se pelea la clase porque la decision ya esta tomada en otro sitio**, que es
+la mesa del racimo. **`P.8` desempata a contenido empatado; aqui el contenido no ha hablado
+todavia.**
+
+**MOTIVO 2: TRES NODOS PUENTE, Y `P.10` PROHIBE FUNDIR LA COMPONENTE ENTERA.** El campo `preservar`
+de la operacion habla de **el superviviente del acto**, en singular, y la medicion dice que el acto
+**no puede volverse un solo nodo sin desmentir trece lecturas `D`**. La salida que `P.10` deja
+(fundir solo el subconjunto cerrado y enlazar el resto) **da DOS triangulos, no uno**, y por lo
+tanto **dos supervivientes y no uno**: eso **cambia la forma final de la operacion**, y la forma
+final no la escribe ninguna pagina. La seccion **54.6** del informe lo dejo dicho el 11 ago 2026 y
+sigue siendo cierto: *no dice si los siete nodos del brainstorming deben quedar en uno, en dos o en
+cuatro; dice cuantos hay que tener delante para poder decidirlo*. **Hoy ya estan todos delante. La
+decision sigue sin tomarse.**
+
+**MOTIVO 3: EL PRIMER TRIANGULO ES UN RACIMO MIXTO AL QUE LE FALTA UN MIEMBRO, Y ESE MIEMBRO ESTA
+FUERA DEL ACTO Y FUERA DEL DOMINIO.** Medido hoy en `docs/RACIMOS_MIEMBROS.jsonl`: el racimo **Las
+reglas del brainstorming** tiene **CUATRO** miembros, `reglas_brainstorming`,
+`brainstorming_divergente`, `brainstorming_efectivo` **y `brainstorming`, que es de `quality`**.
+**Los tres primeros son exactamente el triangulo cerrado; el cuarto no esta en el acto.** Y
+`docs/MESA_RACIMOS.md` escribe que este racimo es uno de los **tres mixtos** de los trece del
+nucleo, con esta advertencia: *podar el lado del nucleo de un racimo mixto cambia el gradiente del
+mundo que lo acompana*. **Fundir los tres aqui decidiria la forma del racimo sin su cuarto miembro
+y sin su mesa.** Y `P.5` no da puerta para leerlo: su alcance adjudicado es **el acto en operacion,
+nunca fuera**. **Medido tambien hoy: ninguna operacion de la fase 06 nombra a estos nodos**, asi
+que esa mesa **no esta escrita como operacion**.
+
+> **LO QUE SI QUEDA HECHO Y NO HAY QUE REPETIR:** la fuente verificada, el destejido consumado, el
+> acto **leido entero por primera vez** con sus trece lecturas dirigidas nuevas, las cuatro
+> relecturas de `P.5` volcadas con su correccion declarada, y **el mapa del acto medido**: dos
+> triangulos, tres puentes y un nodo colgado. **Lo unico que falta para ejecutar es una decision
+> sobre la forma final y sobre quien sobrevive en cada triangulo.**
+
+**EL MARCADOR NO SE MOVIO, y esa es la prueba de que no se toco nada:** las cuatro relecturas no
+cambian de clase y las trece lecturas dirigidas estan fuera de cola. **`n 3.388, A 575, B 83, C 8,
+D 2.722`**, identico a la apertura de la vuelta.
