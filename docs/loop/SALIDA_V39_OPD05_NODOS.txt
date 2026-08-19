@@ -1,0 +1,64 @@
+OP-D-05: LOS TRES NODOS ENTEROS, y la pregunta de si el DESTEJIDO hace falta.
+
+LA SENAL DE COSTURA INTERNA, con la MISMA advertencia que ya se declaro en el
+cierre de OP-D-04: scripts/costuras_internas.py NO ENTREGA HOY (su puerta de
+calibracion se niega). Lo que sigue son sus DOS senales con sus funciones y sus
+umbrales, sobre estos tres nodos: INDICIO, no veredicto.
+umbrales de la casa: pareja 80, bloque 44
+
+nodo                                         pasos  pareja    bloque        dispara
+seleccion_ceo_fundador                       4      51.3      43.6 (c2)     ninguna
+asignacion_de_titulos_ejecutivos             5      43.3      40.6 (c2)     ninguna
+errores_comunes_asignacion_roles             5      49.5      45.5 (c2)     BLOQUE
+
+==========================================================================
+seleccion_ceo_fundador  ..  Decidir con intención quién será el CEO fundador
+  fuente     : The Founder's Dilemmas
+  dominio    : core   etiqueta: Elige con Cuidado a Tu CEO
+  resumen    : La decisión de quién será CEO suele tomarse de forma casual o por defecto: la persona con la idea, o la que tiene la voz más fuerte, sin que evalúes realmente quién es el mejor candidato. Esta decisión pesa simbólica y realmente, y por la inercia propia de cualquier organización, es muy difícil revertirla sin causar disrupción. Tienes que evaluar activamente quién tiene la capacidad de liderar en las distintas etapas cambiantes de tu startup, no solo quién tiene pasión y visión inicial.
+  entregable : Un acuerdo fundacional por escrito que designe formalmente al CEO y explique la decisión con base en la capacidad de liderazgo de cada persona
+  PASOS:
+    1. Reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente
+    2. Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión
+    3. Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer)
+    4. Documenta el acuerdo formalmente para evitar ambigüedad futura
+  CONDICIONES:
+    1. Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO
+    2. Si existe ambigüedad o conflicto latente sobre quién lidera tu equipo
+  previos   : ['decision_fundador_solo_vs_equipo', 'decision_cuando_fundar', 'evaluacion_dispassionate_idea', 'evaluar_motivaciones_cofundadores', 'coraje_en_decisiones_dificiles', 'compatibilidad_motivaciones_riqueza_control']
+  siguientes: ['criterios_equity_split', 'composicion_board_directors', 'riesgo_titulos_inflados', 'embrace_the_struggle_liderazgo_autentico']
+==========================================================================
+asignacion_de_titulos_ejecutivos  ..  Asignación de Títulos Ejecutivos en el Equipo Fundador
+  fuente     : The Founder's Dilemmas
+  dominio    : core   etiqueta: Negocia los Títulos con Cuidado
+  resumen    : La asignación de títulos ejecutivos (CEO, CTO, COO, etc.) entre cofundadores es una de las negociaciones más críticas y difíciles al inicio de un startup. Los títulos tienen significado simbólico y traducen en autoridad real, afectando tanto la motivación interna como la percepción externa (inversores, empleados). Factores clave que determinan quién recibe qué título incluyen: el nivel de compromiso de cada fundador, si es la 'persona de la idea' original, y su capital humano, social y financiero (experiencia previa fundando, años de experiencia laboral, capital semilla invertido). Las 'personas de la idea' tienen 47% de probabilidad de convertirse en CEO vs 12% de los no-idea, pero este ajuste inicial puede debilitarse conforme la startup madura.
+  entregable : Documento de acuerdo de fundadores con títulos ejecutivos claramente asignados y justificados
+  PASOS:
+    1. Identificar quién es la 'persona de la idea' original en el equipo
+    2. Evaluar el nivel de compromiso (full-time vs part-time) de cada cofundador
+    3. Mapear el capital humano, social y financiero que aporta cada fundador
+    4. Negociar explícitamente el título de CEO antes de que surjan conflictos
+    5. Documentar por qué se asignó cada título para futura referencia
+  CONDICIONES:
+    1. Cuando el equipo fundador está por definir roles formales
+    2. Si hay tensión sobre quién debe ser CEO
+    3. Cuando se está preparando documentación para inversionistas
+  previos   : ['decision_fundador_solo_vs_equipo']
+  siguientes: ['criterios_equity_split', 'founder_ceo_succession_process', 'division_de_labor_vs_roles_superpuestos']
+==========================================================================
+errores_comunes_asignacion_roles  ..  Errores Comunes al Asignar Roles entre Cofundadores
+  fuente     : The Founder's Dilemmas
+  dominio    : core   etiqueta: Evita Errores al Asignar Roles
+  resumen    : Existen 'caminos fáciles' que los equipos fundadores toman por evitar conflicto inmediato, pero que generan problemas mayores a largo plazo: evitar el conflicto (nombrando múltiples líderes), subestimar la 'inercia de títulos' (es difícil revertir un título mal asignado), inflar títulos C-level sin justificación real, querer aliados en la junta directiva, e ignorar motivaciones incompatibles entre socios.
+  entregable : Checklist de asignación de roles que el equipo fundador revisa antes de definir títulos y estructura de poder
+  PASOS:
+    1. Confrontar directamente el conflicto sobre quién será CEO en lugar de evitarlo con títulos ambiguos
+    2. Evaluar objetivamente si la persona con la idea original es realmente la mejor opción para CEO
+    3. Ser cautelosos al asignar títulos C-level tempranamente, considerando el crecimiento futuro
+    4. Evitar colocar automáticamente a cofundadores en la junta directiva solo por lealtad
+    5. Evaluar compatibilidad de motivaciones antes de fundar juntos
+  CONDICIONES:
+    1. En las primeras etapas de formación del equipo fundador, antes de asignar títulos formales
+    2. Si el equipo está evitando una conversación difícil sobre quién lidera
+  previos   : ['seleccion_relaciones_cofundadores', 'decision_fundador_solo_vs_equipo']
+  siguientes: ['decision_egalitaria_vs_jerarquica', 'reparto_inicial_equity']
