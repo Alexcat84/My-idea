@@ -2646,3 +2646,58 @@ Y su punto **1** reparte el trabajo con nombre: *si `P.7` (la simulacion previa 
 > **Y SE DECLARA LO QUE `P.16` NO DICE, en vez de fingir que lo dice** (`PENDIENTE DE DOCTRINA`): la regla manda retirar **en el mismo commit**, y **no dice si la retirada va ANTES o DESPUES de fundir**. Aqui va **ANTES**, y el motivo es que asi el ejecutor de fusiones corre **sin tocar** y sus trece guardas juzgan el resultado ya limpio; la alternativa (fundir y limpiar despues) obligaria a modificar el ejecutor o a aceptar que aborta. **Es una eleccion del ejecutor de esta vuelta, no una lectura de la regla, y va MARCADA COMO DISCUTIBLE.**
 
 > **Y UNA CONSECUENCIA QUE SE DICE ANTES DE MEDIRLA: el plan sellado de este primer commit SE VUELVE A SELLAR en el segundo**, porque la retirada cambia las redirecciones medidas (hoy **6**, con `key_partners_hypothesis` entre ellas) y la simetrizacion esperada (hoy **4 aristas**, una de ellas la auto-arista `key_partners_hypothesis.nodos_previos += key_partners_hypothesis`). **Los dos planes quedan en el historial de git y el segundo commit publica el diff, para que la re-selladura se pueda auditar en vez de tener que creerse.** **La particion de los grupos NO cambia**, que es lo que la tabla de arriba publica y lo que el verificador de mapas comprueba.
+
+### `OP-D-06` ACTO 361 CERRADO: **LA RETIRADA DE `P.16` Y LA FUSION** (19 ago 2026, vuelta 43)
+
+#### LA RETIRADA DE LA ARISTA INTERNA, ejecutada **en el mismo commit que la fusion** como `P.16` manda
+
+`python scripts/loop/vuelta43_retirar_arista_interna.py --plan docs/loop/PLAN_V41_ACTO361.json --ejecutar`, sellado en `docs/loop/SALIDA_V43_ACTO361_P16_RETIRADA.txt`, **exit 0**: **2 entradas retiradas** (la unica arista interna, declarada en sus dos extremos), **2 ficheros tocados**, **guarda A** con *cero arista interna tras retirar* en **OK (0)**, y **guarda B** con **texto INTACTO en los DOS nodos** (titulo, etiqueta, pasos, condiciones, entregable y resumen comparados antes y despues) en **OK las dos veces**.
+
+**EL PLAN SE VOLVIO A SELLAR, y su diff se publica en vez de contarse:** redirecciones de **6 a 5** (sale `key_partners_hypothesis`, que era la que acababa nombrandose a si misma) y simetrizacion esperada de **4 aristas a 3** (sale la auto-arista `key_partners_hypothesis.nodos_previos += key_partners_hypothesis`). **El diff entero son esos dos bloques y nada mas**: la particion de los grupos, los textos, los motivos y la tabla de `P.13` salen identicos, y las duplicadas fabricadas siguen en **2**. **La simulacion, re-corrida, sale verde en las doce guardas**, y **la primera, la que salio en ROJO, queda sellada y commiteada en el primer commit del acto: no se borra, porque es la evidencia que disparo la regla.**
+
+| lo medido al ejecutar | como salio |
+|---|---|
+| **censo (guarda 13)** | ANTES **3.853** ficheros, **3.528** vivos, **325** deprecados; DESPUES **3.853**, **3.527**, **326**: **OK** |
+| **enlaces, con la aritmetica entera porque este acto los mueve por TRES caminos** | **16.888** antes, **16.887** despues, **MENOS 1**. Y cierra sin resto: **menos 2** de la retirada de `P.16` (la arista interna en sus dos extremos), **menos 2** de las duplicadas que la redireccion fabrica y el ejecutor limpia, **mas 3** de la simetrizacion. **16.888 menos 2 menos 2 mas 3 es 16.887.** **ES EL PRIMER ACTO DE LA CAMPANA EN QUE LOS ENLACES BAJAN**, y el motivo es que es el primero que retira una arista |
+| **el contenido (guardas 1 a 7)** | **VERBATIM 12 de 12**, cobertura de pasos **10 de 10** y de condiciones **2 de 2**, `preservar_literal` **10 de 10** y rastros **5 de 5** |
+| **el cableado (guardas 8 a 12)** | redirecciones **5 de 5**, deprecados que nombran **0**, `P.16` con **2 duplicadas fabricadas SEGUN EL PLAN**, **cero auto-arista** y cero duplicada tras resolver, **titulo y etiqueta SIN TOCAR** |
+| **`reanclar_por_resolutor.py`** | **EN BLANCO** |
+| **ciclo Gate 0 de CUATRO comandos** | `run_phase1` **GATE 0: OK** con sus **veinte** renglones en `[OK]`. **Y UNA GUARDA DEL PROPIO GATE CONFIRMA `P.16` POR SU LADO**: *Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista via alias) (valor: 0 auto-aristas)*. Paso 5: **1 nodo actualizado, 3 vistas en `nodos_siguientes` y 0 en `nodos_previos`**; universo **3.527 activos y 326 deprecados**. `etiquetas_de_cara` **71**. **COMANDO 4** (`plan_readiness.py`), corrido porque el censo se movio, **con la deriva medida otra vez: CERO nodos cambian de familia**. `sync_assets_web` con `master_graph.json` de **8.139.672 bytes** sha256 **`e6d52671b60b`** |
+| **la simetrizacion, EXACTA** | **3 de 3** en el log, **0 de otros nodos**, faltan 0 y sobran 0, y las **3 releidas en el fichero** |
+| **las suites** | motor **25 de 25**, web **1.030 pasadas**, `tsc` **cero lineas**. Los tres **exit 0** |
+| **caso positivo antes y despues** | ANTES **16 PASAN y 19 CAEN** (exit 1); DESPUES **36 PASAN y 0 CAEN** (exit 0), conservacion **5 vivos y 0 muertos** |
+| **los registros que no son el grafo** | **2 vivos**, y **los dos nombran solo al superviviente**: `dataset/metadata/review_candidates.json` y `docs/PASO_NODO_CANDIDATOS.jsonl` (este ultimo con su corte viejo a la vista al digito: dice `"pasos_madre": 14` cuando el nodo medio **5** desde `OP-F-04-WEI` y mide **6** hoy). **Nada que redirigir.** Los **NUEVE** `bridges_aprobados.json`: **0 veces** |
+
+#### EL INSTRUMENTO DE COSTURAS SOBRE EL RESULTANTE: **LA FUSION APAGO LA SENAL**
+
+`python scripts/costuras_internas.py` corrido DESPUES de fundir (`docs/loop/SALIDA_V43_COSTURAS_TRAS_FUSION_361.txt`, **exit 0**): la cola baja de **1.494** a **1.493** nodos, sobre **3.527** activos, el **42,3 por ciento**. **Y esta vez la cola baja por un motivo que no se habia visto: el absorbido ya estaba FUERA, asi que el que salio de la cola fue EL SUPERVIVIENTE.**
+
+`python scripts/loop/vuelta42_senal_antes_despues.py --nodo key_partners_hypothesis --commit ed61c8f0 --nombre "OP-D-06 acto 361"`, sellado en `docs/loop/SALIDA_V43_ACTO361_SENAL.txt`:
+
+| | pasos | pareja | bloque | contra el umbral 44 |
+|---|---:|---:|---:|---|
+| **antes**, leido de git `ed61c8f0` | 5 | 54,7 | **50,8** (corte tras 2) | **SOBRE** por **mas 6,8**: **DENTRO** |
+| **despues**, del fichero de hoy | 6 | 47,8 | **41,4** (corte tras 2) | **BAJO** por **menos 2,6**: **FUERA** |
+
+**MOVIMIENTO: MENOS 9,4 PUNTOS. LA FUSION APAGO LA SENAL: estaba DENTRO y quedo FUERA**, y `key_partners_hypothesis` aparece hoy **0 veces** en `docs/COSTURAS_INTERNAS.jsonl`. **No hay lectura textual que hacer, porque ya no hay cita.**
+
+> **Y AQUI LA GLOSA PUBLICADA QUEDA DEFINITIVAMENTE DEGRADADA DE LEY A TENDENCIA, con las tres formas medidas en UNA SOLA VUELTA:** el instrumento sigue imprimiendo que *la senal de bloque SUBE con la fusion por un mecanismo MECANICO*, y esta vuelta midio **tres comportamientos distintos**: **mas 1,7** en el acto **344** (**con el corte quieto en 4**), **menos 0,7** en el **341** (**con el corte movido de 2 a 3**), y **menos 9,4** aqui (**con el corte quieto en 2**). **La lectura que los tres sostienen, y no mas:** cuando el corte se queda quieto la senal puede ir en las dos direcciones, y lo que la mueve es **si las piezas que entran reparten vocabulario entre los dos bloques o lo concentran en uno**. Aqui entro un paso nuevo y entero en el segundo bloque (la validacion con reuniones reales) y los cuatro tipos se metieron en el primero, **y eso separo los bloques en vez de acercarlos**. **La glosa del instrumento no se toca en esta vuelta** (tocar un instrumento sellado sin encargo escrito es la especie que el acto 285 ya se nego a hacer), **y queda anotada como `PENDIENTE DE DOCTRINA` con sus cuatro mediciones al lado.**
+
+#### LA RELECTURA DEL PAR 599, HECHA Y VOLCADA: **DE `B` A `D`**
+
+`scripts/loop/vuelta32_relectura_opd01.py 599`, con la razon vieja impresa **ENTERA** y las aristas buscadas en los dos sentidos (`docs/loop/SALIDA_V43_ACTO361_RELECTURA_599.txt`). Volcada con `scripts/corregir_veredicto.py` (`docs/loop/SALIDA_V43_ACTO361_VEREDICTO_599.txt`): **puesto 599, B a D, 3.388 veredictos sin altas ni bajas.**
+
+**LA `B` ERA CONDICIONAL Y LA PROPIA RAZON VIEJA ESCRIBIO SU CONDICION:** por el **TOQUE UNICO** del banco `9.4`, el par se leia *DESPUES de que los dos nodos pasen por el arreglo de costuras, no antes: hoy el veredicto seria sobre dos textos que van a cambiar los dos*. **LOS DOS YA CAMBIARON Y LOS DOS ESTAN ESTABLES, medido en el fichero hoy**: `key_partners_hypothesis` fue de **14 pasos a 5** por `OP-F-04-WEI` y de **5 a 6** por esta fusion; `asociaciones_clave` fue de **12 pasos a 4**, y su campo `fuente`, que aquella razon denuncio por declarar *Essentials of Supply Chain Management* **dos veces** (una entera y otra truncada), dice hoy **una sola cadena limpia**, *Business Model Generation - Osterwalder*.
+
+**EL JUICIO, con los dos textos delante: lo que se solapa es UN paso contra UN paso**, el **2** de `asociaciones_clave` (clasificar las alianzas por tipo: estrategica, coopetencia, joint venture, proveedor) contra el **1** de `key_partners_hypothesis` (clasificar en los cuatro tipos: alianzas estrategicas, coopeticion, desarrollo conjunto de negocio y relaciones con proveedores clave), **y son casi los mismos cuatro tipos**.
+
+> **Y SE DICE LO QUE INCOMODA, porque callarlo seria elegir el dato que conviene: LA FUSION DE ESTE ACTO ACERCO ESE PASO EN VEZ DE ALEJARLO.** Los cuatro tipos vivian antes **solo en el resumen** del superviviente y ahora estan **dentro del paso 1**, que es justo donde el otro nodo los tiene. **La fusion hizo el solape mas nitido, y aun asi el veredicto es `D`**, por lo que sigue: **lo que NO se solapa es todo lo demas y es la mayoria.** `asociaciones_clave` decide **QUE** recursos o actividades se obtienen de terceros, define la **MOTIVACION** de cada asociacion (costo, riesgo o acceso a recursos) y termina **FORMALIZANDO ACUERDOS**; el superviviente no tiene ninguna de las tres, y a cambio evalua la flexibilidad del proveedor, distingue socios de recursos clave, actualiza el Canvas y planea la validacion con reuniones reales, **y de esas cuatro `asociaciones_clave` no tiene ninguna**. Entregables **distintos y no intercambiables**: un **MAPA** de socios con tipo de relacion y motivacion estrategica contra una **TABLA** con el intercambio de valor, los suplentes y la validacion planeada. **Libros distintos** y **cero arista**, buscada hoy en los dos sentidos. **Un paso compartido dentro de dos procedimientos de cuatro y de seis pasos, de dos libros distintos y con dos entregables distintos, no es una repeticion del nodo: es un paso que los dos comparten.**
+
+**EL MARCADOR SE MUEVE, Y SE PUBLICAN LAS DOS CIFRAS** (regla 1: el estado al cierre se mide al cierre, y la apertura no se retoca):
+
+| | n | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **apertura de la vuelta 43** (`SALIDA_V43_APERTURA.txt`) | 3.388 | 575 | **82** | 8 | **2.723** | 17,0 |
+| **tras la relectura del 599**, recomputado por el instrumento | 3.388 | 575 | **81** | 8 | **2.724** | 17,0 |
+
+**Y EL REPARTO, comprobado al cierre:** **12 de 12 piezas VIAJAN y CERO se pierden**, confirmado por la guarda 3 con **12 de 12 verbatim y 0 sobrantes**. **Con cero perdidas no hay nada que repartir.**
