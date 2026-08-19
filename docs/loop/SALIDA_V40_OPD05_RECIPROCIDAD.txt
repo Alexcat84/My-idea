@@ -1,0 +1,43 @@
+
+==============================================================================
+1. LA VARA DE LA CASA: cuanta reciprocidad tiene el grafo HOY
+==============================================================================
+  aristas declaradas por nodos vivos, resueltas (P.1): 15508
+  de ellas RECIPROCAS (el otro extremo la devuelve): 15445
+  tasa de reciprocidad del grafo: 99.59 por ciento
+
+  LECTURA DE LA CIFRA: si la tasa es alta, la reciprocidad es la practica
+  de la casa y romperla es un defecto que el plan tiene que reponer.
+
+==============================================================================
+2. OP-D-05, LA SELECCION DEL CEO: lo que la fusion hacia seleccion_ceo_fundador dejaria declarado en UN SOLO extremo
+==============================================================================
+  vecinos que quedarian apuntando al superviviente sin que el devuelva:
+     decision_egalitaria_vs_jerarquica             nodos_previos     -> seleccion_ceo_fundador
+     division_de_labor_vs_roles_superpuestos       nodos_previos     -> seleccion_ceo_fundador
+     founder_ceo_succession_process                nodos_previos     -> seleccion_ceo_fundador
+     reparto_inicial_equity                        nodos_previos     -> seleccion_ceo_fundador
+     seleccion_relaciones_cofundadores             nodos_siguientes  -> seleccion_ceo_fundador
+  TOTAL ROTURAS: 5
+
+  3. ARISTAS A REPONER EN seleccion_ceo_fundador para no dejar el grafo peor (P.16):
+     seleccion_ceo_fundador.nodos_previos     += seleccion_relaciones_cofundadores
+     seleccion_ceo_fundador.nodos_siguientes  += decision_egalitaria_vs_jerarquica
+     seleccion_ceo_fundador.nodos_siguientes  += division_de_labor_vs_roles_superpuestos
+     seleccion_ceo_fundador.nodos_siguientes  += founder_ceo_succession_process
+     seleccion_ceo_fundador.nodos_siguientes  += reparto_inicial_equity
+     TOTAL A REPONER: 5
+
+  4. LAS PROPIAS DEL ABSORBIDO QUE SE QUEDAN EN UN NODO DEPRECADO:
+     asignacion_de_titulos_ejecutivos              nodos_siguientes  -> founder_ceo_succession_process   el vecino la devuelve, se redirige sola
+     asignacion_de_titulos_ejecutivos              nodos_siguientes  -> division_de_labor_vs_roles_superpuestos   el vecino la devuelve, se redirige sola
+     errores_comunes_asignacion_roles              nodos_previos     -> seleccion_relaciones_cofundadores   el vecino la devuelve, se redirige sola
+     errores_comunes_asignacion_roles              nodos_siguientes  -> decision_egalitaria_vs_jerarquica   el vecino la devuelve, se redirige sola
+     errores_comunes_asignacion_roles              nodos_siguientes  -> reparto_inicial_equity   el vecino la devuelve, se redirige sola
+
+==============================================================================
+VEREDICTO DE LA MEDICION
+==============================================================================
+la tasa de reciprocidad del grafo esta medida; las roturas que cada fusion
+fabricaria estan contadas y nombradas; la lista de aristas a reponer esta
+impresa. NADA SE ESCRIBIO.

@@ -1,0 +1,41 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### seleccion_ceo_fundador  <==  asignacion_de_titulos_ejecutivos
+  1. DESEMPATE POR CABLEADO
+     seleccion_ceo_fundador                       pasos  4 | nombra  9 | LO NOMBRAN  9
+     asignacion_de_titulos_ejecutivos             pasos  5 | nombra  4 | LO NOMBRAN  4
+     >>> gana seleccion_ceo_fundador por 9 contra 4
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['asignacion_de_titulos_ejecutivos']
+  3. ENTRADAS QUE SE REDIRIGEN
+     criterios_equity_split                       nodos_previos     -> seleccion_ceo_fundador
+     decision_fundador_solo_vs_equipo             nodos_siguientes  -> seleccion_ceo_fundador
+     division_de_labor_vs_roles_superpuestos      nodos_previos     -> seleccion_ceo_fundador
+     founder_ceo_succession_process               nodos_previos     -> seleccion_ceo_fundador
+
+### seleccion_ceo_fundador  <==  errores_comunes_asignacion_roles
+  1. DESEMPATE POR CABLEADO
+     seleccion_ceo_fundador                       pasos  4 | nombra  9 | LO NOMBRAN  9
+     errores_comunes_asignacion_roles             pasos  5 | nombra  4 | LO NOMBRAN  4
+     >>> gana seleccion_ceo_fundador por 9 contra 4
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['errores_comunes_asignacion_roles']
+  3. ENTRADAS QUE SE REDIRIGEN
+     decision_egalitaria_vs_jerarquica            nodos_previos     -> seleccion_ceo_fundador
+     decision_fundador_solo_vs_equipo             nodos_siguientes  -> seleccion_ceo_fundador
+     reparto_inicial_equity                       nodos_previos     -> seleccion_ceo_fundador
+     seleccion_relaciones_cofundadores            nodos_siguientes  -> seleccion_ceo_fundador
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     criterios_equity_split                       nodos_previos     -> seleccion_ceo_fundador
+     decision_fundador_solo_vs_equipo             nodos_siguientes  -> seleccion_ceo_fundador
+     TOTAL NUEVAS: 2
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     NINGUNA: el acto queda sin aristas internas tras la fusion

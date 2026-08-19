@@ -1,0 +1,74 @@
+PLAN     : docs/loop/PLAN_V40_OPD05.json
+OPERACION: OP-D-05, FUSION UNICA: LA SELECCION DEL CEO. seleccion_ceo_fundador absorbe a asignacion_de_titulos_ejecutivos y a errores_comunes_asignacion_roles
+SELLADO  : SELLADO en la vuelta 40, 19 ago 2026, ANTES de ejecutar. El destejido de la operacion quedo declarado SIN COSTURA que destejer (la unica que el archivo nombraba, en seleccion_ceo_fundador, ya se la llevo OP-F-04-HOR en 2bd8dd76), asi que P.5 se contesta sobre texto YA ESTABLE.
+MODO     : --simular
+==============================================================================
+censo ANTES: 3853 ficheros, 3534 vivos, 319 deprecados
+guarda 1, fuente del superviviente contra el plan y vida de los TRES: OK
+  ACTO DE FUENTE UNICA (1 fuente(s) distinta(s) medida(s)), las tres impresas y ninguna escondida:
+    seleccion_ceo_fundador                 superviviente  The Founder's Dilemmas
+    asignacion_de_titulos_ejecutivos       absorbido      The Founder's Dilemmas
+    errores_comunes_asignacion_roles       absorbido      The Founder's Dilemmas
+guarda 2, seleccion_ceo_fundador                 pasos y condiciones (4, 2) contra (4, 2): OK
+guarda 2, asignacion_de_titulos_ejecutivos       pasos y condiciones (5, 3) contra (5, 3): OK
+guarda 2, errores_comunes_asignacion_roles       pasos y condiciones (5, 2) contra (5, 2): OK
+guarda 3, VERBATIM contra dataset/nodos: 21 de 21 calzan, 0 sobrantes en el plan
+guarda 4, cobertura de pasos        14 de 14, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones  7 de 7, repetidos [], faltan [], sobran []
+guarda 5, los finales derivados de los grupos calzan con el campo sellado: OK
+guarda 6, preservar_literal en el nodo resultante entero:
+    'presidente de la junta (Chairman)'        ['pasos']
+    'Chief Scientific Officer'                 ['pasos']
+    'capital humano, social y financiero'      ['pasos', 'resumen']
+    'full-time vs part-time'                   ['pasos']
+    '47%'                                      ['resumen']
+    'inercia de títulos'                       ['resumen']
+    'junta directiva solo por lealtad'         ['pasos']
+    'compatibilidad de motivaciones'           ['pasos']
+    8 de 8
+guarda 7, rastros en el nodo resultante entero:
+    'títulos ambiguos'                         ['pasos']
+    'C-level'                                  ['pasos', 'resumen']
+    'inversionistas'                           ['condiciones']
+    'checklist'                                ['entregable']
+    'capacidad de ejecución'                   ['pasos']
+    5 de 5
+redirecciones medidas hoy sobre nodos VIVOS: 8
+    criterios_equity_split                           nodos_previos      asignacion_de_titulos_ejecutivos -> seleccion_ceo_fundador
+    decision_egalitaria_vs_jerarquica                nodos_previos      errores_comunes_asignacion_roles -> seleccion_ceo_fundador
+    decision_fundador_solo_vs_equipo                 nodos_siguientes   asignacion_de_titulos_ejecutivos -> seleccion_ceo_fundador
+    decision_fundador_solo_vs_equipo                 nodos_siguientes   errores_comunes_asignacion_roles -> seleccion_ceo_fundador
+    division_de_labor_vs_roles_superpuestos          nodos_previos      asignacion_de_titulos_ejecutivos -> seleccion_ceo_fundador
+    founder_ceo_succession_process                   nodos_previos      asignacion_de_titulos_ejecutivos -> seleccion_ceo_fundador
+    reparto_inicial_equity                           nodos_previos      errores_comunes_asignacion_roles -> seleccion_ceo_fundador
+    seleccion_relaciones_cofundadores                nodos_siguientes   errores_comunes_asignacion_roles -> seleccion_ceo_fundador
+nodos DEPRECADOS que nombran y NO se tocan: 0
+guarda 8, redirecciones contra el plan sellado (8 esperadas): OK
+guarda 8b, deprecados que nombran contra el plan (0 esperados): OK
+
+### P.16, LAS DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas
+    criterios_equity_split                           nodos_previos      -> seleccion_ceo_fundador
+    decision_fundador_solo_vs_equipo                 nodos_siguientes   -> seleccion_ceo_fundador
+    TOTAL FABRICADAS: 2
+guarda 9, duplicadas fabricadas contra el plan (2 esperadas): OK
+guarda 10, cero auto-arista tras resolver: OK (0)
+guarda 11, cero duplicada tras resolver: OK (0)
+guarda 12, a6 del acta, titulo y etiqueta SIN TOCAR ('Decidir con intención quién será el CEO fundador' / 'Elige con Cuidado a Tu CEO'): OK
+
+EL RESULTADO, sobre copia en memoria:
+  seleccion_ceo_fundador: 6 pasos, 3 condiciones, alias ['asignacion_de_titulos_ejecutivos', 'errores_comunes_asignacion_roles']
+    1. Evalúa la compatibilidad de motivaciones con tus socios antes de fundar juntos, y reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente: confronta el conflicto de frente en lugar de evitarlo con títulos ambiguos
+    2. Identifica quién es la 'persona de la idea' original en el equipo y evalúa objetivamente si es realmente la mejor opción para CEO
+    3. Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión, midiendo el nivel de compromiso (full-time vs part-time) de cada cofundador y mapeando el capital humano, social y financiero que aporta cada fundador
+    4. Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer), y sé cauteloso al asignar títulos C-level tempranamente, considerando el crecimiento futuro
+    5. Negocia explícitamente el título de CEO antes de que surjan conflictos, y evita colocar automáticamente a cofundadores en la junta directiva solo por lealtad
+    6. Documenta el acuerdo formalmente para evitar ambigüedad futura, dejando por escrito por qué se asignó cada título para futura referencia
+    c1. Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO, o están por definir roles formales en las primeras etapas de formación del equipo, antes de asignar títulos formales
+    c2. Si existe ambigüedad o conflicto latente sobre quién lidera tu equipo, hay tensión sobre quién debe ser CEO, o el equipo está evitando una conversación difícil sobre quién lidera
+    c3. Cuando se está preparando documentación para inversionistas
+  entregable: Un acuerdo fundacional por escrito que designe formalmente al CEO y los demás títulos ejecutivos, con la decisión de cada uno justificada por la capacidad de liderazgo y el aporte de cada persona, revisado antes de firmarlo contra un checklist de los errores comunes al asignar roles
+  asignacion_de_titulos_ejecutivos: deprecado True, texto INTACTO (5 pasos, 3 condiciones)
+  errores_comunes_asignacion_roles: deprecado True, texto INTACTO (5 pasos, 2 condiciones)
+  ficheros que se tocarian: 10
+
+SIMULACION: cero escrituras.

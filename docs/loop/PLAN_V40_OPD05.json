@@ -1,0 +1,431 @@
+{
+ "operacion": "OP-D-05, FUSION UNICA: LA SELECCION DEL CEO. seleccion_ceo_fundador absorbe a asignacion_de_titulos_ejecutivos y a errores_comunes_asignacion_roles",
+ "estado": "SELLADO en la vuelta 40, 19 ago 2026, ANTES de ejecutar. El destejido de la operacion quedo declarado SIN COSTURA que destejer (la unica que el archivo nombraba, en seleccion_ceo_fundador, ya se la llevo OP-F-04-HOR en 2bd8dd76), asi que P.5 se contesta sobre texto YA ESTABLE.",
+ "regla": "OP-D-05 de docs/plan/02_DESTEJIDOS.md, acto 4 del cierre transitivo, tres nodos y tres pares A del archivo (492, 673 y 833). Regla de reparto adjudicada el 11 ago 2026: cada perdida al bloque del que proviene, y la que no tenga bloque al superviviente.",
+ "motivo": "El acto se leyo ENTERO por P.5 con el texto ya estable y resulto UNA sola familia: UN subconjunto cerrado que es el acto entero, los 3 de 3 pares en A, CERO nodos puente de P.10 y CERO aristas cojas en los tres. Los tres son de la MISMA fuente, The Founder's Dilemmas: NO es acto de fuente mixta, al contrario que los dos de OP-D-04.",
+ "fecha_corte": "2026-08-19",
+ "superviviente": "seleccion_ceo_fundador",
+ "absorbidos": [
+  "asignacion_de_titulos_ejecutivos",
+  "errores_comunes_asignacion_roles"
+ ],
+ "fuente_esperada": "The Founder's Dilemmas",
+ "prefijos": {
+  "S": "seleccion_ceo_fundador (superviviente)",
+  "T": "asignacion_de_titulos_ejecutivos",
+  "E": "errores_comunes_asignacion_roles"
+ },
+ "origenes": {
+  "S1": "Reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente",
+  "S2": "Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión",
+  "S3": "Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer)",
+  "S4": "Documenta el acuerdo formalmente para evitar ambigüedad futura",
+  "SC1": "Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO",
+  "SC2": "Si existe ambigüedad o conflicto latente sobre quién lidera tu equipo",
+  "T1": "Identificar quién es la 'persona de la idea' original en el equipo",
+  "T2": "Evaluar el nivel de compromiso (full-time vs part-time) de cada cofundador",
+  "T3": "Mapear el capital humano, social y financiero que aporta cada fundador",
+  "T4": "Negociar explícitamente el título de CEO antes de que surjan conflictos",
+  "T5": "Documentar por qué se asignó cada título para futura referencia",
+  "TC1": "Cuando el equipo fundador está por definir roles formales",
+  "TC2": "Si hay tensión sobre quién debe ser CEO",
+  "TC3": "Cuando se está preparando documentación para inversionistas",
+  "E1": "Confrontar directamente el conflicto sobre quién será CEO en lugar de evitarlo con títulos ambiguos",
+  "E2": "Evaluar objetivamente si la persona con la idea original es realmente la mejor opción para CEO",
+  "E3": "Ser cautelosos al asignar títulos C-level tempranamente, considerando el crecimiento futuro",
+  "E4": "Evitar colocar automáticamente a cofundadores en la junta directiva solo por lealtad",
+  "E5": "Evaluar compatibilidad de motivaciones antes de fundar juntos",
+  "EC1": "En las primeras etapas de formación del equipo fundador, antes de asignar títulos formales",
+  "EC2": "Si el equipo está evitando una conversación difícil sobre quién lidera"
+ },
+ "grupos_pasos": [
+  {
+   "origenes": [
+    "S1",
+    "E1",
+    "E5"
+   ],
+   "texto": "Evalúa la compatibilidad de motivaciones con tus socios antes de fundar juntos, y reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente: confronta el conflicto de frente en lugar de evitarlo con títulos ambiguos",
+   "motivo": "LAS TRES PIEZAS SON EL MISMO MOMENTO: la conversacion que se tiene ANTES, antes de fundar y antes de titular. Y las dos del donante son ADVERTENCIAS, no procedimientos: por P.11 califican el paso que el superviviente ya tenia en vez de anadir pasos, y por esa misma regla VIAJAN ENTERAS, porque una advertencia es lo mas facil de perder en una fusion y lo mas caro de recuperar."
+  },
+  {
+   "origenes": [
+    "T1",
+    "E2"
+   ],
+   "texto": "Identifica quién es la 'persona de la idea' original en el equipo y evalúa objetivamente si es realmente la mejor opción para CEO",
+   "motivo": "LA MISMA PIEZA VISTA POR LOS DOS LADOS: el donante T la IDENTIFICA y el donante E obliga a PONERLA A PRUEBA. Sueltas son media pieza cada una, y el superviviente solo la nombraba de refilon dentro de su paso 1."
+  },
+  {
+   "origenes": [
+    "S2",
+    "T2",
+    "T3"
+   ],
+   "texto": "Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión, midiendo el nivel de compromiso (full-time vs part-time) de cada cofundador y mapeando el capital humano, social y financiero que aporta cada fundador",
+   "motivo": "LA VARA DE LA EVALUACION. El superviviente decia CONTRA QUE evaluar (la capacidad de ejecucion) y no decia QUE MIRAR para medirla. Del donante viajan las dos varas concretas que le faltaban, que son ademas las que su propio resumen usa para explicar el 47 por ciento."
+  },
+  {
+   "origenes": [
+    "S3",
+    "E3"
+   ],
+   "texto": "Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer), y sé cauteloso al asignar títulos C-level tempranamente, considerando el crecimiento futuro",
+   "motivo": "EL MISMO OBJETO: los titulos que NO son el de CEO. El superviviente trae el catalogo concreto de roles alternativos, que no tiene ninguno de los otros dos, y el donante trae la advertencia de no inflarlos. Juntas son la pieza entera; separadas, el catalogo se lee como un premio de consolacion."
+  },
+  {
+   "origenes": [
+    "T4",
+    "E4"
+   ],
+   "texto": "Negocia explícitamente el título de CEO antes de que surjan conflictos, y evita colocar automáticamente a cofundadores en la junta directiva solo por lealtad",
+   "motivo": "EL REPARTO DE PODER FORMAL, y el superviviente NO LO NOMBRABA en ninguno de sus cuatro pasos: ni la negociacion explicita del titulo ni la junta. Las dos piezas son de los donantes y las dos viajan, la segunda como advertencia por P.11."
+  },
+  {
+   "origenes": [
+    "S4",
+    "T5"
+   ],
+   "texto": "Documenta el acuerdo formalmente para evitar ambigüedad futura, dejando por escrito por qué se asignó cada título para futura referencia",
+   "motivo": "LA MISMA ACCION DICHA DOS VECES, y del donante viaja el POR QUE: no basta con documentar el acuerdo, hay que documentar el MOTIVO de cada titulo. Es la pieza que hace auditable la decision, que es de lo que trata el nodo."
+  }
+ ],
+ "grupos_condiciones": [
+  {
+   "origenes": [
+    "SC1",
+    "TC1",
+    "EC1"
+   ],
+   "texto": "Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO, o están por definir roles formales en las primeras etapas de formación del equipo, antes de asignar títulos formales",
+   "motivo": "LA MISMA CONDICION DICHA TRES VECES, y de los donantes viaja EL MOMENTO: las primeras etapas, antes de asignar titulos formales."
+  },
+  {
+   "origenes": [
+    "SC2",
+    "TC2",
+    "EC2"
+   ],
+   "texto": "Si existe ambigüedad o conflicto latente sobre quién lidera tu equipo, hay tensión sobre quién debe ser CEO, o el equipo está evitando una conversación difícil sobre quién lidera",
+   "motivo": "LA MISMA CONDICION DICHA TRES VECES, y del donante viaja la senal mas util de las tres: que el equipo ESTA EVITANDO la conversacion, que es el sintoma que se ve desde fuera."
+  },
+  {
+   "origenes": [
+    "TC3"
+   ],
+   "texto": "Cuando se está preparando documentación para inversionistas",
+   "motivo": "PIEZA PROPIA DEL DONANTE, sin equivalente en el superviviente ni en el otro: el disparador EXTERNO, el unico de los tres que no viene del propio equipo. Viaja entera y sola, y por eso tiene grupo propio."
+  }
+ ],
+ "pasos_finales": [
+  "Evalúa la compatibilidad de motivaciones con tus socios antes de fundar juntos, y reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente: confronta el conflicto de frente en lugar de evitarlo con títulos ambiguos",
+  "Identifica quién es la 'persona de la idea' original en el equipo y evalúa objetivamente si es realmente la mejor opción para CEO",
+  "Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión, midiendo el nivel de compromiso (full-time vs part-time) de cada cofundador y mapeando el capital humano, social y financiero que aporta cada fundador",
+  "Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer), y sé cauteloso al asignar títulos C-level tempranamente, considerando el crecimiento futuro",
+  "Negocia explícitamente el título de CEO antes de que surjan conflictos, y evita colocar automáticamente a cofundadores en la junta directiva solo por lealtad",
+  "Documenta el acuerdo formalmente para evitar ambigüedad futura, dejando por escrito por qué se asignó cada título para futura referencia"
+ ],
+ "condiciones_finales": [
+  "Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO, o están por definir roles formales en las primeras etapas de formación del equipo, antes de asignar títulos formales",
+  "Si existe ambigüedad o conflicto latente sobre quién lidera tu equipo, hay tensión sobre quién debe ser CEO, o el equipo está evitando una conversación difícil sobre quién lidera",
+  "Cuando se está preparando documentación para inversionistas"
+ ],
+ "entregable_final": "Un acuerdo fundacional por escrito que designe formalmente al CEO y los demás títulos ejecutivos, con la decisión de cada uno justificada por la capacidad de liderazgo y el aporte de cada persona, revisado antes de firmarlo contra un checklist de los errores comunes al asignar roles",
+ "resumen_final": "La decisión de quién será CEO suele tomarse de forma casual o por defecto: la persona con la idea, o la que tiene la voz más fuerte, sin que evalúes realmente quién es el mejor candidato. Esta decisión pesa simbólica y realmente, y por la inercia propia de cualquier organización, es muy difícil revertirla sin causar disrupción. Tienes que evaluar activamente quién tiene la capacidad de liderar en las distintas etapas cambiantes de tu startup, no solo quién tiene pasión y visión inicial. La asignación de títulos ejecutivos (CEO, CTO, COO, etc.) entre cofundadores es una de las negociaciones más críticas y difíciles al inicio de un startup: los títulos tienen significado simbólico y traducen en autoridad real, afectando tanto la motivación interna como la percepción externa (inversores, empleados), y los factores que determinan quién recibe qué título incluyen el nivel de compromiso de cada fundador, si es la 'persona de la idea' original, y su capital humano, social y financiero (experiencia previa fundando, años de experiencia laboral, capital semilla invertido). Las 'personas de la idea' tienen 47% de probabilidad de convertirse en CEO vs 12% de los no-idea, pero este ajuste inicial puede debilitarse conforme la startup madura. Y existen 'caminos fáciles' que los equipos fundadores toman por evitar conflicto inmediato pero que generan problemas mayores a largo plazo: evitar el conflicto nombrando múltiples líderes, subestimar la 'inercia de títulos' (es difícil revertir un título mal asignado), inflar títulos C-level sin justificación real, querer aliados en la junta directiva, e ignorar motivaciones incompatibles entre socios.",
+ "titulo_sin_cambio": "Decidir con intención quién será el CEO fundador",
+ "etiqueta_arbol_sin_cambio": "Elige con Cuidado a Tu CEO",
+ "preservar_literal": [
+  "presidente de la junta (Chairman)",
+  "Chief Scientific Officer",
+  "capital humano, social y financiero",
+  "full-time vs part-time",
+  "47%",
+  "inercia de títulos",
+  "junta directiva solo por lealtad",
+  "compatibilidad de motivaciones"
+ ],
+ "rastros": [
+  "títulos ambiguos",
+  "C-level",
+  "inversionistas",
+  "checklist",
+  "capacidad de ejecución"
+ ],
+ "entregable_viejo": "Un acuerdo fundacional por escrito que designe formalmente al CEO y explique la decisión con base en la capacidad de liderazgo de cada persona",
+ "resumen_viejo": "La decisión de quién será CEO suele tomarse de forma casual o por defecto: la persona con la idea, o la que tiene la voz más fuerte, sin que evalúes realmente quién es el mejor candidato. Esta decisión pesa simbólica y realmente, y por la inercia propia de cualquier organización, es muy difícil revertirla sin causar disrupción. Tienes que evaluar activamente quién tiene la capacidad de liderar en las distintas etapas cambiantes de tu startup, no solo quién tiene pasión y visión inicial.",
+ "pasos_totales": {
+  "seleccion_ceo_fundador": 4,
+  "asignacion_de_titulos_ejecutivos": 5,
+  "errores_comunes_asignacion_roles": 5
+ },
+ "condiciones_totales": {
+  "seleccion_ceo_fundador": 2,
+  "asignacion_de_titulos_ejecutivos": 3,
+  "errores_comunes_asignacion_roles": 2
+ },
+ "eleccion_p8": {
+  "regla": "P.8, EL CABLEADO DESEMPATA, NO DECIDE. Donde el contenido dice algo manda el contenido, aunque el margen de aristas apunte al otro lado.",
+  "decide": "EL CONTENIDO",
+  "elegido": "seleccion_ceo_fundador",
+  "especie_de_9_3_1": "POR ELEGIR. De los TRES pares A, UNO SOLO nombra ganador en su razon (el 673). No hay GANADOR POR DERECHO, asi que la eleccion es de P.8.",
+  "lectura_de_contenido": [
+   "1. PADRE DECLARADO POR EL ARCHIVO, que P.8 cuenta como CONTENIDO con el mismo peso que el texto. La razon del par 673 dice, literal: 'El corto cabe entero dentro del primer bloque del largo'. El corto es errores_comunes_asignacion_roles y el primer bloque del largo es lo que HOY es seleccion_ceo_fundador entero, sus cuatro pasos, porque el segundo bloque ya se lo llevo OP-F-04-HOR. O sea que el archivo declara CONTENIDO de uno contenido en el otro, y nombra al continente. Es ademas el UNICO de los tres pares que nombra ganador.",
+   "2. EL EJE COMUN ES EL TITULO DEL SUPERVIVIENTE. La razon del par 492 dice que los dos 'mandan decidir con intencion quien es el CEO en vez de darlo por hecho', y el titulo de seleccion_ceo_fundador es, literal, 'Decidir con intencion quien sera el CEO fundador'. La cabeza de la serie es el nodo cuyo titulo ES el eje, y los otros dos son sus caras: la razon del 833 los describe como 'el mismo reparto de titulos contado en positivo y en negativo'.",
+   "3. P.11 SOBRE LOS DOS DONANTES, y desempata sin hacer falta el cableado. errores_comunes_asignacion_roles es, por la vara, LINEA y no procedimiento: quitadas las frases que empiezan por NO, por EVITA o por DE VERDAD (confrontar EN LUGAR DE evitarlo, evaluar OBJETIVAMENTE si es REALMENTE la mejor opcion, SER CAUTELOSOS, EVITAR colocar por lealtad) lo que queda es una lista de punteros. Un checklist de advertencias no es la cabeza de un procedimiento. Y P.11 lo cierra por el otro lado: eso NO autoriza a borrarlas, asi que las cinco viajan y este plan dice en que grupo cae cada una.",
+   "4. PIEZA PROPIA QUE NADIE MAS TIENE: el catalogo concreto de roles alternativos (presidente de la junta, CTO, Chief Scientific Officer) es del superviviente y no aparece en ninguno de los otros dos. Es la unica pieza del acto que dice QUE HACER con la persona de la idea cuando no es el mejor CEO."
+  ],
+  "cableado_solo_como_desempate": {
+   "usado_para_decidir": false,
+   "por_que_se_cita": "porque va A FAVOR del elegido y hay que decir que NO hizo falta: si el contenido no hubiera hablado, esta cifra habria decidido sola, y si hubiera ido en contra, habria perdido igual. Es prelacion, no coincidencia afortunada.",
+   "instrumento": "scripts/loop/vuelta39_acto.py --op OP-D-05, salida docs/loop/SALIDA_V40_OPD05_ACTO.txt, bloque 5",
+   "grados_medidos_hoy": {
+    "seleccion_ceo_fundador": 9,
+    "asignacion_de_titulos_ejecutivos": 4,
+    "errores_comunes_asignacion_roles": 4
+   },
+   "lectura": "NUEVE contra CUATRO y CUATRO, y gana el nueve, que es el mismo que gana por contenido. Cuando las dos varas coinciden la regla no se luce, y por eso se dice que la que mandaba era la primera.",
+   "coste_medido_de_la_eleccion": "CERO aristas. Los tres nodos tienen CERO aristas propias sin reciproco (bloque 6 de la salida del acto), asi que elegir a cualquiera de los tres no perdia ni una arista. La eleccion se juega entera en el contenido."
+  }
+ },
+ "simulacion": {
+  "instrumento": "scripts/plan/simular_fusion.py (P.7), scripts/loop/vuelta40_reciprocidad_post.py y scripts/loop/vuelta40_registros_no_grafo.py",
+  "redirecciones_esperadas": [
+   {
+    "nodo": "criterios_equity_split",
+    "campo": "nodos_previos",
+    "nombraba": "asignacion_de_titulos_ejecutivos"
+   },
+   {
+    "nodo": "decision_egalitaria_vs_jerarquica",
+    "campo": "nodos_previos",
+    "nombraba": "errores_comunes_asignacion_roles"
+   },
+   {
+    "nodo": "decision_fundador_solo_vs_equipo",
+    "campo": "nodos_siguientes",
+    "nombraba": "asignacion_de_titulos_ejecutivos"
+   },
+   {
+    "nodo": "decision_fundador_solo_vs_equipo",
+    "campo": "nodos_siguientes",
+    "nombraba": "errores_comunes_asignacion_roles"
+   },
+   {
+    "nodo": "division_de_labor_vs_roles_superpuestos",
+    "campo": "nodos_previos",
+    "nombraba": "asignacion_de_titulos_ejecutivos"
+   },
+   {
+    "nodo": "founder_ceo_succession_process",
+    "campo": "nodos_previos",
+    "nombraba": "asignacion_de_titulos_ejecutivos"
+   },
+   {
+    "nodo": "reparto_inicial_equity",
+    "campo": "nodos_previos",
+    "nombraba": "errores_comunes_asignacion_roles"
+   },
+   {
+    "nodo": "seleccion_relaciones_cofundadores",
+    "campo": "nodos_siguientes",
+    "nombraba": "errores_comunes_asignacion_roles"
+   }
+  ],
+  "redirecciones_no_tocadas_por_deprecadas": [],
+  "duplicadas_nuevas_esperadas": [
+   {
+    "nodo": "criterios_equity_split",
+    "campo": "nodos_previos",
+    "resuelve_a": "seleccion_ceo_fundador"
+   },
+   {
+    "nodo": "decision_fundador_solo_vs_equipo",
+    "campo": "nodos_siguientes",
+    "resuelve_a": "seleccion_ceo_fundador"
+   }
+  ],
+  "registros_que_no_son_el_grafo": {
+   "por_que_va_en_el_plan": "la leccion de la vuelta 39: su plan enumero 17 referencias de NODO, no miro el registro de puentes, y Gate 0 cayo en rojo DESPUES de escribir. Aqui se enumera ANTES.",
+   "instrumento": "scripts/loop/vuelta40_registros_no_grafo.py, salida en docs/loop/SALIDA_V40_OPD05_REGISTROS.txt",
+   "bridges_aprobados_que_los_nombran": 0,
+   "registros_vivos_que_hay_que_redirigir": [],
+   "aun_asi_se_corre": "scripts/reanclar_por_resolutor.py ENTRE la fusion y run_phase1, practica adjudicada por el acta de la vuelta 39 para toda fusion futura. Una guarda que solo se corre cuando se sospecha no es una guarda."
+  },
+  "simetrizacion_esperada": {
+   "quien_la_escribe": "scripts/run_phase1.py, paso 5, Simetrizacion de enlaces. NO la escribe el ejecutor de fusiones: el redirige a los vecinos y no toca la lista propia del superviviente.",
+   "vara": "la tasa de reciprocidad del grafo medida hoy es 99,59 por ciento (15.445 de 15.508 aristas de nodos vivos, resueltas por P.1), asi que romper la reciprocidad es un defecto y no lo corriente.",
+   "guarda_para_el_dia_de_la_ejecucion": "symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos",
+   "aristas": [
+    {
+     "campo": "nodos_previos",
+     "vecino": "seleccion_relaciones_cofundadores"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "decision_egalitaria_vs_jerarquica"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "division_de_labor_vs_roles_superpuestos"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "founder_ceo_succession_process"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "reparto_inicial_equity"
+    }
+   ]
+  }
+ },
+ "tabla_perdidas_p13": [
+  {
+   "pieza": "E1",
+   "texto": "Confrontar directamente el conflicto sobre quién será CEO en lugar de evitarlo con títulos ambiguos",
+   "de": "errores_comunes_asignacion_roles",
+   "clase": "VIAJA",
+   "destino": "paso 1 del resultado"
+  },
+  {
+   "pieza": "E2",
+   "texto": "Evaluar objetivamente si la persona con la idea original es realmente la mejor opción para CEO",
+   "de": "errores_comunes_asignacion_roles",
+   "clase": "VIAJA",
+   "destino": "paso 2 del resultado"
+  },
+  {
+   "pieza": "E3",
+   "texto": "Ser cautelosos al asignar títulos C-level tempranamente, considerando el crecimiento futuro",
+   "de": "errores_comunes_asignacion_roles",
+   "clase": "VIAJA",
+   "destino": "paso 4 del resultado"
+  },
+  {
+   "pieza": "E4",
+   "texto": "Evitar colocar automáticamente a cofundadores en la junta directiva solo por lealtad",
+   "de": "errores_comunes_asignacion_roles",
+   "clase": "VIAJA",
+   "destino": "paso 5 del resultado"
+  },
+  {
+   "pieza": "E5",
+   "texto": "Evaluar compatibilidad de motivaciones antes de fundar juntos",
+   "de": "errores_comunes_asignacion_roles",
+   "clase": "VIAJA",
+   "destino": "paso 1 del resultado"
+  },
+  {
+   "pieza": "EC1",
+   "texto": "En las primeras etapas de formación del equipo fundador, antes de asignar títulos formales",
+   "de": "errores_comunes_asignacion_roles",
+   "clase": "VIAJA",
+   "destino": "condicion 1 del resultado"
+  },
+  {
+   "pieza": "EC2",
+   "texto": "Si el equipo está evitando una conversación difícil sobre quién lidera",
+   "de": "errores_comunes_asignacion_roles",
+   "clase": "VIAJA",
+   "destino": "condicion 2 del resultado"
+  },
+  {
+   "pieza": "S1",
+   "texto": "Reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente",
+   "de": "seleccion_ceo_fundador",
+   "clase": "VIAJA",
+   "destino": "paso 1 del resultado"
+  },
+  {
+   "pieza": "S2",
+   "texto": "Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión",
+   "de": "seleccion_ceo_fundador",
+   "clase": "VIAJA",
+   "destino": "paso 3 del resultado"
+  },
+  {
+   "pieza": "S3",
+   "texto": "Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer)",
+   "de": "seleccion_ceo_fundador",
+   "clase": "VIAJA",
+   "destino": "paso 4 del resultado"
+  },
+  {
+   "pieza": "S4",
+   "texto": "Documenta el acuerdo formalmente para evitar ambigüedad futura",
+   "de": "seleccion_ceo_fundador",
+   "clase": "VIAJA",
+   "destino": "paso 6 del resultado"
+  },
+  {
+   "pieza": "SC1",
+   "texto": "Si tú y tu equipo fundador aún no han definido formalmente quién es el CEO",
+   "de": "seleccion_ceo_fundador",
+   "clase": "VIAJA",
+   "destino": "condicion 1 del resultado"
+  },
+  {
+   "pieza": "SC2",
+   "texto": "Si existe ambigüedad o conflicto latente sobre quién lidera tu equipo",
+   "de": "seleccion_ceo_fundador",
+   "clase": "VIAJA",
+   "destino": "condicion 2 del resultado"
+  },
+  {
+   "pieza": "T1",
+   "texto": "Identificar quién es la 'persona de la idea' original en el equipo",
+   "de": "asignacion_de_titulos_ejecutivos",
+   "clase": "VIAJA",
+   "destino": "paso 2 del resultado"
+  },
+  {
+   "pieza": "T2",
+   "texto": "Evaluar el nivel de compromiso (full-time vs part-time) de cada cofundador",
+   "de": "asignacion_de_titulos_ejecutivos",
+   "clase": "VIAJA",
+   "destino": "paso 3 del resultado"
+  },
+  {
+   "pieza": "T3",
+   "texto": "Mapear el capital humano, social y financiero que aporta cada fundador",
+   "de": "asignacion_de_titulos_ejecutivos",
+   "clase": "VIAJA",
+   "destino": "paso 3 del resultado"
+  },
+  {
+   "pieza": "T4",
+   "texto": "Negociar explícitamente el título de CEO antes de que surjan conflictos",
+   "de": "asignacion_de_titulos_ejecutivos",
+   "clase": "VIAJA",
+   "destino": "paso 5 del resultado"
+  },
+  {
+   "pieza": "T5",
+   "texto": "Documentar por qué se asignó cada título para futura referencia",
+   "de": "asignacion_de_titulos_ejecutivos",
+   "clase": "VIAJA",
+   "destino": "paso 6 del resultado"
+  },
+  {
+   "pieza": "TC1",
+   "texto": "Cuando el equipo fundador está por definir roles formales",
+   "de": "asignacion_de_titulos_ejecutivos",
+   "clase": "VIAJA",
+   "destino": "condicion 1 del resultado"
+  },
+  {
+   "pieza": "TC2",
+   "texto": "Si hay tensión sobre quién debe ser CEO",
+   "de": "asignacion_de_titulos_ejecutivos",
+   "clase": "VIAJA",
+   "destino": "condicion 2 del resultado"
+  },
+  {
+   "pieza": "TC3",
+   "texto": "Cuando se está preparando documentación para inversionistas",
+   "de": "asignacion_de_titulos_ejecutivos",
+   "clase": "VIAJA",
+   "destino": "condicion 3 del resultado"
+  }
+ ]
+}

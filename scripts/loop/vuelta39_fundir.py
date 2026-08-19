@@ -135,7 +135,15 @@ def main():
             fallos.append("%s: ya esta deprecado" % nid)
     print("guarda 1, fuente del superviviente contra el plan y vida de los TRES: %s"
           % ("OK" if not fallos else "ROJO"))
-    print("  ACTO DE FUENTE MIXTA, las tres fuentes impresas y ninguna escondida:")
+    # LA ETIQUETA SE CALCULA, NO SE AFIRMA (19 ago 2026, vuelta 40). Esta linea
+    # decia ACTO DE FUENTE MIXTA siempre, porque los dos actos de OP-D-04 lo eran.
+    # OP-D-05 NO lo es: sus tres nodos son de la misma fuente, y un instrumento que
+    # imprime una etiqueta falsa mientras mide bien es exactamente la degradacion
+    # silenciosa contra la que existen estas guardas. Se mide y se dice cual es.
+    _fuentes = set(nodos[nid][0].get("fuente") for nid in [sup] + absorbidos)
+    print("  ACTO DE FUENTE %s (%d fuente(s) distinta(s) medida(s)), las tres "
+          "impresas y ninguna escondida:"
+          % ("MIXTA" if len(_fuentes) > 1 else "UNICA", len(_fuentes)))
     for nid in [sup] + absorbidos:
         papel = "superviviente" if nid == sup else "absorbido"
         print("    %-38s %-14s %s" % (nid, papel, nodos[nid][0].get("fuente")))

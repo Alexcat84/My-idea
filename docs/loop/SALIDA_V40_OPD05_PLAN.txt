@@ -1,0 +1,54 @@
+PLAN SELLADO: docs/loop/PLAN_V40_OPD05.json
+  superviviente : seleccion_ceo_fundador
+  absorbidos    : asignacion_de_titulos_ejecutivos, errores_comunes_asignacion_roles
+  fuente de los tres: The Founder's Dilemmas
+  origenes generados VERBATIM del fichero: 21
+  pasos finales : 6 (estandar 3 a 6: DENTRO)
+  condiciones finales: 3
+  redirecciones esperadas: 8
+      criterios_equity_split                         nodos_previos      asignacion_de_titulos_ejecutivos
+      decision_egalitaria_vs_jerarquica              nodos_previos      errores_comunes_asignacion_roles
+      decision_fundador_solo_vs_equipo               nodos_siguientes   asignacion_de_titulos_ejecutivos
+      decision_fundador_solo_vs_equipo               nodos_siguientes   errores_comunes_asignacion_roles
+      division_de_labor_vs_roles_superpuestos        nodos_previos      asignacion_de_titulos_ejecutivos
+      founder_ceo_succession_process                 nodos_previos      asignacion_de_titulos_ejecutivos
+      reparto_inicial_equity                         nodos_previos      errores_comunes_asignacion_roles
+      seleccion_relaciones_cofundadores              nodos_siguientes   errores_comunes_asignacion_roles
+  deprecados que nombran y no se tocan: 0
+  duplicadas que la fusion fabrica: 2
+      criterios_equity_split                         nodos_previos
+      decision_fundador_solo_vs_equipo               nodos_siguientes
+  simetrizacion esperada: 5 aristas
+      seleccion_ceo_fundador.nodos_previos      += seleccion_relaciones_cofundadores
+      seleccion_ceo_fundador.nodos_siguientes   += decision_egalitaria_vs_jerarquica
+      seleccion_ceo_fundador.nodos_siguientes   += division_de_labor_vs_roles_superpuestos
+      seleccion_ceo_fundador.nodos_siguientes   += founder_ceo_succession_process
+      seleccion_ceo_fundador.nodos_siguientes   += reparto_inicial_equity
+
+  LA TABLA DE PERDIDAS, DERIVADA de los grupos y no tecleada:
+      E1    errores_comunes_asignacion_roles   VIAJA    paso 1 del resultado
+      E2    errores_comunes_asignacion_roles   VIAJA    paso 2 del resultado
+      E3    errores_comunes_asignacion_roles   VIAJA    paso 4 del resultado
+      E4    errores_comunes_asignacion_roles   VIAJA    paso 5 del resultado
+      E5    errores_comunes_asignacion_roles   VIAJA    paso 1 del resultado
+      EC1   errores_comunes_asignacion_roles   VIAJA    condicion 1 del resultado
+      EC2   errores_comunes_asignacion_roles   VIAJA    condicion 2 del resultado
+      S1    seleccion_ceo_fundador             VIAJA    paso 1 del resultado
+      S2    seleccion_ceo_fundador             VIAJA    paso 3 del resultado
+      S3    seleccion_ceo_fundador             VIAJA    paso 4 del resultado
+      S4    seleccion_ceo_fundador             VIAJA    paso 6 del resultado
+      SC1   seleccion_ceo_fundador             VIAJA    condicion 1 del resultado
+      SC2   seleccion_ceo_fundador             VIAJA    condicion 2 del resultado
+      T1    asignacion_de_titulos_ejecutivos   VIAJA    paso 2 del resultado
+      T2    asignacion_de_titulos_ejecutivos   VIAJA    paso 3 del resultado
+      T3    asignacion_de_titulos_ejecutivos   VIAJA    paso 3 del resultado
+      T4    asignacion_de_titulos_ejecutivos   VIAJA    paso 5 del resultado
+      T5    asignacion_de_titulos_ejecutivos   VIAJA    paso 6 del resultado
+      TC1   asignacion_de_titulos_ejecutivos   VIAJA    condicion 1 del resultado
+      TC2   asignacion_de_titulos_ejecutivos   VIAJA    condicion 2 del resultado
+      TC3   asignacion_de_titulos_ejecutivos   VIAJA    condicion 3 del resultado
+      VIAJAN 21 de 21. SE PIERDEN 0.
+      LECTURA: la regla de reparto de OP-D-05 manda cada perdida al
+      bloque del que proviene, y la que no tenga bloque al
+      superviviente. Con CERO perdidas no hay nada que repartir, y eso
+      es lo que hay que comprobar al cierre, no suponerlo.

@@ -1761,3 +1761,77 @@ CERO del ejecutor, CERO del auditor*), y la caida de la vuelta 38 quedo corregid
 **Nada de este registro se borra ni se reescribe: el discutible del punto 3 y el bloque de lo que
 el cierre hizo fuera del plan se quedan tal como se escribieron, y esta seccion dice como se
 adjudicaron.**
+
+## `OP-D-05` SELLADA: **LA FUSION UNICA DE LA SELECCION DEL CEO** (19 ago 2026, vuelta 40)
+
+**ESTA SECCION SE ESCRIBE ANTES DE EJECUTAR Y NO SE REESCRIBE DESPUES.** Lo que pase al ejecutar va en su propia seccion de cierre, debajo, para que el plan y su resultado se puedan comparar sin que uno tape al otro.
+
+### EL DESTEJIDO: **NO HAY COSTURA QUE DESTEJER**, y va medido
+
+La tabla de orden de este mismo fichero le cuenta a `OP-D-05` **UN destejido** y le pone de ancla `seleccion_ceo_fundador`. **Ese destejido tenia sujeto escrito**, aunque no en la seccion de la operacion sino en las razones de sus propios pares: la del puesto **673** dice que `seleccion_ceo_fundador` es **costura CONFIRMADA** en `docs/FICHA_SUBFUSION_GRADIENTE.md`, **doce pasos** y corte **1 a 4 contra 5 a 12**, y la del **492** describe el mismo corte.
+
+**MEDIDO CONTRA EL NODO DE HOY** (`scripts/loop/vuelta40_destejido_opd05.py`, salida en `docs/loop/SALIDA_V40_OPD05_DESTEJIDO.txt`): el nodo tiene **cuatro pasos** y **una sola fuente**, y de las **seis huellas** del bloque 5 a 12 (mentor, brecha, CEO profesional, control, autoevaluacion, clausula) **sobreviven CERO**. **Ya se lo llevo `OP-F-04-HOR`**, commit **`2bd8dd76`**, medido con `git log --follow` y no supuesto. **Es el mismo caso que `OP-D-03`**, cuya celda de esa tabla dice que **dos de sus tres costuras estaban CONSUMIDAS por la fase 01**.
+
+**Y EL INSTRUMENTO DE LA CASA, YA VIVO, DICE LO SUYO.** `scripts/costuras_internas.py` se reparo en esta misma vuelta y entrega con `exit 0`. De los tres nodos **cita UNO**, `errores_comunes_asignacion_roles` (bloque **45,5**, corte tras el paso 2), y **no cita** a los otros dos. **La cita se leyo con el texto delante**: los cinco pasos de ese nodo son **cinco errores distintos**, y por **`P.11`** son **advertencias y no procedimientos** (quitadas las frases que empiezan por NO, por EVITA o por DE VERDAD, lo que queda es una lista de punteros). **Comparten tema, no narracion**, que es lo que la senal de bloque no puede distinguir y su propio encabezado declara. **El instrumento CITA y NO JUZGA: aqui cito, se leyo, y la lectura dice que no hay costura.**
+
+### `P.5` CON EL TEXTO YA ESTABLE: **UNA familia, no dos**
+
+`scripts/loop/vuelta39_acto.py --op OP-D-05`, salida en `docs/loop/SALIDA_V40_OPD05_ACTO.txt`, corrida hoy:
+
+| | medido el 19 ago 2026 |
+|---|---|
+| pares | **3 de 3 con clase, los tres `A` y los tres del ARCHIVO** (puestos **492**, **673** y **833**), cero lecturas dirigidas |
+| nodos puente (`P.10`) | **CERO** |
+| subconjuntos cerrados | **1, y es el acto entero**: la respuesta a `P.5` es **UNA familia** |
+| aristas cojas | **CERO en los tres**: elegir superviviente **no cuesta ni una arista** |
+| fuente | **los tres de *The Founder's Dilemmas***: **NO es acto de fuente mixta**, al contrario que los dos de `OP-D-04` |
+| `9.3.1` sobre los pares `A` | de 3, **UNO** nombra ganador (el 673). **No hay GANADOR POR DERECHO**: la especie es **POR ELEGIR** |
+
+**Los tres pares ya tenian clase del archivo y el destejido no los dejo rancios** (no hubo destejido), asi que **`P.5` se contesta sobre texto ya estable sin releer ni un par**, que es exactamente la condicion que la nota de la operacion pone.
+
+### `P.8`: **DECIDE EL CONTENIDO**, y el cableado solo acompaña
+
+**SUPERVIVIENTE: `seleccion_ceo_fundador`.**
+
+- 1. PADRE DECLARADO POR EL ARCHIVO, que P.8 cuenta como CONTENIDO con el mismo peso que el texto. La razon del par 673 dice, literal: 'El corto cabe entero dentro del primer bloque del largo'. El corto es errores_comunes_asignacion_roles y el primer bloque del largo es lo que HOY es seleccion_ceo_fundador entero, sus cuatro pasos, porque el segundo bloque ya se lo llevo OP-F-04-HOR. O sea que el archivo declara CONTENIDO de uno contenido en el otro, y nombra al continente. Es ademas el UNICO de los tres pares que nombra ganador.
+- 2. EL EJE COMUN ES EL TITULO DEL SUPERVIVIENTE. La razon del par 492 dice que los dos 'mandan decidir con intencion quien es el CEO en vez de darlo por hecho', y el titulo de seleccion_ceo_fundador es, literal, 'Decidir con intencion quien sera el CEO fundador'. La cabeza de la serie es el nodo cuyo titulo ES el eje, y los otros dos son sus caras: la razon del 833 los describe como 'el mismo reparto de titulos contado en positivo y en negativo'.
+- 3. P.11 SOBRE LOS DOS DONANTES, y desempata sin hacer falta el cableado. errores_comunes_asignacion_roles es, por la vara, LINEA y no procedimiento: quitadas las frases que empiezan por NO, por EVITA o por DE VERDAD (confrontar EN LUGAR DE evitarlo, evaluar OBJETIVAMENTE si es REALMENTE la mejor opcion, SER CAUTELOSOS, EVITAR colocar por lealtad) lo que queda es una lista de punteros. Un checklist de advertencias no es la cabeza de un procedimiento. Y P.11 lo cierra por el otro lado: eso NO autoriza a borrarlas, asi que las cinco viajan y este plan dice en que grupo cae cada una.
+- 4. PIEZA PROPIA QUE NADIE MAS TIENE: el catalogo concreto de roles alternativos (presidente de la junta, CTO, Chief Scientific Officer) es del superviviente y no aparece en ninguno de los otros dos. Es la unica pieza del acto que dice QUE HACER con la persona de la idea cuando no es el mejor CEO.
+
+**EL CABLEADO, citado y NO usado para decidir:** `seleccion_ceo_fundador` **9**, `asignacion_de_titulos_ejecutivos` **4**, `errores_comunes_asignacion_roles` **4**. NUEVE contra CUATRO y CUATRO, y gana el nueve, que es el mismo que gana por contenido. Cuando las dos varas coinciden la regla no se luce, y por eso se dice que la que mandaba era la primera.
+
+> **Y EL COSTE DE LA ELECCION ESTA MEDIDO: CERO aristas.** Los tres nodos tienen CERO aristas propias sin reciproco (bloque 6 de la salida del acto), asi que elegir a cualquiera de los tres no perdia ni una arista. La eleccion se juega entera en el contenido.
+
+### EL MAPA DE MOVIMIENTO, celda a celda
+
+**Prefijos:** `S` = `seleccion_ceo_fundador` (superviviente), `T` = `asignacion_de_titulos_ejecutivos`, `E` = `errores_comunes_asignacion_roles`.
+
+| paso del resultado | de que origenes sale | motivo |
+|---:|---|---|
+| 1 | S1, E1, E5 | LAS TRES PIEZAS SON EL MISMO MOMENTO: la conversacion que se tiene ANTES, antes de fundar y antes de titular. Y las dos del donante son ADVERTENCIAS, no procedimientos: por P.11 califican el paso que el superviviente ya tenia en vez de anadir pasos, y por esa misma regla VIAJAN ENTERAS, porque una advertencia es lo mas facil de perder en una fusion y lo mas caro de recuperar. |
+| 2 | T1, E2 | LA MISMA PIEZA VISTA POR LOS DOS LADOS: el donante T la IDENTIFICA y el donante E obliga a PONERLA A PRUEBA. Sueltas son media pieza cada una, y el superviviente solo la nombraba de refilon dentro de su paso 1. |
+| 3 | S2, T2, T3 | LA VARA DE LA EVALUACION. El superviviente decia CONTRA QUE evaluar (la capacidad de ejecucion) y no decia QUE MIRAR para medirla. Del donante viajan las dos varas concretas que le faltaban, que son ademas las que su propio resumen usa para explicar el 47 por ciento. |
+| 4 | S3, E3 | EL MISMO OBJETO: los titulos que NO son el de CEO. El superviviente trae el catalogo concreto de roles alternativos, que no tiene ninguno de los otros dos, y el donante trae la advertencia de no inflarlos. Juntas son la pieza entera; separadas, el catalogo se lee como un premio de consolacion. |
+| 5 | T4, E4 | EL REPARTO DE PODER FORMAL, y el superviviente NO LO NOMBRABA en ninguno de sus cuatro pasos: ni la negociacion explicita del titulo ni la junta. Las dos piezas son de los donantes y las dos viajan, la segunda como advertencia por P.11. |
+| 6 | S4, T5 | LA MISMA ACCION DICHA DOS VECES, y del donante viaja el POR QUE: no basta con documentar el acuerdo, hay que documentar el MOTIVO de cada titulo. Es la pieza que hace auditable la decision, que es de lo que trata el nodo. |
+
+| condicion del resultado | de que origenes sale | motivo |
+|---:|---|---|
+| 1 | SC1, TC1, EC1 | LA MISMA CONDICION DICHA TRES VECES, y de los donantes viaja EL MOMENTO: las primeras etapas, antes de asignar titulos formales. |
+| 2 | SC2, TC2, EC2 | LA MISMA CONDICION DICHA TRES VECES, y del donante viaja la senal mas util de las tres: que el equipo ESTA EVITANDO la conversacion, que es el sintoma que se ve desde fuera. |
+| 3 | TC3 | PIEZA PROPIA DEL DONANTE, sin equivalente en el superviviente ni en el otro: el disparador EXTERNO, el unico de los tres que no viene del propio equipo. Viaja entera y sola, y por eso tiene grupo propio. |
+
+**LA TABLA DE PERDIDAS DE `P.13`, derivada de los grupos: 21 de 21 piezas VIAJAN y CERO se pierden.** La regla de reparto adjudicada el 11 ago 2026 manda cada perdida al bloque del que proviene y la que no tenga bloque al superviviente; **con cero perdidas no hay nada que repartir, y eso se comprueba al cierre en vez de suponerse.**
+
+### LO QUE LA SIMULACION DICE QUE VA A PASAR, sellado antes de ejecutar
+
+| | esperado |
+|---|---|
+| redirecciones sobre nodos vivos | **8** |
+| deprecados que nombran y NO se tocan | **0** |
+| duplicadas que la fusion fabrica (`P.16`) | **2**, y las limpia la misma operacion |
+| aristas de simetrizacion que el paso 5 tiene que anadir | **5**, ni una mas ni una menos |
+| pasos del resultado | **6**, **DENTRO del estandar de 3 a 6**: esta operacion **no necesita la excepcion de clase** que `OP-D-04` si necesito |
+
+**LOS REGISTROS QUE NO SON EL GRAFO, ENUMERADOS ANTES Y NO DESPUES.** La leccion de la vuelta 39: su plan enumero 17 referencias de NODO, no miro el registro de puentes, y Gate 0 cayo en rojo DESPUES de escribir. Aqui se enumera ANTES. El barrido (`scripts/loop/vuelta40_registros_no_grafo.py`) da **CERO registros vivos** que nombren a alguno de los tres, y la comprobacion dirigida sobre **los nueve `bridges_aprobados.json`** da **cero apariciones en los nueve**. **Aun asi se corre `reanclar_por_resolutor.py` entre la fusion y `run_phase1`**: es la practica que el acta de la vuelta 39 adjudico para toda fusion futura, y **una guarda que solo se corre cuando se sospecha no es una guarda.**
+
