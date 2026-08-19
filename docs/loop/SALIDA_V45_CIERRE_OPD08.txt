@@ -1,0 +1,92 @@
+==============================================================================
+EL CIERRE DE OP-D-08, MEDIDO HOY CONTRA EL ARCHIVO Y EL GRAFO
+==============================================================================
+
+### (1) LOS NUEVE PUNTOS DEL CAMPO verificacion, copiados del fichero
+
+  1. CASO POSITIVO DE LA OPERACION, y es el que la manda: EL PAR 784 SE DESCONGELA Y SE JUZGA. Su razon dice, con esas palabras, NO SE JUZGA HOY: el nodo l...
+  2. Y AL JUZGARLO SE COMPRUEBA LO QUE EL PROPIO 784 DEJO ANOTADO: que el analisis cruzado (como una debilidad de un bloque golpea a los otros) NO esta en ...
+  3. el veredicto 1434 (D contra value_proposition_canvas) se RELEE contra el nodo destejido y tiene que seguir dando D: su ancla, la linea definir la prop...
+  4. el veredicto 1136 (D contra pensamiento_visual_modelos_negocio) se relee: la clausula de las NOTAS ADHESIVAS tiene que seguir viva, porque es la linea...
+  5. CERO MOVIMIENTO DE GRAFO, medido y no supuesto (banco 9.14 y P.1): lienzo_modelo_negocio declara 91 vecinos en sus dos campos antes de la operacion y ...
+  6. las TRES aristas paso a nodo en las que este nodo es HIJO siguen resolviendo (de tipo_de_mercado_estrategia_competitiva paso 5, de customer_discovery_...
+  7. EL RECUENTO QUE CIERRA LA CIRUGIA: el nodo queda con UNA sola orden de completar los nueve bloques. Si al recontar quedan dos, el destejido no se hizo
+  8. el entregable_esperado se relee contra el texto que quede: hoy dice Lienzo de Modelo de Negocio completo con los 9 bloques definidos y coherentes entr...
+  9. GATE 0 verde, y recomputo del cierre transitivo tras el acto (banco 9.21): el destejido puede cambiar el veredicto del 784, y si el 784 saliera A este...
+
+### (2) EL CASO POSITIVO: EL PAR 784, RELEIDO Y JUZGADO
+
+  puesto 784 | clase HOY: D | lienzo_modelo_negocio contra swot_business_model_canvas
+  su razon ABRE con marca de congelado: False
+  su razon lleva la frase NO SE JUZGA HOY: True
+  su razon declara la correccion: True
+  su razon conserva la vieja a la vista: True
+
+  pares del archivo ENTERO con la frase NO SE JUZGA HOY: 1
+  pares del archivo ENTERO que abren con marca de congelado: 1
+    puesto 1190   clase D   formalize_advisory_board con identificar_consejo_asesores
+
+### (3) EL RECOMPUTO DEL CIERRE TRANSITIVO tras el acto (banco 9.21)
+
+  pares de clase A vigentes en el archivo hoy: 575
+  lienzo_modelo_negocio            componente hoy: 1  (lienzo_modelo_negocio)
+  swot_business_model_canvas       componente hoy: 1  (swot_business_model_canvas)
+
+  LA GUARDA QUE LA OPERACION ESCRIBIO: 'si el 784 saliera A este nodo
+  dejaria de ser componente de uno'. Salio D, asi que NO aporta arista
+  y el nodo SIGUE siendo componente de uno.
+
+### (4) CERO MOVIMIENTO DE GRAFO, re-medido al cierre
+
+  vecinos de lienzo_modelo_negocio: 25 previos + 66 siguientes = 91
+  entradas de arista del grafo entero: 16898 sobre 3853 ficheros
+  ids_alias creados por este acto: 0
+  el nodo sigue VIVO: True
+
+  LA ARISTA DEL PAR 784, buscada al cierre en los DOS sentidos:
+    lienzo_modelo_negocio -> swot_business_model_canvas en siguientes: True
+    swot_business_model_canvas -> lienzo_modelo_negocio en previos   : True
+    ARISTA DIRIGIDA CON SU ESPEJO: True
+
+### (5) EL RECUENTO QUE CIERRA LA CIRUGIA, y el nodo resultante
+
+  pasos: 12  |  condiciones: 7  |  fuente: Business Model Generation - Osterwalder
+  pasos con el literal 'cada uno de los 9 bloques': 0
+  pasos que mandan imprimir: 1
+
+    1. Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+    2. Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+    3. Escribir cada bloque en notas post-it sobre el lienzo
+    4. Identificar los segmentos de clientes a los que se dirige la organización
+    5. Definir la propuesta de valor para cada segmento
+    6. Mapear canales, relaciones y fuentes de ingresos
+    7. Mapear recursos, actividades y asociaciones clave
+    8. Calcular la estructura de costos y el profit resultante
+    9. Pausar para investigar más información donde haya vacíos importantes
+   10. Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+   11. Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+   12. Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+
+### (6) LA SENAL DE COSTURA DEL NODO, antes y despues
+
+  lienzo_modelo_negocio EN LA COLA: pasos 12 | bloque 46.0 (corte tras 8) | pareja 51.5
+    disparo_bloque True | disparo_pareja False
+  nodos en la cola: 1494 sobre 3524 activos
+
+  CITA Y NO JUZGA: la cola global no es base de lectura (limite
+  declarado por el acta de la vuelta 40, seccion 5 pregunta 2).
+
+### (7) EL ESTADO AL CIERRE, RECOMPUTADO AL CIERRE (regla 1)
+
+  ficheros    : 3853
+  vivos       : 3524
+  deprecados  : 329
+  enlaces     : 16898 (previos mas siguientes)
+  cola de costuras: 1494 nodos sobre 3524 activos (42.4 por ciento)
+  marcador    : n 3388 | A 575 B 79 C 8 D 2726 | tasa de A 17.0 por ciento
+  estado declarado en OPERACIONES.jsonl: LISTA | fecha_corte: 2026-08-14
+  aristas_nuevas de la operacion: [] (vacio = cero aristas que poner)
+
+==============================================================================
+FIN DEL CIERRE MEDIDO
+==============================================================================

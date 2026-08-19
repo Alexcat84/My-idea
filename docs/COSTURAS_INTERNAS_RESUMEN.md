@@ -68,7 +68,7 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 |---|---:|---:|
 | p50 | 50.5 | 45.8 |
 | p90 | 57.7 | 51.4 |
-| p99 | 66.1 | 56.7 |
+| p99 | 66.1 | 56.6 |
 | maximo | 86.6 | 72.6 |
 
 Nodos evaluados por bloques (4 pasos o mas): **2238**. Los de menos dan **NO APLICA**, que no es cero.
