@@ -2062,3 +2062,64 @@ El par **285** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 | censo esperado | ficheros **3.853** sin moverse, vivos **3.532 menos 1**, deprecados **321 mas 1** |
 
 **LOS REGISTROS QUE NO SON EL GRAFO, ENUMERADOS ANTES Y NO DESPUES**, con la leccion de la vuelta 39 delante. **Y aun asi se corre `scripts/reanclar_por_resolutor.py` ENTRE la fusion y `run_phase1`**: es la practica que el acta de la vuelta 39 adjudico para toda fusion futura, y **una guarda que solo se corre cuando se sospecha no es una guarda.**
+
+### `OP-D-06` ACTO 285 CERRADO: **LA FUSION EJECUTADA** (19 ago 2026, vuelta 42)
+
+`python scripts/loop/vuelta39_fundir.py --plan docs/loop/PLAN_V41_ACTO285.json --ejecutar`, salida sellada en `docs/loop/SALIDA_V42_ACTO285_EJEC.txt` con **exit 0** y **LAS TRECE GUARDAS EN VERDE**. Las doce primeras ya salieron verdes en la simulacion previa; **la trece solo puede correr en `--ejecutar`**, porque es el censo, y va dicho asi en vez de decir trece en verde cuando la simulacion solo alcanza doce.
+
+| lo medido al ejecutar | como salio |
+|---|---|
+| **censo (guarda 13)** | ANTES **3.853** ficheros, **3.532** vivos, **321** deprecados; DESPUES **3.853**, **3.531**, **322**. *El censo no se movio y los vivos bajaron en 1*: **OK** |
+| **enlaces** | **16.871** antes, **16.878** despues, **mas 7 exactos**. Y la aritmetica cierra sin resto: las **7 redirecciones** son CAMBIOS de id en la lista del vecino (neto **cero**), el absorbido conserva su lista intacta (**cero**), y los **mas 7** son las **7 vistas reciprocas** que la simetrizacion le escribe al superviviente |
+| **`P.16`, las duplicadas** | **CERO fabricadas**, tal como el plan predijo. Guarda 9 OK, y guardas 10 y 11 con **cero auto-arista y cero duplicada** tras resolver |
+| **`reanclar_por_resolutor.py` ENTRE la fusion y `run_phase1`** | corrido, *nada que re-anclar: ninguna referencia apunta a un absorbido*. **Salio en blanco, como el barrido previo predijo, y se corrio igual**: una guarda que solo se corre cuando se sospecha no es una guarda |
+| **la simetrizacion, EXACTA** | `vuelta39_guarda_simetrizacion.py`: **7 entradas en el log del ciclo, las 7 del superviviente, 0 de otros nodos, faltan 0 y sobran 0**, y las **7 releidas en el fichero**. Las dos guardas verdes |
+| **ciclo Gate 0 de TRES comandos** | `run_phase1 --reaplico-curaduria` **GATE 0: OK**, `etiquetas_de_cara --aplicar` **71 etiquetas**, `sync_assets_web` **seis assets**. **Las dos copias del grafo BYTE IGUALES al cerrar**: `master_graph.json` de `dataset/metadata` y de `web/lib/assets`, md5 `0cbf023fb6993d06c3e8f8530f72fffb` las dos, **8.133.183 bytes**, sha256 `0a83990caef2` |
+| **las suites** | motor **25 de 25**, web **80 ficheros con 1.030 pasadas** y 3 saltadas, `tsc` **cero lineas**. Los tres **exit 0** |
+| **caso positivo antes y despues, mismo instrumento** | ANTES **15 PASAN y 21 CAEN** (exit 1, y **tiene que caer**); DESPUES **37 PASAN y 0 CAEN** (exit 0). **La cuenta sube de 36 a 37 comprobaciones y va explicado**: la comprobacion *la ficha del absorbido guarda su fuente* solo existe cuando la entrada de `merged_originals` existe, y antes no existia |
+
+### LOS REGISTROS QUE NO SON EL GRAFO: **TRES VIVOS, Y LOS TRES SON DE ESCRITURA Y NO DE LECTURA**
+
+`scripts/loop/vuelta40_registros_no_grafo.py` sobre los dos nodos, **173.874 ficheros de texto barridos**, salida en `docs/loop/SALIDA_V42_ACTO285_REGISTROS.txt`. **Y AQUI HAY UNA DIFERENCIA CONTRA `OP-D-05` QUE HAY QUE DECIR EN VEZ DE CALLAR**: aquella dio **CERO** registros vivos y esta da **TRES**.
+
+| el registro vivo | quien lo escribe, medido hoy | quien lo lee |
+|---|---|---|
+| `docs/GRADIENTE_PARES.jsonl` | `scripts/gradiente_pares.py` linea 40 | **NADIE**: cero lectores en `scripts/`, `web/lib`, `web/app` y `engine/` |
+| `docs/PASO_NODO_CANDIDATOS.jsonl` | `scripts/paso_contra_nodo.py` linea 63 | **NADIE**, por la misma busqueda |
+| `scripts/rumbos/_ultima_corrida.json` | `scripts/rumbos/prueba_rumbos.py` linea 290 | **NADIE**, y ademas **`.gitignore` lo declara artefacto transitorio** cuya vara es `linea_base_rumbos.json` |
+
+**LA CLASE `VIVO` DEL INSTRUMENTO ES UN CAJON RESIDUAL, NO UNA CLASIFICACION POSITIVA**: `clase_de()` devuelve `VIVO` cuando la ruta no calza ningun prefijo de `REGENERADO` ni de `ARCHIVO`. Los tres son **salidas de su propio instrumento con su corte**, la misma especie que `docs/FRANJA_PARES.jsonl` y `docs/INTRA_DOMINIO_PARES.jsonl`, que **si estan en la lista de `ARCHIVO` solo porque su prefijo si figura**. **Y la comprobacion dirigida sobre la especie que si tumbo el Gate 0 en la vuelta 39 da CERO: los NUEVE `bridges_aprobados.json` nombran a los dos nodos 0 veces.** El Gate 0 de hoy lo confirma por su lado: *Ningun puente aprobado apunta a un nodo deprecado (valor: 0 rotos)*.
+
+> **DOS DETALLES DE ETIQUETA DEL INSTRUMENTO, declarados porque no se arreglan aqui:** su encabezado imprime *LOS TRES NODOS BUSCADOS* y *(vuelta 40)* aunque hoy se le pasaron **dos** ids y corre en la **42**. Es texto fijo del hermano de `OP-D-05`, **no toca ni una cifra**, y cambiarlo dentro de un acto seria tocar un instrumento sellado sin motivo escrito.
+
+### EL INSTRUMENTO DE COSTURAS SOBRE EL RESULTANTE: **CITA, Y LA FUSION NO ENCENDIO LA SENAL**
+
+`scripts/costuras_internas.py` corrido DESPUES de fundir (`docs/loop/SALIDA_V42_COSTURAS_TRAS_FUSION.txt`, **exit 0**): la cola pasa de **1.496** a **1.495** nodos (el absorbido sale al deprecarse) sobre **3.531** activos, el **42,3 por ciento**.
+
+**EL RESULTANTE ESTA CITADO**, y se lee con el texto delante como la practica adjudicada en el acta 40 manda: **pareja 56,6** (pasos **4 y 5**, bajo el umbral de **80**: no dispara), **bloque 50,6** con corte tras **3** (sobre el umbral de **44**: dispara).
+
+`scripts/loop/vuelta42_senal_antes_despues.py --nodo producto_unico_superior --commit b563e7a5`, sellado en `docs/loop/SALIDA_V42_ACTO285_SENAL.txt`:
+
+| | bloque | contra el umbral 44 |
+|---|---|---|
+| **antes**, leido de git `b563e7a5` | **45,4** (corte tras 3) | **SOBRE** por **mas 1,4**, o sea **YA ESTABA DENTRO de la cola** |
+| **despues**, del fichero de hoy | **50,6** (corte tras 3) | **SOBRE** por **mas 6,6** |
+
+**LA FUSION NO ENCENDIO LA SENAL: el nodo ya estaba dentro antes de fundirse y sigue dentro. La cita no es nueva.** El movimiento de **mas 5,2 puntos** es el mismo patron mecanico que la vuelta 40 midio en tres casos: fundir mete mas vocabulario en menos pasos y la senal mide solape de tokens.
+
+**Y LA LECTURA TEXTUAL, que es la que decide: NO HAY COSTURA.** La pareja citada son los pasos **4** (*compara contra la competencia, desarma sus productos, imagina como evolucionara el suyo*) y **5** (*traduce todo lo que encuentres en una definicion de tu producto*). **El paso 5 empieza literalmente con "Traduce todo lo que encuentres": CONTINUA al 4 en vez de volver a contarlo.** Lo mismo con el bloque: los pasos 1 a 3 investigan y definen, los 4 a 6 comparan, traducen y prueban. **Comparten vocabulario, no narracion.** La cita **queda registrada en la cola** y el auditor la relee, que es la guarda contra el juez y parte.
+
+### LA RELECTURA DEL PAR 835, HECHA Y VOLCADA: **DE `B` A `D`**
+
+`scripts/loop/vuelta32_relectura_opd01.py 835`, con la razon vieja impresa ENTERA y las aristas buscadas en los dos sentidos (`docs/loop/SALIDA_V42_ACTO285_RELECTURA_835.txt`). Volcada con `scripts/corregir_veredicto.py` (`docs/loop/SALIDA_V42_ACTO285_VEREDICTO_835.txt`): **puesto 835, B a D, 3.388 veredictos sin altas ni bajas.**
+
+**LA `B` ERA CONDICIONAL Y LA PROPIA RAZON VIEJA LO DECIA:** *decidir este par sin saber que queda del nodo tras la cirugia es decidir sobre un texto que va a cambiar, aunque el solape no toque la juntura*. **Hoy ya se sabe.** Los **dos** cruces que aquella razon nombro siguen siendo **exactamente dos y ninguno mas**, y lo que la fusion anadio (VoC, el desarmado, la evolucion futura, los protocepts) **no toca a `brief_competitivo`**. **La fusion los SEPARA en vez de acercarlos**: el resultante es hoy la doctrina entera del producto superior y `brief_competitivo` sigue siendo UN documento de analisis. Libros distintos, entregables distintos, **cero arista medida hoy en los dos sentidos**.
+
+> **LO QUE NO SE HACE, y va dicho:** `08_VERIFICACION` anade *si hay jerarquia se enlaza*. **La jerarquia candidata se nombra** (`brief_competitivo` es plausiblemente el documento donde se escribe la comparacion que el paso 4 del resultante manda hacer), **pero ninguno de los dos textos nombra al otro**, asi que declararla seria leerla y no medirla. **La arista NO se escribe en esta vuelta**: queda **declarada como candidata de `9.6`** y **marcada como discutible**, porque escribir una arista fuera del plan sellado del acto moveria la cifra publicada de enlaces sin plan detras.
+
+**EL MARCADOR SE MUEVE, Y SE PUBLICAN LAS DOS CIFRAS** (regla 1: el estado al cierre se mide al cierre, y la apertura no se retoca):
+
+| | n | A | B | C | D | tasa de A |
+|---|---:|---:|---:|---:|---:|---:|
+| **apertura de la vuelta 42** (`SALIDA_V42_APERTURA.txt`) | 3.388 | 575 | **83** | 8 | **2.722** | 17,0 |
+| **tras la relectura del 835**, recomputado por el instrumento | 3.388 | 575 | **82** | 8 | **2.723** | 17,0 |

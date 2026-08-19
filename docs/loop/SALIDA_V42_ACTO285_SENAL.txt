@@ -1,0 +1,23 @@
+LA SENAL DE BLOQUE ANTES Y DESPUES DE LA FUSION
+Medida con las senales CRUDAS de scripts/costuras_internas.py.
+Umbral de bloque vigente y no tocado: 44
+
+OP-D-06, acto 285: producto_unico_superior
+  ANTES, leido de git b563e7a5:
+    antes      6 pasos | pareja  52.7 | bloque  45.4 (corte tras 3) | SOBRE el umbral 44 por +1.4
+  DESPUES, leido del fichero de hoy:
+    despues    6 pasos | pareja  56.6 | bloque  50.6 (corte tras 3) | SOBRE el umbral 44 por +6.6
+  MOVIMIENTO DE LA SENAL: +5.2 puntos
+  LA COLA: DENTRO antes -> DENTRO despues
+
+==============================================================================
+LA FUSION NO ENCENDIO LA SENAL: el nodo YA ESTABA DENTRO de la cola
+antes de fundirse, y sigue dentro. La cita no es nueva.
+==============================================================================
+Y LO QUE LA CIFRA SOSTIENE Y NADA MAS: la senal de bloque SUBE con la
+fusion por un mecanismo MECANICO y no semantico (menos pasos y mas
+densos, y la senal mide solape de tokens entre los dos bloques). UNA
+CITA SOBRE UN NODO RECIEN FUNDIDO ES, POR CONSTRUCCION, MENOS
+INFORMATIVA QUE LA MISMA CITA SOBRE UN NODO QUE NADIE TOCO. Cita y no
+juzga: quien decide es la lectura del texto.
+EXIT=0

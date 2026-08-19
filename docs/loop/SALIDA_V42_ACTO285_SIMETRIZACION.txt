@@ -1,0 +1,25 @@
+PLAN        : docs/loop/PLAN_V41_ACTO285.json
+SUPERVIVIENTE: producto_unico_superior
+LA GUARDA, tal como el plan la dejo escrita:
+  symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos
+==============================================================================
+### 1. symmetrize_added DEL LOG DEL CICLO
+  entradas totales en el log        : 7
+  entradas para producto_unico_superior: 7
+  entradas para OTROS nodos         : 0
+  el plan esperaba                  : 7
+    [OK ] nodos_previos      alfabetizacion_en_materiales_maliciosos
+    [OK ] nodos_previos      customer_gains
+    [OK ] nodos_previos      tecnologia_como_medio_no_fin
+    [OK ] nodos_siguientes   desarrollo_en_espiral
+    [OK ] nodos_siguientes   lanzamiento_nuevos_productos_enfoque_problema
+    [OK ] nodos_siguientes   prevencion_objeciones_vs_manejo
+    [OK ] nodos_siguientes   voz_del_cliente_voc
+  GUARDA 1, simetrizacion EXACTA (faltan 0, sobran 0, de otros nodos 0): OK
+
+### 2. LAS ARISTAS RELEIDAS EN EL FICHERO DEL SUPERVIVIENTE
+  GUARDA 2, 7 de 7 aristas presentes en dataset/nodos/producto_unico_superior.json: OK
+
+==============================================================================
+RESULTADO: TODAS LAS GUARDAS VERDES
+EXIT=0

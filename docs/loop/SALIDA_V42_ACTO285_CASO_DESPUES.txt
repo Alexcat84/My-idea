@@ -1,0 +1,61 @@
+CASO POSITIVO: OP-D-06, ACTO 1 DE NUEVE (puesto 285): producto_unico_superior absorbe a superioridad_producto_beneficios
+==============================================================================
+
+EL SUPERVIVIENTE, producto_unico_superior
+  [PASA] tiene 6 pasos, los 6 que el plan deja
+  [PASA] tiene 2 condiciones, las 2 que el plan deja
+  [PASA] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [PASA] sus condiciones son exactamente las del plan
+  [PASA] su entregable es el del plan
+  [PASA] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Tener un Producto Único y Superior: El Factor Número Uno de Rentabilidad'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Ofrece un Producto Realmente Único'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['resumen']: '5 veces más probabilidad de éxito'
+  [PASA] sobrevive literal en ['resumen']: '4 veces más participación de mercado'
+  [PASA] sobrevive literal en ['pasos']: 'voz del cliente, VoC'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: '(features)'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: '(benefits)'
+  [PASA] sobrevive literal en ['pasos']: 'protocepts'
+  [PASA] sobrevive literal en ['pasos']: 'desarma sus productos'
+  [PASA] sobrevive literal en ['pasos']: 'valor por el dinero'
+  [PASA] sobrevive literal en ['pasos']: 'evolucionará el producto de tu competidor'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [PASA] 'superioridad_producto_beneficios' esta en ids_alias del superviviente
+  [PASA] 'superioridad_producto_beneficios' tiene su entrada en merged_originals
+  [PASA] la ficha de 'superioridad_producto_beneficios' guarda su fuente verbatim: 'Winning at New Products - Robert G. Cooper'
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, superioridad_producto_beneficios
+  [PASA] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 6 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LAS REDIRECCIONES
+  [PASA] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 0)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [('enfoque_resolucion_problemas_lanzamiento_producto', 'nodos_previos', 'superioridad_producto_beneficios'), ('prevencion_de_objeciones', 'nodos_previos', 'superioridad_producto_beneficios'), ('spiral_development', 'nodos_previos', 'superioridad_producto_beneficios')], plan [('enfoque_resolucion_problemas_lanzamiento_producto', 'nodos_previos', 'superioridad_producto_beneficios'), ('prevencion_de_objeciones', 'nodos_previos', 'superioridad_producto_beneficios'), ('spiral_development', 'nodos_previos', 'superioridad_producto_beneficios')]
+  [PASA] alfabetizacion_en_materiales_maliciosos.nodos_siguientes ya apunta a producto_unico_superior
+  [PASA] customer_gains.nodos_siguientes ya apunta a producto_unico_superior
+  [PASA] desarrollo_en_espiral.nodos_previos ya apunta a producto_unico_superior
+  [PASA] lanzamiento_nuevos_productos_enfoque_problema.nodos_previos ya apunta a producto_unico_superior
+  [PASA] prevencion_objeciones_vs_manejo.nodos_previos ya apunta a producto_unico_superior
+  [PASA] tecnologia_como_medio_no_fin.nodos_siguientes ya apunta a producto_unico_superior
+  [PASA] voz_del_cliente_voc.nodos_previos ya apunta a producto_unico_superior
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'propuesta de valor' sigue vivo en ['pasos', 'condiciones', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'características técnicas' sigue vivo en ['pasos', 'condiciones', 'entregable']
+  (conservacion) [SI] el rastro 'precio bajo' sigue vivo en ['pasos']
+  (conservacion) [SI] el rastro 'competencia' sigue vivo en ['pasos', 'condiciones', 'entregable']
+  (conservacion) [SI] el rastro 'prototipos' sigue vivo en ['pasos']
+
+==============================================================================
+RESULTADO: 37 PASAN, 0 CAEN
+CONSERVACION (aparte, no suma): 5 vivos, 0 muertos
+EXIT=0
