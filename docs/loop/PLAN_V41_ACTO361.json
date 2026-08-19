@@ -174,11 +174,6 @@
     "nombraba": "partners_hypothesis_physical"
    },
    {
-    "nodo": "key_partners_hypothesis",
-    "campo": "nodos_siguientes",
-    "nombraba": "partners_hypothesis_physical"
-   },
-   {
     "nodo": "key_resources_hypothesis",
     "campo": "nodos_siguientes",
     "nombraba": "partners_hypothesis_physical"
@@ -216,10 +211,6 @@
    "quien_la_escribe": "scripts/run_phase1.py, paso 5, Simetrizacion de enlaces. NO la escribe el ejecutor de fusiones: el redirige a los vecinos y no toca la lista propia del superviviente.",
    "guarda_para_el_dia_de_la_ejecucion": "symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos",
    "aristas": [
-    {
-     "campo": "nodos_previos",
-     "vecino": "key_partners_hypothesis"
-    },
     {
      "campo": "nodos_siguientes",
      "vecino": "contratar_cerrador_de_ventas"

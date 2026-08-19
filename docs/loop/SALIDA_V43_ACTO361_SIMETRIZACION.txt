@@ -1,0 +1,20 @@
+PLAN        : docs/loop/PLAN_V41_ACTO361.json
+SUPERVIVIENTE: key_partners_hypothesis
+LA GUARDA, tal como el plan la dejo escrita:
+  symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos
+==============================================================================
+### 1. symmetrize_added DEL LOG DEL CICLO
+  entradas totales en el log        : 3
+  entradas para key_partners_hypothesis: 3
+  entradas para OTROS nodos         : 0
+  el plan esperaba                  : 3
+    [OK ] nodos_siguientes   contratar_cerrador_de_ventas
+    [OK ] nodos_siguientes   herramientas_de_activacion_web
+    [OK ] nodos_siguientes   mapa_de_canal_de_ventas
+  GUARDA 1, simetrizacion EXACTA (faltan 0, sobran 0, de otros nodos 0): OK
+
+### 2. LAS ARISTAS RELEIDAS EN EL FICHERO DEL SUPERVIVIENTE
+  GUARDA 2, 3 de 3 aristas presentes en dataset/nodos/key_partners_hypothesis.json: OK
+
+==============================================================================
+RESULTADO: TODAS LAS GUARDAS VERDES

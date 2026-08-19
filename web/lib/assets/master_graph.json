@@ -20446,7 +20446,7 @@
       ],
       "entregable_esperado": "Un cerrador de ventas contratado e integrado a tu trabajo de validación con clientes (Customer Development)",
       "nodos_previos": [
-        "partners_hypothesis_physical",
+        "key_partners_hypothesis",
         "earlyvangelists",
         "herramientas_de_activacion_web",
         "identificar_earlyvangelists"
@@ -60663,7 +60663,7 @@
       ],
       "entregable_esperado": "Un conjunto de experimentos de activación implementados en el sitio web con métricas de conversión definidas",
       "nodos_previos": [
-        "partners_hypothesis_physical",
+        "key_partners_hypothesis",
         "producto_minimo_viable",
         "diseno_landing_page",
         "analisis_trafico_competitivo",
@@ -67017,15 +67017,16 @@
       "dominio": "core",
       "titulo_concepto": "Hipótesis de Socios Clave",
       "fuente": "The Startup Owner's Manual - Steve Blank",
-      "resumen_teorico": "Identifica los socios esenciales que proveen capacidades, productos o servicios que la startup no puede o no quiere desarrollar internamente. Se organiza en cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave. Se define el 'intercambio de valor' con cada socio.",
+      "resumen_teorico": "Identifica los socios esenciales que proveen capacidades, productos o servicios que la startup no puede o no quiere desarrollar internamente. Se organizan en cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave. Con cada uno se define el 'intercambio de valor', qué provee y qué recibe a cambio, anotado en una tabla de tres columnas junto a sus candidatos suplentes. La flexibilidad de cada proveedor se evalúa en tiempos de entrega, tamaños de pedido, crédito y precio, y se distingue con cuidado entre socios y recursos clave, que no son lo mismo. El resultado se lleva al Business Model Canvas y se planea su validación posterior con reuniones reales, porque una tabla de socios sin una reunión detrás sigue siendo una hipótesis. El ejemplo de Apple y el iPod con las discográficas muestra cómo un socio puede potenciar el modelo de negocio entero. Aplica igual cuando el producto es físico y necesita proveedores, alianzas o distribución mediante terceros.",
       "pasos_accionables": [
-        "Listar socios potenciales primarios y alternativos por tipo",
-        "Definir qué proveerá cada socio y qué recibirá a cambio",
-        "Evaluar flexibilidad de proveedores en tiempos, precios y condiciones",
-        "Distinguir claramente entre socios y recursos clave",
-        "Actualizar el Business Model Canvas con los socios identificados"
+        "Lista los socios potenciales, los primarios y sus candidatos suplentes, clasificados en los cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave",
+        "Define en una tabla de tres columnas qué proveerá cada socio y qué recibirá de la empresa a cambio: nombre del socio, qué provee, qué ofreces tú",
+        "Evalúa la flexibilidad de cada proveedor en tiempos de entrega, tamaños de pedido, crédito, precio y condiciones",
+        "Distingue claramente entre socios y recursos clave",
+        "Actualiza el Business Model Canvas con los socios identificados",
+        "Planea la validación posterior con reuniones reales con cada socio candidato"
       ],
-      "entregable_esperado": "Tabla de socios clave con columnas: nombre, qué proveen, qué ofrece la empresa a cambio",
+      "entregable_esperado": "Tabla de socios clave con columnas: nombre del socio, tipo de relación, qué provee, y qué ofrece la empresa a cambio como contraprestación, con los candidatos suplentes identificados y la validación con reuniones reales ya planeada",
       "nodos_previos": [
         "key_resources_hypothesis",
         "dependency_analysis",
@@ -67033,13 +67034,26 @@
       ],
       "nodos_siguientes": [
         "revenue_pricing_hypothesis",
-        "partners_hypothesis_physical",
-        "traffic_partners_hypothesis"
+        "traffic_partners_hypothesis",
+        "contratar_cerrador_de_ventas",
+        "herramientas_de_activacion_web",
+        "mapa_de_canal_de_ventas"
       ],
       "condiciones_activacion": [
-        "Cuando el modelo de negocio requiere capacidades externas críticas (manufactura, contenido, distribución)"
+        "Cuando el modelo de negocio requiere capacidades externas críticas (manufactura, contenido, distribución)",
+        "Cuando el producto es físico y requiere proveedores, alianzas o distribución mediante terceros"
       ],
-      "etiqueta_arbol": "Define qué Necesitas Externalizar"
+      "etiqueta_arbol": "Define qué Necesitas Externalizar",
+      "ids_alias": [
+        "partners_hypothesis_physical"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "partners_hypothesis_physical",
+          "titulo": "Hipótesis de Socios Clave (Canal Físico)",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        }
+      ]
     },
     "key_process_product_characteristics": {
       "node_id": "key_process_product_characteristics",
@@ -67109,7 +67123,6 @@
         "intellectual_property_strategy",
         "key_partners_hypothesis",
         "dependency_analysis",
-        "partners_hypothesis_physical",
         "traffic_partners_hypothesis"
       ],
       "condiciones_activacion": [
@@ -70366,7 +70379,7 @@
       ],
       "entregable_esperado": "Un diagrama de canal de ventas con mapa de responsabilidades, descuentos financieros y plan de gestión",
       "nodos_previos": [
-        "partners_hypothesis_physical",
+        "key_partners_hypothesis",
         "scorecard_descubrimiento_cliente",
         "contratar_cerrador_de_ventas"
       ],
@@ -80317,8 +80330,7 @@
       ],
       "entregable_esperado": "Tabla de socios clave con tipo de relación, aporte esperado y contraprestación de la empresa",
       "nodos_previos": [
-        "key_resources_hypothesis",
-        "key_partners_hypothesis"
+        "key_resources_hypothesis"
       ],
       "nodos_siguientes": [
         "revenue_pricing_hypothesis",
@@ -80329,7 +80341,8 @@
       "condiciones_activacion": [
         "Cuando el producto es físico y requiere proveedores, alianzas o distribución mediante terceros"
       ],
-      "etiqueta_arbol": "Define tus Socios Clave"
+      "etiqueta_arbol": "Define tus Socios Clave",
+      "deprecado": true
     },
     "partnerships_estrategicos_verdes": {
       "node_id": "partnerships_estrategicos_verdes",
@@ -97913,7 +97926,6 @@
       "nodos_previos": [
         "key_partners_hypothesis",
         "channels_hypothesis_physical",
-        "partners_hypothesis_physical",
         "traffic_partners_hypothesis"
       ],
       "nodos_siguientes": [
@@ -122947,7 +122959,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 17,
+    "nodos_sin_enlaces_entrantes": 18,
     "enlaces_rotos_en_grafo": 0
   }
 }

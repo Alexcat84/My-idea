@@ -1,0 +1,18 @@
+PLAN         : docs/loop/PLAN_V41_ACTO361.json
+OPERACION    : OP-D-06, ACTO 5 DE NUEVE (puesto 361): key_partners_hypothesis absorbe a partners_hypothesis_physical
+SUPERVIVIENTE: key_partners_hypothesis
+ABSORBIDOS   : partners_hypothesis_physical
+MODO         : --ejecutar
+REGLA        : P.16, QUIEN FABRICA LIMPIA (docs/plan/BANCO_DEL_PLAN.md, 14 ago 2026, decision del fundador)
+==============================================================================
+LA ARISTA INTERNA DEL PAR, medida en los dos sentidos: 2 entrada(s)
+    key_partners_hypothesis                        nodos_siguientes   -> partners_hypothesis_physical
+    partners_hypothesis_physical                   nodos_previos      -> key_partners_hypothesis
+
+ESCRITO. ficheros tocados: 2
+guarda A, cero arista interna del par tras retirar: OK (0)
+guarda B, key_partners_hypothesis                      texto INTACTO (titulo, etiqueta, pasos, condiciones, entregable, resumen): OK
+guarda B, partners_hypothesis_physical                 texto INTACTO (titulo, etiqueta, pasos, condiciones, entregable, resumen): OK
+
+RESULTADO: TODAS LAS GUARDAS VERDES
+EXIT=0

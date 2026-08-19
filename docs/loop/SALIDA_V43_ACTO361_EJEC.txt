@@ -1,0 +1,71 @@
+PLAN     : docs/loop/PLAN_V41_ACTO361.json
+OPERACION: OP-D-06, ACTO 5 DE NUEVE (puesto 361): key_partners_hypothesis absorbe a partners_hypothesis_physical
+SELLADO  : SELLADO en la vuelta 43, 19 ago 2026, ANTES de ejecutar. EL DESTEJIDO QUE LA RAZON PEDIA YA SE HIZO, y no aqui: lo hizo OP-F-04-WEI. La razon del archivo dice que el primero tiene CATORCE pasos y se parte con claridad, y que del seis al catorce entra otro bloque con vocabulario propio (objetivo de traccion, Critical Path, licensing, socios de distribucion y de suministro), y esta RANCIA EN ESE DETALLE. docs/plan/01_FUENTES.md linea 951 publica la frontera leida (1 a 5 contra 6 a 14) y declara ALLI MISMO que el tramo de cola traia DOS subbloques distinguibles y que decidir si eran uno o dos era lectura pendiente que no se resolvia adivinando; las lineas 983 y 984 traen esa lectura ya hecha y los DOS destinos: el bloque 6 a 10 al miembro alineacion_bd_metricas_core (evaluar socios por su capacidad de mover la metrica clave) y el 11 a 14 al miembro pipeline_alianzas_bd (clasificar por tipo segun el cuello de botella), separados A PROPOSITO. LA MEDICION DE HOY LO CONFIRMA: key_partners_hypothesis tiene CINCO pasos, que son exactamente los cinco primeros. Fuente primero satisfecha POR PRECEDENCIA, con OP-F-04-WEI HECHA en su nota 3541 SI segun la apertura de esta vuelta. LO QUE EL INSTRUMENTO SIGUE CITANDO HOY SE DICE EN VEZ DE CALLARSE: partners_hypothesis_physical esta FUERA de la cola de 1.494 y key_partners_hypothesis sigue DENTRO con bloque 50,8 y corte tras 2. Esa cita NO es la costura vieja de Weinberg, que ya no existe en el fichero, y la lectura textual con el texto delante dice que NO hay costura: los pasos 1 y 2 construyen la lista y el intercambio, y los 3 a 5 juzgan al proveedor, trazan la frontera contra los recursos clave y llevan el resultado al Canvas. CONTINUAN en vez de volver a contar. La cita queda REGISTRADA en la cola y no despachada, y el auditor la relee.
+MODO     : --ejecutar
+==============================================================================
+censo ANTES: 3853 ficheros, 3528 vivos, 325 deprecados
+guarda 1, fuente del superviviente contra el plan y vida de los TRES: OK
+  ACTO DE FUENTE UNICA (1 fuente(s) distinta(s) medida(s)), las tres impresas y ninguna escondida:
+    key_partners_hypothesis                superviviente  The Startup Owner's Manual - Steve Blank
+    partners_hypothesis_physical           absorbido      The Startup Owner's Manual - Steve Blank
+guarda 2, key_partners_hypothesis                pasos y condiciones (5, 1) contra (5, 1): OK
+guarda 2, partners_hypothesis_physical           pasos y condiciones (5, 1) contra (5, 1): OK
+guarda 3, VERBATIM contra dataset/nodos: 12 de 12 calzan, 0 sobrantes en el plan
+guarda 4, cobertura de pasos        10 de 10, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones  2 de 2, repetidos [], faltan [], sobran []
+guarda 5, los finales derivados de los grupos calzan con el campo sellado: OK
+guarda 6, preservar_literal en el nodo resultante entero:
+    'coopetición'                              ['pasos', 'resumen']
+    'alianzas estratégicas'                    ['pasos', 'resumen']
+    'desarrollo conjunto'                      ['pasos', 'resumen']
+    'Business Model Canvas'                    ['pasos', 'resumen']
+    'suplentes'                                ['pasos', 'entregable', 'resumen']
+    'tamaños de pedido'                        ['pasos', 'resumen']
+    'crédito'                                  ['pasos', 'resumen']
+    'reuniones reales'                         ['pasos', 'entregable', 'resumen']
+    'producto es físico'                       ['condiciones', 'resumen']
+    'Apple'                                    ['resumen']
+    10 de 10
+guarda 7, rastros en el nodo resultante entero:
+    'intercambio de valor'                     ['resumen']
+    'recursos clave'                           ['pasos', 'resumen']
+    'capacidades externas'                     ['condiciones']
+    'flexibilidad'                             ['pasos', 'resumen']
+    'contraprestación'                         ['entregable']
+    5 de 5
+redirecciones medidas hoy sobre nodos VIVOS: 5
+    contratar_cerrador_de_ventas                     nodos_previos      partners_hypothesis_physical -> key_partners_hypothesis
+    herramientas_de_activacion_web                   nodos_previos      partners_hypothesis_physical -> key_partners_hypothesis
+    key_resources_hypothesis                         nodos_siguientes   partners_hypothesis_physical -> key_partners_hypothesis
+    mapa_de_canal_de_ventas                          nodos_previos      partners_hypothesis_physical -> key_partners_hypothesis
+    revenue_pricing_hypothesis                       nodos_previos      partners_hypothesis_physical -> key_partners_hypothesis
+nodos DEPRECADOS que nombran y NO se tocan: 0
+guarda 8, redirecciones contra el plan sellado (5 esperadas): OK
+guarda 8b, deprecados que nombran contra el plan (0 esperados): OK
+
+### P.16, LAS DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas
+    key_resources_hypothesis                         nodos_siguientes   -> key_partners_hypothesis
+    revenue_pricing_hypothesis                       nodos_previos      -> key_partners_hypothesis
+    TOTAL FABRICADAS: 2
+guarda 9, duplicadas fabricadas contra el plan (2 esperadas): OK
+guarda 10, cero auto-arista tras resolver: OK (0)
+guarda 11, cero duplicada tras resolver: OK (0)
+guarda 12, a6 del acta, titulo y etiqueta SIN TOCAR ('Hipótesis de Socios Clave' / 'Define qué Necesitas Externalizar'): OK
+
+EL RESULTADO, sobre copia en memoria:
+  key_partners_hypothesis: 6 pasos, 2 condiciones, alias ['partners_hypothesis_physical']
+    1. Lista los socios potenciales, los primarios y sus candidatos suplentes, clasificados en los cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave
+    2. Define en una tabla de tres columnas qué proveerá cada socio y qué recibirá de la empresa a cambio: nombre del socio, qué provee, qué ofreces tú
+    3. Evalúa la flexibilidad de cada proveedor en tiempos de entrega, tamaños de pedido, crédito, precio y condiciones
+    4. Distingue claramente entre socios y recursos clave
+    5. Actualiza el Business Model Canvas con los socios identificados
+    6. Planea la validación posterior con reuniones reales con cada socio candidato
+    c1. Cuando el modelo de negocio requiere capacidades externas críticas (manufactura, contenido, distribución)
+    c2. Cuando el producto es físico y requiere proveedores, alianzas o distribución mediante terceros
+  entregable: Tabla de socios clave con columnas: nombre del socio, tipo de relación, qué provee, y qué ofrece la empresa a cambio como contraprestación, con los candidatos suplentes identificados y la validación con reuniones reales ya planeada
+  partners_hypothesis_physical: deprecado True, texto INTACTO (5 pasos, 1 condiciones)
+  ficheros que se tocarian: 7
+
+ESCRITO. censo DESPUES: 3853 ficheros, 3527 vivos, 326 deprecados
+         censo ANTES  : 3853 ficheros, 3528 vivos, 325 deprecados
+guarda 13, el censo no se movio y los vivos bajaron en 1: OK

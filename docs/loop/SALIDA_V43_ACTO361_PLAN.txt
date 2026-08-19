@@ -9,10 +9,9 @@ PLAN SELLADO: docs/loop/PLAN_V41_ACTO361.json
   origenes generados VERBATIM del fichero: 12
   pasos finales : 6 (estandar 3 a 6: DENTRO)
   condiciones finales: 2
-  redirecciones esperadas: 6
+  redirecciones esperadas: 5
       contratar_cerrador_de_ventas                   nodos_previos      partners_hypothesis_physical
       herramientas_de_activacion_web                 nodos_previos      partners_hypothesis_physical
-      key_partners_hypothesis                        nodos_siguientes   partners_hypothesis_physical
       key_resources_hypothesis                       nodos_siguientes   partners_hypothesis_physical
       mapa_de_canal_de_ventas                        nodos_previos      partners_hypothesis_physical
       revenue_pricing_hypothesis                     nodos_previos      partners_hypothesis_physical
@@ -20,8 +19,7 @@ PLAN SELLADO: docs/loop/PLAN_V41_ACTO361.json
   duplicadas que la fusion fabrica: 2
       key_resources_hypothesis                       nodos_siguientes
       revenue_pricing_hypothesis                     nodos_previos
-  simetrizacion esperada: 4 aristas
-      key_partners_hypothesis.nodos_previos      += key_partners_hypothesis
+  simetrizacion esperada: 3 aristas
       key_partners_hypothesis.nodos_siguientes   += contratar_cerrador_de_ventas
       key_partners_hypothesis.nodos_siguientes   += herramientas_de_activacion_web
       key_partners_hypothesis.nodos_siguientes   += mapa_de_canal_de_ventas
