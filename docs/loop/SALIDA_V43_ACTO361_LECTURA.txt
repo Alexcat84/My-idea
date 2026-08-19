@@ -1,0 +1,125 @@
+
+==============================================================================
+(a) LA NOMINA DEL ACTO 361, LEIDA DE LA TABLA SELLADA
+==============================================================================
+  nodo A: key_partners_hypothesis
+  nodo B: partners_hypothesis_physical
+  la tabla sellada trae 9 actos; este es el numero 5 de los nueve
+  los dos estan en la nomina de OPERACIONES.jsonl: SI
+
+  EL AVISO DE SOLAPE DEL PLAN, comprobado contra el fichero y no recordado:
+    > **AVISO DE SOLAPE, y hay que verlo antes de contar dos veces:**
+    > `producto_minimo_viable` y `principio_calidad_mvp` **aparecen aqui Y en
+    > `OP-D-01`**. La seccion 54.3 los cuenta como uno de los nueve actos de dos; el
+    > plan de cirugia los trata como **cura acoplada mayor**. **Es la MISMA pareja
+    > vista por dos instrumentos, no dos trabajos.**
+
+  ESTE ACTO ESTA NOMBRADO EN EL AVISO DE SOLAPE: NO
+
+  EL REPARTO YA ESCRITO PARA ESTE ACTO, si lo tiene:
+    NINGUNO ESCRITO. Se resuelve con la regla adjudicada: cada
+    perdida al bloque del que proviene, y la que no tenga bloque
+    al superviviente.
+
+==============================================================================
+(b) QUE CITA EL INSTRUMENTO DE COSTURAS SOBRE LOS DOS NODOS
+==============================================================================
+  Fuente: docs/COSTURAS_INTERNAS.jsonl, LA COLA QUE EL INSTRUMENTO YA
+  ENTREGO. No se recalcula ni una cifra. EL INSTRUMENTO CITA Y NO JUZGA,
+  y desde la vuelta 41 su salida declara ademas que LA COLA GLOBAL NO ES
+  BASE DE LECTURA mientras el MIN_BLOQUE siga pendiente del fundador.
+  nodos en la cola entregada: 1494
+
+  key_partners_hypothesis                      CITADO por el instrumento
+      pasos 5 | pareja 54.7 (pasos [2, 4]) | bloque 50.8 | corte tras 2
+      disparo por pareja: False | por bloque: True | franja 44-45: False
+      paso A de la pareja citada: Definir qué proveerá cada socio y qué recibirá a cambio
+      paso B de la pareja citada: Distinguir claramente entre socios y recursos clave
+
+  partners_hypothesis_physical                 FUERA DE LA COLA: el instrumento NO lo cita
+
+==============================================================================
+(c) EL TEXTO ENTERO DE LOS DOS NODOS, que es lo unico que decide
+==============================================================================
+
+------------------------------------------------------------------------------
+  key_partners_hypothesis   VIVO
+------------------------------------------------------------------------------
+  titulo    : Hipótesis de Socios Clave
+  etiqueta  : Define qué Necesitas Externalizar
+  dominio   : core
+  fuente    : The Startup Owner's Manual - Steve Blank
+  alias     : []
+  PASOS (5):
+    1. Listar socios potenciales primarios y alternativos por tipo
+    2. Definir qué proveerá cada socio y qué recibirá a cambio
+    3. Evaluar flexibilidad de proveedores en tiempos, precios y condiciones
+    4. Distinguir claramente entre socios y recursos clave
+    5. Actualizar el Business Model Canvas con los socios identificados
+  CONDICIONES (1):
+    c1. Cuando el modelo de negocio requiere capacidades externas críticas (manufactura, contenido, distribución)
+  ENTREGABLE: Tabla de socios clave con columnas: nombre, qué proveen, qué ofrece la empresa a cambio
+  RESUMEN   : Identifica los socios esenciales que proveen capacidades, productos o servicios que la startup no puede o no quiere desarrollar internamente. Se organiza en cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave. Se define el 'intercambio de valor' con cada socio.
+  previos   (3): ['key_resources_hypothesis', 'dependency_analysis', 'intellectual_property_strategy']
+  siguientes(3): ['revenue_pricing_hypothesis', 'partners_hypothesis_physical', 'traffic_partners_hypothesis']
+
+------------------------------------------------------------------------------
+  partners_hypothesis_physical   VIVO
+------------------------------------------------------------------------------
+  titulo    : Hipótesis de Socios Clave (Canal Físico)
+  etiqueta  : Define tus Socios Clave
+  dominio   : core
+  fuente    : The Startup Owner's Manual - Steve Blank
+  alias     : []
+  PASOS (5):
+    1. Crear una tabla de tres columnas: nombre del socio, qué proveen, qué ofrece la empresa a cambio
+    2. Clasificar los socios en alianzas estratégicas, coopetencia, desarrollo conjunto o proveedores clave
+    3. Evaluar la flexibilidad de proveedores en tiempos de entrega, tamaños de pedido, crédito o precio
+    4. Identificar socios primarios y candidatos suplentes
+    5. Planear validación posterior con reuniones reales
+  CONDICIONES (1):
+    c1. Cuando el producto es físico y requiere proveedores, alianzas o distribución mediante terceros
+  ENTREGABLE: Tabla de socios clave con tipo de relación, aporte esperado y contraprestación de la empresa
+  RESUMEN   : Los socios clave proveen capacidades, productos o servicios que la startup no puede o prefiere no desarrollar internamente. Se agrupan en cuatro áreas: alianzas estratégicas, coopetencia, desarrollo conjunto de nuevos negocios, y relaciones con proveedores clave. El ejemplo de Apple/iPod con las discográficas ilustra cómo los socios pueden potenciar el modelo de negocio.
+  previos   (2): ['key_resources_hypothesis', 'key_partners_hypothesis']
+  siguientes(4): ['revenue_pricing_hypothesis', 'contratar_cerrador_de_ventas', 'herramientas_de_activacion_web', 'mapa_de_canal_de_ventas']
+
+==============================================================================
+(d) P.5: EL PAR, SU CLASE, SU RAZON ENTERA, Y EL CIERRE DEL SUBCONJUNTO
+==============================================================================
+  puesto 361 | clase A | key_partners_hypothesis con partners_hypothesis_physical
+  RAZON ENTERA (574 caracteres):
+    REPITE con partners_hypothesis_physical. Los cinco primeros pasos del primero son el segundo entero: listar socios primarios y suplentes por tipo, definir que aporta cada uno y que recibe a cambio, evaluar la flexibilidad del proveedor en tiempos, precios y condiciones, y dejarlo anotado para validar despues. LATERAL, no cambia la clase: el primero tiene catorce pasos y se parte con claridad, del seis al catorce entra otro bloque con vocabulario propio, objetivo de traccion, Critical Path, licensing y socios de distribucion y de suministro. Costura para la otra ficha.
+  9.3.1, LA VARA DEL VERBO: nombra ganador en su razon: NO, es POR ELEGIR
+
+  EL SUBCONJUNTO, CERRADO O NO: todo par del ARCHIVO que meta a un
+  tercero con cualquiera de los dos (P.5 pide el acto entero).
+    puesto 427   clase D   key_partners_hypothesis con key_resources_hypothesis
+    puesto 599   clase B   asociaciones_clave con key_partners_hypothesis
+    2 par(es) con tercero.
+
+    LA GUARDA QUE DECIDE SI EL ACTO ES DE DOS: un acto se construye
+    por TRANSITIVIDAD SOBRE LAS A. Un tercero unido por B o por D NO
+    entra en el acto; uno unido por A SI, y entonces el acto no seria
+    de dos y habria que PARAR.
+    terceros de clase A: 0  ->  el acto ES de dos, como la tabla sellada dice
+
+    Y LOS QUE VUELVEN A LA COLA DE RELECTURA POST FUSION (08_VERIFICACION:
+    un par vuelve cuando uno de sus dos nodos MUERE o CAMBIA DE TEXTO, y
+    solo los B y los C, porque son los que estaban en el filo):
+      puesto 599   clase B   asociaciones_clave con key_partners_hypothesis
+      1 par(es) a releer al cierre de este acto.
+
+==============================================================================
+(e) P.8: EL CABLEADO, QUE ACOMPANA Y NO DECIDE
+==============================================================================
+  key_partners_hypothesis                      cableado (grado por P.1): 6    | aristas propias sin reciproco: 0 
+  partners_hypothesis_physical                 cableado (grado por P.1): 6    | aristas propias sin reciproco: 0 
+
+  EL COSTE MEDIDO DE LA ELECCION: elegir a uno u otro solo pierde
+  aristas si el que muere tiene aristas SIN RECIPROCO, porque las
+  reciprocas las reescribe la simetrizacion de run_phase1, paso 5.
+
+  Y LA PRELACION, dicha antes de mirar: MANDA EL CONTENIDO. Este bloque
+  se lee DESPUES del (c) y del (d), y si apunta al lado contrario del
+  contenido, PIERDE. Se imprime para poder decir que no hizo falta.

@@ -1,0 +1,46 @@
+PLAN SELLADO: docs/loop/PLAN_V41_ACTO361.json
+  acto          : puesto 361 de OP-D-06
+  superviviente : key_partners_hypothesis
+  absorbidos    : partners_hypothesis_physical
+  fuente del superviviente: The Startup Owner's Manual - Steve Blank
+  ACTO DE FUENTE UNICA (1 fuente(s) distinta(s) medida(s)):
+      key_partners_hypothesis                      superviviente  The Startup Owner's Manual - Steve Blank
+      partners_hypothesis_physical                 absorbido      The Startup Owner's Manual - Steve Blank
+  origenes generados VERBATIM del fichero: 12
+  pasos finales : 6 (estandar 3 a 6: DENTRO)
+  condiciones finales: 2
+  redirecciones esperadas: 6
+      contratar_cerrador_de_ventas                   nodos_previos      partners_hypothesis_physical
+      herramientas_de_activacion_web                 nodos_previos      partners_hypothesis_physical
+      key_partners_hypothesis                        nodos_siguientes   partners_hypothesis_physical
+      key_resources_hypothesis                       nodos_siguientes   partners_hypothesis_physical
+      mapa_de_canal_de_ventas                        nodos_previos      partners_hypothesis_physical
+      revenue_pricing_hypothesis                     nodos_previos      partners_hypothesis_physical
+  deprecados que nombran y no se tocan: 0
+  duplicadas que la fusion fabrica: 2
+      key_resources_hypothesis                       nodos_siguientes
+      revenue_pricing_hypothesis                     nodos_previos
+  simetrizacion esperada: 4 aristas
+      key_partners_hypothesis.nodos_previos      += key_partners_hypothesis
+      key_partners_hypothesis.nodos_siguientes   += contratar_cerrador_de_ventas
+      key_partners_hypothesis.nodos_siguientes   += herramientas_de_activacion_web
+      key_partners_hypothesis.nodos_siguientes   += mapa_de_canal_de_ventas
+
+  LA TABLA DE PERDIDAS, DERIVADA de los grupos y no tecleada:
+      K1    key_partners_hypothesis                  VIAJA      paso 1 del resultado
+      K2    key_partners_hypothesis                  VIAJA      paso 2 del resultado
+      K3    key_partners_hypothesis                  VIAJA      paso 3 del resultado
+      K4    key_partners_hypothesis                  VIAJA      paso 4 del resultado
+      K5    key_partners_hypothesis                  VIAJA      paso 5 del resultado
+      KC1   key_partners_hypothesis                  VIAJA      condicion 1 del resultado
+      P1    partners_hypothesis_physical             VIAJA      paso 2 del resultado
+      P2    partners_hypothesis_physical             VIAJA      paso 1 del resultado
+      P3    partners_hypothesis_physical             VIAJA      paso 3 del resultado
+      P4    partners_hypothesis_physical             VIAJA      paso 1 del resultado
+      P5    partners_hypothesis_physical             VIAJA      paso 6 del resultado
+      PC1   partners_hypothesis_physical             VIAJA      condicion 2 del resultado
+      VIAJAN 12 de 12. SE PIERDEN 0.
+      LECTURA: la regla de reparto de OP-D-06 manda cada perdida al
+      bloque del que proviene, y la que no tenga bloque al
+      superviviente. Con CERO perdidas no hay nada que repartir, y eso
+      es lo que hay que comprobar al cierre, no suponerlo.

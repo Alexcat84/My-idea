@@ -2545,3 +2545,104 @@ El par **344** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 **CERO pares B o C vuelven a la cola por este acto**: los cuatro terceros del archivo (**1131**, **1276**, **1287**, **1403**) son **los cuatro D**, medido en la lectura sellada. **El marcador de clases NO se mueve.**
 
 **EL REPARTO, comprobado y no supuesto:** la tabla de `P.13` da **17 de 17 piezas que VIAJAN y CERO que se pierden**, y la guarda 3 lo confirma contra `dataset/nodos` con **17 de 17 verbatim y 0 sobrantes**. **Y LAS DOS PIEZAS QUE EL ARCHIVO MANDO SALVAR ESTAN EN CASA, comprobadas por guarda y no por lectura:** `escalonada` figura en `preservar_literal` y la guarda 6 la encuentra en **`['pasos', 'resumen']`**; el tope bajo por prueba viaja en el mismo paso 5 del resultado. **Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026.**
+
+## `OP-D-06`, ACTO 5 DE NUEVE (puesto 361): **`key_partners_hypothesis` ABSORBE A `partners_hypothesis_physical`** (19 ago 2026, vuelta 43)
+
+### EL DESTEJIDO DEL ACTO: **YA ESTABA HECHO, y su lectura pendiente tambien**
+
+`scripts/loop/vuelta41_lectura_acto.py --puesto 361`, bloque (b), sobre la cola que el instrumento ya entrego (**1.494** nodos): `partners_hypothesis_physical` esta **FUERA** de la cola y `key_partners_hypothesis` sigue **DENTRO**, con **bloque 50,8** y **corte tras 2** (la pareja, 54,7 sobre los pasos 2 y 4, **no dispara**).
+
+**Y ESA CITA NO ES LA COSTURA QUE LA RAZON DESCRIBIA**, leida entera hoy:
+
+> *LATERAL, no cambia la clase: el primero tiene catorce pasos y se parte con claridad, del seis al catorce entra otro bloque con vocabulario propio, objetivo de traccion, Critical Path, licensing y socios de distribucion y de suministro. Costura para la otra ficha.*
+
+**SE DESTEJIO, y la desteji `OP-F-04-WEI`.** `docs/plan/01_FUENTES.md` linea **951** publica la frontera (**1 a 5 / 6 a 14**) **y declara alli mismo una lectura pendiente que no se resolvio adivinando**: *el tramo de cola trae DOS sub bloques distinguibles (6 a 10, meta de traccion y `Critical Path`; 11 a 14, tipos de alianza por cuello de botella). Si son uno o dos es lectura pendiente, y no la resuelvo adivinando*. **Las lineas 983 y 984 traen esa lectura ya hecha, y son DOS destinos y no uno**: el bloque **6 a 10** al miembro `alineacion_bd_metricas_core` (evaluar socios por su capacidad de mover la metrica clave) y el **11 a 14** al miembro `pipeline_alianzas_bd` (clasificar por tipo segun el cuello de botella), **separados a proposito**.
+
+**LA MEDICION DE HOY LO CONFIRMA: `key_partners_hypothesis` tiene CINCO pasos**, que son exactamente los cinco primeros. `OP-F-04-WEI` esta **HECHA en su nota 3541 SI** segun la apertura de esta vuelta. **Fuente primero, satisfecha POR PRECEDENCIA.**
+
+**LA CITA QUE QUEDA, LEIDA CON EL TEXTO DELANTE: NO HAY COSTURA.** El corte cae **tras el paso 2**: los pasos **1 y 2** construyen la lista de socios y el intercambio de valor, y los **3 a 5** juzgan al proveedor, trazan la frontera contra los recursos clave y llevan el resultado al Canvas. **El paso 3 evalua a los proveedores que el paso 1 acaba de listar: CONTINUA en vez de volver a contar.** Comparten vocabulario, no narracion. **La cita queda registrada en la cola y no despachada.**
+
+### `P.5`: **UNA FAMILIA DE DOS**, y la PRIMERA relectura post fusion de la vuelta
+
+El par **361** es **clase A** y su razon **NO nombra ganador**: la vara del verbo de `9.3.1` da **NO, es POR ELEGIR**. Los **dos** pares del archivo que meten un tercero son el **427** (**D**) y el **599** (**B**): **CERO terceros de clase A**, asi que **el acto ES de dos**.
+
+**Y AQUI SI VUELVE UN PAR A LA COLA, el primero de esta vuelta:** el puesto **599**, `asociaciones_clave` con `key_partners_hypothesis`, es **clase B**, y su nodo **cambia de texto al absorber**, asi que **se relee al cierre del acto** como manda `08_VERIFICACION`. Los cuatro actos anteriores de la vuelta (331, 341, 344 y el propio 285 de la vuelta 42 aparte) salieron todos en **CERO**; este no.
+
+**LA FUENTE, DICHA COMO SE MIDE:** el instrumento imprime **FUENTE UNICA (1 fuente distinta medida)**, porque las dos cadenas son **IDENTICAS**: *The Startup Owner's Manual - Steve Blank*. **Es el primer acto de `OP-D-06` en el que la etiqueta sale UNICA**, y se deja escrito porque los tres anteriores (**331**, **341** y **344**) salieron **MIXTA por diferencias de forma y no de libro**. **Aqui se ve que la etiqueta funciona cuando las cadenas calzan, que es lo que da sentido a haber declarado las tres anteriores como forma.**
+
+### `P.8` EN ORDEN: **manda el CONTENIDO, y esta vez el cableado NO PUEDE DECIDIR NADA**
+
+**EL CONTENIDO, leido primero:**
+
+1. **LOS DOS SE LLAMAN IGUAL Y UNO TRAE UN PARENTESIS QUE LO ESTRECHA**, y es la forma mas limpia que ha dado la operacion: *Hipotesis de Socios Clave* contra *Hipotesis de Socios Clave (Canal Fisico)*. **No es que un titulo sea el concepto y el otro se le parezca: es EL MISMO TITULO con un canal metido entre parentesis.** Y esto es **exactamente el ejemplar escrito de `P.8`**, donde el id que ganaba por cableado decia **BIENVENIDA**, que es UNA fase, mientras la doctrina valia para las OCHO, y la regla concluye que **la cabeza de una serie no se llama como uno de sus pasos**. **El canal fisico es UN canal; la hipotesis de socios vale para todos.**
+2. **EL GRAFO DECLARA LA JERARQUIA, Y ESO ES CONTENIDO Y NO CABLEADO.** `P.8` cuenta como contenido *un PADRE DECLARADO*, y aqui no hay que deducirlo de un conteo: **hay una ARISTA DIRECTA que lo dice.** `partners_hypothesis_physical` lleva a `key_partners_hypothesis` en sus `nodos_previos`, y `key_partners_hypothesis` lleva a `partners_hypothesis_physical` en sus `nodos_siguientes`. **El grafo ya tiene escrito que uno viene DEL otro, y el que va primero es el superviviente.** Una arista que dice **quien va antes** no es un margen de aristas: es una declaracion.
+3. **LAS CONDICIONES DE ENTRADA**, que son la misma vara del punto 1 por el otro extremo: la del superviviente se enciende por lo que **el modelo de negocio** necesita (capacidades externas criticas: manufactura, contenido, distribucion) y la del donante por lo que **el producto** es (fisico). **Un nodo cuya puerta de entrada es una propiedad del producto no puede ser la cabeza de una hipotesis del modelo de negocio.**
+4. **EL PASO QUE CIERRA CONTRA EL ARTEFACTO DEL METODO ES DEL SUPERVIVIENTE**: *Actualizar el Business Model Canvas con los socios identificados*. La hipotesis de socios **nace de una casilla del Canvas y vuelve a ella**, y el nodo que completa ese circuito es el que el metodo puede colgar de esa casilla.
+5. **PIEZAS PROPIAS DEL DONANTE QUE NADIE MAS TIENE** y que por eso viajan enteras: los **cuatro tipos nombrados dentro de un paso** (el superviviente solo los tenia en su resumen), la **tabla de tres columnas** con sus nombres, los **tamanos de pedido** y el **credito** como varas de flexibilidad, **la validacion posterior con reuniones reales** (la unica linea del acto que saca el ejercicio del escritorio, y la mas cara de perder), el ejemplar de **Apple** y el iPod con las discograficas, y **su condicion del canal fisico**, que se queda como **segundo disparador con su nombre** en vez de disolverse.
+
+**Superviviente: `key_partners_hypothesis`.**
+
+**EL CABLEADO, citado DESPUES:** grado por `P.1` de **6** contra **6**.
+
+> **ES UN EMPATE EXACTO, Y ESO ROMPE EL PATRON COMODO DE LOS TRES ACTOS ANTERIORES.** En el **331**, el **341** y el **344** el cableado fue a favor del elegido por contenido (**5 contra 2**, **9 contra 5**, **8 contra 3**), y esta vuelta ya habia declarado que ese patron era comodo y restaba evidencia. **Aqui el cableado no aporta ni un gramo: la eleccion la sostiene SOLO el contenido, y si el contenido estuviera mal no habria nada detras que lo tapara.** Se registra como **el caso limpio de la operacion**.
+
+> **Y EL COSTE DE LA ELECCION ESTA MEDIDO: CERO aristas.** Los dos nodos tienen **CERO aristas propias sin reciproco**.
+
+### EL MAPA DE MOVIMIENTO, celda a celda
+
+**Prefijos:** `K` = `key_partners_hypothesis` (superviviente), `P` = `partners_hypothesis_physical` (absorbido).
+
+**Las dos tablas se IMPRIMEN y no se teclean**, generadas del plan sellado con `python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V41_ACTO361.json` y `... --campo grupos_condiciones`:
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | K1, P2, P4 | LA MISMA LISTA CON SUS CUATRO TIPOS NOMBRADOS Y SU BANQUILLO. El superviviente manda listar socios primarios y alternativos POR TIPO y NO dice cuales son los tipos: los nombra en su resumen y no en el paso, que es justo donde hacen falta. El donante los nombra en un paso propio (alianzas estrategicas, coopetencia, desarrollo conjunto, proveedores clave) y ademas trae el suyo de identificar primarios y suplentes, que es la misma accion que la del superviviente dicha con otras palabras. Las tres piezas son UNA sola instruccion, y separarlas dejaria un paso que dice POR TIPO sin decir que tipos. |
+| **2** | K2, P1 | LA MISMA DEFINICION CON SU FORMA. El superviviente dice QUE se define (que provee cada socio y que recibe a cambio) y el donante dice EN QUE se anota (una tabla de tres columnas, con las tres nombradas). Y hay una razon medida para tomar la forma del donante en vez de dejarla fuera: las tres columnas que el donante manda crear son LAS MISMAS TRES que el entregable del superviviente ya pedia, asi que el paso y el entregable dejan de contradecirse en el nivel de detalle. |
+| **3** | K3, P3 | LA MISMA EVALUACION CON LA LISTA COMPLETA. El superviviente evalua en tiempos, precios y condiciones; el donante evalua en tiempos de entrega, tamanos de pedido, credito o precio. Se toman las cinco varas porque ninguna sobra y dos de ellas (tamanos de pedido y credito) son las que distinguen a un proveedor flexible de uno rigido cuando el precio es el mismo. El texto queda mas largo y mas util, que es el intercambio que P.13 autoriza. |
+| **4** | K4 | PIEZA PROPIA DEL SUPERVIVIENTE, y es una DISTINCION y no un procedimiento: por P.11 viaja ENTERA y con grupo propio. Es la unica linea del acto que traza una frontera conceptual en vez de mandar hacer algo, y es la que impide el error tipico de este ejercicio, meter en la tabla de socios lo que en realidad es un recurso de la casa. El donante no la tiene. |
+| **5** | K5 | PIEZA PROPIA DEL SUPERVIVIENTE, y es la que cierra el acto contra el artefacto del metodo: sin ella la tabla de socios se queda en un documento suelto en vez de entrar en el modelo de negocio, que es de donde salio la hipotesis. El donante cierra de otra manera (planeando la validacion), y por eso los dos cierres viajan y ninguno se come al otro. |
+| **6** | P5 | PIEZA PROPIA DEL DONANTE, sin equivalente en el superviviente, y es la mas cara de perder de todo el acto: es la UNICA linea que saca el ejercicio del escritorio. El metodo de Blank entero se sostiene sobre salir a hablar con gente real, y una tabla de socios clave sin una reunion detras sigue siendo una hipotesis con formato de tabla. Va la ultima a proposito, porque es lo que se hace DESPUES de tener el documento. |
+
+| condicion del resultado | de que origenes sale | el motivo que la modifica |
+|---:|---|---|
+| **1** | KC1 | EL DISPARADOR GENERAL, propio del superviviente, y el que corresponde a la cabeza: se enciende por lo que el MODELO DE NEGOCIO necesita, sin importar de que sea el producto. |
+| **2** | PC1 | EL DISPARADOR DEL CANAL FISICO, propio del donante, y NO se funde con el anterior aunque sea un caso suyo. El motivo es el de siempre y aqui pesa mas que nunca: el canal fisico ES la identidad entera del nodo absorbido, y disolver su condicion dentro de la general seria borrar en la fusion justamente lo unico que el donante tenia de propio. Se queda como segundo disparador, con su nombre, para que quien llegue con un producto fisico encuentre el acto por su puerta. |
+
+**LA TABLA DE PERDIDAS DE `P.13`, derivada de los grupos y no tecleada: 12 de 12 piezas VIAJAN y CERO se pierden** (salida de `vuelta41_plan_acto.py`, sellada en `docs/loop/SALIDA_V43_ACTO361_PLAN.txt`). **Este acto NO tiene reparto escrito** en la tabla de `OP-D-06`, asi que rige la regla adjudicada el 11 ago 2026, y **con cero perdidas no hay nada que repartir**, lo que se comprueba al cierre.
+
+### LA SIMULACION SALIO EN ROJO Y ABORTO SIN ESCRIBIR: **la guarda 10 hizo su trabajo, y `P.16` dice quien lo arregla**
+
+`python scripts/loop/vuelta39_fundir.py --plan docs/loop/PLAN_V41_ACTO361.json --simular`, sellado en `docs/loop/SALIDA_V43_ACTO361_SIM.txt`, **exit 1**:
+
+> `guarda 10, cero auto-arista tras resolver: ROJO (1)`
+> `SE ABORTA SIN ESCRIBIR, 1 fallo(s):`
+> `  [ROJO] AUTO-ARISTA: key_partners_hypothesis se nombra a si mismo en nodos_siguientes`
+
+**ESTE ES EL PRIMER ACTO DE LA CAMPANA EN EL QUE EL SUPERVIVIENTE Y EL ABSORBIDO SON VECINOS DIRECTOS**, y por eso es el primero en el que esa guarda se enciende. **La guarda hizo lo correcto y el arbol quedo intacto**: el ejecutor de fusiones **redirige y deduplica, y NO retira**. Las otras once guardas de la simulacion salieron verdes, y la novena confirmo las **2 duplicadas fabricadas** que el plan ya predecia.
+
+**Y LA REGLA QUE DICE QUIEN LO ARREGLA YA ESTABA ESCRITA, adoptada por decision del fundador el 14 ago 2026**: `docs/plan/BANCO_DEL_PLAN.md`, **`P.16` QUIEN FABRICA, LIMPIA**, leida hoy:
+
+> **TODA OPERACION DE FUSION RETIRA, EN SU MISMO COMMIT, LA ARISTA INTERNA DEL PAR QUE SU PROPIA SIMULACION REPORTA COMO AUTO-ARISTA NACIENTE.**
+
+Y su punto **1** reparte el trabajo con nombre: *si `P.7` (la simulacion previa a toda operacion de mesa) reporta que el par a fusionar deja una arista interna sin retirar, sea AUTO-ARISTA o ARISTA DUPLICADA, **LA OPERACION** la retira en el mismo commit que ejecuta la fusion*. Su punto **2** prohibe aplazarlo: *aplazarla es exactamente como nacieron las 33 auto-aristas y las 1.056 entradas duplicadas de hoy*.
+
+**LO QUE SE HACE, Y LO QUE NO SE HACE, dicho antes de hacerlo:**
+
+| | |
+|---|---|
+| **NO se toca `scripts/loop/vuelta39_fundir.py`** | sus **trece guardas** estan escritas contra un comportamiento, y cambiarle la logica dentro de un acto **para que deje de quejarse seria apagar la alarma en vez de atender el fuego**. El ejecutor corre **entero y sin tocar**, y sus trece guardas juzgan el resultado |
+| **la retirada es un paso propio de la operacion** | instrumento nuevo `scripts/loop/vuelta43_retirar_arista_interna.py`, **de un solo objeto y con su motivo escrito dentro**, que retira **las entradas en las que el superviviente nombra al absorbido y las entradas en las que el absorbido nombra al superviviente** |
+| **se retiran LOS DOS SENTIDOS y no uno** | y el motivo esta medido, no supuesto: **retirar uno solo deja la vista reciproca coja y el paso 5 de `run_phase1` LA VUELVE A ESCRIBIR**, con lo que la auto-arista reaparece por la puerta de atras |
+| **no se toca el texto de ningun nodo** | ni pasos, ni condiciones, ni titulo, ni etiqueta, ni resumen, ni entregable: **solo `nodos_previos` y `nodos_siguientes`**, y el instrumento trae una **guarda B** que compara los seis campos antes y despues y lo comprueba |
+| **va en el SEGUNDO commit, con la fusion** | porque `P.16` dice **en el mismo commit que ejecuta la fusion**, y por eso **este primer commit deja el grafo INTACTO** y sella la simulacion **en rojo** como la evidencia que dispara la regla |
+
+**LA ARISTA INTERNA, MEDIDA HOY en los dos sentidos: DOS entradas, que son UNA sola arista declarada en sus dos extremos.**
+
+| nodo | campo | vecino |
+|---|---|---|
+| `key_partners_hypothesis` | `nodos_siguientes` | `partners_hypothesis_physical` |
+| `partners_hypothesis_physical` | `nodos_previos` | `key_partners_hypothesis` |
+
+> **Y SE DECLARA LO QUE `P.16` NO DICE, en vez de fingir que lo dice** (`PENDIENTE DE DOCTRINA`): la regla manda retirar **en el mismo commit**, y **no dice si la retirada va ANTES o DESPUES de fundir**. Aqui va **ANTES**, y el motivo es que asi el ejecutor de fusiones corre **sin tocar** y sus trece guardas juzgan el resultado ya limpio; la alternativa (fundir y limpiar despues) obligaria a modificar el ejecutor o a aceptar que aborta. **Es una eleccion del ejecutor de esta vuelta, no una lectura de la regla, y va MARCADA COMO DISCUTIBLE.**
+
+> **Y UNA CONSECUENCIA QUE SE DICE ANTES DE MEDIRLA: el plan sellado de este primer commit SE VUELVE A SELLAR en el segundo**, porque la retirada cambia las redirecciones medidas (hoy **6**, con `key_partners_hypothesis` entre ellas) y la simetrizacion esperada (hoy **4 aristas**, una de ellas la auto-arista `key_partners_hypothesis.nodos_previos += key_partners_hypothesis`). **Los dos planes quedan en el historial de git y el segundo commit publica el diff, para que la re-selladura se pueda auditar en vez de tener que creerse.** **La particion de los grupos NO cambia**, que es lo que la tabla de arriba publica y lo que el verificador de mapas comprueba.
