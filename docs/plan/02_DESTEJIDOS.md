@@ -1988,3 +1988,77 @@ La tabla de orden de este mismo fichero le cuenta a `OP-D-05` **UN destejido** y
 | **3** | **DOS COMMITS POR ACTO DESDE LA VUELTA 42** (linea **8802**), adjudicado **por extension y no como doctrina nueva**: **el plan sellado con su lectura en un commit pusheado ANTES de fundir; la fusion ejecutada en otro**. Extiende el *commit y push por acto* del encargo 41 por su propia logica y por la leccion de hoy: **un corte de sesion no debe poder dejar un sellado sin commit**. Es la misma especie que la regla del hueco de acta: **lo no registrado no existe** |
 
 **LOS SEIS FICHEROS SIN COMMIT SE COMMITEARON EN ESTA VUELTA 42, TAL COMO QUEDARON**, que es lo que el propio auditor dejo escrito como discutible **(iii)** de su acta (linea **8815**): los dejo sin commitear **a proposito**, porque **son obra del ejecutor y los commitea el ejecutor de la 42 con su mensaje declarado**. Hecho en el commit **2414e7d9**, sin retocar una linea, y con la declaracion de que **la fusion del 285 no se ejecuto**.
+
+## `OP-D-06`, ACTO 1 DE NUEVE (puesto 285): **`producto_unico_superior` ABSORBE A `superioridad_producto_beneficios`** (19 ago 2026, vuelta 42)
+
+**EL PLAN SE SELLO EN LA VUELTA 41 Y SE REPRODUJO POR INSTRUMENTO EN LA 42 ANTES DE EJECUTARSE**, que es la condicion exacta que la adjudicacion 1 del acta de la vuelta 41 puso (`docs/loop/ACTA_AUDITOR.md` linea **8785**, leida hoy). Las tres reproducciones salieron **BYTE IGUALES**, medidas con `md5sum` y `diff` en esta vuelta:
+
+| lo reproducido | instrumento corrido hoy | md5 del sellado y del reproducido |
+|---|---|---|
+| `docs/loop/PLAN_V41_ACTO285.json` | `python scripts/loop/vuelta41_plan_acto.py --puesto 285` | `33ec35d6d8709527303c3a40cfe097ce`, **diff vacio** |
+| `docs/loop/SALIDA_V41_ACTO285_LECTURA.txt` | `python scripts/loop/vuelta41_lectura_acto.py --puesto 285` | `ee1fd3a4682fb63e78a3e9c22f0d39ca`, **diff vacio** |
+| `docs/loop/SALIDA_V41_ACTO285_PLAN.txt` | salida por pantalla de `vuelta41_plan_acto.py` | `1fb2c4c86748df05ae77a7727a81e17a`, **diff vacio** |
+
+**CERO DIFERENCIAS QUE DECLARAR, y por eso el sellado se ejecuta.** La reproduccion entera va sellada en `docs/loop/SALIDA_V42_ACTO285_REPRODUCCION.txt`.
+
+### EL DESTEJIDO DEL ACTO: **SIN COSTURA QUE DESTEJER EN NINGUNO DE LOS DOS**
+
+`scripts/loop/vuelta41_lectura_acto.py --puesto 285`, bloque (b), sobre la cola que el instrumento ya entrego (`docs/COSTURAS_INTERNAS.jsonl`, **1.496** nodos):
+
+| nodo | lo que CITA el instrumento | disparo |
+|---|---|---|
+| `producto_unico_superior` | 6 pasos, pareja **52,7** (pasos 2 y 3), bloque **45,4**, corte tras **3** | pareja **NO**, bloque **SI**, franja 44 a 45 **NO** |
+| `superioridad_producto_beneficios` | 6 pasos, pareja **48,4** (pasos 3 y 5), bloque **44,7**, corte tras **4** | pareja **NO**, bloque **SI**, franja 44 a 45 **SI** |
+
+**EL INSTRUMENTO CITA Y NO JUZGA, y la lectura textual con el texto delante dice que NO hay costura en ninguno de los dos:** en los dos nodos el segundo bloque **CONTINUA** al primero en vez de volver a contarlo. **La cita queda REGISTRADA en la cola y no despachada**, que es la practica que el acta de la vuelta 40 adjudico en su **d1** (linea **8524**) y el precedente del **d2** del acta 39. **Y la relectura ciega del auditor de la vuelta 41 coincidio en esto mismo antes de destapar el plan** (acta, linea **8758**).
+
+### `P.5`: **UNA FAMILIA DE DOS**, con el subconjunto cerrado por transitividad sobre las A
+
+El par **285** es **clase A** y su razon **NO nombra ganador**: la vara del verbo de `9.3.1` da **NO, es POR ELEGIR**. Los **cuatro** pares del archivo que meten un tercero son **163 (D)**, **461 (D)**, **835 (B)** y **1390 (D)**: **CERO terceros de clase A**, asi que **el acto ES de dos**, como la tabla sellada dice. **Y el par 835** (`brief_competitivo` con `producto_unico_superior`, **clase B**) **vuelve a la cola de relectura post fusion** porque el superviviente **cambia de texto**, como manda `08_VERIFICACION`.
+
+**Los dos nodos son de la MISMA fuente**, *Winning at New Products* de Robert G. Cooper: **NO es acto de fuente mixta**. La regla de fuente primero de los tres cruces quedo satisfecha **por precedencia** (`OP-F-03` **HECHA** en su nota **3376**, apertura de hoy).
+
+### `P.8` EN ORDEN: **manda el CONTENIDO, y el cableado PIERDE y se dice que perdio**
+
+**EL CONTENIDO, leido primero:** el titulo de uno **es el sujeto** (*Tener un Producto Unico y Superior: El Factor Numero Uno de Rentabilidad*) y el del otro **es un predicado sobre ese sujeto** (*La superioridad de tu producto esta en los beneficios, no en las caracteristicas*); el **padre declarado por el grafo** de `producto_unico_superior` es `ocho_factores_exito_criticos`, la lista de factores criticos de Cooper de la que su titulo dice cual es; **la cifra del 5 veces mas probabilidad de exito, 4 veces mas participacion y 4 veces mas rentabilidad vive SOLO en su resumen**; y **la propia razon del archivo** describe al otro como un **desarrollo** del posicionamiento (*"El segundo desarrolla mas el discurso de venta segun ese posicionamiento, pero la instruccion es la misma"*). **Superviviente: `producto_unico_superior`.**
+
+**EL CABLEADO, citado DESPUES y NO usado para decidir, y VA EN CONTRA DEL ELEGIDO:** grado por `P.1` de **6** para `producto_unico_superior` contra **7** para `superioridad_producto_beneficios`. **`P.8` dice que el cableado DESEMPATA y NO DECIDE, asi que aqui PIERDE contra el contenido, y se escribe que perdio en vez de esconderlo.** Es **el primer acto de esta campana en que las dos varas se separan**, y por eso queda dicho con todas sus letras.
+
+> **Y EL COSTE DE LA ELECCION ESTA MEDIDO: CERO aristas.** Los dos nodos tienen **CERO aristas propias sin reciproco** (bloque (e) de la lectura), asi que elegir a cualquiera de los dos **no pierde ni una arista**: las reciprocas las reescribe la simetrizacion de `run_phase1`, paso 5. **La diferencia de UNO en el grado no cuesta nada.**
+
+### EL MAPA DE MOVIMIENTO, celda a celda
+
+**Prefijos:** `P` = `producto_unico_superior` (superviviente), `B` = `superioridad_producto_beneficios` (absorbido).
+
+**Las dos tablas se IMPRIMEN y no se teclean** (regla 1 del `EJECUTOR.md`, cuarto renglon), generadas del plan sellado con `python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V41_ACTO285.json` y `... --campo grupos_condiciones`:
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | P1, B2 | LA MISMA ACCION EN EL MISMO MOMENTO, y del donante viaja lo que le faltaba al superviviente: EL NOMBRE DEL INSTRUMENTO (voz del cliente, VoC) y la distincion entre necesidades y deseos, que es la que hace util el estudio. El superviviente decia QUE hacer y CUANDO; el donante dice COMO se llama y QUE se busca. |
+| **2** | P2, P3 | LAS DOS CARAS DE LA MISMA INDAGACION: lo que el cliente no sabe pedir y lo que de verdad pesa cuando compra. Y ES EXACTAMENTE LA PAREJA QUE EL INSTRUMENTO DE COSTURAS CITA en este nodo (pasos 2 y 3, similitud 52,7). Esa cita NO disparo por pareja, porque el umbral es 80: no es una costura probada, es una cita. La fusion es el momento en que se resuelve, y resolverla juntando dos pasos del superviviente NO es destejer nada: destejer es partir un nodo en dos, y esto es lo contrario. |
+| **3** | P4, B1 | EL SUPERVIVIENTE DABA LA ORDEN Y EL DONANTE DA EL PORQUE. Definir por beneficios sin la distincion features contra benefits es una consigna; con ella es un criterio que se puede aplicar. Las dos palabras inglesas viajan literales porque son el vocabulario con el que el lector va a reconocer la idea en cualquier otra pagina. |
+| **4** | P5, B3, B4 | EL MISMO PASO CON SU METODO Y SU HORIZONTE. El superviviente decia CONTRA QUE comparar (los tres ejes) y no decia COMO; el donante trae el como (desarmar el producto) y ademas el aviso que ninguno de los dos tenia dos veces: que la comparacion contra la foto de hoy caduca. |
+| **5** | P6, B5 | EL CIERRE DEL PROCEDIMIENTO, dicho por los dos: el donante manda TRADUCIR lo aprendido a una definicion, y el superviviente manda REVISAR esa definicion contra la trampa del precio bajo. Escribir y revisar lo escrito son el mismo paso partido en dos, y juntos dicen que la propuesta de valor no es un documento que se firma sino uno que se somete a prueba. |
+| **6** | B6 | PIEZA PROPIA DEL DONANTE, sin equivalente en el superviviente: es el UNICO paso del acto que dice que hacer ANTES de construir. Viaja entera y sola, y por eso tiene grupo propio en vez de disolverse dentro de otro. |
+
+| condicion del resultado | de que origenes sale | el motivo que la modifica |
+|---:|---|---|
+| **1** | PC1, BC2 | LA MISMA CONDICION DICHA DOS VECES, una por cada nodo. Se junta en una sola porque son la misma senal vista con las mismas palabras. |
+| **2** | PC2, BC1 | LA MISMA CONDICION POR SUS DOS SINTOMAS: no tener propuesta de valor es el resultado, y definir por caracteristicas tecnicas es la causa. El donante aporta la causa, que es la que se ve antes. |
+
+**LA TABLA DE PERDIDAS DE `P.13`, derivada de los grupos y no tecleada: 16 de 16 piezas VIAJAN y CERO se pierden** (salida de `vuelta41_plan_acto.py`, sellada en `docs/loop/SALIDA_V41_ACTO285_PLAN.txt`). La regla de reparto adjudicada el 11 ago 2026 manda **cada perdida al bloque del que proviene y la que no tenga bloque al superviviente**; **este acto no tiene reparto escrito en la tabla de `OP-D-06`** (solo lo tienen el **392** y el **341**), y **con cero perdidas no hay nada que repartir, y eso se comprueba al cierre en vez de suponerse**.
+
+> **POR QUE ESTA TABLA VA EN PROSA Y NO CON `vuelta38_tabla_perdidas.py`, declarado en vez de callado:** ese instrumento pide un campo `motivo` por fila que **el esquema de `tabla_perdidas_p13` no trae** (sus claves son `pieza`, `texto`, `de`, `clase`, `destino`), y **`OP-D-05` publico la suya en prosa por lo mismo**. La cifra **no se teclea igual**: sale impresa de la corrida del plan.
+
+### LO QUE LA SIMULACION DICE QUE VA A PASAR, sellado antes de ejecutar
+
+| | esperado |
+|---|---|
+| redirecciones sobre nodos vivos | **7** (3 en `nodos_previos`, 4 en `nodos_siguientes`) |
+| deprecados que nombran y NO se tocan | **3** (`enfoque_resolucion_problemas_lanzamiento_producto`, `prevencion_de_objeciones`, `spiral_development`) |
+| duplicadas que la fusion fabrica (`P.16`) | **0**, y aun asi se mide antes de darlo por bueno |
+| aristas de simetrizacion que el paso 5 tiene que anadir | **7**, ni una mas ni una menos |
+| pasos del resultado | **6**, **DENTRO del estandar de 3 a 6** |
+| censo esperado | ficheros **3.853** sin moverse, vivos **3.532 menos 1**, deprecados **321 mas 1** |
+
+**LOS REGISTROS QUE NO SON EL GRAFO, ENUMERADOS ANTES Y NO DESPUES**, con la leccion de la vuelta 39 delante. **Y aun asi se corre `scripts/reanclar_por_resolutor.py` ENTRE la fusion y `run_phase1`**: es la practica que el acta de la vuelta 39 adjudico para toda fusion futura, y **una guarda que solo se corre cuando se sospecha no es una guarda.**

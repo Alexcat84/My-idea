@@ -1,0 +1,72 @@
+PLAN     : docs/loop/PLAN_V41_ACTO285.json
+OPERACION: OP-D-06, ACTO 1 DE NUEVE (puesto 285): producto_unico_superior absorbe a superioridad_producto_beneficios
+SELLADO  : SELLADO en la vuelta 41, 19 ago 2026, ANTES de ejecutar. El destejido del acto quedo declarado SIN COSTURA QUE DESTEJER en los dos nodos: el instrumento de costuras CITA a los dos por bloque (45,4 con corte tras 3 y 44,7 con corte tras 4) y NINGUNO por pareja, y la lectura textual con el texto delante dice que en los dos el segundo bloque CONTINUA al primero en vez de volver a contarlo. La cita queda registrada en la cola, como manda la practica adjudicada en el acta 40.
+MODO     : --simular
+==============================================================================
+censo ANTES: 3853 ficheros, 3532 vivos, 321 deprecados
+guarda 1, fuente del superviviente contra el plan y vida de los TRES: OK
+  ACTO DE FUENTE UNICA (1 fuente(s) distinta(s) medida(s)), las tres impresas y ninguna escondida:
+    producto_unico_superior                superviviente  Winning at New Products - Robert G. Cooper
+    superioridad_producto_beneficios       absorbido      Winning at New Products - Robert G. Cooper
+guarda 2, producto_unico_superior                pasos y condiciones (6, 2) contra (6, 2): OK
+guarda 2, superioridad_producto_beneficios       pasos y condiciones (6, 2) contra (6, 2): OK
+guarda 3, VERBATIM contra dataset/nodos: 16 de 16 calzan, 0 sobrantes en el plan
+guarda 4, cobertura de pasos        12 de 12, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones  4 de 4, repetidos [], faltan [], sobran []
+guarda 5, los finales derivados de los grupos calzan con el campo sellado: OK
+guarda 6, preservar_literal en el nodo resultante entero:
+    '5 veces más probabilidad de éxito'        ['resumen']
+    '4 veces más participación de mercado'     ['resumen']
+    'voz del cliente, VoC'                     ['pasos']
+    '(features)'                               ['pasos', 'resumen']
+    '(benefits)'                               ['pasos', 'resumen']
+    'protocepts'                               ['pasos']
+    'desarma sus productos'                    ['pasos']
+    'valor por el dinero'                      ['pasos']
+    'evolucionará el producto de tu competidor' ['pasos']
+    9 de 9
+guarda 7, rastros en el nodo resultante entero:
+    'propuesta de valor'                       ['pasos', 'condiciones', 'entregable', 'resumen']
+    'características técnicas'                 ['pasos', 'condiciones', 'entregable']
+    'precio bajo'                              ['pasos']
+    'competencia'                              ['pasos', 'condiciones', 'entregable']
+    'prototipos'                               ['pasos']
+    5 de 5
+redirecciones medidas hoy sobre nodos VIVOS: 7
+    alfabetizacion_en_materiales_maliciosos          nodos_siguientes   superioridad_producto_beneficios -> producto_unico_superior
+    customer_gains                                   nodos_siguientes   superioridad_producto_beneficios -> producto_unico_superior
+    desarrollo_en_espiral                            nodos_previos      superioridad_producto_beneficios -> producto_unico_superior
+    lanzamiento_nuevos_productos_enfoque_problema    nodos_previos      superioridad_producto_beneficios -> producto_unico_superior
+    prevencion_objeciones_vs_manejo                  nodos_previos      superioridad_producto_beneficios -> producto_unico_superior
+    tecnologia_como_medio_no_fin                     nodos_siguientes   superioridad_producto_beneficios -> producto_unico_superior
+    voz_del_cliente_voc                              nodos_previos      superioridad_producto_beneficios -> producto_unico_superior
+nodos DEPRECADOS que nombran y NO se tocan: 3
+    enfoque_resolucion_problemas_lanzamiento_producto nodos_previos      superioridad_producto_beneficios (deprecado: registro historico)
+    prevencion_de_objeciones                         nodos_previos      superioridad_producto_beneficios (deprecado: registro historico)
+    spiral_development                               nodos_previos      superioridad_producto_beneficios (deprecado: registro historico)
+guarda 8, redirecciones contra el plan sellado (7 esperadas): OK
+guarda 8b, deprecados que nombran contra el plan (3 esperados): OK
+
+### P.16, LAS DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas
+    TOTAL FABRICADAS: 0
+guarda 9, duplicadas fabricadas contra el plan (0 esperadas): OK
+guarda 10, cero auto-arista tras resolver: OK (0)
+guarda 11, cero duplicada tras resolver: OK (0)
+guarda 12, a6 del acta, titulo y etiqueta SIN TOCAR ('Tener un Producto Único y Superior: El Factor Número Uno de Rentabilidad' / 'Ofrece un Producto Realmente Único'): OK
+
+EL RESULTADO, sobre copia en memoria:
+  producto_unico_superior: 6 pasos, 2 condiciones, alias ['superioridad_producto_beneficios']
+    1. Haz un estudio de necesidades y deseos con tus clientes desde el inicio del proyecto, saliendo a escucharlos con una investigación de voz del cliente, VoC, para descubrir sus necesidades y no solo sus deseos
+    2. Busca necesidades que tu cliente ni siquiera sabe nombrar, no solo lo obvio que ya te pide, y descubre qué es lo que realmente le importa a la hora de decidir
+    3. Define tu producto como un conjunto de beneficios para el cliente y no como una lista de características técnicas, teniendo clara la diferencia: las características (features) te cuestan dinero a ti, y los beneficios (benefits) son lo que tu cliente realmente compra
+    4. Compara directamente lo que ofreces contra la competencia en beneficios percibidos, valor por el dinero y calidad: desarma sus productos y encuentra sus puntos débiles, y no te quedes con la foto de hoy, imagina cómo evolucionará el producto de tu competidor en el futuro
+    5. Traduce todo lo que encuentres en una definición de tu producto centrada en beneficios y en tu propuesta de valor, y revisa si esa propuesta depende solo del precio bajo o si también conecta con lo que tu cliente siente y necesita, aunque eso cambie con el tiempo
+    6. Antes de desarrollar todo, prueba la idea con usuarios reales usando prototipos simples o conceptuales (protocepts)
+    c1. Si tu producto se parece demasiado a los de la competencia o no logra diferenciarse claramente de ella
+    c2. Si no tienes una propuesta de valor clara y diferenciada, o defines tu producto solo por sus características técnicas sin pensar en la mirada del cliente
+  entregable: Un documento con tu propuesta de valor diferenciada, que convierte las características técnicas de tu producto en beneficios claros para el cliente, validado hablando directamente con tus clientes y mirando a la competencia
+  superioridad_producto_beneficios: deprecado True, texto INTACTO (6 pasos, 2 condiciones)
+  ficheros que se tocarian: 9
+
+SIMULACION: cero escrituras.
+EXIT=0

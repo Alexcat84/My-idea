@@ -1,0 +1,50 @@
+==============================================================================
+VUELTA 42: REPRODUCCION POR INSTRUMENTO DEL SELLADO DEL ACTO 285
+==============================================================================
+Condicion puesta por la adjudicacion 1 del acta de la vuelta 41
+(docs/loop/ACTA_AUDITOR.md linea 8785): la vuelta 42 RE-CORRE los dos
+instrumentos y comprueba que REPRODUCEN las dos salidas y el plan
+sellados; cualquier diferencia se declara y DETIENE la ejecucion del
+sellado hasta adjudicarse.
+
+--- MD5 DE LOS SELLADOS, ANTES DE RE-CORRER NADA ---
+ee1fd3a4682fb63e78a3e9c22f0d39ca *docs/loop/SALIDA_V41_ACTO285_LECTURA.txt
+1fb2c4c86748df05ae77a7727a81e17a *docs/loop/SALIDA_V41_ACTO285_PLAN.txt
+33ec35d6d8709527303c3a40cfe097ce *docs/loop/PLAN_V41_ACTO285.json
+
+--- COMANDOS CORRIDOS HOY ---
+  python scripts/loop/vuelta41_lectura_acto.py --puesto 285
+  python scripts/loop/vuelta41_plan_acto.py --puesto 285
+
+--- MD5 DESPUES DE RE-CORRER ---
+ee1fd3a4682fb63e78a3e9c22f0d39ca *docs/loop/SALIDA_V41_ACTO285_LECTURA.txt
+1fb2c4c86748df05ae77a7727a81e17a *docs/loop/SALIDA_V41_ACTO285_PLAN.txt
+33ec35d6d8709527303c3a40cfe097ce *docs/loop/PLAN_V41_ACTO285.json
+
+--- DIFF DE LAS TRES, SELLADO CONTRA REPRODUCIDO ---
+PLAN_V41_ACTO285.json          : IDENTICO BYTE A BYTE (diff vacio)
+SALIDA_V41_ACTO285_LECTURA.txt : IDENTICO BYTE A BYTE (diff vacio)
+SALIDA_V41_ACTO285_PLAN.txt    : IDENTICO BYTE A BYTE (diff vacio)
+
+--- git status sobre el plan commiteado (vacio = no se movio) ---
+(fin del bloque de git status)
+
+--- LA ARITMETICA QUE EL ACTA 41 RE-CONTO (linea 8767), CONTRA LA CORRIDA DE HOY ---
+  el acta dijo: 7 redirecciones, 3 deprecados que nombran, 0 duplicadas,
+  16 origenes verbatim, 7 aristas de simetrizacion, 6 pasos finales,
+  tabla de P.13 con 16 de 16 que VIAJAN.
+  la corrida de hoy imprime, de su propia medicion:
+    origenes generados VERBATIM del fichero: 16
+    pasos finales : 6 (estandar 3 a 6: DENTRO)
+    condiciones finales: 2
+    redirecciones esperadas: 7
+    deprecados que nombran y no se tocan: 3
+    duplicadas que la fusion fabrica: 0
+    simetrizacion esperada: 7 aristas
+        VIAJAN 16 de 16. SE PIERDEN 0.
+
+  CALZA AL DIGITO: SI
+
+==============================================================================
+VEREDICTO: CERO DIFERENCIAS. EL SELLADO SE EJECUTA.
+==============================================================================
