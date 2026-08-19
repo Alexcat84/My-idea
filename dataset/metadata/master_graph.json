@@ -9001,7 +9001,8 @@
         "Cuando el producto ya está en fase de validación de clientes y necesita medir comportamiento real de usuarios",
         "Si el equipo no tiene claridad sobre qué datos son relevantes para decisiones de negocio"
       ],
-      "etiqueta_arbol": "Arma tu Set de Métricas"
+      "etiqueta_arbol": "Arma tu Set de Métricas",
+      "deprecado": true
     },
     "bullseye_framework": {
       "node_id": "bullseye_framework",
@@ -27650,7 +27651,7 @@
       "entregable_esperado": "Resultados de pruebas de venta reales que confirman o refutan lo que creías de tu negocio",
       "nodos_previos": [
         "formalize_advisory_board",
-        "build_metrics_toolset",
+        "metricas_de_adquisicion_activacion",
         "introduccion_validacion_clientes"
       ],
       "nodos_siguientes": [
@@ -60996,7 +60997,7 @@
       ],
       "entregable_esperado": "Un responsable de analítica de datos incorporado al equipo directivo con plan de reporte definido",
       "nodos_previos": [
-        "build_metrics_toolset"
+        "metricas_de_adquisicion_activacion"
       ],
       "nodos_siguientes": [
         "formalize_advisory_board",
@@ -74035,32 +74036,50 @@
       "dominio": "core",
       "titulo_concepto": "Cuántos llegan y cuántos se quedan usando (adquisición y activación)",
       "fuente": "The Startup Owner's Manual",
-      "resumen_teorico": "Si tienes un negocio web o de aplicación, mide cada clic para ver el camino completo que recorre alguien hasta convertirse en cliente (el embudo de conversión). Elige menos de una docena de métricas que te ayuden a decidir, organizadas en cuántos llegan, qué tan rápido, cuánto te cuesta y qué tan buenos son esos clientes. Divide tus métricas en dos grupos: adquisición (visitas, de dónde vienen, cuánto te cuesta conseguir cada uno) y activación (cuántos activan, cuánto cuesta cada activación, qué tan buena es la calidad de esos usuarios).",
+      "resumen_teorico": "Si tienes un negocio web o de aplicación, instrumenta el producto para medir cada clic y ver el camino completo que recorre alguien hasta convertirse en cliente (el embudo de conversión). Parte de qué relación quieres tener con tus clientes, que es una de las hipótesis de tu modelo de negocio, y elige menos de una docena de métricas accionables que te ayuden a decidir, organizadas en cuántos llegan, qué tan rápido, cuánto te cuesta y qué tan buenos son esos clientes, y agrupadas en adquisición, activación y referidos. Mide la adquisición con visitas totales, de dónde vienen, cuántas convierten y cuánto te cuesta conseguir cada cliente; mide la activación con cuántos o qué porcentaje se activa según la fuente, cuánto cuesta cada activación y qué tan buena es la calidad de esos usuarios. El resultado se arma o se compra como un tablero en tiempo real que resume el comportamiento clave y las tendencias, y que se monta de forma que pueda crecer luego a métricas de retención y de cohortes sin rehacerlo.",
       "pasos_accionables": [
-        "Define qué relación quieres tener con tus clientes y a partir de ahí decide qué métricas te dirán si vas bien",
-        "Quédate con menos de 12 métricas, todas deben ayudarte a decidir algo",
+        "Define qué relación quieres tener con tus clientes, que es una de las hipótesis de tu modelo de negocio, y a partir de ahí decide qué métricas te dirán si vas bien",
+        "Quédate con menos de 12 métricas accionables, todas deben ayudarte a decidir algo, y organízalas en adquisición, activación y referidos",
+        "Instrumenta tu producto para capturar cada clic y de qué fuente de tráfico viene",
         "Mide tus métricas de adquisición: visitas totales, de dónde vienen, cuántas convierten y cuánto te cuesta conseguir cada cliente",
         "Mide tus métricas de activación: cuántos o qué porcentaje se activa según la fuente, cuánto cuesta cada activación y qué tan buena es la calidad de esos usuarios",
-        "Arma un tablero que resuma el comportamiento clave de tus usuarios y las tendencias que te ayuden a decidir"
+        "Arma o compra un tablero en tiempo real que resuma el comportamiento clave de tus usuarios y las tendencias que te ayuden a decidir, y móntalo de forma que pueda crecer luego a métricas de retención y de cohortes"
       ],
-      "entregable_esperado": "Un tablero con menos de 12 indicadores que te ayuden a decidir, cubriendo adquisición y activación, actualizado en tiempo real",
+      "entregable_esperado": "Un tablero en tiempo real con menos de 12 indicadores que te ayuden a decidir, cubriendo adquisición, activación y referidos, alimentado por tu producto ya instrumentado y montado de forma que pueda crecer luego a retención y cohortes",
       "nodos_previos": [
         "plan_de_activacion",
         "mvp_alta_fidelidad",
         "acquisicion_viral_engineering",
         "diseno_landing_page_conversion",
         "analisis_trafico_competitivo",
-        "diseno_landing_page"
+        "diseno_landing_page",
+        "sales_roadmap_vs_sales_force",
+        "sintesis_hipotesis_modelo_negocio"
       ],
       "nodos_siguientes": [
         "funnel_get_customers_optimizacion",
-        "reunion_pivotar_o_perseverar"
+        "reunion_pivotar_o_perseverar",
+        "customer_validation_sell_phase",
+        "hire_data_analytics_chief",
+        "optimizacion_embudo_get_customers"
       ],
       "condiciones_activacion": [
         "Cuando necesitas decidir en qué invertir basándote en datos reales de comportamiento",
-        "Si todavía no tienes forma de medir el camino completo que recorre alguien hasta convertirse en cliente"
+        "Cuando tu producto ya está en la fase de validar clientes y necesitas medir el comportamiento real de tus usuarios",
+        "Si todavía no tienes forma de medir el camino completo que recorre alguien hasta convertirse en cliente",
+        "Si tu equipo no tiene claro qué datos son los relevantes para decidir en el negocio"
       ],
-      "etiqueta_arbol": "Mide Cómo Llegan tus Clientes"
+      "etiqueta_arbol": "Mide Cómo Llegan tus Clientes",
+      "ids_alias": [
+        "build_metrics_toolset"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "build_metrics_toolset",
+          "titulo": "Construir un Toolset de Métricas Clave",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        }
+      ]
     },
     "metricas_de_startup": {
       "fase_proyecto": "validacion",
@@ -76759,7 +76778,6 @@
       "nodos_siguientes": [
         "plan_de_activacion",
         "metricas_de_adquisicion_activacion",
-        "build_metrics_toolset",
         "usability_testing_producto"
       ],
       "condiciones_activacion": [
@@ -79212,7 +79230,7 @@
       "entregable_esperado": "Plan de optimización activo con métricas de volumen, costo y conversión mejorando iterativamente, y validación de que LTV supera al CAQ",
       "nodos_previos": [
         "customer_validation_sell_phase",
-        "build_metrics_toolset",
+        "metricas_de_adquisicion_activacion",
         "hire_data_analytics_chief"
       ],
       "nodos_siguientes": [
@@ -100288,7 +100306,7 @@
       "nodos_siguientes": [
         "customer_creation",
         "pivot_o_proceder",
-        "build_metrics_toolset",
+        "metricas_de_adquisicion_activacion",
         "decision_pivotar_o_proceder"
       ],
       "condiciones_activacion": [
@@ -104189,7 +104207,7 @@
         "diseno_experimentos_pass_fail",
         "customer_discovery",
         "aprendizaje_validado",
-        "build_metrics_toolset",
+        "metricas_de_adquisicion_activacion",
         "disenar_tests_pass_fail",
         "hablar_con_clientes_desmontar_supuestos"
       ],
@@ -122959,7 +122977,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 18,
+    "nodos_sin_enlaces_entrantes": 19,
     "enlaces_rotos_en_grafo": 0
   }
 }

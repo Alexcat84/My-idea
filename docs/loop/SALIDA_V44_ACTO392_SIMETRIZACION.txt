@@ -1,0 +1,22 @@
+PLAN        : docs/loop/PLAN_V41_ACTO392.json
+SUPERVIVIENTE: metricas_de_adquisicion_activacion
+LA GUARDA, tal como el plan la dejo escrita:
+  symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos
+==============================================================================
+### 1. symmetrize_added DEL LOG DEL CICLO
+  entradas totales en el log        : 5
+  entradas para metricas_de_adquisicion_activacion: 5
+  entradas para OTROS nodos         : 0
+  el plan esperaba                  : 5
+    [OK ] nodos_previos      sales_roadmap_vs_sales_force
+    [OK ] nodos_previos      sintesis_hipotesis_modelo_negocio
+    [OK ] nodos_siguientes   customer_validation_sell_phase
+    [OK ] nodos_siguientes   hire_data_analytics_chief
+    [OK ] nodos_siguientes   optimizacion_embudo_get_customers
+  GUARDA 1, simetrizacion EXACTA (faltan 0, sobran 0, de otros nodos 0): OK
+
+### 2. LAS ARISTAS RELEIDAS EN EL FICHERO DEL SUPERVIVIENTE
+  GUARDA 2, 5 de 5 aristas presentes en dataset/nodos/metricas_de_adquisicion_activacion.json: OK
+
+==============================================================================
+RESULTADO: TODAS LAS GUARDAS VERDES

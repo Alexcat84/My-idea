@@ -1,0 +1,61 @@
+CASO POSITIVO: OP-D-06, ACTO 6 DE NUEVE (puesto 392): metricas_de_adquisicion_activacion absorbe a build_metrics_toolset
+==============================================================================
+
+EL SUPERVIVIENTE, metricas_de_adquisicion_activacion
+  [PASA] tiene 6 pasos, los 6 que el plan deja
+  [PASA] tiene 4 condiciones, las 4 que el plan deja
+  [PASA] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [PASA] sus condiciones son exactamente las del plan
+  [PASA] su entregable es el del plan
+  [PASA] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Cuántos llegan y cuántos se quedan usando (adquisición y activación)'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Mide Cómo Llegan tus Clientes'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'referidos'
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'retención'
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'cohortes'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'cada clic'
+  [PASA] sobrevive literal en ['pasos']: 'fuente de tráfico'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'visitas totales'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'calidad de esos usuarios'
+  [PASA] sobrevive literal en ['pasos', 'entregable']: 'menos de 12'
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'tiempo real'
+  [PASA] sobrevive literal en ['pasos', 'resumen']: 'modelo de negocio'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [PASA] 'build_metrics_toolset' esta en ids_alias del superviviente
+  [PASA] 'build_metrics_toolset' tiene su entrada en merged_originals
+  [PASA] la ficha de 'build_metrics_toolset' guarda su fuente verbatim: "The Startup Owner's Manual - Steve Blank"
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, build_metrics_toolset
+  [PASA] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 5 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LAS REDIRECCIONES
+  [PASA] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 0)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [PASA] customer_validation_sell_phase.nodos_previos ya apunta a metricas_de_adquisicion_activacion
+  [PASA] hire_data_analytics_chief.nodos_previos ya apunta a metricas_de_adquisicion_activacion
+  [PASA] mvp_alta_fidelidad.nodos_siguientes ya apunta a metricas_de_adquisicion_activacion
+  [PASA] optimizacion_embudo_get_customers.nodos_previos ya apunta a metricas_de_adquisicion_activacion
+  [PASA] sales_roadmap_vs_sales_force.nodos_siguientes ya apunta a metricas_de_adquisicion_activacion
+  [PASA] sintesis_hipotesis_modelo_negocio.nodos_siguientes ya apunta a metricas_de_adquisicion_activacion
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'accionables' sigue vivo en ['pasos', 'resumen']
+  (conservacion) [SI] el rastro 'embudo' sigue vivo en ['resumen']
+  (conservacion) [SI] el rastro 'tablero' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'adquisición' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'activación' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'tendencias' sigue vivo en ['pasos', 'resumen']
+
+==============================================================================
+RESULTADO: 37 PASAN, 0 CAEN
+CONSERVACION (aparte, no suma): 6 vivos, 0 muertos
