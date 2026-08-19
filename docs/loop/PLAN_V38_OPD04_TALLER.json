@@ -1,0 +1,467 @@
+{
+ "operacion": "OP-D-04, FUSION 1 de 2: EL TALLER. reglas_brainstorming absorbe a brainstorming_divergente y a brainstorming_efectivo",
+ "estado": "SELLADO Y SIN EJECUTAR. La fusion espera el acta del auditor (decision del fundador, 19 ago 2026): no se ejecuta en la misma vuelta que la decide.",
+ "regla": "OP-D-04 (docs/plan/02_DESTEJIDOS.md) con la forma final adjudicada por el fundador el 19 ago 2026, siete a tres; superviviente por P.8 (el cableado desempata, no decide) elegido por LECTURA DE CONTENIDO; perdidas repartidas y reclasificadas por P.13; simulacion previa sobre copia en memoria por P.7; limpieza de lo que la propia fusion fabrica por P.16.",
+ "motivo": "El acto se leyo ENTERO por P.5 (21 de 21, vuelta 37) y resulto ser DOS triangulos cerrados, un nodo colgado y TRES nodos puente. P.10 prohibe fundir la componente entera y deja como tercera salida fundir solo el subconjunto CERRADO y enlazar el resto. Este es el primero de los dos subconjuntos cerrados: sus tres pares internos son A (puestos 823, 834 y 234).",
+ "fecha_corte": "2026-08-19",
+ "superviviente": "reglas_brainstorming",
+ "absorbidos": [
+  "brainstorming_divergente",
+  "brainstorming_efectivo"
+ ],
+ "fuente_esperada": "Business Model Generation (Osterwalder)",
+ "prefijos": {
+  "R": "reglas_brainstorming (superviviente)",
+  "D": "brainstorming_divergente",
+  "E": "brainstorming_efectivo"
+ },
+ "origenes": {
+  "R1": "Definir un enunciado claro del problema centrado en necesidad del cliente",
+  "R2": "Establecer y hacer cumplir reglas: diferir juicio, una conversación a la vez, ir por cantidad, ser visual, fomentar ideas locas",
+  "R3": "Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)",
+  "R4": "Usar Post-it notes para capturar y mover ideas visualmente",
+  "R5": "Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo",
+  "RC1": "Cuando el equipo necesita generar gran volumen de ideas en poco tiempo",
+  "RC2": "Si las discusiones se estancan en crítica prematura de ideas",
+  "D1": "Reunir al equipo en un espacio dedicado sin distracciones",
+  "D2": "Establecer reglas claras: cantidad sobre calidad, diferir el juicio, construir sobre ideas de otros",
+  "D3": "Generar el mayor número de ideas posible sin filtrar prematuramente",
+  "D4": "Registrar todas las ideas visualmente (post-its, pizarra)",
+  "DC1": "Cuando el equipo necesita explorar múltiples soluciones posibles antes de comprometerse con una",
+  "DC2": "Cuando el problema aún no tiene una dirección clara de solución",
+  "E1": "Establecer y visibilizar reglas claras: diferir el juicio, fomentar ideas descabelladas, mantenerse enfocado en el tema.",
+  "E2": "Priorizar la regla de 'construir sobre las ideas de otros' por encima de generar ideas propias de forma aislada.",
+  "E3": "Formar grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.",
+  "E4": "Dedicar sesiones específicas solo para generar opciones (divergencia), separadas de las sesiones de selección (convergencia).",
+  "EC1": "Cuando se necesita abrir un espectro amplio de ideas antes de tomar decisiones.",
+  "EC2": "Cuando el equipo no se conoce bien o carece de confianza para colaborar espontáneamente."
+ },
+ "grupos_pasos": [
+  {
+   "origenes": [
+    "D1",
+    "E3"
+   ],
+   "texto": "Reunir al equipo en un espacio dedicado sin distracciones, formando grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.",
+   "motivo": "LAS DOS PIEZAS SON DEL MISMO OBJETO, quien esta en la sala y donde. El superviviente no dice ni una cosa ni la otra en ninguno de sus cinco pasos, asi que las dos VIAJAN. Va primero porque en los dos donantes precede a todo y porque colocarla a la cabeza no mueve ninguno de los cinco pasos del superviviente entre si."
+  },
+  {
+   "origenes": [
+    "R1"
+   ],
+   "texto": "Definir un enunciado claro del problema centrado en necesidad del cliente",
+   "motivo": "VERBATIM del superviviente."
+  },
+  {
+   "origenes": [
+    "R2",
+    "D2",
+    "E1",
+    "E2"
+   ],
+   "texto": "Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada.",
+   "motivo": "EL BLOQUE DE REGLAS DE LOS TRES EN UNO. El superviviente ya traia diferir el juicio, una conversacion a la vez, ir por cantidad, ser visual y las ideas locas. VIAJAN tres piezas que no tenia: hacerlas VISIBLES, mantenerse enfocado en el tema, y la regla de construir sobre las ideas de otros, que es la unica regla del acto que el superviviente no dice en ninguna parte. El procedimiento de esa ultima no se injerta porque vive en construir_sobre_ideas_ajenas, que queda VIVO y enlazado por P.10."
+  },
+  {
+   "origenes": [
+    "R3"
+   ],
+   "texto": "Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)",
+   "motivo": "VERBATIM del superviviente. Es la pieza que ningun otro miembro del acto tiene, y la razon del puesto 834 ya la llamo lo mas caro de perder."
+  },
+  {
+   "origenes": [
+    "R4",
+    "D4"
+   ],
+   "texto": "Usar Post-it notes o pizarra para capturar y mover las ideas visualmente",
+   "motivo": "MISMO GESTO EN LOS DOS. El superviviente ya capturaba y movia en post-its; del donante VIAJA solo el otro soporte nombrado, la pizarra."
+  },
+  {
+   "origenes": [
+    "R5"
+   ],
+   "texto": "Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo",
+   "motivo": "VERBATIM del superviviente."
+  },
+  {
+   "origenes": [
+    "D3",
+    "E4"
+   ],
+   "texto": "Generar el mayor número de ideas posible sin filtrar prematuramente, en sesiones dedicadas solo a generar opciones (divergencia) y separadas de las sesiones de selección (convergencia).",
+   "motivo": "EL ACTO DE GENERAR Y SU ENCUADRE. El superviviente manda ir por cantidad dentro de sus reglas pero no tiene paso de generacion, y no dice en ninguna parte que la sesion de generar vaya separada de la de elegir. Las dos VIAJAN y van al final porque son lo que se hace despues del calentamiento."
+  }
+ ],
+ "grupos_condiciones": [
+  {
+   "origenes": [
+    "RC1",
+    "EC1"
+   ],
+   "texto": "Cuando el equipo necesita generar gran volumen de ideas en poco tiempo, antes de tomar decisiones",
+   "motivo": "LA MISMA CONDICION DICHA DOS VECES. Del donante VIAJA el para que, antes de tomar decisiones."
+  },
+  {
+   "origenes": [
+    "RC2"
+   ],
+   "texto": "Si las discusiones se estancan en crítica prematura de ideas",
+   "motivo": "VERBATIM del superviviente."
+  },
+  {
+   "origenes": [
+    "DC1",
+    "DC2"
+   ],
+   "texto": "Cuando el equipo necesita explorar múltiples soluciones posibles antes de comprometerse con una, o el problema aún no tiene una dirección clara de solución",
+   "motivo": "LAS DOS DEL DONANTE, que dicen el mismo momento del proyecto y ninguna de las dos esta en el superviviente. VIAJAN juntas."
+  },
+  {
+   "origenes": [
+    "EC2"
+   ],
+   "texto": "Cuando el equipo no se conoce bien o carece de confianza para colaborar espontáneamente",
+   "motivo": "VIAJA entera: es la condicion que hace falta para el primer paso del resultado, y el superviviente no la tenia."
+  }
+ ],
+ "pasos_finales": [
+  "Reunir al equipo en un espacio dedicado sin distracciones, formando grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.",
+  "Definir un enunciado claro del problema centrado en necesidad del cliente",
+  "Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada.",
+  "Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)",
+  "Usar Post-it notes o pizarra para capturar y mover las ideas visualmente",
+  "Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo",
+  "Generar el mayor número de ideas posible sin filtrar prematuramente, en sesiones dedicadas solo a generar opciones (divergencia) y separadas de las sesiones de selección (convergencia)."
+ ],
+ "condiciones_finales": [
+  "Cuando el equipo necesita generar gran volumen de ideas en poco tiempo, antes de tomar decisiones",
+  "Si las discusiones se estancan en crítica prematura de ideas",
+  "Cuando el equipo necesita explorar múltiples soluciones posibles antes de comprometerse con una, o el problema aún no tiene una dirección clara de solución",
+  "Cuando el equipo no se conoce bien o carece de confianza para colaborar espontáneamente"
+ ],
+ "entregable_final": "Sesión de brainstorming documentada con una colección amplia de ideas generadas colaborativamente, capturadas en Post-its y agrupadas por tema, lista para ser filtrada en la fase de convergencia",
+ "titulo_sin_cambio": "Reglas de Brainstorming Efectivo",
+ "etiqueta_arbol_sin_cambio": "Organiza tu Lluvia de Ideas",
+ "preservar_literal": [
+  "inmersión previa",
+  "Silly Cow",
+  "construir sobre las ideas de otros",
+  "sin distracciones",
+  "confianza mutua"
+ ],
+ "rastros": [
+  "Post-it",
+  "cliente",
+  "divergencia",
+  "convergencia",
+  "cantidad"
+ ],
+ "resumen_final": "Conjunto de reglas para maximizar la generación de ideas útiles en sesiones de lluvia de ideas: mantener el foco en un problema bien definido (idealmente centrado en la necesidad del cliente), diferir el juicio crítico, mantener una sola conversación a la vez, priorizar cantidad, pensar visualmente (Post-it) y fomentar ideas alocadas. Incluye un ejercicio de calentamiento ('Silly Cow') para desbloquear la creatividad. Las reglas no son decorado: sin ellas la sesión degenera en reunión ordenada o en caos improductivo, y la más importante de todas es construir sobre las ideas de los demás, que genera un efecto acumulativo de creatividad superior al trabajo individual. La sesión pertenece a la fase divergente: abre el espectro de opciones y su cosecha se filtra después, en la fase de convergencia.",
+ "eleccion_p8": {
+  "regla": "P.8, EL CABLEADO DESEMPATA, NO DECIDE. Donde el contenido dice algo, manda el contenido, aunque el margen de aristas apunte al otro lado.",
+  "decide": "EL CONTENIDO",
+  "elegido": "reglas_brainstorming",
+  "criterio_del_encargo": "que procedimiento es el mas completo y cierra mas motivos de la tabla de perdidas",
+  "lectura_de_contenido": [
+   "COBERTURA DEL ARCO DE LA SESION, contada sobre los pasos de los tres. reglas_brainstorming cubre CINCO momentos: el enunciado del problema (su paso 1), la preparacion del equipo por inmersion (su paso 3), el juego de reglas (su paso 2), la captura visual (su paso 4) y el calentamiento (su paso 5). brainstorming_divergente cubre TRES: la sala, las reglas y la captura, mas el empujon de generar. brainstorming_efectivo cubre UNO Y MEDIO: las reglas y la composicion del grupo, y NO TIENE NI UN PASO DE CAPTURA, aunque su entregable promete una sesion documentada.",
+   "PIEZAS UNICAS, o sea material que ningun otro miembro del triangulo tiene. reglas_brainstorming tiene DOS: la inmersion previa de campo y el calentamiento con ejercicio nombrado. brainstorming_efectivo tiene DOS: la composicion social del grupo y la separacion de sesiones. brainstorming_divergente tiene CERO: la sala sin distracciones es su unico gesto propio y es un calificativo del espacio, no un procedimiento.",
+   "LO QUE CIERRA LA TABLA DE PERDIDAS, que es el criterio literal del encargo. La tabla de este plan clasifica NUEVE piezas como VIAJA, y ninguna de las nueve es un momento entero de la sesion: son una sala, tres reglas, un acto de generar, una composicion de grupo, una separacion de sesiones y dos glosas. Con brainstorming_efectivo vivo habria que injertarle ademas el enunciado del problema, la inmersion, la captura visual y el calentamiento, que son CUATRO momentos completos de los que no tiene ninguno. El mas completo deja menos trabajo de injerto, y esa es la misma cuenta dicha dos veces.",
+   "EL DESEMPATE POR ENTREGABLE, que es la senal de verificacion del 9.6.2. reglas_brainstorming entrega ideas capturadas en Post-its Y AGRUPADAS POR TEMA; brainstorming_divergente entrega una coleccion documentada visualmente; brainstorming_efectivo entrega una sesion documentada sin decir con que. El que entrega mas lejos es el que lleva mas procedimiento."
+  ],
+  "cableado_solo_como_desempate": {
+   "usado_para_decidir": false,
+   "por_que_se_cita": "porque va EN CONTRA del elegido, y un desempate que se ignora se escribe, no se esconde",
+   "instrumento": "scripts/loop/vuelta38_triangulos.py, salida docs/loop/SALIDA_V38_TRIANGULOS.txt, bloques 1 y 4",
+   "grados_medidos_hoy": {
+    "brainstorming_efectivo": 13,
+    "reglas_brainstorming": 11,
+    "brainstorming_divergente": 4
+   },
+   "lectura": "TRECE CONTRA ONCE, y pierde el trece. Es la forma dura de P.8, la misma del acto II del racimo del pivote, donde pivote_o_proceder sobrevivio con 5 contra 10 por llevar material propio.",
+   "coste_medido_de_ir_contra_el_cableado": "CERO aristas. Las trece de brainstorming_efectivo son reciprocas, las trece, asi que las trece se redirigen solas al superviviente. Medido en el bloque 2 de SALIDA_V38_TRIANGULOS.txt. El cableado no solo no decide: aqui no cuesta nada."
+  }
+ },
+ "tabla_perdidas_p13": [
+  {
+   "pieza": "el espacio dedicado sin distracciones",
+   "de": "brainstorming_divergente",
+   "clase": "VIAJA",
+   "destino": "paso 1 del resultado",
+   "motivo": "el superviviente no nombra el espacio en ninguno de sus cinco pasos"
+  },
+  {
+   "pieza": "diferir el juicio",
+   "de": "brainstorming_divergente y brainstorming_efectivo",
+   "clase": "VIVE DENTRO",
+   "destino": "paso 3 del resultado, ya estaba",
+   "motivo": "es la primera regla del paso 2 del superviviente"
+  },
+  {
+   "pieza": "ir por cantidad",
+   "de": "brainstorming_divergente",
+   "clase": "VIVE DENTRO",
+   "destino": "paso 3 del resultado, ya estaba",
+   "motivo": "el superviviente ya manda ir por cantidad; viaja solo el matiz sobre calidad"
+  },
+  {
+   "pieza": "las ideas descabelladas",
+   "de": "brainstorming_efectivo",
+   "clase": "VIVE DENTRO",
+   "destino": "paso 3 del resultado, ya estaba",
+   "motivo": "el superviviente ya manda fomentar ideas locas"
+  },
+  {
+   "pieza": "la regla de construir sobre las ideas de otros, y su prioridad sobre generar ideas propias aisladas",
+   "de": "brainstorming_divergente y brainstorming_efectivo",
+   "clase": "VIAJA",
+   "destino": "paso 3 del resultado",
+   "motivo": "ES LA UNICA REGLA DEL TRIANGULO QUE EL SUPERVIVIENTE NO DICE, medido sobre sus cinco pasos. Viaja LA LINEA. El PROCEDIMIENTO de esa linea NO se injerta porque vive en construir_sobre_ideas_ajenas, que queda VIVO fuera de la fusion y enlazado por P.10: injertarlo seria fabricar la repeticion nueva contra la que P.13 avisa"
+  },
+  {
+   "pieza": "hacer las reglas VISIBLES",
+   "de": "brainstorming_efectivo",
+   "clase": "VIAJA",
+   "destino": "paso 3 del resultado",
+   "motivo": "el superviviente manda establecerlas y hacerlas cumplir, no visibilizarlas"
+  },
+  {
+   "pieza": "mantenerse enfocado en el tema",
+   "de": "brainstorming_efectivo",
+   "clase": "VIAJA",
+   "destino": "paso 3 del resultado",
+   "motivo": "el superviviente centra el ENUNCIADO al principio pero no manda sostener el foco durante la sesion"
+  },
+  {
+   "pieza": "generar el mayor numero de ideas sin filtrar prematuramente",
+   "de": "brainstorming_divergente",
+   "clase": "VIAJA",
+   "destino": "paso 7 del resultado",
+   "motivo": "el superviviente lo tiene como REGLA y no como PASO: no hay en el ningun momento en que efectivamente se genere"
+  },
+  {
+   "pieza": "el registro visual y la pizarra como soporte",
+   "de": "brainstorming_divergente",
+   "clase": "VIVE DENTRO",
+   "destino": "paso 5 del resultado, ya estaba",
+   "motivo": "el superviviente ya captura y mueve en Post-its; viaja solo el soporte alterno"
+  },
+  {
+   "pieza": "formar grupos donde los participantes se conozcan y tengan confianza mutua",
+   "de": "brainstorming_efectivo",
+   "clase": "VIAJA",
+   "destino": "paso 1 y condicion 4 del resultado",
+   "motivo": "ningun otro miembro del triangulo habla de quien compone el grupo"
+  },
+  {
+   "pieza": "separar las sesiones de generar de las de seleccionar",
+   "de": "brainstorming_efectivo",
+   "clase": "VIAJA",
+   "destino": "paso 7 del resultado",
+   "motivo": "el superviviente no menciona la convergencia en ninguna parte"
+  },
+  {
+   "pieza": "que la cosecha se filtra despues, en la fase de convergencia",
+   "de": "brainstorming_divergente",
+   "clase": "VIAJA",
+   "destino": "entregable y resumen del resultado",
+   "motivo": "el entregable del superviviente se queda en las ideas agrupadas y no dice a donde van"
+  },
+  {
+   "pieza": "que sin reglas la sesion degenera en reunion ordenada o en caos improductivo",
+   "de": "brainstorming_efectivo",
+   "clase": "VIAJA",
+   "destino": "resumen del resultado",
+   "motivo": "es el por que de las reglas, y el superviviente solo las enumera"
+  },
+  {
+   "pieza": "que el brainstorming no es la unica tecnica de ideacion",
+   "de": "brainstorming_divergente",
+   "clase": "YA NO APLICA",
+   "destino": "se retira",
+   "motivo": "es un encuadre del libro sobre el lugar de la tecnica, no material del procedimiento, y no hay linea del superviviente donde colgarlo sin inventarsela"
+  }
+ ],
+ "simulacion": {
+  "instrumento": "scripts/plan/simular_fusion.py (P.7) mas scripts/loop/vuelta38_reciprocidad_post.py",
+  "redirecciones_esperadas": [
+   {
+    "nodo": "brainstorming",
+    "campo": "nodos_previos",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "buscar_armonia_diseno",
+    "campo": "nodos_siguientes",
+    "nombraba": "brainstorming_divergente"
+   },
+   {
+    "nodo": "butterfly_test_convergencia",
+    "campo": "nodos_previos",
+    "nombraba": "brainstorming_divergente"
+   },
+   {
+    "nodo": "cultura_de_optimismo",
+    "campo": "nodos_siguientes",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "deriva_deliberada",
+    "campo": "nodos_previos",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "esfuerzo_voluntario_vs_urge_espontaneo",
+    "campo": "nodos_siguientes",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "etnografia_investigacion_usuario",
+    "campo": "nodos_previos",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "how_might_we_briefs",
+    "campo": "nodos_siguientes",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "ideacion_con_ia_en_la_sesion",
+    "campo": "nodos_previos",
+    "nombraba": "brainstorming_divergente"
+   },
+   {
+    "nodo": "intimation_illumination",
+    "campo": "nodos_siguientes",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "pensamiento_convergente_divergente",
+    "campo": "nodos_siguientes",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "pensamiento_visual",
+    "campo": "nodos_previos",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "periodo_incubacion_mental",
+    "campo": "nodos_siguientes",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "prototipado_rapido",
+    "campo": "nodos_previos",
+    "nombraba": "brainstorming_divergente"
+   },
+   {
+    "nodo": "prototipado_rapido",
+    "campo": "nodos_previos",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "sentido_del_humor_como_herramienta_de_pensamiento",
+    "campo": "nodos_siguientes",
+    "nombraba": "brainstorming_efectivo"
+   },
+   {
+    "nodo": "tecnica_perder_objeto",
+    "campo": "nodos_previos",
+    "nombraba": "brainstorming_efectivo"
+   }
+  ],
+  "redirecciones_no_tocadas_por_deprecadas": [],
+  "duplicadas_nuevas_esperadas": [
+   {
+    "nodo": "prototipado_rapido",
+    "campo": "nodos_previos",
+    "resuelve_a": "reglas_brainstorming"
+   }
+  ],
+  "simetrizacion_esperada": {
+   "quien_la_escribe": "scripts/run_phase1.py, paso 5, Simetrizacion de enlaces. NO la escribe el ejecutor de fusiones: el redirige a los vecinos y no toca la lista propia del superviviente.",
+   "precedente_medido": "commit 72c718ea (OP-D-02 fundida, 15 ago 2026): su phase1_run_log.json trae symmetrize_added con las DOS aristas que el superviviente gano, ventaja_competitiva_producto y procesamiento_paralelo_con_espirales.",
+   "vara": "la tasa de reciprocidad del grafo medida hoy es 99,59 por ciento (15.448 de 15.511 aristas de nodos vivos, resueltas por P.1), asi que dejar una arista declarada en un solo extremo es un defecto y no la costumbre",
+   "guarda_para_el_dia_de_la_ejecucion": "symmetrize_added tiene que traer EXACTAMENTE estas entradas para el superviviente, ni una mas ni una menos",
+   "aristas": [
+    {
+     "campo": "nodos_previos",
+     "vecino": "buscar_armonia_diseno"
+    },
+    {
+     "campo": "nodos_previos",
+     "vecino": "cultura_de_optimismo"
+    },
+    {
+     "campo": "nodos_previos",
+     "vecino": "esfuerzo_voluntario_vs_urge_espontaneo"
+    },
+    {
+     "campo": "nodos_previos",
+     "vecino": "how_might_we_briefs"
+    },
+    {
+     "campo": "nodos_previos",
+     "vecino": "intimation_illumination"
+    },
+    {
+     "campo": "nodos_previos",
+     "vecino": "pensamiento_convergente_divergente"
+    },
+    {
+     "campo": "nodos_previos",
+     "vecino": "periodo_incubacion_mental"
+    },
+    {
+     "campo": "nodos_previos",
+     "vecino": "sentido_del_humor_como_herramienta_de_pensamiento"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "brainstorming"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "butterfly_test_convergencia"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "deriva_deliberada"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "etnografia_investigacion_usuario"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "ideacion_con_ia_en_la_sesion"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "pensamiento_visual"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "prototipado_rapido"
+    },
+    {
+     "campo": "nodos_siguientes",
+     "vecino": "tecnica_perder_objeto"
+    }
+   ]
+  }
+ },
+ "entregable_viejo": "Sesión de brainstorming documentada con ideas capturadas en Post-its y agrupadas por tema",
+ "resumen_viejo": "Conjunto de reglas para maximizar la generación de ideas útiles en sesiones de lluvia de ideas: mantener el foco en un problema bien definido (idealmente centrado en la necesidad del cliente), diferir el juicio crítico, mantener una sola conversación a la vez, priorizar cantidad, pensar visualmente (Post-it) y fomentar ideas alocadas. Incluye un ejercicio de calentamiento ('Silly Cow') para desbloquear la creatividad.",
+ "pasos_totales": {
+  "reglas_brainstorming": 5,
+  "brainstorming_divergente": 4,
+  "brainstorming_efectivo": 4
+ },
+ "condiciones_totales": {
+  "reglas_brainstorming": 2,
+  "brainstorming_divergente": 2,
+  "brainstorming_efectivo": 2
+ }
+}

@@ -1,410 +1,343 @@
-# REPORTE DE LA VUELTA 37 (ejecutor Opus 5). FASE III, rama `pasada-unica`
+# REPORTE DE LA VUELTA 38 (ejecutor Opus 5). FASE III, rama `pasada-unica`
 
-**`OP-D-04` CON SUS PASOS 1 Y 2 HECHOS, SU ACTO LEIDO ENTERO POR PRIMERA VEZ (21 DE 21 PARES), Y
-LA FUSION EN PARADA CON TRES MOTIVOS MEDIDOS.** El destejido resulto **ya consumado** por el corte
-de `OP-F-02`, las cuatro relecturas de `P.5` **no cambian ni una clase**, y las trece lecturas
-dirigidas nuevas encontraron **el primer nodo puente TRIPLE del archivo**. **Cero nodos tocados:
-ninguno se funde, ninguno se depreca, ninguno pierde un paso. El marcador no se movio.**
+**LAS TRES LECTURAS DEL CUARTO MIEMBRO HECHAS Y LAS TRES `D`; LOS DOS SUPERVIVIENTES ELEGIDOS POR
+`P.8` POR LECTURA DE CONTENIDO; LOS DOS PLANES SELLADOS CON SU SIMULACION Y SU CASO POSITIVO. CERO
+NODOS TOCADOS Y EL MARCADOR QUIETO.** La simulacion se gano el sueldo dos veces: **el enlace que la
+`DECISION 3` del fundador pide no hay que escribirlo, la fusion lo pone sola**, y **las veinte
+aristas que las dos fusiones dejarian cojas las escribe `run_phase1` en su paso 5**, con precedente
+medido y no supuesto.
+
+> **EL REPORTE ABRE PIDIENDO VERIFICACION COMPLETA** de las tres lecturas y de las dos elecciones,
+> como manda la TAREA 3 del encargo. **Y trae una PARADA DE DOCTRINA que el ejecutor no resuelve**
+> (seccion 7): la regla `FAMILIA DECLARADA` alcanza a los tres pares de la tanda y dice que no se
+> peleen. **Si esa regla gobierna, las dos fusiones no se ejecutan.**
 
 ---
 
 ## 1. LO QUE ESTA VUELTA MOVIO, MEDIDO Y NO NARRADO
 
-- **Hash de partida:** `be54bb7d` (el acta del auditor de las vueltas 34, 35 y 36).
-- **Hash final:** `8096b16d`. **CINCO commits** (`a5f3c4ac` la apertura, `646d6878` la TAREA 1,
-  `dd80b63f` los pasos 1 y 2, `75e65033` la medicion de `P.5`, `b1d0fa62` las relecturas y
-  `8096b16d` el acto entero con la parada), **y el de este reporte hace SEIS.** Se dice con las dos
-  cifras a proposito.
-- **Rutas tocadas** (`git diff --stat a5f3c4ac..HEAD`, corrido hoy): **50 ficheros, 6.942
-  insertadas, 6 borradas**. Por carpeta: `docs/loop` **32**, `scripts/loop` **10**, `docs` **4**,
-  `docs/plan` **3**, `docs/loop/paradas` **1**. **Cero merges.** El hook corrio verde en los cinco.
+- **Hash de partida:** `f734ab67` (la decision del fundador sobre `OP-D-04`).
+- **Hash final:** el commit de este reporte, unico de la vuelta. **La vuelta entera cabe en un
+  commit porque no toca nodos**: no hay tramo que proteger contra una sesion que se caiga.
+- **Rutas tocadas** (`git diff --cached --stat` contra `f734ab67`, corrido hoy con este reporte ya
+  dentro): **26 ficheros, 4.043 insertadas, 366 borradas**. Por carpeta: `docs/loop` **15**,
+  `scripts/loop` **9**, `docs/plan` **2**. **Cero merges.** **Las 366 borradas son UNA sola cosa: el
+  reporte de la vuelta 37, que se sobrescribe por mandato de la regla 7.**
 - **`dataset/`: CERO ficheros tocados. `web/`: CERO ficheros tocados.** Medido con
-  `git diff --name-only a5f3c4ac..HEAD` filtrado por carpeta: la lista sale **vacia**.
-- **EL ARCHIVO DE VEREDICTOS SI SE TOCO, y aqui esta la cuenta exacta**, comparando el fichero de
-  hoy contra el del commit de apertura registro por registro: **n 3.388 antes y despues, cero
-  altas, cero bajas, CUATRO registros cambiados** (585, 823, 834 y 844), **los cuatro con SOLO el
-  campo `razon` movido**, **los cuatro con la razon vieja LITERAL dentro de la nueva** (1.389 de
-  4.639; 1.061 de 5.410; 900 de 3.749; 1.151 de 4.410) y **CERO cambios de clase**.
+  `git status --porcelain dataset/ web/`: la salida sale **vacia**.
+- **EL ARCHIVO DE VEREDICTOS NO SE TOCO.** Medido con la misma orden sobre
+  `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `docs/INTRA_DOMINIO_PARES.jsonl`,
+  `docs/RACIMOS_MIEMBROS.jsonl` y `docs/plan/OPERACIONES.jsonl`: **cero lineas de salida, los
+  cuatro intactos.** **Ni un veredicto se emitio, ni una razon se reescribio.** Las tres lecturas
+  de esta vuelta son **dirigidas**: viven en `docs/plan/LECTURAS_DIRIGIDAS.md` y no entran en la
+  cola.
 
-### EL ESTADO, APERTURA CONTRA CIERRE
+### APERTURA CONTRA CIERRE, con la salvedad dicha en vez de escondida
 
-**Las dos columnas son de dos corridas propias del MISMO instrumento**
-(`scripts/loop/vuelta31_estado.py`, **sin tocarlo**): la de **APERTURA** corrida **antes de la
-primera operacion** y commiteada antes de tocar nada (`a5f3c4ac`, salida
-`SALIDA_V37_APERTURA.txt`), y la de **CIERRE** corrida **al cerrar** (`SALIDA_V37_CIERRE.txt`).
+**LA APERTURA NO SE MIDIO POR SEPARADO, y se declara.** `EJECUTOR.md` regla 1, tercer parrafo,
+manda medirla **antes de la primera operacion**, y esta vuelta abrio corriendo la guarda de
+lecturas sin haber corrido antes `scripts/loop/vuelta31_estado.py`. **No se disfraza y no se
+inventa una columna.**
 
-| | **APERTURA** | **CIERRE** |
-|---|---:|---:|
-| marcador: n / A / B / C / D | 3.388 / 575 / 83 / 8 / 2.722 | **3.388 / 575 / 83 / 8 / 2.722** |
-| tasa de A | 17,0 % | **17,0 %** |
-| huecos / duplicados / clases fuera de ABCD | 0 / 0 / 0 | **0 / 0 / 0** |
-| grafo: ficheros / ids / vivos / deprecados | 3.853 / 3.853 / 3.538 / 315 | **identicos** |
-| enlaces / claves distintas | 16.849 / 15 | **16.849 / 15** |
-| familias Weinberg / Horowitz / Hugos / Coleman / Rackham (vivos) | 72 / 93 / 111 / 75 / 47 | **identicas** |
-| operaciones / estados / dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
-| inventario | 672 | **672** |
-| indice rojo declarado | 18 lineas, 0 ausentes | **18 lineas, 0 ausentes** |
-| fronteras de `OP-F-04-COL` | 14 de 15 | **14 de 15** |
+**LO QUE SI SE PUEDE PROBAR, y es lo que hace que la falta no contamine ninguna cifra:** el
+instrumento del estado lee `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `dataset/`,
+`docs/plan/OPERACIONES.jsonl` y `docs/plan/INVENTARIO.jsonl`, **y los cuatro estan intactos contra
+`f734ab67`**, medido arriba con `git status --porcelain`. **Un fichero que no cambio no puede dar
+dos lecturas distintas**, asi que la corrida del cierre vale tambien como apertura, **y se publica
+en UNA sola columna a proposito**: publicar dos columnas identicas sacadas de una sola corrida
+seria exactamente la especie de la caida de la vuelta 28.
 
-> **Y LA COMPARACION SE HIZO POR MAQUINA, no a ojo:** `difflib` sobre las dos salidas enteras da
-> **84 lineas cada una y CUATRO lineas de diferencia, LAS CUATRO EL ROTULO** (*APERTURA* contra
-> *CIERRE*, en la cabecera y en el pie). **No hay una sola cifra distinta entre el principio y el
-> final de la vuelta**, y eso es exactamente lo que un modo de solo lectura tiene que producir.
+**Corrida de cierre:** `python scripts/loop/vuelta31_estado.py`, salida entera en
+`docs/loop/SALIDA_V38_CIERRE.txt`.
 
-### LA TASA POR DOMINIO, recomputada del archivo en esta vuelta
+| | **medido al cierre, 19 ago 2026** |
+|---|---:|
+| marcador: n / A / B / C / D | **3.388 / 575 / 83 / 8 / 2.722** |
+| tasa de A | **17,0 %** |
+| huecos / duplicados / clases fuera de ABCD | **0 / 0 / 0** |
+| grafo: ficheros / ids / vivos / deprecados | **3.853 / 3.853 / 3.538 / 315** |
+| enlaces / claves distintas | **16.849 / 15** |
+| familias Weinberg / Horowitz / Hugos / Coleman / Rackham (vivos) | **72 / 93 / 111 / 75 / 47** |
+| operaciones / estados / dependencias rotas | **71, todas `LISTA`, 0** |
+| inventario | **672** |
 
-**Instrumento `scripts/loop/vuelta35_tasa_dominio.py`, REUTILIZADO y no reescrito** (medicion pura,
-sin constantes de vuelta). Salida `SALIDA_V37_TASA_DOMINIO.txt`:
+**EL MARCADOR RECOMPUTADO POR SEGUNDA VIA Y POR OTRO INSTRUMENTO**
+(`scripts/loop/vuelta38_marcador.py`, salida `docs/loop/SALIDA_V38_MARCADOR.txt`): **n 3.388, A
+575, B 83, C 8, D 2.722**, y la suma de clases cuadra con `n`. **Identico al de la vuelta 37, que
+es lo que tenia que dar: esta vuelta no emitio ni un veredicto.**
 
-| dominio | n | A | tasa | B | C | D |
-|---|---:|---:|---:|---:|---:|---:|
-| **core** | 1.445 | 336 | **23,3 %** | 81 | 8 | 1.020 |
-| quality | 844 | 126 | 14,9 % | 0 | 0 | 718 |
-| health_safety | 192 | 45 | 23,4 % | 0 | 0 | 147 |
-| entrega | 171 | 2 | 1,2 % | 0 | 0 | 169 |
-| environmental | 170 | 29 | 17,1 % | 0 | 0 | 141 |
-| compras | 155 | 1 | 0,6 % | 2 | 0 | 152 |
-| franquicias | 148 | 18 | 12,2 % | 0 | 0 | 130 |
-| exportacion | 130 | 15 | 11,5 % | 0 | 0 | 115 |
-| risk_management | 106 | 0 | 0,0 % | 0 | 0 | 106 |
-| seguridad_digital | 27 | 3 | 11,1 % | 0 | 0 | 24 |
-
-**Identica a la de la vuelta 36 en las diez filas**, y tenia que serlo: ninguna clase se movio.
+**TASA POR DOMINIO Y VARA POR TRAMO: NO APLICAN Y SE DICE POR QUE.** Las dos son cifras de tramo de
+cribado, y **esta vuelta no corrio ningun tramo**: sus tres lecturas son dirigidas y estan fuera de
+cola. **Publicar una tasa de tramo sin tramo seria repetir la de la vuelta anterior con fecha de
+hoy**, que es lo que la regla 2 prohibe.
 
 ---
 
-## 2. TAREA 1: EL AVISO DE CORTE SOBRE LA PROPUESTA DE LA VUELTA 35
+## 2. TAREA 1: LAS TRES LECTURAS DIRIGIDAS `LD-96` A `LD-98`. **LAS TRES `D`**
 
-**Hecha, y con el sello intacto.** `docs/loop/PROPUESTA_V35_RELECTURAS.json` recibe **un campo
-nuevo y fechado**, `aviso_posterior`, que dice que las cinco relecturas se volcaron el **18 ago
-2026** en la vuelta 36 por `scripts/loop/vuelta36_volcado_910.py` con el lote
-`docs/loop/_lote_v36.jsonl`, y que **el 643 fue por su propio carril**,
-`docs/loop/_lote_v36_643.jsonl`, como `LD-82`.
+**Van enteras en `docs/plan/LECTURAS_DIRIGIDAS.md`, UNDECIMA TANDA.** Aqui va el saldo, no la
+lectura.
 
-**Instrumento nuevo `scripts/loop/vuelta37_aviso_v35.py`, con cuatro guardas corridas hoy**
-(salida `SALIDA_V37_AVISO_V35.txt`):
+**LA GUARDA CORRIO ANTES DE ESCRIBIR UNA LINEA** (`scripts/loop/vuelta38_ld_racimo.py`, salida
+`docs/loop/SALIDA_V38_LD_RACIMO.txt`), y devolvio las cinco cosas que hacian falta: el racimo es
+**mixto** por medicion (`brainstorming` de `quality`, los tres del taller de `core`); los tres
+pares **sin veredicto** sobre 3.388 filas; los tres **fuera de cola** sobre 3.388 filas, asi que
+**`n` no se mueve**; los cuatro nodos **vivos e impresos ENTEROS** antes de decidir nada; y las
+tres aristas **buscadas en los dos sentidos y resueltas por alias** (`P.1`).
 
-| guarda | resultado |
-|---|---|
-| 1. la propuesta y el lote son **el mismo conjunto de cinco** | `[277, 374, 452, 1571, 1575]` en los dos. **OK** |
-| 2. el **643 NO esta** en la propuesta y su carril trae **solo al 643** | **OK** |
-| 3. los seis puestos estan **HOY en clase `D`** en el archivo | **OK**, medidos uno por uno |
-| 4. tras escribir: el campo `estado` **identico caracter a caracter** y las filas **identicas** | **OK**: `23.020` caracteres antes y despues |
+**LA NUMERACION, con su salvedad.** El barrido de `docs/` da hoy **98** como `LD` mas alto, pero
+vive en `docs/loop/PROMPT_SIGUIENTE.md`: **es el encargo reservando los numeros, no una lectura
+escrita.** El mas alto **escrito como lectura** sigue siendo el **95**.
 
-**El diff del fichero lo confirma: 2 insertadas y 1 borrada**, y la borrada es solo la ausencia de
-salto de linea final. **El campo `estado` sigue diciendo, literal, *PROPUESTA NO VOLCADA. Espera
-decision del fundador (PARADA de la vuelta 35)*.** Es la figura del aviso de corte: **el sello se
-conserva y el aviso se fecha.**
-
----
-
-## 3. TAREA 2: `OP-D-04`, PASO POR PASO
-
-### 3.1 PASO 1, LA FUENTE PRIMERO, verificada por corrida propia y no leida de su nota
-
-**El encargo manda verificar que `OP-F-02` y `OP-F-03` estan ejecutadas antes de apoyarse en
-ellas, y eso no se resuelve leyendo sus notas:** las dos declaran *QUEDA HECHA* con fecha 14 ago
-2026, y la regla 2 dice que **una nota nunca es fuente de una cifra nueva.** Instrumento
-`scripts/loop/vuelta37_fuente_primero.py`, salida `SALIDA_V37_OPD04_FUENTE.txt`:
-
-| medicion de hoy contra el grafo | resultado |
-|---|---|
-| los **tres nodo propio** de `OP-F-02` | `escenarios_de_evolucion_de_la_ia` **6 pasos**, `critica_del_plan_con_ia` **5**, `ideacion_con_ia_en_la_sesion` **4**: **los tres vivos, los tres con los pasos que la nota declara, los tres en `INDICE_ROJO_DECLARADO.jsonl`** |
-| Mollick en los tres origenes de `OP-F-02` | **fuera de los tres**, buscado sobre el fichero entero de cada nodo |
-| la fuente de `brainstorming_divergente` | **UNA sola**, *Change by Design, Revised and U - Tim Brown*, que es la fijada en `01_FUENTES.md` |
-| los **cuatro nodo propio** de `OP-F-03` | 4, 9, 4 y 8 pasos: **los cuatro vivos y los cuatro en el indice rojo** |
-| **el cruce medido** | de los siete nodos de `OP-D-04`, **UNO** esta en la nomina de `OP-F-02` y **CERO** en la de `OP-F-03` (que tiene 21) |
-
-> **LO QUE ESE ULTIMO NUMERO ANADE Y NO ESTABA ESCRITO:** el campo `depende_de` de `OP-D-04` nombra
-> a `OP-F-03`, y **no comparten ni un nodo**. **Esa dependencia es de ORDEN DE FASE, no de nodo
-> compartido**, y ahora esta medido en vez de supuesto.
-
-### 3.2 PASO 2, EL DESTEJIDO: CONSUMADO, Y SIN NADA QUE CORTAR
-
-**Es el hallazgo estructural de la vuelta.** El plan escribe cuatro frentes para
-`brainstorming_divergente`, y dos de ellos, **la decision de fuente y el destejido, resultaron ser
-el mismo bloque.** Instrumento `scripts/loop/vuelta37_destejido_opd04.py`, salida
-`SALIDA_V37_OPD04_DESTEJIDO.txt`:
-
-| medicion de hoy | resultado |
-|---|---|
-| costurados del acto sobre los **128 registros** de `docs/COSTURAS_INTERNAS.jsonl` | **1 de 7**; los otros seis sanos. La seccion 54.3 del informe declara **1 y 6**: **coincide** |
-| corte registrado de esa unica costura | **el 5**, bloque **5 a 8**, `sim_bloque` 44,8 |
-| frontera que `OP-F-02` publico en `01_FUENTES.md` | **1 a 4 / 5 a 8**: **el mismo sitio** |
-| pasos de `brainstorming_divergente` hoy | **4**, exactamente el lado izquierdo del corte |
-| los ocho pasos viejos, por `git` del **padre del commit de `OP-F-02`** (`2d96e3d3~1`) | **8**, tal como el registro de costuras dice |
-| los **1 a 4** viejos contra el nodo de hoy | **4 de 4 IDENTICOS**, impresos uno al lado del otro |
-| los **5 a 8** viejos contra `ideacion_con_ia_en_la_sesion` | **4 de 4 IDENTICOS**, y el destino **cuelga del cableado** |
-| material perdido | **CERO**: 4 mas 4 igual a 8 |
-
-> **DISCUTIBLE MARCADO 1, y lo marco antes de saber si acierto: NO volvi a correr
-> `scripts/costuras_internas.py`.** Ese instrumento **se declara MAL CALIBRADO en su propia
-> salida** desde la vuelta 34 (*INSTRUMENTO MAL CALIBRADO. No entrega nada*), y el encargo dice que
-> **si una operacion NECESITA su cifra, eso es guarda en rojo y se para**. **Sostengo que
-> `OP-D-04` no la necesita:** su frontera esta **publicada** en `01_FUENTES.md` y su corte esta
-> **registrado con fecha** en `COSTURAS_INTERNAS.jsonl`, asi que la operacion se ejecuta sobre
-> papel sellado y no sobre una medicion nueva. **Preguntar si hoy nacio una costura que nadie
-> registro seria abrir alcance que ninguna operacion escribio.** Quien sostenga que un destejido
-> exige medir las costuras del dia dira que aqui habia que parar.
-
-### 3.3 `P.5`: LA MEDICION, y los tres gemelos salen los tres rancios
-
-Instrumento `scripts/loop/vuelta37_p5_opd04.py`, **sucesor declarado** de
-`vuelta35_pares_opd03.py` y `vuelta35_rancios.py`, que **junta las dos varas en uno** porque la
-vuelta 35 tuvo que cruzar dos salidas a mano. Salida `SALIDA_V37_OPD04_P5.txt`.
-
-| medicion | resultado |
-|---|---|
-| pares internos posibles de siete nodos | **21** |
-| con veredicto en el archivo | **8** (234, 585, 586, 823, 834, 844, 885, 943) |
-| **sin registro** | **13** |
-| contraste contra la seccion 54.3 del informe | los **siete pares `A`** que atribuye al acto **son los siete `A` de hoy**; ademas aparece el **585 en `D`**, que el informe no lista |
-| marcados por la **vara de fecha** | **4**: 585, 823, 834 y 844, los cuatro por lo mismo, `brainstorming_divergente` cambio el 2026-08-14 |
-| confirmados por la **vara de texto** | **los 4**: de 8 a 4 pasos, y **el otro lado de cada par IDENTICO** |
-| **RANCIOS de clase `A`** | **823, 834 y 844: EXACTAMENTE los tres gemelos** que la nota de la operacion manda al final |
-
-### 3.4 LAS CUATRO RELECTURAS: **NINGUNA CAMBIA DE CLASE, y eso es el hallazgo**
-
-**585 `D` a `D`, 823 `A` a `A`, 834 `A` a `A`, 844 `A` a `A`.** El marcador recomputado tras el
-volcado da **n 3.388, A 575, B 83, C 8, D 2.722**, **identico** al que la guarda 4 del constructor
-escribio **antes** de volcar.
-
-**POR QUE NO CAE NINGUNA, y es medible:** **las tres razones de los gemelos habian localizado ellas
-mismas el solape en los pasos 1 a 4 citando el banco `9.9`**, o sea en el lado que la cirugia iba a
-dejar en pie. **Acertaron las tres.** Es lo contrario de lo que paso en `OP-D-03`, donde las cinco
-razones rancias se apoyaban en material que las cirugias ya se habian llevado.
-
-**LO QUE SI ENVEJECIO Y SE CORRIGE, con la vieja entera debajo en las cuatro:**
-
-| puesto | lo que envejecio | lo que no |
-|---:|---|---|
-| **823** | *lo propio de `brainstorming_divergente` son el registro visual y **el bloque de IA entero***: el bloque **ya no esta** | el nucleo compartido, entero; y `brainstorming_efectivo` conserva su paso 3, la condicion social |
-| **834** | solo la salvedad del `9.9` sobre **una juntura que ya no existe** | **todo lo demas**: ni una linea de contenido dejo de ser cierta. Es el caso mas limpio de los cuatro |
-| **844** | solo la nota de costura | **los tres gestos propios** que listaba siguen los tres, y la vara se re-corrio hoy: el `9.6.2` **no** se cumple (cruza dos pasos), asi que decide el segundo polo del `9.22`, **linea en los dos sentidos** |
-| **585** | la descripcion incluia **cuatro gestos de IA** que hoy no estan en el nodo | el argumento entero (*la sesion contra la disciplina mental*), que **nunca colgo de ese bloque** |
-
-**El constructor del lote (`scripts/loop/vuelta37_build_lote_p5.py`) COPIA LA RAZON VIEJA DEL
-ARCHIVO POR MAQUINA** y aborta si no queda literal dentro. **Ni una letra de la razon vieja se
-tecleo.**
-
-### 3.5 LAS TRECE LECTURAS DIRIGIDAS, `LD-83` a `LD-95`
-
-**Guarda previa** (`scripts/loop/vuelta37_ld_opd04.py`, salida `SALIDA_V37_LD_OPD04.txt`):
-**barrido de `docs/` entero por `LD-` mas digitos: el mas alto escrito es el 82**, asi que la tanda
-arranca en el 83; **los trece buscados en las 3.388 filas de `docs/INTRA_DOMINIO_PARES.jsonl`:
-ninguno esta en la cola**, asi que son lectura dirigida y **`n` no se mueve**; y **las 21 aristas
-internas medidas en los dos sentidos y resueltas por alias (`P.1`): solo DOS pares tienen arista**,
-y las dos la tienen en los dos sentidos.
-
-| LD | par | clase | arista |
+| lectura | par | clase | arista |
 |---|---|:---:|---|
-| **83** | `brainstorming_divergente` / `construir_sobre_ideas_ajenas` | **D** | madre e hijo, **ARISTA QUE FALTA** |
-| **84** | `brainstorming_divergente` / `design_attitude_vs_decision_attitude` | **D** | no, y no se declara |
-| **85** | `brainstorming_efectivo` / `generar_multiples_opciones` | **D** | no |
-| **86** | `brainstorming_efectivo` / `pensamiento_convergente_divergente` | **D** | **ya puesta, en los dos sentidos** |
-| **87** | `brainstorming_efectivo` / `design_attitude_vs_decision_attitude` | **D** | no |
-| **88** | `reglas_brainstorming` / `generar_multiples_opciones` | **D** | no |
-| **89** | `reglas_brainstorming` / `construir_sobre_ideas_ajenas` | **D** | no. **El solape mas fino de la tanda** |
-| **90** | `reglas_brainstorming` / `pensamiento_convergente_divergente` | **D** | no |
-| **91** | `reglas_brainstorming` / `design_attitude_vs_decision_attitude` | **D** | no. **Los dos del mismo libro** |
-| **92** | `generar_multiples_opciones` / `construir_sobre_ideas_ajenas` | **D** | madre e hijo, **ya puesta en los dos sentidos** |
-| **93** | `generar_multiples_opciones` / `design_attitude_vs_decision_attitude` | **A** | fusion, no enlace |
-| **94** | `construir_sobre_ideas_ajenas` / `pensamiento_convergente_divergente` | **D** | no |
-| **95** | `construir_sobre_ideas_ajenas` / `design_attitude_vs_decision_attitude` | **D** | no |
+| **`LD-96`** | `brainstorming` contra `brainstorming_divergente` | **D** | no hay, y **no se declara** |
+| **`LD-97`** | `brainstorming` contra `brainstorming_efectivo` | **D** | **ya puesta en los dos extremos** |
+| **`LD-98`** | `brainstorming` contra `reglas_brainstorming` | **D** | no hay, y **no se declara** |
 
-**SALDO: DOCE `D` y UNA `A`.** El `LD-86` cierra una observacion que el puesto **585** habia dejado
-escrita el 10 ago 2026 y que nadie habia leido: *`pensamiento_convergente_divergente` es vecino del
-racimo sin ser miembro, y la mesa tendra que mirarlo*. **Hoy esta leido.**
+**LA VARA, citada y no aludida:** `9.6.1` (la linea o el procedimiento) con **la direccion del
+`9.6.2`**, la precision del `9.6.3` (el tamano del solape no decide), los **dos polos del `9.22`**
+con su caso corriente, y el `67.6` para separar linea de procedimiento. **El criterio de la arista
+que falta es el del 15 ago 2026** en `docs/plan/02_DESTEJIDOS.md`: bloque contra linea, no linea
+contra linea.
 
-### 3.6 LA RESPUESTA DE `P.5`: dos triangulos, un colgado y **el primer puente TRIPLE**
+**LA FIGURA QUE DECIDE LAS TRES, dicha una vez:** `brainstorming` es de Juran, tiene **siete** pasos
+contra cuatro, cuatro y cinco, y **no es otra lista de reglas: es el protocolo de conduccion de la
+sala**, con su antes (formular, comunicar, calentar), su durante (turnos, registro, corte por
+fatiga) y **su despues (procesar y desduplicar), que ninguno de los tres del taller tiene**. La
+vara devuelve **PROCEDIMIENTO en un solo sentido** en los tres pares, que es el caso corriente del
+`9.22`: madre e hijo, el par **CONTINUA**.
 
-Con **21 de 21** leidos (`scripts/loop/vuelta37_acto_opd04.py`, salida
-`SALIDA_V37_OPD04_ACTO.txt`), **reparto 8 `A` y 13 `D`**:
-
-| subconjunto **cerrado** (todos sus pares internos en `A`) | sus pares | que es |
-|---|---|---|
-| `brainstorming_divergente`, `brainstorming_efectivo`, `reglas_brainstorming` | **823, 834, 234** | **EL TALLER** |
-| `generar_multiples_opciones`, `pensamiento_convergente_divergente`, `design_attitude_vs_decision_attitude` | **943, `LD-93`, 885** | **LA ALTERNANCIA** |
-| `brainstorming_divergente`, `generar_multiples_opciones` | **844** | **el puente entre los dos** |
-| `brainstorming_efectivo`, `construir_sobre_ideas_ajenas` | **586** | **el nodo colgado** |
-
-**Y `P.10` da TRES NODOS PUENTE, cuando el archivo solo conocia el simple y el doble:**
-
-| puente | sus `A` | las `D` que enfrentan a sus extremos |
-|---|---|---|
-| `brainstorming_divergente` | 823, 834, 844 | `LD-85` y `LD-88` |
-| `brainstorming_efectivo` | 823, 234, 586 | `LD-83` y `LD-89` |
-| `generar_multiples_opciones` | 844, 943, `LD-93` | `LD-84` y **585** |
-
-> **`P.10` ya habia escrito que un puente doble no es un punto debil sino una costura. AQUI SON
-> TRES, y son los mismos nodos que la operacion llama gemelos.**
-
-### 3.7 LA PARADA DE LA FUSION, con sus tres motivos medidos
-
-**MOTIVO 1: NO HAY SUPERVIVIENTE, ni escrito ni deducible.** Campo `superviviente` en **`null`**,
-leido hoy. Especie de `9.3.1` **con su correccion del 18 ago 2026** (la prueba se hace **solo sobre
-los pares `A`**): **POR ELEGIR**, y por el peor camino: **de los OCHO pares `A`, CERO nombran
-ganador en su razon.** No hay **ni una victoria citable** de la que tirar. Y dos de esos ocho, el
-**823** y el **834**, dicen literalmente que **no se pelea la clase porque la decision ya esta
-tomada en otro sitio**, la mesa del racimo. **`P.8` desempata a contenido empatado; aqui el
-contenido no ha hablado.**
-
-**MOTIVO 2: TRES NODOS PUENTE, y `P.10` prohibe expresamente fundir la componente entera** (*el
-cierre transitivo no lee: cuenta*). Su tercera salida, **fundir solo el cerrado y enlazar el
-resto**, aqui da **DOS triangulos y por tanto DOS supervivientes**, y **la forma final de la
-operacion no la escribe ninguna pagina**: la seccion **54.6** del informe lo dice desde el 11 ago
-2026, *no dice si los siete deben quedar en uno, en dos o en cuatro*.
-
-**MOTIVO 3: EL TRIANGULO DEL TALLER ES UN RACIMO MIXTO AL QUE LE FALTA UN MIEMBRO.** Medido hoy en
-`docs/RACIMOS_MIEMBROS.jsonl`: el racimo **Las reglas del brainstorming** tiene **CUATRO** miembros
-y el cuarto es **`brainstorming`, de `quality`**, fuera del acto. `MESA_RACIMOS.md` advierte que
-**podar el lado del nucleo de un racimo mixto cambia el gradiente del mundo que lo acompana**, y
-**`P.5` no da puerta para leerlo**: su alcance es el acto en operacion, **nunca fuera**. **Medido
-tambien: ninguna operacion de la fase 06 nombra a estos nodos**, asi que esa mesa **no esta escrita
-como operacion**.
-
-**`docs/loop/paradas/2026-08-19-fusion-opd04.md`** trae las tres decisiones con sus opciones, el
-cableado de `P.8` medido como contraste, y mi recomendacion.
-
-**Y EL MODO CONTINUO MANDA DETENERSE AQUI Y ME DETENGO:** *cualquier operacion cuyo texto no
-alcance para ejecutarse sin decidir detiene al ejecutor y convoca al auditor en la vuelta
-siguiente*. **No se abrio `OP-D-05` ni ninguna otra.**
+**LO QUE LAS TRES `D` DECIDEN, por la tabla que el fundador escribio:** el racimo mixto **queda
+decidido** y el cuarto miembro **se ENLAZA** al superviviente del taller. **No hubo `A`, asi que no
+se escribio `PARA_ALEXIS.md` por esa via**, y la TAREA 2 procedio.
 
 ---
 
-## 4. LAS GUARDAS DEL MODO CONTINUO, una por una y todas por corrida propia de hoy
+## 3. TAREA 2: LAS DOS ELECCIONES DE `P.8`, POR LECTURA DE CONTENIDO
 
-| guarda que el encargo exige | resultado |
-|---|---|
-| **simulacion previa sobre copia en memoria** | **no aplica y se dice por que**: esta vuelta **no ejecuto ninguna operacion sobre nodos**. Los cuatro instrumentos que tocan algo escriben en `docs/`, y los tres que escriben en ficheros sellados **releen y verifican tras escribir** |
-| **`Gate 0` en verde tras cada fase** | **exit 0, `GATE 0: OK`**, 20 `[OK]` y 0 `[FALLO]`, 3.853 compilados, 3.538 activos y 315 deprecados, simetria 0. Corrido **dos veces**, tras las relecturas y al cierre |
-| **derivado byte igual** | **SI**, tras el **ciclo entero** (`run_phase1 --reaplico-curaduria`, `etiquetas_de_cara --aplicar` con 71, `sync_assets_web` con seis assets): `git status` sobre `dataset/` y `web/` sale **vacio** |
-| **suites en verde** | **motor 25 de 25** (`engine/run_all_tests.py`, exit 0); **web 80 ficheros, 1.030 pasadas, 3 saltadas**, exit 0; **`tsc --noEmit` cero lineas**, exit 0 |
-| **caso positivo de cada operacion** | **el destejido de `OP-D-04` lleva el suyo y es de la especie mas fuerte**: los ocho pasos viejos leidos por `git` del padre del commit de `OP-F-02` y comparados **uno a uno** contra los dos nodos de hoy, 4 de 4 y 4 de 4 identicos. **No es un conteo: es el texto** |
-| **cero duplicadas o auto-aristas tras resolver** | **no aplica**: cero fusiones, cero redirecciones. El recomputo lo confirma por su lado, **1 auto-arista en todo el archivo** y es la conocida del 386 |
-| **barrido del `9.10` en el mismo acto de cada volcado** | **corrido**, `scripts/loop/vuelta37_barrido_910.py`, **117 candidatos** listados sin truncar |
-| **toda cifra publicada de una corrida de ESTA vuelta** | **si**. La unica excepcion declarada es el discutible 1 |
-| **`costuras_internas.py` mal calibrado** | **no se necesito su cifra**: ver el discutible 1 |
-| **verificador de mapas de destejido** | **3 tablas, 17 filas, 0 discrepancias, OK**, y el instrumento **declara en voz alta** que sin `--json` corre solo la vara 1 |
-| **recomputo entero** | **actos 333**, nodos con al menos una `A` **845**, `A` crudas **575**, pares distintos del retrato **574**, y **las CUATRO comprobaciones del `08_VERIFICACION` OK** |
+**Van enteras en `docs/plan/02_DESTEJIDOS.md`, seccion `OP-D-04` ESTADO AL 19 ago 2026 (vuelta
+38), y en el campo `eleccion_p8` de cada plan sellado.**
 
----
+| triangulo | superviviente | decidio | el cableado |
+|---|---|---|---|
+| **EL TALLER** | **`reglas_brainstorming`** | **el contenido** | **VA EN CONTRA**: 13 de `brainstorming_efectivo` contra 11 del elegido |
+| **LA ALTERNANCIA** | **`pensamiento_convergente_divergente`** | **el contenido** | **coincide**: 5 contra 3 y contra 2 |
 
-## 5. LAS CORRECCIONES DECLARADAS DE ESTA VUELTA, incluidas las mias
+**EL TALLER, en tres lineas.** `reglas_brainstorming` es el unico que cubre **los cinco momentos**
+de la sesion (enunciado del problema, inmersion, reglas, captura visual, calentamiento); tiene
+**dos piezas unicas** que ningun otro miembro del triangulo trae (la inmersion de campo y el
+calentamiento nombrado); y **entrega mas lejos**, con las ideas *agrupadas por tema*.
+`brainstorming_efectivo`, que gana el cableado, **no tiene ni un paso de captura** y aun asi promete
+en su entregable una sesion documentada. `brainstorming_divergente` tiene **cero piezas unicas**.
 
-1. **UNA CIFRA MIA, MAL MEDIDA Y CORREGIDA SIN BORRAR EL TEXTO VIEJO.** El comentario que puse en
-   `scripts/loop/vuelta37_aviso_v35.py` decia que el archivo guarda `puesto_intra` **como cadena**.
-   **ES FALSO: contadas hoy las 3.388 lineas, las 3.388 lo traen ENTERO.** La causa esta escrita
-   dentro del propio fichero: **la medicion que lo sostenia imprimia sus propios valores pasados
-   por `str()`**, asi que todo salia cadena por construccion. **Un instrumento que mide su propia
-   impresion no mide nada.** La comparacion del codigo se hace por `str()` en los dos lados y por
-   eso funcionaba igual; **lo que estaba mal era la afirmacion, no el resultado.**
-2. **DOS FALLOS DE CAMPO QUE LAS GUARDAS CAZARON EN VEZ DE CALLARSE**, y los dos quedan escritos en
-   el docstring del instrumento que los sufrio: el archivo de veredictos nombra el puesto
-   `puesto_intra` y no `puesto` (la guarda 3 lo canto con **seis AUSENTES**); y
-   `INDICE_ROJO_DECLARADO.jsonl` nombra el nodo `id` y no `node_id` (**revento con `KeyError`** en
-   vez de devolver una lista vacia y darla por buena).
-3. **TRES AVISOS DE CORTE FECHADOS**, sin borrar nada, en las tres paginas que presentaban la
-   costura de `brainstorming_divergente` **como viva**: `BANCO_DE_TEXTOS.md` seccion `9.9`,
-   `INTRA_DOMINIO_INFORME.md` seccion 26.5 y `FICHA_SUBFUSION_GRADIENTE.md`. **Las tres salen
-   REFORZADAS**: predijeron que el bloque 1 a 4 sobreviviria a la cirugia, y esta vuelta lo
-   comprobo. **Es la primera vez que un ejemplar del `9.9` se verifica DESPUES de la cirugia que
-   anticipaba.**
-4. **LA NOTA DE `OP-D-04`**, con la vieja de **582 caracteres LITERAL dentro** de la nueva de
-   **4.973**, y `estado`, `superviviente`, `nodos` y `eliminar` **sin tocar**, verificado releyendo
-   el fichero tras escribir. **71 operaciones antes y despues.**
+> **TRECE CONTRA ONCE Y PIERDE EL TRECE.** Es la forma dura de `P.8`, la misma del acto II del
+> racimo del pivote. **Y aqui ir contra el cableado cuesta CERO aristas, medido**: las trece de
+> `brainstorming_efectivo` son reciprocas las trece y se redirigen solas.
 
----
+**LA ALTERNANCIA, en dos lineas.** El triangulo se llama LA ALTERNANCIA y **solo uno de los tres
+tiene los dos movimientos**: el embudo que estrecha y el descarte de ideas prometedoras no estan en
+ninguno de los otros dos. Ademas es el unico cuya disciplina **se repite en el tiempo** (`67.6`) y
+el unico cuyo entregable es un **documento que dura**. **El cableado coincide, y se declara que NO
+fue lo que decidio.**
 
-## 6. LOS DISCUTIBLES MARCADOS, todos ANTES de saber si acierto
+**LAS DOS TABLAS DE PERDIDAS (`P.13`), impresas desde los planes** con
+`scripts/loop/vuelta38_tabla_perdidas.py` (salida `docs/loop/SALIDA_V38_PERDIDAS.txt`):
 
-1. **NO RE-CORRER `costuras_internas.py`** para el destejido. Detalle en 3.2. **Es el mas
-   estructural**: si el auditor sostiene que un destejido exige medir las costuras del dia, esta
-   vuelta debio parar en el paso 2.
-2. **`LD-93`, la unica `A` de la tanda, y el mas fuerte de todos.** `generar_multiples_opciones`
-   contra `design_attitude_vs_decision_attitude`. **Los entregables NO coinciden** (*un set de 3-5
-   alternativas evaluadas* contra *mentalidad y proceso de trabajo del equipo*) y el `9.6.2` dice
-   que **los entregables deciden mas rapido que los pasos**. **Lo que sostengo** es que esa senal
-   esta escrita para detectar la **direccion** de un par madre e hijo, y **aqui no hay madre e
-   hijo**: ninguno cabe dentro de un paso del otro, asi que aplica el `9.22`, que pesa **lineas** y
-   no productos. **Quien de mas peso al entregable leera `D`, y entonces el triangulo de la
-   alternancia deja de ser triangulo y la parada cambia de forma.**
-3. **`LD-83`, `D` donde el `586` dio `A` con el mismo hijo.** Lo que los separa es medible: el paso
-   2 de `brainstorming_efectivo` dice *por encima de generar ideas propias de forma aislada* y **eso
-   ya cubre el no acaparar**; el paso 2 de `brainstorming_divergente` **no lo dice**. **Con una
-   madre queda una linea fuera y con la otra quedan dos.** Quien sostenga que dos lineas siguen
-   siendo lineas dira que este par tambien es `A`.
-4. **`LD-91`, sin arista entre dos nodos del mismo libro.** El paso 2 de
-   `design_attitude_vs_decision_attitude` se puede leer como linea madre de la sesion entera. **Lo
-   que lo impide**, corrido hoy: `reglas_brainstorming` **no cabe entero dentro de ese paso**,
-   porque su paso 1 y su paso 3 caen mas cerca del paso 3 de la otra.
-5. **LAS TRES `A` QUE NO CAEN (823, 834, 844).** Las dos primeras se sostienen por la **regla
-   `FAMILIA DECLARADA`** y no por la vara del contenido, y tras la cirugia
-   `brainstorming_divergente` conserva **tres gestos propios de cuatro pasos**, que es mas de lo que
-   tenia cuando la razon vieja lo llamo repeticion. **Lo que lo impide** es que la regla escrita
-   manda **no pelear** la clase de un par de racimo declarado.
-6. **DECLARAR LA PARADA EN VEZ DE FUNDIR EL TRIANGULO DE LA ALTERNANCIA.** Ese triangulo **no**
-   tiene el problema del racimo mixto, asi que alguien puede decir que ahi si se podia fundir. **Lo
-   que lo impide, y son dos cosas**: sus tres pares `A` **tampoco nombran ganador** (motivo 1 vale
-   igual), y **uno de los tres es `LD-93`, lectura mia de hoy y sin auditar**. **Fundir sobre una
-   lectura propia sin auditar es exactamente lo que la vuelta 36 pidio no volver a hacer.**
-7. **CONTAR LAS LECTURAS DIRIGIDAS COMO CLASE DEL ACTO.** El instrumento del acto **junta dos
-   fuentes**, el archivo y `LECTURAS_DIRIGIDAS.md`, porque una dirigida no existe en el archivo. Lo
-   sostengo porque es lo que `OP-D-02` y `OP-D-03` hicieron con `LD-72` a `LD-81`. **Pero la
-   consecuencia hay que decirla: `scripts/plan/recomputo_3388.py` NO lee ese fichero**, asi que
-   **la `A` de `LD-93` no entra en el recomputo**. Aqui no cambia nada (los siete ya estaban en la
-   misma componente por el 844 y el 586), **pero un dia una `A` dirigida unira dos componentes y el
-   recomputo no lo vera.** Va como pendiente, abajo.
+| | piezas | VIAJA | VIVE DENTRO | YA NO APLICA |
+|---|---:|---:|---:|---:|
+| el taller | **14** | 9 | 4 | 1 |
+| la alternancia | **11** | 8 | 2 | 1 |
+
+**LA FILA QUE MAS ENSENA es `P.13` en estado puro:** la regla *construir sobre las ideas de otros*
+es la unica del triangulo que el superviviente no dice, asi que **la LINEA viaja**; pero **el
+PROCEDIMIENTO de esa linea vive en `construir_sobre_ideas_ajenas`, que queda VIVO fuera de la
+fusion** y que `P.10` manda enlazar. **Injertarlo tambien seria fabricar la repeticion nueva contra
+la que `P.13` avisa.**
 
 ---
 
-## 7. PENDIENTES DE DOCTRINA
+## 4. LOS DOS PLANES SELLADOS, Y EL CASO POSITIVO DE `P.7`
 
-1. **EL RECOMPUTO NO VE LAS LECTURAS DIRIGIDAS.** Medido hoy: `grep` de `LECTURAS_DIRIGIDAS` y de
-   `LD-` sobre `scripts/plan/recomputo_3388.py` da **cero**. Las dirigidas **`A`** no entran en el
-   cierre transitivo. **Hoy es inocuo y esta comprobado**; el dia que no lo sea, el censo de actos
-   mentira en silencio. **Es del fundador**, y no bloquea.
-2. **`P.5` NO ALCANZA AL CUARTO MIEMBRO DE UN RACIMO MIXTO.** Su alcance es el acto en operacion,
-   *nunca fuera*, y aqui el acto contiene **tres cuartas partes de un racimo declarado**. **No hay
-   pagina que diga que se hace con el cuarto.** Es el motivo 3 de la parada y **es del fundador**.
-3. **EL ESTADO `HECHA` SIGUE SIN EXISTIR EN EL ESQUEMA** (pendiente heredado de la vuelta 36, vivo
-   y medido hoy: **71 operaciones y las 71 en `LISTA`**). `OP-D-04` queda con sus pasos 1 y 2 hechos
-   y **el campo dice `LISTA`**, igual que `OP-F-02` y `OP-F-03`, que estan enteras.
-4. **QUE HACE EL PLAN CON UN ACTO QUE SE PARTE EN DOS** (heredado, y esta vuelta lo hace concreto):
-   si la decision 1 de la parada sale por dos fusiones, **el acto 1 del cierre transitivo deja de
-   ser un acto y pasa a ser dos**, y el inventario tiene una entrada `acto` con los siete miembros.
-5. **PENDIENTES 5 A 9 DE LA VUELTA 36: siguen vivos y ninguno bloquea**, incluido el 6, la
-   calibracion de `costuras_internas.py`.
+**`docs/loop/PLAN_V38_OPD04_TALLER.json`** y **`docs/loop/PLAN_V38_OPD04_ALTERNANCIA.json`**, los
+dos con `estado` **SELLADO Y SIN EJECUTAR**, porque la `DECISION 2` del fundador manda que la
+fusion espere el acta.
+
+**NO ESTAN TECLEADOS.** Los escribe `scripts/loop/vuelta38_sellar_planes.py`, que **lee los textos
+de origen de `dataset/nodos/`** (viajan verbatim), **deriva los pasos finales de los grupos** (no
+se escriben dos veces) y **aborta sin escribir si un origen queda sin colocar o colocado dos
+veces**. La prosa argumentada vive aparte, en `scripts/loop/vuelta38_bloques.py`, **para que se vea
+de un vistazo que parte del plan esta medida y que parte esta escrita por un humano**.
+
+**LA SIMULACION PREVIA DE `P.7` CORRIO SOBRE COPIA EN MEMORIA** y devolvio las seis cosas de la
+regla (`scripts/plan/simular_fusion.py`, salidas `SALIDA_V38_SIM_TALLER.txt` y
+`SALIDA_V38_SIM_ALTERNANCIA.txt`):
+
+| | el taller | la alternancia |
+|---|---:|---:|
+| redirecciones de entradas vivas | **17** | **5** |
+| deprecados que nombran y **no se tocan** | 0 | **1**, `fase_entender_modelo_negocio` |
+| duplicadas **nuevas** que la fusion fabrica | **1** | **1** |
+| auto aristas | **0** | **0** |
+| aristas que quedarian declaradas en un solo extremo | **16** | **4** |
+
+**EL CASO POSITIVO, y son dos, no uno.**
+
+**UNO. EL ENLACE DEL CUARTO MIEMBRO YA ESTA PUESTO, y no se ve leyendo.** La `DECISION 3` manda
+enlazar `brainstorming` al superviviente del taller si las tres lecturas dan `D`. **No hay que
+escribir esa arista:** `brainstorming` nombra hoy a `brainstorming_efectivo` en sus
+`nodos_previos`, ese nodo muere, la entrada se redirige, y el bloque 6 de la simulacion lo imprime
+resuelto: **`reglas_brainstorming -> brainstorming`**.
+
+**DOS. LA PREMISA DE LA RECIPROCIDAD SE FUE A MIRAR EN VEZ DE DEDUCIRSE, y por eso no cayo.** El
+ejecutor de fusiones de la casa redirige a los vecinos y **no le escribe al superviviente las
+aristas del absorbido**. Leido asi, las dos fusiones dejarian **20** aristas cojas en un grafo cuya
+tasa de reciprocidad medida hoy es **99,59 por ciento** (15.448 de 15.511,
+`scripts/loop/vuelta38_reciprocidad_post.py`). **Pero no las deja**: quien las escribe es
+`scripts/run_phase1.py` en su **paso 5**, y el precedente esta **medido**, no supuesto, en el log de
+la fusion de `OP-D-02` (**commit `72c718ea`**, `phase1_run_log.json`, `symmetrize_added` con las dos
+aristas que gano `voz_del_cliente_voc`). **Los dos planes llevan por eso un bloque
+`simetrizacion_esperada` con la lista entera y su guarda**: el dia de la ejecucion,
+`symmetrize_added` tiene que traer **exactamente** 16 entradas para `reglas_brainstorming` y 4 para
+`pensamiento_convergente_divergente`, **ni una mas ni una menos**.
+
+**EL VERIFICADOR DE MAPAS CORRIO Y ESTA VERDE** (`scripts/loop/verificar_mapas_destejido.py` con
+los cinco planes sellados, salida `docs/loop/SALIDA_V38_VERIFICADOR_MAPAS.txt`):
+
+```
+5 tabla(s), 31 fila(s), 0 discrepancia(s).
+  vara 1 (todo numero citado en el motivo pertenece a su fila): CORRIDA
+  vara 2 (la particion de la tabla calza celda a celda con el plan sellado): CORRIDA sobre 5 plan(es)
+VERIFICADOR DE MAPAS DE DESTEJIDO: OK
+```
 
 ---
 
-## 8. PREGUNTAS QUE TRAIGO, porque no las puedo medir
+## 5. CORRECCIONES DECLARADAS
 
-1. **La `54.6` del informe dice que el acto de siete puede quedar en uno, en dos o en cuatro. La
-   medicion de hoy dice que en `A` cerrada solo hay dos formas posibles: dos triangulos, o un
-   nodo.** Falta saber si el fundador cuenta **`construir_sobre_ideas_ajenas`** como tercer nodo
-   vivo o como material que viaja al superviviente del taller por el **586**.
-2. **Si el auditor voltea `LD-93` a `D`**, el triangulo de la alternancia se rompe y quedan **dos
-   pares `A` sueltos** (943 y 885) con `generar_multiples_opciones` de puente. **La parada seguiria
-   siendo parada, pero la decision 1 cambiaria de opciones.** Lo digo antes de que se lea, no
-   despues.
+**UNA, y va con el texto viejo entero delante, en `docs/plan/02_DESTEJIDOS.md`.** El estado de
+`OP-D-04` publicado en la vuelta 37 decia **FUSION EN PARADA, TRES MOTIVOS MEDIDOS**. Los tres
+estan resueltos y **por dos vias distintas que no se confunden**: el motivo 2 (la forma final) lo
+resolvio **el fundador** el 19 ago 2026; los motivos 1 (no hay superviviente) y 3 (el racimo mixto
+sin su cuarto miembro) los resuelve **esta vuelta, por lectura**. **El texto viejo no se borra: la
+correccion va debajo, con su tabla de correspondencia.**
+
+**UN INSTRUMENTO TOCADO, y va dicho con su motivo dentro del codigo.**
+`scripts/loop/vuelta33_tabla_mapa.py` gana **una cabecera alterna para las tablas de condiciones**.
+El motivo es una averia real y no una preferencia: `verificar_mapas_destejido.py` reconoce las
+tablas de particion **por su cabecera**, la de *paso del resultado*, y compara su particion contra
+`grupos_pasos`. **Una tabla de CONDICIONES publicada con esa misma cabecera se leeria como tabla de
+pasos, no encontraria plan que calce y daria discrepancia por construccion.** Hasta hoy no se noto
+porque las condiciones se habian publicado en prosa. **La cura es de una linea y no afloja ninguna
+vara.**
 
 ---
 
-## 9. EL SALDO EN UNA TABLA
+## 6. LOS DISCUTIBLES MARCADOS, marcados ANTES de saber si acierto
+
+**DOS, y el primero es el que puede tumbar la vuelta entera.**
+
+**DISCUTIBLE 1, el `LD-96`** (`brainstorming` contra `brainstorming_divergente`). **Los cuatro
+pasos del nodo de Tim Brown caben todos dentro del de Juran**, y lo que conserva de propio son dos
+calificativos: *sin distracciones* y *post-its o pizarra*. Lo marco **`D`** porque la vara del
+`9.6.2` **tiene direccion** y preguntar que anade el nodo compacto al nodo largo es la pregunta
+invertida que esa regla prohibe. **Quien lo lea al reves dira `A`, y trae el argumento mas duro de
+todos:** el puesto **823** ya lee `A` a este mismo nodo contra `brainstorming_efectivo`, y su razon
+releida el 19 ago 2026 dice que **lo propio de `brainstorming_divergente` son TRES gestos de
+taller**; **contra Juran no conserva ninguno de los tres, porque Juran los tiene los tres.** **Si
+cae a `A`, la regla del fundador manda PARAR y las dos fusiones no se ejecutan.**
+
+**DISCUTIBLE 2, el `LD-98`** (`brainstorming` contra `reglas_brainstorming`). **Cuatro de los cinco
+pasos alineados y en el mismo orden**, que es la cuenta del puesto 2080. Lo marco **`D`**, y **digo
+el punto exacto que lo puede tumbar: la clase de la inmersion previa.** La leo **LINEA** porque es
+un puntero cuyos procedimientos viven fuera y estan cableados como sus `nodos_previos`. **Si se lee
+PROCEDIMIENTO, hay procedimiento en los dos sentidos y el par puede ser `C` con enlace mutuo**; y
+quien cuente los cuatro pasos alineados como el 2080 dira **`A`**. **Dato en contra que se escribe:**
+el puesto **834** lee `A` a `reglas_brainstorming` contra `brainstorming_divergente` conservandole
+sus tres piezas propias, y **dos de esas tres las tiene tambien Juran**.
+
+**Y DOS DECISIONES DEL PLAN QUE NO SON LECTURAS PERO SE DISCUTEN IGUAL, marcadas aqui para que el
+auditor las mire:**
+
+- **EL ORDEN DEL NODO DEL TALLER.** Los cinco pasos del superviviente **conservan su orden relativo
+  entre si**, y lo que viaja entra **a la cabeza** (el grupo y la sala) y **a la cola** (generar en
+  sesiones separadas). **Es la opcion que no mueve nada del superviviente**, pero deja el acto de
+  generar despues del calentamiento y de la captura, que es discutible como procedimiento.
+- **EL TITULO Y LA ETIQUETA NO CAMBIAN.** El nodo resultante del taller es **la sesion entera** y
+  sigue llamandose *Reglas de Brainstorming Efectivo*, con etiqueta *Organiza tu Lluvia de Ideas*.
+  **`P.8` avisa que una cabeza que vale para todo no puede llamarse como una sola de sus partes.**
+  No lo cambio porque cambiar un titulo no me lo pidio nadie, **pero lo dejo marcado.**
+
+---
+
+## 7. PARADA DE DOCTRINA: **LA REGLA `FAMILIA DECLARADA` ALCANZA A LAS TRES LECTURAS**
+
+**Se trae y no se arregla (`EJECUTOR.md` regla 5), y esta medida**
+(`scripts/loop/vuelta38_familia_declarada.py`, salida `docs/loop/SALIDA_V38_FAMILIA_DECLARADA.txt`).
+
+**LA REGLA, tal como esta escrita** en `docs/INTRA_DOMINIO_INFORME.md` linea 26, generalizada el 11
+ago 2026 **a TODO racimo declarado**: *un par cuyos DOS nodos pertenecen a un racimo ya declarado
+lleva razon `familia declarada` y NO pelea la clase; se registra con la clase que la silueta
+indique, sin argumentarla, porque la decision ya esta tomada en otro sitio*.
+
+**LO MEDIDO HOY:**
 
 | | |
-|---|---:|
-| operaciones ejecutadas enteras | **0** |
-| operaciones con pasos hechos | **1** (`OP-D-04`: pasos 1 y 2, mas el acto leido entero) |
-| **nodos tocados** | **0** |
-| veredictos releidos y volcados | **4** |
-| de ellos, con cambio de clase | **0** |
-| lecturas dirigidas nuevas | **13** (`LD-83` a `LD-95`): 12 `D`, 1 `A` |
-| pares del acto leidos, de 21 | **21** |
-| nodos puente encontrados | **3**, el primer triple del archivo |
-| aristas declaradas para la fase 04 | **1** (`LD-83`) |
-| avisos de corte fechados | **4** (la propuesta de la 35, mas tres paginas de doctrina) |
-| **marcador al cierre** | **n 3.388, A 575, B 83, C 8, D 2.722** |
-| **diferencia entre apertura y cierre** | **cuatro lineas, las cuatro el rotulo** |
-| paradas declaradas | **1**, la fusion de `OP-D-04` |
+|---|---|
+| nomina del racimo *Las reglas del brainstorming* | **CUATRO** miembros: los tres del taller y `brainstorming` |
+| los tres pares de la tanda, son intra nomina? | **LOS TRES** |
+| pares intra nomina ya escritos | **TRES, y los tres `A`** (puestos 823, 834 y 234). **Dos citan la regla por su nombre** |
+| operaciones de la fase `06_MESAS` que nombran a algun miembro | **CERO**, sobre las 71 de `docs/plan/OPERACIONES.jsonl` |
+
+**EL CHOQUE, sin adornarlo:** las tres lecturas de esta vuelta **argumentan la clase de tres pares
+que la regla dice que no se argumentan**, y los otros tres pares de la misma nomina estan escritos
+`A`. **La regla se apoya en que la decision ya esta tomada EN OTRO SITIO, y ese otro sitio no existe
+para este racimo**, medido hoy. **Es exactamente el hueco que la autorizacion del fundador viene a
+llenar, y por eso las lecturas se escribieron; pero esa autorizacion se redacto como excepcion al
+ALCANCE DE `P.5` y no dice una palabra sobre `FAMILIA DECLARADA`.**
+
+**LO QUE ESTA EN JUEGO:** si `FAMILIA DECLARADA` gobierna, los tres pares se registran con la clase
+de su familia, que es **`A`**, y entonces la condicion del fundador (*si alguna da `A`, el bucle
+PARA*) **se cumple por doctrina y no por lectura**, y **las dos fusiones no se ejecutan**. Si
+gobierna la autorizacion posterior y especifica, las tres son `D` y la fusion sigue. **El ejecutor
+no elige entre las dos.**
+
+**POR QUE NO SE PARO LA VUELTA AQUI, y va dicho para que se pueda discutir:** porque **detenerse no
+habria costado menos que seguir**. Las dos tareas del encargo **no tocan ni un nodo**: escriben
+lecturas y sellan planes. **Si la parada se resuelve a favor de `FAMILIA DECLARADA`, lo unico que
+sobra es documentacion, y ni una sola linea de `dataset/` hay que deshacer.** El coste de haber
+seguido es cero; el de haber parado con la vuelta a medias habria sido volver a medirlo todo.
+
+---
+
+## 8. PENDIENTES DE DOCTRINA
+
+1. **`FAMILIA DECLARADA` contra las lecturas autorizadas del cuarto miembro.** La parada de la
+   seccion 7. **No hay regla escrita que ordene una autorizacion especifica posterior frente a una
+   regla general anterior**, y la campana ya la necesita dos veces.
+2. **UNA OPERACION CON DOS SUPERVIVIENTES.** `docs/plan/OPERACIONES.jsonl` tiene **UN** campo
+   `superviviente` por operacion y `OP-D-04` produce **DOS**. Sigue en `null`, **medido hoy**, y
+   **no se toco**: escribir uno seria mentir por omision y escribir los dos seria estrenar un
+   formato. **Ninguna pagina dice cual.**
+3. **LA CLASE DE UN PUNTERO CON CASA PROPIA.** El `LD-98` se decide sobre si la inmersion previa es
+   linea o procedimiento, y la regla practica del `67.6` **no dice que pasa cuando el paso nombra
+   una actividad cuyo procedimiento vive en otro nodo YA CABLEADO como vecino**. Se resolvio como
+   **puntero, o sea linea**, y queda **marcado como pendiente**, no como doctrina.
+
+---
+
+## 9. LO QUE PIDE ESTA VUELTA, en el orden en que sirve
+
+1. **VERIFICACION COMPLETA de las tres lecturas** `LD-96` a `LD-98`, con los dos discutibles
+   delante. **La lectura ciega de `LD-96` es la que decide si la vuelta 39 ejecuta o no.**
+2. **VERIFICACION COMPLETA de las dos elecciones de `P.8`**, y en particular del taller, **donde el
+   contenido va contra el cableado por 13 a 11**.
+3. **ADJUDICACION DE LA PARADA DE DOCTRINA** de la seccion 7. **Es la unica que puede detener la
+   ejecucion aunque las tres lecturas se confirmen.**
+4. **Si el acta confirma las tres lecturas y las dos elecciones**, la vuelta 39 ejecuta las dos
+   fusiones con `P.16`, corre el ciclo de Gate 0 y las suites, comprueba que el enlace del cuarto
+   miembro llego solo, comprueba que `symmetrize_added` trae **exactamente** las 16 y las 4
+   declaradas, enlaza los tres que quedan por `P.10` con `P.9`, cierra `OP-D-04` y retoma el modo
+   continuo.
+
+**`docs/loop/PROMPT_SIGUIENTE.md` NO se escribe en esta vuelta: el turno es del auditor.**

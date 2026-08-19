@@ -1,0 +1,129 @@
+
+==============================================================================
+1. GRADOS LIMPIOS DE LOS OCHO, contra el grafo de hoy y resueltos (P.1)
+==============================================================================
+  nodos en el grafo: 3853   alias indexados: 392
+
+  nodo                                    pasos   nombra LO NOMBRAN
+  brainstorming_divergente                    4        4          4
+  brainstorming_efectivo                      4       13         13
+  reglas_brainstorming                        5       11         11
+  generar_multiples_opciones                  3        3          3
+  pensamiento_convergente_divergente          4        4          5
+  design_attitude_vs_decision_attitude        4        2          2
+  construir_sobre_ideas_ajenas                3        3          3
+  brainstorming                               7        4          4
+
+==============================================================================
+2. RECIPROCIDAD ARISTA POR ARISTA de los seis que se funden
+==============================================================================
+  Una arista es RECIPROCA si el otro extremo la declara en el campo opuesto.
+  Las NO reciprocas de un nodo que muere se pierden: viven solo en su fichero,
+  y el ejecutor de fusiones lo depreca en vez de vaciarlo.
+
+  --- brainstorming_divergente
+     nodos_previos     buscar_armonia_diseno                      reciproca
+     nodos_siguientes  butterfly_test_convergencia                reciproca
+     nodos_siguientes  prototipado_rapido                         reciproca
+     nodos_siguientes  ideacion_con_ia_en_la_sesion               reciproca
+     no reciprocas: 0
+
+  --- brainstorming_efectivo
+     nodos_previos     pensamiento_convergente_divergente         reciproca
+     nodos_previos     cultura_de_optimismo                       reciproca
+     nodos_previos     esfuerzo_voluntario_vs_urge_espontaneo     reciproca
+     nodos_previos     how_might_we_briefs                        reciproca
+     nodos_previos     intimation_illumination                    reciproca
+     nodos_previos     periodo_incubacion_mental                  reciproca
+     nodos_previos     sentido_del_humor_como_herramienta_de_pensamiento reciproca
+     nodos_siguientes  pensamiento_visual                         reciproca
+     nodos_siguientes  prototipado_rapido                         reciproca
+     nodos_siguientes  deriva_deliberada                          reciproca
+     nodos_siguientes  etnografia_investigacion_usuario           reciproca
+     nodos_siguientes  tecnica_perder_objeto                      reciproca
+     nodos_siguientes  brainstorming                              reciproca
+     no reciprocas: 0
+
+  --- reglas_brainstorming
+     nodos_previos     equipo_diverso_ideacion                    reciproca
+     nodos_previos     cuatro_etapas_del_pensamiento_creativo     reciproca
+     nodos_previos     equipos_visita_cliente                     reciproca
+     nodos_previos     etnografia_investigacion_usuario           reciproca
+     nodos_previos     how_might_we_hmw                           reciproca
+     nodos_siguientes  pensamiento_visual_modelos_negocio         reciproca
+     nodos_siguientes  bundle_ideas                               reciproca
+     nodos_siguientes  co_creation_session                        reciproca
+     nodos_siguientes  get_visual                                 reciproca
+     nodos_siguientes  gut_check                                  reciproca
+     nodos_siguientes  mash_ups                                   reciproca
+     no reciprocas: 0
+
+  --- generar_multiples_opciones
+     nodos_previos     construir_sobre_ideas_ajenas               reciproca
+     nodos_previos     pensamiento_visual                         reciproca
+     nodos_siguientes  portafolio_de_diseno                       reciproca
+     no reciprocas: 0
+
+  --- pensamiento_convergente_divergente
+     nodos_previos     usuarios_extremos_insights                 reciproca
+     nodos_previos     analisis_y_sintesis                        reciproca
+     nodos_siguientes  analisis_y_sintesis                        reciproca
+     nodos_siguientes  prototipado_rapido                         reciproca
+     nodos_siguientes  brainstorming_efectivo                     reciproca
+     no reciprocas: 0
+
+  --- design_attitude_vs_decision_attitude
+     nodos_previos     analisis_y_sintesis                        reciproca
+     nodos_siguientes  fase_entendimiento_investigacion_mercado   reciproca
+     nodos_siguientes  fase_entendimiento_investigacion_mercado   reciproca
+     no reciprocas: 0
+
+==============================================================================
+3. LOS PARES INTERNOS DE CADA TRIANGULO, con su clase de hoy
+==============================================================================
+
+  --- EL TALLER
+     brainstorming_divergente               brainstorming_efectivo                 A  puesto 823
+     brainstorming_divergente               reglas_brainstorming                   A  puesto 834
+     brainstorming_efectivo                 reglas_brainstorming                   A  puesto 234
+
+  --- LA ALTERNANCIA
+     generar_multiples_opciones             pensamiento_convergente_divergente     A  puesto 943
+     generar_multiples_opciones             design_attitude_vs_decision_attitude   SIN VEREDICTO EN EL ARCHIVO
+     pensamiento_convergente_divergente     design_attitude_vs_decision_attitude   A  puesto 885
+
+==============================================================================
+4. EL CONTRAFACTUAL DE P.8: los tres candidatos de cada triangulo
+==============================================================================
+  El cableado NO decide (P.8): decide el contenido. Esta tabla existe para
+  que el desempate quede MEDIDO y para saber que cuesta ir contra el.
+
+  --- EL TALLER
+     candidato                               pasos LO NOMBRAN  aristas que
+                                                              se perderian
+     brainstorming_divergente                    4          4            0
+     brainstorming_efectivo                      4         13            0
+     reglas_brainstorming                        5         11            0
+
+  --- LA ALTERNANCIA
+     candidato                               pasos LO NOMBRAN  aristas que
+                                                              se perderian
+     generar_multiples_opciones                  3          3            0
+     pensamiento_convergente_divergente          4          5            0
+     design_attitude_vs_decision_attitude        4          2            0
+
+==============================================================================
+5. EL CUARTO MIEMBRO Y EL COLGADO, que NO se funden
+==============================================================================
+  brainstorming                          pasos 7   nombra 4   LO NOMBRAN 4
+     nodos_previos     ["fijacion_de_metas", "brainstorming_efectivo"]
+     nodos_siguientes  ["diagrama_afinidad", "diagrama_causa_efecto"]
+  construir_sobre_ideas_ajenas           pasos 3   nombra 3   LO NOMBRAN 3
+     nodos_previos     ["pensamiento_visual", "asociacion_de_ideas"]
+     nodos_siguientes  ["generar_multiples_opciones"]
+
+==============================================================================
+VEREDICTO DE LA MEDICION
+==============================================================================
+los ocho grados medidos limpios; la reciprocidad contada arista por arista;
+el contrafactual de P.8 impreso para los seis candidatos. NADA SE ESCRIBIO.

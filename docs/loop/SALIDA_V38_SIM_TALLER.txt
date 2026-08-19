@@ -1,0 +1,52 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### reglas_brainstorming  <==  brainstorming_divergente
+  1. DESEMPATE POR CABLEADO
+     reglas_brainstorming                         pasos  5 | nombra 11 | LO NOMBRAN 11
+     brainstorming_divergente                     pasos  4 | nombra  4 | LO NOMBRAN  4
+     >>> gana reglas_brainstorming por 11 contra 4
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['brainstorming_divergente']
+  3. ENTRADAS QUE SE REDIRIGEN
+     buscar_armonia_diseno                        nodos_siguientes  -> reglas_brainstorming
+     butterfly_test_convergencia                  nodos_previos     -> reglas_brainstorming
+     ideacion_con_ia_en_la_sesion                 nodos_previos     -> reglas_brainstorming
+     prototipado_rapido                           nodos_previos     -> reglas_brainstorming
+
+### reglas_brainstorming  <==  brainstorming_efectivo
+  1. DESEMPATE POR CABLEADO
+     reglas_brainstorming                         pasos  5 | nombra 11 | LO NOMBRAN 11
+     brainstorming_efectivo                       pasos  4 | nombra 13 | LO NOMBRAN 13
+     >>> gana brainstorming_efectivo por 13 contra 11
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['brainstorming_efectivo']
+  3. ENTRADAS QUE SE REDIRIGEN
+     brainstorming                                nodos_previos     -> reglas_brainstorming
+     cultura_de_optimismo                         nodos_siguientes  -> reglas_brainstorming
+     deriva_deliberada                            nodos_previos     -> reglas_brainstorming
+     esfuerzo_voluntario_vs_urge_espontaneo       nodos_siguientes  -> reglas_brainstorming
+     etnografia_investigacion_usuario             nodos_previos     -> reglas_brainstorming
+     how_might_we_briefs                          nodos_siguientes  -> reglas_brainstorming
+     intimation_illumination                      nodos_siguientes  -> reglas_brainstorming
+     pensamiento_convergente_divergente           nodos_siguientes  -> reglas_brainstorming
+     pensamiento_visual                           nodos_previos     -> reglas_brainstorming
+     periodo_incubacion_mental                    nodos_siguientes  -> reglas_brainstorming
+     prototipado_rapido                           nodos_previos     -> reglas_brainstorming
+     sentido_del_humor_como_herramienta_de_pensamiento nodos_siguientes  -> reglas_brainstorming
+     tecnica_perder_objeto                        nodos_previos     -> reglas_brainstorming
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     prototipado_rapido                           nodos_previos     -> reglas_brainstorming
+     TOTAL NUEVAS: 1
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     brainstorming                 .nodos_previos      reglas_brainstorming -> brainstorming
+     construir_sobre_ideas_ajenas  .nodos_siguientes   construir_sobre_ideas_ajenas -> generar_multiples_opciones
+     generar_multiples_opciones    .nodos_previos      construir_sobre_ideas_ajenas -> generar_multiples_opciones
+     pensamiento_convergente_divergente.nodos_siguientes   pensamiento_convergente_divergente -> reglas_brainstorming

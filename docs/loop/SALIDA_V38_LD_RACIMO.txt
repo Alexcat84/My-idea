@@ -1,0 +1,162 @@
+
+==============================================================================
+1. LA NUMERACION LIBRE: cual es el LD mas alto escrito en docs/
+==============================================================================
+  LD mas alto escrito: LD-98   (en docs\loop\PROMPT_SIGUIENTE.md)
+  la tanda de esta vuelta empieza en LD-99
+
+==============================================================================
+2. LOS CUATRO NODOS DE HOY, con su dominio
+==============================================================================
+  brainstorming                          quality      7 pasos   vivo True
+  brainstorming_divergente               core         4 pasos   vivo True
+  brainstorming_efectivo                 core         4 pasos   vivo True
+  reglas_brainstorming                   core         5 pasos   vivo True
+
+  el cuarto es de quality; los tres del taller son de core
+  RACIMO MIXTO CONFIRMADO POR MEDICION: SI
+
+==============================================================================
+3. LOS TRES PARES: ninguno debe tener veredicto
+==============================================================================
+  docs/INTRA_DOMINIO_VEREDICTOS.jsonl leido: 3388 filas
+  brainstorming  contra brainstorming_divergente               SIN VEREDICTO
+  brainstorming  contra brainstorming_efectivo                 SIN VEREDICTO
+  brainstorming  contra reglas_brainstorming                   SIN VEREDICTO
+
+  GUARDA OK: los tres estan sin veredicto.
+
+==============================================================================
+4. NINGUNO DE LOS TRES ESTA EN LA COLA
+==============================================================================
+  docs/INTRA_DOMINIO_PARES.jsonl leido: 3388 filas, 3388 parejas indexadas
+  brainstorming  contra brainstorming_divergente               en la cola: no
+  brainstorming  contra brainstorming_efectivo                 en la cola: no
+  brainstorming  contra reglas_brainstorming                   en la cola: no
+
+  GUARDA OK: los tres son fuera de cola. Son LECTURA DIRIGIDA y NO mueven n.
+  n sigue en 3388.
+
+==============================================================================
+5. LAS TRES ARISTAS, EN LOS DOS SENTIDOS, RESUELTAS POR ALIAS (P.1)
+==============================================================================
+  nodos en el grafo compilado: 3853    alias indexados: 392
+
+  brainstorming  brainstorming_divergente               NINGUNA
+       a.siguientes=["diagrama_afinidad", "diagrama_causa_efecto"]
+       a.previos   =["fijacion_de_metas", "brainstorming_efectivo"]
+       b.siguientes=["butterfly_test_convergencia", "prototipado_rapido", "ideacion_con_ia_en_la_sesion"]
+       b.previos   =["buscar_armonia_diseno"]
+  brainstorming  brainstorming_efectivo                 EN LOS DOS SENTIDOS
+       a.siguientes=["diagrama_afinidad", "diagrama_causa_efecto"]
+       a.previos   =["fijacion_de_metas", "brainstorming_efectivo"]
+       b.siguientes=["pensamiento_visual", "prototipado_rapido", "deriva_deliberada", "etnografia_investigacion_usuario", "tecnica_perder_objeto", "brainstorming"]
+       b.previos   =["pensamiento_convergente_divergente", "cultura_de_optimismo", "esfuerzo_voluntario_vs_urge_espontaneo", "how_might_we_briefs", "intimation_illumination", "periodo_incubacion_mental", "sentido_del_humor_como_herramienta_de_pensamiento"]
+  brainstorming  reglas_brainstorming                   NINGUNA
+       a.siguientes=["diagrama_afinidad", "diagrama_causa_efecto"]
+       a.previos   =["fijacion_de_metas", "brainstorming_efectivo"]
+       b.siguientes=["pensamiento_visual_modelos_negocio", "bundle_ideas", "co_creation_session", "get_visual", "gut_check", "mash_ups"]
+       b.previos   =["equipo_diverso_ideacion", "cuatro_etapas_del_pensamiento_creativo", "equipos_visita_cliente", "etnografia_investigacion_usuario", "how_might_we_hmw"]
+
+==============================================================================
+6. LOS CUATRO NODOS ENTEROS, ANTES DE DECIDIR NADA
+==============================================================================
+
+------------------------------------------------------------------------------
+NODO: brainstorming
+------------------------------------------------------------------------------
+  dominio           : quality
+  fase_proyecto     : ideacion
+  titulo_concepto   : Brainstorming (Tormenta de Ideas)
+  fuente            : Juran's Quality Handbook_ The C - Joseph A. Defeo
+  etiqueta_arbol    : Lanza tu Lluvia de Ideas
+  deprecado         : None
+  resumen_teorico   :
+      Técnica grupal para generar ideas creativas y constructivas de todos los participantes, sin juicio ni evaluación durante la generación. Es efectiva para desarrollar listas de teorías, ideas u opiniones, pero no debe usarse para probar teorías, que requieren datos.
+  pasos_accionables : 7
+      1. Formular claramente la pregunta o tema a discutir
+      2. Comunicar el tema con anticipación y preparar espacio para contribuciones
+      3. Revisar reglas conceptuales: sin críticas, ser poco convencional, buscar cantidad, aprovechar ideas de otros
+      4. Revisar reglas prácticas: contribuir por turnos, una idea por turno, se puede pasar
+      5. Realizar una sesión de calentamiento antes de iniciar
+      6. Registrar todas las ideas visibles para todos y detener antes de la fatiga del grupo
+      7. Procesar las ideas generadas (clarificar y eliminar duplicados)
+  entregable_esperado:
+      Lista de ideas generadas por el grupo, procesada y lista para su categorización
+  condiciones_activacion: ["Cuando se necesita generar múltiples ideas o teorías sobre un problema o necesidad de mejora"]
+  nodos_previos     : ["fijacion_de_metas", "brainstorming_efectivo"]
+  nodos_siguientes  : ["diagrama_afinidad", "diagrama_causa_efecto"]
+
+------------------------------------------------------------------------------
+NODO: brainstorming_divergente
+------------------------------------------------------------------------------
+  dominio           : core
+  fase_proyecto     : ideacion
+  titulo_concepto   : Brainstorming como Generador de Divergencia
+  fuente            : Change by Design, Revised and U - Tim Brown
+  etiqueta_arbol    : Abre Posibilidades sin Filtro
+  deprecado         : None
+  resumen_teorico   :
+      El brainstorming es una técnica clave para abrir un amplio espectro de ideas durante la fase divergente del design thinking. No es la única técnica de generación de ideas, pero es insuperable para crear opciones antes de pasar a la fase de convergencia donde se toman decisiones.
+  pasos_accionables : 4
+      1. Reunir al equipo en un espacio dedicado sin distracciones
+      2. Establecer reglas claras: cantidad sobre calidad, diferir el juicio, construir sobre ideas de otros
+      3. Generar el mayor número de ideas posible sin filtrar prematuramente
+      4. Registrar todas las ideas visualmente (post-its, pizarra)
+  entregable_esperado:
+      Una colección amplia de ideas divergentes documentadas visualmente, lista para ser filtrada en fase de convergencia
+  condiciones_activacion: ["Cuando el equipo necesita explorar múltiples soluciones posibles antes de comprometerse con una", "Cuando el problema aún no tiene una dirección clara de solución"]
+  nodos_previos     : ["buscar_armonia_diseno"]
+  nodos_siguientes  : ["butterfly_test_convergencia", "prototipado_rapido", "ideacion_con_ia_en_la_sesion"]
+
+------------------------------------------------------------------------------
+NODO: brainstorming_efectivo
+------------------------------------------------------------------------------
+  dominio           : core
+  fase_proyecto     : ideacion
+  titulo_concepto   : Reglas para un Brainstorming Efectivo
+  fuente            : Change by Design
+  etiqueta_arbol    : Sigue Reglas para Idear Mejor
+  deprecado         : None
+  resumen_teorico   :
+      El brainstorming es una forma estructurada de romper la estructura habitual del pensamiento; requiere reglas claras para funcionar bien, de lo contrario degenera en reunión ordenada o caos improductivo. La regla más importante es 'construir sobre las ideas de los demás', lo cual genera un efecto acumulativo de creatividad superior al trabajo individual.
+  pasos_accionables : 4
+      1. Establecer y visibilizar reglas claras: diferir el juicio, fomentar ideas descabelladas, mantenerse enfocado en el tema.
+      2. Priorizar la regla de 'construir sobre las ideas de otros' por encima de generar ideas propias de forma aislada.
+      3. Formar grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.
+      4. Dedicar sesiones específicas solo para generar opciones (divergencia), separadas de las sesiones de selección (convergencia).
+  entregable_esperado:
+      Una sesión de brainstorming documentada con un conjunto amplio de ideas generadas colaborativamente, listas para ser filtradas en fase convergente.
+  condiciones_activacion: ["Cuando se necesita abrir un espectro amplio de ideas antes de tomar decisiones.", "Cuando el equipo no se conoce bien o carece de confianza para colaborar espontáneamente."]
+  nodos_previos     : ["pensamiento_convergente_divergente", "cultura_de_optimismo", "esfuerzo_voluntario_vs_urge_espontaneo", "how_might_we_briefs", "intimation_illumination", "periodo_incubacion_mental", "sentido_del_humor_como_herramienta_de_pensamiento"]
+  nodos_siguientes  : ["pensamiento_visual", "prototipado_rapido", "deriva_deliberada", "etnografia_investigacion_usuario", "tecnica_perder_objeto", "brainstorming"]
+
+------------------------------------------------------------------------------
+NODO: reglas_brainstorming
+------------------------------------------------------------------------------
+  dominio           : core
+  fase_proyecto     : ideacion
+  titulo_concepto   : Reglas de Brainstorming Efectivo
+  fuente            : Business Model Generation (Osterwalder)
+  etiqueta_arbol    : Organiza tu Lluvia de Ideas
+  deprecado         : None
+  resumen_teorico   :
+      Conjunto de reglas para maximizar la generación de ideas útiles en sesiones de lluvia de ideas: mantener el foco en un problema bien definido (idealmente centrado en la necesidad del cliente), diferir el juicio crítico, mantener una sola conversación a la vez, priorizar cantidad, pensar visualmente (Post-it) y fomentar ideas alocadas. Incluye un ejercicio de calentamiento ('Silly Cow') para desbloquear la creatividad.
+  pasos_accionables : 5
+      1. Definir un enunciado claro del problema centrado en necesidad del cliente
+      2. Establecer y hacer cumplir reglas: diferir juicio, una conversación a la vez, ir por cantidad, ser visual, fomentar ideas locas
+      3. Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)
+      4. Usar Post-it notes para capturar y mover ideas visualmente
+      5. Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo
+  entregable_esperado:
+      Sesión de brainstorming documentada con ideas capturadas en Post-its y agrupadas por tema
+  condiciones_activacion: ["Cuando el equipo necesita generar gran volumen de ideas en poco tiempo", "Si las discusiones se estancan en crítica prematura de ideas"]
+  nodos_previos     : ["equipo_diverso_ideacion", "cuatro_etapas_del_pensamiento_creativo", "equipos_visita_cliente", "etnografia_investigacion_usuario", "how_might_we_hmw"]
+  nodos_siguientes  : ["pensamiento_visual_modelos_negocio", "bundle_ideas", "co_creation_session", "get_visual", "gut_check", "mash_ups"]
+
+==============================================================================
+VEREDICTO DE LA GUARDA
+==============================================================================
+numeracion libre desde LD-99; los tres pares sin veredicto y fuera de cola;
+los cuatro nodos vivos e impresos enteros; las tres aristas medidas en los
+dos sentidos. SE PUEDE LEER, por la EXCEPCION DE UNA VEZ de P.5 (19 ago 2026).

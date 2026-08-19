@@ -1,0 +1,56 @@
+
+==============================================================================
+1. LA NOMINA DEL RACIMO, leida hoy de docs/RACIMOS_MIEMBROS.jsonl
+==============================================================================
+  racimos censados en el fichero: 32
+  racimo            : Las reglas del brainstorming
+  dominio_censado   : nucleo (3) + quality (1)
+  tamano_censado    : 4
+  origen            : cribado
+     reglas_brainstorming                   core       veredicto franja 671
+     brainstorming_divergente               core       veredicto franja 671
+     brainstorming_efectivo                 core       veredicto franja 671
+     brainstorming                          quality    veredicto franja 671
+
+==============================================================================
+2. LOS TRES PARES DE LD-96 A LD-98, son intra nomina?
+==============================================================================
+  brainstorming  contra brainstorming_divergente               los dos en la nomina: SI
+  brainstorming  contra brainstorming_efectivo                 los dos en la nomina: SI
+  brainstorming  contra reglas_brainstorming                   los dos en la nomina: SI
+
+  LA REGLA FAMILIA DECLARADA ALCANZA A LOS TRES: SI
+
+==============================================================================
+3. EXISTE EL OTRO SITIO? las 71 operaciones barridas por los cuatro nombres
+==============================================================================
+  operaciones en docs/plan/OPERACIONES.jsonl: 71
+
+  OP-F-02        fase 01_FUENTES         nodos de la nomina que nombra: brainstorming_divergente
+  OP-D-04        fase 02_DESTEJIDOS      nodos de la nomina que nombra: brainstorming_divergente, brainstorming_efectivo, reglas_brainstorming
+
+  operaciones que nombran a algun miembro: 2
+  fases en que aparecen: 01_FUENTES, 02_DESTEJIDOS
+  operaciones de fase 06_MESAS que nombran a algun miembro: 0
+
+  LECTURA: la regla se apoya en que LA DECISION YA ESTA TOMADA EN OTRO SITIO.
+  Si ninguna operacion de mesa nombra a estos nodos, ese otro sitio no existe
+  todavia, y es exactamente el hueco que la autorizacion del fundador llena.
+
+==============================================================================
+4. LAS CLASES YA ESCRITAS ENTRE MIEMBROS DE LA NOMINA
+==============================================================================
+  los 6 pares posibles de una nomina de 4:
+     reglas_brainstorming                   brainstorming_divergente               A  puesto 834   cita la regla: SI
+     reglas_brainstorming                   brainstorming_efectivo                 A  puesto 234   cita la regla: no
+     reglas_brainstorming                   brainstorming                          SIN VEREDICTO
+     brainstorming_divergente               brainstorming_efectivo                 A  puesto 823   cita la regla: SI
+     brainstorming_divergente               brainstorming                          SIN VEREDICTO
+     brainstorming_efectivo                 brainstorming                          SIN VEREDICTO
+
+==============================================================================
+VEREDICTO DE LA MEDICION
+==============================================================================
+la nomina tiene 4 miembros; los tres pares de la tanda son intra nomina;
+el barrido de las 71 operaciones esta impreso arriba. EL CHOQUE NO SE RESUELVE
+AQUI: se mide y se lleva al reporte como PARADA DE DOCTRINA.

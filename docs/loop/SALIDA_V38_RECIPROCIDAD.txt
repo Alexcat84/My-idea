@@ -1,0 +1,101 @@
+
+==============================================================================
+1. LA VARA DE LA CASA: cuanta reciprocidad tiene el grafo HOY
+==============================================================================
+  aristas declaradas por nodos vivos, resueltas (P.1): 15511
+  de ellas RECIPROCAS (el otro extremo la devuelve): 15448
+  tasa de reciprocidad del grafo: 99.59 por ciento
+
+  LECTURA DE LA CIFRA: si la tasa es alta, la reciprocidad es la practica
+  de la casa y romperla es un defecto que el plan tiene que reponer.
+
+==============================================================================
+2. EL TALLER: lo que la fusion hacia reglas_brainstorming dejaria declarado en UN SOLO extremo
+==============================================================================
+  vecinos que quedarian apuntando al superviviente sin que el devuelva:
+     brainstorming                                 nodos_previos     -> reglas_brainstorming
+     buscar_armonia_diseno                         nodos_siguientes  -> reglas_brainstorming
+     butterfly_test_convergencia                   nodos_previos     -> reglas_brainstorming
+     cultura_de_optimismo                          nodos_siguientes  -> reglas_brainstorming
+     deriva_deliberada                             nodos_previos     -> reglas_brainstorming
+     esfuerzo_voluntario_vs_urge_espontaneo        nodos_siguientes  -> reglas_brainstorming
+     etnografia_investigacion_usuario              nodos_previos     -> reglas_brainstorming
+     how_might_we_briefs                           nodos_siguientes  -> reglas_brainstorming
+     ideacion_con_ia_en_la_sesion                  nodos_previos     -> reglas_brainstorming
+     intimation_illumination                       nodos_siguientes  -> reglas_brainstorming
+     pensamiento_convergente_divergente            nodos_siguientes  -> reglas_brainstorming
+     pensamiento_visual                            nodos_previos     -> reglas_brainstorming
+     periodo_incubacion_mental                     nodos_siguientes  -> reglas_brainstorming
+     prototipado_rapido                            nodos_previos     -> reglas_brainstorming
+     sentido_del_humor_como_herramienta_de_pensamiento nodos_siguientes  -> reglas_brainstorming
+     tecnica_perder_objeto                         nodos_previos     -> reglas_brainstorming
+  TOTAL ROTURAS: 16
+
+  3. ARISTAS A REPONER EN reglas_brainstorming para no dejar el grafo peor (P.16):
+     reglas_brainstorming.nodos_previos     += buscar_armonia_diseno
+     reglas_brainstorming.nodos_previos     += cultura_de_optimismo
+     reglas_brainstorming.nodos_previos     += esfuerzo_voluntario_vs_urge_espontaneo
+     reglas_brainstorming.nodos_previos     += how_might_we_briefs
+     reglas_brainstorming.nodos_previos     += intimation_illumination
+     reglas_brainstorming.nodos_previos     += pensamiento_convergente_divergente
+     reglas_brainstorming.nodos_previos     += periodo_incubacion_mental
+     reglas_brainstorming.nodos_previos     += sentido_del_humor_como_herramienta_de_pensamiento
+     reglas_brainstorming.nodos_siguientes  += brainstorming
+     reglas_brainstorming.nodos_siguientes  += butterfly_test_convergencia
+     reglas_brainstorming.nodos_siguientes  += deriva_deliberada
+     reglas_brainstorming.nodos_siguientes  += etnografia_investigacion_usuario
+     reglas_brainstorming.nodos_siguientes  += ideacion_con_ia_en_la_sesion
+     reglas_brainstorming.nodos_siguientes  += pensamiento_visual
+     reglas_brainstorming.nodos_siguientes  += prototipado_rapido
+     reglas_brainstorming.nodos_siguientes  += tecnica_perder_objeto
+     TOTAL A REPONER: 16
+
+  4. LAS PROPIAS DEL ABSORBIDO QUE SE QUEDAN EN UN NODO DEPRECADO:
+     brainstorming_divergente                      nodos_previos     -> buscar_armonia_diseno   el vecino la devuelve, se redirige sola
+     brainstorming_divergente                      nodos_siguientes  -> butterfly_test_convergencia   el vecino la devuelve, se redirige sola
+     brainstorming_divergente                      nodos_siguientes  -> prototipado_rapido   el vecino la devuelve, se redirige sola
+     brainstorming_divergente                      nodos_siguientes  -> ideacion_con_ia_en_la_sesion   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_previos     -> pensamiento_convergente_divergente   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_previos     -> cultura_de_optimismo   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_previos     -> esfuerzo_voluntario_vs_urge_espontaneo   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_previos     -> how_might_we_briefs   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_previos     -> intimation_illumination   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_previos     -> periodo_incubacion_mental   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_previos     -> sentido_del_humor_como_herramienta_de_pensamiento   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_siguientes  -> pensamiento_visual   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_siguientes  -> prototipado_rapido   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_siguientes  -> deriva_deliberada   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_siguientes  -> etnografia_investigacion_usuario   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_siguientes  -> tecnica_perder_objeto   el vecino la devuelve, se redirige sola
+     brainstorming_efectivo                        nodos_siguientes  -> brainstorming   el vecino la devuelve, se redirige sola
+
+==============================================================================
+2. LA ALTERNANCIA: lo que la fusion hacia pensamiento_convergente_divergente dejaria declarado en UN SOLO extremo
+==============================================================================
+  vecinos que quedarian apuntando al superviviente sin que el devuelva:
+     construir_sobre_ideas_ajenas                  nodos_siguientes  -> pensamiento_convergente_divergente
+     fase_entendimiento_investigacion_mercado      nodos_previos     -> pensamiento_convergente_divergente
+     pensamiento_visual                            nodos_siguientes  -> pensamiento_convergente_divergente
+     portafolio_de_diseno                          nodos_previos     -> pensamiento_convergente_divergente
+  TOTAL ROTURAS: 4
+
+  3. ARISTAS A REPONER EN pensamiento_convergente_divergente para no dejar el grafo peor (P.16):
+     pensamiento_convergente_divergente.nodos_previos     += construir_sobre_ideas_ajenas
+     pensamiento_convergente_divergente.nodos_previos     += pensamiento_visual
+     pensamiento_convergente_divergente.nodos_siguientes  += fase_entendimiento_investigacion_mercado
+     pensamiento_convergente_divergente.nodos_siguientes  += portafolio_de_diseno
+     TOTAL A REPONER: 4
+
+  4. LAS PROPIAS DEL ABSORBIDO QUE SE QUEDAN EN UN NODO DEPRECADO:
+     generar_multiples_opciones                    nodos_previos     -> construir_sobre_ideas_ajenas   el vecino la devuelve, se redirige sola
+     generar_multiples_opciones                    nodos_previos     -> pensamiento_visual   el vecino la devuelve, se redirige sola
+     generar_multiples_opciones                    nodos_siguientes  -> portafolio_de_diseno   el vecino la devuelve, se redirige sola
+     design_attitude_vs_decision_attitude          nodos_siguientes  -> fase_entendimiento_investigacion_mercado   el vecino la devuelve, se redirige sola
+     design_attitude_vs_decision_attitude          nodos_siguientes  -> fase_entendimiento_investigacion_mercado   el vecino la devuelve, se redirige sola
+
+==============================================================================
+VEREDICTO DE LA MEDICION
+==============================================================================
+la tasa de reciprocidad del grafo esta medida; las roturas que cada fusion
+fabricaria estan contadas y nombradas; la lista de aristas a reponer esta
+impresa. NADA SE ESCRIBIO.

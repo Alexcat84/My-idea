@@ -31,6 +31,19 @@ from pathlib import Path
 CABECERA = "| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |"
 SEPARADOR = "|---:|---|---|"
 
+# CABECERA ALTERNA PARA LAS CONDICIONES, anadida el 19 ago 2026 (vuelta 38) y va
+# dicho por que, porque tocar un instrumento sellado sin motivo escrito es peor que
+# no tocarlo. scripts/loop/verificar_mapas_destejido.py reconoce una tabla de mapa
+# POR SU CABECERA, la de "paso del resultado", y compara su particion contra
+# `grupos_pasos` del plan. Si una tabla de CONDICIONES se publica con esa misma
+# cabecera, el verificador la lee como si fuera de pasos, no le encuentra plan que
+# calce y da discrepancia por construccion. Hasta hoy no se noto porque las
+# condiciones se habian publicado en prosa. La cura es de una linea: las
+# condiciones se imprimen con SU cabecera, y asi el verificador ni las mira ni
+# hace falta aflojarle la vara.
+CABECERA_CONDICIONES = (
+    "| condicion del resultado | de que origenes sale | el motivo que la modifica |")
+
 
 def filas_del_plan(ruta, campo):
     """Lee las DOS formas de plan sellado que la campana tiene hoy.
@@ -88,7 +101,7 @@ def main():
         print("CAMPO VACIO O AUSENTE: %s en %s" % (args.campo, args.plan))
         return 2
 
-    print(CABECERA)
+    print(CABECERA_CONDICIONES if args.campo == "grupos_condiciones" else CABECERA)
     print(SEPARADOR)
     for f in filas:
         origenes = ", ".join(str(x) for x in f["origenes"])

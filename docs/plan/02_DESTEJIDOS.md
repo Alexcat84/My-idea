@@ -1324,3 +1324,259 @@ que esa mesa **no esta escrita como operacion**.
 **EL MARCADOR NO SE MOVIO, y esa es la prueba de que no se toco nada:** las cuatro relecturas no
 cambian de clase y las trece lecturas dirigidas estan fuera de cola. **`n 3.388, A 575, B 83, C 8,
 D 2.722`**, identico a la apertura de la vuelta.
+
+---
+
+### `OP-D-04`, ESTADO AL 19 ago 2026 (vuelta 38): **LOS DOS SUPERVIVIENTES ELEGIDOS POR `P.8` Y LOS DOS PLANES SELLADOS. CERO NODOS TOCADOS**
+
+**CORRECCION DECLARADA sobre el estado de la vuelta 37, y nada de lo de arriba se borra.** Aquel
+estado publicaba la fusion **EN PARADA** con tres motivos medidos. **Los tres estan resueltos, y
+por dos vias distintas que conviene no confundir:**
+
+| motivo de la parada del 19 ago (vuelta 37) | como quedo |
+|---|---|
+| **1**, no hay superviviente ni escrito ni deducible, y de las ocho `A` **cero** nombran ganador | **RESUELTO EN ESTA VUELTA POR LECTURA**: los dos supervivientes se eligen por `P.8`, por lectura de contenido escrita entera, y se publican aqui abajo |
+| **2**, tres nodos puente y la forma final no la escribe ninguna pagina | **RESUELTO POR DECISION DEL FUNDADOR** el 19 ago 2026: la forma es **siete a tres**, dos fusiones de tres mas el colgado vivo, que es la tercera salida de `P.10` |
+| **3**, el primer triangulo es un racimo mixto sin su cuarto miembro y sin mesa escrita | **RESUELTO EN ESTA VUELTA POR LECTURA**, con la excepcion de una vez autorizada: `LD-96` a `LD-98`, **las tres `D`**, con **una PARADA DE DOCTRINA declarada** al pie de la tanda |
+
+**LA FUSION SIGUE SIN EJECUTARSE, y no por falta de nada: por mandato.** La `DECISION 2` del
+fundador dice que la eleccion **se publica SELLADA y la fusion espera el acta del auditor**: no se
+ejecuta en la misma vuelta que la decide. **Esta vuelta toco CERO nodos y `dataset/` esta
+intacto.**
+
+---
+
+#### LA ELECCION DE `P.8` EN EL TRIANGULO DEL TALLER: **sobrevive `reglas_brainstorming`**
+
+**`P.8` dice que el cableado desempata y NO decide.** Aqui decide el contenido, y el cableado
+**apunta al otro lado**: se escribe en vez de esconderse.
+
+| candidato | pasos | lo nombran | momentos de la sesion que cubre | piezas unicas |
+|---|---:|---:|---:|---:|
+| **`reglas_brainstorming`** | **5** | 11 | **5** | **2** |
+| `brainstorming_efectivo` | 4 | **13** | 1 y medio, **y ninguno de captura** | 2 |
+| `brainstorming_divergente` | 4 | 4 | 3 | **0** |
+
+**Las dos columnas de la izquierda estan medidas** (`scripts/loop/vuelta38_triangulos.py`, salida
+`docs/loop/SALIDA_V38_TRIANGULOS.txt`, bloques 1 y 4); **las dos de la derecha son la lectura de
+contenido**, y va entera en el plan sellado, campo `eleccion_p8.lectura_de_contenido`.
+
+**LA LECTURA, en una linea cada una:** `reglas_brainstorming` es el unico que cubre el arco de la
+sesion de punta a punta (enunciado del problema, inmersion, reglas, captura visual y
+calentamiento); es el unico que tiene **dos piezas que ningun otro miembro del triangulo tiene**
+(la inmersion de campo y el ejercicio de calentamiento nombrado); y **es el que entrega mas
+lejos**, con las ideas *agrupadas por tema* contra la coleccion suelta de uno y la sesion
+documentada sin soporte del otro. **`brainstorming_efectivo` promete en su entregable una sesion
+documentada y no tiene ni un paso que diga como se documenta.**
+
+> **TRECE CONTRA ONCE, Y PIERDE EL TRECE.** Es la forma dura de `P.8`, la misma del acto II del
+> racimo del pivote, donde `pivote_o_proceder` sobrevivio con **5 contra 10** por llevar material
+> propio. **Y aqui ir contra el cableado cuesta CERO aristas, medido:** las trece de
+> `brainstorming_efectivo` son **reciprocas las trece**, asi que las trece se redirigen solas al
+> superviviente.
+
+#### LA ELECCION DE `P.8` EN EL TRIANGULO DE LA ALTERNANCIA: **sobrevive `pensamiento_convergente_divergente`**
+
+| candidato | pasos | lo nombran | abre? | cierra? | entregable |
+|---|---:|---:|:---:|:---:|---|
+| **`pensamiento_convergente_divergente`** | 4 | **5** | **si** | **si** | **mapa de iteraciones a lo largo del proyecto** |
+| `generar_multiples_opciones` | 3 | 3 | si | **no** | set de 3 a 5 alternativas |
+| `design_attitude_vs_decision_attitude` | 4 | 2 | si | **no** | mentalidad, que **no es documento** |
+
+**LA LECTURA:** el triangulo se llama **LA ALTERNANCIA** y **solo uno de los tres tiene los dos
+movimientos**. El embudo que estrecha (paso 2) y el descarte de ideas prometedoras (paso 4) **no
+estan en ninguno de los otros dos**. Ademas es el unico cuya disciplina **se repite en el tiempo**,
+que por el informe `67.6` es lo que convierte un paso en procedimiento, y el unico cuyo entregable
+es un documento que dura. **Un nodo al que habria que injertarle la mitad de su propio nombre no
+era la cabeza.**
+
+> **AQUI EL CABLEADO COINCIDE con el contenido, cinco contra tres y contra dos, y se dice
+> igualmente que NO fue lo que decidio.** Una coincidencia que no se declara se lee despues como si
+> hubiera sido la razon.
+
+---
+
+#### LOS DOS PLANES SELLADOS
+
+**`docs/loop/PLAN_V38_OPD04_TALLER.json`** y **`docs/loop/PLAN_V38_OPD04_ALTERNANCIA.json`**, los
+dos con `estado` **SELLADO Y SIN EJECUTAR**. **No estan tecleados: los escribe
+`scripts/loop/vuelta38_sellar_planes.py`** leyendo los textos de origen de `dataset/nodos/` (viajan
+verbatim), derivando los pasos finales de los grupos (no se escriben dos veces) y **abortando si
+un origen queda sin colocar o colocado dos veces**. Salida entera en
+`docs/loop/SALIDA_V38_SELLAR.txt`.
+
+**LA SIMULACION PREVIA DE `P.7` CORRIO SOBRE COPIA EN MEMORIA, y devolvio las seis cosas que la
+regla le exige** (`scripts/plan/simular_fusion.py`, salidas `docs/loop/SALIDA_V38_SIM_TALLER.txt`
+y `docs/loop/SALIDA_V38_SIM_ALTERNANCIA.txt`):
+
+| | el taller | la alternancia |
+|---|---:|---:|
+| redirecciones de entradas vivas | **17** | **5** |
+| deprecados que nombran y **no se tocan** | 0 | **1**, `fase_entender_modelo_negocio` |
+| duplicadas **nuevas** que la fusion fabrica | **1** | **1** |
+| auto aristas | 0 | 0 |
+| aristas que quedarian declaradas en **un solo extremo** | **16** | **4** |
+
+**Y LA SIMULACION SE GANO SU SUELDO DOS VECES, que es el caso positivo que `P.7` pide.**
+
+**HALLAZGO 1, y es el que cierra la `DECISION 3` del fundador sin escribir nada.** La `DECISION 3`
+manda que, si las tres lecturas dan `D`, el cuarto miembro **se ENLACE** al superviviente del
+taller. **Ese enlace no hay que escribirlo: la fusion lo pone sola.** `brainstorming` nombra hoy a
+`brainstorming_efectivo` en sus `nodos_previos`; al morir ese nodo, la entrada se redirige, y el
+bloque 6 de la simulacion lo imprime resuelto: **`reglas_brainstorming -> brainstorming`**. **Eso
+no se ve leyendo. Se ve simulando.**
+
+**HALLAZGO 2, y corrige una premisa que parecia obvia.** El ejecutor de fusiones de la casa
+(`scripts/loop/vuelta33_fundir.py`) redirige a los vecinos **y no le escribe al superviviente las
+aristas del absorbido**: su lista propia no se toca. Leido asi, las dos fusiones dejarian **20**
+aristas declaradas en un solo extremo, en un grafo cuya tasa de reciprocidad medida hoy es **99,59
+por ciento** (15.448 de 15.511, `scripts/loop/vuelta38_reciprocidad_post.py`). **Pero no las deja,
+y esto NO se dedujo: se fue a mirar.** Quien las escribe es `scripts/run_phase1.py` en su **paso 5,
+Simetrizacion de enlaces**, y el precedente esta medido en el log de la fusion de `OP-D-02`
+(**commit `72c718ea`**, `phase1_run_log.json`, `symmetrize_added` con las **dos** aristas que gano
+`voz_del_cliente_voc`). **Los dos planes llevan por eso un bloque `simetrizacion_esperada` con la
+lista ENTERA y su guarda escrita**: el dia de la ejecucion, `symmetrize_added` tiene que traer
+exactamente esas entradas para el superviviente, **ni una mas ni una menos**.
+
+---
+
+#### EL MAPA DE MOVIMIENTO DEL TALLER: **de 5 mas 4 mas 4 a SIETE pasos**
+
+**NO ESTA TECLEADA: esta IMPRESA desde el plan sellado** (`EJECUTOR.md` regla 1, cuarto renglon).
+**Comando, corrido en esta vuelta:**
+
+```
+python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V38_OPD04_TALLER.json
+```
+
+salida entera en `docs/loop/SALIDA_V38_TABLAS.txt`, pegada aqui sin editar una coma. **Los
+origenes llevan PREFIJO porque aqui hay TRES fuentes**: `R` el superviviente `reglas_brainstorming`,
+`D` `brainstorming_divergente`, `E` `brainstorming_efectivo`.
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | D1, E3 | LAS DOS PIEZAS SON DEL MISMO OBJETO, quien esta en la sala y donde. El superviviente no dice ni una cosa ni la otra en ninguno de sus cinco pasos, asi que las dos VIAJAN. Va primero porque en los dos donantes precede a todo y porque colocarla a la cabeza no mueve ninguno de los cinco pasos del superviviente entre si. |
+| **2** | R1 | VERBATIM del superviviente. |
+| **3** | R2, D2, E1, E2 | EL BLOQUE DE REGLAS DE LOS TRES EN UNO. El superviviente ya traia diferir el juicio, una conversacion a la vez, ir por cantidad, ser visual y las ideas locas. VIAJAN tres piezas que no tenia: hacerlas VISIBLES, mantenerse enfocado en el tema, y la regla de construir sobre las ideas de otros, que es la unica regla del acto que el superviviente no dice en ninguna parte. El procedimiento de esa ultima no se injerta porque vive en construir_sobre_ideas_ajenas, que queda VIVO y enlazado por P.10. |
+| **4** | R3 | VERBATIM del superviviente. Es la pieza que ningun otro miembro del acto tiene, y la razon del puesto 834 ya la llamo lo mas caro de perder. |
+| **5** | R4, D4 | MISMO GESTO EN LOS DOS. El superviviente ya capturaba y movia en post-its; del donante VIAJA solo el otro soporte nombrado, la pizarra. |
+| **6** | R5 | VERBATIM del superviviente. |
+| **7** | D3, E4 | EL ACTO DE GENERAR Y SU ENCUADRE. El superviviente manda ir por cantidad dentro de sus reglas pero no tiene paso de generacion, y no dice en ninguna parte que la sesion de generar vaya separada de la de elegir. Las dos VIAJAN y van al final porque son lo que se hace despues del calentamiento. |
+
+**Y LAS CONDICIONES pasan de 2 mas 2 mas 2 a CUATRO.** Misma fuente, **con cabecera propia** para
+que el verificador de mapas no la lea como tabla de particion de pasos:
+
+| condicion del resultado | de que origenes sale | el motivo que la modifica |
+|---:|---|---|
+| **1** | RC1, EC1 | LA MISMA CONDICION DICHA DOS VECES. Del donante VIAJA el para que, antes de tomar decisiones. |
+| **2** | RC2 | VERBATIM del superviviente. |
+| **3** | DC1, DC2 | LAS DOS DEL DONANTE, que dicen el mismo momento del proyecto y ninguna de las dos esta en el superviviente. VIAJAN juntas. |
+| **4** | EC2 | VIAJA entera: es la condicion que hace falta para el primer paso del resultado, y el superviviente no la tenia. |
+
+#### LA TABLA DE PERDIDAS DEL TALLER (`P.13`)
+
+**Tampoco esta tecleada.** Comando corrido en esta vuelta,
+`python scripts/loop/vuelta38_tabla_perdidas.py docs/loop/PLAN_V38_OPD04_TALLER.json`, salida
+entera en `docs/loop/SALIDA_V38_PERDIDAS.txt`.
+
+| pieza | de que nodo | clase P.13 | a donde va | por que |
+|---|---|:---:|---|---|
+| el espacio dedicado sin distracciones | `brainstorming_divergente` | **VIAJA** | paso 1 del resultado | el superviviente no nombra el espacio en ninguno de sus cinco pasos |
+| generar el mayor numero de ideas sin filtrar prematuramente | `brainstorming_divergente` | **VIAJA** | paso 7 del resultado | el superviviente lo tiene como REGLA y no como PASO: no hay en el ningun momento en que efectivamente se genere |
+| que la cosecha se filtra despues, en la fase de convergencia | `brainstorming_divergente` | **VIAJA** | entregable y resumen del resultado | el entregable del superviviente se queda en las ideas agrupadas y no dice a donde van |
+| la regla de construir sobre las ideas de otros, y su prioridad sobre generar ideas propias aisladas | `brainstorming_divergente y brainstorming_efectivo` | **VIAJA** | paso 3 del resultado | ES LA UNICA REGLA DEL TRIANGULO QUE EL SUPERVIVIENTE NO DICE, medido sobre sus cinco pasos. Viaja LA LINEA. El PROCEDIMIENTO de esa linea NO se injerta porque vive en construir_sobre_ideas_ajenas, que queda VIVO fuera de la fusion y enlazado por P.10: injertarlo seria fabricar la repeticion nueva contra la que P.13 avisa |
+| hacer las reglas VISIBLES | `brainstorming_efectivo` | **VIAJA** | paso 3 del resultado | el superviviente manda establecerlas y hacerlas cumplir, no visibilizarlas |
+| mantenerse enfocado en el tema | `brainstorming_efectivo` | **VIAJA** | paso 3 del resultado | el superviviente centra el ENUNCIADO al principio pero no manda sostener el foco durante la sesion |
+| formar grupos donde los participantes se conozcan y tengan confianza mutua | `brainstorming_efectivo` | **VIAJA** | paso 1 y condicion 4 del resultado | ningun otro miembro del triangulo habla de quien compone el grupo |
+| separar las sesiones de generar de las de seleccionar | `brainstorming_efectivo` | **VIAJA** | paso 7 del resultado | el superviviente no menciona la convergencia en ninguna parte |
+| que sin reglas la sesion degenera en reunion ordenada o en caos improductivo | `brainstorming_efectivo` | **VIAJA** | resumen del resultado | es el por que de las reglas, y el superviviente solo las enumera |
+| ir por cantidad | `brainstorming_divergente` | **VIVE DENTRO** | paso 3 del resultado, ya estaba | el superviviente ya manda ir por cantidad; viaja solo el matiz sobre calidad |
+| el registro visual y la pizarra como soporte | `brainstorming_divergente` | **VIVE DENTRO** | paso 5 del resultado, ya estaba | el superviviente ya captura y mueve en Post-its; viaja solo el soporte alterno |
+| diferir el juicio | `brainstorming_divergente y brainstorming_efectivo` | **VIVE DENTRO** | paso 3 del resultado, ya estaba | es la primera regla del paso 2 del superviviente |
+| las ideas descabelladas | `brainstorming_efectivo` | **VIVE DENTRO** | paso 3 del resultado, ya estaba | el superviviente ya manda fomentar ideas locas |
+| que el brainstorming no es la unica tecnica de ideacion | `brainstorming_divergente` | **YA NO APLICA** | se retira | es un encuadre del libro sobre el lugar de la tecnica, no material del procedimiento, y no hay linea del superviviente donde colgarlo sin inventarsela |
+
+**14 piezas: 9 `VIAJA`, 4 `VIVE DENTRO`, 1 `YA NO APLICA`.**
+
+> **LA FILA QUE MAS ENSENA es la de construir sobre las ideas de otros, y es `P.13` en estado
+> puro.** Es la unica regla del triangulo que el superviviente no dice, asi que **la LINEA viaja**;
+> pero **el PROCEDIMIENTO de esa linea vive en `construir_sobre_ideas_ajenas`, que queda VIVO fuera
+> de la fusion** por ser el nodo colgado del par 586 y que `P.10` manda enlazar. **Injertarlo
+> tambien seria fabricar la repeticion nueva contra la que `P.13` avisa**: *una perdida falsa
+> obliga a injertar en el superviviente algo que ya esta, y eso es como se fabrica una repeticion
+> nueva el dia de la pasada*.
+
+---
+
+#### EL MAPA DE MOVIMIENTO DE LA ALTERNANCIA: **de 4 mas 3 mas 4 a SIETE pasos**
+
+**IMPRESA desde el plan sellado**, comando corrido en esta vuelta:
+
+```
+python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V38_OPD04_ALTERNANCIA.json
+```
+
+**Prefijos**: `P` el superviviente `pensamiento_convergente_divergente`, `G`
+`generar_multiples_opciones`, `T` `design_attitude_vs_decision_attitude`.
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | P1, G1, T2 | LOS TRES DICEN LA MISMA ORDEN y el superviviente la dice entera. De los donantes VIAJA solo el matiz: deliberadamente, y la energia ademas del tiempo. |
+| **2** | G2 | VIAJA ENTERO. El superviviente no pone limite a la divergencia en ninguno de sus cuatro pasos, y sin limite la orden de divergir no tiene freno escrito. |
+| **3** | P2 | VERBATIM del superviviente. |
+| **4** | G3 | VIAJA ENTERO. Es lo unico del donante que no es la orden de divergir, y el superviviente no lo dice. |
+| **5** | P3, T3 | LA ALTERNANCIA ES DEL SUPERVIVIENTE y viaja el matiz del donante, que nombra las TRES actividades entre las que se alterna. Ninguna de las tres esta nombrada en el superviviente. |
+| **6** | P4, T4 | LAS DOS CARAS DE LA MISMA DISCIPLINA, soltar lo bueno y no agarrar lo primero. La segunda VIAJA del donante. |
+| **7** | T1 | VIAJA ENTERO y va al final porque es la actitud que sostiene a los seis anteriores, no un paso que se ejecute antes que ellos. El superviviente no la nombra. |
+
+**Y LAS CONDICIONES pasan de 2 mas 2 mas 1 a TRES:**
+
+| condicion del resultado | de que origenes sale | el motivo que la modifica |
+|---:|---|---|
+| **1** | PC1, GC1, TC1 | LA MISMA CONDICION EN LOS TRES NODOS, escrita tres veces. |
+| **2** | PC2 | VERBATIM del superviviente. |
+| **3** | GC2 | VIAJA entera: es la unica que situa el momento y el superviviente no lo situa. |
+
+#### LA TABLA DE PERDIDAS DE LA ALTERNANCIA (`P.13`)
+
+| pieza | de que nodo | clase P.13 | a donde va | por que |
+|---|---|:---:|---|---|
+| alternar entre investigacion de mercado, prototipado y generacion de forma no lineal | `design_attitude_vs_decision_attitude` | **VIAJA** | paso 5 del resultado | el superviviente alterna entre GENERAR y SELECCIONAR y no nombra ninguna de esas tres actividades |
+| evitar adoptar la primera solucion razonable | `design_attitude_vs_decision_attitude` | **VIAJA** | paso 6 del resultado | el superviviente lo dice en su resumen, que la cultura occidental favorece la convergencia rapida, y no lo tiene como paso |
+| aceptar la ambiguedad y la incertidumbre como parte del proceso | `design_attitude_vs_decision_attitude` | **VIAJA** | paso 7 del resultado | no esta en el superviviente |
+| el contraste ACTITUD DE DISENO contra ACTITUD DE DECISION de Collopy y Boland, con el Design Squiggle de Damien Newman | `design_attitude_vs_decision_attitude` | **VIAJA** | resumen del resultado | ES LA PIEZA MAS CARA DE ESTA FUSION: un concepto con autores nombrados y con su figura. Perderla seria borrar material atribuido |
+| el deadline claro para la fase de divergencia, y la paralisis por analisis | `generar_multiples_opciones` | **VIAJA** | paso 2 del resultado | el superviviente manda divergir y no le pone freno en ninguno de sus pasos |
+| la polinizacion cruzada entre ideas distintas | `generar_multiples_opciones` | **VIAJA** | paso 4 del resultado | no esta ni en el superviviente ni en el otro donante |
+| el set documentado de al menos 3 a 5 alternativas evaluadas | `generar_multiples_opciones` | **VIAJA** | entregable del resultado | el entregable del superviviente cuenta ciclos y no cuenta alternativas |
+| que los plazos ponen un limite productivo a la exploracion, y que no conformarse con la primera buena idea separa lo incremental de lo verdaderamente creativo | `generar_multiples_opciones` | **VIAJA** | resumen del resultado | es el por que del paso 2 que viaja; sin el, la orden del deadline queda sin motivo escrito |
+| dedicar tiempo Y ENERGIA a explorar antes de converger | `design_attitude_vs_decision_attitude` | **VIVE DENTRO** | paso 1 del resultado, ya estaba | el superviviente ya manda dedicar tiempo explicito; viaja la energia |
+| generar deliberadamente multiples alternativas antes de elegir una | `generar_multiples_opciones` | **VIVE DENTRO** | paso 1 del resultado, ya estaba | es el paso 1 del superviviente dicho con otras palabras; viaja el adverbio |
+| mentalidad y proceso de trabajo del equipo, como ENTREGABLE | `design_attitude_vs_decision_attitude` | **YA NO APLICA** | se retira del entregable; su contenido vive en el resumen | una mentalidad no es un documento y el superviviente entrega uno. Retirarla del entregable no pierde material: viaja entero al resumen |
+
+**11 piezas: 8 `VIAJA`, 2 `VIVE DENTRO`, 1 `YA NO APLICA`.**
+
+---
+
+#### LO QUE QUEDA PARA LA VUELTA QUE EJECUTE, escrito para que no haga falta volver a pensarlo
+
+1. **`P.16`, QUIEN FABRICA LIMPIA.** Cada fusion fabrica **UNA duplicada nueva**, las dos ya
+   nombradas en su plan: `prototipado_rapido.nodos_previos` en el taller y
+   `analisis_y_sintesis.nodos_siguientes` en la alternancia. **Las limpia la misma operacion que
+   las hace.**
+2. **La guarda de simetrizacion**, con la lista entera en cada plan: `symmetrize_added` tiene que
+   traer **16** entradas para `reglas_brainstorming` y **4** para
+   `pensamiento_convergente_divergente`, **exactamente esas**.
+3. **El enlace del cuarto miembro NO se escribe a mano**: la fusion del taller lo deja puesto. Lo
+   que si hay que hacer es **comprobarlo despues**, porque una arista que se espera gratis y no
+   llega es la peor de todas.
+4. **Los tres que quedan vivos** (`reglas_brainstorming`, `pensamiento_convergente_divergente` y
+   `construir_sobre_ideas_ajenas`) **se enlazan por `P.10`**, que es la tercera salida, y toda
+   arista nueva se escribe **resuelta al dia de su escritura** (`P.9`).
+5. **El campo `superviviente` de `OP-D-04` sigue en `null`** y **no se toca en esta vuelta**: el
+   fichero de operaciones tiene UN campo `superviviente` y esta operacion produce **DOS**. Escribir
+   uno de los dos seria mentir por omision y escribir los dos seria estrenar un formato. **Se trae
+   como pregunta, no se resuelve.**
+6. **Y sobre todo: la PARADA DE DOCTRINA del pie de la undecima tanda.** Si la regla
+   `FAMILIA DECLARADA` gobierna sobre los tres pares del cuarto miembro, las tres lecturas se
+   registran con la clase de su familia, que en los tres pares ya escritos es **`A`**, y entonces
+   **estas dos fusiones no se ejecutan.**

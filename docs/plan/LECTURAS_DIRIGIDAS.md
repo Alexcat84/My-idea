@@ -1633,3 +1633,258 @@ resto**, y aqui hay **DOS** subconjuntos cerrados de tres, no uno.
 
 > **Y AHI ES DONDE LA OPERACION SE DETIENE, y no por falta de lectura: por falta de superviviente.**
 > El detalle esta en `docs/plan/02_DESTEJIDOS.md`, en la seccion de estado de `OP-D-04`.
+
+---
+
+# UNDECIMA TANDA: **LAS TRES DEL CUARTO MIEMBRO DEL RACIMO MIXTO DE `OP-D-04`** . `LD-96` a `LD-98`
+
+**Escritas el 19 ago 2026, vuelta 38, por la EXCEPCION DE UNA VEZ que el fundador autorizo el
+mismo dia** y que vive registrada junto a `P.5` en `docs/plan/BANCO_DEL_PLAN.md`. **No las
+autoriza `P.5`**, y conviene decirlo primero: su alcance quedo adjudicado el 15 ago 2026 y es
+**el acto en operacion y nada mas**, y estos tres pares estan **FUERA** del acto. `brainstorming`
+es de `quality` y `OP-D-04` no lo nombra.
+
+**LA GUARDA CORRIO ANTES DE ESCRIBIR UNA SOLA LINEA** (`scripts/loop/vuelta38_ld_racimo.py`,
+salida entera en `docs/loop/SALIDA_V38_LD_RACIMO.txt`):
+
+| lo que se midio hoy | lo que dio |
+|---|---|
+| el racimo es **mixto** | `brainstorming` es de `quality`; los tres del taller son de `core` |
+| los tres pares, tienen veredicto? | **NO**, los tres, sobre las **3.388** filas de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` |
+| los tres pares, estan en la cola? | **NO**, los tres, sobre las **3.388** filas de `docs/INTRA_DOMINIO_PARES.jsonl`. **`n` no se mueve: sigue en 3.388** |
+| los cuatro nodos vivos | si, y **impresos ENTEROS** antes de decidir nada |
+| las tres aristas, en los dos sentidos y resueltas por alias (`P.1`) | **una sola de las tres la tiene** |
+
+**LA NUMERACION, medida y con su salvedad dicha en vez de escondida.** El barrido de `docs/`
+entero por la cadena `LD-` seguida de digitos devuelve hoy **98** como numero mas alto, y vive en
+`docs/loop/PROMPT_SIGUIENTE.md`: **es el encargo reservando los numeros de esta tanda, no una
+lectura escrita.** El **`LD` mas alto ESCRITO COMO LECTURA sigue siendo el 95**, el ultimo de la
+decima tanda. La tanda toma **96, 97 y 98**, que son los tres que la decision del fundador nombra.
+
+**LA VARA ES LA DEL CRIBADO, sin cambios:** el banco `9.6.1` (la linea o el procedimiento) con
+**la direccion del `9.6.2`** (la vara pregunta que anade el HIJO a la MADRE, **nunca al reves**,
+porque con la direccion invertida toda madre repite: enunciar en forma compacta es lo que una
+madre ES), la precision del `9.6.3` (**el tamano del solape no decide**: lo que se pesa es el
+resto y en que lado), los **dos polos del `9.22`** con su caso corriente, y la regla practica del
+informe `67.6`: es **LINEA** un puntero, una advertencia, un criterio suelto o una accion unica;
+es **PROCEDIMIENTO** un paso que obliga a varias decisiones dentro de si o que se repite en el
+tiempo. **Y el criterio de la arista que falta es el escrito el 15 ago 2026** en
+`docs/plan/02_DESTEJIDOS.md`: se declara donde lo compartido es un **BLOQUE**, no donde es
+**LINEA contra LINEA** y los dos tienen cableado propio denso.
+
+**EL PERFIL DEL CUARTO, medido antes de leer, porque explica las tres lecturas de golpe.**
+`brainstorming` es de **Juran** y tiene **SIETE** pasos contra los **cuatro, cuatro y cinco** de
+los tres del taller. **No es otra lista de reglas: es el protocolo de conduccion de la sala
+entero**, y lo tiene en tres tiempos: **antes** (formular la pregunta, comunicarla con
+anticipacion, calentar), **durante** (contribuir por turnos, una idea por turno, se puede pasar;
+registrar a la vista de todos; parar antes de la fatiga del grupo) y **despues** (procesar lo
+generado, clarificando y eliminando duplicados). **Ninguno de los tres del taller tiene el
+despues, y ninguno tiene el protocolo de piso.**
+
+## `LD-96` . `brainstorming` contra `brainstorming_divergente` . **D. SIN ARISTA DECLARADA. EL DISCUTIBLE MAS FUERTE DE LA TANDA**
+
+**LO COMPARTIDO ES CASI TODO `brainstorming_divergente`, y se dice de entrada porque es lo que
+hace dificil este par.** Los cuatro pasos del nodo de Tim Brown tienen contrapartida en el de
+Juran, medido paso contra paso sobre los ficheros de hoy:
+
+| `brainstorming_divergente` | donde vive en `brainstorming` |
+|---|---|
+| 1. espacio dedicado sin distracciones | 2, *preparar espacio para contribuciones* |
+| 2. reglas: cantidad sobre calidad, diferir el juicio, construir sobre ideas de otros | 3, *sin criticas, ser poco convencional, buscar cantidad, aprovechar ideas de otros*, que dice las tres |
+| 3. generar el mayor numero sin filtrar prematuramente | 3, dentro del *buscar cantidad* y el *sin criticas* |
+| 4. registrar todas las ideas visualmente (post-its, pizarra) | 6, *registrar todas las ideas visibles para todos* |
+
+**LO QUE QUEDA FUERA DEL SOLAPE, Y EN QUE LADO, que es lo unico que el `9.6.3` deja pesar.** Del
+lado de `brainstorming_divergente` quedan **DOS CALIFICATIVOS**: que el espacio sea *dedicado sin
+distracciones* y que el registro sea *en post-its o pizarra*. **Nada mas: ni un gesto que Juran no
+tenga.** Del lado de `brainstorming` queda **el arco de la conduccion entero**, los tres tiempos
+listados arriba, que **no cabe en una linea** porque es una secuencia de acciones con su propia
+logica, y porque el paso de los turnos por si solo **obliga a varias decisiones dentro de si**,
+que es la definicion de procedimiento del `67.6`.
+
+**LOS ENTREGABLES MIDEN LA MISMA DIFERENCIA, leidos hoy:** *una coleccion amplia de ideas
+divergentes documentadas visualmente, lista para ser filtrada* contra *lista de ideas generadas
+por el grupo, **procesada** y lista para su categorizacion*. **El de Juran esta un paso mas
+adelante: ya paso por el desduplicado**, y su siguiente cableado es `diagrama_afinidad`, que es
+quien categoriza.
+
+**LA PRUEBA DE RECONOCIMIENTO DEL `9.6.2` NO SE CUMPLE EN NINGUNO DE LOS DOS SENTIDOS, y se dice
+en vez de forzarla:** `brainstorming_divergente` **no cabe entero dentro de UN paso** de
+`brainstorming` (cae en el 2, el 3 y el 6), y `brainstorming` tampoco cabe dentro de uno del otro.
+**Asi que se aplica el `9.22` en los dos sentidos:** lo que anade `brainstorming_divergente` es
+**LINEA**; lo que anade `brainstorming` es **PROCEDIMIENTO**. **Procedimiento en UN solo sentido:
+el caso corriente del `9.22`, ahi hay madre e hijo, la vara se aplica una vez y el par CONTINUA.
+`D`, los dos sanos.**
+
+**ARISTA, buscada hoy en los dos sentidos y resuelta por alias: NO HAY NINGUNA. Y NO SE DECLARA**,
+y el motivo no es el tamano sino **el destino**: `brainstorming_divergente` es uno de los dos
+nodos que el plan sellado del taller absorbe, asi que una arista hacia el habria que declararla
+hacia el superviviente, **y hacia el superviviente el enlace ya existe despues de la fusion**,
+medido en `docs/loop/SALIDA_V38_SIM_TALLER.txt` bloque 6. Declarar una arista que la propia
+operacion va a poner sola es inflar el grafo.
+
+> **DISCUTIBLE MARCADO, Y ES EL MAS FUERTE DE LA TANDA, marcado antes de saber si acierto, y con
+> consecuencia: si el auditor lo tumba a `A`, la regla del fundador manda PARAR y las dos fusiones
+> no se ejecutan.** Quien sostenga que un nodo cuyos **cuatro pasos caben todos dentro de otro**
+> REPITE, dira `A`, y trae dos cosas medibles de su lado. **UNA:** el segundo polo del `9.22` dice
+> que `LINEA en los DOS sentidos` es `A`, *el mismo material escrito dos veces con dos apostillas*,
+> y aqui una de las dos direcciones devuelve **menos que una linea**. **DOS, y es la mas dura:** el
+> puesto **823** ya lee `A` a este mismo nodo contra `brainstorming_efectivo`, y su razon releida
+> el 19 ago 2026 dice que **lo propio de `brainstorming_divergente` son TRES gestos de taller, la
+> sala sin distracciones, el empujon de generar sin filtrar y el registro visual**; contra Juran
+> **no conserva ninguno de los tres**, porque Juran los tiene los tres. **Si con tres gestos
+> propios era `A`, con cero seria `A` con mas razon.** Lo que sostiene la `D` es la DIRECCION del
+> `9.6.2`, y nada mas que eso: preguntar que anade el nodo compacto al nodo largo es exactamente
+> la pregunta invertida que el `9.6.2` prohibe, y con la pregunta en su sentido, lo que el hijo
+> aporta es un procedimiento.
+
+## `LD-97` . `brainstorming` contra `brainstorming_efectivo` . **D. ENLACE YA PUESTO EN LOS DOS EXTREMOS**
+
+**ES EL UNICO DE LOS TRES QUE EL GRAFO YA TENIA MODELADO, y en un sentido claro:**
+`brainstorming_efectivo` declara a `brainstorming` en sus `nodos_siguientes` y `brainstorming`
+declara a `brainstorming_efectivo` en sus `nodos_previos`. **Es UNA arista dirigida declarada en
+los dos extremos**, que es como esta casa guarda una arista (`scripts/run_phase1.py`, paso 5, y la
+tasa de reciprocidad del grafo medida hoy es **99,59 por ciento**). **Alguien ya leyo estos dos
+como PRIMERO LAS REGLAS Y DESPUES LA SESION**, y esa direccion es contenido, no cableado.
+
+**LO COMPARTIDO SON LAS REGLAS, y solo las reglas:** el paso 1 de `brainstorming_efectivo`
+(*diferir el juicio, fomentar ideas descabelladas, mantenerse enfocado en el tema*) y su paso 2
+(*priorizar construir sobre las ideas de otros*) viven los dos dentro del paso 3 de
+`brainstorming` (*sin criticas, ser poco convencional, buscar cantidad, aprovechar ideas de
+otros*) y de su paso 1, que es donde se fija el tema.
+
+**LO QUE QUEDA FUERA, Y EN QUE LADO.** De `brainstorming_efectivo` quedan **DOS CRITERIOS
+SUELTOS**: la composicion social del grupo (*formar grupos donde los participantes se conozcan y
+tengan confianza mutua*) y la separacion de sesiones (*sesiones especificas solo para generar,
+separadas de las de seleccion*). **Las dos son LINEA por el `67.6` y por la practica de este mismo
+acto**: el `LD-85` y el `LD-86` leyeron la separacion de fases como **una linea** las dos veces, y
+el segundo lo escribio asi: *la unica linea que se cruza es la misma, la separacion de fases*.
+
+De `brainstorming` queda **todo lo que no es regla**: el espacio y la comunicacion anticipada, el
+protocolo de piso, el calentamiento, el registro visible para todos, el corte por fatiga y el
+procesado con desduplicado. **Y hay una ausencia que decide sola: `brainstorming_efectivo` NO
+TIENE NI UN PASO DE REGISTRO**, medido sobre sus cuatro; promete en su entregable *una sesion de
+brainstorming documentada* y no dice en ningun paso como se documenta. **Lo que Juran anade no es
+una apostilla: es la mitad ejecutable del otro nodo.**
+
+**PROCEDIMIENTO EN UN SOLO SENTIDO. El caso corriente del `9.22`. `D`, los dos sanos.**
+
+**LA ARISTA YA ESTA PUESTA y no hay nada que declarar.** Y su direccion **confirma la lectura**:
+las reglas van antes, la sesion despues.
+
+> **Nota que no cambia la clase y se deja escrita:** tras la fusion del taller, esta arista
+> sobrevive apuntando al superviviente. Medido en `docs/loop/SALIDA_V38_SIM_TALLER.txt` bloque 6:
+> `reglas_brainstorming -> brainstorming`. **El enlace del cuarto miembro al superviviente que la
+> DECISION 3 del fundador pide NO hay que escribirlo: la fusion lo pone sola.**
+
+## `LD-98` . `brainstorming` contra `reglas_brainstorming` . **D. SIN ARISTA DECLARADA. EL SOLAPE MAS GRANDE DE LA TANDA Y EL SEGUNDO DISCUTIBLE**
+
+**CUATRO DE LOS CINCO PASOS DE `reglas_brainstorming` TIENEN CONTRAPARTIDA, Y EN EL MISMO ORDEN**,
+que es exactamente la cuenta que el `9.22` usa en su segundo polo con el puesto **2080** (*seis
+pasos de siete, en el mismo orden*):
+
+| `reglas_brainstorming` | donde vive en `brainstorming` |
+|---|---|
+| 1. enunciado claro del problema centrado en la necesidad del cliente | 1, *formular claramente la pregunta o tema a discutir* |
+| 2. reglas: diferir juicio, una conversacion a la vez, cantidad, ser visual, ideas locas | 3 y 4, las reglas conceptuales y las practicas |
+| 3. **inmersion previa (visita de campo, entrevistas a clientes)** | **nada** |
+| 4. post-its para capturar y mover las ideas | 6, *registrar todas las ideas visibles para todos* |
+| 5. opcional, el calentamiento *Silly Cow* | 5, *realizar una sesion de calentamiento antes de iniciar* |
+
+**Y AUN ASI EL PAR CONTINUA, y el motivo es el del `9.6.3`: lo que se pesa es el resto, no el
+solape.**
+
+**Del lado de `reglas_brainstorming` quedan fuera CUATRO cosas y las cuatro son linea:** que el
+enunciado se centre en la necesidad del cliente (**un criterio**), **la inmersion previa** (**un
+puntero**, y esto esta medido: sus dos procedimientos viven fuera y estan cableados como sus
+`nodos_previos`, `equipos_visita_cliente` y `etnografia_investigacion_usuario`), que los post-its
+se puedan **mover**, y **el nombre** del ejercicio de calentamiento, que es una accion unica.
+
+**Del lado de `brainstorming` queda el protocolo de piso y el cierre**, y son cuatro piezas de las
+que dos no son linea: contribuir **por turnos**, una idea por turno y se puede pasar; **aprovechar
+las ideas de otros**, que `reglas_brainstorming` **no dice en ninguna de sus cinco reglas** y que
+es justamente la que el acto entero considera la mas importante; **parar antes de la fatiga del
+grupo**; y **procesar lo generado, clarificando y eliminando duplicados**. **Eso no es una
+apostilla: es como se conduce y como se cierra una sesion.**
+
+**LOS ENTREGABLES LO CONFIRMAN:** *sesion documentada con ideas capturadas en post-its y agrupadas
+por tema* contra *lista de ideas generadas por el grupo, procesada y lista para su
+categorizacion*. **Uno agrupa dentro; el otro entrega limpio para que agrupe el siguiente**, y el
+siguiente esta cableado: `diagrama_afinidad` es el primer `nodos_siguientes` de `brainstorming`.
+
+**PROCEDIMIENTO EN UN SOLO SENTIDO. `D`, los dos sanos.**
+
+**ARISTA: NO HAY, y NO SE DECLARA.** Lo compartido es **linea contra linea a lo largo de cuatro
+pasos**, no un bloque que uno expanda de una linea del otro, y los dos tienen cableado propio
+denso (**11 y 4** nombres, medidos hoy en `docs/loop/SALIDA_V38_TRIANGULOS.txt`). Es el caso del
+**827** en el criterio del 15 ago 2026, no el del **724**.
+
+> **DISCUTIBLE MARCADO, marcado antes de saber si acierto, y con el punto exacto que lo puede
+> tumbar dicho: LA CLASE DE LA INMERSION.** Si la inmersion previa se lee como **PROCEDIMIENTO** y
+> no como puntero, hay procedimiento en los dos sentidos, y entonces la pregunta pasa a ser la del
+> primer polo del `9.22`: **expande cada uno una linea DISTINTA del otro?** Si la respuesta es si,
+> esto no es `D` sino **`C`, sano con figura, con enlace mutuo**; si es no, sigue siendo `D` por el
+> mismo camino que el `LD-86` (*dos objetos que se rozan en un punto*). **Y quien cuente los cuatro
+> pasos alineados en el mismo orden como el 2080 dira `A`.** Hay ademas un dato que juega para la
+> `A` y se escribe: el puesto **834** lee `A` a `reglas_brainstorming` contra
+> `brainstorming_divergente` **conservandole a `reglas_brainstorming` sus tres piezas propias**, y
+> **dos de esas tres, el enunciado del problema y el calentamiento, las tiene tambien Juran**.
+> Contra Juran solo le queda una.
+
+---
+
+## SALDO DE LA TANDA, contado y no narrado
+
+**TRES lecturas: LAS TRES `D`.** **Una con el enlace ya puesto en los dos extremos** (`LD-97`),
+**dos sin arista y sin declararla** (`LD-96` y `LD-98`), **cero con `ARISTA QUE FALTA`**. **Ninguna
+mueve `n`: las tres estaban fuera de cola, medido hoy sobre las 3.388 filas de
+`docs/INTRA_DOMINIO_PARES.jsonl`.** El marcador sigue en **n 3.388, A 575, B 83, C 8, D 2.722**.
+
+**DOS DISCUTIBLES MARCADOS, los dos antes de saber si acierto:** el **`LD-96`** (un nodo contenido
+entero en el otro, y el precedente del 823 en contra) y el **`LD-98`** (la clase de la inmersion, y
+el precedente del 834 en contra). **El primero es el fuerte, y no por gusto: si cae, cae la vuelta
+entera**, porque la regla del fundador dice que una `A` aqui mete a un nodo de `quality` dentro del
+acto y **el bucle PARA**.
+
+**LO QUE LAS TRES `D` DECIDEN, por la tabla que el fundador escribio el 19 ago 2026:** el racimo
+mixto **queda decidido** y el cuarto miembro **se ENLAZA** al superviviente del taller en vez de
+entrar en la fusion. **Y el enlace ya no hay que escribirlo:** la propia fusion lo deja puesto,
+medido.
+
+---
+
+## PARADA DE DOCTRINA: **LA REGLA `FAMILIA DECLARADA` ALCANZA A LAS TRES Y DICE QUE NO SE PELEEN**
+
+**Se trae en vez de resolverse (`EJECUTOR.md` regla 5), y esta medida**
+(`scripts/loop/vuelta38_familia_declarada.py`, salida
+`docs/loop/SALIDA_V38_FAMILIA_DECLARADA.txt`).
+
+**LA REGLA, tal como esta escrita** en `docs/INTRA_DOMINIO_INFORME.md` linea 26, **generalizada el
+11 ago 2026 a TODO racimo declarado**:
+
+> *Un par cuyos DOS nodos pertenecen a un racimo ya declarado lleva razon `familia declarada` y NO
+> pelea la clase. Se registra con la clase que la silueta indique, sin argumentarla, porque la
+> decision ya esta tomada en otro sitio y discutirla aqui es trabajo que se tira.*
+
+**LO QUE SE MIDIO HOY, y por eso es una parada y no una nota:**
+
+| | |
+|---|---|
+| la nomina del racimo *Las reglas del brainstorming* en `docs/RACIMOS_MIEMBROS.jsonl` | **CUATRO** miembros: los tres del taller y `brainstorming` |
+| los tres pares de esta tanda, son intra nomina? | **LOS TRES** |
+| pares intra nomina ya escritos, y su clase | **TRES**, y los tres **`A`**: los puestos 823, 834 y 234. **Dos citan la regla por su nombre** |
+| operaciones de la fase `06_MESAS` que nombran a algun miembro | **CERO**, sobre las 71 operaciones de `docs/plan/OPERACIONES.jsonl` |
+
+**EL CHOQUE, dicho sin adornarlo:** estas tres lecturas **argumentan la clase de tres pares que la
+regla dice que no se argumentan**, y los otros tres pares de la misma nomina estan escritos `A`.
+**La regla se apoya en que la decision ya esta tomada EN OTRO SITIO, y ese otro sitio NO EXISTE
+para este racimo**: ninguna operacion de mesa lo nombra, medido hoy. Es exactamente el hueco que
+la autorizacion del fundador viene a llenar, y por eso las lecturas se escriben; **pero la
+autorizacion del 19 ago 2026 se escribio como excepcion al ALCANCE DE `P.5`, y no dice una palabra
+sobre `FAMILIA DECLARADA`.**
+
+**LO QUE ESTA EN JUEGO, y es todo:** si la regla `FAMILIA DECLARADA` gobierna, los tres pares se
+registran con la clase de su familia, que es **`A`** en los tres pares ya escritos, y entonces la
+condicion del fundador (*si alguna da `A`, el bucle PARA*) se cumple **por doctrina y no por
+lectura**. Si gobierna la autorizacion posterior y especifica del fundador, las tres son `D` y la
+fusion sigue. **No lo resuelve el ejecutor.**

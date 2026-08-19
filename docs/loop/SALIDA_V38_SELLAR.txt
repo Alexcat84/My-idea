@@ -1,0 +1,100 @@
+==============================================================================
+GUARDA DE PARTICION: cada origen colocado exactamente una vez. OK
+==============================================================================
+
+ESCRITO: docs/loop/PLAN_V38_OPD04_TALLER.json
+  superviviente : reglas_brainstorming
+  absorbidos    : brainstorming_divergente, brainstorming_efectivo
+  origenes de paso colocados: 13 en 7 grupos
+  origenes de condicion colocados: 6 en 4 grupos
+  pasos finales : 7
+     1. Reunir al equipo en un espacio dedicado sin distracciones, formando grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.
+     2. Definir un enunciado claro del problema centrado en necesidad del cliente
+     3. Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada.
+     4. Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)
+     5. Usar Post-it notes o pizarra para capturar y mover las ideas visualmente
+     6. Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo
+     7. Generar el mayor número de ideas posible sin filtrar prematuramente, en sesiones dedicadas solo a generar opciones (divergencia) y separadas de las sesiones de selección (convergencia).
+  condiciones finales: 4
+     1. Cuando el equipo necesita generar gran volumen de ideas en poco tiempo, antes de tomar decisiones
+     2. Si las discusiones se estancan en crítica prematura de ideas
+     3. Cuando el equipo necesita explorar múltiples soluciones posibles antes de comprometerse con una, o el problema aún no tiene una dirección clara de solución
+     4. Cuando el equipo no se conoce bien o carece de confianza para colaborar espontáneamente
+  entregable: Sesión de brainstorming documentada con una colección amplia de ideas generadas colaborativamente, capturadas en Post-its y agrupadas por tema, lista para ser filtrada en la fase de convergencia
+  redirecciones esperadas: 17
+     brainstorming                                 nodos_previos     (nombraba brainstorming_efectivo)
+     buscar_armonia_diseno                         nodos_siguientes  (nombraba brainstorming_divergente)
+     butterfly_test_convergencia                   nodos_previos     (nombraba brainstorming_divergente)
+     cultura_de_optimismo                          nodos_siguientes  (nombraba brainstorming_efectivo)
+     deriva_deliberada                             nodos_previos     (nombraba brainstorming_efectivo)
+     esfuerzo_voluntario_vs_urge_espontaneo        nodos_siguientes  (nombraba brainstorming_efectivo)
+     etnografia_investigacion_usuario              nodos_previos     (nombraba brainstorming_efectivo)
+     how_might_we_briefs                           nodos_siguientes  (nombraba brainstorming_efectivo)
+     ideacion_con_ia_en_la_sesion                  nodos_previos     (nombraba brainstorming_divergente)
+     intimation_illumination                       nodos_siguientes  (nombraba brainstorming_efectivo)
+     pensamiento_convergente_divergente            nodos_siguientes  (nombraba brainstorming_efectivo)
+     pensamiento_visual                            nodos_previos     (nombraba brainstorming_efectivo)
+     periodo_incubacion_mental                     nodos_siguientes  (nombraba brainstorming_efectivo)
+     prototipado_rapido                            nodos_previos     (nombraba brainstorming_divergente)
+     prototipado_rapido                            nodos_previos     (nombraba brainstorming_efectivo)
+     sentido_del_humor_como_herramienta_de_pensamiento nodos_siguientes  (nombraba brainstorming_efectivo)
+     tecnica_perder_objeto                         nodos_previos     (nombraba brainstorming_efectivo)
+  deprecados que nombran y NO se tocan: 0
+  duplicadas NUEVAS que la fusion fabrica: 1
+     prototipado_rapido                            nodos_previos     -> reglas_brainstorming
+  aristas que run_phase1 paso 5 tendra que simetrizar: 16
+     reglas_brainstorming.nodos_previos     += buscar_armonia_diseno
+     reglas_brainstorming.nodos_previos     += cultura_de_optimismo
+     reglas_brainstorming.nodos_previos     += esfuerzo_voluntario_vs_urge_espontaneo
+     reglas_brainstorming.nodos_previos     += how_might_we_briefs
+     reglas_brainstorming.nodos_previos     += intimation_illumination
+     reglas_brainstorming.nodos_previos     += pensamiento_convergente_divergente
+     reglas_brainstorming.nodos_previos     += periodo_incubacion_mental
+     reglas_brainstorming.nodos_previos     += sentido_del_humor_como_herramienta_de_pensamiento
+     reglas_brainstorming.nodos_siguientes  += brainstorming
+     reglas_brainstorming.nodos_siguientes  += butterfly_test_convergencia
+     reglas_brainstorming.nodos_siguientes  += deriva_deliberada
+     reglas_brainstorming.nodos_siguientes  += etnografia_investigacion_usuario
+     reglas_brainstorming.nodos_siguientes  += ideacion_con_ia_en_la_sesion
+     reglas_brainstorming.nodos_siguientes  += pensamiento_visual
+     reglas_brainstorming.nodos_siguientes  += prototipado_rapido
+     reglas_brainstorming.nodos_siguientes  += tecnica_perder_objeto
+  perdidas clasificadas por P.13: 14  (VIAJA 9, VIVE DENTRO 4, YA NO APLICA 1)
+  superviviente elegido por: EL CONTENIDO (P.8). Cableado usado para decidir: False
+
+ESCRITO: docs/loop/PLAN_V38_OPD04_ALTERNANCIA.json
+  superviviente : pensamiento_convergente_divergente
+  absorbidos    : generar_multiples_opciones, design_attitude_vs_decision_attitude
+  origenes de paso colocados: 11 en 7 grupos
+  origenes de condicion colocados: 5 en 3 grupos
+  pasos finales : 7
+     1. Antes de buscar la solución, dedicar tiempo y energía explícitos a generar deliberadamente múltiples alternativas sin juzgarlas (fase divergente).
+     2. Fijar un deadline claro para la fase de divergencia, evitando la parálisis por análisis.
+     3. Usar la metáfora del embudo: abrir posibilidades ampliamente y luego estrechar hacia soluciones concretas.
+     4. Permitir la 'polinización cruzada' entre ideas distintas antes de converger en una.
+     5. Alternar conscientemente entre fases de generación de ideas y fases de selección o eliminación de ideas, de forma no lineal entre investigación de mercado, prototipado y generación.
+     6. Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso, y evitar adoptar la primera solución razonable.
+     7. Aceptar la ambigüedad y la incertidumbre como parte natural del proceso creativo.
+  condiciones finales: 3
+     1. Cuando el equipo converge demasiado rápido en una única idea sin explorar alternativas.
+     2. Cuando se necesita generar innovación disruptiva en lugar de mejoras incrementales.
+     3. En la fase de ideación de un proyecto de diseño.
+  entregable: Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de al menos 3-5 alternativas de solución evaluadas antes de cada decisión final
+  redirecciones esperadas: 5
+     analisis_y_sintesis                           nodos_siguientes  (nombraba design_attitude_vs_decision_attitude)
+     construir_sobre_ideas_ajenas                  nodos_siguientes  (nombraba generar_multiples_opciones)
+     fase_entendimiento_investigacion_mercado      nodos_previos     (nombraba design_attitude_vs_decision_attitude)
+     pensamiento_visual                            nodos_siguientes  (nombraba generar_multiples_opciones)
+     portafolio_de_diseno                          nodos_previos     (nombraba generar_multiples_opciones)
+  deprecados que nombran y NO se tocan: 1
+  duplicadas NUEVAS que la fusion fabrica: 1
+     analisis_y_sintesis                           nodos_siguientes  -> pensamiento_convergente_divergente
+  aristas que run_phase1 paso 5 tendra que simetrizar: 4
+     pensamiento_convergente_divergente.nodos_previos     += construir_sobre_ideas_ajenas
+     pensamiento_convergente_divergente.nodos_previos     += pensamiento_visual
+     pensamiento_convergente_divergente.nodos_siguientes  += fase_entendimiento_investigacion_mercado
+     pensamiento_convergente_divergente.nodos_siguientes  += portafolio_de_diseno
+  perdidas clasificadas por P.13: 11  (VIAJA 8, VIVE DENTRO 2, YA NO APLICA 1)
+  superviviente elegido por: EL CONTENIDO (P.8). Cableado usado para decidir: False
+
+NINGUN NODO TOCADO. dataset/ intacto.
