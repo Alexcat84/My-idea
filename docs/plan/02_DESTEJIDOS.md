@@ -2818,3 +2818,67 @@ Y su punto **1** reparte el trabajo con nombre: *si `P.7` (la simulacion previa 
 | **392** | `metricas_de_adquisicion_activacion` con `build_metrics_toolset` | **SIN ABRIR**. Cero ficheros suyos tocados, cero plan sellado | **TIENE REPARTO ESCRITO** en la tabla de `OP-D-06` y hay que cumplirlo tal como esta: *en la fusion*, que el sistema escale luego a retencion y cohortes, de `build_metrics_toolset`; *con el destejido*, definir que es una conversion, comparar el CAC contra el LTV, y usar SEM para aprender que mensaje funciona. Y `metricas_de_adquisicion_activacion` esta en `OP-F-04-WEI`, asi que **fuente primero** manda y hay que comprobar la precedencia como en el 344 y el 361 |
 | **711** | `future_scenarios_planning` con `escenarios_futuros` | **SIN ABRIR** | **CRUCE CON LA FASE 01 DECLARADO EN LA NOTA DE `OPERACIONES.jsonl`**: `future_scenarios_planning` es **uno de los tres injertos de `OP-F-02`**, y ahi manda **fuente primero**. `OP-F-02` figura **HECHA en su nota 2869 SI** en la apertura de esta vuelta |
 | **969** | `retention_metrics` con `customer_retention_metrics_webmobile` | **SIN ABRIR** | `retention_metrics` esta en la nomina de `OP-F-04-COL`, que **bloquea a `OP-D-06`** segun su propio campo `bloquea_a`, y esta **HECHA en su nota 7981 SI**. Misma comprobacion de precedencia que el 341 |
+
+### EL ACTA DE LA VUELTA 43 VERIFICA ESTE CIERRE ENTERO Y ADJUDICA SUS SIETE DISCUTIBLES A FAVOR (19 ago 2026, vuelta 44)
+
+**Esta seccion no reescribe ninguna de las de arriba.** El cierre de la vuelta 43 se queda entero donde esta, y aqui va **lo que el auditor hizo con el**, leido hoy de `docs/loop/ACTA_AUDITOR.md` con su linea al lado, como manda la regla 1 del `EJECUTOR.md`. **El acta de la vuelta 43 empieza en la linea 9137** y llega hasta el final del fichero (**9.449** lineas, contadas hoy con `wc -l`).
+
+#### LA VUELTA 43 CORRIO ENTERA Y EL REPORTE SALIO LIMPIO: **CERO CAIDAS DEL EJECUTOR** (acta, seccion 1, linea 9147, y seccion 6, linea 9401)
+
+**El auditor no dio por buena una sola cifra: volvio a medir el cierre completo por corrida propia.** Lo que re-corrio, tal como su acta lo escribe:
+
+| lo re-corrido por el auditor | como salio, segun el acta, con su linea |
+|---|---|
+| **el hash y los commits** (linea **9149**) | `HEAD` **7f8bdcbc**, ultimo antes del reporte **c184b2d6**, y `git log e75b20d1..HEAD` da **CATORCE** commits con **los hashes y el orden EXACTOS** de la tabla del reporte. Arbol limpio, todo pusheado |
+| **las rutas** (linea **9155**) | `git diff --shortstat e75b20d1..c184b2d6` da **116** ficheros, **6.988** anadidas y **247** borradas, **LAS TRES CIFRAS AL DIGITO**, con el conteo por carpeta reproducido entero |
+| **el marcador** (linea **9162**) | recomputado por el auditor **desde el archivo**: n **3.388**, **CERO huecos**, A **575**, B **81**, C **8**, D **2.724**, tasa **17,0**. **IDENTICO al cierre del reporte**. Y la apertura re-medida desde git (`811bc480`): **575 / 82 / 8 / 2.723** |
+| **el grafo** (linea **9172**) | **3.853** ficheros, **3.527** vivos, **326** deprecados, **16.887** enlaces con la aritmetica nodo a nodo, cola **1.493** sobre 3.527 (**42,3** por ciento) |
+| **las fusiones, nodo a nodo** (linea **9178**) | los cuatro absorbidos deprecados **con alias sano**, **CERO vivos nombran a ninguno**, **CERO auto-aristas tras resolver en el grafo entero**, y la arista interna del 361 retirada **en los dos sentidos** y **en el mismo commit** que la fusion, *que es la letra de `P.16`* |
+| **el cierre transitivo** (linea **9188**) | recomputado sobre las A vigentes de hoy: **los NUEVE puestos son de dos. Cero actos crecieron** |
+| **el ciclo Gate 0** (linea **9190**) | re-corrido **entero**, con el `run_log` respaldado antes y restaurado byte igual: **GATE 0: OK** y sus **veinte** renglones en `[OK]`, `master_graph` en `sha256 e6d52671b60b` **byte igual en las dos copias y byte igual a HEAD**, `git diff` vacio tras el ciclo |
+| **las suites** (linea **9199**) | motor **25 de 25** exit 0; web **1.030** pasadas y 3 saltadas exit 0; `tsc --noEmit` **cero lineas** exit 0 |
+| **los tres sin abrir** (linea **9215**) | **de dos** por su recomputo, y **los tres cruces de fuente estan HECHOS**, verificado por su propio grep sobre las notas de `OPERACIONES.jsonl`: `OP-F-02`, `OP-F-04-COL` y `OP-F-04-WEI` declaran **HECHA en su nota con el estado en LISTA**. **Los bloqueos de `bloquea_a` sobre `OP-D-06` quedan levantados** |
+
+**Y LAS DOS CITAS QUE EL ACTA MARCA COMO TRAZADAS CON LUPA NO SON CAIDAS** (linea **9233**): la *linea 8985* apunta al arranque del renglon compuesto cuyo texto `0 VIVOS` vive cuatro lineas abajo, y el *2869* y el *7981* son **el largo de la nota** de `OP-F-02` y de `OP-F-04-COL`, re-medidos por el auditor con `len(nota)`. **Cifras trazables al instrumento.**
+
+#### LA CIEGA: **6 DE 6 COINCIDENCIAS, CERO DISCREPANCIAS** (acta, seccion 2, linea 9242, cuenta en la linea 9290)
+
+**Con la ceguera parcial DECLARADA por el propio auditor**: el reporte argumenta sus elecciones, asi que la mitigacion fue **imprimir primero los textos de los nodos desde git** (los pares de los actos 341, 344 y 361 **tal como estaban ANTES de fundir**, y el par del 599 como esta hoy), **adjudicar, y SOLO DESPUES destapar** los planes y las salidas.
+
+| lo releido a ciegas | su adjudicacion, con la linea | resultado |
+|---|---|---|
+| **acto 341**, superviviente (linea **9251**) | `customer_journey_mapping`: la practica que produce al artefacto, el ciclo entero, y termina en decision | **COINCIDE** |
+| **acto 344**, superviviente (linea **9256**) | `plan_de_adquisicion_acquire`: los dos ejecutan la misma prueba de adquisicion y **ninguno ejecuta la activacion**, los dos la **dejan lista**, que no es lo mismo | **COINCIDE** |
+| **acto 361**, superviviente (linea **9262**) | `key_partners_hypothesis`: el general sobrevive y el de canal fisico es su instancia | **COINCIDE** |
+| **el 599**, clase (linea **9265**) | **D, adjudicada ANTES de destapar** la razon vieja y la nueva. Y destapada: la B era **explicitamente condicional** al arreglo de costuras de los dos nodos, los dos ya pasaron por el, **la causa del congelamiento CAYO y la relectura era obligatoria** por `08_VERIFICACION` | **COINCIDE: D** |
+| **D6**, condiciones (linea **9276**) | tres entradas distintas al mismo procedimiento en el 341, y la del canal fisico es la identidad entera del absorbido en el 361: **donde cae la frontera de mismo momento es lectura, y esta lectura es defendible** | **COINCIDE, sin correccion** |
+| **D7**, costuras (linea **9283**) | leyo los tres resultantes con el texto delante (5, 6 y 6 pasos): **los tres leen como UN procedimiento continuo, sin juntura** | **COINCIDE: no hay costura** |
+
+**La regla del credito no dispara relectura al doble de ningun tramo** (linea **9292**), y **cero discrepancias FUERA de los discutibles marcados** en todo lo verificado al digito.
+
+#### LOS SIETE DISCUTIBLES: **LOS SIETE A FAVOR** (acta, seccion 3, linea 9295)
+
+| | el discutible | la adjudicacion, con su linea |
+|---|---|---|
+| **D1** | la lectura no ciega respecto del cableado | **SIN ACCION** (linea **9297**). La coincidencia de las dos varas **no es contaminacion sino corroboracion**, siempre que el caso de contenido se sostenga solo, y en la ciega se sostuvo. **La guarda estructural contra ese riesgo es exactamente esta ciega, y existe.** El 361 (empate 6 a 6 resuelto por contenido) confirma que la primera vara trabaja |
+| **D2** | superviviente del 341 | **A FAVOR** (linea **9305**). `P.8` pone el contenido primero y el contenido dice algo. **La doctrina rica del blueprint VIAJA con las piezas (13 de 13), asi que elegir cabeza no boto nada** |
+| **D3** | la vara de `P.8` en direccion inversa | **EXTENSION NATURAL CITABLE, no doctrina nueva** (linea **9310**). La letra del ejemplar de `P.8` es que **el nombre de la cabeza debe calzar con el alcance real del rol**, y esa vara **corta en las dos direcciones**. **UNA TENSION DECLARADA por el propio auditor**: la razon del 1276 llama al donante *el plan de las dos mitades*; la lectura fina es que **CUBRE la segunda mitad como preparacion, no como ejecucion**, y esa preparacion viajo entera al paso 6 del resultante |
+| **D4** | `P.16` retirada ANTES de fundir, e instrumento nuevo en mitad de un acto | **A FAVOR, NO ES PARADA** (linea **9324**). **`P.16` nombra al responsable (la operacion) y a la unidad (EL MISMO COMMIT); el orden interno del commit NO esta legislado**, y el estado que el repo registra es el del commit entero. Hacerla antes **dejo al ejecutor de fusiones sellado correr sin tocarle la logica, que es la eleccion conservadora**. *La eleccion de orden queda como precedente registrado del ejecutor*, y si el fundador quiere legislarla es un renglon en `P.16` |
+| **D5** | el dato en contra del 599 | **A FAVOR DE D** (linea **9336**). Que la fusion acercara el solape es verdad y esta bien publicado, **pero un paso compartido no hace gemelos a dos procedimientos con entregables distintos**, y la relacion es de **alimentacion**, que pide arista. **Queda declarada como ARISTA QUE FALTA para la fase 04** |
+| **D6** | las condiciones | **A FAVOR** (linea **9343**) |
+| **D7** | las costuras declaradas por quien fundio | **A FAVOR** (linea **9344**). *El ejecutor es juez y parte en esas lecturas por construccion del modo continuo, y la compensacion es esta relectura, que se hizo* |
+
+#### **LA RACHA DE CAIDAS DE REPORTE SE ROMPE Y QUEDA EN CERO** (acta, seccion 6, linea 9427)
+
+**No hay casilla de correccion que rellenar en esta vuelta, y se dice asi en vez de inventarle contenido.** La cuenta del acta en sus lineas **9415 y 9416**: *Caidas del ejecutor en esta vuelta: CERO de clase o cifra, CERO de reporte*, con las dos citas de lupa expresamente exculpadas. Y su linea **9427**: *LA RACHA DE CAIDAS DE REPORTE SE ROMPE Y QUEDA EN CERO: el reporte de la 43 salio limpio contra mi corrida entera, que es lo que el acta de la 42 dijo que la romperia.*
+
+**LA UNICA CAIDA DE LA TANDA ES DEL AUDITOR Y ESTA CONTADA EN SU PROPIA METRICA** (acta, linea **9394**): el `0 VIVOS` que su acta de la vuelta 42 cargo contra el **1** que dice el instrumento sellado `SALIDA_V42_ACTO331_REGISTROS.txt`. **La descubrio el ejecutor de la 43 y el auditor la confirmo contra la salida sellada.** Suma a *caidas de acta del auditor* (acumulado **3**, linea **9422**) y **no se carga al ejecutor**.
+
+#### LOS PENDIENTES DE DOCTRINA, RESUELTOS O ENCARGADOS (acta, seccion 4, linea 9348)
+
+1. **Orden de la retirada de `P.16`: RESUELTO** por la extension de **D4**.
+2. **LA GLOSA DE LA SENAL: ENCARGO ESCRITO** (linea **9351**), y **hecho en esta vuelta 44**. La glosa fija de `scripts/loop/vuelta42_senal_antes_despues.py` afirmaba que la senal **SUBE** con la fusion, y en la salida sellada del 361 esa frase **convivia con la medicion que dos renglones arriba dice LA FUSION APAGO LA SENAL, menos 9,4**. *Una glosa que se presenta como LO QUE LA CIFRA SOSTIENE Y NADA MAS no puede decir lo que la cifra de su propia corrida contradice.* La correccion va **con el texto viejo a la vista en el commit**, **no toca ni una linea de la logica de medicion ni el umbral**, y se verifica re-corriendo el instrumento sobre el acto 361 con los mismos refs.
+3. **`MIN_BLOQUE` 2**: del fundador, **nadie lo toco, sigue igual**.
+4. **Enlace mutuo del 494**: **pendiente vivo de la fase 04**, re-medido por el auditor en los dos sentidos y sigue sin haber ninguna de las dos aristas.
+
+**NINGUNA CONDICION DE PARADA SE CUMPLE** (acta, seccion 7, linea 9431), y su renglon de *campana consumada* nombra exactamente lo que esta vuelta 44 tiene por delante: **faltan 392, 711 y 969, el cierre de `OP-D-06`, y todo lo que el `00_INDICE` tiene detras** (linea **9443**).

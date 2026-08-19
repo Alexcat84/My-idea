@@ -113,12 +113,18 @@ def main():
     else:
         print("LA SENAL NO SE ENCENDIO: fuera antes y fuera despues.")
     print("=" * 78)
-    print("Y LO QUE LA CIFRA SOSTIENE Y NADA MAS: la senal de bloque SUBE con la")
-    print("fusion por un mecanismo MECANICO y no semantico (menos pasos y mas")
-    print("densos, y la senal mide solape de tokens entre los dos bloques). UNA")
-    print("CITA SOBRE UN NODO RECIEN FUNDIDO ES, POR CONSTRUCCION, MENOS")
-    print("INFORMATIVA QUE LA MISMA CITA SOBRE UN NODO QUE NADIE TOCO. Cita y no")
-    print("juzga: quien decide es la lectura del texto.")
+    print("Y LO QUE LA CIFRA SOSTIENE Y NADA MAS: con el umbral quieto en %d, la"
+          % UMBRAL_BLOQUE)
+    print("fusion puede SUBIR O BAJAR la senal de bloque, y NO HAY LEY que diga")
+    print("cual de las dos. Las cuatro mediciones de la vuelta 43, selladas en")
+    print("docs/loop/SALIDA_V43_ACTO{331,341,344,361}_SENAL.txt: el 331 quieto en")
+    print("+0.0, el 341 en -0.7, el 344 en +1.7 y el 361 en -9.4, este ultimo")
+    print("APAGANDO la senal. Lo que la mueve es MECANICO y no semantico: la")
+    print("senal mide solape de tokens entre los dos bloques, asi que SUBE si las")
+    print("piezas que entran REPARTEN vocabulario entre los dos bloques y BAJA si")
+    print("lo CONCENTRAN en uno solo. UNA CITA SOBRE UN NODO RECIEN FUNDIDO ES,")
+    print("POR CONSTRUCCION, MENOS INFORMATIVA QUE LA MISMA CITA SOBRE UN NODO")
+    print("QUE NADIE TOCO. Cita y no juzga: quien decide es la lectura del texto.")
     return 0
 
 
