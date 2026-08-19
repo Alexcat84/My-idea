@@ -2265,3 +2265,84 @@ El acta de la vuelta 42 (linea **9017**, leida hoy) hizo la relectura **ciega de
 **La vuelta 42 no dejo reporte**, medido y no supuesto: el acta lo comprueba en su regla 0 (linea **8875**, leida hoy) y escribe que *"REPORTE.md sigue siendo el de la vuelta 40, ya auditada"*. **Sin reporte no hay discutibles del ejecutor que adjudicar ni cifra publicada que corregir.** Y lo que la 42 **si** commiteo y sello **salio limpio**: el acta cierra con **CERO caidas del ejecutor en lo commiteado y en lo sellado** (linea **9102**).
 
 **La racha de caidas de reporte se queda en UNA y no se rompe** (acta, linea **9112**), por la misma letra que el acta 41 ya habia usado: **una racha no se rompe con material ausente**, la rompe **el primer reporte limpio**. Ese sera el de esta vuelta 43 si sale limpio.
+
+## `OP-D-06`, ACTO 3 DE NUEVE (puesto 341): **`customer_journey_mapping` ABSORBE A `blueprint_de_experiencia`** (19 ago 2026, vuelta 43)
+
+### EL DESTEJIDO DEL ACTO: **YA ESTABA HECHO, Y NO POR ESTA OPERACION**
+
+`scripts/loop/vuelta41_lectura_acto.py --puesto 341`, bloque (b), sobre la cola que el instrumento ya entrego (**1.495** nodos tras los actos 285 y 331): `blueprint_de_experiencia` esta **FUERA** de la cola y `customer_journey_mapping` sigue **DENTRO**, citado con **bloque 49,4** y **corte tras 2** (la pareja, 51,2 sobre los pasos 1 y 3, **no dispara** contra el umbral de 80).
+
+**Y HAY QUE DECIR QUE ESA CITA NO ES LA COSTURA QUE LA RAZON DESCRIBIA**, porque la razon del archivo, leida entera hoy, describia **DOS costuras gordas**:
+
+> *LATERAL, no cambia la clase: los dos son costuras gordas y de las que mas se han visto, diecisiete pasos el primero y diez el segundo, con bloques enteros pegados que no son mapeo, el ritual de celebracion del momento de la compra en uno y la silla vacia del cliente en las reuniones en el otro. Material para la ficha de costuras internas, no para este eje.*
+
+**LAS DOS SE DESTEJIERON, y las desteji `OP-F-04-COL`, la mesa de Coleman.** La tabla de los doce de `docs/plan/01_FUENTES.md` publica las dos fronteras leidas con su bloque: linea **1225**, `blueprint_de_experiencia`, **17** pasos, frontera **1 a 4 / 5 a 17**, *apendice AL FINAL, y es el mas largo de los doce: la postventa, el momento del si, el ritual de bienvenida y los cien dias*; linea **1228**, `customer_journey_mapping`, **10** pasos, frontera **1 a 5 / 6 a 10**, *apendice AL FINAL: los journeys por area, el traspaso entre departamentos, el costo del mal servicio, la silla vacia y la herramienta unificada*. El reparto de los **seis** subbloques del primero esta en las lineas **1332 a 1337** y el de los **tres** del segundo en las **1341 a 1343**.
+
+**Y LA MEDICION DE HOY LO CONFIRMA AL DIGITO: `blueprint_de_experiencia` tiene CUATRO pasos y `customer_journey_mapping` tiene CINCO**, que son exactamente los tramos que aquellas fronteras dejaban en pie. **Los dos elementos que la razon nombraba ya no estan en ninguno de los dos ficheros**: el ritual de celebracion del momento de la compra vive hoy en `fase_admit_celebracion` (linea **1334**) y la silla vacia del cliente en `silla_vacia_del_cliente_en_decisiones` (linea **1342**). **La regla de fuente primero queda satisfecha POR PRECEDENCIA**, con `OP-F-04-COL` **HECHA en su nota 7981 SI** segun la apertura de esta vuelta (`docs/loop/SALIDA_V43_APERTURA.txt`), y con **frontera publicada para los dos** (FORMA A, lineas 1225 y 1228, segun el detector de la propia apertura).
+
+**LA CITA QUE QUEDA, LEIDA CON EL TEXTO DELANTE: NO HAY COSTURA.** El corte que el instrumento marca cae **tras el paso 2**, o sea entre *(1) Observar directamente a clientes reales durante toda su experiencia de servicio* mas *(2) Documentar cada etapa del viaje, desde el primer contacto hasta el cierre*, y *(3) Identificar todos los touchpoints*, *(4) Evaluar cada touchpoint* y *(5) Priorizar mejoras en los puntos de mayor impacto*. **Los pasos 1 y 2 trabajan sobre ETAPAS y el 3 abre cada etapa en sus TOUCHPOINTS, que es un objeto que los dos primeros no nombran nunca; el 4 los juzga y el 5 reparte el esfuerzo. CONTINUAN en vez de volver a contar.** Comparten vocabulario, no narracion. **La cita QUEDA REGISTRADA en la cola y no despachada**, que es la practica que el acta de la vuelta 40 adjudico en su `d1` (linea **8524**), **y el auditor la relee: es la guarda contra el juez y parte.**
+
+> **UNA IMPRECISION DE UN REGISTRO, DECLARADA EN VEZ DE CALLADA** (regla 9 del `EJECUTOR.md`): `docs/plan/01_FUENTES.md` linea **1397** pone a `voz_del_cliente_voc`, `blueprint_de_experiencia` y `customer_journey_mapping` en una fila cuyo *donde mas aparece* es **`OP-D-02`**. **Medido hoy sobre el fichero: la nomina de `OP-D-02` son CUATRO nodos** (`voz_del_cliente_voc`, `enfoque_mercado_voc`, `homework_frontend_loading`, `voice_of_customer_homework`) **y ninguno de los dos de este acto esta en ella**; el bloque entero de `OP-D-02` en `02_DESTEJIDOS.md` (lineas 422 a 770) **los nombra CERO veces**. El que si esta es `voz_del_cliente_voc`. **No cambia nada de este acto** (la operacion que si los tocaba, `OP-F-04-COL`, esta HECHA y verificada arriba), **pero la fila se deja senalada porque una atribucion que no calza es exactamente la clase de nota que se cita luego sin volver a mirar.**
+
+### `P.5`: **UNA FAMILIA DE DOS**, y CERO relecturas post fusion
+
+El par **341** es **clase A** y su razon **NO nombra ganador**: la vara del verbo de `9.3.1` da **NO, es POR ELEGIR**. **NINGUN par del archivo mete a un tercero** con cualquiera de los dos: el subconjunto es **CERRADO** y el acto **ES de dos**, como la tabla sellada dice. **Y CERO pares vuelven a la cola de relectura post fusion**, porque no hay ni un tercero que releer. Es una declaracion mas limpia que la del acto 331, donde habia cuatro terceros y habia que comprobar la clase de los cuatro.
+
+**LA FUENTE, DICHA COMO SE MIDE Y NO COMO CONVIENE:** el instrumento imprime **FUENTE MIXTA (2 fuentes distintas medidas)**, y es cierto **como cadena de texto**: el superviviente declara *Change by Design, Revised and U - Tim Brown* y el absorbido declara *Change by Design*. **Las dos cadenas nombran EL MISMO LIBRO**, y lo unico que las separa es la edicion y el autor. **Es la misma especie de diferencia que el acto 331 ya declaro.** Y hay que anadir lo que la tabla de fuentes ya habia medido: **los dos declaraban ademas a Coleman como segundo libro, y ese segundo libro es justo el que `OP-F-04-COL` se llevo**; que hoy el campo `fuente` ya no lo nombre **es la huella de aquel destejido, no una perdida de este acto**.
+
+### `P.8` EN ORDEN: **manda el CONTENIDO, y el cableado va a favor con margen ancho**
+
+**EL CONTENIDO, leido primero, y los cinco puntos se sostienen SIN el cableado:**
+
+1. **EL QUE EXISTE SIN EL OTRO ES LA CABEZA**, la misma vara que decidio el acto 331. El mapa del viaje existe sin el blueprint; **el blueprint NO existe sin el mapa del viaje**, porque su propio paso 2 es *mapea cada etapa de la experiencia*: para hacerse a si mismo tiene que hacer antes lo que el otro nodo **es**. Un blueprint es un mapa del viaje **con dos capas mas encima** (la emocional y la operativa).
+2. **EL TITULO DE UNO ES EL CONCEPTO Y EL DEL OTRO NOMBRA UN ARTEFACTO DE ESE CONCEPTO**: *Mapeo del Customer Journey (Viaje del Cliente)* es el nombre de **la practica**, y en *El Mapa de Experiencia del Cliente (Blueprint)* **manda el parentesis**: blueprint es el nombre de **un documento concreto** de la disciplina.
+3. **EL PROCEDIMIENTO DEL SUPERVIVIENTE CIERRA EL CICLO Y EL DEL DONANTE NO**: aquel termina **priorizando** (una decision sobre donde gastar el esfuerzo) y este termina **documentando** (el artefacto).
+4. **EL ALCANCE DEL ROL**, que `P.8` cuenta como contenido **con el mismo peso que el texto**: las condiciones del superviviente cubren el caso general (disenar o redisenar cualquier servicio de multiples puntos, y el foco estrechado a un solo producto o etapa) y la del donante cubre **un caso mas estrecho dentro de eso**.
+5. **PIEZAS PROPIAS DEL DONANTE QUE NADIE MAS TIENE** y que por eso viajan enteras: el aviso de partida, los momentos emocionales clave y su nombre propio (**los momentos de verdad**), la vara de **lo memorable** contra lo que solo evita lo malo, la exigencia de llevar **estrategia general y detalle operativo al mismo tiempo**, la distincion contra **el manual operativo**, y el ejemplar de **Marriott**.
+
+**Superviviente: `customer_journey_mapping`.**
+
+**EL CABLEADO, citado DESPUES y NO usado para decidir:** grado por `P.1` de **9** contra **5**.
+
+> **Y AQUI VA UNA LIMITACION DECLARADA EN VEZ DE ESCONDIDA, porque el margen es ancho y un margen ancho a favor es justo el sitio donde una decision por cableado se puede disfrazar de decision por contenido:** el instrumento imprime los cinco bloques **en una sola salida**, asi que el ejecutor de esta vuelta **vio el cableado en la misma corrida en que leyo el contenido**, y su adjudicacion **NO es ciega respecto del cableado**. Los cinco puntos de arriba **no lo mencionan y se sostienen solos**; **la relectura ciega del auditor es la guarda que decide si eso es cierto, y este acto va MARCADO COMO DISCUTIBLE por ese motivo.**
+
+> **Y EL COSTE DE LA ELECCION ESTA MEDIDO: CERO aristas.** Los dos nodos tienen **CERO aristas propias sin reciproco**.
+
+### EL MAPA DE MOVIMIENTO, celda a celda
+
+**Prefijos:** `J` = `customer_journey_mapping` (superviviente), `B` = `blueprint_de_experiencia` (absorbido).
+
+**Las dos tablas se IMPRIMEN y no se teclean** (regla 1 del `EJECUTOR.md`, cuarto renglon), generadas del plan sellado con `python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V41_ACTO341.json` y `... --campo grupos_condiciones`:
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | J1, B1 | LA MISMA OBSERVACION CON SU ADVERTENCIA, y la advertencia es lo unico que los separaba. Los dos mandan lo mismo (acompanar al cliente real por su experiencia entera), y la propia razon del par lo llamo 'el mismo aviso de partida'; lo que viaja del donante es ese aviso, que el superviviente NO tenia: no te quedes en el punto de contacto que supusiste critico. Por P.11 una advertencia que califica un procedimiento entra DENTRO del paso que califica en vez de fabricar un paso suelto, y este califica a este y a ninguno mas. Sin ella el paso dice que observes todo y no dice contra que error observas. |
+| **2** | J2, B2, B4 | LA MISMA DOCUMENTACION CON SU CAPA EMOCIONAL Y SU FORMA, y ninguna de las dos era completa sola. El superviviente decia DONDE empieza y acaba el mapa (del primer contacto al cierre) y no decia QUE se marca dentro de cada etapa; el donante dice que se marcan los momentos emocionales clave, que son los que su propio resumen llama los momentos de verdad. Y la tercera pieza es tambien del donante y modifica esta misma accion y ninguna otra: COMO se documenta, con la estrategia general y el detalle operativo a la vez, que es la linea que distingue este mapa de un manual operativo. Por P.11 las dos califican el procedimiento de documentar y por eso entran aqui y no tienen grupo propio. Un mapa de etapas sin momentos emocionales es un diagrama de flujo, y un mapa que solo trae la estrategia no se puede ejecutar. |
+| **3** | J3 | PIEZA PROPIA DEL SUPERVIVIENTE, sin equivalente en el donante: el mapa del donante llega hasta la ETAPA y se detiene ahi, y este paso abre cada etapa en los puntos concretos donde alguien toca a la marca. Viaja entero y solo, y tiene grupo propio porque es el que fabrica el objeto sobre el que trabajan los dos pasos siguientes: sin touchpoints identificados no hay nada que evaluar ni nada que priorizar. |
+| **4** | J4, B3 | LA MISMA EVALUACION CON DOS VARAS QUE NO SON LA MISMA, y por eso van juntas y se nombran las dos. El superviviente juzga por VALOR (crear valor o perder al cliente), que es una vara economica; el donante juzga por MEMORIA (evitar lo malo o generar lo memorable), que es una vara de experiencia. Fundirlas en una sola frase borraria una de las dos, y no son intercambiables: un touchpoint puede crear valor y ser perfectamente olvidable, y el donante existe justo para ver eso. Por P.13 la vara del donante viaja ENTERA y dentro de la misma accion, porque modifica la MISMA evaluacion y no anade un paso. |
+| **5** | J5 | PIEZA PROPIA DEL SUPERVIVIENTE, y es la unica linea del acto que convierte el mapa en una DECISION: todo lo anterior describe, y esta reparte el esfuerzo. Va la ultima a proposito. Y su coletilla, 'no solo en el producto central', es una advertencia por P.11 y viaja pegada al paso: sin ella el acto entero se puede hacer completo y terminar arreglando el producto, que es exactamente el error que las dos condiciones de entrada describen. |
+
+| condicion del resultado | de que origenes sale | el motivo que la modifica |
+|---:|---|---|
+| **1** | JC1, BC2 | EL MISMO DISPARADOR DICHO CON LAS DOS GRANULARIDADES DEL MISMO MAPA, y aqui fundir NO borra una senal: la quita de repetir. El superviviente dice 'multiples puntos de interaccion' y el donante 'multiples etapas', que son el touchpoint y la etapa, las dos unidades del unico mapa que este acto levanta. Es el CONTRARIO del caso del acto 331, donde las dos condiciones eran dos momentos distintos (decidir la inversion y pedir el financiamiento) y NO se fundieron. La vara es la misma en los dos: se funde lo que es el mismo momento y se separa lo que no. |
+| **2** | JC2 | EL DISPARADOR DEL FOCO ESTRECHO, propio del superviviente. Se enciende ANTES de gastar: el proyecto todavia se esta encuadrando y el encuadre ya salio estrecho. |
+| **3** | BC1 | EL DISPARADOR DEL DINERO YA GASTADO, propio del donante, y se resiste la tentacion de juntarlo con el anterior. Los dos hablan de un foco mal puesto, pero en DOS momentos distintos: aquel se enciende mientras se encuadra el proyecto y este se enciende cuando la inversion YA se hizo y ademas se hizo sin observacion real. Fundirlos dejaria el acto sin su alarma cara, que es la que llega tarde. Por la misma vara que el acto 331 uso para NO fundir sus dos condiciones. |
+
+**LA TABLA DE PERDIDAS DE `P.13`, derivada de los grupos y no tecleada: 13 de 13 piezas VIAJAN y CERO se pierden** (salida de `vuelta41_plan_acto.py`, sellada en `docs/loop/SALIDA_V43_ACTO341_PLAN.txt`). **Este acto SI tiene reparto escrito** en la tabla de `OP-D-06`, y **se cumple tal como esta**: la celda dice *precedente de la cura acoplada, mapa contra mapa*, y leida con su fuente delante (`docs/INTRA_DOMINIO_INFORME.md` linea **3012**) **no reparte piezas: declara la FORMA del acto**, COSTURADA CONTRA COSTURADA, que son **tres movimientos y no dos** (destejer uno, destejer el otro, y solo entonces fundir lo que queda). **Los dos destejidos ya los hizo `OP-F-04-COL`, asi que lo que este acto ejecuta es el tercer movimiento: mapa contra mapa.** Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026, **y eso se comprueba al cierre en vez de suponerse**.
+
+### LO QUE LA SIMULACION DICE QUE VA A PASAR, sellado antes de ejecutar
+
+`python scripts/loop/vuelta39_fundir.py --plan docs/loop/PLAN_V41_ACTO341.json --simular`, sellado en `docs/loop/SALIDA_V43_ACTO341_SIM.txt` con **exit 0** y **LAS DOCE GUARDAS DE SIMULACION EN VERDE** (la trece es el censo y solo corre en `--ejecutar`).
+
+| | esperado |
+|---|---|
+| redirecciones sobre nodos vivos | **5** (`cultura_de_experiencia`, `diseno_de_experiencias_participativas` e `investigacion_etnografica_ideacion` en `nodos_siguientes`; `ejecucion_de_touchpoints` y `storytelling_para_el_cambio` en `nodos_previos`) |
+| deprecados que nombran y NO se tocan | **0** |
+| duplicadas que la fusion fabrica (`P.16`) | **0**, y aun asi se mide antes de darlo por bueno |
+| aristas de simetrizacion que el paso 5 tiene que anadir | **5**, ni una mas ni una menos |
+| pasos del resultado | **5**, **DENTRO del estandar de 3 a 6** |
+| condiciones del resultado | **3** (dos disparadores propios y uno fusionado de los dos) |
+| ficheros que se tocarian | **7** |
+| censo esperado | ficheros **3.853** sin moverse, vivos **3.530 menos 1**, deprecados **323 mas 1** |
+
+**Y EL CASO POSITIVO ANTES, que TIENE que caer:** `python scripts/loop/vuelta39_caso_positivo.py docs/loop/PLAN_V41_ACTO341.json`, sellado en `docs/loop/SALIDA_V43_ACTO341_CASO_ANTES.txt`: **13 PASAN y 22 CAEN**, **exit 1**, con la conservacion aparte en **4 vivos y 1 muerto**. El rastro muerto es *manual operativo*, que hoy vive solo en el resumen del donante.

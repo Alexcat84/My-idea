@@ -1,0 +1,110 @@
+
+==============================================================================
+(a) LA NOMINA DEL ACTO 341, LEIDA DE LA TABLA SELLADA
+==============================================================================
+  nodo A: blueprint_de_experiencia
+  nodo B: customer_journey_mapping
+  la tabla sellada trae 9 actos; este es el numero 3 de los nueve
+  los dos estan en la nomina de OPERACIONES.jsonl: SI
+
+  EL AVISO DE SOLAPE DEL PLAN, comprobado contra el fichero y no recordado:
+    > **AVISO DE SOLAPE, y hay que verlo antes de contar dos veces:**
+    > `producto_minimo_viable` y `principio_calidad_mvp` **aparecen aqui Y en
+    > `OP-D-01`**. La seccion 54.3 los cuenta como uno de los nueve actos de dos; el
+    > plan de cirugia los trata como **cura acoplada mayor**. **Es la MISMA pareja
+    > vista por dos instrumentos, no dos trabajos.**
+
+  ESTE ACTO ESTA NOMBRADO EN EL AVISO DE SOLAPE: NO
+
+  EL REPARTO YA ESCRITO PARA ESTE ACTO, si lo tiene:
+    | `blueprint_de_experiencia` con `customer_journey_mapping` (puesto 341) | precedente de la cura acoplada, mapa contra mapa |
+
+==============================================================================
+(b) QUE CITA EL INSTRUMENTO DE COSTURAS SOBRE LOS DOS NODOS
+==============================================================================
+  Fuente: docs/COSTURAS_INTERNAS.jsonl, LA COLA QUE EL INSTRUMENTO YA
+  ENTREGO. No se recalcula ni una cifra. EL INSTRUMENTO CITA Y NO JUZGA,
+  y desde la vuelta 41 su salida declara ademas que LA COLA GLOBAL NO ES
+  BASE DE LECTURA mientras el MIN_BLOQUE siga pendiente del fundador.
+  nodos en la cola entregada: 1495
+
+  blueprint_de_experiencia                     FUERA DE LA COLA: el instrumento NO lo cita
+
+  customer_journey_mapping                     CITADO por el instrumento
+      pasos 5 | pareja 51.2 (pasos [1, 3]) | bloque 49.4 | corte tras 2
+      disparo por pareja: False | por bloque: True | franja 44-45: False
+      paso A de la pareja citada: Observar directamente a clientes reales durante toda su experiencia de servicio
+      paso B de la pareja citada: Identificar todos los 'touchpoints' donde el cliente interactúa con la marca/servicio
+
+==============================================================================
+(c) EL TEXTO ENTERO DE LOS DOS NODOS, que es lo unico que decide
+==============================================================================
+
+------------------------------------------------------------------------------
+  blueprint_de_experiencia   VIVO
+------------------------------------------------------------------------------
+  titulo    : El Mapa de Experiencia del Cliente (Blueprint)
+  etiqueta  : Mapea el Viaje de tu Cliente
+  dominio   : core
+  fuente    : Change by Design
+  alias     : []
+  PASOS (4):
+    1. Acompaña a tu cliente en todo su recorrido (shadowing) sin limitarte al punto de contacto que asumiste como el más importante
+    2. Mapea cada etapa de la experiencia identificando los momentos emocionales clave
+    3. Distingue entre los puntos que solo evitan una mala experiencia y los que generan una experiencia memorable
+    4. Documenta el mapa de experiencia con la estrategia general y también con el detalle operativo, al mismo tiempo
+  CONDICIONES (2):
+    c1. Cuando has invertido en un punto de contacto que asumiste como crítico sin validarlo con observación real
+    c2. Si necesitas rediseñar una experiencia de servicio compleja con múltiples etapas
+  ENTREGABLE: Un mapa de experiencia (blueprint) que recorra el camino completo de tu cliente con los momentos clave identificados
+  RESUMEN   : Un mapa de experiencia (blueprint) es el documento donde trazas el recorrido emocional de tu cliente a través del tiempo, identificando los puntos más significativos de la interacción (los 'momentos de verdad') para convertirlos en oportunidades de diseño. A diferencia de un manual operativo, este mapa conecta la experiencia de tu cliente con la oportunidad de negocio y te revela ideas que a veces contradicen lo que suponías al principio (como el momento de exhalar que descubrió Marriott, en lugar del check-in).
+  previos   (3): ['diseno_de_experiencias_participativas', 'investigacion_etnografica_ideacion', 'cultura_de_experiencia']
+  siguientes(2): ['ejecucion_de_touchpoints', 'storytelling_para_el_cambio']
+
+------------------------------------------------------------------------------
+  customer_journey_mapping   VIVO
+------------------------------------------------------------------------------
+  titulo    : Mapeo del Customer Journey (Viaje del Cliente)
+  etiqueta  : Traza el Viaje del Cliente
+  dominio   : core
+  fuente    : Change by Design, Revised and U - Tim Brown
+  alias     : []
+  PASOS (5):
+    1. Observar directamente a clientes reales durante toda su experiencia de servicio
+    2. Documentar cada etapa del viaje, desde el primer contacto hasta el cierre
+    3. Identificar todos los 'touchpoints' donde el cliente interactúa con la marca/servicio
+    4. Evaluar cada touchpoint como oportunidad de crear valor positivo o de perder al cliente
+    5. Priorizar mejoras en los puntos de mayor impacto, no solo en el producto central
+  CONDICIONES (2):
+    c1. Cuando se está diseñando o rediseñando un servicio con múltiples puntos de interacción
+    c2. Cuando el foco inicial del proyecto se ha limitado erróneamente a un solo producto/etapa
+  ENTREGABLE: Un mapa visual con todas las etapas y touchpoints del viaje del cliente, identificando oportunidades de mejora
+  RESUMEN   : Estructura de escenario simple que traza las etapas por las que pasa un cliente imaginado desde el inicio hasta el final de una experiencia de servicio. Permite identificar 'touchpoints' (puntos de contacto) donde el cliente interactúa con la marca o servicio, revelando oportunidades de valor u ocasiones de perder al cliente que podrían pasarse por alto si se enfoca solo en el producto final.
+  previos   (2): ['prototipado_rapido', 'voz_del_cliente_voc']
+  siguientes(7): ['prototipado_de_experiencias', 'co_creation_session', 'economia_de_la_experiencia', 'prototipado_experiencial_servicios', 'rediseno_procesos_negocio_cx', 'seguimiento_informacion_cliente', 'silla_vacia_del_cliente_en_decisiones']
+
+==============================================================================
+(d) P.5: EL PAR, SU CLASE, SU RAZON ENTERA, Y EL CIERRE DEL SUBCONJUNTO
+==============================================================================
+  puesto 341 | clase A | blueprint_de_experiencia con customer_journey_mapping
+  RAZON ENTERA (697 caracteres):
+    REPITE con customer_journey_mapping. Los dos mandan lo mismo y con el mismo aviso de partida: acompanar al cliente por todo su recorrido en vez de quedarse en el punto de contacto que uno supone critico, mapear cada etapa y cada punto de contacto, evaluar cuales crean valor y cuales pierden al cliente, y priorizar la mejora por impacto. LATERAL, no cambia la clase: los dos son costuras gordas y de las que mas se han visto, diecisiete pasos el primero y diez el segundo, con bloques enteros pegados que no son mapeo, el ritual de celebracion del momento de la compra en uno y la silla vacia del cliente en las reuniones en el otro. Material para la ficha de costuras internas, no para este eje.
+  9.3.1, LA VARA DEL VERBO: nombra ganador en su razon: NO, es POR ELEGIR
+
+  EL SUBCONJUNTO, CERRADO O NO: todo par del ARCHIVO que meta a un
+  tercero con cualquiera de los dos (P.5 pide el acto entero).
+    NINGUNO. El subconjunto de los dos es CERRADO: UNA familia de dos.
+
+==============================================================================
+(e) P.8: EL CABLEADO, QUE ACOMPANA Y NO DECIDE
+==============================================================================
+  blueprint_de_experiencia                     cableado (grado por P.1): 5    | aristas propias sin reciproco: 0 
+  customer_journey_mapping                     cableado (grado por P.1): 9    | aristas propias sin reciproco: 0 
+
+  EL COSTE MEDIDO DE LA ELECCION: elegir a uno u otro solo pierde
+  aristas si el que muere tiene aristas SIN RECIPROCO, porque las
+  reciprocas las reescribe la simetrizacion de run_phase1, paso 5.
+
+  Y LA PRELACION, dicha antes de mirar: MANDA EL CONTENIDO. Este bloque
+  se lee DESPUES del (c) y del (d), y si apunta al lado contrario del
+  contenido, PIERDE. Se imprime para poder decir que no hizo falta.

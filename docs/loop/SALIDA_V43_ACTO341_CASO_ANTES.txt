@@ -1,0 +1,58 @@
+CASO POSITIVO: OP-D-06, ACTO 3 DE NUEVE (puesto 341): customer_journey_mapping absorbe a blueprint_de_experiencia
+==============================================================================
+
+EL SUPERVIVIENTE, customer_journey_mapping
+  [PASA] tiene 5 pasos, los 5 que el plan deja
+  [CAE ] tiene 2 condiciones, las 3 que el plan deja
+  [CAE ] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [CAE ] sus condiciones son exactamente las del plan
+  [CAE ] su entregable es el del plan
+  [CAE ] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Mapeo del Customer Journey (Viaje del Cliente)'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Traza el Viaje del Cliente'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['pasos', 'entregable', 'resumen']: 'touchpoints'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'shadowing'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'momentos emocionales clave'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'momentos de verdad'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'memorable'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'estrategia general'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'detalle operativo'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'Marriott'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'observación real'
+  [PASA] sobrevive literal en ['pasos']: 'no solo en el producto central'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [CAE ] 'blueprint_de_experiencia' esta en ids_alias del superviviente
+  [CAE ] 'blueprint_de_experiencia' tiene su entrada en merged_originals
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, blueprint_de_experiencia
+  [CAE ] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 4 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LAS REDIRECCIONES
+  [CAE ] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 5)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [CAE ] cultura_de_experiencia.nodos_siguientes ya apunta a customer_journey_mapping
+  [CAE ] diseno_de_experiencias_participativas.nodos_siguientes ya apunta a customer_journey_mapping
+  [CAE ] ejecucion_de_touchpoints.nodos_previos ya apunta a customer_journey_mapping
+  [CAE ] investigacion_etnografica_ideacion.nodos_siguientes ya apunta a customer_journey_mapping
+  [CAE ] storytelling_para_el_cambio.nodos_previos ya apunta a customer_journey_mapping
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'primer contacto' sigue vivo en ['pasos']
+  (conservacion) [SI] el rastro 'etapa' sigue vivo en ['pasos', 'condiciones', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'mayor impacto' sigue vivo en ['pasos']
+  (conservacion) [NO] el rastro 'manual operativo' sigue vivo en NINGUN CAMPO
+  (conservacion) [SI] el rastro 'clientes reales' sigue vivo en ['pasos']
+
+==============================================================================
+RESULTADO: 13 PASAN, 22 CAEN
+CONSERVACION (aparte, no suma): 4 vivos, 1 muertos

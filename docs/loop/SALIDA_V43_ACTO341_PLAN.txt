@@ -1,0 +1,45 @@
+PLAN SELLADO: docs/loop/PLAN_V41_ACTO341.json
+  acto          : puesto 341 de OP-D-06
+  superviviente : customer_journey_mapping
+  absorbidos    : blueprint_de_experiencia
+  fuente del superviviente: Change by Design, Revised and U - Tim Brown
+  ACTO DE FUENTE MIXTA (2 fuente(s) distinta(s) medida(s)):
+      customer_journey_mapping                     superviviente  Change by Design, Revised and U - Tim Brown
+      blueprint_de_experiencia                     absorbido      Change by Design
+  origenes generados VERBATIM del fichero: 13
+  pasos finales : 5 (estandar 3 a 6: DENTRO)
+  condiciones finales: 3
+  redirecciones esperadas: 5
+      cultura_de_experiencia                         nodos_siguientes   blueprint_de_experiencia
+      diseno_de_experiencias_participativas          nodos_siguientes   blueprint_de_experiencia
+      ejecucion_de_touchpoints                       nodos_previos      blueprint_de_experiencia
+      investigacion_etnografica_ideacion             nodos_siguientes   blueprint_de_experiencia
+      storytelling_para_el_cambio                    nodos_previos      blueprint_de_experiencia
+  deprecados que nombran y no se tocan: 0
+  duplicadas que la fusion fabrica: 0
+  simetrizacion esperada: 5 aristas
+      customer_journey_mapping.nodos_previos      += cultura_de_experiencia
+      customer_journey_mapping.nodos_previos      += diseno_de_experiencias_participativas
+      customer_journey_mapping.nodos_previos      += investigacion_etnografica_ideacion
+      customer_journey_mapping.nodos_siguientes   += ejecucion_de_touchpoints
+      customer_journey_mapping.nodos_siguientes   += storytelling_para_el_cambio
+
+  LA TABLA DE PERDIDAS, DERIVADA de los grupos y no tecleada:
+      B1    blueprint_de_experiencia                 VIAJA      paso 1 del resultado
+      B2    blueprint_de_experiencia                 VIAJA      paso 2 del resultado
+      B3    blueprint_de_experiencia                 VIAJA      paso 4 del resultado
+      B4    blueprint_de_experiencia                 VIAJA      paso 2 del resultado
+      BC1   blueprint_de_experiencia                 VIAJA      condicion 3 del resultado
+      BC2   blueprint_de_experiencia                 VIAJA      condicion 1 del resultado
+      J1    customer_journey_mapping                 VIAJA      paso 1 del resultado
+      J2    customer_journey_mapping                 VIAJA      paso 2 del resultado
+      J3    customer_journey_mapping                 VIAJA      paso 3 del resultado
+      J4    customer_journey_mapping                 VIAJA      paso 4 del resultado
+      J5    customer_journey_mapping                 VIAJA      paso 5 del resultado
+      JC1   customer_journey_mapping                 VIAJA      condicion 1 del resultado
+      JC2   customer_journey_mapping                 VIAJA      condicion 2 del resultado
+      VIAJAN 13 de 13. SE PIERDEN 0.
+      LECTURA: la regla de reparto de OP-D-06 manda cada perdida al
+      bloque del que proviene, y la que no tenga bloque al
+      superviviente. Con CERO perdidas no hay nada que repartir, y eso
+      es lo que hay que comprobar al cierre, no suponerlo.
