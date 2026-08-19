@@ -1,0 +1,65 @@
+==============================================================================
+VUELTA 46, PUNTO 6 DEL ENCARGO: EL ORDEN ESCRITO DE LA FASE 03
+==============================================================================
+
+El encargo dice: se ejecuta la PRIMERA operacion por el orden escrito, y
+si el orden NO esta escrito o EXIGE DECIDIR, no se abre y se trae con la
+cita delante. Aqui se mide si el orden esta escrito.
+
+  operaciones de fase 03_FUSIONES: 16
+
+  operacion           orden  estado   depende_de
+  OP-M-02-PROG        1      LISTA    ['OP-M-02']
+  OP-M-03-I           1      LISTA    ['OP-M-03', 'OP-D-07']
+  OP-U-01             1      LISTA    ['OP-C-01', 'OP-C-02', 'OP-C-03', 'OP-C-04', 'OP-F-01', 'OP-F-02', 'OP-F-03', 'OP-D-01', 'OP-D-02', 'OP-D-03', 'OP-D-04', 'OP-D-05', 'OP-D-06']
+  OP-M-02-MEDIOS      2      LISTA    ['OP-M-02']
+  OP-M-03-II          2      LISTA    ['OP-M-03']
+  OP-U-02             2      LISTA    ['OP-U-01']
+  OP-M-02-ACCLIMATE   3      LISTA    ['OP-M-02', 'OP-M-02-MEDIOS']
+  OP-M-02-ACCOMPLISH  3      LISTA    ['OP-M-02', 'OP-M-02-MEDIOS']
+  OP-M-02-ACTIVATE    3      LISTA    ['OP-M-02', 'OP-M-02-MEDIOS']
+  OP-M-02-ADMIT       3      LISTA    ['OP-M-02', 'OP-M-02-MEDIOS']
+  OP-M-02-ASSESS      3      LISTA    ['OP-M-02', 'OP-M-02-MEDIOS']
+  OP-M-03-III         3      LISTA    ['OP-M-03']
+  OP-M-01-FUSION      5      LISTA    ['OP-M-01']
+  OP-M-05-INDICE      6      LISTA    ['OP-M-05', 'OP-M-04', 'OP-M-03-II']
+  OP-M-05-EDIFICIO    7      LISTA    ['OP-M-05', 'OP-M-04', 'OP-M-03-II']
+  OP-M-05-APERTURA    8      LISTA    ['OP-M-05', 'OP-M-04', 'OP-M-03-II']
+
+  CUANTAS COMPARTEN CADA VALOR DE orden:
+    orden 1    -> 3 operacion(es): OP-M-02-PROG, OP-M-03-I, OP-U-01
+    orden 2    -> 3 operacion(es): OP-M-02-MEDIOS, OP-M-03-II, OP-U-02
+    orden 3    -> 6 operacion(es): OP-M-02-ACCLIMATE, OP-M-02-ACCOMPLISH, OP-M-02-ACTIVATE, OP-M-02-ADMIT, OP-M-02-ASSESS, OP-M-03-III
+    orden 5    -> 1 operacion(es): OP-M-01-FUSION
+    orden 6    -> 1 operacion(es): OP-M-05-INDICE
+    orden 7    -> 1 operacion(es): OP-M-05-EDIFICIO
+    orden 8    -> 1 operacion(es): OP-M-05-APERTURA
+
+  EL PRIMER PUESTO ESTA EMPATADO A 3: OP-M-02-PROG, OP-M-03-I, OP-U-01
+  O SEA QUE 'LA PRIMERA POR EL ORDEN ESCRITO' NO ESTA ESCRITA: hay que decidir.
+
+--- Y SE BUSCA UN ORDEN ESCRITO EN PROSA, POR SI EL CAMPO NO ES LA VARA ---
+  docs/plan/03_FUSIONES.md: 0 lineas que hablan de orden
+  docs/plan/00_INDICE.md: 4 lineas que hablan de orden
+    linea 205   > numero de actos; no cambia el orden**, porque el orden se decide por congelados
+    linea 331   ## EL ORDEN, y las tres ataduras que lo fijan
+    linea 363   | **este resumen** | el orden y el criterio de HECHO |
+    linea 421   > ~~**Se ejecutan sesenta y seis operaciones LISTAS en el orden de arriba**~~, se comprueba
+
+--- LOS ENCABEZADOS DE 03_FUSIONES.md, POR SI EL ORDEN FUERA EL DE LA PAGINA ---
+  linea 14    ## LA CIFRA, con su corte y su caducidad
+  linea 44    ## LOS SEIS MAYORES, y cuatro de ellos NO se resuelven aqui
+  linea 62    ## LAS DOS REGLAS DE EJECUCION, y las dos ya estan adjudicadas
+  linea 76    ## LO QUE NO ENTRA AQUI, y por que
+  linea 89    ## `OP-U-01`: LOS ACTOS CERRADOS . **LISTA**
+  linea 125   ## `OP-U-02`: LOS ACTOS ABIERTOS . **espera al cierre**
+  linea 140   ## EL PRIMER ACTO CON DECISION ESCRITA: **LA JUNTA ASESORA**
+
+CONCLUSION MEDIDA: el campo orden EMPATA TRES operaciones en el puesto 1
+y la pagina de la fase NO escribe una lista de orden. Por el punto 6 del
+encargo, LA FASE 03 NO SE ABRE en esta vuelta.
+
+Y ADEMAS, para OP-M-03-I en concreto: su preservar y su verificacion 3
+estan contradichos por la medicion de hoy (la PARADA de esta vuelta), asi
+que aunque el empate se deshiciera a su favor, tampoco seria ejecutable
+sin decidir algo que el plan no escribe.

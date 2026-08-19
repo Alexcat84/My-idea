@@ -4543,3 +4543,32 @@ el criterio nombra estan releidos.
    `OP-D-09` nacieron despues. **Se declara y no se reescribe**, que es como una correccion se
    puede auditar: **rehacer ese marcador es un encargo propio, con su instrumento, no un
    apano al margen de esta seccion.**
+
+### EL PRECEDENTE, HALLADO **DESPUES** DE ESCRIBIR EL REGISTRO DE ARRIBA Y EN LA MISMA VUELTA
+
+**Se anade aqui abajo y NO se mete dentro del registro, para que se vea que llego despues:** una
+correccion que tapa lo que corrige no se puede auditar. **Lo que cambia es la fuerza del cierre,
+no una sola cifra.**
+
+**LA ESPECIE NO ES NUEVA. ESTA PAGINA YA LA NOMBRO TRES VECES ANTES DE HOY, y las tres con el
+mismo metodo que use yo** (medir el nodo de hoy, hallar la operacion que se llevo el bloque con
+`git log --follow`, **y decirlo con la medicion delante en vez de suponerlo**):
+
+| donde, en esta misma pagina | que dice, leido hoy |
+|---|---|
+| linea **251**, `OP-D-01`, vuelta 32 | *MOVIMIENTO 2: el destejido del pariente, **CONSUMIDO, y se dice con su medicion***. Y la linea **292**: *el destejido que esta operacion pedia **ya esta consumido** por esas dos operaciones* |
+| lineas **798** a **805**, `OP-D-03`, vuelta 34 | *Y MEDIDAS HOY LAS TRES, **DOS YA ESTABAN CONSUMIDAS POR LA FASE 01***, con su tabla: `optimizacion_embudo_get_customers` **CONSUMIDA** por `OP-F-04-WEI` y `split_testing_experimentos_ab` **CONSUMIDA** por `OP-F-04-RAC` |
+| linea **1773**, `OP-D-05`, vuelta 40 | *de las **seis huellas** del bloque 5 a 12 **sobreviven CERO**. **Ya se lo llevo `OP-F-04-HOR`**, commit **`2bd8dd76`**, medido con `git log --follow` y **no supuesto**. **Es el mismo caso que `OP-D-03`***. **Y esa operacion quedo `SELLADA`** (encabezado de la linea **1765**) |
+
+> **LO QUE ESTO SIGNIFICA PARA `OP-D-07`, dicho sin estirarlo: NO HACE FALTA DOCTRINA NUEVA PARA
+> LA MITAD DE LA CIRUGIA.** Un destejido **consumido por la fase 01**, medido contra el nodo de
+> hoy y con el commit que se lo llevo nombrado, **es una forma ya escrita de cerrar**, y
+> `OP-D-05` la uso para quedar **`SELLADA`**. Mi registro de arriba hace exactamente eso, con la
+> unica diferencia de que **aqui el bloque no se disolvio: fue a un nodo propio**, que es **mas**
+> trazable, no menos.
+
+> **Y LO QUE ESTE PRECEDENTE NO CUBRE, que es donde la PARADA se queda entera:** en `OP-D-03` y
+> en `OP-D-05` **nada aguas abajo dependia de DONDE aterrizara el bloque consumido**. Aqui si:
+> **`OP-M-03-I` y `FRONTERAS_DECLARADAS.md` escriben, los dos, que el bloque sale del nodo que
+> muere en el acto I**, y hoy no sale de ahi. **El precedente cierra la cirugia; NO cierra la
+> ruta.** Esa mitad sigue en **PARADA** y sigue sin arreglarse aqui.

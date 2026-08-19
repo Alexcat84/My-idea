@@ -1,334 +1,416 @@
-# REPORTE DE LA VUELTA 45 DEL EJECUTOR (19 ago 2026)
+# REPORTE DE LA VUELTA 46 DEL EJECUTOR (19 ago 2026)
 
-**Encargo:** registros (TAREA 1) y `OP-D-08` con su lectura resolutoria, mas `OP-D-09` si la vuelta
-tenia cuerda (TAREA 2). **LAS DOS TAREAS ESTAN COMPLETAS y las dos operaciones cerradas enteras.**
+**Encargo:** registros (TAREA 1) y `OP-D-07` con el cierre medido de la fase 02, mas la primera
+operacion de la fase 03 si quedaba cuerda (TAREA 2).
+
+> **LAS DOS TAREAS ESTAN COMPLETAS, PERO LA SEGUNDA NO SALIO COMO EL ENCARGO LA IMAGINABA, Y ESA
+> ES LA NOTICIA DE LA VUELTA: LA CIRUGIA DE `OP-D-07` YA ESTABA HECHA DESDE EL 14 DE AGOSTO, Y LA
+> HIZO LA FASE 01.** No se toco **ni un solo nodo**. Lo que quedaba por hacer era **medir sus tres
+> verificaciones y publicarlas**, y eso destapo **una PARADA** que no se arregla aqui.
 
 ---
 
 ## 0. LO PRIMERO: EL ARBOL AL ABRIR, Y LA APERTURA MEDIDA ANTES DE NADA
 
-**El acta de la vuelta 44 dejo verificado el arbol limpio y todo pusheado, y asi estaba:** `git
-status` **vacio**, `HEAD` en **`8daaee70`** sobre `origin/pasada-unica`. **No hubo parada que traer
-por este concepto.**
+**El acta de la vuelta 45 dejo verificado el arbol limpio y todo pusheado, y asi estaba:** `git
+status` **vacio**, `HEAD` en **`2f0c47ef`** sobre `origin/pasada-unica`, sin adelanto ni retraso.
+**No hubo parada que traer por este concepto.**
 
-**LA APERTURA SE MIDIO ANTES DE LA PRIMERA OPERACION Y SE COMMITEO SOLA** (`a25b9b07`), que es la
-regla 1 tercer renglon, y **se midio incluso antes de los registros de la TAREA 1**, que es mas
-estricto que lo que el encargo pedia y no puede violar nada:
+**LA APERTURA SE MIDIO ANTES DE LA PRIMERA OPERACION Y SE COMMITEO SOLA** (`a00a95c7`), regla 1
+tercer renglon. **Se midio incluso antes de los registros de la TAREA 1**, que es mas estricto que
+lo que el encargo pedia, con el mismo precedente de la vuelta 45.
 
 ```
-python scripts/loop/vuelta31_estado.py APERTURA  -> SALIDA_V45_APERTURA.txt (exit 0)
-python scripts/costuras_internas.py              -> SALIDA_V45_APERTURA_COLA.txt (exit 0)
+python scripts/loop/vuelta31_estado.py APERTURA  -> SALIDA_V46_APERTURA.txt (exit 0)
+python scripts/costuras_internas.py              -> SALIDA_V46_APERTURA_COLA.txt (exit 0)
 ```
 
 | lo que el encargo exigia como apertura | lo que MI corrida dio | calza |
 |---|---|---|
-| marcador A 575, B 80, C 8, D 2.725 en n 3.388 | **A 575, B 80, C 8, D 2.725 en n 3.388** | **AL DIGITO** |
+| marcador A 575, B 79, C 8, D 2.726 en n 3.388 | **A 575, B 79, C 8, D 2.726 en n 3.388** | **AL DIGITO** |
 | grafo 3.853 ficheros, 3.524 vivos, 329 deprecados, 16.898 enlaces | **3.853 / 3.524 / 329 / 16.898** | **AL DIGITO** |
 | cola 1.494 sobre 3.524 | **1.494 sobre 3.524 (42,4 por ciento)** | **AL DIGITO** |
 
 **CERO discrepancias, asi que no hubo parada.** Ademas: rango de puestos 1 a 3.388, **huecos 0**,
-**duplicados 0**, **clases fuera de ABCD 0**, operaciones **71** con **dependencias rotas 0**.
+**duplicados 0**, **clases fuera de ABCD 0**, operaciones **71** con **dependencias rotas 0**. Y el
+arbol quedo **limpio** tras la corrida de costuras, o sea que el instrumento **reprodujo byte igual**
+los ficheros commiteados.
 
 ---
 
 ## 1. HASH FINAL, COMMITS Y RUTAS TOCADAS
 
-**`HEAD` de `pasada-unica`: `92d0b957`.** Arbol limpio, todo pusheado a `origin/pasada-unica`.
+**`HEAD` de `pasada-unica`: el commit de este reporte.** El ultimo de trabajo es **`48efbcf0`**.
+Arbol limpio y todo pusheado a `origin/pasada-unica`.
 
 | # | hash | que es |
 |---:|---|---|
-| 1 | `a25b9b07` | **la apertura**, medida antes de la primera operacion y **commiteada sola** |
-| 2 | `b9517f11` | **TAREA 1 completa**: la auditoria de la 44 registrada, y `OP-D-01` y `OP-D-02` verificadas punto por punto con su registro escrito |
-| 3 | `19b6e075` | `OP-D-08` **primer commit**: lectura de cero, **la pregunta resuelta**, plan sellado y simulacion. Ni un nodo tocado |
-| 4 | `1f7493d1` | `OP-D-08` **segundo commit**: la cirugia, con el ciclo verde |
-| 5 | `c8172126` | `OP-D-08` **CERRADA**: costuras, la relectura del **784**, el cierre medido y el registro |
-| 6 | `68bad60a` | `OP-D-09` **primer commit**: lectura de cero, plan sellado y simulacion. Ni un nodo tocado |
-| 7 | `ef78c8b1` | `OP-D-09` **segundo commit**: la cirugia, con el ciclo verde |
-| 8 | `92d0b957` | `OP-D-09` **CERRADA**: costuras, la relectura del **2695**, el cierre medido y el registro |
+| 1 | `a00a95c7` | **la apertura**, medida antes de la primera operacion y **commiteada sola** |
+| 2 | `67dd8d3e` | **TAREA 1 completa**: la auditoria de la vuelta 45 registrada, con la tabla **impresa desde el acta** |
+| 3 | `a380c20b` | `OP-D-07` **primer commit**: la lectura de cero **y el hallazgo**. Ni un nodo tocado |
+| 4 | `42d500e2` | `OP-D-07` **segundo commit**: el ciclo Gate 0 verde, las tres suites y el **cierre de la fase 02 medido** |
+| 5 | `48efbcf0` | `OP-D-07` **tercer commit**: el registro escrito, el cierre declarado midiendo y **la PARADA** |
 
-**`git diff --shortstat 8daaee70..HEAD`: 64 ficheros, 5.447 anadidas, 80 borradas.**
-**Por carpeta**, contado en esta vuelta: `docs/loop` **43**, `scripts/loop` **10**, `docs` raiz
-**3**, `web/lib` **2**, `docs/plan` **2**, `dataset/nodos` **2**, `dataset/metadata` **2**. **Total
-64.**
+**LAS RUTAS**, con `git diff --shortstat 2f0c47ef..48efbcf0`: **19 ficheros, 2.368 lineas anadidas
+y CERO borradas**. Por carpeta, contado con mi comando: **`docs/loop` 14, `scripts/loop` 4,
+`docs/plan` 1**. Total **19**.
 
-**SOLO DOS NODOS TOCADOS EN TODA LA VUELTA**, y son los dos sujetos de las dos operaciones:
-`lienzo_modelo_negocio` y `planificacion_recoleccion_datos`.
+> **Y LA CIFRA QUE MANDA EN ESTA VUELTA: NODOS TOCADOS, CERO.** `git diff --name-only` sobre
+> `dataset/nodos` da **0 ficheros**. **No se toco el grafo, no se toco el censo, no se movio un
+> solo veredicto.**
 
 ---
 
-## 2. TAREA 1, PUNTO 1: LA AUDITORIA DE LA VUELTA 44, REGISTRADA
+## 2. TAREA 1: LOS REGISTROS
 
-Escrita en `docs/plan/02_DESTEJIDOS.md` bajo el cierre de `OP-D-06`, **leyendo el acta HOY** (empieza
-en la linea **9452** y cierra en la **9792**) y **con la linea al lado de cada punto**:
+**Escrita en `docs/plan/02_DESTEJIDOS.md`, bajo el registro de cierre de `OP-D-09`, con la tabla
+IMPRESA y no tecleada** (regla 1, cuarto renglon):
 
-| que | con su linea del acta |
+```
+python scripts/loop/vuelta46_registro_auditoria.py --escribir
+  -> docs/loop/SALIDA_V46_REGISTRO_AUDITORIA.txt (exit 0)
+```
+
+**El instrumento imprime VERBATIM cada linea del acta que cada celda cita, mas la seccion 5 entera
+(lineas 10.046 a 10.092), para que ninguna celda sea un recuerdo.** El acta de la vuelta 45 se leyo
+**hoy**: abre en la linea **9.794** y cierra en la **10.157**.
+
+| lo que el encargo mandaba registrar | la linea del acta que lo dice |
 |---|---|
-| **alcance COMPLETA**, no por muestreo, **convocada por la guarda del modo continuo** | **9457** |
-| **CERO caidas del ejecutor** de clase, de cifra y de reporte | **9762** |
-| **ciega 7 de 7**, cero discrepancias, y **cero fuera de lo marcado** | **9609**, con las siete en 9564, 9571, 9576, 9579, 9586, 9592 y 9601 |
-| **los NUEVE discutibles adjudicados uno a uno**: siete **A FAVOR**, uno **SIN ACCION**, y la parada **procede como conducta**. **Ninguno en contra** | **9614** a **9654** |
-| **racha de reporte en CERO, con DOS reportes limpios seguidos** | **9771** |
-| **ceguera PARCIAL y DECLARADA** por el propio auditor, con su mitigacion | **9556** |
-| **cero doctrina nueva** | **9776** |
+| la vuelta 45 auditada **ENTERA**, con Gate 0 y las tres suites re-corridos por corrida propia | **9.801**, y **9.797** para el *sin hueco de acta* |
+| **CERO caidas del ejecutor** | **10.127** |
+| **ciega 5 de 5**, con las cuatro piezas nombradas | **9.941**; la clase del **784** en **9.909**, la del **2695** en **9.917**, la lectura textual de `principio_calidad_mvp` en **9.923**, y los dos repartos origen por origen en **9.929** y **9.933** |
+| **los ONCE discutibles A FAVOR** | **9.946** a **10.027** |
+| **las SEIS correcciones correctas** | **10.028** |
+| racha de reporte en **CERO** con **TRES reportes limpios seguidos** | **10.136** |
+| la adjudicacion de la seccion 5: el `depende_de` de `OP-D-07` **se satisface con la mesa `OP-M-03` ADJUDICADA**, cuatro apoyos escritos, **cero doctrina nueva** | **10.051** y **10.077** |
+| el aviso medido de que **las reescrituras de la mesa siguen pendientes** de su fase 06 | **10.074** |
 
-**Y LA PARADA DE LA SECCION 9 ADJUDICADA, sus cuatro partes** (lineas **9656** a **9705**): el orden
-de la fase es **CONGELADOS LIBERADOS** y no el campo `orden` (**9661**, con el aviso de la vuelta 17
-en las lineas **35** y **36** del propio fichero y el titulo de la tabla en la **81**); `OP-D-08` es
-**ejecutable sin decidir nada nuevo** (**9672**); el registro de `OP-D-01` y `OP-D-02` **se verifica
-y no bloquea** (**9688**); y `OP-D-07` **queda anotada** esperando la lectura de su dependencia
-`OP-M-03` (**9699**).
+**EL AVISO NO SE COPIO: SE RE-MIDIO** (regla 2, *una cifra de un acta es contraste, no fuente*).
+Los siete puestos, leidos por mi de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`:
 
----
+| puesto | clase medida HOY por mi |
+|---:|---|
+| **668**, **737**, **771**, **843**, **957**, **1298**, **753** | **los SIETE en `B`** |
 
-## 3. TAREA 1, PUNTO 2: `OP-D-01` Y `OP-D-02` VERIFICADAS PUNTO POR PUNTO
+**COINCIDE AL DIGITO con lo que el acta declara.** Son trabajo de `OP-M-03` en su fase 06, no
+precondicion del corte.
 
-**Instrumento nuevo de SOLO LECTURA**, `scripts/loop/vuelta45_verificar_opd01_opd02.py` (exit 0),
-sellado en `docs/loop/SALIDA_V45_VERIF_OPD01_OPD02.txt` y **pegado entero** en el plan por la regla 1.
-
-| # | el punto, del propio campo `verificacion` | `OP-D-01` | `OP-D-02` |
-|---:|---|---|---|
-| **1** | Gate 0 verde | **CORRIDO HOY**, ciclo de **TRES** comandos, los tres exit 0: `GATE 0: OK` con **VEINTE** renglones en `[OK]` y cero rojos, **71** etiquetas, **seis** assets, **las dos copias del grafo byte iguales a HEAD** (md5 `f59b0a0e...`). Suites: motor **25/25**, web **1.030** pasadas y 3 saltadas, `tsc` **0** lineas | **la misma corrida**, dicho asi en vez de fingir dos: un Gate 0 mide el arbol entero |
-| **2** | los congelados se releen y salen de la lista | **3 de 3 FUERA**: 494 `C`, 592 `D`, 830 `D` | **3 de 3 FUERA**: 724, 755 y 827, los tres `D` |
-| **3** | dentro del estandar, o de la excepcion de clase de `OP-F-01` | **CUMPLIDO POR LAS DOS RAMAS**: `producto_minimo_viable` **6**, dentro; `principio_calidad_mvp` **7**, por la excepcion aplicada **por su criterio escrito**. **Con un dato en contra publicado** (D1 abajo) | **CUMPLIDO POR LA PRIMERA**: los tres vivos en **6**, **6** y **5**; el cuarto esta deprecado con su texto intacto |
-| **4** | recomputo del cierre transitivo (banco `9.21`) | **CORRIDO HOY** sobre las **575 `A`** vigentes: componente de **UNO** cada nodo | **CORRIDO HOY**: una componente de **TRES**, que es lo que la vuelta 33 midio al contestar `P.5` y lo que `P.10` mando. **Destapa una tension** (D2 abajo) |
-| **5** | cero pares internos sin veredicto | **1 de 1** | **6 de 6** contra los **DOS** registros (D3 abajo) |
-
-**LO DEFERIDO, CITADO COMO DEFERIDO CON SU REGLA**, y no impide ninguno de los dos registros: el par
-nuevo **entra por el recomputo** (banco `9.10`, ya ejecutado por la vuelta 33) y **las aristas son la
-fase 04** (`aristas_nuevas` **VACIO** en las dos, leido hoy). **El enlace mutuo del 494 se
-re-verifico hoy en los dos sentidos** (regla 9): **sigue sin existir.** **Dependencias medidas**: las
-cuatro de `OP-D-01` traen **HECHA**; `OP-D-02` no tiene ninguna.
-
-**TODO LO MATERIAL CUMPLE EN LAS DOS**, asi que **el registro se escribio** con el patron de la
-vuelta 30: `OP-D-01` de **5.258** a **11.739** caracteres, `OP-D-02` de **8.190** a **14.355**, el
-fichero sigue en **71** lineas y **el campo `estado` se queda en `LISTA` en las dos**.
-
-**TAREA 1, PUNTO 3: NO HAY CAIDA DE REPORTE QUE CORREGIR.** El reporte de la vuelta 44 salio limpio
-contra la corrida entera del auditor. **Se dice asi y no se rellena la casilla.**
+**Y LA CASILLA DE LA CAIDA DE REPORTE NO SE RELLENA, porque no hay nada que poner en ella.** El
+acta declara cero caidas y adjudica las seis correcciones como correctas, con la frase que cierra
+el punto: *NINGUNA afirmacion del reporte resulto falsa contra mi corrida*. **Se dice asi.**
 
 ---
 
-## 4. TAREA 2: `OP-D-08`, CON SU PREGUNTA RESUELTA EN LA LECTURA
+## 3. TAREA 2: `OP-D-07`, Y EL HALLAZGO
 
-**Va PRIMERA por CONGELADOS LIBERADOS y no por el campo `orden`, que dice 8**, y por ese criterio
-**estaba atrasada** (le tocaba entre `OP-D-03` y `OP-D-04`).
+### 3.1 LA LECTURA DE CERO, ANTES DE TOCAR NADA
 
-**LA PREGUNTA PENDIENTE, RESUELTA CON LA CITA DELANTE.** El paso 5 decia, literal: *Completar cada
-uno de los 9 bloques del canvas **para la solucion disenada***. **RESOLUCION: ES UN MARCO PROPIO**,
-material propio del bloque 2, **y se reparte como el resto**. **La prueba es del propio texto del
-nodo y esta medida**: la `condicion_activacion` **3** dice *Cuando una **solucion de diseno**
-necesita convertirse en un modelo de negocio viable*, o sea que **el nodo ya legisla ese momento como
-una de sus siete puertas**. **La contraprueba**: **ninguna** de las otras tres narraciones trae
-acotacion de momento. **Aterriza en el paso 4**, el unico cuyo objeto es *para que se usa el lienzo*,
-asi que **no le cambia el objeto a nada**.
+`python scripts/loop/vuelta46_lectura_opd07.py` (**exit 0**, `SALIDA_V46_OPD07_LECTURA.txt`),
+**instrumento de solo lectura**. La operacion se leyo **entera** de `OPERACIONES.jsonl` (los
+diecisiete campos, impresos uno a uno) y el nodo **de cero**, hoy y desde `git`.
 
-**LA CIRUGIA: 17 pasos a DOCE**, que es **exactamente la cifra que la nota de la operacion predijo**.
-Plan sellado, **simulacion previa verde**, guardas del destejedor **17 de 17 prefijos**, **cero
-perdida con 17 origenes cubiertos de 17**, procedencia completa, **fuente sin cambio**.
+**Lo que la operacion dice, en lo material:** nodo unico `decision_pivote_perseverar`,
+`superviviente` **nulo**, `eliminar` **vacio**, `aristas_nuevas` **vacio**, `preservar` con el
+bloque de Traction (pasos 5 a 9), y **tres** puntos de `verificacion`.
 
-**EL CASO POSITIVO SE DA LA VUELTA ENTERO: 0 PASAN y 4 CAEN antes contra 4 PASAN y 0 CAEN despues**,
-con **las NUEVE invariantes en `OK` las dos veces**. Los **NUEVE** puntos del campo `verificacion`
-**cumplidos y medidos uno por uno**.
+### 3.2 EL HALLAZGO
 
-**EL CASO POSITIVO QUE LA OPERACION MANDABA: EL PAR 784 SE DESCONGELO Y SE JUZGO**, de **`B` a `D`**,
-con correccion declarada y **la razon vieja copiada por maquina y conservada entera**. **Los dos
-procedimientos salen DISJUNTOS**, medido palabra por palabra. **La relacion es de ALIMENTACION**, la
-figura del 233 y del 599, **pero con una diferencia que mejora el caso: LA ARISTA YA EXISTE**,
-dirigida y con su espejo, asi que **este par NO deja arista que falte**.
+> **EL DESTEJIDO QUE `OP-D-07` LEGISLA YA ESTABA EJECUTADO DESDE EL 14 DE AGOSTO DE 2026, Y LO
+> EJECUTO LA FASE 01.**
 
-**El ciclo fue de TRES comandos y no de cuatro**, y **se dice por que**: la regla es condicional **al
-censo** y el censo **no se movio** (**3.524 activos y 329 deprecados**, los mismos de la apertura).
-**Un destejido cambia el grafo pero no el censo.**
+- **Quien:** `OP-F-04-WEI`, **segunda tanda**, commit **`1eef1c6b`**.
+- **Como lo halle:** `git log --follow` sobre `dataset/nodos/decision_pivote_perseverar.json`,
+  **corrido hoy**. No sale de ningun acta ni de ningun reporte.
+- **Y esta escrito:** `docs/plan/01_FUENTES.md` **linea 982** lo registra con su frontera
+  (`decision_pivote_perseverar`, **5 a 9**, destino **nodo propio**
+  `puntos_brillantes_antes_del_pivote`, por `P.18` punto 3), y el nodo nuevo figura en
+  `INDICE_ROJO_DECLARADO.jsonl` con **esa misma fecha**.
+- **`OP-D-07` tiene `fecha_corte` 2026-08-12**: se escribio **dos dias antes** de que otra fase se
+  le adelantara.
 
----
+**NO SE TOCO NI UN NODO.** Volver a cortar un nodo ya cortado no es ejecutar la operacion: **es
+fabricar**. La guarda de simulacion previa, el caso positivo y las guardas de duplicadas **no
+tienen sobre que correr**, y decirlo es mas honesto que inventarles un sujeto.
 
-## 5. TAREA 2: `OP-D-09`, LA SEGUNDA, CERRADA TAMBIEN
+### 3.3 LAS TRES VERIFICACIONES, MEDIDAS
 
-**Orden libre** porque **libera cero congelados**, con el precedente escrito de `OP-D-05`.
+| # | lo que exige | como sale medido HOY |
+|---:|---|---|
+| **1** | el corte cae **entre el paso 4 y el 5** | **CUMPLE.** De **9** pasos a **4**, con prefijo **VERBATIM** comun de **4**. Los cuatro que quedan son los de Ries |
+| **3** | el campo `fuente` queda con **UNA sola obra** | **CUMPLE.** De **2** obras a **1** (`The Lean Startup - Eric Ries`) |
+| **2** | el bloque del punto brillante **no se pierde**, y **viaja entero al superviviente del acto I** | **MITAD Y MITAD.** El bloque **NO se perdio**: sus **5** pasos viven **byte a byte** en `puntos_brillantes_antes_del_pivote`, con arista desde el sujeto **y su espejo**. **Pero de viajar al superviviente, nada**: en `pivotar_o_perseverar` viven **0 de 5**, y en `decision_pivote_perseverar` **0 de 5** |
 
-**EL INDICE SON TRES PASOS Y NO CUATRO**: el **paso 1 no se poda, se REPARTE** y sobrevive verbatim
-como cabecera, porque **no tiene casa en el metodo de 5 a 16** y porque **el paso 14 apunta al
-problema tecnico original que solo el 1 establece**. **Los tres que se van se comprobaron uno a uno
-EN SU CASA ANTES de quitarlos**, y **la comprobacion se ve en el mapa**: el 2 viaja con el 9 (y su
-mitad de comunicacion la dice el 15), el 3 con el 7 (y su mitad de muestra la dice el 10) y el 4 con
-el 6 (recolectores **imparciales**). **Ninguno deja resto sin casa. El metodo 5 a 16 no se toco:
-verbatim, contiguo y en orden.**
+**El bloque va publicado paso por paso en el registro**, con su numero viejo (5 a 9) y su numero
+nuevo (1 a 5). **CERO contenido perdido.**
 
-**16 pasos a TRECE.** Caso positivo **0 PASAN y 2 CAEN antes contra 2 PASAN y 0 CAEN despues**,
-**nueve invariantes en `OK` las dos veces**, guardas del destejedor **16 de 16**, **cero perdida**,
-ciclo de **TRES** comandos con `GATE 0: OK`, suites verdes.
+### 3.4 LOS PARES DEL CASO, LEIDOS Y NO MOVIDOS
 
-**EL CASO POSITIVO: el par 2695 releido contra el nodo destejido SIGUE DANDO `D`**, con la prueba del
-`9.6.2` medida (**el hijo se derrama sobre TRES pasos distintos del plan y NO cabe en uno**, y **su
-paso 3 no tiene casa en ninguno de los trece**). **ARISTA QUE FALTA declarada para la fase 04**, con
-las del 599 y el 233. **El veredicto no cambia de clase, asi que el archivo de veredictos no se toca
-y el marcador no se mueve por esta operacion.**
+`OP-D-07` **no manda ninguna relectura ni ningun caso positivo sobre pares** (sus tres puntos de
+`verificacion` estan copiados arriba y ninguno lo pide). Los tres del expediente se leyeron igual,
+**y ninguno se movio**:
 
----
-
-## 6. MARCADOR RECOMPUTADO AL CIERRE, Y EL ESTADO
-
-**Recomputado AL CIERRE y no copiado de la apertura** (regla 1, segundo renglon), porque **esta
-vuelta lo movio**.
-
-| | apertura de la vuelta 45 | **al cierre, recomputado** | lo que lo movio |
-|---|---:|---:|---|
-| ficheros | 3.853 | **3.853** | nada |
-| vivos | 3.524 | **3.524** | **nada: un destejido no deprecia a nadie** |
-| deprecados | 329 | **329** | nada |
-| enlaces | 16.898 | **16.898** | **nada, y es una GUARDA de las dos operaciones, no una casualidad** |
-| cola de costuras | 1.494 sobre 3.524 (42,4 por ciento) | **1.494 sobre 3.524 (42,4 por ciento)** | nada: los dos nodos ya estaban dentro y siguen dentro |
-| marcador `n` | 3.388 | **3.388** | nada: sin altas ni bajas |
-| marcador A | 575 | **575** | nada |
-| marcador B | 80 | **79** | **la relectura del 784**, el caso positivo de `OP-D-08` |
-| marcador C | 8 | **8** | nada |
-| marcador D | 2.725 | **2.726** | la misma relectura |
-| tasa de A | 17,0 | **17,0** | nada |
-
-**UN SOLO MOVIMIENTO EN TODA LA VUELTA, y es el que `OP-D-08` mandaba producir.**
-
-**TASA POR DOMINIO Y VARA POR TRAMO:** esta vuelta **no es de cribado**, es de **ejecucion**, asi que
-**no hay tramo de pares que cribar ni tasa por dominio nueva que publicar**: la unica clase que se
-movio es la del **784** (dominio `core`) y va arriba con su medicion. **Se dice asi en vez de
-rellenar la casilla con la cifra global, que seria repetir la del marcador con otro nombre.**
-
-**FIGURAS Y FAMILIAS AL DIA:** ninguna se movio. **Cero fusiones**, **cero deprecados nuevos**,
-**cero `ids_alias` creados**, **cero altas y cero bajas** de veredictos. Las familias de libro y el
-reparto de `node_families` **no se tocaron** (el comando 4 no corrio porque el censo no se movio).
+- **843** (`B`): su propia razon **ya nombraba el corte** entre el paso 4 y el 5.
+- **860** (`A`): la razon dice que **el solape cae en los pasos 1 y 3, dentro del bloque de Ries**.
+  **Medido hoy: esos cuatro pasos siguen verbatim.** O sea que **el adelanto de la fase 01 no toco
+  el solape**, que era exactamente el riesgo que la `nota` de `OP-D-07` nombraba. **El par se
+  sostiene en `A` y no hace falta recomputo.**
+- **1298** (`B`): la frontera del punto brillante. Ver la PARADA.
 
 ---
 
-## 7. CORRECCIONES DECLARADAS (ninguna tapa el texto que corrige)
+## 4. LA PARADA, Y NO LA ARREGLO YO (regla 5)
 
-1. **La cifra de aristas de `OP-D-08` y de `OP-D-09` es de otro corte.** Las dos dicen **16.866**
-   entradas de arista, cifra **de la vuelta 17** (14 ago 2026), **antes de las ocho fusiones de
-   `OP-D-06`**. **Medido hoy: 16.898 antes y 16.898 despues en las dos.** La guarda que se comprueba
-   es **CERO MOVIMIENTO** con la cifra de **hoy**. **Los textos viejos no se reescriben.**
-2. **La senal de bloque que `OP-D-09` trae escrita tampoco calza:** su `evidencia` dice **52,3** con
-   corte mecanico en el **11**, y **medido por mi en la apertura, con 16 pasos: 56,7 con corte tras el
-   14**. El **11** que cita es **el corte que el nodo tiene HOY, con 13 pasos**. Declarado, no cuadrado.
-3. **Dos correcciones de mi propio constructor de plan**, vistas **antes de sellar nada**: los
-   destinos 1 y 2 de `OP-D-08` salian verbatim y habrian **perdido** un formato preservado y **dejado
-   viva** una copia sobrante de la orden. Pasaron a llevar remedio y **la salida vieja queda en el
-   commit**.
-4. **Una cita rancia en un detalle, declarada y NO reescrita**, con el precedente del acto 711: la
-   razon del **2695** nombra su ancla como **el paso 7** del plan y **hoy ese mismo texto es el paso
-   4**. **El texto es identico palabra por palabra; lo que se movio es el numero.**
-5. **CAIDA MIA: nueve de mis salidas selladas salieron en `cp1252` y no en `utf-8`**, por redirigir
-   instrumentos con texto acentuado sin fijar la codificacion. **Convertidas a `utf-8` sin tocar una
-   sola letra del contenido**, y **declarado aqui y en el commit** en vez de dejarlas mezcladas.
-   **Ninguna cifra cambia.**
-6. **Un limite de mi instrumento de lectura, declarado**: reutilice el de `OP-D-08` para leer el nodo
-   de `OP-D-09`, y su cola trae **dos bloques cableados para aquel nodo** (los 91 vecinos y las tres
-   madres paso a nodo). **Para el segundo nodo esos dos bloques NO aplican** y se leen como restos del
-   otro acto.
+**La segunda mitad de la verificacion 2 ya no se puede cumplir por la ruta que el plan escribio.**
+No por un descuido de hoy: porque **el adelanto de la fase 01 saco el bloque del nodo que muere en
+el acto I**. Los cuatro textos que la medicion contradice, **citados enteros y ninguno reescrito**:
+
+| donde | que da por hecho | que mide el archivo HOY |
+|---|---|---|
+| `OP-D-07`, `verificacion` 2 | el bloque *viaja entero al superviviente del acto I* | el bloque **no esta** en el nodo que muere |
+| `OP-M-03-I`, `preservar` | *del que muere, ya destejido: EL BLOQUE DEL PUNTO BRILLANTE entero, pasos 5 a 9* | **el que muere ya no lo trae**: **0 de 5** |
+| `OP-M-03-I`, `verificacion` 3 | *el bloque del punto brillante esta entero y es identificable como bloque: la frontera del 1298 lo necesita nombrado* | esta entero **y es identificable**, pero **en un tercer nodo** que no es ninguno de los dos de `OP-M-03-I` |
+| `FRONTERAS_DECLARADAS.md` **linea 82**, del **12 ago 2026** | *llega por el destejido `OP-D-07` y se conserva entero en el superviviente del acto I* | **hoy no llega por ahi, porque ya no sale de ahi** |
+
+> **LA FRONTERA DEL 1298 NO ESTA PERDIDA: ESTA EN OTRO SITIO DEL QUE EL PLAN DICE.** Su lado del
+> punto brillante vive **entero**, con `fuente` `Traction` **sola**, en un nodo propio y enlazado.
+> **Lo que ya no se sostiene es la RUTA escrita, no el contenido.**
+
+**Decidir si el lado se queda donde esta, si viaja al superviviente en el acto I, o si la frontera
+se re-declara entre otros dos nodos, es una decision de la fase 03 y de la mesa.** Se trae como
+**PARADA** y **no se arregla aqui**.
 
 ---
 
-## 8. PENDIENTES DE DOCTRINA
+## 5. EL PRECEDENTE, HALLADO DESPUES DE ESCRIBIR EL REGISTRO Y EN LA MISMA VUELTA
 
-1. **El desajuste 17 contra 16 de `planificacion_recoleccion_datos`**: `NO SE RELLENA`. **Hueco
-   nombrado**; decidirlo **exige la fuente, que esta fuera del repo**. Queda como **guarda `B9`** del
-   instrumento para que nadie lo cierre por descuido.
-2. **La costura que `OP-D-09` NO cura**: la senal de bloque del nodo **no cayo ni una decima** (56,7
-   antes y despues), porque **lo que se quito era el indice y el bloque que la senal detecta esta
-   DENTRO del metodo**, que la operacion tenia prohibido tocar. **Queda anotada, sin dueno: ninguna
-   operacion abierta la reclama.**
-3. **`MIN_BLOQUE = 2`** sigue **intacto** y su umbral acompanante **sigue pendiente del fundador**.
-4. **Las aristas que faltan para la fase 04**: el **599**, el **233** y ahora el **2695**. **El 784
-   NO entra**, porque su arista ya existe. Y sigue el **enlace mutuo del 494**, re-verificado hoy.
-5. **Las dos candidatas paso a nodo del paso 10** de `planificacion_recoleccion_datos`: **fase 04**,
-   sin escribir, y esta operacion **no las escribio** (`aristas_nuevas` vacio).
-6. **La medicion de la tasa de costura por longitud** que la ficha del gradiente encarga: **no es de
-   esta fase**. Nombrada para que no se pierda.
+**Se declara la secuencia en vez de disimularla**: el registro de `OP-D-07` se escribio primero, y
+**despues** encontre que **esta pagina ya habia nombrado esta especie TRES veces**, con **el mismo
+metodo** (medir el nodo de hoy, hallar la operacion que se llevo el bloque con `git log --follow`,
+**y decirlo con la medicion delante**). El precedente **se anadio debajo del registro y no dentro**,
+porque *una correccion que tapa lo que corrige no se puede auditar*.
 
----
+| donde, en `02_DESTEJIDOS.md` | que dice, leido hoy |
+|---|---|
+| linea **251** y linea **292**, `OP-D-01`, vuelta 32 | *el destejido del pariente, **CONSUMIDO, y se dice con su medicion*** / *el destejido que esta operacion pedia **ya esta consumido*** |
+| lineas **798** a **805**, `OP-D-03`, vuelta 34 | *DOS YA ESTABAN **CONSUMIDAS POR LA FASE 01***, con su tabla y las operaciones que se llevaron los bloques |
+| linea **1773**, `OP-D-05`, vuelta 40 | *Ya se lo llevo `OP-F-04-HOR`, commit `2bd8dd76`, **medido con `git log --follow` y no supuesto**. Es el mismo caso que `OP-D-03`*. **Y esa operacion quedo `SELLADA`** (linea **1765**) |
 
-## 9. LOS DISCUTIBLES MARCADOS, ANTES DE SABER SI ACIERTO
+> **LO QUE ESTO SIGNIFICA, SIN ESTIRARLO: NO HACE FALTA DOCTRINA NUEVA PARA LA MITAD DE LA
+> CIRUGIA.** Un destejido consumido por la fase 01, medido y con su commit nombrado, **es una forma
+> ya escrita de cerrar**, y `OP-D-05` la uso para quedar **`SELLADA`**. Aqui el bloque ademas **no
+> se disolvio: fue a un nodo propio**, que es **mas** trazable, no menos.
 
-**D1. La excepcion de clase sostenida CONTRA una senal que dispara.** `principio_calidad_mvp` queda en
-**7** pasos y entra por la excepcion de `OP-F-01` **aplicada por su criterio escrito** (superar el
-estandar **sin narracion repetida dentro**). **Pero el instrumento de costuras DISPARA hoy sobre el
-por bloque** (`sim_bloque` **45,8**, corte tras el **5**). La sostengo con **lectura textual propia**
-(los siete pasos son **un solo arco**) y con el **precedente de `OP-D-04`** (linea 1755), y **registro
-la senal como CITA y no como veredicto**. **Discutible: si el auditor lee que una senal que dispara
-tumba la excepcion, el registro de `OP-D-01` cae por este punto.**
-
-**D2. La `A` del puesto 788 que hoy resuelve sobre un par que `LD-74` leyo `D`.** Al absorber
-`OP-D-02` el **medio** del camino dentro de un **extremo**, el resolutor de `P.1` hace que dos
-registros digan cosas distintas del mismo par resuelto. **Por la regla escrita no hay nada que
-corregir** (la cola post fusion admite **solo `B` y `C`**), asi que lo **anoto para la fase 04** y
-**no lo toco**. **Discutible: si el auditor lee que esto obliga a releer el 788, mi lectura de que la
-regla lo excluye esta mal.**
-
-**D3. Contar los pares internos de `OP-D-02` contra DOS registros y no uno.** Mi instrumento reporta
-**2 sin veredicto** porque lee solo el archivo de veredictos; **los tres que faltaban son `LD-72`,
-`LD-73` y `LD-74`**, que **por diseno no estan ahi**. Digo **6 de 6** y **dejo la salida con su 2 sin
-tocar**. **Discutible: si el auditor lee que las `LD` no valen para este punto, `OP-D-02` no cumple el
-punto 5 y su registro cae.**
-
-**D4. La resolucion de la `pregunta_pendiente` de `OP-D-08` como MARCO PROPIO.** Es **la unica pieza
-del reparto que la operacion dejo abierta** y la resuelvo yo, apoyado en la `condicion_activacion` 3
-del propio nodo. **Discutible en las dos direcciones: si es solo un encabezado repetido, la frase
-debia irse con su bloque y mi destino 12 lleva material que no debia sobrevivir.**
-
-**D5. Donde aterriza ese marco: adosado al paso 4 y no como paso nuevo.** Uso la condicion escrita de
-`OP-D-02` (adosar si no cambia el objeto). **Discutible: si el auditor lee que si le cambia el objeto
-al paso 4, tenia que haber abierto paso nuevo y el resultado seria de trece pasos y no de doce.**
-
-**D6. Las tres lineas del resultado de `OP-D-08` que NO son verbatim.** Los destinos **1** (la fusion
-de las dos ordenes de imprimir), **2** (la sesion despojada de su orden) y **3** (la clausula del
-post-it despojada de la suya) **llevan redaccion mia**. **Discutible: es donde mas facil es haberme
-llevado media linea de contenido propio sin verlo.**
-
-**D7. El 784 en `D` cuando el destejido ACERCO los dos textos.** Lo publico en contra de mi propia
-conclusion. **Discutible: quien lea el recorrido de los nueve bloques como la misma forma del paso 1
-del donante puede decir `A` por contencion.**
-
-**D8. El 2695 en `D` cuando la propia operacion aviso de que el riesgo subiria**, y ademas **publico
-que la medicion apunta al otro lado** (el paso del indice que mas se solapaba era el 3, y se fue).
-**Discutible: estoy contradiciendo un aviso escrito de la operacion con una medicion mia.**
-
-**D9. La senal de `OP-D-09` que no cae, publicada como costura sin dueno.** **Discutible: si el
-auditor lee que una operacion que deja la senal intacta no puede declararse HECHA, el registro de
-`OP-D-09` cae.**
-
-**D10. Escribir el REGISTRO DE OPERACION HECHA en `OP-D-08` y `OP-D-09`.** El encargo pide para ellas
-un *registro de cierre* y **no dice literalmente** *registro de OPERACION HECHA*, que si lo decia para
-`OP-D-01` y `OP-D-02`. **Lo escribo igual** por la vara del propio encargo (*si y solo si todo lo
-material cumple*) y para no cargarselo a la vuelta siguiente. **Discutible: si no estaba cubierto, la
-correccion es quitar los dos parrafos, y el texto viejo queda entero delante para poder hacerlo.**
-
-**D11. No haber tocado las condiciones en ninguna de las dos operaciones.** Las dos legislan **pasos**
-y solo pasos, y en `OP-D-08` la condicion 3 es ademas **la evidencia** de mi resolucion. **Discutible:
-si el auditor lee que un destejido alcanza al campo `condiciones_activacion`, las dos operaciones
-quedaron a medias en ese campo.**
+> **Y LO QUE EL PRECEDENTE NO CUBRE, que es donde la PARADA se queda entera:** en `OP-D-03` y en
+> `OP-D-05` **nada aguas abajo dependia de DONDE aterrizara el bloque**. **Aqui si**, y son dos
+> textos los que lo escriben. **El precedente cierra la cirugia; NO cierra la ruta.**
 
 ---
 
-## 10. PREGUNTAS QUE TRAIGO, sin adivinar la respuesta
+## 6. EL CIERRE DE LA FASE 02, DECLARADO MIDIENDO
 
-1. **`OP-D-07` NO SE ABRIO**, como el encargo ordena. Su `depende_de` nombra a `OP-M-03`, **cuya nota
-   dice ADJUDICADA pero no trae registro de HECHA**, y **si la adjudicacion de una mesa satisface un
-   `depende_de` es una lectura que nadie ha hecho con el expediente delante**. **No la hice porque el
-   encargo lo prohibia expresamente**, y la traigo tal cual: **es la unica pieza que queda entre la
-   fase 02 y su cierre**.
-2. **Con `OP-D-08` y `OP-D-09` hechas, la fase 02 tiene `OP-D-07` como unica operacion sin ejecutar.**
-   **No doy por hecho que eso cierre la fase**: no he medido si el `00_INDICE` pide algo mas de la 02,
-   y no lo invento.
+`python scripts/loop/vuelta46_cierre_fase02.py` (**exit 0**, `SALIDA_V46_CIERRE_FASE02.txt`).
+
+**LAS NUEVE OPERACIONES DE LA FASE, con su registro:** `OP-D-01` a `OP-D-09`, **las nueve en estado
+`LISTA`**. **OCHO tenian ya registro de cierre escrito** en una de las dos formas de la campana (la
+frase `REGISTRO DE OPERACION HECHA` acunada en la vuelta 30, en `OP-D-01`, `OP-D-02`, `OP-D-06`,
+`OP-D-08` y `OP-D-09`; el encabezado `CERRADA` o `SELLADA` de la forma anterior, en `OP-D-03`,
+`OP-D-04` y `OP-D-05`). **La unica sin registro era `OP-D-07`, y lo recibio hoy.**
+
+**EL CRITERIO DE HECHO**, copiado de `08_VERIFICACION.md`: linea **25**, *02 DESTEJIDOS: los quince
+congelados releidos; cada perdida en el bloque del que proviene*; y linea **9**, *UNA FASE ESTA
+HECHA CUANDO SU VERIFICACION SE CAERIA SI EL FALLO VOLVIERA*.
+
+**LOS CONGELADOS, CONTADOS HOY SOBRE EL ARCHIVO ENTERO** (detector: la razon abre con *NO SE JUZGA*,
+*NO PUEDO JUZGAR* o *CONGELAD*, el mismo del verificador de la vuelta 45): **UNO sobre 3.388**, el
+**1190** (`formalize_advisory_board` contra `identificar_consejo_asesores`), **que es de la junta
+asesora y NO de esta fase**. **Los quince que el criterio nombra estan releidos.**
+
+**GATE 0 Y SUITES, CORRIDOS EN ESTA VUELTA:**
+
+| que | como salio |
+|---|---|
+| **Gate 0**, ciclo de **TRES** comandos | los tres **exit 0**: `GATE 0: OK`, **71** etiquetas reaplicadas, **6** assets sincronizados |
+| el comando **4** | **NO corre**: el censo **no se movio**, porque no se toco ningun nodo |
+| **arbol tras el ciclo** | **byte igual a `HEAD`**. `phase1_run_log.json` respaldado antes y **comprobado byte igual despues**: no hizo falta restaurarlo |
+| **suite del motor** | **25 de 25**, exit 0 |
+| **suite web** | **80** ficheros, **1.030** pasadas y **3** saltadas, exit 0 |
+| **`tsc --noEmit`** | **CERO** lineas, exit 0 |
+
+### LO QUE NO CIERRA, DECLARADO CON LA MEDICION DELANTE Y NO DECLARADO CERRADO
+
+1. **LA MITAD DIFERIDA DE LA VERIFICACION 2 DE `OP-D-07`**: la **PARADA** de la seccion 4.
+2. **EL MARCADOR DEL `00_INDICE` ESTA RANCIO.** Es una tabla de prosa que **ningun instrumento
+   valida**, la especie exacta contra la que se escribio el cuarto renglon de la regla 1.
+   Contrastada hoy fila por fila contra `OPERACIONES.jsonl`, **CUATRO filas no calzan**:
+
+| fila | el indice publica | **mido hoy** |
+|---|---:|---:|
+| operaciones (total) | 69 | **71** |
+| **02 DESTEJIDOS** | **7** | **9** |
+| 0 CODIGO | 5 | **7** |
+| 05 SANEO | 12 | **10** |
+
+   **La de esta fase es la que mas importa: el indice dice SIETE operaciones y el fichero tiene
+   NUEVE**, porque `OP-D-08` y `OP-D-09` nacieron despues. **Y la tabla de orden de fases del mismo
+   indice repite el error en su celda de HECHO**, donde dice *las siete cirugias hechas*. **Se
+   declara y NO se reescribe**: rehacer ese marcador es un encargo propio con su instrumento, no un
+   apano al margen.
 
 ---
 
-## 11. CONDICIONES DE PARADA: NINGUNA SE CUMPLE
+## 7. LA FASE 03 NO SE ABRE, Y VA CON LA CITA DELANTE
 
-- **Doctrina nueva:** NO. La pregunta de `OP-D-08` se resolvio **con las dos ramas que la propia
-  operacion ya legislaba**, no con una regla nueva.
-- **Contradiccion con regla vigente o cifra publicada con su corte:** NO. Las discrepancias con cifras
-  escritas (aristas y senal) son **de otro corte** y van declaradas, no resueltas copiando.
-- **Decision de fundador:** NO. `MIN_BLOQUE` intacto, **cero contenido propio borrado**, cero ramas
-  fundidas.
-- **Fallo tecnico repetido:** NO. **Cero rojos** en toda la vuelta: dos ciclos Gate 0 completos por
-  operacion, tres suites cada vez, todos exit 0.
-- **Campana consumada:** NO.
+**El punto 6 del encargo dice que se ejecuta la primera operacion de la fase 03 por su orden
+escrito, y que si el orden no esta escrito o exige decidir, NO se abre.** Medido
+(`SALIDA_V46_ORDEN_FASE03.txt`):
 
-**EL BUCLE SIGUE.**
+> **EL PRIMER PUESTO ESTA EMPATADO A TRES**: `OP-M-02-PROG`, `OP-M-03-I` y `OP-U-01`, **las tres con
+> `orden` = 1**.
+
+Y **la pagina de la fase no escribe ninguna lista de orden**: `03_FUSIONES.md` tiene **cero** lineas
+que fijen uno, y sus encabezados son de contenido (*las dos reglas de ejecucion*, *lo que no entra
+aqui*), no de secuencia. El `00_INDICE` ordena **fases**, no operaciones dentro de la fase 03.
+
+**Asi que la fase 03 NO SE ABRE.** Y aunque el empate se deshiciera a favor de `OP-M-03-I`, **esa
+tampoco seria ejecutable hoy**: su `preservar` y su `verificacion` 3 son **dos de los cuatro textos
+que la PARADA contradice**.
+
+---
+
+## 8. EL ESTADO AL CIERRE, RECOMPUTADO AL CIERRE (regla 1, segundo renglon)
+
+**Recomputado al cierre y no copiado de la apertura.** Da **identico**, y **ese es el resultado
+correcto**: esta vuelta no movio un nodo ni un veredicto.
+
+| | apertura de la vuelta 46 | **al cierre, recomputado** | lo que lo movio |
+|---|---|---|---|
+| marcador | A 575, B 79, C 8, D 2.726, n 3.388 | **A 575, B 79, C 8, D 2.726, n 3.388** | **nada** |
+| grafo | 3.853 / 3.524 / 329 / 16.898 | **3.853 / 3.524 / 329 / 16.898** | **nada** |
+| cola de costuras | 1.494 sobre 3.524 | **1.494 sobre 3.524** | **nada** |
+| operaciones | 71, dependencias rotas 0 | **71, dependencias rotas 0** | **nada** |
+| congelados | 1 (el 1190) | **1 (el 1190)** | **nada** |
+
+**Tasa por dominio, vara por tramo y figuras: NO se publican en esta vuelta, y se dice por que.**
+Son cifras del **cribado**, y la campana esta en **ejecucion por fases** (regla 7: *por fase en la
+ejecucion*). **El marcador no se movio**, asi que ninguna de esas cifras pudo moverse tampoco.
+
+---
+
+## 9. CORRECCIONES Y MANEJOS DECLARADOS, todos vistos ANTES de publicar
+
+**Ninguno movio una cifra. Los cinco van con nombre y el texto viejo queda a la vista.**
+
+1. **El emparejador contra el campo `preservar` daba 0 de 5, y eso NO era una ausencia: era el
+   emparejador.** `preservar` es una **parafrasis en prosa**, en infinitivo y sin acentos; los pasos
+   son imperativos con acentos. Corregido a **raices de 5 letras**: **3 de 5 mecanicos**, y **los
+   dos que la parafrasis REORDENA van declarados como LECTURA MIA**, con los dos textos impresos uno
+   al lado del otro. **5 de 5 cubiertos, 3 por mecanica y 2 por lectura declarada.**
+2. **Buscar solo la frase `REGISTRO DE OPERACION HECHA` daba 5 de 9**, y eso tampoco era ausencia de
+   registro: **esa frase se acuno en la vuelta 30**, y `OP-D-03`, `OP-D-04` y `OP-D-05` cerraron
+   **antes**, con encabezado `CERRADA` o `SELLADA`. **Se miden LAS DOS FORMAS y se publican por
+   separado, sin fundir una en otra.**
+3. **Mi prueba de deprecacion usaba un campo `estado` que el nodo no tiene.** El campo real es
+   `deprecado`, medido hoy: **presente en 329 ficheros y siempre `True`**. Corregido antes de contar.
+4. **El campo `fuente` lleva un `|`, y un `|` crudo parte una tabla markdown en columnas falsas.**
+   Visto en la corrida seca **antes de escribir nada**; escapado **en un solo sitio** del generador.
+5. **La primera version del generador de la TAREA 1 pegaba la marca de linea al final de la celda** y
+   **duplicaba la cita en tres filas**. Visto **antes de commitear**; la linea pasa a **columna
+   propia** y el motivo queda escrito en el comentario del script.
+
+**Y UN LIMITE DECLARADO, que no es correccion:** `OP-D-01` y `OP-D-02` **comparten una sola seccion**
+en `02_DESTEJIDOS.md` (la de la vuelta 45, que las verifica juntas), asi que mi localizador las
+apunta **a la misma linea**. **No son dos secciones contadas una vez.**
+
+---
+
+## 10. PENDIENTES DE DOCTRINA
+
+**UNO, y es estrecho a proposito** (la mitad ancha la cubre el precedente de la seccion 5):
+
+> **QUE PASA CON UN `depende_de` Y UN `preservar` QUE APUNTAN A UNA RUTA QUE OTRA FASE YA DESHIZO.**
+> El plan tiene escrito como cerrar **un destejido consumido** (`OP-D-01`, `OP-D-03`, `OP-D-05`).
+> **Lo que no tiene escrito es que hacer cuando lo consumido era ademas el CAMINO por el que una
+> operacion posterior esperaba recibir un bloque**, y esa operacion posterior lo tiene escrito en
+> dos campos y en una pagina de fronteras. **No invento la regla: registro lo mejor sostenido (el
+> bloque esta entero, medido y enlazado), lo marco PENDIENTE DE DOCTRINA, y sigo**, que es lo que la
+> regla 5 manda.
+
+---
+
+## 11. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+
+**Doce.** Cada uno con la rama que elegi y la cita con la que la elegi.
+
+- **D1. NO EJECUTAR NINGUNA CIRUGIA.** El encargo mandaba simulacion, cirugia y caso positivo.
+  **Yo no toque un nodo**, porque el corte ya estaba hecho. **Lo discutible es si eso es obediencia
+  o incumplimiento.** Mi rama: **obediencia**, con el precedente de `OP-D-05` (seccion 5) y con la
+  regla 4 del `EJECUTOR.md` delante.
+- **D2. NO ESTRENAR LA PALABRA `OPERACION HECHA` PARA `OP-D-07`.** Las verificaciones 1 y 3
+  **cumplen**; la 2 cumple **en su mitad material** y no en la diferida. **Podria defenderse que
+  basta.** Mi rama: **no se estrena**, y si el auditor lee que basta, **se escribe en la vuelta
+  siguiente con su acta detras**.
+- **D3. DECLARAR LA PARADA EN VEZ DE TRATARLA COMO SIMPLE TRABAJO DIFERIDO DE LA FASE 03.** El acta
+  de la 45 (linea 10.086) ya la llamaba **DEFERIDA**. **Lo discutible es si mi medicion la asciende
+  a PARADA o si sigue siendo el mismo diferido de siempre.** Mi rama: **PARADA**, porque lo que mido
+  no es que falte hacerlo, **es que la ruta escrita ya no existe**.
+- **D4. AÑADIR EL PRECEDENTE DEBAJO DEL REGISTRO EN VEZ DE REESCRIBIR EL REGISTRO.** Mi rama: debajo
+  y declarado, por *una correccion que tapa lo que corrige no se puede auditar*. **Se puede sostener
+  que un registro que nace incompleto debio rehacerse entero.**
+- **D5. NO ABRIR LA FASE 03 POR EL EMPATE A TRES EN EL CAMPO `orden`.** **Contra-argumento real:
+  en la fase 02 el criterio NO era el campo `orden` sino CONGELADOS LIBERADOS** (adjudicado en el
+  acta de la vuelta 44), asi que **puede que la fase 03 tenga tambien un criterio propio que yo no
+  encontre y que deshaga el empate**. Mi rama: **no abrir**, porque el punto 6 del encargo manda no
+  abrir cuando el orden **exige decidir**, y buscar un criterio no escrito es decidir.
+- **D6. DECLARAR EL MARCADOR RANCIO DEL `00_INDICE` Y NO ARREGLARLO.** Mi rama: **declarar**. **Se
+  puede sostener que con el instrumento ya escrito arreglarlo costaba una linea** y que dejarlo mal
+  otra vuelta es peor. **Lo dejo porque reescribir una pagina que el encargo no me mando es
+  ejecutar mas alla de lo escrito.**
+- **D7. LA FORMA DE LOS TRES COMMITS, ADAPTADA.** El patron asentado es *lectura, cirugia, costuras*.
+  **Sin cirugia lo cambie a** *lectura y hallazgo, ciclo verde y cierre medido, registro y parada*.
+  **Se puede leer como que estrene una forma.**
+- **D8. MEDIR LA APERTURA ANTES INCLUSO DE LA TAREA 1.** Mas estricto que lo pedido, con el
+  precedente de la vuelta 45. **Nadie lo mando.**
+- **D9. LEER LOS TRES PARES (843, 860, 1298) CUANDO LA OPERACION NO MANDA NINGUNA RELECTURA.** Los
+  lei y **no movi ninguno**. **Se puede sostener que leer sin mandato es alcance que me tome.**
+- **D10. CONTAR "8 DE 9 CON REGISTRO" FUNDIENDO DOS FORMAS DISTINTAS DE REGISTRO.** Las publico por
+  separado en la tabla, **pero el total las suma**. **Se puede sostener que son varas distintas y
+  que el total no deberia existir.**
+- **D11. LOS DOS PASOS QUE NINGUNA MECANICA ADJUDICA, RESUELTOS POR LECTURA MIA DECLARADA.** Imprimo
+  los dos textos y digo que estan reordenados y en infinitivo. **Es una lectura, no una medicion.**
+- **D12. ATRIBUIR LA CIRUGIA A `OP-F-04-WEI` / `1eef1c6b`.** La evidencia son **tres**: `git log
+  --follow`, `01_FUENTES.md` linea 982 y `INDICE_ROJO_DECLARADO.jsonl`. **Se puede pedir una cuarta.**
+
+---
+
+## 12. LAS PREGUNTAS QUE NO ADIVINO Y TRAIGO
+
+1. **¿Se marca `OP-D-07` como HECHA?** Las verificaciones 1 y 3 cumplen medidas y la 2 cumple en su
+   mitad material. **No lo decido yo.**
+2. **¿Donde queda el lado del punto brillante de la frontera del 1298?** Tres ramas escritas y
+   ninguna elegida: **(a)** se queda en `puntos_brillantes_antes_del_pivote` y la frontera se
+   re-declara entre ese nodo y la puerta; **(b)** el bloque viaja al superviviente en el acto I y el
+   nodo propio muere; **(c)** la frontera se re-declara entre otros dos nodos. **Es decision de la
+   mesa `OP-M-03` y de la fase 03, con el expediente delante.**
+3. **¿Cual es la primera operacion de la fase 03?** Tres empatadas en `orden` = 1 y ninguna pagina
+   que las desempate. **¿Tiene la fase 03 un criterio propio, como la 02 tenia CONGELADOS
+   LIBERADOS?**
+4. **¿Quien rehace el marcador del `00_INDICE`, y con que instrumento?** Cuatro filas rancias
+   medidas hoy, y la tabla de orden de fases repite el error en su celda de HECHO.
+
+---
+
+## 13. CONDICIONES DE PARADA, RECORRIDAS
+
+| condicion | se cumple |
+|---|---|
+| **doctrina nueva** | **NO** para la cirugia (precedente escrito, seccion 5). **SI hay un PENDIENTE DE DOCTRINA estrecho**, seccion 10, registrado sin parar como manda la regla 5 |
+| **contradiccion sin regla de correccion** | **SI, UNA**: la de la seccion 4. **Va como PARADA, escrita y sin arreglar** |
+| **decision de fundador** | **NO**. `MIN_BLOQUE` intacto, cero contenido borrado, cero ramas fundidas, cero nodos tocados |
+| **fallo tecnico repetido** | **NO**. Gate 0 en verde, tres suites en verde, cero rojos |
+| **credito roto** | **NO** por mi parte: cero cifras publicadas sin medir en esta vuelta |
+| **campana consumada** | **NO**. La fase 03 entera por delante |
+| **credenciales** | no hicieron falta |
+
+**EL BUCLE SIGUE**, con la PARADA de la seccion 4 y las cuatro preguntas de la seccion 12 sobre la
+mesa del auditor.
