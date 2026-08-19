@@ -2484,3 +2484,64 @@ El par **344** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 | censo esperado | ficheros **3.853** sin moverse, vivos **3.529 menos 1**, deprecados **324 mas 1** |
 
 **Y EL CASO POSITIVO ANTES, que TIENE que caer:** `python scripts/loop/vuelta39_caso_positivo.py docs/loop/PLAN_V41_ACTO344.json`, sellado en `docs/loop/SALIDA_V43_ACTO344_CASO_ANTES.txt`: **16 PASAN y 17 CAEN**, **exit 1**, con la conservacion aparte en **4 vivos y 1 muerto**.
+
+### `OP-D-06` ACTO 344 CERRADO: **LA FUSION EJECUTADA, Y EL CICLO PASA DE TRES COMANDOS A CUATRO** (19 ago 2026, vuelta 43)
+
+`python scripts/loop/vuelta39_fundir.py --plan docs/loop/PLAN_V41_ACTO344.json --ejecutar`, salida sellada en `docs/loop/SALIDA_V43_ACTO344_EJEC.txt` con **exit 0** y **LAS TRECE GUARDAS EN VERDE**.
+
+#### EL HALLAZGO VA PRIMERO PORQUE CAMBIA EL PROCEDIMIENTO: **LA SUITE WEB CAYO, Y TENIA RAZON**
+
+`readiness.test.ts` fallo con **UNA divergencia y ni una mas**: *`plan_de_adquisicion_acquire`: Python=general, TS=accion_clientes*. **No era un fallo del grafo ni del codigo**: la fusion cambio el resumen del superviviente y con el **su familia**, y `engine/node_families.json` es un **DERIVADO que el ciclo de TRES comandos NO regenera**.
+
+**LA REGLA QUE LO CUBRE YA ESTABA ESCRITA Y VIGENTE, y lo que estaba corto era el atajo del encargo.** `docs/plan/08_VERIFICACION.md`, lineas **100 a 119**, leidas hoy, define el **COMANDO 4** (`python engine/plan_readiness.py`), **condicional**, que aplica *"solo cuando la operacion CAMBIA EL CENSO (crea o deprecia un nodo)"*, y manda que **corra ANTES del 3** porque el 3 (`sync_assets_web.py`) es quien copia el derivado a `web/lib/assets`. **Y predice, con estas palabras, exactamente lo que paso hoy:**
+
+> *saltarselo deja el derivado viejo y la que lo caza es `readiness.test.ts`, no el Gate: ninguna de las guardas de `Gate 0` mide familias.*
+
+**TODA FUSION DEPRECIA UN NODO, ASI QUE EL COMANDO 4 APLICA A TODAS LAS DE ESTA OPERACION.** Se corrio (`docs/loop/SALIDA_V43_COMANDO4_344.txt`, exit 0) y despues se **re-corrio el comando 3**, y con eso la suite web pasa **1.030 de 1.030**.
+
+> **Y LA DERIVA SE MIDIO EN VEZ DE SUPONERSE, que es lo que evita agrandar un hallazgo.** La sospecha razonable era que los actos **285**, **331** y **341** hubieran dejado el derivado viejo tambien. Respaldado el fichero **ANTES** de correr el comando 4 y comparado **DESPUES**, **cambia UN SOLO NODO**: `plan_de_adquisicion_acquire`, de `general` a `accion_clientes`. **Los otros 3.852 salen identicos.** O sea que **aquellos tres actos NO produjeron deriva de familia**: el conteo se quedo en **3.853** (los deprecados siguen en el grafo, asi que la cuenta de claves nunca se movio) y **ningun nodo cruzo frontera hasta hoy**. **LA OMISION ERA REAL Y EL DANO NO SE HABIA MATERIALIZADO.** Se dice asi y no se agranda. Reparto final del derivado: **151 `accion_clientes`, 3.584 `general`, 118 `viabilidad_economica`**.
+
+| lo medido al ejecutar | como salio |
+|---|---|
+| **censo (guarda 13)** | ANTES **3.853** ficheros, **3.529** vivos, **324** deprecados; DESPUES **3.853**, **3.528**, **325**: **OK** |
+| **enlaces** | **16.885** antes, **16.888** despues, **mas 3 exactos**, que son las **3 vistas reciprocas** de la simetrizacion. Sin resto |
+| **el contenido (guardas 1 a 7)** | **VERBATIM 17 de 17**, cobertura de pasos **14 de 14** y de condiciones **3 de 3**, `preservar_literal` **10 de 10** (con **`escalonada`** dentro, que es la pieza que el archivo mando salvar) y rastros **5 de 5** |
+| **el cableado (guardas 8 a 12)** | redirecciones **3 de 3**, deprecados que nombran **0**, `P.16` **CERO duplicadas fabricadas**, cero auto-arista y cero duplicada tras resolver, **titulo y etiqueta SIN TOCAR** |
+| **`reanclar_por_resolutor.py` ENTRE la fusion y `run_phase1`** | **EN BLANCO** |
+| **la simetrizacion, EXACTA** | **3 de 3** en el log, **0 de otros nodos**, faltan 0 y sobran 0, y las **3 releidas en el fichero** del superviviente |
+| **ciclo Gate 0, AHORA DE CUATRO COMANDOS** | `run_phase1` **GATE 0: OK** con sus **veinte** renglones en `[OK]` (paso 5: **1 nodo actualizado, 2 vistas en `nodos_siguientes` y 1 en `nodos_previos`**; universo **3.528 activos y 325 deprecados**), `etiquetas_de_cara --aplicar` **71 etiquetas**, **`plan_readiness.py` (COMANDO 4)**, y `sync_assets_web` con `master_graph.json` de **8.138.050 bytes** sha256 **`f80de4502e4c`** y `node_families.json` de **177.925 bytes** sha256 **`7a98d1852fd0`** |
+| **las suites, tras el comando 4** | motor **25 de 25**, web **80 ficheros con 1.030 pasadas** y 3 saltadas, `tsc` **cero lineas**. Los tres **exit 0** |
+| **caso positivo antes y despues** | ANTES **16 PASAN y 17 CAEN** (exit 1, y **tiene que caer**); DESPUES **34 PASAN y 0 CAEN** (exit 0), conservacion **5 vivos y 0 muertos** |
+
+### LOS REGISTROS QUE NO SON EL GRAFO: **TRES VIVOS, Y DOS NI SIQUIERA ESTAN EN EL REPOSITORIO**
+
+`scripts/loop/vuelta40_registros_no_grafo.py`, corrido **ANTES** de fundir (`docs/loop/SALIDA_V43_ACTO344_REGISTROS.txt`).
+
+| el registro vivo | a quien nombra | que pasa con el |
+|---|---|---|
+| `engine/projects_local/97140470.json` | al **superviviente** | **NO ESTA EN EL REPOSITORIO**: `.gitignore` linea 9 declara `engine/projects_local/` entero. Es un proyecto local de esta maquina |
+| `engine/sessions/2947a1a5.json` | al **absorbido** | **NO ESTA EN EL REPOSITORIO**: `.gitignore` linea 8 declara `engine/sessions/`. Es una sesion local, y el id absorbido **resuelve por el alias** que la fusion escribio en el superviviente |
+| `docs/PASO_NODO_CANDIDATOS.jsonl` | a los **dos** | salida de su propio instrumento **con corte viejo**, y se ve al digito: la entrada dice `"pasos_madre": 12` cuando el nodo mide **7** desde `OP-F-04-WEI`. **Ya quedo declarado SIN LECTORES en el acto 285** (cero lectores en `scripts/`, `web/lib`, `web/app` y `engine/`) |
+
+**Y LA COMPROBACION DIRIGIDA sobre la especie que si tumbo el Gate 0 en la vuelta 39 da CERO: los NUEVE `bridges_aprobados.json` nombran a los nodos 0 veces.**
+
+### EL INSTRUMENTO DE COSTURAS SOBRE EL RESULTANTE: **CITA, Y LA SENAL SUBE POCO**
+
+`python scripts/costuras_internas.py` corrido DESPUES de fundir (`docs/loop/SALIDA_V43_COSTURAS_TRAS_FUSION_344.txt`, **exit 0**): la cola baja de **1.495** a **1.494** nodos, sobre **3.528** activos, el **42,3 por ciento**. **Esta vez la cola SI se movio, y por el motivo limpio: el absorbido estaba DENTRO y salio al deprecarse.** Es el primer acto de los cuatro de esta vuelta en el que eso pasa.
+
+`python scripts/loop/vuelta42_senal_antes_despues.py --nodo plan_de_adquisicion_acquire --commit 4d2357fb --nombre "OP-D-06 acto 344"`, sellado en `docs/loop/SALIDA_V43_ACTO344_SENAL.txt`:
+
+| | pasos | pareja | bloque | contra el umbral 44 |
+|---|---:|---:|---:|---|
+| **antes**, leido de git `4d2357fb` | 7 | 52,6 | **48,4** (corte tras 4) | **SOBRE** por **mas 4,4**: **YA ESTABA DENTRO** |
+| **despues**, del fichero de hoy | 6 | 50,6 | **50,1** (corte tras 4) | **SOBRE** por **mas 6,1**: **sigue DENTRO** |
+
+**LA FUSION NO ENCENDIO LA SENAL: el nodo ya estaba dentro antes de fundirse y sigue dentro. La cita no es nueva.** El movimiento es de **mas 1,7 puntos**, y **con el corte quieto en 4**, que es lo que lo hace comparable: es la misma particion antes y despues, y la subida es el patron mecanico ya adjudicado (un paso menos y mas denso). **Contraste util con el acto 341 de esta misma vuelta**, donde la senal **bajo 0,7** porque **el corte se movio**: cuando el corte se queda quieto la senal sube, y cuando se mueve la comparacion cambia de objeto.
+
+**Y LA LECTURA TEXTUAL, que es la que decide: NO HAY COSTURA.** La cita de hoy es **pareja 3 y 6** (*Establece antes de cada prueba que resultado la hace pasar o fracasar* contra *Asegurate de que todo lo que activa a un cliente este listo antes de lanzar la adquisicion*, **50,6**, muy por debajo del umbral de 80) y **bloque con corte tras 4**: los pasos **1 a 4** preparan la prueba (anclas, tabla de tacticas, pasa o falla, instrumentacion) y los **5 y 6** la corren y la sostienen (lanzar escalonado con tope y escalado, y la plomeria de activacion lista). **El paso 5 lanza lo que los cuatro anteriores prepararon: CONTINUA en vez de volver a contar.** Comparten vocabulario (*prueba*, *lanzar*, *cliente*), no narracion. **La cita queda registrada en la cola y no despachada.**
+
+### LAS RELECTURAS POST FUSION Y EL REPARTO, comprobados al cierre
+
+**CERO pares B o C vuelven a la cola por este acto**: los cuatro terceros del archivo (**1131**, **1276**, **1287**, **1403**) son **los cuatro D**, medido en la lectura sellada. **El marcador de clases NO se mueve.**
+
+**EL REPARTO, comprobado y no supuesto:** la tabla de `P.13` da **17 de 17 piezas que VIAJAN y CERO que se pierden**, y la guarda 3 lo confirma contra `dataset/nodos` con **17 de 17 verbatim y 0 sobrantes**. **Y LAS DOS PIEZAS QUE EL ARCHIVO MANDO SALVAR ESTAN EN CASA, comprobadas por guarda y no por lectura:** `escalonada` figura en `preservar_literal` y la guarda 6 la encuentra en **`['pasos', 'resumen']`**; el tope bajo por prueba viaja en el mismo paso 5 del resultado. **Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026.**

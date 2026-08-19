@@ -47,11 +47,11 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 
 ## Conteos
 
-**1495 nodos** en la cola, sobre 3529 activos.
+**1494 nodos** en la cola, sobre 3528 activos.
 
 | dominio | nodos |
 |---|---:|
-| core | 653 |
+| core | 652 |
 | quality | 392 |
 | health_safety | 112 |
 | environmental | 84 |
@@ -71,7 +71,7 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 | p99 | 66.3 | 56.7 |
 | maximo | 86.6 | 72.6 |
 
-Nodos evaluados por bloques (4 pasos o mas): **2242**. Los de menos dan **NO APLICA**, que no es cero.
+Nodos evaluados por bloques (4 pasos o mas): **2241**. Los de menos dan **NO APLICA**, que no es cero.
 
 ## La franja 44 a 45: lo que el umbral viejo dejaba fuera
 
