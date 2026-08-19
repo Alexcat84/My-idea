@@ -1,0 +1,145 @@
+
+==============================================================================
+(a) LA NOMINA DEL ACTO 494, LEIDA DE LA TABLA SELLADA
+==============================================================================
+  nodo A: principio_calidad_mvp
+  nodo B: producto_minimo_viable
+  la tabla sellada trae 9 actos; este es el numero 7 de los nueve
+  los dos estan en la nomina de OPERACIONES.jsonl: SI
+
+  EL AVISO DE SOLAPE DEL PLAN, comprobado contra el fichero y no recordado:
+    > **AVISO DE SOLAPE, y hay que verlo antes de contar dos veces:**
+    > `producto_minimo_viable` y `principio_calidad_mvp` **aparecen aqui Y en
+    > `OP-D-01`**. La seccion 54.3 los cuenta como uno de los nueve actos de dos; el
+    > plan de cirugia los trata como **cura acoplada mayor**. **Es la MISMA pareja
+    > vista por dos instrumentos, no dos trabajos.**
+
+  ESTE ACTO ESTA NOMBRADO EN EL AVISO DE SOLAPE: SI, y por eso NO elige superviviente
+
+  EL REPARTO YA ESCRITO PARA ESTE ACTO, si lo tiene:
+    NINGUNO ESCRITO. Se resuelve con la regla adjudicada: cada
+    perdida al bloque del que proviene, y la que no tenga bloque
+    al superviviente.
+
+==============================================================================
+(b) QUE CITA EL INSTRUMENTO DE COSTURAS SOBRE LOS DOS NODOS
+==============================================================================
+  Fuente: docs/COSTURAS_INTERNAS.jsonl, LA COLA QUE EL INSTRUMENTO YA
+  ENTREGO. No se recalcula ni una cifra. EL INSTRUMENTO CITA Y NO JUZGA,
+  y desde la vuelta 41 su salida declara ademas que LA COLA GLOBAL NO ES
+  BASE DE LECTURA mientras el MIN_BLOQUE siga pendiente del fundador.
+  nodos en la cola entregada: 1493
+
+  principio_calidad_mvp                        CITADO por el instrumento
+      pasos 7 | pareja 51.2 (pasos [2, 3]) | bloque 45.8 | corte tras 5
+      disparo por pareja: False | por bloque: True | franja 44-45: False
+      paso A de la pareja citada: No asumas que el estándar de calidad de la industria, ni los requerimientos heredados de un cliente anterior, son lo que el mercado amplio valora; pruébalo empíricamente contra las necesidades reales de tus clientes.
+      paso B de la pareja citada: Lanza al mercado real, lo antes posible, versiones simplificadas o 'hacky' de las features complejas, aceptando que fallarán en algunos aspectos, y mide la reacción real de los clientes.
+
+  producto_minimo_viable                       CITADO por el instrumento
+      pasos 6 | pareja 50.3 (pasos [1, 2]) | bloque 45.8 | corte tras 2
+      disparo por pareja: False | por bloque: True | franja 44-45: False
+      paso A de la pareja citada: Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.
+      paso B de la pareja citada: Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.
+
+==============================================================================
+(c) EL TEXTO ENTERO DE LOS DOS NODOS, que es lo unico que decide
+==============================================================================
+
+------------------------------------------------------------------------------
+  principio_calidad_mvp   VIVO
+------------------------------------------------------------------------------
+  titulo    : Calidad y Diseño en el MVP
+  etiqueta  : Redefine la Calidad Inicial
+  dominio   : core
+  fuente    : The Lean Startup - Eric Ries | The Hard Thing About Hard Things
+  alias     : []
+  PASOS (7):
+    1. Antes de invertir en pulir una característica, pregúntate si contribuye directamente al aprendizaje que buscas, y usa esa pregunta para resistir la presión del equipo de completar todas las funcionalidades 'ideales' antes de lanzar.
+    2. No asumas que el estándar de calidad de la industria, ni los requerimientos heredados de un cliente anterior, son lo que el mercado amplio valora; pruébalo empíricamente contra las necesidades reales de tus clientes.
+    3. Lanza al mercado real, lo antes posible, versiones simplificadas o 'hacky' de las features complejas, aceptando que fallarán en algunos aspectos, y mide la reacción real de los clientes.
+    4. Distingue entre defectos que dificultan el aprendizaje (inaceptables) y baja fidelidad estética (aceptable si permite aprender).
+    5. Capturar y priorizar el aprendizaje obtenido de los primeros clientes reales
+    6. Usa el feedback del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.
+    7. Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones internas
+  CONDICIONES (2):
+    c1. Cuando el equipo duda en lanzar un MVP por temor a que sea de 'baja calidad'.
+    c2. Cuando hay presión interna (profesional o de diseño) por perfeccionar una funcionalidad antes de validarla con clientes.
+  ENTREGABLE: Criterio validado y basado en evidencia sobre qué nivel de calidad/diseño es realmente necesario para satisfacer al cliente, evitando sobre-inversión prematura.
+  RESUMEN   : Replantea la noción tradicional de calidad para startups: si no se sabe quién es el cliente, no se puede saber qué constituye 'calidad' para él. Un MVP de baja fidelidad o inacabado puede ser perfectamente válido si permite el aprendizaje, incluso si los clientes lo perciben como 'de baja calidad', ya que esa reacción es en sí misma información valiosa. La regla es eliminar cualquier característica, proceso o esfuerzo que no contribuya directamente al aprendizaje buscado.
+  previos   (3): ['concierge_mvp', 'wizard_of_oz_testing', 'storytelling_como_herramienta_diseno']
+  siguientes(4): ['contabilidad_innovacion', 'pivote_startup', 'biblioteca_experimentos_validacion', 'riesgos_lanzamiento_mvp']
+
+------------------------------------------------------------------------------
+  producto_minimo_viable   VIVO
+------------------------------------------------------------------------------
+  titulo    : Producto Mínimo Viable (MVP)
+  etiqueta  : Lanza tu Producto Mínimo Viable
+  dominio   : core
+  fuente    : The Lean Startup - Eric Ries
+  alias     : []
+  PASOS (6):
+    1. Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.
+    2. Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.
+    3. Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.
+    4. Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.
+    5. Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.
+    6. Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental.
+  CONDICIONES (5):
+    c1. Cuando tienes una hipótesis de negocio sin validar y no sabes cuándo dejar de analizar y empezar a construir.
+    c2. Si tú o quien te ayuda con el desarrollo quieren construir un producto completo antes de validar.
+    c3. Cuando ya identificaste a tus primeros usuarios apasionados (earlyvangelists) listos para probar algo.
+    c4. Cuando todavía no validaste si el producto resuelve el problema real del cliente.
+    c5. Si no tienes claro qué características priorizar.
+  ENTREGABLE: Tienes tu primera versión del producto, funcional o simulada, lanzada a un grupo reducido de primeros usuarios (early adopters), con las métricas de su respuesta real registradas.
+  RESUMEN   : Tu primera versión (MVP) es la versión de tu producto que te permite empezar el ciclo de construir, medir y aprender con el menor esfuerzo posible. A diferencia de construir buscando la perfección antes de lanzar, tu objetivo es comenzar a aprender, no terminar de aprender. Lo que necesitas probar son las hipótesis fundamentales de tu negocio, no solo resolver preguntas técnicas o de diseño. Tus primeros usuarios (early adopters) prefieren una solución al 80% porque valoran ser los primeros más que la perfección del producto.
+  previos   (28): ['leap_of_faith_questions', 'arquetipos_de_cliente', 'earlyvangelists', 'estrategia_de_innovacion_de_producto', 'hipotesis_propuesta_de_valor_producto', 'problem_solution_fit', 'earlyvangelists_identificacion', 'build_measure_learn', 'catalogo_pivotes', 'ciclo_construir_medir_aprender', 'customer_discovery_cuatro_fases', 'customer_discovery_get_out_of_building', 'customer_discovery_overview', 'evitar_paralisis_por_analisis', 'experiment_library', 'genchi_gembutsu', 'genchi_gembutsu_salir_del_edificio', 'get_out_of_the_building', 'hipotesis_relacion_clientes_web', 'leap_of_faith_assumptions', 'pivot_como_hipotesis_estrategica', 'prototipado_en_lo_salvaje', 'prototipado_virtual_mundos', 'resegmentacion_mercado_nicho_bajo_costo', 'tres_espacios_innovacion_prototipado', 'valor_vs_desperdicio', 'waterfall_vs_agile_development', 'identificar_earlyvangelists']
+  siguientes(32): ['mvp_tipo_video', 'mvp_tipo_concierge', 'contabilidad_innovacion', 'problem_solution_fit', 'business_model_canvas_scorecard', 'biblioteca_experimentos_validacion', 'customer_validation', 'customer_validation_sales_roadmap', 'acquisicion_viral_engineering', 'aprendizaje_validado_vs_metricas_vanidad', 'ciclo_crear_medir_aprender', 'contabilidad_innovacion_pivote', 'customer_acquisition_activation_web', 'earlyvangelists_ventas_tempranas', 'embudo_get_keep_grow', 'embudo_secuencial_de_inversores', 'evitar_pseudociencia_producto', 'financiamiento_amigos_y_familia', 'get_customers_funnel_webmobile', 'hablar_con_clientes_desmontar_supuestos', 'herramientas_de_activacion_web', 'identificar_junta_asesores', 'motor_crecimiento_pago', 'motor_crecimiento_viral', 'mvp_alta_fidelidad', 'sales_roadmap_vs_sales_force', 'split_testing_experimentos_ab', 'trabajo_en_lotes_pequenos', 'regla_50_por_ciento', 'traccion_como_metrica_clave', 'lead_bullets_no_silver_bullets', 'concierge_mvp']
+
+==============================================================================
+(d) P.5: EL PAR, SU CLASE, SU RAZON ENTERA, Y EL CIERRE DEL SUBCONJUNTO
+==============================================================================
+  puesto 494 | clase C | principio_calidad_mvp con producto_minimo_viable
+  RAZON ENTERA (4902 caracteres):
+    REESCRITA EL 15 ago 2026 POR EL DESTEJIDO DEL EMBLEMA, y la clase pasa de A a C. CORRECCION DECLARADA. La relectura se hizo en la vuelta 32 dentro de OP-D-01 movimiento 3 y quedo leida y publicada sin volcar; el volcado lo adjudica el fundador el 15 ago 2026 con el banco 9.10 como mecanismo, y se ejecuta aqui con su barrido de tablas derivadas en el mismo acto. LO QUE DECIA LA RAZON VIEJA, y se deja escrita ENTERA para que la correccion se pueda auditar (copiada del archivo por maquina, no transcrita): REPITE con producto_minimo_viable. Los dos mandan lo mismo: identificar las funcionalidades criticas y excluir a proposito las secundarias en la primera version, lanzar cuanto antes al mercado real aceptando que fallara, medir la reaccion real y no la opinion, e iterar con lo aprendido y no con suposiciones internas. Los pasos 11 al 14 del primero son el nucleo del segundo dicho otra vez. Lo unico propio del primero es la distincion util entre el defecto que estorba el aprendizaje, que es inaceptable, y la baja fidelidad estetica, que no lo es. LATERAL, no cambia la clase: el primero tiene CATORCE pasos y se parte en al menos tres bloques, del 1 al 5 la doctrina de la calidad en el MVP, del 6 al 10 el lanzamiento y la iteracion, y del 11 al 14 otra vez lo minimo viable con otro vocabulario. Con el, la familia del MVP llega a OCHO nodos vivos del nucleo. FIN DE LA RAZON VIEJA. POR QUE CAMBIA, Y EL MOTIVO ES QUE EL UNICO APOYO DE LA A DEJO DE EXISTIR. La razon vieja sostenia la A en una sola frase, los pasos 11 al 14 del primero son el nucleo del segundo dicho otra vez. MEDIDO HOY sobre el arbol: principio_calidad_mvp tiene SIETE pasos y no catorce. Su bloque 11 a 14 se lo llevo OP-F-03 y su bloque 6 a 10 se fundio con el 1 a 5 por P.19 dentro de OP-F-04-HOR, las dos en la vuelta 32. Y el informe habia escrito la condicion por adelantado, seccion 9139: si el destejido conserva la narracion de la CALIDAD, el par deja de repetir. La conserva. LA VARA DEL BANCO 9.6.1, APLICADA EN LOS DOS SENTIDOS Y SOBRE DOS LINEAS DISTINTAS, que es la comprobacion que el banco 9.22 exige para separar esta figura de la duplicacion. PRIMER SENTIDO: principio_calidad_mvp dice en su paso 3, en UNA LINEA, lanza al mercado real lo antes posible versiones simplificadas o hacky de las features complejas aceptando que fallaran, y mide la reaccion real de los clientes; y producto_minimo_viable trae el PROCEDIMIENTO entero de esa linea en sus seis pasos de hoy, bajar la hipotesis critica al problema minimo que alguien pagaria por resolver, disenar la version mas simple con el conjunto minimo desde la propia vision, no agregar funciones extra salvo la excepcion que sin ella no se puede vender, lanzar solo a los earlyvangelists y no al mercado masivo, medir la reaccion real y no la opinion, e iterar o cambiar de rumbo en ciclos cortos. SEGUNDO SENTIDO, Y SOBRE OTRA LINEA: producto_minimo_viable dice en sus pasos 2 y 3, en UNA LINEA, la version mas simple y sin funciones extra que no sean necesarias para aprender; y principio_calidad_mvp trae el PROCEDIMIENTO de esa, preguntarse si pulir contribuye directamente al aprendizaje y usar esa pregunta para resistir la presion del equipo, no asumir que el estandar de calidad de la industria ni los requerimientos heredados de un cliente anterior son lo que el mercado valora, distinguir el defecto que dificulta el aprendizaje, inaceptable, de la baja fidelidad estetica, aceptable, y usar el feedback sobre la version simple para decidir si invertir en alta calidad tradicional. SON DOS LINEAS DISTINTAS, la del lanzamiento y la de la simplicidad, una en cada nodo, y cada uno expande la del otro: NINGUNO ES LA MADRE. Por el banco 9.22 el par es SANO CON FIGURA, clase C, y el arreglo es ENLACE MUTUO, dos aristas. FUNDIRLOS SERIA EL ERROR CARO que el propio 9.22 nombra, porque borraria los dos procedimientos para dejar un nodo con dos lineas sueltas. ARISTA, BUSCADA HOY EN LOS DOS SENTIDOS CONTRA EL GRAFO: NO HAY NINGUNA, ni principio_calidad_mvp nombra a producto_minimo_viable ni al reves. TERCER EJEMPLAR DEL 9.22 en todo el archivo, tras el 1077 y el 1240 que el propio banco nombra, Y EL PRIMERO QUE NACE CON EL ENLACE SIN PONER: los otros dos llegaron cableados. Las dos aristas quedan DECLARADAS para la fase 04 y no se ponen aqui: el campo aristas_nuevas de OP-D-01 esta vacio y los enlaces son fase 04, que va despues. FUENTES: The Lean Startup mas The Hard Thing About Hard Things contra The Lean Startup. DISCUTIBLE MARCADO, y se marca antes de saber si acierto: el informe habia escrito que este par SERIA D. Lo leo C porque la figura de los dos sentidos solo aparece cuando los dos nodos ya estan estables, y eso es DESPUES de aquella prediccion. Solo hay DOS ejemplares de esta figura en 3.388 pares: proponer el tercero es lo mas discutible de esta relectura, y quien lea las dos lineas como la misma linea dira D.
+  9.3.1 SOLO CORRE SOBRE A. Esta es clase C.
+
+  EL SUBCONJUNTO, CERRADO O NO: todo par del ARCHIVO que meta a un
+  tercero con cualquiera de los dos (P.5 pide el acto entero).
+    puesto 362   clase D   construir_mvp_baja_fidelidad con producto_minimo_viable
+    puesto 433   clase D   establecer_linea_base_mvp con producto_minimo_viable
+    puesto 592   clase D   mvp_catalogo_tecnicas con producto_minimo_viable
+    puesto 830   clase D   producto_minimo_viable con prueba_mvp_alta_fidelidad
+    puesto 1078  clase D   customer_discovery con producto_minimo_viable
+    puesto 1223  clase D   principio_calidad_mvp con valor_vs_desperdicio
+    puesto 1259  clase D   construir_mvp_baja_fidelidad con principio_calidad_mvp
+    puesto 1293  clase D   customer_development_modelo con producto_minimo_viable
+    puesto 1359  clase D   determine_what_to_prototype con producto_minimo_viable
+    puesto 1394  clase D   mvp_tipo_video con producto_minimo_viable
+    puesto 1395  clase D   build_measure_learn con producto_minimo_viable
+    11 par(es) con tercero.
+
+    LA GUARDA QUE DECIDE SI EL ACTO ES DE DOS: un acto se construye
+    por TRANSITIVIDAD SOBRE LAS A. Un tercero unido por B o por D NO
+    entra en el acto; uno unido por A SI, y entonces el acto no seria
+    de dos y habria que PARAR.
+    terceros de clase A: 0  ->  el acto ES de dos, como la tabla sellada dice
+
+    Y LOS QUE VUELVEN A LA COLA DE RELECTURA POST FUSION (08_VERIFICACION:
+    un par vuelve cuando uno de sus dos nodos MUERE o CAMBIA DE TEXTO, y
+    solo los B y los C, porque son los que estaban en el filo):
+      0 par(es) a releer al cierre de este acto.
+
+==============================================================================
+(e) P.8: EL CABLEADO, QUE ACOMPANA Y NO DECIDE
+==============================================================================
+  principio_calidad_mvp                        cableado (grado por P.1): 7    | aristas propias sin reciproco: 0 
+  producto_minimo_viable                       cableado (grado por P.1): 56   | aristas propias sin reciproco: 0 
+
+  EL COSTE MEDIDO DE LA ELECCION: elegir a uno u otro solo pierde
+  aristas si el que muere tiene aristas SIN RECIPROCO, porque las
+  reciprocas las reescribe la simetrizacion de run_phase1, paso 5.
+
+  Y LA PRELACION, dicha antes de mirar: MANDA EL CONTENIDO. Este bloque
+  se lee DESPUES del (c) y del (d), y si apunta al lado contrario del
+  contenido, PIERDE. Se imprime para poder decir que no hizo falta.

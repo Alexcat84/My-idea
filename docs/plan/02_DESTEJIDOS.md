@@ -2701,3 +2701,44 @@ Y su punto **1** reparte el trabajo con nombre: *si `P.7` (la simulacion previa 
 | **tras la relectura del 599**, recomputado por el instrumento | 3.388 | 575 | **81** | 8 | **2.724** | 17,0 |
 
 **Y EL REPARTO, comprobado al cierre:** **12 de 12 piezas VIAJAN y CERO se pierden**, confirmado por la guarda 3 con **12 de 12 verbatim y 0 sobrantes**. **Con cero perdidas no hay nada que repartir.**
+
+## `OP-D-06`, ACTO 7 DE NUEVE (puesto 494): **NO ELIGE SUPERVIVIENTE Y SE CIERRA POR DECLARACION** (19 ago 2026, vuelta 43)
+
+**Este acto no funde, no toca un nodo y no elige superviviente, y el motivo no es una decision de esta vuelta: es el AVISO DE SOLAPE que el propio plan tiene escrito.** `scripts/loop/vuelta41_lectura_acto.py --puesto 494`, bloque (a), lo comprueba **contra el fichero y no de memoria**, y su propia salida lo imprime asi:
+
+> `ESTE ACTO ESTA NOMBRADO EN EL AVISO DE SOLAPE: SI, y por eso NO elige superviviente`
+
+**EL AVISO, leido entero hoy** (`docs/plan/02_DESTEJIDOS.md`, cabecera de `OP-D-06`):
+
+> **AVISO DE SOLAPE, y hay que verlo antes de contar dos veces:** `producto_minimo_viable` y `principio_calidad_mvp` **aparecen aqui Y en `OP-D-01`**. La seccion 54.3 los cuenta como uno de los nueve actos de dos; el plan de cirugia los trata como **cura acoplada mayor**. **Es la MISMA pareja vista por dos instrumentos, no dos trabajos.**
+
+### LA VERIFICACION CONTRA EL REGISTRO DE `OP-D-01`, con la cita delante y no de memoria
+
+**El encargo pide comprobar que la pareja YA QUEDO TRATADA, y comprobarlo es leer que se decidio y con que vara.** Lo decidido esta en `docs/plan/02_DESTEJIDOS.md`, en el **MOVIMIENTO 3 de `OP-D-01`**, titulado **el par 494, releido con la vara ordinaria. NO SE FUNDE** (15 ago 2026, vuelta 32):
+
+> **La razon publicada del 494 apoyaba la clase A en una sola cosa** [...] *los pasos 11 al 14 del primero son el nucleo del segundo dicho otra vez*. **Esos pasos ya no existen.** Y el informe (§494) habia escrito la condicion por adelantado: *si el destejido conserva la narracion de la CALIDAD, el par deja de repetir*. **La conserva.**
+
+**Y LA VARA QUE LO CERRO, citada:** el banco **`9.22`, LA VARA EN LOS DOS SENTIDOS**, aplicada sobre **lineas distintas** en cada sentido, con la conclusion escrita: *ninguno de los dos es la madre, y fundirlos seria el error caro porque borraria los dos procedimientos para dejar un nodo con dos lineas sueltas*. **El par paso de `A` a `C`, sano CON FIGURA**, y es el **tercer ejemplar** del `9.22` tras el 1077 y el 1240.
+
+**LA CLASE EN EL ARCHIVO HOY, leida por maquina y no recordada** (`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, puesto 494): **`C`**, con una razon que empieza declarando su propia correccion, *REESCRITA EL 15 ago 2026 POR EL DESTEJIDO DEL EMBLEMA, y la clase pasa de A a C. CORRECCION DECLARADA*, y que **conserva la razon vieja entera dentro** para que la correccion se pueda auditar.
+
+**LO QUE ESTO SIGNIFICA PARA `OP-D-06`, dicho sin rodeos: el acto 494 no tiene trabajo pendiente en esta operacion.** La tabla de los nueve actos lo lista porque el instrumento que la construyo cuenta pares del archivo, y en el archivo el 494 es un par; **pero el trabajo sobre esa pareja lo hizo `OP-D-01` y su veredicto es que no se funde**. **Contar aqui un octavo acto de fusion seria contar dos veces el mismo trabajo, que es exactamente lo que el aviso existe para impedir.**
+
+### LO QUE NO CONTRADICE EL AVISO, comprobado en vez de supuesto
+
+**El encargo manda PARAR si lo que se encuentra contradice el aviso. No lo contradice, y aqui va lo comprobado hoy, punto por punto:**
+
+| lo que el aviso y el registro afirman | medido hoy |
+|---|---|
+| los dos nodos siguen **VIVOS** (no se fundio ninguno) | `principio_calidad_mvp` **deprecado False**, `producto_minimo_viable` **deprecado False** |
+| el destejido **conservo la narracion de la calidad**, que es la condicion escrita por adelantado | `principio_calidad_mvp` mide **7 pasos** y `producto_minimo_viable` mide **6**, que son las cifras que el registro de `OP-D-01` publico tras la cirugia |
+| la clase del par es **`C`** y no `A` | el archivo dice **`C`** hoy |
+| el acto **esta nombrado en el aviso de solape** | el instrumento lo imprime: **SI** |
+
+> **Y UNA BUSQUEDA NEGATIVA RE-VERIFICADA CONTRA EL GRAFO, porque la regla 9 del `EJECUTOR.md` dice que una busqueda negativa no se puede citar:** el registro de `OP-D-01` escribio que el arreglo del `9.22` es **ENLACE MUTUO, dos aristas**, y que *medido hoy en los dos sentidos NO HAY NINGUNA*. **Re-medido en esta vuelta, nodo por nodo y en los dos sentidos: sigue sin haber ninguna.** `principio_calidad_mvp` **no nombra** a `producto_minimo_viable` ni en `nodos_previos` ni en `nodos_siguientes`, y `producto_minimo_viable` **tampoco** lo nombra a el.
+>
+> **ESO NO ES TRABAJO DE ESTE ACTO Y NO SE HACE AQUI, y va dicho con su motivo:** el propio registro de `OP-D-01` ya lo dejo escrito, *`OP-D-01` sigue vacio y **los enlaces son la fase 04**`*. **Escribir aqui dos aristas moveria la cifra publicada de enlaces sin plan sellado detras**, que es justo lo que las trece guardas de esta operacion existen para impedir. **Queda anotado como pendiente vivo de la fase 04, con su medicion de hoy al lado, y NO como un descuido de esta vuelta.**
+
+### EL ACTO 494 QUEDA CERRADO: **CERO nodos tocados, CERO fusiones, UN commit propio**
+
+**El instrumento tambien cita a los dos nodos en la cola de costuras hoy** (`principio_calidad_mvp` bloque **45,8** con corte tras 5, `producto_minimo_viable` bloque **45,8** con corte tras 2, ninguna pareja dispara). **No se leen aqui ni se despachan**: los dos son citas sobre nodos que **`OP-D-01` ya destejio**, la cola las registra, y **este acto no tiene mandato para juzgarlas** porque no funde nada. **Se dejan registradas y a la vista, que es lo que la cola es.**
