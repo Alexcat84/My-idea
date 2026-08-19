@@ -1046,8 +1046,14 @@ impedir.
 > habian llevado**, y el fundador adjudico el volcado
 > (`docs/loop/paradas/2026-08-15-p5-rancios-opd03-DECISION.md`). **Volcados hoy: 277, 374, 452,
 > 1571 y 1575, los cinco de `A` a `D`** (`docs/loop/_lote_v36.jsonl`, marcador recomputado
-> `n 3.388, A 576, B 83, C 8, D 2.721`). **El acto tiene hoy UN solo par `A`, el 643**, y sigue con
-> **cero congelados**. **El texto viejo se queda entero.** **Los seis nodos estan vivos y son de TRES libros
+> `n 3.388, A 576, B 83, C 8, D 2.721`). ~~**El acto tiene hoy UN solo par `A`, el 643**~~, y sigue
+> con **cero congelados**. **El texto viejo se queda entero.**
+>
+> **TERCERA CORRECCION DECLARADA (18 ago 2026, MISMA vuelta 36 unas horas despues), y corrige a la
+> de arriba, escrita por mi mismo hace un rato:** el **643** se leyo como lectura dirigida
+> **`LD-82`** y dio **`D`**, asi que **el acto tiene CERO pares `A`**. **La cifra de una sola
+> correccion vivio menos de una tarde, y va escrita asi a proposito**: la de arriba no se borra
+> porque fue cierta mientras el `643` seguia sin leerse. **Los seis nodos estan vivos y son de TRES libros
 > distintos** (Blank, Ries y Value Proposition Design), cosa que `OP-D-02` no tenia: alli los
 > cuatro eran de Cooper. **Ese detalle va a decidir su fusion y conviene tenerlo escrito antes.**
 
@@ -1184,3 +1190,49 @@ resuelven con la regla adjudicada**, cada perdida al bloque del que proviene.
 
 **Y de la fase entera**: los **quince congelados** releidos, y la tabla de trece
 actos **recomputada al corte del cierre del cribado**, no al 1256.
+
+
+---
+
+## `OP-D-03` CERRADA: **DESTEJIDO HECHO Y SIN FUSION** (18 ago 2026, vuelta 36)
+
+**El paso 2 de su orden interno decia *solo entonces decidir sobre los SEIS nodos*. La decision
+esta tomada y es esta: NO SE FUNDE NINGUNO. Y no es una renuncia: es lo que la medicion dejo.**
+
+### COMO SE LLEGO, con la medicion de cada tramo al lado
+
+| tramo | quien | que dejo |
+|---|---|---|
+| **paso 1**, destejer las TRES costuras | vuelta 34 | **de las tres, solo UNA necesitaba operacion**: las otras dos ya estaban CONSUMIDAS por la fase 01 (`OP-F-04-WEI` se llevo el bloque 6 a 10 de `optimizacion_embudo_get_customers` y `OP-F-04-RAC` el 6 a 9 de `split_testing_experimentos_ab`); `ab_testing_optimizacion` se destejio de **diez pasos a cinco** |
+| **paso 3**, releer 738 y 1061 | vuelta 34 | los dos a `D`, y el **1061** al caer **partio el acto en dos componentes** |
+| **la medicion de `P.5`** | vuelta 35 | **CINCO de los seis pares `A` del acto se habian emitido contra texto que ya no existe** (dos varas independientes, `docs/loop/SALIDA_V35_RANCIOS.txt`). Las cinco relecturas hechas, selladas y **NO volcadas**: `PARADA` por la regla 5 de `EJECUTOR.md` |
+| **la adjudicacion** | el fundador, 15 ago 2026 | se vuelcan las cinco; **el `643` SI se lee** como dirigida dentro del acto; y **la operacion se resuelve por el `643`** |
+| **el volcado de las cinco** | **vuelta 36** | 277, 374, 452, 1571 y 1575, **las cinco de `A` a `D`**, marcador a **`n 3.388, A 576, B 83, C 8, D 2.721`** |
+| **`LD-82`, el `643`** | **vuelta 36** | **`D`, los dos sanos, sin arista declarada**, marcador a **`n 3.388, A 575, B 83, C 8, D 2.722`** |
+
+### LA RESPUESTA DE `P.5`, Y ES LA TERCERA VERSION DE LA MISMA PREGUNTA
+
+> **NI UNA FAMILIA DE SEIS, NI DOS FAMILIAS, NI UN PAR. NINGUNA.** El acto tiene **cero pares `A`**
+> y **desaparece del censo de actos**. Los **seis nodos quedan vivos, sanos y separados.**
+
+**Y EL INSTRUMENTO LO CONFIRMA AL DIGITO, no el dibujo** (`scripts/plan/recomputo_3388.py`, salida
+`docs/loop/SALIDA_V36_RECOMPUTO_3388_B.txt`): actos de **335 a 333**, cerradas de **281 sobre 604
+nodos** a **279 sobre 598**, nodos con al menos una `A` de **851 a 845**, y **las cuatro
+comprobaciones del `08_VERIFICACION.md` dan OK las cuatro**.
+
+### LO QUE ESTE CIERRE NO HACE, y va dicho porque callarlo seria peor
+
+- **No toca un solo nodo.** Ninguno se funde, ninguno se depreca, ninguno pierde un paso en esta
+  vuelta. El censo del grafo no se mueve: **3.853 ficheros, 3.538 vivos, 315 deprecados.**
+- **No fija superviviente ni eliminados.** Los campos `superviviente` y `eliminar` de la operacion
+  se quedan como estaban, **y no por olvido: sin fusion no hay superviviente que fijar.**
+- **No cambia el estado de la operacion.** Sigue en `LISTA`, **igual que `OP-D-01` y `OP-D-02`, que
+  tambien estan ejecutadas**: el esquema de `OPERACIONES.jsonl` no tiene otro estado y la casa
+  registra el hecho consumado en la NOTA. **Queda como PENDIENTE DE DOCTRINA: hoy no hay con que
+  distinguir una operacion HECHA de una pendiente sin leerle la nota.**
+
+> **LA FIGURA QUE ESTA OPERACION DEJA PARA EL INVENTARIO, y se propone sin darla por adoptada: UN
+> ACTO PUEDE MORIR DE SU PROPIO DESTEJIDO.** El acto se convoca por transitividad de pares `A`; si
+> lo que hacia repetir a esos pares eran **bloques ajenos que una cirugia anterior se llevo**,
+> entonces destejer **no prepara la fusion: la cancela**. `OP-D-03` es el primer ejemplar medido de
+> la campana.

@@ -1,0 +1,22 @@
+==============================================================================
+VOLCADO DEL PUESTO 643: split_testing contra test_ab_precio
+==============================================================================
+
+GUARDA 1: los pasos de hoy
+  split_testing    4 pasos (la razon dice 4)  OK
+  test_ab_precio   5 pasos (la razon dice 5)  OK
+
+GUARDA 2: la razon vieja, copiada por maquina y literal dentro
+  643: A -> D, razon vieja 1093 caracteres dentro de 8456  OK
+
+GUARDA 3: el marcador esperado, escrito ANTES de volcar
+  MARCADOR DE AHORA:      n 3388, A 576, B 83, C 8, D 2721
+  MARCADOR TRAS ESTE:     n 3388, A 575, B 83, C 8, D 2722
+  EL ESCRITO EN EL SCRIPT: n 3388, A 575, B 83, C 8, D 2722
+  COINCIDEN. OK
+
+ESCRITO el lote: docs/loop/_lote_v36_643.jsonl (1 fila). El archivo lo escribe scripts/corregir_veredicto.py.
+
+LO QUE ESTE VOLCADO DEJA, y va escrito antes de que nadie lo compute: el acto de
+OP-D-03 se queda con CERO pares A. Los seis nodos salen del cierre transitivo y la
+operacion cierra con su destejido hecho y SIN FUSION.

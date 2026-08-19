@@ -1,0 +1,73 @@
+==============================================================================
+LECTURA DIRIGIDA DEL PUESTO 643 POR P.5: split_testing contra test_ab_precio
+==============================================================================
+
+GUARDA 1: los dos nodos, vivos y con los pasos de hoy
+  split_testing    vivo=True  pasos=4 (la lectura dice 4)  OK
+  test_ab_precio   vivo=True  pasos=5 (la lectura dice 5)  OK
+
+GUARDA 2: el par en el archivo
+  puesto 643: split_testing contra test_ab_precio, clase A (la lectura espera A)  OK
+
+GUARDA 3: la arista, EN LOS DOS SENTIDOS y con el RESOLUTOR de P.1 aplicado
+  resueltos: split_testing -> split_testing   |   test_ab_precio -> test_ab_precio
+    split_testing    nodos_previos    contiene a test_ab_precio   : no
+    split_testing    nodos_siguientes contiene a test_ab_precio   : no
+    test_ab_precio   nodos_previos    contiene a split_testing    : no
+    test_ab_precio   nodos_siguientes contiene a split_testing    : no
+  ARISTA ENTRE LOS DOS: NO HAY NINGUNA
+
+GUARDA 4: ningun paso declarado como pareja de dos
+  OK
+
+==============================================================================
+LA MEDICION DE CONTENCION, paso a paso y con el texto delante
+==============================================================================
+
+--- LOS 4 PASOS DE split_testing, uno por uno ---
+  paso 1 de split_testing: Define las variaciones a testear (precio, copy, features, packaging).
+     PAREJA: paso 1 de test_ab_precio: Definir las variantes a testear (ej. precio de venta vs. modelo de renta)
+     motivo: define las variaciones a testear contra definir las variantes a testear: mismo verbo y mismo objeto gramatical, casi verbatim
+  paso 2 de split_testing: Divide el tráfico equitativamente entre las opciones (control vs. challenge).
+     SIN PAREJA
+     motivo: dividir el trafico EQUITATIVAMENTE entre control y challenge no tiene pareja: el paso 2 del otro manda implementar en un canal real, que es otra cosa
+  paso 3 de split_testing: Mide la tasa de conversión del CTA para cada variante.
+     PAREJA: paso 4 de test_ab_precio: Medir el porcentaje de usuarios que prefieren cada variante
+     motivo: medir la conversion de cada variante, con metrica distinta (tasa del CTA contra porcentaje de usuarios que prefieren) pero el mismo gesto
+  paso 4 de split_testing: Asegura significancia estadística superior al 95% antes de concluir.
+     SIN PAREJA
+     motivo: asegurar significancia estadistica superior al 95 por ciento antes de concluir NO existe en el otro nodo, en ningun paso
+
+--- LOS PASOS DE test_ab_precio QUE NINGUN PASO DE split_testing RECOGE ---
+  paso 2 de test_ab_precio: Implementar el test en un canal real (sitio web, landing page)
+     motivo: implementar el test en un canal real (sitio web, landing page): el otro nodo no nombra canal en ningun paso
+  paso 3 de test_ab_precio: Ejecutar múltiples rondas para afinar el precio óptimo
+     motivo: ejecutar MULTIPLES RONDAS para afinar el precio optimo: el otro nodo no itera, concluye una vez con la significancia en la mano
+  paso 5 de test_ab_precio: Seleccionar el precio o modelo validado con mayor conversión
+     motivo: seleccionar el precio o modelo validado con mayor conversion: el otro nodo NO tiene paso de quedarse con la ganadora, su cierre es el umbral estadistico
+
+==============================================================================
+LA ARITMETICA DE LA DECLARACION, que es lo unico que calcula este script
+==============================================================================
+  split_testing    pasos 4 | compartidos 2 | PROPIOS 2 (50 por ciento propio)
+  test_ab_precio   pasos 5 | compartidos 2 | PROPIOS 3 (60 por ciento propio)
+
+  CONTIENE split_testing a test_ab_precio? NO
+  CONTIENE test_ab_precio a split_testing? NO
+
+  LA VARA DE CONTENCION, y no depende del criterio del 738: un par REPITE cuando
+  el contenido de uno VIVE DENTRO del otro. Aqui NINGUNO contiene al otro y CADA
+  LADO CONSERVA LA MAYORIA DE SUS PROPIOS PASOS. Eso no es repetir.
+
+--- LOS ENTREGABLES, que el 9.6.2 dice que deciden mas rapido que los pasos ---
+  split_testing    Resultados comparativos de conversión entre variantes con significancia estadística.
+  test_ab_precio   Un precio o modelo de monetización validado con datos de conversión reales de al menos cientos de usuarios testeados.
+
+--- LAS CONDICIONES DE ACTIVACION ---
+  split_testing    Cuando existen múltiples alternativas de propuesta de valor, precio o mensaje que se necesitan comparar
+  test_ab_precio   Cuando existe incertidumbre sobre el precio o modelo de ingresos adecuado
+  test_ab_precio   Cuando se tienen múltiples opciones de monetización viables
+
+--- EL CABLEADO PROPIO DE CADA UNO (cuenta para la arista, criterio del 827) ---
+  split_testing    previos 3, siguientes 2, total 5
+  test_ab_precio   previos 3, siguientes 1, total 4

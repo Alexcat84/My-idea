@@ -983,7 +983,7 @@ y cambiaron de clase** (el **1061** de `A` a `D` y el **738** de `B` a `D`), que
 |---|:---:|---|
 | `funnel_get_customers_optimizacion` contra `optimizacion_embudo_get_customers` | ~~**A**~~ **D** | puesto **277**, cribado, **releido por `P.5` el 18 ago 2026** |
 | `ab_testing_optimizacion` contra `split_testing` | ~~**A**~~ **D** | puesto **452**, cribado, **releido por `P.5` el 18 ago 2026** |
-| `split_testing` contra `test_ab_precio` | **A** | puesto **643**, cribado |
+| `split_testing` contra `test_ab_precio` | ~~**A**~~ **D** | puesto **643**, cribado, **releido como `LD-82` el 18 ago 2026** |
 | `split_testing` contra `split_testing_experimentos_ab` | ~~**A**~~ **D** | puesto **374**, cribado, **releido por `P.5` el 18 ago 2026** |
 | `split_testing_experimentos_ab` contra `test_ab_precio` | ~~**A**~~ **D** | puesto **1571**, cribado, **releido por `P.5` el 18 ago 2026** |
 | `ab_testing_optimizacion` contra `test_ab_precio` | ~~**A**~~ **D** | puesto **1575**, cribado, **releido por `P.5` el 18 ago 2026** |
@@ -1028,6 +1028,118 @@ tres sin arista con su motivo escrito (`LD-77`, `LD-78`, `LD-81`). **`n` no se m
 
 ---
 
+## `LD-82` . `split_testing` contra `test_ab_precio` . **D. SIN ARISTA DECLARADA**
+
+**Puesto 643 del cribado. Es EL ULTIMO PAR SIN RELEER DEL ACTO DE `OP-D-03`, y se lee por el
+mandato de `P.5` de leer el acto ENTERO antes de fundirlo**, con la decision del fundador del 15
+ago 2026 detras (`docs/loop/paradas/2026-08-15-p5-rancios-opd03-DECISION.md`, punto 2: *el 643 SI
+se lee como dirigida dentro de `OP-D-03`*) y con el alcance de `P.5` ya escrito: **dentro del acto
+en operacion y nunca fuera**.
+
+> **Y LO PRIMERO ES LA DIFERENCIA DE ESPECIE CON LAS CINCO RELECTURAS DEL MISMO DIA, porque
+> presentarla como la sexta de una tanda uniforme seria mentir por omision.** Aquellas cinco se
+> voltearon **porque el texto habia cambiado bajo el veredicto**. **Este par NO estaba rancio:**
+> sus dos nodos no cambiaron una coma, medido con las dos varas de la vuelta 35, y por eso salio
+> en la lista de **AL DIA** (`docs/loop/SALIDA_V35_RANCIOS.txt`). **Su razon vieja describe el
+> texto de hoy con exactitud.** **LO QUE CAMBIA AQUI ES EL CRITERIO, NO EL TEXTO.**
+
+**LOS DOS NODOS, IMPRESOS ENTEROS ANTES DE DECIDIR** (`docs/loop/SALIDA_V36_NODOS_ENTEROS.txt`,
+con el instrumento sellado `vuelta34_leer_opd03.py` reutilizado y no reescrito).
+
+### LA VARA QUE NO DEPENDE DEL CRITERIO DEL 738, y por que se usa primero
+
+**Las cinco relecturas de esta misma vuelta se decidieron con el criterio del `738`** (la mecanica
+compartida no basta, el objeto decide), **y ese criterio lo escribio la vuelta 34, que nadie ha
+auditado.** Colgar un sexto veredicto de la misma vara heredada, y sola, **seria encadenar seis
+lecturas a un criterio sin auditar.** Asi que el `643` se mide primero con una vara que no depende
+de el: **LA CONTENCION.** Un par REPITE cuando el contenido de uno vive DENTRO del otro.
+
+**LA TABLA NO ESTA TECLEADA: es la salida del instrumento** (`EJECUTOR.md` regla 1, cuarto
+renglon). Comando corrido en esta vuelta:
+
+```
+python scripts/loop/vuelta36_ld_643.py
+```
+
+salida entera en `docs/loop/SALIDA_V36_LD_643.txt`, y la correspondencia se declara **solo donde
+el GESTO es el mismo**, no donde los dos hablan del mismo tema:
+
+| paso de `split_testing` | pareja en `test_ab_precio` | |
+|---|---|---|
+| 1. define las variaciones a testear (precio, copy, features, packaging) | **1.** definir las variantes a testear (precio de venta contra modelo de renta) | **SI**, casi verbatim |
+| 2. divide el trafico **equitativamente** entre control y challenge | | **NO**: el paso 2 del otro manda implementar en un canal real, que es otra cosa |
+| 3. mide la tasa de conversion del CTA de cada variante | **4.** medir el porcentaje de usuarios que prefieren cada variante | **SI**, mismo gesto con otra metrica |
+| 4. **asegura significancia estadistica superior al 95 %** antes de concluir | | **NO**: no existe en ningun paso del otro |
+
+| paso de `test_ab_precio` que nadie recoge | |
+|---|---|
+| 2. implementar el test en un **canal real** (sitio web, landing page) | el otro no nombra canal en ningun paso |
+| 3. **ejecutar multiples rondas para afinar el precio optimo** | el otro no itera: concluye una vez con la significancia en la mano |
+| 5. seleccionar el precio o modelo validado con mayor conversion | el otro **no tiene paso de quedarse con la ganadora**: su cierre es el umbral estadistico |
+
+> **LA ARITMETICA:** `split_testing` conserva **2 propios de 4** (50 %); `test_ab_precio` conserva
+> **3 propios de 5** (60 %). **NINGUNO CONTIENE AL OTRO Y CADA LADO CONSERVA LA MAYORIA DE SUS
+> PROPIOS PASOS. Eso no es repetir.**
+
+### LO QUE DE VERDAD DECIDE ESTA ESCRITO DENTRO DE LA PROPIA RAZON VIEJA, Y JUEGA CONTRA SU CLASE
+
+**Aquella razon cierra diciendo, con estas palabras**, que lo propio de `test_ab_precio` son las
+**rondas multiples** para afinar hasta el precio optimo, *que el general no pide*; y que lo propio
+de `split_testing` es el **umbral del noventa y cinco por ciento**, *que es lo que impide declarar
+ganador a un ruido, y es LO MAS CARO DE PERDER DE LOS DOS*.
+
+> **UNA `A` LLEVA A FUNDIR, Y FUNDIR ES QUE UNO DE LOS DOS MUERA.** Si lo mas caro de perder vive
+> en un lado y la busqueda iterativa del optimo vive en el otro, **la fusion tendria que
+> conservarlos los dos**, y esa **no es la forma de un par que repite: es la forma de un par que
+> continua.** **La razon vieja nombro el motivo para no fundir y clasifico `A` igual.**
+
+**LOS ENTREGABLES, que el `9.6.2` dice que deciden mas rapido que los pasos**, leidos hoy en los
+dos ficheros: *resultados comparativos de conversion entre variantes con significancia
+estadistica*, contra *un precio o modelo de monetizacion validado con datos de conversion reales
+de al menos cientos de usuarios testeados*. **El primero entrega una comparacion valida; el
+segundo, una decision sobre cuanto y como se cobra.** Y **las condiciones de activacion tambien
+separan**: *multiples alternativas de propuesta de valor, precio o mensaje que comparar*, contra
+*incertidumbre sobre el precio o el modelo de ingresos*.
+
+**LA PRUEBA DE MADRE E HIJO DEL `9.6.2` SE CORRIO Y NO SE CUMPLE**, y se dice porque es la lectura
+que un auditor va a probar primero: la regla pide que **el hijo quepa entero dentro de UN paso de
+la madre**, y `test_ab_precio` no cabe en ninguno de los cuatro pasos de `split_testing`: **tres
+de sus cinco pasos no tienen casa en ningun paso del otro.** El precio aparece en `split_testing`
+como **una palabra dentro del parentesis del paso 1**, no como una linea que sea un procedimiento
+nombrado. **NO HAY MADRE E HIJO.**
+
+**CONTINUA: `D`, los dos sanos.**
+
+**ARISTA, BUSCADA HOY EN LOS DOS SENTIDOS CONTRA EL GRAFO Y CON EL RESOLUTOR DE ALIAS APLICADO
+ANTES DE COMPARAR (`P.1`): NO HAY NINGUNA.** Y **no se declara ARISTA QUE FALTA**, por la vara
+escrita el 15 ago 2026 en `02_DESTEJIDOS.md`: se declara donde lo compartido es un **BLOQUE** que
+uno expande de una **LINEA** del otro, y no donde es linea contra linea con cableado propio denso
+a los dos lados. **Aqui lo compartido son DOS GESTOS SUELTOS Y NO CONTIGUOS** (el paso 1 contra el
+1, y el 3 contra el 4), **no un bloque**; y el cableado propio esta medido hoy: `split_testing`
+tiene **5** aristas y `test_ab_precio` **4**.
+
+> **DISCUTIBLE MARCADO, Y ES EL MAS FUERTE DE TODA LA VUELTA, MAS QUE CUALQUIERA DE LAS CINCO:**
+> este es el **UNICO** par del acto donde **el objeto de un nodo esta NOMBRADO DENTRO del objeto
+> del otro**. `split_testing` lista *precio* entre sus cuatro variables y su condicion de
+> activacion dice *precio* con todas sus letras. **Quien sostenga que eso funda la repeticion
+> tiene una frase literal del catalogo de su lado**, y la razon vieja la escribio mejor que nadie:
+> *no es una tecnica distinta, es la misma con una de sus cuatro variables*. Lo que sostengo es
+> que **la variable compartida no es el procedimiento**, y que los dos procedimientos divergen
+> justo en lo que cada uno tiene de mas caro. **Pero este par se puede leer al reves sin forzar
+> nada, y va dicho antes de saber si acierto.**
+
+> **SEGUNDO DISCUTIBLE MARCADO: no declarar arista.** El ejemplar del **755** (15 ago 2026)
+> declaro `ARISTA QUE FALTA` **sin madre e hijo**, porque lo compartido cubria **tres** pasos del
+> superviviente. **Aqui cubre dos de cuatro, que es la mitad, y esta al filo de esa vara.** Lo
+> resuelvo por el lado del **827** (linea contra linea con cableado propio) **y lo marco.**
+
+**SALDO: UNA lectura, UNA `D`, cero `A`. `n` no se movio: sigue en 3.388.** El veredicto **si** se
+movio, y por eso esta lectura **no se queda en este documento**: se volco por el carril del banco
+`9.10` con su barrido en el mismo acto (`docs/loop/_lote_v36_643.jsonl`, marcador recomputado
+**n 3.388, A 575, B 83, C 8, D 2.722** en `docs/loop/SALIDA_V36_MARCADOR_643.txt`).
+
+---
+
 ## CORRECCION DECLARADA (18 ago 2026, vuelta 36): **LA RESPUESTA DE ARRIBA SE DIBUJO CON SEIS `A` Y CINCO DE ELLAS NO SE SOSTENIAN**
 
 **EL TEXTO DE ARRIBA NO SE BORRA, y esta correccion no lo tapa: lo fecha.** Aquella respuesta era
@@ -1055,20 +1167,22 @@ esta puerta.
 **`P.6` manda que la nomina de acto se COMPUTE.** Corrido hoy sobre el archivo ya volcado
 (`python scripts/plan/recomputo_3388.py`, salida `docs/loop/SALIDA_V36_RECOMPUTO_3388.txt`):
 
-| | antes (15 ago, tras la tanda `LD-75` a `LD-81`) | **hoy** (18 ago, tras el volcado de las cinco) |
-|---|---|---|
-| pares `A` dentro del acto | **6** | **1**, el `643` |
-| componentes que deja | **DOS**, las dos cerradas | **UNA**, cerrada |
-| **el nucleo de las pruebas A/B** | 4 nodos, 6 pares internos leidos, 5 `A` | **2 nodos**, `split_testing` y `test_ab_precio`, **1 de 1 leido, el 643 `A`** |
-| **el par del embudo** | 2 nodos, 1 de 1 leido, el 277 `A` | **DESAPARECE del censo de actos**: su unica `A` era el 277 |
-| nodos que salen del cierre transitivo | | **4**: `ab_testing_optimizacion`, `funnel_get_customers_optimizacion`, `optimizacion_embudo_get_customers`, `split_testing_experimentos_ab` |
+| | antes (15 ago, tras la tanda `LD-75` a `LD-81`) | tras el volcado de las cinco (18 ago) | **al cierre de la vuelta 36** |
+|---|---|---|---|
+| pares `A` dentro del acto | **6** | ~~**1**, el `643`~~ | **CERO** |
+| componentes que deja | **DOS**, las dos cerradas | ~~**UNA**, cerrada~~ | **NINGUNA** |
+| **el nucleo de las pruebas A/B** | 4 nodos, 6 pares internos leidos, 5 `A` | ~~**2 nodos**, `split_testing` y `test_ab_precio`~~ | **DESAPARECE**: el `643` era su ultima `A` |
+| **el par del embudo** | 2 nodos, 1 de 1 leido, el 277 `A` | **DESAPARECE del censo de actos**: su unica `A` era el 277 | (ya fuera) |
+| nodos que salen del cierre transitivo | | **4**: `ab_testing_optimizacion`, `funnel_get_customers_optimizacion`, `optimizacion_embudo_get_customers`, `split_testing_experimentos_ab` | **los 6**, con `split_testing` y `test_ab_precio` |
 
 **Y EL INSTRUMENTO LO CONFIRMA AL DIGITO, no mi dibujo:** actos de **335 a 334**, cerradas de
 **281 sobre 604 nodos** a **280 sobre 600**, nodos con al menos una `A` de **851 a 847**, y **las
-cuatro comprobaciones del `08_VERIFICACION.md` dan OK las cuatro**.
+cuatro comprobaciones del `08_VERIFICACION.md` dan OK las cuatro**. **Y tras el `643`, unas horas
+despues del mismo dia: actos a 333, cerradas a 279 sobre 598, nodos con al menos una `A` a 845, y
+otra vez las cuatro comprobaciones OK** (`docs/loop/SALIDA_V36_RECOMPUTO_3388_B.txt`).
 
 > **LA RESPUESTA DE `P.5` PARA `OP-D-03`, REESCRITA CON EL TEXTO DE HOY: NO ES UNA FAMILIA DE
-> SEIS, Y TAMPOCO SON DOS FAMILIAS. ES UN SOLO PAR VIVO Y CUATRO NODOS QUE SE FUERON.** El acto
-> existia **porque los nodos repetian**, y lo que repetia **eran los bloques que las cirugias de
-> la fase 01 y de esta misma operacion se llevaron**. Eso no es un fracaso de la operacion: **es
-> el destejido haciendo su trabajo.**
+> SEIS, NI SON DOS FAMILIAS, NI QUEDA UN PAR. NO QUEDA NINGUNA.** El acto existia **porque los
+> nodos repetian**, y lo que repetia **eran los bloques que las cirugias de la fase 01 y de esta
+> misma operacion se llevaron**. Eso no es un fracaso de la operacion: **es el destejido haciendo
+> su trabajo.** **`OP-D-03` cierra con su destejido HECHO y SIN FUSION.**

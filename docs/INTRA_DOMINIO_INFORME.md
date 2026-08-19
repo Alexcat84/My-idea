@@ -16306,10 +16306,10 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 | | |
 |---|---:|
 | **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
-| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ **576** (17,0 %), ver las correcciones declaradas debajo |
+| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ **575** (17,0 %), ver las correcciones declaradas debajo |
 | **B** | ~~89~~ ~~87~~ ~~84~~ **83** |
 | **C** | ~~7~~ **8** |
-| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ **2.721** |
+| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ **2.722** |
 
 > **CORRECCION DECLARADA (15 ago 2026, vuelta 33 del bucle). LAS CIFRAS VIEJAS SE QUEDAN
 > TACHADAS Y NO BORRADAS: son el marcador del checkpoint del 13 ago y fueron correctas ese dia.**
@@ -16374,6 +16374,26 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 > ciento**, sin altas ni bajas, **y la cifra esperada escrita ANTES de correr el instrumento por
 > cuarta vez** (`docs/loop/SALIDA_V36_VOLCADO.txt`, guarda 6, que **aborta** si el conteo no da
 > exactamente esa). **El `643` NO entra en este lote:** va por su propia lectura dirigida.
+>
+> **QUINTO VOLTEO, DE LA MISMA VUELTA 36 Y UNAS HORAS DESPUES, y por eso las cifras llevan CINCO
+> tachados.** Es **el `643`**, `split_testing` contra `test_ab_precio`, **el ultimo par sin releer
+> del acto de `OP-D-03`**, leido como **`LD-82`** por el mandato de `P.5` de leer el acto entero
+> antes de fundirlo. **Y NO ES DE LA MISMA ESPECIE QUE LOS CINCO ANTERIORES, y se dice en vez de
+> presentarlo como el sexto de una tanda uniforme: aquellos cinco se voltearon porque EL TEXTO
+> HABIA CAMBIADO bajo el veredicto; los dos nodos de este NO CAMBIARON UNA COMA** y su razon vieja
+> describe el texto de hoy con exactitud. **Lo que cambia aqui es el CRITERIO, no el texto.**
+>
+> | puesto | par | antes | ahora | por que |
+> |---:|---|:---:|:---:|---|
+> | **643** | `split_testing` contra `test_ab_precio` | **A** | **D** | **ninguno contiene al otro**, medido paso por paso: `split_testing` conserva 2 propios de 4 (el reparto equitativo del trafico y **el umbral del 95 %**) y `test_ab_precio` 3 de 5 (el canal real, **las multiples rondas** y quedarse con la ganadora). **Y la razon vieja nombro el motivo para NO fundir y clasifico `A` igual**: dijo que el umbral es *lo mas caro de perder de los dos* |
+>
+> **Quinto lote por el mismo carril** (`docs/loop/_lote_v36_643.jsonl`, salida
+> `docs/loop/SALIDA_V36_MARCADOR_643.txt`): **n 3.388, A 575, B 83, C 8, D 2.722, tasa de A 17,0
+> por ciento**, otra vez exacto a la cifra escrita ANTES de correr el instrumento
+> (`docs/loop/SALIDA_V36_VOLCADO_643.txt`, guarda 3).
+>
+> **Y LO QUE ESTE VOLTEO DEJA: el acto de `OP-D-03` se queda con CERO pares `A`.** Los seis nodos
+> salen del cierre transitivo y **la operacion cierra con su destejido hecho y SIN FUSION.**
 
 Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 3.301-3.388
 (comando `python scripts/recomputar_marcador.py 3388`). Las tres A son todas de
@@ -16383,7 +16403,7 @@ Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 
 
 | dominio | n | A | tasa |
 |---|---:|---:|---:|
-| core | 1.445 | ~~344~~ ~~343~~ ~~342~~ **337** | ~~23,8 %~~ ~~23,7 %~~ **23,3 %** |
+| core | 1.445 | ~~344~~ ~~343~~ ~~342~~ ~~337~~ **336** | ~~23,8 %~~ ~~23,7 %~~ **23,3 %** |
 | health_safety | 192 | 45 | 23,4 % |
 | quality | 844 | 126 | 14,9 % (CERRADO) |
 | environmental | 170 | 29 | 17,1 % |
@@ -16431,11 +16451,15 @@ Suma 3.388, calza con el total del archivo. Los diez dominios del catalogo estan
 > | | n | A | tasa | B | C | D |
 > |---|---:|---:|---:|---:|---:|---:|
 > | `core` **tras el volteo de la vuelta 34** | 1.445 | 342 | 23,7 % | 81 | 8 | 1.014 |
-> | `core` **hoy** (18 ago, tras el volteo de la vuelta 36) | 1.445 | **337** | **23,3 %** | **81** | **8** | **1.019** |
+> | `core` **tras el primer volteo de la vuelta 36** | 1.445 | ~~**337**~~ | ~~**23,3 %**~~ | **81** | **8** | ~~**1.019**~~ |
+> | `core` **hoy** (18 ago, tras el `643`) | 1.445 | **336** | **23,3 %** | **81** | **8** | **1.020** |
 >
 > **Y AQUI LA TASA SI SE MUEVE, al reves que en la correccion anterior:** 342 de 1.445 es 23,67 y
-> 337 de 1.445 es 23,32, **y ya no redondean al mismo sitio**. Es la primera vez en la campana que
-> un volteo mueve el porcentaje publicado de `core`.
+> 336 de 1.445 es 23,25, **y ya no redondean al mismo sitio**. Es la primera vez en la campana que
+> un volteo mueve el porcentaje publicado de `core`. **La fila del `643` va aparte y no sumada a
+> las cinco**, porque son dos volteos distintos del mismo dia y mezclarlos borraria que el segundo
+> se decidio por criterio y no por texto envejecido: `core` paso de **342 a 337** con las cinco de
+> `P.5`, y de **337 a 336** con el `643`.
 >
 > **LO QUE ESTA CORRECCION NO HACE, y va dicho porque callarlo seria peor que no hacerlo.**
 > **Contadas hoy, quedan TRECE filas mas** en este informe que citan `core` con **1.445 pares y A
@@ -16517,7 +16541,11 @@ razon: el 1061 no era una fusion mutua.** **TERCERA CORRECCION DECLARADA (18 ago
 el total de A en el archivo es 576**, porque los **cinco** pares rancios del acto de `OP-D-03`
 (**277**, **374**, **452**, **1571** y **1575**) pasaron de `A` a `D` al releerse por `P.5` contra
 el texto de hoy. **El contador de fusiones mutuas sigue en veintiocho por la misma razon de
-siempre, verificada de nuevo: ninguno de los cinco era una fusion mutua.**
+siempre, verificada de nuevo: ninguno de los cinco era una fusion mutua.** **CUARTA CORRECCION
+DECLARADA (18 ago 2026, misma vuelta 36, unas horas despues): el total de A en el archivo es
+575**, porque el **643** paso de `A` a `D` como lectura dirigida `LD-82`, la ultima del acto de
+`OP-D-03`. **El contador de fusiones mutuas sigue en veintiocho: el 643 tampoco era una fusion
+mutua.**
 
 ### 100.7 VERIFICACION DE DISCUTIBLES (fija desde ahora, SEGUNDA VEZ CONSECUTIVA QUE PASA)
 
