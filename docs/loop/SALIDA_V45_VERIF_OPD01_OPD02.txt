@@ -1,0 +1,147 @@
+==============================================================================
+LA VERIFICACION DE OP-D-01 Y OP-D-02, PUNTO POR PUNTO, MEDIDA HOY
+==============================================================================
+
+  pares de clase A vigentes en el archivo hoy: 575
+  nodos en dataset/nodos: 3853 (vivos 3524)
+  el estandar de pasos que se aplica: de 3 a 6
+
+  LOS PUESTOS QUE HOY SIGUEN ABRIENDO CON MARCA DE CONGELADO, en el
+  archivo ENTERO (la lista contra la que se comprueba SALIR de ella):
+    puesto 784    clase B   lienzo_modelo_negocio con swot_business_model_canvas
+    puesto 1190   clase D   formalize_advisory_board con identificar_consejo_asesores
+    total: 2
+
+==============================================================================
+OP-D-01  (02_DESTEJIDOS, tipo DESTEJIDO)
+==============================================================================
+  nomina (2): producto_minimo_viable, principio_calidad_mvp
+  superviviente declarado: None
+  estado: LISTA | fecha_corte: 2026-08-11 | orden: 1
+  aristas_nuevas: []  (vacio = cero aristas que verificar aqui)
+  eliminar: []
+  depende_de: ['OP-F-03'] | bloquea_a: []
+  nodos de la nomina AUSENTES del grafo: 0
+
+  ---------------------------------------------------------------
+  PUNTO 1, copiado del fichero: Gate 0 verde
+  ---------------------------------------------------------------
+    CORRIDA EXTERNA, no medida por este instrumento.
+    Se cita la salida de la corrida del ciclo, sellada aparte.
+
+  ---------------------------------------------------------------
+  PUNTO 2, copiado del fichero: los congelados 494, 592, 830 se releen contra el superviviente y salen de la lista
+  ---------------------------------------------------------------
+    puestos leidos del propio punto: [494, 592, 830]
+
+    puesto  clase nodo A                                     nodo B                                     congelado la razon declara relectura
+    494     C     principio_calidad_mvp                      producto_minimo_viable                     NO        SI
+    592     D     mvp_catalogo_tecnicas                      producto_minimo_viable                     NO        SI
+    830     D     producto_minimo_viable                     prueba_mvp_alta_fidelidad                  NO        SI
+
+    GUARDA: puestos del punto que SALIERON de la lista: 3 de 3
+    GUARDA: puestos del punto que SIGUEN congelados: 0
+
+  ---------------------------------------------------------------
+  PUNTO 3, copiado del fichero: cada nodo resultante dentro del estandar, o dentro de la excepcion de clase de OP-F-01
+  ---------------------------------------------------------------
+    nodo de la nomina                            estado   pasos   contra el estandar 3 a 6
+    producto_minimo_viable                       VIVO     6       DENTRO
+    principio_calidad_mvp                        VIVO     7       FUERA por +1
+
+    GUARDA: nodos VIVOS de la nomina dentro del estandar: 1
+    GUARDA: nodos VIVOS de la nomina FUERA del estandar: 1
+
+  ---------------------------------------------------------------
+  PUNTO 4, copiado del fichero: recomputo del cierre transitivo tras el acto (banco 9.21)
+  ---------------------------------------------------------------
+    nodo de la nomina                            estado   comp   miembros de su componente hoy
+    producto_minimo_viable                       VIVO     1      producto_minimo_viable
+    principio_calidad_mvp                        VIVO     1      principio_calidad_mvp
+
+    GUARDA: nodos de la nomina con componente de MAS de dos: 0
+
+  ---------------------------------------------------------------
+  PUNTO 5, copiado del fichero: el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto
+  ---------------------------------------------------------------
+    todos los pares internos de la nomina, resueltos por P.1:
+
+    nodo A                                     nodo B                                     puesto   clase
+    producto_minimo_viable                     principio_calidad_mvp                      494      C
+
+    GUARDA: pares internos de la nomina: 1
+    GUARDA: pares internos SIN veredicto en el archivo: 0
+
+
+==============================================================================
+OP-D-02  (02_DESTEJIDOS, tipo DESTEJIDO)
+==============================================================================
+  nomina (4): voz_del_cliente_voc, enfoque_mercado_voc, homework_frontend_loading, voice_of_customer_homework
+  superviviente declarado: 'voz_del_cliente_voc'
+  estado: LISTA | fecha_corte: 2026-08-11 | orden: 2
+  aristas_nuevas: []  (vacio = cero aristas que verificar aqui)
+  eliminar: []
+  depende_de: [] | bloquea_a: []
+  nodos de la nomina AUSENTES del grafo: 0
+
+  ---------------------------------------------------------------
+  PUNTO 1, copiado del fichero: Gate 0 verde
+  ---------------------------------------------------------------
+    CORRIDA EXTERNA, no medida por este instrumento.
+    Se cita la salida de la corrida del ciclo, sellada aparte.
+
+  ---------------------------------------------------------------
+  PUNTO 2, copiado del fichero: los congelados 724, 755, 827 se releen contra el superviviente y salen de la lista
+  ---------------------------------------------------------------
+    puestos leidos del propio punto: [724, 755, 827]
+
+    puesto  clase nodo A                                     nodo B                                     congelado la razon declara relectura
+    724     D     voice_of_customer_estrategico              voz_del_cliente_voc                        NO        SI
+    755     D     dia_en_la_vida_del_cliente                 voz_del_cliente_voc                        NO        SI
+    827     D     ganar_comprension_del_cliente              voz_del_cliente_voc                        NO        SI
+
+    GUARDA: puestos del punto que SALIERON de la lista: 3 de 3
+    GUARDA: puestos del punto que SIGUEN congelados: 0
+
+  ---------------------------------------------------------------
+  PUNTO 3, copiado del fichero: cada nodo resultante dentro del estandar, o dentro de la excepcion de clase de OP-F-01
+  ---------------------------------------------------------------
+    nodo de la nomina                            estado   pasos   contra el estandar 3 a 6
+    voz_del_cliente_voc                          VIVO     6       DENTRO
+    enfoque_mercado_voc                          DEPR     5       no aplica (no es nodo resultante)
+    homework_frontend_loading                    VIVO     6       DENTRO
+    voice_of_customer_homework                   VIVO     5       DENTRO
+
+    GUARDA: nodos VIVOS de la nomina dentro del estandar: 3
+    GUARDA: nodos VIVOS de la nomina FUERA del estandar: 0
+
+  ---------------------------------------------------------------
+  PUNTO 4, copiado del fichero: recomputo del cierre transitivo tras el acto (banco 9.21)
+  ---------------------------------------------------------------
+    nodo de la nomina                            estado   comp   miembros de su componente hoy
+    voz_del_cliente_voc                          VIVO     3      homework_frontend_loading, voice_of_customer_homework, voz_del_cliente_voc
+    enfoque_mercado_voc                          DEPR     3      homework_frontend_loading, voice_of_customer_homework, voz_del_cliente_voc
+    homework_frontend_loading                    VIVO     3      homework_frontend_loading, voice_of_customer_homework, voz_del_cliente_voc
+    voice_of_customer_homework                   VIVO     3      homework_frontend_loading, voice_of_customer_homework, voz_del_cliente_voc
+
+    GUARDA: nodos de la nomina con componente de MAS de dos: 4
+
+  ---------------------------------------------------------------
+  PUNTO 5, copiado del fichero: el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto
+  ---------------------------------------------------------------
+    todos los pares internos de la nomina, resueltos por P.1:
+
+    nodo A                                     nodo B                                     puesto   clase
+    voz_del_cliente_voc                        enfoque_mercado_voc                        386      A
+    voz_del_cliente_voc                        homework_frontend_loading                  NINGUNO  SIN VEREDICTO
+    voz_del_cliente_voc                        voice_of_customer_homework                 788      A
+    enfoque_mercado_voc                        homework_frontend_loading                  NINGUNO  SIN VEREDICTO
+    enfoque_mercado_voc                        voice_of_customer_homework                 788      A
+    homework_frontend_loading                  voice_of_customer_homework                 526      A
+
+    GUARDA: pares internos de la nomina: 6
+    GUARDA: pares internos SIN veredicto en el archivo: 2
+
+==============================================================================
+FIN DE LA VERIFICACION MEDIDA
+==============================================================================

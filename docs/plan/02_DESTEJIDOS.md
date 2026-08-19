@@ -3520,3 +3520,307 @@ FIN DEL CIERRE MEDIDO
 | **El enlace mutuo que falta entre los dos del 494** | **fase 04**, re-medido en las vueltas 43 y 44 y sigue sin existir en ninguno de los dos sentidos |
 | **DOS aristas que faltan**, declaradas por las dos relecturas | **fase 04**: la del par **599** (`asociaciones_clave` con `key_partners_hypothesis`) y la del par **233** (`analisis_de_cohortes` con `retention_metrics`). **Los dos pasaron de `B` a `D` porque la relacion es de alimentacion y no de gemelos, y una alimentacion pide arista** |
 | **La duplicada vieja del catalogo** | **`OP-S-12`**, que desde `P.16` pasa de limpieza a **verificacion de cero**. **Las ocho fusiones de `OP-D-06` no fabricaron ninguna**: la unica que aparecio (en el 392, sobre un tercero) la deduplico el propio ejecutor, con la guarda 11 en `OK (0)` |
+
+### LA AUDITORIA DE LA VUELTA 44, VERIFICADA Y ADJUDICADA (19 ago 2026, acta de la vuelta 44)
+
+**El auditor corrio la vuelta 44 ENTERA y la declaracion de arriba ya tiene su acta detras.** La propia
+seccion de cierre habia dejado escrito que *esta declaracion NO tiene todavia un acta del auditor
+detras*; **ese renglon queda contestado y el texto viejo se deja a la vista**, que es como una
+correccion se puede auditar. Todo lo que sigue se lee de `docs/loop/ACTA_AUDITOR.md`, **leida hoy**,
+que abre en la linea **9452** y cierra en la **9792**, y **cada punto va con la linea que lo dice**.
+
+| que verifico el auditor | como salio, con la linea del acta |
+|---|---|
+| **el alcance de la auditoria** | **COMPLETA, no por muestreo**: fue **CONVOCADO POR LA GUARDA DEL MODO CONTINUO** porque la vuelta 44 cerro `OP-D-06` y **paro** ante la operacion siguiente (linea **9457**). **Sin hueco de acta**: la anterior cubre la vuelta 43 |
+| **caidas del ejecutor** | **CERO de clase o cifra y CERO de reporte** (linea **9762**) |
+| **la relectura ciega** | **7 de 7 coincidencias en lo adjudicable, CERO discrepancias**, y **cero discrepancias FUERA de los discutibles marcados** (linea **9609**). Las siete: supervivientes del **392** (9564), del **711** (9571) y del **969** (9576), **la `D` del 233 adjudicada ANTES de destapar la razon nueva** (9579), las **cuatro condiciones del 392** (9586), **la costura del 711** (9592) y **los grupos del 969** (9601) |
+| **los nueve discutibles marcados** | **ADJUDICADOS UNO A UNO** (seccion 3, lineas **9614** a **9654**): **A FAVOR** D1, D2, D4, D5, D6, D7 y D8; **SIN ACCION** D3; y D9, la parada, **PROCEDE COMO CONDUCTA**. **Ninguno en contra** |
+| **la racha de reporte** | **en CERO, y ya son DOS reportes limpios seguidos** contra corrida completa del auditor (linea **9771**) |
+| **la ceguera** | **PARCIAL Y DECLARADA** por el propio auditor (leyo el reporte antes de los pasos) con su mitigacion escrita: imprimir primero los textos desde `git`, adjudicar, y **solo despues** contrastar (linea **9556** y siguientes) |
+
+#### LA PARADA DE LA SECCION 9 DEL REPORTE, ADJUDICADA SIN DOCTRINA NUEVA
+
+**El ejecutor paro ante cual era la operacion siguiente y el auditor la contesto entera con reglas y
+precedentes ya escritos** (seccion 4 del acta, lineas **9656** a **9705**). **Las cuatro partes:**
+
+1. **EL ORDEN DE LA FASE 02 NO ES EL CAMPO `orden`: ES CONGELADOS LIBERADOS** (linea **9661**). Esta escrito
+   **en esta misma pagina**, en el aviso de la vuelta 17 (lineas **35** y **36**) y en el titulo de la tabla
+   de orden (linea **81**, *El criterio es CONGELADOS LIBERADOS. No es tamano, no es coste*). Por ese
+   criterio **`OP-D-08` va PRIMERO** (libera el par **784** y le tocaria ir entre `OP-D-03` y `OP-D-04`,
+   **o sea que esta atrasada**), **`OP-D-09` va despues** con orden libre, y **los numeros 8 y 9 son el
+   artefacto declarado de no renumerar**. El precedente de la propia pagina es `OP-D-05`, sin congelados
+   y con orden libre. **Saltarse el campo `orden` no es decision de alcance porque el campo `orden` no
+   es el criterio de esta fase.**
+2. **`OP-D-08` ES EJECUTABLE SIN DECIDIR NADA NUEVO** (linea **9672**), con tres citas: **(a)** el fundador la
+   declaro **LISTA** con las otras ocho; **(b)** su `pregunta_pendiente`, **leida entera, es un condicional con
+   LAS DOS RAMAS LEGISLADAS** (marco propio, se reparte como el resto; encabezado repetido, se va con su
+   bloque) **y su propio texto dice que decidirla exige leer el nodo con el ojo puesto en esa frase**: el
+   *no se decide aqui* es del momento de **ESCRIBIR** la operacion, no del de **EJECUTARLA**, y la lectura
+   entera del acto que `P.5` y el modo continuo ya obligan **es exactamente la lectura que la resuelve**;
+   **(c)** la especie es **DISTINTA** del `d5` de la vuelta 40 (alla el instrumento **abortaba** con 144 pares
+   sin clase, aca el texto **trae la vara** y solo falta leer). **El ejecutor cito ese `d5` por extension y la
+   extension no aplica: se registra como lectura corregida por adjudicacion y NO como caida**, porque
+   parar a traerlo es lo que la guarda manda ante la duda.
+3. **EL REGISTRO DE `OP-D-01` Y `OP-D-02` NO BLOQUEA Y NO SE ADIVINA: SE VERIFICA** (linea **9688**). Queda
+   **ENCARGADO** verificarlas punto por punto contra su campo `verificacion`, **como el cierre de `OP-D-06`
+   acaba de modelar**, con lo deferido citado como deferido, y escribir el registro **si y solo si todo lo
+   material cumple**. **Ninguna regla lo pone como precondicion de seguir la fase, asi que no altera el
+   orden de arriba.** Se ejecuta en la vuelta 45, abajo.
+4. **`OP-D-07` NO SE ABRE TODAVIA y queda ANOTADO, no adivinado** (linea **9699**): su `depende_de` nombra a
+   `OP-M-03`, **cuya nota dice ADJUDICADA y cuyo expediente esta escrito, pero NO trae registro de HECHA**, y
+   **si la adjudicacion de una mesa satisface un `depende_de` es una lectura que nadie ha hecho con el
+   expediente delante**. No hace falta hacerla hoy porque **hay dos operaciones ejecutables por delante**;
+   se hara cuando `OP-D-07` sea la siguiente por el criterio de la fase.
+
+> **Y LO QUE EL AUDITOR NO CAMBIO, dicho para que no se lea de mas:** **CERO doctrina nueva** (linea **9776**),
+> `MIN_BLOQUE = 2` **intacto** y su umbral acompanante **sigue pendiente del fundador**, las **dos aristas que
+> faltan** (599 y 233) y **el enlace mutuo del 494** siguen en la **fase 04**, y el par **494** sigue yendo a
+> `OP-D-01` como cura acoplada mayor. **Ninguna condicion de parada se cumple: el bucle sigue.**
+
+
+## `OP-D-01` Y `OP-D-02`: **LA VERIFICACION PUNTO POR PUNTO Y EL REGISTRO DE OPERACION HECHA** (19 ago 2026, vuelta 45)
+
+**Encargado por el acta de la vuelta 44, seccion 4 punto 3, leida hoy en la linea 9688**, con sus
+palabras: *EL REGISTRO DE `OP-D-01` Y `OP-D-02` NO BLOQUEA Y NO SE ADIVINA: SE VERIFICA*. La vara
+es la que el cierre de `OP-D-06` acaba de modelar: **cada punto del campo `verificacion` con lo
+medido al lado**, y el registro se escribe **si y solo si todo lo material cumple**.
+
+### EL BLOQUE MEDIDO, PEGADO ENTERO Y SIN RETECLEAR
+
+**Salida verbatim de `python scripts/loop/vuelta45_verificar_opd01_opd02.py`** (instrumento nuevo,
+**estrictamente de solo lectura**, exit 0), sellada en `docs/loop/SALIDA_V45_VERIF_OPD01_OPD02.txt`.
+Va **como bloque literal**, que es la unica forma de que la regla 1 del `EJECUTOR.md` (*la tabla se
+imprime, no se teclea*) no dependa de que quien la copie no se equivoque:
+
+```
+==============================================================================
+LA VERIFICACION DE OP-D-01 Y OP-D-02, PUNTO POR PUNTO, MEDIDA HOY
+==============================================================================
+
+  pares de clase A vigentes en el archivo hoy: 575
+  nodos en dataset/nodos: 3853 (vivos 3524)
+  el estandar de pasos que se aplica: de 3 a 6
+
+  LOS PUESTOS QUE HOY SIGUEN ABRIENDO CON MARCA DE CONGELADO, en el
+  archivo ENTERO (la lista contra la que se comprueba SALIR de ella):
+    puesto 784    clase B   lienzo_modelo_negocio con swot_business_model_canvas
+    puesto 1190   clase D   formalize_advisory_board con identificar_consejo_asesores
+    total: 2
+
+==============================================================================
+OP-D-01  (02_DESTEJIDOS, tipo DESTEJIDO)
+==============================================================================
+  nomina (2): producto_minimo_viable, principio_calidad_mvp
+  superviviente declarado: None
+  estado: LISTA | fecha_corte: 2026-08-11 | orden: 1
+  aristas_nuevas: []  (vacio = cero aristas que verificar aqui)
+  eliminar: []
+  depende_de: ['OP-F-03'] | bloquea_a: []
+  nodos de la nomina AUSENTES del grafo: 0
+
+  ---------------------------------------------------------------
+  PUNTO 1, copiado del fichero: Gate 0 verde
+  ---------------------------------------------------------------
+    CORRIDA EXTERNA, no medida por este instrumento.
+    Se cita la salida de la corrida del ciclo, sellada aparte.
+
+  ---------------------------------------------------------------
+  PUNTO 2, copiado del fichero: los congelados 494, 592, 830 se releen contra el superviviente y salen de la lista
+  ---------------------------------------------------------------
+    puestos leidos del propio punto: [494, 592, 830]
+
+    puesto  clase nodo A                                     nodo B                                     congelado la razon declara relectura
+    494     C     principio_calidad_mvp                      producto_minimo_viable                     NO        SI
+    592     D     mvp_catalogo_tecnicas                      producto_minimo_viable                     NO        SI
+    830     D     producto_minimo_viable                     prueba_mvp_alta_fidelidad                  NO        SI
+
+    GUARDA: puestos del punto que SALIERON de la lista: 3 de 3
+    GUARDA: puestos del punto que SIGUEN congelados: 0
+
+  ---------------------------------------------------------------
+  PUNTO 3, copiado del fichero: cada nodo resultante dentro del estandar, o dentro de la excepcion de clase de OP-F-01
+  ---------------------------------------------------------------
+    nodo de la nomina                            estado   pasos   contra el estandar 3 a 6
+    producto_minimo_viable                       VIVO     6       DENTRO
+    principio_calidad_mvp                        VIVO     7       FUERA por +1
+
+    GUARDA: nodos VIVOS de la nomina dentro del estandar: 1
+    GUARDA: nodos VIVOS de la nomina FUERA del estandar: 1
+
+  ---------------------------------------------------------------
+  PUNTO 4, copiado del fichero: recomputo del cierre transitivo tras el acto (banco 9.21)
+  ---------------------------------------------------------------
+    nodo de la nomina                            estado   comp   miembros de su componente hoy
+    producto_minimo_viable                       VIVO     1      producto_minimo_viable
+    principio_calidad_mvp                        VIVO     1      principio_calidad_mvp
+
+    GUARDA: nodos de la nomina con componente de MAS de dos: 0
+
+  ---------------------------------------------------------------
+  PUNTO 5, copiado del fichero: el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto
+  ---------------------------------------------------------------
+    todos los pares internos de la nomina, resueltos por P.1:
+
+    nodo A                                     nodo B                                     puesto   clase
+    producto_minimo_viable                     principio_calidad_mvp                      494      C
+
+    GUARDA: pares internos de la nomina: 1
+    GUARDA: pares internos SIN veredicto en el archivo: 0
+
+
+==============================================================================
+OP-D-02  (02_DESTEJIDOS, tipo DESTEJIDO)
+==============================================================================
+  nomina (4): voz_del_cliente_voc, enfoque_mercado_voc, homework_frontend_loading, voice_of_customer_homework
+  superviviente declarado: 'voz_del_cliente_voc'
+  estado: LISTA | fecha_corte: 2026-08-11 | orden: 2
+  aristas_nuevas: []  (vacio = cero aristas que verificar aqui)
+  eliminar: []
+  depende_de: [] | bloquea_a: []
+  nodos de la nomina AUSENTES del grafo: 0
+
+  ---------------------------------------------------------------
+  PUNTO 1, copiado del fichero: Gate 0 verde
+  ---------------------------------------------------------------
+    CORRIDA EXTERNA, no medida por este instrumento.
+    Se cita la salida de la corrida del ciclo, sellada aparte.
+
+  ---------------------------------------------------------------
+  PUNTO 2, copiado del fichero: los congelados 724, 755, 827 se releen contra el superviviente y salen de la lista
+  ---------------------------------------------------------------
+    puestos leidos del propio punto: [724, 755, 827]
+
+    puesto  clase nodo A                                     nodo B                                     congelado la razon declara relectura
+    724     D     voice_of_customer_estrategico              voz_del_cliente_voc                        NO        SI
+    755     D     dia_en_la_vida_del_cliente                 voz_del_cliente_voc                        NO        SI
+    827     D     ganar_comprension_del_cliente              voz_del_cliente_voc                        NO        SI
+
+    GUARDA: puestos del punto que SALIERON de la lista: 3 de 3
+    GUARDA: puestos del punto que SIGUEN congelados: 0
+
+  ---------------------------------------------------------------
+  PUNTO 3, copiado del fichero: cada nodo resultante dentro del estandar, o dentro de la excepcion de clase de OP-F-01
+  ---------------------------------------------------------------
+    nodo de la nomina                            estado   pasos   contra el estandar 3 a 6
+    voz_del_cliente_voc                          VIVO     6       DENTRO
+    enfoque_mercado_voc                          DEPR     5       no aplica (no es nodo resultante)
+    homework_frontend_loading                    VIVO     6       DENTRO
+    voice_of_customer_homework                   VIVO     5       DENTRO
+
+    GUARDA: nodos VIVOS de la nomina dentro del estandar: 3
+    GUARDA: nodos VIVOS de la nomina FUERA del estandar: 0
+
+  ---------------------------------------------------------------
+  PUNTO 4, copiado del fichero: recomputo del cierre transitivo tras el acto (banco 9.21)
+  ---------------------------------------------------------------
+    nodo de la nomina                            estado   comp   miembros de su componente hoy
+    voz_del_cliente_voc                          VIVO     3      homework_frontend_loading, voice_of_customer_homework, voz_del_cliente_voc
+    enfoque_mercado_voc                          DEPR     3      homework_frontend_loading, voice_of_customer_homework, voz_del_cliente_voc
+    homework_frontend_loading                    VIVO     3      homework_frontend_loading, voice_of_customer_homework, voz_del_cliente_voc
+    voice_of_customer_homework                   VIVO     3      homework_frontend_loading, voice_of_customer_homework, voz_del_cliente_voc
+
+    GUARDA: nodos de la nomina con componente de MAS de dos: 4
+
+  ---------------------------------------------------------------
+  PUNTO 5, copiado del fichero: el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto
+  ---------------------------------------------------------------
+    todos los pares internos de la nomina, resueltos por P.1:
+
+    nodo A                                     nodo B                                     puesto   clase
+    voz_del_cliente_voc                        enfoque_mercado_voc                        386      A
+    voz_del_cliente_voc                        homework_frontend_loading                  NINGUNO  SIN VEREDICTO
+    voz_del_cliente_voc                        voice_of_customer_homework                 788      A
+    enfoque_mercado_voc                        homework_frontend_loading                  NINGUNO  SIN VEREDICTO
+    enfoque_mercado_voc                        voice_of_customer_homework                 788      A
+    homework_frontend_loading                  voice_of_customer_homework                 526      A
+
+    GUARDA: pares internos de la nomina: 6
+    GUARDA: pares internos SIN veredicto en el archivo: 2
+
+==============================================================================
+FIN DE LA VERIFICACION MEDIDA
+==============================================================================
+```
+
+### LO QUE ESE BLOQUE CONTESTA, y las TRES cosas que el bloque NO alcanza a ver
+
+**Los cinco puntos son los MISMOS en las dos operaciones**, leidos del fichero y no tecleados.
+**Cuatro se contestan con el bloque de arriba y uno se corre aparte:**
+
+| # | el punto, copiado de `OPERACIONES.jsonl` | `OP-D-01`, MEDIDO | `OP-D-02`, MEDIDO |
+|---:|---|---|---|
+| **1** | *Gate 0 verde* | **CORRIDA EXTERNA, hecha hoy**: ciclo de **TRES** comandos (el 4 no aplica: al correrlo el censo no se habia movido), los tres **exit 0**. `run_phase1.py --reaplico-curaduria` con **`GATE 0: OK`** y sus **VEINTE** renglones en `[OK]`, **cero en rojo**; `etiquetas_de_cara.py --aplicar` **71**; `sync_assets_web.py` **seis assets**. **LAS DOS COPIAS DEL GRAFO BYTE IGUALES A HEAD**, md5 `f59b0a0eb6c4cf0aa16f797c6ff62ace` las dos | **LA MISMA CORRIDA**, y se dice asi en vez de fingir dos: un Gate 0 mide el arbol entero, no una operacion |
+| **2** | *los congelados ... se releen contra el superviviente y salen de la lista* | **3 de 3 FUERA**: **494 `C`**, **592 `D`**, **830 `D`**, ninguno abre ya con marca de congelado y los tres con su razon **REESCRITA** y la vieja conservada | **3 de 3 FUERA**: **724**, **755** y **827**, los tres `D`, releidos contra el superviviente **escrito** (`voz_del_cliente_voc`) cuando la causa (el **TOQUE UNICO** del banco `9.4`) cayo al quedar el nodo estable |
+| **3** | *cada nodo resultante dentro del estandar, o dentro de la excepcion de clase de `OP-F-01`* | **CUMPLIDO POR LAS DOS RAMAS**: `producto_minimo_viable` en **6**, DENTRO; `principio_calidad_mvp` en **7**, que entra por la **excepcion de clase aplicada por su criterio escrito**. **Y HAY UN DATO EN CONTRA, publicado abajo** | **CUMPLIDO POR LA PRIMERA RAMA y sin necesitar la excepcion**: los **tres** vivos dentro (**6**, **6** y **5**); el cuarto esta **deprecado con su texto intacto**, asi que no es nodo resultante |
+| **4** | *recomputo del cierre transitivo tras el acto (banco `9.21`)* | **CORRIDO HOY** sobre las **575 `A` vigentes**: componente de **UNO** cada nodo, **cero** por encima de dos. El **494** no aporta arista porque hoy es `C` | **CORRIDO HOY**: una sola componente de **TRES**. **NO es deuda de la cirugia**: es lo que la vuelta 33 midio al contestar `P.5` y lo que `P.10` mando hacer con ello. **Y destapa una tension, publicada abajo** |
+| **5** | *el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto* | **1 de 1**: la nomina son dos nodos, un solo par interno, el **494**, con fila en el archivo | **6 de 6**, contra los **DOS** registros. **El bloque de arriba reporta 2 sin veredicto y eso es un LIMITE DEL INSTRUMENTO, publicado abajo** |
+
+> **PRIMERA, EL DATO QUE VA EN CONTRA DEL PUNTO 3 DE `OP-D-01`, dicho en vez de omitido.** El
+> instrumento de costuras **DISPARA HOY** sobre `principio_calidad_mvp` por bloque (**`sim_bloque`
+> 45,8**, **corte tras el paso 5**; la senal de pareja **NO** dispara, 51,2), asi que el nodo esta
+> **en la cola**. Esa senal **queda REGISTRADA COMO CITA Y NO COMO VEREDICTO**, por el **limite
+> declarado del propio instrumento** (*la cola global no es base de lectura*, acta de la vuelta 40
+> seccion 5 pregunta 2) y por el **precedente escrito de `OP-D-04`** (linea **1755** de este mismo
+> fichero, donde la senal de bloque de `reglas_brainstorming` quedo como cita y los dos resultantes
+> de siete pasos procedieron). **LA LECTURA TEXTUAL PROPIA DE HOY, con los siete pasos delante:**
+> son **UN SOLO ARCO** y no dos narraciones apiladas (preguntar si pulir contribuye al aprendizaje,
+> no asumir el estandar de la industria, lanzar simplificado, distinguir el defecto que impide
+> aprender de la baja fidelidad estetica, capturar y priorizar el aprendizaje, usar ese feedback
+> para decidir si invertir, iterar rapido). **El corte tras el 5 cae en el PIVOTE DE CONSTRUIR A
+> USAR**, que es exactamente la figura que el acta de la vuelta 44 adjudico **a favor** en la
+> costura del **711**. **VA MARCADO COMO DISCUTIBLE.**
+
+> **SEGUNDA, LA TENSION QUE EL RECOMPUTO DEL PUNTO 4 DE `OP-D-02` DESTAPA.** Como la fusion absorbio
+> el nodo del **MEDIO** del camino (`enfoque_mercado_voc`) dentro de uno de sus **EXTREMOS**
+> (`voz_del_cliente_voc`), el **resolutor de `P.1`** hace que la `A` del puesto **788**
+> (`enfoque_mercado_voc` con `voice_of_customer_homework`) **resuelva hoy sobre el par
+> `voz_del_cliente_voc` con `voice_of_customer_homework`, que es justo el que `LD-74` leyo como
+> `D`.** **Dos registros dicen hoy cosas distintas del mismo par resuelto.** **Por la regla escrita
+> no hay nada que corregir aqui:** la **cola de relectura post fusion** de `08_VERIFICACION.md`
+> admite **solo `B` y `C`** y dice con sus palabras que *un `A` ya esta resuelto por definicion*, asi
+> que el 788 **no vuelve a la cola**. Queda **ANOTADO PARA LA FASE 04**, que es donde vive el
+> *enlazar el resto* que `P.10` ya mando. **VA MARCADO COMO DISCUTIBLE.**
+
+> **TERCERA, UN LIMITE DE MI PROPIO INSTRUMENTO, declarado antes que su cifra.** El bloque de arriba
+> reporta **2 pares internos sin veredicto** en `OP-D-02` porque **lee un solo registro**,
+> `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`. **NO es un hueco de lectura:** los tres pares que faltaban
+> se leyeron como **`LD-72`, `LD-73` y `LD-74`** en la vuelta 33, adjudicadas por el fundador por
+> `P.5`, y viven en `docs/plan/LECTURAS_DIRIGIDAS.md` (**OCTAVA TANDA, linea 648**, leida hoy) **y no
+> en el archivo de veredictos, porque ninguno de los tres estaba en la cola y por eso NO mueven `n`**,
+> que sigue en **3.388**. Contra los **dos** registros el acto esta **6 de 6**: **386 `A`**, **788
+> `A`** y **526 `A`** del cribado, mas **`LD-72` `D`**, **`LD-73` `D`** y **`LD-74` `D`**. **La salida
+> del instrumento se deja TAL CUAL, con su 2, y la cifra correcta se dice aqui**: tapar la salida
+> para que calce seria justamente lo que la casa prohibe.
+
+### LO DEFERIDO, CITADO COMO DEFERIDO CON SU REGLA, y no impide ninguno de los dos registros
+
+| que queda | su regla, citada | donde va |
+|---|---|---|
+| **el par nuevo que una relectura diera** | **ENTRA POR EL RECOMPUTO (banco `9.10`)**, que es la letra del propio campo `preservar` de `OP-D-01` en su correccion declarada del 15 ago 2026 | **ya ejecutado por la vuelta 33** |
+| **el enlace mutuo del 494** | el campo `aristas_nuevas` de `OP-D-01` esta **VACIO**, leido hoy | **fase 04**. **RE-VERIFICADO HOY EN LOS DOS SENTIDOS** contra el grafo, porque una busqueda negativa no se puede citar (regla 9): **ninguno de los dos nombra al otro** en `nodos_previos` ni en `nodos_siguientes` |
+| **los dos extremos del camino de `OP-D-02` sin enlazar** | `P.10`: *fundir solo el subconjunto cerrado y **enlazar el resto*** | **fase 04** |
+
+**LAS DEPENDENCIAS, MEDIDAS HOY Y NO SUPUESTAS:** `OP-D-01` depende de `OP-F-03`, que trae **HECHA**
+en su nota, y las tres que la bloquean por dependencia inversa (`OP-F-04-COL`, `OP-F-04-HOR`,
+`OP-F-04-WEI`) traen **HECHA las tres**. `OP-D-02` tiene `depende_de` **vacio** y **ninguna** de las
+**71** operaciones la nombra en su `bloquea_a`, comprobado por barrido. **Ninguna dependencia
+abierta en las dos.**
+
+### EL REGISTRO ESCRITO, con el patron de la vuelta 30 y sin estrenar nada
+
+**TODO LO MATERIAL CUMPLE EN LAS DOS, asi que el registro se escribe.** Va **en la nota**, con
+`python scripts/loop/vuelta30_nota.py docs/loop/NOTAS_V45_OPD01_OPD02.json --ejecutar`
+(`docs/loop/SALIDA_V45_NOTA_OPD01_OPD02.txt`), **simulado antes con `--simular`**:
+
+| | nota antes | nota despues | campo `estado` |
+|---|---:|---:|---|
+| `OP-D-01` | 5.258 | **11.739** | **`LISTA`**, sin tocar |
+| `OP-D-02` | 8.190 | **14.355** | **`LISTA`**, sin tocar |
+
+**El fichero sigue teniendo 71 lineas.** El campo `estado` **se queda en `LISTA`** porque el esquema
+de `OPERACIONES.jsonl` **no tiene el valor `HECHA`** y estrenarlo seria doctrina de esquema,
+**adjudicado NO en el punto 7 del acta de la vuelta 30**.
+
+> **Y UNA DIFERENCIA CON EL REGISTRO DE `OP-D-06`, que aquel declaro que le faltaba: ESTOS DOS SI
+> TIENEN ACTA DETRAS ANTES DE ESCRIBIRSE.** Los encarga el acta de la vuelta 44, que verifico la
+> vuelta entera con **CERO caidas del ejecutor** y **ciega 7 de 7** (lineas **9762** y **9609**).
