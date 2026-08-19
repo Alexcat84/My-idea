@@ -1,0 +1,44 @@
+PLAN SELLADO: docs/loop/PLAN_V41_ACTO969.json
+  acto          : puesto 969 de OP-D-06
+  superviviente : retention_metrics
+  absorbidos    : customer_retention_metrics_webmobile
+  fuente del superviviente: The Startup Owner's Manual - Steve Blank
+  ACTO DE FUENTE UNICA (1 fuente(s) distinta(s) medida(s)):
+      retention_metrics                            superviviente  The Startup Owner's Manual - Steve Blank
+      customer_retention_metrics_webmobile         absorbido      The Startup Owner's Manual - Steve Blank
+  origenes generados VERBATIM del fichero: 14
+  pasos finales : 6 (estandar 3 a 6: DENTRO)
+  condiciones finales: 3
+  redirecciones esperadas: 4
+      customer_activation_tactics                    nodos_siguientes   customer_retention_metrics_webmobile
+      get_customers_funnel_webmobile                 nodos_siguientes   customer_retention_metrics_webmobile
+      keep_customers_strategy                        nodos_siguientes   customer_retention_metrics_webmobile
+      lienzo_modelo_negocio                          nodos_previos      customer_retention_metrics_webmobile
+  deprecados que nombran y no se tocan: 0
+  duplicadas que la fusion fabrica: 0
+  simetrizacion esperada: 4 aristas
+      retention_metrics.nodos_previos      += customer_activation_tactics
+      retention_metrics.nodos_previos      += get_customers_funnel_webmobile
+      retention_metrics.nodos_previos      += keep_customers_strategy
+      retention_metrics.nodos_siguientes   += lienzo_modelo_negocio
+
+  LA TABLA DE PERDIDAS, DERIVADA de los grupos y no tecleada:
+      R1    retention_metrics                        VIAJA      paso 2 del resultado
+      R2    retention_metrics                        VIAJA      paso 2 del resultado
+      R3    retention_metrics                        VIAJA      paso 5 del resultado
+      R4    retention_metrics                        VIAJA      paso 4 del resultado
+      R5    retention_metrics                        VIAJA      paso 1 del resultado
+      RC1   retention_metrics                        VIAJA      condicion 1 del resultado
+      W1    customer_retention_metrics_webmobile     VIAJA      paso 1 del resultado
+      W2    customer_retention_metrics_webmobile     VIAJA      paso 2 del resultado
+      W3    customer_retention_metrics_webmobile     VIAJA      paso 4 del resultado
+      W4    customer_retention_metrics_webmobile     VIAJA      paso 3 del resultado
+      W5    customer_retention_metrics_webmobile     VIAJA      paso 6 del resultado
+      W6    customer_retention_metrics_webmobile     VIAJA      paso 6 del resultado
+      WC1   customer_retention_metrics_webmobile     VIAJA      condicion 2 del resultado
+      WC2   customer_retention_metrics_webmobile     VIAJA      condicion 3 del resultado
+      VIAJAN 14 de 14. SE PIERDEN 0.
+      LECTURA: la regla de reparto de OP-D-06 manda cada perdida al
+      bloque del que proviene, y la que no tenga bloque al
+      superviviente. Con CERO perdidas no hay nada que repartir, y eso
+      es lo que hay que comprobar al cierre, no suponerlo.

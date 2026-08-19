@@ -3219,3 +3219,102 @@ La ficha de hoy: **pareja 1 y 5** con **54,6** (el umbral de pareja es 80: **no 
 **Con cero perdidas no hay nada que repartir por la regla del 11 ago 2026.**
 
 **EL ACTO 711 QUEDA CERRADO ENTERO: sus TRES commits pusheados.**
+
+## `OP-D-06`, ACTO 8 DE NUEVE (puesto 969): **`retention_metrics` ABSORBE A `customer_retention_metrics_webmobile`** (19 ago 2026, vuelta 44)
+
+**ES EL ULTIMO ACTO CON FUSION DE `OP-D-06`.** Cerrado este, de los nueve quedan **ocho fundidos** y el **494 cerrado por declaracion**.
+
+### EL DESTEJIDO DEL ACTO: **YA ESTABA HECHO, y lo hizo la operacion que BLOQUEABA a esta**
+
+`scripts/loop/vuelta41_lectura_acto.py --puesto 969`, sellado en `docs/loop/SALIDA_V44_ACTO969_LECTURA.txt`. **La razon del archivo, leida entera hoy**, dice que lo propio de `retention_metrics` es, entre otras cosas, *y despues el bloque entero del costo de adquisicion*. **Esta RANCIA en ese detalle.**
+
+**SE DESTEJIO, y lo desteji `OP-F-04-COL`.** `docs/plan/01_FUENTES.md` linea **1235** publica la frontera leida (**1 a 5 / 6 a 9**) con el bloque nombrado pieza a pieza (*el CAC exacto por canal, el breakeven, el porcentaje que abandona antes de alcanzarlo y presentarlo a la direccion*), y la linea **1353** publica el miembro receptor, `persuasion_directivos_prioridad_cliente`, **con el desempate escrito**: *los cuatro pasos construyen el caso economico y el ultimo NOMBRA AL DESTINATARIO*.
+
+**LA MEDICION DE HOY LO CONFIRMA POR PARTIDA DOBLE:**
+
+| lo medido | el instrumento | como salio |
+|---|---|---|
+| **el nodo hoy** | `vuelta41_lectura_acto.py --puesto 969`, bloque (c) | `retention_metrics` tiene **CINCO** pasos, **exactamente los cinco primeros** de los nueve |
+| **el commit que lo corto** | `git log --follow` mas `git show` | **`575be1e3`**, *OP-F-04-COL SEGUNDO TIEMPO EJECUTADO*: **9 pasos antes, 5 despues** |
+
+**`OP-F-04-COL` figura HECHA en su nota 7981 SI** en la apertura de esta vuelta, **y es ademas la operacion que declaraba BLOQUEAR a `OP-D-06` en su campo `bloquea_a`**. **El bloqueo queda levantado y MEDIDO, no supuesto.** Fuente primero, satisfecha por precedencia.
+
+**LO QUE EL INSTRUMENTO DE COSTURAS CITA HOY:** sobre la cola de **1.494**, `retention_metrics` esta **FUERA** y `customer_retention_metrics_webmobile` esta **DENTRO**, con **bloque 55,7** y **corte tras 4** (la pareja, **63,8**, no dispara). **LA CITA ES DEL DONANTE Y NO DEL SUPERVIVIENTE**, y leida con el texto delante **tampoco alli hay costura**: sus pasos 1 a 4 miran **al cliente que esta** (alta, actividad, abandono, clics) y los 5 y 6 miran **lo que ese cliente produce** (referidos y respuesta a campanas). **CONTINUAN en vez de volver a contar.** La cita queda **registrada y no despachada**.
+
+### `P.5`: **UNA FAMILIA DE DOS, y vuelve un par a la cola**
+
+El par **969** es **clase A** y su razon **NO nombra ganador**: la vara del verbo de `9.3.1` da **NO, es POR ELEGIR**. Los **CINCO** pares del archivo que meten un tercero son el **233** (**B**), el **522** (D), el **848** (D), el **884** (D) y el **1362** (D): **CERO terceros de clase A**, asi que **el acto ES de dos**.
+
+**Y AQUI SI VUELVE UN PAR A LA COLA, el segundo de toda la operacion despues del 599:** el puesto **233**, `analisis_de_cohortes` con `retention_metrics`, es **clase B** y su nodo **cambia de texto al absorber**, asi que **se relee al cierre del acto** como manda `08_VERIFICACION`. Los actos **392** y **711** de esta misma vuelta salieron los dos en **CERO**; este no.
+
+**LA FUENTE, DICHA COMO SE MIDE:** el instrumento imprime **FUENTE UNICA (1 fuente distinta medida)**, porque las dos cadenas son **IDENTICAS**: *The Startup Owner's Manual - Steve Blank*. **Es el SEGUNDO acto de `OP-D-06` con etiqueta unica**, despues del 361. **Y se deja escrito porque en esta misma vuelta el 711 salio MIXTA DE VERDAD, con dos libros**: la etiqueta del instrumento **distingue las tres situaciones** (unica, mixta por forma, mixta por libro) **y las tres estan ahora registradas con nombre**.
+
+### `P.8` EN ORDEN: **manda el CONTENIDO, y el cableado EMPATA por segunda vez en la operacion**
+
+**EL CONTENIDO, leido primero:**
+
+1. **UNO SE LLAMA POR LA MEDIDA Y EL OTRO POR EL CANAL**, y es el mismo caso que el acto **361** resolvio hace dos actos. *Metricas de Retencion* contra *Monitoreo de Metricas de Retencion **WEB/MOBILE***: **no es que un titulo sea el concepto y el otro se le parezca, es EL MISMO TITULO con un canal pegado detras.** Y **la etiqueta lo repite por su lado**: *Mide la Retencion de Clientes* contra *Vigila la Retencion **Digital***. Es el ejemplar escrito de `P.8`: **la cabeza de una serie no se llama como uno de sus pasos**, y web o movil son **dos canales** de los que un negocio puede tener, mientras que **la retencion se mide en todos**.
+2. **LAS CONDICIONES DE ENTRADA LO CONFIRMAN POR EL OTRO EXTREMO DEL NODO**, que es la misma comprobacion que el 361 uso. La del superviviente se enciende por **lo que quieres SABER** (*cuantificar el exito de las tacticas de retencion*) y la del donante por **lo que TU PRODUCTO ES** (*que ya tengas una base de usuarios activos en web/mobile*). **Un nodo cuya puerta de entrada es una propiedad del canal no puede ser la cabeza de una medida que vale para todos los canales.**
+3. **EL ENTREGABLE DEL DONANTE PROMETE ALGO QUE SU PROPIO PROCEDIMIENTO NO CONSTRUYE, y esto es medicion y no opinion.** Su entregable dice *metricas de retencion **POR COHORTE** y comportamiento individual*, y **NINGUNO de sus seis pasos agrupa por cohortes**: la unica linea de los dos nodos que construye una cohorte es la del superviviente (*agrupar por mes de ingreso*). **El donante DEPENDE de un paso que solo el superviviente tiene para poder entregar lo que promete, y la dependencia va en una sola direccion.**
+4. **EL EJE SOBRE EL QUE SE ORDENA TODO ES DEL SUPERVIVIENTE.** Los dos entregables nombran la cohorte y los dos resumenes la nombran, y **la cohorte es lo que convierte una lista de clics en una comparacion** (este mes contra el anterior). **Es contenido y no cableado: es el armazon del tablero.**
+5. **PIEZAS PROPIAS DEL DONANTE QUE NADIE MAS TIENE** y que por eso viajan enteras: **la fuente** de cada cliente anotada en el alta, la medicion de actividad **por cliente** y no solo por cohorte, **el momento y la causa del abandono**, **los clics que hace y los que NO** (la unica linea de los dos que mide una ausencia), **los referidos** que genera cada uno, **el resultado de cada promocion** (la unica que cierra contra la condicion del superviviente, que sin ella se quedaba sin paso que la atendiera), sus **dos condiciones** y la nota de **privacidad** de su resumen.
+
+**Superviviente: `retention_metrics`.**
+
+**EL CABLEADO, citado DESPUES:** grado por `P.1` de **4** contra **4**.
+
+> **ES EL SEGUNDO EMPATE EXACTO DE LA OPERACION, y llega justo despues del margen mas ancho de todos.** En el **361** paso lo mismo (6 contra 6) y se registro como el caso limpio; en el **711**, dos actos antes, el margen fue **10 contra 3**. **LOS DOS EXTREMOS EN LA MISMA VUELTA, y la eleccion se sostuvo por contenido en los dos.** Aqui **el cableado no aporta ni un gramo**: si el contenido estuviera mal, **no habria nada detras que lo tapara**.
+
+> **Y EL COSTE DE LA ELECCION ESTA MEDIDO: CERO aristas.** Los dos nodos tienen **CERO aristas propias sin reciproco**.
+
+### EL MAPA DE MOVIMIENTO, celda a celda
+
+**Prefijos:** `R` = `retention_metrics` (superviviente), `W` = `customer_retention_metrics_webmobile` (absorbido).
+
+**Las dos tablas se IMPRIMEN y no se teclean**, generadas del plan sellado con `python scripts/loop/vuelta33_tabla_mapa.py docs/loop/PLAN_V41_ACTO969.json` y `... --campo grupos_condiciones`:
+
+| paso del resultado | de que origenes sale | el motivo de perdida de linea que lo modifica |
+|---:|---|---|
+| **1** | W1, R5 | EL DATO Y LO QUE SE HACE CON EL, y es la fusion mas justificada del acto: el donante manda rastrear LA FECHA DE INICIO de cada cliente y el superviviente manda agrupar por COHORTES DE MES DE INGRESO. La cohorte se construye con esa fecha y con ninguna otra cosa, asi que son dos mitades de una sola instruccion. Separarlas dejaria un paso que registra una fecha sin decir para que y otro que agrupa por un mes que nadie registro. Y la fuente de cada cliente viaja pegada porque se anota en el mismo momento del alta. |
+| **2** | R1, R2, W2 | LA MISMA MEDICION DE ACTIVIDAD CON LAS DOS UNIDADES Y SU DERIVADA. El superviviente mide POR COHORTE (visitas, page views, tiempo en sitio) y el donante mide POR CLIENTE (frecuencia y duracion de visitas): es la misma medicion con dos granularidades, y quedarse con una sola era la unica perdida real que este acto podia producir. La segunda pieza del superviviente, el tiempo promedio entre visitas, es una CUENTA que se saca de esas mismas visitas, asi que entra en el mismo paso en vez de quedarse como un paso de una sola division. |
+| **3** | W4 | PIEZA PROPIA DEL DONANTE, sin equivalente en el superviviente, y con grupo propio porque mide una cosa distinta de la de arriba: aquella cuenta CUANTO viene el cliente y esta mira QUE HACE cuando viene. La razon del archivo la nombra expresamente como lo propio de este lado, y el matiz de los clics QUE NO HACE es la unica linea de los dos nodos que mide una ausencia en vez de una presencia. |
+| **4** | W3, R4 | LAS DOS CARAS DE LA MISMA SENAL DE SALIDA. El donante detecta el abandono cuando ya ocurrio (momento y causa) y el superviviente monitorea lo que lo anuncia antes (quejas, tickets, correos sin respuesta). Van juntas porque son el mismo objeto medido antes y despues, y porque separarlas dejaria el aviso en un paso y la confirmacion en otro, que es justo lo que hace que nadie mire el primero. Ninguna de las dos se pierde: las dos listas de senales viajan enteras. |
+| **5** | R3 | PIEZA PROPIA DEL SUPERVIVIENTE, sin equivalente en el donante, y va en grupo propio y DESPUES del abandono porque no se puede calcular antes: la vida promedio se estima con el momento del abandono que el paso anterior acaba de detectar. Es ademas la unica linea de los dos nodos que convierte comportamiento en dinero, que es lo que permite decidir cuanto vale la pena gastar en retener. |
+| **6** | W5, W6 | LAS DOS PIEZAS DEL DONANTE QUE MIDEN EFECTO Y NO ESTADO, y van juntas y al final por la misma razon: las cinco anteriores describen como esta el cliente, y estas dos miden que devuelve. La razon del archivo nombra las dos como propias del donante. Cierran el acto contra la condicion que el superviviente ya traia (cuantificar el exito de las tacticas de retencion), que sin ellas se quedaba sin ningun paso que la atendiera. |
+
+| condicion del resultado | de que origenes sale | el motivo que la modifica |
+|---:|---|---|
+| **1** | RC1 | EL DISPARADOR GENERAL, propio del superviviente y el que corresponde a la cabeza: se enciende por lo que quieres SABER, sin importar por que canal llegue el cliente. |
+| **2** | WC1 | EL DISPARADOR DEL CANAL DIGITAL, propio del donante, y NO se funde con el anterior aunque sea un caso suyo. El motivo es el mismo que el acta de la vuelta 43 adjudico a favor en el acto 361: el canal digital ES la identidad entera del nodo absorbido, hasta en su titulo, y disolver su condicion dentro de la general seria borrar en la fusion justamente lo unico que el donante tenia de propio. Se queda como segundo disparador, con su nombre, para que quien llegue con un producto web o movil encuentre el acto por su puerta. |
+| **3** | WC2 | EL DISPARADOR DEL METODO, propio del donante, y tampoco se funde: los otros dos dicen QUE quieres y DONDE estas, y este dice CON QUE lo vas a hacer. Es la frase que separa este tablero de una encuesta de satisfaccion, y es la misma lectura de tres puertas distintas al mismo procedimiento que el acta de la vuelta 43 adjudico a favor en su D6. |
+
+**LA TABLA DE PERDIDAS DE `P.13`, derivada de los grupos y no tecleada: 14 de 14 piezas VIAJAN y CERO se pierden** (`docs/loop/SALIDA_V44_ACTO969_PLAN.txt`). **Este acto NO tiene reparto escrito**, asi que rige la regla adjudicada el 11 ago 2026. **Pero la razon del archivo SI dejo escrito lo propio de cada lado**, y **las SIETE piezas que nombra van en `preservar_literal` para que una guarda las compruebe una a una**: del donante `fuente de cada cliente`, `clics`, `referidos` y `promoción`; del superviviente `mes de ingreso`, `lifetime value` y `tickets de soporte`.
+
+### LA SIMULACION, EN VERDE Y SIN `P.16`: **las DOCE guardas OK y CERO escrituras**
+
+`python scripts/loop/vuelta39_fundir.py --plan docs/loop/PLAN_V41_ACTO969.json --simular`, sellado en `docs/loop/SALIDA_V44_ACTO969_SIM.txt`, **exit 0**:
+
+| guarda | como salio |
+|---|---|
+| **1**, fuente y vida de los tres | **OK**, **FUENTE UNICA** con las dos cadenas identicas impresas |
+| **2**, conteos | **OK** los dos: (5, 1) y (6, 2) |
+| **3**, VERBATIM contra `dataset/nodos` | **14 de 14 calzan, 0 sobrantes** |
+| **4**, cobertura de origenes | **11 de 11** en pasos y **3 de 3** en condiciones, cero repetidos, faltantes o sobrantes |
+| **5**, finales derivados de los grupos | **OK** |
+| **6**, `preservar_literal` | **10 de 10**, con las **siete** piezas que la razon reparte a cada lado y ademas `privacidad`, `abandono` y `páginas vistas` |
+| **7**, `rastros` | **6 de 6** |
+| **8** y **8b**, redirecciones | **4 esperadas OK**, **0 deprecados que nombran OK** |
+| **9**, `P.16` duplicadas fabricadas | **0 esperadas OK** |
+| **10**, auto-arista tras resolver | **OK (0)** |
+| **11**, duplicada tras resolver | **OK (0)** |
+| **12**, titulo y etiqueta sin tocar | **OK** |
+
+> **`P.16` NO DISPARA:** cero duplicadas fabricadas y cero auto-aristas. **De los tres actos de esta vuelta, el unico que rozo la regla fue el 392** (una duplicada en un tercero, deduplicada por el propio ejecutor), **y ninguno de los tres tuvo la auto-arista del par que el 361 si tuvo.**
+
+**LA SIMETRIZACION ESPERADA, medida y no supuesta: CUATRO aristas**, ni una mas ni una menos.
+
+**EL CASO POSITIVO ANTES, que TIENE que caer:** `docs/loop/SALIDA_V44_ACTO969_CASO_ANTES.txt`, **exit 1**, **13 PASAN y 21 CAEN**, conservacion **5 vivos y 1 muerto**.
+
+**EL VERIFICADOR DE MAPAS con la vara 2**, sobre los **CATORCE** planes sellados que hoy tienen tabla publicada: `docs/loop/SALIDA_V44_VERIFICADOR_MAPAS_969.txt`.
+
+**ESTE PRIMER COMMIT DEJA EL GRAFO INTACTO: cero nodos tocados.**

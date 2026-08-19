@@ -1,0 +1,68 @@
+PLAN     : docs/loop/PLAN_V41_ACTO969.json
+OPERACION: OP-D-06, ACTO 8 DE NUEVE (puesto 969): retention_metrics absorbe a customer_retention_metrics_webmobile
+SELLADO  : SELLADO en la vuelta 44, 19 ago 2026, ANTES de ejecutar. Y ES EL ULTIMO ACTO CON FUSION DE OP-D-06: cerrado este, de los nueve quedan ocho fundidos y el 494 cerrado por declaracion. EL DESTEJIDO QUE LA RAZON PEDIA YA SE HIZO, y no aqui: lo hizo OP-F-04-COL. La razon del archivo dice que lo propio de retention_metrics es, entre otras cosas, 'despues el bloque entero del costo de adquisicion', y esta RANCIA EN ESE DETALLE. docs/plan/01_FUENTES.md linea 1235 publica la frontera leida (1 a 5 contra 6 a 9) con el bloque nombrado pieza a pieza (el CAC exacto por canal, el breakeven, el porcentaje que abandona antes de alcanzarlo, y presentarlo a la direccion) y la linea 1353 publica el miembro receptor, persuasion_directivos_prioridad_cliente, con el desempate escrito: el ultimo paso del bloque NOMBRA AL DESTINATARIO. LA MEDICION DE HOY LO CONFIRMA POR PARTIDA DOBLE: retention_metrics tiene CINCO pasos, que son exactamente los cinco primeros, y el commit que lo corto es 575be1e3 (OP-F-04-COL SEGUNDO TIEMPO EJECUTADO), medido con git show sobre el fichero, 9 pasos antes y 5 despues. Fuente primero satisfecha POR PRECEDENCIA, con OP-F-04-COL HECHA en su nota 7981 SI segun la apertura de esta vuelta, que es ademas la operacion que declaraba BLOQUEAR a OP-D-06 en su campo bloquea_a: el bloqueo queda levantado y medido, no supuesto. LO QUE EL INSTRUMENTO DE COSTURAS CITA HOY SE DICE EN VEZ DE CALLARSE: retention_metrics esta FUERA de la cola de 1.494 y customer_retention_metrics_webmobile esta DENTRO, con bloque 55,7 y corte tras 4 (la pareja, 63,8 sobre sus pasos 1 y 5, NO dispara: el umbral de pareja es 80). LA CITA ES DEL DONANTE Y NO DEL SUPERVIVIENTE, y la lectura textual con el texto delante dice que tampoco alli hay costura: sus pasos 1 a 4 miran al cliente que esta (alta, actividad, abandono, clics) y los 5 y 6 miran lo que ese cliente produce (referidos y respuesta a campanas). CONTINUAN en vez de volver a contar. La cita queda REGISTRADA en la cola y no despachada, y el auditor la relee.
+MODO     : --simular
+==============================================================================
+censo ANTES: 3853 ficheros, 3525 vivos, 328 deprecados
+guarda 1, fuente del superviviente contra el plan y vida de los TRES: OK
+  ACTO DE FUENTE UNICA (1 fuente(s) distinta(s) medida(s)), las tres impresas y ninguna escondida:
+    retention_metrics                      superviviente  The Startup Owner's Manual - Steve Blank
+    customer_retention_metrics_webmobile   absorbido      The Startup Owner's Manual - Steve Blank
+guarda 2, retention_metrics                      pasos y condiciones (5, 1) contra (5, 1): OK
+guarda 2, customer_retention_metrics_webmobile   pasos y condiciones (6, 2) contra (6, 2): OK
+guarda 3, VERBATIM contra dataset/nodos: 14 de 14 calzan, 0 sobrantes en el plan
+guarda 4, cobertura de pasos        11 de 11, repetidos [], faltan [], sobran []
+guarda 4, cobertura de condiciones  3 de 3, repetidos [], faltan [], sobran []
+guarda 5, los finales derivados de los grupos calzan con el campo sellado: OK
+guarda 6, preservar_literal en el nodo resultante entero:
+    'mes de ingreso'                           ['pasos', 'entregable']
+    'fuente de cada cliente'                   ['pasos']
+    'clics'                                    ['pasos', 'resumen']
+    'referidos'                                ['pasos', 'entregable', 'resumen']
+    'promoción'                                ['pasos', 'resumen']
+    'lifetime value'                           ['pasos', 'resumen']
+    'tickets de soporte'                       ['pasos', 'resumen']
+    'privacidad'                               ['resumen']
+    'abandono'                                 ['pasos', 'condiciones', 'entregable', 'resumen']
+    'páginas vistas'                           ['pasos']
+    10 de 10
+guarda 7, rastros en el nodo resultante entero:
+    'cohortes'                                 ['pasos', 'entregable', 'resumen']
+    'retención'                                ['pasos', 'condiciones', 'entregable', 'resumen']
+    'comportamiento'                           ['pasos', 'condiciones', 'entregable', 'resumen']
+    'visitas'                                  ['pasos']
+    'churn'                                    ['resumen']
+    'tablero'                                  ['entregable']
+    6 de 6
+redirecciones medidas hoy sobre nodos VIVOS: 4
+    customer_activation_tactics                      nodos_siguientes   customer_retention_metrics_webmobile -> retention_metrics
+    get_customers_funnel_webmobile                   nodos_siguientes   customer_retention_metrics_webmobile -> retention_metrics
+    keep_customers_strategy                          nodos_siguientes   customer_retention_metrics_webmobile -> retention_metrics
+    lienzo_modelo_negocio                            nodos_previos      customer_retention_metrics_webmobile -> retention_metrics
+nodos DEPRECADOS que nombran y NO se tocan: 0
+guarda 8, redirecciones contra el plan sellado (4 esperadas): OK
+guarda 8b, deprecados que nombran contra el plan (0 esperados): OK
+
+### P.16, LAS DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas
+    TOTAL FABRICADAS: 0
+guarda 9, duplicadas fabricadas contra el plan (0 esperadas): OK
+guarda 10, cero auto-arista tras resolver: OK (0)
+guarda 11, cero duplicada tras resolver: OK (0)
+guarda 12, a6 del acta, titulo y etiqueta SIN TOCAR ('Métricas de Retención' / 'Mide la Retención de Clientes'): OK
+
+EL RESULTADO, sobre copia en memoria:
+  retention_metrics: 6 pasos, 3 condiciones, alias ['customer_retention_metrics_webmobile']
+    1. Registra la fecha de inicio y la fuente de cada cliente, y agrúpalos en cohortes por mes de ingreso para poder comparar su comportamiento
+    2. Mide la actividad de cada cliente y de cada cohorte: visitas, páginas vistas, tiempo en el sitio o la aplicación, frecuencia y duración de cada visita, y el tiempo promedio que pasa entre una y la siguiente
+    3. Monitorea el comportamiento dentro del sitio: qué clics hace cada cliente y cuáles no
+    4. Detecta el momento y la causa del abandono, y monitorea las quejas, los tickets de soporte y las tasas de respuesta a tus correos
+    5. Estima la vida promedio del cliente y su valor de vida (lifetime value)
+    6. Mide lo que tu retención produce: los referidos que genera cada cliente y el resultado de cada promoción o campaña de retención
+    c1. Cuando necesitas cuantificar el éxito de tus tácticas de retención
+    c2. Si tu startup ya cuenta con una base de usuarios activos en web o en móvil
+    c3. Si buscas reducir el abandono con datos de comportamiento en lugar de suposiciones
+  entregable: Un tablero de métricas de retención segmentado por cohortes de mes de ingreso y con el comportamiento individual de cada cliente, que incluya su valor de vida, las señales y la causa del abandono, los referidos que genera y el resultado de cada campaña de retención
+  customer_retention_metrics_webmobile: deprecado True, texto INTACTO (6 pasos, 2 condiciones)
+  ficheros que se tocarian: 6
+
+SIMULACION: cero escrituras.

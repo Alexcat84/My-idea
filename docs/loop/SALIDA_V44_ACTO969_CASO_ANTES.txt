@@ -1,0 +1,58 @@
+CASO POSITIVO: OP-D-06, ACTO 8 DE NUEVE (puesto 969): retention_metrics absorbe a customer_retention_metrics_webmobile
+==============================================================================
+
+EL SUPERVIVIENTE, retention_metrics
+  [CAE ] tiene 5 pasos, los 6 que el plan deja
+  [CAE ] tiene 1 condiciones, las 3 que el plan deja
+  [CAE ] sus pasos son EXACTAMENTE los del plan sellado, letra a letra
+  [CAE ] sus condiciones son exactamente las del plan
+  [CAE ] su entregable es el del plan
+  [CAE ] su resumen es el del plan
+  [PASA] su titulo NO cambio (a6 del acta): 'Métricas de Retención'
+  [PASA] su etiqueta_arbol NO cambio (a6 del acta): 'Mide la Retención de Clientes'
+  [PASA] su fuente NO cambio
+
+EL PRESERVAR, las piezas que la operacion manda salvar, con su sede impresa
+  [PASA] sobrevive literal en ['pasos']: 'mes de ingreso'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'fuente de cada cliente'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'clics'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'referidos'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'promoción'
+  [PASA] sobrevive literal en ['pasos']: 'lifetime value'
+  [PASA] sobrevive literal en ['pasos']: 'tickets de soporte'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'privacidad'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'abandono'
+  [CAE ] sobrevive literal en NINGUN CAMPO: 'páginas vistas'
+
+EL ALIAS Y LA FICHA DE LOS DOS ABSORBIDOS
+  [CAE ] 'customer_retention_metrics_webmobile' esta en ids_alias del superviviente
+  [CAE ] 'customer_retention_metrics_webmobile' tiene su entrada en merged_originals
+  [PASA] el superviviente NO se tiene a si mismo como alias (la trampa de test_gate_alias)
+
+LA MUERTE DEL ABSORBIDO, customer_retention_metrics_webmobile
+  [CAE ] esta marcado deprecado
+  [PASA] su fichero SIGUE EXISTIENDO: una fusion depreca, no borra
+  [PASA] su texto quedo INTACTO: 6 pasos, los mismos que antes
+  [PASA] sus condiciones quedaron INTACTAS: 2
+
+LAS REDIRECCIONES
+  [CAE ] ningun nodo VIVO sigue nombrando a los dos absorbidos (quedan 4)
+  [PASA] los deprecados que aun los nombran son EXACTAMENTE los del plan: hoy [], plan []
+  [CAE ] customer_activation_tactics.nodos_siguientes ya apunta a retention_metrics
+  [CAE ] get_customers_funnel_webmobile.nodos_siguientes ya apunta a retention_metrics
+  [CAE ] keep_customers_strategy.nodos_siguientes ya apunta a retention_metrics
+  [CAE ] lienzo_modelo_negocio.nodos_previos ya apunta a retention_metrics
+  [PASA] cero listas de aristas con duplicados en TODO el grafo (halladas 0)
+  [PASA] cero auto-aristas en TODO el grafo (halladas 0)
+
+(conservacion) LOS RASTROS, que pasan las dos veces a proposito
+  (conservacion) [SI] el rastro 'cohortes' sigue vivo en ['pasos', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'retención' sigue vivo en ['condiciones', 'entregable', 'resumen']
+  (conservacion) [SI] el rastro 'comportamiento' sigue vivo en ['pasos']
+  (conservacion) [SI] el rastro 'visitas' sigue vivo en ['pasos']
+  (conservacion) [SI] el rastro 'churn' sigue vivo en ['resumen']
+  (conservacion) [NO] el rastro 'tablero' sigue vivo en NINGUN CAMPO
+
+==============================================================================
+RESULTADO: 13 PASAN, 21 CAEN
+CONSERVACION (aparte, no suma): 5 vivos, 1 muertos
