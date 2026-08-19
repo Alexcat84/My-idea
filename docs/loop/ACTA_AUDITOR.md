@@ -10155,3 +10155,341 @@ seguidos contra corrida completa del auditor.
 EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: registros (TAREA 1)
 y OP-D-07 con el cierre medido de la fase 02 y, si hay cuerda, la primera
 operacion de la fase 03 por su orden escrito (TAREA 2).
+
+# ACTA DE LA VUELTA 46 DEL AUDITOR (19 ago 2026, Fable 5)
+
+CABECERA. SIN HUECO DE ACTA: la ultima acta escrita cubre la vuelta 45
+(linea 9.794 de este fichero, leida hoy) y esta acta cubre la vuelta 46,
+que es la inmediatamente anterior a la actual. El ejecutor declaro una
+PARADA del modo continuo, asi que la verificacion de esta acta es
+COMPLETA: Gate 0 y las tres suites RE-CORRIDOS por mi, ademas del
+marcador, el grafo, la cola y cada cita del reporte.
+
+## 1. VERIFICACION COMPLETA POR CORRIDA PROPIA
+
+- EL ARBOL Y LOS COMMITS: git status LIMPIO, HEAD 681636b8 igual a
+  origin/pasada-unica. Los cinco commits de la tabla del reporte estan
+  en el log tal como los pinta (a00a95c7 apertura sola, 67dd8d3e TAREA 1,
+  a380c20b lectura y hallazgo, 42d500e2 ciclo verde y cierre medido,
+  48efbcf0 registro y parada, 681636b8 el reporte).
+- LAS RUTAS, medidas con git diff --shortstat 2f0c47ef..48efbcf0:
+  19 ficheros, 2.368 lineas anadidas, CERO borradas. Por carpeta:
+  docs/loop 14, scripts/loop 4, docs/plan 1. Y LA CIFRA QUE MANDA:
+  dataset/nodos CERO ficheros tocados, y dataset entero CERO hasta el
+  commit del reporte inclusive. NI UN NODO SE MOVIO.
+- EL MARCADOR, recomputado por mi del archivo (clave clase sobre
+  puesto_intra): A 575, B 79, C 8, D 2.726, n 3.388. Rango 1 a 3.388,
+  huecos 0, duplicados 0, clases fuera de ABCD 0. AL DIGITO con la
+  apertura y con el cierre del reporte, que da identico porque nada se
+  movio: es el resultado correcto.
+- EL GRAFO, medido por mi sobre dataset/nodos: 3.853 ficheros, 3.524
+  vivos, 329 deprecados, 16.898 enlaces (previos mas siguientes de TODOS
+  los ficheros, que es la definicion del instrumento, leida de
+  vuelta31_estado.py linea 193). El campo deprecado presente en 329
+  ficheros y siempre True, como la correccion 3 del reporte declara.
+- LA COLA, re-corrida por mi con scripts/costuras_internas.py: 1.494
+  sobre 3.524, y el arbol quedo LIMPIO tras la corrida: el instrumento
+  reproduce byte igual los ficheros commiteados.
+- EL CICLO GATE 0, re-corrido ENTERO por mi con phase1_run_log.json
+  respaldado ANTES y restaurado DESPUES: comando 1
+  (run_phase1 --reaplico-curaduria) exit 0 y GATE 0: OK; comando 2
+  (etiquetas_de_cara --aplicar) exit 0 con 71 etiquetas; comando 3
+  (sync_assets_web) exit 0 con los 6 assets; git status LIMPIO tras el
+  ciclo, arbol byte igual a HEAD. El comando 4 NO corre y ES CORRECTO
+  que no corra: el censo no se movio (dataset en cero), y el encargo
+  escribio esa condicion con esas palabras.
+- LAS SUITES, re-corridas por mi: motor 25 de 25 exit 0 (corredor
+  engine/run_all_tests.py); web 80 ficheros, 1.030 pasadas y 3 saltadas,
+  exit 0; tsc --noEmit CERO lineas, exit 0.
+- OPERACIONES.jsonl LEIDO ENTERO: 71 operaciones, dependencias rotas 0.
+  Por fase: 00 CODIGO 7, 01 FUENTES 7, 02 DESTEJIDOS 9, 03 FUSIONES 16,
+  04 ENLACES 10, 05 SANEO 10, 06 MESAS 5, 07 ADUANA 2, 08 VERIFICACION 1,
+  09 LECTURAS 3, 10 INVENTARIO 1. Las CUATRO filas rancias del 00_INDICE
+  confirmadas fila por fila contra mi conteo (69 contra 71 en las lineas
+  9, 119 y 494; 02 DESTEJIDOS 7 contra 9; 0 CODIGO 5 contra 7; 05 SANEO
+  12 contra 10), y la celda de HECHO de la linea 337 dice las siete
+  cirugias cuando son nueve operaciones en el fichero.
+- EL HALLAZGO DE OP-D-07, RE-MEDIDO POR MI DE PUNTA A PUNTA:
+  git log --follow sobre dataset/nodos/decision_pivote_perseverar.json
+  da 1eef1c6b (2026-08-14, OP-F-04-WEI segunda tanda) como ultimo toque,
+  y el stat de ese commit incluye el fichero del nodo. El nodo VIEJO
+  (1eef1c6b~1, leido de git por mi): 9 pasos y DOS obras con el | crudo
+  que la correccion 4 escapa. El nodo HOY: 4 pasos, prefijo VERBATIM
+  comun de 4 con el viejo, fuente UNA obra (The Lean Startup). El bloque
+  viejo 5 a 9 vive byte a byte, 5 de 5, como pasos 1 a 5 de
+  puntos_brillantes_antes_del_pivote, con fuente Traction sola, arista
+  desde el sujeto y su espejo en previos. Y la otra mitad: 0 de 5 en
+  pivotar_o_perseverar, 0 de 5 en el sujeto de hoy. TODO AL DIGITO con
+  la seccion 3 del reporte.
+- LAS CUATRO CITAS DE LA PARADA, leidas por mi en su linea: la
+  verificacion 2 de OP-D-07 en OPERACIONES.jsonl; el preservar y la
+  verificacion 3 de OP-M-03-I en el mismo fichero; 01_FUENTES.md linea
+  982 (frontera 5 a 9, destino nodo propio, P.18 punto 3);
+  FRONTERAS_DECLARADAS.md linea 82 (llega por OP-D-07 y se conserva en
+  el superviviente del acto I); y la fila de
+  puntos_brillantes_antes_del_pivote en INDICE_ROJO_DECLARADO.jsonl
+  (OP-F-04-WEI, 2026-08-14). Las cuatro dicen lo que el reporte dice que
+  dicen, y el archivo de hoy las contradice donde el reporte lo mide.
+- LA TAREA 1, verificada cita por cita: el acta de la vuelta 45 abre en
+  la 9.794 y el fichero cerraba en la 10.157 antes de esta acta; las
+  lineas citadas en la tabla del reporte (9.797, 9.801, 9.909, 9.917,
+  9.923, 9.929, 9.933, 9.941, 9.946 a 10.027, 10.028, 10.051, 10.074,
+  10.077, 10.086, 10.127, 10.136) releidas hoy y cada una dice lo que
+  la celda le atribuye. Los siete puestos del aviso re-medidos por mi
+  del archivo: 668, 737, 771, 843, 957, 1298 y 753, LOS SIETE EN B. La
+  seccion de la auditoria vive en 02_DESTEJIDOS.md linea 4.301, bajo el
+  cierre de OP-D-09, con la tabla impresa.
+- EL CIERRE DE LA FASE 02: las nueve en LISTA (leidas por mi del
+  fichero); el instrumento del cierre da 5 de 9 con la frase de la
+  vuelta 30, 4 de 9 con encabezado CERRADA o SELLADA (OP-D-06 tiene las
+  dos formas), y 8 de 9 con alguna; OP-D-07 recibio hoy su registro en
+  la linea 4.382, sin la palabra HECHA y con el estado quieto en LISTA.
+  Los congelados, barridos por mi sobre el archivo entero con el
+  detector de la vuelta 45: UNO, el 1190, junta asesora, clase D, que
+  NO es de esta fase. El criterio de HECHO copiado igual que las lineas
+  9 y 25 de 08_VERIFICACION.md.
+- LA FASE 03: el empate a tres es real y lo medi del fichero (OP-U-01,
+  OP-M-02-PROG y OP-M-03-I, las tres con orden 1 y LISTAS), y
+  03_FUSIONES.md (164 lineas) no escribe ningun orden de ejecucion. Los
+  precedentes de la seccion 5 del reporte, releidos en su linea:
+  02_DESTEJIDOS 251, 292, 798 a 805, 1765 y 1773 dicen exactamente lo
+  que el reporte cita, y OP-D-05 quedo SELLADA por esa via.
+
+## 2. LA RELECTURA CIEGA
+
+CEGUERA PARCIAL DECLARADA: las clases de los tres pares del caso me
+llegaron con el reporte y con mi propio recomputo, asi que la ciega es
+sobre la ADJUDICACION, no sobre la clase: imprimi PRIMERO los pasos de
+los seis nodos, deje escrita mi clase, y SOLO DESPUES destape las
+razones del archivo.
+
+- 843 (decision_pivote_perseverar contra pivote_o_proceder): mi clase B,
+  misma decision con metodos y obras distintas, solape parcial. La razon
+  escrita dice B por dos entradas a la misma decision. COINCIDE.
+- 860 (decision_pivote_perseverar contra pivotar_o_perseverar): mi clase
+  A, misma obra y mismos pasos de metricas contra el ideal. La razon
+  escrita dice A con el solape entero en el bloque de Ries. COINCIDE. Y
+  la afirmacion fina del reporte se sostiene medida: los cuatro pasos de
+  Ries siguen verbatim en el sujeto, el adelanto de la fase 01 no toco
+  el solape, el par se queda en A sin recomputo.
+- 1298 (decision_pivote_perseverar contra pivote_startup): mi clase B,
+  decision contra ejecucion del pivote, costura con frontera. La razon
+  escrita dice B, la misma puerta en dos libros con disposiciones
+  opuestas, y nombra el bloque del punto brillante. COINCIDE.
+
+CUENTA DE LA CIEGA: 3 de 3 en lo adjudicable, CERO discrepancias de
+clase. La discrepancia de esta vuelta (seccion 3) esta FUERA del
+marcado y NO es de clase.
+
+## 3. LA CAIDA DE REPORTE: UNA, FUERA DEL MARCADO, Y CON NOMBRE
+
+El reporte (seccion 3.1) dice que la operacion se leyo entera con los
+DIECISIETE campos impresos uno a uno. El fichero tiene DIECIOCHO campos
+y la propia salida sellada del ejecutor imprime DIECIOCHO renglones
+CAMPO (contados por mi en SALIDA_V46_OPD07_LECTURA.txt). Ningun dato se
+movio: los dieciocho estan impresos y la lectura fue entera; lo
+equivocado es el conteo tecleado en la prosa del reporte.
+
+- ESPECIE: caida de REPORTE (vive solo en REPORTE.md), la primera tras
+  TRES reportes limpios seguidos. La racha de limpios SE CORTA y la
+  cuenta de la especie queda en UNA: no acumula para la parada de
+  credito (esa pide tres seguidas de la misma especie).
+- REGLA DEL CREDITO APLICADA: discrepancia fuera del marcado, el tramo
+  se relee AL DOBLE. El tramo es la seccion 3 del reporte entera, y la
+  relei re-midiendo CADA afirmacion con mis propios comandos: los campos
+  de la operacion, el hallazgo con git log --follow y el stat del
+  commit, el nodo viejo desde git, las tres verificaciones, el bloque
+  byte a byte, las aristas en los dos sentidos, y los tres pares del
+  caso. NINGUNA OTRA AFIRMACION CAYO: la unica falla del tramo es el
+  conteo de campos.
+
+## 4. LOS DOCE DISCUTIBLES, ADJUDICADOS
+
+- D1, no ejecutar cirugia: A FAVOR. El destejido estaba CONSUMIDO por la
+  fase 01, medido con git log --follow y con las tres huellas escritas
+  (01_FUENTES 982, INDICE_ROJO, el commit), y la forma de cerrar un
+  destejido consumido esta escrita y usada TRES veces (OP-D-01 linea
+  251, OP-D-03 lineas 798 a 805, OP-D-05 linea 1773, SELLADA en la
+  1765). Volver a cortar seria fabricar. Es obediencia.
+- D2, no estrenar OPERACION HECHA: A FAVOR. La verificacion 2 NO cumple
+  entera tal como esta escrita, y la palabra sin la mitad diferida seria
+  un verde que miente. La casilla queda para cuando la ruta este
+  decidida (seccion 6).
+- D3, declarar PARADA y no diferido: A FAVOR, y es la adjudicacion de
+  fondo de esta acta (seccion 6). Lo que el ejecutor midio no es que
+  falte trabajo: es que la ruta escrita ya no existe, y el acta de la
+  vuelta 45 (linea 10.086 y siguientes) dejo dicho por adelantado que
+  ese reparto sin texto suficiente es PARADA del modo continuo.
+- D4, precedente debajo y no reescrito: A FAVOR. Una correccion que tapa
+  lo que corrige no se puede auditar; el registro quedo como nacio y el
+  precedente anadido y fechado debajo. Es la forma correcta.
+- D5, no abrir la fase 03: A FAVOR. El empate a tres esta medido, la
+  pagina de fase no escribe orden, y el punto 6 del encargo manda NO
+  abrir cuando decidir haria falta. Buscar un criterio no escrito es
+  decidir. Y el contraargumento del propio ejecutor es serio: la fase 02
+  tuvo criterio propio adjudicado (CONGELADOS LIBERADOS, acta de la
+  vuelta 44), asi que el criterio de la 03 es una adjudicacion que
+  corresponde hacer ANTES de abrirla, no una improvisacion del ejecutor.
+- D6, declarar el indice rancio sin arreglarlo: A FAVOR. La regla 1
+  (la tabla se imprime, no se teclea) exige instrumento, y rehacer ese
+  marcador sin encargo y sin instrumento seria repetir la especie de
+  las paradas de credito de las vueltas 31 y 32. Es un encargo propio
+  para la reanudacion.
+- D7, la forma de los tres commits adaptada: A FAVOR. El patron de tres
+  commits es de vueltas CON cirugia; sin cirugia, calcarlo habria
+  fabricado un commit de cirugia vacio. El contenido de los tres esta
+  verificado y el reparto es fiel a lo que paso.
+- D8, apertura medida antes de la TAREA 1: A FAVOR. Mas estricto que lo
+  pedido, con el precedente de la vuelta 45, y la regla de la apertura
+  se cumple con margen.
+- D9, leer los tres pares sin mandato de relectura: A FAVOR, y ni
+  siquiera fue alcance tomado: la evidencia de OP-D-07 nombra el 843 y
+  el 860, y su verificacion 2 nombra el 1298. Leer sin mover lo que la
+  operacion nombra es diligencia; mover algo si lo habria sido, y no se
+  movio nada.
+- D10, el total 8 de 9 sumando dos formas: A FAVOR. Las dos formas van
+  medidas y publicadas POR SEPARADO en el instrumento y en el registro
+  (5 de 9 y 4 de 9, con OP-D-06 en las dos), y el total responde la
+  unica pregunta del criterio de cierre: cuantas operaciones tienen
+  registro. La suma no funde las varas, las responde.
+- D11, dos pasos por lectura declarada: A FAVOR. La parafrasis de
+  preservar reordena, ninguna mecanica honesta la adjudica, y la salida
+  sellada (lineas 186 a 199) imprime los dos textos y declara MI
+  LECTURA con esas palabras. Declarar la lectura vale mas que
+  disfrazarla de medicion.
+- D12, la atribucion a OP-F-04-WEI y 1eef1c6b: A FAVOR, con la cuarta
+  evidencia que el ejecutor ofrecio pedir, corrida por mi: el stat del
+  propio commit 1eef1c6b lista el fichero
+  dataset/nodos/decision_pivote_perseverar.json entre los tocados.
+  Cuatro evidencias independientes, cero dudas.
+
+LAS CINCO CORRECCIONES DECLARADAS: correctas las cinco, cada una vista
+antes de publicar y con el texto viejo a la vista (el emparejador de
+raices con su 3 mas 2, las dos formas de registro, el campo deprecado
+medido 329 veces True, el | escapado, y la columna propia del
+generador). El LIMITE DECLARADO (OP-D-01 y OP-D-02 comparten seccion en
+la linea 3.581) es exacto: el instrumento lo imprime asi.
+
+## 5. LAS CUATRO PREGUNTAS DE LA SECCION 12, ADJUDICADAS
+
+1. OP-D-07 HECHA: NO se marca por el bucle. La cirugia esta cerrada por
+   el precedente escrito (la via de OP-D-05 SELLADA), pero la palabra
+   completa depende de la ruta del bloque, que es la parada. Se decide
+   con ella.
+2. La ruta del bloque: PARADA CONFIRMADA, seccion 6. No la adjudico y
+   digo por que no ES adjudicable, que es distinto de no saber.
+3. El orden de la fase 03: NO esta escrito y el empate es real. La
+   adjudicacion de un criterio de fase es trabajo de auditor (precedente
+   CONGELADOS LIBERADOS, acta 44), pero se hace en la REANUDACION, con
+   la decision de la parada delante, porque una de las tres empatadas
+   (OP-M-03-I) es precisamente la operacion cuyo texto la parada
+   contradice: adjudicar orden hoy seria ordenar una cola con una pieza
+   que no se puede ejecutar.
+4. El marcador del 00_INDICE: encargo propio con instrumento en la
+   reanudacion, por la regla 1 (la tabla se imprime, no se teclea).
+   Cuatro filas rancias medidas y confirmadas por mi.
+
+## 6. LA PARADA, ADJUDICADA: SE CONFIRMA, Y EL BUCLE SE DETIENE
+
+EL CHOQUE, con las fechas delante: cuatro textos sellados el 12 de
+agosto (la verificacion 2 de OP-D-07, el preservar y la verificacion 3
+de OP-M-03-I, y la linea 82 de FRONTERAS_DECLARADAS.md) dan por hecho
+que el bloque del punto brillante viaja del sujeto al superviviente del
+acto I. El 14 de agosto el fundador adopto P.18, cuyo alcance nombra a
+OP-F-04-WEI, y la fase 01 la aplico ese mismo dia: por P.18 punto 3,
+ningun miembro de la familia coincidia y el bloque formo NODO PROPIO,
+con la lectura declarada en 01_FUENTES 982. Las dos rutas son
+decisiones de la casa, de fechas distintas, y hoy son incompatibles.
+
+POR QUE NO LO ADJUDICO YO: mi mandato resuelve choques entre reglas
+cuando una regla escrita cubre la salida por extension citable. Aqui la
+salida exige una de tres cosas, y las tres tienen la pluma reservada:
+dejar el bloque donde esta obliga a REESCRIBIR el preservar de una mesa
+adjudicada y una pagina de fronteras (contenido del plan, no una
+correccion de errata); moverlo al superviviente obliga a BORRAR un nodo
+que ninguna regla ordena borrar (decision de fundador por la lista de
+la seccion 4 del protocolo) y a forzar el encaje que P.18 punto 3
+prohibe forzar; re-declarar la frontera entre otros dos nodos es
+doctrina nueva de punta a punta. Y el propio P.18 escribe el motivo con
+todas sus letras: elegir destino de contenido es una pluma que no era
+del ejecutor ni del auditor. El precedente de los destejidos consumidos
+cierra la cirugia; NO cierra la ruta, exactamente como el ejecutor lo
+dijo.
+
+CONDICION DEL PROTOCOLO QUE SE CUMPLE: contradiccion con textos
+vigentes del plan que ninguna regla de correccion existente resuelve,
+mas un pendiente que requiere doctrina nueva o decision de fundador.
+PARA_ALEXIS.md ESCRITO con el motivo, el estado exacto, las tres ramas
+con mi recomendacion argumentada (la rama a, el bloque se queda y los
+textos se corrigen con correccion declarada citando P.18), y como
+retomar. PROMPT_SIGUIENTE.md VACIADO. Copia fechada en
+docs/loop/paradas/2026-08-19-ruta-punto-brillante-opd07.md.
+
+## 7. MIS PROPIOS MANEJOS Y TROPIEZOS, declarados con nombre
+
+- (i) Mi primer recomputo del marcador uso la clave puesto y el campo se
+  llama puesto_intra: KeyError a la vista, corregido leyendo el esquema
+  antes de publicar nada.
+- (ii) Mi primer conteo de enlaces conto solo los nodos vivos y dio
+  15.491; la definicion del instrumento (leida de vuelta31_estado.py)
+  cuenta todos los ficheros y da 16.898 al digito. Corregido antes de
+  publicar, y la definicion queda citada en la seccion 1.
+- (iii) Mi primer intento de la suite del motor invoco un
+  scripts/run_tests.py que no existe; el corredor unico es
+  engine/run_all_tests.py, hallado y corrido con 25 de 25.
+- (iv) El /tmp de Git Bash no es visible para el Python de Windows: el
+  volcado del nodo viejo se rehizo a fichero local, usado y borrado.
+- phase1_run_log.json respaldado antes del ciclo y restaurado despues,
+  la maniobra de las actas 42 a 45.
+Ninguno publico una cifra equivocada: CERO caidas del auditor.
+
+## 8. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 3 relecturas ciegas (843, 860, 1298, con ceguera parcial
+declarada), 9 puestos leidos al digito (los siete B del aviso mas el
+860 y el 1190), 6 nodos de forma (el sujeto hoy y viejo desde git, el
+nodo propio, pivotar_o_perseverar, pivote_o_proceder, pivote_startup),
+39 sitios re-corridos o leidos al digito (marcador con huecos y
+duplicados, grafo con su definicion de enlaces, cola byte igual, ciclo
+Gate 0 de tres comandos, tres suites, shortstat con carpetas, dataset
+en cero, OPERACIONES.jsonl entero con dependencias y conteo por fase,
+OP-D-07 y OP-M-03-I campo a campo, el conteo CAMPO de la salida
+sellada, git log --follow y el stat del commit, el nodo viejo, el
+bloque byte a byte, las aristas en dos sentidos, INDICE_ROJO,
+01_FUENTES 982, FRONTERAS 82, P.18 y P.19 enteras, 08_VERIFICACION 9 y
+25, las cuatro filas del 00_INDICE mas la 337, las once citas del acta
+45, los cinco precedentes, los registros de la fase 02, el empate de la
+fase 03 con su pagina, el detector de congelados sobre el archivo
+entero, y las lineas 186 a 199 de la salida de lectura).
+
+Caidas del ejecutor en esta vuelta: UNA de reporte (los diecisiete
+campos que son dieciocho), CERO de clase o cifra. Caidas del auditor:
+CERO (los manejos de la seccion 7 se vieron antes de publicar).
+
+Acumulado: 74 relecturas, 461 puestos (mas 283 nodos de forma y 334
+sitios de codigo), 7 caidas de clase, 19 de reporte del ejecutor, 7 de
+cifra publicada del ejecutor, 2 de cifra del auditor, 3 de acta del
+auditor, 1 de procedimiento del auditor.
+
+Rachas: clase o cifra CERO. Reporte: la racha de tres limpios seguidos
+SE CORTA con la caida de esta vuelta; la cuenta de la especie queda en
+UNA seguida.
+
+## 9. CONDICIONES DE PARADA, RECORRIDAS: UNA SE CUMPLE
+
+- Doctrina nueva o contradiccion sin regla de correccion: SI. La ruta
+  del bloque del punto brillante, seccion 6. ES LA PARADA.
+- Decision de fundador: SI, contenida en la misma parada (dos de las
+  tres ramas tocan pluma reservada).
+- Fallo tecnico repetido: NO. Gate 0 y las tres suites en verde, por el
+  ejecutor y por mi.
+- Credito de tanda roto: NO. Una caida de reporte no acumula para la
+  parada, y las de clase o cifra estan en CERO.
+- Campana consumada: NO. La fase 03 entera por delante.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SE DETIENE. PARA_ALEXIS.md escrito, PROMPT_SIGUIENTE.md VACIO,
+y la reanudacion tiene sus tres primeras tareas ya adjudicadas: el
+registro de la decision con sus correcciones declaradas, el marcador
+del 00_INDICE con instrumento propio, y el criterio de orden de la
+fase 03 antes de abrir la primera operacion.
