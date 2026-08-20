@@ -1,0 +1,343 @@
+==============================================================================
+BARRIDO DEL BANCO 9.10, vuelta 50 (sucesor: --viejo AHORA BUSCA)
+marcador viejo buscado: A 573 B 77 C 8 D 2730
+retrato viejo buscado : 48, 525
+puestos corregidos    : 2222, 2226
+==============================================================================
+
+--- FAMILIA 1: EL MARCADOR VIEJO QUE SE PIDIO (A 573, D 2730) ---
+  candidatos: 17
+  docs/FRANJA_VEREDICTOS.jsonl:573
+      {"puesto_franja": 573, "nodo_mundo": "practicas_gerenciales_no_delegables", "nodo_nucleo": "entrenamiento_gerencial", "clave": 0.7219, "clase": "D", "razon": "Las responsabilidades no delegables de sostener la mejora con...
+  docs/INTRA_DOMINIO_INFORME.md:3640
+      | **573** | `colaboracion_cadena_suministro` contra `compartir_datos_cadena_suministro` | **medir el efecto latigo y graficarlo** y **la posicion en la cadena**; del otro lado **evaluar cuantitativamente beneficios contr...
+  docs/INTRA_DOMINIO_INFORME.md:6167
+      | **573** | `colaboracion_cadena_suministro` trae el diagnostico del efecto latigo en sus pasos 1 y 2 | `compartir_datos_cadena_suministro` apunta a `diagnostico_efecto_latigo` |
+  docs/INTRA_DOMINIO_INFORME.md:8837
+      > **El marcador no se movio ni un punto**: A 278, B 86, C 5, D 573.
+  docs/INTRA_DOMINIO_INFORME.md:14121
+      | nodos distintos de `quality` que aparecen en la cola | **573** |
+  docs/INTRA_DOMINIO_INFORME.md:15559
+      | **A** | **~~573~~ ~~572~~ 571** (~~19,8~~ ~~19,7~~ 19,7 %) |
+  docs/INTRA_DOMINIO_INFORME.md:15620
+      vieja se conserva completa, la correccion se agrega al final). Efecto en el marcador: A 573 a
+  docs/INTRA_DOMINIO_INFORME.md:16337
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ **573** (16,9 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16340
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ **2.730** (80,6 %) |
+  docs/INTRA_DOMINIO_INFORME.md:16351
+      > (`../loop/SALIDA_V50_MARCADOR_APERTURA.txt`): **A 573, B 77, C 8, D 2.730** sobre `n`
+  docs/plan/03_FUSIONES.md:690
+      | marcador `A` / `B` / `C` / `D` | 575 / 79 / 8 / 2.726 | **573 / 77 / 8 / 2.730** |
+  docs/plan/03_FUSIONES.md:712
+      | [`../INTRA_DOMINIO_INFORME.md`](../INTRA_DOMINIO_INFORME.md) apendice **100.1**, fila `A` | 574 | **573** | `scripts/recomputar_marcador.py 3388` |
+  docs/plan/03_FUSIONES.md:713
+      | el mismo apendice, fila `D` | 2.729 | **2.730** | el mismo |
+  docs/plan/03_FUSIONES.md:714
+      | [`RECOMPUTO_3388.md`](RECOMPUTO_3388.md) fila **246**, `A` crudas | 574 | **573** | `scripts/plan/recomputo_3388.py` |
+  docs/plan/03_FUSIONES.md:717
+      | la fila **1079**, total de `A` de la tabla por dominio | 574 | **573** | `recomputar_marcador.py` |
+  docs/plan/RECOMPUTO_3388.md:246
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ **573** **[CORREGIDA SEIS VECES, el 15 y el 18 ago 2026 y el 19 ago 2026; la sexta el 19 ag...
+  docs/plan/RECOMPUTO_3388.md:1079
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ **573** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ **16,9 %** |
+
+--- FAMILIA LEGADO: EL MARCADOR DE LA VUELTA 14 (583 / 2.709) ---
+  candidatos: 23
+  docs/FRANJA_VEREDICTOS.jsonl:583
+      {"puesto_franja": 583, "nodo_mundo": "sistema_responsabilidad_gerencial_2", "nodo_nucleo": "curse_cinco_culpas", "clave": 0.7216, "clase": "C", "razon": "Asumir el sistema completo como tu responsabilidad contra facilita...
+  docs/INTRA_DOMINIO_INFORME.md:16337
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ **573** (16,9 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16340
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ **2.730** (80,6 %) |
+  docs/INTRA_DOMINIO_INFORME.md:16584
+      `risk_management` aporta cero. ~~Total de A en el archivo: 583.~~ **CORRECCION DECLARADA (15 ago
+  docs/plan/02_DESTEJIDOS.md:352
+      > publicado** (`A 583, B 89, C 7, D 2709` medido hoy al abrir esta vuelta) **y obligaria a
+  docs/plan/02_DESTEJIDOS.md:662
+      | A | 583 | 582 | **582** |
+  docs/plan/02_DESTEJIDOS.md:665
+      | D | 2.709 | 2.711 | **2.714** |
+  docs/plan/03_FUSIONES.md:734
+      `2709`, las cifras del marcador de la vuelta 14, y `--viejo` solo cambia la cabecera que imprime.
+  docs/plan/10_INVENTARIO.md:311
+      | **el nombre que esconde** | 3 ejemplares | TRES VECES el contador dejo fuera a un miembro real porque su NOMBRE no llevaba la palabra del tema, y las tres veces lo cazo el segundo instrumento. (1) el sexto de los cuadr...
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:240
+      | **583** | `decision_factory_mentality` contra `equipos_dedicados_de_proyecto` | **B** | *la mitad que DIAGNOSTICA repite y la mitad que TRATA no*, asi que no se puede dar por sano ni por repetido entero |
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:383
+      | **3** | **`decision_factory_mentality`** | la mesa unida | **no lleva ni *gate* ni *portafolio***: se llama *Haz menos proyectos, pero hazlos bien* | **el barrido de las A**, puestos 1499 y 583 |
+  docs/plan/INVENTARIO.jsonl:327
+      {"tipo": "figura", "nombre": "el nombre que esconde", "cobertura": "3 ejemplares", "forma": "modo de fallo del contador, no del archivo", "miembros": [], "estado": "ANOTADO como historia, no como recomendacion", "operaci...
+  docs/plan/OPERACIONES.jsonl:27
+      {"id_op": "OP-M-01", "fase": "06_MESAS", "tipo": "MESA ADJUDICADA: LAS DOS MITADES QUEDAN, CON FRONTERA ADOPTADA", "nodos": ["asignacion_recursos_en_gates", "decision_factory_mentality", "equipos_dedicados_de_proyecto", ...
+  docs/plan/RECOMPUTO_3388.md:31
+      > | A crudas en el archivo | **583** | ~~**582**~~ **581** al cierre de la vuelta 34 | **menos 2** |
+  docs/plan/RECOMPUTO_3388.md:80
+      > | A crudas en el archivo | **583** | **582** | **582** | **menos 1** |
+  docs/plan/RECOMPUTO_3388.md:246
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ **573** **[CORREGIDA SEIS VECES, el 15 y el 18 ago 2026 y el 19 ago 2026; la sexta el 19 ag...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ **525** **[CORREGIDA SEIS VECES, la ultima el 19 ago 2026 (vuelta 50), por el mismo mot...
+  docs/plan/RECOMPUTO_3388.md:528
+      | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ ~~533~~ **525**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ ~~533~~ **525**) | **OK**, recomprobado el 15 ago 2026 con l...
+  docs/plan/RECOMPUTO_3388.md:1079
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ **573** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ **16,9 %** |
+  docs/plan/RECOMPUTO_3388.md:1081
+      ~~**Los diez dominios y el total (3.388 pares, 583 A) coinciden con el marcador recomputado de la vuelta
+  docs/plan/RECOMPUTO_3388.md:1082
+      14** (`A 583, B 89, C 7, D 2.709`), verificado de nuevo aqui por suma de columna.~~ **CORRECCION
+  docs/plan/RECOMPUTO_3388.md:1782
+      | **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ ~~**576 / 83 / 8 / 2.721**~~ **575 / 83 / 8 / 2.722** **[CORREGIDA VARIAS VECES, el 15 y el 18 ago 2026, ver la...
+  docs/plan/RECOMPUTO_3388.md:1829
+      | **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ ~~**576 / 83 / 8 / 2.721**~~ **575 / 83 / 8 / 2.722** (17,0 / 2,4 / 0,2 / 80,3 por ciento) **[CORREGIDA VARIAS ...
+
+--- FAMILIA RETRATO: LAS CIFRAS VIEJAS DEL RETRATO DE LAS A (48, 525) ---
+  candidatos: 114
+  docs/CENSO_DUPLICACION.md:212
+      | Mapa de brecha | 48 | Media. A mano, fase → semilla |
+  docs/CIFRAS_EN_PALABRAS_CASOS_GRISES.md:82
+      | decenas y mas (veinte, cien, mil) | 48 | 1,4% |
+  docs/COSTURAS_INTERNAS.jsonl:216
+      {"node_id": "asignacion_recursos_en_gates", "dominio": "core", "titulo": "Método de Asignación de Recursos en Gates", "pasos": 4, "sim_pareja": 57.9, "pareja": [1, 4], "paso_a": "Mostrar en cada gate la lista de proyecto...
+  docs/COSTURAS_INTERNAS.jsonl:475
+      {"node_id": "eliminacion_causas_error_4", "dominio": "quality", "titulo": "Eliminación de Causas de Error (Error Cause Removal - ECR)", "pasos": 6, "sim_pareja": 54.5, "pareja": [3, 6], "paso_a": "Clasifica y prioriza ca...
+  docs/COSTURAS_INTERNAS.jsonl:631
+      {"node_id": "identificacion_problema_cliente", "dominio": "core", "titulo": "Identificación del Problema del Cliente (Mission-Critical vs Nice-to-Have)", "pasos": 4, "sim_pareja": 53.2, "pareja": [1, 4], "paso_a": "Inves...
+  docs/COSTURAS_INTERNAS_RESUMEN.md:129
+      | 48 | quality | `desplegar_metas_organizacion` | 5 | 44.7 | 2 |
+  docs/EXPANSION_V1_3_REPORTE.md:77
+      | Co-Intelligence (Mollick) | 48 | 22 |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:379
+      | `exportacion/elementos_plan_exportacion_ejemplo` | 13 | 48,6 | **10** | **trece elementos de un plan de exportacion**: introduccion, metas medibles, recursos financieros y no financieros, capacidad, mercados, politica ...
+  docs/FICHA_SUBFUSION_GRADIENTE.md:380
+      | `core/background_startup_vs_corporativo` | 9 | 48,8 | 4 | **nueve criterios de entrevista** para decidir entre experiencia de startup y de corporativo. Lista de criterios, no narracion. **Es el PRIMER largo legitimo qu...
+  docs/FICHA_SUBFUSION_GRADIENTE.md:450
+      | `core/verificar_modelo_ingresos` | 6 | 48,8 | **3** | **secuencia unica de calculo**: recopilar datos, ingreso bruto, ingreso neto de canal, restar costos, tres escenarios y evaluar el cash burn. Cada paso necesita al ...
+  docs/FICHA_SUBFUSION_GRADIENTE.md:451
+      | `seguridad_digital/csf_funcion_govern` | 7 | 48,5 | **3** | **secuencia unica de la funcion Govern del NIST CSF 2.0**: mision y riesgos, requisitos aplicables, responsable, impacto de perder activos, seguro, terceros y...
+  docs/FICHA_SUBFUSION_GRADIENTE.md:452
+      | `quality/desarrollo_caracteristicas_producto` | 6 | 48,3 | **3** | el **Paso 4 del Quality by Design de Juran** en secuencia unica: agrupar necesidades, elegir metodos, tecnicas creativas, verificar regulaciones, selec...
+  docs/FICHA_SUBFUSION_GRADIENTE.md:453
+      | `quality/abolir_inspeccion_masiva` | 6 | 48,3 | **3** | **secuencia de Deming**: medir el costo de la inspeccion actual, causa raiz, muestreo aleatorio, redisenar el proceso, reducir gradualmente, reservar el 100% para...
+  docs/FICHA_SUBFUSION_GRADIENTE.md:454
+      | `core/criterios_equity_split` | 8 | 48,3 | 5 | **secuencia de criterios de Wasserman** que continua sin calcarse: aportes pasados, capital, costo de oportunidad, aportes futuros, prima de idea, motivaciones, ajuste por...
+  docs/FICHA_SUBFUSION_GRADIENTE.md:455
+      | `quality/estratificacion_datos` | 7 | 48,2 | 4 | **secuencia del metodo**, y el *repetir para otras variables* del paso 6 es **iteracion, no re-narracion**. |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:456
+      | `quality/distorsion_muestreo_mecanico` | 6 | 48,1 | **3** | **secuencia de Deming** sobre el sesgo del instrumento de muestreo, de evaluar el metodo a documentar sus cambios. |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:457
+      | `core/medir_comportamiento_cliente_mvp` | 6 | 48,1 | **3** | secuencia de metricas de comportamiento sobre el MVP. |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:458
+      | `core/fase_affirm_buyers_remorse` | 6 | 48,0 | **3** | secuencia unica de la fase Affirm: mapear el periodo de silencio, contacto proactivo, reafirmar la decision, anticipar obstaculos, abrir espacio para dudas y medir...
+  docs/FICHA_SUBFUSION_GRADIENTE.md:503
+      | `core/verificar_modelo_ingresos` | 6 | 48,8 | 57,8 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:504
+      | `seguridad_digital/csf_funcion_govern` | 7 | 48,5 | 62,0 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:505
+      | `quality/desarrollo_caracteristicas_producto` | 6 | 48,3 | 58,1 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:506
+      | `quality/abolir_inspeccion_masiva` | 6 | 48,3 | 53,2 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:507
+      | `quality/distorsion_muestreo_mecanico` | 6 | 48,1 | 59,1 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:508
+      | `core/medir_comportamiento_cliente_mvp` | 6 | 48,1 | 52,6 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:509
+      | `core/fase_affirm_buyers_remorse` | 6 | 48,0 | 54,7 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:510
+      | `core/etapa_testing_validation` | 6 | 47,5 | 48,9 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:521
+      | `core/retargeting_display` | 6 | 45,6 | 48,6 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:1120
+      ## TANDA DE LA BANDA 48,5 a 48,8: dos confirmadas, cuatro falsas, y el retrato inverso se rompe
+  docs/FICHA_SUBFUSION_GRADIENTE.md:2149
+      | **nodos de UN solo libro** | **48** | **3** | **6%** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:2459
+      | `respuesta_consultas_internacionales` | exportacion | 7 | 48,1 | **3** | *A Basic Guide to Exporting* (U.S. Commercial Service, 11.ª ed.) |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:2460
+      | `plan_de_accion_de_emergencia` | health_safety | 6 | 48,1 | **3** | `SMALL_BUSINESS` |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3701
+      | por debajo de 51,0 | `analisis_tco_roi_b2b` | 48,9 | confirmada |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3702
+      | por debajo de 51,0 | `background_startup_vs_corporativo` | 48,8 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3703
+      | por debajo de 51,0 | `verificar_modelo_ingresos` | 48,8 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3704
+      | por debajo de 51,0 | `customer_journey_mapping` | 48,6 | confirmada |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3705
+      | por debajo de 51,0 | `elementos_plan_exportacion_ejemplo` | 48,6 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3706
+      | por debajo de 51,0 | `organizacion_adaptativa` | 48,5 | confirmada |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3707
+      | por debajo de 51,0 | `csf_funcion_govern` | 48,5 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3708
+      | por debajo de 51,0 | `plan_de_adquisicion_acquire` | 48,3 | confirmada |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3709
+      | por debajo de 51,0 | `desarrollo_caracteristicas_producto` | 48,3 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3710
+      | por debajo de 51,0 | `abolir_inspeccion_masiva` | 48,3 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3711
+      | por debajo de 51,0 | `criterios_equity_split` | 48,3 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3712
+      | por debajo de 51,0 | `ratios_eficiencia_inventario` | 48,3 | confirmada |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3713
+      | por debajo de 51,0 | `estratificacion_datos` | 48,2 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3714
+      | por debajo de 51,0 | `modelo_hibrido_agile_stage_gate` | 48,1 | confirmada |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3715
+      | por debajo de 51,0 | `medir_comportamiento_cliente_mvp` | 48,1 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3716
+      | por debajo de 51,0 | `distorsion_muestreo_mecanico` | 48,1 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3717
+      | por debajo de 51,0 | `respuesta_consultas_internacionales` | 48,1 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3718
+      | por debajo de 51,0 | `plan_de_accion_de_emergencia` | 48,1 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3719
+      | por debajo de 51,0 | `ganar_comprension_del_cliente` | 48,0 | confirmada |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3720
+      | por debajo de 51,0 | `fase_affirm_buyers_remorse` | 48,0 | **falsa** |
+  docs/GRADIENTE_PARES_RESUMEN.md:66
+      | 5 | franquicias | `manejo_objeciones_venta_franquicia` | `prevencion_objeciones_vs_manejo` | 48.8 | 0.8726 | 4/6 |
+  docs/GRADIENTE_PARES_RESUMEN.md:76
+      | 15 | quality | `sistema_medicion_kpi` | `medicion_monitoreo_desempeno` | 48.4 | 0.8406 | 6/5 |
+  docs/GRADIENTE_VEREDICTOS.md:2161
+      | **200** | OK POR ESPECIALIZACION | `franquicias/clasificacion_abc_prospectos` contra `nucleo/clasificacion_leads_abc` **(t56.6, s0.7669)**. El benchmark propio (CIRF en 48 horas) sobre el metodo base |
+  docs/INTRA_DOMINIO_INFORME.md:1968
+      | `customer_journey_mapping` | **10 pasos, corte 7**, bloque 48,6, **EL MAPEO CONTADO DOS VECES**, dos fuentes: *Change by Design* y *Never Lose a Customer Again* |
+  docs/INTRA_DOMINIO_INFORME.md:3199
+      | **525** | `encuadre_desafio_diseno` contra `how_might_we_framing` | **verificar que la pregunta no sea demasiado general ni demasiado especifica** y **usarla como brujula** durante todo el proceso; del otro lado **TRES...
+  docs/INTRA_DOMINIO_INFORME.md:6101
+      | **nucleo al puesto 600** | **445** | 214 | 42 | 4 | 185 | **48,1%** |
+  docs/INTRA_DOMINIO_INFORME.md:6107
+      | **global** | **645 de 3.388** | 233 | 48 | 4 | 360 | **36,1%** |
+  docs/INTRA_DOMINIO_INFORME.md:7251
+      | 600 | 35,8% | 48,1% |
+  docs/INTRA_DOMINIO_INFORME.md:15382
+      | 2.501 a 2.525 | 25 | 11 | **44,0 %** |
+  docs/INTRA_DOMINIO_INFORME.md:15401
+      | **dia de cero defectos** | 2.491 A, 2.525 A mutua | **POR ELEGIR** (9.3.1 visto segundo) |
+  docs/INTRA_DOMINIO_INFORME.md:15927
+      | 10 | 2.525 | `dia_cero_defectos_2` =A= `dia_cero_defectos_3` |
+  docs/INTRA_DOMINIO_RESUMEN.md:34
+      | health_safety | 283 | 39903 | **192** | 0.48% |
+  docs/INTRA_DOMINIO_RESUMEN.md:86
+      | quality | `benchmarking_proceso` con `rol_alta_direccion_benchmarking` | 48.6 | 0.7773 | racimo censado: Benchmarking (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:106
+      | core | `how_might_we_briefs` con `how_might_we_framing` | 48.6 | 0.7718 | racimo censado: Encuadre del problema (How Might We) (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:212
+      | core | `gestion_portafolio_dos_niveles` con `pruning_portafolio` | 48.8 | 0.7338 | racimo censado: Portafolio: revisar, podar, reasignar (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:449
+      | quality | `eliminar_slogans_metas` con `plan_de_accion_transformacion` | 48.1 | 0.5662 | racimo censado: Los puntos de Deming en el titulo (muestra-D) |
+  docs/INTRA_DOMINIO_RESUMEN.md:532
+      | 12 | core | `contratos_de_servicio_garantia` | `diferenciacion_garantia_contrato_servicio` | 48.7 | 0.9258 | 3/4 | nuevo |
+  docs/plan/00_INDICE.md:309
+      | **`OP-U-02`** | los 48 actos abiertos esperan **una sola recomputacion al cierre del cribado** (banco 9.21) |
+  docs/plan/00_INDICE.md:574
+      | lecturas dirigidas **hechas** | **65** | ~~no lo mide este instrumento: **a verificar**~~ **MEDIDO el 19 ago 2026 (vuelta 48) con `scripts/loop/vuelta48_contar_ld.py` ([`../loop/SALIDA_V48_CONTAR_LD.txt`](../loop/SALID...
+  docs/plan/00_INDICE.md:575
+      | lecturas dirigidas **encargadas y sin hacer** | **CERO** | ~~no lo mide este instrumento: **a verificar**~~ **MEDIDO el 19 ago 2026 (vuelta 48), misma corrida: CERO, y la cifra vieja aguanta.** El barrido halla **2** n...
+  docs/plan/02_DESTEJIDOS.md:1009
+      | `optimizacion_embudo_get_customers` | 5 | 48,6 | 0,0 | ninguna |
+  docs/plan/02_DESTEJIDOS.md:1010
+      | `split_testing` | 4 | 48,8 | 0,0 | ninguna |
+  docs/plan/02_DESTEJIDOS.md:1704
+      | `pensamiento_convergente_divergente` **despues** | 7 | 48,1 | 43,8 | ninguna |
+  docs/plan/02_DESTEJIDOS.md:1882
+      | **`seleccion_ceo_fundador`** (`OP-D-05`) | **43,6** | **48,4** | **mas 4,8** | **fuera antes, DENTRO despues** |
+  docs/plan/02_DESTEJIDOS.md:2011
+      | `superioridad_producto_beneficios` | 6 pasos, pareja **48,4** (pasos 3 y 5), bloque **44,7**, corte tras **4** | pareja **NO**, bloque **SI**, franja 44 a 45 **SI** |
+  docs/plan/02_DESTEJIDOS.md:2389
+      | **despues**, del fichero de hoy | 5 | 50,0 | **48,7** (corte tras **3**) | **SOBRE** por **mas 4,7**: **sigue DENTRO** |
+  docs/plan/02_DESTEJIDOS.md:2536
+      | **antes**, leido de git `4d2357fb` | 7 | 52,6 | **48,4** (corte tras 4) | **SOBRE** por **mas 4,4**: **YA ESTABA DENTRO** |
+  docs/plan/02_DESTEJIDOS.md:3166
+      | **vivos** | 3.526 | **3.525** | **menos 1**, guarda 13 OK |
+  docs/plan/02_DESTEJIDOS.md:3197
+      | **despues**, del fichero de hoy | 6 | 54,6 | **48,9** (corte tras 4) | **SOBRE** por **mas 4,9**: **DENTRO** |
+  docs/plan/02_DESTEJIDOS.md:3329
+      | **vivos** | 3.525 | **3.524** | **menos 1**, guarda 13 OK |
+  docs/plan/02_DESTEJIDOS.md:4479
+      | `OP-D-07` | 1 | 3 | ~~**NINGUNO**~~ **CORREGIDO el 19 ago 2026 (vuelta 47), remedido con el mismo instrumento: SI**, con el encabezado de la forma anterior, ~~linea **4578**~~ **CORRECCION DECLARADA el 19 ago 2026 (vue...
+  docs/plan/03_FUSIONES.md:191
+      | ABIERTOS: esperan al recomputo | 48 | 205 |
+  docs/plan/03_FUSIONES.md:275
+      | ~~**lo que mido HOY** contra el grafo de hoy, 19 ago 2026~~ **AL ABRIR EL TRAMO 1** (vuelta 48) | **324** | **822** | **270** | **579** | **54** |
+  docs/plan/03_FUSIONES.md:302
+      | **CORRECCION DECLARADA, barrido 9.10 del 19 ago 2026 (vuelta 48), y las cuatro cifras viejas se quedan delante porque describen el lote QUE ESTA VUELTA ENCONTRO. Recomputado AL CERRAR el tramo 1 con `python scripts/pla...
+  docs/plan/03_FUSIONES.md:411
+      | **48** | `framework_excelencia_operacional` | `preguntas_excelencia_operacional` | CONTENIDO, y por el margen mas ancho del tramo: diez pasos contra cuatro |
+  docs/plan/03_FUSIONES.md:684
+      | los dos actos que la vuelta 48 dejo fuera **por colision de clase medida** (hoy los **8** y **33**) | **siguen fuera**, y esta vuelta no los mira |
+  docs/plan/03_FUSIONES.md:715
+      | la fila **247**, colapsos a auto-arista | 41 | **48** | el mismo |
+  docs/plan/03_FUSIONES.md:716
+      | la fila **248**, pares distintos del retrato | 533 | **525** | el mismo |
+  docs/plan/03_FUSIONES.md:718
+      | el checkpoint **ii** de la fila **528** | 533 igual a 533 | **525 igual a 525, sigue OK** | `recomputo_3388.py`, seccion final |
+  docs/plan/04_ENLACES.md:128
+      | conoce solo la del paso | 230 | 48,2% |
+  docs/plan/05_SANEO.md:586
+      | `franquicias` | 48 | 55 |
+  docs/plan/05_SANEO.md:587
+      | `exportacion` | 32 | 48 |
+  docs/plan/08_VERIFICACION.md:383
+      | **`OP-U-01`** | LISTA con **173 actos** | **la cifra se reescribe**: algunos de los 48 abiertos habran cerrado, y **puede que alguno de los 173 haya crecido y se abra** |
+  docs/plan/10_INVENTARIO.md:130
+      | **ABIERTOS**, esperan al recomputo | ~~**48**~~ | **55** |
+  docs/plan/INVENTARIO.jsonl:325
+      {"tipo": "defecto", "nombre": "aristas duplicadas tras resolucion", "cobertura": "1056", "forma": "MEDIDO, censo completo", "miembros": [], "estado": "reparado en el plan", "operaciones": ["OP-S-12", "OP-C-05"], "fecha_c...
+  docs/plan/OPERACIONES.jsonl:17
+      {"id_op": "OP-S-07", "fase": "00_CODIGO", "tipo": "CAMPO_SUCIO", "nodos": ["analisis_de_cohortes", "analisis_flujo_de_valor", "buyin_customer_development", "costo_de_mala_calidad_copq", "cronograma_proyecto", "cuatro_eta...
+  docs/plan/OPERACIONES.jsonl:23
+      {"id_op": "OP-C-04", "fase": "00_CODIGO", "tipo": "CAMPO_SUCIO", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [], "orden": 6, "depende_de": ["OP-S-06", "OP-S-07"], "bloquea_a": [...
+  docs/plan/OPERACIONES.jsonl:24
+      {"id_op": "OP-U-01", "fase": "03_FUSIONES", "tipo": "FUSION", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [], "orden": 1, "depende_de": ["OP-C-01", "OP-C-02", "OP-C-03", "OP-C-0...
+  docs/plan/OPERACIONES.jsonl:35
+      {"id_op": "OP-U-02", "fase": "03_FUSIONES", "tipo": "FUSION", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [], "orden": 2, "depende_de": ["OP-U-01"], "bloquea_a": [], "verificaci...
+  docs/plan/OPERACIONES.jsonl:37
+      {"id_op": "OP-F-04-COL", "fase": "01_FUENTES", "tipo": "DECISION_DE_FUENTE", "nodos": ["blueprint_de_experiencia", "cliente_disena_producto", "cultura_de_experiencia", "customer_journey_mapping", "diseno_estructura_recom...
+  docs/plan/OPERACIONES.jsonl:46
+      {"id_op": "OP-S-12", "fase": "05_SANEO", "tipo": "SANEO MECANICO", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [], "orden": 12, "depende_de": ["OP-S-01", "OP-S-09", "OP-D-01", "...
+  docs/plan/RECOMPUTO_3388.md:247
+      | de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | ~~**0**~~ ~~**1**~~ ~~**41**~~ **48** **[CORREGIDA TRES VECES, el 15 ago 2026 y el 19 ago 2026 (vueltas 49 y 50). Y NINGUNA DE LAS DOS UL...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ **525** **[CORREGIDA SEIS VECES, la ultima el 19 ago 2026 (vuelta 50), por el mismo mot...
+  docs/plan/RECOMPUTO_3388.md:440
+      | **ABIERTOS** | 48 | **55** | **+7** |
+  docs/plan/RECOMPUTO_3388.md:504
+      | los 48 actos abiertos del 2.117 | cuantos | verificado |
+  docs/plan/RECOMPUTO_3388.md:528
+      | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ ~~533~~ **525**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ ~~533~~ **525**) | **OK**, recomprobado el 15 ago 2026 con l...
+  docs/plan/RECOMPUTO_3388.md:763
+      | `analisis_tco_roi_b2b` | 48,9 | 3690 |
+  docs/plan/RECOMPUTO_3388.md:764
+      | `customer_journey_mapping` | 48,6 | 3693 |
+  docs/plan/RECOMPUTO_3388.md:765
+      | `organizacion_adaptativa` | 48,5 | 3695 |
+  docs/plan/RECOMPUTO_3388.md:766
+      | `plan_de_adquisicion_acquire` | 48,3 | 3697 |
+  docs/plan/RECOMPUTO_3388.md:767
+      | `ratios_eficiencia_inventario` | 48,3 | 3701 |
+  docs/plan/RECOMPUTO_3388.md:768
+      | `modelo_hibrido_agile_stage_gate` | 48,1 | 3703 |
+  docs/plan/RECOMPUTO_3388.md:769
+      | `ganar_comprension_del_cliente` | 48,0 | 3708 |
+
+--- FAMILIA 2: LOS PUESTOS CORREGIDOS ---
+  PUESTO 2222: 2 candidatos
+    docs/INTRA_DOMINIO_PARES.jsonl:2222
+        {"dominio": "health_safety", "nodo_a": "deriva_hacia_el_fallo", "titulo_a": "Drift into Failure (Deriva hacia el fallo)", "nodo_b": "drift_hacia_el_fallo_2", "titulo_b": "Drift into Failure (Normalización de la Desviació...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:2222
+        {"puesto_intra": 2222, "dominio": "health_safety", "nodo_a": "deriva_hacia_el_fallo", "nodo_b": "drift_hacia_el_fallo_2", "clave": null, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 19 ago 2026...
+
+  PUESTO 2226: 2 candidatos
+    docs/INTRA_DOMINIO_PARES.jsonl:2226
+        {"dominio": "health_safety", "nodo_a": "drift_hacia_el_fallo", "titulo_a": "Drift: Desviación Incremental hacia el Fallo", "nodo_b": "drift_hacia_el_fallo_2", "titulo_b": "Drift into Failure (Normalización de la Desviaci...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:2226
+        {"puesto_intra": 2226, "dominio": "health_safety", "nodo_a": "drift_hacia_el_fallo", "nodo_b": "drift_hacia_el_fallo_2", "clave": null, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 19 ago 2026 ...
+
+==============================================================================
+CANDIDATOS TOTALES: 158. Ninguno se oculta y ninguno se corrige aqui:
+este instrumento LISTA, y la adjudicacion de cada sitio es de lectura.
+LIMITE DECLARADO: es una busqueda lexica. Una tabla puede citar el
+marcador con otras palabras y este barrido no la veria; y una cifra con
+su fecha de corte declarada aparece aqui sin estar envejecida.

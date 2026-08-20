@@ -1,0 +1,717 @@
+==============================================================================
+RECOMPUTO_3388.PY, corte 3388, grafo 3853 nodos (355 deprecados)
+==============================================================================
+
+### PASO 1: EL RETRATO DE LAS A (resueltas por alias)
+
+A crudas en el archivo (clase == 'A'): 571
+de esas, colapsan a auto-arista tras resolver (mismo nodo vivo en los dos lados): 49
+   puesto 160: gestion_sindicato_inversores <-> manejo_syndicate_inversion (resuelven al mismo id)
+   puesto 161: asignacion_agil_de_recursos <-> presupuesto_agil_innovacion (resuelven al mismo id)
+   puesto 169: estrategia_plataformas_existentes <-> existing_platforms_leverage (resuelven al mismo id)
+   puesto 176: targeting_blogs_channel <-> targeting_blogs_traccion (resuelven al mismo id)
+   puesto 179: storyboard <-> storyboard_prototipado (resuelven al mismo id)
+   puesto 182: comunicacion_transparente_en_crisis <-> liderazgo_frente_crisis_competitiva (resuelven al mismo id)
+   puesto 183: fase_activate <-> fase_activate_primera_impresion (resuelven al mismo id)
+   puesto 189: proceso_decision_vc <-> proceso_diligencia_vc (resuelven al mismo id)
+   puesto 194: analisis_entorno_modelo_negocio <-> business_model_environment_mapping (resuelven al mismo id)
+   puesto 195: sistema_tres_rs_alineacion <-> three_rs_equilibrium (resuelven al mismo id)
+   puesto 211: framework_excelencia_operacional <-> preguntas_excelencia_operacional (resuelven al mismo id)
+   puesto 212: storytelling_como_herramienta_de_diseno <-> storytelling_para_el_cambio (resuelven al mismo id)
+   puesto 221: compromiso_linea_tiempo_cliente <-> tacticas_cierre_ventas (resuelven al mismo id)
+   puesto 228: determinar_tipo_de_mercado <-> hipotesis_tipo_mercado (resuelven al mismo id)
+   puesto 234: brainstorming_efectivo <-> reglas_brainstorming (resuelven al mismo id)
+   puesto 248: framework_spin_selling <-> modelo_spin_preguntas (resuelven al mismo id)
+   puesto 285: producto_unico_superior <-> superioridad_producto_beneficios (resuelven al mismo id)
+   puesto 300: diferencia_ganancia_flujo_caja <-> profit_vs_cash (resuelven al mismo id)
+   puesto 331: analisis_de_gastos_de_capital <-> propuesta_gasto_capital (resuelven al mismo id)
+   puesto 341: blueprint_de_experiencia <-> customer_journey_mapping (resuelven al mismo id)
+   puesto 344: plan_acquire_activate <-> plan_de_adquisicion_acquire (resuelven al mismo id)
+   puesto 345: determinar_tipo_de_mercado <-> tipo_de_mercado_estrategia_competitiva (resuelven al mismo id)
+   puesto 361: key_partners_hypothesis <-> partners_hypothesis_physical (resuelven al mismo id)
+   puesto 386: enfoque_mercado_voc <-> voz_del_cliente_voc (resuelven al mismo id)
+   puesto 392: build_metrics_toolset <-> metricas_de_adquisicion_activacion (resuelven al mismo id)
+   puesto 401: modelo_spin <-> modelo_spin_preguntas (resuelven al mismo id)
+   puesto 487: cash_is_king <-> diferencia_ganancia_flujo_caja (resuelven al mismo id)
+   puesto 492: asignacion_de_titulos_ejecutivos <-> seleccion_ceo_fundador (resuelven al mismo id)
+   puesto 544: cash_is_king <-> profit_vs_cash (resuelven al mismo id)
+   puesto 673: errores_comunes_asignacion_roles <-> seleccion_ceo_fundador (resuelven al mismo id)
+   puesto 686: hipotesis_tipo_mercado <-> tipo_de_mercado_estrategia_competitiva (resuelven al mismo id)
+   puesto 711: escenarios_futuros <-> future_scenarios_planning (resuelven al mismo id)
+   puesto 823: brainstorming_divergente <-> brainstorming_efectivo (resuelven al mismo id)
+   puesto 833: asignacion_de_titulos_ejecutivos <-> errores_comunes_asignacion_roles (resuelven al mismo id)
+   puesto 834: brainstorming_divergente <-> reglas_brainstorming (resuelven al mismo id)
+   puesto 856: framework_spin_selling <-> modelo_spin (resuelven al mismo id)
+   puesto 885: design_attitude_vs_decision_attitude <-> pensamiento_convergente_divergente (resuelven al mismo id)
+   puesto 943: generar_multiples_opciones <-> pensamiento_convergente_divergente (resuelven al mismo id)
+   puesto 969: customer_retention_metrics_webmobile <-> retention_metrics (resuelven al mismo id)
+   puesto 1779: respetar_la_diversidad <-> respeto_a_la_diversidad (resuelven al mismo id)
+   puesto 1783: critica_eco_eficiencia <-> eco_eficiencia_critica (resuelven al mismo id)
+   puesto 1792: diversidad_como_fortaleza_ecosistemica <-> respeto_a_la_diversidad (resuelven al mismo id)
+   puesto 1832: critica_eco_eficiencia <-> limites_de_la_eco_eficiencia (resuelven al mismo id)
+   puesto 1836: eco_eficiencia_critica <-> limites_de_la_eco_eficiencia (resuelven al mismo id)
+   puesto 1857: diversidad_como_fortaleza_ecosistemica <-> respetar_la_diversidad (resuelven al mismo id)
+   puesto 2237: drift_hacia_el_fallo_2 <-> normalizacion_de_la_desviacion (resuelven al mismo id)
+   puesto 2467: punto_equilibrio_calidad_inspeccion <-> regla_todo_o_nada_inspeccion (resuelven al mismo id)
+   puesto 2473: economia_de_la_inspeccion <-> punto_equilibrio_calidad_inspeccion (resuelven al mismo id)
+   puesto 2480: economia_de_la_inspeccion <-> regla_todo_o_nada_inspeccion (resuelven al mismo id)
+PARES DISTINTOS EN EL RETRATO (tras resolver y deduplicar): 522
+de esos, con mas de un veredicto crudo apuntando al mismo par resuelto: 0
+FECHA DE CORTE: puesto 3388 (archivo entero, banco 9.21)
+
+### PASO 2: EL BARRIDO DE CONFIRMADAS CONTRA LAS A
+
+NO CORRIDO. Localizada la cifra (11 costuras confirmadas con pegado de Hugos, de 46
+costuras confirmadas en total) en docs/plan/01_FUENTES.md linea 53 y linea 62, y en
+docs/plan/CORRECCIONES_A_APLICAR.md lineas 169-174 (CORRECCION 4). NINGUNA de las dos
+escribe la nomina como LISTA de nodos: las dos citan solo el numero 11 (contra el 21 de
+la firma del injerto, que ese si esta escrito nodo por nodo). Busqueda adicional sobre
+docs/ completo (grep 'costuras confirmadas', 'confirmadas de rebote'): docs/COSTURAS_
+INTERNAS_RESUMEN.md secciones 6-7 y docs/FICHA_SUBFUSION_GRADIENTE.md solo repiten el
+CONTEO de 46 (45 nucleo + 1 quality) sin nomina; docs/GRADIENTE_VEREDICTOS.md tiene una
+familia distinta, 'costuras confirmadas DE REBOTE' (6 casos, nombrados, pero es otro
+universo: verificaciones post-cirugia de la cola del gradiente, no la nomina de las 46
+del cierre de costuras internas). SIN LISTA ESCRITA EN NINGUN SITIO: el paso 2 NO SE
+CORRE. No se inventa ni se reconstruye de memoria.
+
+### PASO 3: EL CIERRE TRANSITIVO (sobre el retrato del paso 1, no sobre el archivo crudo)
+
+nodos con al menos una A (tras resolver): 772
+componentes totales: 304
+tamano 1 (sueltos, imposible: todo nodo en ady tiene A, tamano minimo 2): 0
+distribucion de tamanos (>=2): {2: 223, 3: 51, 4: 13, 5: 7, 6: 4, 7: 1, 8: 1, 9: 1, 10: 1, 13: 1, 15: 1}
+
+COMPONENTES DE TAMANO >= 2, la mas grande primero:
+   tamano 15: cultura_de_seguridad_interpretivista_funcionalista, enfoque_situacional_vs_personal, error_humano_vs_falla_mecanica, errores_como_consecuencia, falla_sistemica_vs_error_individual, fallas_activas_condiciones_latentes, human_error_como_sintoma, new_view_human_error, new_view_vs_old_view, nueva_vision_organizacion_linea_seguridad, old_view_vs_new_view_human_error, preguntar_que_no_quien, riesgos_del_enfoque_en_error_humano, seduccion_modelo_persona, vieja_vision_vs_nueva_vision_seguridad
+   tamano 13: decision_factory_mentality, equipos_dedicados_de_proyecto, estructura_de_gates, estructura_gates, gates_go_kill_decision_points, gestion_de_portafolio_gates_go_kill, gestion_portafolio_dos_niveles, gestion_portafolio_foco, gestion_portafolio_formal, portfolio_management, requisitos_gates_con_dientes, revision_portafolio_periodica, sistema_gates_go_kill
+   tamano 10: causas_comunes_vs_especiales, distincion_causas_comunes_especiales, distincion_causas_comunes_especiales_2, distincion_causas_comunes_especiales_incidentes, distincion_causas_especiales_comunes, identificacion_causa_raiz_no_culpa_individual, moral_y_sistema_no_individuo, politica_no_culpar_trabajador, trampa_del_promedio_como_estandar, variacion_del_sistema_vs_individuo
+   tamano  9: customer_development_modelo, customer_discovery, customer_discovery_cuatro_fases, customer_discovery_get_out_of_building, customer_discovery_introduccion, customer_discovery_overview, desarrollo_de_clientes_customer_development, get_out_of_the_building, manifiesto_regla1_hechos_fuera_del_edificio
+   tamano  8: build_measure_learn, ciclo_construir_medir_aprender, ciclo_crear_medir_aprender, desarrollo_en_espiral, design_test_repeat, design_thinking_proceso, startup_como_experimento_cientifico, testing_process_completo
+   tamano  7: customer_validation, customer_validation_sell_phase, earlyvangelists_ventas_tempranas, filosofia_customer_validation, filosofia_validacion_clientes, get_out_building_test_sell, introduccion_validacion_clientes
+   tamano  6: customer_validation_sales_roadmap, estrategia_de_ventas, hoja_de_ruta_de_ventas, refinar_sales_roadmap, sales_roadmap, sales_roadmap_vs_sales_force
+   tamano  6: clasificacion_mercados_cadena_suministro, cuatro_capacidades_mercado, cuatro_categorias_desempeno_cadena_suministro, estrategia_cuatro_capacidades_mercado, marco_analisis_mercado_cadena_suministro, modelo_cuadrantes_mercado
+   tamano  6: cierre_segun_complejidad_venta, cierre_segun_tamano_decision, cierre_sofisticacion_comprador, diferencias_venta_pequena_venta_grande, ineficacia_cierre_ventas_grandes, riesgo_tecnicas_cierre_venta_compleja
+   tamano  6: breakthrough_desempeno_actual, secuencia_universal_breakthrough, secuencia_universal_para_el_breakthrough, seis_sigma_servicios, six_sigma_dmaic, six_sigma_dmaic_2
+   tamano  5: channels_hypothesis_physical, channels_hypothesis_web_mobile, hipotesis_de_canales, seleccion_canal_distribucion, seleccion_canal_fisico
+   tamano  5: alineacion_etica_ia_negocio, human_in_the_loop_ia, mitigar_falling_asleep_wheel, principio_humano_en_el_loop, riesgo_sobredependencia_ia
+   tamano  5: construccion_de_valor_percibido, ecuacion_de_valor, ecuacion_de_valor_cliente, ecuacion_de_valor_venta, prevencion_objeciones_vs_manejo
+   tamano  5: estrategia_de_innovacion_arenas, estrategia_de_innovacion_de_producto, estrategia_de_innovacion_y_tecnologia, estrategia_innovacion_producto, seleccion_arenas_estrategicas
+   tamano  5: encuadre_desafio_diseno, how_might_we_brief_social, how_might_we_briefs, how_might_we_framing, how_might_we_hmw
+   tamano  5: construccion_de_leverage, estrategia_competencia_vcs, gestion_multiples_term_sheets, leverage_en_negociacion_con_vcs, tecnica_anclaje_negociacion
+   tamano  5: cash_burn_calculation, metrics_that_matter_framework, validacion_hipotesis_ingresos, validar_modelo_financiero, verificar_modelo_ingresos
+   tamano  4: comprension_capacidades_limitaciones_ia, invitar_ia_a_todo, jagged_frontier_ia, principio_invitar_ia_siempre
+   tamano  4: enfoque_etapa_investigacion, etapa_de_investigacion, etapa_investigacion_ventas, investigacion_como_habilidad_clave
+   tamano  4: creacion_option_pool, employee_pool_esop, option_pool_negociacion, pool_opciones_empleados
+   tamano  4: etnografia_aplicada_en_equipos_multidisciplinarios, etnografia_de_proyecto, etnografia_investigacion_usuario, investigacion_etnografica_ideacion
+   tamano  4: formalizar_junta_asesora, formalize_advisory_board, identificar_consejo_asesores, identificar_junta_asesores
+   tamano  4: colaboracion_cadena_suministro, compartir_datos_cadena_suministro, diagnostico_efecto_latigo, efecto_bullwhip
+   tamano  4: disenar_tests_pass_fail, diseno_experimentos_hipotesis, diseno_experimentos_pass_fail, realizar_pruebas_pasa_no_pasa
+   tamano  4: fase_diseno_prototipado_modelos, proceso_ideacion_modelo_negocio, prototipado_modelos_negocio, prototyping_possibilities
+   tamano  4: automatizacion_tareas_aburridas, descomposicion_tareas_trabajo, division_trabajo_humano_ia, framework_tareas_ia_humano
+   tamano  4: alianzas_cross_industry, co_opetition_industria, colaboracion_sectorial, trabajo_colectivo_estandares_industria
+   tamano  4: accion_correctiva_5, accion_correctiva_6, accion_correctiva_crosby, accion_correctiva_sistematica
+   tamano  4: compra_por_precio_mas_bajo_como_error, fin_precio_como_criterio_unico, relacion_largo_plazo_proveedor_unico, relaciones_largo_plazo_con_proveedores
+   tamano  4: consejo_calidad, consejo_calidad_2, consejo_de_calidad, consejo_de_calidad_3
+   tamano  3: mission_and_operations_planning, proceso_sop_mop, sop_colaborativo
+   tamano  3: comunidad_tribu_marca, construccion_tribu_de_marca, marcador_visual_marca
+   tamano  3: scorecard_de_seleccion_de_proyectos, scorecards_criterios_gate, scoring_model_scorecard
+   tamano  3: criterios_equity_split, split_igual_vs_desigual, teoria_equidad_split_equity
+   tamano  3: obtencion_compromiso, obtencion_compromiso_venta, obtencion_de_compromiso
+   tamano  3: advances_vs_continuations, marco_avances_continuaciones, objetivos_de_llamada_orientados_a_avance
+   tamano  3: incentivos_transparencia_ia, shadow_ai_use_organizacional, shadow_ia_organizacional
+   tamano  3: regalos_estrategicos_personalizados, regalos_estrategicos_sorpresa, sorprender_cliente_estrategico
+   tamano  3: founder_ceo_succession_process, identificacion_necesidad_sucesion_ceo, sucesion_iniciada_por_fundador
+   tamano  3: formacion_de_habitos_de_pensamiento, formacion_de_habitos_de_trabajo_creativo, gestion_de_habitos_mentales_para_pensar
+   tamano  3: influence_map_organizacional, mapa_de_influencia, mapa_organizacional_influencia
+   tamano  3: decision_cuando_fundar, evaluacion_capacidades_fundador, tres_preguntas_carrera
+   tamano  3: pivote_estrategico, pivote_startup, pivotes_e_iteraciones
+   tamano  3: cofundar_con_amigos_familia_riesgos, riesgo_cofundadores_relacion_previa, seleccion_relaciones_cofundadores
+   tamano  3: investigar_datos_cliente, personalizacion_investigacion_prospecto, seguimiento_informacion_cliente
+   tamano  3: metodo_valor_presente_neto, valor_del_dinero_en_el_tiempo, valor_presente
+   tamano  3: atencion_focal_y_periferica, intimation_illumination, wallas_intimacion_fringe_consciousness
+   tamano  3: crowdfunding_legal_exemptions_jobs_act, cumplimiento_inversionistas_acreditados, equity_crowdfunding
+   tamano  3: customer_profile, customer_profile_value_map, value_proposition_canvas
+   tamano  3: diseno_organizacional_equipos_innovacion, equipo_multifuncional, equipo_multifuncional_real
+   tamano  3: evaluacion_tecnologias_disruptivas, explotacion_tecnologias_disruptivas, tecnologias_disruptivas_oportunidad
+   tamano  3: analisis_trafico_competitivo, captura_conocimiento_mercado, capturar_conocimiento_de_mercado
+   tamano  3: asignacion_persona_ia, ingenieria_de_prompts_efectiva, prompting_por_persona_ia
+   tamano  3: homework_frontend_loading, voice_of_customer_homework, voz_del_cliente_voc
+   tamano  3: customer_segments_hypothesis, problem_recognition_scale, segmentos_de_clientes_problema_necesidad
+   tamano  3: escalamiento_prematuro, preservar_efectivo_buscar_modelo, restriccion_gasto_validacion
+   tamano  3: warrant_pricing_venture_debt, warrants_deuda_convertible, warrants_financiamiento
+   tamano  3: definir_meta_de_traccion, moving_the_needle, traction_goal
+   tamano  3: atacar_mercados_establecidos_con_problema, encontrar_grandes_problemas_mercados_emergentes, resolver_problemas_grandes
+   tamano  3: calcular_peso_dimensional_antes_cotizar, conocer_limites_peso_tamano_courier, medir_paquete_redondeando_hacia_arriba
+   tamano  3: gestion_eco_riesgos, mitigacion_riesgos_ambientales, responsabilidad_extendida_productor
+   tamano  3: definir_limites_huella_carbono, huella_carbono_empresarial, medir_huella_carbono_corporativa
+   tamano  3: enfoque_paso_a_paso_investigacion_mercado, evaluacion_mercados_objetivo, screening_mercados_potenciales
+   tamano  3: gestion_terminacion_franquiciado, perdida_control_operativo, terminacion_franquiciado_causas
+   tamano  3: cinco_categorias_costos_franquicia, costos_preparacion_franquicia, estimacion_inversion_inicial_franquiciador
+   tamano  3: contratar_abogado_especializado_franquicias, contratar_abogado_franquicias, eleccion_abogado_franquicias
+   tamano  3: deteccion_franquicia_inadvertida, estructuras_combinadas_franquicia, prevenir_franquicias_inadvertidas
+   tamano  3: ciclo_de_culpa, ciclo_de_culpa_2, dysfunctional_organizational_culture_patterns
+   tamano  3: defensas_en_profundidad, defensas_en_profundidad_2, defensas_en_profundidad_3
+   tamano  3: evitar_sesgo_retrospectivo_hindsight, evitar_shopping_bag, reconstruccion_contexto_situacional
+   tamano  3: investigacion_new_view, new_view_vs_old_view_de_error_humano, perspectiva_dentro_del_tunel
+   tamano  3: mejora_del_sistema_responsabilidad_gerencial, sistema_estable_causas_comunes, sistema_estable_responsabilidad_gerencial
+   tamano  3: design_for_six_sigma_dfss, design_for_six_sigma_dmadv, design_for_six_sigma_dmadv_2
+   tamano  3: critica_gestion_por_objetivos, eliminacion_gestion_por_objetivos_y_numeros, eliminar_metas_numericas_gerencia
+   tamano  3: dia_cero_defectos, dia_cero_defectos_2, dia_cero_defectos_3
+   tamano  3: analisis_pareto, analisis_pareto_de_proveedores, principio_pareto
+   tamano  3: control_mantener_ganancias, matriz_de_control_de_proceso, plan_de_control
+   tamano  3: analisis_causa_raiz_diagnostico, analisis_diagnostico_causa, viaje_diagnostico_remedial
+   tamano  3: error_proofing_servicio, mistake_proofing_poka_yoke_2, poka_yoke_a_prueba_de_errores
+   tamano  3: reconocimiento, reconocimiento_al_desempeno, reconocimiento_crosby
+   tamano  3: criterios_seleccion_proyectos_calidad, dmaic_fase_select, proceso_nominacion_seleccion
+   tamano  2: domina_lo_que_compras, investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor
+   tamano  2: cultura_climatica_innovacion, cultura_de_innovacion
+   tamano  2: balance_eficiencia_responsividad, trade_off_responsividad_eficiencia
+   tamano  2: desafios_de_diseno_competitivos, diseno_de_desafios_de_innovacion
+   tamano  2: innovacion_abierta, open_innovation_ideacion
+   tamano  2: hr_calidad_gestion, hr_como_control_de_calidad_gerencial
+   tamano  2: customer_appreciation_pr, customer_appreciation_soporte
+   tamano  2: pivotar_o_proceder, pivote_o_proceder
+   tamano  2: analisis_de_variancia, analisis_varianza_financiera
+   tamano  2: sistema_stage_gate, stage_gate_system
+   tamano  2: antigoals_framework, definir_antigoals
+   tamano  2: arquetipos_de_cliente, customer_archetypes
+   tamano  2: assumption_and_constraint_log, assumption_constraint_log
+   tamano  2: embudo_get_keep_grow, estrategia_get_keep_grow
+   tamano  2: analisis_motivaciones_fundador, influencias_tempranas_motivaciones
+   tamano  2: asignacion_recursos_en_gates, sistema_gestion_recursos_en_gates
+   tamano  2: apertura_efectiva_llamada_venta, apertura_llamada_venta_grande
+   tamano  2: produccion_scheduling_balance_objetivos, programacion_produccion
+   tamano  2: estrategia_anuncios_sociales_respuesta_indirecta, social_ads_indirect_response
+   tamano  2: desconexion_ventas_experiencia, traspaso_ventas_cuentas
+   tamano  2: get_visual, pensamiento_visual
+   tamano  2: fases_de_retencion_de_clientes, ocho_fases_experiencia_cliente
+   tamano  2: prototipado_de_experiencias, prototipado_experiencial_servicios
+   tamano  2: entender_term_sheet, term_sheet_overview
+   tamano  2: modelo_cascada_desarrollo_producto, modelo_tradicional_introduccion_producto
+   tamano  2: framework_scor_plan_source_make_deliver, scor_model_operaciones
+   tamano  2: senales_de_compra_en_venta_grande, senales_de_compra_reales
+   tamano  2: analisis_de_cohortes, metricas_cohortes
+   tamano  2: deteccion_alucinaciones_ia, gestion_alucinaciones_ia
+   tamano  2: rediseno_procesos_negocio_cliente, rediseno_procesos_negocio_cx
+   tamano  2: deep_dive_workshop, metodologia_deep_dive
+   tamano  2: fase_assess_ciclo_cliente, fase_assess_experiencia_cliente
+   tamano  2: test_socios_de_trafico, traffic_partners_hypothesis
+   tamano  2: fallo_como_aprendizaje_startup, fracaso_como_aprendizaje_startup
+   tamano  2: leap_of_faith_assumptions, leap_of_faith_questions
+   tamano  2: key_resources_hypothesis, recursos_clave
+   tamano  2: planificacion_preguntas_implicacion, preguntas_implicacion
+   tamano  2: blogging_como_canal_de_traccion, content_marketing_blog
+   tamano  2: desirability_feasibility_viability, triada_restricciones_diseno
+   tamano  2: fase_admit, fase_admit_celebracion
+   tamano  2: usuarios_extremos_edge_cases, usuarios_extremos_insights
+   tamano  2: business_intelligence_niveles_datos, jerarquia_datos_scor
+   tamano  2: alineacion_motivacional_cofundadores, compatibilidad_motivaciones_riqueza_control
+   tamano  2: fase_acclimate_experiencia_cliente, fase_acclimate_mapa_de_proceso
+   tamano  2: estrategia_de_balas_de_plomo, lead_bullets_no_silver_bullets
+   tamano  2: formalizacion_acuerdo_equity, reparto_inicial_equity
+   tamano  2: milk_run_deliveries, programacion_entregas_delivery_scheduling
+   tamano  2: contratar_ambicion_correcta, screening_ambicion_organizacional
+   tamano  2: periodo_incubacion_mental, wallas_etapa_incubacion
+   tamano  2: diferencia_ventaja_beneficio, framework_caracteristicas_ventajas_beneficios
+   tamano  2: fit_problema_solucion, problem_solution_fit
+   tamano  2: encuesta_satisfaccion_postproyecto, reunion_conclusion_proyecto
+   tamano  2: diseno_de_experiencias_participativas, economia_de_la_experiencia
+   tamano  2: evaluacion_vp_ventas, framework_evaluacion_director_ventas
+   tamano  2: plan_a_b_c_soft_landing, restructuracion_deuda_soft_landing
+   tamano  2: publicidad_offline_pruebas_locales, tracking_publicidad_offline
+   tamano  2: desarrollo_presentacion_problema, presentacion_problema_tres_columnas
+   tamano  2: gamificacion_onboarding_visual, visualizacion_progreso_onboarding
+   tamano  2: construir_sobre_ideas_ajenas, reglas_brainstorming
+   tamano  2: five_whys_inversion_proporcional, tecnica_cinco_porques
+   tamano  2: fase_accomplish, fase_accomplish_experiencia_cliente
+   tamano  2: acquisicion_viral_engineering, herramientas_adquisicion_viral
+   tamano  2: ficcion_especulativa_como_metodo, historia_del_futuro_escenarios_especulativos
+   tamano  2: analisis_disrupciones_mercado, evaluacion_industria_cliente
+   tamano  2: alineacion_cadena_estrategia_negocio, definicion_alineacion_cadena_suministro
+   tamano  2: creacion_data_warehouse, data_warehouse_como_fundamento
+   tamano  2: ciclo_de_conversion_de_efectivo, dso_dpo_gestion_capital_trabajo
+   tamano  2: fase_mobilizacion_equipo_multifuncional, fase_mobilizar_modelo_negocio
+   tamano  2: community_building_estrategia, construccion_de_comunidad_como_canal_traccion
+   tamano  2: embudo_secuencial_de_inversores, seleccion_etapa_fondo_vc
+   tamano  2: eleccion_estructura_vesting_founder, vesting_acciones_fundadores
+   tamano  2: diversidad_vs_homogeneidad_equipo, homogeneidad_vs_diversidad_equipo
+   tamano  2: ia_colaborador_productividad, ia_como_nivelador_habilidades
+   tamano  2: auditoria_desempeno_new_products, mantener_puntaje_innovacion
+   tamano  2: duration_estimating_worksheet, estimacion_tres_puntos
+   tamano  2: eventos_offline_como_canal_traccion, eventos_offline_propios
+   tamano  2: genchi_gembutsu, genchi_gembutsu_salir_del_edificio
+   tamano  2: flexible_go_kill_criteria, technology_platform_evaluation
+   tamano  2: decision_pivote_perseverar, pivotar_o_perseverar
+   tamano  2: simulacion_de_operaciones_supply_chain, simulacion_diseno_cadena_suministro
+   tamano  2: colaboracion_transporte_ctm, collaborative_transportation_management
+   tamano  2: customer_development_vs_business_plan, search_for_business_model
+   tamano  2: anticipar_consecuencias_negativas, planificacion_consecuencias_no_intencionadas
+   tamano  2: estrategia_multicanal_bienvenida, seis_medios_comunicacion_cliente
+   tamano  2: intellectual_property_strategy, proteccion_propiedad_intelectual
+   tamano  2: aprendizaje_validado_vs_metricas_vanidad, metricas_accionables
+   tamano  2: alineacion_de_objetivos_en_sistemas, diseno_de_sistemas_a_escala
+   tamano  2: control_voluntario_del_pensamiento, esfuerzo_voluntario_vs_urge_espontaneo
+   tamano  2: seis_herramientas_comunicacion_celebracion, seis_herramientas_comunicacion_fase_activate
+   tamano  2: cuatro_etapas_del_pensamiento_creativo, wallas_etapa_iluminacion
+   tamano  2: observar_lo_ordinario, practica_de_observacion_atenta
+   tamano  2: bullseye_framework, middle_ring_testing
+   tamano  2: diseno_consecuencias_no_intencionadas, diseno_fugitivo_runaway_design
+   tamano  2: arquitectura_flexible_soa, arquitectura_tecnica_modular
+   tamano  2: entrenamiento_empleados_startup, entrenamiento_funcional_empleados
+   tamano  2: convertir_necesidad_en_demanda, insight_observacion_empatia
+   tamano  2: framework_flujos_de_datos_ppp, framework_ppph_flujos
+   tamano  2: business_model_canvas_scorecard, business_model_canvas_vs_plan
+   tamano  2: bucle_retroalimentacion_autoajustable, ciclos_retroalimentacion_autoajuste
+   tamano  2: evitar_greenwashing, evitar_greenwashing_2
+   tamano  2: contabilidad_ambiental, herramientas_contabilidad_ambiental
+   tamano  2: reduccion_cargas_cumplimiento, reduccion_cargas_regulatorias
+   tamano  2: crecimiento_ingresos_verdes, generacion_ingresos_verdes
+   tamano  2: critica_al_pib_como_metrica, critica_del_pib_como_metrica_de_progreso
+   tamano  2: hibridos_monstruosos, manejo_de_hibridos_monstruosos
+   tamano  2: liderazgo_ceo_sostenibilidad, vision_alineacion_sostenibilidad
+   tamano  2: accountability_incentivos, incentivos_reconocimiento_sostenibilidad
+   tamano  2: menos_malo_vs_bueno, ser_menos_malo_vs_ser_bueno
+   tamano  2: diseno_mensaje_verde, mensajeria_creativa_positiva
+   tamano  2: unirse_grupo_lideres_climaticos, unirse_organizacion_rsc_ambiental
+   tamano  2: compra_offsets_carbono, neutralidad_carbono
+   tamano  2: eco_efectividad_2, eco_efectividad_re_evolucion_industrial
+   tamano  2: disruptores_endocrinos_y_salud_industrial, quimicos_toxicos_en_diseno
+   tamano  2: eco_eficiencia, eco_eficiencia_costos
+   tamano  2: desperdicio_es_alimento, metabolismo_biologico_y_tecnico
+   tamano  2: carta_de_credito_letter_of_credit, letters_of_credit
+   tamano  2: export_administration_regulations, regulaciones_exportacion_ear
+   tamano  2: seguro_de_carga_transporte, seguro_exportacion
+   tamano  2: incoterms_reglas_comerciales_internacionales, terminos_de_venta_incoterms
+   tamano  2: certificado_de_origen_tratados_libre_comercio, nafta_free_trade_agreements
+   tamano  2: intermediarios_exportacion, uso_intermediarios_exportacion
+   tamano  2: seleccion_canales_distribucion, seleccion_canales_exportacion
+   tamano  2: ecosistema_global_emprendimiento_gee, recursos_apoyo_pymes_sba
+   tamano  2: documentary_collections, letra_de_cambio_bill_of_exchange
+   tamano  2: prevencion_problemas_de_pago, seleccion_de_metodo_de_pago
+   tamano  2: barreras_comerciales_no_arancelarias, cumplimiento_acuerdos_comerciales_tanc
+   tamano  2: licenciamiento_tecnologico, proteccion_propiedad_intelectual_internacional
+   tamano  2: consejos_distrito_exportacion_dec, uso_del_us_commercial_service
+   tamano  2: elaboracion_fdd, preparar_fdd
+   tamano  2: estrategia_multicanal_expansion, franquicia_mas_crecimiento_corporativo_hibrido
+   tamano  2: proceso_llamada_inicial_venta, proceso_primera_llamada
+   tamano  2: sitio_web_captura_leads, sitio_web_franquicia
+   tamano  2: comprender_definicion_legal_franquicia, marco_name_system_fee
+   tamano  2: programa_de_referidos_de_franquiciados, referidos_franquiciados_existentes
+   tamano  2: mito_control_calidad_corporativo, motivated_management_franquiciado
+   tamano  2: confidencialidad_manual_operaciones, desarrollar_manual_operaciones
+   tamano  2: ferias_comerciales_franquicia, marketing_en_ferias_comerciales_de_franquicias
+   tamano  2: combinar_crecimiento_corporativo_y_franquicia, mix_ubicaciones_corporativas_franquicia
+   tamano  2: rutas_de_salida_y_puertas_de_emergencia, rutas_salida_planificacion_emergencias
+   tamano  2: rendicion_cuentas_prospectiva, responsabilidad_prospectiva
+   tamano  2: capacitacion_conciencia_programa, capacitacion_educacion_seguridad
+   tamano  2: confusion_de_modos_automatizacion, confusion_modos_automatizacion
+   tamano  2: clasificacion_sistemas_por_nivel_seguridad, niveles_de_madurez_de_seguridad
+   tamano  2: accident_proneness_fallacy, declive_teoria_manzana_podrida
+   tamano  2: cultura_justa, cultura_justa_organizacional
+   tamano  2: omisiones_en_mantenimiento, vulnerabilidad_instalacion
+   tamano  2: areas_riesgo_primario, clasificacion_riesgos_por_dominio
+   tamano  2: critica_perdida_de_conciencia_situacional, evitar_perdida_situacion_awareness
+   tamano  2: sesgo_retrospectivo_hindsight, sesgo_retrospectivo_hindsight_2
+   tamano  2: limite_busqueda_causas_pendulo, reglas_parada_investigacion_accidentes
+   tamano  2: caso_descarrilamiento_nakina, condiciones_latentes_largo_plazo
+   tamano  2: cultura_de_aprendizaje, ingenieria_cultura_aprendizaje
+   tamano  2: programa_de_mejora_de_calidad, programa_mejora_calidad_14_pasos
+   tamano  2: mantener_las_ganancias, sostener_las_ganancias
+   tamano  2: innovacion_tipo_ii, tipos_innovacion_i_ii
+   tamano  2: funcion_perdida_limites_especificacion, funcion_perdida_taguchi
+   tamano  2: enfermedades_mortales_gestion, las_siete_enfermedades_mortales
+   tamano  2: eliminacion_pago_destajo, eliminar_trabajo_a_destajo
+   tamano  2: adaptaciones_sectoriales_iso, estandares_especificos_industria
+   tamano  2: estilo_gerencial_ballet_vs_hockey, estilo_gerencial_hockey_vs_ballet
+   tamano  2: roi_breakthrough, roi_proyectos_calidad
+   tamano  2: pensamiento_sistemico_rol_triple, teoria_triple_rol_sistemas_abiertos
+   tamano  2: descubrir_necesidades_cliente, descubrir_necesidades_del_cliente
+   tamano  2: qfd_matriz, spreadsheet_diseno_para_la_calidad
+   tamano  2: premio_shingo, shingo_prize
+   tamano  2: reinicio_programa_calidad, repeticion_programa
+   tamano  2: eliminar_slogans_metas, eliminar_slogans_y_exhortaciones
+   tamano  2: rol_black_belt, rol_black_belt_six_sigma
+   tamano  2: mapeo_flujo_valor, value_stream_mapping
+   tamano  2: cero_defectos, filosofia_zero_defectos
+   tamano  2: equipo_mejora_calidad, equipo_mejora_calidad_2
+   tamano  2: rol_facilitador_black_belt, rol_facilitador_equipos_mejora
+   tamano  2: indice_cpk, interpretacion_cpk
+   tamano  2: barreras_orgullo_trabajo, remover_barreras_orgullo_trabajo
+   tamano  2: histograma, histogramas_distribucion_frecuencias
+   tamano  2: criticas_muestreo_aceptacion, eliminacion_planes_muestreo_estandar
+   tamano  2: recoleccion_validacion_datos_benchmarking, validacion_datos_benchmarking
+   tamano  2: intercambio_de_roles_para_motivacion, rotacion_de_puestos_para_mejora_calidad
+   tamano  2: control_estadistico_del_proceso, control_estadistico_no_implica_cero_defectos
+   tamano  2: benchmarking_mejores_practicas, benchmarking_proceso
+   tamano  2: conciencia_calidad, conciencia_de_calidad_2
+   tamano  2: eliminacion_causas_error_2, eliminacion_causas_error_4
+   tamano  2: circulos_calidad_qc, preparacion_gerencial_antes_de_circulos_de_calidad
+   tamano  2: autocontrol_y_controlabilidad, concepto_autocontrol
+   tamano  2: comunicar_politicas_organizacionales, politica_calidad_organizacional
+   tamano  2: pocos_vitales_muchos_utiles, proyectos_vitales_pocos
+   tamano  2: ciclo_shewhart_pdsa, pdsa_shewhart_cycle
+   tamano  2: control_estadistico_de_procesos, control_estadistico_de_procesos_2
+   tamano  2: evaluacion_gestion_riesgos, plan_de_gestion_de_riesgos
+   tamano  2: enfasis_en_ganancias_corto_plazo, enfasis_en_utilidades_corto_plazo
+   tamano  2: grafico_de_corrida_run_chart, run_chart_datos_temporales
+   tamano  2: evaluacion_alternativas_solucion, evaluacion_seleccion_alternativas_mejora
+   tamano  2: caso_definicion_arruga, definiciones_operacionales
+   tamano  2: distribucion_exponencial, formula_exponencial_confiabilidad
+   tamano  2: medicion_calidad, medicion_calidad_2
+   tamano  2: analisis_reporte_benchmarking, desarrollo_reporte_benchmarking
+   tamano  2: gestion_efectiva_benchmarking, rol_alta_direccion_benchmarking
+   tamano  2: consumidor_como_eje_de_produccion, consumidor_parte_linea_produccion
+   tamano  2: identificar_clientes_diseno, identificar_clientes_externos_e_internos
+   tamano  2: juran_quality_by_design, quality_by_design
+   tamano  2: definiciones_operacionales_3, definiciones_operacionales_4
+   tamano  2: establecimiento_metas, fijacion_de_metas
+   tamano  2: administracion_sin_miedo, gestion_miedo_reportes
+   tamano  2: contacto_con_el_cliente, contacto_con_el_cliente_2
+   tamano  2: analisis_de_sistemas_de_medicion_msa, errores_de_medicion
+   tamano  2: definicion_problema_moms, definicion_problema_moms_2
+   tamano  2: gobierno_corporativo_juntas_directivas, planificacion_gobierno_organizaciones_familiares
+   tamano  2: falacia_recompensa_loteria, sistemas_recompensa_aleatorios
+   tamano  2: comparacion_inspectores_independientes, riesgos_consenso_inspeccion
+   tamano  2: revision_progreso, revision_progreso_breakthrough
+   tamano  2: gestion_estrategica_de_calidad_sqm, rol_tactico_estrategico_oficina
+   tamano  2: juran_transformation_roadmap, roadmap_despliegue_lean_six_sigma
+   tamano  2: eliminacion_barreras_orgullo_del_trabajo, orgullo_por_el_trabajo
+   tamano  2: cinco_suposiciones_erroneas_calidad, concepto_supuestos_erroneos_sobre_calidad
+   tamano  2: estadistico_competente_organizacion, organizacion_liderazgo_estadistico
+   tamano  2: kanban_pull_system, sistema_pull_push
+   tamano  2: cultura_integridad_objetividad_resolucion_problemas, manejo_problemas
+   tamano  2: cambio_actitud_gerencial, seminario_de_exito_para_gerencia
+   tamano  2: evaluacion_organizacional_calidad, evaluacion_riesgo_calidad_organizacional
+   tamano  2: control_del_proceso_del_proveedor, planificacion_tecnologica_conjunta
+   tamano  2: getting_started_incident_response, respuesta_incidentes_cui
+   tamano  2: getting_started_maintenance, mantenimiento_sistema_cui
+   tamano  2: funcion_protect_politica_seguridad, protect_medidas_tecnicas
+
+### PASO 4: LAS NOMINAS Y LOS ACTOS (cobertura banco 9.26, CERRADO/ABIERTO como OP-U-01)
+
+   [A] tamano 15 | posibles 105 | leidos  30 | en cola sin leer 0 | fuera de cola 75 | clases internas {'A': 20, 'D': 10}     | edad TODO POSTERIOR AL 2117
+   [A] tamano 13 | posibles  78 | leidos  20 | en cola sin leer 0 | fuera de cola 58 | clases internas {'B': 2, 'A': 16, 'D': 2} | edad TODO ANTERIOR AL 2117
+   [A] tamano 10 | posibles  45 | leidos  14 | en cola sin leer 0 | fuera de cola 31 | clases internas {'A': 14}              | edad TODO POSTERIOR AL 2117
+   [A] tamano  9 | posibles  36 | leidos  16 | en cola sin leer 0 | fuera de cola 20 | clases internas {'A': 12, 'D': 3, 'B': 1} | edad TODO ANTERIOR AL 2117
+   [A] tamano  8 | posibles  28 | leidos   9 | en cola sin leer 0 | fuera de cola 19 | clases internas {'A': 9}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  7 | posibles  21 | leidos  15 | en cola sin leer 0 | fuera de cola  6 | clases internas {'A': 8, 'D': 7}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  6 | posibles  15 | leidos  10 | en cola sin leer 0 | fuera de cola  5 | clases internas {'D': 4, 'A': 6}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  6 | posibles  15 | leidos   7 | en cola sin leer 0 | fuera de cola  8 | clases internas {'A': 7}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  6 | posibles  15 | leidos   9 | en cola sin leer 0 | fuera de cola  6 | clases internas {'A': 9}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  6 | posibles  15 | leidos   7 | en cola sin leer 0 | fuera de cola  8 | clases internas {'A': 7}               | edad TODO POSTERIOR AL 2117
+   [A] tamano  5 | posibles  10 | leidos   8 | en cola sin leer 0 | fuera de cola  2 | clases internas {'A': 8}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  5 | posibles  10 | leidos   7 | en cola sin leer 0 | fuera de cola  3 | clases internas {'A': 5, 'D': 2}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  5 | posibles  10 | leidos   5 | en cola sin leer 0 | fuera de cola  5 | clases internas {'A': 5}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  5 | posibles  10 | leidos   8 | en cola sin leer 0 | fuera de cola  2 | clases internas {'A': 6, 'D': 2}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  5 | posibles  10 | leidos   4 | en cola sin leer 0 | fuera de cola  6 | clases internas {'A': 4}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  5 | posibles  10 | leidos   7 | en cola sin leer 0 | fuera de cola  3 | clases internas {'A': 7}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  5 | posibles  10 | leidos   6 | en cola sin leer 0 | fuera de cola  4 | clases internas {'A': 5, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   3 | en cola sin leer 0 | fuera de cola  3 | clases internas {'A': 3}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   5 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 5}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   5 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 4, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   3 | en cola sin leer 0 | fuera de cola  3 | clases internas {'A': 3}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   5 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 4, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   4 | en cola sin leer 0 | fuera de cola  2 | clases internas {'A': 3, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   5 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 3, 'D': 2}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   4 | en cola sin leer 0 | fuera de cola  2 | clases internas {'A': 3, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   3 | en cola sin leer 0 | fuera de cola  3 | clases internas {'A': 3}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   3 | en cola sin leer 0 | fuera de cola  3 | clases internas {'A': 3}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  4 | posibles   6 | leidos   6 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 4, 'D': 2}       | edad TODO POSTERIOR AL 2117
+   [A] tamano  4 | posibles   6 | leidos   5 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 3, 'D': 2}       | edad TODO POSTERIOR AL 2117
+   [C] tamano  4 | posibles   6 | leidos   6 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 5, 'D': 1}       | edad TODO POSTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'B': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'D': 1, 'A': 2}       | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 3}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'B': 1}       | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'B': 1}       | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'B': 1, 'A': 2}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad MIXTO
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO ANTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO POSTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO POSTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO POSTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO POSTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 3}               | edad TODO POSTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO POSTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 3}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO POSTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO POSTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 2, 'D': 1}       | edad TODO POSTERIOR AL 2117
+   [A] tamano  3 | posibles   3 | leidos   2 | en cola sin leer 0 | fuera de cola  1 | clases internas {'A': 2}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  3 | posibles   3 | leidos   3 | en cola sin leer 0 | fuera de cola  0 | clases internas {'D': 1, 'A': 2}       | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO ANTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+   [C] tamano  2 | posibles   1 | leidos   1 | en cola sin leer 0 | fuera de cola  0 | clases internas {'A': 1}               | edad TODO POSTERIOR AL 2117
+
+RESUMEN PASO 4:
+  actos (componentes >=2): 304
+  CERRADOS: 251 sobre 532 nodos
+  ABIERTOS: 53 sobre 240 nodos
+  CERRADOS por tamano: {2: 223, 3: 26, 4: 2}
+  ABIERTOS por tamano: {3: 25, 4: 11, 5: 7, 6: 4, 7: 1, 8: 1, 9: 1, 10: 1, 13: 1, 15: 1}
+
+  edad de los actos (TODO ANTERIOR AL CORTE VIEJO / MIXTO / TODO POSTERIOR):
+    {'TODO POSTERIOR AL 2117': 111, 'TODO ANTERIOR AL 2117': 192, 'MIXTO': 1}
+   ABIERTOS por edad: {'TODO POSTERIOR AL 2117': 12, 'TODO ANTERIOR AL 2117': 40, 'MIXTO': 1}
+   CERRADOS por edad: {'TODO POSTERIOR AL 2117': 99, 'TODO ANTERIOR AL 2117': 152}
+escrito: docs/loop/RECOMPUTO_V50_CIERRE.jsonl
+
+### LAS CUATRO COMPROBACIONES (08_VERIFICACION.md)
+
+i. nodos en actos (772) == suma de tamanos de las componentes (772): OK
+ii. A vigentes resueltas del retrato (522) == suma de aristas A internas de las componentes (522): OK
+iii. todo acto CERRADO tiene sus pares internos leidos y ningun miembro con par pendiente: OK
+iv. ningun nodo deprecado aparece dentro de una componente: OK (0 encontrados: [])
+
+LAS CUATRO: TODAS OK

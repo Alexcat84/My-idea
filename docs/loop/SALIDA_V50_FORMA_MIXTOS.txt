@@ -1,0 +1,266 @@
+==============================================================================
+LA FORMA DEL SUBGRAFO A DE CADA ACTO MIXTO, medida hoy
+nomina: docs/loop/RECOMPUTO_V50_APERTURA.jsonl (35 actos mirados)
+==============================================================================
+
+--- ACTO 1  tam 4  FORMA: ESTRELLA
+      miembros: deriva_hacia_el_fallo, drift_hacia_el_fallo, drift_hacia_el_fallo_2, normalizacion_de_la_desviacion
+      aristas A  : deriva_hacia_el_fallo + drift_hacia_el_fallo_2 [2222]; drift_hacia_el_fallo + drift_hacia_el_fallo_2 [2226]; drift_hacia_el_fallo_2 + normalizacion_de_la_desviacion [2237]
+      aristas NO A: deriva_hacia_el_fallo + drift_hacia_el_fallo D[2271]; deriva_hacia_el_fallo + normalizacion_de_la_desviacion D[2275]; drift_hacia_el_fallo + normalizacion_de_la_desviacion D[2394]
+      CENTRO (el que toca todas las A): drift_hacia_el_fallo_2
+      LAS PUNTAS (sin ninguna A entre si): deriva_hacia_el_fallo, drift_hacia_el_fallo, normalizacion_de_la_desviacion
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 2  tam 4  FORMA: CLIQUE_MAS_COLGANTE
+      miembros: accion_correctiva_5, accion_correctiva_6, accion_correctiva_crosby, accion_correctiva_sistematica
+      aristas A  : accion_correctiva_5 + accion_correctiva_6 [2418]; accion_correctiva_5 + accion_correctiva_sistematica [2431]; accion_correctiva_6 + accion_correctiva_crosby [2426]; accion_correctiva_6 + accion_correctiva_sistematica [2701]
+      aristas NO A: accion_correctiva_5 + accion_correctiva_crosby D[2496]; accion_correctiva_crosby + accion_correctiva_sistematica D[2805]
+      PARTE A (clique): accion_correctiva_5, accion_correctiva_6, accion_correctiva_sistematica
+      EL MIXTO que cuelga: accion_correctiva_crosby
+      entra a la componente por: accion_correctiva_6 + accion_correctiva_crosby [2426]
+
+--- ACTO 3  tam 4  FORMA: CLIQUE_MAS_COLGANTE
+      miembros: consejo_calidad, consejo_calidad_2, consejo_de_calidad, consejo_de_calidad_3
+      aristas A  : consejo_calidad + consejo_calidad_2 [2631]; consejo_calidad + consejo_de_calidad [2663]; consejo_calidad + consejo_de_calidad_3 [2523]; consejo_calidad_2 + consejo_de_calidad [2670]; consejo_calidad_2 + consejo_de_calidad_3 [2662]
+      aristas NO A: consejo_de_calidad + consejo_de_calidad_3 D[2916]
+      PARTE A (clique): consejo_calidad, consejo_calidad_2, consejo_de_calidad
+      EL MIXTO que cuelga: consejo_de_calidad_3
+      entra a la componente por: consejo_calidad + consejo_de_calidad_3 [2523]; consejo_calidad_2 + consejo_de_calidad_3 [2662]
+
+--- ACTO 4  tam 3  FORMA: ESTRELLA
+      miembros: mission_and_operations_planning, proceso_sop_mop, sop_colaborativo
+      aristas A  : mission_and_operations_planning + proceso_sop_mop [173]; proceso_sop_mop + sop_colaborativo [330]
+      aristas NO A: mission_and_operations_planning + sop_colaborativo B[703]
+      CENTRO (el que toca todas las A): proceso_sop_mop
+      LAS PUNTAS (sin ninguna A entre si): mission_and_operations_planning, sop_colaborativo
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 5  tam 3  FORMA: ESTRELLA
+      miembros: scorecard_de_seleccion_de_proyectos, scorecards_criterios_gate, scoring_model_scorecard
+      aristas A  : scorecard_de_seleccion_de_proyectos + scoring_model_scorecard [184]; scorecards_criterios_gate + scoring_model_scorecard [820]
+      aristas NO A: scorecard_de_seleccion_de_proyectos + scorecards_criterios_gate D[1201]
+      CENTRO (el que toca todas las A): scoring_model_scorecard
+      LAS PUNTAS (sin ninguna A entre si): scorecard_de_seleccion_de_proyectos, scorecards_criterios_gate
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 6  tam 3  FORMA: ESTRELLA
+      miembros: criterios_equity_split, split_igual_vs_desigual, teoria_equidad_split_equity
+      aristas A  : criterios_equity_split + split_igual_vs_desigual [188]; split_igual_vs_desigual + teoria_equidad_split_equity [502]
+      aristas NO A: criterios_equity_split + teoria_equidad_split_equity D[871]
+      CENTRO (el que toca todas las A): split_igual_vs_desigual
+      LAS PUNTAS (sin ninguna A entre si): criterios_equity_split, teoria_equidad_split_equity
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 8  tam 3  FORMA: ESTRELLA
+      miembros: regalos_estrategicos_personalizados, regalos_estrategicos_sorpresa, sorprender_cliente_estrategico
+      aristas A  : regalos_estrategicos_personalizados + regalos_estrategicos_sorpresa [799]; regalos_estrategicos_sorpresa + sorprender_cliente_estrategico [251]
+      aristas NO A: regalos_estrategicos_personalizados + sorprender_cliente_estrategico D[1348]
+      CENTRO (el que toca todas las A): regalos_estrategicos_sorpresa
+      LAS PUNTAS (sin ninguna A entre si): regalos_estrategicos_personalizados, sorprender_cliente_estrategico
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 9  tam 3  FORMA: ESTRELLA
+      miembros: founder_ceo_succession_process, identificacion_necesidad_sucesion_ceo, sucesion_iniciada_por_fundador
+      aristas A  : founder_ceo_succession_process + identificacion_necesidad_sucesion_ceo [256]; founder_ceo_succession_process + sucesion_iniciada_por_fundador [354]
+      aristas NO A: identificacion_necesidad_sucesion_ceo + sucesion_iniciada_por_fundador B[612]
+      CENTRO (el que toca todas las A): founder_ceo_succession_process
+      LAS PUNTAS (sin ninguna A entre si): identificacion_necesidad_sucesion_ceo, sucesion_iniciada_por_fundador
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 10  tam 3  FORMA: ESTRELLA
+      miembros: formacion_de_habitos_de_pensamiento, formacion_de_habitos_de_trabajo_creativo, gestion_de_habitos_mentales_para_pensar
+      aristas A  : formacion_de_habitos_de_pensamiento + formacion_de_habitos_de_trabajo_creativo [281]; formacion_de_habitos_de_pensamiento + gestion_de_habitos_mentales_para_pensar [261]
+      aristas NO A: formacion_de_habitos_de_trabajo_creativo + gestion_de_habitos_mentales_para_pensar D[333]
+      CENTRO (el que toca todas las A): formacion_de_habitos_de_pensamiento
+      LAS PUNTAS (sin ninguna A entre si): formacion_de_habitos_de_trabajo_creativo, gestion_de_habitos_mentales_para_pensar
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 11  tam 3  FORMA: ESTRELLA
+      miembros: influence_map_organizacional, mapa_de_influencia, mapa_organizacional_influencia
+      aristas A  : influence_map_organizacional + mapa_de_influencia [265]; influence_map_organizacional + mapa_organizacional_influencia [284]
+      aristas NO A: mapa_de_influencia + mapa_organizacional_influencia B[604]
+      CENTRO (el que toca todas las A): influence_map_organizacional
+      LAS PUNTAS (sin ninguna A entre si): mapa_de_influencia, mapa_organizacional_influencia
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 12  tam 3  FORMA: ESTRELLA
+      miembros: decision_cuando_fundar, evaluacion_capacidades_fundador, tres_preguntas_carrera
+      aristas A  : decision_cuando_fundar + evaluacion_capacidades_fundador [893]; decision_cuando_fundar + tres_preguntas_carrera [290]
+      aristas NO A: evaluacion_capacidades_fundador + tres_preguntas_carrera D[1303]
+      CENTRO (el que toca todas las A): decision_cuando_fundar
+      LAS PUNTAS (sin ninguna A entre si): evaluacion_capacidades_fundador, tres_preguntas_carrera
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 13  tam 3  FORMA: ESTRELLA
+      miembros: cofundar_con_amigos_familia_riesgos, riesgo_cofundadores_relacion_previa, seleccion_relaciones_cofundadores
+      aristas A  : cofundar_con_amigos_familia_riesgos + riesgo_cofundadores_relacion_previa [308]; riesgo_cofundadores_relacion_previa + seleccion_relaciones_cofundadores [498]
+      aristas NO A: cofundar_con_amigos_familia_riesgos + seleccion_relaciones_cofundadores D[1058]
+      CENTRO (el que toca todas las A): riesgo_cofundadores_relacion_previa
+      LAS PUNTAS (sin ninguna A entre si): cofundar_con_amigos_familia_riesgos, seleccion_relaciones_cofundadores
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 14  tam 3  FORMA: ESTRELLA
+      miembros: investigar_datos_cliente, personalizacion_investigacion_prospecto, seguimiento_informacion_cliente
+      aristas A  : investigar_datos_cliente + seguimiento_informacion_cliente [317]; personalizacion_investigacion_prospecto + seguimiento_informacion_cliente [1222]
+      aristas NO A: investigar_datos_cliente + personalizacion_investigacion_prospecto B[811]
+      CENTRO (el que toca todas las A): seguimiento_informacion_cliente
+      LAS PUNTAS (sin ninguna A entre si): investigar_datos_cliente, personalizacion_investigacion_prospecto
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 15  tam 3  FORMA: ESTRELLA
+      miembros: customer_profile, customer_profile_value_map, value_proposition_canvas
+      aristas A  : customer_profile + customer_profile_value_map [475]; customer_profile_value_map + value_proposition_canvas [477]
+      aristas NO A: customer_profile + value_proposition_canvas D[705]
+      CENTRO (el que toca todas las A): customer_profile_value_map
+      LAS PUNTAS (sin ninguna A entre si): customer_profile, value_proposition_canvas
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 16  tam 3  FORMA: ESTRELLA
+      miembros: asignacion_persona_ia, ingenieria_de_prompts_efectiva, prompting_por_persona_ia
+      aristas A  : asignacion_persona_ia + ingenieria_de_prompts_efectiva [514]; asignacion_persona_ia + prompting_por_persona_ia [1175]
+      aristas NO A: ingenieria_de_prompts_efectiva + prompting_por_persona_ia D[1144]
+      CENTRO (el que toca todas las A): asignacion_persona_ia
+      LAS PUNTAS (sin ninguna A entre si): ingenieria_de_prompts_efectiva, prompting_por_persona_ia
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 17  tam 3  FORMA: ESTRELLA
+      miembros: warrant_pricing_venture_debt, warrants_deuda_convertible, warrants_financiamiento
+      aristas A  : warrant_pricing_venture_debt + warrants_deuda_convertible [1028]; warrants_deuda_convertible + warrants_financiamiento [559]
+      aristas NO A: warrant_pricing_venture_debt + warrants_financiamiento D[1448]
+      CENTRO (el que toca todas las A): warrants_deuda_convertible
+      LAS PUNTAS (sin ninguna A entre si): warrant_pricing_venture_debt, warrants_financiamiento
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 18  tam 3  FORMA: ESTRELLA
+      miembros: calcular_peso_dimensional_antes_cotizar, conocer_limites_peso_tamano_courier, medir_paquete_redondeando_hacia_arriba
+      aristas A  : calcular_peso_dimensional_antes_cotizar + conocer_limites_peso_tamano_courier [1602]; calcular_peso_dimensional_antes_cotizar + medir_paquete_redondeando_hacia_arriba [1601]
+      aristas NO A: conocer_limites_peso_tamano_courier + medir_paquete_redondeando_hacia_arriba D[1609]
+      CENTRO (el que toca todas las A): calcular_peso_dimensional_antes_cotizar
+      LAS PUNTAS (sin ninguna A entre si): conocer_limites_peso_tamano_courier, medir_paquete_redondeando_hacia_arriba
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 19  tam 3  FORMA: ESTRELLA
+      miembros: definir_limites_huella_carbono, huella_carbono_empresarial, medir_huella_carbono_corporativa
+      aristas A  : definir_limites_huella_carbono + huella_carbono_empresarial [1865]; huella_carbono_empresarial + medir_huella_carbono_corporativa [1805]
+      aristas NO A: definir_limites_huella_carbono + medir_huella_carbono_corporativa D[1855]
+      CENTRO (el que toca todas las A): huella_carbono_empresarial
+      LAS PUNTAS (sin ninguna A entre si): definir_limites_huella_carbono, medir_huella_carbono_corporativa
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 20  tam 3  FORMA: ESTRELLA
+      miembros: enfoque_paso_a_paso_investigacion_mercado, evaluacion_mercados_objetivo, screening_mercados_potenciales
+      aristas A  : enfoque_paso_a_paso_investigacion_mercado + evaluacion_mercados_objetivo [1967]; enfoque_paso_a_paso_investigacion_mercado + screening_mercados_potenciales [1966]
+      aristas NO A: evaluacion_mercados_objetivo + screening_mercados_potenciales D[1972]
+      CENTRO (el que toca todas las A): enfoque_paso_a_paso_investigacion_mercado
+      LAS PUNTAS (sin ninguna A entre si): evaluacion_mercados_objetivo, screening_mercados_potenciales
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 21  tam 3  FORMA: ESTRELLA
+      miembros: cinco_categorias_costos_franquicia, costos_preparacion_franquicia, estimacion_inversion_inicial_franquiciador
+      aristas A  : cinco_categorias_costos_franquicia + costos_preparacion_franquicia [2075]; cinco_categorias_costos_franquicia + estimacion_inversion_inicial_franquiciador [2074]
+      aristas NO A: costos_preparacion_franquicia + estimacion_inversion_inicial_franquiciador D[2092]
+      CENTRO (el que toca todas las A): cinco_categorias_costos_franquicia
+      LAS PUNTAS (sin ninguna A entre si): costos_preparacion_franquicia, estimacion_inversion_inicial_franquiciador
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 22  tam 3  FORMA: ESTRELLA
+      miembros: contratar_abogado_especializado_franquicias, contratar_abogado_franquicias, eleccion_abogado_franquicias
+      aristas A  : contratar_abogado_especializado_franquicias + contratar_abogado_franquicias [2090]; contratar_abogado_especializado_franquicias + eleccion_abogado_franquicias [2076]
+      aristas NO A: contratar_abogado_franquicias + eleccion_abogado_franquicias D[2086]
+      CENTRO (el que toca todas las A): contratar_abogado_especializado_franquicias
+      LAS PUNTAS (sin ninguna A entre si): contratar_abogado_franquicias, eleccion_abogado_franquicias
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 23  tam 3  FORMA: ESTRELLA
+      miembros: deteccion_franquicia_inadvertida, estructuras_combinadas_franquicia, prevenir_franquicias_inadvertidas
+      aristas A  : deteccion_franquicia_inadvertida + estructuras_combinadas_franquicia [2181]; estructuras_combinadas_franquicia + prevenir_franquicias_inadvertidas [2207]
+      aristas NO A: deteccion_franquicia_inadvertida + prevenir_franquicias_inadvertidas D[2073]
+      CENTRO (el que toca todas las A): estructuras_combinadas_franquicia
+      LAS PUNTAS (sin ninguna A entre si): deteccion_franquicia_inadvertida, prevenir_franquicias_inadvertidas
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 25  tam 3  FORMA: ESTRELLA
+      miembros: critica_gestion_por_objetivos, eliminacion_gestion_por_objetivos_y_numeros, eliminar_metas_numericas_gerencia
+      aristas A  : critica_gestion_por_objetivos + eliminacion_gestion_por_objetivos_y_numeros [2488]; critica_gestion_por_objetivos + eliminar_metas_numericas_gerencia [2477]
+      aristas NO A: eliminacion_gestion_por_objetivos_y_numeros + eliminar_metas_numericas_gerencia D[2534]
+      CENTRO (el que toca todas las A): critica_gestion_por_objetivos
+      LAS PUNTAS (sin ninguna A entre si): eliminacion_gestion_por_objetivos_y_numeros, eliminar_metas_numericas_gerencia
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 27  tam 3  FORMA: ESTRELLA
+      miembros: analisis_pareto, analisis_pareto_de_proveedores, principio_pareto
+      aristas A  : analisis_pareto + analisis_pareto_de_proveedores [2546]; analisis_pareto + principio_pareto [2551]
+      aristas NO A: analisis_pareto_de_proveedores + principio_pareto D[3087]
+      CENTRO (el que toca todas las A): analisis_pareto
+      LAS PUNTAS (sin ninguna A entre si): analisis_pareto_de_proveedores, principio_pareto
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 28  tam 3  FORMA: ESTRELLA
+      miembros: error_proofing_servicio, mistake_proofing_poka_yoke_2, poka_yoke_a_prueba_de_errores
+      aristas A  : error_proofing_servicio + mistake_proofing_poka_yoke_2 [2737]; mistake_proofing_poka_yoke_2 + poka_yoke_a_prueba_de_errores [2613]
+      aristas NO A: error_proofing_servicio + poka_yoke_a_prueba_de_errores D[2931]
+      CENTRO (el que toca todas las A): mistake_proofing_poka_yoke_2
+      LAS PUNTAS (sin ninguna A entre si): error_proofing_servicio, poka_yoke_a_prueba_de_errores
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+--- ACTO 29  tam 3  FORMA: ESTRELLA
+      miembros: criterios_seleccion_proyectos_calidad, dmaic_fase_select, proceso_nominacion_seleccion
+      aristas A  : criterios_seleccion_proyectos_calidad + proceso_nominacion_seleccion [2627]; dmaic_fase_select + proceso_nominacion_seleccion [2742]
+      aristas NO A: criterios_seleccion_proyectos_calidad + dmaic_fase_select D[2933]
+      CENTRO (el que toca todas las A): proceso_nominacion_seleccion
+      LAS PUNTAS (sin ninguna A entre si): criterios_seleccion_proyectos_calidad, dmaic_fase_select
+      AVISO: no hay 'la parte A' ni 'el mixto'. El centro repite
+             contra cada punta y elegir cual lo absorbe es una
+             decision que la receta del encargo NO toma.
+
+==============================================================================
+RESUMEN DE FORMAS
+  CLIQUE_MAS_COLGANTE    2
+  ESTRELLA               24
+  TOTAL de actos mixtos: 26

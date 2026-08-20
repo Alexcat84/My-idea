@@ -8,35 +8,47 @@
   "pasos_accionables": [
     "Audita tu historial de anomalías o incidentes menores que has tolerado sin corregir",
     "Identifica el lenguaje que usas para minimizar riesgos crecientes en tu negocio",
-    "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente",
+    "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad",
     "Establece puntos de control periódicos en tu calendario para cuestionar la aceptación acumulada de desviaciones",
     "Evalúa si estás ignorando tus propias señales de alerta o el feedback sobre calidad",
-    "Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna"
+    "Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
+    "Identificar señales de riesgo que fueron descartadas o no reportadas como 'malas noticias'",
+    "Fomentar una cultura donde las pequeñas desviaciones sean visibles y cuestionadas, no normalizadas"
   ],
   "entregable_esperado": "Informe personal de auditoría que identifique patrones de desviación normalizada y recomendaciones concretas para revertirlos.",
   "nodos_previos": [
     "modelo_accidente_organizacional",
-    "principios_gestion_error"
+    "principios_gestion_error",
+    "teoria_sistemas_seguridad"
   ],
   "nodos_siguientes": [
     "fallo_regulatorio_por_recursos_insuficientes",
-    "dysfunctional_organizational_culture_patterns"
+    "dysfunctional_organizational_culture_patterns",
+    "organizaciones_alta_confiabilidad"
   ],
   "condiciones_activacion": [
     "Cuando tienes un historial de incidentes menores tolerados sin corrección",
     "Cuando detectas en ti mismo lenguaje que trivializa riesgos crecientes",
     "Cuando justificas decisiones de mayor riesgo apoyándote en éxitos pasados sin revisarlos",
-    "Cuando sospechas que tu percepción de cómo opera tu negocio se ha desconectado de la realidad"
+    "Cuando sospechas que tu percepción de cómo opera tu negocio se ha desconectado de la realidad",
+    "Cuando se investigan accidentes que parecen surgir de la 'nada' tras un largo periodo de operación exitosa",
+    "Cuando la organización ha experimentado presión sostenida de producción o puntualidad"
   ],
   "etiqueta_arbol": "Cuidado con Normalizar el Riesgo",
   "ids_alias": [
-    "regulador_fallas_sistemicas"
+    "regulador_fallas_sistemicas",
+    "drift_hacia_el_fallo_2"
   ],
   "merged_originals": [
     {
       "node_id": "regulador_fallas_sistemicas",
       "titulo": "Normalización de la Desviación y Fallas Regulatorias",
       "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    },
+    {
+      "node_id": "drift_hacia_el_fallo_2",
+      "titulo": "Drift into Failure (Normalización de la Desviación)",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
     }
   ]
 }

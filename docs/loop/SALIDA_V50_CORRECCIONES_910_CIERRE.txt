@@ -1,0 +1,60 @@
+==============================================================================
+CORRECCIONES DEL BARRIDO 9.10, 19 ago 2026 (vuelta 50, barrido del CIERRE)
+modo: EJECUTAR
+==============================================================================
+
+--- CORRECCION 1: docs/plan/RECOMPUTO_3388.md
+    motivo: Fila 246. La corrigio la TAREA 1.1 de esta misma vuelta a 573 y la TAREA 2 la volvio a mover: la fusion del acto 1 fabrico dos colisiones y la limpieza P.16 volteo los puestos 2222 y 2226 de A a D. Medido al CIERRE.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (136 a 148 caracteres)
+
+--- CORRECCION 2: docs/plan/RECOMPUTO_3388.md
+    motivo: Fila 247. La fusion del acto 1 anade UN colapso mas: el puesto 2237 (drift_hacia_el_fallo_2 contra normalizacion_de_la_desviacion) resuelve hoy al mismo nodo vivo en los dos lados. Es la huella de la cirugia de esta vuelta, la misma especie que la fila ya explica.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (74 a 85 caracteres)
+
+--- CORRECCION 3: docs/plan/RECOMPUTO_3388.md
+    motivo: Fila 248. Baja en tres: dos por los volteos de P.16 (2222 y 2226 dejan de ser A) y uno por el colapso a auto-arista del 2237.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (140 a 152 caracteres)
+
+--- CORRECCION 4: docs/plan/RECOMPUTO_3388.md
+    motivo: Fila 528. El checkpoint se presenta como vigente y lo mueve toda fusion y todo volteo de A. Re-corrido AL CIERRE, que es cuando la regla del aviso manda correrlo.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (237 a 489 caracteres)
+
+--- CORRECCION 5: docs/plan/RECOMPUTO_3388.md
+    motivo: Fila 1079. Los dos volteos de P.16 son los dos de `health_safety`, y por primera vez en esta cadena el dominio que cambia NO es `core`: se dice porque la nota de la tabla venia diciendo lo contrario tres correcciones seguidas.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (107 a 119 caracteres)
+
+--- CORRECCION 6: docs/plan/RECOMPUTO_3388.md
+    motivo: La cadena de correcciones declaradas venia afirmando cuatro veces seguidas que el unico dominio que se mueve es `core`. Esta vuelta lo desmiente y la afirmacion es de las que un lector extiende sin darse cuenta.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (250 a 989 caracteres)
+
+--- CORRECCION 7: docs/INTRA_DOMINIO_INFORME.md
+    motivo: Apendice 100.1, fila A. La TAREA 1.1 la puso en 573 y la TAREA 2 la movio a 571. El barrido del cierre la destapa, que es exactamente para lo que existe.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (138 a 146 caracteres)
+
+--- CORRECCION 8: docs/INTRA_DOMINIO_INFORME.md
+    motivo: Apendice 100.1, fila D. Los dos volteos de P.16 suben D en dos.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (40 a 50 caracteres)
+
+--- CORRECCION 9: docs/INTRA_DOMINIO_INFORME.md
+    motivo: La nota de correccion de la TAREA 1.1 cita su propia medicion fechada y por eso NO se reescribe: se le adosa la segunda, con las dos cifras del mismo dia tachadas en cadena.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (131 a 1076 caracteres)
+
+--- CORRECCION 10: docs/plan/03_FUSIONES.md
+    motivo: La columna se titulaba `hoy, medido en esta vuelta` y por tanto se presentaba como VIGENTE. La propia vuelta movio esas cifras despues, en la TAREA 2. La cifra de la columna NO se toca (fue exacta al escribirse y reescribirla fabricaria una corrida que nunca existio): lo que se corrige es el titulo que la presentaba como el estado de ahora.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (70 a 73 caracteres)
+
+ESCRITO: docs/plan/RECOMPUTO_3388.md (6 correcciones)
+ESCRITO: docs/INTRA_DOMINIO_INFORME.md (3 correcciones)
+ESCRITO: docs/plan/03_FUSIONES.md (1 correcciones)
+
+APLICADAS: 10

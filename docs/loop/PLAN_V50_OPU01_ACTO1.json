@@ -1,0 +1,58 @@
+{
+ "operacion": "OP-U-01",
+ "tramo": "1, P.12: EL ACTO 1 DE LA NOMINA DE HOY, el racimo de la deriva",
+ "fecha": "2026-08-19",
+ "vuelta": 50,
+ "estado": "SELLADO",
+ "nomina": "docs/loop/RECOMPUTO_V50_APERTURA.jsonl",
+ "dossier": "docs/loop/SALIDA_V50_DOSSIER_01_06.txt",
+ "vara": "P.12: el cierre transitivo CONVOCA, la lectura DECIDE. El superviviente de la PARTE A se elige por las dos reglas de 03_FUSIONES.md (sobrevive por CONTENIDO; a contenido empatado desempata el grafo, P.8) mas la vara de las puertas; cada MIXTO (miembro SIN arista A contra el superviviente) se lee contra el y se decide ENTRA o CONTINUA.",
+ "forma_del_acto": "ESTRELLA y no clique mas colgante, medido hoy en docs/loop/SALIDA_V50_FORMA_MIXTOS.txt. El centro es drift_hacia_el_fallo_2, que repite contra los tres perifericos; los tres perifericos son D entre si. Es la figura 9.23 del banco (RACIMO EN ESTRELLA) y el propio veredicto 2222 la nombra RACIMO DE LA DERIVA.",
+ "supervivientes_viables": "TRES, medidos en docs/loop/SALIDA_V50_SUPERVIVIENTES_VIABLES.txt: deriva_hacia_el_fallo, drift_hacia_el_fallo y normalizacion_de_la_desviacion. El centro drift_hacia_el_fallo_2 NO es viable: absorberlo todo juntaria dos nodos que el archivo declaro D, que es lo que P.12 prohibe.",
+ "nota_de_texto": "Ningun texto se teclea aqui salvo el NEXO del unico INCISO, que va impreso aparte para poder discutirlo por separado del contenido.",
+ "vara_de_las_puertas": "Medida hoy con vuelta48_puertas_en_el_lote.py sobre la nomina de hoy (docs/loop/SALIDA_V50_PUERTAS_EN_EL_LOTE.txt): el acto 1 NO aparece entre los 30 SALVABLES ni entre los 2 IMPOSIBLES. Ninguno de sus cuatro miembros es semilla de entrada ni extremo de puente aprobado. La guarda 1B pasa por vacio y se dice asi en vez de darla por buena.",
+ "lecturas_p12": [
+  {
+   "mixto": "deriva_hacia_el_fallo",
+   "superviviente_contra_el_que_se_lee": "normalizacion_de_la_desviacion",
+   "veredicto": "CONTINUA",
+   "citas": "El puesto 2275 lo escribe con los dos textos delante: LA ESTRUCTURA CONTRA EL CALENDARIO. deriva_hacia_el_fallo explica POR QUE PASA (decisiones incrementales, practicas normalizadas, ACOPLAMIENTO FUERTE que eleva el riesgo estructural, y exploracion organizacional hacia la eficiencia contra los limites de seguridad) y normalizacion_de_la_desviacion dice COMO SE PARA, con contramedidas que el otro no tiene (puntos de control periodicos en el calendario, revisar si se ignoran las propias senales de alerta, y buscar una revision externa que contrarreste la normalizacion interna). El propio veredicto declara el SOLAPE en la auditoria del historial y cierra con Sano. Lo que comparten es LA IDEA de que el riesgo se acumula sin que nadie lo decida, y a deriva_hacia_el_fallo le cabe en su paso 2. Lo suyo propio, el acoplamiento fuerte de Perrow, NO es del procedimiento del otro: es un marco analitico entero. CONTINUA, no ENTRA."
+  },
+  {
+   "mixto": "drift_hacia_el_fallo",
+   "superviviente_contra_el_que_se_lee": "normalizacion_de_la_desviacion",
+   "veredicto": "CONTINUA",
+   "citas": "El puesto 2394 hace el mismo reparto con el otro nodo de deriva y lo dice con dos verbos: drift_hacia_el_fallo VIGILA (monitorear la brecha entre procedimiento escrito y practica real de forma sistematica y no solo cuando hay accidentes, y cuestionar si el exito reciente es seguridad real o solo ausencia de consecuencias) y normalizacion_de_la_desviacion FRENA (puntos de control periodicos, revisar si se ignoran las propias senales, y la revision externa que es la unica linea del racimo que admite que desde dentro no se ve). SOLAPE DECLARADO en la auditoria del historial y en la relajacion de criterios, y cierra con Sano. Dos procedimientos distintos sobre la misma idea: CONTINUA."
+  }
+ ],
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "drift_hacia_el_fallo_2",
+    "normalizacion_de_la_desviacion"
+   ],
+   "superviviente": "normalizacion_de_la_desviacion",
+   "motivo": "CONTENIDO, Y NO ESTA EMPATADO, asi que el cableado no habla (P.8). SEIS pasos contra CUATRO, CUATRO condiciones contra DOS, y el resumen mas largo de los cuatro miembros del acto (711 caracteres contra 574, 466 y 458). Es el mismo margen y el mismo criterio con que la vuelta 49 eligio a modelo_spin_preguntas. Y LO ESCRIBE EL PROPIO VEREDICTO A DEL PAR: el puesto 2237 cierra con Sobrevive normalizacion_de_la_desviacion, y nombra lo que solo el trae, REVISAR SI LOS CRITERIOS DE RIESGO ACEPTABLE SE RELAJARON SIN QUE NADIE LO DECIDIERA CONSCIENTEMENTE, que llama la definicion operativa de la normalizacion, mas el test del lenguaje con que se minimiza un riesgo creciente. NOTA DE FUENTE, que no decide pero se dice, igual que en el acto del SPIN: los otros tres miembros son de Dekker y el superviviente es de Reason; el que muere es de Dekker. La regla de la pagina pesa CONTENIDO, no procedencia, y las piezas de Dekker viajan enteras o adosadas, ninguna se pierde.",
+   "absorbidos": [
+    "drift_hacia_el_fallo_2"
+   ],
+   "pasos": {
+    "drift_hacia_el_fallo_2": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND",
+     "3": "INCISO:3|el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad|, por ejemplo si ",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "drift_hacia_el_fallo_2": {
+     "1": "APPEND",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL REPARTO LO ESCRIBE EL PROPIO VEREDICTO 2237 Y AQUI SOLO SE EJECUTA. Dice, con estas palabras, que el paso 1 del que muere (el historial de pequenos cambios y ajustes acumulados) ES el paso 1 del superviviente (auditar las anomalias e incidentes menores tolerados sin corregir): CUBIERTO:1. Dice que su paso 3 es un EJEMPLO del paso 3 del superviviente, y ahi va la unica pieza fina del reparto: EJEMPLO NO ES NI APPEND NI CUBIERTO. Marcarlo APPEND dejaria dos pasos mandando revisar lo mismo; marcarlo CUBIERTO perderia el ejemplar concreto, que es lo unico que vuelve palpable la relajacion de criterios. Va como INCISO ADOSADO, que es la figura que la vuelta 49 incorporo al instrumento para exactamente esta forma, con el trozo VERBATIM y el nexo impreso aparte. Y dice que le quedan DOS LINEAS PROPIAS, que son sus pasos 2 y 4: vigilar las senales de riesgo descartadas o no reportadas como malas noticias, y fomentar una cultura donde las pequenas desviaciones sean visibles y cuestionadas. LAS DOS VIAJAN ENTERAS. LO QUE SE DECLARA DEL PASO 2, porque un lector puede discutirlo: el paso 5 del superviviente ya manda evaluar si estas ignorando tus propias senales de alerta, y se parece; lo que el paso 2 anade y el 5 no tiene es que la senal EXISTIO Y NO SE REPORTO COMO MALA NOTICIA, que es un mecanismo de organizacion y no de atencion propia. El veredicto lo cuenta como linea propia y aqui se le hace caso. LAS DOS CONDICIONES VIAJAN ENTERAS y ninguna de las cuatro del superviviente las dice: investigar accidentes que parecen surgir de la nada tras un largo periodo de operacion exitosa, y la presion sostenida de produccion o puntualidad. La segunda es ademas el gatillo del ejemplo que va de INCISO."
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

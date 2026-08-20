@@ -1,0 +1,72 @@
+==============================================================================
+OP-U-01, TRAMO 1, P.12: EL ACTO 1 DE LA NOMINA DE HOY, el racimo de la deriva . MODO EJECUTAR
+plan: docs/loop/PLAN_V50_OPU01_ACTO1.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3499 vivos, 354 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive normalizacion_de_la_desviacion . absorbe drift_hacia_el_fallo_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 8 (anadidos 2) | condiciones 4 -> 6 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 3 de drift_hacia_el_fallo_2 al PASO 3 del superviviente
+        inciso VERBATIM: 'el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad'
+        nexo (lo unico de cosecha propia): ', por ejemplo si '
+        paso resultante: Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad
+  alias del superviviente: ['regulador_fallas_sistemicas', 'drift_hacia_el_fallo_2']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 2
+   organizaciones_alta_confiabilidad                    nodos_previos     drift_hacia_el_fallo_2 -> normalizacion_de_la_desviacion
+   teoria_sistemas_seguridad                            nodos_siguientes  drift_hacia_el_fallo_2 -> normalizacion_de_la_desviacion
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 0
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 0
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 1002
+  duplicadas tras resolver DESPUES del tramo                          : 1002
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 0, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 1 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (6 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 drift_hacia_el_fallo_2                       paso         1  ya lo dice el PASO 1 del superviviente
+        Revisar el historial de pequeños cambios y ajustes acumulados en procedimientos operativos
+    1 drift_hacia_el_fallo_2                       paso         2  PASO 7 del superviviente
+        Identificar señales de riesgo que fueron descartadas o no reportadas como 'malas noticias'
+    1 drift_hacia_el_fallo_2                       paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad
+    1 drift_hacia_el_fallo_2                       paso         4  PASO 8 del superviviente
+        Fomentar una cultura donde las pequeñas desviaciones sean visibles y cuestionadas, no normalizadas
+    1 drift_hacia_el_fallo_2                       condicion    1  CONDICION 5 del superviviente
+        Cuando se investigan accidentes que parecen surgir de la 'nada' tras un largo periodo de operación exitosa
+    1 drift_hacia_el_fallo_2                       condicion    2  CONDICION 6 del superviviente
+        Cuando la organización ha experimentado presión sostenida de producción o puntualidad
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 1
+  nodos implicados    : 2
+  nodos que MUEREN    : 1
+  piezas repartidas   : 6 (4 viajan enteras, 1 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 4
+censo DESPUES: 3853 ficheros, 3498 vivos, 355 deprecados
+censo ANTES  : 3853 ficheros, 3499 vivos, 354 deprecados
+delta deprecados: +1 (esperado +1): OK

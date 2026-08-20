@@ -1,0 +1,324 @@
+==============================================================================
+SUPERVIVIENTES VIABLES POR ACTO MIXTO, medidos hoy
+nomina: docs/loop/RECOMPUTO_V50_APERTURA.jsonl
+==============================================================================
+
+--- ACTO 1  tam 4
+      miembros: deriva_hacia_el_fallo, drift_hacia_el_fallo, drift_hacia_el_fallo_2, normalizacion_de_la_desviacion
+        deriva_hacia_el_fallo                          drift_hacia_el_fallo                           D      2271
+        deriva_hacia_el_fallo                          drift_hacia_el_fallo_2                         A      2222
+        deriva_hacia_el_fallo                          normalizacion_de_la_desviacion                 D      2275
+        drift_hacia_el_fallo                           drift_hacia_el_fallo_2                         A      2226
+        drift_hacia_el_fallo                           normalizacion_de_la_desviacion                 D      2394
+        drift_hacia_el_fallo_2                         normalizacion_de_la_desviacion                 A      2237
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: deriva_hacia_el_fallo (puestos 2222), drift_hacia_el_fallo (puestos 2226), normalizacion_de_la_desviacion (puestos 2237)
+      drift_hacia_el_fallo_2                         NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      deriva_hacia_el_fallo                          VIABLE   parte A = deriva_hacia_el_fallo, drift_hacia_el_fallo_2   MIXTO(S) = drift_hacia_el_fallo, normalizacion_de_la_desviacion
+      drift_hacia_el_fallo                           VIABLE   parte A = drift_hacia_el_fallo, drift_hacia_el_fallo_2   MIXTO(S) = deriva_hacia_el_fallo, normalizacion_de_la_desviacion
+      normalizacion_de_la_desviacion                 VIABLE   parte A = drift_hacia_el_fallo_2, normalizacion_de_la_desviacion   MIXTO(S) = deriva_hacia_el_fallo, drift_hacia_el_fallo
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 2  tam 4
+      miembros: accion_correctiva_5, accion_correctiva_6, accion_correctiva_crosby, accion_correctiva_sistematica
+        accion_correctiva_5                            accion_correctiva_6                            A      2418
+        accion_correctiva_5                            accion_correctiva_crosby                       D      2496
+        accion_correctiva_5                            accion_correctiva_sistematica                  A      2431
+        accion_correctiva_6                            accion_correctiva_crosby                       A      2426
+        accion_correctiva_6                            accion_correctiva_sistematica                  A      2701
+        accion_correctiva_crosby                       accion_correctiva_sistematica                  D      2805
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: accion_correctiva_5 (puestos 2418), accion_correctiva_crosby (puestos 2426), accion_correctiva_sistematica (puestos 2431)
+      accion_correctiva_6                            NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      accion_correctiva_5                            VIABLE   parte A = accion_correctiva_5, accion_correctiva_6, accion_correctiva_sistematica   MIXTO(S) = accion_correctiva_crosby
+      accion_correctiva_crosby                       VIABLE   parte A = accion_correctiva_6, accion_correctiva_crosby   MIXTO(S) = accion_correctiva_5, accion_correctiva_sistematica
+      accion_correctiva_sistematica                  VIABLE   parte A = accion_correctiva_5, accion_correctiva_6, accion_correctiva_sistematica   MIXTO(S) = accion_correctiva_crosby
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 3  tam 4
+      miembros: consejo_calidad, consejo_calidad_2, consejo_de_calidad, consejo_de_calidad_3
+        consejo_calidad                                consejo_calidad_2                              A      2631
+        consejo_calidad                                consejo_de_calidad                             A      2663
+        consejo_calidad                                consejo_de_calidad_3                           A      2523
+        consejo_calidad_2                              consejo_de_calidad                             A      2670
+        consejo_calidad_2                              consejo_de_calidad_3                           A      2662
+        consejo_de_calidad                             consejo_de_calidad_3                           D      2916
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: consejo_calidad (puestos 2631,2663,2523), consejo_calidad_2 (puestos 2670,2662)
+      consejo_calidad                                NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      consejo_calidad_2                              NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      consejo_de_calidad                             VIABLE   parte A = consejo_calidad, consejo_calidad_2, consejo_de_calidad   MIXTO(S) = consejo_de_calidad_3
+      consejo_de_calidad_3                           VIABLE   parte A = consejo_calidad, consejo_calidad_2, consejo_de_calidad_3   MIXTO(S) = consejo_de_calidad
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+      CHOQUE: los veredictos 2631,2663,2523 nombran superviviente a consejo_calidad,
+              que NO es viable por la estructura del acto.
+      CHOQUE: los veredictos 2670,2662 nombran superviviente a consejo_calidad_2,
+              que NO es viable por la estructura del acto.
+
+--- ACTO 4  tam 3
+      miembros: mission_and_operations_planning, proceso_sop_mop, sop_colaborativo
+        mission_and_operations_planning                proceso_sop_mop                                A      173
+        mission_and_operations_planning                sop_colaborativo                               B      703
+        proceso_sop_mop                                sop_colaborativo                               A      330
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      proceso_sop_mop                                NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      mission_and_operations_planning                VIABLE   parte A = mission_and_operations_planning, proceso_sop_mop   MIXTO(S) = sop_colaborativo
+      sop_colaborativo                               VIABLE   parte A = proceso_sop_mop, sop_colaborativo   MIXTO(S) = mission_and_operations_planning
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 5  tam 3
+      miembros: scorecard_de_seleccion_de_proyectos, scorecards_criterios_gate, scoring_model_scorecard
+        scorecard_de_seleccion_de_proyectos            scorecards_criterios_gate                      D      1201
+        scorecard_de_seleccion_de_proyectos            scoring_model_scorecard                        A      184
+        scorecards_criterios_gate                      scoring_model_scorecard                        A      820
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      scoring_model_scorecard                        NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      scorecard_de_seleccion_de_proyectos            VIABLE   parte A = scorecard_de_seleccion_de_proyectos, scoring_model_scorecard   MIXTO(S) = scorecards_criterios_gate
+      scorecards_criterios_gate                      VIABLE   parte A = scorecards_criterios_gate, scoring_model_scorecard   MIXTO(S) = scorecard_de_seleccion_de_proyectos
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 6  tam 3
+      miembros: criterios_equity_split, split_igual_vs_desigual, teoria_equidad_split_equity
+        criterios_equity_split                         split_igual_vs_desigual                        A      188
+        criterios_equity_split                         teoria_equidad_split_equity                    D      871
+        split_igual_vs_desigual                        teoria_equidad_split_equity                    A      502
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      split_igual_vs_desigual                        NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      criterios_equity_split                         VIABLE   parte A = criterios_equity_split, split_igual_vs_desigual   MIXTO(S) = teoria_equidad_split_equity
+      teoria_equidad_split_equity                    VIABLE   parte A = split_igual_vs_desigual, teoria_equidad_split_equity   MIXTO(S) = criterios_equity_split
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 8  tam 3
+      miembros: regalos_estrategicos_personalizados, regalos_estrategicos_sorpresa, sorprender_cliente_estrategico
+        regalos_estrategicos_personalizados            regalos_estrategicos_sorpresa                  A      799
+        regalos_estrategicos_personalizados            sorprender_cliente_estrategico                 D      1348
+        regalos_estrategicos_sorpresa                  sorprender_cliente_estrategico                 A      251
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      regalos_estrategicos_sorpresa                  NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      regalos_estrategicos_personalizados            VIABLE   parte A = regalos_estrategicos_personalizados, regalos_estrategicos_sorpresa   MIXTO(S) = sorprender_cliente_estrategico
+      sorprender_cliente_estrategico                 VIABLE   parte A = regalos_estrategicos_sorpresa, sorprender_cliente_estrategico   MIXTO(S) = regalos_estrategicos_personalizados
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 9  tam 3
+      miembros: founder_ceo_succession_process, identificacion_necesidad_sucesion_ceo, sucesion_iniciada_por_fundador
+        founder_ceo_succession_process                 identificacion_necesidad_sucesion_ceo          A      256
+        founder_ceo_succession_process                 sucesion_iniciada_por_fundador                 A      354
+        identificacion_necesidad_sucesion_ceo          sucesion_iniciada_por_fundador                 B      612
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      founder_ceo_succession_process                 NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      identificacion_necesidad_sucesion_ceo          VIABLE   parte A = founder_ceo_succession_process, identificacion_necesidad_sucesion_ceo   MIXTO(S) = sucesion_iniciada_por_fundador
+      sucesion_iniciada_por_fundador                 VIABLE   parte A = founder_ceo_succession_process, sucesion_iniciada_por_fundador   MIXTO(S) = identificacion_necesidad_sucesion_ceo
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 10  tam 3
+      miembros: formacion_de_habitos_de_pensamiento, formacion_de_habitos_de_trabajo_creativo, gestion_de_habitos_mentales_para_pensar
+        formacion_de_habitos_de_pensamiento            formacion_de_habitos_de_trabajo_creativo       A      281
+        formacion_de_habitos_de_pensamiento            gestion_de_habitos_mentales_para_pensar        A      261
+        formacion_de_habitos_de_trabajo_creativo       gestion_de_habitos_mentales_para_pensar        D      333
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      formacion_de_habitos_de_pensamiento            NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      formacion_de_habitos_de_trabajo_creativo       VIABLE   parte A = formacion_de_habitos_de_pensamiento, formacion_de_habitos_de_trabajo_creativo   MIXTO(S) = gestion_de_habitos_mentales_para_pensar
+      gestion_de_habitos_mentales_para_pensar        VIABLE   parte A = formacion_de_habitos_de_pensamiento, gestion_de_habitos_mentales_para_pensar   MIXTO(S) = formacion_de_habitos_de_trabajo_creativo
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 11  tam 3
+      miembros: influence_map_organizacional, mapa_de_influencia, mapa_organizacional_influencia
+        influence_map_organizacional                   mapa_de_influencia                             A      265
+        influence_map_organizacional                   mapa_organizacional_influencia                 A      284
+        mapa_de_influencia                             mapa_organizacional_influencia                 B      604
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      influence_map_organizacional                   NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      mapa_de_influencia                             VIABLE   parte A = influence_map_organizacional, mapa_de_influencia   MIXTO(S) = mapa_organizacional_influencia
+      mapa_organizacional_influencia                 VIABLE   parte A = influence_map_organizacional, mapa_organizacional_influencia   MIXTO(S) = mapa_de_influencia
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 12  tam 3
+      miembros: decision_cuando_fundar, evaluacion_capacidades_fundador, tres_preguntas_carrera
+        decision_cuando_fundar                         evaluacion_capacidades_fundador                A      893
+        decision_cuando_fundar                         tres_preguntas_carrera                         A      290
+        evaluacion_capacidades_fundador                tres_preguntas_carrera                         D      1303
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      decision_cuando_fundar                         NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      evaluacion_capacidades_fundador                VIABLE   parte A = decision_cuando_fundar, evaluacion_capacidades_fundador   MIXTO(S) = tres_preguntas_carrera
+      tres_preguntas_carrera                         VIABLE   parte A = decision_cuando_fundar, tres_preguntas_carrera   MIXTO(S) = evaluacion_capacidades_fundador
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 13  tam 3
+      miembros: cofundar_con_amigos_familia_riesgos, riesgo_cofundadores_relacion_previa, seleccion_relaciones_cofundadores
+        cofundar_con_amigos_familia_riesgos            riesgo_cofundadores_relacion_previa            A      308
+        cofundar_con_amigos_familia_riesgos            seleccion_relaciones_cofundadores              D      1058
+        riesgo_cofundadores_relacion_previa            seleccion_relaciones_cofundadores              A      498
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      riesgo_cofundadores_relacion_previa            NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      cofundar_con_amigos_familia_riesgos            VIABLE   parte A = cofundar_con_amigos_familia_riesgos, riesgo_cofundadores_relacion_previa   MIXTO(S) = seleccion_relaciones_cofundadores
+      seleccion_relaciones_cofundadores              VIABLE   parte A = riesgo_cofundadores_relacion_previa, seleccion_relaciones_cofundadores   MIXTO(S) = cofundar_con_amigos_familia_riesgos
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 14  tam 3
+      miembros: investigar_datos_cliente, personalizacion_investigacion_prospecto, seguimiento_informacion_cliente
+        investigar_datos_cliente                       personalizacion_investigacion_prospecto        B      811
+        investigar_datos_cliente                       seguimiento_informacion_cliente                A      317
+        personalizacion_investigacion_prospecto        seguimiento_informacion_cliente                A      1222
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      seguimiento_informacion_cliente                NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      investigar_datos_cliente                       VIABLE   parte A = investigar_datos_cliente, seguimiento_informacion_cliente   MIXTO(S) = personalizacion_investigacion_prospecto
+      personalizacion_investigacion_prospecto        VIABLE   parte A = personalizacion_investigacion_prospecto, seguimiento_informacion_cliente   MIXTO(S) = investigar_datos_cliente
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 15  tam 3
+      miembros: customer_profile, customer_profile_value_map, value_proposition_canvas
+        customer_profile                               customer_profile_value_map                     A      475
+        customer_profile                               value_proposition_canvas                       D      705
+        customer_profile_value_map                     value_proposition_canvas                       A      477
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      customer_profile_value_map                     NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      customer_profile                               VIABLE   parte A = customer_profile, customer_profile_value_map   MIXTO(S) = value_proposition_canvas
+      value_proposition_canvas                       VIABLE   parte A = customer_profile_value_map, value_proposition_canvas   MIXTO(S) = customer_profile
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 16  tam 3
+      miembros: asignacion_persona_ia, ingenieria_de_prompts_efectiva, prompting_por_persona_ia
+        asignacion_persona_ia                          ingenieria_de_prompts_efectiva                 A      514
+        asignacion_persona_ia                          prompting_por_persona_ia                       A      1175
+        ingenieria_de_prompts_efectiva                 prompting_por_persona_ia                       D      1144
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      asignacion_persona_ia                          NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      ingenieria_de_prompts_efectiva                 VIABLE   parte A = asignacion_persona_ia, ingenieria_de_prompts_efectiva   MIXTO(S) = prompting_por_persona_ia
+      prompting_por_persona_ia                       VIABLE   parte A = asignacion_persona_ia, prompting_por_persona_ia   MIXTO(S) = ingenieria_de_prompts_efectiva
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 17  tam 3
+      miembros: warrant_pricing_venture_debt, warrants_deuda_convertible, warrants_financiamiento
+        warrant_pricing_venture_debt                   warrants_deuda_convertible                     A      1028
+        warrant_pricing_venture_debt                   warrants_financiamiento                        D      1448
+        warrants_deuda_convertible                     warrants_financiamiento                        A      559
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      warrants_deuda_convertible                     NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      warrant_pricing_venture_debt                   VIABLE   parte A = warrant_pricing_venture_debt, warrants_deuda_convertible   MIXTO(S) = warrants_financiamiento
+      warrants_financiamiento                        VIABLE   parte A = warrants_deuda_convertible, warrants_financiamiento   MIXTO(S) = warrant_pricing_venture_debt
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 18  tam 3
+      miembros: calcular_peso_dimensional_antes_cotizar, conocer_limites_peso_tamano_courier, medir_paquete_redondeando_hacia_arriba
+        calcular_peso_dimensional_antes_cotizar        conocer_limites_peso_tamano_courier            A      1602
+        calcular_peso_dimensional_antes_cotizar        medir_paquete_redondeando_hacia_arriba         A      1601
+        conocer_limites_peso_tamano_courier            medir_paquete_redondeando_hacia_arriba         D      1609
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      calcular_peso_dimensional_antes_cotizar        NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      conocer_limites_peso_tamano_courier            VIABLE   parte A = calcular_peso_dimensional_antes_cotizar, conocer_limites_peso_tamano_courier   MIXTO(S) = medir_paquete_redondeando_hacia_arriba
+      medir_paquete_redondeando_hacia_arriba         VIABLE   parte A = calcular_peso_dimensional_antes_cotizar, medir_paquete_redondeando_hacia_arriba   MIXTO(S) = conocer_limites_peso_tamano_courier
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 19  tam 3
+      miembros: definir_limites_huella_carbono, huella_carbono_empresarial, medir_huella_carbono_corporativa
+        definir_limites_huella_carbono                 huella_carbono_empresarial                     A      1865
+        definir_limites_huella_carbono                 medir_huella_carbono_corporativa               D      1855
+        huella_carbono_empresarial                     medir_huella_carbono_corporativa               A      1805
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      huella_carbono_empresarial                     NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      definir_limites_huella_carbono                 VIABLE   parte A = definir_limites_huella_carbono, huella_carbono_empresarial   MIXTO(S) = medir_huella_carbono_corporativa
+      medir_huella_carbono_corporativa               VIABLE   parte A = huella_carbono_empresarial, medir_huella_carbono_corporativa   MIXTO(S) = definir_limites_huella_carbono
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 20  tam 3
+      miembros: enfoque_paso_a_paso_investigacion_mercado, evaluacion_mercados_objetivo, screening_mercados_potenciales
+        enfoque_paso_a_paso_investigacion_mercado      evaluacion_mercados_objetivo                   A      1967
+        enfoque_paso_a_paso_investigacion_mercado      screening_mercados_potenciales                 A      1966
+        evaluacion_mercados_objetivo                   screening_mercados_potenciales                 D      1972
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      enfoque_paso_a_paso_investigacion_mercado      NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      evaluacion_mercados_objetivo                   VIABLE   parte A = enfoque_paso_a_paso_investigacion_mercado, evaluacion_mercados_objetivo   MIXTO(S) = screening_mercados_potenciales
+      screening_mercados_potenciales                 VIABLE   parte A = enfoque_paso_a_paso_investigacion_mercado, screening_mercados_potenciales   MIXTO(S) = evaluacion_mercados_objetivo
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 21  tam 3
+      miembros: cinco_categorias_costos_franquicia, costos_preparacion_franquicia, estimacion_inversion_inicial_franquiciador
+        cinco_categorias_costos_franquicia             costos_preparacion_franquicia                  A      2075
+        cinco_categorias_costos_franquicia             estimacion_inversion_inicial_franquiciador     A      2074
+        costos_preparacion_franquicia                  estimacion_inversion_inicial_franquiciador     D      2092
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      cinco_categorias_costos_franquicia             NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      costos_preparacion_franquicia                  VIABLE   parte A = cinco_categorias_costos_franquicia, costos_preparacion_franquicia   MIXTO(S) = estimacion_inversion_inicial_franquiciador
+      estimacion_inversion_inicial_franquiciador     VIABLE   parte A = cinco_categorias_costos_franquicia, estimacion_inversion_inicial_franquiciador   MIXTO(S) = costos_preparacion_franquicia
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 22  tam 3
+      miembros: contratar_abogado_especializado_franquicias, contratar_abogado_franquicias, eleccion_abogado_franquicias
+        contratar_abogado_especializado_franquicias    contratar_abogado_franquicias                  A      2090
+        contratar_abogado_especializado_franquicias    eleccion_abogado_franquicias                   A      2076
+        contratar_abogado_franquicias                  eleccion_abogado_franquicias                   D      2086
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: ninguno lo escribe con la formula 'Sobrevive X'
+      contratar_abogado_especializado_franquicias    NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      contratar_abogado_franquicias                  VIABLE   parte A = contratar_abogado_especializado_franquicias, contratar_abogado_franquicias   MIXTO(S) = eleccion_abogado_franquicias
+      eleccion_abogado_franquicias                   VIABLE   parte A = contratar_abogado_especializado_franquicias, eleccion_abogado_franquicias   MIXTO(S) = contratar_abogado_franquicias
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 23  tam 3
+      miembros: deteccion_franquicia_inadvertida, estructuras_combinadas_franquicia, prevenir_franquicias_inadvertidas
+        deteccion_franquicia_inadvertida               estructuras_combinadas_franquicia              A      2181
+        deteccion_franquicia_inadvertida               prevenir_franquicias_inadvertidas              D      2073
+        estructuras_combinadas_franquicia              prevenir_franquicias_inadvertidas              A      2207
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: deteccion_franquicia_inadvertida (puestos 2181), prevenir_franquicias_inadvertidas (puestos 2207)
+      estructuras_combinadas_franquicia              NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      deteccion_franquicia_inadvertida               VIABLE   parte A = deteccion_franquicia_inadvertida, estructuras_combinadas_franquicia   MIXTO(S) = prevenir_franquicias_inadvertidas
+      prevenir_franquicias_inadvertidas              VIABLE   parte A = estructuras_combinadas_franquicia, prevenir_franquicias_inadvertidas   MIXTO(S) = deteccion_franquicia_inadvertida
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 25  tam 3
+      miembros: critica_gestion_por_objetivos, eliminacion_gestion_por_objetivos_y_numeros, eliminar_metas_numericas_gerencia
+        critica_gestion_por_objetivos                  eliminacion_gestion_por_objetivos_y_numeros    A      2488
+        critica_gestion_por_objetivos                  eliminar_metas_numericas_gerencia              A      2477
+        eliminacion_gestion_por_objetivos_y_numeros    eliminar_metas_numericas_gerencia              D      2534
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: eliminacion_gestion_por_objetivos_y_numeros (puestos 2488), eliminar_metas_numericas_gerencia (puestos 2477)
+      critica_gestion_por_objetivos                  NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      eliminacion_gestion_por_objetivos_y_numeros    VIABLE   parte A = critica_gestion_por_objetivos, eliminacion_gestion_por_objetivos_y_numeros   MIXTO(S) = eliminar_metas_numericas_gerencia
+      eliminar_metas_numericas_gerencia              VIABLE   parte A = critica_gestion_por_objetivos, eliminar_metas_numericas_gerencia   MIXTO(S) = eliminacion_gestion_por_objetivos_y_numeros
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+
+--- ACTO 27  tam 3
+      miembros: analisis_pareto, analisis_pareto_de_proveedores, principio_pareto
+        analisis_pareto                                analisis_pareto_de_proveedores                 A      2546
+        analisis_pareto                                principio_pareto                               A      2551
+        analisis_pareto_de_proveedores                 principio_pareto                               D      3087
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: analisis_pareto (puestos 2546,2551)
+      analisis_pareto                                NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      analisis_pareto_de_proveedores                 VIABLE   parte A = analisis_pareto, analisis_pareto_de_proveedores   MIXTO(S) = principio_pareto
+      principio_pareto                               VIABLE   parte A = analisis_pareto, principio_pareto   MIXTO(S) = analisis_pareto_de_proveedores
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+      CHOQUE: los veredictos 2546,2551 nombran superviviente a analisis_pareto,
+              que NO es viable por la estructura del acto.
+
+--- ACTO 28  tam 3
+      miembros: error_proofing_servicio, mistake_proofing_poka_yoke_2, poka_yoke_a_prueba_de_errores
+        error_proofing_servicio                        mistake_proofing_poka_yoke_2                   A      2737
+        error_proofing_servicio                        poka_yoke_a_prueba_de_errores                  D      2931
+        mistake_proofing_poka_yoke_2                   poka_yoke_a_prueba_de_errores                  A      2613
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: mistake_proofing_poka_yoke_2 (puestos 2613)
+      mistake_proofing_poka_yoke_2                   NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      error_proofing_servicio                        VIABLE   parte A = error_proofing_servicio, mistake_proofing_poka_yoke_2   MIXTO(S) = poka_yoke_a_prueba_de_errores
+      poka_yoke_a_prueba_de_errores                  VIABLE   parte A = mistake_proofing_poka_yoke_2, poka_yoke_a_prueba_de_errores   MIXTO(S) = error_proofing_servicio
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+      CHOQUE: los veredictos 2613 nombran superviviente a mistake_proofing_poka_yoke_2,
+              que NO es viable por la estructura del acto.
+
+--- ACTO 29  tam 3
+      miembros: criterios_seleccion_proyectos_calidad, dmaic_fase_select, proceso_nominacion_seleccion
+        criterios_seleccion_proyectos_calidad          dmaic_fase_select                              D      2933
+        criterios_seleccion_proyectos_calidad          proceso_nominacion_seleccion                   A      2627
+        dmaic_fase_select                              proceso_nominacion_seleccion                   A      2742
+      LOS VEREDICTOS A NOMBRAN SUPERVIVIENTE: proceso_nominacion_seleccion (puestos 2627)
+      proceso_nominacion_seleccion                   NO VIABLE: no deja ningun mixto fuera: seria fusion entera
+      criterios_seleccion_proyectos_calidad          VIABLE   parte A = criterios_seleccion_proyectos_calidad, proceso_nominacion_seleccion   MIXTO(S) = dmaic_fase_select
+      dmaic_fase_select                              VIABLE   parte A = dmaic_fase_select, proceso_nominacion_seleccion   MIXTO(S) = criterios_seleccion_proyectos_calidad
+      VEREDICTO DEL INSTRUMENTO: VARIOS VIABLES
+      CHOQUE: los veredictos 2627 nombran superviviente a proceso_nominacion_seleccion,
+              que NO es viable por la estructura del acto.
+
+==============================================================================
+RESUMEN
+  UN SOLO VIABLE    0   actos ninguno
+  VARIOS VIABLES   26   actos 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 27, 28, 29
+  NINGUNO VIABLE    0   actos ninguno
+  CHOQUES letra del veredicto contra estructura: 5
+     acto 3: consejo_calidad nombrado en 2631,2663,2523
+     acto 3: consejo_calidad_2 nombrado en 2670,2662
+     acto 27: analisis_pareto nombrado en 2546,2551
+     acto 28: mistake_proofing_poka_yoke_2 nombrado en 2613
+     acto 29: proceso_nominacion_seleccion nombrado en 2627

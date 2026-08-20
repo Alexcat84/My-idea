@@ -1,0 +1,53 @@
+==============================================================================
+COLISIONES DE CLASE, medidas sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+EN EL ESTADO DE HOY, sin fundir nada: pares resueltos con dos clases = 0
+
+POR ACTO: colisiones NUEVAS que fabricaria cada forma de fundir
+acto   tam figura         ENTERA   NUCLEO-A
+   1     4 MIXTO               0          0
+   2     4 MIXTO               0          0
+   3     4 MIXTO               0          0
+   4     3 MIXTO               0          0
+   5     3 MIXTO               0          0
+   6     3 MIXTO               2          0
+   7     3 TODO-A              1          1
+   8     3 MIXTO               0          0
+   9     3 MIXTO               0          0
+  10     3 MIXTO               1          0
+  11     3 MIXTO               0          0
+  12     3 MIXTO               0          0
+  13     3 MIXTO               0          0
+  14     3 MIXTO               0          0
+  15     3 MIXTO               1          0
+  16     3 MIXTO               0          0
+  17     3 MIXTO               1          0
+  18     3 MIXTO               0          0
+  19     3 MIXTO               0          0
+  20     3 MIXTO               0          0
+  21     3 MIXTO               0          0
+  22     3 MIXTO               0          0
+  23     3 MIXTO               0          0
+  24     3 TODO-A              0          0
+  25     3 MIXTO               0          0
+  26     3 TODO-A              0          0
+  27     3 MIXTO               0          0
+  28     3 MIXTO               0          0
+  29     3 MIXTO               0          0
+  30     2 TODO-A              0          0
+  31     2 TODO-A              1          1
+  32     2 TODO-A              0          0
+  33     2 TODO-A              0          0
+  34     2 TODO-A              0          0
+  35     2 TODO-A              0          0
+
+RESUMEN sobre 35 actos:
+  actos que NO fabrican ninguna colision al fundirse ENTEROS: 29
+  actos que SI fabrican colision al fundirse enteros        : 6
+  los que la fabrican: [6, 7, 10, 15, 17, 31]
+
+  cruce figura contra colision (fusion ENTERA):
+    MIXTO    sin colision=False : 4
+    MIXTO    sin colision=True  : 22
+    TODO-A   sin colision=False : 2
+    TODO-A   sin colision=True  : 7
