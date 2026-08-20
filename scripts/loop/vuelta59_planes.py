@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""vuelta59_planes.py . EL GENERADOR DE LOS PLANES DE ESTA VUELTA PARA EL TRAMO 5
-DE OP-U-01.
+"""vuelta59_planes.py . EL GENERADOR DE LOS PLANES DE LOS LOTES DE UN TRAMO DE
+OP-U-01: EL NUMERO DE TRAMO NO SE TALLA AQUI, LO DICE EL INSUMO QUE ENTRA POR
+--tramo, QUE ES LO QUE EL PRINT DE TITULO YA HACIA.
 
 SUCESOR DECLARADO de scripts/loop/vuelta57_planes.py, al que NO reemplaza. LA
 ARITMETICA Y LAS GUARDAS SON LAS SUYAS, COPIADAS LITERALMENTE Y NO RETECLEADAS
@@ -24,6 +25,20 @@ LO QUE CAMBIA, declarado porque es lo unico que no es copia:
   3. EL FICHERO DEL TRAMO y el prefijo del plan entran por argumento
      (--tramo, --prefijo), asi que el instrumento no puede quedarse apuntando
      a la nomina de otra vuelta.
+  4. LA CABECERA YA NO TALLA EL TRAMO (correccion de la vuelta 60, TAREA 1.2 del
+     encargo, y el texto viejo se queda escrito aqui porque una correccion que
+     tapa lo que corrige no se puede auditar). LA CABECERA DECIA:
+
+         EL GENERADOR DE LOS PLANES DE ESTA VUELTA PARA EL TRAMO 5 DE OP-U-01.
+
+     El print de titulo SI estaba curado desde que este fichero nacio (punto 2
+     de arriba), pero la CABECERA no, y el barrido de titulos tallados la caza
+     como ROJO con todas sus letras: 'recibe el sujeto por --tramo y el titulo
+     no se entera'. Lo cazo LA CORRIDA DEL AUDITOR de la vuelta 59, no una
+     lectura. Se elige LA VIA DE REFORMULAR (no la del rotulo de procedencia)
+     porque aqui el numero NO nombraba a un ancestro: nombraba al sujeto de
+     hoy, que es justo lo que el argumento puede cambiar. LA ARITMETICA Y LAS
+     GUARDAS NO SE TOCAN en esta correccion: solo el texto de la cabecera.
 
 EL INCISO SE DECLARA EN ASCII y el generador BUSCA ESE TROZO EN EL PASO REAL
 comparando las dos cadenas sin acentos, y EXTRAE LA SUBCADENA REAL, con sus
@@ -37,6 +52,7 @@ Uso:
   python scripts/loop/vuelta59_planes.py --lote A --vuelta 59 [--simular]
 """
 import argparse
+import datetime
 import io
 import json
 import os
@@ -50,7 +66,14 @@ SALIDA = os.path.join(RAIZ, "docs", "loop")
 
 CABECERA = {
     "operacion": "OP-U-01",
-    "fecha": "2026-08-21",
+    # LA FECHA SE MIDE, NO SE TECLEA (correccion de la vuelta 60, TAREA 1.1 del
+    # encargo; motivo: LA CAIDA DE LA VUELTA 59 FUE LA FECHA). Este campo decia
+    # "2026-08-21" tallado a mano y era FALSO: los seis commits de aquella vuelta
+    # son del 2026-08-20 medido por git. EL PLAN YA SELLADO DEL LOTE A NO SE
+    # REEDITA (lo prohibe el encargo) y su error se declara en el registro del
+    # tramo cuando el tramo cierre; los planes que se sellen DE AQUI EN ADELANTE
+    # llevan la fecha del reloj, que es la unica que no se puede suponer.
+    "fecha": datetime.date.today().isoformat(),
     "estado": "SELLADO",
     "nomina": "docs/loop/RECOMPUTO_V59_APERTURA.jsonl, corrida ANTES de la primera operacion de la vuelta",
     "tramo_definido_en": "docs/loop/SALIDA_V58_TRAMO5_NOMINA.txt, con scripts/loop/vuelta58_tramo5_nomina.py. EL INSUMO ESTA MEDIDO Y FIJADO POR LA VUELTA 58 Y NO SE RE-MIDE (encargo de esta vuelta): 50 actos, puestos 27 a 76 de hoy y 200 a 249 en la nomina de la 48, todos PURO A y fusion pura, solape con el tramo 4 CERO, prefijo de 26 confirmado por las dos puntas y verificado por el auditor sobre nomina propia (acta 58, seccion 1).",

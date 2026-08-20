@@ -1,0 +1,27 @@
+==============================================================================
+CORRECCION DECLARADA DE LA FECHA. La fecha buena se MIDE con git.
+==============================================================================
+
+  commits del rango a248c6a3..02d0bf00: 6
+    c9927b19  2026-08-20 13:37:29  VUELTA 59, APERTURA MEDIDA ANTES DE LA PRIMERA OPERACION: 
+    fd7de724  2026-08-20 13:45:37  VUELTA 59, TAREA 1.1: LA ESPECIE DE LOS TITULOS TALLADOS A
+    956f9e3d  2026-08-20 13:48:45  VUELTA 59, TAREA 1.2: LA RATIFICACION DEL ACTA 58 ANOTADA 
+    39d495b2  2026-08-20 14:08:34  VUELTA 59, LOTE A DEL TRAMO 5: DIECISEIS ACTOS FUNDIDOS DE
+    6b6607bb  2026-08-20 14:20:13  VUELTA 59 CERRADA: LA TAREA 1 ENTERA, EL LOTE A DEL TRAMO 
+    02d0bf00  2026-08-20 14:22:04  REPORTE de la vuelta 59: el hash final y los cinco commits
+  dias distintos medidos: 2026-08-20
+  el commit que ESCRIBIO la linea: 956f9e3d de 2026-08-20 13:48:45
+  hoy, por el ultimo commit del arbol : 2026-08-20
+  hoy, por el reloj del sistema       : 2026-08-20
+
+  linea 2469 de docs/plan/03_FUSIONES.md
+    dice  : 21 ago 2026
+    y es  : 20 ago 2026
+
+--- LA LINEA CORREGIDA ---
+> **RATIFICADA POR CORRIDA PROPIA DEL AUDITOR (20 ago 2026, vuelta 59, TAREA 1.2 del encargo).** El acta 58 **re-derivo el cuadro de varas del tramo con codigo propio y las 50 filas calzan al digito, `DISTINTAS 0`** (`../loop/ACTA_AUDITOR.md` linea **14735**, leida hoy), y **re-midio este acto 32 sobre los ficheros de hoy: pasos 5 contra 5, condiciones 2 contra 2, cableado 3 contra 3, `EMPATE SIN VARA`** (linea **14743**). **Nada de lo sellado se reescribe: la correccion de arriba queda como esta y esta linea solo dice que un segundo instrumento la midio y la sostiene.**
+
+--- LA CORRECCION DECLARADA QUE SE ANADE DEBAJO ---
+> **CORRECCION DECLARADA DE LA FECHA DE ESTA MISMA LINEA (20 ago 2026, vuelta 60, TAREA 1.1 del encargo; hallazgo del acta 59).** La linea de arriba decia **~~21 ago 2026~~** y la fecha buena es **20 ago 2026**. **EL TEXTO VIEJO NO SE BORRA: queda citado aqui**, que es lo que la regla 8 del `EJECUTOR.md` pide. **EL MOTIVO ESTA MEDIDO, NO SUPUESTO:** los **6 commits** de la vuelta 59 (`c9927b19`, `fd7de724`, `956f9e3d`, `39d495b2`, `6b6607bb`, `02d0bf00`) llevan **todos** fecha **2026-08-20** por `git log --date=format:'%Y-%m-%d'`, y el commit que escribio esta misma linea es **`956f9e3d`, de 2026-08-20 13:48:45**. **LA FECHA DE LA VUELTA SE SUPUSO EN VEZ DE MEDIRSE**, y de aqui en adelante **la fecha de todo reporte y de toda nota fechada SE MIDE** (del reloj del sistema o del commit) **y no se supone**. **EL CAMPO `fecha` DEL PLAN SELLADO DEL LOTE A (`docs/loop/PLAN_V59_OPU01_LOTE_A.json`) NO SE REEDITA:** su error queda declarado en el registro de este tramo cuando el tramo cierre.
+
+ESCRITO: C:\Users\AlexDesk\Documents\I have an idea\docs\plan\03_FUSIONES.md (linea 2469 corregida, correccion declarada en la 2471)
