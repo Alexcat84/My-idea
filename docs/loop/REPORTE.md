@@ -12,8 +12,8 @@ funden, y el carril del filo lo manda con esas palabras.**
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `4e48e8e6` (el acta de la vuelta 54), **arbol limpio y todo pusheado** |
-| **hash final** | el de este commit del cierre mas el commit que escribe esta cabecera, **pusheados a `origin/pasada-unica`** |
-| **commits de la vuelta** | **5**: `795c2fdd` (apertura y sucesor del instrumento del tramo), el de la TAREA 1.1, el del lote A, el del lote B y el del cierre, mas el de esta cabecera |
+| **hash final** | `b908d5b4` (el cierre) mas este mismo commit, que solo escribe esta cabecera, **pusheados a `origin/pasada-unica`** |
+| **commits de la vuelta** | **6**: `795c2fdd` (apertura medida y sucesor del instrumento del tramo), `4d15c341` (TAREA 1.1, el 18 fundido y el 23 deshecho y rehecho), `9e1a0d69` (lote A), `2422405a` (lote B), `b908d5b4` (el cierre) y este, que escribe el hash del cierre en la cabecera porque el commit del cierre no podia contenerlo |
 | **arbol al cierre** | limpio tras el commit del cierre |
 
 ---
