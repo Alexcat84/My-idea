@@ -1,0 +1,149 @@
+==============================================================================
+OP-U-01, TRAMO 1, P.12, LOTE B DE LA VUELTA 53: los actos 13, 14, 15 y 17 de la nomina del cierre de la vuelta 52 (los COSTOS DE FRANQUICIA, el ABOGADO DE FRANQUICIAS, la FRANQUICIA INADVERTIDA y la GESTION POR OBJETIVOS) . MODO EJECUTAR
+plan: docs/loop/PLAN_V53_OPU01_LOTE_B.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3485 vivos, 368 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive estimacion_inversion_inicial_franquiciador . absorbe cinco_categorias_costos_franquicia
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['cinco_categorias_costos_franquicia']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive eleccion_abogado_franquicias . absorbe contratar_abogado_especializado_franquicias
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['contratacion_abogado_franquicia', 'contratar_abogado_especializado_franquicias']
+
+------------------------------------------------------------------------------
+ACTO 3 . sobrevive prevenir_franquicias_inadvertidas . absorbe estructuras_combinadas_franquicia
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 1 de estructuras_combinadas_franquicia al PASO 1 del superviviente
+        inciso VERBATIM: 'cada estructura de negocio diseñada'
+        nexo (lo unico de cosecha propia): ', y aplica la misma prueba a '
+        paso resultante: Revisar todos los acuerdos de distribución, licencia o agencia existentes para verificar si cumplen los elementos legales de una franquicia (marca, sistema prescrito, tarifa), y aplica la misma prueba a cada estructura de negocio diseñada
+  alias del superviviente: ['estructuras_combinadas_franquicia']
+
+------------------------------------------------------------------------------
+ACTO 4 . sobrevive eliminar_metas_numericas_gerencia . absorbe critica_gestion_por_objetivos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['critica_gestion_por_objetivos']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 11
+   combinar_crecimiento_corporativo_y_franquicia        nodos_previos     estructuras_combinadas_franquicia -> prevenir_franquicias_inadvertidas
+   construccion_equipo_franquicia                       nodos_previos     cinco_categorias_costos_franquicia -> estimacion_inversion_inicial_franquiciador
+   criterio_bazooka_peashooter                          nodos_siguientes  cinco_categorias_costos_franquicia -> estimacion_inversion_inicial_franquiciador
+   elaboracion_fdd                                      nodos_previos     contratar_abogado_especializado_franquicias -> eleccion_abogado_franquicias
+   evitar_copia_estructura_competencia                  nodos_siguientes  contratar_abogado_especializado_franquicias -> eleccion_abogado_franquicias
+   exenciones_legales_franquicia                        nodos_siguientes  estructuras_combinadas_franquicia -> prevenir_franquicias_inadvertidas
+   gestion_miedo_reportes                               nodos_siguientes  critica_gestion_por_objetivos -> eliminar_metas_numericas_gerencia
+   presupuesto_marketing_leads_franquicia               nodos_previos     cinco_categorias_costos_franquicia -> estimacion_inversion_inicial_franquiciador
+   seleccion_consultor_franquicias                      nodos_siguientes  cinco_categorias_costos_franquicia -> estimacion_inversion_inicial_franquiciador
+   sistema_estable_causas_comunes                       nodos_previos     critica_gestion_por_objetivos -> eliminar_metas_numericas_gerencia
+   sistema_estable_causas_comunes                       nodos_siguientes  critica_gestion_por_objetivos -> eliminar_metas_numericas_gerencia
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 3
+   diferenciacion_estructura_legal_franquicia           nodos_siguientes  contratar_abogado_especializado_franquicias (registro historico)
+   sistema_estable_deming                               nodos_previos     critica_gestion_por_objetivos (registro historico)
+   sistema_estable_deming                               nodos_siguientes  critica_gestion_por_objetivos (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 2
+   elaboracion_fdd                                      nodos_previos
+   sistema_estable_causas_comunes                       nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 999
+  duplicadas tras resolver DESPUES del tramo                          : 996
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 3, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 20 de 20
+guarda D, los 4 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (24 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 cinco_categorias_costos_franquicia           paso         1  PASO 6 del superviviente
+        Define cuántas franquicias quieres vender en tu primer año.
+    1 cinco_categorias_costos_franquicia           paso         2  ya lo dice el PASO 3 del superviviente
+        Presupuesta los costos de desarrollo: estrategia, el documento de divulgación (FDD), el contrato de franquicia, el manual de operaciones y los materia
+    1 cinco_categorias_costos_franquicia           paso         3  ya lo dice el PASO 2 del superviviente
+        Presupuesta los costos legales: redacción de documentos, registros en cada estado o país donde vayas a operar y el registro de tu marca.
+    1 cinco_categorias_costos_franquicia           paso         4  ya lo dice el PASO 4 del superviviente
+        Presupuesta los costos de marketing para atraer compradores de franquicia; pregunta el precio promedio por franquicia vendida en tu mercado.
+    1 cinco_categorias_costos_franquicia           paso         5  PASO 7 del superviviente
+        Presupuesta los costos de personal según cuánta gente necesitas contratar y si puedes aprovechar al equipo que ya tienes.
+    1 cinco_categorias_costos_franquicia           paso         6  PASO 8 del superviviente
+        Presupuesta los costos de preparación: crear la nueva entidad legal, duplicar materiales, viajes y equipo nuevo.
+    1 cinco_categorias_costos_franquicia           paso         7  ya lo dice el PASO 5 del superviviente
+        Suma todo en un solo presupuesto antes de arrancar tu programa de franquicias.
+    1 cinco_categorias_costos_franquicia           condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando necesitas calcular cuánto dinero vas a necesitar para convertir tu negocio en franquicia.
+    2 contratar_abogado_especializado_franquicias  paso         1  ya lo dice el PASO 1 del superviviente
+        Completar toda la planificación de negocio antes de buscar asesoría legal
+    2 contratar_abogado_especializado_franquicias  paso         2  ya lo dice el PASO 2 del superviviente
+        Investigar y verificar la experiencia real en franquicias del abogado candidato (no solo experiencia general)
+    2 contratar_abogado_especializado_franquicias  paso         3  ya lo dice el PASO 2 del superviviente
+        Solicitar referencias de otros franquiciantes que hayan trabajado con el abogado
+    2 contratar_abogado_especializado_franquicias  paso         4  ya lo dice el PASO 2 del superviviente
+        Confirmar que el abogado se dedica activamente a la práctica privada de franquicias
+    2 contratar_abogado_especializado_franquicias  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el plan de negocio de franquicia está terminado y se necesita documentación legal
+    2 contratar_abogado_especializado_franquicias  condicion    2  CONDICION 3 del superviviente
+        Si el usuario está considerando contratar al primer abogado disponible sin verificar su expertise
+    3 estructuras_combinadas_franquicia            paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Aplicar la prueba de tres elementos a cada estructura de negocio diseñada
+    3 estructuras_combinadas_franquicia            paso         2  ya lo dice el PASO 1 del superviviente
+        Revisar si se está combinando accidentalmente elementos de distintas categorías (marca + control + fee)
+    3 estructuras_combinadas_franquicia            paso         3  ya lo dice el PASO 2 del superviviente
+        Validar legalmente cada estructura combinada antes de lanzarla al mercado
+    3 estructuras_combinadas_franquicia            condicion    1  CONDICION 3 del superviviente
+        Al diseñar cualquier estructura alternativa a la franquicia tradicional
+    3 estructuras_combinadas_franquicia            condicion    2  CONDICION 4 del superviviente
+        Si existe riesgo de haber creado inadvertidamente una franquicia no declarada
+    4 critica_gestion_por_objetivos                paso         1  ya lo dice el PASO 3 del superviviente
+        Evaluar si tus metas actuales están basadas en la capacidad real de tu negocio (datos históricos, seguimiento de tus procesos)
+    4 critica_gestion_por_objetivos                paso         2  ya lo dice el PASO 2 del superviviente
+        Eliminar las metas arbitrarias que no estén fundamentadas en el conocimiento real de tu proceso
+    4 critica_gestion_por_objetivos                paso         3  ya lo dice el PASO 4 del superviviente
+        Cambiar el manejo por objetivos por métodos de mejora continua de tu sistema
+    4 critica_gestion_por_objetivos                paso         4  PASO 5 del superviviente
+        Reconocer el costo oculto de manejar tu negocio por miedo a los números
+    4 critica_gestion_por_objetivos                condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando te exiges o te exigen metas numéricas fijas sin base real en tu negocio
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 4
+  nodos implicados    : 8
+  nodos que MUEREN    : 4
+  piezas repartidas   : 24 (7 viajan enteras, 16 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 18
+censo DESPUES: 3853 ficheros, 3481 vivos, 372 deprecados
+censo ANTES  : 3853 ficheros, 3485 vivos, 368 deprecados
+delta deprecados: +4 (esperado +4): OK

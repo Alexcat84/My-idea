@@ -1,0 +1,22 @@
+==============================================================================
+TRAS EL LOTE B DE LA VUELTA 53
+==============================================================================
+  veredictos leidos                       : 3388
+  pares resueltos distintos               : 3299
+  AUTO-PARES (los dos lados al mismo vivo): 47
+  COLISIONES DE CLASE VIGENTES            : 4
+
+  par resuelto: contratar_abogado_franquicias contra eleccion_abogado_franquicias
+     puesto 2086   D | crudo: contratar_abogado_franquicias + eleccion_abogado_franquicias
+     puesto 2090   A | crudo: contratar_abogado_especializado_franquicias + contratar_abogado_franquicias
+  par resuelto: costos_preparacion_franquicia contra estimacion_inversion_inicial_franquiciador
+     puesto 2075   A | crudo: cinco_categorias_costos_franquicia + costos_preparacion_franquicia
+     puesto 2092   D | crudo: costos_preparacion_franquicia + estimacion_inversion_inicial_franquiciador
+  par resuelto: deteccion_franquicia_inadvertida contra prevenir_franquicias_inadvertidas
+     puesto 2073   D | crudo: deteccion_franquicia_inadvertida + prevenir_franquicias_inadvertidas
+     puesto 2181   A | crudo: deteccion_franquicia_inadvertida + estructuras_combinadas_franquicia
+  par resuelto: eliminacion_gestion_por_objetivos_y_numeros contra eliminar_metas_numericas_gerencia
+     puesto 2488   A | crudo: critica_gestion_por_objetivos + eliminacion_gestion_por_objetivos_y_numeros
+     puesto 2534   D | crudo: eliminacion_gestion_por_objetivos_y_numeros + eliminar_metas_numericas_gerencia
+
+  CUENTA ESPERADA: 4 | MEDIDA: 4 | CALZA: SI

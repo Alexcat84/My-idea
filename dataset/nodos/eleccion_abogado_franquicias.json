@@ -17,7 +17,8 @@
   "nodos_previos": [
     "seleccion_consultor_franquicias",
     "criterios_seleccion_consultor_franquicia",
-    "otros_terminos_contractuales"
+    "otros_terminos_contractuales",
+    "evitar_copia_estructura_competencia"
   ],
   "nodos_siguientes": [
     "criterio_bazooka_peashooter",
@@ -26,16 +27,23 @@
   ],
   "condiciones_activacion": [
     "Cuando ya decidiste franquiciar y ya trabajaste con un consultor de franquicias",
-    "Antes de elaborar el Franchise Disclosure Document (FDD) o los contratos de franquicia"
+    "Antes de elaborar el Franchise Disclosure Document (FDD) o los contratos de franquicia",
+    "Si el usuario está considerando contratar al primer abogado disponible sin verificar su expertise"
   ],
   "etiqueta_arbol": "Elige tu Abogado de Franquicias",
   "ids_alias": [
-    "contratacion_abogado_franquicia"
+    "contratacion_abogado_franquicia",
+    "contratar_abogado_especializado_franquicias"
   ],
   "merged_originals": [
     {
       "node_id": "contratacion_abogado_franquicia",
       "titulo": "Contratación de Asesoría Legal Especializada en Franquicias",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    },
+    {
+      "node_id": "contratar_abogado_especializado_franquicias",
+      "titulo": "Contratación de Abogado Especializado en Franquicias",
       "fuente": "Franchise Your Business - Mark Siebert"
     }
   ]

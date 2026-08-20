@@ -14037,7 +14037,8 @@
       "condiciones_activacion": [
         "Cuando necesitas calcular cuánto dinero vas a necesitar para convertir tu negocio en franquicia."
       ],
-      "etiqueta_arbol": "Presupuesta las Cinco Categorías Clave"
+      "etiqueta_arbol": "Presupuesta las Cinco Categorías Clave",
+      "deprecado": true
     },
     "cinco_pasos_eco_efectividad": {
       "node_id": "cinco_pasos_eco_efectividad",
@@ -15734,7 +15735,7 @@
       "entregable_esperado": "Un plan de gobernanza que defina reglas de territorio, marketing compartido y estándares entre unidades corporativas y franquiciadas",
       "nodos_previos": [
         "estrategia_multicanal_expansion",
-        "estructuras_combinadas_franquicia",
+        "prevenir_franquicias_inadvertidas",
         "alternativa_operaciones_propias"
       ],
       "nodos_siguientes": [
@@ -19463,7 +19464,7 @@
       ],
       "entregable_esperado": "Un plan de equipo con funciones definidas, momento de incorporación y calificaciones mínimas por posición",
       "nodos_previos": [
-        "cinco_categorias_costos_franquicia",
+        "estimacion_inversion_inicial_franquiciador",
         "gestion_tiempo_lanzamiento_franquicia"
       ],
       "nodos_siguientes": [
@@ -20510,7 +20511,8 @@
         "Cuando el plan de negocio de franquicia está terminado y se necesita documentación legal",
         "Si el usuario está considerando contratar al primer abogado disponible sin verificar su expertise"
       ],
-      "etiqueta_arbol": "Elige Bien a tu Abogado"
+      "etiqueta_arbol": "Elige Bien a tu Abogado",
+      "deprecado": true
     },
     "contratar_abogado_franquicias": {
       "node_id": "contratar_abogado_franquicias",
@@ -23788,7 +23790,7 @@
         "eleccion_abogado_franquicias"
       ],
       "nodos_siguientes": [
-        "cinco_categorias_costos_franquicia"
+        "estimacion_inversion_inicial_franquiciador"
       ],
       "condiciones_activacion": [
         "Si dudas entre pagar mas por un mejor profesional o ahorrar con una opcion económica"
@@ -24273,7 +24275,8 @@
       "condiciones_activacion": [
         "Cuando te exiges o te exigen metas numéricas fijas sin base real en tu negocio"
       ],
-      "etiqueta_arbol": "Cuestiona las Metas Numéricas Arbitrarias"
+      "etiqueta_arbol": "Cuestiona las Metas Numéricas Arbitrarias",
+      "deprecado": true
     },
     "critica_ground_truth_investigacion": {
       "node_id": "critica_ground_truth_investigacion",
@@ -39819,9 +39822,8 @@
       ],
       "entregable_esperado": "FDD completo con las 23 secciones redactadas y proceso de entrega documentado",
       "nodos_previos": [
-        "contratar_abogado_especializado_franquicias",
-        "contratacion_abogado_franquicia",
-        "eleccion_abogado_franquicias"
+        "eleccion_abogado_franquicias",
+        "contratacion_abogado_franquicia"
       ],
       "nodos_siguientes": [
         "decision_fpr",
@@ -39916,7 +39918,8 @@
       "nodos_previos": [
         "seleccion_consultor_franquicias",
         "criterios_seleccion_consultor_franquicia",
-        "otros_terminos_contractuales"
+        "otros_terminos_contractuales",
+        "evitar_copia_estructura_competencia"
       ],
       "nodos_siguientes": [
         "criterio_bazooka_peashooter",
@@ -39925,16 +39928,23 @@
       ],
       "condiciones_activacion": [
         "Cuando ya decidiste franquiciar y ya trabajaste con un consultor de franquicias",
-        "Antes de elaborar el Franchise Disclosure Document (FDD) o los contratos de franquicia"
+        "Antes de elaborar el Franchise Disclosure Document (FDD) o los contratos de franquicia",
+        "Si el usuario está considerando contratar al primer abogado disponible sin verificar su expertise"
       ],
       "etiqueta_arbol": "Elige tu Abogado de Franquicias",
       "ids_alias": [
-        "contratacion_abogado_franquicia"
+        "contratacion_abogado_franquicia",
+        "contratar_abogado_especializado_franquicias"
       ],
       "merged_originals": [
         {
           "node_id": "contratacion_abogado_franquicia",
           "titulo": "Contratación de Asesoría Legal Especializada en Franquicias",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        },
+        {
+          "node_id": "contratar_abogado_especializado_franquicias",
+          "titulo": "Contratación de Abogado Especializado en Franquicias",
           "fuente": "Franchise Your Business - Mark Siebert"
         }
       ]
@@ -40837,21 +40847,34 @@
         "Revisar las metas numéricas actuales de gerencia y verificar si cuentan con un plan de acción concreto",
         "Eliminar metas que solo se basen en deseos o presión sin método definido",
         "Determinar la capacidad real del sistema mediante análisis estadístico antes de fijar cualquier meta",
-        "Reemplazar metas arbitrarias por objetivos de mejora continua con planes de acción específicos"
+        "Reemplazar metas arbitrarias por objetivos de mejora continua con planes de acción específicos",
+        "Reconocer el costo oculto de manejar tu negocio por miedo a los números"
       ],
       "entregable_esperado": "Documento de metas organizacionales revisado, con cada meta vinculada a un método y análisis de capacidad del sistema",
       "nodos_previos": [
         "sistema_estable_variacion",
-        "sistema_estable_causas_comunes"
+        "sistema_estable_causas_comunes",
+        "gestion_miedo_reportes"
       ],
       "nodos_siguientes": [
-        "remover_barreras_orgullo_trabajo"
+        "remover_barreras_orgullo_trabajo",
+        "sistema_estable_causas_comunes"
       ],
       "condiciones_activacion": [
         "Cuando la dirección establece objetivos porcentuales de mejora sin plan de acción",
         "Cuando existe gestión por resultados (management by numbers) sin comprensión del proceso"
       ],
-      "etiqueta_arbol": "Fija Metas con Método"
+      "etiqueta_arbol": "Fija Metas con Método",
+      "ids_alias": [
+        "critica_gestion_por_objetivos"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "critica_gestion_por_objetivos",
+          "titulo": "Crítica a la Gestión por Objetivos (MBO) y por Números",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "eliminar_miedo": {
       "node_id": "eliminar_miedo",
@@ -46158,21 +46181,38 @@
         "Cotiza el costo de armar los documentos legales de tu franquicia (por ejemplo el contrato y el documento de divulgación conocido como FDD)",
         "Presupuesta el desarrollo de tu manual de operaciones y de los materiales de entrenamiento",
         "Calcula cuánto vas a necesitar en marketing para atraer a tus futuros franquiciados",
-        "Define el capital total que necesitas antes de lanzar tu programa de franquicia"
+        "Define el capital total que necesitas antes de lanzar tu programa de franquicia",
+        "Define cuántas franquicias quieres vender en tu primer año.",
+        "Presupuesta los costos de personal según cuánta gente necesitas contratar y si puedes aprovechar al equipo que ya tienes.",
+        "Presupuesta los costos de preparación: crear la nueva entidad legal, duplicar materiales, viajes y equipo nuevo."
       ],
       "entregable_esperado": "Un presupuesto detallado de la inversión inicial que necesitas para lanzar tu sistema de franquicia",
       "nodos_previos": [
         "evaluacion_franquiciabilidad_negocio",
-        "evaluacion_necesidad_franquiciar"
+        "evaluacion_necesidad_franquiciar",
+        "criterio_bazooka_peashooter",
+        "seleccion_consultor_franquicias"
       ],
       "nodos_siguientes": [
-        "documentacion_sistemas_operativos"
+        "documentacion_sistemas_operativos",
+        "construccion_equipo_franquicia",
+        "presupuesto_marketing_leads_franquicia"
       ],
       "condiciones_activacion": [
         "Antes de empezar tu proceso de conversión a franquicia",
         "Cuando necesitas planificar el capital que vas a necesitar para franquiciar"
       ],
-      "etiqueta_arbol": "Estima tu Inversión Inicial"
+      "etiqueta_arbol": "Estima tu Inversión Inicial",
+      "ids_alias": [
+        "cinco_categorias_costos_franquicia"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "cinco_categorias_costos_franquicia",
+          "titulo": "Las cinco categorías de costos para convertir tu negocio en franquicia (desarrollo, legal, marketing, personal y preparación)",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ]
     },
     "estimacion_tres_puntos": {
       "node_id": "estimacion_tres_puntos",
@@ -47912,7 +47952,8 @@
         "Al diseñar cualquier estructura alternativa a la franquicia tradicional",
         "Si existe riesgo de haber creado inadvertidamente una franquicia no declarada"
       ],
-      "etiqueta_arbol": "Revisa si Ya Es Franquicia"
+      "etiqueta_arbol": "Revisa si Ya Es Franquicia",
+      "deprecado": true
     },
     "estudio_desempeno_run_charts_servicios": {
       "node_id": "estudio_desempeno_run_charts_servicios",
@@ -50446,7 +50487,7 @@
       ],
       "nodos_siguientes": [
         "otros_terminos_contractuales",
-        "contratar_abogado_especializado_franquicias"
+        "eleccion_abogado_franquicias"
       ],
       "condiciones_activacion": [
         "Cuando sientes la tentación de copiar la estructura legal o de fees de un competidor exitoso",
@@ -50900,7 +50941,7 @@
         "alternativa_joint_venture"
       ],
       "nodos_siguientes": [
-        "estructuras_combinadas_franquicia"
+        "prevenir_franquicias_inadvertidas"
       ],
       "condiciones_activacion": [
         "Si la relación de negocio cumple técnicamente los tres elementos de franquicia pero se busca evitar la regulación",
@@ -58278,7 +58319,7 @@
       ],
       "nodos_siguientes": [
         "falacia_recompensa_loteria",
-        "critica_gestion_por_objetivos"
+        "eliminar_metas_numericas_gerencia"
       ],
       "condiciones_activacion": [
         "Cuando los datos reportados muestran concentraciones sospechosas cerca de límites de aceptación.",
@@ -86811,7 +86852,7 @@
       ],
       "entregable_esperado": "Un presupuesto de marketing y una proyección de flujo de caja para los primeros 6 a 12 meses de venta de franquicias",
       "nodos_previos": [
-        "cinco_categorias_costos_franquicia"
+        "estimacion_inversion_inicial_franquiciador"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -87211,24 +87252,38 @@
       "fuente": "Franchise Your Business - Mark Siebert",
       "resumen_teorico": "Muchas empresas crean relaciones de franquicia sin saberlo, al estructurar acuerdos de distribución, licencia o agencia que cumplen legalmente con la definición de franquicia (marca + sistema de marketing prescrito + tarifa), sin registrarse ni cumplir con las leyes correspondientes. Esto suele originarse por asesoría legal deficiente o por el desconocimiento de que ciertos elementos (incluso una tarifa mínima como la compra de manuales) pueden activar leyes estatales de franquicia, generando demandas millonarias y sanciones severas.",
       "pasos_accionables": [
-        "Revisar todos los acuerdos de distribución, licencia o agencia existentes para verificar si cumplen los elementos legales de una franquicia (marca, sistema prescrito, tarifa)",
+        "Revisar todos los acuerdos de distribución, licencia o agencia existentes para verificar si cumplen los elementos legales de una franquicia (marca, sistema prescrito, tarifa), y aplica la misma prueba a cada estructura de negocio diseñada",
         "Consultar a un abogado especializado en franquicias (no un abogado generalista) antes de estructurar cualquier relación de negocio con terceros que usen tu marca",
         "Verificar los umbrales de tarifas y las definiciones específicas de franquicia en cada estado donde operes o planees operar",
         "Documentar explícitamente la naturaleza de cualquier relación contractual para evitar ambigüedad legal"
       ],
       "entregable_esperado": "Auditoría legal de todos los acuerdos comerciales actuales confirmando que ninguno constituye una franquicia no registrada",
       "nodos_previos": [
-        "investigacion_desarrollo_concepto"
+        "investigacion_desarrollo_concepto",
+        "exenciones_legales_franquicia"
       ],
       "nodos_siguientes": [
         "contratar_abogado_franquicias",
-        "cumplimiento_ftc_rule_436"
+        "cumplimiento_ftc_rule_436",
+        "combinar_crecimiento_corporativo_y_franquicia"
       ],
       "condiciones_activacion": [
         "Si la empresa tiene acuerdos de distribución, licencia o agencia con terceros que usan su marca",
-        "Si se está evitando intencionalmente llamar 'franquicia' a una relación comercial para eludir regulaciones"
+        "Si se está evitando intencionalmente llamar 'franquicia' a una relación comercial para eludir regulaciones",
+        "Al diseñar cualquier estructura alternativa a la franquicia tradicional",
+        "Si existe riesgo de haber creado inadvertidamente una franquicia no declarada"
       ],
-      "etiqueta_arbol": "Evita Franquicias sin Saberlo"
+      "etiqueta_arbol": "Evita Franquicias sin Saberlo",
+      "ids_alias": [
+        "estructuras_combinadas_franquicia"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "estructuras_combinadas_franquicia",
+          "titulo": "Estructuras Combinadas: Cuando una Alternativa También Es Franquicia",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ]
     },
     "pricing_models_selection": {
       "node_id": "pricing_models_selection",
@@ -102656,7 +102711,7 @@
       ],
       "nodos_siguientes": [
         "eleccion_abogado_franquicias",
-        "cinco_categorias_costos_franquicia",
+        "estimacion_inversion_inicial_franquiciador",
         "criterio_bazooka_peashooter",
         "contratacion_abogado_franquicia"
       ],
@@ -104876,17 +104931,16 @@
       "entregable_esperado": "Una carta de control o run chart con el diagnóstico de estabilidad del proceso, la clasificación de causas y un plan de acción dirigido a cambiar el sistema si corresponde.",
       "nodos_previos": [
         "cadena_reaccion_calidad_productividad",
-        "critica_gestion_por_objetivos",
+        "eliminar_metas_numericas_gerencia",
         "eliminar_slogans_y_exhortaciones"
       ],
       "nodos_siguientes": [
         "definiciones_operacionales",
         "control_estadistico_proceso",
-        "critica_gestion_por_objetivos",
+        "eliminar_metas_numericas_gerencia",
         "eliminacion_estandares_trabajo",
         "estadistico_competente_organizacion",
         "inspeccion_optima_proceso",
-        "eliminar_metas_numericas_gerencia",
         "eliminar_cuotas_numericas_trabajadores",
         "falacia_meta_numerica_sin_metodo",
         "sistemas_recompensa_aleatorios",
@@ -123602,7 +123656,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 55,
+    "nodos_sin_enlaces_entrantes": 57,
     "enlaces_rotos_en_grafo": 0
   }
 }
