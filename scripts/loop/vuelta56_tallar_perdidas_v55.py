@@ -29,8 +29,17 @@ Quien audite no tiene que creerle a la etiqueta: tiene la frase al lado.
 
 DE SOLO LECTURA. No escribe ningun fichero: imprime.
 
-Uso: python scripts/loop/vuelta56_tallar_perdidas_v55.py
+AMPLIADO EL MISMO DIA, ANTES DE QUE NINGUNA PAGINA CITARA SUS CIFRAS: sirve
+para CUALQUIER vuelta y CUALQUIER lista de lotes, porque la vuelta 56 tiene sus
+propias perdidas que contar y duplicar el instrumento para cambiar dos cadenas
+seria fabricar un hermano gemelo sin motivo. La ampliacion NO toca la
+aritmetica: solo saca a la linea de comandos el numero de vuelta y los lotes.
+
+Uso:
+  python scripts/loop/vuelta56_tallar_perdidas_v55.py --vuelta 55 --lotes T1,A,B
+  python scripts/loop/vuelta56_tallar_perdidas_v55.py --vuelta 56 --lotes A,B,C
 """
+import argparse
 import io
 import json
 import os
@@ -38,7 +47,6 @@ import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LOOP = os.path.join(RAIZ, "docs", "loop")
-LOTES = ["T1", "A", "B"]
 MARCA = "PERDIDA NOMBRADA"
 
 
@@ -58,15 +66,21 @@ def especie(trozo):
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--vuelta", default="55")
+    ap.add_argument("--lotes", default="T1,A,B")
+    a = ap.parse_args()
+    V, LOTES = a.vuelta, [x.strip() for x in a.lotes.split(",") if x.strip()]
+    PLAN = "PLAN_V%s_OPU01_LOTE_%%s.json" % V
     sys.stdout.reconfigure(encoding="utf-8")
     print("=" * 78)
-    print("LAS PERDIDAS NOMBRADAS DE LA VUELTA 55, TALLADAS DE LOS PLANES SELLADOS")
+    print("LAS PERDIDAS NOMBRADAS DE LA VUELTA %s, TALLADAS DE LOS PLANES SELLADOS" % V)
     print("=" * 78)
     print()
 
     filas, rojo = [], []
     for L in LOTES:
-        p = os.path.join(LOOP, "PLAN_V55_OPU01_LOTE_%s.json" % L)
+        p = os.path.join(LOOP, PLAN % L)
         plan = json.load(io.open(p, encoding="utf-8"))
         for act in plan["actos"]:
             nota = act["nota_del_reparto"]
@@ -84,7 +98,7 @@ def main():
             filas.append({"lote": L, "orden": act["orden"], "muere": act["absorbidos"][0],
                           "especie": esp[0], "causa": esp[1], "frase": frase})
 
-    print("  planes leidos       : %s" % ", ".join("PLAN_V55_OPU01_LOTE_%s.json" % L for L in LOTES))
+    print("  planes leidos       : %s" % ", ".join(PLAN % L for L in LOTES))
     print("  perdidas encontradas: %d" % (len(filas) + len(rojo)))
     if rojo:
         print()
@@ -98,7 +112,7 @@ def main():
     print("  por especie         : %s" % dict(sorted(cuenta.items())))
     print()
 
-    print("--- TABLA: LAS PERDIDAS NOMBRADAS DE LA VUELTA 55, CON SU ESPECIE ---")
+    print("--- TABLA: LAS PERDIDAS NOMBRADAS DE LA VUELTA %s, CON SU ESPECIE ---" % V)
     print()
     print("| acto | lote | el nodo que muere | **ESPECIE** | por que se perdio | la frase del plan sellado que lo dice |")
     print("|---:|:---:|---|---|---|---|")

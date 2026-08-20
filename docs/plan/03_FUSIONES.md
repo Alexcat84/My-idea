@@ -1960,3 +1960,235 @@ y las cinco se releyeron por el carril general de colisiones **con sus dos ampli
 > 117 colapsos). Las celdas 247, 248 y 528 de `RECOMPUTO_3388.md` y las filas `B` y `D` del
 > marcador publicado en `INTRA_DOMINIO_INFORME.md` quedan corregidas con tachado, contador cuadrado
 > y nota fechada por el barrido `9.10` del cierre.
+
+---
+
+## `OP-U-01`, TRAMO 3 **ABIERTO Y CERRADO EN LA MISMA VUELTA: 47 ACTOS FUNDIDOS DE 50 Y TRES DECLARADOS** (20 ago 2026, vuelta 56)
+
+**EL TRAMO 3 SE ABRE Y SE CIERRA EN LA MISMA VUELTA**: de sus **50** actos, **47 estan fundidos**
+y **TRES quedan DECLARADOS**, cada uno con su especie escrita y su carril. Es el primer tramo de
+`OP-U-01` que no necesita una segunda vuelta.
+
+### LA FRONTERA DEL TRAMO: **LAS DOS LECTURAS NO CALZAN, Y LA DIVERGENCIA QUEDA EXPLICADA ENTERA**
+
+**El abridor es `scripts/loop/vuelta56_tramo3_nomina.py`**
+([`../loop/SALIDA_V56_TRAMO3_NOMINA.txt`](../loop/SALIDA_V56_TRAMO3_NOMINA.txt)), con la
+**identidad POR MIEMBROS** copiada del sucesor de la vuelta 55 y el **ORDINAL** copiado del
+ABRIDOR de la vuelta 54 (la posicion en el orden impreso de hoy). **Se dice de cual se copia cada
+pieza porque no son la misma**: el sucesor derivaba el ordinal del puesto de la nomina de la 48
+porque aquel tramo ya estaba abierto y sus ordinales ya estaban publicados; este tramo se ABRE hoy
+y no tiene ordinal publicado que respetar.
+
+| lo que el abridor comprueba | resultado al abrir la vuelta 56 |
+|---|---|
+| **guarda del prefijo**: los vivos de los tramos 1 y 2 ocupan los puestos 1 a N **sin huecos** | **SI**, y son **16**, medido y no tecleado (11 del tramo 1 y 5 del tramo 2) |
+| **LECTURA A**: los 50 `CERRADOS` siguientes en el orden impreso de HOY | los puestos **17 a 66** |
+| **LECTURA B**: los que ocupaban los puestos **101 a 150** de la nomina de la vuelta 48 | **50 actos**, los 50 vivos hoy |
+| las dos lecturas, en conjunto y en orden | **NO CALZAN**: uno solo en A, uno solo en B |
+| guarda de los cuatro ajenos, **camino literal** | **VERDE**, ninguno de los cuatro entra |
+| guarda de los cuatro ajenos, **POR EL RESOLUTOR** | **MUERDE** donde el literal pasaba por vacio |
+| guarda de solape con los tramos 1 y 2 | **VERDE**, CERO |
+| figura de los 50 | **FUSION PURA los 50**, tamano 2 y `PURO A` |
+
+> **LA DIVERGENCIA, DIAGNOSTICADA CON EL FICHERO DELANTE Y CON LA CADENA MEDIDA COMMIT A COMMIT.**
+> **Solo en A**: `construir_sobre_ideas_ajenas` mas `reglas_brainstorming`, hoy en el puesto **23**,
+> que **en la nomina de la 48 NO EXISTIA como `CERRADO`**: alli era la componente **62**, **ABIERTA
+> y de tamano 3**, con `pensamiento_convergente_divergente` dentro. **Se partio cuando la vuelta 49
+> corrigio el veredicto del puesto 844** (`brainstorming_divergente` contra
+> `generar_multiples_opciones`) **de `A` a `D`**, por una de las tres colisiones de clase que el
+> acta de la vuelta 48 mando releer: ese par resuelve a `pensamiento_convergente_divergente` contra
+> `reglas_brainstorming` y **era la unica arista `A` que ataba al tercero a la componente**.
+> **Solo en B**: `crecimiento_ingresos_verdes` mas `generacion_ingresos_verdes`, que ocupaba el
+> puesto **150** de la 48 y hoy cae en el **67**, **UNO por detras del corte: DESPLAZADO al tramo
+> siguiente, no perdido.**
+
+> **EL TRAMO SE TOMA POR LA VARA VIGENTE Y NO SE ELIGE A OJO.** La cabecera del registro del tramo
+> 1 de esta misma pagina dice desde la vuelta 48 que el tramo son *los CINCUENTA primeros actos
+> CERRADOS de la NOMINA RE-MEDIDA AL ABRIRLO, en el orden en que el instrumento los imprime*, que
+> es **la LECTURA A**. La lectura B no es una vara rival: es la comprobacion de que entre una
+> apertura y la siguiente no ha pasado nada que el ejecutor no haya medido. **El abridor no elige:
+> DIAGNOSTICA, y solo continua si toda divergencia cae en una de las dos formas explicadas** (un
+> `CERRADO` nacido despues en el lado A, un acto desplazado detras del corte en el lado B).
+> **Cualquier otra es ROJO y PARADA.**
+
+> **Y LA GUARDA DE LOS CUATRO AJENOS SE LEE AHORA POR DOS CAMINOS** (regla 9 del `EJECUTOR.md`,
+> `P.1`): el ajeno **`brainstorming_divergente`** esta **DEPRECADO** y vive hoy dentro del
+> `ids_alias` de **`reglas_brainstorming`**, que es miembro del **acto 7**. **Por el camino LITERAL,
+> que es el que corrian los abridores de los tramos 1 y 2, la guarda pasa POR VACIO y nadie se
+> entera.** **EL ACTO SE FUNDIO IGUAL, Y LA VARA VA ESCRITA**: esta misma pagina midio esa guarda
+> **SOBRE LAS COMPONENTES** el 19 ago 2026 y escribio que `ab_testing_optimizacion` y
+> `brainstorming_divergente` *ya no aparecen en ninguna componente* porque sus operaciones
+> corrieron y los deprecaron; **por esa vara escrita la guarda esta VERDE hoy tambien**. Y **la
+> fusion NO TOCA AL AJENO por ningun lado**: el nodo que lleva su alias es **el que SOBREVIVE**, el
+> que muere es `construir_sobre_ideas_ajenas`, y ni el id ni el alias ni la clase del ajeno cambian.
+
+### LOS TRES LOTES, TALLADOS DE LOS PLANES SELLADOS
+
+**Estas tablas NO estan tecleadas: salen enteras de
+`python scripts/loop/vuelta56_tallar_planes.py`**
+([`../loop/SALIDA_V56_TALLAR_PLANES.txt`](../loop/SALIDA_V56_TALLAR_PLANES.txt)), **que las cuenta
+de los `PLAN_V56_*.json` sellados** y **cae en ROJO con el acto nombrado si un motivo no encaja en
+ninguna forma conocida**.
+
+| lote | actos | fundidos | mueren | piezas | enteras | ya dichas | de `INCISO` | perdidas nombradas |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| **A** | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 | **17** | **17** | **100** | 30 | 52 | **18** | **5** |
+| **B** | 18, 19, 20, 21, 22, 23, 24, 25, 26, 28, 29, 30, 31, 32, 33, 34 | **16** | **16** | **101** | 49 | 36 | **16** | **1** |
+| **C** | 35, 36, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50 | **14** | **14** | **82** | 31 | 31 | **20** | **5** |
+| **los tres** | | **47** | **47** | **283** | **110** | **119** | **54** | **11** |
+
+| la forma, leida del motivo sellado | cuantos | los actos |
+|---|---:|---|
+| **TODAS LAS VARAS de contenido de acuerdo** | **19** | 3, 4, 7, 9, 10, 13, 14, 15, 17, 19, 20, 21, 28, 30, 32, 34, 38, 39, 40 |
+| **UNA SOLA VARA de contenido no empatada, y BASTA** | **15** | 1, 5, 11, 12, 16, 24, 25, 29, 31, 33, 36, 41, 42, 48, 50 |
+| **EL CONTENIDO EMPATA y EL CABLEADO DECIDE SOLO** | **10** | 2, 6, 18, 22, 26, 43, 44, 46, 47, 49 |
+| **LA PUERTA SOBREVIVE, con el choque registrado** | **2** | 8, 35 |
+| **CONTEOS QUE CHOCAN CON LA PIEZA DECLARADA, y decide la declarada** | **1** | 23 |
+| **suma** | **47** | |
+
+| acto | lote | sobrevive | absorbe | piezas | enteras | ya dichas | `INCISO` |
+|---:|:---:|---|---|---:|---:|---:|---:|
+| **1** | A | `economia_de_la_experiencia` | `diseno_de_experiencias_participativas` | 5 | 1 | 4 | 0 |
+| **2** | A | `evaluacion_vp_ventas` | `framework_evaluacion_director_ventas` | 8 | 4 | 3 | 1 |
+| **3** | A | `plan_a_b_c_soft_landing` | `restructuracion_deuda_soft_landing` | 5 | 2 | 3 | 0 |
+| **4** | A | `publicidad_offline_pruebas_locales` | `tracking_publicidad_offline` | 5 | 2 | 2 | 1 |
+| **5** | A | `desarrollo_presentacion_problema` | `presentacion_problema_tres_columnas` | 6 | 1 | 3 | 2 |
+| **6** | A | `gamificacion_onboarding_visual` | `visualizacion_progreso_onboarding` | 6 | 2 | 4 | 0 |
+| **7** | A | `reglas_brainstorming` | `construir_sobre_ideas_ajenas` | 4 | 1 | 2 | 1 |
+| **8** | A | `five_whys_inversion_proporcional` | `tecnica_cinco_porques` | 8 | 3 | 5 | 0 |
+| **9** | A | `fase_accomplish_experiencia_cliente` | `fase_accomplish` | 5 | 1 | 3 | 1 |
+| **10** | A | `acquisicion_viral_engineering` | `herramientas_adquisicion_viral` | 6 | 1 | 4 | 1 |
+| **11** | A | `ficcion_especulativa_como_metodo` | `historia_del_futuro_escenarios_especulativos` | 7 | 0 | 4 | 3 |
+| **12** | A | `evaluacion_industria_cliente` | `analisis_disrupciones_mercado` | 7 | 4 | 2 | 1 |
+| **13** | A | `definicion_alineacion_cadena_suministro` | `alineacion_cadena_estrategia_negocio` | 5 | 2 | 1 | 2 |
+| **14** | A | `creacion_data_warehouse` | `data_warehouse_como_fundamento` | 5 | 1 | 3 | 1 |
+| **15** | A | `ciclo_de_conversion_de_efectivo` | `dso_dpo_gestion_capital_trabajo` | 6 | 1 | 3 | 2 |
+| **16** | A | `fase_mobilizar_modelo_negocio` | `fase_mobilizacion_equipo_multifuncional` | 5 | 1 | 3 | 1 |
+| **17** | A | `community_building_estrategia` | `construccion_de_comunidad_como_canal_traccion` | 7 | 3 | 3 | 1 |
+| **18** | B | `embudo_secuencial_de_inversores` | `seleccion_etapa_fondo_vc` | 6 | 2 | 4 | 0 |
+| **19** | B | `vesting_acciones_fundadores` | `eleccion_estructura_vesting_founder` | 9 | 4 | 4 | 1 |
+| **20** | B | `homogeneidad_vs_diversidad_equipo` | `diversidad_vs_homogeneidad_equipo` | 6 | 3 | 2 | 1 |
+| **21** | B | `ia_como_nivelador_habilidades` | `ia_colaborador_productividad` | 6 | 2 | 3 | 1 |
+| **22** | B | `mantener_puntaje_innovacion` | `auditoria_desempeno_new_products` | 6 | 4 | 2 | 0 |
+| **23** | B | `duration_estimating_worksheet` | `estimacion_tres_puntos` | 7 | 2 | 4 | 1 |
+| **24** | B | `eventos_offline_como_canal_traccion` | `eventos_offline_propios` | 8 | 6 | 0 | 2 |
+| **25** | B | `genchi_gembutsu_salir_del_edificio` | `genchi_gembutsu` | 6 | 2 | 3 | 1 |
+| **26** | B | `technology_platform_evaluation` | `flexible_go_kill_criteria` | 6 | 2 | 3 | 1 |
+| **28** | B | `simulacion_de_operaciones_supply_chain` | `simulacion_diseno_cadena_suministro` | 7 | 5 | 1 | 1 |
+| **29** | B | `colaboracion_transporte_ctm` | `collaborative_transportation_management` | 6 | 3 | 2 | 1 |
+| **30** | B | `search_for_business_model` | `customer_development_vs_business_plan` | 6 | 2 | 4 | 0 |
+| **31** | B | `planificacion_consecuencias_no_intencionadas` | `anticipar_consecuencias_negativas` | 6 | 4 | 1 | 1 |
+| **32** | B | `estrategia_multicanal_bienvenida` | `seis_medios_comunicacion_cliente` | 5 | 1 | 2 | 2 |
+| **33** | B | `intellectual_property_strategy` | `proteccion_propiedad_intelectual` | 5 | 2 | 1 | 2 |
+| **34** | B | `metricas_accionables` | `aprendizaje_validado_vs_metricas_vanidad` | 6 | 5 | 0 | 1 |
+| **35** | C | `alineacion_de_objetivos_en_sistemas` | `diseno_de_sistemas_a_escala` | 6 | 2 | 2 | 2 |
+| **36** | C | `esfuerzo_voluntario_vs_urge_espontaneo` | `control_voluntario_del_pensamiento` | 5 | 3 | 2 | 0 |
+| **38** | C | `cuatro_etapas_del_pensamiento_creativo` | `wallas_etapa_iluminacion` | 5 | 1 | 2 | 2 |
+| **39** | C | `practica_de_observacion_atenta` | `observar_lo_ordinario` | 4 | 0 | 3 | 1 |
+| **40** | C | `bullseye_framework` | `middle_ring_testing` | 7 | 2 | 3 | 2 |
+| **41** | C | `diseno_consecuencias_no_intencionadas` | `diseno_fugitivo_runaway_design` | 7 | 3 | 2 | 2 |
+| **42** | C | `arquitectura_tecnica_modular` | `arquitectura_flexible_soa` | 6 | 2 | 3 | 1 |
+| **43** | C | `entrenamiento_funcional_empleados` | `entrenamiento_empleados_startup` | 6 | 2 | 2 | 2 |
+| **44** | C | `convertir_necesidad_en_demanda` | `insight_observacion_empatia` | 6 | 4 | 1 | 1 |
+| **46** | C | `business_model_canvas_scorecard` | `business_model_canvas_vs_plan` | 8 | 6 | 1 | 1 |
+| **47** | C | `bucle_retroalimentacion_autoajustable` | `ciclos_retroalimentacion_autoajuste` | 6 | 2 | 2 | 2 |
+| **48** | C | `evitar_greenwashing` | `evitar_greenwashing_2` | 5 | 1 | 3 | 1 |
+| **49** | C | `contabilidad_ambiental` | `herramientas_contabilidad_ambiental` | 6 | 2 | 2 | 2 |
+| **50** | C | `reduccion_cargas_regulatorias` | `reduccion_cargas_cumplimiento` | 5 | 1 | 3 | 1 |
+
+| acto | lote | sus miembros | especie | se acumula para |
+|---:|:---:|---|---|---|
+| **27** | B | `decision_pivote_perseverar`, `pivotar_o_perseverar` | **CONTEOS DE CONTENIDO QUE CHOCAN Y LA PIEZA DECLARADA NO DESEMPATA** | LA MESA, con el pendiente de doctrina 1 de la vuelta 55, ahora con CUATRO actos y no tres |
+| **37** | C | `seis_herramientas_comunicacion_celebracion`, `seis_herramientas_comunicacion_fase_activate` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA. Y con un dato de familia que la propia razon aporta y conviene que la mesa tenga delante: este par cierra el tratamiento de la serie de los seis medios de Coleman, porque prueba que LAS INSTANCIAS POR FASE TAMBIEN SE REPITEN ENTRE ELLAS, no solo los dos nodos generales. La serie esta duplicada tantas veces como fases la instancien, y eso es una decision de catalogo, no de par. |
+| **45** | C | `framework_flujos_de_datos_ppp`, `framework_ppph_flujos` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA. La propia razon lo llama la trampa de identificador MAS LIMPIA de todas: son el mismo marco, uno nombrado por las tres primeras letras y el otro por las cuatro, con LOS CINCO PASOS CORRESPONDIENDOSE UNO A UNO en el mismo orden y con los mismos nombres. Que un par tan limpio no se pueda fundir por falta de vara es exactamente el caso que hace visible el pendiente de doctrina 1. |
+| **suma** | | **3 declarados** | | |
+
+### LAS PERDIDAS NOMBRADAS, CON SU ESPECIE SEPARADA Y LA FRASE SELLADA AL LADO
+
+**Tampoco esta tecleada: sale entera de
+`python scripts/loop/vuelta56_tallar_perdidas_v55.py --vuelta 56 --lotes A,B,C`**
+([`../loop/SALIDA_V56_TALLAR_PERDIDAS.txt`](../loop/SALIDA_V56_TALLAR_PERDIDAS.txt)), **que lee la
+especie del propio plan sin rama por defecto**. **Son ONCE: DIEZ de condiciones y UNA de un paso**,
+y se cuentan separadas a proposito, porque mezclarlas fue la caida de reporte que el acta de la
+vuelta 55 nombro.
+
+| acto | lote | el nodo que muere | **ESPECIE** | por que se perdio | la frase del plan sellado que lo dice |
+|---:|:---:|---|---|---|---|
+| **5** | A | `presentacion_problema_tres_columnas` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 pide validar el problema Y la reaccion inicial a la solucion EN UNA MISMA SESION DE ENTREVISTA, y la condicion 1 del superviviente solo habla de validar si el problema es real y urgente antes de mostrar el producto; el INCISO para condiciones no existe en el instrumento (pendiente de...* |
+| **6** | A | `visualizacion_progreso_onboarding` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 anade que el proceso PUEDE GENERAR ANSIEDAD EN EL CLIENTE y la condicion 1 del superviviente habla de proceso tecnico, largo o con usuarios sin experiencia previa, que no es lo mismo; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **8** | A | `tecnica_cinco_porques` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 incluye UN RESULTADO DE NEGOCIO INESPERADO junto al fallo tecnico o de proceso, y la condicion 1 del superviviente solo habla de error o falla tecnica u operativa repetible; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **14** | A | `data_warehouse_como_fundamento` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 nombra el OBJETIVO que dispara el proyecto (querer mejorar pronostico, inventario o gestion de pedidos) y la condicion 1 del superviviente solo habla de manejar varios sistemas de informacion dispersos; el INCISO para condiciones no existe en el instrumento y por eso la perdida se no...* |
+| **15** | A | `dso_dpo_gestion_capital_trabajo` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 dice PESE A VENTAS SALUDABLES, que es lo que hace del sintoma un problema de ciclo y no de demanda, y la condicion 2 del superviviente solo dice problemas de liquidez; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **32** | B | `seis_medios_comunicacion_cliente` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 pide diversificar y personalizar la comunicacion EN CADA ETAPA DEL CICLO DE VIDA, y la condicion 1 del superviviente acota el disparador a la confirmacion de compra generica y automatizada, que es solo la bienvenida; el INCISO para condiciones no existe en el instrumento (pendiente d...* |
+| **35** | C | `diseno_de_sistemas_a_escala` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 acota el disparador a que el problema involucre VARIAS ORGANIZACIONES O ENTIDADES DEL GOBIERNO, y la condicion 1 del superviviente habla de un sistema grande con distintos tipos de usuarios en conflicto, que no lo dice; el INCISO para condiciones no existe en el instrumento (pendient...* |
+| **36** | C | `control_voluntario_del_pensamiento` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 dispara al ESTAR APRENDIENDO una habilidad nueva de pensamiento o creacion, y la condicion 1 del superviviente dispara al DEPENDER SOLO DE LA INSPIRACION ESPONTANEA, que es otro estado; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **39** | C | `observar_lo_ordinario` | **DE PARAMETRO DE PASO** | el inciso MENTIRIA contra la unica restriccion del paso que protege | *PERDIDA NOMBRADA, Y NO ES DE CONDICIONES SINO DE MOMENTO DE UN PASO, que es la especie del acto 45 de la vuelta 55 y se dice para no mezclarlas: el paso 2 del que muere manda PREGUNTARSE EL PORQUE detras de objetos y comportamientos triviales MIENTRAS se observa, y el paso 2 del superviviente manda SUSPENDER EL JUIC...* |
+| **41** | C | `diseno_fugitivo_runaway_design` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 2 incluye los SISTEMAS QUE APRENDEN Y SE RETROALIMENTAN junto a los datos y la IA, y la condicion 1 del superviviente enumera IA, datos personales y biotecnologia sin nombrarlos; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **43** | C | `entrenamiento_empleados_startup` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 2 dispara al detectar que los empleados nuevos NO COMPRENDEN EL CONTEXTO COMPLETO de su trabajo, y la condicion 2 del superviviente habla de alta rotacion o baja productividad, que es otro sintoma; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **suma** | | | **10 DE CONDICIONES, 1 DE PARAMETRO DE PASO** | | |
+
+> **UN MATIZ DE LA COLUMNA DE LA CAUSA, declarado en vez de callado**: el tallador escribe una
+> causa GENERICA para la especie de paso (*el inciso mentiria contra la unica restriccion del paso
+> que protege*), que es la del acto 45 de la vuelta 55. **La del acto 39 de esta vuelta es de la
+> misma familia pero no identica**: alli el inciso mentiria porque **contradiria el paso 2 del
+> superviviente**, que manda suspender el juicio, y no porque el paso hable de *la unica*
+> restriccion. **La razon exacta esta en la ultima columna, VERBATIM del plan sellado**, que es
+> donde se lee sin tener que creerle a la etiqueta.
+
+### LA UNICA COLISION PREVISTA DEL TRAMO, RESUELTA ANTES DE FUNDIR
+
+**Las colisiones esperadas se midieron sobre EL ARCHIVO ENTERO y por PAR RESUELTO ANTES de tocar un
+nodo** ([`../loop/SALIDA_V56_COLISIONES_ESPERADAS_TRAMO3.txt`](../loop/SALIDA_V56_COLISIONES_ESPERADAS_TRAMO3.txt)):
+**100 combinaciones simuladas y UNA SOLA que fabrica colision.**
+
+| acto | los dos puestos | que decide la relectura | consecuencia |
+|---:|---|---|---|
+| **15** | **203** `C` contra **813** `D` | **CONDICION DE TEXTO, y se resuelve.** El **203** es del FILO, asi que por el carril general NO se voltea por maquina: se relee en el mismo acto. **LA RELECTURA MUEVE EL 203 Y NO EL 813**, con tres razones medidas: su propia sustancia ya decia *niveles distintos, sano*; la FIGURA que lo hizo `C` (racimo de tres con `dso_dpo_gestion_capital_trabajo` de conjunto) **ya estaba medida del reves en el registro**, por el puesto **566** bajo el rotulo *hallazgo que corrige la lectura del puesto 203* y por la **seccion 14** del informe, que remidio el racimo a **CUATRO** miembros con `ciclo_de_conversion_de_efectivo` de **centro**; y la vara del banco `9.6.1` devuelve `D` en **los DOS hermanos** del racimo con la misma forma | **el 203 pasa de `C` a `D`** con correccion declarada y la razon vieja entera pegada por maquina, y **el acto SE FUNDE** |
+
+> **Y NO ES PREGUNTA DE POLITICA, medido contra la marca operativa que esta misma vuelta registro**
+> (acta de la vuelta 55, pregunta 1, adosada mas arriba en esta pagina): la razon del **203** **ni
+> REMITE la decision a una instancia nombrada ni SE ABSTIENE**. Es una **RESERVA que una vara
+> escrita resuelve**, o sea **MATIZ**, y el acto no queda bloqueado.
+
+> **LA AMPLIACION DE MOVER LOS DOS NO HIZO FALTA, Y SE COMPROBO EN VEZ DE SUPONERSE:** mover UN
+> solo veredicto cierra la colision, porque el 813 ya era `D`. **El censo esperado se RE-CORRIO
+> despues de la correccion** y baja de UNA colision a **CERO**
+> ([`../loop/SALIDA_V56_COLISIONES_ESPERADAS_TRAS_FILO.txt`](../loop/SALIDA_V56_COLISIONES_ESPERADAS_TRAS_FILO.txt)).
+
+### EL CIERRE DE LA SECCION, MEDIDO AL CERRAR
+
+| | al abrir la vuelta 56 | **al cerrarla** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 551 / 72 / 6 / 2759 | **551 / 72 / 5 / 2760** |
+| grafo: vivos / deprecados / enlaces | 3432 / 421 / 17168 | **3385 / 468 / 17290** |
+| retrato: `A` crudas / colapsos / pares distintos | 551 / 117 / 434 | **551 / 164 / 387** |
+| actos `CERRADOS` / `ABIERTOS` | 187 / 53 | **140 / 53** |
+| nodos en `CERRADOS` / `ABIERTOS` | 383 / 240 | **289 / 240** |
+| cola de costuras | 1482 | **1473** |
+| colisiones de clase vigentes | 0 | **0**, censo propio sobre el archivo entero |
+| auto-pares (los dos lados al mismo vivo) | 96 | **142** |
+| duplicadas historicas: grupos / nodos | 983 / 774 | **972 / 764** |
+| actos del tramo 3 fundidos / pendientes | 0 / 50 | **47 / 3, los tres DECLARADOS** |
+| las cuatro comprobaciones de [`08_VERIFICACION.md`](08_VERIFICACION.md) | | **TODAS OK** |
+| duplicadas tras resolver **NUEVAS** / auto-aristas **NUEVAS** | | **CERO** / **CERO** en los tres lotes |
+
+> **DE DONDE SALE CADA COLUMNA. LAS DOS SON CORRIDAS PROPIAS DE ESTA VUELTA**, la de apertura
+> **ANTES de la primera operacion** y la de cierre **DESPUES del ultimo movimiento**, y **ninguna
+> celda esta tecleada**: las extrae `python scripts/loop/vuelta56_registro_tramo.py` de las
+> salidas `_APERTURA` y `_CIERRE` hermanas que cada celda cita.
+
+> **EL MARCADOR SE MUEVE EN `C` Y EN `D`, Y NO EN `A` NI EN `B`:** la relectura del filo del acto
+> 15 corrigio el puesto **203** de `C` a `D`. **Las CUARENTA Y SIETE fusiones NO movieron el
+> marcador por si solas**: son de fusion pura y ninguna fabrico colision, asi que `P.16` no tuvo
+> nada que limpiar. **La `A` sigue en 551 y por eso las dos tablas por dominio hermanas tampoco se
+> mueven**, medido y no supuesto.
+
+> **EL RETRATO SE MUEVE CUARENTA Y SIETE, UNO POR ACTO, Y AQUI LA CUENTA SI ES EXACTA**, a
+> diferencia de la vuelta 55: esta vuelta no deshizo ninguna fusion previa, asi que **117 mas 47
+> son 164**, y **551 crudas menos 164 colapsos son 387**, que es la resta exacta.
+
+> **Y UNA CIFRA QUE NO CUADRA A LA PRIMERA Y SE EXPLICA EN VEZ DE DEJARSE PASAR:** los auto-pares
+> suben de **96** a **142**, o sea **46** y no 47. **Medido**: el censo cuenta **auto-pares
+> DISTINTOS**, y el del **acto 7** cae sobre uno que YA EXISTIA, el de `reglas_brainstorming`, que
+> hoy recoge **CUATRO** veredictos crudos distintos resueltos al mismo nodo. **Es el mismo acto 7
+> del ajeno bajo el resolutor**, y por eso la cuenta baja en uno.

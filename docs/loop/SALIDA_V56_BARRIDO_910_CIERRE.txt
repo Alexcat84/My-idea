@@ -1,0 +1,241 @@
+==============================================================================
+BARRIDO DEL BANCO 9.10, vuelta 50 (sucesor: --viejo AHORA BUSCA)
+marcador viejo buscado: A 551 B 72 C 6 D 2759
+retrato viejo buscado : 117, 434
+puestos corregidos    : 305
+==============================================================================
+
+--- FAMILIA 1: EL MARCADOR VIEJO QUE SE PIDIO (A 551, D 2759) ---
+  candidatos: 19
+  docs/BANCO_DE_TEXTOS.md:828
+      | **el pareto** | `analisis_pareto` | **2.546 `A`** (*Sobrevive analisis_pareto*) y **2.551 `A`** (*Sobrevive analisis_pareto*). **No pierde ninguno** | **NO ES VIABLE y MUERE ABSORBIDO** por `analisis_pareto_de_proveedo...
+  docs/FRANJA_VEREDICTOS.jsonl:551
+      {"puesto_franja": 551, "nodo_mundo": "criterios_diseno_producto", "nodo_nucleo": "producto_unico_superior", "clave": 0.7227, "clase": "D", "razon": "Los criterios para elegir entre disenos alternativos contra construir u...
+  docs/INTRA_DOMINIO_INFORME.md:15384
+      | 2.551 a 2.575 | 25 | 9 | 36,0 % |
+  docs/INTRA_DOMINIO_INFORME.md:15536
+      | el **breakthrough / DMAIC** | **POR ELEGIR**: breakthrough_desempeno_actual =A= DMAIC otra vez (2.759, via 2.618 y 2.548) |
+  docs/INTRA_DOMINIO_INFORME.md:15572
+      > **ROTULO FECHADO Y CADENA CERRADA (20 ago 2026, vuelta 52, TAREA 1.4.a; adjudicacion del acta de la vuelta 51, pregunta 4). ESTE APENDICE ES UN CHECKPOINT DEL CRIBADO, UNA FOTO FECHADA DEL BUCLE VUELTA 4 AL CORTE 2.900...
+  docs/INTRA_DOMINIO_INFORME.md:15634
+      | el **breakthrough / DMAIC** | **POR ELEGIR**: 2.887 secuencia_universal_para_el_breakthrough =A= six_sigma_dmaic, la identidad breakthrough=DMAIC de nuevo (via 2.618, 2.759) |
+  docs/INTRA_DOMINIO_INFORME.md:16339
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ ~~566 (16,7 %)~~ ~~563 (16,6 %)~~ **551** (16,3 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16342
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ ~~2.737 (80,8 %)~~ ~~2.743 (81,0 %)~~ ~~2.758~~ **2.759** (81,4 %) ...
+  docs/INTRA_DOMINIO_INFORME.md:16344
+      > **CORRECCION DECLARADA (20 ago 2026, vuelta 55, barrido `9.10` del cierre, corrido DESPUES del ultimo movimiento de la vuelta). SE MUEVEN `B` Y `D`, Y NO SE MUEVEN `A` NI `C`.** La vuelta 55 corrigio UN veredicto por l...
+  docs/INTRA_DOMINIO_INFORME.md:16563
+      > **QUINTA CORRECCION DECLARADA (20 ago 2026, vuelta 53, barrido `9.10` DEL CIERRE, corrido DESPUES del ultimo movimiento de la vuelta), Y ES LA PRIMERA QUE SE HACE EN EL MISMO ACTO QUE SU TABLA HERMANA.** La vuelta 53 f...
+  docs/plan/03_FUSIONES.md:1439
+      | marcador `A` / `B` / `C` / `D` | 563 / 75 / 7 / 2743 | **551 / 73 / 6 / 2758** |
+  docs/plan/03_FUSIONES.md:1441
+      | retrato: `A` crudas / colapsos / pares distintos | 563 / 60 / 503 | **551 / 72 / 479** |
+  docs/plan/03_FUSIONES.md:1662
+      | marcador `A` / `B` / `C` / `D` | 551 / 73 / 6 / 2758 | **551 / 73 / 6 / 2758**, sin mover |
+  docs/plan/03_FUSIONES.md:1664
+      | retrato: `A` crudas / colapsos / pares distintos | 551 / 72 / 479 | **551 / 93 / 458** |
+  docs/plan/03_FUSIONES.md:1923
+      | marcador `A` / `B` / `C` / `D` | 551 / 73 / 6 / 2758 | **551 / 72 / 6 / 2759** |
+  docs/plan/03_FUSIONES.md:1925
+      | retrato: `A` crudas / colapsos / pares distintos | 551 / 93 / 458 | **551 / 117 / 434** |
+  docs/plan/RECOMPUTO_3388.md:246
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ ~~**563**~~ **551** **[CORREGIDA ~~SIETE~~ ~~OCHO~~ ~~N...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ ~~**525**~~ ~~**522**~~ ~~**509**~~ ~~**503**~~ ~~**479**~~ ~~**458**~~ **434** **[CORR...
+  docs/plan/RECOMPUTO_3388.md:1079
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ ~~**563**~~ **551** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ ~~**16,9 %**~~ ~~**...
+
+--- FAMILIA LEGADO: EL MARCADOR DE LA VUELTA 14 (583 / 2.709) ---
+  candidatos: 25
+  docs/FRANJA_VEREDICTOS.jsonl:583
+      {"puesto_franja": 583, "nodo_mundo": "sistema_responsabilidad_gerencial_2", "nodo_nucleo": "curse_cinco_culpas", "clave": 0.7216, "clase": "C", "razon": "Asumir el sistema completo como tu responsabilidad contra facilita...
+  docs/INTRA_DOMINIO_INFORME.md:16339
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ ~~566 (16,7 %)~~ ~~563 (16,6 %)~~ **551** (16,3 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16342
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ ~~2.737 (80,8 %)~~ ~~2.743 (81,0 %)~~ ~~2.758~~ **2.759** (81,4 %) ...
+  docs/INTRA_DOMINIO_INFORME.md:16625
+      `risk_management` aporta cero. ~~Total de A en el archivo: 583.~~ **CORRECCION DECLARADA (15 ago
+  docs/plan/02_DESTEJIDOS.md:352
+      > publicado** (`A 583, B 89, C 7, D 2709` medido hoy al abrir esta vuelta) **y obligaria a
+  docs/plan/02_DESTEJIDOS.md:662
+      | A | 583 | 582 | **582** |
+  docs/plan/02_DESTEJIDOS.md:665
+      | D | 2.709 | 2.711 | **2.714** |
+  docs/plan/03_FUSIONES.md:734
+      `2709`, las cifras del marcador de la vuelta 14, y `--viejo` solo cambia la cabecera que imprime.
+  docs/plan/10_INVENTARIO.md:311
+      | **el nombre que esconde** | 3 ejemplares | TRES VECES el contador dejo fuera a un miembro real porque su NOMBRE no llevaba la palabra del tema, y las tres veces lo cazo el segundo instrumento. (1) el sexto de los cuadr...
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:240
+      | **583** | `decision_factory_mentality` contra `equipos_dedicados_de_proyecto` | **B** | *la mitad que DIAGNOSTICA repite y la mitad que TRATA no*, asi que no se puede dar por sano ni por repetido entero |
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:383
+      | **3** | **`decision_factory_mentality`** | la mesa unida | **no lleva ni *gate* ni *portafolio***: se llama *Haz menos proyectos, pero hazlos bien* | **el barrido de las A**, puestos 1499 y 583 |
+  docs/plan/INVENTARIO.jsonl:327
+      {"tipo": "figura", "nombre": "el nombre que esconde", "cobertura": "3 ejemplares", "forma": "modo de fallo del contador, no del archivo", "miembros": [], "estado": "ANOTADO como historia, no como recomendacion", "operaci...
+  docs/plan/OPERACIONES.jsonl:27
+      {"id_op": "OP-M-01", "fase": "06_MESAS", "tipo": "MESA ADJUDICADA: LAS DOS MITADES QUEDAN, CON FRONTERA ADOPTADA", "nodos": ["asignacion_recursos_en_gates", "decision_factory_mentality", "equipos_dedicados_de_proyecto", ...
+  docs/plan/RECOMPUTO_3388.md:31
+      > | A crudas en el archivo | **583** | ~~**582**~~ **581** al cierre de la vuelta 34 | **menos 2** |
+  docs/plan/RECOMPUTO_3388.md:80
+      > | A crudas en el archivo | **583** | **582** | **582** | **menos 1** |
+  docs/plan/RECOMPUTO_3388.md:246
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ ~~**563**~~ **551** **[CORREGIDA ~~SIETE~~ ~~OCHO~~ ~~N...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ ~~**525**~~ ~~**522**~~ ~~**509**~~ ~~**503**~~ ~~**479**~~ ~~**458**~~ **434** **[CORR...
+  docs/plan/RECOMPUTO_3388.md:528
+      | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ ~~509~~ ~~503~~ ~~479~~ ~~458~~ **434**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~52...
+  docs/plan/RECOMPUTO_3388.md:1079
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ ~~**563**~~ **551** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ ~~**16,9 %**~~ ~~**...
+  docs/plan/RECOMPUTO_3388.md:1083
+      ~~**Los diez dominios y el total (3.388 pares, 583 A) coinciden con el marcador recomputado de la vuelta
+  docs/plan/RECOMPUTO_3388.md:1084
+      14** (`A 583, B 89, C 7, D 2.709`), verificado de nuevo aqui por suma de columna.~~ **CORRECCION
+  docs/plan/RECOMPUTO_3388.md:1792
+      | **A / B / C / D** | **583 / 89 / 7 / 2.709** ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ ~~**576 / 83 / 8 / 2.721**~~ ~~**575 / 83 / 8 / 2.722**~~ **[CORREGIDA VARIAS VECES, el 15 y el 18 ago 2026, ver la...
+  docs/plan/RECOMPUTO_3388.md:1799
+      > **ROTULO FECHADO Y CADENA CERRADA (20 ago 2026, vuelta 52, TAREA 1.4.b; adjudicacion del acta de la vuelta 51, pregunta 4). ESTA TABLA ES UNA FOTO FECHADA, NO UNA TABLA VIGENTE, y su encabezado decia *medido hoy*.** **...
+  docs/plan/RECOMPUTO_3388.md:1841
+      | **A / B / C / D** | **583 / 89 / 7 / 2.709** (**17,2 / 2,6 / 0,2 / 80,0** por ciento) ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ ~~**576 / 83 / 8 / 2.721**~~ ~~**575 / 83 / 8 / 2.722** (17,0 / 2,4 / 0,2 ...
+  docs/plan/RECOMPUTO_3388.md:1851
+      > **ROTULO FECHADO Y CADENA CERRADA (20 ago 2026, vuelta 52, TAREA 1.4.b; adjudicacion del acta de la vuelta 51, pregunta 4). ESTA TABLA ES UNA FOTO FECHADA, NO UNA TABLA VIGENTE, y su encabezado decia *medido hoy*.** **...
+
+--- FAMILIA RETRATO: LAS CIFRAS VIEJAS DEL RETRATO DE LAS A (117, 434) ---
+  candidatos: 43
+  docs/BANCO_DE_TEXTOS.md:959
+      | **5** | **la competencia entre inversores** | **~~4~~ 5** | **~~6~~ 10** | **7** | **7** | **~~PURO~~ SUB-PURO, 7 de 10 al puesto 2.117.** Ver la correccion declarada debajo de la tabla |
+  docs/COSTURAS_INTERNAS_RESUMEN.md:198
+      | 117 | core | `proteccion_organizacion_matriz_experimentos` | 5 | 44.4 | 2 |
+  docs/GRADIENTE_VEREDICTOS.md:1819
+      | **117** | FALSO PAR FUNCIONAL | `franquicias/manejo_objeciones_venta_franquicia` contra `nucleo/diseno_embudo_ventas_cliente` **(t30.8, s0.7821)**. **SEXTA aparicion** del nodo de objeciones; la ficha de frontera suma ...
+  docs/INTRA_DOMINIO_INFORME.md:2680
+      | **434** | `business_intelligence_niveles_datos` contra `jerarquia_datos_scor` | **sumar datos externos** (tamano de mercado, indicadores economicos, comparaciones sectoriales) y **el control de accesos** por funcion; d...
+  docs/INTRA_DOMINIO_INFORME.md:11099
+      | **1401-1517** (el tramo) | 117 | **10** | **8,5%** | **36** (30,8%) | **0** |
+  docs/INTRA_DOMINIO_INFORME.md:11680
+      | global | **A 374, B 89, C 7, D 1.434** |
+  docs/INTRA_DOMINIO_INFORME.md:12028
+      | **GLOBAL** | 1-2117 | **2.117** | **400** | **18,9%** | abierto |
+  docs/INTRA_DOMINIO_INFORME.md:12509
+      | **TOTAL** | **2.117** | **2.117** |
+  docs/INTRA_DOMINIO_INFORME.md:12531
+      | clase | corte 2.117 | **corte 2.219** | delta |
+  docs/INTRA_DOMINIO_INFORME.md:12537
+      | **TOTAL** | **2.117** | **2.219** | +102 |
+  docs/LECTURA_CONDICIONES_Y_DEPRECADOS.md:23
+      | `planRedactor.ts:117` y `:137` | qué nodos se cosechan para el plan |
+  docs/plan/00_INDICE.md:576
+      | **corte del archivo** | **2.117 de 3.388** | **3.388 de 3.388**, el cribado cerrado |
+  docs/plan/02_DESTEJIDOS.md:3178
+      | **117** | `engine/sessions/*.json` | **ignorados por `.gitignore` linea 8**, comprobado hoy con `git check-ignore -v`: **ninguno esta en el repositorio**. Y los 117 nombran **al SUPERVIVIENTE**, que sigue vivo: **no ha...
+  docs/plan/02_DESTEJIDOS.md:3484
+      | **2** | *recomputo del cierre transitivo* | **CORRIDO HOY** sobre las **575 A vigentes**: **los nueve puestos siguen de DOS y CERO actos crecieron**. La adjudicacion del 11 ago 2026 los midio al corte del puesto 2.117;...
+  docs/plan/03_FUSIONES.md:1925
+      | retrato: `A` crudas / colapsos / pares distintos | 551 / 93 / 458 | **551 / 117 / 434** |
+  docs/plan/04_ENLACES.md:345
+      | D en el archivo al corte 2.117 | 1.621 |
+  docs/plan/05_SANEO.md:67
+      | `nafta_free_trade_agreements` | los **nombres de los formularios** (CF 434, Form B-232), sin los cuales *completar el certificado* no dice que papel llenar |
+  docs/plan/08_VERIFICACION.md:749
+      | **fecha de corte** | **12 ago 2026, archivo al puesto 2.117** |
+  docs/plan/10_INVENTARIO.md:44
+      > | leerlo como **el retrato del catalogo al puesto 2.117**, que es lo que fue y sigue siendo cierto de aquel corte | leer ninguna de sus cifras **como el estado de hoy** |
+  docs/plan/10_INVENTARIO.md:73
+      | **acto** | ~~**221**~~ **221 al corte 2.117. Ver el AVISO: hoy el archivo fuente tiene 556 filas de tipo `acto`, 221 superadas mas 335 vigentes** |
+  docs/plan/10_INVENTARIO.md:77
+      | **TOTAL** | ~~**336**~~ **336 al corte 2.117. Ver el AVISO: hoy el archivo fuente tiene 671 filas** |
+  docs/plan/10_INVENTARIO.md:125
+      | | ~~corte 2.117~~ | **corte 3.388, vigente** |
+  docs/plan/10_INVENTARIO.md:134
+      | miembros | ~~actos al 2.117~~ | **actos al 3.388, vigente** |
+  docs/plan/10_INVENTARIO.md:400
+      | **cuando caduca lo que lee** | el campo `fecha_corte`, **fila por fila y no en bloque**. ~~**todo el inventario es del 11 ago 2026**~~ **YA NO ES CIERTO del archivo al que esta misma tabla manda**: `INVENTARIO.jsonl` t...
+  docs/plan/INVENTARIO.jsonl:169
+      {"tipo": "acto", "nombre": "atacar_mercados_establecidos_con_problema", "miembros": ["atacar_mercados_establecidos_con_problema", "encontrar_grandes_problemas_mercados_emergentes", "resolver_problemas_grandes"], "forma":...
+  docs/plan/OPERACIONES.jsonl:10
+      {"id_op": "OP-S-01", "fase": "05_SANEO", "tipo": "FUSION", "nodos": ["nafta_free_trade_agreements", "certificado_de_origen_tratados_libre_comercio"], "superviviente": "certificado_de_origen_tratados_libre_comercio", "pre...
+  docs/plan/OPERACIONES.jsonl:24
+      {"id_op": "OP-U-01", "fase": "03_FUSIONES", "tipo": "FUSION", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [], "orden": 1, "depende_de": ["OP-C-01", "OP-C-02", "OP-C-03", "OP-C-0...
+  docs/plan/OPERACIONES.jsonl:33
+      {"id_op": "OP-A-02", "fase": "07_ADUANA", "tipo": "MESA", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [], "orden": 2, "depende_de": [], "bloquea_a": [], "verificacion": ["ningun...
+  docs/plan/OPERACIONES.jsonl:35
+      {"id_op": "OP-U-02", "fase": "03_FUSIONES", "tipo": "FUSION", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [], "orden": 2, "depende_de": ["OP-U-01"], "bloquea_a": [], "verificaci...
+  docs/plan/OPERACIONES.jsonl:71
+      {"id_op": "OP-D-09", "fase": "02_DESTEJIDOS", "tipo": "DESTEJIDO", "nodos": ["planificacion_recoleccion_datos"], "superviviente": null, "preservar": ["EL METODO COMPLETO, pasos 5 a 16, que es el cuerpo del nodo y no se t...
+  docs/plan/RECOMPUTO_3388.md:247
+      | de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | ~~**0**~~ ~~**1**~~ ~~**41**~~ ~~**48**~~ ~~**49**~~ ~~**57**~~ ~~**60**~~ ~~**72**~~ ~~**93**~~ **117** **[CORREGIDA ~~CUATRO~~ ~~CINCO~...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ ~~**525**~~ ~~**522**~~ ~~**509**~~ ~~**503**~~ ~~**479**~~ ~~**458**~~ **434** **[CORR...
+  docs/plan/RECOMPUTO_3388.md:435
+      | | corte 2.117 (`OP-U-01`/`OP-U-02`) | corte 3.388 (esta vuelta) | diferencia |
+  docs/plan/RECOMPUTO_3388.md:468
+      | **TODO ANTERIOR AL 2.117** (todas sus aristas A tienen puesto <= 2.117) | 221 | 42 | 179 |
+  docs/plan/RECOMPUTO_3388.md:469
+      | **MIXTO** (al menos una arista <= 2.117 y al menos una > 2.117) | 1 | 1 | 0 |
+  docs/plan/RECOMPUTO_3388.md:470
+      | **TODO POSTERIOR AL 2.117** (todas sus aristas A tienen puesto > 2.117) | 113 | 12 | 101 |
+  docs/plan/RECOMPUTO_3388.md:504
+      | los 48 actos abiertos del 2.117 | cuantos | verificado |
+  docs/plan/RECOMPUTO_3388.md:528
+      | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ ~~509~~ ~~503~~ ~~479~~ ~~458~~ **434**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~52...
+  docs/plan/RECOMPUTO_3388.md:608
+      | | corte 2.117 | corte 3.388 |
+  docs/plan/RECOMPUTO_3388.md:631
+      | operacion | nomina | 2.117: leidos (A) / actos sobre nodos | 3.388: leidos (A) / actos sobre nodos | cambia |
+  docs/plan/RECOMPUTO_3388.md:680
+      | dominio | pares leidos al 2.117 | pares leidos al 3.388 |
+  docs/plan/RECOMPUTO_3388.md:994
+      | paso | corte 2.117 reconstruido |
+  docs/plan/RECOMPUTO_3388.md:1227
+      | la nota vieja de `OP-I-01` | 323 (221 actos, 53 familias, 14 defectos, 13 racimos, 12 figuras, 10 dominios) | 2026-08-11, puesto 2.117 |
+
+--- FAMILIA 2: LOS PUESTOS CORREGIDOS ---
+  PUESTO 305: 21 candidatos
+    docs/FICHA_SUBFUSION_GRADIENTE.md:5371
+        `framework_tres_rs_sucesion` (puesto **305**) e
+    docs/FICHA_SUBFUSION_GRADIENTE.md:5844
+        Encontrado en el **lote 21, puesto 305**. **Un miembro medido.**
+    docs/FRANJA_INFORME.md:742
+        - **305** | quality/establecimiento_metas contra metas_objetivos_smart_innovacion
+    docs/FRANJA_PARES.jsonl:305
+        {"puesto_franja": 305, "mundo": "quality", "nodo_mundo": "establecimiento_metas", "titulo_mundo": "Establecimiento de Metas (Paso 10)", "nodo_nucleo": "metas_objetivos_smart_innovacion", "titulo_nucleo": "Cómo definir me...
+    docs/FRANJA_VEREDICTOS.jsonl:305
+        {"puesto_franja": 305, "nodo_mundo": "establecimiento_metas", "nodo_nucleo": "metas_objetivos_smart_innovacion", "clave": 0.7314, "clase": "C", "razon": "Fijar metas de calidad a 30, 60 y 90 dias contra las metas SMART d...
+    docs/FRANJA_VEREDICTOS.jsonl:562
+        {"puesto_franja": 562, "nodo_mundo": "medicion_calidad", "nodo_nucleo": "afinar_motor_crecimiento", "clave": 0.7223, "clase": "C", "razon": "Medir la calidad por area con linea base y graficos visibles contra afinar el m...
+    docs/FRANJA_VEREDICTOS.jsonl:887
+        {"puesto_franja": 887, "nodo_mundo": "fijacion_de_metas", "nodo_nucleo": "diseno_metricas_lideres_rezagados", "clave": 0.713, "clase": "C", "razon": "Fijar metas de mejora por grupo con reconocimiento publico contra comb...
+    docs/GRADIENTE_VEREDICTOS.md:2695
+        | **305** | OK, **colateral de tipo nuevo: LA AUDIENCIA INVERTIDA** | ver abajo |
+    docs/INTRA_DOMINIO_INFORME.md:344
+        | SPIN | 3 | ~~305~~, 401 **[CORREGIDA el 19 ago 2026 (vuelta 49): el `305` paso de `A` a `D`. La colision la FABRICO la propia fusion de la parte A del acto 1 de `OP-U-01`, que depreco `modelo_spin` con alias a `modelo_...
+    docs/INTRA_DOMINIO_INFORME.md:1643
+        | **305** | `metodologia_spin_selling` contra `modelo_spin` | **diagnostica-pequena-o-grande** antes de nada; **estudios-de-incremento**, la cifra de mas del veinte por ciento; **deja-abiertas-vs-cerradas**, que esa dist...
+    docs/INTRA_DOMINIO_INFORME.md:1696
+        | clases | **A** (248), ~~**A** (305)~~ **D** (305), **A** (401), **D** (625), **D** (764) **[CORREGIDA el 19 ago 2026 (vuelta 49): el `305` paso de `A` a `D`. La colision la FABRICO la propia fusion de la parte A del ac...
+    docs/INTRA_DOMINIO_INFORME.md:8184
+        | saldo | ~~**4 A** (248, 305, 401, 856) y **2 D** (625, 764)~~ **3 A** (248, 401, 856) y **3 D** (305, 625, 764) **[CORREGIDA el 19 ago 2026 (vuelta 49): el `305` paso de `A` a `D`. La colision la FABRICO la propia fusi...
+    docs/INTRA_DOMINIO_INFORME.md:16350
+        > **despues, en su propia TAREA 2, el puesto 305 volteo de `A` a `D`** por la limpieza `P.16`
+    docs/INTRA_DOMINIO_PARES.jsonl:305
+        {"dominio": "core", "nodo_a": "metodologia_spin_selling", "titulo_a": "Metodología SPIN Selling", "nodo_b": "modelo_spin", "titulo_b": "Las preguntas que abren una venta grande (método SPIN)", "sim_titulo": 35.9, "sim_se...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:305
+        {"puesto_intra": 305, "dominio": "core", "nodo_a": "metodologia_spin_selling", "nodo_b": "modelo_spin", "clave": 0.8665, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 19 ago 2026 (vuelta 49), Y ...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:401
+        {"puesto_intra": 401, "dominio": "core", "nodo_a": "modelo_spin", "nodo_b": "modelo_spin_preguntas", "clave": 0.8501, "banda_078_080": false, "clase": "A", "razon": "REPITE con modelo_spin_preguntas. Los dos mandan la mi...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:1150
+        {"puesto_intra": 1150, "dominio": "core", "nodo_a": "modelo_spin", "nodo_b": "obtencion_compromiso", "clave": null, "banda_078_080": true, "clase": "D", "razon": "La secuencia de preguntas contra la doctrina del cierre, ...
+    docs/plan/03_FUSIONES.md:641
+        **Al deprecar `modelo_spin` con alias a `modelo_spin_preguntas`, el puesto 305**
+    docs/plan/03_FUSIONES.md:704
+        del puesto **305** por `P.16` y las tres fusiones de su TAREA 2) **y no volvio a barrer al
+    docs/plan/RECOMPUTO_3388.md:246
+        | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ ~~**563**~~ **551** **[CORREGIDA ~~SIETE~~ ~~OCHO~~ ~~N...
+    docs/plan/RECOMPUTO_3388.md:528
+        | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ ~~509~~ ~~503~~ ~~479~~ ~~458~~ **434**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~52...
+
+==============================================================================
+CANDIDATOS TOTALES: 108. Ninguno se oculta y ninguno se corrige aqui:
+este instrumento LISTA, y la adjudicacion de cada sitio es de lectura.
+LIMITE DECLARADO: es una busqueda lexica. Una tabla puede citar el
+marcador con otras palabras y este barrido no la veria; y una cifra con
+su fecha de corte declarada aparece aqui sin estar envejecida.

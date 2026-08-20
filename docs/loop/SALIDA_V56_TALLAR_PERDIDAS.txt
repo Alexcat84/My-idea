@@ -1,0 +1,28 @@
+==============================================================================
+LAS PERDIDAS NOMBRADAS DE LA VUELTA 56, TALLADAS DE LOS PLANES SELLADOS
+==============================================================================
+
+  planes leidos       : PLAN_V56_OPU01_LOTE_A.json, PLAN_V56_OPU01_LOTE_B.json, PLAN_V56_OPU01_LOTE_C.json
+  perdidas encontradas: 11
+  por especie         : {'DE CONDICIONES': 10, 'DE PARAMETRO DE PASO': 1}
+
+--- TABLA: LAS PERDIDAS NOMBRADAS DE LA VUELTA 56, CON SU ESPECIE ---
+
+| acto | lote | el nodo que muere | **ESPECIE** | por que se perdio | la frase del plan sellado que lo dice |
+|---:|:---:|---|---|---|---|
+| **5** | A | `presentacion_problema_tres_columnas` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 pide validar el problema Y la reaccion inicial a la solucion EN UNA MISMA SESION DE ENTREVISTA, y la condicion 1 del superviviente solo habla de validar si el problema es real y urgente antes de mostrar el producto; el INCISO para condiciones no existe en el instrumento (pendiente de...* |
+| **6** | A | `visualizacion_progreso_onboarding` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 anade que el proceso PUEDE GENERAR ANSIEDAD EN EL CLIENTE y la condicion 1 del superviviente habla de proceso tecnico, largo o con usuarios sin experiencia previa, que no es lo mismo; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **8** | A | `tecnica_cinco_porques` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 incluye UN RESULTADO DE NEGOCIO INESPERADO junto al fallo tecnico o de proceso, y la condicion 1 del superviviente solo habla de error o falla tecnica u operativa repetible; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **14** | A | `data_warehouse_como_fundamento` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 nombra el OBJETIVO que dispara el proyecto (querer mejorar pronostico, inventario o gestion de pedidos) y la condicion 1 del superviviente solo habla de manejar varios sistemas de informacion dispersos; el INCISO para condiciones no existe en el instrumento y por eso la perdida se no...* |
+| **15** | A | `dso_dpo_gestion_capital_trabajo` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 dice PESE A VENTAS SALUDABLES, que es lo que hace del sintoma un problema de ciclo y no de demanda, y la condicion 2 del superviviente solo dice problemas de liquidez; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **32** | B | `seis_medios_comunicacion_cliente` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 pide diversificar y personalizar la comunicacion EN CADA ETAPA DEL CICLO DE VIDA, y la condicion 1 del superviviente acota el disparador a la confirmacion de compra generica y automatizada, que es solo la bienvenida; el INCISO para condiciones no existe en el instrumento (pendiente d...* |
+| **35** | C | `diseno_de_sistemas_a_escala` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 acota el disparador a que el problema involucre VARIAS ORGANIZACIONES O ENTIDADES DEL GOBIERNO, y la condicion 1 del superviviente habla de un sistema grande con distintos tipos de usuarios en conflicto, que no lo dice; el INCISO para condiciones no existe en el instrumento (pendient...* |
+| **36** | C | `control_voluntario_del_pensamiento` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 dispara al ESTAR APRENDIENDO una habilidad nueva de pensamiento o creacion, y la condicion 1 del superviviente dispara al DEPENDER SOLO DE LA INSPIRACION ESPONTANEA, que es otro estado; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **39** | C | `observar_lo_ordinario` | **DE PARAMETRO DE PASO** | el inciso MENTIRIA contra la unica restriccion del paso que protege | *PERDIDA NOMBRADA, Y NO ES DE CONDICIONES SINO DE MOMENTO DE UN PASO, que es la especie del acto 45 de la vuelta 55 y se dice para no mezclarlas: el paso 2 del que muere manda PREGUNTARSE EL PORQUE detras de objetos y comportamientos triviales MIENTRAS se observa, y el paso 2 del superviviente manda SUSPENDER EL JUIC...* |
+| **41** | C | `diseno_fugitivo_runaway_design` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 2 incluye los SISTEMAS QUE APRENDEN Y SE RETROALIMENTAN junto a los datos y la IA, y la condicion 1 del superviviente enumera IA, datos personales y biotecnologia sin nombrarlos; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **43** | C | `entrenamiento_empleados_startup` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 2 dispara al detectar que los empleados nuevos NO COMPRENDEN EL CONTEXTO COMPLETO de su trabajo, y la condicion 2 del superviviente habla de alta rotacion o baja productividad, que es otro sintoma; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **suma** | | | **10 DE CONDICIONES, 1 DE PARAMETRO DE PASO** | | |
+
+  actos con perdida: 11 | de condiciones: 10 | de parametro de paso: 1
+
+FIN

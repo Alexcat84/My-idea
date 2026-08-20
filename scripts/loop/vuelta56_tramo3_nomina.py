@@ -144,10 +144,78 @@ def mapa_alias():
     return alias
 
 
+def medir_fijado(a, hoy, alias, resolver):
+    """MODO CONTINUACION, anadido ANTES de que ninguna pagina cite las cifras de
+    este instrumento y declarado aqui porque es lo unico que no es copia del
+    abridor: cuando el tramo YA ESTA FIJADO en su fichero, no se vuelve a abrir.
+
+    EL MOTIVO ES EL MISMO HALLAZGO QUE LA VUELTA 55 REGISTRO: un abridor compara
+    los 50 CERRADOS siguientes de HOY contra una nomina vieja, y en cuanto se
+    funde un acto del tramo, ese acto sale de la nomina, la lectura encoge y la
+    otra rellena con actos del tramo SIGUIENTE. El rojo diria el tramo ya se
+    toco, no el tramo no esta determinado. Con el tramo fijado en fichero, la
+    identidad POR MIEMBROS ya no depende de ninguna lectura: cada acto se busca
+    hoy por sus miembros y, si no aparece, se comprueba contra el grafo que esta
+    FUNDIDO LIMPIO. La aritmetica es COPIA de la del sucesor de la vuelta 55."""
+    fijado = cargar(a.fijado)
+    print("=" * 78)
+    print("EL TRAMO %d DE OP-U-01, RE-MEDIDO SOBRE SU NOMINA FIJADA" % TRAMO)
+    print("aritmetica copiada del sucesor de la vuelta 55; identidad POR MIEMBROS")
+    print("=" * 78)
+    print()
+    print("  nomina de hoy   : %s (%d actos CERRADOS)" % (a.nomina, len(hoy)))
+    print("  tramo fijado en : %s (%d actos)" % (a.fijado, len(fijado)))
+    print()
+
+    vivos, fundidos, rojo = [], [], []
+    for r in fijado:
+        n = r["orden_tramo%d" % TRAMO]
+        mi = set(r["miembros"])
+        aqui = [(i, x) for i, x in enumerate(hoy, 1) if set(x["miembros"]) & mi]
+        if aqui:
+            vivos.append((n, aqui[0][0], sorted(mi)))
+            continue
+        res = sorted({resolver(m) for m in sorted(mi)})
+        muertos = [m for m in sorted(mi) if (leer_nodo(m) or {}).get("deprecado") is True]
+        vivo = [m for m in sorted(mi) if m not in muertos]
+        izado = False
+        if len(vivo) == 1:
+            izado = all(m in ((leer_nodo(vivo[0]) or {}).get("ids_alias") or []) for m in muertos)
+        ok = (len(res) == 1 and len(muertos) == len(mi) - 1 and len(vivo) == 1 and izado)
+        fundidos.append((n, vivo[0] if vivo else None, muertos, len(res) == 1, izado))
+        if not ok:
+            rojo.append((n, "no esta fundido limpio: resuelven a %s, muertos %s" % (res, muertos)))
+
+    print("  VIVOS hoy   : %d" % len(vivos))
+    print("  FUNDIDOS    : %d" % len(fundidos))
+    print("  suma        : %d de %d" % (len(vivos) + len(fundidos), len(fijado)))
+    print()
+    print("--- LOS FUNDIDOS, COMPROBADOS CONTRA EL GRAFO UNO A UNO ---")
+    for n, sup, abso, uno, izado in fundidos:
+        print("  acto %-3d superviviente %-46s absorbido %-46s resuelven a UNO: %-3s alias izado: %s"
+              % (n, sup, ", ".join(abso), "SI" if uno else "NO", "SI" if izado else "NO"))
+    print("  COMPROBACION: %s" % ("ROJO" if rojo else
+                                  "VERDE, los %d estan fundidos limpios" % len(fundidos)))
+    print()
+    print("--- LOS QUE SIGUEN VIVOS, CON SU PUESTO DE HOY ---")
+    for n, puesto, mi in vivos:
+        print("  acto %-3d puesto de hoy %-4d  %s" % (n, puesto, ", ".join(mi)))
+    print()
+    if rojo:
+        for n, m in rojo:
+            print("     acto %d: %s" % (n, m))
+        print("  ROJO DE VERDAD. PARADA.")
+        return 1
+    print("FIN")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--nomina", required=True)
     ap.add_argument("--salida", default=None)
+    ap.add_argument("--fijado", default=None,
+                    help="jsonl del tramo YA FIJADO: mide su estado de hoy en vez de re-abrirlo")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 
@@ -155,6 +223,9 @@ def main():
     v48 = [r for r in cargar(V48) if r["estado"] == "CERRADO"]
     alias = mapa_alias()
     resolver = lambda x: alias.get(x, x)
+
+    if a.fijado:
+        return medir_fijado(a, hoy, alias, resolver)
 
     print("=" * 78)
     print("EL ABRIDOR DEL TRAMO %d DE OP-U-01 (vuelta 56)" % TRAMO)
