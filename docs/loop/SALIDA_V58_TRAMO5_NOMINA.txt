@@ -1,0 +1,135 @@
+==============================================================================
+EL ABRIDOR DEL TRAMO 5 DE OP-U-01 (vuelta 58)
+sucesor declarado del abridor del tramo 4: la LECTURA B no es un bloque
+fijo de la 48, sino la nomina de la 48 saltando los tramos FIJADOS
+==============================================================================
+
+  nomina de hoy   : docs/loop/RECOMPUTO_V58_TRAMO5.jsonl (97 actos CERRADOS)
+  nomina de la 48 : docs\loop\RECOMPUTO_V48_COMPONENTES.jsonl (270 actos CERRADOS)
+
+--- LOS TRAMOS YA ABIERTOS, IDENTIFICADOS POR SUS MIEMBROS ---
+  tramo 1: 50 actos, 139 miembros, 11 vivos hoy en los puestos [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+           fuente: el bloque 1 a 50 de la nomina de la 48 (no tiene fichero propio)
+  tramo 2: 50 actos, 100 miembros, 5 vivos hoy en los puestos [12, 13, 14, 15, 16]
+           fuente: docs\loop\TRAMO2_V54.jsonl
+  tramo 3: 50 actos, 100 miembros, 3 vivos hoy en los puestos [17, 18, 19]
+           fuente: docs\loop\TRAMO3_V56.jsonl
+  tramo 4: 50 actos, 100 miembros, 7 vivos hoy en los puestos [20, 21, 22, 23, 24, 25, 26]
+           fuente: docs\loop\TRAMO4_V57.jsonl
+
+--- EL TRAMO 2 CONTRA SU BLOQUE DE LA 48 (aquella apertura SI calzaba) ---
+   bloque 51 a 100 de la 48: 50 actos | fichero fijado: 50 actos
+   calzan en conjunto y en orden: SI
+
+--- EL TRAMO 3 CONTRA SU BLOQUE DE LA 48 (la vuelta 56 midio que NO calza) ---
+   en el fichero y no en el bloque: 1  ['construir_sobre_ideas_ajenas, reglas_brainstorming']
+   en el bloque y no en el fichero: 1  ['crecimiento_ingresos_verdes, generacion_ingresos_verdes']
+   ES LO QUE LA VUELTA 56 DEJO ESCRITO, y por eso la LECTURA B de este tramo
+   se arma saltando los tramos FIJADOS en vez de tomar un bloque contiguo.
+
+--- GUARDA DEL PREFIJO (el numero se MIDE, no se teclea ni se hereda) ---
+  actos vivos de los tramos 1, 2, 3 y 4: 26
+  puestos que ocupan hoy             : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+  ocupan los puestos 1 a 26 sin huecos: SI
+
+--- LECTURA A: los 50 CERRADOS siguientes en el orden impreso de HOY ---
+  actos CERRADOS fuera de los tramos 1, 2, 3 y 4: 71
+  puestos de hoy del tramo 5: del 27 al 76
+
+--- LECTURA B: la nomina de la 48, EN SU ORDEN, saltando los tramos fijados ---
+  CERRADOS de la 48 fuera de los tramos 1, 2, 3 y 4: 71
+  puestos de la 48 del tramo 5: del 200 al 249 (no tienen por que ser contiguos)
+
+  VIVOS hoy   : 50
+  FUNDIDOS    : 0
+  suma        : 50 de 50
+
+--- LAS DOS LECTURAS, COMPARADAS EN CONJUNTO Y EN ORDEN ---
+  LECTURA A (orden de HOY) y LECTURA B (orden de la 48): CALZAN, mismo conjunto y mismo orden
+
+--- GUARDA DE LOS CUATRO AJENOS (03_FUSIONES.md, 11 ago 2026) ---
+   CAMINO 1, EL LITERAL, que es el que corrian los abridores de los tramos 1 y 2:
+     gates_go_kill_decision_points          en el TRAMO 5: NO                     en el lote CERRADO entero: NO
+     customer_discovery                     en el TRAMO 5: NO                     en el lote CERRADO entero: NO
+     ab_testing_optimizacion                en el TRAMO 5: NO                     en el lote CERRADO entero: NO
+     brainstorming_divergente               en el TRAMO 5: NO                     en el lote CERRADO entero: NO
+   CAMINO 1: VERDE, ninguno de los cuatro entra
+
+   CAMINO 2, POR EL RESOLUTOR (regla 9 del EJECUTOR, P.1): un ajeno deprecado
+   vive hoy dentro del ids_alias de su superviviente, y el camino literal no lo ve.
+     gates_go_kill_decision_points          deprecado: None   resuelve a gates_go_kill_decision_points    en el TRAMO 5: NO
+     customer_discovery                     deprecado: None   resuelve a customer_discovery               en el TRAMO 5: NO
+     ab_testing_optimizacion                deprecado: None   resuelve a ab_testing_optimizacion          en el TRAMO 5: NO
+     brainstorming_divergente               deprecado: True   resuelve a reglas_brainstorming             en el TRAMO 5: NO
+   CAMINO 2: VERDE, ningun ajeno entra tampoco bajo el resolutor.
+
+--- GUARDA DE SOLAPE CON LOS TRAMOS 1, 2 Y 3 ---
+   actos del tramo 5 que tocan un miembro de un tramo anterior: 0
+   GUARDA: VERDE, ningun solape
+
+--- EL TRAMO 5, EN EL ORDEN IMPRESO ---
+
+  acto hoy   en 48  tamano  clases internas      miembros
+  1    27    200    2       {'A': 1}             programa_de_mejora_de_calidad, programa_mejora_calidad_14_pasos
+  2    28    201    2       {'A': 1}             mantener_las_ganancias, sostener_las_ganancias
+  3    29    202    2       {'A': 1}             innovacion_tipo_ii, tipos_innovacion_i_ii
+  4    30    203    2       {'A': 1}             funcion_perdida_limites_especificacion, funcion_perdida_taguchi
+  5    31    204    2       {'A': 1}             enfermedades_mortales_gestion, las_siete_enfermedades_mortales
+  6    32    205    2       {'A': 1}             eliminacion_pago_destajo, eliminar_trabajo_a_destajo
+  7    33    206    2       {'A': 1}             adaptaciones_sectoriales_iso, estandares_especificos_industria
+  8    34    207    2       {'A': 1}             estilo_gerencial_ballet_vs_hockey, estilo_gerencial_hockey_vs_ballet
+  9    35    208    2       {'A': 1}             roi_breakthrough, roi_proyectos_calidad
+  10   36    209    2       {'A': 1}             pensamiento_sistemico_rol_triple, teoria_triple_rol_sistemas_abiertos
+  11   37    210    2       {'A': 1}             descubrir_necesidades_cliente, descubrir_necesidades_del_cliente
+  12   38    211    2       {'A': 1}             qfd_matriz, spreadsheet_diseno_para_la_calidad
+  13   39    212    2       {'A': 1}             premio_shingo, shingo_prize
+  14   40    213    2       {'A': 1}             reinicio_programa_calidad, repeticion_programa
+  15   41    214    2       {'A': 1}             eliminar_slogans_metas, eliminar_slogans_y_exhortaciones
+  16   42    215    2       {'A': 1}             rol_black_belt, rol_black_belt_six_sigma
+  17   43    216    2       {'A': 1}             mapeo_flujo_valor, value_stream_mapping
+  18   44    217    2       {'A': 1}             cero_defectos, filosofia_zero_defectos
+  19   45    218    2       {'A': 1}             equipo_mejora_calidad, equipo_mejora_calidad_2
+  20   46    219    2       {'A': 1}             rol_facilitador_black_belt, rol_facilitador_equipos_mejora
+  21   47    220    2       {'A': 1}             indice_cpk, interpretacion_cpk
+  22   48    221    2       {'A': 1}             barreras_orgullo_trabajo, remover_barreras_orgullo_trabajo
+  23   49    222    2       {'A': 1}             histograma, histogramas_distribucion_frecuencias
+  24   50    223    2       {'A': 1}             criticas_muestreo_aceptacion, eliminacion_planes_muestreo_estandar
+  25   51    224    2       {'A': 1}             recoleccion_validacion_datos_benchmarking, validacion_datos_benchmarking
+  26   52    225    2       {'A': 1}             intercambio_de_roles_para_motivacion, rotacion_de_puestos_para_mejora_calidad
+  27   53    226    2       {'A': 1}             control_estadistico_del_proceso, control_estadistico_no_implica_cero_defectos
+  28   54    227    2       {'A': 1}             benchmarking_mejores_practicas, benchmarking_proceso
+  29   55    228    2       {'A': 1}             conciencia_calidad, conciencia_de_calidad_2
+  30   56    229    2       {'A': 1}             eliminacion_causas_error_2, eliminacion_causas_error_4
+  31   57    230    2       {'A': 1}             circulos_calidad_qc, preparacion_gerencial_antes_de_circulos_de_calidad
+  32   58    231    2       {'A': 1}             autocontrol_y_controlabilidad, concepto_autocontrol
+  33   59    232    2       {'A': 1}             comunicar_politicas_organizacionales, politica_calidad_organizacional
+  34   60    233    2       {'A': 1}             pocos_vitales_muchos_utiles, proyectos_vitales_pocos
+  35   61    234    2       {'A': 1}             ciclo_shewhart_pdsa, pdsa_shewhart_cycle
+  36   62    235    2       {'A': 1}             control_estadistico_de_procesos, control_estadistico_de_procesos_2
+  37   63    236    2       {'A': 1}             evaluacion_gestion_riesgos, plan_de_gestion_de_riesgos
+  38   64    237    2       {'A': 1}             enfasis_en_ganancias_corto_plazo, enfasis_en_utilidades_corto_plazo
+  39   65    238    2       {'A': 1}             grafico_de_corrida_run_chart, run_chart_datos_temporales
+  40   66    239    2       {'A': 1}             evaluacion_alternativas_solucion, evaluacion_seleccion_alternativas_mejora
+  41   67    240    2       {'A': 1}             caso_definicion_arruga, definiciones_operacionales
+  42   68    241    2       {'A': 1}             distribucion_exponencial, formula_exponencial_confiabilidad
+  43   69    242    2       {'A': 1}             medicion_calidad, medicion_calidad_2
+  44   70    243    2       {'A': 1}             analisis_reporte_benchmarking, desarrollo_reporte_benchmarking
+  45   71    244    2       {'A': 1}             gestion_efectiva_benchmarking, rol_alta_direccion_benchmarking
+  46   72    245    2       {'A': 1}             consumidor_como_eje_de_produccion, consumidor_parte_linea_produccion
+  47   73    246    2       {'A': 1}             identificar_clientes_diseno, identificar_clientes_externos_e_internos
+  48   74    247    2       {'A': 1}             juran_quality_by_design, quality_by_design
+  49   75    248    2       {'A': 1}             definiciones_operacionales_3, definiciones_operacionales_4
+  50   76    249    2       {'A': 1}             establecimiento_metas, fijacion_de_metas
+
+  actos del tramo 5      : 50
+  por tamano             : {2: 50}
+  por figura             : {'PURO A': 50, 'MIXTO': 0}
+  nodos implicados       : 100
+  nodos que MORIRIAN si se funden todos: 50
+
+--- LOS QUE NO SON DE FUSION PURA (tamano 2 y PURO A), NOMBRADOS ---
+   NINGUNO: los 50 son de fusion pura, tamano 2 y PURO A.
+
+  escrito: docs/loop/TRAMO5_V58.jsonl
+
+FIN
