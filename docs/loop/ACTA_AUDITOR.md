@@ -10493,3 +10493,371 @@ y la reanudacion tiene sus tres primeras tareas ya adjudicadas: el
 registro de la decision con sus correcciones declaradas, el marcador
 del 00_INDICE con instrumento propio, y el criterio de orden de la
 fase 03 antes de abrir la primera operacion.
+
+# ACTA DE LA VUELTA 47 DEL AUDITOR (19 ago 2026, Fable 5)
+
+CABECERA. SIN HUECO DE ACTA: la ultima acta escrita cubre la vuelta 46
+(linea 10.159 de este fichero, leida hoy) y esta acta cubre la vuelta 47,
+que es la inmediatamente anterior a la actual. La vuelta 47 es la
+REANUDACION tras la parada de fundador de la vuelta 46, con el encargo
+escrito por el propio fundador (commit a47edcc9), y el ejecutor la cerro
+con preguntas abiertas que me convocan (el tramo de OP-U-01 y la
+discrepancia 335 contra 332), asi que la verificacion de esta acta es
+COMPLETA: Gate 0 y las tres suites RE-CORRIDOS por mi, ademas del
+marcador, el grafo, la cola y cada cifra del reporte.
+
+## 1. VERIFICACION COMPLETA POR CORRIDA PROPIA
+
+- EL ARBOL Y LOS COMMITS: git status LIMPIO, HEAD 1b4441e7 igual a
+  origin/pasada-unica. Los commits de la vuelta estan en el log tal como
+  el reporte los pinta: apertura en a47edcc9 (la decision del fundador,
+  arbol limpio, la regla 3 cumplida por vacio como el reporte lo dice),
+  62c10658 TAREA 1, c63be8aa TAREA 2, d5c4d64b TAREA 3, 1b4441e7 el
+  reporte.
+- LAS RUTAS, medidas con git diff --name-status a47edcc9..1b4441e7:
+  32 ficheros contando REPORTE.md, o sea los 31 del reporte mas el
+  reporte mismo; por carpeta 21 altas en docs/loop, 5 altas en
+  scripts/loop, 5 modificados en docs/plan, CERO borrados. Y LA CIFRA
+  QUE MANDA: dataset/ CERO ficheros tocados hasta el commit del reporte
+  inclusive. NI UN NODO SE MOVIO.
+- EL MARCADOR, recomputado por mi del archivo (clave clase sobre
+  puesto_intra): A 575, B 79, C 8, D 2.726, n 3.388, rango 1 a 3.388,
+  huecos 0, duplicados 0. AL DIGITO con la apertura y el cierre del
+  reporte, que dan identico porque la vuelta no ejecuto cirugia.
+- EL GRAFO, medido por mi sobre dataset/nodos: 3.853 ficheros, 3.524
+  vivos, 329 deprecados, 16.898 enlaces. AL DIGITO.
+- LA COLA, re-corrida por mi con scripts/costuras_internas.py: 1.494
+  sobre 3.524, y el fichero commiteado quedo byte igual (md5
+  ef5c6df5af31378f996451698e2e1a53 antes y despues, git status limpio).
+- EL CICLO GATE 0, re-corrido ENTERO por mi con phase1_run_log.json
+  respaldado antes: comando 1 (scripts/run_phase1.py
+  --reaplico-curaduria) exit 0 y GATE 0: OK; comando 2
+  (etiquetas_de_cara --aplicar) 71 etiquetas; comando 3 (sync_assets_web)
+  los 6 assets; git status LIMPIO tras el ciclo y el log byte igual
+  (md5 dfa6fc2d3e9ce275729047f65fefe446, el mismo que el reporte
+  publica). El comando 4 NO corre y es correcto: el censo no se movio.
+- LAS SUITES, re-corridas por mi: motor 25 de 25 exit 0; web 80
+  ficheros, 1.030 pasadas y 3 saltadas, exit 0; tsc --noEmit CERO
+  lineas, exit 0.
+- TAREA 1, verificada texto a texto: los CUATRO textos del 12 ago
+  llevan tachado, fecha, el criterio del fundador citado con sus
+  palabras y la cita de P.18 punto 3 (verificacion 2 de OP-D-07,
+  preservar y verificacion 3 de OP-M-03-I en OPERACIONES.jsonl, y la
+  fila del bloque en FRONTERAS_DECLARADAS.md), y el texto viejo sigue
+  dentro en los cuatro. El estado de OP-D-07 sigue LISTA, sin la
+  palabra HECHA, como el encargo mandaba.
+- LA FRONTERA DEL 1298, re-medida por mi nodo a nodo: el bloque son los
+  5 pasos de puntos_brillantes_antes_del_pivote (fuente Traction -
+  Gabriel Weinberg SOLA), CERO huellas de esos pasos en
+  pivotar_o_perseverar y CERO en decision_pivote_perseverar; el paso 3
+  de pivote_startup dice Decide con rapidez y sin miedo al fracaso si
+  toca pivotar (fuente Steve Blank); la arista sujeto a nodo propio
+  existe en los dos sentidos y la puerta no nombra al nodo propio en
+  ningun campo. TODO AL DIGITO con la tabla del reporte.
+- EL CIERRE DE LA FASE 02, re-corrido por mi con
+  vuelta46_cierre_fase02.py: 9 de 9 con registro, 5 de 9 con la frase
+  de la vuelta 30, 5 de 9 con encabezado CERRADA o SELLADA, OP-D-06 en
+  las dos. El sello de OP-D-07 existe y no escribe la frase de la
+  vuelta 30, como el ejecutor declaro. AQUI CAYO LA UNICA CIFRA DE LA
+  VUELTA: seccion 3 de esta acta.
+- TAREA 2, recomputada por mi de OPERACIONES.jsonl: 71 operaciones, 71
+  LISTA, ids unicos 71, y por fase 7, 7, 9, 16, 10, 10, 5, 2, 1, 3, 1.
+  La tabla vigente del 00_INDICE calza AL DIGITO con mi conteo; la
+  vieja quedo entera, tachada y fechada. Las derivadas, re-medidas por
+  mi: P.1 a P.20 son VEINTE encabezados en BANCO_DEL_PLAN.md, el
+  inventario tiene 672 entradas, las fronteras son 5, y las dos filas
+  de lecturas dirigidas van A VERIFICAR sin republicar, que es lo que
+  la regla 2 manda. El instrumento del marcador re-corrido por mi HOY:
+  cero filas sin calzar.
+- TAREA 3, re-medida por mi del fichero: el empate es real (OP-U-01,
+  OP-M-02-PROG y OP-M-03-I, las tres con orden 1); el unico congelado
+  abierto del archivo es el 1190 y lo nombra OP-M-04, de la fase 06;
+  los desbloqueos leidos de depende_de son OP-U-01 dos (OP-U-02 y
+  OP-S-12), OP-M-03-I uno (OP-M-03-ENLACES), OP-M-02-PROG cero; la
+  cita general existe tal cual en docs/PENDIENTES.md lineas 2594 a
+  2597 (adjudicado el 14 ago 2026, el criterio es cuantos pares
+  desbloquea); y las 13 dependencias de OP-U-01 viven en fases con
+  cierre declarado.
+- OP-U-01, las tres cifras re-contadas por mi linea a linea: la nomina
+  sellada RECOMPUTO_3388_COMPONENTES.jsonl trae 332 actos, 838 nodos,
+  278 CERRADOS con 595 nodos y 54 ABIERTOS; la de hoy
+  (RECOMPUTO_V47_COMPONENTES.jsonl) trae 324, 822, 270 con 579 y 54,
+  con 235 de dos, 31 de tres y 4 de cuatro, o sea 309 muertes si se
+  funden todos. Los OCHO nodos que el reporte nombra estan HOY
+  deprecados los ocho, los ocho estaban en la sellada y ninguno esta en
+  la de hoy, y la resta completa es 16 nodos que salen (los ocho mas
+  sus ocho parejas) y CERO que entran: cuadra al digito. La guarda de
+  los cuatro ajenos, re-medida: ab_testing_optimizacion y
+  brainstorming_divergente en ninguna componente, el de 13 y el de 9
+  ABIERTOS.
+- EL HALLAZGO DE LA SECCION 6, verificado en el codigo:
+  scripts/plan/recomputo_3388.py se anuncia ESTRICTAMENTE DE SOLO
+  LECTURA y "si se pide, vuelca su propio jsonl", y su argumento
+  --salida trae DEFAULT apuntando a docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl,
+  o sea que escribe SIN pedirselo. El fichero sellado esta intacto en
+  el arbol (332 lineas, contadas por mi) y no aparece en ningun commit
+  de la vuelta: la restauracion del ejecutor fue real y limpia.
+- GUIONES: cero guiones largos y cero medios en los cinco ficheros de
+  docs/plan tocados, los cinco instrumentos nuevos y el reporte,
+  barridos por mi.
+
+## 2. LA RELECTURA CIEGA
+
+CEGUERA PARCIAL DECLARADA: los discutibles de esta vuelta son
+decisiones y no clases, y sus razones venian en el reporte que es mi
+insumo. La ciega que cabe es la de siempre en esta especie: imprimi
+PRIMERO la evidencia cruda (el texto viejo desde git show, los pasos de
+los cuatro nodos de la frontera, mis propios conteos de los ficheros),
+deje escrita mi lectura, y SOLO DESPUES la coteje con la razon del
+ejecutor. En el 1298 imprimi los 5 pasos del nodo propio y el paso 3 de
+pivote_startup antes de cotejar: mi lectura de los dos lados coincide
+con la re-declaracion.
+
+CUENTA DE LA CIEGA: 12 de 12 discutibles COINCIDEN en el fondo con lo
+que el ejecutor eligio. La discrepancia de esta vuelta (seccion 3) esta
+FUERA del marcado y no es de las doce.
+
+## 3. LA CAIDA: UNA, DE CIFRA PUBLICADA, FUERA DEL MARCADO
+
+La celda corregida de la tabla de registros de 02_DESTEJIDOS.md (la
+fila de OP-D-07) publica "linea 4578" como sede del encabezado del
+sello, y en el arbol commiteado ese encabezado vive en la LINEA 4591,
+medido por mi con el mismo instrumento y a ojo sobre el fichero. El
+mecanismo esta claro y es de la casa: el ejecutor corrio el instrumento
+(su salida sellada dice 4578, y era verdad en ese momento), y DESPUES,
+en el mismo commit, anadio 13 lineas por encima (el bloque de la
+correccion de 8 de 9 a 9 de 9 y la resolucion del punto 1), que
+desplazaron su propio blanco. Las OTRAS siete citas de linea de esa
+tabla (1197, 1614, 1765, 3403, 3829, 4115 y la 3581 compartida) las
+relei una a una y las siete calzan.
+
+- ESPECIE: caida de CIFRA PUBLICADA (vive en docs/plan). Cuenta para el
+  credito y para la parada. Es la PRIMERA seguida de su especie: la
+  vuelta 46 tuvo cero de clase o cifra. DOS seguidas serian PARADA; una
+  no lo es.
+- REGLA DEL CREDITO APLICADA: discrepancia fuera del marcado, el tramo
+  se relee AL DOBLE. El tramo es la seccion del cierre de la fase 02
+  entera: relei cita a cita las ocho lineas de la tabla, re-corri el
+  instrumento (9 de 9, 5 y 5, al digito), y verifique el sello seccion
+  por seccion. NINGUNA OTRA AFIRMACION CAYO.
+- LA LECCION, con regla vigente y no doctrina nueva: una cita de linea
+  a un fichero que la misma vuelta sigue editando se mide DESPUES de la
+  ultima edicion, que es la regla 1 de siempre (la cifra publicada sale
+  del instrumento corrido sobre el estado que se publica). El encargo
+  trae la correccion declarada.
+- Y UNA ERRATA SIN CIFRA, dicha aqui para que no se pierda:
+  03_FUSIONES.md escribe MUERIRIAN por MORIRIAN en la tabla del lote.
+  No es una caida (no hay cifra ni clase); va al encargo como errata.
+
+## 4. LOS DOCE DISCUTIBLES, ADJUDICADOS
+
+- D1, la lectura de "entre ese nodo y la puerta": A FAVOR, y es la
+  adjudicacion de fondo de esta acta. La frase del fundador es verbatim
+  la rama (a) de la parada de la vuelta 46, y el propio fichero de la
+  parada escribe su sentido dos veces: "el nodo propio es MAS trazable
+  COMO LADO de la frontera" y "tras la fusion del acto I el Gate 0
+  redirige la arista del sujeto muerto al superviviente, asi que la
+  frontera queda CONECTADA sin mover contenido". Eso es exactamente lo
+  que el ejecutor escribio: cambia la SEDE del lado del punto brillante
+  y la puerta queda como sosten de grafo. La lectura literal (los dos
+  lados pasan a ser el nodo propio y la puerta) queda descartada por
+  texto sellado, no por gusto: la definicion de frontera de la propia
+  pagina exige dos nodos que mandan LO CONTRARIO sobre el mismo gesto,
+  y el nodo propio (Traction) y la puerta (Ries) estan del MISMO lado
+  de la linea sellada "entre libros: Ries mas Traction contra Blank",
+  que nadie mando mover. Una lectura que fabrica una frontera entre dos
+  aliados y deja sin lado a Blank no es una lectura: es un choque
+  nuevo. La pregunta 2 del reporte queda contestada con esto; si el
+  fundador quiso otra cosa, la correccion es una tabla y esta escrita
+  para poder cambiarse, pero el registro escrito solo sostiene esta.
+- D2, tachar tambien la celda de la fila 75: A FAVOR. Dejarla habria
+  dejado la pagina publicando DOS sedes para el mismo lado, que es la
+  especie exacta de divergencia que la casa no tolera (una sola fuente
+  de verdad); esta metida en la 1.2, que es donde el encargo manda
+  re-declarar con el texto viejo delante, y esta declarada.
+- D3, SELLADA y no HECHA: A FAVOR. El encargo dice "sella por la via de
+  OP-D-05 SELLADA" y esa via usa esa palabra en su propio encabezado
+  (linea 1765, releida); no estrenar HECHA es lo que tres actas
+  adjudicaron y el estado LISTA quieto esta mandado por el encargo
+  citando las notas de OP-F-02 y OP-D-04.
+- D4, corregir 8 de 9 a 9 de 9 en la misma vuelta: A FAVOR. La 1.4
+  manda recomputar lo que se mueva en el mismo acto; la cifra vieja
+  quedo delante con su fecha y el recomputo lo firma el instrumento de
+  la vuelta 46, que yo re-corri con el mismo resultado. Que en ese
+  mismo tramo cayera la cita de linea 4578 (seccion 3) no toca esta
+  decision: la decision de recomputar era la correcta.
+- D5, no escribir la frase de la vuelta 30 dentro del sello: A FAVOR.
+  El localizador busca la frase como texto plano y el sello que la
+  escribiera para negarla se contaria en las dos formas: el instrumento
+  habria publicado 6 y 5 en vez de 5 y 5. Verificado por mi corriendo
+  el instrumento: hoy da 5 y 5 y OP-D-07 sale solo por encabezado. La
+  nota del motivo dentro de la seccion es una nota de artefacto
+  declarado, la especie que esta campana ya usa.
+- D6, barrer tres tablas derivadas no nombradas: A FAVOR. El carril del
+  banco 9.10 manda el barrido de toda tabla derivada EN EL MISMO ACTO,
+  y el encargo 1.4 lo cita; las tres correcciones las re-medi una a una
+  (71/71/0, VEINTE reglas contadas, 672 entradas, corte 3.388) y las
+  tres son exactas. No es alcance tomado: es la regla aplicada.
+- D7, A VERIFICAR en vez de republicar: A FAVOR. Ningun instrumento de
+  la vuelta cuenta las lecturas dirigidas, y una cifra sin medicion de
+  hoy no se republica: eso es la regla 2 al pie de la letra. El encargo
+  trae el instrumento que cierra las dos celdas.
+- D8, el criterio de orden por la forma general: A FAVOR, Y LO RATIFICO
+  COMO ADJUDICACION DE AUDITOR, que es lo que la decision del fundador
+  pedia (punto 3: "el orden de la fase 03 lo adjudica el auditor al
+  reanudar"). El fundador delego la primera escritura al ejecutor en su
+  propio encargo (TAREA 3.1) y me toca a mi re-adjudicarla: la
+  re-adjudico y CONVERGE. La vara literal (congelados liberados) se
+  aplico primero y empata a cero (unico congelado el 1190, de OP-M-04,
+  fase 06: medido por mi); la forma general esta escrita por el
+  fundador el 14 ago (PENDIENTES 2596: cuantos pares desbloquea, no
+  tamano ni averia); el dato que la aplica es depende_de, texto sellado
+  del plan que yo re-conte (2, 1, 0); y convergen dos citas mas de
+  paginas selladas (la cabecera del 11 ago de 03_FUSIONES y la atadura
+  2 del 00_INDICE). CUATRO textos citables y cero datos inventados: es
+  extension citable, no doctrina nueva, y no tocaba parar por la 3.3
+  porque criterio citable SI habia. OP-U-01 VA PRIMERA, adjudicado.
+- D9, restaurar la nomina sellada: A FAVOR. Publicar la vuelta con un
+  artefacto sellado pisado en silencio era la unica alternativa real, y
+  esa es la especie del canon 9. La restauracion esta verificada por
+  mi: 332 lineas en el arbol, ausente del git status, y la corrida
+  repetida con --salida fuera de docs/plan. Custodiar un sellado no es
+  tocar lo ajeno.
+- D10, declarar tres cifras sin elegir: A FAVOR. La regla 2 manda
+  declarar en vez de resolver copiando, y el ejecutor ademas dejo la
+  mitad que SI podia explicar explicada y cuadrada al digito. La mitad
+  que no explico la adjudico yo en la seccion 5 con la evidencia de
+  git, que es trabajo de auditor y no del ejecutor.
+- D11, abrir OP-U-01 sin fundir: A FAVOR, y NO es caida de alcance. La
+  operacion trae superviviente null y nodos vacios: la regla para
+  elegir esta escrita (las dos reglas de la pagina mas P.8), asi que no
+  es PARADA, pero el trabajo son 270 lecturas de contenido y la unidad
+  del tramo NO esta legislada (la regla 6 habla de pares). Inventarse
+  un tramo habria sido adivinar; entregarlo con la lectura de cero
+  hecha, el lote re-medido, la guarda de ajenos en verde y la pregunta
+  escrita es exactamente lo que el modo continuo manda cuando el texto
+  no alcanza para ejecutar sin decidir. La apertura pedida quedo
+  entregada entera.
+- D12, corregir el guarda de guiones propio: A FAVOR. La regla 10 dice
+  todo lo que se escribe, y que el hook lo dejara pasar no es licencia.
+  Barrido por mi: cero guiones largos y cero medios en los cinco
+  instrumentos.
+
+LAS TRES CORRECCIONES DECLARADAS DEL EJECUTOR: correctas las tres,
+cada una vista antes de publicar y con el texto viejo delante. La 1 y
+la 2 las verifique corriendo los dos instrumentos hoy (5 y 5 sin doble
+conteo; 12 de 12 con cero filas sin calzar).
+
+## 5. LAS CUATRO PREGUNTAS DE LA SECCION 9, ADJUDICADAS
+
+1. LA DISCREPANCIA 335 CONTRA 332: ADJUDICADA CON LA EVIDENCIA DE GIT,
+   y quien envejecio es LA NOTA DE LA OPERACION, no el fichero. La
+   cadena de custodia del fichero sellado esta entera en el log:
+   7f4ec6d9 lo crea (vuelta 11, con 335 actos y 280 cerrados, que es
+   EXACTAMENTE lo que la nota de OP-U-01 publica); 7cec9ecc lo
+   reescribe con el instrumento re-corrido entero y lo declara en el
+   propio commit (componentes 335 a 334, cerradas 280 a 279, muere la
+   componente del 494); 78ea7799 lo vuelve a correr (el colapso del par
+   386, primer colapso de la campana); y 70878328 (vuelta 40, OP-D-05)
+   lo deja en 332 actos y 278 cerrados, tambien declarado en su commit.
+   Cuatro re-selladas, las cuatro con correccion declarada en su
+   momento. Lo que NUNCA se barrio fue la nota y la evidencia de
+   OP-U-01 y OP-U-02, que se quedaron con la cifra de la vuelta 11: es
+   un barrido de tabla derivada que quedo pendiente entonces y asoma
+   hoy. La regla de correccion EXISTE (el carril del banco 9.10,
+   correccion declarada con tachado, fecha y cita), asi que NO es
+   parada: va al encargo.
+2. LA LECTURA DE "Y LA PUERTA": adjudicada en D1, a favor de la lectura
+   del ejecutor, por el texto de la propia parada que la decision
+   adopta por su nombre.
+3. EL TAMANO DEL TRAMO DE OP-U-01: LO ADJUDICO YO, por extension de la
+   regla 6 de EJECUTOR.md (~50 a 100 pares por tramo, o por operacion):
+   la unidad aqui es el acto y el lote real es 235 de dos, 31 de tres y
+   4 de cuatro, o sea que un acto mediano pesa como un par y los
+   grandes pesan mas por sus lecturas internas. TRAMO DE 50 ACTOS, la
+   banda baja de la regla porque cada acto trae ademas la cirugia
+   entera (P.5 leido entero, superviviente por las dos reglas de la
+   pagina mas P.8, simulacion previa, alias, perdidas). El ORDEN dentro
+   del lote es el orden en que el instrumento imprime la nomina
+   RE-MEDIDA al abrir cada tramo: deterministico, citable y sin
+   preferencia de nadie. Con 270 actos son unos seis tramos.
+4. recomputo_3388.py: SE CAMBIA, y lo encargo citando el canon 9 del
+   banco (fallar ruidoso): un instrumento que se anuncia de solo
+   lectura y escribe por defecto es exactamente la especie que no deja
+   sintoma, y ya piso un sellado una vez. El cambio minimo que el canon
+   pide: --salida SIN default (exigido), el docstring corregido en el
+   mismo commit, y el caso positivo publicado (la corrida sin --salida
+   falla visible). No toca nodos ni cifras y el fichero sellado queda
+   intacto.
+
+## 6. MIS PROPIOS MANEJOS Y TROPIEZOS, declarados con nombre
+
+- (i) REINCIDI en la clave puesto: mi primer recomputo del marcador uso
+  la clave que mi propia acta 46 dejo escrita como equivocada
+  (puesto_intra es la buena). TypeError a la vista, corregido leyendo
+  el esquema antes de publicar nada. Reincidir en un tropiezo propio ya
+  declarado se dice con esa palabra.
+- (ii) Mi primer intento del Gate 0 invoco run_phase1.py en la raiz; el
+  validador vive en scripts/. Error visible, corregido.
+- (iii) Mi primer conteo del grafo camino dataset/ entero y tropezo con
+  JSON que son listas; la definicion del instrumento cuenta
+  dataset/nodos, y con ella dio al digito.
+Ninguno publico una cifra equivocada: CERO caidas del auditor.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 1 relectura ciega de par (el 1298, los dos lados con los
+pasos impresos antes de cotejar, ceguera parcial declarada), 12
+discutibles adjudicados con su evidencia re-corrida, 2 puestos leidos
+al digito (1298 y 1190), 4 nodos de forma (el nodo propio, la puerta,
+el sujeto y pivote_startup), 45 sitios re-corridos o leidos al digito
+(marcador con huecos y duplicados, grafo, cola byte igual con md5,
+ciclo Gate 0 de tres comandos con md5 del log, tres suites, diff
+name-status con las carpetas, dataset en cero, OPERACIONES.jsonl entero
+con conteo por fase, los cuatro textos corregidos uno a uno, la
+re-declaracion entera del 1298 con huellas y aristas medidas, el sello
+de OP-D-07, el instrumento del cierre de la fase 02 re-corrido, las
+ocho citas de linea de la tabla de registros, la tabla vigente del
+00_INDICE contra mi conteo, la vieja tachada, la linea 9, la celda de
+HECHO, la tabla de la sesion B con 672 y 5 re-contados, P.1 a P.20, el
+empate de orden 1, los desbloqueos de depende_de, el congelado 1190
+con su liberador, PENDIENTES 2594 a 2597, las secciones nuevas de
+03_FUSIONES, las dos nominas linea a linea con tamanos y muertes, los
+ocho deprecados uno a uno con la resta 16 y 0, la guarda de los cuatro
+ajenos, el default de recomputo_3388.py leido del codigo, la historia
+git del fichero sellado en cuatro commits, el instrumento del marcador
+re-corrido hoy y el barrido de guiones).
+
+Caidas del ejecutor en esta vuelta: UNA de CIFRA PUBLICADA (la linea
+4578 que es 4591), CERO de clase, CERO de reporte (el reporte en si
+salio limpio: todo lo que afirma calza). Caidas del auditor: CERO.
+
+Acumulado: 75 relecturas, 463 puestos (mas 287 nodos de forma y 379
+sitios de codigo), 7 caidas de clase, 19 de reporte del ejecutor, 8 de
+cifra publicada del ejecutor, 2 de cifra del auditor, 3 de acta del
+auditor, 1 de procedimiento del auditor.
+
+Rachas: CLASE O CIFRA queda en UNA seguida (dos seguidas serian
+PARADA: la proxima tanda con una caida de esta especie DETIENE el
+bucle). REPORTE vuelve a CERO seguidas: la caida de la vuelta 46 no
+tuvo continuacion.
+
+## 8. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. Las cuatro preguntas se adjudicaron con textos
+  citables (la parada adoptada por la decision, el carril 9.10, la
+  regla 6 extendida con su cuenta delante, el canon 9).
+- Contradiccion sin regla de correccion: NO. La discrepancia 335
+  contra 332 tiene carril escrito y va al encargo.
+- Decision de fundador: NO hace falta ninguna nueva: la de la parada
+  esta registrada y verificada.
+- Fallo tecnico repetido: NO. Gate 0 y las tres suites en verde, por el
+  ejecutor dos veces y por mi una.
+- Credito de tanda roto: NO, pero queda ARMADO: una caida de cifra
+  publicada esta contada y la segunda seguida para el bucle.
+- Campana consumada: NO. OP-U-01 tiene 270 actos por fundir.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: registros y
+correcciones (TAREA 1) y el primer tramo de 50 actos de OP-U-01
+(TAREA 2), con el tramo y su orden adjudicados en la seccion 5.
