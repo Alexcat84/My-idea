@@ -418,6 +418,58 @@ INDICES**, y el instrumento lee cada pieza verbatim del fichero del nodo. La gua
 comprueba que **cada indice aparezca exactamente una vez y que no sobre ninguno**: una perdida sin
 destino no es una perdida, es un olvido.
 
+### CORRECCION DECLARADA SOBRE EL ACTO 49: **LA PIEZA QUE NO VIAJABA, ADOSADA** (19 ago 2026, vuelta 49)
+
+> **El texto viejo NO se borra, y va delante:** el plan sellado del tramo
+> ([`../loop/PLAN_V48_OPU01_TRAMO1.json`](../loop/PLAN_V48_OPU01_TRAMO1.json), acto 49) marco el
+> **paso 3** de `storytelling_para_el_cambio` como **`CUBIERTO:3`**, y su campo
+> `perdidas_declaradas` lo decia asi: *"NO se anade como paso propio: el veredicto 212 agrupa ese
+> paso con las demostraciones tangibles, que sobreviven enteras en el paso 3 del superviviente. Lo
+> que NO sobrevive es el matiz de QUIEN demuestra."* **El reporte de la vuelta 48 lo marco el mismo
+> como discutible `D9`.**
+
+**Y NO ERA VERDAD COMPLETA.** El auditor lo verifico y lo adjudico
+([`../loop/ACTA_AUDITOR.md`](../loop/ACTA_AUDITOR.md), acta de la vuelta 48, seccion 4, leida hoy):
+el paso 3 del superviviente **dice las demostraciones y NO dice QUIEN modela**. Los dos textos,
+leidos hoy del fichero del nodo:
+
+| | el paso 3, verbatim |
+|---|---|
+| superviviente, **antes** | `Crear momentos memorables (eventos, demostraciones) en lugar de solo publicidad` |
+| absorbido (`storytelling_para_el_cambio`, **texto INTACTO**) | `Usar demostraciones tangibles y figuras de autoridad para modelar el nuevo comportamiento` |
+
+**LA FIGURA APLICADA ES EL `INCISO ADOSADO`**, que es el remedio escrito de `SALVAGUARDA` en la
+**TABLA DE LOS SEIS MOTIVOS DE PERDIDA DE LINEA** (*el inciso se adosa al paso que protege*), con
+el precedente vivo de `OP-D-02` paso 1 en [`02_DESTEJIDOS.md`](02_DESTEJIDOS.md) **linea 220**,
+leida hoy. **No es `APPEND`**: anadir el paso entero duplicaria *usar demostraciones tangibles*,
+que es exactamente lo que el superviviente ya manda. **Y no es `CUBIERTO`**, que es lo que estaba
+mal escrito.
+
+| | el paso 3 del superviviente, **HOY** |
+|---|---|
+| **resultado** | `Crear momentos memorables (eventos, demostraciones) en lugar de solo publicidad, con figuras de autoridad para modelar el nuevo comportamiento` |
+
+**El instrumento es `scripts/loop/vuelta49_inciso_adosado.py`** con el plan sellado
+[`../loop/PLAN_V49_INCISO_ACTO49.json`](../loop/PLAN_V49_INCISO_ACTO49.json)
+([`../loop/SALIDA_V49_INCISO_SIM.txt`](../loop/SALIDA_V49_INCISO_SIM.txt) y
+[`../loop/SALIDA_V49_INCISO_EJEC.txt`](../loop/SALIDA_V49_INCISO_EJEC.txt), los dos exit 0).
+**El plan no redacta el inciso: lo nombra como TROZO VERBATIM** del paso del que muere, y la
+guarda 2 comprueba que ese trozo esta literal dentro de ese paso. **Lo unico que el instrumento
+aporta de su cosecha es el NEXO**, `", con "`, **y va impreso aparte para que se pueda discutir
+por separado del contenido.**
+
+| guarda | resultado |
+|---|---|
+| **0**, los dos nodos en el estado que el plan dice (vivo, deprecado, y el alias los une) | **OK** |
+| **1**, `P.5` sobre el texto: el paso es HOY byte a byte el que el plan leyo | **OK** |
+| **2**, el inciso es trozo **VERBATIM** del paso 3 del absorbido | **OK** |
+| **3**, idempotencia: correr dos veces no apila | **OK** (la 1.ª corrida `--ejecutar` se revirtio con `git checkout` para tomar la base de la guarda de defectos, y la 2.ª volvio a escribir el mismo byte) |
+| **4**, **SOLO** cambia `pasos_accionables`; ni titulo, ni fuente, ni resumen, ni entregable, ni una arista | **OK** |
+| **duplicadas tras resolver y auto-aristas NUEVAS**, re-corridas sobre el resultado | **CERO y CERO**: **1.004** y **0** en la base y **1.004** y **0** despues ([`../loop/SALIDA_V49_DEFECTOS_INCISO.txt`](../loop/SALIDA_V49_DEFECTOS_INCISO.txt), exit 0) |
+
+**El nodo absorbido no se toca: su texto sigue INTACTO**, que es lo que hace que un recorrido viejo
+siga contando algo.
+
 ### LOS CINCO DECLARADOS Y NO FUNDIDOS, con su motivo citado
 
 | # | el acto | por que NO se funde |
