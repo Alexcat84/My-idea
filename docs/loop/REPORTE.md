@@ -14,8 +14,8 @@ ellos le habria hecho retirar **ocho entradas que no le tocaban**.
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `a248c6a3` (el commit del acta 58), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** |
-| **hash final** | el commit del cierre mas este mismo, que solo escribe esta cabecera, **pusheados a `origin/pasada-unica`** |
-| **commits de la vuelta** | **4 hasta el cierre**, leidos de `git log --oneline a248c6a3..HEAD`: `c9927b19` (apertura medida), `fd7de724` (TAREA 1.1, el barrido de titulos), `956f9e3d` (TAREA 1.2, la ratificacion del 32), `39d495b2` (LOTE A del tramo 5), **mas el del cierre y este** |
+| **hash final** | `6b6607bb` (el cierre) mas este mismo commit, que solo escribe esta cabecera, **pusheados a `origin/pasada-unica`** |
+| **commits de la vuelta** | **5 hasta el cierre**, leidos de `git log --oneline a248c6a3..HEAD` al escribir esto: `c9927b19` (apertura medida), `fd7de724` (TAREA 1.1, el barrido de titulos), `956f9e3d` (TAREA 1.2, la ratificacion del 32), `39d495b2` (LOTE A del tramo 5), `6b6607bb` (el cierre), **mas este**, que solo escribe esta cabecera porque el commit del cierre no podia contener su propio hash |
 | **arbol al cierre** | limpio tras el commit del cierre |
 
 ---
