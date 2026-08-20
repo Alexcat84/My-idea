@@ -2683,3 +2683,95 @@ trozo no nombra ni condicion ni paso*, actos 1, 4 y 7), y **la vuelta 59 nunca l
 comprobado porque no existe `SALIDA_V59_TALLAR_PERDIDAS.txt`. La cifra **3** que aquella vuelta
 publico en su TABLA 1 **sigue en pie y no la toca nada de esto**; lo que no existe, y no existia, es
 la clasificacion por especie de esas tres.
+
+---
+
+## LAS ADJUDICACIONES DEL ACTA DE LA VUELTA 61, REGISTRADAS AQUI PARA QUE EL REGISTRO NO DEPENDA DEL ACTA (20 ago 2026, vuelta 62, TAREA 1 del encargo)
+
+**Se adosan al final del documento y NO reescriben ni una linea de las secciones de arriba**, que es
+la via que esta pagina ya uso con las tres adjudicaciones del acta 52 (linea **1250**) y con la del
+acta 57 sobre el acto 25 (linea **2475**). **Ninguna cifra publicada se toca.** **Cada cita lleva la
+linea del acta LEIDA HOY**, no recordada: el acta de la vuelta 61 abre en la linea **15690** de
+[`../loop/ACTA_AUDITOR.md`](../loop/ACTA_AUDITOR.md), su seccion de adjudicaciones en la **15822** y
+la de las cinco preguntas en la **15879**.
+
+### a) **EL TRAMO ES UN PREFIJO CON TOPE DE CINCUENTA, NO UN MINIMO: UN TRAMO CORTO POR AGOTAMIENTO ES UN TRAMO** (acta 61, `D1`, linea **15824**; pregunta 1, linea **15881**)
+
+**LA VARA NO CAMBIA: SE LEE ENTERA.** La vara vigente es la cabecera del registro del tramo 1 de esta
+misma pagina, **linea 360**, leida hoy: *El tramo son los CINCUENTA primeros actos `CERRADOS` de la
+nomina re-medida al abrirlo, en el orden en que el instrumento los imprime.* **Eso define un PREFIJO
+con TOPE de cincuenta, no un minimo:** fija el orden y corta en cincuenta. **El prefijo de una nomina
+de veintiuno son los veintiuno.**
+
+| lo que se pregunto | lo adjudicado | la vara |
+|---|---|---|
+| un tramo con **menos de cincuenta actos libres**, es un tramo? | **SI** | la linea **360** de esta pagina, leida como prefijo con tope |
+| hace falta **doctrina nueva** para decirlo? | **NO.** De las tres salidas posibles, la de prefijo es **la unica que no estrena regla**; declararlo cierre en vez de tramo, o darle otra vara, **si la necesitarian** | acta 61, `D1` |
+| **agotarse** es lo mismo que **truncar**? | **NO, y la diferencia es medible: truncar deja actos detras del corte y agotarse no deja ninguno.** En el tramo 6 se tomaron **21 de 21** y **no queda ni un acto fuera**, comprobado por el auditor con cuenta propia e independiente | acta 61, seccion 1, cuenta del tramo 6 por tres caminos |
+
+**Y LA CONSECUENCIA QUE VIENE PEGADA, PORQUE EL ACTA LA DICTA EN LA MISMA RESPUESTA: EL TRAMO 6 ES EL
+ULTIMO TRAMO DE `OP-U-01`.** Cuando el tramo 6 quede ejecutado y registrado, **el universo de
+`OP-U-01` queda agotado**, y **su registro abre declarandolo con la cifra**: `TRAMO FINAL POR
+AGOTAMIENTO: VEINTIUNO, NO CINCUENTA`.
+
+**LO QUE ESTA ADJUDICACION NO AUTORIZA:** cortar un tramo por debajo de cincuenta **habiendo actos
+libres detras del corte**. Eso sigue siendo truncar, y truncar no esta adjudicado.
+
+### b) **UNA GUARDA PUEDE CRECER EN UN SUCESOR DECLARADO, CON DOS CONDICIONES** (acta 61, `D2`, linea **15839**; pregunta 2, linea **15887**)
+
+El contrato del sucesor declarado es **copia byte a byte MAS lo declarado** (acta 54, pregunta 3), y
+**lo declarado admite una guarda que CRECE** si cumple las dos:
+
+| condicion | por que |
+|---|---|
+| **va enumerada en el docstring** del sucesor, entre lo que cambia | una guarda que crece **no es copia**, y lo que no es copia se enumera |
+| **va marcada DISCUTIBLE** en el reporte de la vuelta que la estrena | es el unico cambio de la lista que **amplia lo comprobado**, y ampliar lo comprobado se somete |
+
+**LA FIGURA ES LA DEL ABRIDOR:** el ancestro miraba `(1, 2, 3)` tallado a mano y **por eso dejo fuera
+el tramo 4 al abrir el tramo 5**; la guarda que mira **TODOS los previos medidos** es **la correccion
+de esa especie**, no una mutacion callada. **LO QUE ESTA ADJUDICACION NO CUBRE: crecer una guarda sin
+declararla.**
+
+### c) **`SELLO_FIJO` NO NECESITA FUENTE EXTERNA: BASTA LA GUARDA** (acta 61, `D3`, linea **15847**; pregunta 3, linea **15890**)
+
+El barrido de titulos **no le cree a la palabra: le cree a la estructura**, que es **la MISMA
+distincion que ya separa `ROJO` de `CENSO`** (sujeto repuntable por argumento contra sujeto fijo).
+
+| rotulo | su sujeto vive | que se le exige |
+|---|---|---|
+| **`PROCEDENCIA`** | **FUERA** del fichero (un acta, un ancestro, otra vuelta) | **fuente externa citada**, porque el sujeto no esta en la pagina |
+| **`SELLO_FIJO`** | **DENTRO** del propio fichero | **los tres dientes de la guarda**: sin argumento que repunte el sujeto, numero cotejado por maquina, y `ROTULO HUERFANO` en `ROJO` si no casa. **La fuente de un sujeto fijo es el propio fichero** |
+
+**Exigirle ademas fuente externa seria regla nueva sin necesidad.** Los tres dientes **estan probados
+sembrando averia** (acta 61, seccion 1: `sujeto=tramo:9` sembrado, el barrido dio `ROTULO HUERFANO`
+en `ROJO`, restaurado y de vuelta a limpio).
+
+### d) **LOS 29 VIVOS DE LOS TRAMOS 1 A 5 SON ACTOS DECLARADOS Y COSA JUZGADA** (acta 61, pregunta 4, linea **15893**)
+
+| lo que son | **actos DECLARADOS**, cada uno con su motivo citado en el registro de su tramo |
+|---|---|
+| **quince** | siguen **la via de la mesa**, dentro del pendiente de doctrina 1 |
+| **catorce** | **no tienen cola pendiente NI la necesitan**: su declaracion **es su estado final** mientras ninguna regla nueva los nombre |
+
+**LO QUE ESTO CIERRA, con las palabras del acta: no se reparten, no se reabren, no entran en ningun
+tramo por abrir.** Ocupan los puestos **1 a 29** como **prefijo para las guardas de solape y nada
+mas**.
+
+### e) **ENTRE CORRER UN ANCESTRO CUYO TITULO MIENTE Y ESCRIBIR UN SUCESOR DECLARADO QUE NO MIENTE, EL SUCESOR ES LA VIA** (acta 61, `D5`, linea **15861**; pregunta 5, linea **15900**)
+
+**La mentira declarada en el reporte NO repara la salida publicada que la lleva.** Correr el ancestro
+habria publicado un titulo que miente (**la especie exacta que la racha de reporte pago en las
+vueltas 59 y 60**) o habria pagado un `ROJO` que el encargo prohibia pagar. **Dos ficheros de mas es
+el precio de no mentir**, y **los ancestros quedan intactos y citados**, que es la via del acta 54
+pregunta 3.
+
+### f) **LOS TRES RESTANTES, ADJUDICADOS `A FAVOR` Y REGISTRADOS SIN DESARROLLO PORQUE NO CREAN CARRIL**
+
+| | que se adjudico | la vara |
+|---|---|---|
+| **`D4`** | **extender el barrido la misma vuelta que publica su cifra**: `A FAVOR` por la adjudicacion ya escrita (`D7` de la vuelta 60, sus cuatro condiciones), cumplidas y re-verificadas | acta 61, linea **15856** |
+| **`D6`** | **la exclusion de los DOS ficheros que hablan la gramatica** (el barrido y el triador), solo para el cotejo de rotulos y con los dos midiendose igual por titulos: **alcance minimo y motivo medido** | acta 61, linea **15867** |
+| **`D7`** | **el lote A sin ejecutar en la vuelta 61**: `A FAVOR`, porque el encargo lo permitia expresamente, mandaba decirlo primero y **se dijo primero**; fundir 21 actos bajo una vara aun no adjudicada **habria decidido en silencio** lo que el `D1` traia a la mesa | acta 61, linea **15873** |
+
+**NINGUNA DE LAS SIETE ESTRENA DOCTRINA**, y el acta lo dice en su seccion 8 (linea **15953**, leida
+hoy): *Doctrina nueva: NO.*

@@ -264,7 +264,20 @@ def main():
     print("=" * 78)
     print()
     if a.tramo_numero is not None and not a.fijado and a.tramo_numero != siguiente:
-        print("  AVISO: se pidio el tramo %d y el medido es el %d. Se corre el pedido y")
+        # CORRECCION DECLARADA (20 ago 2026, encargo de la vuelta 62, TAREA 1; HALLAZGO
+        # PROPIO DEL AUDITOR, acta 61 seccion 6): esta linea imprimia los DOS %d SIN
+        # interpolar, o sea un print de cadena sin argumentos. EL TEXTO VIEJO NO SE
+        # BORRA, que es lo que hace auditable la correccion, Y DECIA EXACTAMENTE:
+        #
+        #     print("  AVISO: se pidio el tramo %d y el medido es el %d. Se corre el pedido y")
+        #
+        # El camino solo se alcanza cuando --tramo-numero difiere del medido y ninguna
+        # corrida publicada paso por el, asi que CERO cifras publicadas dependen de esta
+        # linea: es correccion declarada y no caida. Su caso positivo minimo va en
+        # docs/loop/SALIDA_V62_CASO_POSITIVO_AVISO.txt, corrido sobre salida de prueba
+        # NO publicada.
+        print("  AVISO: se pidio el tramo %d y el medido es el %d. Se corre el pedido y"
+              % (a.tramo_numero, siguiente))
         print("  se dice, que es lo contrario de elegirlo en silencio.")
         print()
 

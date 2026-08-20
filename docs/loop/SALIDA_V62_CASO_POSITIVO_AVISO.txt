@@ -1,0 +1,159 @@
+CASO POSITIVO MINIMO DE LA CORRECCION DEL AVISO (linea 267 del abridor)
+vuelta 62, 20 ago 2026. LAS DOS MITADES EN LA MISMA SALIDA.
+
+MITAD 1, COMO ESTABA (fichero del commit d9fd6a54, corrido hoy por mi con el
+mismo comando, sobre salida de prueba NO publicada):
+
+  AVISO: se pidio el tramo %d y el medido es el %d. Se corre el pedido y
+  se dice, que es lo contrario de elegirlo en silencio.
+
+MITAD 2, COMO QUEDA (lo que sigue abajo es la corrida entera de hoy):
+
+comando:
+  python scripts/loop/abrir_tramo_de_opu01.py --nomina docs/loop/_v62_componentes.jsonl \n      --tramo-numero 6 --salida docs/loop/_v62_caso_positivo_aviso.jsonl
+
+el camino se alcanza porque el censo ya ve el tramo 6 FIJADO y mide que el
+siguiente es el 7, asi que --tramo-numero 6 difiere del medido.
+
+CONTRASTE ANADIDO: la nomina que sale de esta corrida de prueba da DIFF VACIO
+contra docs/loop/TRAMO6_V61.jsonl. El fichero de prueba se borro tras medirlo:
+no se publica una nomina de un camino de aviso.
+
+==============================================================================
+
+==============================================================================
+EL TRAMO SE MIDE, NO SE TALLA
+  tramos ya fijados : 1 (el bloque 1 a 50 de la nomina de la 48), 2 (docs\loop\TRAMO2_V54.jsonl, vuelta 54), 3 (docs\loop\TRAMO3_V56.jsonl, vuelta 56), 4 (docs\loop\TRAMO4_V57.jsonl, vuelta 57), 5 (docs\loop\TRAMO5_V58.jsonl, vuelta 58), 6 (docs\loop\TRAMO6_V61.jsonl, vuelta 61)
+  re-mediciones posteriores DESCARTADAS como nomina de apertura, nombradas:
+     tramo 2: docs\loop\TRAMO2_V55.jsonl (vuelta 55, posterior a la 54 que lo abrio)
+  el siguiente es   : 7
+  este abridor corre sobre el tramo: 6 (dado por --tramo-numero)
+==============================================================================
+
+  AVISO: se pidio el tramo 6 y el medido es el 7. Se corre el pedido y
+  se dice, que es lo contrario de elegirlo en silencio.
+
+==============================================================================
+EL ABRIDOR DEL TRAMO 6 DE OP-U-01
+instrumento de nombre estable: el numero de arriba sale de la medicion
+de la cabecera, no de una constante. La LECTURA B no es un bloque fijo
+de la 48, sino la nomina de la 48 saltando los tramos FIJADOS
+==============================================================================
+
+  nomina de hoy   : docs/loop/_v62_componentes.jsonl (50 actos CERRADOS)
+  nomina de la 48 : docs\loop\RECOMPUTO_V48_COMPONENTES.jsonl (270 actos CERRADOS)
+
+--- LOS TRAMOS YA ABIERTOS, IDENTIFICADOS POR SUS MIEMBROS ---
+  tramo 1: 50 actos, 139 miembros, 11 vivos hoy en los puestos [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+           fuente: el bloque 1 a 50 de la nomina de la 48 (no tiene fichero propio)
+  tramo 2: 50 actos, 100 miembros, 5 vivos hoy en los puestos [12, 13, 14, 15, 16]
+           fuente: docs\loop\TRAMO2_V54.jsonl
+  tramo 3: 50 actos, 100 miembros, 3 vivos hoy en los puestos [17, 18, 19]
+           fuente: docs\loop\TRAMO3_V56.jsonl
+  tramo 4: 50 actos, 100 miembros, 7 vivos hoy en los puestos [20, 21, 22, 23, 24, 25, 26]
+           fuente: docs\loop\TRAMO4_V57.jsonl
+  tramo 5: 50 actos, 100 miembros, 3 vivos hoy en los puestos [27, 28, 29]
+           fuente: docs\loop\TRAMO5_V58.jsonl
+
+--- EL TRAMO 2 CONTRA SU BLOQUE DE LA 48 (aquella apertura SI calzaba) ---
+   bloque 51 a 100 de la 48: 50 actos | fichero fijado: 50 actos
+   calzan en conjunto y en orden: SI
+
+--- EL TRAMO 3 CONTRA SU BLOQUE DE LA 48 (la vuelta 56 midio que NO calza) ---
+   en el fichero y no en el bloque: 1  ['construir_sobre_ideas_ajenas, reglas_brainstorming']
+   en el bloque y no en el fichero: 1  ['crecimiento_ingresos_verdes, generacion_ingresos_verdes']
+   ES LO QUE LA VUELTA 56 DEJO ESCRITO, y por eso la LECTURA B de este tramo
+   se arma saltando los tramos FIJADOS en vez de tomar un bloque contiguo.
+
+--- GUARDA DEL PREFIJO (el numero se MIDE, no se teclea ni se hereda) ---
+  actos vivos de los tramos 1, 2, 3, 4, 5: 29
+  puestos que ocupan hoy             : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+  ocupan los puestos 1 a 29 sin huecos: SI
+
+--- LECTURA A: los 50 CERRADOS siguientes en el orden impreso de HOY ---
+  actos CERRADOS fuera de los tramos 1, 2, 3, 4, 5: 21
+
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  TRAMO CORTO POR AGOTAMIENTO, DECLARADO Y NO CALLADO
+  La vara vigente (03_FUSIONES.md, cabecera del registro del tramo 1,
+  vuelta 48) dice LOS CINCUENTA PRIMEROS ACTOS CERRADOS de la nomina
+  RE-MEDIDA AL ABRIRLO. Hoy quedan 21, no 50.
+  EL TRAMO SE LLEVA EL RESTO ENTERO: 21 actos, y NO queda ni uno fuera
+  (comprobado: los tomados son 21 y el resto es 21).
+  ESO ES AGOTARSE, NO TRUNCAR, y son cosas distintas: truncar deja
+  actos detras del corte y agotarse no deja ninguno.
+  ESTE ABRIDOR NO ADJUDICA si un tramo corto es tramo: MIDE Y DECLARA.
+  PENDIENTE DE DOCTRINA: ninguna regla escrita dice que pasa cuando el
+  resto es menor que la vara. Va al reporte como pregunta.
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  puestos de hoy del tramo 6: del 30 al 50
+
+--- LECTURA B: la nomina de la 48, EN SU ORDEN, saltando los tramos fijados ---
+  CERRADOS de la 48 fuera de los tramos 1, 2, 3, 4, 5: 21
+  TRAMO CORTO: esta lectura se toma del mismo tamano que la A (21) para que
+  las dos se puedan comparar; la 48 aporta 21 en total.
+
+  VIVOS hoy   : 21
+  FUNDIDOS    : 0
+  suma        : 21 de 21
+
+--- LAS DOS LECTURAS, COMPARADAS EN CONJUNTO Y EN ORDEN ---
+  LECTURA A (orden de HOY) y LECTURA B (orden de la 48): CALZAN, mismo conjunto y mismo orden
+
+--- GUARDA DE LOS CUATRO AJENOS (03_FUSIONES.md, 11 ago 2026) ---
+   CAMINO 1, EL LITERAL, que es el que corrian los abridores de los tramos 1 y 2:
+     gates_go_kill_decision_points          en el TRAMO 6: NO                     en el lote CERRADO entero: NO
+     customer_discovery                     en el TRAMO 6: NO                     en el lote CERRADO entero: NO
+     ab_testing_optimizacion                en el TRAMO 6: NO                     en el lote CERRADO entero: NO
+     brainstorming_divergente               en el TRAMO 6: NO                     en el lote CERRADO entero: NO
+   CAMINO 1: VERDE, ninguno de los cuatro entra
+
+   CAMINO 2, POR EL RESOLUTOR (regla 9 del EJECUTOR, P.1): un ajeno deprecado
+   vive hoy dentro del ids_alias de su superviviente, y el camino literal no lo ve.
+     gates_go_kill_decision_points          deprecado: None   resuelve a gates_go_kill_decision_points    en el TRAMO 6: NO
+     customer_discovery                     deprecado: None   resuelve a customer_discovery               en el TRAMO 6: NO
+     ab_testing_optimizacion                deprecado: None   resuelve a ab_testing_optimizacion          en el TRAMO 6: NO
+     brainstorming_divergente               deprecado: True   resuelve a reglas_brainstorming             en el TRAMO 6: NO
+   CAMINO 2: VERDE, ningun ajeno entra tampoco bajo el resolutor.
+
+--- GUARDA DE SOLAPE CON LOS TRAMOS 1, 2, 3, 4, 5 (TODOS los previos, no tres) ---
+   actos del tramo 6 que tocan un miembro de un tramo anterior: 0
+   GUARDA: VERDE, ningun solape
+
+--- EL TRAMO 6, EN EL ORDEN IMPRESO ---
+
+  acto hoy   en 48  tamano  clases internas      miembros
+  1    30    250    2       {'A': 1}             administracion_sin_miedo, gestion_miedo_reportes
+  2    31    251    2       {'A': 1}             contacto_con_el_cliente, contacto_con_el_cliente_2
+  3    32    252    2       {'A': 1}             analisis_de_sistemas_de_medicion_msa, errores_de_medicion
+  4    33    253    2       {'A': 1}             definicion_problema_moms, definicion_problema_moms_2
+  5    34    254    2       {'A': 1}             gobierno_corporativo_juntas_directivas, planificacion_gobierno_organizaciones_familiares
+  6    35    255    2       {'A': 1}             falacia_recompensa_loteria, sistemas_recompensa_aleatorios
+  7    36    256    2       {'A': 1}             comparacion_inspectores_independientes, riesgos_consenso_inspeccion
+  8    37    257    2       {'A': 1}             revision_progreso, revision_progreso_breakthrough
+  9    38    258    2       {'A': 1}             gestion_estrategica_de_calidad_sqm, rol_tactico_estrategico_oficina
+  10   39    259    2       {'A': 1}             juran_transformation_roadmap, roadmap_despliegue_lean_six_sigma
+  11   40    260    2       {'A': 1}             eliminacion_barreras_orgullo_del_trabajo, orgullo_por_el_trabajo
+  12   41    261    2       {'A': 1}             cinco_suposiciones_erroneas_calidad, concepto_supuestos_erroneos_sobre_calidad
+  13   42    262    2       {'A': 1}             estadistico_competente_organizacion, organizacion_liderazgo_estadistico
+  14   43    263    2       {'A': 1}             kanban_pull_system, sistema_pull_push
+  15   44    264    2       {'A': 1}             cultura_integridad_objetividad_resolucion_problemas, manejo_problemas
+  16   45    265    2       {'A': 1}             cambio_actitud_gerencial, seminario_de_exito_para_gerencia
+  17   46    266    2       {'A': 1}             evaluacion_organizacional_calidad, evaluacion_riesgo_calidad_organizacional
+  18   47    267    2       {'A': 1}             control_del_proceso_del_proveedor, planificacion_tecnologica_conjunta
+  19   48    268    2       {'A': 1}             getting_started_incident_response, respuesta_incidentes_cui
+  20   49    269    2       {'A': 1}             getting_started_maintenance, mantenimiento_sistema_cui
+  21   50    270    2       {'A': 1}             funcion_protect_politica_seguridad, protect_medidas_tecnicas
+
+  actos del tramo 6      : 21  (TRAMO CORTO POR AGOTAMIENTO: la vara pide 50)
+  por tamano             : {2: 21}
+  por figura             : {'PURO A': 21, 'MIXTO': 0}
+  nodos implicados       : 42
+  nodos que MORIRIAN si se funden todos: 21
+
+--- LOS QUE NO SON DE FUSION PURA (tamano 2 y PURO A), NOMBRADOS ---
+   NINGUNO: los 21 son de fusion pura, tamano 2 y PURO A.
+
+  escrito: docs/loop/_v62_caso_positivo_aviso.jsonl
+
+FIN
