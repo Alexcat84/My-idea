@@ -1,0 +1,55 @@
+==============================================================================
+LOS SITIOS DE LA PROMESA DE MARCADO DE LA VUELTA 62, MEDIDOS
+  planes  : docs/loop/PLAN_V62_OPU01_LOTE_A.json, docs/loop/PLAN_V62_OPU01_LOTE_B.json
+  reporte : docs/loop/REPORTE.md (cabecera: # REPORTE DE LA VUELTA 62 (20 ago 2026, ejecutor Opus 5))
+  seccion 6 leida: 3586 caracteres
+==============================================================================
+
+A) LOS SITIOS QUE PROMETEN (frase 'VA MARCADO COMO DISCUTIBLE'):
+
+acto   lote   campo              dice EN   cumplida  por donde se busco en la seccion 6
+                                 EL REPORTE           
+--------------------------------------------------------------------------------------------------------------
+5      A      motivo             SI        SI        acto 5, planificacion_gobierno_organizaciones_familiares
+7      A      motivo             NO        NO        ninguna de: acto 7, acto **7**, riesgos_consenso_inspeccion, comparacion_inspectores_independientes
+9      A      motivo             SI        NO        ninguna de: acto 9, acto **9**, rol_tactico_estrategico_oficina, gestion_estrategica_de_calidad_sqm
+10     A      motivo             SI        NO        ninguna de: acto 10, acto **10**, roadmap_despliegue_lean_six_sigma, juran_transformation_roadmap
+12     B      motivo             NO        NO        ninguna de: acto 12, acto **12**, cinco_suposiciones_erroneas_calidad, concepto_supuestos_erroneos_sobre_calidad
+15     B      motivo             NO        NO        ninguna de: acto 15, acto **15**, manejo_problemas, cultura_integridad_objetividad_resolucion_problemas
+19     B      motivo             NO        NO        ninguna de: acto 19, acto **19**, respuesta_incidentes_cui, getting_started_incident_response
+
+  promesas medidas      : 7
+  promesas CUMPLIDAS    : 1
+  promesas INCUMPLIDAS  : 6, en los actos 7, 9, 10, 12, 15, 19
+
+B) EL OTRO LADO DE LA VARA, para que se vea que la vara separa: sitios que
+   solo usan la palabra discutible SIN prometer marcado, y que NO cuentan:
+     PLAN_V62_OPU01_LOTE_A.json             acto 6   campo motivo
+     PLAN_V62_OPU01_LOTE_A.json             acto 11  campo motivo
+     PLAN_V62_OPU01_LOTE_B.json             acto 12  campo nota_del_reparto
+   son 3, y ninguno entra en la cuenta de arriba.
+
+C) LA FRASE ENTERA DE CADA PROMESA, para que el registro no dependa de esta tabla:
+
+   acto 5   (PLAN_V62_OPU01_LOTE_A.json, campo motivo)
+      VA MARCADO COMO DISCUTIBLE en el reporte precisamente por eso: es el acto del lote donde la vara de contenido y el cableado apuntan mas lejos uno del otro.
+
+   acto 7   (PLAN_V62_OPU01_LOTE_A.json, campo motivo)
+      VA MARCADO COMO DISCUTIBLE porque la propia razon trae un discutible fuerte: uno es un PROCEDIMIENTO de medicion de la variacion entre inspectores y el otro una ADVERTENCIA conceptual sobre el consenso.
+
+   acto 9   (PLAN_V62_OPU01_LOTE_A.json, campo motivo)
+      La diferencia del cableado es la mas estrecha del lote, UNA arista, y por eso VA MARCADO COMO DISCUTIBLE en el reporte.
+
+   acto 10  (PLAN_V62_OPU01_LOTE_A.json, campo motivo)
+      VA MARCADO COMO DISCUTIBLE en el reporte porque la propia razon lo marca fuerte: uno se rotula transformacion Juran y el otro despliegue Lean Six Sigma.
+
+   acto 12  (PLAN_V62_OPU01_LOTE_B.json, campo motivo)
+      VA MARCADO COMO DISCUTIBLE porque la propia razon lo marca fuerte: concepto trae las sesiones y los testimonios como despliegue y cinco trae buscar el origen real de los defectos.
+
+   acto 15  (PLAN_V62_OPU01_LOTE_B.json, campo motivo)
+      La diferencia del cableado es de UNA arista, la mas estrecha del lote, y por eso VA MARCADO COMO DISCUTIBLE.
+
+   acto 19  (PLAN_V62_OPU01_LOTE_B.json, campo motivo)
+      VA MARCADO COMO DISCUTIBLE porque la razon lo marca fuerte y porque es el primer par del dominio seguridad_digital que cruza a A.
+
+FIN

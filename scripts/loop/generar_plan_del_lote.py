@@ -44,11 +44,31 @@ INCISO desde el nodo comparando sin tildes con su comprobacion verbatim, la
 guarda de la juntura, el campo declarados_y_no_fundidos, y el numero de tramo
 leido de la clave del ordinal del propio fichero medido.
 
+  5. LA CABECERA SE ARMA DEL INSUMO O DECLARA SU FALTA, y ya no es un dict
+     constante con las cifras de un tramo talladas dentro. Es la CORRECCION
+     DECLARADA de la vuelta 63 (20 ago 2026, TAREA 1.b del encargo), nacida del
+     censo scripts/loop/censo_de_plantillas_talladas.py, que dio UN solo TALLADO
+     en los quince instrumentos de nombre estable y era este fichero. El texto
+     viejo queda citado ENTERO en el comentario que hay justo encima de
+     VARA_DEL_SUPERVIVIENTE. Lo que trae consigo, y va enumerado aqui porque es
+     UNA GUARDA QUE CRECE y por eso va tambien MARCADA DISCUTIBLE en el reporte
+     (acta 61, D2 y pregunta 2, que pone esas dos condiciones):
+       - --operacion pasa a ser REQUERIDO. Un generador de nombre estable que da
+         OP-U-01 por supuesto miente en cuanto se use para otra operacion.
+       - --nomina, --dossier, --varas-impresas y --colisiones-esperadas son
+         opcionales, y su AUSENCIA SE DECLARA dentro del plan sellado.
+       - el cotejo del insumo contra los nodos de hoy se MIDE al sellar, sobre
+         el tramo entero, en vez de citar la salida de otra corrida.
+     LA ARITMETICA NO SE TOCA: guardas, cobertura, INCISOS, juntura, validacion
+     de perdidas y el campo actos del plan salen exactamente igual que antes.
+
 DE ESCRITURA SOLO SOBRE docs/loop/PLAN_V<N>_*.json. No toca ni un nodo.
 
 Uso:
   python scripts/loop/generar_plan_del_lote.py --lote A --vuelta 62
-      --tramo docs/loop/TRAMO6_V61.jsonl --contenido _v62_lote_a [--simular]
+      --operacion OP-U-01 --tramo docs/loop/TRAMO6_V61.jsonl
+      --contenido _v62_lote_a [--nomina ...] [--dossier ...]
+      [--varas-impresas ...] [--colisiones-esperadas ...] [--simular]
 """
 import argparse
 import datetime
@@ -69,20 +89,192 @@ CONTRATO_DE_PERDIDAS = "CAMPO PROPIO v1"
 CLAVES_DE_PERDIDA = ("especie", "que", "donde", "enrutada_a")
 ESPECIES_DE_PERDIDA = ("DE PARAMETRO DE PASO", "DE CONDICIONES", "DE NOMBRE")
 
-CABECERA = {
-    "operacion": "OP-U-01",
-    # LA FECHA SE MIDE, NO SE TECLEA (correccion nacida de la caida de la vuelta 59).
-    "fecha": datetime.date.today().isoformat(),
-    "estado": "SELLADO",
-    "nomina": "docs/loop/_v62_componentes.jsonl, el recomputo corrido ANTES de la primera operacion de la vuelta 62",
-    "tramo_definido_en": "docs/loop/TRAMO6_V61.jsonl, abierto con scripts/loop/abrir_tramo_de_opu01.py en la vuelta 61 y FIJADO ahi. EL INSUMO NO SE RE-MIDE: 21 actos, puestos 30 a 50 de hoy y 250 a 270 en la nomina de la 48, todos PURO A y fusion pura, solape con los tramos 1 a 5 CERO. ES UN TRAMO CORTO POR AGOTAMIENTO Y ES EL ULTIMO DE OP-U-01: la vara del tramo es un PREFIJO CON TOPE de cincuenta y no un minimo (acta 61, D1 y pregunta 1, registrada en docs/plan/03_FUSIONES.md). COTEJADO CONTRA LOS NODOS DE HOY antes de escribir una linea de este plan: 21 actos mirados, 21 vivos, 0 ya fundidos, DESCALCES 0 (docs/loop/SALIDA_V62_COTEJO_INSUMO.txt).",
-    "dossier": "docs/loop/SALIDA_V61_DOSSIER_TRAMO6.txt (P.5, el acto leido entero con su razon entera pegada, 848 lineas) mas docs/loop/SALIDA_V61_VARAS_TRAMO6.txt",
-    "vara": "LOS 21 ACTOS DEL TRAMO 6 SON DE FUSION PURA (medido por la vuelta 61: tamano 2 y PURO A, 21 de 21): un acto de dos miembros con UN par A directo y ningun mixto. No hay lectura P.12 que hacer. El superviviente lo elige el CONTENIDO como P.8 lo define; UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4); si TODAS las varas de contenido concuerdan se funde a su lado; si el contenido EMPATA ENTERO, EL CABLEADO DECIDE SOLO (P.8); si dos varas de contenido CHOCAN decide la pieza DECLARADA (acta 53 pregunta 3, y tambien contra DOS conteos por acta 59 pregunta 2), y si la declarada esta a los dos lados se DECLARA (acto 29 del tramo 5). Y LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1, registrada en 03_FUSIONES.md): en un acto de dos donde el unico candidato limpio es la puerta, LA PUERTA SOBREVIVE y el choque se registra en el motivo. EL ROTULO SOLO (LINEA contra PASOS) NUNCA DECIDE, y LA RAMA DE LA CANTIDAD COMO VARA SIGUE NO ADOPTADA y no se usa en ningun acto de este plan.",
-    "varas_impresas": "docs/loop/SALIDA_V61_VARAS_TRAMO6.txt, una fila por acto con pasos, condiciones y cableado contados por maquina y la FORMA del veredicto impresa: 12 de UNA SOLA VARA, 5 de TODAS DE ACUERDO y 4 de CONTENIDO EMPATA. NI UN CHOCAN Y NI UN EMPATE SIN VARA en el tramo entero, que es lo que lo hace, por forma, el tramo mas limpio de la campana. El auditor lo re-corrio en la vuelta 61 y dio diff VACIO (acta 61, seccion 1). Ninguna cifra de este plan esta tecleada. LA FORMA IMPRESA ES MEDICION DE LOS TRES CONTEOS Y NO ADJUDICACION: no conoce la pieza declarada ni la guarda 1B, y por eso un acto puede salir de la tabla apuntando a un lado y decidirse al otro, que es exactamente lo que pasa en el acto 20.",
-    "colisiones_esperadas": "docs/loop/SALIDA_V61_COLISIONES_ESPERADAS_TRAMO6.txt, medidas por la vuelta 61 ANTES de tocar un nodo sobre EL ARCHIVO ENTERO, por PAR RESUELTO: 42 combinaciones simuladas y CERO que fabriquen colision, con cualquiera de los dos supervivientes en cualquiera de los 21 actos. El censo esperado de cada lote es CERO y una colision real DETIENE.",
-    "vara_de_las_puertas": "GUARDA 1B: ningun absorbido de este plan es semilla de entrada ni extremo de puente aprobado, comprobado por el generador y otra vez por el ejecutor. EN EL TRAMO 6 HAY UN SOLO ACTO CON MIEMBRO PUERTA, EL 20 (mantenimiento_sistema_cui, leido del dossier y de la columna puerta del cuadro de varas), Y AHI LA PUERTA NO ES LA QUE EL CONTENIDO ELIGE: el choque se registra en el motivo por acta 54, pregunta 1.",
-    "politica_del_reparto": "LA HEREDADA Y CITADA, no reinventada (acta 51 D3; acta 52 D5 y D10; acta 54 pregunta 5; acta 55 preguntas 3, 4 y 5; registros de las vueltas 53 a 57 y 60): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND, y una pieza mitad propia mitad ya dicha va de APPEND ENTERO con el solape declarado para la poda de la fase 04. CUANDO LA RAZON DECLARA COMPARTIDO UN GESTO QUE EL TEXTO NO DICE, PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3). LAS PERDIDAS DE CONDICIONES NO VAN DE APPEND POR DEFECTO: se NOMBRAN mientras el INCISO de condiciones no exista (acta 55, pregunta 5), y solo van de APPEND cuando la condicion es un DISPARADOR DISTINTO y no un matiz del que el superviviente ya tiene. El INCISO es siempre TROZO VERBATIM del paso que muere, y se EXTRAE del nodo en vez de teclearse. Y LA NOVEDAD DE ESTE TRAMO: TODA perdida nombrada va ADEMAS sellada en el campo perdidas de su acto, con su especie, donde vive y a quien se enruta.",
-}
+# ======================================================================
+# CORRECCION DECLARADA (20 ago 2026, vuelta 63, TAREA 1.b del encargo).
+# LA CABECERA DE ESTE GENERADOR ERA UN dict CONSTANTE CON LAS CIFRAS DEL
+# TRAMO 6 TALLADAS DENTRO, y este fichero es de NOMBRE ESTABLE: corrido
+# sobre cualquier otro tramo habria SELLADO un plan cuya cabecera afirma
+# 21 actos, 42 combinaciones y 848 lineas de dossier sin haber medido
+# ninguna de las tres. Es la misma especie que la vuelta 62 cazo en
+# registrar_cierre_de_tramo.py, y aqui la caza el censo de esta vuelta:
+# scripts/loop/censo_de_plantillas_talladas.py da UN solo TALLADO en los
+# quince instrumentos de nombre estable, y es este fichero, con NUEVE
+# cantidades talladas en las lineas 78, 79, 80 y 82
+# (docs/loop/SALIDA_V63_CENSO_PLANTILLAS.txt).
+#
+# LA VARA QUE MANDA ES LA REGLA 1 DEL EJECUTOR LEIDA ENTERA, y el acta 62
+# pregunta 1 (linea 16171) la aplica a este caso con todas sus letras: una
+# plantilla con cifras talladas hace decir al instrumento cifras que NO
+# midio, o sea viola EL INSTRUMENTO MANDA cada vez que corre. La forma
+# debida, que es la que queda abajo: EL BLOQUE SE ARMA DEL INSUMO O
+# DECLARA SU FALTA.
+#
+# EL TEXTO VIEJO SE QUEDA ESCRITO ENTERO AQUI, que es lo que hace
+# auditable la correccion. Decia, literal:
+#
+#   CABERERA = {
+#     "operacion": "OP-U-01",
+#     "fecha": datetime.date.today().isoformat(),
+#     "estado": "SELLADO",
+#     "nomina": "docs/loop/_v62_componentes.jsonl, el recomputo corrido ANTES de la primera operacion de la vuelta 62",
+#     "tramo_definido_en": "docs/loop/TRAMO6_V61.jsonl, abierto con scripts/loop/abrir_tramo_de_opu01.py en la vuelta 61 y FIJADO ahi. EL INSUMO NO SE RE-MIDE: 21 actos, puestos 30 a 50 de hoy y 250 a 270 en la nomina de la 48, todos PURO A y fusion pura, solape con los tramos 1 a 5 CERO. ES UN TRAMO CORTO POR AGOTAMIENTO Y ES EL ULTIMO DE OP-U-01: la vara del tramo es un PREFIJO CON TOPE de cincuenta y no un minimo (acta 61, D1 y pregunta 1, registrada en docs/plan/03_FUSIONES.md). COTEJADO CONTRA LOS NODOS DE HOY antes de escribir una linea de este plan: 21 actos mirados, 21 vivos, 0 ya fundidos, DESCALCES 0 (docs/loop/SALIDA_V62_COTEJO_INSUMO.txt).",
+#     "dossier": "docs/loop/SALIDA_V61_DOSSIER_TRAMO6.txt (P.5, el acto leido entero con su razon entera pegada, 848 lineas) mas docs/loop/SALIDA_V61_VARAS_TRAMO6.txt",
+#     "vara": "LOS 21 ACTOS DEL TRAMO 6 SON DE FUSION PURA (medido por la vuelta 61: tamano 2 y PURO A, 21 de 21): un acto de dos miembros con UN par A directo y ningun mixto. No hay lectura P.12 que hacer. El superviviente lo elige el CONTENIDO como P.8 lo define; UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4); si TODAS las varas de contenido concuerdan se funde a su lado; si el contenido EMPATA ENTERO, EL CABLEADO DECIDE SOLO (P.8); si dos varas de contenido CHOCAN decide la pieza DECLARADA (acta 53 pregunta 3, y tambien contra DOS conteos por acta 59 pregunta 2), y si la declarada esta a los dos lados se DECLARA (acto 29 del tramo 5). Y LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1, registrada en 03_FUSIONES.md): en un acto de dos donde el unico candidato limpio es la puerta, LA PUERTA SOBREVIVE y el choque se registra en el motivo. EL ROTULO SOLO (LINEA contra PASOS) NUNCA DECIDE, y LA RAMA DE LA CANTIDAD COMO VARA SIGUE NO ADOPTADA y no se usa en ningun acto de este plan.",
+#     "varas_impresas": "docs/loop/SALIDA_V61_VARAS_TRAMO6.txt, una fila por acto con pasos, condiciones y cableado contados por maquina y la FORMA del veredicto impresa: 12 de UNA SOLA VARA, 5 de TODAS DE ACUERDO y 4 de CONTENIDO EMPATA. NI UN CHOCAN Y NI UN EMPATE SIN VARA en el tramo entero, que es lo que lo hace, por forma, el tramo mas limpio de la campana. El auditor lo re-corrio en la vuelta 61 y dio diff VACIO (acta 61, seccion 1). Ninguna cifra de este plan esta tecleada. LA FORMA IMPRESA ES MEDICION DE LOS TRES CONTEOS Y NO ADJUDICACION: no conoce la pieza declarada ni la guarda 1B, y por eso un acto puede salir de la tabla apuntando a un lado y decidirse al otro, que es exactamente lo que pasa en el acto 20.",
+#     "colisiones_esperadas": "docs/loop/SALIDA_V61_COLISIONES_ESPERADAS_TRAMO6.txt, medidas por la vuelta 61 ANTES de tocar un nodo sobre EL ARCHIVO ENTERO, por PAR RESUELTO: 42 combinaciones simuladas y CERO que fabriquen colision, con cualquiera de los dos supervivientes en cualquiera de los 21 actos. El censo esperado de cada lote es CERO y una colision real DETIENE.",
+#     "vara_de_las_puertas": "GUARDA 1B: ningun absorbido de este plan es semilla de entrada ni extremo de puente aprobado, comprobado por el generador y otra vez por el ejecutor. EN EL TRAMO 6 HAY UN SOLO ACTO CON MIEMBRO PUERTA, EL 20 (mantenimiento_sistema_cui, leido del dossier y de la columna puerta del cuadro de varas), Y AHI LA PUERTA NO ES LA QUE EL CONTENIDO ELIGE: el choque se registra en el motivo por acta 54, pregunta 1.",
+#     "politica_del_reparto": "LA HEREDADA Y CITADA, no reinventada (acta 51 D3; acta 52 D5 y D10; acta 54 pregunta 5; acta 55 preguntas 3, 4 y 5; registros de las vueltas 53 a 57 y 60): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND, y una pieza mitad propia mitad ya dicha va de APPEND ENTERO con el solape declarado para la poda de la fase 04. CUANDO LA RAZON DECLARA COMPARTIDO UN GESTO QUE EL TEXTO NO DICE, PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3). LAS PERDIDAS DE CONDICIONES NO VAN DE APPEND POR DEFECTO: se NOMBRAN mientras el INCISO de condiciones no exista (acta 55, pregunta 5), y solo van de APPEND cuando la condicion es un DISPARADOR DISTINTO y no un matiz del que el superviviente ya tiene. El INCISO es siempre TROZO VERBATIM del paso que muere, y se EXTRAE del nodo en vez de teclearse. Y LA NOVEDAD DE ESTE TRAMO: TODA perdida nombrada va ADEMAS sellada en el campo perdidas de su acto, con su especie, donde vive y a quien se enruta.",
+#   }
+#
+# LO QUE NO CAMBIA, Y SE DICE PARA QUE NADIE LO BUSQUE EN EL DIFF: LA
+# ARITMETICA NO SE TOCA. Las guardas, la cobertura, los INCISOS extraidos
+# del nodo, la juntura, la validacion de las perdidas y el campo actos del
+# plan salen exactamente igual que antes. LO UNICO QUE CAMBIA ES DE DONDE
+# SALEN LAS CIFRAS Y LOS NOMBRES DE LA CABECERA.
+# ======================================================================
+
+# LA DOCTRINA CITADA, que NO lleva cifra medida de ningun tramo y por eso
+# si puede vivir en una constante: son citas de actas y de puntos del
+# banco, no cuentas de la corrida.
+VARA_DEL_SUPERVIVIENTE = (
+    "El superviviente lo elige el CONTENIDO como P.8 lo define; UNA SOLA VARA DE CONTENIDO "
+    "NO EMPATADA BASTA (acta 53, pregunta 4); si TODAS las varas de contenido concuerdan se "
+    "funde a su lado; si el contenido EMPATA ENTERO, EL CABLEADO DECIDE SOLO (P.8); si dos "
+    "varas de contenido CHOCAN decide la pieza DECLARADA (acta 53 pregunta 3, y tambien "
+    "contra DOS conteos por acta 59 pregunta 2), y si la declarada esta a los dos lados se "
+    "DECLARA. Y LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, "
+    "pregunta 1, registrada en docs/plan/03_FUSIONES.md): en un acto de dos donde el unico "
+    "candidato limpio es la puerta, LA PUERTA SOBREVIVE y el choque se registra en el motivo. "
+    "EL ROTULO SOLO (LINEA contra PASOS) NUNCA DECIDE, y LA RAMA DE LA CANTIDAD COMO VARA "
+    "SIGUE NO ADOPTADA."
+)
+POLITICA_DEL_REPARTO = (
+    "LA HEREDADA Y CITADA, no reinventada (acta 51 D3; acta 52 D5 y D10; acta 54 pregunta 5; "
+    "acta 55 preguntas 3, 4 y 5; registros de las vueltas 53 a 57 y 60): una pieza del "
+    "absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el "
+    "superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y "
+    "de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de "
+    "APPEND, y una pieza mitad propia mitad ya dicha va de APPEND ENTERO con el solape "
+    "declarado para la poda de la fase 04. CUANDO LA RAZON DECLARA COMPARTIDO UN GESTO QUE EL "
+    "TEXTO NO DICE, PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3). LAS PERDIDAS DE "
+    "CONDICIONES NO VAN DE APPEND POR DEFECTO: se NOMBRAN mientras el INCISO de condiciones no "
+    "exista (acta 55, pregunta 5), y solo van de APPEND cuando la condicion es un DISPARADOR "
+    "DISTINTO y no un matiz del que el superviviente ya tiene. El INCISO es siempre TROZO "
+    "VERBATIM del paso que muere, y se EXTRAE del nodo en vez de teclearse. Y BAJO EL CONTRATO "
+    "CAMPO PROPIO v1: TODA perdida nombrada va ADEMAS sellada en el campo perdidas de su acto, "
+    "con su especie, donde vive y a quien se enruta."
+)
+
+
+def insumo(ruta, que, para_que):
+    """UN BLOQUE DE CABECERA QUE VIENE DE FUERA: o se arma del fichero que entra
+    por argumento, con su tamano MEDIDO, o DECLARA su falta con todas las letras.
+    Ninguna de las dos ramas teclea una cifra."""
+    if not ruta:
+        return ("NO ENTRO NINGUN FICHERO DE %s A ESTE GENERADOR, y por eso este plan NO LO "
+                "DECLARA en vez de suponerlo. %s" % (que, para_que))
+    completa = os.path.join(RAIZ, ruta.replace("/", os.sep))
+    if not os.path.exists(completa):
+        return ("SE PASO %s COMO FICHERO DE %s Y NO EXISTE EN EL ARBOL DE HOY: el plan lo dice "
+                "en vez de callarlo. %s" % (ruta, que, para_que))
+    n = len(io.open(completa, encoding="utf-8").read().split(chr(10)))
+    return "%s (%d lineas, medidas al sellar). %s" % (ruta, n, para_que)
+
+
+def cotejo_del_insumo(filas):
+    """EL COTEJO DEL TRAMO ENTERO CONTRA LOS NODOS DE HOY, MEDIDO AL SELLAR. El
+    texto viejo de la cabecera lo traia tallado (21 actos mirados, 21 vivos, 0 ya
+    fundidos, DESCALCES 0) y apuntaba a la salida de otra corrida. Aqui se
+    cuenta, y se cuenta sobre TODAS las filas del tramo, no solo sobre el lote."""
+    mirados = len(filas)
+    vivos = fundidos = descalces = 0
+    for f in filas:
+        estados = []
+        for x in f["miembros"]:
+            p = os.path.join(NODOS, x + ".json")
+            if not os.path.exists(p):
+                estados.append("falta")
+            else:
+                d = json.load(io.open(p, encoding="utf-8"))
+                estados.append("deprecado" if (d.get("deprecado") or d.get("deprecated")) else "vivo")
+        if "falta" in estados:
+            descalces += 1
+        elif "deprecado" in estados:
+            fundidos += 1
+        else:
+            vivos += 1
+    return ("%d actos mirados, %d vivos, %d ya fundidos, DESCALCES %d, contados al sellar "
+            "sobre dataset/nodos" % (mirados, vivos, fundidos, descalces))
+
+
+def cabecera(a, filas, ORD, num_tramo, prot, cotejo):
+    """ARMA LA CABECERA DEL PLAN DESDE EL INSUMO. Cada cifra sale de filas (el
+    fichero del tramo que entra por --tramo), de los nodos que el propio
+    generador acaba de leer, o de un fichero que entra por argumento. La que no
+    tenga de donde salir NO SE ESCRIBE: se declara ausente."""
+    n = len(filas)
+    puestos_hoy = sorted(f["puesto_hoy"] for f in filas if "puesto_hoy" in f)
+    puestos_v48 = sorted(f["puesto_v48"] for f in filas if f.get("puesto_v48") is not None)
+    puros = sum(1 for f in filas if f.get("figura") == "PURO A")
+    dedos = sum(1 for f in filas if f.get("tamano") == 2)
+    con_puerta = sorted(f[ORD] for f in filas if any(x in prot for x in f["miembros"]))
+    combinaciones = sum(len(f["miembros"]) for f in filas)
+
+    rango_hoy = ("puestos %d a %d de hoy" % (puestos_hoy[0], puestos_hoy[-1])
+                 if puestos_hoy else "el fichero del tramo no trae puesto_hoy y este plan no lo inventa")
+    rango_v48 = ("y %d a %d en la nomina previa" % (puestos_v48[0], puestos_v48[-1])
+                 if puestos_v48 else "y el fichero del tramo no trae puesto de nomina previa")
+
+    if con_puerta:
+        puerta_txt = ("EN ESTE TRAMO HAY %d ACTO(S) CON MIEMBRO PUERTA, MEDIDO AL SELLAR CONTRA "
+                      "entry_seeds.json Y LOS PUENTES APROBADOS: %s. Donde la puerta no sea la "
+                      "que el contenido elige, el choque se registra en el motivo por acta 54, "
+                      "pregunta 1."
+                      % (len(con_puerta), ", ".join("acto %d" % x for x in con_puerta)))
+    else:
+        puerta_txt = ("NINGUN MIEMBRO DE ESTE TRAMO ES PUERTA, medido al sellar contra "
+                      "entry_seeds.json y los puentes aprobados.")
+
+    return {
+        "operacion": a.operacion,
+        # LA FECHA SE MIDE, NO SE TECLEA (correccion nacida de la caida de la vuelta 59).
+        "fecha": datetime.date.today().isoformat(),
+        "estado": "SELLADO",
+        "nomina": insumo(a.nomina, "NOMINA (el recomputo de componentes)",
+                         "Es el recomputo del que sale la nomina de los actos."),
+        "tramo_definido_en": (
+            "%s. EL INSUMO NO SE RE-MIDE, SE COTEJA: %d actos, %s %s, %d de figura PURO A y %d "
+            "de tamano dos, TODO MEDIDO AL SELLAR sobre ese mismo fichero. La vara del tramo es "
+            "un PREFIJO CON TOPE y no un minimo (acta 61, D1 y pregunta 1, registrada en "
+            "docs/plan/03_FUSIONES.md). COTEJADO CONTRA LOS NODOS DE HOY antes de escribir una "
+            "linea de este plan: %s."
+            % (a.tramo, n, rango_hoy, rango_v48, puros, dedos, cotejo)),
+        "dossier": insumo(a.dossier, "DOSSIER",
+                          "Es la lectura P.5, el acto leido entero con su razon entera pegada."),
+        "vara": ("DE LOS %d ACTOS DEL TRAMO, %d SON DE FUSION PURA, medido al sellar sobre el "
+                 "fichero del tramo (figura PURO A y tamano dos): un acto de dos miembros con "
+                 "UN par A directo y ningun mixto. %s"
+                 % (n, min(puros, dedos), VARA_DEL_SUPERVIVIENTE)),
+        "varas_impresas": insumo(
+            a.varas_impresas, "CUADRO DE VARAS",
+            "Es una fila por acto con pasos, condiciones y cableado contados por maquina y la "
+            "FORMA del veredicto impresa. ESTE GENERADOR NO RE-CUENTA ESA FORMA Y POR ESO NO "
+            "PUBLICA SU REPARTO: quien la quiera, la lee de ese fichero. LA FORMA IMPRESA ES "
+            "MEDICION DE LOS TRES CONTEOS Y NO ADJUDICACION: no conoce la pieza declarada ni la "
+            "guarda 1B, y por eso un acto puede salir de la tabla apuntando a un lado y "
+            "decidirse al otro."),
+        "colisiones_esperadas": (
+            "%s COMBINACIONES POSIBLES DE SUPERVIVIENTE EN ESTE TRAMO: %d, contadas al sellar "
+            "como la suma de los miembros de los %d actos. El censo esperado de cada lote lo "
+            "fija ese fichero y una colision real DETIENE."
+            % (insumo(a.colisiones_esperadas, "COLISIONES ESPERADAS",
+                      "Es el censo por PAR RESUELTO sobre el archivo entero, medido ANTES de "
+                      "tocar un nodo."), combinaciones, n)),
+        "vara_de_las_puertas": (
+            "GUARDA 1B: ningun absorbido de este plan es semilla de entrada ni extremo de puente "
+            "aprobado, comprobado por el generador y otra vez por el ejecutor. %s" % puerta_txt),
+        "politica_del_reparto": POLITICA_DEL_REPARTO,
+    }
 
 
 def cargar_jsonl(p):
@@ -139,6 +331,20 @@ def main():
                     help="modulo del contenido editorial del lote, por ejemplo _v62_lote_a")
     ap.add_argument("--vuelta", type=int, required=True)
     ap.add_argument("--tramo", default="docs/loop/TRAMO5_V58.jsonl")
+    # CORRECCION DECLARADA (20 ago 2026, vuelta 63): LOS CINCO NOMBRES Y FICHEROS
+    # QUE LA CABECERA CITABA TALLADOS AHORA ENTRAN POR ARGUMENTO. --operacion es
+    # REQUERIDO porque un generador de nombre estable que da OP-U-01 por supuesto
+    # miente en cuanto se use para otra operacion; los otros cuatro son
+    # opcionales y su ausencia se DECLARA en el plan en vez de suponerse.
+    ap.add_argument("--operacion", required=True,
+                    help="id de la operacion que este plan ejecuta, por ejemplo OP-U-01")
+    ap.add_argument("--nomina", default=None,
+                    help="jsonl del recomputo de componentes del que sale la nomina")
+    ap.add_argument("--dossier", default=None, help="salida de la lectura P.5 del tramo")
+    ap.add_argument("--varas-impresas", dest="varas_impresas", default=None,
+                    help="salida del cuadro de varas del tramo")
+    ap.add_argument("--colisiones-esperadas", dest="colisiones_esperadas", default=None,
+                    help="salida del censo de colisiones esperadas del tramo")
     ap.add_argument("--prefijo", default=None,
                     help="prefijo del plan; por defecto PLAN_V<vuelta>_OPU01_LOTE_")
     ap.add_argument("--simular", action="store_true")
@@ -159,6 +365,7 @@ def main():
 
     tramo = {r[ORD]: r for r in filas}
     prot = puertas()
+    cotejo_txt = cotejo_del_insumo(filas)
     # CAMBIO 1 DECLARADO: EL CONTENIDO EDITORIAL NO VIVE EN ESTE FICHERO. El
     # ancestro llevaba el lote A del tramo 5 escrito dentro y los otros dos por
     # import TALLADO. Aqui el modulo entra por --contenido y este generador no
@@ -345,7 +552,7 @@ def main():
         for p_ in x["perdidas"]:
             print("        acto %-3d %-22s %s" % (x["orden"], p_["especie"], p_["que"]))
 
-    plan = dict(CABECERA)
+    plan = cabecera(a, filas, ORD, num_tramo, prot, cotejo_txt)
     # CAMBIO 4 DECLARADO: LA RAIZ DECLARA EL CONTRATO. Sin esta linea el tallador
     # nuevo se niega a leer por campo y exige --por-token con todas sus letras:
     # el modo no se elige en silencio.

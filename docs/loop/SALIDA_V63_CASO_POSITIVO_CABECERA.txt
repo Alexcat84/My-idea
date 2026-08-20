@@ -1,0 +1,57 @@
+==============================================================================
+CASO POSITIVO DE LA CORRECCION DE LA CABECERA DE scripts/loop/generar_plan_del_lote.py
+  la mitad COMO ESTABA sale del commit 630c6d19, extraido con git show
+  la mitad COMO QUEDA sale del fichero de hoy
+==============================================================================
+
+------------------------------------------------------------------------------
+1. COMO ESTABA: la cabecera vieja es un dict CONSTANTE
+------------------------------------------------------------------------------
+   tramo_definido_en      docs/loop/TRAMO6_V61.jsonl, abierto con scripts/loop/abrir_tramo_de_opu01.py en la vuelta 61 y FIJADO ahi. EL INSUMO NO SE RE-MIDE: 21 actos, puestos 
+   dossier                docs/loop/SALIDA_V61_DOSSIER_TRAMO6.txt (P.5, el acto leido entero con su razon entera pegada, 848 lineas) mas docs/loop/SALIDA_V61_VARAS_TRAMO6.txt
+   vara                   LOS 21 ACTOS DEL TRAMO 6 SON DE FUSION PURA (medido por la vuelta 61: tamano 2 y PURO A, 21 de 21): un acto de dos miembros con UN par A directo y nin
+   colisiones_esperadas   docs/loop/SALIDA_V61_COLISIONES_ESPERADAS_TRAMO6.txt, medidas por la vuelta 61 ANTES de tocar un nodo sobre EL ARCHIVO ENTERO, por PAR RESUELTO: 42 co
+   vara_de_las_puertas    GUARDA 1B: ningun absorbido de este plan es semilla de entrada ni extremo de puente aprobado, comprobado por el generador y otra vez por el ejecutor. 
+
+   LAS TRES CIFRAS TALLADAS ESTAN DONDE EL CENSO LAS PUSO: 21 actos,
+   42 combinaciones y 848 lineas. NO DEPENDEN DE NINGUN ARGUMENTO: son
+   valores de un dict de modulo, asi que salen iguales corra lo que corra.
+
+------------------------------------------------------------------------------
+2. COMO QUEDA, SOBRE EL INSUMO VERDADERO: tiene que dar lo mismo que los
+   planes sellados de la vuelta 62 llevan
+------------------------------------------------------------------------------
+   tramo_definido_en : docs/loop/TRAMO6_V61.jsonl. EL INSUMO NO SE RE-MIDE, SE COTEJA: 21 actos, puestos 30 a 50 de hoy y 250 a 270 en la nomina previa, 21 de figura PURO A y 21 de tamano dos, TODO MEDIDO AL SELLAR sobre ese mismo fichero. La 
+   vara              : DE LOS 21 ACTOS DEL TRAMO, 21 SON DE FUSION PURA, medido al sellar sobre el fichero del tramo (figura PURO A y tamano dos): un acto de dos miembros co
+   colisiones        :  POSIBLES DE SUPERVIVIENTE EN ESTE TRAMO: 42, contadas al sellar como la suma de los miembros de los 21 actos. El censo esperado de cada lote lo fija ese fichero y una colision real DETIENE.
+   puertas           : MIEMBRO PUERTA, MEDIDO AL SELLAR CONTRA entry_seeds.json Y LOS PUENTES APROBADOS: acto 20. Donde la puerta no sea la que el contenido elige, el choque se registra en el motivo por acta 54, pregunta 1.
+
+   MEDIDO HOY: 21 actos y 42 combinaciones.
+   EL PLAN SELLADO DE LA VUELTA 62 DICE: 21 actos y 42 combinaciones.
+   CALZAN. LA CORRECCION HONRA EL CONTEO, NO LO ACOMODA.
+
+------------------------------------------------------------------------------
+3. COMO QUEDA, SOBRE UN INSUMO DISTINTO: ahi es donde la vieja mentia
+------------------------------------------------------------------------------
+   la de HOY  : docs/loop/TRAMO6_V61.jsonl. EL INSUMO NO SE RE-MIDE, SE COTEJA: 3 actos, puestos 30 a 32 de hoy y 250 a 252 en la nomina previa, 3 de figura PURO A y 3 de tamano dos, TODO MEDIDO AL SELLAR sobre ese mismo fiche
+   la VIEJA   : docs/loop/TRAMO6_V61.jsonl, abierto con scripts/loop/abrir_tramo_de_opu01.py en la vuelta 61 y FIJADO ahi. EL INSUMO NO SE RE-MIDE: 21 actos, puestos 30 a 50 de hoy y 250 a 270 en la nomina de la 48, todos PURO
+
+   CON TRES ACTOS DE INSUMO, LA DE HOY DICE TRES Y LA VIEJA SIGUE
+   DICIENDO VEINTIUNO. Esa es la mentira, y esa es la que se corrige.
+
+------------------------------------------------------------------------------
+4. LA FALTA, DECLARADA: sin los cuatro ficheros externos, los cuatro
+   bloques lo dicen en vez de suponerlo
+------------------------------------------------------------------------------
+   nomina                 DECLARA LA FALTA
+   dossier                DECLARA LA FALTA
+   varas_impresas         DECLARA LA FALTA
+   colisiones_esperadas   DECLARA LA FALTA
+
+   Y CON EL FICHERO PUESTO, LA CIFRA SE MIDE en vez de tallarse:
+   dossier            : docs/loop/SALIDA_V61_DOSSIER_TRAMO6.txt (849 lineas, medidas al sellar). Es la lectura P.5, el acto leido entero con su razon entera pegada.
+   lineas contadas fuera del generador, con python: 849
+
+==============================================================================
+LAS CUATRO PRUEBAS EN VERDE.
+==============================================================================
