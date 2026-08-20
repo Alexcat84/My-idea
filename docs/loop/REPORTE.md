@@ -1,314 +1,271 @@
-# REPORTE DE LA VUELTA 61 (20 ago 2026, ejecutor Opus 5)
+# REPORTE DE LA VUELTA 62 (20 ago 2026, ejecutor Opus 5)
 
-**LO PRIMERO, PORQUE EL ENCARGO MANDA DECIRLO PRIMERO: EL LOTE A DEL TRAMO 6 NO SE EJECUTA EN ESTA
-VUELTA.** Se entrega **LA APERTURA ENTERA** del tramo 6 con sus cuatro piezas por instrumento y sus
-guardas en verde, mas el contrato de la perdida sellada con su tallador y su caso positivo. Es la via
-que el **acta 58, pregunta 6** deja escrita. **NINGUN NODO SE TOCO EN ESTA VUELTA:** el grafo cierra
-igual que abrio, celda por celda.
+**LO PRIMERO, PORQUE ES LO QUE LA VUELTA ENTREGA Y ES MAS DE LO QUE EL ENCARGO PEDIA: EL LOTE A DEL
+TRAMO 6 SE EJECUTO ENTERO, Y EL LOTE B TAMBIEN. EL TRAMO 6 QUEDA CERRADO CON 21 ACTOS FUNDIDOS DE 21
+Y CERO DECLARADOS, Y CON EL, EL UNIVERSO DE `OP-U-01` QUEDA AGOTADO.** El encargo permitia entregar
+solo lo que cerrara entero (acta 58, pregunta 6) y **cerro entero el tramo**.
 
-**LA FECHA DE ARRIBA ESTA MEDIDA POR DOS RELOJES Y NO SUPUESTA:** `date` del sistema da `2026-08-20` y
-`git log -1 --date=format:'%Y-%m-%d'` da `2026-08-20`. Es la misma medicion que
-`scripts/loop/triage_ambar_titulos.py` escribe en el `corte=` de cada uno de los 25 rotulos que sello
-hoy, y ese instrumento **cae en ROJO sin escribir si los dos relojes no coinciden**.
+**LA FECHA DE ARRIBA ESTA MEDIDA POR DOS RELOJES Y NO SUPUESTA:** `date` del sistema da `2026-08-20`
+y `git log -1 --date=format:'%Y-%m-%d'` da `2026-08-20`. Es la misma medicion que el campo `fecha` de
+los dos planes sellados, que la lee del reloj y no de una constante.
 
-**LA RACHA DE REPORTE ESTABA EN DOS Y EL FRENO VA DELANTE.** La regla de dictado que el encargo pone
-para este reporte se aplica en cada seccion: **todo instrumento que cayo en ROJO y luego quedo
-arreglado se dicta con las DOS mitades en la misma frase**, cayo Y como quedo. Los cuatro sitios donde
-esta vuelta tuvo un ROJO propio estan dictados asi y van nombrados en la seccion 8.
+**LAS DOS RACHAS ESTABAN EN CERO Y EL FRENO VA DELANTE.** Los sitios donde esta vuelta tuvo un `ROJO`
+o un `AMBAR` propio estan dictados **con las DOS mitades en la misma frase**, cayo Y como quedo, y
+van nombrados uno a uno en la seccion 7.
 
-**EL HALLAZGO DE LA VUELTA, Y NO ES DE INSTRUMENTO SINO DE FONDO: OP-U-01 SE ESTA ACABANDO.** El
-abridor del tramo 6 midio que **fuera de los tramos 1 a 5 quedan VEINTIUNO actos `CERRADOS`, no
-cincuenta**. La vara pide cincuenta. El abridor **no recorto, no relleno y no callo**: se llevo el
-resto entero, comprobo que no deja ni un acto fuera y lo declaro como **TRAMO CORTO POR AGOTAMIENTO,
-PENDIENTE DE DOCTRINA**. Va como pregunta 1 al auditor.
+**EL HALLAZGO DE LA VUELTA NO ES DE FONDO SINO DE INSTRUMENTO, Y SALE DE SIMULAR, NO DE LEER:
+`registrar_cierre_de_tramo.py`, que es de NOMBRE ESTABLE y se estreno hace dos vueltas, llevaba TRES
+BLOQUES DE SU PLANTILLA TALLADOS A MANO CON LAS CIFRAS DEL TRAMO 5.** Corrido tal cual habria
+publicado en el registro del tramo 6 que se miraron **50 actos con 34 vivos y 16 ya fundidos** (aqui
+son **21, 21 y 0**), la casilla **`0 / 50`** en un tramo de **21**, y una nota afirmando que el lote A
+ya estaba fundido al tomar la apertura, **que es falso en un tramo que abre y cierra en la misma
+vuelta**. **Se cazo en la corrida `--simular`, antes de escribir una linea**, y va en la seccion 5.
 
 | | |
 |---|---|
 | **rama** | `pasada-unica` |
-| **hash de apertura** | `eda42bc2` (el commit del acta 60), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** (`git status --porcelain` VACIO, comprobado) |
-| **hash final** | **`7682b973`**, el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas este ultimo, que solo escribe esta celda y la de los commits porque el commit del reporte no podia contener su propio hash |
-| **commits de la vuelta** | **5** antes de este, leidos de `git log --format=%h eda42bc2..HEAD`: `027606a6` (apertura medida), `789564f8` (TAREA 1, los 35 AMBAR), `32d6fcf3` (TAREA 2.1, el abridor estable y el tramo 6), `ccf2832b` (TAREA 2.2, varas, dossier, colisiones y el contrato de perdidas), `7682b973` (este reporte), **mas el que escribe estas dos celdas**, leidos DESPUES de escribir el reporte |
-| **arbol al cierre** | limpio tras este commit |
+| **hash de apertura** | `d9fd6a54` (el commit del acta 61), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** (`git status --porcelain` VACIO, comprobado) |
+| **hash final** | **el commit de este reporte**, pusheado a `origin/pasada-unica`, mas el que escribe esta celda, porque el commit del reporte no puede contener su propio hash |
+| **commits de la vuelta** | **5**, leidos de `git log --format=%h d9fd6a54..HEAD`: `fdbaf979` (apertura medida), `dcb20469` (TAREA 1 entera), `7a467818` (LOTE A), `01fb303f` (LOTE B mas el registro del tramo), el de este reporte, **mas el que escribe esta celda** |
+| **arbol al cierre** | limpio tras el commit del reporte |
 
 ---
 
 ## 0. LA APERTURA Y EL CIERRE, LA TABLA TALLADA POR INSTRUMENTO (regla 1)
 
 **NINGUNA CELDA ESTA TECLEADA:** sale entera de
-`python scripts/loop/tallar_cabecera_reporte.py --vuelta 61`
-([`SALIDA_V61_TALLAR_CABECERA.txt`](SALIDA_V61_TALLAR_CABECERA.txt)). **Las dos columnas se leen de
+`python scripts/loop/tallar_cabecera_reporte.py --vuelta 62`
+([`SALIDA_V62_TALLAR_CABECERA.txt`](SALIDA_V62_TALLAR_CABECERA.txt)). **Las dos columnas se leen de
 ficheros DISTINTOS.**
 
 | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
 | marcador `A` / `B` / `C` / `D` | 551 / 72 / 5 / 2.760 | **551 / 72 / 5 / 2.760** |
 | `n`, huecos, duplicados | 3.388 / 0 / 0 | **3.388 / 0 / 0** |
-| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.295 / 558 / 17.449 | **3.853 / 3.295 / 558 / 17.449** |
-| retrato: `A` crudas / colapsos / pares distintos | 551 / 254 / 297 | **551 / 254 / 297** |
-| actos (componentes) | 103 | **103** |
-| actos `CERRADOS` / `ABIERTOS` | 50 / 53 | **50 / 53** |
-| nodos en `CERRADOS` / `ABIERTOS` | 109 / 240 | **109 / 240** |
-| cola de costuras | 1.460 | **1.460** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.295 / 558 / 17.449 | **3.853 / 3.274 / 579 / 17.486** |
+| retrato: `A` crudas / colapsos / pares distintos | 551 / 254 / 297 | **551 / 275 / 276** |
+| actos (componentes) | 103 | **82** |
+| actos `CERRADOS` / `ABIERTOS` | 50 / 53 | **29 / 53** |
+| nodos en `CERRADOS` / `ABIERTOS` | 109 / 240 | **67 / 240** |
+| cola de costuras | 1.460 | **1.456** |
 | colisiones de clase vigentes | 0 | **0** |
-| auto-pares (los dos lados al mismo vivo) | 232 | **232** |
-| duplicadas historicas: grupos / nodos | 935 / 741 | **935 / 741** |
+| auto-pares (los dos lados al mismo vivo) | 232 | **253** |
+| duplicadas historicas: grupos / nodos | 935 / 741 | **928 / 735** |
 | operaciones, estados, dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
 | entradas del inventario | 672 | **672** |
-| las cuatro comprobaciones de `08_VERIFICACION` | TODAS OK (349 igual a 349; 297 igual a 297) | **TODAS OK (349 igual a 349; 297 igual a 297)** |
+| las cuatro comprobaciones de `08_VERIFICACION` | TODAS OK (349 igual a 349; 297 igual a 297) | **TODAS OK (307 igual a 307; 276 igual a 276)** |
 
-**LAS DOS COLUMNAS SON IGUALES EN LAS CATORCE FILAS, Y ESO NO SE PUBLICA COMO SI FUERA SOLO,** porque
-es exactamente la forma que tenia la caida de la vuelta 56 (heredar el lado de enfrente). **El propio
-tallador lo avisa** al pie de su salida. Lo que lo sostiene aqui: **esta vuelta no toco ni un nodo**
-(la fase de ejecucion no abrio ningun lote), y las dos columnas se leen de **ficheros distintos**,
-`SALIDA_V61_*_APERTURA.txt` y `SALIDA_V61_*_CIERRE.txt`, medidos con **horas** distintas.
+**LA APERTURA CALZA AL DIGITO CON EL CIERRE QUE EL ACTA 61 MIDIO POR CORRIDA PROPIA**, y eso es
+contraste, no fuente. Instrumentos de apertura corridos **ANTES de la primera operacion y con el
+arbol limpio**: [`SALIDA_V62_APERTURA.txt`](SALIDA_V62_APERTURA.txt),
+[`SALIDA_V62_MARCADOR_APERTURA.txt`](SALIDA_V62_MARCADOR_APERTURA.txt),
+[`SALIDA_V62_RECOMPUTO_APERTURA.txt`](SALIDA_V62_RECOMPUTO_APERTURA.txt),
+[`SALIDA_V62_COLA_APERTURA.txt`](SALIDA_V62_COLA_APERTURA.txt),
+[`SALIDA_V62_COLISIONES_APERTURA.txt`](SALIDA_V62_COLISIONES_APERTURA.txt),
+[`SALIDA_V62_DUPLICADAS_APERTURA.txt`](SALIDA_V62_DUPLICADAS_APERTURA.txt) y
+[`SALIDA_V62_BARRIDO_APERTURA.txt`](SALIDA_V62_BARRIDO_APERTURA.txt). **Las tres que reescriben sus
+ficheros salieron IDEMPOTENTES**, verificado por `git status`, que no listo **ni un fichero rastreado
+modificado**.
 
-**LA APERTURA CALZA AL DIGITO CON EL CIERRE QUE EL ACTA 60 MIDIO POR CORRIDA PROPIA**, y eso es
-contraste, no fuente. Instrumentos de apertura corridos **ANTES de la primera operacion**:
-[`SALIDA_V61_APERTURA.txt`](SALIDA_V61_APERTURA.txt),
-[`SALIDA_V61_MARCADOR_APERTURA.txt`](SALIDA_V61_MARCADOR_APERTURA.txt),
-[`SALIDA_V61_RECOMPUTO_APERTURA.txt`](SALIDA_V61_RECOMPUTO_APERTURA.txt),
-[`SALIDA_V61_COLA_APERTURA.txt`](SALIDA_V61_COLA_APERTURA.txt),
-[`SALIDA_V61_COLISIONES_APERTURA.txt`](SALIDA_V61_COLISIONES_APERTURA.txt) y
-[`SALIDA_V61_DUPLICADAS_APERTURA.txt`](SALIDA_V61_DUPLICADAS_APERTURA.txt).
+**LA MEDICION DE CIERRE SE RE-CORRIO DESPUES DE ESCRIBIR EL REGISTRO DEL TRAMO**, por si aquella
+escritura movia algo, y **las cuatro salidas dan `diff` VACIO contra las de antes** (estado,
+marcador, recomputo y cola). **La cabecera de arriba es la ULTIMA medicion, no una heredada.**
 
-**LA MEDICION DE CIERRE SE RE-CORRIO DESPUES DEL `Gate 0` Y DEL CICLO DE TRES**, por si aquello movia
-algo, y **las seis salidas dan `diff` VACIO** contra las publicadas (la del recomputo difiere en **una
-sola linea**, la que imprime la ruta de su propio `--salida`, y se dice en vez de llamarla vacia).
+**LAS CELDAS QUE SE MUEVEN EN 21 O EN 42 SON LAS QUE LOS DOS LOTES PREDECIAN**, una por acto fundido
+o dos por acto: vivos bajan 21, deprecados suben 21, colapsos suben 21, pares distintos bajan 21,
+actos bajan 21, `CERRADOS` bajan 21, nodos en `CERRADOS` bajan 42 y auto-pares suben 21. **Son 11 del
+lote A mas 10 del lote B**, y los dos deltas de deprecados se midieron por separado al ejecutar cada
+lote (**+11 sobre +11 esperado** y **+10 sobre +10 esperado**).
+
+**LAS TRES CELDAS QUE NO SE MUEVEN ASI, MEDIDAS Y NO SUPUESTAS:**
+
+1. **LOS ENLACES SUBEN 37** (17.449 a 17.486). Cada superviviente hereda los vecinos del que muere y
+   la fusion dedupica por literal, asi que el saldo no es multiplo de nada.
+2. **LA COLA BAJA 4** (1.460 a 1.456). Es el efecto de los pasos que se adosan y se apilan en los
+   supervivientes, que cambia su cuenta de pasos y saca a cuatro nodos del corte de la cola.
+3. **LAS DUPLICADAS BAJAN 7 (935 a 928 grupos), Y EL DIFF ESTA CORRIDO POR INSTRUMENTO, NO A OJO.**
+   **CERO grupos fabricados en los tres cortes**, y **cero renombrados**. Detalle en la seccion 4.
 
 **TASA POR DOMINIO AL CIERRE**, leida de
-[`SALIDA_V61_MARCADOR_CIERRE.txt`](SALIDA_V61_MARCADOR_CIERRE.txt): compras 0,6 (n 155) | core 22,5
+[`SALIDA_V62_MARCADOR_CIERRE.txt`](SALIDA_V62_MARCADOR_CIERRE.txt): compras 0,6 (n 155) | core 22,5
 (n 1.445) | entrega 1,2 (n 171) | environmental 16,5 (n 170) | exportacion 11,5 (n 130) | franquicias
 10,1 (n 148) | health_safety 22,4 (n 192) | quality 14,1 (n 844) | risk_management 0,0 (n 106) |
-seguridad_digital 11,1 (n 27). **IDENTICA a la de la apertura al digito, y el motivo es el mismo: no
-se fundio nada.**
+seguridad_digital 11,1 (n 27). **IDENTICA a la de la apertura al digito, y no es casualidad: fundir
+no voltea veredictos.** Lo sostiene la medicion previa del tramo: **42 combinaciones simuladas y CERO
+que fabriquen colision** ([`SALIDA_V61_COLISIONES_ESPERADAS_TRAMO6.txt`](SALIDA_V61_COLISIONES_ESPERADAS_TRAMO6.txt)).
 
 ---
 
-## 1. TAREA 1: **LOS 35 `AMBAR`, TRIADOS, Y EL VEREDICTO ESCRITO DONDE LA MAQUINA LO VUELVE A MIRAR**
+## 1. TAREA 1: **LOS REGISTROS Y LA CORRECCION DEL `%d`**
 
-El barrido dice de cada `AMBAR`, con todas sus letras, que **NO LO DECIDE**. El triage es donde el ojo
-escribe lo que leyo. **Lo que esta vuelta anade es que no lo escribe en un papel aparte: lo escribe
-DENTRO del fichero, en una forma que el barrido COTEJA EN CADA CORRIDA.**
+### 1.1 Las adjudicaciones del acta 61, registradas donde el patron de la campana las pone
 
-### 1.1 El instrumento y sus guardas
+Van al final de [`docs/plan/03_FUSIONES.md`](../plan/03_FUSIONES.md), **adosadas y SIN reescribir una
+sola linea de las secciones de arriba**, que es la via que esa pagina ya uso dos veces: las tres
+adjudicaciones del acta 52 (**linea 1250**) y la del acta 57 sobre el acto 25 (**linea 2475**), **las
+dos cotejadas HOY** abriendo el fichero, no recordadas.
 
-Nace **`scripts/loop/triage_ambar_titulos.py`**, de **nombre estable**
-([`SALIDA_V61_TRIAGE_AMBAR.txt`](SALIDA_V61_TRIAGE_AMBAR.txt)). **Sus guardas corren ANTES de escribir
-un solo byte**, y las dos primeras son la vara entera:
-
-| guarda | que hace | medido hoy |
+| | lo registrado | la vara |
 |---|---|---|
-| **la tabla contra el barrido de HOY** | si una fila dice triar algo que hoy no es un `AMBAR` vivo alli, **ROJO y CERO escrituras** | **35 de 35 cubiertas** |
-| **la cuenta cuadra o no se escribe** | si el barrido trae un `AMBAR` que la tabla no tria, **ROJO** | **ni uno de sobra ni uno de menos** |
-| **la vuelta de la cita envejecida, por DOS relojes** | `git log --diff-filter=A` y el nombre del fichero | **56 y 56: COINCIDEN** |
-| **idempotencia** | segunda corrida | **`YA ESTA`, 0 escrituras, exit 0** |
+| **a** | **EL TRAMO ES UN PREFIJO CON TOPE DE CINCUENTA, NO UN MINIMO**, y por eso **un tramo corto POR AGOTAMIENTO es un tramo**. Con su consecuencia pegada: **el tramo 6 es EL ULTIMO de `OP-U-01`**. Y con su limite: **no autoriza cortar por debajo de cincuenta habiendo actos libres detras** | acta 61, `D1` (linea **15824**) y pregunta 1 (linea **15881**); la vara es la **linea 360** de la propia pagina |
+| **b** | **UNA GUARDA PUEDE CRECER EN UN SUCESOR DECLARADO** con dos condiciones: enumerada en el docstring y marcada discutible. **No cubre crecer callando** | acta 61, `D2` (**15839**) y pregunta 2 (**15887**) |
+| **c** | **`SELLO_FIJO` NO NECESITA FUENTE EXTERNA: BASTA LA GUARDA**, porque su sujeto vive DENTRO del fichero; `PROCEDENCIA` si la necesita porque el suyo vive FUERA | acta 61, `D3` (**15847**) y pregunta 3 (**15890**) |
+| **d** | **LOS 29 VIVOS DE LOS TRAMOS 1 A 5 SON COSA JUZGADA**: quince por la via de la mesa, catorce sin cola pendiente. Prefijo de las guardas y nada mas | acta 61, pregunta 4 (**15893**) |
+| **e** | **ENTRE UN ANCESTRO QUE MIENTE EN EL TITULO Y UN SUCESOR DECLARADO QUE NO, EL SUCESOR** | acta 61, `D5` (**15861**) y pregunta 5 (**15900**) |
+| **f** | `D4`, `D6` y `D7`, **registrados sin desarrollo porque no crean carril** | acta 61, lineas **15856**, **15867** y **15873** |
 
-### 1.2 El reparto: **35 menciones, y solo UNA era una cita envejecida**
+**UN ROJO PROPIO DE ESTA MISMA TAREA, Y SE DICTA CON LAS DOS MITADES:** **CUATRO de las citas de
+linea salieron mal a la primera** (las de `D4`, `D6`, `D7` y la de *Doctrina nueva: NO*, tecleadas
+como 15855, 15868, 15874 y 15938); **Y QUEDARON ARREGLADAS antes del commit** porque se corrio un
+`sed` sobre el acta imprimiendo cada linea citada y se compararon una a una: las buenas son **15856,
+15867, 15873 y 15953**. **Es exactamente la especie que la regla 1 persigue**, y la caza no fue una
+lectura sino una medicion.
 
-| veredicto | claves | menciones | que es |
-|---|---:|---:|---|
-| **`SELLO_FIJO`** | **10** | **17** | el numero nombra el **sujeto FIJO del propio instrumento** (el registro del tramo 2, el deshacer del acto 32 del tramo 4). Salio `AMBAR` porque el **nombre** del fichero no lleva el tramo y la maquina no tenia con que cotejarlo |
-| **`PROCEDENCIA`** | **15** | **17** | el numero **nombra un ancestro a proposito**: el acta de otra vuelta, la propuesta de la 35, el instrumento del que se copio la aritmetica |
-| **`ENVEJECIDA`** | **1** | **1** | `vuelta56_varas_tramo3.py` |
+### 1.2 **LA CORRECCION DEL AVISO QUE IMPRIMIA `%d` SIN INTERPOLAR**
 
-### 1.3 **EL ROTULO NO ES UN SILENCIADOR: ES UNA DECLARACION CON GUARDA**
+Es el **hallazgo propio del auditor** (acta 61, seccion 6): la **linea 267** de
+`scripts/loop/abrir_tramo_de_opu01.py` imprimia el `AVISO` con los **dos `%d` sin argumentos**.
+**QUEDA ARREGLADA con nota fechada y el texto viejo citado entero dentro del propio fichero.**
 
-Es la via del `vigente=` de la vuelta 58 traida a esta especie. **Cada rotulo se COTEJA en cada
-corrida del barrido y el barrido prefiere `ROJO` a callar:**
+**EL CASO POSITIVO ESTA CORRIDO, NO AFIRMADO**
+([`SALIDA_V62_CASO_POSITIVO_AVISO.txt`](SALIDA_V62_CASO_POSITIVO_AVISO.txt)), **y trae las dos
+mitades en la misma salida**:
 
-- **`SELLO_FIJO`** se coteja contra el numero tallado **y contra que el fichero NO reciba esa especie
-  por argumento**. **Un instrumento repuntable NO se puede sellar con este rotulo**, y eso es lo que
-  impide que el rotulo sea una excusa.
-- **`PROCEDENCIA`** se coteja contra la **fuente citada**, que tiene que **existir** y **contener el
-  literal de prueba**. Si el ancestro desaparece o se renombra, `ROJO`.
-- **Un rotulo que no casa con ningun `AMBAR` vivo es `ROJO` por huerfano**, para que no quede de
-  adorno cuando el titulo que cubria ya se corrigio.
-
-**Y ESTO NO SE AFIRMA, SE PROBO SEMBRANDO TRES AVERIAS**
-([`SALIDA_V61_CASO_POSITIVO_ROTULO.txt`](SALIDA_V61_CASO_POSITIVO_ROTULO.txt)):
-
-| averia sembrada | lo que hizo el barrido | restaurada |
+| mitad | como se midio | que imprime |
 |---|---|---|
-| el literal de prueba deja de existir en la fuente | **`ROJO` nombrando el literal y el fichero**, y `ROJO` sube de 32 a **33** | `git checkout` |
-| se le anade `--tramo` a un fichero con `SELLO_FIJO` | el titulo pasa a **`ROJO`** por la via normal **y el rotulo se va a huerfano**: las dos a la vez | `git checkout` |
-| el rotulo declara `tramo:9` y el titulo dice `TRAMO 1` | **rotulo huerfano `ROJO`** y el `AMBAR` **vuelve a salir** | `git checkout` |
+| **como estaba** | corriendo **el fichero del commit `d9fd6a54`**, extraido con `git show`, con el mismo comando | `se pidio el tramo %d y el medido es el %d` |
+| **como queda** | `--tramo-numero 6` sobre el censo que **ya ve el tramo 6 fijado**, asi que el medido es el **7** y el camino se alcanza | `se pidio el tramo 6 y el medido es el 7` |
 
-**El arbol quedo limpio tras las tres restauraciones, comprobado por `git status`.**
+**LA SALIDA DE PRUEBA NO SE PUBLICA Y SE BORRO TRAS MEDIRLA**, con el contraste anotado: daba **`diff`
+VACIO** contra [`TRAMO6_V61.jsonl`](TRAMO6_V61.jsonl). **CERO cifras publicadas dependen de ese
+camino**, y por eso es correccion y no caida, tal como el encargo lo dice.
 
-### 1.4 **LA UNICA CITA ENVEJECIDA, CORREGIDA CON EL TEXTO VIEJO CITADO**
-
-`scripts/loop/vuelta56_varas_tramo3.py` imprimia
-`EL CUADRO DE VARAS DE LOS %d ACTOS DEL TRAMO 3 (vuelta 54)`. El `(vuelta 54)` **venia del ancestro
-`vuelta54_varas_tramo2.py`, donde SI es verdad** (ahi el fichero es de la vuelta 54). **Este fichero
-nacio en la vuelta 56**, y eso **no se tecleo**: se mide con `git log --diff-filter=A`, commit
-`2743bd88`, asunto *VUELTA 56, LOTE A DEL TRAMO 3*. La correccion queda con **nota fechada y el texto
-viejo citado entero**, y la nota dice ademas lo que **no** se toco:
-
-> **EL `TRAMO 3` DE ESTA MISMA LINEA NO SE TOCA: es un `ROJO` del barrido y esta vuelta no paga
-> `ROJO`.**
-
-### 1.5 **EL BARRIDO RE-CORRIDO, CON SU RESUMEN ENTERO**
-
-```
-RESUMEN: 380 ficheros barridos, 184 con hallazgo, 196 limpios | ROJO 32, AMBAR 0, ROTULADO 34, CENSO 214, ILEGIBLE 1
-```
-
-([`SALIDA_V61_BARRIDO_TRAS_TRIAGE.txt`](SALIDA_V61_BARRIDO_TRAS_TRIAGE.txt) es el de la TAREA 1, con
-377 ficheros; el de arriba es el del cierre, con los tres instrumentos nuevos de la TAREA 2 ya
-dentro.) **Contra la apertura** ([`SALIDA_V61_BARRIDO_APERTURA.txt`](SALIDA_V61_BARRIDO_APERTURA.txt),
-`376 ficheros, 184 con hallazgo, 192 limpios | ROJO 32, AMBAR 35, CENSO 213, ILEGIBLE 1`):
-
-| celda | apertura | cierre | por que se movio, medido |
-|---|---:|---:|---|
-| **`AMBAR`** | **35** | **0** | 34 rotulados y 1 corregido |
-| **`ROTULADO`** | (no existia) | **34** | los 34 que quedaron con rotulo cotejado |
-| **`ROJO`** | **32** | **32** | **SON LOS MISMOS, comprobado por `diff` linea a linea**: solo cambian numeros de linea porque los rotulos insertados empujaron el codigo hacia abajo. **Ni uno pagado, ni uno nuevo** |
-| **`CENSO`** | **213** | **214** | la cita corregida, que ahora **calza** con el fichero |
-| **ficheros** | **376** | **380** | los cuatro instrumentos nuevos de esta vuelta, **y ninguno sale con hallazgo** |
-
-**Y NADA DE ESTO SE PUBLICA SIN CONTRASTE.** Antes de escribir **ni un rotulo**, el barrido
-**extendido** se corrio sobre el arbol **sin un solo rotulo**
-([`SALIDA_V61_BARRIDO_CONTRASTE_SIN_ROTULOS.txt`](SALIDA_V61_BARRIDO_CONTRASTE_SIN_ROTULOS.txt)) y dio
-`376 / 184 / 192, ROJO 32, AMBAR 35, CENSO 213, ILEGIBLE 1`, **identico linea a linea al barrido
-viejo** salvo la fila nueva del resumen. Es la cuarta condicion del `D7` de la vuelta 60 aplicada a mi
-mismo: **quien cambia el instrumento que va a contar sus cifras contrasta contra la cifra ya
-publicada.**
+**BARRIDO RE-CORRIDO TRAS LA CORRECCION: `diff` VACIO contra el de la apertura**, 380 barridos, `ROJO`
+32, `AMBAR` 0, `ROTULADO` 34, `CENSO` 214, `ILEGIBLE` 1, y **el abridor no sale en ninguna lista**.
 
 ---
 
-## 2. TAREA 2: **LA APERTURA DEL TRAMO 6**
+## 2. TAREA 2: **EL TRAMO 6 ENTERO, EN DOS LOTES**
 
-### 2.1 **EL ABRIDOR NACE ESTABLE, Y AHI MUERE LA CADENA DE CLONES**
+### 2.1 **LAS TABLAS, TALLADAS DE LOS PLANES SELLADOS**
 
-Nace **`scripts/loop/abrir_tramo_de_opu01.py`**: **sin numero de tramo ni de vuelta en el nombre, en
-el titulo ni en el codigo**. Es la deuda del **acta 58 pregunta 4** y la que el reporte 60 volvio a
-nombrar (`vuelta58_tramo5_nomina.py` sigue en el `ROJO` **con cuatro menciones**, y **ahi se queda**:
-esta vuelta no paga `ROJO`).
+Salen enteras de
+`python scripts/loop/tallar_planes_del_tramo.py --vuelta 62 --prefijo PLAN_V62_OPU01_LOTE_`
+([`SALIDA_V62_TALLAR_PLANES.txt`](SALIDA_V62_TALLAR_PLANES.txt)).
 
-**ES COPIA BYTE A BYTE DEL ANCESTRO** (`sha1 7d70bcfbc56a`, medido) y solo despues se le cambio lo que
-su docstring enumera. **El ancestro queda intacto y re-corrible**, que es la via del acta 54 pregunta
-3. **EL BARRIDO DA EL FICHERO NUEVO LIMPIO: no sale en `ROJO`, ni en `AMBAR`, ni en `CENSO`.**
+| lote | actos | fundidos | mueren | piezas | enteras | ya dichas | de `INCISO` | perdidas selladas |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| **A** | 1 a 11 | **11** | **11** | **69** | 14 | 45 | **10** | **12** |
+| **B** | 12 a 21 | **10** | **10** | **65** | 13 | 46 | **6** | **6** |
+| **los 2** | | **21** | **21** | **134** | **27** | **91** | **16** | **18** |
 
-| lo que cambia | de que a que | es aritmetica? |
-|---|---|---|
-| el tramo | constante `TRAMO = 5` **a** medido del censo de `TRAMO<N>_V<vuelta>.jsonl`, o `--tramo-numero` | **no** |
-| los tramos previos | tres constantes tecleadas **a** descubiertos del mismo censo | **no** |
-| tramo con varios ficheros | (no existia) **a** **manda el de la vuelta MAS BAJA**, la del dia en que se abrio, y **los descartados se imprimen con su nombre** | **no** |
-| la clave del ordinal | `orden_tramo5` tallado **a** armado del numero medido | **no** |
-| los titulos | **a** `%d` alimentado de lo medido, que es la via VERDE del barrido | **no** |
-| **la guarda de solape** | `(1, 2, 3)` tallado **a** **TODOS los previos** | **SI, Y VA COMO DISCUTIBLE `D2`** |
+| la forma, leida del motivo sellado | cuantos | los actos |
+|---|---:|---|
+| **UNA SOLA VARA de contenido no empatada, y BASTA** | **11** | 1, 3, 5, 6, 10, 12, 14, 16, 18, 19, 21 |
+| **TODAS LAS VARAS de contenido de acuerdo** | **5** | 4, 8, 11, 13, 17 |
+| **EL CONTENIDO EMPATA y EL CABLEADO DECIDE SOLO** | **4** | 2, 7, 9, 15 |
+| **LA PUERTA SOBREVIVE, con el choque registrado** | **1** | 20 |
+| **suma** | **21** | |
 
-**LA GUARDA QUE CRECE SE DICE ENTERA:** el ancestro miraba `(1, 2, 3)` escrito a mano, asi que **al
-abrir el tramo 5 se dejo fuera el tramo 4**. Una guarda que crece **no es copia**, y por eso va
-marcada.
+**CERO ACTOS DECLARADOS, Y ES EL PRIMER TRAMO DE LA CAMPANA QUE CIERRA ASI. EL MOTIVO ESTA MEDIDO Y
+NO ES MERITO:** el cuadro de varas fijado **no trae ni un `CHOCAN` ni un `EMPATE SIN VARA`**, y esas
+son **las dos unicas figuras que declaran**. **LA MESA SE QUEDA EN QUINCE ACTOS.** **La rama de LA
+CANTIDAD COMO VARA sigue NO ADOPTADA y no se uso en ningun acto de estos dos planes.**
 
-**LA REGLA DEL FICHERO DE APERTURA NACIO DE UN `ROJO` PROPIO Y SE DICTA CON LAS DOS MITADES:** la
-primera version **cayo en `ROJO` sin abrir el tramo** porque `TRAMO2_V54.jsonl` y `TRAMO2_V55.jsonl`
-reclaman los dos el tramo 2; **y quedo arreglada** midiendo la regla que el ancestro llevaba escrita a
-mano (aquel apuntaba al `V54`), o sea **manda la vuelta mas baja**, con el descartado impreso por su
-nombre.
+**LAS TRES FORMAS DE LA TABLA SON LAS DE LA LETRA VIGENTE Y NINGUNA ES NUEVA**, y la cuarta (`LA
+PUERTA SOBREVIVE`) ya la estreno el tramo 5. **EL CABLEADO SE DICE TAMBIEN CUANDO NO ENTRA:** en los
+actos **1, 5, 16 y 18** apunta al lado contrario del que gana o con ventaja ancha, y **queda escrito
+en el motivo sellado** en vez de callarse, porque por `P.8` solo habla a contenido EMPATADO.
 
-### 2.2 **EL HALLAZGO: `OP-U-01` SE ESTA ACABANDO, Y EL TRAMO 6 ES CORTO**
+### 2.2 **EL UNICO CHOQUE DE PUERTA DEL TRAMO: EL ACTO 20**
 
-**Medido** ([`SALIDA_V61_TRAMO6_ABIERTO.txt`](SALIDA_V61_TRAMO6_ABIERTO.txt)):
+`mantenimiento_sistema_cui` es **puerta** (extremo de puente aprobado, leido del dossier, que lo marca
+`PUERTA: TIENE QUE SOBREVIVIR`, y de la columna `puerta` del cuadro de varas). **Y LAS DOS VIAS
+APUNTABAN AL OTRO LADO:**
 
-| | |
-|---|---:|
-| actos `CERRADOS` hoy | **50** |
-| de esos, **VIVOS de los tramos 1 a 5** (los declarados que no se fundieron) | **29** |
-| **libres para el tramo 6** | **21** |
-| lo que la vara pide | **50** |
-
-**VERIFICADO POR CORRIDA APARTE E INDEPENDIENTE**, no por creerle al abridor: los `CERRADOS` de hoy
-fuera de los tramos 1 a 5 son **21**, y los `CERRADOS` de la nomina de la 48 fuera de ellos son
-**21** tambien.
-
-**EL ABRIDOR NO RECORTO, NO RELLENO Y NO CALLO.** Se llevo el resto entero, **comprobo que no deja ni
-un acto fuera** (21 tomados de 21) y lo imprimio en un bloque propio:
-
-> **ESO ES AGOTARSE, NO TRUNCAR, y son cosas distintas: truncar deja actos detras del corte y
-> agotarse no deja ninguno. ESTE ABRIDOR NO ADJUDICA si un tramo corto es tramo: MIDE Y DECLARA.**
-
-Va como **`PENDIENTE DE DOCTRINA`** y como **pregunta 1** al auditor.
-
-### 2.3 **EL INSUMO DEL TRAMO 6, FIJADO, CON SUS CUATRO PIEZAS Y SUS GUARDAS**
-
-| pieza | instrumento | salida | lo medido |
-|---|---|---|---|
-| **nomina fijada** | `abrir_tramo_de_opu01.py` | [`TRAMO6_V61.jsonl`](TRAMO6_V61.jsonl) mas [`SALIDA_V61_TRAMO6_ABIERTO.txt`](SALIDA_V61_TRAMO6_ABIERTO.txt) | **21 actos**, puestos de hoy **30 a 50** y de la 48 **250 a 270** |
-| **cuadro de varas de los 50** (aqui, de los 21) | `vuelta58_varas_tramo.py`, ya de nombre estable | [`SALIDA_V61_VARAS_TRAMO6.txt`](SALIDA_V61_VARAS_TRAMO6.txt) | pasos, condiciones, cableado, forma y puertas, una fila por acto |
-| **dossier de razones enteras** (P.5) | **`dossier_del_tramo.py`**, nuevo | [`SALIDA_V61_DOSSIER_TRAMO6.txt`](SALIDA_V61_DOSSIER_TRAMO6.txt) | **848 lineas**, los **21** actos leidos enteros, 256 ids del universo protegido |
-| **colisiones esperadas del tramo entero** | `vuelta56_colisiones_esperadas.py` | [`SALIDA_V61_COLISIONES_ESPERADAS_TRAMO6.txt`](SALIDA_V61_COLISIONES_ESPERADAS_TRAMO6.txt) | **42 combinaciones simuladas por par resuelto, CERO que fabriquen colision** |
-
-**LAS GUARDAS DE LA APERTURA, TODAS MEDIDAS Y NINGUNA AFIRMADA:**
-
-| guarda | resultado |
+| via | a quien apunta |
 |---|---|
-| **las dos lecturas** (orden de hoy contra orden de la 48) | **CALZAN, mismo conjunto y mismo orden. CERO divergencias** |
-| **prefijo** | **29 vivos en los puestos 1 a 29, SIN HUECOS** |
-| **cuatro ajenos, CAMINO 1 (literal)** | **VERDE, ninguno entra** |
-| **cuatro ajenos, CAMINO 2 (por el resolutor, P.1)** | **VERDE**, y muerde donde hay que mirar: `brainstorming_divergente` esta deprecado y resuelve a `reglas_brainstorming`, **que tampoco entra** |
-| **solape con los tramos 1 a 5** | **CERO** |
-| **el tramo 2 contra su bloque 51 a 100 de la 48** | **sigue calzando** |
-| **el tramo 3 contra su bloque** | **sigue sin calzar**, con el mismo acto de mas y el mismo de menos que la vuelta 56 midio |
-| **figura y tamano** | **los 21 son de FUSION PURA: tamano 2 y `PURO A`. Ni uno mixto** |
-| **modo de continuacion `--fijado`** | re-mide el tramo 6: **21 vivos, 0 fundidos** |
-| **contraste del propio abridor** | la corrida con `--tramo-numero 6` da una nomina **IDENTICA por `diff`** a la del tramo medido |
+| **la vara de contenido** | pasos 6 contra 5 hacia `getting_started_maintenance` |
+| **la pieza declarada** | la razon del puesto **3364** escribe *SUPERVIVIENTE POR DOMINANCIA: `getting_started_maintenance`* |
+| **la guarda `1B`** | **prohibe absorber la puerta**, y el unico candidato limpio del acto es el otro |
 
-**EL CUADRO DE VARAS, POR FORMA** (leido de la salida, no contado a ojo):
+Por **acta 54, pregunta 1**, registrada en `03_FUSIONES.md`, **LA GUARDA RESTRINGE Y EL CONTENIDO
+ELIGE ENTRE LO PERMITIDO**: aqui lo permitido es uno solo, **LA PUERTA SOBREVIVE**, y **el choque
+queda escrito en el motivo sellado**. **Y LA CONSECUENCIA VA DICHA, porque es la parte que podia
+perderse:** el paso con el que la razon daba la dominancia (*sanitizar o destruir equipos con CUI
+antes de retirarlos de las instalaciones*, **la unica linea que nombra CUI en toda la comparacion**)
+**es justo el que tuvo que viajar de `APPEND`, y viajo**.
 
-| forma | cuantos |
-|---|---:|
-| **UNA SOLA VARA** de contenido no empatada | **12** |
-| **TODAS LAS VARAS de contenido de acuerdo** | **5** |
-| **EL CONTENIDO EMPATA** y decide el cableado | **4** |
-| **suma** | **21** |
+### 2.3 **EL CONTRATO `CAMPO PROPIO v1`, ESTRENADO: LAS PERDIDAS YA NO VIVEN EN LA PROSA**
 
-**NI UN `CHOCAN` Y NI UN `EMPATE SIN VARA`.** Es, por forma, **el tramo mas limpio de la campana**, y
-es justo lo contrario de lo que la mesa acumula: **los quince actos de la mesa no crecen con este
-tramo**, al menos por lo que el cuadro imprime hoy.
+Nace **`scripts/loop/generar_plan_del_lote.py`**, de **nombre estable** (ni vuelta, ni tramo, ni lote
+en el nombre), **sucesor declarado** de `vuelta59_planes.py` (**sha1 del ancestro `fda28294196f`,
+medido hoy**), que queda intacto y re-corrible.
 
-### 2.4 **LA PERDIDA SELLADA EN CAMPO PROPIO: EL CONTRATO Y SU TALLADOR**
+**LA MAQUINA NO SE RETECLEA, Y ESO ES COMPROBABLE:** se **extrae** de las lineas 387 a 621 del
+ancestro con `scripts/loop/_v62_construir_generador.py`, que lleva **un `assert` por cada cambio** y
+es **IDEMPOTENTE** (re-corrido sobre su propia salida da `diff` VACIO, comprobado).
 
-Es el **pendiente de instrumento del acta 60**: el tallador viejo **solo ve las perdidas con el token
-en la prosa**, y en los lotes B y C del tramo 5 hubo **cuatro sin el**. Nace
-**`scripts/loop/tallar_perdidas_del_plan.py`**, de nombre estable. **El ancestro no se toca**: sigue
-entero y sus cifras siguen citadas por los registros de los tramos 3, 4 y 5.
+| lo que cambia | es aritmetica? |
+|---|---|
+| **1.** el contenido editorial entra por `--contenido` y este fichero no conoce ningun tramo | **no** |
+| **2.** el campo `perdidas` va **SIEMPRE**, aunque vacio | **no**: es el contrato |
+| **3.** **las perdidas se validan AL SELLAR**, no solo al tallar: especie fuera de las tres, o clave que falta, es `ROJO` y el plan **no se escribe** | **SI, ES UNA GUARDA QUE CRECE, Y VA COMO DISCUTIBLE `D1`** |
+| **4.** la raiz declara `contrato_de_perdidas` | **no** |
 
-**EL CONTRATO, decidido por el instrumento y escrito en su docstring** (que es lo que el encargo pide
-declarar):
+**LA MITAD UTIL DEL CONTRATO, MEDIDA SOBRE LOS 21 ACTOS: NUEVE DECLARAN CERO PERDIDAS con la lista
+vacia y DOCE SELLAN AL MENOS UNA.** Lista vacia es **una declaracion**; campo ausente es que el plan
+no lo dice, **y eso es `ROJO`**.
 
-```
-raiz del plan:  "contrato_de_perdidas": "CAMPO PROPIO v1"
-cada acto:      "perdidas": [ {especie, que, donde, enrutada_a}, ... ]   SIEMPRE, aunque vacia
-especies:       DE PARAMETRO DE PASO | DE CONDICIONES | DE NOMBRE   (y solo esas)
-```
+**LAS 18 PERDIDAS, TALLADAS POR CAMPO** con `tallar_perdidas_del_plan.py`
+([`SALIDA_V62_TALLAR_PERDIDAS.txt`](SALIDA_V62_TALLAR_PERDIDAS.txt)): **14 `DE PARAMETRO DE PASO` y 4
+`DE CONDICIONES`**. Ninguna `DE NOMBRE`, y se dice: **este tramo no tuvo ni una perdida de
+denominacion**, que es la especie que la vuelta 60 dejo como serie abierta.
 
-**LA MITAD UTIL DEL CONTRATO ES LA DISTINCION QUE LA PROSA NO SABIA HACER:**
+**Y UNA DE LAS 18 ES LA QUE EL PROPIO ARCHIVO DEJO PENDIENTE:** la razon del puesto **3064** habia
+marcado *PERDIDA NOMBRADA CANDIDATA, no verificada* (**reconociendo logros**, del acto 16). **Aqui
+queda sellada en el campo con su especie, su sitio y su destino**, en vez de seguir siendo una nota en
+prosa.
 
-> **LISTA VACIA es una DECLARACION de cero perdidas. CAMPO AUSENTE es que el plan NO LO DICE, y eso es
-> `ROJO`.**
+### 2.4 **LAS GUARDAS DE LOS DOS LOTES, TODAS MEDIDAS Y NINGUNA AFIRMADA**
 
-**Y LA GUARDA QUE HACE FIABLE AL CAMPO ES EL CRUCE CONTRA LA PROSA:** token suelto en una frase que no
-dice que se repone, con el campo vacio, es **`ROJO`**; **al reves NO**, porque una perdida en el campo
-**sin** token en la prosa es **el caso bueno**, el que el ancestro no veia. Es el motivo entero del
-contrato.
-
-**PROBADO CON SEIS PLANES DE PRUEBA, UNO POR GUARDA**
-([`SALIDA_V61_CASO_POSITIVO_PERDIDAS.txt`](SALIDA_V61_CASO_POSITIVO_PERDIDAS.txt)):
-
-| plan de prueba | esperado | medido |
+| guarda | LOTE A | LOTE B |
 |---|---|---|
-| bueno (una perdida y una lista vacia) | talla | **tabla emitida, 1 perdida, exit 0** |
-| campo ausente con contrato declarado | `ROJO` | **`ROJO`, sin tabla, exit 1** |
-| especie desconocida (`DE COLOR`) | `ROJO` | **`ROJO`, sin tabla, exit 1** |
-| prosa con token y campo vacio | `ROJO` | **`ROJO`, sin tabla, exit 1** |
-| token en frase que dice `SE REPONE`, campo vacio | **NO** es rojo | **0 perdidas, exit 0** |
-| plan sin contrato leido por campo | `ROJO` | **`ROJO`, exit 1** |
-| `--por-token` sobre un plan que **SI** declara el contrato | `ROJO` | **`ROJO`: el modo no se elige en silencio** |
+| cotejo del insumo fijado contra los nodos de HOY | **21 mirados, 21 VIVOS, 0 ya fundidos, DESCALCES 0** | **10 mirados, 10 VIVOS, 0 ya fundidos, DESCALCES 0** |
+| plan generado | **11 fichas TODAS en verde** | **10 fichas TODAS en verde** |
+| `1B`, cobertura exacta, incisos verbatim, junturas | **las cuatro OK** | **las cuatro OK** |
+| `P.16` antes de fundir, por el resolutor | **NINGUNA** | **NINGUNA** |
+| simulacion sobre copia | **verde, 4 guardas OK en los 11 actos, CERO escrituras** | **verde, 4 guardas OK en los 10 actos, CERO escrituras** |
+| delta de deprecados | **+11 sobre +11: OK** | **+10 sobre +10: OK** |
+| reanclar entre la fusion y `run_phase1` | **NADA QUE RE-ANCLAR** | **NADA QUE RE-ANCLAR** |
+| `Gate 0` con el ciclo de tres | **OK**, simetrizacion 0 | **OK**, simetrizacion 0 |
+| suite del motor | **25 de 25** | **25 de 25** |
+| suite web | **80 ficheros, 1.030 pasadas, 3 saltadas** | **80 ficheros, 1.030 pasadas, 3 saltadas** |
+| `tsc --noEmit` | **CERO lineas** | **CERO lineas** |
+| censo de colisiones con esperadas | **0 esperadas, 0 medidas, `CALZA: SI`** (232 a 243 auto-pares) | **0 esperadas, 0 medidas, `CALZA: SI`** (243 a 253 auto-pares) |
+| duplicadas fabricadas, por instrumento | **CERO**, 0 renombrados | **CERO**, 0 renombrados |
+| caso positivo heredado | **LAS SEIS GUARDAS MUERDEN** | **LAS SEIS GUARDAS MUERDEN** |
+| caso positivo del contrato | **LAS CUATRO PRUEBAS EN VERDE** | **LAS CUATRO PRUEBAS EN VERDE** |
 
-**CONTRASTE CONTRA LA CIFRA YA PUBLICADA:** el modo heredado sobre los lotes B y C del tramo 5 da **1
-perdida sobre 31 actos**, que es **la cifra que el registro del tramo 5 publico**.
+**LOS DOS CASOS POSITIVOS VAN SOBRE EL ACTO 37 DEL TRAMO 3**, que esta **DECLARADO** y que esta vuelta
+**no toca**, comprobado **contra la nomina fijada del tramo 6** (42 ids, **ninguno de los dos
+dentro**) y contra el grafo (los dos miembros siguen vivos), **no supuesto**.
+
+### 2.5 **EL CASO POSITIVO NUEVO, Y POR QUE NO BASTABA EL HEREDADO**
+
+Nace **`scripts/loop/caso_positivo_del_contrato_de_perdidas.py`**, de **nombre estable**. El heredado
+prueba **las seis guardas del EJECUTOR de fusiones**, y **ninguna de las seis sabe nada de perdidas**:
+la guarda nueva vive en el GENERADOR y muerde **antes**, al sellar.
+
+| prueba | esperado | medido |
+|---|---|---|
+| **especie desconocida** (`DE COLOR`) al sellar | `ROJO`, sin escribir | **`ROJO`, exit 1, plan no escrito** |
+| **clave que falta** (`enrutada_a`) al sellar | `ROJO`, sin escribir | **`ROJO`, exit 1, plan no escrito** |
+| **la MISMA perdida bien formada** | **tiene que PASAR** | **exit 0, sella, 1 perdida en el campo** |
+| **campo ausente** con el contrato declarado, visto por el tallador | `ROJO`, sin tabla | **`ROJO`, exit 1** |
+
+**LA TERCERA PRUEBA ES LA QUE IMPIDE QUE ESTO SEA UN SELLO DE GOMA:** una guarda que solo sabe decir
+rojo no es una guarda, es un freno de mano. **Muerde y no sobremuerde.**
 
 ---
 
@@ -316,111 +273,159 @@ perdida sobre 31 actos**, que es **la cifra que el registro del tramo 5 publico*
 
 | | |
 |---|---|
-| `Gate 0` (`python scripts/run_phase1.py --reaplico-curaduria`) | **`GATE 0: OK`**, simetrizacion **0 nodos** |
-| `etiquetas_de_cara.py --aplicar` | **71 etiquetas re-aplicadas** |
+| `Gate 0` (`python scripts/run_phase1.py --reaplico-curaduria`) | **`GATE 0: OK`** las dos veces, simetrizacion **0** |
+| `etiquetas_de_cara.py --aplicar` | **71 etiquetas re-aplicadas** cada vez |
 | `sync_assets_web.py` | **6 assets sincronizados**, manifest escrito |
-| **arbol tras el ciclo de tres** | **LIMPIO**, `git status` sin un rastreado modificado |
 | suite del motor | **25 de 25** |
 | suite web | **80 ficheros, 1.030 pasadas, 3 saltadas** |
 | `tsc --noEmit` | **CERO lineas** |
+| barrido de titulos al cierre | **387 barridos, `ROJO` 32, `AMBAR` 0, `ROTULADO` 34, `CENSO` 214, `ILEGIBLE` 1** |
 
-**EL `Gate 0` DEJO EL ARBOL SUCIO A MEDIO CAMINO Y SE DICTA CON LAS DOS MITADES:** corrido solo,
-`run_phase1.py` recompila `master_graph.json` **desde los nodos** y **revierte 71 `etiqueta_arbol` a
-su forma cruda** (`Canvas` donde el grafo publicado dice `Mapa`); **y quedo arreglado** al correr el
-**ciclo de tres entero**, que es lo que la vuelta 60 ya dejo escrito: `etiquetas_de_cara --aplicar`
-las repone las 71 y el arbol cierra limpio. **No es una averia nueva: es que el ciclo va entero o no
-va.**
+**LOS SIETE FICHEROS NUEVOS DE ESTA VUELTA NO SALEN EN NINGUNA LISTA DEL BARRIDO**, comprobado uno a
+uno por `grep` sobre la salida y no supuesto: `generar_plan_del_lote.py`,
+`caso_positivo_del_contrato_de_perdidas.py`, `_v62_lote_a.py`, `_v62_lote_b.py`,
+`_v62_construir_generador.py`, `_v62_corregir_registrador.py` y `_v62_registrar.py`.
 
 ---
 
-## 4. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+## 4. LAS DUPLICADAS, POR INSTRUMENTO Y EN LOS TRES CORTES
+
+| corte | grupos ya resueltos | renombrados | **FABRICADOS** |
+|---|---|---:|---:|
+| lote A contra la apertura ([`SALIDA_V62_DIFF_DUPLICADAS_A.txt`](SALIDA_V62_DIFF_DUPLICADAS_A.txt)) | 935 a 933 | 0 | **0** |
+| lote B contra el lote A ([`SALIDA_V62_DIFF_DUPLICADAS_B.txt`](SALIDA_V62_DIFF_DUPLICADAS_B.txt)) | 932 a 928 | 0 | **0** |
+| el cierre contra la apertura ([`SALIDA_V62_DIFF_DUPLICADAS_VUELTA.txt`](SALIDA_V62_DIFF_DUPLICADAS_VUELTA.txt)) | 934 a 928 | 0 | **0** |
+
+**LOS SEIS GRUPOS QUE DESAPARECEN VAN NOMBRADOS UNO A UNO** en la salida del corte de la vuelta, y
+todos son de nodos que murieron en estas mismas fusiones.
+
+**SE REPITE LA DIFERENCIA QUE LA VUELTA 60 DESTAPO, y se dice en vez de elegir en silencio cual
+publicar:** el censo **por rotulo crudo** dice **935** grupos en la apertura y **por resolutor** salen
+**934** en un corte y **935** en otro, segun contra que fichero se compare. **La cifra 935 de la
+cabecera es la del instrumento del censo y no se toca**; lo que se anade es que **contada por
+resolutor puede diferir en uno o dos grupos que el rotulo separa y el resolutor junta**.
+
+---
+
+## 5. EL HALLAZGO: **UN INSTRUMENTO DE NOMBRE ESTABLE CON LA PLANTILLA TALLADA A MANO**
+
+`registrar_cierre_de_tramo.py` nacio en la vuelta 60 **de nombre estable**, que es la direccion
+correcta. **Pero su plantilla llevaba dentro las cifras del tramo 5 tecleadas**, y eso en un
+instrumento estable **no envejece: miente en el tramo siguiente sin que nadie teclee nada ese dia.**
+
+| lo que habria publicado en el tramo 6 | lo que es verdad | como se corrige |
+|---|---|---|
+| *50 actos mirados, 34 vivos, 16 ya fundidos, DESCALCES 0*, apuntando a la salida de la vuelta 60 | **21, 21, 0** | el bloque se arma de los ficheros que entran por **`--cotejo`**; **sin ninguno, DECLARA su falta** |
+| la casilla **`0 / 50`** del tamano del tramo | **`0 / 21`** | el tamano **se suma** de los fundidos y los vivos de la salida del `--fijado` |
+| *el lote A ya estaba fundido cuando se tomo la apertura* | **falso**: el tramo abre y cierra en la misma vuelta | se **mide**, leyendo las vueltas de los planes que el tallador hallo |
+
+**Y DOS MAS DE LA MISMA ESPECIE, cazadas por la misma corrida:** el recorte de la `TABLA 1` buscaba la
+marca **entera** (que llevaba dentro la cuenta de lotes) y **el registro caia en `ROJO` sin escribir**;
+y la rama de la tabla de perdidas **solo conocia las marcas del tallador VIEJO**, asi que **habria
+publicado una FALTA DE TABLA que no existe**. **Se reconocen las dos, la vieja primero.**
+
+**SE ANADE ADEMAS `--abre`**, porque **el registro no tenia forma de ABRIR con una declaracion**, solo
+de anadir al final con `--nota`, y el encargo pide que el registro del tramo 6 **abra** declarando
+`TRAMO FINAL POR AGOTAMIENTO`. **Sin el argumento, el registro sale exactamente como antes.**
+
+**LAS SEIS CORRECCIONES SE APLICAN CON `scripts/loop/_v62_corregir_registrador.py`, que lleva un
+`assert` por cada una**, y **el texto viejo queda citado entero dentro del instrumento**.
+
+**Y HAY UNA SEXTA, EN OTRO INSTRUMENTO, DE LA MISMA FAMILIA:** `tallar_planes_del_tramo.py` contaba
+las perdidas **solo por el token en la prosa**, asi que **la `TABLA 1` de este reporte habria dicho
+`perdidas nombradas 0` mientras el campo sella DIECIOCHO**. Es **exactamente la mitad que su propia
+correccion de la vuelta 60 dejo escrita como no arreglada**. Ahora, **si el plan declara el contrato,
+la cuenta sale del campo**.
+
+**EL CONTRASTE ESTA CORRIDO Y NO AFIRMADO** ([`SALIDA_V62_CONTRASTE_TRAMO5.txt`](SALIDA_V62_CONTRASTE_TRAMO5.txt)):
+sobre los planes del tramo 5, que **no** declaran el contrato, esta version da **A 3, B 1, C 0 y los
+tres 4**, que son **las cifras que aquel registro publico**, y **la unica diferencia del `diff` es el
+rotulo de la cabecera**.
+
+---
+
+## 6. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
 | | que hice | por que se puede discutir |
 |---|---|---|
-| **D1** | **ABRI EL TRAMO 6 CON 21 ACTOS** cuando la vara pide 50, en vez de parar | El abridor mide, declara y sigue; yo elegi que un tramo corto **por agotamiento** es tramo. **Ninguna regla escrita lo dice.** Lo sostengo con la regla 5 del `EJECUTOR` (lo que ninguna regla cubre no para: se registra lo mejor sostenido y se marca `PENDIENTE DE DOCTRINA`) y con que **no queda ni un acto fuera**; pero un lector estricto dira que **la vara dice CINCUENTA** y que abrir un tramo con menos es estrenar clase |
-| **D2** | **AMPLIE LA GUARDA DE SOLAPE** del abridor de `(1, 2, 3)` a **todos los tramos previos** | Es el **unico** cambio del abridor que **no es copia**: una guarda que crece cambia lo comprobado. Lo sostengo porque el ancestro se dejaba fuera el tramo 4 **por tenerlo tallado a mano**, que es la misma especie que toda esta vuelta persigue; pero **cambia el resultado posible** de una corrida del ancestro y por eso no se cuela como copia. **Que no cambiara aquella corrida es consecuencia, no excusa**, y no lo uso de argumento |
-| **D3** | **EL ROTULO `SELLO_FIJO` ES UNA AUTODECLARACION** del fichero sobre cual es su sujeto | Un rotulo que el propio fichero se pone puede leerse como **permiso para silenciar un `AMBAR`**. Lo sostengo porque la maquina **no acepta la palabra sola**: comprueba que el fichero **no reciba esa especie por argumento**, que es exactamente lo que separa `ROJO` de `CENSO` en el barrido vigente, y lo probe sembrando el argumento (seccion 1.3). Aun asi, **es la primera vez que un fichero declara su propio sujeto y el barrido le cree** |
-| **D4** | **EXTENDI EL BARRIDO** (el instrumento que cuenta la cifra que publico) **en la misma vuelta en que publico su cifra** | Es literalmente el `D7` de la vuelta 60. Lo hice con **las cuatro condiciones que aquel dejo adjudicadas**: cambio medido, **contraste contra la cifra publicada re-corrido antes de escribir nada** (seccion 1.5), guarda que prefiere `ROJO` a callar, y el estado final dictado exacto. Pero **sigue siendo cambiar la balanza el dia que me peso** |
-| **D5** | **ESCRIBI DOS SUCESORES** (`dossier_del_tramo.py` y `tallar_perdidas_del_plan.py`) que el encargo **no pidio** | El encargo pide el **abridor** estable, no estos dos. Lo sostengo porque correr los ancestros habria publicado salidas con el **titulo mintiendo** (`vuelta56_dossier_tramo3.py` es `ROJO` con `--tramo`), que es la especie que la racha de la cabecera ya pago tres veces; y porque **un sucesor no paga el `ROJO` del ancestro**, que sigue en la lista de 32. Pero **son dos ficheros de mas** en una vuelta que ya trae tres |
-| **D6** | **EXCLUI DEL COTEJO DE ROTULOS a los dos ficheros que hablan su gramatica** (el barrido y el triador) | Es una excepcion escrita a mano en el instrumento, y una excepcion es una puerta. Lo sostengo con **las dos mediciones que la levantaron**: el barrido leia **sus propios dos ejemplos** del docstring como rotulos y publico **dos huerfanos que no existen**, y al vaciar las lineas de rotulo del triador (que las **arma**) lo dejo **`ILEGIBLE`**. La excepcion es **de rotulos y de nada mas**: los dos ficheros se siguen barriendo enteros por sus titulos. Pero **un instrumento que se excluye a si mismo de su propia vara pide que lo miren** |
-| **D7** | **DEJE EL LOTE A SIN EJECUTAR** | El encargo lo permite (`acta 58 pregunta 6`) y mando decirlo primero, y lo digo primero. Pero **la vuelta cierra sin haber fundido ni un acto**, y quien mida la campana por actos fundidos vera una vuelta en cero. Lo sostengo con lo que la apertura destapo: **el tramo es corto y eso es doctrina pendiente**, y fundir 21 actos bajo una vara que no los cubre habria sido decidir en silencio lo que el `D1` trae a la mesa |
+| **D1** | **HICE CRECER UNA GUARDA en un sucesor declarado**: el generador valida las perdidas AL SELLAR, cosa que el ancestro no hacia | Es la figura que el acta 61 (`D2`) adjudico **con dos condiciones**, y las dos se cumplen (enumerada en el docstring, marcada aqui). Pero **es la primera vez que se usa esa adjudicacion**, y quien la lea estrecha dira que una guarda nueva es guarda nueva, no copia |
+| **D2** | **CORREGI SEIS SITIOS DE DOS INSTRUMENTOS QUE CUENTAN LAS CIFRAS DE ESTA MISMA VUELTA, EL MISMO DIA** | Es el `D7` de la vuelta 60 otra vez, y lo digo igual: **cambiar el instrumento que va a contar mis propias cifras es la forma en que un conteo se acomoda a quien lo corre**. La alternativa era publicar *50 actos mirados* y *perdidas 0*, que son falsas. El contraste sobre el tramo 5 esta corrido y da identico |
+| **D3** | **EJECUTE EL TRAMO ENTERO en una vuelta**, cuando el encargo pedia el lote A | El encargo decia que el tamano del lote lo decide el plan que se selle, y que **si no cabe entero se entregue lo que cierre**. Cerro todo. Pero **21 actos en una vuelta es el ritmo mas alto de la campana desde el tramo 3**, y quien mida el riesgo por actos por vuelta dira que era mejor parar en el lote A |
+| **D4** | **FUNDI EL ACTO 20 HACIA LA PUERTA contra la vara Y contra la razon a la vez** | Es el carril del acta 54 pregunta 1 y el choque queda en el motivo; pero **a diferencia del acto 1 del tramo 5, aqui la razon NO dice POR ELEGIR: dice DOMINANCIA con nombre propio**, y un lector estricto puede decir que una razon que nombra por dominancia pesa mas que una que solo elige |
+| **D5** | **APENDE 3 pasos en el acto 8 (5 a 8) y 3 en el acto 18 (6 a 9)** | Son los dos repartos mas anchos del tramo. Los sostengo porque cada pieza es un gesto que el superviviente no hace en ningun grado; pero **un nodo que crece de 6 a 9 pasos en una sola fusion es candidato a la poda de la fase 04**, y lo declaro como solape en la nota del plan en vez de marcarlo pieza a pieza |
+| **D6** | **NOMBRE 18 PERDIDAS, cuando el tramo 5 entero nombro 4** | La diferencia no es que este tramo pierda mas: es que **el contrato nuevo hace visible lo que la prosa no contaba**. Pero quien compare las dos cifras sin leer el contrato dira que este tramo se fundio peor, y **el numero por si solo no distingue una perdida nueva de una perdida que antes no se veia** |
+| **D7** | **DECIDI el superviviente del acto 1 por la cuenta de CONDICIONES (2 contra 3) contra un cableado de 7 contra 3** | Es `P.8` al pie: el cableado solo habla a contenido EMPATADO. Pero **la diferencia de cableado es la mas ancha del lote A**, y quien lea el acto por su peso en el grafo dira que sobrevivio el nodo mas pobre |
+| **D8** | **DECIDI el acto 5 igual, por pasos 5 contra 6, hacia un nodo con CERO siguientes** | Mismo carril que el `D7` y misma objecion, agravada: `planificacion_gobierno_organizaciones_familiares` **no tiene ni un nodo siguiente**, asi que la fusion mueve el acto a un nodo que el grafo casi no toca |
+| **D9** | **MARQUE `CUBIERTO` con perdida sellada en vez de `INCISO` en once sitios**, casi siempre porque el paso del superviviente cierra en punto | Es la letra de la politica del reparto (*de `CUBIERTO` con la perdida NOMBRADA cuando el paso resultante no se lee limpio*). Pero **la puntuacion del superviviente no es una razon de contenido**, y un lector puede decir que el criterio deberia ser si la pieza cabe, no si el punto estorba |
 
 ---
 
-## 5. PENDIENTES DE DOCTRINA
+## 7. MIS PROPIOS ROJOS Y TROPIEZOS, declarados con las dos mitades
 
-- **NUEVO, Y ES EL DE ESTA VUELTA: EL TRAMO CORTO POR AGOTAMIENTO.** La vara del registro del tramo 1
-  dice **los CINCUENTA primeros actos `CERRADOS`**. Quedan **21**. **No propongo regla**: propongo que
-  la mesa decida si un tramo corto por agotamiento es un tramo, si el ultimo tramo se declara **cierre
-  de `OP-U-01`** en vez de tramo, o si los 29 vivos de los tramos 1 a 5 (los declarados) entran de
-  algun modo en el reparto final. **La cifra 21 esta medida por dos caminos y no cambia con la
-  decision.**
-- **1, PARA LA MESA, con QUINCE actos:** heredado sin cambio. **El tramo 6 no le anade ni uno** por lo
-  que el cuadro imprime hoy: **ni un `CHOCAN` y ni un `EMPATE SIN VARA`** en los 21.
+1. **LAS CUATRO CITAS DE LINEA DEL REGISTRO DE ADJUDICACIONES SALIERON MAL** y **quedaron arregladas
+   antes del commit** por medicion, no por relectura (seccion 1.1).
+2. **EL CASO POSITIVO NUEVO CAYO EN ROJO EN SU PRIMERA CORRIDA, 2 de 4 pruebas**, porque fabricaba la
+   mentira sobre **el acto 1 del tramo 6, que esta vuelta acababa de fundir**, asi que **la guarda de
+   miembros vivos se disparaba ANTES que la de perdidas y el rojo no era el que se buscaba**; **Y
+   QUEDO ARREGLADO** apuntandolo a una nomina de mentira de una sola fila sobre el acto 37 del tramo
+   3, con las dos comprobaciones corridas.
+3. **LA CABECERA DE `_v62_lote_a.py` ENCENDIO UN `AMBAR` EN EL BARRIDO** (de 0 a 1) por tallar
+   `TRAMO 6`; **Y QUEDO ARREGLADA** por la via de **REFORMULAR**, la misma que la vuelta 60 eligio
+   para el ancestro, y el barrido volvio a `AMBAR` 0.
+4. **EL REGISTRO DEL TRAMO CAYO EN `ROJO` SIN ESCRIBIR** en su primera simulacion, porque el recorte
+   de la `TABLA 1` ya no casaba tras mi propia correccion del rotulo; **Y QUEDO ARREGLADO** buscando
+   por el prefijo de la marca.
+5. **MANEJOS SIN CIFRA DE POR MEDIO, declarados igual:** tres intentos de parche por `heredoc` que
+   murieron en su propio `assert` **sin escribir nada** (dos por el escapado de `\n` y uno porque el
+   fichero tenia saltos `CRLF` y mi comparacion asumia `LF`); el andamio de correccion del registrador
+   dejo **una asignacion muerta duplicada** que **quite antes de correrlo de verdad**; y
+   `registrar_cierre_de_tramo.py` quedo **normalizado a saltos `LF`**, que es lo que el repositorio
+   guarda, y lo digo porque tocar los saltos de un fichero rastreado es un acto y no un accidente.
+
+---
+
+## 8. PENDIENTES DE DOCTRINA
+
+- **1, PARA LA MESA, con QUINCE actos**, los mismos que el acta 60 conto. **Este tramo no anade
+  ninguno**, y el motivo esta medido: sin `CHOCAN` y sin `EMPATE SIN VARA` no hay de que declarar.
 - **2 (`INCISO`), 3, 4, 5 y 7: HEREDADOS SIN CAMBIO.** No se pagan hoy.
-- **EL DE LA SERIE DEL TITULO** (la perdida de nombre que vive solo en el `titulo_concepto`, tres
-  ejemplares): **HEREDADO Y EN LA MESA**, sin ejemplar nuevo esta vuelta.
-- **PAGADO Y CERRADO, y se dice porque estaba en esta lista:** el **pendiente de instrumento** del
-  tallador de perdidas. Ya no es pendiente: es contrato con guarda y caso positivo (seccion 2.4).
-- **PAGADO Y CERRADO:** los **35 `AMBAR`** dejan de estar en cola. **`AMBAR 0`.**
+- **LA SERIE DE LA PERDIDA DE NOMBRE que vive solo en el titulo: NO CRECE.** Este tramo no tuvo ni una
+  perdida `DE NOMBRE`, y se dice porque la ausencia tambien es medicion.
+- **NUEVO, Y ES DE INSTRUMENTO, NO DE DOCTRINA:** el hallazgo de la seccion 5 dice que **un nombre
+  estable no basta para que un instrumento no envejezca**: `registrar_cierre_de_tramo.py` tenia el
+  nombre bien y la plantilla tallada. **Queda como pregunta al auditor**, no como regla escrita por
+  mi.
 
 ---
 
-## 6. PREGUNTAS PARA EL AUDITOR
+## 9. PREGUNTAS PARA EL AUDITOR
 
-1. **UN TRAMO CORTO POR AGOTAMIENTO ES UN TRAMO?** (`D1`.) Quedan 21 donde la vara pide 50, y no queda
-   ni uno fuera. Si la respuesta es no, **que es**: cierre de `OP-U-01`, o tramo con otra vara.
-2. **UNA GUARDA PUEDE CRECER DENTRO DE UN SUCESOR DECLARADO?** (`D2`.) El contrato del sucesor es
-   *copia byte a byte y solo despues lo declarado*, y lo declarado aqui **amplia lo comprobado** en vez
-   de solo reformularlo.
-3. **UN FICHERO PUEDE DECLARAR SU PROPIO SUJETO Y QUE EL BARRIDO LE CREA?** (`D3`.) La guarda es que no
-   reciba esa especie por argumento. **Basta esa guarda, o un `SELLO_FIJO` deberia exigir tambien una
-   fuente externa como la `PROCEDENCIA`?**
-4. **LOS 29 ACTOS VIVOS DE LOS TRAMOS 1 A 5 (los declarados) QUE SON AHORA?** Ocupan los puestos 1 a 29
-   del orden de hoy y **no son de ningun tramo por abrir**. La mesa tiene quince de ellos; **los otros
-   catorce no se han vuelto a nombrar** y esta vuelta no los toco.
-5. **UN SUCESOR ESCRITO SOLO PARA NO PUBLICAR UN TITULO QUE MIENTE ESTA JUSTIFICADO?** (`D5`.) La
-   alternativa era correr el ancestro `ROJO` y declarar la mentira en el reporte.
-
----
-
-## 7. MIS PROPIOS MANEJOS Y TROPIEZOS, declarados
-
-**Los cuatro `ROJO` propios de esta vuelta, cada uno dictado con las DOS mitades, cayo Y como quedo:**
-
-- **EL BARRIDO SE LEYO A SI MISMO EL MANUAL Y PUBLICO DOS HUERFANOS QUE NO EXISTEN;** y **quedo
-  arreglado** excluyendo del cotejo de rotulos a los dos ficheros que hablan la gramatica, con las dos
-  mediciones escritas dentro del codigo. Es la piedra que `_v50_contraste_contar_ld_v49` ya dejo
-  escrita: **un instrumento que se lee a si mismo se da la razon solo.**
-- **AL VACIAR LAS LINEAS DE ROTULO DEJE `ILEGIBLE` AL TRIADOR** (`unmatched ')'`, linea 198), porque
-  ese fichero **arma** las lineas de rotulo; y **quedo arreglado** con la misma exclusion. **Lo cazo
-  la corrida siguiente del barrido, no una lectura.**
-- **LAS LINEAS DE ROTULO SE VACIAN Y NO SE QUITAN,** y esto lo vi **antes** de que mordiera: quitarlas
-  habria corrido hacia arriba **el numero de linea que el propio barrido publica**. Queda escrito
-  dentro de `sin_rotulos` con su motivo.
-- **EL ABRIDOR CAYO EN `ROJO` SIN ABRIR EL TRAMO** porque dos ficheros reclaman el tramo 2; **y quedo
-  arreglado** midiendo la regla que el ancestro llevaba tallada (manda la vuelta mas baja), con el
-  descartado impreso por su nombre. **La guarda funciono sobre mi diseno, no sobre los datos.**
-- **LA IDEMPOTENCIA DEL TRIADOR CAYO EN `ROJO` LA PRIMERA VEZ** por una pregunta mal hecha: pregunte
-  si el texto viejo habia desaparecido, cuando **la doctrina manda citarlo y no borrarlo**, asi que
-  siempre sigue ahi; **y quedo arreglada** preguntando por la **nota** de la correccion. El
-  razonamiento equivocado queda escrito dentro del propio instrumento.
-- **BUSQUE `run_phase1.py` EN LA RAIZ Y ESTA EN `scripts/`.** Costo una corrida, cero cifras.
-- **CORRI `recomputo_3388.py` APUNTANDO A `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl`** y le quito
-  **229 lineas** a un fichero publicado. **Lo restaure con `git checkout` y lo re-corri contra una
-  salida propia**, y lo digo porque **restaurar un fichero rastreado es un acto y no un accidente**.
-- **DEJE `phase1_run_log.json` CON EL LOG DE MI CORRIDA** tras el `Gate 0` y lo restaure a su estado
-  committeado, por lo mismo.
+1. **UN NOMBRE ESTABLE NO BASTA. ¿Hace falta una vara para las PLANTILLAS de los instrumentos
+   estables?** El barrido de titulos caza el numero en el TITULO, pero `registrar_cierre_de_tramo.py`
+   lo llevaba en el CUERPO de su plantilla de salida, y ahi no lo mira nadie. Lo traigo como pregunta
+   y no como regla porque escribir la vara seria doctrina nueva.
+2. **¿ES SUFICIENTE EL CARRIL DE LA PUERTA cuando la razon nombra al otro POR DOMINANCIA?** (`D4`).
+   El acta 54 pregunta 1 se escribio sobre un acto donde la razon decia *POR ELEGIR*. Aqui dice
+   dominancia con nombre. Lo funde igual, y lo pregunto.
+3. **LAS 18 PERDIDAS DEL TRAMO 6 CONTRA LAS 4 DEL TRAMO 5: ¿es comparable esa cifra entre tramos?**
+   (`D6`). Mi lectura es que **no**, porque los instrumentos que las cuentan son distintos, y que
+   compararlas seria leer una mejora de instrumento como un empeoramiento de fusion.
+4. **¿SE PUEDE CERRAR UN TRAMO ENTERO EN UNA VUELTA cuando el encargo pedia un lote?** (`D3`). El
+   encargo decia *entrega lo que cierre entero y dilo primero*, y cerro todo. Lo pregunto por si la
+   lectura correcta era *no mas de lo pedido*.
+5. **EL UNIVERSO DE `OP-U-01` QUEDA AGOTADO. ¿Cual es la siguiente operacion?** El `00_INDICE` manda,
+   pero lo pregunto en vez de elegirla yo: **la campana entra en terreno que ninguna vuelta ha
+   pisado**, y elegir la siguiente operacion no es una medicion.
 
 ---
 
-## 8. LO QUE QUEDA, DICHO SIN ADORNO
+## 10. LO QUE QUEDA, DICHO SIN ADORNO
 
-**EL TRAMO 6 ESTA ABIERTO, FIJADO Y CON SU INSUMO ENTERO:** nomina de 21, cuadro de varas, dossier de
-848 lineas y colisiones esperadas en cero. **Todas las guardas de la apertura en verde.** **EL LOTE A
-NO SE EJECUTO** y esta dicho en la primera linea. **Los 35 `AMBAR` estan pagados y el barrido dice
-`AMBAR 0`.** **Los 32 `ROJO` siguen siendo los mismos 32**, comprobado linea a linea. **La cadena de
-clones del abridor murio**, y con ella el motivo por el que `vuelta58_tramo5_nomina.py` seguia siendo
-la unica via de abrir un tramo. **El pendiente del tallador de perdidas esta pagado con contrato,
-guarda y caso positivo.** **NINGUN NODO SE TOCO.** **Y la campana tiene por delante una pregunta que
-esta vuelta destapo y no contesta: `OP-U-01` tiene 21 actos de vida, no 50.**
+- **`OP-U-01` esta AGOTADO.** Los **29** actos vivos de los tramos 1 a 5 son **cosa juzgada** (acta
+  61, pregunta 4): quince por la via de la mesa, catorce sin cola pendiente. **No queda ningun tramo
+  por abrir.**
+- **La mesa sigue con QUINCE actos** mas la serie del titulo con tres ejemplares.
+- **Las fases 04 en adelante siguen enteras**, y **18 perdidas de este tramo estan enrutadas a la 04**
+  con su especie, su sitio y su destino escritos en el plan sellado, no en una nota.
+- **NINGUNA CONDICION DE PARADA SE CUMPLE.** El merge sigue siendo decision del fundador y este bucle
+  no funde ramas.

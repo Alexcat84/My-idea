@@ -1,0 +1,42 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 62.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 551 / 72 / 5 / 2.760 | **551 / 72 / 5 / 2.760** |
+| `n`, huecos, duplicados | 3.388 / 0 / 0 | **3.388 / 0 / 0** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.295 / 558 / 17.449 | **3.853 / 3.274 / 579 / 17.486** |
+| retrato: `A` crudas / colapsos / pares distintos | 551 / 254 / 297 | **551 / 275 / 276** |
+| actos (componentes) | 103 | **82** |
+| actos `CERRADOS` / `ABIERTOS` | 50 / 53 | **29 / 53** |
+| nodos en `CERRADOS` / `ABIERTOS` | 109 / 240 | **67 / 240** |
+| cola de costuras | 1.460 | **1.456** |
+| colisiones de clase vigentes | 0 | **0** |
+| auto-pares (los dos lados al mismo vivo) | 232 | **253** |
+| duplicadas historicas: grupos / nodos | 935 / 741 | **928 / 735** |
+| operaciones, estados, dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
+| entradas del inventario | 672 | **672** |
+| las cuatro comprobaciones de `08_VERIFICACION` | TODAS OK (349 igual a 349; 297 igual a 297) | **TODAS OK (307 igual a 307; 276 igual a 276)** |
+
+--- LAS CUATRO COMPROBACIONES, CADA LADO DE SU PROPIA SALIDA ---
+
+  APERTURA (SALIDA_V62_RECOMPUTO_APERTURA.txt):
+    i.  nodos en actos 349 == componentes 349
+    ii. A vigentes 297 == aristas A internas 297
+    veredicto: TODAS OK
+  CIERRE   (SALIDA_V62_RECOMPUTO_CIERRE.txt):
+    i.  nodos en actos 307 == componentes 307
+    ii. A vigentes 276 == aristas A internas 276
+    veredicto: TODAS OK
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 14 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN
