@@ -14,6 +14,7 @@ antes de escribir que las 666 lineas restantes quedan identicas byte a byte y qu
 en cada entrada tocada solo cambian las claves declaradas. Si algo no cuadra,
 ABORTA sin escribir.
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:18 fuente=docs/loop/ACTA_AUDITOR.md prueba="## VUELTA 18," corte=2026-08-20 motivo="escribe los registros de las adjudicaciones del acta de la vuelta 18"
 import io
 import json
 import sys

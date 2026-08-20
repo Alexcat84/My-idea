@@ -1,0 +1,85 @@
+====================================================================================================
+TRIAGE DE LOS AMBAR DEL BARRIDO DE TITULOS, POR EL CARRIL DEL BANCO 9.10 (vuelta 61)
+  modo : ESCRIBIR
+  corte: 2026-08-20 (fecha del sistema, la misma que va en cada rotulo)
+====================================================================================================
+
+--- EL BARRIDO CORRIDO AHORA MISMO, QUE ES LA VARA ---
+  menciones AMBAR vivas: 35 en 26 claves (fichero, especie, numero)
+  menciones cubiertas por la tabla: 35 de 35
+  claves de la tabla: 10 SELLO_FIJO, 15 PROCEDENCIA, 1 ENVEJECIDA
+
+--- LA CITA ENVEJECIDA, CON SU VUELTA MEDIDA Y NO TECLEADA ---
+  fichero            : scripts/loop/vuelta56_varas_tramo3.py
+  commit que lo anade: 2743bd88
+  asunto del commit  : VUELTA 56, LOTE A DEL TRAMO 3: LOS DIECISIETE PRIMEROS ACTOS FUNDIDOS EN EL ORDEN IMPRESO, con la colision unica del tramo resuelta ANTES por relectura del filo y el re-anclaje del rumbo cazado por la suite
+  vuelta MEDIDA por git                  : 56
+  vuelta que el NOMBRE del fichero declara: 56
+  LOS DOS RELOJES COINCIDEN en 56: la correccion escribe ese numero y no otro
+
+--- LOS ROTULOS, uno por clave (fichero, especie, numero) ---
+    scripts/loop/_v41_patch_costuras.py                  +1 rotulo(s) tras el docstring (linea 10)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:40 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 40 DEL AUDITOR" corte=2026-08-20 motivo="cita el acta de la vuelta 40, seccion 5, pregunta 2, que es lo que ejecuta"
+    scripts/loop/_v50_contraste_contar_ld_v49.py         +1 rotulo(s) tras el docstring (linea 64)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:48 fuente=scripts/loop/vuelta48_contar_ld.py prueba="Vuelta 48, TAREA 1.4" corte=2026-08-20 motivo="es la copia de contraste del instrumento de la vuelta 48 y conserva su cabecera a proposito"
+    scripts/loop/backlog_l03_vuelta14.py                 +1 rotulo(s) tras el docstring (linea 33)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:13 fuente=docs/loop/ACTA_AUDITOR.md prueba="## VUELTA 13," corte=2026-08-20 motivo="nombra la via que la vuelta 13 uso para OP-U-02, de la que copia el metodo"
+    scripts/loop/vuelta17_marcar_221_superadas.py        +1 rotulo(s) tras el docstring (linea 22)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:16 fuente=docs/loop/ACTA_AUDITOR.md prueba="## VUELTA 16," corte=2026-08-20 motivo="ejecuta el discutible 1 del acta de la vuelta 16 y la cita con su seccion"
+    scripts/loop/vuelta17_nota_op_i_01.py                +1 rotulo(s) tras el docstring (linea 12)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:16 fuente=docs/loop/ACTA_AUDITOR.md prueba="## VUELTA 16," corte=2026-08-20 motivo="registra el hueco nombrado del discutible 2 del acta de la vuelta 16"
+    scripts/loop/vuelta19_tarea1.py                      +1 rotulo(s) tras el docstring (linea 16)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:18 fuente=docs/loop/ACTA_AUDITOR.md prueba="## VUELTA 18," corte=2026-08-20 motivo="escribe los registros de las adjudicaciones del acta de la vuelta 18"
+    scripts/loop/vuelta21_tarea1.py                      +1 rotulo(s) tras el docstring (linea 22)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:20 fuente=docs/loop/ACTA_AUDITOR.md prueba="## VUELTA 20," corte=2026-08-20 motivo="escribe los registros de las adjudicaciones del acta de la vuelta 20"
+    scripts/loop/vuelta37_aviso_v35.py                   +1 rotulo(s) tras el docstring (linea 32)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:35 fuente=docs/loop/PROPUESTA_V35_RELECTURAS.json prueba="PROPUESTA NO VOLCADA" corte=2026-08-20 motivo="su sujeto ES la propuesta de la vuelta 35, y el aviso de corte se le pone encima"
+    scripts/loop/vuelta46_registro_auditoria.py          +1 rotulo(s) tras el docstring (linea 16)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:45 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 45 DEL AUDITOR" corte=2026-08-20 motivo="su sujeto ES la auditoria de la vuelta 45"
+    scripts/loop/vuelta48_registro_tramo.py              +1 rotulo(s) tras el docstring (linea 9)
+        # ROTULO titulo especie=SELLO_FIJO sujeto=tramo:1 corte=2026-08-20 motivo="escribe el registro del tramo 1 de OP-U-01 y lee PLAN_V48_OPU01_TRAMO1: sujeto fijo"
+    scripts/loop/vuelta50_correcciones_910_cierre.py     +1 rotulo(s) tras el docstring (linea 37)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:49 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 49 DEL AUDITOR" corte=2026-08-20 motivo="nombra a la vuelta 49 como la que no corrio este barrido, que es su motivo de existir"
+    scripts/loop/vuelta54_registro_tramo.py              +1 rotulo(s) tras el docstring (linea 13)
+        # ROTULO titulo especie=SELLO_FIJO sujeto=tramo:2 corte=2026-08-20 motivo="escribe el registro del tramo 2 de OP-U-01: sujeto fijo, sin argumento que lo repunte"
+    scripts/loop/vuelta55_deshacer_acto23.py             +2 rotulo(s) tras el docstring (linea 48)
+        # ROTULO titulo especie=SELLO_FIJO sujeto=tramo:2 corte=2026-08-20 motivo="deshace la fusion del acto 23 del tramo 2, un acto nombrado: sujeto fijo"
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:54 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 54 DEL AUDITOR" corte=2026-08-20 motivo="nombra la vuelta 54 como la que ejecuto la fusion que este instrumento deshace"
+    scripts/loop/vuelta55_registro_tramo.py              +1 rotulo(s) tras el docstring (linea 18)
+        # ROTULO titulo especie=SELLO_FIJO sujeto=tramo:2 corte=2026-08-20 motivo="escribe el registro del CIERRE del tramo 2: sujeto fijo, sin argumento que lo repunte"
+    scripts/loop/vuelta56_registro_tramo.py              +1 rotulo(s) tras el docstring (linea 14)
+        # ROTULO titulo especie=SELLO_FIJO sujeto=tramo:3 corte=2026-08-20 motivo="escribe el registro del cierre del tramo 3: sujeto fijo, sin argumento que lo repunte"
+    scripts/loop/vuelta56_tramo3_nomina.py               +1 rotulo(s) tras el docstring (linea 97)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:55 fuente=scripts/loop/vuelta55_tramo2_nomina.py prueba="RE-IDENTIFICADO POR SUS" corte=2026-08-20 motivo="declara de que ancestro copio la aritmetica de identidad por miembros"
+    scripts/loop/vuelta57_correcciones_tarea1.py         +1 rotulo(s) tras el docstring (linea 47)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:56 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 56 DEL AUDITOR" corte=2026-08-20 motivo="nombra la vuelta 56 como la que dejo envejecidas las tres citas que corrige"
+    scripts/loop/vuelta57_registro_tramo.py              +1 rotulo(s) tras el docstring (linea 19)
+        # ROTULO titulo especie=SELLO_FIJO sujeto=tramo:4 corte=2026-08-20 motivo="escribe el registro del cierre del tramo 4: sujeto fijo, sin argumento que lo repunte"
+    scripts/loop/vuelta57_tramo4_nomina.py               +1 rotulo(s) tras el docstring (linea 63)
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:55 fuente=scripts/loop/vuelta55_tramo2_nomina.py prueba="RE-IDENTIFICADO POR SUS" corte=2026-08-20 motivo="declara de que ancestro viene la aritmetica de identidad por miembros"
+    scripts/loop/vuelta58_deshacer_acto32.py             +2 rotulo(s) tras el docstring (linea 54)
+        # ROTULO titulo especie=SELLO_FIJO sujeto=tramo:4 corte=2026-08-20 motivo="deshace la fusion del acto 32 del tramo 4, un acto nombrado: sujeto fijo"
+        # ROTULO titulo especie=PROCEDENCIA cita=vuelta:57 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 57 DEL AUDITOR" corte=2026-08-20 motivo="nombra la vuelta 57 como la que ejecuto la fusion que este instrumento deshace"
+    scripts/loop/vuelta58_registro_acto32.py             +1 rotulo(s) tras el docstring (linea 30)
+        # ROTULO titulo especie=SELLO_FIJO sujeto=tramo:4 corte=2026-08-20 motivo="corrige el registro del tramo 4 por el acto 32: sujeto fijo"
+    scripts/loop/vuelta58_relectura_acto32.py            +1 rotulo(s) tras el docstring (linea 25)
+        # ROTULO titulo especie=SELLO_FIJO sujeto=tramo:4 corte=2026-08-20 motivo="relee el acto 32 del tramo 4 contra el grafo pre fusion: sujeto fijo"
+    scripts/loop/vuelta58_tallar_planes.py               +1 rotulo(s) tras el docstring (linea 33)
+        # ROTULO titulo especie=SELLO_FIJO sujeto=tramo:4 corte=2026-08-20 motivo="talla las tablas de los PLAN_V57_OPU01_LOTE_*.json, que son los del tramo 4 y estan escritos en el codigo: --vuelta solo cambia el rotulo impreso, no el plan leido"
+
+--- LA CORRECCION DECLARADA, con el texto viejo CITADO y no borrado ---
+    linea 101 de scripts/loop/vuelta56_varas_tramo3.py
+        VIEJO: print("EL CUADRO DE VARAS DE LOS %d ACTOS DEL TRAMO 3 (vuelta 54)" % len(tramo))
+        NUEVO: print("EL CUADRO DE VARAS DE LOS %d ACTOS DEL TRAMO 3 (vuelta 56)" % len(tramo))
+        # CORRECCION DECLARADA (2026-08-20, vuelta 61, TAREA 1, carril del banco 9.10).
+        # EL TEXTO VIEJO, CITADO ENTERO Y NO BORRADO:
+        #   print("EL CUADRO DE VARAS DE LOS %d ACTOS DEL TRAMO 3 (vuelta 54)" % len(tramo))
+        # Por que era CITA ENVEJECIDA y no procedencia: el (vuelta 54) venia del ancestro
+        # scripts/loop/vuelta54_varas_tramo2.py, donde SI es verdad, y este fichero
+        # nacio en la vuelta 56, MEDIDA con git log --diff-filter=A
+        # (commit 2743bd88, asunto 'VUELTA 56, LOTE A DEL TRAMO 3: LOS DIECISIETE PRIMEROS ACTOS FUNDIDOS EN EL ORDEN IMPRESO, con la colision unica del tramo resuelta ANTES por relectura del filo y el re-anclaje del rumbo cazado por la suite').
+        # EL TRAMO 3 DE ESTA MISMA LINEA NO SE TOCA: es un ROJO del barrido y esta vuelta
+        # no paga ROJO. Se corrige la cita envejecida y nada mas.
+
+RESUMEN: 35 menciones AMBAR triadas (10 claves SELLO_FIJO, 15 PROCEDENCIA, 1 ENVEJECIDA) | escrituras nuevas 26, ya estaban 0 | modo ESCRIBIR
+FIN

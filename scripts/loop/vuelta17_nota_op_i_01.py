@@ -10,6 +10,7 @@ Uso:
   python scripts/loop/vuelta17_nota_op_i_01.py              (simulacro)
   python scripts/loop/vuelta17_nota_op_i_01.py --escribir
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:16 fuente=docs/loop/ACTA_AUDITOR.md prueba="## VUELTA 16," corte=2026-08-20 motivo="registra el hueco nombrado del discutible 2 del acta de la vuelta 16"
 
 import json
 import os

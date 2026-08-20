@@ -12,6 +12,7 @@ IDEMPOTENTE: si la cabecera del registro ya esta en el fichero, no escribe.
 
 Uso: python scripts/loop/vuelta56_registro_tramo.py [--simular]
 """
+# ROTULO titulo especie=SELLO_FIJO sujeto=tramo:3 corte=2026-08-20 motivo="escribe el registro del cierre del tramo 3: sujeto fijo, sin argumento que lo repunte"
 import argparse
 import io
 import os

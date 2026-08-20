@@ -20,6 +20,7 @@ Uso:
   python scripts/loop/vuelta17_marcar_221_superadas.py            (simulacro)
   python scripts/loop/vuelta17_marcar_221_superadas.py --escribir (escribe)
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:16 fuente=docs/loop/ACTA_AUDITOR.md prueba="## VUELTA 16," corte=2026-08-20 motivo="ejecuta el discutible 1 del acta de la vuelta 16 y la cita con su seccion"
 
 import json
 import os

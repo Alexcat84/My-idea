@@ -7,6 +7,7 @@ medidas. Aqui no se escribe ni una cifra a mano.
 
 Uso: python scripts/loop/vuelta48_registro_tramo.py [--escribir]
 """
+# ROTULO titulo especie=SELLO_FIJO sujeto=tramo:1 corte=2026-08-20 motivo="escribe el registro del tramo 1 de OP-U-01 y lee PLAN_V48_OPU01_TRAMO1: sujeto fijo"
 import argparse
 import io
 import json

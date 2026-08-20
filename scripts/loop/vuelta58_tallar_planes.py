@@ -31,6 +31,7 @@ EXACTAMENTE lo mismo que su ancestro, y eso se comprueba corriendo los dos.
 
 DE SOLO LECTURA. No toca ni un nodo ni un plan: imprime.
 """
+# ROTULO titulo especie=SELLO_FIJO sujeto=tramo:4 corte=2026-08-20 motivo="talla las tablas de los PLAN_V57_OPU01_LOTE_*.json, que son los del tramo 4 y estan escritos en el codigo: --vuelta solo cambia el rotulo impreso, no el plan leido"
 
 import argparse
 import io

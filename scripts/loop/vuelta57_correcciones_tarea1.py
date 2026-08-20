@@ -45,6 +45,7 @@ aparece de mas, es ROJO y no se escribe nada.
 
 Uso: python scripts/loop/vuelta57_correcciones_tarea1.py [--simular]
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:56 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 56 DEL AUDITOR" corte=2026-08-20 motivo="nombra la vuelta 56 como la que dejo envejecidas las tres citas que corrige"
 import argparse
 import io
 import os

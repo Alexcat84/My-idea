@@ -42,6 +42,33 @@ LAS TRES CLASES, y cada una se decide MIDIENDO, no opinando:
     propio sujeto fijo y no puede mentir sin que alguien reescriba el fichero.
     NO ES DEUDA HOY: es el censo para la vuelta que lo toque.
 
+  ROTULADO, EL AMBAR YA TRIADO (anadido el 21 ago 2026, vuelta 61, TAREA 1, por
+    el carril del banco 9.10 y por la via del rotulo con vigente= de la vuelta 58):
+    un AMBAR deja de ser deuda cuando el fichero lleva un ROTULO que DECLARA que
+    especie es, Y EL ROTULO SE COTEJA POR MAQUINA EN CADA CORRIDA. No es un
+    silenciador: es una declaracion con guarda, y la guarda prefiere ROJO a
+    callar. Dos especies, cada una con su cotejo:
+
+      ROTULO titulo especie=SELLO_FIJO sujeto=tramo:2 corte=<fecha> motivo=<texto>
+        El fichero declara que su sujeto es ESE tramo, que es justo lo que su
+        nombre no dice y por lo que el AMBAR salio. SE COTEJA: el numero tallado
+        tiene que ser el declarado, y el fichero NO puede recibir esa especie por
+        argumento. Si manana alguien le anade --tramo, el rotulo cae en ROJO. O
+        sea: un instrumento repuntable NO se puede silenciar con este rotulo.
+
+      ROTULO titulo especie=PROCEDENCIA cita=vuelta:40 fuente=<ruta> prueba=<literal> corte=<fecha>
+        El numero NOMBRA UN ANCESTRO o un sujeto ajeno a proposito (el acta de la
+        vuelta 40, la propuesta de la 35, el instrumento del que se copio la
+        aritmetica), y por eso no envejece. SE COTEJA: la fuente citada tiene que
+        EXISTIR y contener el literal de prueba. Si el ancestro desaparece o se
+        renombra, el rotulo cae en ROJO.
+
+    UN ROTULO QUE NO CASA CON NINGUN AMBAR VIVO ES ROJO (rotulo huerfano): asi un
+    rotulo no se queda de adorno cuando el titulo que cubria ya se corrigio.
+    LAS LINEAS DE ROTULO NO SE BARREN NI CUENTAN COMO DECLARACION DEL FICHERO:
+    se recortan del texto antes de medir, para que el rotulo no mueva la
+    clasificacion de los demas numeros del mismo fichero.
+
 VERDE es no salir: el numero llega por %s alimentado de un argumento o de una
 medicion (a.vuelta, la clave orden_tramoN leida del fichero), que es la via ya
 estrenada por tallar_cabecera_reporte.py y por vuelta58_varas_tramo.py.
@@ -115,6 +142,123 @@ DECLARAN = [
     (re.compile(r"(?i)\btramo(\d+)\b"), [("tramo", 1)]),
     (re.compile(r"(?i)\b(?:PLAN|SALIDA|RECOMPUTO)_V(\d+)"), [("vuelta", 1)]),
 ]
+
+
+# EL ROTULO DEL TITULO, la via de la vuelta 58 (ROTULO puesto=... vigente=...)
+# traida a esta especie. Una linea, clave=valor, y el valor puede ir entre
+# comillas cuando lleva espacios.
+RE_ROTULO = re.compile(r"ROTULO\s+titulo\s+(.+)$")
+RE_CAMPO = re.compile(r"(\w+)=(\"[^\"]*\"|'[^']*'|\S+)")
+
+
+# LOS DOS FICHEROS QUE HABLAN LA GRAMATICA DEL ROTULO NO SE BARREN POR ROTULOS, y
+# los dos motivos estan MEDIDOS, no supuestos:
+#   1. este mismo barrido lleva la gramatica escrita en su docstring con dos
+#      ejemplos, y la primera corrida del cotejo los leyo como rotulos de verdad y
+#      publico DOS huerfanos ROJO que no existen;
+#   2. scripts/loop/triage_ambar_titulos.py ARMA las lineas de rotulo, asi que al
+#      vaciarlas se le vaciaron dos lineas de codigo y el fichero salio ILEGIBLE
+#      ("unmatched ')'", linea 198) en la corrida que siguio al triage.
+# Es la piedra que _v50_contraste_contar_ld_v49 ya dejo escrita: un instrumento que
+# se lee a si mismo se da la razon solo. LA EXCEPCION ES DE ROTULOS Y DE NADA MAS:
+# los dos ficheros se barren enteros por sus titulos, como todos los demas.
+QUE_HABLAN_LA_GRAMATICA = (
+    os.path.join("scripts", "loop", "barrido_titulos_tallados.py"),
+    os.path.join("scripts", "loop", "triage_ambar_titulos.py"),
+)
+
+
+def habla_la_gramatica(ruta_rel):
+    normal = ruta_rel.replace("/", os.sep)
+    return any(normal.endswith(x) for x in QUE_HABLAN_LA_GRAMATICA)
+
+
+def rotulos_del_fichero(fuente, ruta_rel=""):
+    """Los ROTULO del fichero, en orden, con su numero de linea."""
+    if habla_la_gramatica(ruta_rel):
+        return []
+    out = []
+    for i, linea in enumerate(fuente.splitlines(), 1):
+        m = RE_ROTULO.search(linea)
+        if not m:
+            continue
+        campos = {}
+        for k, v in RE_CAMPO.findall(m.group(1)):
+            campos[k] = v[1:-1] if v[:1] in ("\"", "'") else v
+        campos["_linea"] = i
+        campos["_casado"] = False
+        out.append(campos)
+    return out
+
+
+def sin_rotulos(fuente):
+    """El texto del fichero con sus lineas de rotulo EN BLANCO. Se mide sobre esto
+    para que un rotulo no se declare a si mismo ni mueva la clase de los otros
+    numeros del fichero.
+
+    SE VACIAN, NO SE QUITAN, y la diferencia no es de estilo: quitarlas correria
+    hacia arriba el numero de linea de todo lo que venga despues, y el barrido
+    publica la linea de cada print. Un rotulo puesto encima de un print habria
+    movido la linea que el propio barrido cita."""
+    return chr(10).join("" if RE_ROTULO.search(l) else l for l in fuente.splitlines())
+
+
+def parte_sujeto(valor):
+    """'tramo:2' o 'vuelta:40' partido en (especie, numero); (None, None) si no."""
+    if not valor or ":" not in valor:
+        return None, None
+    especie, _, numero = valor.partition(":")
+    especie = especie.strip().lower()
+    if especie not in ("tramo", "vuelta") or not numero.strip().isdigit():
+        return None, None
+    return especie, int(numero.strip())
+
+
+def cotejar_rotulo(rot, hallazgo, fuente):
+    """Devuelve (clase, motivo) para un AMBAR que tiene rotulo. La guarda prefiere
+    ROJO a callar: si el rotulo no se puede comprobar, no absuelve."""
+    especie_rot = (rot.get("especie") or "").upper()
+    if especie_rot == "SELLO_FIJO":
+        e, n = parte_sujeto(rot.get("sujeto"))
+        if e is None:
+            return "ROJO", "el rotulo de la linea %d no declara un sujeto legible (sujeto=tramo:N)" % rot["_linea"]
+        if e != hallazgo["especie"] or n != hallazgo["numero"]:
+            return "ROJO", ("el rotulo de la linea %d declara sujeto %s %d y el titulo dice %s %d"
+                            % (rot["_linea"], e, n, hallazgo["especie"], hallazgo["numero"]))
+        op = repunta(fuente, hallazgo["especie"])
+        if op:
+            return "ROJO", ("el rotulo de la linea %d declara SELLO_FIJO pero el fichero recibe el "
+                            "sujeto por %s: un instrumento repuntable no se sella" % (rot["_linea"], op))
+        return "ROTULADO", ("SELLO_FIJO cotejado: el fichero declara %s %d como su sujeto y no recibe "
+                            "esa especie por argumento (rotulo de la linea %d, corte %s)"
+                            % (e, n, rot["_linea"], rot.get("corte", "sin corte")))
+    if especie_rot == "PROCEDENCIA":
+        e, n = parte_sujeto(rot.get("cita"))
+        if e is None:
+            return "ROJO", "el rotulo de la linea %d no declara una cita legible (cita=vuelta:N)" % rot["_linea"]
+        if e != hallazgo["especie"] or n != hallazgo["numero"]:
+            return "ROJO", ("el rotulo de la linea %d cita %s %d y el titulo dice %s %d"
+                            % (rot["_linea"], e, n, hallazgo["especie"], hallazgo["numero"]))
+        ruta = rot.get("fuente") or ""
+        prueba = rot.get("prueba") or ""
+        abs_ruta = os.path.join(RAIZ, ruta.replace("/", os.sep))
+        if not ruta or not os.path.exists(abs_ruta):
+            return "ROJO", ("el rotulo de la linea %d nombra la fuente %r y esa ruta NO EXISTE"
+                            % (rot["_linea"], ruta))
+        if not prueba:
+            return "ROJO", "el rotulo de la linea %d no trae literal de prueba" % rot["_linea"]
+        try:
+            texto = io.open(abs_ruta, encoding="utf-8", errors="replace").read()
+        except OSError as e2:
+            return "ROJO", "el rotulo de la linea %d no pudo leer %s (%s)" % (rot["_linea"], ruta, e2)
+        if prueba not in texto:
+            return "ROJO", ("el rotulo de la linea %d dice que %s contiene %r y HOY no lo contiene"
+                            % (rot["_linea"], ruta, prueba))
+        return "ROTULADO", ("PROCEDENCIA cotejada: %s %d nombra un ancestro que existe (%s contiene %r; "
+                            "rotulo de la linea %d, corte %s)"
+                            % (e, n, ruta, prueba, rot["_linea"], rot.get("corte", "sin corte")))
+    return "ROJO", ("el rotulo de la linea %d declara la especie %r, que este barrido no coteja"
+                    % (rot["_linea"], rot.get("especie")))
 
 
 def es_banda(nodo):
@@ -251,7 +395,11 @@ def clasificar(especie, numero, fuente, dec):
 
 
 def barrer(ruta_abs, ruta_rel):
-    fuente = io.open(ruta_abs, encoding="utf-8").read()
+    crudo = io.open(ruta_abs, encoding="utf-8").read()
+    # LOS ROTULOS SE APARTAN ANTES DE MEDIR: un rotulo no declara nada del fichero
+    # ni cambia la clase de los demas numeros. Se leen del crudo y se miden aparte.
+    rotulos = rotulos_del_fichero(crudo, ruta_rel)
+    fuente = crudo if habla_la_gramatica(ruta_rel) else sin_rotulos(crudo)
     try:
         arbol = ast.parse(fuente)
     except SyntaxError as e:
@@ -291,6 +439,28 @@ def barrer(ruta_abs, ruta_rel):
                               "texto": "%s = %d (linea %d)" % (nombre, valor, linea_const),
                               "especie": especie, "numero": valor,
                               "motivo": motivo + "; el numero es literal un renglon mas arriba"})
+
+    # EL COTEJO DE LOS ROTULOS, al final y solo sobre los AMBAR: un rotulo no
+    # puede tocar un ROJO ni un CENSO, solo triar un AMBAR que ya salio.
+    for h in hallazgos:
+        if h["clase"] != "AMBAR":
+            continue
+        for rot in rotulos:
+            e_rot, n_rot = parte_sujeto(rot.get("sujeto") or rot.get("cita"))
+            if e_rot != h["especie"] or n_rot != h["numero"]:
+                continue
+            rot["_casado"] = True
+            h["clase"], h["motivo"] = cotejar_rotulo(rot, h, fuente)
+            break
+    for rot in rotulos:
+        if rot["_casado"]:
+            continue
+        hallazgos.append({"clase": "ROJO", "linea": rot["_linea"], "sede": "ROTULO HUERFANO",
+                          "texto": "especie=%s sujeto/cita=%s" % (rot.get("especie"),
+                                                                 rot.get("sujeto") or rot.get("cita")),
+                          "especie": "", "numero": 0,
+                          "motivo": "el rotulo no casa con ningun AMBAR vivo de este fichero: o el "
+                                    "titulo que cubria ya se corrigio, o el rotulo esta mal escrito"})
     return hallazgos
 
 
@@ -341,7 +511,7 @@ def main():
             x["fichero"] = rel
             todos.append(x)
 
-    orden = {"ILEGIBLE": 0, "ROJO": 1, "AMBAR": 2, "CENSO": 3}
+    orden = {"ILEGIBLE": 0, "ROJO": 1, "AMBAR": 2, "ROTULADO": 3, "CENSO": 4}
     for clase in ("ILEGIBLE", "ROJO", "AMBAR"):
         grupo = [x for x in todos if x["clase"] == clase]
         print("--- %s: %d ---" % (clase, len(grupo)))
@@ -351,6 +521,16 @@ def main():
             print("    %s:%d  [%s]  %r" % (x["fichero"], x["linea"], x["sede"], x["texto"]))
             print("        %s" % x["motivo"])
         print()
+
+    rotulados = [x for x in todos if x["clase"] == "ROTULADO"]
+    print("--- ROTULADO (AMBAR YA TRIADO, con el rotulo cotejado en esta corrida): %d en %d ficheros ---"
+          % (len(rotulados), len({x["fichero"] for x in rotulados})))
+    if not rotulados:
+        print("    ninguno")
+    for x in sorted(rotulados, key=lambda y: (y["fichero"], y["linea"])):
+        print("    %s:%d  [%s]  %r" % (x["fichero"], x["linea"], x["sede"], x["texto"]))
+        print("        %s" % x["motivo"])
+    print()
 
     censo = [x for x in todos if x["clase"] == "CENSO"]
     print("--- CENSO (SELLO FIJO), para las vueltas que los toquen: %d en %d ficheros ---"
@@ -367,9 +547,9 @@ def main():
     print()
 
     cuenta = {c: len([x for x in todos if x["clase"] == c]) for c in orden}
-    print("RESUMEN: %d ficheros barridos, %d con hallazgo, %d limpios | ROJO %d, AMBAR %d, CENSO %d, ILEGIBLE %d"
+    print("RESUMEN: %d ficheros barridos, %d con hallazgo, %d limpios | ROJO %d, AMBAR %d, ROTULADO %d, CENSO %d, ILEGIBLE %d"
           % (len(lista), con_hallazgo, len(lista) - con_hallazgo,
-             cuenta["ROJO"], cuenta["AMBAR"], cuenta["CENSO"], cuenta["ILEGIBLE"]))
+             cuenta["ROJO"], cuenta["AMBAR"], cuenta["ROTULADO"], cuenta["CENSO"], cuenta["ILEGIBLE"]))
     print("FIN")
     return 1 if (cuenta["ROJO"] or cuenta["AMBAR"] or cuenta["ILEGIBLE"]) else 0
 

@@ -98,7 +98,16 @@ def main():
     ORD = claves[0]
 
     print("=" * 110)
-    print("EL CUADRO DE VARAS DE LOS %d ACTOS DEL TRAMO 3 (vuelta 54)" % len(tramo))
+    # CORRECCION DECLARADA (2026-08-20, vuelta 61, TAREA 1, carril del banco 9.10).
+    # EL TEXTO VIEJO, CITADO ENTERO Y NO BORRADO:
+    #   print("EL CUADRO DE VARAS DE LOS %d ACTOS DEL TRAMO 3 (vuelta 54)" % len(tramo))
+    # Por que era CITA ENVEJECIDA y no procedencia: el (vuelta 54) venia del ancestro
+    # scripts/loop/vuelta54_varas_tramo2.py, donde SI es verdad, y este fichero
+    # nacio en la vuelta 56, MEDIDA con git log --diff-filter=A
+    # (commit 2743bd88, asunto 'VUELTA 56, LOTE A DEL TRAMO 3: LOS DIECISIETE PRIMEROS ACTOS FUNDIDOS EN EL ORDEN IMPRESO, con la colision unica del tramo resuelta ANTES por relectura del filo y el re-anclaje del rumbo cazado por la suite').
+    # EL TRAMO 3 DE ESTA MISMA LINEA NO SE TOCA: es un ROJO del barrido y esta vuelta
+    # no paga ROJO. Se corrige la cita envejecida y nada mas.
+    print("EL CUADRO DE VARAS DE LOS %d ACTOS DEL TRAMO 3 (vuelta 56)" % len(tramo))
     print("=" * 110)
     print()
     print("  pasos y cond son las varas de CONTENIDO contables; cab es el CABLEADO,")

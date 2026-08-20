@@ -23,6 +23,7 @@ Uso:
   python scripts/loop/vuelta58_relectura_acto32.py --raiz ../_v58_prefusion
   python scripts/loop/vuelta58_relectura_acto32.py --raiz .   (estado de hoy)
 """
+# ROTULO titulo especie=SELLO_FIJO sujeto=tramo:4 corte=2026-08-20 motivo="relee el acto 32 del tramo 4 contra el grafo pre fusion: sujeto fijo"
 
 import argparse
 import io

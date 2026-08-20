@@ -31,6 +31,7 @@ nombra "destejido o cirugia", no "cualquier operacion" (ese es el criterio
 ANCHO que uso OP-U-02 para otra pregunta, no esta). Se listan aparte para que
 el auditor los vea.
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:13 fuente=docs/loop/ACTA_AUDITOR.md prueba="## VUELTA 13," corte=2026-08-20 motivo="nombra la via que la vuelta 13 uso para OP-U-02, de la que copia el metodo"
 import io
 import json
 from pathlib import Path

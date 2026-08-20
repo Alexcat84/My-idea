@@ -28,6 +28,7 @@ MODOS: --simular (por defecto) y --ejecutar.
 
 Uso: python scripts/loop/vuelta58_registro_acto32.py [--ejecutar]
 """
+# ROTULO titulo especie=SELLO_FIJO sujeto=tramo:4 corte=2026-08-20 motivo="corrige el registro del tramo 4 por el acto 32: sujeto fijo"
 import argparse
 import io
 import os

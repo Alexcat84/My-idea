@@ -46,6 +46,8 @@ MODOS: --simular (por defecto, cero escrituras) y --ejecutar.
 
 Uso: python scripts/loop/vuelta55_deshacer_acto23.py [--ejecutar]
 """
+# ROTULO titulo especie=SELLO_FIJO sujeto=tramo:2 corte=2026-08-20 motivo="deshace la fusion del acto 23 del tramo 2, un acto nombrado: sujeto fijo"
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:54 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 54 DEL AUDITOR" corte=2026-08-20 motivo="nombra la vuelta 54 como la que ejecuto la fusion que este instrumento deshace"
 import argparse
 import io
 import json

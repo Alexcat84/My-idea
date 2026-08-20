@@ -62,6 +62,7 @@ De solo lectura. No escribe nada.
 
 Uso: python scripts/loop/vuelta48_contar_ld.py
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:48 fuente=scripts/loop/vuelta48_contar_ld.py prueba="Vuelta 48, TAREA 1.4" corte=2026-08-20 motivo="es la copia de contraste del instrumento de la vuelta 48 y conserva su cabecera a proposito"
 import io
 import os
 import re

@@ -95,6 +95,7 @@ Uso:
   python scripts/loop/vuelta56_tramo3_nomina.py --nomina <RECOMPUTO del dia> \
         [--salida docs/loop/TRAMO3_V56.jsonl]
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:55 fuente=scripts/loop/vuelta55_tramo2_nomina.py prueba="RE-IDENTIFICADO POR SUS" corte=2026-08-20 motivo="declara de que ancestro copio la aritmetica de identidad por miembros"
 import argparse
 import io
 import json

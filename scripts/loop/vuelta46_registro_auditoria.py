@@ -14,6 +14,7 @@ Uso: python scripts/loop/vuelta46_registro_auditoria.py [--escribir]
 Sin --escribir solo imprime. Con --escribir anade la seccion al final de
 docs/plan/02_DESTEJIDOS.md.
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:45 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 45 DEL AUDITOR" corte=2026-08-20 motivo="su sujeto ES la auditoria de la vuelta 45"
 import json
 import os
 import sys

@@ -20,6 +20,7 @@ cita como adjudicacion, que es lo que es.
 Idempotente: si el ancla ya no esta o el registro ya esta puesto, lo dice y no
 escribe. Cero guiones largos y cero guiones medios.
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:20 fuente=docs/loop/ACTA_AUDITOR.md prueba="## VUELTA 20," corte=2026-08-20 motivo="escribe los registros de las adjudicaciones del acta de la vuelta 20"
 import io
 import json
 import sys

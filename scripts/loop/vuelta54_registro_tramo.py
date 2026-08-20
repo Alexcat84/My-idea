@@ -11,6 +11,7 @@ IDEMPOTENTE: si la seccion ya esta, no la duplica.
 
 Uso: python scripts/loop/vuelta54_registro_tramo.py [--simular]
 """
+# ROTULO titulo especie=SELLO_FIJO sujeto=tramo:2 corte=2026-08-20 motivo="escribe el registro del tramo 2 de OP-U-01: sujeto fijo, sin argumento que lo repunte"
 import argparse
 import io
 import os

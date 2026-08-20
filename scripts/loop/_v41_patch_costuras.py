@@ -8,6 +8,7 @@ NO TOCA UMBRALES, NI FIXTURES, NI NODOS: solo anade lineas de impresion al final
 de main(). La cifra del porcentaje se MIDE en la propia corrida (len(filas) sobre
 len(activos)) y no se teclea, por la regla 1 del EJECUTOR.md.
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:40 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 40 DEL AUDITOR" corte=2026-08-20 motivo="cita el acta de la vuelta 40, seccion 5, pregunta 2, que es lo que ejecuta"
 import io
 import os
 

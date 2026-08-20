@@ -61,6 +61,7 @@ Uso:
   python scripts/loop/vuelta57_tramo4_nomina.py --nomina <...> \
         --fijado docs/loop/TRAMO4_V57.jsonl
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:55 fuente=scripts/loop/vuelta55_tramo2_nomina.py prueba="RE-IDENTIFICADO POR SUS" corte=2026-08-20 motivo="declara de que ancestro viene la aritmetica de identidad por miembros"
 import argparse
 import io
 import json

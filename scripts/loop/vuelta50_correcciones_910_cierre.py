@@ -35,6 +35,7 @@ literal y unica; si el texto viejo no aparece EXACTAMENTE una vez, aborta.
 
 Uso: python scripts/loop/vuelta50_correcciones_910_cierre.py [--ejecutar]
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:49 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 49 DEL AUDITOR" corte=2026-08-20 motivo="nombra a la vuelta 49 como la que no corrio este barrido, que es su motivo de existir"
 import argparse
 import io
 import sys

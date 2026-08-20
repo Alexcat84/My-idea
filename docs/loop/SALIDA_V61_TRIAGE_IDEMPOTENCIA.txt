@@ -1,0 +1,51 @@
+====================================================================================================
+TRIAGE DE LOS AMBAR DEL BARRIDO DE TITULOS, POR EL CARRIL DEL BANCO 9.10 (vuelta 61)
+  modo : ESCRIBIR
+  corte: 2026-08-20 (fecha del sistema, la misma que va en cada rotulo)
+====================================================================================================
+
+--- EL BARRIDO CORRIDO AHORA MISMO, QUE ES LA VARA ---
+  menciones AMBAR vivas   : 0 en 0 claves (fichero, especie, numero)
+  menciones YA ROTULADAS  : 34 en 25 claves (triadas en una corrida anterior)
+  menciones cubiertas por la tabla: 0 AMBAR vivas mas 35 ya triadas
+  claves de la tabla: 10 SELLO_FIJO, 15 PROCEDENCIA, 1 ENVEJECIDA
+
+--- LA CITA ENVEJECIDA, CON SU VUELTA MEDIDA Y NO TECLEADA ---
+  fichero            : scripts/loop/vuelta56_varas_tramo3.py
+  commit que lo anade: 2743bd88
+  asunto del commit  : VUELTA 56, LOTE A DEL TRAMO 3: LOS DIECISIETE PRIMEROS ACTOS FUNDIDOS EN EL ORDEN IMPRESO, con la colision unica del tramo resuelta ANTES por relectura del filo y el re-anclaje del rumbo cazado por la suite
+  vuelta MEDIDA por git                  : 56
+  vuelta que el NOMBRE del fichero declara: 56
+  LOS DOS RELOJES COINCIDEN en 56: la correccion escribe ese numero y no otro
+
+--- LOS ROTULOS, uno por clave (fichero, especie, numero) ---
+    scripts/loop/_v41_patch_costuras.py                  YA ESTA
+    scripts/loop/_v50_contraste_contar_ld_v49.py         YA ESTA
+    scripts/loop/backlog_l03_vuelta14.py                 YA ESTA
+    scripts/loop/vuelta17_marcar_221_superadas.py        YA ESTA
+    scripts/loop/vuelta17_nota_op_i_01.py                YA ESTA
+    scripts/loop/vuelta19_tarea1.py                      YA ESTA
+    scripts/loop/vuelta21_tarea1.py                      YA ESTA
+    scripts/loop/vuelta37_aviso_v35.py                   YA ESTA
+    scripts/loop/vuelta46_registro_auditoria.py          YA ESTA
+    scripts/loop/vuelta48_registro_tramo.py              YA ESTA
+    scripts/loop/vuelta50_correcciones_910_cierre.py     YA ESTA
+    scripts/loop/vuelta54_registro_tramo.py              YA ESTA
+    scripts/loop/vuelta55_deshacer_acto23.py             YA ESTA
+    scripts/loop/vuelta55_registro_tramo.py              YA ESTA
+    scripts/loop/vuelta56_registro_tramo.py              YA ESTA
+    scripts/loop/vuelta56_tramo3_nomina.py               YA ESTA
+    scripts/loop/vuelta57_correcciones_tarea1.py         YA ESTA
+    scripts/loop/vuelta57_registro_tramo.py              YA ESTA
+    scripts/loop/vuelta57_tramo4_nomina.py               YA ESTA
+    scripts/loop/vuelta58_deshacer_acto32.py             YA ESTA
+    scripts/loop/vuelta58_registro_acto32.py             YA ESTA
+    scripts/loop/vuelta58_relectura_acto32.py            YA ESTA
+    scripts/loop/vuelta58_tallar_planes.py               YA ESTA
+
+--- LA CORRECCION DECLARADA, con el texto viejo CITADO y no borrado ---
+    YA ESTA: la nota de la correccion ya esta escrita y la linea dice ya (vuelta 56). No se reescribe.
+
+RESUMEN: 0 menciones AMBAR vivas triadas y 35 ya triadas antes (10 claves SELLO_FIJO, 15 PROCEDENCIA, 1 ENVEJECIDA) | escrituras nuevas 0, ya estaban 25 | modo ESCRIBIR
+YA ESTA: no habia nada nuevo que escribir.
+FIN

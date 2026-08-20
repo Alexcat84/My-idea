@@ -30,6 +30,7 @@ LAS GUARDAS SE CORREN HOY, NO SE HEREDAN (EJECUTOR.md regla 2):
 
 Uso: python scripts/loop/vuelta37_aviso_v35.py
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:35 fuente=docs/loop/PROPUESTA_V35_RELECTURAS.json prueba="PROPUESTA NO VOLCADA" corte=2026-08-20 motivo="su sujeto ES la propuesta de la vuelta 35, y el aviso de corte se le pone encima"
 import json
 import os
 import sys
