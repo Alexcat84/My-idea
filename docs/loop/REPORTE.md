@@ -16,8 +16,8 @@ no existia**, y la verificacion contra el grafo (regla 9) la desmonto antes de q
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `d6e98e97` (el commit del acta 59), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** |
-| **hash final** | `5ce3300a` (el registro del tramo) mas este mismo commit, que solo escribe este reporte, **pusheados a `origin/pasada-unica`** |
-| **commits de la vuelta** | **5 hasta aqui**, leidos de `git log --oneline d6e98e97..HEAD` al escribir esto: `7938d4b4` (apertura medida), `852d9412` (TAREA 1 entera), `02384c6a` (LOTE B), `aed86a79` (LOTE C), `5ce3300a` (el registro del cierre del tramo 5), **mas este** |
+| **hash final** | **`a50bc6f4`**, el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas este ultimo, que solo escribe esta celda porque el commit del reporte no podia contener su propio hash |
+| **commits de la vuelta** | **6**, leidos de `git log --format=%h d6e98e97..HEAD` DESPUES de escribir el reporte: `7938d4b4` (apertura medida), `852d9412` (TAREA 1 entera), `02384c6a` (LOTE B), `aed86a79` (LOTE C), `5ce3300a` (el registro del cierre del tramo 5), `a50bc6f4` (este reporte), **mas el que escribe esta celda** |
 | **arbol al cierre** | limpio tras este commit |
 
 ---
