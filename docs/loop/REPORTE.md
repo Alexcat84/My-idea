@@ -26,8 +26,8 @@ PENDIENTE DE DOCTRINA**. Va como pregunta 1 al auditor.
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `eda42bc2` (el commit del acta 60), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** (`git status --porcelain` VACIO, comprobado) |
-| **hash final** | **`ccf2832b`** mas el commit de este reporte, **pusheados a `origin/pasada-unica`** |
-| **commits de la vuelta** | **4** antes de este, leidos de `git log --format=%h eda42bc2..HEAD`: `027606a6` (apertura medida), `789564f8` (TAREA 1, los 35 AMBAR), `32d6fcf3` (TAREA 2.1, el abridor estable y el tramo 6), `ccf2832b` (TAREA 2.2, varas, dossier, colisiones y el contrato de perdidas), **mas este** |
+| **hash final** | **`7682b973`**, el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas este ultimo, que solo escribe esta celda y la de los commits porque el commit del reporte no podia contener su propio hash |
+| **commits de la vuelta** | **5** antes de este, leidos de `git log --format=%h eda42bc2..HEAD`: `027606a6` (apertura medida), `789564f8` (TAREA 1, los 35 AMBAR), `32d6fcf3` (TAREA 2.1, el abridor estable y el tramo 6), `ccf2832b` (TAREA 2.2, varas, dossier, colisiones y el contrato de perdidas), `7682b973` (este reporte), **mas el que escribe estas dos celdas**, leidos DESPUES de escribir el reporte |
 | **arbol al cierre** | limpio tras este commit |
 
 ---
