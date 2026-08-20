@@ -1,62 +1,67 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 SESION EJECUTORA. FASE III, EJECUCION. RAMA pasada-unica. MODO DE
 EJECUCION CONTINUA (AUDITOR.md seccion 3), con las guardas obligatorias
-por operacion. El acta de la vuelta 58 esta al final de
-docs/loop/ACTA_AUDITOR.md: CERO caidas en la tanda, CERO discrepancias
-de la ciega, los seis discutibles A FAVOR y las seis preguntas
-contestadas sin doctrina nueva. La relectura conjunta del 32 quedo
-ratificada por corrida propia del auditor (5/5, 2/2, 3/3, empate sin
-vara, declarado). Las dos rachas siguen en cero.
+por operacion. El acta de la vuelta 59 esta al final de
+docs/loop/ACTA_AUDITOR.md: CERO discrepancias de la ciega (las 16
+elecciones del lote A mas el 13 declarado, cobertura total), los ocho
+discutibles A FAVOR, las seis preguntas contestadas sin doctrina nueva,
+y UNA caida de reporte con nombre: LA FECHA de la vuelta (el reporte,
+la nota de ratificacion y el plan dicen 21 ago 2026 y los seis commits
+son del 20 ago, medido por git). La racha de reporte esta en UNA; la de
+clase o cifra sigue en cero.
 
-- TAREA 1: registros y el barrido de la especie conocida.
-  (1.1) EL BARRIDO DE TITULOS TALLADOS A MANO (acta 58, pregunta 3):
-  instrumento NUEVO de solo lectura que recorra los instrumentos del
-  bucle (scripts/loop/*.py como minimo), lea sus cabeceras y sus print
-  de titulo, y marque toda constante de tramo o de vuelta tallada a
-  mano (numeros de tramo o de vuelta escritos en literales de titulo
-  que no salgan de un argumento ni del fichero medido). La salida se
-  cita entera en el reporte. Los ejemplares que encuentre NO se
-  reparan a ciegas en la misma pasada: se listan con su linea, y se
-  reparan SOLO los que vayan a correrse en esta vuelta o la siguiente,
-  por la via ya estrenada (nombre estable con la vuelta por argumento
-  y el tramo leido del fichero, aritmetica intacta comprobada por
-  diff contra el ancestro). El resto queda listado como censo para
-  las vueltas que los toquen.
-  (1.2) Anota con fecha en el registro del tramo 4, junto a la
-  correccion del 32, que el acta 58 la RATIFICO por corrida propia
-  del auditor (cuadro de varas re-derivado, 50 de 50, y el 32 en
-  5/5, 2/2, 3/3). Una linea, sin reescribir nada de lo sellado.
-- TAREA 2: LOS LOTES DEL TRAMO 5, que son la mitad que la vuelta 58
-  dejo dicha y sin hacer. El insumo esta MEDIDO Y FIJADO y no se
-  re-mide: nomina en docs/loop/TRAMO5_V58.jsonl (50 actos, puestos 27
-  a 76, prefijo 26 verificado por el auditor sobre nomina propia),
-  cuadro de varas en SALIDA_V58_VARAS_TRAMO5.txt (22 de una sola
-  vara, 11 todas de acuerdo, 7 contenido empata, 6 chocan, 4 empate
-  sin vara; el auditor lo re-derivo con codigo propio y las 50 filas
-  calzan), colisiones esperadas CERO sobre cien combinaciones, y
-  dossier de 1.979 lineas con las razones enteras. Arranca en el PLAN
-  DEL LOTE A. Lotes con las guardas de siempre: simulacion previa
-  sobre copia, guarda 1B por acto, junturas comprobadas antes de
-  sellar, cobertura exacta, reanclar entre la fusion y run_phase1,
-  Gate 0 y las tres suites tras cada lote, censo con esperadas y
-  CALZA, caso positivo sobre un acto que la vuelta no toque, tallador
-  y registro por maquina, y la cabecera del reporte TALLADA con el
-  comparador corrido antes del commit. Las varas por forma, con su
-  letra vigente: una sola vara BASTA (acta 53 pregunta 4); todas de
-  acuerdo funde a su lado; contenido empata decide el cableado solo
-  (P.8); CHOCAN decide la pieza declarada de mayor peso (acta 53
-  pregunta 3) y si ninguna razon declara es PARADA, no improvisacion;
-  EMPATE SIN VARA se DECLARA y acumula para la mesa (actas 53 y 54
-  pregunta 4, con el 32 de precedente fresco). La rama de la cantidad
-  como vara sigue NO ADOPTADA: no la uses. Si un lote no cabe entero
-  con sus guardas en verde, NO lo empieces: cierra la vuelta con los
-  lotes hechos enteros y di primero cuales faltan (acta 58, D1 y
-  pregunta 6: la unidad que se entrega es el lote entero).
-- Con el freno delante: las dos rachas estan en CERO, pero las reglas
-  siguen vivas (tres caidas de reporte seguidas son parada; dos tandas
-  seguidas con caida de clase o cifra son parada). Toda cifra que
-  publiques sale del instrumento corrido en esta vuelta, y lo viejo se
-  cita como contraste, no como fuente.
+- TAREA 1: registros y dos correcciones, minimas y medidas.
+  (1.1) LA FECHA: en docs/plan/03_FUSIONES.md, en la nota de
+  ratificacion de la linea 2469, corrige 21 ago 2026 a 20 ago 2026 por
+  correccion declarada de una linea (el texto viejo tachado o citado,
+  la fecha buena al lado, y el motivo: los commits de la vuelta 59 son
+  del 20 ago, git lo mide). El campo fecha del PLAN SELLADO NO se
+  reedita: su error queda declarado en el registro del tramo cuando el
+  tramo cierre. Y de aqui en adelante la fecha de todo reporte y toda
+  nota fechada SE MIDE (del sistema o del commit), no se supone.
+  (1.2) EL ROJO NUEVO DEL BARRIDO, cazado por la corrida del auditor:
+  scripts/loop/vuelta59_planes.py, que el lote B corre, lleva TRAMO 5
+  tallado en su CABECERA (linea 1) aunque su print de titulo si esta
+  curado. Antes de correrlo, o reformula la cabecera para que no talle
+  el numero (el tramo se lee del insumo, como su print ya hace), o
+  rotula la mencion como PROCEDENCIA legible por el barrido (la via
+  del rotulo con vigente= de la vuelta 58). La aritmetica no se toca y
+  la eleccion se declara en el reporte. Los 35 AMBAR del barrido
+  quedan EN COLA para despues del cierre del tramo: no los pagues hoy.
+- TAREA 2: LOS LOTES B Y C DEL TRAMO 5, actos 18 a 50, que son los 34
+  que faltan. El insumo esta MEDIDO Y FIJADO y no se re-mide: nomina
+  en docs/loop/TRAMO5_V58.jsonl, cuadro de varas en
+  SALIDA_V58_VARAS_TRAMO5.txt (verificado dos veces por auditor),
+  colisiones esperadas CERO, dossier de 1.979 lineas. Arranca en el
+  PLAN DEL LOTE B, acto 18. P.16 se corre ANTES de fundir con el
+  instrumento YA ARREGLADO (retirar_duplicada_por_resolutor.py), y si
+  el censo del cierre destapa una fabricada, el carril del D7
+  adjudicado: retirar_entrada_redundante.py con su guarda de
+  legitimidad y TODO re-medido despues, con la cabecera publicada
+  siendo la ultima medicion. Lotes con las guardas de siempre:
+  simulacion previa sobre copia, guarda 1B por acto, junturas
+  comprobadas antes de sellar, cobertura exacta, reanclar entre la
+  fusion y run_phase1, Gate 0 y las tres suites tras cada lote, censo
+  con esperadas y CALZA, caso positivo sobre un acto que la vuelta no
+  toque, tallador y registro por maquina, y la cabecera del reporte
+  TALLADA con el comparador corrido antes del commit. Las varas por
+  forma, con su letra vigente: una sola vara BASTA (acta 53 pregunta
+  4); todas de acuerdo funde a su lado; contenido empata decide el
+  cableado solo (P.8); CHOCAN decide la pieza declarada (acta 53
+  pregunta 3, y por acta 59 pregunta 2 tambien cuando vence a DOS
+  conteos); EMPATE SIN VARA se DECLARA y acumula para la mesa (trece
+  actos ya, con el 13 de este tramo). La rama de la cantidad como vara
+  y la del rotulo LINEA como descuento siguen NO ADOPTADAS: no las
+  uses. Si los dos lotes no caben enteros con sus guardas en verde,
+  entrega el que quepa ENTERO y di primero cual falta (acta 58
+  pregunta 6). SI EL TRAMO CIERRA: el registro del tramo en
+  03_FUSIONES.md por maquina, y ahi se declara tambien el campo fecha
+  equivocado del plan del lote A.
+- Con el freno delante: la racha de reporte esta en UNA (tres seguidas
+  son parada) y la de clase o cifra en cero (dos tandas seguidas son
+  parada). Toda cifra que publiques sale del instrumento corrido en
+  esta vuelta, la FECHA incluida, y lo viejo se cita como contraste,
+  no como fuente.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
