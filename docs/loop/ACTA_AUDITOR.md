@@ -11935,3 +11935,400 @@ EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: las tres
 correcciones adjudicadas (TAREA 1) y las 25 lecturas P.12 del tramo 1 por
 la receta RATIFICADA, con la regla de los choques y el tramo 2 si hay
 cuerda (TAREA 2).
+
+# ==========================================================================
+# ACTA DE LA VUELTA 51 DEL AUDITOR (20 ago 2026, Fable 5)
+# ==========================================================================
+
+Sin hueco de acta: la ultima acta escrita cubre la vuelta 50 y esta cubre
+la 51 (commits 67bc64c3, 40b8eb80, a78c12e5 y 5b7caac0, rama pasada-unica,
+arbol limpio al abrir mi corrida). Verificacion COMPLETA por corrida
+propia: el reporte llego convocando al auditor por dos vias del MODO DE
+EJECUCION CONTINUA, una guarda en rojo (la cuenta de colisiones del
+encargo no calzo en el acto del equity y el ejecutor se detuvo) y seis
+preguntas de adjudicacion.
+
+## 1. VERIFICACION COMPLETA POR CORRIDA PROPIA, todo al digito
+
+Toda cifra de esta seccion sale de instrumento corrido EN ESTA vuelta,
+con codigo propio salvo donde se dice el instrumento del ejecutor.
+
+- MARCADOR al cierre, codigo propio sobre el archivo: A 566, B 77, C 8,
+  D 2.737, n 3.388, CERO huecos, CERO duplicados, tasa 16,7. Calza al
+  digito. Por dominio: quality A 123 de 844 (14,6) y core A 332 de 1.445
+  (23,0), que son los dos dominios que el reporte declara movidos, y las
+  aperturas se re-derivan exactas (126 = 123 mas los tres volteos de
+  quality; 334 = 332 mas los dos de core).
+- GRAFO, codigo propio: 3.853 ficheros, 3.492 vivos, 361 deprecados,
+  17.011 enlaces con la vara del instrumento. Los deprecados suben SEIS,
+  contados por nombre contra git (ver seccion 3.3).
+- RETRATO de las A, codigo propio con resolutor por cadena: 566 crudas,
+  57 colapsos a auto-arista, 509 pares distintos. Calza.
+- NOMINA, recomputo_3388.py con --salida fuera de docs/plan: 300
+  componentes, 247 CERRADOS sobre 518 nodos, 53 ABIERTOS sobre 240, LAS
+  CUATRO comprobaciones de 08_VERIFICACION TODAS OK.
+- OPERACIONES 71, todas LISTA, CERO dependencias rotas; INVENTARIO 672;
+  COLA 1.489 lineas contadas por mi (1.491 menos dos, coherente con los
+  dos absorbidos que estaban en cola).
+- INVARIANTES: duplicadas tras resolver 1.001 grupos con el instrumento
+  del ejecutor re-corrido por mi (y su jsonl salio byte igual al
+  commiteado: el arbol quedo limpio); auto-aristas tras resolver CERO con
+  codigo propio. CERO nuevas.
+- COLISIONES DE CLASE VIGENTES: CERO, censo propio (par resuelto con dos
+  o mas clases) sobre el archivo entero.
+- LAS CINCO FAMILIAS DE LIBRO, codigo propio: Weinberg 68/66, Horowitz
+  91/89, Hugos 111/111, Coleman 74/72, Rackham 46/46. No se mueven.
+- EL TRAMO POR MIEMBROS, re-corrido sobre MI nomina: 18 consumidos, 26
+  vivos, 6 partidos; 21 mixtos pendientes de P.12 y 5 de fusion pura
+  vivos (los cinco declarados, intactos: ninguno aparece entre los 34
+  ficheros de nodos que la vuelta toco).
+- LOS CINCO VOLTEOS P.16 (820, 2426, 2523, 2662, 498) contra git: los
+  cinco eran A en 6dcb01b9 y son D en HEAD, son LOS UNICOS veredictos con
+  clase o razon tocada en la vuelta, todos llevan la razon vieja entera
+  dentro y citan la lectura P.12. La aritmetica cierra sola: A 571 menos
+  5, D 2.732 mas 5.
+- MARCADOR AL CORTE 2.900, codigo propio: A 554, B 77, C 8, D 2.261.
+  Reproduce el contraste que el ejecutor midio para el apendice 95.1.
+- GATE 0 por el ciclo de TRES re-corrido por mi (GATE 0: OK; 71
+  etiquetas; 6 assets con manifest), suite del motor 25 de 25, suite web
+  80 ficheros con 1.030 pasadas y 3 saltadas, tsc CERO lineas. Mi
+  re-corrida dejo el arbol LIMPIO, sin restauraciones.
+- EL HALLAZGO DEL INSTRUMENTO, verificado en fuente y en dato: los
+  puestos 266 (B, reparto_inicial_equity y split_igual_vs_desigual) y
+  246 (C, split_igual_vs_desigual y timing_equity_split) existen con esas
+  clases, y los pares directos 754 y 688 son D contra
+  criterios_equity_split. Y EL DATO QUE EL REPORTE NO SUBRAYA: las dos
+  colisiones de fuera NO eran A contra D, eran B contra D y C contra D,
+  o sea veredictos DEL FILO. Eso pesa en la pregunta 2 (seccion 5).
+- EL INSTRUMENTO REESCRITO, re-corrido por mi HOY sobre mi nomina del
+  cierre: 42 combinaciones (21 mixtos), 37 CALZAN y 5 NO CALZAN, los
+  mismos cuatro actos del reporte (equity con dos de fuera, habitos,
+  value proposition canvas por sus dos viables, warrants). Coherente al
+  digito con la corrida de apertura del ejecutor: 51 combinaciones son
+  25 actos por dos viables mas el tercero del acto de la accion
+  correctiva, y 46 mas 5 son las 51; las 9 que faltan hoy son las de los
+  4 actos fundidos, todas CALZA en su salida.
+- LA REVERSION, verificada: el acto del equity esta entero en la nomina
+  (criterios_equity_split, split_igual_vs_desigual,
+  teoria_equidad_split_equity, CERRADO de tres), y el diff de veredictos
+  contra 6dcb01b9 no tiene mas rastro que los cinco volteos declarados.
+- LOS CUATRO ACTOS FUNDIDOS, campo a campo contra git: los SEIS
+  absorbidos cambian SOLO el campo deprecado y su texto queda intacto
+  campo a campo; los cuatro supervivientes tocan exactamente
+  pasos_accionables, condiciones_activacion, ids_alias, merged_originals
+  y los enlaces (los campos que la operacion no redacta, intactos);
+  pasos 6 a 9, 5 a 6, 6 a 11 y 5 a 7; alias izados 2, 1, 2, 1.
+- LAS PUERTAS, re-corridas sobre mi nomina: los dos actos con DOS
+  puertas existen (decision_cuando_fundar mas
+  evaluacion_capacidades_fundador; enfoque_paso_a_paso_investigacion_
+  mercado mas evaluacion_mercados_objetivo; hoy actos 8 y 15 de mi
+  corrida, 9 y 17 en la del ejecutor tras el lote A, mismos miembros), y
+  el instrumento LOS LISTA COMO SALVABLES bajo un rotulo que dice "una
+  sola puerta" imprimiendo dos. El hallazgo del ejecutor es exacto.
+- TAREA 1 contra fuente: la fila 680 con el 25 tachado y el 26 vigente,
+  motivo y relectura conjunta citados, y la fila hermana del registro 50
+  intacta; el rotulo de los declarados fechado a la apertura de la 50
+  con las cifras 7/24/26/30/31 intactas y la nota con el cierre; el
+  "hoy el acto 156" fechado con el 155 de la apertura de la 51; los DOS
+  parentesis de la fila 528 en 509 igual a 509 tras el barrido, con la
+  cadena de notas adosada y no reescrita.
+- EL BARRIDO DEL CIERRE, celda a celda contra mis mediciones: 246 (566),
+  247 (57), 248 (509), 528 (509 y 509), 1079 (566 y 16,7), 100.1 (A 566
+  con 16,7; D 2.737 con 80,8; segunda nota adosada sin reescribir la de
+  la 50). Las CIFRAS calzan todas. Los CONTADORES no: seccion 3.1.
+- EL CABLEADO DEL EQUITY, contraste declarado: el reporte dice 20 contra
+  4 y mi conteo crudo de enlaces da 22 contra 4. NO es discrepancia: el
+  dossier usa la vara de P.8 (quien nombra y a quien lo nombran, 20/20)
+  y la mia contaba punteros crudos. Se declara con su criterio.
+
+## 2. LA RELECTURA CIEGA, empezando por los discutibles
+
+Imprimi PRIMERO, del estado de apertura 6dcb01b9: las varas de contenido
+de los DIECINUEVE nodos de los seis grupos (los cuatro actos fundidos, el
+equity detenido y los regalos: pasos, condiciones, resumen, cableado),
+los pasos enteros del grupo de la accion correctiva y de los cuatro
+supervivientes finales, y las CLASES de los veinte pares internos sin
+razon alguna. Adjudique estructura, viables, superviviente y las cinco
+P.12, y SOLO DESPUES destape las razones (188, 871, 502, 2431, 2418,
+2701, 2805, 2496, 2426, 184, 1201, 820, 2663, 2670, 2631, 2916, 2523,
+2662, 308, 1058, 498, 799, 251, 1348: veinticuatro puestos con su razon
+entera, mas 266, 246, 754 y 688 al digito de clase).
+
+- viables por grupo, derivados en ciego de las clases: accion correctiva
+  TRES (sistematica, la 5 y crosby, que explican las 51 combinaciones),
+  scorecard DOS, consejo DOS (consejo_de_calidad y EL PROPIO MIXTO
+  consejo_de_calidad_3), cofundar DOS, equity DOS, regalos DOS. COINCIDE
+  todo con el instrumento del ejecutor.
+- superviviente por contenido: scorecard (todas las varas a favor),
+  cofundar (pasos y resumen), equity (margen mas ancho del tramo) y
+  consejo (pasos 6 contra 4 y cableado alineado) salen igual que el
+  ejecutor SIN mirar razones. En la accion correctiva mi ciega dio
+  EMPATE de contenido entre sistematica y la 5 (pasos 6 y 6, condiciones
+  3 y 3, resumen a favor de la 5, cableado a favor de sistematica) con
+  crosby descartado por todas las varas; al destapar, el 2431 declara el
+  procedimiento propio de sistematica (la cadencia de tres niveles, el
+  grupo puntual con regla de disolucion, ordenar por gravedad) y cierra
+  con Sobrevive sistematica. COINCIDE con la eleccion del ejecutor.
+- las cinco P.12: CONTINUA las cinco en ciego (el veredicto DIRECTO de
+  cada par mixto ya era D), y el destape lo confirma (el 1058 escribe la
+  palabra; el 2916 cuenta conjuntos disjuntos de pasos propios).
+- los cinco choques de letra contra aritmetica: verificados en las cinco
+  razones (2631, 2663 y 2523 cierran con Sobrevive consejo_calidad; 2670
+  y 2662 con Sobrevive consejo_calidad_2) y NINGUNO de los dos nombrados
+  es viable, derivado por mi de las clases: la parte A de cada uno se
+  lleva a los cuatro miembros. La letra se honro en lo que pudo.
+- el reparto: paso 8 de sistematica contra sus pasos 3 y 4 leidos
+  enteros (escalada de AUTORIDAD para la especie sutil contra escalada
+  de CALENDARIO dentro del sistema: dos mandatos); el paso 1 y el paso 6
+  del consejo final leidos con sus dos incisos cada uno (se leen
+  limpios); la perdida nombrada de la procedencia contra el paso 2 del
+  mixto vivo crosby (auditorias independientes periodicas por
+  departamento: el contenido vive entero en el racimo).
+
+CIEGA: 12 relecturas de fondo, CERO discrepancias DENTRO del marcado.
+FUERA del marcado aparecieron TRES discrepancias y un rotulo: seccion 3.
+
+## 3. LO QUE APARECIO FUERA DEL MARCADO: dos caidas de CIFRA PUBLICADA,
+##    una de REPORTE y un rotulo, con los tramos releidos AL DOBLE
+
+1. LOS CONTADORES DE LAS FILAS 246, 247 y 248 DE RECOMPUTO_3388.md
+   QUEDARON SIN CUADRAR: el barrido de esta vuelta tacho las cifras
+   (571 a 566, 49 a 57, 522 a 509) pero dejo CORREGIDA SIETE VECES,
+   CUATRO VECES y SIETE VECES con cadenas que hoy tienen OCHO, CINCO y
+   OCHO tachados, contados por mi, y sin nota fechada de la correccion
+   nueva (la de 100.1 si se adoso; estas no). La vara es la que el
+   propio ejecutor adjudico y esta acta ratifico en la vuelta 50 (D7):
+   un contador publicado que no calza con su propia cadena es una cifra
+   publicada mal, y cuadrarlo es parte de la correccion. CAIDA DE CIFRA
+   PUBLICADA, correccion encargada en TAREA 1.
+2. LOS ORDINALES DE LOS CINCO DECLARADOS "AL CERRAR LA VUELTA 51" DEL
+   REGISTRO (03_FUSIONES.md, y repetidos en el reporte) DICEN 4, 21, 23,
+   27 y 28, Y LA SALIDA QUE LA PROPIA CELDA CITA IMPRIME 3, 19, 21, 25 y
+   26: los publicados son los ordinales de la corrida TRAS EL LOTE A
+   (verificado contra las dos salidas, linea a linea). La celda hasta
+   presume de rotulo fechado, y el rotulo es exacto: lo que esta mal es
+   la CIFRA, copiada de otra corrida en vez de leida de la salida
+   citada, que es la especie exacta de las caidas de las vueltas 15 y
+   16. CAIDA DE CIFRA PUBLICADA, correccion con tachado encargada. Los
+   miembros, que son la llave declarada, estan bien los cinco.
+3. EL REPORTE DICE SIETE ABSORBIDOS Y SON SEIS, contados por nombre
+   contra git (accion_correctiva_5, accion_correctiva_6, consejo_calidad,
+   consejo_calidad_2, riesgo_cofundadores_relacion_previa,
+   scoring_model_scorecard), coherente con el propio reporte (deprecados
+   355 a 361, vivos 3.498 a 3.492) y con mi grafo. El siete vive en
+   REPORTE.md y en el docstring del instrumento nuevo, no en docs/plan
+   ni en el banco: CAIDA DE REPORTE, no mueve ningun dato.
+4. EL REGISTRO DICE "las 25 combinaciones de acto y superviviente viable
+   se re-midieron" Y DOS LINEAS DESPUES "De 51 combinaciones, CINCO no
+   calzan": las combinaciones medidas son 51 y el 25 es la cuenta exacta
+   de los ACTOS mixtos. Es la especie del ROTULO (la cifra exacta con el
+   sustantivo equivocado, con la cifra buena impresa al lado): se
+   encarga la correccion de redaccion y NO se cuenta como caida, con la
+   misma vara que el acta 50 aplico a sus dos hallazgos de rotulo.
+
+Por la regla del credito, los tramos afectados quedaron RELEIDOS AL
+DOBLE: las filas del RECOMPUTO con sus cadenas contadas tachado a
+tachado, y el registro de la vuelta 51 entero, dos pasadas. De ahi
+salieron el 2 y el 4; no hay mas hallazgos.
+
+## 4. LOS ONCE DISCUTIBLES, ADJUDICADOS (todos A FAVOR)
+
+- D1, cuatro lecturas de veinticinco y sin tramo 2: A FAVOR. La guarda
+  de cuenta del encargo se puso en rojo y el MODO CONTINUO manda
+  detenerse y convocar. Lo que consumio la vuelta esta a la vista: el
+  instrumento reescrito para re-resolver 3.388 veredictos, la reversion
+  verificada limpia y las 51 combinaciones medidas. Es la figura del D1
+  de la vuelta 50.
+- D2, revertir un acto ya ejecutado en vez de limpiar y seguir: A FAVOR.
+  Las dos colisiones de fuera caian sobre veredictos del FILO (un B y un
+  C), y voltear un B por maquina sin regla escrita habria sido decidir
+  sin texto, que es la especie exacta de parada que el MODO CONTINUO
+  nombra. Revertir al ultimo estado verde y traer el caso es la lectura
+  correcta; el trabajo no se perdio (el plan quedo escrito y la lectura
+  HECHA).
+- D3, la politica del reparto (parametro concreto de gesto existente va
+  de INCISO, gesto distinto va de APPEND): A FAVOR y queda ADJUDICADA
+  como criterio del reparto. Es la figura del inciso de la vuelta 49 mas
+  el precedente D4 de la 50, aplicada consistente en los siete incisos
+  de esta vuelta, todos leidos.
+- D4, sistematica con el resumen en contra: A FAVOR. P.8 dice que el
+  contenido manda y que contenido incluye lo que el archivo ya declaro:
+  el 2431, la unica lectura real de ese par, declara el procedimiento
+  propio de sistematica y cierra con su formula. El conteo de caracteres
+  del resumen no es una vara de P.8; el cableado, que solo desempata,
+  tambien apuntaba a sistematica. No contradice a la vuelta 50: alli el
+  resumen fue una de tres varas alineadas, no el arbitro.
+- D5, el paso 5 de la 5 viaja aunque el 2431 lo da por cubierto: A
+  FAVOR. Leidos los dos pasos enteros, la escalada de AUTORIDAD para lo
+  sutil y de largo plazo no es la revision semanal del calendario; el
+  2418 la llama lo unico del par que impide que un problema cronico se
+  vuelva paisaje. Perderla seria perdida real; el costo del append es un
+  solape anotado a la fase 04. Figura exacta del D5 de la vuelta 50.
+- D6, la procedencia de perdida nombrada y no de inciso: A FAVOR. El
+  propio 2418 clasifica esa procedencia como LINEA, y el contenido vive
+  entero en el mixto vivo cableado (crosby, paso 2, auditorias
+  independientes por departamento). La vara que esta adjudicacion fija:
+  una procedencia cuyo contenido vive entero en un vecino vivo del
+  racimo puede ir de PERDIDA NOMBRADA; si no viviera en ningun vivo, el
+  inciso habria sido obligatorio.
+- D7, el consejo con dos de tres varas en contra: A FAVOR. Los viables
+  eran el elegido y el propio mixto; el contenido HABLA (seis pasos
+  contra cuatro, y el 2916 cuenta el propio de cada lado), y donde el
+  contenido habla el cableado y el resumen no votan (P.8 es prelacion,
+  no promedio). Pesar todas las varas juntas no esta escrito en ninguna
+  regla.
+- D8, cuatro incisos sobre dos pasos: A FAVOR. Los dos pasos finales
+  estan leidos por mi en el fichero y se leen limpios; cada inciso es un
+  parametro concreto del gesto de su paso. La figura del inciso no
+  escribe tope por paso: el limite es la legibilidad, y se cumple.
+- D9, la colision contada por PAR RESUELTO: A FAVOR y RATIFICADA (ver
+  pregunta 1).
+- D10, no corregir el rotulo del registro 49: A FAVOR. El encargo
+  scopeo la 1.2 al registro de la 50; medirlo y traerlo era lo mandado.
+  La correccion va encargada ahora con la figura de la 1.2.
+- D11, no tocar el 95.1 ni las dos tablas: A FAVOR. Adjudicar la especie
+  de una tabla no es del ejecutor; traerla con la cifra medida y el
+  comando citado es la conducta que el protocolo pide.
+
+## 5. LAS SEIS PREGUNTAS, ADJUDICADAS (ninguna pide doctrina nueva)
+
+1. POR PAR RESUELTO. La definicion escrita del censo y del instrumento
+   nuevo es "un par resuelto con dos o mas clases distintas es una
+   colision"; el censo que declara CERO vigentes cuenta pares, y una
+   guarda que contara veredictos hablaria otra unidad que su propio
+   censo. El ejemplar del consejo (tres veredictos, un par, dos volteos)
+   queda como la figura. Ratificada.
+2. DETENER FUE LO CORRECTO, por la letra del encargo y porque no habia
+   carril escrito EN EL ENCARGO para el exceso. Y EL CARRIL QUEDA
+   ADJUDICADO AHORA, por extension citable, para el equity y los que
+   vengan: (a) la colision interna se limpia volteando el A viejo a la
+   clase del veredicto DIRECTO del par resuelto, citandolo como
+   relectura conjunta (la figura del segundo veredicto del mismo par,
+   cinco ejemplares esta vuelta); (b) la colision de FUERA cuyo veredicto
+   arrastrado es del FILO (B o C) NO se voltea por maquina: su nodo
+   muere o cambia de texto, y eso es exactamente la COLA DE RELECTURA
+   POST FUSION de 08_VERIFICACION ("lo que se mueve es lo que estaba en
+   el filo"). Se relee el par resuelto EN EL MISMO ACTO con el veredicto
+   directo como contraste, la correccion declarada lleva la razon vieja
+   entera y cita esa relectura, y si la relectura encuentra que lo
+   congelado es una pregunta de POLITICA de catalogo, el acto NO se
+   funde: se declara y va a la mesa. (c) La guarda de cuenta fija del
+   encargo se RETIRA y la reemplaza la prediccion del instrumento
+   reescrito: el censo esperado es el que la simulacion imprime antes de
+   mover nada, y una colision real fuera de la prediccion detiene.
+   Piezas: P.16 ampliada (acta 49), 08_VERIFICACION (el filo ante muerte
+   o cambio de texto), P.12 (la lectura decide) y el precedente de esta
+   vuelta. El acto del equity SE EJECUTA con este carril en la vuelta
+   52: esta adjudicado en el encargo.
+3. SI SON IMPOSIBLES, y la vara queda dicha: un acto es IMPOSIBLE POR
+   PUERTA cuando NINGUNA fusion posible respeta 1B, no solo cuando todos
+   sus miembros son puerta (la figura ya escrita de domina_lo_que_compras
+   es "alguien tendria que morir", y aqui alguien tiene que morir con
+   cualquier viable). Los dos actos se DECLARAN, se suman a la lista del
+   PARA_ALEXIS del cierre identificados por miembros, y el instrumento
+   se repara con el tercer caso. Encargado.
+4. FOTO FECHADA, las dos familias, por la regla del acta 50 pregunta 5
+   mas el alcance escrito del 9.10 (tablas VIGENTES): el apendice 95.1
+   es un checkpoint del cribado, exacto para su corrida, que los
+   barridos posteriores mantuvieron restando como si fuera tabla
+   vigente; se fecha el rotulo, se cierra la cadena con nota fechada, y
+   la medicion de hoy (A 554, B 77, C 8, D 2.261, comando citado) queda
+   en la nota como contraste, no como cifra vigente. Las dos tablas
+   "medido hoy" de RECOMPUTO_3388 (lineas 1790 y 1837, registros de las
+   vueltas 19 y 20) igual: rotulo fechado a su vuelta, cadena cerrada
+   con nota, y la cifra de su corrida verificada por git ANTES de
+   fechar (checkout del cierre de esa vuelta y recomputo; si la primera
+   cifra de la cadena no calza ni con su propia corrida, se trae en vez
+   de fecharse). El marcador vigente vive en 246, 1079 y 100.1, y en
+   ningun otro sitio.
+5. UNA B QUE CONGELA POLITICA NO LA CONTESTA P.12 NI LA MAQUINA. El
+   carril: la razon del B se lee ANTES de fundir su acto; si lo
+   congelado es condicion de TEXTO, la relectura post fusion decide y el
+   B se corrige citandola; si es pregunta de POLITICA de catalogo (dos
+   contextos o dos nodos, como el 703 del S&OP), el acto se DECLARA, no
+   se funde, y va a la mesa del PARA_ALEXIS del cierre con los cinco
+   declarados, porque decidir el alcance del catalogo es de las cosas
+   que la casa reserva (AUDITOR.md seccion 4). No es parada hoy: los
+   declarados se acumulan, el tramo sigue con los demas.
+6. EL RESUMEN POR CINCO CARACTERES NO DESEMPATA. P.8 se corre en su
+   orden escrito: primero el CONTENIDO, que incluye el material propio y
+   el padre declarado en las lecturas del archivo (para los regalos, las
+   razones 799, 251 y 1348 traen material y hay que leerlas como parte
+   de la eleccion, no solo contar varas); si el contenido de verdad
+   calla, EL CABLEADO DECIDE SOLO (es la letra de P.8, con el ejemplar
+   de la fusion 328); y si el cableado tambien empata (mi conteo crudo
+   da 2 contra 2), el acto se DECLARA como empate sin vara y viene al
+   auditor. Un conteo de caracteres no es contenido.
+
+Pendientes de doctrina del reporte: el 1 queda resuelto por la pregunta
+2 (guarda nueva mas carril del filo); el 2 por la pregunta 3; el 3 por
+la pregunta 5. Heredados y sin cambio, siguen anotados: el INCISO de
+condiciones, el esquema de OPERACIONES.jsonl que no distingue ejecutada
+de pendiente, y el campo orden de la fase 03.
+
+## 6. MIS PROPIOS MANEJOS Y TROPIEZOS, declarados
+
+- Mi conteo crudo del cableado del equity (22) difiere de la vara P.8
+  del dossier (20) por criterio declarado, no por medicion: se publica
+  como contraste en la seccion 1.
+- Mi corrida entera del Gate 0 y de las suites dejo el arbol limpio sin
+  restauraciones: no hubo que tocar nada y se dice.
+- Releo mi encargo de la vuelta 51 y no encuentro cifra mia copiada sin
+  medir en esta tanda. Las dos caidas de cifra de la seccion 3 son del
+  ejecutor y ninguna venia de mi encargo.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 12 relecturas ciegas de fondo (viables de seis grupos,
+cuatro elecciones de superviviente, cinco P.12 y el reparto con D5, D6 y
+D8 sobre el texto final), 24 puestos leidos al digito con su razon
+entera mas 4 al digito de clase, 8 nodos impresos enteros y 19 medidos
+en sus varas, y unos 32 sitios re-corridos o leidos al digito (marcador
+propio con dominios y corte 2.900, grafo, retrato, censo, auto-aristas,
+familias, nomina con --salida, tramo sobre nomina propia, duplicadas
+con el instrumento del ejecutor, cola, operaciones e inventario,
+colisiones esperadas re-corridas, puertas re-corridas, ciclo Gate 0 y
+tres suites con tsc, cinco volteos contra git, seis absorbidos y cuatro
+supervivientes campo a campo, celdas 246 a 248, 528, 1079 y 100.1
+contra instrumento, apendice 95.1 y las dos tablas viejas, TAREA 1
+sitio a sitio, la fila 683, y el registro de la vuelta 51 al doble).
+
+Caidas del ejecutor en esta tanda (vuelta 51): DOS de cifra publicada
+(los contadores sin cuadrar; los ordinales del cierre copiados de la
+corrida anterior), UNA de reporte (siete absorbidos que son seis), CERO
+de clase. Un rotulo encargado sin contar (las 25 combinaciones).
+
+Acumulado: 111 relecturas, 514 puestos (mas 348 nodos de forma y 500
+sitios de codigo), 7 caidas de clase, 20 de reporte del ejecutor, 12 de
+cifra publicada del ejecutor, 3 de cifra del auditor, 4 de acta del
+auditor, 2 de procedimiento del auditor.
+
+Rachas: CLASE O CIFRA EN UNA SEGUIDA (esta tanda tiene las dos caidas de
+cifra publicada). LA PROXIMA TANDA CON CAIDA DE CLASE O DE CIFRA
+PUBLICADA DETIENE EL BUCLE. REPORTE en una seguida (el siete por seis).
+
+## 8. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. Las seis preguntas y los tres pendientes se
+  adjudicaron por extension citable (P.8, P.12, P.16 ampliada,
+  08_VERIFICACION y la regla del acta 50 pregunta 5), cada una con sus
+  piezas nombradas.
+- Contradiccion sin regla de correccion: NO. Las caidas tienen su
+  carril: 9.10 con tachado, contador cuadrado y nota fechada.
+- Decision de fundador: NINGUNA SE TOMA. Lo que la pide (las B de
+  politica, los imposibles por puerta) queda DECLARADO y acumulado para
+  el PARA_ALEXIS del cierre, que es exactamente el carril escrito.
+- Fallo tecnico repetido: NO. Gate 0 y suites en verde dos corridas, la
+  del ejecutor y la mia, arbol limpio.
+- Credito de tanda roto: NO ROTO PERO EN EL FILO: la racha de clase o
+  cifra queda EN UNA. Dos tandas seguidas serian PARADA: el aviso va en
+  cabecera del encargo.
+- Campana consumada: NO. Quedan 21 lecturas P.12 (una ya adjudicada
+  para ejecutar: el equity), el tramo 2 y lo que el 00_INDICE tiene
+  detras.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: correcciones
+adjudicadas y reparacion del instrumento de puertas (TAREA 1), y el
+tramo 1 con la guarda nueva de colisiones, el carril del filo, el
+equity ejecutado por su carril y las B de politica declaradas (TAREA 2).
