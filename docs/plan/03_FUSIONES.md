@@ -2237,10 +2237,10 @@ vuelta NO volteo ningun veredicto y el marcador queda identico al abrir y al cer
 | | **apertura** | **cierre, RECOMPUTADO** |
 |---|---:|---:|
 | marcador `A` / `B` / `C` / `D` | 551 / 72 / 5 / 2760 | **551 / 72 / 5 / 2760** |
-| grafo: vivos / deprecados / enlaces | 3385 / 468 / 17290 | **3341 / 512 / 17369** |
-| retrato: colapsos / pares distintos | 164 / 387 | **208 / 343** |
-| actos (componentes) / `CERRADOS` | 193 / 140 | **149 / 96** |
-| actos del tramo 4 fundidos / vivos | 0 / 50 | **44 / 6, los 6 DECLARADOS** |
+| grafo: vivos / deprecados / enlaces | 3385 / 468 / 17290 | ~~**3341 / 512 / 17369**~~ **3342 / 511 / 17366** |
+| retrato: colapsos / pares distintos | 164 / 387 | ~~**208 / 343**~~ **207 / 344** |
+| actos (componentes) / `CERRADOS` | 193 / 140 | ~~**149 / 96**~~ **150 / 97** |
+| actos del tramo 4 fundidos / vivos | 0 / 50 | ~~**44 / 6, los 6 DECLARADOS**~~ **43 / 7, los 7 DECLARADOS** |
 
 ### EL REPARTO, TALLADO DE LOS PLANES SELLADOS
 
@@ -2250,12 +2250,16 @@ vuelta NO volteo ningun veredicto y el marcador queda identico al abrir y al cer
 los `PLAN_V57_*.json` **SELLADOS** y **cae en ROJO con el acto nombrado si un motivo no encaja en
 ninguna forma conocida**.
 
+> **TABLA SUPERADA (20 ago 2026, vuelta 58).** Esta tabla es la del dia del sellado y **se queda entera porque el texto viejo no se borra**. La VIGENTE, con el acto **32** fuera, esta en la **CORRECCION DECLARADA** del final de este registro.
+
 | lote | actos | fundidos | mueren | piezas | enteras | ya dichas | de `INCISO` | perdidas nombradas |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
 | **A** | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 16, 17 | **14** | **14** | **74** | 16 | 36 | **22** | **2** |
 | **B** | 18, 19, 20, 21, 22, 23, 26, 27, 28, 29, 30, 32, 33, 34 | **14** | **14** | **78** | 25 | 28 | **25** | **1** |
 | **C** | 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 | **16** | **16** | **93** | 27 | 41 | **25** | **0** |
 | **los tres** | | **44** | **44** | **245** | **68** | **105** | **72** | **3** |
+
+> **TABLA SUPERADA (20 ago 2026, vuelta 58).** Esta tabla es la del dia del sellado y **se queda entera porque el texto viejo no se borra**. La VIGENTE, con el acto **32** fuera, esta en la **CORRECCION DECLARADA** del final de este registro.
 
 | la forma, leida del motivo sellado | cuantos | los actos |
 |---|---:|---|
@@ -2268,6 +2272,8 @@ ninguna forma conocida**.
 | **LA PUERTA SOBREVIVE y los conteos concuerdan, contra la razon declarada** | **1** | 43 |
 | **LOS TRES CONTEOS EMPATAN y decide la pieza declarada POR CANTIDAD** | **1** | 32 |
 | **suma** | **44** | |
+
+> **TABLA SUPERADA (20 ago 2026, vuelta 58).** Esta tabla es la del dia del sellado y **se queda entera porque el texto viejo no se borra**. La VIGENTE, con el acto **32** fuera, esta en la **CORRECCION DECLARADA** del final de este registro.
 
 | acto | lote | sobrevive | absorbe | piezas | enteras | ya dichas | `INCISO` |
 |---:|:---:|---|---|---:|---:|---:|---:|
@@ -2316,6 +2322,8 @@ ninguna forma conocida**.
 | **49** | C | `condiciones_latentes_largo_plazo` | `caso_descarrilamiento_nakina` | 4 | 2 | 1 | 1 |
 | **50** | C | `cultura_de_aprendizaje` | `ingenieria_cultura_aprendizaje` | 7 | 2 | 2 | 3 |
 
+> **TABLA SUPERADA (20 ago 2026, vuelta 58).** Esta tabla es la del dia del sellado y **se queda entera porque el texto viejo no se borra**. La VIGENTE, con el acto **32** fuera, esta en la **CORRECCION DECLARADA** del final de este registro.
+
 | acto | lote | sus miembros | especie | se acumula para |
 |---:|:---:|---|---|---|
 | **11** | A | `disruptores_endocrinos_y_salud_industrial`, `quimicos_toxicos_en_diseno` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA. Y con un dato que la propia razon aporta y que conviene que la mesa tenga delante: la pieza de disruptores_endocrinos_y_salud_industrial que la razon llama LA UNICA REGLA PRECAUTORIA DEL CATALOGO (no basta con quitar lo que se sabe malo, hay que desconfiar de lo que nadie ha mirado) no tiene equivalente en ningun otro nodo del par. Un empate de conteos que pone en riesgo una regla unica del catalogo es el caso que hace visible el pendiente de doctrina 1 desde otro angulo que el del acto 45 de la vuelta 56. |
@@ -2344,3 +2352,136 @@ las tres por la misma causa heredada: **el `INCISO` de condiciones no existe en 
 > **UNA CIFRA QUE CONVIENE DEJAR DICHA PORQUE ES LA QUE MIDE EL REPARTO:** de las **245**
 > piezas repartidas en los tres lotes, **3** se pierden. El resto viaja entera, esta ya dicha
 > en el superviviente, o se salva de `INCISO` adosado.
+
+
+---
+
+### CORRECCION DECLARADA: **EL ACTO 32 SE DESHACE Y QUEDA DECLARADO, SEPTIMO DEL TRAMO** (20 ago 2026, vuelta 58, TAREA 1.1 del encargo)
+
+**LA RELECTURA CONJUNTA QUE EL ACTA 57 ENCARGO SE RESOLVIO A FAVOR DEL CASO DEL AUDITOR**
+(su seccion 2 y su discutible `D4`), **y se verifico contra el grafo ANTES de tocar nada**, que es
+lo que el encargo pedia. **Instrumento de solo lectura**
+`python scripts/loop/vuelta58_relectura_acto32.py --raiz <worktree en 75863aee>`
+([`../loop/SALIDA_V58_RELECTURA_ACTO32_PREFUSION.txt`](../loop/SALIDA_V58_RELECTURA_ACTO32_PREFUSION.txt)),
+con la aritmetica de varas copiada entera del cuadro de varas y medida sobre el arbol **PRE
+FUSION**: `programa_de_referidos_de_franquiciados` contra `referidos_franquiciados_existentes` da
+**pasos 5 contra 5, condiciones 2 contra 2 y cableado 3 contra 3**, y la forma que la receta le da
+es **EMPATE SIN VARA**.
+
+**LA LETRA VIGENTE, LEIDA HOY Y CON SU LINEA AL LADO:** el acta 53, pregunta 4 (linea **13015** de
+`../loop/ACTA_AUDITOR.md`) *reserva el empate sin vara para cuando TODO empata*; el acta 54,
+pregunta 4 (linea **13389**) dice que *el conteo de caracteres no desempata*, y su linea **13391**
+que *el propio declarado de UN SOLO LADO es una vara no empatada*. **En este acto el propio
+declarado esta A LOS DOS LADOS**: la razon del puesto **2127**, leida hoy entera, mide **UNA
+LINEA** propia de uno y **DOS LINEAS** propias del otro. **Contar esas lineas es un conteo sobre la
+letra, y ninguna acta lo ha adjudicado como vara.** La razon del 2127 **no declara superviviente,
+ni contencion, ni padre**: pesa una pieza como *la que mas cuesta reponer*, que no es ninguna de
+las tres formas que el acta 53, pregunta 3, enumera.
+
+> **EL CONTRASTE INTERNO, MEDIDO EN LA MISMA SALIDA Y NO CITADO DE MEMORIA:** el **acto 11** de
+> este mismo tramo da **4 contra 4, 2 contra 2 y 2 contra 2**, tambien **EMPATE SIN VARA**, y su
+> razon (puesto **1884**) declara material propio **UNA linea contra TRES**. **La vuelta 57 lo
+> DECLARO.** Dos actos con la misma forma y el mismo tipo de desempate no pueden acabar uno fundido
+> y otro declarado, y esa inconsistencia es la que esta correccion cierra.
+
+**NINGUNA EVIDENCIA NUEVA CONTRA EL CASO**, asi que no hubo que parar antes de tocar el grafo.
+**LA RAMA DE LA CANTIDAD COMO VARA NO SE APLICA MAS** mientras la mesa no la adopte: queda dentro
+del **pendiente de doctrina 1**, tal como el acta 57 (pregunta 2) la dejo.
+
+**EL DESHACER, Y LO QUE OBLIGO A HACERLO DISTINTO DEL ACTO 23 DE LA VUELTA 55.**
+`python scripts/loop/vuelta58_deshacer_acto32.py --ejecutar`
+([`../loop/SALIDA_V58_DESHACER_ACTO32.txt`](../loop/SALIDA_V58_DESHACER_ACTO32.txt)). De los
+**CINCO** ficheros que el acto 32 toco en el lote B (`a1d7269d`), **CUATRO** no se habian vuelto a
+tocar y se restauran al blob del lote A (`0481113f`); **el quinto,
+`principio_apalancamiento_numero_magico.json`, SI se toco despues**, en el lote C (`706397c7`) y
+**por OTRO acto, el 35**. **Restaurarle el blob habria borrado el acto 35**, asi que ese fichero
+recibe el **DIFF INVERSO** del acto 32, probado con `--check` antes de aplicarse. **El acto 35
+queda en pie, verificado por conteo.** Las guardas de despues: **los dos miembros VIVOS, sin alias
+cruzado y CAMPO A CAMPO IDENTICOS al blob pre fusion**, y **el cableado de vuelta al absorbido en
+los tres vecinos**.
+
+#### EL ESTADO DEL TRAMO 4, RECOMPUTADO TRAS DESHACER EL ACTO 32
+
+**Ninguna celda esta tecleada:** las extrae `python scripts/loop/vuelta58_registro_acto32.py` de
+[`../loop/SALIDA_V58_ESTADO_TRAS_ACTO32.txt`](../loop/SALIDA_V58_ESTADO_TRAS_ACTO32.txt),
+[`../loop/SALIDA_V58_RECOMPUTO_TRAS_ACTO32.txt`](../loop/SALIDA_V58_RECOMPUTO_TRAS_ACTO32.txt) y
+[`../loop/SALIDA_V58_CENSO_TRAS_ACTO32.txt`](../loop/SALIDA_V58_CENSO_TRAS_ACTO32.txt).
+
+| | **cierre de la vuelta 57** | **tras deshacer el acto 32** |
+|---|---:|---:|
+| grafo: vivos / deprecados / enlaces | 3341 / 512 / 17369 | **3342 / 511 / 17366** |
+| retrato: colapsos / pares distintos | 208 / 343 | **207 / 344** |
+| actos (componentes) / `CERRADOS` | 149 / 96 | **150 / 97** |
+| auto-pares / colisiones de clase vigentes | 186 / 0 | **185 / 0** |
+| actos del tramo 4 fundidos / vivos | 44 / 6 | **43 / 7, los 7 DECLARADOS** |
+| las cuatro comprobaciones de `08_VERIFICACION` | TODAS OK (441 igual a 441; 343 igual a 343) | **TODAS OK (443 igual a 443; 344 igual a 344)** |
+
+> **CADA CELDA QUE SE MOVIO LO HIZO EN UNO, Y ESO ERA LO QUE EL ENCARGO PREDECIA:** los colapsos
+> bajan uno, los pares distintos suben uno, los actos suben uno, los `CERRADOS` suben uno, los
+> auto-pares bajan uno, los vivos suben uno y los deprecados bajan uno. **Los enlaces bajan TRES y
+> el motivo esta medido, no supuesto:** el conteo incluye los deprecados, la fusion habia sumado
+> **tres** `nodos_previos` al superviviente, y esos tres son los que se van. **El marcador NO se
+> mueve y tampoco es un olvido**: deshacer una fusion pura no voltea ningun veredicto, y el censo
+> de colisiones sale en **0** con `CALZA: SI`.
+
+#### LAS TABLAS VIGENTES, TALLADAS DE LOS PLANES SELLADOS CON EL 32 RETIRADO
+
+**Salen enteras de** `python scripts/loop/vuelta58_tallar_planes.py --vuelta 58 --retirado "32|..."`
+([`../loop/SALIDA_V58_TALLAR_PLANES.txt`](../loop/SALIDA_V58_TALLAR_PLANES.txt)), **sucesor
+declarado del tallador de la vuelta 57 copiado byte a byte**, cuyo unico anadido es el argumento
+`--retirado`. **EL PLAN SELLADO NO SE TOCA:** los `PLAN_V57_*.json` se quedan con el acto 32 dentro
+y su motivo entero, porque reescribir un plan sellado taparia lo que se corrige. **Corrido sin
+`--retirado`, este sucesor imprime lo mismo que su ancestro al digito, y se comprobo.**
+
+| lote | actos | fundidos | mueren | piezas | enteras | ya dichas | de `INCISO` | perdidas nombradas |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| **A** | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 16, 17 | **14** | **14** | **74** | 16 | 36 | **22** | **2** |
+| **B** | 18, 19, 20, 21, 22, 23, 26, 27, 28, 29, 30, 33, 34 | **13** | **13** | **71** | 23 | 25 | **23** | **1** |
+| **C** | 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 | **16** | **16** | **93** | 27 | 41 | **25** | **0** |
+| **los tres** | | **43** | **43** | **238** | **66** | **102** | **70** | **3** |
+
+| la forma, leida del motivo sellado | cuantos | los actos |
+|---|---:|---|
+| **UNA SOLA VARA de contenido no empatada, y BASTA** | **18** | 3, 6, 8, 10, 16, 18, 21, 23, 29, 30, 33, 35, 37, 40, 44, 46, 48, 49 |
+| **TODAS LAS VARAS de contenido de acuerdo** | **15** | 2, 4, 5, 7, 9, 12, 15, 17, 19, 22, 26, 27, 34, 36, 39 |
+| **LA PIEZA DECLARADA GANA A UN CONTEO de contenido** | **4** | 41, 45, 47, 50 |
+| **LA PUERTA SOBREVIVE, con el choque registrado** | **2** | 20, 38 |
+| **LOS CONTEOS EMPATAN y la PIEZA DECLARADA decide** | **2** | 28, 42 |
+| **EL CONTENIDO EMPATA y EL CABLEADO DECIDE SOLO** | **1** | 1 |
+| **LA PUERTA SOBREVIVE y los conteos concuerdan, contra la razon declarada** | **1** | 43 |
+| **suma** | **43** | |
+
+| acto | lote | sus miembros | especie | se acumula para |
+|---:|:---:|---|---|---|
+| **11** | A | `disruptores_endocrinos_y_salud_industrial`, `quimicos_toxicos_en_diseno` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA. Y con un dato que la propia razon aporta y que conviene que la mesa tenga delante: la pieza de disruptores_endocrinos_y_salud_industrial que la razon llama LA UNICA REGLA PRECAUTORIA DEL CATALOGO (no basta con quitar lo que se sabe malo, hay que desconfiar de lo que nadie ha mirado) no tiene equivalente en ningun otro nodo del par. Un empate de conteos que pone en riesgo una regla unica del catalogo es el caso que hace visible el pendiente de doctrina 1 desde otro angulo que el del acto 45 de la vuelta 56. |
+| **13** | A | `desperdicio_es_alimento`, `metabolismo_biologico_y_tecnico` | **CONTEOS QUE CHOCAN Y LA PIEZA DECLARADA NO DESEMPATA** | LA MESA. Con un dato de familia: los dos nodos son el eje del que cuelga media seccion del libro (el paso 5 de metabolismo_biologico_y_tecnico nombra el upcycling sobre el downcycling y el paso 6 de desperdicio_es_alimento cambia el MODELO DE NEGOCIO en vez del producto), y ninguno de los dos es la madre del otro. Es el segundo ejemplar de conteos que chocan sin pieza que desempate, y el primero fuera del dominio core. |
+| **14** | A | `carta_de_credito_letter_of_credit`, `letters_of_credit` | **CONTEOS QUE CHOCAN Y LA PIEZA DECLARADA NO DESEMPATA** | LA MESA. Y con una observacion medida que la mesa deberia tener delante porque no es de conteo: los dos nodos cubren ETAPAS DISTINTAS del mismo tramite, uno la negociacion previa a que la carta exista y el otro la revision de la carta ya recibida, y la razon lo dice con esas palabras. Es el PRIMER PAR DEL DOMINIO DE EXPORTACION que entra a la mesa, y entra por la misma puerta por la que entro el ambiental. |
+| **24** | B | `barreras_comerciales_no_arancelarias`, `cumplimiento_acuerdos_comerciales_tanc` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA. Y con el dato que la propia razon subraya y que hace este empate distinto de los demas: LAS DOS PIEZAS PROPIAS SON LAS DOS RESPUESTAS OPUESTAS AL MISMO PROBLEMA. Un nodo termina CEDIENDO ante la barrera (ajustar el producto) y el otro INSISTIENDO (dar seguimiento hasta que se resuelva), y la razon escribe que la fusion tiene que conservar las dos porque son las dos salidas legitimas. Un empate cuyas dos mitades son opuestas no se rompe eligiendo la mas larga, y por eso este ejemplar merece llegar a la mesa con esa frase delante. |
+| **25** | B | `licenciamiento_tecnologico`, `proteccion_propiedad_intelectual_internacional` | **LOS DOS MIEMBROS SON PUERTA: NO HAY ABSORBIDO POSIBLE** | LA MESA, Y CON UNA PREGUNTA QUE NO ES DE PAR SINO DE CATALOGO: que se hace con un acto CERRADO cuyos DOS miembros son puertas. La vara del acta 54 pregunta 1 esta escrita para el acto con UNA puerta y no dice nada de este caso. Hay al menos dos salidas imaginables y ninguna esta escrita, asi que NO se elige aqui: fundir moviendo antes el puente o la semilla al superviviente, o dejar el par como enlace permanente. Va marcado como PENDIENTE DE DOCTRINA en el reporte, con el aviso de que el tramo 4 lo destapa pero no lo inventa: la figura estaba esperando desde que existen las puertas. |
+| **31** | B | `comprender_definicion_legal_franquicia`, `marco_name_system_fee` | **CONTEOS QUE CHOCAN Y LA PIEZA DECLARADA NO DESEMPATA** | LA MESA. Con un dato que la razon aporta y que a la mesa le sirve para no leer este empate como los otros: la unica diferencia real entre los dos nodos ES EL MODO, uno pregunta si YA se es franquicia y el otro si se QUIERE serlo, y la razon deja escrito que la clase se decide leyendo los pasos y no el modo. Es el TERCER ejemplar de conteos que chocan de este tramo, y el primero en el que lo que chocan son cuatro contra cinco pasos y tres contra dos condiciones sobre un test de tres elementos identico. |
+| **32** | B | `programa_de_referidos_de_franquiciados`, `referidos_franquiciados_existentes` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA, dentro del pendiente de doctrina 1. RETIRADO EN LA VUELTA 58 por la relectura conjunta que el acta 57 encargo (discutible D4): la fusion de la vuelta 57 rompio el empate triple con la CANTIDAD de lineas propias declaradas, una contra dos, y eso es un conteo sobre la letra que ninguna acta adjudica como vara. Por acta 53 pregunta 4 el empate sin vara es cuando TODO empata, y aqui empatan pasos 5 contra 5, condiciones 2 contra 2 y cableado 3 contra 3; por acta 54 pregunta 4 el propio declarado solo es vara no empatada DE UN SOLO LADO, y aqui esta a los dos. La rama de la CANTIDAD como vara queda ABIERTA PARA LA MESA y NO se aplica mientras tanto. |
+| **suma** | | **7 declarados** | | |
+
+| acto | lote | la forma que el motivo SELLADO le dio | donde queda ahora |
+|---:|:---:|---|---|
+| **32** | B | LOS TRES CONTEOS EMPATAN y decide la pieza declarada POR CANTIDAD | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** |
+
+---
+
+### LA ADJUDICACION DEL ACTA 57 SOBRE EL **ACTO 25**: **EL CARRIL YA ESTABA ESCRITO** (20 ago 2026, vuelta 58, TAREA 1.4 del encargo)
+
+**El registro del tramo 4 dejo el acto 25 con la pregunta abierta** (*que se hace con un acto
+`CERRADO` cuyos DOS miembros son puertas*). **El acta 57 la contesta en su pregunta 3 y SIN
+DOCTRINA NUEVA, y se anota aqui con fecha porque es este registro el que la pedia:**
+
+> **DECLARARLO FUE CORRECTO, y el carril es el IMPOSIBLE POR PUERTA.** La vara del acta 51,
+> pregunta 3, define el imposible por puerta como **el acto donde NINGUNA fusion respeta la
+> guarda**; el acta 54, pregunta 1, la cita; y el acta 54, pregunta 2, **lo lista con todas sus
+> letras en el carril de DECLARAR Y ACUMULAR**. **Con las DOS puertas, ninguna direccion respeta la
+> guarda `1B`: se declara, se acumula, el bucle sigue.** **No hacia falta doctrina nueva para
+> declararlo y no se escribio ninguna.**
+
+**LO QUE SI QUEDA PARA LA MESA ES LA SALIDA DE FONDO, Y SOLO ESA:** mover el puente o la semilla al
+superviviente, o dejar el par como enlace permanente. **Eso es politica de catalogo y la casa lo
+reserva**, en el **pendiente de doctrina 5**. **El acto 25 no vuelve a la cola de fusion mientras
+tanto**, y sigue en la tabla de declarados de arriba con su especie escrita.
