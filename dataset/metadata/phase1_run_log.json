@@ -7,34 +7,174 @@
   "final_cleanup_removed": [],
   "symmetrize_added": [
     {
-      "node": "desconexion_ventas_experiencia",
+      "node": "apertura_llamada_venta_grande",
       "key": "nodos_siguientes",
-      "added": "fase_admit"
+      "added": "enfoque_etapa_investigacion"
     },
     {
-      "node": "modelo_tradicional_introduccion_producto",
-      "key": "nodos_siguientes",
-      "added": "desarrollo_de_clientes_customer_development"
-    },
-    {
-      "node": "modelo_tradicional_introduccion_producto",
-      "key": "nodos_siguientes",
-      "added": "nueve_pecados_capitales_lanzamiento"
-    },
-    {
-      "node": "modelo_tradicional_introduccion_producto",
-      "key": "nodos_siguientes",
-      "added": "search_for_business_model"
-    },
-    {
-      "node": "modelo_tradicional_introduccion_producto",
+      "node": "apertura_llamada_venta_grande",
       "key": "nodos_previos",
-      "added": "build_measure_learn"
+      "added": "analisis_de_cohortes"
     },
     {
-      "node": "modelo_tradicional_introduccion_producto",
+      "node": "content_marketing_blog",
+      "key": "nodos_siguientes",
+      "added": "canales_de_traccion_19"
+    },
+    {
+      "node": "content_marketing_blog",
       "key": "nodos_previos",
-      "added": "curva_atricion_optima"
+      "added": "customer_profile"
+    },
+    {
+      "node": "content_marketing_blog",
+      "key": "nodos_previos",
+      "added": "value_proposition_startup"
+    },
+    {
+      "node": "deep_dive_workshop",
+      "key": "nodos_siguientes",
+      "added": "adn_de_innovacion_organizacional"
+    },
+    {
+      "node": "deep_dive_workshop",
+      "key": "nodos_siguientes",
+      "added": "case_study_sistema_servicio_completo"
+    },
+    {
+      "node": "deep_dive_workshop",
+      "key": "nodos_siguientes",
+      "added": "deriva_deliberada"
+    },
+    {
+      "node": "deep_dive_workshop",
+      "key": "nodos_siguientes",
+      "added": "prototipado_rapido"
+    },
+    {
+      "node": "deep_dive_workshop",
+      "key": "nodos_previos",
+      "added": "how_might_we_hmw"
+    },
+    {
+      "node": "deep_dive_workshop",
+      "key": "nodos_previos",
+      "added": "investigacion_etnografica_ideacion"
+    },
+    {
+      "node": "fase_assess_ciclo_cliente",
+      "key": "nodos_siguientes",
+      "added": "fase_acclimate_experiencia_cliente"
+    },
+    {
+      "node": "fase_assess_ciclo_cliente",
+      "key": "nodos_siguientes",
+      "added": "welcome_call_cliente_veterano"
+    },
+    {
+      "node": "fracaso_como_aprendizaje_startup",
+      "key": "nodos_siguientes",
+      "added": "diseno_experimentos_hipotesis"
+    },
+    {
+      "node": "fracaso_como_aprendizaje_startup",
+      "key": "nodos_previos",
+      "added": "emocion_como_motor_pensamiento"
+    },
+    {
+      "node": "key_resources_hypothesis",
+      "key": "nodos_siguientes",
+      "added": "actividades_clave"
+    },
+    {
+      "node": "key_resources_hypothesis",
+      "key": "nodos_siguientes",
+      "added": "asociaciones_clave"
+    },
+    {
+      "node": "key_resources_hypothesis",
+      "key": "nodos_siguientes",
+      "added": "estructura_de_costos"
+    },
+    {
+      "node": "key_resources_hypothesis",
+      "key": "nodos_previos",
+      "added": "actividades_clave"
+    },
+    {
+      "node": "key_resources_hypothesis",
+      "key": "nodos_previos",
+      "added": "flujos_de_ingresos"
+    },
+    {
+      "node": "leap_of_faith_assumptions",
+      "key": "nodos_previos",
+      "added": "actualizar_modelo_de_negocio_pivot_o_proceed"
+    },
+    {
+      "node": "leap_of_faith_assumptions",
+      "key": "nodos_previos",
+      "added": "genchi_gembutsu_salir_del_edificio"
+    },
+    {
+      "node": "planificacion_preguntas_implicacion",
+      "key": "nodos_siguientes",
+      "added": "ecuacion_de_valor"
+    },
+    {
+      "node": "planificacion_preguntas_implicacion",
+      "key": "nodos_siguientes",
+      "added": "ecuacion_de_valor_venta"
+    },
+    {
+      "node": "planificacion_preguntas_implicacion",
+      "key": "nodos_previos",
+      "added": "necesidades_implicitas_vs_explicitas"
+    },
+    {
+      "node": "rediseno_procesos_negocio_cx",
+      "key": "nodos_siguientes",
+      "added": "cultura_de_experiencia"
+    },
+    {
+      "node": "rediseno_procesos_negocio_cx",
+      "key": "nodos_siguientes",
+      "added": "transparencia_facturacion"
+    },
+    {
+      "node": "rediseno_procesos_negocio_cx",
+      "key": "nodos_previos",
+      "added": "contacto_con_el_cliente"
+    },
+    {
+      "node": "test_socios_de_trafico",
+      "key": "nodos_siguientes",
+      "added": "revenue_pricing_hypothesis"
+    },
+    {
+      "node": "test_socios_de_trafico",
+      "key": "nodos_previos",
+      "added": "bd_bajo_contacto_escalable"
+    },
+    {
+      "node": "test_socios_de_trafico",
+      "key": "nodos_previos",
+      "added": "key_partners_hypothesis"
+    },
+    {
+      "node": "test_socios_de_trafico",
+      "key": "nodos_previos",
+      "added": "key_resources_hypothesis"
+    },
+    {
+      "node": "trade_off_responsividad_eficiencia",
+      "key": "nodos_siguientes",
+      "added": "coordinacion_colaboracion_cadena_suministro"
+    },
+    {
+      "node": "trade_off_responsividad_eficiencia",
+      "key": "nodos_previos",
+      "added": "gestion_riesgo_cadena_suministro"
     }
   ]
 }

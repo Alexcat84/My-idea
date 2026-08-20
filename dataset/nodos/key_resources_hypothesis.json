@@ -6,25 +6,40 @@
   "fuente": "The Startup Owner's Manual - Steve Blank",
   "resumen_teorico": "Identifica los recursos externos que son críticos para que tu negocio funcione, agrupados en físicos, financieros, humanos y de propiedad intelectual. Para cada uno anota qué necesitas, cuánto cuesta (pregunta el precio en tu mercado) y dónde conseguirlo, y revisa qué dependencias externas escapan a tu control.",
   "pasos_accionables": [
-    "Lista los recursos físicos que necesitas: instalaciones, insumos, equipo",
-    "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants), venta de facturas (factoring) o arrendamiento de equipo (leasing)",
+    "Lista los recursos físicos que necesitas: instalaciones, insumos, equipo, redes de distribución",
+    "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants), venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito",
     "Define qué talento necesitas ahora y cuál vas a necesitar más adelante",
-    "Identifica qué ideas, marcas o desarrollos tuyos valen la pena proteger como propiedad intelectual",
+    "Identifica qué ideas, marcas o desarrollos tuyos valen la pena proteger como propiedad intelectual: marca, patentes, bases de datos, saber hacer",
     "Revisa qué dependes de otros que está fuera de tu control"
   ],
   "entregable_esperado": "Un documento con tu hipótesis de recursos clave: qué necesitas, cuánto cuesta, dónde conseguirlo y cómo asegurarlo, integrado a tu modelo de negocio (Business Model Canvas)",
   "nodos_previos": [
     "estrategia_crecimiento_clientes",
-    "lienzo_modelo_negocio"
+    "lienzo_modelo_negocio",
+    "actividades_clave",
+    "flujos_de_ingresos"
   ],
   "nodos_siguientes": [
     "intellectual_property_strategy",
     "key_partners_hypothesis",
     "dependency_analysis",
-    "traffic_partners_hypothesis"
+    "test_socios_de_trafico",
+    "actividades_clave",
+    "asociaciones_clave",
+    "estructura_de_costos"
   ],
   "condiciones_activacion": [
     "Cuando estés definiendo tu modelo de negocio y necesites saber qué recursos externos son indispensables para lograrlo"
   ],
-  "etiqueta_arbol": "Define tus Recursos Clave"
+  "etiqueta_arbol": "Define tus Recursos Clave",
+  "ids_alias": [
+    "recursos_clave"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "recursos_clave",
+      "titulo": "Bloque de Recursos Clave",
+      "fuente": "Business Model Generation - Osterwalder"
+    }
+  ]
 }

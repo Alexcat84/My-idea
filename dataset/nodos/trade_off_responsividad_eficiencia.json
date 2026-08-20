@@ -9,25 +9,41 @@
     "Analizar qué valora más tu segmento de clientes: precio bajo o rapidez/servicio.",
     "Evaluar el nivel de exceso de capacidad, inventario y flexibilidad de transporte actuales.",
     "Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.",
-    "Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes."
+    "Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.",
+    "Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas",
+    "Evaluar la confiabilidad de los pronósticos y datos disponibles",
+    "Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)",
+    "Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)"
   ],
   "entregable_esperado": "Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.",
   "nodos_previos": [
     "definicion_alineacion_cadena_suministro",
-    "information_driver_supply_chain"
+    "information_driver_supply_chain",
+    "gestion_riesgo_cadena_suministro"
   ],
   "nodos_siguientes": [
     "driver_produccion",
     "driver_ubicacion",
     "driver_transporte",
-    "alineacion_cadena_estrategia_negocio"
+    "alineacion_cadena_estrategia_negocio",
+    "coordinacion_colaboracion_cadena_suministro"
   ],
   "condiciones_activacion": [
     "Cuando existen conflictos aparentes entre nivel de servicio y costos operativos.",
-    "Cuando el usuario debe decidir entre invertir en flexibilidad o en reducción de costos."
+    "Cuando el usuario debe decidir entre invertir en flexibilidad o en reducción de costos.",
+    "Si el mercado está cambiando y la empresa sigue optimizando solo por eficiencia",
+    "Al diseñar la estrategia de sourcing, manufactura y distribución"
   ],
   "ids_alias": [
-    "trade_off_responsividad_eficiencia_2"
+    "trade_off_responsividad_eficiencia_2",
+    "balance_eficiencia_responsividad"
   ],
-  "etiqueta_arbol": "Elige entre Rapidez y Eficiencia"
+  "etiqueta_arbol": "Elige entre Rapidez y Eficiencia",
+  "merged_originals": [
+    {
+      "node_id": "balance_eficiencia_responsividad",
+      "titulo": "Balance entre Eficiencia y Responsividad en la Cadena de Suministro",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }

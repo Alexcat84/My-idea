@@ -1038,7 +1038,7 @@
       ],
       "entregable_esperado": "Lista de actividades clave categorizadas y vinculadas a otros bloques del modelo",
       "nodos_previos": [
-        "recursos_clave"
+        "key_resources_hypothesis"
       ],
       "nodos_siguientes": [
         "asociaciones_clave",
@@ -1049,7 +1049,7 @@
         "mercados_multilaterales",
         "roles_product_owner_scrum_master",
         "estimacion_tres_puntos",
-        "recursos_clave"
+        "key_resources_hypothesis"
       ],
       "condiciones_activacion": [
         "Cuando se necesita definir el 'qué hacer' operativo del modelo de negocio"
@@ -1426,7 +1426,7 @@
         "cash_burn_calculation",
         "customer_development_weekly_lessons_learned",
         "earlyvangelists_identificacion",
-        "leap_of_faith_questions",
+        "leap_of_faith_assumptions",
         "resegmentacion_mercado_nicho_bajo_costo",
         "identificar_earlyvangelists"
       ],
@@ -1892,7 +1892,7 @@
       ],
       "entregable_esperado": "Un plan de transformación organizacional con roles de liderazgo definidos, espacio físico asignado y métricas de éxito.",
       "nodos_previos": [
-        "metodologia_deep_dive",
+        "deep_dive_workshop",
         "cultura_de_optimismo"
       ],
       "nodos_siguientes": [
@@ -3556,7 +3556,7 @@
         "metricas_accionables",
         "construccion_de_comunidad_como_canal_traccion",
         "estrategia_plataformas_existentes",
-        "apertura_efectiva_llamada_venta",
+        "apertura_llamada_venta_grande",
         "metodologia_spin_selling",
         "preguntas_situacion",
         "optimizacion_keep_retencion",
@@ -5142,7 +5142,8 @@
         "Cuando estás preparando el guion de apertura para una venta compleja o de ciclo largo (large sale).",
         "Si tu equipo de ventas usa siempre el mismo discurso de apertura y las tasas de éxito son bajas."
       ],
-      "etiqueta_arbol": "Gana Permiso para Investigar"
+      "etiqueta_arbol": "Gana Permiso para Investigar",
+      "deprecado": true
     },
     "apertura_llamada_venta_grande": {
       "node_id": "apertura_llamada_venta_grande",
@@ -5152,25 +5153,40 @@
       "fuente": "SPIN Selling - Neil Rackham",
       "resumen_teorico": "En ventas pequeñas, hablar de temas personales del comprador o abrir con una frase fuerte sobre el beneficio puede ayudarte a cerrar. Pero en ventas grandes y complejas la evidencia muestra que esas técnicas no tienen relación con tu éxito: la persona que compra valora su tiempo y desconfía de la simpatía forzada, y ninguna apertura brillante compensa que después no sepas indagar bien sus necesidades. Lo que de verdad decide la llamada pasa en la etapa de preguntas, no en tus primeros minutos.",
       "pasos_accionables": [
-        "No gastes demasiado tiempo abriendo con temas personales o triviales cuando vendes algo grande o le hablas a alguien senior",
-        "No repitas siempre la misma fórmula de apertura con una frase de beneficio como si fuera un truco garantizado",
+        "No gastes demasiado tiempo abriendo con temas personales o triviales cuando vendes algo grande o le hablas a alguien senior, nunca más del 20% del tiempo total de la llamada",
+        "No repitas siempre la misma fórmula de apertura con una frase de beneficio como si fuera un truco garantizado, y menos con el mismo cliente en múltiples visitas",
         "Ajusta tu apertura a cada situación y pasa rápido a hacer preguntas de descubrimiento",
-        "Pon tu esfuerzo de preparación en la calidad de tus preguntas, no en pulir una apertura elegante"
+        "Pon tu esfuerzo de preparación en la calidad de tus preguntas, no en pulir una apertura elegante",
+        "Al iniciar la llamada, establece claramente quién eres, por qué estás ahí (sin dar detalles de producto) y tu derecho a hacer preguntas.",
+        "Resiste la tentación de hablar de tu producto o solución en la primera mitad de la llamada.",
+        "Si el comprador te hace preguntas de producto muy pronto, retoma el control redirigiendo hacia preguntas sobre sus necesidades."
       ],
       "entregable_esperado": "Guion de apertura breve y flexible para tus llamadas de venta, con transición rápida hacia preguntas de descubrimiento",
       "nodos_previos": [
-        "ventaja_competitiva_producto"
+        "ventaja_competitiva_producto",
+        "analisis_de_cohortes"
       ],
       "nodos_siguientes": [
         "modelo_spin_preguntas",
-        "apertura_efectiva_llamada_venta",
-        "reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor"
+        "reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor",
+        "enfoque_etapa_investigacion"
       ],
       "condiciones_activacion": [
         "Cuando le vendes a alguien senior o estás en un ciclo de venta grande y complejo",
-        "Cuando sientes que gastas demasiado esfuerzo en romper el hielo y no ves resultado"
+        "Cuando sientes que gastas demasiado esfuerzo en romper el hielo y no ves resultado",
+        "Si tu equipo de ventas usa siempre el mismo discurso de apertura y las tasas de éxito son bajas."
       ],
-      "etiqueta_arbol": "Olvida la Primera Impresión Perfecta"
+      "etiqueta_arbol": "Olvida la Primera Impresión Perfecta",
+      "ids_alias": [
+        "apertura_efectiva_llamada_venta"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "apertura_efectiva_llamada_venta",
+          "titulo": "Apertura Efectiva de la Llamada de Ventas (Preliminares)",
+          "fuente": "SPIN Selling - Neil Rackham"
+        }
+      ]
     },
     "aplica_modelo_ackerman": {
       "node_id": "aplica_modelo_ackerman",
@@ -5590,7 +5606,6 @@
         "eventos_offline_como_canal_traccion",
         "fase_adopt_ciclo_cliente",
         "fase_assess_ciclo_cliente",
-        "fase_assess_experiencia_cliente",
         "investigar_datos_cliente",
         "preframing_expectativas",
         "preparacion_preguntas_problema_precall",
@@ -6036,7 +6051,7 @@
       "entregable_esperado": "Mapa de socios clave con tipo de relación y motivación estratégica",
       "nodos_previos": [
         "actividades_clave",
-        "recursos_clave",
+        "key_resources_hypothesis",
         "bpm_gestion_excepciones"
       ],
       "nodos_siguientes": [
@@ -7761,7 +7776,8 @@
         "Si el mercado está cambiando y la empresa sigue optimizando solo por eficiencia",
         "Al diseñar la estrategia de sourcing, manufactura y distribución"
       ],
-      "etiqueta_arbol": "Equilibra Eficiencia y Capacidad de Respuesta"
+      "etiqueta_arbol": "Equilibra Eficiencia y Capacidad de Respuesta",
+      "deprecado": true
     },
     "balance_estructura_libertad_aprendizaje": {
       "node_id": "balance_estructura_libertad_aprendizaje",
@@ -7911,7 +7927,7 @@
         "tacticas_negociacion_bd"
       ],
       "nodos_siguientes": [
-        "traffic_partners_hypothesis"
+        "test_socios_de_trafico"
       ],
       "condiciones_activacion": [
         "Cuando ya existen partnerships exitosos validados y se busca escalar sin negociación manual"
@@ -8362,7 +8378,8 @@
         "Si el startup necesita construir autoridad de marca a largo plazo",
         "Si el equipo tiene capacidad de producir contenido de calidad de forma sostenida"
       ],
-      "etiqueta_arbol": "Atrae Clientes con tu Blog"
+      "etiqueta_arbol": "Atrae Clientes con tu Blog",
+      "deprecado": true
     },
     "blue_ocean_four_actions": {
       "node_id": "blue_ocean_four_actions",
@@ -10808,7 +10825,7 @@
       "entregable_esperado": "Lista priorizada de canales de tracción candidatos con una breve justificación de por qué podrían funcionar para el negocio específico.",
       "nodos_previos": [
         "traccion_como_metrica_clave",
-        "blogging_como_canal_de_traccion"
+        "content_marketing_blog"
       ],
       "nodos_siguientes": [
         "bullseye_framework"
@@ -11747,7 +11764,7 @@
       ],
       "entregable_esperado": "Un sistema de servicio completo validado (producto más operación más marca más modelo de negocio) probado en una prueba real antes de escalar",
       "nodos_previos": [
-        "metodologia_deep_dive",
+        "deep_dive_workshop",
         "prototipado_rapido",
         "diseno_de_sistemas_a_escala"
       ],
@@ -20264,7 +20281,7 @@
       ],
       "nodos_siguientes": [
         "retroalimentacion_cliente_mejora_servicio",
-        "rediseno_procesos_negocio_cliente",
+        "rediseno_procesos_negocio_cx",
         "punto_unico_contacto_proveedores"
       ],
       "condiciones_activacion": [
@@ -20338,10 +20355,11 @@
         "Establecer un calendario de publicación consistente (ej. quincenal)",
         "Escribir contenido que revele problemas no articulados por el lector, no solo soluciones",
         "Usar infografías y contenido visual (comparten ~20x más que posts regulares)",
-        "Hacer guest posting en blogs establecidos de la industria para ganar audiencia inicial",
-        "Interactuar con influencers en redes sociales pidiendo feedback sobre publicaciones",
-        "Monitorear analíticas para identificar qué tipo de contenido genera más tracción",
-        "Capturar leads mediante lead magnets (ebooks, infografías) para construir lista de email"
+        "Hacer guest posting en blogs establecidos de la industria para ganar audiencia inicial, desde los primeros meses",
+        "Interactuar con influencers en redes sociales pidiendo feedback sobre publicaciones, en especial influencers de Twitter en tu nicho",
+        "Monitorear analíticas para identificar qué tipo de contenido genera más tracción, sin dejar fuera las menciones sociales",
+        "Capturar leads mediante lead magnets (ebooks, infografías) para construir lista de email",
+        "Dedica al menos seis meses consistentes de publicación antes de evaluar resultados"
       ],
       "entregable_esperado": "Blog activo con calendario editorial, al menos 10-15 publicaciones iniciales y sistema de captura de leads",
       "nodos_previos": [
@@ -20349,17 +20367,32 @@
         "seo_estrategia_fat_head",
         "publicidad_offline_pruebas_locales",
         "seo_link_building",
-        "seo_long_tail"
+        "seo_long_tail",
+        "customer_profile",
+        "value_proposition_startup"
       ],
       "nodos_siguientes": [
         "email_marketing_para_captacion",
-        "creacion_contenido_compartible"
+        "creacion_contenido_compartible",
+        "canales_de_traccion_19"
       ],
       "condiciones_activacion": [
         "Cuando se busca un canal de adquisición de bajo costo y sostenible en el tiempo",
-        "Cuando el equipo tiene expertise de industria para compartir insights valiosos"
+        "Cuando el equipo tiene expertise de industria para compartir insights valiosos",
+        "Si el startup necesita construir autoridad de marca a largo plazo",
+        "Si el equipo tiene capacidad de producir contenido de calidad de forma sostenida"
       ],
-      "etiqueta_arbol": "Convierte Contenido en Canal"
+      "etiqueta_arbol": "Convierte Contenido en Canal",
+      "ids_alias": [
+        "blogging_como_canal_de_traccion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "blogging_como_canal_de_traccion",
+          "titulo": "Blog Corporativo como Canal de Tracción",
+          "fuente": "Traction - Gabriel Weinberg"
+        }
+      ]
     },
     "contextualizacion_datos_sostenibilidad": {
       "node_id": "contextualizacion_datos_sostenibilidad",
@@ -21795,7 +21828,7 @@
       ],
       "entregable_esperado": "Estrategia de relación con proveedores/socios basada en colaboración mutua, con plataforma o mecanismo de coordinación implementado",
       "nodos_previos": [
-        "balance_eficiencia_responsividad"
+        "trade_off_responsividad_eficiencia"
       ],
       "nodos_siguientes": [
         "ciclo_virtuoso_datos_electronicos"
@@ -25731,7 +25764,7 @@
         "diseno_de_experiencias_participativas",
         "reduccion_tamano_de_lote_batch_size",
         "tecnica_perder_objeto",
-        "rediseno_procesos_negocio_cliente",
+        "rediseno_procesos_negocio_cx",
         "transparencia_facturacion"
       ],
       "nodos_siguientes": [
@@ -27624,7 +27657,7 @@
         "customer_gains",
         "value_map",
         "fit_value_proposition",
-        "blogging_como_canal_de_traccion",
+        "content_marketing_blog",
         "engineering_as_marketing",
         "estrategia_ventas_enterprise",
         "targeting_blogs_traccion"
@@ -29425,23 +29458,41 @@
       "fuente": "Change by Design, Revised and U - Tim Brown",
       "resumen_teorico": "Un taller intensivo donde te juntas con quien diseña el producto, el espacio y con quien conoce el problema de primera mano (médicos, enfermeras, pacientes) para explorar juntos una idea, armar prototipos y probarlos en un formato corto y acelerado. Si tienes menos tiempo, puedes hacer una versión más ligera, llamada 'Skinny Dip'.",
       "pasos_accionables": [
-        "Reúne un equipo con quienes diseñan y quienes conocen el problema o lo viven de cerca",
+        "Reúne un equipo con quienes diseñan y quienes conocen el problema o lo viven de cerca, en un mismo espacio físico",
         "Define la pregunta central en formato '¿Cómo podríamos...?'",
         "Observa el problema en el terreno o simula la situación antes del taller",
-        "Arma prototipos físicos o de proceso durante el taller",
+        "Arma prototipos físicos o de proceso durante el taller, y que sean de baja fidelidad",
         "Prueba los resultados con las personas presentes y ajusta en el momento"
       ],
       "entregable_esperado": "Prototipos probados y validados por usuarios o expertos reales en poco tiempo",
       "nodos_previos": [
         "practica_de_observacion_atenta",
-        "ways_to_grow_matrix"
+        "ways_to_grow_matrix",
+        "how_might_we_hmw",
+        "investigacion_etnografica_ideacion"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "adn_de_innovacion_organizacional",
+        "case_study_sistema_servicio_completo",
+        "deriva_deliberada",
+        "prototipado_rapido"
+      ],
       "condiciones_activacion": [
         "Cuando necesitas resolver un problema complejo con varias personas involucradas y poco tiempo",
-        "Si necesitas validar rápido con quien conoce el problema antes de construir la solución completa"
+        "Si necesitas validar rápido con quien conoce el problema antes de construir la solución completa",
+        "Si se necesita involucrar a múltiples stakeholders con conocimientos técnicos distintos"
       ],
-      "etiqueta_arbol": "Explora a Fondo con Expertos"
+      "etiqueta_arbol": "Explora a Fondo con Expertos",
+      "ids_alias": [
+        "metodologia_deep_dive"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "metodologia_deep_dive",
+          "titulo": "El Método 'Deep Dive' (Inmersión Profunda)",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "defensas_en_profundidad": {
       "node_id": "defensas_en_profundidad",
@@ -31269,7 +31320,7 @@
       ],
       "entregable_esperado": "Registro de observaciones de una sesión de deriva (fotos, notas, mapas sensoriales) con insights de diseño identificados",
       "nodos_previos": [
-        "metodologia_deep_dive",
+        "deep_dive_workshop",
         "reglas_brainstorming"
       ],
       "nodos_siguientes": [
@@ -35883,7 +35934,7 @@
       "nodos_previos": [
         "business_model_canvas_como_scorecard",
         "business_model_canvas_vs_plan",
-        "fallo_como_aprendizaje_startup",
+        "fracaso_como_aprendizaje_startup",
         "business_model_canvas_scorecard"
       ],
       "nodos_siguientes": [
@@ -39277,7 +39328,7 @@
       "entregable_esperado": "Análisis costo-beneficio percibido por el cliente antes de presentar la propuesta formal",
       "nodos_previos": [
         "necesidades_implicitas_vs_explicitas",
-        "preguntas_implicacion"
+        "planificacion_preguntas_implicacion"
       ],
       "nodos_siguientes": [
         "obtencion_de_compromiso",
@@ -39330,7 +39381,7 @@
       ],
       "entregable_esperado": "Justificación cuantificada (costos, tiempos, riesgos) del problema del cliente que respalde el precio de la solución antes de presentarla.",
       "nodos_previos": [
-        "preguntas_implicacion",
+        "planificacion_preguntas_implicacion",
         "prevencion_de_objeciones",
         "prevencion_objeciones_vs_manejo"
       ],
@@ -41213,9 +41264,8 @@
       ],
       "entregable_esperado": "Una lista de correos de prospectos organizada por interés, con al menos un contenido gancho (curso o guía) funcionando",
       "nodos_previos": [
-        "blogging_como_canal_de_traccion",
-        "value_proposition_startup",
-        "content_marketing_blog"
+        "content_marketing_blog",
+        "value_proposition_startup"
       ],
       "nodos_siguientes": [
         "email_marketing_activacion",
@@ -41483,7 +41533,7 @@
         "esfuerzo_y_energia_intelectual",
         "evaluacion_industria_cliente",
         "falacia_del_disenador_affordances",
-        "fallo_como_aprendizaje_startup",
+        "fracaso_como_aprendizaje_startup",
         "gestion_de_habitos_mentales_para_pensar",
         "humor_como_herramienta_creativa",
         "sentido_del_humor_como_herramienta_de_pensamiento",
@@ -42401,7 +42451,7 @@
       "nodos_previos": [
         "modelo_spin_secuencia_preguntas",
         "objetivos_de_llamada_orientados_a_avance",
-        "apertura_efectiva_llamada_venta",
+        "apertura_llamada_venta_grande",
         "reglas_aprendizaje_habilidades_venta",
         "modelo_spin_preguntas"
       ],
@@ -47742,7 +47792,7 @@
       "nodos_previos": [
         "asociaciones_clave",
         "actividades_clave",
-        "recursos_clave",
+        "key_resources_hypothesis",
         "flujos_de_ingresos"
       ],
       "nodos_siguientes": [
@@ -52226,7 +52276,8 @@
         "Si te da miedo contar cuando algo salió mal",
         "Si estás empezando a hablar con clientes para validar tu idea"
       ],
-      "etiqueta_arbol": "Busca Fallando Sin Miedo"
+      "etiqueta_arbol": "Busca Fallando Sin Miedo",
+      "deprecado": true
     },
     "fallo_regulatorio_por_recursos_insuficientes": {
       "node_id": "fallo_regulatorio_por_recursos_insuficientes",
@@ -52463,7 +52514,7 @@
       ],
       "entregable_esperado": "Mapa de la fase de aclimatación con puntos de contacto, riesgos de abandono y acciones diseñadas para cada etapa del proceso de onboarding.",
       "nodos_previos": [
-        "fase_assess_experiencia_cliente",
+        "fase_assess_ciclo_cliente",
         "welcome_call_cliente_veterano",
         "fase_affirm_reduccion_incertidumbre",
         "investigar_datos_cliente",
@@ -52973,10 +53024,11 @@
       "resumen_teorico": "Esta es la primera etapa de tu recorrido con el cliente, el momento en que la persona decide si te compra revisando tu sitio, testimonios, reseñas y materiales de marketing. Puede durar segundos, como en una compra por impulso, o meses, como en ventas complejas entre negocios. Tu objetivo no es solo cerrar la venta: es conectar de verdad con esa persona y anticiparle cómo será la experiencia después de pagar, para que no le quede el miedo de que la abandones una vez que cobraste.",
       "pasos_accionables": [
         "Revisa tus materiales de marketing y comprueba si comunican cómo se va a sentir el cliente, no solo qué va a recibir",
-        "Mide cuánto tiempo tardan tus prospectos típicos en decidir comprarte",
+        "Mide cuánto tiempo tardan tus prospectos típicos en decidir comprarte: puede ser segundos, días o meses",
         "Evalúa si tú, o quien vende por ti, está registrando bien lo que el cliente necesita",
         "Califica del 1 al 10 la experiencia que hoy le das al prospecto en esta etapa",
-        "Diseña al menos una mejora inmediata usando uno de los seis canales de comunicación: en persona, correo electrónico, correo físico, teléfono, video o un regalo"
+        "Diseña al menos una mejora inmediata usando uno de los seis canales de comunicación: en persona, correo electrónico, correo físico, teléfono, video o un regalo",
+        "Crea algo tangible (una muestra, una historia, un testimonio) que le dé a la persona un anticipo real de cómo será la experiencia después de comprarte"
       ],
       "entregable_esperado": "Un diagnóstico de cómo estás manejando hoy esta etapa de evaluación, con un plan concreto de mejora usando al menos un canal de comunicación",
       "nodos_previos": [
@@ -52987,14 +53039,28 @@
         "fase_admit",
         "preframing_expectativas",
         "fase_admit_celebracion",
-        "seis_canales_comunicacion_assess"
+        "seis_canales_comunicacion_assess",
+        "fase_acclimate_experiencia_cliente",
+        "welcome_call_cliente_veterano"
       ],
       "condiciones_activacion": [
         "Cuando quieras diseñar o mejorar la forma en que consigues nuevos clientes",
         "Si buscas diferenciarte antes de que te compren",
-        "Cuando empieces a revisar toda la experiencia de tu cliente de principio a fin"
+        "Cuando empieces a revisar toda la experiencia de tu cliente de principio a fin",
+        "Cuando estás enfocado solo en cerrar la venta y no en mostrar cómo será la experiencia después",
+        "Si te cancelan seguido poco después de comprarte aunque cierras bien las ventas"
       ],
-      "etiqueta_arbol": "Gana la Evaluación Inicial"
+      "etiqueta_arbol": "Gana la Evaluación Inicial",
+      "ids_alias": [
+        "fase_assess_experiencia_cliente"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "fase_assess_experiencia_cliente",
+          "titulo": "Antes de comprarte: el momento en que te evalúan",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "fase_assess_experiencia_cliente": {
       "node_id": "fase_assess_experiencia_cliente",
@@ -53023,7 +53089,8 @@
         "Cuando necesitas diseñar tu manera de conseguir clientes",
         "Si te cancelan seguido poco después de comprarte aunque cierras bien las ventas"
       ],
-      "etiqueta_arbol": "Convence Antes de la Compra"
+      "etiqueta_arbol": "Convence Antes de la Compra",
+      "deprecado": true
     },
     "fase_de_eliminacion_de_no_comercializables": {
       "node_id": "fase_de_eliminacion_de_no_comercializables",
@@ -54461,7 +54528,7 @@
         "canales_distribucion"
       ],
       "nodos_siguientes": [
-        "recursos_clave",
+        "key_resources_hypothesis",
         "estructura_de_costos",
         "lienzo_modelo_negocio"
       ],
@@ -55242,14 +55309,26 @@
         "buscar_armonia_diseno",
         "manifiesto_regla1_hechos_fuera_del_edificio",
         "poder_a_traves_de_la_accion",
-        "search_for_business_model"
+        "search_for_business_model",
+        "emocion_como_motor_pensamiento"
       ],
       "nodos_siguientes": [
         "pivote_startup",
         "manifiesto_regla4_iteraciones_pivotes",
-        "pivotes_e_iteraciones"
+        "pivotes_e_iteraciones",
+        "diseno_experimentos_hipotesis"
       ],
-      "etiqueta_arbol": "Acepta el Fracaso como Aprendizaje"
+      "etiqueta_arbol": "Acepta el Fracaso como Aprendizaje",
+      "ids_alias": [
+        "fallo_como_aprendizaje_startup"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "fallo_como_aprendizaje_startup",
+          "titulo": "Fallar como Parte de la Búsqueda",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        }
+      ]
     },
     "framework_bullseye": {
       "node_id": "framework_bullseye",
@@ -57015,7 +57094,7 @@
         "arquetipos_de_cliente",
         "producto_minimo_viable",
         "evitar_paralisis_por_analisis",
-        "leap_of_faith_questions"
+        "leap_of_faith_assumptions"
       ],
       "condiciones_activacion": [
         "Cuando el emprendedor tiene solo intuición o corazonadas sin datos reales",
@@ -58954,7 +59033,7 @@
         "efecto_bullwhip"
       ],
       "nodos_siguientes": [
-        "balance_eficiencia_responsividad",
+        "trade_off_responsividad_eficiencia",
         "fundamentos_gestion_riesgo",
         "getting_started_supply_chain_risk_management"
       ],
@@ -62294,7 +62373,7 @@
       ],
       "nodos_siguientes": [
         "reglas_brainstorming",
-        "metodologia_deep_dive"
+        "deep_dive_workshop"
       ],
       "condiciones_activacion": [
         "Al inicio de cualquier proyecto de innovación",
@@ -66448,7 +66527,7 @@
         "analisis_y_sintesis",
         "customer_journey_mapping",
         "diseno_basado_en_comportamientos_existentes",
-        "metodologia_deep_dive",
+        "deep_dive_workshop",
         "prototipado_de_experiencias",
         "reformular_problema_mas_alla_del_producto",
         "sintesis_de_insights_en_principios_de_diseno",
@@ -67722,7 +67801,7 @@
       ],
       "nodos_siguientes": [
         "revenue_pricing_hypothesis",
-        "traffic_partners_hypothesis",
+        "test_socios_de_trafico",
         "contratar_cerrador_de_ventas",
         "herramientas_de_activacion_web",
         "mapa_de_canal_de_ventas"
@@ -67796,27 +67875,42 @@
       "fuente": "The Startup Owner's Manual - Steve Blank",
       "resumen_teorico": "Identifica los recursos externos que son críticos para que tu negocio funcione, agrupados en físicos, financieros, humanos y de propiedad intelectual. Para cada uno anota qué necesitas, cuánto cuesta (pregunta el precio en tu mercado) y dónde conseguirlo, y revisa qué dependencias externas escapan a tu control.",
       "pasos_accionables": [
-        "Lista los recursos físicos que necesitas: instalaciones, insumos, equipo",
-        "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants), venta de facturas (factoring) o arrendamiento de equipo (leasing)",
+        "Lista los recursos físicos que necesitas: instalaciones, insumos, equipo, redes de distribución",
+        "Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants), venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito",
         "Define qué talento necesitas ahora y cuál vas a necesitar más adelante",
-        "Identifica qué ideas, marcas o desarrollos tuyos valen la pena proteger como propiedad intelectual",
+        "Identifica qué ideas, marcas o desarrollos tuyos valen la pena proteger como propiedad intelectual: marca, patentes, bases de datos, saber hacer",
         "Revisa qué dependes de otros que está fuera de tu control"
       ],
       "entregable_esperado": "Un documento con tu hipótesis de recursos clave: qué necesitas, cuánto cuesta, dónde conseguirlo y cómo asegurarlo, integrado a tu modelo de negocio (Business Model Canvas)",
       "nodos_previos": [
         "estrategia_crecimiento_clientes",
-        "lienzo_modelo_negocio"
+        "lienzo_modelo_negocio",
+        "actividades_clave",
+        "flujos_de_ingresos"
       ],
       "nodos_siguientes": [
         "intellectual_property_strategy",
         "key_partners_hypothesis",
         "dependency_analysis",
-        "traffic_partners_hypothesis"
+        "test_socios_de_trafico",
+        "actividades_clave",
+        "asociaciones_clave",
+        "estructura_de_costos"
       ],
       "condiciones_activacion": [
         "Cuando estés definiendo tu modelo de negocio y necesites saber qué recursos externos son indispensables para lograrlo"
       ],
-      "etiqueta_arbol": "Define tus Recursos Clave"
+      "etiqueta_arbol": "Define tus Recursos Clave",
+      "ids_alias": [
+        "recursos_clave"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "recursos_clave",
+          "titulo": "Bloque de Recursos Clave",
+          "fuente": "Business Model Generation - Osterwalder"
+        }
+      ]
     },
     "kit_shock_and_awe_bienvenida": {
       "node_id": "kit_shock_and_awe_bienvenida",
@@ -68341,15 +68435,18 @@
       "fuente": "The Lean Startup - Eric Ries",
       "resumen_teorico": "Todo negocio que arrancas parte de una serie de suposiciones. La mayoría son hechos ya establecidos, pero unas pocas, las más riesgosas y de las que depende todo tu éxito, son los supuestos de salto de fe. No puedes probarlos de antemano: tienes que actuar como si fueran ciertos y diseñar pruebas para verificarlos lo antes posible. Los dos supuestos de salto de fe más importantes son la hipótesis de valor y la hipótesis de crecimiento.",
       "pasos_accionables": [
-        "Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado",
+        "Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado, incluidos el modelo de negocio y el spreadsheet financiero",
         "Identifica cuáles suposiciones son de bajo riesgo y cuáles son verdaderos saltos de fe",
         "Reescribe tus comparaciones con otros negocios en términos concretos y verificables, evitando analogías que te oculten el riesgo real",
-        "Ordena tus supuestos según el riesgo que representan para que tu negocio funcione"
+        "Ordena tus supuestos según el riesgo que representan para que tu negocio funcione",
+        "Diseñar experimentos específicos para validar cada leap-of-faith question antes de construir el producto completo"
       ],
       "entregable_esperado": "Lista priorizada de tus supuestos de salto de fe, separados de los hechos comprobados de tu plan",
       "nodos_previos": [
         "alineacion_ti_negocio",
-        "analogos_antilogos"
+        "analogos_antilogos",
+        "actualizar_modelo_de_negocio_pivot_o_proceed",
+        "genchi_gembutsu_salir_del_edificio"
       ],
       "nodos_siguientes": [
         "hipotesis_valor_crecimiento",
@@ -68364,7 +68461,17 @@
         "Cuando tienes un plan pero no has diferenciado qué partes son hechos y cuáles son suposiciones riesgosas",
         "Cuando necesitas justificar por qué te conviene probar antes de construir el producto completo"
       ],
-      "etiqueta_arbol": "Identifica tus Supuestos Más Riesgosos"
+      "etiqueta_arbol": "Identifica tus Supuestos Más Riesgosos",
+      "ids_alias": [
+        "leap_of_faith_questions"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "leap_of_faith_questions",
+          "titulo": "Preguntas de Salto de Fe (Leap-of-Faith Questions)",
+          "fuente": "The Lean Startup - Eric Ries"
+        }
+      ]
     },
     "leap_of_faith_questions": {
       "node_id": "leap_of_faith_questions",
@@ -68391,7 +68498,8 @@
         "Antes de comenzar a construir cualquier producto o funcionalidad",
         "Cuando el modelo de negocio tiene supuestos financieros sin validar"
       ],
-      "etiqueta_arbol": "Responde tus Preguntas Más Riesgosas"
+      "etiqueta_arbol": "Responde tus Preguntas Más Riesgosas",
+      "deprecado": true
     },
     "learning_card": {
       "node_id": "learning_card",
@@ -74316,7 +74424,8 @@
         "Cuando el problema es complejo y sistémico (no solo de un objeto)",
         "Si se necesita involucrar a múltiples stakeholders con conocimientos técnicos distintos"
       ],
-      "etiqueta_arbol": "Sumérgete a Fondo en el Problema"
+      "etiqueta_arbol": "Sumérgete a Fondo en el Problema",
+      "deprecado": true
     },
     "metodologia_evaluacion_entrenamiento_ventas": {
       "node_id": "metodologia_evaluacion_entrenamiento_ventas",
@@ -76441,7 +76550,6 @@
         "apertura_llamada_venta_grande",
         "ecuacion_de_valor_cliente",
         "enfoque_resolucion_problemas_lanzamiento_producto",
-        "apertura_efectiva_llamada_venta",
         "lanzamiento_nuevos_productos_enfoque_problema",
         "cierre_satisfaccion_postventa",
         "cierre_segun_tamano_decision",
@@ -76468,7 +76576,6 @@
         "cierre_segun_complejidad_venta",
         "compromiso_linea_tiempo_cliente",
         "planificacion_preguntas_implicacion",
-        "preguntas_implicacion",
         "preguntas_need_payoff",
         "preguntas_problema_2",
         "preguntas_situacion",
@@ -77851,7 +77958,7 @@
       "nodos_siguientes": [
         "ecuacion_de_valor",
         "obtencion_de_compromiso",
-        "preguntas_implicacion",
+        "planificacion_preguntas_implicacion",
         "preguntas_beneficio",
         "preguntas_need_payoff",
         "senales_de_compra_en_venta_grande"
@@ -83072,7 +83179,6 @@
       ],
       "entregable_esperado": "Un historial con las versiones de tu lienzo de modelo de negocio, con la razón basada en datos detrás de cada ajuste y cada cambio de rumbo",
       "nodos_previos": [
-        "fallo_como_aprendizaje_startup",
         "fracaso_como_aprendizaje_startup",
         "customer_development_agile_pairing"
       ],
@@ -84581,19 +84687,23 @@
       "resumen_teorico": "Las Implication Questions son las más difíciles de formular espontáneamente durante una llamada de ventas, por lo que deben planificarse antes del encuentro con el cliente. El método consiste en anticipar problemas potenciales del cliente, identificar las dificultades derivadas de cada problema, y diseñar preguntas específicas que hagan visible la gravedad de esas dificultades antes de presentar la solución.",
       "pasos_accionables": [
         "Antes de la llamada, escribe al menos tres problemas potenciales que el comprador podría tener y que tu producto o servicio puede resolver",
-        "Para cada problema, anota las dificultades relacionadas o consecuencias que podría generar",
+        "Para cada problema, anota las dificultades relacionadas o consecuencias que podría generar, sean financieras, operativas, de satisfacción",
         "Para cada dificultad, redacta preguntas de implicación específicas que la hagan evidente al cliente",
-        "Evita empezar la llamada solo con preguntas de situación; avanza rápido hacia problema e implicación"
+        "Evita empezar la llamada solo con preguntas de situación; avanza rápido hacia problema e implicación",
+        "Practicar y refinar estas preguntas ya que requieren mayor habilidad y preparación"
       ],
       "entregable_esperado": "Guion o mapa de preguntas de implicación preparado antes de cada llamada de ventas, vinculando problemas potenciales con consecuencias y preguntas específicas",
       "nodos_previos": [
         "preguntas_problema_2",
         "modelo_spin_preguntas",
-        "preparacion_preguntas_problema_precall"
+        "preparacion_preguntas_problema_precall",
+        "necesidades_implicitas_vs_explicitas"
       ],
       "nodos_siguientes": [
         "preguntas_need_payoff",
-        "uso_preguntas_necesidad_beneficio"
+        "uso_preguntas_necesidad_beneficio",
+        "ecuacion_de_valor",
+        "ecuacion_de_valor_venta"
       ],
       "condiciones_activacion": [
         "Antes de cualquier llamada de ventas compleja o de cuenta grande",
@@ -84601,9 +84711,17 @@
         "Cuando se requiere elevar la percepción de urgencia del problema en el cliente"
       ],
       "ids_alias": [
-        "planificacion_preguntas_implicacion_2"
+        "planificacion_preguntas_implicacion_2",
+        "preguntas_implicacion"
       ],
-      "etiqueta_arbol": "Prepara tus Preguntas de Implicación"
+      "etiqueta_arbol": "Prepara tus Preguntas de Implicación",
+      "merged_originals": [
+        {
+          "node_id": "preguntas_implicacion",
+          "titulo": "Preguntas de Implicación",
+          "fuente": "SPIN Selling - Neil Rackham"
+        }
+      ]
     },
     "planificacion_recoleccion_datos": {
       "node_id": "planificacion_recoleccion_datos",
@@ -85966,10 +86084,9 @@
       ],
       "entregable_esperado": "Protocolo de preframing con checklist de investigación de prospecto y ejemplos de gestos personalizados por segmento de cliente",
       "nodos_previos": [
-        "fase_assess_experiencia_cliente",
+        "fase_assess_ciclo_cliente",
         "value_proposition_startup",
         "arquetipos_de_cliente",
-        "fase_assess_ciclo_cliente",
         "personalizacion_investigacion_prospecto"
       ],
       "nodos_siguientes": [
@@ -86257,7 +86374,8 @@
       "ids_alias": [
         "preguntas_implicacion_2"
       ],
-      "etiqueta_arbol": "Explora las Implicaciones del Problema"
+      "etiqueta_arbol": "Explora las Implicaciones del Problema",
+      "deprecado": true
     },
     "preguntas_ipo_dolor_cliente": {
       "node_id": "preguntas_ipo_dolor_cliente",
@@ -86331,10 +86449,9 @@
       ],
       "entregable_esperado": "Lista de beneficios articulados por el cliente en sus propias palabras, vinculados a sus necesidades explicitas y lista para usarse como argumento de cierre.",
       "nodos_previos": [
-        "preguntas_implicacion",
+        "planificacion_preguntas_implicacion",
         "necesidades_implicitas_vs_explicitas",
         "modelo_spin_preguntas",
-        "planificacion_preguntas_implicacion",
         "ecuacion_de_valor_venta"
       ],
       "nodos_siguientes": [
@@ -86423,9 +86540,8 @@
         "modelo_spin_preguntas"
       ],
       "nodos_siguientes": [
-        "preguntas_implicacion",
-        "necesidades_implicitas_vs_explicitas",
-        "planificacion_preguntas_implicacion"
+        "planificacion_preguntas_implicacion",
+        "necesidades_implicitas_vs_explicitas"
       ],
       "condiciones_activacion": [
         "Cuando se está en la fase de descubrimiento de necesidades con un cliente potencial.",
@@ -89543,7 +89659,7 @@
       ],
       "entregable_esperado": "Tienes tu primera versión del producto, funcional o simulada, lanzada a un grupo reducido de primeros usuarios (early adopters), con las métricas de su respuesta real registradas.",
       "nodos_previos": [
-        "leap_of_faith_questions",
+        "leap_of_faith_assumptions",
         "arquetipos_de_cliente",
         "earlyvangelists",
         "estrategia_de_innovacion_de_producto",
@@ -89562,7 +89678,6 @@
         "genchi_gembutsu_salir_del_edificio",
         "get_out_of_the_building",
         "hipotesis_relacion_clientes_web",
-        "leap_of_faith_assumptions",
         "pivot_como_hipotesis_estrategica",
         "prototipado_en_lo_salvaje",
         "prototipado_virtual_mundos",
@@ -92013,7 +92128,7 @@
         "how_might_we_briefs",
         "how_might_we_framing",
         "mental_trial_and_error",
-        "metodologia_deep_dive",
+        "deep_dive_workshop",
         "narrativa_como_herramienta_de_sentido",
         "pensamiento_convergente_divergente",
         "reformular_problema_mas_alla_del_producto",
@@ -94511,7 +94626,8 @@
       "condiciones_activacion": [
         "Cuando necesitas identificar qué activos son indispensables para operar tu negocio"
       ],
-      "etiqueta_arbol": "Identifica tus Activos Esenciales"
+      "etiqueta_arbol": "Identifica tus Activos Esenciales",
+      "deprecado": true
     },
     "recursos_de_segundo_nivel": {
       "node_id": "recursos_de_segundo_nivel",
@@ -94838,7 +94954,8 @@
         "Cuando existen altos volúmenes de quejas o llamadas repetidas de clientes",
         "Cuando los procesos internos están diseñados por conveniencia operativa y no por el cliente"
       ],
-      "etiqueta_arbol": "Elimina Fricciones que Tú Creaste"
+      "etiqueta_arbol": "Elimina Fricciones que Tú Creaste",
+      "deprecado": true
     },
     "rediseno_procesos_negocio_cx": {
       "node_id": "rediseno_procesos_negocio_cx",
@@ -94856,24 +94973,45 @@
         "Diagnosticar si los empleados saben que la experiencia del cliente es parte de su trabajo",
         "Diseñar un programa de capacitación peer-to-peer a gran escala con plazos definidos",
         "Unificar las herramientas internas de información del cliente para reducir errores y fricción",
-        "Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas"
+        "Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas",
+        "Rediseñar procesos clave (ej: agendamiento, atención telefónica) para resolución en un solo contacto",
+        "Implementar compensaciones automáticas cuando la empresa incumple su promesa de servicio",
+        "Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)",
+        "Simplifica los procesos administrativos (formularios, papeleo) con herramientas digitales para reducir la fricción",
+        "Identificar y mapear los distintos journeys del cliente (facturación, soporte, onboarding, percepción)",
+        "Diagnosticar en qué punto los departamentos se pasan la responsabilidad del cliente sin resolución",
+        "Medir el impacto cuantitativo del mal servicio (llamadas repetidas, visitas técnicas, tasa de abandono)"
       ],
       "entregable_esperado": "Un plan de transformación de tus procesos, con formación para tu gente, menos herramientas duplicadas y presupuesto pensado para varios años",
       "nodos_previos": [
         "customer_journey_mapping",
         "advocacy_customer_journey",
         "conexion_personal_emocional",
-        "adquisicion_estrategica_resolver_crisis"
+        "adquisicion_estrategica_resolver_crisis",
+        "contacto_con_el_cliente"
       ],
       "nodos_siguientes": [
         "contacto_con_el_cliente",
-        "conexion_personal_emocional"
+        "conexion_personal_emocional",
+        "cultura_de_experiencia",
+        "transparencia_facturacion"
       ],
       "condiciones_activacion": [
         "Cuando descubres que la causa del mal servicio está en cómo tú mismo organizaste tu negocio",
-        "Cuando necesitas un cambio profundo en cómo trabajas, no solo un arreglo cosmético"
+        "Cuando necesitas un cambio profundo en cómo trabajas, no solo un arreglo cosmético",
+        "Cuando existen altos volúmenes de quejas o llamadas repetidas de clientes"
       ],
-      "etiqueta_arbol": "Rediseña Procesos Pensando en el Cliente"
+      "etiqueta_arbol": "Rediseña Procesos Pensando en el Cliente",
+      "ids_alias": [
+        "rediseno_procesos_negocio_cliente"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "rediseno_procesos_negocio_cliente",
+          "titulo": "Rediseño de Procesos de Negocio para Eliminar Fricciones Autoinfligidas",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "rediseno_tras_fracaso_proyecto": {
       "node_id": "rediseno_tras_fracaso_proyecto",
@@ -98856,7 +98994,7 @@
       "nodos_previos": [
         "key_partners_hypothesis",
         "channels_hypothesis_physical",
-        "traffic_partners_hypothesis"
+        "test_socios_de_trafico"
       ],
       "nodos_siguientes": [
         "lienzo_modelo_negocio",
@@ -109879,24 +110017,39 @@
       "fuente": "The Startup Owner's Manual - Steve Blank",
       "resumen_teorico": "Los socios de tráfico son alianzas que te traen visitantes a tu sitio o app mediante enlaces, banners o contenido compartido. Son clave cuando dependes de gente que llega desde afuera, porque construir algo no garantiza que alguien llegue a verlo. Necesitas comprobar esta idea con reuniones exploratorias y acuerdos iniciales.",
       "pasos_accionables": [
-        "Identifica los socios que podrían traerte tráfico y encajan con tu idea",
+        "Identifica los socios que podrían traerte tráfico y encajan con tu idea, mirando en tiendas de aplicaciones, marketplaces y emisores de tarjetas de crédito",
         "Prepara un correo de presentación centrado en lo que el socio gana con la alianza",
-        "Agenda reuniones exploratorias con los candidatos",
+        "Agenda reuniones exploratorias con los candidatos, cuando llegues a la fase de validación con clientes (Customer Validation)",
         "Propón intercambios: contenido, listas de correo, anuncios, mini sitios",
         "Después de cada reunión, arma una ficha de resultados (report card) para estimar qué tan grande es la oportunidad",
-        "Cierra acuerdos o compromisos firmes con los socios de tráfico"
+        "Cierra acuerdos o compromisos firmes con los socios de tráfico",
+        "Ordena tu lista de socios según cuales son mas criticos para ti"
       ],
       "entregable_esperado": "Acuerdos o compromisos firmes con socios de tráfico, documentados en tu ficha de resultados",
       "nodos_previos": [
-        "optimizacion_mercado_multilado"
+        "optimizacion_mercado_multilado",
+        "bd_bajo_contacto_escalable",
+        "key_partners_hypothesis",
+        "key_resources_hypothesis"
       ],
       "nodos_siguientes": [
-        "desarrollo_posicionamiento_producto"
+        "desarrollo_posicionamiento_producto",
+        "revenue_pricing_hypothesis"
       ],
       "condiciones_activacion": [
         "Cuando tu negocio depende de tráfico externo y no tienes un canal propio de adquisición fuerte"
       ],
-      "etiqueta_arbol": "Prueba tus Socios de Tráfico"
+      "etiqueta_arbol": "Prueba tus Socios de Tráfico",
+      "ids_alias": [
+        "traffic_partners_hypothesis"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "traffic_partners_hypothesis",
+          "titulo": "Los socios que te traen tráfico (Traffic Partners)",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        }
+      ]
     },
     "testear_circulo_cuadrado_rectangulo": {
       "node_id": "testear_circulo_cuadrado_rectangulo",
@@ -110994,27 +111147,43 @@
         "Analizar qué valora más tu segmento de clientes: precio bajo o rapidez/servicio.",
         "Evaluar el nivel de exceso de capacidad, inventario y flexibilidad de transporte actuales.",
         "Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.",
-        "Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes."
+        "Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.",
+        "Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas",
+        "Evaluar la confiabilidad de los pronósticos y datos disponibles",
+        "Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)",
+        "Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)"
       ],
       "entregable_esperado": "Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.",
       "nodos_previos": [
         "definicion_alineacion_cadena_suministro",
-        "information_driver_supply_chain"
+        "information_driver_supply_chain",
+        "gestion_riesgo_cadena_suministro"
       ],
       "nodos_siguientes": [
         "driver_produccion",
         "driver_ubicacion",
         "driver_transporte",
-        "alineacion_cadena_estrategia_negocio"
+        "alineacion_cadena_estrategia_negocio",
+        "coordinacion_colaboracion_cadena_suministro"
       ],
       "condiciones_activacion": [
         "Cuando existen conflictos aparentes entre nivel de servicio y costos operativos.",
-        "Cuando el usuario debe decidir entre invertir en flexibilidad o en reducción de costos."
+        "Cuando el usuario debe decidir entre invertir en flexibilidad o en reducción de costos.",
+        "Si el mercado está cambiando y la empresa sigue optimizando solo por eficiencia",
+        "Al diseñar la estrategia de sourcing, manufactura y distribución"
       ],
       "ids_alias": [
-        "trade_off_responsividad_eficiencia_2"
+        "trade_off_responsividad_eficiencia_2",
+        "balance_eficiencia_responsividad"
       ],
-      "etiqueta_arbol": "Elige entre Rapidez y Eficiencia"
+      "etiqueta_arbol": "Elige entre Rapidez y Eficiencia",
+      "merged_originals": [
+        {
+          "node_id": "balance_eficiencia_responsividad",
+          "titulo": "Balance entre Eficiencia y Responsividad en la Cadena de Suministro",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        }
+      ]
     },
     "traduccion_necesidades_cliente": {
       "node_id": "traduccion_necesidades_cliente",
@@ -111095,7 +111264,8 @@
       "condiciones_activacion": [
         "Cuando tu negocio es web o movil y depende de traer trafico externo para conseguir usuarios o clientes"
       ],
-      "etiqueta_arbol": "Prueba tu Hipótesis de Tráfico"
+      "etiqueta_arbol": "Prueba tu Hipótesis de Tráfico",
+      "deprecado": true
     },
     "trampa_del_promedio_como_estandar": {
       "node_id": "trampa_del_promedio_como_estandar",
@@ -111502,7 +111672,7 @@
       ],
       "entregable_esperado": "Sistema de facturación simplificado con comunicación proactiva personalizada al cliente",
       "nodos_previos": [
-        "rediseno_procesos_negocio_cliente"
+        "rediseno_procesos_negocio_cx"
       ],
       "nodos_siguientes": [
         "cultura_de_experiencia"
@@ -113744,7 +113914,7 @@
         "mvp_catalogo_tecnicas",
         "plan_de_materiales_colaterales",
         "transicion_producto_a_experiencia",
-        "blogging_como_canal_de_traccion",
+        "content_marketing_blog",
         "construccion_de_comunidad_como_canal_traccion",
         "email_marketing_para_captacion",
         "estrategia_ventas_enterprise",
@@ -116166,7 +116336,7 @@
         "fase_affirm_reducir_remordimiento",
         "desconexion_ventas_experiencia",
         "fase_admit_celebracion",
-        "fase_assess_experiencia_cliente",
+        "fase_assess_ciclo_cliente",
         "preframing_expectativas",
         "fase_affirm_buyers_remorse"
       ],
@@ -124079,7 +124249,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 75,
+    "nodos_sin_enlaces_entrantes": 84,
     "enlaces_rotos_en_grafo": 0
   }
 }

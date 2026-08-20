@@ -1,0 +1,420 @@
+==============================================================================
+OP-U-01, TRAMO 2, LOTE A DE LA VUELTA 55: LOS ONCE PRIMEROS ACTOS VIVOS DEL TRAMO EN SU ORDEN IMPRESO (1, 15, 28 a 36), incluidos LOS DOS DEL CHOQUE DE LA PUERTA que el acta 54 adjudico a favor de la puerta . MODO EJECUTAR
+plan: docs/loop/PLAN_V55_OPU01_LOTE_A.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3455 vivos, 398 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive trade_off_responsividad_eficiencia . absorbe balance_eficiencia_responsividad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 8 (anadidos 4) | condiciones 2 -> 4 (anadidas 2)
+  alias del superviviente: ['trade_off_responsividad_eficiencia_2', 'balance_eficiencia_responsividad']
+
+------------------------------------------------------------------------------
+ACTO 15 . sobrevive apertura_llamada_venta_grande . absorbe apertura_efectiva_llamada_venta
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 2 de apertura_efectiva_llamada_venta al PASO 2 del superviviente
+        inciso VERBATIM: 'con el mismo cliente en múltiples visitas'
+        nexo (lo unico de cosecha propia): ', y menos '
+        paso resultante: No repitas siempre la misma fórmula de apertura con una frase de beneficio como si fuera un truco garantizado, y menos con el mismo cliente en múltiples visitas
+     del paso 3 de apertura_efectiva_llamada_venta al PASO 1 del superviviente
+        inciso VERBATIM: 'más del 20% del tiempo total de la llamada'
+        nexo (lo unico de cosecha propia): ', nunca '
+        paso resultante: No gastes demasiado tiempo abriendo con temas personales o triviales cuando vendes algo grande o le hablas a alguien senior, nunca más del 20% del tiempo total de la llamada
+  alias del superviviente: ['apertura_efectiva_llamada_venta']
+
+------------------------------------------------------------------------------
+ACTO 28 . sobrevive rediseno_procesos_negocio_cx . absorbe rediseno_procesos_negocio_cliente
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 9 -> 16 (anadidos 7) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['rediseno_procesos_negocio_cliente']
+
+------------------------------------------------------------------------------
+ACTO 29 . sobrevive deep_dive_workshop . absorbe metodologia_deep_dive
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de metodologia_deep_dive al PASO 1 del superviviente
+        inciso VERBATIM: 'en un mismo espacio físico'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Reúne un equipo con quienes diseñan y quienes conocen el problema o lo viven de cerca, en un mismo espacio físico
+     del paso 3 de metodologia_deep_dive al PASO 4 del superviviente
+        inciso VERBATIM: 'de baja fidelidad'
+        nexo (lo unico de cosecha propia): ', y que sean '
+        paso resultante: Arma prototipos físicos o de proceso durante el taller, y que sean de baja fidelidad
+  alias del superviviente: ['metodologia_deep_dive']
+
+------------------------------------------------------------------------------
+ACTO 30 . sobrevive fase_assess_ciclo_cliente . absorbe fase_assess_experiencia_cliente
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 5 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 1 de fase_assess_experiencia_cliente al PASO 2 del superviviente
+        inciso VERBATIM: 'puede ser segundos, días o meses'
+        nexo (lo unico de cosecha propia): ': '
+        paso resultante: Mide cuánto tiempo tardan tus prospectos típicos en decidir comprarte: puede ser segundos, días o meses
+  alias del superviviente: ['fase_assess_experiencia_cliente']
+
+------------------------------------------------------------------------------
+ACTO 31 . sobrevive test_socios_de_trafico . absorbe traffic_partners_hypothesis
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 7 (anadidos 1) | condiciones 1 -> 1 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 4 de traffic_partners_hypothesis al PASO 1 del superviviente
+        inciso VERBATIM: 'tiendas de aplicaciones, marketplaces y emisores de tarjetas de crédito'
+        nexo (lo unico de cosecha propia): ', mirando en '
+        paso resultante: Identifica los socios que podrían traerte tráfico y encajan con tu idea, mirando en tiendas de aplicaciones, marketplaces y emisores de tarjetas de crédito
+     del paso 5 de traffic_partners_hypothesis al PASO 3 del superviviente
+        inciso VERBATIM: 'cuando llegues a la fase de validación con clientes (Customer Validation)'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Agenda reuniones exploratorias con los candidatos, cuando llegues a la fase de validación con clientes (Customer Validation)
+  alias del superviviente: ['traffic_partners_hypothesis']
+
+------------------------------------------------------------------------------
+ACTO 32 . sobrevive fracaso_como_aprendizaje_startup . absorbe fallo_como_aprendizaje_startup
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['fallo_como_aprendizaje_startup']
+
+------------------------------------------------------------------------------
+ACTO 33 . sobrevive leap_of_faith_assumptions . absorbe leap_of_faith_questions
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de leap_of_faith_questions al PASO 1 del superviviente
+        inciso VERBATIM: 'el modelo de negocio y el spreadsheet financiero'
+        nexo (lo unico de cosecha propia): ', incluidos '
+        paso resultante: Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado, incluidos el modelo de negocio y el spreadsheet financiero
+  alias del superviviente: ['leap_of_faith_questions']
+
+------------------------------------------------------------------------------
+ACTO 34 . sobrevive key_resources_hypothesis . absorbe recursos_clave
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 1 -> 1 (anadidas 0)
+  INCISOS ADOSADOS: 3
+     del paso 1 de recursos_clave al PASO 1 del superviviente
+        inciso VERBATIM: 'redes de distribución'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Lista los recursos físicos que necesitas: instalaciones, insumos, equipo, redes de distribución
+     del paso 2 de recursos_clave al PASO 4 del superviviente
+        inciso VERBATIM: 'marca, patentes, bases de datos, saber hacer'
+        nexo (lo unico de cosecha propia): ': '
+        paso resultante: Identifica qué ideas, marcas o desarrollos tuyos valen la pena proteger como propiedad intelectual: marca, patentes, bases de datos, saber hacer
+     del paso 4 de recursos_clave al PASO 2 del superviviente
+        inciso VERBATIM: 'efectivo, líneas de crédito'
+        nexo (lo unico de cosecha propia): ', y calcula cuánto hace falta en '
+        paso resultante: Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants), venta de facturas (factoring) o arrendamiento de equipo (leasing), y calcula cuánto hace falta en efectivo, líneas de crédito
+  alias del superviviente: ['recursos_clave']
+
+------------------------------------------------------------------------------
+ACTO 35 . sobrevive planificacion_preguntas_implicacion . absorbe preguntas_implicacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de preguntas_implicacion al PASO 2 del superviviente
+        inciso VERBATIM: 'financieras, operativas, de satisfacción'
+        nexo (lo unico de cosecha propia): ', sean '
+        paso resultante: Para cada problema, anota las dificultades relacionadas o consecuencias que podría generar, sean financieras, operativas, de satisfacción
+  alias del superviviente: ['planificacion_preguntas_implicacion_2', 'preguntas_implicacion']
+
+------------------------------------------------------------------------------
+ACTO 36 . sobrevive content_marketing_blog . absorbe blogging_como_canal_de_traccion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 8 -> 9 (anadidos 1) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 3
+     del paso 3 de blogging_como_canal_de_traccion al PASO 5 del superviviente
+        inciso VERBATIM: 'desde los primeros meses'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Hacer guest posting en blogs establecidos de la industria para ganar audiencia inicial, desde los primeros meses
+     del paso 4 de blogging_como_canal_de_traccion al PASO 6 del superviviente
+        inciso VERBATIM: 'influencers de Twitter en tu nicho'
+        nexo (lo unico de cosecha propia): ', en especial '
+        paso resultante: Interactuar con influencers en redes sociales pidiendo feedback sobre publicaciones, en especial influencers de Twitter en tu nicho
+     del paso 5 de blogging_como_canal_de_traccion al PASO 7 del superviviente
+        inciso VERBATIM: 'menciones sociales'
+        nexo (lo unico de cosecha propia): ', sin dejar fuera las '
+        paso resultante: Monitorear analíticas para identificar qué tipo de contenido genera más tracción, sin dejar fuera las menciones sociales
+  alias del superviviente: ['blogging_como_canal_de_traccion']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 44
+   actividades_clave                                    nodos_previos     recursos_clave -> key_resources_hypothesis
+   actividades_clave                                    nodos_siguientes  recursos_clave -> key_resources_hypothesis
+   actualizar_modelo_de_negocio_pivot_o_proceed         nodos_siguientes  leap_of_faith_questions -> leap_of_faith_assumptions
+   adn_de_innovacion_organizacional                     nodos_previos     metodologia_deep_dive -> deep_dive_workshop
+   analisis_de_cohortes                                 nodos_siguientes  apertura_efectiva_llamada_venta -> apertura_llamada_venta_grande
+   apertura_llamada_venta_grande                        nodos_siguientes  apertura_efectiva_llamada_venta -> apertura_llamada_venta_grande
+   arquetipos_de_cliente                                nodos_siguientes  fase_assess_experiencia_cliente -> fase_assess_ciclo_cliente
+   asociaciones_clave                                   nodos_previos     recursos_clave -> key_resources_hypothesis
+   bd_bajo_contacto_escalable                           nodos_siguientes  traffic_partners_hypothesis -> test_socios_de_trafico
+   canales_de_traccion_19                               nodos_previos     blogging_como_canal_de_traccion -> content_marketing_blog
+   case_study_sistema_servicio_completo                 nodos_previos     metodologia_deep_dive -> deep_dive_workshop
+   contacto_con_el_cliente                              nodos_siguientes  rediseno_procesos_negocio_cliente -> rediseno_procesos_negocio_cx
+   coordinacion_colaboracion_cadena_suministro          nodos_previos     balance_eficiencia_responsividad -> trade_off_responsividad_eficiencia
+   cultura_de_experiencia                               nodos_previos     rediseno_procesos_negocio_cliente -> rediseno_procesos_negocio_cx
+   customer_profile                                     nodos_siguientes  blogging_como_canal_de_traccion -> content_marketing_blog
+   deriva_deliberada                                    nodos_previos     metodologia_deep_dive -> deep_dive_workshop
+   diseno_experimentos_hipotesis                        nodos_previos     fallo_como_aprendizaje_startup -> fracaso_como_aprendizaje_startup
+   ecuacion_de_valor                                    nodos_previos     preguntas_implicacion -> planificacion_preguntas_implicacion
+   ecuacion_de_valor_venta                              nodos_previos     preguntas_implicacion -> planificacion_preguntas_implicacion
+   email_marketing_para_captacion                       nodos_previos     blogging_como_canal_de_traccion -> content_marketing_blog
+   emocion_como_motor_pensamiento                       nodos_siguientes  fallo_como_aprendizaje_startup -> fracaso_como_aprendizaje_startup
+   enfoque_etapa_investigacion                          nodos_previos     apertura_efectiva_llamada_venta -> apertura_llamada_venta_grande
+   estructura_de_costos                                 nodos_previos     recursos_clave -> key_resources_hypothesis
+   fase_acclimate_experiencia_cliente                   nodos_previos     fase_assess_experiencia_cliente -> fase_assess_ciclo_cliente
+   flujos_de_ingresos                                   nodos_siguientes  recursos_clave -> key_resources_hypothesis
+   genchi_gembutsu_salir_del_edificio                   nodos_siguientes  leap_of_faith_questions -> leap_of_faith_assumptions
+   gestion_riesgo_cadena_suministro                     nodos_siguientes  balance_eficiencia_responsividad -> trade_off_responsividad_eficiencia
+   how_might_we_hmw                                     nodos_siguientes  metodologia_deep_dive -> deep_dive_workshop
+   investigacion_etnografica_ideacion                   nodos_siguientes  metodologia_deep_dive -> deep_dive_workshop
+   key_partners_hypothesis                              nodos_siguientes  traffic_partners_hypothesis -> test_socios_de_trafico
+   key_resources_hypothesis                             nodos_siguientes  traffic_partners_hypothesis -> test_socios_de_trafico
+   modelo_spin_preguntas                                nodos_previos     apertura_efectiva_llamada_venta -> apertura_llamada_venta_grande
+   modelo_spin_preguntas                                nodos_siguientes  preguntas_implicacion -> planificacion_preguntas_implicacion
+   necesidades_implicitas_vs_explicitas                 nodos_siguientes  preguntas_implicacion -> planificacion_preguntas_implicacion
+   pivotes_e_iteraciones                                nodos_previos     fallo_como_aprendizaje_startup -> fracaso_como_aprendizaje_startup
+   preframing_expectativas                              nodos_previos     fase_assess_experiencia_cliente -> fase_assess_ciclo_cliente
+   preguntas_need_payoff                                nodos_previos     preguntas_implicacion -> planificacion_preguntas_implicacion
+   preguntas_problema_2                                 nodos_siguientes  preguntas_implicacion -> planificacion_preguntas_implicacion
+   producto_minimo_viable                               nodos_previos     leap_of_faith_questions -> leap_of_faith_assumptions
+   prototipado_rapido                                   nodos_previos     metodologia_deep_dive -> deep_dive_workshop
+   revenue_pricing_hypothesis                           nodos_previos     traffic_partners_hypothesis -> test_socios_de_trafico
+   transparencia_facturacion                            nodos_previos     rediseno_procesos_negocio_cliente -> rediseno_procesos_negocio_cx
+   value_proposition_startup                            nodos_siguientes  blogging_como_canal_de_traccion -> content_marketing_blog
+   welcome_call_cliente_veterano                        nodos_previos     fase_assess_experiencia_cliente -> fase_assess_ciclo_cliente
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 5
+   customer_archetypes                                  nodos_siguientes  fase_assess_experiencia_cliente (registro historico)
+   modelo_spin                                          nodos_siguientes  preguntas_implicacion (registro historico)
+   modelo_spin_secuencia_preguntas                      nodos_previos     apertura_efectiva_llamada_venta (registro historico)
+   preguntas_beneficio                                  nodos_previos     preguntas_implicacion (registro historico)
+   preguntas_necesidad_beneficio                        nodos_previos     preguntas_implicacion (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 9
+   arquetipos_de_cliente                                nodos_siguientes
+   email_marketing_para_captacion                       nodos_previos
+   modelo_spin_preguntas                                nodos_previos
+   modelo_spin_preguntas                                nodos_siguientes
+   pivotes_e_iteraciones                                nodos_previos
+   preframing_expectativas                              nodos_previos
+   preguntas_need_payoff                                nodos_previos
+   preguntas_problema_2                                 nodos_siguientes
+   producto_minimo_viable                               nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   apertura_llamada_venta_grande                        nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 976   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 974   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 2, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 55 de 55
+guarda D, los 11 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (75 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 balance_eficiencia_responsividad             paso         1  PASO 5 del superviviente
+        Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas
+    1 balance_eficiencia_responsividad             paso         2  PASO 6 del superviviente
+        Evaluar la confiabilidad de los pronósticos y datos disponibles
+    1 balance_eficiencia_responsividad             paso         3  PASO 7 del superviviente
+        Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)
+    1 balance_eficiencia_responsividad             paso         4  ya lo dice el PASO 3 del superviviente
+        Posicionar la estrategia de la cadena en el punto del continuum que mejor se ajuste a las circunstancias actuales
+    1 balance_eficiencia_responsividad             paso         5  ya lo dice el PASO 4 del superviviente
+        Reevaluar y reposicionar continuamente conforme cambian las circunstancias del mercado
+    1 balance_eficiencia_responsividad             paso         6  PASO 8 del superviviente
+        Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)
+    1 balance_eficiencia_responsividad             condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la empresa enfrenta presión de reducir costos versus mantener capacidad de respuesta
+    1 balance_eficiencia_responsividad             condicion    2  CONDICION 3 del superviviente
+        Si el mercado está cambiando y la empresa sigue optimizando solo por eficiencia
+    1 balance_eficiencia_responsividad             condicion    3  CONDICION 4 del superviviente
+        Al diseñar la estrategia de sourcing, manufactura y distribución
+   15 apertura_efectiva_llamada_venta              paso         1  PASO 5 del superviviente
+        Al iniciar la llamada, establece claramente quién eres, por qué estás ahí (sin dar detalles de producto) y tu derecho a hacer preguntas.
+   15 apertura_efectiva_llamada_venta              paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evita usar siempre la misma frase de apertura, especialmente con el mismo cliente en múltiples visitas.
+   15 apertura_efectiva_llamada_venta              paso         3  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        No dediques más del 20% del tiempo total de la llamada a las Preliminares.
+   15 apertura_efectiva_llamada_venta              paso         4  PASO 6 del superviviente
+        Resiste la tentación de hablar de tu producto o solución en la primera mitad de la llamada.
+   15 apertura_efectiva_llamada_venta              paso         5  PASO 7 del superviviente
+        Si el comprador te hace preguntas de producto muy pronto, retoma el control redirigiendo hacia preguntas sobre sus necesidades.
+   15 apertura_efectiva_llamada_venta              condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando estás preparando el guion de apertura para una venta compleja o de ciclo largo (large sale).
+   15 apertura_efectiva_llamada_venta              condicion    2  CONDICION 3 del superviviente
+        Si tu equipo de ventas usa siempre el mismo discurso de apertura y las tasas de éxito son bajas.
+   28 rediseno_procesos_negocio_cliente            paso         1  ya lo dice el PASO 1 del superviviente
+        Mapear los procesos internos que generan quejas recurrentes de clientes
+   28 rediseno_procesos_negocio_cliente            paso         2  ya lo dice el PASO 1 del superviviente
+        Identificar políticas o estructuras internas que crean fricción sin beneficio para el cliente
+   28 rediseno_procesos_negocio_cliente            paso         3  PASO 10 del superviviente
+        Rediseñar procesos clave (ej: agendamiento, atención telefónica) para resolución en un solo contacto
+   28 rediseno_procesos_negocio_cliente            paso         4  PASO 11 del superviviente
+        Implementar compensaciones automáticas cuando la empresa incumple su promesa de servicio
+   28 rediseno_procesos_negocio_cliente            paso         5  PASO 12 del superviviente
+        Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)
+   28 rediseno_procesos_negocio_cliente            paso         6  PASO 13 del superviviente
+        Simplifica los procesos administrativos (formularios, papeleo) con herramientas digitales para reducir la fricción
+   28 rediseno_procesos_negocio_cliente            paso         7  PASO 14 del superviviente
+        Identificar y mapear los distintos journeys del cliente (facturación, soporte, onboarding, percepción)
+   28 rediseno_procesos_negocio_cliente            paso         8  PASO 15 del superviviente
+        Diagnosticar en qué punto los departamentos se pasan la responsabilidad del cliente sin resolución
+   28 rediseno_procesos_negocio_cliente            paso         9  PASO 16 del superviviente
+        Medir el impacto cuantitativo del mal servicio (llamadas repetidas, visitas técnicas, tasa de abandono)
+   28 rediseno_procesos_negocio_cliente            condicion    1  CONDICION 3 del superviviente
+        Cuando existen altos volúmenes de quejas o llamadas repetidas de clientes
+   28 rediseno_procesos_negocio_cliente            condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando los procesos internos están diseñados por conveniencia operativa y no por el cliente
+   29 metodologia_deep_dive                        paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Reunir a un equipo interdisciplinario (técnicos, diseñadores, usuarios finales) en un mismo espacio físico.
+   29 metodologia_deep_dive                        paso         2  ya lo dice el PASO 3 del superviviente
+        Realizar observación de campo directa en el entorno real del problema (ej. un hospital).
+   29 metodologia_deep_dive                        paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Prototipar soluciones físicas de baja fidelidad de manera inmediata durante el taller.
+   29 metodologia_deep_dive                        paso         4  ya lo dice el PASO 5 del superviviente
+        Evaluar los resultados con los mismos usuarios presentes en la sesión.
+   29 metodologia_deep_dive                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el problema es complejo y sistémico (no solo de un objeto)
+   29 metodologia_deep_dive                        condicion    2  CONDICION 3 del superviviente
+        Si se necesita involucrar a múltiples stakeholders con conocimientos técnicos distintos
+   30 fase_assess_experiencia_cliente              paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identifica cuánto dura ese momento de evaluación para lo que vendes: puede ser segundos, días o meses
+   30 fase_assess_experiencia_cliente              paso         2  ya lo dice el PASO 1 del superviviente
+        Diseña tu manera de mostrarte y de vender para que transmita, incluso emocionalmente, cómo será la relación una vez que te compren
+   30 fase_assess_experiencia_cliente              paso         3  ya lo dice el PASO 1 del superviviente
+        Revisa lo que dices o muestras hoy para vender: ¿hablas solo de beneficios genéricos ('te vamos a cuidar') o das detalles concretos de cómo es el proc
+   30 fase_assess_experiencia_cliente              paso         4  PASO 6 del superviviente
+        Crea algo tangible (una muestra, una historia, un testimonio) que le dé a la persona un anticipo real de cómo será la experiencia después de comprarte
+   30 fase_assess_experiencia_cliente              condicion    1  CONDICION 4 del superviviente
+        Cuando estás enfocado solo en cerrar la venta y no en mostrar cómo será la experiencia después
+   30 fase_assess_experiencia_cliente              condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando necesitas diseñar tu manera de conseguir clientes
+   30 fase_assess_experiencia_cliente              condicion    3  CONDICION 5 del superviviente
+        Si te cancelan seguido poco después de comprarte aunque cierras bien las ventas
+   31 traffic_partners_hypothesis                  paso         1  ya lo dice el PASO 1 del superviviente
+        Identifica que socios de trafico necesitas si o si, y cuales te gustaria tener
+   31 traffic_partners_hypothesis                  paso         2  ya lo dice el PASO 4 del superviviente
+        Define que esperas de cada uno y que le vas a dar a cambio, en dinero o en especie
+   31 traffic_partners_hypothesis                  paso         3  PASO 7 del superviviente
+        Ordena tu lista de socios según cuales son mas criticos para ti
+   31 traffic_partners_hypothesis                  paso         4  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Investiga tiendas de aplicaciones, marketplaces y emisores de tarjetas de crédito como posibles socios clave
+   31 traffic_partners_hypothesis                  paso         5  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Prepara reuniones con estos socios cuando llegues a la fase de validación con clientes (Customer Validation)
+   31 traffic_partners_hypothesis                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando tu negocio es web o movil y depende de traer trafico externo para conseguir usuarios o clientes
+   32 fallo_como_aprendizaje_startup               paso         1  ya lo dice el PASO 1 del superviviente
+        Acepta que vas a hacer docenas de pruebas simples de si algo funciona o no, sobre tu propuesta, tus funciones y tus precios
+   32 fallo_como_aprendizaje_startup               paso         2  ya lo dice el PASO 3 del superviviente
+        Cuando algo no funcione, cambia rápido de rumbo con los hechos nuevos que tienes
+   32 fallo_como_aprendizaje_startup               paso         3  ya lo dice el PASO 3 del superviviente
+        Decide qué corregir y actúa sin darle más vueltas
+   32 fallo_como_aprendizaje_startup               paso         4  ya lo dice el PASO 2 del superviviente
+        Quítale el peso de la culpa al fallo: trátalo como un dato más
+   32 fallo_como_aprendizaje_startup               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si te da miedo contar cuando algo salió mal
+   32 fallo_como_aprendizaje_startup               condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Si estás empezando a hablar con clientes para validar tu idea
+   33 leap_of_faith_questions                      paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Revisar el modelo de negocio y el spreadsheet financiero para identificar supuestos numéricos clave
+   33 leap_of_faith_questions                      paso         2  ya lo dice el PASO 2 del superviviente
+        Hacer explícitas las suposiciones críticas (ej: porcentaje de conversión, retención)
+   33 leap_of_faith_questions                      paso         3  ya lo dice el PASO 4 del superviviente
+        Priorizar cuál de estas suposiciones representa el mayor riesgo para el negocio
+   33 leap_of_faith_questions                      paso         4  PASO 5 del superviviente
+        Diseñar experimentos específicos para validar cada leap-of-faith question antes de construir el producto completo
+   33 leap_of_faith_questions                      condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Antes de comenzar a construir cualquier producto o funcionalidad
+   33 leap_of_faith_questions                      condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando el modelo de negocio tiene supuestos financieros sin validar
+   34 recursos_clave                               paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Haz una lista de los recursos físicos que necesitas (instalaciones, equipos, redes de distribución)
+   34 recursos_clave                               paso         2  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identifica tus recursos intelectuales (marca, patentes, bases de datos, saber hacer)
+   34 recursos_clave                               paso         3  ya lo dice el PASO 3 del superviviente
+        Determina qué personas son críticas para que tu negocio funcione
+   34 recursos_clave                               paso         4  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Calcula qué recursos financieros necesitas (efectivo, líneas de crédito)
+   34 recursos_clave                               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando necesitas identificar qué activos son indispensables para operar tu negocio
+   35 preguntas_implicacion                        paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Mapear las consecuencias potenciales (financieras, operativas, de satisfacción) de cada problema identificado
+   35 preguntas_implicacion                        paso         2  ya lo dice el PASO 3 del superviviente
+        Formular preguntas que conecten el problema con impactos en áreas críticas del negocio del cliente
+   35 preguntas_implicacion                        paso         3  PASO 5 del superviviente
+        Practicar y refinar estas preguntas ya que requieren mayor habilidad y preparación
+   35 preguntas_implicacion                        condicion    1  ya lo dice la CONDICION 3 del superviviente
+        En ventas grandes o complejas donde el cliente no percibe la urgencia del problema
+   36 blogging_como_canal_de_traccion              paso         1  PASO 9 del superviviente
+        Dedica al menos seis meses consistentes de publicación antes de evaluar resultados
+   36 blogging_como_canal_de_traccion              paso         2  ya lo dice el PASO 3 del superviviente
+        Escribe contenido que muestre problemas no articulados por tu audiencia objetivo, no solo soluciones
+   36 blogging_como_canal_de_traccion              paso         3  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Haz guest posting en blogs populares del sector desde los primeros meses
+   36 blogging_como_canal_de_traccion              paso         4  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Contacta e interactúa con influencers de Twitter en tu nicho pidiendo feedback
+   36 blogging_como_canal_de_traccion              paso         5  INCISO ADOSADO al PASO 7 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Monitorea menciones sociales y analítica para identificar qué contenido resuena
+   36 blogging_como_canal_de_traccion              paso         6  ya lo dice el PASO 2 del superviviente
+        Mantén un calendario de publicación regular
+   36 blogging_como_canal_de_traccion              condicion    1  CONDICION 3 del superviviente
+        Si el startup necesita construir autoridad de marca a largo plazo
+   36 blogging_como_canal_de_traccion              condicion    2  CONDICION 4 del superviviente
+        Si el equipo tiene capacidad de producir contenido de calidad de forma sostenida
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 11
+  nodos implicados    : 22
+  nodos que MUEREN    : 11
+  piezas repartidas   : 75 (28 viajan enteras, 32 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 62
+censo DESPUES: 3853 ficheros, 3444 vivos, 409 deprecados
+censo ANTES  : 3853 ficheros, 3455 vivos, 398 deprecados
+delta deprecados: +11 (esperado +11): OK
