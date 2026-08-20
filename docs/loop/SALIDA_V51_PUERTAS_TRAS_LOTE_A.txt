@@ -1,0 +1,82 @@
+==============================================================================
+LAS PUERTAS DENTRO DEL LOTE DE OP-U-01
+==============================================================================
+  semillas de entrada core                     : 20
+  semillas de entrada con las de los mundos    : 85
+  nodos que son extremo de puente aprobado     : 185
+  UNION, el universo PROTEGIDO                 : 256
+
+SOBRE LOS 249 ACTOS CERRADOS:
+  actos con al menos una puerta dentro: 31
+    SALVABLES (una sola puerta; el acto se funde SI la puerta sobrevive): 29
+    IMPOSIBLES (todos sus miembros son puerta; alguien tendria que morir): 2
+
+  LOS IMPOSIBLES, uno por uno:
+    acto  27 tam 2 | domina_lo_que_compras, investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor
+    acto 153 tam 2 | licenciamiento_tecnologico, proteccion_propiedad_intelectual_internacional
+
+  LOS SALVABLES, uno por uno (puerta que TIENE que sobrevivir):
+    acto   4 tam 3 | puerta: obtencion_de_compromiso
+               resto: obtencion_compromiso, obtencion_compromiso_venta
+    acto   9 tam 3 | puerta: decision_cuando_fundar, evaluacion_capacidades_fundador
+               resto: tres_preguntas_carrera
+    acto  15 tam 3 | puerta: calcular_peso_dimensional_antes_cotizar
+               resto: conocer_limites_peso_tamano_courier, medir_paquete_redondeando_hacia_arriba
+    acto  17 tam 3 | puerta: enfoque_paso_a_paso_investigacion_mercado, evaluacion_mercados_objetivo
+               resto: screening_mercados_potenciales
+    acto  26 tam 3 | puerta: criterios_seleccion_proyectos_calidad
+               resto: dmaic_fase_select, proceso_nominacion_seleccion
+    acto  28 tam 2 | puerta: cultura_climatica_innovacion
+               resto: cultura_de_innovacion
+    acto  29 tam 2 | puerta: trade_off_responsividad_eficiencia
+               resto: balance_eficiencia_responsividad
+    acto  43 tam 2 | puerta: apertura_llamada_venta_grande
+               resto: apertura_efectiva_llamada_venta
+    acto  61 tam 2 | puerta: leap_of_faith_assumptions
+               resto: leap_of_faith_questions
+    acto  73 tam 2 | puerta: programacion_entregas_delivery_scheduling
+               resto: milk_run_deliveries
+    acto  83 tam 2 | puerta: desarrollo_presentacion_problema
+               resto: presentacion_problema_tres_columnas
+    acto  85 tam 2 | puerta: reglas_brainstorming
+               resto: construir_sobre_ideas_ajenas
+    acto  86 tam 2 | puerta: five_whys_inversion_proporcional
+               resto: tecnica_cinco_porques
+    acto 111 tam 2 | puerta: intellectual_property_strategy
+               resto: proteccion_propiedad_intelectual
+    acto 112 tam 2 | puerta: metricas_accionables
+               resto: aprendizaje_validado_vs_metricas_vanidad
+    acto 113 tam 2 | puerta: alineacion_de_objetivos_en_sistemas
+               resto: diseno_de_sistemas_a_escala
+    acto 116 tam 2 | puerta: cuatro_etapas_del_pensamiento_creativo
+               resto: wallas_etapa_iluminacion
+    acto 120 tam 2 | puerta: arquitectura_tecnica_modular
+               resto: arquitectura_flexible_soa
+    acto 129 tam 2 | puerta: crecimiento_ingresos_verdes
+               resto: generacion_ingresos_verdes
+    acto 148 tam 2 | puerta: seleccion_canales_distribucion
+               resto: seleccion_canales_exportacion
+    acto 151 tam 2 | puerta: seleccion_de_metodo_de_pago
+               resto: prevencion_problemas_de_pago
+    acto 157 tam 2 | puerta: proceso_llamada_inicial_venta
+               resto: proceso_primera_llamada
+    acto 166 tam 2 | puerta: responsabilidad_prospectiva
+               resto: rendicion_cuentas_prospectiva
+    acto 171 tam 2 | puerta: cultura_justa
+               resto: cultura_justa_organizacional
+    acto 179 tam 2 | puerta: programa_mejora_calidad_14_pasos
+               resto: programa_de_mejora_de_calidad
+    acto 187 tam 2 | puerta: roi_proyectos_calidad
+               resto: roi_breakthrough
+    acto 214 tam 2 | puerta: control_estadistico_de_procesos
+               resto: control_estadistico_de_procesos_2
+    acto 221 tam 2 | puerta: medicion_calidad
+               resto: medicion_calidad_2
+    acto 248 tam 2 | puerta: mantenimiento_sistema_cui
+               resto: getting_started_maintenance
+
+LO QUE ESTO DEJA ESCRITO PARA LOS TRAMOS QUE VIENEN: la eleccion de
+superviviente de esos 31 actos NO es libre. La regla de la pagina dice
+que sobrevive por CONTENIDO; si el contenido apunta al que NO es puerta,
+hay choque entre la vara de la fase y el Gate 0, y eso no lo resuelve
+ninguna regla escrita hoy. Va como pregunta al auditor, no como decision.

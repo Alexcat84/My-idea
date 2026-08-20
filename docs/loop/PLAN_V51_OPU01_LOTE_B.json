@@ -1,0 +1,102 @@
+{
+ "operacion": "OP-U-01",
+ "tramo": "1, P.12, LOTE B DE LA VUELTA 51: los actos 1 y 10 de la nomina re-medida tras el lote A",
+ "fecha": "2026-08-20",
+ "vuelta": 51,
+ "estado": "SELLADO",
+ "nomina": "docs/loop/RECOMPUTO_V51_TRAS_LOTE_A.jsonl",
+ "dossier": "docs/loop/SALIDA_V51_DOSSIER_01_05.txt (el acto del consejo, con la numeracion de la apertura) y docs/loop/SALIDA_V51_DOSSIER_09_10.txt",
+ "vara": "P.12 con la receta RATIFICADA por el acta de la vuelta 50, pregunta 1, la misma del lote A.",
+ "viabilidad": "docs/loop/SALIDA_V51_COLISIONES_ESPERADAS_B.txt, corrida sobre la nomina re-medida tras el lote A.",
+ "colisiones_esperadas": "UNA por acto y las dos DENTRO del acto, CERO fuera, medidas ANTES de tocar un nodo sobre EL ARCHIVO ENTERO. En el acto 1 esa unica colision arrastra DOS veredictos a voltear (los puestos 2523 y 2662, los dos A contra el mixto desde los dos absorbidos) y en el acto 10 uno solo (el 498). LA COLISION SE CUENTA POR PAR RESUELTO, no por veredicto: un par resuelto con dos clases es UNA colision aunque lleve tres veredictos dentro.",
+ "vara_de_las_puertas": "Medida sobre la nomina de este lote (docs/loop/SALIDA_V51_PUERTAS_TRAS_LOTE_A.txt): ninguno de los dos actos aparece entre los 29 SALVABLES ni entre los 2 IMPOSIBLES. La guarda 1B pasa por vacio en los dos y se dice asi en vez de darla por buena.",
+ "politica_del_reparto": "La misma del lote A: parametro concreto de un gesto que el superviviente ya tiene, INCISO ADOSADO si el paso resultante se lee limpio; gesto distinto, APPEND. Es lectura del ejecutor y va marcada como discutible.",
+ "lecturas_p12": [
+  {
+   "acto": 1,
+   "mixto": "consejo_de_calidad_3",
+   "superviviente_contra_el_que_se_lee": "consejo_de_calidad",
+   "veredicto": "CONTINUA",
+   "citas": "El puesto 2916 es el veredicto DIRECTO del par y trae su relectura conjunta entera ya escrita (bucle vuelta 5, acta del auditor de la vuelta 5): dice, verificado contra el grafo y con los nodos enteros delante, que consejo_de_calidad_3 TRAE DOS PASOS ENTEROS QUE consejo_de_calidad NO TIENE, coordinar la repeticion del ciclo de mejora e institucionalizar el consejo como parte de la estructura permanente, y que consejo_de_calidad TRAE TRES PASOS ENTEROS QUE EL OTRO NO TIENE, capacitarse en el metodo de mejora, priorizar con analisis de Pareto y asignar los recursos nombrados de capacitacion, personas, tiempo y acompanamiento. Y lo cierra con la frase que decide: NINGUNO CABE ENTERO EN EL OTRO, SON CONJUNTOS DISJUNTOS DE PASOS PROPIOS, NO GEMELOS. Lo que comparten es LA IDEA del Consejo de Calidad y su cadencia, y esa idea le cabe al mixto en lineas. Ademas el archivo YA CORTA DENTRO DE ESTA MISMA FAMILIA por la misma linea, y el 2916 lo cita: el puesto 2549 separo consejo_de_calidad, el motor de proyectos, de consejo_de_calidad_y_rol_del_director, la politica que le da consecuencia. P.12 lo llama CONTINUA: enlace mas poda del solape, no fusion. LO QUE ESTA LECTURA ANADE Y NO ESTABA: el mixto es de CROSBY y el superviviente es de JURAN, y lo propio del mixto es exactamente el encuadre de Crosby, el consejo como MOTOR DEL CICLO DE CATORCE PASOS que se repite y se institucionaliza. Fundirlo perderia el unico sitio del catalogo donde el consejo aparece atado a la repeticion del programa."
+  },
+  {
+   "acto": 10,
+   "mixto": "seleccion_relaciones_cofundadores",
+   "superviviente_contra_el_que_se_lee": "cofundar_con_amigos_familia_riesgos",
+   "veredicto": "CONTINUA",
+   "citas": "EL VEREDICTO DIRECTO DEL PAR ESCRIBE LA PALABRA. El puesto 1058 dice, con la vara del banco 9.6.1 nombrada: seleccion_relaciones_cofundadores MAPEA EL TERRENO y dice EN UNA LINEA evaluar honestamente los riesgos de mezclar relaciones personales con la sociedad de negocio; cofundar_con_amigos_familia_riesgos TRAE EL PROCEDIMIENTO DE ESA LINEA, evaluar si la relacion previa aporta habilidades o solo comodidad, discutir antes de fundar el reparto de equity, los roles y que pasa si el negocio falla, PROBAR LA RELACION DE TRABAJO EN UN PROYECTO PEQUENO antes de comprometerse, establecer cortafuegos formales entre lo personal y lo profesional, y definir estructuras de autoridad claras aunque incomoden. Y cierra: POR LA VARA DEL BANCO 9.6.1, CONTINUA. Es el caso de manual de P.12, un nodo cuya linea es el procedimiento entero del otro. Lo propio del mixto que la fusion no debe llevarse es EL MAPA DE LOS TRES CIRCULOS, cercanos, indirectos y desconocidos, y el proceso de evaluacion de habilidades y compatibilidad para el circulo externo: eso no es un paso del procedimiento del superviviente, es un instrumento de seleccion previo."
+  }
+ ],
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "consejo_calidad",
+    "consejo_calidad_2",
+    "consejo_de_calidad"
+   ],
+   "superviviente": "consejo_de_calidad",
+   "motivo": "CONTENIDO, Y EL CHOQUE DE LETRA CONTRA ARITMETICA SE REGISTRA AQUI CON SUS PUESTOS, resuelto como el acta de la vuelta 50 adjudico en su pregunta 3: MANDA LA ARITMETICA. Los dos unicos viables son consejo_de_calidad y consejo_de_calidad_3; consejo_calidad y consejo_calidad_2 NO son viables porque su parte A se lleva a los cuatro miembros y no deja ningun mixto fuera, o sea que elegirlos seria fundir entero un acto que tiene una D dentro, que es lo que P.12 prohibe. Y SIN EMBARGO CINCO VEREDICTOS A DEL ACTO NOMBRAN A UNO DE ESOS DOS con la formula Sobrevive X: los puestos 2631, 2663 y 2523 nombran a consejo_calidad, y los puestos 2670 y 2662 nombran a consejo_calidad_2. Es el choque medido en la vuelta 50 y adjudicado en su acta: la formula Sobrevive X es el cierre de una razon de PAR y el racimo decide; P.12 es regla y la aritmetica manda. La letra se honra en lo que puede: los dos nombrados MUEREN aqui, que es lo que sus veredictos pedian de ellos como absorbedores dentro de sus pares, pero ninguno absorbe el racimo. Entre los dos viables decide el CONTENIDO: SEIS pasos contra cuatro, y el propio veredicto directo del par (2916) escribe que consejo_de_calidad trae TRES pasos enteros propios contra los DOS del otro. Las otras dos varas apuntan al reves (una condicion contra dos, resumen de 362 caracteres contra 427) y se dice en vez de esconderlo, pero la vara de los PASOS es la primera y el veredicto directo la respalda contando pasos propios, no caracteres. DISCUTIBLE MARCADO.",
+   "absorbidos": [
+    "consejo_calidad",
+    "consejo_calidad_2"
+   ],
+   "pasos": {
+    "consejo_calidad": {
+     "1": "INCISO:1|miembros del comité de alta dirección|, idealmente ",
+     "2": "APPEND",
+     "3": "APPEND",
+     "4": "APPEND",
+     "5": "CUBIERTO:4",
+     "6": "INCISO:6|métricas de progreso|, con "
+    },
+    "consejo_calidad_2": {
+     "1": "INCISO:1|presidido por el máximo responsable del nivel correspondiente|, ",
+     "2": "APPEND",
+     "3": "APPEND",
+     "4": "CUBIERTO:4",
+     "5": "INCISO:6|remoción de obstáculos| y la "
+    }
+   },
+   "condiciones": {
+    "consejo_calidad": {
+     "1": "APPEND",
+     "2": "CUBIERTO:1"
+    },
+    "consejo_calidad_2": {
+     "1": "APPEND",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL REPARTO LO ESCRIBEN LOS PUESTOS 2523, 2631, 2663 Y 2670, que entre los cuatro nombran pieza por pieza lo que cada absorbido trae de mas, y aqui solo se ejecuta. VIAJAN ENTERAS LAS CINCO PIEZAS QUE LOS VEREDICTOS LLAMAN PROPIAS: de consejo_calidad, PUBLICAR Y COMUNICAR LAS RESPONSABILIDADES DEL CONSEJO A TODA LA ORGANIZACION, ESTABLECER POLITICAS DE ENFOQUE AL CLIENTE Y CONTINUIDAD DEL BREAKTHROUGH y VINCULAR CONSEJOS CORPORATIVOS CON DIVISIONALES O LOCALES, las tres nombradas una a una por el 2523 y por el 2663; de consejo_calidad_2, INCLUIR AL DIRECTOR DE CALIDAD COMO MIEMBRO y REDACTAR UNA CARTA CONSTITUTIVA CON RESPONSABILIDADES CLARAS, las dos nombradas por el 2631 y por el 2670. Ninguna de las cinco esta en el superviviente y ninguna se apila. VAN DE INCISO CUATRO PARAMETROS de gestos que el superviviente ya tiene, por la politica de reparto de este lote: QUIENES conforman el consejo se adosa al paso 1 en dos incisos, miembros del comite de alta direccion (de consejo_calidad) y presidido por el maximo responsable del nivel correspondiente (de consejo_calidad_2), porque el paso 1 del superviviente dice REUNE A LAS PERSONAS CLAVE y no dice quienes son; y al paso 6, que manda revisar el avance y reconocer los logros, se le adosan METRICAS DE PROGRESO (de consejo_calidad) y LA REMOCION DE OBSTACULOS (de consejo_calidad_2), que son con que se revisa y que se hace con lo que la revision encuentra. ESTAN CUBIERTAS las dos piezas de infraestructura de proyectos, el paso 5 de consejo_calidad y el paso 4 de consejo_calidad_2, porque el paso 4 del superviviente ya manda elegir los proyectos y definir el problema y la meta de cada uno, y su paso 5 asigna los recursos nombrados. LAS CONDICIONES: el superviviente traia UNA sola, instalar una practica constante de mejora continua, y las tres que viajan la completan por donde no llega, cuando la organizacion requiere CIENTOS O MILES de proyectos de mejora anuales, cuando se INICIA un esfuerzo estrategico de calidad, y cuando se requiere COORDINACION DE ALTO NIVEL para el despliegue. La cuarta, institucionalizar la mejora mas alla de esfuerzos voluntarios aislados, es la que el superviviente ya tenia. CERO PERDIDAS NOMBRADAS en este acto."
+  },
+  {
+   "orden": 2,
+   "miembros": [
+    "cofundar_con_amigos_familia_riesgos",
+    "riesgo_cofundadores_relacion_previa"
+   ],
+   "superviviente": "cofundar_con_amigos_familia_riesgos",
+   "motivo": "CONTENIDO, con la vara de los pasos y la del resumen a favor y sin que ninguna apunte al reves salvo el cableado, que por P.8 SOLO habla a contenido empatado y aqui el contenido no lo esta. Los dos viables son cofundar_con_amigos_familia_riesgos y seleccion_relaciones_cofundadores; riesgo_cofundadores_relacion_previa es el CENTRO de la estrella y NO es viable. Entre los dos viables: CINCO pasos contra cuatro y resumen de 576 caracteres contra 491. El cableado apunta al otro (13 contra 5) y se dice en vez de esconderlo. Y EL VEREDICTO DIRECTO DEL PAR MIXTO LO RESPALDA SIN AMBIGUEDAD: el 1058 escribe que el otro dice EN UNA LINEA lo que este trae como PROCEDIMIENTO ENTERO, que es exactamente la vara del contenido. NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X: no hay choque de letra contra aritmetica que registrar.",
+   "absorbidos": [
+    "riesgo_cofundadores_relacion_previa"
+   ],
+   "pasos": {
+    "riesgo_cofundadores_relacion_previa": {
+     "1": "INCISO:1|familiar, amigo, excompañero de trabajo, conocido o desconocido|, identificando primero de qué tipo es: ",
+     "2": "CUBIERTO:1",
+     "3": "APPEND",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "riesgo_cofundadores_relacion_previa": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PUESTO 308 ESCRIBE EL REPARTO Y AQUI SE EJECUTA, con una correccion de lectura que se declara. El 308 dice que EL SEGUNDO ENTERO ESTA DENTRO DEL PRIMERO y nombra tres gestos: identificar el tipo de relacion previa, reconocer que llevarse bien en lo personal no anticipa funcionar en lo profesional, y revisar si se trabajo de verdad con esa persona antes. LOS TRES NO ESTAN IGUAL DE DENTRO, y leerlos uno a uno contra los cinco pasos del superviviente lo muestra. El segundo SI: el paso 1 del superviviente manda evaluar honestamente si la relacion social previa aporta LAS HABILIDADES NECESARIAS O SOLO COMODIDAD, que es la misma advertencia dicha como pregunta operativa (CUBIERTO:1). El primero esta a medias: el superviviente evalua la relacion previa pero NO LA CLASIFICA, y la taxonomia de cinco casillas es lo unico que vuelve el paso ejecutable, asi que va de INCISO ADOSADO al paso 1 con las cinco casillas VERBATIM. EL TERCERO NO ESTA, y aqui es donde la lectura del 308 se corrige: revisar SI YA TRABAJASTE DE VERDAD CON ESA PERSONA ANTES mira al PASADO, y el paso 3 del superviviente, PROBAR LA RELACION DE TRABAJO EN UN PROYECTO PEQUENO, construye la prueba HACIA ADELANTE. Son dos gestos distintos y el segundo no ahorra el primero: viaja entero. VIAJA TAMBIEN ENTERO SU PASO 4, que ninguno de los cinco del superviviente dice: SUMAR A ALGUIEN CON QUIEN YA TRABAJASTE ANTES REDUCE EL RIESGO MAS QUE SUMAR A UN AMIGO O FAMILIAR SIN ESE ANTECEDENTE, que es el unico criterio de ELECCION del par, mientras el superviviente entero habla de como blindarse una vez elegido. Las condiciones: la primera es la condicion 1 del superviviente, cofundadores que son familiares, amigos cercanos o parejas (CUBIERTO:1); la segunda viaja entera porque abre el nodo a un caso mas ancho que el superviviente no cubre, estar armando el equipo con el que vas a empezar, sin que haya todavia amigo ni familiar en la mesa. CERO PERDIDAS NOMBRADAS en este acto."
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

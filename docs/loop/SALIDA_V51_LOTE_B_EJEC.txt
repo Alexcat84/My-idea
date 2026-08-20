@@ -1,0 +1,144 @@
+==============================================================================
+OP-U-01, TRAMO 1, P.12, LOTE B DE LA VUELTA 51: los actos 1 y 10 de la nomina re-medida tras el lote A . MODO EJECUTAR
+plan: docs/loop/PLAN_V51_OPU01_LOTE_B.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3495 vivos, 358 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive consejo_de_calidad . absorbe consejo_calidad, consejo_calidad_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 11 (anadidos 5) | condiciones 1 -> 4 (anadidas 3)
+  INCISOS ADOSADOS: 4
+     del paso 1 de consejo_calidad al PASO 1 del superviviente
+        inciso VERBATIM: 'miembros del comité de alta dirección'
+        nexo (lo unico de cosecha propia): ', idealmente '
+        paso resultante: Reune a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente
+     del paso 6 de consejo_calidad al PASO 6 del superviviente
+        inciso VERBATIM: 'métricas de progreso'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Revisa el avance de cada equipo y reconoce los logros, con métricas de progreso y la remoción de obstáculos
+     del paso 1 de consejo_calidad_2 al PASO 1 del superviviente
+        inciso VERBATIM: 'presidido por el máximo responsable del nivel correspondiente'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Reune a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente
+     del paso 5 de consejo_calidad_2 al PASO 6 del superviviente
+        inciso VERBATIM: 'remoción de obstáculos'
+        nexo (lo unico de cosecha propia): ' y la '
+        paso resultante: Revisa el avance de cada equipo y reconoce los logros, con métricas de progreso y la remoción de obstáculos
+  alias del superviviente: ['consejo_calidad', 'consejo_calidad_2']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive cofundar_con_amigos_familia_riesgos . absorbe riesgo_cofundadores_relacion_previa
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de riesgo_cofundadores_relacion_previa al PASO 1 del superviviente
+        inciso VERBATIM: 'familiar, amigo, excompañero de trabajo, conocido o desconocido'
+        nexo (lo unico de cosecha propia): ', identificando primero de qué tipo es: '
+        paso resultante: Evaluar honestamente si la relación social previa (amistad/familia) aporta las habilidades necesarias o solo comodidad, identificando primero de qué tipo es: familiar, amigo, excompañero de trabajo, conocido o desconocido
+  alias del superviviente: ['riesgo_cofundadores_relacion_previa']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 15
+   auditoria_negocio                                    nodos_previos     consejo_calidad_2 -> consejo_de_calidad
+   auditoria_negocio                                    nodos_siguientes  consejo_calidad -> consejo_de_calidad
+   auditoria_presidente                                 nodos_siguientes  consejo_calidad -> consejo_de_calidad
+   calculo_roi_calidad                                  nodos_siguientes  consejo_calidad -> consejo_de_calidad
+   despliegue_metas                                     nodos_previos     consejo_calidad -> consejo_de_calidad
+   metas_negocio_calidad                                nodos_previos     consejo_calidad -> consejo_de_calidad
+   playing_with_fire_gap                                nodos_previos     riesgo_cofundadores_relacion_previa -> cofundar_con_amigos_familia_riesgos
+   presentaciones_alta_direccion                        nodos_siguientes  consejo_calidad -> consejo_de_calidad
+   prueba_antes_de_comprometerse                        nodos_previos     riesgo_cofundadores_relacion_previa -> cofundar_con_amigos_familia_riesgos
+   relacion_previa_y_estructura_roles                   nodos_siguientes  riesgo_cofundadores_relacion_previa -> cofundar_con_amigos_familia_riesgos
+   rol_alta_direccion_calidad                           nodos_siguientes  consejo_calidad -> consejo_de_calidad
+   rol_alta_direccion_calidad                           nodos_siguientes  consejo_calidad_2 -> consejo_de_calidad
+   rol_director_calidad                                 nodos_previos     consejo_calidad -> consejo_de_calidad
+   rol_director_calidad                                 nodos_previos     consejo_calidad_2 -> consejo_de_calidad
+   three_rs_equilibrium                                 nodos_previos     riesgo_cofundadores_relacion_previa -> cofundar_con_amigos_familia_riesgos
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 1
+   sistema_tres_rs_alineacion                           nodos_previos     riesgo_cofundadores_relacion_previa (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 2
+   rol_alta_direccion_calidad                           nodos_siguientes
+   rol_director_calidad                                 nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 1000
+  duplicadas tras resolver DESPUES del tramo                          : 1000
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 0, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 10 de 10
+guarda D, los 3 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (21 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 consejo_calidad                              paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Conformar el consejo con miembros del comité de alta dirección
+    1 consejo_calidad                              paso         2  PASO 7 del superviviente
+        Publicar y comunicar las responsabilidades del consejo a toda la organización
+    1 consejo_calidad                              paso         3  PASO 8 del superviviente
+        Establecer políticas de enfoque al cliente y continuidad del breakthrough
+    1 consejo_calidad                              paso         4  PASO 9 del superviviente
+        Vincular consejos corporativos con consejos divisionales o locales si la organización es grande
+    1 consejo_calidad                              paso         5  ya lo dice el PASO 4 del superviviente
+        Definir procesos de selección de proyectos y soporte a equipos
+    1 consejo_calidad                              paso         6  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer métricas de progreso y sistema de reconocimiento
+    1 consejo_calidad                              condicion    1  CONDICION 2 del superviviente
+        Cuando la organización requiere cientos o miles de proyectos de mejora anuales
+    1 consejo_calidad                              condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando se busca institucionalizar la mejora continua más allá de esfuerzos voluntarios aislados
+    1 consejo_calidad_2                            paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Conformar el consejo con altos directivos de línea y staff, presidido por el máximo responsable del nivel correspondiente
+    1 consejo_calidad_2                            paso         2  PASO 10 del superviviente
+        Incluir al director de calidad como miembro del consejo
+    1 consejo_calidad_2                            paso         3  PASO 11 del superviviente
+        Redactar una carta constitutiva con responsabilidades claras del consejo
+    1 consejo_calidad_2                            paso         4  ya lo dice el PASO 4 del superviviente
+        Establecer infraestructura para seleccionar proyectos de calidad y asignar líderes de equipo
+    1 consejo_calidad_2                            paso         5  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir mecanismos de revisión periódica de progreso y remoción de obstáculos
+    1 consejo_calidad_2                            condicion    1  CONDICION 3 del superviviente
+        Cuando la organización inicia un esfuerzo estratégico de calidad
+    1 consejo_calidad_2                            condicion    2  CONDICION 4 del superviviente
+        Cuando se requiere coordinación de alto nivel para el despliegue de la estrategia de calidad
+    2 riesgo_cofundadores_relacion_previa          paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identifica qué tipo de relación tienes con cada persona que consideras como socio: familiar, amigo, excompañero de trabajo, conocido o desconocido.
+    2 riesgo_cofundadores_relacion_previa          paso         2  ya lo dice el PASO 1 del superviviente
+        Reconoce que llevarte bien con alguien en lo personal no significa que vayan a funcionar bien trabajando juntos.
+    2 riesgo_cofundadores_relacion_previa          paso         3  PASO 6 del superviviente
+        Revisa si ya trabajaste de verdad con esa persona antes, no solo si se conocen socialmente.
+    2 riesgo_cofundadores_relacion_previa          paso         4  PASO 7 del superviviente
+        Si puedes elegir, considera que sumar a alguien con quien ya trabajaste antes reduce el riesgo, más que sumar a un amigo o familiar sin ese antecedent
+    2 riesgo_cofundadores_relacion_previa          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando estás pensando en fundar un negocio con amigos o familiares.
+    2 riesgo_cofundadores_relacion_previa          condicion    2  CONDICION 3 del superviviente
+        Cuando estás armando el equipo con el que vas a empezar.
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 2
+  nodos implicados    : 5
+  nodos que MUEREN    : 3
+  piezas repartidas   : 21 (11 viajan enteras, 5 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 17
+censo DESPUES: 3853 ficheros, 3492 vivos, 361 deprecados
+censo ANTES  : 3853 ficheros, 3495 vivos, 358 deprecados
+delta deprecados: +3 (esperado +3): OK

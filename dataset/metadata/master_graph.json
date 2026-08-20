@@ -6618,13 +6618,13 @@
       "nodos_previos": [
         "tablero_control_scorecard",
         "costo_de_mala_calidad",
-        "consejo_calidad_2",
+        "consejo_de_calidad",
         "costo_de_mala_calidad_2",
         "revision_progreso",
         "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
-        "consejo_calidad",
+        "consejo_de_calidad",
         "auditoria_presidente"
       ],
       "condiciones_activacion": [
@@ -6652,7 +6652,7 @@
         "auditoria_negocio"
       ],
       "nodos_siguientes": [
-        "consejo_calidad"
+        "consejo_de_calidad"
       ],
       "condiciones_activacion": [
         "Cuando se busca reforzar el compromiso visible del liderazgo con la calidad",
@@ -10124,7 +10124,7 @@
       ],
       "nodos_siguientes": [
         "presentaciones_alta_direccion",
-        "consejo_calidad",
+        "consejo_de_calidad",
         "lenguajes_jerarquia_organizacional"
       ],
       "condiciones_activacion": [
@@ -15321,27 +15321,44 @@
       "fuente": "The Founder's Dilemmas",
       "resumen_teorico": "Fundar con amigos o familiares ('equipos relacionales') es común (40% de equipos incluyen amigos, 17.3% incluyen familiares) por facilidad de acceso y apoyo emocional, pero datos muestran que estos equipos son menos estables que equipos de extraños o excompañeros de trabajo. Cada relación social adicional en el equipo aumenta en 28.6% la probabilidad de salida de un cofundador. El problema surge porque es difícil transformar una relación social preexistente en una relación profesional funcional, especialmente al tomar decisiones difíciles como reparto de equity o roles.",
       "pasos_accionables": [
-        "Evaluar honestamente si la relación social previa (amistad/familia) aporta las habilidades necesarias o solo comodidad",
+        "Evaluar honestamente si la relación social previa (amistad/familia) aporta las habilidades necesarias o solo comodidad, identificando primero de qué tipo es: familiar, amigo, excompañero de trabajo, conocido o desconocido",
         "Discutir explícitamente temas difíciles antes de fundar: reparto de equity, roles, qué pasa si el negocio falla",
         "Probar la relación de trabajo en un proyecto pequeño antes de comprometerse totalmente ('trying before buying')",
         "Establecer mecanismos formales (firewalls) para separar la relación personal de la profesional",
-        "Si se decide cofundar con familia/amigos, definir estructuras de autoridad claras aunque resulten incómodas socialmente"
+        "Si se decide cofundar con familia/amigos, definir estructuras de autoridad claras aunque resulten incómodas socialmente",
+        "Revisa si ya trabajaste de verdad con esa persona antes, no solo si se conocen socialmente.",
+        "Si puedes elegir, considera que sumar a alguien con quien ya trabajaste antes reduce el riesgo, más que sumar a un amigo o familiar sin ese antecedente."
       ],
       "entregable_esperado": "Documento de acuerdo entre cofundadores que aborde roles, equity y expectativas discutidas explícitamente antes de fundar",
       "nodos_previos": [
         "circulos_busqueda_cofundadores",
         "homogeneidad_vs_diversidad_equipo",
-        "prueba_antes_de_comprometerse"
+        "prueba_antes_de_comprometerse",
+        "relacion_previa_y_estructura_roles"
       ],
       "nodos_siguientes": [
         "criterios_equity_split",
-        "riesgo_contratar_amigos_familia"
+        "riesgo_contratar_amigos_familia",
+        "playing_with_fire_gap",
+        "prueba_antes_de_comprometerse",
+        "three_rs_equilibrium"
       ],
       "condiciones_activacion": [
         "Si los cofundadores potenciales son familiares, amigos cercanos o parejas",
-        "Si el equipo fundador no ha trabajado profesionalmente junto antes"
+        "Si el equipo fundador no ha trabajado profesionalmente junto antes",
+        "Cuando estás armando el equipo con el que vas a empezar."
       ],
-      "etiqueta_arbol": "Piensa Antes de Cofundar en Familia"
+      "etiqueta_arbol": "Piensa Antes de Cofundar en Familia",
+      "ids_alias": [
+        "riesgo_cofundadores_relacion_previa"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "riesgo_cofundadores_relacion_previa",
+          "titulo": "Riesgo de Cofundar según Tipo de Relación Previa",
+          "fuente": "The Founder's Dilemmas"
+        }
+      ]
     },
     "cognisance_organizacional": {
       "node_id": "cognisance_organizacional",
@@ -18751,7 +18768,8 @@
         "Cuando la organización requiere cientos o miles de proyectos de mejora anuales",
         "Cuando se busca institucionalizar la mejora continua más allá de esfuerzos voluntarios aislados"
       ],
-      "etiqueta_arbol": "Forma tu Consejo de Calidad"
+      "etiqueta_arbol": "Forma tu Consejo de Calidad",
+      "deprecado": true
     },
     "consejo_calidad_2": {
       "node_id": "consejo_calidad_2",
@@ -18779,7 +18797,8 @@
         "Cuando la organización inicia un esfuerzo estratégico de calidad",
         "Cuando se requiere coordinación de alto nivel para el despliegue de la estrategia de calidad"
       ],
-      "etiqueta_arbol": "Lidera tu Consejo de Calidad"
+      "etiqueta_arbol": "Lidera tu Consejo de Calidad",
+      "deprecado": true
     },
     "consejo_calidad_informacion": {
       "node_id": "consejo_calidad_informacion",
@@ -18815,12 +18834,17 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Es la instancia donde tu, junto con las personas que te ayudan a llevar el negocio, decides que proyectos de mejora vale la pena impulsar, evaluas su avance y asignas los recursos necesarios: capacitación, tiempo, personas. Es la forma en que tu, como responsable del negocio, lideras personalmente las iniciativas de calidad en lugar de delegarlas por completo.",
       "pasos_accionables": [
-        "Reune a las personas clave de tu negocio para formar este espacio de decisión",
+        "Reune a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente",
         "Capacitense en el método de mejora de calidad que van a usar",
         "Identifica y prioriza los problemas mas importantes, por ejemplo con un análisis de Pareto",
         "Elige los proyectos a trabajar y define con claridad el problema y la meta de cada uno",
         "Asigna los recursos necesarios: capacitación, personas, tiempo y acompañamiento",
-        "Revisa el avance de cada equipo y reconoce los logros"
+        "Revisa el avance de cada equipo y reconoce los logros, con métricas de progreso y la remoción de obstáculos",
+        "Publicar y comunicar las responsabilidades del consejo a toda la organización",
+        "Establecer políticas de enfoque al cliente y continuidad del breakthrough",
+        "Vincular consejos corporativos con consejos divisionales o locales si la organización es grande",
+        "Incluir al director de calidad como miembro del consejo",
+        "Redactar una carta constitutiva con responsabilidades claras del consejo"
       ],
       "entregable_esperado": "Un espacio de decisión activo, con proyectos priorizados y equipos con recursos asignados",
       "nodos_previos": [
@@ -18832,17 +18856,45 @@
         "programa_zero_defects",
         "replicar_resultados",
         "analisis_pareto",
-        "cero_defectos"
+        "cero_defectos",
+        "auditoria_negocio",
+        "auditoria_presidente",
+        "calculo_roi_calidad",
+        "presentaciones_alta_direccion",
+        "rol_alta_direccion_calidad"
       ],
       "nodos_siguientes": [
         "establecer_proyecto_mejora",
         "involucramiento_sindical",
-        "involucramiento_sindical_calidad"
+        "involucramiento_sindical_calidad",
+        "auditoria_negocio",
+        "despliegue_metas",
+        "metas_negocio_calidad",
+        "rol_director_calidad"
       ],
       "condiciones_activacion": [
-        "Cuando necesitas instalar en tu negocio una practica constante de mejora continua"
+        "Cuando necesitas instalar en tu negocio una practica constante de mejora continua",
+        "Cuando la organización requiere cientos o miles de proyectos de mejora anuales",
+        "Cuando la organización inicia un esfuerzo estratégico de calidad",
+        "Cuando se requiere coordinación de alto nivel para el despliegue de la estrategia de calidad"
       ],
-      "etiqueta_arbol": "Elige tus Proyectos de Mejora"
+      "etiqueta_arbol": "Elige tus Proyectos de Mejora",
+      "ids_alias": [
+        "consejo_calidad",
+        "consejo_calidad_2"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "consejo_calidad",
+          "titulo": "Consejo de Calidad Ejecutivo (Quality Council)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "consejo_calidad_2",
+          "titulo": "Consejo de Liderazgo de Calidad (Quality Council)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "consejo_de_calidad_2": {
       "node_id": "consejo_de_calidad_2",
@@ -32644,7 +32696,7 @@
       "entregable_esperado": "Matriz de despliegue de metas con proyectos asignados, responsables y recursos acordados por nivel organizacional",
       "nodos_previos": [
         "metas_negocio_calidad",
-        "consejo_calidad"
+        "consejo_de_calidad"
       ],
       "nodos_siguientes": [
         "concepto_proyecto_breakthrough",
@@ -73558,7 +73610,7 @@
       ],
       "entregable_esperado": "Sección de metas de calidad incluida en el plan de negocio estratégico, con cifras y plazos concretos",
       "nodos_previos": [
-        "consejo_calidad",
+        "consejo_de_calidad",
         "modelo_shingo_evaluacion_excelencia",
         "presentaciones_alta_direccion"
       ],
@@ -84450,7 +84502,7 @@
       ],
       "entregable_esperado": "Diagnóstico visual o escrito de la brecha de riesgo por cada par de cofundadores, identificando temas pendientes de discutir",
       "nodos_previos": [
-        "riesgo_cofundadores_relacion_previa"
+        "cofundar_con_amigos_familia_riesgos"
       ],
       "nodos_siguientes": [
         "reducir_playing_with_fire_gap"
@@ -86493,7 +86545,7 @@
         "calculo_roi_calidad"
       ],
       "nodos_siguientes": [
-        "consejo_calidad",
+        "consejo_de_calidad",
         "metas_negocio_calidad"
       ],
       "condiciones_activacion": [
@@ -91674,7 +91726,7 @@
       ],
       "entregable_esperado": "Registro de un ejercicio de colaboración previa completado, con conclusiones documentadas sobre compatibilidad de valores y capacidad de trabajo conjunto",
       "nodos_previos": [
-        "riesgo_cofundadores_relacion_previa",
+        "cofundar_con_amigos_familia_riesgos",
         "diversidad_vs_homogeneidad_equipo"
       ],
       "nodos_siguientes": [
@@ -96143,7 +96195,7 @@
       "nodos_siguientes": [
         "three_rs_equilibrium",
         "reasignacion_equity_fundadores",
-        "riesgo_cofundadores_relacion_previa",
+        "cofundar_con_amigos_familia_riesgos",
         "teoria_equidad_split_equity"
       ],
       "condiciones_activacion": [
@@ -98795,7 +98847,8 @@
         "Cuando estás pensando en fundar un negocio con amigos o familiares.",
         "Cuando estás armando el equipo con el que vas a empezar."
       ],
-      "etiqueta_arbol": "Evalúa el Vínculo entre Cofundadores"
+      "etiqueta_arbol": "Evalúa el Vínculo entre Cofundadores",
+      "deprecado": true
     },
     "riesgo_concepto_vs_amenaza_competitiva": {
       "node_id": "riesgo_concepto_vs_amenaza_competitiva",
@@ -99629,9 +99682,8 @@
         "requisitos_lider_de_rrhh"
       ],
       "nodos_siguientes": [
-        "consejo_calidad",
-        "rol_director_calidad",
-        "consejo_calidad_2"
+        "consejo_de_calidad",
+        "rol_director_calidad"
       ],
       "condiciones_activacion": [
         "Cuando empiezas una transformación cultural de calidad en tu negocio",
@@ -99787,9 +99839,8 @@
       ],
       "entregable_esperado": "Un plan de transición de responsabilidades de calidad hacia quienes ejecutan el trabajo en cada area, con un programa de capacitación asociado",
       "nodos_previos": [
-        "consejo_calidad",
-        "rol_alta_direccion_calidad",
-        "consejo_calidad_2"
+        "consejo_de_calidad",
+        "rol_alta_direccion_calidad"
       ],
       "nodos_siguientes": [
         "enfoques_gurus_calidad"
@@ -109411,7 +109462,7 @@
         "ceo_equity_premium",
         "criterios_equity_split",
         "relacion_previa_y_estructura_roles",
-        "riesgo_cofundadores_relacion_previa"
+        "cofundar_con_amigos_familia_riesgos"
       ],
       "nodos_siguientes": [
         "vesting_dinamico",
@@ -123444,7 +123495,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 45,
+    "nodos_sin_enlaces_entrantes": 48,
     "enlaces_rotos_en_grafo": 0
   }
 }

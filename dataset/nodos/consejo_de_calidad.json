@@ -6,12 +6,17 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Es la instancia donde tu, junto con las personas que te ayudan a llevar el negocio, decides que proyectos de mejora vale la pena impulsar, evaluas su avance y asignas los recursos necesarios: capacitación, tiempo, personas. Es la forma en que tu, como responsable del negocio, lideras personalmente las iniciativas de calidad en lugar de delegarlas por completo.",
   "pasos_accionables": [
-    "Reune a las personas clave de tu negocio para formar este espacio de decisión",
+    "Reune a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente",
     "Capacitense en el método de mejora de calidad que van a usar",
     "Identifica y prioriza los problemas mas importantes, por ejemplo con un análisis de Pareto",
     "Elige los proyectos a trabajar y define con claridad el problema y la meta de cada uno",
     "Asigna los recursos necesarios: capacitación, personas, tiempo y acompañamiento",
-    "Revisa el avance de cada equipo y reconoce los logros"
+    "Revisa el avance de cada equipo y reconoce los logros, con métricas de progreso y la remoción de obstáculos",
+    "Publicar y comunicar las responsabilidades del consejo a toda la organización",
+    "Establecer políticas de enfoque al cliente y continuidad del breakthrough",
+    "Vincular consejos corporativos con consejos divisionales o locales si la organización es grande",
+    "Incluir al director de calidad como miembro del consejo",
+    "Redactar una carta constitutiva con responsabilidades claras del consejo"
   ],
   "entregable_esperado": "Un espacio de decisión activo, con proyectos priorizados y equipos con recursos asignados",
   "nodos_previos": [
@@ -23,15 +28,43 @@
     "programa_zero_defects",
     "replicar_resultados",
     "analisis_pareto",
-    "cero_defectos"
+    "cero_defectos",
+    "auditoria_negocio",
+    "auditoria_presidente",
+    "calculo_roi_calidad",
+    "presentaciones_alta_direccion",
+    "rol_alta_direccion_calidad"
   ],
   "nodos_siguientes": [
     "establecer_proyecto_mejora",
     "involucramiento_sindical",
-    "involucramiento_sindical_calidad"
+    "involucramiento_sindical_calidad",
+    "auditoria_negocio",
+    "despliegue_metas",
+    "metas_negocio_calidad",
+    "rol_director_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando necesitas instalar en tu negocio una practica constante de mejora continua"
+    "Cuando necesitas instalar en tu negocio una practica constante de mejora continua",
+    "Cuando la organización requiere cientos o miles de proyectos de mejora anuales",
+    "Cuando la organización inicia un esfuerzo estratégico de calidad",
+    "Cuando se requiere coordinación de alto nivel para el despliegue de la estrategia de calidad"
   ],
-  "etiqueta_arbol": "Elige tus Proyectos de Mejora"
+  "etiqueta_arbol": "Elige tus Proyectos de Mejora",
+  "ids_alias": [
+    "consejo_calidad",
+    "consejo_calidad_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "consejo_calidad",
+      "titulo": "Consejo de Calidad Ejecutivo (Quality Council)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "consejo_calidad_2",
+      "titulo": "Consejo de Liderazgo de Calidad (Quality Council)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

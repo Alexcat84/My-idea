@@ -1,0 +1,174 @@
+==============================================================================
+DOSSIER DE LECTURA, actos 9 a 10 del lote CERRADO de OP-U-01
+nomina: docs/loop/RECOMPUTO_V51_TRAS_LOTE_A.jsonl (249 actos CERRADOS)
+==============================================================================
+
+GUARDA DE LOS CUATRO AJENOS (03_FUSIONES.md, 11 ago 2026):
+   gates_go_kill_decision_points          en el lote CERRADO: NO
+   customer_discovery                     en el lote CERRADO: NO
+   ab_testing_optimizacion                en el lote CERRADO: NO
+   brainstorming_divergente               en el lote CERRADO: NO
+   GUARDA: VERDE, ninguno de los cuatro entra
+
+##############################################################################
+# ACTO 9 de 249 . tamano 3 . clases internas {'A': 2, 'D': 1}
+# decision_cuando_fundar, evaluacion_capacidades_fundador, tres_preguntas_carrera
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 893   decision_cuando_fundar + evaluacion_capacidades_fundador
+      El mismo inventario personal antes de fundar, del mismo libro y con arista en los dos sentidos verificada resolviendo a nodo vivo. Lo comun es el instrumento entero: inventariar lo que uno trae, habilidades y experiencia por un lado y capacidad economica para asumir el riesgo por el otro, y compararlo honestamente contra lo que la oportunidad concreta exige antes de dar el salto. decision_cuando_fundar lo llama factores de carrera y factores personales; evaluacion_capacidades_fundador lo llama capital humano y capital financiero. Lo propio de cada uno cabe en una linea: el primero anade el factor de MERCADO, si la idea es solida o la pasion esta sesgando el juicio, y disenar un plan para mitigar el factor mas debil; el segundo anade el CAPITAL SOCIAL, contactos, red de referencias y reputacion, que el otro no nombra. Por la vara del banco 9.6.1, REPITE. Lo que hay que salvar en la fusion son esas dos: el factor de mercado y el capital social.
+  [A] puesto 290   decision_cuando_fundar + tres_preguntas_carrera
+      REPITE con tres_preguntas_carrera. Los dos mandan la misma autoevaluacion antes de dejar el empleo y con los mismos tres factores nombrados igual: el de carrera, si se tienen las habilidades y la experiencia; el personal, si la situacion familiar y economica aguanta el riesgo; y el de mercado, si la oportunidad y el momento acompanan. Y los dos cierran con el mismo paso final, identificar cual de los tres esta mas debil y disenar un plan para fortalecerlo antes de saltar.
+  [D] puesto 1303  evaluacion_capacidades_fundador + tres_preguntas_carrera
+      Tres capitales contra tres factores, del mismo libro y con arista, y las dos taxonomias no cubren lo mismo. evaluacion_capacidades_fundador mide LO QUE UNO TRAE: listar el capital humano acumulado en habilidades tecnicas, gerenciales y de industria; listar el capital social de contactos, red de referencias y reputacion; evaluar el capital financiero disponible; y compararlos honestamente contra lo que la oportunidad concreta demanda. tres_preguntas_carrera mide TRES MUNDOS: el factor de carrera, si se tiene la experiencia y las habilidades; el factor personal, si la situacion familiar y financiera soporta el riesgo; el factor de MERCADO, si la oportunidad y el momento son favorables; e identificar cual de los tres esta debil para disenar un plan que lo fortalezca antes de lanzarse. Se cruzan en dos de tres y cada uno tiene un tercero propio: el CAPITAL SOCIAL no aparece en el otro, y el FACTOR DE MERCADO tampoco, y ese ademas no habla del fundador sino del mundo. Mas el paso de remediar al mas debil, que solo esta en uno. Con el puesto 1069, es la segunda lectura sana de evaluacion_capacidades_fundador.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## decision_cuando_fundar
+     titulo    : La Decisión de Cuándo Fundar: Factores de Carrera, Mercado y Personales
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: ideacion
+     etiqueta  : Evalúa Cuándo Fundar tu Empresa
+     entregable: Matriz de autoevaluación de los tres factores (carrera, mercado, personal) con plan de mitigación para los factores débiles
+     alias     : []
+     resumen   : 635 caracteres
+     PASOS (4):
+       1. Evaluar tus factores de carrera: ¿tienes las habilidades y experiencia necesarias o necesitarás cofundadores/empleados para compensar?
+       2. Evaluar factores de mercado: ¿tu idea es lo suficientemente sólida o tu pasión te está sesgando el juicio?
+       3. Evaluar factores personales: ¿tu situación familiar y económica permite asumir el riesgo del emprendimiento?
+       4. Identificar cuál de los tres factores es más débil y diseñar un plan para mitigarlo antes de dar el salto
+     CONDICIONES (2):
+       1. Cuando alguien está considerando dejar su empleo para fundar una startup
+       2. Cuando el usuario duda entre lanzarse ahora o esperar a acumular más experiencia
+
+  ## evaluacion_capacidades_fundador
+     titulo    : Evaluación de Capacidades del Fundador frente a la Oportunidad
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: ideacion
+     etiqueta  : Mide tus Capacidades como Fundador
+     entregable: Inventario personal de capital humano, social y financiero relacionado a la oportunidad de negocio
+     alias     : []
+     resumen   : 375 caracteres
+     PASOS (4):
+       1. Listar el capital humano acumulado (habilidades técnicas, gerenciales, de industria)
+       2. Listar el capital social (contactos, red de referencias, reputación)
+       3. Evaluar el capital financiero disponible (ahorros, capacidad de asumir riesgo)
+       4. Comparar honestamente estas capacidades con lo que la oportunidad específica demanda
+     CONDICIONES (2):
+       1. Cuando el usuario está considerando lanzarse a emprender pero no ha evaluado si está preparado
+       2. Antes de comprometerse de tiempo completo a una idea
+
+  ## tres_preguntas_carrera
+     titulo    : Las tres preguntas antes de saltar a emprender (factores de carrera, personales y de mercado)
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: ideacion
+     etiqueta  : Evalúa tu Momento para Emprender
+     entregable: Un diagnóstico claro de los tres factores, con un plan de acción para fortalecer los que estén débiles
+     alias     : []
+     resumen   : 512 caracteres
+     PASOS (4):
+       1. Evalúa el factor de carrera: pregúntate si tienes la experiencia y las habilidades necesarias
+       2. Evalúa el factor personal: pregúntate si tu situación familiar y financiera soporta el riesgo
+       3. Evalúa el factor de mercado: pregúntate si la oportunidad y el momento son favorables
+       4. Identifica cuál de los tres factores está débil y diseña un plan para fortalecerlo antes de lanzarte
+     CONDICIONES (2):
+       1. Cuando dudas si es el momento correcto para emprender
+       2. Cuando tienes una idea pero no sabes si debes dejar tu empleo actual
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  decision_cuando_fundar                              4       11       11
+  evaluacion_capacidades_fundador                     4        7        7
+  tres_preguntas_carrera                              4        4        4
+  aristas INTERNAS del acto: ['evaluacion_capacidades_fundador.nodos_previos -> decision_cuando_fundar', 'decision_cuando_fundar.nodos_siguientes -> evaluacion_capacidades_fundador', 'tres_preguntas_carrera.nodos_previos -> evaluacion_capacidades_fundador', 'evaluacion_capacidades_fundador.nodos_siguientes -> tres_preguntas_carrera']
+
+--- 4. LA FIGURA DEL ACTO ---
+  ACTO MIXTO: 1 par(es) interno(s) NO en A.
+     [D] evaluacion_capacidades_fundador + tres_preguntas_carrera
+  P.12 MANDA: el cierre transitivo CONVOCA, la lectura DECIDE. El nodo
+  mixto se lee CONTRA EL SUPERVIVIENTE: si comparte PROCEDIMIENTO,
+  ENTRA; si comparte LA IDEA EN LINEAS, CONTINUA (enlace mas poda del
+  solape). NI transitividad automatica NI mayoria.
+
+##############################################################################
+# ACTO 10 de 249 . tamano 3 . clases internas {'A': 2, 'D': 1}
+# cofundar_con_amigos_familia_riesgos, riesgo_cofundadores_relacion_previa, seleccion_relaciones_cofundadores
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 308   cofundar_con_amigos_familia_riesgos + riesgo_cofundadores_relacion_previa
+      REPITE con riesgo_cofundadores_relacion_previa. El segundo entero esta dentro del primero: identificar que tipo de relacion previa se tiene con cada socio candidato, reconocer que llevarse bien en lo personal no anticipa que funcione en lo profesional, y revisar si se trabajo de verdad con esa persona antes o solo se conocen socialmente. El primero dice eso mismo y sigue con el remedio, hablar de equity y roles antes de fundar, probar la relacion en un proyecto pequeno y poner cortafuegos y estructuras de autoridad. Es la version corta y la larga del mismo aviso.
+  [D] puesto 1058  cofundar_con_amigos_familia_riesgos + seleccion_relaciones_cofundadores
+      Los circulos contra los riesgos de elegir cerca, del mismo libro y sin arista entre ellos. seleccion_relaciones_cofundadores mapea el terreno y dice en UNA LINEA evaluar honestamente los riesgos de mezclar relaciones personales con la sociedad de negocio. cofundar_con_amigos_familia_riesgos trae el procedimiento de esa linea: evaluar con honestidad si la relacion previa aporta las habilidades necesarias o solo comodidad, discutir explicitamente antes de fundar el reparto de equity, los roles y que pasa si el negocio falla, PROBAR LA RELACION DE TRABAJO en un proyecto pequeno antes de comprometerse, establecer cortafuegos formales entre lo personal y lo profesional, y definir estructuras de autoridad claras aunque incomoden. Por la vara del banco 9.6.1, CONTINUA. La prueba en un proyecto pequeno es lo mas concreto del par. Nota: con el puesto 498, seleccion_relaciones_cofundadores tiene ya un gemelo declarado, asi que esta arista sale del superviviente de aquella fusion.
+  [A] puesto 498   riesgo_cofundadores_relacion_previa + seleccion_relaciones_cofundadores
+      REPITE con seleccion_relaciones_cofundadores. Los dos mandan lo mismo de Wasserman: clasificar que tipo de relacion previa hay con cada candidato a socio, familiar, amigo cercano, conocido de trabajo o desconocido; reconocer que llevarse bien en lo personal no anticipa funcionar en lo profesional; y pesar el riesgo de mezclar antes de decidir. El primero anade la prueba concreta de si ya se trabajo de verdad con esa persona; el segundo anade el mapa de los tres circulos y los acuerdos explicitos de roles y conflictos si se elige a alguien cercano. Con el puesto 308, esta familia llega a TRES nodos del nucleo.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## cofundar_con_amigos_familia_riesgos
+     titulo    : Riesgos de Cofundar con Amigos y Familia (Relational Teams)
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: ideacion
+     etiqueta  : Piensa Antes de Cofundar en Familia
+     entregable: Documento de acuerdo entre cofundadores que aborde roles, equity y expectativas discutidas explícitamente antes de fundar
+     alias     : []
+     resumen   : 576 caracteres
+     PASOS (5):
+       1. Evaluar honestamente si la relación social previa (amistad/familia) aporta las habilidades necesarias o solo comodidad
+       2. Discutir explícitamente temas difíciles antes de fundar: reparto de equity, roles, qué pasa si el negocio falla
+       3. Probar la relación de trabajo en un proyecto pequeño antes de comprometerse totalmente ('trying before buying')
+       4. Establecer mecanismos formales (firewalls) para separar la relación personal de la profesional
+       5. Si se decide cofundar con familia/amigos, definir estructuras de autoridad claras aunque resulten incómodas socialmente
+     CONDICIONES (2):
+       1. Si los cofundadores potenciales son familiares, amigos cercanos o parejas
+       2. Si el equipo fundador no ha trabajado profesionalmente junto antes
+
+  ## riesgo_cofundadores_relacion_previa
+     titulo    : Riesgo de Cofundar según Tipo de Relación Previa
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: ideacion
+     etiqueta  : Evalúa el Vínculo entre Cofundadores
+     entregable: Un mapa de las personas que consideras como socios, con el tipo de relación que tienes con cada una (personal, laboral, académica o desconocida) y qué riesgo implica cada caso.
+     alias     : []
+     resumen   : 488 caracteres
+     PASOS (4):
+       1. Identifica qué tipo de relación tienes con cada persona que consideras como socio: familiar, amigo, excompañero de trabajo, conocido o desconocido.
+       2. Reconoce que llevarte bien con alguien en lo personal no significa que vayan a funcionar bien trabajando juntos.
+       3. Revisa si ya trabajaste de verdad con esa persona antes, no solo si se conocen socialmente.
+       4. Si puedes elegir, considera que sumar a alguien con quien ya trabajaste antes reduce el riesgo, más que sumar a un amigo o familiar sin ese antecedente.
+     CONDICIONES (2):
+       1. Cuando estás pensando en fundar un negocio con amigos o familiares.
+       2. Cuando estás armando el equipo con el que vas a empezar.
+
+  ## seleccion_relaciones_cofundadores
+     titulo    : Círculos de Relación para Elegir Cofundadores
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: ideacion
+     etiqueta  : Elige Cofundadores en tus Círculos
+     entregable: Mapa de candidatos a cofundador clasificados por círculo de relación, con análisis de riesgos y beneficios de cada opción.
+     alias     : []
+     resumen   : 491 caracteres
+     PASOS (4):
+       1. Mapear tu red de contactos según los tres círculos: cercanos, indirectos y desconocidos.
+       2. Evaluar honestamente los riesgos de mezclar relaciones personales (familia, pareja) con la sociedad de negocio.
+       3. Si se elige un cofundador cercano, establecer explícitamente acuerdos sobre roles y manejo de conflictos desde el inicio.
+       4. Si se busca en el círculo externo, definir un proceso de evaluación de habilidades y compatibilidad de trabajo.
+     CONDICIONES (2):
+       1. Cuando el fundador está evaluando a candidatos específicos para incorporar como cofundadores.
+       2. Si existe la tentación de sumar a un familiar o amigo cercano sin evaluar riesgos relacionales.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  cofundar_con_amigos_familia_riesgos                 5        5        5
+  riesgo_cofundadores_relacion_previa                 4        4        4
+  seleccion_relaciones_cofundadores                   4       13       13
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  ACTO MIXTO: 1 par(es) interno(s) NO en A.
+     [D] cofundar_con_amigos_familia_riesgos + seleccion_relaciones_cofundadores
+  P.12 MANDA: el cierre transitivo CONVOCA, la lectura DECIDE. El nodo
+  mixto se lee CONTRA EL SUPERVIVIENTE: si comparte PROCEDIMIENTO,
+  ENTRA; si comparte LA IDEA EN LINEAS, CONTINUA (enlace mas poda del
+  solape). NI transitividad automatica NI mayoria.
