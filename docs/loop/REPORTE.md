@@ -13,8 +13,8 @@ tramo 1 dejo veintisiete mixtos esperando cinco vueltas, EL TRAMO 2 NO PIDE NI U
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `92618dde` (el acta de la vuelta 53), **arbol limpio y todo pusheado** |
-| **hash final** | `PENDIENTE, se escribe en el commit siguiente al del cierre` |
-| **commits de la vuelta** | **4**: `e30e2ccb` (TAREA 1), `0feef54e` (tramo 2 abierto y lote A), `ca191ee6` (lote B) y el del cierre |
+| **hash final** | `29ac3675` (el cierre) mas este mismo commit, que solo escribe esta cabecera, **pusheados a `origin/pasada-unica`** |
+| **commits de la vuelta** | **5**: `e30e2ccb` (TAREA 1), `0feef54e` (tramo 2 abierto y lote A), `ca191ee6` (lote B), `29ac3675` (el cierre) y este, que escribe el hash del cierre en la cabecera porque el commit del cierre no podia contenerlo |
 | **arbol al cierre** | limpio tras el commit del cierre |
 
 ---
