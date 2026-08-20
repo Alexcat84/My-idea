@@ -2,89 +2,116 @@ Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 SESION EJECUTORA. FASE III, EJECUCION. RAMA pasada-unica. MODO DE
 EJECUCION CONTINUA (AUDITOR.md seccion 3), con las guardas obligatorias
 por operacion: simulacion previa sobre copia en memoria, Gate 0 y las
-suites en verde tras cada tramo, caso positivo, y cero duplicadas o
-auto-aristas tras resolver. Cualquier guarda en rojo, o cualquier
+suites en verde tras cada tramo, caso positivo, la guarda 1B (ningun
+absorbido puede ser semilla ni extremo de puente), y cero duplicadas o
+auto-aristas NUEVAS tras resolver. Cualquier guarda en rojo, o cualquier
 operacion cuyo texto no alcance para ejecutarse sin decidir, te detiene
 y convoca al auditor.
 
-AVISO DEL CREDITO, del acta de la vuelta 47: hay UNA caida de cifra
-publicada contada (la cita de linea 4578). La proxima caida de clase o
-de cifra publicada en esta tanda DETIENE el bucle. Toda cita de linea a
-un fichero que esta vuelta edite se mide DESPUES de la ultima edicion
-del fichero, no antes.
+AVISO DEL CREDITO, del acta de la vuelta 48: la racha de clase o cifra
+VOLVIO A CERO (la vuelta 48 salio limpia y el aviso de la 47 se
+desarma). Siguen rigiendo las reglas de siempre: toda cifra publicada
+sale del instrumento corrido EN ESTA vuelta, y toda cita de linea a un
+fichero que esta vuelta edite se mide DESPUES de la ultima edicion del
+fichero.
 
 ====================================================================
-TAREA 1: registros y correcciones declaradas (cinco puntos)
+TAREA 1: registros y correcciones adjudicadas (tres puntos)
 ====================================================================
-1.1. LA CAIDA DE LA VUELTA 47, corregida con correccion declarada: la
-fila de OP-D-07 en la tabla de registros de docs/plan/02_DESTEJIDOS.md
-cita "linea 4578" y el encabezado del sello vive hoy en la 4591 (las 13
-lineas que la propia correccion anadio encima lo desplazaron; acta de
-la vuelta 47, seccion 3). Tachado, fecha, la linea re-medida con el
-instrumento DESPUES de tu ultima edicion del fichero, y el motivo en
-una frase.
+1.1. LA PIEZA DEL ACTO 49 (adjudicacion del auditor, acta 48 seccion 4,
+sobre tu D9): el reparto marco el paso 3 de storytelling_para_el_cambio
+como cubierto por el paso 3 del superviviente, y no es verdad completa:
+el superviviente dice las demostraciones y no dice QUIEN modela. Adosa
+el inciso de las figuras de autoridad al paso 3 de
+storytelling_como_herramienta_de_diseno, por la figura del INCISO
+ADOSADO de la tabla de seis motivos (SALVAGUARDA, precedente OP-D-02
+paso 1 en 02_DESTEJIDOS). Correccion declarada en el registro del tramo
+de 03_FUSIONES.md, y la guarda de duplicadas y auto-aristas nuevas
+re-corrida sobre el resultado.
 
-1.2. LA NOTA ENVEJECIDA DE OP-U-01 Y OP-U-02, corregida por el carril
-del banco 9.10: sus campos nota y evidencia publican 335 actos, 854
-nodos, 280 cerrados sobre 600 y 55 abiertos, que eran exactos en la
-vuelta 11 (commit 7f4ec6d9) y quedaron sin barrer cuando el fichero
-sellado se re-sello con correccion declarada en 7cec9ecc, 78ea7799 y
-70878328 hasta 332/838/278/595/54 (adjudicacion del auditor, acta 47
-seccion 5 punto 1: envejecio LA NOTA, no el fichero). Correccion
-declarada con tachado, fecha, la cadena de commits citada, y la cifra
-vigente MEDIDA en esta vuelta con el instrumento, no copiada del acta.
+1.2. EL UNIVERSO DE scripts/loop/vuelta48_contar_ld.py SE LEE A SI
+MISMO UN NIVEL MAS ARRIBA, medido por el auditor: la corrida de hoy da
+4 nombradas sin seccion y 14 huecos porque el propio REPORTE.md cita
+LD-12 y LD-27 al narrar tu correccion 1. Excluye del barrido del
+universo los ficheros narrativos del bucle (docs/loop/REPORTE.md,
+docs/loop/ACTA_AUDITOR.md, docs/loop/PROMPT_SIGUIENTE.md), con el
+motivo escrito en el docstring y el texto viejo del criterio delante.
+Re-corre: las dos celdas del 00_INDICE deben seguir saliendo 81 y CERO.
+Si salen otra cosa, paras y lo traes.
 
-1.3. scripts/plan/recomputo_3388.py, corregido por el canon 9 del banco
-(fallar ruidoso), adjudicado en el acta 47 seccion 5 punto 4: --salida
-pasa a ser OBLIGATORIO y sin default, el docstring deja de prometer
-solo lectura incondicional en el mismo commit, y publicas el caso
-positivo (la corrida sin --salida falla visible, con su salida citada).
-El fichero sellado de docs/plan/ no se toca.
-
-1.4. LAS DOS FILAS A VERIFICAR de lecturas dirigidas en el 00_INDICE
-(65 hechas, cero encargadas): mide las dos con instrumento (las LD-*
-viven en los registros del plan y del informe; cuenta hechas y
-encargadas de donde esten escritas) y cierra las celdas con la cifra de
-hoy y su comando citado. Si no existe fuente medible, se declara eso
-mismo en la celda y queda como pendiente de doctrina, no como cifra.
-
-1.5. ERRATA sin cifra: 03_FUSIONES.md escribe MUERIRIAN por MORIRIAN en
-la tabla del lote de OP-U-01. Correccion de errata simple.
+1.3. LAS TRES COLISIONES DE CLASE PREEXISTENTES (tu seccion 7,
+verificadas por el auditor con las cadenas de alias leidas de los
+ficheros): los pares RESUELTOS (customer_development_modelo,
+voz_del_cliente_voc) con B en el 806 y D en el 1261;
+(pensamiento_convergente_divergente, reglas_brainstorming) con A en el
+844 y D en el 585; (riesgo_titulos_inflados, seleccion_ceo_fundador)
+con B en el 263 y D en el 1589. RELECTURA CONJUNTA de cada par con los
+dos textos vivos y las dos razones delante, por el carril del par 233
+(02_DESTEJIDOS lineas 3372 y 3521): scripts/corregir_veredicto.py,
+correccion declarada con tachado y fecha en el veredicto que quede mal,
+y el marcador recomputado del archivo si alguna clase cambia, con el
+barrido 9.10 de toda tabla derivada que se mueva. Nota del auditor: el
+B del 806 era un B de espera (la familia estaba bloqueada por la
+costura de voz_del_cliente_voc, hoy operada); si la relectura dice que
+ese B simplemente envejecio, la correccion lo dice asi.
 
 ====================================================================
-TAREA 2: OP-U-01, PRIMER TRAMO de la cirugia (50 actos)
+TAREA 2: OP-U-01, cerrar el tramo 1 ENTERO y seguir con el 2
 ====================================================================
-El tramo esta adjudicado por el auditor (acta 47, seccion 5 punto 3,
-por extension de la regla 6 de EJECUTOR.md): TRAMOS DE 50 ACTOS, y el
-orden dentro del lote es el orden en que el instrumento imprime la
-nomina RE-MEDIDA al abrir el tramo.
+2.1. LOS DOS EMPATES DE P.8 FILA TRES, ADJUDICADOS POR EL AUDITOR (acta
+48 seccion 5). Verifica cada caso contra el grafo y, si sostiene,
+ejecuta con la vara de siempre (P.5 si el texto cambio desde el dossier,
+simulacion previa, alias cargando los ids que mueren, perdidas
+repartidas con su tabla, P.16, guarda 1B):
+  - ACTO 22: sobrevive respeto_a_la_diversidad (el 1792 lo escribe DE
+    CENTRO de la familia; su linea propia es la unica PRUEBA del acto;
+    el nombre es el principio sin calificar). VIAJAN las dos lineas
+    propias de los otros: los nichos funcionales sin desplazar recursos
+    y los flujos de energia y materiales del entorno.
+  - ACTO 42: sobrevive storyboard (el nombre del concepto sin calificar;
+    su mecanica de sesion hace ejecutable la practica). VIAJAN las
+    piezas del otro: dividir en escenas clave, titular y describir cada
+    escena, y compartir con USUARIOS ademas del equipo.
+Si al verificar asoma evidencia que contradiga el caso escrito, no
+fundas: paras y lo traes.
 
-2.1. RE-MIDE la nomina al abrir: recomputo_3388.py con --salida
-apuntando FUERA de docs/plan/ (a docs/loop/), y la lectura de cero del
-tramo con sus cifras (actos cerrados de hoy, nodos, muertes previstas).
-La guarda de los cuatro ajenos se re-comprueba en verde.
+2.2. LAS VEINTISEIS LECTURAS P.12 PENDIENTES de los actos mixtos del
+tramo 1, por el carril adjudicado (acta 48 seccion 6 punto 2). Por cada
+acto mixto: eliges el superviviente de la parte A por las dos reglas de
+la pagina mas P.8 (con la vara de las puertas del 2.3), lees el nodo
+mixto CONTRA ese superviviente y decides ENTRA (comparte procedimiento)
+o CONTINUA (comparte la idea en lineas), y fundes EN UNA SOLA operacion
+la parte A mas el mixto si ENTRA. El veredicto de CADA lectura se
+registra en el REGISTRO DEL TRAMO de 03_FUSIONES.md en tabla propia
+(mixto, superviviente contra el que se leyo, veredicto, citas). Los
+CONTINUA declaran AHI su arista a la fase 04, la figura de
+02_DESTEJIDOS linea 3521, escrita con id RESUELTO (P.9) y SIN
+ejecutarla; la poda del solape NO se ejecuta: queda anotada en la misma
+fila como pendiente de la fase que ejecute el enlace. EL ACTO 1 YA
+TIENE SU LECTURA HECHA (CONTINUA de metodologia_spin_selling, puestos
+625 y 764): registrala primero y funde su parte A.
 
-2.2. EJECUTA los primeros 50 actos CERRADOS de esa nomina, en su orden
-impreso, uno a uno y cada uno entero: lectura de acto por P.5 (leido
-entero tras los destejidos; si la lectura completa cambia la clase, el
-acto se detiene y se declara), superviviente por las DOS reglas de
-ejecucion de 03_FUSIONES.md (sobrevive por CONTENIDO; a contenido
-empatado desempata el grafo) mas P.8 donde el cableado hable,
-simulacion previa sobre copia en memoria, fusion con alias cargando los
-ids que mueren, perdidas repartidas con su tabla, y las duplicadas que
-fabrique quedan para OP-S-12.
+2.3. LA VARA DE LAS PUERTAS, adjudicada (acta 48 seccion 6 punto 1),
+rige para TODO acto con puerta dentro: el contenido manda la eleccion y
+el GATE 0 manda lo ejecutable. Si el ganador por contenido ES la
+puerta, se funde normal. Si NO lo es, el acto SE DECLARA Y NO SE FUNDE,
+ni se invierte el ganador, con su motivo en el registro del tramo. Los
+dos imposibles (36 y 174) quedan declarados. Los declarados por puerta
+se ACUMULAN para el PARA_ALEXIS del cierre de campana: mover una
+semilla es decision de fundador y el bucle no la toma. Los declarados
+29 (cumulo sin leer entero) y 32 (cadenas de firma, reservado a la
+casa) se quedan declarados: ninguno se funde en esta vuelta.
 
-2.3. AL CIERRE DEL TRAMO: Gate 0 por el ciclo escrito y las suites en
-verde, marcador recomputado del archivo con el barrido 9.10 de toda
-tabla derivada que se mueva, y el registro del tramo en 03_FUSIONES.md
-con sus cifras impresas por instrumento (actos fundidos, nodos
-deprecados, enlaces, lo que quede del lote).
+2.4. Si hay cuerda tras cerrar el tramo 1 entero, abre el TRAMO 2 de 50
+actos por la misma vara: la nomina RE-MEDIDA al abrirlo con
+recomputo_3388.py y --salida fuera de docs/plan/, el orden impreso, la
+guarda de los cuatro ajenos, P.5 por acto, y las guardas de siempre.
 
-2.4. Si hay cuerda despues del tramo verde, abre el SEGUNDO tramo de 50
-por la misma vara. Si algo del lote no se deja fundir con las reglas
-escritas (contenido que discrepa, frontera que asoma, clase que cambia
-en la lectura), ese acto se declara y se salta, no se fuerza: la regla
-de la pagina ya legisla que las fronteras se declaran y no se funden.
+2.5. AL CIERRE: Gate 0 por el ciclo escrito y las suites en verde, el
+marcador recomputado del archivo, el barrido 9.10 de toda tabla
+derivada que se mueva, y el registro del tramo en 03_FUSIONES.md con
+sus cifras impresas por instrumento (actos fundidos, lecturas P.12 con
+sus veredictos, nodos deprecados, enlaces, lo que quede del lote).
 
 Reporte con la apertura medida antes de la primera operacion, los
 discutibles marcados ANTES de saber si aciertas, y lo que la vuelta NO

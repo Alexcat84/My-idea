@@ -10861,3 +10861,428 @@ tuvo continuacion.
 EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: registros y
 correcciones (TAREA 1) y el primer tramo de 50 actos de OP-U-01
 (TAREA 2), con el tramo y su orden adjudicados en la seccion 5.
+
+# ==========================================================================
+# ACTA DE LA VUELTA 48 DEL AUDITOR (19 ago 2026, Fable 5)
+# ==========================================================================
+
+CABECERA. SIN HUECO DE ACTA: la ultima acta escrita cubre la vuelta 47
+(linea 10.497 de este fichero, leida hoy) y esta acta cubre la vuelta 48,
+la inmediatamente anterior a la actual. CONVOCADO POR EL MODO CONTINUO:
+la vuelta 48 tuvo un GATE 0 EN ROJO dentro de la vuelta (el acto 36) y
+cierra con cinco preguntas y once discutibles, asi que la verificacion de
+esta acta es COMPLETA: Gate 0 y las tres suites RE-CORRIDOS por mi, ademas
+del marcador, el grafo, la cola, los invariantes de la fusion y cada cifra
+del reporte que se dejo re-medir.
+
+## 1. VERIFICACION COMPLETA POR CORRIDA PROPIA
+
+- EL ARBOL Y LOS COMMITS: git status LIMPIO, HEAD 2459a726 igual a
+  origin/pasada-unica. Los cuatro commits de la vuelta mas el reporte
+  estan en el log tal como el reporte los pinta (a3914f4b, 7ff06525,
+  1a784377, 29c0b773, y 2459a726 el reporte). git diff --name-status
+  b1130103..29c0b773 da 158 ficheros (159 con el reporte), y el desglose
+  por carpeta reproducido entero por mi comando: dataset/nodos 113 mas
+  dataset/metadata 2 son los 115 de dataset; docs/loop 25 mas scripts/loop
+  9 son las 34 altas; docs/plan 4; docs/ 2 (las costuras); web/lib 2;
+  scripts/plan 1. CERO borrados, medido.
+- EL MARCADOR, RECOMPUTADO POR MI del archivo con python propio: n 3.388,
+  A 575, B 79, C 8, D 2.726, rango 1 a 3.388, CERO huecos, CERO
+  duplicados, CERO clases fuera de ABCD. Apertura igual a cierre, y es lo
+  correcto: fundir nodos no cambia veredictos.
+- EL GRAFO, MEDIDO POR MI con conteo propio: 3.853 ficheros, 3.504 vivos,
+  349 deprecados, 16.962 enlaces. AL DIGITO. Y el instrumento de estado
+  (vuelta31_estado.py) re-corrido por mi sale BYTE IGUAL con la salida
+  sellada del cierre, salvo la etiqueta.
+- LOS VEINTE DEPRECADOS NUEVOS, uno a uno contra su estado en 7ff06525
+  (el commit previo a la fusion), con codigo mio: los 20 pasan de vivos a
+  deprecados, el TEXTO INTACTO en los seis campos (pasos, resumen,
+  condiciones, entregable, titulo, fuente) en los 20, y cada uno resuelve
+  por ids_alias a UN vivo, ninguno a mas de uno.
+- LOS INVARIANTES, con la vara del ejecutor REPRODUCIDA POR MI CODIGO
+  (mapa de alias de vivos, tripletas nodo campo destino): duplicadas tras
+  resolver 1.010 ANTES del tramo (estado reconstruido con los 113 ficheros
+  revertidos) y 1.004 DESPUES, CERO nuevas, CERO auto-aristas, y la baja
+  de 6 que P.16 explica. AL DIGITO con el reporte. Y con MI vara mas ancha
+  (cadenas de alias que pasan por deprecados, sobrantes en vez de
+  tripletas) el catalogo carga 1.038 sobrantes y OCHO referencias del
+  dominio calidad que solo resuelven via cadenas por deprecados
+  (costo_de_calidad_5 y costo_de_la_calidad via costo_de_calidad_6, que
+  esta deprecado y carga el alias; costos_de_calidad_cuatro_categorias via
+  cuatro_costos_de_calidad, igual). Las ocho viven en ficheros que esta
+  vuelta NO toco: son pasivo historico de OP-S-12, no caida de nadie, y
+  quedan medidas aqui como contraste.
+- LAS FAMILIAS DE LIBRO: el cierre byte igual por el instrumento; la
+  apertura verificada por deltas con las fuentes de los 20 muertos leidas
+  desde git (Weinberg baja 3, Horowitz baja 2, Coleman baja 1, Hugos y
+  Rackham cero, en vivos y en unicos): 72/70 a 69/67, 93/91 a 91/89,
+  75/73 a 74/72. AL DIGITO.
+- EL CICLO GATE 0 RE-CORRIDO ENTERO POR MI: comando 1 GATE 0: OK exit 0;
+  comando 2 con 71 etiquetas; comando 3 con los 6 assets. LAS SUITES:
+  motor 25 de 25 exit 0; web 80 ficheros, 1.030 pasadas y 3 saltadas,
+  exit 0; tsc --noEmit CERO lineas, exit 0. Los seis exits en cero.
+- EL LOG DE LA FASE 1, y la explicacion del reporte VERIFICADA EN EL
+  DIFF: el log commiteado (md5 d4aa4d71) carga las 64 entradas de
+  symmetrize_added que la corrida del ejecutor escribio, que son
+  exactamente los 64 enlaces nuevos (16.962 menos 16.898). Mi re-corrida
+  idempotente no redirige nada y regenera el log de la corrida vacia (md5
+  dfa6fc2d, el de la vuelta 47): lo restaure con git checkout y queda
+  declarado en la seccion 7. La afirmacion del reporte (un log identico
+  tras 113 nodos movidos seria el sintoma de que el ciclo no corrio) es
+  correcta y el cambio de md5 es legitimo.
+- LA COLA DE COSTURAS, RE-CORRIDA POR MI con scripts/costuras_internas.py:
+  1.490 sobre 3.504, y git status LIMPIO tras la corrida, o sea que los
+  dos ficheros commiteados son byte iguales con una corrida fresca. El
+  alcance tomado del D11 queda verificado.
+- LAS PUERTAS, RE-CORRIDAS POR MI con el instrumento y la nomina de
+  apertura: salida BYTE IGUAL con la sellada. 85 semillas, 185 extremos
+  de puente, 256 la union, 31 actos CERRADOS con puerta, 29 salvables y
+  2 imposibles (36 y 174).
+- LAS TRES COLISIONES DE CLASE, VERIFICADAS POR MI PROPIA VIA (el
+  instrumento de colisiones mide el estado de apertura y no se puede
+  re-correr identico tras la fusion): los tres pares RESUELTOS cargan dos
+  clases. El 806 (B) es contra enfoque_mercado_voc, hoy deprecado con
+  alias en voz_del_cliente_voc, que es el par del 1261 (D). El 844 (A) es
+  contra generar_multiples_opciones, alias en
+  pensamiento_convergente_divergente, y brainstorming_divergente tiene
+  alias en reglas_brainstorming: el par resuelto del 844 es el del 585
+  (D). El 263 (B) es contra errores_comunes_asignacion_roles, alias en
+  seleccion_ceo_fundador, el par del 1589 (D). Las cuatro cadenas de
+  alias leidas por mi de los ficheros y las seis clases leidas de los
+  seis puestos. Los tres son anteriores a la vuelta, como el reporte dice.
+- TAREA 1 ENTERA, verificada punto a punto: el encabezado del sello de
+  OP-D-07 vive HOY en la linea 4591 (medido por mi y por el instrumento
+  re-corrido, que ademas declara YA APLICADA); la celda lleva el tachado
+  de 4578 con fecha y motivo; git show 62c10658 trae los tres hunks y los
+  dos de arriba suman 9 mas 4, las 13 del desplazamiento. La cadena del
+  fichero sellado, re-corrida por mi con git log --follow: OCHO commits,
+  y los conteos por commit (335, 334, 334, 335 QUE SUBE, 334, 333, 333,
+  332) AL DIGITO con la discrepancia que el reporte declara. La nota de
+  OP-U-01 y OP-U-02 lleva la correccion en los seis campos con el texto
+  viejo dentro (instrumento re-corrido: 2 de 2, y leido directo del
+  jsonl). El caso positivo de recomputo_3388.py re-corrido por mi: exit 2
+  sin --salida, y la nomina sellada intacta (md5 64c2c192, 332 lineas,
+  antes y despues de mi corrida). Las celdas de lecturas dirigidas: 81
+  hechas re-medido, y el CERO de encargadas lleva la derivacion ENTERA
+  escrita en la celda con las dos citas del acta que yo verifique
+  verbatim (linea 4234, LD-71 NO se acuna; linea 7906, el ejecutor uso 96
+  a 98). MUERIRIAN cero, MORIRIAN dos.
+- EL TRAMO: el plan sellado leido entero (16 actos, indices y no texto,
+  cobertura exacta por guarda 2), las guardas 1, 1B, 2 y 3 en OK en los
+  dieciseis actos de la salida de ejecucion, las 84 redirecciones sobre
+  vivos impresas, los 27 mixtos RECONTADOS POR MI de la nomina (27, con 4
+  de tamano cuatro y 23 de tres, todos dentro de los primeros 35), la
+  guarda de los cuatro ajenos re-medida (NINGUNO en el lote CERRADO), y
+  la nomina del cierre recontada por mi: 308 actos, 786 nodos, 254
+  CERRADOS con 543, 54 ABIERTOS con 243. Las restas cuadran: 16 actos y
+  36 nodos salen, los ABIERTOS no se mueven.
+- GUIONES: cero largos y cero medios en los cuatro ficheros de docs/plan
+  tocados y en el reporte, medido en UTF-8 (seccion 7 punto ii).
+
+## 2. LA RELECTURA CIEGA, con la ceguera parcial DECLARADA
+
+Lei REPORTE.md entero antes de leer un solo paso (es mi insumo), y mi
+propio censo de deprecados ya nombraba a los muertos de cada acto. La
+ciega que cabe es la de las actas 42 a 47: imprimi PRIMERO los textos
+crudos PRE-fusion desde git (los miembros de los actos 1, 29, 38, 45, 47,
+48, 49 y 50, pasos, condiciones, entregable y cableado), deje escrita mi
+adjudicacion por las dos reglas de la pagina mas P.8, y SOLO DESPUES
+destape el plan sellado y sus razones.
+
+- ACTO 38: MI ADJUDICACION asignacion_agil_de_recursos, con pasos
+  empatados (las mismas cuatro ideas), cableado empatado a 3, y el
+  desempate en las dos condiciones contra una y el entregable mas
+  completo. COINCIDE, y la vara queda adjudicada en el D6.
+- ACTO 45: MI ADJUDICACION proceso_decision_vc: procedimiento mas rico
+  (la alarma de la informacion desproporcionada, las referencias en
+  situaciones dificiles) y el rol mas ancho, contra un cableado de 6 a 2
+  que no manda porque el contenido habla (P.8, segunda aplicacion).
+  COINCIDE.
+- ACTO 47: MI ADJUDICACION three_rs_equilibrium: carga el metodo entero
+  (documentar por escrito, revision periodica, los elefantes) y las
+  piezas del otro viajan. La tension del D7 es real y la comparto: la
+  logica social contra la de negocio es doctrina que viaja como pieza,
+  no como ganador. COINCIDE.
+- ACTO 48: MI ADJUDICACION framework_excelencia_operacional: diez pasos
+  cargan el material entero del de cuatro (el veredicto 211 dice que la
+  unica diferencia es QUIEN pregunta), contra cableado 5 a 2. COINCIDE.
+- ACTO 49: MI ADJUDICACION storytelling_como_herramienta_de_diseno como
+  superviviente. COINCIDE en el ganador; DISCREPO PARCIAL en una pieza
+  del reparto (seccion 4).
+- ACTO 50: MI ADJUDICACION compromiso_linea_tiempo_cliente: seis pasos
+  cubren los cuatro del otro y trae la higiene del embudo. COINCIDE.
+- ACTO 29: MI ADJUDICACION declarar, y mi lectura ciega ademas eligio
+  OTRO ganador hipotetico (sistema_estable_causas_comunes, el mas
+  completo de los tres) que el que el veredicto 2572 llama provisional
+  (mejora_del_sistema): dos lectores serios eligen distinto, que es
+  exactamente la firma de POR ELEGIR. La cita del 2572 verificada
+  verbatim (ganador PROVISIONAL, el cumulo pasa de diez nodos por raiz y
+  no esta leido entero). COINCIDE en declarar.
+- ACTO 1 (el mixto ejemplar): MI ADJUDICACION CONTINUA: el paso 3 de
+  metodologia_spin_selling es una linea que remite fuera y
+  modelo_spin_preguntas trae el procedimiento entero. Los puestos 625 y
+  764 leidos por mi: los dos escriben CONTINUA con esa palabra. COINCIDE.
+- LAS CITAS DE LOS DECLARADOS, verificadas verbatim: 2525 (las dos
+  cadenas de firma, contigo uno a uno contra con su supervisor, y la
+  fusion tiene que DECIDIRLO, no apilarlo), 1857, 1792 y 1779 (TRES de
+  los cuatro pasos se corresponden, una linea propia a cada uno).
+
+CUENTA DE LA CIEGA: 8 de 8 COINCIDEN en el fondo. UNA discrepancia
+PARCIAL (la pieza del acto 49), DENTRO del marcado (el propio D9 la
+nombra): el credito de la tanda no baja y ningun tramo se relee al doble
+por regla; el reparto del tramo lo relei fila a fila de todos modos
+porque ahi vivia la pieza.
+
+## 3. LOS ONCE DISCUTIBLES, ADJUDICADOS
+
+- D1 (fundir 16 de 50): A FAVOR, y NO es caida de alcance. El 2.4 del
+  encargo no es una valvula con cupo: vale para todo acto cuyo motivo sea
+  citable, y los 34 lo tienen (27 por P.12, que prohibe la transitividad
+  con esas palabras; 5 con cita verificada; 2 por colision medida). La
+  concentracion no es senal de abuso: el orden impreso pone los duros por
+  delante, y los 27 mixtos caen todos antes del puesto 36 de la nomina,
+  medido por mi. La letra ejecuta los primeros 50 se cumplio en la mitad
+  que las reglas escritas dejan ejecutar, y la otra mitad quedo declarada
+  con nombre.
+- D2 (no leer 26 mixtos): A FAVOR con encargo. La alternativa que cabia
+  en la vuelta era fundir por transitividad, que es lo unico prohibido.
+  La lectura pendiente es trabajo real y va a la TAREA 2 del encargo con
+  el carril adjudicado en la seccion 6.
+- D3 (P.16 contra la letra del encargo): A FAVOR DEL EJECUTOR, y la
+  frase del encargo fue CAIDA MIA DE LINAJE (seccion 7). P.16 es
+  decision de fundador del 14 ago y sus puntos 2 y 3 son inequivocos: la
+  limpieza no se aplaza, y OP-S-12 es verificacion de cero para las
+  fusiones nuevas. La frase las duplicadas quedan para OP-S-12
+  contradecia la regla y la guarda del propio encargo. El ejecutor
+  eligio la regla y lo declaro: es la conducta correcta.
+- D4 (seguir tras el GATE 0 en rojo): A FAVOR, por precedente citable.
+  Las actas 39 y 43 ya adjudicaron esta figura: una guarda en rojo
+  atendida por regla escrita en la misma vuelta, con el dataset
+  restaurado, la guarda que faltaba escrita (1B), la corrida vuelta a
+  verde, y la verificacion COMPLETA del auditor en la vuelta siguiente,
+  cumple el modo continuo. Esta acta es esa verificacion. El rojo quedo
+  contado con nombre, que es lo que el canon 9 pide.
+- D5 (45, 48, 50 contra el cableado): A FAVOR. P.8 segunda aplicacion es
+  letra exacta (diez contra cinco y pierde), y mis tres relecturas
+  ciegas coinciden con los tres supervivientes.
+- D6 (el 38 por condiciones y entregable): A FAVOR, y LA VARA QUEDA
+  ADJUDICADA: las condiciones y el entregable SON contenido. P.8 define
+  contenido como lo que el nodo dice (piezas propias, rol declarado,
+  alcance) y sus dos ejemplos no agotan la especie: una condicion de
+  activacion y un entregable son piezas propias del nodo tanto como un
+  paso. Con esa vara el 38 NO estaba empatado en contenido y no tocaba
+  fila tres. El margen corto quedo declarado, que es lo que corresponde.
+- D7 (el 47 por cantidad): A FAVOR, con la tension declarada compartida.
+  Ver la ciega.
+- D8 (declarar el 29 por la palabra provisional): A FAVOR. La cita es
+  verbatim y mi propia lectura eligio otro ganador que el veredicto:
+  fundir ahi seria decidir lo que el archivo dejo sin decidir. El acto
+  queda declarado hasta que el cumulo se lea entero.
+- D9 (la perdida que no viaja del 49): DISCREPO PARCIAL, dentro del
+  marcado. Seccion 4.
+- D10 (la columna NUCLEO-A): A FAVOR. Declarar que una columna imprime
+  un cero ambiguo y no citarla es exactamente lo que se hace con un
+  instrumento que no mide lo que dice; ninguna cifra del reporte sale de
+  ahi, cotejado.
+- D11 (correr costuras_internas): A FAVOR y VERIFICADO: mi re-corrida
+  reproduce los dos ficheros byte iguales y la cifra 1.490 sobre 3.504.
+  Un instrumento que escribe su propio censo, corrido para medir y
+  declarado, no es alcance robado.
+
+## 4. LA PIEZA DEL ACTO 49, mi unica discrepancia (dentro del marcado)
+
+El reparto marca el paso 3 de storytelling_para_el_cambio (usar
+demostraciones tangibles Y FIGURAS DE AUTORIDAD para modelar el
+comportamiento) como ya lo dice el PASO 3 del superviviente, y no es
+verdad completa: el paso 3 del superviviente (crear momentos memorables,
+eventos, demostraciones) dice las demostraciones y NO dice QUIEN modela.
+La tabla de seis motivos ya tiene el gesto exacto para esto: el INCISO
+ADOSADO al paso que protege (SALVAGUARDA, precedente OP-D-02 paso 1, en
+la propia pagina de 02_DESTEJIDOS). Correccion menor encargada (TAREA
+1.1): adosar y figuras de autoridad al paso 3 del superviviente, con
+correccion declarada y las guardas re-corridas. NO es caida de clase ni
+de cifra publicada (el reparto vive en el plan sellado de docs/loop y el
+reporte lo marco el mismo como D9): es la relectura conjunta haciendo su
+trabajo.
+
+## 5. LOS DOS EMPATES TRAIDOS AL AUDITOR (P.8 fila tres), ADJUDICADOS
+
+Los dos verifican el empate: lo re-medi (acto 22: una linea propia a
+cada nodo segun los tres veredictos, cuatro pasos y dos condiciones cada
+uno, cableado 3 a 3 entre los dos punteros; acto 42: cuatro pasos cada
+uno, cableado 4 a 4).
+
+- ACTO 22: SOBREVIVE respeto_a_la_diversidad. El caso: (a) el archivo ya
+  le dio el rol: el 1792 lo escribe DE CENTRO de la familia en su nota de
+  nomina; (b) su linea propia es la unica PRUEBA del acto (evaluar la
+  resiliencia: el 1779 la llama la unica que pone una prueba al diseno en
+  vez de una regla); (c) el nombre es el principio del libro sin
+  calificar, la misma figura del nombre que P.8 usa (la cabeza no se
+  llama como uno de sus angulos: fortaleza ecosistemica es el angulo del
+  encaje). VIAJAN las dos lineas propias de los otros: identificar nichos
+  funcionales sin desplazar recursos (la condicion de no dano) y disenar
+  con los flujos de energia y materiales del entorno. Nada se pierde.
+- ACTO 42: SOBREVIVE storyboard. El caso: (a) el nombre del concepto sin
+  calificar, misma figura; (b) su mecanica de sesion es lo que hace
+  ejecutable la practica (el time-box de 30 a 45 minutos, no preocuparse
+  por la calidad del dibujo, actuar o presentar al equipo); (c) la
+  anatomia del otro viaja limpia como piezas (dividir en escenas clave,
+  titular cada escena y describirla, compartir con USUARIOS ademas del
+  equipo), y su condicion 2 ya la dice la condicion del superviviente.
+El ejecutor verifica cada caso contra el grafo y ejecuta con la vara de
+siempre; si al verificar asoma evidencia que contradiga el caso escrito,
+no funde: para y lo trae.
+
+## 6. LAS CINCO PREGUNTAS DE LA SECCION 9, ADJUDICADAS
+
+1. CONTENIDO CONTRA GATE 0, EN LOS 29 SALVABLES Y LOS 2 IMPOSIBLES:
+   ADJUDICADO SIN DOCTRINA NUEVA, y la vara es esta: EL CONTENIDO MANDA
+   LA ELECCION Y EL GATE 0 MANDA LO EJECUTABLE. Si el ganador por
+   contenido ES la puerta, el acto se funde normal. Si el ganador por
+   contenido NO es la puerta, el acto SE DECLARA Y NO SE FUNDE: ni se
+   invierte el ganador para complacer al GATE 0 (seria fundir contra la
+   vara de la pagina), ni se depreca la puerta (seria romper una guarda
+   obligatoria del modo continuo). La letra que lo sostiene ya existe:
+   el 2.4 del encargo ratificado por la regla de la pagina (lo que no se
+   deja fundir con las reglas escritas se declara y se salta, no se
+   fuerza), y las guardas obligatorias de AUDITOR.md seccion 3. Los
+   declarados por puerta se ACUMULAN en el registro del tramo con su
+   motivo y viajan al PARA_ALEXIS del cierre de campana, porque mover
+   una semilla de sede o decidir que la puerta pierda es decision de
+   fundador (seccion 4): el bucle no la toma, la deja escrita. Los dos
+   imposibles (36 y 174) quedan declarados por la misma vara, y el 36 ya
+   tiene su lectura y su superviviente escritos en el plan para el dia
+   en que la casa decida.
+2. EL CARRIL DEL CONTINUA DE P.12: ADJUDICADO POR PRECEDENTE. El
+   veredicto de cada lectura P.12 se registra en el REGISTRO DEL TRAMO
+   de 03_FUSIONES.md (el encargo 2.3 ya manda registrar el tramo en esa
+   pagina), en tabla propia: mixto, superviviente contra el que se leyo,
+   veredicto ENTRA o CONTINUA, y las citas. Los CONTINUA declaran AHI su
+   arista a la fase 04, que es EXACTAMENTE la figura que 02_DESTEJIDOS
+   (linea 3521, leida hoy) uso con las aristas de los pares 599 y 233:
+   declarada en el registro de la operacion que la descubrio, ejecutada
+   por la fase 04. La arista se escribe con id RESUELTO (P.9) y NO se
+   ejecuta aqui. La poda del solape que P.12 nombra NO la tiene
+   autorizada esta operacion: queda anotada en la misma fila como
+   pendiente de la fase que ejecute el enlace, y si al abrir la fase 04
+   su texto no alcanza para la poda, ESA sera la parada de entonces. El
+   acto 1 ya tiene su lectura hecha: se registra primero.
+3. LA LECTURA DE 2.4: vale para lo que la vara alcance, sin cupo (D1). Y
+   con una precision: los 27 mixtos NO son la valvula de 2.4, son P.12
+   pendiente de lectura, una especie distinta que se cierra leyendo, y
+   va al encargo.
+4. LAS DUPLICADAS FABRICADAS: P.16, adjudicado en D3. La frase del
+   encargo era la equivocada y era mia.
+5. UN GATE 0 EN ROJO RESTAURADO Y VUELTO A VERDE: no cuenta como parada,
+   adjudicado en D4 por el precedente de las actas 39 y 43 mas esta
+   verificacion completa. Cuenta como lo que el reporte hizo con el: un
+   rojo contado con nombre y una guarda nueva que lo hace imposible de
+   repetir en silencio.
+
+Y LA SECCION 7 DEL REPORTE (las tres colisiones de clase preexistentes):
+ADJUDICADAS A RELECTURA CONJUNTA con carril existente, no parada. El
+carril es el del par 233 (02_DESTEJIDOS lineas 3372 y 3521):
+scripts/corregir_veredicto.py con correccion declarada y recomputo del
+marcador si una clase cambia. Va como TAREA 1.3 del encargo. Nota de
+lectura: el B del 806 es un B de espera (la familia estaba bloqueada por
+la costura de voz_del_cliente_voc, hoy operada), no un choque de fondo;
+si la relectura dice que ese B simplemente envejecio, la correccion lo
+dice asi.
+
+LOS PENDIENTES HEREDADOS (el esquema de OPERACIONES.jsonl sin distinguir
+ejecutada de pendiente, y el campo orden de la fase 03) siguen sin dueno
+y sin cambio, como el reporte los deja: no bloquean y quedan nombrados.
+
+## 7. MIS PROPIOS MANEJOS Y TROPIEZOS, declarados con nombre
+
+- (i) Mi re-corrida del Gate 0 piso dataset/metadata/phase1_run_log.json
+  con el log de la corrida vacia (md5 dfa6fc2d): restaurado con git
+  checkout al sellado (d4aa4d71), diferencia leida en el diff y explicada
+  en la seccion 1. Ninguna cifra publicada salio de ese manejo.
+- (ii) Mi primer conteo de guiones uso Get-Content sin declarar UTF-8 y
+  fabrico DIEZ guiones medios falsos en el 00_INDICE: eran los caracteres
+  de caja del diagrama de fases descodificados como cp1252. Re-medido en
+  UTF-8: cero. La cifra mala no se publico en ningun sitio antes de la
+  re-medicion, y el tropiezo es de la misma especie que la trampa de
+  Windows ya conocida de la casa.
+- (iii) Mi primer mapa de alias solo miraba los vivos y dejo ocho
+  referencias historicas sin resolver; la vara del ejecutor y las cadenas
+  por deprecados las resuelven, y quedaron medidas como pasivo en la
+  seccion 1.
+- Y DOS CAIDAS DE MI LINAJE (del auditor de la vuelta 47), con nombre:
+  (a) CAIDA DE ACTA: el acta 47 seccion 5.1 llamo cadena de custodia
+  ENTERA a cuatro commits del fichero sellado; git log --follow da OCHO,
+  y la cuenta no baja monotona (801c59f9 SUBE a 335). La adjudicacion de
+  fondo (envejecio la nota, no el fichero) NO cambia, pero la palabra
+  entera era falsa y el ejecutor la descubrio midiendo. Suma a caidas de
+  acta del auditor.
+  (b) CAIDA DE ENCARGO: la frase del encargo 47 las duplicadas que
+  fabrique quedan para OP-S-12 contradice P.16 puntos 2 y 3 y chocaba
+  con la guarda de cero duplicadas del propio encargo. El ejecutor
+  eligio la regla y declaro la divergencia. Suma a procedimiento del
+  auditor.
+
+## 8. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 10 relecturas (8 ciegas de contenido con los textos
+impresos antes del destape, mas los 2 empates adjudicados con re-conteo
+propio), 13 puestos leidos al digito con su razon entera (625, 764,
+1857, 1792, 1779, 2525, 2572, 806, 1261, 844, 585, 263, 1589), 24 nodos
+de forma impresos enteros desde git, y unos 40 sitios re-corridos o
+leidos al digito (commits y diff por carpeta, marcador propio, grafo
+propio, los 20 deprecados campo a campo, invariantes en dos estados con
+dos varas, familias por deltas, ciclo Gate 0 y tres suites, el log del
+symmetrize leido en el diff, costuras byte igual, puertas byte igual,
+nota envejecida re-corrida y leida del jsonl, registros de lineas con
+los hunks de git show, la cadena de OCHO commits con conteo por commit,
+caso positivo con md5 antes y despues, celdas LD con la deriva de hoy
+medida y explicada, las dos citas del acta verbatim, MORIRIAN, el plan
+sellado entero, los declarados, las guardas de la ejecucion, el registro
+del tramo, la nomina del cierre recontada, la nota de OP-U-01, el
+precedente de la linea 3521, y el barrido de guiones en UTF-8).
+
+Caidas del ejecutor en esta vuelta: CERO de clase, CERO de cifra
+publicada, CERO de reporte. Todo lo que el reporte afirma y se dejo
+medir calzo al digito, y sus dos discrepancias declaradas (los ocho
+commits contra los tres del encargo, y P.16 contra la letra del encargo)
+eran las correctas. Caidas del auditor: UNA de acta y UNA de
+procedimiento, las dos del linaje de la vuelta 47, declaradas en la
+seccion 7.
+
+Acumulado: 85 relecturas, 476 puestos (mas 311 nodos de forma y 419
+sitios de codigo), 7 caidas de clase, 19 de reporte del ejecutor, 8 de
+cifra publicada del ejecutor, 2 de cifra del auditor, 4 de acta del
+auditor, 2 de procedimiento del auditor.
+
+Rachas: CLASE O CIFRA VUELVE A CERO. El aviso armado del acta 47 (la
+proxima caida detiene el bucle) se desarma: la vuelta 48 salio limpia de
+esa especie. REPORTE sigue en cero.
+
+## 9. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. Las dos preguntas grandes se adjudicaron por
+  extension citable (la vara de las puertas por el 2.4 mas la regla de
+  la pagina y las guardas del modo continuo; el carril del CONTINUA por
+  el precedente de 02_DESTEJIDOS 3521 y el registro del tramo que el
+  encargo 2.3 ya manda).
+- Contradiccion sin regla de correccion: NO. Las tres colisiones de
+  clase tienen el carril del 233; la pieza del 49 tiene el gesto de la
+  tabla de seis motivos.
+- Decision de fundador: NINGUNA SE TOMA. Mover semillas de sede queda
+  declarado y acumulado para el cierre de campana; los actos 29 (cumulo
+  sin leer) y 32 (cadenas de firma) quedan declarados; nada se borro
+  fuera de regla; el bucle no fundio ramas.
+- Fallo tecnico repetido: NO. El GATE 0 en rojo fue UNA vez, por causa
+  nueva, atendido con guarda nueva en la misma vuelta, y re-corrido en
+  verde por el ejecutor y por mi.
+- Credito de tanda roto: NO. Cero caidas de clase o cifra; la racha
+  vuelve a cero.
+- Campana consumada: NO. Quedan 254 actos CERRADOS en la nomina, los 26
+  mixtos del tramo 1, dos empates adjudicados por ejecutar, y todo lo
+  que el 00_INDICE tiene detras.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: las correcciones
+adjudicadas (TAREA 1) y el cierre entero del tramo 1 de OP-U-01 con las
+lecturas P.12 por el carril nuevo, los dos empates, la vara de las
+puertas, y el tramo 2 si hay cuerda (TAREA 2).
