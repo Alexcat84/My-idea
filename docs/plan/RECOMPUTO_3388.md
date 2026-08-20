@@ -243,9 +243,9 @@ que el auditor verifique las cuatro comprobaciones de mas abajo.
 
 | | |
 |---|---:|
-| A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ **574** **[CORREGIDA CINCO VECES, el 15 y el 18 ago 2026 y el 19 ago 2026; la quinta por la relectura conjunta de las tres colisiones de clase, vuelta 49, que volteo el puesto 844 de `A` a `D`]** |
-| de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | ~~**0**~~ ~~**1**~~ **41** **[CORREGIDA DOS VECES, el 15 ago 2026 y el 19 ago 2026. Y LA SEGUNDA NO ES UN ERROR: ES LA HUELLA DE LA CIRUGIA. Cada acto que se funde convierte su par `A` en un par cuyos dos ids resuelven al mismo nodo vivo. Las 41 son exactamente los pares `A` que las fusiones de las fases 02 y 03 ya consumieron, impresas una a una por el instrumento en `../loop/SALIDA_V49_RECOMPUTO_3388.txt`]** |
-| pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ **533** **[CORREGIDA CINCO VECES, la ultima el 19 ago 2026]** |
+| A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ **573** **[CORREGIDA SEIS VECES, el 15 y el 18 ago 2026 y el 19 ago 2026; la sexta el 19 ago 2026 en la vuelta 50, porque el volteo del puesto **305** de `A` a `D` (la limpieza `P.16` de la colision que la fusion del acto 1 fabrico, vuelta 49) MOVIO ESTA TABLA Y LA TABLA NO SE BARRIO EN AQUEL ACTO. Medido hoy con `python scripts/plan/recomputo_3388.py` (`../loop/SALIDA_V50_RECOMPUTO_APERTURA.txt`, paso 1)]** |
+| de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | ~~**0**~~ ~~**1**~~ ~~**41**~~ **48** **[CORREGIDA TRES VECES, el 15 ago 2026 y el 19 ago 2026 (vueltas 49 y 50). Y NINGUNA DE LAS DOS ULTIMAS ES UN ERROR DE LECTURA: ES LA HUELLA DE LA CIRUGIA, que la propia fila ya explicaba. Cada acto que se funde convierte su par `A` en un par cuyos dos ids resuelven al mismo nodo vivo. El 41 era el corte de la TAREA 1.3 de la vuelta 49, ANTERIOR a las tres fusiones de su TAREA 2 (actos 20, 34 y la parte A del acto 1), que anadieron siete; las 48 estan impresas una a una por el instrumento en `../loop/SALIDA_V50_RECOMPUTO_APERTURA.txt`]** |
+| pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ **525** **[CORREGIDA SEIS VECES, la ultima el 19 ago 2026 (vuelta 50), por el mismo motivo que las dos filas de arriba]** |
 | pares con mas de un veredicto crudo apuntando al mismo par resuelto | **0** |
 
 ~~**Ninguna de las 583 A colapsa.** Los 391 alias vigentes hoy son historia previa a esta campana
@@ -525,7 +525,7 @@ tamano**, confirmado con las dos vias.
 | # | comprobacion | resultado |
 |---:|---|---|
 | **i** | nodos en actos (~~854~~ **852**) == suma de tamanos de las componentes (~~854~~ **852**) | **OK**, recomprobado el 15 ago 2026 |
-| **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ **533**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ **533**) | **OK**, recomprobado el 15 ago 2026 con las cifras nuevas, DOS veces, y **RE-CORRIDO EL 19 ago 2026 (vuelta 49): sigue OK con 533 y 533**, y con el las otras tres ([`../loop/SALIDA_V49_RECOMPUTO_3388.txt`](../loop/SALIDA_V49_RECOMPUTO_3388.txt), *LAS CUATRO: TODAS OK*) |
+| **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ ~~533~~ **525**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ ~~533~~ **525**) | **OK**, recomprobado el 15 ago 2026 con las cifras nuevas, DOS veces, ~~y **RE-CORRIDO EL 19 ago 2026 (vuelta 49): sigue OK con 533 y 533**~~ y **RE-CORRIDO OTRA VEZ EL 19 ago 2026 (vuelta 50) CON LA PAREJA NUEVA: sigue OK con 525 y 525**, y con el las otras tres ([`../loop/SALIDA_V50_RECOMPUTO_APERTURA.txt`](../loop/SALIDA_V50_RECOMPUTO_APERTURA.txt), *LAS CUATRO: TODAS OK*). **La pareja de la vuelta 49 se tacha y no se borra: era cierta con el retrato de aquel corte y dejo de serlo cuando el 305 y las tres fusiones movieron el retrato dentro de la propia vuelta 49** |
 | **iii** | todo acto CERRADO tiene sus pares internos leidos y ningun miembro con par pendiente | **OK**, verificado sobre los 280 |
 | **iv** | ningun nodo deprecado aparece dentro de una componente | **OK**, 0 encontrados |
 
@@ -1076,7 +1076,7 @@ lineas.**
 | risk_management | 106 | 0 | 0,0 % |
 | exportacion | 130 | 15 | 11,5 % |
 | seguridad_digital | 27 | 3 | 11,1 % |
-| **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ **574** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ **16,9 %** |
+| **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ **573** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ **16,9 %** |
 
 ~~**Los diez dominios y el total (3.388 pares, 583 A) coinciden con el marcador recomputado de la vuelta
 14** (`A 583, B 89, C 7, D 2.709`), verificado de nuevo aqui por suma de columna.~~ **CORRECCION
@@ -1095,7 +1095,13 @@ digito. LA FILA `core` DE LA TABLA DE ARRIBA SIGUE DICIENDO 344 Y NO SE REESCRIB
 (18 ago 2026, misma vuelta 36 unas horas despues): tras el `643` el total es `A 575, B 83, C 8,
 D 2.722` y `core` queda en `n 1445, A 336 (23,3 por ciento), B 81, C 8, D 1020`
 (`docs/loop/SALIDA_V36_TASA_DOMINIO_B.txt`). Los otros nueve dominios, otra vez identicos al
-digito.** **La tasa de quality
+digito.** **CUARTA CORRECCION DECLARADA (19 ago 2026, vuelta 50): el total es hoy `A 573,
+B 77, C 8, D 2.730` sobre los mismos 3.388 pares, y el UNICO dominio que cambia vuelve a ser
+`core`, porque los CUATRO volteos de la vuelta 49 (806, 844, 263 y 305) son los cuatro de
+`core`. Medido hoy dominio por dominio (`../loop/SALIDA_V50_MARCADOR_APERTURA.txt`): `core`
+queda en `n 1.445, A 334 (23,1 por ciento)`. Los otros nueve dominios, identicos al digito.
+LA FILA `core` DE LA TABLA DE ARRIBA SIGUE DICIENDO 344 Y NO SE REESCRIBE, por el mismo motivo
+que la segunda correccion ya escribio: es la foto del 13 ago.** **La tasa de quality
 cayo de 24,3 % (corte 2.900, acta vuelta 4) a 14,9 % (corte 3.388)** porque los 355 pares que entraron
 despues del corte 2.900 en ese dominio son mayoritariamente D: es la figura 9.27 (la cola del dominio se
 agota por dentro) actuando sobre el propio quality.

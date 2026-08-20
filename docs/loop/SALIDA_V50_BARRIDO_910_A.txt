@@ -1,0 +1,241 @@
+==============================================================================
+BARRIDO DEL BANCO 9.10, vuelta 50 (sucesor: --viejo AHORA BUSCA)
+marcador viejo buscado: A 574 B 77 C 8 D 2729
+retrato viejo buscado : 41, 533
+puestos corregidos    : 305
+==============================================================================
+
+--- FAMILIA 1: EL MARCADOR VIEJO QUE SE PIDIO (A 574, D 2729) ---
+  candidatos: 16
+  docs/FRANJA_VEREDICTOS.jsonl:574
+      {"puesto_franja": 574, "nodo_mundo": "screening_mercados_potenciales", "nodo_nucleo": "etapa_scoping", "clave": 0.7218, "clase": "C", "razon": "Screening de mercados de exportacion contra la etapa de investigacion prelim...
+  docs/INTRA_DOMINIO_INFORME.md:3641
+      | **574** | `gestion_portafolio_formal` contra `portfolio_management` | **familia declarada**, y ahora dentro de la MESA UNIDA | ver abajo |
+  docs/INTRA_DOMINIO_INFORME.md:6168
+      | **574** | `gestion_portafolio_formal` trae los Strategic Buckets en su paso 4 | `portfolio_management` apunta a `metodo_strategic_buckets` |
+  docs/INTRA_DOMINIO_INFORME.md:9410
+      | `portfolio_management` | 6 | **el centro: CUATRO A** (574, 853, 967, 1119) |
+  docs/INTRA_DOMINIO_INFORME.md:9411
+      | `gestion_portafolio_formal` | 6 | tres A (468, 574, 616) |
+  docs/INTRA_DOMINIO_INFORME.md:9422
+      | **A** | **SIETE**: 468, 574, 616, 802, 853, 967, 1119 |
+  docs/INTRA_DOMINIO_INFORME.md:9562
+      | **`portfolio_management`** | 6 | **CUATRO**: 574, 853, 967, 1119 |
+  docs/INTRA_DOMINIO_INFORME.md:9563
+      | `gestion_portafolio_formal` | 6 | tres: 468, 574, 616 |
+  docs/INTRA_DOMINIO_INFORME.md:9582
+      | **A** | **SIETE**: 468, 574, 616, 802, 853, 967, 1119 |
+  docs/INTRA_DOMINIO_INFORME.md:16337
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ **574** (16,9 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16340
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ **2.729** (80,5 %) |
+  docs/INTRA_DOMINIO_INFORME.md:16350
+      > (`docs/loop/SALIDA_V49_MARCADOR.txt`): **A 574, B 77, C 8, D 2.729** sobre `n` **3.388**, cero
+  docs/plan/02_DESTEJIDOS.md:1684
+      | **4**, `recomputo del cierre transitivo tras el acto (banco 9.21)` | **CORRIDO** (`scripts/plan/recomputo_3388.py`, `SALIDA_V39_RECOMPUTO_3388.txt`): actos **333** sin cambio, ABIERTOS de **54 sobre 247** nodos a **54 ...
+  docs/plan/RECOMPUTO_3388.md:246
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ **574** **[CORREGIDA CINCO VECES, el 15 y el 18 ago 2026 y el 19 ago 2026; la quinta por la relectura c...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ **533** **[CORREGIDA CINCO VECES, la ultima el 19 ago 2026]** |
+  docs/plan/RECOMPUTO_3388.md:1079
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ **574** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ **16,9 %** |
+
+--- FAMILIA LEGADO: EL MARCADOR DE LA VUELTA 14 (583 / 2.709) ---
+  candidatos: 22
+  docs/FRANJA_VEREDICTOS.jsonl:583
+      {"puesto_franja": 583, "nodo_mundo": "sistema_responsabilidad_gerencial_2", "nodo_nucleo": "curse_cinco_culpas", "clave": 0.7216, "clase": "C", "razon": "Asumir el sistema completo como tu responsabilidad contra facilita...
+  docs/INTRA_DOMINIO_INFORME.md:16337
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ **574** (16,9 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16340
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ **2.729** (80,5 %) |
+  docs/INTRA_DOMINIO_INFORME.md:16572
+      `risk_management` aporta cero. ~~Total de A en el archivo: 583.~~ **CORRECCION DECLARADA (15 ago
+  docs/plan/02_DESTEJIDOS.md:352
+      > publicado** (`A 583, B 89, C 7, D 2709` medido hoy al abrir esta vuelta) **y obligaria a
+  docs/plan/02_DESTEJIDOS.md:662
+      | A | 583 | 582 | **582** |
+  docs/plan/02_DESTEJIDOS.md:665
+      | D | 2.709 | 2.711 | **2.714** |
+  docs/plan/10_INVENTARIO.md:311
+      | **el nombre que esconde** | 3 ejemplares | TRES VECES el contador dejo fuera a un miembro real porque su NOMBRE no llevaba la palabra del tema, y las tres veces lo cazo el segundo instrumento. (1) el sexto de los cuadr...
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:240
+      | **583** | `decision_factory_mentality` contra `equipos_dedicados_de_proyecto` | **B** | *la mitad que DIAGNOSTICA repite y la mitad que TRATA no*, asi que no se puede dar por sano ni por repetido entero |
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:383
+      | **3** | **`decision_factory_mentality`** | la mesa unida | **no lleva ni *gate* ni *portafolio***: se llama *Haz menos proyectos, pero hazlos bien* | **el barrido de las A**, puestos 1499 y 583 |
+  docs/plan/INVENTARIO.jsonl:327
+      {"tipo": "figura", "nombre": "el nombre que esconde", "cobertura": "3 ejemplares", "forma": "modo de fallo del contador, no del archivo", "miembros": [], "estado": "ANOTADO como historia, no como recomendacion", "operaci...
+  docs/plan/OPERACIONES.jsonl:27
+      {"id_op": "OP-M-01", "fase": "06_MESAS", "tipo": "MESA ADJUDICADA: LAS DOS MITADES QUEDAN, CON FRONTERA ADOPTADA", "nodos": ["asignacion_recursos_en_gates", "decision_factory_mentality", "equipos_dedicados_de_proyecto", ...
+  docs/plan/RECOMPUTO_3388.md:31
+      > | A crudas en el archivo | **583** | ~~**582**~~ **581** al cierre de la vuelta 34 | **menos 2** |
+  docs/plan/RECOMPUTO_3388.md:80
+      > | A crudas en el archivo | **583** | **582** | **582** | **menos 1** |
+  docs/plan/RECOMPUTO_3388.md:246
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ **574** **[CORREGIDA CINCO VECES, el 15 y el 18 ago 2026 y el 19 ago 2026; la quinta por la relectura c...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ **533** **[CORREGIDA CINCO VECES, la ultima el 19 ago 2026]** |
+  docs/plan/RECOMPUTO_3388.md:528
+      | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ **533**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ **533**) | **OK**, recomprobado el 15 ago 2026 con las cifras nuevas...
+  docs/plan/RECOMPUTO_3388.md:1079
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ **574** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ **16,9 %** |
+  docs/plan/RECOMPUTO_3388.md:1081
+      ~~**Los diez dominios y el total (3.388 pares, 583 A) coinciden con el marcador recomputado de la vuelta
+  docs/plan/RECOMPUTO_3388.md:1082
+      14** (`A 583, B 89, C 7, D 2.709`), verificado de nuevo aqui por suma de columna.~~ **CORRECCION
+  docs/plan/RECOMPUTO_3388.md:1776
+      | **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ ~~**576 / 83 / 8 / 2.721**~~ **575 / 83 / 8 / 2.722** **[CORREGIDA VARIAS VECES, el 15 y el 18 ago 2026, ver la...
+  docs/plan/RECOMPUTO_3388.md:1823
+      | **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ ~~**576 / 83 / 8 / 2.721**~~ **575 / 83 / 8 / 2.722** (17,0 / 2,4 / 0,2 / 80,3 por ciento) **[CORREGIDA VARIAS ...
+
+--- FAMILIA RETRATO: LAS CIFRAS VIEJAS DEL RETRATO DE LAS A (41, 533) ---
+  candidatos: 53
+  docs/BANCO_DE_TEXTOS.md:3059
+      | 1901-1941 | 41 | 3 | **7,3%** |
+  docs/COSTURAS_INTERNAS_RESUMEN.md:122
+      | 41 | core | `driver_produccion` | 4 | 44.8 | 2 |
+  docs/FRANJA_PARES.jsonl:984
+      {"puesto_franja": 984, "mundo": "quality", "nodo_mundo": "descubrir_necesidades_del_cliente", "titulo_mundo": "Descubrimiento de las Necesidades del Cliente", "nodo_nucleo": "customer_jobs", "titulo_nucleo": "Las tareas ...
+  docs/GRADIENTE_NUCLEO_MUNDO.md:174
+      | de esos, con **fuentes mezcladas** | **41** |
+  docs/INTRA_DOMINIO_INFORME.md:6109
+      | tramo 568 a 645 | 78 | 28 | 9 | 0 | 41 | 35,9% |
+  docs/INTRA_DOMINIO_INFORME.md:9654
+      | **el tramo 1158-1200** | **43** | **2** | 0 | 0 | 41 | **4,7%** |
+  docs/INTRA_DOMINIO_INFORME.md:11813
+      | ultimos 41 (1901-1941) | 41 | 3 | **7,3%** |
+  docs/INTRA_DOMINIO_INFORME.md:13126
+      | la vara: CONTINUA | 41 | **43** |
+  docs/INTRA_DOMINIO_INFORME.md:13459
+      | A de `health_safety` | 42 | **41** |
+  docs/INTRA_DOMINIO_INFORME.md:13490
+      | `health_safety` acumulado | **169 de 192** | 41 | 128 | **24,3%** |
+  docs/INTRA_DOMINIO_INFORME.md:13723
+      | A de `health_safety` | 42 | **41** |
+  docs/INTRA_DOMINIO_INFORME.md:14105
+      | **`quality`** | **17** | **7** | **10** | **41,2%** |
+  docs/INTRA_DOMINIO_INFORME.md:14474
+      | **`quality`** | **41** | **16** | **25** | **39,0%** |
+  docs/INTRA_DOMINIO_RESUMEN.md:31
+      | environmental | 289 | 41616 | **170** | 0.41% |
+  docs/INTRA_DOMINIO_RESUMEN.md:94
+      | health_safety | `ciclo_de_culpa` con `responsabilidad_sistemica` | 41.1 | 0.7758 | racimo censado: No culpar a la persona, arreglar el sistema (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:95
+      | core | `customer_development_modelo` con `customer_discovery_phase2_problem_test` | 41.4 | 0.7758 | racimo censado: Customer discovery: salir a hablar con el cliente (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:125
+      | quality | `politica_no_culpar_trabajador` con `sistema_responsabilidad_gerencial_2` | 41.5 | 0.7654 | racimo censado: Causas comunes y responsabilidad del sistema (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:139
+      | health_safety | `falla_sistemica_vs_error_individual` con `responsabilidad_sistemica` | 41.2 | 0.7585 | racimo censado: No culpar a la persona, arreglar el sistema (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:141
+      | quality | `rol_black_belt` con `rol_green_belt_six_sigma` | 41.3 | 0.7579 | racimo censado: La estructura de cinturones de Six Sigma (muestra-D) |
+  docs/INTRA_DOMINIO_RESUMEN.md:147
+      | health_safety | `abandonar_arreglos_rapidos` con `responsabilidad_sistemica` | 41.2 | 0.7545 | racimo censado: No culpar a la persona, arreglar el sistema (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:158
+      | core | `curse_cinco_culpas` con `regla_simplificada_tolerancia_errores` | 41.1 | 0.7524 | racimo censado: Los cinco porques (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:159
+      | health_safety | `enfoque_situacional_vs_personal` con `preguntar_que_no_quien` | 41.6 | 0.7522 | racimo censado: No culpar a la persona, arreglar el sistema (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:190
+      | quality | `auditoria_calidad` con `estructuracion_programa_auditoria` | 41.4 | 0.7411 | racimo censado: Auditoria de calidad (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:211
+      | health_safety | `bad_apple_theory` con `principios_gestion_error` | 41.2 | 0.7342 | racimo censado: No culpar a la persona, arreglar el sistema (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:220
+      | core | `actualizar_modelo_de_negocio_pivot_o_proceed` con `reunion_pivotar_o_perseverar` | 41.6 | 0.7311 | racimo censado: Pivotar o proceder (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:230
+      | health_safety | `gestion_de_errores` con `new_view_human_error` | 41.8 | 0.7256 | racimo censado: No culpar a la persona, arreglar el sistema (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:243
+      | core | `encuadre_desafio_diseno` con `how_might_we_brief_social` | 41.5 | 0.7218 | racimo censado: Encuadre del problema (How Might We) (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:248
+      | core | `curse_cinco_culpas` con `tecnica_cinco_porques` | 41.5 | 0.72 | racimo censado: Los cinco porques (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:256
+      | quality | `adopcion_liderazgo` con `eliminar_slogans_metas` | 41.2 | 0.718 | racimo censado: Los puntos de Deming en el titulo (muestra-D) |
+  docs/INTRA_DOMINIO_RESUMEN.md:345
+      | core | `actualizar_modelo_de_negocio_pivot_o_proceed` con `pivotar_o_perseverar` | 41.0 | 0.678 | racimo censado: Pivotar o proceder (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:377
+      | health_safety | `desajuste_autoridad_responsabilidad` con `revision_de_aprendizaje` | 41.3 | 0.6564 | racimo censado: No culpar a la persona, arreglar el sistema (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:383
+      | quality | `eliminar_slogans_metas` con `mejora_continua_del_sistema` | 41.5 | 0.652 | racimo censado: Los puntos de Deming en el titulo (muestra-D) |
+  docs/INTRA_DOMINIO_RESUMEN.md:403
+      | core | `customer_development_process` con `customer_development_vs_business_plan` | 41.2 | 0.6331 | racimo censado: Customer discovery: salir a hablar con el cliente (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:408
+      | quality | `institucionalizar_capacitacion` con `mejora_continua_del_sistema` | 41.8 | 0.6274 | racimo censado: Los puntos de Deming en el titulo (muestra-D) |
+  docs/INTRA_DOMINIO_RESUMEN.md:436
+      | health_safety | `process_tracing_methods` con `responsabilidad_sistemica` | 41.5 | 0.5934 | racimo censado: No culpar a la persona, arreglar el sistema (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:499
+      | quality | **347** | 497 | 844 | 41% |
+  docs/INTRA_DOMINIO_RESUMEN.md:511
+      | `cadencia_seguimiento_prospectos` con `gestion_seguimiento_prospectos` | 0.7887 | 41.7 | **NO** |
+  docs/plan/02_DESTEJIDOS.md:1988
+      | **3** | **DOS COMMITS POR ACTO DESDE LA VUELTA 42** (linea **8802**), adjudicado **por extension y no como doctrina nueva**: **el plan sellado con su lectura en un commit pusheado ANTES de fundir; la fusion ejecutada e...
+  docs/plan/02_DESTEJIDOS.md:2680
+      | **despues**, del fichero de hoy | 6 | 47,8 | **41,4** (corte tras 2) | **BAJO** por **menos 2,6**: **FUERA** |
+  docs/plan/02_DESTEJIDOS.md:3025
+      | **antes**, leido de git `d809eaac` | 5 | 56,1 | **41,9** (corte tras 2) | **BAJO** por **menos 2,1**: **FUERA** |
+  docs/plan/03_FUSIONES.md:405
+      | **41** | `targeting_blogs_traccion` | `targeting_blogs_channel` | CONTENIDO EMPATADO Y EL VEREDICTO LO DICE: el puesto 176 escribe que los cinco pasos son los mismos reordenados |
+  docs/plan/EXPEDIENTE_MESA_COLEMAN.md:38
+      | **leidos** | 38 | **41** *(28 D, 10 A, 3 B)* |
+  docs/plan/EXPEDIENTE_MESA_COLEMAN.md:41
+      | forma | MEZCLADO | **MEZCLADO, cobertura 41 de 378** |
+  docs/plan/EXPEDIENTE_MESA_COLEMAN.md:375
+      | **la cobertura completa** | **41 de 378, y 337 pares FUERA DE COLA.** Por el banco 9.26 **toda forma de esta mesa es PROVISIONAL**, y hay que decirlo al adjudicar |
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:352
+      | **enlaces mutuos** del banco 9.22 | **2** (`LD-41` y `LD-43`), y **se arreglan con dos aristas cada uno, no con fusion** |
+  docs/plan/LD_MESA_UNIDA.md:301
+      | **DOS enlaces mutuos** | `LD-41` y `LD-43`. Se arreglan con **dos aristas cada uno**, no con fusion |
+  docs/plan/OPERACIONES.jsonl:28
+      {"id_op": "OP-M-02", "fase": "06_MESAS", "tipo": "MESA ADJUDICADA: SERIE DECLARADA", "nodos": ["fase_assess", "fase_assess_ciclo_cliente", "fase_assess_experiencia_cliente", "fase_admit", "fase_admit_celebracion", "fase_...
+  docs/plan/OPERACIONES.jsonl:47
+      {"id_op": "OP-C-05", "fase": "00_CODIGO", "tipo": "GUARDA", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [], "orden": 7, "depende_de": ["OP-S-12"], "bloquea_a": [], "verificacion...
+  docs/plan/RECOMPUTO_3388.md:247
+      | de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | ~~**0**~~ ~~**1**~~ **41** **[CORREGIDA DOS VECES, el 15 ago 2026 y el 19 ago 2026. Y LA SEGUNDA NO ES UN ERROR: ES LA HUELLA DE LA CIRUG...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ **533** **[CORREGIDA CINCO VECES, la ultima el 19 ago 2026]** |
+  docs/plan/RECOMPUTO_3388.md:528
+      | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ **533**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ **533**) | **OK**, recomprobado el 15 ago 2026 con las cifras nuevas...
+  docs/plan/RECOMPUTO_3388.md:670
+      | `OP-C-05` | lista blanca de aristas bidireccionales (2 enlaces mutuos mas 2 citas LD) | lista fija por evidencia de lectura ya escrita (LD-41 y otra), no por el estado del cribado. No depende del corte. |
+  docs/plan/RECOMPUTO_3388.md:1141
+      | la serie de Coleman | 28 | 378 | 45 de 378: 41 en cola mas `LD-28` a `LD-31` (4 D) | `EXPEDIENTE_MESA_COLEMAN.md` linea 41 y nota de `INVENTARIO.jsonl` |
+
+--- FAMILIA 2: LOS PUESTOS CORREGIDOS ---
+  PUESTO 305: 17 candidatos
+    docs/FICHA_SUBFUSION_GRADIENTE.md:5371
+        `framework_tres_rs_sucesion` (puesto **305**) e
+    docs/FICHA_SUBFUSION_GRADIENTE.md:5844
+        Encontrado en el **lote 21, puesto 305**. **Un miembro medido.**
+    docs/FRANJA_INFORME.md:742
+        - **305** | quality/establecimiento_metas contra metas_objetivos_smart_innovacion
+    docs/FRANJA_PARES.jsonl:305
+        {"puesto_franja": 305, "mundo": "quality", "nodo_mundo": "establecimiento_metas", "titulo_mundo": "Establecimiento de Metas (Paso 10)", "nodo_nucleo": "metas_objetivos_smart_innovacion", "titulo_nucleo": "Cómo definir me...
+    docs/FRANJA_VEREDICTOS.jsonl:305
+        {"puesto_franja": 305, "nodo_mundo": "establecimiento_metas", "nodo_nucleo": "metas_objetivos_smart_innovacion", "clave": 0.7314, "clase": "C", "razon": "Fijar metas de calidad a 30, 60 y 90 dias contra las metas SMART d...
+    docs/FRANJA_VEREDICTOS.jsonl:562
+        {"puesto_franja": 562, "nodo_mundo": "medicion_calidad", "nodo_nucleo": "afinar_motor_crecimiento", "clave": 0.7223, "clase": "C", "razon": "Medir la calidad por area con linea base y graficos visibles contra afinar el m...
+    docs/FRANJA_VEREDICTOS.jsonl:887
+        {"puesto_franja": 887, "nodo_mundo": "fijacion_de_metas", "nodo_nucleo": "diseno_metricas_lideres_rezagados", "clave": 0.713, "clase": "C", "razon": "Fijar metas de mejora por grupo con reconocimiento publico contra comb...
+    docs/GRADIENTE_VEREDICTOS.md:2695
+        | **305** | OK, **colateral de tipo nuevo: LA AUDIENCIA INVERTIDA** | ver abajo |
+    docs/INTRA_DOMINIO_INFORME.md:344
+        | SPIN | 3 | ~~305~~, 401 **[CORREGIDA el 19 ago 2026 (vuelta 49): el `305` paso de `A` a `D`. La colision la FABRICO la propia fusion de la parte A del acto 1 de `OP-U-01`, que depreco `modelo_spin` con alias a `modelo_...
+    docs/INTRA_DOMINIO_INFORME.md:1643
+        | **305** | `metodologia_spin_selling` contra `modelo_spin` | **diagnostica-pequena-o-grande** antes de nada; **estudios-de-incremento**, la cifra de mas del veinte por ciento; **deja-abiertas-vs-cerradas**, que esa dist...
+    docs/INTRA_DOMINIO_INFORME.md:1696
+        | clases | **A** (248), ~~**A** (305)~~ **D** (305), **A** (401), **D** (625), **D** (764) **[CORREGIDA el 19 ago 2026 (vuelta 49): el `305` paso de `A` a `D`. La colision la FABRICO la propia fusion de la parte A del ac...
+    docs/INTRA_DOMINIO_INFORME.md:8184
+        | saldo | ~~**4 A** (248, 305, 401, 856) y **2 D** (625, 764)~~ **3 A** (248, 401, 856) y **3 D** (305, 625, 764) **[CORREGIDA el 19 ago 2026 (vuelta 49): el `305` paso de `A` a `D`. La colision la FABRICO la propia fusi...
+    docs/INTRA_DOMINIO_PARES.jsonl:305
+        {"dominio": "core", "nodo_a": "metodologia_spin_selling", "titulo_a": "Metodología SPIN Selling", "nodo_b": "modelo_spin", "titulo_b": "Las preguntas que abren una venta grande (método SPIN)", "sim_titulo": 35.9, "sim_se...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:305
+        {"puesto_intra": 305, "dominio": "core", "nodo_a": "metodologia_spin_selling", "nodo_b": "modelo_spin", "clave": 0.8665, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 19 ago 2026 (vuelta 49), Y ...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:401
+        {"puesto_intra": 401, "dominio": "core", "nodo_a": "modelo_spin", "nodo_b": "modelo_spin_preguntas", "clave": 0.8501, "banda_078_080": false, "clase": "A", "razon": "REPITE con modelo_spin_preguntas. Los dos mandan la mi...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:1150
+        {"puesto_intra": 1150, "dominio": "core", "nodo_a": "modelo_spin", "nodo_b": "obtencion_compromiso", "clave": null, "banda_078_080": true, "clase": "D", "razon": "La secuencia de preguntas contra la doctrina del cierre, ...
+    docs/plan/03_FUSIONES.md:641
+        **Al deprecar `modelo_spin` con alias a `modelo_spin_preguntas`, el puesto 305**
+
+==============================================================================
+CANDIDATOS TOTALES: 108. Ninguno se oculta y ninguno se corrige aqui:
+este instrumento LISTA, y la adjudicacion de cada sitio es de lectura.
+LIMITE DECLARADO: es una busqueda lexica. Una tabla puede citar el
+marcador con otras palabras y este barrido no la veria; y una cifra con
+su fecha de corte declarada aparece aqui sin estar envejecida.

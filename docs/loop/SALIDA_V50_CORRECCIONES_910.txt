@@ -1,0 +1,34 @@
+==============================================================================
+CORRECCIONES DEL BARRIDO 9.10, 19 ago 2026 (vuelta 50)
+modo: EJECUTAR
+==============================================================================
+
+--- CORRECCION 1: docs/plan/RECOMPUTO_3388.md
+    motivo: LAS TRES FILAS DEL RETRATO SE PRESENTAN COMO VIGENTES (corte 3.388) y quedaron atras tras el volteo del 305 y las tres fusiones de la vuelta 49. Es la caida de cifra publicada que el acta 49 seccion 3 nombra, y se corrige con la medicion de HOY, no con la del acta.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (998 a 1467 caracteres)
+
+--- CORRECCION 2: docs/plan/RECOMPUTO_3388.md
+    motivo: La comprobacion se presenta como vigente y su cifra la mueve toda fusion y todo volteo de A. Re-corrida hoy por el propio instrumento con la pareja nueva.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (434 a 755 caracteres)
+
+--- CORRECCION 3: docs/plan/RECOMPUTO_3388.md
+    motivo: Total de A presentado como vigente. El puesto 305 volteo de A a D el 19 ago 2026 (vuelta 49) y es de `core`, medido hoy con `recomputar_marcador.py 3388` (`../loop/SALIDA_V50_MARCADOR_APERTURA.txt`). LA TASA NO SE MUEVE Y SE DICE POR QUE: 573 sobre 3.388 sigue redondeando a 16,9 por ciento, asi que la celda de la tasa queda como esta y no se le anade un tachado que fingiria un cambio que no hubo.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (153 a 165 caracteres)
+
+--- CORRECCION 4: docs/plan/RECOMPUTO_3388.md
+    motivo: La cadena de correcciones declaradas de esta tabla se quedo en la tercera (18 ago). El dominio `core` vigente hoy es 334 y no 336, y sin esta cuarta entrada la unica cifra de `core` legible como reciente seria la del 18 ago.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (99 a 705 caracteres)
+
+--- CORRECCION 5: docs/INTRA_DOMINIO_INFORME.md
+    motivo: El marcador del apendice se presenta como el marcador vigente del archivo y quedo UNA relectura atras: el volteo del 305 de la propia vuelta 49. Se corrige con la medicion de hoy y se declara la caida donde se cometio.
+    apariciones del texto viejo: 1
+    OK, lista para aplicar (373 a 1329 caracteres)
+
+ESCRITO: docs/plan/RECOMPUTO_3388.md (4 correcciones)
+ESCRITO: docs/INTRA_DOMINIO_INFORME.md (1 correcciones)
+
+APLICADAS: 5

@@ -1,0 +1,25 @@
+==============================================================================
+ALIAS DURMIENTES, medidos hoy sobre 3853 nodos (3499 vivos, 354 deprecados)
+campos leidos: node_id / ids_alias (los de la casa)
+==============================================================================
+
+--- modelo_spin_2 ---
+  1. QUIEN LO DECLARA
+     es fichero propio (nodo con ese node_id): NO
+     declarado en ids_alias por: modelo_spin
+        modelo_spin  ->  deprecado: SI
+  2. EL RESOLUTOR DE LA CASA (mapa de alias SOLO de nodos vivos, P.1)
+     cadena: modelo_spin_2
+     NO RESUELVE (no llega a ningun fichero)
+     o sea: para todo conteo publicado, este id se queda DONDE ESTA.
+  3. LA CADENA ANCHA (admitiendo los ids_alias de los deprecados)
+     cadena: modelo_spin_2 -> modelo_spin -> modelo_spin_preguntas
+     llega a: modelo_spin_preguntas
+     pasa por deprecado(s): modelo_spin
+     el vivo lo carga como alias propio: NO, y por eso solo llega por cadena a traves del deprecado
+  4. QUIEN LO PISA
+     REFERENCIAS EN ARISTAS: 0 
+     REFERENCIAS EN VEREDICTOS: 0 
+     VEREDICTO DEL INSTRUMENTO: PASIVO DURMIENTE, nadie lo pisa hoy (especie OP-S-12)
+
+==============================================================================

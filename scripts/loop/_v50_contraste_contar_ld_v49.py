@@ -58,39 +58,6 @@ una pagina del PLAN, no en el reporte que cuenta lo que ya se midio. Los tres
 ficheros narrativos del bucle quedan EXCLUIDOS del universo, con la misma vara y
 por el mismo motivo que los SALIDA_*.
 
-TERCERA CORRECCION DECLARADA SOBRE MI PROPIO INSTRUMENTO, 19 ago 2026
-(vuelta 50, encargada por el auditor en el acta de la vuelta 49, TAREA 1.2), y
-OTRA VEZ EL TEXTO VIEJO DEL CRITERIO SE QUEDA DELANTE, SIN BORRAR. EL TEXTO
-VIEJO ERA ESTE, y es el que la segunda correccion dejo escrito:
-
-    "Los tres ficheros narrativos del bucle quedan EXCLUIDOS del universo, con
-    la misma vara y por el mismo motivo que los SALIDA_*."
-    (con NARRATIVOS_DEL_BUCLE = REPORTE.md, ACTA_AUDITOR.md, PROMPT_SIGUIENTE.md)
-
-EL MOTIVO DE LA TERCERA, medido por el auditor y RE-MEDIDO aqui: la segunda
-correccion tapo el agujero al nivel del PAPEL del bucle y lo dejo abierto UN
-NIVEL MAS ARRIBA TODAVIA, en los REGISTROS DEL ARNES. El auditor midio 4
-nombradas sin seccion porque docs/loop/ultimo_ejecutor.json, que NO esta en git
-(.gitignore linea 26) y que el arnes escribe AL TERMINAR cada sesion, guardaba el
-resumen de la vuelta 49 y en ese resumen citaba LD-12 y LD-27.
-
-Y HAY UNA RAZON MAS FUERTE QUE LA DEL NIVEL, MEDIDA EN ESTA VUELTA Y QUE SE
-ESCRIBE PORQUE ES LA QUE DE VERDAD CONDENA A ESOS FICHEROS: SU CONTENIDO NO ES
-REPRODUCIBLE. La corrida del ejecutor de la vuelta 50, hecha ANTES de esta
-correccion, dio 2 y no 4 (docs/loop/SALIDA_V50_CONTAR_LD_ANTES.txt), y la causa
-es que docs/loop/ultimo_ejecutor.json estaba en CERO BYTES en ese momento: el
-arnes lo vacia al abrir la sesion y lo reescribe al cerrarla. O sea que el mismo
-instrumento, sobre el mismo repo y el mismo dia, devuelve una cifra distinta
-segun EN QUE MINUTO DE LA SESION se corra. Una celda publicada no puede colgar de
-eso. Los registros del arnes no son papel del plan ni salida de instrumento: son
-estado de la maquina que corre el bucle, y no es un sitio donde quepa un ENCARGO.
-
-LA VARA, escrita para poder discutirla: quedan EXCLUIDOS los ficheros
-docs/loop/ultimo_*.json (hoy ultimo_ejecutor.json y ultimo_auditor.json, y sus
-hermanos si el arnes anade alguno, que es lo que el patron cubre por adelantado).
-docs/loop/loop.log ya quedaba fuera por su extension y se dice en vez de darlo
-por supuesto: el universo solo barre .md, .txt, .json y .jsonl.
-
 De solo lectura. No escribe nada.
 
 Uso: python scripts/loop/vuelta48_contar_ld.py
@@ -116,12 +83,6 @@ NARRATIVOS_DEL_BUCLE = {
     "docs/loop/ACTA_AUDITOR.md",
     "docs/loop/PROMPT_SIGUIENTE.md",
 }
-
-# LOS REGISTROS DEL ARNES del bucle: estado de la maquina que corre las sesiones,
-# fuera de git, vaciado al abrir y reescrito al cerrar cada sesion. Ver la tercera
-# correccion declarada del docstring. Es un PATRON y no una lista cerrada, para
-# que un hermano nuevo del arnes no vuelva a entrar por la puerta de atras.
-RE_ARNES = re.compile(r"^docs/loop/ultimo_[a-z_]+\.json$")
 
 RE_ID = re.compile(r"LD-(\d+)")
 RE_CAB = re.compile(r"^#+\s*\**\s*`?LD-(\d+)`?")
@@ -165,7 +126,6 @@ def main():
     universo = {}
     excluidos = []
     excluidos_narrativos = []
-    excluidos_arnes = []
     for base, _, ficheros in os.walk(DOCS):
         for f in ficheros:
             if not f.endswith((".md", ".txt", ".json", ".jsonl")):
@@ -174,24 +134,17 @@ def main():
             # correccion declarada del docstring: sin esto, este instrumento se
             # lee a si mismo y se inventa encargos con su propia lista de huecos.
             rel_f = os.path.relpath(os.path.join(base, f), RAIZ).replace("\\", "/")
-            # EXCLUIDOS, TRES FAMILIAS Y UN MISMO MOTIVO: ninguna de las tres es
-            # un sitio donde quepa un ENCARGO, las tres son salida propia del
-            # bucle o de su arnes.
+            # EXCLUIDOS, DOS FAMILIAS Y UN MISMO MOTIVO: ninguna de las dos es un
+            # sitio donde quepa un ENCARGO, las dos son salida propia del bucle.
             #  (a) SALIDA_*: la salida cruda de los instrumentos (correccion 1).
             #  (b) LOS NARRATIVOS DEL BUCLE: el reporte, el acta y el prompt, que
             #      NARRAN las mediciones y por eso citan numeros de LD al contar
             #      lo ya medido (correccion 2, vuelta 49). Ver el docstring.
-            #  (c) LOS REGISTROS DEL ARNES (docs/loop/ultimo_*.json): estado de la
-            #      maquina, fuera de git, y con contenido NO REPRODUCIBLE dentro
-            #      de una misma sesion (correccion 3, vuelta 50). Ver el docstring.
             if f.startswith("SALIDA_"):
                 excluidos.append(rel_f)
                 continue
             if rel_f in NARRATIVOS_DEL_BUCLE:
                 excluidos_narrativos.append(rel_f)
-                continue
-            if RE_ARNES.match(rel_f):
-                excluidos_arnes.append(rel_f)
                 continue
             p = os.path.join(base, f)
             try:
@@ -206,9 +159,6 @@ def main():
     print("  ficheros EXCLUIDOS por ser NARRATIVOS del bucle: %d  ->  %s"
           % (len(excluidos_narrativos),
              ", ".join(sorted(excluidos_narrativos)) or "ninguno"))
-    print("  ficheros EXCLUIDOS por ser REGISTROS DEL ARNES: %d  ->  %s"
-          % (len(excluidos_arnes),
-             ", ".join(sorted(excluidos_arnes)) or "ninguno"))
     print("  ficheros barridos bajo docs/: numeros distintos hallados = %d"
           % len(universo))
     print("  rango del universo: LD-%02d a LD-%02d" % (min(universo), max(universo)))
