@@ -306,23 +306,37 @@
       "fuente": "The Field Guide to Understandin - Dekker, Sidney;",
       "resumen_teorico": "Teoría histórica (1920s-1940s) que sugería que ciertos trabajadores eran inherentemente 'propensos a accidentes' basándose en estadísticas de que un pequeño porcentaje de trabajadores generaba un gran porcentaje de accidentes. Esta teoría fue desacreditada porque no consideraba que los trabajadores no están expuestos al mismo nivel o tipo de riesgo (contexto, rutas, tareas), haciendo imposible comparar sus tasas de accidentes de forma justa. Su declive durante la Segunda Guerra Mundial mostró que la propensión al accidente depende más de las herramientas, tareas y situaciones que de características personales.",
       "pasos_accionables": [
-        "Cuestionar estadísticas que atribuyen accidentes desproporcionadamente a ciertos individuos sin considerar el contexto",
-        "Analizar si las diferencias en tasas de incidentes se explican por diferencias de exposición al riesgo (tipo de tarea, ruta, turno)",
+        "Cuestionar estadísticas que atribuyen accidentes desproporcionadamente a ciertos individuos sin considerar el contexto, incluidas las que asumen exposición al riesgo homogénea entre trabajadores",
+        "Analizar si las diferencias en tasas de incidentes se explican por diferencias de exposición al riesgo (tipo de tarea, ruta, turno), y hacerlo antes de atribuir culpa personal",
         "Evitar el uso de 'perfiles de propensión' para decisiones de contratación o despido sin análisis contextual"
       ],
       "entregable_esperado": "Análisis crítico de las estadísticas de accidentes/incidentes de la organización que considere factores de exposición diferencial al riesgo",
       "nodos_previos": [
         "old_view_bad_apple_theory",
-        "bad_apple_theory"
+        "bad_apple_theory",
+        "investigacion_incidentes"
       ],
       "nodos_siguientes": [
-        "new_view_human_error"
+        "new_view_human_error",
+        "desajuste_tarea_persona",
+        "responsabilidad_sistemica"
       ],
       "condiciones_activacion": [
         "Cuando se presenta evidencia estadística de que ciertos trabajadores tienen más incidentes que otros",
-        "Cuando se considera usar historiales de accidentes como criterio único de selección o despido de personal"
+        "Cuando se considera usar historiales de accidentes como criterio único de selección o despido de personal",
+        "Cuando se atribuye un accidente recurrente únicamente a características personales de un trabajador"
       ],
-      "etiqueta_arbol": "Cuestiona la Propensión al Accidente"
+      "etiqueta_arbol": "Cuestiona la Propensión al Accidente",
+      "ids_alias": [
+        "declive_teoria_manzana_podrida"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "declive_teoria_manzana_podrida",
+          "titulo": "Declive de la teoría de la 'Manzana Podrida' (Bad Apple)",
+          "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+        }
+      ]
     },
     "accidentes_individuales_vs_organizacionales": {
       "node_id": "accidentes_individuales_vs_organizacionales",
@@ -2892,7 +2906,7 @@
       ],
       "nodos_siguientes": [
         "alternativa_business_opportunity_licensing",
-        "combinar_crecimiento_corporativo_y_franquicia",
+        "mix_ubicaciones_corporativas_franquicia",
         "franquicia_como_capital_alternativo"
       ],
       "condiciones_activacion": [
@@ -3982,7 +3996,6 @@
       ],
       "entregable_esperado": "Informe que vincule factores organizacionales y regulatorios con las decisiones tomadas en el extremo agudo",
       "nodos_previos": [
-        "sesgo_retrospectivo_hindsight",
         "sesgo_retrospectivo_hindsight_2"
       ],
       "nodos_siguientes": [
@@ -5526,7 +5539,7 @@
       ],
       "entregable_esperado": "Informe de investigación de incidente con clasificación de culpabilidad usando el árbol de decisión",
       "nodos_previos": [
-        "cultura_justa_organizacional"
+        "cultura_justa"
       ],
       "nodos_siguientes": [
         "prueba_sustitucion_johnston"
@@ -5560,7 +5573,8 @@
         "Cuando sospeches que tu manera de gestionar riesgos está desactualizada o centrada en un solo tipo de riesgo",
         "Después de un incidente que muestre un tipo de riesgo que no habías tomado en cuenta, por ejemplo el riesgo para terceros"
       ],
-      "etiqueta_arbol": "Identifica los Riesgos Peligrosos"
+      "etiqueta_arbol": "Identifica los Riesgos Peligrosos",
+      "deprecado": true
     },
     "arenas_estrategicas": {
       "node_id": "arenas_estrategicas",
@@ -7162,7 +7176,7 @@
         "cultura_como_mecanismo_descentralizacion"
       ],
       "nodos_siguientes": [
-        "ingenieria_cultura_aprendizaje"
+        "cultura_de_aprendizaje"
       ],
       "condiciones_activacion": [
         "Cuando el trabajo se hace en condiciones que dificultan estar supervisando todo el tiempo desde un solo punto",
@@ -11216,7 +11230,8 @@
         "Al lanzar un nuevo programa de seguridad y salud",
         "Cuando se incorpora nuevo personal"
       ],
-      "etiqueta_arbol": "Capacita a Todos en Seguridad"
+      "etiqueta_arbol": "Capacita a Todos en Seguridad",
+      "deprecado": true
     },
     "capacitacion_de_distribuidores": {
       "node_id": "capacitacion_de_distribuidores",
@@ -11253,7 +11268,7 @@
       "resumen_teorico": "La capacitación te da a ti, a las personas que supervisan y a cada trabajador el conocimiento y las habilidades para trabajar de forma segura, reconocer y controlar peligros, y entender el rol de cada quien dentro del programa de seguridad, incluyendo cómo funciona y cómo se protegen los derechos de los trabajadores. Puede impartirse de forma formal, mediante charlas diarias, capacitación entre pares o con herramientas de identificación de peligros disponibles en tu país. Debe dirigirse tanto a quienes se incorporan como a quienes ya están en el sitio, asegurando que todos entiendan los controles implementados y sepan cómo reportar incidentes, peligros y cuasi accidentes.",
       "pasos_accionables": [
         "Capacita a todos en las políticas, metas y procedimientos de tu programa de seguridad, explicando cómo funciona y cuál es el rol de cada persona",
-        "Fórmate junto con quienes supervisan en el rol de liderazgo, la investigación de incidentes y la protección de los derechos de los trabajadores",
+        "Fórmate junto con quienes supervisan en el rol de liderazgo, la investigación de incidentes y la protección de los derechos de los trabajadores, incluido el derecho a reportar sin temor a represalias",
         "Entrena a los trabajadores en el reporte de incidentes, peligros y cuasi accidentes",
         "Capacita en el reconocimiento de peligros y en la jerarquía de controles, apoyándote en herramientas de identificación de peligros disponibles en tu país",
         "Imparte la capacitación en el idioma y nivel de comprensión adecuado, tanto a quienes se incorporan como a quienes ya trabajan contigo",
@@ -11271,22 +11286,33 @@
       "nodos_siguientes": [
         "evaluacion_mejora_programa",
         "evaluacion_mejora_programa_3",
-        "evaluacion_mejora_programa_2"
+        "evaluacion_mejora_programa_2",
+        "capacitacion_identificacion_peligros",
+        "capacitacion_roles_gerencia",
+        "nueve_pasos_iniciar_programa",
+        "programa_seguridad_salud_ocupacional"
       ],
       "condiciones_activacion": [
         "Cuando se incorporan nuevos trabajadores, equipos o procesos al sitio",
         "Cuando se detectan brechas de conocimiento en el reconocimiento de peligros",
-        "Cuando se implementan nuevos controles o procedimientos de seguridad"
+        "Cuando se implementan nuevos controles o procedimientos de seguridad",
+        "Al lanzar un nuevo programa de seguridad y salud"
       ],
       "etiqueta_arbol": "Capacita en Seguridad Laboral",
       "ids_alias": [
-        "educacion_entrenamiento_seguridad"
+        "educacion_entrenamiento_seguridad",
+        "capacitacion_conciencia_programa"
       ],
       "merged_originals": [
         {
           "node_id": "educacion_entrenamiento_seguridad",
           "titulo": "Educación y Entrenamiento en Seguridad",
           "fuente": "OSHA3886"
+        },
+        {
+          "node_id": "capacitacion_conciencia_programa",
+          "titulo": "Capacitación de Conciencia del Programa de Seguridad y Salud",
+          "fuente": "OSHA3885"
         }
       ]
     },
@@ -11307,7 +11333,7 @@
       "entregable_esperado": "Trabajadores capacitados y certificados en identificación y control de peligros de su puesto",
       "nodos_previos": [
         "capacitacion_roles_gerencia",
-        "capacitacion_conciencia_programa"
+        "capacitacion_educacion_seguridad"
       ],
       "nodos_siguientes": [
         "evaluacion_mejora_programa",
@@ -11334,7 +11360,7 @@
       ],
       "entregable_esperado": "Gerentes y supervisores certificados en su rol dentro del programa de seguridad",
       "nodos_previos": [
-        "capacitacion_conciencia_programa"
+        "capacitacion_educacion_seguridad"
       ],
       "nodos_siguientes": [
         "capacitacion_identificacion_peligros"
@@ -11614,7 +11640,7 @@
       "nodos_siguientes": [
         "jerarquia_controles",
         "prevencion_violencia_laboral",
-        "rutas_de_salida_y_puertas_de_emergencia",
+        "rutas_salida_planificacion_emergencias",
         "prevencion_control_peligros"
       ],
       "condiciones_activacion": [
@@ -12000,7 +12026,8 @@
       "condiciones_activacion": [
         "Cuando se quiere ilustrar con un ejemplo concreto el concepto de condición latente sin fallo humano activo."
       ],
-      "etiqueta_arbol": "Aprende de Fallas Latentes"
+      "etiqueta_arbol": "Aprende de Fallas Latentes",
+      "deprecado": true
     },
     "caso_estudio_benchmarking_terminal": {
       "node_id": "caso_estudio_benchmarking_terminal",
@@ -13967,7 +13994,7 @@
         "seleccion_estructura_franquicia",
         "comunicacion_efectiva_con_franquiciados",
         "entrenar_franquiciados_validacion",
-        "marketing_en_ferias_comerciales_de_franquicias"
+        "ferias_comerciales_franquicia"
       ],
       "condiciones_activacion": [
         "Ya vendes franquicias pero no tienes un sistema de soporte post venta definido.",
@@ -14927,12 +14954,14 @@
         "Mapear los cuatro tipos de riesgo (personal, operador clave, latente, terceros) específicos del dominio de la organización",
         "Comparar el perfil de riesgo actual contra dominios similares usando referencias históricas",
         "Identificar si el enfoque de gestión de riesgos está desactualizado respecto a cambios tecnológicos o sociales recientes",
-        "Priorizar recursos de gestión de riesgo según el tipo de riesgo predominante en el dominio, no solo en lesiones personales"
+        "Priorizar recursos de gestión de riesgo según el tipo de riesgo predominante en el dominio, no solo en lesiones personales",
+        "Definir cómo vas a vigilar cada tipo de riesgo que identifiques"
       ],
       "entregable_esperado": "Matriz de clasificación de riesgos por tipo (personal, operador, latente, terceros) específica para la organización, con nivel estimado de cada uno",
       "nodos_previos": [
         "modelo_accidente_organizacional",
-        "condiciones_latentes_organizacionales"
+        "condiciones_latentes_organizacionales",
+        "modelos_gestion_seguridad"
       ],
       "nodos_siguientes": [
         "condiciones_latentes_riesgo_universal",
@@ -14940,9 +14969,20 @@
       ],
       "condiciones_activacion": [
         "Cuando la organización opera en un sector de alto riesgo (nuclear, oil&gas, aviación, salud) y necesita evaluar su exposición real",
-        "Cuando existe sospecha de que el enfoque de seguridad está enfocado en el riesgo equivocado"
+        "Cuando existe sospecha de que el enfoque de seguridad está enfocado en el riesgo equivocado",
+        "Después de un incidente que muestre un tipo de riesgo que no habías tomado en cuenta, por ejemplo el riesgo para terceros"
       ],
-      "etiqueta_arbol": "Clasifica tus Riesgos por Dominio"
+      "etiqueta_arbol": "Clasifica tus Riesgos por Dominio",
+      "ids_alias": [
+        "areas_riesgo_primario"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "areas_riesgo_primario",
+          "titulo": "Cuatro Áreas Primarias de Riesgo en Tecnologías Peligrosas",
+          "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+        }
+      ]
     },
     "clasificacion_seriedad": {
       "node_id": "clasificacion_seriedad",
@@ -15008,21 +15048,36 @@
       "resumen_teorico": "Puedes clasificar una actividad según la frecuencia con la que produce muerte o lesión grave: insegura (1 en 10 a 1,000), más segura (1 en 10,000), segura (1 en 100,000) y ultra segura (1 en 1,000,000 o mejor). La forma correcta de mejorar la seguridad depende de en qué categoría estas: en actividades inseguras ayuda mejorar la competencia individual de las personas; en las más seguras, estandarizar personas, trabajo y tecnología; en las seguras, que tu compromiso real con la seguridad se note en los hechos y que reportar incidentes funcione como un ensayo de lo que podría pasar antes de que pase.",
       "pasos_accionables": [
         "Determinar en qué categoría de seguridad está hoy tu actividad usando datos históricos de fatalidad o lesión",
-        "Elegir la estrategia de mejora que corresponde a esa categoría: competencia, estandarización, o gestión seria del reporte de incidentes",
-        "Evitar copiar recetas de actividades ultra seguras para algo que por naturaleza es riesgoso, y viceversa"
+        "Elegir la estrategia de mejora que corresponde a esa categoría: competencia, estandarización, o gestión seria del reporte de incidentes, entre las que han funcionado históricamente en ese nivel",
+        "Evitar copiar recetas de actividades ultra seguras para algo que por naturaleza es riesgoso, y viceversa",
+        "Ajustar las inversiones en seguridad según el nivel de madurez detectado"
       ],
       "entregable_esperado": "Una clasificación clara de tu actividad según su nivel de seguridad, con un plan de mejora específico para esa categoría",
       "nodos_previos": [
-        "teoria_accidentes_normales"
+        "teoria_accidentes_normales",
+        "vieja_vision_vs_nueva_vision_seguridad"
       ],
       "nodos_siguientes": [
-        "aprendizaje_organizacional_desde_incidentes"
+        "aprendizaje_organizacional_desde_incidentes",
+        "fenomenos_senuelo",
+        "thin_edge_of_the_wedge"
       ],
       "condiciones_activacion": [
         "Cuando estas diseñando un plan de mejora de seguridad para una actividad o proceso concreto",
-        "Si quieres evitar aplicar soluciones genéricas de seguridad sin mirar el nivel de riesgo real que tienes"
+        "Si quieres evitar aplicar soluciones genéricas de seguridad sin mirar el nivel de riesgo real que tienes",
+        "Cuando las intervenciones de seguridad anteriores no han funcionado como se esperaba"
       ],
-      "etiqueta_arbol": "Clasifica tus Sistemas por Seguridad"
+      "etiqueta_arbol": "Clasifica tus Sistemas por Seguridad",
+      "ids_alias": [
+        "niveles_de_madurez_de_seguridad"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "niveles_de_madurez_de_seguridad",
+          "titulo": "Niveles de Madurez de Seguridad (Amalberti)",
+          "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+        }
+      ]
     },
     "clasificacion_tipos_activos": {
       "node_id": "clasificacion_tipos_activos",
@@ -16032,7 +16087,8 @@
         "Si la empresa ya tiene una base sustancial de unidades propias y quiere agregar franquicia",
         "Si se busca maximizar el valor de la empresa combinando ambos canales de crecimiento"
       ],
-      "etiqueta_arbol": "Combina Franquicia y Crecimiento Propio"
+      "etiqueta_arbol": "Combina Franquicia y Crecimiento Propio",
+      "deprecado": true
     },
     "comercio_electronico_fundamentos": {
       "node_id": "comercio_electronico_fundamentos",
@@ -18477,19 +18533,34 @@
       "resumen_teorico": "El caso del descarrilamiento de Nakina ilustra cómo una condición latente puede permanecer inactiva durante décadas (76 años) hasta que un evento local disparador —en este caso, la eliminación de castores y una temporada lluviosa— la activa, causando un accidente. Esto resalta que las auditorías de riesgo deben considerar el historial de diseño original de la infraestructura, no solo su mantenimiento reciente.",
       "pasos_accionables": [
         "Revisar el historial de diseño original de infraestructuras críticas, no solo su mantenimiento actual.",
-        "Identificar interacciones entre políticas de mantenimiento y factores ambientales naturales.",
-        "Incluir en las auditorías de riesgo el análisis de decisiones de diseño tomadas décadas atrás."
+        "Identificar interacciones entre políticas de mantenimiento y factores ambientales naturales. Cuentan entre ellos la eliminación de fauna, patrones climáticos",
+        "Incluir en las auditorías de riesgo el análisis de decisiones de diseño tomadas décadas atrás.",
+        "Realizar análisis geotécnicos o de ingeniería profundos en infraestructuras críticas, no solo inspecciones visuales externas."
       ],
       "entregable_esperado": "Informe de auditoría histórica de infraestructura crítica identificando condiciones latentes de origen antiguo.",
       "nodos_previos": [
-        "fallas_activas_condiciones_latentes"
+        "fallas_activas_condiciones_latentes",
+        "condiciones_latentes_organizacionales"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "sesgo_retrospectivo_hindsight_2"
+      ],
       "condiciones_activacion": [
         "Cuando se investiga una falla de infraestructura antigua",
-        "Cuando se evalúan riesgos de sistemas con largo historial operativo"
+        "Cuando se evalúan riesgos de sistemas con largo historial operativo",
+        "Cuando se quiere ilustrar con un ejemplo concreto el concepto de condición latente sin fallo humano activo."
       ],
-      "etiqueta_arbol": "Vigila Riesgos Dormidos Años"
+      "etiqueta_arbol": "Vigila Riesgos Dormidos Años",
+      "ids_alias": [
+        "caso_descarrilamiento_nakina"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "caso_descarrilamiento_nakina",
+          "titulo": "Estudio de Caso: Descarrilamiento de Nakina (Falla Latente de 76 Años)",
+          "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+        }
+      ]
     },
     "condiciones_latentes_organizacionales": {
       "node_id": "condiciones_latentes_organizacionales",
@@ -18510,7 +18581,7 @@
       "nodos_siguientes": [
         "cultura_generativa_westrum",
         "identificacion_evaluacion_peligros",
-        "caso_descarrilamiento_nakina",
+        "condiciones_latentes_largo_plazo",
         "clasificacion_riesgos_por_dominio",
         "condiciones_latentes_riesgo_universal",
         "ironias_de_la_automatizacion"
@@ -18853,23 +18924,35 @@
       "pasos_accionables": [
         "Auditar los sistemas automatizados críticos identificando cuántos modos operativos posee cada uno",
         "Evaluar si el diseño de la interfaz permite detectar fácilmente transiciones de modo",
-        "Entrenar a los operadores en el reconocimiento de todos los modos posibles y sus transiciones",
-        "Implementar retroalimentación clara y visible ante cada cambio de modo del sistema"
+        "Entrenar a los operadores en el reconocimiento de todos los modos posibles y sus transiciones, y en la lógica interna de transición de modos",
+        "Implementar retroalimentación clara y visible ante cada cambio de modo del sistema, reduciendo la carga cognitiva en momentos de alta demanda"
       ],
       "entregable_esperado": "Informe de auditoría de automatización con matriz de modos operativos y riesgos de confusión asociados",
       "nodos_previos": [
         "modelo_barreras_swiss_cheese",
-        "modelo_barreras_defensas"
+        "modelo_barreras_defensas",
+        "ironias_de_la_automatizacion"
       ],
       "nodos_siguientes": [
         "defensas_en_profundidad",
-        "gestion_falsas_alarmas"
+        "gestion_falsas_alarmas",
+        "defensas_peligrosas_paradojas"
       ],
       "condiciones_activacion": [
         "Cuando la organización opera sistemas altamente automatizados (aviación, plantas nucleares, anestesia)",
         "Si se han reportado incidentes de confusión operador-máquina"
       ],
-      "etiqueta_arbol": "Entiende tu Sistema Automatizado"
+      "etiqueta_arbol": "Entiende tu Sistema Automatizado",
+      "ids_alias": [
+        "confusion_modos_automatizacion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "confusion_modos_automatizacion",
+          "titulo": "Confusión de Modos en Sistemas Automatizados (Mode Confusion)",
+          "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+        }
+      ]
     },
     "confusion_modos_automatizacion": {
       "node_id": "confusion_modos_automatizacion",
@@ -18894,7 +18977,8 @@
         "Cuando se opera maquinaria o sistemas con múltiples modos automáticos de control.",
         "Cuando se investigan incidentes relacionados con 'sorpresas' de automatización."
       ],
-      "etiqueta_arbol": "Sabe en qué Modo Estás"
+      "etiqueta_arbol": "Sabe en qué Modo Estás",
+      "deprecado": true
     },
     "conoce_insumos_vitales": {
       "node_id": "conoce_insumos_vitales",
@@ -24761,7 +24845,8 @@
         "Cuando un informe de investigación atribuye un incidente a 'pérdida de conciencia situacional'",
         "Cuando se prepara una defensa o análisis técnico ante un proceso judicial o disciplinario tras un accidente"
       ],
-      "etiqueta_arbol": "Cuestiona la Culpa al Humano"
+      "etiqueta_arbol": "Cuestiona la Culpa al Humano",
+      "deprecado": true
     },
     "critica_revolucion_industrial": {
       "node_id": "critica_revolucion_industrial",
@@ -25455,7 +25540,7 @@
       "entregable_esperado": "Una decisión clave dividida entre lo que sabes con datos y lo que solo crees, con un dato externo que la contraste.",
       "nodos_previos": [
         "calibra_tu_propio_ojo",
-        "sesgo_retrospectivo_hindsight"
+        "sesgo_retrospectivo_hindsight_2"
       ],
       "nodos_siguientes": [
         "cuidado_con_la_falsa_precision",
@@ -25940,7 +26025,7 @@
       ],
       "nodos_siguientes": [
         "auftragssystem_supervision_autonoma",
-        "ingenieria_cultura_aprendizaje",
+        "cultura_de_aprendizaje",
         "cultura_narrativas_variedad_requerida"
       ],
       "condiciones_activacion": [
@@ -25958,8 +26043,8 @@
       "fuente": "Managing the Risks of Organizat - Reason, J. T_",
       "resumen_teorico": "Una cultura de aprendizaje es la voluntad y competencia de una organización para extraer las conclusiones correctas de su sistema de información de seguridad, y la disposición a implementar reformas importantes cuando se indica su necesidad. Es el subcomponente final que cierra el ciclo de la cultura de seguridad, transformando la información recolectada en acciones concretas de mejora del sistema.",
       "pasos_accionables": [
-        "Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad",
-        "Definir procesos de decisión para implementar reformas basadas en hallazgos",
+        "Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad, incluida una forma sistematica de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar",
+        "Definir procesos de decisión para implementar reformas basadas en hallazgos, comprometiendo tu tiempo y tus recursos explícitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas",
         "Medir la efectividad de las reformas implementadas mediante seguimiento continuo",
         "Institucionalizar la revisión periódica de lecciones aprendidas"
       ],
@@ -25968,16 +26053,31 @@
         "cultura_de_reporte",
         "cultura_justa",
         "cultura_flexible",
-        "cultura_de_seguridad_componentes"
+        "cultura_de_seguridad_componentes",
+        "auftragssystem_supervision_autonoma",
+        "cultura_como_mecanismo_descentralizacion"
       ],
       "nodos_siguientes": [
-        "cultura_de_seguridad_componentes"
+        "cultura_de_seguridad_componentes",
+        "evaluacion_cultura_seguridad_completa"
       ],
       "condiciones_activacion": [
         "Cuando la organización recolecta datos de seguridad pero no actúa sobre ellos",
-        "Al cerrar el ciclo de mejora continua en gestión de seguridad organizacional"
+        "Al cerrar el ciclo de mejora continua en gestión de seguridad organizacional",
+        "Cuando pospones reformas de seguridad por tareas 'más urgentes'",
+        "Cuando quieres evitar repetir errores que ya identificaste"
       ],
-      "etiqueta_arbol": "Aprende de tus Propios Errores"
+      "etiqueta_arbol": "Aprende de tus Propios Errores",
+      "ids_alias": [
+        "ingenieria_cultura_aprendizaje"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "ingenieria_cultura_aprendizaje",
+          "titulo": "Cómo construir una cultura de aprendizaje en tu negocio",
+          "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+        }
+      ]
     },
     "cultura_de_buena_empresa": {
       "node_id": "cultura_de_buena_empresa",
@@ -26398,7 +26498,7 @@
       "entregable_esperado": "Diagnóstico documentado del tipo de cultura de seguridad de la organización y plan de transición hacia una cultura generativa.",
       "nodos_previos": [
         "condiciones_latentes_organizacionales",
-        "sesgo_retrospectivo_hindsight"
+        "sesgo_retrospectivo_hindsight_2"
       ],
       "nodos_siguientes": [
         "identificacion_evaluacion_peligros"
@@ -26445,10 +26545,11 @@
       "resumen_teorico": "Una cultura justa es un atmósfera de confianza en la que se anima y hasta se recompensa a las personas por proporcionar información esencial relacionada con la seguridad, pero en la que también se tiene claridad sobre dónde trazar la línea entre comportamiento aceptable e inaceptable. No es lo mismo que una cultura de 'no culpa' (no-blame), ya que ciertos actos inseguros egregios (abuso de sustancias, incumplimiento imprudente, sabotaje) sí ameritan sanciones. El desafío está en discriminar entre estas pocas 'malas conductas' verdaderas y la mayoría de actos inseguros donde la atribución de culpa no es apropiada ni útil. Se basa en el análisis de tres elementos de la acción humana: intención, acción y consecuencias.",
       "pasos_accionables": [
         "Definir criterios claros y consensuados para distinguir comportamiento aceptable de inaceptable",
-        "Establecer una línea explícita entre errores humanos normales y actos verdaderamente negligentes o maliciosos",
+        "Establecer una línea explícita entre errores humanos normales y actos verdaderamente negligentes o maliciosos, y dejarla por escrito",
         "Capacitar a supervisores y gestores en la aplicación consistente de estos criterios",
         "Comunicar estas políticas a toda la organización para generar confianza",
-        "Evitar tanto la amnistía total como el castigo indiscriminado de todos los errores"
+        "Evitar tanto la amnistía total como el castigo indiscriminado de todos los errores",
+        "Arma un grupo de confianza que revise los casos difíciles o ambiguos"
       ],
       "entregable_esperado": "Política de cultura justa documentada con criterios claros de discriminación entre error humano y conducta sancionable",
       "nodos_previos": [
@@ -26468,15 +26569,28 @@
       "nodos_siguientes": [
         "cultura_de_aprendizaje",
         "cultura_flexible",
-        "rendicion_cuentas_prospectiva",
-        "cultura_justa_organizacional"
+        "responsabilidad_prospectiva",
+        "arbol_decision_culpabilidad",
+        "efectos_recompensa_castigo",
+        "reporte_casi_accidentes"
       ],
       "condiciones_activacion": [
         "Cuando existe ambigüedad sobre qué comportamientos deben ser sancionados",
         "Cuando los trabajadores desconfían del sistema de sanciones disciplinarias",
-        "Al diseñar políticas de manejo de errores en la organización"
+        "Al diseñar políticas de manejo de errores en la organización",
+        "Cuando buscas que tu equipo reporte errores de forma voluntaria"
       ],
-      "etiqueta_arbol": "Construye una Cultura Justa"
+      "etiqueta_arbol": "Construye una Cultura Justa",
+      "ids_alias": [
+        "cultura_justa_organizacional"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "cultura_justa_organizacional",
+          "titulo": "Cultura Justa (Just Culture)",
+          "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+        }
+      ]
     },
     "cultura_justa_2": {
       "node_id": "cultura_justa_2",
@@ -26497,7 +26611,7 @@
         "reporte_confidencial_seguridad"
       ],
       "nodos_siguientes": [
-        "rendicion_cuentas_prospectiva"
+        "responsabilidad_prospectiva"
       ],
       "condiciones_activacion": [
         "Cuando la organización busca implementar o revisar su programa de 'just culture'",
@@ -26557,7 +26671,8 @@
         "Cuando buscas que tu equipo reporte errores de forma voluntaria",
         "Si notas desconfianza de tu equipo hacia la forma en que hoy evalúas y sancionas los errores"
       ],
-      "etiqueta_arbol": "Haz Justicia al Evaluar Errores"
+      "etiqueta_arbol": "Haz Justicia al Evaluar Errores",
+      "deprecado": true
     },
     "cultura_narrativas_variedad_requerida": {
       "node_id": "cultura_narrativas_variedad_requerida",
@@ -26923,7 +27038,7 @@
         "drift_hacia_el_fallo"
       ],
       "nodos_siguientes": [
-        "critica_perdida_de_conciencia_situacional"
+        "evitar_perdida_situacion_awareness"
       ],
       "condiciones_activacion": [
         "Cuando se investiga un incidente y se detecta que el operador no siguió el procedimiento al pie de la letra",
@@ -29351,7 +29466,7 @@
       ],
       "entregable_esperado": "Tu decisión documentada sobre si tu modelo de expansión incluirá una marca común y cuánto control quieres tener sobre ella",
       "nodos_previos": [
-        "combinar_crecimiento_corporativo_y_franquicia"
+        "mix_ubicaciones_corporativas_franquicia"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -29712,7 +29827,8 @@
         "Cuando se atribuye un accidente recurrente únicamente a características personales de un trabajador",
         "Cuando se usan estadísticas comparativas de desempeño sin considerar diferencias de exposición al riesgo"
       ],
-      "etiqueta_arbol": "No Culpes a la Manzana Podrida"
+      "etiqueta_arbol": "No Culpes a la Manzana Podrida",
+      "deprecado": true
     },
     "deep_dive_workshop": {
       "node_id": "deep_dive_workshop",
@@ -29860,7 +29976,7 @@
       ],
       "entregable_esperado": "Análisis crítico de las defensas de seguridad actuales de la organización, identificando efectos secundarios no deseados.",
       "nodos_previos": [
-        "confusion_modos_automatizacion"
+        "confusion_de_modos_automatizacion"
       ],
       "nodos_siguientes": [
         "quality_control_vs_quality_assurance"
@@ -31745,7 +31861,7 @@
       ],
       "entregable_esperado": "Un diagnóstico documentado que identifique la fuente del desajuste (individual vs organizacional) y un plan de acción correspondiente",
       "nodos_previos": [
-        "declive_teoria_manzana_podrida"
+        "accident_proneness_fallacy"
       ],
       "nodos_siguientes": [
         "responsabilidad_sistemica",
@@ -38461,7 +38577,7 @@
       "entregable_esperado": "Procedimiento formal de traspaso de trabajo con hojas de etapa documentadas.",
       "nodos_previos": [
         "fallas_activas_condiciones_latentes",
-        "omisiones_en_mantenimiento"
+        "vulnerabilidad_instalacion"
       ],
       "nodos_siguientes": [
         "defensas_en_profundidad"
@@ -40008,7 +40124,7 @@
       ],
       "entregable_esperado": "Esquema de incentivos y sanciones alineado con principios de refuerzo conductual",
       "nodos_previos": [
-        "cultura_justa_organizacional",
+        "cultura_justa",
         "deteccion_efecto_hawthorne"
       ],
       "nodos_siguientes": [],
@@ -49685,7 +49801,7 @@
       ],
       "entregable_esperado": "Informe de autodiagnóstico organizacional respondiendo el checklist de preguntas críticas sobre cultura de seguridad",
       "nodos_previos": [
-        "ingenieria_cultura_aprendizaje"
+        "cultura_de_aprendizaje"
       ],
       "nodos_siguientes": [
         "modelos_gestion_seguridad"
@@ -50368,7 +50484,7 @@
         "investigacion_desarrollo_concepto",
         "decision_intensidad_capital",
         "costo_de_oportunidad",
-        "combinar_crecimiento_corporativo_y_franquicia",
+        "mix_ubicaciones_corporativas_franquicia",
         "leverage_una_sola_franquicia",
         "definir_meta_a_5_anos_antes_de_franquiciar"
       ],
@@ -51551,11 +51667,13 @@
         "Evitar usar 'pérdida de situation awareness' como causa explicativa en informes de investigación",
         "En lugar de eso, preguntar qué hizo que la interpretación de la situación por parte del operador tuviera sentido en ese momento",
         "Definir claramente qué normativa o estándar se está usando para juzgar el comportamiento, evitando el conocimiento retrospectivo como referencia",
-        "Reconstruir el 'túnel' del operador: qué información tenía disponible, qué presiones enfrentaba, qué opciones parecían razonables"
+        "Reconstruir el 'túnel' del operador: qué información tenía disponible, qué presiones enfrentaba, qué opciones parecían razonables",
+        "Rechazar el uso de este término en contextos legales o disciplinarios como sustituto de una explicación causal real"
       ],
       "entregable_esperado": "Un informe de investigación que reemplace la etiqueta de 'pérdida de situation awareness' por una explicación basada en el contexto y la perspectiva del operador",
       "nodos_previos": [
-        "critica_ground_truth_investigacion"
+        "critica_ground_truth_investigacion",
+        "cumplimiento_vs_violacion"
       ],
       "nodos_siguientes": [
         "evitar_uso_complacencia"
@@ -51565,7 +51683,17 @@
         "Si se está considerando responsabilidad legal o disciplinaria basada en este concepto",
         "Cuando se diseña un programa de entrenamiento en factores humanos"
       ],
-      "etiqueta_arbol": "No Uses Esa Etiqueta Fácil"
+      "etiqueta_arbol": "No Uses Esa Etiqueta Fácil",
+      "ids_alias": [
+        "critica_perdida_de_conciencia_situacional"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "critica_perdida_de_conciencia_situacional",
+          "titulo": "Crítica al Concepto 'Pérdida de Conciencia Situacional'",
+          "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+        }
+      ]
     },
     "evitar_pseudociencia_producto": {
       "node_id": "evitar_pseudociencia_producto",
@@ -52752,9 +52880,9 @@
       "nodos_previos": [
         "modelo_accidente_organizacional",
         "defensas_en_profundidad_2",
-        "omisiones_en_mantenimiento",
+        "vulnerabilidad_instalacion",
         "prueba_sustitucion_johnston",
-        "reglas_parada_investigacion_accidentes",
+        "limite_busqueda_causas_pendulo",
         "modelo_queso_suizo"
       ],
       "nodos_siguientes": [
@@ -52765,7 +52893,7 @@
         "documentacion_mantenimiento_linea_base",
         "trayectoria_del_accidente",
         "heart_metodo_evaluacion_error_humano",
-        "omisiones_en_mantenimiento"
+        "vulnerabilidad_instalacion"
       ],
       "condiciones_activacion": [
         "Al analizar por qué un accidente ocurrió pese a múltiples capas defensivas",
@@ -54212,7 +54340,7 @@
       "entregable_esperado": "Mapa de riesgos ampliado que incluya áreas fuera del foco de atención actual de la organización",
       "nodos_previos": [
         "thin_edge_of_the_wedge",
-        "niveles_de_madurez_de_seguridad"
+        "clasificacion_sistemas_por_nivel_seguridad"
       ],
       "nodos_siguientes": [
         "insight_de_wald"
@@ -54234,26 +54362,41 @@
       "fuente": "Franchise Your Business - Mark Siebert",
       "resumen_teorico": "Las ferias comerciales se dividen en dos tipos: las de franquicia, dirigidas a compradores activos que buscan invertir y con audiencia normalmente local, y las de industria, dirigidas a un sector específico, con audiencia nacional o internacional, donde solo una parte de los asistentes busca franquiciarse. Para elegir la feria correcta necesitas tener claro que perfil de inversor buscas. Revisa las estadisticas de asistentes de ediciones anteriores, porque participar tiene costos que no siempre se ven a primera vista (viaje, materiales, personal) y pueden superar el monto que imaginas al principio (pregunta el precio en tu mercado). El objetivo de ir a una feria es conseguir contactos interesados, no cerrar ventas ahi mismo, así que tienes que entrenar a quien te acompañe para identificar rápido a los prospectos con potencial real.",
       "pasos_accionables": [
-        "Define el perfil de inversor que buscas (capital, experiencia, sector)",
+        "Define el perfil de inversor que buscas (capital, experiencia, sector), y con la región donde quieres crecer",
         "Pide las estadisticas de asistentes de ferias pasadas y contacta a quienes participaron antes como referencia",
         "Distingue si necesitas una feria de franquicia o una feria de industria según lo que buscas",
-        "Calcula todos los costos, incluidos los que no se ven a simple vista (viaje, materiales, personal, stand)",
-        "Entrena a quien te acompañe para calificar prospectos rápido y aprovechar el flujo de gente en tu stand",
-        "Planea el seguimiento después de la feria (charlas, reuniones uno a uno) según el tipo de evento"
+        "Calcula todos los costos, incluidos los que no se ven a simple vista (viaje, materiales, personal, stand), y para reducirlos negocia tarifas de hotel y reserva vuelos con anticipación",
+        "Entrena a quien te acompañe para calificar prospectos rápido y aprovechar el flujo de gente en tu stand, con un mini folleto económico para repartir a todos y un folleto completo para los prospectos que realmente te interesan",
+        "Planea el seguimiento después de la feria (charlas, reuniones uno a uno) según el tipo de evento, y que sea inmediato"
       ],
       "entregable_esperado": "Un plan de participacion en ferias con presupuesto detallado, los criterios para elegir el evento correcto y una forma clara de calificar a los contactos que consigas",
       "nodos_previos": [
         "relaciones_publicas_leads_franquicia",
-        "mix_medios_marketing_franquicia"
+        "mix_medios_marketing_franquicia",
+        "ciclo_ventas_calidad_franquicia",
+        "mensaje_marketing_franquicia"
       ],
       "nodos_siguientes": [
-        "publicidad_impresa_franquicia"
+        "publicidad_impresa_franquicia",
+        "principio_apalancamiento_numero_magico"
       ],
       "condiciones_activacion": [
         "Cuando buscas contacto directo y cara a cara con prospectos calificados",
-        "Cuando tienes un perfil de inversor muy especifico en mente (por ejemplo, alguien con varias unidades o mucho capital)"
+        "Cuando tienes un perfil de inversor muy especifico en mente (por ejemplo, alguien con varias unidades o mucho capital)",
+        "Cuando tienes presupuesto de marketing suficiente para invertir en presencia física.",
+        "Cuando quieres competir mostrando tu marca frente a otros franquiciadores."
       ],
-      "etiqueta_arbol": "Participa en Ferias Clave"
+      "etiqueta_arbol": "Participa en Ferias Clave",
+      "ids_alias": [
+        "marketing_en_ferias_comerciales_de_franquicias"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "marketing_en_ferias_comerciales_de_franquicias",
+          "titulo": "Marketing en ferias comerciales para franquicias (trade shows)",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ]
     },
     "ficcion_especulativa_como_metodo": {
       "node_id": "ficcion_especulativa_como_metodo",
@@ -54314,7 +54457,6 @@
       ],
       "entregable_esperado": "Mapa de sensemaking que muestre la evolución de la interpretación de la tripulación/operador y los puntos de fijación",
       "nodos_previos": [
-        "sesgo_retrospectivo_hindsight",
         "sesgo_retrospectivo_hindsight_2"
       ],
       "nodos_siguientes": [
@@ -56548,7 +56690,7 @@
       ],
       "nodos_siguientes": [
         "principio_apalancamiento_numero_magico",
-        "combinar_crecimiento_corporativo_y_franquicia"
+        "mix_ubicaciones_corporativas_franquicia"
       ],
       "condiciones_activacion": [
         "Cuando el usuario busca maximizar la valoración de la empresa combinando ambos modelos de crecimiento",
@@ -65679,7 +65821,8 @@
         "Cuando pospones reformas de seguridad por tareas 'más urgentes'",
         "Cuando quieres evitar repetir errores que ya identificaste"
       ],
-      "etiqueta_arbol": "Construye una Cultura de Aprendizaje"
+      "etiqueta_arbol": "Construye una Cultura de Aprendizaje",
+      "deprecado": true
     },
     "ingenieria_de_prompts_efectiva": {
       "node_id": "ingenieria_de_prompts_efectiva",
@@ -67344,7 +67487,7 @@
         "caracterizacion_priorizacion_peligros",
         "construccion_timeline_resolucion",
         "peligros_emergencias_no_rutinarias",
-        "declive_teoria_manzana_podrida",
+        "accident_proneness_fallacy",
         "prevencion_control_peligros"
       ],
       "condiciones_activacion": [
@@ -67841,7 +67984,7 @@
         "condiciones_latentes_organizacionales"
       ],
       "nodos_siguientes": [
-        "confusion_modos_automatizacion"
+        "confusion_de_modos_automatizacion"
       ],
       "condiciones_activacion": [
         "Cuando se introduce o evalúa tecnología automatizada en procesos críticos de seguridad.",
@@ -70365,22 +70508,36 @@
         "Al investigar un accidente, evaluar en qué punto el análisis causal deja de aportar valor remedial práctico",
         "Enfocar recursos de investigación en factores de lugar de trabajo y organizacionales, que ofrecen el mayor retorno",
         "Reconocer explícitamente qué factores societales/económicos son 'dados' y no controlables por el gestor de riesgo",
-        "Evitar diluir la responsabilidad organizacional atribuyendo todo a fuerzas sociales incontrolables"
+        "Evitar diluir la responsabilidad organizacional atribuyendo todo a fuerzas sociales incontrolables",
+        "Priorizar la calidad y disponibilidad de evidencia confiable al fijar los límites del análisis"
       ],
       "entregable_esperado": "Marco de investigación de accidentes con criterios explícitos de alcance causal (dónde detener la búsqueda de causas)",
       "nodos_previos": [
         "condiciones_latentes_riesgo_universal",
-        "seduccion_modelo_persona"
+        "seduccion_modelo_persona",
+        "modelo_accidente_organizacional"
       ],
       "nodos_siguientes": [
         "costos_ocultos_accidentes_iceberg",
-        "process_tracing_methods"
+        "process_tracing_methods",
+        "fallas_activas_condiciones_latentes"
       ],
       "condiciones_activacion": [
         "Cuando una investigación de accidente se extiende indefinidamente sin generar recomendaciones accionables",
-        "Al diseñar la metodología de investigación de incidentes de la organización"
+        "Al diseñar la metodología de investigación de incidentes de la organización",
+        "Si se debe decidir dónde trazar la línea de responsabilidad organizacional"
       ],
-      "etiqueta_arbol": "Pregúntate Hasta Dónde Buscar Causas"
+      "etiqueta_arbol": "Pregúntate Hasta Dónde Buscar Causas",
+      "ids_alias": [
+        "reglas_parada_investigacion_accidentes"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "reglas_parada_investigacion_accidentes",
+          "titulo": "Reglas de Parada (Stop Rules) en la Investigación de Accidentes",
+          "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+        }
+      ]
     },
     "limites_autorizacion_sistema": {
       "node_id": "limites_autorizacion_sistema",
@@ -72867,7 +73024,8 @@
         "Cuando tienes presupuesto de marketing suficiente para invertir en presencia física.",
         "Cuando quieres competir mostrando tu marca frente a otros franquiciadores."
       ],
-      "etiqueta_arbol": "Exponte en Ferias Comerciales"
+      "etiqueta_arbol": "Exponte en Ferias Comerciales",
+      "deprecado": true
     },
     "marketing_verde_autentico": {
       "node_id": "marketing_verde_autentico",
@@ -74588,7 +74746,7 @@
       ],
       "nodos_siguientes": [
         "marketing_directo_y_llamadas_en_frio_franquicias",
-        "marketing_en_ferias_comerciales_de_franquicias",
+        "ferias_comerciales_franquicia",
         "publicidad_impresa_para_franquicias",
         "seo_para_captacion_de_franquiciados",
         "historia_marca_diferenciacion",
@@ -76501,35 +76659,47 @@
       "fuente": "Franchise Your Business - Mark Siebert",
       "resumen_teorico": "Al definir la mezcla entre locales corporativos y franquiciados, cuentas con cuatro estrategias de ubicacion: Home Sweet Home, que reserva el mercado local para ti y franquicia en mercados distantes; Spiking, que abre locales corporativos distantes como vitrina y centro de soporte para futuras franquicias; Cherry Picking, que te reserva los mejores mercados y ubicaciones dejando las secundarias a franquiciados; y Reverse Cherry Picking, que toma para ti las ubicaciones suboptimas y cede las mejores a franquiciados para mejorar la validacion del sistema. Cada estrategia implica distintos niveles de ROI, riesgo, validacion ante futuros franquiciados y velocidad de crecimiento, por lo que la eleccion depende de tu capital disponible y tu plan de salida.",
       "pasos_accionables": [
-        "Decide si continuaras abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias",
-        "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia",
+        "Decide si continuaras abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo",
+        "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, asegurando a los dos canales recursos dedicados suficientes para crecer sin canibalizarse",
         "Selecciona la estrategia de ubicacion, Home Sweet Home, Spiking, Cherry Picking o Reverse Cherry Picking, segun tus objetivos de validacion, riesgo y retorno",
-        "Define criterios claros para asignar mercados y ubicaciones entre lo corporativo y lo franquiciado",
+        "Define criterios claros para asignar mercados y ubicaciones entre lo corporativo y lo franquiciado, y para evitar encroachment",
         "Evalua el impacto de la estrategia elegida en la validacion y satisfaccion de futuros franquiciados",
-        "Documenta la estrategia en tu plan de marketing de franquicia, incluyendo el uso de ubicaciones corporativas como centros de entrenamiento o soporte si aplica"
+        "Documenta la estrategia en tu plan de marketing de franquicia, incluyendo el uso de ubicaciones corporativas como centros de entrenamiento o soporte si aplica, y en especial las de en mercados distantes"
       ],
       "entregable_esperado": "Documento de estrategia de ubicacion que define la mezcla entre locales corporativos y franquiciados, el criterio de asignacion de mercados y el uso de ubicaciones corporativas como soporte.",
       "nodos_previos": [
         "estrategia_mercados_geograficos",
-        "preguntas_clave_decision_franquiciar"
+        "preguntas_clave_decision_franquiciar",
+        "alternativa_operaciones_propias",
+        "franquicia_mas_crecimiento_corporativo_hibrido",
+        "prevenir_franquicias_inadvertidas"
       ],
       "nodos_siguientes": [
         "segmentacion_perfil_franquiciado",
-        "mix_medios_marketing_franquicia"
+        "mix_medios_marketing_franquicia",
+        "decision_marca_comun_branding",
+        "evaluacion_necesidad_franquiciar"
       ],
       "condiciones_activacion": [
         "Cuando ya decidiste franquiciar tu negocio y tambien planeas mantener o abrir locales propios",
         "Cuando existe conflicto potencial entre tu expansion corporativa y el territorio de tus franquiciados",
-        "Cuando necesitas definir como distribuir mercados entre ubicaciones corporativas y franquiciadas antes de escalar"
+        "Cuando necesitas definir como distribuir mercados entre ubicaciones corporativas y franquiciadas antes de escalar",
+        "Si se busca maximizar el valor de la empresa combinando ambos canales de crecimiento"
       ],
       "etiqueta_arbol": "Equilibra Ubicaciones Propias y Franquiciadas",
       "ids_alias": [
-        "estrategia_ubicacion_franquicia_corporativa"
+        "estrategia_ubicacion_franquicia_corporativa",
+        "combinar_crecimiento_corporativo_y_franquicia"
       ],
       "merged_originals": [
         {
           "node_id": "estrategia_ubicacion_franquicia_corporativa",
           "titulo": "Estrategias de Ubicación: Mix Franquicia-Corporativo",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        },
+        {
+          "node_id": "combinar_crecimiento_corporativo_y_franquicia",
+          "titulo": "Combinar Crecimiento Corporativo y Franquiciado como Estrategia Dual",
           "fuente": "Franchise Your Business - Mark Siebert"
         }
       ]
@@ -76633,7 +76803,7 @@
         "accidentes_individuales_vs_organizacionales"
       ],
       "nodos_siguientes": [
-        "reglas_parada_investigacion_accidentes",
+        "limite_busqueda_causas_pendulo",
         "fallas_activas_condiciones_latentes",
         "clasificacion_riesgos_por_dominio",
         "condiciones_latentes_organizacionales",
@@ -77601,7 +77771,7 @@
         "evaluacion_cultura_seguridad_completa"
       ],
       "nodos_siguientes": [
-        "areas_riesgo_primario",
+        "clasificacion_riesgos_por_dominio",
         "old_view_bad_apple_theory",
         "bad_apple_theory"
       ],
@@ -79397,7 +79567,8 @@
         "Cuando se necesita definir una estrategia de mejora de seguridad organizacional",
         "Cuando las intervenciones de seguridad anteriores no han funcionado como se esperaba"
       ],
-      "etiqueta_arbol": "Mide tu Madurez en Seguridad"
+      "etiqueta_arbol": "Mide tu Madurez en Seguridad",
+      "deprecado": true
     },
     "no_jugar_con_probabilidades": {
       "node_id": "no_jugar_con_probabilidades",
@@ -79912,7 +80083,7 @@
       "entregable_esperado": "Lista de verificación con las nueve acciones iniciales completadas o en proceso, que sirve de base para un programa de seguridad más estructurado",
       "nodos_previos": [
         "evaluacion_mejora_programa_2",
-        "capacitacion_conciencia_programa",
+        "capacitacion_educacion_seguridad",
         "evaluacion_mejora_programa"
       ],
       "nodos_siguientes": [
@@ -80648,7 +80819,8 @@
         "Cuando se diseñan procedimientos de mantenimiento para equipos con múltiples partes desmontables",
         "Cuando se investiga un incidente relacionado con partes faltantes tras mantenimiento"
       ],
-      "etiqueta_arbol": "Cuida las Omisiones en Mantenimiento"
+      "etiqueta_arbol": "Cuida las Omisiones en Mantenimiento",
+      "deprecado": true
     },
     "onboarding_comunitario_y_lenguaje_propio": {
       "node_id": "onboarding_comunitario_y_lenguaje_propio",
@@ -84412,7 +84584,7 @@
       ],
       "entregable_esperado": "Documento escrito de Plan de Acción de Emergencia con roles, rutas, y procedimientos de evacuación",
       "nodos_previos": [
-        "rutas_de_salida_y_puertas_de_emergencia"
+        "rutas_salida_planificacion_emergencias"
       ],
       "nodos_siguientes": [
         "senalizacion_de_salidas",
@@ -88653,7 +88825,7 @@
       "nodos_siguientes": [
         "contratar_abogado_franquicias",
         "cumplimiento_ftc_rule_436",
-        "combinar_crecimiento_corporativo_y_franquicia"
+        "mix_ubicaciones_corporativas_franquicia"
       ],
       "condiciones_activacion": [
         "Si la empresa tiene acuerdos de distribución, licencia o agencia con terceros que usan su marca",
@@ -88747,7 +88919,7 @@
       "nodos_previos": [
         "franquicia_mas_crecimiento_corporativo_hibrido",
         "marketing_directo_y_llamadas_en_frio_franquicias",
-        "marketing_en_ferias_comerciales_de_franquicias",
+        "ferias_comerciales_franquicia",
         "pilares_control_calidad",
         "portales_web_de_franquicias",
         "ppc_para_venta_de_franquicias"
@@ -91549,7 +91721,7 @@
       "entregable_esperado": "Documento marco del programa de seguridad y salud con los siete elementos identificados, evidencia de implementacion y un plan inicial de mejora continua.",
       "nodos_previos": [
         "diez_pasos_iniciales_programa",
-        "capacitacion_conciencia_programa",
+        "capacitacion_educacion_seguridad",
         "nueve_pasos_iniciar_programa"
       ],
       "nodos_siguientes": [
@@ -97365,7 +97537,8 @@
         "Cuando la investigación de un accidente se extiende indefinidamente sin llegar a conclusiones accionables",
         "Si se debe decidir dónde trazar la línea de responsabilidad organizacional"
       ],
-      "etiqueta_arbol": "Define Dónde Detener el Análisis"
+      "etiqueta_arbol": "Define Dónde Detener el Análisis",
+      "deprecado": true
     },
     "regulaciones_antiboicot": {
       "node_id": "regulaciones_antiboicot",
@@ -98037,7 +98210,8 @@
         "Después de que ocurrio un incidente y quieres que sirva para aprender de verdad",
         "Cuando quieres dejar el castigo y pasar a mejorar de forma continua"
       ],
-      "etiqueta_arbol": "Mira Hacia Adelante, no Atrás"
+      "etiqueta_arbol": "Mira Hacia Adelante, no Atrás",
+      "deprecado": true
     },
     "rendicion_de_cuentas_del_equipo": {
       "node_id": "rendicion_de_cuentas_del_equipo",
@@ -98260,7 +98434,7 @@
       "entregable_esperado": "Sistema de reporte de casi accidentes funcionando con métricas de participación y análisis de causas",
       "nodos_previos": [
         "medidas_reactivas_proactivas",
-        "cultura_justa_organizacional"
+        "cultura_justa"
       ],
       "nodos_siguientes": [
         "gestion_de_errores"
@@ -99237,22 +99411,39 @@
         "Cuando revises un problema, en vez de preguntar quién falló, pregunta qué necesitas cambiar",
         "Asigna quién va a poner en marcha esos cambios, no quién va a recibir el castigo",
         "Define cómo vas a comprobar si los cambios que hiciste realmente funcionan",
-        "Cuéntale a las personas con las que trabajas que la idea es mejorar, no castigar"
+        "Cuéntale a las personas con las que trabajas que la idea es mejorar, no castigar",
+        "Comparte lo que conto la persona involucrada (storytelling) para que todos aprendan de la situacion, en lugar de sancionarla",
+        "Da apoyo a quien vivio el incidente de cerca, porque también carga con el golpe"
       ],
       "entregable_esperado": "Un plan con los cambios que vas a hacer y quién se encarga de ponerlos en marcha, sin apuntar a sanciones",
       "nodos_previos": [
         "justicia_restaurativa",
         "preguntar_que_no_quien",
-        "capacidad_de_respuesta_responsable"
+        "capacidad_de_respuesta_responsable",
+        "cultura_justa",
+        "cultura_justa_2",
+        "responsabilidad_sistemica"
       ],
       "nodos_siguientes": [
         "soporte_segunda_victima"
       ],
       "condiciones_activacion": [
         "Cuando decides cómo vas a manejar los errores en tu negocio",
-        "Cuando quieres que las personas te cuenten los problemas sin miedo a ser señaladas"
+        "Cuando quieres que las personas te cuenten los problemas sin miedo a ser señaladas",
+        "Después de que ocurrio un incidente y quieres que sirva para aprender de verdad",
+        "Cuando quieres dejar el castigo y pasar a mejorar de forma continua"
       ],
-      "etiqueta_arbol": "Fomenta el Reporte Sin Culpa"
+      "etiqueta_arbol": "Fomenta el Reporte Sin Culpa",
+      "ids_alias": [
+        "rendicion_cuentas_prospectiva"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "rendicion_cuentas_prospectiva",
+          "titulo": "Rendir cuentas para mejorar, no para culpar (Forward-Looking Accountability)",
+          "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+        }
+      ]
     },
     "responsabilidad_sistemica": {
       "node_id": "responsabilidad_sistemica",
@@ -99269,12 +99460,12 @@
       "entregable_esperado": "Un informe de análisis sistémico del incidente que identifique responsabilidades distribuidas más allá del individuo directamente involucrado",
       "nodos_previos": [
         "desajuste_autoridad_responsabilidad",
-        "declive_teoria_manzana_podrida",
+        "accident_proneness_fallacy",
         "desajuste_tarea_persona"
       ],
       "nodos_siguientes": [
         "cultura_justa",
-        "rendicion_cuentas_prospectiva",
+        "responsabilidad_prospectiva",
         "cultura_justa_2",
         "reporte_confidencial_seguridad"
       ],
@@ -100200,7 +100391,7 @@
       ],
       "entregable_esperado": "Reporte de aprendizaje colaborativo con propuestas de mejora generadas junto con el personal involucrado",
       "nodos_previos": [
-        "sesgo_retrospectivo_hindsight",
+        "sesgo_retrospectivo_hindsight_2",
         "recomendaciones_smart"
       ],
       "nodos_siguientes": [
@@ -102064,7 +102255,8 @@
         "Si tu negocio tiene un local físico con varias personas trabajando",
         "Si necesitas cumplir con la normativa de seguridad sobre rutas de escape en tu país"
       ],
-      "etiqueta_arbol": "Diseña tus Rutas de Emergencia"
+      "etiqueta_arbol": "Diseña tus Rutas de Emergencia",
+      "deprecado": true
     },
     "rutas_salida_planificacion_emergencias": {
       "node_id": "rutas_salida_planificacion_emergencias",
@@ -102075,22 +102267,38 @@
       "resumen_teorico": "Diseña tus rutas de salida para que el camino de escape sea obvio, directo y esté libre de obstáculos, con puertas que se abran sin necesidad de llave ni herramienta especial mientras el lugar esté ocupado. Evita usar puertas giratorias, corredizas o elevadizas como salidas obligatorias, y garantiza mecanismos de apertura rápida (como el hardware de pánico) que funcionen incluso en cuartos fríos bloqueados desde afuera. Cuando planifiques tus emergencias, piensa también en poner barreras para que nadie salga directo al tráfico de vehículos.",
       "pasos_accionables": [
         "Verifica que las puertas de salida no estén bloqueadas, cerradas con llave u obstruidas",
-        "Confirma que las puertas se abran sin necesidad de llave, herramienta o conocimiento especial mientras el lugar está ocupado",
+        "Confirma que las puertas se abran sin necesidad de llave, herramienta o conocimiento especial mientras el lugar está ocupado, y con bisagra lateral",
         "Revisa que no uses puertas giratorias, corredizas o elevadizas como salidas obligatorias",
-        "Instala hardware de pánico en las puertas de salida que lo requieran",
+        "Instala hardware de pánico en las puertas de salida que lo requieran, que abran con poca fuerza, según el estándar de tu país",
         "Asegura mecanismos de liberación interna en los cuartos fríos, incluso si están bloqueados desde afuera",
         "Coloca barreras y señalización donde las salidas den directo a zonas de tráfico vehicular"
       ],
       "entregable_esperado": "Tu checklist de rutas de salida y emergencias completado, con las deficiencias en puertas y accesos de salida ya corregidas.",
       "nodos_previos": [
-        "autoinspeccion_lugar_de_trabajo"
+        "autoinspeccion_lugar_de_trabajo",
+        "caracterizacion_priorizacion_peligros"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "plan_de_accion_de_emergencia",
+        "senalizacion_de_salidas"
+      ],
       "condiciones_activacion": [
         "Cuando diseñes o revises el plan de evacuación de tu lugar de trabajo",
-        "Cuando detectes puertas o rutas de salida bloqueadas u obstruidas"
+        "Cuando detectes puertas o rutas de salida bloqueadas u obstruidas",
+        "Si tu negocio tiene un local físico con varias personas trabajando",
+        "Si necesitas cumplir con la normativa de seguridad sobre rutas de escape en tu país"
       ],
-      "etiqueta_arbol": "Planifica tus Rutas de Escape"
+      "etiqueta_arbol": "Planifica tus Rutas de Escape",
+      "ids_alias": [
+        "rutas_de_salida_y_puertas_de_emergencia"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "rutas_de_salida_y_puertas_de_emergencia",
+          "titulo": "Diseño y Mantenimiento de Rutas de Salida y Puertas de Emergencia",
+          "fuente": "SMALL_BUSINESS"
+        }
+      ]
     },
     "saber_hasta_donde_mejorar_servicio": {
       "node_id": "saber_hasta_donde_mejorar_servicio",
@@ -103440,7 +103648,6 @@
         "plan_control_peligros"
       ],
       "nodos_siguientes": [
-        "capacitacion_conciencia_programa",
         "capacitacion_educacion_seguridad",
         "evaluacion_mejora_programa_3",
         "evaluacion_mejora_programa"
@@ -105382,7 +105589,7 @@
       ],
       "entregable_esperado": "Instalación completa y verificada de señalización de salidas conforme a normativa",
       "nodos_previos": [
-        "rutas_de_salida_y_puertas_de_emergencia",
+        "rutas_salida_planificacion_emergencias",
         "plan_de_accion_de_emergencia"
       ],
       "nodos_siguientes": [
@@ -105854,7 +106061,8 @@
         "Cuando se realiza una investigación post-accidente y se evalúa la culpabilidad o previsibilidad de los actores.",
         "Cuando se diseñan procesos de aprendizaje organizacional a partir de fallos."
       ],
-      "etiqueta_arbol": "Cuestiona tu Sesgo Retrospectivo"
+      "etiqueta_arbol": "Cuestiona tu Sesgo Retrospectivo",
+      "deprecado": true
     },
     "sesgo_retrospectivo_hindsight_2": {
       "node_id": "sesgo_retrospectivo_hindsight_2",
@@ -105866,21 +106074,37 @@
       "pasos_accionables": [
         "No te preguntes '¿por qué no hice...?' o '¿por qué no hizo...?', esa pregunta ya asume que la respuesta era obvia",
         "Reconstruye la situación tal como la viviste o la vivió la otra persona, sin usar lo que ya sabes ahora del resultado",
-        "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento",
-        "No conviertas la secuencia de eventos en una causa y efecto simple, la realidad casi nunca fue tan lineal"
+        "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, sin olvidar el volumen de información disperso entre los participantes",
+        "No conviertas la secuencia de eventos en una causa y efecto simple, la realidad casi nunca fue tan lineal",
+        "Entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo."
       ],
       "entregable_esperado": "Una reconstrucción en orden cronológico de la situación, contada desde lo que sabías o sabía la otra persona en ese momento, sin dejar que el resultado final contamine esa mirada",
       "nodos_previos": [
-        "caso_descarrilamiento_nakina"
+        "condiciones_latentes_largo_plazo"
       ],
       "nodos_siguientes": [
         "analisis_factores_distales_proximales",
-        "fijacion_cognitiva"
+        "fijacion_cognitiva",
+        "cuanto_sabes_y_cuanto_solo_crees",
+        "cultura_generativa_westrum",
+        "revision_de_aprendizaje"
       ],
       "condiciones_activacion": [
-        "Cuando estés revisando un error o un incidente para entender qué pasó y aprender de él"
+        "Cuando estés revisando un error o un incidente para entender qué pasó y aprender de él",
+        "Cuando se realiza una investigación post-accidente y se evalúa la culpabilidad o previsibilidad de los actores.",
+        "Cuando se diseñan procesos de aprendizaje organizacional a partir de fallos."
       ],
-      "etiqueta_arbol": "Reconoce el Sesgo Retrospectivo"
+      "etiqueta_arbol": "Reconoce el Sesgo Retrospectivo",
+      "ids_alias": [
+        "sesgo_retrospectivo_hindsight"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "sesgo_retrospectivo_hindsight",
+          "titulo": "Sesgo Retrospectivo (Hindsight Bias) en el Análisis de Accidentes",
+          "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+        }
+      ]
     },
     "sesgos_naturales_del_fundador": {
       "node_id": "sesgos_naturales_del_fundador",
@@ -111292,7 +111516,7 @@
       ],
       "entregable_esperado": "Análisis crítico de las prácticas de seguridad actuales identificando si aplican intervenciones obsoletas para el nivel de madurez alcanzado",
       "nodos_previos": [
-        "niveles_de_madurez_de_seguridad"
+        "clasificacion_sistemas_por_nivel_seguridad"
       ],
       "nodos_siguientes": [
         "fenomenos_senuelo",
@@ -116326,7 +116550,7 @@
       ],
       "nodos_siguientes": [
         "riesgos_programas_seguridad_conductual",
-        "niveles_de_madurez_de_seguridad",
+        "clasificacion_sistemas_por_nivel_seguridad",
         "critica_behavior_based_safety"
       ],
       "condiciones_activacion": [
@@ -116987,22 +117211,35 @@
       "resumen_teorico": "Dentro del mantenimiento, la fase de reinstalación/reensamblaje es mucho más propensa a errores que el desensamblaje. El desensamblaje tiene una secuencia natural cuya lógica está 'en el mundo' (solo hay una forma correcta), mientras que la reinstalación permite múltiples combinaciones erróneas (ej. 8 tuercas = 40,320 formas de reensamblar mal) y los errores suelen quedar ocultos. Datos de aviación (Boeing, Pratt & Whitney, UK CAA) confirman que la instalación incompleta, dañada o incorrecta son las causas más frecuentes de fallas.",
       "pasos_accionables": [
         "Diseñar procedimientos de reinstalación con secuencias claramente numeradas y verificables",
-        "Implementar listas de verificación específicas para pasos de reensamblaje",
-        "Aumentar la supervisión y doble verificación durante la fase de instalación, no solo desensamblaje",
-        "Analizar históricos de fallas de mantenimiento para confirmar predominancia de errores de instalación"
+        "Implementar listas de verificación específicas para pasos de reensamblaje, obligatorias y con firma paso a paso",
+        "Aumentar la supervisión y doble verificación durante la fase de instalación, no solo desensamblaje, con inspecciones independientes posteriores al reensamblaje antes de la puesta en servicio",
+        "Analizar históricos de fallas de mantenimiento para confirmar predominancia de errores de instalación, incluidas las omisiones en cubiertas, sujetadores"
       ],
       "entregable_esperado": "Procedimiento de reinstalación con checklist de verificación por pasos críticos",
       "nodos_previos": [
-        "riesgo_actividades_mantenimiento"
+        "riesgo_actividades_mantenimiento",
+        "fallas_activas_condiciones_latentes"
       ],
       "nodos_siguientes": [
-        "prevalencia_omisiones"
+        "prevalencia_omisiones",
+        "documentacion_mantenimiento_linea_base",
+        "fallas_activas_condiciones_latentes"
       ],
       "condiciones_activacion": [
         "Cuando se diseñan o revisan procedimientos de mantenimiento",
         "Cuando ocurren fallas repetidas tras intervenciones de mantenimiento"
       ],
-      "etiqueta_arbol": "Cuida más al Reinstalar"
+      "etiqueta_arbol": "Cuida más al Reinstalar",
+      "ids_alias": [
+        "omisiones_en_mantenimiento"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "omisiones_en_mantenimiento",
+          "titulo": "Omisiones en Reensamblaje durante Mantenimiento",
+          "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+        }
+      ]
     },
     "wallas_cuatro_etapas_pensamiento_creativo": {
       "node_id": "wallas_cuatro_etapas_pensamiento_creativo",
@@ -125502,7 +125739,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 151,
+    "nodos_sin_enlaces_entrantes": 163,
     "enlaces_rotos_en_grafo": 0
   }
 }

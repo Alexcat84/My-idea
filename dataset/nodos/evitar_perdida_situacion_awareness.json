@@ -9,11 +9,13 @@
     "Evitar usar 'pérdida de situation awareness' como causa explicativa en informes de investigación",
     "En lugar de eso, preguntar qué hizo que la interpretación de la situación por parte del operador tuviera sentido en ese momento",
     "Definir claramente qué normativa o estándar se está usando para juzgar el comportamiento, evitando el conocimiento retrospectivo como referencia",
-    "Reconstruir el 'túnel' del operador: qué información tenía disponible, qué presiones enfrentaba, qué opciones parecían razonables"
+    "Reconstruir el 'túnel' del operador: qué información tenía disponible, qué presiones enfrentaba, qué opciones parecían razonables",
+    "Rechazar el uso de este término en contextos legales o disciplinarios como sustituto de una explicación causal real"
   ],
   "entregable_esperado": "Un informe de investigación que reemplace la etiqueta de 'pérdida de situation awareness' por una explicación basada en el contexto y la perspectiva del operador",
   "nodos_previos": [
-    "critica_ground_truth_investigacion"
+    "critica_ground_truth_investigacion",
+    "cumplimiento_vs_violacion"
   ],
   "nodos_siguientes": [
     "evitar_uso_complacencia"
@@ -23,5 +25,15 @@
     "Si se está considerando responsabilidad legal o disciplinaria basada en este concepto",
     "Cuando se diseña un programa de entrenamiento en factores humanos"
   ],
-  "etiqueta_arbol": "No Uses Esa Etiqueta Fácil"
+  "etiqueta_arbol": "No Uses Esa Etiqueta Fácil",
+  "ids_alias": [
+    "critica_perdida_de_conciencia_situacional"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "critica_perdida_de_conciencia_situacional",
+      "titulo": "Crítica al Concepto 'Pérdida de Conciencia Situacional'",
+      "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    }
+  ]
 }

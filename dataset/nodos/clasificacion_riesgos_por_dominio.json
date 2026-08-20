@@ -9,12 +9,14 @@
     "Mapear los cuatro tipos de riesgo (personal, operador clave, latente, terceros) específicos del dominio de la organización",
     "Comparar el perfil de riesgo actual contra dominios similares usando referencias históricas",
     "Identificar si el enfoque de gestión de riesgos está desactualizado respecto a cambios tecnológicos o sociales recientes",
-    "Priorizar recursos de gestión de riesgo según el tipo de riesgo predominante en el dominio, no solo en lesiones personales"
+    "Priorizar recursos de gestión de riesgo según el tipo de riesgo predominante en el dominio, no solo en lesiones personales",
+    "Definir cómo vas a vigilar cada tipo de riesgo que identifiques"
   ],
   "entregable_esperado": "Matriz de clasificación de riesgos por tipo (personal, operador, latente, terceros) específica para la organización, con nivel estimado de cada uno",
   "nodos_previos": [
     "modelo_accidente_organizacional",
-    "condiciones_latentes_organizacionales"
+    "condiciones_latentes_organizacionales",
+    "modelos_gestion_seguridad"
   ],
   "nodos_siguientes": [
     "condiciones_latentes_riesgo_universal",
@@ -22,7 +24,18 @@
   ],
   "condiciones_activacion": [
     "Cuando la organización opera en un sector de alto riesgo (nuclear, oil&gas, aviación, salud) y necesita evaluar su exposición real",
-    "Cuando existe sospecha de que el enfoque de seguridad está enfocado en el riesgo equivocado"
+    "Cuando existe sospecha de que el enfoque de seguridad está enfocado en el riesgo equivocado",
+    "Después de un incidente que muestre un tipo de riesgo que no habías tomado en cuenta, por ejemplo el riesgo para terceros"
   ],
-  "etiqueta_arbol": "Clasifica tus Riesgos por Dominio"
+  "etiqueta_arbol": "Clasifica tus Riesgos por Dominio",
+  "ids_alias": [
+    "areas_riesgo_primario"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "areas_riesgo_primario",
+      "titulo": "Cuatro Áreas Primarias de Riesgo en Tecnologías Peligrosas",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

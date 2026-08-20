@@ -7,20 +7,36 @@
   "resumen_teorico": "Diseña tus rutas de salida para que el camino de escape sea obvio, directo y esté libre de obstáculos, con puertas que se abran sin necesidad de llave ni herramienta especial mientras el lugar esté ocupado. Evita usar puertas giratorias, corredizas o elevadizas como salidas obligatorias, y garantiza mecanismos de apertura rápida (como el hardware de pánico) que funcionen incluso en cuartos fríos bloqueados desde afuera. Cuando planifiques tus emergencias, piensa también en poner barreras para que nadie salga directo al tráfico de vehículos.",
   "pasos_accionables": [
     "Verifica que las puertas de salida no estén bloqueadas, cerradas con llave u obstruidas",
-    "Confirma que las puertas se abran sin necesidad de llave, herramienta o conocimiento especial mientras el lugar está ocupado",
+    "Confirma que las puertas se abran sin necesidad de llave, herramienta o conocimiento especial mientras el lugar está ocupado, y con bisagra lateral",
     "Revisa que no uses puertas giratorias, corredizas o elevadizas como salidas obligatorias",
-    "Instala hardware de pánico en las puertas de salida que lo requieran",
+    "Instala hardware de pánico en las puertas de salida que lo requieran, que abran con poca fuerza, según el estándar de tu país",
     "Asegura mecanismos de liberación interna en los cuartos fríos, incluso si están bloqueados desde afuera",
     "Coloca barreras y señalización donde las salidas den directo a zonas de tráfico vehicular"
   ],
   "entregable_esperado": "Tu checklist de rutas de salida y emergencias completado, con las deficiencias en puertas y accesos de salida ya corregidas.",
   "nodos_previos": [
-    "autoinspeccion_lugar_de_trabajo"
+    "autoinspeccion_lugar_de_trabajo",
+    "caracterizacion_priorizacion_peligros"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "plan_de_accion_de_emergencia",
+    "senalizacion_de_salidas"
+  ],
   "condiciones_activacion": [
     "Cuando diseñes o revises el plan de evacuación de tu lugar de trabajo",
-    "Cuando detectes puertas o rutas de salida bloqueadas u obstruidas"
+    "Cuando detectes puertas o rutas de salida bloqueadas u obstruidas",
+    "Si tu negocio tiene un local físico con varias personas trabajando",
+    "Si necesitas cumplir con la normativa de seguridad sobre rutas de escape en tu país"
   ],
-  "etiqueta_arbol": "Planifica tus Rutas de Escape"
+  "etiqueta_arbol": "Planifica tus Rutas de Escape",
+  "ids_alias": [
+    "rutas_de_salida_y_puertas_de_emergencia"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "rutas_de_salida_y_puertas_de_emergencia",
+      "titulo": "Diseño y Mantenimiento de Rutas de Salida y Puertas de Emergencia",
+      "fuente": "SMALL_BUSINESS"
+    }
+  ]
 }

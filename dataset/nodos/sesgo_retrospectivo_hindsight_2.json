@@ -8,19 +8,35 @@
   "pasos_accionables": [
     "No te preguntes '¿por qué no hice...?' o '¿por qué no hizo...?', esa pregunta ya asume que la respuesta era obvia",
     "Reconstruye la situación tal como la viviste o la vivió la otra persona, sin usar lo que ya sabes ahora del resultado",
-    "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento",
-    "No conviertas la secuencia de eventos en una causa y efecto simple, la realidad casi nunca fue tan lineal"
+    "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, sin olvidar el volumen de información disperso entre los participantes",
+    "No conviertas la secuencia de eventos en una causa y efecto simple, la realidad casi nunca fue tan lineal",
+    "Entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo."
   ],
   "entregable_esperado": "Una reconstrucción en orden cronológico de la situación, contada desde lo que sabías o sabía la otra persona en ese momento, sin dejar que el resultado final contamine esa mirada",
   "nodos_previos": [
-    "caso_descarrilamiento_nakina"
+    "condiciones_latentes_largo_plazo"
   ],
   "nodos_siguientes": [
     "analisis_factores_distales_proximales",
-    "fijacion_cognitiva"
+    "fijacion_cognitiva",
+    "cuanto_sabes_y_cuanto_solo_crees",
+    "cultura_generativa_westrum",
+    "revision_de_aprendizaje"
   ],
   "condiciones_activacion": [
-    "Cuando estés revisando un error o un incidente para entender qué pasó y aprender de él"
+    "Cuando estés revisando un error o un incidente para entender qué pasó y aprender de él",
+    "Cuando se realiza una investigación post-accidente y se evalúa la culpabilidad o previsibilidad de los actores.",
+    "Cuando se diseñan procesos de aprendizaje organizacional a partir de fallos."
   ],
-  "etiqueta_arbol": "Reconoce el Sesgo Retrospectivo"
+  "etiqueta_arbol": "Reconoce el Sesgo Retrospectivo",
+  "ids_alias": [
+    "sesgo_retrospectivo_hindsight"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "sesgo_retrospectivo_hindsight",
+      "titulo": "Sesgo Retrospectivo (Hindsight Bias) en el Análisis de Accidentes",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

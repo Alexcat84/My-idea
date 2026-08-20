@@ -8,21 +8,33 @@
   "pasos_accionables": [
     "Auditar los sistemas automatizados críticos identificando cuántos modos operativos posee cada uno",
     "Evaluar si el diseño de la interfaz permite detectar fácilmente transiciones de modo",
-    "Entrenar a los operadores en el reconocimiento de todos los modos posibles y sus transiciones",
-    "Implementar retroalimentación clara y visible ante cada cambio de modo del sistema"
+    "Entrenar a los operadores en el reconocimiento de todos los modos posibles y sus transiciones, y en la lógica interna de transición de modos",
+    "Implementar retroalimentación clara y visible ante cada cambio de modo del sistema, reduciendo la carga cognitiva en momentos de alta demanda"
   ],
   "entregable_esperado": "Informe de auditoría de automatización con matriz de modos operativos y riesgos de confusión asociados",
   "nodos_previos": [
     "modelo_barreras_swiss_cheese",
-    "modelo_barreras_defensas"
+    "modelo_barreras_defensas",
+    "ironias_de_la_automatizacion"
   ],
   "nodos_siguientes": [
     "defensas_en_profundidad",
-    "gestion_falsas_alarmas"
+    "gestion_falsas_alarmas",
+    "defensas_peligrosas_paradojas"
   ],
   "condiciones_activacion": [
     "Cuando la organización opera sistemas altamente automatizados (aviación, plantas nucleares, anestesia)",
     "Si se han reportado incidentes de confusión operador-máquina"
   ],
-  "etiqueta_arbol": "Entiende tu Sistema Automatizado"
+  "etiqueta_arbol": "Entiende tu Sistema Automatizado",
+  "ids_alias": [
+    "confusion_modos_automatizacion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "confusion_modos_automatizacion",
+      "titulo": "Confusión de Modos en Sistemas Automatizados (Mode Confusion)",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

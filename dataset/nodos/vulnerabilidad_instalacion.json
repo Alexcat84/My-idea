@@ -7,20 +7,33 @@
   "resumen_teorico": "Dentro del mantenimiento, la fase de reinstalación/reensamblaje es mucho más propensa a errores que el desensamblaje. El desensamblaje tiene una secuencia natural cuya lógica está 'en el mundo' (solo hay una forma correcta), mientras que la reinstalación permite múltiples combinaciones erróneas (ej. 8 tuercas = 40,320 formas de reensamblar mal) y los errores suelen quedar ocultos. Datos de aviación (Boeing, Pratt & Whitney, UK CAA) confirman que la instalación incompleta, dañada o incorrecta son las causas más frecuentes de fallas.",
   "pasos_accionables": [
     "Diseñar procedimientos de reinstalación con secuencias claramente numeradas y verificables",
-    "Implementar listas de verificación específicas para pasos de reensamblaje",
-    "Aumentar la supervisión y doble verificación durante la fase de instalación, no solo desensamblaje",
-    "Analizar históricos de fallas de mantenimiento para confirmar predominancia de errores de instalación"
+    "Implementar listas de verificación específicas para pasos de reensamblaje, obligatorias y con firma paso a paso",
+    "Aumentar la supervisión y doble verificación durante la fase de instalación, no solo desensamblaje, con inspecciones independientes posteriores al reensamblaje antes de la puesta en servicio",
+    "Analizar históricos de fallas de mantenimiento para confirmar predominancia de errores de instalación, incluidas las omisiones en cubiertas, sujetadores"
   ],
   "entregable_esperado": "Procedimiento de reinstalación con checklist de verificación por pasos críticos",
   "nodos_previos": [
-    "riesgo_actividades_mantenimiento"
+    "riesgo_actividades_mantenimiento",
+    "fallas_activas_condiciones_latentes"
   ],
   "nodos_siguientes": [
-    "prevalencia_omisiones"
+    "prevalencia_omisiones",
+    "documentacion_mantenimiento_linea_base",
+    "fallas_activas_condiciones_latentes"
   ],
   "condiciones_activacion": [
     "Cuando se diseñan o revisan procedimientos de mantenimiento",
     "Cuando ocurren fallas repetidas tras intervenciones de mantenimiento"
   ],
-  "etiqueta_arbol": "Cuida más al Reinstalar"
+  "etiqueta_arbol": "Cuida más al Reinstalar",
+  "ids_alias": [
+    "omisiones_en_mantenimiento"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "omisiones_en_mantenimiento",
+      "titulo": "Omisiones en Reensamblaje durante Mantenimiento",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

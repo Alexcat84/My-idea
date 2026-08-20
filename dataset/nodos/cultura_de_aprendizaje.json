@@ -6,8 +6,8 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Una cultura de aprendizaje es la voluntad y competencia de una organización para extraer las conclusiones correctas de su sistema de información de seguridad, y la disposición a implementar reformas importantes cuando se indica su necesidad. Es el subcomponente final que cierra el ciclo de la cultura de seguridad, transformando la información recolectada en acciones concretas de mejora del sistema.",
   "pasos_accionables": [
-    "Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad",
-    "Definir procesos de decisión para implementar reformas basadas en hallazgos",
+    "Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad, incluida una forma sistematica de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar",
+    "Definir procesos de decisión para implementar reformas basadas en hallazgos, comprometiendo tu tiempo y tus recursos explícitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas",
     "Medir la efectividad de las reformas implementadas mediante seguimiento continuo",
     "Institucionalizar la revisión periódica de lecciones aprendidas"
   ],
@@ -16,14 +16,29 @@
     "cultura_de_reporte",
     "cultura_justa",
     "cultura_flexible",
-    "cultura_de_seguridad_componentes"
+    "cultura_de_seguridad_componentes",
+    "auftragssystem_supervision_autonoma",
+    "cultura_como_mecanismo_descentralizacion"
   ],
   "nodos_siguientes": [
-    "cultura_de_seguridad_componentes"
+    "cultura_de_seguridad_componentes",
+    "evaluacion_cultura_seguridad_completa"
   ],
   "condiciones_activacion": [
     "Cuando la organización recolecta datos de seguridad pero no actúa sobre ellos",
-    "Al cerrar el ciclo de mejora continua en gestión de seguridad organizacional"
+    "Al cerrar el ciclo de mejora continua en gestión de seguridad organizacional",
+    "Cuando pospones reformas de seguridad por tareas 'más urgentes'",
+    "Cuando quieres evitar repetir errores que ya identificaste"
   ],
-  "etiqueta_arbol": "Aprende de tus Propios Errores"
+  "etiqueta_arbol": "Aprende de tus Propios Errores",
+  "ids_alias": [
+    "ingenieria_cultura_aprendizaje"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "ingenieria_cultura_aprendizaje",
+      "titulo": "Cómo construir una cultura de aprendizaje en tu negocio",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

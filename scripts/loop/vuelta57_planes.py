@@ -484,6 +484,218 @@ LOTES["B"] = {
 }
 
 
+LOTES["C"] = {
+    "titulo": "4, LOTE C DE LA VUELTA 57: LOS ACTOS 35 A 50 EN EL ORDEN IMPRESO DEL TRAMO, LOS DIECISEIS SIN APARTAR NINGUNO. Es el primer lote de la campana en el que la vara de LO DECLARADO gana a un conteo CUATRO veces (actos 41, 45, 47 y 50), y las cuatro van marcadas como discutibles en el reporte",
+    "actos": [
+        {
+            "orden": 35,
+            "superviviente": "ferias_comerciales_franquicia",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA RAZON DECLARA EL MISMO SUPERVIVIENTE. Pasos 6 contra 5 a favor de ferias_comerciales_franquicia; condiciones 2 contra 2, empatadas. UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4), asi que el cableado NO habla, y se dice que ADEMAS EMPATA (3 contra 3). La razon del puesto 2202 escribe SOBREVIVE ferias_comerciales_franquicia y lo sostiene con la vara del banco 9.6.1: lo propio del que muere son DOS TACTICAS SUELTAS que caben en una linea, y el que sobrevive si trae procedimiento propio, entre otras cosas pedir las estadisticas de asistentes de ediciones pasadas y contactar a quienes expusieron antes.",
+            "pasos": {
+                "1": ["INCISO", 1, "la region donde quieres crecer", ", y con "],
+                "2": ["INCISO", 4, "tarifas de hotel y reserva vuelos con anticipacion", ", y para reducirlos negocia "],
+                "3": ["INCISO", 5, "un mini folleto economico para repartir a todos y un folleto completo para los prospectos que realmente te interesan", ", con "],
+                "4": ["CUBIERTO", 5],
+                "5": ["INCISO", 6, "inmediato", ", y que sea "],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"]},
+            "nota": "NINGUNA PIEZA DE PASO VIAJA ENTERA Y LAS DOS TACTICAS QUE LA RAZON DECLARA PROPIAS DEL QUE MUERE SE SALVAN LAS DOS DE INCISO, que es lo que la razon manda al decir que se absorben como lineas suyas: negociar hotel y vuelos con anticipacion se adosa al paso 4 del superviviente, que es el del costeo; y los DOS FOLLETOS, el barato para todos y el completo para los que interesan, se adosan a su paso 5, que es el del estand. Otros dos incisos afinan alcance y ritmo: la REGION donde se quiere crecer como criterio de eleccion de feria, y el INMEDIATO del seguimiento. SUS DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos: TENER PRESUPUESTO suficiente para presencia fisica, y QUERER COMPETIR mostrando la marca frente a otros franquiciadores; las dos del superviviente hablan de buscar contacto cara a cara y de tener un perfil de inversor muy especifico. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 36,
+            "superviviente": "mix_ubicaciones_corporativas_franquicia",
+            "motivo": "TODAS LAS VARAS DE CONTENIDO DE ACUERDO, Y LA RAZON DECLARA EL MISMO SUPERVIVIENTE. Pasos 4 contra 6 y condiciones 2 contra 3, las dos a favor de mix_ubicaciones_corporativas_franquicia. EL CABLEADO APUNTA AL OTRO (6 contra 4) y por P.8 no le toca hablar, porque el contenido no calla. La razon del puesto 2204 escribe SOBREVIVE mix_ubicaciones_corporativas_franquicia: lo que le queda propio al otro son DOS AVISOS, y una advertencia es LINEA por la precision del banco 9.6.1, mientras que el superviviente trae EL MENU NOMBRADO DE CUATRO ESTRATEGIAS DE UBICACION con sus criterios de validacion y riesgo.",
+            "pasos": {
+                "1": ["INCISO", 1, "una iniciativa separada que no compita con el desarrollo corporativo", ", lanzando el canal de franquicia como "],
+                "2": ["INCISO", 4, "para evitar encroachment", ", y "],
+                "3": ["INCISO", 6, "en mercados distantes", ", y en especial las de "],
+                "4": ["INCISO", 2, "recursos dedicados suficientes para crecer sin canibalizarse", ", asegurando a los dos canales "],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"]},
+            "nota": "NINGUNA PIEZA DE PASO VIAJA ENTERA Y LAS CUATRO SE SALVAN DE INCISO, que es lo que la razon manda al decir que las dos advertencias se absorben como lineas suyas: la de LANZAR EL CANAL COMO INICIATIVA SEPARADA se adosa al paso 1 del superviviente, que es donde se decide si se siguen abriendo locales propios en paralelo; y la de los RECURSOS DEDICADOS PARA NO CANIBALIZARSE se adosa a su paso 2, que es donde se mira el capital disponible. Las otras dos son las que la razon mide como ya presentes: el ENCROACHMENT como nombre del conflicto de territorio, adosado a su paso 4; y los MERCADOS DISTANTES como el caso en que la tienda corporativa sirve de centro de entrenamiento, adosado a su paso 6, que ya nombra ese uso sin decir donde. SU CONDICION 2 VIAJA ENTERA por ser un disparador distinto: MAXIMIZAR EL VALOR de la empresa combinando los dos canales no lo dice ninguna de las tres del superviviente. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 37,
+            "superviviente": "rutas_salida_planificacion_emergencias",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA RAZON DECLARA EL MISMO SUPERVIVIENTE. Pasos 5 contra 6 a favor de rutas_salida_planificacion_emergencias; condiciones 2 contra 2, empatadas. UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4), asi que el cableado NO habla, y se dice porque apuntaba al OTRO (3 contra 1). La razon del puesto 2223 escribe SOBREVIVE rutas_salida_planificacion_emergencias: lo unico propio del que muere son DOS LINEAS (la bisagra lateral y el estandar del pais para el herraje), y ademas la bisagra lateral es el reverso de una linea que el superviviente SI tiene, la prohibicion de puertas giratorias, corredizas o elevadizas.",
+            "pasos": {
+                "1": ["INCISO", 2, "bisagra lateral", ", y con "],
+                "2": ["CUBIERTO", 1],
+                "3": ["INCISO", 4, "que abran con poca fuerza, segun el estandar de tu pais", ", "],
+                "4": ["CUBIERTO", 5],
+                "5": ["CUBIERTO", 6],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"]},
+            "nota": "NINGUNA PIEZA DE PASO VIAJA ENTERA Y LAS DOS LINEAS PROPIAS SE SALVAN LAS DOS DE INCISO: la BISAGRA LATERAL se adosa al paso 2 del superviviente, que es el que exige que la puerta abra sin llave; y el QUE ABRAN CON POCA FUERZA SEGUN EL ESTANDAR DEL PAIS se adosa a su paso 4, que instala el herraje de panico sin decir con que fuerza ni contra que norma. Los otros tres pasos quedan cubiertos uno a uno: las rutas libres y senalizadas por su paso 1, la liberacion interna de las camaras frias por su paso 5, y las barreras hacia el trafico vehicular por su paso 6. SUS DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos: TENER UN LOCAL FISICO CON VARIAS PERSONAS TRABAJANDO, y NECESITAR CUMPLIR LA NORMATIVA del pais; las dos del superviviente hablan de disenar o revisar el plan de evacuacion y de detectar puertas bloqueadas. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 38,
+            "superviviente": "responsabilidad_prospectiva",
+            "motivo": "LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1), Y AQUI EL CONTENIDO NO TIENE ENTRE QUIEN ELEGIR. responsabilidad_prospectiva ES PUERTA (extremo de puente aprobado) y la guarda 1B exige que sobreviva: es el UNICO candidato limpio del acto. EL CHOQUE SE REGISTRA CON SUS CIFRAS Y ES DE PIEZA DECLARADA, que es una TERCERA especie de choque de puerta y por eso se dice aparte de las dos anteriores: los conteos de contenido EMPATAN AL DIGITO (pasos 4 contra 4 y condiciones 2 contra 2) y el cableado apunta a la puerta (3 contra 4), asi que ni los conteos ni el cableado contradicen a la guarda. QUIEN CONTRADICE ES LA RAZON: el puesto 2230 escribe SOBREVIVE rendicion_cuentas_prospectiva, porque ese nodo trae dos cosas que el otro no tiene, COMPARTIR EL RELATO DE LA PERSONA INVOLUCRADA como mecanismo y DAR APOYO A LA SEGUNDA VICTIMA. LAS DOS VIAJAN ENTERAS EN EL REPARTO, asi que la eleccion de la guarda no cuesta ninguna de las dos piezas por las que la razon la prefiere. VA MARCADO COMO DISCUTIBLE EN EL REPORTE.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 2],
+                "3": ["APPEND"],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"]},
+            "nota": "DOS PIEZAS VIAJAN ENTERAS Y SON EXACTAMENTE LAS DOS POR LAS QUE LA RAZON PREFERIA AL OTRO NODO, que es lo que hace defendible respetar la guarda sin perder nada: COMPARTIR EL RELATO DE LA PERSONA INVOLUCRADA para que todos aprendan en lugar de sancionarla, que convierte el anuncio del paso 4 del superviviente en un mecanismo; y DAR APOYO A QUIEN VIVIO EL INCIDENTE DE CERCA PORQUE TAMBIEN CARGA CON EL GOLPE, la segunda victima, que la razon mide que no aparece en ninguna linea del superviviente. Sus dos primeros pasos quedan cubiertos: cambiar quien fallo por que hay que cambiar es el paso 1 del superviviente, y decidir quien ejecuta las mejoras y quien revisa que funcionaron son sus pasos 2 y 3, y se marca contra el 2 porque es el que asigna. SUS DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos: DESPUES DE UN INCIDENTE que se quiere aprovechar para aprender, y QUERER DEJAR EL CASTIGO y pasar a la mejora continua; las dos del superviviente hablan de decidir como se manejaran los errores y de que la gente cuente los problemas sin miedo. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 39,
+            "superviviente": "capacitacion_educacion_seguridad",
+            "motivo": "TODAS LAS VARAS DE CONTENIDO DE ACUERDO, Y LA RAZON DECLARA EL MISMO SUPERVIVIENTE. Pasos 4 contra 6 y condiciones 2 contra 3, las dos a favor de capacitacion_educacion_seguridad, y el cableado apunta al mismo lado (7 contra 9) aunque por P.8 no le toque hablar. La razon del puesto 2232 escribe SOBREVIVE capacitacion_educacion_seguridad y nombra las TRES cosas que solo el tiene: formar a quienes supervisan en liderazgo e investigacion de incidentes, capacitar en reconocimiento de peligros y jerarquia de controles, y considerar cursos de certificacion segun el rol. Y DEJA REGISTRADA UNA FIGURA NUEVA que se traslada aqui sin tocarla: LA MISMA NORMA EN DOS FOLLETOS, porque la repeticion no viene de dos autores que piensan parecido sino de dos publicaciones del MISMO organismo (OSHA3885 y OSHA3886) que cubren el mismo requisito con distinto detalle.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 3],
+                "3": ["CUBIERTO", 5],
+                "4": ["INCISO", 2, "a reportar sin temor a represalias", ", incluido el derecho "],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["CUBIERTO", 1]},
+            "nota": "NINGUNA PIEZA DE PASO VIAJA ENTERA Y NINGUNA SE PIERDE: capacitar en politicas, metas y procedimientos es el paso 1 del superviviente; ensenar a reportar peligros, lesiones y casi accidentes es su paso 3; e impartirlo en el idioma y nivel adecuado es su paso 5. UN INCISO, y es el que la razon mide como el unico que estaba DENTRO de otro paso y no pareado: el DERECHO A REPORTAR SIN TEMOR A REPRESALIAS, adosado al paso 2 del superviviente, que habla de la proteccion de los derechos de los trabajadores sin nombrar este. SU CONDICION 1 VIAJA ENTERA por ser un disparador distinto: AL LANZAR UN NUEVO PROGRAMA de seguridad y salud no lo dice ninguna de las tres del superviviente, que hablan de incorporaciones, de brechas de conocimiento y de nuevos controles. Su condicion 2 queda cubierta por la condicion 1 del superviviente, que nombra a los nuevos trabajadores. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 40,
+            "superviviente": "confusion_de_modos_automatizacion",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA RAZON DECLARA EL MISMO SUPERVIVIENTE. Pasos 4 contra 3 a favor de confusion_de_modos_automatizacion; condiciones 2 contra 2, empatadas. UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4), asi que el cableado NO habla, y se dice que apuntaba AL MISMO LADO (3 contra 2). La razon del puesto 2235 escribe SOBREVIVE confusion_de_modos_automatizacion: lo unico propio del otro son DOS MATICES que son LINEA, y el superviviente trae un paso mas y una cuenta que el otro no pide, INVENTARIAR CUANTOS MODOS OPERATIVOS TIENE CADA SISTEMA CRITICO, ademas de separar el diagnostico de la interfaz del remedio.",
+            "pasos": {
+                "1": ["CUBIERTO", 2],
+                "2": ["INCISO", 3, "la logica interna de transicion de modos", ", y en "],
+                "3": ["INCISO", 4, "reduciendo la carga cognitiva en momentos de alta demanda", ", "],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["CUBIERTO", 2]},
+            "nota": "NINGUNA PIEZA VIAJA ENTERA Y LOS DOS MATICES QUE LA RAZON DECLARA PROPIOS DEL QUE MUERE SE SALVAN LOS DOS DE INCISO: la LOGICA INTERNA DE TRANSICION DE MODOS, que es el grano de profundidad que el paso 3 del superviviente no fija al entrenar en los modos y sus transiciones; y el REDUCIR LA CARGA COGNITIVA EN MOMENTOS DE ALTA DEMANDA, que es el motivo del rediseno y que su paso 4 no dice. Su paso 1 queda cubierto por el paso 2 del superviviente, que evalua si la interfaz permite detectar las transiciones. Sus dos condiciones quedan cubiertas una a una: operar sistemas con multiples modos por la condicion 1, e investigar sorpresas de automatizacion por la condicion 2, que habla de incidentes de confusion operador maquina. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 41,
+            "superviviente": "clasificacion_sistemas_por_nivel_seguridad",
+            "motivo": "LA PIEZA DECLARADA GANA A UN CONTEO, Y VA MARCADO COMO DISCUTIBLE. Los pasos apuntan al OTRO (3 contra 4 a favor de niveles_de_madurez_de_seguridad); las condiciones EMPATAN (2 contra 2) y el cableado apunta tambien al otro (2 contra 3). LA PIEZA DECLARADA APUNTA AQUI, Y ES LA UNICA VARA QUE LO HACE: la razon del puesto 2250 escribe SOBREVIVE clasificacion_sistemas_por_nivel_seguridad y mide por que, porque este trae EL INSTRUMENTO y el otro solo el aviso: LA ESCALERA NOMBRADA (unsafe, safer, safe y ultra safe), LA BASE DE MEDICION (datos historicos de fatalidad o lesion) y LAS ESTRATEGIAS NOMBRADAS POR PELDANO. Del otro dice que le queda UNA LINEA propia y que su paso 2 identifica las intervenciones SIN NOMBRARLAS. LA VARA QUE SE APLICA es la del acta 53 pregunta 3 y el acta 54 pregunta 2, GANA LO DECLARADO Y NO EL CONTEO, que es la misma que el acta 56 confirmo para el acto 23 del tramo 3. SE DICE EL RIESGO EN VEZ DE CALLARLO: el acta 50, adjudicacion 3, dice que en el choque entre la letra y la aritmetica manda la aritmetica, y por eso este acto va al reporte marcado.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["INCISO", 2, "han funcionado historicamente en ese nivel", ", entre las que "],
+                "3": ["CUBIERTO", 3],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente la unica linea que la razon declara propia del que muere: AJUSTAR LAS INVERSIONES EN SEGURIDAD SEGUN EL NIVEL DE MADUREZ DETECTADO. UN INCISO: el criterio de que las intervenciones sean las que HAN FUNCIONADO HISTORICAMENTE EN ESE NIVEL, adosado al paso 2 del superviviente, que nombra las tres estrategias sin decir de donde sale que corresponden. Sus otros dos pasos quedan cubiertos uno a uno. SU CONDICION 2 VIAJA ENTERA por ser un disparador distinto: que LAS INTERVENCIONES ANTERIORES NO HAYAN FUNCIONADO como se esperaba no lo dice ninguna de las dos del superviviente. CERO perdidas nombradas, Y ESO IMPORTA AQUI MAS QUE EN OTROS ACTOS: el nodo que muere tiene MAS pasos que el que sobrevive, asi que la unica forma de que la eleccion no cueste nada es que sus cuatro piezas viajen, y las cuatro viajan.",
+        },
+        {
+            "orden": 42,
+            "superviviente": "accident_proneness_fallacy",
+            "motivo": "LOS CONTEOS EMPATAN Y LA PIEZA DECLARADA DECIDE. Pasos 3 contra 3 y condiciones 2 contra 2: las dos varas contables de contenido empatan al digito. PERO EL CONTENIDO NO CALLA, porque EL MATERIAL PROPIO DECLARADO ES UNA VARA DE CONTENIDO (acta 54, pregunta 4) y aqui esta A UN SOLO LADO Y CON TODAS SUS LETRAS: la razon del puesto 2252 escribe que a declive_teoria_manzana_podrida NO LE QUEDA NI UNA LINEA PROPIA, y que accident_proneness_fallacy trae dos cosas suyas, LAS VARIABLES DE EXPOSICION NOMBRADAS (tipo de tarea, ruta y turno), que convierten el aviso en una comparacion que se puede hacer, y LA PROHIBICION CONCRETA de usar perfiles de propension para contratar o despedir, que es la unica frontera institucional del par. El cableado apuntaba al otro (2 contra 3) y NO llega a hablar, porque el contenido no calla.",
+            "pasos": {
+                "1": ["INCISO", 1, "que asumen exposicion al riesgo homogenea entre trabajadores", ", incluidas las "],
+                "2": ["INCISO", 2, "antes de atribuir culpa personal", ", y hacerlo "],
+                "3": ["CUBIERTO", 3],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["CUBIERTO", 1]},
+            "nota": "NINGUNA PIEZA DE PASO VIAJA ENTERA Y NINGUNA SE PIERDE, que es lo que cabe esperar cuando la razon mide que al que muere NO LE QUEDA NI UNA LINEA PROPIA. DOS INCISOS que afinan la misma critica: la forma EXPOSICION HOMOGENEA de la estadistica sospechosa, adosada al paso 1 del superviviente; y el ANTES DE ATRIBUIR CULPA PERSONAL como momento del analisis de exposicion, adosado a su paso 2. SU CONDICION 1 VIAJA ENTERA por ser un disparador distinto: atribuir un accidente RECURRENTE unicamente a caracteristicas personales de un trabajador no lo dice ninguna de las dos del superviviente, que hablan de evidencia estadistica comparativa y de usar historiales como criterio de seleccion. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 43,
+            "superviviente": "cultura_justa",
+            "motivo": "LA GUARDA RESTRINGE Y ADEMAS LOS TRES CONTEOS APUNTAN AL MISMO LADO. cultura_justa ES PUERTA (extremo de puente aprobado) y la guarda 1B exige que sobreviva: es el UNICO candidato limpio del acto. Y AQUI, A DIFERENCIA DE LOS ACTOS 20 Y 38, NO HAY CHOQUE DE CONTEOS: los pasos (5 contra 4), las condiciones (3 contra 2) y el cableado (16 contra 4) apuntan LOS TRES a cultura_justa. QUIEN APUNTA AL OTRO LADO ES LA RAZON, y se dice con sus palabras: el puesto 2255 escribe SOBREVIVE cultura_justa_organizacional porque ese nodo trae UNA INSTITUCION PERMANENTE que el otro no tiene, EL GRUPO DE CONFIANZA QUE REVISA LOS CASOS DIFICILES O AMBIGUOS, y la propia razon se califica como DE LOS MAS DISCUTIBLES y avisa de que muere el nodo de cinco pasos contra el de cuatro. LA GUARDA NO DEJA HACER LO QUE LA RAZON PIDE, y el grupo de confianza VIAJA ENTERO en el reparto, asi que la institucion no se pierde. VA MARCADO COMO DISCUTIBLE EN EL REPORTE.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 4],
+                "3": ["APPEND"],
+                "4": ["INCISO", 2, "por escrito", ", y dejarla "],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["CUBIERTO", 2]},
+            "nota": "UNA PIEZA VIAJA ENTERA Y ES EXACTAMENTE LA INSTITUCION POR LA QUE LA RAZON PREFERIA AL OTRO NODO: ARMAR UN GRUPO DE CONFIANZA QUE REVISE LOS CASOS DIFICILES O AMBIGUOS, que la razon llama lo unico del par que resuelve el caso donde los criterios no alcanzan. VA DE APPEND, que no pierde nada, y por eso la guarda puede mandar sin que el catalogo pague el precio que la razon temia. UN INCISO: el POR ESCRITO de la separacion entre error normal y mala conducta deliberada, adosado al paso 2 del superviviente, que traza esa linea sin exigir que quede escrita. Sus otros dos pasos quedan cubiertos. SU CONDICION 1 VIAJA ENTERA por ser un disparador distinto: BUSCAR QUE EL EQUIPO REPORTE ERRORES DE FORMA VOLUNTARIA no lo dice ninguna de las tres del superviviente, que hablan de ambiguedad sobre que sancionar, de desconfianza en el sistema disciplinario y de disenar politicas de manejo de errores. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 44,
+            "superviviente": "vulnerabilidad_instalacion",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA RAZON DECLARA EL MISMO SUPERVIVIENTE. Pasos 3 contra 4 a favor de vulnerabilidad_instalacion; condiciones 2 contra 2, empatadas. UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4), asi que el cableado NO habla, y se dice porque apuntaba al OTRO (5 contra 2). La razon del puesto 2264 escribe SOBREVIVE vulnerabilidad_instalacion: lo que el otro anade son TRES CALIFICATIVOS que son LINEA, y el superviviente trae un requisito de diseno que el otro no tiene, PROCEDIMIENTOS DE REINSTALACION CON SECUENCIAS NUMERADAS Y VERIFICABLES, mas la tesis que le da nombre y que ordena donde poner el esfuerzo, QUE LA INSTALACION ES MAS VULNERABLE QUE EL DESENSAMBLAJE.",
+            "pasos": {
+                "1": ["INCISO", 4, "cubiertas, sujetadores", ", incluidas las omisiones en "],
+                "2": ["INCISO", 2, "con firma paso a paso", ", obligatorias y "],
+                "3": ["INCISO", 3, "independientes posteriores al reensamblaje antes de la puesta en servicio", ", con inspecciones "],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["CUBIERTO", 2]},
+            "nota": "NINGUNA PIEZA VIAJA ENTERA Y LOS TRES CALIFICATIVOS QUE LA RAZON DECLARA PROPIOS DEL QUE MUERE SE SALVAN LOS TRES DE INCISO, que es lo que la razon manda al decir que la firma y la inspeccion independiente se absorben como lineas suyas: las OMISIONES HISTORICAS NOMBRADAS (cubiertas, sujetadores) se adosan al paso 4 del superviviente, que analiza los historicos sin decir en que; la FIRMA PASO A PASO y el caracter OBLIGATORIO se adosan a su paso 2, que implementa las listas sin exigir firma; y la INDEPENDENCIA DEL INSPECTOR con la PUERTA DE LA PUESTA EN SERVICIO se adosan a su paso 3, que aumenta la supervision sin decir de quien ni hasta cuando. Sus dos condiciones quedan cubiertas una a una. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 45,
+            "superviviente": "clasificacion_riesgos_por_dominio",
+            "motivo": "LA PIEZA DECLARADA GANA A UN CONTEO, Y VA MARCADO COMO DISCUTIBLE. Los pasos EMPATAN (4 contra 4); las condiciones apuntan al OTRO (3 contra 2 a favor de areas_riesgo_primario) y el cableado apunta aqui (1 contra 4). LA PIEZA DECLARADA APUNTA AQUI Y CON MEDICION: la razon del puesto 2265 escribe SOBREVIVE clasificacion_riesgos_por_dominio, mide que el paso 1 del otro HABLA DE LOS CUATRO TIPOS DE RIESGO SIN NOMBRAR NI UNO mientras este los nombra (personal, operador clave, latente y terceros), aplica la regla de que EL QUE REMITE SIN NOMBRAR ES EL DERIVADO, y anade que este trae DOS INSTRUMENTOS que el otro no tiene, el BENCHMARK contra dominios similares con referencias historicas y la FECHA DE CADUCIDAD sobre el propio marco (si el enfoque quedo desactualizado frente a cambios tecnologicos o sociales). Del otro dice que le queda UNA linea propia. LA VARA QUE SE APLICA es la del acta 53 pregunta 3 y el acta 54 pregunta 2, GANA LO DECLARADO Y NO EL CONTEO. SE DICE EL RIESGO EN VEZ DE CALLARLO, igual que en el acto 41.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 4],
+                "3": ["CUBIERTO", 4],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["CUBIERTO", 2], "3": ["APPEND"]},
+            "nota": "UNA PIEZA DE PASO VIAJA ENTERA y es exactamente la unica linea que la razon declara propia del que muere: DEFINIR COMO SE VIGILARA CADA TIPO DE RIESGO que se identifique. Sus otros tres pasos quedan cubiertos: identificar los cuatro tipos es el paso 1 del superviviente, que ademas los NOMBRA; y determinar cual es mas urgente y revisar si solo se ha mirado el de lesiones personales son los dos su paso 4, que prioriza segun el tipo predominante y no solo lesiones, y se marcan los dos contra el porque la razon los mide asi. SU CONDICION 3 VIAJA ENTERA por ser un disparador distinto y ademas es la que sostiene el conteo que este acto no siguio: DESPUES DE UN INCIDENTE que muestre un tipo de riesgo que no se habia tomado en cuenta, por ejemplo el de terceros. VIAJANDO ENTERA, la vara de las condiciones no cuesta nada: el superviviente termina con las tres. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 46,
+            "superviviente": "evitar_perdida_situacion_awareness",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA RAZON DECLARA EL MISMO SUPERVIVIENTE. Pasos 4 contra 4, empatados, y condiciones 2 contra 3 a favor de evitar_perdida_situacion_awareness, que es la unica vara de contenido no empatada del acto. UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4), asi que el cableado NO habla, y se dice que apuntaba AL MISMO LADO (1 contra 2). La razon del puesto 2268 escribe SOBREVIVE evitar_perdida_situacion_awareness: lo unico propio del otro es RECHAZAR EL TERMINO EN CONTEXTOS LEGALES O DISCIPLINARIOS, y una prohibicion es LINEA, mientras que el superviviente trae DOS PASOS DE TRABAJO, definir explicitamente que normativa o estandar se usa para juzgar el comportamiento, y RECONSTRUIR EL TUNEL DEL OPERADOR con sus tres elementos.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 4],
+                "3": ["CUBIERTO", 2],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["CUBIERTO", 2]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente la unica que la razon declara propia del que muere: RECHAZAR EL USO DEL TERMINO EN CONTEXTOS LEGALES O DISCIPLINARIOS como sustituto de una explicacion causal real. LA RAZON DICE QUE SE ABSORBE COMO LINEA SUYA Y AQUI VA DE APPEND, que es la forma que NO pierde nada, y se dice la diferencia en vez de darla por equivalente. Sus otros tres pasos quedan cubiertos uno a uno: evitar el termino como explicacion es el paso 1 del superviviente; reconstruir que informacion y contexto tenia el operador es su paso 4, el del TUNEL; y preguntar por que tenia sentido para ellos es su paso 2. Sus dos condiciones quedan cubiertas una a una. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 47,
+            "superviviente": "sesgo_retrospectivo_hindsight_2",
+            "motivo": "LA PIEZA DECLARADA GANA A UN CONTEO, Y VA MARCADO COMO DISCUTIBLE. LOS CONTEOS CHOCAN: pasos 3 contra 4 a favor de sesgo_retrospectivo_hindsight_2 y condiciones 2 contra 1 a favor de sesgo_retrospectivo_hindsight. El cableado NO PUEDE HABLAR porque el contenido no calla, CHOCA (acta 54, pregunta 4), y se dice que apuntaba al que muere (6 contra 3). LA PIEZA DECLARADA DESEMPATA Y APUNTA AL MISMO LADO QUE LOS PASOS: la razon del puesto 2281 escribe SOBREVIVE sesgo_retrospectivo_hindsight_2, mide que al otro le queda UNA linea propia (entrenar a los investigadores en el sesgo) y que este conserva DOS lineas de doctrina que el otro no tiene, el test de la forma de la pregunta y la advertencia contra la causa y efecto lineal. Y DEJA UNA COHERENCIA DECLARADA que se traslada sin tocarla: el nodo de Reason sobrevivio en los puestos 2234 y 2239 porque alli era el unico que preguntaba si la senal era siquiera visible; contra el unico nodo de Dekker que tambien lo pregunta, esa ventaja desaparece.",
+            "pasos": {
+                "1": ["CUBIERTO", 2],
+                "2": ["APPEND"],
+                "3": ["INCISO", 3, "el volumen de informacion disperso entre los participantes", ", sin olvidar "],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente la unica linea que la razon declara propia del que muere: ENTRENAR A LOS INVESTIGADORES DE INCIDENTES EN EL RECONOCIMIENTO Y MITIGACION DEL SESGO RETROSPECTIVO. UN INCISO: el VOLUMEN DE INFORMACION DISPERSO ENTRE LOS PARTICIPANTES, que es la formulacion operativa del test compartido y que el paso 3 del superviviente deja en distinguir lo disponible de lo observable. Su paso 1 queda cubierto por el paso 2 del superviviente, que reconstruye la situacion sin usar lo que ya se sabe del resultado. SUS DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos: evaluar LA CULPABILIDAD O PREVISIBILIDAD de los actores tras un accidente, y DISENAR PROCESOS DE APRENDIZAJE ORGANIZACIONAL a partir de fallos; la unica condicion del superviviente habla de revisar un error para entender que paso. CERO perdidas nombradas, y aqui importa decirlo: el superviviente pasa de UNA condicion a TRES, asi que la vara de las condiciones que apuntaba al otro queda saldada por el reparto.",
+        },
+        {
+            "orden": 48,
+            "superviviente": "limite_busqueda_causas_pendulo",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA RAZON DECLARA EL MISMO SUPERVIVIENTE. Pasos 4 contra 3 a favor de limite_busqueda_causas_pendulo; condiciones 2 contra 2, empatadas. UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4), asi que el cableado NO habla, y se dice que apuntaba AL MISMO LADO (4 contra 2). La razon del puesto 2328 escribe SOBREVIVE limite_busqueda_causas_pendulo: al otro le queda UN criterio propio que es UNA LINEA, y este trae dos cosas que el otro no tiene, EL TEST OPERATIVO (en que punto el analisis causal deja de aportar valor remedial practico), que es un criterio de utilidad y no de jurisdiccion, y EL CONTRAPESO QUE IMPIDE ABUSAR DE LA PROPIA REGLA (no diluir la responsabilidad organizacional atribuyendolo todo a fuerzas sociales incontrolables), sin el cual, dice la razon, una regla de parada es una excusa.",
+            "pasos": {
+                "1": ["CUBIERTO", 3],
+                "2": ["CUBIERTO", 3],
+                "3": ["APPEND"],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente el unico criterio que la razon declara propio del que muere: PRIORIZAR LA CALIDAD Y DISPONIBILIDAD DE EVIDENCIA CONFIABLE al fijar los limites del analisis, que es un criterio de EVIDENCIA y no de jurisdiccion ni de utilidad, asi que no lo dice ninguno de los cuatro pasos del superviviente. Sus otros dos pasos caen los dos en el paso 3 del superviviente, y se dice en vez de repartirlos por comodidad: ese paso reconoce explicitamente que factores societales y economicos son DADOS y no controlables por el gestor de riesgo, que es a la vez definir el alcance por lo controlable y evitar extenderlo a lo inmutable, o sea la misma frase por sus dos caras. SU CONDICION 2 VIAJA ENTERA por ser un disparador distinto: DECIDIR DONDE TRAZAR LA LINEA DE RESPONSABILIDAD ORGANIZACIONAL no lo dice ninguna de las dos del superviviente. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 49,
+            "superviviente": "condiciones_latentes_largo_plazo",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA RAZON DECLARA EL MISMO SUPERVIVIENTE CON UNA CORRECCION FECHADA DETRAS. Pasos 3 contra 3, empatados, y condiciones 1 contra 2 a favor de condiciones_latentes_largo_plazo, que es la unica vara de contenido no empatada del acto. UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4), asi que el cableado NO habla, y se dice porque apuntaba al OTRO (3 contra 1). LA RAZON DEL PUESTO 2335 TRAE UN SUPERVIVIENTE CORREGIDO EL 18 ago 2026 y explica el volteo con P.8: EL ALCANCE DEL ROL ES CONTENIDO, y una cabeza que vale para toda infraestructura critica no puede llamarse como un descarrilamiento concreto. Lo prueba con los entregables: el del superviviente es un INFORME DE AUDITORIA HISTORICA generico, y el del que muere es un INFORME DE CASO DE ESTUDIO que manda buscar POSIBLES FALLAS DE 1916 EQUIVALENTES, o sea que lleva la fecha de un terraplen dentro de su propio producto. La razon deja registrada la FIGURA NUEVA con nombre: EL CASO NO ES LA CASA.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["INCISO", 2, "eliminacion de fauna, patrones climaticos", " Cuentan entre ellos la "],
+                "3": ["APPEND"],
+            },
+            "condiciones": {"1": ["APPEND"]},
+            "nota": "DOS PIEZAS VIAJAN ENTERAS Y SON EXACTAMENTE LAS DOS QUE LA RAZON MANDA REPONER, que es lo que hace que EL CASO NO SEA LA CASA sin perder lo que el caso traia: el REQUISITO DE METODO propio, ANALISIS GEOTECNICOS O DE INGENIERIA PROFUNDOS Y NO SOLO INSPECCION VISUAL EXTERNA, que la razon llama real y dice que viaja; y su unica condicion, ILUSTRAR CON UN EJEMPLO CONCRETO el concepto de condicion latente sin fallo humano activo, que es exactamente la forma en que la razon quiere que Nakina quede dentro de la doctrina, como EJEMPLO NOMBRADO con su falla latente de setenta y seis anos. UN INCISO: los factores ambientales nombrados (eliminacion de fauna, patrones climaticos), adosados al paso 2 del superviviente, que habla de factores ambientales naturales sin dar ninguno. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 50,
+            "superviviente": "cultura_de_aprendizaje",
+            "motivo": "LA PIEZA DECLARADA GANA A UN CONTEO, Y VA MARCADO COMO DISCUTIBLE. Los pasos EMPATAN (4 contra 4); las condiciones apuntan al OTRO (2 contra 3 a favor de ingenieria_cultura_aprendizaje) y el cableado apunta aqui (5 contra 3). LA PIEZA DECLARADA APUNTA AQUI: la razon del puesto 2389 escribe SOBREVIVE cultura_de_aprendizaje, mide que lo unico propio del otro es EL ENFASIS de comprometerse a implementar y no solo hablar de ello, y que un enfasis es LINEA; y nombra los DOS PASOS que solo el superviviente tiene y que son los que CIERRAN EL CICLO, MEDIR LA EFECTIVIDAD DE LAS REFORMAS con seguimiento continuo, sin lo cual nadie sabe si la mejora sirvio, e INSTITUCIONALIZAR LA REVISION PERIODICA DE LECCIONES APRENDIDAS. La razon lo resume en una frase que es la vara: el otro termina donde se implementa; este comprueba y vuelve a empezar. LA VARA QUE SE APLICA es la del acta 53 pregunta 3 y el acta 54 pregunta 2, GANA LO DECLARADO Y NO EL CONTEO. SE DICE EL RIESGO EN VEZ DE CALLARLO, igual que en los actos 41 y 45.",
+            "pasos": {
+                "1": ["INCISO", 1, "observar incidentes y condiciones de riesgo", ", incluida una forma sistematica de "],
+                "2": ["INCISO", 1, "momentos regulares para analizar y diagnosticar", ", y "],
+                "3": ["CUBIERTO", 2],
+                "4": ["INCISO", 2, "tu tiempo y tus recursos explicitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas", ", comprometiendo "],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"], "3": ["APPEND"]},
+            "nota": "NINGUNA PIEZA DE PASO VIAJA ENTERA Y EL ENFASIS QUE LA RAZON DECLARA COMO LO UNICO PROPIO DEL QUE MUERE SE SALVA DE INCISO: el COMPROMETER TIEMPO Y RECURSOS PARA IMPLEMENTAR Y NO SOLO HABLAR DE ELLO se adosa al paso 2 del superviviente, que define los procesos de decision para implementar reformas sin exigir ese compromiso. Otros dos incisos recogen las dos primeras casillas del ciclo con las palabras del que muere, las dos adosadas al paso 1 del superviviente, que es donde vive el analisis de los datos del reporte. DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos, y una de ellas es justo la que sostenia el conteo que este acto no siguio: POSPONER REFORMAS DE SEGURIDAD POR TAREAS MAS URGENTES, y QUERER EVITAR REPETIR ERRORES YA IDENTIFICADOS. VIAJANDO ENTERAS, el superviviente termina con TRES condiciones y la vara que apuntaba al otro queda saldada por el reparto. CERO perdidas nombradas.",
+        },
+    ],
+    "declarados": [],
+}
+
+
 def cargar_jsonl(p):
     return [json.loads(l) for l in io.open(p, encoding="utf-8") if l.strip()]
 

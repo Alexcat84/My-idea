@@ -7,17 +7,32 @@
   "resumen_teorico": "El caso del descarrilamiento de Nakina ilustra cómo una condición latente puede permanecer inactiva durante décadas (76 años) hasta que un evento local disparador —en este caso, la eliminación de castores y una temporada lluviosa— la activa, causando un accidente. Esto resalta que las auditorías de riesgo deben considerar el historial de diseño original de la infraestructura, no solo su mantenimiento reciente.",
   "pasos_accionables": [
     "Revisar el historial de diseño original de infraestructuras críticas, no solo su mantenimiento actual.",
-    "Identificar interacciones entre políticas de mantenimiento y factores ambientales naturales.",
-    "Incluir en las auditorías de riesgo el análisis de decisiones de diseño tomadas décadas atrás."
+    "Identificar interacciones entre políticas de mantenimiento y factores ambientales naturales. Cuentan entre ellos la eliminación de fauna, patrones climáticos",
+    "Incluir en las auditorías de riesgo el análisis de decisiones de diseño tomadas décadas atrás.",
+    "Realizar análisis geotécnicos o de ingeniería profundos en infraestructuras críticas, no solo inspecciones visuales externas."
   ],
   "entregable_esperado": "Informe de auditoría histórica de infraestructura crítica identificando condiciones latentes de origen antiguo.",
   "nodos_previos": [
-    "fallas_activas_condiciones_latentes"
+    "fallas_activas_condiciones_latentes",
+    "condiciones_latentes_organizacionales"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "sesgo_retrospectivo_hindsight_2"
+  ],
   "condiciones_activacion": [
     "Cuando se investiga una falla de infraestructura antigua",
-    "Cuando se evalúan riesgos de sistemas con largo historial operativo"
+    "Cuando se evalúan riesgos de sistemas con largo historial operativo",
+    "Cuando se quiere ilustrar con un ejemplo concreto el concepto de condición latente sin fallo humano activo."
   ],
-  "etiqueta_arbol": "Vigila Riesgos Dormidos Años"
+  "etiqueta_arbol": "Vigila Riesgos Dormidos Años",
+  "ids_alias": [
+    "caso_descarrilamiento_nakina"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "caso_descarrilamiento_nakina",
+      "titulo": "Estudio de Caso: Descarrilamiento de Nakina (Falla Latente de 76 Años)",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "La capacitación te da a ti, a las personas que supervisan y a cada trabajador el conocimiento y las habilidades para trabajar de forma segura, reconocer y controlar peligros, y entender el rol de cada quien dentro del programa de seguridad, incluyendo cómo funciona y cómo se protegen los derechos de los trabajadores. Puede impartirse de forma formal, mediante charlas diarias, capacitación entre pares o con herramientas de identificación de peligros disponibles en tu país. Debe dirigirse tanto a quienes se incorporan como a quienes ya están en el sitio, asegurando que todos entiendan los controles implementados y sepan cómo reportar incidentes, peligros y cuasi accidentes.",
   "pasos_accionables": [
     "Capacita a todos en las políticas, metas y procedimientos de tu programa de seguridad, explicando cómo funciona y cuál es el rol de cada persona",
-    "Fórmate junto con quienes supervisan en el rol de liderazgo, la investigación de incidentes y la protección de los derechos de los trabajadores",
+    "Fórmate junto con quienes supervisan en el rol de liderazgo, la investigación de incidentes y la protección de los derechos de los trabajadores, incluido el derecho a reportar sin temor a represalias",
     "Entrena a los trabajadores en el reporte de incidentes, peligros y cuasi accidentes",
     "Capacita en el reconocimiento de peligros y en la jerarquía de controles, apoyándote en herramientas de identificación de peligros disponibles en tu país",
     "Imparte la capacitación en el idioma y nivel de comprensión adecuado, tanto a quienes se incorporan como a quienes ya trabajan contigo",
@@ -25,22 +25,33 @@
   "nodos_siguientes": [
     "evaluacion_mejora_programa",
     "evaluacion_mejora_programa_3",
-    "evaluacion_mejora_programa_2"
+    "evaluacion_mejora_programa_2",
+    "capacitacion_identificacion_peligros",
+    "capacitacion_roles_gerencia",
+    "nueve_pasos_iniciar_programa",
+    "programa_seguridad_salud_ocupacional"
   ],
   "condiciones_activacion": [
     "Cuando se incorporan nuevos trabajadores, equipos o procesos al sitio",
     "Cuando se detectan brechas de conocimiento en el reconocimiento de peligros",
-    "Cuando se implementan nuevos controles o procedimientos de seguridad"
+    "Cuando se implementan nuevos controles o procedimientos de seguridad",
+    "Al lanzar un nuevo programa de seguridad y salud"
   ],
   "etiqueta_arbol": "Capacita en Seguridad Laboral",
   "ids_alias": [
-    "educacion_entrenamiento_seguridad"
+    "educacion_entrenamiento_seguridad",
+    "capacitacion_conciencia_programa"
   ],
   "merged_originals": [
     {
       "node_id": "educacion_entrenamiento_seguridad",
       "titulo": "Educación y Entrenamiento en Seguridad",
       "fuente": "OSHA3886"
+    },
+    {
+      "node_id": "capacitacion_conciencia_programa",
+      "titulo": "Capacitación de Conciencia del Programa de Seguridad y Salud",
+      "fuente": "OSHA3885"
     }
   ]
 }

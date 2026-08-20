@@ -1,0 +1,547 @@
+==============================================================================
+OP-U-01, TRAMO 4, LOTE C DE LA VUELTA 57: LOS ACTOS 35 A 50 EN EL ORDEN IMPRESO DEL TRAMO, LOS DIECISEIS SIN APARTAR NINGUNO. Es el primer lote de la campana en el que la vara de LO DECLARADO gana a un conteo CUATRO veces (actos 41, 45, 47 y 50), y las cuatro van marcadas como discutibles en el reporte . MODO EJECUTAR
+plan: docs/loop/PLAN_V57_OPU01_LOTE_C.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3357 vivos, 496 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 35 . sobrevive ferias_comerciales_franquicia . absorbe marketing_en_ferias_comerciales_de_franquicias
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 4
+     del paso 1 de marketing_en_ferias_comerciales_de_franquicias al PASO 1 del superviviente
+        inciso VERBATIM: 'la región donde quieres crecer'
+        nexo (lo unico de cosecha propia): ', y con '
+        paso resultante: Define el perfil de inversor que buscas (capital, experiencia, sector), y con la región donde quieres crecer
+     del paso 2 de marketing_en_ferias_comerciales_de_franquicias al PASO 4 del superviviente
+        inciso VERBATIM: 'tarifas de hotel y reserva vuelos con anticipación'
+        nexo (lo unico de cosecha propia): ', y para reducirlos negocia '
+        paso resultante: Calcula todos los costos, incluidos los que no se ven a simple vista (viaje, materiales, personal, stand), y para reducirlos negocia tarifas de hotel y reserva vuelos con anticipación
+     del paso 3 de marketing_en_ferias_comerciales_de_franquicias al PASO 5 del superviviente
+        inciso VERBATIM: 'un mini folleto económico para repartir a todos y un folleto completo para los prospectos que realmente te interesan'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Entrena a quien te acompañe para calificar prospectos rápido y aprovechar el flujo de gente en tu stand, con un mini folleto económico para repartir a todos y un folleto completo para los prospectos que realmente te interesan
+     del paso 5 de marketing_en_ferias_comerciales_de_franquicias al PASO 6 del superviviente
+        inciso VERBATIM: 'inmediato'
+        nexo (lo unico de cosecha propia): ', y que sea '
+        paso resultante: Planea el seguimiento después de la feria (charlas, reuniones uno a uno) según el tipo de evento, y que sea inmediato
+  alias del superviviente: ['marketing_en_ferias_comerciales_de_franquicias']
+
+------------------------------------------------------------------------------
+ACTO 36 . sobrevive mix_ubicaciones_corporativas_franquicia . absorbe combinar_crecimiento_corporativo_y_franquicia
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 4
+     del paso 1 de combinar_crecimiento_corporativo_y_franquicia al PASO 1 del superviviente
+        inciso VERBATIM: 'una iniciativa separada que no compita con el desarrollo corporativo'
+        nexo (lo unico de cosecha propia): ', lanzando el canal de franquicia como '
+        paso resultante: Decide si continuaras abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo
+     del paso 2 de combinar_crecimiento_corporativo_y_franquicia al PASO 4 del superviviente
+        inciso VERBATIM: 'para evitar encroachment'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Define criterios claros para asignar mercados y ubicaciones entre lo corporativo y lo franquiciado, y para evitar encroachment
+     del paso 3 de combinar_crecimiento_corporativo_y_franquicia al PASO 6 del superviviente
+        inciso VERBATIM: 'en mercados distantes'
+        nexo (lo unico de cosecha propia): ', y en especial las de '
+        paso resultante: Documenta la estrategia en tu plan de marketing de franquicia, incluyendo el uso de ubicaciones corporativas como centros de entrenamiento o soporte si aplica, y en especial las de en mercados distantes
+     del paso 4 de combinar_crecimiento_corporativo_y_franquicia al PASO 2 del superviviente
+        inciso VERBATIM: 'recursos dedicados suficientes para crecer sin canibalizarse'
+        nexo (lo unico de cosecha propia): ', asegurando a los dos canales '
+        paso resultante: Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, asegurando a los dos canales recursos dedicados suficientes para crecer sin canibalizarse
+  alias del superviviente: ['estrategia_ubicacion_franquicia_corporativa', 'combinar_crecimiento_corporativo_y_franquicia']
+
+------------------------------------------------------------------------------
+ACTO 37 . sobrevive rutas_salida_planificacion_emergencias . absorbe rutas_de_salida_y_puertas_de_emergencia
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 2
+     del paso 1 de rutas_de_salida_y_puertas_de_emergencia al PASO 2 del superviviente
+        inciso VERBATIM: 'bisagra lateral'
+        nexo (lo unico de cosecha propia): ', y con '
+        paso resultante: Confirma que las puertas se abran sin necesidad de llave, herramienta o conocimiento especial mientras el lugar está ocupado, y con bisagra lateral
+     del paso 3 de rutas_de_salida_y_puertas_de_emergencia al PASO 4 del superviviente
+        inciso VERBATIM: 'que abran con poca fuerza, según el estándar de tu país'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Instala hardware de pánico en las puertas de salida que lo requieran, que abran con poca fuerza, según el estándar de tu país
+  alias del superviviente: ['rutas_de_salida_y_puertas_de_emergencia']
+
+------------------------------------------------------------------------------
+ACTO 38 . sobrevive responsabilidad_prospectiva . absorbe rendicion_cuentas_prospectiva
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 4 (anadidas 2)
+  alias del superviviente: ['rendicion_cuentas_prospectiva']
+
+------------------------------------------------------------------------------
+ACTO 39 . sobrevive capacitacion_educacion_seguridad . absorbe capacitacion_conciencia_programa
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 4 de capacitacion_conciencia_programa al PASO 2 del superviviente
+        inciso VERBATIM: 'a reportar sin temor a represalias'
+        nexo (lo unico de cosecha propia): ', incluido el derecho '
+        paso resultante: Fórmate junto con quienes supervisan en el rol de liderazgo, la investigación de incidentes y la protección de los derechos de los trabajadores, incluido el derecho a reportar sin temor a represalias
+  alias del superviviente: ['educacion_entrenamiento_seguridad', 'capacitacion_conciencia_programa']
+
+------------------------------------------------------------------------------
+ACTO 40 . sobrevive confusion_de_modos_automatizacion . absorbe confusion_modos_automatizacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 2 de confusion_modos_automatizacion al PASO 3 del superviviente
+        inciso VERBATIM: 'la lógica interna de transición de modos'
+        nexo (lo unico de cosecha propia): ', y en '
+        paso resultante: Entrenar a los operadores en el reconocimiento de todos los modos posibles y sus transiciones, y en la lógica interna de transición de modos
+     del paso 3 de confusion_modos_automatizacion al PASO 4 del superviviente
+        inciso VERBATIM: 'reduciendo la carga cognitiva en momentos de alta demanda'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Implementar retroalimentación clara y visible ante cada cambio de modo del sistema, reduciendo la carga cognitiva en momentos de alta demanda
+  alias del superviviente: ['confusion_modos_automatizacion']
+
+------------------------------------------------------------------------------
+ACTO 41 . sobrevive clasificacion_sistemas_por_nivel_seguridad . absorbe niveles_de_madurez_de_seguridad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 3 -> 4 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de niveles_de_madurez_de_seguridad al PASO 2 del superviviente
+        inciso VERBATIM: 'han funcionado históricamente en ese nivel'
+        nexo (lo unico de cosecha propia): ', entre las que '
+        paso resultante: Elegir la estrategia de mejora que corresponde a esa categoría: competencia, estandarización, o gestión seria del reporte de incidentes, entre las que han funcionado históricamente en ese nivel
+  alias del superviviente: ['niveles_de_madurez_de_seguridad']
+
+------------------------------------------------------------------------------
+ACTO 42 . sobrevive accident_proneness_fallacy . absorbe declive_teoria_manzana_podrida
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 3 -> 3 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de declive_teoria_manzana_podrida al PASO 1 del superviviente
+        inciso VERBATIM: 'que asumen exposición al riesgo homogénea entre trabajadores'
+        nexo (lo unico de cosecha propia): ', incluidas las '
+        paso resultante: Cuestionar estadísticas que atribuyen accidentes desproporcionadamente a ciertos individuos sin considerar el contexto, incluidas las que asumen exposición al riesgo homogénea entre trabajadores
+     del paso 2 de declive_teoria_manzana_podrida al PASO 2 del superviviente
+        inciso VERBATIM: 'antes de atribuir culpa personal'
+        nexo (lo unico de cosecha propia): ', y hacerlo '
+        paso resultante: Analizar si las diferencias en tasas de incidentes se explican por diferencias de exposición al riesgo (tipo de tarea, ruta, turno), y hacerlo antes de atribuir culpa personal
+  alias del superviviente: ['declive_teoria_manzana_podrida']
+
+------------------------------------------------------------------------------
+ACTO 43 . sobrevive cultura_justa . absorbe cultura_justa_organizacional
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 4 de cultura_justa_organizacional al PASO 2 del superviviente
+        inciso VERBATIM: 'por escrito'
+        nexo (lo unico de cosecha propia): ', y dejarla '
+        paso resultante: Establecer una línea explícita entre errores humanos normales y actos verdaderamente negligentes o maliciosos, y dejarla por escrito
+  alias del superviviente: ['cultura_justa_organizacional']
+
+------------------------------------------------------------------------------
+ACTO 44 . sobrevive vulnerabilidad_instalacion . absorbe omisiones_en_mantenimiento
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 3
+     del paso 1 de omisiones_en_mantenimiento al PASO 4 del superviviente
+        inciso VERBATIM: 'cubiertas, sujetadores'
+        nexo (lo unico de cosecha propia): ', incluidas las omisiones en '
+        paso resultante: Analizar históricos de fallas de mantenimiento para confirmar predominancia de errores de instalación, incluidas las omisiones en cubiertas, sujetadores
+     del paso 2 de omisiones_en_mantenimiento al PASO 2 del superviviente
+        inciso VERBATIM: 'con firma paso a paso'
+        nexo (lo unico de cosecha propia): ', obligatorias y '
+        paso resultante: Implementar listas de verificación específicas para pasos de reensamblaje, obligatorias y con firma paso a paso
+     del paso 3 de omisiones_en_mantenimiento al PASO 3 del superviviente
+        inciso VERBATIM: 'independientes posteriores al reensamblaje antes de la puesta en servicio'
+        nexo (lo unico de cosecha propia): ', con inspecciones '
+        paso resultante: Aumentar la supervisión y doble verificación durante la fase de instalación, no solo desensamblaje, con inspecciones independientes posteriores al reensamblaje antes de la puesta en servicio
+  alias del superviviente: ['omisiones_en_mantenimiento']
+
+------------------------------------------------------------------------------
+ACTO 45 . sobrevive clasificacion_riesgos_por_dominio . absorbe areas_riesgo_primario
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['areas_riesgo_primario']
+
+------------------------------------------------------------------------------
+ACTO 46 . sobrevive evitar_perdida_situacion_awareness . absorbe critica_perdida_de_conciencia_situacional
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['critica_perdida_de_conciencia_situacional']
+
+------------------------------------------------------------------------------
+ACTO 47 . sobrevive sesgo_retrospectivo_hindsight_2 . absorbe sesgo_retrospectivo_hindsight
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 1 -> 3 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 3 de sesgo_retrospectivo_hindsight al PASO 3 del superviviente
+        inciso VERBATIM: 'el volumen de información disperso entre los participantes'
+        nexo (lo unico de cosecha propia): ', sin olvidar '
+        paso resultante: Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, sin olvidar el volumen de información disperso entre los participantes
+  alias del superviviente: ['sesgo_retrospectivo_hindsight']
+
+------------------------------------------------------------------------------
+ACTO 48 . sobrevive limite_busqueda_causas_pendulo . absorbe reglas_parada_investigacion_accidentes
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['reglas_parada_investigacion_accidentes']
+
+------------------------------------------------------------------------------
+ACTO 49 . sobrevive condiciones_latentes_largo_plazo . absorbe caso_descarrilamiento_nakina
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 3 -> 4 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de caso_descarrilamiento_nakina al PASO 2 del superviviente
+        inciso VERBATIM: 'eliminación de fauna, patrones climáticos'
+        nexo (lo unico de cosecha propia): ' Cuentan entre ellos la '
+        paso resultante: Identificar interacciones entre políticas de mantenimiento y factores ambientales naturales. Cuentan entre ellos la eliminación de fauna, patrones climáticos
+  alias del superviviente: ['caso_descarrilamiento_nakina']
+
+------------------------------------------------------------------------------
+ACTO 50 . sobrevive cultura_de_aprendizaje . absorbe ingenieria_cultura_aprendizaje
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 3
+     del paso 1 de ingenieria_cultura_aprendizaje al PASO 1 del superviviente
+        inciso VERBATIM: 'observar incidentes y condiciones de riesgo'
+        nexo (lo unico de cosecha propia): ', incluida una forma sistematica de '
+        paso resultante: Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad, incluida una forma sistematica de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar
+     del paso 2 de ingenieria_cultura_aprendizaje al PASO 1 del superviviente
+        inciso VERBATIM: 'momentos regulares para analizar y diagnosticar'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad, incluida una forma sistematica de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar
+     del paso 4 de ingenieria_cultura_aprendizaje al PASO 2 del superviviente
+        inciso VERBATIM: 'tu tiempo y tus recursos explícitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas'
+        nexo (lo unico de cosecha propia): ', comprometiendo '
+        paso resultante: Definir procesos de decisión para implementar reformas basadas en hallazgos, comprometiendo tu tiempo y tus recursos explícitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas
+  alias del superviviente: ['ingenieria_cultura_aprendizaje']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 48
+   alternativa_operaciones_propias                      nodos_siguientes  combinar_crecimiento_corporativo_y_franquicia -> mix_ubicaciones_corporativas_franquicia
+   analisis_factores_distales_proximales                nodos_previos     sesgo_retrospectivo_hindsight -> sesgo_retrospectivo_hindsight_2
+   arbol_decision_culpabilidad                          nodos_previos     cultura_justa_organizacional -> cultura_justa
+   auftragssystem_supervision_autonoma                  nodos_siguientes  ingenieria_cultura_aprendizaje -> cultura_de_aprendizaje
+   capacitacion_identificacion_peligros                 nodos_previos     capacitacion_conciencia_programa -> capacitacion_educacion_seguridad
+   capacitacion_roles_gerencia                          nodos_previos     capacitacion_conciencia_programa -> capacitacion_educacion_seguridad
+   caracterizacion_priorizacion_peligros                nodos_siguientes  rutas_de_salida_y_puertas_de_emergencia -> rutas_salida_planificacion_emergencias
+   ciclo_ventas_calidad_franquicia                      nodos_siguientes  marketing_en_ferias_comerciales_de_franquicias -> ferias_comerciales_franquicia
+   condiciones_latentes_organizacionales                nodos_siguientes  caso_descarrilamiento_nakina -> condiciones_latentes_largo_plazo
+   cuanto_sabes_y_cuanto_solo_crees                     nodos_previos     sesgo_retrospectivo_hindsight -> sesgo_retrospectivo_hindsight_2
+   cultura_como_mecanismo_descentralizacion             nodos_siguientes  ingenieria_cultura_aprendizaje -> cultura_de_aprendizaje
+   cultura_generativa_westrum                           nodos_previos     sesgo_retrospectivo_hindsight -> sesgo_retrospectivo_hindsight_2
+   cultura_justa                                        nodos_siguientes  cultura_justa_organizacional -> cultura_justa
+   cultura_justa                                        nodos_siguientes  rendicion_cuentas_prospectiva -> responsabilidad_prospectiva
+   cultura_justa_2                                      nodos_siguientes  rendicion_cuentas_prospectiva -> responsabilidad_prospectiva
+   cumplimiento_vs_violacion                            nodos_siguientes  critica_perdida_de_conciencia_situacional -> evitar_perdida_situacion_awareness
+   decision_marca_comun_branding                        nodos_previos     combinar_crecimiento_corporativo_y_franquicia -> mix_ubicaciones_corporativas_franquicia
+   defensas_peligrosas_paradojas                        nodos_previos     confusion_modos_automatizacion -> confusion_de_modos_automatizacion
+   desajuste_tarea_persona                              nodos_previos     declive_teoria_manzana_podrida -> accident_proneness_fallacy
+   documentacion_mantenimiento_linea_base               nodos_previos     omisiones_en_mantenimiento -> vulnerabilidad_instalacion
+   efectos_recompensa_castigo                           nodos_previos     cultura_justa_organizacional -> cultura_justa
+   evaluacion_cultura_seguridad_completa                nodos_previos     ingenieria_cultura_aprendizaje -> cultura_de_aprendizaje
+   evaluacion_necesidad_franquiciar                     nodos_previos     combinar_crecimiento_corporativo_y_franquicia -> mix_ubicaciones_corporativas_franquicia
+   fallas_activas_condiciones_latentes                  nodos_previos     omisiones_en_mantenimiento -> vulnerabilidad_instalacion
+   fallas_activas_condiciones_latentes                  nodos_previos     reglas_parada_investigacion_accidentes -> limite_busqueda_causas_pendulo
+   fallas_activas_condiciones_latentes                  nodos_siguientes  omisiones_en_mantenimiento -> vulnerabilidad_instalacion
+   fenomenos_senuelo                                    nodos_previos     niveles_de_madurez_de_seguridad -> clasificacion_sistemas_por_nivel_seguridad
+   fijacion_cognitiva                                   nodos_previos     sesgo_retrospectivo_hindsight -> sesgo_retrospectivo_hindsight_2
+   franquicia_mas_crecimiento_corporativo_hibrido       nodos_siguientes  combinar_crecimiento_corporativo_y_franquicia -> mix_ubicaciones_corporativas_franquicia
+   investigacion_incidentes                             nodos_siguientes  declive_teoria_manzana_podrida -> accident_proneness_fallacy
+   ironias_de_la_automatizacion                         nodos_siguientes  confusion_modos_automatizacion -> confusion_de_modos_automatizacion
+   mensaje_marketing_franquicia                         nodos_siguientes  marketing_en_ferias_comerciales_de_franquicias -> ferias_comerciales_franquicia
+   modelo_accidente_organizacional                      nodos_siguientes  reglas_parada_investigacion_accidentes -> limite_busqueda_causas_pendulo
+   modelos_gestion_seguridad                            nodos_siguientes  areas_riesgo_primario -> clasificacion_riesgos_por_dominio
+   nueve_pasos_iniciar_programa                         nodos_previos     capacitacion_conciencia_programa -> capacitacion_educacion_seguridad
+   plan_de_accion_de_emergencia                         nodos_previos     rutas_de_salida_y_puertas_de_emergencia -> rutas_salida_planificacion_emergencias
+   prevenir_franquicias_inadvertidas                    nodos_siguientes  combinar_crecimiento_corporativo_y_franquicia -> mix_ubicaciones_corporativas_franquicia
+   principio_apalancamiento_numero_magico               nodos_previos     marketing_en_ferias_comerciales_de_franquicias -> ferias_comerciales_franquicia
+   programa_seguridad_salud_ocupacional                 nodos_previos     capacitacion_conciencia_programa -> capacitacion_educacion_seguridad
+   reporte_casi_accidentes                              nodos_previos     cultura_justa_organizacional -> cultura_justa
+   responsabilidad_sistemica                            nodos_previos     declive_teoria_manzana_podrida -> accident_proneness_fallacy
+   responsabilidad_sistemica                            nodos_siguientes  rendicion_cuentas_prospectiva -> responsabilidad_prospectiva
+   revision_de_aprendizaje                              nodos_previos     sesgo_retrospectivo_hindsight -> sesgo_retrospectivo_hindsight_2
+   seguimiento_efectividad_controles                    nodos_siguientes  capacitacion_conciencia_programa -> capacitacion_educacion_seguridad
+   senalizacion_de_salidas                              nodos_previos     rutas_de_salida_y_puertas_de_emergencia -> rutas_salida_planificacion_emergencias
+   sesgo_retrospectivo_hindsight_2                      nodos_previos     caso_descarrilamiento_nakina -> condiciones_latentes_largo_plazo
+   thin_edge_of_the_wedge                               nodos_previos     niveles_de_madurez_de_seguridad -> clasificacion_sistemas_por_nivel_seguridad
+   vieja_vision_vs_nueva_vision_seguridad               nodos_siguientes  niveles_de_madurez_de_seguridad -> clasificacion_sistemas_por_nivel_seguridad
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 9
+   ciclo_venta_calidad_franquicia                       nodos_siguientes  marketing_en_ferias_comerciales_de_franquicias (registro historico)
+   diez_pasos_iniciales_programa                        nodos_previos     capacitacion_conciencia_programa (registro historico)
+   estrategia_multicanal_expansion                      nodos_siguientes  combinar_crecimiento_corporativo_y_franquicia (registro historico)
+   estructuras_combinadas_franquicia                    nodos_siguientes  combinar_crecimiento_corporativo_y_franquicia (registro historico)
+   explorar_franquicia_como_estrategia_expansion        nodos_previos     combinar_crecimiento_corporativo_y_franquicia (registro historico)
+   fallas_activas_condiciones_latentes_2                nodos_previos     omisiones_en_mantenimiento (registro historico)
+   fallos_activos_condiciones_latentes                  nodos_siguientes  omisiones_en_mantenimiento (registro historico)
+   leverage_una_sola_franquicia                         nodos_previos     marketing_en_ferias_comerciales_de_franquicias (registro historico)
+   programa_seguridad_salud_ocupacional_2               nodos_previos     capacitacion_conciencia_programa (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 3
+   analisis_factores_distales_proximales                nodos_previos
+   fijacion_cognitiva                                   nodos_previos
+   seguimiento_efectividad_controles                    nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   cultura_justa                                        nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 947   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 940   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 7, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 80 de 80
+guarda D, los 16 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (93 filas)
+ acto de que nodo                                  que          n  a donde va
+   35 marketing_en_ferias_comerciales_de_franquicias paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Elige las ferias que mejor encajen con el perfil de franquiciado que buscas y con la región donde quieres crecer.
+   35 marketing_en_ferias_comerciales_de_franquicias paso         2  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Negocia tarifas de hotel y reserva vuelos con anticipación para reducir costos.
+   35 marketing_en_ferias_comerciales_de_franquicias paso         3  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseña un mini folleto económico para repartir a todos y un folleto completo para los prospectos que realmente te interesan.
+   35 marketing_en_ferias_comerciales_de_franquicias paso         4  ya lo dice el PASO 5 del superviviente
+        Prepara a quien te acompañe en el estand para reconocer en el momento a los contactos con más potencial (leads calificados).
+   35 marketing_en_ferias_comerciales_de_franquicias paso         5  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Da seguimiento inmediato después del evento a todos los contactos que generaste.
+   35 marketing_en_ferias_comerciales_de_franquicias condicion    1  CONDICION 3 del superviviente
+        Cuando tienes presupuesto de marketing suficiente para invertir en presencia física.
+   35 marketing_en_ferias_comerciales_de_franquicias condicion    2  CONDICION 4 del superviviente
+        Cuando quieres competir mostrando tu marca frente a otros franquiciadores.
+   36 combinar_crecimiento_corporativo_y_franquicia paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Lanzar el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo
+   36 combinar_crecimiento_corporativo_y_franquicia paso         2  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir políticas claras de territorio para evitar encroachment entre unidades propias y franquiciadas
+   36 combinar_crecimiento_corporativo_y_franquicia paso         3  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Usar tiendas corporativas en mercados distantes como centros de entrenamiento
+   36 combinar_crecimiento_corporativo_y_franquicia paso         4  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Asegurar que ambos canales tengan recursos dedicados suficientes para crecer sin canibalizarse
+   36 combinar_crecimiento_corporativo_y_franquicia condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si la empresa ya tiene una base sustancial de unidades propias y quiere agregar franquicia
+   36 combinar_crecimiento_corporativo_y_franquicia condicion    2  CONDICION 4 del superviviente
+        Si se busca maximizar el valor de la empresa combinando ambos canales de crecimiento
+   37 rutas_de_salida_y_puertas_de_emergencia      paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Revisa que todas tus puertas de salida tengan bisagra lateral y se abran sin llave
+   37 rutas_de_salida_y_puertas_de_emergencia      paso         2  ya lo dice el PASO 1 del superviviente
+        Verifica que las rutas de escape estén libres de obstáculos y bien señalizadas
+   37 rutas_de_salida_y_puertas_de_emergencia      paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Instala herrajes de pánico que abran con poca fuerza, según el estándar de tu país
+   37 rutas_de_salida_y_puertas_de_emergencia      paso         4  ya lo dice el PASO 5 del superviviente
+        Coloca mecanismos de liberación interna en las cámaras frías
+   37 rutas_de_salida_y_puertas_de_emergencia      paso         5  ya lo dice el PASO 6 del superviviente
+        Instala barreras donde las salidas den a zonas de tráfico vehicular
+   37 rutas_de_salida_y_puertas_de_emergencia      condicion    1  CONDICION 3 del superviviente
+        Si tu negocio tiene un local físico con varias personas trabajando
+   37 rutas_de_salida_y_puertas_de_emergencia      condicion    2  CONDICION 4 del superviviente
+        Si necesitas cumplir con la normativa de seguridad sobre rutas de escape en tu país
+   38 rendicion_cuentas_prospectiva                paso         1  ya lo dice el PASO 1 del superviviente
+        Cuando pase un incidente, cambia la pregunta de quien fallo por que necesito cambiar
+   38 rendicion_cuentas_prospectiva                paso         2  ya lo dice el PASO 2 del superviviente
+        Decide quien va a poner en marcha las mejoras y quien revisara que funcionaron
+   38 rendicion_cuentas_prospectiva                paso         3  PASO 5 del superviviente
+        Comparte lo que conto la persona involucrada (storytelling) para que todos aprendan de la situacion, en lugar de sancionarla
+   38 rendicion_cuentas_prospectiva                paso         4  PASO 6 del superviviente
+        Da apoyo a quien vivio el incidente de cerca, porque también carga con el golpe
+   38 rendicion_cuentas_prospectiva                condicion    1  CONDICION 3 del superviviente
+        Después de que ocurrio un incidente y quieres que sirva para aprender de verdad
+   38 rendicion_cuentas_prospectiva                condicion    2  CONDICION 4 del superviviente
+        Cuando quieres dejar el castigo y pasar a mejorar de forma continua
+   39 capacitacion_conciencia_programa             paso         1  ya lo dice el PASO 1 del superviviente
+        Capacitar a todo el personal sobre políticas, metas y procedimientos de seguridad
+   39 capacitacion_conciencia_programa             paso         2  ya lo dice el PASO 3 del superviviente
+        Explicar cómo reportar peligros, lesiones y casi accidentes
+   39 capacitacion_conciencia_programa             paso         3  ya lo dice el PASO 5 del superviviente
+        Asegurar que la capacitación se imparta en el idioma y nivel de comprensión adecuado
+   39 capacitacion_conciencia_programa             paso         4  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Confirmar el derecho de los trabajadores a reportar sin temor a represalias
+   39 capacitacion_conciencia_programa             condicion    1  CONDICION 4 del superviviente
+        Al lanzar un nuevo programa de seguridad y salud
+   39 capacitacion_conciencia_programa             condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando se incorpora nuevo personal
+   40 confusion_modos_automatizacion               paso         1  ya lo dice el PASO 2 del superviviente
+        Auditar las interfaces de sistemas automatizados críticos para identificar puntos de opacidad sobre el modo/estado activo.
+   40 confusion_modos_automatizacion               paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Capacitar a los operadores no solo en el uso del sistema sino en la lógica interna de transición de modos.
+   40 confusion_modos_automatizacion               paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Rediseñar interfaces para hacer visibles las transiciones de modo automáticas, reduciendo la carga cognitiva en momentos de alta demanda.
+   40 confusion_modos_automatizacion               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se opera maquinaria o sistemas con múltiples modos automáticos de control.
+   40 confusion_modos_automatizacion               condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se investigan incidentes relacionados con 'sorpresas' de automatización.
+   41 niveles_de_madurez_de_seguridad              paso         1  ya lo dice el PASO 1 del superviviente
+        Diagnosticar en qué nivel de seguridad se encuentra actualmente la actividad u organización
+   41 niveles_de_madurez_de_seguridad              paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar qué tipo de intervenciones han funcionado históricamente en ese nivel
+   41 niveles_de_madurez_de_seguridad              paso         3  ya lo dice el PASO 3 del superviviente
+        Evitar aplicar recetas de un nivel de seguridad a otro nivel distinto
+   41 niveles_de_madurez_de_seguridad              paso         4  PASO 4 del superviviente
+        Ajustar las inversiones en seguridad según el nivel de madurez detectado
+   41 niveles_de_madurez_de_seguridad              condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se necesita definir una estrategia de mejora de seguridad organizacional
+   41 niveles_de_madurez_de_seguridad              condicion    2  CONDICION 3 del superviviente
+        Cuando las intervenciones de seguridad anteriores no han funcionado como se esperaba
+   42 declive_teoria_manzana_podrida               paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Cuestionar estadísticas de accidentes que asumen exposición al riesgo homogénea entre trabajadores
+   42 declive_teoria_manzana_podrida               paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Investigar el contexto y las tareas específicas de cada practicante antes de atribuir culpa personal
+   42 declive_teoria_manzana_podrida               paso         3  ya lo dice el PASO 3 del superviviente
+        Evitar conclusiones categóricas sobre 'propensión a accidentes' sin evidencia contextual robusta
+   42 declive_teoria_manzana_podrida               condicion    1  CONDICION 3 del superviviente
+        Cuando se atribuye un accidente recurrente únicamente a características personales de un trabajador
+   42 declive_teoria_manzana_podrida               condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando se usan estadísticas comparativas de desempeño sin considerar diferencias de exposición al riesgo
+   43 cultura_justa_organizacional                 paso         1  ya lo dice el PASO 1 del superviviente
+        Define principios claros para distinguir un comportamiento aceptable de uno inaceptable
+   43 cultura_justa_organizacional                 paso         2  ya lo dice el PASO 4 del superviviente
+        Comunica a todo tu equipo que existe una forma justa y consistente de evaluar los errores
+   43 cultura_justa_organizacional                 paso         3  PASO 6 del superviviente
+        Arma un grupo de confianza que revise los casos difíciles o ambiguos
+   43 cultura_justa_organizacional                 paso         4  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Separa por escrito cómo manejas los errores normales de cómo sancionas la mala conducta deliberada
+   43 cultura_justa_organizacional                 condicion    1  CONDICION 4 del superviviente
+        Cuando buscas que tu equipo reporte errores de forma voluntaria
+   43 cultura_justa_organizacional                 condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si notas desconfianza de tu equipo hacia la forma en que hoy evalúas y sancionas los errores
+   44 omisiones_en_mantenimiento                   paso         1  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar tareas de reensamblaje críticas donde históricamente ocurren omisiones (ej. cubiertas, sujetadores).
+   44 omisiones_en_mantenimiento                   paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Implementar listas de verificación obligatorias con firma paso a paso para tareas críticas.
+   44 omisiones_en_mantenimiento                   paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer inspecciones independientes posteriores al reensamblaje antes de la puesta en servicio.
+   44 omisiones_en_mantenimiento                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se diseñan procedimientos de mantenimiento para equipos con múltiples partes desmontables
+   44 omisiones_en_mantenimiento                   condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se investiga un incidente relacionado con partes faltantes tras mantenimiento
+   45 areas_riesgo_primario                        paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar cómo se ve cada uno de los cuatro tipos de riesgo en tu negocio
+   45 areas_riesgo_primario                        paso         2  ya lo dice el PASO 4 del superviviente
+        Determinar cuál de los cuatro es más urgente o crítico según tu tecnología y el contexto actual
+   45 areas_riesgo_primario                        paso         3  ya lo dice el PASO 4 del superviviente
+        Revisar si has estado enfocado solo en un tipo de riesgo (por ejemplo, lesiones personales) dejando de lado otros (como mantenimiento o terceros)
+   45 areas_riesgo_primario                        paso         4  PASO 5 del superviviente
+        Definir cómo vas a vigilar cada tipo de riesgo que identifiques
+   45 areas_riesgo_primario                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando hagas una revisión completa de los riesgos de tu negocio o instalación peligrosa
+   45 areas_riesgo_primario                        condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando sospeches que tu manera de gestionar riesgos está desactualizada o centrada en un solo tipo de riesgo
+   45 areas_riesgo_primario                        condicion    3  CONDICION 3 del superviviente
+        Después de un incidente que muestre un tipo de riesgo que no habías tomado en cuenta, por ejemplo el riesgo para terceros
+   46 critica_perdida_de_conciencia_situacional    paso         1  ya lo dice el PASO 1 del superviviente
+        Evitar usar 'pérdida de conciencia situacional' como explicación en informes de investigación de incidentes
+   46 critica_perdida_de_conciencia_situacional    paso         2  ya lo dice el PASO 4 del superviviente
+        En lugar de comparar con una 'verdad de campo' conocida en retrospectiva, reconstruir qué información y contexto tenía el operador en el momento
+   46 critica_perdida_de_conciencia_situacional    paso         3  ya lo dice el PASO 2 del superviviente
+        Preguntar '¿por qué tenía sentido para ellos ver/hacer lo que vieron/hicieron?' en vez de juzgar lo que no vieron
+   46 critica_perdida_de_conciencia_situacional    paso         4  PASO 5 del superviviente
+        Rechazar el uso de este término en contextos legales o disciplinarios como sustituto de una explicación causal real
+   46 critica_perdida_de_conciencia_situacional    condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando un informe de investigación atribuye un incidente a 'pérdida de conciencia situacional'
+   46 critica_perdida_de_conciencia_situacional    condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se prepara una defensa o análisis técnico ante un proceso judicial o disciplinario tras un accidente
+   47 sesgo_retrospectivo_hindsight                paso         1  ya lo dice el PASO 2 del superviviente
+        Al investigar un accidente, reconstruir el estado de conocimiento e información disponible ANTES del evento, evitando juzgar con el conocimiento del r
+   47 sesgo_retrospectivo_hindsight                paso         2  PASO 5 del superviviente
+        Entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo.
+   47 sesgo_retrospectivo_hindsight                paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar si las 'señales de advertencia' identificadas post-hoc eran realmente discernibles en tiempo real dado el volumen de información disperso entr
+   47 sesgo_retrospectivo_hindsight                condicion    1  CONDICION 2 del superviviente
+        Cuando se realiza una investigación post-accidente y se evalúa la culpabilidad o previsibilidad de los actores.
+   47 sesgo_retrospectivo_hindsight                condicion    2  CONDICION 3 del superviviente
+        Cuando se diseñan procesos de aprendizaje organizacional a partir de fallos.
+   48 reglas_parada_investigacion_accidentes       paso         1  ya lo dice el PASO 3 del superviviente
+        Definir el alcance de la investigación según lo que los gestores del sistema pueden controlar
+   48 reglas_parada_investigacion_accidentes       paso         2  ya lo dice el PASO 3 del superviviente
+        Evitar extender el análisis a factores societales inmutables que no generan mejoras accionables
+   48 reglas_parada_investigacion_accidentes       paso         3  PASO 5 del superviviente
+        Priorizar la calidad y disponibilidad de evidencia confiable al fijar los límites del análisis
+   48 reglas_parada_investigacion_accidentes       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la investigación de un accidente se extiende indefinidamente sin llegar a conclusiones accionables
+   48 reglas_parada_investigacion_accidentes       condicion    2  CONDICION 3 del superviviente
+        Si se debe decidir dónde trazar la línea de responsabilidad organizacional
+   49 caso_descarrilamiento_nakina                 paso         1  ya lo dice el PASO 1 del superviviente
+        Documentar el historial completo de infraestructura crítica, incluyendo decisiones de diseño originales, aunque sean muy antiguas.
+   49 caso_descarrilamiento_nakina                 paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar cómo cambios ambientales o de políticas (ej. eliminación de fauna, patrones climáticos) pueden interactuar con debilidades estructurales antig
+   49 caso_descarrilamiento_nakina                 paso         3  PASO 4 del superviviente
+        Realizar análisis geotécnicos o de ingeniería profundos en infraestructuras críticas, no solo inspecciones visuales externas.
+   49 caso_descarrilamiento_nakina                 condicion    1  CONDICION 3 del superviviente
+        Cuando se quiere ilustrar con un ejemplo concreto el concepto de condición latente sin fallo humano activo.
+   50 ingenieria_cultura_aprendizaje               paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer una forma sistemática de observar incidentes y condiciones de riesgo
+   50 ingenieria_cultura_aprendizaje               paso         2  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Crear momentos regulares para analizar y diagnosticar la información que recolectas
+   50 ingenieria_cultura_aprendizaje               paso         3  ya lo dice el PASO 2 del superviviente
+        Diseñar e imaginar soluciones y mejoras basadas en lo que encuentras
+   50 ingenieria_cultura_aprendizaje               paso         4  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Comprometer tu tiempo y tus recursos explícitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas
+   50 ingenieria_cultura_aprendizaje               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando tienes formas de reportar problemas pero no logras convertir los hallazgos en acciones concretas
+   50 ingenieria_cultura_aprendizaje               condicion    2  CONDICION 3 del superviviente
+        Cuando pospones reformas de seguridad por tareas 'más urgentes'
+   50 ingenieria_cultura_aprendizaje               condicion    3  CONDICION 4 del superviviente
+        Cuando quieres evitar repetir errores que ya identificaste
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 16
+  nodos implicados    : 32
+  nodos que MUEREN    : 16
+  piezas repartidas   : 93 (27 viajan enteras, 41 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 74
+censo DESPUES: 3853 ficheros, 3341 vivos, 512 deprecados
+censo ANTES  : 3853 ficheros, 3357 vivos, 496 deprecados
+delta deprecados: +16 (esperado +16): OK

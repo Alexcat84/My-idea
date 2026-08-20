@@ -9,20 +9,34 @@
     "Al investigar un accidente, evaluar en qué punto el análisis causal deja de aportar valor remedial práctico",
     "Enfocar recursos de investigación en factores de lugar de trabajo y organizacionales, que ofrecen el mayor retorno",
     "Reconocer explícitamente qué factores societales/económicos son 'dados' y no controlables por el gestor de riesgo",
-    "Evitar diluir la responsabilidad organizacional atribuyendo todo a fuerzas sociales incontrolables"
+    "Evitar diluir la responsabilidad organizacional atribuyendo todo a fuerzas sociales incontrolables",
+    "Priorizar la calidad y disponibilidad de evidencia confiable al fijar los límites del análisis"
   ],
   "entregable_esperado": "Marco de investigación de accidentes con criterios explícitos de alcance causal (dónde detener la búsqueda de causas)",
   "nodos_previos": [
     "condiciones_latentes_riesgo_universal",
-    "seduccion_modelo_persona"
+    "seduccion_modelo_persona",
+    "modelo_accidente_organizacional"
   ],
   "nodos_siguientes": [
     "costos_ocultos_accidentes_iceberg",
-    "process_tracing_methods"
+    "process_tracing_methods",
+    "fallas_activas_condiciones_latentes"
   ],
   "condiciones_activacion": [
     "Cuando una investigación de accidente se extiende indefinidamente sin generar recomendaciones accionables",
-    "Al diseñar la metodología de investigación de incidentes de la organización"
+    "Al diseñar la metodología de investigación de incidentes de la organización",
+    "Si se debe decidir dónde trazar la línea de responsabilidad organizacional"
   ],
-  "etiqueta_arbol": "Pregúntate Hasta Dónde Buscar Causas"
+  "etiqueta_arbol": "Pregúntate Hasta Dónde Buscar Causas",
+  "ids_alias": [
+    "reglas_parada_investigacion_accidentes"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "reglas_parada_investigacion_accidentes",
+      "titulo": "Reglas de Parada (Stop Rules) en la Investigación de Accidentes",
+      "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ]
 }
