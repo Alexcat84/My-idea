@@ -163,12 +163,22 @@ contando algo.
 
 | clase | cuantas | donde va |
 |---|---:|---|
-| **B, dudosas** | **89** | **no entran**: su clase se decide DESPUES de los destejidos, porque un destejido puede cambiarla |
-| **C, sanas con figura** | **7** | **no se funden NUNCA**: son **ENLACE MUTUO**, o sea **dos aristas**. Puestos 201, 203, 215, 246, 360, 1077 y 1240 |
+| **B, dudosas** | ~~**89**~~ **72** | **no entran**: su clase se decide DESPUES de los destejidos, porque un destejido puede cambiarla |
+| **C, sanas con figura** | ~~**7**~~ **5** | **no se funden NUNCA**: son **ENLACE MUTUO**, o sea **dos aristas**. Puestos 201, ~~203~~, 215, ~~246~~, ~~360~~, **494**, 1077 y 1240 |
 
 > **Fundir una C seria el error caro que el banco 9.22 nombra**: borraria los dos
 > procedimientos para dejar un nodo con dos lineas sueltas. **Van a la fase 04, no
 > a esta.**
+
+> **CORRECCION DECLARADA (20 ago 2026, vuelta 57, TAREA 1.2, por el carril del banco `9.10`). LA LISTA DE LAS SANAS CON FIGURA ESTABA ENVEJECIDA POR LOS DOS LADOS, y las dos direcciones se dicen porque son especies distintas.**
+>
+> **SALEN TRES.** El **`203`** lo volteo la vuelta 56 en la relectura del filo del acto 15 del tramo 3 de `OP-U-01`. El **`246`** y el **`360`** dejaron de serlo cuando sus actos se fundieron en las vueltas 52 y 53 y sus dos lados pasaron a resolver al mismo nodo vivo: **nadie los tecleo mal, envejecieron solos**, y por eso ningun barrido que dependa de que alguien NOMBRE el puesto los iba a cazar.
+>
+> **ENTRA UNO, y este no lo habia notado nadie.** El **`494`** lo es desde el **15 ago 2026**, medido con `git` sobre las versiones del archivo de veredictos: el commit `7cec9ecc` lo volteo desde `A` por el **tercer ejemplar del banco `9.22`**, y esta lista no lo recogio nunca. **Una lista publicada envejece por no soltar y tambien por no tomar.**
+>
+> **LA CUENTA VIGENTE, RECOMPUTADA HOY del archivo y no heredada de ningun texto: 201, 215, 494, 1077 y 1240, CINCO.** Medido HOY sobre `../INTRA_DOMINIO_VEREDICTOS.jsonl` con `python scripts/loop/vuelta57_puestos_volteados.py --base c0e8041a --tambien 203,246,360` y con `python scripts/recomputar_marcador.py 3388`: [`../loop/SALIDA_V57_PUESTOS_VOLTEADOS_ANTES.txt`](../loop/SALIDA_V57_PUESTOS_VOLTEADOS_ANTES.txt) da estas celdas ROJAS, [`../loop/SALIDA_V57_PUESTOS_VOLTEADOS_DESPUES.txt`](../loop/SALIDA_V57_PUESTOS_VOLTEADOS_DESPUES.txt) las da VERDES, y [`../loop/SALIDA_V57_MARCADOR_APERTURA.txt`](../loop/SALIDA_V57_MARCADOR_APERTURA.txt) es la corrida del marcador de la que salen el 5 y el 72.
+>
+> **Y LA FILA DE ARRIBA VA EN EL MISMO ACTO, aunque el encargo no la nombraba:** publicaba **89** dudosas, que es la cifra de una medicion vieja; la de hoy es **72**. Corregir una celda y publicar la de al lado sin mirarla es la caida que la regla 1 castiga, asi que se corrige aqui y **se marca como discutible en el reporte de la vuelta**.
 
 ---
 

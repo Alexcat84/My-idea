@@ -307,13 +307,15 @@ revisar **toda** nomina por el DOMINIO de sus miembros, cruzando
 
 ---
 
-## LAS SIETE C TAMBIEN SON DE ESTA FASE
+## ~~LAS SIETE C~~ LAS CINCO C TAMBIEN SON DE ESTA FASE
 
 **Los pares de clase C, sanos con figura, se arreglan con DOS ARISTAS**, no con
-una fusion. Puestos **201, 203, 215, 246, 360, 1077 y 1240**.
+una fusion. Puestos **201, ~~203~~, 215, ~~246~~, ~~360~~, 494, 1077 y 1240**.
 
 > **Es el ENLACE MUTUO del banco 9.22**: cada nodo expande una linea distinta del
 > otro, ninguno es la madre, **y fundirlos borraria los dos procedimientos.**
+
+> **CORRECCION DECLARADA (20 ago 2026, vuelta 57, TAREA 1.2, por el carril del banco `9.10`). ESTA LISTA ES HERMANA DE LA DE `03_FUSIONES.md` Y ESTABA ENVEJECIDA IGUAL.** Salen el **`203`** (volteado por la vuelta 56, relectura del filo del acto 15 del tramo 3 de `OP-U-01`), el **`246`** y el **`360`** (sus actos se fundieron en las vueltas 52 y 53 y sus dos lados pasaron a resolver al mismo nodo vivo). Entra el **`494`**, que lo es desde el 15 ago 2026 por el commit `7cec9ecc` y que esta lista no recogio nunca. **La cuenta vigente, recomputada hoy del archivo: 201, 215, 494, 1077 y 1240, CINCO**, y por eso el titulo de la seccion tambien se tacha. **El texto de la regla no cambia**: siguen siendo enlace mutuo del banco `9.22` y siguen sin fundirse. Medido HOY sobre `../INTRA_DOMINIO_VEREDICTOS.jsonl` con `python scripts/loop/vuelta57_puestos_volteados.py --base c0e8041a --tambien 203,246,360` y con `python scripts/recomputar_marcador.py 3388`: [`../loop/SALIDA_V57_PUESTOS_VOLTEADOS_ANTES.txt`](../loop/SALIDA_V57_PUESTOS_VOLTEADOS_ANTES.txt) da estas celdas ROJAS, [`../loop/SALIDA_V57_PUESTOS_VOLTEADOS_DESPUES.txt`](../loop/SALIDA_V57_PUESTOS_VOLTEADOS_DESPUES.txt) las da VERDES, y [`../loop/SALIDA_V57_MARCADOR_APERTURA.txt`](../loop/SALIDA_V57_MARCADOR_APERTURA.txt) es la corrida del marcador de la que salen el 5 y el 72.
 
 ---
 

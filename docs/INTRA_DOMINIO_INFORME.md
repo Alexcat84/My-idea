@@ -4166,7 +4166,7 @@ trabajo**, el conjunto `dso_dpo_gestion_capital_trabajo` mas uno por cada mitad,
 | par | puesto | clase |
 |---|---:|:---:|
 | el conjunto contra la mitad del cobro | 191 | **D** |
-| el conjunto contra la mitad del pago | 203 | **C** |
+| el conjunto contra la mitad del pago | 203 | ~~**C**~~ **D** |
 | **el conjunto contra el CICLO** | **653** | **A** |
 
 > **Los tres nodos de la figura del 203 no repiten entre si: el conjunto jerarquiza
@@ -4178,6 +4178,8 @@ trabajo**, el conjunto `dso_dpo_gestion_capital_trabajo` mas uno por cada mitad,
 > cercania de tema **era una jerarquia de tres**, y la repeticion real estaba con
 > el nodo del ciclo. **Los dos forman una PAREJA CERRADA**: ninguno de los dos
 > tiene otra A.
+
+> **CORRECCION DECLARADA (20 ago 2026, vuelta 57, TAREA 1.1, por el carril del banco `9.10`). LA CELDA DEL 203 EN ESTA TABLA ESTABA ENVEJECIDA UNA VUELTA ENTERA.** La vuelta 56 volteo ese puesto en la relectura del filo del acto 15 del tramo 3 de `OP-U-01`, y **no barrio esta tabla derivada en el mismo acto**, que es lo que el `9.10` manda y lo que el precedente del **844** (vuelta 49) si hizo. **Lo que la remedicion del 653 dice NO cambia y por eso no se reescribe**: los tres nodos de la figura no repiten entre si y la unica `A` sigue siendo la del ciclo. Lo unico que se mueve es el veredicto de esa fila. Medido HOY sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` con `python scripts/loop/vuelta57_puestos_volteados.py --base c0e8041a --tambien 203,246,360`: [`loop/SALIDA_V57_PUESTOS_VOLTEADOS_ANTES.txt`](loop/SALIDA_V57_PUESTOS_VOLTEADOS_ANTES.txt) da esta celda ROJA y [`loop/SALIDA_V57_PUESTOS_VOLTEADOS_DESPUES.txt`](loop/SALIDA_V57_PUESTOS_VOLTEADOS_DESPUES.txt) la da VERDE.
 
 **LAS PERDIDAS, verificadas como unicas en el grafo**: de
 `ciclo_de_conversion_de_efectivo` se pierden **la formula del ciclo**, dias de
