@@ -1745,6 +1745,62 @@ la vuelta 54 nombra: una tabla que resume decisiones se talla de los planes, no 
 | **B** | 37, 38, 39, 40, 41, 43, 44, 45, 46, 47, 48, 50 | **12** | **12** | **68** | 20 | 39 | **9** | **1** |
 | **los tres** | | **25** | **25** | **156** | **53** | **75** | **28** | **4** |
 
+> ### CORRECCION DECLARADA: **LAS CUATRO PERDIDAS NO SON TODAS DE CONDICIONES. SON TRES Y UNA** (20 ago 2026, vuelta 56, TAREA 1.2 del encargo; caida de reporte nombrada por el acta de la vuelta 55, seccion 3)
+>
+> **LA CELDA DE ARRIBA DICE `4` PERDIDAS NOMBRADAS Y ESA CIFRA ES CORRECTA: son cuatro.** Lo que
+> estaba mal era **SU ESPECIE**, y la correccion se escribe **aqui** porque esta es la celda desde
+> la que la cifra se podria heredar.
+>
+> **ESTA TABLA NO ESTA TECLEADA: sale entera de
+> `python scripts/loop/vuelta56_tallar_perdidas_v55.py`**
+> ([`../loop/SALIDA_V56_TALLAR_PERDIDAS_V55.txt`](../loop/SALIDA_V56_TALLAR_PERDIDAS_V55.txt)),
+> **que la talla de los `PLAN_V55_*.json` SELLADOS y lee la especie del propio plan**, sin rama por
+> defecto: si el trozo sellado no nombra ni condicion ni paso, o nombra los dos, el tallador sale
+> **ROJO con el acto nombrado** y no emite tabla. **La ultima columna trae la frase sellada
+> VERBATIM**, recortada por maquina, para que la etiqueta no haya que creersela.
+>
+> | acto | lote | el nodo que muere | **ESPECIE** | por que se perdio | la frase del plan sellado que lo dice |
+> |---:|:---:|---|---|---|---|
+> | **18** | T1 | `traspaso_ventas_cuentas` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 habla de quejas de CLIENTES y la condicion 1 del superviviente dice CLIENTES NUEVOS, que es mas estrecho; el INCISO para condiciones no existe en el instrumento (pendiente de doctrina heredado) y por eso la perdida se nombra en vez de repararse* |
+> | **31** | A | `traffic_partners_hypothesis` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA, UNA: su condicion 1 acota el disparador a los negocios WEB O MOVIL y la del superviviente no lo acota; el INCISO para condiciones no existe en el instrumento y la perdida se nombra* |
+> | **33** | A | `leap_of_faith_questions` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA, UNA: su condicion 2 acota el disparador a los SUPUESTOS FINANCIEROS sin validar y la condicion 1 del superviviente habla de suposiciones sin acotar; el INCISO para condiciones no existe en el instrumento y la perdida se nombra* |
+> | **45** | B | `milk_run_deliveries` | **DE PARAMETRO DE PASO** | el inciso MENTIRIA contra la unica restriccion del paso que protege | *PERDIDA NOMBRADA, UNA, Y LA ELECCION SE DECLARA: el paso 3 del que muere nombra las VENTANAS DE TIEMPO junto a la capacidad de vehiculo como restricciones que deciden la tecnica de ruteo, y el paso 4 de la madre dice que la asignacion generalizada es para cuando LA UNICA restriccion es la capacidad del vehiculo* |
+> | **suma** | | | **3 DE CONDICIONES, 1 DE PARAMETRO DE PASO** | | |
+>
+> **TRES DE CONDICIONES Y UNA DE PARAMETRO DE PASO.** **El `D8` del reporte de la vuelta 55 las
+> llamo a las CUATRO de condiciones, y esa es la caida de reporte que el acta de la vuelta 55
+> nombra en su seccion 3.** **EL REPORTE VIEJO NO SE EDITA** (una correccion que tapa lo que
+> corrige no se puede auditar, banco `9.10`): **la correccion vive aqui**. Y se deja dicho que
+> **aquel mismo reporte describia BIEN el caso del 45 en su `D5` y lo generalizaba MAL en su
+> `D8`**: la caida no fue de medicion, fue de dictado.
+
+> ### EL PENDIENTE DE DOCTRINA DEL `INCISO` DE CONDICIONES, NOMBRADO EN EL REGISTRO CON SU CUENTA MEDIDA (20 ago 2026, vuelta 56, TAREA 1.3 del encargo)
+>
+> **UNA MEDICION DEL DIA QUE SE DECLARA EN VEZ DE CALLARSE, porque cambia donde va esta nota:** la
+> TAREA 1.3 pedia dejar la cuenta *donde ese pendiente este nombrado en el registro*, y **medido hoy
+> por `grep` sobre `docs/plan/`, EL PENDIENTE NO ESTABA NOMBRADO EN NINGUNA PAGINA DEL PLAN**.
+> Vivia solo en `docs/loop/REPORTE.md` y en `docs/loop/ACTA_AUDITOR.md`. **Asi que se nombra aqui
+> por primera vez, pegado a la cuenta que lo mide**, que es el unico sitio del registro donde tiene
+> con que sostenerse.
+>
+> **EL PENDIENTE, dicho entero:** el instrumento de fundir conoce el destino `INCISO` para los
+> **PASOS** y **no para las CONDICIONES**. Mientras no exista, una condicion del que muere que dice
+> **casi** lo mismo que una del superviviente solo tiene dos destinos: **`APPEND`**, que fabrica
+> condiciones casi gemelas, o **`CUBIERTO` con perdida nombrada**.
+>
+> **SU COSTO, MEDIDO Y NO ESTIMADO: TRES perdidas de condicion en UNA SOLA VUELTA** (los actos
+> **18**, **31** y **33** de la vuelta 55, contados por el tallador de arriba) **son el costo de
+> que el `INCISO` de condiciones no exista.**
+>
+> **LA RAMA DE MANDARLAS DE `APPEND` QUEDO CONTESTADA** (acta de la vuelta 55, pregunta 5): **NO
+> por defecto.** Fabricar condiciones casi gemelas para no nombrar una perdida **esconde el sintoma
+> que mantiene visible este pendiente**, y **la perdida NOMBRADA es el carril mientras siga
+> abierto**.
+>
+> **LA DECISION DE CREAR EL `INCISO` DE CONDICIONES SIGUE SIENDO DE LA MESA.** Este registro no la
+> toma: la nombra, la mide y la deja acumulada.
+
+
 | la forma, leida del motivo sellado | cuantos | los actos |
 |---|---:|---|
 | **UNA SOLA VARA de contenido no empatada, y BASTA** | **11** | 18, 29, 30, 31, 34, 36, 37, 39, 46, 47, 48 |
@@ -1815,6 +1871,40 @@ y las cinco se releyeron por el carril general de colisiones **con sus dos ampli
 > 44 mover UN solo veredicto cierra la colision, porque el 1008 ya era `D`. **El censo esperado se
 > RE-CORRIO despues de la correccion** y baja de UNA colision a **CERO** para ese acto
 > ([`../loop/SALIDA_V55_COLISIONES_ESPERADAS_TRAS_FILO.txt`](../loop/SALIDA_V55_COLISIONES_ESPERADAS_TRAS_FILO.txt)).
+
+> ### ADJUDICACION REGISTRADA: **UNA RAZON QUE REMITE A UNA MESA, O QUE SE ABSTIENE, ES PREGUNTA DE POLITICA Y BLOQUEA EL ACTO** (20 ago 2026, vuelta 56, TAREA 1.1 del encargo; adjudicada por el acta de la vuelta 55, pregunta 1)
+>
+> **La pregunta que esta nota cierra**, y que la tabla de arriba hizo caer cinco veces: cuando una
+> razon del filo dice *esto lo decide la mesa* o *no lo decido*, eso cuenta como **PREGUNTA DE
+> POLITICA que BLOQUEA el acto**, o como **MATIZ que no lo bloquea**. De ella dependian los actos
+> **6** y **49**, que la vuelta 55 declaro en vez de fundir.
+>
+> **LA RESPUESTA, POR EXTENSION CITABLE Y SIN DOCTRINA NUEVA: ES PREGUNTA DE POLITICA, Y BLOQUEA.**
+> Y con ella va **LA MARCA OPERATIVA**, para que la lectura no dependa del gusto de quien lee:
+>
+> | la forma de la razon | que es | que se hace con el acto |
+> |---|---|---|
+> | **REMITE** la decision a una **INSTANCIA NOMBRADA** (una mesa, un criterio por adoptar) | **PREGUNTA DE POLITICA** | **NO se funde**: se **DECLARA** y acumula para esa mesa |
+> | **SE ABSTIENE** con sus palabras (*no lo decido*) | **PREGUNTA DE POLITICA** | **NO se funde**: se **DECLARA** y acumula |
+> | **RESERVA que la propia razon resuelve, o que una VARA ESCRITA resuelve** | **MATIZ** | **se resuelve y el acto SE FUNDE** |
+>
+> **LAS DOS SEDES, citadas y no resumidas:** el **acta de la vuelta 51, pregunta 2**, que fija el
+> carril del filo (*si la relectura encuentra que lo congelado es una pregunta de POLITICA de
+> catalogo, el acto NO se funde*) y de la que esta adjudicacion es **extension citable**; y el
+> **acta de la vuelta 55, pregunta 1**, que fija la **marca operativa** de arriba.
+>
+> **LAS FIGURAS ESTAN EN ESTA MISMA TABLA, y por eso la nota va aqui y no en otra pagina:** los
+> cuatro pares de los actos **6** y **49** (**668**, **968**, **338** y **297**) escriben la
+> remision o la abstencion **con sus palabras**, y los dos actos quedan **DECLARADOS**; el **218**
+> del acto **44** era una **RESERVA que una vara escrita resuelve**, la del banco `9.6.1` (la linea
+> contra el procedimiento), **y por eso ese acto SI se fundio**. **Cuatro y uno, en la misma
+> tanda**: es el contraste el que hace legible la marca.
+>
+> **LO QUE ESTA ADJUDICACION NO DICE, para que no se estire:** **no contesta ninguna** de las
+> preguntas de politica que las cuatro razones destapan. **Quien las contesta sigue siendo la mesa**
+> del `PARA_ALEXIS` del cierre, y ese pendiente de doctrina **sigue abierto y engordado** con los
+> actos 6 y 49.
+
 
 ### LOS CINCO ACTOS QUE EL TRAMO 2 DEJA DECLARADOS, CADA UNO CON SU CARRIL
 

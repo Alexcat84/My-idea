@@ -1,0 +1,21 @@
+==============================================================================
+LAS PERDIDAS NOMBRADAS DE LA VUELTA 55, TALLADAS DE LOS PLANES SELLADOS
+==============================================================================
+
+  planes leidos       : PLAN_V55_OPU01_LOTE_T1.json, PLAN_V55_OPU01_LOTE_A.json, PLAN_V55_OPU01_LOTE_B.json
+  perdidas encontradas: 4
+  por especie         : {'DE CONDICIONES': 3, 'DE PARAMETRO DE PASO': 1}
+
+--- TABLA: LAS PERDIDAS NOMBRADAS DE LA VUELTA 55, CON SU ESPECIE ---
+
+| acto | lote | el nodo que muere | **ESPECIE** | por que se perdio | la frase del plan sellado que lo dice |
+|---:|:---:|---|---|---|---|
+| **18** | T1 | `traspaso_ventas_cuentas` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 habla de quejas de CLIENTES y la condicion 1 del superviviente dice CLIENTES NUEVOS, que es mas estrecho; el INCISO para condiciones no existe en el instrumento (pendiente de doctrina heredado) y por eso la perdida se nombra en vez de repararse* |
+| **31** | A | `traffic_partners_hypothesis` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA, UNA: su condicion 1 acota el disparador a los negocios WEB O MOVIL y la del superviviente no lo acota; el INCISO para condiciones no existe en el instrumento y la perdida se nombra* |
+| **33** | A | `leap_of_faith_questions` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA, UNA: su condicion 2 acota el disparador a los SUPUESTOS FINANCIEROS sin validar y la condicion 1 del superviviente habla de suposiciones sin acotar; el INCISO para condiciones no existe en el instrumento y la perdida se nombra* |
+| **45** | B | `milk_run_deliveries` | **DE PARAMETRO DE PASO** | el inciso MENTIRIA contra la unica restriccion del paso que protege | *PERDIDA NOMBRADA, UNA, Y LA ELECCION SE DECLARA: el paso 3 del que muere nombra las VENTANAS DE TIEMPO junto a la capacidad de vehiculo como restricciones que deciden la tecnica de ruteo, y el paso 4 de la madre dice que la asignacion generalizada es para cuando LA UNICA restriccion es la capacidad del vehiculo* |
+| **suma** | | | **3 DE CONDICIONES, 1 DE PARAMETRO DE PASO** | | |
+
+  actos con perdida: 4 | de condiciones: 3 | de parametro de paso: 1
+
+FIN
