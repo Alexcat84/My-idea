@@ -1,0 +1,41 @@
+==============================================================================
+CASO POSITIVO DE LA VUELTA 56: LAS GUARDAS PUESTAS A FALLAR
+==============================================================================
+
+  LAS MENTIRAS DE PLAN VAN SOBRE EL ACTO 20 DEL TRAMO 2, que esta
+  DECLARADO y que esta vuelta NO TOCA (regla del acta 54, pregunta 7).
+  superviviente fases_de_retencion_de_clientes, absorbido ocho_fases_experiencia_cliente
+
+  1. GUARDA 1B con un absorbido que es PUERTA
+     exit=1 | aborta sin escribir: SI
+     guarda 1B, ningun absorbido es semilla ni extremo de puente: ROJO
+     VEREDICTO: LA GUARDA MUERDE
+
+  2. GUARDA DE COBERTURA por OLVIDO de un paso (la direccion peligrosa)
+     exit=1 | aborta sin escribir: SI
+     guarda 2, cobertura exacta de indices (cero olvidos): ROJO
+     [ROJO] acto 20, pasos de ocho_fases_experiencia_cliente: faltan ['3'], sobran []
+     [ROJO] acto 20: marca desconocida ''
+     lineas rojas: 2 (la 55 declaro DOS aqui, D6: una causa, dos sintomas)
+     VEREDICTO: LA GUARDA MUERDE
+
+  3. GUARDA DE COBERTURA por SOBRANTE, la que AISLA la guarda 2
+     exit=1 | aborta sin escribir: SI
+     guarda 2, cobertura exacta de indices (cero olvidos): ROJO
+     [ROJO] acto 20, pasos de ocho_fases_experiencia_cliente: faltan [], sobran ['5']
+     lineas rojas: 1 | UNA SOLA CAUSA Y UN SOLO SINTOMA: SI
+     VEREDICTO: LA GUARDA MUERDE
+
+  4. GUARDA DEL INCISO VERBATIM con una parafrasis en vez de un trozo literal
+     exit=1 | aborta sin escribir: SI
+     OP-U-01, TRAMO CASO POSITIVO inciso: el inciso NO es trozo verbatim . MODO SIMULAR
+     [ROJO] acto 20: el inciso 'la experiencia emocional deseada para todos los segmentos' NO es trozo verbatim del paso 2 de ocho_fases_experiencia_cliente
+     VEREDICTO: LA GUARDA MUERDE
+
+  5. GUARDA DE COLISIONES contra una cuenta esperada FALSA
+     CUENTA ESPERADA: 7 | MEDIDA: 0 | CALZA: NO
+     VEREDICTO: LA GUARDA MUERDE
+
+  planes de mentira borrados: _caso_positivo_v56_1b.json, _caso_positivo_v56_cobertura.json, _caso_positivo_v56_sobrante.json, _caso_positivo_v56_inciso.json
+
+RESULTADO: LAS CINCO GUARDAS MUERDEN

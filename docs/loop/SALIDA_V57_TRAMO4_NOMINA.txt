@@ -1,0 +1,132 @@
+==============================================================================
+EL ABRIDOR DEL TRAMO 4 DE OP-U-01 (vuelta 57)
+sucesor del de la 56: la LECTURA B deja de ser un bloque fijo de la 48
+==============================================================================
+
+  nomina de hoy   : docs/loop/RECOMPUTO_V57_APERTURA.jsonl (140 actos CERRADOS)
+  nomina de la 48 : docs\loop\RECOMPUTO_V48_COMPONENTES.jsonl (270 actos CERRADOS)
+
+--- LOS TRAMOS YA ABIERTOS, IDENTIFICADOS POR SUS MIEMBROS ---
+  tramo 1: 50 actos, 139 miembros, 11 vivos hoy en los puestos [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+           fuente: el bloque 1 a 50 de la nomina de la 48 (no tiene fichero propio)
+  tramo 2: 50 actos, 100 miembros, 5 vivos hoy en los puestos [12, 13, 14, 15, 16]
+           fuente: docs\loop\TRAMO2_V54.jsonl
+  tramo 3: 50 actos, 100 miembros, 3 vivos hoy en los puestos [17, 18, 19]
+           fuente: docs\loop\TRAMO3_V56.jsonl
+
+--- EL TRAMO 2 CONTRA SU BLOQUE DE LA 48 (aquella apertura SI calzaba) ---
+   bloque 51 a 100 de la 48: 50 actos | fichero fijado: 50 actos
+   calzan en conjunto y en orden: SI
+
+--- EL TRAMO 3 CONTRA SU BLOQUE DE LA 48 (la vuelta 56 midio que NO calza) ---
+   en el fichero y no en el bloque: 1  ['construir_sobre_ideas_ajenas, reglas_brainstorming']
+   en el bloque y no en el fichero: 1  ['crecimiento_ingresos_verdes, generacion_ingresos_verdes']
+   ES LO QUE LA VUELTA 56 DEJO ESCRITO, y por eso la LECTURA B de este tramo
+   se arma saltando los tramos FIJADOS en vez de tomar el bloque 151 a 200.
+
+--- GUARDA DEL PREFIJO (el 19 se MIDE, no se teclea) ---
+  actos vivos de los tramos 1, 2 y 3 : 19
+  puestos que ocupan hoy             : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+  ocupan los puestos 1 a 19 sin huecos: SI
+
+--- LECTURA A: los 50 CERRADOS siguientes en el orden impreso de HOY ---
+  actos CERRADOS fuera de los tramos 1, 2 y 3: 121
+  puestos de hoy del tramo 4: del 20 al 69
+
+--- LECTURA B: la nomina de la 48, EN SU ORDEN, saltando los tramos fijados ---
+  CERRADOS de la 48 fuera de los tramos 1, 2 y 3: 121
+  puestos de la 48 del tramo 4: del 150 al 199 (no tienen por que ser contiguos)
+
+  VIVOS hoy   : 50
+  FUNDIDOS    : 0
+  suma        : 50 de 50
+
+--- LAS DOS LECTURAS, COMPARADAS EN CONJUNTO Y EN ORDEN ---
+  LECTURA A (orden de HOY) y LECTURA B (orden de la 48): CALZAN, mismo conjunto y mismo orden
+
+--- GUARDA DE LOS CUATRO AJENOS (03_FUSIONES.md, 11 ago 2026) ---
+   CAMINO 1, EL LITERAL, que es el que corrian los abridores de los tramos 1 y 2:
+     gates_go_kill_decision_points          en el TRAMO 4: NO                     en el lote CERRADO entero: NO
+     customer_discovery                     en el TRAMO 4: NO                     en el lote CERRADO entero: NO
+     ab_testing_optimizacion                en el TRAMO 4: NO                     en el lote CERRADO entero: NO
+     brainstorming_divergente               en el TRAMO 4: NO                     en el lote CERRADO entero: NO
+   CAMINO 1: VERDE, ninguno de los cuatro entra
+
+   CAMINO 2, POR EL RESOLUTOR (regla 9 del EJECUTOR, P.1): un ajeno deprecado
+   vive hoy dentro del ids_alias de su superviviente, y el camino literal no lo ve.
+     gates_go_kill_decision_points          deprecado: None   resuelve a gates_go_kill_decision_points    en el TRAMO 4: NO
+     customer_discovery                     deprecado: None   resuelve a customer_discovery               en el TRAMO 4: NO
+     ab_testing_optimizacion                deprecado: None   resuelve a ab_testing_optimizacion          en el TRAMO 4: NO
+     brainstorming_divergente               deprecado: True   resuelve a reglas_brainstorming             en el TRAMO 4: NO
+   CAMINO 2: VERDE, ningun ajeno entra tampoco bajo el resolutor.
+
+--- GUARDA DE SOLAPE CON LOS TRAMOS 1, 2 Y 3 ---
+   actos del tramo 4 que tocan un miembro de un tramo anterior: 0
+   GUARDA: VERDE, ningun solape
+
+--- EL TRAMO 4, EN EL ORDEN IMPRESO ---
+
+  acto hoy   en 48  tamano  clases internas      miembros
+  1    20    150    2       {'A': 1}             crecimiento_ingresos_verdes, generacion_ingresos_verdes
+  2    21    151    2       {'A': 1}             critica_al_pib_como_metrica, critica_del_pib_como_metrica_de_progreso
+  3    22    152    2       {'A': 1}             hibridos_monstruosos, manejo_de_hibridos_monstruosos
+  4    23    153    2       {'A': 1}             liderazgo_ceo_sostenibilidad, vision_alineacion_sostenibilidad
+  5    24    154    2       {'A': 1}             accountability_incentivos, incentivos_reconocimiento_sostenibilidad
+  6    25    155    2       {'A': 1}             menos_malo_vs_bueno, ser_menos_malo_vs_ser_bueno
+  7    26    156    2       {'A': 1}             diseno_mensaje_verde, mensajeria_creativa_positiva
+  8    27    157    2       {'A': 1}             unirse_grupo_lideres_climaticos, unirse_organizacion_rsc_ambiental
+  9    28    158    2       {'A': 1}             compra_offsets_carbono, neutralidad_carbono
+  10   29    159    2       {'A': 1}             eco_efectividad_2, eco_efectividad_re_evolucion_industrial
+  11   30    160    2       {'A': 1}             disruptores_endocrinos_y_salud_industrial, quimicos_toxicos_en_diseno
+  12   31    161    2       {'A': 1}             eco_eficiencia, eco_eficiencia_costos
+  13   32    162    2       {'A': 1}             desperdicio_es_alimento, metabolismo_biologico_y_tecnico
+  14   33    163    2       {'A': 1}             carta_de_credito_letter_of_credit, letters_of_credit
+  15   34    164    2       {'A': 1}             export_administration_regulations, regulaciones_exportacion_ear
+  16   35    165    2       {'A': 1}             seguro_de_carga_transporte, seguro_exportacion
+  17   36    166    2       {'A': 1}             incoterms_reglas_comerciales_internacionales, terminos_de_venta_incoterms
+  18   37    167    2       {'A': 1}             certificado_de_origen_tratados_libre_comercio, nafta_free_trade_agreements
+  19   38    168    2       {'A': 1}             intermediarios_exportacion, uso_intermediarios_exportacion
+  20   39    169    2       {'A': 1}             seleccion_canales_distribucion, seleccion_canales_exportacion
+  21   40    170    2       {'A': 1}             ecosistema_global_emprendimiento_gee, recursos_apoyo_pymes_sba
+  22   41    171    2       {'A': 1}             documentary_collections, letra_de_cambio_bill_of_exchange
+  23   42    172    2       {'A': 1}             prevencion_problemas_de_pago, seleccion_de_metodo_de_pago
+  24   43    173    2       {'A': 1}             barreras_comerciales_no_arancelarias, cumplimiento_acuerdos_comerciales_tanc
+  25   44    174    2       {'A': 1}             licenciamiento_tecnologico, proteccion_propiedad_intelectual_internacional
+  26   45    175    2       {'A': 1}             consejos_distrito_exportacion_dec, uso_del_us_commercial_service
+  27   46    176    2       {'A': 1}             elaboracion_fdd, preparar_fdd
+  28   47    177    2       {'A': 1}             estrategia_multicanal_expansion, franquicia_mas_crecimiento_corporativo_hibrido
+  29   48    178    2       {'A': 1}             proceso_llamada_inicial_venta, proceso_primera_llamada
+  30   49    179    2       {'A': 1}             sitio_web_captura_leads, sitio_web_franquicia
+  31   50    180    2       {'A': 1}             comprender_definicion_legal_franquicia, marco_name_system_fee
+  32   51    181    2       {'A': 1}             programa_de_referidos_de_franquiciados, referidos_franquiciados_existentes
+  33   52    182    2       {'A': 1}             mito_control_calidad_corporativo, motivated_management_franquiciado
+  34   53    183    2       {'A': 1}             confidencialidad_manual_operaciones, desarrollar_manual_operaciones
+  35   54    184    2       {'A': 1}             ferias_comerciales_franquicia, marketing_en_ferias_comerciales_de_franquicias
+  36   55    185    2       {'A': 1}             combinar_crecimiento_corporativo_y_franquicia, mix_ubicaciones_corporativas_franquicia
+  37   56    186    2       {'A': 1}             rutas_de_salida_y_puertas_de_emergencia, rutas_salida_planificacion_emergencias
+  38   57    187    2       {'A': 1}             rendicion_cuentas_prospectiva, responsabilidad_prospectiva
+  39   58    188    2       {'A': 1}             capacitacion_conciencia_programa, capacitacion_educacion_seguridad
+  40   59    189    2       {'A': 1}             confusion_de_modos_automatizacion, confusion_modos_automatizacion
+  41   60    190    2       {'A': 1}             clasificacion_sistemas_por_nivel_seguridad, niveles_de_madurez_de_seguridad
+  42   61    191    2       {'A': 1}             accident_proneness_fallacy, declive_teoria_manzana_podrida
+  43   62    192    2       {'A': 1}             cultura_justa, cultura_justa_organizacional
+  44   63    193    2       {'A': 1}             omisiones_en_mantenimiento, vulnerabilidad_instalacion
+  45   64    194    2       {'A': 1}             areas_riesgo_primario, clasificacion_riesgos_por_dominio
+  46   65    195    2       {'A': 1}             critica_perdida_de_conciencia_situacional, evitar_perdida_situacion_awareness
+  47   66    196    2       {'A': 1}             sesgo_retrospectivo_hindsight, sesgo_retrospectivo_hindsight_2
+  48   67    197    2       {'A': 1}             limite_busqueda_causas_pendulo, reglas_parada_investigacion_accidentes
+  49   68    198    2       {'A': 1}             caso_descarrilamiento_nakina, condiciones_latentes_largo_plazo
+  50   69    199    2       {'A': 1}             cultura_de_aprendizaje, ingenieria_cultura_aprendizaje
+
+  actos del tramo 4      : 50
+  por tamano             : {2: 50}
+  por figura             : {'PURO A': 50, 'MIXTO': 0}
+  nodos implicados       : 100
+  nodos que MORIRIAN si se funden todos: 50
+
+--- LOS QUE NO SON DE FUSION PURA (tamano 2 y PURO A), NOMBRADOS ---
+   NINGUNO: los 50 son de fusion pura, tamano 2 y PURO A.
+
+  escrito: docs/loop/TRAMO4_V57.jsonl
+
+FIN
