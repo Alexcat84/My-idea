@@ -11,7 +11,8 @@ NODOS, y el segundo es justo el MIXTO que sobrevive a ese acto. La perdida no ex
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `d88c42bb` (el acta de la vuelta 52), **arbol limpio y todo pusheado** |
-| **commits de la vuelta** | **5**: `49ae6eef` (TAREA 1), `cadc9977` (lote A), `04bd56de` (lote B), `90bb930c` (lote C) y el del cierre |
+| **hash final** | `be5d152b`, **pusheado a `origin/pasada-unica`** |
+| **commits de la vuelta** | **5**: `49ae6eef` (TAREA 1), `cadc9977` (lote A), `04bd56de` (lote B), `90bb930c` (lote C) y `be5d152b` (el cierre) |
 | **arbol al cierre** | limpio tras el commit del cierre |
 
 ---
