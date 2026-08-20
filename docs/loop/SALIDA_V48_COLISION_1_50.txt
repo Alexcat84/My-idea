@@ -1,0 +1,71 @@
+==============================================================================
+COLISIONES DE CLASE, medidas sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+EN EL ESTADO DE HOY, sin fundir nada: pares resueltos con dos clases = 3
+   ['customer_development_modelo', 'voz_del_cliente_voc'] -> [('B', 806), ('D', 1261)]
+   ['pensamiento_convergente_divergente', 'reglas_brainstorming'] -> [('A', 844), ('D', 585)]
+   ['riesgo_titulos_inflados', 'seleccion_ceo_fundador'] -> [('B', 263), ('D', 1589)]
+
+POR ACTO: colisiones NUEVAS que fabricaria cada forma de fundir
+acto   tam figura         ENTERA   NUCLEO-A
+   1     4 MIXTO               0          0
+   2     4 MIXTO               0          0
+   3     4 MIXTO               0          0
+   4     4 MIXTO               0          0
+   5     3 MIXTO               0          0
+   6     3 MIXTO               0          0
+   7     3 MIXTO               2          0
+   8     3 TODO-A              1          1
+   9     3 TODO-A              0          0
+  10     3 MIXTO               0          0
+  11     3 MIXTO               0          0
+  12     3 MIXTO               1          0
+  13     3 MIXTO               0          0
+  14     3 MIXTO               0          0
+  15     3 TODO-A              0          0
+  16     3 MIXTO               0          0
+  17     3 MIXTO               0          0
+  18     3 MIXTO               1          0
+  19     3 MIXTO               0          0
+  20     3 MIXTO               1          0
+  21     3 MIXTO               0          0
+  22     3 TODO-A              0          0
+  23     3 TODO-A              0          0
+  24     3 MIXTO               0          0
+  25     3 MIXTO               0          0
+  26     3 MIXTO               0          0
+  27     3 MIXTO               0          0
+  28     3 MIXTO               0          0
+  29     3 TODO-A              0          0
+  30     3 TODO-A              0          0
+  31     3 MIXTO               0          0
+  32     3 TODO-A              0          0
+  33     3 MIXTO               0          0
+  34     3 MIXTO               0          0
+  35     3 MIXTO               0          0
+  36     2 TODO-A              0          0
+  37     2 TODO-A              0          0
+  38     2 TODO-A              0          0
+  39     2 TODO-A              0          0
+  40     2 TODO-A              1          1
+  41     2 TODO-A              0          0
+  42     2 TODO-A              0          0
+  43     2 TODO-A              0          0
+  44     2 TODO-A              0          0
+  45     2 TODO-A              0          0
+  46     2 TODO-A              0          0
+  47     2 TODO-A              0          0
+  48     2 TODO-A              0          0
+  49     2 TODO-A              0          0
+  50     2 TODO-A              0          0
+
+RESUMEN sobre 50 actos:
+  actos que NO fabrican ninguna colision al fundirse ENTEROS: 44
+  actos que SI fabrican colision al fundirse enteros        : 6
+  los que la fabrican: [7, 8, 12, 18, 20, 40]
+
+  cruce figura contra colision (fusion ENTERA):
+    MIXTO    sin colision=False : 4
+    MIXTO    sin colision=True  : 23
+    TODO-A   sin colision=False : 2
+    TODO-A   sin colision=True  : 21
