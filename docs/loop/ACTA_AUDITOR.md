@@ -14628,3 +14628,318 @@ esta tanda no trae ninguna: la racha se rompe).
 EL BUCLE SIGUE: encargo escrito en PROMPT_SIGUIENTE.md (relectura
 conjunta del 32, las once heredadas con triage, el rotulo del cuadro
 de varas, y el tramo 5).
+
+
+# ACTA DE LA VUELTA 58 DEL AUDITOR (20 ago 2026, Fable 5)
+
+SIN HUECO DE ACTA: la ultima acta cubre la vuelta 57 y esta cubre la 58,
+que es la inmediatamente anterior a la actual. Vuelta auditada: hash final
+3ffc2091 mas el commit del reporte 081d9888, los dos en
+origin/pasada-unica (HEAD igual a origin, verificado), arbol limpio al
+abrir y al cerrar mi corrida. La vuelta trae la relectura conjunta del
+acto 32 RESUELTA A FAVOR DE MI CASO, el atraso de las once heredadas en
+cero, el tramo 5 abierto con todo su insumo y NINGUN lote ejecutado,
+dicho por el ejecutor en su primera linea y no escondido.
+
+## 1. VERIFICACION POR CORRIDA PROPIA: TODO AL DIGITO
+
+Cada cifra de esta seccion sale de un instrumento corrido HOY por mi
+(salidas y codigo propio en docs/loop/_auditor_v58_*, committeados con
+esta acta); el reporte se uso como contraste, no como fuente.
+
+- CABECERA TALLADA, RE-CORRIDA POR MI: tallar_cabecera_reporte.py
+  --vuelta 58 --comparar da filas cotejadas 14, DISTINTAS 0, ausentes 0,
+  CABECERA IDENTICA AL TALLADOR.
+- MARCADOR (recomputar_marcador.py 3388): A 551, B 72, C 5, D 2.760
+  sobre n 3.388, cero huecos, cero duplicados. El diff de
+  INTRA_DOMINIO_VEREDICTOS.jsonl entre b222e1c5 y HEAD es VACIO, corrido
+  por mi: deshacer una fusion pura no volteo ni un veredicto, tal como
+  el reporte declara. Tasa por dominio identica al digito (quality 14,1
+  con n 844; risk_management 0,0; seguridad_digital 11,1).
+- GRAFO (vuelta31_estado.py): 3.853 ficheros, 3.342 vivos, 511
+  deprecados, 17.366 enlaces; 71 operaciones todas LISTA, dependencias
+  rotas 0, inventario 672. Los deltas del deshacer cuadran solos: vivos
+  mas uno, deprecados menos uno, enlaces menos tres (los tres
+  nodos_previos que la fusion habia sumado al superviviente).
+- RETRATO Y ACTOS (recomputo_3388.py con salida propia): 551 crudas,
+  344 pares distintos (colapsos 207 por resta exacta), 150 componentes,
+  97 CERRADOS sobre 203 nodos y 53 ABIERTOS sobre 240, LAS CUATRO
+  comprobaciones OK (i en 443 igual a 443, ii en 344 igual a 344).
+  Cada celda contra la vuelta 57 se movio en UNO y era lo que el
+  encargo predecia para el deshacer.
+- COLA 1.471, CENSO cero colisiones con 185 auto-pares y CALZA: SI,
+  DUPLICADAS 956 grupos sobre 754 nodos. Los tres re-corridos por mi
+  con idempotencia verificada por git (el unico M de ARISTAS_DUPLICADAS
+  fue el aviso LF/CRLF de git en Windows con diff de contenido VACIO,
+  y lo digo en vez de contarlo como cambio).
+- EL ACTO 32, DESHECHO Y VERIFICADO CAMPO A CAMPO: los dos miembros
+  VIVOS hoy y IDENTICOS campo a campo contra sus blobs de 75863aee
+  (script propio sobre git show, CERO campos distintos en los dos). El
+  acto 35 EN PIE: principio_apalancamiento_numero_magico conserva
+  ferias_comerciales_franquicia y ya no lleva el id viejo, que es
+  exactamente lo que el diff inverso debia preservar. La duplicada
+  historica que vuelve con el nodo esta MEDIDA con nombre: el grupo
+  programa_de_referidos_de_franquiciados sobre nodos_previos hacia
+  principio_apalancamiento_numero_magico esta en el fichero de
+  duplicadas, con leverage_una_sola_franquicia resolviendo al mismo
+  destino.
+- LAS ONCE HEREDADAS: los SEIS volteos citados en el triage verificados
+  por mi contra git al commit exacto (1222 A a D en 90bb930c, 1865 A a
+  D en cadc9977, 2488 A a D en 04bd56de, 599 B a D en 76c9fadc, 233 B a
+  D en 15d42eef, 784 B a D en c8172126; el padre de cada uno con la
+  clase vieja, leido por mi). El barrido de puestos volteados re-corrido
+  por mi: 199 VERDES, 16 AMBIGUAS las mismas, 3 ROTULADAS con su
+  vigente= cotejado contra el archivo de hoy, deuda CERO, GUARDA VERDE.
+  Los dos escritores re-corridos: 15 y 3 sitios en YA ESTABA. La fila
+  del banco partida verificada en su sitio (2914 tachada entera, 2.477
+  en A y 2.488 en D debajo, nota fechada), y las celdas del 9.10 en
+  RECOMPUTO_3388.md leidas: 247 en 207 con contador DOCE, 248 en 344
+  con contador QUINCE, 528 en 344 igual a 344 sigue OK.
+- TAREA 1.3 POR DIFF PROPIO: corri el ancestro (vuelta56_varas_tramo3)
+  y el sucesor (vuelta58_varas_tramo) sobre EL MISMO fichero del tramo
+  5: difieren SOLO el titulo (el ancestro talla TRAMO 3 vuelta 54 sobre
+  actos del tramo 5, que es el defecto) y la linea nueva de la ruta.
+  La aritmetica no se movio ni un caracter, comprobado por mi y no
+  afirmado.
+- EL REGISTRO DEL TRAMO 4: correccion declarada del 32 con sus cuatro
+  TABLA SUPERADA delante y el bloque nuevo al final, y la adjudicacion
+  del acto 25 anotada con el carril del imposible por puerta citando
+  acta 51 pregunta 3 y acta 54 preguntas 1 y 2. Leido sitio a sitio.
+- EL TRAMO 5: la nomina fijada TRAMO5_V58.jsonl cotejada CONTRA MI
+  PROPIO recomputo (los 50 actos existen como CERRADOS de tamano 2 en
+  mi fichero de componentes, 50 de 50 CALZAN), puesto_hoy contiguo 27 a
+  76, puesto_v48 contiguo 200 a 249, todos PURO A y fusion pura, solape
+  con el tramo 4 CERO. El abridor re-corrido por mi en modo fijado
+  SOBRE MI NOMINA: 50 vivos, 0 fundidos, el primero en el puesto 27,
+  que es el prefijo de 26 confirmado por la otra punta; y los vivos de
+  los tramos 2, 3 y 4 contados por mi del grafo: 5, 3 y 7 (el septimo
+  es el 32 deshecho), consistente con 11 del tramo 1 para 26.
+- GATE 0 Y SUITES, corrida entera mia: run_phase1.py
+  --reaplico-curaduria con GATE 0: OK; el ciclo completado con
+  etiquetas_de_cara --aplicar y sync_assets_web y el arbol LIMPIO
+  despues (el ciclo de tres es idempotente entero; a medias no lo es, y
+  me paso, seccion 6). Suite del motor 25 de 25; suite web 80 ficheros,
+  1.030 pasadas y 3 saltadas; tsc --noEmit CERO lineas. Caso positivo
+  de la 57 re-corrido por mi: LAS SEIS GUARDAS MUERDEN.
+
+## 2. RELECTURA CIEGA: CUADRO DE VARAS PROPIO, 50 DE 50, Y EL 32
+##    RE-MEDIDO
+
+Esta vuelta no sello ningun plan (los lotes no corrieron), asi que la
+ciega no tiene elecciones nuevas que destapar: recae sobre el insumo
+del tramo 5 y sobre la relectura conjunta del 32.
+
+- CONSTRUI MI PROPIO CUADRO DE VARAS de los 50 actos del tramo 5 con
+  codigo propio (pasos y condiciones por conteo, cableado por vecinos
+  resueltos distintos con resolutor propio), ANTES de cotejar: las 50
+  FILAS CALZAN AL DIGITO con el cuadro del ejecutor (miembros, seis
+  conteos y forma por acto, cotejo por maquina, DISTINTAS 0). El
+  resumen POR FORMA sale identico: 22 de UNA SOLA VARA, 11 de TODAS DE
+  ACUERDO, 7 de CONTENIDO EMPATA, 6 que CHOCAN y 4 de EMPATE SIN VARA.
+  Declaro que lei el instrumento del ejecutor antes de escribir el mio:
+  es la receta de medicion ratificada, no una adjudicacion, y para el
+  tramo 5 no existe todavia ningun motivo sellado que destapar.
+- EL ACTO 32, RE-MEDIDO POR MI sobre los ficheros de hoy (identicos
+  campo a campo a los blobs pre fusion, verificado antes): pasos 5
+  contra 5, condiciones 2 contra 2, cableado 3 contra 3. EMPATE SIN
+  VARA por la letra vigente, que es MI caso del acta 57 confirmado por
+  la corrida del ejecutor y ahora por la mia. La resolucion (deshacer y
+  DECLARADO, septimo del tramo) es la que el carril escrito manda.
+
+CIEGA: CERO discrepancias, dentro o fuera del marcado. La regla del
+credito no dispara nada.
+
+## 3. CAIDAS DE ESTA TANDA: CERO DEL EJECUTOR
+
+Busque las tres especies con instrumento y contraste y no hay ninguna:
+cero de clase (diff de veredictos VACIO y marcador identico), cero de
+cifra publicada (cada celda que coteje calza con mi corrida), cero de
+reporte (la cabecera es identica al tallador y toda afirmacion cotejada
+salio cierta, incluida la trampa declarada del vitest sin --reporter).
+EL INCUMPLIMIENTO DEL D1 NO ES CAIDA DE NINGUNA ESPECIE: no hay
+afirmacion falsa en ninguna parte, el reporte lo dice en su primera
+linea y lo lista primero en lo no hecho. Es alcance sin cumplir,
+declarado, y se adjudica abajo.
+
+## 4. LOS SEIS DISCUTIBLES, ADJUDICADOS
+
+1. D1, PARAR ANTES DE LOS LOTES CON EL TRAMO ABIERTO: A FAVOR. El lote
+   con sus guardas (simulacion previa, 1B por acto, junturas, cobertura
+   exacta, reanclar, Gate 0 y suites, censo con esperadas, tallador y
+   registro) es la UNIDAD ATOMICA de ejecucion del modo continuo: un
+   lote a medias no tiene estado verificable que entregar, y el modo
+   (AUDITOR.md seccion 3) exige las guardas EN VERDE TRAS CADA FASE,
+   no a mitad de una. Dejar el insumo entero medido y fijado (nomina,
+   varas, colisiones esperadas, dossier) y decir el incumplimiento
+   PRIMERO es la conducta de fallar ruidoso que la casa pide. La mitad
+   sin hacer va al encargo como TAREA 2 y no se convierte en pasivo.
+2. D2, ROTULAR TRES EN VEZ DE CORREGIRLAS: A FAVOR, y la vara NO la
+   invento el ejecutor: es la del encargo (acta 57, pregunta 6): la
+   que sea retrato de un dia con su corte declarado se ROTULA, la
+   envejecida se CORRIGE. Las tres son retratos: la pagina anuncia una
+   relectura y el commit de esa misma operacion la ejecuto (los tres
+   commits verificados por mi lo dicen en su titulo), asi que escribir
+   D dejaria a la pagina contando el tiempo al reves; y el 784 vive en
+   una salida de instrumento pegada verbatim, que es el D6 de la 57 ya
+   adjudicado A FAVOR. La formulacion del ejecutor (se rotula cuando
+   reescribir haria mentir a la pagina) es la MISMA vara dicha por sus
+   consecuencias, no una nueva.
+3. D3, CORREGIR LA CELDA DE UNA TABLA DE DOCTRINA: A FAVOR, por el
+   precedente del 203 (vuelta 57, TAREA 1, ratificado en su acta): el
+   tachado conserva la letra vieja, la nota fechada dice que el
+   argumento no cambia y que solo se mueve el veredicto de esa fila.
+   Dejar la A seria publicar a sabiendas una clase envejecida (regla
+   1, el instrumento manda). La celda es la conclusion de la regla
+   APLICADA A UN PAR, no la regla: la regla vive en el argumento, que
+   no se toco.
+4. D4, PARTIR LA FILA DEL BANCO EN DOS: A FAVOR. La fila publicaba una
+   letra para dos puestos que ya no la comparten: corregirla en su
+   sitio la dejaba o mintiendo (una letra) o AMBIGUA (dos letras en
+   una celda, que es lo que el barrido no puede cotejar). La fila
+   vieja queda entera y tachada, las dos nuevas dicen la verdad
+   cotejable. Es el principio ya adjudicado en el D2 de la 57:
+   acomodar el papel para que la guarda pueda leerlo no es acomodar el
+   dato, es lo contrario de esconderlo. El carril 9.10 cubre la
+   correccion; la forma minima que la hace cotejable viene con el.
+5. D5, EL ROTULO COMO FORMA NUEVA CON SU DETECTOR: A FAVOR. El encargo
+   pedia expresamente que el rotulo BASTARA para que el barrido dejara
+   de listar la cita como deuda: un rotulo que el instrumento no lee
+   no cumple el encargo, asi que ensenarselo a la guarda era la tarea,
+   no un acomodo. Las tres protecciones estan bien puestas y las
+   verifique: el rotulo cae en ROJO si su vigente= no calza con el
+   archivo de hoy, las lineas de rotulo se blanquean antes de los
+   detectores (la trampa del D2 de la 57, nombrada y esquivada), y el
+   ancestro corrido como contraste da las mismas cifras salvo la
+   clasificacion, que prueba la aritmetica copiada.
+6. D6, SEIS FICHEROS DE INSTRUMENTO EN UNA VUELTA: A FAVOR para esta
+   vuelta. Cada sucesor cumple la vara del acta 54 pregunta 3 una a
+   una (cifras ya citadas, logica intacta, sucesor declarado con
+   ancestro re-corrible), y el del cuadro de varas lo comprobe por
+   diff propio sobre el mismo insumo. La pregunta del techo de la
+   cadena se contesta abajo (pregunta 4) sin doctrina nueva.
+
+## 5. LAS SEIS PREGUNTAS, CONTESTADAS SIN DOCTRINA NUEVA
+
+1. LA VARA DEL REPARTO ES LA DEL ENCARGO Y ESTA BIEN APLICADA: retrato
+   con corte declarado se rotula, envejecida se corrige (acta 57,
+   pregunta 6, que a su vez es el limite declarado del 9.10 y el D6 de
+   la 57). El tachado conserva, pero conservar no es el criterio: el
+   criterio es si la clase citada es DEUDA (envejecida) o RETRATO (la
+   pagina habla de un momento con su corte, y reescribirla le cambia
+   el tiempo del verbo). El rotulo no sobra: es lo que vuelve el
+   retrato cotejable por maquina en vez de deuda eterna.
+2. SI, CON EL PRECEDENTE DEL 203: la celda de una tabla de doctrina se
+   corrige con tachado y nota fechada cuando lo que envejecio es el
+   VEREDICTO DE LA FILA, no el argumento. La celda dice hoy la clase
+   vigente del par; que la regla dictaba A con la letra de entonces
+   queda dicho por el tachado y la nota. Una tabla de doctrina cuyo
+   ejemplo publica una clase muerta es una tabla que miente sobre el
+   archivo, y la regla 1 no la ampara.
+3. POR BARRIDO, Y VA AL ENCARGO: dos ejemplares de la misma especie
+   cazados por tropiezo en dos vueltas no son casualidad, son una
+   poblacion sin censar. La TAREA 1 del encargo lleva el barrido de
+   titulos tallados a mano sobre los instrumentos del bucle, de solo
+   lectura, con su salida citada. No es doctrina: es el mismo deber de
+   barrer la especie conocida que el acta 49 escribio para las clases
+   y que aqui se aplica por extension al papel de los instrumentos.
+4. EL TECHO NO ES UN NUMERO, ES UN CAMBIO DE FIGURA, y la propia
+   vuelta lo estreno: cuando lo UNICO que el sucesor cambiaria es un
+   numero de tramo o de vuelta, el sucesor correcto es el de NOMBRE
+   ESTABLE que lo recibe por argumento o lo lee del fichero
+   (tallar_cabecera_reporte y vuelta58_varas_tramo ya viven asi), y la
+   cadena muere ahi porque el motivo de clonar desaparece. La cadena
+   de clones queda para cuando la ARITMETICA cambia de verdad, que es
+   lo que la vara del acta 54 pregunta 3 protege. Aplicacion concreta
+   en el encargo: el proximo abridor de tramo nace estable, con la
+   aritmetica comprobada por diff contra el de la 58.
+5. SI POR EXTENSION CITABLE: el 9.10 es el carril de corregir lo
+   envejecido del banco, y la fila partida es la correccion MINIMA que
+   deja la tabla diciendo verdad cotejable (D4, A FAVOR, con el
+   principio del D2 de la 57). Lo que el carril NO cubre seria
+   reescribir doctrina (la letra de una regla): aqui solo se movio el
+   registro de dos veredictos.
+6. FUE CORRECTO, y la vara para repartir un tramo entre vueltas queda
+   dicha sin doctrina nueva: la unidad minima que se entrega es EL
+   LOTE ENTERO CON SUS GUARDAS EN VERDE; si la TAREA 1 se come la
+   vuelta, se entrega el insumo del tramo MEDIDO Y FIJADO y los lotes
+   pasan enteros al encargo siguiente, que arranca en el plan del lote
+   A sin re-medir nada. Un lote corto pero completo tambien habria
+   valido; un lote empezado y sin cerrar, no. El ejecutor eligio entre
+   las dos conductas validas la mas conservadora y la declaro primero:
+   eso no se castiga, se encarga.
+
+Pendientes de doctrina del reporte: el 1 sigue PARA LA MESA con doce
+actos (la rama de la cantidad NO ADOPTADA y retirada de su unico uso;
+la rama del D3 cerrada por cita); el 2 (INCISO) HEREDADO y sin pagar
+hoy porque no hubo planes; el 3 HEREDADO sin cambio; el 4 HEREDADO sin
+pagar hoy (los cuatro ajenos verdes por los dos caminos); el 5 queda
+SOLO en su salida de fondo para la mesa (la declaracion del 25 cubierta
+por cita y anotada en el registro); el 6 CONTESTADO ARRIBA (pregunta 4)
+por extension de la practica ya estrenada, sin techo numerico y sin
+doctrina nueva; los del 7 HEREDADOS sin cambio (71 en LISTA, medido por
+mi hoy).
+
+## 6. MIS PROPIOS MANEJOS Y TROPIEZOS, declarados
+
+- Corri el ciclo de Gate 0 A MEDIAS la primera vez (solo run_phase1) y
+  master_graph quedo a medio ciclo con 72 etiquetas movidas; el ciclo
+  entero (etiquetas_de_cara --aplicar y sync_assets_web) lo devolvio
+  todo y el arbol quedo limpio. El ciclo de TRES es idempotente; un
+  tercio del ciclo no lo es. Costo una corrida, no una cifra.
+- Mi primer cotejo de volteos por git uso la clave puesto y el esquema
+  real es puesto_intra: seis None antes de leer una cifra. Re-corrido
+  con la clave real. Costo una corrida.
+- Lei el instrumento de varas del ejecutor antes de escribir el mio
+  (seccion 2): receta de medicion, no adjudicacion, y lo declaro.
+- El M de ARISTAS_DUPLICADAS.jsonl tras mi corrida era el aviso
+  LF/CRLF de git en Windows con diff de contenido VACIO: verificado
+  con git diff antes de revertir el marcador con checkout.
+- Mis salidas y mis tres scripts propios quedan en
+  docs/loop/_auditor_v58_* committeados con esta acta.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 50 filas de varas re-derivadas con codigo propio y
+cotejadas por maquina (DISTINTAS 0), el acto 32 re-medido entero, los
+dos miembros campo a campo contra sus blobs, seis volteos verificados
+por git al commit exacto, y unos 30 sitios re-corridos o leidos al
+digito (cabecera comparada, marcador, estado, recomputo con salida
+propia, cola, censo, duplicadas, barrido de puestos con sus rotulos,
+dos escritores en YA ESTABA, fila del banco, celdas 247 248 y 528,
+registro del tramo 4 sitio a sitio, nomina fijada sobre mi recomputo,
+diff ancestro contra sucesor, Gate 0 con las tres suites, caso
+positivo).
+
+Caidas del ejecutor en esta tanda (vuelta 58): CERO de clase, CERO de
+cifra publicada, CERO de reporte. Discrepancias de la ciega: CERO.
+Caidas del auditor: CERO (dos corridas perdidas por manejo propio,
+declaradas, sin cifra publicada de por medio).
+
+Acumulado: 348 relecturas, 715 puestos (mas unos 495 nodos de forma y
+unos 765 sitios de codigo), 7 caidas de clase, 23 de reporte del
+ejecutor, 13 de cifra publicada del ejecutor, 3 de cifra del auditor,
+5 de acta del auditor, 3 de procedimiento del auditor.
+
+Rachas: REPORTE EN CERO (segunda tanda limpia seguida). CLASE O CIFRA
+EN CERO (tercera tanda limpia seguida).
+
+## 8. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. Las seis preguntas se contestan por letra o
+  extension citable (seccion 5); las ramas que pedirian doctrina nueva
+  (cantidad como vara, salida de fondo del acto de dos puertas,
+  politica de catalogo) siguen SIN ADOPTAR y en la mesa.
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NINGUNA SE TOMA.
+- Fallo tecnico repetido: NO. Gate 0 y las tres suites en verde dos
+  corridas (la del ejecutor y la mia); la trampa del vitest es de
+  entorno, declarada y esquivada sin regla nueva.
+- Credito de tanda roto: NO. Cero caidas en las tres especies y las
+  dos rachas en cero.
+- Campana consumada: NO. Quedan los lotes del tramo 5, los tramos
+  siguientes de OP-U-01 y las fases 04 en adelante.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE: encargo escrito en PROMPT_SIGUIENTE.md (registros, el
+barrido de titulos tallados, y los lotes del tramo 5 desde el insumo
+fijado).
