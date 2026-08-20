@@ -7392,6 +7392,20 @@ marca** en el regalo.
 > **2. LA VOZ DEL CLIENTE, CINCO nodos vistos** (puesto 806), y uno de ellos,
 > `voz_del_cliente_voc`, **es costura confirmada que bloquea dos pares**. **No se
 > puede decidir de a pares mientras el nodo grande siga sin operar.**
+>
+> **NOTA DE CIERRE DECLARADA (19 ago 2026, vuelta 49), y el texto de arriba NO se borra porque
+> era exacto el dia que se escribio: EL BLOQUEO TERMINO.** `voz_del_cliente_voc` **esta
+> operado** (`OP-F-04-COL`) y hoy carga a `enfoque_mercado_voc` como alias, medido en el fichero
+> del nodo. El **806** se releyo con el par ya resuelto y **paso de `B` a `D`**. **El `B` no
+> envejecio por error de lectura: se cumplio su propia condicion**, que es la mejor cosa que le
+> puede pasar a un `B` de espera.
+>
+> **NOTA DE CIERRE DECLARADA (19 ago 2026, vuelta 49), y el texto de arriba NO se borra porque
+> era exacto el dia que se escribio: EL BLOQUEO TERMINO.** `voz_del_cliente_voc` **esta
+> operado** (`OP-F-04-COL`) y hoy carga a `enfoque_mercado_voc` como alias, medido en el fichero
+> del nodo. El **806** se releyo con el par ya resuelto y **paso de `B` a `D`**. **El `B` no
+> envejecio por error de lectura: se cumplio su propia condicion**, que es la mejor cosa que le
+> puede pasar a un `B` de espera.
 
 ---
 
@@ -8013,8 +8027,13 @@ con ellos llega a **siete pares leidos**:
 | clase | puestos |
 |---|---|
 | **A** | 635 (`customer_discovery`), **849** (`customer_discovery_get_out_of_building`) |
-| **D** | 377, **854** |
-| **B** | **683, 707, 806** |
+| **D** | 377, **854**, y desde el 19 ago 2026 tambien **806** |
+| **B** | ~~**683, 707, 806**~~ **683, 707** |
+
+> **CORRECCION DECLARADA (19 ago 2026, vuelta 49).** El **806** paso de `B` a `D` en la
+> relectura conjunta de las tres colisiones de clase. **Su `B` era un `B` DE ESPERA** y la propia
+> razon lo decia: esperaba a que `voz_del_cliente_voc` se operase. **Ya esta operado**, y el par
+> resuelto sale `D`. **`customer_development_modelo` baja de TRES dudosos a DOS.**
 
 > **Repite con DOS nodos de descubrimiento distintos** y **acumula tres dudosos**,
 > mas que ningun otro nodo del cribado hasta ahora. **Su zona, la del customer
@@ -8133,7 +8152,7 @@ y que decide cada una.**
 
 | | |
 |---|---|
-| **el nodo** | **siete pares leidos**: **A** en 635 y 849, **D** en 377 y 854, **B en 683, 707 y 806** |
+| **el nodo** | **siete pares leidos**: **A** en 635 y 849, **D** en 377, 854 y ~~-~~ **806**, **B** en ~~683, 707 y 806~~ **683 y 707**. **CORREGIDA el 19 ago 2026 (vuelta 49)**: el 806 paso de `B` a `D`, asi que **los dudosos sobre este nodo pasan de TRES a DOS** |
 | **motivo** | **tres dudosos sobre un solo nodo, mas que ningun otro del cribado.** Y repite con **dos** nodos de descubrimiento distintos |
 | **la forma del problema** | demasiados nodos contando **el mismo proceso desde alturas distintas**: el modelo entero, la etapa, la fase y el gesto |
 | **QUE DECIDE** | **a que altura vive cada nodo** de customer development, y **cual de las alturas se queda con el material comun** |
@@ -10241,7 +10260,7 @@ con B y B con C, los tres son el mismo acto (banco 9.24).
 
 | # | tamano | costurados | sanos | pares A que lo sostienen | aristas internas |
 |---:|---:|---:|---:|---|---:|
-| **1** | **7** | 1 | 6 | 234, 586, 823, 834, 844, 885, 943 | 2 |
+| **1** | **7** | 1 | 6 | 234, 586, 823, 834, ~~844~~, 885, 943 **[CORREGIDA el 19 ago 2026 (vuelta 49): el `844` dejo de ser `A` y ya no sostiene nada. Y la fila entera esta envejecida por otra causa mayor que se dice en vez de callarse: `OP-D-04` fundio ese acto, asi que de sus siete pares `A` hoy CINCO (234, 823, 834, 885 y 943) resuelven a auto-par, medido en `../loop/SALIDA_V49_RECOMPUTO_3388.txt`. La fila se conserva como el retrato del dia que se midio]** | 2 |
 | **2** | **6** | **3** | 3 | 277, 374, 452, 643, **1061** | 1 |
 | **3** | **4** | 1 | 3 | 386, 526, 788 | 2 |
 | **4** | 3 | 1 | 2 | 492, 673, 833 | 0 |
@@ -16315,10 +16334,21 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 | | |
 |---|---:|
 | **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
-| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ **575** (17,0 %), ver las correcciones declaradas debajo |
-| **B** | ~~89~~ ~~87~~ ~~84~~ **83** |
+| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ **574** (16,9 %), ver las correcciones declaradas debajo |
+| **B** | ~~89~~ ~~87~~ ~~84~~ ~~83~~ ~~82~~ ~~81~~ ~~80~~ ~~79~~ **77** |
 | **C** | ~~7~~ **8** |
-| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ **2.722** |
+| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ **2.729** (80,5 %) |
+
+> **CORRECCION DECLARADA (19 ago 2026, vuelta 49), Y LA MITAD DE ELLA ES UNA CAIDA DE MI
+> PROPIO LINAJE QUE SE CUENTA EN VEZ DE ESCONDERSE.** Esta tabla venia corregida hasta el 18 ago
+> 2026 y **se quedo ahi**: las relecturas de los pares **835** (vuelta 42), **599** (vuelta 43) y
+> **233** (vuelta 44) movieron `B` y `D` y **ninguna de las tres barrio esta tabla**, que es
+> exactamente la averia que el banco `9.10` nombra. Lo que hoy la mueve son las tres de la vuelta
+> 49 (**806** y **263** de `B` a `D`, **844** de `A` a `D`); lo que la tenia parada eran las tres
+> anteriores. **Las cifras intermedias van tachadas en la cadena para que el salto no parezca de
+> un solo dia.** Medido hoy con `python scripts/recomputar_marcador.py 3388`
+> (`docs/loop/SALIDA_V49_MARCADOR.txt`): **A 574, B 77, C 8, D 2.729** sobre `n` **3.388**, cero
+> huecos y cero duplicados.
 
 > **CORRECCION DECLARADA (15 ago 2026, vuelta 33 del bucle). LAS CIFRAS VIEJAS SE QUEDAN
 > TACHADAS Y NO BORRADAS: son el marcador del checkpoint del 13 ago y fueron correctas ese dia.**

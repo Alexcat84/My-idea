@@ -1,0 +1,45 @@
+==============================================================================
+LAS TRES COLISIONES, RESUELTAS POR EL RESOLUTOR (P.1) . medido HOY
+==============================================================================
+
+------------------------------------------------------------------------------
+puesto 806   clase B
+   nodo_a crudo : customer_development_modelo                    [VIVO]
+     cadena     : customer_development_modelo
+   nodo_b crudo : enfoque_mercado_voc                            [DEPRECADO]
+     cadena     : enfoque_mercado_voc -> voz_del_cliente_voc
+   PAR RESUELTO : customer_development_modelo  CONTRA  voz_del_cliente_voc
+puesto 1261  clase D
+   nodo_a crudo : customer_development_modelo                    [VIVO]
+     cadena     : customer_development_modelo
+   nodo_b crudo : voz_del_cliente_voc                            [VIVO]
+     cadena     : voz_del_cliente_voc
+   PAR RESUELTO : customer_development_modelo  CONTRA  voz_del_cliente_voc
+
+------------------------------------------------------------------------------
+puesto 844   clase A
+   nodo_a crudo : brainstorming_divergente                       [DEPRECADO]
+     cadena     : brainstorming_divergente -> reglas_brainstorming
+   nodo_b crudo : generar_multiples_opciones                     [DEPRECADO]
+     cadena     : generar_multiples_opciones -> pensamiento_convergente_divergente
+   PAR RESUELTO : pensamiento_convergente_divergente  CONTRA  reglas_brainstorming
+puesto 585   clase D
+   nodo_a crudo : brainstorming_divergente                       [DEPRECADO]
+     cadena     : brainstorming_divergente -> reglas_brainstorming
+   nodo_b crudo : pensamiento_convergente_divergente             [VIVO]
+     cadena     : pensamiento_convergente_divergente
+   PAR RESUELTO : pensamiento_convergente_divergente  CONTRA  reglas_brainstorming
+
+------------------------------------------------------------------------------
+puesto 263   clase B
+   nodo_a crudo : errores_comunes_asignacion_roles               [DEPRECADO]
+     cadena     : errores_comunes_asignacion_roles -> seleccion_ceo_fundador
+   nodo_b crudo : riesgo_titulos_inflados                        [VIVO]
+     cadena     : riesgo_titulos_inflados
+   PAR RESUELTO : riesgo_titulos_inflados  CONTRA  seleccion_ceo_fundador
+puesto 1589  clase D
+   nodo_a crudo : riesgo_titulos_inflados                        [VIVO]
+     cadena     : riesgo_titulos_inflados
+   nodo_b crudo : seleccion_ceo_fundador                         [VIVO]
+     cadena     : seleccion_ceo_fundador
+   PAR RESUELTO : riesgo_titulos_inflados  CONTRA  seleccion_ceo_fundador

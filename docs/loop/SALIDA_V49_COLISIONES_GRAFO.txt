@@ -1,0 +1,39 @@
+==============================================================================
+customer_development_modelo   CONTRA   voz_del_cliente_voc
+  customer_development_modelo              pasos 5 cond 2 | fuente: The Startup Owner's Manual - Blank, Steve
+      previos   (3): ['modelo_tradicional_introduccion_producto', 'search_for_business_model', 'tipos_de_riesgo_invencion_vs_mercado']
+      siguientes(2): ['customer_discovery', 'decision_pivotar_o_proceder']
+      racimos declarados: ['Customer discovery: salir a hablar con el cliente']
+  voz_del_cliente_voc                      pasos 6 cond 3 | fuente: Winning at New Products - Robert G. Cooper
+      previos   (3): ['desirability_feasibility_viability', 'procesamiento_paralelo_con_espirales', 'producto_unico_superior']
+      siguientes(11): ['customer_discovery_get_out_of_building', 'customer_journey_mapping', 'data_integrity_forecasting', 'definicion_producto_proyecto', 'desarrollo_en_espiral', 'estrategia_producto_global_glocal', 'homework_frontend_loading', 'observar_al_cliente_en_su_contexto', 'product_backlog_agile', 'reduccion_tiempo_de_mercado_velocidad', 'ventaja_competitiva_producto']
+      racimos declarados: ninguno
+  ARISTA customer_development_modelo -> voz_del_cliente_voc : False
+  ARISTA voz_del_cliente_voc -> customer_development_modelo : False
+  CABLEADO resuelto: customer_development_modelo=5  voz_del_cliente_voc=14
+==============================================================================
+pensamiento_convergente_divergente   CONTRA   reglas_brainstorming
+  pensamiento_convergente_divergente       pasos 7 cond 3 | fuente: Change by Design
+      previos   (4): ['analisis_y_sintesis', 'construir_sobre_ideas_ajenas', 'pensamiento_visual', 'usuarios_extremos_insights']
+      siguientes(5): ['analisis_y_sintesis', 'fase_entendimiento_investigacion_mercado', 'portafolio_de_diseno', 'prototipado_rapido', 'reglas_brainstorming']
+      racimos declarados: ninguno
+  reglas_brainstorming                     pasos 7 cond 4 | fuente: Business Model Generation (Osterwalder)
+      previos   (13): ['buscar_armonia_diseno', 'cuatro_etapas_del_pensamiento_creativo', 'cultura_de_optimismo', 'equipo_diverso_ideacion', 'equipos_visita_cliente', 'esfuerzo_voluntario_vs_urge_espontaneo', 'etnografia_investigacion_usuario', 'how_might_we_briefs', 'how_might_we_hmw', 'intimation_illumination', 'pensamiento_convergente_divergente', 'periodo_incubacion_mental', 'sentido_del_humor_como_herramienta_de_pensamiento']
+      siguientes(15): ['brainstorming', 'bundle_ideas', 'butterfly_test_convergencia', 'co_creation_session', 'construir_sobre_ideas_ajenas', 'deriva_deliberada', 'etnografia_investigacion_usuario', 'get_visual', 'gut_check', 'ideacion_con_ia_en_la_sesion', 'mash_ups', 'pensamiento_visual', 'pensamiento_visual_modelos_negocio', 'prototipado_rapido', 'tecnica_perder_objeto']
+      racimos declarados: ['Las reglas del brainstorming', 'Las reglas del brainstorming', 'Las reglas del brainstorming']
+  ARISTA pensamiento_convergente_divergente -> reglas_brainstorming : True
+  ARISTA reglas_brainstorming -> pensamiento_convergente_divergente : True
+  CABLEADO resuelto: pensamiento_convergente_divergente=8  reglas_brainstorming=27
+==============================================================================
+riesgo_titulos_inflados   CONTRA   seleccion_ceo_fundador
+  riesgo_titulos_inflados                  pasos 3 cond 1 | fuente: The Founder's Dilemmas
+      previos   (1): ['seleccion_ceo_fundador']
+      siguientes(1): ['composicion_board_directors']
+      racimos declarados: ninguno
+  seleccion_ceo_fundador                   pasos 6 cond 3 | fuente: The Founder's Dilemmas
+      previos   (6): ['compatibilidad_motivaciones_riqueza_control', 'coraje_en_decisiones_dificiles', 'decision_cuando_fundar', 'decision_fundador_solo_vs_equipo', 'evaluacion_dispassionate_idea', 'seleccion_relaciones_cofundadores']
+      siguientes(8): ['composicion_board_directors', 'criterios_equity_split', 'decision_egalitaria_vs_jerarquica', 'division_de_labor_vs_roles_superpuestos', 'embrace_the_struggle_liderazgo_autentico', 'founder_ceo_succession_process', 'reparto_inicial_equity', 'riesgo_titulos_inflados']
+      racimos declarados: ninguno
+  ARISTA riesgo_titulos_inflados -> seleccion_ceo_fundador : True
+  ARISTA seleccion_ceo_fundador -> riesgo_titulos_inflados : True
+  CABLEADO resuelto: riesgo_titulos_inflados=2  seleccion_ceo_fundador=14

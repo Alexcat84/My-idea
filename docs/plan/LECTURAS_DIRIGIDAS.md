@@ -1572,7 +1572,7 @@ respuesta medida y no estimada** (`scripts/loop/vuelta37_acto_opd04.py`, salida
 |---|:---:|---|
 | `brainstorming_divergente` contra `brainstorming_efectivo` | **A** | puesto **823**, cribado, **releido por `P.5` el 19 ago 2026** |
 | `brainstorming_divergente` contra `reglas_brainstorming` | **A** | puesto **834**, cribado, **releido por `P.5` el 19 ago 2026** |
-| `brainstorming_divergente` contra `generar_multiples_opciones` | **A** | puesto **844**, cribado, **releido por `P.5` el 19 ago 2026** |
+| `brainstorming_divergente` contra `generar_multiples_opciones` | ~~**A**~~ **D** | puesto **844**, cribado, **releido por `P.5` el 19 ago 2026** y **VOLTEADO DE `A` A `D` el 19 ago 2026 (vuelta 49)** por la relectura conjunta del par RESUELTO: los dos ids de este puesto estan hoy deprecados y resuelven a `reglas_brainstorming` y a `pensamiento_convergente_divergente`, y lo que cada superviviente anade al otro **ya no es LINEA sino PROCEDIMIENTO**, asi que el segundo polo del `9.22` que produjo la `A` no sobrevive al par resuelto |
 | `brainstorming_efectivo` contra `reglas_brainstorming` | **A** | puesto **234**, cribado |
 | `brainstorming_efectivo` contra `construir_sobre_ideas_ajenas` | **A** | puesto **586**, cribado |
 | `generar_multiples_opciones` contra `pensamiento_convergente_divergente` | **A** | puesto **943**, cribado |

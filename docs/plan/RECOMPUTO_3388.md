@@ -243,9 +243,9 @@ que el auditor verifique las cuatro comprobaciones de mas abajo.
 
 | | |
 |---|---:|
-| A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ **575** **[CORREGIDA CUATRO VECES, el 15 y el 18 ago 2026, ver las correcciones declaradas al principio del documento]** |
-| de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | ~~**0**~~ **1** **[CORREGIDA el 15 ago 2026: la fusion de `OP-D-02` la produjo, ver la correccion declarada al principio del documento]** |
-| pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ **574** **[CORREGIDA CUATRO VECES, el 15 y el 18 ago 2026, ver las correcciones declaradas al principio del documento]** |
+| A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ **574** **[CORREGIDA CINCO VECES, el 15 y el 18 ago 2026 y el 19 ago 2026; la quinta por la relectura conjunta de las tres colisiones de clase, vuelta 49, que volteo el puesto 844 de `A` a `D`]** |
+| de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | ~~**0**~~ ~~**1**~~ **41** **[CORREGIDA DOS VECES, el 15 ago 2026 y el 19 ago 2026. Y LA SEGUNDA NO ES UN ERROR: ES LA HUELLA DE LA CIRUGIA. Cada acto que se funde convierte su par `A` en un par cuyos dos ids resuelven al mismo nodo vivo. Las 41 son exactamente los pares `A` que las fusiones de las fases 02 y 03 ya consumieron, impresas una a una por el instrumento en `../loop/SALIDA_V49_RECOMPUTO_3388.txt`]** |
+| pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ **533** **[CORREGIDA CINCO VECES, la ultima el 19 ago 2026]** |
 | pares con mas de un veredicto crudo apuntando al mismo par resuelto | **0** |
 
 ~~**Ninguna de las 583 A colapsa.** Los 391 alias vigentes hoy son historia previa a esta campana
@@ -525,7 +525,7 @@ tamano**, confirmado con las dos vias.
 | # | comprobacion | resultado |
 |---:|---|---|
 | **i** | nodos en actos (~~854~~ **852**) == suma de tamanos de las componentes (~~854~~ **852**) | **OK**, recomprobado el 15 ago 2026 |
-| **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ **580**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ **580**) | **OK**, recomprobado el 15 ago 2026 con las cifras nuevas, DOS veces |
+| **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ **533**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ **533**) | **OK**, recomprobado el 15 ago 2026 con las cifras nuevas, DOS veces, y **RE-CORRIDO EL 19 ago 2026 (vuelta 49): sigue OK con 533 y 533**, y con el las otras tres ([`../loop/SALIDA_V49_RECOMPUTO_3388.txt`](../loop/SALIDA_V49_RECOMPUTO_3388.txt), *LAS CUATRO: TODAS OK*) |
 | **iii** | todo acto CERRADO tiene sus pares internos leidos y ningun miembro con par pendiente | **OK**, verificado sobre los 280 |
 | **iv** | ningun nodo deprecado aparece dentro de una componente | **OK**, 0 encontrados |
 
@@ -1076,7 +1076,7 @@ lineas.**
 | risk_management | 106 | 0 | 0,0 % |
 | exportacion | 130 | 15 | 11,5 % |
 | seguridad_digital | 27 | 3 | 11,1 % |
-| **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ **575** | ~~**17,2 %**~~ ~~**17,1 %**~~ **17,0 %** |
+| **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ **574** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ **16,9 %** |
 
 ~~**Los diez dominios y el total (3.388 pares, 583 A) coinciden con el marcador recomputado de la vuelta
 14** (`A 583, B 89, C 7, D 2.709`), verificado de nuevo aqui por suma de columna.~~ **CORRECCION
