@@ -1,0 +1,48 @@
+==============================================================================
+LOS DOS GRANDES DE DESTEJIDO, COMPROBADOS CONTRA EL GRAFO DE HOY
+  componentes: docs/loop/_v63_componentes_cierre.jsonl
+  veredictos : docs/INTRA_DOMINIO_VEREDICTOS.jsonl (3388)
+==============================================================================
+
+------------------------------------------------------------------------------
+OP-D-03 . la ficha nombra 6 nodos
+------------------------------------------------------------------------------
+  id de la ficha                                 resuelve HOY a                                 deprecado
+  ab_testing_optimizacion                        ab_testing_optimizacion                        False
+  optimizacion_embudo_get_customers              optimizacion_embudo_get_customers              False
+  split_testing_experimentos_ab                  split_testing_experimentos_ab                  False
+  funnel_get_customers_optimizacion              funnel_get_customers_optimizacion              False
+  split_testing                                  split_testing                                  False
+  test_ab_precio                                 test_ab_precio                                 False
+  supervivientes distintos tras resolver: 6
+  componentes del recomputo de HOY que tocan esa nomina: 0
+  pares INTERNOS entre esos supervivientes en el archivo: 8, por clase {'D': 8}
+     funnel_get_customers_optimizacion            optimizacion_embudo_get_customers            clase=D
+     split_testing                                split_testing_experimentos_ab                clase=D
+     ab_testing_optimizacion                      split_testing                                clase=D
+     split_testing                                test_ab_precio                               clase=D
+     ab_testing_optimizacion                      split_testing_experimentos_ab                clase=D
+     ab_testing_optimizacion                      optimizacion_embudo_get_customers            clase=D
+     split_testing_experimentos_ab                test_ab_precio                               clase=D
+     ab_testing_optimizacion                      test_ab_precio                               clase=D
+
+  LA CAUSA, MEDIDA: los 6 nodos siguen VIVOS y ninguno resuelve a otro, asi que lo que desaparecio NO son los nodos: son LAS ARISTAS A. Los 8 pares internos que el archivo tiene entre ellos son 8 de clase D, y una componente de este recomputo se forma SOLO con aristas A.
+
+------------------------------------------------------------------------------
+OP-D-04 . la ficha nombra 7 nodos
+------------------------------------------------------------------------------
+  id de la ficha                                 resuelve HOY a                                 deprecado
+  brainstorming_divergente                       reglas_brainstorming                           False
+  brainstorming_efectivo                         reglas_brainstorming                           False
+  reglas_brainstorming                           reglas_brainstorming                           False
+  generar_multiples_opciones                     pensamiento_convergente_divergente             False
+  construir_sobre_ideas_ajenas                   reglas_brainstorming                           False
+  pensamiento_convergente_divergente             pensamiento_convergente_divergente             False
+  design_attitude_vs_decision_attitude           pensamiento_convergente_divergente             False
+  supervivientes distintos tras resolver: 2
+  componentes del recomputo de HOY que tocan esa nomina: 0
+  pares INTERNOS entre esos supervivientes en el archivo: 0, por clase {}
+
+  LA CAUSA, MEDIDA: la nomina de 7 resuelve hoy a 2 nodo(s). LA COMPONENTE SE CONSUMIO POR FUSION.
+
+FIN

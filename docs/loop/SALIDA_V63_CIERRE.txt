@@ -1,0 +1,84 @@
+==============================================================================
+ESTADO DE LA CAMPANA, MEDICION DE CIERRE
+==============================================================================
+
+--- EL MARCADOR ---
+n = 3388
+  A   551   16.3 por ciento
+  B    72    2.1 por ciento
+  C     5    0.1 por ciento
+  D  2760   81.5 por ciento
+clases fuera de ABCD: 0
+rango de puestos: 1 a 3388
+huecos: 0
+duplicados: 0
+
+--- EL GRAFO ---
+ficheros        : 3853
+ids unicos      : 3853
+vivos           : 3272
+deprecados      : 581
+enlaces         : 17490 (previos mas siguientes)
+claves distintas: 15
+
+--- LAS FAMILIAS DE LIBRO (nomina vigente al dia) ---
+familia      trozo de fuente                             vivos   unicos
+Weinberg     Traction                                       61       59
+Horowitz     Hard Thing                                     87       85
+Hugos        Hugos                                         100      100
+Coleman      Coleman                                        63       61
+Rackham      Rackham                                        42       42
+
+--- LAS OPERACIONES ---
+operaciones: 71, ids unicos: 71
+estados: {'LISTA': 71}
+dependencias rotas: 0
+
+op de fase 01  estado    nodos     nota  HECHA en la nota
+OP-F-01        LISTA         6     2205  NO
+OP-F-02        LISTA         3     2869  SI
+OP-F-03        LISTA        21     3376  SI
+OP-F-04-COL    LISTA        15     7981  SI
+OP-F-04-HOR    LISTA        14     8536  SI
+OP-F-04-WEI    LISTA        13     3541  SI
+OP-F-04-RAC    LISTA         4     2396  SI
+
+--- EL INVENTARIO ---
+entradas: 672
+por tipo: {'dominio': 10, 'acto': 556, 'racimo': 13, 'familia_de_ids': 54, 'figura': 20, 'defecto': 19}
+
+--- EL INDICE ROJO DECLARADO ---
+lineas: 18
+por operacion: {'OP-F-02': 3, 'OP-F-03': 4, 'OP-F-04-WEI': 3, 'OP-F-04-HOR': 3, 'OP-F-04-COL': 5}
+ids del rojo AUSENTES del grafo: 0 
+
+--- LOS TRES NODOS DE TOQUE UNICO (ejecutados en la vuelta 30) ---
+coeficiente_viral              pasos   8  vivo True  fuente: The Startup Owner's Manual - Steve Blank | Traction - Gabriel Weinberg
+viral_loop_marketing           pasos  23  vivo True  fuente: The Startup Owner's Manual - Blank, Steve | Never Lose a Customer Again - Joey Coleman | Traction - Gabriel Weinberg
+decision_de_vender_startup     pasos  15  vivo True  fuente: The Founder's Dilemmas | The Hard Thing About Hard Thing - Ben Horowitz | The Hard Thing About Hard Things - Ben Horowitz
+
+--- FRONTERAS PUBLICADAS DE OP-F-04-COL (detector de DOS formas) ---
+  FORMA A: el id y la particion en la MISMA linea (la tipica del grupo)
+  FORMA B: el id en un ENCABEZADO y la particion en el cuerpo de esa
+           subseccion (la que P.20 estreno con viral_loop_marketing)
+
+  blueprint_de_experiencia               lineas=[1225, 1324, 1332, 1333, 1334, 1335]... FORMA: A    FRONTERA: [1225]
+  cliente_disena_producto                lineas=[1226, 1338]           FORMA: A    FRONTERA: [1226]
+  cultura_de_experiencia                 lineas=[1227, 1339, 1340]     FORMA: A    FRONTERA: [1227]
+  customer_journey_mapping               lineas=[1228, 1341, 1342, 1343, 1397] FORMA: A    FRONTERA: [1228]
+  diseno_estructura_recompensas_roles    lineas=[1229, 1344]           FORMA: A    FRONTERA: [1229]
+  estrategia_crecimiento_clientes        lineas=[1230, 1345, 1346]     FORMA: A    FRONTERA: [1230]
+  ganar_comprension_del_cliente          lineas=[1231, 1347, 1348]     FORMA: A    FRONTERA: [1231]
+  keep_customers_strategy                lineas=[1232, 1242, 1260, 1269, 1277, 1320]... FORMA: NO   FRONTERA: NO
+  metas_vs_proposito                     lineas=[703, 802, 908, 1036, 1078, 1217]... FORMA: A    FRONTERA: [802, 1078, 1349, 1471]
+  project_close_out                      lineas=[1233, 1350]           FORMA: A    FRONTERA: [1233]
+  relaciones_con_clientes                lineas=[1234, 1351, 1352]     FORMA: A    FRONTERA: [1234]
+  retention_metrics                      lineas=[1235, 1353, 1398]     FORMA: A    FRONTERA: [1235]
+  sistema_inmune_producto                lineas=[1236, 1354]           FORMA: A    FRONTERA: [1236]
+  viral_loop_marketing                   lineas=[704, 749, 769, 781, 788, 828]... FORMA: B    FRONTERA: [797, 802]
+  voz_del_cliente_voc                    lineas=[739, 1078, 1217, 1311, 1355, 1397]... FORMA: A    FRONTERA: [739, 1078]
+CON FRONTERA PUBLICADA: 14 de 15
+SIN FRONTERA: ['keep_customers_strategy']
+
+==============================================================================
+FIN DE LA MEDICION DE CIERRE

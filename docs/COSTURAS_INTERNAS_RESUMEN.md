@@ -47,7 +47,7 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 
 ## Conteos
 
-**1456 nodos** en la cola, sobre 3274 activos.
+**1456 nodos** en la cola, sobre 3272 activos.
 
 | dominio | nodos |
 |---|---:|

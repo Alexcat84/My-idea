@@ -3253,3 +3253,50 @@ Sale de [`../loop/SALIDA_V63_VERIFICAR_OPM02PROG.txt`](../loop/SALIDA_V63_VERIFI
 
 **Y UNA COSA QUE PARECE UNA DISCREPANCIA ENTRE DOS INSTRUMENTOS Y NO LO ES, dicha porque leerla mal cuesta una vuelta:** `simular_fusion.py` reporta **UNA duplicada nueva** y `retirar_duplicada_por_resolutor.py` (el instrumento de `P.16` que corre ANTES de fundir) reporta **NINGUNA**. **No se contradicen: el segundo dice en su propio docstring que SALTA A PROPOSITO el caso que el ejecutor de fusiones deduplica solo**, y persigue unicamente las que llegan por una cadena de alias y sobrevivirian. Esta es de las primeras: `pensamiento_h2h` trae los dos ids **literalmente** en su lista, asi que la sustitucion del ejecutor la funde y la dedupica en el sitio. **El ejecutor la conto y la imprimio antes de limpiarla**, que es lo que `P.16` exige.
 
+
+---
+
+## `OP-U-02`: **LA APERTURA MEDIDA, SIN FUNDIR NI UN ACTO** (20 ago 2026, vuelta 63)
+
+**Esto NO ejecuta `OP-U-02`: la MIDE.** Ni un acto suyo se funde en esta vuelta. **La nomina queda FIJADA en fichero propio**, [`../loop/NOMINA_OPU02_V63.jsonl`](../loop/NOMINA_OPU02_V63.jsonl), **una fila por acto abierto con sus miembros**, y sale entera de `python scripts/loop/abrir_universo_de_opu02.py` ([`../loop/SALIDA_V63_APERTURA_OPU02.txt`](../loop/SALIDA_V63_APERTURA_OPU02.txt)).
+
+**EL INSUMO ES EL RECOMPUTO CORRIDO EN ESTA MISMA VUELTA**, no un fichero sellado viejo: [`../loop/_v63_componentes_cierre.jsonl`](../loop/_v63_componentes_cierre.jsonl), medido DESPUES de las dos fusiones de mesa. **Y por `P.1`, el instrumento RESUELVE POR ALIAS ANTES DE CONTAR**, o contaria como libre un acto cuyo miembro ya fue absorbido.
+
+| | |
+|---|---:|
+| **actos abiertos, medidos hoy** | **53** sobre **240** nodos |
+| **`OP-U-02` ABRE** (criterio del propio plan: sin dueno en mesa ni destejido) | **47** actos sobre **201** nodos |
+| **quedan FUERA, con dueno en otra fase** | **6** actos sobre **39** nodos |
+| **los que ABREN, por tamano** | **1** de 15, **1** de 10, **1** de 8, **4** de 6, **7** de 5, **10** de 4, **23** de 3 |
+
+### LOS QUE QUEDAN FUERA, CADA UNO CON SU DUENO NOMBRADO Y SU CITA
+
+| tamano | dueno | miembros |
+|---:|---|---|
+| **13** | `OP-M-01`, `OP-M-01-FUSION` | `decision_factory_mentality`, `equipos_dedicados_de_proyecto`, `estructura_de_gates`, `estructura_gates`, `gates_go_kill_decision_points`, `gestion_de_portafolio_gates_go_kill`, `gestion_portafolio_dos_niveles`, `gestion_portafolio_foco`, `gestion_portafolio_formal`, `portfolio_management`, `requisitos_gates_con_dientes`, `revision_portafolio_periodica`, `sistema_gates_go_kill` |
+| **9** | `OP-M-05`, `OP-M-05-EDIFICIO`, `OP-M-05-INDICE` | `customer_development_modelo`, `customer_discovery`, `customer_discovery_cuatro_fases`, `customer_discovery_get_out_of_building`, `customer_discovery_introduccion`, `customer_discovery_overview`, `desarrollo_de_clientes_customer_development`, `get_out_of_the_building`, `manifiesto_regla1_hechos_fuera_del_edificio` |
+| **7** | `OP-M-05-APERTURA` | `customer_validation`, `customer_validation_sell_phase`, `earlyvangelists_ventas_tempranas`, `filosofia_customer_validation`, `filosofia_validacion_clientes`, `get_out_building_test_sell`, `introduccion_validacion_clientes` |
+| **4** | `OP-M-04` | `formalizar_junta_asesora`, `formalize_advisory_board`, `identificar_consejo_asesores`, `identificar_junta_asesores` |
+| **3** | `OP-D-02` | `homework_frontend_loading`, `voice_of_customer_homework`, `voz_del_cliente_voc` |
+| **3** | `OP-M-03-III` | `pivote_estrategico`, `pivote_startup`, `pivotes_e_iteraciones` |
+
+### **LA FRASE DE LA LINEA 226 ESTA ENVEJECIDA, Y SE DICE EN VEZ DE CALLARLO**
+
+**El texto de arriba (lineas 226 a 228, leidas HOY y cotejadas por este mismo instrumento antes de escribir) dice que CUATRO abiertos no se resuelven aqui nunca**: el de 13 y el de 9 a mesa, y **dos grandes a destejido**. **La ficha de `OP-U-02` en [`OPERACIONES.jsonl`](OPERACIONES.jsonl) ya lo habia corregido en la vuelta 13 y dice OCHO.** **Lo medido HOY reconcilia las dos y no elige entre ellas:**
+
+| los OCHO que la ficha nombra | como estan HOY |
+|---|---|
+| **seis de ellos** (el de 13, el de 9, el de 7 de `customer validation`, el de la junta asesora, el de la voz del cliente y el del pivote) | **siguen ABIERTOS y quedan fuera por su dueno**, y son exactamente los seis de la tabla de arriba |
+| **los DOS de destejido** (`OP-D-03` y `OP-D-04`) | **YA NO SON ACTOS: no aparecen en NINGUNA componente del recomputo de hoy, ni abierta ni cerrada** |
+
+**Y LA DESAPARICION DE ESOS DOS NO SE SUPONE: SE MIDE, Y LAS DOS CAUSAS SON DISTINTAS** ([`../loop/SALIDA_V63_DESTEJIDOS_COMPROBADOS.txt`](../loop/SALIDA_V63_DESTEJIDOS_COMPROBADOS.txt)):
+
+| | lo medido | la causa |
+|---|---|---|
+| **`OP-D-04`** | sus **7** nodos resuelven HOY a **2** supervivientes, los dos vivos | **la componente se consumio POR FUSION** |
+| **`OP-D-03`** | sus **6** nodos siguen **VIVOS** y **ninguno resuelve a otro** | **lo que desaparecio no son los nodos: son LAS ARISTAS `A`**. Los **8** pares internos que el archivo tiene entre ellos son **8 de clase `D`**, y una componente de este recomputo se forma **solo con aristas `A`** |
+
+> **UNA CIFRA MAS QUE CAMBIO Y VA DICHA:** la ficha de la vuelta 13 llamaba **de tamano 4** al acto de la voz del cliente; **hoy mide 3**. Es un acto que encogio, no una cuenta mal hecha, y por eso la tabla de arriba publica **3** y esta nota publica la diferencia.
+
+> **LO QUE ESTA APERTURA NO HACE, dicho para que nadie se lo atribuya: NO elige superviviente, NO reparte piezas, NO declara ningun acto y NO funde nada.** Fija quien entra en el universo y quien no, con su motivo citado. **La fusion de esos 47 actos es trabajo de la vuelta que la ejecute.**
+
