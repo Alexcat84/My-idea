@@ -1,0 +1,78 @@
+{
+  "operacion": "OP-U-01",
+  "tramo": "1, P.12, LOTE A DE LA VUELTA 52: el acto 2 de la nomina de la apertura, EL REPARTO DE EQUITY, adjudicado por el acta de la vuelta 51 (pregunta 2)",
+  "fecha": "2026-08-20",
+  "vuelta": 52,
+  "estado": "SELLADO",
+  "nomina": "docs/loop/RECOMPUTO_V52_APERTURA.jsonl",
+  "dossier": "docs/loop/SALIDA_V52_DOSSIER_01_26.txt",
+  "vara": "P.12 con la receta RATIFICADA (acta de la vuelta 50, pregunta 1, y acta de la vuelta 51): dado un superviviente S, PARTE A = S mas los miembros con arista A contra S; MIXTOS = los miembros sin arista A contra S; S es VIABLE si su parte A es clique A y deja al menos un mixto fuera. Entre los viables elige el CONTENIDO. Cada MIXTO se lee contra el superviviente y se decide ENTRA o CONTINUA.",
+  "adjudicacion": "EL ACTO SE EJECUTA. Acta de la vuelta 51, pregunta 2: el superviviente es criterios_equity_split (el contenido manda, P.8, y el plan quedo escrito entero en la vuelta 51). La guarda de cuenta fija del encargo viejo QUEDA RETIRADA (acta 51, pregunta 2c): el censo esperado es el que la simulacion imprime, por PAR RESUELTO.",
+  "viabilidad": "docs/loop/SALIDA_V52_VIABLES.txt, corrida sobre la nomina de la apertura de esta vuelta. El acto 2 sale VARIOS VIABLES con dos: criterios_equity_split y teoria_equidad_split_equity. split_igual_vs_desigual NO es viable porque no deja ningun mixto fuera (seria fusion entera).",
+  "colisiones_esperadas": "docs/loop/SALIDA_V52_COLISIONES_ESPERADAS.txt, medidas ANTES de tocar un nodo con scripts/loop/vuelta51_colisiones_esperadas.py sobre EL ARCHIVO ENTERO. Con criterios_equity_split de superviviente: UNA colision DENTRO del acto (el 502 contra el 871) y DOS FUERA (el 266 contra el 754 y el 246 contra el 688). TRES en total, por PAR RESUELTO. Esa es la prediccion y ese es el censo esperado tras ejecutar.",
+  "vara_de_las_puertas": "Medida hoy con el instrumento REPARADO en la TAREA 1.5 (docs/loop/SALIDA_V52_PUERTAS_REPARADO.txt). El acto 2 no aparece ni entre los 26 SALVABLES, ni entre los 2 IMPOSIBLES POR NOMINA, ni entre los 3 IMPOSIBLES POR ESTRUCTURA: ninguno de sus tres miembros es semilla ni extremo de puente aprobado. La guarda 1B pasa POR VACIO y se dice asi en vez de darla por pasada.",
+  "politica_del_reparto": "LA MISMA DEL LOTE A DE LA VUELTA 51, heredada y citada, no reinventada (discutible D3 de aquella vuelta): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND.",
+  "carril_del_filo": "Acta de la vuelta 51, pregunta 2. Las DOS colisiones de fuera arrastran veredictos del FILO (el 266 es B y el 246 es C) y NO se voltean por maquina: se RELEE el par resuelto EN ESTE MISMO ACTO con el veredicto directo como contraste, y la correccion declarada cita ESA relectura. Las dos relecturas estan escritas en relecturas_del_filo de este plan, hechas ANTES de sellar.",
+  "lecturas_p12": [
+    {
+      "acto": 2,
+      "mixto": "teoria_equidad_split_equity",
+      "superviviente_contra_el_que_se_lee": "criterios_equity_split",
+      "veredicto": "CONTINUA",
+      "citas": "El puesto 871 es el veredicto DIRECTO del par y lo dice sin rodeos: EL SEGUNDO ES LA PREGUNTA PREVIA DEL PRIMERO Y NO ESTA CONTENIDO EN EL, porque el checklist SUPONE YA ELEGIDA la logica de negocio. criterios_equity_split es el checklist para repartir: listar contribuciones pasadas, documentar el capital exacto, calcular el costo de oportunidad, estimar contribuciones futuras, considerar la prima de idea de diez a quince puntos, discutir motivaciones y tolerancia al conflicto, ajustar proporcionalmente por dedicacion y registrar por escrito la logica. teoria_equidad_split_equity decide ANTES QUE LOGICA SE USA: determinar si el equipo opera bajo logica social o de negocio segun sus relaciones previas, aceptar el reparto igualitario con su coste si es social, disenar el proporcional si es de negocio, y evaluar el riesgo de la asimetria entre contribucion real y equity si se elige la logica equivocada. Son dos procedimientos distintos sobre la misma idea y en dos momentos distintos: CONTINUA. NOTA DE ESTE PAR: LA ARISTA QUE P.12 MANDA DECLARAR YA EXISTE EN LOS DOS SENTIDOS (criterios_equity_split.nodos_siguientes a teoria_equidad_split_equity y teoria_equidad_split_equity.nodos_previos a criterios_equity_split, impresas en el dossier de hoy), asi que aqui no hay arista que declarar y lo que queda es SOLO la poda del solape para la fase 04. Puestos citados: 871."
+    }
+  ],
+  "relecturas_del_filo": [
+    {
+      "par_resuelto": "criterios_equity_split contra reparto_inicial_equity",
+      "veredicto_arrastrado": "puesto 266, clase B, emitido contra reparto_inicial_equity mas split_igual_vs_desigual",
+      "veredicto_directo_de_contraste": "puesto 754, clase D",
+      "que_congelaba_el_B": "El 266 dice DUDOSO y nombra su duda entera: los dos deciden el mismo reparto de equity entre fundadores y comparten la instruccion de dejar por escrito la logica del acuerdo, pero reparto_inicial_equity manda esperar a que se asiente la estrategia y usar plantilla con vesting, y split_igual_vs_desigual compara aportes para decidir si el reparto es igual o desigual.",
+      "la_relectura": "CONDICION DE TEXTO, y se resuelve. Leido el par RESUELTO con los dos textos vivos delante: criterios_equity_split son OCHO pasos que responden CON QUE SE DECIDE el reparto (contribuciones pasadas, capital exacto, costo de oportunidad, contribuciones futuras, prima de idea de diez a quince puntos, motivaciones y tolerancia al conflicto, ajuste proporcional por dedicacion, y registro escrito de la logica). reparto_inicial_equity son CUATRO pasos que responden CUANDO Y COMO SE CIERRA: esperar a que la estrategia y el equipo se estabilicen antes de cerrar el reparto final, usar una plantilla estructurada tipo UpDown para conversarlo, escribir los acuerdos, y DEJAR SIEMPRE UNA PARTE AJUSTABLE, vesting o clausulas de recompra, nunca fijo para siempre. Esa ultima linea es doctrina propia del par y NO existe en criterios_equity_split, verificado paso a paso sobre el fichero. El unico roce real es dejarlo por escrito (paso 8 del uno contra paso 3 del otro), que es exactamente lo que el veredicto DIRECTO 754 ya llama EL UNICO ROCE y por lo que lo clasifica D. La duda del 266 nacio contra split_igual_vs_desigual, un nodo de cuatro pasos cuyo contenido el propio puesto 188 declara DENTRO de los ocho del largo: contra el texto completo la distincion criterios contra proceso queda limpia y la duda se cierra. NO ES UNA PREGUNTA DE POLITICA DE CATALOGO: el 266 no pregunta si el catalogo quiere uno o dos nodos, nombra una diferencia de contenido, y la diferencia sobrevive medida. Clase resultante: D.",
+      "es_pregunta_de_politica": false
+    },
+    {
+      "par_resuelto": "criterios_equity_split contra timing_equity_split",
+      "veredicto_arrastrado": "puesto 246, clase C, emitido contra split_igual_vs_desigual mas timing_equity_split",
+      "veredicto_directo_de_contraste": "puesto 688, clase D",
+      "que_congelaba_el_C": "El 246 lee COMO REPARTIR contra CUANDO REPARTIRLO, dice objetos distintos y sano, y lo que registra ademas es una FIGURA: un RACIMO NUEVO que no estaba en RACIMOS_MIEMBROS.jsonl, con cuatro nodos del nucleo.",
+      "la_relectura": "CONDICION DE TEXTO, y se resuelve. Leido el par RESUELTO: timing_equity_split son cuatro pasos que responden CUANDO (hablarlo ahora o esperar a tener mas informacion sobre las contribuciones reales, fijar un momento claro como antes de la primera ronda si se espera, pesar el riesgo de perder a un cofundador valioso por no ofrecerle equity pronto, y evitar dejar la negociacion para cuando ya exista una valoracion externa porque eleva la tension). criterios_equity_split responde COMO, y lo hace con los ocho pasos del checklist. Es LA MISMA LECTURA que el propio 246 escribio, y el veredicto DIRECTO 688 lo dice con esas palabras: es la misma lectura que dio el puesto 246, y ademas hay arista en los dos sentidos verificada resolviendo a nodo vivo. LA FIGURA QUE EL C CONGELABA NO QUEDA VIVA: el racimo del reparto de equity ya esta registrado y remedido a SEIS miembros, y los dos veredictos directos del par (688 y 754) lo citan como FAMILIA DECLARADA. No hay registro pendiente que la fusion se lleve por delante. Clase resultante: D.",
+      "es_pregunta_de_politica": false
+    }
+  ],
+  "actos": [
+    {
+      "orden": 1,
+      "miembros": [
+        "criterios_equity_split",
+        "split_igual_vs_desigual"
+      ],
+      "superviviente": "criterios_equity_split",
+      "motivo": "CONTENIDO, con el margen mas ancho del tramo y sin empate en ninguna vara. Los dos viables medidos hoy son criterios_equity_split y teoria_equidad_split_equity (docs/loop/SALIDA_V52_VIABLES.txt); split_igual_vs_desigual no es viable porque no deja ningun mixto fuera. Entre los dos viables: OCHO pasos contra cuatro, TRES condiciones contra dos, 1.134 caracteres de resumen contra 586 y cableado de 20 contra 4. Las cuatro varas apuntan al mismo y ninguna se contradice. LA VARA DE LAS PUERTAS NO OPINA aqui porque ninguno de los tres es puerta. NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X (el 188 dice candidato a fusion con el corto absorbido, que apunta al mismo sitio sin usar la formula; el 502 no nombra superviviente), asi que aqui no hay choque de letra contra aritmetica que registrar.",
+      "absorbidos": [
+        "split_igual_vs_desigual"
+      ],
+      "pasos": {
+        "split_igual_vs_desigual": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2",
+          "3": "APPEND",
+          "4": "CUBIERTO:8"
+        }
+      },
+      "condiciones": {
+        "split_igual_vs_desigual": {
+          "1": "CUBIERTO:2"
+        }
+      },
+      "nota_del_reparto": "EL PUESTO 188 ESCRIBE LA VARA Y AQUI SE EJECUTA PIEZA A PIEZA, no en bloque: dice que split_igual_vs_desigual es la version corta del mismo nodo y que sus cuatro pasos estan dentro de los ocho del largo. Tres de los cuatro lo estan literalmente y el cuarto NO, y se dice en vez de aceptarse la frase entera. Su paso 1 (comparar experiencia previa, capital aportado e ideas de cada uno) es el paso 1 del elegido (listar las contribuciones pasadas de cada fundador: quien tuvo la idea original, cuanto capital, tiempo o activos aporto cada uno), con la experiencia previa recogida ademas en el paso 4 del elegido: CUBIERTO:1. Su paso 2 (decidir si esas diferencias justifican un reparto desigual) es el paso 2 del elegido (discutir abiertamente si esas contribuciones son similares o desiguales, ya que esto predice fuertemente si el split terminara siendo igualitario o no): CUBIERTO:2. Su paso 4 (dejar por escrito por que elegiste un reparto igual o desigual) es el paso 8 del elegido (registrar por escrito la logica detras de la decision de split para evitar conflictos futuros): CUBIERTO:8. SU PASO 3 VIAJA ENTERO Y ES LA UNICA PIEZA DISCUTIBLE DEL REPARTO: no cerrar el acuerdo con un simple apreton de manos rapido y tomarse el tiempo de discutirlo a fondo aunque se termine eligiendo un reparto igual NO ES UN PARAMETRO de ningun paso del elegido, es un GESTO DISTINTO, una disciplina sobre la manera de negociar y no sobre que se mide; el elegido manda discutir abiertamente las contribuciones (paso 2) y las motivaciones (paso 6), pero en ninguna linea manda NO CERRAR RAPIDO. Por la politica del reparto, gesto distinto va de APPEND. Su unica condicion (cuando tu y tus cofundadores estan decidiendo si repartir el equity en partes iguales o segun lo que cada uno aporta) es la condicion 2 del elegido (cuando dos o mas cofundadores deben decidir como repartir el equity inicial de la startup): CUBIERTO_COND:2. CERO PERDIDAS NOMBRADAS en este acto.",
+      "miembros_del_acto_entero": [
+        "criterios_equity_split",
+        "split_igual_vs_desigual",
+        "teoria_equidad_split_equity"
+      ],
+      "mixto_que_queda_fuera": "teoria_equidad_split_equity"
+    }
+  ],
+  "declarados_y_no_fundidos": []
+}

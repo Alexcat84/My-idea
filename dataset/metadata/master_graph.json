@@ -23891,7 +23891,8 @@
         "Considerar si se otorga una 'prima de idea' de 10 a 15 puntos porcentuales al fundador que originó el concepto",
         "Discutir abiertamente las motivaciones y la tolerancia al conflicto de cada fundador",
         "Ajustar el split proporcionalmente si algún fundador dedicará menos tiempo (por ejemplo, 80% de dedicación equivale a 80% del equity que le correspondería a tiempo completo)",
-        "Registrar por escrito la lógica detrás de la decisión de split para evitar conflictos futuros"
+        "Registrar por escrito la lógica detrás de la decisión de split para evitar conflictos futuros",
+        "No cierres el acuerdo con un simple apretón de manos rápido: tómate el tiempo de discutirlo a fondo, aunque termines eligiendo un reparto igual"
       ],
       "entregable_esperado": "Tabla de equity split justificada, con los porcentajes asignados a cada fundador y el razonamiento detrás de cada uno, incluyendo el análisis de similitud de capital aportado",
       "condiciones_activacion": [
@@ -23916,7 +23917,6 @@
         "formalizacion_acuerdo_equity",
         "elementos_contrato_legal",
         "reparto_inicial_equity",
-        "split_igual_vs_desigual",
         "teoria_equidad_split_equity",
         "timing_equity_split",
         "ceo_equity_premium",
@@ -23926,7 +23926,17 @@
         "riesgo_split_51_49",
         "three_rs_equilibrium"
       ],
-      "etiqueta_arbol": "Divide las Acciones con Justicia"
+      "etiqueta_arbol": "Divide las Acciones con Justicia",
+      "ids_alias": [
+        "split_igual_vs_desigual"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "split_igual_vs_desigual",
+          "titulo": "Repartir el equity en partes iguales o desiguales (split)",
+          "fuente": "The Founder's Dilemmas"
+        }
+      ]
     },
     "criterios_seleccion_consultor_franquicia": {
       "node_id": "criterios_seleccion_consultor_franquicia",
@@ -54592,9 +54602,8 @@
       ],
       "entregable_esperado": "Un documento firmado que deje claro el reparto de participaciones (equity) entre tú y tus socios",
       "nodos_previos": [
-        "split_igual_vs_desigual",
-        "riesgo_split_51_49",
-        "criterios_equity_split"
+        "criterios_equity_split",
+        "riesgo_split_51_49"
       ],
       "nodos_siguientes": [
         "vesting_dinamico"
@@ -106412,7 +106421,8 @@
       "condiciones_activacion": [
         "Cuando tú y tus cofundadores están decidiendo si repartir el equity en partes iguales o según lo que cada uno aporta"
       ],
-      "etiqueta_arbol": "Reparte Bien la Sociedad"
+      "etiqueta_arbol": "Reparte Bien la Sociedad",
+      "deprecado": true
     },
     "split_testing": {
       "node_id": "split_testing",
@@ -123495,7 +123505,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 48,
+    "nodos_sin_enlaces_entrantes": 49,
     "enlaces_rotos_en_grafo": 0
   }
 }

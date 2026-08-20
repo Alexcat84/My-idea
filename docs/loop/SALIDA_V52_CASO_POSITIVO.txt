@@ -1,0 +1,23 @@
+==============================================================================
+CASO POSITIVO DE LA VUELTA 52: LAS GUARDAS PUESTAS A FALLAR
+==============================================================================
+
+  1. GUARDA 1B con un absorbido que es PUERTA
+     exit=1 | aborta sin escribir: SI
+     guarda 1B, ningun absorbido es semilla ni extremo de puente: ROJO
+     VEREDICTO: LA GUARDA MUERDE
+
+  2. GUARDA DE COBERTURA con un paso olvidado
+     exit=1 | aborta sin escribir: SI
+     guarda 2, cobertura exacta de indices (cero olvidos): ROJO
+     [ROJO] acto 1, pasos de split_igual_vs_desigual: faltan ['3'], sobran []
+     [ROJO] acto 1: marca desconocida ''
+     VEREDICTO: LA GUARDA MUERDE
+
+  3. GUARDA DE COLISIONES contra una cuenta esperada FALSA
+     CUENTA ESPERADA: 7 | MEDIDA: 0 | CALZA: NO
+     VEREDICTO: LA GUARDA MUERDE
+
+  planes de mentira borrados: _caso_positivo_v52_1b.json, _caso_positivo_v52_cobertura.json
+
+RESULTADO: LAS TRES GUARDAS MUERDEN

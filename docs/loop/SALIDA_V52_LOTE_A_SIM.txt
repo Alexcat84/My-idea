@@ -1,0 +1,64 @@
+==============================================================================
+OP-U-01, TRAMO 1, P.12, LOTE A DE LA VUELTA 52: el acto 2 de la nomina de la apertura, EL REPARTO DE EQUITY, adjudicado por el acta de la vuelta 51 (pregunta 2) . MODO SIMULAR
+plan: docs/loop/PLAN_V52_OPU01_LOTE_A.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3492 vivos, 361 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive criterios_equity_split . absorbe split_igual_vs_desigual
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 8 -> 9 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['split_igual_vs_desigual']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 2
+   criterios_equity_split                               nodos_siguientes  split_igual_vs_desigual -> criterios_equity_split
+   formalizacion_acuerdo_equity                         nodos_previos     split_igual_vs_desigual -> criterios_equity_split
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 0
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 1
+   formalizacion_acuerdo_equity                         nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   criterios_equity_split                               nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 1000
+  duplicadas tras resolver DESPUES del tramo                          : 1000
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 0, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 1 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (5 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 split_igual_vs_desigual                      paso         1  ya lo dice el PASO 1 del superviviente
+        Compara con tus cofundadores la experiencia previa, el capital aportado y las ideas de cada uno
+    1 split_igual_vs_desigual                      paso         2  ya lo dice el PASO 2 del superviviente
+        Decide si esas diferencias son lo bastante grandes como para justificar un reparto desigual
+    1 split_igual_vs_desigual                      paso         3  PASO 9 del superviviente
+        No cierres el acuerdo con un simple apretón de manos rápido: tómate el tiempo de discutirlo a fondo, aunque termines eligiendo un reparto igual
+    1 split_igual_vs_desigual                      paso         4  ya lo dice el PASO 8 del superviviente
+        Deja por escrito por qué elegiste un reparto igual o desigual
+    1 split_igual_vs_desigual                      condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando tú y tus cofundadores están decidiendo si repartir el equity en partes iguales o según lo que cada uno aporta
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 1
+  nodos implicados    : 2
+  nodos que MUEREN    : 1
+  piezas repartidas   : 5 (1 viajan enteras, 4 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.
