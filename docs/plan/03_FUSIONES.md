@@ -680,7 +680,7 @@ de `metodologia_spin_selling` sigue siendo una linea.**
 | lecturas `P.12` **encargadas y NO hechas** | ~~**25**~~ **26** **[CORREGIDA UNA VEZ, el 20 ago 2026 (vuelta 51, TAREA 1.1). NO ES UNA CIFRA QUE ENVEJECIO: NACIO MAL. La cuenta buena al cierre de la vuelta 49 era 26, medida por miembros sobre la nomina de aquel estado (`../loop/SALIDA_V50_TRAMO1_POR_MIEMBROS.txt`, corrida al abrir la vuelta 50 sobre el hash `b8d1083a`, que es el cierre de la 49) y re-derivada por el auditor en el acta de la vuelta 50, seccion 3.3, que es su relectura conjunta: 25 mixtos al cierre de la vuelta 50 mas el acto 1 que esa vuelta resolvio. LA FILA HERMANA del registro de la vuelta 50, que dice 25 al cierre, esta bien medida y NO se toca. El 25 de aqui convivia en esta misma pagina con el 26 de la medicion de la forma, dos parrafos mas arriba]** |
 | actos **fundidos** en esta seccion | **3** (los dos empates y la parte A del acto 1) |
 | **tramo 2** de 50 actos | **NO ABIERTO**: no hubo cuerda |
-| los declarados **29**, **32** y **36** (hoy **26**, **28** y **32**) | **siguen declarados**, ninguno se toca |
+| los declarados **29**, **32** y **36** (~~hoy~~ **26**, **28** y **32** AL ABRIR LA VUELTA 49) **[ROTULO FECHADO, 20 ago 2026 (vuelta 52, TAREA 1.3), CIFRAS INTACTAS: el 26/28/32 es exacto para la corrida de la APERTURA de la vuelta 49 y lo que envejecio es la palabra *hoy*. Re-medido esta vuelta con `python scripts/loop/vuelta50_tramo_por_miembros.py` contra las tres nominas selladas: al ABRIR la vuelta 49 son 26, 28 y 32 (`../loop/SALIDA_V52_TRAMO1_EN_APERTURA_V49.txt`, sobre `RECOMPUTO_V48_CIERRE.jsonl`, 254 CERRADOS); al CERRARLA ya eran 24, 26 y 30 (`../loop/SALIDA_V52_TRAMO1_EN_CIERRE_V49.txt`, sobre `RECOMPUTO_V49_CIERRE.jsonl`, 252 CERRADOS); y al ABRIR la vuelta 51 eran 23, 25 y 29 (`../loop/SALIDA_V52_TRAMO1_EN_APERTURA_V51.txt`, sobre `RECOMPUTO_V51_APERTURA.jsonl`, 251 CERRADOS). Es la misma especie que la TAREA 1.2 de la vuelta 51 corrigio en el registro de la vuelta 50, y el acta de la vuelta 51 la adjudico en su `D10`. Los tres son numeros del TRAMO (29, 32 y 36), que no bailan; lo que baila es el ordinal de la nomina del dia]** | **siguen declarados**, ninguno se toca |
 | los dos actos que la vuelta 48 dejo fuera **por colision de clase medida** (hoy los **8** y **33**) | **siguen fuera**, y esta vuelta no los mira |
 
 ### EL CIERRE DE LA SECCION, MEDIDO AL CERRAR
@@ -970,10 +970,12 @@ superviviente ya tenia leidos, los puestos **754** y **688**.
 
 **QUE SE HIZO CON ESO, y no fue seguir:** el dataset se revirtio entero con `git checkout`, el
 censo confirmo la vuelta a **CERO** colisiones, el instrumento se reescribio para **simular el
-mapa de alias y re-resolver LOS 3.388 VEREDICTOS**, y las 25 combinaciones de acto y
-superviviente viable se re-midieron con la aritmetica buena
+mapa de alias y re-resolver LOS 3.388 VEREDICTOS**, y las ~~25~~ **51** combinaciones de acto y
+superviviente viable **de los 25 actos mixtos** se re-midieron con la aritmetica buena
 ([`../loop/SALIDA_V51_COLISIONES_ESPERADAS.txt`](../loop/SALIDA_V51_COLISIONES_ESPERADAS.txt)).
 **De 51 combinaciones, CINCO no calzan con la cuenta del encargo.**
+
+> **CORRECCION DE ROTULO DECLARADA (20 ago 2026, vuelta 52, TAREA 1.2; acta de la vuelta 51, seccion 3.4), y el 25 se queda tachado delante:** lo que se re-midio fueron **51 combinaciones de acto y superviviente viable**, no 25. **El 25 es la cuenta de los ACTOS MIXTOS** que habia entonces, y la frase de al lado ya publicaba el 51, asi que la pagina se contradecia consigo misma a dos lineas de distancia. La cifra buena la imprime el propio instrumento citado ([`../loop/SALIDA_V51_COLISIONES_ESPERADAS.txt`](../loop/SALIDA_V51_COLISIONES_ESPERADAS.txt)). **No es una cifra mal medida: es un nombre mal puesto a una cifra bien medida**, y por eso el tratamiento es el del rotulo y no el de la cifra.
 
 ### Y UNA FORMA DE CONTAR QUE ESTA VUELTA TUVO QUE FIJAR: **LA COLISION SE CUENTA POR PAR RESUELTO**
 
@@ -1050,9 +1052,11 @@ viables**, asi que la guarda `1B` los rechaza
 fusion: `obtencion_compromiso` y hermanos; `mejora_del_sistema_responsabilidad_gerencial` y
 hermanos; `dia_cero_defectos` y hermanos; `domina_lo_que_compras` con
 `investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor`; y `cultura_climatica_innovacion`
-con `cultura_de_innovacion`. **Al cerrar la vuelta 51 son los actos 4, 21, 23, 27 y 28**
+con `cultura_de_innovacion`. **Al cerrar la vuelta 51 son los actos ~~4, 21, 23, 27 y 28~~ 3, 19, 21, 25 y 26**
 ([`../loop/SALIDA_V51_TRAMO1_CIERRE.txt`](../loop/SALIDA_V51_TRAMO1_CIERRE.txt), y el rotulo va
 fechado a su corrida desde el principio, que es lo que el acta 50 adjudico en su pregunta 5).
+
+> **CORRECCION DECLARADA (20 ago 2026, vuelta 52, TAREA 1.2), y el texto viejo se queda tachado delante: LOS CINCO ORDINALES NACIERON MAL, no envejecieron.** El rotulo de la celda estaba bien fechado y la salida citada era la correcta; **las cifras venian de OTRA corrida**, la de TRAS EL LOTE A ([`../loop/SALIDA_V51_TRAMO1_TRAS_LOTE_A.txt`](../loop/SALIDA_V51_TRAMO1_TRAS_LOTE_A.txt), que imprime 4, 21, 23, 27 y 28 porque el lote B todavia no habia consumido dos actos mas). **La salida que la propia celda cita imprime 3, 19, 21, 25 y 26** ([`../loop/SALIDA_V51_TRAMO1_CIERRE.txt`](../loop/SALIDA_V51_TRAMO1_CIERRE.txt), bloque *actos de FUSION PURA vivos*). Es la caida de cifra publicada que el acta de la vuelta 51 nombra en su seccion 3.2. **Al abrir la vuelta 52 los cinco siguen en 3, 19, 21, 25 y 26**, re-medidos hoy ([`../loop/SALIDA_V52_TRAMO1_APERTURA.txt`](../loop/SALIDA_V52_TRAMO1_APERTURA.txt)), y la coincidencia no es la fuente de la correccion sino su contraste: entre el cierre de la 51 y la apertura de la 52 no se fundio ningun acto.
 
 ### LO QUE ESTA VUELTA NO HIZO DEL TRAMO 1, CON SU CIFRA MEDIDA AL CIERRE
 
