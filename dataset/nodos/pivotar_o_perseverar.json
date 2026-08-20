@@ -6,11 +6,12 @@
   "fuente": "The Lean Startup - Eric Ries",
   "resumen_teorico": "Es el tercer paso para medir el avance real de tu negocio con números: el momento en que decides si el progreso hacia tu modelo ideal justifica seguir igual (perseverar) o si necesitas un cambio de rumbo serio (pivotar). Si los números clave de tu negocio no se mueven a pesar del esfuerzo, es una señal clara de que necesitas pivotar. Sabes que un pivote funciono porque, después de hacerlo, tus ajustes empiezan a dar mas resultado que antes.",
   "pasos_accionables": [
-    "Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio",
+    "Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio y con las expectativas cuantitativas definidas al inicio",
     "Si las metricas se acercan a ese ideal, sigue con tu estrategia actual (perseveras)",
-    "Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote)",
+    "Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote), con datos concretos en la sala, no solo con intuición",
     "Si pivotas, establece una nueva línea base y vuelve a empezar el ciclo de ajuste de tu negocio",
-    "Comprueba que, después del cambio, tus nuevas acciones den mejores resultados que las anteriores"
+    "Comprueba que, después del cambio, tus nuevas acciones den mejores resultados que las anteriores",
+    "Evaluar si el equipo puede racionalizar el fracaso en lugar de aceptarlo"
   ],
   "entregable_esperado": "Tu decisión escrita de pivotar (con la nueva estrategia y la hipótesis) o de perseverar (con el plan para seguir)",
   "nodos_previos": [
@@ -18,14 +19,30 @@
     "ciclo_construir_medir_aprender",
     "contabilidad_innovacion",
     "metricas_accionables",
-    "quemar_las_naves_burning_the_boats"
+    "quemar_las_naves_burning_the_boats",
+    "ciclo_crear_medir_aprender",
+    "contabilidad_innovacion_pivote"
   ],
   "nodos_siguientes": [
-    "establecer_linea_base_mvp"
+    "establecer_linea_base_mvp",
+    "catalogo_pivotes",
+    "puntos_brillantes_antes_del_pivote",
+    "reunion_pivotar_o_perseverar"
   ],
   "condiciones_activacion": [
     "Cuando, después de varios ciclos de ajuste, tus metricas clave no mejoran",
-    "Si ya agotaste las mejoras posibles y no ves resultados en el negocio"
+    "Si ya agotaste las mejoras posibles y no ves resultados en el negocio",
+    "Cuando el equipo siente que el desarrollo de producto debería ser más productivo"
   ],
-  "etiqueta_arbol": "Decide: Pivotar o Perseverar"
+  "etiqueta_arbol": "Decide: Pivotar o Perseverar",
+  "ids_alias": [
+    "decision_pivote_perseverar"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "decision_pivote_perseverar",
+      "titulo": "Decisión de Pivotar o Perseverar",
+      "fuente": "The Lean Startup - Eric Ries"
+    }
+  ]
 }

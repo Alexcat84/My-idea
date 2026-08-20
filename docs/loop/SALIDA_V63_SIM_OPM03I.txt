@@ -1,0 +1,27 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### pivotar_o_perseverar  <==  decision_pivote_perseverar
+  1. DESEMPATE POR CABLEADO
+     pivotar_o_perseverar                         pasos  5 | nombra  6 | LO NOMBRAN  6
+     decision_pivote_perseverar                   pasos  4 | nombra  5 | LO NOMBRAN  5
+     >>> gana pivotar_o_perseverar por 6 contra 5
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['decision_pivote_perseverar']
+  3. ENTRADAS QUE SE REDIRIGEN
+     catalogo_pivotes                             nodos_previos     -> pivotar_o_perseverar
+     ciclo_crear_medir_aprender                   nodos_siguientes  -> pivotar_o_perseverar
+     contabilidad_innovacion_pivote               nodos_siguientes  -> pivotar_o_perseverar
+     puntos_brillantes_antes_del_pivote           nodos_previos     -> pivotar_o_perseverar
+     reunion_pivotar_o_perseverar                 nodos_previos     -> pivotar_o_perseverar
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     TOTAL NUEVAS: 0
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ninguna
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     NINGUNA: el acto queda sin aristas internas tras la fusion

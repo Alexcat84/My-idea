@@ -3051,3 +3051,107 @@ dejo medido el empate del puesto 1: **`OP-U-01` con 2 desbloqueos, `OP-M-03-I` c
 `OP-M-02-PROG` con 0**. **Siguen, en ese orden, `OP-M-03-I` y despues `OP-M-02-PROG`**, las dos
 desbloqueadas. **Despues viene el puesto 2, donde vive `OP-U-02`**, cuya apertura **se puede MEDIR
 sin fundir nada**.
+
+---
+
+## `OP-M-03-I`: EL REGISTRO DE LA FUSION (2026-08-20, vuelta 63)
+
+**Cada celda de este registro sale de un instrumento corrido en la vuelta 63 y pegada entera**, con el comando citado al lado. **El registro se adosa al final de la pagina y NO reescribe ni una linea de arriba.**
+
+| | |
+|---|---|
+| **la ficha** | `docs/plan/OPERACIONES.jsonl`, tipo **FUSION DE MESA**, estado **LISTA**, fecha de corte **2026-08-12** |
+| **superviviente** | `pivotar_o_perseverar` |
+| **absorbe** | `decision_pivote_perseverar` |
+| **plan sellado** | [`../loop/PLAN_V63_OPM03I.json`](../loop/PLAN_V63_OPM03I.json), contrato **`CAMPO PROPIO v1`** |
+| **censo del catalogo** | ANTES 3853 ficheros, 3274 vivos, 579 deprecados . DESPUES 3853 ficheros, 3273 vivos, 580 deprecados . **delta de deprecados +1 (esperado +1): OK** |
+| **el superviviente** | 5 -> 6 (anadidos 1), condiciones 2 -> 3 (anadidas 1) |
+| **piezas repartidas** | **7 (2 viajan enteras, 3 ya estaban dichas)** |
+
+**LA ADJUDICACION, COPIADA VERBATIM DE LA FICHA Y NO REDACTADA AQUI:**
+
+> ACTO I, LA PUERTA DE METRICAS DE RIES. Sobrevive pivotar_o_perseverar por CABLEADO A CONTENIDO EMPATADO, 6 contra 4, que es el supuesto en el que P.8 deja decidir al grafo. CONSERVA EL BLOQUE DEL PUNTO BRILLANTE, que llega por el destejido de OP-D-07 y que es uno de los dos lados de la frontera declarada del 1298.
+
+### EL REPARTO, PIEZA A PIEZA, TALLADO DEL PLAN SELLADO
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `decision_pivote_perseverar` | `CUBIERTO` | ya lo dice el paso **1** del superviviente |
+| paso **2** de `decision_pivote_perseverar` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **3** de `decision_pivote_perseverar` | `INCISO` | **`INCISO` ADOSADO** al paso 1: *las expectativas cuantitativas definidas al inicio* |
+| paso **4** de `decision_pivote_perseverar` | `INCISO` | **`INCISO` ADOSADO** al paso 3: *con datos concretos en la sala, no solo con intuición* |
+| condicion **1** de `decision_pivote_perseverar` | `CUBIERTO` | ya lo dice la condicion **1** del superviviente |
+| condicion **2** de `decision_pivote_perseverar` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **3** de `decision_pivote_perseverar` | `CUBIERTO` | ya lo dice la condicion **2** del superviviente |
+
+### LAS PERDIDAS, SELLADAS EN CAMPO PROPIO (`CAMPO PROPIO v1`)
+
+| especie | que se pierde | donde vivia | enrutada a |
+|---|---|---|---|
+| **DE PARAMETRO DE PASO** | el calificativo ACCIONABLES de las metricas que se revisan, y el rotulo de MODELO DE NEGOCIO SOSTENIBLE como destino; el paso 1 del superviviente dice tus metricas actuales y el modelo ideal de tu plan de negocio, que es el mismo gesto sin esos dos rotulos. SE DICE LO QUE NO SE PIERDE: metricas_accionables es HOY uno de los cinco nodos_previos del superviviente, medido en esta vuelta, asi que el concepto sigue a un salto del nodo vivo | paso 1 de decision_pivote_perseverar | la fase 04, que redacta y afina los pasos del superviviente |
+| **DE CONDICIONES** | el disparador de que los experimentos de producto muestren efectividad DECRECIENTE; la condicion 1 del superviviente dispara porque las metricas clave NO MEJORAN tras varios ciclos, que es el mismo fenomeno sin la pendiente | condicion 1 de decision_pivote_perseverar | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| **DE CONDICIONES** | la imagen de la startup ATRAPADA EN LA TIERRA DE LOS MUERTOS VIVIENTES, que es el estado de ni crecer ni morir; la condicion 2 del superviviente dispara por haber agotado las mejoras posibles sin ver resultados, que es el mismo callejon dicho sin la imagen | condicion 3 de decision_pivote_perseverar | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+
+### LAS REDIRECCIONES Y LAS GUARDAS, LEIDAS DE LA SALIDA DE LA EJECUCION
+
+**Redirecciones sobre nodos VIVOS: 5.** Salen enteras de [`../loop/SALIDA_V63_OPM03I_EJEC.txt`](../loop/SALIDA_V63_OPM03I_EJEC.txt):
+
+| nodo que nombraba al que muere | campo | pasa a nombrar |
+|---|---|---|
+| `catalogo_pivotes` | `nodos_previos` | `pivotar_o_perseverar` |
+| `ciclo_crear_medir_aprender` | `nodos_siguientes` | `pivotar_o_perseverar` |
+| `contabilidad_innovacion_pivote` | `nodos_siguientes` | `pivotar_o_perseverar` |
+| `puntos_brillantes_antes_del_pivote` | `nodos_previos` | `pivotar_o_perseverar` |
+| `reunion_pivotar_o_perseverar` | `nodos_previos` | `pivotar_o_perseverar` |
+
+| guarda | resultado |
+|---|---|
+| **`P.16`, duplicadas que la propia fusion fabrica** | **0** |
+| **auto-aristas que la fusion habria creado** | **0** |
+| **guarda A**, cero auto-aristas nuevas | **OK (0)** |
+| **guarda B**, cero duplicadas nuevas tras resolver | **OK (0)** |
+| **guarda C**, los cinco campos que la operacion NO redacta, intactos | **5 de 5** |
+| **guarda D**, el absorbido conserva su texto INTACTO | **OK** |
+
+### LO QUE LA FICHA MANDABA COMPROBAR DESPUES DE FUNDIR, COMPROBADO
+
+Sale de [`../loop/SALIDA_V63_VERIFICAR_OPM03I.txt`](../loop/SALIDA_V63_VERIFICAR_OPM03I.txt), corrida en esta vuelta:
+
+```
+1. LAS TRES PIEZAS PROPIAS DEL PAR, EN EL TEXTO FINAL DEL SUPERVIVIENTE
+   racionalizacion del fracaso  OK   paso [6]
+   linea base nueva             OK   paso [4]
+   comprobacion posterior       OK   paso [5]
+   el superviviente queda con 6 pasos y 3 condiciones
+2. EL BLOQUE DEL PUNTO BRILLANTE, BYTE A BYTE EN SU NODO PROPIO
+   pasos hoy: 5 | pasos antes: 5 | IDENTICOS BYTE A BYTE: SI
+   fuente: 'Traction - Gabriel Weinberg' (antes 'Traction - Gabriel Weinberg')
+   pasos del bloque que estaban en el que MUERE: 0 de 5 (la correccion declarada de la ficha decia 0 de 5)
+3. LA ARISTA REDIRIGIDA AL SUPERVIVIENTE, CON SU ESPEJO
+   ANTES: el que muere lo nombraba en nodos_siguientes: True | el nodo propio nombraba al que muere en nodos_previos: True
+   HOY  : el superviviente lo nombra en nodos_siguientes: True | el nodo propio nombra al superviviente en nodos_previos: True
+   el id del muerto ya NO aparece en el nodo propio: True
+4. EL NODO PROPIO SIGUE VIVO
+   deprecado: None | VIVO: SI
+5. EL ALIAS DEL SUPERVIVIENTE CARGA EL ID QUE MUERE
+   ids_alias: ['decision_pivote_perseverar']
+   merged_originals: ['decision_pivote_perseverar']
+6. EL ABSORBIDO, DEPRECADO Y CON SU TEXTO INTACTO
+   deprecado: SI | texto y aristas INTACTOS: SI
+```
+
+### LAS DOS DIVERGENCIAS ENTRE LA SIMULACION SELLADA Y LA MEDICION DE HOY, DECLARADAS
+
+**LA FICHA SE SELLO EL 12 AGO 2026 Y SU SIMULACION ES DE ESE DIA.** Entre aquel dia y hoy el grafo se movio, y **las dos diferencias se declaran en vez de taparse, porque ninguna cambia el superviviente**:
+
+| | lo que la ficha sellada dice | **lo medido HOY** | por que difiere |
+|---|---|---|---|
+| **entradas que se redirigen** | **4**: `catalogo_pivotes`, `ciclo_crear_medir_aprender`, `contabilidad_innovacion_pivote` y `reunion_pivotar_o_perseverar` | **5**: las cuatro **mas** `puntos_brillantes_antes_del_pivote` | ese nodo **NACIO EL 14 AGO 2026** por `OP-F-04-WEI`, dos dias DESPUES de la simulacion sellada. **Es exactamente la arista que la correccion declarada de la propia ficha manda redirigir**, y el cotejo de las dos listas es identidad mas ese unico anadido |
+| **cableado** | **6 contra 4** | **6 contra 5** | la entrada que el que muere gano es la misma de arriba. **El superviviente sigue ganando** |
+
+**Y UNA TERCERA DIFERENCIA, QUE NO ES DE MEDICION SINO DE LECTURA, Y VA MARCADA DISCUTIBLE EN EL REPORTE DE ESTA VUELTA.** La ficha adjudica *por CABLEADO A CONTENIDO EMPATADO*. **Leido con las varas por forma que los seis tramos de `OP-U-01` usaron, el contenido de hoy NO empata entero:** pasos **5 contra 4** apunta al superviviente y condiciones **2 contra 3** apunta al que muere, o sea **`CHOCAN`**. Y en un `CHOCAN` **decide la pieza DECLARADA** (acta 53, pregunta 3), que aqui es **la adjudicacion sellada de la propia ficha** y nombra a `pivotar_o_perseverar` con todas sus letras. **LAS DOS VIAS CONVERGEN EN EL MISMO NODO**, y por eso esto es una divergencia declarada y no una parada.
+
+### `P.16` CONTRA LA LETRA DE LA FICHA, Y LA DIVERGENCIA YA ESTABA ADJUDICADA
+
+La ficha de esta operacion **no manda nada sobre duplicadas**; la de `OP-M-02-PROG` si, y dice que **las duplicadas que la fusion fabrique quedan para `OP-S-12`**. **`P.16` (adoptada el 14 ago 2026, decision del fundador) dice lo contrario: quien fabrica, limpia, en el mismo commit**, y su punto 3 convierte a `OP-S-12` en **VERIFICACION DE CERO**. **La divergencia la declaro el instrumento de fundir desde la vuelta 48 y con ella se ejecutaron los seis tramos de `OP-U-01`**, auditados vuelta a vuelta. **Aqui no hizo falta**: esta fusion fabrico **CERO** duplicadas y **CERO** auto-aristas, medido antes de limpiar.
+

@@ -1,0 +1,82 @@
+==============================================================================
+OP-M-03-I . ACTO I DE LA MESA DEL PIVOTE, LA PUERTA DE METRICAS DE RIES: pivotar_o_perseverar absorbe decision_pivote_perseverar. Es la primera fusion de mesa de la campana y la primera operacion de la fase 03 despues de que OP-U-01 quedara agotada. EL BLOQUE DEL PUNTO BRILLANTE NO SE TOCA: vive entero en su nodo propio puntos_brillantes_antes_del_pivote y lo unico que esta fusion tiene que hacer con el es NO PERDER SU ARISTA . MODO EJECUTAR
+plan: docs/loop/PLAN_V63_OPM03I.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3274 vivos, 579 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive pivotar_o_perseverar . absorbe decision_pivote_perseverar
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 3 de decision_pivote_perseverar al PASO 1 del superviviente
+        inciso VERBATIM: 'las expectativas cuantitativas definidas al inicio'
+        nexo (lo unico de cosecha propia): ' y con '
+        paso resultante: Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio y con las expectativas cuantitativas definidas al inicio
+     del paso 4 de decision_pivote_perseverar al PASO 3 del superviviente
+        inciso VERBATIM: 'con datos concretos en la sala, no solo con intuición'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote), con datos concretos en la sala, no solo con intuición
+  alias del superviviente: ['decision_pivote_perseverar']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 5
+   catalogo_pivotes                                     nodos_previos     decision_pivote_perseverar -> pivotar_o_perseverar
+   ciclo_crear_medir_aprender                           nodos_siguientes  decision_pivote_perseverar -> pivotar_o_perseverar
+   contabilidad_innovacion_pivote                       nodos_siguientes  decision_pivote_perseverar -> pivotar_o_perseverar
+   puntos_brillantes_antes_del_pivote                   nodos_previos     decision_pivote_perseverar -> pivotar_o_perseverar
+   reunion_pivotar_o_perseverar                         nodos_previos     decision_pivote_perseverar -> pivotar_o_perseverar
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 1
+   tipos_de_pivote                                      nodos_previos     decision_pivote_perseverar (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 0
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 907   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 906   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 1 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (7 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 decision_pivote_perseverar                   paso         1  ya lo dice el PASO 1 del superviviente
+        Revisar si las métricas accionables muestran mejora suficiente hacia un modelo de negocio sostenible
+    1 decision_pivote_perseverar                   paso         2  PASO 6 del superviviente
+        Evaluar si el equipo puede racionalizar el fracaso en lugar de aceptarlo
+    1 decision_pivote_perseverar                   paso         3  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Comparar el progreso actual con las expectativas cuantitativas definidas al inicio
+    1 decision_pivote_perseverar                   paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Decidir con datos concretos en la sala, no solo con intuición
+    1 decision_pivote_perseverar                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando los experimentos de producto muestran efectividad decreciente
+    1 decision_pivote_perseverar                   condicion    2  CONDICION 3 del superviviente
+        Cuando el equipo siente que el desarrollo de producto debería ser más productivo
+    1 decision_pivote_perseverar                   condicion    3  ya lo dice la CONDICION 2 del superviviente
+        Cuando la startup lleva 'atrapada en la tierra de los muertos vivientes' (ni crece ni muere)
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 1
+  nodos implicados    : 2
+  nodos que MUEREN    : 1
+  piezas repartidas   : 7 (2 viajan enteras, 3 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 7
+censo DESPUES: 3853 ficheros, 3273 vivos, 580 deprecados
+censo ANTES  : 3853 ficheros, 3274 vivos, 579 deprecados
+delta deprecados: +1 (esperado +1): OK

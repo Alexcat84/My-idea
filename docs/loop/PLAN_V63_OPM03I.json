@@ -1,0 +1,92 @@
+{
+ "operacion": "OP-M-03-I",
+ "rotulo": "ACTO I DE LA MESA DEL PIVOTE, LA PUERTA DE METRICAS DE RIES: pivotar_o_perseverar absorbe decision_pivote_perseverar. Es la primera fusion de mesa de la campana y la primera operacion de la fase 03 despues de que OP-U-01 quedara agotada. EL BLOQUE DEL PUNTO BRILLANTE NO SE TOCA: vive entero en su nodo propio puntos_brillantes_antes_del_pivote y lo unico que esta fusion tiene que hacer con el es NO PERDER SU ARISTA",
+ "fecha": "2026-08-20",
+ "estado": "SELLADO",
+ "contrato_de_perdidas": "CAMPO PROPIO v1",
+ "vuelta": 63,
+ "tramo": "NO ES UN TRAMO: es la fusion de mesa OP-M-03-I",
+ "ficha_tipo": "FUSION DE MESA",
+ "ficha_fecha_corte": "2026-08-12",
+ "ficha_adjudicacion": "ACTO I, LA PUERTA DE METRICAS DE RIES. Sobrevive pivotar_o_perseverar por CABLEADO A CONTENIDO EMPATADO, 6 contra 4, que es el supuesto en el que P.8 deja decidir al grafo. CONSERVA EL BLOQUE DEL PUNTO BRILLANTE, que llega por el destejido de OP-D-07 y que es uno de los dos lados de la frontera declarada del 1298.",
+ "ficha_preservar": [
+  "del que muere: evaluar si el equipo esta RACIONALIZANDO EL FRACASO en vez de aceptarlo",
+  "~~del que muere, ya destejido: EL BLOQUE DEL PUNTO BRILLANTE entero, pasos 5 a 9~~ (texto del 12 ago 2026; NO SE BORRA). CORRECCION DECLARADA, 19 ago 2026 (vuelta 47), DECISION DEL FUNDADOR (docs/loop/paradas/2026-08-19-punto-brillante-DECISION.md, rama a), con el criterio que la propia decision escribe: CUANDO DOS TEXTOS SELLADOS CHOCAN, GANA EL QUE APLICO LA REGLA MAS RECIENTE DEL FUNDADOR, Y EL PERDEDOR SE CORRIGE. Aqui gana la fase 01 del 14 ago 2026, que aplico P.18 punto 3 y formo NODO PROPIO; pierde este texto, sellado el 12 ago 2026. EL QUE MUERE YA NO TRAE ESE BLOQUE, Y ESTA FUSION NO LO PRESERVA PORQUE NO LO RECIBE: el bloque salio de decision_pivote_perseverar el 14 ago 2026 por OP-F-04-WEI (commit 1eef1c6b) y vive entero en su nodo propio puntos_brillantes_antes_del_pivote (docs/plan/01_FUENTES.md linea 982, P.18 punto 3). MEDIDO EN LA VUELTA 47: 0 de 5 pasos en el que muere, 5 de 5 en el nodo propio. LO QUE ESTA FUSION SI TIENE QUE HACER CON EL BLOQUE, y es lo unico: NO TOCARLO Y NO PERDER SU ARISTA. decision_pivote_perseverar nombra hoy a puntos_brillantes_antes_del_pivote en nodos_siguientes y este lo nombra en nodos_previos, medido en los dos sentidos; al morir el sujeto esa arista se REDIRIGE al superviviente pivotar_o_perseverar como cualquier otra entrada del que muere, con su espejo. EL NODO PROPIO NO SE ABSORBE NI SE FUNDE: absorberlo seria deshacer P.18 punto 3, que es la regla mas reciente del fundador sobre este bloque.",
+  "VIVEN DENTRO, no son perdidas: la LINEA BASE NUEVA es el paso 4 del superviviente y la COMPROBACION POSTERIOR es su paso 5. Se reclasifican como PIEZAS QUE NO SE TOCAN, y el destejido tiene prohibido llevarselas"
+ ],
+ "ficha_verificacion": [
+  "SIMULADA (P.7): 4 entradas se redirigen (catalogo_pivotes, ciclo_crear_medir_aprender, contabilidad_innovacion_pivote y reunion_pivotar_o_perseverar), CERO duplicadas nuevas y CERO auto aristas. Es la fusion mas limpia de las tres",
+  "LAS TRES PIEZAS PROPIAS DEL PAR ESTAN EN EL TEXTO FINAL: racionalizacion del fracaso, linea base nueva y comprobacion posterior. Las dos ultimas ya son del superviviente y hay que comprobar que siguen ahi",
+  "~~el bloque del punto brillante esta entero y es identificable como bloque: la frontera del 1298 lo necesita nombrado~~ (texto del 12 ago 2026; NO SE BORRA). CORRECCION DECLARADA, 19 ago 2026 (vuelta 47), DECISION DEL FUNDADOR (docs/loop/paradas/2026-08-19-punto-brillante-DECISION.md, rama a), con el criterio que la propia decision escribe: CUANDO DOS TEXTOS SELLADOS CHOCAN, GANA EL QUE APLICO LA REGLA MAS RECIENTE DEL FUNDADOR, Y EL PERDEDOR SE CORRIGE. Aqui gana la fase 01 del 14 ago 2026, que aplico P.18 punto 3 y formo NODO PROPIO; pierde este texto, sellado el 12 ago 2026. EL BLOQUE ESTA ENTERO Y ES IDENTIFICABLE COMO BLOQUE, PERO EN SU NODO PROPIO puntos_brillantes_antes_del_pivote, QUE NO ES NINGUNO DE LOS DOS NODOS DE ESTA FUSION. LO QUE ESTA VERIFICACION COMPRUEBA HOY, y son tres cosas medibles tras la fusion: 1) los 5 pasos del bloque siguen byte a byte en puntos_brillantes_antes_del_pivote, con su fuente Traction sola; 2) la arista del sujeto muerto hacia ese nodo queda REDIRIGIDA al superviviente pivotar_o_perseverar, con su espejo, y no se pierde; 3) el nodo propio sigue VIVO y NO deprecado. Si la fusion se llevara el bloque dentro del superviviente estaria deshaciendo P.18 punto 3.",
+  "el alias del superviviente carga decision_pivote_perseverar",
+  "PASADA DE PERDIDAS RECOMPUTADAS (P.13), 12 ago 2026: cada perdida listada comprobada contra la nomina COMPLETA de esta fusion y contra el texto del superviviente. Las que viven dentro estan reclasificadas y no se injertan"
+ ],
+ "ficha_evidencia": [
+  "puesto 860 (A)",
+  "scripts/plan/simular_fusion.py (P.7), corrida del 12 ago 2026",
+  "MEDIDO: 6 contra 4 en cableado"
+ ],
+ "ficha_nota": "LA UNICA DE LAS TRES QUE NO FABRICA NI UNA DUPLICADA. Y el orden importa: OP-D-07 va antes, porque el bloque de Traction tiene que estar declarado ANTES de que el nodo desaparezca dentro de otro.",
+ "ficha_depende_de": [
+  "OP-M-03",
+  "OP-D-07"
+ ],
+ "ficha_bloquea_a": [],
+ "simulacion_de_hoy": "scripts/plan/simular_fusion.py corrido en la vuelta 63 ANTES de tocar un nodo (docs/loop/SALIDA_V63_SIM_OPM03I.txt): CINCO entradas se redirigen (catalogo_pivotes, ciclo_crear_medir_aprender, contabilidad_innovacion_pivote, puntos_brillantes_antes_del_pivote y reunion_pivotar_o_perseverar), CERO duplicadas nuevas y CERO auto aristas. LA SIMULACION SELLADA DEL PLAN DECIA CUATRO y nombraba a las cuatro primeras; LA QUINTA ES EXACTAMENTE LA QUE LA CORRECCION DECLARADA DE LA FICHA MANDA REDIRIGIR, y nacio despues de aquella simulacion. El cotejo de las dos listas es identidad mas ese unico anadido.",
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "pivotar_o_perseverar",
+    "decision_pivote_perseverar"
+   ],
+   "miembros_del_acto_entero": [
+    "pivotar_o_perseverar",
+    "decision_pivote_perseverar"
+   ],
+   "figura": "FUSION DE MESA, la ficha la escribe con su adjudicacion sellada",
+   "superviviente": "pivotar_o_perseverar",
+   "motivo": "EL SUPERVIVIENTE LO FIJA LA FICHA SELLADA Y AQUI NO SE RE-ADJUDICA: docs/plan/OPERACIONES.jsonl escribe superviviente pivotar_o_perseverar el 12 ago 2026, POR CABLEADO A CONTENIDO EMPATADO, 6 contra 4, que es el supuesto en el que P.8 deja decidir al grafo. DOS DIVERGENCIAS ENTRE LA MEDICION DE AQUEL DIA Y LA DE HOY, Y LAS DOS SE DECLARAN EN VEZ DE TAPARSE, PORQUE NINGUNA CAMBIA EL SUPERVIVIENTE. PRIMERA: el cableado de hoy es 6 contra 5 y no 6 contra 4, medido con scripts/plan/simular_fusion.py en esta vuelta; la entrada que el que muere gano es la de puntos_brillantes_antes_del_pivote, que NACIO EL 14 AGO 2026 por OP-F-04-WEI, o sea DESPUES de la simulacion sellada. El superviviente sigue ganando. SEGUNDA: leido con las varas por forma de los tramos, el contenido de hoy NO empata entero: pasos 5 contra 4 apunta a pivotar_o_perseverar y condiciones 2 contra 3 apunta al que muere, o sea CHOCAN. Y en un CHOCAN decide LA PIEZA DECLARADA (acta 53, pregunta 3), que aqui es la adjudicacion sellada de la propia ficha y nombra a pivotar_o_perseverar con todas sus letras. LAS DOS VIAS CONVERGEN EN EL MISMO NODO, y por eso esto es una divergencia declarada y no una parada. VA MARCADO COMO DISCUTIBLE EN LA SECCION 6 DEL REPORTE DE ESTA VUELTA.",
+   "absorbidos": [
+    "decision_pivote_perseverar"
+   ],
+   "pasos": {
+    "decision_pivote_perseverar": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND",
+     "3": "INCISO:1|las expectativas cuantitativas definidas al inicio| y con ",
+     "4": "INCISO:3|con datos concretos en la sala, no solo con intuición|, "
+    }
+   },
+   "condiciones": {
+    "decision_pivote_perseverar": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND",
+     "3": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "SIETE PIEZAS REPARTIDAS: dos viajan enteras, dos de INCISO y tres ya estaban dichas. LA PIEZA QUE LA FICHA MANDA PRESERVAR VIAJA ENTERA Y ES LA PRIMERA DEL REPARTO: evaluar si el equipo RACIONALIZA EL FRACASO en vez de aceptarlo (paso 2 del que muere) es un gesto que el superviviente no hace en ningun grado, porque el superviviente mira las metricas y no mira al equipo. Va de APPEND. LAS DOS PIEZAS QUE LA FICHA RECLASIFICA COMO QUE VIVEN DENTRO SE COMPRUEBAN Y NO SE TOCAN: la LINEA BASE NUEVA es el paso 4 del superviviente y la COMPROBACION POSTERIOR es su paso 5, los dos leidos hoy y los dos intactos tras la fusion. LOS DOS INCISOS SE ADOSAN PORQUE CABEN LIMPIOS, que es la letra de la politica y el limite que el acta 62 le puso al D9: no se marca CUBIERTO con perdida para ahorrarse un INCISO que si cabe. El paso 3 del que muere anade a que se compara el progreso (las expectativas cuantitativas definidas al inicio) sobre un paso 1 del superviviente que no cierra en punto; el paso 4 anade COMO se decide (con datos concretos en la sala y no solo con intuicion) sobre un paso 3 que cierra en parentesis y admite la coma. EL BLOQUE DEL PUNTO BRILLANTE NO ENTRA EN ESTE REPARTO PORQUE NO ESTA EN EL QUE MUERE, y eso se midio antes de repartir: decision_pivote_perseverar tiene HOY cuatro pasos y NINGUNO es del bloque; los cinco viven en puntos_brillantes_antes_del_pivote, que esta VIVO y no se toca. Lo unico que esta fusion le hace es REDIRIGIR su arista al superviviente, con su espejo. TRES PERDIDAS SELLADAS EN EL CAMPO, y las tres son de matiz y ninguna de gesto. LAS DOS DE CONDICIONES SE NOMBRAN EN VEZ DE IR DE APPEND porque son matices de disparadores que el superviviente ya tiene y no disparadores distintos, que es la vara del acta 55, pregunta 5; LA TERCERA CONDICION DEL QUE MUERE SI ES UN DISPARADOR DISTINTO y por eso esa si va de APPEND: que el EQUIPO SIENTA que el desarrollo deberia ser mas productivo es una senal subjetiva del equipo, no una cuenta de metricas, y el superviviente no dispara por nada parecido.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "el calificativo ACCIONABLES de las metricas que se revisan, y el rotulo de MODELO DE NEGOCIO SOSTENIBLE como destino; el paso 1 del superviviente dice tus metricas actuales y el modelo ideal de tu plan de negocio, que es el mismo gesto sin esos dos rotulos. SE DICE LO QUE NO SE PIERDE: metricas_accionables es HOY uno de los cinco nodos_previos del superviviente, medido en esta vuelta, asi que el concepto sigue a un salto del nodo vivo",
+     "donde": "paso 1 de decision_pivote_perseverar",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "el disparador de que los experimentos de producto muestren efectividad DECRECIENTE; la condicion 1 del superviviente dispara porque las metricas clave NO MEJORAN tras varios ciclos, que es el mismo fenomeno sin la pendiente",
+     "donde": "condicion 1 de decision_pivote_perseverar",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "la imagen de la startup ATRAPADA EN LA TIERRA DE LOS MUERTOS VIVIENTES, que es el estado de ni crecer ni morir; la condicion 2 del superviviente dispara por haber agotado las mejoras posibles sin ver resultados, que es el mismo callejon dicho sin la imagen",
+     "donde": "condicion 3 de decision_pivote_perseverar",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    }
+   ]
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

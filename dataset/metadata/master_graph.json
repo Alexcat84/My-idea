@@ -12202,7 +12202,7 @@
       "nodos_previos": [
         "reunion_pivotar_o_perseverar",
         "riesgo_no_pivotar_a_tiempo",
-        "decision_pivote_perseverar",
+        "pivotar_o_perseverar",
         "coraje_para_pivotar",
         "customer_validation_sales_roadmap"
       ],
@@ -13715,7 +13715,7 @@
       ],
       "nodos_siguientes": [
         "contabilidad_innovacion",
-        "decision_pivote_perseverar"
+        "pivotar_o_perseverar"
       ],
       "condiciones_activacion": [
         "Cuando el equipo se enfoca demasiado en una sola actividad (solo construir, solo medir o solo aprender) sin ver el ciclo completo",
@@ -20690,7 +20690,7 @@
         "catalogo_pivotes"
       ],
       "nodos_siguientes": [
-        "decision_pivote_perseverar",
+        "pivotar_o_perseverar",
         "reunion_pivotar_o_perseverar",
         "search_for_business_model"
       ],
@@ -29839,7 +29839,8 @@
         "Cuando el equipo siente que el desarrollo de producto debería ser más productivo",
         "Cuando la startup lleva 'atrapada en la tierra de los muertos vivientes' (ni crece ni muere)"
       ],
-      "etiqueta_arbol": "Cambiar de Rumbo o Perseverar"
+      "etiqueta_arbol": "Cambiar de Rumbo o Perseverar",
+      "deprecado": true
     },
     "decision_royalties_vs_venta_producto": {
       "node_id": "decision_royalties_vs_venta_producto",
@@ -84740,11 +84741,12 @@
       "fuente": "The Lean Startup - Eric Ries",
       "resumen_teorico": "Es el tercer paso para medir el avance real de tu negocio con números: el momento en que decides si el progreso hacia tu modelo ideal justifica seguir igual (perseverar) o si necesitas un cambio de rumbo serio (pivotar). Si los números clave de tu negocio no se mueven a pesar del esfuerzo, es una señal clara de que necesitas pivotar. Sabes que un pivote funciono porque, después de hacerlo, tus ajustes empiezan a dar mas resultado que antes.",
       "pasos_accionables": [
-        "Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio",
+        "Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio y con las expectativas cuantitativas definidas al inicio",
         "Si las metricas se acercan a ese ideal, sigue con tu estrategia actual (perseveras)",
-        "Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote)",
+        "Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote), con datos concretos en la sala, no solo con intuición",
         "Si pivotas, establece una nueva línea base y vuelve a empezar el ciclo de ajuste de tu negocio",
-        "Comprueba que, después del cambio, tus nuevas acciones den mejores resultados que las anteriores"
+        "Comprueba que, después del cambio, tus nuevas acciones den mejores resultados que las anteriores",
+        "Evaluar si el equipo puede racionalizar el fracaso en lugar de aceptarlo"
       ],
       "entregable_esperado": "Tu decisión escrita de pivotar (con la nueva estrategia y la hipótesis) o de perseverar (con el plan para seguir)",
       "nodos_previos": [
@@ -84752,16 +84754,32 @@
         "ciclo_construir_medir_aprender",
         "contabilidad_innovacion",
         "metricas_accionables",
-        "quemar_las_naves_burning_the_boats"
+        "quemar_las_naves_burning_the_boats",
+        "ciclo_crear_medir_aprender",
+        "contabilidad_innovacion_pivote"
       ],
       "nodos_siguientes": [
-        "establecer_linea_base_mvp"
+        "establecer_linea_base_mvp",
+        "catalogo_pivotes",
+        "puntos_brillantes_antes_del_pivote",
+        "reunion_pivotar_o_perseverar"
       ],
       "condiciones_activacion": [
         "Cuando, después de varios ciclos de ajuste, tus metricas clave no mejoran",
-        "Si ya agotaste las mejoras posibles y no ves resultados en el negocio"
+        "Si ya agotaste las mejoras posibles y no ves resultados en el negocio",
+        "Cuando el equipo siente que el desarrollo de producto debería ser más productivo"
       ],
-      "etiqueta_arbol": "Sostener el Rumbo o Cambiarlo"
+      "etiqueta_arbol": "Sostener el Rumbo o Cambiarlo",
+      "ids_alias": [
+        "decision_pivote_perseverar"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "decision_pivote_perseverar",
+          "titulo": "Decisión de Pivotar o Perseverar",
+          "fuente": "The Lean Startup - Eric Ries"
+        }
+      ]
     },
     "pivotar_o_proceder": {
       "node_id": "pivotar_o_proceder",
@@ -94968,7 +94986,7 @@
       ],
       "entregable_esperado": "El analisis de tus clientes mas comprometidos con lo que tienen en comun, tu veredicto escrito de si son adoptadores tempranos o valores atipicos, y la decision de pivotar o perseverar que sale de el",
       "nodos_previos": [
-        "decision_pivote_perseverar"
+        "pivotar_o_perseverar"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -100827,7 +100845,7 @@
       "nodos_previos": [
         "metricas_accionables",
         "contabilidad_innovacion",
-        "decision_pivote_perseverar",
+        "pivotar_o_perseverar",
         "runway_como_numero_de_pivotes",
         "biblioteca_experimentos_validacion",
         "contabilidad_innovacion_pivote",
@@ -126665,7 +126683,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 214,
+    "nodos_sin_enlaces_entrantes": 215,
     "enlaces_rotos_en_grafo": 0
   }
 }
