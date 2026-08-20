@@ -16334,10 +16334,10 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 | | |
 |---|---:|
 | **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
-| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ **571** (16,9 %), ver las correcciones declaradas debajo |
+| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ **566** (16,7 %), ver las correcciones declaradas debajo |
 | **B** | ~~89~~ ~~87~~ ~~84~~ ~~83~~ ~~82~~ ~~81~~ ~~80~~ ~~79~~ **77** |
 | **C** | ~~7~~ **8** |
-| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ **2.732** (80,6 %) |
+| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ **2.737** (80,8 %) |
 
 > **CORRECCION DECLARADA (19 ago 2026, vuelta 50). LA TABLA VOLVIO A QUEDARSE ATRAS, Y ESTA
 > VEZ DENTRO DE LA MISMA VUELTA QUE LA ACABABA DE CORREGIR.** La correccion de la vuelta 49
@@ -16362,6 +16362,18 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 > cierre con `python scripts/recomputar_marcador.py 3388`
 > (`../loop/SALIDA_V50_MARCADOR_CIERRE.txt`): **A 571, B 77, C 8, D 2.732** sobre `n` **3.388**,
 > cero huecos y cero duplicados.
+
+> **CORRECCION DECLARADA DE LA VUELTA 51 (20 ago 2026), Y ESTA VEZ LA TABLA NO SE QUEDO ATRAS:
+> EL BARRIDO SE CORRIO AL CIERRE, DESPUES DEL ULTIMO MOVIMIENTO, QUE ES LO QUE LA REGLA PIDE.**
+> La vuelta 51 fundio **CUATRO** actos del tramo 1 de `OP-U-01` (la accion correctiva y el
+> scorecard en el lote A, el consejo de calidad y la relacion previa entre cofundadores en el
+> lote B) y volteo **CINCO** veredictos de `A` a `D` por la limpieza `P.16` de las colisiones
+> que esas mismas fusiones fabricaron: los puestos **820**, **2426**, **2523**, **2662** y
+> **498**. **Las cifras intermedias van tachadas y no borradas**, porque cada una fue exacta en
+> su momento. Medido al cierre con `python scripts/recomputar_marcador.py 3388`
+> (`../loop/SALIDA_V51_MARCADOR_CIERRE.txt`): **A 566, B 77, C 8, D 2.737** sobre `n` **3.388**,
+> cero huecos y cero duplicados. **Y LOS DOMINIOS QUE SE MUEVEN SON DOS: `quality` de `A 126` a
+> `A 123` y `core` de `A 334` a `A 332`.**
 
 > **CORRECCION DECLARADA (19 ago 2026, vuelta 49), Y LA MITAD DE ELLA ES UNA CAIDA DE MI
 > PROPIO LINAJE QUE SE CUENTA EN VEZ DE ESCONDERSE.** Esta tabla venia corregida hasta el 18 ago

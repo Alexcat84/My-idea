@@ -1,251 +1,231 @@
-# REPORTE DE LA VUELTA 50 (19 ago 2026, ejecutor Opus 5)
+# REPORTE DE LA VUELTA 51 (20 ago 2026, ejecutor Opus 5)
 
-**LA TAREA 1 ENTERA, y con ella el instrumento del barrido REPARADO: perseguia una averia
-que el mismo tenia. DE LA TAREA 2, UN ACTO DE VEINTISEIS, y lo que lo frena no es la
-cuerda sino un hallazgo: LA RECETA DE `P.12` DEL ENCARGO NO ESTA DEFINIDA PARA LA FORMA
-QUE TIENEN 24 DE LOS 26 MIXTOS. Medido antes de tocar un nodo, generalizado desde el
-unico acto ya resuelto, y comprobado que NINGUN acto se queda sin superviviente posible,
-asi que no hay parada.**
+**LA TAREA 1 ENTERA, cada una de sus tres correcciones tratada por SU ESPECIE. DE LA TAREA 2,
+CUATRO ACTOS FUNDIDOS Y CINCO LECTURAS `P.12`. Y EL HALLAZGO DE LA VUELTA ME LO HIZO A MI MISMO
+MI PROPIO INSTRUMENTO: la guarda que escribi para cumplir la cuenta de colisiones del encargo
+MIRABA SOLO DENTRO DEL ACTO, dio el visto bueno a una fusion, y el censo del archivo entero
+devolvio CINCO colisiones donde ella habia prometido TRES. El dataset se revirtio con `git
+checkout`, el instrumento se reescribio para re-resolver los 3.388 veredictos, y los 25 mixtos
+se re-midieron con la aritmetica buena antes de seguir.**
 
 | | |
 |---|---|
 | **rama** | `pasada-unica` |
-| **hash de apertura** | `b8d1083a` (el acta de la vuelta 49), **arbol limpio y todo pusheado** |
-| **commits de la vuelta** | **2**: `d485284a` (TAREA 1) mas el del cierre |
+| **hash de apertura** | `6dcb01b9` (el acta de la vuelta 50), **arbol limpio y todo pusheado** |
+| **commits de la vuelta** | **4**: `67bc64c3` (TAREA 1), `40b8eb80` (lote A), `a78c12e5` (lote B) y el del cierre |
 | **arbol al cierre** | limpio tras el commit del cierre |
 
 ---
 
 ## 0. LA APERTURA, MEDIDA ANTES DE LA PRIMERA OPERACION (regla 1)
 
-**Corrida ANTES de tocar nada**, con `python scripts/loop/vuelta31_estado.py APERTURA_V50`
-([`SALIDA_V50_APERTURA.txt`](SALIDA_V50_APERTURA.txt)). **El arbol estaba limpio y todo
-pusheado en `b8d1083a`, asi que la regla 3 se cumplio por vacio, y se dice asi en vez de
-darla por cumplida.**
+**Corrida ANTES de tocar nada**, con `python scripts/loop/vuelta31_estado.py APERTURA_V51`
+([`SALIDA_V51_APERTURA.txt`](SALIDA_V51_APERTURA.txt)). **El arbol estaba limpio y todo pusheado
+en `6dcb01b9`, asi que la regla 3 se cumplio por vacio, y se dice asi en vez de darla por
+cumplida.**
 
 | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
-| marcador `A` / `B` / `C` / `D` | 573 / 77 / 8 / 2.730 | **571 / 77 / 8 / 2.732** |
+| marcador `A` / `B` / `C` / `D` | 571 / 77 / 8 / 2.732 | **566 / 77 / 8 / 2.737** |
 | `n`, huecos, duplicados | 3.388 / 0 / 0 | **3.388 / 0 / 0** |
-| tasa de `A` | 16,9 | **16,9** |
-| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.499 / 354 / 16.984 | **3.853 / 3.498 / 355 / 16.986** |
-| retrato: `A` crudas / colapsos / pares distintos | 573 / 48 / 525 | **571 / 49 / 522** |
+| tasa de `A` | 16,9 | **16,7** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.498 / 355 / 16.986 | **3.853 / 3.492 / 361 / 17.011** |
+| retrato: `A` crudas / colapsos / pares distintos | 571 / 49 / 522 | **566 / 57 / 509** |
 | operaciones, estados, dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
 | entradas del inventario | 672 | **672** |
-| actos `CERRADOS` / `ABIERTOS` | 252 / 53 | **251 / 53** |
-| nodos en `CERRADOS` / `ABIERTOS` | 536 / 240 | **532 / 240** |
-| cola de costuras | 1.491 | **1.491** |
-| duplicadas tras resolver / auto-aristas | 1.002 / 0 | **1.002 / 0** |
+| actos `CERRADOS` / `ABIERTOS` | 251 / 53 | **247 / 53** |
+| nodos en `CERRADOS` / `ABIERTOS` | 532 / 240 | **518 / 240** |
+| cola de costuras | 1.491 | **1.489** |
+| duplicadas tras resolver (grupos) / auto-aristas | 1.002 / 0 | **1.001 / 0** |
 | colisiones de clase vigentes | 0 | **0** |
+| mixtos del tramo 1 pendientes de `P.12` | 25 | **21** |
 
-**El cierre esta RECOMPUTADO al cierre** ([`SALIDA_V50_CIERRE.txt`](SALIDA_V50_CIERRE.txt),
-[`SALIDA_V50_MARCADOR_CIERRE.txt`](SALIDA_V50_MARCADOR_CIERRE.txt),
-[`SALIDA_V50_RECOMPUTO_CIERRE.txt`](SALIDA_V50_RECOMPUTO_CIERRE.txt),
-[`SALIDA_V50_COLA.txt`](SALIDA_V50_COLA.txt)), **no copiado de la apertura.**
+**El cierre esta RECOMPUTADO al cierre** ([`SALIDA_V51_CIERRE.txt`](SALIDA_V51_CIERRE.txt),
+[`SALIDA_V51_MARCADOR_CIERRE.txt`](SALIDA_V51_MARCADOR_CIERRE.txt),
+[`SALIDA_V51_RECOMPUTO_CIERRE.txt`](SALIDA_V51_RECOMPUTO_CIERRE.txt),
+[`SALIDA_V51_COLA_CIERRE.txt`](SALIDA_V51_COLA_CIERRE.txt)), **no copiado de la apertura.**
 
-**Las cinco familias de libro no se mueven** (Weinberg 68/66, Horowitz 91/89, Hugos
-111/111, Coleman 74/72, Rackham 46/46): el unico nodo que muere hoy es de `health_safety`.
-
----
-
-## 1. TAREA 1.1: LAS TABLAS SIN BARRER, Y EL BARRIDO QUE NO SABIA BUSCAR
-
-**Siete celdas corregidas con tachado, fecha y motivo, y TODAS las cifras de instrumento
-corrido HOY** ([`SALIDA_V50_CORRECCIONES_910.txt`](SALIDA_V50_CORRECCIONES_910.txt)):
-
-| la celda | decia | **medido hoy** |
-|---|---:|---:|
-| informe **100.1**, fila `A` / fila `D` | 574 / 2.729 | **573 / 2.730** |
-| `RECOMPUTO_3388.md` **246** (`A` crudas) | 574 | **573** |
-| **247** (colapsos a auto-arista) | 41 | **48** |
-| **248** (pares distintos) | 533 | **525** |
-| **1079** (total de `A`) | 574 | **573** |
-| checkpoint **ii** de la **528** | 533 igual a 533 | **525 igual a 525, sigue OK** |
-
-**Y el 41 no era un error de lectura**: era el corte de la TAREA 1.3 de la vuelta 49,
-tomado ANTES de las tres fusiones de su propia TAREA 2. **Los siete que faltaban son la
-huella de esas tres fusiones, que es lo que la propia fila ya explicaba de las 41.**
-
-**Mas una CUARTA correccion declarada de la fila `core`**, que la cadena no tenia: el
-dominio vigente es **334** y sin ella la unica cifra legible como reciente era la del 18 ago.
-
-### EL HALLAZGO DEL TRAMO: EL INSTRUMENTO DEL BARRIDO TENIA LA AVERIA QUE PERSEGUIA
-
-**Medido antes de escribir una linea del sucesor**
-([`SALIDA_V50_BARRIDO_910_INSTRUMENTO_VIEJO.txt`](SALIDA_V50_BARRIDO_910_INSTRUMENTO_VIEJO.txt)):
-`vuelta49_barrido_910.py` **acepta `--viejo` pero NO LO USA PARA BUSCAR**. Sus dos
-expresiones regulares estan clavadas a `583` y `2709`, las cifras de la vuelta 14, y
-`--viejo` solo cambia la cabecera que imprime. Corrido con `--viejo 574,77,8,2729`
-devuelve 22 candidatos, **y los devuelve porque esas celdas arrastran el 583 en su cadena
-de tachados, no porque sepa buscar el 574**. **Una celda nueva escrita hoy con la cifra
-vigente y sin cadena de tachados le seria INVISIBLE.**
-
-**El sucesor `scripts/loop/vuelta50_barrido_910.py`** busca de verdad lo que se le pide,
-conserva la familia legado y anade **la familia del RETRATO**, que ningun barrido anterior
-miraba. **Con el, las siete celdas salen solas**, y al cierre saco tambien las que esta
-misma vuelta habia escrito (seccion 5).
+**Las cinco familias de libro no se mueven** (Weinberg 68/66, Horowitz 91/89, Hugos 111/111,
+Coleman 74/72, Rackham 46/46). **Los dominios que se mueven son DOS**, medidos al cierre: `quality`
+de `A 126` a `A 123` (14,9 a 14,6 por ciento) y `core` de `A 334` a `A 332` (23,1 a 23,0).
 
 ---
 
-## 2. TAREA 1.2: EL CONTADOR LD, TERCER NIVEL, Y UNA RAZON MAS FUERTE QUE LA DEL NIVEL
+## 1. TAREA 1: LAS TRES CORRECCIONES, CADA UNA POR SU ESPECIE
 
-**Tercera correccion declarada sobre el mismo instrumento, con el texto viejo del criterio
-delante y sin borrar.** Excluidos los **REGISTROS DEL ARNES** por patron
-`docs/loop/ultimo_*.json` (hoy `ultimo_ejecutor.json` y `ultimo_auditor.json`;
-`loop.log` ya quedaba fuera por extension, y se dice en vez de darlo por supuesto).
+**La regla que las separa es la que el acta de la vuelta 50 adjudico en su pregunta 5**, y esta
+vuelta la aplico como criterio de clasificacion y no como formula
+([`SALIDA_V51_CORRECCIONES_T1.txt`](SALIDA_V51_CORRECCIONES_T1.txt),
+`scripts/loop/vuelta51_correcciones_tarea1.py`, cuatro sustituciones, todas idempotentes al
+re-correrlas: [`SALIDA_V51_CORRECCIONES_T1_IDEMPOTENCIA.txt`](SALIDA_V51_CORRECCIONES_T1_IDEMPOTENCIA.txt)).
 
-> **Y LA RAZON QUE DE VERDAD LOS CONDENA NO ES EL NIVEL: ES QUE SU CONTENIDO NO ES
-> REPRODUCIBLE.** Mi corrida previa dio **2** y no los **4** del auditor
-> ([`SALIDA_V50_CONTAR_LD_ANTES.txt`](SALIDA_V50_CONTAR_LD_ANTES.txt)), **porque
-> `ultimo_ejecutor.json` estaba en CERO BYTES**: el arnes lo vacia al abrir la sesion y lo
-> reescribe al cerrarla. **El mismo instrumento, mismo repo, mismo dia, devuelve una cifra
-> distinta segun EN QUE MINUTO de la sesion se corra.** Una celda publicada no puede colgar
-> de eso. **La discrepancia con el auditor se declara y no se resuelve copiando** (regla 2).
+| | la especie | lo que se toco |
+|---|---|---|
+| **1.1** | **CIFRA QUE NACIO MAL**, no que envejecio | la fila *lecturas `P.12` encargadas y NO hechas* del registro de la vuelta 49: **25 tachado, 26 vigente**, con la salida que lo mide citada y el acta 50 como su relectura conjunta. **La fila hermana del registro de la vuelta 50, que dice 25 al cierre, NO se toco** |
+| **1.2** | **ROTULO ENVEJECIDO**, la cifra se queda | la columna *numero en la vuelta 48 / hoy* de los cinco declarados: **el rotulo pasa a AL ABRIR LA VUELTA 50** y las cifras (7, 24, 26, 30, 31) quedan intactas, con nota de que al cierre eran 6, 23, 25, 29 y 30. **Misma vara al *hoy el acto 156* de los imposibles**, que al abrir la vuelta 51 es el **155** |
+| **1.3** | **CORRECCION INCOMPLETA DE FORMA** | el checkpoint **ii** de la fila **528**: **525 tachado y 522 vigente en los DOS parentesis**, cadena de notas intacta |
 
-**CASO POSITIVO CORRIDO, y es lo que cierra el argumento**
-([`SALIDA_V50_CONTAR_LD_CASO_POSITIVO.txt`](SALIDA_V50_CONTAR_LD_CASO_POSITIVO.txt)): con
-una sonda que repone la cita en el fichero del arnes, **el instrumento VIEJO da 4, y son
-exactamente los `LD-12` y `LD-27` que el auditor midio**; el corregido da **2**. Arnes
-restaurado a cero bytes, que es como estaba.
+**LA MEDICION QUE SOSTIENE 1.2, y no sale de ningun acta:** los cinco declarados eran **7, 24,
+26, 30 y 31** al abrir la vuelta 50
+([`SALIDA_V50_TRAMO1_POR_MIEMBROS.txt`](SALIDA_V50_TRAMO1_POR_MIEMBROS.txt)) y **6, 23, 25, 29 y
+30** al cerrarla ([`SALIDA_V50_TRAMO1_CIERRE.txt`](SALIDA_V50_TRAMO1_CIERRE.txt)); al abrir la 51
+seguian en **6, 23, 25, 29 y 30**
+([`SALIDA_V51_TRAMO1_APERTURA.txt`](SALIDA_V51_TRAMO1_APERTURA.txt)). El segundo imposible por
+puerta era el **156** al abrir la vuelta 50
+([`SALIDA_V50_PUERTAS_EN_EL_LOTE.txt`](SALIDA_V50_PUERTAS_EN_EL_LOTE.txt)) y el **155** al abrir
+la 51 ([`SALIDA_V51_PUERTAS_APERTURA.txt`](SALIDA_V51_PUERTAS_APERTURA.txt)).
 
-| | cifra vieja (corte 12 ago) | **medida hoy, tras la correccion** |
-|---|---:|---|
-| lecturas dirigidas **hechas** | 65 | **81** |
-| nombrados **sin seccion propia** | | **2**: `LD-71` y `LD-99`, los dos ya adjudicados como NO pendientes |
-| **encargadas sin hacer** (la celda publicada) | CERO | **CERO, y la celda aguanta** |
+### UN CUARTO SITIO DE LA MISMA ESPECIE, MEDIDO Y **NO TOCADO**
 
-**LAS DOS CELDAS DEL `00_INDICE` SE REPRODUCEN: 81 y CERO. Ninguna parada.**
+**El registro de la vuelta 49 tiene la misma especie de rotulo envejecido en su fila *los
+declarados 29, 32 y 36 (hoy 26, 28 y 32)*.** Medido corriendo el instrumento de miembros contra
+cuatro cortes distintos: **26, 28 y 32 es la numeracion de la APERTURA de la vuelta 49**; al
+**cerrar** aquella vuelta ya eran **24, 26 y 30**
+([`SALIDA_V51_TRAMO1_EN_CIERRE_V49.txt`](SALIDA_V51_TRAMO1_EN_CIERRE_V49.txt)) y al abrir la 51
+son **23, 25 y 29**. **No se corrige porque el encargo scopeo la TAREA 1.2 al registro de la
+vuelta 50 y el acta 50 hizo lo mismo.** Va como hallazgo y como pregunta, no como alcance
+tomado por mi cuenta.
 
 ---
 
-## 3. TAREA 1.3: EL ALIAS `modelo_spin_2`, CON UN FILO MAS QUE LA OBSERVACION DEL ACTA
+## 2. EL HALLAZGO DE LA VUELTA: **UNA FUSION NO SOLO CHOCA CONSIGO MISMA**
 
-**Una linea en el registro del tramo y cero datos tocados**, que es lo que el encargo
-manda. Medido hoy ([`SALIDA_V50_ALIAS_DURMIENTE.txt`](SALIDA_V50_ALIAS_DURMIENTE.txt)):
+**El encargo pone una guarda de cuenta** (*una colision por cada `CONTINUA` sobre mixto CON
+forma y CERO por cada `ENTRA`; una colision que no calce con esa cuenta te detiene*). Para poder
+cumplirla ANTES de mover un nodo escribi `scripts/loop/vuelta51_colisiones_esperadas.py`. **Y la
+primera version contaba las colisiones mirando SOLO LOS VEREDICTOS INTERNOS DEL ACTO.**
 
 | | |
 |---|---|
-| quien lo declara | `modelo_spin`, **que esta DEPRECADO** |
-| **por el resolutor de la casa** (`P.1`, mapa de alias solo de vivos) | **NO RESUELVE EN ABSOLUTO** |
-| por la cadena ancha | `modelo_spin_2` a `modelo_spin` **[DEP]** a `modelo_spin_preguntas` |
-| referencias en aristas / en veredictos | **CERO** / **CERO** |
+| que prometio | **TRES** colisiones para el lote A (los actos de la accion correctiva, del scorecard y del reparto de equity) |
+| que salio | **CINCO**, medidas sobre el archivo entero tras ejecutar ([`SALIDA_V51_CENSO_COLISIONES_LOTE_A.txt`](SALIDA_V51_CENSO_COLISIONES_LOTE_A.txt), primera corrida) |
+| las dos de mas | veredictos del absorbido `split_igual_vs_desigual` contra nodos de **FUERA del acto**: el **266** contra `reparto_inicial_equity` y el **246** contra `timing_equity_split`, que al resolver caian sobre los pares **754** y **688**, que el superviviente ya tenia leidos |
 
-**El acta decia que resuelve por cadena; medido con la vara de la casa, para todo conteo
-publicado ese id se queda DONDE ESTA.** Pasivo de `OP-S-12`, nombrado y no reparado.
+> **LA LECCION: absorber un nodo arrastra TODOS sus veredictos, tambien los que apuntan fuera del
+> acto, y cada uno puede caer sobre un par que el superviviente ya tenia leido. Una guarda que
+> solo mira dentro del acto TRANQUILIZA SIN MIRAR**, que es la misma especie de averia que la
+> vuelta 50 encontro en el barrido `9.10`.
 
-> **CORRECCION DECLARADA SOBRE MI PROPIO INSTRUMENTO NUEVO, en la vuelta en que nacio:** la
-> primera version leia los campos `id` y `alias` en vez de `node_id` e `ids_alias`, y
-> **imprimio un resultado que POR CASUALIDAD se parecia al hallazgo verdadero**. Eso es lo
-> que la hacia peligrosa: una medicion que sale bien por el motivo equivocado no es una
-> medicion. **Corregida antes de publicar cifra alguna.**
+**QUE SE HIZO, y no fue seguir:** el dataset se revirtio entero con `git checkout -- dataset/`,
+el censo confirmo la vuelta a **CERO** colisiones, el instrumento se reescribio para **simular el
+mapa de alias y re-resolver LOS 3.388 VEREDICTOS**, y las 51 combinaciones de acto y superviviente
+viable de los 25 mixtos se re-midieron
+([`SALIDA_V51_COLISIONES_ESPERADAS.txt`](SALIDA_V51_COLISIONES_ESPERADAS.txt)).
+
+| | combinaciones |
+|---|---:|
+| **CALZAN** con la cuenta del encargo | **46** |
+| **NO CALZAN** (colisiones fuera del acto) | **5**, en cuatro actos: el del equity, el de los habitos, el del *value proposition canvas* (los dos viables) y el de los warrants |
+
+### Y UNA FORMA DE CONTAR QUE ESTA VUELTA TUVO QUE FIJAR
+
+**LA COLISION SE CUENTA POR PAR RESUELTO, NO POR VEREDICTO.** El par
+`consejo_de_calidad` contra `consejo_de_calidad_3` lleva **TRES** veredictos dentro (**2523** `A`,
+**2662** `A`, **2916** `D`) y es **UNA** colision: los dos `A` se voltean, el `D` se queda. **Con
+esa forma de contar la cuenta del encargo calza; contando veredictos, no.** Es decision de lectura
+y va marcada (**D9**).
 
 ---
 
-## 4. TAREA 2: LO QUE FRENO EL TRAMO NO FUE LA CUERDA
+## 3. LOS CUATRO ACTOS FUNDIDOS Y LAS CINCO LECTURAS `P.12`
 
-### 4.1 EL TRAMO 1, RE-IDENTIFICADO POR MIEMBROS Y NO POR NUMERO
+**Las cinco salieron `CONTINUA`, y ninguna por descarte:** en las cinco el veredicto DIRECTO del
+par mixto ya era `D` y ya traia escrito por que. **En el de los cofundadores el propio veredicto
+escribe la palabra** (el **1058**: *por la vara del banco `9.6.1`, CONTINUA*).
 
-**Lo manda el encargo y era necesario**: el numero de acto baila con cada fusion.
-Instrumento nuevo `vuelta50_tramo_por_miembros.py`, que resuelve por `P.1` y casa
-conjuntos ([`SALIDA_V50_TRAMO1_POR_MIEMBROS.txt`](SALIDA_V50_TRAMO1_POR_MIEMBROS.txt)).
+| lote | superviviente | absorbe | el mixto, `CONTINUA` contra el | colision limpiada |
+|---|---|---|---|---|
+| **A** | `accion_correctiva_sistematica` | `accion_correctiva_5`, `accion_correctiva_6` | `accion_correctiva_crosby` (2805) | **2426** `A` a `D` |
+| **A** | `scorecard_de_seleccion_de_proyectos` | `scoring_model_scorecard` (el centro) | `scorecards_criterios_gate` (1201) | **820** `A` a `D` |
+| **B** | `consejo_de_calidad` | `consejo_calidad`, `consejo_calidad_2` | `consejo_de_calidad_3` (2916) | **2523** y **2662** `A` a `D` |
+| **B** | `cofundar_con_amigos_familia_riesgos` | `riesgo_cofundadores_relacion_previa` (el centro) | `seleccion_relaciones_cofundadores` (1058) | **498** `A` a `D` |
+| **detenido** | `criterios_equity_split` | (no se ejecuta) | `teoria_equidad_split_equity` (871), **lectura HECHA** | (ninguna: el acto no se funde) |
 
-| de los 50 actos del tramo | al abrir | **al cerrar** |
+**Guardas, por acto y en los cuatro:** miembros vivos y nomina completa, **`1B`**, cobertura
+exacta de indices sin olvidos, cero repetidos literales. **`1B` pasa CON CONTENIDO en el acto del
+scorecard** (su puerta `scorecards_criterios_gate` es el mixto y sobrevive) y **por vacio** en los
+otros tres. **Cero auto-aristas y cero duplicadas NUEVAS** en los dos lotes, con el pasivo
+historico bajando de 1.002 a 1.001 grupos porque `P.16` limpia lo que la propia sustitucion toca.
+**Los cinco campos que la operacion no redacta, intactos; los siete absorbidos con su texto
+INTACTO.** **Censo tras cada limpieza: CERO colisiones vigentes**
+([`SALIDA_V51_CENSO_COLISIONES_TRAS_P16.txt`](SALIDA_V51_CENSO_COLISIONES_TRAS_P16.txt),
+[`SALIDA_V51_CENSO_COLISIONES_TRAS_P16_B.txt`](SALIDA_V51_CENSO_COLISIONES_TRAS_P16_B.txt)).
+
+### EL CHOQUE DE LETRA CONTRA ARITMETICA, registrado con sus puestos
+
+**El acta 50, pregunta 3, lo adjudico: MANDA LA ARITMETICA.** En el acto del consejo hay
+**CINCO**: los puestos **2631**, **2663** y **2523** cierran con *Sobrevive `consejo_calidad`*, y
+los **2670** y **2662** con *Sobrevive `consejo_calidad_2`*, **y ninguno de los dos es VIABLE**,
+porque su parte `A` se lleva a los cuatro miembros y no deja ningun mixto fuera. **Los dos
+nombrados mueren, ninguno absorbe el racimo.** En los otros tres actos ningun veredicto `A`
+escribe la formula, y se dice en vez de darlo por supuesto.
+
+### EL ACTO DETENIDO, con el acto escrito entero
+
+**El del reparto de equity.** El contenido elige `criterios_equity_split` por el margen mas ancho
+del tramo (**ocho pasos contra cuatro, tres condiciones contra dos, 1.134 caracteres de resumen
+contra 586, cableado 20 contra 4**) y con ese superviviente la fusion fabrica **TRES** colisiones
+para **UNA** `CONTINUA`. **El otro viable SI calza, pero elegirlo seria dejar que la aritmetica de
+las colisiones decida el superviviente, y ninguna regla escrita lo permite.** Lectura `P.12`
+hecha, plan escrito, y el acto va al auditor.
+
+---
+
+## 4. DOS ACTOS QUE BLOQUEA LA VARA DE LAS PUERTAS, Y EL INSTRUMENTO NO LO DICE
+
+**Medido sobre la nomina re-medida tras el lote A**
+([`SALIDA_V51_PUERTAS_TRAS_LOTE_A.txt`](SALIDA_V51_PUERTAS_TRAS_LOTE_A.txt)): los actos **9** y
+**17** tienen **DOS puertas dentro cada uno** (`decision_cuando_fundar` mas
+`evaluacion_capacidades_fundador`; `enfoque_paso_a_paso_investigacion_mercado` mas
+`evaluacion_mercados_objetivo`) **y en los dos la puerta que hace de CENTRO de la estrella tiene
+que morir con cualquiera de los supervivientes viables.** La guarda `1B` los rechaza.
+
+> **EL HALLAZGO: `vuelta48_puertas_en_el_lote.py` LOS LLAMA SALVABLES.** Su dicotomia es SALVABLE
+> (una sola puerta) contra IMPOSIBLE (todos los miembros son puerta). **Falta el tercer caso: MAS
+> DE UNA PUERTA, con alguna obligada a morir por la estructura del acto.** No se repara aqui, que
+> seria alcance: se declara y se trae.
+
+---
+
+## 5. EL BARRIDO `9.10` DEL CIERRE, CORRIDO DESPUES DEL ULTIMO MOVIMIENTO
+
+**Con las cifras viejas DE HOY** (`--viejo 571,77,8,2732 --retrato 49,522`, mas los cinco puestos
+corregidos), como manda la regla del aviso
+([`SALIDA_V51_BARRIDO_910_CIERRE.txt`](SALIDA_V51_BARRIDO_910_CIERRE.txt)). **NUEVE celdas
+corregidas** ([`SALIDA_V51_CORRECCIONES_910.txt`](SALIDA_V51_CORRECCIONES_910.txt)):
+
+| la celda | decia | **medido al cierre** |
 |---|---:|---:|
-| **CONSUMIDOS** (ya fundidos) | 18 | **18** |
-| **VIVOS** en la nomina | 31 | **30** |
-| **PARTIDOS** (no calzan enteros hoy) | 1 | **2** |
-| de los vivos: **MIXTOS** pendientes de `P.12` | **26** | **25** |
-| de los vivos: **DECLARADOS** | 5 | **5** |
+| `RECOMPUTO_3388.md` **246**, `A` crudas | 571 | **566** |
+| **247**, colapsos a auto-arista | 49 | **57** |
+| **248**, pares distintos del retrato | 522 | **509** |
+| **528**, el checkpoint **ii** (los dos parentesis mas su nota) | 522 igual a 522 | **509 igual a 509, sigue OK** |
+| **1079**, total de `A` de la tabla por dominio | 571 (16,9 %) | **566 (16,7 %)** |
+| `INTRA_DOMINIO_INFORME.md` **100.1**, fila `A` | 571 (16,9 %) | **566 (16,7 %)** |
+| **100.1**, fila `D` | 2.732 (80,6 %) | **2.737 (80,8 %)** |
+| **100.1**, la nota de correccion | | **segunda nota adosada, sin reescribir la de la vuelta 50** |
 
-> **LA CIFRA DEL ENCARGO NO CUADRA CON LA MEDICION Y SE DECLARA EN VEZ DE COPIARSE**
-> (regla 2): **el encargo pide *las veinticinco lecturas `P.12` pendientes*, y al abrir esta
-> vuelta eran VEINTISEIS.** El 25 viene de una fila del registro de la vuelta 49 que en la
-> misma pagina convive con un **26 de 26**. La vuelta 48 dejo **27** y la 49 resolvio **uno**.
+### DOS FAMILIAS QUE EL BARRIDO SACO Y QUE **NO TOQUE**, con su cifra medida
 
-### 4.2 LA RECETA DEL ENCARGO NO ESTA DEFINIDA PARA 24 DE LOS 26. **ESTE ES EL HALLAZGO**
+**No son medicion: son adjudicacion, y por eso van como pregunta.**
 
-**El encargo dice: elige el superviviente de la PARTE A y lee el MIXTO contra el.** Eso
-presupone la forma del unico acto ya resuelto (el del SPIN): **una clique `A` mas UN nodo
-colgando.** **El primer acto que abri no la tiene**, y por eso lo primero fue medir las 26
-([`SALIDA_V50_FORMA_MIXTOS.txt`](SALIDA_V50_FORMA_MIXTOS.txt)):
-
-| forma del subgrafo `A` | actos |
-|---|---:|
-| **CLIQUE MAS COLGANTE**, donde la receta se aplica sola | **2** |
-| **ESTRELLA**: un centro que repite contra cada punta, y puntas que no se parecen entre si | **24** |
-
-**No es una rareza: es la figura `9.23` del banco**, y **el propio archivo la nombra** (el
-puesto **1201** dice, con esa palabra, *este par cierra una ESTRELLA*). Lo que `9.23` no
-dice es **quien sobrevive cuando el centro repite contra varios nodos que son `D` entre si**.
-
-**LA DEFINICION OPERATIVA, sacada del acto ya resuelto y NO inventada:** en el SPIN la
-parte A fueron los nodos **con arista `A` contra el superviviente**, y el mixto el unico
-**sin** arista `A` contra el. Generalizado, mas una comprobacion que es aritmetica y no
-criterio: un superviviente es **VIABLE** si su parte A es clique `A` (si no, fundirla
-juntaria dos nodos que el archivo declaro `D`, que es lo que `P.12` prohibe) y si deja al
-menos un mixto fuera
-([`SALIDA_V50_SUPERVIVIENTES_VIABLES.txt`](SALIDA_V50_SUPERVIVIENTES_VIABLES.txt)).
-
-| | actos |
-|---|---:|
-| **VARIOS VIABLES**, y el CONTENIDO decide, que es la regla de la pagina | **26 de 26** |
-| **NINGUNO VIABLE**, que habria sido parada | **CERO** |
-
-> **NINGUN ACTO SE QUEDA SIN SUPERVIVIENTE POSIBLE: NO HAY CONDICION DE PARADA.** Lo que
-> hay es que **en la estrella el CENTRO casi nunca es viable.**
-
-**Y UN CHOQUE MEDIDO: CINCO veredictos en CUATRO actos** (hoy el **3**, que trae dos, el
-**27**, el **28** y el **29**) **cierran con *Sobrevive X* apuntando a un `X` que NO es
-viable** por la estructura de su acto. **Se mide, se nombra y se trae.**
-
-### 4.3 EL ACTO 1 EJECUTADO ENTERO: EL RACIMO DE LA DERIVA
-
-| | |
-|---|---|
-| **superviviente** | `normalizacion_de_la_desviacion`, por **CONTENIDO** sin empate (6 pasos contra 4, 4 condiciones contra 2, resumen de 711 contra 574/466/458), **y el propio 2237 cierra con *Sobrevive normalizacion_de_la_desviacion*** |
-| absorbe | `drift_hacia_el_fallo_2` |
-| **guarda de las puertas (`1B`)** | **por vacio**: el acto no esta entre los 30 SALVABLES ni entre los 2 IMPOSIBLES ([`SALIDA_V50_PUERTAS_EN_EL_LOTE.txt`](SALIDA_V50_PUERTAS_EN_EL_LOTE.txt)) |
-| **las dos lecturas `P.12`** | `deriva_hacia_el_fallo` y `drift_hacia_el_fallo`, **las dos `CONTINUA`**, con los puestos 2275 y 2394 citados |
-| aristas declaradas (`P.9`, sin ejecutar) | **2**, con su poda de solape anotada para la fase 04 |
-| **las ocho guardas del instrumento** | **todas OK**, incluido el reparto sin olvidos (6 piezas: 4 viajan, 1 ya estaba, **1 de INCISO**) |
-| censo | 3.499 a **3.498** vivos, delta deprecados **+1 sobre +1 esperado** |
-
-**LAS DOS COLISIONES QUE FABRICO, LIMPIADAS EN EL MISMO ACTO (`P.16`)**, con la razon vieja
-pegada por maquina: **2222 y 2226, de `A` a `D`**. **LA CUENTA CALZA CON LA QUE EL ENCARGO
-EXIGE: dos `CONTINUA`, dos colisiones, cero por `ENTRA`**
-([`SALIDA_V50_CENSO_COLISIONES_ACTO1.txt`](SALIDA_V50_CENSO_COLISIONES_ACTO1.txt)). **Censo
-tras la limpieza: CERO colisiones vigentes.**
-
----
-
-## 5. EL BARRIDO DEL CIERRE, QUE ES LA REGLA DEL AVISO, Y SE CORRIO SOBRE MI PROPIA VUELTA
-
-**La TAREA 1.1 corrigio siete celdas con el marcador de ESE momento. Despues la TAREA 2 lo
-movio otra vez.** Dejarlas asi habria sido repetir, **dentro de la misma vuelta**, la caida
-que esta vuelta vino a corregir. **El barrido se corrio DESPUES del ultimo movimiento**
-([`SALIDA_V50_BARRIDO_910_CIERRE.txt`](SALIDA_V50_BARRIDO_910_CIERRE.txt)) **y saco DIEZ
-correcciones mas** ([`SALIDA_V50_CORRECCIONES_910_CIERRE.txt`](SALIDA_V50_CORRECCIONES_910_CIERRE.txt)):
-las filas 246, 247, 248, 528 y 1079, el apendice 100.1 entero, y **el encabezado de mi
-propia tabla de la TAREA 1.1**, que decia *hoy, medido en esta vuelta* y por tanto se
-presentaba como vigente. **Su cifra NO se toco** (fue exacta al escribirse; reescribirla
-fabricaria una corrida que nunca existio): **se corrigio el titulo.**
-
-**Y UNA AFIRMACION HEREDADA QUE ESTA VUELTA DESMIENTE, dicha en vez de dejada correr:** las
-cuatro correcciones declaradas anteriores de la tabla por dominio decian, cada una, que **el
-unico dominio que se mueve es `core`**. Hoy no: **los dos volteos de `P.16` son de
-`health_safety`**, que baja de `A 45` a `A 43` (23,4 a 22,4 por ciento) mientras `core` se
-queda quieto en 334. **Queda escrita como quinta correccion declarada.**
-
-**Re-barrido de comprobacion tras corregir: ninguna celda vigente conserva la cifra vieja**
-([`SALIDA_V50_BARRIDO_910_TRAS.txt`](SALIDA_V50_BARRIDO_910_TRAS.txt)). **Y los tres
-contadores de correccion (*CORREGIDA N VECES*) se cuadraron con su cadena de tachados: 7, 4
-y 7**, que es una incoherencia que las propias correcciones habrian dejado dentro.
+1. **El apendice 95.1 de `INTRA_DOMINIO_INFORME.md`, MARCADOR (corte 2.900).** Publica
+   `A 571, B 89, C 7, D 2.233`. **Medido hoy con `python scripts/recomputar_marcador.py 2900`**
+   ([`SALIDA_V51_MARCADOR_2900_CIERRE.txt`](SALIDA_V51_MARCADOR_2900_CIERRE.txt)):
+   **`A 554, B 77, C 8, D 2.261`**. **La duda no es la cifra.** O es una FOTO FECHADA de la vuelta
+   4 (y entonces la cadena de tachados que vueltas posteriores le fueron aplicando a la `A` y a la
+   `D` sobraba), o es una TABLA VIGENTE al corte 2.900 (y entonces lleva tiempo derivando, porque
+   **se ha mantenido restando de la cifra anterior en vez de re-midiendo**, y por eso la `B` y la
+   `C` se quedaron en las de la vuelta 4).
+2. **Las dos tablas *EL MARCADOR ... AL CERRAR LA VUELTA* de `RECOMPUTO_3388.md`** (lineas 1790 y
+   1837), que publican `575 / 83 / 8 / 2.722` bajo un encabezado que dice ***medido hoy***. Misma
+   duda y **exactamente la misma especie del rotulo que la TAREA 1.2 de esta vuelta corrigio**.
 
 ---
 
 ## 6. GATE 0 Y LAS SUITES
 
-**Corridos tras la TAREA 1 y otra vez al cierre. Todos exit 0.**
+**Corridos tras la TAREA 1, tras cada lote y otra vez al cierre. Todos exit 0.**
 
 | que | como salio |
 |---|---|
@@ -253,96 +233,106 @@ y 7**, que es una incoherencia que las propias correcciones habrian dejado dentr
 | **suite del motor** | **25 de 25** |
 | **suite web** | **80** ficheros, **1.030** pasadas y **3** saltadas |
 | `tsc --noEmit` | **CERO** lineas |
-| duplicadas tras resolver / auto-aristas **NUEVAS** | **CERO** y **CERO** (1.002 y 0 en la base, 1.002 y 0 despues) |
-| las cuatro comprobaciones de `08_VERIFICACION` | **TODAS OK** |
+| duplicadas / auto-aristas **NUEVAS** | **CERO** y **CERO** en los dos lotes |
+| las cuatro comprobaciones de `08_VERIFICACION` | **TODAS OK** al cierre |
 | **hook guardian** | verde en todos los commits |
 
 ---
 
 ## 7. CORRECCIONES DECLARADAS SOBRE MI PROPIO TRABAJO
 
-1. **EL INSTRUMENTO DEL BARRIDO `9.10` NO BUSCABA LO QUE SE LE PEDIA**, y por eso el
-   barrido de la vuelta 49 tranquilizaba sin mirar. **Sucesor escrito con el motivo medido
-   delante.**
-2. **MI CONTADOR LD SE LEIA A SI MISMO UN TERCER NIVEL MAS ARRIBA**, y la razon de fondo
-   es peor que el nivel: **su fuente no es reproducible dentro de una misma sesion.**
-3. **MI INSTRUMENTO DE ALIAS NACIO LEYENDO LOS CAMPOS EQUIVOCADOS** y dio un resultado que
-   se parecia al bueno. **Declarado en su propio docstring.**
-4. **LA TABLA QUE ESCRIBI EN LA TAREA 1.1 ENVEJECIO DENTRO DE MI PROPIA VUELTA**, y la
-   destapo mi propio barrido del cierre. **Corregido el encabezado, no la cifra.**
-5. **Ficheros tocados que el encargo no nombraba, declarados:** `docs/COSTURAS_INTERNAS.jsonl`
-   y `docs/COSTURAS_INTERNAS_RESUMEN.md`, que `scripts/costuras_internas.py` reescribe al
-   correrse. **Mismo alcance que las vueltas 48 y 49, y se vuelve a declarar.**
-6. **UNA CIFRA MIA QUE CONVIVE CON OTRA Y SE EXPLICA EN VEZ DE ESCONDERSE:** el recomputo
-   cuenta **49 veredictos `A` que colapsan a auto-arista** y mi censo propio cuenta **32
-   auto-pares**. **No es discrepancia: son dos universos**, uno cuenta veredictos y el otro
-   pares resueltos distintos (varios veredictos colapsan al mismo nodo).
+1. **EL INSTRUMENTO DE COLISIONES ESPERADAS MIRABA SOLO DENTRO DEL ACTO** y por eso aprobo una
+   fusion que fabricaba dos colisiones que el no veia. **Reescrito para re-resolver los 3.388
+   veredictos, con el motivo entero escrito en su propio docstring**, y la fusion revertida.
+2. **LA CELDA QUE ESCRIBI EN LA TAREA 1.1 NACIO PARTIDA EN DIEZ LINEAS Y ROMPIA LA FILA DE LA
+   TABLA MARKDOWN.** Colapsada a una sola linea, que es la forma de las celdas corregidas de
+   `RECOMPUTO_3388.md`, **y el instrumento se actualizo para que su re-corrida sea idempotente**
+   en vez de dejar el fichero y el instrumento diciendo cosas distintas.
+3. **MI PRIMERA VERSION DEL PREDICTOR LEIA EL CAMPO `puesto` Y EL CAMPO SE LLAMA `puesto_intra`**:
+   imprimia `None` en todos los puestos citados. **Las clases salian bien y los puestos no**, que
+   es la clase de fallo que se publica sin darse cuenta si nadie mira la columna.
+4. **Ficheros tocados que el encargo no nombraba, declarados:** `docs/COSTURAS_INTERNAS.jsonl` y
+   `docs/COSTURAS_INTERNAS_RESUMEN.md` (los reescribe `scripts/costuras_internas.py` al correrse),
+   `docs/plan/ARISTAS_DUPLICADAS.jsonl` (lo reescribe el instrumento de duplicadas; el commit
+   traia una version anterior al volteo del 305), `dataset/metadata/*` y `web/lib/assets/manifest.json`
+   (los reescribe el ciclo de Gate 0). **Mismo alcance que las vueltas 48, 49 y 50.**
 
 ---
 
 ## 8. LOS DISCUTIBLES MARCADOS, para la relectura ciega
 
-**Marcados ANTES de saber si acierto. Son OCHO.**
+**Marcados ANTES de saber si acierto. Son ONCE.**
 
 | # | el discutible | por que lo marco |
 |---:|---|---|
-| **D1** | **Hice 1 de las 26 lecturas `P.12` y NO abri el tramo 2. Es el discutible mayor y es de alcance.** | Entregue **un acto de veintiseis**. Lo que consumio la vuelta no fue la TAREA 1 sino **medir que la receta no estaba definida** para 24 de los 26 y generalizarla desde el unico precedente. **Si el auditor lee que la generalizacion era obvia y que habia que fundir sin medirla, esto es una caida de reparto y la marco yo** |
-| **D2** | **Generalice la definicion de PARTE A y de MIXTO, que el encargo daba por sabida.** | La saque del acto del SPIN por induccion de UN caso, no de una regla escrita. **Es la pieza mas discutible de la vuelta**: si el auditor lee que "parte A" significaba otra cosa, las dos lecturas del acto 1 y sus dos volteos estan mal fundados |
-| **D3** | **Elegi `normalizacion_de_la_desviacion` sobre dos candidatos que los otros veredictos `A` nombran.** | Los tres `A` del acto nombran **tres supervivientes distintos**, y el 2237 dice con esas palabras que **cual sobrevive se resuelve en el racimo, no par a par**. **Elegi por CONTENIDO como manda la pagina y cite el 2237 a mi favor, pero el mismo veredicto declara la cuestion abierta.** Un lector puede decir que este acto era DECLARADO, no fundible |
-| **D4** | **Marque el paso 3 del que muere como INCISO y no como `CUBIERTO`.** | El 2237 lo llama **un EJEMPLO** del paso 3 del superviviente. **Un ejemplo puede leerse como ya cubierto**, y entonces el inciso anade texto que nadie pidio. Elegi la figura del INCISO porque el ejemplar concreto es lo unico que vuelve palpable la relajacion de criterios |
-| **D5** | **Marque el paso 2 del que muere como `APPEND` teniendo el paso 5 del superviviente cerca.** | El paso 5 ya manda *evaluar si estas ignorando tus propias senales de alerta*. **Lo que anade el 2 es que la senal EXISTIO Y NO SE REPORTO**, que es mecanismo de organizacion y no de atencion propia. **El veredicto lo cuenta como linea propia y le hice caso, pero el solape es real y lo digo** |
-| **D6** | **Corregi el ENCABEZADO de una tabla que yo mismo habia escrito seis horas antes, en vez de declararla y encargarla.** | Es alcance sobre trabajo de la propia vuelta. **La alternativa era dejar viva una columna titulada *hoy* con una cifra que ya no era la de hoy**, que es exactamente la especie de la caida de la vuelta 49 |
-| **D7** | **Cuadre los contadores *CORREGIDA N VECES* de tres filas.** | **Nadie me lo pidio.** Los deje coherentes con su cadena de tachados porque una fila que dice SEIS con siete tachados es una cifra publicada mal. **Si el auditor lee que el contador cuenta otra cosa (por ejemplo, actos de correccion y no cifras), tres de mis ediciones sobran** |
-| **D8** | **Declare que el encargo pide 25 lecturas cuando yo mido 26, en vez de aceptar el 25.** | La regla 2 manda declarar la discrepancia. **Pero el 25 viene del acta y del encargo, o sea de mi auditor**, y estoy contradiciendo su cifra con la mia. **Si mi universo esta mal definido, el equivocado soy yo y la declaracion es ruido** |
+| **D1** | **Ejecute 4 de 25 lecturas `P.12` y NO abri el tramo 2.** | Es el discutible mayor y es de alcance. Lo que consumio la vuelta fue el hallazgo del instrumento, la reversion y la re-medicion de las 51 combinaciones. **Si el auditor lee que la reversion sobraba y que las tres colisiones del equity se limpiaban bajo `P.16` y se seguia, esto es una caida de reparto y la marco yo** |
+| **D2** | **Reverti con `git checkout` un acto YA EJECUTADO en vez de limpiar sus colisiones.** | `P.16` dice *quien fabrica limpia*, y yo podia haber limpiado. **Elegi detener porque el encargo lo manda con esas palabras y porque las dos colisiones de fuera caian sobre pares que NO lei como parte de `P.5`.** Un lector puede decir que revertir trabajo bueno es peor que leer dos pares mas |
+| **D3** | **La politica de reparto de los lotes es mia:** parametro concreto de un gesto que el superviviente ya tiene, INCISO; gesto distinto, APPEND. | **Ninguna regla escrita la dice.** La saque de la figura del INCISO y del precedente `D4` de la vuelta 50. **De ella cuelgan siete INCISOS de esta vuelta** |
+| **D4** | **En la accion correctiva elegi `accion_correctiva_sistematica` con el contenido EMPATADO en pasos y condiciones y el resumen a favor del otro** (672 contra 535). | Lo decidi con el veredicto DIRECTO del par (2431, *Sobrevive `accion_correctiva_sistematica`*), que es lo que `P.12` parte 2 manda. **Pero eso deja la vara del resumen contradicha, y la vara del resumen es la que la vuelta 50 uso para desempatar** |
+| **D5** | **El paso 5 de `accion_correctiva_5` viaja de APPEND aunque el 2431 lo da por CUBIERTO.** | El 2431 lo mapea al paso 3 del elegido. **No es la misma escalada: una es de AUTORIDAD y la otra de CALENDARIO**, y el 2418 llama a esa escalada *lo unico del par que impide que un problema cronico se vuelva paisaje*. **Si el auditor lee que si estaba cubierto, ese paso sobra y duplica** |
+| **D6** | **La procedencia del paso 1 de `accion_correctiva_6` (*mediante auditorias de calidad*) va de PERDIDA NOMBRADA y NO de INCISO.** | **Es la unica perdida declarada del lote A junto con el *otro indicador de productividad* del scorecard.** La deje ir porque el paso resultante no se leia limpio y porque el mixto vivo `accion_correctiva_crosby` manda auditorias independientes por departamento. **Un lector puede decir que una perdida nombrada sigue siendo una perdida** |
+| **D7** | **En el consejo elegi `consejo_de_calidad` con DOS de las tres varas EN CONTRA** (una condicion contra dos, resumen 362 contra 427). | Me apoye en la vara de los PASOS (seis contra cuatro) y en que el veredicto directo 2916 cuenta **tres pasos enteros propios contra dos**. **Si el auditor lee que las varas se pesan todas juntas, el superviviente era el otro y las cuatro piezas del reparto estan al reves** |
+| **D8** | **Adose CUATRO incisos sobre DOS pasos del consejo** (dos al paso 1 y dos al paso 6). | Ningun precedente apila dos incisos en el mismo paso. **Los dos pasos resultantes se leen limpios y estan impresos en la salida**, pero es una forma nueva |
+| **D9** | **Conte la colision POR PAR RESUELTO y no por veredicto**, y eso es lo que hace que la cuenta del encargo calce en el acto del consejo. | Contando veredictos, ese acto habria dado **dos** colisiones para una `CONTINUA` **y me habria detenido**. **La decision de que es una colision la tome yo** |
+| **D10** | **No corregi el rotulo *hoy* del registro de la vuelta 49** (los declarados 29, 32 y 36), aunque es la especie exacta que la TAREA 1.2 vino a corregir y la medi. | Lo deje por scope: el encargo y el acta scopearon la 1.2 al registro de la vuelta 50. **Si el auditor lee que la vara adjudicada es general, dejarlo vivo es la misma caida que corregi tres parrafos mas arriba** |
+| **D11** | **No corregi el apendice 95.1 ni las dos tablas de `RECOMPUTO_3388.md`** que el barrido saco, y las traigo como pregunta con su cifra medida. | Es la decision mas comoda de las once y lo digo asi. **La alternativa era elegir yo si son fotos fechadas o tablas vigentes, y esa eleccion cambia si sus cifras se reescriben o se restauran** |
 
 ---
 
 ## 9. PENDIENTES DE DOCTRINA
 
-1. **LA ESTRELLA CON PUNTAS `D` NO TIENE REGLA DE SUPERVIVIENTE.** El banco `9.23` define
-   la figura y su coste (*el centro contra cada periferico, por separado*), pero **no dice
-   que hacer cuando el centro repite contra `N` nodos que son `D` entre si**: el centro solo
-   puede morir una vez. **Afecta a 24 de los 26 mixtos pendientes.** Mi salida (elegir por
-   CONTENIDO entre los viables y leer los demas por `P.12`) **es una lectura mia y merece
-   adjudicacion.**
-2. **UN VEREDICTO `A` QUE NOMBRA UN SUPERVIVIENTE NO VIABLE.** Medido en **cinco
-   veredictos de cuatro actos**. La letra del veredicto y la aritmetica del acto apuntan a
-   sitios distintos, **y ninguna regla dice cual manda.**
-3. **HEREDADOS Y SIN CAMBIO HOY**: el INCISO para condiciones **sigue sin existir** en el
-   instrumento (el acta 49 lo dejo como extension citable, a fabricar cuando un caso real lo
-   pida; esta vuelta no lo pidio); el esquema de `OPERACIONES.jsonl` **sigue sin distinguir
-   ejecutada de pendiente** (71 en `LISTA`, medido hoy); y el campo `orden` de la fase 03
-   **sigue sin ser su criterio de orden**.
+1. **LA CUENTA DE COLISIONES DEL ENCARGO NO CUBRE LAS QUE CAEN FUERA DEL ACTO.** Medido: **cinco
+   combinaciones de las 51** las fabrican. **La formula *una por `CONTINUA`* es exacta para la
+   forma de la estrella con centro absorbido y no en general**, y hoy no hay regla que diga que
+   hacer cuando el exceso aparece.
+2. **LA VARA DE LAS PUERTAS TIENE DOS CATEGORIAS Y HACEN FALTA TRES.** SALVABLE, IMPOSIBLE, **y el
+   caso de MAS DE UNA PUERTA con alguna obligada a morir**, que hoy se cuenta como SALVABLE y no
+   lo es. **Afecta a dos actos del tramo 1.**
+3. **LA CLASE `B` COMO PAR CONGELADO PARA LA MESA.** Cuatro de los 21 mixtos que quedan tienen su
+   par mixto en `B`, y al menos uno (el **703**, el del S&OP) congela **una pregunta de politica**
+   (*si el catalogo quiere un procedimiento con dos contextos o dos nodos*), no una condicion de
+   texto. **`08_VERIFICACION` manda releer la `B` cuando el nodo cambia de texto, y `P.12` manda
+   que la lectura decida; ninguna de las dos dice quien contesta una pregunta de politica.**
+4. **HEREDADOS Y SIN CAMBIO HOY**: el INCISO para condiciones **sigue sin existir** en el
+   instrumento; el esquema de `OPERACIONES.jsonl` **sigue sin distinguir ejecutada de pendiente**
+   (71 en `LISTA`, medido hoy); y el campo `orden` de la fase 03 **sigue sin ser su criterio de
+   orden**.
 
 ---
 
 ## 10. LO QUE ESTA VUELTA NO HIZO, DICHO EN VEZ DE CALLADO
 
-1. **NO hizo 25 de las 26 lecturas `P.12`.** Solo el acto 1, con sus dos lecturas. **Es el
-   incumplimiento mayor de la vuelta**, y no lo tapo la TAREA 1.
+1. **NO hizo 21 de las 25 lecturas `P.12` pendientes.** Cinco hechas, cuatro ejecutadas. **Es el
+   incumplimiento mayor de la vuelta.**
 2. **NO abrio el tramo 2** de 50 actos.
-3. **NO toco los cinco declarados**, identificados hoy **por sus miembros** y no por su
-   numero. Ninguno se funde y los cinco quedan escritos con su motivo en el registro.
-4. **NO ejecuto las dos aristas** de los `CONTINUA` del acto 1 ni la poda de sus solapes:
-   son de la fase 04 y quedan **declaradas** con id resuelto (`P.9`).
-5. **NO resolvio las 1.002 duplicadas** ni el alias durmiente `modelo_spin_2`: son de
-   `OP-S-12`.
-6. **NO corrigio todos los candidatos del barrido**, solo las celdas adjudicadas como
-   tablas vigentes envejecidas. **La vara de separacion va escrita en el instrumento** y es
-   de lectura, asi que se puede discutir sitio por sitio.
+3. **NO toco los cinco declarados**, identificados por sus miembros. Al cerrar son los actos 4,
+   21, 23, 27 y 28.
+4. **NO ejecuto las cuatro aristas** de los `CONTINUA` ni la poda de sus solapes: son de la fase
+   04 y quedan **declaradas** con id resuelto (`P.9`). **En el acto del equity la arista ya existia
+   en los dos sentidos**, y por eso alli no habria arista que declarar sino solo poda.
+5. **NO resolvio las 1.001 duplicadas** ni el alias durmiente `modelo_spin_2`: son de `OP-S-12`.
+6. **NO corrigio** el apendice 95.1, ni las dos tablas *al cerrar la vuelta* de
+   `RECOMPUTO_3388.md`, ni el rotulo del registro de la vuelta 49. **Las tres estan medidas y
+   traidas.**
+7. **NO reparo el instrumento de las puertas** para que reconozca el tercer caso.
 
 ---
 
 ## 11. LAS PREGUNTAS PARA EL AUDITOR
 
-1. **La generalizacion de PARTE A y MIXTO: vale?** (**D2**.) Es la pieza sobre la que se
-   apoya todo el resto del tramo. **Afecta a los 25 que quedan.**
-2. **La estrella con puntas `D`: se funde eligiendo por contenido entre los viables, o es
-   DECLARADO?** (**D3**, pendiente 1.) El propio 2237 dice que se resuelve *en el racimo, no
-   par a par*, **y yo lo resolvi par a par.**
-3. **Un veredicto `A` que nombra un superviviente no viable: manda la letra o la
-   aritmetica?** (Pendiente 2, cinco casos medidos.)
-4. **Las 26 contra las 25: cual universo es el bueno?** (**D8**.)
-5. **Una tabla que la propia vuelta envejece a media vuelta: se corrige el encabezado, se
-   corrige la cifra, o se declara y se encarga?** (**D6**.) **Lo hice del primer modo y es
-   la decision que menos precedente tiene.**
+1. **La colision: se cuenta por PAR RESUELTO o por VEREDICTO?** (**D9**.) De la respuesta depende
+   si el acto del consejo se podia fundir o me tenia que haber detenido.
+2. **El acto detenido: detener era lo correcto, o `P.16` obligaba a limpiar las dos colisiones de
+   fuera y seguir?** (**D1**, **D2**.) **Si la respuesta es limpiar, el acto esta escrito entero y
+   sale en una corrida.**
+3. **Los actos con DOS puertas: son IMPOSIBLES?** (Pendiente 2.) Y si lo son, **se repara el
+   instrumento que hoy los llama SALVABLES?**
+4. **El apendice 95.1 al corte 2.900: foto fechada o tabla vigente?** (**D11**.) Si es foto, hay
+   una cadena de tachados que sobra; si es vigente, lleva tiempo derivando por mantenerse restando
+   en vez de re-midiendo.
+5. **Un par `B` que congela una pregunta de POLITICA: la contesta `P.12` o va a la mesa?**
+   (Pendiente 3.) Afecta a cuatro de los 21 mixtos que quedan.
+6. **A contenido empatado en las tres varas, desempata el resumen por cinco caracteres, o el
+   empate va al auditor por `P.8` fila tres?** El acto de los regalos estrategicos queda en
+   **433 contra 428** de resumen, con pasos, condiciones y cableado empatados. **No lo funde esta
+   vuelta y por eso no es discutible sino pregunta.**

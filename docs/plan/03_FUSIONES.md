@@ -941,3 +941,140 @@ DOS imposibles siguen siendo los mismos DOS por miembros, que es la llave que no
 | duplicadas tras resolver **NUEVAS** / auto-aristas **NUEVAS** | | **CERO** / **CERO** |
 | las cuatro comprobaciones de [`08_VERIFICACION.md`](08_VERIFICACION.md) | | **TODAS OK** |
 | **el barrido `9.10` DEL CIERRE**, la regla del aviso | | **CORRIDO despues del ultimo movimiento**, con **diez** celdas corregidas |
+
+---
+
+## `OP-U-01`, TRAMO 1, LA VUELTA 51: **CUATRO ACTOS, CUATRO LECTURAS `P.12`, Y UN INSTRUMENTO QUE SE DIO EL VISTO BUENO A SI MISMO MIRANDO DONDE NO ERA** (20 ago 2026, vuelta 51)
+
+### EL HALLAZGO DE LA VUELTA, Y ME LO HIZO A MI MISMO MI PROPIO INSTRUMENTO
+
+**El encargo pone una guarda de cuenta:** *una colision por cada `CONTINUA` sobre mixto CON
+forma y CERO por cada `ENTRA`; una colision que no calce con esa cuenta te detiene*. Para
+poder cumplirla ANTES de mover un nodo, esta vuelta escribio
+`scripts/loop/vuelta51_colisiones_esperadas.py`. **Y la primera version del instrumento
+contaba las colisiones mirando SOLO LOS VEREDICTOS INTERNOS DEL ACTO.**
+
+**Con esa cuenta dio el visto bueno al acto del reparto de equity**, la fusion se ejecuto, y
+**el censo del archivo entero devolvio CINCO colisiones donde el instrumento habia prometido
+TRES** ([`../loop/SALIDA_V51_CENSO_COLISIONES_LOTE_A.txt`](../loop/SALIDA_V51_CENSO_COLISIONES_LOTE_A.txt),
+en su primera corrida). Las dos de mas eran veredictos del absorbido `split_igual_vs_desigual`
+contra nodos de **FUERA del acto**: el puesto **266** contra `reparto_inicial_equity` y el
+puesto **246** contra `timing_equity_split`, que al resolver caian sobre pares que el
+superviviente ya tenia leidos, los puestos **754** y **688**.
+
+> **LA LECCION, escrita donde no se pierde: UNA FUSION NO SOLO CHOCA CONSIGO MISMA.** Absorber
+> un nodo arrastra **TODOS** sus veredictos, tambien los que apuntan fuera del acto, y cada uno
+> puede caer sobre un par que el superviviente ya tenia leido. **Una guarda que solo mira dentro
+> del acto tranquiliza sin mirar**, que es exactamente la especie de la averia que la vuelta 50
+> encontro en el barrido `9.10`.
+
+**QUE SE HIZO CON ESO, y no fue seguir:** el dataset se revirtio entero con `git checkout`, el
+censo confirmo la vuelta a **CERO** colisiones, el instrumento se reescribio para **simular el
+mapa de alias y re-resolver LOS 3.388 VEREDICTOS**, y las 25 combinaciones de acto y
+superviviente viable se re-midieron con la aritmetica buena
+([`../loop/SALIDA_V51_COLISIONES_ESPERADAS.txt`](../loop/SALIDA_V51_COLISIONES_ESPERADAS.txt)).
+**De 51 combinaciones, CINCO no calzan con la cuenta del encargo.**
+
+### Y UNA FORMA DE CONTAR QUE ESTA VUELTA TUVO QUE FIJAR: **LA COLISION SE CUENTA POR PAR RESUELTO**
+
+**El acto del consejo de calidad lo prueba:** el par resuelto `consejo_de_calidad` contra
+`consejo_de_calidad_3` lleva **TRES** veredictos dentro (**2523** `A`, **2662** `A` y **2916**
+`D`) y es **UNA sola colision**: los dos `A` se voltean, el `D` se queda. **Con esa forma de
+contar la cuenta del encargo calza; contando veredictos, no.** Se dice porque es una decision
+de lectura y no un dato.
+
+### LAS CINCO LECTURAS `P.12`, con sus citas: **CUATRO EJECUTADAS Y UNA DETENIDA**
+
+**Tabla generada desde los dos planes sellados**, no tecleada
+(`python scripts/loop/vuelta51_registro_tramo.py`):
+
+| el mixto | leido contra | veredicto | estado | lo que lo decide, con su puesto |
+|---|---|---|---|---|
+| `accion_correctiva_crosby` | `accion_correctiva_sistematica` | **`CONTINUA`** | EJECUTADA | lote A. El puesto 2805 es el veredicto DIRECTO del par y ya trae su relectura conjunta escrita (bucle vuelta 5): dice, con estas palabras, que NINGUNO DE LOS DOS CABE ENTERO EN EL OTRO. Puestos citados: 2496, 2805 |
+| `scorecards_criterios_gate` | `scorecard_de_seleccion_de_proyectos` | **`CONTINUA`** | EJECUTADA | lote A. El puesto 1201 es el veredicto DIRECTO del par y lo escribe entero: EL INSTRUMENTO ES EL MISMO Y EL MOMENTO Y EL RITUAL NO SE TOCAN. Puestos citados: 1201 |
+| `teoria_equidad_split_equity` | `criterios_equity_split` | **`CONTINUA`** | **HECHA, NO EJECUTADA** (el acto lo detuvo la guarda de la cuenta de colisiones) | lote A. El puesto 871 es el veredicto DIRECTO del par y lo dice sin rodeos: EL SEGUNDO ES LA PREGUNTA PREVIA DEL PRIMERO Y NO ESTA CONTENIDO EN EL, porque el checklist SUPONE YA ELEGIDA la logica de negocio. Puestos citados: 871 |
+| `consejo_de_calidad_3` | `consejo_de_calidad` | **`CONTINUA`** | EJECUTADA | lote B. El puesto 2916 es el veredicto DIRECTO del par y trae su relectura conjunta entera ya escrita (bucle vuelta 5, acta del auditor de la vuelta 5): dice, verificado contra el grafo y con los nodos enteros delante, que consejo_de_calidad_3 TRAE DOS PASOS ENTEROS QUE consejo_de_calidad NO TIENE, coordinar la repeticion d.... Puestos citados: 2549, 2916 |
+| `seleccion_relaciones_cofundadores` | `cofundar_con_amigos_familia_riesgos` | **`CONTINUA`** | EJECUTADA | lote B. EL VEREDICTO DIRECTO DEL PAR ESCRIBE LA PALABRA. Puestos citados: 1058 |
+
+**LAS CINCO SALIERON `CONTINUA`, y ninguna por descarte:** en las cinco el veredicto DIRECTO
+del par mixto ya era `D` y ya traia escrito por que. **En la del acto de los cofundadores el
+propio veredicto escribe la palabra** (el **1058**: *por la vara del banco `9.6.1`, CONTINUA*),
+y en la del consejo el **2916** cierra con *son conjuntos disjuntos de pasos propios, no
+gemelos*. **Las aristas de las CUATRO ejecutadas quedan DECLARADAS con id resuelto (`P.9`) y SIN ejecutarse**, y
+la poda de sus solapes queda anotada para la fase 04.
+
+### LOS CUATRO ACTOS FUNDIDOS, con su reparto contado por el instrumento
+
+| lote | superviviente | absorbe | piezas del reparto |
+|---|---|---|---|
+| **A** | `accion_correctiva_sistematica` | `accion_correctiva_5`, `accion_correctiva_6` | **15**: 5 enteras, 0 de INCISO, 10 ya dichas |
+| **A** | `scorecard_de_seleccion_de_proyectos` | `scoring_model_scorecard` | **9**: 4 enteras, 2 de INCISO, 3 ya dichas |
+| **B** | `consejo_de_calidad` | `consejo_calidad`, `consejo_calidad_2` | **15**: 8 enteras, 4 de INCISO, 3 ya dichas |
+| **B** | `cofundar_con_amigos_familia_riesgos` | `riesgo_cofundadores_relacion_previa` | **6**: 3 enteras, 1 de INCISO, 2 ya dichas |
+
+### EL CHOQUE DE LETRA CONTRA ARITMETICA, registrado con sus puestos
+
+**El acta de la vuelta 50, pregunta 3, lo adjudico: MANDA LA ARITMETICA**, y manda registrar
+cada choque con sus puestos. **En el acto del consejo hay CINCO**: los puestos **2631**,
+**2663** y **2523** cierran con *Sobrevive `consejo_calidad`*, y los **2670** y **2662** con
+*Sobrevive `consejo_calidad_2`*, **y ninguno de los dos es VIABLE**, porque su parte `A` se
+lleva a los cuatro miembros y no deja ningun mixto fuera: elegirlos seria fundir entero un acto
+con una `D` dentro, que es lo que `P.12` prohibe. **La letra se honra en lo que puede: los dos
+nombrados mueren aqui, que es lo que sus veredictos pedian de ellos dentro de sus pares, pero
+ninguno absorbe el racimo.** En los otros tres actos **ningun veredicto `A` escribe la formula
+*Sobrevive X***, y se dice en vez de darlo por supuesto.
+
+### LOS ACTOS QUE ESTA VUELTA NO FUNDE, Y POR QUE
+
+| el acto | superviviente que el CONTENIDO elige | por que NO se funde |
+|---|---|---|
+| `criterios_equity_split`, `split_igual_vs_desigual`, `teoria_equidad_split_equity` | `criterios_equity_split` | DETENIDO POR LA GUARDA DE LA CUENTA DE COLISIONES DEL ENCARGO, y el acto estaba escrito entero. Con criterios_equity_split de superviviente la fusion fabrica UNA colision DENTRO del acto (la que el encargo predice, el puesto 502 contra el 871) y DOS FUERA de el, contra nodos que no son miembros: el puesto 266 (reparto_inicial_equity contra split_igual_vs_desigual, clase B) cae sobre el par del puesto 754 (criterios_equity_split contra reparto_inicial_equity, clase D), y el puesto 246 (split_igual_vs_desigual contra timing_equity_split, clase C) cae sobre el par del puesto 688 (criterios_equity_split contra timing_equity_split, clase D). Tres colisiones para una CONTINUA: la cuenta NO calza y el encargo manda detener. El superviviente alternativo teoria_equidad_split_equity SI calza, pero el CONTENIDO lo descarta por el margen mas ancho del tramo (ocho pasos contra cuatro, tres condiciones contra dos, 1.134 caracteres de resumen contra 586 y cableado de 20 contra 4), y elegirlo para hacer calzar la guarda seria dejar que la aritmetica de las colisiones decida el superviviente, que ninguna regla escrita permite. Va al auditor con la lectura P.12 hecha y las cuatro razones leidas. |
+
+**Y DOS MAS QUE BLOQUEA LA VARA DE LAS PUERTAS, con un hallazgo sobre el instrumento que las
+mide:** los actos **9** y **17** de la nomina re-medida tras el lote A tienen **DOS puertas
+dentro cada uno** (`decision_cuando_fundar` mas `evaluacion_capacidades_fundador`; y
+`enfoque_paso_a_paso_investigacion_mercado` mas `evaluacion_mercados_objetivo`) **y en los dos
+la puerta que hace de CENTRO de la estrella tiene que morir con cualquiera de los supervivientes
+viables**, asi que la guarda `1B` los rechaza
+([`../loop/SALIDA_V51_PUERTAS_TRAS_LOTE_A.txt`](../loop/SALIDA_V51_PUERTAS_TRAS_LOTE_A.txt)).
+
+> **EL HALLAZGO: `vuelta48_puertas_en_el_lote.py` LOS LLAMA SALVABLES.** Su dicotomia es
+> SALVABLE (una sola puerta, el acto se funde si la puerta sobrevive) contra IMPOSIBLE (todos
+> los miembros son puerta). **Falta el tercer caso: MAS DE UNA PUERTA, con alguna obligada a
+> morir por la estructura del acto.** No se repara aqui, que seria alcance: se declara y se
+> trae.
+
+### LOS CINCO DECLARADOS DEL TRAMO SIGUEN DECLARADOS
+
+**Ninguno se toca y se identifican por sus MIEMBROS**, no por su numero, que baila con cada
+fusion: `obtencion_compromiso` y hermanos; `mejora_del_sistema_responsabilidad_gerencial` y
+hermanos; `dia_cero_defectos` y hermanos; `domina_lo_que_compras` con
+`investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor`; y `cultura_climatica_innovacion`
+con `cultura_de_innovacion`. **Al cerrar la vuelta 51 son los actos 4, 21, 23, 27 y 28**
+([`../loop/SALIDA_V51_TRAMO1_CIERRE.txt`](../loop/SALIDA_V51_TRAMO1_CIERRE.txt), y el rotulo va
+fechado a su corrida desde el principio, que es lo que el acta 50 adjudico en su pregunta 5).
+
+### LO QUE ESTA VUELTA NO HIZO DEL TRAMO 1, CON SU CIFRA MEDIDA AL CIERRE
+
+| | |
+|---|---:|
+| lecturas `P.12` **hechas y ejecutadas** | **4** |
+| lecturas `P.12` **hechas y NO ejecutadas** (el acto detenido por la guarda) | **1** |
+| actos **fundidos** | **4** |
+| actos MIXTOS que **siguen pendientes** de `P.12`, re-medidos al cierre | **21** |
+| **tramo 2** de 50 actos | **NO ABIERTO** |
+
+### EL CIERRE DE LA SECCION, MEDIDO AL CERRAR
+
+| | al abrir la vuelta 51 | **al cerrarla** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 571 / 77 / 8 / 2732 | **566 / 77 / 8 / 2737** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3853 / 3498 / 355 / 16986 | **3853 / 3492 / 361 / 17011** |
+| retrato: `A` crudas / colapsos / pares distintos | 571 / 49 / 522 | **566 / 57 / 509** |
+| actos `CERRADOS` / `ABIERTOS` | 251 / 53 | **247 / 53** |
+| nodos en `CERRADOS` / `ABIERTOS` | 532 / 240 | **518 / 240** |
+| cola de costuras | 1491 | **1489** |
+| colisiones de clase vigentes | 0 | ****0**, censo propio sobre el archivo entero** |
+| mixtos del tramo 1 pendientes de `P.12` | 25 | ****21**** |
+| las cuatro comprobaciones de [`08_VERIFICACION.md`](08_VERIFICACION.md) | | **TODAS OK** |
+| duplicadas tras resolver **NUEVAS** / auto-aristas **NUEVAS** | | **CERO** / **CERO** |
