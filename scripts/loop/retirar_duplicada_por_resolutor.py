@@ -237,7 +237,18 @@ def main():
                 # TRES eran de la primera especie y el ejecutor las limpiaba
                 # solo; la unica real es la de documentacion_exportacion, que es
                 # la que su guarda final reporto en ROJO.
-                if any(x == destino for x in otras):
+                # TERCER ARREGLO DEL SUCESOR, y lo destapo el censo del cierre,
+                # no un razonamiento: la deduplicacion literal del ejecutor solo
+                # salva el caso cuando EL CULPABLE ES EL ABSORBIDO ESCRITO CON
+                # SU PROPIO NOMBRE, porque solo a ese lo sustituye. Si el
+                # culpable llega POR UN ALIAS, el ejecutor no lo toca, las dos
+                # cadenas siguen siendo distintas y la duplicada SOBREVIVE.
+                # Medido en el lote A del tramo 5: con la regla vieja,
+                # definicion_calidad_conformidad | nodos_siguientes quedaba
+                # fabricada y sin limpiar, y aparecia como grupo NUEVO en el
+                # diff del censo contra la apertura. P.16 dice que quien fabrica
+                # limpia, asi que se limpia.
+                if any(x == destino for x in otras) and all(x in absorbidos for x in culpables):
                     continue
                 for x in culpables:
                     # QUIEN LO FABRICA: el absorbido que esta EN LA CADENA de

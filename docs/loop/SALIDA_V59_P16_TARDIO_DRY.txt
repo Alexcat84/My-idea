@@ -1,0 +1,15 @@
+==============================================================================
+P.16 A POSTERIORI: UNA ENTRADA REDUNDANTE, EN LOS DOS SENTIDOS
+MODO SIMULAR
+==============================================================================
+  definicion_calidad_conformidad | nodos_siguientes | retirar programa_catorce_pasos_crosby
+
+  la entrada resuelve a : programa_mejora_calidad_14_pasos
+  otras entradas de la misma lista que YA resuelven ahi: programa_mejora_calidad_14_pasos
+
+  VERDE: el camino se conserva por programa_mejora_calidad_14_pasos, y la entrada que se retira sobra.
+  SE RETIRA programa_catorce_pasos_crosby de definicion_calidad_conformidad.nodos_siguientes, y la reciproca en programa_catorce_pasos_crosby.nodos_previos
+
+  MODO SIMULAR: no se escribe nada.
+
+FIN
