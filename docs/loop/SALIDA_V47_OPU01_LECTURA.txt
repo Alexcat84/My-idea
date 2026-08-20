@@ -1,0 +1,114 @@
+
+==============================================================================
+1. OP-U-01 LEIDA ENTERA DEL FICHERO, CAMPO POR CAMPO
+==============================================================================
+  campos en la linea: 18
+  id_op              OP-U-01
+  fase               03_FUSIONES
+  tipo               FUSION
+  nodos              lista de 0
+  superviviente      None
+  preservar          lista de 0
+  eliminar           lista de 0
+  aristas_nuevas     lista de 0
+  orden              1
+  depende_de         lista de 13
+      1. OP-C-01
+      2. OP-C-02
+      3. OP-C-03
+      4. OP-C-04
+      5. OP-F-01
+      6. OP-F-02
+      7. OP-F-03
+      8. OP-D-01
+      9. OP-D-02
+      10. OP-D-03
+      11. OP-D-04
+      12. OP-D-05
+      13. OP-D-06
+  bloquea_a          lista de 0
+  verificacion       lista de 6
+      1. los 173 actos cerrados ejecutados: un superviviente por acto, el resto DEPRECADO CON ALIAS
+      2. toda perdida listada en la razon del par aparece literalmente en el superviviente
+      3. resolverId devuelve el superviviente para cada id absorbido
+      4. NINGUN acto de la lista de 55 abiertos (corte 3.388; eran 48 al corte 2.117) se ejecuta antes del recomputo
+      5. Gate 0 verde
+      6. el acto se leyo ENTERO antes de fundirse: cero pares internos sin veredicto
+  evidencia          lista de 4
+      1. INTRA_DOMINIO_VEREDICTOS.jsonl, las 400 A vigentes al puesto 2117
+      2. MEDIDO el 11 ago 2026: 221 componentes conexas sobre 576 nodos
+      3. banco 9.24: una familia es el CIERRE TRANSITIVO de la relacion gemelo
+      4. RECOMPUTO AL CORTE 3.388 (vuelta 11 del bucle, verificado por el auditor con instrumento propio y por el ejecutor vuelta 12, dos vias): 335 componentes conexas sobre 854 nodos, 280 CERRADOS sobre 600 (2: 244, 3: 32, 4: 4), 55 ABIERTOS sobre 254; docs/plan/RECOMPUTO_3388.md y docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl
+  estado             LISTA
+  fecha_corte        2026-08-11
+  adjudicacion       texto de 656 caracteres
+      SE ESCRIBEN HOY LAS FUSIONES DE LOS ACTOS QUE YA NO PUEDEN CRECER. Un acto no puede crecer cuando TODOS sus pares posibles estan leidos Y ningun miembro tiene par pendiente en la cola. MEDIDO el 11 ago 2026 al corte del puesto 2117: 173 actos CERRADOS sobre 371 nodos. El resto queda con su fecha de corte y UNA SOLA recomputacion al cerrar el cribado. CORRECCION DECLARADA (vuelta 12, corte 3.388, l [...]
+  pregunta_pendiente None
+  nota               texto de 2461 caracteres
+      EL CRITERIO, y son DOS condiciones a la vez: 1) todos los pares posibles entre miembros del acto ya estan leidos, y 2) ningun miembro tiene un par pendiente en la cola sin leer. La segunda es la que importa: un acto puede tener sus pares internos leidos y aun asi crecer, porque un miembro tiene un par PENDIENTE con un nodo de fuera que podria salir A. MEDIDO AL CORTE 2117, con 1.271 pares aun en c [...]
+
+==============================================================================
+2. LA NOMINA DE HOY CONTRA LA NOMINA SELLADA
+==============================================================================
+  sellada : docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl
+  de hoy  : docs/loop/RECOMPUTO_V47_COMPONENTES.jsonl
+
+  campos de cada fila: ['aristas_A_internas', 'clases_internas', 'edad', 'en_cola_sin_leer', 'estado', 'fuera_de_cola', 'leidos', 'miembros', 'posibles', 'tamano']
+
+                                      sellada      hoy
+  actos (componentes)                     332      324
+  nodos dentro de actos                   838      822
+  CERRADOS                                278      270
+  nodos en CERRADOS                       595      579
+  ABIERTOS                                 54       54
+
+  actos de la sellada que HOY ya no estan igual: 8
+  actos de hoy que la sellada no tenia igual   : 0
+
+==============================================================================
+3. POR QUE SE MOVIO: LOS NODOS QUE LA SELLADA CONTABA Y HOY ESTAN DEPRECADOS
+==============================================================================
+  grafo: 3524 vivos, 329 deprecados
+  nodos que la nomina SELLADA contaba y hoy estan DEPRECADOS: 8
+      blueprint_de_experiencia
+      build_metrics_toolset
+      customer_retention_metrics_webmobile
+      escenarios_futuros
+      partners_hypothesis_physical
+      plan_acquire_activate
+      propuesta_gasto_capital
+      superioridad_producto_beneficios
+
+  LECTURA: cada uno de esos lo absorbio una fusion de las fases 01 o 02,
+  que corrieron DESPUES de sellarse la nomina. Por eso la cifra de la
+  operacion (280 sobre 600) no se copia: se re-mide.
+
+==============================================================================
+4. LOS CUATRO ACTOS QUE ESTA OPERACION NO RESUELVE NUNCA
+==============================================================================
+  03_FUSIONES.md los nombra: el de 13 y el de 9 van a mesa (OP-M-01 y
+  OP-M-05) y dos grandes van a destejido (OP-D-03 y OP-D-04).
+
+  OP-D-03    ancla ab_testing_optimizacion                NO aparece en ninguna componente de hoy
+  OP-D-04    ancla brainstorming_divergente               NO aparece en ninguna componente de hoy
+  OP-M-01    ancla gates_go_kill_decision_points          componente de 13, ABIERTO
+  OP-M-05    ancla customer_discovery                     componente de 9, ABIERTO
+
+  GUARDA: ninguno de los cuatro puede aparecer como CERRADO y entrar en
+  el lote de OP-U-01. Si alguno aparece CERRADO, esta operacion NO lo
+  toca: su dueno esta escrito en otra fase.
+
+==============================================================================
+5. EL LOTE REAL DE OP-U-01, HOY, POR TAMANO
+==============================================================================
+  CERRADOS por tamano: {2: 235, 3: 31, 4: 4}
+  total de actos a fundir: 270
+  total de nodos implicados: 579
+  nodos que MUEREN si se funden todos (tamano menos 1 por acto): 309
+
+  Y NINGUNO DE ESOS ACTOS TRAE SU SUPERVIVIENTE ESCRITO: el campo
+  superviviente de OP-U-01 es null y sus nodos son lista vacia. La
+  eleccion la dan las DOS REGLAS DE EJECUCION de 03_FUSIONES.md
+  (sobrevive por CONTENIDO; a contenido empatado desempata el grafo) mas
+  P.8, acto por acto y con lectura escrita. Eso es lo que hace que esta
+  operacion se ejecute POR TRAMOS y no en una sentada.
