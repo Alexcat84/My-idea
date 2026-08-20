@@ -1,394 +1,394 @@
-# REPORTE DE LA VUELTA 53 (20 ago 2026, ejecutor Opus 5)
+# REPORTE DE LA VUELTA 54 (20 ago 2026, ejecutor Opus 5)
 
-**LA TAREA 1 ENTERA, sus CUATRO puntos. Y LA TAREA 2 CIERRA EL TRAMO 1: DOCE ACTOS FUNDIDOS en
-tres lotes, UN ACTO MAS DECLARADO, y CERO lecturas `P.12` pendientes. EL HALLAZGO DE LA VUELTA
-SALE DE CUMPLIR LA REGLA 9 (toda perdida declarada se re-verifica contra el grafo): el puesto 2488
-escribe que el acronimo MBO SOLO APARECE EN EL NODO QUE CAE y el 2477 que el superviviente NO LO
-NOMBRA EN NINGUN SITIO. Medido hoy campo por campo sobre los 3.489 nodos vivos, MBO VIVE EN DOS
-NODOS, y el segundo es justo el MIXTO que sobrevive a ese acto. La perdida no existe.**
+**LA TAREA 1 ENTERA, sus CUATRO puntos, con las cifras de dos de ellos RE-MEDIDAS en vez de
+copiadas del acta. Y LA TAREA 2 ABRE EL TRAMO 2 Y FUNDE VEINTIUN ACTOS EN DOS LOTES. EL HALLAZGO
+DE LA VUELTA SALE DE CORRER LA GUARDA QUE EL ENCARGO MANDA: `vuelta51_colisiones_esperadas.py`
+sobre la nomina del dia NO IMPRIME NI UNO de los cincuenta actos del tramo 2, porque su linea 130
+salta la fusion pura, y los cincuenta son de fusion pura. La guarda no se apago: se le escribio un
+sucesor declarado con la misma aritmetica. Y EL SEGUNDO HALLAZGO ES LA FORMA DEL TRAMO: donde el
+tramo 1 dejo veintisiete mixtos esperando cinco vueltas, EL TRAMO 2 NO PIDE NI UNA SOLA LECTURA
+`P.12`.**
 
 | | |
 |---|---|
 | **rama** | `pasada-unica` |
-| **hash de apertura** | `d88c42bb` (el acta de la vuelta 52), **arbol limpio y todo pusheado** |
-| **hash final** | `be5d152b`, **pusheado a `origin/pasada-unica`** |
-| **commits de la vuelta** | **5**: `49ae6eef` (TAREA 1), `cadc9977` (lote A), `04bd56de` (lote B), `90bb930c` (lote C) y `be5d152b` (el cierre) |
+| **hash de apertura** | `92618dde` (el acta de la vuelta 53), **arbol limpio y todo pusheado** |
+| **hash final** | `PENDIENTE, se escribe en el commit siguiente al del cierre` |
+| **commits de la vuelta** | **4**: `e30e2ccb` (TAREA 1), `0feef54e` (tramo 2 abierto y lote A), `ca191ee6` (lote B) y el del cierre |
 | **arbol al cierre** | limpio tras el commit del cierre |
 
 ---
 
-## 0. LA APERTURA, MEDIDA ANTES DE LA PRIMERA OPERACION (regla 1)
+## 0. LA APERTURA, MEDIDA ANTES DE LA PRIMERA OPERACION (regla 1, y la regla de la apertura del `D1` de la vuelta 53)
 
-**Corrida ANTES de tocar nada**, con `python scripts/loop/vuelta31_estado.py APERTURA_V53`
-([`SALIDA_V53_APERTURA.txt`](SALIDA_V53_APERTURA.txt)) y `python scripts/recomputar_marcador.py
-3388` ([`SALIDA_V53_MARCADOR_APERTURA.txt`](SALIDA_V53_MARCADOR_APERTURA.txt)). **El arbol estaba
-limpio y todo pusheado en `d88c42bb`, asi que la regla 3 se cumplio por vacio, y se dice asi en
-vez de darla por cumplida.**
+**Corrida ANTES de tocar nada. TODAS las filas son corridas propias de esta vuelta y NINGUNA se
+hereda del cierre anterior**, que es exactamente lo que el `D1` de la vuelta 53 dejo pendiente y
+el encargo convirtio en regla. **El arbol estaba limpio y todo pusheado en `92618dde`, asi que la
+regla 3 se cumplio por vacio, y se dice asi en vez de darla por cumplida.**
 
 | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
-| marcador `A` / `B` / `C` / `D` | 563 / 75 / 7 / 2.743 | **551 / 73 / 6 / 2.758** |
+| marcador `A` / `B` / `C` / `D` | 551 / 73 / 6 / 2.758 | **551 / 73 / 6 / 2.758**, sin mover |
 | `n`, huecos, duplicados | 3.388 / 0 / 0 | **3.388 / 0 / 0** |
-| tasa de `A` | 16,6 | **16,3** |
-| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.489 / 364 / 17.011 | **3.853 / 3.477 / 376 / 17.052** |
-| retrato: `A` crudas / colapsos / pares distintos | 563 / 60 / 503 | **551 / 72 / 479** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.477 / 376 / 17.052 | **3.853 / 3.456 / 397 / 17.118** |
+| retrato: `A` crudas / colapsos / pares distintos | 551 / 72 / 479 | **551 / 93 / 458** |
+| actos (componentes) | 285 | **264** |
+| actos `CERRADOS` / `ABIERTOS` | 232 / 53 | **211 / 53** |
+| nodos en `CERRADOS` / `ABIERTOS` | 473 / 240 | **431 / 240** |
+| cola de costuras | 1.483 | **1.489** |
+| colisiones de clase vigentes | 0 | **0** |
+| auto-pares (los dos lados al mismo vivo) | 51 | **72** |
+| duplicadas historicas: grupos / nodos | 997 / 787 | **988 / 779** |
 | operaciones, estados, dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
 | entradas del inventario | 672 | **672** |
-| actos `CERRADOS` / `ABIERTOS` | 244 / 53 | **232 / 53** |
-| nodos en `CERRADOS` / `ABIERTOS` | 509 / 240 | **473 / 240** |
-| cola de costuras | 1.488 | **1.483** |
-| colisiones de clase vigentes | 0 | **0** |
-| mixtos del tramo 1 pendientes de `P.12` | 18 | **6, y los SEIS declarados o bloqueados** |
-| familias de libro que se mueven | | **una sola, `Coleman`, de 73/71 a 72/70** |
+| las cuatro comprobaciones de `08_VERIFICACION` | TODAS OK | **TODAS OK** |
+| actos del tramo 2 fundidos / pendientes | 0 / 50 | **21 / 29** |
 
-**EL CIERRE ESTA RECOMPUTADO AL CIERRE**, despues del ultimo movimiento
-([`SALIDA_V53_CIERRE.txt`](SALIDA_V53_CIERRE.txt),
-[`SALIDA_V53_MARCADOR_CIERRE.txt`](SALIDA_V53_MARCADOR_CIERRE.txt),
-[`SALIDA_V53_RECOMPUTO_CIERRE.txt`](SALIDA_V53_RECOMPUTO_CIERRE.txt),
-[`SALIDA_V53_COLA_CIERRE.txt`](SALIDA_V53_COLA_CIERRE.txt)), **no copiado de la apertura.**
+**Instrumentos de la apertura, todos corridos antes de la primera operacion:**
+[`SALIDA_V54_APERTURA.txt`](SALIDA_V54_APERTURA.txt),
+[`SALIDA_V54_MARCADOR_APERTURA.txt`](SALIDA_V54_MARCADOR_APERTURA.txt),
+[`SALIDA_V54_RECOMPUTO_APERTURA.txt`](SALIDA_V54_RECOMPUTO_APERTURA.txt),
+[`SALIDA_V54_COLA_APERTURA.txt`](SALIDA_V54_COLA_APERTURA.txt),
+[`SALIDA_V54_COLISIONES_APERTURA.txt`](SALIDA_V54_COLISIONES_APERTURA.txt) y
+[`SALIDA_V54_DUPLICADAS_APERTURA.txt`](SALIDA_V54_DUPLICADAS_APERTURA.txt). **El cierre esta en
+los ficheros `_CIERRE` hermanos, corridos DESPUES del ultimo movimiento.**
 
-> **LO QUE LA COLUMNA DE APERTURA NO ES, dicho en vez de callado.** Las filas de **marcador,
-> grafo, operaciones, inventario y familias** salen de las DOS corridas propias hechas antes de la
-> primera operacion. **Las filas de retrato, actos, cola y tramo 1 NO se re-corrieron antes de la
-> primera operacion: son las del CIERRE de la vuelta 52** y valen como apertura porque entre aquel
-> cierre y mi primera operacion no se movio ningun nodo ni ningun veredicto, **comprobado por las
-> dos corridas propias que si se hicieron, que reproducen el cierre de la 52 al digito**
-> (563/75/7/2.743 y 3.853/3.489/364/17.011). **Va marcado (`D1`).**
+**EL MARCADOR NO SE MUEVE, Y NO ES UN OLVIDO DEL BARRIDO.** Esta vuelta **no volteo ni un
+veredicto**: los veintiun actos fundidos son de FUSION PURA y **ninguno fabrico colision**, asi
+que `P.16` no tuvo nada que limpiar. **Por eso las DOS tablas por dominio hermanas tampoco se
+mueven: la `A` de cada uno de los diez dominios es la misma al digito**, comprobado en las dos
+corridas del marcador. **La hermandad escrita en la TAREA 1.1 de la vuelta 53 se cumple POR VACIO
+y se dice asi en vez de darla por cumplida.**
 
-**EL MOVIMIENTO DEL MARCADOR CUADRA AL DIGITO CON LOS QUINCE MOVIMIENTOS:** **menos 12 en `A`**
-(los puestos 475, 1175, 559, 1865, 2075, 2090, 2181, 2488, 2551, 2613, 2742 y 1222), **menos 2 en
-`B`** (el 204 y el 811), **menos 1 en `C`** (el 360) y **mas 15 en `D`**.
+**LO QUE SI SE MOVIO ES EL RETRATO, y cuadra al digito con lo ejecutado:** **VEINTIUN colapsos
+mas** (72 a 93) y **VEINTIUN pares distintos menos** (479 a 458), **uno por cada acto fundido**,
+porque cada fusion convierte el par `A` interno del acto en un par cuyos dos ids resuelven al
+mismo nodo vivo. **458 es la resta exacta**: 551 crudas menos 93 colapsos.
 
-**CUATRO DOMINIOS SE MUEVEN Y SEIS NO:** `core` de 329 a **325**, `quality` de 123 a **119**,
-`environmental` de 29 a **28** y `franquicias` de 18 a **15**, que es el que mas se mueve porque
-tres de los doce actos son suyos. **Quedan identicos al digito** `health_safety` 43, `exportacion`
-15, `entrega` 2, `compras` 1, `risk_management` 0 y `seguridad_digital` 3.
-
-**EL GRAFO GANA 41 ENLACES Y NO LOS PIERDE, y se dice porque es la primera vuelta en que esa fila
-se mueve:** la simetrizacion del paso 5 de `run_phase1.py` completo **45 vistas** en las tres
-corridas de Gate 0 (7+6, 4+5 y 13+10) al redirigir a los supervivientes las aristas de los doce
-nodos que mueren, y `P.16` retiro por su lado duplicadas y dos auto-aristas. **La resta exacta
-entre 45 y 41 no la he derivado y no la invento: va como pregunta.**
+**EL GRAFO GANA 66 ENLACES** (17.052 a 17.118) y **21 nodos pasan a deprecados** (376 a 397), que
+es exactamente el numero de actos fundidos.
 
 ---
 
-## 1. TAREA 1: LOS CUATRO PUNTOS
+## 1. TAREA 1: LOS CUATRO PUNTOS, Y DOS DE ELLOS CON LA CIFRA RE-MEDIDA
 
-**Instrumentos: `scripts/loop/vuelta53_correcciones_tarea1.py` (nueve sustituciones, todas
-idempotentes al re-correrlas:
-[`SALIDA_V53_CORRECCIONES_T1_IDEMPOTENCIA.txt`](SALIDA_V53_CORRECCIONES_T1_IDEMPOTENCIA.txt)) y
-`scripts/loop/vuelta53_marcador_por_git.py`, sucesor declarado que anade las columnas de
-porcentaje.**
+**Instrumento: `scripts/loop/vuelta54_correcciones_tarea1.py`, idempotente al re-correrlo
+([`SALIDA_V54_CORRECCIONES_T1_IDEMPOTENCIA.txt`](SALIDA_V54_CORRECCIONES_T1_IDEMPOTENCIA.txt)).**
 
-| | la especie | lo que se toco |
+| | lo que se escribio | de donde salen sus cifras |
 |---|---|---|
-| **1.1** | **TABLA VIGENTE MANTENIDA A MEDIAS** | las **tres** filas atrasadas de la **100.2** del `INFORME` (`core` 336, `quality` 126, `health_safety` 45) corregidas con tachado y nota fechada a **329 / 123 / 43**, leidas de mi corrida del dia. **Y LA HERMANDAD CON LA TABLA DEL `RECOMPUTO` ESCRITA EN LAS DOS SEDES** |
-| **1.2** | **FOTO FECHADA QUE NO PUBLICA LA CIFRA DE SU CORRIDA** | el **583 / 89 / 7 / 2.709** restituido A LA VISTA en las dos tablas (vueltas 19 y 20) y las **cuatro** cifras del mantenimiento muerto tachadas con nota. **Los cuatro porcentajes de la tabla de la 20 eran los del 575 y se tachan con el**; los del 583 (17,2 / 2,6 / 0,2 / 80,0) salen del instrumento |
-| **1.3** | **ROTULO QUE REPITE EL SINTOMA** | los **dos** rotulos del caso `c` de `vuelta48_puertas_en_el_lote.py` (docstring y parentesis del resumen), con el texto viejo delante entero |
-| **1.4** | **REGISTROS DE ADJUDICACIONES** | los **tres** carriles del acta 52 escritos en el registro del tramo de `03_FUSIONES.md`: el acto de la sucesion del CEO por **empate sin vara**, el **carril GENERAL de colisiones** en tabla, y el criterio del **mixto contenido** en tabla |
+| **1.1** | **LA PRECISION DE LA ESTRELLA**, nota NUEVA y fechada al final del **9.3.1** de `docs/BANCO_DE_TEXTOS.md`, **sin tachar nada**: cuando el GANADOR POR DERECHO de sus pares `A` es el CENTRO de una estrella cuyas puntas son `D` entre si, **manda la receta de `P.12` y el centro muere absorbido por el viable que el contenido elija** | **NO del acta: de corrida propia.** `scripts/loop/vuelta54_ejemplares_estrella.py` (nuevo) lee la clase de cada par **HOY y al abrir la vuelta 53** (commit `d88c42bb`, por git) y comprueba nodo a nodo que **ninguno de los tres centros pierde un solo par `A`**: los tres son GANADOR POR DERECHO, los tres estan hoy `deprecado: true` y los tres supervivientes vivos con el alias izado ([`SALIDA_V54_EJEMPLARES_ESTRELLA.txt`](SALIDA_V54_EJEMPLARES_ESTRELLA.txt)) |
+| **1.2** | **LAS DOS AMPLIACIONES DEL CARRIL GENERAL DE COLISIONES**, adosadas al registro **1.4.b** de la vuelta 53 en `03_FUSIONES.md` **sin reescribir la tabla vieja**: la condicion de CONTEO O COBERTURA es **carril de TEXTO en sentido amplio** y se descarga POR MEDICION antes de fundir (figura, el `811`); y cuando mover un solo veredicto deja la colision viva, **LA RELECTURA MUEVE LOS DOS** y lo dice en las dos correcciones (figura, el par `811` contra `1222`) | las dos figuras y sus varas, del acta de la vuelta 53, seccion 5, preguntas 5 y 6, **leidas hoy** |
+| **1.3** | **EL ROTULO DEL CENSO DE DUPLICADAS** de `vuelta48_fundir_tramo.py`, los dos `print`, con el **texto viejo delante entero** y la frase adosada: *CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA `aristas_duplicadas_tras_resolver.py`*. **LA LOGICA NO SE TOCA**, y el comentario dice por que el censo de la guarda ignora los alias de deprecados | la referencia del encargo (*hoy lineas 418 a 421*) **verificada por git**: ese `print` vivia en la linea 418 del commit anterior |
+| **1.4** | **LA NOTA DE LOS 41 ENLACES**, adosada al registro del tramo de la vuelta 53 | **NO copia la derivacion del acta: la vuelve a medir.** `scripts/loop/vuelta54_41_enlaces.py` (nuevo) sobre los SEIS commits ([`SALIDA_V54_41_ENLACES.txt`](SALIDA_V54_41_ENLACES.txt)) |
 
-**LOS OTROS SIETE DOMINIOS DE LA 100.2 MEDIAN EXACTOS EN LA APERTURA Y NO SE TOCARON EN LA TAREA
-1**, comprobado en la misma salida. **La suma de la columna cuadraba con el marcador de la
-apertura**: 329 mas 123 mas 43 mas 2 mas 29 mas 1 mas 18 mas 0 mas 15 mas 3 son **563**.
+**LA DERIVACION DE LOS 41 SALE MAS FINA QUE LA DEL ACTA, y eso es lo que se gana re-midiendo en
+vez de copiar:** el acta cerro la resta global (45 vistas menos 4 retiros son 41); **mi corrida
+la cierra LOTE A LOTE**, que es una comprobacion que la resta global no hace:
 
-**LA VERIFICACION POR GIT DE 1.2, RE-CORRIDA HOY**: `python scripts/loop/vuelta53_marcador_por_git.py`
-sobre los **once** commits que van del inicio de la vuelta 19 al final de la 21
-([`SALIDA_V53_MARCADOR_POR_GIT.txt`](SALIDA_V53_MARCADOR_POR_GIT.txt)): **los once miden `A 583, B
-89, C 7, D 2.709` y `17,2 / 2,6 / 0,2 / 80,0 por ciento`, al digito.**
+| lote | vistas de la simetrizacion | instancias retiradas | esperado | delta de enlaces MEDIDO | |
+|---|---:|---:|---:|---:|---|
+| **A** (`cadc9977`) | 13 | 1 | +12 | **+12** | **CALZA** |
+| **B** (`04bd56de`) | 9 | 2 | +7 | **+7** | **CALZA** |
+| **C** (`90bb930c`) | 23 | 1 | +22 | **+22** | **CALZA** |
+| **la vuelta 53 entera** | **45** | **4** | **+41** | **+41** | **CALZA** |
 
-**EL ROTULO REPARADO NO MUEVE LA VARA**, comprobado re-corriendo el instrumento sobre la nomina del
-dia ([`SALIDA_V53_PUERTAS_APERTURA.txt`](SALIDA_V53_PUERTAS_APERTURA.txt)): **31 actos con puerta
-dentro, 26 salvables, 2 imposibles por nomina, 3 por estructura y 0 sin receta**, exactamente las
-mismas cifras que antes de tocarlo.
+**Y LAS CUATRO INSTANCIAS SE VERIFICAN UNA A UNA** (el id absorbido estaba en el campo ANTES del
+lote y ya no esta DESPUES), **con los dos colapsos comprobando ademas que el superviviente YA
+ESTABA en el campo**, que es lo que hace que dos instancias colapsen en una.
+
+**UNA CORRECCION DECLARADA SOBRE MI PROPIO INSTRUMENTO DE LOS 41:** su primera version contaba
+las instancias por el TAMANO del campo antes y despues, y esa resta da CERO, porque la
+simetrizacion anade aristas a esos mismos campos en el mismo commit. **La cifra salio `CALZA: NO`
+y se reescribio para contar LA INSTANCIA NOMBRADA**, que es lo que el acta afirma. **La primera
+version no se publico.**
+
+**Y UN PUNTO DE ALCANCE MIO, DECLARADO Y MARCADO (`D1`): la TAREA 1.3.b.** El encargo nombra
+`vuelta48_fundir_tramo.py`, y la referencia es exacta. **Pero el instrumento que EJECUTA los
+tramos desde la vuelta 49 es su sucesor declarado, `vuelta49_fundir_tramo.py`, que lleva LOS
+MISMOS DOS ROTULOS palabra por palabra en sus lineas 478 a 481**, y es el que la vuelta 53 corrio
+(comprobado: solo el de la 49 imprime `INCISOS ADOSADOS`, y las tres salidas de sus lotes lo
+imprimen). **Reparar solo el ancestro dejaria el sintoma vivo justo donde la cifra se publica en
+cada tramo. Adose la misma frase con el mismo texto viejo delante, y va marcado.**
 
 ---
 
-## 2. TAREA 2: EL TRAMO 1 QUEDA CERRADO
+## 2. TAREA 2: EL TRAMO 2, ABIERTO Y CON VEINTIUN ACTOS FUNDIDOS
 
-### LAS TRECE LECTURAS `P.12` QUE ESPERABAN, LAS TRECE HECHAS
+### 2.1 LA FRONTERA DEL TRAMO NO SE DECIDIO: SE MIDIO
+
+*Los 50 siguientes* admitia **dos lecturas**, y `scripts/loop/vuelta54_tramo2_nomina.py` computa
+**las dos** ([`SALIDA_V54_TRAMO2_NOMINA.txt`](SALIDA_V54_TRAMO2_NOMINA.txt)):
+
+| lectura | resultado |
+|---|---|
+| **A, por el orden de HOY**, saltando los actos del tramo 1 que siguen vivos **identificados POR SUS MIEMBROS** | los once del tramo 1 estan en los puestos **1 a 11** y el tramo 2 es del **12 al 61** |
+| **B, por el orden de la vuelta 48**: los que ocupaban los puestos **51 a 100** de `RECOMPUTO_V48_COMPONENTES.jsonl` | **los mismos 50, en el mismo orden** |
+
+> **LAS DOS COINCIDEN AL ACTO Y AL ORDEN, y el instrumento cae en ROJO CON PARADA si algun dia no
+> calzan.** Una operacion cuyo texto no alcanza para ejecutarse sin decidir detiene; **esta
+> alcanza, y la prueba esta impresa en vez de argumentada.**
+
+### 2.2 LA FORMA DEL TRAMO 2, Y ES LO CONTRARIO DEL TRAMO 1
 
 | | |
 |---|---:|
-| lecturas `P.12` hechas | **13 de 13** |
-| de ellas, **FUNDIDAS** | **12** |
-| de ellas, **DECLARADAS** | **1** (el mapa de influencia, par mixto en `B`, politica del 604) |
-| mixtos del tramo 1 que quedan pendientes de lectura | **CERO** |
+| actos del tramo | **50** |
+| por tamano | **los 50 de tamano 2** |
+| por figura | **`{'PURO A': 50, 'MIXTO': 0}`** |
+| nodos implicados | **100** |
+| **lecturas `P.12` que este tramo pide** | **CERO** |
 
-**Los seis actos mixtos vivos al cierre son exactamente los que ninguna lectura puede mover**: el
-del S&OP (politica del 703), el de la sucesion del CEO (empate sin vara), el del mapa de influencia
-(politica del 604, declarado esta vuelta) y **los tres imposibles por puerta**.
+**Un acto de dos miembros con UN par `A` directo no deja ningun mixto fuera**, asi que la receta
+de la estrella no tiene nada que decidir. **Lo que este tramo pide es la otra mitad de `P.8`:
+quien sobrevive por CONTENIDO.** Guarda de los cuatro ajenos **VERDE** (y ninguno de los cuatro
+esta ya en el lote `CERRADO` entero) y guarda de solape con el tramo 1 **VERDE, cero**.
 
-### LA GUARDA DE COLISIONES, CUMPLIDA AL DIGITO EN LOS TRES LOTES
+### 2.3 EL HALLAZGO: LA GUARDA DE COLISIONES NO CUBRIA ESTA FORMA
 
-| lote | **predicho** antes de tocar un nodo | **medido** sobre el archivo entero tras ejecutar | tras `P.16` |
-|---|---:|---:|---:|
-| **A** (lienzo, prompts, warrants, huella) | **6**: 4 dentro, 2 fuera | **6, las mismas seis** | **0** |
-| **B** (costos, abogado, inadvertida, objetivos) | **4**: 4 dentro, 0 fuera | **4, las mismas cuatro** | **0** |
-| **C** (pareto, poka yoke, dmaic, cliente) | **4**: 4 dentro, 0 fuera | **4, las mismas cuatro** | **0** |
+**Corrido `scripts/loop/vuelta51_colisiones_esperadas.py` sobre la nomina del dia, como el encargo
+2.2 manda, NO IMPRIME NI UNO de los cincuenta actos**
+([`SALIDA_V54_COLISIONES_ESPERADAS.txt`](SALIDA_V54_COLISIONES_ESPERADAS.txt)). **El motivo esta
+en su propio codigo, linea 130:** `continue  # fusion pura, no pide P.12`. **Y es correcto para lo
+que aquel instrumento mide**: nacio para la guarda de cuenta de la vuelta 51, que cuenta una
+colision por cada mixto en `CONTINUA`.
 
-**Ninguna colision real fuera de la prediccion. Ninguna guarda en rojo. Ninguna condicion de
-parada.**
+**La guarda no se apago y el instrumento viejo no se falseo: se escribio un SUCESOR DECLARADO**
+(`scripts/loop/vuelta54_colisiones_esperadas.py`), **con la misma aritmetica copiada** y la rama
+que faltaba. **Lo que predice, sobre el archivo entero y antes de tocar un nodo**
+([`SALIDA_V54_COLISIONES_ESPERADAS_TRAMO2.txt`](SALIDA_V54_COLISIONES_ESPERADAS_TRAMO2.txt)):
+**100 combinaciones simuladas, 6 que fabrican colision, y SOLO TRES ACTOS del tramo**: el **6**
+(dos), el **44** (una) y el **49** (dos). **Las cinco son `B` DIRECTO contra `D` y todas FUERA del
+acto**, o sea del carril del filo. **Los otros 47 actos, cero.**
 
-### LOS DOCE ACTOS, con la vara que eligio al superviviente
+### 2.4 LOS VEINTIUN ACTOS FUNDIDOS, EN DOS LOTES
 
-| lote | superviviente | absorbe | mixto en `CONTINUA` (su `D` directo) | **que eligio al superviviente** |
-|---|---|---|---|---|
-| **A** | `value_proposition_canvas` | `customer_profile_value_map` | `customer_profile` (705) | **ALCANCE DEL ROL**: el 705 llama al superviviente EL INSTRUMENTO ENTERO y al mixto EL CIRCULO DE LA DERECHA. **El conteo apuntaba al otro** (5 pasos contra 4, 2 condiciones contra 1) |
-| **A** | `ingenieria_de_prompts_efectiva` | `asignacion_persona_ia` | `prompting_por_persona_ia` (1144) | **PADRE DECLARADO**: el 1144 la declara LA ANATOMIA DEL PROMPT y al mixto EL PROCEDIMIENTO DE SU PRIMERA LINEA. Conteos EMPATADOS, cableado al otro |
-| **A** | `warrant_pricing_venture_debt` | `warrants_deuda_convertible` | `warrants_financiamiento` (1448) | **ALCANCE DEL ROL**: el entregable del que muere son LOS TERMINOS YA DEFINIDOS, que es LA MECANICA DEL PRECIO y no LA DECISION DE ACEPTAR. **Las condiciones apuntaban al otro** (2 contra 1) |
-| **A** | `medir_huella_carbono_corporativa` | `huella_carbono_empresarial` | `definir_limites_huella_carbono` (1855) | **LAS TRES VARAS A FAVOR y ninguna en contra**: 5 pasos contra 4, 3 condiciones contra 2, cableado 4 contra 3 |
-| **B** | `estimacion_inversion_inicial_franquiciador` | `cinco_categorias_costos_franquicia` | `costos_preparacion_franquicia` (2092) | **ALCANCE DEL ROL**: el que muere es el presupuesto de las CINCO categorias y el otro viable se llama como UNA de ellas. **El cableado apuntaba al otro** |
-| **B** | `eleccion_abogado_franquicias` | `contratar_abogado_especializado_franquicias` | `contratar_abogado_franquicias` (2086) | **PASOS 6 contra 5 y alcance del rol de acuerdo. EL MATERIAL PROPIO APUNTABA AL OTRO** (4 contra 3) |
-| **B** | `prevenir_franquicias_inadvertidas` | `estructuras_combinadas_franquicia` | `deteccion_franquicia_inadvertida` (2073) | **TRES VARAS a favor y la cuarta empatada**: condiciones 2 contra 1, cableado 3 contra 1, material propio 3 contra 2 |
-| **B** | `eliminar_metas_numericas_gerencia` | `critica_gestion_por_objetivos` | `eliminacion_gestion_por_objetivos_y_numeros` (2534) | **LA UNICA VARA QUE NO EMPATA**: condiciones 2 contra 1. Pasos, cableado y material propio EMPATAN |
-| **C** | `analisis_pareto_de_proveedores` | `analisis_pareto` | `principio_pareto` (3087) | **PASOS 5 contra 3, condiciones 2 contra 1 y material propio 2 contra 1. El cableado apuntaba al otro** (4 contra 2) |
-| **C** | `error_proofing_servicio` | `mistake_proofing_poka_yoke_2` | `poka_yoke_a_prueba_de_errores` (2931) | **LAS TRES VARAS QUE NO EMPATAN a favor**: 6 pasos contra 4, cableado 4 contra 1, material propio 3 contra 2 |
-| **C** | `criterios_seleccion_proyectos_calidad` | `proceso_nominacion_seleccion` | `dmaic_fase_select` (2933) | **ALCANCE DEL ROL** con condiciones y cableado de acuerdo: el que muere es el proceso GENERAL y el otro viable es UNA FASE del mapa DMAIC. **Los pasos apuntaban al otro** (5 contra 4) |
-| **C** | `investigar_datos_cliente` | `seguimiento_informacion_cliente` | `personalizacion_investigacion_prospecto` (811) | **EL MARGEN MAS ANCHO DE LA TANDA**: 11 pasos contra 4, cableado 4 contra 2 |
+| lote | actos | fundidos | mueren | piezas | enteras | ya dichas | de `INCISO` | colisiones predichas | **medidas** |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **A** | 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 14 | **11** | **11** | **70** | 19 | 38 | **13** | **0** | **0, CALZA** |
+| **B** | 16, 17, 19, 21, 22, 23, 24, 25, 26, 27 | **10** | **10** | **57** | 16 | 35 | **6** | **0** | **0, CALZA** |
 
-**En los doce muere el CENTRO de la estrella. En SIETE de los doce alguna vara apunta al otro
-lado, y en los siete va escrito en el motivo del plan y marcado aqui:** el conteo en el lienzo, el
-cableado en los prompts, en los costos de franquicia y en el pareto, las condiciones en los
-warrants, el material propio en el abogado y los pasos en el dmaic select.
+**Guardas, por acto y en los veintiuno:** miembros vivos y nomina completa, cobertura exacta de
+indices sin olvidos, cero repetidos literales, **cero auto-aristas y cero duplicadas NUEVAS**, y
+los cinco campos que la operacion no redacta **intactos, 55 de 55 en el lote A y 50 de 50 en el
+B**. **La guarda `1B` paso POR VACIO en los veintiuno: ningun absorbido es puerta.**
 
-**Guardas, por acto y en los doce:** miembros vivos y nomina completa, cobertura exacta de indices
-sin olvidos, cero repetidos literales, **cero auto-aristas y cero duplicadas NUEVAS**, los cinco
-campos que la operacion no redacta intactos, y **los doce absorbidos con su texto INTACTO**. **La
-guarda `1B` paso POR VACIO en once y en el doceavo (el dmaic select) NO paso por vacio sino con la
-puerta DE SUPERVIVIENTE**: `criterios_seleccion_proyectos_calidad` es puerta y aqui es quien
-sobrevive.
+### 2.5 LAS FORMAS DEL VEREDICTO, CONTADAS POR MAQUINA Y NO TECLEADAS
 
-### EL CARRIL GENERAL DE COLISIONES, EN SUS DOS FORMAS
+`scripts/loop/vuelta54_varas_tramo2.py` imprime **una fila por acto** con pasos, condiciones y
+cableado contados, y **la FORMA del veredicto**
+([`SALIDA_V54_VARAS_TRAMO2.txt`](SALIDA_V54_VARAS_TRAMO2.txt)):
 
-**ONCE VOLTEOS POR MAQUINA** (`A` arrastrada contra directo `D`, el unico caso mecanico): 475,
-1175, 559, 1865, 2075, 2090, 2181, 2488, 2551, 2613 y 2742. **CUATRO RELECTURAS EN EL MISMO ACTO**
-por veredicto del filo:
+| la forma | de los 50 | que decide | fundidos asi en esta vuelta |
+|---|---:|---|---|
+| **TODAS DE ACUERDO** | 13 | las varas de contenido que no empatan apuntan al mismo lado | 7 |
+| **UNA SOLA VARA** | 22 | una sola vara de contenido no empata **y BASTA** (acta 53, pregunta 4) | 10 |
+| **CHOCAN** | 5 | decide **LA PIEZA DECLARADA**; si no hay ninguna, **PARADA** (acta 53, pregunta 3) | 1 (el 25) |
+| **CONTENIDO EMPATA** | 9 | **EL CABLEADO DECIDE SOLO** | 3 (21, 23, 27) |
+| **EMPATE SIN VARA** | 1 | **se DECLARA** | 0 |
 
-| par resuelto | del filo | contraste | veredicto de la relectura |
-|---|---|---|---|
-| `value_map` contra `value_proposition_canvas` | **360 `C` ARRASTRADO** | 250 `D` directo | **CONDICION DE TEXTO.** Las dos razones dicen lo mismo (NIVELES DISTINTOS, SANO contra LA PARTE CONTRA EL TODO) y tras la fusion el paso 3 del superviviente apunta al mapa de valor con MAS letra. **La figura que el `C` congelaba YA esta registrada Y RE-ENCUADRADA** en la seccion 5 del `INFORME`, verificado hoy. **Se mueve el `C`** |
-| `venture_debt_terminos_economicos` contra `warrant_pricing_venture_debt` | **204 `B` DIRECTO** | 1521 `D` arrastrado | **CONDICION DE TEXTO.** Su frase EL SEGUNDO NO AGREGA DECISION NUEVA es falsa hoy: el superviviente trae TRES decisiones que el otro no tiene, y el propio contraste las llama PROCEDIMIENTO. **Se mueve el `B`** |
-| `investigar_datos_cliente` contra `personalizacion_investigacion_prospecto` | **811 `B` DIRECTO** y **1222 `A` arrastrada** | uno del otro | **CONDICION DE CONTEO, DESCARGADA POR MEDICION.** **SE MUEVEN LOS DOS**, y se dice por que: dejar uno en `B` y el otro en `D` deja la colision viva. La vara la escribe el propio 1222 (*cuando lo compartido es solo por donde se entra, es sano*) |
+**Y SE DECLARA UNA CORRECCION SOBRE MI PROPIO INSTRUMENTO ANTES DE QUE NADIE LA ENCUENTRE:** la
+mesa (`vuelta54_mesa_tramo2.py`) imprime una columna **MATERIAL PROPIO** calculada por **solape
+lexico**, y **esa columna NO es la vara**: la receta define el contenido como *pasos y
+condiciones, material propio y padre declarado EN LAS RAZONES*, y el material propio de la receta
+es **el que la razon declara**, no el que un contador de palabras estima. **La retire de las varas
+que deciden y quedo rotulada como contraste de maquina.** **Va marcada (`D9`), porque la columna
+si esta publicada en la salida.**
 
-**LAS CUATRO SALIERON CONDICION DE TEXTO O DE CONTEO Y NINGUNA PREGUNTA DE POLITICA**, y de eso
-dependia que los actos se pudieran fundir.
+### 2.6 LOS ACTOS QUE ESTA VUELTA NO FUNDE, CADA UNO CON SU ESPECIE
 
-### LOS TRES CHOQUES DE LETRA CONTRA ARITMETICA, EJECUTADOS Y REGISTRADOS
-
-| el acto | lo que la letra nombra | los puestos | que le paso |
-|---|---|---|---|
-| pareto | `analisis_pareto` | **2546, 2551** | **NO ES VIABLE y MUERE ABSORBIDO** |
-| poka yoke | `mistake_proofing_poka_yoke_2` | **2613** | **NO ES VIABLE y MUERE ABSORBIDO** |
-| dmaic select | `proceso_nominacion_seleccion` | **2627** | **NO ES VIABLE y MUERE ABSORBIDO** |
-
-> **LO QUE ESTOS TRES TIENEN DE NUEVO, y no es un detalle.** El acta de la vuelta 50 adjudico que
-> manda la aritmetica **y escribio que *la letra se honra en lo que puede: X sigue VIVO en los
-> cinco casos***. **En estos tres X NO sigue vivo: MUERE**, porque el nodo que la letra nombra es
-> el CENTRO de la estrella, que es justo el que la receta no deja sobrevivir. **La adjudicacion se
-> cumple en lo que si dice** (nadie funde a X en contra de su par: los pares que lo absorben son
-> sus dos `A`), **pero el consuelo que escribia no aplica.** Va marcado (`D3`).
-
-### EL REPARTO, pieza por pieza
-
-| lote | piezas | enteras | de INCISO | ya dichas | perdidas NOMBRADAS |
-|---|---:|---:|---:|---:|---:|
-| **A** | 28 | 12 | 5 | 11 | **1** (la comparacion entre varias personas, viva entera en el mixto) |
-| **B** | 24 | 7 | 1 | 16 | **1** (las referencias a otros franquiciantes, vivas enteras en el mixto) |
-| **C** | 33 | 19 | 6 | 8 | **0** |
-
----
-
-## 3. EL HALLAZGO: UNA PERDIDA QUE DOS VEREDICTOS DAN POR SEGURA Y LA MEDICION DESMIENTE
-
-**La regla 9 del `EJECUTOR` manda re-verificar contra el grafo toda perdida de catalogo declarada,
-sin importar quien la declare.** Esta vuelta la cumplio TRES veces
-(`scripts/loop/vuelta53_perdidas_verificadas.py`) y una de las tres devolvio lo contrario de lo
-escrito:
-
-| busqueda | lo que el archivo decia | **lo que mide el grafo hoy** |
+| actos | especie | por que |
 |---|---|---|
-| **MBO** | el 2488: *el acronimo MBO solo aparece en el nodo que cae*; el 2477: *el superviviente no nombra el MBO en ningun sitio* | **VIVE EN DOS NODOS VIVOS**: el que muere **y `eliminacion_gestion_por_objetivos_y_numeros`, que es el MIXTO de ese acto y SOBREVIVE**, en su resumen teorico ([`SALIDA_V53_MBO.txt`](SALIDA_V53_MBO.txt)) |
-| **PARETO** | (nada escrito) | **CINCO titulos vivos llevan la palabra**, y al morir `analisis_pareto` quedan **CUATRO**, entre ellos el del mixto que sobrevive ([`SALIDA_V53_PARETO.txt`](SALIDA_V53_PARETO.txt)) |
-| **la familia Coleman del 811** | *ya lleva cuatro nodos vistos y los pares se contradicen: hay que contarla antes de decidir* | **cobertura 6 de 6, CERO pares pendientes**, y contada no hay contradiccion ([`SALIDA_V53_COLEMAN.txt`](SALIDA_V53_COLEMAN.txt)) |
-
-**LA PERDIDA DE MBO NO EXISTE**, y es la clase **VIVE DENTRO** de `P.13`: era real contra aquel
-par y es falsa contra esta nomina. **Se declara la discrepancia en vez de resolverla copiando**
-(regla 2), y **las dos razones viejas no se tocan**. **Lo que si se declara como perdida de nombre
-es el titulo general sin adjetivo `Analisis de Pareto`**, porque esta operacion no redacta titulos.
+| **1** y **15** | **EL CONTENIDO APUNTA AL QUE NO ES PUERTA** | la guarda `1B` exige que la puerta sobreviva y el contenido elige al otro (pasos 6 contra 4 y condiciones 3 contra 2 en el 1; pasos 5 contra 4 en el 15). **Ese choque no lo resuelve ninguna regla escrita hoy**, y el instrumento de las puertas lo dice desde la vuelta 48: *va como pregunta al auditor, no como decision*. **SE DECLARAN** (`D3`) |
+| **4**, **20** y **42** | **CONTEOS DE CONTENIDO QUE CHOCAN SIN PIEZA DECLARADA** | pasos a un lado, condiciones al otro, y la razon **no declara padre, ni contencion, ni alcance del rol**: la del 326 llega a escribir que los dos anadidos son *la misma deteccion por dos caminos*. **El acta 53, pregunta 3, manda PARAR y traerlo como pregunta** (`D2`) |
+| **18** | **EMPATE SIN VARA** | pasos 4 contra 4, condiciones 3 contra 3 **y cableado 2 contra 2**. Es el unico del tramo donde TODO empata |
+| **6**, **44** y **49** | **COLISION PREVISTA, PENDIENTE DE RELECTURA** | los tres fabrican colision `B` directo contra `D` y el carril del filo pide relectura EN EL MISMO ACTO. **No hubo cuerda** |
+| los **veinte** restantes | **SIN TOCAR POR FALTA DE CUERDA** | ninguna guarda los frena |
 
 ---
 
-## 4. EL CASO POSITIVO: LAS CUATRO GUARDAS PUESTAS A FALLAR
+## 3. EL CASO POSITIVO: LAS CUATRO GUARDAS PUESTAS A FALLAR, Y POR QUE HUBO QUE REESCRIBIRLO
 
-**Escrito y corrido ANTES de ejecutar nada** (`scripts/loop/vuelta53_caso_positivo.py`,
-[`SALIDA_V53_CASO_POSITIVO.txt`](SALIDA_V53_CASO_POSITIVO.txt)).
+**Corrido ANTES de ejecutar nada** (`scripts/loop/vuelta54_caso_positivo.py`,
+[`SALIDA_V54_CASO_POSITIVO.txt`](SALIDA_V54_CASO_POSITIVO.txt)).
 
-| guarda | la mentira que se le puso delante | resultado |
+**EL CASO POSITIVO DE LA VUELTA 53 SE RE-CORRIO PRIMERO Y SALIO VERDE, y aun asi hubo que
+reescribirlo**, por el mismo motivo por el que aquella vuelta reescribio el de la 52: sus tres
+mentiras se fabricaban con `customer_profile_value_map`, que **aquella misma vuelta depreco**.
+Re-corrido hoy ([`SALIDA_V54_CASO_POSITIVO_V53.txt`](SALIDA_V54_CASO_POSITIVO_V53.txt)), **la
+mentira de la cobertura falla por CUATRO motivos y solo uno es el suyo**. Las tres se rehicieron
+sobre un acto **VIVO** del tramo 2.
+
+| guarda | la mentira | resultado |
 |---|---|---|
 | **`1B`** | un plan cuyo absorbido es `domina_lo_que_compras`, que es puerta | **exit 1, `ROJO`, aborta sin escribir** |
 | **cobertura** | un plan que se olvida del paso 3 del absorbido | **exit 1, `faltan ['3']`, aborta sin escribir** |
-| **INCISO VERBATIM** (NUEVA) | un inciso que es PARAFRASIS y no trozo literal | **exit 1, `NO es trozo verbatim`, aborta sin escribir** |
+| **INCISO VERBATIM** | un inciso que es PARAFRASIS y no trozo literal | **exit 1, `NO es trozo verbatim`, aborta sin escribir** |
 | **colisiones** | el censo contra una cuenta esperada FALSA de 9 | **`MEDIDA: 0 \| CALZA: NO`** |
 
-**LA CUARTA ES NUEVA Y SE ANADIO POR NECESIDAD**: siete de los doce actos llevan marcas `INCISO`,
-y la marca solo es honesta si su primer campo es literal. **Y el caso positivo de la vuelta 52 se
-tuvo que reescribir**, porque su plan de mentira usaba `split_igual_vs_desigual`, que aquella
-misma vuelta depreco: habria fallado por la guarda equivocada. **Una mentira que falla por el
-motivo que no es no prueba la guarda que dice probar.**
+**LAS CUATRO MUERDEN, Y CADA UNA POR SU MOTIVO.**
+
+**Y LA GUARDA DEL INCISO MORDIO DE VERDAD, no solo en el caso positivo:** el generador de planes
+(`scripts/loop/vuelta54_planes.py`) comprueba el verbatim **antes** de escribir el plan, y **cazo
+OCHO incisos mios escritos sin acentos**; no escribio nada hasta que los corregi. **Es la guarda
+funcionando, no un acierto mio.**
 
 ---
 
-## 5. EL BARRIDO `9.10` DEL CIERRE, CORRIDO DESPUES DEL ULTIMO MOVIMIENTO
+## 4. EL BARRIDO `9.10` DEL CIERRE, CORRIDO DESPUES DEL ULTIMO MOVIMIENTO
 
-**Con las cifras viejas DE HOY** (`--viejo 563,75,7,2743 --retrato 60,503 --puestos` los quince,
-[`SALIDA_V53_BARRIDO_910_CIERRE.txt`](SALIDA_V53_BARRIDO_910_CIERRE.txt)). **VEINTIUNA celdas
-corregidas** ([`SALIDA_V53_CORRECCIONES_910.txt`](SALIDA_V53_CORRECCIONES_910.txt), idempotente al
-re-correrlo):
+**Con las cifras viejas DE HOY** (`--viejo 551,73,6,2758 --retrato 72,479`,
+[`SALIDA_V54_BARRIDO_910_CIERRE.txt`](SALIDA_V54_BARRIDO_910_CIERRE.txt), 87 candidatos).
+**SEIS celdas corregidas** ([`SALIDA_V54_CORRECCIONES_910.txt`](SALIDA_V54_CORRECCIONES_910.txt),
+idempotente al re-correrlo):
 
 | la celda | decia | **medido al cierre** |
 |---|---:|---:|
-| `RECOMPUTO_3388.md` **246**, `A` crudas **y su contador** | 563, contador NUEVE | **551, contador DIEZ** |
-| **247**, colapsos **y su contador** | 60, contador SEIS | **72, contador SIETE** |
-| **248**, pares distintos **y su contador** | 503, contador NUEVE | **479, contador DIEZ** |
-| **528**, el checkpoint `ii` en sus dos parentesis | 503 igual a 503 | **479 igual a 479, sigue OK** |
-| **1069 a 1078**, las CUATRO filas por dominio que se mueven | 329 / 123 / 29 / 18 | **325 / 119 / 28 / 15** |
-| **1079**, total de la tabla por dominio | 563 (16,6 %) | **551 (16,3 %)** |
-| `INTRA_DOMINIO_INFORME.md` **100.1**, las CUATRO filas | 563 / 75 / 7 / 2.743 | **551 / 73 / 6 / 2.758** |
-| **100.2**, las CUATRO filas por dominio **y su nota** | 329 / 123 / 29 / 18 | **325 / 119 / 28 / 15** |
+| `RECOMPUTO_3388.md` **247**, colapsos **y su contador** | 72, contador SIETE | **93, contador OCHO** |
+| **248**, pares distintos **y su contador** | 479, contador DIEZ | **458, contador ONCE** |
+| **528**, el checkpoint `ii` en sus dos parentesis **y su nota** | 479 igual a 479 | **458 igual a 458, sigue OK** |
 
-**LAS DOS TABLAS POR DOMINIO SE MOVIERON EN EL MISMO ACTO, QUE ES PARA LO QUE LA HERMANDAD SE
-ESCRIBIO EN LA TAREA 1.1.** **Y LOS TRES CONTADORES SE CUADRARON EN EL MISMO ACTO**, que es el
-`D7` de la vuelta 50. **La suma de la columna vuelve a cuadrar**, comprobada hoy: 325 mas 119 mas
-43 mas 2 mas 28 mas 1 mas 15 mas 0 mas 15 mas 3 son **551**.
+**LA FILA 246 (`A` crudas) NO SE TOCA Y NO ES UN OLVIDO:** esta vuelta no volteo ningun veredicto,
+asi que la `A` global es la misma al abrir y al cerrar. **Y LAS DOS TABLAS POR DOMINIO HERMANAS
+TAMPOCO, por lo mismo**: la `A` de cada uno de los diez dominios es identica al digito. **La
+hermandad se cumple POR VACIO y se dice, en vez de darla por cumplida.**
 
 ---
 
-## 6. GATE 0 Y LAS SUITES
+## 5. GATE 0 Y LAS SUITES
 
-**Corridos tras la TAREA 1, tras cada uno de los tres lotes y otra vez al cierre. Todos exit 0.**
+**Corridos tras cada uno de los dos lotes y otra vez al cierre. Todos exit 0.**
 
 | que | como salio |
 |---|---|
-| **Gate 0**, ciclo de **TRES** comandos | `run_phase1 --reaplico-curaduria` con **`GATE 0: OK`** las cinco veces; `etiquetas_de_cara --aplicar` con **71** etiquetas; `sync_assets_web` con **6** assets |
-| **suite del motor** | **25 de 25**, las cinco veces |
+| **Gate 0**, ciclo de **TRES** comandos | `run_phase1 --reaplico-curaduria` con **`GATE 0: OK`** las tres veces; `etiquetas_de_cara --aplicar` con **71** etiquetas; `sync_assets_web` con **6** assets |
+| **suite del motor** | **25 de 25**, las tres veces |
 | **suite web** | **80** ficheros, **1.030** pasadas y **3** saltadas |
 | `tsc --noEmit` | **CERO** lineas |
-| duplicadas / auto-aristas **NUEVAS** | **CERO** y **CERO** en los tres lotes |
-| las cuatro comprobaciones de `08_VERIFICACION` | **TODAS OK** al cierre (713 igual a 713; 479 igual a 479) |
+| duplicadas / auto-aristas **NUEVAS** | **CERO** y **CERO** en los dos lotes |
+| las cuatro comprobaciones de `08_VERIFICACION` | **TODAS OK** al cierre (671 igual a 671; 458 igual a 458) |
 | censo de colisiones **al cierre** | **CERO** |
 | **hook guardian** | verde en todos los commits |
 
 ---
 
-## 7. CORRECCIONES DECLARADAS SOBRE MI PROPIO TRABAJO
+## 6. CORRECCIONES DECLARADAS SOBRE MI PROPIO TRABAJO
 
-1. **MI PRIMERA VERSION DE LOS TRES PLANES NO LLEVABA EL CAMPO `declarados_y_no_fundidos`**, y el
-   ejecutor cayo con `KeyError` al imprimir el resumen **despues de haber hecho las cuatro
-   simulaciones en verde**. No escribio nada porque corria en modo simular. Corregido en el
-   generador y re-simulado antes de ejecutar.
-2. **CINCO DE MIS SIETE INCISOS SE LEIAN MAL EN SU PRIMERA VERSION** (*especificando en el los
-   jobs*, *en el proceso proceso o producto*, un parentesis colgando detras de un punto, dos sin
-   acentos). **Los cace releyendo la salida de la simulacion del generador, que imprime el paso
-   resultante entero**, y los corregi antes de sellar los planes. **Es la guarda funcionando, no
-   un acierto mio.**
-3. **MI PRIMERA VERSION DEL PLAN DEL ACTO 17 DECLARABA UNA PERDIDA DE NOMBRE DEL ACRONIMO MBO
-   copiando lo que dicen los puestos 2477 y 2488.** La regla 9 me obligo a medirlo y la medicion
-   dijo lo contrario. **Corregido en el plan ANTES de sellarlo**, y la discrepancia declarada.
-4. **CUATRO ANCLAS DE MIS INSTRUMENTOS DE CORRECCION APARECIAN DOS O CUATRO VECES** en su fichero
-   (la fila de `health_safety` de la 100.2 es literal a la de la 99.2; la ultima fila de un
-   registro de tramo es literal en los cuatro registros). **Los instrumentos salieron en ROJO y no
-   escribieron nada**, que es lo que se les pide; re-anclados sobre bloques verificados unicos.
-5. **Ficheros tocados que el encargo no nombraba, declarados:** `docs/COSTURAS_INTERNAS.jsonl` y
+1. **MI PRIMER INSTRUMENTO DE LOS 41 ENLACES llamaba a `git show` una vez POR FICHERO** (3.853
+   por commit, seis commits) **y no termino en dos minutos.** Reescrito con una sola pasada de
+   `git cat-file --batch` por commit, **con la vara intacta y el cambio declarado en su
+   docstring.**
+2. **Y SU SECCION 3 CONTABA LA COSA EQUIVOCADA:** medía el TAMANO del campo antes y despues, y esa
+   resta da CERO porque la simetrizacion anade aristas a esos mismos campos en el mismo commit.
+   **Salio `CALZA: NO` y se reescribio para contar LA INSTANCIA NOMBRADA.** La version mala **no
+   se publico**.
+3. **OCHO DE MIS INCISOS ESTABAN SIN ACENTOS** y el generador los rechazo antes de escribir el
+   plan. **Los corregi contra el texto verbatim del paso.** Y **tres de mis nexos** tambien iban
+   sin acentos (*y tambien*, *ademas*, *tacticas*): corregidos antes de sellar.
+4. **MI PRIMERA VERSION DE LOS PLANES NO LLEVABA EL CAMPO `declarados_y_no_fundidos`** y el
+   ejecutor cayo con `KeyError` **despues de tener todas las guardas en verde**, exactamente la
+   misma caida que la vuelta 53 declaro en su correccion 1. **Lo puse en el generador para que
+   vaya SIEMPRE**, aunque el lote no declare ninguno. **No escribio nada porque corria en modo
+   simular.**
+5. **LA COLUMNA `MATERIAL PROPIO` DE MI MESA es un contraste lexico y no la vara**, y lo declare
+   antes de usarla para decidir (`D9`).
+6. **MI PRIMER BORRADOR DE LA TABLA DEL CIERRE PUBLICABA LOS AUTO-PARES DE DESPUES DEL LOTE
+   A (62) EN LA COLUMNA DE CIERRE**, que es la especie exacta del `D1` de la vuelta 53 en
+   pequeno: medir temprano y publicar tarde sin remedir. **Lo cace releyendo la salida del
+   censo del cierre, que imprime la cifra al lado de las colisiones**, y la columna publica
+   **72**, medido DESPUES del ultimo movimiento
+   ([`SALIDA_V54_COLISIONES_CIERRE.txt`](SALIDA_V54_COLISIONES_CIERRE.txt)). **El borrador no
+   se llego a publicar.**
+7. **Ficheros tocados que el encargo no nombraba, declarados:** `docs/COSTURAS_INTERNAS.jsonl` y
    `docs/COSTURAS_INTERNAS_RESUMEN.md`, `docs/plan/ARISTAS_DUPLICADAS.jsonl`,
    `dataset/metadata/*` y `web/lib/assets/*` (los reescriben los instrumentos y el ciclo de Gate
-   0). **Mismo alcance que las vueltas 48 a 52.**
+   0). **Mismo alcance que las vueltas 48 a 53.** Y **`scripts/loop/vuelta49_fundir_tramo.py`**,
+   que va aparte y marcado (`D1`).
 
 ---
 
-## 8. LOS DISCUTIBLES MARCADOS, para la relectura ciega
+## 7. LOS DISCUTIBLES MARCADOS, para la relectura ciega
 
-**Marcados ANTES de saber si acierto. Son ONCE.**
+**Marcados ANTES de saber si acierto. Son DOCE.**
 
 | # | el discutible | por que lo marco |
 |---:|---|---|
-| **D1** | **La columna de APERTURA de mi tabla mezcla dos corridas**: marcador, grafo, operaciones e inventario son mios y de antes de la primera operacion; **retrato, actos, cola y tramo 1 son del CIERRE de la vuelta 52 y no los re-corri antes de tocar nada.** | La regla 1 dice que la apertura se mide ANTES de la primera operacion. **Lo justifico con que las dos corridas propias reproducen el cierre de la 52 al digito, pero eso es un argumento, no una medicion de esas filas.** Y hay UNA cifra que NO reproduce: las duplicadas tras resolver, que la vuelta 52 publico en **1.000** al cierre y que mi instrumento de fundir midio en **999** antes de tocar un nodo. **No la explico y va aqui** |
-| **D2** | **En el acto del PARETO mate `analisis_pareto`**, que es el nodo mas cargado del acto (6 pasos, cableado 9, con alias) y el unico que lleva el nombre general del instrumento, **para que sobreviva `analisis_pareto_de_proveedores`.** | Es el discutible mayor de la tanda. **La receta lo obliga** (el centro no es viable) **y el contenido eligio entre los dos viables, pero el resultado es que un titulo general muere dentro de una especializacion.** Ademas `9.3.1` del banco llama a un nodo que gano todos sus pares **GANADOR POR DERECHO** y dice que *el superviviente esta fijado, es final*: `analisis_pareto` gano 2546 y 2551 y el tercer par no lo incluye. **Lo resolvi con la adjudicacion 2 del acta 50 (la estrella con puntas D funde y el centro muere), que es posterior y especifica, pero la tension con `9.3.1` es real y la traigo** |
-| **D3** | **En los tres choques el nodo que la letra nombra MUERE**, y la adjudicacion del acta 50 escribia que *X sigue VIVO en los cinco casos*. | **Ejecute los tres igual, porque la adjudicacion dice que manda la aritmetica y esa parte si aplica.** Pero el consuelo con el que la adjudicacion se sostenia no aplica aqui, y **si el auditor lee que ese consuelo era parte de la vara, los tres actos habria que haberlos declarado en vez de fundirlos** |
-| **D4** | **En el acto del ABOGADO elegi `eleccion_abogado_franquicias` aunque el MATERIAL PROPIO apunta al otro** (el 2086 le cuenta CUATRO cosas propias a `contratar_abogado_franquicias` y TRES al elegido). | Me apoye en los pasos (6 contra 5), el cableado, el alias y el alcance del rol. **Pero el acta 51, pregunta 6, dice que el material propio ES el contenido hablando**, y aqui lo puse por debajo del conteo de pasos. **Es el mismo orden que la vuelta 52 uso al reves y le adjudicaron a favor** |
-| **D5** | **En el acto de los WARRANTS elegi `warrant_pricing_venture_debt` aunque las CONDICIONES apuntan al otro** (2 contra 1) **y aunque esa eleccion fabrica una colision FUERA del acto que la otra no fabricaba.** | Me apoye en el alcance del rol leido del entregable del nodo que muere. **Elegir la rama que cuesta una relectura mas es defendible y tambien es alcance: un lector puede decir que preferi la lectura que me gustaba y pague el precio** |
-| **D6** | **En el acto de la GESTION POR OBJETIVOS decidi con UNA SOLA vara** (condiciones 2 contra 1) **estando pasos, cableado y material propio EMPATADOS.** | **Es exactamente la forma que la vuelta 52 declaro como EMPATE SIN VARA en el acto de la sucesion del CEO**, salvo que alli el cableado tambien empataba y aqui las condiciones no. **Si el auditor lee que una sola vara de conteo no basta, este acto habria que haberlo declarado** |
-| **D7** | **En el acto del POKA YOKE meti de `APPEND` el paso 5 del centro (validar el dispositivo antes de escalar) aunque el `D` directo 2931 declara *probarlo en condiciones reales* propio del MIXTO.** | Elegi `APPEND` porque la pieza es un GESTO DISTINTO y porque el solape que fabrica **no es una contradiccion** sino un solape, que es lo que la poda de la fase 04 recoge. **Pero el `D5` de la vuelta 52 se ratifico para no meter en el vivo lo que un `D` declara del otro, y un lector puede leer esto como el mismo caso** |
-| **D8** | **En la colision del `811` movi LOS DOS veredictos y no uno.** | El carril dice *la relectura decide CUAL se mueve*, en singular. **Mover uno solo dejaba la colision viva** (`B` contra `D` sigue siendo colision), asi que movi los dos y lo escribi en la razon. **Pero elegir mover dos cuando el carril dice cual es lectura mia** |
-| **D9** | **Trate la condicion del `811` como CONDICION DE CONTEO y no como pregunta de POLITICA**, y por eso el acto se fundio. | El carril escrito solo tiene dos casillas: **texto** (se resuelve) o **politica** (se declara). **La del 811 no es ninguna de las dos: es una condicion de COBERTURA que se descarga midiendo.** La descargue y segui. **La casilla nueva la puse yo** |
-| **D10** | **Corregi las filas de `environmental` y `franquicias` de las DOS tablas por dominio, que el encargo no nombraba**, y ademas les abri cadena de tachados donde no habia ninguna. | Lo hice porque esta vuelta SI las movio y porque la hermandad que yo mismo acababa de escribir obliga a moverlas juntas. **Pero abrir cadena en una celda que nunca la tuvo es una decision de formato que nadie adjudico** |
-| **D11** | **En 1.2 publique los CUATRO PORCENTAJES del 583 en la tabla de la vuelta 20**, que el encargo no pedia: solo mandaba dejar visible el 583 y tachar las cuatro cifras muertas. | Los porcentajes viejos eran los del 575 y dejarlos al lado del 583 publicaba una cifra de una corrida con los porcentajes de otra. **Para no teclearlos escribi un instrumento nuevo. Pero anadir columnas a un instrumento para poder publicar cuatro numeros que el encargo no pedia es alcance** |
+| **D1** | **Adose la frase de la TAREA 1.3 tambien a `vuelta49_fundir_tramo.py`**, que el encargo NO nombra. | El encargo nombra el de la 48 y su referencia de linea es exacta. **Pero el que se corre es el de la 49, y lleva el mismo rotulo.** Reparar solo el ancestro dejaba el sintoma vivo donde la cifra se publica. **Anadir un fichero que el encargo no nombra es alcance mio** |
+| **D2** | **Declare TRES actos (4, 20 y 42) por conteos de contenido que chocan sin pieza declarada EN LA RAZON**, en vez de leer el ALCANCE DEL ROL en los `entregable_esperado` de los dos nodos. | La receta dice *padre declarado EN LAS RAZONES*, y ahi no hay nada. **Pero la vuelta 53 leyo alcance del rol de la razon de OTRO par del acto, y aqui no hay otro par.** Si el auditor lee que el entregable del nodo tambien es pieza declarada, **los tres se podian fundir** |
+| **D3** | **Declare DOS actos (1 y 15) porque el contenido apunta al que NO es puerta**, en vez de fundir con la puerta de superviviente. | La guarda `1B` es obligatoria y **la vara de las puertas la cumpliria fundiendo hacia la puerta**; el instrumento de puertas dice que el choque *va como pregunta al auditor*. **Elegi parar. Un lector puede decir que la guarda YA decide y que declararlos es no ejecutar lo ejecutable** |
+| **D4** | **En el acto 24 (SCOR) elegi `scor_model_operaciones` por UNA sola vara, las condiciones 3 contra 2**, con pasos y cableado empatados. | La razon del **342** le reconoce al OTRO *bajar a metricas de nivel 2 y de diagnostico de nivel 3* y a este *quedarse en los KPI de nivel 1*. **Si eso se lee como contencion declarada, mandaria y elegiria al otro.** Lo lei como material propio A LOS DOS LADOS (el otro anade el benchmark) y por eso decidio el conteo. **Lo que lo hace sostenible es el reparto: los niveles 2 y 3 viajan ENTEROS** |
+| **D5** | **En el acto 23 (cascada) decidio EL CABLEADO SOLO** con el contenido empatado. | La razon del **340** llama al gesto propio del OTRO *su unico gesto propio*, y una pieza declarada pesa mas que el cableado. **Lo trate como que los dos anaden y por eso el contenido empata.** Tambien aqui **el gesto propio viaja ENTERO** |
+| **D6** | **En el acto 2 meti de `APPEND` el paso 4 del absorbido aunque su segunda mitad (publicitar para narrativa) ya la dice el paso 4 del superviviente.** | Su primera mitad (**documentar** el proceso) no la dice nadie, **y esta operacion mueve piezas enteras y no parte pasos**. El solape que fabrica es de los que recoge la poda de la fase 04. **Pero es un solape que yo fabrico a proposito** |
+| **D7** | **En el acto 7 marque `CUBIERTO` con PERDIDA NOMBRADA** la comparacion contra el periodo anterior, **en vez de `INCISO`**. | El inciso encadenado sobre el mismo paso 1 habria quedado *hacerlo cada mes o contra el periodo anterior*, **que dice otra cosa**. La tabla de los seis motivos manda exactamente eso. **Pero es una perdida que yo elijo aceptar** |
+| **D8** | **Escribi un SUCESOR del instrumento de colisiones en vez de repararlo.** | La vuelta 51 reparo ESE MISMO instrumento el dia que nacio, con correccion declarada. **Elegi sucesor para no mover un instrumento que cuatro registros ya citan.** Un lector puede decir que ahora hay dos instrumentos donde antes habia uno |
+| **D9** | **Publique en la mesa una columna `MATERIAL PROPIO` calculada por solape lexico**, y luego la declare NO-vara. | La cifra esta impresa en `SALIDA_V54_MESA_TRAMO2.txt` **y se puede leer como una vara aunque yo diga que no lo es.** Deberia haberla rotulado como contraste desde la primera corrida |
+| **D10** | **Los lotes no van en el orden impreso del tramo:** elegi primero los actos limpios y deje fuera los que tenian puerta, choque o colision. | El tramo tiene un orden y el encargo pide `P.8` EN ORDEN. **Los ejecute en orden dentro de cada lote, pero el lote lo forme por especie.** Es una decision de trabajo que nadie adjudico |
+| **D11** | **En el acto 21 mande el paso 5 del absorbido a `CUBIERTO:3` con perdida nombrada del matiz** *emocionales y funcionales*. | El paso 3 del superviviente documenta *reacciones y sugerencias*, que no es lo mismo. **Podia haber ido de `INCISO`** |
+| **D12** | **El caso positivo se fabrico sobre el acto 10 del tramo 2, que ESTA MISMA VUELTA fundio despues.** | Corrio ANTES de la fusion y era un acto vivo, que es lo que se le pide. **Pero deja el caso positivo caducado para la vuelta que viene, que es justo la trampa que esta vuelta tuvo que arreglar** |
 
 ---
 
-## 9. PENDIENTES DE DOCTRINA
+## 8. PENDIENTES DE DOCTRINA
 
-1. **`9.3.1` (GANADOR POR DERECHO) Y LA RECETA `P.12` SE CONTRADICEN EN LA ESTRELLA CON PUNTAS
-   `D`.** El banco dice que un nodo que gano todos sus pares tiene *el superviviente fijado* y que
-   *no hay lectura pendiente ni futura que pueda moverlo*; la receta dice que ese mismo nodo no es
-   viable porque no deja ningun mixto fuera. **Medido tres veces esta vuelta** (pareto, poka yoke,
-   dmaic select). Lo resolvi con la adjudicacion 2 del acta 50, que es posterior y especifica, y
-   **lo traigo escrito**.
-2. **EL CARRIL DE COLISIONES NO TIENE CASILLA PARA UNA CONDICION DE COBERTURA.** Tiene *texto* y
-   *politica*. La del `811` es de CONTEO y se descarga midiendo, no leyendo ni decidiendo en la
-   mesa. **Aparecio una vez y se resolvio midiendo** (`D9`).
-3. **EL CARRIL DICE *CUAL* SE MUEVE Y A VECES HAY QUE MOVER LOS DOS**, porque dejar clases
-   distintas sobre el mismo par resuelto deja la colision viva. **Aparecio una vez** (`D8`).
-4. **QUIEN CONTESTA UNA PREGUNTA DE POLITICA DE CATALOGO.** Heredado y sin cambio, y **ahora
-   afecta a DOS actos declarados** (el del S&OP por el 703 y el del mapa de influencia por el
-   604), los dos con la pregunta escrita por el propio veredicto.
-5. **UNA PERDIDA DECLARADA EN UNA RAZON PUBLICADA QUE LA MEDICION DESMIENTE: DONDE SE ESCRIBE.**
-   La declare en el plan y en este reporte, y **las dos razones viejas no se tocan**. Ninguna
-   pagina dice si ademas hay que adosar la correccion a las razones mismas.
-6. **HEREDADOS Y SIN CAMBIO HOY**: el `INCISO` para condiciones **sigue sin existir** en el
-   instrumento; el esquema de `OPERACIONES.jsonl` **sigue sin distinguir ejecutada de pendiente**
+1. **EL CHOQUE ENTRE LA VARA DE LA FASE Y LA VARA DE LAS PUERTAS.** Cuando el CONTENIDO elige al
+   miembro que **no** es puerta, `P.8` y la guarda `1B` piden cosas distintas. **El propio
+   instrumento de las puertas lo declara sin resolver desde la vuelta 48**, y hasta hoy nunca
+   habia pasado porque el contenido siempre coincidio con la puerta. **Esta vuelta pasa DOS
+   veces** (actos 1 y 15). **Declarados y traidos** (`D3`).
+2. **DONDE VIVE LA PIEZA DECLARADA CUANDO EL ACTO TIENE UN SOLO PAR.** La receta dice *padre
+   declarado EN LAS RAZONES*; en un acto de dos miembros **la unica razon es la del propio par**,
+   y si esa razon no declara direccion no hay a donde mirar. **Los `entregable_esperado` de los
+   dos nodos si dicen alcance, pero no son razones.** **Aparecio TRES veces** (`D2`).
+3. **UN INSTRUMENTO DE GUARDA QUE NO CUBRE UNA FORMA: SE REPARA O SE SUCEDE.** Las dos vias tienen
+   precedente en la casa. **Elegi sucesor y lo traigo** (`D8`).
+4. **QUIEN CONTESTA UNA PREGUNTA DE POLITICA DE CATALOGO.** Heredado y sin cambio. **Sigue
+   afectando a DOS actos declarados del tramo 1** (el del S&OP por el 703 y el del mapa de
+   influencia por el 604).
+5. **HEREDADOS Y SIN CAMBIO HOY**: el `INCISO` para condiciones **sigue sin existir** en el
+   instrumento (esta vuelta lo habria usado en el acto 3, donde la condicion 2 pierde un *o
+   creativo*); el esquema de `OPERACIONES.jsonl` **sigue sin distinguir ejecutada de pendiente**
    (71 en `LISTA`, medido hoy); y el campo `orden` de la fase 03 **sigue sin ser su criterio de
    orden**.
 
 ---
 
-## 10. LO QUE ESTA VUELTA NO HIZO, DICHO EN VEZ DE CALLADO
+## 9. LO QUE ESTA VUELTA NO HIZO, DICHO EN VEZ DE CALLADO
 
-1. **NO ABRIO EL TRAMO 2**, aunque el tramo 1 quedo cerrado y la condicion del encargo se cumplio.
-   **No hubo cuerda: la vuelta se fue en la TAREA 1 entera, en trece lecturas `P.12`, doce
-   fusiones en tres lotes con sus guardas, cuatro relecturas del filo y el cierre completo con su
-   barrido.** **Es el incumplimiento de la vuelta y va el primero.**
-2. **NO REPARO LA RECETA** para que sepa que hacer cuando el `GANADOR POR DERECHO` del `9.3.1` es
-   el centro no viable de una estrella: eso es doctrina y va al auditor.
-3. **NO TOCO LOS CINCO DECLARADOS DE SIEMPRE.** Al cerrar son los actos **2, 8, 9, 10 y 11**,
-   leidos de la salida que la celda cita.
-4. **NO EJECUTO LAS DOCE ARISTAS** de los `CONTINUA` ni la poda de sus solapes: son de la fase 04
-   y quedan **declaradas** con id resuelto (`P.9`).
-5. **NO RESOLVIO LAS DUPLICADAS HISTORICAS** (997 grupos al cierre, medidos con
-   `scripts/plan/aristas_duplicadas_tras_resolver.py`) ni el alias durmiente `modelo_spin_2`: son
-   de `OP-S-12`.
-6. **NO REPUSO EL TITULO GENERAL `Analisis de Pareto`**: esta operacion no redacta titulos.
-7. **NO MIDIO POR SU CUENTA LAS FILAS DE RETRATO, COLA Y TRAMO 1 DE LA APERTURA** (`D1`).
+1. **NO FUNDIO LOS VEINTINUEVE ACTOS RESTANTES DEL TRAMO 2.** De los 50, quedan **29**: veinte sin
+   tocar por falta de cuerda, tres pendientes de relectura del filo (6, 44 y 49), tres declarados
+   por conteos que chocan (4, 20 y 42), dos declarados por el choque de la puerta (1 y 15) y uno
+   por empate sin vara (18). **Es el incumplimiento de la vuelta y va el primero.**
+2. **NO HIZO LAS CINCO RELECTURAS DEL FILO** que los actos 6, 44 y 49 piden, **que estan
+   predichas, nombradas y con sus puestos** (`668`/`1312`, `968`/`1305`, `218`/`1008`,
+   `338`/`490`, `297`/`497`).
+3. **NO TOCO NINGUNO DE LOS ONCE ACTOS VIVOS DEL TRAMO 1**, incluidos los cinco de fusion pura y
+   los tres imposibles por puerta. **Sus ordinales al cerrar se leen de la salida del dia**: hoy
+   son los puestos **1 a 11** de la nomina.
+4. **NO EJECUTO NINGUNA ARISTA NI PODA DE SOLAPES**: son de la fase 04. **Y esta vuelta fabrico
+   solapes a proposito** en el acto 2 (`D6`), que quedan para esa poda.
+5. **NO RESOLVIO LAS DUPLICADAS HISTORICAS** (988 grupos al cierre, medidos con
+   `aristas_duplicadas_tras_resolver.py`) ni el alias durmiente `modelo_spin_2`: son de `OP-S-12`.
+6. **NO REPARO `vuelta51_colisiones_esperadas.py`**: le escribio un sucesor (`D8`).
 
 ---
 
-## 11. LAS PREGUNTAS PARA EL AUDITOR
+## 10. LAS PREGUNTAS PARA EL AUDITOR
 
-1. **`9.3.1` contra la receta: cuando el GANADOR POR DERECHO es el centro no viable de una
-   estrella, quien manda?** (`D2`, pendiente 1.) Esta vuelta mato al ganador por derecho **tres
-   veces**. Si la respuesta es `9.3.1`, los tres actos habria que deshacerlos.
-2. **El consuelo del acta 50 (*X sigue VIVO*) era parte de la vara o una observacion?** (`D3`.) De
-   la respuesta depende si un choque cuyo X MUERE se ejecuta o se declara.
-3. **Entre el conteo de pasos y el material propio declarado en las razones, cual va primero?**
-   (`D4`.) La vuelta 52 puso el material propio por encima del conteo y le adjudicaron a favor;
-   esta vuelta lo puso por debajo en el acto del abogado.
-4. **Una sola vara de conteo basta para elegir, o eso es empate sin vara?** (`D6`.) En el acto de
-   la gestion por objetivos decidieron las condiciones, 2 contra 1, con todo lo demas empatado.
-5. **Una condicion de COBERTURA en un veredicto del filo: que casilla del carril es?** (`D9`,
-   pendiente 2.) La descargue midiendo y fundi el acto.
-6. **Cuando una colision se resuelve moviendo LOS DOS veredictos, sigue siendo el carril?**
-   (`D8`, pendiente 3.)
-7. **Una perdida que una razon publicada declara y la medicion desmiente: se adosa la correccion a
-   la razon vieja, o basta declararla fuera?** (Pendiente 5.) Hoy esta declarada en el plan y en
-   este reporte, y las razones viejas siguen intactas.
-8. **Los 41 enlaces que gana el grafo contra las 45 vistas que la simetrizacion completo: de donde
-   sale la diferencia?** No la he derivado y no la invento.
+1. **Cuando el CONTENIDO elige al miembro que no es puerta, quien manda: `P.8` o la guarda `1B`?**
+   (`D3`, pendiente 1.) **Declare los actos 1 y 15.** Si manda la guarda, los dos se funden hacia
+   la puerta y estaban listos.
+2. **En un acto de UN SOLO PAR cuyos conteos de contenido chocan, el `entregable_esperado` de los
+   nodos vale como PIEZA DECLARADA (alcance del rol), o solo valen las razones?** (`D2`,
+   pendiente 2.) **De la respuesta dependen tres actos declarados.**
+3. **Cuando un instrumento de guarda no cubre una forma nueva, se repara o se le escribe un
+   sucesor?** (`D8`, pendiente 3.) La vuelta 51 reparo este mismo instrumento; yo le escribi un
+   sucesor.
+4. **El MATERIAL PROPIO que `P.8` pesa es SOLO el que la razon declara, o tambien el que se puede
+   medir sobre los pasos?** (`D9`.) Lo trate como solo-declarado y retire mi propia columna.
+5. **Una pieza cuya PRIMERA mitad es propia y la SEGUNDA ya la dice el superviviente: `APPEND`
+   entero (y solape fabricado) o `CUBIERTO` con perdida nombrada?** (`D6`.) Elegi `APPEND`.
+6. **El lote se forma por ORDEN del tramo o por ESPECIE del acto?** (`D10`.) Lo forme por especie
+   para no mezclar los que necesitan relectura con los que no.
+7. **El caso positivo debe fabricarse sobre actos que la propia vuelta NO vaya a fundir**, para
+   que no caduque en la vuelta siguiente? (`D12`.) Es la tercera vuelta seguida que tiene que
+   reescribirlo por esta causa.
