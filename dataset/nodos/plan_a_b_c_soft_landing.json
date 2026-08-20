@@ -10,13 +10,16 @@
     "Si el Plan A falla, explora activamente opciones de venta, recapitalización o venta de activos (Plan B)",
     "Mantén una comunicación transparente y profesional con tus inversionistas y prestamistas durante la transición",
     "Si la venta no se concreta, prepara un cierre ordenado (Plan C) que minimice las pérdidas para todos los involucrados",
-    "Documenta y ejecuta el proceso con profesionalismo para proteger tus relaciones futuras en el mercado de capital de riesgo"
+    "Documenta y ejecuta el proceso con profesionalismo para proteger tus relaciones futuras en el mercado de capital de riesgo",
+    "Avisa a quien te prestó el dinero apenas detectes que tu desempeño se está desviando de forma importante del plan.",
+    "Revisa cómo te está calificando tu prestamista en este momento (si te ve como un caso normal, uno que están vigilando de cerca, o uno con problemas) y qué significa eso para tu relación con ellos."
   ],
   "entregable_esperado": "Un plan de contingencia documentado con los escenarios A, B y C, y comunicación proactiva con tus inversionistas sobre la situación de tu negocio",
   "nodos_previos": [
     "venture_debt_introduccion",
-    "restructuracion_deuda_soft_landing",
-    "reservas_de_capital_vc"
+    "reservas_de_capital_vc",
+    "mac_clause_gestion_riesgo",
+    "mejorar_deal_despues_del_hecho"
   ],
   "nodos_siguientes": [
     "relaciones_con_clientes"
@@ -26,5 +29,15 @@
     "Si el acceso a capital no dilutivo está disminuyendo",
     "Si tienes deuda de venture debt en tu tabla de capitalización (cap table) y hay riesgo de incumplimiento (default)"
   ],
-  "etiqueta_arbol": "Prepara tu Plan de Contingencia"
+  "etiqueta_arbol": "Prepara tu Plan de Contingencia",
+  "ids_alias": [
+    "restructuracion_deuda_soft_landing"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "restructuracion_deuda_soft_landing",
+      "titulo": "Reestructurar tu deuda y buscar un aterrizaje suave (soft landing)",
+      "fuente": "Venture Deals"
+    }
+  ]
 }

@@ -924,14 +924,16 @@
         "Crear widgets simples de 'like' o compartir en redes sociales",
         "Aplicar el test de recomendación (Net Promoter Score simplificado) a clientes tempranos",
         "Considerar recompensas para quienes refieran el producto",
-        "Crear contenido no genérico (sitios, blogs) relacionado al problema que resuelve el producto"
+        "Crear contenido no genérico (sitios, blogs) relacionado al problema que resuelve el producto, como videos o demostraciones",
+        "Anima a tus primeros clientes a que lo promuevan activamente"
       ],
       "entregable_esperado": "Componentes virales integrados en el producto y una métrica de recomendación (score 1-10) de clientes tempranos",
       "nodos_previos": [
         "hipotesis_de_canales",
         "producto_minimo_viable",
         "get_customers_funnel_webmobile",
-        "email_marketing_retencion"
+        "email_marketing_retencion",
+        "plan_de_adquisicion_acquire"
       ],
       "nodos_siguientes": [
         "plan_de_activacion",
@@ -941,7 +943,17 @@
         "Cuando el startup necesita escalar adquisición de usuarios a bajo costo",
         "Si el producto tiene potencial de ser compartido entre usuarios"
       ],
-      "etiqueta_arbol": "Diseña tu Crecimiento Viral"
+      "etiqueta_arbol": "Diseña tu Crecimiento Viral",
+      "ids_alias": [
+        "herramientas_adquisicion_viral"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "herramientas_adquisicion_viral",
+          "titulo": "Herramientas de crecimiento viral integradas al producto",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        }
+      ]
     },
     "acreditacion_organismos_certificadores": {
       "node_id": "acreditacion_organismos_certificadores",
@@ -2457,7 +2469,8 @@
       "condiciones_activacion": [
         "Si el usuario tiene un modelo de negocio definido y necesita diseñar/optimizar su cadena de suministro para soportarlo"
       ],
-      "etiqueta_arbol": "Alinea tu Cadena con tu Estrategia"
+      "etiqueta_arbol": "Alinea tu Cadena con tu Estrategia",
+      "deprecado": true
     },
     "alineacion_con_canvas": {
       "node_id": "alineacion_con_canvas",
@@ -3555,7 +3568,7 @@
       "nodos_siguientes": [
         "optimizacion_metricas_crecimiento",
         "metricas_accionables",
-        "construccion_de_comunidad_como_canal_traccion",
+        "community_building_estrategia",
         "estrategia_plataformas_existentes",
         "apertura_llamada_venta_grande",
         "metodologia_spin_selling",
@@ -3843,7 +3856,8 @@
         "Cuando se busca identificar oportunidades de innovación a nivel estratégico, no solo a nivel de producto individual",
         "Cuando la industria del cliente está atravesando cambios estructurales"
       ],
-      "etiqueta_arbol": "Detecta Disrupciones del Mercado"
+      "etiqueta_arbol": "Detecta Disrupciones del Mercado",
+      "deprecado": true
     },
     "analisis_distribucion_poisson_para_capacidad": {
       "node_id": "analisis_distribucion_poisson_para_capacidad",
@@ -4643,7 +4657,7 @@
         "alineacion_de_objetivos_en_sistemas",
         "analisis_cadena_de_valor",
         "analisis_competitivo_deconstruccion",
-        "analisis_disrupciones_mercado",
+        "evaluacion_industria_cliente",
         "analogos_antilogos",
         "atencion_focal_y_periferica",
         "coordinacion_organica_de_elementos_independientes",
@@ -4655,7 +4669,7 @@
         "pensamiento_convergente_divergente",
         "disciplina_atencion_dirigida",
         "diseno_basado_en_comportamientos_existentes",
-        "diseno_de_experiencias_participativas",
+        "economia_de_la_experiencia",
         "diseno_de_sistemas_institucionales",
         "diseno_estrategico_vs_tactico",
         "diseno_imperfeccion_intencional",
@@ -6028,7 +6042,7 @@
       ],
       "nodos_siguientes": [
         "pensamiento_no_guiado_vs_regulado",
-        "construir_sobre_ideas_ajenas"
+        "reglas_brainstorming"
       ],
       "condiciones_activacion": [
         "Cuando se necesita generar ideas nuevas a partir de un problema definido",
@@ -6449,7 +6463,7 @@
         "arquetipos_de_cliente"
       ],
       "nodos_siguientes": [
-        "alineacion_cadena_estrategia_negocio"
+        "definicion_alineacion_cadena_suministro"
       ],
       "condiciones_activacion": [
         "Si el usuario necesita validar qué tipo de cadena de suministro requiere su segmento de clientes"
@@ -8577,7 +8591,7 @@
       ],
       "entregable_esperado": "Sistema BPM configurado con reglas de negocio y alertas automáticas de excepciones",
       "nodos_previos": [
-        "data_warehouse_como_fundamento"
+        "creacion_data_warehouse"
       ],
       "nodos_siguientes": [
         "asociaciones_clave"
@@ -9390,7 +9404,7 @@
         "definicion_startup_busqueda_modelo_negocio",
         "diseno_como_plataforma_expansiva",
         "fracaso_como_aprendizaje_startup",
-        "historia_del_futuro_escenarios_especulativos",
+        "ficcion_especulativa_como_metodo",
         "narrativa_como_herramienta_de_sentido",
         "practica_de_observacion_atenta",
         "search_for_business_model"
@@ -12432,7 +12446,7 @@
       "entregable_esperado": "Protocolo definido de celebración por cada hito importante del cliente, con presupuesto y disparadores automatizados.",
       "nodos_previos": [
         "fase_acclimate_experiencia_cliente",
-        "visualizacion_progreso_onboarding"
+        "gamificacion_onboarding_visual"
       ],
       "nodos_siguientes": [
         "fase_accomplish_experiencia_cliente"
@@ -13441,7 +13455,7 @@
       "nodos_previos": [
         "empathy_map",
         "framework_flujos_de_datos_ppp",
-        "historia_del_futuro_escenarios_especulativos"
+        "ficcion_especulativa_como_metodo"
       ],
       "nodos_siguientes": [
         "economia_circular_de_la_imaginacion",
@@ -13519,12 +13533,13 @@
       "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
       "resumen_teorico": "El ciclo de conversión de efectivo mide cuántos días tarda una empresa en recuperar el efectivo invertido en sus operaciones, desde el pago de materias primas hasta el cobro de las ventas, integrando los periodos de cuentas por pagar, inventario y cuentas por cobrar. Se calcula como DSO + DII − DPO (días de cobro más días de inventario menos días de pago). Un ciclo largo implica una mayor necesidad de capital de trabajo; acortarlo libera efectivo significativo para el negocio, aunque maximizar el DPO (tardar más en pagar a proveedores) debe equilibrarse contra el riesgo de deteriorar las relaciones con ellos.",
       "pasos_accionables": [
-        "Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago)",
+        "Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago), el DSO es cuentas por cobrar finales dividido entre ingresos diarios, y el DPO es cuentas por pagar finales dividido entre COGS diario",
         "Aplicar la fórmula: Ciclo = DSO + DII - DPO",
         "Multiplicar el resultado por las ventas diarias para estimar el capital de trabajo requerido",
         "Evaluar el trade-off entre maximizar el DPO y mantener buenas relaciones con los proveedores",
         "Identificar en qué punto del ciclo se puede acelerar el retorno de efectivo (reducir DSO, reducir inventario, aumentar DPO razonablemente)",
-        "Monitorear el ciclo periódicamente, especialmente tras fusiones o adquisiciones"
+        "Monitorear el ciclo periódicamente, especialmente tras fusiones o adquisiciones",
+        "Investigar causas de un DSO elevado: quejas de clientes, términos de venta laxos, facturación lenta"
       ],
       "entregable_esperado": "Cálculo del ciclo de conversión de efectivo, con diagrama de DPO, DSO y DII integrados, y un plan de acción para optimizarlo",
       "condiciones_activacion": [
@@ -13539,14 +13554,27 @@
         "gestion_inventario",
         "gestion_cuentas_por_pagar_dpo",
         "analisis_flujo_de_valor",
-        "gestion_capital_trabajo"
+        "gestion_capital_trabajo",
+        "ratios_eficiencia_inventario"
       ],
       "nodos_siguientes": [
         "gestion_relacion_bancaria",
         "analisis_antiguedad_cuentas_por_cobrar",
-        "cultura_de_transparencia_financiera"
+        "cultura_de_transparencia_financiera",
+        "rotacion_activos",
+        "tasa_crecimiento_sostenible"
       ],
-      "etiqueta_arbol": "Mide tu Ciclo de Efectivo"
+      "etiqueta_arbol": "Mide tu Ciclo de Efectivo",
+      "ids_alias": [
+        "dso_dpo_gestion_capital_trabajo"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "dso_dpo_gestion_capital_trabajo",
+          "titulo": "Gestión de Cuentas por Cobrar y Pagar (DSO y DPO)",
+          "fuente": "Financial Intelligence for Entrepreneurs"
+        }
+      ]
     },
     "ciclo_de_culpa": {
       "node_id": "ciclo_de_culpa",
@@ -14260,7 +14288,7 @@
       ],
       "entregable_esperado": "Persona designada como Five Whys Master, con regla de activación documentada y primer área piloto definida",
       "nodos_previos": [
-        "tecnica_cinco_porques",
+        "five_whys_inversion_proporcional",
         "curse_cinco_culpas"
       ],
       "nodos_siguientes": [
@@ -15988,12 +16016,14 @@
       "resumen_teorico": "Construir comunidad implica invertir en las conexiones entre clientes, fomentando relaciones que ayuden a atraer más usuarios de forma orgánica. Requiere una misión clara que dé sentido de pertenencia, apertura para incorporar feedback de la comunidad en el producto, espacios para que los miembros se conecten entre sí (no solo con la empresa), y mantenimiento constante de la calidad para evitar la dilución con el crecimiento.",
       "pasos_accionables": [
         "Definir una misión clara y significativa que la comunidad pueda adoptar como propia",
-        "Aprovechar una audiencia existente (blog, redes) para dar feedback previo al lanzamiento",
+        "Aprovechar una audiencia existente (blog, redes) para dar feedback previo al lanzamiento, incluidas comunidades complementarias existentes online y offline",
         "Crear espacios de meta-discusión donde los usuarios hablen sobre la comunidad misma",
         "Reconocer y agradecer personalmente a los evangelistas tempranos (emails, regalos, eventos)",
         "Establecer guías de calidad claras y visibles desde el inicio",
         "Delegar cierta moderación a la propia comunidad (sistemas de karma/votación)",
-        "Combinar community building con otros canales como eventos offline y speaking"
+        "Combinar community building con otros canales como eventos offline y speaking",
+        "Evaluar si tu modelo de negocio se presta naturalmente a la construcción de comunidad (¿tu valor central conecta personas?).",
+        "Fomentar la conexión cruzada entre miembros de la comunidad, no solo entre miembro-empresa."
       ],
       "entregable_esperado": "Documento de misión de comunidad, guías de calidad definidas y un plan de reconocimiento a evangelistas tempranos",
       "nodos_previos": [
@@ -16001,19 +16031,34 @@
         "arquetipos_de_cliente",
         "eventos_offline_como_canal_traccion",
         "speaking_engagements_estrategia",
-        "onboarding_comunitario_y_lenguaje_propio"
+        "onboarding_comunitario_y_lenguaje_propio",
+        "analisis_de_cohortes",
+        "value_proposition_startup"
       ],
       "nodos_siguientes": [
         "customer_retention_strategy",
         "eventos_offline_propios",
-        "customer_retention_tactics"
+        "customer_retention_tactics",
+        "comunidad_como_activo_estrategico",
+        "gestion_calidad_comunidad_a_escala"
       ],
       "condiciones_activacion": [
         "Si el producto depende de contenido o contribuciones generadas por usuarios",
         "Si existen ya usuarios apasionados (evangelistas) que hablan del producto espontáneamente",
-        "Si se busca crecimiento orgánico sostenible más allá de canales pagados"
+        "Si se busca crecimiento orgánico sostenible más allá de canales pagados",
+        "Cuando el negocio depende de conectar personas entre sí (marketplace, red social, plataforma colaborativa)"
       ],
-      "etiqueta_arbol": "Construye una Comunidad Real"
+      "etiqueta_arbol": "Construye una Comunidad Real",
+      "ids_alias": [
+        "construccion_de_comunidad_como_canal_traccion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "construccion_de_comunidad_como_canal_traccion",
+          "titulo": "Construcción de Comunidad como Canal de Tracción",
+          "fuente": "Traction - Gabriel Weinberg"
+        }
+      ]
     },
     "commuting_teletrabajo_sostenible": {
       "node_id": "commuting_teletrabajo_sostenible",
@@ -17463,7 +17508,7 @@
       "entregable_esperado": "Un mecanismo de contribución de usuarios integrado al producto y una lista de candidatos de contratación provenientes de la comunidad.",
       "nodos_previos": [
         "gestion_calidad_comunidad_a_escala",
-        "construccion_de_comunidad_como_canal_traccion",
+        "community_building_estrategia",
         "comunidad_tribu_marca"
       ],
       "nodos_siguientes": [
@@ -19521,7 +19566,8 @@
         "Cuando el negocio depende de conectar personas entre sí (marketplace, red social, plataforma colaborativa)",
         "Cuando se busca un canal de tracción de bajo costo pero alto compromiso emocional del usuario"
       ],
-      "etiqueta_arbol": "Usa la Comunidad para Crecer"
+      "etiqueta_arbol": "Usa la Comunidad para Crecer",
+      "deprecado": true
     },
     "construccion_de_leverage": {
       "node_id": "construccion_de_leverage",
@@ -19976,7 +20022,8 @@
       "condiciones_activacion": [
         "Durante sesiones de brainstorming o co-creación en equipo"
       ],
-      "etiqueta_arbol": "Construye Sobre Ideas de Otros"
+      "etiqueta_arbol": "Construye Sobre Ideas de Otros",
+      "deprecado": true
     },
     "consultores_comercio_internacional": {
       "node_id": "consultores_comercio_internacional",
@@ -23634,23 +23681,36 @@
       "pasos_accionables": [
         "Identifica los sistemas que usas para operar y llevar las cuentas, y de dónde salen los datos que necesitas",
         "Automatiza la captura de esos datos para no tener que ingresarlos a mano",
-        "Arma primero una versión simple y pequeña antes de ampliarla",
+        "Arma primero una versión simple y pequeña antes de ampliarla, consolidando diaria u horariamente",
         "Deja listos reportes ya armados y la posibilidad de hacer consultas propias para quien los necesite",
-        "Si tiene sentido, dale acceso por internet a las personas con las que trabajas en tu cadena de suministro"
+        "Si tiene sentido, dale acceso por internet a las personas con las que trabajas en tu cadena de suministro",
+        "Prioriza este proyecto como base antes de construir módulos analíticos (forecasting, scheduling)"
       ],
       "entregable_esperado": "Un repositorio de datos (data warehouse) que funciona, conectado automáticamente a tus sistemas de origen, con reportes básicos de tu operación",
       "nodos_previos": [
-        "jerarquia_datos_scor"
+        "jerarquia_datos_scor",
+        "cuatro_capacidades_mercado"
       ],
       "nodos_siguientes": [
         "diseno_dashboards",
-        "compartir_datos_cadena_suministro"
+        "compartir_datos_cadena_suministro",
+        "bpm_gestion_excepciones"
       ],
       "condiciones_activacion": [
         "Cuando manejas varios sistemas de información dispersos",
         "Si necesitas ver de un vistazo cómo va tu operación"
       ],
-      "etiqueta_arbol": "Centraliza tus Datos Clave"
+      "etiqueta_arbol": "Centraliza tus Datos Clave",
+      "ids_alias": [
+        "data_warehouse_como_fundamento"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "data_warehouse_como_fundamento",
+          "titulo": "Data Warehouse Empresarial como Fundamento de Mejora Operativa",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        }
+      ]
     },
     "creacion_estrategia_cadena_suministro": {
       "node_id": "creacion_estrategia_cadena_suministro",
@@ -25313,7 +25373,7 @@
         "definicion_alineacion_cadena_suministro"
       ],
       "nodos_siguientes": [
-        "data_warehouse_como_fundamento"
+        "creacion_data_warehouse"
       ],
       "condiciones_activacion": [
         "Cuando se define la estrategia de inversión en operaciones",
@@ -25784,7 +25844,7 @@
       ],
       "entregable_esperado": "Un programa de capacitación o toolkit cultural que empodere a los empleados como diseñadores de experiencia en cada punto de contacto",
       "nodos_previos": [
-        "diseno_de_experiencias_participativas",
+        "economia_de_la_experiencia",
         "reduccion_tamano_de_lote_batch_size",
         "tecnica_perder_objeto",
         "rediseno_procesos_negocio_cx",
@@ -26733,7 +26793,7 @@
       ],
       "entregable_esperado": "Cultura y protocolo de reunión donde se documenta explícitamente el enfoque sistémico y se evita la atribución de culpa personal",
       "nodos_previos": [
-        "tecnica_cinco_porques",
+        "five_whys_inversion_proporcional",
         "aceleracion_de_gates"
       ],
       "nodos_siguientes": [
@@ -27164,7 +27224,7 @@
       ],
       "nodos_siguientes": [
         "customer_discovery_overview",
-        "fase_mobilizacion_equipo_multifuncional"
+        "fase_mobilizar_modelo_negocio"
       ],
       "condiciones_activacion": [
         "Si le delegas la conversación con clientes a alguien de ventas o marketing en lugar de hacerlo tú mismo"
@@ -27546,7 +27606,7 @@
         "prototipado_rapido",
         "voz_del_cliente_voc",
         "cultura_de_experiencia",
-        "diseno_de_experiencias_participativas",
+        "economia_de_la_experiencia",
         "investigacion_etnografica_ideacion"
       ],
       "nodos_siguientes": [
@@ -27915,7 +27975,7 @@
         "lienzo_modelo_negocio",
         "plan_de_adquisicion_acquire",
         "relaciones_con_clientes",
-        "framework_evaluacion_director_ventas",
+        "evaluacion_vp_ventas",
         "tipos_de_clientes",
         "embudo_get_keep_grow"
       ],
@@ -28218,7 +28278,8 @@
       "condiciones_activacion": [
         "Cuando se quiere mejorar pronóstico, inventario o gestión de pedidos pero los datos están fragmentados en múltiples sistemas"
       ],
-      "etiqueta_arbol": "Ordena tus Datos Primero"
+      "etiqueta_arbol": "Ordena tus Datos Primero",
+      "deprecado": true
     },
     "deadlines_como_herramienta_convergencia": {
       "node_id": "deadlines_como_herramienta_convergencia",
@@ -29668,22 +29729,26 @@
       "resumen_teorico": "Una cadena de suministro es la red de empresas y actividades necesarias para diseñar, fabricar, entregar y usar un producto o servicio. Toda empresa participa en una o más cadenas de suministro y debe entender el rol que juega en ellas. La gestión de la cadena de suministro (SCM) es la coordinación sistémica de producción, inventario, ubicación y transporte entre los participantes para lograr el mejor balance entre capacidad de respuesta y eficiencia según el mercado servido. La estrategia de la empresa (competir por precio vs. por servicio/conveniencia) debe determinar el diseño de su cadena de suministro.",
       "pasos_accionables": [
         "Mapear todas las empresas y actividades que participan en la cadena de suministro de tu producto/servicio.",
-        "Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.).",
+        "Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.)., y sus core competencies",
         "Definir si tu estrategia competitiva se basa en precio bajo (requiere eficiencia) o en servicio/conveniencia (requiere capacidad de respuesta).",
-        "Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida.",
+        "Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida., que son los 5 drivers (producción, inventario, ubicación, transporte, información)",
         "Identificar en qué categoría(s) participa tu empresa: productor, distribuidor, minorista, proveedor de servicios",
         "Mapear todos los participantes de tu cadena de suministro actual, incluyendo proveedores del proveedor y clientes del cliente",
-        "Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia operativa"
+        "Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia operativa",
+        "Responder las 6 preguntas de Chopra y Meindl sobre tu mercado: cantidad por lote, tiempo de respuesta, variedad, nivel de servicio, precio, tasa de innovación",
+        "Validar que la estrategia de cadena de suministro sea coherente con la propuesta de valor al cliente"
       ],
       "entregable_esperado": "Mapa de cadena de suministro con el rol de la empresa identificado y una declaración clara de la estrategia competitiva (costo vs. servicio) que guiará las decisiones operativas.",
       "nodos_previos": [
         "lienzo_modelo_negocio",
-        "evaluar_ia_predictiva_vs_generativa_para_negocio"
+        "evaluar_ia_predictiva_vs_generativa_para_negocio",
+        "atributos_mercado_chopra_meindl",
+        "information_driver_supply_chain",
+        "trade_off_responsividad_eficiencia"
       ],
       "nodos_siguientes": [
         "trade_off_responsividad_eficiencia",
         "driver_produccion",
-        "alineacion_cadena_estrategia_negocio",
         "arquitectura_tecnica_modular",
         "bucle_retroalimentacion_autoajustable",
         "collaborative_transportation_management",
@@ -29695,13 +29760,24 @@
         "plataforma_colaboracion_masiva",
         "simulacion_de_operaciones_supply_chain",
         "sistema_visibilidad_cadena_suministro_low_cost",
-        "vehiculos_autonomos_drones_supply_chain"
+        "vehiculos_autonomos_drones_supply_chain",
+        "planificacion_cadena_suministro"
       ],
       "condiciones_activacion": [
         "Cuando el usuario está diseñando o rediseñando las operaciones de su negocio.",
         "Cuando el usuario no ha definido claramente su ventaja competitiva operativa."
       ],
-      "etiqueta_arbol": "Conecta tu Red con el Negocio"
+      "etiqueta_arbol": "Conecta tu Red con el Negocio",
+      "ids_alias": [
+        "alineacion_cadena_estrategia_negocio"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "alineacion_cadena_estrategia_negocio",
+          "titulo": "Alineación de la Cadena de Suministro con la Estrategia de Negocio",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        }
+      ]
     },
     "definicion_calidad_como_conformidad": {
       "node_id": "definicion_calidad_como_conformidad",
@@ -32047,26 +32123,38 @@
       "pasos_accionables": [
         "Convierte tus hipótesis de propuesta de valor en una presentación simple de una diapositiva con tres columnas: problemas, soluciones actuales, solución propuesta",
         "Presenta primero solo los problemas y haz una pausa para que el cliente reaccione y priorice",
-        "Pregúntale cómo resuelve hoy ese problema y quién más lo comparte",
-        "Presenta tu solución al final y observa la reacción genuina del cliente",
+        "Pregúntale cómo resuelve hoy ese problema y quién más lo comparte, y preguntar cómo las rankean",
+        "Presenta tu solución al final y observa la reacción genuina del cliente, sin entrar en features",
         "Cierra la reunión preguntando qué deberías haberle preguntado y pide referencias adicionales",
-        "Anota el costo estimado del problema para el cliente, en tiempo, dinero o frustración, para usarlo más adelante en la validación"
+        "Anota el costo estimado del problema para el cliente, en tiempo, dinero o frustración, para usarlo más adelante en la validación",
+        "Preguntar cómo se compara la solución propuesta con las soluciones actuales"
       ],
       "entregable_esperado": "Presentación del problema validada con comentarios cualitativos de al menos 10 a 15 clientes",
       "nodos_previos": [
-        "preparar_contacto_clientes"
+        "preparar_contacto_clientes",
+        "preguntas_ipo_dolor_cliente"
       ],
       "nodos_siguientes": [
         "customer_validation",
         "audacia_del_cero",
         "burn_rate_por_etapa",
-        "presentacion_problema_tres_columnas",
-        "preguntas_ipo_dolor_cliente"
+        "preguntas_ipo_dolor_cliente",
+        "scorecard_descubrimiento_cliente"
       ],
       "condiciones_activacion": [
         "Cuando ya tienes reuniones agendadas con clientes potenciales y necesitas validar si el problema es real y urgente antes de mostrarles tu producto"
       ],
-      "etiqueta_arbol": "Haz Hablar al Cliente"
+      "etiqueta_arbol": "Haz Hablar al Cliente",
+      "ids_alias": [
+        "presentacion_problema_tres_columnas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "presentacion_problema_tres_columnas",
+          "titulo": "Presentación del Problema en Tres Columnas",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        }
+      ]
     },
     "desarrollo_reporte_benchmarking": {
       "node_id": "desarrollo_reporte_benchmarking",
@@ -35525,7 +35613,8 @@
         "Cuando el producto o servicio se sienta genérico o puramente funcional",
         "Si se busca diferenciación de marca mediante la experiencia del cliente"
       ],
-      "etiqueta_arbol": "Diseña Experiencias, no Solo Productos"
+      "etiqueta_arbol": "Diseña Experiencias, no Solo Productos",
+      "deprecado": true
     },
     "diseno_de_flujos_pace_layers": {
       "node_id": "diseno_de_flujos_pace_layers",
@@ -38686,7 +38775,8 @@
         "La empresa reporta problemas de flujo de caja pese a ventas saludables",
         "Due diligence de adquisición de otra empresa"
       ],
-      "etiqueta_arbol": "Gestiona Cobros y Pagos"
+      "etiqueta_arbol": "Gestiona Cobros y Pagos",
+      "deprecado": true
     },
     "due_diligence_adquisiciones": {
       "node_id": "due_diligence_adquisiciones",
@@ -39251,21 +39341,37 @@
         "Mapear los puntos de contacto (touchpoints) donde el usuario podría pasar de consumo pasivo a participación activa.",
         "Diseñar elementos que generen conexión emocional, no solo eficiencia funcional.",
         "Evaluar la ejecución del detalle (calidad, distribución, precio, diseño físico) ya que fallas de ejecución destruyen buenas ideas.",
-        "Iterar el diseño de la experiencia con el mismo rigor que se aplicaría a la ingeniería de un producto."
+        "Iterar el diseño de la experiencia con el mismo rigor que se aplicaría a la ingeniería de un producto.",
+        "Analizar ejemplos de marcas de experiencia (Whole Foods, Virgin America) para inspirar el diseño propio"
       ],
       "entregable_esperado": "Un análisis de touchpoints con propuestas concretas de mejora para transformar la interacción funcional en una experiencia emocionalmente resonante.",
       "nodos_previos": [
         "customer_journey_mapping",
-        "economia_circular_de_la_imaginacion"
+        "economia_circular_de_la_imaginacion",
+        "analisis_y_sintesis",
+        "empathy_map",
+        "prototipado_de_experiencias"
       ],
       "nodos_siguientes": [
-        "value_proposition_startup"
+        "value_proposition_startup",
+        "cultura_de_experiencia",
+        "customer_journey_mapping"
       ],
       "condiciones_activacion": [
         "Cuando el producto cumple su función pero no logra diferenciarse ni generar lealtad de marca.",
         "Cuando se busca elevar una oferta de commodity/producto/servicio al nivel de experiencia."
       ],
-      "etiqueta_arbol": "Vende Experiencias, no Productos"
+      "etiqueta_arbol": "Vende Experiencias, no Productos",
+      "ids_alias": [
+        "diseno_de_experiencias_participativas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "diseno_de_experiencias_participativas",
+          "titulo": "Diseño de Experiencias Participativas",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "economia_de_la_inspeccion": {
       "node_id": "economia_de_la_inspeccion",
@@ -41722,7 +41828,7 @@
         "proceso_ideacion_modelo_negocio",
         "ciclo_circunstancias_sentimientos_ideas",
         "diseno_basado_en_comportamientos_existentes",
-        "diseno_de_experiencias_participativas",
+        "economia_de_la_experiencia",
         "diseno_fugitivo_runaway_design",
         "elementos_creadores_valor",
         "escenarios_diseno_modelo_negocio",
@@ -45214,7 +45320,7 @@
         "cinco_porques_master"
       ],
       "nodos_siguientes": [
-        "tecnica_cinco_porques"
+        "five_whys_inversion_proporcional"
       ],
       "condiciones_activacion": [
         "Cuando el equipo experimenta retrabajos frecuentes o retrasos en la entrega de producto",
@@ -47001,7 +47107,7 @@
         "lienzo_modelo_negocio",
         "refinar_sales_roadmap",
         "fases_de_retencion_de_clientes",
-        "framework_evaluacion_director_ventas"
+        "evaluacion_vp_ventas"
       ],
       "nodos_siguientes": [
         "plan_de_implementacion_de_venta"
@@ -49184,7 +49290,6 @@
       "node_id": "evaluacion_competencias_centrales",
       "nodos_previos": [
         "evaluacion_industria_cliente",
-        "analisis_disrupciones_mercado",
         "vertical_vs_virtual_integracion"
       ],
       "nodos_siguientes": [
@@ -49593,23 +49698,39 @@
         "Trabajar directamente con usuarios líderes (lead users)",
         "Analizar la cadena de valor de la industria",
         "Crear un Market Map para ver qué jugadores tienen qué porción de ingresos",
-        "Crear un Profit Pool Map para identificar márgenes de ganancia por actividad",
-        "Identificar los segmentos de mercado más atractivos (arenas) para enfocar la búsqueda de ideas"
+        "Crear un Profit Pool Map para identificar márgenes de ganancia por actividad, y cómo están cambiando",
+        "Identificar los segmentos de mercado más atractivos (arenas) para enfocar la búsqueda de ideas",
+        "Evaluar el futuro de cada actor: quién gana, quién es desintermediado",
+        "Definir escenarios futuros y detectar arenas de oportunidad"
       ],
       "entregable_esperado": "Documento con mapa de mercado, mapa de pool de ganancias y lista de arenas/segmentos prioritarios para innovación",
       "nodos_previos": [
-        "emocion_como_motor_pensamiento"
+        "emocion_como_motor_pensamiento",
+        "analisis_y_sintesis"
       ],
       "nodos_siguientes": [
         "evaluacion_competencias_centrales",
         "iota_analysis",
-        "explotacion_tecnologias_disruptivas"
+        "explotacion_tecnologias_disruptivas",
+        "tecnologias_disruptivas_oportunidad"
       ],
       "condiciones_activacion": [
         "Cuando se busca identificar necesidades emergentes o no satisfechas del cliente",
-        "Cuando se necesita enfocar la búsqueda de ideas de nuevos productos en segmentos rentables"
+        "Cuando se necesita enfocar la búsqueda de ideas de nuevos productos en segmentos rentables",
+        "Cuando se busca identificar oportunidades de innovación a nivel estratégico, no solo a nivel de producto individual",
+        "Cuando la industria del cliente está atravesando cambios estructurales"
       ],
-      "etiqueta_arbol": "Estudia la Industria de tu Cliente"
+      "etiqueta_arbol": "Estudia la Industria de tu Cliente",
+      "ids_alias": [
+        "analisis_disrupciones_mercado"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "analisis_disrupciones_mercado",
+          "titulo": "Búsqueda Estratégica de Grandes Problemas y Disrupciones en el Mercado",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        }
+      ]
     },
     "evaluacion_madurez_shingo": {
       "node_id": "evaluacion_madurez_shingo",
@@ -50389,25 +50510,41 @@
       "pasos_accionables": [
         "Pregunta si el candidato diseñó o solo ejecutó el proceso de ventas en su empresa anterior",
         "Verifica su comprensión de procesos técnicos de venta: benchmarking, POCs, demos, lockout documents",
-        "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo",
+        "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo, pidiendole ejemplos de contrataciones que salieron mal",
         "Pide que describa su modelo de evaluación de representantes y diferencie entre reps transaccionales y de venta enterprise",
         "Solicita referencias de clientes que puedan confirmar su capacidad de cerrar grandes deals",
-        "Evalúa su entendimiento de marketing (branding, generación de leads, sales enablement) y de conflictos de canal"
+        "Evalúa su entendimiento de marketing (branding, generación de leads, sales enablement) y de conflictos de canal",
+        "Evalúa si puede presentarte de forma convincente y estratégica su empresa actual, como prueba de que sabe articular una visión",
+        "Pide referencias de su equipo actual para confirmar si la gente lo seguiría",
+        "Evalúa si entiende de planes de compensación, incentivos por resultados, canales de venta y los conflictos que surgen entre canales"
       ],
       "entregable_esperado": "Checklist de entrevista estructurado con preguntas específicas para validar competencias reales de un candidato a VP de Ventas",
       "nodos_previos": [
         "framework_ones_and_twos",
-        "contratar_cerrador_de_ventas"
+        "contratar_cerrador_de_ventas",
+        "customer_segments_hypothesis"
       ],
       "nodos_siguientes": [
         "diseno_embudo_ventas_cliente",
-        "framework_excelencia_operacional"
+        "framework_excelencia_operacional",
+        "estrategia_de_ventas"
       ],
       "condiciones_activacion": [
         "Cuando la startup necesita escalar su función de ventas contratando un líder senior",
-        "Si el fundador no tiene experiencia previa evaluando ejecutivos de ventas"
+        "Si el fundador no tiene experiencia previa evaluando ejecutivos de ventas",
+        "Cuando buscas hacer crecer tu equipo comercial que vende a otras empresas (B2B)"
       ],
-      "etiqueta_arbol": "Evalúa a tu Futuro Vendedor"
+      "etiqueta_arbol": "Evalúa a tu Futuro Vendedor",
+      "ids_alias": [
+        "framework_evaluacion_director_ventas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "framework_evaluacion_director_ventas",
+          "titulo": "Cómo evaluar a un candidato a líder de ventas para grandes cuentas (Head of Enterprise Sales)",
+          "fuente": "The Hard Thing About Hard Thing - Ben Horowitz"
+        }
+      ]
     },
     "evaluar_controles": {
       "node_id": "evaluar_controles",
@@ -52533,7 +52670,7 @@
         "ocho_fases_experiencia_cliente"
       ],
       "nodos_siguientes": [
-        "fase_accomplish"
+        "fase_accomplish_experiencia_cliente"
       ],
       "condiciones_activacion": [
         "Cuando los clientes muestran confusión o fricción al usar el producto/servicio por primera vez."
@@ -52568,7 +52705,7 @@
         "comunicacion_proactiva_puntos_estres",
         "documento_quien_es_quien_equipo",
         "onboarding_comunitario_y_lenguaje_propio",
-        "visualizacion_progreso_onboarding"
+        "gamificacion_onboarding_visual"
       ],
       "condiciones_activacion": [
         "Cuando el negocio tiene alta tasa de abandono en los primeros meses tras la venta",
@@ -52638,7 +52775,8 @@
       "ids_alias": [
         "fase_accomplish_2"
       ],
-      "etiqueta_arbol": "Confirma que el Cliente Gane"
+      "etiqueta_arbol": "Confirma que el Cliente Gane",
+      "deprecado": true
     },
     "fase_accomplish_experiencia_cliente": {
       "node_id": "fase_accomplish_experiencia_cliente",
@@ -52648,7 +52786,7 @@
       "fuente": "Never Lose a Customer Again - Joey Coleman",
       "resumen_teorico": "La fase Accomplish es el momento en que el cliente realmente logra el resultado que buscaba al comprar tu producto o servicio. Sorprendentemente pocas empresas rastrean si sus clientes llegan a esta fase. Existen tres escenarios posibles: Mission Accomplished (logra el objetivo con experiencia positiva y repetirá compra/recomendará), Lukewarm Bath (logra el objetivo pero con sentimientos negativos, no repetirá), y Mission Failure (no logra el objetivo y abandona la relación). Una venta no está 'terminada' hasta que el cliente recibe un resultado.",
       "pasos_accionables": [
-        "Definir claramente cuál es el objetivo/resultado que el cliente busca al comprar tu producto",
+        "Definir claramente cuál es el objetivo/resultado que el cliente busca al comprar tu producto, y no solo la entrega del producto",
         "Implementar un sistema de seguimiento (automatizado o manual) para saber cuándo el cliente alcanza ese objetivo",
         "Clasificar cada relación con cliente en uno de los tres escenarios: Mission Accomplished, Lukewarm Bath o Mission Failure",
         "Diseñar un momento de celebración específico para cuando el cliente logra su objetivo",
@@ -52657,7 +52795,8 @@
         "Investigar el deseo o motivación real detrás de ese objetivo declarado",
         "Diseñar un punto de seguimiento posterior al logro del objetivo aparente (ej. pedir una foto, confirmar el resultado real)",
         "Mantener contacto y apoyo del equipo más allá del cumplimiento nominal del contrato",
-        "Evitar que el equipo 'desacelere' el esfuerzo justo cuando el cliente cree haber terminado"
+        "Evitar que el equipo 'desacelere' el esfuerzo justo cuando el cliente cree haber terminado",
+        "Recoger evidencia (testimonios, datos) del resultado logrado para usos futuros."
       ],
       "entregable_esperado": "Sistema de tracking de logros de clientes y protocolo de celebración definido para el momento en que se alcanza el objetivo",
       "nodos_previos": [
@@ -52665,20 +52804,37 @@
         "value_proposition_startup",
         "celebracion_hitos_cliente",
         "documento_quien_es_quien_equipo",
-        "fase_acclimate_experiencia_cliente"
+        "fase_acclimate_experiencia_cliente",
+        "fase_acclimate",
+        "micro_experiencias_personalizadas",
+        "ocho_fases_experiencia_cliente",
+        "reunion_conclusion_proyecto"
       ],
       "nodos_siguientes": [
         "fase_adopt_ciclo_cliente",
         "gestion_testimonios",
         "celebracion_automatizada_de_hitos",
-        "reunion_conclusion_proyecto"
+        "reunion_conclusion_proyecto",
+        "fase_adopt",
+        "seis_herramientas_comunicacion_celebracion",
+        "upsell_post_logro"
       ],
       "condiciones_activacion": [
         "Cuando el negocio no sabe si sus clientes están logrando el resultado prometido",
         "Cuando hay alta tasa de abandono o no renovación pese a buen soporte inicial",
         "Al diseñar el ciclo de vida completo de la experiencia del cliente"
       ],
-      "etiqueta_arbol": "Verifica el Logro del Cliente"
+      "etiqueta_arbol": "Verifica el Logro del Cliente",
+      "ids_alias": [
+        "fase_accomplish"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "fase_accomplish",
+          "titulo": "Fase 6: Accomplish (Lograr)",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "fase_activate": {
       "node_id": "fase_activate",
@@ -52850,7 +53006,7 @@
       ],
       "entregable_esperado": "Un programa de comunidad/lealtad con beneficios exclusivos para clientes comprometidos con la marca.",
       "nodos_previos": [
-        "fase_accomplish",
+        "fase_accomplish_experiencia_cliente",
         "upsell_post_logro",
         "micro_experiencias_personalizadas",
         "ocho_fases_experiencia_cliente",
@@ -53259,7 +53415,6 @@
       ],
       "entregable_esperado": "Un documento de insights de mercado y clientes con mapas de empatía, supuestos de industria cuestionados y análisis de competidores o patrones de industria.",
       "nodos_previos": [
-        "fase_mobilizacion_equipo_multifuncional",
         "fase_mobilizar_modelo_negocio",
         "pensamiento_convergente_divergente",
         "proceso_diseno_modelo_negocio_5_fases"
@@ -53370,7 +53525,8 @@
       "condiciones_activacion": [
         "Si se inicia un proyecto formal de diseño o rediseño de modelo de negocio en una organización establecida"
       ],
-      "etiqueta_arbol": "Arma tu Equipo Multifuncional"
+      "etiqueta_arbol": "Arma tu Equipo Multifuncional",
+      "deprecado": true
     },
     "fase_mobilizar_modelo_negocio": {
       "node_id": "fase_mobilizar_modelo_negocio",
@@ -53381,14 +53537,16 @@
       "resumen_teorico": "Esta es la primera fase para diseñar tu modelo de negocio: pones sobre la mesa el objetivo, pruebas tus primeras ideas, planificas y armas tu equipo. El peligro más grande es que te enamores demasiado de tu idea inicial y eso te cierre la puerta a explorar otras posibilidades. Si trabajas dentro de una empresa ya establecida, además necesitas ganarte la legitimidad del proyecto, manejar los intereses de quienes ya tienen algo en juego, formar un equipo con gente de distintas áreas y guiar a quienes van a tomar la decisión final.",
       "pasos_accionables": [
         "Define con claridad el objetivo, el alcance y el porqué de tu proyecto",
-        "Arma un equipo con gente de experiencias distintas",
+        "Arma un equipo con gente de experiencias distintas, incluyendo diferentes niveles jerárquicos y áreas de expertise",
         "Usa el Lienzo de Modelo de Negocio (Business Model Canvas) como lenguaje común para hablar del proyecto",
         "Haz un ejercicio para poner a prueba tu idea (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar",
-        "Si estás dentro de una empresa ya establecida, consigue el respaldo visible de quienes mandan y maneja los intereses de quienes podrían sentirse afectados"
+        "Si estás dentro de una empresa ya establecida, consigue el respaldo visible de quienes mandan y maneja los intereses de quienes podrían sentirse afectados",
+        "Educar a los tomadores de decisiones sobre modelos de negocio usando historias e imágenes, no teoría"
       ],
       "entregable_esperado": "Tu equipo armado, el objetivo definido por escrito, y una primera validación de tu idea de negocio con el ejercicio kill/thrill",
       "nodos_previos": [
-        "proceso_diseno_modelo_negocio_5_fases"
+        "proceso_diseno_modelo_negocio_5_fases",
+        "customer_development_team"
       ],
       "nodos_siguientes": [
         "fase_entender_modelo_negocio",
@@ -53397,7 +53555,17 @@
       "condiciones_activacion": [
         "Cuando arrancas formalmente un proyecto para innovar tu modelo de negocio, antes de salir a investigar el mercado"
       ],
-      "etiqueta_arbol": "Prepara tu Proyecto de Modelo"
+      "etiqueta_arbol": "Prepara tu Proyecto de Modelo",
+      "ids_alias": [
+        "fase_mobilizacion_equipo_multifuncional"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "fase_mobilizacion_equipo_multifuncional",
+          "titulo": "Fase de Movilización: Equipo Multifuncional",
+          "fuente": "Business Model Generation - Osterwalder, Alexander"
+        }
+      ]
     },
     "fases_de_retencion_de_clientes": {
       "node_id": "fases_de_retencion_de_clientes",
@@ -53710,27 +53878,40 @@
       "resumen_teorico": "Antes de que una tecnología o una decisión de diseño exista, puedes contarte una historia sobre cómo sería vivir con ella. Imagina escenarios extremos, llevados al límite, para descubrir tensiones y dilemas que hoy no ves: qué pasaría si existiera un sistema que puntuara el comportamiento de la gente, o una forma de criar hijos entre varias personas, o una donación genética regulada. Este ejercicio te ayuda a anticipar efectos secundarios no deseados y a cuestionar si lo que estás construyendo realmente representa progreso.",
       "pasos_accionables": [
         "Elige una tendencia tecnológica o social emergente que se relacione con lo que estás construyendo.",
-        "Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real.",
+        "Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real., en 10-15 años, del tipo usuarios, empresas, reguladores",
         "Identifica qué tensiones éticas, sociales o de fondo aparecen en ese escenario.",
-        "Usa la historia para conversar con quien te acompaña o con las personas involucradas, y anticipar consecuencias que no querrías.",
+        "Usa la historia para conversar con quien te acompaña o con las personas involucradas, y anticipar consecuencias que no querrías., y antes de definir requisitos del producto",
         "Saca de ahí principios de diseño que te ayuden a evitar los riesgos que descubriste en la historia."
       ],
       "entregable_esperado": "Un relato breve (1 a 2 páginas) que explore cómo sería el futuro con la tecnología o el sistema que estás pensando, más una lista de las tensiones éticas que descubriste al escribirlo.",
       "nodos_previos": [
         "investigacion_analoga",
         "evaluacion_megatendencias",
-        "disenar_para_sanacion"
+        "disenar_para_sanacion",
+        "buscar_armonia_diseno"
       ],
       "nodos_siguientes": [
         "diseno_intencional_etica",
-        "prototipado_rapido"
+        "prototipado_rapido",
+        "ciclo_circunstancias_sentimientos_ideas",
+        "search_for_business_model"
       ],
       "condiciones_activacion": [
         "Cuando lo que estás construyendo usa tecnología emergente con impacto profundo en las personas.",
         "Si necesitas anticipar consecuencias no intencionadas antes de poner en marcha un sistema.",
         "Cuando quieres generar una conversación honesta sobre el futuro de lo que estás creando."
       ],
-      "etiqueta_arbol": "Imagina Futuros con Ficción Especulativa"
+      "etiqueta_arbol": "Imagina Futuros con Ficción Especulativa",
+      "ids_alias": [
+        "historia_del_futuro_escenarios_especulativos"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "historia_del_futuro_escenarios_especulativos",
+          "titulo": "Historia del Futuro: Escenarios Especulativos como Herramienta de Diseño",
+          "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+        }
+      ]
     },
     "fijacion_cognitiva": {
       "node_id": "fijacion_cognitiva",
@@ -54456,24 +54637,46 @@
         "Para cada respuesta, asignar una persona responsable y una acción proporcional al nivel del problema",
         "Documentar tanto el aprendizaje obtenido como las acciones correctivas tomadas",
         "Evitar culpar a individuos; enfocar el análisis en procesos y sistemas",
-        "Revisar después de un tiempo si el problema se repitió para validar la efectividad de las correcciones"
+        "Revisar después de un tiempo si el problema se repitió para validar la efectividad de las correcciones",
+        "Cuando ocurra un fallo o síntoma negativo, reunir a todas las personas involucradas en su descubrimiento, diagnóstico y resolución",
+        "Identificar en cada nivel si la causa es técnica o humana/organizacional"
       ],
       "entregable_esperado": "Documento de sesión Five Whys con cadena de causas, responsables asignados y acciones proporcionales implementadas",
       "nodos_previos": [
         "design_test_repeat",
-        "cinco_porques_master"
+        "cinco_porques_master",
+        "espiral_muerte_lotes_grandes",
+        "identificar_earlyvangelists",
+        "no_sacrificar_calidad_por_velocidad",
+        "organizacion_adaptativa",
+        "regla_simplificada_tolerancia_errores",
+        "sistema_inmune_producto"
       ],
       "nodos_siguientes": [
         "mejora_continua_relentless",
         "investigacion_incidentes_2",
-        "investigacion_incidentes"
+        "investigacion_incidentes",
+        "cinco_porques_master",
+        "curse_cinco_culpas",
+        "inversion_proporcional"
       ],
       "condiciones_activacion": [
         "Cuando ocurre un error o falla técnica/operativa repetible",
         "Cuando el equipo tiende a culpar a personas en lugar de procesos",
-        "Cuando se busca prevenir la recurrencia de un problema sistémico"
+        "Cuando se busca prevenir la recurrencia de un problema sistémico",
+        "Cuando la organización necesita balancear velocidad de ejecución con calidad de forma incremental"
       ],
-      "etiqueta_arbol": "Invierte Según Cada Causa Raíz"
+      "etiqueta_arbol": "Invierte Según Cada Causa Raíz",
+      "ids_alias": [
+        "tecnica_cinco_porques"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "tecnica_cinco_porques",
+          "titulo": "Los Cinco Porqués (Five Whys)",
+          "fuente": "The Lean Startup - Eric Ries"
+        }
+      ]
     },
     "flexible_go_kill_criteria": {
       "node_id": "flexible_go_kill_criteria",
@@ -55518,7 +55721,8 @@
         "Cuando necesitas contratar a tu primer líder de ventas para grandes cuentas",
         "Cuando buscas hacer crecer tu equipo comercial que vende a otras empresas (B2B)"
       ],
-      "etiqueta_arbol": "Evalúa a tu Líder de Ventas"
+      "etiqueta_arbol": "Evalúa a tu Líder de Ventas",
+      "deprecado": true
     },
     "framework_excelencia_operacional": {
       "node_id": "framework_excelencia_operacional",
@@ -56687,21 +56891,35 @@
         "Diseñar un elemento visual o lúdico (rompecabezas, checklist ilustrado, barra de progreso) que represente cada paso",
         "Entregar el elemento físico o digital al inicio del proceso, junto con el kickoff",
         "Actualizar y comunicar el avance con cada hito completado usando imágenes en emails o mensajes",
-        "Celebrar la finalización con un evento o pieza final que sirva como recuerdo tangible"
+        "Celebrar la finalización con un evento o pieza final que sirva como recuerdo tangible",
+        "Enviar solo la información necesaria para el paso actual, evitando saturar al cliente con todo el proceso de una vez.",
+        "Anticipar el siguiente paso en cada comunicación para generar expectativa."
       ],
       "entregable_esperado": "Un sistema visual/lúdico de seguimiento de progreso para procesos complejos de implementación u onboarding",
       "nodos_previos": [
         "fase_acclimate_mapa_de_proceso",
         "conversacion_emocional_postcompra",
-        "fase_affirm_buyers_remorse"
+        "fase_affirm_buyers_remorse",
+        "fase_acclimate_experiencia_cliente"
       ],
       "nodos_siguientes": [
-        "get_visual"
+        "get_visual",
+        "celebracion_hitos_cliente"
       ],
       "condiciones_activacion": [
         "Cuando el proceso de implementación o entrega es técnico, largo o involucra a usuarios sin experiencia previa en el producto/servicio"
       ],
-      "etiqueta_arbol": "Vuelve Lúdica la Bienvenida"
+      "etiqueta_arbol": "Vuelve Lúdica la Bienvenida",
+      "ids_alias": [
+        "visualizacion_progreso_onboarding"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "visualizacion_progreso_onboarding",
+          "titulo": "Visualización Gráfica del Progreso de Onboarding",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "ganar_comprension_del_cliente": {
       "fase_proyecto": "validacion",
@@ -57428,7 +57646,7 @@
       ],
       "entregable_esperado": "Documento de guías/estándares de comunidad publicado y un sistema (manual o automatizado) de auto-moderación funcionando.",
       "nodos_previos": [
-        "construccion_de_comunidad_como_canal_traccion"
+        "community_building_estrategia"
       ],
       "nodos_siguientes": [
         "comunidad_como_activo_estrategico"
@@ -59681,7 +59899,7 @@
         "create_a_concept",
         "diseno_activismo_social",
         "butterfly_test_convergencia",
-        "construir_sobre_ideas_ajenas",
+        "reglas_brainstorming",
         "pensamiento_convergente_divergente"
       ],
       "condiciones_activacion": [
@@ -61346,7 +61564,8 @@
       "condiciones_activacion": [
         "Cuando tu producto es digital y puede beneficiarse de crecer por recomendación o efecto de red, con poco gasto"
       ],
-      "etiqueta_arbol": "Haz que tu Producto se Comparta"
+      "etiqueta_arbol": "Haz que tu Producto se Comparta",
+      "deprecado": true
     },
     "herramientas_analisis_causa_raiz": {
       "node_id": "herramientas_analisis_causa_raiz",
@@ -61540,7 +61759,7 @@
       "nodos_siguientes": [
         "plan_de_adquisicion_acquire",
         "social_ads_indirect_response",
-        "tracking_publicidad_offline",
+        "publicidad_offline_pruebas_locales",
         "decidir_vender_solo_online_o_tambien_tienda_fisica"
       ],
       "condiciones_activacion": [
@@ -61965,7 +62184,8 @@
         "Cuando se diseña tecnología con alto potencial de impacto social a largo plazo (IA, biometría, redes sociales).",
         "Cuando el equipo necesita anticipar riesgos éticos antes de la fase de prototipado."
       ],
-      "etiqueta_arbol": "Imagina Escenarios del Futuro"
+      "etiqueta_arbol": "Imagina Escenarios del Futuro",
+      "deprecado": true
     },
     "historia_marca_diferenciacion": {
       "node_id": "historia_marca_diferenciacion",
@@ -63645,7 +63865,7 @@
         "formalizar_junta_asesora",
         "producto_minimo_viable",
         "contratar_cerrador_de_ventas",
-        "tecnica_cinco_porques"
+        "five_whys_inversion_proporcional"
       ],
       "condiciones_activacion": [
         "Cuando buscas tus primeros clientes para testear el MVP y el mercado mainstream aún no está listo",
@@ -64844,7 +65064,7 @@
         "driver_transporte"
       ],
       "nodos_siguientes": [
-        "alineacion_cadena_estrategia_negocio",
+        "definicion_alineacion_cadena_suministro",
         "trade_off_responsividad_eficiencia",
         "planificacion_cadena_suministro"
       ],
@@ -66340,7 +66560,7 @@
       ],
       "entregable_esperado": "Lista de acciones preventivas de bajo costo asignadas por nivel de causa, con seguimiento de recurrencia del problema",
       "nodos_previos": [
-        "tecnica_cinco_porques"
+        "five_whys_inversion_proporcional"
       ],
       "nodos_siguientes": [
         "organizacion_adaptativa"
@@ -70355,7 +70575,7 @@
         "covenants_control_terms"
       ],
       "nodos_siguientes": [
-        "restructuracion_deuda_soft_landing"
+        "plan_a_b_c_soft_landing"
       ],
       "condiciones_activacion": [
         "Si el contrato de deuda incluye una cláusula MAC y la empresa necesita evaluar el riesgo de discrecionalidad del prestamista."
@@ -73700,7 +73920,7 @@
         "breakup_fee_evaluation"
       ],
       "nodos_siguientes": [
-        "restructuracion_deuda_soft_landing"
+        "plan_a_b_c_soft_landing"
       ],
       "condiciones_activacion": [
         "Cuando ya cerraste una ronda con condiciones que consideras desfavorables"
@@ -75225,7 +75445,7 @@
         "customer_appreciation_pr"
       ],
       "nodos_siguientes": [
-        "fase_accomplish",
+        "fase_accomplish_experiencia_cliente",
         "fase_adopt"
       ],
       "condiciones_activacion": [
@@ -78660,7 +78880,7 @@
         "optimizacion_metricas_crecimiento"
       ],
       "nodos_siguientes": [
-        "tecnica_cinco_porques"
+        "five_whys_inversion_proporcional"
       ],
       "condiciones_activacion": [
         "Cuando el equipo empieza a acumular bugs o problemas de calidad recurrentes al intentar ir más rápido",
@@ -79604,7 +79824,7 @@
         "fase_affirm",
         "fase_activate_primera_impresion",
         "fase_acclimate",
-        "fase_accomplish",
+        "fase_accomplish_experiencia_cliente",
         "fase_adopt",
         "advocacy_customer_journey",
         "estrategia_multicanal_bienvenida",
@@ -80512,7 +80732,7 @@
         "inversion_proporcional"
       ],
       "nodos_siguientes": [
-        "tecnica_cinco_porques",
+        "five_whys_inversion_proporcional",
         "no_sacrificar_calidad_por_velocidad"
       ],
       "condiciones_activacion": [
@@ -81979,7 +82199,7 @@
       "nodos_previos": [
         "usuarios_extremos_edge_cases",
         "analisis_y_sintesis",
-        "construir_sobre_ideas_ajenas",
+        "reglas_brainstorming",
         "get_visual"
       ],
       "nodos_siguientes": [
@@ -83318,13 +83538,16 @@
         "Si el Plan A falla, explora activamente opciones de venta, recapitalización o venta de activos (Plan B)",
         "Mantén una comunicación transparente y profesional con tus inversionistas y prestamistas durante la transición",
         "Si la venta no se concreta, prepara un cierre ordenado (Plan C) que minimice las pérdidas para todos los involucrados",
-        "Documenta y ejecuta el proceso con profesionalismo para proteger tus relaciones futuras en el mercado de capital de riesgo"
+        "Documenta y ejecuta el proceso con profesionalismo para proteger tus relaciones futuras en el mercado de capital de riesgo",
+        "Avisa a quien te prestó el dinero apenas detectes que tu desempeño se está desviando de forma importante del plan.",
+        "Revisa cómo te está calificando tu prestamista en este momento (si te ve como un caso normal, uno que están vigilando de cerca, o uno con problemas) y qué significa eso para tu relación con ellos."
       ],
       "entregable_esperado": "Un plan de contingencia documentado con los escenarios A, B y C, y comunicación proactiva con tus inversionistas sobre la situación de tu negocio",
       "nodos_previos": [
         "venture_debt_introduccion",
-        "restructuracion_deuda_soft_landing",
-        "reservas_de_capital_vc"
+        "reservas_de_capital_vc",
+        "mac_clause_gestion_riesgo",
+        "mejorar_deal_despues_del_hecho"
       ],
       "nodos_siguientes": [
         "relaciones_con_clientes"
@@ -83334,7 +83557,17 @@
         "Si el acceso a capital no dilutivo está disminuyendo",
         "Si tienes deuda de venture debt en tu tabla de capitalización (cap table) y hay riesgo de incumplimiento (default)"
       ],
-      "etiqueta_arbol": "Prepara tu Plan de Contingencia"
+      "etiqueta_arbol": "Prepara tu Plan de Contingencia",
+      "ids_alias": [
+        "restructuracion_deuda_soft_landing"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "restructuracion_deuda_soft_landing",
+          "titulo": "Reestructurar tu deuda y buscar un aterrizaje suave (soft landing)",
+          "fuente": "Venture Deals"
+        }
+      ]
     },
     "plan_accion_corto_mediano_largo_plazo": {
       "node_id": "plan_accion_corto_mediano_largo_plazo",
@@ -83718,7 +83951,7 @@
         "analisis_de_cohortes",
         "push_vs_pull_marketing",
         "customer_activation_tactics",
-        "herramientas_adquisicion_viral"
+        "acquisicion_viral_engineering"
       ],
       "condiciones_activacion": [
         "Cuando entras en la fase de validar clientes (customer validation) y necesitas probar qué canales de adquisición funcionan",
@@ -84405,7 +84638,7 @@
       "nodos_previos": [
         "evaluacion_encuesta_calidad_proveedor",
         "seleccion_fuente_unica_multiple",
-        "alineacion_cadena_estrategia_negocio",
+        "definicion_alineacion_cadena_suministro",
         "driver_informacion",
         "gestion_instalaciones",
         "gestion_pedidos_order_management",
@@ -86499,7 +86732,7 @@
       "nodos_siguientes": [
         "scorecard_descubrimiento_cliente",
         "presentacion_solucion_producto",
-        "presentacion_problema_tres_columnas"
+        "desarrollo_presentacion_problema"
       ],
       "condiciones_activacion": [
         "Cuando se está en fase de customer discovery y se necesita validar la importancia real de un problema"
@@ -87123,7 +87356,8 @@
       "condiciones_activacion": [
         "Cuando se necesita validar tanto el problema como la reacción inicial a la solución en una misma sesión de entrevista"
       ],
-      "etiqueta_arbol": "Presenta el Problema en Partes"
+      "etiqueta_arbol": "Presenta el Problema en Partes",
+      "deprecado": true
     },
     "presentacion_solucion_producto": {
       "node_id": "presentacion_solucion_producto",
@@ -92054,7 +92288,7 @@
       ],
       "nodos_siguientes": [
         "usuarios_extremos_edge_cases",
-        "diseno_de_experiencias_participativas",
+        "economia_de_la_experiencia",
         "diseno_en_la_cuarta_dimension",
         "storytelling_como_herramienta_de_diseno",
         "espacios_de_diseno_superpuestos",
@@ -92882,27 +93116,42 @@
       "pasos_accionables": [
         "Diseña varias pruebas pequeñas de publicidad fuera de internet en paralelo, en distintos mercados locales",
         "Busca espacios publicitarios sobrantes (remnant ad inventory) para conseguir descuentos",
-        "Asigna un código único o una dirección web específica a cada campaña para rastrear qué te trae resultados",
+        "Asigna un código único o una dirección web específica a cada campaña para rastrear qué te trae resultados, y un código de descuento distinto para cada canal",
         "Mide los resultados y escala solo lo que te esté dando retorno positivo",
         "Revisa el rendimiento cada tanto, porque un anuncio que funciona hoy puede dejar de funcionar con el tiempo",
         "Pregunta a tus clientes qué medios consumen fuera de internet (revistas, radio, etc.)",
         "Pide a cada medio que te interese su prospecto de audiencia (paquete de anuncio) para saber a quién le llega",
         "Compara la gente a la que llega cada medio, su alcance y su precio",
-        "Empieza con pruebas pequeñas y económicas antes de escalar (radio local, prensa local, vallas pequeñas)"
+        "Empieza con pruebas pequeñas y económicas antes de escalar (radio local, prensa local, vallas pequeñas)",
+        "Agrega la pregunta '¿cómo se enteró de nosotros?' en tu formulario de registro o compra"
       ],
       "entregable_esperado": "Un reporte de tus pruebas piloto de publicidad fuera de internet con las métricas de conversión por canal y por código de rastreo",
       "nodos_previos": [
-        "seleccion_canal_distribucion"
+        "seleccion_canal_distribucion",
+        "herramientas_online_canal_fisico",
+        "seleccion_plataforma_social_ads"
       ],
       "nodos_siguientes": [
         "seo_estrategia_fat_head",
-        "content_marketing_blog"
+        "content_marketing_blog",
+        "publicidad_remanente_remnant_ads"
       ],
       "condiciones_activacion": [
         "Cuando tu producto apunta a mucha gente y lo offline tiene sentido para ti (por ejemplo, productos de consumo)",
-        "Cuando los canales digitales ya no te alcanzan o están saturados"
+        "Cuando los canales digitales ya no te alcanzan o están saturados",
+        "Cuando estás corriendo varias campañas offline al mismo tiempo y necesitas saber cuál te está funcionando"
       ],
-      "etiqueta_arbol": "Prueba tu Publicidad en Local"
+      "etiqueta_arbol": "Prueba tu Publicidad en Local",
+      "ids_alias": [
+        "tracking_publicidad_offline"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "tracking_publicidad_offline",
+          "titulo": "Cómo medir tu publicidad fuera de internet",
+          "fuente": "Traction - Gabriel Weinberg"
+        }
+      ]
     },
     "publicidad_remanente_remnant_ads": {
       "node_id": "publicidad_remanente_remnant_ads",
@@ -92919,7 +93168,7 @@
       ],
       "entregable_esperado": "Contrato o acuerdo de compra de espacio remanente a precio reducido",
       "nodos_previos": [
-        "tracking_publicidad_offline"
+        "publicidad_offline_pruebas_locales"
       ],
       "nodos_siguientes": [
         "ad_tracking"
@@ -93864,7 +94113,7 @@
         "ratios_liquidez"
       ],
       "nodos_siguientes": [
-        "dso_dpo_gestion_capital_trabajo"
+        "ciclo_de_conversion_de_efectivo"
       ],
       "condiciones_activacion": [
         "Negocios con inventario físico significativo (retail, manufactura)"
@@ -96124,7 +96373,7 @@
         "protocolo_reuniones_gate"
       ],
       "nodos_siguientes": [
-        "tecnica_cinco_porques"
+        "five_whys_inversion_proporcional"
       ],
       "condiciones_activacion": [
         "Cuando el equipo o la organización carece aún de la confianza o madurez para aplicar el proceso completo de Cinco Porqués",
@@ -96230,11 +96479,12 @@
       "pasos_accionables": [
         "Reunir al equipo en un espacio dedicado sin distracciones, formando grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.",
         "Definir un enunciado claro del problema centrado en necesidad del cliente",
-        "Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada.",
+        "Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada., en sesiones de construcción colectiva ('yes, and...')",
         "Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)",
         "Usar Post-it notes o pizarra para capturar y mover las ideas visualmente",
         "Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo",
-        "Generar el mayor número de ideas posible sin filtrar prematuramente, en sesiones dedicadas solo a generar opciones (divergencia) y separadas de las sesiones de selección (convergencia)."
+        "Generar el mayor número de ideas posible sin filtrar prematuramente, en sesiones dedicadas solo a generar opciones (divergencia) y separadas de las sesiones de selección (convergencia).",
+        "Evitar atribuir ideas exclusivamente a una sola persona para promover su evolución."
       ],
       "entregable_esperado": "Sesión de brainstorming documentada con una colección amplia de ideas generadas colaborativamente, capturadas en Post-its y agrupadas por tema, lista para ser filtrada en la fase de convergencia",
       "nodos_previos": [
@@ -96250,7 +96500,9 @@
         "intimation_illumination",
         "pensamiento_convergente_divergente",
         "wallas_etapa_incubacion",
-        "sentido_del_humor_como_herramienta_de_pensamiento"
+        "sentido_del_humor_como_herramienta_de_pensamiento",
+        "asociacion_de_ideas",
+        "get_visual"
       ],
       "nodos_siguientes": [
         "pensamiento_visual_modelos_negocio",
@@ -96266,7 +96518,7 @@
         "ideacion_con_ia_en_la_sesion",
         "prototipado_rapido",
         "tecnica_perder_objeto",
-        "construir_sobre_ideas_ajenas"
+        "pensamiento_convergente_divergente"
       ],
       "condiciones_activacion": [
         "Cuando el equipo necesita generar gran volumen de ideas en poco tiempo, antes de tomar decisiones",
@@ -96277,7 +96529,8 @@
       "etiqueta_arbol": "Organiza tu Lluvia de Ideas",
       "ids_alias": [
         "brainstorming_divergente",
-        "brainstorming_efectivo"
+        "brainstorming_efectivo",
+        "construir_sobre_ideas_ajenas"
       ],
       "merged_originals": [
         {
@@ -96288,6 +96541,11 @@
         {
           "node_id": "brainstorming_efectivo",
           "titulo": "Reglas para un Brainstorming Efectivo",
+          "fuente": "Change by Design"
+        },
+        {
+          "node_id": "construir_sobre_ideas_ajenas",
+          "titulo": "Construir Sobre las Ideas de Otros",
           "fuente": "Change by Design"
         }
       ]
@@ -98622,7 +98880,8 @@
       "condiciones_activacion": [
         "Si tu negocio está teniendo dificultades financieras y hay riesgo de que no puedas cumplir con tu préstamo de riesgo (venture debt)."
       ],
-      "etiqueta_arbol": "Negocia a Tiempo tu Deuda"
+      "etiqueta_arbol": "Negocia a Tiempo tu Deuda",
+      "deprecado": true
     },
     "resumen_de_datos_graficos": {
       "node_id": "resumen_de_datos_graficos",
@@ -98907,7 +99166,7 @@
       "nodos_siguientes": [
         "gestion_testimonios",
         "fase_adopt_ciclo_cliente",
-        "fase_accomplish"
+        "fase_accomplish_experiencia_cliente"
       ],
       "condiciones_activacion": [
         "Al finalizar cualquier proyecto de entrega con cliente (ej. desarrollo web, consultoría)",
@@ -100952,7 +101211,7 @@
       ],
       "entregable_esperado": "Análisis de eficiencia de uso de activos con tendencias históricas y comparación sectorial",
       "nodos_previos": [
-        "dso_dpo_gestion_capital_trabajo"
+        "ciclo_de_conversion_de_efectivo"
       ],
       "nodos_siguientes": [
         "tasa_crecimiento_sostenible"
@@ -101798,7 +102057,7 @@
       ],
       "entregable_esperado": "Tabla scorecard completa con clientes evaluados, puntajes ponderados y clasificación de seguimiento (earlyvangelist candidate, en espera, descartado)",
       "nodos_previos": [
-        "presentacion_problema_tres_columnas",
+        "desarrollo_presentacion_problema",
         "estrategia_de_innovacion_y_tecnologia",
         "preguntas_ipo_dolor_cliente",
         "segmentos_de_clientes_problema_necesidad"
@@ -101993,7 +102252,7 @@
         "arenas_estrategicas",
         "analisis_y_sintesis",
         "diseno_consecuencias_no_intencionadas",
-        "historia_del_futuro_escenarios_especulativos",
+        "ficcion_especulativa_como_metodo",
         "tecnica_cambio_de_perspectiva_escala",
         "vision_estrategia_producto_pivote",
         "descomposicion_tareas_trabajo",
@@ -102929,7 +103188,7 @@
       ],
       "entregable_esperado": "Plan de comunicación de celebración con canal(es) elegido(s) y mensaje personalizado",
       "nodos_previos": [
-        "fase_accomplish"
+        "fase_accomplish_experiencia_cliente"
       ],
       "nodos_siguientes": [
         "fase_adopt"
@@ -103941,7 +104200,7 @@
         "creacion_contenido_compartible"
       ],
       "nodos_siguientes": [
-        "tracking_publicidad_offline"
+        "publicidad_offline_pruebas_locales"
       ],
       "condiciones_activacion": [
         "Cuando el equipo debe decidir en qué red social invertir su presupuesto de ads"
@@ -105929,7 +106188,7 @@
         "despliegue_continuo"
       ],
       "nodos_siguientes": [
-        "tecnica_cinco_porques",
+        "five_whys_inversion_proporcional",
         "autoservicio_y_autosanacion_del_producto"
       ],
       "condiciones_activacion": [
@@ -108769,7 +109028,7 @@
       "nodos_previos": [
         "rotacion_activos",
         "ratio_deuda_capital",
-        "dso_dpo_gestion_capital_trabajo"
+        "ciclo_de_conversion_de_efectivo"
       ],
       "nodos_siguientes": [
         "valor_del_dinero_en_el_tiempo"
@@ -109119,7 +109378,8 @@
         "Cuando el equipo repite errores similares sin entender la causa raíz",
         "Cuando la organización necesita balancear velocidad de ejecución con calidad de forma incremental"
       ],
-      "etiqueta_arbol": "Pregunta los Cinco Porqués"
+      "etiqueta_arbol": "Pregunta los Cinco Porqués",
+      "deprecado": true
     },
     "tecnica_freaky_friday": {
       "node_id": "tecnica_freaky_friday",
@@ -109282,7 +109542,7 @@
       ],
       "entregable_esperado": "Un análisis comparativo de curvas de rendimiento (tecnología dominante vs disruptiva) con una recomendación estratégica de inversión o vigilancia.",
       "nodos_previos": [
-        "analisis_disrupciones_mercado",
+        "evaluacion_industria_cliente",
         "reconocer_sesgo_de_apofenia",
         "empatia_capas_de_comprension",
         "etnografia_de_proyecto"
@@ -111166,7 +111426,8 @@
       "condiciones_activacion": [
         "Cuando estás corriendo varias campañas offline al mismo tiempo y necesitas saber cuál te está funcionando"
       ],
-      "etiqueta_arbol": "Mide tu Publicidad Fuera de Línea"
+      "etiqueta_arbol": "Mide tu Publicidad Fuera de Línea",
+      "deprecado": true
     },
     "traction_channel_bias": {
       "node_id": "traction_channel_bias",
@@ -111304,7 +111565,7 @@
         "driver_produccion",
         "driver_ubicacion",
         "driver_transporte",
-        "alineacion_cadena_estrategia_negocio",
+        "definicion_alineacion_cadena_suministro",
         "coordinacion_colaboracion_cadena_suministro"
       ],
       "condiciones_activacion": [
@@ -112796,7 +113057,7 @@
       ],
       "entregable_esperado": "Propuesta de upsell/cross-sell diseñada para el momento post-logro con mensaje personalizado",
       "nodos_previos": [
-        "fase_accomplish"
+        "fase_accomplish_experiencia_cliente"
       ],
       "nodos_siguientes": [
         "fase_adopt"
@@ -114073,7 +114334,7 @@
         "plan_de_materiales_colaterales",
         "transicion_producto_a_experiencia",
         "content_marketing_blog",
-        "construccion_de_comunidad_como_canal_traccion",
+        "community_building_estrategia",
         "email_marketing_para_captacion",
         "estrategia_ventas_enterprise",
         "publicidad_no_convencional_stunts",
@@ -115626,7 +115887,8 @@
       "condiciones_activacion": [
         "Cuando el proceso de implementación es largo, técnico o puede generar ansiedad en el cliente"
       ],
-      "etiqueta_arbol": "Muestra el Progreso Visualmente"
+      "etiqueta_arbol": "Muestra el Progreso Visualmente",
+      "deprecado": true
     },
     "voc_temprano_en_agile_stage_gate": {
       "node_id": "voc_temprano_en_agile_stage_gate",
@@ -124420,7 +124682,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 92,
+    "nodos_sin_enlaces_entrantes": 105,
     "enlaces_rotos_en_grafo": 0
   }
 }

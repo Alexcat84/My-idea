@@ -1,0 +1,556 @@
+==============================================================================
+OP-U-01, TRAMO 3, LOTE A DE LA VUELTA 56: LOS DIECISIETE PRIMEROS ACTOS DEL TRAMO EN SU ORDEN IMPRESO (1 a 17), incluidos EL ACTO 7, que es el CERRADO nacido despues de la nomina de la 48 y el que la guarda de ajenos destapa por el resolutor, y LOS DOS DEL CHOQUE DE LA PUERTA (el 8 por cableado) . MODO EJECUTAR
+plan: docs/loop/PLAN_V56_OPU01_LOTE_A.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3432 vivos, 421 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive economia_de_la_experiencia . absorbe diseno_de_experiencias_participativas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['diseno_de_experiencias_participativas']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive evaluacion_vp_ventas . absorbe framework_evaluacion_director_ventas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 9 (anadidos 3) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de framework_evaluacion_director_ventas al PASO 3 del superviviente
+        inciso VERBATIM: 'ejemplos de contrataciones que salieron mal'
+        nexo (lo unico de cosecha propia): ', pidiendole '
+        paso resultante: Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo, pidiendole ejemplos de contrataciones que salieron mal
+  alias del superviviente: ['framework_evaluacion_director_ventas']
+
+------------------------------------------------------------------------------
+ACTO 3 . sobrevive plan_a_b_c_soft_landing . absorbe restructuracion_deuda_soft_landing
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['restructuracion_deuda_soft_landing']
+
+------------------------------------------------------------------------------
+ACTO 4 . sobrevive publicidad_offline_pruebas_locales . absorbe tracking_publicidad_offline
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 9 -> 10 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de tracking_publicidad_offline al PASO 3 del superviviente
+        inciso VERBATIM: 'un código de descuento distinto para cada canal'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Asigna un código único o una dirección web específica a cada campaña para rastrear qué te trae resultados, y un código de descuento distinto para cada canal
+  alias del superviviente: ['tracking_publicidad_offline']
+
+------------------------------------------------------------------------------
+ACTO 5 . sobrevive desarrollo_presentacion_problema . absorbe presentacion_problema_tres_columnas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 7 (anadidos 1) | condiciones 1 -> 1 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 2 de presentacion_problema_tres_columnas al PASO 3 del superviviente
+        inciso VERBATIM: 'preguntar cómo las rankean'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Pregúntale cómo resuelve hoy ese problema y quién más lo comparte, y preguntar cómo las rankean
+     del paso 3 de presentacion_problema_tres_columnas al PASO 4 del superviviente
+        inciso VERBATIM: 'sin entrar en features'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Presenta tu solución al final y observa la reacción genuina del cliente, sin entrar en features
+  alias del superviviente: ['presentacion_problema_tres_columnas']
+
+------------------------------------------------------------------------------
+ACTO 6 . sobrevive gamificacion_onboarding_visual . absorbe visualizacion_progreso_onboarding
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 1 -> 1 (anadidas 0)
+  alias del superviviente: ['visualizacion_progreso_onboarding']
+
+------------------------------------------------------------------------------
+ACTO 7 . sobrevive reglas_brainstorming . absorbe construir_sobre_ideas_ajenas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 8 (anadidos 1) | condiciones 4 -> 4 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de construir_sobre_ideas_ajenas al PASO 3 del superviviente
+        inciso VERBATIM: "sesiones de construcción colectiva ('yes, and...')"
+        nexo (lo unico de cosecha propia): ', en '
+        paso resultante: Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada., en sesiones de construcción colectiva ('yes, and...')
+  alias del superviviente: ['brainstorming_divergente', 'brainstorming_efectivo', 'construir_sobre_ideas_ajenas']
+
+------------------------------------------------------------------------------
+ACTO 8 . sobrevive five_whys_inversion_proporcional . absorbe tecnica_cinco_porques
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 3 -> 4 (anadidas 1)
+  alias del superviviente: ['tecnica_cinco_porques']
+
+------------------------------------------------------------------------------
+ACTO 9 . sobrevive fase_accomplish_experiencia_cliente . absorbe fase_accomplish
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 10 -> 11 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de fase_accomplish al PASO 1 del superviviente
+        inciso VERBATIM: 'no solo la entrega del producto'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Definir claramente cuál es el objetivo/resultado que el cliente busca al comprar tu producto, y no solo la entrega del producto
+  alias del superviviente: ['fase_accomplish']
+
+------------------------------------------------------------------------------
+ACTO 10 . sobrevive acquisicion_viral_engineering . absorbe herramientas_adquisicion_viral
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 7 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 4 de herramientas_adquisicion_viral al PASO 6 del superviviente
+        inciso VERBATIM: 'videos o demostraciones'
+        nexo (lo unico de cosecha propia): ', como '
+        paso resultante: Crear contenido no genérico (sitios, blogs) relacionado al problema que resuelve el producto, como videos o demostraciones
+  alias del superviviente: ['herramientas_adquisicion_viral']
+
+------------------------------------------------------------------------------
+ACTO 11 . sobrevive ficcion_especulativa_como_metodo . absorbe historia_del_futuro_escenarios_especulativos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 3
+     del paso 2 de historia_del_futuro_escenarios_especulativos al PASO 2 del superviviente
+        inciso VERBATIM: 'en 10-15 años'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real., en 10-15 años, del tipo usuarios, empresas, reguladores
+     del paso 3 de historia_del_futuro_escenarios_especulativos al PASO 2 del superviviente
+        inciso VERBATIM: 'usuarios, empresas, reguladores'
+        nexo (lo unico de cosecha propia): ', del tipo '
+        paso resultante: Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real., en 10-15 años, del tipo usuarios, empresas, reguladores
+     del paso 5 de historia_del_futuro_escenarios_especulativos al PASO 4 del superviviente
+        inciso VERBATIM: 'antes de definir requisitos del producto'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Usa la historia para conversar con quien te acompaña o con las personas involucradas, y anticipar consecuencias que no querrías., y antes de definir requisitos del producto
+  alias del superviviente: ['historia_del_futuro_escenarios_especulativos']
+
+------------------------------------------------------------------------------
+ACTO 12 . sobrevive evaluacion_industria_cliente . absorbe analisis_disrupciones_mercado
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 8 (anadidos 2) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 3 de analisis_disrupciones_mercado al PASO 5 del superviviente
+        inciso VERBATIM: 'y cómo están cambiando'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Crear un Profit Pool Map para identificar márgenes de ganancia por actividad, y cómo están cambiando
+  alias del superviviente: ['analisis_disrupciones_mercado']
+
+------------------------------------------------------------------------------
+ACTO 13 . sobrevive definicion_alineacion_cadena_suministro . absorbe alineacion_cadena_estrategia_negocio
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 9 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 2 de alineacion_cadena_estrategia_negocio al PASO 2 del superviviente
+        inciso VERBATIM: 'y sus core competencies'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.)., y sus core competencies
+     del paso 3 de alineacion_cadena_estrategia_negocio al PASO 4 del superviviente
+        inciso VERBATIM: 'los 5 drivers (producción, inventario, ubicación, transporte, información)'
+        nexo (lo unico de cosecha propia): ', que son '
+        paso resultante: Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida., que son los 5 drivers (producción, inventario, ubicación, transporte, información)
+  alias del superviviente: ['alineacion_cadena_estrategia_negocio']
+
+------------------------------------------------------------------------------
+ACTO 14 . sobrevive creacion_data_warehouse . absorbe data_warehouse_como_fundamento
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de data_warehouse_como_fundamento al PASO 3 del superviviente
+        inciso VERBATIM: 'diaria u horariamente'
+        nexo (lo unico de cosecha propia): ', consolidando '
+        paso resultante: Arma primero una versión simple y pequeña antes de ampliarla, consolidando diaria u horariamente
+  alias del superviviente: ['data_warehouse_como_fundamento']
+
+------------------------------------------------------------------------------
+ACTO 15 . sobrevive ciclo_de_conversion_de_efectivo . absorbe dso_dpo_gestion_capital_trabajo
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 7 (anadidos 1) | condiciones 4 -> 4 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 1 de dso_dpo_gestion_capital_trabajo al PASO 1 del superviviente
+        inciso VERBATIM: 'cuentas por cobrar finales dividido entre ingresos diarios'
+        nexo (lo unico de cosecha propia): ', el DSO es '
+        paso resultante: Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago), el DSO es cuentas por cobrar finales dividido entre ingresos diarios, y el DPO es cuentas por pagar finales dividido entre COGS diario
+     del paso 2 de dso_dpo_gestion_capital_trabajo al PASO 1 del superviviente
+        inciso VERBATIM: 'cuentas por pagar finales dividido entre COGS diario'
+        nexo (lo unico de cosecha propia): ', y el DPO es '
+        paso resultante: Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago), el DSO es cuentas por cobrar finales dividido entre ingresos diarios, y el DPO es cuentas por pagar finales dividido entre COGS diario
+  alias del superviviente: ['dso_dpo_gestion_capital_trabajo']
+
+------------------------------------------------------------------------------
+ACTO 16 . sobrevive fase_mobilizar_modelo_negocio . absorbe fase_mobilizacion_equipo_multifuncional
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 1 -> 1 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de fase_mobilizacion_equipo_multifuncional al PASO 2 del superviviente
+        inciso VERBATIM: 'diferentes niveles jerárquicos y áreas de expertise'
+        nexo (lo unico de cosecha propia): ', incluyendo '
+        paso resultante: Arma un equipo con gente de experiencias distintas, incluyendo diferentes niveles jerárquicos y áreas de expertise
+  alias del superviviente: ['fase_mobilizacion_equipo_multifuncional']
+
+------------------------------------------------------------------------------
+ACTO 17 . sobrevive community_building_estrategia . absorbe construccion_de_comunidad_como_canal_traccion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 9 (anadidos 2) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de construccion_de_comunidad_como_canal_traccion al PASO 2 del superviviente
+        inciso VERBATIM: 'comunidades complementarias existentes online y offline'
+        nexo (lo unico de cosecha propia): ', incluidas '
+        paso resultante: Aprovechar una audiencia existente (blog, redes) para dar feedback previo al lanzamiento, incluidas comunidades complementarias existentes online y offline
+  alias del superviviente: ['construccion_de_comunidad_como_canal_traccion']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 61
+   analisis_de_cohortes                                 nodos_siguientes  construccion_de_comunidad_como_canal_traccion -> community_building_estrategia
+   analisis_y_sintesis                                  nodos_siguientes  analisis_disrupciones_mercado -> evaluacion_industria_cliente
+   analisis_y_sintesis                                  nodos_siguientes  diseno_de_experiencias_participativas -> economia_de_la_experiencia
+   asociacion_de_ideas                                  nodos_siguientes  construir_sobre_ideas_ajenas -> reglas_brainstorming
+   atributos_mercado_chopra_meindl                      nodos_siguientes  alineacion_cadena_estrategia_negocio -> definicion_alineacion_cadena_suministro
+   bpm_gestion_excepciones                              nodos_previos     data_warehouse_como_fundamento -> creacion_data_warehouse
+   buscar_armonia_diseno                                nodos_siguientes  historia_del_futuro_escenarios_especulativos -> ficcion_especulativa_como_metodo
+   celebracion_hitos_cliente                            nodos_previos     visualizacion_progreso_onboarding -> gamificacion_onboarding_visual
+   ciclo_circunstancias_sentimientos_ideas              nodos_previos     historia_del_futuro_escenarios_especulativos -> ficcion_especulativa_como_metodo
+   cinco_porques_master                                 nodos_previos     tecnica_cinco_porques -> five_whys_inversion_proporcional
+   comunidad_como_activo_estrategico                    nodos_previos     construccion_de_comunidad_como_canal_traccion -> community_building_estrategia
+   cuatro_capacidades_mercado                           nodos_siguientes  data_warehouse_como_fundamento -> creacion_data_warehouse
+   cultura_de_experiencia                               nodos_previos     diseno_de_experiencias_participativas -> economia_de_la_experiencia
+   curse_cinco_culpas                                   nodos_previos     tecnica_cinco_porques -> five_whys_inversion_proporcional
+   customer_development_team                            nodos_siguientes  fase_mobilizacion_equipo_multifuncional -> fase_mobilizar_modelo_negocio
+   customer_journey_mapping                             nodos_previos     diseno_de_experiencias_participativas -> economia_de_la_experiencia
+   customer_segments_hypothesis                         nodos_siguientes  framework_evaluacion_director_ventas -> evaluacion_vp_ventas
+   definicion_alineacion_cadena_suministro              nodos_siguientes  alineacion_cadena_estrategia_negocio -> definicion_alineacion_cadena_suministro
+   desarrollo_presentacion_problema                     nodos_siguientes  presentacion_problema_tres_columnas -> desarrollo_presentacion_problema
+   empathy_map                                          nodos_siguientes  diseno_de_experiencias_participativas -> economia_de_la_experiencia
+   espiral_muerte_lotes_grandes                         nodos_siguientes  tecnica_cinco_porques -> five_whys_inversion_proporcional
+   estrategia_de_ventas                                 nodos_previos     framework_evaluacion_director_ventas -> evaluacion_vp_ventas
+   evaluacion_competencias_centrales                    nodos_previos     analisis_disrupciones_mercado -> evaluacion_industria_cliente
+   fase_acclimate                                       nodos_siguientes  fase_accomplish -> fase_accomplish_experiencia_cliente
+   fase_acclimate_experiencia_cliente                   nodos_siguientes  visualizacion_progreso_onboarding -> gamificacion_onboarding_visual
+   fase_adopt                                           nodos_previos     fase_accomplish -> fase_accomplish_experiencia_cliente
+   fase_entendimiento_investigacion_mercado             nodos_previos     fase_mobilizacion_equipo_multifuncional -> fase_mobilizar_modelo_negocio
+   gestion_calidad_comunidad_a_escala                   nodos_previos     construccion_de_comunidad_como_canal_traccion -> community_building_estrategia
+   get_visual                                           nodos_siguientes  construir_sobre_ideas_ajenas -> reglas_brainstorming
+   herramientas_online_canal_fisico                     nodos_siguientes  tracking_publicidad_offline -> publicidad_offline_pruebas_locales
+   identificar_earlyvangelists                          nodos_siguientes  tecnica_cinco_porques -> five_whys_inversion_proporcional
+   information_driver_supply_chain                      nodos_siguientes  alineacion_cadena_estrategia_negocio -> definicion_alineacion_cadena_suministro
+   inversion_proporcional                               nodos_previos     tecnica_cinco_porques -> five_whys_inversion_proporcional
+   mac_clause_gestion_riesgo                            nodos_siguientes  restructuracion_deuda_soft_landing -> plan_a_b_c_soft_landing
+   mejorar_deal_despues_del_hecho                       nodos_siguientes  restructuracion_deuda_soft_landing -> plan_a_b_c_soft_landing
+   micro_experiencias_personalizadas                    nodos_siguientes  fase_accomplish -> fase_accomplish_experiencia_cliente
+   no_sacrificar_calidad_por_velocidad                  nodos_siguientes  tecnica_cinco_porques -> five_whys_inversion_proporcional
+   ocho_fases_experiencia_cliente                       nodos_siguientes  fase_accomplish -> fase_accomplish_experiencia_cliente
+   organizacion_adaptativa                              nodos_siguientes  tecnica_cinco_porques -> five_whys_inversion_proporcional
+   pensamiento_convergente_divergente                   nodos_previos     construir_sobre_ideas_ajenas -> reglas_brainstorming
+   plan_a_b_c_soft_landing                              nodos_previos     restructuracion_deuda_soft_landing -> plan_a_b_c_soft_landing
+   plan_de_adquisicion_acquire                          nodos_siguientes  herramientas_adquisicion_viral -> acquisicion_viral_engineering
+   planificacion_cadena_suministro                      nodos_previos     alineacion_cadena_estrategia_negocio -> definicion_alineacion_cadena_suministro
+   preguntas_ipo_dolor_cliente                          nodos_siguientes  presentacion_problema_tres_columnas -> desarrollo_presentacion_problema
+   prototipado_de_experiencias                          nodos_siguientes  diseno_de_experiencias_participativas -> economia_de_la_experiencia
+   publicidad_remanente_remnant_ads                     nodos_previos     tracking_publicidad_offline -> publicidad_offline_pruebas_locales
+   ratios_eficiencia_inventario                         nodos_siguientes  dso_dpo_gestion_capital_trabajo -> ciclo_de_conversion_de_efectivo
+   regla_simplificada_tolerancia_errores                nodos_siguientes  tecnica_cinco_porques -> five_whys_inversion_proporcional
+   reglas_brainstorming                                 nodos_siguientes  construir_sobre_ideas_ajenas -> reglas_brainstorming
+   reunion_conclusion_proyecto                          nodos_siguientes  fase_accomplish -> fase_accomplish_experiencia_cliente
+   rotacion_activos                                     nodos_previos     dso_dpo_gestion_capital_trabajo -> ciclo_de_conversion_de_efectivo
+   scorecard_descubrimiento_cliente                     nodos_previos     presentacion_problema_tres_columnas -> desarrollo_presentacion_problema
+   search_for_business_model                            nodos_previos     historia_del_futuro_escenarios_especulativos -> ficcion_especulativa_como_metodo
+   seis_herramientas_comunicacion_celebracion           nodos_previos     fase_accomplish -> fase_accomplish_experiencia_cliente
+   seleccion_plataforma_social_ads                      nodos_siguientes  tracking_publicidad_offline -> publicidad_offline_pruebas_locales
+   sistema_inmune_producto                              nodos_siguientes  tecnica_cinco_porques -> five_whys_inversion_proporcional
+   tasa_crecimiento_sostenible                          nodos_previos     dso_dpo_gestion_capital_trabajo -> ciclo_de_conversion_de_efectivo
+   tecnologias_disruptivas_oportunidad                  nodos_previos     analisis_disrupciones_mercado -> evaluacion_industria_cliente
+   trade_off_responsividad_eficiencia                   nodos_siguientes  alineacion_cadena_estrategia_negocio -> definicion_alineacion_cadena_suministro
+   upsell_post_logro                                    nodos_previos     fase_accomplish -> fase_accomplish_experiencia_cliente
+   value_proposition_startup                            nodos_siguientes  construccion_de_comunidad_como_canal_traccion -> community_building_estrategia
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 7
+   blueprint_de_experiencia                             nodos_previos     diseno_de_experiencias_participativas (registro historico)
+   definicion_startup                                   nodos_previos     historia_del_futuro_escenarios_especulativos (registro historico)
+   earlyvangelists_identificacion                       nodos_siguientes  tecnica_cinco_porques (registro historico)
+   encuesta_satisfaccion_postproyecto                   nodos_siguientes  fase_accomplish (registro historico)
+   generar_multiples_opciones                           nodos_previos     construir_sobre_ideas_ajenas (registro historico)
+   pensamiento_visual                                   nodos_siguientes  construir_sobre_ideas_ajenas (registro historico)
+   plan_acquire_activate                                nodos_siguientes  herramientas_adquisicion_viral (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 2
+   evaluacion_competencias_centrales                    nodos_previos
+   fase_entendimiento_investigacion_mercado             nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 4
+   definicion_alineacion_cadena_suministro              nodos_siguientes
+   desarrollo_presentacion_problema                     nodos_siguientes
+   plan_a_b_c_soft_landing                              nodos_previos
+   reglas_brainstorming                                 nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 972   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 970   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 2, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 85 de 85
+guarda D, los 17 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (100 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 diseno_de_experiencias_participativas        paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar si tu propuesta de valor se basa solo en beneficios funcionales o también emocionales
+    1 diseno_de_experiencias_participativas        paso         2  ya lo dice el PASO 2 del superviviente
+        Buscar oportunidades para que el usuario participe activamente en la experiencia en vez de consumirla pasivamente
+    1 diseno_de_experiencias_participativas        paso         3  PASO 6 del superviviente
+        Analizar ejemplos de marcas de experiencia (Whole Foods, Virgin America) para inspirar el diseño propio
+    1 diseno_de_experiencias_participativas        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el producto o servicio se sienta genérico o puramente funcional
+    1 diseno_de_experiencias_participativas        condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si se busca diferenciación de marca mediante la experiencia del cliente
+    2 framework_evaluacion_director_ventas         paso         1  PASO 7 del superviviente
+        Evalúa si puede presentarte de forma convincente y estratégica su empresa actual, como prueba de que sabe articular una visión
+    2 framework_evaluacion_director_ventas         paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Pregúntale cómo identifica y contrata talento de ventas top, y pídele ejemplos de contrataciones que salieron mal
+    2 framework_evaluacion_director_ventas         paso         3  ya lo dice el PASO 1 del superviviente
+        Verifica si él diseñó el proceso de ventas de su empresa anterior o solo lo ejecutó
+    2 framework_evaluacion_director_ventas         paso         4  PASO 8 del superviviente
+        Pide referencias de su equipo actual para confirmar si la gente lo seguiría
+    2 framework_evaluacion_director_ventas         paso         5  PASO 9 del superviviente
+        Evalúa si entiende de planes de compensación, incentivos por resultados, canales de venta y los conflictos que surgen entre canales
+    2 framework_evaluacion_director_ventas         paso         6  ya lo dice el PASO 5 del superviviente
+        Confirma con casos concretos, y con referencias de clientes, que haya cerrado o hecho crecer negocios grandes
+    2 framework_evaluacion_director_ventas         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando necesitas contratar a tu primer líder de ventas para grandes cuentas
+    2 framework_evaluacion_director_ventas         condicion    2  CONDICION 3 del superviviente
+        Cuando buscas hacer crecer tu equipo comercial que vende a otras empresas (B2B)
+    3 restructuracion_deuda_soft_landing           paso         1  PASO 6 del superviviente
+        Avisa a quien te prestó el dinero apenas detectes que tu desempeño se está desviando de forma importante del plan.
+    3 restructuracion_deuda_soft_landing           paso         2  PASO 7 del superviviente
+        Revisa cómo te está calificando tu prestamista en este momento (si te ve como un caso normal, uno que están vigilando de cerca, o uno con problemas) y
+    3 restructuracion_deuda_soft_landing           paso         3  ya lo dice el PASO 1 del superviviente
+        Junto con quienes invirtieron en ti, arma tus planes de contingencia: Plan A (conseguir más capital), Plan B (vender el negocio) y Plan C (cerrar de f
+    3 restructuracion_deuda_soft_landing           paso         4  ya lo dice el PASO 2 del superviviente
+        Si la continuidad de tu negocio está en riesgo, trabaja de forma profesional con tu prestamista y tus inversionistas para explorar conseguir más capit
+    3 restructuracion_deuda_soft_landing           condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Si tu negocio está teniendo dificultades financieras y hay riesgo de que no puedas cumplir con tu préstamo de riesgo (venture debt).
+    4 tracking_publicidad_offline                  paso         1  ya lo dice el PASO 3 del superviviente
+        Crea una dirección web única o una página propia para cada campaña que hagas fuera de internet
+    4 tracking_publicidad_offline                  paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Usa un código de descuento distinto para cada canal que pruebes
+    4 tracking_publicidad_offline                  paso         3  PASO 10 del superviviente
+        Agrega la pregunta '¿cómo se enteró de nosotros?' en tu formulario de registro o compra
+    4 tracking_publicidad_offline                  paso         4  ya lo dice el PASO 4 del superviviente
+        Revisa lo que fuiste juntando y decide en qué canal offline meterle más y cuál dejar
+    4 tracking_publicidad_offline                  condicion    1  CONDICION 3 del superviviente
+        Cuando estás corriendo varias campañas offline al mismo tiempo y necesitas saber cuál te está funcionando
+    5 presentacion_problema_tres_columnas          paso         1  ya lo dice el PASO 2 del superviviente
+        Presentar la Columna 1: el problema percibido y pausar para validar con el cliente
+    5 presentacion_problema_tres_columnas          paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Presentar la Columna 2: soluciones actuales disponibles y preguntar cómo las rankean
+    5 presentacion_problema_tres_columnas          paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Presentar la Columna 3: la gran idea de solución propia sin entrar en features
+    5 presentacion_problema_tres_columnas          paso         4  ya lo dice el PASO 4 del superviviente
+        Observar si el cliente entiende, se emociona o queda confundido
+    5 presentacion_problema_tres_columnas          paso         5  PASO 7 del superviviente
+        Preguntar cómo se compara la solución propuesta con las soluciones actuales
+    5 presentacion_problema_tres_columnas          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se necesita validar tanto el problema como la reacción inicial a la solución en una misma sesión de entrevista
+    6 visualizacion_progreso_onboarding            paso         1  ya lo dice el PASO 1 del superviviente
+        Descomponer el proceso de implementación en pasos pequeños y comprensibles.
+    6 visualizacion_progreso_onboarding            paso         2  ya lo dice el PASO 2 del superviviente
+        Crear una representación visual (física o digital) que muestre el avance paso a paso.
+    6 visualizacion_progreso_onboarding            paso         3  PASO 6 del superviviente
+        Enviar solo la información necesaria para el paso actual, evitando saturar al cliente con todo el proceso de una vez.
+    6 visualizacion_progreso_onboarding            paso         4  PASO 7 del superviviente
+        Anticipar el siguiente paso en cada comunicación para generar expectativa.
+    6 visualizacion_progreso_onboarding            paso         5  ya lo dice el PASO 5 del superviviente
+        Cerrar el proceso con un elemento simbólico de finalización y celebración.
+    6 visualizacion_progreso_onboarding            condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el proceso de implementación es largo, técnico o puede generar ansiedad en el cliente
+    7 construir_sobre_ideas_ajenas                 paso         1  ya lo dice el PASO 3 del superviviente
+        Compartir ideas abiertamente en el equipo en lugar de guardarlas como propiedad individual.
+    7 construir_sobre_ideas_ajenas                 paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Fomentar sesiones de construcción colectiva ('yes, and...') sobre ideas presentadas por otros.
+    7 construir_sobre_ideas_ajenas                 paso         3  PASO 8 del superviviente
+        Evitar atribuir ideas exclusivamente a una sola persona para promover su evolución.
+    7 construir_sobre_ideas_ajenas                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Durante sesiones de brainstorming o co-creación en equipo
+    8 tecnica_cinco_porques                        paso         1  PASO 6 del superviviente
+        Cuando ocurra un fallo o síntoma negativo, reunir a todas las personas involucradas en su descubrimiento, diagnóstico y resolución
+    8 tecnica_cinco_porques                        paso         2  ya lo dice el PASO 1 del superviviente
+        Preguntar '¿Por qué ocurrió esto?' y registrar la respuesta
+    8 tecnica_cinco_porques                        paso         3  ya lo dice el PASO 1 del superviviente
+        Repetir la pregunta '¿Por qué?' sobre la respuesta anterior, hasta completar cinco niveles
+    8 tecnica_cinco_porques                        paso         4  PASO 7 del superviviente
+        Identificar en cada nivel si la causa es técnica o humana/organizacional
+    8 tecnica_cinco_porques                        paso         5  ya lo dice el PASO 2 del superviviente
+        Definir una inversión de prevención proporcional al nivel de daño causado por el síntoma en cada uno de los cinco niveles
+    8 tecnica_cinco_porques                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando ocurre un fallo técnico, de proceso o un resultado de negocio inesperado
+    8 tecnica_cinco_porques                        condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando el equipo repite errores similares sin entender la causa raíz
+    8 tecnica_cinco_porques                        condicion    3  CONDICION 4 del superviviente
+        Cuando la organización necesita balancear velocidad de ejecución con calidad de forma incremental
+    9 fase_accomplish                              paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir claramente cuál es el 'resultado deseado' del cliente, no solo la entrega del producto.
+    9 fase_accomplish                              paso         2  ya lo dice el PASO 2 del superviviente
+        Medir y validar activamente cuándo el cliente ha alcanzado ese resultado.
+    9 fase_accomplish                              paso         3  ya lo dice el PASO 4 del superviviente
+        Celebrar y comunicar el logro alcanzado junto con el cliente.
+    9 fase_accomplish                              paso         4  PASO 11 del superviviente
+        Recoger evidencia (testimonios, datos) del resultado logrado para usos futuros.
+    9 fase_accomplish                              condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se necesita verificar si el cliente realmente obtuvo el valor prometido.
+   10 herramientas_adquisicion_viral               paso         1  ya lo dice el PASO 2 del superviviente
+        Diseña dentro de tu producto una forma de invitar o compartir, como un 'invita a un amigo'
+   10 herramientas_adquisicion_viral               paso         2  ya lo dice el PASO 4 del superviviente
+        Pregunta a tus primeros clientes: ¿recomendarías esto a un amigo, del uno al diez?
+   10 herramientas_adquisicion_viral               paso         3  ya lo dice el PASO 3 del superviviente
+        Crea botones o enlaces que faciliten compartir en redes sociales
+   10 herramientas_adquisicion_viral               paso         4  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Produce contenido compartible, como videos o demostraciones, que inviten a otros a explorar tu producto
+   10 herramientas_adquisicion_viral               paso         5  PASO 7 del superviviente
+        Anima a tus primeros clientes a que lo promuevan activamente
+   10 herramientas_adquisicion_viral               condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando tu producto es digital y puede beneficiarse de crecer por recomendación o efecto de red, con poco gasto
+   11 historia_del_futuro_escenarios_especulativos paso         1  ya lo dice el PASO 1 del superviviente
+        Elige una tendencia tecnológica emergente relevante para tu proyecto.
+   11 historia_del_futuro_escenarios_especulativos paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Escribe una viñeta narrativa de cómo esa tecnología podría usarse (o mal usarse) en 10-15 años.
+   11 historia_del_futuro_escenarios_especulativos paso         3  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Introduce personajes con distintas motivaciones (usuarios, empresas, reguladores) para revelar tensiones.
+   11 historia_del_futuro_escenarios_especulativos paso         4  ya lo dice el PASO 3 del superviviente
+        Extrae de la narrativa los riesgos éticos, sociales o emocionales que el diseño actual debería mitigar.
+   11 historia_del_futuro_escenarios_especulativos paso         5  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Comparte el escenario con el equipo para generar discusión antes de definir requisitos del producto.
+   11 historia_del_futuro_escenarios_especulativos condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se diseña tecnología con alto potencial de impacto social a largo plazo (IA, biometría, redes sociales).
+   11 historia_del_futuro_escenarios_especulativos condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando el equipo necesita anticipar riesgos éticos antes de la fase de prototipado.
+   12 analisis_disrupciones_mercado                paso         1  ya lo dice el PASO 3 del superviviente
+        Desarrollar un mapa de la cadena de valor de la industria del cliente
+   12 analisis_disrupciones_mercado                paso         2  PASO 7 del superviviente
+        Evaluar el futuro de cada actor: quién gana, quién es desintermediado
+   12 analisis_disrupciones_mercado                paso         3  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar los drivers de rentabilidad de la industria del cliente y cómo están cambiando
+   12 analisis_disrupciones_mercado                paso         4  ya lo dice el PASO 4 del superviviente
+        Construir un Market Map o Profit Pool Map para visualizar distribución de ingresos y márgenes
+   12 analisis_disrupciones_mercado                paso         5  PASO 8 del superviviente
+        Definir escenarios futuros y detectar arenas de oportunidad
+   12 analisis_disrupciones_mercado                condicion    1  CONDICION 3 del superviviente
+        Cuando se busca identificar oportunidades de innovación a nivel estratégico, no solo a nivel de producto individual
+   12 analisis_disrupciones_mercado                condicion    2  CONDICION 4 del superviviente
+        Cuando la industria del cliente está atravesando cambios estructurales
+   13 alineacion_cadena_estrategia_negocio         paso         1  PASO 8 del superviviente
+        Responder las 6 preguntas de Chopra y Meindl sobre tu mercado: cantidad por lote, tiempo de respuesta, variedad, nivel de servicio, precio, tasa de in
+   13 alineacion_cadena_estrategia_negocio         paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir el rol de tu empresa en la cadena de suministro y sus core competencies
+   13 alineacion_cadena_estrategia_negocio         paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseñar cada uno de los 5 drivers (producción, inventario, ubicación, transporte, información) para soportar responsividad o eficiencia según correspo
+   13 alineacion_cadena_estrategia_negocio         paso         4  PASO 9 del superviviente
+        Validar que la estrategia de cadena de suministro sea coherente con la propuesta de valor al cliente
+   13 alineacion_cadena_estrategia_negocio         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el usuario tiene un modelo de negocio definido y necesita diseñar/optimizar su cadena de suministro para soportarlo
+   14 data_warehouse_como_fundamento               paso         1  ya lo dice el PASO 1 del superviviente
+        Identifica todas las fuentes de datos transaccionales existentes (ERP, sistemas de intercambio de datos)
+   14 data_warehouse_como_fundamento               paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseña un data warehouse que consolide estos datos diaria u horariamente
+   14 data_warehouse_como_fundamento               paso         3  PASO 6 del superviviente
+        Prioriza este proyecto como base antes de construir módulos analíticos (forecasting, scheduling)
+   14 data_warehouse_como_fundamento               paso         4  ya lo dice el PASO 4 del superviviente
+        Define qué reportes y accesos vía web se habilitarán a partir de esta base de datos
+   14 data_warehouse_como_fundamento               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se quiere mejorar pronóstico, inventario o gestión de pedidos pero los datos están fragmentados en múltiples sistemas
+   15 dso_dpo_gestion_capital_trabajo              paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Calcular cuentas por cobrar finales dividido entre ingresos diarios para obtener DSO
+   15 dso_dpo_gestion_capital_trabajo              paso         2  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Calcular cuentas por pagar finales dividido entre COGS diario para obtener DPO
+   15 dso_dpo_gestion_capital_trabajo              paso         3  PASO 7 del superviviente
+        Investigar causas de un DSO elevado: quejas de clientes, términos de venta laxos, facturación lenta
+   15 dso_dpo_gestion_capital_trabajo              paso         4  ya lo dice el PASO 4 del superviviente
+        Balancear el DPO para preservar efectivo sin dañar la relación con proveedores clave
+   15 dso_dpo_gestion_capital_trabajo              condicion    1  ya lo dice la CONDICION 2 del superviviente
+        La empresa reporta problemas de flujo de caja pese a ventas saludables
+   15 dso_dpo_gestion_capital_trabajo              condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Due diligence de adquisición de otra empresa
+   16 fase_mobilizacion_equipo_multifuncional      paso         1  ya lo dice el PASO 2 del superviviente
+        Reclutar miembros de distintas unidades y funciones de la organización
+   16 fase_mobilizacion_equipo_multifuncional      paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Incluir diferentes niveles jerárquicos y áreas de expertise
+   16 fase_mobilizacion_equipo_multifuncional      paso         3  PASO 6 del superviviente
+        Educar a los tomadores de decisiones sobre modelos de negocio usando historias e imágenes, no teoría
+   16 fase_mobilizacion_equipo_multifuncional      paso         4  ya lo dice el PASO 1 del superviviente
+        Establecer el propósito y alcance del proyecto de innovación de modelo de negocio
+   16 fase_mobilizacion_equipo_multifuncional      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si se inicia un proyecto formal de diseño o rediseño de modelo de negocio en una organización establecida
+   17 construccion_de_comunidad_como_canal_traccion paso         1  PASO 8 del superviviente
+        Evaluar si tu modelo de negocio se presta naturalmente a la construcción de comunidad (¿tu valor central conecta personas?).
+   17 construccion_de_comunidad_como_canal_traccion paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar comunidades complementarias existentes online y offline para hacer bootstrap de evangelistas iniciales.
+   17 construccion_de_comunidad_como_canal_traccion paso         3  ya lo dice el PASO 1 del superviviente
+        Compartir tu misión en esos espacios y reclutar a los primeros miembros/evangelistas.
+   17 construccion_de_comunidad_como_canal_traccion paso         4  PASO 9 del superviviente
+        Fomentar la conexión cruzada entre miembros de la comunidad, no solo entre miembro-empresa.
+   17 construccion_de_comunidad_como_canal_traccion paso         5  ya lo dice el PASO 7 del superviviente
+        Organizar o participar en eventos presenciales (charlas, meetups) que refuercen los lazos creados online.
+   17 construccion_de_comunidad_como_canal_traccion condicion    1  CONDICION 4 del superviviente
+        Cuando el negocio depende de conectar personas entre sí (marketplace, red social, plataforma colaborativa)
+   17 construccion_de_comunidad_como_canal_traccion condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando se busca un canal de tracción de bajo costo pero alto compromiso emocional del usuario
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 17
+  nodos implicados    : 34
+  nodos que MUEREN    : 17
+  piezas repartidas   : 100 (30 viajan enteras, 52 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 90
+censo DESPUES: 3853 ficheros, 3415 vivos, 438 deprecados
+censo ANTES  : 3853 ficheros, 3432 vivos, 421 deprecados
+delta deprecados: +17 (esperado +17): OK

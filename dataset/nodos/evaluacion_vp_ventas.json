@@ -8,23 +8,39 @@
   "pasos_accionables": [
     "Pregunta si el candidato diseñó o solo ejecutó el proceso de ventas en su empresa anterior",
     "Verifica su comprensión de procesos técnicos de venta: benchmarking, POCs, demos, lockout documents",
-    "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo",
+    "Evalúa su capacidad para entrenar y hacer cumplir el proceso de ventas al equipo, pidiendole ejemplos de contrataciones que salieron mal",
     "Pide que describa su modelo de evaluación de representantes y diferencie entre reps transaccionales y de venta enterprise",
     "Solicita referencias de clientes que puedan confirmar su capacidad de cerrar grandes deals",
-    "Evalúa su entendimiento de marketing (branding, generación de leads, sales enablement) y de conflictos de canal"
+    "Evalúa su entendimiento de marketing (branding, generación de leads, sales enablement) y de conflictos de canal",
+    "Evalúa si puede presentarte de forma convincente y estratégica su empresa actual, como prueba de que sabe articular una visión",
+    "Pide referencias de su equipo actual para confirmar si la gente lo seguiría",
+    "Evalúa si entiende de planes de compensación, incentivos por resultados, canales de venta y los conflictos que surgen entre canales"
   ],
   "entregable_esperado": "Checklist de entrevista estructurado con preguntas específicas para validar competencias reales de un candidato a VP de Ventas",
   "nodos_previos": [
     "framework_ones_and_twos",
-    "contratar_cerrador_de_ventas"
+    "contratar_cerrador_de_ventas",
+    "customer_segments_hypothesis"
   ],
   "nodos_siguientes": [
     "diseno_embudo_ventas_cliente",
-    "framework_excelencia_operacional"
+    "framework_excelencia_operacional",
+    "estrategia_de_ventas"
   ],
   "condiciones_activacion": [
     "Cuando la startup necesita escalar su función de ventas contratando un líder senior",
-    "Si el fundador no tiene experiencia previa evaluando ejecutivos de ventas"
+    "Si el fundador no tiene experiencia previa evaluando ejecutivos de ventas",
+    "Cuando buscas hacer crecer tu equipo comercial que vende a otras empresas (B2B)"
   ],
-  "etiqueta_arbol": "Evalúa a tu Futuro Vendedor"
+  "etiqueta_arbol": "Evalúa a tu Futuro Vendedor",
+  "ids_alias": [
+    "framework_evaluacion_director_ventas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "framework_evaluacion_director_ventas",
+      "titulo": "Cómo evaluar a un candidato a líder de ventas para grandes cuentas (Head of Enterprise Sales)",
+      "fuente": "The Hard Thing About Hard Thing - Ben Horowitz"
+    }
+  ]
 }

@@ -8,25 +8,40 @@
   "pasos_accionables": [
     "Diseña varias pruebas pequeñas de publicidad fuera de internet en paralelo, en distintos mercados locales",
     "Busca espacios publicitarios sobrantes (remnant ad inventory) para conseguir descuentos",
-    "Asigna un código único o una dirección web específica a cada campaña para rastrear qué te trae resultados",
+    "Asigna un código único o una dirección web específica a cada campaña para rastrear qué te trae resultados, y un código de descuento distinto para cada canal",
     "Mide los resultados y escala solo lo que te esté dando retorno positivo",
     "Revisa el rendimiento cada tanto, porque un anuncio que funciona hoy puede dejar de funcionar con el tiempo",
     "Pregunta a tus clientes qué medios consumen fuera de internet (revistas, radio, etc.)",
     "Pide a cada medio que te interese su prospecto de audiencia (paquete de anuncio) para saber a quién le llega",
     "Compara la gente a la que llega cada medio, su alcance y su precio",
-    "Empieza con pruebas pequeñas y económicas antes de escalar (radio local, prensa local, vallas pequeñas)"
+    "Empieza con pruebas pequeñas y económicas antes de escalar (radio local, prensa local, vallas pequeñas)",
+    "Agrega la pregunta '¿cómo se enteró de nosotros?' en tu formulario de registro o compra"
   ],
   "entregable_esperado": "Un reporte de tus pruebas piloto de publicidad fuera de internet con las métricas de conversión por canal y por código de rastreo",
   "nodos_previos": [
-    "seleccion_canal_distribucion"
+    "seleccion_canal_distribucion",
+    "herramientas_online_canal_fisico",
+    "seleccion_plataforma_social_ads"
   ],
   "nodos_siguientes": [
     "seo_estrategia_fat_head",
-    "content_marketing_blog"
+    "content_marketing_blog",
+    "publicidad_remanente_remnant_ads"
   ],
   "condiciones_activacion": [
     "Cuando tu producto apunta a mucha gente y lo offline tiene sentido para ti (por ejemplo, productos de consumo)",
-    "Cuando los canales digitales ya no te alcanzan o están saturados"
+    "Cuando los canales digitales ya no te alcanzan o están saturados",
+    "Cuando estás corriendo varias campañas offline al mismo tiempo y necesitas saber cuál te está funcionando"
   ],
-  "etiqueta_arbol": "Prueba tu Publicidad en Local"
+  "etiqueta_arbol": "Prueba tu Publicidad en Local",
+  "ids_alias": [
+    "tracking_publicidad_offline"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "tracking_publicidad_offline",
+      "titulo": "Cómo medir tu publicidad fuera de internet",
+      "fuente": "Traction - Gabriel Weinberg"
+    }
+  ]
 }

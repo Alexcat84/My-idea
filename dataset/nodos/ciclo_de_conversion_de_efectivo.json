@@ -5,12 +5,13 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "El ciclo de conversión de efectivo mide cuántos días tarda una empresa en recuperar el efectivo invertido en sus operaciones, desde el pago de materias primas hasta el cobro de las ventas, integrando los periodos de cuentas por pagar, inventario y cuentas por cobrar. Se calcula como DSO + DII − DPO (días de cobro más días de inventario menos días de pago). Un ciclo largo implica una mayor necesidad de capital de trabajo; acortarlo libera efectivo significativo para el negocio, aunque maximizar el DPO (tardar más en pagar a proveedores) debe equilibrarse contra el riesgo de deteriorar las relaciones con ellos.",
   "pasos_accionables": [
-    "Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago)",
+    "Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago), el DSO es cuentas por cobrar finales dividido entre ingresos diarios, y el DPO es cuentas por pagar finales dividido entre COGS diario",
     "Aplicar la fórmula: Ciclo = DSO + DII - DPO",
     "Multiplicar el resultado por las ventas diarias para estimar el capital de trabajo requerido",
     "Evaluar el trade-off entre maximizar el DPO y mantener buenas relaciones con los proveedores",
     "Identificar en qué punto del ciclo se puede acelerar el retorno de efectivo (reducir DSO, reducir inventario, aumentar DPO razonablemente)",
-    "Monitorear el ciclo periódicamente, especialmente tras fusiones o adquisiciones"
+    "Monitorear el ciclo periódicamente, especialmente tras fusiones o adquisiciones",
+    "Investigar causas de un DSO elevado: quejas de clientes, términos de venta laxos, facturación lenta"
   ],
   "entregable_esperado": "Cálculo del ciclo de conversión de efectivo, con diagrama de DPO, DSO y DII integrados, y un plan de acción para optimizarlo",
   "condiciones_activacion": [
@@ -25,12 +26,25 @@
     "gestion_inventario",
     "gestion_cuentas_por_pagar_dpo",
     "analisis_flujo_de_valor",
-    "gestion_capital_trabajo"
+    "gestion_capital_trabajo",
+    "ratios_eficiencia_inventario"
   ],
   "nodos_siguientes": [
     "gestion_relacion_bancaria",
     "analisis_antiguedad_cuentas_por_cobrar",
-    "cultura_de_transparencia_financiera"
+    "cultura_de_transparencia_financiera",
+    "rotacion_activos",
+    "tasa_crecimiento_sostenible"
   ],
-  "etiqueta_arbol": "Mide tu Ciclo de Efectivo"
+  "etiqueta_arbol": "Mide tu Ciclo de Efectivo",
+  "ids_alias": [
+    "dso_dpo_gestion_capital_trabajo"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "dso_dpo_gestion_capital_trabajo",
+      "titulo": "Gestión de Cuentas por Cobrar y Pagar (DSO y DPO)",
+      "fuente": "Financial Intelligence for Entrepreneurs"
+    }
+  ]
 }

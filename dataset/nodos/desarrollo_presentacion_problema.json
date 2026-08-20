@@ -8,24 +8,36 @@
   "pasos_accionables": [
     "Convierte tus hipótesis de propuesta de valor en una presentación simple de una diapositiva con tres columnas: problemas, soluciones actuales, solución propuesta",
     "Presenta primero solo los problemas y haz una pausa para que el cliente reaccione y priorice",
-    "Pregúntale cómo resuelve hoy ese problema y quién más lo comparte",
-    "Presenta tu solución al final y observa la reacción genuina del cliente",
+    "Pregúntale cómo resuelve hoy ese problema y quién más lo comparte, y preguntar cómo las rankean",
+    "Presenta tu solución al final y observa la reacción genuina del cliente, sin entrar en features",
     "Cierra la reunión preguntando qué deberías haberle preguntado y pide referencias adicionales",
-    "Anota el costo estimado del problema para el cliente, en tiempo, dinero o frustración, para usarlo más adelante en la validación"
+    "Anota el costo estimado del problema para el cliente, en tiempo, dinero o frustración, para usarlo más adelante en la validación",
+    "Preguntar cómo se compara la solución propuesta con las soluciones actuales"
   ],
   "entregable_esperado": "Presentación del problema validada con comentarios cualitativos de al menos 10 a 15 clientes",
   "nodos_previos": [
-    "preparar_contacto_clientes"
+    "preparar_contacto_clientes",
+    "preguntas_ipo_dolor_cliente"
   ],
   "nodos_siguientes": [
     "customer_validation",
     "audacia_del_cero",
     "burn_rate_por_etapa",
-    "presentacion_problema_tres_columnas",
-    "preguntas_ipo_dolor_cliente"
+    "preguntas_ipo_dolor_cliente",
+    "scorecard_descubrimiento_cliente"
   ],
   "condiciones_activacion": [
     "Cuando ya tienes reuniones agendadas con clientes potenciales y necesitas validar si el problema es real y urgente antes de mostrarles tu producto"
   ],
-  "etiqueta_arbol": "Haz Hablar al Cliente"
+  "etiqueta_arbol": "Haz Hablar al Cliente",
+  "ids_alias": [
+    "presentacion_problema_tres_columnas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "presentacion_problema_tres_columnas",
+      "titulo": "Presentación del Problema en Tres Columnas",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

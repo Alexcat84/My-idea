@@ -8,21 +8,34 @@
   "pasos_accionables": [
     "Identifica los sistemas que usas para operar y llevar las cuentas, y de dónde salen los datos que necesitas",
     "Automatiza la captura de esos datos para no tener que ingresarlos a mano",
-    "Arma primero una versión simple y pequeña antes de ampliarla",
+    "Arma primero una versión simple y pequeña antes de ampliarla, consolidando diaria u horariamente",
     "Deja listos reportes ya armados y la posibilidad de hacer consultas propias para quien los necesite",
-    "Si tiene sentido, dale acceso por internet a las personas con las que trabajas en tu cadena de suministro"
+    "Si tiene sentido, dale acceso por internet a las personas con las que trabajas en tu cadena de suministro",
+    "Prioriza este proyecto como base antes de construir módulos analíticos (forecasting, scheduling)"
   ],
   "entregable_esperado": "Un repositorio de datos (data warehouse) que funciona, conectado automáticamente a tus sistemas de origen, con reportes básicos de tu operación",
   "nodos_previos": [
-    "jerarquia_datos_scor"
+    "jerarquia_datos_scor",
+    "cuatro_capacidades_mercado"
   ],
   "nodos_siguientes": [
     "diseno_dashboards",
-    "compartir_datos_cadena_suministro"
+    "compartir_datos_cadena_suministro",
+    "bpm_gestion_excepciones"
   ],
   "condiciones_activacion": [
     "Cuando manejas varios sistemas de información dispersos",
     "Si necesitas ver de un vistazo cómo va tu operación"
   ],
-  "etiqueta_arbol": "Centraliza tus Datos Clave"
+  "etiqueta_arbol": "Centraliza tus Datos Clave",
+  "ids_alias": [
+    "data_warehouse_como_fundamento"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "data_warehouse_como_fundamento",
+      "titulo": "Data Warehouse Empresarial como Fundamento de Mejora Operativa",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }
