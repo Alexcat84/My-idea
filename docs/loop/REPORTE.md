@@ -25,8 +25,8 @@ vuelta**. **Se cazo en la corrida `--simular`, antes de escribir una linea**, y 
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `d9fd6a54` (el commit del acta 61), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** (`git status --porcelain` VACIO, comprobado) |
-| **hash final** | **el commit de este reporte**, pusheado a `origin/pasada-unica`, mas el que escribe esta celda, porque el commit del reporte no puede contener su propio hash |
-| **commits de la vuelta** | **5**, leidos de `git log --format=%h d9fd6a54..HEAD`: `fdbaf979` (apertura medida), `dcb20469` (TAREA 1 entera), `7a467818` (LOTE A), `01fb303f` (LOTE B mas el registro del tramo), el de este reporte, **mas el que escribe esta celda** |
+| **hash final** | **`77f8c8f3`**, el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas este ultimo, que solo escribe esta celda porque el commit del reporte no podia contener su propio hash |
+| **commits de la vuelta** | **5**, leidos de `git log --format=%h d9fd6a54..HEAD`: `fdbaf979` (apertura medida), `dcb20469` (TAREA 1 entera), `7a467818` (LOTE A), `01fb303f` (LOTE B mas el registro del tramo), `77f8c8f3` (este reporte), **mas el que escribe esta celda** |
 | **arbol al cierre** | limpio tras el commit del reporte |
 
 ---
