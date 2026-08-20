@@ -6,25 +6,50 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El error-proofing es un elemento clave de prevención de errores en procesos de servicio. Se basa en cinco principios: eliminar la actividad propensa a errores, sustituir por un proceso más confiable, facilitar el trabajo del trabajador, detectar errores más temprano, y minimizar el efecto de los errores. La tecnología juega un rol importante como fuente de ayudas para el error-proofing.",
   "pasos_accionables": [
-    "Identificar actividades propensas a errores en el proceso",
+    "Identificar actividades propensas a errores en el proceso o producto",
     "Evaluar si la actividad puede eliminarse completamente",
     "Buscar sustitutos más confiables para el proceso actual",
     "Simplificar el trabajo para reducir la posibilidad de error humano",
     "Implementar detección temprana de errores (software, códigos de barras, checklists)",
-    "Diseñar mecanismos para minimizar el impacto cuando ocurran errores"
+    "Diseñar mecanismos para minimizar el impacto cuando ocurran errores",
+    "Clasifica el tipo de intervención según los cinco principios: eliminación, reemplazo, facilitación, detección o mitigación",
+    "Diseña dispositivos físicos o lógicos que hagan imposible o detectable el error, como encajes únicos o sensores",
+    "Prioriza la prevención proactiva en la etapa de diseño por encima de la mitigación reactiva",
+    "Valida que el dispositivo funcione consistentemente antes de escalar su uso"
   ],
   "entregable_esperado": "Lista de mecanismos de error-proofing implementados en el proceso con evidencia de reducción de errores",
   "nodos_previos": [
     "analisis_flujo_proceso_servicio",
     "diseno_servicio_calidad",
-    "reduccion_tiempo_ciclo"
+    "reduccion_tiempo_ciclo",
+    "analisis_diagnostico_causa",
+    "analisis_flujo_proceso",
+    "control_del_proceso_del_proveedor",
+    "control_proceso_variables",
+    "rcm_reliability_centered_maintenance"
   ],
   "nodos_siguientes": [
-    "medicion_capacidad_servicio"
+    "medicion_capacidad_servicio",
+    "control_estadistico_de_procesos",
+    "six_sigma_dmaic",
+    "six_sigma_dmaic_2",
+    "validacion_sistema_medicion"
   ],
   "condiciones_activacion": [
     "Cuando se identifican puntos del proceso propensos a fallos humanos",
-    "Cuando se busca prevenir defectos antes de que ocurran en el servicio"
+    "Cuando se busca prevenir defectos antes de que ocurran en el servicio",
+    "Cuando buscas reducir inspecciones y lograr trabajo libre de defectos",
+    "Cuando diseñas un nuevo proceso o herramienta y quieres prevenir errores desde el origen"
   ],
-  "etiqueta_arbol": "Evita Errores en tu Servicio"
+  "etiqueta_arbol": "Evita Errores en tu Servicio",
+  "ids_alias": [
+    "mistake_proofing_poka_yoke_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "mistake_proofing_poka_yoke_2",
+      "titulo": "Mistake Proofing (Poka-Yoke)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

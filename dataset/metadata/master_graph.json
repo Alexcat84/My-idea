@@ -3797,7 +3797,7 @@
       ],
       "nodos_siguientes": [
         "juran_rcca_metodo",
-        "mistake_proofing_poka_yoke_2",
+        "error_proofing_servicio",
         "pdsa_shewhart_cycle"
       ],
       "condiciones_activacion": [
@@ -4018,7 +4018,7 @@
       "nodos_siguientes": [
         "control_proceso_variables",
         "errores_a_prueba_poka_yoke",
-        "mistake_proofing_poka_yoke_2"
+        "error_proofing_servicio"
       ],
       "condiciones_activacion": [
         "Cuando se diseña o rediseña un proceso de manufactura",
@@ -4184,7 +4184,8 @@
           "titulo": "Análisis de Pareto para Priorización de Problemas",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
         }
-      ]
+      ],
+      "deprecado": true
     },
     "analisis_pareto_de_proveedores": {
       "node_id": "analisis_pareto_de_proveedores",
@@ -4194,24 +4195,48 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Técnica para identificar los 'pocos vitales' problemas de proveedores en lugar de intentar programas amplios que aprieten todos los procedimientos. Puede aplicarse por número de parte, familia de producto, proceso, proveedor completo, costo total, o modo de falla, revelando debilidades gerenciales y tecnológicas específicas que merecen atención prioritaria.",
       "pasos_accionables": [
-        "Recopilar datos de defectos y rechazos por proveedor, parte o proceso",
+        "Recopilar datos de defectos y rechazos por proveedor, parte o proceso y calcular el gran total",
         "Clasificar las pérdidas usando el principio de Pareto (80/20)",
-        "Identificar los pocos proveedores o partes que concentran la mayoría de los problemas",
+        "Identificar los pocos proveedores o partes que concentran la mayoría de los problemas, analizando el punto de quiebre en la curva",
         "Enfocar recursos de mejora en los elementos vitales identificados",
-        "Repetir el análisis por diferentes dimensiones (costo, modo de falla, etc.)"
+        "Repetir el análisis por diferentes dimensiones (costo, modo de falla, etc.)",
+        "Reordenar los contribuyentes de mayor a menor y calcular el porcentaje acumulado",
+        "Dibujar ejes con barras de magnitud y línea de porcentaje acumulado",
+        "Repetir el análisis de forma iterativa sobre las subcategorías del problema principal"
       ],
       "entregable_esperado": "Gráfico de Pareto con los proveedores, partes o procesos críticos identificados y priorizados para acción",
       "nodos_previos": [
-        "calificacion_de_calidad_de_proveedores"
+        "calificacion_de_calidad_de_proveedores",
+        "graficos_y_diagramas",
+        "principio_pareto"
       ],
       "nodos_siguientes": [
-        "equipo_conjunto_de_mejora_con_proveedores"
+        "equipo_conjunto_de_mejora_con_proveedores",
+        "consejo_de_calidad",
+        "control_estadistico_de_procesos",
+        "establecer_proyecto_mejora",
+        "fmea_analisis_de_modos_de_falla",
+        "matriz_de_planificacion_arbol",
+        "six_sigma_dmaic",
+        "viaje_diagnostico_remedial"
       ],
       "condiciones_activacion": [
         "Cuando un programa de mejora de proveedores no logra resultados por dispersión de esfuerzos",
-        "Cuando se necesita priorizar recursos limitados de mejora"
+        "Cuando se necesita priorizar recursos limitados de mejora",
+        "Cuando debes elegir en qué proyecto de mejora invertir tu tiempo según su impacto",
+        "Cuando existen varios tipos de defectos o problemas y no sabes por dónde empezar"
       ],
-      "etiqueta_arbol": "Prioriza Problemas con Proveedores"
+      "etiqueta_arbol": "Prioriza Problemas con Proveedores",
+      "ids_alias": [
+        "analisis_pareto"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "analisis_pareto",
+          "titulo": "Análisis de Pareto",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "analisis_pareto_priorizacion": {
       "node_id": "analisis_pareto_priorizacion",
@@ -13843,7 +13868,7 @@
       "entregable_esperado": "Reporte de correlación entre estilo de venta (cierre vs. consultivo) y métricas de satisfacción/retención post-venta",
       "nodos_previos": [
         "cierre_sofisticacion_comprador",
-        "seguimiento_informacion_cliente"
+        "investigar_datos_cliente"
       ],
       "nodos_siguientes": [
         "customer_retention_strategy",
@@ -17690,7 +17715,7 @@
       ],
       "nodos_siguientes": [
         "principio_pareto",
-        "proceso_nominacion_seleccion",
+        "criterios_seleccion_proyectos_calidad",
         "rol_facilitador_equipos_mejora"
       ],
       "condiciones_activacion": [
@@ -18857,7 +18882,7 @@
         "programa_mejora_calidad_14_pasos",
         "programa_zero_defects",
         "replicar_resultados",
-        "analisis_pareto",
+        "analisis_pareto_de_proveedores",
         "cero_defectos",
         "auditoria_negocio",
         "auditoria_presidente",
@@ -20940,7 +20965,7 @@
         "certificacion_de_proveedores",
         "clasificacion_de_seriedad_de_defectos",
         "clasificacion_de_seriedad_de_defectos_2",
-        "mistake_proofing_poka_yoke_2"
+        "error_proofing_servicio"
       ],
       "condiciones_activacion": [
         "Cuando se inicia una relación contractual con un nuevo proveedor de manufactura",
@@ -21023,11 +21048,11 @@
       "entregable_esperado": "Gráfico de control implementado con límites calculados, subgrupos racionales definidos y protocolo de interpretación/acción",
       "nodos_previos": [
         "histograma",
-        "analisis_pareto",
+        "analisis_pareto_de_proveedores",
         "cuatro_costos_de_calidad",
         "matriz_de_control_de_proceso",
         "mejora_continua_del_sistema",
-        "mistake_proofing_poka_yoke_2",
+        "error_proofing_servicio",
         "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
@@ -21350,7 +21375,7 @@
       "nodos_siguientes": [
         "errores_a_prueba_poka_yoke",
         "validacion_sistema_medicion",
-        "mistake_proofing_poka_yoke_2"
+        "error_proofing_servicio"
       ],
       "condiciones_activacion": [
         "Cuando se busca reducir variabilidad del proceso",
@@ -24009,16 +24034,19 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Para priorizar proyectos de mejora entre múltiples nominaciones, las organizaciones deben evaluar sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios determina las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
       "pasos_accionables": [
-        "Listar todas las nominaciones de proyectos disponibles",
-        "Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio",
+        "Listar todas las nominaciones de proyectos disponibles desde todas las fuentes posibles (datos, encuestas, empleados, clientes)",
+        "Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio, y también según factibilidad, significancia, medibilidad",
         "Construir una matriz de evaluación compuesta para comparar nominaciones",
-        "Presentar el listado priorizado al consejo de calidad para decisión final"
+        "Presentar el listado priorizado al consejo de calidad para decisión final",
+        "Delegar el filtrado inicial a una secretaría o departamento de calidad",
+        "Asegurar balance entre proyectos 'vitales pocos' y 'útiles muchos' para impacto real en resultados financieros"
       ],
       "entregable_esperado": "Matriz de priorización de proyectos con lista ordenada de recomendaciones",
       "nodos_previos": [
-        "proceso_nominacion_seleccion",
         "comprension_brechas_desempeno",
-        "data_integrity_forecasting"
+        "data_integrity_forecasting",
+        "concepto_proyecto_breakthrough",
+        "principio_pareto"
       ],
       "nodos_siguientes": [
         "carta_proyecto_calidad",
@@ -24027,9 +24055,20 @@
       ],
       "condiciones_activacion": [
         "Cuando existen múltiples proyectos de mejora candidatos y se debe decidir cuáles ejecutar primero",
-        "Cuando el consejo de calidad necesita justificar recursos limitados"
+        "Cuando el consejo de calidad necesita justificar recursos limitados",
+        "Cuando se detecta que proyectos ejecutados no generan impacto real en resultados financieros (solo firefighting o relaciones humanas)"
       ],
-      "etiqueta_arbol": "Prioriza tus Proyectos de Calidad"
+      "etiqueta_arbol": "Prioriza tus Proyectos de Calidad",
+      "ids_alias": [
+        "proceso_nominacion_seleccion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "proceso_nominacion_seleccion",
+          "titulo": "Proceso de Nominación y Selección de Proyectos",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "critica_acceptable_quality_level": {
       "node_id": "critica_acceptable_quality_level",
@@ -27341,7 +27380,7 @@
         "economia_de_la_experiencia",
         "prototipado_experiencial_servicios",
         "rediseno_procesos_negocio_cx",
-        "seguimiento_informacion_cliente",
+        "investigar_datos_cliente",
         "silla_vacia_del_cliente_en_decisiones",
         "ejecucion_de_touchpoints",
         "storytelling_como_herramienta_de_diseno"
@@ -44085,27 +44124,52 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "El error-proofing es un elemento clave de prevención de errores en procesos de servicio. Se basa en cinco principios: eliminar la actividad propensa a errores, sustituir por un proceso más confiable, facilitar el trabajo del trabajador, detectar errores más temprano, y minimizar el efecto de los errores. La tecnología juega un rol importante como fuente de ayudas para el error-proofing.",
       "pasos_accionables": [
-        "Identificar actividades propensas a errores en el proceso",
+        "Identificar actividades propensas a errores en el proceso o producto",
         "Evaluar si la actividad puede eliminarse completamente",
         "Buscar sustitutos más confiables para el proceso actual",
         "Simplificar el trabajo para reducir la posibilidad de error humano",
         "Implementar detección temprana de errores (software, códigos de barras, checklists)",
-        "Diseñar mecanismos para minimizar el impacto cuando ocurran errores"
+        "Diseñar mecanismos para minimizar el impacto cuando ocurran errores",
+        "Clasifica el tipo de intervención según los cinco principios: eliminación, reemplazo, facilitación, detección o mitigación",
+        "Diseña dispositivos físicos o lógicos que hagan imposible o detectable el error, como encajes únicos o sensores",
+        "Prioriza la prevención proactiva en la etapa de diseño por encima de la mitigación reactiva",
+        "Valida que el dispositivo funcione consistentemente antes de escalar su uso"
       ],
       "entregable_esperado": "Lista de mecanismos de error-proofing implementados en el proceso con evidencia de reducción de errores",
       "nodos_previos": [
         "analisis_flujo_proceso_servicio",
         "diseno_servicio_calidad",
-        "reduccion_tiempo_ciclo"
+        "reduccion_tiempo_ciclo",
+        "analisis_diagnostico_causa",
+        "analisis_flujo_proceso",
+        "control_del_proceso_del_proveedor",
+        "control_proceso_variables",
+        "rcm_reliability_centered_maintenance"
       ],
       "nodos_siguientes": [
-        "medicion_capacidad_servicio"
+        "medicion_capacidad_servicio",
+        "control_estadistico_de_procesos",
+        "six_sigma_dmaic",
+        "six_sigma_dmaic_2",
+        "validacion_sistema_medicion"
       ],
       "condiciones_activacion": [
         "Cuando se identifican puntos del proceso propensos a fallos humanos",
-        "Cuando se busca prevenir defectos antes de que ocurran en el servicio"
+        "Cuando se busca prevenir defectos antes de que ocurran en el servicio",
+        "Cuando buscas reducir inspecciones y lograr trabajo libre de defectos",
+        "Cuando diseñas un nuevo proceso o herramienta y quieres prevenir errores desde el origen"
       ],
-      "etiqueta_arbol": "Evita Errores en tu Servicio"
+      "etiqueta_arbol": "Evita Errores en tu Servicio",
+      "ids_alias": [
+        "mistake_proofing_poka_yoke_2"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "mistake_proofing_poka_yoke_2",
+          "titulo": "Mistake Proofing (Poka-Yoke)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "error_proofing_six_sigma_lean": {
       "node_id": "error_proofing_six_sigma_lean",
@@ -45366,7 +45430,7 @@
       "nodos_previos": [
         "consejo_de_calidad",
         "analisis_pareto_priorizacion",
-        "analisis_pareto"
+        "analisis_pareto_de_proveedores"
       ],
       "nodos_siguientes": [
         "viaje_diagnostico_remedial"
@@ -52227,7 +52291,7 @@
         "fase_assess_experiencia_cliente",
         "welcome_call_cliente_veterano",
         "fase_affirm_reduccion_incertidumbre",
-        "seguimiento_informacion_cliente",
+        "investigar_datos_cliente",
         "fase_affirm_buyers_remorse"
       ],
       "nodos_siguientes": [
@@ -54251,7 +54315,7 @@
       "entregable_esperado": "Matriz FMEA completa con modos de falla, causas, efectos, RPN calculado y plan de acción para los riesgos más altos",
       "nodos_previos": [
         "diagrama_de_flujo_proceso_map",
-        "analisis_pareto"
+        "analisis_pareto_de_proveedores"
       ],
       "nodos_siguientes": [
         "matriz_de_control_de_proceso",
@@ -60222,7 +60286,7 @@
         "diagrama_arbol_despliegue"
       ],
       "nodos_siguientes": [
-        "analisis_pareto",
+        "analisis_pareto_de_proveedores",
         "histograma"
       ],
       "condiciones_activacion": [
@@ -66403,7 +66467,7 @@
       "fuente": "Never Lose a Customer Again - Joey Coleman",
       "resumen_teorico": "Este es el primer paso del método IOPS (investigar, observar, personalizar, sorprender) para no perder a tus clientes. Se trata de identificar y anotar de forma ordenada datos personales y emocionales de cada cliente en tu CRM, el sistema donde guardas su información, usando primero fuentes públicas como LinkedIn, Facebook, el sitio web de la empresa o una búsqueda en Google, antes de preguntar directamente. Cuando combinas datos personales y emocionales logras conexiones más genuinas y significativas.",
       "pasos_accionables": [
-        "Elige de 5 a 10 datos que vas a empezar a registrar de inmediato",
+        "Elige de 5 a 10 datos que vas a empezar a registrar de inmediato, clasificados por categorías (básica, profesional, personal, preferencias, actividad de compra)",
         "Elige otros 5 a 10 datos para registrar en los próximos 6 a 12 meses",
         "Revisa LinkedIn, Facebook, el sitio web de la empresa y Google para completar esos datos en tu CRM",
         "Guarda las URLs de los perfiles sociales en el CRM para facilitar futuras búsquedas",
@@ -66413,24 +66477,42 @@
         "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar",
         "Define entre 5 y 10 datos prioritarios que empieces a registrar desde ahora",
         "Revisa y completa la información que ya conoces pero no has registrado",
-        "Investiga perfiles públicos en redes sociales para obtener datos personales y emocionales"
+        "Investiga perfiles públicos en redes sociales para obtener datos personales y emocionales",
+        "Registrar la fecha de adquisición y actualización de cada dato para mantener la información fresca",
+        "Capturar tanto la razón declarada como la razón real de compra del cliente para entender mejor su motivación",
+        "Documentar resultados obtenidos y disposición general del cliente tras cada compra o interacción",
+        "Usar la información recopilada activamente en comunicaciones personalizadas (cumpleaños, preferencias de contacto, intereses)"
       ],
       "entregable_esperado": "Tu CRM con los datos personales y emocionales clave de cada cliente, listos para usarlos más adelante en la personalización",
       "nodos_previos": [
         "customer_archetypes",
         "customer_types_mapping",
-        "tipos_de_clientes"
+        "tipos_de_clientes",
+        "customer_journey_mapping"
       ],
       "nodos_siguientes": [
         "personalizar_interacciones_cliente",
-        "observar_al_cliente_en_su_contexto"
+        "observar_al_cliente_en_su_contexto",
+        "cierre_satisfaccion_postventa",
+        "fase_acclimate_experiencia_cliente"
       ],
       "condiciones_activacion": [
         "Ya tienes clientes activos pero te falta conocerlos a fondo",
         "Quieres mejorar la retención construyendo relaciones más personales",
-        "Tu CRM tiene campos vacíos o desactualizados"
+        "Tu CRM tiene campos vacíos o desactualizados",
+        "Si el equipo no tiene un sistema estructurado para conocer a fondo a sus clientes"
       ],
-      "etiqueta_arbol": "Recopila Datos de tu Cliente"
+      "etiqueta_arbol": "Recopila Datos de tu Cliente",
+      "ids_alias": [
+        "seguimiento_informacion_cliente"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "seguimiento_informacion_cliente",
+          "titulo": "Sistema de Seguimiento de Información del Cliente",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "invitar_ia_a_todo": {
       "node_id": "invitar_ia_a_todo",
@@ -71886,7 +71968,7 @@
       ],
       "entregable_esperado": "Matriz de planificación con tareas, responsables, fechas y mecanismo de seguimiento definidos",
       "nodos_previos": [
-        "analisis_pareto",
+        "analisis_pareto_de_proveedores",
         "matriz_de_seleccion"
       ],
       "nodos_siguientes": [
@@ -74999,7 +75081,8 @@
           "titulo": "Mistake Proofing / Poka-Yoke",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
         }
-      ]
+      ],
+      "deprecado": true
     },
     "mitigacion_efecto_latigo": {
       "node_id": "mitigacion_efecto_latigo",
@@ -87597,9 +87680,9 @@
         "despliegue_metas"
       ],
       "nodos_siguientes": [
-        "proceso_nominacion_seleccion",
+        "criterios_seleccion_proyectos_calidad",
         "analisis_pareto_priorizacion",
-        "analisis_pareto"
+        "analisis_pareto_de_proveedores"
       ],
       "condiciones_activacion": [
         "Cuando existen múltiples problemas o proyectos candidatos y se necesita priorizar por impacto"
@@ -88633,7 +88716,8 @@
         "Cuando se reciben múltiples nominaciones de proyectos y se requiere un mecanismo estructurado de priorización",
         "Cuando se detecta que proyectos ejecutados no generan impacto real en resultados financieros (solo firefighting o relaciones humanas)"
       ],
-      "etiqueta_arbol": "Selecciona tus Proyectos de Mejora"
+      "etiqueta_arbol": "Selecciona tus Proyectos de Mejora",
+      "deprecado": true
     },
     "proceso_primera_llamada": {
       "node_id": "proceso_primera_llamada",
@@ -93331,7 +93415,7 @@
       ],
       "nodos_siguientes": [
         "mistake_proofing_poka_yoke",
-        "mistake_proofing_poka_yoke_2"
+        "error_proofing_servicio"
       ],
       "condiciones_activacion": [
         "Cuando se necesita priorizar recursos limitados de mantenimiento",
@@ -101946,7 +102030,8 @@
         "Si el equipo no tiene un sistema estructurado para conocer a fondo a sus clientes",
         "Cuando se quiere pasar de transacciones anónimas a relaciones personalizadas"
       ],
-      "etiqueta_arbol": "Registra lo que Importa del Cliente"
+      "etiqueta_arbol": "Registra lo que Importa del Cliente",
+      "deprecado": true
     },
     "seguimiento_tendencias_sostenibilidad": {
       "node_id": "seguimiento_tendencias_sostenibilidad",
@@ -105989,11 +106074,11 @@
         "secuencia_universal_breakthrough",
         "viaje_diagnostico_remedial",
         "analisis_pareto_priorizacion",
-        "mistake_proofing_poka_yoke_2",
+        "error_proofing_servicio",
         "secuencia_universal_para_el_breakthrough",
         "dmaic_fase_improve",
         "impacto_calidad_en_costos",
-        "analisis_pareto",
+        "analisis_pareto_de_proveedores",
         "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
@@ -106038,7 +106123,7 @@
       "nodos_previos": [
         "mistake_proofing_poka_yoke",
         "descubrir_necesidades_cliente",
-        "mistake_proofing_poka_yoke_2"
+        "error_proofing_servicio"
       ],
       "nodos_siguientes": [
         "dmadv_design_for_six_sigma",
@@ -112646,7 +112731,7 @@
         "control_proceso_variables",
         "errores_a_prueba_poka_yoke",
         "metodologia_6s",
-        "mistake_proofing_poka_yoke_2"
+        "error_proofing_servicio"
       ],
       "nodos_siguientes": [
         "establecimiento_capacidad_proceso",
@@ -114407,7 +114492,7 @@
         "secuencia_universal_breakthrough",
         "analisis_pareto_priorizacion",
         "establecer_proyecto_mejora",
-        "analisis_pareto"
+        "analisis_pareto_de_proveedores"
       ],
       "nodos_siguientes": [
         "six_sigma_dmaic",
@@ -123656,7 +123741,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 57,
+    "nodos_sin_enlaces_entrantes": 60,
     "enlaces_rotos_en_grafo": 0
   }
 }

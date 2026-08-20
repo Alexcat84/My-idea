@@ -1,0 +1,22 @@
+==============================================================================
+TRAS EL LOTE C DE LA VUELTA 53
+==============================================================================
+  veredictos leidos                       : 3388
+  pares resueltos distintos               : 3293
+  AUTO-PARES (los dos lados al mismo vivo): 51
+  COLISIONES DE CLASE VIGENTES            : 4
+
+  par resuelto: analisis_pareto_de_proveedores contra principio_pareto
+     puesto 2551   A | crudo: analisis_pareto + principio_pareto
+     puesto 3087   D | crudo: analisis_pareto_de_proveedores + principio_pareto
+  par resuelto: criterios_seleccion_proyectos_calidad contra dmaic_fase_select
+     puesto 2742   A | crudo: dmaic_fase_select + proceso_nominacion_seleccion
+     puesto 2933   D | crudo: criterios_seleccion_proyectos_calidad + dmaic_fase_select
+  par resuelto: error_proofing_servicio contra poka_yoke_a_prueba_de_errores
+     puesto 2613   A | crudo: mistake_proofing_poka_yoke_2 + poka_yoke_a_prueba_de_errores
+     puesto 2931   D | crudo: error_proofing_servicio + poka_yoke_a_prueba_de_errores
+  par resuelto: investigar_datos_cliente contra personalizacion_investigacion_prospecto
+     puesto 811    B | crudo: investigar_datos_cliente + personalizacion_investigacion_prospecto
+     puesto 1222   A | crudo: personalizacion_investigacion_prospecto + seguimiento_informacion_cliente
+
+  CUENTA ESPERADA: 4 | MEDIDA: 4 | CALZA: SI

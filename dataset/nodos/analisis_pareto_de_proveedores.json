@@ -6,22 +6,46 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Técnica para identificar los 'pocos vitales' problemas de proveedores en lugar de intentar programas amplios que aprieten todos los procedimientos. Puede aplicarse por número de parte, familia de producto, proceso, proveedor completo, costo total, o modo de falla, revelando debilidades gerenciales y tecnológicas específicas que merecen atención prioritaria.",
   "pasos_accionables": [
-    "Recopilar datos de defectos y rechazos por proveedor, parte o proceso",
+    "Recopilar datos de defectos y rechazos por proveedor, parte o proceso y calcular el gran total",
     "Clasificar las pérdidas usando el principio de Pareto (80/20)",
-    "Identificar los pocos proveedores o partes que concentran la mayoría de los problemas",
+    "Identificar los pocos proveedores o partes que concentran la mayoría de los problemas, analizando el punto de quiebre en la curva",
     "Enfocar recursos de mejora en los elementos vitales identificados",
-    "Repetir el análisis por diferentes dimensiones (costo, modo de falla, etc.)"
+    "Repetir el análisis por diferentes dimensiones (costo, modo de falla, etc.)",
+    "Reordenar los contribuyentes de mayor a menor y calcular el porcentaje acumulado",
+    "Dibujar ejes con barras de magnitud y línea de porcentaje acumulado",
+    "Repetir el análisis de forma iterativa sobre las subcategorías del problema principal"
   ],
   "entregable_esperado": "Gráfico de Pareto con los proveedores, partes o procesos críticos identificados y priorizados para acción",
   "nodos_previos": [
-    "calificacion_de_calidad_de_proveedores"
+    "calificacion_de_calidad_de_proveedores",
+    "graficos_y_diagramas",
+    "principio_pareto"
   ],
   "nodos_siguientes": [
-    "equipo_conjunto_de_mejora_con_proveedores"
+    "equipo_conjunto_de_mejora_con_proveedores",
+    "consejo_de_calidad",
+    "control_estadistico_de_procesos",
+    "establecer_proyecto_mejora",
+    "fmea_analisis_de_modos_de_falla",
+    "matriz_de_planificacion_arbol",
+    "six_sigma_dmaic",
+    "viaje_diagnostico_remedial"
   ],
   "condiciones_activacion": [
     "Cuando un programa de mejora de proveedores no logra resultados por dispersión de esfuerzos",
-    "Cuando se necesita priorizar recursos limitados de mejora"
+    "Cuando se necesita priorizar recursos limitados de mejora",
+    "Cuando debes elegir en qué proyecto de mejora invertir tu tiempo según su impacto",
+    "Cuando existen varios tipos de defectos o problemas y no sabes por dónde empezar"
   ],
-  "etiqueta_arbol": "Prioriza Problemas con Proveedores"
+  "etiqueta_arbol": "Prioriza Problemas con Proveedores",
+  "ids_alias": [
+    "analisis_pareto"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "analisis_pareto",
+      "titulo": "Análisis de Pareto",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

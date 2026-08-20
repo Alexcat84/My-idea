@@ -6,7 +6,7 @@
   "fuente": "Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "Este es el primer paso del método IOPS (investigar, observar, personalizar, sorprender) para no perder a tus clientes. Se trata de identificar y anotar de forma ordenada datos personales y emocionales de cada cliente en tu CRM, el sistema donde guardas su información, usando primero fuentes públicas como LinkedIn, Facebook, el sitio web de la empresa o una búsqueda en Google, antes de preguntar directamente. Cuando combinas datos personales y emocionales logras conexiones más genuinas y significativas.",
   "pasos_accionables": [
-    "Elige de 5 a 10 datos que vas a empezar a registrar de inmediato",
+    "Elige de 5 a 10 datos que vas a empezar a registrar de inmediato, clasificados por categorías (básica, profesional, personal, preferencias, actividad de compra)",
     "Elige otros 5 a 10 datos para registrar en los próximos 6 a 12 meses",
     "Revisa LinkedIn, Facebook, el sitio web de la empresa y Google para completar esos datos en tu CRM",
     "Guarda las URLs de los perfiles sociales en el CRM para facilitar futuras búsquedas",
@@ -16,22 +16,40 @@
     "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar",
     "Define entre 5 y 10 datos prioritarios que empieces a registrar desde ahora",
     "Revisa y completa la información que ya conoces pero no has registrado",
-    "Investiga perfiles públicos en redes sociales para obtener datos personales y emocionales"
+    "Investiga perfiles públicos en redes sociales para obtener datos personales y emocionales",
+    "Registrar la fecha de adquisición y actualización de cada dato para mantener la información fresca",
+    "Capturar tanto la razón declarada como la razón real de compra del cliente para entender mejor su motivación",
+    "Documentar resultados obtenidos y disposición general del cliente tras cada compra o interacción",
+    "Usar la información recopilada activamente en comunicaciones personalizadas (cumpleaños, preferencias de contacto, intereses)"
   ],
   "entregable_esperado": "Tu CRM con los datos personales y emocionales clave de cada cliente, listos para usarlos más adelante en la personalización",
   "nodos_previos": [
     "customer_archetypes",
     "customer_types_mapping",
-    "tipos_de_clientes"
+    "tipos_de_clientes",
+    "customer_journey_mapping"
   ],
   "nodos_siguientes": [
     "personalizar_interacciones_cliente",
-    "observar_al_cliente_en_su_contexto"
+    "observar_al_cliente_en_su_contexto",
+    "cierre_satisfaccion_postventa",
+    "fase_acclimate_experiencia_cliente"
   ],
   "condiciones_activacion": [
     "Ya tienes clientes activos pero te falta conocerlos a fondo",
     "Quieres mejorar la retención construyendo relaciones más personales",
-    "Tu CRM tiene campos vacíos o desactualizados"
+    "Tu CRM tiene campos vacíos o desactualizados",
+    "Si el equipo no tiene un sistema estructurado para conocer a fondo a sus clientes"
   ],
-  "etiqueta_arbol": "Recopila Datos de tu Cliente"
+  "etiqueta_arbol": "Recopila Datos de tu Cliente",
+  "ids_alias": [
+    "seguimiento_informacion_cliente"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "seguimiento_informacion_cliente",
+      "titulo": "Sistema de Seguimiento de Información del Cliente",
+      "fuente": "Never Lose a Customer Again - Joey Coleman"
+    }
+  ]
 }

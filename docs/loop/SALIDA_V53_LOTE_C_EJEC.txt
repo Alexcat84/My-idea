@@ -1,0 +1,201 @@
+==============================================================================
+OP-U-01, TRAMO 1, P.12, LOTE C DE LA VUELTA 53: los actos 19, 20, 21 y 6 de la nomina del cierre de la vuelta 52 (el PARETO, el POKA YOKE, el DMAIC SELECT y la INVESTIGACION DEL CLIENTE, este ultimo con par mixto en B) . MODO EJECUTAR
+plan: docs/loop/PLAN_V53_OPU01_LOTE_C.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3481 vivos, 372 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive analisis_pareto_de_proveedores . absorbe analisis_pareto
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 2
+     del paso 1 de analisis_pareto al PASO 1 del superviviente
+        inciso VERBATIM: 'calcular el gran total'
+        nexo (lo unico de cosecha propia): ' y '
+        paso resultante: Recopilar datos de defectos y rechazos por proveedor, parte o proceso y calcular el gran total
+     del paso 4 de analisis_pareto al PASO 3 del superviviente
+        inciso VERBATIM: 'el punto de quiebre en la curva'
+        nexo (lo unico de cosecha propia): ', analizando '
+        paso resultante: Identificar los pocos proveedores o partes que concentran la mayoría de los problemas, analizando el punto de quiebre en la curva
+  alias del superviviente: ['analisis_pareto']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive error_proofing_servicio . absorbe mistake_proofing_poka_yoke_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 10 (anadidos 4) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 1 de mistake_proofing_poka_yoke_2 al PASO 1 del superviviente
+        inciso VERBATIM: 'o producto'
+        nexo (lo unico de cosecha propia): ' '
+        paso resultante: Identificar actividades propensas a errores en el proceso o producto
+  alias del superviviente: ['mistake_proofing_poka_yoke_2']
+
+------------------------------------------------------------------------------
+ACTO 3 . sobrevive criterios_seleccion_proyectos_calidad . absorbe proceso_nominacion_seleccion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de proceso_nominacion_seleccion al PASO 1 del superviviente
+        inciso VERBATIM: '(datos, encuestas, empleados, clientes)'
+        nexo (lo unico de cosecha propia): ' desde todas las fuentes posibles '
+        paso resultante: Listar todas las nominaciones de proyectos disponibles desde todas las fuentes posibles (datos, encuestas, empleados, clientes)
+     del paso 2 de proceso_nominacion_seleccion al PASO 2 del superviviente
+        inciso VERBATIM: 'factibilidad, significancia, medibilidad'
+        nexo (lo unico de cosecha propia): ', y también según '
+        paso resultante: Evaluar cada nominación según ROI, potencial de breakthrough, urgencia, viabilidad tecnológica, salud del producto y resistencia al cambio, y también según factibilidad, significancia, medibilidad
+  alias del superviviente: ['proceso_nominacion_seleccion']
+
+------------------------------------------------------------------------------
+ACTO 4 . sobrevive investigar_datos_cliente . absorbe seguimiento_informacion_cliente
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 11 -> 15 (anadidos 4) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de seguimiento_informacion_cliente al PASO 1 del superviviente
+        inciso VERBATIM: '(básica, profesional, personal, preferencias, actividad de compra)'
+        nexo (lo unico de cosecha propia): ', clasificados por categorías '
+        paso resultante: Elige de 5 a 10 datos que vas a empezar a registrar de inmediato, clasificados por categorías (básica, profesional, personal, preferencias, actividad de compra)
+  alias del superviviente: ['seguimiento_informacion_cliente']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 24
+   analisis_diagnostico_causa                           nodos_siguientes  mistake_proofing_poka_yoke_2 -> error_proofing_servicio
+   analisis_flujo_proceso                               nodos_siguientes  mistake_proofing_poka_yoke_2 -> error_proofing_servicio
+   cierre_satisfaccion_postventa                        nodos_previos     seguimiento_informacion_cliente -> investigar_datos_cliente
+   concepto_proyecto_breakthrough                       nodos_siguientes  proceso_nominacion_seleccion -> criterios_seleccion_proyectos_calidad
+   consejo_de_calidad                                   nodos_previos     analisis_pareto -> analisis_pareto_de_proveedores
+   control_del_proceso_del_proveedor                    nodos_siguientes  mistake_proofing_poka_yoke_2 -> error_proofing_servicio
+   control_estadistico_de_procesos                      nodos_previos     analisis_pareto -> analisis_pareto_de_proveedores
+   control_estadistico_de_procesos                      nodos_previos     mistake_proofing_poka_yoke_2 -> error_proofing_servicio
+   control_proceso_variables                            nodos_siguientes  mistake_proofing_poka_yoke_2 -> error_proofing_servicio
+   criterios_seleccion_proyectos_calidad                nodos_previos     proceso_nominacion_seleccion -> criterios_seleccion_proyectos_calidad
+   customer_journey_mapping                             nodos_siguientes  seguimiento_informacion_cliente -> investigar_datos_cliente
+   establecer_proyecto_mejora                           nodos_previos     analisis_pareto -> analisis_pareto_de_proveedores
+   fase_acclimate_experiencia_cliente                   nodos_previos     seguimiento_informacion_cliente -> investigar_datos_cliente
+   fmea_analisis_de_modos_de_falla                      nodos_previos     analisis_pareto -> analisis_pareto_de_proveedores
+   graficos_y_diagramas                                 nodos_siguientes  analisis_pareto -> analisis_pareto_de_proveedores
+   matriz_de_planificacion_arbol                        nodos_previos     analisis_pareto -> analisis_pareto_de_proveedores
+   principio_pareto                                     nodos_siguientes  analisis_pareto -> analisis_pareto_de_proveedores
+   principio_pareto                                     nodos_siguientes  proceso_nominacion_seleccion -> criterios_seleccion_proyectos_calidad
+   rcm_reliability_centered_maintenance                 nodos_siguientes  mistake_proofing_poka_yoke_2 -> error_proofing_servicio
+   six_sigma_dmaic                                      nodos_previos     analisis_pareto -> analisis_pareto_de_proveedores
+   six_sigma_dmaic                                      nodos_previos     mistake_proofing_poka_yoke_2 -> error_proofing_servicio
+   six_sigma_dmaic_2                                    nodos_previos     mistake_proofing_poka_yoke_2 -> error_proofing_servicio
+   validacion_sistema_medicion                          nodos_previos     mistake_proofing_poka_yoke_2 -> error_proofing_servicio
+   viaje_diagnostico_remedial                           nodos_previos     analisis_pareto -> analisis_pareto_de_proveedores
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 2
+   6s_lugar_trabajo                                     nodos_previos     mistake_proofing_poka_yoke_2 (registro historico)
+   6s_workplace_organization                            nodos_siguientes  mistake_proofing_poka_yoke_2 (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 0
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   criterios_seleccion_proyectos_calidad                nodos_previos
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 996
+  duplicadas tras resolver DESPUES del tramo                          : 986
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 10, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 20 de 20
+guarda D, los 4 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (33 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 analisis_pareto                              paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Recopilar datos de cada contribuyente (tipo, costo, frecuencia) y calcular el gran total
+    1 analisis_pareto                              paso         2  PASO 6 del superviviente
+        Reordenar los contribuyentes de mayor a menor y calcular el porcentaje acumulado
+    1 analisis_pareto                              paso         3  PASO 7 del superviviente
+        Dibujar ejes con barras de magnitud y línea de porcentaje acumulado
+    1 analisis_pareto                              paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Analizar el punto de quiebre en la curva para identificar los pocos vitales
+    1 analisis_pareto                              paso         5  PASO 8 del superviviente
+        Repetir el análisis de forma iterativa sobre las subcategorías del problema principal
+    1 analisis_pareto                              paso         6  ya lo dice el PASO 4 del superviviente
+        Enfocar tus recursos y tiempo en los pocos vitales identificados
+    1 analisis_pareto                              condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando necesitas priorizar entre múltiples causas o problemas
+    1 analisis_pareto                              condicion    2  CONDICION 3 del superviviente
+        Cuando debes elegir en qué proyecto de mejora invertir tu tiempo según su impacto
+    1 analisis_pareto                              condicion    3  CONDICION 4 del superviviente
+        Cuando existen varios tipos de defectos o problemas y no sabes por dónde empezar
+    2 mistake_proofing_poka_yoke_2                 paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Analiza tu proceso o producto para identificar los puntos donde el error humano es probable o frecuente
+    2 mistake_proofing_poka_yoke_2                 paso         2  PASO 7 del superviviente
+        Clasifica el tipo de intervención según los cinco principios: eliminación, reemplazo, facilitación, detección o mitigación
+    2 mistake_proofing_poka_yoke_2                 paso         3  PASO 8 del superviviente
+        Diseña dispositivos físicos o lógicos que hagan imposible o detectable el error, como encajes únicos o sensores
+    2 mistake_proofing_poka_yoke_2                 paso         4  PASO 9 del superviviente
+        Prioriza la prevención proactiva en la etapa de diseño por encima de la mitigación reactiva
+    2 mistake_proofing_poka_yoke_2                 paso         5  PASO 10 del superviviente
+        Valida que el dispositivo funcione consistentemente antes de escalar su uso
+    2 mistake_proofing_poka_yoke_2                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando existen defectos recurrentes causados por errores humanos evitables
+    2 mistake_proofing_poka_yoke_2                 condicion    2  CONDICION 3 del superviviente
+        Cuando buscas reducir inspecciones y lograr trabajo libre de defectos
+    2 mistake_proofing_poka_yoke_2                 condicion    3  CONDICION 4 del superviviente
+        Cuando diseñas un nuevo proceso o herramienta y quieres prevenir errores desde el origen
+    3 proceso_nominacion_seleccion                 paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Convocar nominaciones de proyectos desde todas las fuentes posibles (datos, encuestas, empleados, clientes)
+    3 proceso_nominacion_seleccion                 paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Aplicar criterios de screening: factibilidad, significancia, medibilidad, ROI, urgencia, resistencia al cambio
+    3 proceso_nominacion_seleccion                 paso         3  PASO 5 del superviviente
+        Delegar el filtrado inicial a una secretaría o departamento de calidad
+    3 proceso_nominacion_seleccion                 paso         4  ya lo dice el PASO 4 del superviviente
+        Presentar lista priorizada de proyectos recomendados al consejo para decisión final
+    3 proceso_nominacion_seleccion                 paso         5  PASO 6 del superviviente
+        Asegurar balance entre proyectos 'vitales pocos' y 'útiles muchos' para impacto real en resultados financieros
+    3 proceso_nominacion_seleccion                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se reciben múltiples nominaciones de proyectos y se requiere un mecanismo estructurado de priorización
+    3 proceso_nominacion_seleccion                 condicion    2  CONDICION 3 del superviviente
+        Cuando se detecta que proyectos ejecutados no generan impacto real en resultados financieros (solo firefighting o relaciones humanas)
+    4 seguimiento_informacion_cliente              paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir qué categorías de información son relevantes para tu negocio (básica, profesional, personal, preferencias, actividad de compra)
+    4 seguimiento_informacion_cliente              paso         2  ya lo dice el PASO 8 del superviviente
+        Establecer un sistema o CRM para registrar y actualizar estos datos de forma consistente
+    4 seguimiento_informacion_cliente              paso         3  PASO 12 del superviviente
+        Registrar la fecha de adquisición y actualización de cada dato para mantener la información fresca
+    4 seguimiento_informacion_cliente              paso         4  PASO 13 del superviviente
+        Capturar tanto la razón declarada como la razón real de compra del cliente para entender mejor su motivación
+    4 seguimiento_informacion_cliente              paso         5  PASO 14 del superviviente
+        Documentar resultados obtenidos y disposición general del cliente tras cada compra o interacción
+    4 seguimiento_informacion_cliente              paso         6  PASO 15 del superviviente
+        Usar la información recopilada activamente en comunicaciones personalizadas (cumpleaños, preferencias de contacto, intereses)
+    4 seguimiento_informacion_cliente              condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando el negocio ya tiene clientes activos y busca mejorar la retención
+    4 seguimiento_informacion_cliente              condicion    2  CONDICION 4 del superviviente
+        Si el equipo no tiene un sistema estructurado para conocer a fondo a sus clientes
+    4 seguimiento_informacion_cliente              condicion    3  ya lo dice la CONDICION 2 del superviviente
+        Cuando se quiere pasar de transacciones anónimas a relaciones personalizadas
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 4
+  nodos implicados    : 8
+  nodos que MUEREN    : 4
+  piezas repartidas   : 33 (19 viajan enteras, 8 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 1
+
+ESCRITO. ficheros tocados: 28
+censo DESPUES: 3853 ficheros, 3477 vivos, 376 deprecados
+censo ANTES  : 3853 ficheros, 3481 vivos, 372 deprecados
+delta deprecados: +4 (esperado +4): OK
