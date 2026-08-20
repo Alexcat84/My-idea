@@ -2489,3 +2489,197 @@ DOCTRINA NUEVA, y se anota aqui con fecha porque es este registro el que la pedi
 superviviente, o dejar el par como enlace permanente. **Eso es politica de catalogo y la casa lo
 reserva**, en el **pendiente de doctrina 5**. **El acto 25 no vuelve a la cola de fusion mientras
 tanto**, y sigue en la tabla de declarados de arriba con su especie escrita.
+
+
+---
+
+## `OP-U-01`, TRAMO 5: EL REGISTRO DEL CIERRE (20 ago 2026, vuelta 60)
+
+**LA VARA QUE FIJA EL TRAMO ES LA MISMA DESDE LA VUELTA 48**, escrita en la cabecera del registro
+del tramo 1: *los CINCUENTA primeros actos CERRADOS de la NOMINA RE-MEDIDA AL ABRIRLO*. **EL INSUMO
+DE ESTE TRAMO SE MIDIO Y SE FIJO AL ABRIRLO Y NO SE RE-MIDIO NI UNA VEZ DESPUES**, que es lo que el
+encargo mandaba
+([`../loop/SALIDA_V58_TRAMO5_NOMINA.txt`](../loop/SALIDA_V58_TRAMO5_NOMINA.txt)).
+
+**GUARDA DEL PREFIJO:** los vivos de los tramos anteriores son **26** y ocupan sus puestos
+sin huecos, medido y no tecleado. **El tramo 5 son los puestos 27 a 76 de
+hoy.** **Solape con los tramos anteriores: CERO.**
+
+> **EL COTEJO QUE ESTE TRAMO ESTRENA, y nace de que el tramo se repartio entre DOS vueltas:** entre
+> la foto fijada del insumo y la ejecucion de los lotes B y C hubo una fusion de por medio (la del
+> lote A), y una fusion CAMBIA los pasos del superviviente. Antes de escribir una linea del plan del
+> lote B se corrio `scripts/loop/vuelta60_cotejo_insumo.py`, que NO re-mide el insumo sino que lo
+> COTEJA contra los nodos de hoy: **50 actos mirados, 34 vivos, 16 ya fundidos, DESCALCES 0**
+> ([`../loop/SALIDA_V60_COTEJO_INSUMO.txt`](../loop/SALIDA_V60_COTEJO_INSUMO.txt)).
+
+**LAS COLISIONES ESPERADAS DEL TRAMO ENTERO, medidas ANTES de tocar un nodo** sobre el archivo
+entero y por par resuelto
+([`../loop/SALIDA_V58_COLISIONES_ESPERADAS_TRAMO5.txt`](../loop/SALIDA_V58_COLISIONES_ESPERADAS_TRAMO5.txt)):
+**100 combinaciones simuladas y 0 que fabriquen colision.** Ni una. **Por eso este
+tramo NO volteo ningun veredicto y el marcador queda identico al abrir y al cerrar.**
+
+### EL ESTADO, MEDIDO AL ABRIR LA VUELTA QUE CIERRA EL TRAMO Y RECOMPUTADO AL CERRARLA
+
+| | **apertura de la vuelta 60** | **cierre, RECOMPUTADO** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 551 / 72 / 5 / 2.760 | **551 / 72 / 5 / 2.760** |
+| grafo: vivos / deprecados / enlaces | 3.326 / 527 / 17.396 | **3.295 / 558 / 17.449** |
+| retrato: colapsos / pares distintos | 223 / 328 | **254 / 297** |
+| actos (componentes) / `CERRADOS` | 134 / 81 | **103 / 50** |
+| actos del tramo 5 fundidos / vivos | 0 / 50 | **47 / 3, los 3 DECLARADOS** |
+
+> **LA COLUMNA DE APERTURA ES LA DE LA VUELTA QUE CIERRA EL TRAMO, no la de la que lo abrio, y se
+> dice para que nadie lea de ahi el efecto del tramo entero.** El lote A ya estaba fundido cuando se
+> tomo. El efecto del TRAMO COMPLETO se lee de los `47` actos fundidos de la ultima fila, que
+> es la cifra que si cubre las dos vueltas.
+
+### EL REPARTO, TALLADO DE LOS PLANES SELLADOS DE LAS DOS VUELTAS
+
+**Ninguna de estas tablas esta tecleada:** salen enteras de
+`python scripts/loop/tallar_planes_del_tramo.py --vuelta 60 --prefijo PLAN_V59_OPU01_LOTE_ --prefijo PLAN_V60_OPU01_LOTE_`
+([`../loop/SALIDA_V60_TALLAR_PLANES.txt`](../loop/SALIDA_V60_TALLAR_PLANES.txt)), que las cuenta de los planes **SELLADOS** y **cae en ROJO
+con el acto nombrado si un motivo no encaja en ninguna forma conocida**. **`--prefijo` se hizo
+REPETIBLE en esta vuelta justamente para esto**: con un prefijo unico, el registro habria publicado
+**31 fusiones donde hay 47**, y las cuatro tablas habrian mentido por omision.
+
+| lote | actos | fundidos | mueren | piezas | enteras | ya dichas | de `INCISO` | perdidas nombradas |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| **A** | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17 | **16** | **16** | **97** | 24 | 59 | **14** | **3** |
+| **B** | 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30, 31, 32, 33 | **15** | **15** | **90** | 30 | 55 | **5** | **1** |
+| **C** | 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 | **16** | **16** | **101** | 24 | 70 | **7** | **0** |
+| **los tres** | | **47** | **47** | **288** | **78** | **184** | **26** | **4** |
+
+| la forma, leida del motivo sellado | cuantos | los actos |
+|---|---:|---|
+| **UNA SOLA VARA de contenido no empatada, y BASTA** | **18** | 4, 6, 9, 16, 21, 22, 23, 24, 25, 26, 27, 28, 30, 36, 37, 44, 45, 46 |
+| **TODAS LAS VARAS de contenido de acuerdo** | **10** | 8, 12, 14, 17, 18, 19, 31, 39, 48, 50 |
+| **EL CONTENIDO EMPATA y EL CABLEADO DECIDE SOLO** | **6** | 2, 5, 10, 15, 20, 38 |
+| **CONTEOS QUE CHOCAN CON LA PIEZA DECLARADA, y decide la declarada** | **4** | 11, 35, 42, 47 |
+| **LA PIEZA DECLARADA GANA A UN CONTEO de contenido** | **2** | 7, 33 |
+| **LA PUERTA SOBREVIVE, con el choque registrado** | **2** | 1, 43 |
+| **LOS TRES CONTEOS EMPATAN y decide LA PIEZA DECLARADA, que esta de UN SOLO LADO** | **2** | 32, 40 |
+| **EL CONTENIDO EMPATA y LA PIEZA DECLARADA Y EL CABLEADO COINCIDEN** | **1** | 49 |
+| **LA PIEZA DECLARADA GANA A LOS DOS CONTEOS de contenido** | **1** | 3 |
+| **UNA FIGURA CON NOMBRE del informe vence al conteo (EL CASO NO ES LA CASA)** | **1** | 41 |
+| **suma** | **47** | |
+
+| acto | lote | sobrevive | absorbe | piezas | enteras | ya dichas | `INCISO` |
+|---:|:---:|---|---|---:|---:|---:|---:|
+| **1** | A | `programa_mejora_calidad_14_pasos` | `programa_de_mejora_de_calidad` | 9 | 2 | 6 | 1 |
+| **2** | A | `sostener_las_ganancias` | `mantener_las_ganancias` | 7 | 1 | 5 | 1 |
+| **3** | A | `innovacion_tipo_ii` | `tipos_innovacion_i_ii` | 9 | 1 | 8 | 0 |
+| **4** | A | `funcion_perdida_limites_especificacion` | `funcion_perdida_taguchi` | 6 | 0 | 4 | 2 |
+| **5** | A | `enfermedades_mortales_gestion` | `las_siete_enfermedades_mortales` | 6 | 2 | 2 | 2 |
+| **6** | A | `eliminar_trabajo_a_destajo` | `eliminacion_pago_destajo` | 5 | 1 | 4 | 0 |
+| **7** | A | `adaptaciones_sectoriales_iso` | `estandares_especificos_industria` | 6 | 1 | 4 | 1 |
+| **8** | A | `estilo_gerencial_ballet_vs_hockey` | `estilo_gerencial_hockey_vs_ballet` | 6 | 3 | 3 | 0 |
+| **9** | A | `roi_proyectos_calidad` | `roi_breakthrough` | 6 | 4 | 2 | 0 |
+| **10** | A | `teoria_triple_rol_sistemas_abiertos` | `pensamiento_sistemico_rol_triple` | 6 | 1 | 3 | 2 |
+| **11** | A | `descubrir_necesidades_del_cliente` | `descubrir_necesidades_cliente` | 5 | 1 | 2 | 2 |
+| **12** | A | `qfd_matriz` | `spreadsheet_diseno_para_la_calidad` | 5 | 0 | 4 | 1 |
+| **14** | A | `reinicio_programa_calidad` | `repeticion_programa` | 4 | 0 | 4 | 0 |
+| **15** | A | `eliminar_slogans_y_exhortaciones` | `eliminar_slogans_metas` | 6 | 2 | 3 | 1 |
+| **16** | A | `rol_black_belt_six_sigma` | `rol_black_belt` | 5 | 3 | 2 | 0 |
+| **17** | A | `mapeo_flujo_valor` | `value_stream_mapping` | 6 | 2 | 3 | 1 |
+| **18** | B | `cero_defectos` | `filosofia_zero_defectos` | 6 | 2 | 4 | 0 |
+| **19** | B | `equipo_mejora_calidad_2` | `equipo_mejora_calidad` | 5 | 1 | 4 | 0 |
+| **20** | B | `rol_facilitador_equipos_mejora` | `rol_facilitador_black_belt` | 6 | 3 | 2 | 1 |
+| **21** | B | `indice_cpk` | `interpretacion_cpk` | 6 | 4 | 2 | 0 |
+| **22** | B | `remover_barreras_orgullo_trabajo` | `barreras_orgullo_trabajo` | 5 | 2 | 3 | 0 |
+| **23** | B | `histograma` | `histogramas_distribucion_frecuencias` | 7 | 2 | 5 | 0 |
+| **24** | B | `eliminacion_planes_muestreo_estandar` | `criticas_muestreo_aceptacion` | 5 | 0 | 4 | 1 |
+| **25** | B | `recoleccion_validacion_datos_benchmarking` | `validacion_datos_benchmarking` | 6 | 3 | 3 | 0 |
+| **26** | B | `intercambio_de_roles_para_motivacion` | `rotacion_de_puestos_para_mejora_calidad` | 6 | 1 | 5 | 0 |
+| **27** | B | `control_estadistico_del_proceso` | `control_estadistico_no_implica_cero_defectos` | 6 | 4 | 2 | 0 |
+| **28** | B | `benchmarking_proceso` | `benchmarking_mejores_practicas` | 6 | 1 | 5 | 0 |
+| **30** | B | `eliminacion_causas_error_4` | `eliminacion_causas_error_2` | 8 | 0 | 6 | 2 |
+| **31** | B | `circulos_calidad_qc` | `preparacion_gerencial_antes_de_circulos_de_calidad` | 5 | 2 | 3 | 0 |
+| **32** | B | `autocontrol_y_controlabilidad` | `concepto_autocontrol` | 7 | 2 | 5 | 0 |
+| **33** | B | `comunicar_politicas_organizacionales` | `politica_calidad_organizacional` | 6 | 3 | 2 | 1 |
+| **35** | C | `ciclo_shewhart_pdsa` | `pdsa_shewhart_cycle` | 8 | 2 | 6 | 0 |
+| **36** | C | `control_estadistico_de_procesos` | `control_estadistico_de_procesos_2` | 7 | 1 | 4 | 2 |
+| **37** | C | `evaluacion_gestion_riesgos` | `plan_de_gestion_de_riesgos` | 7 | 1 | 5 | 1 |
+| **38** | C | `enfasis_en_utilidades_corto_plazo` | `enfasis_en_ganancias_corto_plazo` | 6 | 5 | 1 | 0 |
+| **39** | C | `grafico_de_corrida_run_chart` | `run_chart_datos_temporales` | 5 | 0 | 5 | 0 |
+| **40** | C | `evaluacion_alternativas_solucion` | `evaluacion_seleccion_alternativas_mejora` | 5 | 1 | 3 | 1 |
+| **41** | C | `definiciones_operacionales` | `caso_definicion_arruga` | 7 | 0 | 7 | 0 |
+| **42** | C | `formula_exponencial_confiabilidad` | `distribucion_exponencial` | 6 | 1 | 4 | 1 |
+| **43** | C | `medicion_calidad` | `medicion_calidad_2` | 7 | 4 | 2 | 1 |
+| **44** | C | `analisis_reporte_benchmarking` | `desarrollo_reporte_benchmarking` | 7 | 2 | 5 | 0 |
+| **45** | C | `gestion_efectiva_benchmarking` | `rol_alta_direccion_benchmarking` | 8 | 0 | 8 | 0 |
+| **46** | C | `consumidor_como_eje_de_produccion` | `consumidor_parte_linea_produccion` | 5 | 3 | 2 | 0 |
+| **47** | C | `identificar_clientes_externos_e_internos` | `identificar_clientes_diseno` | 5 | 2 | 3 | 0 |
+| **48** | C | `juran_quality_by_design` | `quality_by_design` | 6 | 1 | 5 | 0 |
+| **49** | C | `definiciones_operacionales_3` | `definiciones_operacionales_4` | 8 | 1 | 7 | 0 |
+| **50** | C | `fijacion_de_metas` | `establecimiento_metas` | 4 | 0 | 3 | 1 |
+
+| acto | lote | sus miembros | especie | se acumula para |
+|---:|:---:|---|---|---|
+| **13** | A | `premio_shingo`, `shingo_prize` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA, dentro del pendiente de doctrina 1. LOS TRES CONTEOS EMPATAN AL DIGITO: pasos 4 contra 4, condiciones 2 contra 2 y cableado 2 contra 2 (cuadro de varas de la vuelta 58, fila 13, re-derivado por el auditor). Por acta 53 pregunta 4, el empate sin vara es cuando TODO empata, y aqui todo empata. LA RAZON DEL PUESTO 2475 DECLARA PROPIO A LOS DOS LADOS, que es la figura exacta del acto 32 del tramo 4 resuelta en esta misma campana: de premio_shingo declara DOS PASOS que el otro no tiene (documentar evidencia de implementacion de principios Lean, y usar el feedback de la evaluacion externa para planificar los proximos pasos); de shingo_prize declara la madurez CULTURAL Y OPERATIVA y la puerta de los criterios minimos. Que la razon llame LINEA a lo del segundo y PASOS a lo del primero es una comparacion de PESO entre dos propios declarados, y pesar dos propios declarados para romper un empate triple es EXACTAMENTE la rama que el acta 58 dejo NO ADOPTADA al deshacer el acto 32. SE DECLARA Y NO SE FUNDE. Y va marcado como DISCUTIBLE en el reporte, porque hay una lectura sostenible en contra: cuando la razon clasifica el propio de un lado como LINEA esta diciendo que no lo cuenta, y entonces el propio declarado seria de UN SOLO LADO y por acta 54 pregunta 4 seria vara. No la aplico porque decidirlo asi es estrenar doctrina sobre un empate, y deshacer una fusion cuesta una vuelta entera, como acaba de costarla el 32. |
+| **29** | B | `conciencia_calidad`, `conciencia_de_calidad_2` | **CONTEOS QUE CHOCAN Y LA PIEZA DECLARADA NO DESEMPATA** | LA MESA, dentro del pendiente de doctrina 1. LOS DOS CONTEOS DE CONTENIDO CHOCAN ENTRE SI: pasos 4 contra 5 apunta a conciencia_de_calidad_2 y condiciones 3 contra 2 apunta a conciencia_calidad (cuadro de varas de la vuelta 58, fila 29, cotejado hoy contra los nodos). Por acta 53 pregunta 3 y acta 54 pregunta 2, cuando dos varas de contenido CHOCAN decide LA PIEZA DECLARADA; y aqui LA PIEZA DECLARADA ESTA A LOS DOS LADOS Y NO DESEMPATA: la razon del puesto 2552 escribe REPITE POR FUSION MUTUA, DUODECIMO CASO DEL ARCHIVO, y NINGUNO DOMINA, reconociendo propio a los dos. De conciencia_calidad: EL COSTO REAL DE LA NO CALIDAD como contenido del mensaje, que es lo unico que le da sustancia a la campana, y LA EXTENSION A PERSONAL ADMINISTRATIVO Y DE SERVICIO. De conciencia_de_calidad_2: QUE CADA SUPERVISOR TRANSMITA DIRECTAMENTE Y NUNCA POR UNA SOLA REUNION MASIVA, que es regla de cascada y no de estilo; MANTENER CONSISTENCIA Y CUMPLIR LAS PROMESAS HECHAS EN LAS REUNIONES; y apoyar la logistica con relaciones publicas. CONTAR CUANTOS PROPIOS TIENE CADA LADO, DOS CONTRA TRES, ES LA RAMA DE LA CANTIDAD COMO VARA, QUE EL ACTA 58 DEJO NO ADOPTADA AL DESHACER EL ACTO 32 DEL TRAMO 4 Y QUE EL ENCARGO DE ESTA VUELTA PROHIBE USAR. EL CABLEADO TAMPOCO ENTRA: por P.8 el cableado solo habla a contenido EMPATADO, y aqui el contenido no empata, choca. SE DECLARA Y NO SE FUNDE. Va marcado como DISCUTIBLE en el reporte: es el primer ejemplar del tramo en que LAS DOS VIAS DE DESEMPATE ESCRITAS FALLAN A LA VEZ, los conteos porque chocan y la pieza declarada porque esta a los dos lados. |
+| **34** | B | `pocos_vitales_muchos_utiles`, `proyectos_vitales_pocos` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA, dentro del pendiente de doctrina 1. LOS TRES CONTEOS EMPATAN AL DIGITO: pasos 4 contra 4, condiciones 2 contra 2 y cableado 2 contra 2 (cuadro de varas de la vuelta 58, fila 34, cotejado hoy contra los nodos). Por acta 53 pregunta 4, el empate sin vara es cuando TODO empata, y aqui todo empata. Y LA PIEZA DECLARADA TAMPOCO SEPARA, porque la razon del puesto 2575 escribe REPITE POR FUSION MUTUA, DECIMOTERCER CASO DEL ARCHIVO, NINGUNO DOMINA, y le reconoce a CADA UNO UNA LINEA PROPIA Y SOLO UNA: a pocos_vitales_muchos_utiles LA TERCERA CATEGORIA, el apagado de incendios, con su guarda de no volcar todos los recursos ahi, que es el unico del par que reconoce el trabajo reactivo; a proyectos_vitales_pocos el DELEGAR LOS PROYECTOS DE BAJO IMPACTO A EQUIPOS DEPARTAMENTALES LOCALES, que nombra a quien cae la cola. UNA CONTRA UNA: ni siquiera la rama NO ADOPTADA de la cantidad lo romperia. La propia razon escribe que por el visto de hoy LA FUSION MUTUA NO PRODUCE GANADOR POR DERECHO y que el acto es POR ELEGIR, y marca ella misma su discutible, que se trae sin tocar: quien lea la categoria de incendios como un acto aparte y no como una linea dira que pocos_vitales domina y es A plana; la defensa de la razon es que sigue siendo clasificar proyectos, en tres cubos en vez de dos. SE DECLARA Y NO SE FUNDE. |
+| **suma** | | **3 declarados** | | |
+
+### LAS PERDIDAS NOMBRADAS
+
+**Talladas de los planes sellados** con el tallador de perdidas ([`../loop/SALIDA_V60_TALLAR_PERDIDAS.txt`](../loop/SALIDA_V60_TALLAR_PERDIDAS.txt)), que **lee la especie del propio plan y no tiene rama por defecto**.
+
+| acto | lote | el nodo que muere | **ESPECIE** | por que se perdio | la frase del plan sellado que lo dice |
+|---:|:---:|---|---|---|---|
+| **19** | B | `equipo_mejora_calidad` | **DE PARAMETRO DE PASO** | el inciso MENTIRIA contra la unica restriccion del paso que protege | *PERDIDA NOMBRADA QUE LA RAZON MARCO, motivo ALCANCE, y se NOMBRA en vez de reponerse: no es un gesto suelto sino una MANERA de entender el rol que ya define el paso 5 del superviviente (hasta donde puede llegar este grupo para proponer y ejecutar acciones correctivas), y adosarla de inciso a ese paso convertiria un ...* |
+| **suma** | | | **1 DE PARAMETRO DE PASO** | | |
+
+### CORRECCION DECLARADA: **EL CAMPO `fecha` DEL PLAN SELLADO DEL LOTE A ESTA EQUIVOCADO**
+
+**El plan del lote A (`../loop/PLAN_V59_OPU01_LOTE_A.json`) lleva `"fecha": "2026-08-21"` y ES
+FALSO: aquella vuelta corrio el 20 de agosto de 2026.** La medicion esta corrida hoy y no supuesta:
+los **seis commits del ejecutor de la vuelta 59** (`c9927b19`, `fd7de724`, `956f9e3d`, `39d495b2`,
+`6b6607bb`, `02d0bf00`) llevan **todos** fecha `2026-08-20` por
+`git log --format=%ad --date=format:'%Y-%m-%d'`, y el commit que sello ese plan es `39d495b2`, del
+`2026-08-20 14:08:34`.
+
+**EL PLAN NO SE REEDITA, y el motivo es el de la casa: un plan sellado es el registro de lo que se
+decidio aquel dia y reescribirlo taparia lo que se corrige.** El error queda declarado AQUI, que es
+el sitio que el encargo de la vuelta 60 senalo, y **la fecha buena es el 20 de agosto de 2026**.
+
+**LO QUE SE ARREGLO PARA QUE NO VUELVA A PASAR, y se arreglo donde de verdad muerde:** el campo
+`fecha` de la cabecera del generador de planes estaba **TALLADO A MANO**, asi que cualquier plan
+sellado despues heredaba la misma fecha equivocada. Pasa a leerse del reloj
+(`datetime.date.today()`), y **los planes de los lotes B y C ya nacieron con `2026-08-20`**,
+comprobado leyendo los tres ficheros. **De aqui en adelante, la fecha de toda nota fechada y de todo
+reporte SE MIDE, del reloj del sistema o del commit, y no se supone.**
+
+### LO QUE ESTE REGISTRO NO PUEDE PUBLICAR, DICHO CON NOMBRE
+
+**LA TABLA DE PERDIDAS DE ESTE TRAMO NO SALE ENTERA, Y LA CULPA NO ES DEL TRAMO SINO DEL
+INSTRUMENTO.** Se declaran las dos mitades del problema, las dos medidas hoy:
+
+1. **CONTABA DE MAS, y esto SI se corrigio.** El tallador contaba una perdida por cada aparicion del
+   token `PERDIDA NOMBRADA` en la nota del reparto. Medido sobre los lotes B y C: de **SEIS**
+   apariciones, **CINCO** viven dentro de frases que dicen lo contrario de una perdida, porque
+   anuncian que la que la razon nombro **esta REPUESTA** por esta fusion (lote B actos 20, 28, 31 y
+   32; lote C acto 36). **Sin corregirlo, la TABLA 1 de arriba habria publicado 5 perdidas en el
+   lote B y 1 en el C, y las dos cifras son falsas.** La regla nueva es textual y comprobable: una
+   aparicion no cuenta si en su misma frase el plan dice `SE REPONE`, `SE REPONEN` o `NO SE PIERDE`.
+   **El contraste esta corrido: con la correccion puesta, el lote A de la vuelta 59 sigue dando 3,
+   la misma cifra que ya publico.**
+2. **SIGUE CONTANDO DE MENOS, y esto NO se corrigio porque corregirlo a ojo seria inventar.** El
+   tallador solo ve las perdidas que llevan el token. Las que el plan nombra **con otras palabras**
+   no las cuenta, y en estos dos lotes hay al menos cuatro: el matiz *sin recurrir a esquemas
+   motivacionales artificiales* (lote B, acto 26), el matiz *o trabajador* de la condicion 1 (lote C,
+   acto 36), la mitad de la denominacion `Concerns, Options, Consequences` que solo vive en el titulo
+   del absorbido (lote C, acto 37) y la instancia `arruga`, que tambien vive solo en el titulo (lote
+   C, acto 41). **Las cuatro estan escritas en su nota de reparto**; lo que falta es que un
+   instrumento sepa contarlas.
+
+**Y EL TALLADOR CAYO EN ROJO SOBRE EL UNICO ACTO QUE SI TIENE PERDIDA CON TOKEN, EL 19 DEL LOTE B**,
+porque su nota nombra a la vez un paso y una condicion. **Eso es la guarda funcionando**: el
+instrumento esta escrito para caer en ROJO antes que clasificar en silencio. Su salida entera esta
+en [`../loop/SALIDA_V60_TALLAR_PERDIDAS.txt`](../loop/SALIDA_V60_TALLAR_PERDIDAS.txt).
+
+**HALLAZGO APARTE, MEDIDO Y QUE NO ES DE ESTA VUELTA:** corrido el tallador **sin ningun cambio**
+(`git stash`) sobre el lote A de la vuelta 59, **sus tres perdidas salen las tres en ROJO** (*el
+trozo no nombra ni condicion ni paso*, actos 1, 4 y 7), y **la vuelta 59 nunca llego a correrlo**,
+comprobado porque no existe `SALIDA_V59_TALLAR_PERDIDAS.txt`. La cifra **3** que aquella vuelta
+publico en su TABLA 1 **sigue en pie y no la toca nada de esto**; lo que no existe, y no existia, es
+la clasificacion por especie de esas tres.

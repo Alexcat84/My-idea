@@ -81,6 +81,23 @@ FORMAS = [
      "CONTEOS QUE CHOCAN CON LA PIEZA DECLARADA, y decide la declarada"),
     ("UNA SOLA VARA DE CONTENIDO NO EMPATADA",
      "UNA SOLA VARA de contenido no empatada, y BASTA"),
+    # LAS FRASES QUE LA VUELTA 60 ANADE, con los lotes B y C del tramo 5. Como
+    # las de la 59, NINGUNA VIEJA SE TOCA NI SE RENOMBRA. Tres de las cuatro
+    # nombran formas que YA EXISTEN en la letra vigente y solo cambian la frase
+    # de cabecera; LA CUARTA ES FORMA NUEVA y va dicha: hasta este tramo ninguna
+    # fusion se habia decidido por una FIGURA CON NOMBRE del informe en vez de
+    # por una vara de las actas, y por eso se le da etiqueta propia en vez de
+    # colarla dentro de una existente.
+    ("LA PIEZA DECLARADA DECIDE, QUE ES LA VARA ESCRITA PARA CUANDO DOS VARAS DE CONTENIDO CHOCAN",
+     "CONTEOS QUE CHOCAN CON LA PIEZA DECLARADA, y decide la declarada"),
+    ("LA PIEZA DECLARADA DECIDE, Y ES VARA PORQUE ESTA DE UN SOLO LADO",
+     "LOS TRES CONTEOS EMPATAN y decide LA PIEZA DECLARADA, que esta de UN SOLO LADO"),
+    ("LA PIEZA DECLARADA DECIDE, Y ES VARA PORQUE LA RAZON LA RECONOCE ASIMETRICA",
+     "LOS TRES CONTEOS EMPATAN y decide LA PIEZA DECLARADA, que esta de UN SOLO LADO"),
+    ("LAS DOS VIAS ESCRITAS APUNTAN AL MISMO LADO",
+     "EL CONTENIDO EMPATA y LA PIEZA DECLARADA Y EL CABLEADO COINCIDEN"),
+    ("UNA FIGURA CON NOMBRE VENCE AL CONTEO DE PASOS",
+     "UNA FIGURA CON NOMBRE del informe vence al conteo (EL CASO NO ES LA CASA)"),
 ]
 
 
@@ -91,11 +108,58 @@ def forma_de(motivo):
     return None
 
 
+# LA CUENTA DE PERDIDAS, CORREGIDA EN LA VUELTA 60, Y EL TEXTO VIEJO SE QUEDA
+# ESCRITO AQUI PORQUE UNA CORRECCION QUE TAPA LO QUE CORRIGE NO SE PUEDE AUDITAR.
+# LO QUE HABIA ERA:
+#
+#     perdidas = act["nota_del_reparto"].count("PERDIDA NOMBRADA")
+#
+# Y CUENTA DE MAS, medido y no supuesto sobre los lotes B y C del tramo 5: de
+# las SEIS apariciones del token, CINCO estan dentro de frases que dicen lo
+# CONTRARIO de una perdida, porque anuncian que la perdida que la RAZON nombro
+# esta REPUESTA por esta fusion:
+#     lote B acto 20  "LA PERDIDA NOMBRADA QUE LA RAZON MARCO NO SE PIERDE ..."
+#     lote B acto 28  "LA UNICA PERDIDA NOMBRADA SE REPONE DE APPEND ..."
+#     lote B acto 31  "LA UNICA PERDIDA NOMBRADA SE REPONE DE APPEND ..."
+#     lote B acto 32  "LA UNICA PERDIDA NOMBRADA SE REPONE DE APPEND ..."
+#     lote C acto 36  "LA UNICA PERDIDA NOMBRADA SE REPONE DE INCISO ..."
+# La unica de verdad es el acto 19 del lote B, que dice "se NOMBRA en vez de
+# reponerse". Sin esta correccion la TABLA 1 del registro del tramo 5 habria
+# publicado 5 perdidas en el lote B y 1 en el C, y las dos cifras son falsas.
+#
+# LA REGLA NUEVA ES TEXTUAL Y COMPROBABLE, no una adivinanza: una aparicion del
+# token NO cuenta si en su misma frase (hasta el primer punto) el plan dice que
+# la pieza SE REPONE o que NO SE PIERDE. El plan sellado no se toca.
+#
+# LO QUE ESTA CORRECCION NO ARREGLA, Y VA DICHO EN VEZ DE CALLARSE: sigue
+# contando SOLO las perdidas que llevan el token, asi que SIGUE CONTANDO DE
+# MENOS las que el plan nombra con otras palabras (un matiz de condicion que se
+# declara, una denominacion que el instrumento no puede reponer). Esa segunda
+# mitad NO se arregla aqui porque arreglarla a ojo seria inventar; queda
+# declarada en el reporte con los actos nombrados.
+NO_ES_PERDIDA = ("SE REPONE", "SE REPONEN", "NO SE PIERDE")
+
+
+def cuenta_perdidas(nota):
+    n = 0
+    desde = 0
+    while True:
+        i = nota.find("PERDIDA NOMBRADA", desde)
+        if i < 0:
+            return n
+        fin = nota.find(".", i)
+        frase = nota[i:fin if fin > 0 else len(nota)]
+        if not any(x in frase for x in NO_ES_PERDIDA):
+            n += 1
+        desde = i + 1
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--vuelta", type=int, required=True)
-    ap.add_argument("--prefijo", default=None,
-                    help="prefijo de los planes; por defecto PLAN_V<vuelta>_OPU01_LOTE_")
+    ap.add_argument("--prefijo", action="append", default=None,
+                    help="prefijo de los planes; REPETIBLE (un tramo puede repartirse "
+                         "entre varias vueltas); por defecto PLAN_V<vuelta>_OPU01_LOTE_")
     ap.add_argument("--retirado", action="append", default=[],
                     help="N|especie|carril . acto SELLADO que se retiro despues")
     a = ap.parse_args()
@@ -111,22 +175,36 @@ def main():
             return 1
         retirados[int(partes[0])] = (partes[1].strip(), partes[2].strip())
 
-    PREFIJO = a.prefijo or ("PLAN_V%d_OPU01_LOTE_" % a.vuelta)
-    LOTES_HALLADOS = [L for L in LOTES
-                      if os.path.exists(os.path.join(LOOP, "%s%s.json" % (PREFIJO, L)))]
+    # SEGUNDA COSA QUE ESTE FICHERO ANADE (vuelta 60), y el motivo esta medido:
+    # EL TRAMO 5 SE REPARTIO ENTRE DOS VUELTAS. Su lote A lo sello la vuelta 59
+    # (PLAN_V59_*) y sus lotes B y C la vuelta 60 (PLAN_V60_*). Con un prefijo
+    # unico, el registro del CIERRE del tramo saldria con 31 fusiones en vez de
+    # 47 y las cuatro tablas mentirian por omision. --prefijo pasa a ser
+    # REPETIBLE y cada lote se busca en el primer prefijo que lo tenga. LA
+    # ARITMETICA NO SE TOCA: con un solo prefijo este fichero imprime
+    # EXACTAMENTE lo que imprimia, y eso se comprueba corriendo los dos.
+    prefijos = a.prefijo or ["PLAN_V%d_OPU01_LOTE_" % a.vuelta]
+    RUTA_DE = {}
+    for L in LOTES:
+        for pref in prefijos:
+            cand = os.path.join(LOOP, "%s%s.json" % (pref, L))
+            if os.path.exists(cand):
+                RUTA_DE[L] = cand
+                break
+    LOTES_HALLADOS = [L for L in LOTES if L in RUTA_DE]
     if not LOTES_HALLADOS:
-        print("ROJO: no hay ningun plan con prefijo %s. PARADA." % PREFIJO)
+        print("ROJO: no hay ningun plan con prefijo %s. PARADA." % ", ".join(prefijos))
         return 1
     # EL NUMERO DE TRAMO SALE DEL PLAN Y NO DE UNA CONSTANTE (TAREA 1.1)
-    _pr = json.load(io.open(os.path.join(LOOP, "%s%s.json" % (PREFIJO, LOTES_HALLADOS[0])),
-                            encoding="utf-8"))
+    _pr = json.load(io.open(RUTA_DE[LOTES_HALLADOS[0]], encoding="utf-8"))
     _m = re.match(r"\s*(\d+)", str(_pr.get("tramo", "")))
     num_tramo = _m.group(1) if _m else "SIN NUMERO EN EL CAMPO tramo DEL PLAN"
 
     print("=" * 78)
     print("LAS TABLAS DEL TRAMO %s, TALLADAS DE LOS PLANES SELLADOS (vuelta %d)"
           % (num_tramo, a.vuelta))
-    print("  lotes hallados: %s" % ", ".join(LOTES_HALLADOS))
+    print("  lotes hallados: %s" % ", ".join(
+        "%s (%s)" % (L, os.path.basename(RUTA_DE[L])) for L in LOTES_HALLADOS))
     if retirados:
         print("ACTOS RETIRADOS DESPUES DEL SELLADO: %s"
               % ", ".join(str(n) for n in sorted(retirados)))
@@ -138,7 +216,7 @@ def main():
     rojo = []
     sacados = []
     for L in LOTES_HALLADOS:
-        p = os.path.join(LOOP, "%s%s.json" % (PREFIJO, L))
+        p = RUTA_DE[L]
         plan = json.load(io.open(p, encoding="utf-8"))
         for act in plan["actos"]:
             if act["orden"] in retirados:
@@ -158,7 +236,7 @@ def main():
             f = forma_de(act["motivo"])
             if f is None:
                 rojo.append((L, act["orden"]))
-            perdidas = act["nota_del_reparto"].count("PERDIDA NOMBRADA")
+            perdidas = cuenta_perdidas(act["nota_del_reparto"])
             todos.append({"lote": L, "orden": act["orden"],
                           "sup": act["superviviente"], "abs": act["absorbidos"][0],
                           "forma": f, "piezas": sum(c.values()),
@@ -216,7 +294,7 @@ def main():
     # en su sitio por orden, junto a los que ya nacieron declarados.
     filas = []
     for L in LOTES_HALLADOS:
-        p = os.path.join(LOOP, "%s%s.json" % (PREFIJO, L))
+        p = RUTA_DE[L]
         plan = json.load(io.open(p, encoding="utf-8"))
         for d in plan.get("declarados_y_no_fundidos", []):
             filas.append((d["orden"], L, d["miembros"], d["especie"],

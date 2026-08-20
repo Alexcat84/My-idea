@@ -49,6 +49,23 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 LOOP = os.path.join(RAIZ, "docs", "loop")
 MARCA = "PERDIDA NOMBRADA"
 
+# MISMA CORRECCION QUE LA DE scripts/loop/tallar_planes_del_tramo.py, aplicada
+# aqui el mismo dia y por la misma medicion (vuelta 60, lotes B y C del tramo
+# 5): de las SEIS apariciones del token, CINCO viven en frases que dicen que la
+# perdida que la RAZON nombro esta REPUESTA por esta fusion, o sea lo contrario
+# de una perdida. Una aparicion NO cuenta si en su misma frase el plan dice SE
+# REPONE, SE REPONEN o NO SE PIERDE. El plan sellado no se toca.
+# LO QUE SIGUE SIN ARREGLARSE, dicho y no callado: este instrumento solo ve las
+# perdidas que llevan el token, asi que sigue contando de menos las que el plan
+# nombra con otras palabras. No se arregla a ojo.
+NO_ES_PERDIDA = ("SE REPONE", "SE REPONEN", "NO SE PIERDE")
+
+
+def es_perdida_real(trozo):
+    fin = trozo.find(".")
+    frase = trozo[:fin if fin > 0 else len(trozo)]
+    return not any(x in frase for x in NO_ES_PERDIDA)
+
 
 def especie(trozo):
     """Devuelve (etiqueta, causa) o (None, motivo del rojo). Sin rama por defecto."""
@@ -78,7 +95,7 @@ def main():
     print("=" * 78)
     print()
 
-    filas, rojo = [], []
+    filas, rojo, saltados = [], [], []
     for L in LOTES:
         p = os.path.join(LOOP, PLAN % L)
         plan = json.load(io.open(p, encoding="utf-8"))
@@ -86,7 +103,32 @@ def main():
             nota = act["nota_del_reparto"]
             if MARCA not in nota:
                 continue
-            trozo = nota[nota.index(MARCA):]
+            # SEGUNDA CORRECCION DE LA VUELTA 60, Y VA CON LA MEDICION QUE LA
+            # SOSTIENE PORQUE EL PRIMER INTENTO DE JUSTIFICARLA FUE MIO Y ESTABA
+            # MAL, y un razonamiento equivocado descartado tambien es registro.
+            # LO QUE HABIA: el trozo que se clasificaba era LA COLA ENTERA de la
+            # nota desde el token, asi que arrastraba frases de OTROS asuntos.
+            # Medido en el lote B acto 19 del tramo 5: la cola llegaba hasta
+            # "es su condicion 2", una frase que habla de la cobertura de
+            # condiciones y no de la perdida, y el instrumento salia AMBIGUO por
+            # culpa de eso. El propio docstring de arriba dice que la especie se
+            # lee de la FRASE, asi que se acota a la frase, que es ademas la
+            # misma que ya se publica en la ultima columna.
+            # LO QUE CREI Y NO ERA: llegue a revertir esta cota pensando que
+            # rompia la clasificacion del lote A de la vuelta 59. LO COMPROBE
+            # CORRIENDO EL INSTRUMENTO SIN NINGUN CAMBIO MIO (git stash) y es
+            # FALSO: los actos 1, 4 y 7 de aquel lote YA SALIAN ROJO ANTES, con
+            # otro motivo (el trozo no nombra ni condicion ni paso), y la vuelta
+            # 59 nunca llego a correr este tallador, comprobado porque no existe
+            # docs/loop/SALIDA_V59_TALLAR_PERDIDAS.txt. La cota NO cambia nada
+            # para el lote A y SI arregla el lote B, asi que se queda. Aquel
+            # ROJO del lote A es anterior, es de otra especie y queda declarado.
+            cola = nota[nota.index(MARCA):]
+            corte = cola.find(".")
+            trozo = cola[:corte if corte > 0 else len(cola)]
+            if not es_perdida_real(trozo):
+                saltados.append((L, act["orden"], trozo.split(".")[0].strip()[:150]))
+                continue
             esp, mal = especie(trozo)
             if esp is None:
                 rojo.append((L, act["orden"], mal))
@@ -100,6 +142,11 @@ def main():
 
     print("  planes leidos       : %s" % ", ".join(PLAN % L for L in LOTES))
     print("  perdidas encontradas: %d" % (len(filas) + len(rojo)))
+    if saltados:
+        print("  APARICIONES DEL TOKEN QUE NO SON PERDIDA (la frase dice que se repone): %d"
+              % len(saltados))
+        for L, n_, fr in saltados:
+            print("     lote %s acto %d: %s" % (L, n_, fr))
     if rojo:
         print()
         for L, n, mal in rojo:
