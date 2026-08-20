@@ -677,7 +677,7 @@ de `metodologia_spin_selling` sigue siendo una linea.**
 | | |
 |---|---:|
 | lecturas `P.12` **hechas y registradas** | **1** (el acto 1, que ya la tenia hecha) |
-| lecturas `P.12` **encargadas y NO hechas** | **25** |
+| lecturas `P.12` **encargadas y NO hechas** | ~~**25**~~ **26** **[CORREGIDA UNA VEZ, el 20 ago 2026 (vuelta 51, TAREA 1.1). NO ES UNA CIFRA QUE ENVEJECIO: NACIO MAL. La cuenta buena al cierre de la vuelta 49 era 26, medida por miembros sobre la nomina de aquel estado (`../loop/SALIDA_V50_TRAMO1_POR_MIEMBROS.txt`, corrida al abrir la vuelta 50 sobre el hash `b8d1083a`, que es el cierre de la 49) y re-derivada por el auditor en el acta de la vuelta 50, seccion 3.3, que es su relectura conjunta: 25 mixtos al cierre de la vuelta 50 mas el acto 1 que esa vuelta resolvio. LA FILA HERMANA del registro de la vuelta 50, que dice 25 al cierre, esta bien medida y NO se toca. El 25 de aqui convivia en esta misma pagina con el 26 de la medicion de la forma, dos parrafos mas arriba]** |
 | actos **fundidos** en esta seccion | **3** (los dos empates y la parte A del acto 1) |
 | **tramo 2** de 50 actos | **NO ABIERTO**: no hubo cuerda |
 | los declarados **29**, **32** y **36** (hoy **26**, **28** y **32**) | **siguen declarados**, ninguno se toca |
@@ -894,7 +894,7 @@ limpieza: CERO colisiones vigentes.**
 **El numero baila con cada fusion y por eso no se usa** (lo manda el encargo). Los cinco del tramo
 1 siguen declarados y **ninguno se toca**:
 
-| los miembros | por que sigue declarado | numero en la vuelta 48 / **hoy** |
+| los miembros | por que sigue declarado | numero en la vuelta 48 / ~~**hoy**~~ **AL ABRIR LA VUELTA 50** |
 |---|---|---|
 | `obtencion_compromiso`, `obtencion_compromiso_venta`, `obtencion_de_compromiso` | **colision de clase medida**: fundirlo fabrica una colision **aunque se funda solo el nucleo `A`**, medido hoy | 8 / **7** |
 | `mejora_del_sistema_responsabilidad_gerencial`, `sistema_estable_causas_comunes`, `sistema_estable_responsabilidad_gerencial` | el puesto **2572** llama **PROVISIONAL** a su propio ganador | 29 / **24** |
@@ -902,10 +902,30 @@ limpieza: CERO colisiones vigentes.**
 | `domina_lo_que_compras`, `investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor` | **IMPOSIBLE POR PUERTA**: los dos miembros son puerta, alguien tendria que morir | 36 / **30** |
 | `cultura_climatica_innovacion`, `cultura_de_innovacion` | **colision de clase medida**, igual que el primero | 40 / **31** |
 
-**Los dos IMPOSIBLES por puerta re-medidos hoy sobre la nomina de hoy son el `domina_lo_que_compras`
-y `licenciamiento_tecnologico` contra `proteccion_propiedad_intelectual_internacional`** (hoy el
-acto **156**), **y el segundo cae FUERA del tramo 1**, que es exactamente lo que decia el registro
-de la vuelta 48 con la numeracion de aquel dia.
+> **CORRECCION DECLARADA DE ROTULO (20 ago 2026, vuelta 51, TAREA 1.2), adjudicada en el acta de
+> la vuelta 50, seccion 3.1, con la figura del discutible D6 de la propia vuelta 50.** La columna
+> de arriba se titulaba **`hoy`** y traia los numeros de la corrida de APERTURA de la vuelta 50
+> (**7, 24, 26, 30, 31**,
+> [`../loop/SALIDA_V50_TRAMO1_POR_MIEMBROS.txt`](../loop/SALIDA_V50_TRAMO1_POR_MIEMBROS.txt)).
+> **El cierre de esa MISMA vuelta los re-midio distintos: 6, 23, 25, 29 y 30**
+> ([`../loop/SALIDA_V50_TRAMO1_CIERRE.txt`](../loop/SALIDA_V50_TRAMO1_CIERRE.txt)), porque la
+> fusion del acto 1 borro un acto de la nomina y corrio todos los numeros de detras. **Las cifras
+> NO se reescriben: fueron exactas para la corrida que la celda cita, y reescribirlas fabricaria
+> una corrida que nunca existio.** Lo que se corrige es el ROTULO, fechado a su corrida. **Los
+> mismos cinco actos re-medidos al abrir la vuelta 51 siguen en 6, 23, 25, 29 y 30**
+> ([`../loop/SALIDA_V51_TRAMO1_APERTURA.txt`](../loop/SALIDA_V51_TRAMO1_APERTURA.txt)). **Y la
+> propia tabla ya avisaba de que el numero no se usa: la llave son los miembros.**
+
+**Los dos IMPOSIBLES por puerta re-medidos sobre la nomina de la APERTURA DE LA VUELTA 50 son el
+`domina_lo_que_compras` y `licenciamiento_tecnologico` contra
+`proteccion_propiedad_intelectual_internacional`** (~~hoy el acto **156**~~ **el acto 156 en
+aquella corrida**, [`../loop/SALIDA_V50_PUERTAS_EN_EL_LOTE.txt`](../loop/SALIDA_V50_PUERTAS_EN_EL_LOTE.txt);
+**al abrir la vuelta 51 es el acto 155**,
+[`../loop/SALIDA_V51_PUERTAS_APERTURA.txt`](../loop/SALIDA_V51_PUERTAS_APERTURA.txt)), **y el
+segundo cae FUERA del tramo 1**, que es exactamente lo que decia el registro de la vuelta 48 con
+la numeracion de aquel dia. **Rotulo corregido con la misma vara el 20 ago 2026 (vuelta 51,
+TAREA 1.2): el ordinal era el de la apertura de la vuelta 50 y se presentaba como el de hoy. Los
+DOS imposibles siguen siendo los mismos DOS por miembros, que es la llave que no baila.**
 
 ### EL CIERRE DE LA SECCION, MEDIDO AL CERRAR
 
