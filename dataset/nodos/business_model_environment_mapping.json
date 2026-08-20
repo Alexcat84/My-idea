@@ -10,17 +10,19 @@
     "Analizar fuerzas de la industria: competidores incumbentes, nuevos entrantes, proveedores, productos sustitutos",
     "Identificar tendencias clave (regulatorias, tecnológicas, sociales, culturales)",
     "Evaluar fuerzas macroeconómicas (mercados de capital, condiciones económicas, infraestructura)",
-    "Formular preguntas estratégicas por cada bloque del Canvas en base a los hallazgos"
+    "Formular preguntas estratégicas por cada bloque del Canvas en base a los hallazgos",
+    "Listar stakeholders clave y su nivel de influencia sobre el modelo"
   ],
   "entregable_esperado": "Mapa visual del entorno de negocio con las cuatro áreas documentadas y su impacto en el Business Model Canvas",
   "nodos_previos": [
     "lienzo_modelo_negocio",
-    "future_scenarios_planning"
+    "future_scenarios_planning",
+    "business_plan_cinco_secciones",
+    "value_proposition_startup"
   ],
   "nodos_siguientes": [
     "caso_taobao_evolucion_modelo",
     "future_scenarios_planning",
-    "analisis_entorno_modelo_negocio",
     "business_model_canvas_vs_plan",
     "determinacion_tamano_cubetas",
     "economia_circular_como_modelo_de_negocio",
@@ -31,11 +33,24 @@
     "vertical_vs_virtual_integracion",
     "reconstruir_equipo_ejecutivo_para_nueva_etapa",
     "seleccion_estrategia_pricing",
-    "reconstruccion_de_equipo_ejecutivo"
+    "reconstruccion_de_equipo_ejecutivo",
+    "prototipado_modelos_negocio",
+    "swot_business_model_canvas"
   ],
   "condiciones_activacion": [
     "Si el equipo necesita entender el contexto competitivo y macro antes de rediseñar su modelo",
-    "Si la organización enfrenta cambios acelerados en su sector"
+    "Si la organización enfrenta cambios acelerados en su sector",
+    "Si el usuario ya tiene un modelo de negocio definido y necesita validar su vigencia frente a cambios externos"
   ],
-  "etiqueta_arbol": "Analiza las Fuerzas de tu Entorno"
+  "etiqueta_arbol": "Analiza las Fuerzas de tu Entorno",
+  "ids_alias": [
+    "analisis_entorno_modelo_negocio"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "analisis_entorno_modelo_negocio",
+      "titulo": "Análisis del Entorno del Modelo de Negocio",
+      "fuente": "Business Model Generation (Osterwalder)"
+    }
+  ]
 }

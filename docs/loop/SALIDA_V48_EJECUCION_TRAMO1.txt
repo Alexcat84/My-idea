@@ -1,0 +1,535 @@
+==============================================================================
+OP-U-01, TRAMO 1 . MODO EJECUTAR
+plan: docs/loop/PLAN_V48_OPU01_TRAMO1.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3524 vivos, 329 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 9 . sobrevive determinar_tipo_de_mercado . absorbe hipotesis_tipo_mercado, tipo_de_mercado_estrategia_competitiva
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 12 (anadidos 6) | condiciones 4 -> 7 (anadidas 3)
+  alias del superviviente: ['market_type_definicion', 'hipotesis_tipo_mercado', 'tipo_de_mercado_estrategia_competitiva']
+
+------------------------------------------------------------------------------
+ACTO 15 . sobrevive diferencia_ganancia_flujo_caja . absorbe cash_is_king, profit_vs_cash
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 3 -> 4 (anadidas 1)
+  alias del superviviente: ['cash_is_king', 'profit_vs_cash']
+
+------------------------------------------------------------------------------
+ACTO 23 . sobrevive critica_eco_eficiencia . absorbe eco_eficiencia_critica, limites_de_la_eco_eficiencia
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 2 -> 4 (anadidas 2)
+  alias del superviviente: ['eco_eficiencia_critica', 'limites_de_la_eco_eficiencia']
+
+------------------------------------------------------------------------------
+ACTO 30 . sobrevive punto_equilibrio_calidad_inspeccion . absorbe economia_de_la_inspeccion, regla_todo_o_nada_inspeccion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 8 (anadidos 2) | condiciones 4 -> 4 (anadidas 0)
+  alias del superviviente: ['punto_equilibrio_calidad', 'economia_de_la_inspeccion', 'regla_todo_o_nada_inspeccion']
+
+------------------------------------------------------------------------------
+ACTO 37 . sobrevive gestion_sindicato_inversores . absorbe manejo_syndicate_inversion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['manejo_syndicate_inversion']
+
+------------------------------------------------------------------------------
+ACTO 38 . sobrevive asignacion_agil_de_recursos . absorbe presupuesto_agil_innovacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['presupuesto_agil_innovacion']
+
+------------------------------------------------------------------------------
+ACTO 39 . sobrevive estrategia_plataformas_existentes . absorbe existing_platforms_leverage
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['existing_platforms_leverage']
+
+------------------------------------------------------------------------------
+ACTO 41 . sobrevive targeting_blogs_traccion . absorbe targeting_blogs_channel
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['targeting_blogs_channel']
+
+------------------------------------------------------------------------------
+ACTO 43 . sobrevive comunicacion_transparente_en_crisis . absorbe liderazgo_frente_crisis_competitiva
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['liderazgo_frente_crisis_competitiva']
+
+------------------------------------------------------------------------------
+ACTO 44 . sobrevive fase_activate_primera_impresion . absorbe fase_activate
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['fase_activate']
+
+------------------------------------------------------------------------------
+ACTO 45 . sobrevive proceso_decision_vc . absorbe proceso_diligencia_vc
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['proceso_diligencia_vc']
+
+------------------------------------------------------------------------------
+ACTO 46 . sobrevive business_model_environment_mapping . absorbe analisis_entorno_modelo_negocio
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['analisis_entorno_modelo_negocio']
+
+------------------------------------------------------------------------------
+ACTO 47 . sobrevive three_rs_equilibrium . absorbe sistema_tres_rs_alineacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 4 -> 4 (anadidas 0)
+  alias del superviviente: ['sistema_tres_rs_alineacion']
+
+------------------------------------------------------------------------------
+ACTO 48 . sobrevive framework_excelencia_operacional . absorbe preguntas_excelencia_operacional
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 10 -> 11 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['preguntas_excelencia_operacional']
+
+------------------------------------------------------------------------------
+ACTO 49 . sobrevive storytelling_como_herramienta_de_diseno . absorbe storytelling_para_el_cambio
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['storytelling_para_el_cambio']
+
+------------------------------------------------------------------------------
+ACTO 50 . sobrevive compromiso_linea_tiempo_cliente . absorbe tacticas_cierre_ventas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 7 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['tacticas_cierre_ventas']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 84
+   analisis_competitivo                                 nodos_siguientes  liderazgo_frente_crisis_competitiva -> comunicacion_transparente_en_crisis
+   analisis_costo_entrada_mercado                       nodos_previos     hipotesis_tipo_mercado -> determinar_tipo_de_mercado
+   brief_competitivo                                    nodos_previos     tipo_de_mercado_estrategia_competitiva -> determinar_tipo_de_mercado
+   bullseye_framework                                   nodos_previos     existing_platforms_leverage -> estrategia_plataformas_existentes
+   business_model_environment_mapping                   nodos_siguientes  analisis_entorno_modelo_negocio -> business_model_environment_mapping
+   business_plan_cinco_secciones                        nodos_siguientes  analisis_entorno_modelo_negocio -> business_model_environment_mapping
+   capturar_conocimiento_de_mercado                     nodos_siguientes  tipo_de_mercado_estrategia_competitiva -> determinar_tipo_de_mercado
+   carta_de_intencion_loi                               nodos_siguientes  proceso_diligencia_vc -> proceso_decision_vc
+   cierre_segun_complejidad_venta                       nodos_siguientes  tacticas_cierre_ventas -> compromiso_linea_tiempo_cliente
+   clasificacion_seriedad_defectos                      nodos_siguientes  economia_de_la_inspeccion -> punto_equilibrio_calidad_inspeccion
+   contract_close_out                                   nodos_siguientes  tacticas_cierre_ventas -> compromiso_linea_tiempo_cliente
+   control_estadistico_de_procesos                      nodos_siguientes  regla_todo_o_nada_inspeccion -> punto_equilibrio_calidad_inspeccion
+   cronograma_proyecto                                  nodos_siguientes  presupuesto_agil_innovacion -> asignacion_agil_de_recursos
+   cultura_de_innovacion                                nodos_previos     presupuesto_agil_innovacion -> asignacion_agil_de_recursos
+   customer_journey_mapping                             nodos_siguientes  storytelling_para_el_cambio -> storytelling_como_herramienta_de_diseno
+   desarrollo_posicionamiento_producto                  nodos_siguientes  liderazgo_frente_crisis_competitiva -> comunicacion_transparente_en_crisis
+   determinar_tipo_de_mercado                           nodos_previos     tipo_de_mercado_estrategia_competitiva -> determinar_tipo_de_mercado
+   diagnostico_de_productos_crudos                      nodos_siguientes  limites_de_la_eco_eficiencia -> critica_eco_eficiencia
+   diseno_metricas_lideres_rezagados                    nodos_previos     preguntas_excelencia_operacional -> framework_excelencia_operacional
+   diseno_organizacional                                nodos_previos     preguntas_excelencia_operacional -> framework_excelencia_operacional
+   disruptores_endocrinos_y_salud_industrial            nodos_previos     limites_de_la_eco_eficiencia -> critica_eco_eficiencia
+   downcycling_problema                                 nodos_previos     eco_eficiencia_critica -> critica_eco_eficiencia
+   eco_efectividad                                      nodos_previos     eco_eficiencia_critica -> critica_eco_eficiencia
+   economia_subensambles_inspeccion                     nodos_previos     regla_todo_o_nada_inspeccion -> punto_equilibrio_calidad_inspeccion
+   eliminacion_planes_muestreo_estandar                 nodos_previos     regla_todo_o_nada_inspeccion -> punto_equilibrio_calidad_inspeccion
+   entender_term_sheet                                  nodos_previos     manejo_syndicate_inversion -> gestion_sindicato_inversores
+   entrada_mercado_nuevo                                nodos_previos     tipo_de_mercado_estrategia_competitiva -> determinar_tipo_de_mercado
+   errores_de_medicion                                  nodos_siguientes  economia_de_la_inspeccion -> punto_equilibrio_calidad_inspeccion
+   estado_flujo_de_caja_tres_categorias                 nodos_previos     profit_vs_cash -> diferencia_ganancia_flujo_caja
+   estrategia_competencia_vcs                           nodos_previos     proceso_diligencia_vc -> proceso_decision_vc
+   estrategia_de_tragedia_vs_estrategia_de_cambio       nodos_siguientes  limites_de_la_eco_eficiencia -> critica_eco_eficiencia
+   estrategia_get_keep_grow                             nodos_previos     tipo_de_mercado_estrategia_competitiva -> determinar_tipo_de_mercado
+   etapa_de_investigacion                               nodos_previos     hipotesis_tipo_mercado -> determinar_tipo_de_mercado
+   evaluacion_vp_ventas                                 nodos_siguientes  preguntas_excelencia_operacional -> framework_excelencia_operacional
+   fase_acclimate                                       nodos_previos     fase_activate -> fase_activate_primera_impresion
+   fase_affirm_buyers_remorse                           nodos_siguientes  fase_activate -> fase_activate_primera_impresion
+   framework_spin_selling                               nodos_siguientes  tacticas_cierre_ventas -> compromiso_linea_tiempo_cliente
+   gestion_confrontacion_ejecutiva                      nodos_previos     preguntas_excelencia_operacional -> framework_excelencia_operacional
+   herramientas_de_activacion_web                       nodos_previos     targeting_blogs_channel -> targeting_blogs_traccion
+   hipotesis_de_canales                                 nodos_siguientes  existing_platforms_leverage -> estrategia_plataformas_existentes
+   hipotesis_de_canales                                 nodos_siguientes  hipotesis_tipo_mercado -> determinar_tipo_de_mercado
+   hipotesis_relacion_clientes_web                      nodos_previos     hipotesis_tipo_mercado -> determinar_tipo_de_mercado
+   inspeccion_automatizada                              nodos_siguientes  economia_de_la_inspeccion -> punto_equilibrio_calidad_inspeccion
+   jerarquia_firma_vc                                   nodos_siguientes  proceso_diligencia_vc -> proceso_decision_vc
+   lectura_balance_general                              nodos_siguientes  cash_is_king -> diferencia_ganancia_flujo_caja
+   licencia_para_danar                                  nodos_previos     eco_eficiencia_critica -> critica_eco_eficiencia
+   lienzo_modelo_negocio                                nodos_siguientes  analisis_entorno_modelo_negocio -> business_model_environment_mapping
+   lienzo_modelo_negocio                                nodos_siguientes  tipo_de_mercado_estrategia_competitiva -> determinar_tipo_de_mercado
+   middle_ring_testing                                  nodos_siguientes  targeting_blogs_channel -> targeting_blogs_traccion
+   muestreo_de_aceptacion                               nodos_previos     economia_de_la_inspeccion -> punto_equilibrio_calidad_inspeccion
+   navegacion_politica_organizacional                   nodos_previos     storytelling_para_el_cambio -> storytelling_como_herramienta_de_diseno
+   no_shop_agreement                                    nodos_siguientes  proceso_diligencia_vc -> proceso_decision_vc
+   ocho_fases_experiencia_cliente                       nodos_siguientes  fase_activate -> fase_activate_primera_impresion
+   owner_earnings                                       nodos_previos     cash_is_king -> diferencia_ganancia_flujo_caja
+   pivote_estrategico                                   nodos_previos     liderazgo_frente_crisis_competitiva -> comunicacion_transparente_en_crisis
+   portafolio_innovacion_diversificado                  nodos_siguientes  presupuesto_agil_innovacion -> asignacion_agil_de_recursos
+   probabilidad_falla_ensamblaje_multiple               nodos_previos     regla_todo_o_nada_inspeccion -> punto_equilibrio_calidad_inspeccion
+   programa_afiliados                                   nodos_siguientes  existing_platforms_leverage -> estrategia_plataformas_existentes
+   propagacion_de_ideas_meme                            nodos_previos     storytelling_para_el_cambio -> storytelling_como_herramienta_de_diseno
+   prototipado_modelos_negocio                          nodos_previos     analisis_entorno_modelo_negocio -> business_model_environment_mapping
+   pruebas_destructivas                                 nodos_previos     regla_todo_o_nada_inspeccion -> punto_equilibrio_calidad_inspeccion
+   relacion_largo_plazo_proveedor_unico                 nodos_siguientes  regla_todo_o_nada_inspeccion -> punto_equilibrio_calidad_inspeccion
+   relacion_previa_y_estructura_roles                   nodos_siguientes  sistema_tres_rs_alineacion -> three_rs_equilibrium
+   rendicion_de_cuentas_del_equipo                      nodos_previos     tacticas_cierre_ventas -> compromiso_linea_tiempo_cliente
+   resegmentacion_mercado_nicho_bajo_costo              nodos_previos     hipotesis_tipo_mercado -> determinar_tipo_de_mercado
+   resegmentacion_mercado_nicho_bajo_costo              nodos_previos     tipo_de_mercado_estrategia_competitiva -> determinar_tipo_de_mercado
+   resegmentacion_mercado_nicho_bajo_costo              nodos_siguientes  tipo_de_mercado_estrategia_competitiva -> determinar_tipo_de_mercado
+   riesgo_cofundadores_relacion_previa                  nodos_siguientes  sistema_tres_rs_alineacion -> three_rs_equilibrium
+   rotacion_equipo_fundador                             nodos_previos     sistema_tres_rs_alineacion -> three_rs_equilibrium
+   seleccion_canal_distribucion                         nodos_siguientes  hipotesis_tipo_mercado -> determinar_tipo_de_mercado
+   seleccion_canal_fisico                               nodos_siguientes  hipotesis_tipo_mercado -> determinar_tipo_de_mercado
+   seleccion_etapa_fondo_vc                             nodos_siguientes  manejo_syndicate_inversion -> gestion_sindicato_inversores
+   seleccion_productos_servicios_verdes                 nodos_siguientes  eco_eficiencia_critica -> critica_eco_eficiencia
+   separar_hechos_de_percepcion                         nodos_previos     storytelling_para_el_cambio -> storytelling_como_herramienta_de_diseno
+   ser_menos_malo_vs_ser_bueno                          nodos_previos     eco_eficiencia_critica -> critica_eco_eficiencia
+   storytelling_como_herramienta_de_diseno              nodos_previos     storytelling_para_el_cambio -> storytelling_como_herramienta_de_diseno
+   swot_business_model_canvas                           nodos_previos     analisis_entorno_modelo_negocio -> business_model_environment_mapping
+   term_sheet_disposiciones_vinculantes                 nodos_previos     proceso_diligencia_vc -> proceso_decision_vc
+   term_sheet_overview                                  nodos_previos     proceso_diligencia_vc -> proceso_decision_vc
+   traction_channel_bias                                nodos_siguientes  targeting_blogs_channel -> targeting_blogs_traccion
+   tres_as_de_metricas                                  nodos_previos     preguntas_excelencia_operacional -> framework_excelencia_operacional
+   value_proposition_startup                            nodos_siguientes  analisis_entorno_modelo_negocio -> business_model_environment_mapping
+   verificacion_paralela_trabajo_critico                nodos_previos     regla_todo_o_nada_inspeccion -> punto_equilibrio_calidad_inspeccion
+   vesting_dinamico                                     nodos_previos     sistema_tres_rs_alineacion -> three_rs_equilibrium
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 7
+   blueprint_de_experiencia                             nodos_siguientes  storytelling_para_el_cambio (registro historico)
+   clima_positivo_innovacion                            nodos_previos     presupuesto_agil_innovacion (registro historico)
+   entendiendo_balance_general_basico                   nodos_siguientes  cash_is_king (registro historico)
+   estrategia_resegmentacion_mercado                    nodos_previos     hipotesis_tipo_mercado (registro historico)
+   fase_affirm                                          nodos_siguientes  fase_activate (registro historico)
+   framework_bullseye                                   nodos_previos     existing_platforms_leverage (registro historico)
+   lectura_estado_flujo_efectivo                        nodos_previos     profit_vs_cash (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 7
+   eco_efectividad                                      nodos_previos
+   fase_affirm_buyers_remorse                           nodos_siguientes
+   lienzo_modelo_negocio                                nodos_siguientes
+   propagacion_de_ideas_meme                            nodos_previos
+   resegmentacion_mercado_nicho_bajo_costo              nodos_previos
+   seleccion_productos_servicios_verdes                 nodos_siguientes
+   vesting_dinamico                                     nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 3
+   business_model_environment_mapping                   nodos_siguientes
+   determinar_tipo_de_mercado                           nodos_previos
+   storytelling_como_herramienta_de_diseno              nodos_previos
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 1010
+  duplicadas tras resolver DESPUES del tramo                          : 1004
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 6, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 80 de 80
+guarda D, los 20 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (123 filas)
+ acto de que nodo                                  que          n  a donde va
+    9 hipotesis_tipo_mercado                       paso         1  ya lo dice el PASO 1 del superviviente
+        Determinar si existe un mercado bien definido con competidores conocidos
+    9 hipotesis_tipo_mercado                       paso         2  PASO 7 del superviviente
+        Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio o mercado inestable
+    9 hipotesis_tipo_mercado                       paso         3  ya lo dice el PASO 4 del superviviente
+        Decidir si el producto entra en mercado existente, se re-segmenta, crea nuevo mercado o clona un modelo existente
+    9 hipotesis_tipo_mercado                       paso         4  PASO 8 del superviviente
+        Si se ataca mercado existente, calcular el costo de entrada (1.7x o 3x el presupuesto de marketing del líder)
+    9 hipotesis_tipo_mercado                       paso         5  PASO 9 del superviviente
+        Definir la base de competencia donde el producto puede ganar (features, servicio, precio, marca)
+    9 hipotesis_tipo_mercado                       condicion    1  CONDICION 5 del superviviente
+        Cuando el equipo necesita decidir su estrategia de entrada al mercado antes de invertir en marketing y ventas
+    9 tipo_de_mercado_estrategia_competitiva       paso         1  ya lo dice el PASO 1 del superviviente
+        Revisa si ya existen competidores directos y qué parte del mercado tienen
+    9 tipo_de_mercado_estrategia_competitiva       paso         2  PASO 10 del superviviente
+        Si un competidor domina más del 74% del mercado, evita atacarlo de frente; si domina entre 26% y 74%, elige bien tus batallas
+    9 tipo_de_mercado_estrategia_competitiva       paso         3  ya lo dice el PASO 4 del superviviente
+        Decide tu estrategia: entrar a un mercado existente, resegmentarlo, o crear uno nuevo
+    9 tipo_de_mercado_estrategia_competitiva       paso         4  PASO 11 del superviviente
+        Escribe un breve documento respondiendo las preguntas clave según el tipo de mercado que elegiste
+    9 tipo_de_mercado_estrategia_competitiva       paso         5  PASO 12 del superviviente
+        Actualiza tu mapa de modelo de negocio (Business Model Canvas) con esta hipótesis
+    9 tipo_de_mercado_estrategia_competitiva       condicion    1  CONDICION 6 del superviviente
+        No sabes cómo posicionar tu producto frente a la competencia
+    9 tipo_de_mercado_estrategia_competitiva       condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Tienes que decidir cuánto invertir en marketing y ventas
+    9 tipo_de_mercado_estrategia_competitiva       condicion    3  CONDICION 7 del superviviente
+        Las personas que invierten en tu negocio esperan ingresos que no coinciden con el tipo de mercado real
+   15 cash_is_king                                 paso         1  PASO 6 del superviviente
+        Revisa el saldo de tu cuenta y el flujo de caja cada semana, o cada día si estas en un momento critico
+   15 cash_is_king                                 paso         2  ya lo dice el PASO 3 del superviviente
+        Calcula cuanto efectivo consumes al mes operando tu negocio (burn rate)
+   15 cash_is_king                                 paso         3  ya lo dice el PASO 1 del superviviente
+        No confies solo en el estado de resultados para saber si estas bien financieramente
+   15 cash_is_king                                 paso         4  PASO 7 del superviviente
+        Aprende a leer el estado de flujo de efectivo, aunque al principio el lenguaje te parezca tecnico
+   15 cash_is_king                                 condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Si estas mirando solo la ganancia en papel y descuidando el efectivo real
+   15 cash_is_king                                 condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si tus ventas estan creciendo pero te estas quedando sin liquidez
+   15 profit_vs_cash                               paso         1  PASO 8 del superviviente
+        Mira cuánto tardan tus clientes en pagarte y cuánto tardas tú en pagarle a tus proveedores.
+   15 profit_vs_cash                               paso         2  ya lo dice el PASO 2 del superviviente
+        Proyecta tu flujo de caja mes a mes tomando en cuenta esos desfases, no solo mires tu estado de resultados.
+   15 profit_vs_cash                               paso         3  ya lo dice el PASO 4 del superviviente
+        Revisa si tu crecimiento en ventas te está dejando corto de efectivo por la diferencia entre cuándo cobras y cuándo pagas.
+   15 profit_vs_cash                               paso         4  ya lo dice el PASO 5 del superviviente
+        Decide si necesitas ayuda para conseguir financiamiento o ayuda para bajar costos, según lo que encuentres.
+   15 profit_vs_cash                               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si tu negocio está creciendo rápido en ventas pero te está faltando efectivo.
+   15 profit_vs_cash                               condicion    2  CONDICION 4 del superviviente
+        Si tu negocio es rentable en el papel pero no te alcanza para pagar sueldos.
+   23 eco_eficiencia_critica                       paso         1  ya lo dice el PASO 2 del superviviente
+        Evaluar si las iniciativas actuales de sostenibilidad solo reducen daño o realmente lo eliminan
+   23 eco_eficiencia_critica                       paso         2  PASO 5 del superviviente
+        Identificar procesos industriales que aún generan toxinas aunque en menor cantidad
+   23 eco_eficiencia_critica                       paso         3  ya lo dice el PASO 3 del superviviente
+        Cuestionar si la reducción de tamaño/material realmente resuelve el problema de fondo
+   23 eco_eficiencia_critica                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando una empresa cree que reducir emisiones o residuos es suficiente para ser sostenible
+   23 eco_eficiencia_critica                       condicion    2  CONDICION 3 del superviviente
+        Si el usuario busca ir más allá de certificaciones básicas de reducción
+   23 limites_de_la_eco_eficiencia                 paso         1  ya lo dice el PASO 1 del superviviente
+        Auditar las iniciativas actuales de sostenibilidad del proyecto: ¿reducen daño o lo eliminan?
+   23 limites_de_la_eco_eficiencia                 paso         2  PASO 6 del superviviente
+        Identificar si alguna estrategia de 'reducción' solo posterga el problema (ej. incineración, downcycling)
+   23 limites_de_la_eco_eficiencia                 paso         3  ya lo dice el PASO 3 del superviviente
+        Cuestionar si las metas actuales apuntan a 'cero emisiones' o solo a 'menos emisiones'
+   23 limites_de_la_eco_eficiencia                 paso         4  PASO 7 del superviviente
+        Plantear la transición de una lógica de reducción a una lógica de rediseño regenerativo
+   23 limites_de_la_eco_eficiencia                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el usuario cree que sus prácticas de 'reducir, reusar, reciclar' ya son suficientes
+   23 limites_de_la_eco_eficiencia                 condicion    2  CONDICION 4 del superviviente
+        Si se está evaluando si adoptar una certificación de eco-eficiencia es la meta final o solo un paso intermedio
+   30 economia_de_la_inspeccion                    paso         1  ya lo dice el PASO 1 del superviviente
+        Calcular el costo de inspección por unidad (I)
+   30 economia_de_la_inspeccion                    paso         2  ya lo dice el PASO 1 del superviviente
+        Calcular el costo de daño por defecto no detectado (A)
+   30 economia_de_la_inspeccion                    paso         3  ya lo dice el PASO 2 del superviviente
+        Determinar el punto de equilibrio pb = I/A
+   30 economia_de_la_inspeccion                    paso         4  ya lo dice el PASO 4 del superviviente
+        Comparar el nivel de calidad histórico (p) contra pb
+   30 economia_de_la_inspeccion                    paso         5  PASO 7 del superviviente
+        Seleccionar la estrategia de inspección (ninguna, muestreo, 100%) según el resultado
+   30 economia_de_la_inspeccion                    condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se debe decidir el nivel de inspección para un lote de producción
+   30 economia_de_la_inspeccion                    condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando los costos de inspección o de fallas son significativos
+   30 regla_todo_o_nada_inspeccion                 paso         1  ya lo dice el PASO 1 del superviviente
+        Calcula el costo de inspeccionar cada unidad (k1) del material o proceso.
+   30 regla_todo_o_nada_inspeccion                 paso         2  ya lo dice el PASO 1 del superviviente
+        Calcula el costo promedio de corregir el problema más adelante (k2) si el defecto no se detecta a tiempo.
+   30 regla_todo_o_nada_inspeccion                 paso         3  ya lo dice el PASO 3 del superviviente
+        Calcula la fracción de piezas defectuosas (p) que históricamente te da ese proveedor o proceso.
+   30 regla_todo_o_nada_inspeccion                 paso         4  ya lo dice el PASO 4 del superviviente
+        Compara p con k1/k2 para decidir si inspeccionas el 100% o no inspeccionas nada.
+   30 regla_todo_o_nada_inspeccion                 paso         5  PASO 8 del superviviente
+        Anota tu decisión y sigue revisando con cartas de control para comprobar que la fracción de defectos se mantenga estable.
+   30 regla_todo_o_nada_inspeccion                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando tienes que decidir si inspeccionas los materiales que te llegan o los productos en proceso
+   30 regla_todo_o_nada_inspeccion                 condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando corregir un defecto que no detectaste a tiempo te sale caro
+   37 manejo_syndicate_inversion                   paso         1  PASO 5 del superviviente
+        Identifica o negocia quién será el inversionista líder del grupo
+   37 manejo_syndicate_inversion                   paso         2  ya lo dice el PASO 3 del superviviente
+        Consigue que todos acuerden, aunque sea de palabra, que el líder negocia los términos en nombre del resto
+   37 manejo_syndicate_inversion                   paso         3  ya lo dice el PASO 1 del superviviente
+        Mantén comunicación regular con cada inversionista del grupo, no solo con el líder
+   37 manejo_syndicate_inversion                   paso         4  ya lo dice la CONDICION 2 del superviviente
+        Evita negociar los mismos términos una y otra vez con cada inversionista por separado
+   37 manejo_syndicate_inversion                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando varios inversionistas participan juntos en la misma ronda de financiamiento
+   38 presupuesto_agil_innovacion                  paso         1  ya lo dice el PASO 2 del superviviente
+        Evita atar la financiación de tus proyectos creativos a ciclos anuales fijos.
+   38 presupuesto_agil_innovacion                  paso         2  ya lo dice el PASO 1 del superviviente
+        Crea un fondo propio de capital de riesgo, o algo parecido, para financiar estas ideas.
+   38 presupuesto_agil_innovacion                  paso         3  PASO 5 del superviviente
+        Libera los fondos poco a poco, según vayas cumpliendo hitos de aprendizaje, no solo metas financieras.
+   38 presupuesto_agil_innovacion                  paso         4  PASO 6 del superviviente
+        Confía en tu criterio, o en el de la persona que te acompaña, para decidir la financiación, en vez de seguir una fórmula rígida.
+   38 presupuesto_agil_innovacion                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando los ciclos de presupuesto anual te están frenando la velocidad en tus proyectos de innovación.
+   39 existing_platforms_leverage                  paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar plataformas grandes donde se concentran tus clientes potenciales
+   39 existing_platforms_leverage                  paso         2  ya lo dice el PASO 2 del superviviente
+        Detectar funcionalidades ausentes o mal resueltas en esa plataforma que tu producto pueda cubrir
+   39 existing_platforms_leverage                  paso         3  ya lo dice el PASO 3 del superviviente
+        Diseñar una integración o feature que aproveche el tráfico de la plataforma anfitriona
+   39 existing_platforms_leverage                  paso         4  PASO 6 del superviviente
+        Lanzar la integración y medir el tráfico/referidos generados
+   39 existing_platforms_leverage                  paso         5  ya lo dice el PASO 4 del superviviente
+        Priorizar plataformas emergentes (menos saturadas) sobre las ya maduras
+   39 existing_platforms_leverage                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si se busca crecimiento rápido sin gran inversión en marketing pagado
+   39 existing_platforms_leverage                  condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si existe una plataforma masiva con un vacío funcional relevante para el producto
+   41 targeting_blogs_channel                      paso         1  ya lo dice el PASO 1 del superviviente
+        Identifica blogs relevantes usando buscadores, YouTube, Twitter, Delicious y Social Mention
+   41 targeting_blogs_channel                      paso         2  ya lo dice el PASO 4 del superviviente
+        Crea contenido o productos personalizados (bundles, badges compartibles) que faciliten que el blog te mencione
+   41 targeting_blogs_channel                      paso         3  ya lo dice el PASO 2 del superviviente
+        Contacta bloggers pequeños ofreciendo patrocinio directo o compensación económica simple
+   41 targeting_blogs_channel                      paso         4  PASO 6 del superviviente
+        Ofrece acceso VIP o beneficios exclusivos a quienes compartan tu producto en sus blogs
+   41 targeting_blogs_channel                      paso         5  ya lo dice el PASO 3 del superviviente
+        Rastrea qué blogs generan más señales (clics, registros) para enfocar futuros esfuerzos
+   41 targeting_blogs_channel                      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el startup está en fase I buscando su primera ola de usuarios
+   41 targeting_blogs_channel                      condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando el producto tiene un nicho claro con comunidades de blogs identificables
+   43 liderazgo_frente_crisis_competitiva          paso         1  ya lo dice el PASO 1 del superviviente
+        Designa un vocero o líder que esté disponible para prensa y stakeholders durante crisis competitivas.
+   43 liderazgo_frente_crisis_competitiva          paso         2  ya lo dice el PASO 2 del superviviente
+        Desarrolla mensajes clave y una narrativa clara antes de que la crisis escale.
+   43 liderazgo_frente_crisis_competitiva          paso         3  ya lo dice el PASO 3 del superviviente
+        Practica la comunicación bajo presión: transparencia sin pánico.
+   43 liderazgo_frente_crisis_competitiva          paso         4  ya lo dice el PASO 4 del superviviente
+        Usa la crisis como oportunidad de reposicionamiento estratégico, no solo de defensa.
+   43 liderazgo_frente_crisis_competitiva          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando un competidor con mayores recursos lanza un ataque directo (ej. abaratamiento agresivo, funcionalidad gratuita).
+   43 liderazgo_frente_crisis_competitiva          condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando la prensa y el mercado empiezan a cuestionar la viabilidad de la empresa.
+   44 fase_activate                                paso         1  ya lo dice el PASO 3 del superviviente
+        Diseñar una experiencia de 'primer uso' o 'kickoff' memorable y bien estructurada.
+   44 fase_activate                                paso         2  PASO 5 del superviviente
+        Establecer expectativas claras sobre los próximos pasos del proceso.
+   44 fase_activate                                paso         3  PASO 6 del superviviente
+        Generar momentum temprano mostrando avances o entregables rápidos.
+   44 fase_activate                                paso         4  PASO 7 del superviviente
+        Evitar fallos en la primera impresión operativa, ya que son difíciles de revertir.
+   44 fase_activate                                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando comienza la entrega real del producto/servicio tras la venta.
+   45 proceso_diligencia_vc                        paso         1  ya lo dice el PASO 3 del superviviente
+        Preparar con antelación presentaciones, proyecciones financieras y análisis competitivo.
+   45 proceso_diligencia_vc                        paso         2  ya lo dice el PASO 1 del superviviente
+        Verificar que un socio senior de la firma esté involucrado en el proceso, no solo un asociado junior.
+   45 proceso_diligencia_vc                        paso         3  ya lo dice el PASO 2 del superviviente
+        Realizar diligencia inversa: pedir referencias de otros fundadores que la firma haya respaldado, incluyendo casos fallidos.
+   45 proceso_diligencia_vc                        paso         4  PASO 6 del superviviente
+        Preguntar directamente cuál es el proceso y los próximos pasos después de la segunda reunión.
+   45 proceso_diligencia_vc                        condicion    1  CONDICION 3 del superviviente
+        Cuando el usuario está en conversaciones avanzadas con un VC y necesita entregar documentación.
+   46 analisis_entorno_modelo_negocio              paso         1  ya lo dice el PASO 1 del superviviente
+        Mapear las fuerzas de mercado: segmentos, necesidades, costos de cambio y atractivo de ingresos
+   46 analisis_entorno_modelo_negocio              paso         2  ya lo dice el PASO 2 del superviviente
+        Identificar competidores incumbentes y nuevos entrantes disruptivos
+   46 analisis_entorno_modelo_negocio              paso         3  ya lo dice el PASO 2 del superviviente
+        Detectar productos o servicios sustitutos que puedan reemplazar tu oferta
+   46 analisis_entorno_modelo_negocio              paso         4  PASO 6 del superviviente
+        Listar stakeholders clave y su nivel de influencia sobre el modelo
+   46 analisis_entorno_modelo_negocio              paso         5  ya lo dice el PASO 3 del superviviente
+        Analizar tendencias tecnológicas, regulatorias, sociales y socioeconómicas relevantes
+   46 analisis_entorno_modelo_negocio              paso         6  ya lo dice el PASO 4 del superviviente
+        Evaluar condiciones macroeconómicas: mercados de capital, commodities, infraestructura
+   46 analisis_entorno_modelo_negocio              condicion    1  CONDICION 3 del superviviente
+        Si el usuario ya tiene un modelo de negocio definido y necesita validar su vigencia frente a cambios externos
+   46 analisis_entorno_modelo_negocio              condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si se requiere anticipar disrupciones en la industria
+   47 sistema_tres_rs_alineacion                   paso         1  PASO 6 del superviviente
+        Mapear el tipo de relación previa entre cofundadores (familia, amigos, excompañeros de trabajo, extraños)
+   47 sistema_tres_rs_alineacion                   paso         2  PASO 7 del superviviente
+        Evaluar si la estructura de roles elegida (jerárquica vs igualitaria) es consistente con esa relación previa
+   47 sistema_tres_rs_alineacion                   paso         3  PASO 8 del superviviente
+        Verificar que el split de equity refleje la misma lógica (social vs de negocio) que la relación y los roles
+   47 sistema_tres_rs_alineacion                   paso         4  ya lo dice el PASO 3 del superviviente
+        Revisar periódicamente la alineación del sistema, ya que el startup evoluciona y puede requerir un nuevo equilibrio
+   47 sistema_tres_rs_alineacion                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el equipo fundador está definiendo roles y equity al inicio del startup
+   47 sistema_tres_rs_alineacion                   condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando hay tensión creciente entre cofundadores y no se identifica la causa raíz
+   47 sistema_tres_rs_alineacion                   condicion    3  ya lo dice la CONDICION 3 del superviviente
+        Antes de una ronda de inversión que requiera clarificar la estructura de control
+   48 preguntas_excelencia_operacional             paso         1  ya lo dice el PASO 1 del superviviente
+        Pregunta cómo el ejecutivo recluta, entrena y evalúa a sus reportes directos
+   48 preguntas_excelencia_operacional             paso         2  ya lo dice el PASO 2 del superviviente
+        Indaga su proceso de toma de decisiones y cómo estructura sus reuniones de staff
+   48 preguntas_excelencia_operacional             paso         3  ya lo dice el PASO 4 del superviviente
+        Solicita que describa cómo diseñó sus procesos centrales: entrevistas, gestión de desempeño, integración de empleados, planeación estratégica
+   48 preguntas_excelencia_operacional             paso         4  PASO 11 del superviviente
+        Pide que explique cómo obtiene conocimiento sistemático de la organización, clientes y mercado
+   48 preguntas_excelencia_operacional             condicion    1  CONDICION 3 del superviviente
+        Cuando se necesita evaluar o auditar a cualquier ejecutivo senior de la organización
+   48 preguntas_excelencia_operacional             condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si la empresa está creciendo y requiere profesionalizar su liderazgo
+   49 storytelling_para_el_cambio                  paso         1  ya lo dice el PASO 2 del superviviente
+        Identificar un conjunto reducido de comportamientos concretos y accionables que generen impacto acumulado
+   49 storytelling_para_el_cambio                  paso         2  ya lo dice el PASO 5 del superviviente
+        Crear una narrativa o símbolo memorable (como un nombre de campaña) que encapsule el cambio deseado
+   49 storytelling_para_el_cambio                  paso         3  ya lo dice el PASO 3 del superviviente
+        Usar demostraciones tangibles y figuras de autoridad para modelar el nuevo comportamiento
+   49 storytelling_para_el_cambio                  paso         4  PASO 6 del superviviente
+        Medir el reconocimiento y adopción de la narrativa en la población objetivo
+   49 storytelling_para_el_cambio                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se necesita movilizar un cambio de comportamiento colectivo o social
+   49 storytelling_para_el_cambio                  condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si las campañas de comunicación tradicionales han fallado en generar adopción
+   50 tacticas_cierre_ventas                       paso         1  ya lo dice el PASO 1 del superviviente
+        Definir un timeline específico de entrega o pilot (ej. 'en 2 semanas')
+   50 tacticas_cierre_ventas                       paso         2  ya lo dice el PASO 3 del superviviente
+        Solicitar un compromiso explícito de sí o no al final del pilot o demo
+   50 tacticas_cierre_ventas                       paso         3  ya lo dice el PASO 5 del superviviente
+        Evitar dejar la decisión de compra abierta o ambigua
+   50 tacticas_cierre_ventas                       paso         4  PASO 7 del superviviente
+        Documentar el acuerdo de cierre por escrito con el cliente
+   50 tacticas_cierre_ventas                       condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando un prospecto calificado está en etapa final del embudo de ventas
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 16
+  nodos implicados    : 36
+  nodos que MUEREN    : 20
+  piezas repartidas   : 123 (39 viajan enteras, 84 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 5
+
+ESCRITO. ficheros tocados: 113
+censo DESPUES: 3853 ficheros, 3504 vivos, 349 deprecados
+censo ANTES  : 3853 ficheros, 3524 vivos, 329 deprecados
+delta deprecados: +20 (esperado +20): OK

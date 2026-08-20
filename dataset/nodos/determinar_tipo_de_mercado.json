@@ -11,38 +11,71 @@
     "Si el mercado es nuevo, evitar gastar rápido en marketing y enfocarte en validar si hay una base de clientes persuadible",
     "Si el mercado está dominado por incumbentes fuertes, evaluar re-segmentarlo por bajo costo o por nicho",
     "Evaluar si el modelo de negocio ya funciona en otro país y puede clonarse localmente",
-    "Documentar el tipo de mercado como hipótesis temprana, aunque sea una decisión de atado tardío"
+    "Documentar el tipo de mercado como hipótesis temprana, aunque sea una decisión de atado tardío",
+    "Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio o mercado inestable",
+    "Si se ataca mercado existente, calcular el costo de entrada (1.7x o 3x el presupuesto de marketing del líder)",
+    "Definir la base de competencia donde el producto puede ganar (features, servicio, precio, marca)",
+    "Si un competidor domina más del 74% del mercado, evita atacarlo de frente; si domina entre 26% y 74%, elige bien tus batallas",
+    "Escribe un breve documento respondiendo las preguntas clave según el tipo de mercado que elegiste",
+    "Actualiza tu mapa de modelo de negocio (Business Model Canvas) con esta hipótesis"
   ],
   "entregable_esperado": "Una hipótesis documentada y justificada sobre el tipo de mercado en el que compites (existente, nuevo, re-segmentado o clonado), con sus implicancias estratégicas.",
   "nodos_previos": [
     "diseno_experimentos_hipotesis",
-    "tipo_de_mercado_estrategia_competitiva",
     "lanzamiento_nuevos_productos_enfoque_problema",
     "board_management_buyin",
     "channels_hypothesis_physical",
     "channels_hypothesis_web_mobile",
-    "multi_sided_market_channel"
+    "multi_sided_market_channel",
+    "capturar_conocimiento_de_mercado",
+    "hipotesis_de_canales",
+    "lienzo_modelo_negocio",
+    "resegmentacion_mercado_nicho_bajo_costo",
+    "seleccion_canal_distribucion",
+    "seleccion_canal_fisico"
   ],
   "nodos_siguientes": [
     "metricas_de_startup",
     "estrategia_producto_global_glocal",
-    "market_type_revenue_growth"
+    "market_type_revenue_growth",
+    "analisis_costo_entrada_mercado",
+    "brief_competitivo",
+    "entrada_mercado_nuevo",
+    "estrategia_get_keep_grow",
+    "etapa_de_investigacion",
+    "hipotesis_relacion_clientes_web",
+    "resegmentacion_mercado_nicho_bajo_costo"
   ],
   "condiciones_activacion": [
     "Al iniciar el Customer Discovery",
     "Si la estrategia de marketing no está funcionando y sospechas un error de tipo de mercado",
     "Si aplicas la misma estrategia de marketing sin distinguir si el mercado es nuevo o existente",
-    "Si tienes confusión sobre quién es tu competidor real"
+    "Si tienes confusión sobre quién es tu competidor real",
+    "Cuando el equipo necesita decidir su estrategia de entrada al mercado antes de invertir en marketing y ventas",
+    "No sabes cómo posicionar tu producto frente a la competencia",
+    "Las personas que invierten en tu negocio esperan ingresos que no coinciden con el tipo de mercado real"
   ],
   "etiqueta_arbol": "Identifica tu Tipo de Mercado",
   "ids_alias": [
-    "market_type_definicion"
+    "market_type_definicion",
+    "hipotesis_tipo_mercado",
+    "tipo_de_mercado_estrategia_competitiva"
   ],
   "merged_originals": [
     {
       "node_id": "market_type_definicion",
       "titulo": "Definir el Tipo de Mercado (Market Type)",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "hipotesis_tipo_mercado",
+      "titulo": "Hipótesis de Tipo de Mercado y Competencia",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "tipo_de_mercado_estrategia_competitiva",
+      "titulo": "Decidir en qué tipo de mercado compites y tu estrategia para hacerlo",
+      "fuente": "The Startup Owner's Manual"
     }
   ]
 }

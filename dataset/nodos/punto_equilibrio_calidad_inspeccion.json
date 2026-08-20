@@ -11,7 +11,9 @@
     "Estima la fraccion defectuosa entrante p usando datos historicos del proceso o proveedor en estado de control estadistico",
     "Compara p contra el punto de equilibrio: si p es menor, elimina la inspeccion; si p es mayor, aplica inspeccion al 100%",
     "Evita planes de muestreo intermedios cuando p este consistentemente de un lado del punto de equilibrio",
-    "Si manejas varias piezas o proveedores, ordena los terminos ki menos K por pi de mayor a menor y aplica la regla a cada una"
+    "Si manejas varias piezas o proveedores, ordena los terminos ki menos K por pi de mayor a menor y aplica la regla a cada una",
+    "Seleccionar la estrategia de inspección (ninguna, muestreo, 100%) según el resultado",
+    "Anota tu decisión y sigue revisando con cartas de control para comprobar que la fracción de defectos se mantenga estable."
   ],
   "entregable_esperado": "Tabla de costos comparativos que documente, por cada componente o proveedor, la politica de inspeccion aplicada (cero o cien por ciento) con base en datos reales de costos y calidad entrante.",
   "nodos_previos": [
@@ -21,13 +23,24 @@
     "comparacion_metodos_inspeccion",
     "redundancia_en_diseno",
     "costo_de_calidad_6",
-    "costo_de_mala_calidad_copq"
+    "costo_de_mala_calidad_copq",
+    "clasificacion_seriedad_defectos",
+    "control_estadistico_de_procesos",
+    "errores_de_medicion",
+    "inspeccion_automatizada",
+    "relacion_largo_plazo_proveedor_unico"
   ],
   "nodos_siguientes": [
     "programa_cero_defectos",
     "equipo_conjunto_de_mejora_con_proveedores",
     "regla_todo_o_nada_inspeccion_2",
-    "cribado_prueba_barata"
+    "cribado_prueba_barata",
+    "economia_subensambles_inspeccion",
+    "eliminacion_planes_muestreo_estandar",
+    "muestreo_de_aceptacion",
+    "probabilidad_falla_ensamblaje_multiple",
+    "pruebas_destructivas",
+    "verificacion_paralela_trabajo_critico"
   ],
   "condiciones_activacion": [
     "Cuando recibes lotes de materiales o piezas y debes decidir el nivel de inspeccion de entrada",
@@ -37,12 +50,24 @@
   ],
   "etiqueta_arbol": "Decide Cuánto Inspeccionar",
   "ids_alias": [
-    "punto_equilibrio_calidad"
+    "punto_equilibrio_calidad",
+    "economia_de_la_inspeccion",
+    "regla_todo_o_nada_inspeccion"
   ],
   "merged_originals": [
     {
       "node_id": "punto_equilibrio_calidad",
       "titulo": "Punto de Equilibrio de Calidad y Regla Todo-o-Nada en Inspección",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "economia_de_la_inspeccion",
+      "titulo": "Economía de la Inspección (Regla de Deming kp)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "regla_todo_o_nada_inspeccion",
+      "titulo": "Decide si inspeccionar todo o nada (regla de costos k1/k2)",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
     }
   ]

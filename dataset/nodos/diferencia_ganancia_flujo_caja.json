@@ -10,20 +10,43 @@
     "Proyecta tu flujo de caja a 12 o 18 meses considerando cuánto esperas crecer en ventas",
     "Calcula cuánto efectivo gastas cada mes si tu negocio todavía no genera flujo de caja positivo",
     "Identifica el momento en que crecer en ventas podría dejarte sin liquidez",
-    "Consigue líneas de crédito o busca financiamiento antes de que la falta de efectivo se vuelva crítica"
+    "Consigue líneas de crédito o busca financiamiento antes de que la falta de efectivo se vuelva crítica",
+    "Revisa el saldo de tu cuenta y el flujo de caja cada semana, o cada día si estas en un momento critico",
+    "Aprende a leer el estado de flujo de efectivo, aunque al principio el lenguaje te parezca tecnico",
+    "Mira cuánto tardan tus clientes en pagarte y cuánto tardas tú en pagarle a tus proveedores."
   ],
   "entregable_esperado": "Una proyección de flujo de caja a 12 o 18 meses que te anticipe posibles momentos en los que te falte efectivo",
   "nodos_previos": [
-    "fundamentos_inteligencia_financiera"
+    "fundamentos_inteligencia_financiera",
+    "lectura_balance_general"
   ],
   "nodos_siguientes": [
     "flujo_de_caja_libre",
-    "cash_burn_calculation"
+    "cash_burn_calculation",
+    "estado_flujo_de_caja_tres_categorias",
+    "owner_earnings"
   ],
   "condiciones_activacion": [
     "Si tu negocio está creciendo rápido en ventas pero no has revisado tu flujo de caja",
     "Si tu negocio muestra ganancias en los reportes pero te cuesta pagar tus facturas",
-    "Antes de tomar decisiones de expansión basándote solo en el estado de resultados"
+    "Antes de tomar decisiones de expansión basándote solo en el estado de resultados",
+    "Si tu negocio es rentable en el papel pero no te alcanza para pagar sueldos."
   ],
-  "etiqueta_arbol": "Cuida tu Caja, no Solo Ganancia"
+  "etiqueta_arbol": "Cuida tu Caja, no Solo Ganancia",
+  "ids_alias": [
+    "cash_is_king",
+    "profit_vs_cash"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "cash_is_king",
+      "titulo": "El efectivo manda: la plata en el banco es la realidad",
+      "fuente": "Financial Intelligence for Entrepreneurs"
+    },
+    {
+      "node_id": "profit_vs_cash",
+      "titulo": "Ganar dinero en el papel no es lo mismo que tener el dinero en la mano (utilidad vs. efectivo)",
+      "fuente": "Financial Intelligence for Entrepreneurs"
+    }
+  ]
 }

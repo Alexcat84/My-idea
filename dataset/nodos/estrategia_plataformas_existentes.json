@@ -10,21 +10,35 @@
     "Analizar qué funcionalidad falta en esa plataforma que tus usuarios necesitan.",
     "Diseñar una feature o producto complementario que llene ese vacío y redirija tráfico hacia tu producto.",
     "Priorizar plataformas nuevas o en crecimiento (menos saturadas, mayor visibilidad) sobre las ya maduras.",
-    "Ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promoción inicial gratuita."
+    "Ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promoción inicial gratuita.",
+    "Lanzar la integración y medir el tráfico/referidos generados"
   ],
   "entregable_esperado": "Una feature o integración específica lanzada en una plataforma existente, con métricas de tráfico/usuarios adquiridos a través de ella.",
   "nodos_previos": [
     "analisis_de_cohortes",
-    "verificar_clientes_y_canales"
+    "verificar_clientes_y_canales",
+    "hipotesis_de_canales",
+    "programa_afiliados"
   ],
   "nodos_siguientes": [
     "programa_afiliados",
-    "canales_distribucion"
+    "canales_distribucion",
+    "bullseye_framework"
   ],
   "condiciones_activacion": [
     "Cuando el startup necesita acelerar la adquisición de usuarios sin gran presupuesto de marketing.",
     "Cuando existe una plataforma grande y en crecimiento donde se concentran los clientes objetivo.",
     "Cuando el producto puede integrarse o complementar una plataforma ya existente."
   ],
-  "etiqueta_arbol": "Aprovecha Plataformas ya Grandes"
+  "etiqueta_arbol": "Aprovecha Plataformas ya Grandes",
+  "ids_alias": [
+    "existing_platforms_leverage"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "existing_platforms_leverage",
+      "titulo": "Aprovechamiento de Plataformas Existentes (Piggybacking)",
+      "fuente": "Traction - Gabriel Weinberg"
+    }
+  ]
 }

@@ -11,18 +11,33 @@
     "Solicitar un compromiso de respuesta sí/no al finalizar el plazo",
     "Documentar y dar seguimiento a la fecha comprometida",
     "Descartar o re-clasificar a los prospectos que no confirman compromiso",
-    "Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto"
+    "Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto",
+    "Documentar el acuerdo de cierre por escrito con el cliente"
   ],
   "entregable_esperado": "Acuerdo o documento de compromiso con fecha y condiciones claras de decisión de compra por parte del prospecto",
   "nodos_previos": [
-    "diseno_embudo_ventas_cliente"
+    "diseno_embudo_ventas_cliente",
+    "cierre_segun_complejidad_venta",
+    "contract_close_out",
+    "framework_spin_selling"
   ],
   "nodos_siguientes": [
-    "framework_spin_selling"
+    "framework_spin_selling",
+    "rendicion_de_cuentas_del_equipo"
   ],
   "condiciones_activacion": [
     "Si hay prospectos indefinidos que consumen tiempo sin decisión clara",
     "Si se requiere acelerar el ciclo de ventas"
   ],
-  "etiqueta_arbol": "Pacta un Plazo de Decisión"
+  "etiqueta_arbol": "Pacta un Plazo de Decisión",
+  "ids_alias": [
+    "tacticas_cierre_ventas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "tacticas_cierre_ventas",
+      "titulo": "Tácticas de Cierre de Ventas",
+      "fuente": "Traction - Gabriel Weinberg"
+    }
+  ]
 }

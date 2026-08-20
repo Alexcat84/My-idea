@@ -9,20 +9,47 @@
     "Identificar las estrategias actuales de sostenibilidad de la organización (reducción, reciclaje, compensación)",
     "Evaluar si estas estrategias abordan la causa raíz o solo mitigan síntomas",
     "Cuestionar métricas como el PIB o el conteo de emisiones reducidas como indicadores de verdadero progreso",
-    "Plantear la pregunta: ¿qué pasaría si hiciéramos esto perfectamente eficiente? ¿seguiría siendo dañino?"
+    "Plantear la pregunta: ¿qué pasaría si hiciéramos esto perfectamente eficiente? ¿seguiría siendo dañino?",
+    "Identificar procesos industriales que aún generan toxinas aunque en menor cantidad",
+    "Identificar si alguna estrategia de 'reducción' solo posterga el problema (ej. incineración, downcycling)",
+    "Plantear la transición de una lógica de reducción a una lógica de rediseño regenerativo"
   ],
   "entregable_esperado": "Un documento de diagnóstico crítico que distinga las prácticas de 'menos malo' de las oportunidades reales de rediseño regenerativo.",
   "nodos_previos": [
-    "seleccion_productos_servicios_verdes"
+    "seleccion_productos_servicios_verdes",
+    "diagnostico_de_productos_crudos",
+    "estrategia_de_tragedia_vs_estrategia_de_cambio"
   ],
   "nodos_siguientes": [
     "eco_efectividad",
     "critica_al_pib_como_metrica",
-    "eco_efectividad_2"
+    "eco_efectividad_2",
+    "disruptores_endocrinos_y_salud_industrial",
+    "downcycling_problema",
+    "licencia_para_danar",
+    "ser_menos_malo_vs_ser_bueno"
   ],
   "condiciones_activacion": [
     "Cuando la organización cree que reciclar o reducir consumo es suficiente para ser sostenible",
-    "Al iniciar la fase de ideación de una estrategia ambiental corporativa"
+    "Al iniciar la fase de ideación de una estrategia ambiental corporativa",
+    "Si el usuario busca ir más allá de certificaciones básicas de reducción",
+    "Si se está evaluando si adoptar una certificación de eco-eficiencia es la meta final o solo un paso intermedio"
   ],
-  "etiqueta_arbol": "Ser Menos Malo No Basta"
+  "etiqueta_arbol": "Ser Menos Malo No Basta",
+  "ids_alias": [
+    "eco_eficiencia_critica",
+    "limites_de_la_eco_eficiencia"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "eco_eficiencia_critica",
+      "titulo": "Crítica a la Eco-eficiencia",
+      "fuente": "Cradle to Cradle - Michael Braungart"
+    },
+    {
+      "node_id": "limites_de_la_eco_eficiencia",
+      "titulo": "Los Límites de la Eco-Eficiencia ('Ser Menos Malo')",
+      "fuente": "Cradle to Cradle - Michael Braungart"
+    }
+  ]
 }

@@ -10,20 +10,34 @@
     "Contactar bloggers pequeños ofreciendo pago por publicidad o acceso anticipado al producto",
     "Trackear cada blog/anuncio para medir efectividad y perfil de audiencia",
     "Crear ofertas especiales o bundles diseñados específicamente para la audiencia de un blog influyente",
-    "Establecer partnerships de contenido con sitios más grandes una vez validado el canal"
+    "Establecer partnerships de contenido con sitios más grandes una vez validado el canal",
+    "Ofrece acceso VIP o beneficios exclusivos a quienes compartan tu producto en sus blogs"
   ],
   "entregable_esperado": "Lista de blogs objetivo priorizados, mensajes de contacto personalizados y métricas de conversión por canal de blog",
   "nodos_previos": [
     "customer_profile",
-    "value_proposition_startup"
+    "value_proposition_startup",
+    "middle_ring_testing",
+    "traction_channel_bias"
   ],
   "nodos_siguientes": [
     "publicidad_tradicional_pr",
-    "canales_link_sharing"
+    "canales_link_sharing",
+    "herramientas_de_activacion_web"
   ],
   "condiciones_activacion": [
     "Cuando el startup necesita early adopters y tiene bajo presupuesto de marketing",
     "Cuando el producto tiene un nicho de audiencia claramente identificable en blogs"
   ],
-  "etiqueta_arbol": "Patrocina Blogs para Crecer"
+  "etiqueta_arbol": "Patrocina Blogs para Crecer",
+  "ids_alias": [
+    "targeting_blogs_channel"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "targeting_blogs_channel",
+      "titulo": "Targeting Blogs como Canal de Tracción",
+      "fuente": "Traction - Gabriel Weinberg"
+    }
+  ]
 }

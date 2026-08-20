@@ -1,0 +1,545 @@
+{
+  "operacion": "OP-U-01",
+  "tramo": 1,
+  "fecha": "2026-08-19",
+  "vuelta": 48,
+  "estado": "SELLADO",
+  "nomina": "docs/loop/RECOMPUTO_V48_COMPONENTES.jsonl",
+  "dossier": "docs/loop/SALIDA_V48_DOSSIER_1_50.txt",
+  "vara": "03_FUSIONES.md, LAS DOS REGLAS DE EJECUCION: sobrevive por CONTENIDO; a contenido empatado, desempata el grafo (P.8). Mas P.5 (acto leido entero) y P.12 (el cierre transitivo convoca, la lectura decide).",
+  "nota_de_texto": "Ningun texto se teclea aqui. Los pasos y las condiciones se toman VERBATIM del fichero del nodo por su INDICE, que es lo que este plan nombra. Asi una errata de transcripcion es imposible.",
+  "actos": [
+    {
+      "orden": 9,
+      "miembros": [
+        "determinar_tipo_de_mercado",
+        "hipotesis_tipo_mercado",
+        "tipo_de_mercado_estrategia_competitiva"
+      ],
+      "superviviente": "determinar_tipo_de_mercado",
+      "motivo": "CONTENIDO. Seis pasos contra cinco y cinco, cuatro condiciones contra una y tres, y el resumen mas largo del acto (773 caracteres). Es el unico que recorre el arbol de decision entero incluyendo el mercado NUEVO (paso 3, no gastar rapido en marketing y validar si hay base persuadible) y el atado tardio del paso 6. El cableado converge y no hace falta que hable: 10 contra 7 y 7.",
+      "absorbidos": [
+        "hipotesis_tipo_mercado",
+        "tipo_de_mercado_estrategia_competitiva"
+      ],
+      "pasos": {
+        "hipotesis_tipo_mercado": {
+          "1": "CUBIERTO:1",
+          "2": "APPEND",
+          "3": "CUBIERTO:4",
+          "4": "APPEND",
+          "5": "APPEND"
+        },
+        "tipo_de_mercado_estrategia_competitiva": {
+          "1": "CUBIERTO:1",
+          "2": "APPEND",
+          "3": "CUBIERTO:4",
+          "4": "APPEND",
+          "5": "APPEND"
+        }
+      },
+      "condiciones": {
+        "hipotesis_tipo_mercado": {
+          "1": "APPEND"
+        },
+        "tipo_de_mercado_estrategia_competitiva": {
+          "1": "APPEND",
+          "2": "CUBIERTO:2",
+          "3": "APPEND"
+        }
+      }
+    },
+    {
+      "orden": 15,
+      "miembros": [
+        "cash_is_king",
+        "diferencia_ganancia_flujo_caja",
+        "profit_vs_cash"
+      ],
+      "superviviente": "diferencia_ganancia_flujo_caja",
+      "motivo": "CONTENIDO. Cinco pasos contra cuatro y cuatro, tres condiciones contra dos y dos, y lleva las dos piezas que el racimo censado El efectivo contra la ganancia no tiene en ningun otro miembro: la proyeccion a 12 o 18 meses (el horizonte mas largo del acto) y conseguir credito ANTES de que la falta sea critica. El cableado empata a 3 con cash_is_king, asi que por P.8 no decide: decide el contenido.",
+      "absorbidos": [
+        "cash_is_king",
+        "profit_vs_cash"
+      ],
+      "pasos": {
+        "cash_is_king": {
+          "1": "APPEND",
+          "2": "CUBIERTO:3",
+          "3": "CUBIERTO:1",
+          "4": "APPEND"
+        },
+        "profit_vs_cash": {
+          "1": "APPEND",
+          "2": "CUBIERTO:2",
+          "3": "CUBIERTO:4",
+          "4": "CUBIERTO:5"
+        }
+      },
+      "condiciones": {
+        "cash_is_king": {
+          "1": "CUBIERTO:3",
+          "2": "CUBIERTO:1"
+        },
+        "profit_vs_cash": {
+          "1": "CUBIERTO:1",
+          "2": "APPEND"
+        }
+      }
+    },
+    {
+      "orden": 23,
+      "miembros": [
+        "critica_eco_eficiencia",
+        "eco_eficiencia_critica",
+        "limites_de_la_eco_eficiencia"
+      ],
+      "superviviente": "critica_eco_eficiencia",
+      "motivo": "CONTENIDO. El veredicto 1783 declara que eco_eficiencia_critica es SUBCONJUNTO ESTRICTO suyo, y contra limites_de_la_eco_eficiencia lleva la pieza que el propio veredicto 1832 llama el argumento entero del libro en una pregunta: que pasaria si hicieramos esto perfectamente eficiente, seguiria siendo daniño. Cuatro pasos contra tres y cuatro. El cableado dice 5 para el subconjunto estricto, y por P.8 el cableado NO vence al contenido.",
+      "absorbidos": [
+        "eco_eficiencia_critica",
+        "limites_de_la_eco_eficiencia"
+      ],
+      "pasos": {
+        "eco_eficiencia_critica": {
+          "1": "CUBIERTO:2",
+          "2": "APPEND",
+          "3": "CUBIERTO:3"
+        },
+        "limites_de_la_eco_eficiencia": {
+          "1": "CUBIERTO:1",
+          "2": "APPEND",
+          "3": "CUBIERTO:3",
+          "4": "APPEND"
+        }
+      },
+      "condiciones": {
+        "eco_eficiencia_critica": {
+          "1": "CUBIERTO:1",
+          "2": "APPEND"
+        },
+        "limites_de_la_eco_eficiencia": {
+          "1": "CUBIERTO:1",
+          "2": "APPEND"
+        }
+      }
+    },
+    {
+      "orden": 30,
+      "miembros": [
+        "economia_de_la_inspeccion",
+        "punto_equilibrio_calidad_inspeccion",
+        "regla_todo_o_nada_inspeccion"
+      ],
+      "superviviente": "punto_equilibrio_calidad_inspeccion",
+      "motivo": "CONTENIDO, y lo escribe el archivo: los veredictos 2473 y 2467 dicen los dos, con esas palabras, Sobrevive punto_equilibrio_calidad_inspeccion, y el 2480 lo llama GANADOR LIMPIO porque se llevo los dos pares directos. Seis pasos contra cinco y cinco, y las tres piezas propias que nombra el 2467: estimar p con el proceso en control estadistico, evitar los planes de muestreo intermedios, y la extension a varias piezas o proveedores.",
+      "absorbidos": [
+        "economia_de_la_inspeccion",
+        "regla_todo_o_nada_inspeccion"
+      ],
+      "pasos": {
+        "economia_de_la_inspeccion": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:1",
+          "3": "CUBIERTO:2",
+          "4": "CUBIERTO:4",
+          "5": "APPEND"
+        },
+        "regla_todo_o_nada_inspeccion": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:1",
+          "3": "CUBIERTO:3",
+          "4": "CUBIERTO:4",
+          "5": "APPEND"
+        }
+      },
+      "condiciones": {
+        "economia_de_la_inspeccion": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2"
+        },
+        "regla_todo_o_nada_inspeccion": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2"
+        }
+      }
+    },
+    {
+      "orden": 37,
+      "miembros": [
+        "gestion_sindicato_inversores",
+        "manejo_syndicate_inversion"
+      ],
+      "superviviente": "gestion_sindicato_inversores",
+      "motivo": "CONTENIDO. Dos piezas propias contra una: evitar la party round de muchos inversores pequenos, y llevar los desacuerdos entre inversores directamente a quien lidera. Dos condiciones contra una. El cableado converge, 3 contra 2.",
+      "absorbidos": [
+        "manejo_syndicate_inversion"
+      ],
+      "pasos": {
+        "manejo_syndicate_inversion": {
+          "1": "APPEND",
+          "2": "CUBIERTO:3",
+          "3": "CUBIERTO:1",
+          "4": "CUBIERTO_COND:2"
+        }
+      },
+      "condiciones": {
+        "manejo_syndicate_inversion": {
+          "1": "CUBIERTO:1"
+        }
+      }
+    },
+    {
+      "orden": 38,
+      "miembros": [
+        "asignacion_agil_de_recursos",
+        "presupuesto_agil_innovacion"
+      ],
+      "superviviente": "asignacion_agil_de_recursos",
+      "motivo": "CONTENIDO, y por margen corto que se declara: mismo numero de pasos (cuatro y cuatro) y el cableado empatado a 3, asi que por P.8 el cableado NO desempata. Lo que decide es que asignacion_agil_de_recursos trae dos condiciones contra una y su entregable nombra el instrumento entero (modelo de financiamiento por hitos con criterios de revision que tu mismo defines y usas), mientras el otro nombra solo el esquema. VA MARCADO COMO DISCUTIBLE.",
+      "absorbidos": [
+        "presupuesto_agil_innovacion"
+      ],
+      "pasos": {
+        "presupuesto_agil_innovacion": {
+          "1": "CUBIERTO:2",
+          "2": "CUBIERTO:1",
+          "3": "APPEND",
+          "4": "APPEND"
+        }
+      },
+      "condiciones": {
+        "presupuesto_agil_innovacion": {
+          "1": "CUBIERTO:1"
+        }
+      }
+    },
+    {
+      "orden": 39,
+      "miembros": [
+        "estrategia_plataformas_existentes",
+        "existing_platforms_leverage"
+      ],
+      "superviviente": "estrategia_plataformas_existentes",
+      "motivo": "CONTENIDO. Mismos cinco pasos reordenados, pero lleva la pieza de tiempo que el otro no tiene: ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promocion inicial gratuita. Y tres condiciones contra dos. El cableado converge, 4 contra 3.",
+      "absorbidos": [
+        "existing_platforms_leverage"
+      ],
+      "pasos": {
+        "existing_platforms_leverage": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2",
+          "3": "CUBIERTO:3",
+          "4": "APPEND",
+          "5": "CUBIERTO:4"
+        }
+      },
+      "condiciones": {
+        "existing_platforms_leverage": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2"
+        }
+      }
+    },
+    {
+      "orden": 41,
+      "miembros": [
+        "targeting_blogs_channel",
+        "targeting_blogs_traccion"
+      ],
+      "superviviente": "targeting_blogs_traccion",
+      "motivo": "CONTENIDO EMPATADO Y EL VEREDICTO LO DICE: el puesto 176 escribe que los cinco pasos son los mismos reordenados. Cinco pasos y dos condiciones cada uno. Por P.8, fila tres de su tabla, ahi decide el cableado: 4 contra 3 para targeting_blogs_traccion. Y converge con lo unico propio que le queda a cada uno: el superviviente cierra el canal (partnerships con sitios mayores una vez validado) y el otro solo lo abre.",
+      "absorbidos": [
+        "targeting_blogs_channel"
+      ],
+      "pasos": {
+        "targeting_blogs_channel": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:4",
+          "3": "CUBIERTO:2",
+          "4": "APPEND",
+          "5": "CUBIERTO:3"
+        }
+      },
+      "condiciones": {
+        "targeting_blogs_channel": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2"
+        }
+      }
+    },
+    {
+      "orden": 43,
+      "miembros": [
+        "comunicacion_transparente_en_crisis",
+        "liderazgo_frente_crisis_competitiva"
+      ],
+      "superviviente": "comunicacion_transparente_en_crisis",
+      "motivo": "CONTENIDO EMPATADO Y EL VEREDICTO LO DICE: el puesto 182 escribe que los cuatro pasos coinciden. Por P.8, fila tres, decide el cableado: 7 contra 3. Es el ejemplar mas limpio del tramo porque el acto no pierde NADA: cero pasos y cero condiciones que anadir.",
+      "absorbidos": [
+        "liderazgo_frente_crisis_competitiva"
+      ],
+      "pasos": {
+        "liderazgo_frente_crisis_competitiva": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2",
+          "3": "CUBIERTO:3",
+          "4": "CUBIERTO:4"
+        }
+      },
+      "condiciones": {
+        "liderazgo_frente_crisis_competitiva": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2"
+        }
+      }
+    },
+    {
+      "orden": 44,
+      "miembros": [
+        "fase_activate",
+        "fase_activate_primera_impresion"
+      ],
+      "superviviente": "fase_activate_primera_impresion",
+      "motivo": "CONTENIDO. Tres piezas propias contra dos, y las tres bajan del principio a la operacion: identificar el momento exacto del primer contacto real, eliminar la barrera tecnica o logistica que retrasa la gratificacion inmediata, y evaluar la reaccion emocional del cliente en ese momento. Dos condiciones contra una. El cableado converge, 4 contra 3.",
+      "absorbidos": [
+        "fase_activate"
+      ],
+      "pasos": {
+        "fase_activate": {
+          "1": "CUBIERTO:3",
+          "2": "APPEND",
+          "3": "APPEND",
+          "4": "APPEND"
+        }
+      },
+      "condiciones": {
+        "fase_activate": {
+          "1": "CUBIERTO:1"
+        }
+      }
+    },
+    {
+      "orden": 45,
+      "miembros": [
+        "proceso_decision_vc",
+        "proceso_diligencia_vc"
+      ],
+      "superviviente": "proceso_decision_vc",
+      "motivo": "CONTENIDO, y contra el cableado, que es exactamente lo que P.8 autoriza (su segunda aplicacion: diez contra cinco y pierde). Cinco pasos contra cuatro y dos condiciones contra una, y lleva la unica alarma del par: detectar senales de alerta si el VC pide informacion desproporcionada para la etapa de la empresa. El cableado dice 6 contra 2 para el otro y NO decide, porque el contenido dice algo. VA MARCADO COMO DISCUTIBLE.",
+      "absorbidos": [
+        "proceso_diligencia_vc"
+      ],
+      "pasos": {
+        "proceso_diligencia_vc": {
+          "1": "CUBIERTO:3",
+          "2": "CUBIERTO:1",
+          "3": "CUBIERTO:2",
+          "4": "APPEND"
+        }
+      },
+      "condiciones": {
+        "proceso_diligencia_vc": {
+          "1": "APPEND"
+        }
+      }
+    },
+    {
+      "orden": 46,
+      "miembros": [
+        "analisis_entorno_modelo_negocio",
+        "business_model_environment_mapping"
+      ],
+      "superviviente": "business_model_environment_mapping",
+      "motivo": "CONTENIDO CASI EMPATADO Y EL CABLEADO DESEMPATA (P.8). El veredicto 194 dice que los dos recorren las mismas cuatro fuerzas del entorno del Canvas; a cada uno le queda UNA pieza propia (al otro los stakeholders y su influencia, a este formular las preguntas estrategicas por cada bloque del Canvas, que es el paso que convierte el mapa en decision). Empatados en condiciones, dos y dos. El cableado no empata ni por poco: 13 contra 6.",
+      "absorbidos": [
+        "analisis_entorno_modelo_negocio"
+      ],
+      "pasos": {
+        "analisis_entorno_modelo_negocio": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2",
+          "3": "CUBIERTO:2",
+          "4": "APPEND",
+          "5": "CUBIERTO:3",
+          "6": "CUBIERTO:4"
+        }
+      },
+      "condiciones": {
+        "analisis_entorno_modelo_negocio": {
+          "1": "APPEND",
+          "2": "CUBIERTO:2"
+        }
+      }
+    },
+    {
+      "orden": 47,
+      "miembros": [
+        "sistema_tres_rs_alineacion",
+        "three_rs_equilibrium"
+      ],
+      "superviviente": "three_rs_equilibrium",
+      "motivo": "CONTENIDO. Cinco pasos contra cuatro y cuatro condiciones contra tres, y lleva las dos piezas que convierten el diagnostico en acuerdo: documentar por escrito y no solo de palabra, e identificar y discutir abiertamente las tensiones no habladas. El cableado empata a 4 y por P.8 no habla. VA MARCADO COMO DISCUTIBLE: lo que el absorbido trae (la logica social contra la de negocio del split) es doctrina de mas peso que dos pasos de proceso, y quien lo pese asi leera al reves.",
+      "absorbidos": [
+        "sistema_tres_rs_alineacion"
+      ],
+      "pasos": {
+        "sistema_tres_rs_alineacion": {
+          "1": "APPEND",
+          "2": "APPEND",
+          "3": "APPEND",
+          "4": "CUBIERTO:3"
+        }
+      },
+      "condiciones": {
+        "sistema_tres_rs_alineacion": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2",
+          "3": "CUBIERTO:3"
+        }
+      }
+    },
+    {
+      "orden": 48,
+      "miembros": [
+        "framework_excelencia_operacional",
+        "preguntas_excelencia_operacional"
+      ],
+      "superviviente": "framework_excelencia_operacional",
+      "motivo": "CONTENIDO, y por el margen mas ancho del tramo: diez pasos contra cuatro. El veredicto 211 dice que los cuatro items del absorbido son los mismos y que la unica diferencia es QUIEN pregunta. El cableado dice 5 contra 2 al reves y por P.8 no decide.",
+      "absorbidos": [
+        "preguntas_excelencia_operacional"
+      ],
+      "pasos": {
+        "preguntas_excelencia_operacional": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2",
+          "3": "CUBIERTO:4",
+          "4": "APPEND"
+        }
+      },
+      "condiciones": {
+        "preguntas_excelencia_operacional": {
+          "1": "APPEND",
+          "2": "CUBIERTO:1"
+        }
+      }
+    },
+    {
+      "orden": 49,
+      "miembros": [
+        "storytelling_como_herramienta_de_diseno",
+        "storytelling_para_el_cambio"
+      ],
+      "superviviente": "storytelling_como_herramienta_de_diseno",
+      "motivo": "CONTENIDO. Cinco pasos contra cuatro, tres condiciones contra dos, y lleva las dos piezas del contagio: facilitar que la audiencia se apropie y difunda la historia por si misma, y reforzarla con simbolos tangibles. El cableado converge, 6 contra 5.",
+      "absorbidos": [
+        "storytelling_para_el_cambio"
+      ],
+      "pasos": {
+        "storytelling_para_el_cambio": {
+          "1": "CUBIERTO:2",
+          "2": "CUBIERTO:5",
+          "3": "CUBIERTO:3",
+          "4": "APPEND"
+        }
+      },
+      "condiciones": {
+        "storytelling_para_el_cambio": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2"
+        }
+      },
+      "perdidas_declaradas": [
+        {
+          "pieza": "las figuras de autoridad que modelan el nuevo comportamiento (paso 3 de storytelling_para_el_cambio)",
+          "donde_queda": "NO se anade como paso propio: el veredicto 212 agrupa ese paso con las demostraciones tangibles, que sobreviven enteras en el paso 3 del superviviente. Lo que NO sobrevive es el matiz de QUIEN demuestra.",
+          "motivo": "declarada en vez de escondida: anadirla entera duplicaria las demostraciones tangibles que el superviviente ya manda"
+        }
+      ]
+    },
+    {
+      "orden": 50,
+      "miembros": [
+        "compromiso_linea_tiempo_cliente",
+        "tacticas_cierre_ventas"
+      ],
+      "superviviente": "compromiso_linea_tiempo_cliente",
+      "motivo": "CONTENIDO. Seis pasos contra cuatro y dos condiciones contra una, y lleva la unica pieza de higiene del embudo del par: descartar o re-clasificar a los prospectos que no confirman compromiso. El cableado dice 4 contra 2 al reves y por P.8 no decide.",
+      "absorbidos": [
+        "tacticas_cierre_ventas"
+      ],
+      "pasos": {
+        "tacticas_cierre_ventas": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:3",
+          "3": "CUBIERTO:5",
+          "4": "APPEND"
+        }
+      },
+      "condiciones": {
+        "tacticas_cierre_ventas": {
+          "1": "CUBIERTO:2"
+        }
+      },
+      "aviso": "El superviviente trae una REPETICION INTERNA medida y no tocada aqui: su paso 6 repite lo que ya mandan sus pasos 1 y 3. P.19 dice que la repeticion interna SE FUNDE, no se desteje, pero eso es otra operacion y esta no lo tiene encargado. Queda declarado."
+    }
+  ],
+  "declarados_y_no_fundidos": [
+    {
+      "orden": 36,
+      "miembros": [
+        "domina_lo_que_compras",
+        "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor"
+      ],
+      "motivo": "LA PUERTA DE UN MUNDO NO SE ABSORBE. El absorbido que este plan traia, investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor, es SEMILLA DE ENTRADA del mundo compras y ademas DESTINO DE UN PUENTE APROBADO. La primera corrida --ejecutar de esta vuelta lo depreco y GATE 0 SALIO EN ROJO por dos chequeos a la vez (Ninguna semilla de entrada esta deprecada, y Ningun puente aprobado apunta a un nodo deprecado). El dataset se restauro con git checkout, el acto sale del lote, y la guarda que faltaba (1B) queda escrita en el instrumento para que ningun tramo futuro pueda deprecar una puerta en silencio. La lectura y el superviviente del acto siguen siendo validos y quedan escritos aqui para cuando alguien decida que hacer con la semilla: sobrevive domina_lo_que_compras.",
+      "superviviente_leido": "domina_lo_que_compras",
+      "guarda_que_lo_para": "1B, semilla de entrada y extremo de puente aprobado"
+    },
+    {
+      "orden": 22,
+      "miembros": [
+        "diversidad_como_fortaleza_ecosistemica",
+        "respetar_la_diversidad",
+        "respeto_a_la_diversidad"
+      ],
+      "motivo": "CONTENIDO EMPATADO Y EL CABLEADO TAMBIEN. Los tres veredictos (1857, 1792, 1779) dicen lo mismo de los tres pares: TRES de los cuatro pasos se corresponden y a cada nodo le queda EXACTAMENTE UNA linea propia. Cuatro pasos y dos condiciones cada uno. El cableado empata a 3 entre diversidad_como_fortaleza_ecosistemica y respeto_a_la_diversidad. P.8, fila tres de su tabla: empatado el contenido y empatado el cableado, SE TRAE AL AUDITOR. No se fuerza."
+    },
+    {
+      "orden": 29,
+      "miembros": [
+        "mejora_del_sistema_responsabilidad_gerencial",
+        "sistema_estable_causas_comunes",
+        "sistema_estable_responsabilidad_gerencial"
+      ],
+      "motivo": "EL PROPIO VEREDICTO MARCA AL GANADOR COMO PROVISIONAL. El puesto 2572 escribe una NOTA GRAVE DE FAMILIA: mejora_del_sistema queda arriba y sin perder, ganador PROVISIONAL, pero el cumulo pasa de diez nodos por raiz y no esta leido entero, y sistema_estable_causas_comunes gano el 2453 y perdio el 2537, que es la firma de POR ELEGIR. Fundir sobre un ganador que el archivo llama provisional es decidir lo que el archivo dejo sin decidir. Se declara."
+    },
+    {
+      "orden": 32,
+      "miembros": [
+        "dia_cero_defectos",
+        "dia_cero_defectos_2",
+        "dia_cero_defectos_3"
+      ],
+      "motivo": "EL VEREDICTO 2525 DEJA UN AVISO EXPRESO PARA ESTA OPERACION: los dos dan CADENAS DE FIRMA DISTINTAS, firmar contigo uno a uno contra firmar con su supervisor, y dice con esas palabras que la fusion TIENE QUE DECIDIRLO, NO APILARLO. Decidirlo es quedarse con una y borrar la otra, y borrar contenido que ninguna regla ordena esta reservado al fundador (AUDITOR.md seccion 4). Apilarlas dejaria el nodo mandando dos cosas incompatibles. Se declara y no se funde."
+    },
+    {
+      "orden": 42,
+      "miembros": [
+        "storyboard",
+        "storyboard_prototipado"
+      ],
+      "motivo": "CONTENIDO EMPATADO Y EL CABLEADO TAMBIEN. El veredicto 179 lee los dos como la misma cosa en tres gestos. Cuatro pasos cada uno, y el cableado empata a 4. P.8, fila tres: SE TRAE AL AUDITOR."
+    }
+  ],
+  "fuera_del_tramo_por_colision": [
+    {
+      "orden": 8,
+      "motivo": "fabrica 1 colision de clase medida (SALIDA_V48_COLISION_1_50.txt), pese a ser TODO-A"
+    },
+    {
+      "orden": 40,
+      "motivo": "fabrica 1 colision de clase medida, pese a ser TODO-A"
+    }
+  ]
+}

@@ -3289,7 +3289,7 @@
         "voice_of_customer_estrategico",
         "ceo_de_guerra_vs_paz",
         "lead_bullets_no_silver_bullets",
-        "liderazgo_frente_crisis_competitiva"
+        "comunicacion_transparente_en_crisis"
       ],
       "condiciones_activacion": [
         "Cuando un competidor ha lanzado un producto innovador y la empresa debe decidir si responde",
@@ -3396,7 +3396,7 @@
       ],
       "entregable_esperado": "Reporte de viabilidad de entrada a mercado con cálculo de presupuesto competitivo necesario",
       "nodos_previos": [
-        "hipotesis_tipo_mercado",
+        "determinar_tipo_de_mercado",
         "analisis_de_sensibilidad_riesgo"
       ],
       "nodos_siguientes": [
@@ -3861,7 +3861,8 @@
         "Si el usuario ya tiene un modelo de negocio definido y necesita validar su vigencia frente a cambios externos",
         "Si se requiere anticipar disrupciones en la industria"
       ],
-      "etiqueta_arbol": "Mapea tu Entorno de Negocio"
+      "etiqueta_arbol": "Mapea tu Entorno de Negocio",
+      "deprecado": true
     },
     "analisis_estrategia_crecimiento_franquicia_vs_corporativo": {
       "node_id": "analisis_estrategia_crecimiento_franquicia_vs_corporativo",
@@ -5618,21 +5619,36 @@
         "Crea un fondo interno para financiar tus proyectos más prometedores, como si fueras un inversor de capital de riesgo.",
         "Define hitos flexibles en lugar de un presupuesto fijo para todo el año.",
         "Decide cuándo liberar más dinero según el progreso real que ves, no según el calendario fiscal.",
-        "Acepta y avisa que las reglas del presupuesto van a cambiar varias veces mientras dure el proyecto."
+        "Acepta y avisa que las reglas del presupuesto van a cambiar varias veces mientras dure el proyecto.",
+        "Libera los fondos poco a poco, según vayas cumpliendo hitos de aprendizaje, no solo metas financieras.",
+        "Confía en tu criterio, o en el de la persona que te acompaña, para decidir la financiación, en vez de seguir una fórmula rígida."
       ],
       "entregable_esperado": "Un modelo de financiamiento por hitos, con criterios de revisión flexibles que tú mismo defines y usas.",
       "nodos_previos": [
         "design_thinking_proceso",
-        "analisis_de_capacidad_de_recursos"
+        "analisis_de_capacidad_de_recursos",
+        "cronograma_proyecto",
+        "portafolio_innovacion_diversificado"
       ],
       "nodos_siguientes": [
-        "ways_to_grow_matrix"
+        "ways_to_grow_matrix",
+        "cultura_de_innovacion"
       ],
       "condiciones_activacion": [
         "Si usas un presupuesto anual fijo que frena tu innovación",
         "Si tus proyectos de diseño no encajan en los ciclos financieros de siempre"
       ],
-      "etiqueta_arbol": "Asigna Recursos con Flexibilidad"
+      "etiqueta_arbol": "Asigna Recursos con Flexibilidad",
+      "ids_alias": [
+        "presupuesto_agil_innovacion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "presupuesto_agil_innovacion",
+          "titulo": "Presupuesto Ágil para la Innovación",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "asignacion_de_titulos_ejecutivos": {
       "node_id": "asignacion_de_titulos_ejecutivos",
@@ -8701,7 +8717,7 @@
       ],
       "entregable_esperado": "Tu análisis de la competencia, enfocado en la razón de compra del cliente",
       "nodos_previos": [
-        "tipo_de_mercado_estrategia_competitiva",
+        "determinar_tipo_de_mercado",
         "resegmentacion_mercado_nicho_bajo_costo",
         "entrada_mercado_nuevo",
         "analisis_costo_entrada_mercado"
@@ -9032,7 +9048,7 @@
         "regla_50_por_ciento",
         "definir_meta_de_traccion",
         "fases_traccion_producto",
-        "existing_platforms_leverage",
+        "estrategia_plataformas_existentes",
         "programa_afiliados"
       ],
       "nodos_siguientes": [
@@ -9475,17 +9491,19 @@
         "Analizar fuerzas de la industria: competidores incumbentes, nuevos entrantes, proveedores, productos sustitutos",
         "Identificar tendencias clave (regulatorias, tecnológicas, sociales, culturales)",
         "Evaluar fuerzas macroeconómicas (mercados de capital, condiciones económicas, infraestructura)",
-        "Formular preguntas estratégicas por cada bloque del Canvas en base a los hallazgos"
+        "Formular preguntas estratégicas por cada bloque del Canvas en base a los hallazgos",
+        "Listar stakeholders clave y su nivel de influencia sobre el modelo"
       ],
       "entregable_esperado": "Mapa visual del entorno de negocio con las cuatro áreas documentadas y su impacto en el Business Model Canvas",
       "nodos_previos": [
         "lienzo_modelo_negocio",
-        "future_scenarios_planning"
+        "future_scenarios_planning",
+        "business_plan_cinco_secciones",
+        "value_proposition_startup"
       ],
       "nodos_siguientes": [
         "caso_taobao_evolucion_modelo",
         "future_scenarios_planning",
-        "analisis_entorno_modelo_negocio",
         "business_model_canvas_vs_plan",
         "determinacion_tamano_cubetas",
         "economia_circular_como_modelo_de_negocio",
@@ -9496,13 +9514,26 @@
         "vertical_vs_virtual_integracion",
         "reconstruir_equipo_ejecutivo_para_nueva_etapa",
         "seleccion_estrategia_pricing",
-        "reconstruccion_de_equipo_ejecutivo"
+        "reconstruccion_de_equipo_ejecutivo",
+        "prototipado_modelos_negocio",
+        "swot_business_model_canvas"
       ],
       "condiciones_activacion": [
         "Si el equipo necesita entender el contexto competitivo y macro antes de rediseñar su modelo",
-        "Si la organización enfrenta cambios acelerados en su sector"
+        "Si la organización enfrenta cambios acelerados en su sector",
+        "Si el usuario ya tiene un modelo de negocio definido y necesita validar su vigencia frente a cambios externos"
       ],
-      "etiqueta_arbol": "Analiza las Fuerzas de tu Entorno"
+      "etiqueta_arbol": "Analiza las Fuerzas de tu Entorno",
+      "ids_alias": [
+        "analisis_entorno_modelo_negocio"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "analisis_entorno_modelo_negocio",
+          "titulo": "Análisis del Entorno del Modelo de Negocio",
+          "fuente": "Business Model Generation (Osterwalder)"
+        }
+      ]
     },
     "business_plan_cinco_secciones": {
       "node_id": "business_plan_cinco_secciones",
@@ -9527,7 +9558,7 @@
       ],
       "nodos_siguientes": [
         "plan_de_implementacion_de_venta",
-        "analisis_entorno_modelo_negocio",
+        "business_model_environment_mapping",
         "balance_estructura_libertad_aprendizaje",
         "benchmark_inversion_rd_industria",
         "business_model_canvas_vs_plan_negocio",
@@ -11226,7 +11257,7 @@
       "nodos_siguientes": [
         "actualizar_modelo_de_negocio_pivot_o_proceed",
         "market_type_revenue_growth",
-        "tipo_de_mercado_estrategia_competitiva"
+        "determinar_tipo_de_mercado"
       ],
       "condiciones_activacion": [
         "Cuando se necesita posicionar el producto frente a competidores antes de lanzar una MVP",
@@ -11502,7 +11533,7 @@
         "estilos_de_negociacion"
       ],
       "nodos_siguientes": [
-        "proceso_diligencia_vc",
+        "proceso_decision_vc",
         "confidencialidad_nda_adquisicion",
         "no_shop_extension_negotiation"
       ],
@@ -11649,7 +11680,8 @@
         "Si estas mirando solo la ganancia en papel y descuidando el efectivo real",
         "Si tus ventas estan creciendo pero te estas quedando sin liquidez"
       ],
-      "etiqueta_arbol": "El Efectivo Manda Siempre"
+      "etiqueta_arbol": "El Efectivo Manda Siempre",
+      "deprecado": true
     },
     "caso_definicion_arruga": {
       "node_id": "caso_definicion_arruga",
@@ -13818,7 +13850,7 @@
         "preguntas_need_payoff"
       ],
       "nodos_siguientes": [
-        "tacticas_cierre_ventas",
+        "compromiso_linea_tiempo_cliente",
         "fase_affirm_reducir_remordimiento",
         "kit_shock_and_awe_bienvenida",
         "fase_affirm_buyers_remorse",
@@ -14661,7 +14693,7 @@
       ],
       "nodos_siguientes": [
         "inspeccion_automatizada",
-        "economia_de_la_inspeccion"
+        "punto_equilibrio_calidad_inspeccion"
       ],
       "condiciones_activacion": [
         "Cuando tienes alto volumen de inspección sin prioridades claras",
@@ -16655,20 +16687,35 @@
         "Solicitar un compromiso de respuesta sí/no al finalizar el plazo",
         "Documentar y dar seguimiento a la fecha comprometida",
         "Descartar o re-clasificar a los prospectos que no confirman compromiso",
-        "Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto"
+        "Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto",
+        "Documentar el acuerdo de cierre por escrito con el cliente"
       ],
       "entregable_esperado": "Acuerdo o documento de compromiso con fecha y condiciones claras de decisión de compra por parte del prospecto",
       "nodos_previos": [
-        "diseno_embudo_ventas_cliente"
+        "diseno_embudo_ventas_cliente",
+        "cierre_segun_complejidad_venta",
+        "contract_close_out",
+        "framework_spin_selling"
       ],
       "nodos_siguientes": [
-        "framework_spin_selling"
+        "framework_spin_selling",
+        "rendicion_de_cuentas_del_equipo"
       ],
       "condiciones_activacion": [
         "Si hay prospectos indefinidos que consumen tiempo sin decisión clara",
         "Si se requiere acelerar el ciclo de ventas"
       ],
-      "etiqueta_arbol": "Pacta un Plazo de Decisión"
+      "etiqueta_arbol": "Pacta un Plazo de Decisión",
+      "ids_alias": [
+        "tacticas_cierre_ventas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "tacticas_cierre_ventas",
+          "titulo": "Tácticas de Cierre de Ventas",
+          "fuente": "Traction - Gabriel Weinberg"
+        }
+      ]
     },
     "compromiso_organismico_en_la_accion": {
       "node_id": "compromiso_organismico_en_la_accion",
@@ -17143,17 +17190,30 @@
         "ceo_de_guerra_vs_paz",
         "gestion_de_problemas_sin_receta",
         "negociacion_con_plazos_artificiales",
-        "reset_total_de_expectativas"
+        "reset_total_de_expectativas",
+        "analisis_competitivo",
+        "desarrollo_posicionamiento_producto"
       ],
       "nodos_siguientes": [
         "publicidad_tradicional_pr",
-        "reconstruccion_de_equipo_ejecutivo"
+        "reconstruccion_de_equipo_ejecutivo",
+        "pivote_estrategico"
       ],
       "condiciones_activacion": [
         "Cuando un competidor lanza un ataque directo (precio, producto gratuito, etc.) que amenaza el modelo de negocio",
         "Cuando la prensa o el mercado empiezan a cuestionar la viabilidad de la empresa"
       ],
-      "etiqueta_arbol": "Da la Cara en la Crisis"
+      "etiqueta_arbol": "Da la Cara en la Crisis",
+      "ids_alias": [
+        "liderazgo_frente_crisis_competitiva"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "liderazgo_frente_crisis_competitiva",
+          "titulo": "Liderazgo Visible Durante Ataques Competitivos",
+          "fuente": "The Hard Thing About Hard Things"
+        }
+      ]
     },
     "comunicar_politicas_organizacionales": {
       "node_id": "comunicar_politicas_organizacionales",
@@ -20164,7 +20224,7 @@
         "project_close_out",
         "lessons_learned",
         "contractor_status_report",
-        "tacticas_cierre_ventas"
+        "compromiso_linea_tiempo_cliente"
       ],
       "condiciones_activacion": [
         "Cuando un contrato con un proveedor ha finalizado o se está terminando"
@@ -20894,7 +20954,7 @@
         "graficos_control_defectos_raros",
         "mejora_continua_del_proceso",
         "pruebas_destructivas",
-        "regla_todo_o_nada_inspeccion"
+        "punto_equilibrio_calidad_inspeccion"
       ],
       "condiciones_activacion": [
         "Cuando se necesita monitorear y predecir el desempeño de un proceso en el tiempo",
@@ -24051,22 +24111,49 @@
         "Identificar las estrategias actuales de sostenibilidad de la organización (reducción, reciclaje, compensación)",
         "Evaluar si estas estrategias abordan la causa raíz o solo mitigan síntomas",
         "Cuestionar métricas como el PIB o el conteo de emisiones reducidas como indicadores de verdadero progreso",
-        "Plantear la pregunta: ¿qué pasaría si hiciéramos esto perfectamente eficiente? ¿seguiría siendo dañino?"
+        "Plantear la pregunta: ¿qué pasaría si hiciéramos esto perfectamente eficiente? ¿seguiría siendo dañino?",
+        "Identificar procesos industriales que aún generan toxinas aunque en menor cantidad",
+        "Identificar si alguna estrategia de 'reducción' solo posterga el problema (ej. incineración, downcycling)",
+        "Plantear la transición de una lógica de reducción a una lógica de rediseño regenerativo"
       ],
       "entregable_esperado": "Un documento de diagnóstico crítico que distinga las prácticas de 'menos malo' de las oportunidades reales de rediseño regenerativo.",
       "nodos_previos": [
-        "seleccion_productos_servicios_verdes"
+        "seleccion_productos_servicios_verdes",
+        "diagnostico_de_productos_crudos",
+        "estrategia_de_tragedia_vs_estrategia_de_cambio"
       ],
       "nodos_siguientes": [
         "eco_efectividad",
         "critica_al_pib_como_metrica",
-        "eco_efectividad_2"
+        "eco_efectividad_2",
+        "disruptores_endocrinos_y_salud_industrial",
+        "downcycling_problema",
+        "licencia_para_danar",
+        "ser_menos_malo_vs_ser_bueno"
       ],
       "condiciones_activacion": [
         "Cuando la organización cree que reciclar o reducir consumo es suficiente para ser sostenible",
-        "Al iniciar la fase de ideación de una estrategia ambiental corporativa"
+        "Al iniciar la fase de ideación de una estrategia ambiental corporativa",
+        "Si el usuario busca ir más allá de certificaciones básicas de reducción",
+        "Si se está evaluando si adoptar una certificación de eco-eficiencia es la meta final o solo un paso intermedio"
       ],
-      "etiqueta_arbol": "Ser Menos Malo No Basta"
+      "etiqueta_arbol": "Ser Menos Malo No Basta",
+      "ids_alias": [
+        "eco_eficiencia_critica",
+        "limites_de_la_eco_eficiencia"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "eco_eficiencia_critica",
+          "titulo": "Crítica a la Eco-eficiencia",
+          "fuente": "Cradle to Cradle - Michael Braungart"
+        },
+        {
+          "node_id": "limites_de_la_eco_eficiencia",
+          "titulo": "Los Límites de la Eco-Eficiencia ('Ser Menos Malo')",
+          "fuente": "Cradle to Cradle - Michael Braungart"
+        }
+      ]
     },
     "critica_gestion_por_objetivos": {
       "node_id": "critica_gestion_por_objetivos",
@@ -24260,7 +24347,7 @@
       ],
       "nodos_siguientes": [
         "estimacion_costos_actividad",
-        "presupuesto_agil_innovacion",
+        "asignacion_agil_de_recursos",
         "project_charter",
         "linea_base_costos",
         "activity_duration_estimates",
@@ -25468,7 +25555,7 @@
         "adn_de_innovacion_organizacional",
         "diseno_organizacional_equipos_innovacion",
         "estrategia_de_innovacion_arenas",
-        "presupuesto_agil_innovacion"
+        "asignacion_agil_de_recursos"
       ],
       "nodos_siguientes": [
         "gestion_libro_abierto_obm",
@@ -27163,7 +27250,7 @@
         "seguimiento_informacion_cliente",
         "silla_vacia_del_cliente_en_decisiones",
         "ejecucion_de_touchpoints",
-        "storytelling_para_el_cambio"
+        "storytelling_como_herramienta_de_diseno"
       ],
       "condiciones_activacion": [
         "Cuando estás diseñando o rediseñando un servicio complejo, con múltiples etapas y múltiples puntos de interacción",
@@ -31619,7 +31706,7 @@
         "gate_0_evaluacion_wishlist",
         "nueve_pecados_capitales_lanzamiento",
         "posicionamiento_de_empresa",
-        "liderazgo_frente_crisis_competitiva"
+        "comunicacion_transparente_en_crisis"
       ],
       "etiqueta_arbol": "Posiciona tu Producto con Claridad"
     },
@@ -33074,38 +33161,71 @@
         "Si el mercado es nuevo, evitar gastar rápido en marketing y enfocarte en validar si hay una base de clientes persuadible",
         "Si el mercado está dominado por incumbentes fuertes, evaluar re-segmentarlo por bajo costo o por nicho",
         "Evaluar si el modelo de negocio ya funciona en otro país y puede clonarse localmente",
-        "Documentar el tipo de mercado como hipótesis temprana, aunque sea una decisión de atado tardío"
+        "Documentar el tipo de mercado como hipótesis temprana, aunque sea una decisión de atado tardío",
+        "Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio o mercado inestable",
+        "Si se ataca mercado existente, calcular el costo de entrada (1.7x o 3x el presupuesto de marketing del líder)",
+        "Definir la base de competencia donde el producto puede ganar (features, servicio, precio, marca)",
+        "Si un competidor domina más del 74% del mercado, evita atacarlo de frente; si domina entre 26% y 74%, elige bien tus batallas",
+        "Escribe un breve documento respondiendo las preguntas clave según el tipo de mercado que elegiste",
+        "Actualiza tu mapa de modelo de negocio (Business Model Canvas) con esta hipótesis"
       ],
       "entregable_esperado": "Una hipótesis documentada y justificada sobre el tipo de mercado en el que compites (existente, nuevo, re-segmentado o clonado), con sus implicancias estratégicas.",
       "nodos_previos": [
         "diseno_experimentos_hipotesis",
-        "tipo_de_mercado_estrategia_competitiva",
         "lanzamiento_nuevos_productos_enfoque_problema",
         "board_management_buyin",
         "channels_hypothesis_physical",
         "channels_hypothesis_web_mobile",
-        "multi_sided_market_channel"
+        "multi_sided_market_channel",
+        "capturar_conocimiento_de_mercado",
+        "hipotesis_de_canales",
+        "lienzo_modelo_negocio",
+        "resegmentacion_mercado_nicho_bajo_costo",
+        "seleccion_canal_distribucion",
+        "seleccion_canal_fisico"
       ],
       "nodos_siguientes": [
         "metricas_de_startup",
         "estrategia_producto_global_glocal",
-        "market_type_revenue_growth"
+        "market_type_revenue_growth",
+        "analisis_costo_entrada_mercado",
+        "brief_competitivo",
+        "entrada_mercado_nuevo",
+        "estrategia_get_keep_grow",
+        "etapa_de_investigacion",
+        "hipotesis_relacion_clientes_web",
+        "resegmentacion_mercado_nicho_bajo_costo"
       ],
       "condiciones_activacion": [
         "Al iniciar el Customer Discovery",
         "Si la estrategia de marketing no está funcionando y sospechas un error de tipo de mercado",
         "Si aplicas la misma estrategia de marketing sin distinguir si el mercado es nuevo o existente",
-        "Si tienes confusión sobre quién es tu competidor real"
+        "Si tienes confusión sobre quién es tu competidor real",
+        "Cuando el equipo necesita decidir su estrategia de entrada al mercado antes de invertir en marketing y ventas",
+        "No sabes cómo posicionar tu producto frente a la competencia",
+        "Las personas que invierten en tu negocio esperan ingresos que no coinciden con el tipo de mercado real"
       ],
       "etiqueta_arbol": "Identifica tu Tipo de Mercado",
       "ids_alias": [
-        "market_type_definicion"
+        "market_type_definicion",
+        "hipotesis_tipo_mercado",
+        "tipo_de_mercado_estrategia_competitiva"
       ],
       "merged_originals": [
         {
           "node_id": "market_type_definicion",
           "titulo": "Definir el Tipo de Mercado (Market Type)",
           "fuente": "The Startup Owner's Manual - Steve Blank"
+        },
+        {
+          "node_id": "hipotesis_tipo_mercado",
+          "titulo": "Hipótesis de Tipo de Mercado y Competencia",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        },
+        {
+          "node_id": "tipo_de_mercado_estrategia_competitiva",
+          "titulo": "Decidir en qué tipo de mercado compites y tu estrategia para hacerlo",
+          "fuente": "The Startup Owner's Manual"
         }
       ]
     },
@@ -33365,7 +33485,7 @@
       ],
       "nodos_siguientes": [
         "concepto_producto_plus",
-        "limites_de_la_eco_eficiencia",
+        "critica_eco_eficiencia",
         "reconocer_mercancia_peligrosa_disfrazada"
       ],
       "condiciones_activacion": [
@@ -33984,22 +34104,45 @@
         "Proyecta tu flujo de caja a 12 o 18 meses considerando cuánto esperas crecer en ventas",
         "Calcula cuánto efectivo gastas cada mes si tu negocio todavía no genera flujo de caja positivo",
         "Identifica el momento en que crecer en ventas podría dejarte sin liquidez",
-        "Consigue líneas de crédito o busca financiamiento antes de que la falta de efectivo se vuelva crítica"
+        "Consigue líneas de crédito o busca financiamiento antes de que la falta de efectivo se vuelva crítica",
+        "Revisa el saldo de tu cuenta y el flujo de caja cada semana, o cada día si estas en un momento critico",
+        "Aprende a leer el estado de flujo de efectivo, aunque al principio el lenguaje te parezca tecnico",
+        "Mira cuánto tardan tus clientes en pagarte y cuánto tardas tú en pagarle a tus proveedores."
       ],
       "entregable_esperado": "Una proyección de flujo de caja a 12 o 18 meses que te anticipe posibles momentos en los que te falte efectivo",
       "nodos_previos": [
-        "fundamentos_inteligencia_financiera"
+        "fundamentos_inteligencia_financiera",
+        "lectura_balance_general"
       ],
       "nodos_siguientes": [
         "flujo_de_caja_libre",
-        "cash_burn_calculation"
+        "cash_burn_calculation",
+        "estado_flujo_de_caja_tres_categorias",
+        "owner_earnings"
       ],
       "condiciones_activacion": [
         "Si tu negocio está creciendo rápido en ventas pero no has revisado tu flujo de caja",
         "Si tu negocio muestra ganancias en los reportes pero te cuesta pagar tus facturas",
-        "Antes de tomar decisiones de expansión basándote solo en el estado de resultados"
+        "Antes de tomar decisiones de expansión basándote solo en el estado de resultados",
+        "Si tu negocio es rentable en el papel pero no te alcanza para pagar sueldos."
       ],
-      "etiqueta_arbol": "Cuida tu Caja, no Solo Ganancia"
+      "etiqueta_arbol": "Cuida tu Caja, no Solo Ganancia",
+      "ids_alias": [
+        "cash_is_king",
+        "profit_vs_cash"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "cash_is_king",
+          "titulo": "El efectivo manda: la plata en el banco es la realidad",
+          "fuente": "Financial Intelligence for Entrepreneurs"
+        },
+        {
+          "node_id": "profit_vs_cash",
+          "titulo": "Ganar dinero en el papel no es lo mismo que tener el dinero en la mano (utilidad vs. efectivo)",
+          "fuente": "Financial Intelligence for Entrepreneurs"
+        }
+      ]
     },
     "diferencia_iso9001_iso9004": {
       "node_id": "diferencia_iso9001_iso9004",
@@ -35783,7 +35926,7 @@
       ],
       "entregable_esperado": "Un panel de métricas con señales tempranas y resultados finales balanceados, con la razón de cada uno anotada",
       "nodos_previos": [
-        "preguntas_excelencia_operacional"
+        "framework_excelencia_operacional"
       ],
       "nodos_siguientes": [
         "diseno_organizacional"
@@ -35840,7 +35983,7 @@
       "nodos_previos": [
         "cultura_flexible_organizacional",
         "diseno_metricas_lideres_rezagados",
-        "preguntas_excelencia_operacional",
+        "framework_excelencia_operacional",
         "reuniones_uno_a_uno"
       ],
       "nodos_siguientes": [
@@ -36460,7 +36603,7 @@
       "entregable_esperado": "Protocolo de revisión toxicológica de materiales previo a su incorporación en el diseño",
       "nodos_previos": [
         "concepto_producto_plus",
-        "limites_de_la_eco_eficiencia"
+        "critica_eco_eficiencia"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -37830,7 +37973,7 @@
       ],
       "entregable_esperado": "Mapa de materiales del producto clasificados como reciclables verdaderos vs. downcycables, con plan de rediseño",
       "nodos_previos": [
-        "eco_eficiencia_critica"
+        "critica_eco_eficiencia"
       ],
       "nodos_siguientes": [
         "eco_efectividad"
@@ -38463,10 +38606,9 @@
       ],
       "entregable_esperado": "Propuesta de rediseño eco-efectivo de un producto piloto con materiales de ciclo cerrado",
       "nodos_previos": [
-        "eco_eficiencia_critica",
+        "critica_eco_eficiencia",
         "downcycling_problema",
         "ser_menos_malo_vs_ser_bueno",
-        "critica_eco_eficiencia",
         "licencia_para_danar",
         "modelo_cradle_to_grave"
       ],
@@ -38661,7 +38803,8 @@
         "Cuando una empresa cree que reducir emisiones o residuos es suficiente para ser sostenible",
         "Si el usuario busca ir más allá de certificaciones básicas de reducción"
       ],
-      "etiqueta_arbol": "Cuestiona la Eco-Eficiencia"
+      "etiqueta_arbol": "Cuestiona la Eco-Eficiencia",
+      "deprecado": true
     },
     "economia_circular_como_modelo_de_negocio": {
       "node_id": "economia_circular_como_modelo_de_negocio",
@@ -38778,7 +38921,8 @@
         "Cuando se debe decidir el nivel de inspección para un lote de producción",
         "Cuando los costos de inspección o de fallas son significativos"
       ],
-      "etiqueta_arbol": "Calcula cuánto Inspeccionar"
+      "etiqueta_arbol": "Calcula cuánto Inspeccionar",
+      "deprecado": true
     },
     "economia_subensambles_inspeccion": {
       "node_id": "economia_subensambles_inspeccion",
@@ -38797,7 +38941,7 @@
       "entregable_esperado": "Plan de inspección escalonado por subensambles, con análisis de costos aplicado a cada etapa intermedia del proceso.",
       "nodos_previos": [
         "probabilidad_falla_ensamblaje_multiple",
-        "regla_todo_o_nada_inspeccion"
+        "punto_equilibrio_calidad_inspeccion"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -40494,7 +40638,7 @@
       ],
       "entregable_esperado": "Un documento de política de calidad, propio, donde elimines el uso de planes de muestreo estándar y definas tus criterios según el análisis de costos y el control estadístico.",
       "nodos_previos": [
-        "regla_todo_o_nada_inspeccion",
+        "punto_equilibrio_calidad_inspeccion",
         "probabilidad_falla_ensamblaje_multiple"
       ],
       "nodos_siguientes": [
@@ -42463,7 +42607,7 @@
         "por_que_existen_los_term_sheets",
         "gestion_angel_investors",
         "jerarquia_firma_vc",
-        "manejo_syndicate_inversion",
+        "gestion_sindicato_inversores",
         "seleccion_abogado_venture"
       ],
       "nodos_siguientes": [
@@ -42522,7 +42666,7 @@
       ],
       "entregable_esperado": "Brief de mercado nuevo con visión, estimación de costos de educación de mercado y pronósticos de adopción",
       "nodos_previos": [
-        "tipo_de_mercado_estrategia_competitiva",
+        "determinar_tipo_de_mercado",
         "brief_competitivo"
       ],
       "nodos_siguientes": [
@@ -44011,7 +44155,7 @@
         "analisis_de_sistemas_de_medicion_msa"
       ],
       "nodos_siguientes": [
-        "economia_de_la_inspeccion"
+        "punto_equilibrio_calidad_inspeccion"
       ],
       "condiciones_activacion": [
         "Cuando se requieren niveles de defectos bajo enfoque Six Sigma",
@@ -45464,7 +45608,7 @@
         "estructura_estado_resultados",
         "lectura_balance_general",
         "contabilidad_caja_vs_devengo",
-        "profit_vs_cash"
+        "diferencia_ganancia_flujo_caja"
       ],
       "nodos_siguientes": [
         "reconciliacion_utilidad_neta_flujo_caja",
@@ -46096,7 +46240,7 @@
       ],
       "entregable_esperado": "Un calendario de tu ronda con varios inversores avanzando en etapas de negociación sincronizadas.",
       "nodos_previos": [
-        "proceso_diligencia_vc"
+        "proceso_decision_vc"
       ],
       "nodos_siguientes": [
         "cierre_term_sheet"
@@ -46367,7 +46511,7 @@
         "tirania_intergeneracional_remota"
       ],
       "nodos_siguientes": [
-        "limites_de_la_eco_eficiencia"
+        "critica_eco_eficiencia"
       ],
       "condiciones_activacion": [
         "Si la organización ya identificó impactos negativos pero no ha decidido actuar",
@@ -46568,7 +46712,7 @@
         "brief_competitivo",
         "hipotesis_de_canales",
         "entrada_mercado_nuevo",
-        "tipo_de_mercado_estrategia_competitiva"
+        "determinar_tipo_de_mercado"
       ],
       "nodos_siguientes": [
         "estrategia_crecimiento_clientes",
@@ -46765,23 +46909,37 @@
         "Analizar qué funcionalidad falta en esa plataforma que tus usuarios necesitan.",
         "Diseñar una feature o producto complementario que llene ese vacío y redirija tráfico hacia tu producto.",
         "Priorizar plataformas nuevas o en crecimiento (menos saturadas, mayor visibilidad) sobre las ya maduras.",
-        "Ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promoción inicial gratuita."
+        "Ser de los primeros en integrarte cuando lanza una plataforma nueva para captar la promoción inicial gratuita.",
+        "Lanzar la integración y medir el tráfico/referidos generados"
       ],
       "entregable_esperado": "Una feature o integración específica lanzada en una plataforma existente, con métricas de tráfico/usuarios adquiridos a través de ella.",
       "nodos_previos": [
         "analisis_de_cohortes",
-        "verificar_clientes_y_canales"
+        "verificar_clientes_y_canales",
+        "hipotesis_de_canales",
+        "programa_afiliados"
       ],
       "nodos_siguientes": [
         "programa_afiliados",
-        "canales_distribucion"
+        "canales_distribucion",
+        "bullseye_framework"
       ],
       "condiciones_activacion": [
         "Cuando el startup necesita acelerar la adquisición de usuarios sin gran presupuesto de marketing.",
         "Cuando existe una plataforma grande y en crecimiento donde se concentran los clientes objetivo.",
         "Cuando el producto puede integrarse o complementar una plataforma ya existente."
       ],
-      "etiqueta_arbol": "Aprovecha Plataformas ya Grandes"
+      "etiqueta_arbol": "Aprovecha Plataformas ya Grandes",
+      "ids_alias": [
+        "existing_platforms_leverage"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "existing_platforms_leverage",
+          "titulo": "Aprovechamiento de Plataformas Existentes (Piggybacking)",
+          "fuente": "Traction - Gabriel Weinberg"
+        }
+      ]
     },
     "estrategia_proactiva_ambiental": {
       "node_id": "estrategia_proactiva_ambiental",
@@ -47825,7 +47983,7 @@
       ],
       "entregable_esperado": "Registro o grabación de llamada de venta con proporción de tiempo dedicado a preguntas vs. presentación",
       "nodos_previos": [
-        "hipotesis_tipo_mercado"
+        "determinar_tipo_de_mercado"
       ],
       "nodos_siguientes": [
         "necesidades_implicitas_vs_explicitas",
@@ -49778,7 +49936,7 @@
       ],
       "nodos_siguientes": [
         "diseno_embudo_ventas_cliente",
-        "preguntas_excelencia_operacional"
+        "framework_excelencia_operacional"
       ],
       "condiciones_activacion": [
         "Cuando la startup necesita escalar su función de ventas contratando un líder senior",
@@ -50708,7 +50866,8 @@
         "Si se busca crecimiento rápido sin gran inversión en marketing pagado",
         "Si existe una plataforma masiva con un vacío funcional relevante para el producto"
       ],
-      "etiqueta_arbol": "Aprovecha Vacíos en Plataformas Grandes"
+      "etiqueta_arbol": "Aprovecha Vacíos en Plataformas Grandes",
+      "deprecado": true
     },
     "exito_franquiciado_determina_exito_franquiciador": {
       "node_id": "exito_franquiciado_determina_exito_franquiciador",
@@ -51904,7 +52063,7 @@
       ],
       "entregable_esperado": "Una guía o proceso de onboarding documentado que facilite la familiarización del cliente con la forma de trabajar de la empresa.",
       "nodos_previos": [
-        "fase_activate",
+        "fase_activate_primera_impresion",
         "ocho_fases_experiencia_cliente"
       ],
       "nodos_siguientes": [
@@ -52081,7 +52240,8 @@
       "condiciones_activacion": [
         "Cuando comienza la entrega real del producto/servicio tras la venta."
       ],
-      "etiqueta_arbol": "Cumple tu Primera Promesa"
+      "etiqueta_arbol": "Cumple tu Primera Promesa",
+      "deprecado": true
     },
     "fase_activate_primera_impresion": {
       "node_id": "fase_activate_primera_impresion",
@@ -52094,23 +52254,38 @@
         "Identificar cuál es el momento exacto de 'primer contacto real' del cliente con el producto o servicio",
         "Eliminar cualquier barrera técnica o logística que retrase la gratificación inmediata (ej: baterías, configuración, activación)",
         "Diseñar la entrega/kickoff como una experiencia memorable, no un simple trámite",
-        "Evaluar la reacción emocional del cliente en ese primer momento y ajustar el proceso si genera frustración"
+        "Evaluar la reacción emocional del cliente en ese primer momento y ajustar el proceso si genera frustración",
+        "Establecer expectativas claras sobre los próximos pasos del proceso.",
+        "Generar momentum temprano mostrando avances o entregables rápidos.",
+        "Evitar fallos en la primera impresión operativa, ya que son difíciles de revertir."
       ],
       "entregable_esperado": "Protocolo de entrega o kickoff diseñado explícitamente para generar una reacción de sorpresa y satisfacción inmediata",
       "nodos_previos": [
         "fase_affirm_reducir_remordimiento",
         "welcome_call_cliente_veterano",
-        "fase_affirm_buyers_remorse"
+        "fase_affirm_buyers_remorse",
+        "ocho_fases_experiencia_cliente"
       ],
       "nodos_siguientes": [
         "gratificacion_inmediata_producto",
-        "shock_and_awe_kit_bienvenida"
+        "shock_and_awe_kit_bienvenida",
+        "fase_acclimate"
       ],
       "condiciones_activacion": [
         "Cuando el negocio tiene un momento claro de entrega, activación o primer uso post-compra",
         "Cuando se detectan altas tasas de churn o insatisfacción justo después de la compra"
       ],
-      "etiqueta_arbol": "Demuestra Valor desde el Inicio"
+      "etiqueta_arbol": "Demuestra Valor desde el Inicio",
+      "ids_alias": [
+        "fase_activate"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "fase_activate",
+          "titulo": "Fase 4: Activate (Activar)",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "fase_admit": {
       "node_id": "fase_admit",
@@ -52300,9 +52475,8 @@
         "conversacion_emocional_postcompra",
         "garantia_devolucion_dinero",
         "hacer_remarcable_lo_requerido",
-        "fase_activate",
-        "fase_acclimate_experiencia_cliente",
         "fase_activate_primera_impresion",
+        "fase_acclimate_experiencia_cliente",
         "welcome_call_cliente_veterano"
       ],
       "condiciones_activacion": [
@@ -54839,20 +55013,37 @@
         "Evaluar si el equipo ejecutivo y los procesos de contratación están alineados con los desafíos actuales de la empresa.",
         "Preguntar a empleados individuales qué tan fácil es para ellos ejecutar su trabajo sin fricciones políticas o burocráticas.",
         "Establecer objetivos calibrados a la oportunidad real de la empresa, no a benchmarks externos irrelevantes.",
-        "Revisar resultados contra esos objetivos periódicamente."
+        "Revisar resultados contra esos objetivos periódicamente.",
+        "Pide que explique cómo obtiene conocimiento sistemático de la organización, clientes y mercado"
       ],
       "entregable_esperado": "Documento de auditoría de procesos de gestión con métricas balanceadas y diseño organizacional justificado",
       "nodos_previos": [
-        "auditorias_gerenciales_periodicas"
+        "auditorias_gerenciales_periodicas",
+        "evaluacion_vp_ventas"
       ],
       "nodos_siguientes": [
-        "metodologia_clara_reporte"
+        "metodologia_clara_reporte",
+        "diseno_metricas_lideres_rezagados",
+        "diseno_organizacional",
+        "gestion_confrontacion_ejecutiva",
+        "tres_as_de_metricas"
       ],
       "condiciones_activacion": [
         "Cuando la empresa crece y necesita formalizar procesos de gestión",
-        "Cuando se detectan métricas desbalanceadas con efectos secundarios negativos"
+        "Cuando se detectan métricas desbalanceadas con efectos secundarios negativos",
+        "Cuando se necesita evaluar o auditar a cualquier ejecutivo senior de la organización"
       ],
-      "etiqueta_arbol": "Pregúntate por tu Excelencia Operativa"
+      "etiqueta_arbol": "Pregúntate por tu Excelencia Operativa",
+      "ids_alias": [
+        "preguntas_excelencia_operacional"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "preguntas_excelencia_operacional",
+          "titulo": "Preguntas de Excelencia Operacional para Ejecutivos",
+          "fuente": "The Hard Thing About Hard Thing - Ben Horowitz"
+        }
+      ]
     },
     "framework_flujos_de_datos_ppp": {
       "node_id": "framework_flujos_de_datos_ppp",
@@ -55047,7 +55238,7 @@
         "cierre_sofisticacion_comprador"
       ],
       "nodos_siguientes": [
-        "tacticas_cierre_ventas",
+        "compromiso_linea_tiempo_cliente",
         "kit_shock_and_awe_bienvenida",
         "shock_and_awe_kit_bienvenida"
       ],
@@ -56830,7 +57021,7 @@
       ],
       "entregable_esperado": "Protocolo documentado de manejo de conflictos, promociones y despidos para la organización",
       "nodos_previos": [
-        "preguntas_excelencia_operacional"
+        "framework_excelencia_operacional"
       ],
       "nodos_siguientes": [
         "rol_alta_direccion_calidad"
@@ -58575,21 +58766,34 @@
         "Mantén comunicación activa con cada inversor del sindicato, no solo con quien lidera",
         "Evita armar rondas con demasiados inversores pequeños (party round)",
         "Pide un acuerdo verbal de que quien lidera negocia los términos por todo el grupo",
-        "Si hay desacuerdos entre inversores, llévalos directamente a quien lidera"
+        "Si hay desacuerdos entre inversores, llévalos directamente a quien lidera",
+        "Identifica o negocia quién será el inversionista líder del grupo"
       ],
       "entregable_esperado": "Un plan de comunicación con tus inversores y un acuerdo claro sobre quién lidera la negociación de los términos",
       "nodos_previos": [
         "term_sheet_negociacion",
-        "shareholder_representative_role"
+        "shareholder_representative_role",
+        "seleccion_etapa_fondo_vc"
       ],
       "nodos_siguientes": [
-        "seleccion_abogado_venture"
+        "seleccion_abogado_venture",
+        "entender_term_sheet"
       ],
       "condiciones_activacion": [
         "Cuando estás negociando una ronda con varios inversores a la vez",
         "Si corres el riesgo de negociar el mismo trato varias veces con distintas personas"
       ],
-      "etiqueta_arbol": "Comunícate con Todo el Sindicato"
+      "etiqueta_arbol": "Comunícate con Todo el Sindicato",
+      "ids_alias": [
+        "manejo_syndicate_inversion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "manejo_syndicate_inversion",
+          "titulo": "Manejo del Grupo de Inversionistas (sindicato)",
+          "fuente": "Venture Deals"
+        }
+      ]
     },
     "gestion_terminacion_franquiciado": {
       "node_id": "gestion_terminacion_franquiciado",
@@ -60685,7 +60889,7 @@
         "producto_minimo_viable",
         "diseno_landing_page",
         "analisis_trafico_competitivo",
-        "targeting_blogs_channel",
+        "targeting_blogs_traccion",
         "plataforma_colaboracion_masiva"
       ],
       "nodos_siguientes": [
@@ -60825,10 +61029,10 @@
       ],
       "nodos_siguientes": [
         "seleccion_canal_fisico",
-        "hipotesis_tipo_mercado",
+        "determinar_tipo_de_mercado",
         "acquisicion_viral_engineering",
         "estrategia_get_keep_grow",
-        "existing_platforms_leverage",
+        "estrategia_plataformas_existentes",
         "programa_afiliados",
         "seleccion_canales_distribucion"
       ],
@@ -60919,7 +61123,7 @@
       "entregable_esperado": "Embudo Get-Keep-Grow documentado con tácticas específicas para cada etapa y plan de prueba a pequeña escala",
       "nodos_previos": [
         "brief_competitivo",
-        "hipotesis_tipo_mercado",
+        "determinar_tipo_de_mercado",
         "estrategia_get_keep_grow"
       ],
       "nodos_siguientes": [
@@ -60963,7 +61167,8 @@
       "condiciones_activacion": [
         "Cuando el equipo necesita decidir su estrategia de entrada al mercado antes de invertir en marketing y ventas"
       ],
-      "etiqueta_arbol": "Elige tu Tipo de Mercado"
+      "etiqueta_arbol": "Elige tu Tipo de Mercado",
+      "deprecado": true
     },
     "hipotesis_valor_crecimiento": {
       "node_id": "hipotesis_valor_crecimiento",
@@ -64641,7 +64846,7 @@
       ],
       "nodos_siguientes": [
         "errores_de_medicion",
-        "economia_de_la_inspeccion"
+        "punto_equilibrio_calidad_inspeccion"
       ],
       "condiciones_activacion": [
         "Cuando la inspección humana genera altos índices de error por monotonía",
@@ -66646,7 +66851,7 @@
       ],
       "nodos_siguientes": [
         "entender_term_sheet",
-        "proceso_diligencia_vc"
+        "proceso_decision_vc"
       ],
       "condiciones_activacion": [
         "Cuando el emprendedor comienza a interactuar con una firma de VC",
@@ -67784,7 +67989,7 @@
         "tipos_de_pasivos",
         "clasificacion_tipos_activos",
         "concepto_patrimonio_equity",
-        "cash_is_king",
+        "diferencia_ganancia_flujo_caja",
         "distincion_gasto_vs_capital_expenditure"
       ],
       "condiciones_activacion": [
@@ -68190,7 +68395,7 @@
       ],
       "entregable_esperado": "Lista de regulaciones actuales reinterpretadas como oportunidades de rediseño de producto/proceso",
       "nodos_previos": [
-        "eco_eficiencia_critica"
+        "critica_eco_eficiencia"
       ],
       "nodos_siguientes": [
         "eco_efectividad",
@@ -68406,7 +68611,8 @@
         "Cuando un competidor con mayores recursos lanza un ataque directo (ej. abaratamiento agresivo, funcionalidad gratuita).",
         "Cuando la prensa y el mercado empiezan a cuestionar la viabilidad de la empresa."
       ],
-      "etiqueta_arbol": "Da la Cara ante el Ataque"
+      "etiqueta_arbol": "Da la Cara ante el Ataque",
+      "deprecado": true
     },
     "liderazgo_gerencial_seguridad": {
       "node_id": "liderazgo_gerencial_seguridad",
@@ -68573,11 +68779,10 @@
         "value_proposition_canvas",
         "preservar_efectivo_buscar_modelo",
         "alineacion_ti_negocio",
-        "analisis_entorno_modelo_negocio",
+        "business_model_environment_mapping",
         "blue_ocean_four_actions",
         "business_model_canvas_como_scorecard",
         "business_model_canvas_vs_plan",
-        "business_model_environment_mapping",
         "business_plan_cinco_secciones",
         "convertible_debt_fundamentos",
         "customer_development_vs_business_plan",
@@ -68621,7 +68826,7 @@
         "storytelling_modelo_negocio",
         "swot_business_model_canvas",
         "testear_circulo_cuadrado_rectangulo",
-        "tipo_de_mercado_estrategia_competitiva",
+        "determinar_tipo_de_mercado",
         "unbundling_business_models",
         "unique_selling_proposition_statement",
         "war_room_pivot_proceed",
@@ -68927,7 +69132,8 @@
         "Si el usuario cree que sus prácticas de 'reducir, reusar, reciclar' ya son suficientes",
         "Si se está evaluando si adoptar una certificación de eco-eficiencia es la meta final o solo un paso intermedio"
       ],
-      "etiqueta_arbol": "No Te Conformes con Menos Malo"
+      "etiqueta_arbol": "No Te Conformes con Menos Malo",
+      "deprecado": true
     },
     "limites_de_la_voluntad_sobre_el_pensamiento": {
       "node_id": "limites_de_la_voluntad_sobre_el_pensamiento",
@@ -69861,7 +70067,8 @@
       "condiciones_activacion": [
         "Cuando varios inversionistas participan juntos en la misma ronda de financiamiento"
       ],
-      "etiqueta_arbol": "Coordina a tus Inversionistas"
+      "etiqueta_arbol": "Coordina a tus Inversionistas",
+      "deprecado": true
     },
     "manifiesto_agile": {
       "node_id": "manifiesto_agile",
@@ -74362,7 +74569,7 @@
       ],
       "nodos_siguientes": [
         "critical_path",
-        "targeting_blogs_channel",
+        "targeting_blogs_traccion",
         "anillo_interior_explotar_el_canal_nucleo"
       ],
       "condiciones_activacion": [
@@ -76567,7 +76774,7 @@
       ],
       "entregable_esperado": "Plan de muestreo de aceptación documentado con n, c, y niveles de riesgo definidos",
       "nodos_previos": [
-        "economia_de_la_inspeccion"
+        "punto_equilibrio_calidad_inspeccion"
       ],
       "nodos_siguientes": [
         "curva_caracteristica_operativa",
@@ -77016,7 +77223,7 @@
       "nodos_previos": [
         "adherence_loop_diseno_temporal",
         "emprendedor_como_puesto_de_trabajo",
-        "storytelling_para_el_cambio",
+        "storytelling_como_herramienta_de_diseno",
         "transformacion_organizacional_diseno"
       ],
       "nodos_siguientes": [
@@ -77746,7 +77953,7 @@
         "conditions_precedent_financing"
       ],
       "nodos_siguientes": [
-        "proceso_diligencia_vc",
+        "proceso_decision_vc",
         "term_sheet_negociacion",
         "clausula_no_shop_adquisicion"
       ],
@@ -78643,7 +78850,7 @@
         "fase_assess",
         "fase_admit",
         "fase_affirm",
-        "fase_activate",
+        "fase_activate_primera_impresion",
         "fase_acclimate",
         "fase_accomplish",
         "fase_adopt",
@@ -80026,7 +80233,7 @@
       ],
       "entregable_esperado": "El cálculo de tus ganancias del propietario del último período fiscal",
       "nodos_previos": [
-        "cash_is_king",
+        "diferencia_ganancia_flujo_caja",
         "lectura_estado_flujo_efectivo",
         "estado_flujo_de_caja_tres_categorias"
       ],
@@ -82218,7 +82425,7 @@
         "producto_como_experimento",
         "romper_vision_en_experimentos",
         "lead_bullets_no_silver_bullets",
-        "liderazgo_frente_crisis_competitiva",
+        "comunicacion_transparente_en_crisis",
         "plan_de_contingencia_b",
         "concierge_mvp"
       ],
@@ -84544,7 +84751,7 @@
         "analisis_de_capacidad_de_recursos"
       ],
       "nodos_siguientes": [
-        "presupuesto_agil_innovacion"
+        "asignacion_agil_de_recursos"
       ],
       "condiciones_activacion": [
         "Cuando la empresa solo invierte en mejoras incrementales y corre riesgo de disrupción externa, o viceversa."
@@ -85471,7 +85678,8 @@
         "Cuando se necesita evaluar o auditar a cualquier ejecutivo senior de la organización",
         "Si la empresa está creciendo y requiere profesionalizar su liderazgo"
       ],
-      "etiqueta_arbol": "Cuestiona tu Madurez Ejecutiva"
+      "etiqueta_arbol": "Cuestiona tu Madurez Ejecutiva",
+      "deprecado": true
     },
     "preguntas_implicacion": {
       "node_id": "preguntas_implicacion",
@@ -86379,7 +86587,8 @@
       "condiciones_activacion": [
         "Cuando los ciclos de presupuesto anual te están frenando la velocidad en tus proyectos de innovación."
       ],
-      "etiqueta_arbol": "Ajusta tu Presupuesto con Agilidad"
+      "etiqueta_arbol": "Ajusta tu Presupuesto con Agilidad",
+      "deprecado": true
     },
     "presupuesto_marketing_franquicia": {
       "node_id": "presupuesto_marketing_franquicia",
@@ -87665,7 +87874,7 @@
       ],
       "entregable_esperado": "Matriz de partes críticas con su fracción defectuosa y clasificación de estrategia de inspección (100% o cero defectos garantizado).",
       "nodos_previos": [
-        "regla_todo_o_nada_inspeccion"
+        "punto_equilibrio_calidad_inspeccion"
       ],
       "nodos_siguientes": [
         "redundancia_diseno_confiabilidad",
@@ -87975,20 +88184,38 @@
         "Solicitar introducciones a otros founders que la firma haya respaldado, incluyendo casos fallidos",
         "Preparar de antemano documentos comúnmente solicitados: proyecciones, pipeline, plan de desarrollo, análisis competitivo, bios",
         "Detectar señales de alerta si el VC pide información desproporcionada para la etapa de la empresa",
-        "Solicitar y verificar referencias de otros emprendedores sobre el trato del VC en situaciones difíciles"
+        "Solicitar y verificar referencias de otros emprendedores sobre el trato del VC en situaciones difíciles",
+        "Preguntar directamente cuál es el proceso y los próximos pasos después de la segunda reunión."
       ],
       "entregable_esperado": "Evaluación documentada del proceso y comportamiento de cada VC en negociación, con referencias verificadas",
       "nodos_previos": [
-        "encontrar_lead_vc"
+        "encontrar_lead_vc",
+        "carta_de_intencion_loi",
+        "jerarquia_firma_vc",
+        "no_shop_agreement"
       ],
       "nodos_siguientes": [
-        "term_sheet_negociacion"
+        "term_sheet_negociacion",
+        "estrategia_competencia_vcs",
+        "term_sheet_disposiciones_vinculantes",
+        "term_sheet_overview"
       ],
       "condiciones_activacion": [
         "Cuando un VC inicia un proceso de diligencia informal",
-        "Cuando el usuario necesita evaluar la seriedad y comportamiento de un inversionista antes de comprometerse"
+        "Cuando el usuario necesita evaluar la seriedad y comportamiento de un inversionista antes de comprometerse",
+        "Cuando el usuario está en conversaciones avanzadas con un VC y necesita entregar documentación."
       ],
-      "etiqueta_arbol": "Entiende Cómo Decide un Inversionista"
+      "etiqueta_arbol": "Entiende Cómo Decide un Inversionista",
+      "ids_alias": [
+        "proceso_diligencia_vc"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "proceso_diligencia_vc",
+          "titulo": "Debida Diligencia del Inversor (Due Diligence)",
+          "fuente": "Venture Deals - Brad Feld"
+        }
+      ]
     },
     "proceso_despidos_responsables": {
       "node_id": "proceso_despidos_responsables",
@@ -88044,7 +88271,8 @@
       "condiciones_activacion": [
         "Cuando el usuario está en conversaciones avanzadas con un VC y necesita entregar documentación."
       ],
-      "etiqueta_arbol": "Prepárate para la Diligencia"
+      "etiqueta_arbol": "Prepárate para la Diligencia",
+      "deprecado": true
     },
     "proceso_diseno_modelo_negocio_5_fases": {
       "node_id": "proceso_diseno_modelo_negocio_5_fases",
@@ -88947,7 +89175,8 @@
         "Si tu negocio está creciendo rápido en ventas pero te está faltando efectivo.",
         "Si tu negocio es rentable en el papel pero no te alcanza para pagar sueldos."
       ],
-      "etiqueta_arbol": "Distingue Utilidad y Efectivo"
+      "etiqueta_arbol": "Distingue Utilidad y Efectivo",
+      "deprecado": true
     },
     "profundizacion_cadena_suministro": {
       "node_id": "profundizacion_cadena_suministro",
@@ -88999,7 +89228,7 @@
       ],
       "nodos_siguientes": [
         "framework_bullseye",
-        "existing_platforms_leverage",
+        "estrategia_plataformas_existentes",
         "bullseye_framework"
       ],
       "condiciones_activacion": [
@@ -90446,8 +90675,7 @@
       "entregable_esperado": "Una pieza narrativa (video, campaña, evento) pensada para que la gente la comparta y la repita por su cuenta.",
       "nodos_previos": [
         "navegacion_politica_organizacional",
-        "storytelling_como_herramienta_de_diseno",
-        "storytelling_para_el_cambio"
+        "storytelling_como_herramienta_de_diseno"
       ],
       "nodos_siguientes": [
         "diseno_de_desafios_de_innovacion"
@@ -91115,7 +91343,7 @@
         "proceso_ideacion_modelo_negocio",
         "lienzo_modelo_negocio",
         "empathy_map",
-        "analisis_entorno_modelo_negocio",
+        "business_model_environment_mapping",
         "blue_ocean_four_actions",
         "escenarios_diseno_modelo_negocio",
         "evaluacion_amazon_case",
@@ -91570,7 +91798,7 @@
       ],
       "entregable_esperado": "Sistema de control estadístico de proceso implementado que garantice la calidad sin depender de pruebas destructivas al 100%.",
       "nodos_previos": [
-        "regla_todo_o_nada_inspeccion",
+        "punto_equilibrio_calidad_inspeccion",
         "control_estadistico_de_procesos"
       ],
       "nodos_siguientes": [
@@ -92014,7 +92242,9 @@
         "Estima la fraccion defectuosa entrante p usando datos historicos del proceso o proveedor en estado de control estadistico",
         "Compara p contra el punto de equilibrio: si p es menor, elimina la inspeccion; si p es mayor, aplica inspeccion al 100%",
         "Evita planes de muestreo intermedios cuando p este consistentemente de un lado del punto de equilibrio",
-        "Si manejas varias piezas o proveedores, ordena los terminos ki menos K por pi de mayor a menor y aplica la regla a cada una"
+        "Si manejas varias piezas o proveedores, ordena los terminos ki menos K por pi de mayor a menor y aplica la regla a cada una",
+        "Seleccionar la estrategia de inspección (ninguna, muestreo, 100%) según el resultado",
+        "Anota tu decisión y sigue revisando con cartas de control para comprobar que la fracción de defectos se mantenga estable."
       ],
       "entregable_esperado": "Tabla de costos comparativos que documente, por cada componente o proveedor, la politica de inspeccion aplicada (cero o cien por ciento) con base en datos reales de costos y calidad entrante.",
       "nodos_previos": [
@@ -92024,13 +92254,24 @@
         "comparacion_metodos_inspeccion",
         "redundancia_en_diseno",
         "costo_de_calidad_6",
-        "costo_de_mala_calidad_copq"
+        "costo_de_mala_calidad_copq",
+        "clasificacion_seriedad_defectos",
+        "control_estadistico_de_procesos",
+        "errores_de_medicion",
+        "inspeccion_automatizada",
+        "relacion_largo_plazo_proveedor_unico"
       ],
       "nodos_siguientes": [
         "programa_cero_defectos",
         "equipo_conjunto_de_mejora_con_proveedores",
         "regla_todo_o_nada_inspeccion_2",
-        "cribado_prueba_barata"
+        "cribado_prueba_barata",
+        "economia_subensambles_inspeccion",
+        "eliminacion_planes_muestreo_estandar",
+        "muestreo_de_aceptacion",
+        "probabilidad_falla_ensamblaje_multiple",
+        "pruebas_destructivas",
+        "verificacion_paralela_trabajo_critico"
       ],
       "condiciones_activacion": [
         "Cuando recibes lotes de materiales o piezas y debes decidir el nivel de inspeccion de entrada",
@@ -92040,12 +92281,24 @@
       ],
       "etiqueta_arbol": "Decide Cuánto Inspeccionar",
       "ids_alias": [
-        "punto_equilibrio_calidad"
+        "punto_equilibrio_calidad",
+        "economia_de_la_inspeccion",
+        "regla_todo_o_nada_inspeccion"
       ],
       "merged_originals": [
         {
           "node_id": "punto_equilibrio_calidad",
           "titulo": "Punto de Equilibrio de Calidad y Regla Todo-o-Nada en Inspección",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "economia_de_la_inspeccion",
+          "titulo": "Economía de la Inspección (Regla de Deming kp)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "regla_todo_o_nada_inspeccion",
+          "titulo": "Decide si inspeccionar todo o nada (regla de costos k1/k2)",
           "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
         }
       ]
@@ -95045,7 +95298,8 @@
         "Cuando tienes que decidir si inspeccionas los materiales que te llegan o los productos en proceso",
         "Cuando corregir un defecto que no detectaste a tiempo te sale caro"
       ],
-      "etiqueta_arbol": "Decide Inspeccionar Todo o Nada"
+      "etiqueta_arbol": "Decide Inspeccionar Todo o Nada",
+      "deprecado": true
     },
     "regla_todo_o_nada_inspeccion_2": {
       "node_id": "regla_todo_o_nada_inspeccion_2",
@@ -95784,7 +96038,7 @@
         "mejora_continua_del_sistema",
         "calificacion_de_proveedores_por_capacidad",
         "practicas_manufactura_justo_a_tiempo",
-        "regla_todo_o_nada_inspeccion"
+        "punto_equilibrio_calidad_inspeccion"
       ],
       "condiciones_activacion": [
         "Cuando la empresa maneja múltiples proveedores para un mismo insumo",
@@ -95810,7 +96064,7 @@
         "decision_fundador_solo_vs_equipo"
       ],
       "nodos_siguientes": [
-        "sistema_tres_rs_alineacion",
+        "three_rs_equilibrium",
         "reasignacion_equity_fundadores",
         "riesgo_cofundadores_relacion_previa",
         "teoria_equidad_split_equity"
@@ -96026,7 +96280,7 @@
       "entregable_esperado": "Un documento donde comparas los resultados reales contra lo que proyectaste en tu caso de negocio",
       "nodos_previos": [
         "diseno_organizacional_equipos_innovacion",
-        "tacticas_cierre_ventas"
+        "compromiso_linea_tiempo_cliente"
       ],
       "nodos_siguientes": [
         "cultura_de_innovacion",
@@ -96614,9 +96868,8 @@
       ],
       "entregable_esperado": "Un mapa de mercado y un brief de re-segmentación con hipótesis validables sobre el nicho elegido",
       "nodos_previos": [
-        "tipo_de_mercado_estrategia_competitiva",
+        "determinar_tipo_de_mercado",
         "actualizar_modelo_de_negocio_pivot_o_proceed",
-        "hipotesis_tipo_mercado",
         "analisis_costo_entrada_mercado"
       ],
       "nodos_siguientes": [
@@ -96625,7 +96878,7 @@
         "customer_scenarios_business_model",
         "multi_sided_platform_pattern",
         "seleccion_estrategia_pricing",
-        "tipo_de_mercado_estrategia_competitiva",
+        "determinar_tipo_de_mercado",
         "escenarios_diseno_modelo_negocio",
         "multi_sided_platforms"
       ],
@@ -98434,7 +98687,7 @@
       "nodos_siguientes": [
         "playing_with_fire_gap",
         "prueba_antes_de_comprometerse",
-        "sistema_tres_rs_alineacion"
+        "three_rs_equilibrium"
       ],
       "condiciones_activacion": [
         "Cuando estás pensando en fundar un negocio con amigos o familiares.",
@@ -99845,7 +100098,7 @@
       "entregable_esperado": "Plan de contingencia y cláusulas contractuales (vesting, buy-back) para manejar salidas de fundadores",
       "nodos_previos": [
         "gestion_de_conflictos_cofundadores",
-        "sistema_tres_rs_alineacion"
+        "three_rs_equilibrium"
       ],
       "nodos_siguientes": [
         "founder_ceo_succession_process",
@@ -101989,7 +102242,7 @@
         "channels_hypothesis_physical"
       ],
       "nodos_siguientes": [
-        "hipotesis_tipo_mercado",
+        "determinar_tipo_de_mercado",
         "customer_discovery",
         "publicidad_offline_pruebas_locales",
         "estrategia_multicanal_bienvenida",
@@ -102019,7 +102272,7 @@
         "hipotesis_de_canales"
       ],
       "nodos_siguientes": [
-        "hipotesis_tipo_mercado"
+        "determinar_tipo_de_mercado"
       ],
       "condiciones_activacion": [
         "Si el producto es físico y requiere intermediarios para llegar al consumidor final"
@@ -102475,7 +102728,7 @@
       ],
       "nodos_siguientes": [
         "jerarquia_firma_vc",
-        "manejo_syndicate_inversion"
+        "gestion_sindicato_inversores"
       ],
       "condiciones_activacion": [
         "Cuando arrancas a buscar capital",
@@ -102791,8 +103044,7 @@
       "nodos_siguientes": [
         "estrategia_edificios_verdes",
         "triple_bottom_line",
-        "critica_eco_eficiencia",
-        "eco_eficiencia_critica"
+        "critica_eco_eficiencia"
       ],
       "condiciones_activacion": [
         "Si la empresa está definiendo su política de sourcing y procurement",
@@ -103436,7 +103688,7 @@
       ],
       "entregable_esperado": "Un registro de al menos dos interpretaciones alternativas ante cada crisis mayor, que uses para decidir y para hablarle a tu equipo.",
       "nodos_previos": [
-        "storytelling_para_el_cambio"
+        "storytelling_como_herramienta_de_diseno"
       ],
       "nodos_siguientes": [
         "gestion_de_problemas_sin_receta"
@@ -103514,7 +103766,7 @@
       ],
       "entregable_esperado": "Documento de visión reformulando las metas de sostenibilidad de negativas a positivas/regenerativas",
       "nodos_previos": [
-        "eco_eficiencia_critica",
+        "critica_eco_eficiencia",
         "licencia_para_danar"
       ],
       "nodos_siguientes": [
@@ -105084,7 +105336,8 @@
         "Cuando hay tensión creciente entre cofundadores y no se identifica la causa raíz",
         "Antes de una ronda de inversión que requiera clarificar la estructura de control"
       ],
-      "etiqueta_arbol": "Alinea Relaciones, Roles y Recompensas"
+      "etiqueta_arbol": "Alinea Relaciones, Roles y Recompensas",
+      "deprecado": true
     },
     "sistema_triage_x_gray_p_list": {
       "node_id": "sistema_triage_x_gray_p_list",
@@ -106537,25 +106790,38 @@
         "Traducir el mensaje en actividades concretas y significativas para el público",
         "Crear momentos memorables (eventos, demostraciones) en lugar de solo publicidad",
         "Facilitar que la audiencia se apropie y difunda la historia por sí misma",
-        "Reforzar la narrativa con símbolos tangibles (pines, insignias, señales)"
+        "Reforzar la narrativa con símbolos tangibles (pines, insignias, señales)",
+        "Medir el reconocimiento y adopción de la narrativa en la población objetivo"
       ],
       "entregable_esperado": "Una narrativa central clara con elementos tangibles de refuerzo que el público pueda replicar y compartir.",
       "nodos_previos": [
         "sintesis_de_insights_en_principios_de_diseno",
         "prototipado_de_experiencias",
         "capacidad_de_respuesta_responsable",
-        "storytelling_para_el_cambio"
+        "customer_journey_mapping"
       ],
       "nodos_siguientes": [
         "diseno_en_la_cuarta_dimension",
-        "propagacion_de_ideas_meme"
+        "propagacion_de_ideas_meme",
+        "navegacion_politica_organizacional",
+        "separar_hechos_de_percepcion"
       ],
       "condiciones_activacion": [
         "Cuando se necesita cambiar comportamientos colectivos o culturales",
         "Cuando la publicidad tradicional no está generando adopción",
         "Cuando se busca transformar una campaña en un movimiento"
       ],
-      "etiqueta_arbol": "Cuenta Historias que Transforman"
+      "etiqueta_arbol": "Cuenta Historias que Transforman",
+      "ids_alias": [
+        "storytelling_para_el_cambio"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "storytelling_para_el_cambio",
+          "titulo": "Storytelling para Movilizar el Cambio",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "storytelling_como_herramienta_diseno": {
       "node_id": "storytelling_como_herramienta_diseno",
@@ -106650,7 +106916,8 @@
         "Cuando se necesita movilizar un cambio de comportamiento colectivo o social",
         "Si las campañas de comunicación tradicionales han fallado en generar adopción"
       ],
-      "etiqueta_arbol": "Narra el Cambio que Buscas"
+      "etiqueta_arbol": "Narra el Cambio que Buscas",
+      "deprecado": true
     },
     "strat_map": {
       "node_id": "strat_map",
@@ -107114,7 +107381,7 @@
       "entregable_esperado": "Matriz SWOT detallada por cada bloque del Business Model Canvas con hallazgos priorizados",
       "nodos_previos": [
         "lienzo_modelo_negocio",
-        "analisis_entorno_modelo_negocio"
+        "business_model_environment_mapping"
       ],
       "nodos_siguientes": [
         "prototipado_modelos_negocio",
@@ -107180,7 +107447,8 @@
       "condiciones_activacion": [
         "Cuando un prospecto calificado está en etapa final del embudo de ventas"
       ],
-      "etiqueta_arbol": "Cierra la Venta con Claridad"
+      "etiqueta_arbol": "Cierra la Venta con Claridad",
+      "deprecado": true
     },
     "tacticas_cold_calling": {
       "node_id": "tacticas_cold_calling",
@@ -107392,7 +107660,8 @@
         "Cuando el startup está en fase I buscando su primera ola de usuarios",
         "Cuando el producto tiene un nicho claro con comunidades de blogs identificables"
       ],
-      "etiqueta_arbol": "Conquista Blogs Clave del Nicho"
+      "etiqueta_arbol": "Conquista Blogs Clave del Nicho",
+      "deprecado": true
     },
     "targeting_blogs_traccion": {
       "node_id": "targeting_blogs_traccion",
@@ -107406,22 +107675,36 @@
         "Contactar bloggers pequeños ofreciendo pago por publicidad o acceso anticipado al producto",
         "Trackear cada blog/anuncio para medir efectividad y perfil de audiencia",
         "Crear ofertas especiales o bundles diseñados específicamente para la audiencia de un blog influyente",
-        "Establecer partnerships de contenido con sitios más grandes una vez validado el canal"
+        "Establecer partnerships de contenido con sitios más grandes una vez validado el canal",
+        "Ofrece acceso VIP o beneficios exclusivos a quienes compartan tu producto en sus blogs"
       ],
       "entregable_esperado": "Lista de blogs objetivo priorizados, mensajes de contacto personalizados y métricas de conversión por canal de blog",
       "nodos_previos": [
         "customer_profile",
-        "value_proposition_startup"
+        "value_proposition_startup",
+        "middle_ring_testing",
+        "traction_channel_bias"
       ],
       "nodos_siguientes": [
         "publicidad_tradicional_pr",
-        "canales_link_sharing"
+        "canales_link_sharing",
+        "herramientas_de_activacion_web"
       ],
       "condiciones_activacion": [
         "Cuando el startup necesita early adopters y tiene bajo presupuesto de marketing",
         "Cuando el producto tiene un nicho de audiencia claramente identificable en blogs"
       ],
-      "etiqueta_arbol": "Patrocina Blogs para Crecer"
+      "etiqueta_arbol": "Patrocina Blogs para Crecer",
+      "ids_alias": [
+        "targeting_blogs_channel"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "targeting_blogs_channel",
+          "titulo": "Targeting Blogs como Canal de Tracción",
+          "fuente": "Traction - Gabriel Weinberg"
+        }
+      ]
     },
     "tasa_captura_leads": {
       "node_id": "tasa_captura_leads",
@@ -108414,7 +108697,7 @@
       "entregable_esperado": "Term sheet revisado con las cláusulas vinculantes claramente diferenciadas y negociadas",
       "nodos_previos": [
         "term_sheet_negociacion",
-        "proceso_diligencia_vc"
+        "proceso_decision_vc"
       ],
       "nodos_siguientes": [
         "cierre_term_sheet"
@@ -108513,7 +108796,7 @@
       "entregable_esperado": "Análisis del term sheet clasificado por impacto económico vs. de control.",
       "nodos_previos": [
         "cierre_term_sheet",
-        "proceso_diligencia_vc"
+        "proceso_decision_vc"
       ],
       "nodos_siguientes": [
         "valuacion_pre_post_money"
@@ -108976,16 +109259,22 @@
         "Verificar que estos tres elementos estén alineados entre sí (ej. quien más aporta recibe más equity)",
         "Establecer un mecanismo regular (ej. trimestral) para revisar y renegociar este equilibrio",
         "Documentar por escrito los acuerdos, no solo verbalmente",
-        "Identificar y discutir abiertamente las tensiones no habladas ('elefantes en la habitación')"
+        "Identificar y discutir abiertamente las tensiones no habladas ('elefantes en la habitación')",
+        "Mapear el tipo de relación previa entre cofundadores (familia, amigos, excompañeros de trabajo, extraños)",
+        "Evaluar si la estructura de roles elegida (jerárquica vs igualitaria) es consistente con esa relación previa",
+        "Verificar que el split de equity refleje la misma lógica (social vs de negocio) que la relación y los roles"
       ],
       "entregable_esperado": "Documento de acuerdo fundacional que alinee relaciones, roles y recompensas, con mecanismo de revisión periódica establecido",
       "nodos_previos": [
         "ceo_equity_premium",
-        "criterios_equity_split"
+        "criterios_equity_split",
+        "relacion_previa_y_estructura_roles",
+        "riesgo_cofundadores_relacion_previa"
       ],
       "nodos_siguientes": [
         "vesting_dinamico",
-        "hiring_blueprints"
+        "hiring_blueprints",
+        "rotacion_equipo_fundador"
       ],
       "condiciones_activacion": [
         "Al formar un equipo fundador y definir su estructura interna",
@@ -108993,7 +109282,17 @@
         "Antes de una ronda de inversión que pueda alterar roles existentes",
         "Cuando hay cambios significativos en el compromiso o circunstancias de un cofundador"
       ],
-      "etiqueta_arbol": "Equilibra tu Equipo Fundador"
+      "etiqueta_arbol": "Equilibra tu Equipo Fundador",
+      "ids_alias": [
+        "sistema_tres_rs_alineacion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "sistema_tres_rs_alineacion",
+          "titulo": "El Sistema de las Tres Rs: Alineación entre Relaciones, Roles y Recompensas",
+          "fuente": "The Founder's Dilemmas"
+        }
+      ]
     },
     "ti_para_desempeno_ecologico": {
       "node_id": "ti_para_desempeno_ecologico",
@@ -109138,7 +109437,8 @@
         "Tienes que decidir cuánto invertir en marketing y ventas",
         "Las personas que invierten en tu negocio esperan ingresos que no coinciden con el tipo de mercado real"
       ],
-      "etiqueta_arbol": "Elige tu Estrategia Competitiva"
+      "etiqueta_arbol": "Elige tu Estrategia Competitiva",
+      "deprecado": true
     },
     "tipo_mercado_curva_ingresos": {
       "node_id": "tipo_mercado_curva_ingresos",
@@ -109853,7 +110153,7 @@
       ],
       "nodos_siguientes": [
         "middle_ring_testing",
-        "targeting_blogs_channel"
+        "targeting_blogs_traccion"
       ],
       "condiciones_activacion": [
         "Cuando tu lluvia de ideas sobre canales de tracción se siente limitada o repetitiva",
@@ -110650,7 +110950,7 @@
       "nodos_previos": [
         "metricas_cohortes",
         "kanban_validacion_aprendizaje",
-        "preguntas_excelencia_operacional"
+        "framework_excelencia_operacional"
       ],
       "nodos_siguientes": [
         "metricas_accionables",
@@ -112677,7 +112977,7 @@
       "nodos_siguientes": [
         "value_proposition_canvas",
         "sales_funnel_get_keep_grow",
-        "analisis_entorno_modelo_negocio",
+        "business_model_environment_mapping",
         "blue_ocean_four_actions",
         "elementos_creadores_valor",
         "elevator_pitch_inversion",
@@ -113484,7 +113784,7 @@
       ],
       "entregable_esperado": "Procedimiento formal de verificación paralela implementado para transacciones críticas, con sistema de comparación automatizada de resultados.",
       "nodos_previos": [
-        "regla_todo_o_nada_inspeccion"
+        "punto_equilibrio_calidad_inspeccion"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -113736,8 +114036,7 @@
         "reparto_inicial_equity",
         "confianza_mutua_fundadores",
         "convertir_unknown_unknowns_en_known_unknowns",
-        "criterios_equity_split",
-        "sistema_tres_rs_alineacion"
+        "criterios_equity_split"
       ],
       "nodos_siguientes": [
         "term_sheet_negociacion",
@@ -123003,7 +123302,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 21,
+    "nodos_sin_enlaces_entrantes": 37,
     "enlaces_rotos_en_grafo": 0
   }
 }
