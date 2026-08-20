@@ -12,18 +12,33 @@
     "Dibujar ejes horizontal y vertical con las barras correspondientes",
     "Titular el gráfico e indicar observaciones totales",
     "Identificar y clasificar el patrón de variación",
-    "Desarrollar una explicación del patrón observado"
+    "Desarrollar una explicación del patrón observado",
+    "Recopilar al menos 40 puntos de datos para un histograma (u 8 para box plot)",
+    "Comparar múltiples distribuciones usando box plots si es necesario"
   ],
   "entregable_esperado": "Histograma con patrón de variación identificado y explicación de causas físicas asociadas",
   "nodos_previos": [
-    "graficos_y_diagramas"
+    "graficos_y_diagramas",
+    "visualizacion_datos_deteccion_outliers"
   ],
   "nodos_siguientes": [
-    "control_estadistico_de_procesos"
+    "control_estadistico_de_procesos",
+    "concepto_variacion_estadistica",
+    "distribuciones_probabilidad"
   ],
   "condiciones_activacion": [
     "Cuando se necesita entender la distribución y variación de un conjunto de datos",
     "Cuando se busca detectar patrones anómalos generados por el proceso"
   ],
-  "etiqueta_arbol": "Visualiza tus Datos en Histograma"
+  "etiqueta_arbol": "Visualiza tus Datos en Histograma",
+  "ids_alias": [
+    "histogramas_distribucion_frecuencias"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "histogramas_distribucion_frecuencias",
+      "titulo": "Histogramas y Distribución de Frecuencias",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

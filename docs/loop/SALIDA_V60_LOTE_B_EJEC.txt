@@ -1,0 +1,443 @@
+==============================================================================
+OP-U-01, TRAMO 5, LOTE B: LOS DIECISIETE ACTOS SIGUIENTES DEL TRAMO EN SU ORDEN IMPRESO (18 a 34), apartando el 29 y el 34 porque ninguna vara de la casa los separa. Es el lote de LAS DENOMINACIONES REPUESTAS: las perdidas de nombre que la lectura marco (AQL, Cpm y box plot) viajan ENTERAS dentro de la linea que las nombra, en vez de quedarse en la lista de perdidas . MODO EJECUTAR
+plan: docs/loop/PLAN_V60_OPU01_LOTE_B.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3326 vivos, 527 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 18 . sobrevive cero_defectos . absorbe filosofia_zero_defectos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 7 (anadidos 1) | condiciones 3 -> 4 (anadidas 1)
+  alias del superviviente: ['cero_defectos_zd', 'concepto_zero_defects', 'programa_zero_defects', 'filosofia_zero_defectos']
+
+------------------------------------------------------------------------------
+ACTO 19 . sobrevive equipo_mejora_calidad_2 . absorbe equipo_mejora_calidad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['equipo_mejora_calidad']
+
+------------------------------------------------------------------------------
+ACTO 20 . sobrevive rol_facilitador_equipos_mejora . absorbe rol_facilitador_black_belt
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de rol_facilitador_black_belt al PASO 1 del superviviente
+        inciso VERBATIM: 'herramientas de mejora'
+        nexo (lo unico de cosecha propia): ', ademas de '
+        paso resultante: Capacitar al facilitador en team building, resolución de conflictos y comunicación, ademas de herramientas de mejora
+  alias del superviviente: ['rol_facilitador_black_belt']
+
+------------------------------------------------------------------------------
+ACTO 21 . sobrevive indice_cpk . absorbe interpretacion_cpk
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 2 -> 4 (anadidas 2)
+  alias del superviviente: ['interpretacion_cpk']
+
+------------------------------------------------------------------------------
+ACTO 22 . sobrevive remover_barreras_orgullo_trabajo . absorbe barreras_orgullo_trabajo
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['barreras_orgullo_trabajo']
+
+------------------------------------------------------------------------------
+ACTO 23 . sobrevive histograma . absorbe histogramas_distribucion_frecuencias
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 9 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['histogramas_distribucion_frecuencias']
+
+------------------------------------------------------------------------------
+ACTO 24 . sobrevive eliminacion_planes_muestreo_estandar . absorbe criticas_muestreo_aceptacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de criticas_muestreo_aceptacion al PASO 4 del superviviente
+        inciso VERBATIM: 'poco a poco'
+        nexo (lo unico de cosecha propia): ' Hazlo '
+        paso resultante: Cambia el criterio de aceptar o rechazar lotes por un control estadístico continuo del proceso de tu proveedor. Hazlo poco a poco
+  alias del superviviente: ['criticas_muestreo_aceptacion']
+
+------------------------------------------------------------------------------
+ACTO 25 . sobrevive recoleccion_validacion_datos_benchmarking . absorbe validacion_datos_benchmarking
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 9 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['validacion_datos_benchmarking']
+
+------------------------------------------------------------------------------
+ACTO 26 . sobrevive intercambio_de_roles_para_motivacion . absorbe rotacion_de_puestos_para_mejora_calidad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['rotacion_de_puestos_para_mejora_calidad']
+
+------------------------------------------------------------------------------
+ACTO 27 . sobrevive control_estadistico_del_proceso . absorbe control_estadistico_no_implica_cero_defectos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 3 -> 4 (anadidas 1)
+  alias del superviviente: ['control_estadistico_no_implica_cero_defectos']
+
+------------------------------------------------------------------------------
+ACTO 28 . sobrevive benchmarking_proceso . absorbe benchmarking_mejores_practicas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 8 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['benchmarking_mejores_practicas']
+
+------------------------------------------------------------------------------
+ACTO 30 . sobrevive eliminacion_causas_error_4 . absorbe eliminacion_causas_error_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 1 de eliminacion_causas_error_2 al PASO 1 del superviviente
+        inciso VERBATIM: 'en cada área de trabajo, a la vista de todos'
+        nexo (lo unico de cosecha propia): ', y ponlo '
+        paso resultante: Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos
+     del paso 6 de eliminacion_causas_error_2 al PASO 6 del superviviente
+        inciso VERBATIM: 'un sorteo semanal o un reconocimiento visible'
+        nexo (lo unico de cosecha propia): ', por ejemplo con '
+        paso resultante: Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan, por ejemplo con un sorteo semanal o un reconocimiento visible
+  alias del superviviente: ['eliminacion_causas_error_3', 'programa_ecr_causa_de_error', 'eliminacion_causas_error_2']
+
+------------------------------------------------------------------------------
+ACTO 31 . sobrevive circulos_calidad_qc . absorbe preparacion_gerencial_antes_de_circulos_de_calidad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['preparacion_gerencial_antes_de_circulos_de_calidad']
+
+------------------------------------------------------------------------------
+ACTO 32 . sobrevive autocontrol_y_controlabilidad . absorbe concepto_autocontrol
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['concepto_autocontrol']
+
+------------------------------------------------------------------------------
+ACTO 33 . sobrevive comunicar_politicas_organizacionales . absorbe politica_calidad_organizacional
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 1 -> 3 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 1 de politica_calidad_organizacional al PASO 1 del superviviente
+        inciso VERBATIM: 'la reducción de costos de mala calidad'
+        nexo (lo unico de cosecha propia): ', mas '
+        paso resultante: Redactar políticas de calidad que cubran necesidades del cliente, competitividad y mejora continua, mas la reducción de costos de mala calidad
+  alias del superviviente: ['politica_calidad_organizacional']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 44
+   analisis_capacidad_proceso                           nodos_siguientes  interpretacion_cpk -> indice_cpk
+   autocontrol_planificacion_servicio                   nodos_previos     concepto_autocontrol -> autocontrol_y_controlabilidad
+   cero_defectos                                        nodos_siguientes  equipo_mejora_calidad -> equipo_mejora_calidad_2
+   ciclo_adaptativo_inteligencia                        nodos_siguientes  benchmarking_mejores_practicas -> benchmarking_proceso
+   codigo_conducta_orientado_cliente                    nodos_siguientes  politica_calidad_organizacional -> comunicar_politicas_organizacionales
+   compromiso_gerencial_calidad                         nodos_siguientes  equipo_mejora_calidad -> equipo_mejora_calidad_2
+   concepto_variacion_estadistica                       nodos_previos     histogramas_distribucion_frecuencias -> histograma
+   concepto_vs_tecnica                                  nodos_previos     filosofia_zero_defectos -> cero_defectos
+   conciencia_calidad                                   nodos_previos     rotacion_de_puestos_para_mejora_calidad -> intercambio_de_roles_para_motivacion
+   consejo_de_calidad_2                                 nodos_previos     equipo_mejora_calidad -> equipo_mejora_calidad_2
+   consejo_de_calidad_y_rol_del_director                nodos_previos     politica_calidad_organizacional -> comunicar_politicas_organizacionales
+   costo_de_mala_calidad_copq                           nodos_siguientes  equipo_mejora_calidad -> equipo_mejora_calidad_2
+   decide_phase_roadmap                                 nodos_previos     benchmarking_mejores_practicas -> benchmarking_proceso
+   definicion_calidad_conformidad                       nodos_siguientes  equipo_mejora_calidad -> equipo_mejora_calidad_2
+   dia_cero_defectos                                    nodos_siguientes  eliminacion_causas_error_2 -> eliminacion_causas_error_4
+   distorsion_muestreo_mecanico                         nodos_siguientes  control_estadistico_no_implica_cero_defectos -> control_estadistico_del_proceso
+   distribuciones_probabilidad                          nodos_previos     histogramas_distribucion_frecuencias -> histograma
+   eliminacion_barreras_orgullo_del_trabajo             nodos_previos     preparacion_gerencial_antes_de_circulos_de_calidad -> circulos_calidad_qc
+   eliminar_trabajo_a_destajo                           nodos_siguientes  barreras_orgullo_trabajo -> remover_barreras_orgullo_trabajo
+   empoderamiento_empleados                             nodos_siguientes  rotacion_de_puestos_para_mejora_calidad -> intercambio_de_roles_para_motivacion
+   estudio_mezclas_multiples_fuentes                    nodos_previos     control_estadistico_no_implica_cero_defectos -> control_estadistico_del_proceso
+   feedback_supervisores_trabajadores                   nodos_previos     concepto_autocontrol -> autocontrol_y_controlabilidad
+   fijacion_de_metas                                    nodos_siguientes  eliminacion_causas_error_2 -> eliminacion_causas_error_4
+   formacion_equipo_proyecto                            nodos_siguientes  rol_facilitador_black_belt -> rol_facilitador_equipos_mejora
+   ia_como_nivelador_habilidades                        nodos_siguientes  rotacion_de_puestos_para_mejora_calidad -> intercambio_de_roles_para_motivacion
+   involucramiento_sindical_calidad                     nodos_previos     equipo_mejora_calidad -> equipo_mejora_calidad_2
+   juran_transformation_roadmap                         nodos_previos     benchmarking_mejores_practicas -> benchmarking_proceso
+   limitaciones_intervalos_confianza                    nodos_siguientes  criticas_muestreo_aceptacion -> eliminacion_planes_muestreo_estandar
+   mantenimiento_productivo_total                       nodos_previos     concepto_autocontrol -> autocontrol_y_controlabilidad
+   medicion_calidad                                     nodos_previos     equipo_mejora_calidad -> equipo_mejora_calidad_2
+   medicion_calidad                                     nodos_previos     filosofia_zero_defectos -> cero_defectos
+   medicion_calidad_2                                   nodos_previos     filosofia_zero_defectos -> cero_defectos
+   mito_departamento_control_calidad                    nodos_previos     criticas_muestreo_aceptacion -> eliminacion_planes_muestreo_estandar
+   normas_culturales_calidad                            nodos_previos     politica_calidad_organizacional -> comunicar_politicas_organizacionales
+   perfeccionismo_vs_valor                              nodos_siguientes  filosofia_zero_defectos -> cero_defectos
+   proceso_benchmarking_juran_7pasos                    nodos_siguientes  validacion_datos_benchmarking -> recoleccion_validacion_datos_benchmarking
+   programa_mejora_calidad_14_pasos                     nodos_siguientes  equipo_mejora_calidad -> equipo_mejora_calidad_2
+   recursos_humanos_cultura                             nodos_previos     politica_calidad_organizacional -> comunicar_politicas_organizacionales
+   rol_lider_equipo_calidad                             nodos_siguientes  rol_facilitador_black_belt -> rol_facilitador_equipos_mejora
+   sostenibilidad_agil                                  nodos_previos     politica_calidad_organizacional -> comunicar_politicas_organizacionales
+   transformacion_gerencial_para_la_calidad             nodos_siguientes  preparacion_gerencial_antes_de_circulos_de_calidad -> circulos_calidad_qc
+   validacion_sistema_medicion                          nodos_siguientes  concepto_autocontrol -> autocontrol_y_controlabilidad
+   validacion_sistema_medicion_2                        nodos_siguientes  concepto_autocontrol -> autocontrol_y_controlabilidad
+   visualizacion_datos_deteccion_outliers               nodos_siguientes  histogramas_distribucion_frecuencias -> histograma
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 10
+   conciencia_de_calidad                                nodos_previos     rotacion_de_puestos_para_mejora_calidad (registro historico)
+   costo_de_la_no_calidad                               nodos_siguientes  equipo_mejora_calidad (registro historico)
+   definicion_calidad_conformidad_requisitos_3          nodos_siguientes  equipo_mejora_calidad (registro historico)
+   efecto_nivelador_ia                                  nodos_siguientes  rotacion_de_puestos_para_mejora_calidad (registro historico)
+   eliminacion_pago_destajo                             nodos_siguientes  barreras_orgullo_trabajo (registro historico)
+   involucramiento_sindical                             nodos_previos     equipo_mejora_calidad (registro historico)
+   medicion_de_calidad                                  nodos_previos     equipo_mejora_calidad (registro historico)
+   perfeccionismo_vs_valor_2                            nodos_siguientes  filosofia_zero_defectos (registro historico)
+   programa_de_mejora_de_calidad                        nodos_siguientes  equipo_mejora_calidad (registro historico)
+   programa_zero_defects                                nodos_siguientes  equipo_mejora_calidad (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 6
+   cero_defectos                                        nodos_siguientes
+   costo_de_mala_calidad_copq                           nodos_siguientes
+   dia_cero_defectos                                    nodos_siguientes
+   distorsion_muestreo_mecanico                         nodos_siguientes
+   involucramiento_sindical_calidad                     nodos_previos
+   medicion_calidad_2                                   nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 926   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 918   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 8, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 75 de 75
+guarda D, los 15 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (90 filas)
+ acto de que nodo                                  que          n  a donde va
+   18 filosofia_zero_defectos                      paso         1  ya lo dice el PASO 2 del superviviente
+        Comunicar explícitamente el estándar de Cero Defectos a todos los niveles de la organización
+   18 filosofia_zero_defectos                      paso         2  PASO 7 del superviviente
+        Eliminar el lenguaje que normaliza niveles aceptables de error (AQL)
+   18 filosofia_zero_defectos                      paso         3  ya lo dice el PASO 1 del superviviente
+        Vincular el estándar a la actitud personal de cada empleado, no solo a métricas de producción
+   18 filosofia_zero_defectos                      paso         4  ya lo dice el PASO 6 del superviviente
+        Reforzar el mensaje en reuniones y comunicaciones internas de forma recurrente
+   18 filosofia_zero_defectos                      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la organización acepta implícitamente niveles de error como normales
+   18 filosofia_zero_defectos                      condicion    2  CONDICION 4 del superviviente
+        Al iniciar un programa de mejora de calidad
+   19 equipo_mejora_calidad                        paso         1  ya lo dice el PASO 2 del superviviente
+        Convocar representantes de cada departamento de la organización
+   19 equipo_mejora_calidad                        paso         2  PASO 6 del superviviente
+        Orientar al equipo sobre el contenido y propósito del programa de calidad
+   19 equipo_mejora_calidad                        paso         3  ya lo dice el PASO 5 del superviviente
+        Definir el rol de cada miembro como agente de cambio en su departamento
+   19 equipo_mejora_calidad                        paso         4  ya lo dice el PASO 1 del superviviente
+        Nombrar un presidente o líder del equipo
+   19 equipo_mejora_calidad                        condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando ya existe compromiso gerencial y se necesita estructura organizacional para ejecutar el programa
+   20 rol_facilitador_black_belt                   paso         1  ya lo dice el PASO 2 del superviviente
+        Asignar un facilitador o Black Belt capacitado a cada equipo, especialmente en fases iniciales
+   20 rol_facilitador_black_belt                   paso         2  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Entrenar al facilitador en construcción de equipos, herramientas de mejora y comunicación
+   20 rol_facilitador_black_belt                   paso         3  PASO 5 del superviviente
+        Usar al facilitador para detectar cuándo el equipo se estanca y redirigir el proyecto
+   20 rol_facilitador_black_belt                   paso         4  PASO 6 del superviviente
+        Reducir gradualmente el soporte de facilitación conforme el equipo gana experiencia
+   20 rol_facilitador_black_belt                   condicion    1  CONDICION 3 del superviviente
+        Cuando la organización está iniciando su cultura de mejora continua y necesita soporte experto
+   20 rol_facilitador_black_belt                   condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando un equipo muestra señales de estancamiento o conflicto interno
+   21 interpretacion_cpk                           paso         1  ya lo dice el PASO 3 del superviviente
+        Calcular el Cpk usando la fórmula estándar con USL, LSL, media y desviación estándar
+   21 interpretacion_cpk                           paso         2  PASO 6 del superviviente
+        Revisar siempre el histograma del proceso, no solo el valor numérico de Cpk
+   21 interpretacion_cpk                           paso         3  ya lo dice el PASO 5 del superviviente
+        Determinar si la mejora requiere ajustar el promedio del proceso o reducir la variabilidad
+   21 interpretacion_cpk                           paso         4  PASO 7 del superviviente
+        Comparar con el índice Cpm si existe un valor objetivo (target) diferente de la media
+   21 interpretacion_cpk                           condicion    1  CONDICION 3 del superviviente
+        Cuando se ha calculado un Cpk y se necesita decidir qué acción tomar para mejorarlo
+   21 interpretacion_cpk                           condicion    2  CONDICION 4 del superviviente
+        Cuando se comparan procesos con el mismo Cpk pero comportamientos distintos
+   22 barreras_orgullo_trabajo                     paso         1  ya lo dice el PASO 1 del superviviente
+        Realizar entrevistas con trabajadores para identificar barreras percibidas
+   22 barreras_orgullo_trabajo                     paso         2  PASO 5 del superviviente
+        Clasificar barreras según sean responsabilidad de gestión o del sistema
+   22 barreras_orgullo_trabajo                     paso         3  ya lo dice el PASO 3 del superviviente
+        Diseñar un plan de acción para remover barreras priorizadas
+   22 barreras_orgullo_trabajo                     paso         4  PASO 6 del superviviente
+        Reemplazar carteles y exhortaciones por comunicación real de avances
+   22 barreras_orgullo_trabajo                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando existe baja moral o desmotivación en planta
+   23 histogramas_distribucion_frecuencias         paso         1  PASO 8 del superviviente
+        Recopilar al menos 40 puntos de datos para un histograma (u 8 para box plot)
+   23 histogramas_distribucion_frecuencias         paso         2  ya lo dice el PASO 2 del superviviente
+        Organizar los datos por tamaño en intervalos
+   23 histogramas_distribucion_frecuencias         paso         3  ya lo dice el PASO 4 del superviviente
+        Graficar la frecuencia de ocurrencia de cada intervalo
+   23 histogramas_distribucion_frecuencias         paso         4  ya lo dice el PASO 6 del superviviente
+        Analizar la forma de la distribución para identificar posibles causas de variación
+   23 histogramas_distribucion_frecuencias         paso         5  PASO 9 del superviviente
+        Comparar múltiples distribuciones usando box plots si es necesario
+   23 histogramas_distribucion_frecuencias         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se requiere entender la forma de distribución de un conjunto de datos de proceso
+   23 histogramas_distribucion_frecuencias         condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Al iniciar un análisis de causas de variación
+   24 criticas_muestreo_aceptacion                 paso         1  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Deja de usar poco a poco los planes de muestreo por aceptación como tu control final de calidad
+   24 criticas_muestreo_aceptacion                 paso         2  ya lo dice el PASO 4 del superviviente
+        Cambia la inspección de lotes por el control estadístico de tu proceso en tiempo real
+   24 criticas_muestreo_aceptacion                 paso         3  ya lo dice el PASO 3 del superviviente
+        Trabaja junto a tus proveedores para asegurar la calidad desde el origen, no en la revisión final
+   24 criticas_muestreo_aceptacion                 paso         4  ya lo dice el PASO 2 del superviviente
+        Calcula cuánto te cuesta realmente seguir usando el muestreo por aceptación
+   24 criticas_muestreo_aceptacion                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si hoy controlas la calidad de tus lotes, entrantes o salientes, usando planes de muestreo por aceptación
+   25 validacion_datos_benchmarking                paso         1  ya lo dice el PASO 1 del superviviente
+        Incorporar verificaciones automáticas en el instrumento de recolección de datos para prevenir errores de entrada.
+   25 validacion_datos_benchmarking                paso         2  PASO 8 del superviviente
+        Solicitar a los participantes realizar una primera revisión manual antes de enviar sus datos.
+   25 validacion_datos_benchmarking                paso         3  ya lo dice el PASO 4 del superviviente
+        Aplicar un proceso de verificación manual en tres pasos: completitud, integridad y consistencia de los datos.
+   25 validacion_datos_benchmarking                paso         4  PASO 9 del superviviente
+        Resolver discrepancias mediante contacto directo con los participantes antes de consolidar el análisis final.
+   25 validacion_datos_benchmarking                condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando se han recolectado datos de múltiples participantes y se requiere asegurar su calidad antes del análisis.
+   25 validacion_datos_benchmarking                condicion    2  CONDICION 3 del superviviente
+        Si existen inconsistencias o dudas sobre la fiabilidad de los datos recibidos.
+   26 rotacion_de_puestos_para_mejora_calidad      paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar áreas o departamentos relacionados donde el intercambio de personal sea viable
+   26 rotacion_de_puestos_para_mejora_calidad      paso         2  ya lo dice el PASO 2 del superviviente
+        Acordar con otro supervisor un intercambio temporal (por ejemplo, una semana) de algunos empleados
+   26 rotacion_de_puestos_para_mejora_calidad      paso         3  ya lo dice el PASO 4 del superviviente
+        Observar y documentar cambios en comprensión, motivación y resultados de calidad
+   26 rotacion_de_puestos_para_mejora_calidad      paso         4  PASO 6 del superviviente
+        Fomentar que los empleados discutan sus problemas y ambiciones con el supervisor
+   26 rotacion_de_puestos_para_mejora_calidad      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando existe baja comprensión del proceso total entre empleados de distintas áreas
+   26 rotacion_de_puestos_para_mejora_calidad      condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se busca mejorar el compromiso y la calidad sin recurrir a esquemas motivacionales artificiales
+   27 control_estadistico_no_implica_cero_defectos paso         1  ya lo dice el PASO 3 del superviviente
+        Verificar mediante carta de control si el proceso está en estado de control estadístico
+   27 control_estadistico_no_implica_cero_defectos paso         2  PASO 5 del superviviente
+        Aceptar que estar en control no equivale a cumplir especificaciones
+   27 control_estadistico_no_implica_cero_defectos paso         3  PASO 6 del superviviente
+        Iniciar intervención en el sistema (cambio de diseño, método, materiales) para reducir el nivel de defectos una vez confirmado el control
+   27 control_estadistico_no_implica_cero_defectos paso         4  PASO 7 del superviviente
+        Distinguir entre cambiar el nivel promedio (más simple) y reducir la dispersión (usualmente más difícil)
+   27 control_estadistico_no_implica_cero_defectos condicion    1  CONDICION 4 del superviviente
+        Cuando el equipo confunda 'proceso estable' con 'proceso libre de defectos'
+   27 control_estadistico_no_implica_cero_defectos condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando se requiera planificar mejoras después de confirmar estabilidad del proceso
+   28 benchmarking_mejores_practicas               paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar procesos clave a comparar (diseño, logística, ventas, etc.)
+   28 benchmarking_mejores_practicas               paso         2  ya lo dice el PASO 2 del superviviente
+        Seleccionar organizaciones reconocidas como mejores en clase para esos procesos
+   28 benchmarking_mejores_practicas               paso         3  PASO 8 del superviviente
+        Subcontratar o realizar el estudio de benchmarking comparando prácticas
+   28 benchmarking_mejores_practicas               paso         4  ya lo dice el PASO 4 del superviviente
+        Identificar brechas entre el desempeño propio y las mejores prácticas encontradas
+   28 benchmarking_mejores_practicas               condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando se busca identificar oportunidades de mejora disruptiva comparando con estándares externos
+   28 benchmarking_mejores_practicas               condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si la organización desconoce su posición relativa frente a las mejores prácticas del sector
+   30 eliminacion_causas_error_2                   paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Distribuye formularios simples de una página en cada área de trabajo, a la vista de todos.
+   30 eliminacion_causas_error_2                   paso         2  ya lo dice el PASO 2 del superviviente
+        Asegúrate de que quien presenta un ECR reciba una nota de agradecimiento inmediata.
+   30 eliminacion_causas_error_2                   paso         3  ya lo dice el PASO 3 del superviviente
+        Toma en serio cada ECR presentado, sin excepción.
+   30 eliminacion_causas_error_2                   paso         4  ya lo dice el PASO 5 del superviviente
+        Si decides no actuar sobre un ECR, valida esa decisión con alguien más antes de descartarlo.
+   30 eliminacion_causas_error_2                   paso         5  ya lo dice el PASO 4 del superviviente
+        Responde rápido para generar credibilidad y fomentar que sigan participando.
+   30 eliminacion_causas_error_2                   paso         6  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Usa incentivos simples (por ejemplo, un sorteo semanal o un reconocimiento visible) para estimular la participación.
+   30 eliminacion_causas_error_2                   condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando enfrentas obstáculos operativos que dificultan cumplir con los estándares de calidad y no tienes un canal claro para comunicarlos.
+   30 eliminacion_causas_error_2                   condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Si necesitas un mecanismo de retroalimentación continua entre quienes ejecutan el trabajo y quien decide, dentro de tu sistema de mejora de calidad.
+   31 preparacion_gerencial_antes_de_circulos_de_calidad paso         1  ya lo dice el PASO 1 del superviviente
+        Entender primero cuál es tu responsabilidad para remover los obstáculos que aparezcan
+   31 preparacion_gerencial_antes_de_circulos_de_calidad paso         2  ya lo dice el PASO 3 del superviviente
+        Establecer una forma clara de actuar sobre lo que los círculos te recomienden
+   31 preparacion_gerencial_antes_de_circulos_de_calidad paso         3  ya lo dice el PASO 1 del superviviente
+        Solo después de lo anterior, forma círculos de calidad con las personas que te ayudan
+   31 preparacion_gerencial_antes_de_circulos_de_calidad paso         4  PASO 6 del superviviente
+        Registra y comunica las acciones que tomas en respuesta a lo que el círculo identifica
+   31 preparacion_gerencial_antes_de_circulos_de_calidad condicion    1  CONDICION 3 del superviviente
+        Cuando piensas implementar círculos de calidad sin haberte preparado antes para actuar sobre lo que descubran
+   32 concepto_autocontrol                         paso         1  ya lo dice el PASO 2 del superviviente
+        Darle a la persona que te ayuda especificaciones claras del producto y del proceso
+   32 concepto_autocontrol                         paso         2  ya lo dice el PASO 2 del superviviente
+        Establecer una forma de retroalimentación rápida y fácil de entender sobre su desempeño
+   32 concepto_autocontrol                         paso         3  ya lo dice el PASO 1 del superviviente
+        Asegurarte de que el proceso sea capaz y responda de forma predecible a los ajustes
+   32 concepto_autocontrol                         paso         4  PASO 6 del superviviente
+        Entrenar a la persona que te ayuda en el uso de los mecanismos para corregir el proceso
+   32 concepto_autocontrol                         paso         5  ya lo dice el PASO 5 del superviviente
+        Hacer un análisis simple para determinar el origen real de los defectos
+   32 concepto_autocontrol                         condicion    1  CONDICION 3 del superviviente
+        Cuando existen defectos crónicos sin causa clara
+   32 concepto_autocontrol                         condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando quieres definir si un defecto es responsabilidad de la persona que te ayuda o tuya
+   33 politica_calidad_organizacional              paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Redactar una declaración de política de calidad que priorice la satisfacción del cliente y la reducción de costos de mala calidad
+   33 politica_calidad_organizacional              paso         2  PASO 5 del superviviente
+        Incluir la política en el manual organizacional
+   33 politica_calidad_organizacional              paso         3  ya lo dice el PASO 4 del superviviente
+        Comunicar la política a toda la organización
+   33 politica_calidad_organizacional              paso         4  ya lo dice el PASO 3 del superviviente
+        Establecer mecanismos de seguimiento y cumplimiento de la política
+   33 politica_calidad_organizacional              condicion    1  CONDICION 2 del superviviente
+        Cuando se inicia un manual de calidad organizacional
+   33 politica_calidad_organizacional              condicion    2  CONDICION 3 del superviviente
+        Si la organización necesita alinear decisiones gerenciales con objetivos de calidad
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 15
+  nodos implicados    : 30
+  nodos que MUEREN    : 15
+  piezas repartidas   : 90 (30 viajan enteras, 55 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 2
+
+ESCRITO. ficheros tocados: 72
+censo DESPUES: 3853 ficheros, 3311 vivos, 542 deprecados
+censo ANTES  : 3853 ficheros, 3326 vivos, 527 deprecados
+delta deprecados: +15 (esperado +15): OK

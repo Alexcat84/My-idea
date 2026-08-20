@@ -6,14 +6,18 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El facilitador es un agente externo al equipo de proyecto que ayuda a mejorar las relaciones humanas, asiste en asuntos fuera del alcance del equipo, apoya a los miembros manteniendo el foco en la meta, cuestiona afirmaciones sin sustento y reporta el progreso a los consejos de calidad. Requiere entrenamiento especializado en construcción de equipos, resolución de conflictos y conocimiento de las herramientas de breakthrough.",
   "pasos_accionables": [
-    "Capacitar al facilitador en team building, resolución de conflictos y comunicación",
+    "Capacitar al facilitador en team building, resolución de conflictos y comunicación, ademas de herramientas de mejora",
     "Asignar facilitador de forma parcial durante la fase de arranque del proyecto",
     "Usar preguntas para desafiar teorías sin evidencia dentro del equipo",
-    "Reportar avances del equipo a los consejos de calidad periódicamente"
+    "Reportar avances del equipo a los consejos de calidad periódicamente",
+    "Usar al facilitador para detectar cuándo el equipo se estanca y redirigir el proyecto",
+    "Reducir gradualmente el soporte de facilitación conforme el equipo gana experiencia"
   ],
   "entregable_esperado": "Plan de facilitación con roles definidos y reportes periódicos de avance del equipo",
   "nodos_previos": [
-    "concepto_proyecto_breakthrough"
+    "concepto_proyecto_breakthrough",
+    "formacion_equipo_proyecto",
+    "rol_lider_equipo_calidad"
   ],
   "nodos_siguientes": [
     "rol_black_belt_six_sigma",
@@ -21,7 +25,18 @@
   ],
   "condiciones_activacion": [
     "Si el equipo presenta fricciones internas",
-    "Si el proyecto requiere decisiones fuera del alcance del equipo"
+    "Si el proyecto requiere decisiones fuera del alcance del equipo",
+    "Cuando la organización está iniciando su cultura de mejora continua y necesita soporte experto"
   ],
-  "etiqueta_arbol": "El Facilitador de tu Equipo"
+  "etiqueta_arbol": "El Facilitador de tu Equipo",
+  "ids_alias": [
+    "rol_facilitador_black_belt"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "rol_facilitador_black_belt",
+      "titulo": "Facilitadores y Black Belts en Proyectos de Mejora",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

@@ -3161,7 +3161,7 @@
       ],
       "nodos_siguientes": [
         "mejora_continua_del_proceso",
-        "interpretacion_cpk"
+        "indice_cpk"
       ],
       "condiciones_activacion": [
         "Cuando se necesita verificar si un proceso cumple con las especificaciones del producto",
@@ -7379,7 +7379,7 @@
       ],
       "entregable_esperado": "Un checklist de autocontrol que completas evaluando los tres criterios (saber qué hacer, saber cómo te estás desempeñando, poder ajustar el proceso) y un plan de acción para las brechas que encuentres",
       "nodos_previos": [
-        "concepto_autocontrol"
+        "autocontrol_y_controlabilidad"
       ],
       "nodos_siguientes": [
         "control_calidad_operaciones_servicio",
@@ -7405,7 +7405,8 @@
         "Dar a quien ejecuta el trabajo manera de conocer las metas y su desempeño real",
         "Dar mecanismos concretos para ajustar el proceso y corregir desviaciones",
         "Usar una lista de verificación por proceso para confirmar que se cumplen las condiciones de autocontrol",
-        "Antes de culpar a alguien por un error, revisar si la responsabilidad es tuya, por cómo diseñaste el proceso, o de quien lo ejecutó"
+        "Antes de culpar a alguien por un error, revisar si la responsabilidad es tuya, por cómo diseñaste el proceso, o de quien lo ejecutó",
+        "Entrenar a la persona que te ayuda en el uso de los mecanismos para corregir el proceso"
       ],
       "entregable_esperado": "Una lista de verificación de autocontrol para cada proceso clave de tu negocio, que te permita distinguir errores de diseño, que son tuyos, de errores de ejecución",
       "nodos_previos": [
@@ -7413,16 +7414,32 @@
         "bucle_retroalimentacion_control",
         "caracteristicas_clave_producto_proceso",
         "planificacion_inicial_calidad",
-        "key_process_product_characteristics"
+        "key_process_product_characteristics",
+        "validacion_sistema_medicion",
+        "validacion_sistema_medicion_2"
       ],
       "nodos_siguientes": [
-        "auto_inspeccion"
+        "auto_inspeccion",
+        "autocontrol_planificacion_servicio",
+        "feedback_supervisores_trabajadores",
+        "mantenimiento_productivo_total"
       ],
       "condiciones_activacion": [
         "Cuando necesitas decidir quién es responsable de un defecto de calidad",
-        "Si estás pensando en motivar a quien te ayuda para mejorar la calidad, antes de invertir tiempo o dinero en eso"
+        "Si estás pensando en motivar a quien te ayuda para mejorar la calidad, antes de invertir tiempo o dinero en eso",
+        "Cuando existen defectos crónicos sin causa clara"
       ],
-      "etiqueta_arbol": "Verifica si tu Equipo puede Autocontrolarse"
+      "etiqueta_arbol": "Verifica si tu Equipo puede Autocontrolarse",
+      "ids_alias": [
+        "concepto_autocontrol"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "concepto_autocontrol",
+          "titulo": "Concepto de Autocontrol de la Persona que te Ayuda",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "autoevaluacion_gerencial_exportacion": {
       "node_id": "autoevaluacion_gerencial_exportacion",
@@ -7952,7 +7969,8 @@
       "condiciones_activacion": [
         "Cuando existe baja moral o desmotivación en planta"
       ],
-      "etiqueta_arbol": "Quita las Barreras al Orgullo Laboral"
+      "etiqueta_arbol": "Quita las Barreras al Orgullo Laboral",
+      "deprecado": true
     },
     "batna_definicion": {
       "fase_proyecto": "ejecucion",
@@ -8175,7 +8193,8 @@
         "Cuando se busca identificar oportunidades de mejora disruptiva comparando con estándares externos",
         "Si la organización desconoce su posición relativa frente a las mejores prácticas del sector"
       ],
-      "etiqueta_arbol": "Aprende de los Mejores"
+      "etiqueta_arbol": "Aprende de los Mejores",
+      "deprecado": true
     },
     "benchmarking_prioritizacion_sostenibilidad": {
       "node_id": "benchmarking_prioritizacion_sostenibilidad",
@@ -8219,21 +8238,35 @@
         "Analizar los hallazgos y detectar las brechas de desempeño",
         "Identificar las prácticas líderes que permiten ese desempeño superior",
         "Desarrollar e implementar planes de acción de mejora basados en lo que encontraste",
-        "Evaluar los resultados y replicar el aprendizaje en tu negocio"
+        "Evaluar los resultados y replicar el aprendizaje en tu negocio",
+        "Subcontratar o realizar el estudio de benchmarking comparando prácticas"
       ],
       "entregable_esperado": "Informe de benchmarking con las brechas de desempeño cuantificadas, las prácticas líderes identificadas y un plan de acción de mejora que tú decides poner en marcha",
       "nodos_previos": [
-        "dmadv_fase_verificacion"
+        "dmadv_fase_verificacion",
+        "ciclo_adaptativo_inteligencia"
       ],
       "nodos_siguientes": [
         "clasificacion_benchmarking",
-        "recoleccion_validacion_datos_benchmarking"
+        "recoleccion_validacion_datos_benchmarking",
+        "decide_phase_roadmap",
+        "juran_transformation_roadmap"
       ],
       "condiciones_activacion": [
         "Cuando necesitas establecer metas creíbles basadas en referencias externas para tu planificación estratégica",
         "Cuando necesitas identificar oportunidades de mejora de desempeño comparando de forma objetiva con otros negocios o procesos"
       ],
-      "etiqueta_arbol": "Compárate para Mejorar Siempre"
+      "etiqueta_arbol": "Compárate para Mejorar Siempre",
+      "ids_alias": [
+        "benchmarking_mejores_practicas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "benchmarking_mejores_practicas",
+          "titulo": "Benchmarking de Mejores Prácticas",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "benchmarking_prospectivo_futuro": {
       "node_id": "benchmarking_prospectivo_futuro",
@@ -12750,7 +12783,8 @@
         "Fija una fecha de lanzamiento (Día de Cero Defectos) tras un periodo breve de preparación para darle visibilidad",
         "Reconoce el desempeño alineado al estándar de forma genuina, evitando el efectivo como único mecanismo",
         "Extiende el estándar a todas tus áreas de trabajo, no solo a la producción o entrega del producto",
-        "Repite y refuerza el mensaje de forma constante hasta que se vuelva parte habitual de tu forma de trabajar"
+        "Repite y refuerza el mensaje de forma constante hasta que se vuelva parte habitual de tu forma de trabajar",
+        "Eliminar el lenguaje que normaliza niveles aceptables de error (AQL)"
       ],
       "entregable_esperado": "Declaración personal de compromiso con Cero Defectos, con fecha de lanzamiento, mecanismo de reconocimiento no monetario y plan de refuerzo periódico documentado.",
       "nodos_previos": [
@@ -12767,7 +12801,8 @@
         "critica_acceptable_quality_level",
         "costo_de_la_no_calidad",
         "definicion_calidad_conformidad_requisitos_3",
-        "costo_de_mala_calidad_copq"
+        "costo_de_mala_calidad_copq",
+        "perfeccionismo_vs_valor"
       ],
       "nodos_siguientes": [
         "eliminacion_causas_error",
@@ -12777,20 +12812,23 @@
         "programa_make_certain_3",
         "medicion_calidad_2",
         "concepto_reconocimiento_ring_of_quality",
-        "equipo_mejora_calidad",
+        "equipo_mejora_calidad_2",
         "consejo_de_calidad",
-        "equipo_mejora_calidad_2"
+        "concepto_vs_tecnica",
+        "medicion_calidad"
       ],
       "condiciones_activacion": [
         "Cuando aceptas el error como algo inevitable en tu forma de trabajar",
         "Cuando necesitas un cambio de actitud sostenido hacia la prevención de defectos, más allá de una campaña temporal",
-        "Cuando tienes un estándar de desempeño pero no lo has comunicado con claridad a quienes te rodean"
+        "Cuando tienes un estándar de desempeño pero no lo has comunicado con claridad a quienes te rodean",
+        "Al iniciar un programa de mejora de calidad"
       ],
       "etiqueta_arbol": "Apunta a Cero Defectos",
       "ids_alias": [
         "cero_defectos_zd",
         "concepto_zero_defects",
-        "programa_zero_defects"
+        "programa_zero_defects",
+        "filosofia_zero_defectos"
       ],
       "merged_originals": [
         {
@@ -12806,6 +12844,11 @@
         {
           "node_id": "programa_zero_defects",
           "titulo": "Programa de Cero Defectos (Zero Defects)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "filosofia_zero_defectos",
+          "titulo": "Filosofía de Cero Defectos",
           "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
         }
       ]
@@ -13550,7 +13593,7 @@
       ],
       "nodos_siguientes": [
         "estudio_lealtad_cliente",
-        "benchmarking_mejores_practicas"
+        "benchmarking_proceso"
       ],
       "condiciones_activacion": [
         "Cuando se requiere monitoreo continuo del entorno para sostener ventaja competitiva",
@@ -14527,21 +14570,35 @@
         "Deja que las personas que trabajan contigo elijan los temas y proyectos que quieren resolver",
         "Crea un mecanismo real de seguimiento para que tú actúes sobre las propuestas que surjan",
         "Evita convertir el círculo en una estructura formal y burocrática",
-        "Reconoce los logros del grupo por encima de premios en dinero para una sola persona"
+        "Reconoce los logros del grupo por encima de premios en dinero para una sola persona",
+        "Registra y comunica las acciones que tomas en respuesta a lo que el círculo identifica"
       ],
       "entregable_esperado": "Un círculo de calidad funcionando, con tu compromiso por escrito de actuar sobre lo que recomienden",
       "nodos_previos": [
         "mito_departamento_control_calidad",
-        "falacia_culpa_trabajadores"
+        "falacia_culpa_trabajadores",
+        "transformacion_gerencial_para_la_calidad"
       ],
       "nodos_siguientes": [
-        "falsos_comienzos_mejora_calidad"
+        "falsos_comienzos_mejora_calidad",
+        "eliminacion_barreras_orgullo_del_trabajo"
       ],
       "condiciones_activacion": [
         "Si quieres involucrar a las personas que trabajan contigo en la mejora de la calidad",
-        "Si te interesa adoptar prácticas japonesas de calidad en tu negocio"
+        "Si te interesa adoptar prácticas japonesas de calidad en tu negocio",
+        "Cuando piensas implementar círculos de calidad sin haberte preparado antes para actuar sobre lo que descubran"
       ],
-      "etiqueta_arbol": "Escucha los Círculos de Calidad"
+      "etiqueta_arbol": "Escucha los Círculos de Calidad",
+      "ids_alias": [
+        "preparacion_gerencial_antes_de_circulos_de_calidad"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "preparacion_gerencial_antes_de_circulos_de_calidad",
+          "titulo": "Preparación previa a los Círculos de Calidad",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "circulos_de_calidad_para_mejora_operativa": {
       "node_id": "circulos_de_calidad_para_mejora_operativa",
@@ -15575,7 +15632,7 @@
         "medicion_capacidad_servicio"
       ],
       "nodos_siguientes": [
-        "politica_calidad_organizacional",
+        "comunicar_politicas_organizacionales",
         "normas_culturales_calidad"
       ],
       "condiciones_activacion": [
@@ -17070,7 +17127,7 @@
         "rejilla_madurez_gestion_calidad"
       ],
       "nodos_siguientes": [
-        "equipo_mejora_calidad",
+        "equipo_mejora_calidad_2",
         "medicion_calidad",
         "politica_formal_de_calidad"
       ],
@@ -17662,22 +17719,40 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Una política es una guía para la acción gerencial. Las políticas de calidad publicadas suelen declarar la intención de satisfacer las necesidades del cliente, igualar o superar a la competencia y comprometerse con la mejora continua. Deben ser aprobadas al más alto nivel y sujetas a auditoría (p.ej. bajo ISO 9000).",
       "pasos_accionables": [
-        "Redactar políticas de calidad que cubran necesidades del cliente, competitividad y mejora continua",
+        "Redactar políticas de calidad que cubran necesidades del cliente, competitividad y mejora continua, mas la reducción de costos de mala calidad",
         "Obtener aprobación al más alto nivel ejecutivo",
         "Establecer mecanismos de auditoría para verificar el cumplimiento de las políticas",
-        "Comunicar las políticas a toda la organización como guía de decisiones diarias"
+        "Comunicar las políticas a toda la organización como guía de decisiones diarias",
+        "Incluir la política en el manual organizacional"
       ],
       "entregable_esperado": "Documento de política de calidad aprobado, auditable y comunicado en toda la organización",
       "nodos_previos": [
-        "articular_etica_valores"
+        "articular_etica_valores",
+        "codigo_conducta_orientado_cliente"
       ],
       "nodos_siguientes": [
-        "desplegar_metas_organizacion"
+        "desplegar_metas_organizacion",
+        "consejo_de_calidad_y_rol_del_director",
+        "normas_culturales_calidad",
+        "recursos_humanos_cultura",
+        "sostenibilidad_agil"
       ],
       "condiciones_activacion": [
-        "Cuando la organización requiere formalizar su compromiso de calidad ante clientes y auditorías"
+        "Cuando la organización requiere formalizar su compromiso de calidad ante clientes y auditorías",
+        "Cuando se inicia un manual de calidad organizacional",
+        "Si la organización necesita alinear decisiones gerenciales con objetivos de calidad"
       ],
-      "etiqueta_arbol": "Comunica Tus Políticas de Calidad"
+      "etiqueta_arbol": "Comunica Tus Políticas de Calidad",
+      "ids_alias": [
+        "politica_calidad_organizacional"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "politica_calidad_organizacional",
+          "titulo": "Política de Calidad Organizacional",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "comunidad_como_activo_estrategico": {
       "node_id": "comunidad_como_activo_estrategico",
@@ -17789,7 +17864,8 @@
         "Cuando existen defectos crónicos sin causa clara",
         "Cuando quieres definir si un defecto es responsabilidad de la persona que te ayuda o tuya"
       ],
-      "etiqueta_arbol": "Fomenta el Autocontrol del Trabajador"
+      "etiqueta_arbol": "Fomenta el Autocontrol del Trabajador",
+      "deprecado": true
     },
     "concepto_costo_de_calidad": {
       "node_id": "concepto_costo_de_calidad",
@@ -18201,7 +18277,7 @@
       ],
       "entregable_esperado": "Documento o análisis que reconozca y cuantifique la variación del proceso antes de tomar decisiones",
       "nodos_previos": [
-        "histogramas_distribucion_frecuencias"
+        "histograma"
       ],
       "nodos_siguientes": [
         "distribuciones_probabilidad",
@@ -18242,7 +18318,7 @@
       ],
       "entregable_esperado": "Mensaje institucional que combine claramente el fundamento filosófico (concepto) con las herramientas prácticas (técnica) del programa",
       "nodos_previos": [
-        "filosofia_zero_defectos"
+        "cero_defectos"
       ],
       "nodos_siguientes": [
         "medicion_calidad"
@@ -18302,7 +18378,7 @@
         "medicion_de_calidad",
         "costo_de_calidad_4",
         "programa_mejora_calidad_14_pasos",
-        "rotacion_de_puestos_para_mejora_calidad",
+        "intercambio_de_roles_para_motivacion",
         "costo_de_mala_calidad_copq"
       ],
       "nodos_siguientes": [
@@ -19333,7 +19409,7 @@
       ],
       "entregable_esperado": "Consejo de calidad operativo con estructura propia, reuniones regulares contigo y canal abierto de comunicación bidireccional.",
       "nodos_previos": [
-        "equipo_mejora_calidad"
+        "equipo_mejora_calidad_2"
       ],
       "nodos_siguientes": [
         "involucramiento_sindical",
@@ -19408,7 +19484,7 @@
       ],
       "entregable_esperado": "Un documento simple con los roles, responsabilidades y calendario de revisiones de tu consejo de calidad",
       "nodos_previos": [
-        "politica_calidad_organizacional"
+        "comunicar_politicas_organizacionales"
       ],
       "nodos_siguientes": [
         "transferencia_de_actividades_a_departamentos_de_linea",
@@ -21581,7 +21657,10 @@
         "Recolectar datos secuenciales del proceso (por hora, por lote, etc.)",
         "Construir gráficos de control (X-barra y R) con los datos",
         "Identificar y eliminar causas especiales de variación hasta que el proceso muestre estabilidad",
-        "Una vez estable, calcular la capacidad real del proceso"
+        "Una vez estable, calcular la capacidad real del proceso",
+        "Aceptar que estar en control no equivale a cumplir especificaciones",
+        "Iniciar intervención en el sistema (cambio de diseño, método, materiales) para reducir el nivel de defectos una vez confirmado el control",
+        "Distinguir entre cambiar el nivel promedio (más simple) y reducir la dispersión (usualmente más difícil)"
       ],
       "entregable_esperado": "Gráfico de control validado que demuestre estabilidad estadística del proceso, con causas especiales documentadas y eliminadas.",
       "nodos_previos": [
@@ -21592,14 +21671,26 @@
       "nodos_siguientes": [
         "capacidad_del_proceso",
         "graficos_de_control_uso",
-        "limites_de_especificacion_vs_limites_de_control"
+        "limites_de_especificacion_vs_limites_de_control",
+        "estudio_mezclas_multiples_fuentes"
       ],
       "condiciones_activacion": [
         "Cuando el usuario depende de inspección final para garantizar calidad",
         "Cuando hay variabilidad inexplicada en la producción",
-        "Antes de intentar mejorar un proceso, para saber si es estable"
+        "Antes de intentar mejorar un proceso, para saber si es estable",
+        "Cuando el equipo confunda 'proceso estable' con 'proceso libre de defectos'"
       ],
-      "etiqueta_arbol": "Confirma que tu Proceso Esté Estable"
+      "etiqueta_arbol": "Confirma que tu Proceso Esté Estable",
+      "ids_alias": [
+        "control_estadistico_no_implica_cero_defectos"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "control_estadistico_no_implica_cero_defectos",
+          "titulo": "Control Estadístico No Implica Ausencia de Defectos",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "control_estadistico_metodo_medicion": {
       "node_id": "control_estadistico_metodo_medicion",
@@ -21669,7 +21760,8 @@
         "Cuando el equipo confunda 'proceso estable' con 'proceso libre de defectos'",
         "Cuando se requiera planificar mejoras después de confirmar estabilidad del proceso"
       ],
-      "etiqueta_arbol": "No Confundas Control con Perfección"
+      "etiqueta_arbol": "No Confundas Control con Perfección",
+      "deprecado": true
     },
     "control_estadistico_proceso": {
       "node_id": "control_estadistico_proceso",
@@ -23264,9 +23356,8 @@
         "conciencia_de_calidad",
         "conciencia_calidad",
         "concepto_programa_catorce_pasos",
-        "equipo_mejora_calidad",
-        "programa_zero_defects",
         "equipo_mejora_calidad_2",
+        "programa_zero_defects",
         "cero_defectos",
         "sistema_medicion_kpi",
         "auditoria_negocio",
@@ -24936,7 +25027,8 @@
       "condiciones_activacion": [
         "Si hoy controlas la calidad de tus lotes, entrantes o salientes, usando planes de muestreo por aceptación"
       ],
-      "etiqueta_arbol": "No Confíes en el Muestreo"
+      "etiqueta_arbol": "No Confíes en el Muestreo",
+      "deprecado": true
     },
     "cronograma_proyecto": {
       "node_id": "cronograma_proyecto",
@@ -28691,7 +28783,7 @@
       "entregable_esperado": "Plan de implementación con infraestructura, metodología, metas y milestones definidos",
       "nodos_previos": [
         "juran_transformation_roadmap",
-        "benchmarking_mejores_practicas",
+        "benchmarking_proceso",
         "estudio_lealtad_cliente"
       ],
       "nodos_siguientes": [
@@ -30152,7 +30244,7 @@
         "programa_zero_defects",
         "costo_de_calidad_diagnostico",
         "programa_mejora_calidad_14_pasos",
-        "equipo_mejora_calidad",
+        "equipo_mejora_calidad_2",
         "costo_de_calidad_6",
         "costo_de_mala_calidad_copq"
       ],
@@ -34112,12 +34204,11 @@
       ],
       "nodos_siguientes": [
         "establecimiento_metas",
-        "eliminacion_causas_error_2",
+        "eliminacion_causas_error_4",
         "entrenamiento_supervisores_2",
         "fijacion_de_metas",
         "programa_ecr_causa_de_error",
         "reconocimiento_al_desempeno",
-        "eliminacion_causas_error_4",
         "entrenamiento_supervisores_calidad"
       ],
       "condiciones_activacion": [
@@ -37696,7 +37787,6 @@
         "experimento_cuentas_rojas"
       ],
       "nodos_siguientes": [
-        "control_estadistico_no_implica_cero_defectos",
         "control_estadistico_del_proceso"
       ],
       "condiciones_activacion": [
@@ -37906,7 +37996,7 @@
       "entregable_esperado": "Identificación y ajuste de la distribución de probabilidad apropiada para el conjunto de datos analizado",
       "nodos_previos": [
         "concepto_variacion_estadistica",
-        "histogramas_distribucion_frecuencias"
+        "histograma"
       ],
       "nodos_siguientes": [
         "inferencia_estadistica_muestreo"
@@ -41181,7 +41271,7 @@
       "entregable_esperado": "Un plan con las barreras identificadas, quien se encarga de cada una y el cronograma para resolverlas",
       "nodos_previos": [
         "eliminacion_gestion_por_objetivos_y_numeros",
-        "preparacion_gerencial_antes_de_circulos_de_calidad"
+        "circulos_calidad_qc"
       ],
       "nodos_siguientes": [
         "analisis_causa_raiz_despido_ejecutivo"
@@ -41254,7 +41344,8 @@
         "Cuando enfrentas obstáculos operativos que dificultan cumplir con los estándares de calidad y no tienes un canal claro para comunicarlos.",
         "Si necesitas un mecanismo de retroalimentación continua entre quienes ejecutan el trabajo y quien decide, dentro de tu sistema de mejora de calidad."
       ],
-      "etiqueta_arbol": "Comunica Barreras sin Culpas"
+      "etiqueta_arbol": "Comunica Barreras sin Culpas",
+      "deprecado": true
     },
     "eliminacion_causas_error_3": {
       "node_id": "eliminacion_causas_error_3",
@@ -41294,12 +41385,12 @@
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
       "resumen_teorico": "ECR es la forma en que cualquier persona que te ayuda en tu negocio te avisa, sin necesidad de proponer la solución, sobre algo que le impide hacer bien su trabajo: una herramienta que no funciona, poca luz, un proceso que no tiene sentido, etc. Se activa una vez que ya tienes clara la meta de cero errores y todos la entienden, trasladando la detección de obstáculos a quien está en el día a día. Cada aviso merece una respuesta rápida y un agradecimiento personal; si decides no actuar, esa decisión debe quedar justificada y revisada por alguien de más experiencia o confianza. Bien manejado, genera participación positiva sin volverse quejas destructivas, y sirve de base para reconocer periódicamente a quienes avisan.",
       "pasos_accionables": [
-        "Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución",
+        "Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos",
         "Envía un agradecimiento personal e inmediato a quien te avisa de un problema",
         "Clasifica y prioriza cada aviso y pásalo a quien pueda resolverlo",
         "Consigue lo necesario y actúa rápido para eliminar la causa",
         "Si decides no actuar, justifica la decisión y revísala con alguien de más experiencia o confianza antes de cerrarla",
-        "Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan"
+        "Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan, por ejemplo con un sorteo semanal o un reconocimiento visible"
       ],
       "entregable_esperado": "Sistema ECR funcionando: formulario, respuesta rápida, registro de causas reportadas y resueltas, y retroalimentación a quienes avisan.",
       "nodos_previos": [
@@ -41308,7 +41399,8 @@
         "zero_defects_concepto",
         "accion_correctiva_crosby",
         "analisis_datos_atributos",
-        "dia_cero_defectos"
+        "dia_cero_defectos",
+        "fijacion_de_metas"
       ],
       "nodos_siguientes": [
         "consejo_de_calidad",
@@ -41324,7 +41416,8 @@
       "etiqueta_arbol": "Identifica las Causas de Error",
       "ids_alias": [
         "eliminacion_causas_error_3",
-        "programa_ecr_causa_de_error"
+        "programa_ecr_causa_de_error",
+        "eliminacion_causas_error_2"
       ],
       "merged_originals": [
         {
@@ -41335,6 +41428,11 @@
         {
           "node_id": "programa_ecr_causa_de_error",
           "titulo": "Sistema ECR (Error Cause Removal)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "eliminacion_causas_error_2",
+          "titulo": "Eliminación de Causas de Error - ECR (Paso 11)",
           "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
         }
       ]
@@ -41545,21 +41643,33 @@
         "Revisa los contratos y procedimientos actuales que te exigen usar AQL o planes de muestreo estándar.",
         "Calcula el costo total que tienes con el plan de muestreo actual y compáralo con el costo de la regla óptima: revisar todo o no revisar nada.",
         "Negocia con tus proveedores y clientes para eliminar las cláusulas de AQL y acordar en base al costo total y la mejora continua.",
-        "Cambia el criterio de aceptar o rechazar lotes por un control estadístico continuo del proceso de tu proveedor."
+        "Cambia el criterio de aceptar o rechazar lotes por un control estadístico continuo del proceso de tu proveedor. Hazlo poco a poco"
       ],
       "entregable_esperado": "Un documento de política de calidad, propio, donde elimines el uso de planes de muestreo estándar y definas tus criterios según el análisis de costos y el control estadístico.",
       "nodos_previos": [
         "punto_equilibrio_calidad_inspeccion",
-        "probabilidad_falla_ensamblaje_multiple"
+        "probabilidad_falla_ensamblaje_multiple",
+        "limitaciones_intervalos_confianza"
       ],
       "nodos_siguientes": [
-        "relacion_largo_plazo_proveedor_unico"
+        "relacion_largo_plazo_proveedor_unico",
+        "mito_departamento_control_calidad"
       ],
       "condiciones_activacion": [
         "Cuando hoy aplicas planes de muestreo estándar como Military Standard 105D o tablas AQL.",
         "Cuando tus contratos con proveedores exigen niveles de calidad aceptable (AQL) sin análisis de costo."
       ],
-      "etiqueta_arbol": "Descarta Muestreos Estándar Rígidos"
+      "etiqueta_arbol": "Descarta Muestreos Estándar Rígidos",
+      "ids_alias": [
+        "criticas_muestreo_aceptacion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "criticas_muestreo_aceptacion",
+          "titulo": "Por qué revisar una muestra de cada lote no basta (muestreo de aceptación)",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "eliminar_barreras_departamentales": {
       "node_id": "eliminar_barreras_departamentales",
@@ -41799,7 +41909,7 @@
       "nodos_siguientes": [
         "responsabilidad_gerencial_causas_comunes",
         "abolir_inspeccion_masiva",
-        "barreras_orgullo_trabajo"
+        "remover_barreras_orgullo_trabajo"
       ],
       "condiciones_activacion": [
         "Cuando la organización utiliza pago por pieza como esquema de compensación principal",
@@ -42470,7 +42580,7 @@
         "equipos_blitz",
         "normas_culturales_calidad",
         "gestion_participativa_qc_circle_supervisores",
-        "rotacion_de_puestos_para_mejora_calidad"
+        "intercambio_de_roles_para_motivacion"
       ],
       "condiciones_activacion": [
         "Cuando la organización tiene un modelo de mando directivo y busca mayor compromiso del personal",
@@ -44451,7 +44561,8 @@
       "condiciones_activacion": [
         "Cuando ya existe compromiso gerencial y se necesita estructura organizacional para ejecutar el programa"
       ],
-      "etiqueta_arbol": "Arma tu Equipo de Calidad"
+      "etiqueta_arbol": "Arma tu Equipo de Calidad",
+      "deprecado": true
     },
     "equipo_mejora_calidad_2": {
       "node_id": "equipo_mejora_calidad_2",
@@ -44465,26 +44576,42 @@
         "Identifica quien representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad.",
         "Asigna a alguien que documente las reuniones, de seguimiento a las acciones y mantenga el impulso del programa.",
         "Establece una frecuencia regular de reuniones, por ejemplo semanal, con agenda y notas claras.",
-        "Define hasta dónde puede llegar este grupo para proponer y ejecutar acciones correctivas."
+        "Define hasta dónde puede llegar este grupo para proponer y ejecutar acciones correctivas.",
+        "Orientar al equipo sobre el contenido y propósito del programa de calidad"
       ],
       "entregable_esperado": "Un grupo de mejora de calidad definido, con quien lo lidera, quien participa, quien documenta y un calendario de reuniones establecido.",
       "nodos_previos": [
         "programa_zero_defects",
         "costo_de_la_no_calidad",
         "cero_defectos",
-        "costo_de_mala_calidad_copq"
+        "costo_de_mala_calidad_copq",
+        "compromiso_gerencial_calidad",
+        "definicion_calidad_conformidad",
+        "programa_mejora_calidad_14_pasos"
       ],
       "nodos_siguientes": [
         "consejo_de_calidad",
         "involucramiento_sindical",
-        "involucramiento_sindical_calidad"
+        "involucramiento_sindical_calidad",
+        "consejo_de_calidad_2",
+        "medicion_calidad"
       ],
       "condiciones_activacion": [
         "Si ya tienes varias personas trabajando contigo, incluso si tu negocio tiene personal sindicalizado.",
         "Cuando decides lanzar formalmente un programa de mejora de calidad en tu negocio.",
         "Cuando necesitas coordinar distintas áreas de tu negocio para resolver problemas de calidad que las atraviesan a todas."
       ],
-      "etiqueta_arbol": "Lidera con tu Equipo de Calidad"
+      "etiqueta_arbol": "Lidera con tu Equipo de Calidad",
+      "ids_alias": [
+        "equipo_mejora_calidad"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "equipo_mejora_calidad",
+          "titulo": "Paso Dos: Equipo de Mejora de Calidad",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        }
+      ]
     },
     "equipo_multifuncional": {
       "node_id": "equipo_multifuncional",
@@ -49036,7 +49163,7 @@
       ],
       "entregable_esperado": "Cartas de control individuales por fuente y plan de acción priorizado para las fuentes más problemáticas",
       "nodos_previos": [
-        "control_estadistico_no_implica_cero_defectos"
+        "control_estadistico_del_proceso"
       ],
       "nodos_siguientes": [
         "distincion_causas_comunes_especiales",
@@ -54289,7 +54416,7 @@
       ],
       "entregable_esperado": "Sistema de retroalimentación de calidad implementado a nivel de trabajador y supervisor",
       "nodos_previos": [
-        "concepto_autocontrol"
+        "autocontrol_y_controlabilidad"
       ],
       "nodos_siguientes": [
         "mantenimiento_productivo_total"
@@ -54571,7 +54698,7 @@
       ],
       "nodos_siguientes": [
         "eliminacion_causas_error",
-        "eliminacion_causas_error_2",
+        "eliminacion_causas_error_4",
         "reconocimiento_al_desempeno",
         "brainstorming"
       ],
@@ -54731,7 +54858,8 @@
         "Cuando la organización acepta implícitamente niveles de error como normales",
         "Al iniciar un programa de mejora de calidad"
       ],
-      "etiqueta_arbol": "Adopta Cero Defectos como Norma"
+      "etiqueta_arbol": "Adopta Cero Defectos como Norma",
+      "deprecado": true
     },
     "fin_precio_como_criterio_unico": {
       "node_id": "fin_precio_como_criterio_unico",
@@ -55711,7 +55839,7 @@
       ],
       "nodos_siguientes": [
         "rol_lider_equipo_calidad",
-        "rol_facilitador_black_belt"
+        "rol_facilitador_equipos_mejora"
       ],
       "condiciones_activacion": [
         "Cuando el proyecto involucra causas y remedios que cruzan múltiples departamentos",
@@ -62713,20 +62841,35 @@
         "Dibujar ejes horizontal y vertical con las barras correspondientes",
         "Titular el gráfico e indicar observaciones totales",
         "Identificar y clasificar el patrón de variación",
-        "Desarrollar una explicación del patrón observado"
+        "Desarrollar una explicación del patrón observado",
+        "Recopilar al menos 40 puntos de datos para un histograma (u 8 para box plot)",
+        "Comparar múltiples distribuciones usando box plots si es necesario"
       ],
       "entregable_esperado": "Histograma con patrón de variación identificado y explicación de causas físicas asociadas",
       "nodos_previos": [
-        "graficos_y_diagramas"
+        "graficos_y_diagramas",
+        "visualizacion_datos_deteccion_outliers"
       ],
       "nodos_siguientes": [
-        "control_estadistico_de_procesos"
+        "control_estadistico_de_procesos",
+        "concepto_variacion_estadistica",
+        "distribuciones_probabilidad"
       ],
       "condiciones_activacion": [
         "Cuando se necesita entender la distribución y variación de un conjunto de datos",
         "Cuando se busca detectar patrones anómalos generados por el proceso"
       ],
-      "etiqueta_arbol": "Visualiza tus Datos en Histograma"
+      "etiqueta_arbol": "Visualiza tus Datos en Histograma",
+      "ids_alias": [
+        "histogramas_distribucion_frecuencias"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "histogramas_distribucion_frecuencias",
+          "titulo": "Histogramas y Distribución de Frecuencias",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "histograma_analisis": {
       "node_id": "histograma_analisis",
@@ -62807,7 +62950,8 @@
         "Cuando se requiere entender la forma de distribución de un conjunto de datos de proceso",
         "Al iniciar un análisis de causas de variación"
       ],
-      "etiqueta_arbol": "Analiza la Forma del Histograma"
+      "etiqueta_arbol": "Analiza la Forma del Histograma",
+      "deprecado": true
     },
     "historia_del_futuro_escenarios_especulativos": {
       "node_id": "historia_del_futuro_escenarios_especulativos",
@@ -63560,7 +63704,7 @@
         "gestion_alucinaciones_ia"
       ],
       "nodos_siguientes": [
-        "rotacion_de_puestos_para_mejora_calidad",
+        "intercambio_de_roles_para_motivacion",
         "desafios_implementacion_ia"
       ],
       "condiciones_activacion": [
@@ -65477,20 +65621,35 @@
         "Calcular la distancia de la media a cada límite de especificación (USL y LSL)",
         "Determinar Cpk como el mínimo entre (USL-media)/3σ y (media-LSL)/3σ",
         "Comparar Cpk con Cp para determinar si el proceso está descentrado",
-        "Si Cpk es menor a Cp, tomar acciones para centrar la media del proceso y/o reducir su variación"
+        "Si Cpk es menor a Cp, tomar acciones para centrar la media del proceso y/o reducir su variación",
+        "Revisar siempre el histograma del proceso, no solo el valor numérico de Cpk",
+        "Comparar con el índice Cpm si existe un valor objetivo (target) diferente de la media"
       ],
       "entregable_esperado": "Valor numérico de Cpk documentado con recomendaciones de acción (centrado o reducción de variación)",
       "nodos_previos": [
         "indice_cp",
         "capacidad_proceso_concepto",
-        "planificacion_estudio_capacidad"
+        "planificacion_estudio_capacidad",
+        "analisis_capacidad_proceso"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando se sospecha que el proceso no está centrado en la especificación",
-        "Cuando se certifica a proveedores usando criterios de capacidad de proceso"
+        "Cuando se certifica a proveedores usando criterios de capacidad de proceso",
+        "Cuando se ha calculado un Cpk y se necesita decidir qué acción tomar para mejorarlo",
+        "Cuando se comparan procesos con el mismo Cpk pero comportamientos distintos"
       ],
-      "etiqueta_arbol": "Calcula tu Capacidad Cpk"
+      "etiqueta_arbol": "Calcula tu Capacidad Cpk",
+      "ids_alias": [
+        "interpretacion_cpk"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "interpretacion_cpk",
+          "titulo": "Interpretación del Índice Cpk",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "indice_de_productividad": {
       "node_id": "indice_de_productividad",
@@ -66815,21 +66974,35 @@
         "Negociar con el supervisor par un intercambio de 2-3 empleados por un periodo corto (una semana).",
         "Obtener aprobación del superintendente o gerencia si es necesario.",
         "Ejecutar el intercambio y observar cambios en indicadores de ausentismo, rechazo y cumplimiento de programa.",
-        "Repetir o expandir el programa si los resultados son positivos, fomentando la voluntariedad de los empleados."
+        "Repetir o expandir el programa si los resultados son positivos, fomentando la voluntariedad de los empleados.",
+        "Fomentar que los empleados discutan sus problemas y ambiciones con el supervisor"
       ],
       "entregable_esperado": "Un programa piloto de intercambio de roles documentado, con métricas de antes/después que evidencien el impacto en motivación y calidad.",
       "nodos_previos": [
-        "identificacion_empleado_con_el_trabajo"
+        "identificacion_empleado_con_el_trabajo",
+        "empoderamiento_empleados",
+        "ia_como_nivelador_habilidades"
       ],
       "nodos_siguientes": [
         "entrenamiento_supervisores_2",
-        "entrenamiento_supervisores_calidad"
+        "entrenamiento_supervisores_calidad",
+        "conciencia_calidad"
       ],
       "condiciones_activacion": [
         "Cuando los empleados muestran desconexión con el propósito global del proceso de producción.",
         "Cuando otras acciones de comunicación no han logrado mejorar el compromiso del equipo."
       ],
-      "etiqueta_arbol": "Intercambia Roles para Entender"
+      "etiqueta_arbol": "Intercambia Roles para Entender",
+      "ids_alias": [
+        "rotacion_de_puestos_para_mejora_calidad"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "rotacion_de_puestos_para_mejora_calidad",
+          "titulo": "Rotación de Puestos como Herramienta de Mejora de Calidad",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        }
+      ]
     },
     "intermediarios_exportacion": {
       "node_id": "intermediarios_exportacion",
@@ -67039,7 +67212,8 @@
         "Cuando se ha calculado un Cpk y se necesita decidir qué acción tomar para mejorarlo",
         "Cuando se comparan procesos con el mismo Cpk pero comportamientos distintos"
       ],
-      "etiqueta_arbol": "Interpreta tu Índice Cpk"
+      "etiqueta_arbol": "Interpreta tu Índice Cpk",
+      "deprecado": true
     },
     "interpretacion_graficos_variables": {
       "node_id": "interpretacion_graficos_variables",
@@ -67955,10 +68129,9 @@
       ],
       "entregable_esperado": "Acuerdo de colaboración con representantes sindicales, con al menos un representante integrado a tu equipo de mejora.",
       "nodos_previos": [
-        "equipo_mejora_calidad",
+        "equipo_mejora_calidad_2",
         "consejo_de_calidad",
-        "consejo_de_calidad_2",
-        "equipo_mejora_calidad_2"
+        "consejo_de_calidad_2"
       ],
       "nodos_siguientes": [
         "medicion_calidad",
@@ -68557,7 +68730,7 @@
       "entregable_esperado": "Plan de transformación documentado con las cinco fases, hitos y responsables definidos para cada una",
       "nodos_previos": [
         "estudio_lealtad_cliente",
-        "benchmarking_mejores_practicas"
+        "benchmarking_proceso"
       ],
       "nodos_siguientes": [
         "decide_phase_roadmap"
@@ -70569,7 +70742,7 @@
         "ensenanza_deficiente_metodos_estadisticos"
       ],
       "nodos_siguientes": [
-        "criticas_muestreo_aceptacion"
+        "eliminacion_planes_muestreo_estandar"
       ],
       "condiciones_activacion": [
         "Cuando se debe decidir entre dos métodos o procesos basándose en datos estadísticos para planificación futura"
@@ -71960,7 +72133,7 @@
       "entregable_esperado": "Programa de TPM/RCM implementado con métricas de OEE",
       "nodos_previos": [
         "feedback_supervisores_trabajadores",
-        "concepto_autocontrol"
+        "autocontrol_y_controlabilidad"
       ],
       "nodos_siguientes": [
         "lean_manufacturing_tps"
@@ -73664,10 +73837,10 @@
       ],
       "entregable_esperado": "Sistema de medición de calidad documentado por área, con línea base registrada y visible, listo para calcular el costo de la calidad.",
       "nodos_previos": [
-        "equipo_mejora_calidad",
+        "equipo_mejora_calidad_2",
         "compromiso_gerencial_calidad",
         "concepto_vs_tecnica",
-        "filosofia_zero_defectos",
+        "cero_defectos",
         "involucramiento_sindical_calidad",
         "reinicio_programa_calidad",
         "programa_mejora_calidad_14_pasos"
@@ -73718,11 +73891,10 @@
       ],
       "entregable_esperado": "Sistema de gráficos de tendencia y reportes de defectos visibles e implementados por área",
       "nodos_previos": [
-        "filosofia_zero_defectos",
+        "cero_defectos",
         "involucramiento_sindical_calidad",
         "cero_defectos_zd",
-        "programa_make_certain_2",
-        "cero_defectos"
+        "programa_make_certain_2"
       ],
       "nodos_siguientes": [
         "medicion_servicios",
@@ -76684,7 +76856,7 @@
       ],
       "entregable_esperado": "Una redefinición escrita de quien hace que en calidad, con tu rol claro en el centro",
       "nodos_previos": [
-        "criticas_muestreo_aceptacion"
+        "eliminacion_planes_muestreo_estandar"
       ],
       "nodos_siguientes": [
         "falacia_culpa_trabajadores",
@@ -80120,7 +80292,7 @@
         "breakthrough_cultural",
         "codigo_conducta_orientado_cliente",
         "empoderamiento_empleados",
-        "politica_calidad_organizacional",
+        "comunicar_politicas_organizacionales",
         "recursos_humanos_cultura"
       ],
       "nodos_siguientes": [
@@ -83475,7 +83647,7 @@
         "superioridad_calidad_market_share"
       ],
       "nodos_siguientes": [
-        "filosofia_zero_defectos"
+        "cero_defectos"
       ],
       "condiciones_activacion": [
         "Cuando inviertes recursos significativos en mejorar atributos no críticos",
@@ -86363,7 +86535,8 @@
         "Cuando se inicia un manual de calidad organizacional",
         "Si la organización necesita alinear decisiones gerenciales con objetivos de calidad"
       ],
-      "etiqueta_arbol": "Define tu Política de Calidad"
+      "etiqueta_arbol": "Define tu Política de Calidad",
+      "deprecado": true
     },
     "politica_compras_verdes": {
       "node_id": "politica_compras_verdes",
@@ -87933,7 +88106,8 @@
       "condiciones_activacion": [
         "Cuando piensas implementar círculos de calidad sin haberte preparado antes para actuar sobre lo que descubran"
       ],
-      "etiqueta_arbol": "Prepara a la Gerencia Primero"
+      "etiqueta_arbol": "Prepara a la Gerencia Primero",
+      "deprecado": true
     },
     "preparacion_materiales_fundraising": {
       "node_id": "preparacion_materiales_fundraising",
@@ -89995,7 +90169,7 @@
         "tipos_benchmarking_por_participante"
       ],
       "nodos_siguientes": [
-        "validacion_datos_benchmarking"
+        "recoleccion_validacion_datos_benchmarking"
       ],
       "condiciones_activacion": [
         "Cuando se inicia formalmente un proyecto de benchmarking con participantes definidos.",
@@ -91657,7 +91831,7 @@
         "compromiso_gerencial_calidad",
         "conciencia_calidad",
         "consejos_de_calidad",
-        "equipo_mejora_calidad",
+        "equipo_mejora_calidad_2",
         "make_certain_programa",
         "medicion_calidad"
       ],
@@ -95326,12 +95500,15 @@
         "Revisa manualmente que todo esté completo: que no falte ningún dato pedido",
         "Revisa manualmente la integridad: compara los datos relacionados entre sí para ver si tienen sentido",
         "Revisa manualmente la consistencia: compara con datos históricos que tengas disponibles",
-        "Si ves muchos errores o dificultades repetidas, organiza una sesión de resolución de dudas (data clinic) con los participantes"
+        "Si ves muchos errores o dificultades repetidas, organiza una sesión de resolución de dudas (data clinic) con los participantes",
+        "Solicitar a los participantes realizar una primera revisión manual antes de enviar sus datos.",
+        "Resolver discrepancias mediante contacto directo con los participantes antes de consolidar el análisis final."
       ],
       "entregable_esperado": "Un documento de recolección validado y un conjunto de datos limpio, completo, íntegro y consistente, listo para analizar",
       "nodos_previos": [
         "benchmarking_proceso",
-        "gestion_efectiva_benchmarking"
+        "gestion_efectiva_benchmarking",
+        "proceso_benchmarking_juran_7pasos"
       ],
       "nodos_siguientes": [
         "normalizacion_de_datos",
@@ -95340,9 +95517,20 @@
       ],
       "condiciones_activacion": [
         "Cuando empiezas a recolectar datos para tu estudio de comparación (benchmarking)",
-        "Si tienes varios participantes que deben enviarte datos comparables"
+        "Si tienes varios participantes que deben enviarte datos comparables",
+        "Si existen inconsistencias o dudas sobre la fiabilidad de los datos recibidos."
       ],
-      "etiqueta_arbol": "Recolecta y Valida tus Datos"
+      "etiqueta_arbol": "Recolecta y Valida tus Datos",
+      "ids_alias": [
+        "validacion_datos_benchmarking"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "validacion_datos_benchmarking",
+          "titulo": "Validación de Datos en Benchmarking",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "recomendaciones_smart": {
       "node_id": "recomendaciones_smart",
@@ -96089,7 +96277,7 @@
       ],
       "entregable_esperado": "Un conjunto simple de prácticas (cómo contratas, cómo recibes a alguien nuevo, qué le entregas por escrito, a quién reconoces y haces crecer) alineadas y documentadas con la cultura de calidad que quieres para tu negocio",
       "nodos_previos": [
-        "politica_calidad_organizacional"
+        "comunicar_politicas_organizacionales"
       ],
       "nodos_siguientes": [
         "normas_culturales_calidad"
@@ -98314,12 +98502,15 @@
         "Conversar directamente con las personas que trabajan contigo, o preguntarles de forma sencilla, para identificar barreras especificas a su desempeño",
         "Clasificar las barreras identificadas según su origen: materiales, equipos, supervision, comunicacion",
         "Priorizar las barreras y definir quien se encarga de eliminar cada una",
-        "Crear un canal simple de retroalimentacion continua para dar seguimiento a las mejoras"
+        "Crear un canal simple de retroalimentacion continua para dar seguimiento a las mejoras",
+        "Clasificar barreras según sean responsabilidad de gestión o del sistema",
+        "Reemplazar carteles y exhortaciones por comunicación real de avances"
       ],
       "entregable_esperado": "Lista priorizada de barreras identificadas, con un plan de accion y quien se encarga de resolver cada una",
       "nodos_previos": [
         "eliminar_cuotas_numericas_trabajadores",
-        "eliminar_metas_numericas_gerencia"
+        "eliminar_metas_numericas_gerencia",
+        "eliminar_trabajo_a_destajo"
       ],
       "nodos_siguientes": [
         "mejora_continua_del_sistema"
@@ -98328,7 +98519,17 @@
         "Cuando notas niveles altos de desmotivacion, ausentismo o rotacion entre las personas que trabajan contigo",
         "Cuando las personas que trabajan contigo dicen que no pueden controlar la calidad de su trabajo por factores que no dependen de ellas"
       ],
-      "etiqueta_arbol": "Elimina Barreras al Orgullo Laboral"
+      "etiqueta_arbol": "Elimina Barreras al Orgullo Laboral",
+      "ids_alias": [
+        "barreras_orgullo_trabajo"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "barreras_orgullo_trabajo",
+          "titulo": "Remoción de Barreras al Orgullo por el Trabajo",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "rendicion_cuentas_prospectiva": {
       "node_id": "rendicion_cuentas_prospectiva",
@@ -101915,7 +102116,8 @@
         "Cuando la organización está iniciando su cultura de mejora continua y necesita soporte experto",
         "Cuando un equipo muestra señales de estancamiento o conflicto interno"
       ],
-      "etiqueta_arbol": "Asigna Facilitadores de Mejora"
+      "etiqueta_arbol": "Asigna Facilitadores de Mejora",
+      "deprecado": true
     },
     "rol_facilitador_equipos_mejora": {
       "node_id": "rol_facilitador_equipos_mejora",
@@ -101925,14 +102127,18 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "El facilitador es un agente externo al equipo de proyecto que ayuda a mejorar las relaciones humanas, asiste en asuntos fuera del alcance del equipo, apoya a los miembros manteniendo el foco en la meta, cuestiona afirmaciones sin sustento y reporta el progreso a los consejos de calidad. Requiere entrenamiento especializado en construcción de equipos, resolución de conflictos y conocimiento de las herramientas de breakthrough.",
       "pasos_accionables": [
-        "Capacitar al facilitador en team building, resolución de conflictos y comunicación",
+        "Capacitar al facilitador en team building, resolución de conflictos y comunicación, ademas de herramientas de mejora",
         "Asignar facilitador de forma parcial durante la fase de arranque del proyecto",
         "Usar preguntas para desafiar teorías sin evidencia dentro del equipo",
-        "Reportar avances del equipo a los consejos de calidad periódicamente"
+        "Reportar avances del equipo a los consejos de calidad periódicamente",
+        "Usar al facilitador para detectar cuándo el equipo se estanca y redirigir el proyecto",
+        "Reducir gradualmente el soporte de facilitación conforme el equipo gana experiencia"
       ],
       "entregable_esperado": "Plan de facilitación con roles definidos y reportes periódicos de avance del equipo",
       "nodos_previos": [
-        "concepto_proyecto_breakthrough"
+        "concepto_proyecto_breakthrough",
+        "formacion_equipo_proyecto",
+        "rol_lider_equipo_calidad"
       ],
       "nodos_siguientes": [
         "rol_black_belt_six_sigma",
@@ -101940,9 +102146,20 @@
       ],
       "condiciones_activacion": [
         "Si el equipo presenta fricciones internas",
-        "Si el proyecto requiere decisiones fuera del alcance del equipo"
+        "Si el proyecto requiere decisiones fuera del alcance del equipo",
+        "Cuando la organización está iniciando su cultura de mejora continua y necesita soporte experto"
       ],
-      "etiqueta_arbol": "El Facilitador de tu Equipo"
+      "etiqueta_arbol": "El Facilitador de tu Equipo",
+      "ids_alias": [
+        "rol_facilitador_black_belt"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "rol_facilitador_black_belt",
+          "titulo": "Facilitadores y Black Belts en Proyectos de Mejora",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "rol_gates_agile": {
       "node_id": "rol_gates_agile",
@@ -102016,7 +102233,7 @@
         "formacion_equipo_proyecto"
       ],
       "nodos_siguientes": [
-        "rol_facilitador_black_belt"
+        "rol_facilitador_equipos_mejora"
       ],
       "condiciones_activacion": [
         "Cuando un equipo de proyecto multifuncional necesita coordinación sin autoridad de mando formal"
@@ -102273,7 +102490,8 @@
         "Cuando existe baja comprensión del proceso total entre empleados de distintas áreas",
         "Cuando se busca mejorar el compromiso y la calidad sin recurrir a esquemas motivacionales artificiales"
       ],
-      "etiqueta_arbol": "Rota Puestos para Mejorar Calidad"
+      "etiqueta_arbol": "Rota Puestos para Mejorar Calidad",
+      "deprecado": true
     },
     "rotacion_equipo_fundador": {
       "node_id": "rotacion_equipo_fundador",
@@ -108483,7 +108701,7 @@
       ],
       "entregable_esperado": "Sistema o ciclo de inteligencia organizacional documentado con estructuras de detección, interpretación y respuesta a cambios",
       "nodos_previos": [
-        "politica_calidad_organizacional",
+        "comunicar_politicas_organizacionales",
         "expand_phase_roadmap"
       ],
       "nodos_siguientes": [
@@ -112988,7 +113206,7 @@
         "cuestionario_autoevaluacion_gerencial_calidad"
       ],
       "nodos_siguientes": [
-        "preparacion_gerencial_antes_de_circulos_de_calidad",
+        "circulos_calidad_qc",
         "relaciones_largo_plazo_con_proveedores"
       ],
       "condiciones_activacion": [
@@ -114801,7 +115019,8 @@
         "Cuando se han recolectado datos de múltiples participantes y se requiere asegurar su calidad antes del análisis.",
         "Si existen inconsistencias o dudas sobre la fiabilidad de los datos recibidos."
       ],
-      "etiqueta_arbol": "Verifica tus Datos antes de Comparar"
+      "etiqueta_arbol": "Verifica tus Datos antes de Comparar",
+      "deprecado": true
     },
     "validacion_externa_reportes": {
       "node_id": "validacion_externa_reportes",
@@ -114883,7 +115102,7 @@
       ],
       "nodos_siguientes": [
         "establecimiento_capacidad_proceso",
-        "concepto_autocontrol"
+        "autocontrol_y_controlabilidad"
       ],
       "condiciones_activacion": [
         "Cuando necesitas confirmar que los datos que usas para controlar un proceso son confiables"
@@ -114909,7 +115128,7 @@
         "metodologia_6s"
       ],
       "nodos_siguientes": [
-        "concepto_autocontrol"
+        "autocontrol_y_controlabilidad"
       ],
       "condiciones_activacion": [
         "Cuando se requieren tolerancias muy estrictas (Six Sigma)",
@@ -117100,7 +117319,7 @@
         "diseno_de_metodos_de_recoleccion_de_datos"
       ],
       "nodos_siguientes": [
-        "histogramas_distribucion_frecuencias",
+        "histograma",
         "analisis_regresion_correlacion"
       ],
       "condiciones_activacion": [
@@ -125941,7 +126160,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 176,
+    "nodos_sin_enlaces_entrantes": 187,
     "enlaces_rotos_en_grafo": 0
   }
 }

@@ -1,0 +1,108 @@
+==============================================================================================
+COTEJO DEL INSUMO FIJADO CONTRA LOS NODOS DE HOY
+  nomina: docs/loop/TRAMO5_V58.jsonl | cuadro de varas: docs/loop/SALIDA_V58_VARAS_TRAMO5.txt
+==============================================================================================
+
+  acto 1   FUNDIDO YA programa_de_mejora_de_calidad                  programa_mejora_calidad_14_pasos
+           hoy: pasos 6/8  cond 3/3  estado DEPRECADO/vivo | cuadro fijado: pasos 6/7 | sin fila en el cuadro
+  acto 2   FUNDIDO YA mantener_las_ganancias                         sostener_las_ganancias
+           hoy: pasos 5/6  cond 2/2  estado DEPRECADO/vivo | cuadro fijado: pasos 5/5 | sin fila en el cuadro
+  acto 3   FUNDIDO YA innovacion_tipo_ii                             tipos_innovacion_i_ii
+           hoy: pasos 5/6  cond 3/3  estado vivo/DEPRECADO | cuadro fijado: pasos 5/6 | sin fila en el cuadro
+  acto 4   FUNDIDO YA funcion_perdida_limites_especificacion         funcion_perdida_taguchi
+           hoy: pasos 5/5  cond 2/1  estado vivo/DEPRECADO | cuadro fijado: pasos 5/5 | sin fila en el cuadro
+  acto 5   FUNDIDO YA enfermedades_mortales_gestion                  las_siete_enfermedades_mortales
+           hoy: pasos 4/4  cond 4/2  estado vivo/DEPRECADO | cuadro fijado: pasos 4/4 | sin fila en el cuadro
+  acto 6   FUNDIDO YA eliminacion_pago_destajo                       eliminar_trabajo_a_destajo
+           hoy: pasos 4/5  cond 1/2  estado DEPRECADO/vivo | cuadro fijado: pasos 4/4 | sin fila en el cuadro
+  acto 7   FUNDIDO YA adaptaciones_sectoriales_iso                   estandares_especificos_industria
+           hoy: pasos 4/4  cond 2/2  estado vivo/DEPRECADO | cuadro fijado: pasos 4/4 | sin fila en el cuadro
+  acto 8   FUNDIDO YA estilo_gerencial_ballet_vs_hockey              estilo_gerencial_hockey_vs_ballet
+           hoy: pasos 8/4  cond 5/2  estado vivo/DEPRECADO | cuadro fijado: pasos 6/4 | sin fila en el cuadro
+  acto 9   FUNDIDO YA roi_breakthrough                               roi_proyectos_calidad
+           hoy: pasos 4/7  cond 2/4  estado DEPRECADO/vivo | cuadro fijado: pasos 4/5 | sin fila en el cuadro
+  acto 10  FUNDIDO YA pensamiento_sistemico_rol_triple               teoria_triple_rol_sistemas_abiertos
+           hoy: pasos 4/4  cond 2/3  estado DEPRECADO/vivo | cuadro fijado: pasos 4/4 | sin fila en el cuadro
+  acto 11  FUNDIDO YA descubrir_necesidades_cliente                  descubrir_necesidades_del_cliente
+           hoy: pasos 3/6  cond 2/2  estado DEPRECADO/vivo | cuadro fijado: pasos 3/6 | sin fila en el cuadro
+  acto 12  FUNDIDO YA qfd_matriz                                     spreadsheet_diseno_para_la_calidad
+           hoy: pasos 6/4  cond 4/1  estado vivo/DEPRECADO | cuadro fijado: pasos 6/4 | sin fila en el cuadro
+  acto 13  VIVO      premio_shingo                                  shingo_prize
+           hoy: pasos 4/4  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 4/4 | CALZA
+  acto 14  FUNDIDO YA reinicio_programa_calidad                      repeticion_programa
+           hoy: pasos 5/3  cond 3/1  estado vivo/DEPRECADO | cuadro fijado: pasos 5/3 | sin fila en el cuadro
+  acto 15  FUNDIDO YA eliminar_slogans_metas                         eliminar_slogans_y_exhortaciones
+           hoy: pasos 4/5  cond 2/3  estado DEPRECADO/vivo | cuadro fijado: pasos 4/4 | sin fila en el cuadro
+  acto 16  FUNDIDO YA rol_black_belt                                 rol_black_belt_six_sigma
+           hoy: pasos 4/6  cond 1/3  estado DEPRECADO/vivo | cuadro fijado: pasos 4/4 | sin fila en el cuadro
+  acto 17  FUNDIDO YA mapeo_flujo_valor                              value_stream_mapping
+           hoy: pasos 7/4  cond 4/2  estado vivo/DEPRECADO | cuadro fijado: pasos 5/4 | sin fila en el cuadro
+  acto 18  VIVO      cero_defectos                                  filosofia_zero_defectos
+           hoy: pasos 6/4  cond 3/2  estado vivo/vivo | cuadro fijado: pasos 6/4 | CALZA
+  acto 19  VIVO      equipo_mejora_calidad                          equipo_mejora_calidad_2
+           hoy: pasos 4/5  cond 1/3  estado vivo/vivo | cuadro fijado: pasos 4/5 | CALZA
+  acto 20  VIVO      rol_facilitador_black_belt                     rol_facilitador_equipos_mejora
+           hoy: pasos 4/4  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 4/4 | CALZA
+  acto 21  VIVO      indice_cpk                                     interpretacion_cpk
+           hoy: pasos 5/4  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 5/4 | CALZA
+  acto 22  VIVO      barreras_orgullo_trabajo                       remover_barreras_orgullo_trabajo
+           hoy: pasos 4/4  cond 1/2  estado vivo/vivo | cuadro fijado: pasos 4/4 | CALZA
+  acto 23  VIVO      histograma                                     histogramas_distribucion_frecuencias
+           hoy: pasos 7/5  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 7/5 | CALZA
+  acto 24  VIVO      criticas_muestreo_aceptacion                   eliminacion_planes_muestreo_estandar
+           hoy: pasos 4/4  cond 1/2  estado vivo/vivo | cuadro fijado: pasos 4/4 | CALZA
+  acto 25  VIVO      recoleccion_validacion_datos_benchmarking      validacion_datos_benchmarking
+           hoy: pasos 7/4  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 7/4 | CALZA
+  acto 26  VIVO      intercambio_de_roles_para_motivacion           rotacion_de_puestos_para_mejora_calidad
+           hoy: pasos 5/4  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 5/4 | CALZA
+  acto 27  VIVO      control_estadistico_del_proceso                control_estadistico_no_implica_cero_defectos
+           hoy: pasos 4/4  cond 3/2  estado vivo/vivo | cuadro fijado: pasos 4/4 | CALZA
+  acto 28  VIVO      benchmarking_mejores_practicas                 benchmarking_proceso
+           hoy: pasos 4/7  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 4/7 | CALZA
+  acto 29  VIVO      conciencia_calidad                             conciencia_de_calidad_2
+           hoy: pasos 4/5  cond 3/2  estado vivo/vivo | cuadro fijado: pasos 4/5 | CALZA
+  acto 30  VIVO      eliminacion_causas_error_2                     eliminacion_causas_error_4
+           hoy: pasos 6/6  cond 2/3  estado vivo/vivo | cuadro fijado: pasos 6/6 | CALZA
+  acto 31  VIVO      circulos_calidad_qc                            preparacion_gerencial_antes_de_circulos_de_calidad
+           hoy: pasos 5/4  cond 2/1  estado vivo/vivo | cuadro fijado: pasos 5/4 | CALZA
+  acto 32  VIVO      autocontrol_y_controlabilidad                  concepto_autocontrol
+           hoy: pasos 5/5  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 5/5 | CALZA
+  acto 33  VIVO      comunicar_politicas_organizacionales           politica_calidad_organizacional
+           hoy: pasos 4/4  cond 1/2  estado vivo/vivo | cuadro fijado: pasos 4/4 | CALZA
+  acto 34  VIVO      pocos_vitales_muchos_utiles                    proyectos_vitales_pocos
+           hoy: pasos 4/4  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 4/4 | CALZA
+  acto 35  VIVO      ciclo_shewhart_pdsa                            pdsa_shewhart_cycle
+           hoy: pasos 5/4  cond 2/4  estado vivo/vivo | cuadro fijado: pasos 5/4 | CALZA
+  acto 36  VIVO      control_estadistico_de_procesos                control_estadistico_de_procesos_2
+           hoy: pasos 10/5  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 10/5 | CALZA
+  acto 37  VIVO      evaluacion_gestion_riesgos                     plan_de_gestion_de_riesgos
+           hoy: pasos 6/5  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 6/5 | CALZA
+  acto 38  VIVO      enfasis_en_ganancias_corto_plazo               enfasis_en_utilidades_corto_plazo
+           hoy: pasos 4/4  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 4/4 | CALZA
+  acto 39  VIVO      grafico_de_corrida_run_chart                   run_chart_datos_temporales
+           hoy: pasos 5/4  cond 3/1  estado vivo/vivo | cuadro fijado: pasos 5/4 | CALZA
+  acto 40  VIVO      evaluacion_alternativas_solucion               evaluacion_seleccion_alternativas_mejora
+           hoy: pasos 4/4  cond 1/1  estado vivo/vivo | cuadro fijado: pasos 4/4 | CALZA
+  acto 41  VIVO      caso_definicion_arruga                         definiciones_operacionales
+           hoy: pasos 5/4  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 5/4 | CALZA
+  acto 42  VIVO      distribucion_exponencial                       formula_exponencial_confiabilidad
+           hoy: pasos 4/5  cond 2/1  estado vivo/vivo | cuadro fijado: pasos 4/5 | CALZA
+  acto 43  VIVO      medicion_calidad                               medicion_calidad_2
+           hoy: pasos 5/5  cond 3/2  estado vivo/vivo | cuadro fijado: pasos 5/5 | CALZA
+  acto 44  VIVO      analisis_reporte_benchmarking                  desarrollo_reporte_benchmarking
+           hoy: pasos 7/5  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 7/5 | CALZA
+  acto 45  VIVO      gestion_efectiva_benchmarking                  rol_alta_direccion_benchmarking
+           hoy: pasos 7/6  cond 2/2  estado vivo/vivo | cuadro fijado: pasos 7/6 | CALZA
+  acto 46  VIVO      consumidor_como_eje_de_produccion              consumidor_parte_linea_produccion
+           hoy: pasos 4/4  cond 2/1  estado vivo/vivo | cuadro fijado: pasos 4/4 | CALZA
+  acto 47  VIVO      identificar_clientes_diseno                    identificar_clientes_externos_e_internos
+           hoy: pasos 3/4  cond 2/1  estado vivo/vivo | cuadro fijado: pasos 3/4 | CALZA
+  acto 48  VIVO      juran_quality_by_design                        quality_by_design
+           hoy: pasos 6/4  cond 3/2  estado vivo/vivo | cuadro fijado: pasos 6/4 | CALZA
+  acto 49  VIVO      definiciones_operacionales_3                   definiciones_operacionales_4
+           hoy: pasos 5/5  cond 3/3  estado vivo/vivo | cuadro fijado: pasos 5/5 | CALZA
+  acto 50  VIVO      establecimiento_metas                          fijacion_de_metas
+           hoy: pasos 3/5  cond 1/2  estado vivo/vivo | cuadro fijado: pasos 3/5 | CALZA
+
+  RESUMEN: actos mirados 50 | VIVOS 34 | ya fundidos 16 | DESCALCES 0
+  VERDE: todos los actos vivos calzan con la foto fijada.

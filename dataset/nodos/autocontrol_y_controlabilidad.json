@@ -10,7 +10,8 @@
     "Dar a quien ejecuta el trabajo manera de conocer las metas y su desempeño real",
     "Dar mecanismos concretos para ajustar el proceso y corregir desviaciones",
     "Usar una lista de verificación por proceso para confirmar que se cumplen las condiciones de autocontrol",
-    "Antes de culpar a alguien por un error, revisar si la responsabilidad es tuya, por cómo diseñaste el proceso, o de quien lo ejecutó"
+    "Antes de culpar a alguien por un error, revisar si la responsabilidad es tuya, por cómo diseñaste el proceso, o de quien lo ejecutó",
+    "Entrenar a la persona que te ayuda en el uso de los mecanismos para corregir el proceso"
   ],
   "entregable_esperado": "Una lista de verificación de autocontrol para cada proceso clave de tu negocio, que te permita distinguir errores de diseño, que son tuyos, de errores de ejecución",
   "nodos_previos": [
@@ -18,14 +19,30 @@
     "bucle_retroalimentacion_control",
     "caracteristicas_clave_producto_proceso",
     "planificacion_inicial_calidad",
-    "key_process_product_characteristics"
+    "key_process_product_characteristics",
+    "validacion_sistema_medicion",
+    "validacion_sistema_medicion_2"
   ],
   "nodos_siguientes": [
-    "auto_inspeccion"
+    "auto_inspeccion",
+    "autocontrol_planificacion_servicio",
+    "feedback_supervisores_trabajadores",
+    "mantenimiento_productivo_total"
   ],
   "condiciones_activacion": [
     "Cuando necesitas decidir quién es responsable de un defecto de calidad",
-    "Si estás pensando en motivar a quien te ayuda para mejorar la calidad, antes de invertir tiempo o dinero en eso"
+    "Si estás pensando en motivar a quien te ayuda para mejorar la calidad, antes de invertir tiempo o dinero en eso",
+    "Cuando existen defectos crónicos sin causa clara"
   ],
-  "etiqueta_arbol": "Verifica si tu Equipo puede Autocontrolarse"
+  "etiqueta_arbol": "Verifica si tu Equipo puede Autocontrolarse",
+  "ids_alias": [
+    "concepto_autocontrol"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "concepto_autocontrol",
+      "titulo": "Concepto de Autocontrol de la Persona que te Ayuda",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

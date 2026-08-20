@@ -5,5 +5,196 @@
   "alias_redirects": [],
   "alias_unresolved_removed": [],
   "final_cleanup_removed": [],
-  "symmetrize_added": []
+  "symmetrize_added": [
+    {
+      "node": "autocontrol_y_controlabilidad",
+      "key": "nodos_siguientes",
+      "added": "autocontrol_planificacion_servicio"
+    },
+    {
+      "node": "autocontrol_y_controlabilidad",
+      "key": "nodos_siguientes",
+      "added": "feedback_supervisores_trabajadores"
+    },
+    {
+      "node": "autocontrol_y_controlabilidad",
+      "key": "nodos_siguientes",
+      "added": "mantenimiento_productivo_total"
+    },
+    {
+      "node": "autocontrol_y_controlabilidad",
+      "key": "nodos_previos",
+      "added": "validacion_sistema_medicion"
+    },
+    {
+      "node": "autocontrol_y_controlabilidad",
+      "key": "nodos_previos",
+      "added": "validacion_sistema_medicion_2"
+    },
+    {
+      "node": "benchmarking_proceso",
+      "key": "nodos_siguientes",
+      "added": "decide_phase_roadmap"
+    },
+    {
+      "node": "benchmarking_proceso",
+      "key": "nodos_siguientes",
+      "added": "juran_transformation_roadmap"
+    },
+    {
+      "node": "benchmarking_proceso",
+      "key": "nodos_previos",
+      "added": "ciclo_adaptativo_inteligencia"
+    },
+    {
+      "node": "cero_defectos",
+      "key": "nodos_siguientes",
+      "added": "concepto_vs_tecnica"
+    },
+    {
+      "node": "cero_defectos",
+      "key": "nodos_siguientes",
+      "added": "medicion_calidad"
+    },
+    {
+      "node": "cero_defectos",
+      "key": "nodos_previos",
+      "added": "perfeccionismo_vs_valor"
+    },
+    {
+      "node": "circulos_calidad_qc",
+      "key": "nodos_siguientes",
+      "added": "eliminacion_barreras_orgullo_del_trabajo"
+    },
+    {
+      "node": "circulos_calidad_qc",
+      "key": "nodos_previos",
+      "added": "transformacion_gerencial_para_la_calidad"
+    },
+    {
+      "node": "comunicar_politicas_organizacionales",
+      "key": "nodos_siguientes",
+      "added": "consejo_de_calidad_y_rol_del_director"
+    },
+    {
+      "node": "comunicar_politicas_organizacionales",
+      "key": "nodos_siguientes",
+      "added": "normas_culturales_calidad"
+    },
+    {
+      "node": "comunicar_politicas_organizacionales",
+      "key": "nodos_siguientes",
+      "added": "recursos_humanos_cultura"
+    },
+    {
+      "node": "comunicar_politicas_organizacionales",
+      "key": "nodos_siguientes",
+      "added": "sostenibilidad_agil"
+    },
+    {
+      "node": "comunicar_politicas_organizacionales",
+      "key": "nodos_previos",
+      "added": "codigo_conducta_orientado_cliente"
+    },
+    {
+      "node": "control_estadistico_del_proceso",
+      "key": "nodos_siguientes",
+      "added": "estudio_mezclas_multiples_fuentes"
+    },
+    {
+      "node": "eliminacion_causas_error_4",
+      "key": "nodos_previos",
+      "added": "fijacion_de_metas"
+    },
+    {
+      "node": "eliminacion_planes_muestreo_estandar",
+      "key": "nodos_siguientes",
+      "added": "mito_departamento_control_calidad"
+    },
+    {
+      "node": "eliminacion_planes_muestreo_estandar",
+      "key": "nodos_previos",
+      "added": "limitaciones_intervalos_confianza"
+    },
+    {
+      "node": "equipo_mejora_calidad_2",
+      "key": "nodos_siguientes",
+      "added": "consejo_de_calidad_2"
+    },
+    {
+      "node": "equipo_mejora_calidad_2",
+      "key": "nodos_siguientes",
+      "added": "medicion_calidad"
+    },
+    {
+      "node": "equipo_mejora_calidad_2",
+      "key": "nodos_previos",
+      "added": "compromiso_gerencial_calidad"
+    },
+    {
+      "node": "equipo_mejora_calidad_2",
+      "key": "nodos_previos",
+      "added": "definicion_calidad_conformidad"
+    },
+    {
+      "node": "equipo_mejora_calidad_2",
+      "key": "nodos_previos",
+      "added": "programa_mejora_calidad_14_pasos"
+    },
+    {
+      "node": "histograma",
+      "key": "nodos_siguientes",
+      "added": "concepto_variacion_estadistica"
+    },
+    {
+      "node": "histograma",
+      "key": "nodos_siguientes",
+      "added": "distribuciones_probabilidad"
+    },
+    {
+      "node": "histograma",
+      "key": "nodos_previos",
+      "added": "visualizacion_datos_deteccion_outliers"
+    },
+    {
+      "node": "indice_cpk",
+      "key": "nodos_previos",
+      "added": "analisis_capacidad_proceso"
+    },
+    {
+      "node": "intercambio_de_roles_para_motivacion",
+      "key": "nodos_siguientes",
+      "added": "conciencia_calidad"
+    },
+    {
+      "node": "intercambio_de_roles_para_motivacion",
+      "key": "nodos_previos",
+      "added": "empoderamiento_empleados"
+    },
+    {
+      "node": "intercambio_de_roles_para_motivacion",
+      "key": "nodos_previos",
+      "added": "ia_como_nivelador_habilidades"
+    },
+    {
+      "node": "recoleccion_validacion_datos_benchmarking",
+      "key": "nodos_previos",
+      "added": "proceso_benchmarking_juran_7pasos"
+    },
+    {
+      "node": "remover_barreras_orgullo_trabajo",
+      "key": "nodos_previos",
+      "added": "eliminar_trabajo_a_destajo"
+    },
+    {
+      "node": "rol_facilitador_equipos_mejora",
+      "key": "nodos_previos",
+      "added": "formacion_equipo_proyecto"
+    },
+    {
+      "node": "rol_facilitador_equipos_mejora",
+      "key": "nodos_previos",
+      "added": "rol_lider_equipo_calidad"
+    }
+  ]
 }

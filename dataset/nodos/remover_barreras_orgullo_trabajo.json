@@ -9,12 +9,15 @@
     "Conversar directamente con las personas que trabajan contigo, o preguntarles de forma sencilla, para identificar barreras especificas a su desempeño",
     "Clasificar las barreras identificadas según su origen: materiales, equipos, supervision, comunicacion",
     "Priorizar las barreras y definir quien se encarga de eliminar cada una",
-    "Crear un canal simple de retroalimentacion continua para dar seguimiento a las mejoras"
+    "Crear un canal simple de retroalimentacion continua para dar seguimiento a las mejoras",
+    "Clasificar barreras según sean responsabilidad de gestión o del sistema",
+    "Reemplazar carteles y exhortaciones por comunicación real de avances"
   ],
   "entregable_esperado": "Lista priorizada de barreras identificadas, con un plan de accion y quien se encarga de resolver cada una",
   "nodos_previos": [
     "eliminar_cuotas_numericas_trabajadores",
-    "eliminar_metas_numericas_gerencia"
+    "eliminar_metas_numericas_gerencia",
+    "eliminar_trabajo_a_destajo"
   ],
   "nodos_siguientes": [
     "mejora_continua_del_sistema"
@@ -23,5 +26,15 @@
     "Cuando notas niveles altos de desmotivacion, ausentismo o rotacion entre las personas que trabajan contigo",
     "Cuando las personas que trabajan contigo dicen que no pueden controlar la calidad de su trabajo por factores que no dependen de ellas"
   ],
-  "etiqueta_arbol": "Elimina Barreras al Orgullo Laboral"
+  "etiqueta_arbol": "Elimina Barreras al Orgullo Laboral",
+  "ids_alias": [
+    "barreras_orgullo_trabajo"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "barreras_orgullo_trabajo",
+      "titulo": "Remoción de Barreras al Orgullo por el Trabajo",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

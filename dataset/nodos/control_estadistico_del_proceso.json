@@ -9,7 +9,10 @@
     "Recolectar datos secuenciales del proceso (por hora, por lote, etc.)",
     "Construir gráficos de control (X-barra y R) con los datos",
     "Identificar y eliminar causas especiales de variación hasta que el proceso muestre estabilidad",
-    "Una vez estable, calcular la capacidad real del proceso"
+    "Una vez estable, calcular la capacidad real del proceso",
+    "Aceptar que estar en control no equivale a cumplir especificaciones",
+    "Iniciar intervención en el sistema (cambio de diseño, método, materiales) para reducir el nivel de defectos una vez confirmado el control",
+    "Distinguir entre cambiar el nivel promedio (más simple) y reducir la dispersión (usualmente más difícil)"
   ],
   "entregable_esperado": "Gráfico de control validado que demuestre estabilidad estadística del proceso, con causas especiales documentadas y eliminadas.",
   "nodos_previos": [
@@ -20,12 +23,24 @@
   "nodos_siguientes": [
     "capacidad_del_proceso",
     "graficos_de_control_uso",
-    "limites_de_especificacion_vs_limites_de_control"
+    "limites_de_especificacion_vs_limites_de_control",
+    "estudio_mezclas_multiples_fuentes"
   ],
   "condiciones_activacion": [
     "Cuando el usuario depende de inspección final para garantizar calidad",
     "Cuando hay variabilidad inexplicada en la producción",
-    "Antes de intentar mejorar un proceso, para saber si es estable"
+    "Antes de intentar mejorar un proceso, para saber si es estable",
+    "Cuando el equipo confunda 'proceso estable' con 'proceso libre de defectos'"
   ],
-  "etiqueta_arbol": "Confirma que tu Proceso Esté Estable"
+  "etiqueta_arbol": "Confirma que tu Proceso Esté Estable",
+  "ids_alias": [
+    "control_estadistico_no_implica_cero_defectos"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "control_estadistico_no_implica_cero_defectos",
+      "titulo": "Control Estadístico No Implica Ausencia de Defectos",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

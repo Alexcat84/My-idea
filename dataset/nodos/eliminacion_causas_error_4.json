@@ -6,12 +6,12 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "ECR es la forma en que cualquier persona que te ayuda en tu negocio te avisa, sin necesidad de proponer la solución, sobre algo que le impide hacer bien su trabajo: una herramienta que no funciona, poca luz, un proceso que no tiene sentido, etc. Se activa una vez que ya tienes clara la meta de cero errores y todos la entienden, trasladando la detección de obstáculos a quien está en el día a día. Cada aviso merece una respuesta rápida y un agradecimiento personal; si decides no actuar, esa decisión debe quedar justificada y revisada por alguien de más experiencia o confianza. Bien manejado, genera participación positiva sin volverse quejas destructivas, y sirve de base para reconocer periódicamente a quienes avisan.",
   "pasos_accionables": [
-    "Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución",
+    "Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos",
     "Envía un agradecimiento personal e inmediato a quien te avisa de un problema",
     "Clasifica y prioriza cada aviso y pásalo a quien pueda resolverlo",
     "Consigue lo necesario y actúa rápido para eliminar la causa",
     "Si decides no actuar, justifica la decisión y revísala con alguien de más experiencia o confianza antes de cerrarla",
-    "Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan"
+    "Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan, por ejemplo con un sorteo semanal o un reconocimiento visible"
   ],
   "entregable_esperado": "Sistema ECR funcionando: formulario, respuesta rápida, registro de causas reportadas y resueltas, y retroalimentación a quienes avisan.",
   "nodos_previos": [
@@ -20,7 +20,8 @@
     "zero_defects_concepto",
     "accion_correctiva_crosby",
     "analisis_datos_atributos",
-    "dia_cero_defectos"
+    "dia_cero_defectos",
+    "fijacion_de_metas"
   ],
   "nodos_siguientes": [
     "consejo_de_calidad",
@@ -36,7 +37,8 @@
   "etiqueta_arbol": "Identifica las Causas de Error",
   "ids_alias": [
     "eliminacion_causas_error_3",
-    "programa_ecr_causa_de_error"
+    "programa_ecr_causa_de_error",
+    "eliminacion_causas_error_2"
   ],
   "merged_originals": [
     {
@@ -47,6 +49,11 @@
     {
       "node_id": "programa_ecr_causa_de_error",
       "titulo": "Sistema ECR (Error Cause Removal)",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    },
+    {
+      "node_id": "eliminacion_causas_error_2",
+      "titulo": "Eliminación de Causas de Error - ECR (Paso 11)",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
     }
   ]

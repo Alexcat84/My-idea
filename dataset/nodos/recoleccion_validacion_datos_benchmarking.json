@@ -12,12 +12,15 @@
     "Revisa manualmente que todo esté completo: que no falte ningún dato pedido",
     "Revisa manualmente la integridad: compara los datos relacionados entre sí para ver si tienen sentido",
     "Revisa manualmente la consistencia: compara con datos históricos que tengas disponibles",
-    "Si ves muchos errores o dificultades repetidas, organiza una sesión de resolución de dudas (data clinic) con los participantes"
+    "Si ves muchos errores o dificultades repetidas, organiza una sesión de resolución de dudas (data clinic) con los participantes",
+    "Solicitar a los participantes realizar una primera revisión manual antes de enviar sus datos.",
+    "Resolver discrepancias mediante contacto directo con los participantes antes de consolidar el análisis final."
   ],
   "entregable_esperado": "Un documento de recolección validado y un conjunto de datos limpio, completo, íntegro y consistente, listo para analizar",
   "nodos_previos": [
     "benchmarking_proceso",
-    "gestion_efectiva_benchmarking"
+    "gestion_efectiva_benchmarking",
+    "proceso_benchmarking_juran_7pasos"
   ],
   "nodos_siguientes": [
     "normalizacion_de_datos",
@@ -26,7 +29,18 @@
   ],
   "condiciones_activacion": [
     "Cuando empiezas a recolectar datos para tu estudio de comparación (benchmarking)",
-    "Si tienes varios participantes que deben enviarte datos comparables"
+    "Si tienes varios participantes que deben enviarte datos comparables",
+    "Si existen inconsistencias o dudas sobre la fiabilidad de los datos recibidos."
   ],
-  "etiqueta_arbol": "Recolecta y Valida tus Datos"
+  "etiqueta_arbol": "Recolecta y Valida tus Datos",
+  "ids_alias": [
+    "validacion_datos_benchmarking"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "validacion_datos_benchmarking",
+      "titulo": "Validación de Datos en Benchmarking",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

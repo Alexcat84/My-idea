@@ -10,18 +10,33 @@
     "Calcular la distancia de la media a cada límite de especificación (USL y LSL)",
     "Determinar Cpk como el mínimo entre (USL-media)/3σ y (media-LSL)/3σ",
     "Comparar Cpk con Cp para determinar si el proceso está descentrado",
-    "Si Cpk es menor a Cp, tomar acciones para centrar la media del proceso y/o reducir su variación"
+    "Si Cpk es menor a Cp, tomar acciones para centrar la media del proceso y/o reducir su variación",
+    "Revisar siempre el histograma del proceso, no solo el valor numérico de Cpk",
+    "Comparar con el índice Cpm si existe un valor objetivo (target) diferente de la media"
   ],
   "entregable_esperado": "Valor numérico de Cpk documentado con recomendaciones de acción (centrado o reducción de variación)",
   "nodos_previos": [
     "indice_cp",
     "capacidad_proceso_concepto",
-    "planificacion_estudio_capacidad"
+    "planificacion_estudio_capacidad",
+    "analisis_capacidad_proceso"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando se sospecha que el proceso no está centrado en la especificación",
-    "Cuando se certifica a proveedores usando criterios de capacidad de proceso"
+    "Cuando se certifica a proveedores usando criterios de capacidad de proceso",
+    "Cuando se ha calculado un Cpk y se necesita decidir qué acción tomar para mejorarlo",
+    "Cuando se comparan procesos con el mismo Cpk pero comportamientos distintos"
   ],
-  "etiqueta_arbol": "Calcula tu Capacidad Cpk"
+  "etiqueta_arbol": "Calcula tu Capacidad Cpk",
+  "ids_alias": [
+    "interpretacion_cpk"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "interpretacion_cpk",
+      "titulo": "Interpretación del Índice Cpk",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

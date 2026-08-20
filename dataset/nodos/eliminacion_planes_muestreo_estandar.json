@@ -9,19 +9,31 @@
     "Revisa los contratos y procedimientos actuales que te exigen usar AQL o planes de muestreo estándar.",
     "Calcula el costo total que tienes con el plan de muestreo actual y compáralo con el costo de la regla óptima: revisar todo o no revisar nada.",
     "Negocia con tus proveedores y clientes para eliminar las cláusulas de AQL y acordar en base al costo total y la mejora continua.",
-    "Cambia el criterio de aceptar o rechazar lotes por un control estadístico continuo del proceso de tu proveedor."
+    "Cambia el criterio de aceptar o rechazar lotes por un control estadístico continuo del proceso de tu proveedor. Hazlo poco a poco"
   ],
   "entregable_esperado": "Un documento de política de calidad, propio, donde elimines el uso de planes de muestreo estándar y definas tus criterios según el análisis de costos y el control estadístico.",
   "nodos_previos": [
     "punto_equilibrio_calidad_inspeccion",
-    "probabilidad_falla_ensamblaje_multiple"
+    "probabilidad_falla_ensamblaje_multiple",
+    "limitaciones_intervalos_confianza"
   ],
   "nodos_siguientes": [
-    "relacion_largo_plazo_proveedor_unico"
+    "relacion_largo_plazo_proveedor_unico",
+    "mito_departamento_control_calidad"
   ],
   "condiciones_activacion": [
     "Cuando hoy aplicas planes de muestreo estándar como Military Standard 105D o tablas AQL.",
     "Cuando tus contratos con proveedores exigen niveles de calidad aceptable (AQL) sin análisis de costo."
   ],
-  "etiqueta_arbol": "Descarta Muestreos Estándar Rígidos"
+  "etiqueta_arbol": "Descarta Muestreos Estándar Rígidos",
+  "ids_alias": [
+    "criticas_muestreo_aceptacion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "criticas_muestreo_aceptacion",
+      "titulo": "Por qué revisar una muestra de cada lote no basta (muestreo de aceptación)",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

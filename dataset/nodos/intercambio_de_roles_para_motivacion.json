@@ -10,19 +10,33 @@
     "Negociar con el supervisor par un intercambio de 2-3 empleados por un periodo corto (una semana).",
     "Obtener aprobación del superintendente o gerencia si es necesario.",
     "Ejecutar el intercambio y observar cambios en indicadores de ausentismo, rechazo y cumplimiento de programa.",
-    "Repetir o expandir el programa si los resultados son positivos, fomentando la voluntariedad de los empleados."
+    "Repetir o expandir el programa si los resultados son positivos, fomentando la voluntariedad de los empleados.",
+    "Fomentar que los empleados discutan sus problemas y ambiciones con el supervisor"
   ],
   "entregable_esperado": "Un programa piloto de intercambio de roles documentado, con métricas de antes/después que evidencien el impacto en motivación y calidad.",
   "nodos_previos": [
-    "identificacion_empleado_con_el_trabajo"
+    "identificacion_empleado_con_el_trabajo",
+    "empoderamiento_empleados",
+    "ia_como_nivelador_habilidades"
   ],
   "nodos_siguientes": [
     "entrenamiento_supervisores_2",
-    "entrenamiento_supervisores_calidad"
+    "entrenamiento_supervisores_calidad",
+    "conciencia_calidad"
   ],
   "condiciones_activacion": [
     "Cuando los empleados muestran desconexión con el propósito global del proceso de producción.",
     "Cuando otras acciones de comunicación no han logrado mejorar el compromiso del equipo."
   ],
-  "etiqueta_arbol": "Intercambia Roles para Entender"
+  "etiqueta_arbol": "Intercambia Roles para Entender",
+  "ids_alias": [
+    "rotacion_de_puestos_para_mejora_calidad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "rotacion_de_puestos_para_mejora_calidad",
+      "titulo": "Rotación de Puestos como Herramienta de Mejora de Calidad",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ]
 }

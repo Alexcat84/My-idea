@@ -96,6 +96,17 @@ CABECERA = {
 # --------------------------------------------------------------------------
 LOTES = {}
 
+# LOS LOTES B Y C VIENEN DE FICHEROS DE CONTENIDO APARTE (vuelta 60): el lote A
+# nacio dentro de este fichero y ahi se queda, porque moverlo seria reescribir un
+# plan ya SELLADO y ejecutado. Los que faltan entran por import para que un
+# cambio de TEXTO y un cambio de ARITMETICA no se pisen en el mismo diff.
+try:
+    from _v60_lote_b import LOTE_B
+except ImportError:  # corrido desde otra carpeta
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from _v60_lote_b import LOTE_B
+LOTES["B"] = LOTE_B
+
 LOTES["A"] = {
     "titulo": "LOTE A DE LA VUELTA 59: LOS DIECISIETE PRIMEROS ACTOS DEL TRAMO EN SU ORDEN IMPRESO (1 a 17), apartando el 13 por EMPATE SIN VARA. Lo encabeza EL ACTO 1, que es el unico choque de puerta del lote: la razon declara superviviente a un nodo que la guarda 1B no permite absorber por el otro lado",
     "declarados": [

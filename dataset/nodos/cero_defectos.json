@@ -11,7 +11,8 @@
     "Fija una fecha de lanzamiento (Día de Cero Defectos) tras un periodo breve de preparación para darle visibilidad",
     "Reconoce el desempeño alineado al estándar de forma genuina, evitando el efectivo como único mecanismo",
     "Extiende el estándar a todas tus áreas de trabajo, no solo a la producción o entrega del producto",
-    "Repite y refuerza el mensaje de forma constante hasta que se vuelva parte habitual de tu forma de trabajar"
+    "Repite y refuerza el mensaje de forma constante hasta que se vuelva parte habitual de tu forma de trabajar",
+    "Eliminar el lenguaje que normaliza niveles aceptables de error (AQL)"
   ],
   "entregable_esperado": "Declaración personal de compromiso con Cero Defectos, con fecha de lanzamiento, mecanismo de reconocimiento no monetario y plan de refuerzo periódico documentado.",
   "nodos_previos": [
@@ -28,7 +29,8 @@
     "critica_acceptable_quality_level",
     "costo_de_la_no_calidad",
     "definicion_calidad_conformidad_requisitos_3",
-    "costo_de_mala_calidad_copq"
+    "costo_de_mala_calidad_copq",
+    "perfeccionismo_vs_valor"
   ],
   "nodos_siguientes": [
     "eliminacion_causas_error",
@@ -38,20 +40,23 @@
     "programa_make_certain_3",
     "medicion_calidad_2",
     "concepto_reconocimiento_ring_of_quality",
-    "equipo_mejora_calidad",
+    "equipo_mejora_calidad_2",
     "consejo_de_calidad",
-    "equipo_mejora_calidad_2"
+    "concepto_vs_tecnica",
+    "medicion_calidad"
   ],
   "condiciones_activacion": [
     "Cuando aceptas el error como algo inevitable en tu forma de trabajar",
     "Cuando necesitas un cambio de actitud sostenido hacia la prevención de defectos, más allá de una campaña temporal",
-    "Cuando tienes un estándar de desempeño pero no lo has comunicado con claridad a quienes te rodean"
+    "Cuando tienes un estándar de desempeño pero no lo has comunicado con claridad a quienes te rodean",
+    "Al iniciar un programa de mejora de calidad"
   ],
   "etiqueta_arbol": "Apunta a Cero Defectos",
   "ids_alias": [
     "cero_defectos_zd",
     "concepto_zero_defects",
-    "programa_zero_defects"
+    "programa_zero_defects",
+    "filosofia_zero_defectos"
   ],
   "merged_originals": [
     {
@@ -67,6 +72,11 @@
     {
       "node_id": "programa_zero_defects",
       "titulo": "Programa de Cero Defectos (Zero Defects)",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    },
+    {
+      "node_id": "filosofia_zero_defectos",
+      "titulo": "Filosofía de Cero Defectos",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
     }
   ]
