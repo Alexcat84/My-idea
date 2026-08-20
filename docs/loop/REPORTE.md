@@ -14,8 +14,8 @@ no leyendola.**
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `06b89c74` (el commit del reporte de la vuelta 57), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** |
-| **hash final** | el commit del cierre mas el de esta cabecera, **pusheados a `origin/pasada-unica`** |
-| **commits de la vuelta** | **6 hasta el cierre**, leidos de `git log --oneline` al escribir esto: `b222e1c5` (apertura medida), `2ef9adda` (TAREA 1.1, el acto 32 deshecho), `38a0f341` (TAREA 1.2, las once heredadas), `e00475db` (TAREAS 1.3 y 1.4), `5efa8382` (tramo 5 abierto), `908bc4c9` (dossier del tramo 5), **mas el del cierre y el de esta cabecera** |
+| **hash final** | `3ffc2091` (el cierre) mas este mismo commit, que solo escribe esta cabecera, **pusheados a `origin/pasada-unica`** |
+| **commits de la vuelta** | **7 hasta el cierre**, leidos de `git log --oneline` al escribir esto: `b222e1c5` (apertura medida), `2ef9adda` (TAREA 1.1, el acto 32 deshecho), `38a0f341` (TAREA 1.2, las once heredadas), `e00475db` (TAREAS 1.3 y 1.4), `5efa8382` (tramo 5 abierto), `908bc4c9` (dossier del tramo 5), `3ffc2091` (el cierre), **mas este**, que solo escribe esta cabecera porque el commit del cierre no podia contener su propio hash |
 | **arbol al cierre** | limpio tras el commit del cierre |
 
 ---
