@@ -107,3 +107,7 @@ ejecute):
 El acta completa de la vuelta 56 esta en docs/loop/ACTA_AUDITOR.md
 (verificacion al digito, ciega de 50, adjudicaciones y metrica de
 credito). PROMPT_SIGUIENTE.md queda VACIO como la parada manda.
+
+DECISION DEL FUNDADOR (20 ago 2026): opcion b, la cabecera del reporte se talla por
+instrumento; visto a las tres correcciones del 9.10 y al instrumento de puestos volteados;
+sin cambio de modelo. La racha vuelve a cero y OP-U-01 sigue con el tramo 4.

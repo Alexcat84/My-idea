@@ -32,6 +32,16 @@ lo que diga el encargo.
    tabla de particion (fila = destino, origenes, motivo) se pasa por
    scripts/loop/verificar_mapas_destejido.py antes del commit, con su
    salida citada en el reporte.
+   LA CABECERA DEL REPORTE SE TALLA, NO SE TECLEA (20 ago 2026; motivo: la
+   racha de las vueltas 54, 55 y 56, las TRES frases tecleadas en la
+   cabecera del reporte, ninguna salida de un tallador. La de la 56 es el
+   ejemplar: la celda del cierre publicaba 623 igual a 623, que era la cifra
+   de la APERTURA heredada, cuando el instrumento del cierre dice 529). Las
+   tablas de apertura y cierre del reporte se generan con
+   scripts/loop/tallar_cabecera_reporte.py --vuelta N y se pegan enteras,
+   con el comando citado al lado; LA CELDA QUE NO SALGA DE UN INSTRUMENTO NO
+   SE ESCRIBE. Antes del commit, --comparar docs/loop/REPORTE.md tiene que
+   dar CABECERA IDENTICA AL TALLADOR, y su salida se cita en el reporte.
 2. EL INSTRUMENTO MANDA (14 ago 2026; motivo: las caidas de las vueltas 15
    y 16 fueron las dos de esta especie). Toda cifra o nombre propio que se
    publique se lee de la salida del instrumento corrido EN ESTA VUELTA. Una
