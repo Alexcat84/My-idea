@@ -9,7 +9,7 @@
     "Busca los patrones que se repiten en esas conversaciones",
     "Describe o dibuja a quien usa tu producto: su entorno (oficina, planta, cubiculo) y su rutina",
     "Si aplica, describe o dibuja por separado a quien decide la compra, que puede ser distinto de quien lo usa",
-    "Define tus hipótesis sobre quien es el comprador: su estilo de vida, nivel económico y situacion familiar",
+    "Define tus hipótesis sobre quien es el comprador: su estilo de vida, nivel económico y situacion familiar, con su perfil demográfico y psicográfico",
     "Escribe un documento breve que reuna el perfil, los problemas y el contexto de cada retrato",
     "Conecta estas caracteristicas con el resto de tu negocio: como llegas a tu cliente, como te relacionas con el y como le cobras",
     "Trata cada retrato como una hipótesis provisional que revisas a medida que aprendes"
@@ -18,17 +18,46 @@
   "condiciones_activacion": [
     "Cuando ya explorastes a tus clientes pero todavia no tienes claro el perfil al que apuntas",
     "Si necesitas ordenar las prioridades de lo que vas a construir",
-    "Cuando necesitas visualizar con claridad a tu cliente para alinear tu estrategia de producto"
+    "Cuando necesitas visualizar con claridad a tu cliente para alinear tu estrategia de producto",
+    "Antes de diseñar mensajes de marketing"
   ],
   "node_id": "arquetipos_de_cliente",
   "nodos_previos": [
     "genchi_gembutsu_salir_del_edificio",
     "tipos_de_clientes",
-    "identificacion_problema_cliente"
+    "identificacion_problema_cliente",
+    "problem_recognition_scale",
+    "simulacion_clientes_ia"
   ],
   "nodos_siguientes": [
     "producto_minimo_viable",
-    "dia_en_la_vida_del_cliente"
+    "dia_en_la_vida_del_cliente",
+    "advocacy_customer_journey",
+    "atributos_mercado_chopra_meindl",
+    "community_building_estrategia",
+    "construccion_tribu_de_marca",
+    "content_marketing_blog",
+    "cuatro_etapas_llamada_de_ventas",
+    "enfoque_en_superfans",
+    "estrategia_cuatro_capacidades_mercado",
+    "eventos_offline_como_canal_traccion",
+    "fase_adopt_ciclo_cliente",
+    "fase_assess_ciclo_cliente",
+    "fase_assess_experiencia_cliente",
+    "investigar_datos_cliente",
+    "preframing_expectativas",
+    "preparacion_preguntas_problema_precall",
+    "seo_estrategia_fat_head"
   ],
-  "etiqueta_arbol": "Retrata a tu Cliente Real"
+  "etiqueta_arbol": "Retrata a tu Cliente Real",
+  "ids_alias": [
+    "customer_archetypes"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "customer_archetypes",
+      "titulo": "Arquetipos de Cliente",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

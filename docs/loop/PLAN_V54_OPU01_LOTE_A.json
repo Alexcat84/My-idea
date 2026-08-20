@@ -1,0 +1,374 @@
+{
+ "operacion": "OP-U-01",
+ "fecha": "2026-08-20",
+ "vuelta": 54,
+ "estado": "SELLADO",
+ "nomina": "docs/loop/RECOMPUTO_V54_APERTURA.jsonl",
+ "tramo_definido_en": "docs/loop/SALIDA_V54_TRAMO2_NOMINA.txt, con las DOS lecturas de 'los 50 siguientes' calzando en el mismo tramo y el mismo orden",
+ "dossier": "docs/loop/SALIDA_V54_DOSSIER_TRAMO2.txt (P.5, el acto leido entero) mas docs/loop/SALIDA_V54_MESA_TRAMO2.txt y docs/loop/SALIDA_V54_VARAS_TRAMO2.txt",
+ "vara": "TODOS los actos del tramo 2 son de FUSION PURA (50 de 50, medido): un acto de dos miembros con UN par A directo y ningun mixto. No hay lectura P.12 que hacer, porque no hay mixto que quede fuera. El superviviente lo elige el CONTENIDO como P.8 lo define (pasos y condiciones, material propio y padre declarado EN LAS RAZONES); UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4); si dos varas de contenido CHOCAN decide la pieza DECLARADA de mayor peso en las razones y si no hay ninguna se PARA (acta 53, pregunta 3); si el contenido calla entero, EL CABLEADO DECIDE SOLO; si tambien empata, se DECLARA empate sin vara.",
+ "varas_impresas": "docs/loop/SALIDA_V54_VARAS_TRAMO2.txt, una fila por acto con pasos, condiciones y cableado contados por maquina y la FORMA del veredicto impresa. Ninguna cifra de este plan esta tecleada.",
+ "colisiones_esperadas": "docs/loop/SALIDA_V54_COLISIONES_ESPERADAS_TRAMO2.txt, medidas ANTES de tocar un nodo sobre EL ARCHIVO ENTERO, por PAR RESUELTO, con scripts/loop/vuelta54_colisiones_esperadas.py (sucesor declarado del de la vuelta 51, que salta la fusion pura y por eso no imprimia ni uno de estos 50). Una colision real fuera de esa prediccion detiene.",
+ "vara_de_las_puertas": "docs/loop/SALIDA_V54_PUERTAS_APERTURA.txt (30 actos con puerta dentro: 25 salvables, 2 imposibles por nomina, 3 por estructura, 0 sin receta). GUARDA 1B: ningun absorbido de este plan es semilla de entrada ni extremo de puente aprobado, comprobado por el generador y otra vez por el ejecutor.",
+ "politica_del_reparto": "LA HEREDADA Y CITADA, no reinventada (acta 51 D3; acta 52 D5 y D10; registro de la vuelta 53): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND. El INCISO es siempre TROZO VERBATIM del paso que muere.",
+ "tramo": "2, LOTE A DE LA VUELTA 54: los actos 2, 3, 5, 7, 8, 9, 10, 11, 12, 13 y 14 del tramo 2 (los ONCE primeros del tramo cuyo superviviente elige el contenido sin choque, sin puerta en juego y sin colision prevista)",
+ "actos": [
+  {
+   "orden": 2,
+   "miembros": [
+    "diseno_de_desafios_de_innovacion",
+    "desafios_de_diseno_competitivos"
+   ],
+   "miembros_del_acto_entero": [
+    "desafios_de_diseno_competitivos",
+    "diseno_de_desafios_de_innovacion"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "diseno_de_desafios_de_innovacion",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA Y BASTA (acta 53, pregunta 4): los pasos EMPATAN 5 contra 5 y las CONDICIONES apuntan a diseno_de_desafios_de_innovacion, 3 contra 2. El cableado esta de acuerdo (5 contra 3) y no hace falta que hable. El puesto 237 no escribe la formula Sobrevive X, asi que aqui no hay choque de letra contra aritmetica.",
+   "absorbidos": [
+    "desafios_de_diseno_competitivos"
+   ],
+   "pasos": {
+    "desafios_de_diseno_competitivos": {
+     "1": "INCISO:1|técnico o social|, sea ",
+     "2": "CUBIERTO:2",
+     "3": "APPEND",
+     "4": "APPEND",
+     "5": "INCISO:5|el impacto posterior en inversión e innovación del sector|, y también "
+    }
+   },
+   "condiciones": {
+    "desafios_de_diseno_competitivos": {
+     "1": "APPEND",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PASO 3 DEL QUE MUERE VA DE APPEND Y LA RAZON DEL 237 DICE QUE LOS DOS MANDAN CONVOCAR EQUIPOS: la razon resume, y medido paso a paso el superviviente NO TIENE paso de convocatoria (sus cinco son definir el reto, reglas y premio, comunicar el progreso, aprovechar medios y evaluar). Se dice en vez de callarse, y la pieza viaja entera. EL PASO 4 TAMBIEN VA DE APPEND aunque su segunda mitad (publicitar para narrativa) la dice el paso 4 del superviviente: su primera mitad, DOCUMENTAR el proceso, no la dice nadie, y esta operacion mueve piezas enteras y no parte pasos. El solape que eso fabrica es de los que recoge la poda de la fase 04. CERO perdidas nombradas."
+  },
+  {
+   "orden": 3,
+   "miembros": [
+    "innovacion_abierta",
+    "open_innovation_ideacion"
+   ],
+   "miembros_del_acto_entero": [
+    "innovacion_abierta",
+    "open_innovation_ideacion"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "innovacion_abierta",
+   "motivo": "CONTENIDO, Y LO DECIDE LA CONTENCION DECLARADA EN LA RAZON, que P.8 pesa por encima de cualquier conteo: el puesto 244 escribe que CINCO DE LOS SEIS PASOS DEL SEGUNDO SON LOS PASOS 2 A 6 DEL PRIMERO, uno por uno, y los nombra. Los pasos apuntan al mismo lado (7 contra 6) y las condiciones empatan. EL CABLEADO APUNTA AL OTRO (10 contra 3) y no manda, porque el contenido no calla.",
+   "absorbidos": [
+    "open_innovation_ideacion"
+   ],
+   "pasos": {
+    "open_innovation_ideacion": {
+     "1": "INCISO:2|conferencias, ferias|, y que visiten ",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:4",
+     "4": "CUBIERTO:5",
+     "5": "CUBIERTO:6",
+     "6": "APPEND"
+    }
+   },
+   "condiciones": {
+    "open_innovation_ideacion": {
+     "1": "CUBIERTO:3",
+     "2": "CUBIERTO:2",
+     "3": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PASO 6 DEL QUE MUERE (adaptar el Stage-Gate para manejar ideas, IP y tecnologias externas) ES EL UNICO GESTO QUE EL SUPERVIVIENTE NO TIENE y viaja entero. PERDIDA NOMBRADA, UNA: la condicion 2 del que muere dice 'de consumo relativamente simple O CREATIVO' y la condicion 2 del superviviente dice 'B2C con productos de tecnologia relativamente simple': el 'o creativo' se pierde y se nombra aqui."
+  },
+  {
+   "orden": 5,
+   "miembros": [
+    "customer_appreciation_pr",
+    "customer_appreciation_soporte"
+   ],
+   "miembros_del_acto_entero": [
+    "customer_appreciation_pr",
+    "customer_appreciation_soporte"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "customer_appreciation_pr",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos apuntan a customer_appreciation_pr (5 contra 4) y las condiciones empatan 2 contra 2. El cableado esta de acuerdo (6 contra 2). El puesto 262 no nombra superviviente.",
+   "absorbidos": [
+    "customer_appreciation_soporte"
+   ],
+   "pasos": {
+    "customer_appreciation_soporte": {
+     "1": "CUBIERTO:4",
+     "2": "APPEND",
+     "3": "INCISO:2|resolución de problemas fuera del alcance normal|, además de la ",
+     "4": "CUBIERTO:5"
+    }
+   },
+   "condiciones": {
+    "customer_appreciation_soporte": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "EL PASO 2 DEL QUE MUERE VA DE APPEND porque es un GESTO DISTINTO: poner POLITICAS que prioricen la satisfaccion sobre la eficiencia operativa (envios y devoluciones gratis) no es ninguno de los cinco gestos del superviviente. Su paso 3 va de INCISO porque su unico contenido propio es un PARAMETRO del gesto que el paso 2 del superviviente ya manda. CERO perdidas nombradas."
+  },
+  {
+   "orden": 7,
+   "miembros": [
+    "analisis_varianza_financiera",
+    "analisis_de_variancia"
+   ],
+   "miembros_del_acto_entero": [
+    "analisis_de_variancia",
+    "analisis_varianza_financiera"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "analisis_varianza_financiera",
+   "motivo": "CONTENIDO, LAS DOS VARAS DE ACUERDO: pasos 4 contra 3 y condiciones 2 contra 1, las dos hacia analisis_varianza_financiera. El cableado empata 3 contra 3 y no hace falta. La razon del 273 llama a los dos gestos propios del elegido DETALLE DE EJECUCION sobre la misma instruccion, y aun asi son suyos y estan escritos.",
+   "absorbidos": [
+    "analisis_de_variancia"
+   ],
+   "pasos": {
+    "analisis_de_variancia": {
+     "1": "INCISO:1|cada mes|, y hacerlo ",
+     "2": "CUBIERTO:1",
+     "3": "APPEND"
+    }
+   },
+   "condiciones": {
+    "analisis_de_variancia": {
+     "1": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "PERDIDA NOMBRADA, UNA: el paso 2 del que muere ofrece comparar TAMBIEN CONTRA EL PERIODO ANTERIOR como alternativa al presupuesto, y el superviviente solo calcula contra presupuesto. Va de CUBIERTO y no de INCISO porque el paso resultante NO se leia limpio con los dos incisos encadenados sobre el mismo paso 1 (habria quedado 'hacerlo cada mes o contra el periodo anterior', que dice otra cosa). LA PERDIDA QUEDA NOMBRADA AQUI, que es el carril de la tabla de los seis motivos. El paso 3 va de APPEND porque ANOTAR LA CAUSA es un gesto que el superviviente no tiene."
+  },
+  {
+   "orden": 8,
+   "miembros": [
+    "stage_gate_system",
+    "sistema_stage_gate"
+   ],
+   "miembros_del_acto_entero": [
+    "sistema_stage_gate",
+    "stage_gate_system"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "stage_gate_system",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos apuntan a stage_gate_system (5 contra 4) y las condiciones empatan 2 contra 2. El cableado esta de acuerdo (11 contra 10). La razon del 275 dice que cada uno anade lo suyo, asi que el material propio declarado NO desempata, y el conteo si.",
+   "absorbidos": [
+    "sistema_stage_gate"
+   ],
+   "pasos": {
+    "sistema_stage_gate": {
+     "1": "INCISO:1|Discovery, Scoping, Business Case, Development, Testing, Launch|, por ejemplo ",
+     "2": "CUBIERTO:2",
+     "3": "APPEND",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "sistema_stage_gate": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "LOS DOS GESTOS PROPIOS QUE LA RAZON LE RECONOCE AL QUE MUERE VIAJAN ENTEROS: el equipo multifuncional en paralelo (paso 3) y la logica de compra de opciones incrementales (paso 4). Su paso 1 va de INCISO porque el gesto (definir las etapas) ya esta y lo propio es LA LISTA DE ETAPAS, que es un parametro concreto. CERO perdidas nombradas."
+  },
+  {
+   "orden": 9,
+   "miembros": [
+    "antigoals_framework",
+    "definir_antigoals"
+   ],
+   "miembros_del_acto_entero": [
+    "antigoals_framework",
+    "definir_antigoals"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "antigoals_framework",
+   "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO, que es el carril escrito: pasos 5 contra 5, condiciones 3 contra 3, y la razon del 282 dice EL MISMO FRAMEWORK DICHO DOS VECES, con un cierre propio para cada uno (revisitar contra compartir). El cableado apunta a antigoals_framework, 5 contra 3. NO es empate sin vara, porque el empate sin vara exige que TAMBIEN el cableado empate (acta 53, pregunta 4).",
+   "absorbidos": [
+    "definir_antigoals"
+   ],
+   "pasos": {
+    "definir_antigoals": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:4",
+     "5": "APPEND"
+    }
+   },
+   "condiciones": {
+    "definir_antigoals": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "EL PASO 5 DEL QUE MUERE (compartir la lista con el equipo) VIAJA ENTERO: el superviviente cierra REVISITANDO las listas, que es otro gesto. Los ejemplos de antimeta del que muere (no confundir al usuario, no excluir personas con discapacidad) son parametros de un gesto que el paso 3 del superviviente ya trae con sus propios ejemplos, y van de CUBIERTO. CERO perdidas nombradas."
+  },
+  {
+   "orden": 10,
+   "miembros": [
+    "arquetipos_de_cliente",
+    "customer_archetypes"
+   ],
+   "miembros_del_acto_entero": [
+    "arquetipos_de_cliente",
+    "customer_archetypes"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "arquetipos_de_cliente",
+   "motivo": "CONTENIDO, LAS DOS VARAS DE ACUERDO Y ADEMAS LA CONTENCION DECLARADA: pasos 8 contra 4 y condiciones 3 contra 2, las dos hacia arquetipos_de_cliente, y el puesto 288 escribe que el primero DESARROLLA MUCHO MAS el trabajo previo y que EL SEGUNDO ES LA VERSION CORTA DEL MISMO GESTO. EL CABLEADO APUNTA AL OTRO Y CON MARGEN ANCHO (20 contra 5) y no manda, porque el contenido no calla.",
+   "absorbidos": [
+    "customer_archetypes"
+   ],
+   "pasos": {
+    "customer_archetypes": {
+     "1": "CUBIERTO:4",
+     "2": "INCISO:5|demográfico y psicográfico|, con su perfil ",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:7"
+    }
+   },
+   "condiciones": {
+    "customer_archetypes": {
+     "1": "CUBIERTO:3",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PASO 1 DEL QUE MUERE (dibujar al usuario final Y al decisor clave) LO DICEN LOS PASOS 3 Y 4 DEL SUPERVIVIENTE JUNTOS, y la marca apunta al 4 porque es el que nombra al decisor y lo separa de quien usa. PERDIDA NOMBRADA, UNA: el ejemplo HOGAR del contexto fisico del paso 3 del que muere, que el paso 3 del superviviente no lista (dice oficina, planta, cubiculo)."
+  },
+  {
+   "orden": 11,
+   "miembros": [
+    "assumption_constraint_log",
+    "assumption_and_constraint_log"
+   ],
+   "miembros_del_acto_entero": [
+    "assumption_and_constraint_log",
+    "assumption_constraint_log"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "assumption_constraint_log",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos empatan 5 contra 5 y las condiciones apuntan a assumption_constraint_log, 2 contra 1. La razon del 289 dice que los cinco pasos coinciden uno a uno y que lo unico que los separa es que el segundo PRECISA DE DONDE VIENEN (charter, cliente, reguladores), que es del elegido. EL CABLEADO APUNTA AL OTRO (4 contra 3) y no manda.",
+   "absorbidos": [
+    "assumption_and_constraint_log"
+   ],
+   "pasos": {
+    "assumption_and_constraint_log": {
+     "1": "INCISO:1|categorizar cada supuesto o restricción|, y ",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:4",
+     "5": "INCISO:4|activo, pendiente, cerrado|, que puede ser "
+    }
+   },
+   "condiciones": {
+    "assumption_and_constraint_log": {
+     "1": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "DOS PIEZAS DEL QUE MUERE VAN DE INCISO Y NINGUNA DE APPEND: CATEGORIZAR (su paso 1) es un gesto adosado al identificar que el superviviente ya manda, y LOS TRES ESTADOS (activo, pendiente, cerrado) son el parametro del estado que su paso 4 ya registra. Los dos pasos resultantes se leen limpios. CERO perdidas nombradas."
+  },
+  {
+   "orden": 12,
+   "miembros": [
+    "embudo_get_keep_grow",
+    "estrategia_get_keep_grow"
+   ],
+   "miembros_del_acto_entero": [
+    "embudo_get_keep_grow",
+    "estrategia_get_keep_grow"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "embudo_get_keep_grow",
+   "motivo": "CONTENIDO, LAS DOS VARAS DE ACUERDO: pasos 6 contra 5 y condiciones 3 contra 2, las dos hacia embudo_get_keep_grow, con el cableado de acuerdo (12 contra 8). La razon del 292 le reconoce al elegido la etapa GROW entera y la actualizacion del lienzo.",
+   "absorbidos": [
+    "estrategia_get_keep_grow"
+   ],
+   "pasos": {
+    "estrategia_get_keep_grow": {
+     "1": "INCISO:2|conciencia, interés, consideración, compra|, con sus etapas de ",
+     "2": "APPEND",
+     "3": "CUBIERTO:6",
+     "4": "INCISO:3|llamadas de seguimiento, encuestas de satisfacción, programas de lealtad|, con tácticas como ",
+     "5": "APPEND"
+    }
+   },
+   "condiciones": {
+    "estrategia_get_keep_grow": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "DOS GESTOS DISTINTOS VIAJAN ENTEROS: elegir tacticas de medios ganados y pagados (paso 2) y medir el CAC contra el margen por venta (paso 5), que la razon nombra como el desglose propio del que muere. Sus pasos 1 y 4 van de INCISO porque lo propio son LAS ETAPAS DEL EMBUDO y LA LISTA DE TACTICAS, parametros de gestos que el superviviente ya manda. CERO perdidas nombradas."
+  },
+  {
+   "orden": 13,
+   "miembros": [
+    "analisis_motivaciones_fundador",
+    "influencias_tempranas_motivaciones"
+   ],
+   "miembros_del_acto_entero": [
+    "analisis_motivaciones_fundador",
+    "influencias_tempranas_motivaciones"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "analisis_motivaciones_fundador",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos apuntan a analisis_motivaciones_fundador (4 contra 3) y las condiciones empatan 2 contra 2. El cableado esta de acuerdo (4 contra 2). La razon del 301 dice que el primero NOMBRA LAS TRECE MOTIVACIONES Y LOS PERFILES TIPICOS y que el segundo SE QUEDA EN LA TENSION ENTRE CONTROL Y RIQUEZA: el mismo ejercicio con distinto grado de detalle.",
+   "absorbidos": [
+    "influencias_tempranas_motivaciones"
+   ],
+   "pasos": {
+    "influencias_tempranas_motivaciones": {
+     "1": "CUBIERTO:1",
+     "2": "INCISO:2|con una herramienta tipo CareerLeader|, por ejemplo ",
+     "3": "APPEND"
+    }
+   },
+   "condiciones": {
+    "influencias_tempranas_motivaciones": {
+     "1": "APPEND",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PASO 3 DEL QUE MUERE VIAJA ENTERO porque es su gesto propio declarado: el eje CONTROL CONTRA RIQUEZA y lo que pesa despues al repartir participacion y decidir quien manda. Las dos condiciones tambien viajan enteras: ninguna de las dos del superviviente habla de no tener claro POR QUE emprender ni de los roces con la familia. CERO perdidas nombradas."
+  },
+  {
+   "orden": 14,
+   "miembros": [
+    "asignacion_recursos_en_gates",
+    "sistema_gestion_recursos_en_gates"
+   ],
+   "miembros_del_acto_entero": [
+    "asignacion_recursos_en_gates",
+    "sistema_gestion_recursos_en_gates"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "asignacion_recursos_en_gates",
+   "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO: pasos 4 contra 4, condiciones 2 contra 2, y la razon del 302 dice LA MISMA INSTRUCCION CON LOS MISMOS CUATRO GESTOS. El cableado apunta a asignacion_recursos_en_gates, 8 contra 4. NO es empate sin vara porque el cableado no empata.",
+   "absorbidos": [
+    "sistema_gestion_recursos_en_gates"
+   ],
+   "pasos": {
+    "sistema_gestion_recursos_en_gates": {
+     "1": "INCISO:2|lista manual, hoja de cálculo o algún programa especializado|, o bien ",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:1",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "sistema_gestion_recursos_en_gates": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "EL PASO 4 DEL QUE MUERE VIAJA ENTERO: comprometerse EN LA REUNION de forma explicita a asignar personas y presupuesto para la siguiente etapa es un gesto que los cuatro del superviviente no tienen (el suyo es EVITAR agregar proyectos sin resolver las implicaciones, que es la cara negativa). Su paso 1 va de INCISO porque lo propio son OTRAS TRES OPCIONES del mismo metodo. CERO perdidas nombradas."
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

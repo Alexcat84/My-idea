@@ -1,0 +1,725 @@
+==============================================================================
+LA MESA DE LOS 50 ACTOS DEL TRAMO 2 (vuelta 54)
+==============================================================================
+
+  universo PROTEGIDO, misma fuente que vuelta48_puertas_en_el_lote.py:
+     semillas core 20 | semillas con las de los mundos 85 | extremos de puente 185
+     UNION: 256 ids
+
+##############################################################################
+# ACTO 1 del tramo 2 (puesto 12 de la nomina de hoy, 51 en la de la 48)
+# balance_eficiencia_responsividad, trade_off_responsividad_eficiencia
+##############################################################################
+  [A] puesto 227     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  balance_eficiencia_responsividad                         6     3      6     2     2 no
+  trade_off_responsividad_eficiencia                       4     2      4     6     6 SI
+  GUARDA 1B: hay puerta. TIENE que sobrevivir: trade_off_responsividad_eficiencia
+
+  si sobrevive balance_eficiencia_responsividad               colisiones: 0  (CIERRA PUERTA)
+  si sobrevive trade_off_responsividad_eficiencia             colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 2 del tramo 2 (puesto 13 de la nomina de hoy, 52 en la de la 48)
+# desafios_de_diseno_competitivos, diseno_de_desafios_de_innovacion
+##############################################################################
+  [A] puesto 237     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  desafios_de_diseno_competitivos                          5     2      4     3     3 no
+  diseno_de_desafios_de_innovacion                         5     3      4     5     5 no
+
+  si sobrevive desafios_de_diseno_competitivos                colisiones: 0  (limpio)
+  si sobrevive diseno_de_desafios_de_innovacion               colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 3 del tramo 2 (puesto 14 de la nomina de hoy, 53 en la de la 48)
+# innovacion_abierta, open_innovation_ideacion
+##############################################################################
+  [A] puesto 244     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  innovacion_abierta                                       7     3      4     3     3 no
+  open_innovation_ideacion                                 6     3      1    10    10 no
+
+  si sobrevive innovacion_abierta                             colisiones: 0  (limpio)
+  si sobrevive open_innovation_ideacion                       colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 4 del tramo 2 (puesto 15 de la nomina de hoy, 54 en la de la 48)
+# hr_calidad_gestion, hr_como_control_de_calidad_gerencial
+##############################################################################
+  [A] puesto 249     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  hr_calidad_gestion                                       6     1      5     3     3 no
+  hr_como_control_de_calidad_gerencial                     4     2      3     2     2 no
+
+  si sobrevive hr_calidad_gestion                             colisiones: 0  (limpio)
+  si sobrevive hr_como_control_de_calidad_gerencial           colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 5 del tramo 2 (puesto 16 de la nomina de hoy, 55 en la de la 48)
+# customer_appreciation_pr, customer_appreciation_soporte
+##############################################################################
+  [A] puesto 262     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  customer_appreciation_pr                                 5     2      3     6     6 no
+  customer_appreciation_soporte                            4     2      2     2     2 no
+
+  si sobrevive customer_appreciation_pr                       colisiones: 0  (limpio)
+  si sobrevive customer_appreciation_soporte                  colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 6 del tramo 2 (puesto 17 de la nomina de hoy, 56 en la de la 48)
+# pivotar_o_proceder, pivote_o_proceder
+##############################################################################
+  [A] puesto 268     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  pivotar_o_proceder                                       5     2      4    10    10 no
+  pivote_o_proceder                                        7     1      6     5     5 no
+
+  si sobrevive pivotar_o_proceder                             colisiones: 2  (limpio)
+       pivotar_o_proceder + pivote_startup : B 668, D 1312
+       pivotar_o_proceder + reunion_pivotar_o_perseverar : B 968, D 1305
+  si sobrevive pivote_o_proceder                              colisiones: 2  (limpio)
+       pivote_o_proceder + pivote_startup : B 668, D 1312
+       pivote_o_proceder + reunion_pivotar_o_perseverar : B 968, D 1305
+
+##############################################################################
+# ACTO 7 del tramo 2 (puesto 18 de la nomina de hoy, 57 en la de la 48)
+# analisis_de_variancia, analisis_varianza_financiera
+##############################################################################
+  [A] puesto 273     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: ['PIDE CONTAR ANTES']
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  analisis_de_variancia                                    3     1      3     3     3 no
+  analisis_varianza_financiera                             4     2      4     3     3 no
+
+  si sobrevive analisis_de_variancia                          colisiones: 0  (limpio)
+  si sobrevive analisis_varianza_financiera                   colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 8 del tramo 2 (puesto 19 de la nomina de hoy, 58 en la de la 48)
+# sistema_stage_gate, stage_gate_system
+##############################################################################
+  [A] puesto 275     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  sistema_stage_gate                                       4     2      4    10    10 no
+  stage_gate_system                                        5     2      5    11    11 no
+
+  si sobrevive sistema_stage_gate                             colisiones: 0  (limpio)
+  si sobrevive stage_gate_system                              colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 9 del tramo 2 (puesto 20 de la nomina de hoy, 59 en la de la 48)
+# antigoals_framework, definir_antigoals
+##############################################################################
+  [A] puesto 282     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  antigoals_framework                                      5     3      3     5     5 no
+  definir_antigoals                                        5     3      3     3     3 no
+
+  si sobrevive antigoals_framework                            colisiones: 0  (limpio)
+  si sobrevive definir_antigoals                              colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 10 del tramo 2 (puesto 21 de la nomina de hoy, 60 en la de la 48)
+# arquetipos_de_cliente, customer_archetypes
+##############################################################################
+  [A] puesto 288     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: ['PROVISIONAL']
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  arquetipos_de_cliente                                    8     3      8     5     5 no
+  customer_archetypes                                      4     2      4    20    20 no
+
+  si sobrevive arquetipos_de_cliente                          colisiones: 0  (limpio)
+  si sobrevive customer_archetypes                            colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 11 del tramo 2 (puesto 22 de la nomina de hoy, 61 en la de la 48)
+# assumption_and_constraint_log, assumption_constraint_log
+##############################################################################
+  [A] puesto 289     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  assumption_and_constraint_log                            5     1      3     4     4 no
+  assumption_constraint_log                                5     2      4     3     3 no
+
+  si sobrevive assumption_and_constraint_log                  colisiones: 0  (limpio)
+  si sobrevive assumption_constraint_log                      colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 12 del tramo 2 (puesto 23 de la nomina de hoy, 62 en la de la 48)
+# embudo_get_keep_grow, estrategia_get_keep_grow
+##############################################################################
+  [A] puesto 292     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  embudo_get_keep_grow                                     6     3      6    12    12 no
+  estrategia_get_keep_grow                                 5     2      5     8     8 no
+
+  si sobrevive embudo_get_keep_grow                           colisiones: 0  (limpio)
+  si sobrevive estrategia_get_keep_grow                       colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 13 del tramo 2 (puesto 24 de la nomina de hoy, 63 en la de la 48)
+# analisis_motivaciones_fundador, influencias_tempranas_motivaciones
+##############################################################################
+  [A] puesto 301     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  analisis_motivaciones_fundador                           4     2      3     4     4 no
+  influencias_tempranas_motivaciones                       3     2      3     2     2 no
+
+  si sobrevive analisis_motivaciones_fundador                 colisiones: 0  (limpio)
+  si sobrevive influencias_tempranas_motivaciones             colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 14 del tramo 2 (puesto 25 de la nomina de hoy, 64 en la de la 48)
+# asignacion_recursos_en_gates, sistema_gestion_recursos_en_gates
+##############################################################################
+  [A] puesto 302     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  asignacion_recursos_en_gates                             4     2      4     8     8 no
+  sistema_gestion_recursos_en_gates                        4     2      4     4     4 no
+
+  si sobrevive asignacion_recursos_en_gates                   colisiones: 0  (limpio)
+  si sobrevive sistema_gestion_recursos_en_gates              colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 15 del tramo 2 (puesto 26 de la nomina de hoy, 65 en la de la 48)
+# apertura_efectiva_llamada_venta, apertura_llamada_venta_grande
+##############################################################################
+  [A] puesto 307     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  apertura_efectiva_llamada_venta                          5     2      5     4     4 no
+  apertura_llamada_venta_grande                            4     2      4     4     4 SI
+  GUARDA 1B: hay puerta. TIENE que sobrevivir: apertura_llamada_venta_grande
+
+  si sobrevive apertura_efectiva_llamada_venta                colisiones: 0  (CIERRA PUERTA)
+  si sobrevive apertura_llamada_venta_grande                  colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 16 del tramo 2 (puesto 27 de la nomina de hoy, 66 en la de la 48)
+# produccion_scheduling_balance_objetivos, programacion_produccion
+##############################################################################
+  [A] puesto 312     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  produccion_scheduling_balance_objetivos                  4     3      2     4     4 no
+  programacion_produccion                                  4     2      1     2     2 no
+
+  si sobrevive produccion_scheduling_balance_objetivos        colisiones: 0  (limpio)
+  si sobrevive programacion_produccion                        colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 17 del tramo 2 (puesto 28 de la nomina de hoy, 67 en la de la 48)
+# estrategia_anuncios_sociales_respuesta_indirecta, social_ads_indirect_response
+##############################################################################
+  [A] puesto 320     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  estrategia_anuncios_sociales_respuesta_indirecta         4     2      4     2     2 no
+  social_ads_indirect_response                             5     2      5     2     2 no
+
+  si sobrevive estrategia_anuncios_sociales_respuesta_indirecta colisiones: 0  (limpio)
+  si sobrevive social_ads_indirect_response                   colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 18 del tramo 2 (puesto 29 de la nomina de hoy, 68 en la de la 48)
+# desconexion_ventas_experiencia, traspaso_ventas_cuentas
+##############################################################################
+  [A] puesto 322     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  desconexion_ventas_experiencia                           4     3      4     2     2 no
+  traspaso_ventas_cuentas                                  4     3      4     2     2 no
+
+  si sobrevive desconexion_ventas_experiencia                 colisiones: 0  (limpio)
+  si sobrevive traspaso_ventas_cuentas                        colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 19 del tramo 2 (puesto 30 de la nomina de hoy, 69 en la de la 48)
+# get_visual, pensamiento_visual
+##############################################################################
+  [A] puesto 325     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  get_visual                                               4     2      4     6     6 no
+  pensamiento_visual                                       3     2      3     7     7 no
+
+  si sobrevive get_visual                                     colisiones: 0  (limpio)
+  si sobrevive pensamiento_visual                             colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 20 del tramo 2 (puesto 31 de la nomina de hoy, 70 en la de la 48)
+# fases_de_retencion_de_clientes, ocho_fases_experiencia_cliente
+##############################################################################
+  [A] puesto 326     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  fases_de_retencion_de_clientes                           3     2      2     3     3 no
+  ocho_fases_experiencia_cliente                           4     1      2    13    13 no
+
+  si sobrevive fases_de_retencion_de_clientes                 colisiones: 0  (limpio)
+  si sobrevive ocho_fases_experiencia_cliente                 colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 21 del tramo 2 (puesto 32 de la nomina de hoy, 71 en la de la 48)
+# prototipado_de_experiencias, prototipado_experiencial_servicios
+##############################################################################
+  [A] puesto 335     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  prototipado_de_experiencias                              5     2      2     8     8 no
+  prototipado_experiencial_servicios                       5     2      4     5     5 no
+
+  si sobrevive prototipado_de_experiencias                    colisiones: 0  (limpio)
+  si sobrevive prototipado_experiencial_servicios             colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 22 del tramo 2 (puesto 33 de la nomina de hoy, 72 en la de la 48)
+# entender_term_sheet, term_sheet_overview
+##############################################################################
+  [A] puesto 339     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  entender_term_sheet                                      3     2      3     6     6 no
+  term_sheet_overview                                      3     1      1     3     3 no
+
+  si sobrevive entender_term_sheet                            colisiones: 0  (limpio)
+  si sobrevive term_sheet_overview                            colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 23 del tramo 2 (puesto 34 de la nomina de hoy, 73 en la de la 48)
+# modelo_cascada_desarrollo_producto, modelo_tradicional_introduccion_producto
+##############################################################################
+  [A] puesto 340     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  modelo_cascada_desarrollo_producto                       4     2      4     5     5 no
+  modelo_tradicional_introduccion_producto                 4     2      4     2     2 no
+
+  si sobrevive modelo_cascada_desarrollo_producto             colisiones: 0  (limpio)
+  si sobrevive modelo_tradicional_introduccion_producto       colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 24 del tramo 2 (puesto 35 de la nomina de hoy, 74 en la de la 48)
+# framework_scor_plan_source_make_deliver, scor_model_operaciones
+##############################################################################
+  [A] puesto 342     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  framework_scor_plan_source_make_deliver                  4     2      3     3     3 no
+  scor_model_operaciones                                   4     3      2     3     3 no
+
+  si sobrevive framework_scor_plan_source_make_deliver        colisiones: 0  (limpio)
+  si sobrevive scor_model_operaciones                         colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 25 del tramo 2 (puesto 36 de la nomina de hoy, 75 en la de la 48)
+# senales_de_compra_en_venta_grande, senales_de_compra_reales
+##############################################################################
+  [A] puesto 346     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  senales_de_compra_en_venta_grande                        4     1      4     2     2 no
+  senales_de_compra_reales                                 3     2      3     2     2 no
+
+  si sobrevive senales_de_compra_en_venta_grande              colisiones: 0  (limpio)
+  si sobrevive senales_de_compra_reales                       colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 26 del tramo 2 (puesto 37 de la nomina de hoy, 76 en la de la 48)
+# analisis_de_cohortes, metricas_cohortes
+##############################################################################
+  [A] puesto 353     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  analisis_de_cohortes                                     5     3      5    13    13 no
+  metricas_cohortes                                        4     2      3     3     3 no
+
+  si sobrevive analisis_de_cohortes                           colisiones: 0  (limpio)
+  si sobrevive metricas_cohortes                              colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 27 del tramo 2 (puesto 38 de la nomina de hoy, 77 en la de la 48)
+# deteccion_alucinaciones_ia, gestion_alucinaciones_ia
+##############################################################################
+  [A] puesto 363     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  deteccion_alucinaciones_ia                               4     2      1     2     2 no
+  gestion_alucinaciones_ia                                 4     2      3     5     5 no
+
+  si sobrevive deteccion_alucinaciones_ia                     colisiones: 0  (limpio)
+  si sobrevive gestion_alucinaciones_ia                       colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 28 del tramo 2 (puesto 39 de la nomina de hoy, 78 en la de la 48)
+# rediseno_procesos_negocio_cliente, rediseno_procesos_negocio_cx
+##############################################################################
+  [A] puesto 364     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  rediseno_procesos_negocio_cliente                        9     2      9     3     3 no
+  rediseno_procesos_negocio_cx                             9     2      9     5     5 no
+
+  si sobrevive rediseno_procesos_negocio_cliente              colisiones: 0  (limpio)
+  si sobrevive rediseno_procesos_negocio_cx                   colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 29 del tramo 2 (puesto 40 de la nomina de hoy, 79 en la de la 48)
+# deep_dive_workshop, metodologia_deep_dive
+##############################################################################
+  [A] puesto 366     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  deep_dive_workshop                                       5     2      4     2     2 no
+  metodologia_deep_dive                                    4     2      4     6     6 no
+
+  si sobrevive deep_dive_workshop                             colisiones: 0  (limpio)
+  si sobrevive metodologia_deep_dive                          colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 30 del tramo 2 (puesto 41 de la nomina de hoy, 80 en la de la 48)
+# fase_assess_ciclo_cliente, fase_assess_experiencia_cliente
+##############################################################################
+  [A] puesto 373     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  fase_assess_ciclo_cliente                                5     3      5     6     6 no
+  fase_assess_experiencia_cliente                          4     3      4     4     4 no
+
+  si sobrevive fase_assess_ciclo_cliente                      colisiones: 0  (limpio)
+  si sobrevive fase_assess_experiencia_cliente                colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 31 del tramo 2 (puesto 42 de la nomina de hoy, 81 en la de la 48)
+# test_socios_de_trafico, traffic_partners_hypothesis
+##############################################################################
+  [A] puesto 380     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  test_socios_de_trafico                                   6     1      6     2     2 no
+  traffic_partners_hypothesis                              5     1      5     4     4 no
+
+  si sobrevive test_socios_de_trafico                         colisiones: 0  (limpio)
+  si sobrevive traffic_partners_hypothesis                    colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 32 del tramo 2 (puesto 43 de la nomina de hoy, 82 en la de la 48)
+# fallo_como_aprendizaje_startup, fracaso_como_aprendizaje_startup
+##############################################################################
+  [A] puesto 387     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  fallo_como_aprendizaje_startup                           4     2      4     3     3 no
+  fracaso_como_aprendizaje_startup                         5     3      5     6     6 no
+
+  si sobrevive fallo_como_aprendizaje_startup                 colisiones: 0  (limpio)
+  si sobrevive fracaso_como_aprendizaje_startup               colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 33 del tramo 2 (puesto 44 de la nomina de hoy, 83 en la de la 48)
+# leap_of_faith_assumptions, leap_of_faith_questions
+##############################################################################
+  [A] puesto 389     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  leap_of_faith_assumptions                                4     2      4     9     9 SI
+  leap_of_faith_questions                                  4     2      4     3     3 no
+  GUARDA 1B: hay puerta. TIENE que sobrevivir: leap_of_faith_assumptions
+
+  si sobrevive leap_of_faith_assumptions                      colisiones: 0  (limpio)
+  si sobrevive leap_of_faith_questions                        colisiones: 0  (CIERRA PUERTA)
+
+##############################################################################
+# ACTO 34 del tramo 2 (puesto 45 de la nomina de hoy, 84 en la de la 48)
+# key_resources_hypothesis, recursos_clave
+##############################################################################
+  [A] puesto 406     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  key_resources_hypothesis                                 5     1      4     6     6 no
+  recursos_clave                                           4     1      3     4     4 no
+
+  si sobrevive key_resources_hypothesis                       colisiones: 0  (limpio)
+  si sobrevive recursos_clave                                 colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 35 del tramo 2 (puesto 46 de la nomina de hoy, 85 en la de la 48)
+# planificacion_preguntas_implicacion, preguntas_implicacion
+##############################################################################
+  [A] puesto 410     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  planificacion_preguntas_implicacion                      4     3      4     4     4 no
+  preguntas_implicacion                                    3     1      3     6     6 no
+
+  si sobrevive planificacion_preguntas_implicacion            colisiones: 0  (limpio)
+  si sobrevive preguntas_implicacion                          colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 36 del tramo 2 (puesto 47 de la nomina de hoy, 86 en la de la 48)
+# blogging_como_canal_de_traccion, content_marketing_blog
+##############################################################################
+  [A] puesto 417     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  blogging_como_canal_de_traccion                          6     2      4     4     4 no
+  content_marketing_blog                                   8     2      5     7     7 no
+
+  si sobrevive blogging_como_canal_de_traccion                colisiones: 0  (limpio)
+  si sobrevive content_marketing_blog                         colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 37 del tramo 2 (puesto 48 de la nomina de hoy, 87 en la de la 48)
+# desirability_feasibility_viability, triada_restricciones_diseno
+##############################################################################
+  [A] puesto 419     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  desirability_feasibility_viability                       5     2      3     4     4 no
+  triada_restricciones_diseno                              4     2      4     4     4 no
+
+  si sobrevive desirability_feasibility_viability             colisiones: 0  (limpio)
+  si sobrevive triada_restricciones_diseno                    colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 38 del tramo 2 (puesto 49 de la nomina de hoy, 88 en la de la 48)
+# fase_admit, fase_admit_celebracion
+##############################################################################
+  [A] puesto 421     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  fase_admit                                               4     1      2     7     7 no
+  fase_admit_celebracion                                   9     3      8     4     4 no
+
+  si sobrevive fase_admit                                     colisiones: 0  (limpio)
+  si sobrevive fase_admit_celebracion                         colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 39 del tramo 2 (puesto 50 de la nomina de hoy, 89 en la de la 48)
+# usuarios_extremos_edge_cases, usuarios_extremos_insights
+##############################################################################
+  [A] puesto 426     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  usuarios_extremos_edge_cases                             4     2      4     5     5 no
+  usuarios_extremos_insights                               4     1      4     4     4 no
+
+  si sobrevive usuarios_extremos_edge_cases                   colisiones: 0  (limpio)
+  si sobrevive usuarios_extremos_insights                     colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 40 del tramo 2 (puesto 51 de la nomina de hoy, 90 en la de la 48)
+# business_intelligence_niveles_datos, jerarquia_datos_scor
+##############################################################################
+  [A] puesto 434     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  business_intelligence_niveles_datos                      4     2      4     2     2 no
+  jerarquia_datos_scor                                     4     2      4     3     3 no
+
+  si sobrevive business_intelligence_niveles_datos            colisiones: 0  (limpio)
+  si sobrevive jerarquia_datos_scor                           colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 41 del tramo 2 (puesto 52 de la nomina de hoy, 91 en la de la 48)
+# alineacion_motivacional_cofundadores, compatibilidad_motivaciones_riqueza_control
+##############################################################################
+  [A] puesto 440     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  alineacion_motivacional_cofundadores                     3     2      3     3     3 no
+  compatibilidad_motivaciones_riqueza_control              5     3      5     8     8 no
+
+  si sobrevive alineacion_motivacional_cofundadores           colisiones: 0  (limpio)
+  si sobrevive compatibilidad_motivaciones_riqueza_control    colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 42 del tramo 2 (puesto 53 de la nomina de hoy, 92 en la de la 48)
+# fase_acclimate_experiencia_cliente, fase_acclimate_mapa_de_proceso
+##############################################################################
+  [A] puesto 447     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  fase_acclimate_experiencia_cliente                       5     2      4    10    10 no
+  fase_acclimate_mapa_de_proceso                           8     1      6     3     3 no
+
+  si sobrevive fase_acclimate_experiencia_cliente             colisiones: 0  (limpio)
+  si sobrevive fase_acclimate_mapa_de_proceso                 colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 43 del tramo 2 (puesto 54 de la nomina de hoy, 93 en la de la 48)
+# estrategia_de_balas_de_plomo, lead_bullets_no_silver_bullets
+##############################################################################
+  [A] puesto 450     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  estrategia_de_balas_de_plomo                             4     1      4     2     2 no
+  lead_bullets_no_silver_bullets                           5     2      5     3     3 no
+
+  si sobrevive estrategia_de_balas_de_plomo                   colisiones: 0  (limpio)
+  si sobrevive lead_bullets_no_silver_bullets                 colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 44 del tramo 2 (puesto 55 de la nomina de hoy, 94 en la de la 48)
+# formalizacion_acuerdo_equity, reparto_inicial_equity
+##############################################################################
+  [A] puesto 453     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  formalizacion_acuerdo_equity                             3     1      3     3     3 no
+  reparto_inicial_equity                                   4     2      4     8     8 no
+
+  si sobrevive formalizacion_acuerdo_equity                   colisiones: 1  (limpio)
+       formalizacion_acuerdo_equity + timing_equity_split : B 218, D 1008
+  si sobrevive reparto_inicial_equity                         colisiones: 1  (limpio)
+       reparto_inicial_equity + timing_equity_split : B 218, D 1008
+
+##############################################################################
+# ACTO 45 del tramo 2 (puesto 56 de la nomina de hoy, 95 en la de la 48)
+# milk_run_deliveries, programacion_entregas_delivery_scheduling
+##############################################################################
+  [A] puesto 474     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  milk_run_deliveries                                      5     2      4     4     4 no
+  programacion_entregas_delivery_scheduling                5     2      4     2     2 SI
+  GUARDA 1B: hay puerta. TIENE que sobrevivir: programacion_entregas_delivery_scheduling
+
+  si sobrevive milk_run_deliveries                            colisiones: 0  (CIERRA PUERTA)
+  si sobrevive programacion_entregas_delivery_scheduling      colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 46 del tramo 2 (puesto 57 de la nomina de hoy, 96 en la de la 48)
+# contratar_ambicion_correcta, screening_ambicion_organizacional
+##############################################################################
+  [A] puesto 479     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  contratar_ambicion_correcta                             10     2     10     2     2 no
+  screening_ambicion_organizacional                        4     2      3     2     2 no
+
+  si sobrevive contratar_ambicion_correcta                    colisiones: 0  (limpio)
+  si sobrevive screening_ambicion_organizacional              colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 47 del tramo 2 (puesto 58 de la nomina de hoy, 97 en la de la 48)
+# periodo_incubacion_mental, wallas_etapa_incubacion
+##############################################################################
+  [A] puesto 489     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  periodo_incubacion_mental                                4     2      4     5     5 no
+  wallas_etapa_incubacion                                  5     2      5     3     3 no
+
+  si sobrevive periodo_incubacion_mental                      colisiones: 0  (limpio)
+  si sobrevive wallas_etapa_incubacion                        colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 48 del tramo 2 (puesto 59 de la nomina de hoy, 98 en la de la 48)
+# diferencia_ventaja_beneficio, framework_caracteristicas_ventajas_beneficios
+##############################################################################
+  [A] puesto 531     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  diferencia_ventaja_beneficio                             4     2      4     2     2 no
+  framework_caracteristicas_ventajas_beneficios            8     2      8     3     3 no
+
+  si sobrevive diferencia_ventaja_beneficio                   colisiones: 0  (limpio)
+  si sobrevive framework_caracteristicas_ventajas_beneficios  colisiones: 0  (limpio)
+
+##############################################################################
+# ACTO 49 del tramo 2 (puesto 60 de la nomina de hoy, 99 en la de la 48)
+# fit_problema_solucion, problem_solution_fit
+##############################################################################
+  [A] puesto 536     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  fit_problema_solucion                                    3     1      3     6     6 no
+  problem_solution_fit                                     4     2      4     5     5 no
+
+  si sobrevive fit_problema_solucion                          colisiones: 2  (limpio)
+       fit_problema_solucion + verificar_product_market_fit : B 297, D 497
+       fit_problema_solucion + product_market_fit : B 338, D 490
+  si sobrevive problem_solution_fit                           colisiones: 2  (limpio)
+       problem_solution_fit + verificar_product_market_fit : B 297, D 497
+       problem_solution_fit + product_market_fit : B 338, D 490
+
+##############################################################################
+# ACTO 50 del tramo 2 (puesto 61 de la nomina de hoy, 100 en la de la 48)
+# encuesta_satisfaccion_postproyecto, reunion_conclusion_proyecto
+##############################################################################
+  [A] puesto 541     la letra cierra con: (no nombra superviviente)
+  avisos-especie en la letra: NINGUNO
+
+  miembro                                              pasos  cond propio  sale entra puerta
+  encuesta_satisfaccion_postproyecto                       6     1      5     3     3 no
+  reunion_conclusion_proyecto                             12     3     12     5     5 no
+
+  si sobrevive encuesta_satisfaccion_postproyecto             colisiones: 0  (limpio)
+  si sobrevive reunion_conclusion_proyecto                    colisiones: 0  (limpio)
+
+==============================================================================
+RESUMEN: {'con aviso': 2, 'con puerta': 4, 'con colision prevista': 6}
+FIN

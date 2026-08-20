@@ -6,11 +6,13 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Stage-Gate es una metodología estructurada de idea-a-lanzamiento que organiza el desarrollo de productos en etapas (stages) separadas por puntos de decisión (gates) de Go/Kill. Integra los factores críticos de éxito y mejores prácticas identificadas en la investigación de fracasos y éxitos, traduciéndolos en un blueprint operativo. Versiones modernas incorporan enfoques híbridos con métodos Agile (Agile-Stage-Gate), modelos basados en riesgo y contexto, haciendo el sistema más flexible, rápido y adaptativo para proyectos de innovación audaz.",
   "pasos_accionables": [
-    "Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa",
+    "Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa, por ejemplo Discovery, Scoping, Business Case, Development, Testing, Launch",
     "Establecer gates de decisión Go/Kill con criterios claros basados en los factores de éxito",
     "Incorporar prácticas ágiles donde sea apropiado para aumentar velocidad y flexibilidad",
     "Ajustar el rigor del proceso según el riesgo y tipo de proyecto (context-based approach)",
-    "Documentar el playbook como sistema operativo replicable para toda la organización"
+    "Documentar el playbook como sistema operativo replicable para toda la organización",
+    "Asegurar que cada etapa involucre equipos multifuncionales trabajando en paralelo",
+    "Establecer que cada etapa cueste progresivamente más, siguiendo la lógica de compra de opciones incrementales"
   ],
   "entregable_esperado": "Mapa documentado del proceso Stage-Gate adaptado a la organización, con etapas, entregables y criterios de gate definidos",
   "nodos_previos": [
@@ -21,16 +23,36 @@
     "gate_0_evaluacion_wishlist",
     "product_roadmap_estrategico",
     "siete_razones_fracaso_productos",
-    "voice_of_customer_homework"
+    "voice_of_customer_homework",
+    "cultura_de_innovacion",
+    "diamante_de_innovacion",
+    "embudo_atricion_nuevos_productos",
+    "innovacion_como_apuesta_incremental",
+    "liderazgo_ejecutivo_innovacion",
+    "reglas_gestion_riesgo_gambling",
+    "skunk_works_proyectos_paralelos"
   ],
   "nodos_siguientes": [
     "build_measure_learn",
     "modelo_tradicional_introduccion_producto",
-    "estrategia_innovacion_producto"
+    "estrategia_innovacion_producto",
+    "calidad_de_ejecucion_proceso_innovacion",
+    "estructura_gates",
+    "etapa_discovery_ideacion"
   ],
   "condiciones_activacion": [
     "Si la organización no tiene un proceso formal de desarrollo de nuevos productos",
     "Si se busca estandarizar y mejorar el proceso de idea-to-launch existente"
   ],
-  "etiqueta_arbol": "Guía tu Desarrollo por Etapas"
+  "etiqueta_arbol": "Guía tu Desarrollo por Etapas",
+  "ids_alias": [
+    "sistema_stage_gate"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "sistema_stage_gate",
+      "titulo": "Sistema Stage-Gate: Modelo Integral de Innovación",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

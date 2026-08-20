@@ -1,0 +1,2843 @@
+==============================================================================
+DOSSIER DE LECTURA, actos 12 a 61 del lote CERRADO de OP-U-01
+nomina: docs/loop/RECOMPUTO_V54_APERTURA.jsonl (232 actos CERRADOS)
+==============================================================================
+
+GUARDA DE LOS CUATRO AJENOS (03_FUSIONES.md, 11 ago 2026):
+   gates_go_kill_decision_points          en el lote CERRADO: NO
+   customer_discovery                     en el lote CERRADO: NO
+   ab_testing_optimizacion                en el lote CERRADO: NO
+   brainstorming_divergente               en el lote CERRADO: NO
+   GUARDA: VERDE, ninguno de los cuatro entra
+
+##############################################################################
+# ACTO 12 de 232 . tamano 2 . clases internas {'A': 1}
+# balance_eficiencia_responsividad, trade_off_responsividad_eficiencia
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 227   balance_eficiencia_responsividad + trade_off_responsividad_eficiencia
+      REPITE con trade_off_responsividad_eficiencia. Los dos mandan situar la cadena en un punto del continuo entre eficiencia y capacidad de respuesta segun lo que valore tu cliente y la estabilidad del entorno, y revisarlo periodicamente porque el mercado cambia. FIGURA: ids casi identicos con las palabras permutadas. Candidato a fusion.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## balance_eficiencia_responsividad
+     titulo    : Balance entre Eficiencia y Responsividad en la Cadena de Suministro
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     dominio   : core | fase: planificacion
+     etiqueta  : Equilibra Eficiencia y Capacidad de Respuesta
+     entregable: Definición estratégica documentada de dónde se ubica la empresa en el continuum eficiencia-responsividad, con justificación basada en volatilidad del mercado
+     alias     : []
+     resumen   : 540 caracteres
+     PASOS (6):
+       1. Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas
+       2. Evaluar la confiabilidad de los pronósticos y datos disponibles
+       3. Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)
+       4. Posicionar la estrategia de la cadena en el punto del continuum que mejor se ajuste a las circunstancias actuales
+       5. Reevaluar y reposicionar continuamente conforme cambian las circunstancias del mercado
+       6. Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)
+     CONDICIONES (3):
+       1. Cuando la empresa enfrenta presión de reducir costos versus mantener capacidad de respuesta
+       2. Si el mercado está cambiando y la empresa sigue optimizando solo por eficiencia
+       3. Al diseñar la estrategia de sourcing, manufactura y distribución
+
+  ## trade_off_responsividad_eficiencia
+     titulo    : Balance entre Capacidad de Respuesta y Eficiencia
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     dominio   : core | fase: planificacion
+     etiqueta  : Elige entre Rapidez y Eficiencia
+     entregable: Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.
+     alias     : ['trade_off_responsividad_eficiencia_2']
+     resumen   : 455 caracteres
+     PASOS (4):
+       1. Analizar qué valora más tu segmento de clientes: precio bajo o rapidez/servicio.
+       2. Evaluar el nivel de exceso de capacidad, inventario y flexibilidad de transporte actuales.
+       3. Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.
+       4. Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.
+     CONDICIONES (2):
+       1. Cuando existen conflictos aparentes entre nivel de servicio y costos operativos.
+       2. Cuando el usuario debe decidir entre invertir en flexibilidad o en reducción de costos.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  balance_eficiencia_responsividad                    6        2        2
+  trade_off_responsividad_eficiencia                  4        6        6
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 13 de 232 . tamano 2 . clases internas {'A': 1}
+# desafios_de_diseno_competitivos, diseno_de_desafios_de_innovacion
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 237   desafios_de_diseno_competitivos + diseno_de_desafios_de_innovacion
+      REPITE con diseno_de_desafios_de_innovacion. Los dos mandan definir un reto medible, poner reglas y premio, convocar equipos y publicitar el proceso para construir narrativa, y evaluar el impacto mas alla del ganador. FIGURA: ids casi identicos. Candidato a fusion.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## desafios_de_diseno_competitivos
+     titulo    : Design Challenges (Desafíos de Diseño Competitivos)
+     fuente    : Change by Design, Revised and U - Tim Brown
+     dominio   : core | fase: ideacion
+     etiqueta  : Lanza un Desafío de Diseño
+     entregable: Un marco de competencia pública con criterios de éxito definidos y mecanismo de premiación
+     alias     : []
+     resumen   : 339 caracteres
+     PASOS (5):
+       1. Definir un objetivo técnico o social ambicioso y medible
+       2. Establecer reglas claras y un premio simbólico o monetario
+       3. Convocar públicamente a equipos independientes (no gubernamentales)
+       4. Documentar y publicitar el proceso para generar una narrativa pública
+       5. Evaluar el impacto posterior en inversión e innovación del sector
+     CONDICIONES (2):
+       1. Cuando se busca estimular innovación en un sector estancado tecnológicamente
+       2. Si se requiere movilizar inversión privada hacia un objetivo público/humanitario
+
+  ## diseno_de_desafios_de_innovacion
+     titulo    : El Desafío de Diseño (Design Challenge)
+     fuente    : Change by Design, Revised and U - Tim Brown
+     dominio   : core | fase: ideacion
+     etiqueta  : Lanza un Desafío de Innovación
+     entregable: Una convocatoria de desafío de diseño con reglas, premio y plan de comunicación pública definidos.
+     alias     : []
+     resumen   : 384 caracteres
+     PASOS (5):
+       1. Definir un reto claro, medible y desafiante para los equipos participantes
+       2. Establecer reglas y un premio (financiero, reconocimiento o ambos)
+       3. Comunicar el progreso del desafío públicamente para generar expectación
+       4. Aprovechar medios (TV, web, prensa) para construir una narrativa de seguimiento
+       5. Evaluar resultados más allá del ganador: aprendizaje colectivo e innovación generada
+     CONDICIONES (3):
+       1. Cuando se busca innovación radical en un plazo definido
+       2. Cuando se quiere generar cobertura mediática significativa con bajo presupuesto
+       3. Cuando existen múltiples equipos o comunidades capaces de competir por una solución
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  desafios_de_diseno_competitivos                     5        3        3
+  diseno_de_desafios_de_innovacion                    5        5        5
+  aristas INTERNAS del acto: ['desafios_de_diseno_competitivos.nodos_previos -> diseno_de_desafios_de_innovacion', 'diseno_de_desafios_de_innovacion.nodos_siguientes -> desafios_de_diseno_competitivos']
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 14 de 232 . tamano 2 . clases internas {'A': 1}
+# innovacion_abierta, open_innovation_ideacion
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 244   innovacion_abierta + open_innovation_ideacion
+      REPITE con open_innovation_ideacion. Cinco de los seis pasos del segundo son los pasos 2 a 6 del primero, uno por uno: equipos de scouting, pagina web para recibir ideas, vinculos con centros de transferencia, sesiones con proveedores tecnicos y plataformas de co-creacion con clientes. PROCEDENCIA: par ya registrado como calcado del nucleo desde la cola de 346. La relectura lo sostiene.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## innovacion_abierta
+     titulo    : Innovación Abierta (Open Innovation)
+     fuente    : Winning at New Products - Robert G. Cooper
+     dominio   : core | fase: ideacion
+     etiqueta  : Busca Ideas Fuera de Casa
+     entregable: Estrategia de innovación abierta con métodos seleccionados, red de socios/proveedores establecida y procesos para evaluar ideas externas
+     alias     : []
+     resumen   : 418 caracteres
+     PASOS (7):
+       1. Evaluar el grado de síndrome NIH en la organización
+       2. Establecer equipos de exploración (scouting) que investiguen startups, inventores y pequeñas empresas
+       3. Crear páginas web que inviten al público a enviar ideas, tecnología o productos terminados
+       4. Establecer interfaces con centros de transferencia tecnológica universitaria
+       5. Realizar sesiones regulares con proveedores técnicos (como el modelo Swarovski de 'search fields')
+       6. Considerar plataformas de diseño de producto por parte del cliente (como LEGO Digital Designer)
+       7. Evaluar qué métodos de innovación abierta aplican según la complejidad del producto y la industria (B2C vs B2B/alta tecnología)
+     CONDICIONES (3):
+       1. Cuando la I+D interna no ha sido suficiente fuente de innovación
+       2. Cuando la empresa opera en un sector B2C con productos de tecnología relativamente simple
+       3. Cuando se busca complementar la ideación interna con fuentes externas
+
+  ## open_innovation_ideacion
+     titulo    : Innovación Abierta para Generación de Ideas
+     fuente    : Winning at New Products - Robert G. Cooper
+     dominio   : core | fase: ideacion
+     etiqueta  : Busca Ideas Fuera del Equipo
+     entregable: Sistema estructurado de innovación abierta con canales definidos para captar ideas externas y un proceso Stage-Gate adaptado para evaluarlas.
+     alias     : []
+     resumen   : 360 caracteres
+     PASOS (6):
+       1. Establecer equipos de exploración (scouting) que visiten conferencias, ferias y startups
+       2. Crear una página web para que el público envíe ideas, tecnología o productos terminados
+       3. Establecer vínculos con centros de transferencia tecnológica universitaria
+       4. Organizar sesiones regulares con proveedores y su personal técnico
+       5. Considerar plataformas de co-creación con clientes (ej. LEGO Digital Designer)
+       6. Adaptar el proceso Stage-Gate para manejar ideas, IP y tecnologías externas
+     CONDICIONES (3):
+       1. Cuando la empresa busca expandir sus fuentes de ideas más allá de los empleados internos
+       2. Si el producto es de consumo relativamente simple o creativo
+       3. Cuando se cuenta con recursos para gestionar y evaluar un alto volumen de propuestas externas
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  innovacion_abierta                                  7        3        3
+  open_innovation_ideacion                            6       10       10
+  aristas INTERNAS del acto: ['innovacion_abierta.nodos_previos -> open_innovation_ideacion', 'open_innovation_ideacion.nodos_siguientes -> innovacion_abierta']
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 15 de 232 . tamano 2 . clases internas {'A': 1}
+# hr_calidad_gestion, hr_como_control_de_calidad_gerencial
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 249   hr_calidad_gestion + hr_como_control_de_calidad_gerencial
+      REPITE con hr_como_control_de_calidad_gerencial. Los dos mandan definir el ciclo de vida completo del empleado, poner preguntas de revision y metricas objetivas por cada fase, y usar lo que encuentres para corregir la calidad de la gestion. Candidato a fusion.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## hr_calidad_gestion
+     titulo    : Cuidar la calidad de cómo gestionas a tu equipo (employee life cycle)
+     fuente    : The Hard Thing About Hard Thing - Ben Horowitz
+     dominio   : core | fase: ejecucion
+     etiqueta  : Vigila la Calidad de tu Gestión
+     entregable: Un mapa de revisión del recorrido completo de una persona en tu negocio, con métricas por etapa: reclutamiento, compensación, entrenamiento, desempeño y motivación
+     alias     : []
+     resumen   : 484 caracteres
+     PASOS (6):
+       1. Evalúa cada etapa del recorrido de una persona en tu equipo: reclutamiento, compensación, integración, desempeño, motivación
+       2. Pregunta si quienes hacen las entrevistas están bien preparados y llegan a tiempo
+       3. Compara los paquetes de compensación y participación (stock options) con lo que ofrece la competencia por talento
+       4. Mide cuánto tarda alguien nuevo en volverse productivo
+       5. Evalúa el compromiso: ¿las personas creen en lo que estás construyendo, disfrutan venir a trabajar, o están desconectadas?
+       6. Contrata a alguien que sepa diseñar procesos de primer nivel para cuidar a tu equipo, igual que quien lidera el control de calidad (QA) de un producto
+     CONDICIONES (1):
+       1. Cuando necesitas ir más allá de la administración básica de personas y empezar a cuidar en serio cómo se gestiona a tu equipo
+
+  ## hr_como_control_de_calidad_gerencial
+     titulo    : El área de personas como control de calidad de tus gerentes
+     fuente    : The Hard Thing About Hard Things - Ben Horowitz
+     dominio   : core | fase: ejecucion
+     etiqueta  : Usa RRHH como Control Gerencial
+     entregable: Un marco de evaluación del ciclo de vida del empleado con métricas de calidad de gestión por fase.
+     alias     : []
+     resumen   : 495 caracteres
+     PASOS (4):
+       1. Define el ciclo de vida completo del empleado en tu negocio (reclutamiento, compensación, integración, desempeño, motivación).
+       2. Establece preguntas de revisión para cada fase, por ejemplo: ¿tus gerentes dan retroalimentación consistente? ¿las revisiones de desempeño llegan a tiempo?
+       3. Diseña métricas objetivas para monitorear la calidad de gestión en cada fase.
+       4. Usa lo que encuentres para corregir directamente a tus gerentes antes de que el problema escale.
+     CONDICIONES (2):
+       1. Cuando tu negocio supera los 30 o 50 empleados y necesitas formalizar tu área de personas
+       2. Cuando sientes que la calidad de gestión se está deteriorando pero no tienes datos objetivos para confirmarlo
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  hr_calidad_gestion                                  6        3        3
+  hr_como_control_de_calidad_gerencial                4        2        2
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 16 de 232 . tamano 2 . clases internas {'A': 1}
+# customer_appreciation_pr, customer_appreciation_soporte
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 262   customer_appreciation_pr + customer_appreciation_soporte
+      REPITE con customer_appreciation_soporte. Los dos mandan lo mismo: tratar el presupuesto de soporte como inversion de marketing, disenar gestos sorpresa de bajo costo como notas escritas a mano y regalos pequenos, y medir el efecto en retencion y recomendacion boca a boca. FIGURA: ids casi identicos y titulos al 87,6. Candidato a fusion.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## customer_appreciation_pr
+     titulo    : Customer Appreciation como Canal de Tracción
+     fuente    : Traction - Gabriel Weinberg
+     dominio   : core | fase: ejecucion
+     etiqueta  : Sorprende y Aprecia a tus Clientes
+     entregable: Programa de apreciación al cliente con acciones definidas, presupuesto y calendario de ejecución
+     alias     : []
+     resumen   : 350 caracteres
+     PASOS (5):
+       1. Identificar momentos clave del customer journey para sorprender con gestos genuinos
+       2. Enviar notas escritas a mano, regalos pequeños o reconocimientos públicos a clientes tempranos
+       3. Diseñar contests o promociones de bajo costo pero alto valor emocional (ej. sorteos, dibujos personalizados)
+       4. Tratar el soporte al cliente como inversión de marketing, priorizando calidad sobre velocidad
+       5. Medir el efecto en redes sociales, retención y menciones espontáneas de marca
+     CONDICIONES (2):
+       1. Cuando el startup ya tiene clientes activos y busca aumentar retención y boca a boca
+       2. Cuando se quiere diferenciar la marca mediante experiencia de cliente memorable
+
+  ## customer_appreciation_soporte
+     titulo    : Customer Appreciation como Canal de Marketing
+     fuente    : Traction - Gabriel Weinberg
+     dominio   : core | fase: ejecucion
+     etiqueta  : Invierte en Atender Bien
+     entregable: Una política de servicio al cliente documentada que incluya al menos un gesto de 'sorpresa y deleite' repetible.
+     alias     : []
+     resumen   : 447 caracteres
+     PASOS (4):
+       1. Redefinir el presupuesto de soporte al cliente como inversión de marketing, no solo costo
+       2. Establecer políticas que prioricen la satisfacción del cliente sobre la eficiencia operativa (ej. envíos y devoluciones gratis)
+       3. Diseñar pequeños gestos sorpresa (regalos, notas personalizadas, resolución de problemas fuera del alcance normal)
+       4. Medir el impacto en retención, recomendaciones boca a boca y menciones en redes sociales
+     CONDICIONES (2):
+       1. Cuando el producto ya tiene clientes activos y se busca aumentar retención y boca a boca
+       2. Cuando el diferencial competitivo puede construirse vía experiencia de cliente
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  customer_appreciation_pr                            5        6        6
+  customer_appreciation_soporte                       4        2        2
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 17 de 232 . tamano 2 . clases internas {'A': 1}
+# pivotar_o_proceder, pivote_o_proceder
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 268   pivotar_o_proceder + pivote_o_proceder
+      REPITE con pivote_o_proceder. Los dos mandan la misma decision y con los mismos gestos: sentarse con el socio o el inversor en vez de decidirlo solo en la cabeza, mirar evidencia real de clientes y no opiniones, decidir entre cambiar de rumbo o seguir adelante, y dejar la decision por escrito con sus criterios. El segundo anade dibujar como trabaja el cliente tipico y comparar ese mapa con lo supuesto, que es material propio, pero el nucleo de la instruccion es el mismo y los ids son el mismo nombre en dos formas.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## pivotar_o_proceder
+     titulo    : La decisión de cambiar de rumbo o seguir adelante (pivot or proceed)
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: validacion
+     etiqueta  : Decide Pivotar o Seguir
+     entregable: Un documento con tu decisión de cambiar de rumbo o seguir adelante, los criterios que usaste para llegar a ella, y tu lienzo de negocio (Business Model Canvas) actualizado
+     alias     : []
+     resumen   : 331 caracteres
+     PASOS (5):
+       1. Siéntate con quien te acompañe en esto, sea socio o inversor, a evaluar con calma en qué punto estás
+       2. Revisa evidencia real, no opiniones, sobre qué tan entusiasmados están tus clientes
+       3. Clasifica las respuestas de tus clientes según su nivel de entusiasmo, desde amor total hasta indiferencia
+       4. Decide con claridad: cambias de rumbo y vuelves al inicio, o sigues adelante hacia la validación con clientes
+       5. Documenta tu decisión y los criterios que usaste para tomarla
+     CONDICIONES (2):
+       1. Después de cada fase de descubrimiento de clientes (Customer Discovery), antes de invertir más en desarrollo
+       2. Cuando no tienes claro si tu producto resuelve un problema real
+
+  ## pivote_o_proceder
+     titulo    : El momento de decidir: pivotar o seguir adelante (Pivote o Proceder)
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: validacion
+     etiqueta  : Revisa tu Modelo y Decide
+     entregable: Una decisión clara y por escrito: pivotar o seguir, con tu modelo de negocio actualizado y tu lista de funciones ordenada y reducida
+     alias     : []
+     resumen   : 389 caracteres
+     PASOS (7):
+       1. Siéntate con quien te acompaña en esto, no lo decidas solo en tu cabeza, y si tienes inversores, súmalos también
+       2. Dibuja cómo trabaja realmente tu cliente típico, basándote en datos reales que hayas recogido
+       3. Compara ese mapa real con lo que habías supuesto al armar tu modelo de negocio
+       4. Pregúntate qué tan bien lo que estás construyendo resuelve el problema real de tu cliente
+       5. Si la respuesta es 'no del todo', decide si el problema está en que elegiste el cliente equivocado o en las funciones de tu producto
+       6. Reduce tu lista de funciones a algo que puedas contar en un párrafo y vender a miles de personas, no a una lista larguísima pensada para diez clientes
+       7. Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante
+     CONDICIONES (1):
+       1. Cuando terminaste de poner a prueba el problema con clientes reales y necesitas decidir si sigues con tus hipótesis actuales o las cambias
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  pivotar_o_proceder                                  5       10       10
+  pivote_o_proceder                                   7        5        5
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 18 de 232 . tamano 2 . clases internas {'A': 1}
+# analisis_de_variancia, analisis_varianza_financiera
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 273   analisis_de_variancia + analisis_varianza_financiera
+      REPITE con analisis_varianza_financiera. Los dos mandan comparar mes a mes lo real contra lo presupuestado linea por linea, calcular la variacion en monto y en porcentaje, y priorizar la investigacion de las desviaciones grandes antes de decidir nada. El segundo anade dos gestos propios, marcar cada varianza como favorable o desfavorable y verificar como presenta el sistema contable los parentesis y los signos negativos, pero eso es detalle de ejecucion sobre la misma instruccion.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## analisis_de_variancia
+     titulo    : Análisis de variación entre lo presupuestado y lo real (budget vs. actual)
+     fuente    : Financial Intelligence for Entrepreneurs
+     dominio   : core | fase: ejecucion
+     etiqueta  : Compara Presupuesto Contra Realidad
+     entregable: Un reporte mensual de variación con las explicaciones de las diferencias más importantes.
+     alias     : []
+     resumen   : 324 caracteres
+     PASOS (3):
+       1. Compara cada mes lo real contra lo que presupuestaste (budget), línea por línea.
+       2. Calcula el porcentaje de variación entre lo real y lo presupuestado, o contra el periodo anterior.
+       3. Investiga y anota la causa de cualquier diferencia importante antes de tomar decisiones.
+     CONDICIONES (1):
+       1. Si ya tienes un presupuesto operativo y necesitas controlarlo.
+
+  ## analisis_varianza_financiera
+     titulo    : Análisis de Varianza Financiera
+     fuente    : Financial Intelligence for Entrepreneurs
+     dominio   : core | fase: ejecucion
+     etiqueta  : Detecta Varianzas en tus Números
+     entregable: Reporte de varianza mensual con clasificación clara de favorable/desfavorable por línea
+     alias     : []
+     resumen   : 366 caracteres
+     PASOS (4):
+       1. Calcular varianza en dólares y en porcentaje para cada línea relevante
+       2. Determinar manualmente si cada varianza es favorable o desfavorable
+       3. Verificar cómo el sistema contable presenta paréntesis/signos negativos
+       4. Priorizar la revisión de varianzas grandes en términos porcentuales
+     CONDICIONES (2):
+       1. Si el usuario debe reportar desempeño mensual contra presupuesto
+       2. Si el usuario necesita identificar rápidamente desviaciones significativas
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  analisis_de_variancia                               3        3        3
+  analisis_varianza_financiera                        4        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 19 de 232 . tamano 2 . clases internas {'A': 1}
+# sistema_stage_gate, stage_gate_system
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 275   sistema_stage_gate + stage_gate_system
+      REPITE con stage_gate_system. Los dos mandan construir el mismo sistema: partir el desarrollo de producto en etapas discretas, poner un gate de decision antes de cada una, y ajustar el rigor segun el proyecto. El primero anade el equipo multifuncional en paralelo y la logica de compra de opciones; el segundo anade los criterios Go/Kill, las practicas agiles y el playbook documentado. Son dos redacciones del mismo Stage-Gate de Cooper y los ids son el mismo nombre en dos idiomas.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## sistema_stage_gate
+     titulo    : Sistema Stage-Gate: Modelo Integral de Innovación
+     fuente    : Winning at New Products - Robert G. Cooper
+     dominio   : core | fase: planificacion
+     etiqueta  : Estructura la Innovación por Etapas
+     entregable: Un diagrama del proceso Stage-Gate adaptado a la empresa, con etapas y gates claramente definidos
+     alias     : []
+     resumen   : 356 caracteres
+     PASOS (4):
+       1. Mapear el proceso de innovación de la empresa en etapas discretas (Discovery, Scoping, Business Case, Development, Testing, Launch)
+       2. Definir un gate o punto de decisión antes de cada etapa
+       3. Asegurar que cada etapa involucre equipos multifuncionales trabajando en paralelo
+       4. Establecer que cada etapa cueste progresivamente más, siguiendo la lógica de compra de opciones incrementales
+     CONDICIONES (2):
+       1. Si la empresa maneja la innovación como una 'caja negra' sin proceso definido
+       2. Si se requiere estandarizar el desarrollo de nuevos productos en la organización
+
+  ## stage_gate_system
+     titulo    : Sistema Stage-Gate: Playbook para el Desarrollo de Nuevos Productos
+     fuente    : Winning at New Products - Robert G. Cooper
+     dominio   : core | fase: planificacion
+     etiqueta  : Guía tu Desarrollo por Etapas
+     entregable: Mapa documentado del proceso Stage-Gate adaptado a la organización, con etapas, entregables y criterios de gate definidos
+     alias     : []
+     resumen   : 547 caracteres
+     PASOS (5):
+       1. Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa
+       2. Establecer gates de decisión Go/Kill con criterios claros basados en los factores de éxito
+       3. Incorporar prácticas ágiles donde sea apropiado para aumentar velocidad y flexibilidad
+       4. Ajustar el rigor del proceso según el riesgo y tipo de proyecto (context-based approach)
+       5. Documentar el playbook como sistema operativo replicable para toda la organización
+     CONDICIONES (2):
+       1. Si la organización no tiene un proceso formal de desarrollo de nuevos productos
+       2. Si se busca estandarizar y mejorar el proceso de idea-to-launch existente
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  sistema_stage_gate                                  4       10       10
+  stage_gate_system                                   5       11       11
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 20 de 232 . tamano 2 . clases internas {'A': 1}
+# antigoals_framework, definir_antigoals
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 282   antigoals_framework + definir_antigoals
+      REPITE con definir_antigoals. Los dos mandan construir las mismas cuatro listas y en el mismo orden: metas normales, no-metas de lo que queda fuera de alcance, antimetas de lo que uno se compromete a no hacer, y salvaguardas para detectar la desviacion. El primero cierra revisitando las listas y el segundo compartiendolas con el equipo. Es el mismo framework dicho dos veces.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## antigoals_framework
+     titulo    : Framework de Antigoals (Metas, No-metas, Antimetas, Salvaguardas)
+     fuente    : Assembling Tomorrow: A Guide to Designing a Thriving Future
+     dominio   : core | fase: planificacion
+     etiqueta  : Define lo que Quieres Evitar
+     entregable: Documento con las 4 listas (Metas, No-metas, Antimetas, Salvaguardas) validado por el equipo fundador o de diseño
+     alias     : []
+     resumen   : 553 caracteres
+     PASOS (5):
+       1. Reúne al equipo y define explícitamente las Metas normales del proyecto
+       2. Define las No-metas: qué está fuera de alcance intencionalmente
+       3. Define las Antimetas: qué te comprometes activamente a NO hacer (ej. no excluir usuarios, no engañar al cliente)
+       4. Define Salvaguardas: mecanismos concretos para detectar y corregir cuando el proyecto se desvía hacia una antimeta
+       5. Revisita estas 4 listas periódicamente conforme el proyecto evoluciona
+     CONDICIONES (3):
+       1. Cuando el proyecto involucra tecnología potencialmente riesgosa o de alto impacto ético (IA, biotecnología, datos sensibles)
+       2. Al definir los valores fundacionales de un producto antes de escalar
+       3. Si el equipo necesita alinear expectativas éticas antes de ejecutar una estrategia agresiva de crecimiento
+
+  ## definir_antigoals
+     titulo    : Antigoals: Definir lo que NO harás
+     fuente    : Assembling Tomorrow: A Guide to Designing a Thriving Future
+     dominio   : core | fase: ideacion
+     etiqueta  : Define lo que No Harás
+     entregable: Documento con cuatro listas: metas normales, no-metas, antigoals y salvaguardas para el proyecto en curso
+     alias     : []
+     resumen   : 580 caracteres
+     PASOS (5):
+       1. Lista tus metas normales: qué quieres lograr con el proyecto
+       2. Define las no-metas: qué está fuera de alcance intencionalmente
+       3. Articula los antigoals: qué te comprometes explícitamente a NO hacer (ej: no confundir al usuario, no excluir personas con discapacidad)
+       4. Diseña salvaguardas: mecanismos para detectar cuando te acercas a un antigoal
+       5. Comparte la lista con el equipo para que también puedan rally alrededor de los antigoals, no solo de las metas
+     CONDICIONES (3):
+       1. Cuando el proyecto involucra sistemas complejos o IA con comportamiento emergente
+       2. Cuando el equipo solo se enfoca en qué construir sin considerar riesgos éticos
+       3. Antes de escalar un producto que podría tener efectos secundarios no deseados
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  antigoals_framework                                 5        5        5
+  definir_antigoals                                   5        3        3
+  aristas INTERNAS del acto: ['antigoals_framework.nodos_previos -> definir_antigoals', 'definir_antigoals.nodos_siguientes -> antigoals_framework']
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 21 de 232 . tamano 2 . clases internas {'A': 1}
+# arquetipos_de_cliente, customer_archetypes
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 288   arquetipos_de_cliente + customer_archetypes
+      REPITE con customer_archetypes. Los dos mandan dibujar el mismo retrato: el usuario final y por separado quien decide la compra, con su perfil demografico y psicografico, su contexto fisico de oficina, cubiculo o planta, y usar el resultado para alinear canal, relacion con el cliente y modelo de ingresos. El primero desarrolla mucho mas el trabajo previo de conversaciones y patrones y trata cada retrato como hipotesis provisional; el segundo es la version corta del mismo gesto. Los ids son el mismo nombre en dos idiomas.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## arquetipos_de_cliente
+     titulo    : El retrato de tu cliente (arquetipo de cliente)
+     fuente    : The Startup Owner's Manual - Steve Blank | The Lean Startup - Eric Ries
+     dominio   : core | fase: validacion
+     etiqueta  : Retrata a tu Cliente Real
+     entregable: Un documento o fichas con al menos un retrato de tu cliente (quien lo usa y, si aplica, quien decide la compra), con su perfil, problemas, contexto y motivaciones, conectado con el resto de tu negocio
+     alias     : []
+     resumen   : 766 caracteres
+     PASOS (8):
+       1. Ten conversaciones exploratorias con clientes potenciales sobre sus problemas, necesidades y frustraciones
+       2. Busca los patrones que se repiten en esas conversaciones
+       3. Describe o dibuja a quien usa tu producto: su entorno (oficina, planta, cubiculo) y su rutina
+       4. Si aplica, describe o dibuja por separado a quien decide la compra, que puede ser distinto de quien lo usa
+       5. Define tus hipótesis sobre quien es el comprador: su estilo de vida, nivel económico y situacion familiar
+       6. Escribe un documento breve que reuna el perfil, los problemas y el contexto de cada retrato
+       7. Conecta estas caracteristicas con el resto de tu negocio: como llegas a tu cliente, como te relacionas con el y como le cobras
+       8. Trata cada retrato como una hipótesis provisional que revisas a medida que aprendes
+     CONDICIONES (3):
+       1. Cuando ya explorastes a tus clientes pero todavia no tienes claro el perfil al que apuntas
+       2. Si necesitas ordenar las prioridades de lo que vas a construir
+       3. Cuando necesitas visualizar con claridad a tu cliente para alinear tu estrategia de producto
+
+  ## customer_archetypes
+     titulo    : Arquetipos de Cliente
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: validacion
+     etiqueta  : Dibuja tus Arquetipos de Cliente
+     entregable: Fichas visuales de arquetipos de cliente (usuario final y decisor como mínimo)
+     alias     : []
+     resumen   : 311 caracteres
+     PASOS (4):
+       1. Dibujar o bocetar al usuario final y al decisor clave
+       2. Definir perfil demográfico y psicográfico (edad, estilo de vida, intereses)
+       3. Determinar el contexto físico del cliente (oficina, cubículo, hogar, etc.)
+       4. Usar estos arquetipos para informar canal, relación con cliente y modelo de ingresos
+     CONDICIONES (2):
+       1. Cuando el equipo necesita alinear su visión de quién es el cliente
+       2. Antes de diseñar mensajes de marketing
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  arquetipos_de_cliente                               8        5        5
+  customer_archetypes                                 4       20       20
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 22 de 232 . tamano 2 . clases internas {'A': 1}
+# assumption_and_constraint_log, assumption_constraint_log
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 289   assumption_and_constraint_log + assumption_constraint_log
+      REPITE con assumption_constraint_log. Los ids son el mismo nombre con y sin la conjuncion, y los cinco pasos coinciden uno a uno: identificar los supuestos y las restricciones, asignar responsable, poner fecha limite de validacion, documentar las acciones, y actualizar el estado a medida que se validan o se invalidan. El segundo precisa de donde vienen, del charter, del cliente o de los reguladores, y eso es todo lo que los separa.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## assumption_and_constraint_log
+     titulo    : Assumption and Constraint Log
+     fuente    : A Project Manager's Book of Forms
+     dominio   : core | fase: planificacion
+     etiqueta  : Registra Supuestos y Límites
+     entregable: Log actualizado con supuestos y restricciones categorizados, con responsables y fechas asignadas
+     alias     : []
+     resumen   : 233 caracteres
+     PASOS (5):
+       1. Identificar y categorizar cada supuesto o restricción
+       2. Asignar un responsable para validar cada supuesto
+       3. Establecer fecha límite para validación
+       4. Documentar acciones necesarias para validar
+       5. Actualizar el estado (activo, pendiente, cerrado) periódicamente
+     CONDICIONES (1):
+       1. Cuando surgen supuestos no validados durante la planificación que deben rastrearse a lo largo del proyecto
+
+  ## assumption_constraint_log
+     titulo    : Registro de Supuestos y Restricciones
+     fuente    : A Project Manager's Book of Forms
+     dominio   : core | fase: planificacion
+     etiqueta  : Anota tus Supuestos Clave
+     entregable: Un log con identificador, categoría, descripción, responsable, fecha, acciones y estado de cada supuesto o restricción.
+     alias     : []
+     resumen   : 304 caracteres
+     PASOS (5):
+       1. Identificar supuestos provenientes de cualquier documento o del equipo del proyecto
+       2. Documentar restricciones definidas por el charter, cliente o reguladores
+       3. Asignar responsable y fecha límite para validar cada supuesto
+       4. Registrar acciones tomadas y el estado actual de cada ítem
+       5. Actualizar el log conforme se validan o invalidan los supuestos
+     CONDICIONES (2):
+       1. Cuando el proyecto tiene múltiples supuestos no validados que podrían representar riesgos
+       2. Cuando se necesita rastrear restricciones impuestas por el cliente o regulaciones
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  assumption_and_constraint_log                       5        4        4
+  assumption_constraint_log                           5        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 23 de 232 . tamano 2 . clases internas {'A': 1}
+# embudo_get_keep_grow, estrategia_get_keep_grow
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 292   embudo_get_keep_grow + estrategia_get_keep_grow
+      REPITE con estrategia_get_keep_grow. Los dos mandan disenar el mismo embudo Get, Keep, Grow: la estrategia de adquisicion y activacion, la de retencion, y las pruebas pass/fail por etapa, con el costo de adquisicion vigilado contra lo que deja cada venta. El primero anade la etapa Grow de ingreso incremental y referidos y actualizar el lienzo; el segundo desglosa mas las tacticas de medios ganados y pagados. Es el mismo marco de Blank con los mismos gestos.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## embudo_get_keep_grow
+     titulo    : Embudo Get, Keep, Grow Customers
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: ejecucion
+     etiqueta  : Consigue, Mantén y Crece Clientes
+     entregable: Documento de hipótesis de relación con clientes con las tres estrategias Get/Keep/Grow definidas, recursos priorizados y pruebas pass/fail identificadas.
+     alias     : ['framework_get_keep_grow']
+     resumen   : 692 caracteres
+     PASOS (6):
+       1. Dibuja el embudo Get/Keep/Grow específico para tu canal, físico o web/mobile
+       2. Define tu estrategia de Get Customers para adquisición y activación
+       3. Define tu estrategia de Keep Customers para interacción y retención
+       4. Define tu estrategia de Grow Customers para ingreso incremental y referidos
+       5. Prioriza tus recursos sabiendo que adquirir clientes es la etapa más costosa
+       6. Actualiza tu business model canvas e identifica pruebas pass/fail para cada etapa
+     CONDICIONES (3):
+       1. Cuando tu startup ya tiene un MVP y necesitas definir cómo conseguirás, retendrás y harás crecer tu base de clientes
+       2. Cuando estás construyendo tu business model canvas y falta la sección de canales o relación con clientes
+       3. Cuando aún no has definido cómo adquirirás, retendrás y harás crecer tu base de clientes
+
+  ## estrategia_get_keep_grow
+     titulo    : Estrategia de Relación con el Cliente: Get, Keep, Grow
+     fuente    : The Startup Owner's Manual
+     dominio   : core | fase: validacion
+     etiqueta  : Consigue, Retén y Haz Crecer
+     entregable: Una hoja de cálculo de hipótesis de 'Get Customers' con costos y resultados esperados, más un plan de retención con métricas de churn
+     alias     : []
+     resumen   : 443 caracteres
+     PASOS (5):
+       1. Diseñar el embudo de 'Get Customers': conciencia, interés, consideración, compra
+       2. Elegir tácticas de medios ganados (earned media) y pagados (paid media) a probar
+       3. Crear métricas pass/fail para cada prueba de 'Get' (ej: tasa de conversión de llamadas)
+       4. Diseñar tácticas de 'Keep Customers': llamadas de seguimiento, encuestas de satisfacción, programas de lealtad
+       5. Medir el costo de adquisición de cliente (CAC) contra el margen de ganancia por venta
+     CONDICIONES (2):
+       1. Si el startup ya validó su propuesta de valor y necesita estrategia de adquisición y retención de clientes
+       2. Si se necesita definir presupuesto de marketing con pruebas de bajo costo antes de escalar
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  embudo_get_keep_grow                                6       12       12
+  estrategia_get_keep_grow                            5        8        8
+  aristas INTERNAS del acto: ['embudo_get_keep_grow.nodos_previos -> estrategia_get_keep_grow', 'estrategia_get_keep_grow.nodos_siguientes -> embudo_get_keep_grow']
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 24 de 232 . tamano 2 . clases internas {'A': 1}
+# analisis_motivaciones_fundador, influencias_tempranas_motivaciones
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 301   analisis_motivaciones_fundador + influencias_tempranas_motivaciones
+      REPITE con influencias_tempranas_motivaciones. Los dos mandan el mismo examen previo a emprender: repasar las influencias familiares y culturales que formaron la manera de ver el emprendimiento, hacer una autoevaluacion de motivaciones con una herramienta de lista, y decidir a partir de ahi si el perfil encaja con el camino. El primero nombra las trece motivaciones y los perfiles tipicos; el segundo se queda en la tension entre control y riqueza. Es el mismo ejercicio con distinto grado de detalle.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## analisis_motivaciones_fundador
+     titulo    : Análisis de Motivaciones del Fundador
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: ideacion
+     etiqueta  : Revisa tus Motivaciones Reales
+     entregable: Un perfil personal de tus motivaciones, documentado, que muestre qué tan cerca estás del perfil típico de quien emprende
+     alias     : []
+     resumen   : 543 caracteres
+     PASOS (4):
+       1. Reflexiona sobre las influencias familiares y culturales que tuviste relacionadas con emprender
+       2. Identifica tus 4 motivaciones principales (de una lista de 13: afiliación, altruismo, autonomía, ganancia financiera, etc.)
+       3. Compara esas motivaciones con los perfiles típicos de quienes emprenden y de quienes no
+       4. Decide si tu perfil motivacional es compatible con el camino de emprender
+     CONDICIONES (2):
+       1. Si estás considerando por primera vez convertirte en emprendedor
+       2. Si dudas sobre si tienes lo necesario para fundar un negocio
+
+  ## influencias_tempranas_motivaciones
+     titulo    : Tus influencias tempranas y motivaciones para emprender
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: ideacion
+     etiqueta  : Descubre tus Motivaciones Profundas
+     entregable: Tu perfil de motivaciones personales escrito, dejando claro si priorizas el control o la riqueza
+     alias     : []
+     resumen   : 573 caracteres
+     PASOS (3):
+       1. Piensa en las influencias familiares y culturales que formaron tu manera de ver el emprendimiento
+       2. Haz un ejercicio de auto evaluación de tus motivaciones (por ejemplo con una herramienta tipo CareerLeader): ¿te mueve el control, la riqueza, pertenecer a un grupo, la seguridad?
+       3. Identifica si lo tuyo es más el control o más la riqueza, porque eso va a pesar cuando decidas cómo repartir participación y quién manda en tu negocio
+     CONDICIONES (2):
+       1. Cuando no tienes claro por qué quieres emprender
+       2. Cuando hay roces con tu familia o tu entorno por tu decisión de emprender
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  analisis_motivaciones_fundador                      4        4        4
+  influencias_tempranas_motivaciones                  3        2        2
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 25 de 232 . tamano 2 . clases internas {'A': 1}
+# asignacion_recursos_en_gates, sistema_gestion_recursos_en_gates
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 302   asignacion_recursos_en_gates + sistema_gestion_recursos_en_gates
+      REPITE con sistema_gestion_recursos_en_gates. Los dos mandan lo mismo en la misma reunion de gate: elegir un metodo de seguimiento de recursos, sea lista, hoja de calculo o programa; revisar la disponibilidad real de las personas antes de comprometerlas; tener a la vista los compromisos de todos los proyectos activos para no comprometer dos veces a la misma gente; y no aprobar un proyecto sin resolver esas implicaciones. Es la misma instruccion con los mismos cuatro gestos.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## asignacion_recursos_en_gates
+     titulo    : Método de Asignación de Recursos en Gates
+     fuente    : Winning at New Products - Robert G. Cooper
+     dominio   : core | fase: ejecucion
+     etiqueta  : Comprométete al Decir Sí
+     entregable: Sistema de seguimiento de recursos (hoja de cálculo o software) que muestre asignación de personas por proyecto y disponibilidad futura
+     alias     : []
+     resumen   : 439 caracteres
+     PASOS (4):
+       1. Mostrar en cada gate la lista de proyectos activos con su priorización y compromisos de recursos actuales
+       2. Elegir un método de seguimiento de recursos: pre-conversación del líder con candidatos, software de gestión, o preparación previa de gatekeepers
+       3. Verificar disponibilidad real de personas antes de comprometer recursos a un nuevo proyecto
+       4. Evitar agregar proyectos a la lista activa sin resolver las implicaciones de recursos
+     CONDICIONES (2):
+       1. Cuando se aprueban proyectos sin verificar disponibilidad real de equipo
+       2. Si existe multitasking excesivo entre miembros del equipo de desarrollo
+
+  ## sistema_gestion_recursos_en_gates
+     titulo    : Cómo asignar y seguir los recursos en cada decisión de avance (gate)
+     fuente    : Winning at New Products - Robert G. Cooper
+     dominio   : core | fase: ejecucion
+     etiqueta  : Asigna Recursos Reales en Cada Etapa
+     entregable: Un modelo de recursos (hoja de cálculo o programa) que te muestre qué personas están asignadas a qué proyectos y cuándo están disponibles.
+     alias     : []
+     resumen   : 500 caracteres
+     PASOS (4):
+       1. Elige un método de seguimiento de recursos: lista manual, hoja de cálculo o algún programa especializado.
+       2. Antes de cada reunión de avance, revisa si realmente tienes disponibles las personas de cada área.
+       3. Anota los compromisos de recursos de todos tus proyectos activos para no comprometer a la misma persona dos veces.
+       4. En la reunión, comprométete de forma explícita a asignar personas y presupuesto para la siguiente etapa.
+     CONDICIONES (2):
+       1. Si los proyectos que apruebas para seguir adelante no reciben los recursos reales que necesitan.
+       2. Si tienes varios proyectos compitiendo por las mismas personas.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  asignacion_recursos_en_gates                        4        8        8
+  sistema_gestion_recursos_en_gates                   4        4        4
+  aristas INTERNAS del acto: ['sistema_gestion_recursos_en_gates.nodos_previos -> asignacion_recursos_en_gates', 'asignacion_recursos_en_gates.nodos_siguientes -> sistema_gestion_recursos_en_gates']
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 26 de 232 . tamano 2 . clases internas {'A': 1}
+# apertura_efectiva_llamada_venta, apertura_llamada_venta_grande
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 307   apertura_efectiva_llamada_venta + apertura_llamada_venta_grande
+      REPITE con apertura_llamada_venta_grande. Los dos mandan lo mismo sobre la apertura de la llamada en venta grande: no repetir siempre la misma formula de apertura, no gastar demasiado tiempo en los preliminares, pasar rapido a las preguntas de descubrimiento, y poner el esfuerzo de preparacion en la calidad de las preguntas y no en pulir la entrada. Es la misma tesis de Rackham contra el mito de la primera impresion.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## apertura_efectiva_llamada_venta
+     titulo    : Apertura Efectiva de la Llamada de Ventas (Preliminares)
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: ejecucion
+     etiqueta  : Gana Permiso para Investigar
+     entregable: Un guion flexible de apertura de llamada que deja claro que tu rol es preguntar, sin caer en declaraciones de beneficio repetitivas ni en detalles prematuros de producto.
+     alias     : []
+     resumen   : 709 caracteres
+     PASOS (5):
+       1. Al iniciar la llamada, establece claramente quién eres, por qué estás ahí (sin dar detalles de producto) y tu derecho a hacer preguntas.
+       2. Evita usar siempre la misma frase de apertura, especialmente con el mismo cliente en múltiples visitas.
+       3. No dediques más del 20% del tiempo total de la llamada a las Preliminares.
+       4. Resiste la tentación de hablar de tu producto o solución en la primera mitad de la llamada.
+       5. Si el comprador te hace preguntas de producto muy pronto, retoma el control redirigiendo hacia preguntas sobre sus necesidades.
+     CONDICIONES (2):
+       1. Cuando estás preparando el guion de apertura para una venta compleja o de ciclo largo (large sale).
+       2. Si tu equipo de ventas usa siempre el mismo discurso de apertura y las tasas de éxito son bajas.
+
+  ## apertura_llamada_venta_grande
+     titulo    : Abrir la llamada en ventas grandes: el mito de la primera impresión
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: ejecucion
+     etiqueta  : Olvida la Primera Impresión Perfecta
+     entregable: Guion de apertura breve y flexible para tus llamadas de venta, con transición rápida hacia preguntas de descubrimiento
+     alias     : []
+     resumen   : 498 caracteres
+     PASOS (4):
+       1. No gastes demasiado tiempo abriendo con temas personales o triviales cuando vendes algo grande o le hablas a alguien senior
+       2. No repitas siempre la misma fórmula de apertura con una frase de beneficio como si fuera un truco garantizado
+       3. Ajusta tu apertura a cada situación y pasa rápido a hacer preguntas de descubrimiento
+       4. Pon tu esfuerzo de preparación en la calidad de tus preguntas, no en pulir una apertura elegante
+     CONDICIONES (2):
+       1. Cuando le vendes a alguien senior o estás en un ciclo de venta grande y complejo
+       2. Cuando sientes que gastas demasiado esfuerzo en romper el hielo y no ves resultado
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  apertura_efectiva_llamada_venta                     5        4        4
+  apertura_llamada_venta_grande                       4        4        4
+  aristas INTERNAS del acto: ['apertura_efectiva_llamada_venta.nodos_previos -> apertura_llamada_venta_grande', 'apertura_llamada_venta_grande.nodos_siguientes -> apertura_efectiva_llamada_venta']
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 27 de 232 . tamano 2 . clases internas {'A': 1}
+# produccion_scheduling_balance_objetivos, programacion_produccion
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 312   produccion_scheduling_balance_objetivos + programacion_produccion
+      REPITE con programacion_produccion. Los dos mandan la misma secuencia de programacion: calcular el lote economico de cada producto, calcular su run-out time, ordenar la produccion segun el menor run-out time, y ajustar para balancear utilizacion, inventario y servicio al cliente. El primero antepone elegir cual de los tres objetivos manda, pero los cuatro gestos son los mismos y en el mismo orden.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## produccion_scheduling_balance_objetivos
+     titulo    : Programación de Producción: Balance entre Objetivos Competitivos
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     dominio   : core | fase: ejecucion
+     etiqueta  : Equilibra tus Objetivos de Producción
+     entregable: Un calendario de producción documentado con lotes económicos calculados y secuencia de corridas basada en run-out time
+     alias     : []
+     resumen   : 579 caracteres
+     PASOS (4):
+       1. Identificar cuáles de los tres objetivos (utilización, inventario, servicio) son prioritarios para tu modelo de negocio
+       2. Calcular el lote económico de producción (economic lot size) para cada producto
+       3. Determinar la secuencia de producción usando el concepto de 'run-out time' (tiempo de agotamiento de inventario)
+       4. Revisar continuamente el inventario resultante contra la demanda real y ajustar
+     CONDICIONES (3):
+       1. Cuando el startup pasa de producción artesanal a producción en volumen
+       2. Si el usuario fabrica múltiples productos en una misma línea o instalación
+       3. Cuando hay tensión entre costos de inventario y nivel de servicio al cliente
+
+  ## programacion_produccion
+     titulo    : Programación de Producción y Lote Económico
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     dominio   : core | fase: ejecucion
+     etiqueta  : Programa tu Producción y Lotes
+     entregable: Calendario de producción con lotes económicos y secuencia basada en run-out time
+     alias     : []
+     resumen   : 463 caracteres
+     PASOS (4):
+       1. Calcular el tamaño de lote económico para cada producto balanceando costos de setup e inventario
+       2. Calcular el run-out time de cada producto (inventario disponible / demanda esperada)
+       3. Priorizar la secuencia de producción según menor run-out time relativo
+       4. Ajustar la programación para balancear utilización, inventario y servicio al cliente
+     CONDICIONES (2):
+       1. Cuando se fabrican múltiples productos en una misma línea o instalación
+       2. Cuando se busca optimizar el balance entre inventario y costos de producción
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  produccion_scheduling_balance_objetivos             4        4        4
+  programacion_produccion                             4        2        2
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 28 de 232 . tamano 2 . clases internas {'A': 1}
+# estrategia_anuncios_sociales_respuesta_indirecta, social_ads_indirect_response
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 320   estrategia_anuncios_sociales_respuesta_indirecta + social_ads_indirect_response
+      REPITE con social_ads_indirect_response. Los ids son el mismo nombre en dos idiomas y los pasos van detras: poner el objetivo del anuncio social en la afinidad y no en la conversion inmediata, crear contenido de marca o de proposito antes de pedir nada, alimentar y construir la audiencia con el tiempo, y solo despues llevarla a la conversion. El segundo anade medir en ventanas de tiempo mas largas que en buscadores, que es el unico gesto propio.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## estrategia_anuncios_sociales_respuesta_indirecta
+     titulo    : Publicidad Social con Respuesta Indirecta
+     fuente    : Traction - Gabriel Weinberg
+     dominio   : core | fase: ejecucion
+     etiqueta  : Construye Audiencia Antes de Vender
+     entregable: Plan de campaña social con fase de construcción de audiencia y fase de conversión diferenciadas
+     alias     : []
+     resumen   : 425 caracteres
+     PASOS (4):
+       1. Definir el objetivo del anuncio social como awareness, no como conversión inmediata
+       2. Crear contenido que genere afinidad con la marca antes de pedir una acción
+       3. Construir audiencia y engagement a lo largo del tiempo
+       4. Migrar gradualmente a esa audiencia hacia un objetivo de conversión (compra, registro, uso)
+     CONDICIONES (2):
+       1. Cuando el usuario busca traction vía redes sociales
+       2. Si el producto es nuevo y desconocido para la audiencia objetivo
+
+  ## social_ads_indirect_response
+     titulo    : Publicidad en redes sociales con respuesta indirecta (Indirect Response)
+     fuente    : Traction - Gabriel Weinberg
+     dominio   : core | fase: ejecucion
+     etiqueta  : Construye Marca en Redes Sociales
+     entregable: Una campaña de anuncios en redes sociales con contenido de marca y un plan de al menos 3 etapas para acompañar a tu audiencia antes de pedirle la conversión.
+     alias     : []
+     resumen   : 585 caracteres
+     PASOS (5):
+       1. Define tu objetivo de largo plazo, afinidad y conversión futura, en lugar de mirar solo los clics inmediatos
+       2. Crea contenido que explique la misión o el propósito de tu marca, no solo tu producto
+       3. Dirige tus anuncios sociales hacia contenido de valor en lugar de páginas de venta directa
+       4. Alimenta a tu audiencia con contenido recurrente antes de pedirle que compre
+       5. Mide la conversión en ventanas de tiempo más largas que las que usarías en publicidad de buscadores
+     CONDICIONES (2):
+       1. Cuando tu producto necesita que la gente lo entienda o confíe en ti antes de comprar
+       2. Cuando ya tienes optimizada tu publicidad en buscadores y quieres ampliar por dónde te llegan clientes
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  estrategia_anuncios_sociales_respuesta_indirecta      4        2        2
+  social_ads_indirect_response                        5        2        2
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 29 de 232 . tamano 2 . clases internas {'A': 1}
+# desconexion_ventas_experiencia, traspaso_ventas_cuentas
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 322   desconexion_ventas_experiencia + traspaso_ventas_cuentas
+      REPITE con traspaso_ventas_cuentas. Los dos mandan lo mismo contra el mismo problema, que quien vende y quien entrega funcionen como mundos separados: trazar como pasa hoy la informacion desde la venta hasta la atencion, anotar lo prometido y las preferencias del cliente antes del traspaso, montar un paso fijo de entrega para los clientes importantes, y revisar cada tanto si lo prometido coincide con lo entregado. El primero anade revisar como se incentiva a quien vende, que es su unico gesto propio.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## desconexion_ventas_experiencia
+     titulo    : La desconexion entre vender y cumplir lo prometido después
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: planificacion
+     etiqueta  : Conecta Ventas y Postventa
+     entregable: Un proceso documentado de traspaso del cliente (de la venta a la entrega), con una herramienta (CRM) configurada y con metas de retencion ligadas a la venta
+     alias     : []
+     resumen   : 470 caracteres
+     PASOS (4):
+       1. Traza el camino que sigue un cliente entre la venta y la entrega, y anota que información se pierde en ese traspaso
+       2. Revisa como te pagas o incentivas a quien vende, para que también le importe que el cliente se quede contento y se quede contigo, no solo cerrar cuentas nuevas
+       3. Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después
+       4. Crea un protocolo claro de traspaso: una reunion conjunta entre el cliente, quien vendio y quien sigue atendiendolo
+     CONDICIONES (3):
+       1. Cuando recibes quejas frecuentes de clientes nuevos porque no se cumplio lo que se les prometio
+       2. Si quien vende y quien atiende o entrega funcionan como mundos separados
+       3. Cuando notas que muchos clientes se van en los primeros meses después de comprar
+
+  ## traspaso_ventas_cuentas
+     titulo    : Que lo que prometes al vender sea lo que realmente entregas
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Cuida el Traspaso entre Equipos
+     entregable: Un método simple y por escrito para pasar la información del cliente desde la venta hasta la atención, con una lista de chequeo para verificarlo
+     alias     : []
+     resumen   : 348 caracteres
+     PASOS (4):
+       1. Revisa cómo pasa hoy la información desde que cierras una venta hasta que alguien atiende a ese cliente
+       2. Anota siempre lo que el cliente necesita, qué le prometiste y sus preferencias antes de dar la venta por cerrada
+       3. Para tus clientes más importantes, ten una conversación o un paso fijo donde entregues esa información a quien seguirá atendiéndolos
+       4. De vez en cuando revisa si lo que prometiste al vender coincide con lo que de verdad estás entregando
+     CONDICIONES (3):
+       1. Cuando recibes quejas repetidas de clientes porque no cumpliste lo prometido
+       2. Si una persona vende y otra distinta atiende después al cliente
+       3. En ventas de alto valor o contratos largos (seguros, software, servicios)
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  desconexion_ventas_experiencia                      4        2        2
+  traspaso_ventas_cuentas                             4        2        2
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 30 de 232 . tamano 2 . clases internas {'A': 1}
+# get_visual, pensamiento_visual
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 325   get_visual + pensamiento_visual
+      REPITE con pensamiento_visual. Los dos mandan lo mismo de IDEO: tener siempre a mano el papel, los post-its o la libreta, traducir cualquier idea u observacion en un dibujo rapido sin preocuparse por la calidad artistica, y usar esos dibujos como base para explicar y desarrollar con el equipo. Los titulos son la misma orden en dos formas, Get Visual y Hacerlo Visual.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## get_visual
+     titulo    : Get Visual (Pensamiento Visual)
+     fuente    : The field guide to human-centered design
+     dominio   : core | fase: ideacion
+     etiqueta  : Dibuja tus Ideas Primero
+     entregable: Representaciones visuales (dibujos, esquemas, maquetas) de las ideas clave del equipo
+     alias     : []
+     resumen   : 318 caracteres
+     PASOS (4):
+       1. Mantener post-its, papel y lápices siempre a mano durante todo el proceso
+       2. Dibujar, graficar o construir cualquier idea que surja, sin preocuparse por la calidad artística
+       3. Explicar los dibujos al equipo para complementar la comunicación visual
+       4. Si cuesta explicar una idea verbalmente, intentar dibujarla para clarificarla
+     CONDICIONES (2):
+       1. Cuando el equipo tiene dificultad para comunicar o entender una idea abstracta
+       2. Si se necesita cuantificar o visualizar datos cualitativos de forma más intuitiva (ej. proporciones)
+
+  ## pensamiento_visual
+     titulo    : Hacerlo Visual (Make It Visual)
+     fuente    : Change by Design
+     dominio   : core | fase: ideacion
+     etiqueta  : Dibuja para Entender Mejor
+     entregable: Una colección visual (sketchbook, mapa mental o board) de ideas y observaciones del proyecto.
+     alias     : []
+     resumen   : 285 caracteres
+     PASOS (3):
+       1. Llevar siempre una libreta de bocetos o herramienta digital equivalente.
+       2. Traducir ideas y observaciones en dibujos rápidos, mapas mentales o fotografías.
+       3. Usar estas imágenes como base para compartir y desarrollar ideas con el equipo.
+     CONDICIONES (2):
+       1. Al documentar hallazgos de investigación
+       2. Al comunicar ideas complejas a un equipo o cliente
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  get_visual                                          4        6        6
+  pensamiento_visual                                  3        7        7
+  aristas INTERNAS del acto: ['get_visual.nodos_previos -> pensamiento_visual', 'pensamiento_visual.nodos_siguientes -> get_visual']
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 31 de 232 . tamano 2 . clases internas {'A': 1}
+# fases_de_retencion_de_clientes, ocho_fases_experiencia_cliente
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 326   fases_de_retencion_de_clientes + ocho_fases_experiencia_cliente
+      REPITE con ocho_fases_experiencia_cliente. Los dos mandan lo mismo sobre el mismo mapa de ocho fases del viaje del cliente: ubicar en que fase esta hoy cada segmento, disenar la experiencia de cada una de las ocho y no solo de las de captacion, y armar el plan que empuja al cliente de una fase a la siguiente. El primero senala Affirm y Activate como las mas descuidadas y el segundo manda detectar donde se atascan, que es la misma deteccion por dos caminos. Nota: esta familia de la experiencia es la del racimo costurado transversal numero 1 de la ficha de costuras.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## fases_de_retencion_de_clientes
+     titulo    : Las 8 Fases del Viaje del Cliente (Assess-Advocate)
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Guía las Fases del Cliente
+     entregable: Mapa del viaje del cliente con las 8 fases y acciones concretas asignadas a cada una.
+     alias     : []
+     resumen   : 554 caracteres
+     PASOS (3):
+       1. Mapear en qué fase se encuentra actualmente cada segmento de clientes.
+       2. Diseñar acciones específicas de la empresa para cada una de las 8 fases (no solo para Assess y Admit).
+       3. Priorizar el diseño de experiencia en las fases Affirm y Activate, que suelen ser las más descuidadas y donde ocurre la mayor deserción.
+     CONDICIONES (2):
+       1. Cuando la empresa solo tiene procesos diseñados para atraer y cerrar ventas, pero no para después de la compra.
+       2. Cuando se busca reducir la tasa de abandono temprano de clientes.
+
+  ## ocho_fases_experiencia_cliente
+     titulo    : Las Ocho Fases de la Experiencia del Cliente
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Recorre las Ocho Fases del Cliente
+     entregable: Un diagrama del recorrido del cliente con las ocho fases identificadas y el estado actual de los clientes en cada una.
+     alias     : []
+     resumen   : 531 caracteres
+     PASOS (4):
+       1. Identificar en qué fase se encuentra actualmente cada segmento de clientes.
+       2. Diseñar la experiencia emocional deseada para cada una de las ocho fases.
+       3. Detectar en qué fase se están 'atascando' la mayoría de los clientes actuales.
+       4. Crear un plan de acción específico para avanzar a los clientes de una fase a la siguiente.
+     CONDICIONES (1):
+       1. Cuando el usuario necesita una estructura sistemática para gestionar la experiencia del cliente después de la venta.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  fases_de_retencion_de_clientes                      3        3        3
+  ocho_fases_experiencia_cliente                      4       13       13
+  aristas INTERNAS del acto: ['fases_de_retencion_de_clientes.nodos_previos -> ocho_fases_experiencia_cliente', 'ocho_fases_experiencia_cliente.nodos_siguientes -> fases_de_retencion_de_clientes']
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 32 de 232 . tamano 2 . clases internas {'A': 1}
+# prototipado_de_experiencias, prototipado_experiencial_servicios
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 335   prototipado_de_experiencias + prototipado_experiencial_servicios
+      REPITE con prototipado_experiencial_servicios. Los dos mandan el mismo taller y hasta con el mismo material: levantar una maqueta a escala del espacio de servicio en foam core, invitar a clientes y stakeholders a actuar situaciones reales dentro de ella, recoger sugerencias con post-its, entrenar al equipo en improvisacion teatral para que se suelte, y documentar lo que sale para iterar el diseno. Son el mismo nodo escrito dos veces.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## prototipado_de_experiencias
+     titulo    : Prototipado de Experiencias Intangibles (Acting Out)
+     fuente    : Change by Design, Revised and U - Tim Brown
+     dominio   : core | fase: validacion
+     etiqueta  : Prototipa Experiencias, No Solo Objetos
+     entregable: Una maqueta experiencial o escenario actuado que genera insights concretos sobre la experiencia de servicio, junto con una lista de mejoras identificadas
+     alias     : []
+     resumen   : 466 caracteres
+     PASOS (5):
+       1. Construir una maqueta física aproximada del espacio o servicio (ej. foam core)
+       2. Invitar a miembros del equipo, clientes y stakeholders a actuar situaciones reales dentro de la maqueta
+       3. Documentar reacciones y sugerencias mediante post-its u observación directa
+       4. Aplicar técnicas de improvisación teatral básicas para facilitar la actuación grupal
+       5. Iterar el diseño del servicio basándose en los insights obtenidos de las actuaciones
+     CONDICIONES (2):
+       1. Cuando el proyecto involucra un servicio, experiencia o sistema organizacional en lugar de un producto físico
+       2. Cuando se necesita validar una experiencia completa antes de invertir en su implementación real
+
+  ## prototipado_experiencial_servicios
+     titulo    : Prototipado Experiencial de Servicios
+     fuente    : Change by Design, Revised and U - Tim Brown
+     dominio   : core | fase: ideacion
+     etiqueta  : Actúa la Experiencia del Servicio
+     entregable: Un prototipo espacial a escala real con retroalimentación documentada (Post-its, notas de observación) sobre la experiencia de servicio.
+     alias     : []
+     resumen   : 389 caracteres
+     PASOS (5):
+       1. Construir un mock-up a escala real del espacio de servicio (ej: con foam core) en un lugar de bajo costo.
+       2. Invitar a diseñadores, clientes y stakeholders a actuar diferentes escenarios de uso dentro del prototipo.
+       3. Usar Post-its para que los visitantes sugieran cambios directamente sobre el prototipo.
+       4. Entrenar al equipo en técnicas de improvisación teatral para sentirse cómodos actuando ideas.
+       5. Documentar los insights emocionales y funcionales que surgen de la actuación en vivo.
+     CONDICIONES (2):
+       1. Cuando el proyecto involucra una experiencia de servicio compleja (hotelería, salud, atención al cliente).
+       2. Cuando las encuestas tradicionales no logran capturar la dimensión emocional/social de la experiencia.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  prototipado_de_experiencias                         5        8        8
+  prototipado_experiencial_servicios                  5        5        5
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 33 de 232 . tamano 2 . clases internas {'A': 1}
+# entender_term_sheet, term_sheet_overview
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 339   entender_term_sheet + term_sheet_overview
+      REPITE con term_sheet_overview. Los dos mandan la misma lectura del term sheet: clasificar cada clausula como de economia o de control, concentrar la negociacion en esos dos ejes, y no distraerse con las clausulas que no afectan a ninguno de los dos. El primero anade pedir asesoria legal especializada en capital de riesgo y el segundo anade nombrar las clausulas neutras como posibles tacticas de distraccion, que es la misma advertencia dicha al reves.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## entender_term_sheet
+     titulo    : El Arte del Term Sheet
+     fuente    : Venture Deals
+     dominio   : core | fase: planificacion
+     etiqueta  : Domina tu Term Sheet
+     entregable: Checklist personal de términos de economía y control identificados antes de firmar cualquier term sheet
+     alias     : []
+     resumen   : 407 caracteres
+     PASOS (3):
+       1. Antes de negociar, identificar qué cláusulas del term sheet afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)
+       2. Priorizar la negociación en estos dos ejes y no distraerse con cláusulas secundarias
+       3. Solicitar asesoría legal especializada en VC para revisar el documento completo
+     CONDICIONES (2):
+       1. Cuando el emprendedor recibe una oferta de inversión de capital de riesgo
+       2. Cuando se prepara para negociar una ronda de financiamiento
+
+  ## term_sheet_overview
+     titulo    : Economía y Control en el Term Sheet
+     fuente    : Venture Deals - Brad Feld
+     dominio   : core | fase: planificacion
+     etiqueta  : Entiende Economía y Control
+     entregable: Análisis del term sheet clasificado por impacto económico vs. de control.
+     alias     : []
+     resumen   : 372 caracteres
+     PASOS (3):
+       1. Clasificar cada cláusula del term sheet como relacionada a 'economía' o 'control'.
+       2. Identificar cláusulas que no afectan ni economía ni control (posibles tácticas de distracción).
+       3. Priorizar la negociación en los términos que impactan retorno financiero y poder de decisión.
+     CONDICIONES (1):
+       1. Cuando el usuario recibe su primer term sheet y no sabe qué cláusulas priorizar.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  entender_term_sheet                                 3        6        6
+  term_sheet_overview                                 3        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 34 de 232 . tamano 2 . clases internas {'A': 1}
+# modelo_cascada_desarrollo_producto, modelo_tradicional_introduccion_producto
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 340   modelo_cascada_desarrollo_producto + modelo_tradicional_introduccion_producto
+      REPITE con modelo_tradicional_introduccion_producto. Los dos mandan lo mismo contra el mismo antipatron: reconocer si el equipo esta usando el modelo en cascada heredado de la empresa grande, evaluar si las especificaciones descansan sobre supuestos no validados, parar la ejecucion ciega y cambiar los hitos rigidos por ciclos de aprendizaje. El segundo anade no contratar estructuras completas, VP de ventas y equipos, antes de validar, que es el unico gesto propio.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## modelo_cascada_desarrollo_producto
+     titulo    : El Modelo Tradicional en Cascada (Waterfall)
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: planificacion
+     etiqueta  : Evita el Modelo Lineal Tradicional
+     entregable: Un diagnóstico claro de si el proyecto está operando bajo supuestos no validados (modo ejecución) en lugar de modo búsqueda.
+     alias     : []
+     resumen   : 466 caracteres
+     PASOS (4):
+       1. Identificar si tu startup está usando este modelo por defecto (heredado de grandes empresas).
+       2. Reconocer las 4 etapas: Concepto, Desarrollo, Alpha/Beta, Lanzamiento.
+       3. Evaluar si el mercado y el cliente son realmente 'conocidos' o son solo hipótesis.
+       4. Detener la ejecución ciega si no hay contacto continuo con el cliente.
+     CONDICIONES (2):
+       1. Si el equipo está construyendo un producto completo antes de hablar con clientes.
+       2. Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback.
+
+  ## modelo_tradicional_introduccion_producto
+     titulo    : El Modelo Tradicional de Introducción de Nuevos Productos (Anti-patrón)
+     fuente    : The Startup Owner's Manual - Blank, Steve
+     dominio   : core | fase: planificacion
+     etiqueta  : Evita el Viejo Modelo en Cascada
+     entregable: Un diagnóstico de qué partes del proceso actual de desarrollo de producto siguen el patrón waterfall riesgoso, y un plan para sustituirlas por iteración
+     alias     : []
+     resumen   : 587 caracteres
+     PASOS (4):
+       1. Identificar si tu equipo está usando un proceso waterfall rígido de especificación-desarrollo-lanzamiento
+       2. Evaluar si las especificaciones del producto se basan en suposiciones no validadas
+       3. Reemplazar los hitos rígidos de este modelo por ciclos iterativos de aprendizaje validado
+       4. Evitar contratar estructuras organizacionales (VP Ventas, equipos completos) antes de validar el modelo de negocio
+     CONDICIONES (2):
+       1. Cuando el equipo está usando un plan de negocio y cronograma de lanzamiento rígido sin haber hablado con clientes
+       2. Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  modelo_cascada_desarrollo_producto                  4        5        5
+  modelo_tradicional_introduccion_producto            4        2        2
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 35 de 232 . tamano 2 . clases internas {'A': 1}
+# framework_scor_plan_source_make_deliver, scor_model_operaciones
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 342   framework_scor_plan_source_make_deliver + scor_model_operaciones
+      REPITE con scor_model_operaciones. Los dos mandan lo mismo con el mismo marco SCOR: mapear las operaciones en las categorias Plan, Source, Make y Deliver, definir metricas por categoria, y usar el marco comun para localizar donde esta el problema. El primero baja a metricas de nivel 2 y de diagnostico de nivel 3, el segundo se queda en los KPI de nivel 1 y anade el benchmark contra la industria. Es el mismo mapeo con distinta profundidad de metrica.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## framework_scor_plan_source_make_deliver
+     titulo    : Framework SCOR: Plan, Source, Make, Deliver
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     dominio   : core | fase: ejecucion
+     etiqueta  : Ordena tu Cadena de Suministro
+     entregable: Mapa operativo de la cadena de suministro estructurado según el framework SCOR con métricas asociadas
+     alias     : []
+     resumen   : 440 caracteres
+     PASOS (4):
+       1. Mapear las actividades de tu cadena de suministro en las cuatro categorías: Plan, Source, Make, Deliver
+       2. Definir métricas de nivel 2 para cada categoría (ej. costo de planificación, tiempo de ciclo de abastecimiento, defectos de producto, tasa de retorno)
+       3. Cuando se detecten desviaciones, profundizar con métricas de diagnóstico de nivel 3
+       4. Vincular cada operación con la categoría de desempeño que más impacta (servicio, eficiencia, flexibilidad, desarrollo)
+     CONDICIONES (2):
+       1. Cuando la empresa necesita estructurar su operación de cadena de suministro de forma sistemática
+       2. Si hay problemas recurrentes sin causa raíz identificada
+
+  ## scor_model_operaciones
+     titulo    : Modelo SCOR: Marco de Operaciones de Cadena de Suministro
+     fuente    : Essentials of Supply Chain Mana - Michael H. Hugos
+     dominio   : core | fase: planificacion
+     etiqueta  : Estandariza tu Desempeño Logístico
+     entregable: Mapa de procesos de cadena de suministro clasificado bajo el modelo SCOR con métricas base definidas
+     alias     : []
+     resumen   : 552 caracteres
+     PASOS (4):
+       1. Mapear las operaciones actuales de tu empresa según las categorías Plan-Source-Make-Deliver (y Return/Enable si aplica)
+       2. Definir métricas KPI de nivel 1 para cada categoría (confiabilidad, agilidad, costo)
+       3. Comparar (benchmark) tu desempeño contra estándares de la industria
+       4. Identificar cuellos de botella u operaciones no optimizadas usando el marco común
+     CONDICIONES (3):
+       1. Cuando la empresa ya tiene operaciones activas y necesita evaluarlas sistemáticamente
+       2. Si se busca comparar desempeño contra competidores o estándares de industria
+       3. Cuando se planea escalar operaciones y se requiere un lenguaje común entre equipos
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  framework_scor_plan_source_make_deliver             4        3        3
+  scor_model_operaciones                              4        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 36 de 232 . tamano 2 . clases internas {'A': 1}
+# senales_de_compra_en_venta_grande, senales_de_compra_reales
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 346   senales_de_compra_en_venta_grande + senales_de_compra_reales
+      REPITE con senales_de_compra_reales. Los dos mandan lo mismo: clasificar lo que dijo el cliente en la reunion, no dar por buena la conversacion solo porque menciono problemas, y esperar la necesidad explicita antes de declarar exito. El segundo anade que si solo hubo problemas hay que planear otra conversacion en vez de asumir avance, que es la consecuencia practica de lo que el primero avisa. Con el puesto 286, esta familia de la senal de compra en venta grande llega a TRES nodos del nucleo.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## senales_de_compra_en_venta_grande
+     titulo    : Señales de Compra en Ventas Grandes
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: validacion
+     etiqueta  : Distingue Señales Reales de Compra
+     entregable: Un criterio claro y por escrito para reconocer cuáles son señales de compra reales y cuáles no, que puedas usar tú y quien te ayude en ventas en cada conversación
+     alias     : []
+     resumen   : 364 caracteres
+     PASOS (4):
+       1. No celebres antes de tiempo cuando tu cliente menciona problemas: eso es solo materia prima, no una venta
+       2. Escucha con atención las frases donde tu cliente dice qué va a hacer o qué busca ('vamos a...', 'buscamos un sistema con...'): esas sí son señales de compra reales
+       3. Distingue entre que no haya problemas (mala señal) y que sí los haya (señal insuficiente por sí sola): ninguna de las dos te dice que vas a cerrar la venta
+       4. Espera a escuchar necesidades explícitas claras antes de decidir si la conversación fue un éxito
+     CONDICIONES (1):
+       1. Cuando tú o quien te ayuda en ventas confunden el interés superficial de un cliente con una intención real de compra, en procesos de venta largos
+
+  ## senales_de_compra_reales
+     titulo    : Señales de Compra Reales vs Falsas
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: validacion
+     etiqueta  : Reconoce Señales Reales de Compra
+     entregable: Un criterio claro para calificar el estado real de una oportunidad de venta (temprana o madura) según el lenguaje del cliente.
+     alias     : []
+     resumen   : 400 caracteres
+     PASOS (3):
+       1. Durante y después de cada reunión de ventas, clasifica lo que dijo el cliente: ¿mencionó solo problemas o habló de acciones futuras concretas?
+       2. No declares una conversación como buena solo porque el cliente reconoció problemas; espera que hable de acciones.
+       3. Si solo hay problemas mencionados, planea otra conversación para profundizar antes de asumir que hay una oportunidad real de venta.
+     CONDICIONES (2):
+       1. Cuando estás sobreestimando la probabilidad de cerrar una venta basándote en señales débiles.
+       2. Cuando necesitas calificar de forma objetiva qué tan avanzada está cada oportunidad en tu proceso de ventas.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  senales_de_compra_en_venta_grande                   4        2        2
+  senales_de_compra_reales                            3        2        2
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 37 de 232 . tamano 2 . clases internas {'A': 1}
+# analisis_de_cohortes, metricas_cohortes
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 353   analisis_de_cohortes + metricas_cohortes
+      REPITE con metricas_cohortes. Los dos mandan el mismo analisis: agrupar a los usuarios en cohortes por fecha de entrada o por atributo, medir en cada cohorte los comportamientos clave a lo largo del tiempo, y comparar las cohortes entre si para ver que cambia de verdad. El primero anade detectar que canal de adquisicion trae clientes mas leales y disenar la retencion por cohorte problematica; el segundo enmarca todo contra las metricas de vanidad. Mismo instrumento, mismo uso.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## analisis_de_cohortes
+     titulo    : Análisis de Cohortes para Retención
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: validacion
+     etiqueta  : Agrupa Clientes por Cohortes
+     entregable: Reporte de análisis de cohortes con patrones de retención identificados y estrategias correctivas propuestas por segmento
+     alias     : ['cohort_analysis_retencion']
+     resumen   : 762 caracteres
+     PASOS (5):
+       1. Agrupa tus usuarios según un atributo relevante: fuente de referencia, fecha de activación o tipo de oferta aceptada
+       2. Mide el comportamiento de cada cohorte a lo largo del tiempo: frecuencia de uso, duración, gasto
+       3. Compara las cohortes entre sí para detectar patrones de abandono y señales de alerta temprana
+       4. Determina si algún canal de adquisición te está trayendo clientes más leales que otros
+       5. Diseña y ajusta tus estrategias de retención según los hallazgos de cada cohorte problemática
+     CONDICIONES (3):
+       1. Cuando ya tienes al menos varios miles de clientes para poder segmentar con sentido
+       2. Cuando necesitas mejorar la retención de tus usuarios
+       3. Cuando tus métricas de retención promedio parecen saludables pero sospechas que ocultan problemas en ciertos grupos
+
+  ## metricas_cohortes
+     titulo    : Métricas de Cohortes (Cohort-Based Metrics)
+     fuente    : The Lean Startup - Eric Ries
+     dominio   : core | fase: validacion
+     etiqueta  : Analiza tus Clientes por Grupos
+     entregable: Tablero o reporte de métricas de cohortes que muestre el comportamiento de grupos de usuarios en el tiempo
+     alias     : []
+     resumen   : 460 caracteres
+     PASOS (4):
+       1. Definir un periodo de tiempo para agrupar usuarios (cohortes) según su fecha de ingreso
+       2. Identificar comportamientos clave a medir (registro, activación, retención, conversión)
+       3. Medir el porcentaje de cada cohorte que cumple cada comportamiento
+       4. Comparar cohortes a lo largo del tiempo para ver si las mejoras del producto generan cambios reales
+     CONDICIONES (2):
+       1. Si las métricas totales (vanity metrics) suben pero no se sabe la causa real
+       2. Si se necesita evaluar el impacto real de cambios en el producto sobre el comportamiento del usuario
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  analisis_de_cohortes                                5       13       13
+  metricas_cohortes                                   4        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 38 de 232 . tamano 2 . clases internas {'A': 1}
+# deteccion_alucinaciones_ia, gestion_alucinaciones_ia
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 363   deteccion_alucinaciones_ia + gestion_alucinaciones_ia
+      REPITE con gestion_alucinaciones_ia. Los dos mandan lo mismo contra el mismo riesgo: no usar nunca una cifra o una cita de IA sin verificar en documentos legales, financieros o contractuales; pedirle que cite fuentes y comprobar despues que esas fuentes existen de verdad; y tratar el sonar creible como senal de alerta y no de confianza. El primero anade repetir la pregunta de varias formas para cazar inconsistencias y el segundo anade usar la IA solo para borradores, pero es la misma politica.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## deteccion_alucinaciones_ia
+     titulo    : Detección y Manejo de Alucinaciones de IA
+     fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+     dominio   : core | fase: validacion
+     etiqueta  : Detecta cuando la IA Inventa
+     entregable: Checklist de verificación de datos generados por IA antes de su uso en documentos o decisiones del negocio
+     alias     : []
+     resumen   : 450 caracteres
+     PASOS (4):
+       1. Contrastar toda cifra, cita o dato generado por IA con una fuente primaria verificable
+       2. Pedir a la IA que cite sus fuentes y verificar que existan realmente
+       3. Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas
+       4. Nunca usar output de IA sin verificación en documentos legales, financieros o contractuales
+     CONDICIONES (2):
+       1. Cuando se usa IA para investigación de mercado, redacción de propuestas o análisis de datos
+       2. Si el usuario detecta información sospechosamente precisa pero sin fuente clara
+
+  ## gestion_alucinaciones_ia
+     titulo    : Gestión de Alucinaciones de la IA
+     fuente    : Co-Intelligence_ Living and Wor - Ethan Mollick
+     dominio   : core | fase: validacion
+     etiqueta  : Verifica lo que Dice la IA
+     entregable: Un protocolo de verificación de contenido generado por IA antes de su uso en decisiones de negocio o comunicaciones externas.
+     alias     : ['gestion_alucinaciones_ia_2']
+     resumen   : 440 caracteres
+     PASOS (4):
+       1. Establecer como política interna que ningún dato, cifra o cita generado por IA se use en documentos externos (pitch decks, reportes, contratos) sin verificación humana en fuente original.
+       2. Pedir a la IA que cite fuentes verificables y luego contrastar manualmente esas fuentes.
+       3. Usar la IA para generar borradores o hipótesis, nunca como fuente final de verdad.
+       4. Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza.
+     CONDICIONES (2):
+       1. Cuando el equipo usa IA para generar informes, datos de mercado o contenido que será presentado a terceros (inversionistas, clientes, reguladores).
+       2. Si se detectan inconsistencias entre lo que la IA afirma y la realidad verificable.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  deteccion_alucinaciones_ia                          4        2        2
+  gestion_alucinaciones_ia                            4        5        5
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 39 de 232 . tamano 2 . clases internas {'A': 1}
+# rediseno_procesos_negocio_cliente, rediseno_procesos_negocio_cx
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 364   rediseno_procesos_negocio_cliente + rediseno_procesos_negocio_cx
+      REPITE con rediseno_procesos_negocio_cx. Los ids son casi el mismo nombre y los dos mandan lo mismo: revisar que procesos internos generan friccion al cliente sin beneficio para el, reconocer que estan disenados por conveniencia operativa propia, rediseniarlos para resolver en un solo contacto y poner a alguien con vision de todo el recorrido a cargo. El primero anade la compensacion automatica cuando la empresa incumple y las metricas antes y despues; el segundo anade reducir la cantidad de herramientas y sostener el presupuesto varios anos.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## rediseno_procesos_negocio_cliente
+     titulo    : Rediseño de Procesos de Negocio para Eliminar Fricciones Autoinfligidas
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Elimina Fricciones que Tú Creaste
+     entregable: Mapa de procesos rediseñados con métricas de impacto esperado y mecanismos de compensación automática
+     alias     : []
+     resumen   : 531 caracteres
+     PASOS (9):
+       1. Mapear los procesos internos que generan quejas recurrentes de clientes
+       2. Identificar políticas o estructuras internas que crean fricción sin beneficio para el cliente
+       3. Rediseñar procesos clave (ej: agendamiento, atención telefónica) para resolución en un solo contacto
+       4. Implementar compensaciones automáticas cuando la empresa incumple su promesa de servicio
+       5. Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)
+       6. Simplifica los procesos administrativos (formularios, papeleo) con herramientas digitales para reducir la fricción
+       7. Identificar y mapear los distintos journeys del cliente (facturación, soporte, onboarding, percepción)
+       8. Diagnosticar en qué punto los departamentos se pasan la responsabilidad del cliente sin resolución
+       9. Medir el impacto cuantitativo del mal servicio (llamadas repetidas, visitas técnicas, tasa de abandono)
+     CONDICIONES (2):
+       1. Cuando existen altos volúmenes de quejas o llamadas repetidas de clientes
+       2. Cuando los procesos internos están diseñados por conveniencia operativa y no por el cliente
+
+  ## rediseno_procesos_negocio_cx
+     titulo    : Rediseño de Procesos de Negocio Centrado en el Cliente
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Rediseña Procesos Pensando en el Cliente
+     entregable: Un plan de transformación de tus procesos, con formación para tu gente, menos herramientas duplicadas y presupuesto pensado para varios años
+     alias     : []
+     resumen   : 512 caracteres
+     PASOS (9):
+       1. Revisa qué procesos internos le generan fricción innecesaria a tu cliente (números distintos, sistemas duplicados)
+       2. Enseña a todas las personas que trabajan contigo, no solo a quien atiende al cliente, cuál es su papel en la experiencia que vive
+       3. Reduce la cantidad de herramientas o sistemas que usas para atender a tu cliente
+       4. Ponte tú, o quien tenga visión de todo el proceso, a cargo de la experiencia del cliente, no solo para reaccionar cuando algo falla
+       5. Destina presupuesto sostenido durante varios años para esta transformación, en lugar de soluciones rápidas y parciales
+       6. Diagnosticar si los empleados saben que la experiencia del cliente es parte de su trabajo
+       7. Diseñar un programa de capacitación peer-to-peer a gran escala con plazos definidos
+       8. Unificar las herramientas internas de información del cliente para reducir errores y fricción
+       9. Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas
+     CONDICIONES (2):
+       1. Cuando descubres que la causa del mal servicio está en cómo tú mismo organizaste tu negocio
+       2. Cuando necesitas un cambio profundo en cómo trabajas, no solo un arreglo cosmético
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  rediseno_procesos_negocio_cliente                   9        3        3
+  rediseno_procesos_negocio_cx                        9        5        5
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 40 de 232 . tamano 2 . clases internas {'A': 1}
+# deep_dive_workshop, metodologia_deep_dive
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 366   deep_dive_workshop + metodologia_deep_dive
+      REPITE con metodologia_deep_dive. Los dos mandan el mismo taller de IDEO y con los mismos cuatro gestos: reunir en un mismo espacio a un equipo interdisciplinario que incluya a quien vive el problema, observar el problema en el terreno real antes o durante, prototipar de baja fidelidad ahi mismo sin salir del taller, y probar el resultado con las mismas personas presentes y ajustar en el momento. El primero anade formular la pregunta central como Como podriamos, que es su unico gesto propio.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## deep_dive_workshop
+     titulo    : Deep Dive (Taller Intensivo de Design Thinking)
+     fuente    : Change by Design, Revised and U - Tim Brown
+     dominio   : core | fase: ejecucion
+     etiqueta  : Explora a Fondo con Expertos
+     entregable: Prototipos probados y validados por usuarios o expertos reales en poco tiempo
+     alias     : []
+     resumen   : 332 caracteres
+     PASOS (5):
+       1. Reúne un equipo con quienes diseñan y quienes conocen el problema o lo viven de cerca
+       2. Define la pregunta central en formato '¿Cómo podríamos...?'
+       3. Observa el problema en el terreno o simula la situación antes del taller
+       4. Arma prototipos físicos o de proceso durante el taller
+       5. Prueba los resultados con las personas presentes y ajusta en el momento
+     CONDICIONES (2):
+       1. Cuando necesitas resolver un problema complejo con varias personas involucradas y poco tiempo
+       2. Si necesitas validar rápido con quien conoce el problema antes de construir la solución completa
+
+  ## metodologia_deep_dive
+     titulo    : El Método 'Deep Dive' (Inmersión Profunda)
+     fuente    : Change by Design
+     dominio   : core | fase: ideacion
+     etiqueta  : Sumérgete a Fondo en el Problema
+     entregable: Un prototipo funcional de baja fidelidad y una lista de insights validados sobre el problema sistémico.
+     alias     : []
+     resumen   : 412 caracteres
+     PASOS (4):
+       1. Reunir a un equipo interdisciplinario (técnicos, diseñadores, usuarios finales) en un mismo espacio físico.
+       2. Realizar observación de campo directa en el entorno real del problema (ej. un hospital).
+       3. Prototipar soluciones físicas de baja fidelidad de manera inmediata durante el taller.
+       4. Evaluar los resultados con los mismos usuarios presentes en la sesión.
+     CONDICIONES (2):
+       1. Cuando el problema es complejo y sistémico (no solo de un objeto)
+       2. Si se necesita involucrar a múltiples stakeholders con conocimientos técnicos distintos
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  deep_dive_workshop                                  5        2        2
+  metodologia_deep_dive                               4        6        6
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 41 de 232 . tamano 2 . clases internas {'A': 1}
+# fase_assess_ciclo_cliente, fase_assess_experiencia_cliente
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 373   fase_assess_ciclo_cliente + fase_assess_experiencia_cliente
+      REPITE con fase_assess_experiencia_cliente. Los dos trabajan la misma fase Assess y mandan lo mismo: medir cuanto dura el momento en que el prospecto te evalua, revisar si lo que dices para vender comunica como se va a sentir en vez de beneficios genericos, y disenar al menos una mejora concreta de esa etapa. El segundo anade crear algo tangible, muestra, historia o testimonio, que de un anticipo; el primero anade calificar del 1 al 10 y los seis canales de comunicacion. Esta familia es la del racimo costurado transversal numero 1 de la ficha de costuras.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## fase_assess_ciclo_cliente
+     titulo    : La etapa en que el cliente te evalúa (Assess)
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: validacion
+     etiqueta  : Gana la Evaluación Inicial
+     entregable: Un diagnóstico de cómo estás manejando hoy esta etapa de evaluación, con un plan concreto de mejora usando al menos un canal de comunicación
+     alias     : []
+     resumen   : 484 caracteres
+     PASOS (5):
+       1. Revisa tus materiales de marketing y comprueba si comunican cómo se va a sentir el cliente, no solo qué va a recibir
+       2. Mide cuánto tiempo tardan tus prospectos típicos en decidir comprarte
+       3. Evalúa si tú, o quien vende por ti, está registrando bien lo que el cliente necesita
+       4. Califica del 1 al 10 la experiencia que hoy le das al prospecto en esta etapa
+       5. Diseña al menos una mejora inmediata usando uno de los seis canales de comunicación: en persona, correo electrónico, correo físico, teléfono, video o un regalo
+     CONDICIONES (3):
+       1. Cuando quieras diseñar o mejorar la forma en que consigues nuevos clientes
+       2. Si buscas diferenciarte antes de que te compren
+       3. Cuando empieces a revisar toda la experiencia de tu cliente de principio a fin
+
+  ## fase_assess_experiencia_cliente
+     titulo    : Antes de comprarte: el momento en que te evalúan
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: validacion
+     etiqueta  : Convence Antes de la Compra
+     entregable: Un mapa de ese momento de evaluación previa a la compra con los puntos donde tu marketing y tu venta tocan a la persona, más un guion o protocolo que anticipe cómo será la experiencia después de la venta
+     alias     : []
+     resumen   : 530 caracteres
+     PASOS (4):
+       1. Identifica cuánto dura ese momento de evaluación para lo que vendes: puede ser segundos, días o meses
+       2. Diseña tu manera de mostrarte y de vender para que transmita, incluso emocionalmente, cómo será la relación una vez que te compren
+       3. Revisa lo que dices o muestras hoy para vender: ¿hablas solo de beneficios genéricos ('te vamos a cuidar') o das detalles concretos de cómo es el proceso después de la compra?
+       4. Crea algo tangible (una muestra, una historia, un testimonio) que le dé a la persona un anticipo real de cómo será la experiencia después de comprarte
+     CONDICIONES (3):
+       1. Cuando estás enfocado solo en cerrar la venta y no en mostrar cómo será la experiencia después
+       2. Cuando necesitas diseñar tu manera de conseguir clientes
+       3. Si te cancelan seguido poco después de comprarte aunque cierras bien las ventas
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  fase_assess_ciclo_cliente                           5        6        6
+  fase_assess_experiencia_cliente                     4        4        4
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 42 de 232 . tamano 2 . clases internas {'A': 1}
+# test_socios_de_trafico, traffic_partners_hypothesis
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 380   test_socios_de_trafico + traffic_partners_hypothesis
+      REPITE con traffic_partners_hypothesis. Los dos mandan lo mismo: identificar que socios de trafico hacen falta, definir que se espera de cada uno y que se le da a cambio, ordenarlos por lo criticos que son, y preparar las reuniones. El primero anade el correo de presentacion centrado en lo que gana el socio y la ficha de resultados despues de cada reunion; el segundo anade donde buscarlos, tiendas de aplicaciones, marketplaces y emisores de tarjetas. Misma hipotesis, mismos gestos.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## test_socios_de_trafico
+     titulo    : Prueba de Socios de Tráfico (Traffic Partners)
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: validacion
+     etiqueta  : Prueba tus Socios de Tráfico
+     entregable: Acuerdos o compromisos firmes con socios de tráfico, documentados en tu ficha de resultados
+     alias     : []
+     resumen   : 327 caracteres
+     PASOS (6):
+       1. Identifica los socios que podrían traerte tráfico y encajan con tu idea
+       2. Prepara un correo de presentación centrado en lo que el socio gana con la alianza
+       3. Agenda reuniones exploratorias con los candidatos
+       4. Propón intercambios: contenido, listas de correo, anuncios, mini sitios
+       5. Después de cada reunión, arma una ficha de resultados (report card) para estimar qué tan grande es la oportunidad
+       6. Cierra acuerdos o compromisos firmes con los socios de tráfico
+     CONDICIONES (1):
+       1. Cuando tu negocio depende de tráfico externo y no tienes un canal propio de adquisición fuerte
+
+  ## traffic_partners_hypothesis
+     titulo    : Los socios que te traen tráfico (Traffic Partners)
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: planificacion
+     etiqueta  : Prueba tu Hipótesis de Tráfico
+     entregable: Tu lista de socios de trafico ordenada por prioridad, con lo que le ofreces a cada uno a cambio
+     alias     : []
+     resumen   : 345 caracteres
+     PASOS (5):
+       1. Identifica que socios de trafico necesitas si o si, y cuales te gustaria tener
+       2. Define que esperas de cada uno y que le vas a dar a cambio, en dinero o en especie
+       3. Ordena tu lista de socios según cuales son mas criticos para ti
+       4. Investiga tiendas de aplicaciones, marketplaces y emisores de tarjetas de crédito como posibles socios clave
+       5. Prepara reuniones con estos socios cuando llegues a la fase de validación con clientes (Customer Validation)
+     CONDICIONES (1):
+       1. Cuando tu negocio es web o movil y depende de traer trafico externo para conseguir usuarios o clientes
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  test_socios_de_trafico                              6        2        2
+  traffic_partners_hypothesis                         5        4        4
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 43 de 232 . tamano 2 . clases internas {'A': 1}
+# fallo_como_aprendizaje_startup, fracaso_como_aprendizaje_startup
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 387   fallo_como_aprendizaje_startup + fracaso_como_aprendizaje_startup
+      REPITE con fracaso_como_aprendizaje_startup. Los ids son el mismo nombre con un sinonimo, fallo y fracaso, y los dos mandan lo mismo: hacer muchas pruebas con criterio claro de si funciona o no, reorientarse rapido hacia los hechos nuevos cuando algo falla y decidir que corregir sin darle vueltas, y quitarle la culpa al fallo tratandolo como dato. El segundo anade documentar cada fracaso como insumo de la decision de pivotar y no penalizar al equipo, que es lo mismo dicho para el equipo en vez de para uno.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## fallo_como_aprendizaje_startup
+     titulo    : Fallar como Parte de la Búsqueda
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: ideacion
+     etiqueta  : Busca Fallando Sin Miedo
+     entregable: Una forma de pensar, tuya y de quien trabaje contigo, donde los fallos se anotan como aprendizajes válidos y no como culpas
+     alias     : []
+     resumen   : 268 caracteres
+     PASOS (4):
+       1. Acepta que vas a hacer docenas de pruebas simples de si algo funciona o no, sobre tu propuesta, tus funciones y tus precios
+       2. Cuando algo no funcione, cambia rápido de rumbo con los hechos nuevos que tienes
+       3. Decide qué corregir y actúa sin darle más vueltas
+       4. Quítale el peso de la culpa al fallo: trátalo como un dato más
+     CONDICIONES (2):
+       1. Si te da miedo contar cuando algo salió mal
+       2. Si estás empezando a hablar con clientes para validar tu idea
+
+  ## fracaso_como_aprendizaje_startup
+     titulo    : El Fracaso es Parte Integral de la Búsqueda
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: ideacion
+     etiqueta  : Acepta el Fracaso como Aprendizaje
+     entregable: Una cultura de equipo documentada que registra y aprende de los experimentos fallidos como parte normal del proceso de descubrimiento, en vez de penalizarlos
+     alias     : []
+     resumen   : 520 caracteres
+     PASOS (5):
+       1. Diseñar experimentos con criterios claros de éxito y fracaso (para mensajes, características, precios, etc.), aceptando de antemano que varios fallarán
+       2. Cambiar la cultura del equipo de 'miedo al fracaso' a 'aprendizaje y descubrimiento'
+       3. Cuando algo no funciona, reorientarse rápidamente hacia los nuevos hechos y decidir qué corregir
+       4. Documentar cada fracaso como aprendizaje válido que alimenta la decisión de pivotar
+       5. Evitar penalizar al equipo por hipótesis fallidas; en su lugar, ajustar el modelo
+     CONDICIONES (3):
+       1. Si el equipo tiene miedo de experimentar por temor a equivocarse
+       2. Al establecer la cultura inicial de un proyecto en etapa de búsqueda
+       3. En las primeras fases de descubrimiento de clientes
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  fallo_como_aprendizaje_startup                      4        3        3
+  fracaso_como_aprendizaje_startup                    5        6        6
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 44 de 232 . tamano 2 . clases internas {'A': 1}
+# leap_of_faith_assumptions, leap_of_faith_questions
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 389   leap_of_faith_assumptions + leap_of_faith_questions
+      REPITE con leap_of_faith_questions. Los dos mandan lo mismo: repasar el plan y el modelo para separar lo comprobado de lo supuesto, hacer explicitos los supuestos criticos, y ordenarlos por el riesgo que representan para el negocio. El primero anade reescribir las comparaciones con otros negocios en terminos verificables; el segundo anade disenar el experimento que valida cada uno antes de construir. Es el mismo inventario de saltos de fe.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## leap_of_faith_assumptions
+     titulo    : Supuestos de salto de fe (leap-of-faith assumptions)
+     fuente    : The Lean Startup - Eric Ries
+     dominio   : core | fase: ideacion
+     etiqueta  : Identifica tus Supuestos Más Riesgosos
+     entregable: Lista priorizada de tus supuestos de salto de fe, separados de los hechos comprobados de tu plan
+     alias     : []
+     resumen   : 439 caracteres
+     PASOS (4):
+       1. Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado
+       2. Identifica cuáles suposiciones son de bajo riesgo y cuáles son verdaderos saltos de fe
+       3. Reescribe tus comparaciones con otros negocios en términos concretos y verificables, evitando analogías que te oculten el riesgo real
+       4. Ordena tus supuestos según el riesgo que representan para que tu negocio funcione
+     CONDICIONES (2):
+       1. Cuando tienes un plan pero no has diferenciado qué partes son hechos y cuáles son suposiciones riesgosas
+       2. Cuando necesitas justificar por qué te conviene probar antes de construir el producto completo
+
+  ## leap_of_faith_questions
+     titulo    : Preguntas de Salto de Fe (Leap-of-Faith Questions)
+     fuente    : The Lean Startup - Eric Ries
+     dominio   : core | fase: validacion
+     etiqueta  : Responde tus Preguntas Más Riesgosas
+     entregable: Lista priorizada de hipótesis críticas (leap-of-faith) con su nivel de riesgo e incertidumbre
+     alias     : []
+     resumen   : 432 caracteres
+     PASOS (4):
+       1. Revisar el modelo de negocio y el spreadsheet financiero para identificar supuestos numéricos clave
+       2. Hacer explícitas las suposiciones críticas (ej: porcentaje de conversión, retención)
+       3. Priorizar cuál de estas suposiciones representa el mayor riesgo para el negocio
+       4. Diseñar experimentos específicos para validar cada leap-of-faith question antes de construir el producto completo
+     CONDICIONES (2):
+       1. Antes de comenzar a construir cualquier producto o funcionalidad
+       2. Cuando el modelo de negocio tiene supuestos financieros sin validar
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  leap_of_faith_assumptions                           4        9        9
+  leap_of_faith_questions                             4        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 45 de 232 . tamano 2 . clases internas {'A': 1}
+# key_resources_hypothesis, recursos_clave
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 406   key_resources_hypothesis + recursos_clave
+      REPITE con recursos_clave. Los dos mandan el mismo inventario del mismo bloque del lienzo y con las mismas cuatro categorias: los recursos fisicos, instalaciones y equipo; los intelectuales, marca, patentes y saber hacer, que el primero llama propiedad intelectual que vale la pena proteger; las personas criticas; y el dinero que hace falta. El primero anade revisar de que se depende que esta fuera del propio control, y es su unico gesto propio.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## key_resources_hypothesis
+     titulo    : Hipótesis de Recursos Clave
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: planificacion
+     etiqueta  : Define tus Recursos Clave
+     entregable: Un documento con tu hipótesis de recursos clave: qué necesitas, cuánto cuesta, dónde conseguirlo y cómo asegurarlo, integrado a tu modelo de negocio (Business Model Canvas)
+     alias     : []
+     resumen   : 312 caracteres
+     PASOS (5):
+       1. Lista los recursos físicos que necesitas: instalaciones, insumos, equipo
+       2. Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants), venta de facturas (factoring) o arrendamiento de equipo (leasing)
+       3. Define qué talento necesitas ahora y cuál vas a necesitar más adelante
+       4. Identifica qué ideas, marcas o desarrollos tuyos valen la pena proteger como propiedad intelectual
+       5. Revisa qué dependes de otros que está fuera de tu control
+     CONDICIONES (1):
+       1. Cuando estés definiendo tu modelo de negocio y necesites saber qué recursos externos son indispensables para lograrlo
+
+  ## recursos_clave
+     titulo    : Bloque de Recursos Clave
+     fuente    : Business Model Generation - Osterwalder
+     dominio   : core | fase: planificacion
+     etiqueta  : Identifica tus Activos Esenciales
+     entregable: Un inventario clasificado de los recursos clave que necesitas para operar tu negocio
+     alias     : []
+     resumen   : 319 caracteres
+     PASOS (4):
+       1. Haz una lista de los recursos físicos que necesitas (instalaciones, equipos, redes de distribución)
+       2. Identifica tus recursos intelectuales (marca, patentes, bases de datos, saber hacer)
+       3. Determina qué personas son críticas para que tu negocio funcione
+       4. Calcula qué recursos financieros necesitas (efectivo, líneas de crédito)
+     CONDICIONES (1):
+       1. Cuando necesitas identificar qué activos son indispensables para operar tu negocio
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  key_resources_hypothesis                            5        6        6
+  recursos_clave                                      4        4        4
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 46 de 232 . tamano 2 . clases internas {'A': 1}
+# planificacion_preguntas_implicacion, preguntas_implicacion
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 410   planificacion_preguntas_implicacion + preguntas_implicacion
+      REPITE con preguntas_implicacion. Los dos mandan lo mismo: mapear las consecuencias que cada problema del cliente arrastra, financieras, operativas o de satisfaccion, y formular con ellas las preguntas que conectan el problema con impactos que el cliente no ve solo. El primero lo convierte en ejercicio previo a la llamada, escribir tres problemas y bajar de cada uno a sus dificultades y de cada dificultad a su pregunta; el segundo manda practicarlas porque exigen mas habilidad. Mismo gesto, uno como plantilla y otro como consejo.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## planificacion_preguntas_implicacion
+     titulo    : Planificación Anticipada de Preguntas de Implicación
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: planificacion
+     etiqueta  : Prepara tus Preguntas de Implicación
+     entregable: Guion o mapa de preguntas de implicación preparado antes de cada llamada de ventas, vinculando problemas potenciales con consecuencias y preguntas específicas
+     alias     : ['planificacion_preguntas_implicacion_2']
+     resumen   : 411 caracteres
+     PASOS (4):
+       1. Antes de la llamada, escribe al menos tres problemas potenciales que el comprador podría tener y que tu producto o servicio puede resolver
+       2. Para cada problema, anota las dificultades relacionadas o consecuencias que podría generar
+       3. Para cada dificultad, redacta preguntas de implicación específicas que la hagan evidente al cliente
+       4. Evita empezar la llamada solo con preguntas de situación; avanza rápido hacia problema e implicación
+     CONDICIONES (3):
+       1. Antes de cualquier llamada de ventas compleja o de cuenta grande
+       2. Cuando el vendedor tiene dificultad para formular preguntas de implicación de manera espontánea
+       3. Cuando se requiere elevar la percepción de urgencia del problema en el cliente
+
+  ## preguntas_implicacion
+     titulo    : Preguntas de Implicación
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: ejecucion
+     etiqueta  : Explora las Implicaciones del Problema
+     entregable: Set de preguntas de implicación que conecten cada problema detectado con consecuencias de negocio medibles
+     alias     : ['preguntas_implicacion_2']
+     resumen   : 395 caracteres
+     PASOS (3):
+       1. Mapear las consecuencias potenciales (financieras, operativas, de satisfacción) de cada problema identificado
+       2. Formular preguntas que conecten el problema con impactos en áreas críticas del negocio del cliente
+       3. Practicar y refinar estas preguntas ya que requieren mayor habilidad y preparación
+     CONDICIONES (1):
+       1. En ventas grandes o complejas donde el cliente no percibe la urgencia del problema
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  planificacion_preguntas_implicacion                 4        4        4
+  preguntas_implicacion                               3        6        6
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 47 de 232 . tamano 2 . clases internas {'A': 1}
+# blogging_como_canal_de_traccion, content_marketing_blog
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 417   blogging_como_canal_de_traccion + content_marketing_blog
+      REPITE con content_marketing_blog. Los dos mandan lo mismo y hasta con la misma frase peculiar: escribir contenido que revele problemas que el lector no ha articulado y no solo soluciones. Ademas los dos mandan sostener un calendario de publicacion constante, hacer guest posting en blogs establecidos del sector para ganar audiencia, interactuar con influencers pidiendoles feedback, y mirar la analitica para ver que contenido tira. El primero pone el plazo de seis meses antes de evaluar; el segundo anade las infografias y los lead magnets.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## blogging_como_canal_de_traccion
+     titulo    : Blog Corporativo como Canal de Tracción
+     fuente    : Traction - Gabriel Weinberg
+     dominio   : core | fase: ejecucion
+     etiqueta  : Atrae Clientes con tu Blog
+     entregable: Un blog corporativo activo con calendario editorial, métricas de tráfico establecidas y al menos 3 guest posts publicados en blogs externos
+     alias     : []
+     resumen   : 434 caracteres
+     PASOS (6):
+       1. Dedica al menos seis meses consistentes de publicación antes de evaluar resultados
+       2. Escribe contenido que muestre problemas no articulados por tu audiencia objetivo, no solo soluciones
+       3. Haz guest posting en blogs populares del sector desde los primeros meses
+       4. Contacta e interactúa con influencers de Twitter en tu nicho pidiendo feedback
+       5. Monitorea menciones sociales y analítica para identificar qué contenido resuena
+       6. Mantén un calendario de publicación regular
+     CONDICIONES (2):
+       1. Si el startup necesita construir autoridad de marca a largo plazo
+       2. Si el equipo tiene capacidad de producir contenido de calidad de forma sostenida
+
+  ## content_marketing_blog
+     titulo    : Marketing de Contenidos como Canal de Tracción
+     fuente    : Traction - Gabriel Weinberg
+     dominio   : core | fase: ejecucion
+     etiqueta  : Convierte Contenido en Canal
+     entregable: Blog activo con calendario editorial, al menos 10-15 publicaciones iniciales y sistema de captura de leads
+     alias     : []
+     resumen   : 475 caracteres
+     PASOS (8):
+       1. Definir los problemas centrales que enfrenta tu cliente objetivo
+       2. Establecer un calendario de publicación consistente (ej. quincenal)
+       3. Escribir contenido que revele problemas no articulados por el lector, no solo soluciones
+       4. Usar infografías y contenido visual (comparten ~20x más que posts regulares)
+       5. Hacer guest posting en blogs establecidos de la industria para ganar audiencia inicial
+       6. Interactuar con influencers en redes sociales pidiendo feedback sobre publicaciones
+       7. Monitorear analíticas para identificar qué tipo de contenido genera más tracción
+       8. Capturar leads mediante lead magnets (ebooks, infografías) para construir lista de email
+     CONDICIONES (2):
+       1. Cuando se busca un canal de adquisición de bajo costo y sostenible en el tiempo
+       2. Cuando el equipo tiene expertise de industria para compartir insights valiosos
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  blogging_como_canal_de_traccion                     6        4        4
+  content_marketing_blog                              8        7        7
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 48 de 232 . tamano 2 . clases internas {'A': 1}
+# desirability_feasibility_viability, triada_restricciones_diseno
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 419   desirability_feasibility_viability + triada_restricciones_diseno
+      REPITE con triada_restricciones_diseno. Los dos mandan la misma triada y los mismos cuatro gestos: evaluar cada idea contra los tres ejes a la vez, deseabilidad, factibilidad y viabilidad; identificar desde cual arranca de forma natural la organizacion o cual domina el proyecto; no apoyarse solo en la superioridad tecnica ni solo en la viabilidad de corto plazo; e ir iterando entre los tres durante todo el ciclo en vez de tratarlos en fila. Es el mismo marco de IDEO con dos redacciones.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## desirability_feasibility_viability
+     titulo    : Tríada Deseabilidad-Factibilidad-Viabilidad
+     fuente    : Change by Design, Revised and U - Tim Brown
+     dominio   : core | fase: ideacion
+     etiqueta  : Evalúa Deseo, Técnica y Negocio
+     entregable: Una evaluación documentada de la idea/proyecto en los tres ejes con plan de ajuste para el eje más débil
+     alias     : []
+     resumen   : 458 caracteres
+     PASOS (5):
+       1. Evaluar cada idea de innovación en los tres ejes simultáneamente
+       2. Identificar desde qué ángulo natural parte la organización (tecnología, mercado o negocio)
+       3. Ajustar los factores más débiles conforme se descubre nueva información
+       4. Evitar depender exclusivamente de la superioridad técnica como ventaja competitiva
+       5. Aprovechar activos existentes (marca, base de clientes, distribución) cuando se parte de deseabilidad
+     CONDICIONES (2):
+       1. Al evaluar cualquier nueva iniciativa de innovación
+       2. Cuando una empresa confía solo en su tecnología sin validar mercado o negocio
+
+  ## triada_restricciones_diseno
+     titulo    : Las Tres Restricciones del Diseño: Viabilidad, Factibilidad y Deseabilidad
+     fuente    : Change by Design
+     dominio   : core | fase: ideacion
+     etiqueta  : Equilibra Viabilidad, Factibilidad y Deseo
+     entregable: Matriz o diagrama de Venn del proyecto marcando el nivel de cumplimiento de factibilidad, viabilidad y deseabilidad para cada concepto evaluado
+     alias     : []
+     resumen   : 528 caracteres
+     PASOS (4):
+       1. Evaluar cada idea de producto o servicio contra los tres criterios: ¿es deseable para las personas?, ¿es viable como negocio?, ¿es técnicamente factible?
+       2. Identificar qué restricción domina el proyecto actual (tecnología, presupuesto o factores humanos) según el tipo de organización
+       3. Evitar enfocarse solo en la viabilidad a corto plazo, ya que esto puede sacrificar innovación por incrementalismo
+       4. Iterar entre las tres restricciones durante todo el ciclo de vida del proyecto, no de forma lineal
+     CONDICIONES (2):
+       1. Si el equipo está evaluando múltiples conceptos de producto y necesita priorizar
+       2. Si la organización tiende a enfocarse solo en tecnología o solo en negocio, ignorando al usuario
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  desirability_feasibility_viability                  5        4        4
+  triada_restricciones_diseno                         4        4        4
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 49 de 232 . tamano 2 . clases internas {'A': 1}
+# fase_admit, fase_admit_celebracion
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 421   fase_admit + fase_admit_celebracion
+      REPITE con fase_admit_celebracion. Los dos trabajan la misma fase Admit y mandan lo mismo: disenar un momento de celebracion o reconocimiento inmediato al cerrar la compra, dejar un artefacto o un mensaje personalizado que lo memorialice, y no caer en el silencio post-venta. El segundo anade la co-creacion cuando se pueda y el cuidado de que la celebracion no venga solo del vendedor. Esta familia es la del racimo costurado transversal numero 1 de la ficha de costuras.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## fase_admit
+     titulo    : Fase 2: Admit (Admitir)
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Celebra la Decisión de Compra
+     entregable: Un protocolo de bienvenida inmediato posterior a la compra (email, llamada, mensaje) diseñado para prolongar la euforia inicial.
+     alias     : []
+     resumen   : 367 caracteres
+     PASOS (4):
+       1. Diseñar un momento de celebración o reconocimiento inmediato tras la compra.
+       2. Reforzar la decisión del cliente con un mensaje de bienvenida personalizado.
+       3. Evitar caer en el silencio post-venta; mantener el contacto activo justo después del cierre.
+       4. Capturar y asociar la emoción positiva del momento de compra con la marca.
+     CONDICIONES (1):
+       1. Cuando un cliente acaba de completar una compra o firmar un contrato.
+
+  ## fase_admit_celebracion
+     titulo    : Fase Admit: Celebrar el Momento de la Compra
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Celebra el Momento de Compra
+     entregable: Diseño de un momento de celebración/bienvenida tangible para el cliente en el instante de la compra
+     alias     : []
+     resumen   : 568 caracteres
+     PASOS (9):
+       1. Diseñar un ritual o momento de celebración compartido con el cliente al cerrar la compra
+       2. Crear un artefacto físico o digital que memorialice el momento (certificado, mensaje personalizado, video)
+       3. Involucrar al cliente en la co-creación de su producto/servicio cuando sea posible
+       4. Alinear la comunicación de celebración interna de la empresa con una comunicación externa hacia el cliente
+       5. Evitar que la única interacción de celebración provenga únicamente del vendedor (para no generar desconfianza)
+       6. Identifica el momento exacto en que tu prospecto se convierte oficialmente en cliente (el pago, la firma del contrato, etc.)
+       7. Diseña un ritual o una celebración específica para ese momento (un anuncio público, mencionarlo por nombre, entregarle algo simbólico)
+       8. Crea un recuerdo físico o digital que tu cliente pueda conservar de la decisión que tomó
+       9. Involucra a las personas que trabajan contigo en la celebración para reforzar el mensaje de bienvenida
+     CONDICIONES (3):
+       1. Inmediatamente después de cerrar una venta o firma de contrato
+       2. Cuando se busca reducir la sensación de abandono post-compra
+       3. Al diseñar experiencias de onboarding memorables
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  fase_admit                                          4        7        7
+  fase_admit_celebracion                              9        4        4
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 50 de 232 . tamano 2 . clases internas {'A': 1}
+# usuarios_extremos_edge_cases, usuarios_extremos_insights
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 426   usuarios_extremos_edge_cases + usuarios_extremos_insights
+      REPITE con usuarios_extremos_insights. Los dos mandan la misma investigacion: buscar a los usuarios de los extremos del espectro, los que mas y los que menos usan, los expertos totales y los principiantes; observarlos o entrevistarlos aunque no sean el cliente objetivo; y extraer de su comportamiento exagerado los patrones que iluminan necesidades que el usuario promedio no revela. El primero anade no rendirse a la solucion estandar cuando los extremos apuntan a otra cosa; el segundo anade documentarlo como activo creativo para iteraciones futuras.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## usuarios_extremos_edge_cases
+     titulo    : Investigación con Usuarios Extremos (Edge Cases)
+     fuente    : Change by Design
+     dominio   : core | fase: ideacion
+     etiqueta  : Aprende de tus Usuarios Extremos
+     entregable: Un perfil de usuarios extremos documentado con insights aplicables al diseño general del producto o servicio.
+     alias     : []
+     resumen   : 369 caracteres
+     PASOS (4):
+       1. Identificar usuarios en los márgenes: expertos extremos, principiantes totales, o personas con necesidades atípicas.
+       2. Estudiar cómo estos usuarios extremos interactúan con el producto o problema, aunque no sean el mercado objetivo directo.
+       3. Extraer patrones de sus comportamientos exagerados que iluminen problemas ocultos en el diseño para el usuario promedio.
+       4. Evitar la ortodoxia de soluciones 'estándar' cuando los extremos sugieren necesidades diferenciadas.
+     CONDICIONES (2):
+       1. Cuando la investigación de mercado convencional solo confirma lo ya conocido.
+       2. Si se busca innovación disruptiva en vez de mejoras incrementales.
+
+  ## usuarios_extremos_insights
+     titulo    : Usuarios Extremos como Fuente de Inspiración
+     fuente    : Change by Design
+     dominio   : core | fase: validacion
+     etiqueta  : Inspírate en tus Usuarios Extremos
+     entregable: Un reporte de investigación de 'usuarios extremos' con insights no obvios.
+     alias     : []
+     resumen   : 276 caracteres
+     PASOS (4):
+       1. Identificar usuarios en los extremos del espectro (los que más o menos usan el producto/servicio).
+       2. Realizar entrevistas o inmersiones etnográficas con estos usuarios específicos.
+       3. Extraer patrones o necesidades extremas que puedan aplicarse a la mayoría de usuarios.
+       4. Documentar estos hallazgos como 'activos creativos' para futuras iteraciones.
+     CONDICIONES (1):
+       1. Cuando la investigación de usuarios estándar (promedio) no arroja ideas innovadoras suficientes.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  usuarios_extremos_edge_cases                        4        5        5
+  usuarios_extremos_insights                          4        4        4
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 51 de 232 . tamano 2 . clases internas {'A': 1}
+# business_intelligence_niveles_datos, jerarquia_datos_scor
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 434   business_intelligence_niveles_datos + jerarquia_datos_scor
+      REPITE con jerarquia_datos_scor. Los dos mandan la misma jerarquia de tres niveles y con los mismos nombres, estrategico, operativo y tactico: definir que dato pertenece a cada nivel, organizar la recoleccion segun quien lo usa, y dar a cada persona la vista que su funcion necesita. El primero anade el almacen de datos y automatizar la captura para no meterlos a mano; el segundo anade sumar datos externos de mercado y economia. Misma estructura, distinto acento.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## business_intelligence_niveles_datos
+     titulo    : Sistema de inteligencia de negocio en tres niveles
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     dominio   : core | fase: ejecucion
+     etiqueta  : Organiza tus Datos en Tres Niveles
+     entregable: Un sistema de reportes y paneles (dashboards) organizado en tres niveles (estratégico, operativo, táctico) conectado a un almacén de datos (data warehouse)
+     alias     : []
+     resumen   : 565 caracteres
+     PASOS (4):
+       1. Define qué datos estratégicos, operativos y tácticos son relevantes para tu negocio
+       2. Construye o consigue un almacén de datos (data warehouse) que centralice la información de tus sistemas operativos y contables
+       3. Automatiza la captura de datos y evita meterlos a mano
+       4. Crea reportes fijos según el tipo de decisión que necesites tomar (grandes decisiones, decisiones de cómo ejecutar, o resolver problemas puntuales) y deja abierta la posibilidad de hacer consultas puntuales cuando las necesites
+     CONDICIONES (2):
+       1. Cuando tu negocio está saturado de datos pero no logras convertirlos en decisiones
+       2. Si necesitas ver tu negocio de forma distinta según el tipo de decisión que estés tomando en ese momento
+
+  ## jerarquia_datos_scor
+     titulo    : Los tres niveles de datos de tu negocio: estratégicos, operativos y tácticos (modelo SCOR)
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     dominio   : core | fase: planificacion
+     etiqueta  : Ordena tus Datos por Nivel
+     entregable: Mapa de tus métricas clasificado en los tres niveles del modelo SCOR, con claridad de quién usa cada uno
+     alias     : []
+     resumen   : 622 caracteres
+     PASOS (4):
+       1. Define qué datos necesitas ver tú a nivel estratégico, cuáles a nivel operativo y cuáles a nivel táctico, siguiendo el modelo SCOR
+       2. Organiza la recolección de datos según quién los usa: tú, quien coordina el día a día, o quien resuelve problemas en el terreno
+       3. Suma datos externos, como el tamaño de tu mercado, indicadores económicos y comparaciones con otros negocios de tu sector, al nivel estratégico
+       4. Revisa que cada persona en tu negocio tenga acceso solo a la información que necesita para su función
+     CONDICIONES (2):
+       1. Cuando tu negocio tiene distintos niveles de responsabilidad y necesitas organizar cómo fluye la información
+       2. Si sientes que hay demasiados datos sin una estructura clara de para qué sirve cada uno
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  business_intelligence_niveles_datos                 4        2        2
+  jerarquia_datos_scor                                4        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 52 de 232 . tamano 2 . clases internas {'A': 1}
+# alineacion_motivacional_cofundadores, compatibilidad_motivaciones_riqueza_control
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 440   alineacion_motivacional_cofundadores + compatibilidad_motivaciones_riqueza_control
+      REPITE con compatibilidad_motivaciones_riqueza_control. Los dos mandan la misma conversacion previa a fundar y con el mismo eje de Wasserman: hablar de forma explicita de las motivaciones con el socio potencial antes de lanzar nada, detectar el choque cuando las motivaciones no calzan, y decidir antes de fundar si hay compatibilidad suficiente. El primero lo instrumenta con una matriz que simula escenarios futuros; el segundo nombra el eje de frente, riqueza contra control, y anticipa el choque de poder si los dos quieren mandar. Mismo diagnostico, distinta herramienta.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## alineacion_motivacional_cofundadores
+     titulo    : Diagnóstico de Alineación Motivacional entre Cofundadores
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: ideacion
+     etiqueta  : Habla Motivaciones con tus Socios
+     entregable: Acuerdo de fundadores (founders' agreement) que documente expectativas compartidas sobre control, equity y financiamiento futuro.
+     alias     : []
+     resumen   : 466 caracteres
+     PASOS (3):
+       1. Realizar sesiones de discusión explícita con cofundadores potenciales sobre cada fork de decisión (financiamiento, equity, roles).
+       2. Usar una matriz tipo Figura 11.1 para simular escenarios futuros y verificar consenso.
+       3. Decidir explícitamente, antes de fundar, si existe compatibilidad motivacional suficiente para evitar conflictos destructivos.
+     CONDICIONES (2):
+       1. Cuando se está por formar un equipo fundador con más de una persona.
+       2. Cuando existen señales tempranas de desacuerdo sobre el rumbo estratégico del startup.
+
+  ## compatibilidad_motivaciones_riqueza_control
+     titulo    : Compatibilidad de motivaciones: riqueza contra control
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: ideacion
+     etiqueta  : Elige Riqueza o Control
+     entregable: Una conversacion documentada o un acuerdo informal sobre la motivacion de cada uno y el análisis de si son compatibles como equipo
+     alias     : ['evaluar_motivaciones_cofundadores']
+     resumen   : 814 caracteres
+     PASOS (5):
+       1. Pregúntate honestamente si lo que mas te importa es la riqueza o el control antes de asociarte con alguien
+       2. Habla abiertamente de tu motivacion con tu posible socio antes de lanzar el proyecto juntos
+       3. Detecta si hay una fuente de conflicto por el rol de liderazgo cuando las motivaciones no calzan
+       4. Si ambos buscan control, anticipa el choque de poder y define desde el inicio como lo van a resolver, sin caer en un liderazgo compartido ambiguo
+       5. Si hay un mix de motivaciones, confirma que de verdad confias en la capacidad de tu socio antes de cederle esa autoridad
+     CONDICIONES (3):
+       1. Antes de formalizar una sociedad con un socio
+       2. Si sientes tension recurrente sobre hacia donde va el negocio o quien tiene el control
+       3. Si hay tension sobre quien debe liderar tu startup
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  alineacion_motivacional_cofundadores                3        3        3
+  compatibilidad_motivaciones_riqueza_control         5        8        8
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 53 de 232 . tamano 2 . clases internas {'A': 1}
+# fase_acclimate_experiencia_cliente, fase_acclimate_mapa_de_proceso
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 447   fase_acclimate_experiencia_cliente + fase_acclimate_mapa_de_proceso
+      REPITE con fase_acclimate_mapa_de_proceso. Los dos trabajan la misma fase Acclimate y mandan lo mismo: mapear todo el recorrido desde la compra hasta que el cliente logra su objetivo y desde la perspectiva del cliente, detectar donde se pierde, se confunde o se calla antes de que abandone, atar comunicaciones recurrentes a hitos o micro-logros, y partir lo complejo en pasos pequenos. El primero anade medir la aclimatacion con encuestas rapidas; el segundo anade el mapa visual que le dice al cliente en que etapa esta. Esta familia es la del racimo costurado transversal numero 1 de la ficha de costuras.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## fase_acclimate_experiencia_cliente
+     titulo    : Fase de Aclimatación del Cliente (Acclimate Phase)
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Enseña al Cliente tus Reglas
+     entregable: Mapa de la fase de aclimatación con puntos de contacto, riesgos de abandono y acciones diseñadas para cada etapa del proceso de onboarding.
+     alias     : []
+     resumen   : 426 caracteres
+     PASOS (5):
+       1. Mapear todos los puntos de contacto entre la primera compra y el logro del objetivo del cliente.
+       2. Identificar momentos de fricción, confusión o estrés potencial en ese recorrido.
+       3. Diseñar herramientas de comunicación (email, presencial, video, correo físico, teléfono, regalos) para cada etapa del proceso.
+       4. Establecer hitos claros y celebrarlos para mantener el compromiso del cliente.
+       5. Medir el nivel de aclimatación con encuestas rápidas o check-ins regulares.
+     CONDICIONES (2):
+       1. Cuando el negocio tiene alta tasa de abandono en los primeros meses tras la venta
+       2. Cuando el proceso de implementación o uso del producto es complejo y requiere aprendizaje
+
+  ## fase_acclimate_mapa_de_proceso
+     titulo    : Fase Acclimate: Familiarizar al Cliente con el Proceso
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Familiariza al Cliente con Procesos
+     entregable: Un mapa visual del proceso de onboarding/entrega y un calendario de comunicaciones por hito
+     alias     : []
+     resumen   : 556 caracteres
+     PASOS (8):
+       1. Mapear todos los pasos del proceso de entrega/servicio desde la perspectiva del cliente
+       2. Crear un documento o gráfico visual (mapa) que muestre en qué etapa está el cliente en cada momento
+       3. Establecer comunicaciones recurrentes atadas a micro-logros o hitos del proceso
+       4. Detectar señales silenciosas de desconexión del cliente antes de que se quejen o abandonen
+       5. Simplificar procesos complejos dividiéndolos en pasos pequeños y digeribles
+       6. Haz una lista de todos los puntos de contacto que atraviesa un cliente nuevo entre la compra y el día 100
+       7. Establece hitos de comunicación proactiva (bienvenida, chequeos de progreso, celebración de logros tempranos) distribuidos en ese periodo
+       8. Asigna un responsable claro para cada punto de contacto y mide qué tan consistente es la ejecución
+     CONDICIONES (1):
+       1. Cuando los clientes se pierden, dejan de responder o preguntan '¿qué sigue?' durante la implementación o entrega del servicio
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  fase_acclimate_experiencia_cliente                  5       10       10
+  fase_acclimate_mapa_de_proceso                      8        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 54 de 232 . tamano 2 . clases internas {'A': 1}
+# estrategia_de_balas_de_plomo, lead_bullets_no_silver_bullets
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 450   estrategia_de_balas_de_plomo + lead_bullets_no_silver_bullets
+      REPITE con lead_bullets_no_silver_bullets. Los ids son el mismo nombre en dos idiomas, balas de plomo y lead bullets, y los dos mandan lo mismo de Horowitz: aceptar que no hay solucion magica para una desventaja estructural, resistir la tentacion de escaparse hacia mercados o modelos alternativos, concentrar el esfuerzo en la debilidad competitiva central, y sostenerlo en el tiempo hasta cerrar la brecha. El segundo antepone el diagnostico de si el problema es de mercado o de producto, que es su unico gesto propio.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## estrategia_de_balas_de_plomo
+     titulo    : Estrategia de 'Balas de Plomo' frente a Desventajas Estructurales
+     fuente    : The Hard Thing About Hard Thing - Ben Horowitz
+     dominio   : core | fase: ejecucion
+     etiqueta  : Dispara Muchas Balas Pequeñas
+     entregable: Lista priorizada de mejoras incrementales ('balas de plomo') con plan de ejecución continua
+     alias     : []
+     resumen   : 360 caracteres
+     PASOS (4):
+       1. Aceptar que no existe una solución única e inmediata para desventajas estructurales graves
+       2. Identificar múltiples mejoras incrementales que en conjunto cierren la brecha competitiva
+       3. Priorizar y ejecutar estas mejoras de forma sostenida en el tiempo
+       4. Evitar buscar exclusivamente asociaciones o adquisiciones como solución mágica
+     CONDICIONES (1):
+       1. Cuando la empresa enfrenta una desventaja competitiva estructural severa sin solución rápida evidente
+
+  ## lead_bullets_no_silver_bullets
+     titulo    : Balas de Plomo, No Balas de Plata
+     fuente    : The Hard Thing About Hard Thing - Ben Horowitz
+     dominio   : core | fase: ejecucion
+     etiqueta  : Ejecuta, no Busques Atajos
+     entregable: Plan de acción centrado en resolver la debilidad competitiva central del producto, sin desviarse hacia soluciones tangenciales.
+     alias     : []
+     resumen   : 452 caracteres
+     PASOS (5):
+       1. Identifica si el problema es de mercado (no hay demanda) o de producto/ejecución (hay demanda pero tu producto pierde frente a competencia).
+       2. Si es un problema de producto, resiste la tentación de buscar mercados alternativos o modelos de negocio distintos como escape.
+       3. Enfoca los recursos de ingeniería/equipo directamente en resolver la debilidad competitiva central.
+       4. Comunica claramente al equipo que no hay atajos: se requiere trabajo sostenido ('balas de plomo') para ganar.
+       5. Persiste en el ciclo de mejora del producto hasta recuperar la ventaja competitiva.
+     CONDICIONES (2):
+       1. Cuando la empresa enfrenta una amenaza existencial de un competidor con ventaja clara (precio, velocidad, features).
+       2. Cuando el equipo propone múltiples 'soluciones alternativas' que evitan enfrentar el problema central del producto.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  estrategia_de_balas_de_plomo                        4        2        2
+  lead_bullets_no_silver_bullets                      5        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 55 de 232 . tamano 2 . clases internas {'A': 1}
+# formalizacion_acuerdo_equity, reparto_inicial_equity
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 453   formalizacion_acuerdo_equity + reparto_inicial_equity
+      REPITE con reparto_inicial_equity. Los dos mandan lo mismo sobre el mismo acuerdo: ponerlo por escrito para evitar malentendidos, y dejar dentro una parte que pueda ajustarse, vesting o clausulas de recompra, en vez de cerrarlo rigido. El primero anade preguntar por las implicaciones fiscales y legales del mercado propio; el segundo anade esperar a que la estrategia y el equipo se estabilicen y usar una plantilla estructurada. Con los puestos 246 y 266, la familia del reparto de equity entre fundadores llega a CINCO nodos del nucleo.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## formalizacion_acuerdo_equity
+     titulo    : Cómo formalizar el reparto de participaciones entre socios (equity)
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: planificacion
+     etiqueta  : Formaliza tu Acuerdo de Equity
+     entregable: Un documento firmado que deje claro el reparto de participaciones (equity) entre tú y tus socios
+     alias     : []
+     resumen   : 432 caracteres
+     PASOS (3):
+       1. Pon por escrito el acuerdo de reparto de participaciones (equity), idealmente con ayuda de alguien con conocimiento legal
+       2. Incluye condiciones que permitan ajustes futuros, sin volverlas demasiado rígidas
+       3. Pregunta por las implicaciones fiscales y legales del acuerdo en tu mercado
+     CONDICIONES (1):
+       1. Cuando tú y tus socios ya acordaron de palabra el reparto de participaciones y necesitan hacerlo vinculante
+
+  ## reparto_inicial_equity
+     titulo    : Cómo repartir la propiedad (equity) inicial entre los socios fundadores
+     fuente    : The Founder's Dilemmas
+     dominio   : core | fase: planificacion
+     etiqueta  : Reparte el Equity con Cuidado
+     entregable: Un documento firmado por todos los socios con el reparto de la propiedad (equity), incluyendo cláusulas que permitan ajustarlo con el tiempo
+     alias     : []
+     resumen   : 441 caracteres
+     PASOS (4):
+       1. Espera a que la estrategia de tu negocio y quiénes forman tu equipo se estabilicen antes de cerrar el reparto final
+       2. Usa una plantilla estructurada (como la de UpDown) para hablar con tus socios sobre lo que cada uno aportó y lo que va a aportar
+       3. Escribe los acuerdos a los que llegaste para evitar malentendidos más adelante
+       4. Incluye siempre una parte que pueda ajustarse, como vesting o cláusulas de recompra, nunca lo dejes fijo para siempre
+     CONDICIONES (2):
+       1. Si todavía no has definido con tus socios cómo repartir la propiedad de tu negocio
+       2. Si se acerca una ronda de inversión externa que va a exigir que tengas clara la tabla de propiedad (cap table)
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  formalizacion_acuerdo_equity                        3        3        3
+  reparto_inicial_equity                              4        8        8
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 56 de 232 . tamano 2 . clases internas {'A': 1}
+# milk_run_deliveries, programacion_entregas_delivery_scheduling
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 474   milk_run_deliveries + programacion_entregas_delivery_scheduling
+      EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA. milk_run_deliveries es el paso 3 de programacion_entregas_delivery_scheduling desarrollado, la rama de disenar rutas milk run cuando el lote economico no llena camion, y repite ademas dos pasos mas de la madre, el calculo del EOQ por ubicacion y la eleccion de la tecnica de ruteo entre matriz de ahorros y asignacion generalizada. La madre es la decision entre entrega directa y milk run; el hijo es una de las dos ramas contada aparte con tres de sus cinco pasos ya dichos arriba. Ninguno enlaza al otro. Detalle anotado: en las aristas de este par hay un nodo DEPRECADO. MEDICION DEL 12 ago 2026, LA MEDICION DE LOS VEINTE, con la regla LA MAYORIA MANDA del banco 9.6.1: FORMA medida: RADIOS. El unico hijo de paso vivo de programacion_entregas_delivery_scheduling es milk_run_deliveries, por el paso 3; ni la matriz de ahorros ni la asignacion generalizada ni las entregas directas tienen nodo propio. PROPORCION: CERO enlazados, o sea que no hay hermanos enlazados y la figura NO APLICA: manda la regla original. Y el texto lo confirma por su cuenta: este hijo no solo desarrolla el paso 3, REPITE ademas dos pasos mas de la madre, asi que repite y no continua. LA CLASE A SE SOSTIENE.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## milk_run_deliveries
+     titulo    : Entregas Milk Run
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     dominio   : core | fase: ejecucion
+     etiqueta  : Consolida tus Rutas de Entrega
+     entregable: Plan de ruta de entrega consolidada (milk run) con secuencia de paradas, cantidades por parada y técnica de ruteo seleccionada
+     alias     : []
+     resumen   : 530 caracteres
+     PASOS (5):
+       1. Identificar ubicaciones de origen y destino que puedan consolidarse en una sola ruta
+       2. Calcular las cantidades económicas de pedido (EOQ) de cada producto por ubicación
+       3. Elegir la técnica de ruteo (matriz de ahorros o asignación generalizada) según las restricciones existentes (ventanas de tiempo, capacidad de vehículo)
+       4. Diseñar la secuencia de recogidas/entregas y validar con software de ruteo
+       5. Medir el ahorro en costo de transporte y recepción tras implementar la ruta consolidada
+     CONDICIONES (2):
+       1. Cuando existen múltiples clientes o proveedores con volúmenes menores a carga completa
+       2. Cuando se busca reducir costos de transporte consolidando envíos
+
+  ## programacion_entregas_delivery_scheduling
+     titulo    : Programación de Entregas: Directas vs. Milk Run
+     fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+     dominio   : core | fase: ejecucion
+     etiqueta  : Elige cómo Programar tus Entregas
+     entregable: Plan de logística de entregas con método seleccionado (directo/milk run) y rutas optimizadas
+     alias     : []
+     resumen   : 551 caracteres
+     PASOS (5):
+       1. Evaluar si el EOQ de cada ubicación receptora coincide con cargas completas de transporte
+       2. Si coincide, implementar entregas directas por su simplicidad
+       3. Si no coincide, diseñar rutas milk run combinando pedidos
+       4. Seleccionar técnica de ruteo: matriz de ahorros (savings matrix) para múltiples restricciones o técnica de asignación generalizada cuando la única restricción es capacidad del vehículo
+       5. Decidir entre entregas desde ubicaciones de producto único o desde centros de distribución
+     CONDICIONES (2):
+       1. Cuando el negocio tiene múltiples puntos de entrega y busca reducir costos logísticos
+       2. Si los costos de transporte o recepción son elevados por entregas fragmentadas
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  milk_run_deliveries                                 5        4        4
+  programacion_entregas_delivery_scheduling           5        2        2
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 57 de 232 . tamano 2 . clases internas {'A': 1}
+# contratar_ambicion_correcta, screening_ambicion_organizacional
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 479   contratar_ambicion_correcta + screening_ambicion_organizacional
+      REPITE con screening_ambicion_organizacional. Los dos mandan el mismo filtro de Horowitz y con los mismos gestos: fijarse en si el candidato dice yo o dice nosotros al contar sus logros, pedirle el detalle de como se orquesto un trato porque el impostor no sabe explicar el proceso, cruzar referencias con otros que estuvieron en el mismo trato, y preferir a quien pregunta primero por la estrategia de la empresa antes que por su compensacion. El primero anade ser mas riguroso en ventas, donde los incentivos locales tiran mas fuerte.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## contratar_ambicion_correcta
+     titulo    : Contratar el Tipo Correcto de Ambición
+     fuente    : The Hard Thing About Hard Things - Ben Horowitz
+     dominio   : core | fase: ejecucion
+     etiqueta  : Contrata la Ambición Correcta
+     entregable: Guía de entrevista con preguntas y señales específicas para detectar el tipo de ambición del candidato ejecutivo.
+     alias     : []
+     resumen   : 511 caracteres
+     PASOS (10):
+       1. En entrevistas, prestar atención al uso de 'yo/mi' vs 'nosotros/el equipo' al describir logros y fracasos pasados.
+       2. Pedir al candidato que explique en detalle cómo se ganó un trato o proyecto, no solo que reclame el crédito.
+       3. Verificar mediante referencias si la narrativa del candidato coincide con la de otros involucrados en los mismos logros.
+       4. Priorizar candidatos que muestren gran interés en cómo ganará la empresa por sobre su propia compensación o carrera.
+       5. Ser especialmente riguroso en este filtro para roles de ventas, dado que ahí los incentivos locales son más fuertes.
+       6. Evalúa si está acostumbrado a actuar por iniciativa propia o si espera que le asignen las tareas
+       7. Pregúntale qué hará en su primer mes contigo y desconfía si solo habla de 'aprender'
+       8. Verifica que tenga conciencia real de en qué se diferencia su rol anterior de este nuevo
+       9. Pregúntale por qué quiere unirse a un negocio pequeño y desconfía si la única motivación es la participación accionaria (equity)
+       10. Busca a alguien motivado por crear más que por administrar
+     CONDICIONES (2):
+       1. Cuando se está contratando un ejecutivo senior o gerente clave
+       2. Cuando la empresa sufre alta rotación o desmotivación relacionada con liderazgo egocéntrico
+
+  ## screening_ambicion_organizacional
+     titulo    : Filtro de Ambición por la Compañía vs. Ambición Personal
+     fuente    : The Hard Thing About Hard Thing - Ben Horowitz
+     dominio   : core | fase: ejecucion
+     etiqueta  : Filtra la Ambición de tus Líderes
+     entregable: Checklist de evaluación de candidatos senior con criterio de 'ambición por la compañía' documentado
+     alias     : []
+     resumen   : 447 caracteres
+     PASOS (4):
+       1. Durante la entrevista, observa si el candidato atribuye éxitos al equipo o solo a sí mismo
+       2. Pide detalles específicos de cómo se orquestó un logro; los impostores no pueden explicar el proceso
+       3. Verifica referencias cruzadas con otros involucrados en los mismos deals o proyectos
+       4. Evalúa si el candidato pregunta primero por la estrategia de la empresa antes que por compensación
+     CONDICIONES (2):
+       1. Si estás contratando un líder de ventas u otro puesto con fuertes incentivos individuales
+       2. Si sospechas que un ejecutivo actual está optimizando para sí mismo en detrimento de la empresa
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  contratar_ambicion_correcta                        10        2        2
+  screening_ambicion_organizacional                   4        2        2
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 58 de 232 . tamano 2 . clases internas {'A': 1}
+# periodo_incubacion_mental, wallas_etapa_incubacion
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 489   periodo_incubacion_mental + wallas_etapa_incubacion
+      REPITE con wallas_etapa_incubacion. Los dos mandan la misma etapa de Wallas y con los mismos gestos: despues de un periodo intenso de trabajo sobre el problema, alejarse de el a proposito; programar descanso mental de verdad y no llenar cada hueco con tareas rutinarias; y confiar en que esa inactividad aparente es parte productiva del proceso. El primero anade registrar en que momentos de distraccion aparecen las ideas; el segundo anade alternar entre varios problemas en vez de agotar uno solo.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## periodo_incubacion_mental
+     titulo    : Período de Incubación antes de la Iluminación
+     fuente    : The Art of Thought - Wallas, Graham
+     dominio   : core | fase: ideacion
+     etiqueta  : Descansa Antes de la Idea
+     entregable: Un calendario o rutina de trabajo que alterne bloques de concentración intensa con períodos de descanso real, y un registro de ideas surgidas durante la incubación.
+     alias     : []
+     resumen   : 584 caracteres
+     PASOS (4):
+       1. Tras un período de trabajo intenso y concentrado en un problema, programar deliberadamente tiempo de descanso real (sin estímulos relacionados a la tarea)
+       2. Evitar llenar cada momento disponible con tareas asignadas; dejar espacios de ocio genuino
+       3. Registrar en qué momentos de descanso o distracción surgen ideas nuevas para identificar patrones personales de incubación
+       4. Alternar entre esfuerzo intenso y descanso prolongado en lugar de trabajo continuo de baja intensidad
+     CONDICIONES (2):
+       1. Cuando el equipo está estancado tras un esfuerzo intenso de ideación y no logra nuevas soluciones
+       2. Si el proceso de innovación se ha vuelto puramente mecánico o de 'trabajo forzado' sin resultados creativos
+
+  ## wallas_etapa_incubacion
+     titulo    : Etapa de Incubación y Abstención Voluntaria
+     fuente    : The Art of Thought - Wallas, Graham
+     dominio   : core | fase: ideacion
+     etiqueta  : Deja Reposar tus Ideas
+     entregable: Un plan de trabajo que incluya bloques explícitos de descanso o cambio de tarea después de sesiones de trabajo profundo.
+     alias     : []
+     resumen   : 641 caracteres
+     PASOS (5):
+       1. Tras un periodo intenso de Preparación, alejarse conscientemente del problema.
+       2. Alternar entre varios problemas en desarrollo en vez de agotar cada uno de una sola vez.
+       3. Programar tiempo de relajación mental real (caminatas, ejercicio, descanso) sin lectura ni estímulos que ocupen la mente.
+       4. Evitar saturar la agenda con tareas administrativas rutinarias que impidan la incubación.
+       5. Confiar en que la 'inactividad' aparente es parte productiva del proceso creativo.
+     CONDICIONES (2):
+       1. Cuando el equipo lleva mucho tiempo atascado en un problema sin avanzar y necesita un descanso estratégico.
+       2. Cuando la presión de productividad constante está bloqueando la generación de ideas nuevas.
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  periodo_incubacion_mental                           4        5        5
+  wallas_etapa_incubacion                             5        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 59 de 232 . tamano 2 . clases internas {'A': 1}
+# diferencia_ventaja_beneficio, framework_caracteristicas_ventajas_beneficios
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 531   diferencia_ventaja_beneficio + framework_caracteristicas_ventajas_beneficios
+      REPITE con framework_caracteristicas_ventajas_beneficios. Los dos mandan la misma disciplina de Rackham sobre el marco FAB: no presentar caracteristicas ni ventajas antes de que el cliente haya verbalizado una necesidad explicita, guardar el beneficio para cuando esa necesidad ya este dicha, y revisar las propias llamadas para medir en que proporcion se usa cada cosa. El primero anade que hacer cuando la necesidad todavia no aparecio, volver a preguntas de implicacion, y el aviso de no abrir la conversacion con ventajas genericas; el segundo anade clasificar cada afirmacion del discurso en una de las tres categorias.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## diferencia_ventaja_beneficio
+     titulo    : La diferencia entre mostrar una ventaja y mostrar un beneficio (FAB)
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: ejecucion
+     etiqueta  : Distingue Ventaja de Beneficio
+     entregable: Tu lista de mensajes de venta, reclasificados como Ventaja o Beneficio, con el momento exacto de la conversación en que debes usar cada uno
+     alias     : []
+     resumen   : 669 caracteres
+     PASOS (4):
+       1. Antes de mencionar una capacidad de tu producto, revisa si tu cliente ya expresó una Necesidad Explícita relacionada
+       2. Si todavía no la expresó, no presentes la característica: vuelve a preguntas de Implicación o de Necesidad y Beneficio
+       3. Guarda frases como 'esto le ayudará a...' (Beneficio) para después de que tu cliente diga 'quiero X' o 'necesito X'
+       4. Evita abrir la conversación presentando Ventajas genéricas de tu producto
+     CONDICIONES (2):
+       1. Cuando tu material de ventas o tu discurso se centra en características y ventajas genéricas
+       2. Cuando recibes objeciones justo después de mencionar una capacidad de tu producto
+
+  ## framework_caracteristicas_ventajas_beneficios
+     titulo    : Marco de Características, Ventajas y Beneficios (FAB)
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: ejecucion
+     etiqueta  : Vende Beneficios, No Características
+     entregable: Checklist o guía de clasificación de mensajes de venta (Características/Ventajas/Beneficios) aplicada a la propuesta de valor propia
+     alias     : []
+     resumen   : 594 caracteres
+     PASOS (8):
+       1. Clasificar cada afirmación sobre tu producto en Característica, Ventaja o Beneficio
+       2. Evitar presentar Características y Ventajas antes de haber desarrollado necesidades explícitas
+       3. Asegurarse de que las presentaciones de Beneficio respondan directamente a una Necesidad Explícita verbalizada por el cliente
+       4. Revisar transcripciones de llamadas propias para medir la proporción de Características/Ventajas/Beneficios usados
+       5. Decide si tu producto va a competir por precio bajo con muchas funciones, o como algo premium
+       6. Si eliges precio bajo, arma tu discurso de venta enumerando características
+       7. Si eliges premium, no enumeres características; habla de los beneficios que resuelven necesidades concretas de tu cliente
+       8. Si sumas vendedores que vienen de una empresa con otro posicionamiento de precio, revisa que no repitan el estilo equivocado
+     CONDICIONES (2):
+       1. Cuando se diseña o revisa un discurso o presentación de ventas
+       2. En ventas grandes/complejas donde el enfoque en el producto (bells and whistles) puede resultar contraproducente
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  diferencia_ventaja_beneficio                        4        2        2
+  framework_caracteristicas_ventajas_beneficios       8        3        3
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 60 de 232 . tamano 2 . clases internas {'A': 1}
+# fit_problema_solucion, problem_solution_fit
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 536   fit_problema_solucion + problem_solution_fit
+      FAMILIA DECLARADA: este par vive entero dentro del racimo nuevo A del informe intra, la puerta del ajuste, y por la regla operativa registrada en la seccion 9 no se pelea la clase aqui. Se anota como A porque la silueta es la ya conocida y SIN ARISTA, verificado resolviendo a nodo vivo. LO NUEVO, que si se anota: problem_solution_fit es el TERCER hijo sin arista de fit_problema_solucion. Con los puestos 490 y 497, la misma madre tiene TRES nodos que desarrollan sus pasos 1 y 2 y no enlaza con ninguno de los tres. Eso confirma la forma del racimo que el barrido de la seccion 6 midio como SUELTO con cero aristas, y lo agrava: no es que falten enlaces entre hermanos, es que la madre no enlaza a nadie.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## fit_problema_solucion
+     titulo    : Los Tres Tipos de Fit (Problem-Solution, Product-Market, Business Model)
+     fuente    : Value Proposition Design
+     dominio   : core | fase: validacion
+     etiqueta  : Valida los Tres Tipos de Encaje
+     entregable: Evidencia documentada de al menos el problem-solution fit antes de escalar.
+     alias     : []
+     resumen   : 349 caracteres
+     PASOS (3):
+       1. Validar que los jobs, pains y gains identificados realmente importan a los clientes.
+       2. Testear si los clientes quieren tu propuesta de valor concreta.
+       3. Evaluar si el modelo de negocio asociado es escalable y rentable.
+     CONDICIONES (1):
+       1. Cuando se necesita saber en qué etapa de validación se encuentra el proyecto.
+
+  ## problem_solution_fit
+     titulo    : Búsqueda del Problem/Solution Fit
+     fuente    : The Startup Owner's Manual - Steve Blank
+     dominio   : core | fase: validacion
+     etiqueta  : Valida tu Ajuste Problema-Solución
+     entregable: Evidencia documentada de que el problema y la solución encajan con el segmento objetivo
+     alias     : []
+     resumen   : 378 caracteres
+     PASOS (4):
+       1. Validar que el problema identificado sea doloroso para un segmento amplio de clientes
+       2. Probar si la solución propuesta resuelve el problema de forma convincente
+       3. Verificar alineación entre modelo de ingresos, precio y necesidades del cliente
+       4. Considerar mercados multi-sided donde puede haber múltiples propuestas de valor
+     CONDICIONES (2):
+       1. Cuando se ha probado el MVP con earlyvangelists y se necesita confirmar el ajuste
+       2. Antes de pasar a customer validation
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  fit_problema_solucion                               3        6        6
+  problem_solution_fit                                4        5        5
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).
+
+##############################################################################
+# ACTO 61 de 232 . tamano 2 . clases internas {'A': 1}
+# encuesta_satisfaccion_postproyecto, reunion_conclusion_proyecto
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [A] puesto 541   encuesta_satisfaccion_postproyecto + reunion_conclusion_proyecto
+      REPITE con reunion_conclusion_proyecto. Los dos mandan lo mismo al terminar un proyecto: pasar encuesta al cliente Y al propio equipo, ramificar las preguntas segun la nota recibida, pedir testimonio o resena si la nota es alta y dar espacio a la frustracion con una solucion si es baja, y usar los resultados para ajustar procesos. El segundo anade la reunion de conclusion propiamente dicha, el periodo de monitoreo posterior de tres meses contra el remordimiento post-compra, y el orden de pedir testimonios solo despues de haber dado valor.
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## encuesta_satisfaccion_postproyecto
+     titulo    : Encuesta de Satisfacción Post-Entrega
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Pregunta Cómo Quedó tu Cliente
+     entregable: Una encuesta con ramas según la respuesta y un reporte de resultados (como el NPS u otro indicador)
+     alias     : []
+     resumen   : 339 caracteres
+     PASOS (6):
+       1. Diseña una encuesta breve con una calificación inicial (por ejemplo estrellas o NPS)
+       2. Divide las preguntas según el resultado, positivo o negativo
+       3. Si es positivo, pide un testimonio o una reseña
+       4. Si es negativo, da espacio para que exprese su frustración y propón una solución
+       5. Aplica la encuesta tanto a tu equipo como a tu cliente
+       6. Usa los resultados para ajustar tus procesos futuros
+     CONDICIONES (1):
+       1. Cuando termines una entrega, un proyecto o una interacción importante con tu cliente
+
+  ## reunion_conclusion_proyecto
+     titulo    : Reunión de Conclusión con Encuestas Internas y Externas
+     fuente    : Never Lose a Customer Again - Joey Coleman
+     dominio   : core | fase: ejecucion
+     etiqueta  : Cierra tu Proyecto con Balance
+     entregable: Protocolo de cierre de proyecto con encuestas internas/externas y plan de monitoreo post-entrega documentado
+     alias     : []
+     resumen   : 542 caracteres
+     PASOS (12):
+       1. Programar una Reunión de Conclusión al finalizar el proyecto, revisando los objetivos y métricas definidos en el kickoff
+       2. Diseñar una encuesta interna para el equipo: satisfacción de trabajar con el cliente, disposición a repetir, comentarios abiertos
+       3. Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos
+       4. Ramificar las preguntas según el puntaje recibido (alta satisfacción → pedir testimonio; baja satisfacción → espacio para desahogo y solución)
+       5. Establecer un periodo de monitoreo posterior (ej. 3 meses) para mitigar el 'remordimiento post-lanzamiento' del cliente
+       6. Solicitar testimonios y referidos solo después de dar valor y feedback positivo primero
+       7. Revisar los objetivos organizacionales y métricas de éxito definidas en el kickoff
+       8. Realizar una evaluación honesta del nivel de éxito en cada métrica
+       9. Solicitar feedback del cliente sobre esas métricas
+       10. Atender cualquier deficiencia pendiente antes de cerrar
+       11. Compartir testimonios y reconocimientos mutuos
+       12. Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)
+     CONDICIONES (3):
+       1. Al finalizar cualquier proyecto de entrega con cliente (ej. desarrollo web, consultoría)
+       2. Cuando se busca sistematizar la recolección de testimonios y mejorar la retención
+       3. Cuando existe riesgo de que el cliente sienta que el proyecto no cerró satisfactoriamente pese a estar 'técnicamente' terminado
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  encuesta_satisfaccion_postproyecto                  6        3        3
+  reunion_conclusion_proyecto                        12        5        5
+  aristas INTERNAS del acto: ['encuesta_satisfaccion_postproyecto.nodos_previos -> reunion_conclusion_proyecto', 'reunion_conclusion_proyecto.nodos_siguientes -> encuesta_satisfaccion_postproyecto']
+
+--- 4. LA FIGURA DEL ACTO ---
+  TODOS los pares internos en A. La lectura decide el superviviente
+  por CONTENIDO; el cableado solo desempata (P.8).

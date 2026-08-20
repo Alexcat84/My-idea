@@ -1043,7 +1043,7 @@
       "nodos_siguientes": [
         "asociaciones_clave",
         "estructura_de_costos",
-        "assumption_and_constraint_log",
+        "assumption_constraint_log",
         "homework_frontend_loading",
         "medir_lo_que_importa_no_solo_lo_facil",
         "mercados_multilaterales",
@@ -2089,7 +2089,7 @@
       "entregable_esperado": "Un plan de comunicación multicanal específico para clientes en fase Advocate",
       "nodos_previos": [
         "programa_referidos_exclusividad",
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "fase_adopt_ciclo_cliente",
         "welcome_call_cliente_veterano",
         "construccion_tribu_de_marca",
@@ -3748,7 +3748,8 @@
       "condiciones_activacion": [
         "Si ya tienes un presupuesto operativo y necesitas controlarlo."
       ],
-      "etiqueta_arbol": "Compara Presupuesto Contra Realidad"
+      "etiqueta_arbol": "Compara Presupuesto Contra Realidad",
+      "deprecado": true
     },
     "analisis_del_extremo_organizacional": {
       "node_id": "analisis_del_extremo_organizacional",
@@ -4121,24 +4122,39 @@
       "resumen_teorico": "Antes de fundar un negocio, tienes que reflexionar sobre tus motivaciones centrales (riqueza, control, autonomía, altruismo, etc.) y las influencias familiares y culturales que te formaron desde temprano. Los estudios muestran que quienes emprenden con éxito suelen estar motivados sobre todo por el control (poder, autonomía, manejo de personas) y la ganancia financiera, mientras que otras motivaciones dominan en quienes no emprenden. Esta introspección te ayuda a decidir si en algún momento de tu carrera deberías convertirte en fundador.",
       "pasos_accionables": [
         "Reflexiona sobre las influencias familiares y culturales que tuviste relacionadas con emprender",
-        "Identifica tus 4 motivaciones principales (de una lista de 13: afiliación, altruismo, autonomía, ganancia financiera, etc.)",
+        "Identifica tus 4 motivaciones principales (de una lista de 13: afiliación, altruismo, autonomía, ganancia financiera, etc.), por ejemplo con una herramienta tipo CareerLeader",
         "Compara esas motivaciones con los perfiles típicos de quienes emprenden y de quienes no",
-        "Decide si tu perfil motivacional es compatible con el camino de emprender"
+        "Decide si tu perfil motivacional es compatible con el camino de emprender",
+        "Identifica si lo tuyo es más el control o más la riqueza, porque eso va a pesar cuando decidas cómo repartir participación y quién manda en tu negocio"
       ],
       "entregable_esperado": "Un perfil personal de tus motivaciones, documentado, que muestre qué tan cerca estás del perfil típico de quien emprende",
       "nodos_previos": [
-        "decision_cuando_fundar"
+        "decision_cuando_fundar",
+        "dilema_riqueza_vs_control"
       ],
       "nodos_siguientes": [
         "decision_momento_fundacion",
         "evaluacion_capital_humano",
-        "dilema_riqueza_vs_control"
+        "dilema_riqueza_vs_control",
+        "decision_cuando_fundar"
       ],
       "condiciones_activacion": [
         "Si estás considerando por primera vez convertirte en emprendedor",
-        "Si dudas sobre si tienes lo necesario para fundar un negocio"
+        "Si dudas sobre si tienes lo necesario para fundar un negocio",
+        "Cuando no tienes claro por qué quieres emprender",
+        "Cuando hay roces con tu familia o tu entorno por tu decisión de emprender"
       ],
-      "etiqueta_arbol": "Revisa tus Motivaciones Reales"
+      "etiqueta_arbol": "Revisa tus Motivaciones Reales",
+      "ids_alias": [
+        "influencias_tempranas_motivaciones"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "influencias_tempranas_motivaciones",
+          "titulo": "Tus influencias tempranas y motivaciones para emprender",
+          "fuente": "The Founder's Dilemmas"
+        }
+      ]
     },
     "analisis_pareto": {
       "node_id": "analisis_pareto",
@@ -4534,24 +4550,38 @@
       "fuente": "Financial Intelligence for Entrepreneurs",
       "resumen_teorico": "La varianza es la diferencia entre dos cifras financieras (presupuesto vs. real, mes actual vs. mes anterior). Es clave determinar si una varianza es favorable o desfavorable: más ingresos de lo esperado es favorable, más gastos de lo esperado es desfavorable. Los paréntesis o signos negativos no siempre indican lo mismo dependiendo si es línea de ingreso o gasto.",
       "pasos_accionables": [
-        "Calcular varianza en dólares y en porcentaje para cada línea relevante",
+        "Calcular varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes",
         "Determinar manualmente si cada varianza es favorable o desfavorable",
         "Verificar cómo el sistema contable presenta paréntesis/signos negativos",
-        "Priorizar la revisión de varianzas grandes en términos porcentuales"
+        "Priorizar la revisión de varianzas grandes en términos porcentuales",
+        "Investiga y anota la causa de cualquier diferencia importante antes de tomar decisiones."
       ],
       "entregable_esperado": "Reporte de varianza mensual con clasificación clara de favorable/desfavorable por línea",
       "nodos_previos": [
         "tipos_de_utilidad",
-        "metodo_valor_presente_neto"
+        "metodo_valor_presente_neto",
+        "estructura_estado_resultados",
+        "pro_forma_vs_actuals"
       ],
       "nodos_siguientes": [
-        "decision_consciente_de_crecimiento"
+        "decision_consciente_de_crecimiento",
+        "footnotes_financieros"
       ],
       "condiciones_activacion": [
         "Si el usuario debe reportar desempeño mensual contra presupuesto",
         "Si el usuario necesita identificar rápidamente desviaciones significativas"
       ],
-      "etiqueta_arbol": "Detecta Varianzas en tus Números"
+      "etiqueta_arbol": "Detecta Varianzas en tus Números",
+      "ids_alias": [
+        "analisis_de_variancia"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "analisis_de_variancia",
+          "titulo": "Análisis de variación entre lo presupuestado y lo real (budget vs. actual)",
+          "fuente": "Financial Intelligence for Entrepreneurs"
+        }
+      ]
     },
     "analisis_vendibilidad": {
       "node_id": "analisis_vendibilidad",
@@ -4597,7 +4627,7 @@
         "investigacion_etnografica_ideacion"
       ],
       "nodos_siguientes": [
-        "open_innovation_ideacion",
+        "innovacion_abierta",
         "definicion_startup",
         "alineacion_de_objetivos_en_sistemas",
         "analisis_cadena_de_valor",
@@ -4610,7 +4640,7 @@
         "cultura_de_innovacion_y_juego_serio",
         "customer_insights_design",
         "definir_tesoro_con_perspectiva_temporal",
-        "desafios_de_diseno_competitivos",
+        "diseno_de_desafios_de_innovacion",
         "pensamiento_convergente_divergente",
         "disciplina_atencion_dirigida",
         "diseno_basado_en_comportamientos_existentes",
@@ -4621,7 +4651,6 @@
         "diseno_para_ia_centrada_en_humano",
         "diseno_por_sustraccion",
         "diseno_sistemico_partes_interesadas",
-        "diseno_de_desafios_de_innovacion",
         "diseno_para_reuso_responsable",
         "encontrar_grandes_problemas_mercados_emergentes",
         "encuadre_desafio_diseno",
@@ -4986,13 +5015,15 @@
         "Define las No-metas: qué está fuera de alcance intencionalmente",
         "Define las Antimetas: qué te comprometes activamente a NO hacer (ej. no excluir usuarios, no engañar al cliente)",
         "Define Salvaguardas: mecanismos concretos para detectar y corregir cuando el proyecto se desvía hacia una antimeta",
-        "Revisita estas 4 listas periódicamente conforme el proyecto evoluciona"
+        "Revisita estas 4 listas periódicamente conforme el proyecto evoluciona",
+        "Comparte la lista con el equipo para que también puedan rally alrededor de los antigoals, no solo de las metas"
       ],
       "entregable_esperado": "Documento con las 4 listas (Metas, No-metas, Antimetas, Salvaguardas) validado por el equipo fundador o de diseño",
       "nodos_previos": [
         "metas_vs_proposito",
-        "definir_antigoals",
-        "disenio_en_turbulencia"
+        "disenio_en_turbulencia",
+        "diseno_consecuencias_no_intencionadas",
+        "search_for_business_model"
       ],
       "nodos_siguientes": [
         "diseno_experimentos_pass_fail",
@@ -5003,7 +5034,17 @@
         "Al definir los valores fundacionales de un producto antes de escalar",
         "Si el equipo necesita alinear expectativas éticas antes de ejecutar una estrategia agresiva de crecimiento"
       ],
-      "etiqueta_arbol": "Define lo que Quieres Evitar"
+      "etiqueta_arbol": "Define lo que Quieres Evitar",
+      "ids_alias": [
+        "definir_antigoals"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "definir_antigoals",
+          "titulo": "Antigoals: Definir lo que NO harás",
+          "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+        }
+      ]
     },
     "apalancamiento_de_competencias_centrales": {
       "fase_proyecto": "ideacion",
@@ -5505,7 +5546,7 @@
         "Busca los patrones que se repiten en esas conversaciones",
         "Describe o dibuja a quien usa tu producto: su entorno (oficina, planta, cubiculo) y su rutina",
         "Si aplica, describe o dibuja por separado a quien decide la compra, que puede ser distinto de quien lo usa",
-        "Define tus hipótesis sobre quien es el comprador: su estilo de vida, nivel económico y situacion familiar",
+        "Define tus hipótesis sobre quien es el comprador: su estilo de vida, nivel económico y situacion familiar, con su perfil demográfico y psicográfico",
         "Escribe un documento breve que reuna el perfil, los problemas y el contexto de cada retrato",
         "Conecta estas caracteristicas con el resto de tu negocio: como llegas a tu cliente, como te relacionas con el y como le cobras",
         "Trata cada retrato como una hipótesis provisional que revisas a medida que aprendes"
@@ -5514,19 +5555,48 @@
       "condiciones_activacion": [
         "Cuando ya explorastes a tus clientes pero todavia no tienes claro el perfil al que apuntas",
         "Si necesitas ordenar las prioridades de lo que vas a construir",
-        "Cuando necesitas visualizar con claridad a tu cliente para alinear tu estrategia de producto"
+        "Cuando necesitas visualizar con claridad a tu cliente para alinear tu estrategia de producto",
+        "Antes de diseñar mensajes de marketing"
       ],
       "node_id": "arquetipos_de_cliente",
       "nodos_previos": [
         "genchi_gembutsu_salir_del_edificio",
         "tipos_de_clientes",
-        "identificacion_problema_cliente"
+        "identificacion_problema_cliente",
+        "problem_recognition_scale",
+        "simulacion_clientes_ia"
       ],
       "nodos_siguientes": [
         "producto_minimo_viable",
-        "dia_en_la_vida_del_cliente"
+        "dia_en_la_vida_del_cliente",
+        "advocacy_customer_journey",
+        "atributos_mercado_chopra_meindl",
+        "community_building_estrategia",
+        "construccion_tribu_de_marca",
+        "content_marketing_blog",
+        "cuatro_etapas_llamada_de_ventas",
+        "enfoque_en_superfans",
+        "estrategia_cuatro_capacidades_mercado",
+        "eventos_offline_como_canal_traccion",
+        "fase_adopt_ciclo_cliente",
+        "fase_assess_ciclo_cliente",
+        "fase_assess_experiencia_cliente",
+        "investigar_datos_cliente",
+        "preframing_expectativas",
+        "preparacion_preguntas_problema_precall",
+        "seo_estrategia_fat_head"
       ],
-      "etiqueta_arbol": "Retrata a tu Cliente Real"
+      "etiqueta_arbol": "Retrata a tu Cliente Real",
+      "ids_alias": [
+        "customer_archetypes"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "customer_archetypes",
+          "titulo": "Arquetipos de Cliente",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        }
+      ]
     },
     "arquitectura_flexible_soa": {
       "node_id": "arquitectura_flexible_soa",
@@ -5771,30 +5841,42 @@
       "resumen_teorico": "Toda decisión Go en un gate debe ir acompañada de un compromiso real de recursos, considerando el contexto del portafolio completo (no solo el proyecto individual). Se recomiendan tres enfoques: que el líder de proyecto llegue con candidatos de equipo pre-conversados, uso de software de gestión de recursos que muestre disponibilidad, o que los propios gatekeepers lleguen preparados con conocimiento de disponibilidad de su departamento.",
       "pasos_accionables": [
         "Mostrar en cada gate la lista de proyectos activos con su priorización y compromisos de recursos actuales",
-        "Elegir un método de seguimiento de recursos: pre-conversación del líder con candidatos, software de gestión, o preparación previa de gatekeepers",
+        "Elegir un método de seguimiento de recursos: pre-conversación del líder con candidatos, software de gestión, o preparación previa de gatekeepers, o bien lista manual, hoja de cálculo o algún programa especializado",
         "Verificar disponibilidad real de personas antes de comprometer recursos a un nuevo proyecto",
-        "Evitar agregar proyectos a la lista activa sin resolver las implicaciones de recursos"
+        "Evitar agregar proyectos a la lista activa sin resolver las implicaciones de recursos",
+        "En la reunión, comprométete de forma explícita a asignar personas y presupuesto para la siguiente etapa."
       ],
       "entregable_esperado": "Sistema de seguimiento de recursos (hoja de cálculo o software) que muestre asignación de personas por proyecto y disponibilidad futura",
       "nodos_previos": [
         "scorecards_criterios_gate",
         "gates_go_kill_decision_points",
         "gates_huecos_hollow_gates",
-        "automatizacion_software_gestion_innovacion"
+        "automatizacion_software_gestion_innovacion",
+        "mitos_stage_gate"
       ],
       "nodos_siguientes": [
         "gestion_portafolio_formal",
         "gates_huecos_hollow_gates",
         "identificacion_talento_design_thinking",
-        "sistema_gestion_recursos_en_gates",
         "trabajo_en_lotes_pequenos",
-        "identificar_pensadores_de_diseno_internos"
+        "identificar_pensadores_de_diseno_internos",
+        "estructura_de_gates"
       ],
       "condiciones_activacion": [
         "Cuando se aprueban proyectos sin verificar disponibilidad real de equipo",
         "Si existe multitasking excesivo entre miembros del equipo de desarrollo"
       ],
-      "etiqueta_arbol": "Comprométete al Decir Sí"
+      "etiqueta_arbol": "Comprométete al Decir Sí",
+      "ids_alias": [
+        "sistema_gestion_recursos_en_gates"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "sistema_gestion_recursos_en_gates",
+          "titulo": "Cómo asignar y seguir los recursos en cada decisión de avance (gate)",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        }
+      ]
     },
     "asistencia_agencias_minoritarias_mbda": {
       "node_id": "asistencia_agencias_minoritarias_mbda",
@@ -6037,7 +6119,8 @@
       "condiciones_activacion": [
         "Cuando surgen supuestos no validados durante la planificación que deben rastrearse a lo largo del proyecto"
       ],
-      "etiqueta_arbol": "Registra Supuestos y Límites"
+      "etiqueta_arbol": "Registra Supuestos y Límites",
+      "deprecado": true
     },
     "assumption_constraint_log": {
       "node_id": "assumption_constraint_log",
@@ -6047,25 +6130,37 @@
       "fuente": "A Project Manager's Book of Forms",
       "resumen_teorico": "Documento dinámico que registra los supuestos (factores considerados verdaderos sin comprobación) y las restricciones (limitaciones como presupuesto fijo o hitos obligatorios) que afectan la planificación y ejecución del proyecto. Se actualiza continuamente conforme los supuestos se validan o invalidan.",
       "pasos_accionables": [
-        "Identificar supuestos provenientes de cualquier documento o del equipo del proyecto",
+        "Identificar supuestos provenientes de cualquier documento o del equipo del proyecto, y categorizar cada supuesto o restricción",
         "Documentar restricciones definidas por el charter, cliente o reguladores",
         "Asignar responsable y fecha límite para validar cada supuesto",
-        "Registrar acciones tomadas y el estado actual de cada ítem",
+        "Registrar acciones tomadas y el estado actual de cada ítem, que puede ser activo, pendiente, cerrado",
         "Actualizar el log conforme se validan o invalidan los supuestos"
       ],
       "entregable_esperado": "Un log con identificador, categoría, descripción, responsable, fecha, acciones y estado de cada supuesto o restricción.",
       "nodos_previos": [
         "project_scope_statement",
-        "estrategia_de_innovacion_arenas"
+        "estrategia_de_innovacion_arenas",
+        "actividades_clave"
       ],
       "nodos_siguientes": [
-        "stakeholder_register"
+        "stakeholder_register",
+        "work_breakdown_structure"
       ],
       "condiciones_activacion": [
         "Cuando el proyecto tiene múltiples supuestos no validados que podrían representar riesgos",
         "Cuando se necesita rastrear restricciones impuestas por el cliente o regulaciones"
       ],
-      "etiqueta_arbol": "Anota tus Supuestos Clave"
+      "etiqueta_arbol": "Anota tus Supuestos Clave",
+      "ids_alias": [
+        "assumption_and_constraint_log"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "assumption_and_constraint_log",
+          "titulo": "Assumption and Constraint Log",
+          "fuente": "A Project Manager's Book of Forms"
+        }
+      ]
     },
     "asuncion_stock_options_adquisicion": {
       "node_id": "asuncion_stock_options_adquisicion",
@@ -6325,7 +6420,7 @@
       ],
       "entregable_esperado": "Perfil de requerimientos del mercado documentado con los 6 atributos evaluados",
       "nodos_previos": [
-        "customer_archetypes"
+        "arquetipos_de_cliente"
       ],
       "nodos_siguientes": [
         "alineacion_cadena_estrategia_negocio"
@@ -8778,7 +8873,7 @@
         "analisis_costo_entrada_mercado"
       ],
       "nodos_siguientes": [
-        "estrategia_get_keep_grow",
+        "embudo_get_keep_grow",
         "entrada_mercado_nuevo",
         "hipotesis_relacion_clientes_web"
       ],
@@ -10311,7 +10406,7 @@
       "nodos_previos": [
         "estrategia_de_innovacion_de_producto",
         "cultura_de_optimismo",
-        "sistema_stage_gate",
+        "stage_gate_system",
         "storytelling_como_herramienta_diseno"
       ],
       "nodos_siguientes": [
@@ -15874,7 +15969,7 @@
       "entregable_esperado": "Documento de misión de comunidad, guías de calidad definidas y un plan de reconocimiento a evangelistas tempranos",
       "nodos_previos": [
         "meetups_bootstrapping_comunidad",
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "eventos_offline_como_canal_traccion",
         "speaking_engagements_estrategia",
         "onboarding_comunitario_y_lenguaje_propio"
@@ -19666,7 +19761,7 @@
       "entregable_esperado": "Un statement de ethos de marca y al menos un artefacto simbólico de pertenencia para clientes leales",
       "nodos_previos": [
         "value_proposition_startup",
-        "customer_archetypes"
+        "arquetipos_de_cliente"
       ],
       "nodos_siguientes": [
         "advocacy_customer_journey",
@@ -20240,7 +20335,7 @@
       ],
       "entregable_esperado": "Blog activo con calendario editorial, al menos 10-15 publicaciones iniciales y sistema de captura de leads",
       "nodos_previos": [
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "seo_estrategia_fat_head",
         "publicidad_offline_pruebas_locales",
         "seo_link_building",
@@ -25332,7 +25427,7 @@
       "entregable_esperado": "Guion o checklist de llamada de ventas estructurado en las cuatro etapas",
       "nodos_previos": [
         "metodologia_spin_selling",
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "value_proposition_startup"
       ],
       "nodos_siguientes": [
@@ -25692,7 +25787,7 @@
       ],
       "nodos_siguientes": [
         "gestion_libro_abierto_obm",
-        "sistema_stage_gate",
+        "stage_gate_system",
         "liderazgo_ejecutivo_innovacion",
         "skunk_works_proyectos_paralelos"
       ],
@@ -26741,17 +26836,19 @@
       "resumen_teorico": "Forma sostenible de PR no convencional basada en hacer sentir apreciados a los clientes mediante gestos personalizados (notas escritas a mano, regalos, contests). Esto genera boca a boca, fortalece la marca y puede generar cobertura de prensa espontánea, incluso si ese no es el objetivo principal. Ejemplos: Hipmunk, reddit, Grasshopper.com, Zappos.",
       "pasos_accionables": [
         "Identificar momentos clave del customer journey para sorprender con gestos genuinos",
-        "Enviar notas escritas a mano, regalos pequeños o reconocimientos públicos a clientes tempranos",
+        "Enviar notas escritas a mano, regalos pequeños o reconocimientos públicos a clientes tempranos, además de la resolución de problemas fuera del alcance normal",
         "Diseñar contests o promociones de bajo costo pero alto valor emocional (ej. sorteos, dibujos personalizados)",
         "Tratar el soporte al cliente como inversión de marketing, priorizando calidad sobre velocidad",
-        "Medir el efecto en redes sociales, retención y menciones espontáneas de marca"
+        "Medir el efecto en redes sociales, retención y menciones espontáneas de marca",
+        "Establecer políticas que prioricen la satisfacción del cliente sobre la eficiencia operativa (ej. envíos y devoluciones gratis)"
       ],
       "entregable_esperado": "Programa de apreciación al cliente con acciones definidas, presupuesto y calendario de ejecución",
       "nodos_previos": [
         "pr_no_convencional_stunts",
         "regalos_estrategicos_personalizados",
         "shock_and_awe_kit_bienvenida",
-        "sorprender_cliente_estrategico"
+        "sorprender_cliente_estrategico",
+        "publicidad_no_convencional_stunts"
       ],
       "nodos_siguientes": [
         "customer_retention_strategy",
@@ -26762,7 +26859,17 @@
         "Cuando el startup ya tiene clientes activos y busca aumentar retención y boca a boca",
         "Cuando se quiere diferenciar la marca mediante experiencia de cliente memorable"
       ],
-      "etiqueta_arbol": "Sorprende y Aprecia a tus Clientes"
+      "etiqueta_arbol": "Sorprende y Aprecia a tus Clientes",
+      "ids_alias": [
+        "customer_appreciation_soporte"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "customer_appreciation_soporte",
+          "titulo": "Customer Appreciation como Canal de Marketing",
+          "fuente": "Traction - Gabriel Weinberg"
+        }
+      ]
     },
     "customer_appreciation_soporte": {
       "node_id": "customer_appreciation_soporte",
@@ -26789,7 +26896,8 @@
         "Cuando el producto ya tiene clientes activos y se busca aumentar retención y boca a boca",
         "Cuando el diferencial competitivo puede construirse vía experiencia de cliente"
       ],
-      "etiqueta_arbol": "Invierte en Atender Bien"
+      "etiqueta_arbol": "Invierte en Atender Bien",
+      "deprecado": true
     },
     "customer_archetypes": {
       "node_id": "customer_archetypes",
@@ -26834,7 +26942,8 @@
         "Cuando el equipo necesita alinear su visión de quién es el cliente",
         "Antes de diseñar mensajes de marketing"
       ],
-      "etiqueta_arbol": "Dibuja tus Arquetipos de Cliente"
+      "etiqueta_arbol": "Dibuja tus Arquetipos de Cliente",
+      "deprecado": true
     },
     "customer_creation": {
       "node_id": "customer_creation",
@@ -27653,7 +27762,6 @@
         "embudo_get_keep_grow",
         "community_building_estrategia",
         "customer_appreciation_pr",
-        "customer_appreciation_soporte",
         "eventos_offline_propios",
         "cierre_satisfaccion_postventa",
         "gestion_pedidos_order_management",
@@ -28472,7 +28580,7 @@
       "entregable_esperado": "Matriz de autoevaluación de los tres factores (carrera, mercado, personal) con plan de mitigación para los factores débiles",
       "nodos_previos": [
         "dilema_riqueza_vs_control",
-        "influencias_tempranas_motivaciones"
+        "analisis_motivaciones_fundador"
       ],
       "nodos_siguientes": [
         "evaluacion_dispassionate_idea",
@@ -30567,7 +30675,8 @@
         "Cuando el equipo solo se enfoca en qué construir sin considerar riesgos éticos",
         "Antes de escalar un producto que podría tener efectos secundarios no deseados"
       ],
-      "etiqueta_arbol": "Define lo que No Harás"
+      "etiqueta_arbol": "Define lo que No Harás",
+      "deprecado": true
     },
     "definir_limites_huella_carbono": {
       "node_id": "definir_limites_huella_carbono",
@@ -31217,7 +31326,8 @@
         "Cuando se busca estimular innovación en un sector estancado tecnológicamente",
         "Si se requiere movilizar inversión privada hacia un objetivo público/humanitario"
       ],
-      "etiqueta_arbol": "Lanza un Desafío de Diseño"
+      "etiqueta_arbol": "Lanza un Desafío de Diseño",
+      "deprecado": true
     },
     "desafios_implementacion_ia": {
       "node_id": "desafios_implementacion_ia",
@@ -33325,7 +33435,7 @@
         "analisis_costo_entrada_mercado",
         "brief_competitivo",
         "entrada_mercado_nuevo",
-        "estrategia_get_keep_grow",
+        "embudo_get_keep_grow",
         "etapa_de_investigacion",
         "hipotesis_relacion_clientes_web",
         "resegmentacion_mercado_nicho_bajo_costo"
@@ -33562,7 +33672,6 @@
       ],
       "node_id": "dia_en_la_vida_del_cliente",
       "nodos_previos": [
-        "customer_archetypes",
         "arquetipos_de_cliente",
         "problem_recognition_scale"
       ],
@@ -34073,7 +34182,7 @@
         "auditoria_desempeno_new_products"
       ],
       "nodos_siguientes": [
-        "sistema_stage_gate",
+        "stage_gate_system",
         "gestion_de_portafolio_arriesgado",
         "estrategia_de_innovacion_producto",
         "motor_idea_a_lanzamiento_agil",
@@ -34535,7 +34644,7 @@
         "decision_cuando_fundar",
         "diagnostico_motivacion_para_contrataciones_inversores",
         "identificacion_necesidad_sucesion_ceo",
-        "influencias_tempranas_motivaciones",
+        "analisis_motivaciones_fundador",
         "puzzle_prima_capital_privado",
         "recursos_de_segundo_nivel",
         "sucesion_iniciada_por_fundador"
@@ -35084,7 +35193,7 @@
       "nodos_siguientes": [
         "definicion_startup",
         "prototipado_rapido",
-        "definir_antigoals",
+        "antigoals_framework",
         "search_for_business_model"
       ],
       "condiciones_activacion": [
@@ -35211,11 +35320,13 @@
       "fuente": "Change by Design, Revised and U - Tim Brown",
       "resumen_teorico": "Una competencia estructurada entre equipos rivales que atacan un mismo problema, generando energía colectiva, innovación y una narrativa pública atractiva. Casos como el avión a baterías de Panasonic/Hakuhodo o el Ansari X Prize muestran cómo estos desafíos convierten a espectadores pasivos en participantes comprometidos, generando cobertura mediática y avances tecnológicos reales.",
       "pasos_accionables": [
-        "Definir un reto claro, medible y desafiante para los equipos participantes",
+        "Definir un reto claro, medible y desafiante para los equipos participantes, sea técnico o social",
         "Establecer reglas y un premio (financiero, reconocimiento o ambos)",
         "Comunicar el progreso del desafío públicamente para generar expectación",
         "Aprovechar medios (TV, web, prensa) para construir una narrativa de seguimiento",
-        "Evaluar resultados más allá del ganador: aprendizaje colectivo e innovación generada"
+        "Evaluar resultados más allá del ganador: aprendizaje colectivo e innovación generada, y también el impacto posterior en inversión e innovación del sector",
+        "Convocar públicamente a equipos independientes (no gubernamentales)",
+        "Documentar y publicitar el proceso para generar una narrativa pública"
       ],
       "entregable_esperado": "Una convocatoria de desafío de diseño con reglas, premio y plan de comunicación pública definidos.",
       "nodos_previos": [
@@ -35223,16 +35334,28 @@
         "analisis_y_sintesis"
       ],
       "nodos_siguientes": [
-        "desafios_de_diseno_competitivos",
         "how_might_we_framing",
-        "transformacion_organizacional_diseno"
+        "transformacion_organizacional_diseno",
+        "storytelling_como_herramienta_diseno"
       ],
       "condiciones_activacion": [
         "Cuando se busca innovación radical en un plazo definido",
         "Cuando se quiere generar cobertura mediática significativa con bajo presupuesto",
-        "Cuando existen múltiples equipos o comunidades capaces de competir por una solución"
+        "Cuando existen múltiples equipos o comunidades capaces de competir por una solución",
+        "Cuando se busca estimular innovación en un sector estancado tecnológicamente",
+        "Si se requiere movilizar inversión privada hacia un objetivo público/humanitario"
       ],
-      "etiqueta_arbol": "Lanza un Desafío de Innovación"
+      "etiqueta_arbol": "Lanza un Desafío de Innovación",
+      "ids_alias": [
+        "desafios_de_diseno_competitivos"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "desafios_de_diseno_competitivos",
+          "titulo": "Design Challenges (Desafíos de Diseño Competitivos)",
+          "fuente": "Change by Design, Revised and U - Tim Brown"
+        }
+      ]
     },
     "diseno_de_eucatastrofe_organizacional": {
       "node_id": "diseno_de_eucatastrofe_organizacional",
@@ -41183,7 +41306,7 @@
         "definicion_tipos_nuevo_producto"
       ],
       "nodos_siguientes": [
-        "sistema_stage_gate",
+        "stage_gate_system",
         "portfolio_management",
         "mantener_puntaje_innovacion"
       ],
@@ -41202,11 +41325,13 @@
       "resumen_teorico": "El embudo Get, Keep, Grow resume la misión de toda startup en tres frases: construir grandes productos, conseguir, mantener y hacer crecer clientes, y ganar dinero de ellos. Aplica tanto a canales físicos como a web o mobile y describe el ciclo de vida completo de la relación con el cliente: adquisición y activación (Get), retención e interacción (Keep), y crecimiento vía up-sell, cross-sell y referidos (Grow). Es una de las hipótesis más críticas de cualquier startup porque sin clientes la empresa muere. Además, adquirir clientes suele ser la parte más costosa del negocio, por lo que conviene priorizar recursos entre las tres fases según su impacto real en el crecimiento sostenible.",
       "pasos_accionables": [
         "Dibuja el embudo Get/Keep/Grow específico para tu canal, físico o web/mobile",
-        "Define tu estrategia de Get Customers para adquisición y activación",
-        "Define tu estrategia de Keep Customers para interacción y retención",
+        "Define tu estrategia de Get Customers para adquisición y activación, con sus etapas de conciencia, interés, consideración, compra",
+        "Define tu estrategia de Keep Customers para interacción y retención, con tácticas como llamadas de seguimiento, encuestas de satisfacción, programas de lealtad",
         "Define tu estrategia de Grow Customers para ingreso incremental y referidos",
         "Prioriza tus recursos sabiendo que adquirir clientes es la etapa más costosa",
-        "Actualiza tu business model canvas e identifica pruebas pass/fail para cada etapa"
+        "Actualiza tu business model canvas e identifica pruebas pass/fail para cada etapa",
+        "Elegir tácticas de medios ganados (earned media) y pagados (paid media) a probar",
+        "Medir el costo de adquisición de cliente (CAC) contra el margen de ganancia por venta"
       ],
       "entregable_esperado": "Documento de hipótesis de relación con clientes con las tres estrategias Get/Keep/Grow definidas, recursos priorizados y pruebas pass/fail identificadas.",
       "nodos_previos": [
@@ -41215,8 +41340,11 @@
         "optimizacion_grow_customers",
         "customer_segments_hypothesis",
         "fit_value_proposition",
-        "estrategia_get_keep_grow",
-        "optimizacion_metricas_crecimiento"
+        "optimizacion_metricas_crecimiento",
+        "brief_competitivo",
+        "determinar_tipo_de_mercado",
+        "entrada_mercado_nuevo",
+        "hipotesis_de_canales"
       ],
       "nodos_siguientes": [
         "customer_activation_tactics",
@@ -41226,22 +41354,31 @@
         "get_customers_funnel",
         "keep_customers_strategy",
         "customer_retention_tactics",
-        "get_customers_funnel_webmobile"
+        "get_customers_funnel_webmobile",
+        "hipotesis_relacion_clientes_web",
+        "metricas_calidad"
       ],
       "condiciones_activacion": [
         "Cuando tu startup ya tiene un MVP y necesitas definir cómo conseguirás, retendrás y harás crecer tu base de clientes",
         "Cuando estás construyendo tu business model canvas y falta la sección de canales o relación con clientes",
-        "Cuando aún no has definido cómo adquirirás, retendrás y harás crecer tu base de clientes"
+        "Cuando aún no has definido cómo adquirirás, retendrás y harás crecer tu base de clientes",
+        "Si se necesita definir presupuesto de marketing con pruebas de bajo costo antes de escalar"
       ],
       "etiqueta_arbol": "Consigue, Mantén y Crece Clientes",
       "ids_alias": [
-        "framework_get_keep_grow"
+        "framework_get_keep_grow",
+        "estrategia_get_keep_grow"
       ],
       "merged_originals": [
         {
           "node_id": "framework_get_keep_grow",
           "titulo": "Framework 'Get, Keep, Grow' Customers",
           "fuente": "The Startup Owner's Manual - Steve Blank"
+        },
+        {
+          "node_id": "estrategia_get_keep_grow",
+          "titulo": "Estrategia de Relación con el Cliente: Get, Keep, Grow",
+          "fuente": "The Startup Owner's Manual"
         }
       ]
     },
@@ -42211,7 +42348,7 @@
       ],
       "entregable_esperado": "Tu lista de clientes superfans y un plan de cómo vas a interactuar de forma exclusiva con ellos",
       "nodos_previos": [
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "construccion_tribu_de_marca"
       ],
       "nodos_siguientes": [
@@ -42827,7 +42964,7 @@
       ],
       "nodos_siguientes": [
         "brief_competitivo",
-        "estrategia_get_keep_grow"
+        "embudo_get_keep_grow"
       ],
       "condiciones_activacion": [
         "Si no existen competidores ni productos comparables",
@@ -43481,7 +43618,7 @@
       ],
       "entregable_esperado": "Lista de miembros del equipo de ideación con roles y áreas de expertise definidas",
       "nodos_previos": [
-        "open_innovation_ideacion",
+        "innovacion_abierta",
         "humor_como_herramienta_creativa",
         "sentido_del_humor_como_herramienta_de_pensamiento"
       ],
@@ -46499,7 +46636,6 @@
         "customer_retention_strategy",
         "customer_retention_tactics",
         "embudo_get_keep_grow",
-        "estrategia_get_keep_grow",
         "framework_get_keep_grow",
         "publicidad_garantia_conforme",
         "get_customers_funnel_webmobile"
@@ -46526,7 +46662,7 @@
       "entregable_esperado": "Documento de estrategia de cadena de suministro que defina la capacidad de mercado prioritaria y la justificación basada en la etapa del mercado.",
       "nodos_previos": [
         "market_type_revenue_growth",
-        "customer_archetypes"
+        "arquetipos_de_cliente"
       ],
       "nodos_siguientes": [
         "key_process_product_characteristics",
@@ -46922,7 +47058,8 @@
         "Si el startup ya validó su propuesta de valor y necesita estrategia de adquisición y retención de clientes",
         "Si se necesita definir presupuesto de marketing con pruebas de bajo costo antes de escalar"
       ],
-      "etiqueta_arbol": "Consigue, Retén y Haz Crecer"
+      "etiqueta_arbol": "Consigue, Retén y Haz Crecer",
+      "deprecado": true
     },
     "estrategia_hibrida_control_riqueza": {
       "node_id": "estrategia_hibrida_control_riqueza",
@@ -46979,7 +47116,7 @@
         "portfolio_management",
         "metas_objetivos_smart_innovacion",
         "metodo_strategic_buckets",
-        "open_innovation_ideacion",
+        "innovacion_abierta",
         "tecnologia_como_medio_no_fin",
         "seleccion_arenas_estrategicas"
       ],
@@ -47599,7 +47736,7 @@
       "entregable_esperado": "Documento de gate con lista de entregables, criterios y protocolo de decisión estandarizado.",
       "nodos_previos": [
         "mitos_stage_gate",
-        "sistema_gestion_recursos_en_gates"
+        "asignacion_recursos_en_gates"
       ],
       "nodos_siguientes": [
         "diamante_decision_tres_partes",
@@ -47689,7 +47826,7 @@
         "fundamentos_inteligencia_financiera"
       ],
       "nodos_siguientes": [
-        "analisis_de_variancia",
+        "analisis_varianza_financiera",
         "distincion_cogs_gastos_operativos",
         "distincion_gasto_vs_capital_expenditure",
         "estado_flujo_de_caja_tres_categorias"
@@ -47744,7 +47881,7 @@
       ],
       "entregable_esperado": "Una plantilla para cada punto de decisión, con la lista de criterios eliminatorios, una forma de priorizar los que sí cumplen, y un protocolo claro para decidir si sigues, detienes, pausas o rehaces la propuesta",
       "nodos_previos": [
-        "sistema_stage_gate",
+        "stage_gate_system",
         "reglas_gestion_riesgo_gambling"
       ],
       "nodos_siguientes": [
@@ -48240,7 +48377,7 @@
       "entregable_esperado": "Un documento de idea (idea template) de una página, listo para ser presentado en el Gate 1",
       "nodos_previos": [
         "estructura_gates",
-        "sistema_stage_gate"
+        "stage_gate_system"
       ],
       "nodos_siguientes": [
         "gate1_idea_screen"
@@ -50406,7 +50543,7 @@
       "entregable_esperado": "Un evento presencial piloto (encuentro o mini charla) que planeaste y realizaste, con la asistencia y el interés generado anotados",
       "nodos_previos": [
         "canales_distribucion",
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "estrategia_multicanal_bienvenida"
       ],
       "nodos_siguientes": [
@@ -52599,7 +52736,7 @@
       ],
       "entregable_esperado": "Mapa de touchpoints de la fase Adopt con al menos una acción definida por canal",
       "nodos_previos": [
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "celebracion_automatizada_de_hitos",
         "fase_accomplish_experiencia_cliente",
         "reunion_conclusion_proyecto"
@@ -52805,7 +52942,7 @@
       ],
       "entregable_esperado": "Un diagnóstico de cómo estás manejando hoy esta etapa de evaluación, con un plan concreto de mejora usando al menos un canal de comunicación",
       "nodos_previos": [
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "value_proposition_startup"
       ],
       "nodos_siguientes": [
@@ -52836,7 +52973,7 @@
       ],
       "entregable_esperado": "Un mapa de ese momento de evaluación previa a la compra con los puntos donde tu marketing y tu venta tocan a la persona, más un guion o protocolo que anticipe cómo será la experiencia después de la venta",
       "nodos_previos": [
-        "customer_archetypes"
+        "arquetipos_de_cliente"
       ],
       "nodos_siguientes": [
         "preframing_expectativas",
@@ -54419,7 +54556,7 @@
       ],
       "entregable_esperado": "Una lista de preguntas clave para el contador sobre supuestos y políticas contables aplicadas.",
       "nodos_previos": [
-        "analisis_de_variancia"
+        "analisis_varianza_financiera"
       ],
       "nodos_siguientes": [
         "reconocimiento_de_ingresos"
@@ -58583,7 +58720,6 @@
         "asignacion_recursos_en_gates",
         "pruning_portafolio",
         "requisitos_gates_con_dientes",
-        "sistema_gestion_recursos_en_gates",
         "estructura_de_gates"
       ],
       "nodos_siguientes": [
@@ -61243,7 +61379,7 @@
         "seleccion_canal_fisico",
         "determinar_tipo_de_mercado",
         "acquisicion_viral_engineering",
-        "estrategia_get_keep_grow",
+        "embudo_get_keep_grow",
         "estrategia_plataformas_existentes",
         "programa_afiliados",
         "seleccion_canales_distribucion"
@@ -61336,7 +61472,7 @@
       "nodos_previos": [
         "brief_competitivo",
         "determinar_tipo_de_mercado",
-        "estrategia_get_keep_grow"
+        "embudo_get_keep_grow"
       ],
       "nodos_siguientes": [
         "producto_minimo_viable",
@@ -64469,7 +64605,8 @@
         "Cuando no tienes claro por qué quieres emprender",
         "Cuando hay roces con tu familia o tu entorno por tu decisión de emprender"
       ],
-      "etiqueta_arbol": "Descubre tus Motivaciones Profundas"
+      "etiqueta_arbol": "Descubre tus Motivaciones Profundas",
+      "deprecado": true
     },
     "information_driver_supply_chain": {
       "node_id": "information_driver_supply_chain",
@@ -64777,27 +64914,47 @@
       "resumen_teorico": "Estrategia para generar ideas de nuevos productos aprovechando fuentes externas a la organización, superando el síndrome NIH ('not invented here'). Incluye seis métodos: socios/proveedores, comunidad técnica externa, pequeñas empresas y startups, diseños externos de producto (crowdsourcing), envío externo de ideas, y concursos externos de ideas. El método más popular y efectivo es trabajar con socios y proveedores.",
       "pasos_accionables": [
         "Evaluar el grado de síndrome NIH en la organización",
-        "Establecer equipos de exploración (scouting) que investiguen startups, inventores y pequeñas empresas",
+        "Establecer equipos de exploración (scouting) que investiguen startups, inventores y pequeñas empresas, y que visiten conferencias, ferias",
         "Crear páginas web que inviten al público a enviar ideas, tecnología o productos terminados",
         "Establecer interfaces con centros de transferencia tecnológica universitaria",
         "Realizar sesiones regulares con proveedores técnicos (como el modelo Swarovski de 'search fields')",
         "Considerar plataformas de diseño de producto por parte del cliente (como LEGO Digital Designer)",
-        "Evaluar qué métodos de innovación abierta aplican según la complejidad del producto y la industria (B2C vs B2B/alta tecnología)"
+        "Evaluar qué métodos de innovación abierta aplican según la complejidad del producto y la industria (B2C vs B2B/alta tecnología)",
+        "Adaptar el proceso Stage-Gate para manejar ideas, IP y tecnologías externas"
       ],
       "entregable_esperado": "Estrategia de innovación abierta con métodos seleccionados, red de socios/proveedores establecida y procesos para evaluar ideas externas",
       "nodos_previos": [
         "iota_analysis",
-        "open_innovation_ideacion"
+        "analisis_y_sintesis",
+        "estrategia_innovacion_producto",
+        "llamar_lo_que_falta",
+        "nombrar_los_monstruos",
+        "shapeshifting_diversidad"
       ],
       "nodos_siguientes": [
-        "estructura_equipos_innovacion_interna"
+        "estructura_equipos_innovacion_interna",
+        "equipo_diverso_ideacion",
+        "mitos_stage_gate",
+        "portfolio_management",
+        "reglas_gestion_riesgo_gambling"
       ],
       "condiciones_activacion": [
         "Cuando la I+D interna no ha sido suficiente fuente de innovación",
         "Cuando la empresa opera en un sector B2C con productos de tecnología relativamente simple",
-        "Cuando se busca complementar la ideación interna con fuentes externas"
+        "Cuando se busca complementar la ideación interna con fuentes externas",
+        "Cuando se cuenta con recursos para gestionar y evaluar un alto volumen de propuestas externas"
       ],
-      "etiqueta_arbol": "Busca Ideas Fuera de Casa"
+      "etiqueta_arbol": "Busca Ideas Fuera de Casa",
+      "ids_alias": [
+        "open_innovation_ideacion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "open_innovation_ideacion",
+          "titulo": "Innovación Abierta para Generación de Ideas",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        }
+      ]
     },
     "innovacion_abierta_externa": {
       "node_id": "innovacion_abierta_externa",
@@ -64845,7 +65002,7 @@
         "liderazgo_ejecutivo_innovacion"
       ],
       "nodos_siguientes": [
-        "sistema_stage_gate",
+        "stage_gate_system",
         "portfolio_management"
       ],
       "condiciones_activacion": [
@@ -66485,7 +66642,7 @@
       ],
       "entregable_esperado": "Tu CRM con los datos personales y emocionales clave de cada cliente, listos para usarlos más adelante en la personalización",
       "nodos_previos": [
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "customer_types_mapping",
         "tipos_de_clientes",
         "customer_journey_mapping"
@@ -68818,7 +68975,7 @@
         "cultura_de_innovacion"
       ],
       "nodos_siguientes": [
-        "sistema_stage_gate",
+        "stage_gate_system",
         "ways_to_grow_matrix",
         "innovacion_como_apuesta_incremental",
         "rol_alta_direccion_calidad"
@@ -69602,7 +69759,7 @@
       ],
       "nodos_siguientes": [
         "nombrar_los_monstruos",
-        "open_innovation_ideacion"
+        "innovacion_abierta"
       ],
       "condiciones_activacion": [
         "Cuando el equipo siente que algo falta pero no puede articularlo",
@@ -74440,7 +74597,7 @@
       "entregable_esperado": "Tabla de métricas de calidad con atributos, valores objetivo y métodos de medición",
       "nodos_previos": [
         "plan_gestion_calidad",
-        "estrategia_get_keep_grow"
+        "embudo_get_keep_grow"
       ],
       "nodos_siguientes": [
         "formal_acceptance"
@@ -75235,7 +75392,7 @@
       "nodos_previos": [
         "cinco_artefactos_stage_gate",
         "checklist_sistema_stage_gate_primera_clase",
-        "open_innovation_ideacion",
+        "innovacion_abierta",
         "strategic_buckets",
         "metodo_strategic_buckets"
       ],
@@ -75247,7 +75404,7 @@
         "gates_go_kill_decision_points",
         "gestion_portafolio_dos_niveles",
         "modelo_hibrido_agile_stage_gate",
-        "sistema_gestion_recursos_en_gates",
+        "asignacion_recursos_en_gates",
         "sistema_triple_a_stage_gate"
       ],
       "condiciones_activacion": [
@@ -78410,7 +78567,7 @@
         "llamar_lo_que_falta"
       ],
       "nodos_siguientes": [
-        "open_innovation_ideacion",
+        "innovacion_abierta",
         "plan_gestion_riesgos",
         "shapeshifting_diversidad"
       ],
@@ -79566,7 +79723,8 @@
         "Si el producto es de consumo relativamente simple o creativo",
         "Cuando se cuenta con recursos para gestionar y evaluar un alto volumen de propuestas externas"
       ],
-      "etiqueta_arbol": "Busca Ideas Fuera del Equipo"
+      "etiqueta_arbol": "Busca Ideas Fuera del Equipo",
+      "deprecado": true
     },
     "operacionalizacion_de_etiquetas_psicologicas": {
       "node_id": "operacionalizacion_de_etiquetas_psicologicas",
@@ -85106,7 +85264,7 @@
       "entregable_esperado": "Portafolio de proyectos priorizado y balanceado, con recursos asignados según valor estratégico y decisiones explícitas de Go/Kill documentadas.",
       "nodos_previos": [
         "mrg_event",
-        "open_innovation_ideacion",
+        "innovacion_abierta",
         "arenas_estrategicas",
         "definicion_tipos_nuevo_producto",
         "embudo_atricion_nuevos_productos",
@@ -85725,7 +85883,7 @@
       "nodos_previos": [
         "fase_assess_experiencia_cliente",
         "value_proposition_startup",
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "fase_assess_ciclo_cliente",
         "personalizacion_investigacion_prospecto"
       ],
@@ -86429,7 +86587,7 @@
       ],
       "entregable_esperado": "Lista escrita de problemas potenciales del cliente con preguntas de problema asociadas, lista para usar antes de la llamada",
       "nodos_previos": [
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "empathy_map"
       ],
       "nodos_siguientes": [
@@ -88139,7 +88297,7 @@
         "lienzo_modelo_negocio"
       ],
       "nodos_siguientes": [
-        "analisis_de_variancia",
+        "analisis_varianza_financiera",
         "estructura_estado_resultados",
         "analisis_de_ratios_financieros"
       ],
@@ -88254,7 +88412,7 @@
         "comunicacion_proactiva_puntos_estres"
       ],
       "nodos_siguientes": [
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "dia_en_la_vida_del_cliente"
       ],
       "condiciones_activacion": [
@@ -90826,7 +90984,6 @@
         "work_breakdown_structure",
         "network_diagram",
         "activity_duration_estimates",
-        "assumption_and_constraint_log",
         "assumption_constraint_log",
         "duration_estimating_worksheet",
         "milestone_list",
@@ -92362,7 +92519,7 @@
         "value_proposition_startup"
       ],
       "nodos_siguientes": [
-        "customer_appreciation_soporte"
+        "customer_appreciation_pr"
       ],
       "condiciones_activacion": [
         "Cuando tienes poco presupuesto de marketing pero buscas visibilidad rápida",
@@ -95852,14 +96009,14 @@
       ],
       "entregable_esperado": "Un mapa de riesgo del proyecto que muestre la relación entre incertidumbre y montos invertidos en cada etapa, con puntos de salida definidos",
       "nodos_previos": [
-        "open_innovation_ideacion",
+        "innovacion_abierta",
         "ventaja_competitiva_producto",
         "sistema_gates_go_kill",
         "front_end_homework",
         "homework_frontend_loading"
       ],
       "nodos_siguientes": [
-        "sistema_stage_gate",
+        "stage_gate_system",
         "estructura_gates",
         "cadena_suministro_respuesta_desastres",
         "fundamentos_gestion_riesgo"
@@ -101445,7 +101602,7 @@
         "aprendizaje_validado",
         "emprendimiento_como_disciplina_de_gestion",
         "marcos_historicos_comunidades_startup",
-        "definir_antigoals",
+        "antigoals_framework",
         "diseno_sistemico_partes_interesadas",
         "how_might_we_briefs",
         "mapeo_capas_diseno",
@@ -103926,7 +104083,7 @@
       "entregable_esperado": "Lista priorizada de 3-5 keywords fat-head validadas con plan de optimización on-page y estrategia de link building",
       "nodos_previos": [
         "productos_crudos",
-        "customer_archetypes",
+        "arquetipos_de_cliente",
         "publicidad_offline_pruebas_locales"
       ],
       "nodos_siguientes": [
@@ -104428,7 +104585,7 @@
         "emocion_como_motor_pensamiento"
       ],
       "nodos_siguientes": [
-        "open_innovation_ideacion",
+        "innovacion_abierta",
         "prototipado_rapido"
       ],
       "condiciones_activacion": [
@@ -104691,7 +104848,7 @@
       ],
       "nodos_siguientes": [
         "prueba_solucion_con_cliente",
-        "customer_archetypes"
+        "arquetipos_de_cliente"
       ],
       "condiciones_activacion": [
         "Antes de realizar entrevistas costosas o difíciles de conseguir con clientes reales",
@@ -105300,7 +105457,8 @@
         "Si los proyectos que apruebas para seguir adelante no reciben los recursos reales que necesitan.",
         "Si tienes varios proyectos compitiendo por las mismas personas."
       ],
-      "etiqueta_arbol": "Asigna Recursos Reales en Cada Etapa"
+      "etiqueta_arbol": "Asigna Recursos Reales en Cada Etapa",
+      "deprecado": true
     },
     "sistema_informacion_calidad": {
       "node_id": "sistema_informacion_calidad",
@@ -105667,7 +105825,8 @@
         "Si la empresa maneja la innovación como una 'caja negra' sin proceso definido",
         "Si se requiere estandarizar el desarrollo de nuevos productos en la organización"
       ],
-      "etiqueta_arbol": "Estructura la Innovación por Etapas"
+      "etiqueta_arbol": "Estructura la Innovación por Etapas",
+      "deprecado": true
     },
     "sistema_take_back": {
       "node_id": "sistema_take_back",
@@ -106157,7 +106316,7 @@
         "cultura_de_innovacion"
       ],
       "nodos_siguientes": [
-        "sistema_stage_gate"
+        "stage_gate_system"
       ],
       "condiciones_activacion": [
         "Si la empresa tiene ideas prometedoras que no encajan en el pipeline oficial de proyectos.",
@@ -106803,11 +106962,13 @@
       "fuente": "Winning at New Products - Robert G. Cooper",
       "resumen_teorico": "Stage-Gate es una metodología estructurada de idea-a-lanzamiento que organiza el desarrollo de productos en etapas (stages) separadas por puntos de decisión (gates) de Go/Kill. Integra los factores críticos de éxito y mejores prácticas identificadas en la investigación de fracasos y éxitos, traduciéndolos en un blueprint operativo. Versiones modernas incorporan enfoques híbridos con métodos Agile (Agile-Stage-Gate), modelos basados en riesgo y contexto, haciendo el sistema más flexible, rápido y adaptativo para proyectos de innovación audaz.",
       "pasos_accionables": [
-        "Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa",
+        "Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa, por ejemplo Discovery, Scoping, Business Case, Development, Testing, Launch",
         "Establecer gates de decisión Go/Kill con criterios claros basados en los factores de éxito",
         "Incorporar prácticas ágiles donde sea apropiado para aumentar velocidad y flexibilidad",
         "Ajustar el rigor del proceso según el riesgo y tipo de proyecto (context-based approach)",
-        "Documentar el playbook como sistema operativo replicable para toda la organización"
+        "Documentar el playbook como sistema operativo replicable para toda la organización",
+        "Asegurar que cada etapa involucre equipos multifuncionales trabajando en paralelo",
+        "Establecer que cada etapa cueste progresivamente más, siguiendo la lógica de compra de opciones incrementales"
       ],
       "entregable_esperado": "Mapa documentado del proceso Stage-Gate adaptado a la organización, con etapas, entregables y criterios de gate definidos",
       "nodos_previos": [
@@ -106818,18 +106979,38 @@
         "gate_0_evaluacion_wishlist",
         "product_roadmap_estrategico",
         "siete_razones_fracaso_productos",
-        "voice_of_customer_homework"
+        "voice_of_customer_homework",
+        "cultura_de_innovacion",
+        "diamante_de_innovacion",
+        "embudo_atricion_nuevos_productos",
+        "innovacion_como_apuesta_incremental",
+        "liderazgo_ejecutivo_innovacion",
+        "reglas_gestion_riesgo_gambling",
+        "skunk_works_proyectos_paralelos"
       ],
       "nodos_siguientes": [
         "build_measure_learn",
         "modelo_tradicional_introduccion_producto",
-        "estrategia_innovacion_producto"
+        "estrategia_innovacion_producto",
+        "calidad_de_ejecucion_proceso_innovacion",
+        "estructura_gates",
+        "etapa_discovery_ideacion"
       ],
       "condiciones_activacion": [
         "Si la organización no tiene un proceso formal de desarrollo de nuevos productos",
         "Si se busca estandarizar y mejorar el proceso de idea-to-launch existente"
       ],
-      "etiqueta_arbol": "Guía tu Desarrollo por Etapas"
+      "etiqueta_arbol": "Guía tu Desarrollo por Etapas",
+      "ids_alias": [
+        "sistema_stage_gate"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "sistema_stage_gate",
+          "titulo": "Sistema Stage-Gate: Modelo Integral de Innovación",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        }
+      ]
     },
     "stage_gate_td_tecnologia": {
       "node_id": "stage_gate_td_tecnologia",
@@ -107002,7 +107183,6 @@
       "entregable_esperado": "Una tabla que armas tú mismo con el listado completo de personas involucradas, su rol, contacto, lo que necesitan, lo que esperan, su nivel de influencia y cómo las clasificas.",
       "nodos_previos": [
         "project_charter",
-        "assumption_and_constraint_log",
         "assumption_constraint_log",
         "cost_management_plan",
         "wbs_dictionary"
@@ -107244,7 +107424,7 @@
       "nodos_previos": [
         "practica_de_observacion_atenta",
         "prototipado_rapido",
-        "desafios_de_diseno_competitivos"
+        "diseno_de_desafios_de_innovacion"
       ],
       "nodos_siguientes": [
         "ways_to_grow_matrix",
@@ -109983,7 +110163,6 @@
         "flexible_go_kill_criteria",
         "manejo_de_incertidumbre_proyectos_innovadores",
         "pensar_en_grande_empezar_pequeno",
-        "customer_archetypes",
         "investigar_datos_cliente",
         "multiples_compradores_influyentes"
       ],
@@ -115923,7 +116102,7 @@
       "nodos_previos": [
         "project_scope_statement",
         "scope_management_plan",
-        "assumption_and_constraint_log"
+        "assumption_constraint_log"
       ],
       "nodos_siguientes": [
         "wbs_dictionary",
@@ -123741,7 +123920,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 60,
+    "nodos_sin_enlaces_entrantes": 67,
     "enlaces_rotos_en_grafo": 0
   }
 }

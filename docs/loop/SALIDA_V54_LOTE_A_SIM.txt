@@ -1,0 +1,432 @@
+==============================================================================
+OP-U-01, TRAMO 2, LOTE A DE LA VUELTA 54: los actos 2, 3, 5, 7, 8, 9, 10, 11, 12, 13 y 14 del tramo 2 (los ONCE primeros del tramo cuyo superviviente elige el contenido sin choque, sin puerta en juego y sin colision prevista) . MODO SIMULAR
+plan: docs/loop/PLAN_V54_OPU01_LOTE_A.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3477 vivos, 376 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive diseno_de_desafios_de_innovacion . absorbe desafios_de_diseno_competitivos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 3 -> 5 (anadidas 2)
+  INCISOS ADOSADOS: 2
+     del paso 1 de desafios_de_diseno_competitivos al PASO 1 del superviviente
+        inciso VERBATIM: 'técnico o social'
+        nexo (lo unico de cosecha propia): ', sea '
+        paso resultante: Definir un reto claro, medible y desafiante para los equipos participantes, sea técnico o social
+     del paso 5 de desafios_de_diseno_competitivos al PASO 5 del superviviente
+        inciso VERBATIM: 'el impacto posterior en inversión e innovación del sector'
+        nexo (lo unico de cosecha propia): ', y también '
+        paso resultante: Evaluar resultados más allá del ganador: aprendizaje colectivo e innovación generada, y también el impacto posterior en inversión e innovación del sector
+  alias del superviviente: ['desafios_de_diseno_competitivos']
+
+------------------------------------------------------------------------------
+ACTO 3 . sobrevive innovacion_abierta . absorbe open_innovation_ideacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 8 (anadidos 1) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de open_innovation_ideacion al PASO 2 del superviviente
+        inciso VERBATIM: 'conferencias, ferias'
+        nexo (lo unico de cosecha propia): ', y que visiten '
+        paso resultante: Establecer equipos de exploración (scouting) que investiguen startups, inventores y pequeñas empresas, y que visiten conferencias, ferias
+  alias del superviviente: ['open_innovation_ideacion']
+
+------------------------------------------------------------------------------
+ACTO 5 . sobrevive customer_appreciation_pr . absorbe customer_appreciation_soporte
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 3 de customer_appreciation_soporte al PASO 2 del superviviente
+        inciso VERBATIM: 'resolución de problemas fuera del alcance normal'
+        nexo (lo unico de cosecha propia): ', además de la '
+        paso resultante: Enviar notas escritas a mano, regalos pequeños o reconocimientos públicos a clientes tempranos, además de la resolución de problemas fuera del alcance normal
+  alias del superviviente: ['customer_appreciation_soporte']
+
+------------------------------------------------------------------------------
+ACTO 7 . sobrevive analisis_varianza_financiera . absorbe analisis_de_variancia
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de analisis_de_variancia al PASO 1 del superviviente
+        inciso VERBATIM: 'cada mes'
+        nexo (lo unico de cosecha propia): ', y hacerlo '
+        paso resultante: Calcular varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes
+  alias del superviviente: ['analisis_de_variancia']
+
+------------------------------------------------------------------------------
+ACTO 8 . sobrevive stage_gate_system . absorbe sistema_stage_gate
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de sistema_stage_gate al PASO 1 del superviviente
+        inciso VERBATIM: 'Discovery, Scoping, Business Case, Development, Testing, Launch'
+        nexo (lo unico de cosecha propia): ', por ejemplo '
+        paso resultante: Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa, por ejemplo Discovery, Scoping, Business Case, Development, Testing, Launch
+  alias del superviviente: ['sistema_stage_gate']
+
+------------------------------------------------------------------------------
+ACTO 9 . sobrevive antigoals_framework . absorbe definir_antigoals
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['definir_antigoals']
+
+------------------------------------------------------------------------------
+ACTO 10 . sobrevive arquetipos_de_cliente . absorbe customer_archetypes
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 8 -> 8 (anadidos 0) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de customer_archetypes al PASO 5 del superviviente
+        inciso VERBATIM: 'demográfico y psicográfico'
+        nexo (lo unico de cosecha propia): ', con su perfil '
+        paso resultante: Define tus hipótesis sobre quien es el comprador: su estilo de vida, nivel económico y situacion familiar, con su perfil demográfico y psicográfico
+  alias del superviviente: ['customer_archetypes']
+
+------------------------------------------------------------------------------
+ACTO 11 . sobrevive assumption_constraint_log . absorbe assumption_and_constraint_log
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 1 de assumption_and_constraint_log al PASO 1 del superviviente
+        inciso VERBATIM: 'categorizar cada supuesto o restricción'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Identificar supuestos provenientes de cualquier documento o del equipo del proyecto, y categorizar cada supuesto o restricción
+     del paso 5 de assumption_and_constraint_log al PASO 4 del superviviente
+        inciso VERBATIM: 'activo, pendiente, cerrado'
+        nexo (lo unico de cosecha propia): ', que puede ser '
+        paso resultante: Registrar acciones tomadas y el estado actual de cada ítem, que puede ser activo, pendiente, cerrado
+  alias del superviviente: ['assumption_and_constraint_log']
+
+------------------------------------------------------------------------------
+ACTO 12 . sobrevive embudo_get_keep_grow . absorbe estrategia_get_keep_grow
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 8 (anadidos 2) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de estrategia_get_keep_grow al PASO 2 del superviviente
+        inciso VERBATIM: 'conciencia, interés, consideración, compra'
+        nexo (lo unico de cosecha propia): ', con sus etapas de '
+        paso resultante: Define tu estrategia de Get Customers para adquisición y activación, con sus etapas de conciencia, interés, consideración, compra
+     del paso 4 de estrategia_get_keep_grow al PASO 3 del superviviente
+        inciso VERBATIM: 'llamadas de seguimiento, encuestas de satisfacción, programas de lealtad'
+        nexo (lo unico de cosecha propia): ', con tácticas como '
+        paso resultante: Define tu estrategia de Keep Customers para interacción y retención, con tácticas como llamadas de seguimiento, encuestas de satisfacción, programas de lealtad
+  alias del superviviente: ['framework_get_keep_grow', 'estrategia_get_keep_grow']
+
+------------------------------------------------------------------------------
+ACTO 13 . sobrevive analisis_motivaciones_fundador . absorbe influencias_tempranas_motivaciones
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 2 de influencias_tempranas_motivaciones al PASO 2 del superviviente
+        inciso VERBATIM: 'con una herramienta tipo CareerLeader'
+        nexo (lo unico de cosecha propia): ', por ejemplo '
+        paso resultante: Identifica tus 4 motivaciones principales (de una lista de 13: afiliación, altruismo, autonomía, ganancia financiera, etc.), por ejemplo con una herramienta tipo CareerLeader
+  alias del superviviente: ['influencias_tempranas_motivaciones']
+
+------------------------------------------------------------------------------
+ACTO 14 . sobrevive asignacion_recursos_en_gates . absorbe sistema_gestion_recursos_en_gates
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de sistema_gestion_recursos_en_gates al PASO 2 del superviviente
+        inciso VERBATIM: 'lista manual, hoja de cálculo o algún programa especializado'
+        nexo (lo unico de cosecha propia): ', o bien '
+        paso resultante: Elegir un método de seguimiento de recursos: pre-conversación del líder con candidatos, software de gestión, o preparación previa de gatekeepers, o bien lista manual, hoja de cálculo o algún programa especializado
+  alias del superviviente: ['sistema_gestion_recursos_en_gates']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 69
+   actividades_clave                                    nodos_siguientes  assumption_and_constraint_log -> assumption_constraint_log
+   advocacy_customer_journey                            nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   analisis_y_sintesis                                  nodos_siguientes  desafios_de_diseno_competitivos -> diseno_de_desafios_de_innovacion
+   analisis_y_sintesis                                  nodos_siguientes  open_innovation_ideacion -> innovacion_abierta
+   antigoals_framework                                  nodos_previos     definir_antigoals -> antigoals_framework
+   asignacion_recursos_en_gates                         nodos_siguientes  sistema_gestion_recursos_en_gates -> asignacion_recursos_en_gates
+   atributos_mercado_chopra_meindl                      nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   brief_competitivo                                    nodos_siguientes  estrategia_get_keep_grow -> embudo_get_keep_grow
+   calidad_de_ejecucion_proceso_innovacion              nodos_previos     sistema_stage_gate -> stage_gate_system
+   community_building_estrategia                        nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   construccion_tribu_de_marca                          nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   content_marketing_blog                               nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   cuatro_etapas_llamada_de_ventas                      nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   cultura_de_innovacion                                nodos_siguientes  sistema_stage_gate -> stage_gate_system
+   customer_retention_tactics                           nodos_previos     customer_appreciation_soporte -> customer_appreciation_pr
+   decision_cuando_fundar                               nodos_previos     influencias_tempranas_motivaciones -> analisis_motivaciones_fundador
+   determinar_tipo_de_mercado                           nodos_siguientes  estrategia_get_keep_grow -> embudo_get_keep_grow
+   dia_en_la_vida_del_cliente                           nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   diamante_de_innovacion                               nodos_siguientes  sistema_stage_gate -> stage_gate_system
+   dilema_riqueza_vs_control                            nodos_siguientes  influencias_tempranas_motivaciones -> analisis_motivaciones_fundador
+   diseno_consecuencias_no_intencionadas                nodos_siguientes  definir_antigoals -> antigoals_framework
+   diseno_de_desafios_de_innovacion                     nodos_siguientes  desafios_de_diseno_competitivos -> diseno_de_desafios_de_innovacion
+   embudo_atricion_nuevos_productos                     nodos_siguientes  sistema_stage_gate -> stage_gate_system
+   embudo_get_keep_grow                                 nodos_previos     estrategia_get_keep_grow -> embudo_get_keep_grow
+   enfoque_en_superfans                                 nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   entrada_mercado_nuevo                                nodos_siguientes  estrategia_get_keep_grow -> embudo_get_keep_grow
+   equipo_diverso_ideacion                              nodos_previos     open_innovation_ideacion -> innovacion_abierta
+   estrategia_crecimiento_clientes                      nodos_previos     estrategia_get_keep_grow -> embudo_get_keep_grow
+   estrategia_cuatro_capacidades_mercado                nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   estrategia_innovacion_producto                       nodos_siguientes  open_innovation_ideacion -> innovacion_abierta
+   estructura_de_gates                                  nodos_previos     sistema_gestion_recursos_en_gates -> asignacion_recursos_en_gates
+   estructura_estado_resultados                         nodos_siguientes  analisis_de_variancia -> analisis_varianza_financiera
+   estructura_gates                                     nodos_previos     sistema_stage_gate -> stage_gate_system
+   etapa_discovery_ideacion                             nodos_previos     sistema_stage_gate -> stage_gate_system
+   eventos_offline_como_canal_traccion                  nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   fase_adopt_ciclo_cliente                             nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   fase_assess_ciclo_cliente                            nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   fase_assess_experiencia_cliente                      nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   footnotes_financieros                                nodos_previos     analisis_de_variancia -> analisis_varianza_financiera
+   gestion_portafolio_formal                            nodos_previos     sistema_gestion_recursos_en_gates -> asignacion_recursos_en_gates
+   hipotesis_de_canales                                 nodos_siguientes  estrategia_get_keep_grow -> embudo_get_keep_grow
+   hipotesis_relacion_clientes_web                      nodos_previos     estrategia_get_keep_grow -> embudo_get_keep_grow
+   innovacion_abierta                                   nodos_previos     open_innovation_ideacion -> innovacion_abierta
+   innovacion_como_apuesta_incremental                  nodos_siguientes  sistema_stage_gate -> stage_gate_system
+   investigar_datos_cliente                             nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   liderazgo_ejecutivo_innovacion                       nodos_siguientes  sistema_stage_gate -> stage_gate_system
+   llamar_lo_que_falta                                  nodos_siguientes  open_innovation_ideacion -> innovacion_abierta
+   metricas_calidad                                     nodos_previos     estrategia_get_keep_grow -> embudo_get_keep_grow
+   mitos_stage_gate                                     nodos_previos     open_innovation_ideacion -> innovacion_abierta
+   mitos_stage_gate                                     nodos_siguientes  sistema_gestion_recursos_en_gates -> asignacion_recursos_en_gates
+   nombrar_los_monstruos                                nodos_siguientes  open_innovation_ideacion -> innovacion_abierta
+   portfolio_management                                 nodos_previos     open_innovation_ideacion -> innovacion_abierta
+   preframing_expectativas                              nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   preparacion_preguntas_problema_precall               nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   pro_forma_vs_actuals                                 nodos_siguientes  analisis_de_variancia -> analisis_varianza_financiera
+   problem_recognition_scale                            nodos_siguientes  customer_archetypes -> arquetipos_de_cliente
+   project_scope_statement                              nodos_siguientes  assumption_and_constraint_log -> assumption_constraint_log
+   publicidad_no_convencional_stunts                    nodos_siguientes  customer_appreciation_soporte -> customer_appreciation_pr
+   reglas_gestion_riesgo_gambling                       nodos_previos     open_innovation_ideacion -> innovacion_abierta
+   reglas_gestion_riesgo_gambling                       nodos_siguientes  sistema_stage_gate -> stage_gate_system
+   search_for_business_model                            nodos_siguientes  definir_antigoals -> antigoals_framework
+   seo_estrategia_fat_head                              nodos_previos     customer_archetypes -> arquetipos_de_cliente
+   shapeshifting_diversidad                             nodos_siguientes  open_innovation_ideacion -> innovacion_abierta
+   simulacion_clientes_ia                               nodos_siguientes  customer_archetypes -> arquetipos_de_cliente
+   skunk_works_proyectos_paralelos                      nodos_siguientes  sistema_stage_gate -> stage_gate_system
+   stakeholder_register                                 nodos_previos     assumption_and_constraint_log -> assumption_constraint_log
+   storytelling_como_herramienta_diseno                 nodos_previos     desafios_de_diseno_competitivos -> diseno_de_desafios_de_innovacion
+   tipos_de_clientes                                    nodos_siguientes  customer_archetypes -> arquetipos_de_cliente
+   work_breakdown_structure                             nodos_previos     assumption_and_constraint_log -> assumption_constraint_log
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 8
+   calidad_ejecucion_proceso                            nodos_previos     sistema_stage_gate (registro historico)
+   clima_positivo_innovacion                            nodos_siguientes  sistema_stage_gate (registro historico)
+   customer_retention_strategy                          nodos_previos     customer_appreciation_soporte (registro historico)
+   customer_types_mapping                               nodos_siguientes  customer_archetypes (registro historico)
+   definicion_startup                                   nodos_siguientes  definir_antigoals (registro historico)
+   framework_get_keep_grow                              nodos_previos     estrategia_get_keep_grow (registro historico)
+   portafolio_formal_management                         nodos_previos     sistema_gestion_recursos_en_gates (registro historico)
+   tipo_de_mercado_estrategia_competitiva               nodos_siguientes  estrategia_get_keep_grow (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 8
+   analisis_y_sintesis                                  nodos_siguientes
+   customer_retention_tactics                           nodos_previos
+   dia_en_la_vida_del_cliente                           nodos_previos
+   estrategia_crecimiento_clientes                      nodos_previos
+   gestion_portafolio_formal                            nodos_previos
+   project_scope_statement                              nodos_siguientes
+   stakeholder_register                                 nodos_previos
+   tipos_de_clientes                                    nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 5
+   antigoals_framework                                  nodos_previos
+   asignacion_recursos_en_gates                         nodos_siguientes
+   diseno_de_desafios_de_innovacion                     nodos_siguientes
+   embudo_get_keep_grow                                 nodos_previos
+   innovacion_abierta                                   nodos_previos
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 986   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 979   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 7, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 55 de 55
+guarda D, los 11 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (70 filas)
+ acto de que nodo                                  que          n  a donde va
+    2 desafios_de_diseno_competitivos              paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir un objetivo técnico o social ambicioso y medible
+    2 desafios_de_diseno_competitivos              paso         2  ya lo dice el PASO 2 del superviviente
+        Establecer reglas claras y un premio simbólico o monetario
+    2 desafios_de_diseno_competitivos              paso         3  PASO 6 del superviviente
+        Convocar públicamente a equipos independientes (no gubernamentales)
+    2 desafios_de_diseno_competitivos              paso         4  PASO 7 del superviviente
+        Documentar y publicitar el proceso para generar una narrativa pública
+    2 desafios_de_diseno_competitivos              paso         5  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar el impacto posterior en inversión e innovación del sector
+    2 desafios_de_diseno_competitivos              condicion    1  CONDICION 4 del superviviente
+        Cuando se busca estimular innovación en un sector estancado tecnológicamente
+    2 desafios_de_diseno_competitivos              condicion    2  CONDICION 5 del superviviente
+        Si se requiere movilizar inversión privada hacia un objetivo público/humanitario
+    3 open_innovation_ideacion                     paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer equipos de exploración (scouting) que visiten conferencias, ferias y startups
+    3 open_innovation_ideacion                     paso         2  ya lo dice el PASO 3 del superviviente
+        Crear una página web para que el público envíe ideas, tecnología o productos terminados
+    3 open_innovation_ideacion                     paso         3  ya lo dice el PASO 4 del superviviente
+        Establecer vínculos con centros de transferencia tecnológica universitaria
+    3 open_innovation_ideacion                     paso         4  ya lo dice el PASO 5 del superviviente
+        Organizar sesiones regulares con proveedores y su personal técnico
+    3 open_innovation_ideacion                     paso         5  ya lo dice el PASO 6 del superviviente
+        Considerar plataformas de co-creación con clientes (ej. LEGO Digital Designer)
+    3 open_innovation_ideacion                     paso         6  PASO 8 del superviviente
+        Adaptar el proceso Stage-Gate para manejar ideas, IP y tecnologías externas
+    3 open_innovation_ideacion                     condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Cuando la empresa busca expandir sus fuentes de ideas más allá de los empleados internos
+    3 open_innovation_ideacion                     condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si el producto es de consumo relativamente simple o creativo
+    3 open_innovation_ideacion                     condicion    3  CONDICION 4 del superviviente
+        Cuando se cuenta con recursos para gestionar y evaluar un alto volumen de propuestas externas
+    5 customer_appreciation_soporte                paso         1  ya lo dice el PASO 4 del superviviente
+        Redefinir el presupuesto de soporte al cliente como inversión de marketing, no solo costo
+    5 customer_appreciation_soporte                paso         2  PASO 6 del superviviente
+        Establecer políticas que prioricen la satisfacción del cliente sobre la eficiencia operativa (ej. envíos y devoluciones gratis)
+    5 customer_appreciation_soporte                paso         3  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseñar pequeños gestos sorpresa (regalos, notas personalizadas, resolución de problemas fuera del alcance normal)
+    5 customer_appreciation_soporte                paso         4  ya lo dice el PASO 5 del superviviente
+        Medir el impacto en retención, recomendaciones boca a boca y menciones en redes sociales
+    5 customer_appreciation_soporte                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el producto ya tiene clientes activos y se busca aumentar retención y boca a boca
+    5 customer_appreciation_soporte                condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando el diferencial competitivo puede construirse vía experiencia de cliente
+    7 analisis_de_variancia                        paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Compara cada mes lo real contra lo que presupuestaste (budget), línea por línea.
+    7 analisis_de_variancia                        paso         2  ya lo dice el PASO 1 del superviviente
+        Calcula el porcentaje de variación entre lo real y lo presupuestado, o contra el periodo anterior.
+    7 analisis_de_variancia                        paso         3  PASO 5 del superviviente
+        Investiga y anota la causa de cualquier diferencia importante antes de tomar decisiones.
+    7 analisis_de_variancia                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si ya tienes un presupuesto operativo y necesitas controlarlo.
+    8 sistema_stage_gate                           paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Mapear el proceso de innovación de la empresa en etapas discretas (Discovery, Scoping, Business Case, Development, Testing, Launch)
+    8 sistema_stage_gate                           paso         2  ya lo dice el PASO 2 del superviviente
+        Definir un gate o punto de decisión antes de cada etapa
+    8 sistema_stage_gate                           paso         3  PASO 6 del superviviente
+        Asegurar que cada etapa involucre equipos multifuncionales trabajando en paralelo
+    8 sistema_stage_gate                           paso         4  PASO 7 del superviviente
+        Establecer que cada etapa cueste progresivamente más, siguiendo la lógica de compra de opciones incrementales
+    8 sistema_stage_gate                           condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si la empresa maneja la innovación como una 'caja negra' sin proceso definido
+    8 sistema_stage_gate                           condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si se requiere estandarizar el desarrollo de nuevos productos en la organización
+    9 definir_antigoals                            paso         1  ya lo dice el PASO 1 del superviviente
+        Lista tus metas normales: qué quieres lograr con el proyecto
+    9 definir_antigoals                            paso         2  ya lo dice el PASO 2 del superviviente
+        Define las no-metas: qué está fuera de alcance intencionalmente
+    9 definir_antigoals                            paso         3  ya lo dice el PASO 3 del superviviente
+        Articula los antigoals: qué te comprometes explícitamente a NO hacer (ej: no confundir al usuario, no excluir personas con discapacidad)
+    9 definir_antigoals                            paso         4  ya lo dice el PASO 4 del superviviente
+        Diseña salvaguardas: mecanismos para detectar cuando te acercas a un antigoal
+    9 definir_antigoals                            paso         5  PASO 6 del superviviente
+        Comparte la lista con el equipo para que también puedan rally alrededor de los antigoals, no solo de las metas
+    9 definir_antigoals                            condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el proyecto involucra sistemas complejos o IA con comportamiento emergente
+    9 definir_antigoals                            condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando el equipo solo se enfoca en qué construir sin considerar riesgos éticos
+    9 definir_antigoals                            condicion    3  ya lo dice la CONDICION 2 del superviviente
+        Antes de escalar un producto que podría tener efectos secundarios no deseados
+   10 customer_archetypes                          paso         1  ya lo dice el PASO 4 del superviviente
+        Dibujar o bocetar al usuario final y al decisor clave
+   10 customer_archetypes                          paso         2  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir perfil demográfico y psicográfico (edad, estilo de vida, intereses)
+   10 customer_archetypes                          paso         3  ya lo dice el PASO 3 del superviviente
+        Determinar el contexto físico del cliente (oficina, cubículo, hogar, etc.)
+   10 customer_archetypes                          paso         4  ya lo dice el PASO 7 del superviviente
+        Usar estos arquetipos para informar canal, relación con cliente y modelo de ingresos
+   10 customer_archetypes                          condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Cuando el equipo necesita alinear su visión de quién es el cliente
+   10 customer_archetypes                          condicion    2  CONDICION 4 del superviviente
+        Antes de diseñar mensajes de marketing
+   11 assumption_and_constraint_log                paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar y categorizar cada supuesto o restricción
+   11 assumption_and_constraint_log                paso         2  ya lo dice el PASO 3 del superviviente
+        Asignar un responsable para validar cada supuesto
+   11 assumption_and_constraint_log                paso         3  ya lo dice el PASO 3 del superviviente
+        Establecer fecha límite para validación
+   11 assumption_and_constraint_log                paso         4  ya lo dice el PASO 4 del superviviente
+        Documentar acciones necesarias para validar
+   11 assumption_and_constraint_log                paso         5  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Actualizar el estado (activo, pendiente, cerrado) periódicamente
+   11 assumption_and_constraint_log                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando surgen supuestos no validados durante la planificación que deben rastrearse a lo largo del proyecto
+   12 estrategia_get_keep_grow                     paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseñar el embudo de 'Get Customers': conciencia, interés, consideración, compra
+   12 estrategia_get_keep_grow                     paso         2  PASO 7 del superviviente
+        Elegir tácticas de medios ganados (earned media) y pagados (paid media) a probar
+   12 estrategia_get_keep_grow                     paso         3  ya lo dice el PASO 6 del superviviente
+        Crear métricas pass/fail para cada prueba de 'Get' (ej: tasa de conversión de llamadas)
+   12 estrategia_get_keep_grow                     paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseñar tácticas de 'Keep Customers': llamadas de seguimiento, encuestas de satisfacción, programas de lealtad
+   12 estrategia_get_keep_grow                     paso         5  PASO 8 del superviviente
+        Medir el costo de adquisición de cliente (CAC) contra el margen de ganancia por venta
+   12 estrategia_get_keep_grow                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el startup ya validó su propuesta de valor y necesita estrategia de adquisición y retención de clientes
+   12 estrategia_get_keep_grow                     condicion    2  CONDICION 4 del superviviente
+        Si se necesita definir presupuesto de marketing con pruebas de bajo costo antes de escalar
+   13 influencias_tempranas_motivaciones           paso         1  ya lo dice el PASO 1 del superviviente
+        Piensa en las influencias familiares y culturales que formaron tu manera de ver el emprendimiento
+   13 influencias_tempranas_motivaciones           paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Haz un ejercicio de auto evaluación de tus motivaciones (por ejemplo con una herramienta tipo CareerLeader): ¿te mueve el control, la riqueza, pertene
+   13 influencias_tempranas_motivaciones           paso         3  PASO 5 del superviviente
+        Identifica si lo tuyo es más el control o más la riqueza, porque eso va a pesar cuando decidas cómo repartir participación y quién manda en tu negocio
+   13 influencias_tempranas_motivaciones           condicion    1  CONDICION 3 del superviviente
+        Cuando no tienes claro por qué quieres emprender
+   13 influencias_tempranas_motivaciones           condicion    2  CONDICION 4 del superviviente
+        Cuando hay roces con tu familia o tu entorno por tu decisión de emprender
+   14 sistema_gestion_recursos_en_gates            paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Elige un método de seguimiento de recursos: lista manual, hoja de cálculo o algún programa especializado.
+   14 sistema_gestion_recursos_en_gates            paso         2  ya lo dice el PASO 3 del superviviente
+        Antes de cada reunión de avance, revisa si realmente tienes disponibles las personas de cada área.
+   14 sistema_gestion_recursos_en_gates            paso         3  ya lo dice el PASO 1 del superviviente
+        Anota los compromisos de recursos de todos tus proyectos activos para no comprometer a la misma persona dos veces.
+   14 sistema_gestion_recursos_en_gates            paso         4  PASO 5 del superviviente
+        En la reunión, comprométete de forma explícita a asignar personas y presupuesto para la siguiente etapa.
+   14 sistema_gestion_recursos_en_gates            condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si los proyectos que apruebas para seguir adelante no reciben los recursos reales que necesitan.
+   14 sistema_gestion_recursos_en_gates            condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si tienes varios proyectos compitiendo por las mismas personas.
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 11
+  nodos implicados    : 22
+  nodos que MUEREN    : 11
+  piezas repartidas   : 70 (19 viajan enteras, 38 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.

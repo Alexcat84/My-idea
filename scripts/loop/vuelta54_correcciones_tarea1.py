@@ -233,10 +233,35 @@ en el campo ANTES del lote y ya no esta DESPUES):
 cuatro nombres.**
 """
 
+# ==========================================================================
+# 1.3.b EL MISMO ROTULO EN EL INSTRUMENTO QUE DE VERDAD SE CORRE, Y ES
+# ALCANCE MIO SOBRE EL ENCARGO: SE DECLARA EN VEZ DE HACERSE CALLADO.
+#
+# El encargo nombra "scripts/loop/vuelta48_fundir_tramo.py, los dos print de
+# duplicadas tras resolver, hoy lineas 418 a 421", y la referencia es EXACTA:
+# medido hoy con git, ese print vivia en la linea 418 del fichero del commit
+# anterior. Pero el instrumento que EJECUTA los tramos desde la vuelta 49 es
+# su SUCESOR DECLARADO, scripts/loop/vuelta49_fundir_tramo.py (el que anade el
+# destino INCISO), y lleva LOS MISMOS DOS ROTULOS, palabra por palabra, en sus
+# lineas 478 a 481. La vuelta 53 corrio ESE, comprobado en su salida: solo el
+# de la 49 imprime "INCISOS ADOSADOS", y las tres salidas de sus lotes lo
+# imprimen.
+#
+# Reparar solo el ancestro dejaria el sintoma vivo justo en el instrumento que
+# publica la cifra en cada tramo. Se adosa la MISMA frase, con el MISMO texto
+# viejo delante, y va MARCADO COMO DISCUTIBLE en el reporte, porque anadir un
+# fichero que el encargo no nombra es alcance mio y no suyo.
+# ==========================================================================
+FUN49 = os.path.join(RAIZ, "scripts", "loop", "vuelta49_fundir_tramo.py")
+
+NUEVO_FUNDIR_49 = NUEVO_FUNDIR.replace("(vuelta 54, TAREA 1.3 del",
+                                       "(vuelta 54, TAREA 1.3.b del")
+
 CAMBIOS = [
     (BAN, "1.1 la precision de la estrella, al final del 9.3.1", ANCLA_BAN, NOTA_ESTRELLA),
     (FUS, "1.2 las dos ampliaciones del carril", ANCLA_FUS, AMPLIACIONES),
     (FUN, "1.3 los dos rotulos del censo de duplicadas", VIEJO_FUNDIR, NUEVO_FUNDIR),
+    (FUN49, "1.3.b los mismos dos rotulos en el sucesor", VIEJO_FUNDIR, NUEVO_FUNDIR_49),
 ]
 
 COLA = [

@@ -7,11 +7,13 @@
   "resumen_teorico": "El embudo Get, Keep, Grow resume la misión de toda startup en tres frases: construir grandes productos, conseguir, mantener y hacer crecer clientes, y ganar dinero de ellos. Aplica tanto a canales físicos como a web o mobile y describe el ciclo de vida completo de la relación con el cliente: adquisición y activación (Get), retención e interacción (Keep), y crecimiento vía up-sell, cross-sell y referidos (Grow). Es una de las hipótesis más críticas de cualquier startup porque sin clientes la empresa muere. Además, adquirir clientes suele ser la parte más costosa del negocio, por lo que conviene priorizar recursos entre las tres fases según su impacto real en el crecimiento sostenible.",
   "pasos_accionables": [
     "Dibuja el embudo Get/Keep/Grow específico para tu canal, físico o web/mobile",
-    "Define tu estrategia de Get Customers para adquisición y activación",
-    "Define tu estrategia de Keep Customers para interacción y retención",
+    "Define tu estrategia de Get Customers para adquisición y activación, con sus etapas de conciencia, interés, consideración, compra",
+    "Define tu estrategia de Keep Customers para interacción y retención, con tácticas como llamadas de seguimiento, encuestas de satisfacción, programas de lealtad",
     "Define tu estrategia de Grow Customers para ingreso incremental y referidos",
     "Prioriza tus recursos sabiendo que adquirir clientes es la etapa más costosa",
-    "Actualiza tu business model canvas e identifica pruebas pass/fail para cada etapa"
+    "Actualiza tu business model canvas e identifica pruebas pass/fail para cada etapa",
+    "Elegir tácticas de medios ganados (earned media) y pagados (paid media) a probar",
+    "Medir el costo de adquisición de cliente (CAC) contra el margen de ganancia por venta"
   ],
   "entregable_esperado": "Documento de hipótesis de relación con clientes con las tres estrategias Get/Keep/Grow definidas, recursos priorizados y pruebas pass/fail identificadas.",
   "nodos_previos": [
@@ -20,8 +22,11 @@
     "optimizacion_grow_customers",
     "customer_segments_hypothesis",
     "fit_value_proposition",
-    "estrategia_get_keep_grow",
-    "optimizacion_metricas_crecimiento"
+    "optimizacion_metricas_crecimiento",
+    "brief_competitivo",
+    "determinar_tipo_de_mercado",
+    "entrada_mercado_nuevo",
+    "hipotesis_de_canales"
   ],
   "nodos_siguientes": [
     "customer_activation_tactics",
@@ -31,22 +36,31 @@
     "get_customers_funnel",
     "keep_customers_strategy",
     "customer_retention_tactics",
-    "get_customers_funnel_webmobile"
+    "get_customers_funnel_webmobile",
+    "hipotesis_relacion_clientes_web",
+    "metricas_calidad"
   ],
   "condiciones_activacion": [
     "Cuando tu startup ya tiene un MVP y necesitas definir cómo conseguirás, retendrás y harás crecer tu base de clientes",
     "Cuando estás construyendo tu business model canvas y falta la sección de canales o relación con clientes",
-    "Cuando aún no has definido cómo adquirirás, retendrás y harás crecer tu base de clientes"
+    "Cuando aún no has definido cómo adquirirás, retendrás y harás crecer tu base de clientes",
+    "Si se necesita definir presupuesto de marketing con pruebas de bajo costo antes de escalar"
   ],
   "etiqueta_arbol": "Consigue, Mantén y Crece Clientes",
   "ids_alias": [
-    "framework_get_keep_grow"
+    "framework_get_keep_grow",
+    "estrategia_get_keep_grow"
   ],
   "merged_originals": [
     {
       "node_id": "framework_get_keep_grow",
       "titulo": "Framework 'Get, Keep, Grow' Customers",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "estrategia_get_keep_grow",
+      "titulo": "Estrategia de Relación con el Cliente: Get, Keep, Grow",
+      "fuente": "The Startup Owner's Manual"
     }
   ]
 }
