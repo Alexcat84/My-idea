@@ -15967,3 +15967,305 @@ O CIFRA EN CERO (sexta tanda limpia).
 EL BUCLE SIGUE: encargo escrito en PROMPT_SIGUIENTE.md (registros y la
 correccion del %d como TAREA 1; los planes del tramo 6 sellados con el
 contrato CAMPO PROPIO v1 y el LOTE A del tramo final como TAREA 2).
+
+# ACTA DE LA VUELTA 62 DEL AUDITOR (20 ago 2026, Fable 5)
+
+SIN HUECO DE ACTA: la ultima acta cubre la vuelta 61 y esta cubre la 62,
+que es la inmediatamente anterior a la actual. Vuelta auditada: hash final
+77f8c8f3 mas el commit de cabecera f940a156, los dos en
+origin/pasada-unica (medido: git log origin/pasada-unica -1 da f940a156,
+igual que HEAD), arbol limpio al abrir y al cerrar mi corrida, SEIS
+commits en el rango d9fd6a54..f940a156 leidos por git log (fdbaf979,
+dcb20469, 7a467818, 01fb303f, 77f8c8f3, f940a156), que son los cinco de
+la cabecera mas el que la escribe, tal como el reporte lo dice. La vuelta
+trae la TAREA 1 entera (adjudicaciones del acta 61 registradas y la
+correccion del %d con su caso positivo), y la TAREA 2 REBASADA POR LA VIA
+QUE EL ENCARGO DEJABA ESCRITA: el tramo 6 ENTERO en dos lotes, 21 actos
+fundidos de 21, CERO declarados, el contrato CAMPO PROPIO v1 estrenado
+con 18 perdidas selladas en campo, y el universo de OP-U-01 AGOTADO.
+La fecha por dos relojes: Get-Date y git log dan 2026-08-20, los dos
+corridos por mi.
+
+## 1. VERIFICACION POR CORRIDA PROPIA: TODO AL DIGITO
+
+Cada cifra sale de un instrumento corrido HOY por mi (salidas propias en
+docs/loop/_auditor_v62_*, committeadas con esta acta).
+
+- CABECERA: tallar_cabecera_reporte.py --vuelta 62 corrido por mi da la
+  tabla IDENTICA a la publicada, las catorce filas, cero distintas
+  (_auditor_v62_cabecera.txt).
+- MARCADOR: recomputar_marcador.py 3388 da diff VACIO contra
+  SALIDA_V62_MARCADOR_CIERRE.txt: n 3388, cero huecos, cero duplicados,
+  A 551 B 72 C 5 D 2760, tasa por dominio identica al digito.
+- RECOMPUTO: recomputo_3388.py con salida propia da diff de UNA linea
+  contra SALIDA_V62_RECOMPUTO_CIERRE.txt, la de la ruta del --salida,
+  exactamente el patron del acta 61. Grafo 3853/3274/579/17486, retrato
+  551/275/276, actos 82 con 29 CERRADOS y 53 ABIERTOS sobre 67/240
+  nodos, y las cuatro comprobaciones de 08_VERIFICACION OK (307 igual a
+  307, 276 igual a 276).
+- COLA: costuras_internas.py, diff VACIO, 1456, arbol limpio tras la
+  corrida (salidas idempotentes).
+- COLISIONES: vuelta51_censo_colisiones.py, 3388 leidos, 3195 pares,
+  0 vigentes y 253 auto-pares; el diff contra la salida del ejecutor
+  solo difiere en el rotulo del titulo y en la linea CUENTA ESPERADA,
+  que son argumentos de su invocacion, no cifras. DUPLICADAS:
+  aristas_duplicadas_tras_resolver.py, diff VACIO, 928 grupos y 735
+  nodos. ESTADO: vuelta31_estado.py, diff SOLO en la etiqueta de la
+  medicion (yo corri sin rotulo CIERRE): 71 operaciones todas LISTA,
+  0 dependencias rotas, 672 entradas del inventario.
+- BARRIDO: barrido_titulos_tallados.py corrido por mi da diff VACIO
+  contra SALIDA_V62_BARRIDO_CIERRE.txt: 387 barridos, ROJO 32, AMBAR 0,
+  ROTULADO 34, CENSO 214, ILEGIBLE 1. Los siete ficheros nuevos de la
+  vuelta comprobados uno a uno por grep sobre MI salida: ninguno sale
+  en ninguna lista.
+- GATE 0 Y SUITES, CORRIDA MIA: run_phase1.py --reaplico-curaduria
+  GATE 0 OK con simetrizacion 0; ciclo de tres entero (71 etiquetas
+  re-aplicadas, 6 assets, manifest) y arbol limpio tras restaurar
+  phase1_run_log.json (mi log, mismo manejo declarado que las actas
+  previas); motor 25/25; web 80 ficheros, 1030 pasadas, 3 saltadas;
+  tsc CERO lineas.
+- TALLAR PLANES: tallar_planes_del_tramo.py --vuelta 62 --prefijo
+  PLAN_V62_OPU01_LOTE_ da diff VACIO contra la salida publicada: 21
+  actos, 11 y 10, 134 piezas, 27/91/16, y el reparto por forma
+  11/5/4/1.
+- TALLAR PERDIDAS: tallar_perdidas_del_plan.py --vuelta 62 --lotes A,B
+  da diff VACIO: 18 perdidas, 14 DE PARAMETRO DE PASO y 4 DE
+  CONDICIONES, contrato CAMPO PROPIO v1 en los dos planes.
+- CONTRASTE TRAMO 5: la version corregida del tallador sobre los planes
+  V59/V60 da diff VACIO contra SALIDA_V62_CONTRASTE_TRAMO5.txt: 47
+  actos, 4 perdidas por token, las cifras que aquel registro publico.
+- CASO POSITIVO DEL CONTRATO: caso_positivo_del_contrato_de_perdidas.py
+  re-corrido por mi, diff VACIO, las cuatro pruebas en verde, muerde y
+  no sobremuerde.
+- LA CORRECCION DEL %d, POR CAMINO PROPIO: el texto viejo cotejado en
+  git show d9fd6a54 (print sin argumentos, citado entero en la nota del
+  fichero), y el abridor re-corrido por mi con --tramo-numero 6 sobre MI
+  jsonl de componentes imprime AVISO: se pidio el tramo 6 y el medido es
+  el 7, interpolado. La corrida siguio hasta la guarda del universo:
+  ROJO, no queda NI UN acto CERRADO fuera de los tramos previos, PARADA,
+  sin escribir salida. ESO ES UNA CONFIRMACION INDEPENDIENTE de que
+  OP-U-01 esta agotado, por la guarda del propio abridor.
+- CUENTA INDEPENDIENTE DEL TRAMO 6, CAMINO PROPIO
+  (_auditor_v62_cuenta_tramo6.py, sin reusar scripts del ejecutor): los
+  21 actos de TRAMO6_V61.jsonl tienen hoy UN muerto que resuelve por
+  ids_alias al OTRO miembro, 21 de 21, cero fallos; los 42 ids de la
+  nomina son EXACTAMENTE los 42 de los dos planes sellados; la puerta
+  mantenimiento_sistema_cui VIVA y getting_started_maintenance resuelve
+  a ella; 3853 nodos, 579 deprecados, 3274 vivos, las cifras de la
+  cabecera.
+- APPENDS DEL D5 Y DEL ACTO 20, MEDIDOS HOY: revision_progreso 8 pasos
+  (5 mas 3), control_del_proceso_del_proveedor 9 (6 mas 3),
+  mantenimiento_sistema_cui 6 (5 mas 1) y el paso de sanitizar equipos
+  CUI esta dentro de su texto: el paso de la dominancia viajo.
+- LAS TRECE CITAS DE LINEA del registro de adjudicaciones, cotejadas
+  una a una contra el acta (15824, 15839, 15847, 15856, 15861, 15867,
+  15873, 15881, 15887, 15890, 15893, 15900, 15953) y las tres de
+  03_FUSIONES.md (360 la vara, 1250 acta 52, 2475 acta 57): TODAS
+  calzan.
+- EL REGISTRO DEL TRAMO 6 en 03_FUSIONES.md abre declarando TRAMO FINAL
+  POR AGOTAMIENTO: VEINTIUNO, NO CINCUENTA, cita el acta 61, y sus
+  tablas son las del tallador que yo re-corri.
+- SHA1 DEL ANCESTRO vuelta59_planes.py medido por mi: fda28294196f, el
+  del reporte.
+
+## 2. RELECTURA CIEGA Y RELECTURA AL DOBLE
+
+El producto de ojo de la vuelta son las 21 fusiones. La ciega: imprimi
+PRIMERO los pasos y condiciones de los DOS miembros de ocho actos desde
+el arbol de APERTURA (git show d9fd6a54), los cinco del marcado (1, 5,
+8, 18, 20) y tres fuera (2, 9, 12), adjudique vara y superviviente, y
+SOLO DESPUES destape los motivos sellados de los planes.
+
+- COINCIDEN: 8 de 8 en el fondo (superviviente, vara que decide, forma,
+  y en el acto 20 el carril de la puerta con el APPEND del paso CUI).
+- NO ESTRICTA Y SE DECLARA: antes de la ciega yo ya habia leido el
+  registro del tramo en 03_FUSIONES.md (lo exigia la TAREA 1), que trae
+  la columna de supervivientes. Lo que quedo ciego de verdad fueron los
+  MOTIVOS sellados (vara, carril, piezas), que no habia abierto.
+- DISCREPANCIA FUERA DEL MARCADO, UNA ESPECIE: seis motivos sellados
+  afirman VA MARCADO COMO DISCUTIBLE, y en DOS de ellos con las
+  palabras en el reporte (actos 9 y 10); los otros cuatro (7, 12, 15,
+  19) no dicen donde. La seccion 6 del reporte trae NUEVE discutibles y
+  NINGUNO es el acto 7, 9, 10, 12, 15 ni 19; grep del reporte entero:
+  cero menciones. La promesa de marcado no se cumplio.
+- POR LA REGLA DEL CREDITO, EL TRAMO SE RELEYO AL DOBLE: los 21 motivos
+  sellados leidos enteros, mas un cotejo mecanico de los 21 actos
+  (_auditor_v62_cotejo_varas.py): cada cuenta de pasos y condiciones
+  que el motivo cita, contra el arbol de apertura, y cada superviviente
+  y absorbido contra el grafo de hoy. 21 de 21 OK, CERO fallas de
+  datos.
+
+## 3. CAIDAS DE ESTA TANDA: CERO DE CLASE, CERO DE CIFRA, UNA DE REPORTE
+
+- La promesa de marcado incumplida ES UNA CAIDA y se adjudica por
+  extension de especie: la afirmacion vive en los planes sellados de
+  docs/loop y habla del contenido del reporte, no mueve ningun
+  veredicto, ninguna cifra del marcador y ninguna cifra de docs/plan
+  (el cotejo mecanico dio 21 de 21 limpio). Es la especie de REPORTE:
+  dictado suelto, cero datos movidos. Se registra con nombre (actos 9 y
+  10 con en el reporte explicito; 7, 12, 15 y 19 de la misma frase sin
+  sitio), disparo la relectura al doble (hecha) y NO acumula para la
+  parada. LA RACHA DE REPORTE PASA DE CERO A UNO.
+- CLASE O CIFRA PUBLICADA: CERO. Septima tanda limpia.
+- Los cuatro ROJO propios que el reporte declara (citas de linea, caso
+  positivo 2 de 4, AMBAR del lote A, registro en ROJO) quedaron
+  arreglados antes de sus commits con sus dos mitades dictadas: son
+  correcciones declaradas, no caidas, igual que en las tandas previas.
+
+## 4. ADJUDICACION DE LOS NUEVE DISCUTIBLES
+
+- D1, LA GUARDA QUE CRECE EN EL SUCESOR (validar perdidas al sellar): A
+  FAVOR por el carril del acta 61 (D2 y pregunta 2), con las dos
+  condiciones comprobadas por mi: el docstring de
+  generar_plan_del_lote.py enumera el cambio y el reporte lo marca
+  discutible. Primera aplicacion de esa adjudicacion, y limpia.
+- D2, CORREGIR EL MISMO DIA LOS INSTRUMENTOS QUE CUENTAN LAS CIFRAS DE
+  LA VUELTA: A FAVOR. La alternativa era publicar 50 actos mirados y
+  perdidas 0, falsas las dos. El contraste sobre el tramo 5 lo re-corri
+  yo y da IDENTICO al registro viejo: la correccion no acomoda el
+  conteo, lo honra. El texto viejo queda citado entero en los dos
+  instrumentos, comprobado.
+- D3, EL TRAMO ENTERO EN UNA VUELTA: A FAVOR. El encargo decia entrega
+  lo que cierre entero y dilo primero, y ADEMAS traia escrito que hacer
+  si el tramo entero cerraba en esta vuelta (la declaracion de TRAMO
+  FINAL POR AGOTAMIENTO en su registro). Cerrar entero estaba DENTRO de
+  la letra, no mas alla de ella.
+- D4, LA PUERTA DEL ACTO 20 CONTRA LA DOMINANCIA NOMBRADA: A FAVOR. La
+  letra del acta 54 pregunta 1 es LA GUARDA RESTRINGE Y EL CONTENIDO
+  ELIGE ENTRE LO PERMITIDO, y no distingue como hable el contenido:
+  POR ELEGIR o POR DOMINANCIA, la guarda 1B es absoluta y aqui lo
+  permitido era uno solo. La dominancia no se pierde: su paso viajo de
+  APPEND, medido por mi en el texto de hoy. El choque registrado en el
+  motivo es exactamente la forma debida.
+- D5, LOS DOS APPEND DE TRES (actos 8 y 18): A FAVOR. Relei los pasos
+  de los cuatro nodos: cada pieza viajada es un gesto que el
+  superviviente no hacia en ningun grado (el formato con costo,
+  inversion y ahorro; la revision del propio seguimiento; el acuerdo
+  del significado de requisitos; la cuantificacion de confiabilidad;
+  la trazabilidad de lotes). Los supervivientes quedan en 8 y 9 pasos
+  y son candidatos legitimos a la poda de la fase 04, que ya esta
+  anotada en los planes.
+- D6, LAS 18 PERDIDAS CONTRA LAS 4 DEL TRAMO 5: A FAVOR, y la cifra NO
+  es comparable entre tramos (pregunta 3).
+- D7, EL ACTO 1 POR CONDICIONES 2 CONTRA 3: A FAVOR. Pasos 4 contra 4
+  empatados (cotejado por mi contra la apertura), condiciones 2 contra
+  3 la unica vara que separa, y por P.8 el cableado (7 contra 3 al otro
+  lado) solo habla a contenido EMPATADO. Es la letra del acta 53
+  pregunta 4 al pie.
+- D8, EL ACTO 5 HACIA EL NODO SIN SIGUIENTES: A FAVOR. Pasos 5 contra 6
+  no empatados, la vara decide sola, y la cantidad de cableado NO es
+  vara adoptada. Y la objecion del grafo pobre se disuelve midiendo: el
+  superviviente HEREDO el cableado del que murio y hoy tiene 2
+  siguientes, medido por mi.
+- D9, CUBIERTO CON PERDIDA SELLADA EN VEZ DE INCISO EN ONCE SITIOS: A
+  FAVOR por la letra de la politica del reparto (de CUBIERTO con la
+  perdida NOMBRADA cuando el paso resultante no se lee limpio): la
+  legibilidad del paso resultante ES el criterio escrito, y con el
+  contrato nuevo la perdida sellada es visible y enrutada, no un
+  silencio. El limite que esta adjudicacion no cubre: marcar CUBIERTO
+  con perdida para ahorrarse un INCISO que SI cabria limpio; en los
+  once sitios releidos no vi ese abuso.
+
+## 5. LAS CINCO PREGUNTAS, CONTESTADAS SIN DOCTRINA NUEVA
+
+1. LAS PLANTILLAS DE LOS INSTRUMENTOS ESTABLES: NO HACE FALTA VARA
+   NUEVA, LA REGLA 1 YA LAS CUBRE por extension citable. EL INSTRUMENTO
+   MANDA dice que toda cifra publicada se lee de la salida del
+   instrumento corrido en esta vuelta y que una constante nunca es
+   fuente de una cifra: una plantilla con cifras talladas hace decir al
+   instrumento cifras que NO midio, o sea viola la regla cada vez que
+   corre. La forma debida es la que la correccion ya tiene: el bloque
+   se arma de lo que entra por argumento y, sin insumo, DECLARA su
+   falta. Lo que SI se encarga es MEDICION, no doctrina: un censo unico
+   de las plantillas de salida de los instrumentos de nombre estable
+   buscando literales con cifras, para saber si quedan mas de la misma
+   especie.
+2. SI, EL CARRIL DE LA PUERTA BASTA aunque la razon nombre por
+   dominancia (D4): la guarda no lee el tono de la razon, restringe; y
+   el contenido dominante viaja en vez de perderse.
+3. NO SON COMPARABLES las 18 perdidas contra las 4: las cuentan
+   instrumentos distintos (campo contra token), y compararlas leeria
+   una mejora de instrumento como un empeoramiento de fusion. La serie
+   por especie SI es comparable HACIA ADELANTE, de este tramo en
+   adelante, mientras el contrato no cambie.
+4. SI SE PODIA CERRAR EL TRAMO ENTERO (D3): la letra del encargo lo
+   contemplaba con su registro ya prescrito.
+5. LA SIGUIENTE OPERACION SALE DEL ORDEN YA ADJUDICADO, NO SE ELIGE:
+   03_FUSIONES.md seccion EL ORDEN DE ESTA FASE (vuelta 47) dejo MEDIDA
+   la tabla del empate del puesto 1: OP-U-01 primero (2 desbloqueos),
+   OP-M-03-I segundo (1, a OP-M-03-ENLACES), OP-M-02-PROG tercero (0).
+   Agotada OP-U-01, siguen LAS DOS FUSIONES DE MESA DEL PUESTO 1 en ese
+   orden: OP-M-03-I y luego OP-M-02-PROG, las dos desbloqueadas
+   (dependencias en fases con cierre declarado, y OP-D-07 ejecutada).
+   Despues viene el puesto 2, donde vive OP-U-02 (los ABIERTOS), cuya
+   apertura se puede MEDIR ya sin fundir nada.
+
+## 6. HALLAZGOS Y MANEJOS PROPIOS DEL AUDITOR, SIN CIFRA DE POR MEDIO
+
+- El redireccionamiento de PowerShell mete BOM UTF-8: mis dos primeras
+  salidas dieron diff de un byte invisible y las regenere por la via de
+  cmd. Ninguna cifra de por medio.
+- recomputo_3388.py: en mi primera corrida le di al --salida mi fichero
+  de texto, y el --salida es el jsonl de componentes; el informe va por
+  stdout. Re-corrido bien; el fichero pisado era mio y sin publicar.
+- tallar_perdidas_del_plan.py: dos invocaciones mias mal formadas
+  (posicionales, y un prefijo sin su hueco de lote) que murieron en
+  usage y en TypeError sin escribir nada; la firma correcta es
+  --vuelta con --lotes.
+- Mi cuenta independiente nacio con DOS fallos mios, corregidos antes
+  de publicar su salida: lei la raiz del grafo como nodes cuando es
+  nodos, y busque el alias en el muerto cuando vive en el ids_alias
+  del superviviente. Los declaro porque la primera corrida imprimio 21
+  fallos que eran mios, no del grafo.
+- phase1_run_log.json restaurado a su estado committeado tras mi
+  Gate 0, mismo manejo declarado de las actas previas.
+- El barrido y el abridor salen con exit 1 cuando tienen hallazgo o
+  guarda disparada: son sus senales, no fallos de corrida.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 8 relecturas ciegas de acto (motivo destapado despues, no
+estricta en el superviviente y declarado) mas 21 motivos releidos al
+doble con cotejo mecanico 21 de 21, y unos 30 sitios re-corridos o
+leidos al digito (cabecera, marcador, recomputo, cola, colisiones,
+duplicadas, estado, barrido con los siete ficheros, Gate 0 con ciclo de
+tres, motor, web, tsc, tallar planes, tallar perdidas, contraste del
+tramo 5, caso positivo del contrato, el camino del aviso con la guarda
+del agotamiento, cuenta independiente del tramo, appends de hoy, trece
+mas tres citas de linea, sha1, fecha por dos relojes, commits del
+rango).
+
+Caidas del ejecutor en esta tanda (vuelta 62): CERO de clase, CERO de
+cifra publicada, UNA de reporte (la promesa de marcado incumplida, seis
+sitios de una especie). Discrepancias de la ciega en el FONDO de los
+actos: CERO en 8 de 8. Caidas del auditor: CERO (seis manejos
+declarados, sin cifra publicada de por medio).
+
+Acumulado: 453 relecturas, 753 puestos (mas unos 511 nodos de forma y
+unos 828 sitios de codigo), 7 caidas de clase, 26 de reporte del
+ejecutor, 13 de cifra publicada del ejecutor, 3 de cifra del auditor, 5
+de acta del auditor, 3 de procedimiento del auditor.
+
+Rachas: REPORTE EN UNO (la promesa de marcado incumplida; tres seguidas
+de la misma especie serian parada, va una). CLASE O CIFRA EN CERO
+(septima tanda limpia).
+
+## 8. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. Las plantillas quedan bajo la regla 1 por
+  extension citable; la puerta bajo acta 54 pregunta 1; el resto por
+  letra o adjudicaciones previas. Ninguna regla se estrena.
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NINGUNA SE TOMA. El merge sigue siendo suyo.
+- Fallo tecnico repetido: NO. Gate 0 y las tres suites en verde en la
+  corrida del ejecutor y en la mia.
+- Credito de tanda roto: NO. Cero de clase o cifra; la caida de reporte
+  no acumula para la parada y la relectura al doble esta hecha.
+- Campana consumada: NO. Quedan las fusiones de mesa de la fase 03,
+  OP-U-02, y las fases 04 en adelante.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE: encargo escrito en PROMPT_SIGUIENTE.md (registros, el
+censo de plantillas y la leccion de la promesa de marcado como TAREA 1;
+OP-M-03-I y OP-M-02-PROG tal como estan escritas, mas la apertura
+MEDIDA de OP-U-02 sin fundir, como TAREA 2).

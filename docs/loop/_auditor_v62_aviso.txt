@@ -1,0 +1,53 @@
+==============================================================================
+EL TRAMO SE MIDE, NO SE TALLA
+  tramos ya fijados : 1 (el bloque 1 a 50 de la nomina de la 48), 2 (docs\loop\TRAMO2_V54.jsonl, vuelta 54), 3 (docs\loop\TRAMO3_V56.jsonl, vuelta 56), 4 (docs\loop\TRAMO4_V57.jsonl, vuelta 57), 5 (docs\loop\TRAMO5_V58.jsonl, vuelta 58), 6 (docs\loop\TRAMO6_V61.jsonl, vuelta 61)
+  re-mediciones posteriores DESCARTADAS como nomina de apertura, nombradas:
+     tramo 2: docs\loop\TRAMO2_V55.jsonl (vuelta 55, posterior a la 54 que lo abrio)
+  el siguiente es   : 7
+  este abridor corre sobre el tramo: 6 (dado por --tramo-numero)
+==============================================================================
+
+  AVISO: se pidio el tramo 6 y el medido es el 7. Se corre el pedido y
+  se dice, que es lo contrario de elegirlo en silencio.
+
+==============================================================================
+EL ABRIDOR DEL TRAMO 6 DE OP-U-01
+instrumento de nombre estable: el numero de arriba sale de la medicion
+de la cabecera, no de una constante. La LECTURA B no es un bloque fijo
+de la 48, sino la nomina de la 48 saltando los tramos FIJADOS
+==============================================================================
+
+  nomina de hoy   : docs\loop\_auditor_v62_componentes.jsonl (29 actos CERRADOS)
+  nomina de la 48 : docs\loop\RECOMPUTO_V48_COMPONENTES.jsonl (270 actos CERRADOS)
+
+--- LOS TRAMOS YA ABIERTOS, IDENTIFICADOS POR SUS MIEMBROS ---
+  tramo 1: 50 actos, 139 miembros, 11 vivos hoy en los puestos [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+           fuente: el bloque 1 a 50 de la nomina de la 48 (no tiene fichero propio)
+  tramo 2: 50 actos, 100 miembros, 5 vivos hoy en los puestos [12, 13, 14, 15, 16]
+           fuente: docs\loop\TRAMO2_V54.jsonl
+  tramo 3: 50 actos, 100 miembros, 3 vivos hoy en los puestos [17, 18, 19]
+           fuente: docs\loop\TRAMO3_V56.jsonl
+  tramo 4: 50 actos, 100 miembros, 7 vivos hoy en los puestos [20, 21, 22, 23, 24, 25, 26]
+           fuente: docs\loop\TRAMO4_V57.jsonl
+  tramo 5: 50 actos, 100 miembros, 3 vivos hoy en los puestos [27, 28, 29]
+           fuente: docs\loop\TRAMO5_V58.jsonl
+
+--- EL TRAMO 2 CONTRA SU BLOQUE DE LA 48 (aquella apertura SI calzaba) ---
+   bloque 51 a 100 de la 48: 50 actos | fichero fijado: 50 actos
+   calzan en conjunto y en orden: SI
+
+--- EL TRAMO 3 CONTRA SU BLOQUE DE LA 48 (la vuelta 56 midio que NO calza) ---
+   en el fichero y no en el bloque: 1  ['construir_sobre_ideas_ajenas, reglas_brainstorming']
+   en el bloque y no en el fichero: 1  ['crecimiento_ingresos_verdes, generacion_ingresos_verdes']
+   ES LO QUE LA VUELTA 56 DEJO ESCRITO, y por eso la LECTURA B de este tramo
+   se arma saltando los tramos FIJADOS en vez de tomar un bloque contiguo.
+
+--- GUARDA DEL PREFIJO (el numero se MIDE, no se teclea ni se hereda) ---
+  actos vivos de los tramos 1, 2, 3, 4, 5: 29
+  puestos que ocupan hoy             : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+  ocupan los puestos 1 a 29 sin huecos: SI
+
+--- LECTURA A: los 50 CERRADOS siguientes en el orden impreso de HOY ---
+  actos CERRADOS fuera de los tramos 1, 2, 3, 4, 5: 0
+
+  ROJO: no queda NI UN acto CERRADO fuera de los tramos previos. PARADA.

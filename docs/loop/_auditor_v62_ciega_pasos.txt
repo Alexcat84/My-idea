@@ -1,0 +1,227 @@
+==========================================================================================
+ACTO 1
+------------------------------------------------------------------------------------------
+nodo: administracion_sin_miedo
+titulo: Administración sin Miedo
+siguientes: 2 | previos: 5
+condiciones (2):
+   * Cuando los datos de calidad muestran patrones anómalos o poco creíbles
+   * Cuando se sospecha que empleados ocultan información por temor a sanciones
+pasos (4):
+   Identificar patrones de datos sospechosamente uniformes o con distribuciones anómalas cerca de límites de especificación
+   Investigar si existe temor a represalias que esté distorsionando los reportes
+   Eliminar políticas que castiguen a los empleados por reportar problemas reales
+   Fomentar una cultura donde reportar problemas sea seguro y valorado
+------------------------------------------------------------------------------------------
+nodo: gestion_miedo_reportes
+titulo: Gestión del Miedo en el Reporte de Datos
+siguientes: 2 | previos: 1
+condiciones (3):
+   * Cuando los datos reportados muestran concentraciones sospechosas cerca de límites de aceptación.
+   * Cuando los trabajadores evitan reportar fallas por temor a ser culpados.
+   * Al diseñar sistemas de evaluación de desempeño individual.
+pasos (4):
+   Auditar la distribución de datos reportados en busca de patrones anómalos de concentración cerca de límites regulatorios.
+   Investigar si el personal evita reportar valores extremos por temor a consecuencias.
+   Rediseñar los sistemas de evaluación de desempeño para que no penalicen el reporte honesto de problemas.
+   Empoderar a los trabajadores para actuar según el criterio técnico sin temor a represalias por afectar metas de producción.
+
+==========================================================================================
+ACTO 2
+------------------------------------------------------------------------------------------
+nodo: contacto_con_el_cliente
+titulo: Gestión del Contacto con el Cliente en Organizaciones de Servicio
+siguientes: 3 | previos: 5
+condiciones (2):
+   * Cuando la organización tiene personal de atención directa al público
+   * Al diseñar procesos de contratación y capacitación en servicio al cliente
+pasos (4):
+   Identificar quiénes en la organización tienen contacto directo con el cliente
+   Priorizar en la contratación la capacidad de trato y servicio al cliente
+   Capacitar específicamente a los 'contact men' en manejo de clientes
+   Reconocer que toda la organización, vea o no al cliente, contribuye a construir la calidad del servicio
+------------------------------------------------------------------------------------------
+nodo: contacto_con_el_cliente_2
+titulo: Rol del Personal de Contacto con el Cliente
+siguientes: 1 | previos: 1
+condiciones (2):
+   * Cuando tu reputación depende de la percepción directa del cliente
+   * Si recibes quejas relacionadas con la actitud o el trato de quien atiende al cliente
+pasos (4):
+   Identificar quien en tu negocio tiene contacto directo con los clientes, aunque seas tu mismo
+   Preparar una forma clara de atender, ser cortes y manejar situaciones dificiles
+   Tener presente que esa persona, o tu mismo, es en la practica quien construye la reputación del negocio ante el cliente
+   Revisar cada cierto tiempo que percepción tiene el cliente sobre el trato que recibe
+
+==========================================================================================
+ACTO 5
+------------------------------------------------------------------------------------------
+nodo: gobierno_corporativo_juntas_directivas
+titulo: Gobierno Corporativo y Estructura de Juntas Directivas
+siguientes: 3 | previos: 1
+condiciones (3):
+   * Cuando una organización familiar está en proceso de sucesión o retiro del fundador
+   * Si la organización no tiene una estructura formal de gobierno corporativo
+   * Cuando se requiere profesionalizar la toma de decisiones estratégicas
+pasos (5):
+   Evaluar si la organización necesita transicionar de una junta informal a una estructura formal
+   Crear una junta asesora como primer paso antes de establecer una junta legal formal
+   Establecer un consejo familiar con reglas claras de participación y comunicación
+   Definir un master plan con la colaboración de un consultor externo que incluya nuevos miembros, consejo familiar y junta profesional
+   Seleccionar directores independientes con las cualidades adecuadas: respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación
+------------------------------------------------------------------------------------------
+nodo: planificacion_gobierno_organizaciones_familiares
+titulo: Cómo organizar el mando y la sucesión en un negocio familiar (gobierno corporativo)
+siguientes: 0 | previos: 1
+condiciones (3):
+   * Cuando empiezas a planear tu retiro de un negocio familiar
+   * Cuando hay varias generaciones de tu familia metidas en la gestión del negocio
+   * Cuando tu junta actual solo firma sin supervisar de verdad
+pasos (6):
+   Busca a alguien externo que te ayude a planear la sucesión y el mando
+   Diseña un consejo familiar (family council) que represente a los familiares que son dueños
+   Define reglas claras de cómo participa tu familia y qué esperas de la junta directiva
+   Decide qué necesitas para sumar a la junta a personas externas independientes
+   Evita que los directores se metan en el día a día de tu negocio
+   Si todavía no estás listo para una junta formal, empieza con un consejo asesor (advisory board) como paso intermedio
+
+==========================================================================================
+ACTO 8
+------------------------------------------------------------------------------------------
+nodo: revision_progreso
+titulo: Proceso Formal de Revisión de Progreso
+siguientes: 2 | previos: 2
+condiciones (2):
+   * Cuando un proyecto de calidad está en ejecución y requiere seguimiento continuo
+   * Cuando se detectan desviaciones entre lo planificado y lo ejecutado
+pasos (5):
+   Establecer puntos de revisión específicos y planificados para cada proyecto
+   Comparar el estado actual medido contra el objetivo establecido
+   Identificar brechas (gaps) que requieren atención
+   Asignar responsabilidad y autoridad clara para actuar sobre las brechas identificadas
+   Documentar y comunicar resultados de forma gráfica y periódica
+------------------------------------------------------------------------------------------
+nodo: revision_progreso_breakthrough
+titulo: Revisión Periódica del Progreso de Breakthrough
+siguientes: 2 | previos: 1
+condiciones (1):
+   * Si tienes varios proyectos de mejora en marcha que necesitan seguimiento
+pasos (4):
+   Fijar fechas periódicas (por ejemplo cada trimestre) para revisar tus proyectos de mejora
+   Crear un formato simple y estándar para reportar cada proyecto
+   Reunir en ese formato el costo, la inversión y el ahorro neto de cada proyecto
+   Revisar este proceso de seguimiento como parte de tu control de calidad general
+
+==========================================================================================
+ACTO 9
+------------------------------------------------------------------------------------------
+nodo: gestion_estrategica_de_calidad_sqm
+titulo: Gestión Estratégica de la Calidad
+siguientes: 1 | previos: 1
+condiciones (2):
+   * Cuando la calidad necesita tener más peso en las decisiones grandes de tu negocio
+   * Cuando hay confusión entre las tareas técnicas de calidad y las decisiones estratégicas de calidad
+pasos (4):
+   Evalúa si quien maneja la calidad en tu negocio piensa solo en lo técnico o también tiene visión de conjunto
+   Separa las tareas técnicas de calidad, como inspección y auditoría, de las decisiones estratégicas de calidad
+   Si tu negocio crece, define con claridad quién se encarga de la ingeniería de calidad y quién de la gestión estratégica de calidad
+   Conecta la planificación de calidad con la planificación general de tu negocio, para que vayan en la misma dirección
+------------------------------------------------------------------------------------------
+nodo: rol_tactico_estrategico_oficina
+titulo: Rol Táctico versus Estratégico de la Oficina de Calidad
+siguientes: 1 | previos: 2
+condiciones (2):
+   * Cuando la Oficina de Calidad es percibida solo como función de inspección/control
+   * Si se busca elevar el rol de calidad a un nivel de asesoría ejecutiva
+pasos (4):
+   Auditar las actividades actuales de la Oficina y clasificarlas en tácticas o estratégicas
+   Identificar brechas donde la Oficina podría aportar valor estratégico y no lo está haciendo
+   Incluir a la Oficina en el proceso de planificación estratégica anual de la organización
+   Definir métricas e indicadores que vinculen calidad con resultados de negocio (costos, crecimiento, satisfacción del cliente)
+
+==========================================================================================
+ACTO 12
+------------------------------------------------------------------------------------------
+nodo: cinco_suposiciones_erroneas_calidad
+titulo: Las Cinco Suposiciones Erróneas sobre la Calidad
+siguientes: 2 | previos: 2
+condiciones (3):
+   * Cuando culpas siempre a quienes producen o fabrican por los defectos
+   * Cuando dejas toda la responsabilidad de la calidad en una sola persona o area
+   * Al empezar a poner en marcha un programa de calidad en tu negocio
+pasos (4):
+   Revisa cuales de estas suposiciones erroneas estan presentes en como piensas y manejas tu negocio
+   Aprende la definición correcta de calidad y como medirla a traves de sus costos
+   Busca el origen real de los defectos, ya sea en el diseño, la planeación o la forma de administrar, y no solo en quien produce
+   Redefine el rol de quien revisa la calidad: que mida y reporte, y no que cargue solo con la responsabilidad de resolverlo todo
+------------------------------------------------------------------------------------------
+nodo: concepto_supuestos_erroneos_sobre_calidad
+titulo: Supuestos Erróneos Convencionales sobre la Calidad
+siguientes: 1 | previos: 1
+condiciones (2):
+   * Cuando existe resistencia cultural o escepticismo directivo hacia los programas de calidad.
+   * Cuando se inicia un proyecto de transformación de calidad en una organización sin experiencia previa.
+pasos (4):
+   Realizar entrevistas o encuestas a gerentes para identificar sus supuestos actuales sobre la calidad.
+   Confrontar cada supuesto erróneo con su contraparte correcta (calidad = conformidad con requisitos, es medible, el error no es inevitable, la gente sí se preocupa).
+   Diseñar sesiones de sensibilización o seminarios para dirección basados en estas correcciones conceptuales.
+   Usar testimonios de gerentes que ya cambiaron su percepción como agentes de cambio interno.
+
+==========================================================================================
+ACTO 18
+------------------------------------------------------------------------------------------
+nodo: control_del_proceso_del_proveedor
+titulo: Plan de Control de Proceso del Proveedor
+siguientes: 4 | previos: 3
+condiciones (2):
+   * Cuando se inicia una relación contractual con un nuevo proveedor de manufactura
+   * Cuando existen discrepancias recurrentes en mediciones entre proveedor y comprador
+pasos (6):
+   Solicitar al proveedor un plan escrito de control del proceso de manufactura
+   Incluir requisitos de SPC para detección temprana de defectos
+   Definir tareas especiales y buenas prácticas de manufactura requeridas
+   Clasificar la seriedad de los defectos para priorizar esfuerzos
+   Establecer estándares sensoriales físicos cuando se requiera juicio humano
+   Estandarizar métodos y condiciones de prueba entre proveedor y comprador
+------------------------------------------------------------------------------------------
+nodo: planificacion_tecnologica_conjunta
+titulo: Planificación Tecnológica Conjunta con Proveedores
+siguientes: 0 | previos: 2
+condiciones (1):
+   * Cuando se establece una relación de partnership técnico con un proveedor clave
+pasos (6):
+   Acordar el significado exacto de los requisitos de desempeño en las especificaciones
+   Cuantificar requisitos de confiabilidad y mantenibilidad, evitando errores como aplicar la regla de multiplicación incorrectamente
+   Solicitar al proveedor un plan de control de proceso con técnicas de SPC
+   Clasificar la seriedad de los defectos para enfocar esfuerzos
+   Estandarizar métodos y condiciones de prueba entre comprador y proveedor
+   Establecer sistema de trazabilidad de lotes
+
+==========================================================================================
+ACTO 20
+------------------------------------------------------------------------------------------
+nodo: getting_started_maintenance
+titulo: Mantenimiento de Sistemas
+siguientes: 1 | previos: 2
+condiciones (1):
+   * Cuando los sistemas que procesan CUI requieren actualizaciones o reparaciones periódicas.
+pasos (6):
+   Identificar herramientas usadas para diagnóstico y reparación de sistemas.
+   Establecer un calendario de mantenimiento regular y verificar su cumplimiento.
+   Habilitar actualizaciones automáticas cuando sea posible.
+   Planificar reemplazo de hardware/software próximos a fin de vida útil.
+   Exigir autenticación multifactor en sesiones de mantenimiento remoto y terminarlas al finalizar.
+   Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones.
+------------------------------------------------------------------------------------------
+nodo: mantenimiento_sistema_cui
+titulo: Mantenimiento de Sistemas que Procesan CUI
+siguientes: 1 | previos: 1
+condiciones (1):
+   * Cuando se implementan los requisitos de la familia Maintenance de SP 800-171
+pasos (5):
+   Identificar las herramientas usadas para diagnóstico y reparación del sistema
+   Determinar un cronograma regular de mantenimiento y verificar su cumplimiento
+   Habilitar actualizaciones automáticas donde sea apropiado
+   Planificar actualizaciones para hardware o software que llegará a fin de vida útil
+   Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar
+

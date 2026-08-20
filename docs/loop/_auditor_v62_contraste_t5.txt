@@ -1,0 +1,94 @@
+==============================================================================
+LAS TABLAS DEL TRAMO 5, TALLADAS DE LOS PLANES SELLADOS (vuelta 60)
+  lotes hallados: A (PLAN_V59_OPU01_LOTE_A.json), B (PLAN_V60_OPU01_LOTE_B.json), C (PLAN_V60_OPU01_LOTE_C.json)
+==============================================================================
+
+--- TABLA 1: LOS 3 LOTES, CON SUS PIEZAS ---
+
+| lote | actos | fundidos | mueren | piezas | enteras | ya dichas | de `INCISO` | perdidas nombradas |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| **A** | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17 | **16** | **16** | **97** | 24 | 59 | **14** | **3** |
+| **B** | 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 30, 31, 32, 33 | **15** | **15** | **90** | 30 | 55 | **5** | **1** |
+| **C** | 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 | **16** | **16** | **101** | 24 | 70 | **7** | **0** |
+| **los 3** | | **47** | **47** | **288** | **78** | **184** | **26** | **4** |
+
+--- TABLA 2: LA FORMA DEL VEREDICTO, CONTADA DE LOS MOTIVOS SELLADOS ---
+
+| la forma, leida del motivo sellado | cuantos | los actos |
+|---|---:|---|
+| **UNA SOLA VARA de contenido no empatada, y BASTA** | **18** | 4, 6, 9, 16, 21, 22, 23, 24, 25, 26, 27, 28, 30, 36, 37, 44, 45, 46 |
+| **TODAS LAS VARAS de contenido de acuerdo** | **10** | 8, 12, 14, 17, 18, 19, 31, 39, 48, 50 |
+| **EL CONTENIDO EMPATA y EL CABLEADO DECIDE SOLO** | **6** | 2, 5, 10, 15, 20, 38 |
+| **CONTEOS QUE CHOCAN CON LA PIEZA DECLARADA, y decide la declarada** | **4** | 11, 35, 42, 47 |
+| **LA PIEZA DECLARADA GANA A UN CONTEO de contenido** | **2** | 7, 33 |
+| **LA PUERTA SOBREVIVE, con el choque registrado** | **2** | 1, 43 |
+| **LOS TRES CONTEOS EMPATAN y decide LA PIEZA DECLARADA, que esta de UN SOLO LADO** | **2** | 32, 40 |
+| **EL CONTENIDO EMPATA y LA PIEZA DECLARADA Y EL CABLEADO COINCIDEN** | **1** | 49 |
+| **LA PIEZA DECLARADA GANA A LOS DOS CONTEOS de contenido** | **1** | 3 |
+| **UNA FIGURA CON NOMBRE del informe vence al conteo (EL CASO NO ES LA CASA)** | **1** | 41 |
+| **suma** | **47** | |
+
+--- TABLA 3: ACTO A ACTO, SUPERVIVIENTE Y ABSORBIDO ---
+
+| acto | lote | sobrevive | absorbe | piezas | enteras | ya dichas | `INCISO` |
+|---:|:---:|---|---|---:|---:|---:|---:|
+| **1** | A | `programa_mejora_calidad_14_pasos` | `programa_de_mejora_de_calidad` | 9 | 2 | 6 | 1 |
+| **2** | A | `sostener_las_ganancias` | `mantener_las_ganancias` | 7 | 1 | 5 | 1 |
+| **3** | A | `innovacion_tipo_ii` | `tipos_innovacion_i_ii` | 9 | 1 | 8 | 0 |
+| **4** | A | `funcion_perdida_limites_especificacion` | `funcion_perdida_taguchi` | 6 | 0 | 4 | 2 |
+| **5** | A | `enfermedades_mortales_gestion` | `las_siete_enfermedades_mortales` | 6 | 2 | 2 | 2 |
+| **6** | A | `eliminar_trabajo_a_destajo` | `eliminacion_pago_destajo` | 5 | 1 | 4 | 0 |
+| **7** | A | `adaptaciones_sectoriales_iso` | `estandares_especificos_industria` | 6 | 1 | 4 | 1 |
+| **8** | A | `estilo_gerencial_ballet_vs_hockey` | `estilo_gerencial_hockey_vs_ballet` | 6 | 3 | 3 | 0 |
+| **9** | A | `roi_proyectos_calidad` | `roi_breakthrough` | 6 | 4 | 2 | 0 |
+| **10** | A | `teoria_triple_rol_sistemas_abiertos` | `pensamiento_sistemico_rol_triple` | 6 | 1 | 3 | 2 |
+| **11** | A | `descubrir_necesidades_del_cliente` | `descubrir_necesidades_cliente` | 5 | 1 | 2 | 2 |
+| **12** | A | `qfd_matriz` | `spreadsheet_diseno_para_la_calidad` | 5 | 0 | 4 | 1 |
+| **14** | A | `reinicio_programa_calidad` | `repeticion_programa` | 4 | 0 | 4 | 0 |
+| **15** | A | `eliminar_slogans_y_exhortaciones` | `eliminar_slogans_metas` | 6 | 2 | 3 | 1 |
+| **16** | A | `rol_black_belt_six_sigma` | `rol_black_belt` | 5 | 3 | 2 | 0 |
+| **17** | A | `mapeo_flujo_valor` | `value_stream_mapping` | 6 | 2 | 3 | 1 |
+| **18** | B | `cero_defectos` | `filosofia_zero_defectos` | 6 | 2 | 4 | 0 |
+| **19** | B | `equipo_mejora_calidad_2` | `equipo_mejora_calidad` | 5 | 1 | 4 | 0 |
+| **20** | B | `rol_facilitador_equipos_mejora` | `rol_facilitador_black_belt` | 6 | 3 | 2 | 1 |
+| **21** | B | `indice_cpk` | `interpretacion_cpk` | 6 | 4 | 2 | 0 |
+| **22** | B | `remover_barreras_orgullo_trabajo` | `barreras_orgullo_trabajo` | 5 | 2 | 3 | 0 |
+| **23** | B | `histograma` | `histogramas_distribucion_frecuencias` | 7 | 2 | 5 | 0 |
+| **24** | B | `eliminacion_planes_muestreo_estandar` | `criticas_muestreo_aceptacion` | 5 | 0 | 4 | 1 |
+| **25** | B | `recoleccion_validacion_datos_benchmarking` | `validacion_datos_benchmarking` | 6 | 3 | 3 | 0 |
+| **26** | B | `intercambio_de_roles_para_motivacion` | `rotacion_de_puestos_para_mejora_calidad` | 6 | 1 | 5 | 0 |
+| **27** | B | `control_estadistico_del_proceso` | `control_estadistico_no_implica_cero_defectos` | 6 | 4 | 2 | 0 |
+| **28** | B | `benchmarking_proceso` | `benchmarking_mejores_practicas` | 6 | 1 | 5 | 0 |
+| **30** | B | `eliminacion_causas_error_4` | `eliminacion_causas_error_2` | 8 | 0 | 6 | 2 |
+| **31** | B | `circulos_calidad_qc` | `preparacion_gerencial_antes_de_circulos_de_calidad` | 5 | 2 | 3 | 0 |
+| **32** | B | `autocontrol_y_controlabilidad` | `concepto_autocontrol` | 7 | 2 | 5 | 0 |
+| **33** | B | `comunicar_politicas_organizacionales` | `politica_calidad_organizacional` | 6 | 3 | 2 | 1 |
+| **35** | C | `ciclo_shewhart_pdsa` | `pdsa_shewhart_cycle` | 8 | 2 | 6 | 0 |
+| **36** | C | `control_estadistico_de_procesos` | `control_estadistico_de_procesos_2` | 7 | 1 | 4 | 2 |
+| **37** | C | `evaluacion_gestion_riesgos` | `plan_de_gestion_de_riesgos` | 7 | 1 | 5 | 1 |
+| **38** | C | `enfasis_en_utilidades_corto_plazo` | `enfasis_en_ganancias_corto_plazo` | 6 | 5 | 1 | 0 |
+| **39** | C | `grafico_de_corrida_run_chart` | `run_chart_datos_temporales` | 5 | 0 | 5 | 0 |
+| **40** | C | `evaluacion_alternativas_solucion` | `evaluacion_seleccion_alternativas_mejora` | 5 | 1 | 3 | 1 |
+| **41** | C | `definiciones_operacionales` | `caso_definicion_arruga` | 7 | 0 | 7 | 0 |
+| **42** | C | `formula_exponencial_confiabilidad` | `distribucion_exponencial` | 6 | 1 | 4 | 1 |
+| **43** | C | `medicion_calidad` | `medicion_calidad_2` | 7 | 4 | 2 | 1 |
+| **44** | C | `analisis_reporte_benchmarking` | `desarrollo_reporte_benchmarking` | 7 | 2 | 5 | 0 |
+| **45** | C | `gestion_efectiva_benchmarking` | `rol_alta_direccion_benchmarking` | 8 | 0 | 8 | 0 |
+| **46** | C | `consumidor_como_eje_de_produccion` | `consumidor_parte_linea_produccion` | 5 | 3 | 2 | 0 |
+| **47** | C | `identificar_clientes_externos_e_internos` | `identificar_clientes_diseno` | 5 | 2 | 3 | 0 |
+| **48** | C | `juran_quality_by_design` | `quality_by_design` | 6 | 1 | 5 | 0 |
+| **49** | C | `definiciones_operacionales_3` | `definiciones_operacionales_4` | 8 | 1 | 7 | 0 |
+| **50** | C | `fijacion_de_metas` | `establecimiento_metas` | 4 | 0 | 3 | 1 |
+
+--- TABLA 4: LOS ACTOS DECLARADOS Y NO FUNDIDOS ---
+
+| acto | lote | sus miembros | especie | se acumula para |
+|---:|:---:|---|---|---|
+| **13** | A | `premio_shingo`, `shingo_prize` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA, dentro del pendiente de doctrina 1. LOS TRES CONTEOS EMPATAN AL DIGITO: pasos 4 contra 4, condiciones 2 contra 2 y cableado 2 contra 2 (cuadro de varas de la vuelta 58, fila 13, re-derivado por el auditor). Por acta 53 pregunta 4, el empate sin vara es cuando TODO empata, y aqui todo empata. LA RAZON DEL PUESTO 2475 DECLARA PROPIO A LOS DOS LADOS, que es la figura exacta del acto 32 del tramo 4 resuelta en esta misma campana: de premio_shingo declara DOS PASOS que el otro no tiene (documentar evidencia de implementacion de principios Lean, y usar el feedback de la evaluacion externa para planificar los proximos pasos); de shingo_prize declara la madurez CULTURAL Y OPERATIVA y la puerta de los criterios minimos. Que la razon llame LINEA a lo del segundo y PASOS a lo del primero es una comparacion de PESO entre dos propios declarados, y pesar dos propios declarados para romper un empate triple es EXACTAMENTE la rama que el acta 58 dejo NO ADOPTADA al deshacer el acto 32. SE DECLARA Y NO SE FUNDE. Y va marcado como DISCUTIBLE en el reporte, porque hay una lectura sostenible en contra: cuando la razon clasifica el propio de un lado como LINEA esta diciendo que no lo cuenta, y entonces el propio declarado seria de UN SOLO LADO y por acta 54 pregunta 4 seria vara. No la aplico porque decidirlo asi es estrenar doctrina sobre un empate, y deshacer una fusion cuesta una vuelta entera, como acaba de costarla el 32. |
+| **29** | B | `conciencia_calidad`, `conciencia_de_calidad_2` | **CONTEOS QUE CHOCAN Y LA PIEZA DECLARADA NO DESEMPATA** | LA MESA, dentro del pendiente de doctrina 1. LOS DOS CONTEOS DE CONTENIDO CHOCAN ENTRE SI: pasos 4 contra 5 apunta a conciencia_de_calidad_2 y condiciones 3 contra 2 apunta a conciencia_calidad (cuadro de varas de la vuelta 58, fila 29, cotejado hoy contra los nodos). Por acta 53 pregunta 3 y acta 54 pregunta 2, cuando dos varas de contenido CHOCAN decide LA PIEZA DECLARADA; y aqui LA PIEZA DECLARADA ESTA A LOS DOS LADOS Y NO DESEMPATA: la razon del puesto 2552 escribe REPITE POR FUSION MUTUA, DUODECIMO CASO DEL ARCHIVO, y NINGUNO DOMINA, reconociendo propio a los dos. De conciencia_calidad: EL COSTO REAL DE LA NO CALIDAD como contenido del mensaje, que es lo unico que le da sustancia a la campana, y LA EXTENSION A PERSONAL ADMINISTRATIVO Y DE SERVICIO. De conciencia_de_calidad_2: QUE CADA SUPERVISOR TRANSMITA DIRECTAMENTE Y NUNCA POR UNA SOLA REUNION MASIVA, que es regla de cascada y no de estilo; MANTENER CONSISTENCIA Y CUMPLIR LAS PROMESAS HECHAS EN LAS REUNIONES; y apoyar la logistica con relaciones publicas. CONTAR CUANTOS PROPIOS TIENE CADA LADO, DOS CONTRA TRES, ES LA RAMA DE LA CANTIDAD COMO VARA, QUE EL ACTA 58 DEJO NO ADOPTADA AL DESHACER EL ACTO 32 DEL TRAMO 4 Y QUE EL ENCARGO DE ESTA VUELTA PROHIBE USAR. EL CABLEADO TAMPOCO ENTRA: por P.8 el cableado solo habla a contenido EMPATADO, y aqui el contenido no empata, choca. SE DECLARA Y NO SE FUNDE. Va marcado como DISCUTIBLE en el reporte: es el primer ejemplar del tramo en que LAS DOS VIAS DE DESEMPATE ESCRITAS FALLAN A LA VEZ, los conteos porque chocan y la pieza declarada porque esta a los dos lados. |
+| **34** | B | `pocos_vitales_muchos_utiles`, `proyectos_vitales_pocos` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA, dentro del pendiente de doctrina 1. LOS TRES CONTEOS EMPATAN AL DIGITO: pasos 4 contra 4, condiciones 2 contra 2 y cableado 2 contra 2 (cuadro de varas de la vuelta 58, fila 34, cotejado hoy contra los nodos). Por acta 53 pregunta 4, el empate sin vara es cuando TODO empata, y aqui todo empata. Y LA PIEZA DECLARADA TAMPOCO SEPARA, porque la razon del puesto 2575 escribe REPITE POR FUSION MUTUA, DECIMOTERCER CASO DEL ARCHIVO, NINGUNO DOMINA, y le reconoce a CADA UNO UNA LINEA PROPIA Y SOLO UNA: a pocos_vitales_muchos_utiles LA TERCERA CATEGORIA, el apagado de incendios, con su guarda de no volcar todos los recursos ahi, que es el unico del par que reconoce el trabajo reactivo; a proyectos_vitales_pocos el DELEGAR LOS PROYECTOS DE BAJO IMPACTO A EQUIPOS DEPARTAMENTALES LOCALES, que nombra a quien cae la cola. UNA CONTRA UNA: ni siquiera la rama NO ADOPTADA de la cantidad lo romperia. La propia razon escribe que por el visto de hoy LA FUSION MUTUA NO PRODUCE GANADOR POR DERECHO y que el acto es POR ELEGIR, y marca ella misma su discutible, que se trae sin tocar: quien lea la categoria de incendios como un acto aparte y no como una linea dira que pocos_vitales domina y es A plana; la defensa de la razon es que sigue siendo clasificar proyectos, en tres cubos en vez de dos. SE DECLARA Y NO SE FUNDE. |
+| **suma** | | **3 declarados** | | |
+
+  actos tallados: 47 | piezas: 288 | perdidas nombradas: 4 | retirados: 0
+
+FIN
