@@ -47,18 +47,18 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 
 ## Conteos
 
-**1460 nodos** en la cola, sobre 3295 activos.
+**1456 nodos** en la cola, sobre 3274 activos.
 
 | dominio | nodos |
 |---|---:|
 | core | 637 |
-| quality | 374 |
+| quality | 371 |
 | health_safety | 112 |
 | environmental | 85 |
 | franquicias | 77 |
 | exportacion | 70 |
 | compras | 33 |
-| seguridad_digital | 30 |
+| seguridad_digital | 29 |
 | entrega | 25 |
 | risk_management | 17 |
 
@@ -71,7 +71,7 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 | p99 | 65.9 | 56.6 |
 | maximo | 86.6 | 72.6 |
 
-Nodos evaluados por bloques (4 pasos o mas): **2156**. Los de menos dan **NO APLICA**, que no es cero.
+Nodos evaluados por bloques (4 pasos o mas): **2147**. Los de menos dan **NO APLICA**, que no es cero.
 
 ## La franja 44 a 45: lo que el umbral viejo dejaba fuera
 
@@ -122,59 +122,59 @@ Nodos evaluados por bloques (4 pasos o mas): **2156**. Los de menos dan **NO APL
 | 41 | quality | `intercambio_de_roles_para_motivacion` | 6 | 44.7 | 3 |
 | 42 | core | `mission_and_operations_planning` | 5 | 44.7 | 2 |
 | 43 | core | `siete_razones_fracaso_productos` | 4 | 44.7 | 2 |
-| 44 | quality | `superioridad_calidad_market_share` | 5 | 44.7 | 2 |
-| 45 | entrega | `detectar_prioridad_cliente_entrega` | 5 | 44.7 | 3 |
-| 46 | entrega | `medir_satisfaccion_real_del_cliente` | 5 | 44.7 | 2 |
-| 47 | quality | `desplegar_metas_organizacion` | 5 | 44.7 | 2 |
-| 48 | core | `preparar_contacto_clientes` | 6 | 44.7 | 2 |
-| 49 | risk_management | `cultura_que_habla_del_riesgo_sin_miedo` | 4 | 44.7 | 2 |
-| 50 | franquicias | `preparar_candidato_validacion` | 5 | 44.7 | 2 |
-| 51 | core | `due_diligence_adquisiciones` | 6 | 44.7 | 4 |
-| 52 | health_safety | `evaluacion_mejora_programa` | 6 | 44.7 | 4 |
-| 53 | environmental | `alineacion_engagement_estrategia_general` | 4 | 44.7 | 2 |
-| 54 | core | `work_breakdown_structure` | 5 | 44.7 | 3 |
-| 55 | health_safety | `senalizacion_de_salidas` | 4 | 44.7 | 2 |
-| 56 | quality | `eliminar_slogans_y_exhortaciones` | 5 | 44.7 | 2 |
-| 57 | core | `personas_productos_ganancias_orden` | 4 | 44.7 | 2 |
-| 58 | core | `sistema_captura_ideas` | 5 | 44.7 | 3 |
-| 59 | core | `principios_lean_startup` | 5 | 44.7 | 2 |
-| 60 | quality | `rol_del_equipo_de_trabajo_en_calidad` | 4 | 44.7 | 2 |
-| 61 | core | `split_testing_experimentos_ab` | 5 | 44.7 | 3 |
-| 62 | quality | `sostener_las_ganancias` | 6 | 44.7 | 4 |
-| 63 | quality | `consejos_de_calidad` | 5 | 44.6 | 3 |
-| 64 | quality | `graficos_control_atributos` | 5 | 44.6 | 3 |
-| 65 | core | `original_issue_discount_oid` | 4 | 44.6 | 2 |
-| 66 | quality | `necesidad_mantener_informado` | 4 | 44.6 | 2 |
-| 67 | core | `dilema_riqueza_vs_control` | 6 | 44.6 | 4 |
-| 68 | core | `lead_bullets_no_silver_bullets` | 5 | 44.6 | 3 |
-| 69 | core | `gate2_second_screen` | 5 | 44.6 | 3 |
-| 70 | risk_management | `correr_hacia_el_riesgo` | 5 | 44.6 | 2 |
-| 71 | quality | `categorias_de_material_entrante` | 5 | 44.6 | 3 |
-| 72 | core | `estilos_de_negociacion` | 4 | 44.6 | 2 |
-| 73 | quality | `decision_aptitud_uso` | 6 | 44.6 | 3 |
-| 74 | health_safety | `ergonomia_laboral` | 6 | 44.6 | 2 |
-| 75 | environmental | `gestion_e_waste` | 5 | 44.6 | 3 |
-| 76 | core | `gate4_go_to_testing` | 4 | 44.6 | 2 |
-| 77 | quality | `mejora_continua_del_sistema` | 5 | 44.6 | 2 |
-| 78 | core | `mapa_de_influencia` | 5 | 44.6 | 3 |
-| 79 | quality | `metodologia_medicion_copq` | 5 | 44.6 | 3 |
-| 80 | quality | `ciclo_shewhart_pdsa` | 5 | 44.5 | 2 |
-| 81 | environmental | `plan_cambio_climatico` | 5 | 44.5 | 3 |
-| 82 | exportacion | `desarrollo_plan_exportacion` | 6 | 44.5 | 3 |
-| 83 | quality | `sistema_informacion_calidad` | 5 | 44.5 | 3 |
-| 84 | quality | `mejora_de_proceso_como_via_a_productividad` | 5 | 44.5 | 3 |
-| 85 | environmental | `alcance_profundo_cadena_suministro` | 4 | 44.5 | 2 |
-| 86 | core | `amar_las_restricciones` | 4 | 44.5 | 2 |
-| 87 | health_safety | `implementacion_controles` | 5 | 44.5 | 2 |
-| 88 | quality | `circulos_de_calidad_para_mejora_operativa` | 5 | 44.5 | 3 |
-| 89 | franquicias | `adaptabilidad_regional_concepto` | 5 | 44.5 | 3 |
-| 90 | seguridad_digital | `csf_funcion_protect` | 7 | 44.5 | 5 |
-| 91 | core | `customer_discovery` | 5 | 44.5 | 2 |
-| 92 | entrega | `probar_empaque_antes_de_escalar_envios` | 5 | 44.5 | 2 |
-| 93 | core | `plan_de_contingencia_b` | 5 | 44.5 | 2 |
-| 94 | core | `test_rico_vs_rey` | 4 | 44.5 | 2 |
-| 95 | core | `paradoja_responsabilidad_creatividad` | 5 | 44.5 | 3 |
-| 96 | quality | `revision_progreso` | 5 | 44.5 | 3 |
+| 44 | quality | `revision_progreso` | 8 | 44.7 | 3 |
+| 45 | quality | `superioridad_calidad_market_share` | 5 | 44.7 | 2 |
+| 46 | entrega | `detectar_prioridad_cliente_entrega` | 5 | 44.7 | 3 |
+| 47 | entrega | `medir_satisfaccion_real_del_cliente` | 5 | 44.7 | 2 |
+| 48 | quality | `desplegar_metas_organizacion` | 5 | 44.7 | 2 |
+| 49 | core | `preparar_contacto_clientes` | 6 | 44.7 | 2 |
+| 50 | risk_management | `cultura_que_habla_del_riesgo_sin_miedo` | 4 | 44.7 | 2 |
+| 51 | franquicias | `preparar_candidato_validacion` | 5 | 44.7 | 2 |
+| 52 | core | `due_diligence_adquisiciones` | 6 | 44.7 | 4 |
+| 53 | health_safety | `evaluacion_mejora_programa` | 6 | 44.7 | 4 |
+| 54 | environmental | `alineacion_engagement_estrategia_general` | 4 | 44.7 | 2 |
+| 55 | core | `work_breakdown_structure` | 5 | 44.7 | 3 |
+| 56 | health_safety | `senalizacion_de_salidas` | 4 | 44.7 | 2 |
+| 57 | quality | `eliminar_slogans_y_exhortaciones` | 5 | 44.7 | 2 |
+| 58 | core | `personas_productos_ganancias_orden` | 4 | 44.7 | 2 |
+| 59 | core | `sistema_captura_ideas` | 5 | 44.7 | 3 |
+| 60 | core | `principios_lean_startup` | 5 | 44.7 | 2 |
+| 61 | quality | `rol_del_equipo_de_trabajo_en_calidad` | 4 | 44.7 | 2 |
+| 62 | core | `split_testing_experimentos_ab` | 5 | 44.7 | 3 |
+| 63 | quality | `sostener_las_ganancias` | 6 | 44.7 | 4 |
+| 64 | quality | `consejos_de_calidad` | 5 | 44.6 | 3 |
+| 65 | quality | `graficos_control_atributos` | 5 | 44.6 | 3 |
+| 66 | core | `original_issue_discount_oid` | 4 | 44.6 | 2 |
+| 67 | quality | `necesidad_mantener_informado` | 4 | 44.6 | 2 |
+| 68 | core | `dilema_riqueza_vs_control` | 6 | 44.6 | 4 |
+| 69 | core | `lead_bullets_no_silver_bullets` | 5 | 44.6 | 3 |
+| 70 | core | `gate2_second_screen` | 5 | 44.6 | 3 |
+| 71 | risk_management | `correr_hacia_el_riesgo` | 5 | 44.6 | 2 |
+| 72 | quality | `categorias_de_material_entrante` | 5 | 44.6 | 3 |
+| 73 | core | `estilos_de_negociacion` | 4 | 44.6 | 2 |
+| 74 | quality | `decision_aptitud_uso` | 6 | 44.6 | 3 |
+| 75 | health_safety | `ergonomia_laboral` | 6 | 44.6 | 2 |
+| 76 | environmental | `gestion_e_waste` | 5 | 44.6 | 3 |
+| 77 | core | `gate4_go_to_testing` | 4 | 44.6 | 2 |
+| 78 | quality | `mejora_continua_del_sistema` | 5 | 44.6 | 2 |
+| 79 | core | `mapa_de_influencia` | 5 | 44.6 | 3 |
+| 80 | quality | `metodologia_medicion_copq` | 5 | 44.6 | 3 |
+| 81 | quality | `ciclo_shewhart_pdsa` | 5 | 44.5 | 2 |
+| 82 | environmental | `plan_cambio_climatico` | 5 | 44.5 | 3 |
+| 83 | exportacion | `desarrollo_plan_exportacion` | 6 | 44.5 | 3 |
+| 84 | quality | `sistema_informacion_calidad` | 5 | 44.5 | 3 |
+| 85 | quality | `mejora_de_proceso_como_via_a_productividad` | 5 | 44.5 | 3 |
+| 86 | environmental | `alcance_profundo_cadena_suministro` | 4 | 44.5 | 2 |
+| 87 | core | `amar_las_restricciones` | 4 | 44.5 | 2 |
+| 88 | health_safety | `implementacion_controles` | 5 | 44.5 | 2 |
+| 89 | quality | `circulos_de_calidad_para_mejora_operativa` | 5 | 44.5 | 3 |
+| 90 | franquicias | `adaptabilidad_regional_concepto` | 5 | 44.5 | 3 |
+| 91 | seguridad_digital | `csf_funcion_protect` | 7 | 44.5 | 5 |
+| 92 | core | `customer_discovery` | 5 | 44.5 | 2 |
+| 93 | entrega | `probar_empaque_antes_de_escalar_envios` | 5 | 44.5 | 2 |
+| 94 | core | `plan_de_contingencia_b` | 5 | 44.5 | 2 |
+| 95 | core | `test_rico_vs_rey` | 4 | 44.5 | 2 |
+| 96 | core | `paradoja_responsabilidad_creatividad` | 5 | 44.5 | 3 |
 | 97 | health_safety | `evitar_micro_matching` | 5 | 44.5 | 3 |
 | 98 | exportacion | `marco_legal_comercio_electronico_internacional` | 6 | 44.5 | 3 |
 | 99 | exportacion | `trade_fair_certification_program` | 5 | 44.5 | 3 |
@@ -193,30 +193,30 @@ Nodos evaluados por bloques (4 pasos o mas): **2156**. Los de menos dan **NO APL
 | 112 | core | `plan_gestion_recursos_humanos` | 5 | 44.4 | 2 |
 | 113 | environmental | `marketing_verde_autentico` | 4 | 44.4 | 2 |
 | 114 | core | `patrimonio_de_los_propietarios` | 4 | 44.4 | 2 |
-| 115 | franquicias | `franquicia_unidad_individual` | 4 | 44.4 | 2 |
-| 116 | core | `customer_insights_design` | 4 | 44.4 | 2 |
-| 117 | core | `proteccion_organizacion_matriz_experimentos` | 5 | 44.4 | 2 |
-| 118 | quality | `analisis_variacion_desempeno_servicio` | 5 | 44.4 | 2 |
-| 119 | core | `optimizacion_embudo_get_customers` | 5 | 44.4 | 3 |
-| 120 | quality | `rol_black_belt_six_sigma` | 6 | 44.4 | 3 |
-| 121 | core | `genchi_gembutsu_salir_del_edificio` | 6 | 44.4 | 4 |
-| 122 | quality | `lean_six_sigma_roadmap` | 5 | 44.4 | 3 |
-| 123 | core | `gates_tempranos_flexibles` | 4 | 44.4 | 2 |
-| 124 | environmental | `eficiencia_energetica_almacenes` | 4 | 44.4 | 2 |
-| 125 | core | `transparencia_facturacion` | 4 | 44.4 | 2 |
-| 126 | franquicias | `venta_primer_franquiciado` | 4 | 44.4 | 2 |
-| 127 | core | `requirements_management_plan` | 5 | 44.4 | 3 |
-| 128 | environmental | `metricas_impacto_ambiental` | 5 | 44.4 | 2 |
-| 129 | core | `experiment_library` | 5 | 44.4 | 3 |
-| 130 | core | `sintesis_hipotesis_modelo_negocio` | 5 | 44.3 | 3 |
-| 131 | exportacion | `metodos_de_pago_internacional` | 4 | 44.3 | 2 |
-| 132 | quality | `consejo_ejecutivo_calidad` | 5 | 44.3 | 2 |
-| 133 | quality | `establecer_proyecto_y_metas_diseno` | 5 | 44.3 | 2 |
-| 134 | health_safety | `enfoque_find_and_fix` | 4 | 44.3 | 2 |
-| 135 | seguridad_digital | `que_es_cui` | 4 | 44.3 | 2 |
-| 136 | core | `analisis_flujo_de_valor` | 6 | 44.3 | 4 |
-| 137 | core | `gate_0_evaluacion_wishlist` | 5 | 44.3 | 3 |
-| 138 | quality | `concepto_supuestos_erroneos_sobre_calidad` | 4 | 44.3 | 2 |
+| 115 | quality | `falacia_recompensa_loteria` | 6 | 44.4 | 3 |
+| 116 | franquicias | `franquicia_unidad_individual` | 4 | 44.4 | 2 |
+| 117 | core | `customer_insights_design` | 4 | 44.4 | 2 |
+| 118 | core | `proteccion_organizacion_matriz_experimentos` | 5 | 44.4 | 2 |
+| 119 | quality | `analisis_variacion_desempeno_servicio` | 5 | 44.4 | 2 |
+| 120 | core | `optimizacion_embudo_get_customers` | 5 | 44.4 | 3 |
+| 121 | quality | `rol_black_belt_six_sigma` | 6 | 44.4 | 3 |
+| 122 | core | `genchi_gembutsu_salir_del_edificio` | 6 | 44.4 | 4 |
+| 123 | quality | `lean_six_sigma_roadmap` | 5 | 44.4 | 3 |
+| 124 | core | `gates_tempranos_flexibles` | 4 | 44.4 | 2 |
+| 125 | environmental | `eficiencia_energetica_almacenes` | 4 | 44.4 | 2 |
+| 126 | core | `transparencia_facturacion` | 4 | 44.4 | 2 |
+| 127 | franquicias | `venta_primer_franquiciado` | 4 | 44.4 | 2 |
+| 128 | core | `requirements_management_plan` | 5 | 44.4 | 3 |
+| 129 | environmental | `metricas_impacto_ambiental` | 5 | 44.4 | 2 |
+| 130 | core | `experiment_library` | 5 | 44.4 | 3 |
+| 131 | core | `sintesis_hipotesis_modelo_negocio` | 5 | 44.3 | 3 |
+| 132 | exportacion | `metodos_de_pago_internacional` | 4 | 44.3 | 2 |
+| 133 | quality | `consejo_ejecutivo_calidad` | 5 | 44.3 | 2 |
+| 134 | quality | `establecer_proyecto_y_metas_diseno` | 5 | 44.3 | 2 |
+| 135 | health_safety | `enfoque_find_and_fix` | 4 | 44.3 | 2 |
+| 136 | seguridad_digital | `que_es_cui` | 4 | 44.3 | 2 |
+| 137 | core | `analisis_flujo_de_valor` | 6 | 44.3 | 4 |
+| 138 | core | `gate_0_evaluacion_wishlist` | 5 | 44.3 | 3 |
 | 139 | core | `problem_recognition_scale` | 4 | 44.3 | 2 |
 | 140 | health_safety | `new_view_vs_old_view_de_error_humano` | 5 | 44.3 | 3 |
 | 141 | exportacion | `documentacion_exportacion` | 6 | 44.3 | 4 |
@@ -248,15 +248,15 @@ Nodos evaluados por bloques (4 pasos o mas): **2156**. Los de menos dan **NO APL
 | 167 | quality | `secuencia_universal_para_el_breakthrough` | 6 | 44.2 | 4 |
 | 168 | health_safety | `sesgo_retrospectivo` | 4 | 44.2 | 2 |
 | 169 | health_safety | `reporte_casi_accidentes` | 4 | 44.2 | 2 |
-| 170 | exportacion | `international_partner_search` | 6 | 44.2 | 2 |
-| 171 | environmental | `canales_comunicacion_estrategicos` | 4 | 44.2 | 2 |
-| 172 | core | `gestion_de_las_cuatro_fases_del_negocio` | 4 | 44.2 | 2 |
-| 173 | franquicias | `estrategia_redes_sociales_franquicias` | 5 | 44.2 | 2 |
-| 174 | core | `mecanica_conversion_deuda` | 4 | 44.2 | 2 |
-| 175 | risk_management | `anota_por_que_decidiste_asi` | 4 | 44.2 | 2 |
-| 176 | environmental | `sistema_gestion_cumplimiento_ambiental` | 4 | 44.2 | 2 |
-| 177 | franquicias | `metodologias_analisis_territorio` | 5 | 44.2 | 3 |
-| 178 | quality | `juran_transformation_roadmap` | 5 | 44.1 | 3 |
+| 170 | quality | `manejo_problemas` | 5 | 44.2 | 3 |
+| 171 | exportacion | `international_partner_search` | 6 | 44.2 | 2 |
+| 172 | environmental | `canales_comunicacion_estrategicos` | 4 | 44.2 | 2 |
+| 173 | core | `gestion_de_las_cuatro_fases_del_negocio` | 4 | 44.2 | 2 |
+| 174 | franquicias | `estrategia_redes_sociales_franquicias` | 5 | 44.2 | 2 |
+| 175 | core | `mecanica_conversion_deuda` | 4 | 44.2 | 2 |
+| 176 | risk_management | `anota_por_que_decidiste_asi` | 4 | 44.2 | 2 |
+| 177 | environmental | `sistema_gestion_cumplimiento_ambiental` | 4 | 44.2 | 2 |
+| 178 | franquicias | `metodologias_analisis_territorio` | 5 | 44.2 | 3 |
 | 179 | core | `global_vs_local_maximum` | 4 | 44.1 | 2 |
 | 180 | core | `activity_resource_requirements` | 4 | 44.1 | 2 |
 | 181 | core | `calidad_de_ejecucion_proceso_innovacion` | 5 | 44.1 | 2 |

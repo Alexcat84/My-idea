@@ -97,6 +97,10 @@ def main():
     p.add_argument("--nomina", required=True)
     p.add_argument("--fijado", required=True)
     p.add_argument("--colisiones", required=True)
+    p.add_argument("--abre", action="append", default=[],
+                   help="parrafo que va JUSTO DEBAJO del encabezado, repetible")
+    p.add_argument("--cotejo", action="append", default=[],
+                   help="salida del cotejo del insumo contra los nodos, repetible")
     p.add_argument("--nota", action="append", default=[])
     p.add_argument("--simular", action="store_true")
     a = p.parse_args()
@@ -159,7 +163,14 @@ def main():
     d["desde"] = busca(nom, r"puestos de hoy del tramo \d+: del (\d+)", "primer puesto", fallos)
     d["hasta"] = busca(nom, r"puestos de hoy del tramo \d+: del \d+ al (\d+)", "ultimo puesto", fallos)
 
-    t1 = recorta(tal, "--- TABLA 1: LOS TRES LOTES, CON SUS PIEZAS ---", "--- TABLA 2", "tabla 1", fallos)
+    # CORRECCION DECLARADA (20 ago 2026, vuelta 62): este recorte buscaba la
+    # marca ENTERA de la TABLA 1, y esa marca tallaba la cuenta de lotes a mano
+    # en el tallador ("LOS TRES LOTES"). Al corregir alli el rotulo, porque el
+    # tramo 6 tiene DOS lotes, el recorte dejaba de casar y este registro caia
+    # en ROJO sin escribir. EL TEXTO VIEJO SE QUEDA ESCRITO Y DECIA:
+    #     t1 = recorta(tal, "--- TABLA 1: LOS TRES LOTES, CON SUS PIEZAS ---", ...)
+    # Ahora se busca por el PREFIJO de la marca, que no lleva la cuenta dentro.
+    t1 = recorta(tal, "--- TABLA 1:", "--- TABLA 2", "tabla 1", fallos)
     t2 = recorta(tal, "--- TABLA 2: LA FORMA DEL VEREDICTO, CONTADA DE LOS MOTIVOS SELLADOS ---",
                  "--- TABLA 3", "tabla 2", fallos)
     t3 = recorta(tal, "--- TABLA 3: ACTO A ACTO, SUPERVIVIENTE Y ABSORBIDO ---",
@@ -168,9 +179,20 @@ def main():
                  "\n  actos tallados:", "tabla 4", fallos)
 
     # LA SECCION DE PERDIDAS, OPCIONAL Y CON SU FALTA DECLARADA.
-    if per and "--- TABLA: LAS PERDIDAS NOMBRADAS" in per:
-        marca = per[per.find("--- TABLA: LAS PERDIDAS NOMBRADAS"):].split("\n", 1)[0]
-        tp = recorta(per, marca, "\n  actos con perdida:", "tabla de perdidas", fallos)
+    # CORRECCION DECLARADA (20 ago 2026, vuelta 62): esta rama solo conocia la
+    # marca y el pie del tallador VIEJO de perdidas. El tallador nuevo
+    # (tallar_perdidas_del_plan.py, contrato CAMPO PROPIO v1) abre su tabla con
+    # otra marca y la cierra con otro pie, asi que sin esto el registro habria
+    # tomado la rama de NO EMITIO TABLA sobre una salida que SI la emite, o sea
+    # habria publicado una falta que no existe. EL TEXTO VIEJO SE QUEDA Y DECIA
+    # que la marca era "--- TABLA: LAS PERDIDAS NOMBRADAS" y el pie la linea de
+    # los actos con perdida. SE RECONOCEN LAS DOS, la vieja primero.
+    MARCAS_PERD = (("--- TABLA: LAS PERDIDAS NOMBRADAS", chr(10) + "  actos con perdida:"),
+                   ("--- LA TABLA ---", chr(10) + "  planes leidos"))
+    marca_perd = next(((m, pie) for m, pie in MARCAS_PERD if per and m in per), None)
+    if marca_perd:
+        marca = per[per.find(marca_perd[0]):].split(chr(10), 1)[0]
+        tp = recorta(per, marca, marca_perd[1], "tabla de perdidas", fallos)
         bloque_perd = ("**Talladas de los planes sellados** con el tallador de perdidas "
                        "([`../loop/%s`](../loop/%s)), que **lee la especie del propio plan y no "
                        "tiene rama por defecto**.\n\n%s" %
@@ -186,6 +208,93 @@ def main():
                                                 os.path.basename(a.perdidas), motivos))
     else:
         bloque_perd = "**No se paso fichero de perdidas a este registro.**"
+
+    # ==================================================================
+    # CORRECCION DECLARADA (20 ago 2026, vuelta 62). TRES BLOQUES DE LA
+    # PLANTILLA DE ABAJO ESTABAN TALLADOS A MANO CON LAS CIFRAS DEL TRAMO 5, y
+    # en un instrumento de NOMBRE ESTABLE eso publica cifras falsas en el tramo
+    # siguiente sin que nadie las teclee ese dia. EL TEXTO VIEJO SE QUEDA
+    # ESCRITO AQUI, que es lo que hace auditable la correccion:
+    #
+    #   a) EL BLOQUE DEL COTEJO DEL INSUMO decia, literal, "50 actos mirados, 34
+    #      vivos, 16 ya fundidos, DESCALCES 0" y apuntaba a
+    #      SALIDA_V60_COTEJO_INSUMO.txt. En el tramo 6 no hay 50 actos: hay 21.
+    #      AHORA SE LEE DE LOS FICHEROS QUE ENTRAN POR --cotejo, y si no entra
+    #      ninguno el bloque DECLARA su falta en vez de inventar.
+    #   b) LA FILA DEL TRAMO decia "0 / 50" en la columna de apertura. AHORA EL
+    #      TAMANO SE MIDE, sumando los fundidos y los vivos de la salida del
+    #      --fijado.
+    #   c) LA NOTA DE LA COLUMNA DE APERTURA afirmaba que el lote A ya estaba
+    #      fundido al tomarla, que es cierto en un tramo repartido entre DOS
+    #      vueltas y FALSO en uno que abre y cierra en la misma. AHORA SE MIDE,
+    #      leyendo las vueltas de los planes que el tallador hallo.
+    #
+    # LAS CIFRAS DE LAS CUATRO TABLAS NO SE TOCAN EN ESTA CORRECCION.
+    # ==================================================================
+    # SEXTA CORRECCION DECLARADA (20 ago 2026, vuelta 62): el registro no tenia
+    # forma de ABRIR con una declaracion. --nota anade al FINAL, y el encargo de
+    # esta vuelta pide que el registro del tramo 6 ABRA declarando TRAMO FINAL
+    # POR AGOTAMIENTO. --abre pone el parrafo justo debajo del encabezado; sin
+    # el argumento el registro sale exactamente como antes.
+    d["apertura"] = (chr(10) + chr(10)).join(a.abre) + (chr(10) if a.abre else "")
+    d["tam"] = str(int(d["fund"]) + int(d["vivos_tramo"]))
+    if d["vivos_tramo"] != "0":
+        d["vivos_tramo"] = "%s, los %s DECLARADOS" % (d["vivos_tramo"], d["vivos_tramo"])
+
+    planes = re.findall(r"\(PLAN_V(\d+)_[^)]*\.json\)", tal)
+    vueltas_de_los_planes = sorted({int(x) for x in planes})
+    prefijos = sorted({re.sub(r"[A-Z]\.json$", "", x) for x in
+                       re.findall(r"\((PLAN_V\d+_[^)]*\.json)\)", tal)})
+    d["comando_tallador"] = ("python scripts/loop/tallar_planes_del_tramo.py --vuelta %d %s"
+                             % (a.vuelta, " ".join("--prefijo " + x for x in prefijos)))
+    if len(prefijos) > 1:
+        d["fusiones_falsas"] = "solo una parte de las fusiones y no las %s" % d["fund"]
+    else:
+        d["fusiones_falsas"] = ("lo mismo que publica, porque los planes de este tramo caben"
+                                " en UN solo prefijo y ahi la repetibilidad no cambia nada")
+    d["de_las_vueltas"] = (" DE LAS %d VUELTAS" % len(vueltas_de_los_planes)
+                           if len(vueltas_de_los_planes) > 1 else " DE ESTA VUELTA")
+
+    if len(vueltas_de_los_planes) > 1:
+        d["nota_apertura"] = (chr(10).join([
+            "> **LA COLUMNA DE APERTURA ES LA DE LA VUELTA QUE CIERRA EL TRAMO, no la de la",
+            "> que lo abrio, y se dice para que nadie lea de ahi el efecto del tramo entero.**",
+            "> Los lotes de las vueltas anteriores (%s) ya estaban fundidos cuando se tomo. El",
+            "> efecto del TRAMO COMPLETO se lee de los `%s` actos fundidos de la ultima fila,",
+            "> que es la cifra que si cubre las %d vueltas.",
+        ]) % (", ".join(str(x) for x in vueltas_de_los_planes[:-1]), d["fund"],
+              len(vueltas_de_los_planes)))
+    else:
+        d["nota_apertura"] = (chr(10).join([
+            "> **EL TRAMO ABRE Y CIERRA DENTRO DE ESTA MISMA VUELTA, medido y no supuesto: los",
+            "> %d planes sellados que el tallador hallo son TODOS de la vuelta %d.** Por eso la",
+            "> columna de apertura SI precede al tramo entero: cuando se tomo no habia ni un",
+            "> acto de este tramo fundido, y la diferencia entre las dos columnas es el efecto",
+            "> del tramo completo.",
+        ]) % (len(planes), vueltas_de_los_planes[0]))
+
+    if a.cotejo:
+        piezas = []
+        for ruta in a.cotejo:
+            texto = leer(ruta, fallos)
+            resumen = busca(texto, r"(RESUMEN: actos mirados .*)", "resumen del cotejo", fallos)
+            piezas.append("> **%s**" % resumen.strip() + chr(10) +
+                          "> ([`../loop/%s`](../loop/%s))"
+                          % (os.path.basename(ruta), os.path.basename(ruta)))
+        d["bloque_cotejo"] = (chr(10).join([
+            "> **EL COTEJO DEL INSUMO, CORRIDO ANTES DE ESCRIBIR UNA LINEA DE CADA PLAN:** el",
+            "> insumo se midio y se FIJO al abrir el tramo y no se re-mide, pero entre aquella",
+            "> foto y hoy puede haberse fundido un lote del mismo tramo, y una fusion CAMBIA los",
+            "> pasos del superviviente. `scripts/loop/vuelta60_cotejo_insumo.py` NO re-mide:",
+            "> COTEJA contra los nodos de hoy y dice en que actos la foto dejo de calzar.",
+            ">",
+        ]) + chr(10) + (chr(10) + ">" + chr(10)).join(piezas))
+    else:
+        d["bloque_cotejo"] = chr(10).join([
+            "> **A ESTE REGISTRO NO SE LE PASO NINGUNA SALIDA DE COTEJO DEL INSUMO, y se dice",
+            "> en vez de callarse.** Sin ella este registro no puede afirmar que la foto fijada",
+            "> siguiera calzando con los nodos al escribir los planes.",
+        ])
 
     hoy = datetime.date.today()
     d["fecha"] = "%d %s %d" % (hoy.day, MESES[hoy.month - 1], hoy.year)
@@ -216,6 +325,8 @@ def main():
 
 %(enc)s
 
+%(apertura)s
+
 **LA VARA QUE FIJA EL TRAMO ES LA MISMA DESDE LA VUELTA 48**, escrita en la cabecera del registro
 del tramo 1: *los CINCUENTA primeros actos CERRADOS de la NOMINA RE-MEDIDA AL ABRIRLO*. **EL INSUMO
 DE ESTE TRAMO SE MIDIO Y SE FIJO AL ABRIRLO Y NO SE RE-MIDIO NI UNA VEZ DESPUES**, que es lo que el
@@ -226,12 +337,7 @@ encargo mandaba
 sin huecos, medido y no tecleado. **El tramo %(tramo)s son los puestos %(desde)s a %(hasta)s de
 hoy.** **Solape con los tramos anteriores: CERO.**
 
-> **EL COTEJO QUE ESTE TRAMO ESTRENA, y nace de que el tramo se repartio entre DOS vueltas:** entre
-> la foto fijada del insumo y la ejecucion de los lotes B y C hubo una fusion de por medio (la del
-> lote A), y una fusion CAMBIA los pasos del superviviente. Antes de escribir una linea del plan del
-> lote B se corrio `scripts/loop/vuelta60_cotejo_insumo.py`, que NO re-mide el insumo sino que lo
-> COTEJA contra los nodos de hoy: **50 actos mirados, 34 vivos, 16 ya fundidos, DESCALCES 0**
-> ([`../loop/SALIDA_V60_COTEJO_INSUMO.txt`](../loop/SALIDA_V60_COTEJO_INSUMO.txt)).
+%(bloque_cotejo)s
 
 **LAS COLISIONES ESPERADAS DEL TRAMO ENTERO, medidas ANTES de tocar un nodo** sobre el archivo
 entero y por par resuelto
@@ -247,21 +353,18 @@ tramo NO volteo ningun veredicto y el marcador queda identico al abrir y al cerr
 | grafo: vivos / deprecados / enlaces | %(viv_a)s / %(dep_a)s / %(enl_a)s | **%(viv_c)s / %(dep_c)s / %(enl_c)s** |
 | retrato: colapsos / pares distintos | %(col_a)s / %(par_a)s | **%(col_c)s / %(par_c)s** |
 | actos (componentes) / `CERRADOS` | %(cmp_a)s / %(cer_a)s | **%(cmp_c)s / %(cer_c)s** |
-| actos del tramo %(tramo)s fundidos / vivos | 0 / 50 | **%(fund)s / %(vivos_tramo)s, los %(vivos_tramo)s DECLARADOS** |
+| actos del tramo %(tramo)s fundidos / vivos | 0 / %(tam)s | **%(fund)s / %(vivos_tramo)s** |
 
-> **LA COLUMNA DE APERTURA ES LA DE LA VUELTA QUE CIERRA EL TRAMO, no la de la que lo abrio, y se
-> dice para que nadie lea de ahi el efecto del tramo entero.** El lote A ya estaba fundido cuando se
-> tomo. El efecto del TRAMO COMPLETO se lee de los `%(fund)s` actos fundidos de la ultima fila, que
-> es la cifra que si cubre las dos vueltas.
+%(nota_apertura)s
 
-### EL REPARTO, TALLADO DE LOS PLANES SELLADOS DE LAS DOS VUELTAS
+### EL REPARTO, TALLADO DE LOS PLANES SELLADOS%(de_las_vueltas)s
 
 **Ninguna de estas tablas esta tecleada:** salen enteras de
-`python scripts/loop/tallar_planes_del_tramo.py --vuelta %(vuelta)d --prefijo PLAN_V59_OPU01_LOTE_ --prefijo PLAN_V60_OPU01_LOTE_`
+`%(comando_tallador)s`
 ([`../loop/%(tal)s`](../loop/%(tal)s)), que las cuenta de los planes **SELLADOS** y **cae en ROJO
 con el acto nombrado si un motivo no encaja en ninguna forma conocida**. **`--prefijo` se hizo
 REPETIBLE en esta vuelta justamente para esto**: con un prefijo unico, el registro habria publicado
-**31 fusiones donde hay %(fund)s**, y las cuatro tablas habrian mentido por omision.
+**%(fusiones_falsas)s**, y las cuatro tablas habrian mentido por omision.
 
 %(t1)s
 

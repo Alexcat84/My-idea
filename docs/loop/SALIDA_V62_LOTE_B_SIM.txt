@@ -1,0 +1,329 @@
+==============================================================================
+OP-U-01, TRAMO 6, LOTE B: LOS DIEZ ACTOS QUE QUEDABAN DEL TRAMO EN SU ORDEN IMPRESO (12 a 21), SIN APARTAR NINGUNO. CIERRA EL TRAMO Y CON EL EL UNIVERSO DE OP-U-01, que el acta 61 declaro agotado en veintiuno. Trae el UNICO CHOQUE DE PUERTA del tramo entero, el acto 20, donde la guarda 1B manda contra la vara y contra la razon a la vez . MODO SIMULAR
+plan: docs/loop/PLAN_V62_OPU01_LOTE_B.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3284 vivos, 569 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 12 . sobrevive cinco_suposiciones_erroneas_calidad . absorbe concepto_supuestos_erroneos_sobre_calidad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de concepto_supuestos_erroneos_sobre_calidad al PASO 1 del superviviente
+        inciso VERBATIM: 'entrevistas o encuestas a gerentes'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Revisa cuales de estas suposiciones erroneas estan presentes en como piensas y manejas tu negocio, con entrevistas o encuestas a gerentes
+     del paso 2 de concepto_supuestos_erroneos_sobre_calidad al PASO 2 del superviviente
+        inciso VERBATIM: 'el error no es inevitable, la gente sí se preocupa'
+        nexo (lo unico de cosecha propia): ', y tambien que '
+        paso resultante: Aprende la definición correcta de calidad y como medirla a traves de sus costos, y tambien que el error no es inevitable, la gente sí se preocupa
+  alias del superviviente: ['concepto_supuestos_erroneos_sobre_calidad']
+
+------------------------------------------------------------------------------
+ACTO 13 . sobrevive organizacion_liderazgo_estadistico . absorbe estadistico_competente_organizacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 4 de estadistico_competente_organizacion al PASO 4 del superviviente
+        inciso VERBATIM: 'decisiones de diseño, compras y control de calidad'
+        nexo (lo unico de cosecha propia): ', incluidas las '
+        paso resultante: Asegurate de que esa persona este presente cuando se toman decisiones importantes del negocio, incluidas las decisiones de diseño, compras y control de calidad
+  alias del superviviente: ['estadistico_competente_organizacion']
+
+------------------------------------------------------------------------------
+ACTO 14 . sobrevive sistema_pull_push . absorbe kanban_pull_system
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de kanban_pull_system al PASO 4 del superviviente
+        inciso VERBATIM: 'tarjeta, espacio, contenedor'
+        nexo (lo unico de cosecha propia): ', eligiendo el tipo de senal entre '
+        paso resultante: Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor
+  alias del superviviente: ['pull_vs_push_systems', 'kanban_pull_system']
+
+------------------------------------------------------------------------------
+ACTO 15 . sobrevive manejo_problemas . absorbe cultura_integridad_objetividad_resolucion_problemas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['cultura_integridad_objetividad_resolucion_problemas']
+
+------------------------------------------------------------------------------
+ACTO 16 . sobrevive seminario_de_exito_para_gerencia . absorbe cambio_actitud_gerencial
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['cambio_actitud_gerencial']
+
+------------------------------------------------------------------------------
+ACTO 17 . sobrevive evaluacion_riesgo_calidad_organizacional . absorbe evaluacion_organizacional_calidad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 8 -> 8 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de evaluacion_organizacional_calidad al PASO 3 del superviviente
+        inciso VERBATIM: 'todo tu negocio, un área, una planta o un proceso puntual'
+        nexo (lo unico de cosecha propia): ', que puede ser '
+        paso resultante: Definir el alcance y los criterios de evaluación (enfoque, despliegue, resultados), que puede ser todo tu negocio, un área, una planta o un proceso puntual
+  alias del superviviente: ['evaluacion_organizacional_calidad']
+
+------------------------------------------------------------------------------
+ACTO 18 . sobrevive control_del_proceso_del_proveedor . absorbe planificacion_tecnologica_conjunta
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 9 (anadidos 3) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['planificacion_tecnologica_conjunta']
+
+------------------------------------------------------------------------------
+ACTO 19 . sobrevive respuesta_incidentes_cui . absorbe getting_started_incident_response
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de getting_started_incident_response al PASO 2 del superviviente
+        inciso VERBATIM: 'datos de contacto'
+        nexo (lo unico de cosecha propia): ', con sus '
+        paso resultante: Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro), con sus datos de contacto
+  alias del superviviente: ['getting_started_incident_response']
+
+------------------------------------------------------------------------------
+ACTO 20 . sobrevive mantenimiento_sistema_cui . absorbe getting_started_maintenance
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 1 -> 2 (anadidas 1)
+  alias del superviviente: ['getting_started_maintenance']
+
+------------------------------------------------------------------------------
+ACTO 21 . sobrevive funcion_protect_politica_seguridad . absorbe protect_medidas_tecnicas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 8 -> 8 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['protect_medidas_tecnicas']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 28
+   acceptance_control                                   nodos_siguientes  evaluacion_organizacional_calidad -> evaluacion_riesgo_calidad_organizacional
+   alineacion_estrategica_despliegue                    nodos_previos     evaluacion_organizacional_calidad -> evaluacion_riesgo_calidad_organizacional
+   analisis_causa_raiz_defectos                         nodos_previos     cultura_integridad_objetividad_resolucion_problemas -> manejo_problemas
+   communicate_transparencia                            nodos_previos     protect_medidas_tecnicas -> funcion_protect_politica_seguridad
+   compromiso_gerencial_calidad                         nodos_previos     cambio_actitud_gerencial -> seminario_de_exito_para_gerencia
+   concepto_haciendo_la_calidad_cierta                  nodos_previos     concepto_supuestos_erroneos_sobre_calidad -> cinco_suposiciones_erroneas_calidad
+   constraint_management                                nodos_siguientes  kanban_pull_system -> sistema_pull_push
+   control_minimizacion_datos                           nodos_siguientes  protect_medidas_tecnicas -> funcion_protect_politica_seguridad
+   costo_de_mala_calidad_copq                           nodos_previos     evaluacion_organizacional_calidad -> evaluacion_riesgo_calidad_organizacional
+   definiciones_operacionales                           nodos_siguientes  concepto_supuestos_erroneos_sobre_calidad -> cinco_suposiciones_erroneas_calidad
+   gestion_contrasenas_cui                              nodos_siguientes  getting_started_incident_response -> respuesta_incidentes_cui
+   gestion_contrasenas_cui                              nodos_siguientes  getting_started_maintenance -> mantenimiento_sistema_cui
+   getting_started_media_protection                     nodos_previos     getting_started_maintenance -> mantenimiento_sistema_cui
+   getting_started_risk_assessment                      nodos_previos     getting_started_incident_response -> respuesta_incidentes_cui
+   go_plan_de_accion                                    nodos_previos     protect_medidas_tecnicas -> funcion_protect_politica_seguridad
+   inventory_analysis_lean                              nodos_siguientes  kanban_pull_system -> sistema_pull_push
+   manejo_problemas                                     nodos_siguientes  cultura_integridad_objetividad_resolucion_problemas -> manejo_problemas
+   mapeo_flujo_valor                                    nodos_siguientes  kanban_pull_system -> sistema_pull_push
+   persuasion_directivos_prioridad_cliente              nodos_previos     cambio_actitud_gerencial -> seminario_de_exito_para_gerencia
+   planificacion_cadena_suministro                      nodos_siguientes  planificacion_tecnologica_conjunta -> control_del_proceso_del_proveedor
+   planificacion_economica_conjunta                     nodos_siguientes  planificacion_tecnologica_conjunta -> control_del_proceso_del_proveedor
+   principio_reflexivo_contratacion                     nodos_siguientes  cambio_actitud_gerencial -> seminario_de_exito_para_gerencia
+   rejilla_madurez_gestion_calidad                      nodos_siguientes  cambio_actitud_gerencial -> seminario_de_exito_para_gerencia
+   resolucion_problemas_niveles_supervision             nodos_previos     cultura_integridad_objetividad_resolucion_problemas -> manejo_problemas
+   responsabilidad_personal_en_gestion                  nodos_siguientes  cambio_actitud_gerencial -> seminario_de_exito_para_gerencia
+   sistema_estable_causas_comunes                       nodos_siguientes  estadistico_competente_organizacion -> organizacion_liderazgo_estadistico
+   sistema_pull_push                                    nodos_siguientes  kanban_pull_system -> sistema_pull_push
+   smed_setup_reduction                                 nodos_previos     kanban_pull_system -> sistema_pull_push
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 6
+   costo_pobre_calidad                                  nodos_previos     evaluacion_organizacional_calidad (registro historico)
+   pull_vs_push_systems                                 nodos_siguientes  kanban_pull_system (registro historico)
+   quality_management_maturity_grid                     nodos_siguientes  cambio_actitud_gerencial (registro historico)
+   quality_management_maturity_grid_3                   nodos_siguientes  cambio_actitud_gerencial (registro historico)
+   sistema_estable_deming                               nodos_siguientes  estadistico_competente_organizacion (registro historico)
+   value_stream_mapping_2                               nodos_siguientes  kanban_pull_system (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 3
+   costo_de_mala_calidad_copq                           nodos_previos
+   mapeo_flujo_valor                                    nodos_siguientes
+   planificacion_cadena_suministro                      nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 2
+   manejo_problemas                                     nodos_siguientes
+   sistema_pull_push                                    nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 912   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 907   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 5, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 50 de 50
+guarda D, los 10 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (65 filas)
+ acto de que nodo                                  que          n  a donde va
+   12 concepto_supuestos_erroneos_sobre_calidad    paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Realizar entrevistas o encuestas a gerentes para identificar sus supuestos actuales sobre la calidad.
+   12 concepto_supuestos_erroneos_sobre_calidad    paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Confrontar cada supuesto erróneo con su contraparte correcta (calidad = conformidad con requisitos, es medible, el error no es inevitable, la gente sí
+   12 concepto_supuestos_erroneos_sobre_calidad    paso         3  PASO 5 del superviviente
+        Diseñar sesiones de sensibilización o seminarios para dirección basados en estas correcciones conceptuales.
+   12 concepto_supuestos_erroneos_sobre_calidad    paso         4  PASO 6 del superviviente
+        Usar testimonios de gerentes que ya cambiaron su percepción como agentes de cambio interno.
+   12 concepto_supuestos_erroneos_sobre_calidad    condicion    1  CONDICION 4 del superviviente
+        Cuando existe resistencia cultural o escepticismo directivo hacia los programas de calidad.
+   12 concepto_supuestos_erroneos_sobre_calidad    condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando se inicia un proyecto de transformación de calidad en una organización sin experiencia previa.
+   13 estadistico_competente_organizacion          paso         1  ya lo dice el PASO 2 del superviviente
+        Evaluar si la organización cuenta con personal capacitado en estadística aplicada
+   13 estadistico_competente_organizacion          paso         2  ya lo dice el PASO 1 del superviviente
+        Otorgar autoridad transversal al estadístico para investigar cualquier proceso
+   13 estadistico_competente_organizacion          paso         3  PASO 6 del superviviente
+        Establecer programas de capacitación en pensamiento estadístico para todo el personal
+   13 estadistico_competente_organizacion          paso         4  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Integrar al estadístico en decisiones de diseño, compras y control de calidad
+   13 estadistico_competente_organizacion          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la empresa carece de análisis estadístico riguroso en sus procesos
+   14 kanban_pull_system                           paso         1  ya lo dice el PASO 4 del superviviente
+        Definir puntos de consumo donde se necesita reposición
+   14 kanban_pull_system                           paso         2  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseñar el tipo de señal kanban (tarjeta, espacio, contenedor)
+   14 kanban_pull_system                           paso         3  ya lo dice el PASO 4 del superviviente
+        Establecer niveles de reposición basados en consumo real
+   14 kanban_pull_system                           paso         4  PASO 6 del superviviente
+        Implementar el sistema y capacitar a los operadores
+   14 kanban_pull_system                           paso         5  ya lo dice el PASO 5 del superviviente
+        Monitorear y ajustar los niveles de kanban según variación de demanda
+   14 kanban_pull_system                           condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se busca implementar un sistema pull de producción
+   14 kanban_pull_system                           condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si hay sobreproducción o exceso de transporte en el proceso
+   15 cultura_integridad_objetividad_resolucion_problemas paso         1  ya lo dice el PASO 1 del superviviente
+        Establecer como política que los problemas se discuten abiertamente sin buscar culpables individuales
+   15 cultura_integridad_objetividad_resolucion_problemas paso         2  ya lo dice el PASO 2 del superviviente
+        Dirigir las preguntas y el análisis hacia el proceso o tarea, no hacia la persona
+   15 cultura_integridad_objetividad_resolucion_problemas paso         3  ya lo dice el PASO 1 del superviviente
+        Comunicar que el objetivo es mejorar el sistema, no señalar responsables
+   15 cultura_integridad_objetividad_resolucion_problemas paso         4  PASO 5 del superviviente
+        Dar a los involucrados la oportunidad de mejorar bajo condiciones distintas si el ajuste persona-tarea fue inadecuado
+   15 cultura_integridad_objetividad_resolucion_problemas condicion    1  CONDICION 3 del superviviente
+        Cuando existe un clima de culpa o temor que impide identificar causas reales de los defectos
+   15 cultura_integridad_objetividad_resolucion_problemas condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando los supervisores evitan reportar problemas por miedo a ser señalados
+   16 cambio_actitud_gerencial                     paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar la parte de tu negocio o la persona más abierta a probar algo nuevo para hacer ahí una prueba piloto
+   16 cambio_actitud_gerencial                     paso         2  ya lo dice el PASO 2 del superviviente
+        Acompañar de forma discreta la planificación y puesta en marcha del piloto, sin que tú seas quien protagoniza
+   16 cambio_actitud_gerencial                     paso         3  ya lo dice el PASO 4 del superviviente
+        Una vez logrados resultados, organizar un encuentro donde los protagonistas del piloto cuenten su experiencia directamente a las demás personas involu
+   16 cambio_actitud_gerencial                     paso         4  ya lo dice el PASO 5 del superviviente
+        Cerrar el encuentro pidiendo compromisos explícitos y públicos (firmar, levantar la mano) de quienes participan
+   16 cambio_actitud_gerencial                     paso         5  ya lo dice el PASO 6 del superviviente
+        Repetir el proceso de manera recurrente, reconociendo logros y dando seguimiento
+   16 cambio_actitud_gerencial                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando las personas con las que trabajas son escépticas ante tus recomendaciones directas
+   16 cambio_actitud_gerencial                     condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando necesitas expandir una mejora probada en una parte pequeña de tu negocio a todo el resto
+   17 evaluacion_organizacional_calidad            paso         1  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir el alcance de la evaluación (todo tu negocio, un área, una planta o un proceso puntual)
+   17 evaluacion_organizacional_calidad            paso         2  ya lo dice el PASO 3 del superviviente
+        Revisar el enfoque, el despliegue y los resultados en cada área clave (alineación estratégica, sistema de calidad, medición, procesos, empleados, prov
+   17 evaluacion_organizacional_calidad            paso         3  ya lo dice el PASO 6 del superviviente
+        Recopilar información observando, conversando con las personas involucradas y revisando documentos
+   17 evaluacion_organizacional_calidad            paso         4  ya lo dice el PASO 7 del superviviente
+        Anotar fortalezas y debilidades con el nivel de detalle necesario en cada dimensión
+   17 evaluacion_organizacional_calidad            paso         5  ya lo dice el PASO 8 del superviviente
+        Integrar lo que encontraste en un análisis FODA de tu negocio
+   17 evaluacion_organizacional_calidad            condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando decides empezar una transformación hacia la calidad en tu negocio
+   17 evaluacion_organizacional_calidad            condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si necesitas establecer un punto de partida claro sobre cómo está tu negocio en calidad
+   18 planificacion_tecnologica_conjunta           paso         1  PASO 7 del superviviente
+        Acordar el significado exacto de los requisitos de desempeño en las especificaciones
+   18 planificacion_tecnologica_conjunta           paso         2  PASO 8 del superviviente
+        Cuantificar requisitos de confiabilidad y mantenibilidad, evitando errores como aplicar la regla de multiplicación incorrectamente
+   18 planificacion_tecnologica_conjunta           paso         3  ya lo dice el PASO 1 del superviviente
+        Solicitar al proveedor un plan de control de proceso con técnicas de SPC
+   18 planificacion_tecnologica_conjunta           paso         4  ya lo dice el PASO 4 del superviviente
+        Clasificar la seriedad de los defectos para enfocar esfuerzos
+   18 planificacion_tecnologica_conjunta           paso         5  ya lo dice el PASO 6 del superviviente
+        Estandarizar métodos y condiciones de prueba entre comprador y proveedor
+   18 planificacion_tecnologica_conjunta           paso         6  PASO 9 del superviviente
+        Establecer sistema de trazabilidad de lotes
+   18 planificacion_tecnologica_conjunta           condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se establece una relación de partnership técnico con un proveedor clave
+   19 getting_started_incident_response            paso         1  ya lo dice el PASO 1 del superviviente
+        Designar un responsable (business champion) del plan de respuesta a incidentes.
+   19 getting_started_incident_response            paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Elaborar una lista de contactos clave con roles, responsabilidades y datos de contacto.
+   19 getting_started_incident_response            paso         3  PASO 5 del superviviente
+        Definir qué, cuándo y cómo reportar incidentes según leyes, regulaciones y contratos.
+   19 getting_started_incident_response            paso         4  ya lo dice el PASO 3 del superviviente
+        Incluir requisitos específicos de reporte exigidos por contratos federales.
+   19 getting_started_incident_response            condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando la empresa aún no cuenta con un procedimiento formal ante brechas de seguridad.
+   20 getting_started_maintenance                  paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar herramientas usadas para diagnóstico y reparación de sistemas.
+   20 getting_started_maintenance                  paso         2  ya lo dice el PASO 2 del superviviente
+        Establecer un calendario de mantenimiento regular y verificar su cumplimiento.
+   20 getting_started_maintenance                  paso         3  ya lo dice el PASO 3 del superviviente
+        Habilitar actualizaciones automáticas cuando sea posible.
+   20 getting_started_maintenance                  paso         4  ya lo dice el PASO 4 del superviviente
+        Planificar reemplazo de hardware/software próximos a fin de vida útil.
+   20 getting_started_maintenance                  paso         5  ya lo dice el PASO 5 del superviviente
+        Exigir autenticación multifactor en sesiones de mantenimiento remoto y terminarlas al finalizar.
+   20 getting_started_maintenance                  paso         6  PASO 6 del superviviente
+        Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones.
+   20 getting_started_maintenance                  condicion    1  CONDICION 2 del superviviente
+        Cuando los sistemas que procesan CUI requieren actualizaciones o reparaciones periódicas.
+   21 protect_medidas_tecnicas                     paso         1  ya lo dice el PASO 2 del superviviente
+        Implementar controles de acceso para redes, computadoras y dispositivos
+   21 protect_medidas_tecnicas                     paso         2  ya lo dice el PASO 3 del superviviente
+        Instalar y mantener software de seguridad actualizado
+   21 protect_medidas_tecnicas                     paso         3  ya lo dice el PASO 4 del superviviente
+        Cifrar datos sensibles tanto en reposo como en tránsito
+   21 protect_medidas_tecnicas                     paso         4  ya lo dice el PASO 5 del superviviente
+        Establecer rutina de respaldos regulares de datos
+   21 protect_medidas_tecnicas                     paso         5  ya lo dice el PASO 6 del superviviente
+        Automatizar actualizaciones de seguridad cuando sea posible
+   21 protect_medidas_tecnicas                     paso         6  ya lo dice el PASO 7 del superviviente
+        Redactar políticas formales de disposición segura de datos y equipos
+   21 protect_medidas_tecnicas                     condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando se requiere implementar salvaguardas técnicas concretas
+   21 protect_medidas_tecnicas                     condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si la organización maneja datos sensibles sin protecciones técnicas actuales
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 10
+  nodos implicados    : 20
+  nodos que MUEREN    : 10
+  piezas repartidas   : 65 (13 viajan enteras, 46 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.

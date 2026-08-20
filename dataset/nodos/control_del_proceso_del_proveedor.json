@@ -11,13 +11,17 @@
     "Definir tareas especiales y buenas prácticas de manufactura requeridas",
     "Clasificar la seriedad de los defectos para priorizar esfuerzos",
     "Establecer estándares sensoriales físicos cuando se requiera juicio humano",
-    "Estandarizar métodos y condiciones de prueba entre proveedor y comprador"
+    "Estandarizar métodos y condiciones de prueba entre proveedor y comprador",
+    "Acordar el significado exacto de los requisitos de desempeño en las especificaciones",
+    "Cuantificar requisitos de confiabilidad y mantenibilidad, evitando errores como aplicar la regla de multiplicación incorrectamente",
+    "Establecer sistema de trazabilidad de lotes"
   ],
   "entregable_esperado": "Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de SPC, clasificación de defectos y métodos de prueba estandarizados",
   "nodos_previos": [
     "planificacion_cadena_suministro",
     "dmadv_design_for_six_sigma",
-    "design_for_six_sigma_dfss"
+    "design_for_six_sigma_dfss",
+    "planificacion_economica_conjunta"
   ],
   "nodos_siguientes": [
     "certificacion_de_proveedores",
@@ -29,5 +33,15 @@
     "Cuando se inicia una relación contractual con un nuevo proveedor de manufactura",
     "Cuando existen discrepancias recurrentes en mediciones entre proveedor y comprador"
   ],
-  "etiqueta_arbol": "Exige un Plan de Control"
+  "etiqueta_arbol": "Exige un Plan de Control",
+  "ids_alias": [
+    "planificacion_tecnologica_conjunta"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "planificacion_tecnologica_conjunta",
+      "titulo": "Planificación Tecnológica Conjunta con Proveedores",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

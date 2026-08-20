@@ -2775,3 +2775,154 @@ pregunta 3.
 
 **NINGUNA DE LAS SIETE ESTRENA DOCTRINA**, y el acta lo dice en su seccion 8 (linea **15953**, leida
 hoy): *Doctrina nueva: NO.*
+
+
+---
+
+## `OP-U-01`, TRAMO 6: EL REGISTRO DEL CIERRE (20 ago 2026, vuelta 62)
+
+> **TRAMO FINAL POR AGOTAMIENTO: VEINTIUNO, NO CINCUENTA. Y CON EL, EL UNIVERSO DE `OP-U-01` QUEDA AGOTADO.**
+> Este tramo no tiene cincuenta actos porque **ya no quedaban cincuenta**: fuera de los tramos 1 a 5
+> solo quedaban **VEINTIUNO** actos `CERRADOS`, y el abridor **se los llevo todos**. **Agotarse no es
+> truncar, y la diferencia es medible: truncar deja actos detras del corte y aqui no queda ninguno**
+> (21 tomados de 21, comprobado por el abridor, por la nomina de la 48 y por la corrida propia del
+> auditor, tres caminos).
+
+> **LA VARA NO SE ESTRENO PARA ESTO: SE LEYO ENTERA.** Que un tramo corto por agotamiento SEA un
+> tramo esta **adjudicado por el acta de la vuelta 61** (`D1` y pregunta 1, registradas al final de
+> esta misma pagina): la vara de la linea **360** define un **PREFIJO CON TOPE de cincuenta, no un
+> minimo**, y **el prefijo de una nomina de veintiuno son los veintiuno**. **Ninguna regla nueva se
+> estrena aqui.**
+
+
+**LA VARA QUE FIJA EL TRAMO ES LA MISMA DESDE LA VUELTA 48**, escrita en la cabecera del registro
+del tramo 1: *los CINCUENTA primeros actos CERRADOS de la NOMINA RE-MEDIDA AL ABRIRLO*. **EL INSUMO
+DE ESTE TRAMO SE MIDIO Y SE FIJO AL ABRIRLO Y NO SE RE-MIDIO NI UNA VEZ DESPUES**, que es lo que el
+encargo mandaba
+([`../loop/SALIDA_V61_TRAMO6_ABIERTO.txt`](../loop/SALIDA_V61_TRAMO6_ABIERTO.txt)).
+
+**GUARDA DEL PREFIJO:** los vivos de los tramos anteriores son **29** y ocupan sus puestos
+sin huecos, medido y no tecleado. **El tramo 6 son los puestos 30 a 50 de
+hoy.** **Solape con los tramos anteriores: CERO.**
+
+> **EL COTEJO DEL INSUMO, CORRIDO ANTES DE ESCRIBIR UNA LINEA DE CADA PLAN:** el
+> insumo se midio y se FIJO al abrir el tramo y no se re-mide, pero entre aquella
+> foto y hoy puede haberse fundido un lote del mismo tramo, y una fusion CAMBIA los
+> pasos del superviviente. `scripts/loop/vuelta60_cotejo_insumo.py` NO re-mide:
+> COTEJA contra los nodos de hoy y dice en que actos la foto dejo de calzar.
+>
+> **RESUMEN: actos mirados 21 | VIVOS 21 | ya fundidos 0 | DESCALCES 0**
+> ([`../loop/SALIDA_V62_COTEJO_INSUMO.txt`](../loop/SALIDA_V62_COTEJO_INSUMO.txt))
+>
+> **RESUMEN: actos mirados 10 | VIVOS 10 | ya fundidos 0 | DESCALCES 0**
+> ([`../loop/SALIDA_V62_COTEJO_INSUMO_B.txt`](../loop/SALIDA_V62_COTEJO_INSUMO_B.txt))
+
+**LAS COLISIONES ESPERADAS DEL TRAMO ENTERO, medidas ANTES de tocar un nodo** sobre el archivo
+entero y por par resuelto
+([`../loop/SALIDA_V61_COLISIONES_ESPERADAS_TRAMO6.txt`](../loop/SALIDA_V61_COLISIONES_ESPERADAS_TRAMO6.txt)):
+**42 combinaciones simuladas y 0 que fabriquen colision.** Ni una. **Por eso este
+tramo NO volteo ningun veredicto y el marcador queda identico al abrir y al cerrar.**
+
+### EL ESTADO, MEDIDO AL ABRIR LA VUELTA QUE CIERRA EL TRAMO Y RECOMPUTADO AL CERRARLA
+
+| | **apertura de la vuelta 62** | **cierre, RECOMPUTADO** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 551 / 72 / 5 / 2.760 | **551 / 72 / 5 / 2.760** |
+| grafo: vivos / deprecados / enlaces | 3.295 / 558 / 17.449 | **3.274 / 579 / 17.486** |
+| retrato: colapsos / pares distintos | 254 / 297 | **275 / 276** |
+| actos (componentes) / `CERRADOS` | 103 / 50 | **82 / 29** |
+| actos del tramo 6 fundidos / vivos | 0 / 21 | **21 / 0** |
+
+> **EL TRAMO ABRE Y CIERRA DENTRO DE ESTA MISMA VUELTA, medido y no supuesto: los
+> 2 planes sellados que el tallador hallo son TODOS de la vuelta 62.** Por eso la
+> columna de apertura SI precede al tramo entero: cuando se tomo no habia ni un
+> acto de este tramo fundido, y la diferencia entre las dos columnas es el efecto
+> del tramo completo.
+
+### EL REPARTO, TALLADO DE LOS PLANES SELLADOS DE ESTA VUELTA
+
+**Ninguna de estas tablas esta tecleada:** salen enteras de
+`python scripts/loop/tallar_planes_del_tramo.py --vuelta 62 --prefijo PLAN_V62_OPU01_LOTE_`
+([`../loop/SALIDA_V62_TALLAR_PLANES.txt`](../loop/SALIDA_V62_TALLAR_PLANES.txt)), que las cuenta de los planes **SELLADOS** y **cae en ROJO
+con el acto nombrado si un motivo no encaja en ninguna forma conocida**. **`--prefijo` se hizo
+REPETIBLE en esta vuelta justamente para esto**: con un prefijo unico, el registro habria publicado
+**lo mismo que publica, porque los planes de este tramo caben en UN solo prefijo y ahi la repetibilidad no cambia nada**, y las cuatro tablas habrian mentido por omision.
+
+ LOS 2 LOTES, CON SUS PIEZAS ---
+
+| lote | actos | fundidos | mueren | piezas | enteras | ya dichas | de `INCISO` | perdidas nombradas |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| **A** | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 | **11** | **11** | **69** | 14 | 45 | **10** | **12** |
+| **B** | 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 | **10** | **10** | **65** | 13 | 46 | **6** | **6** |
+| **los 2** | | **21** | **21** | **134** | **27** | **91** | **16** | **18** |
+
+| la forma, leida del motivo sellado | cuantos | los actos |
+|---|---:|---|
+| **UNA SOLA VARA de contenido no empatada, y BASTA** | **11** | 1, 3, 5, 6, 10, 12, 14, 16, 18, 19, 21 |
+| **TODAS LAS VARAS de contenido de acuerdo** | **5** | 4, 8, 11, 13, 17 |
+| **EL CONTENIDO EMPATA y EL CABLEADO DECIDE SOLO** | **4** | 2, 7, 9, 15 |
+| **LA PUERTA SOBREVIVE, con el choque registrado** | **1** | 20 |
+| **suma** | **21** | |
+
+| acto | lote | sobrevive | absorbe | piezas | enteras | ya dichas | `INCISO` |
+|---:|:---:|---|---|---:|---:|---:|---:|
+| **1** | A | `gestion_miedo_reportes` | `administracion_sin_miedo` | 6 | 0 | 6 | 0 |
+| **2** | A | `contacto_con_el_cliente` | `contacto_con_el_cliente_2` | 6 | 2 | 2 | 2 |
+| **3** | A | `analisis_de_sistemas_de_medicion_msa` | `errores_de_medicion` | 7 | 0 | 6 | 1 |
+| **4** | A | `definicion_problema_moms_2` | `definicion_problema_moms` | 5 | 0 | 5 | 0 |
+| **5** | A | `planificacion_gobierno_organizaciones_familiares` | `gobierno_corporativo_juntas_directivas` | 8 | 0 | 7 | 1 |
+| **6** | A | `falacia_recompensa_loteria` | `sistemas_recompensa_aleatorios` | 6 | 3 | 3 | 0 |
+| **7** | A | `riesgos_consenso_inspeccion` | `comparacion_inspectores_independientes` | 7 | 2 | 5 | 0 |
+| **8** | A | `revision_progreso` | `revision_progreso_breakthrough` | 5 | 3 | 1 | 1 |
+| **9** | A | `rol_tactico_estrategico_oficina` | `gestion_estrategica_de_calidad_sqm` | 6 | 1 | 5 | 0 |
+| **10** | A | `roadmap_despliegue_lean_six_sigma` | `juran_transformation_roadmap` | 7 | 1 | 2 | 4 |
+| **11** | A | `orgullo_por_el_trabajo` | `eliminacion_barreras_orgullo_del_trabajo` | 6 | 2 | 3 | 1 |
+| **12** | B | `cinco_suposiciones_erroneas_calidad` | `concepto_supuestos_erroneos_sobre_calidad` | 6 | 3 | 1 | 2 |
+| **13** | B | `organizacion_liderazgo_estadistico` | `estadistico_competente_organizacion` | 5 | 1 | 3 | 1 |
+| **14** | B | `sistema_pull_push` | `kanban_pull_system` | 7 | 1 | 5 | 1 |
+| **15** | B | `manejo_problemas` | `cultura_integridad_objetividad_resolucion_problemas` | 6 | 2 | 4 | 0 |
+| **16** | B | `seminario_de_exito_para_gerencia` | `cambio_actitud_gerencial` | 7 | 0 | 7 | 0 |
+| **17** | B | `evaluacion_riesgo_calidad_organizacional` | `evaluacion_organizacional_calidad` | 7 | 0 | 6 | 1 |
+| **18** | B | `control_del_proceso_del_proveedor` | `planificacion_tecnologica_conjunta` | 7 | 3 | 4 | 0 |
+| **19** | B | `respuesta_incidentes_cui` | `getting_started_incident_response` | 5 | 1 | 3 | 1 |
+| **20** | B | `mantenimiento_sistema_cui` | `getting_started_maintenance` | 7 | 2 | 5 | 0 |
+| **21** | B | `funcion_protect_politica_seguridad` | `protect_medidas_tecnicas` | 8 | 0 | 8 | 0 |
+
+| acto | lote | sus miembros | especie | se acumula para |
+|---:|:---:|---|---|---|
+| **suma** | | **0 declarados** | | |
+
+### LAS PERDIDAS NOMBRADAS
+
+**Talladas de los planes sellados** con el tallador de perdidas ([`../loop/SALIDA_V62_TALLAR_PERDIDAS.txt`](../loop/SALIDA_V62_TALLAR_PERDIDAS.txt)), que **lee la especie del propio plan y no tiene rama por defecto**.
+
+| plan | acto | especie | que se pierde | donde vive | enrutada a |
+|---|---:|---|---|---|---|
+| PLAN_V62_OPU01_LOTE_A.json | 1 | DE PARAMETRO DE PASO | el escenario del limite DE ESPECIFICACION como sitio donde mirar la concentracion anomala de datos; el superviviente solo nombra el limite regulatorio y el de aceptacion | paso 1 de administracion_sin_miedo | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_A.json | 3 | DE PARAMETRO DE PASO | el LABORATORIO como fuente de variabilidad del sistema de medicion; el superviviente lista material, analistas, aparatos y dias, y no lo incluye | paso 2 de errores_de_medicion | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_A.json | 3 | DE CONDICIONES | el disparador de estar bajo enfoque Six Sigma con niveles de defectos exigidos; el superviviente dispara por validar la precision antes de decidir y por dudas sobre la exactitud, y no nombra el programa | condicion 1 de errores_de_medicion | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V62_OPU01_LOTE_A.json | 4 | DE PARAMETRO DE PASO | MEDIANTE SINTOMAS, que es como se comprueba la O de observable; el superviviente enumera las cuatro letras del criterio y no dice con que se verifica cada una | paso 3 de definicion_problema_moms | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_A.json | 4 | DE PARAMETRO DE PASO | DENTRO DEL ALCANCE DEL EQUIPO, que es la vara con la que se confirma la M de manejable en el paso 4 del absorbido | paso 4 de definicion_problema_moms | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_A.json | 5 | DE CONDICIONES | el disparador de querer PROFESIONALIZAR LA TOMA DE DECISIONES ESTRATEGICAS; el superviviente dispara por el retiro del fundador, por varias generaciones en la gestion y por una junta que solo firma | condicion 3 de gobierno_corporativo_juntas_directivas | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V62_OPU01_LOTE_A.json | 6 | DE PARAMETRO DE PASO | el REEMPLAZO del reconocimiento por desempeno puntual con ANALISIS DE TENDENCIAS EN GRAFICOS DE CONTROL INDIVIDUALES; el superviviente dice evitar el premio individual y mejorar el sistema, y no nombra ese mecanismo | paso 3 de sistemas_recompensa_aleatorios | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_A.json | 7 | DE PARAMETRO DE PASO | el seguimiento A LO LARGO DEL TIEMPO del grafico de los inspectores; el grafico del superviviente organiza acuerdos y desacuerdos POR TIPO DE CASO, que no es lo mismo que la serie longitudinal | paso 4 de comparacion_inspectores_independientes | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_A.json | 7 | DE PARAMETRO DE PASO | la particion diagnostica de la discrepancia, si viene de diferencias ENTRE INSPECTORES o ENTRE MUESTRAS; el superviviente investiga el desacuerdo para pedir mejores definiciones o entrenamiento y no hace esa separacion | paso 5 de comparacion_inspectores_independientes | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_A.json | 7 | DE CONDICIONES | el disparador de la sospecha de sesgo o divergencia sistematica entre evaluadores SIN relacion jerarquica de por medio; la condicion 2 del superviviente exige esa relacion jerarquica | condicion 2 de comparacion_inspectores_independientes | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V62_OPU01_LOTE_A.json | 9 | DE PARAMETRO DE PASO | la mirada sobre QUIEN MANEJA LA CALIDAD, si piensa solo en lo tecnico o tambien tiene vision de conjunto; el superviviente clasifica actividades en tacticas o estrategicas y no evalua a la persona | paso 1 de gestion_estrategica_de_calidad_sqm | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_A.json | 11 | DE PARAMETRO DE PASO | CAMBIAR LOS DISCURSOS MOTIVACIONALES Y LOS CARTELES, o sea la mitad de RETIRAR los lemas; el superviviente hace la mitad de PONER accion visible sobre las sugerencias y no nombra los carteles | paso 4 de eliminacion_barreras_orgullo_del_trabajo | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_B.json | 14 | DE PARAMETRO DE PASO | el AJUSTE DE LOS NIVELES DE KANBAN segun la variacion de demanda; el superviviente monitorea la reduccion del tiempo de entrega y la mejora en confiabilidad, que es otro objeto | paso 5 de kanban_pull_system | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_B.json | 15 | DE CONDICIONES | el encuadre de que sean LOS SUPERVISORES los que evitan reportar problemas por miedo a ser senalados; la condicion que se anade habla del clima de culpa o temor sin nombrar a ese sujeto | condicion 2 de cultura_integridad_objetividad_resolucion_problemas | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V62_OPU01_LOTE_B.json | 16 | DE PARAMETRO DE PASO | las formas concretas del compromiso, FIRMAR o LEVANTAR LA MANO; el superviviente pide compromisos publicos y visibles y no dice con que gesto se dan | paso 4 de cambio_actitud_gerencial | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_B.json | 16 | DE PARAMETRO DE PASO | RECONOCER LOGROS Y DAR SEGUIMIENTO al repetir el proceso; el paso 6 del superviviente repite y EXTIENDE a los espacios de revision, que no es reconocer ni dar seguimiento. ES LA PERDIDA CANDIDATA QUE LA RAZON DEL PUESTO 3064 DEJO MARCADA SIN VERIFICAR, y aqui queda sellada | paso 5 de cambio_actitud_gerencial | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_B.json | 17 | DE PARAMETRO DE PASO | las AREAS CLAVE sobre las que se aplica el criterio de enfoque, despliegue y resultados: alineacion estrategica, sistema de calidad, medicion, procesos, empleados, proveedores y resultados | paso 2 de evaluacion_organizacional_calidad | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V62_OPU01_LOTE_B.json | 17 | DE PARAMETRO DE PASO | la REVISION DE DOCUMENTOS como fuente de la recoleccion; el superviviente recolecta por observacion, entrevistas y revision de resultados operativos | paso 3 de evaluacion_organizacional_calidad | la fase 04, que redacta y afina los pasos del superviviente |
+
+**EL TRAMO CIERRA CON CERO ACTOS DECLARADOS, y es el primero de la campana que lo hace.** **El motivo esta medido y no es merito:** el cuadro de varas del tramo 6 ([`../loop/SALIDA_V61_VARAS_TRAMO6.txt`](../loop/SALIDA_V61_VARAS_TRAMO6.txt)) **no trae ni un `CHOCAN` ni un `EMPATE SIN VARA`** (12 de `UNA SOLA VARA`, 5 de `TODAS DE ACUERDO` y 4 de `CONTENIDO EMPATA`), y esas son **las dos unicas figuras que declaran**. **LA MESA SE QUEDA EN QUINCE ACTOS**, los mismos que el acta 60 conto, y **la rama de LA CANTIDAD COMO VARA sigue NO ADOPTADA y no se uso en ningun acto de estos dos planes.**
+
+**EL UNICO CHOQUE DE PUERTA DEL TRAMO, REGISTRADO EN VEZ DE TAPADO: EL ACTO 20.** `mantenimiento_sistema_cui` es **puerta** (extremo de puente aprobado, leido del dossier y de la columna `puerta` del cuadro de varas), y **las DOS vias apuntaban al otro lado**: la vara de contenido (pasos 6 contra 5) y **la razon del puesto 3364, que NOMBRA superviviente a `getting_started_maintenance` por dominancia**. **La guarda `1B` prohibe absorber una puerta**, asi que **LA PUERTA SOBREVIVE** por acta 54 pregunta 1, y **el choque queda escrito en el motivo sellado del acto**. **Y LA CONSECUENCIA VA DICHA:** el paso con el que la razon daba esa dominancia, *sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones*, **es justo el que tuvo que viajar de `APPEND`, y viajo**.
+
+**LAS PERDIDAS DE ESTE TRAMO NO VIVEN EN LA PROSA: VIVEN EN UN CAMPO DEL PLAN.** Los dos planes nacen con el contrato **`CAMPO PROPIO v1`** (raiz con `contrato_de_perdidas`, y cada acto con su lista `perdidas`, **siempre, aunque vacia**). **LISTA VACIA es una DECLARACION de cero perdidas; CAMPO AUSENTE es que el plan no lo dice, y eso es `ROJO`.** De los **21** actos, **nueve declaran cero perdidas** y **doce sellan al menos una**. **Es el pendiente de instrumento que el acta 60 dejo escrito**, y con el, la mitad que la correccion de aquella vuelta no pudo arreglar (*sigue contando de menos las que el plan nombra con otras palabras*) **queda cerrada por contrato en vez de por heuristica**.
+
+**CORRECCION DECLARADA SOBRE LOS INSTRUMENTOS QUE ESCRIBEN ESTE REGISTRO (20 ago 2026, vuelta 62), y va aqui porque toca a las cifras de esta misma pagina.** `scripts/loop/tallar_planes_del_tramo.py` contaba las perdidas **SOLO por el token en la prosa**, y con el contrato nuevo eso habria publicado **`perdidas nombradas 0` en la TABLA 1 de arriba cuando el campo sella DIECIOCHO**. Ahora, **si el plan declara el contrato, la cuenta sale del campo**; si no lo declara, se cuenta por token como hasta ahora. **EL CONTRASTE ESTA CORRIDO Y NO AFIRMADO:** sobre los planes del tramo 5, que no declaran el contrato, esta version da **exactamente las mismas cifras que aquel registro publico (A 3, B 1, C 0, los tres 4)**, y la unica diferencia del `diff` es el rotulo de la cabecera ([`../loop/SALIDA_V62_CONTRASTE_TRAMO5.txt`](../loop/SALIDA_V62_CONTRASTE_TRAMO5.txt)). **Y `registrar_cierre_de_tramo.py` llevaba TRES bloques de su plantilla TALLADOS A MANO CON LAS CIFRAS DEL TRAMO 5** (*50 actos mirados, 34 vivos, 16 ya fundidos*, la casilla *0 / 50*, y la nota que afirmaba que el lote A ya estaba fundido al tomar la apertura). **Corrido tal cual, este registro habria publicado esas tres cosas, y las tres son falsas en un tramo de veintiuno que abre y cierra en la misma vuelta.** Las tres pasan a medirse; **el texto viejo queda citado entero dentro del propio instrumento**, que es lo que la regla 8 pide.
+
+**LO QUE QUEDA DE `OP-U-01`, DICHO SIN ADORNO Y CON SU CIFRA:** **el universo esta agotado**. Los **29** actos vivos de los tramos 1 a 5 son **cosa juzgada** de los registros de sus tramos (acta 61, pregunta 4): quince siguen la via de la mesa y catorce **no tienen cola pendiente ni la necesitan**. **No se reparten, no se reabren y no entran en ningun tramo por abrir**, porque **no queda ninguno por abrir**.

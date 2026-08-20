@@ -7,21 +7,34 @@
   "resumen_teorico": "Establece una capacidad de manejo de incidentes para los sistemas que incluye preparación adecuada, detección, análisis, contención, recuperación y actividades de respuesta del usuario, así como el rastreo, documentación y reporte de incidentes a las autoridades y funcionarios organizacionales apropiados. Debe existir un plan antes de que ocurra un incidente, incluyendo un campeón del negocio responsable, lista de contactos y roles, y requisitos de reporte según leyes, contratos o políticas.",
   "pasos_accionables": [
     "Designar un responsable (business champion) del plan de respuesta a incidentes",
-    "Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro)",
+    "Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro), con sus datos de contacto",
     "Documentar requisitos específicos de reporte según contratos federales",
-    "Probar la efectividad del plan mediante ejercicios de mesa (tabletop), simulaciones o listas de verificación"
+    "Probar la efectividad del plan mediante ejercicios de mesa (tabletop), simulaciones o listas de verificación",
+    "Definir qué, cuándo y cómo reportar incidentes según leyes, regulaciones y contratos."
   ],
   "entregable_esperado": "Plan de respuesta a incidentes documentado con lista de contactos y procedimientos de prueba periódicos",
   "nodos_previos": [
     "identificacion_autenticacion_mfa",
-    "concientizacion_entrenamiento_cui"
+    "concientizacion_entrenamiento_cui",
+    "gestion_contrasenas_cui"
   ],
   "nodos_siguientes": [
-    "mantenimiento_sistema_cui"
+    "mantenimiento_sistema_cui",
+    "getting_started_risk_assessment"
   ],
   "condiciones_activacion": [
     "Cuando se implementan los requisitos de la familia Incident Response de SP 800-171",
     "Si la organización aún no tiene un plan formal de respuesta ante incidentes de seguridad"
   ],
-  "etiqueta_arbol": "Prepárate para Responder Incidentes"
+  "etiqueta_arbol": "Prepárate para Responder Incidentes",
+  "ids_alias": [
+    "getting_started_incident_response"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "getting_started_incident_response",
+      "titulo": "Plan de Respuesta a Incidentes",
+      "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+    }
+  ]
 }

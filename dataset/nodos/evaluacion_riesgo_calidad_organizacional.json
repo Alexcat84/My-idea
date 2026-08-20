@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir el equipo evaluador y sus roles",
     "Establecer objetivos claros de la evaluación",
-    "Definir el alcance y los criterios de evaluación (enfoque, despliegue, resultados)",
+    "Definir el alcance y los criterios de evaluación (enfoque, despliegue, resultados), que puede ser todo tu negocio, un área, una planta o un proceso puntual",
     "Crear un plan de comunicación entre el equipo y el liderazgo",
     "Realizar una pre-evaluación generalizada (versión resumida del OHC)",
     "Recolectar datos mediante observación, entrevistas y revisión de resultados operativos",
@@ -17,18 +17,30 @@
   ],
   "entregable_esperado": "Informe de evaluación de riesgo de calidad con puntaje por categoría (sobre 1000 puntos) y su integración al análisis FODA organizacional",
   "nodos_previos": [
-    "planificacion_estrategica_despliegue_2"
+    "planificacion_estrategica_despliegue_2",
+    "acceptance_control"
   ],
   "nodos_siguientes": [
     "costo_de_mala_calidad",
     "estudio_mercado_calidad",
     "costo_de_mala_calidad_3",
-    "costo_de_mala_calidad_copq"
+    "costo_de_mala_calidad_copq",
+    "alineacion_estrategica_despliegue"
   ],
   "condiciones_activacion": [
     "Cuando la organización necesita un diagnóstico integral del estado de su sistema de calidad",
     "Cuando se requiere alinear la calidad con la estrategia general del negocio",
     "Antes de definir un plan estratégico de calidad"
   ],
-  "etiqueta_arbol": "Diagnostica el Riesgo de tu Calidad"
+  "etiqueta_arbol": "Diagnostica el Riesgo de tu Calidad",
+  "ids_alias": [
+    "evaluacion_organizacional_calidad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "evaluacion_organizacional_calidad",
+      "titulo": "Evaluación Integral de tu Negocio (Quality Risk Assessment)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

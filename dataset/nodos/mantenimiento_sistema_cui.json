@@ -10,17 +10,31 @@
     "Determinar un cronograma regular de mantenimiento y verificar su cumplimiento",
     "Habilitar actualizaciones automáticas donde sea apropiado",
     "Planificar actualizaciones para hardware o software que llegará a fin de vida útil",
-    "Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar"
+    "Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
+    "Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones."
   ],
   "entregable_esperado": "Plan de mantenimiento documentado con cronograma, herramientas autorizadas y procedimientos para mantenimiento remoto seguro",
   "nodos_previos": [
-    "respuesta_incidentes_cui"
+    "respuesta_incidentes_cui",
+    "gestion_contrasenas_cui"
   ],
   "nodos_siguientes": [
-    "que_es_cui"
+    "que_es_cui",
+    "getting_started_media_protection"
   ],
   "condiciones_activacion": [
-    "Cuando se implementan los requisitos de la familia Maintenance de SP 800-171"
+    "Cuando se implementan los requisitos de la familia Maintenance de SP 800-171",
+    "Cuando los sistemas que procesan CUI requieren actualizaciones o reparaciones periódicas."
   ],
-  "etiqueta_arbol": "Mantén Segura tu Información"
+  "etiqueta_arbol": "Mantén Segura tu Información",
+  "ids_alias": [
+    "getting_started_maintenance"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "getting_started_maintenance",
+      "titulo": "Mantenimiento de Sistemas",
+      "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+    }
+  ]
 }

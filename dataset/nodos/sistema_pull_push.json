@@ -9,18 +9,21 @@
     "Evaluar si tu operacion actual funciona bajo un esquema push o pull",
     "Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso",
     "Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente",
-    "Implementar kanbans y señales de reposicion basadas en consumo",
-    "Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad"
+    "Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor",
+    "Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad",
+    "Implementar el sistema y capacitar a los operadores"
   ],
   "entregable_esperado": "Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.",
   "nodos_previos": [
     "mapeo_flujo_valor",
-    "tres_tipos_desperdicio_tps"
+    "tres_tipos_desperdicio_tps",
+    "constraint_management",
+    "inventory_analysis_lean"
   ],
   "nodos_siguientes": [
     "eventos_kaizen_rie",
-    "kanban_pull_system",
-    "constraint_management"
+    "constraint_management",
+    "smed_setup_reduction"
   ],
   "condiciones_activacion": [
     "Cuando tienes exceso de inventario en proceso (WIP)",
@@ -29,12 +32,18 @@
   ],
   "etiqueta_arbol": "Elige entre Empujar o Jalar Producción",
   "ids_alias": [
-    "pull_vs_push_systems"
+    "pull_vs_push_systems",
+    "kanban_pull_system"
   ],
   "merged_originals": [
     {
       "node_id": "pull_vs_push_systems",
       "titulo": "Sistemas Pull versus Push",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "kanban_pull_system",
+      "titulo": "Kanban – Señal para Producir",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
     }
   ]

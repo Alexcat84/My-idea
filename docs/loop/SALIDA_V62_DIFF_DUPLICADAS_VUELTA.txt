@@ -1,0 +1,23 @@
+==============================================================================
+DIFF DEL CENSO DE DUPLICADAS, CON NODO Y DESTINO RESUELTOS POR EL ALIAS
+  el cierre de la vuelta 62 contra su apertura
+  antes  : docs/loop/_v62_duplicadas_antes.jsonl
+  despues: docs/plan/ARISTAS_DUPLICADAS.jsonl
+==============================================================================
+
+  grupos por rotulo CRUDO   : antes 935 | despues 928
+  grupos ya RESUELTOS       : antes 934 | despues 928
+
+  RENOMBRADOS (aparecen con rotulo nuevo pero son el MISMO grupo): 0
+
+  GRUPOS FABRICADOS DE VERDAD: 0
+
+  grupos que DESAPARECEN: 6
+     falacia_recompensa_loteria | nodos_previos | sistema_estable_causas_comunes
+     organizacion_liderazgo_estadistico | nodos_previos | sistema_estable_causas_comunes
+     planificacion_gobierno_organizaciones_familiares | nodos_siguientes | familia_normas_iso_9000
+     seminario_de_exito_para_gerencia | nodos_previos | rejilla_madurez_gestion_calidad
+     sistema_pull_push | nodos_previos | mapeo_flujo_valor
+     sistema_pull_push | nodos_previos | sistema_pull_push
+
+  VERDE: CERO grupos fabricados.

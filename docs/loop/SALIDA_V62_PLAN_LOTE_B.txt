@@ -1,0 +1,63 @@
+==============================================================================
+GENERADOR DEL PLAN DEL LOTE B DEL TRAMO 6 (vuelta 62)
+  fichero del tramo: docs/loop/TRAMO6_V61.jsonl
+==============================================================================
+
+  acto 12  INCISO al paso 1
+      trozo pedido en ASCII : 'entrevistas o encuestas a gerentes'
+      trozo EXTRAIDO del nodo: 'entrevistas o encuestas a gerentes'
+      paso resultante        : Revisa cuales de estas suposiciones erroneas estan presentes en como piensas y manejas tu negocio, con entrevistas o encuestas a gerentes
+  acto 12  INCISO al paso 2
+      trozo pedido en ASCII : 'el error no es inevitable, la gente si se preocupa'
+      trozo EXTRAIDO del nodo: 'el error no es inevitable, la gente sí se preocupa'
+      paso resultante        : Aprende la definición correcta de calidad y como medirla a traves de sus costos, y tambien que el error no es inevitable, la gente sí se preocupa
+  acto 13  INCISO al paso 4
+      trozo pedido en ASCII : 'decisiones de diseno, compras y control de calidad'
+      trozo EXTRAIDO del nodo: 'decisiones de diseño, compras y control de calidad'
+      paso resultante        : Asegurate de que esa persona este presente cuando se toman decisiones importantes del negocio, incluidas las decisiones de diseño, compras y control de calidad
+  acto 14  INCISO al paso 4
+      trozo pedido en ASCII : 'tarjeta, espacio, contenedor'
+      trozo EXTRAIDO del nodo: 'tarjeta, espacio, contenedor'
+      paso resultante        : Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor
+  acto 17  INCISO al paso 3
+      trozo pedido en ASCII : 'todo tu negocio, un area, una planta o un proceso puntual'
+      trozo EXTRAIDO del nodo: 'todo tu negocio, un área, una planta o un proceso puntual'
+      paso resultante        : Definir el alcance y los criterios de evaluación (enfoque, despliegue, resultados), que puede ser todo tu negocio, un área, una planta o un proceso puntual
+  acto 19  INCISO al paso 2
+      trozo pedido en ASCII : 'datos de contacto'
+      trozo EXTRAIDO del nodo: 'datos de contacto'
+      paso resultante        : Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro), con sus datos de contacto
+
+  las 10 fichas del lote B: TODAS en verde
+  guarda 1B: ningun absorbido es puerta
+  cobertura: cada paso y cada condicion de cada absorbido con marca UNICA
+  incisos: todos EXTRAIDOS del nodo y comprobados VERBATIM dentro del paso
+
+  RESUMEN DEL REPARTO POR ACTO:
+     acto 12  sobrevive cinco_suposiciones_erroneas_calidad            piezas  6 (enteras 3, ya dichas 1, de INCISO 2)
+     acto 13  sobrevive organizacion_liderazgo_estadistico             piezas  5 (enteras 1, ya dichas 3, de INCISO 1)
+     acto 14  sobrevive sistema_pull_push                              piezas  7 (enteras 1, ya dichas 5, de INCISO 1)
+     acto 15  sobrevive manejo_problemas                               piezas  6 (enteras 2, ya dichas 4, de INCISO 0)
+     acto 16  sobrevive seminario_de_exito_para_gerencia               piezas  7 (enteras 0, ya dichas 7, de INCISO 0)
+     acto 17  sobrevive evaluacion_riesgo_calidad_organizacional       piezas  7 (enteras 0, ya dichas 6, de INCISO 1)
+     acto 18  sobrevive control_del_proceso_del_proveedor              piezas  7 (enteras 3, ya dichas 4, de INCISO 0)
+     acto 19  sobrevive respuesta_incidentes_cui                       piezas  5 (enteras 1, ya dichas 3, de INCISO 1)
+     acto 20  sobrevive mantenimiento_sistema_cui                      piezas  7 (enteras 2, ya dichas 5, de INCISO 0)
+     acto 21  sobrevive funcion_protect_politica_seguridad             piezas  8 (enteras 0, ya dichas 8, de INCISO 0)
+     TOTAL del lote B: piezas 65 (enteras 13, ya dichas 46, de INCISO 6)
+
+  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato CAMPO PROPIO v1):
+     actos con el campo perdidas presente: 10 de 10 (el campo va SIEMPRE)
+     actos que DECLARAN cero perdidas    : 6
+     actos con al menos una perdida      : 4
+     perdidas selladas, en total         : 6
+        acto 14  DE PARAMETRO DE PASO   el AJUSTE DE LOS NIVELES DE KANBAN segun la variacion de demanda; el superviviente monitorea la reduccion del tiempo de entrega y la mejora en confiabilidad, que es otro objeto
+        acto 15  DE CONDICIONES         el encuadre de que sean LOS SUPERVISORES los que evitan reportar problemas por miedo a ser senalados; la condicion que se anade habla del clima de culpa o temor sin nombrar a ese sujeto
+        acto 16  DE PARAMETRO DE PASO   las formas concretas del compromiso, FIRMAR o LEVANTAR LA MANO; el superviviente pide compromisos publicos y visibles y no dice con que gesto se dan
+        acto 16  DE PARAMETRO DE PASO   RECONOCER LOGROS Y DAR SEGUIMIENTO al repetir el proceso; el paso 6 del superviviente repite y EXTIENDE a los espacios de revision, que no es reconocer ni dar seguimiento. ES LA PERDIDA CANDIDATA QUE LA RAZON DEL PUESTO 3064 DEJO MARCADA SIN VERIFICAR, y aqui queda sellada
+        acto 17  DE PARAMETRO DE PASO   las AREAS CLAVE sobre las que se aplica el criterio de enfoque, despliegue y resultados: alineacion estrategica, sistema de calidad, medicion, procesos, empleados, proveedores y resultados
+        acto 17  DE PARAMETRO DE PASO   la REVISION DE DOCUMENTOS como fuente de la recoleccion; el superviviente recolecta por observacion, entrevistas y revision de resultados operativos
+
+  plan escrito: docs\loop\PLAN_V62_OPU01_LOTE_B.json
+
+FIN

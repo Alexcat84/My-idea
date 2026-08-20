@@ -9,7 +9,8 @@
     "Fomentar una cultura de integridad donde 'hacer las cosas bien' sea la norma explícita",
     "Enfocar la investigación de problemas en el proceso/trabajo, no en culpar individuos",
     "Resolver el mayor número de problemas en el primer nivel de supervisión posible",
-    "Escalar solo cuando sea estrictamente necesario, documentando el plan de acción con cronograma"
+    "Escalar solo cuando sea estrictamente necesario, documentando el plan de acción con cronograma",
+    "Dar a los involucrados la oportunidad de mejorar bajo condiciones distintas si el ajuste persona-tarea fue inadecuado"
   ],
   "entregable_esperado": "Cultura y proceso de resolución de problemas basado en niveles de escalamiento definidos y enfoque objetivo",
   "nodos_previos": [
@@ -18,11 +19,23 @@
     "accion_correctiva_2"
   ],
   "nodos_siguientes": [
-    "cultura_integridad_objetividad_resolucion_problemas"
+    "analisis_causa_raiz_defectos",
+    "resolucion_problemas_niveles_supervision"
   ],
   "condiciones_activacion": [
     "Cuando surgen conflictos o problemas recurrentes que afectan la operación",
-    "Ante crisis de calidad que requieren manejo organizacional maduro"
+    "Ante crisis de calidad que requieren manejo organizacional maduro",
+    "Cuando existe un clima de culpa o temor que impide identificar causas reales de los defectos"
   ],
-  "etiqueta_arbol": "Resuelve con Integridad y Objetividad"
+  "etiqueta_arbol": "Resuelve con Integridad y Objetividad",
+  "ids_alias": [
+    "cultura_integridad_objetividad_resolucion_problemas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "cultura_integridad_objetividad_resolucion_problemas",
+      "titulo": "Cultura de Integridad y Objetividad en la Resolución de Problemas",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ]
 }

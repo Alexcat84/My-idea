@@ -290,7 +290,7 @@
         "muestreo_dodge_romig"
       ],
       "nodos_siguientes": [
-        "evaluacion_organizacional_calidad"
+        "evaluacion_riesgo_calidad_organizacional"
       ],
       "condiciones_activacion": [
         "Cuando se busca evolucionar de una inspección reactiva a una estrategia proactiva de calidad",
@@ -2613,7 +2613,7 @@
       ],
       "entregable_esperado": "Un mapa que muestre como tu visión se conecta con tus estrategias, tus metas anuales y tus iniciativas o proyectos alineados",
       "nodos_previos": [
-        "evaluacion_organizacional_calidad"
+        "evaluacion_riesgo_calidad_organizacional"
       ],
       "nodos_siguientes": [
         "costo_pobre_calidad",
@@ -3256,7 +3256,7 @@
       "entregable_esperado": "Tabla de defectos con causa raíz validada, acción correctiva implementada y resultado medido (reducción de incidencia).",
       "nodos_previos": [
         "resolucion_problemas_niveles_supervision",
-        "cultura_integridad_objetividad_resolucion_problemas"
+        "manejo_problemas"
       ],
       "nodos_siguientes": [
         "equipo_interdepartamental_calidad",
@@ -10932,7 +10932,8 @@
         "Cuando las personas con las que trabajas son escépticas ante tus recomendaciones directas",
         "Cuando necesitas expandir una mejora probada en una parte pequeña de tu negocio a todo el resto"
       ],
-      "etiqueta_arbol": "Convence con Pares y Pilotos"
+      "etiqueta_arbol": "Convence con Pares y Pilotos",
+      "deprecado": true
     },
     "cambio_comportamiento_consumidor": {
       "node_id": "cambio_comportamiento_consumidor",
@@ -14551,26 +14552,41 @@
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
       "resumen_teorico": "Existen cinco creencias erróneas que dificultan gestionar bien la calidad en tu negocio: (1) pensar que calidad significa lujo o algo bueno en abstracto; (2) creer que la calidad es intangible y no se puede medir; (3) suponer que existe una economia de la calidad que limita cuanta calidad puedes costear; (4) creer que los problemas de calidad nacen en quienes producen o fabrican; y (5) creer que la calidad es responsabilidad exclusiva de quien la revisa o controla. Superar estas suposiciones es el primer paso para que un programa de calidad funcione de verdad.",
       "pasos_accionables": [
-        "Revisa cuales de estas suposiciones erroneas estan presentes en como piensas y manejas tu negocio",
-        "Aprende la definición correcta de calidad y como medirla a traves de sus costos",
+        "Revisa cuales de estas suposiciones erroneas estan presentes en como piensas y manejas tu negocio, con entrevistas o encuestas a gerentes",
+        "Aprende la definición correcta de calidad y como medirla a traves de sus costos, y tambien que el error no es inevitable, la gente sí se preocupa",
         "Busca el origen real de los defectos, ya sea en el diseño, la planeación o la forma de administrar, y no solo en quien produce",
-        "Redefine el rol de quien revisa la calidad: que mida y reporte, y no que cargue solo con la responsabilidad de resolverlo todo"
+        "Redefine el rol de quien revisa la calidad: que mida y reporte, y no que cargue solo con la responsabilidad de resolverlo todo",
+        "Diseñar sesiones de sensibilización o seminarios para dirección basados en estas correcciones conceptuales.",
+        "Usar testimonios de gerentes que ya cambiaron su percepción como agentes de cambio interno."
       ],
       "entregable_esperado": "Un diagnostico honesto de que suposiciones erroneas estan afectando tu negocio, con un plan para corregirlas",
       "nodos_previos": [
         "definicion_calidad_conformidad_requisitos",
-        "definicion_calidad_conformidad"
+        "definicion_calidad_conformidad",
+        "definiciones_operacionales"
       ],
       "nodos_siguientes": [
         "quality_management_maturity_grid",
-        "rejilla_madurez_gestion_calidad"
+        "rejilla_madurez_gestion_calidad",
+        "concepto_haciendo_la_calidad_cierta"
       ],
       "condiciones_activacion": [
         "Cuando culpas siempre a quienes producen o fabrican por los defectos",
         "Cuando dejas toda la responsabilidad de la calidad en una sola persona o area",
-        "Al empezar a poner en marcha un programa de calidad en tu negocio"
+        "Al empezar a poner en marcha un programa de calidad en tu negocio",
+        "Cuando existe resistencia cultural o escepticismo directivo hacia los programas de calidad."
       ],
-      "etiqueta_arbol": "Cuestiona tus Mitos de Calidad"
+      "etiqueta_arbol": "Cuestiona tus Mitos de Calidad",
+      "ids_alias": [
+        "concepto_supuestos_erroneos_sobre_calidad"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "concepto_supuestos_erroneos_sobre_calidad",
+          "titulo": "Supuestos Erróneos Convencionales sobre la Calidad",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        }
+      ]
     },
     "circulos_busqueda_cofundadores": {
       "node_id": "circulos_busqueda_cofundadores",
@@ -16269,7 +16285,7 @@
       ],
       "entregable_esperado": "Política de comunicación de privacidad y plan de respuesta a brechas de datos documentado",
       "nodos_previos": [
-        "protect_medidas_tecnicas",
+        "funcion_protect_politica_seguridad",
         "control_minimizacion_datos"
       ],
       "nodos_siguientes": [
@@ -17164,7 +17180,7 @@
       ],
       "entregable_esperado": "Una postura de calidad clara, escrita y comunicada a las personas involucradas en los próximos días",
       "nodos_previos": [
-        "cambio_actitud_gerencial",
+        "seminario_de_exito_para_gerencia",
         "programa_mejora_calidad_14_pasos",
         "quality_management_maturity_grid_3",
         "rejilla_madurez_gestion_calidad"
@@ -18090,7 +18106,7 @@
       "entregable_esperado": "Una definición clara de calidad que tu aceptas y un plan de comunicación para instalarla en tu forma de trabajar.",
       "nodos_previos": [
         "concepto_quality_is_free",
-        "concepto_supuestos_erroneos_sobre_calidad"
+        "cinco_suposiciones_erroneas_calidad"
       ],
       "nodos_siguientes": [
         "concepto_cuatro_pilares_programa_calidad"
@@ -18302,7 +18318,8 @@
         "Cuando existe resistencia cultural o escepticismo directivo hacia los programas de calidad.",
         "Cuando se inicia un proyecto de transformación de calidad en una organización sin experiencia previa."
       ],
-      "etiqueta_arbol": "Cuestiona tus Creencias sobre Calidad"
+      "etiqueta_arbol": "Cuestiona tus Creencias sobre Calidad",
+      "deprecado": true
     },
     "concepto_variacion_estadistica": {
       "node_id": "concepto_variacion_estadistica",
@@ -19808,7 +19825,7 @@
         "takt_time"
       ],
       "nodos_siguientes": [
-        "kanban_pull_system",
+        "sistema_pull_push",
         "reduccion_de_tiempo_de_ciclo",
         "smed_setup_reduction",
         "teoria_de_restricciones"
@@ -21541,13 +21558,17 @@
         "Definir tareas especiales y buenas prácticas de manufactura requeridas",
         "Clasificar la seriedad de los defectos para priorizar esfuerzos",
         "Establecer estándares sensoriales físicos cuando se requiera juicio humano",
-        "Estandarizar métodos y condiciones de prueba entre proveedor y comprador"
+        "Estandarizar métodos y condiciones de prueba entre proveedor y comprador",
+        "Acordar el significado exacto de los requisitos de desempeño en las especificaciones",
+        "Cuantificar requisitos de confiabilidad y mantenibilidad, evitando errores como aplicar la regla de multiplicación incorrectamente",
+        "Establecer sistema de trazabilidad de lotes"
       ],
       "entregable_esperado": "Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de SPC, clasificación de defectos y métodos de prueba estandarizados",
       "nodos_previos": [
         "planificacion_cadena_suministro",
         "dmadv_design_for_six_sigma",
-        "design_for_six_sigma_dfss"
+        "design_for_six_sigma_dfss",
+        "planificacion_economica_conjunta"
       ],
       "nodos_siguientes": [
         "certificacion_de_proveedores",
@@ -21559,7 +21580,17 @@
         "Cuando se inicia una relación contractual con un nuevo proveedor de manufactura",
         "Cuando existen discrepancias recurrentes en mediciones entre proveedor y comprador"
       ],
-      "etiqueta_arbol": "Exige un Plan de Control"
+      "etiqueta_arbol": "Exige un Plan de Control",
+      "ids_alias": [
+        "planificacion_tecnologica_conjunta"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "planificacion_tecnologica_conjunta",
+          "titulo": "Planificación Tecnológica Conjunta con Proveedores",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "control_estadistico_de_inventario_en_transito": {
       "node_id": "control_estadistico_de_inventario_en_transito",
@@ -21962,7 +21993,7 @@
         "identify_mapeo_datos"
       ],
       "nodos_siguientes": [
-        "protect_medidas_tecnicas",
+        "funcion_protect_politica_seguridad",
         "communicate_transparencia"
       ],
       "condiciones_activacion": [
@@ -23395,7 +23426,6 @@
         "evaluacion_riesgo_calidad_organizacional",
         "proyectos_vitales_pocos",
         "alineacion_estrategica_despliegue",
-        "evaluacion_organizacional_calidad",
         "rejilla_madurez_gestion_calidad",
         "definicion_calidad_conformidad",
         "definicion_calidad_conformidad_requisitos",
@@ -26720,7 +26750,8 @@
         "Cuando existe un clima de culpa o temor que impide identificar causas reales de los defectos",
         "Cuando los supervisores evitan reportar problemas por miedo a ser señalados"
       ],
-      "etiqueta_arbol": "Resuelve Problemas con Integridad"
+      "etiqueta_arbol": "Resuelve Problemas con Integridad",
+      "deprecado": true
     },
     "cultura_justa": {
       "node_id": "cultura_justa",
@@ -31149,7 +31180,7 @@
         "claridad_especificaciones_instrucciones",
         "estandares_voluntarios",
         "muestreo_aleatorio_operacional",
-        "concepto_supuestos_erroneos_sobre_calidad",
+        "cinco_suposiciones_erroneas_calidad",
         "falacia_problemas_diferentes",
         "definiciones_operacionales_de_calidad",
         "costo_de_mala_calidad_copq"
@@ -46911,7 +46942,8 @@
       "condiciones_activacion": [
         "Cuando la empresa carece de análisis estadístico riguroso en sus procesos"
       ],
-      "etiqueta_arbol": "Suma un Estadístico Competente"
+      "etiqueta_arbol": "Suma un Estadístico Competente",
+      "deprecado": true
     },
     "estado_flujo_de_caja_tres_categorias": {
       "node_id": "estado_flujo_de_caja_tres_categorias",
@@ -50943,7 +50975,8 @@
         "Cuando decides empezar una transformación hacia la calidad en tu negocio",
         "Si necesitas establecer un punto de partida claro sobre cómo está tu negocio en calidad"
       ],
-      "etiqueta_arbol": "Evalúa tu Calidad Integral"
+      "etiqueta_arbol": "Evalúa tu Calidad Integral",
+      "deprecado": true
     },
     "evaluacion_periodica_programa_seguridad": {
       "node_id": "evaluacion_periodica_programa_seguridad",
@@ -51082,7 +51115,7 @@
       "pasos_accionables": [
         "Definir el equipo evaluador y sus roles",
         "Establecer objetivos claros de la evaluación",
-        "Definir el alcance y los criterios de evaluación (enfoque, despliegue, resultados)",
+        "Definir el alcance y los criterios de evaluación (enfoque, despliegue, resultados), que puede ser todo tu negocio, un área, una planta o un proceso puntual",
         "Crear un plan de comunicación entre el equipo y el liderazgo",
         "Realizar una pre-evaluación generalizada (versión resumida del OHC)",
         "Recolectar datos mediante observación, entrevistas y revisión de resultados operativos",
@@ -51091,20 +51124,32 @@
       ],
       "entregable_esperado": "Informe de evaluación de riesgo de calidad con puntaje por categoría (sobre 1000 puntos) y su integración al análisis FODA organizacional",
       "nodos_previos": [
-        "planificacion_estrategica_despliegue_2"
+        "planificacion_estrategica_despliegue_2",
+        "acceptance_control"
       ],
       "nodos_siguientes": [
         "costo_de_mala_calidad",
         "estudio_mercado_calidad",
         "costo_de_mala_calidad_3",
-        "costo_de_mala_calidad_copq"
+        "costo_de_mala_calidad_copq",
+        "alineacion_estrategica_despliegue"
       ],
       "condiciones_activacion": [
         "Cuando la organización necesita un diagnóstico integral del estado de su sistema de calidad",
         "Cuando se requiere alinear la calidad con la estrategia general del negocio",
         "Antes de definir un plan estratégico de calidad"
       ],
-      "etiqueta_arbol": "Diagnostica el Riesgo de tu Calidad"
+      "etiqueta_arbol": "Diagnostica el Riesgo de tu Calidad",
+      "ids_alias": [
+        "evaluacion_organizacional_calidad"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "evaluacion_organizacional_calidad",
+          "titulo": "Evaluación Integral de tu Negocio (Quality Risk Assessment)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "evaluacion_riesgo_mercado_dinero_gestion": {
       "node_id": "evaluacion_riesgo_mercado_dinero_gestion",
@@ -57528,16 +57573,29 @@
       "entregable_esperado": "Política de ciberseguridad escrita y comunicada, junto con controles técnicos implementados (cifrado, respaldos, actualizaciones)",
       "nodos_previos": [
         "funcion_identify_inventario_activos",
-        "marco_nist_cybersecurity_framework"
+        "marco_nist_cybersecurity_framework",
+        "control_minimizacion_datos"
       ],
       "nodos_siguientes": [
-        "funcion_detect_monitoreo_red"
+        "funcion_detect_monitoreo_red",
+        "communicate_transparencia",
+        "go_plan_de_accion"
       ],
       "condiciones_activacion": [
         "Cuando ya existe un inventario de activos",
         "Cuando la empresa carece de políticas formales de seguridad"
       ],
-      "etiqueta_arbol": "Crea tu Política de Ciberseguridad"
+      "etiqueta_arbol": "Crea tu Política de Ciberseguridad",
+      "ids_alias": [
+        "protect_medidas_tecnicas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "protect_medidas_tecnicas",
+          "titulo": "Protect: Medidas Técnicas de Protección de Datos",
+          "fuente": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+        }
+      ]
     },
     "funcion_recover_restauracion": {
       "node_id": "funcion_recover_restauracion",
@@ -58787,8 +58845,8 @@
         "identificacion_autenticacion_mfa"
       ],
       "nodos_siguientes": [
-        "getting_started_incident_response",
-        "getting_started_maintenance"
+        "respuesta_incidentes_cui",
+        "mantenimiento_sistema_cui"
       ],
       "condiciones_activacion": [
         "Cuando la empresa maneja CUI y necesita establecer controles de acceso robustos."
@@ -60956,7 +61014,8 @@
       "condiciones_activacion": [
         "Cuando la empresa aún no cuenta con un procedimiento formal ante brechas de seguridad."
       ],
-      "etiqueta_arbol": "Prepara tu Respuesta a Incidentes"
+      "etiqueta_arbol": "Prepara tu Respuesta a Incidentes",
+      "deprecado": true
     },
     "getting_started_maintenance": {
       "node_id": "getting_started_maintenance",
@@ -60984,7 +61043,8 @@
       "condiciones_activacion": [
         "Cuando los sistemas que procesan CUI requieren actualizaciones o reparaciones periódicas."
       ],
-      "etiqueta_arbol": "Mantén tus Sistemas al Día"
+      "etiqueta_arbol": "Mantén tus Sistemas al Día",
+      "deprecado": true
     },
     "getting_started_media_protection": {
       "node_id": "getting_started_media_protection",
@@ -61004,7 +61064,7 @@
       ],
       "entregable_esperado": "Inventario de medios con CUI, procedimiento de sanitización y registro de control de acceso/transporte.",
       "nodos_previos": [
-        "getting_started_maintenance"
+        "mantenimiento_sistema_cui"
       ],
       "nodos_siguientes": [
         "getting_started_personnel_security"
@@ -61115,7 +61175,7 @@
       "entregable_esperado": "Informe de evaluación de riesgos con inventario de activos, categorización de impacto y plan de monitoreo de vulnerabilidades.",
       "nodos_previos": [
         "getting_started_physical_protection",
-        "getting_started_incident_response",
+        "respuesta_incidentes_cui",
         "matriz_probabilidad_impacto",
         "registro_de_riesgos"
       ],
@@ -61334,7 +61394,7 @@
       "entregable_esperado": "Plan de accion de privacidad priorizado, acordado y en ejecucion",
       "nodos_previos": [
         "communicate_transparencia",
-        "protect_medidas_tecnicas"
+        "funcion_protect_politica_seguridad"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -67673,7 +67733,7 @@
       ],
       "nodos_siguientes": [
         "littles_law",
-        "kanban_pull_system"
+        "sistema_pull_push"
       ],
       "condiciones_activacion": [
         "Cuando tienes exceso de inventario o tus registros son imprecisos",
@@ -69179,7 +69239,8 @@
         "Cuando se busca implementar un sistema pull de producción",
         "Si hay sobreproducción o exceso de transporte en el proceso"
       ],
-      "etiqueta_arbol": "Señala cuándo Producir"
+      "etiqueta_arbol": "Señala cuándo Producir",
+      "deprecado": true
     },
     "kanban_validacion_aprendizaje": {
       "node_id": "kanban_validacion_aprendizaje",
@@ -72103,7 +72164,8 @@
         "Fomentar una cultura de integridad donde 'hacer las cosas bien' sea la norma explícita",
         "Enfocar la investigación de problemas en el proceso/trabajo, no en culpar individuos",
         "Resolver el mayor número de problemas en el primer nivel de supervisión posible",
-        "Escalar solo cuando sea estrictamente necesario, documentando el plan de acción con cronograma"
+        "Escalar solo cuando sea estrictamente necesario, documentando el plan de acción con cronograma",
+        "Dar a los involucrados la oportunidad de mejorar bajo condiciones distintas si el ajuste persona-tarea fue inadecuado"
       ],
       "entregable_esperado": "Cultura y proceso de resolución de problemas basado en niveles de escalamiento definidos y enfoque objetivo",
       "nodos_previos": [
@@ -72112,13 +72174,25 @@
         "accion_correctiva_2"
       ],
       "nodos_siguientes": [
-        "cultura_integridad_objetividad_resolucion_problemas"
+        "analisis_causa_raiz_defectos",
+        "resolucion_problemas_niveles_supervision"
       ],
       "condiciones_activacion": [
         "Cuando surgen conflictos o problemas recurrentes que afectan la operación",
-        "Ante crisis de calidad que requieren manejo organizacional maduro"
+        "Ante crisis de calidad que requieren manejo organizacional maduro",
+        "Cuando existe un clima de culpa o temor que impide identificar causas reales de los defectos"
       ],
-      "etiqueta_arbol": "Resuelve con Integridad y Objetividad"
+      "etiqueta_arbol": "Resuelve con Integridad y Objetividad",
+      "ids_alias": [
+        "cultura_integridad_objetividad_resolucion_problemas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "cultura_integridad_objetividad_resolucion_problemas",
+          "titulo": "Cultura de Integridad y Objetividad en la Resolución de Problemas",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        }
+      ]
     },
     "manejo_psicologia_ceo": {
       "node_id": "manejo_psicologia_ceo",
@@ -72494,19 +72568,33 @@
         "Determinar un cronograma regular de mantenimiento y verificar su cumplimiento",
         "Habilitar actualizaciones automáticas donde sea apropiado",
         "Planificar actualizaciones para hardware o software que llegará a fin de vida útil",
-        "Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar"
+        "Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
+        "Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones."
       ],
       "entregable_esperado": "Plan de mantenimiento documentado con cronograma, herramientas autorizadas y procedimientos para mantenimiento remoto seguro",
       "nodos_previos": [
-        "respuesta_incidentes_cui"
+        "respuesta_incidentes_cui",
+        "gestion_contrasenas_cui"
       ],
       "nodos_siguientes": [
-        "que_es_cui"
+        "que_es_cui",
+        "getting_started_media_protection"
       ],
       "condiciones_activacion": [
-        "Cuando se implementan los requisitos de la familia Maintenance de SP 800-171"
+        "Cuando se implementan los requisitos de la familia Maintenance de SP 800-171",
+        "Cuando los sistemas que procesan CUI requieren actualizaciones o reparaciones periódicas."
       ],
-      "etiqueta_arbol": "Mantén Segura tu Información"
+      "etiqueta_arbol": "Mantén Segura tu Información",
+      "ids_alias": [
+        "getting_started_maintenance"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "getting_started_maintenance",
+          "titulo": "Mantenimiento de Sistemas",
+          "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+        }
+      ]
     },
     "manual_de_calidad": {
       "node_id": "manual_de_calidad",
@@ -72991,7 +73079,6 @@
         "tres_tipos_desperdicio_tps",
         "value_non_value_added_analysis",
         "takt_time_demand",
-        "kanban_pull_system",
         "constraint_management",
         "inventory_analysis_lean",
         "kaizen_mejora_continua"
@@ -82144,13 +82231,15 @@
         "Define quien en tu negocio, tu mismo o alguien que contrates, sera responsable del método estadístico, con autoridad para revisar cualquier área que lo necesite",
         "Exige que esa persona tenga dominio real: formación seria, experiencia práctica, trabajo demostrable y capacidad de explicarlo con claridad",
         "Si tienes colaboradores en distintas áreas, que cada uno responda por su trabajo diario ante quien lleva esa área, pero en método y desarrollo profesional responda ante la persona experta en estadística",
-        "Asegurate de que esa persona este presente cuando se toman decisiones importantes del negocio",
-        "No dejes que las decisiones basadas en datos se evaluen solo con el criterio de quien lleva el día a día de esa área"
+        "Asegurate de que esa persona este presente cuando se toman decisiones importantes del negocio, incluidas las decisiones de diseño, compras y control de calidad",
+        "No dejes que las decisiones basadas en datos se evaluen solo con el criterio de quien lleva el día a día de esa área",
+        "Establecer programas de capacitación en pensamiento estadístico para todo el personal"
       ],
       "entregable_esperado": "Un esquema simple que muestre quien es responsable del método estadístico en tu negocio y como se conecta esa persona con quienes manejan las áreas del día a día",
       "nodos_previos": [
         "control_estadistico_proceso",
-        "breakthrough_cultural"
+        "breakthrough_cultural",
+        "sistema_estable_causas_comunes"
       ],
       "nodos_siguientes": [
         "formacion_seleccion_y_retencion_de_personal",
@@ -82162,7 +82251,17 @@
         "Cuando quieres que el uso de datos y método se mantenga consistente en todo el negocio y no solo en un área",
         "Cuando necesitas equilibrar la autoridad de quien sabe de método con la autoridad de quien lleva el día a día"
       ],
-      "etiqueta_arbol": "Lidera con Metodología Estadística"
+      "etiqueta_arbol": "Lidera con Metodología Estadística",
+      "ids_alias": [
+        "estadistico_competente_organizacion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "estadistico_competente_organizacion",
+          "titulo": "Rol del Estadístico Competente en la Organización",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "organizaciones_alta_confiabilidad": {
       "node_id": "organizaciones_alta_confiabilidad",
@@ -84253,7 +84352,7 @@
       ],
       "entregable_esperado": "Un caso con datos numéricos y ejemplos reales que demuestre el retorno de invertir en experiencia del cliente, listo para presentar a quien decide",
       "nodos_previos": [
-        "cambio_actitud_gerencial"
+        "seminario_de_exito_para_gerencia"
       ],
       "nodos_siguientes": [
         "contacto_con_el_cliente"
@@ -85974,7 +86073,6 @@
       ],
       "nodos_siguientes": [
         "planificacion_economica_conjunta",
-        "planificacion_tecnologica_conjunta",
         "control_del_proceso_del_proveedor",
         "gestion_instalaciones",
         "modelo_simulacion_cadena_suministro_circular",
@@ -86140,7 +86238,7 @@
         "planificacion_cadena_suministro"
       ],
       "nodos_siguientes": [
-        "planificacion_tecnologica_conjunta",
+        "control_del_proceso_del_proveedor",
         "value_stream_mapping_2",
         "mapeo_flujo_valor"
       ],
@@ -86568,7 +86666,8 @@
       "condiciones_activacion": [
         "Cuando se establece una relación de partnership técnico con un proveedor clave"
       ],
-      "etiqueta_arbol": "Acuerda Tecnología con tus Proveedores"
+      "etiqueta_arbol": "Acuerda Tecnología con tus Proveedores",
+      "deprecado": true
     },
     "plantea_oferta_como_rango_o_cifra_precisa": {
       "node_id": "plantea_oferta_como_rango_o_cifra_precisa",
@@ -89788,7 +89887,7 @@
         "cultura_de_buena_empresa"
       ],
       "nodos_siguientes": [
-        "cambio_actitud_gerencial"
+        "seminario_de_exito_para_gerencia"
       ],
       "condiciones_activacion": [
         "Cuando se evalúa contratar a un empleado que trabaja en la empresa de un socio o amigo cercano"
@@ -93540,7 +93639,8 @@
         "Cuando se requiere implementar salvaguardas técnicas concretas",
         "Si la organización maneja datos sensibles sin protecciones técnicas actuales"
       ],
-      "etiqueta_arbol": "Protege tus Datos Técnicamente"
+      "etiqueta_arbol": "Protege tus Datos Técnicamente",
+      "deprecado": true
     },
     "protective_provisions": {
       "node_id": "protective_provisions",
@@ -98441,7 +98541,7 @@
         "costo_de_calidad",
         "programa_mejora_calidad_14_pasos",
         "costo_de_calidad_6",
-        "cambio_actitud_gerencial",
+        "seminario_de_exito_para_gerencia",
         "costo_de_calidad_diagnostico",
         "prevencion_gestion_calidad",
         "compromiso_gerencial_calidad",
@@ -99671,7 +99771,7 @@
       ],
       "entregable_esperado": "Un criterio propio para decidir cuándo resolver un problema de calidad tú mismo, cuándo coordinar con alguien más y cuándo pedir ayuda experta.",
       "nodos_previos": [
-        "cultura_integridad_objetividad_resolucion_problemas"
+        "manejo_problemas"
       ],
       "nodos_siguientes": [
         "analisis_causa_raiz_defectos"
@@ -100049,7 +100149,7 @@
       ],
       "nodos_siguientes": [
         "quality_management_maturity_grid",
-        "cambio_actitud_gerencial",
+        "seminario_de_exito_para_gerencia",
         "rejilla_madurez_gestion_calidad"
       ],
       "condiciones_activacion": [
@@ -100251,23 +100351,36 @@
       "resumen_teorico": "Establece una capacidad de manejo de incidentes para los sistemas que incluye preparación adecuada, detección, análisis, contención, recuperación y actividades de respuesta del usuario, así como el rastreo, documentación y reporte de incidentes a las autoridades y funcionarios organizacionales apropiados. Debe existir un plan antes de que ocurra un incidente, incluyendo un campeón del negocio responsable, lista de contactos y roles, y requisitos de reporte según leyes, contratos o políticas.",
       "pasos_accionables": [
         "Designar un responsable (business champion) del plan de respuesta a incidentes",
-        "Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro)",
+        "Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro), con sus datos de contacto",
         "Documentar requisitos específicos de reporte según contratos federales",
-        "Probar la efectividad del plan mediante ejercicios de mesa (tabletop), simulaciones o listas de verificación"
+        "Probar la efectividad del plan mediante ejercicios de mesa (tabletop), simulaciones o listas de verificación",
+        "Definir qué, cuándo y cómo reportar incidentes según leyes, regulaciones y contratos."
       ],
       "entregable_esperado": "Plan de respuesta a incidentes documentado con lista de contactos y procedimientos de prueba periódicos",
       "nodos_previos": [
         "identificacion_autenticacion_mfa",
-        "concientizacion_entrenamiento_cui"
+        "concientizacion_entrenamiento_cui",
+        "gestion_contrasenas_cui"
       ],
       "nodos_siguientes": [
-        "mantenimiento_sistema_cui"
+        "mantenimiento_sistema_cui",
+        "getting_started_risk_assessment"
       ],
       "condiciones_activacion": [
         "Cuando se implementan los requisitos de la familia Incident Response de SP 800-171",
         "Si la organización aún no tiene un plan formal de respuesta ante incidentes de seguridad"
       ],
-      "etiqueta_arbol": "Prepárate para Responder Incidentes"
+      "etiqueta_arbol": "Prepárate para Responder Incidentes",
+      "ids_alias": [
+        "getting_started_incident_response"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "getting_started_incident_response",
+          "titulo": "Plan de Respuesta a Incidentes",
+          "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+        }
+      ]
     },
     "restriccion_gasto_validacion": {
       "fase_proyecto": "validacion",
@@ -106237,16 +106350,31 @@
       ],
       "entregable_esperado": "Un programa piloto documentado con resultados medibles y un encuentro realizado con compromisos firmados por quienes participaron.",
       "nodos_previos": [
-        "politica_formal_de_calidad"
+        "politica_formal_de_calidad",
+        "principio_reflexivo_contratacion",
+        "rejilla_madurez_gestion_calidad",
+        "responsabilidad_personal_en_gestion"
       ],
       "nodos_siguientes": [
-        "reconocimiento_crosby"
+        "reconocimiento_crosby",
+        "compromiso_gerencial_calidad",
+        "persuasion_directivos_prioridad_cliente"
       ],
       "condiciones_activacion": [
         "Cuando hay resistencia o desconfianza hacia una iniciativa de calidad.",
         "Cuando necesitas evidencia practica y testimonios reales para llevar un programa de calidad a otras partes de tu negocio."
       ],
-      "etiqueta_arbol": "Muestra Éxitos ante la Gerencia"
+      "etiqueta_arbol": "Muestra Éxitos ante la Gerencia",
+      "ids_alias": [
+        "cambio_actitud_gerencial"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "cambio_actitud_gerencial",
+          "titulo": "Cambio de Actitudes mediante Pares y Pilotos",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        }
+      ]
     },
     "senales_alerta_no_atendidas": {
       "node_id": "senales_alerta_no_atendidas",
@@ -107583,7 +107711,7 @@
         "control_estadistico_proceso",
         "eliminar_metas_numericas_gerencia",
         "eliminacion_estandares_trabajo",
-        "estadistico_competente_organizacion",
+        "organizacion_liderazgo_estadistico",
         "inspeccion_optima_proceso",
         "eliminar_cuotas_numericas_trabajadores",
         "falacia_meta_numerica_sin_metodo",
@@ -108050,18 +108178,21 @@
         "Evaluar si tu operacion actual funciona bajo un esquema push o pull",
         "Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso",
         "Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente",
-        "Implementar kanbans y señales de reposicion basadas en consumo",
-        "Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad"
+        "Implementar kanbans y señales de reposicion basadas en consumo, eligiendo el tipo de senal entre tarjeta, espacio, contenedor",
+        "Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad",
+        "Implementar el sistema y capacitar a los operadores"
       ],
       "entregable_esperado": "Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.",
       "nodos_previos": [
         "mapeo_flujo_valor",
-        "tres_tipos_desperdicio_tps"
+        "tres_tipos_desperdicio_tps",
+        "constraint_management",
+        "inventory_analysis_lean"
       ],
       "nodos_siguientes": [
         "eventos_kaizen_rie",
-        "kanban_pull_system",
-        "constraint_management"
+        "constraint_management",
+        "smed_setup_reduction"
       ],
       "condiciones_activacion": [
         "Cuando tienes exceso de inventario en proceso (WIP)",
@@ -108070,12 +108201,18 @@
       ],
       "etiqueta_arbol": "Elige entre Empujar o Jalar Producción",
       "ids_alias": [
-        "pull_vs_push_systems"
+        "pull_vs_push_systems",
+        "kanban_pull_system"
       ],
       "merged_originals": [
         {
           "node_id": "pull_vs_push_systems",
           "titulo": "Sistemas Pull versus Push",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "kanban_pull_system",
+          "titulo": "Kanban – Señal para Producir",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
         }
       ]
@@ -108757,7 +108894,7 @@
       ],
       "entregable_esperado": "Tiempo de cambio (setup) reducido y documentado, con procedimiento estandarizado",
       "nodos_previos": [
-        "kanban_pull_system",
+        "sistema_pull_push",
         "constraint_management"
       ],
       "nodos_siguientes": [
@@ -126528,7 +126665,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 208,
+    "nodos_sin_enlaces_entrantes": 214,
     "enlaces_rotos_en_grafo": 0
   }
 }

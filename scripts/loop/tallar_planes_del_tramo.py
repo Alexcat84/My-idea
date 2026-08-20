@@ -137,7 +137,26 @@ def forma_de(motivo):
 # declara, una denominacion que el instrumento no puede reponer). Esa segunda
 # mitad NO se arregla aqui porque arreglarla a ojo seria inventar; queda
 # declarada en el reporte con los actos nombrados.
+# SEGUNDA CORRECCION DECLARADA (20 ago 2026, vuelta 62), Y ES JUSTO LA MITAD QUE
+# LA PRIMERA DEJO SIN ARREGLAR, escrita cinco renglones mas arriba: "SIGUE
+# CONTANDO DE MENOS las que el plan nombra con otras palabras". Ya no hace falta
+# adivinar, porque los planes del tramo 6 nacen con el contrato CAMPO PROPIO v1
+# y traen la perdida EN UN CAMPO. LA REGLA NUEVA NO ES UNA HEURISTICA:
+#
+#     si el plan declara "contrato_de_perdidas": "CAMPO PROPIO v1", la cuenta
+#     sale del CAMPO perdidas de cada acto, que es una lista y se mide con len().
+#     si NO lo declara, se cuenta por TOKEN como hasta ahora, con su aviso.
+#
+# POR QUE SE CORRIGE HOY, el mismo dia en que este instrumento cuenta las cifras
+# de esta vuelta, que es lo que el D7 de la vuelta 60 marco como discutible: sin
+# esto la TABLA 1 del registro del tramo 6 publicaria PERDIDAS NOMBRADAS 0
+# cuando el campo sella DIECIOCHO, y publicar un cero falso es peor que corregir
+# con contraste. EL CONTRASTE ESTA CORRIDO Y CITADO en el reporte: sobre los
+# planes del tramo 5, que NO declaran el contrato, esta version da EXACTAMENTE
+# las mismas cifras que el registro de aquel tramo publico (A 3, B 1, C 0, los
+# tres 4). La aritmetica de piezas no se toca en esta correccion.
 NO_ES_PERDIDA = ("SE REPONE", "SE REPONEN", "NO SE PIERDE")
+CONTRATO_DE_PERDIDAS = "CAMPO PROPIO v1"
 
 
 def cuenta_perdidas(nota):
@@ -236,7 +255,10 @@ def main():
             f = forma_de(act["motivo"])
             if f is None:
                 rojo.append((L, act["orden"]))
-            perdidas = cuenta_perdidas(act["nota_del_reparto"])
+            if plan.get("contrato_de_perdidas") == CONTRATO_DE_PERDIDAS:
+                perdidas = len(act.get("perdidas") or [])
+            else:
+                perdidas = cuenta_perdidas(act["nota_del_reparto"])
             todos.append({"lote": L, "orden": act["orden"],
                           "sup": act["superviviente"], "abs": act["absorbidos"][0],
                           "forma": f, "piezas": sum(c.values()),
@@ -247,7 +269,13 @@ def main():
         print("  ROJO: motivos cuya forma no se reconoce: %s" % rojo)
         return 1
 
-    print("--- TABLA 1: LOS TRES LOTES, CON SUS PIEZAS ---")
+    # CORRECCION DECLARADA (20 ago 2026, vuelta 62): estas dos lineas tallaban
+    # "LOS TRES" a mano y el tramo 6 tiene DOS lotes, asi que la tabla habria
+    # publicado un rotulo falso. EL TEXTO VIEJO SE QUEDA ESCRITO: decia
+    #     print("--- TABLA 1: LOS TRES LOTES, CON SUS PIEZAS ---")
+    #     print("| **los tres** | ...
+    # Ahora la cuenta sale de los lotes HALLADOS. No toca ninguna cifra.
+    print("--- TABLA 1: LOS %d LOTES, CON SUS PIEZAS ---" % len(LOTES_HALLADOS))
     print()
     print("| lote | actos | fundidos | mueren | piezas | enteras | ya dichas | de `INCISO` | perdidas nombradas |")
     print("|---|---|---:|---:|---:|---:|---:|---:|---:|")
@@ -258,8 +286,9 @@ def main():
                  sum(x["piezas"] for x in f), sum(x["append"] for x in f),
                  sum(x["cubierto"] for x in f), sum(x["inciso"] for x in f),
                  sum(x["perdidas"] for x in f)))
-    print("| **los tres** | | **%d** | **%d** | **%d** | **%d** | **%d** | **%d** | **%d** |"
-          % (len(todos), len(todos), sum(x["piezas"] for x in todos),
+    print("| **los %d** | | **%d** | **%d** | **%d** | **%d** | **%d** | **%d** | **%d** |"
+          % (len(LOTES_HALLADOS), len(todos), len(todos),
+             sum(x["piezas"] for x in todos),
              sum(x["append"] for x in todos), sum(x["cubierto"] for x in todos),
              sum(x["inciso"] for x in todos), sum(x["perdidas"] for x in todos)))
     print()
