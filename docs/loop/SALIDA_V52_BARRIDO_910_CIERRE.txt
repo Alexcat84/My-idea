@@ -1,0 +1,361 @@
+==============================================================================
+BARRIDO DEL BANCO 9.10, vuelta 50 (sucesor: --viejo AHORA BUSCA)
+marcador viejo buscado: A 566 B 77 C 8 D 2737
+retrato viejo buscado : 57, 509
+puestos corregidos    : 502, 266, 246, 251, 281, 243
+==============================================================================
+
+--- FAMILIA 1: EL MARCADOR VIEJO QUE SE PIDIO (A 566, D 2737) ---
+  candidatos: 11
+  docs/FRANJA_VEREDICTOS.jsonl:566
+      {"puesto_franja": 566, "nodo_mundo": "matriz_de_control_de_proceso", "nodo_nucleo": "plan_gestion_calidad", "clave": 0.7222, "clase": "C", "razon": "La matriz de control de proceso contra el plan de gestion de calidad: n...
+  docs/INTRA_DOMINIO_INFORME.md:16339
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ **566** (16,7 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16342
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ **2.737** (80,8 %) |
+  docs/INTRA_DOMINIO_INFORME.md:16376
+      > (`../loop/SALIDA_V51_MARCADOR_CIERRE.txt`): **A 566, B 77, C 8, D 2.737** sobre `n` **3.388**,
+  docs/plan/02_DESTEJIDOS.md:1868
+      | **2**, `recomputo del cierre transitivo` | **CORRIDO** (`docs/loop/SALIDA_V40_RECOMPUTO_3388.txt`): actos de **333 a 332**, `CERRADOS` de **279 sobre 598** nodos a **278 sobre 595**, `ABIERTOS` **quietos en 54 sobre 24...
+  docs/plan/02_DESTEJIDOS.md:1914
+      | **el recomputo del cierre transitivo** | **332 actos**, `CERRADOS` **278 sobre 595**, nodos en actos **838**, A vigentes **566**, **las cuatro comprobaciones OK** y el jsonl escrito **identico al commiteado** |
+  docs/plan/03_FUSIONES.md:1075
+      | marcador `A` / `B` / `C` / `D` | 571 / 77 / 8 / 2732 | **566 / 77 / 8 / 2737** |
+  docs/plan/03_FUSIONES.md:1077
+      | retrato: `A` crudas / colapsos / pares distintos | 571 / 49 / 522 | **566 / 57 / 509** |
+  docs/plan/RECOMPUTO_3388.md:246
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ **566** **[CORREGIDA ~~SIETE~~ OCHO VECES, el 15 y el 18 ago 2026 y...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ ~~**525**~~ ~~**522**~~ **509** **[CORREGIDA ~~SIETE~~ OCHO VECES, las dos ultimas el 1...
+  docs/plan/RECOMPUTO_3388.md:1079
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ **566** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ ~~**16,9 %**~~ **16,7 %** |
+
+--- FAMILIA LEGADO: EL MARCADOR DE LA VUELTA 14 (583 / 2.709) ---
+  candidatos: 25
+  docs/FRANJA_VEREDICTOS.jsonl:583
+      {"puesto_franja": 583, "nodo_mundo": "sistema_responsabilidad_gerencial_2", "nodo_nucleo": "curse_cinco_culpas", "clave": 0.7216, "clase": "C", "razon": "Asumir el sistema completo como tu responsabilidad contra facilita...
+  docs/INTRA_DOMINIO_INFORME.md:16339
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ **566** (16,7 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16342
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ **2.737** (80,8 %) |
+  docs/INTRA_DOMINIO_INFORME.md:16610
+      `risk_management` aporta cero. ~~Total de A en el archivo: 583.~~ **CORRECCION DECLARADA (15 ago
+  docs/plan/02_DESTEJIDOS.md:352
+      > publicado** (`A 583, B 89, C 7, D 2709` medido hoy al abrir esta vuelta) **y obligaria a
+  docs/plan/02_DESTEJIDOS.md:662
+      | A | 583 | 582 | **582** |
+  docs/plan/02_DESTEJIDOS.md:665
+      | D | 2.709 | 2.711 | **2.714** |
+  docs/plan/03_FUSIONES.md:734
+      `2709`, las cifras del marcador de la vuelta 14, y `--viejo` solo cambia la cabecera que imprime.
+  docs/plan/10_INVENTARIO.md:311
+      | **el nombre que esconde** | 3 ejemplares | TRES VECES el contador dejo fuera a un miembro real porque su NOMBRE no llevaba la palabra del tema, y las tres veces lo cazo el segundo instrumento. (1) el sexto de los cuadr...
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:240
+      | **583** | `decision_factory_mentality` contra `equipos_dedicados_de_proyecto` | **B** | *la mitad que DIAGNOSTICA repite y la mitad que TRATA no*, asi que no se puede dar por sano ni por repetido entero |
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:383
+      | **3** | **`decision_factory_mentality`** | la mesa unida | **no lleva ni *gate* ni *portafolio***: se llama *Haz menos proyectos, pero hazlos bien* | **el barrido de las A**, puestos 1499 y 583 |
+  docs/plan/INVENTARIO.jsonl:327
+      {"tipo": "figura", "nombre": "el nombre que esconde", "cobertura": "3 ejemplares", "forma": "modo de fallo del contador, no del archivo", "miembros": [], "estado": "ANOTADO como historia, no como recomendacion", "operaci...
+  docs/plan/OPERACIONES.jsonl:27
+      {"id_op": "OP-M-01", "fase": "06_MESAS", "tipo": "MESA ADJUDICADA: LAS DOS MITADES QUEDAN, CON FRONTERA ADOPTADA", "nodos": ["asignacion_recursos_en_gates", "decision_factory_mentality", "equipos_dedicados_de_proyecto", ...
+  docs/plan/RECOMPUTO_3388.md:31
+      > | A crudas en el archivo | **583** | ~~**582**~~ **581** al cierre de la vuelta 34 | **menos 2** |
+  docs/plan/RECOMPUTO_3388.md:80
+      > | A crudas en el archivo | **583** | **582** | **582** | **menos 1** |
+  docs/plan/RECOMPUTO_3388.md:246
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ **566** **[CORREGIDA ~~SIETE~~ OCHO VECES, el 15 y el 18 ago 2026 y...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ ~~**525**~~ ~~**522**~~ **509** **[CORREGIDA ~~SIETE~~ OCHO VECES, las dos ultimas el 1...
+  docs/plan/RECOMPUTO_3388.md:528
+      | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ **509**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ **509**) | **OK**, r...
+  docs/plan/RECOMPUTO_3388.md:1079
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ **566** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ ~~**16,9 %**~~ **16,7 %** |
+  docs/plan/RECOMPUTO_3388.md:1081
+      ~~**Los diez dominios y el total (3.388 pares, 583 A) coinciden con el marcador recomputado de la vuelta
+  docs/plan/RECOMPUTO_3388.md:1082
+      14** (`A 583, B 89, C 7, D 2.709`), verificado de nuevo aqui por suma de columna.~~ **CORRECCION
+  docs/plan/RECOMPUTO_3388.md:1790
+      | **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ ~~**576 / 83 / 8 / 2.721**~~ **575 / 83 / 8 / 2.722** **[CORREGIDA VARIAS VECES, el 15 y el 18 ago 2026, ver la...
+  docs/plan/RECOMPUTO_3388.md:1797
+      > **ROTULO FECHADO Y CADENA CERRADA (20 ago 2026, vuelta 52, TAREA 1.4.b; adjudicacion del acta de la vuelta 51, pregunta 4). ESTA TABLA ES UNA FOTO FECHADA, NO UNA TABLA VIGENTE, y su encabezado decia *medido hoy*.** **...
+  docs/plan/RECOMPUTO_3388.md:1839
+      | **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ ~~**576 / 83 / 8 / 2.721**~~ **575 / 83 / 8 / 2.722** (17,0 / 2,4 / 0,2 / 80,3 por ciento) **[CORREGIDA VARIAS ...
+  docs/plan/RECOMPUTO_3388.md:1849
+      > **ROTULO FECHADO Y CADENA CERRADA (20 ago 2026, vuelta 52, TAREA 1.4.b; adjudicacion del acta de la vuelta 51, pregunta 4). ESTA TABLA ES UNA FOTO FECHADA, NO UNA TABLA VIGENTE, y su encabezado decia *medido hoy*.** **...
+
+--- FAMILIA RETRATO: LAS CIFRAS VIEJAS DEL RETRATO DE LAS A (57, 509) ---
+  candidatos: 29
+  docs/APK_READINESS.md:163
+      | APIs de navegador con fallback | ✅ **Cumplida** | `useSpeech` expone `soportado`; `CampoConVoz.tsx:62` **no renderiza** el micrófono sin soporte (fallback limpio a solo-texto). Las únicas otras APIs son `matchMedia('pr...
+  docs/AUDITORIA_MOTOR.md:405
+      | `interprete.ts:509` — respaldo tier-2 | cae a afinidad léxica y **registra el evento** | el único de la lista que **deja rastro estructurado** |
+  docs/CENSO_DUPLICACION.md:55
+      | Seguridad y Personas | 332 | a granel puro | 29 | 27 | 57 | 17,2 % |
+  docs/COSTURAS_INTERNAS.jsonl:215
+      {"node_id": "asignacion_recursos_en_gates", "dominio": "core", "titulo": "Método de Asignación de Recursos en Gates", "pasos": 4, "sim_pareja": 57.9, "pareja": [1, 4], "paso_a": "Mostrar en cada gate la lista de proyecto...
+  docs/COSTURAS_INTERNAS.jsonl:244
+      {"node_id": "six_sigma_dmaic_2", "dominio": "quality", "titulo": "Six Sigma - Metodología DMAIC", "pasos": 5, "sim_pareja": 57.6, "pareja": [3, 4], "paso_a": "Analyze: Analizar los datos recolectados para determinar las ...
+  docs/COSTURAS_INTERNAS_RESUMEN.md:70
+      | p90 | 57.7 | 51.4 |
+  docs/COSTURAS_INTERNAS_RESUMEN.md:138
+      | 57 | core | `principios_lean_startup` | 5 | 44.7 | 2 |
+  docs/COSTURAS_INTERNAS_RESUMEN.md:321
+      | 3 | quality | `tipos_innovacion_i_ii` | 6 | 84.1 | 57.1 | 3 | pareja y bloque |
+  docs/COSTURAS_INTERNAS_RESUMEN.md:333
+      | 15 | core | `reporte_estado_miembro_equipo` | 6 | 67.2 | 57.8 | 4 | bloque |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:503
+      | `core/verificar_modelo_ingresos` | 6 | 48,8 | 57,8 | **falsa** |
+  docs/INTRA_DOMINIO_INFORME.md:6577
+      | **global al puesto 700** | **700 de 3.388** | 240 | 57 | 4 | 399 | **34,3%** |
+  docs/INTRA_DOMINIO_INFORME.md:9354
+      | **el tramo 1101-1157** | **57** | **7** | 0 | 0 | 50 | **12,3%** |
+  docs/INTRA_DOMINIO_INFORME.md:9364
+      | **1101-1157** | **57** | **12,3%** | **21 (37%)** | **17** |
+  docs/INTRA_DOMINIO_INFORME.md:9668
+      | 1101-1157 | 57 | 12,3% | 21 (37%) | 17 |
+  docs/INTRA_DOMINIO_INFORME.md:9893
+      | 1101-1157 | 57 | 12,3% | 37% |
+  docs/INTRA_DOMINIO_INFORME.md:14120
+      | **familias por sufijo numerico** en la cola de `quality` | **24 familias, 57 nodos** |
+  docs/INTRA_DOMINIO_RESUMEN.md:93
+      | quality | `accion_correctiva_2` con `accion_correctiva_crosby` | 57.5 | 0.7759 | racimo censado: Accion correctiva (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:132
+      | environmental | `diversidad_en_diseno` con `respeto_a_la_diversidad` | 57.5 | 0.7601 | racimo censado: Diversidad en el diseno (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:208
+      | core | `customer_discovery_get_out_of_building` con `customer_discovery_phase2_problem_test` | 57.4 | 0.7352 | racimo censado: Customer discovery: salir a hablar con el cliente (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:276
+      | quality | `fomento_educacion_autoeducacion` con `institucionalizar_capacitacion` | 57.8 | 0.7105 | racimo censado: Los puntos de Deming en el titulo (muestra-D) |
+  docs/INTRA_DOMINIO_RESUMEN.md:291
+      | core | `cinco_porques_master` con `five_whys_inversion_proporcional` | 57.1 | 0.7044 | racimo censado: Los cinco porques (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:529
+      | 9 | franquicias | `gestion_terminacion_franquiciado` | `terminacion_franquiciado_causas` | 57.1 | 0.9309 | 5/4 | nuevo |
+  docs/INVENTARIO_ESCALA.md:53
+      | exportacion | 57 | 1 | 0 |
+  docs/plan/02_DESTEJIDOS.md:3026
+      | **despues**, del fichero de hoy | 6 | 57,6 | **46,0** (corte tras 3) | **SOBRE** por **mas 2,0**: **DENTRO** |
+  docs/plan/03_FUSIONES.md:1077
+      | retrato: `A` crudas / colapsos / pares distintos | 571 / 49 / 522 | **566 / 57 / 509** |
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:336
+      | **`LD-57`** | `asignacion_recursos_en_gates` es **HIJO** de `sistema_gates_go_kill`: este dice *comprometete recursos solo despues de pasar el gate* **en una linea**, y el otro trae el procedimiento |
+  docs/plan/RECOMPUTO_3388.md:247
+      | de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | ~~**0**~~ ~~**1**~~ ~~**41**~~ ~~**48**~~ ~~**49**~~ **57** **[CORREGIDA ~~CUATRO~~ CINCO VECES, el 15 ago 2026 y el 19 ago 2026 (vueltas...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ ~~**525**~~ ~~**522**~~ **509** **[CORREGIDA ~~SIETE~~ OCHO VECES, las dos ultimas el 1...
+  docs/plan/RECOMPUTO_3388.md:528
+      | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ **509**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ **509**) | **OK**, r...
+
+--- FAMILIA 2: LOS PUESTOS CORREGIDOS ---
+  PUESTO 502: 7 candidatos
+    docs/AUDITORIA_MOTOR.md:56
+        | **`calculadora.py`** (502) | la aritmética de Tus Números | vivo; gemelo TS en `web/lib/calculadora.ts` |
+    docs/FRANJA_PARES.jsonl:502
+        {"puesto_franja": 502, "mundo": "quality", "nodo_mundo": "calidad_de_diseno_vs_produccion", "titulo_mundo": "Calidad de Diseño vs. Calidad de Producción", "nodo_nucleo": "calidad_de_ejecucion_proceso_innovacion", "titulo...
+    docs/FRANJA_VEREDICTOS.jsonl:502
+        {"puesto_franja": 502, "nodo_mundo": "calidad_de_diseno_vs_produccion", "nodo_nucleo": "calidad_de_ejecucion_proceso_innovacion", "clave": 0.7244, "clase": "D", "razon": "Medir la brecha entre lo disenado y lo producido ...
+    docs/INTRA_DOMINIO_INFORME.md:3127
+        | **502** | `split_igual_vs_desigual` contra `teoria_equidad_split_equity` | la **logica social contra la de negocio** y el **riesgo de asimetria** si se elige la equivocada; del otro lado, **no cerrar con un apreton de ...
+    docs/INTRA_DOMINIO_PARES.jsonl:502
+        {"dominio": "core", "nodo_a": "split_igual_vs_desigual", "titulo_a": "Repartir el equity en partes iguales o desiguales (split)", "nodo_b": "teoria_equidad_split_equity", "titulo_b": "Teoría de la Equidad: Distribución I...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:502
+        {"puesto_intra": 502, "dominio": "core", "nodo_a": "split_igual_vs_desigual", "nodo_b": "teoria_equidad_split_equity", "clave": 0.8378, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 20 ago 2026 ...
+    docs/plan/03_FUSIONES.md:1033
+        | `criterios_equity_split`, `split_igual_vs_desigual`, `teoria_equidad_split_equity` | `criterios_equity_split` | DETENIDO POR LA GUARDA DE LA CUENTA DE COLISIONES DEL ENCARGO, y el acto estaba escrito entero. Con criter...
+
+  PUESTO 266: 11 candidatos
+    docs/AUDITORIA_SEGUNDO_INDICE.md:13
+        | vectores | **3.521** | **1.266** |
+    docs/FRANJA_PARES.jsonl:266
+        {"puesto_franja": 266, "mundo": "quality", "nodo_mundo": "evaluacion_riesgo_calidad_organizacional", "titulo_mundo": "Evaluación de Riesgo de Calidad (Quality Risk Assessment)", "nodo_nucleo": "quality_audit", "titulo_nu...
+    docs/FRANJA_VEREDICTOS.jsonl:266
+        {"puesto_franja": 266, "nodo_mundo": "evaluacion_riesgo_calidad_organizacional", "nodo_nucleo": "quality_audit", "clave": 0.7332, "clase": "D", "razon": "La evaluacion de riesgo de calidad con equipo, pre-evaluacion, pun...
+    docs/GRADIENTE_VEREDICTOS.md:2499
+        | **266** | FALSO PAR FUNCIONAL | `quality/evaluacion_de_factores_de_riesgo` contra `nucleo/plan_gestion_riesgos` **(t38.2)** |
+    docs/INTRA_DOMINIO_PARES.jsonl:266
+        {"dominio": "core", "nodo_a": "reparto_inicial_equity", "titulo_a": "Cómo repartir la propiedad (equity) inicial entre los socios fundadores", "nodo_b": "split_igual_vs_desigual", "titulo_b": "Repartir el equity en parte...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:246
+        {"puesto_intra": 246, "dominio": "core", "nodo_a": "split_igual_vs_desigual", "nodo_b": "timing_equity_split", "clave": 0.88, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 20 ago 2026 (vuelta 52...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:266
+        {"puesto_intra": 266, "dominio": "core", "nodo_a": "reparto_inicial_equity", "nodo_b": "split_igual_vs_desigual", "clave": 0.8746, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 20 ago 2026 (vuel...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:453
+        {"puesto_intra": 453, "dominio": "core", "nodo_a": "formalizacion_acuerdo_equity", "nodo_b": "reparto_inicial_equity", "clave": 0.8434, "banda_078_080": false, "clase": "A", "razon": "REPITE con reparto_inicial_equity. L...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:502
+        {"puesto_intra": 502, "dominio": "core", "nodo_a": "split_igual_vs_desigual", "nodo_b": "teoria_equidad_split_equity", "clave": 0.8378, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 20 ago 2026 ...
+    docs/plan/03_FUSIONES.md:961
+        contra nodos de **FUERA del acto**: el puesto **266** contra `reparto_inicial_equity` y el
+    docs/plan/03_FUSIONES.md:1033
+        | `criterios_equity_split`, `split_igual_vs_desigual`, `teoria_equidad_split_equity` | `criterios_equity_split` | DETENIDO POR LA GUARDA DE LA CUENTA DE COLISIONES DEL ENCARGO, y el acto estaba escrito entero. Con criter...
+
+  PUESTO 246: 20 candidatos
+    docs/FRANJA_INFORME.md:716
+        - **246** | exportacion/proteccion_propiedad_intelectual_2 contra patentes_startup
+    docs/FRANJA_PARES.jsonl:246
+        {"puesto_franja": 246, "mundo": "exportacion", "nodo_mundo": "proteccion_propiedad_intelectual_2", "titulo_mundo": "Protección de Propiedad Intelectual (Patente y Marca)", "nodo_nucleo": "patentes_startup", "titulo_nucle...
+    docs/FRANJA_VEREDICTOS.jsonl:246
+        {"puesto_franja": 246, "nodo_mundo": "proteccion_propiedad_intelectual_2", "nodo_nucleo": "patentes_startup", "clave": 0.7339, "clase": "C", "razon": "Registrar la propiedad intelectual en cada mercado destino contra el ...
+    docs/FRANJA_VEREDICTOS.jsonl:295
+        {"puesto_franja": 295, "nodo_mundo": "proteccion_propiedad_intelectual_internacional", "nodo_nucleo": "patentes_startup", "clave": 0.7318, "clase": "C", "razon": "Registrar la propiedad intelectual en cada mercado destin...
+    docs/GRADIENTE_VEREDICTOS.md:2371
+        | **246** | OK | `environmental/aprender_haciendo_dfe` contra `nucleo/diseno_para_sostenibilidad_cradle_to_cradle` **(t38.9)** |
+    docs/INTRA_DOMINIO_INFORME.md:602
+        | **el reparto de equity** (puesto 246) | **4** | **6** | de forma supuesta a **CENTRO ENLAZADO sin ningun aislado**, o sea la unica de las remedidas **sin gemelo que resolver** |
+    docs/INTRA_DOMINIO_INFORME.md:6000
+        los puestos **201, 203, 246 y 360** se declararon **antes de que existiera la
+    docs/INTRA_DOMINIO_INFORME.md:6019
+        | **246** el reparto de equity | **6** | 7 | **CENTRO ENLAZADO** | **ninguno** |
+    docs/INTRA_DOMINIO_PARES.jsonl:246
+        {"dominio": "core", "nodo_a": "split_igual_vs_desigual", "titulo_a": "Repartir el equity en partes iguales o desiguales (split)", "nodo_b": "timing_equity_split", "titulo_b": "Momento Óptimo para Dividir el Equity (Split...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:246
+        {"puesto_intra": 246, "dominio": "core", "nodo_a": "split_igual_vs_desigual", "nodo_b": "timing_equity_split", "clave": 0.88, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 20 ago 2026 (vuelta 52...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:266
+        {"puesto_intra": 266, "dominio": "core", "nodo_a": "reparto_inicial_equity", "nodo_b": "split_igual_vs_desigual", "clave": 0.8746, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 20 ago 2026 (vuel...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:453
+        {"puesto_intra": 453, "dominio": "core", "nodo_a": "formalizacion_acuerdo_equity", "nodo_b": "reparto_inicial_equity", "clave": 0.8434, "banda_078_080": false, "clase": "A", "razon": "REPITE con reparto_inicial_equity. L...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:502
+        {"puesto_intra": 502, "dominio": "core", "nodo_a": "split_igual_vs_desigual", "nodo_b": "teoria_equidad_split_equity", "clave": 0.8378, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 20 ago 2026 ...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:688
+        {"puesto_intra": 688, "dominio": "core", "nodo_a": "criterios_equity_split", "nodo_b": "timing_equity_split", "clave": 0.8208, "banda_078_080": false, "clase": "D", "razon": "FAMILIA DECLARADA: los dos son miembros del r...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:871
+        {"puesto_intra": 871, "dominio": "core", "nodo_a": "criterios_equity_split", "nodo_b": "teoria_equidad_split_equity", "clave": null, "banda_078_080": false, "clase": "D", "razon": "La lista de criterios contra la eleccio...
+    docs/plan/03_FUSIONES.md:167
+        | **C, sanas con figura** | **7** | **no se funden NUNCA**: son **ENLACE MUTUO**, o sea **dos aristas**. Puestos 201, 203, 215, 246, 360, 1077 y 1240 |
+    docs/plan/03_FUSIONES.md:714
+        | [`RECOMPUTO_3388.md`](RECOMPUTO_3388.md) fila **246**, `A` crudas | 574 | **573** | `scripts/plan/recomputo_3388.py` |
+    docs/plan/03_FUSIONES.md:962
+        puesto **246** contra `timing_equity_split`, que al resolver caian sobre pares que el
+    docs/plan/03_FUSIONES.md:1033
+        | `criterios_equity_split`, `split_igual_vs_desigual`, `teoria_equidad_split_equity` | `criterios_equity_split` | DETENIDO POR LA GUARDA DE LA CUENTA DE COLISIONES DEL ENCARGO, y el acto estaba escrito entero. Con criter...
+    docs/plan/04_ENLACES.md:313
+        una fusion. Puestos **201, 203, 215, 246, 360, 1077 y 1240**.
+
+  PUESTO 251: 23 candidatos
+    docs/FICHA_SUBFUSION_GRADIENTE.md:1940
+        > cribado intra-dominio lo clasifico **A REPITE** en su puesto 251, porque
+    docs/FICHA_SUBFUSION_GRADIENTE.md:2922
+        | los dos de **regalos** (puesto 251) | **falsos** | **A**, repiten entre si |
+    docs/FICHA_SUBFUSION_GRADIENTE.md:5197
+        `produccion_scheduling_balance_objetivos` (puesto **251**). **Cuatro pasos cada
+    docs/FRANJA_PARES.jsonl:251
+        {"puesto_franja": 251, "mundo": "environmental", "nodo_mundo": "critica_del_pib_como_metrica_de_progreso", "titulo_mundo": "Crítica al PIB como Métrica de Progreso", "nodo_nucleo": "medir_lo_que_importa_no_solo_lo_facil"...
+    docs/FRANJA_VEREDICTOS.jsonl:251
+        {"puesto_franja": 251, "nodo_mundo": "critica_del_pib_como_metrica_de_progreso", "nodo_nucleo": "medir_lo_que_importa_no_solo_lo_facil", "clave": 0.7337, "clase": "D", "razon": "Criticar el PIB y los incentivos perversos...
+    docs/GRADIENTE_VEREDICTOS.md:2376
+        | **251** | OK, **par intra-nucleo nuevo** | ver abajo |
+    docs/INTRA_DOMINIO_INFORME.md:1194
+        | **251** | `regalos_estrategicos_sorpresa` contra `sorprender_cliente_estrategico` | **el 2 a 10 por ciento de utilidades**, **la nota a mano**, **evitar-festivos** y **la familia del cliente** en la investigacion previ...
+    docs/INTRA_DOMINIO_INFORME.md:1229
+        | los dos de **regalos** del puesto 251 | **falsos** | **A**: repiten entre si |
+    docs/INTRA_DOMINIO_INFORME.md:1245
+        > (puesto 251), y `shock_and_awe_kit_bienvenida` es **sano frente al primero**
+    docs/INTRA_DOMINIO_INFORME.md:1305
+        > **exactamente el material de la familia de los regalos** del puesto 251 y del
+    docs/INTRA_DOMINIO_INFORME.md:1868
+        | regalos | falsa | 251 |
+    docs/INTRA_DOMINIO_INFORME.md:10856
+        los puestos **799** y **251**. **Este par era el unico que faltaba leer entre
+    docs/INTRA_DOMINIO_INFORME.md:16178
+        | 3.251-3.255 | 5 | 0 | 0,0 % |
+    docs/INTRA_DOMINIO_PARES.jsonl:251
+        {"dominio": "core", "nodo_a": "regalos_estrategicos_sorpresa", "titulo_a": "Sorpresas y Regalos Estratégicos al Cliente", "nodo_b": "sorprender_cliente_estrategico", "titulo_b": "Sorprender: regalos y gestos de apreciaci...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:251
+        {"puesto_intra": 251, "dominio": "core", "nodo_a": "regalos_estrategicos_sorpresa", "nodo_b": "sorprender_cliente_estrategico", "clave": 0.8789, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 20 ...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:799
+        {"puesto_intra": 799, "dominio": "core", "nodo_a": "regalos_estrategicos_personalizados", "nodo_b": "regalos_estrategicos_sorpresa", "clave": 0.8129, "banda_078_080": false, "clase": "A", "razon": "El mismo regalo estrat...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:1348
+        {"puesto_intra": 1348, "dominio": "core", "nodo_a": "regalos_estrategicos_personalizados", "nodo_b": "sorprender_cliente_estrategico", "clave": null, "banda_078_080": true, "clase": "D", "razon": "TERCERA ESTRELLA DEL EJ...
+    docs/plan/02_DESTEJIDOS.md:4572
+        | linea **251**, `OP-D-01`, vuelta 32 | *MOVIMIENTO 2: el destejido del pariente, **CONSUMIDO, y se dice con su medicion***. Y la linea **292**: *el destejido que esta operacion pedia **ya esta consumido** por esas dos o...
+    docs/plan/03_FUSIONES.md:683
+        | los declarados **29**, **32** y **36** (~~hoy~~ **26**, **28** y **32** AL ABRIR LA VUELTA 49) **[ROTULO FECHADO, 20 ago 2026 (vuelta 52, TAREA 1.3), CIFRAS INTACTAS: el 26/28/32 es exacto para la corrida de la APERTUR...
+    docs/plan/03_FUSIONES.md:937
+        | actos `CERRADOS` / `ABIERTOS` | 252 / 53 | **251 / 53** |
+    docs/plan/03_FUSIONES.md:1078
+        | actos `CERRADOS` / `ABIERTOS` | 251 / 53 | **247 / 53** |
+    docs/plan/EXPEDIENTE_MESA_COLEMAN.md:160
+        | **la familia de los regalos** | `regalos_estrategicos_personalizados`, `regalos_estrategicos_sorpresa`, `sorprender_cliente_estrategico` . **A en 251 y 799** |
+    docs/plan/INVENTARIO.jsonl:300
+        {"tipo": "figura", "nombre": "ESTRELLA (9.23)", "miembros": [], "forma": "figura de lectura", "cobertura": "9 ejemplares", "estado": "sano, doctrina escrita", "operaciones": [], "fecha_corte": "2026-08-11", "nota": "un c...
+
+  PUESTO 281: 19 candidatos
+    docs/FRANJA_INFORME.md:734
+        - **281** | quality/definiciones_operacionales_2 contra metricas_calidad
+    docs/FRANJA_PARES.jsonl:281
+        {"puesto_franja": 281, "mundo": "quality", "nodo_mundo": "definiciones_operacionales_2", "titulo_mundo": "Definiciones Operacionales (Método, Prueba y Criterio)", "nodo_nucleo": "metricas_calidad", "titulo_nucleo": "Métr...
+    docs/FRANJA_VEREDICTOS.jsonl:281
+        {"puesto_franja": 281, "nodo_mundo": "definiciones_operacionales_2", "nodo_nucleo": "metricas_calidad", "clave": 0.7322, "clase": "C", "razon": "Definir el metodo de prueba y el criterio de aceptacion contra definir y do...
+    docs/FRANJA_VEREDICTOS.jsonl:517
+        {"puesto_franja": 517, "nodo_mundo": "definiciones_operacionales", "nodo_nucleo": "no_sacrificar_calidad_por_velocidad", "clave": 0.7238, "clase": "C", "razon": "Definiciones operacionales de calidad aceptable contra el ...
+    docs/GRADIENTE_VEREDICTOS.md:2580
+        | **281** | OK | `quality/brainstorming` contra `nucleo/construir_sobre_ideas_ajenas` **(t44.8)** |
+    docs/INTRA_DOMINIO_INFORME.md:137
+        | el habito de trabajo creativo | **3** | puestos 281 y 333 |
+    docs/INTRA_DOMINIO_INFORME.md:1388
+        | **281** | `formacion_de_habitos_de_pensamiento` contra `formacion_de_habitos_de_trabajo_creativo` | casi nada: uno anade el **estimulo sensorial** asociado al habito y el otro **perseverar hasta el segundo aire** | de ...
+    docs/INTRA_DOMINIO_INFORME.md:1514
+        | **leidos** | **3** (puestos **261**, **281** y **333**) |
+    docs/INTRA_DOMINIO_INFORME.md:12992
+        | 2.281 | `sesgo_retrospectivo_hindsight` | `sesgo_retrospectivo_hindsight_2` |
+    docs/INTRA_DOMINIO_PARES.jsonl:281
+        {"dominio": "core", "nodo_a": "formacion_de_habitos_de_pensamiento", "titulo_a": "Formación de Hábitos de Pensamiento (Rutinas Creativas)", "nodo_b": "formacion_de_habitos_de_trabajo_creativo", "titulo_b": "Formación de ...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:281
+        {"puesto_intra": 281, "dominio": "core", "nodo_a": "formacion_de_habitos_de_pensamiento", "nodo_b": "formacion_de_habitos_de_trabajo_creativo", "clave": 0.8721, "banda_078_080": false, "clase": "D", "razon": "CORRECCION ...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:333
+        {"puesto_intra": 333, "dominio": "core", "nodo_a": "formacion_de_habitos_de_trabajo_creativo", "nodo_b": "gestion_de_habitos_mentales_para_pensar", "clave": 0.8613, "banda_078_080": false, "clase": "D", "razon": "La form...
+    docs/plan/OPERACIONES.jsonl:6
+        {"id_op": "OP-D-03", "fase": "02_DESTEJIDOS", "tipo": "DESTEJIDO", "nodos": ["ab_testing_optimizacion", "optimizacion_embudo_get_customers", "split_testing_experimentos_ab", "funnel_get_customers_optimizacion", "split_te...
+    docs/plan/RECOMPUTO_3388.md:112
+        > | componentes CERRADAS | **279** sobre **598** | **281** sobre **604** | **mas 2 y mas 6** |
+    docs/plan/RECOMPUTO_3388.md:150
+        > | componentes CERRADAS | **281** sobre **604** | **280** sobre **600** | **menos 1 y menos 4** |
+    docs/plan/RECOMPUTO_3388.md:1718
+        | las lecturas de acto entero de P.5 | CUANTIFICADA: 280 hechos, 55 pendientes, 329 pares | **REMEDIDA: 281 hechos, 54 pendientes, 324 pares** |
+    docs/plan/RECOMPUTO_3388.md:1794
+        | actos vigentes **CERRADOS / ABIERTOS** | **281 / 54** |
+    docs/plan/RECOMPUTO_3388.md:1821
+        | las lecturas de acto entero de P.5 | 281 hechos, 54 pendientes, 324 pares | **IGUAL, remedido hoy**: **556 actos** (221 superadas, **335 vigentes**), vigentes **281 CERRADOS y 54 ABIERTOS**, deuda **324** por el campo ...
+    docs/plan/RECOMPUTO_3388.md:1844
+        | actos vigentes **CERRADOS / ABIERTOS** | **281 / 54** |
+
+  PUESTO 243: 18 candidatos
+    docs/FRANJA_INFORME.md:714
+        - **243** | quality/distincion_causas_comunes_especiales contra curse_cinco_culpas
+    docs/FRANJA_PARES.jsonl:243
+        {"puesto_franja": 243, "mundo": "quality", "nodo_mundo": "distincion_causas_comunes_especiales", "titulo_mundo": "Distinción entre Causas Comunes y Especiales de Variación", "nodo_nucleo": "curse_cinco_culpas", "titulo_n...
+    docs/FRANJA_VEREDICTOS.jsonl:243
+        {"puesto_franja": 243, "nodo_mundo": "distincion_causas_comunes_especiales", "nodo_nucleo": "curse_cinco_culpas", "clave": 0.7341, "clase": "C", "razon": "No informar defectos individuales cuando el proceso esta en contr...
+    docs/FRANJA_VEREDICTOS.jsonl:265
+        {"puesto_franja": 265, "nodo_mundo": "distincion_causas_especiales_comunes", "nodo_nucleo": "five_whys_inversion_proporcional", "clave": 0.7332, "clase": "C", "razon": "Verificar el control estadistico antes de ajustar e...
+    docs/FRANJA_VEREDICTOS.jsonl:613
+        {"puesto_franja": 613, "nodo_mundo": "responsabilidad_gerencial_causas_comunes", "nodo_nucleo": "five_whys_inversion_proporcional", "clave": 0.7206, "clase": "C", "razon": "Distinguir causas comunes de especiales y asumi...
+    docs/GRADIENTE_VEREDICTOS.md:2368
+        | **243** | OK | `quality/equipo_conjunto_de_mejora_con_proveedores` contra `nucleo/collaboration_enablers` **(t42.5)** |
+    docs/INTRA_DOMINIO_PARES.jsonl:243
+        {"dominio": "core", "nodo_a": "gestion_de_habitos_mentales_para_pensar", "titulo_a": "Gestión de Hábitos Mentales para el Pensamiento Productivo", "nodo_b": "ruptura_de_habitos_para_estimulo", "titulo_b": "Ruptura Delibe...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:243
+        {"puesto_intra": 243, "dominio": "core", "nodo_a": "gestion_de_habitos_mentales_para_pensar", "nodo_b": "ruptura_de_habitos_para_estimulo", "clave": 0.8802, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECL...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:261
+        {"puesto_intra": 261, "dominio": "core", "nodo_a": "formacion_de_habitos_de_pensamiento", "nodo_b": "gestion_de_habitos_mentales_para_pensar", "clave": 0.8761, "banda_078_080": false, "clase": "A", "razon": "REPITE con g...
+    docs/plan/02_DESTEJIDOS.md:1684
+        | **4**, `recomputo del cierre transitivo tras el acto (banco 9.21)` | **CORRIDO** (`scripts/plan/recomputo_3388.py`, `SALIDA_V39_RECOMPUTO_3388.txt`): actos **333** sin cambio, ABIERTOS de **54 sobre 247** nodos a **54 ...
+    docs/plan/02_DESTEJIDOS.md:1868
+        | **2**, `recomputo del cierre transitivo` | **CORRIDO** (`docs/loop/SALIDA_V40_RECOMPUTO_3388.txt`): actos de **333 a 332**, `CERRADOS` de **279 sobre 598** nodos a **278 sobre 595**, `ABIERTOS` **quietos en 54 sobre 24...
+    docs/plan/03_FUSIONES.md:387
+        | nodos en `ABIERTOS` | **243** | **243** |
+    docs/plan/03_FUSIONES.md:693
+        | nodos en `CERRADOS` / `ABIERTOS` | 543 / 243 | **536 / 240** |
+    docs/plan/OPERACIONES.jsonl:24
+        {"id_op": "OP-U-01", "fase": "03_FUSIONES", "tipo": "FUSION", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [], "orden": 1, "depende_de": ["OP-C-01", "OP-C-02", "OP-C-03", "OP-C-0...
+    docs/plan/OPERACIONES.jsonl:35
+        {"id_op": "OP-U-02", "fase": "03_FUSIONES", "tipo": "FUSION", "nodos": [], "superviviente": null, "preservar": [], "eliminar": [], "aristas_nuevas": [], "orden": 2, "depende_de": ["OP-U-01"], "bloquea_a": [], "verificaci...
+    docs/plan/RECOMPUTO_3388.md:38
+        > | componentes de tamano 2 | **244** | **243** | **menos 1** |
+    docs/plan/RECOMPUTO_3388.md:152
+        > | CERRADAS de tamano 2 | **243** | **244** | **mas 1** |
+    docs/plan/RECOMPUTO_3388.md:205
+        > | CERRADAS de tamano 2 | **244** | **243** | **menos 1** |
+
+==============================================================================
+CANDIDATOS TOTALES: 163. Ninguno se oculta y ninguno se corrige aqui:
+este instrumento LISTA, y la adjudicacion de cada sitio es de lectura.
+LIMITE DECLARADO: es una busqueda lexica. Una tabla puede citar el
+marcador con otras palabras y este barrido no la veria; y una cifra con
+su fecha de corte declarada aparece aqui sin estar envejecida.

@@ -1082,3 +1082,157 @@ fechado a su corrida desde el principio, que es lo que el acta 50 adjudico en su
 | mixtos del tramo 1 pendientes de `P.12` | 25 | ****21**** |
 | las cuatro comprobaciones de [`08_VERIFICACION.md`](08_VERIFICACION.md) | | **TODAS OK** |
 | duplicadas tras resolver **NUEVAS** / auto-aristas **NUEVAS** | | **CERO** / **CERO** |
+
+---
+
+## `OP-U-01`, TRAMO 1, LA VUELTA 52: **TRES ACTOS FUNDIDOS, EL CARRIL DEL FILO ESTRENADO, Y CINCO ACTOS DECLARADOS CON SU ESPECIE** (20 ago 2026, vuelta 52)
+
+### LA GUARDA DE COLISIONES YA NO ES UNA CUENTA FIJA: ES LA QUE LA SIMULACION IMPRIME
+
+**El acta de la vuelta 51, pregunta 2c, retiro la cuenta fija del encargo viejo** (*una colision
+por cada `CONTINUA` sobre mixto CON forma y CERO por cada `ENTRA`*), que era exacta para la forma
+de la estrella con centro absorbido y no en general. **En su lugar: antes de cada lote se corre
+`scripts/loop/vuelta51_colisiones_esperadas.py` sobre la nomina re-medida del dia, EL CENSO
+ESPERADO ES EL QUE LA SIMULACION IMPRIME, por PAR RESUELTO, y una colision real FUERA de la
+prediccion detiene.**
+
+**Los dos lotes de esta vuelta cumplieron la guarda AL DIGITO.** El lote A predijo **TRES** (una
+dentro del acto y dos fuera) y el censo del archivo entero devolvio **exactamente esas tres**
+([`../loop/SALIDA_V52_CENSO_COLISIONES_LOTE_A.txt`](../loop/SALIDA_V52_CENSO_COLISIONES_LOTE_A.txt)).
+El lote B predijo **TRES** (dos dentro y una fuera) y devolvio **exactamente esas tres**
+([`../loop/SALIDA_V52_CENSO_COLISIONES_LOTE_B.txt`](../loop/SALIDA_V52_CENSO_COLISIONES_LOTE_B.txt)).
+**Tras cada limpieza `P.16` el censo vuelve a CERO.**
+
+### LAS TRES LECTURAS `P.12` EJECUTADAS, con sus citas
+
+**Tabla generada desde los dos planes sellados**, no tecleada
+(`python scripts/loop/vuelta52_registro_tramo.py`):
+
+| el mixto | leido contra | veredicto | estado | lo que lo decide, con su puesto |
+|---|---|---|---|---|
+| `teoria_equidad_split_equity` | `criterios_equity_split` | **`CONTINUA`** | EJECUTADA | lote A. El puesto 871 es el veredicto DIRECTO del par y lo dice sin rodeos: EL SEGUNDO ES LA PREGUNTA PREVIA DEL PRIMERO Y NO ESTA CONTENIDO EN EL, porque el checklist SUPONE YA ELEGIDA la logica de negocio. Puestos citados: 871 |
+| `sorprender_cliente_estrategico` | `regalos_estrategicos_personalizados` | **`CONTINUA`** | EJECUTADA | lote B. El puesto 1348 es el veredicto DIRECTO del par y es D, y no lo dice de pasada: lo llama TERCERA ESTRELLA DEL EJERCICIO y la primera del archivo con cobertura completa desde el dia en que se declara. Puestos citados: 251, 799, 1097, 1348 |
+| `formacion_de_habitos_de_trabajo_creativo` | `gestion_de_habitos_mentales_para_pensar` | **`CONTINUA`** | EJECUTADA | lote B. El puesto 333 es el veredicto DIRECTO del par y es D, y lo escribe entero: LA FORMACION DEL HABITO CONTRA SU GESTION. Puestos citados: 261, 281, 333 |
+
+**LAS TRES SALIERON `CONTINUA`, y en las tres el veredicto DIRECTO del par mixto ya era `D`.**
+**Las aristas de las tres quedan DECLARADAS con id resuelto (`P.9`) y SIN ejecutarse**, y la
+poda de sus solapes queda anotada para la fase 04. **En el acto del equity no hay arista que
+declarar**: ya existe en los dos sentidos, y lo que queda es solo la poda.
+
+### LOS TRES ACTOS FUNDIDOS, con su reparto contado por el instrumento
+
+| lote | superviviente | absorbe | el mixto que queda vivo | piezas del reparto |
+|---|---|---|---|---|
+| **A** | `criterios_equity_split` | `split_igual_vs_desigual` | `teoria_equidad_split_equity` | **5**: 1 enteras, 0 de INCISO, 4 ya dichas |
+| **B** | `regalos_estrategicos_personalizados` | `regalos_estrategicos_sorpresa` | `sorprender_cliente_estrategico` | **10**: 7 enteras, 2 de INCISO, 1 ya dichas |
+| **B** | `gestion_de_habitos_mentales_para_pensar` | `formacion_de_habitos_de_pensamiento` | `formacion_de_habitos_de_trabajo_creativo` | **6**: 2 enteras, 1 de INCISO, 3 ya dichas |
+
+**EN LOS TRES MUERE EL CENTRO DE LA ESTRELLA Y SOBREVIVE UN PERIFERICO**, que es la figura que
+la vuelta 51 ya habia ejecutado dos veces: el centro es el que tiene arista `A` con los dos
+demas, y absorberlo entero juntaria a los dos perifericos, que el archivo declara `D`.
+
+**Y EN LOS TRES EL SUPERVIVIENTE LO ELIGIO EL CONTENIDO, NUNCA EL CONTEO DE CARACTERES**, que es
+lo que el encargo de esta vuelta retiro como vara: en el del equity el contenido gana por el
+margen mas ancho del tramo; **en el de los regalos las tres varas de conteo EMPATAN y decide el
+MATERIAL PROPIO declarado en el puesto 799** (*resistir la tentacion de comercializar
+masivamente el artefacto exclusivo, que no esta en ningun otro nodo*) contra el otro viable, al
+que el puesto 251 declara repetido; **y en el de los habitos empatan pasos y condiciones, el
+resumen apunta al otro y NO desempata, y decide el PADRE DECLARADO en el puesto 261**, que llama
+al elegido *la version larga* del centro que muere.
+
+### EL CARRIL DEL FILO, ESTRENADO: **TRES RELECTURAS EN EL MISMO ACTO**
+
+**El acta de la vuelta 51, pregunta 2, lo adjudico:** una colision cuyo veredicto arrastrado es
+del FILO (`B` o `C`) **NO se voltea por maquina**, porque su nodo muere o cambia de texto y eso
+es la COLA DE RELECTURA POST FUSION de [`08_VERIFICACION.md`](08_VERIFICACION.md): **se RELEE el
+par resuelto EN EL MISMO ACTO con el veredicto directo como contraste, y la correccion cita ESA
+relectura.** Y si la relectura encuentra que lo congelado es una pregunta de POLITICA de
+catalogo, **el acto NO se funde**.
+
+| par resuelto | veredicto del FILO arrastrado o directo | contraste | que decide la relectura |
+|---|---|---|---|
+| `criterios_equity_split contra reparto_inicial_equity` | puesto 266, clase B, emitido contra reparto_inicial_equity mas split_igual_vs_desigual | puesto 754, clase D | **CONDICION DE TEXTO.** CONDICION DE TEXTO, y se resuelve |
+| `criterios_equity_split contra timing_equity_split` | puesto 246, clase C, emitido contra split_igual_vs_desigual mas timing_equity_split | puesto 688, clase D | **CONDICION DE TEXTO.** CONDICION DE TEXTO, y se resuelve |
+| `gestion_de_habitos_mentales_para_pensar contra ruptura_de_habitos_para_estimulo` | puesto 563, clase D, emitido contra formacion_de_habitos_de_pensamiento mas ruptura_de_habitos_para_estimulo | puesto 243, clase B | **CONDICION DE TEXTO.** CONDICION DE TEXTO, y se resuelve a D |
+
+**LAS TRES SALIERON CONDICION DE TEXTO Y NINGUNA PREGUNTA DE POLITICA**, y de eso dependia que
+los actos se pudieran fundir. **Las tres relecturas estan escritas en los planes ANTES de
+sellarlos**, no despues de ejecutar.
+
+> **UNA FORMA QUE NINGUN CARRIL ESCRITO CUBRE, dicha antes de resolverla y no despues:** en el
+> par `gestion_de_habitos_mentales_para_pensar` contra `ruptura_de_habitos_para_estimulo` el
+> veredicto **ARRASTRADO es una `D`** (el 563) y el **DIRECTO es una `B`** (el 243), que es al
+> reves de los dos carriles: el del `A` arrastrado (acta 49, pregunta 1) y el del filo (acta 51,
+> pregunta 2). **Lo que si es mecanico es el disparador de `08_VERIFICACION.md`: un par vuelve a
+> la cola cuando uno de sus dos nodos MUERE O CAMBIA DE TEXTO, y aqui pasan las dos cosas.** Se
+> relee y **se mueve el `B` directo y no la `D` arrastrada**, porque la relectura sostiene la `D`
+> por su cuenta: `ruptura_de_habitos_para_estimulo` tiene CINCO pasos y solo DOS caben en el paso
+> 3 del superviviente. **Mover el `B` y no la `D` es lectura del ejecutor y va marcada.**
+
+### EL CHOQUE DE LETRA CONTRA ARITMETICA
+
+**Ningun veredicto `A` de los tres actos fundidos escribe la formula *Sobrevive X***, medido hoy
+([`../loop/SALIDA_V52_VIABLES.txt`](../loop/SALIDA_V52_VIABLES.txt)), asi que **esta vuelta no
+registra ningun choque nuevo**. Se dice en vez de darlo por supuesto. **Los TRES choques que el
+instrumento sigue midiendo estan en actos que esta vuelta NO toca** (los del `analisis_pareto`,
+del `mistake_proofing_poka_yoke_2` y del `proceso_nominacion_seleccion`), y quedan para su
+lectura.
+
+### LOS ACTOS QUE ESTA VUELTA NO FUNDE, CADA UNO CON SU ESPECIE
+
+| el acto, por sus MIEMBROS | especie | por que NO se funde | se acumula para |
+|---|---|---|---|
+| `mission_and_operations_planning`, `proceso_sop_mop`, `sop_colaborativo` | **PREGUNTA DE POLITICA DE CATALOGO CONGELADA EN UNA B** | EL PROPIO VEREDICTO DEL PAR MIXTO ESCRIBE LA PREGUNTA Y LA MANDA A LA MESA | LA MESA |
+| `founder_ceo_succession_process`, `identificacion_necesidad_sucesion_ceo`, `sucesion_iniciada_por_fundador` | **EL CONTENIDO NO ALCANZA A ELEGIR Y LA RECETA NO TIENE CARRIL PARA LO QUE LA LECTURA ENCUENTRA** | SE DECLARA POR DOS MOTIVOS Y LOS DOS SE ESCRIBEN, porque cada uno por separado ya bastaria | LA MESA y el PARA_ALEXIS del cierre |
+| `decision_cuando_fundar`, `evaluacion_capacidades_fundador`, `tres_preguntas_carrera` | **IMPOSIBLE POR PUERTA (por estructura)** | DOS PUERTAS DENTRO Y UNA OBLIGADA A MORIR | el PARA_ALEXIS del cierre |
+| `enfoque_paso_a_paso_investigacion_mercado`, `evaluacion_mercados_objetivo`, `screening_mercados_potenciales` | **IMPOSIBLE POR PUERTA (por estructura)** | MISMA FIGURA EXACTA QUE EL ACTO 8 | el PARA_ALEXIS del cierre |
+| `calcular_peso_dimensional_antes_cotizar`, `conocer_limites_peso_tamano_courier`, `medir_paquete_redondeando_hacia_arriba` | **IMPOSIBLE POR PUERTA (por estructura), Y EL ENCARGO NO LO NOMBRABA** | EL TERCERO QUE LA VARA REPARADA ENCUENTRA Y QUE NADIE HABIA CONTADO, y se dice asi en vez de colarlo con los otros dos | el PARA_ALEXIS del cierre |
+
+> **EL TERCER IMPOSIBLE POR PUERTA QUE EL ENCARGO NO NOMBRABA, y es el hallazgo de la TAREA
+> 1.5:** el encargo mandaba reparar `vuelta48_puertas_en_el_lote.py` con el caso *MAS DE UNA
+> PUERTA con alguna obligada a morir*, y nombraba DOS actos. **La vara reparada encuentra TRES**,
+> y el tercero tiene **UNA SOLA puerta**. **Lo que eso desmiente es el caso `a` del instrumento
+> viejo**, escrito con estas palabras: *UN SOLO miembro protegido, el acto SE SALVA si la lectura
+> elige a ese nodo como superviviente*. **Cuando esa unica puerta es el CENTRO de la estrella, la
+> lectura NO PUEDE elegirlo**, porque no deja ningun mixto fuera. **La cuenta de puertas no es lo
+> que decide: lo que decide es si alguna puerta esta OBLIGADA A MORIR por la estructura del
+> acto**, y asi quedan las cuatro categorias del instrumento de hoy: SALVABLE, IMPOSIBLE POR
+> NOMINA, IMPOSIBLE POR ESTRUCTURA y SIN RECETA
+> ([`../loop/SALIDA_V52_PUERTAS_REPARADO.txt`](../loop/SALIDA_V52_PUERTAS_REPARADO.txt)).
+
+### LOS CINCO DECLARADOS DEL TRAMO SIGUEN DECLARADOS
+
+**Ninguno se toca y se identifican por sus MIEMBROS**, no por su numero, que baila con cada
+fusion: `obtencion_compromiso` y hermanos; `mejora_del_sistema_responsabilidad_gerencial` y
+hermanos; `dia_cero_defectos` y hermanos; `domina_lo_que_compras` con
+`investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor`; y `cultura_climatica_innovacion`
+con `cultura_de_innovacion`. **Al cerrar la vuelta 52 son los actos 2, 16, 18, 22 y 23**, leidos
+de la salida que esta misma celda cita
+([`../loop/SALIDA_V52_TRAMO1_CIERRE.txt`](../loop/SALIDA_V52_TRAMO1_CIERRE.txt), bloque *actos de
+FUSION PURA vivos*, corrida DESPUES del ultimo movimiento de la vuelta).
+
+### LO QUE ESTA VUELTA NO HIZO DEL TRAMO 1, CON SU CIFRA MEDIDA AL CIERRE
+
+| | |
+|---|---:|
+| lecturas `P.12` **hechas y ejecutadas** | **3** |
+| actos **fundidos** | **3** |
+| actos **DECLARADOS** y no fundidos, con su especie escrita | **5** |
+| actos MIXTOS que **siguen pendientes** de `P.12`, re-medidos al cierre | **18** |
+| de esos, **bloqueados por la vara de las puertas** y que ninguna lectura salva | **3** |
+| **tramo 2** de 50 actos | **NO ABIERTO**: no hubo cuerda |
+
+### EL CIERRE DE LA SECCION, MEDIDO AL CERRAR
+
+| | al abrir la vuelta 52 | **al cerrarla** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 566 / 77 / 8 / 2737 | **563 / 75 / 7 / 2743** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3853 / 3492 / 361 / 17011 | **3853 / 3489 / 364 / 17011** |
+| retrato: `A` crudas / colapsos / pares distintos | 566 / 57 / 509 | **563 / 60 / 503** |
+| actos `CERRADOS` / `ABIERTOS` | 247 / 53 | **244 / 53** |
+| nodos en `CERRADOS` / `ABIERTOS` | 518 / 240 | **509 / 240** |
+| cola de costuras | 1489 | **1488** |
+| colisiones de clase vigentes | 0 | **0**, censo propio sobre el archivo entero |
+| mixtos del tramo 1 pendientes de `P.12` | 21 | **18** |
+| las cuatro comprobaciones de [`08_VERIFICACION.md`](08_VERIFICACION.md) | | **TODAS OK** |
+| duplicadas tras resolver **NUEVAS** / auto-aristas **NUEVAS** | | **CERO** / **CERO** |

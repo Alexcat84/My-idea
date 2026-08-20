@@ -15551,7 +15551,7 @@ commit del checkpoint fija el estado que el auditor recomputa.
 `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commits. Cifras recomputadas del
 archivo, sin huecos ni duplicados.
 
-### 95.1 MARCADOR (corte 2.900)
+### 95.1 MARCADOR (corte 2.900), FOTO FECHADA DEL CHECKPOINT DEL BUCLE VUELTA 4 (12 ago 2026), NO TABLA VIGENTE
 
 | | |
 |---|---:|
@@ -15568,6 +15568,8 @@ relectura conjunta acta vuelta 4, 95.3.1):** el 2.805 pasa de A a D. **SEGUNDA C
 DECLARADA (bucle vuelta 8, relectura conjunta acta vuelta 7, TAREA 1.2):** el 2.630 pasa de A a
 D (98.2), y baja el marcador global un escalon mas (el 2.630 es anterior a este corte). Cifras
 de esta seccion ya recomputadas con las dos correcciones aplicadas.
+
+> **ROTULO FECHADO Y CADENA CERRADA (20 ago 2026, vuelta 52, TAREA 1.4.a; adjudicacion del acta de la vuelta 51, pregunta 4). ESTE APENDICE ES UN CHECKPOINT DEL CRIBADO, UNA FOTO FECHADA DEL BUCLE VUELTA 4 AL CORTE 2.900, Y NO UNA TABLA VIGENTE.** La duda que el barrido `9.10` de la vuelta 51 levanto no era de medicion sino de naturaleza, y esta adjudicada: **es foto.** **Y LA CADENA DE TACHADOS QUE VUELTAS POSTERIORES LE FUERON APLICANDO A LA `A` Y A LA `D` LE ESTABA DANDO MANTENIMIENTO A UNA FOTO COMO SI FUERA UNA TABLA VIGENTE, restando de la cifra anterior en vez de re-medir**, y esa es exactamente la razon de que la `B` (89) y la `C` (7) se quedaran congeladas en las de la vuelta 4 mientras la `A` y la `D` bajaban escalon a escalon. **LA CADENA TERMINA AQUI: ninguna vuelta futura la vuelve a mover.** Nada se borra ni se reescribe: los tachados se quedan como registro de lo que paso. **CONTRASTE, y va DENTRO de esta nota y NO como cifra de la tabla, porque el corte 2.900 de hoy no es el checkpoint de la vuelta 4 sino el mismo tramo del archivo despues de dieciseis vueltas de correcciones y fusiones:** **A 551, B 75, C 7, D 2.267** sobre `n` **2.900**, medido HOY con `python scripts/recomputar_marcador.py 2900` (`../loop/SALIDA_V52_MARCADOR_2900_CIERRE.txt`), corrido DESPUES del ultimo movimiento de la vuelta 52. **EL MARCADOR VIGENTE VIVE EN EL APENDICE 100.1 DE ESTE MISMO DOCUMENTO Y EN LAS FILAS DEL PASO 1 Y DE LA TABLA POR DOMINIO DE `plan/RECOMPUTO_3388.md`, Y EN NINGUN OTRO SITIO.**
 
 ### 95.2 `quality` y su vara por tramo (2.801-2.900)
 
@@ -16334,10 +16336,10 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 | | |
 |---|---:|
 | **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
-| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ **566** (16,7 %), ver las correcciones declaradas debajo |
-| **B** | ~~89~~ ~~87~~ ~~84~~ ~~83~~ ~~82~~ ~~81~~ ~~80~~ ~~79~~ **77** |
-| **C** | ~~7~~ **8** |
-| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ **2.737** (80,8 %) |
+| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ ~~566 (16,7 %)~~ **563** (16,6 %), ver las correcciones declaradas debajo |
+| **B** | ~~89~~ ~~87~~ ~~84~~ ~~83~~ ~~82~~ ~~81~~ ~~80~~ ~~79~~ ~~77~~ **75** |
+| **C** | ~~7~~ ~~8~~ **7** |
+| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ ~~2.737 (80,8 %)~~ **2.743** (81,0 %) |
 
 > **CORRECCION DECLARADA (19 ago 2026, vuelta 50). LA TABLA VOLVIO A QUEDARSE ATRAS, Y ESTA
 > VEZ DENTRO DE LA MISMA VUELTA QUE LA ACABABA DE CORREGIR.** La correccion de la vuelta 49
@@ -16350,6 +16352,8 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 > volteo. Medido hoy con `python scripts/recomputar_marcador.py 3388`
 > (`../loop/SALIDA_V50_MARCADOR_APERTURA.txt`): **A 573, B 77, C 8, D 2.730** sobre `n`
 > **3.388**, cero huecos y cero duplicados.
+
+> **TERCERA CORRECCION DECLARADA SOBRE ESTA TABLA (20 ago 2026, vuelta 52, barrido `9.10` del cierre), y las dos notas de la vuelta 50 y la de la vuelta 51 NO se reescriben: estan fechadas y se quedan.** Esta vez la tabla SI se barrio antes de cerrar, y ademas SE MOVIERON LAS CUATRO FILAS Y NO SOLO DOS, que es lo que la vuelta 51 no tuvo que hacer porque sus CINCO volteos salian todos de `A`. **Los seis volteos de esta vuelta salen de TRES clases distintas: TRES de `A` (los puestos 502, 251 y 281), DOS de `B` (el 266 y el 243) y UNO de `C` (el 246), asi que bajan la `A`, la `B` y la `C` a la vez y las seis suben a la `D`. La cuenta cuadra al digito contra la apertura de esta vuelta (A 566, B 77, C 8, D 2.737): menos 3, menos 2, menos 1 y mas 6.** la vuelta 52 fundio TRES actos de `OP-U-01` (el del reparto de equity, el de los regalos estrategicos y el de los habitos de pensamiento) y volteo SEIS veredictos por `P.16` (puestos 502, 266 y 246 en el lote A; 251, 281 y 243 en el lote B). **Medido HOY con `python scripts/recomputar_marcador.py 3388` DESPUES del ultimo movimiento (`../loop/SALIDA_V52_MARCADOR_CIERRE.txt`): A 563, B 75, C 7, D 2.743** sobre `n` **3.388**, cero huecos y cero duplicados. **Y LA REGLA QUE ESTA VUELTA CUMPLE DE ENTRADA Y NO EN LA SIGUIENTE:** las tres celdas con contador de `plan/RECOMPUTO_3388.md` que este mismo barrido movio llevan su contador CUADRADO en el mismo acto, que es lo que el `D7` de la vuelta 50 pide y lo que la vuelta 51 no hizo.
 
 > **SEGUNDA CORRECCION DECLARADA DE LA VUELTA 50, Y ES LA MISMA TABLA OTRA VEZ, EL MISMO DIA,
 > A MANOS DE LA MISMA VUELTA.** La correccion de arriba se escribio con el marcador de la

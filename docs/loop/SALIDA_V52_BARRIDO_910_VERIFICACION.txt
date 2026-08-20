@@ -1,0 +1,171 @@
+==============================================================================
+BARRIDO DEL BANCO 9.10, vuelta 50 (sucesor: --viejo AHORA BUSCA)
+marcador viejo buscado: A 563 B 75 C 7 D 2743
+retrato viejo buscado : 60, 503
+puestos corregidos    : 502
+==============================================================================
+
+--- FAMILIA 1: EL MARCADOR VIEJO QUE SE PIDIO (A 563, D 2743) ---
+  candidatos: 10
+  docs/FRANJA_VEREDICTOS.jsonl:563
+      {"puesto_franja": 563, "nodo_mundo": "descubrir_necesidades_cliente", "nodo_nucleo": "requirements_documentation", "clave": 0.7222, "clase": "D", "razon": "Recolectar y priorizar necesidades contra documentar y priorizar...
+  docs/INTRA_DOMINIO_INFORME.md:15492
+      | **A** | **~~563~~ 562** (20,1 %) |
+  docs/INTRA_DOMINIO_INFORME.md:16339
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ ~~566 (16,7 %)~~ **563** (16,6 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16342
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ ~~2.737 (80,8 %)~~ **2.743** (81,0 %) |
+  docs/INTRA_DOMINIO_INFORME.md:16356
+      > **TERCERA CORRECCION DECLARADA SOBRE ESTA TABLA (20 ago 2026, vuelta 52, barrido `9.10` del cierre), y las dos notas de la vuelta 50 y la de la vuelta 51 NO se reescriben: estan fechadas y se quedan.** Esta vez la tabl...
+  docs/plan/RECOMPUTO_3388.md:246
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ **563** **[CORREGIDA ~~SIETE~~ ~~OCHO~~ NUEVE VECES, el...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ ~~**525**~~ ~~**522**~~ ~~**509**~~ **503** **[CORREGIDA ~~SIETE~~ ~~OCHO~~ NUEVE VECES...
+  docs/plan/RECOMPUTO_3388.md:1079
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ **563** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ ~~**16,9 %**~~ ~~**16,7 %**~~ *...
+  docs/plan/RECOMPUTO_3388.md:1797
+      > **ROTULO FECHADO Y CADENA CERRADA (20 ago 2026, vuelta 52, TAREA 1.4.b; adjudicacion del acta de la vuelta 51, pregunta 4). ESTA TABLA ES UNA FOTO FECHADA, NO UNA TABLA VIGENTE, y su encabezado decia *medido hoy*.** **...
+  docs/plan/RECOMPUTO_3388.md:1849
+      > **ROTULO FECHADO Y CADENA CERRADA (20 ago 2026, vuelta 52, TAREA 1.4.b; adjudicacion del acta de la vuelta 51, pregunta 4). ESTA TABLA ES UNA FOTO FECHADA, NO UNA TABLA VIGENTE, y su encabezado decia *medido hoy*.** **...
+
+--- FAMILIA LEGADO: EL MARCADOR DE LA VUELTA 14 (583 / 2.709) ---
+  candidatos: 25
+  docs/FRANJA_VEREDICTOS.jsonl:583
+      {"puesto_franja": 583, "nodo_mundo": "sistema_responsabilidad_gerencial_2", "nodo_nucleo": "curse_cinco_culpas", "clave": 0.7216, "clase": "C", "razon": "Asumir el sistema completo como tu responsabilidad contra facilita...
+  docs/INTRA_DOMINIO_INFORME.md:16339
+      | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ ~~566 (16,7 %)~~ **563** (16,6 %), ver las correcciones declaradas debajo |
+  docs/INTRA_DOMINIO_INFORME.md:16342
+      | **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ ~~2.737 (80,8 %)~~ **2.743** (81,0 %) |
+  docs/INTRA_DOMINIO_INFORME.md:16612
+      `risk_management` aporta cero. ~~Total de A en el archivo: 583.~~ **CORRECCION DECLARADA (15 ago
+  docs/plan/02_DESTEJIDOS.md:352
+      > publicado** (`A 583, B 89, C 7, D 2709` medido hoy al abrir esta vuelta) **y obligaria a
+  docs/plan/02_DESTEJIDOS.md:662
+      | A | 583 | 582 | **582** |
+  docs/plan/02_DESTEJIDOS.md:665
+      | D | 2.709 | 2.711 | **2.714** |
+  docs/plan/03_FUSIONES.md:734
+      `2709`, las cifras del marcador de la vuelta 14, y `--viejo` solo cambia la cabecera que imprime.
+  docs/plan/10_INVENTARIO.md:311
+      | **el nombre que esconde** | 3 ejemplares | TRES VECES el contador dejo fuera a un miembro real porque su NOMBRE no llevaba la palabra del tema, y las tres veces lo cazo el segundo instrumento. (1) el sexto de los cuadr...
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:240
+      | **583** | `decision_factory_mentality` contra `equipos_dedicados_de_proyecto` | **B** | *la mitad que DIAGNOSTICA repite y la mitad que TRATA no*, asi que no se puede dar por sano ni por repetido entero |
+  docs/plan/EXPEDIENTE_MESA_UNIDA.md:383
+      | **3** | **`decision_factory_mentality`** | la mesa unida | **no lleva ni *gate* ni *portafolio***: se llama *Haz menos proyectos, pero hazlos bien* | **el barrido de las A**, puestos 1499 y 583 |
+  docs/plan/INVENTARIO.jsonl:327
+      {"tipo": "figura", "nombre": "el nombre que esconde", "cobertura": "3 ejemplares", "forma": "modo de fallo del contador, no del archivo", "miembros": [], "estado": "ANOTADO como historia, no como recomendacion", "operaci...
+  docs/plan/OPERACIONES.jsonl:27
+      {"id_op": "OP-M-01", "fase": "06_MESAS", "tipo": "MESA ADJUDICADA: LAS DOS MITADES QUEDAN, CON FRONTERA ADOPTADA", "nodos": ["asignacion_recursos_en_gates", "decision_factory_mentality", "equipos_dedicados_de_proyecto", ...
+  docs/plan/RECOMPUTO_3388.md:31
+      > | A crudas en el archivo | **583** | ~~**582**~~ **581** al cierre de la vuelta 34 | **menos 2** |
+  docs/plan/RECOMPUTO_3388.md:80
+      > | A crudas en el archivo | **583** | **582** | **582** | **menos 1** |
+  docs/plan/RECOMPUTO_3388.md:246
+      | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ **563** **[CORREGIDA ~~SIETE~~ ~~OCHO~~ NUEVE VECES, el...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ ~~**525**~~ ~~**522**~~ ~~**509**~~ **503** **[CORREGIDA ~~SIETE~~ ~~OCHO~~ NUEVE VECES...
+  docs/plan/RECOMPUTO_3388.md:528
+      | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ ~~509~~ **503**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ ~~509~~ **50...
+  docs/plan/RECOMPUTO_3388.md:1079
+      | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ **563** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ ~~**16,9 %**~~ ~~**16,7 %**~~ *...
+  docs/plan/RECOMPUTO_3388.md:1081
+      ~~**Los diez dominios y el total (3.388 pares, 583 A) coinciden con el marcador recomputado de la vuelta
+  docs/plan/RECOMPUTO_3388.md:1082
+      14** (`A 583, B 89, C 7, D 2.709`), verificado de nuevo aqui por suma de columna.~~ **CORRECCION
+  docs/plan/RECOMPUTO_3388.md:1790
+      | **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ ~~**576 / 83 / 8 / 2.721**~~ **575 / 83 / 8 / 2.722** **[CORREGIDA VARIAS VECES, el 15 y el 18 ago 2026, ver la...
+  docs/plan/RECOMPUTO_3388.md:1797
+      > **ROTULO FECHADO Y CADENA CERRADA (20 ago 2026, vuelta 52, TAREA 1.4.b; adjudicacion del acta de la vuelta 51, pregunta 4). ESTA TABLA ES UNA FOTO FECHADA, NO UNA TABLA VIGENTE, y su encabezado decia *medido hoy*.** **...
+  docs/plan/RECOMPUTO_3388.md:1839
+      | **A / B / C / D** | ~~**583 / 89 / 7 / 2.709**~~ ~~**582 / 87 / 8 / 2.711**~~ ~~**581 / 83 / 8 / 2.716**~~ ~~**576 / 83 / 8 / 2.721**~~ **575 / 83 / 8 / 2.722** (17,0 / 2,4 / 0,2 / 80,3 por ciento) **[CORREGIDA VARIAS ...
+  docs/plan/RECOMPUTO_3388.md:1849
+      > **ROTULO FECHADO Y CADENA CERRADA (20 ago 2026, vuelta 52, TAREA 1.4.b; adjudicacion del acta de la vuelta 51, pregunta 4). ESTA TABLA ES UNA FOTO FECHADA, NO UNA TABLA VIGENTE, y su encabezado decia *medido hoy*.** **...
+
+--- FAMILIA RETRATO: LAS CIFRAS VIEJAS DEL RETRATO DE LAS A (60, 503) ---
+  candidatos: 28
+  docs/BANCO_DE_TEXTOS.md:2234
+      | **el identificador de familia** (§82.2) | duplicados reales, **60%** | el `_2` que marca **destinatario u objeto distinto** |
+  docs/COSTURAS_INTERNAS_RESUMEN.md:141
+      | 60 | quality | `consejos_de_calidad` | 5 | 44.6 | 3 |
+  docs/COSTURAS_INTERNAS_RESUMEN.md:324
+      | 6 | core | `customer_development_weekly_lessons_learned` | 6 | 76.4 | 60.8 | 4 | bloque |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:519
+      | `core/definicion_gatekeepers` | 6 | 45,7 | 60,6 | **falsa** |
+  docs/FICHA_SUBFUSION_GRADIENTE.md:1375
+      | **10 a 13** | **el ciclo generico vision e hitos**: definir la vision de largo plazo, dividir en hitos de 30, 60 y 90 dias, **entregar una version funcional al final de cada ciclo** y ajustar el plan siguiente con lo a...
+  docs/FICHA_SUBFUSION_GRADIENTE.md:3668
+      | por encima de 52,0 | `transicion_producto_a_experiencia` | 60,1 | confirmada |
+  docs/INTRA_DOMINIO_INFORME.md:4761
+      | **el identificador** (§82.2) | 5 pares del mismo id de familia en `quality` | **3 repitieron, 2 no: 60%** |
+  docs/INTRA_DOMINIO_INFORME.md:4913
+      | **el identificador** (§82.2, §84.3) | 5 pares de familia, **3 repitieron: 60%** | **ve parecido donde no lo hay**: un `_2` puede marcar destinatario (2.439) u objeto (2.433) distinto | **mirar el destinatario y el obje...
+  docs/INTRA_DOMINIO_INFORME.md:8435
+      | **904** | la cultura financiera, *sesiones regulares* | tres sesiones de 30 a 60 minutos, mensuales, reunion semanal de numeros, mapas de dinero |
+  docs/INTRA_DOMINIO_INFORME.md:11039
+      ### 60.5 EL RETRATO DE LAS A A LOS 1.400
+  docs/INTRA_DOMINIO_INFORME.md:13931
+      | **LA VIEJA Y LA NUEVA VISION** | 6 | 15 | 9 | 4 | 5 | **60%** | **0** |
+  docs/INTRA_DOMINIO_INFORME.md:14730
+      | **acierto del identificador** | **60%** | **25%** |
+  docs/INTRA_DOMINIO_RESUMEN.md:112
+      | quality | `analisis_causa_raiz_diagnostico` con `juran_rcca_metodo` | 60.0 | 0.77 | racimo censado: Analisis de causa raiz (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:166
+      | quality | `ciclo_de_mejora_continua_helix` con `ciclo_shewhart_pdsa` | 60.0 | 0.749 | racimo censado: Ciclo de mejora PDCA / PDSA (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:381
+      | quality | `analisis_causa_raiz_defectos` con `analisis_diagnostico_causa` | 60.2 | 0.6524 | racimo censado: Analisis de causa raiz (cribado) |
+  docs/INTRA_DOMINIO_RESUMEN.md:420
+      | quality | `concepto_de_auditoria_de_calidad` con `reporte_auditoria` | 60.5 | 0.6193 | racimo censado: Auditoria de calidad (cribado) |
+  docs/PENDIENTES.md:1091
+      | `The Hard Thing About Hard Thing - Ben Horowitz` | 60 |
+  docs/plan/01_FUENTES.md:429
+      | `modelo_hibrido_agile_stage_gate` | **1 a 9 / 10 a 13** | objetivo final ambicioso, **hitos de 30, 60 y 90 dias**, version funcional por ciclo |
+  docs/plan/01_FUENTES.md:499
+      | `modelo_hibrido_agile_stage_gate` | **10 a 13** | `ejecucion_incremental_transicion_tecnologica` | hitos de 30, 60 y 90 dias con version funcional por ciclo: **pasos incrementales evaluando el aprendizaje de cada uno**...
+  docs/plan/05_SANEO.md:66
+      | `nafta_free_trade_agreements` | los **dos porcentajes**: 60% por metodo de transaccion y 50% por costo neto |
+  docs/plan/LD_ACTO_DE_SEIS.md:122
+      | **`gates_go_kill_decision_points`** | | | **A** `LD-58` | **A** `LD-60` | **A** `LD-61` | **A** `LD-52` |
+  docs/plan/LECTURAS_DIRIGIDAS.md:634
+      | **las seis que maduran la fusion** | `LD-60` a `LD-65` | [`LD_ACTO_DE_SEIS.md`](LD_ACTO_DE_SEIS.md) |
+  docs/plan/OPERACIONES.jsonl:10
+      {"id_op": "OP-S-01", "fase": "05_SANEO", "tipo": "FUSION", "nodos": ["nafta_free_trade_agreements", "certificado_de_origen_tratados_libre_comercio"], "superviviente": "certificado_de_origen_tratados_libre_comercio", "pre...
+  docs/plan/OPERACIONES.jsonl:60
+      {"id_op": "OP-M-01-FUSION", "fase": "03_FUSIONES", "tipo": "FUSION DE MESA: LA CAMARILLA DE CINCO", "nodos": ["sistema_gates_go_kill", "gates_go_kill_decision_points", "requisitos_gates_con_dientes", "estructura_gates", ...
+  docs/plan/RECOMPUTO_3388.md:247
+      | de esas, colapsan a auto-arista al resolver (mismo nodo vivo en los dos lados) | ~~**0**~~ ~~**1**~~ ~~**41**~~ ~~**48**~~ ~~**49**~~ ~~**57**~~ **60** **[CORREGIDA ~~CUATRO~~ ~~CINCO~~ SEIS VECES, el 15 ago 2026 y el ...
+  docs/plan/RECOMPUTO_3388.md:248
+      | pares distintos en el retrato tras resolver y deduplicar | ~~**583**~~ ~~**582**~~ ~~**580**~~ ~~**575**~~ ~~**574**~~ ~~**533**~~ ~~**525**~~ ~~**522**~~ ~~**509**~~ **503** **[CORREGIDA ~~SIETE~~ ~~OCHO~~ NUEVE VECES...
+  docs/plan/RECOMPUTO_3388.md:528
+      | **ii** | A vigentes resueltas del retrato (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ ~~509~~ **503**) == suma de aristas A internas de las componentes (~~583~~ ~~582~~ ~~580~~ ~~533~~ ~~525~~ ~~522~~ ~~509~~ **50...
+  docs/plan/RECOMPUTO_3388.md:744
+      | `transicion_producto_a_experiencia` | 60,1 | 3657 |
+
+--- FAMILIA 2: LOS PUESTOS CORREGIDOS ---
+  PUESTO 502: 10 candidatos
+    docs/AUDITORIA_MOTOR.md:56
+        | **`calculadora.py`** (502) | la aritmética de Tus Números | vivo; gemelo TS en `web/lib/calculadora.ts` |
+    docs/FRANJA_PARES.jsonl:502
+        {"puesto_franja": 502, "mundo": "quality", "nodo_mundo": "calidad_de_diseno_vs_produccion", "titulo_mundo": "Calidad de Diseño vs. Calidad de Producción", "nodo_nucleo": "calidad_de_ejecucion_proceso_innovacion", "titulo...
+    docs/FRANJA_VEREDICTOS.jsonl:502
+        {"puesto_franja": 502, "nodo_mundo": "calidad_de_diseno_vs_produccion", "nodo_nucleo": "calidad_de_ejecucion_proceso_innovacion", "clave": 0.7244, "clase": "D", "razon": "Medir la brecha entre lo disenado y lo producido ...
+    docs/INTRA_DOMINIO_INFORME.md:3127
+        | **502** | `split_igual_vs_desigual` contra `teoria_equidad_split_equity` | la **logica social contra la de negocio** y el **riesgo de asimetria** si se elige la equivocada; del otro lado, **no cerrar con un apreton de ...
+    docs/INTRA_DOMINIO_INFORME.md:16356
+        > **TERCERA CORRECCION DECLARADA SOBRE ESTA TABLA (20 ago 2026, vuelta 52, barrido `9.10` del cierre), y las dos notas de la vuelta 50 y la de la vuelta 51 NO se reescriben: estan fechadas y se quedan.** Esta vez la tabl...
+    docs/INTRA_DOMINIO_PARES.jsonl:502
+        {"dominio": "core", "nodo_a": "split_igual_vs_desigual", "titulo_a": "Repartir el equity en partes iguales o desiguales (split)", "nodo_b": "teoria_equidad_split_equity", "titulo_b": "Teoría de la Equidad: Distribución I...
+    docs/INTRA_DOMINIO_VEREDICTOS.jsonl:502
+        {"puesto_intra": 502, "dominio": "core", "nodo_a": "split_igual_vs_desigual", "nodo_b": "teoria_equidad_split_equity", "clave": 0.8378, "banda_078_080": false, "clase": "D", "razon": "CORRECCION DECLARADA EL 20 ago 2026 ...
+    docs/plan/03_FUSIONES.md:1033
+        | `criterios_equity_split`, `split_igual_vs_desigual`, `teoria_equidad_split_equity` | `criterios_equity_split` | DETENIDO POR LA GUARDA DE LA CUENTA DE COLISIONES DEL ENCARGO, y el acto estaba escrito entero. Con criter...
+    docs/plan/RECOMPUTO_3388.md:246
+        | A crudas en el archivo (`clase == 'A'`), corte 3.388 | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ **563** **[CORREGIDA ~~SIETE~~ ~~OCHO~~ NUEVE VECES, el...
+    docs/plan/RECOMPUTO_3388.md:1079
+        | **total** | **3.388** | ~~**583**~~ ~~**582**~~ ~~**581**~~ ~~**576**~~ ~~**575**~~ ~~**574**~~ ~~**573**~~ ~~**571**~~ ~~**566**~~ **563** | ~~**17,2 %**~~ ~~**17,1 %**~~ ~~**17,0 %**~~ ~~**16,9 %**~~ ~~**16,7 %**~~ *...
+
+==============================================================================
+CANDIDATOS TOTALES: 73. Ninguno se oculta y ninguno se corrige aqui:
+este instrumento LISTA, y la adjudicacion de cada sitio es de lectura.
+LIMITE DECLARADO: es una busqueda lexica. Una tabla puede citar el
+marcador con otras palabras y este barrido no la veria; y una cifra con
+su fecha de corte declarada aparece aqui sin estar envejecida.
