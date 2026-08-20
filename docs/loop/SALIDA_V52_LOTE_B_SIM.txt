@@ -1,0 +1,120 @@
+==============================================================================
+OP-U-01, TRAMO 1, P.12, LOTE B DE LA VUELTA 52: los actos 4 y 6 de la nomina de la apertura (los REGALOS ESTRATEGICOS y los HABITOS DE PENSAMIENTO) . MODO SIMULAR
+plan: docs/loop/PLAN_V52_OPU01_LOTE_B.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3491 vivos, 362 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive regalos_estrategicos_personalizados . absorbe regalos_estrategicos_sorpresa
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 10 (anadidos 5) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 2
+     del paso 1 de regalos_estrategicos_sorpresa al PASO 2 del superviviente
+        inciso VERBATIM: 'su entorno cercano (familia, asistentes, equipo)'
+        nexo (lo unico de cosecha propia): ', y también '
+        paso resultante: Investiga sus intereses individuales (redes sociales, historial de interacción), y también su entorno cercano (familia, asistentes, equipo)
+     del paso 3 de regalos_estrategicos_sorpresa al PASO 3 del superviviente
+        inciso VERBATIM: 'el nombre del destinatario'
+        nexo (lo unico de cosecha propia): ', personalizándolo con '
+        paso resultante: Diseña un regalo o experiencia única y no replicable para reforzar exclusividad, personalizándolo con el nombre del destinatario
+  alias del superviviente: ['regalos_estrategicos_sorpresa']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive gestion_de_habitos_mentales_para_pensar . absorbe formacion_de_habitos_de_pensamiento
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 4 de formacion_de_habitos_de_pensamiento al PASO 1 del superviviente
+        inciso VERBATIM: ' un estímulo sensorial específico (objetos, lugar, sonido)'
+        nexo (lo unico de cosecha propia): ' Asocia además el hábito a'
+        paso resultante: Establece un ritual fijo (hora, lugar, gesto) para activar el 'modo de trabajo profundo' antes de sesiones de pensamiento creativo. Asocia además el hábito a un estímulo sensorial específico (objetos, lugar, sonido)
+  alias del superviviente: ['formacion_de_habitos_de_pensamiento']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 10
+   cuatro_etapas_del_pensamiento_creativo               nodos_siguientes  formacion_de_habitos_de_pensamiento -> gestion_de_habitos_mentales_para_pensar
+   customer_appreciation_pr                             nodos_previos     regalos_estrategicos_sorpresa -> regalos_estrategicos_personalizados
+   emocion_como_motor_pensamiento                       nodos_siguientes  formacion_de_habitos_de_pensamiento -> gestion_de_habitos_mentales_para_pensar
+   gestion_de_habitos_mentales_para_pensar              nodos_siguientes  formacion_de_habitos_de_pensamiento -> gestion_de_habitos_mentales_para_pensar
+   gestion_de_pensamientos_marginales                   nodos_previos     formacion_de_habitos_de_pensamiento -> gestion_de_habitos_mentales_para_pensar
+   herramientas_de_activacion_web                       nodos_siguientes  regalos_estrategicos_sorpresa -> regalos_estrategicos_personalizados
+   reincorporacion_del_trabajo_previo                   nodos_previos     formacion_de_habitos_de_pensamiento -> gestion_de_habitos_mentales_para_pensar
+   ruptura_de_habitos_para_estimulo                     nodos_previos     formacion_de_habitos_de_pensamiento -> gestion_de_habitos_mentales_para_pensar
+   second_wind_energia_mental                           nodos_siguientes  formacion_de_habitos_de_pensamiento -> gestion_de_habitos_mentales_para_pensar
+   understanding_customers_tecnicas                     nodos_siguientes  regalos_estrategicos_sorpresa -> regalos_estrategicos_personalizados
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 1
+   equilibrio_habito_estimulo                           nodos_previos     formacion_de_habitos_de_pensamiento (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 3
+   cuatro_etapas_del_pensamiento_creativo               nodos_siguientes
+   gestion_de_pensamientos_marginales                   nodos_previos
+   ruptura_de_habitos_para_estimulo                     nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   gestion_de_habitos_mentales_para_pensar              nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 1000
+  duplicadas tras resolver DESPUES del tramo                          : 999
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 10 de 10
+guarda D, los 2 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (16 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 regalos_estrategicos_sorpresa                paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Investigar detalles personales del cliente y su entorno cercano (familia, asistentes, equipo)
+    1 regalos_estrategicos_sorpresa                paso         2  PASO 6 del superviviente
+        Seleccionar regalos de alta calidad sin logos ni mensajes de marca
+    1 regalos_estrategicos_sorpresa                paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Personalizar el regalo con el nombre del destinatario
+    1 regalos_estrategicos_sorpresa                paso         4  PASO 7 del superviviente
+        Acompañar el regalo con una nota escrita a mano
+    1 regalos_estrategicos_sorpresa                paso         5  ya lo dice el PASO 4 del superviviente
+        Programar el envío en momentos inesperados, evitando fechas festivas masivas
+    1 regalos_estrategicos_sorpresa                paso         6  PASO 8 del superviviente
+        Asignar entre 2% y 10% de las utilidades netas a un presupuesto de regalos
+    1 regalos_estrategicos_sorpresa                paso         7  PASO 9 del superviviente
+        Memorializar experiencias (cenas, eventos) con un objeto físico que las recuerde
+    1 regalos_estrategicos_sorpresa                paso         8  PASO 10 del superviviente
+        Empezar con 2-3 clientes clave antes de escalar la práctica
+    1 regalos_estrategicos_sorpresa                condicion    1  CONDICION 3 del superviviente
+        Cuando el usuario ya tiene un proceso de onboarding y personalización de clientes establecido
+    1 regalos_estrategicos_sorpresa                condicion    2  CONDICION 4 del superviviente
+        Cuando se busca diferenciarse de la competencia en la retención de clientes clave
+    2 formacion_de_habitos_de_pensamiento          paso         1  ya lo dice el PASO 1 del superviviente
+        Elegir una hora fija del día para el trabajo creativo o intelectual.
+    2 formacion_de_habitos_de_pensamiento          paso         2  ya lo dice el PASO 1 del superviviente
+        Repetir esa rutina diariamente durante varias semanas para automatizar el 'calentamiento' mental.
+    2 formacion_de_habitos_de_pensamiento          paso         3  ya lo dice el PASO 4 del superviviente
+        Aprender a reconocer las señales de fatiga y de 'segundo aliento' sin frustrarse.
+    2 formacion_de_habitos_de_pensamiento          paso         4  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Asociar el hábito temporal con un estímulo sensorial específico (objetos, lugar, sonido) si resulta útil.
+    2 formacion_de_habitos_de_pensamiento          condicion    1  CONDICION 3 del superviviente
+        Si el usuario tiene dificultad para iniciar sesiones de trabajo creativo de forma consistente.
+    2 formacion_de_habitos_de_pensamiento          condicion    2  CONDICION 4 del superviviente
+        Si el usuario reporta bloqueos frecuentes al comenzar una tarea intelectual.
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 2
+  nodos implicados    : 4
+  nodos que MUEREN    : 2
+  piezas repartidas   : 16 (9 viajan enteras, 4 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 5
+
+SIMULACION: cero escrituras.

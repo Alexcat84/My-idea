@@ -25248,7 +25248,6 @@
         "reglas_brainstorming",
         "esfuerzo_y_energia_intelectual",
         "explorar_medios_no_convencionales",
-        "formacion_de_habitos_de_pensamiento",
         "gestion_de_habitos_mentales_para_pensar",
         "humor_como_herramienta_creativa",
         "intimacion_emocional_como_senal_de_verdad",
@@ -26707,7 +26706,7 @@
       "entregable_esperado": "Programa de apreciación al cliente con acciones definidas, presupuesto y calendario de ejecución",
       "nodos_previos": [
         "pr_no_convencional_stunts",
-        "regalos_estrategicos_sorpresa",
+        "regalos_estrategicos_personalizados",
         "shock_and_awe_kit_bienvenida",
         "sorprender_cliente_estrategico"
       ],
@@ -41261,7 +41260,7 @@
         "evaluacion_industria_cliente",
         "falacia_del_disenador_affordances",
         "fallo_como_aprendizaje_startup",
-        "formacion_de_habitos_de_pensamiento",
+        "gestion_de_habitos_mentales_para_pensar",
         "humor_como_herramienta_creativa",
         "sentido_del_humor_como_herramienta_de_pensamiento",
         "shapeshifting_diversidad"
@@ -54441,7 +54440,8 @@
         "Si el usuario tiene dificultad para iniciar sesiones de trabajo creativo de forma consistente.",
         "Si el usuario reporta bloqueos frecuentes al comenzar una tarea intelectual."
       ],
-      "etiqueta_arbol": "Crea Hábitos de Pensamiento"
+      "etiqueta_arbol": "Crea Hábitos de Pensamiento",
+      "deprecado": true
     },
     "formacion_de_habitos_de_trabajo_creativo": {
       "node_id": "formacion_de_habitos_de_trabajo_creativo",
@@ -57348,7 +57348,7 @@
       "fuente": "The Art of Thought - Wallas, Graham",
       "resumen_teorico": "Wallas argumenta que toda actividad mental crea hábitos, y que estos hábitos pueden ser herramientas útiles (como un ritual de 'calentamiento' asociado a un horario, lugar o gesto físico) o barreras que impiden nuevas perspectivas. Los mejores pensadores rompen deliberadamente sus propios hábitos mentales para encontrar puntos de partida frescos, mientras mantienen rutinas que facilitan entrar en estado de concentración.",
       "pasos_accionables": [
-        "Establece un ritual fijo (hora, lugar, gesto) para activar el 'modo de trabajo profundo' antes de sesiones de pensamiento creativo.",
+        "Establece un ritual fijo (hora, lugar, gesto) para activar el 'modo de trabajo profundo' antes de sesiones de pensamiento creativo. Asocia además el hábito a un estímulo sensorial específico (objetos, lugar, sonido)",
         "Registra sistemáticamente los pensamientos espontáneos o 'fringe-thoughts' que surgen fuera del horario de trabajo planificado.",
         "Programa rupturas deliberadas de rutina (cambiar de lugar, de método, de orden) cuando sientas que tu pensamiento se ha estancado en patrones repetitivos.",
         "Ajusta tus hábitos de trabajo según tu edad, energía natural y el tipo de problema que enfrentas."
@@ -57358,19 +57358,33 @@
         "cuatro_etapas_del_pensamiento_creativo",
         "fase_entender_modelo_negocio",
         "formacion_de_habitos_de_trabajo_creativo",
-        "fase_entendimiento_investigacion_mercado"
+        "fase_entendimiento_investigacion_mercado",
+        "emocion_como_motor_pensamiento",
+        "second_wind_energia_mental"
       ],
       "nodos_siguientes": [
         "equilibrio_habito_estimulo",
-        "formacion_de_habitos_de_pensamiento",
         "gestion_de_pensamientos_marginales",
-        "ruptura_de_habitos_para_estimulo"
+        "ruptura_de_habitos_para_estimulo",
+        "reincorporacion_del_trabajo_previo"
       ],
       "condiciones_activacion": [
         "Cuando un equipo o individuo siente fatiga creativa o estancamiento en la ideación.",
-        "Al diseñar rutinas de trabajo para equipos que requieren innovación constante."
+        "Al diseñar rutinas de trabajo para equipos que requieren innovación constante.",
+        "Si el usuario tiene dificultad para iniciar sesiones de trabajo creativo de forma consistente.",
+        "Si el usuario reporta bloqueos frecuentes al comenzar una tarea intelectual."
       ],
-      "etiqueta_arbol": "Crea Rituales para Pensar Mejor"
+      "etiqueta_arbol": "Crea Rituales para Pensar Mejor",
+      "ids_alias": [
+        "formacion_de_habitos_de_pensamiento"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "formacion_de_habitos_de_pensamiento",
+          "titulo": "Formación de Hábitos de Pensamiento (Rutinas Creativas)",
+          "fuente": "The Art of Thought - Wallas, Graham"
+        }
+      ]
     },
     "gestion_de_las_cuatro_fases_del_negocio": {
       "node_id": "gestion_de_las_cuatro_fases_del_negocio",
@@ -57419,7 +57433,6 @@
       "entregable_esperado": "Un sistema de notas y carpetas organizado que capture ideas marginales para su desarrollo posterior, evitando la pérdida de pensamientos valiosos.",
       "nodos_previos": [
         "reincorporacion_del_trabajo_previo",
-        "formacion_de_habitos_de_pensamiento",
         "gestion_de_habitos_mentales_para_pensar"
       ],
       "nodos_siguientes": [
@@ -60987,7 +61000,7 @@
       "nodos_siguientes": [
         "contratar_cerrador_de_ventas",
         "hoja_de_ruta_de_ventas",
-        "regalos_estrategicos_sorpresa"
+        "regalos_estrategicos_personalizados"
       ],
       "condiciones_activacion": [
         "Si el startup tiene tráfico web pero baja conversión a clientes activos",
@@ -95081,23 +95094,43 @@
       "resumen_teorico": "Crear artefactos únicos, hechos a medida y con carga simbólica/nostálgica para los clientes más importantes fortalece relaciones a largo plazo más que buscar constantemente nuevos clientes. El caso de los Chicago Cubs (parlantes hechos con madera de Wrigley Field) y Taylor Swift (regalos hiperpersonalizados basados en investigación de redes sociales) muestran que la exclusividad y personalización generan lealtad desproporcionada.",
       "pasos_accionables": [
         "Identifica a tus top clientes (por valor, tiempo de relación o influencia)",
-        "Investiga sus intereses individuales (redes sociales, historial de interacción)",
-        "Diseña un regalo o experiencia única y no replicable para reforzar exclusividad",
+        "Investiga sus intereses individuales (redes sociales, historial de interacción), y también su entorno cercano (familia, asistentes, equipo)",
+        "Diseña un regalo o experiencia única y no replicable para reforzar exclusividad, personalizándolo con el nombre del destinatario",
         "Entrega el regalo en un momento inesperado (fuera de fechas comerciales típicas)",
-        "Resiste la tentación de comercializar masivamente el artefacto exclusivo"
+        "Resiste la tentación de comercializar masivamente el artefacto exclusivo",
+        "Seleccionar regalos de alta calidad sin logos ni mensajes de marca",
+        "Acompañar el regalo con una nota escrita a mano",
+        "Asignar entre 2% y 10% de las utilidades netas a un presupuesto de regalos",
+        "Memorializar experiencias (cenas, eventos) con un objeto físico que las recuerde",
+        "Empezar con 2-3 clientes clave antes de escalar la práctica"
       ],
       "entregable_esperado": "Plan de regalos personalizados para al menos los 10-20 clientes más valiosos, con presupuesto y calendario de entrega",
       "nodos_previos": [
-        "enfoque_en_superfans"
+        "enfoque_en_superfans",
+        "herramientas_de_activacion_web",
+        "understanding_customers_tecnicas"
       ],
       "nodos_siguientes": [
-        "advocacy_customer_journey"
+        "advocacy_customer_journey",
+        "customer_appreciation_pr"
       ],
       "condiciones_activacion": [
         "Cuando se dispone de presupuesto para inversión en relación con pocos clientes de alto valor",
-        "Si se busca generar contenido viral o testimonios emocionales"
+        "Si se busca generar contenido viral o testimonios emocionales",
+        "Cuando el usuario ya tiene un proceso de onboarding y personalización de clientes establecido",
+        "Cuando se busca diferenciarse de la competencia en la retención de clientes clave"
       ],
-      "etiqueta_arbol": "Regala Algo Único a tus Clientes"
+      "etiqueta_arbol": "Regala Algo Único a tus Clientes",
+      "ids_alias": [
+        "regalos_estrategicos_sorpresa"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "regalos_estrategicos_sorpresa",
+          "titulo": "Sorpresas y Regalos Estratégicos al Cliente",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "regalos_estrategicos_sorpresa": {
       "node_id": "regalos_estrategicos_sorpresa",
@@ -95128,7 +95161,8 @@
         "Cuando el usuario ya tiene un proceso de onboarding y personalización de clientes establecido",
         "Cuando se busca diferenciarse de la competencia en la retención de clientes clave"
       ],
-      "etiqueta_arbol": "Sorprende a tu Cliente con Regalos"
+      "etiqueta_arbol": "Sorprende a tu Cliente con Regalos",
+      "deprecado": true
     },
     "registration_rights_stock_consideration": {
       "node_id": "registration_rights_stock_consideration",
@@ -95857,7 +95891,7 @@
       ],
       "entregable_esperado": "Un proceso diario de revisión y continuidad del trabajo intelectual que aprovecha el trabajo subconsciente realizado durante la incubación.",
       "nodos_previos": [
-        "formacion_de_habitos_de_pensamiento",
+        "gestion_de_habitos_mentales_para_pensar",
         "cuatro_etapas_del_pensamiento_creativo",
         "analisis_y_sintesis"
       ],
@@ -100349,9 +100383,8 @@
         "cuatro_etapas_del_pensamiento_creativo",
         "fase_entender_modelo_negocio",
         "formacion_de_habitos_de_trabajo_creativo",
-        "formacion_de_habitos_de_pensamiento",
-        "gestion_de_pensamientos_marginales",
         "gestion_de_habitos_mentales_para_pensar",
+        "gestion_de_pensamientos_marginales",
         "fase_entendimiento_investigacion_mercado"
       ],
       "nodos_siguientes": [
@@ -101329,7 +101362,7 @@
       "nodos_siguientes": [
         "habito_energetico_vs_mecanico",
         "encontrar_el_golpe_mental",
-        "formacion_de_habitos_de_pensamiento",
+        "gestion_de_habitos_mentales_para_pensar",
         "fatigue_performance_effects"
       ],
       "condiciones_activacion": [
@@ -111763,7 +111796,7 @@
       "nodos_siguientes": [
         "fit_problema_solucion",
         "preguntas_problema_2",
-        "regalos_estrategicos_sorpresa"
+        "regalos_estrategicos_personalizados"
       ],
       "condiciones_activacion": [
         "Cuando las suposiciones sobre el cliente no han sido validadas con datos o investigación de campo."
@@ -123505,7 +123538,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 49,
+    "nodos_sin_enlaces_entrantes": 51,
     "enlaces_rotos_en_grafo": 0
   }
 }

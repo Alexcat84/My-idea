@@ -1,0 +1,170 @@
+{
+  "operacion": "OP-U-01",
+  "tramo": "1, P.12, LOTE B DE LA VUELTA 52: los actos 4 y 6 de la nomina de la apertura (los REGALOS ESTRATEGICOS y los HABITOS DE PENSAMIENTO)",
+  "fecha": "2026-08-20",
+  "vuelta": 52,
+  "estado": "SELLADO",
+  "nomina": "docs/loop/RECOMPUTO_V52_APERTURA.jsonl",
+  "dossier": "docs/loop/SALIDA_V52_DOSSIER_01_26.txt",
+  "vara": "P.12 con la receta RATIFICADA (acta de la vuelta 50, pregunta 1, y acta de la vuelta 51): dado un superviviente S, PARTE A = S mas los miembros con arista A contra S; MIXTOS = los miembros sin arista A contra S; S es VIABLE si su parte A es clique A y deja al menos un mixto fuera. Entre los viables elige el CONTENIDO como P.8 lo define: el texto de los pasos, el material propio y el padre declarado EN LAS RAZONES del archivo cuentan como contenido; el conteo de caracteres del resumen NO desempata. Si el contenido calla, el CABLEADO decide solo. Si tambien empata, se DECLARA.",
+  "viabilidad": "docs/loop/SALIDA_V52_VIABLES.txt, corrida sobre la nomina de la apertura de esta vuelta. Los dos actos salen VARIOS VIABLES con dos cada uno, y en los dos el CENTRO de la estrella no es viable porque no deja ningun mixto fuera.",
+  "colisiones_esperadas": "docs/loop/SALIDA_V52_COLISIONES_ESPERADAS.txt, medidas ANTES de tocar un nodo sobre EL ARCHIVO ENTERO. Acto 4 con regalos_estrategicos_personalizados: UNA colision, dentro del acto. Acto 6 con gestion_de_habitos_mentales_para_pensar: DOS, una dentro y una FUERA. El censo esperado tras ejecutar este lote es TRES, por PAR RESUELTO, y una colision real fuera de esa prediccion detiene.",
+  "vara_de_las_puertas": "Medida hoy con el instrumento REPARADO en la TAREA 1.5 (docs/loop/SALIDA_V52_PUERTAS_REPARADO.txt). Ni el acto 4 ni el acto 6 aparecen en ninguna de las cuatro categorias: ninguno de sus seis miembros es semilla ni extremo de puente aprobado. La guarda 1B pasa POR VACIO en los dos y se dice asi en vez de darla por pasada.",
+  "politica_del_reparto": "LA MISMA DEL LOTE A DE LA VUELTA 51, heredada y citada, no reinventada (discutible D3 de aquella vuelta): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND. Y ESTE LOTE ANADE UN MOTIVO NUEVO DE CUBIERTO CON PERDIDA NOMBRADA, declarado aqui para poder discutirlo: cuando anadir la pieza METERIA EN EL SUPERVIVIENTE EL GESTO QUE UN VEREDICTO D DECLARA CONTRARIO al suyo, la pieza NO viaja, porque la fusion no puede fabricar una contradiccion dentro del nodo que deja vivo. Pasa dos veces en el acto 6 y las dos con la linea a salvo en el mixto que sobrevive.",
+  "lecturas_p12": [
+    {
+      "acto": 4,
+      "mixto": "sorprender_cliente_estrategico",
+      "superviviente_contra_el_que_se_lee": "regalos_estrategicos_personalizados",
+      "veredicto": "CONTINUA",
+      "citas": "El puesto 1348 es el veredicto DIRECTO del par y es D, y no lo dice de pasada: lo llama TERCERA ESTRELLA DEL EJERCICIO y la primera del archivo con cobertura completa desde el dia en que se declara. Lee los dos textos entero por entero: regalos_estrategicos_personalizados manda ELEGIR Y RESERVAR, identificar a los mejores clientes por valor, tiempo de relacion o influencia, disenar un regalo o experiencia unica y no replicable, entregarlo en un momento inesperado fuera de las fechas comerciales tipicas, y RESISTIR la tentacion de comercializar masivamente el objeto exclusivo. sorprender_cliente_estrategico manda otras cosas: planificar con anticipacion, no incluir el logo ni mensajes de marca, pensar tambien en la familia, el asistente o el equipo del cliente, y priorizar la calidad y el significado por encima del costo. Lo compartido es UNA linea de cinco y de cinco. Y el propio 1348 cierra la cuenta: fundirlos SUMARIA nueve reglas distintas en vez de borrar ninguna. UN D DIRECTO NO LO TUMBA LA ARITMETICA DE UNA FUSION: CONTINUA. Puestos citados: 1348, 799, 251, 1097."
+    },
+    {
+      "acto": 6,
+      "mixto": "formacion_de_habitos_de_trabajo_creativo",
+      "superviviente_contra_el_que_se_lee": "gestion_de_habitos_mentales_para_pensar",
+      "veredicto": "CONTINUA",
+      "citas": "El puesto 333 es el veredicto DIRECTO del par y es D, y lo escribe entero: LA FORMACION DEL HABITO CONTRA SU GESTION. formacion_de_habitos_de_trabajo_creativo manda CONSTRUIR la rutina, horario fijo y diario, repetir consistentemente durante varias semanas para consolidar el habito automatico, reconocer las senales fisiologicas de calentamiento y fatiga, y perseverar a traves de la fatiga inicial hasta alcanzar el segundo aire. gestion_de_habitos_mentales_para_pensar manda ADMINISTRARLA Y HASTA ROMPERLA A PROPOSITO, cambiar de lugar, de metodo y de orden cuando se siente el estancamiento, registrar los pensamientos que llegan fuera del horario, y ajustar segun la edad, la energia natural y el tipo de problema. Y el 333 pone la prueba de que no se repiten en una sola linea: EL TERCER PASO DEL SEGUNDO VA JUSTO EN DIRECCION CONTRARIA AL SEGUNDO PASO DEL PRIMERO. Dos gestos opuestos no son el mismo procedimiento: comparten LA IDEA en lineas y por eso es CONTINUA, enlace mas poda del solape. Puestos citados: 333, 281, 261."
+    }
+  ],
+  "relecturas_del_filo": [
+    {
+      "acto": 6,
+      "par_resuelto": "gestion_de_habitos_mentales_para_pensar contra ruptura_de_habitos_para_estimulo",
+      "veredicto_arrastrado": "puesto 563, clase D, emitido contra formacion_de_habitos_de_pensamiento mas ruptura_de_habitos_para_estimulo",
+      "veredicto_directo_de_contraste": "puesto 243, clase B",
+      "la_forma_que_ningun_carril_cubre": "SE DICE ANTES DE RESOLVERLA, PORQUE NINGUNA REGLA ESCRITA LA CUBRE: el carril del A arrastrado (acta 49, pregunta 1) vale cuando el arrastrado es A, y el carril del filo (acta 51, pregunta 2) vale cuando el arrastrado es B o C. AQUI EL ARRASTRADO ES UNA D Y EL DIRECTO ES UNA B, que es al reves de los dos carriles. Lo que si es mecanico es el disparador de docs/plan/08_VERIFICACION.md: un par vuelve a la cola de relectura post fusion cuando uno de sus dos nodos MUERE O CAMBIA DE TEXTO, y gestion_de_habitos_mentales_para_pensar cambia de texto en esta fusion, asi que el 243 entra en la cola por su propio pie. Se relee y la relectura decide cual de las dos clases queda. VA MARCADO COMO DISCUTIBLE: mover el B directo y no la D arrastrada es lectura del ejecutor.",
+      "la_relectura": "CONDICION DE TEXTO, y se resuelve a D. Lo que el 243 congelaba, con sus palabras: el paso 3 del primero, programar rupturas deliberadas de rutina, ES EL NODO ENTERO DEL SEGUNDO, que lo desarrolla con las senales de rigidez, la dieta de informacion y la alternancia de modos. MEDIDO HOY SOBRE LOS FICHEROS: ruptura_de_habitos_para_estimulo tiene CINCO pasos y TRES condiciones, y de sus cinco pasos SOLO DOS caben en el paso 3 de gestion_de_habitos_mentales_para_pensar (vigilar senales de rigidez y alterar la rutina). Los otros TRES no estan en ningun paso del superviviente ni antes ni despues de la fusion: reducir temporalmente el consumo de informacion rutinaria, buscar experiencias nuevas como viajes o conversaciones con desconocidos mientras se sigue pensando en el problema, y alternar entre modos de trabajo. Y LA FUSION LOS ALEJA EN VEZ DE ACERCARLOS: el superviviente absorbe formacion_de_habitos_de_pensamiento, que es la mitad de CONSTRUIR la rutina, y el veredicto directo 563 ya habia leido exactamente ese par (formacion_de_habitos_de_pensamiento contra ruptura_de_habitos_para_estimulo) y lo clasifico D con estas palabras: son las dos mitades opuestas y complementarias de la misma doctrina, uno construye la rutina y el otro la rompe cuando deja de rendir, en la misma linea del puesto 333. NO ES UNA PREGUNTA DE POLITICA DE CATALOGO: el 243 no pregunta si el catalogo quiere uno o dos nodos, mide un solape entre un paso y un nodo, y el solape medido hoy es de dos pasos de cinco. Clase resultante: D, y es la que el arrastrado ya traia.",
+      "es_pregunta_de_politica": false
+    }
+  ],
+  "actos": [
+    {
+      "orden": 1,
+      "miembros": [
+        "regalos_estrategicos_personalizados",
+        "regalos_estrategicos_sorpresa"
+      ],
+      "miembros_del_acto_entero": [
+        "regalos_estrategicos_personalizados",
+        "regalos_estrategicos_sorpresa",
+        "sorprender_cliente_estrategico"
+      ],
+      "mixto_que_queda_fuera": "sorprender_cliente_estrategico",
+      "superviviente": "regalos_estrategicos_personalizados",
+      "motivo": "CONTENIDO, Y LO DECIDE EL MATERIAL PROPIO DECLARADO EN LAS RAZONES, no el conteo de caracteres, que aqui no desempata por mandato del encargo (433 contra 428, cinco caracteres). Los dos viables medidos hoy son regalos_estrategicos_personalizados y sorprender_cliente_estrategico; regalos_estrategicos_sorpresa es el CENTRO de la estrella y no es viable porque no deja ningun mixto fuera. Entre los dos viables las varas de conteo EMPATAN: CINCO pasos cada uno, DOS condiciones cada uno y cableado 2 contra 2. EL CONTENIDO NO CALLA, y por eso el cableado no llega a hablar: el puesto 799 declara el material propio de regalos_estrategicos_personalizados y lo declara UNICO EN EL CATALOGO, con estas palabras: lo propio de regalos_estrategicos_personalizados es la advertencia final, RESISTIR LA TENTACION de comercializar masivamente el artefacto exclusivo, que es lo unico que protege la exclusividad y NO ESTA EN NINGUN OTRO NODO. Del otro viable el archivo dice lo contrario: el puesto 251 lo declara REPETIDO por el centro que muere, los dos mandan lo mismo sobre el regalo al cliente, personalizarlo segun sus intereses reales, no ponerle tu logo ni mensajes de marca, priorizar calidad y significado sobre precio, y planificar el envio en vez de improvisarlo, CANDIDATO A FUSION. Un viable con material declarado unico contra un viable declarado repetido: el contenido elige al primero. NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X, asi que aqui no hay choque de letra contra aritmetica que registrar.",
+      "absorbidos": [
+        "regalos_estrategicos_sorpresa"
+      ],
+      "pasos": {
+        "regalos_estrategicos_sorpresa": {
+          "1": "INCISO:2|su entorno cercano (familia, asistentes, equipo)|, y también ",
+          "2": "APPEND",
+          "3": "INCISO:3|el nombre del destinatario|, personalizándolo con ",
+          "4": "APPEND",
+          "5": "CUBIERTO:4",
+          "6": "APPEND",
+          "7": "APPEND",
+          "8": "APPEND"
+        }
+      },
+      "condiciones": {
+        "regalos_estrategicos_sorpresa": {
+          "1": "APPEND",
+          "2": "APPEND"
+        }
+      },
+      "nota_del_reparto": "EL PUESTO 799 ESCRIBE LA LISTA DE LO QUE HAY QUE SALVAR Y AQUI SE SALVA PIEZA A PIEZA: dice que lo propio de regalos_estrategicos_sorpresa son las piezas que lo vuelven ejecutable, sin logos ni marca, con el nombre del destinatario, la nota escrita a mano, el presupuesto del dos al diez por ciento de las utilidades netas, memorializar las experiencias con un objeto fisico, y empezar con dos o tres clientes antes de escalar. LAS SEIS SE SALVAN Y NINGUNA SE PIERDE. Dos van de INCISO porque son PARAMETRO de un gesto que el superviviente ya tiene y los dos pasos resultantes se leen limpios: su paso 1 investiga los detalles personales del cliente Y SU ENTORNO CERCANO, y el superviviente ya manda investigar sus intereses individuales, asi que lo unico que anade es HASTA DONDE llega la investigacion (INCISO al paso 2); y su paso 3 personaliza el regalo CON EL NOMBRE DEL DESTINATARIO, y el superviviente ya manda disenar un regalo unico y no replicable, asi que lo unico que anade es CON QUE se personaliza (INCISO al paso 3). Uno solo esta CUBIERTO: su paso 5, programar el envio en momentos inesperados evitando fechas festivas masivas, es literalmente el paso 4 del superviviente, entregar el regalo en un momento inesperado fuera de fechas comerciales tipicas (CUBIERTO:4). Los otros CINCO viajan enteros porque son GESTOS DISTINTOS y no parametros de nada que el superviviente tenga: seleccionar regalos de alta calidad sin logos ni mensajes de marca, acompanar el regalo con una nota escrita a mano, asignar entre 2 y 10 por ciento de las utilidades netas a un presupuesto de regalos, memorializar experiencias con un objeto fisico, y empezar con dos o tres clientes clave antes de escalar. Sus DOS condiciones tambien viajan enteras: ninguna de las dos del superviviente habla del proceso de onboarding ya establecido ni de diferenciarse de la competencia en retencion. CERO PERDIDAS NOMBRADAS en este acto. NOTA SOBRE LA MARCA, que se dice en vez de callarse: el paso que viaja diciendo SIN LOGOS NI MENSAJES DE MARCA es el mismo que el puesto 564 usa como prueba de una contradiccion sana con shock_and_awe_kit_bienvenida, que manda lo contrario en otro momento del ciclo. La contradiccion es entre nodos y ya esta leida y declarada SANA; la fusion la mueve de nodo pero no la crea ni la resuelve, y el predictor midio CERO colisiones fuera del acto para este superviviente."
+    },
+    {
+      "orden": 2,
+      "miembros": [
+        "gestion_de_habitos_mentales_para_pensar",
+        "formacion_de_habitos_de_pensamiento"
+      ],
+      "miembros_del_acto_entero": [
+        "formacion_de_habitos_de_pensamiento",
+        "formacion_de_habitos_de_trabajo_creativo",
+        "gestion_de_habitos_mentales_para_pensar"
+      ],
+      "mixto_que_queda_fuera": "formacion_de_habitos_de_trabajo_creativo",
+      "superviviente": "gestion_de_habitos_mentales_para_pensar",
+      "motivo": "CONTENIDO, Y LO DECIDE EL PADRE DECLARADO EN LAS RAZONES. Los dos viables medidos hoy son formacion_de_habitos_de_trabajo_creativo y gestion_de_habitos_mentales_para_pensar; formacion_de_habitos_de_pensamiento es el CENTRO de la estrella y no es viable porque no deja ningun mixto fuera. Entre los dos viables las varas de conteo EMPATAN en pasos (CUATRO cada uno) y en condiciones (DOS cada una), y el resumen apunta al otro (557 contra 424) PERO EL RESUMEN NO DESEMPATA POR MANDATO DEL ENCARGO. EL CONTENIDO NO CALLA: el puesto 261 declara a gestion_de_habitos_mentales_para_pensar LA VERSION LARGA del centro que muere, con estas palabras, y anade que LOS CUATRO PASOS DEL CORTO CABEN EN EL PRIMERO Y EL ULTIMO DEL LARGO. Del otro viable ninguna razon dice que sea version larga de nada: el puesto 281 lo lee contra el mismo centro y dice que MANDAN LO MISMO PALABRA POR PALABRA EN TRES DE SUS CUATRO PASOS, o sea gemelos y no padre. Un viable declarado LA VERSION LARGA del centro contra un viable declarado su gemelo palabra por palabra: el contenido elige al primero, que es ademas el que puede absorber al centro sin perder nada. Y EL CABLEADO, QUE AQUI NO LLEGA A HABLAR PORQUE EL CONTENIDO NO CALLA, APUNTA AL MISMO SITIO: 6 contra 5. NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X, asi que aqui no hay choque de letra contra aritmetica que registrar.",
+      "absorbidos": [
+        "formacion_de_habitos_de_pensamiento"
+      ],
+      "pasos": {
+        "formacion_de_habitos_de_pensamiento": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:1",
+          "3": "CUBIERTO:4",
+          "4": "INCISO:1| un estímulo sensorial específico (objetos, lugar, sonido)| Asocia además el hábito a"
+        }
+      },
+      "condiciones": {
+        "formacion_de_habitos_de_pensamiento": {
+          "1": "APPEND",
+          "2": "APPEND"
+        }
+      },
+      "nota_del_reparto": "EL PUESTO 261 ES EL VEREDICTO DIRECTO DEL PAR QUE SE FUNDE Y ES EL QUE MANDA (P.12 parte 2): dice que los cuatro pasos del corto CABEN EN EL PRIMERO Y EL ULTIMO DEL LARGO. Aqui se ejecuta esa lectura pieza a pieza y no en bloque, y DOS DE LAS CUATRO SE MARCAN COMO PERDIDA NOMBRADA en vez de darlas por dichas. Su paso 1, elegir una hora fija del dia, es el paso 1 del superviviente, establecer un ritual fijo de hora, lugar y gesto (CUBIERTO:1). Su paso 4, asociar el habito a un estimulo sensorial especifico con objetos, lugar y sonido, es el mismo paso 1 con un PARAMETRO CONCRETO encima, porque el ritual del superviviente ya nombra el lugar y el gesto y lo unico que anade es CON QUE se ancla: va de INCISO ADOSADO y el paso resultante se lee limpio. PERDIDA NOMBRADA UNO: su paso 2, repetir la rutina diariamente durante varias semanas para automatizar el calentamiento mental, se marca CUBIERTO:1 Y SE DECLARA LO QUE SE PIERDE, la repeticion durante semanas. NO viaja de APPEND, y el motivo es el motivo nuevo de este lote: el puesto 333 declara que el paso 3 del superviviente, programar rupturas deliberadas de la rutina, VA JUSTO EN DIRECCION CONTRARIA a ese mismo gesto, asi que anadirlo meteria dentro del nodo vivo una orden y su contraria. La linea NO se pierde del catalogo: formacion_de_habitos_de_trabajo_creativo, que es el mixto y SOBREVIVE, la trae literal en su paso 2. PERDIDA NOMBRADA DOS: su paso 3, reconocer las senales de fatiga y de segundo aliento sin frustrarse, se marca CUBIERTO:4 (ajusta tus habitos segun tu edad, energia natural y el tipo de problema) Y SE DECLARA LO QUE SE PIERDE, la palabra SEGUNDO ALIENTO. Tampoco se pierde del catalogo: el mixto que sobrevive la trae en sus pasos 3 y 4, y el puesto 333 la nombra como lo propio suyo. Sus DOS condiciones viajan enteras porque hablan de otra cosa que las del superviviente: la dificultad para INICIAR sesiones de forma consistente y los bloqueos frecuentes AL COMENZAR, contra la fatiga creativa y el diseno de rutinas de equipo."
+    }
+  ],
+  "declarados_y_no_fundidos": [
+    {
+      "acto": 1,
+      "miembros": [
+        "mission_and_operations_planning",
+        "proceso_sop_mop",
+        "sop_colaborativo"
+      ],
+      "especie": "PREGUNTA DE POLITICA DE CATALOGO CONGELADA EN UNA B",
+      "motivo": "EL PROPIO VEREDICTO DEL PAR MIXTO ESCRIBE LA PREGUNTA Y LA MANDA A LA MESA. El puesto 703, clase B, mission_and_operations_planning contra sop_colaborativo, cierra con estas palabras: LA MESA TIENE QUE DECIDIR SI EL CATALOGO QUIERE UN PROCEDIMIENTO CON DOS CONTEXTOS O DOS NODOS. Lo que congela no es una condicion de texto sino una politica: los dos son EL MISMO ESQUELETO EN DOS MUNDOS, el ciclo COMERCIAL de S&OP (cadencia mensual, pronosticos de ventas y precios, validacion con socios) y el mismo esqueleto en un mundo SIN JERARQUIA FORMAL y con poblacion afectada (CONOPS, demanda por instalacion segun la poblacion afectada, flota de vehiculos), los dos de Essentials of Supply Chain Management y sin arista entre ellos. El acta de la vuelta 51 lo dejo adjudicado en su pregunta 5 y el encargo lo repite: pregunta de POLITICA, el acto se DECLARA, no se funde, y se acumula para la mesa. LO QUE SE MIDIO IGUAL, para que la mesa no tenga que volver a medir: los dos viables son mission_and_operations_planning y sop_colaborativo, el centro proceso_sop_mop no es viable, y con cualquiera de los dos la fusion fabrica UNA colision dentro del acto y CERO fuera.",
+      "acumulado_para": "LA MESA"
+    },
+    {
+      "acto": 5,
+      "miembros": [
+        "founder_ceo_succession_process",
+        "identificacion_necesidad_sucesion_ceo",
+        "sucesion_iniciada_por_fundador"
+      ],
+      "especie": "EL CONTENIDO NO ALCANZA A ELEGIR Y LA RECETA NO TIENE CARRIL PARA LO QUE LA LECTURA ENCUENTRA",
+      "motivo": "SE DECLARA POR DOS MOTIVOS Y LOS DOS SE ESCRIBEN, porque cada uno por separado ya bastaria. PRIMERO, EL CONTENIDO NO ELIGE. Los dos viables son identificacion_necesidad_sucesion_ceo y sucesion_iniciada_por_fundador; founder_ceo_succession_process es el CENTRO y no es viable porque no deja ningun mixto fuera. Entre los dos viables: pasos EMPATADOS (cuatro y cuatro), cableado EMPATADO (3 y 3), resumen 380 contra 434 QUE NO DESEMPATA por mandato del encargo, y las varas que quedan apuntan a lados distintos: identificacion_necesidad_sucesion_ceo gana en condiciones (dos contra una) y sucesion_iniciada_por_fundador es PADRE DECLARADO en las razones (el puesto 612 registra que su paso 3 es un nodo entero, involucramiento_fundador_busqueda_ceo, sin arista, medido en el puesto 557). Una vara para cada uno, dos empatadas y la del resumen retirada: el contenido no calla pero tampoco elige, y el cableado, que es el desempate siguiente, ya esta empatado. SEGUNDO, Y ES LO QUE VUELVE PELIGROSO EJECUTARLO IGUAL: los dos veredictos A del acto declaran a los dos viables CONTENIDOS ENTEROS en el centro que muere (el puesto 256 dice que los cuatro pasos del corto estan dentro de los ocho del largo; el puesto 354 dice que el segundo entero esta dentro del primero y lo llama la version corta y la larga del mismo consejo). Con identificacion_necesidad_sucesion_ceo de superviviente, el mixto sucesion_iniciada_por_fundador queda ENTERO dentro del nodo que resulta, y la lectura P.12 honesta seria ENTRA y no CONTINUA. LA RECETA RATIFICADA NO TIENE CARRIL PARA UN ENTRA: su condicion de viabilidad exige dejar un mixto fuera, o sea da por supuesto que todo mixto CONTINUA, y el instrumento de fundir solo sabe absorber la PARTE A. PENDIENTE DE DOCTRINA, declarado, y el acto no se toca. NOTA DE FORMA que la mesa necesita: el par mixto es una B (puesto 612) y no una D, y la regla de la clique del instrumento de viabilidad trata la B igual que la D, cuando su propio motivo escrito habla de nodos QUE EL ARCHIVO DECLARO DISTINTOS, que es lo que dice una D y no lo que dice una B.",
+      "acumulado_para": "LA MESA y el PARA_ALEXIS del cierre"
+    },
+    {
+      "acto": 8,
+      "miembros": [
+        "decision_cuando_fundar",
+        "evaluacion_capacidades_fundador",
+        "tres_preguntas_carrera"
+      ],
+      "especie": "IMPOSIBLE POR PUERTA (por estructura)",
+      "motivo": "DOS PUERTAS DENTRO Y UNA OBLIGADA A MORIR. decision_cuando_fundar y evaluacion_capacidades_fundador son semilla de entrada o extremo de puente aprobado. decision_cuando_fundar es el CENTRO de la estrella y no es viable como superviviente porque no deja ningun mixto fuera; los otros dos candidatos viables (evaluacion_capacidades_fundador y tres_preguntas_carrera) LO ABSORBEN LOS DOS. Ninguna eleccion que la receta permita deja vivas a las dos puertas, asi que la guarda 1B lo rechaza siempre. Medido hoy con el instrumento reparado en la TAREA 1.5 (docs/loop/SALIDA_V52_PUERTAS_REPARADO.txt), que hasta esta vuelta lo contaba SALVABLE bajo un rotulo que decia una sola puerta imprimiendo dos.",
+      "acumulado_para": "el PARA_ALEXIS del cierre"
+    },
+    {
+      "acto": 15,
+      "miembros": [
+        "enfoque_paso_a_paso_investigacion_mercado",
+        "evaluacion_mercados_objetivo",
+        "screening_mercados_potenciales"
+      ],
+      "especie": "IMPOSIBLE POR PUERTA (por estructura)",
+      "motivo": "MISMA FIGURA EXACTA QUE EL ACTO 8. enfoque_paso_a_paso_investigacion_mercado y evaluacion_mercados_objetivo son puerta; el primero es el CENTRO de la estrella, no es viable como superviviente, y los dos candidatos viables (evaluacion_mercados_objetivo y screening_mercados_potenciales) lo absorben los dos. La guarda 1B lo rechaza siempre. Medido hoy con el instrumento reparado (docs/loop/SALIDA_V52_PUERTAS_REPARADO.txt).",
+      "acumulado_para": "el PARA_ALEXIS del cierre"
+    },
+    {
+      "acto": 13,
+      "miembros": [
+        "calcular_peso_dimensional_antes_cotizar",
+        "conocer_limites_peso_tamano_courier",
+        "medir_paquete_redondeando_hacia_arriba"
+      ],
+      "especie": "IMPOSIBLE POR PUERTA (por estructura), Y EL ENCARGO NO LO NOMBRABA",
+      "motivo": "EL TERCERO QUE LA VARA REPARADA ENCUENTRA Y QUE NADIE HABIA CONTADO, y se dice asi en vez de colarlo con los otros dos. TIENE UNA SOLA PUERTA, no dos: calcular_peso_dimensional_antes_cotizar. Y ESA UNICA PUERTA ES EL CENTRO DE LA ESTRELLA, asi que no es viable como superviviente (no deja ningun mixto fuera) y los dos candidatos viables la absorben los dos. LO QUE ESO DESMIENTE es el caso a del instrumento viejo escrito con estas palabras: UN SOLO miembro protegido, el acto SE SALVA si la lectura elige a ese nodo como superviviente. Aqui la lectura NO PUEDE elegirlo. La cuenta de puertas no es lo que decide: lo que decide es si alguna puerta esta OBLIGADA A MORIR por la estructura del acto. La guarda 1B lo rechaza siempre. Medido hoy con el instrumento reparado (docs/loop/SALIDA_V52_PUERTAS_REPARADO.txt).",
+      "acumulado_para": "el PARA_ALEXIS del cierre"
+    }
+  ]
+}
