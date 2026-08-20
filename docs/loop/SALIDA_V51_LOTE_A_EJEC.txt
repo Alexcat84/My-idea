@@ -1,0 +1,134 @@
+==============================================================================
+OP-U-01, TRAMO 1, P.12, LOTE A DE LA VUELTA 51: los actos 1 y 4 de la nomina de la apertura . MODO EJECUTAR
+plan: docs/loop/PLAN_V51_OPU01_LOTE_A.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3498 vivos, 355 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive accion_correctiva_sistematica . absorbe accion_correctiva_5, accion_correctiva_6
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 9 (anadidos 3) | condiciones 3 -> 5 (anadidas 2)
+  alias del superviviente: ['accion_correctiva_5', 'accion_correctiva_6']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive scorecard_de_seleccion_de_proyectos . absorbe scoring_model_scorecard
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 6 (anadidas 3)
+  INCISOS ADOSADOS: 2
+     del paso 1 de scoring_model_scorecard al PASO 1 del superviviente
+        inciso VERBATIM: 'entre 6 y 10 preguntas sólidas, basadas en investigación'
+        nexo (lo unico de cosecha propia): ', y usa '
+        paso resultante: Define los seis criterios que vas a usar: qué tan alineado está con tu estrategia, la ventaja frente a la competencia, qué tan atractivo es el mercado, si aprovecha lo que ya sabes hacer, si es viable técnicamente y la relación entre riesgo y retorno, y usa entre 6 y 10 preguntas sólidas, basadas en investigación
+     del paso 2 de scoring_model_scorecard al PASO 2 del superviviente
+        inciso VERBATIM: 'del 1 al 5 o del 0 al 10'
+        nexo (lo unico de cosecha propia): ', por ejemplo '
+        paso resultante: Decide cómo vas a puntuar cada criterio, con pesos o una escala simple, por ejemplo del 1 al 5 o del 0 al 10
+  alias del superviviente: ['scoring_model_scorecard']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 14
+   cero_defectos                                        nodos_previos     accion_correctiva_5 -> accion_correctiva_sistematica
+   cero_defectos                                        nodos_siguientes  accion_correctiva_6 -> accion_correctiva_sistematica
+   conciencia_calidad                                   nodos_siguientes  accion_correctiva_5 -> accion_correctiva_sistematica
+   consejo_de_calidad                                   nodos_previos     accion_correctiva_6 -> accion_correctiva_sistematica
+   data_integrity_forecasting                           nodos_siguientes  scoring_model_scorecard -> scorecard_de_seleccion_de_proyectos
+   eliminacion_causas_error                             nodos_previos     accion_correctiva_6 -> accion_correctiva_sistematica
+   expected_commercial_value_ecv                        nodos_siguientes  scoring_model_scorecard -> scorecard_de_seleccion_de_proyectos
+   governance_integration_gates_portfolio_roadmap       nodos_previos     scoring_model_scorecard -> scorecard_de_seleccion_de_proyectos
+   portfolio_management_triangulation                   nodos_previos     scoring_model_scorecard -> scorecard_de_seleccion_de_proyectos
+   product_roadmap_estrategico                          nodos_previos     scoring_model_scorecard -> scorecard_de_seleccion_de_proyectos
+   programa_mejora_calidad_14_pasos                     nodos_siguientes  accion_correctiva_6 -> accion_correctiva_sistematica
+   revision_portafolio_periodica                        nodos_previos     scoring_model_scorecard -> scorecard_de_seleccion_de_proyectos
+   technology_platform_evaluation                       nodos_previos     scoring_model_scorecard -> scorecard_de_seleccion_de_proyectos
+   testing_process_completo                             nodos_siguientes  scoring_model_scorecard -> scorecard_de_seleccion_de_proyectos
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 1
+   conciencia_de_calidad                                nodos_siguientes  accion_correctiva_5 (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 0
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 1002
+  duplicadas tras resolver DESPUES del tramo                          : 1000
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 2, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 10 de 10
+guarda D, los 3 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (24 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 accion_correctiva_5                          paso         1  ya lo dice el PASO 1 del superviviente
+        Documenta formalmente cada problema detectado durante la operación, revisión de calidad u otros medios
+    1 accion_correctiva_5                          paso         2  ya lo dice el PASO 2 del superviviente
+        Revisa con frecuencia regular, diaria si es posible, los problemas pendientes junto a quien te apoye en calidad
+    1 accion_correctiva_5                          paso         3  ya lo dice el PASO 1 del superviviente
+        Crea un chart de acción ítem por ítem que registre problema, gravedad, causa y responsable
+    1 accion_correctiva_5                          paso         4  PASO 7 del superviviente
+        Define acciones que corrijan la causa raíz y prevengan la recurrencia, no solo alivien la presión del momento
+    1 accion_correctiva_5                          paso         5  PASO 8 del superviviente
+        Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular, para que no se acepten como normales
+    1 accion_correctiva_5                          paso         6  ya lo dice el PASO 4 del superviviente
+        Da seguimiento sistemático a cada ítem hasta su cierre definitivo
+    1 accion_correctiva_5                          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando has identificado problemas de no conformidad recurrentes que requieren resolución sistemática y permanente
+    1 accion_correctiva_5                          condicion    2  CONDICION 4 del superviviente
+        Cuando necesitas pasar de la sola concientización a la solución estructurada de problemas
+    1 accion_correctiva_5                          condicion    3  CONDICION 5 del superviviente
+        Cuando detectas problemas sutiles o de largo plazo que corren el riesgo de aceptarse como normales sin resolverse
+    1 accion_correctiva_6                          paso         1  ya lo dice el PASO 1 del superviviente
+        Documentar los problemas detectados mediante auditorías de calidad
+    1 accion_correctiva_6                          paso         2  ya lo dice el PASO 1 del superviviente
+        Investigar la causa raíz de cada problema de forma sistemática
+    1 accion_correctiva_6                          paso         3  ya lo dice el PASO 1 del superviviente
+        Asignar responsables y plazos para la resolución definitiva
+    1 accion_correctiva_6                          paso         4  PASO 9 del superviviente
+        Dar seguimiento y verificar que la acción implementada haya eliminado el problema
+    1 accion_correctiva_6                          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se detectan defectos o no conformidades recurrentes
+    1 accion_correctiva_6                          condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando la organización carece de un sistema formal para resolver causas raíz de problemas
+    2 scoring_model_scorecard                      paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Elige entre 6 y 10 preguntas sólidas, basadas en investigación, que cubran: el encaje con tu estrategia, la ventaja de tu producto, si aprovecha lo qu
+    2 scoring_model_scorecard                      paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Califica el proyecto en cada criterio usando una escala simple, por ejemplo del 1 al 5 o del 0 al 10
+    2 scoring_model_scorecard                      paso         3  ya lo dice el PASO 3 del superviviente
+        Suma esas calificaciones, dándole más peso a algunas si quieres, para obtener un puntaje de qué tan atractivo es el proyecto
+    2 scoring_model_scorecard                      paso         4  ya lo dice el PASO 4 del superviviente
+        Usa ese puntaje junto con otro indicador de productividad para ordenar y priorizar tus proyectos cuando revises en qué estás trabajando
+    2 scoring_model_scorecard                      paso         5  PASO 6 del superviviente
+        Usa un scorecard distinto según el tipo de proyecto: no es lo mismo un producto estándar nuevo que una tecnología avanzada
+    2 scoring_model_scorecard                      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si usas o evalúas este tipo de instrumento de puntaje
+    2 scoring_model_scorecard                      condicion    2  CONDICION 4 del superviviente
+        Cuando los datos financieros todavía no son confiables porque el proyecto está en una etapa temprana
+    2 scoring_model_scorecard                      condicion    3  CONDICION 5 del superviviente
+        Cuando necesitas evaluar proyectos audaces o innovadores con mucha incertidumbre
+    2 scoring_model_scorecard                      condicion    4  CONDICION 6 del superviviente
+        Cuando estás definiendo los criterios para tus primeros puntos de decisión sobre seguir o frenar un proyecto
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 2
+  nodos implicados    : 5
+  nodos que MUEREN    : 3
+  piezas repartidas   : 24 (9 viajan enteras, 13 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 1
+
+ESCRITO. ficheros tocados: 18
+censo DESPUES: 3853 ficheros, 3495 vivos, 358 deprecados
+censo ANTES  : 3853 ficheros, 3498 vivos, 355 deprecados
+delta deprecados: +3 (esperado +3): OK

@@ -1,0 +1,367 @@
+==============================================================================
+COLISIONES DE CLASE ESPERADAS, MEDIDAS SOBRE EL ARCHIVO ENTERO
+nomina: docs/loop/RECOMPUTO_V51_APERTURA.jsonl
+colisiones VIGENTES antes de tocar nada: 0
+==============================================================================
+
+--- ACTO 1  tam 4
+      miembros: accion_correctiva_5, accion_correctiva_6, accion_correctiva_crosby, accion_correctiva_sistematica
+      SUPERVIVIENTE accion_correctiva_5                            mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] accion_correctiva_5 contra accion_correctiva_crosby
+              puesto 2426   A | crudo: accion_correctiva_6 + accion_correctiva_crosby
+              puesto 2496   D | crudo: accion_correctiva_5 + accion_correctiva_crosby
+              puesto 2805   D | crudo: accion_correctiva_crosby + accion_correctiva_sistematica
+      SUPERVIVIENTE accion_correctiva_crosby                       mixtos 2 | colisiones DENTRO 2, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] accion_correctiva_5 contra accion_correctiva_crosby
+              puesto 2418   A | crudo: accion_correctiva_5 + accion_correctiva_6
+              puesto 2496   D | crudo: accion_correctiva_5 + accion_correctiva_crosby
+          [dentro] accion_correctiva_crosby contra accion_correctiva_sistematica
+              puesto 2701   A | crudo: accion_correctiva_6 + accion_correctiva_sistematica
+              puesto 2805   D | crudo: accion_correctiva_crosby + accion_correctiva_sistematica
+      SUPERVIVIENTE accion_correctiva_sistematica                  mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] accion_correctiva_crosby contra accion_correctiva_sistematica
+              puesto 2426   A | crudo: accion_correctiva_6 + accion_correctiva_crosby
+              puesto 2496   D | crudo: accion_correctiva_5 + accion_correctiva_crosby
+              puesto 2805   D | crudo: accion_correctiva_crosby + accion_correctiva_sistematica
+
+--- ACTO 2  tam 4
+      miembros: consejo_calidad, consejo_calidad_2, consejo_de_calidad, consejo_de_calidad_3
+      SUPERVIVIENTE consejo_de_calidad                             mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] consejo_de_calidad contra consejo_de_calidad_3
+              puesto 2523   A | crudo: consejo_calidad + consejo_de_calidad_3
+              puesto 2662   A | crudo: consejo_calidad_2 + consejo_de_calidad_3
+              puesto 2916   D | crudo: consejo_de_calidad + consejo_de_calidad_3
+      SUPERVIVIENTE consejo_de_calidad_3                           mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] consejo_de_calidad contra consejo_de_calidad_3
+              puesto 2663   A | crudo: consejo_calidad + consejo_de_calidad
+              puesto 2670   A | crudo: consejo_calidad_2 + consejo_de_calidad
+              puesto 2916   D | crudo: consejo_de_calidad + consejo_de_calidad_3
+
+--- ACTO 3  tam 3
+      miembros: mission_and_operations_planning, proceso_sop_mop, sop_colaborativo
+      SUPERVIVIENTE mission_and_operations_planning                mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] mission_and_operations_planning contra sop_colaborativo
+              puesto 330    A | crudo: proceso_sop_mop + sop_colaborativo
+              puesto 703    B | crudo: mission_and_operations_planning + sop_colaborativo
+      SUPERVIVIENTE sop_colaborativo                               mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] mission_and_operations_planning contra sop_colaborativo
+              puesto 173    A | crudo: mission_and_operations_planning + proceso_sop_mop
+              puesto 703    B | crudo: mission_and_operations_planning + sop_colaborativo
+
+--- ACTO 4  tam 3
+      miembros: scorecard_de_seleccion_de_proyectos, scorecards_criterios_gate, scoring_model_scorecard
+      SUPERVIVIENTE scorecard_de_seleccion_de_proyectos            mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] scorecard_de_seleccion_de_proyectos contra scorecards_criterios_gate
+              puesto 820    A | crudo: scorecards_criterios_gate + scoring_model_scorecard
+              puesto 1201   D | crudo: scorecard_de_seleccion_de_proyectos + scorecards_criterios_gate
+      SUPERVIVIENTE scorecards_criterios_gate                      mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] scorecard_de_seleccion_de_proyectos contra scorecards_criterios_gate
+              puesto 184    A | crudo: scorecard_de_seleccion_de_proyectos + scoring_model_scorecard
+              puesto 1201   D | crudo: scorecard_de_seleccion_de_proyectos + scorecards_criterios_gate
+
+--- ACTO 5  tam 3
+      miembros: criterios_equity_split, split_igual_vs_desigual, teoria_equidad_split_equity
+      SUPERVIVIENTE criterios_equity_split                         mixtos 1 | colisiones DENTRO 1, FUERA 2 | NO CALZA
+          [dentro] criterios_equity_split contra teoria_equidad_split_equity
+              puesto 502    A | crudo: split_igual_vs_desigual + teoria_equidad_split_equity
+              puesto 871    D | crudo: criterios_equity_split + teoria_equidad_split_equity
+          [FUERA DEL ACTO] criterios_equity_split contra reparto_inicial_equity
+              puesto 266    B | crudo: reparto_inicial_equity + split_igual_vs_desigual
+              puesto 754    D | crudo: criterios_equity_split + reparto_inicial_equity
+          [FUERA DEL ACTO] criterios_equity_split contra timing_equity_split
+              puesto 246    C | crudo: split_igual_vs_desigual + timing_equity_split
+              puesto 688    D | crudo: criterios_equity_split + timing_equity_split
+      SUPERVIVIENTE teoria_equidad_split_equity                    mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] criterios_equity_split contra teoria_equidad_split_equity
+              puesto 188    A | crudo: criterios_equity_split + split_igual_vs_desigual
+              puesto 871    D | crudo: criterios_equity_split + teoria_equidad_split_equity
+
+--- ACTO 7  tam 3
+      miembros: regalos_estrategicos_personalizados, regalos_estrategicos_sorpresa, sorprender_cliente_estrategico
+      SUPERVIVIENTE regalos_estrategicos_personalizados            mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] regalos_estrategicos_personalizados contra sorprender_cliente_estrategico
+              puesto 251    A | crudo: regalos_estrategicos_sorpresa + sorprender_cliente_estrategico
+              puesto 1348   D | crudo: regalos_estrategicos_personalizados + sorprender_cliente_estrategico
+      SUPERVIVIENTE sorprender_cliente_estrategico                 mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] regalos_estrategicos_personalizados contra sorprender_cliente_estrategico
+              puesto 799    A | crudo: regalos_estrategicos_personalizados + regalos_estrategicos_sorpresa
+              puesto 1348   D | crudo: regalos_estrategicos_personalizados + sorprender_cliente_estrategico
+
+--- ACTO 8  tam 3
+      miembros: founder_ceo_succession_process, identificacion_necesidad_sucesion_ceo, sucesion_iniciada_por_fundador
+      SUPERVIVIENTE identificacion_necesidad_sucesion_ceo          mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] identificacion_necesidad_sucesion_ceo contra sucesion_iniciada_por_fundador
+              puesto 354    A | crudo: founder_ceo_succession_process + sucesion_iniciada_por_fundador
+              puesto 612    B | crudo: identificacion_necesidad_sucesion_ceo + sucesion_iniciada_por_fundador
+      SUPERVIVIENTE sucesion_iniciada_por_fundador                 mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] identificacion_necesidad_sucesion_ceo contra sucesion_iniciada_por_fundador
+              puesto 256    A | crudo: founder_ceo_succession_process + identificacion_necesidad_sucesion_ceo
+              puesto 612    B | crudo: identificacion_necesidad_sucesion_ceo + sucesion_iniciada_por_fundador
+
+--- ACTO 9  tam 3
+      miembros: formacion_de_habitos_de_pensamiento, formacion_de_habitos_de_trabajo_creativo, gestion_de_habitos_mentales_para_pensar
+      SUPERVIVIENTE formacion_de_habitos_de_trabajo_creativo       mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] formacion_de_habitos_de_trabajo_creativo contra gestion_de_habitos_mentales_para_pensar
+              puesto 261    A | crudo: formacion_de_habitos_de_pensamiento + gestion_de_habitos_mentales_para_pensar
+              puesto 333    D | crudo: formacion_de_habitos_de_trabajo_creativo + gestion_de_habitos_mentales_para_pensar
+      SUPERVIVIENTE gestion_de_habitos_mentales_para_pensar        mixtos 1 | colisiones DENTRO 1, FUERA 1 | NO CALZA
+          [dentro] formacion_de_habitos_de_trabajo_creativo contra gestion_de_habitos_mentales_para_pensar
+              puesto 281    A | crudo: formacion_de_habitos_de_pensamiento + formacion_de_habitos_de_trabajo_creativo
+              puesto 333    D | crudo: formacion_de_habitos_de_trabajo_creativo + gestion_de_habitos_mentales_para_pensar
+          [FUERA DEL ACTO] gestion_de_habitos_mentales_para_pensar contra ruptura_de_habitos_para_estimulo
+              puesto 243    B | crudo: gestion_de_habitos_mentales_para_pensar + ruptura_de_habitos_para_estimulo
+              puesto 563    D | crudo: formacion_de_habitos_de_pensamiento + ruptura_de_habitos_para_estimulo
+
+--- ACTO 10  tam 3
+      miembros: influence_map_organizacional, mapa_de_influencia, mapa_organizacional_influencia
+      SUPERVIVIENTE mapa_de_influencia                             mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] mapa_de_influencia contra mapa_organizacional_influencia
+              puesto 284    A | crudo: influence_map_organizacional + mapa_organizacional_influencia
+              puesto 604    B | crudo: mapa_de_influencia + mapa_organizacional_influencia
+      SUPERVIVIENTE mapa_organizacional_influencia                 mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] mapa_de_influencia contra mapa_organizacional_influencia
+              puesto 265    A | crudo: influence_map_organizacional + mapa_de_influencia
+              puesto 604    B | crudo: mapa_de_influencia + mapa_organizacional_influencia
+
+--- ACTO 11  tam 3
+      miembros: decision_cuando_fundar, evaluacion_capacidades_fundador, tres_preguntas_carrera
+      SUPERVIVIENTE evaluacion_capacidades_fundador                mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] evaluacion_capacidades_fundador contra tres_preguntas_carrera
+              puesto 290    A | crudo: decision_cuando_fundar + tres_preguntas_carrera
+              puesto 1303   D | crudo: evaluacion_capacidades_fundador + tres_preguntas_carrera
+      SUPERVIVIENTE tres_preguntas_carrera                         mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] evaluacion_capacidades_fundador contra tres_preguntas_carrera
+              puesto 893    A | crudo: decision_cuando_fundar + evaluacion_capacidades_fundador
+              puesto 1303   D | crudo: evaluacion_capacidades_fundador + tres_preguntas_carrera
+
+--- ACTO 12  tam 3
+      miembros: cofundar_con_amigos_familia_riesgos, riesgo_cofundadores_relacion_previa, seleccion_relaciones_cofundadores
+      SUPERVIVIENTE cofundar_con_amigos_familia_riesgos            mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] cofundar_con_amigos_familia_riesgos contra seleccion_relaciones_cofundadores
+              puesto 498    A | crudo: riesgo_cofundadores_relacion_previa + seleccion_relaciones_cofundadores
+              puesto 1058   D | crudo: cofundar_con_amigos_familia_riesgos + seleccion_relaciones_cofundadores
+      SUPERVIVIENTE seleccion_relaciones_cofundadores              mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] cofundar_con_amigos_familia_riesgos contra seleccion_relaciones_cofundadores
+              puesto 308    A | crudo: cofundar_con_amigos_familia_riesgos + riesgo_cofundadores_relacion_previa
+              puesto 1058   D | crudo: cofundar_con_amigos_familia_riesgos + seleccion_relaciones_cofundadores
+
+--- ACTO 13  tam 3
+      miembros: investigar_datos_cliente, personalizacion_investigacion_prospecto, seguimiento_informacion_cliente
+      SUPERVIVIENTE investigar_datos_cliente                       mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] investigar_datos_cliente contra personalizacion_investigacion_prospecto
+              puesto 811    B | crudo: investigar_datos_cliente + personalizacion_investigacion_prospecto
+              puesto 1222   A | crudo: personalizacion_investigacion_prospecto + seguimiento_informacion_cliente
+      SUPERVIVIENTE personalizacion_investigacion_prospecto        mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] investigar_datos_cliente contra personalizacion_investigacion_prospecto
+              puesto 317    A | crudo: investigar_datos_cliente + seguimiento_informacion_cliente
+              puesto 811    B | crudo: investigar_datos_cliente + personalizacion_investigacion_prospecto
+
+--- ACTO 14  tam 3
+      miembros: customer_profile, customer_profile_value_map, value_proposition_canvas
+      SUPERVIVIENTE customer_profile                               mixtos 1 | colisiones DENTRO 1, FUERA 1 | NO CALZA
+          [dentro] customer_profile contra value_proposition_canvas
+              puesto 477    A | crudo: customer_profile_value_map + value_proposition_canvas
+              puesto 705    D | crudo: customer_profile + value_proposition_canvas
+          [FUERA DEL ACTO] customer_profile contra value_map
+              puesto 309    D | crudo: customer_profile + value_map
+              puesto 360    C | crudo: customer_profile_value_map + value_map
+      SUPERVIVIENTE value_proposition_canvas                       mixtos 1 | colisiones DENTRO 1, FUERA 1 | NO CALZA
+          [dentro] customer_profile contra value_proposition_canvas
+              puesto 475    A | crudo: customer_profile + customer_profile_value_map
+              puesto 705    D | crudo: customer_profile + value_proposition_canvas
+          [FUERA DEL ACTO] value_map contra value_proposition_canvas
+              puesto 250    D | crudo: value_map + value_proposition_canvas
+              puesto 360    C | crudo: customer_profile_value_map + value_map
+
+--- ACTO 15  tam 3
+      miembros: asignacion_persona_ia, ingenieria_de_prompts_efectiva, prompting_por_persona_ia
+      SUPERVIVIENTE ingenieria_de_prompts_efectiva                 mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] ingenieria_de_prompts_efectiva contra prompting_por_persona_ia
+              puesto 1144   D | crudo: ingenieria_de_prompts_efectiva + prompting_por_persona_ia
+              puesto 1175   A | crudo: asignacion_persona_ia + prompting_por_persona_ia
+      SUPERVIVIENTE prompting_por_persona_ia                       mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] ingenieria_de_prompts_efectiva contra prompting_por_persona_ia
+              puesto 514    A | crudo: asignacion_persona_ia + ingenieria_de_prompts_efectiva
+              puesto 1144   D | crudo: ingenieria_de_prompts_efectiva + prompting_por_persona_ia
+
+--- ACTO 16  tam 3
+      miembros: warrant_pricing_venture_debt, warrants_deuda_convertible, warrants_financiamiento
+      SUPERVIVIENTE warrant_pricing_venture_debt                   mixtos 1 | colisiones DENTRO 1, FUERA 1 | NO CALZA
+          [dentro] warrant_pricing_venture_debt contra warrants_financiamiento
+              puesto 559    A | crudo: warrants_deuda_convertible + warrants_financiamiento
+              puesto 1448   D | crudo: warrant_pricing_venture_debt + warrants_financiamiento
+          [FUERA DEL ACTO] venture_debt_terminos_economicos contra warrant_pricing_venture_debt
+              puesto 204    B | crudo: venture_debt_terminos_economicos + warrant_pricing_venture_debt
+              puesto 1521   D | crudo: venture_debt_terminos_economicos + warrants_deuda_convertible
+      SUPERVIVIENTE warrants_financiamiento                        mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] warrant_pricing_venture_debt contra warrants_financiamiento
+              puesto 1028   A | crudo: warrant_pricing_venture_debt + warrants_deuda_convertible
+              puesto 1448   D | crudo: warrant_pricing_venture_debt + warrants_financiamiento
+
+--- ACTO 17  tam 3
+      miembros: calcular_peso_dimensional_antes_cotizar, conocer_limites_peso_tamano_courier, medir_paquete_redondeando_hacia_arriba
+      SUPERVIVIENTE conocer_limites_peso_tamano_courier            mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] conocer_limites_peso_tamano_courier contra medir_paquete_redondeando_hacia_arriba
+              puesto 1601   A | crudo: calcular_peso_dimensional_antes_cotizar + medir_paquete_redondeando_hacia_arriba
+              puesto 1609   D | crudo: conocer_limites_peso_tamano_courier + medir_paquete_redondeando_hacia_arriba
+      SUPERVIVIENTE medir_paquete_redondeando_hacia_arriba         mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] conocer_limites_peso_tamano_courier contra medir_paquete_redondeando_hacia_arriba
+              puesto 1602   A | crudo: calcular_peso_dimensional_antes_cotizar + conocer_limites_peso_tamano_courier
+              puesto 1609   D | crudo: conocer_limites_peso_tamano_courier + medir_paquete_redondeando_hacia_arriba
+
+--- ACTO 18  tam 3
+      miembros: definir_limites_huella_carbono, huella_carbono_empresarial, medir_huella_carbono_corporativa
+      SUPERVIVIENTE definir_limites_huella_carbono                 mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] definir_limites_huella_carbono contra medir_huella_carbono_corporativa
+              puesto 1805   A | crudo: huella_carbono_empresarial + medir_huella_carbono_corporativa
+              puesto 1855   D | crudo: definir_limites_huella_carbono + medir_huella_carbono_corporativa
+      SUPERVIVIENTE medir_huella_carbono_corporativa               mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] definir_limites_huella_carbono contra medir_huella_carbono_corporativa
+              puesto 1855   D | crudo: definir_limites_huella_carbono + medir_huella_carbono_corporativa
+              puesto 1865   A | crudo: definir_limites_huella_carbono + huella_carbono_empresarial
+
+--- ACTO 19  tam 3
+      miembros: enfoque_paso_a_paso_investigacion_mercado, evaluacion_mercados_objetivo, screening_mercados_potenciales
+      SUPERVIVIENTE evaluacion_mercados_objetivo                   mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] evaluacion_mercados_objetivo contra screening_mercados_potenciales
+              puesto 1966   A | crudo: enfoque_paso_a_paso_investigacion_mercado + screening_mercados_potenciales
+              puesto 1972   D | crudo: evaluacion_mercados_objetivo + screening_mercados_potenciales
+      SUPERVIVIENTE screening_mercados_potenciales                 mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] evaluacion_mercados_objetivo contra screening_mercados_potenciales
+              puesto 1967   A | crudo: enfoque_paso_a_paso_investigacion_mercado + evaluacion_mercados_objetivo
+              puesto 1972   D | crudo: evaluacion_mercados_objetivo + screening_mercados_potenciales
+
+--- ACTO 20  tam 3
+      miembros: cinco_categorias_costos_franquicia, costos_preparacion_franquicia, estimacion_inversion_inicial_franquiciador
+      SUPERVIVIENTE costos_preparacion_franquicia                  mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] costos_preparacion_franquicia contra estimacion_inversion_inicial_franquiciador
+              puesto 2074   A | crudo: cinco_categorias_costos_franquicia + estimacion_inversion_inicial_franquiciador
+              puesto 2092   D | crudo: costos_preparacion_franquicia + estimacion_inversion_inicial_franquiciador
+      SUPERVIVIENTE estimacion_inversion_inicial_franquiciador     mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] costos_preparacion_franquicia contra estimacion_inversion_inicial_franquiciador
+              puesto 2075   A | crudo: cinco_categorias_costos_franquicia + costos_preparacion_franquicia
+              puesto 2092   D | crudo: costos_preparacion_franquicia + estimacion_inversion_inicial_franquiciador
+
+--- ACTO 21  tam 3
+      miembros: contratar_abogado_especializado_franquicias, contratar_abogado_franquicias, eleccion_abogado_franquicias
+      SUPERVIVIENTE contratar_abogado_franquicias                  mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] contratar_abogado_franquicias contra eleccion_abogado_franquicias
+              puesto 2076   A | crudo: contratar_abogado_especializado_franquicias + eleccion_abogado_franquicias
+              puesto 2086   D | crudo: contratar_abogado_franquicias + eleccion_abogado_franquicias
+      SUPERVIVIENTE eleccion_abogado_franquicias                   mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] contratar_abogado_franquicias contra eleccion_abogado_franquicias
+              puesto 2086   D | crudo: contratar_abogado_franquicias + eleccion_abogado_franquicias
+              puesto 2090   A | crudo: contratar_abogado_especializado_franquicias + contratar_abogado_franquicias
+
+--- ACTO 22  tam 3
+      miembros: deteccion_franquicia_inadvertida, estructuras_combinadas_franquicia, prevenir_franquicias_inadvertidas
+      SUPERVIVIENTE deteccion_franquicia_inadvertida               mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] deteccion_franquicia_inadvertida contra prevenir_franquicias_inadvertidas
+              puesto 2073   D | crudo: deteccion_franquicia_inadvertida + prevenir_franquicias_inadvertidas
+              puesto 2207   A | crudo: estructuras_combinadas_franquicia + prevenir_franquicias_inadvertidas
+      SUPERVIVIENTE prevenir_franquicias_inadvertidas              mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] deteccion_franquicia_inadvertida contra prevenir_franquicias_inadvertidas
+              puesto 2073   D | crudo: deteccion_franquicia_inadvertida + prevenir_franquicias_inadvertidas
+              puesto 2181   A | crudo: deteccion_franquicia_inadvertida + estructuras_combinadas_franquicia
+
+--- ACTO 24  tam 3
+      miembros: critica_gestion_por_objetivos, eliminacion_gestion_por_objetivos_y_numeros, eliminar_metas_numericas_gerencia
+      SUPERVIVIENTE eliminacion_gestion_por_objetivos_y_numeros    mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] eliminacion_gestion_por_objetivos_y_numeros contra eliminar_metas_numericas_gerencia
+              puesto 2477   A | crudo: critica_gestion_por_objetivos + eliminar_metas_numericas_gerencia
+              puesto 2534   D | crudo: eliminacion_gestion_por_objetivos_y_numeros + eliminar_metas_numericas_gerencia
+      SUPERVIVIENTE eliminar_metas_numericas_gerencia              mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] eliminacion_gestion_por_objetivos_y_numeros contra eliminar_metas_numericas_gerencia
+              puesto 2488   A | crudo: critica_gestion_por_objetivos + eliminacion_gestion_por_objetivos_y_numeros
+              puesto 2534   D | crudo: eliminacion_gestion_por_objetivos_y_numeros + eliminar_metas_numericas_gerencia
+
+--- ACTO 26  tam 3
+      miembros: analisis_pareto, analisis_pareto_de_proveedores, principio_pareto
+      SUPERVIVIENTE analisis_pareto_de_proveedores                 mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] analisis_pareto_de_proveedores contra principio_pareto
+              puesto 2551   A | crudo: analisis_pareto + principio_pareto
+              puesto 3087   D | crudo: analisis_pareto_de_proveedores + principio_pareto
+      SUPERVIVIENTE principio_pareto                               mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] analisis_pareto_de_proveedores contra principio_pareto
+              puesto 2546   A | crudo: analisis_pareto + analisis_pareto_de_proveedores
+              puesto 3087   D | crudo: analisis_pareto_de_proveedores + principio_pareto
+
+--- ACTO 27  tam 3
+      miembros: error_proofing_servicio, mistake_proofing_poka_yoke_2, poka_yoke_a_prueba_de_errores
+      SUPERVIVIENTE error_proofing_servicio                        mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] error_proofing_servicio contra poka_yoke_a_prueba_de_errores
+              puesto 2613   A | crudo: mistake_proofing_poka_yoke_2 + poka_yoke_a_prueba_de_errores
+              puesto 2931   D | crudo: error_proofing_servicio + poka_yoke_a_prueba_de_errores
+      SUPERVIVIENTE poka_yoke_a_prueba_de_errores                  mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] error_proofing_servicio contra poka_yoke_a_prueba_de_errores
+              puesto 2737   A | crudo: error_proofing_servicio + mistake_proofing_poka_yoke_2
+              puesto 2931   D | crudo: error_proofing_servicio + poka_yoke_a_prueba_de_errores
+
+--- ACTO 28  tam 3
+      miembros: criterios_seleccion_proyectos_calidad, dmaic_fase_select, proceso_nominacion_seleccion
+      SUPERVIVIENTE criterios_seleccion_proyectos_calidad          mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] criterios_seleccion_proyectos_calidad contra dmaic_fase_select
+              puesto 2742   A | crudo: dmaic_fase_select + proceso_nominacion_seleccion
+              puesto 2933   D | crudo: criterios_seleccion_proyectos_calidad + dmaic_fase_select
+      SUPERVIVIENTE dmaic_fase_select                              mixtos 1 | colisiones DENTRO 1, FUERA 0 | CALZA con la cuenta del encargo
+          [dentro] criterios_seleccion_proyectos_calidad contra dmaic_fase_select
+              puesto 2627   A | crudo: criterios_seleccion_proyectos_calidad + proceso_nominacion_seleccion
+              puesto 2933   D | crudo: criterios_seleccion_proyectos_calidad + dmaic_fase_select
+
+==============================================================================
+RESUMEN: acto, superviviente, mixtos, colisiones dentro y fuera
+==============================================================================
+  acto 1    accion_correctiva_5                                mixtos 1  dentro 1  fuera 0  CALZA
+  acto 1    accion_correctiva_crosby                           mixtos 2  dentro 2  fuera 0  CALZA
+  acto 1    accion_correctiva_sistematica                      mixtos 1  dentro 1  fuera 0  CALZA
+  acto 2    consejo_de_calidad                                 mixtos 1  dentro 1  fuera 0  CALZA
+  acto 2    consejo_de_calidad_3                               mixtos 1  dentro 1  fuera 0  CALZA
+  acto 3    mission_and_operations_planning                    mixtos 1  dentro 1  fuera 0  CALZA
+  acto 3    sop_colaborativo                                   mixtos 1  dentro 1  fuera 0  CALZA
+  acto 4    scorecard_de_seleccion_de_proyectos                mixtos 1  dentro 1  fuera 0  CALZA
+  acto 4    scorecards_criterios_gate                          mixtos 1  dentro 1  fuera 0  CALZA
+  acto 5    criterios_equity_split                             mixtos 1  dentro 1  fuera 2  NO CALZA
+  acto 5    teoria_equidad_split_equity                        mixtos 1  dentro 1  fuera 0  CALZA
+  acto 7    regalos_estrategicos_personalizados                mixtos 1  dentro 1  fuera 0  CALZA
+  acto 7    sorprender_cliente_estrategico                     mixtos 1  dentro 1  fuera 0  CALZA
+  acto 8    identificacion_necesidad_sucesion_ceo              mixtos 1  dentro 1  fuera 0  CALZA
+  acto 8    sucesion_iniciada_por_fundador                     mixtos 1  dentro 1  fuera 0  CALZA
+  acto 9    formacion_de_habitos_de_trabajo_creativo           mixtos 1  dentro 1  fuera 0  CALZA
+  acto 9    gestion_de_habitos_mentales_para_pensar            mixtos 1  dentro 1  fuera 1  NO CALZA
+  acto 10   mapa_de_influencia                                 mixtos 1  dentro 1  fuera 0  CALZA
+  acto 10   mapa_organizacional_influencia                     mixtos 1  dentro 1  fuera 0  CALZA
+  acto 11   evaluacion_capacidades_fundador                    mixtos 1  dentro 1  fuera 0  CALZA
+  acto 11   tres_preguntas_carrera                             mixtos 1  dentro 1  fuera 0  CALZA
+  acto 12   cofundar_con_amigos_familia_riesgos                mixtos 1  dentro 1  fuera 0  CALZA
+  acto 12   seleccion_relaciones_cofundadores                  mixtos 1  dentro 1  fuera 0  CALZA
+  acto 13   investigar_datos_cliente                           mixtos 1  dentro 1  fuera 0  CALZA
+  acto 13   personalizacion_investigacion_prospecto            mixtos 1  dentro 1  fuera 0  CALZA
+  acto 14   customer_profile                                   mixtos 1  dentro 1  fuera 1  NO CALZA
+  acto 14   value_proposition_canvas                           mixtos 1  dentro 1  fuera 1  NO CALZA
+  acto 15   ingenieria_de_prompts_efectiva                     mixtos 1  dentro 1  fuera 0  CALZA
+  acto 15   prompting_por_persona_ia                           mixtos 1  dentro 1  fuera 0  CALZA
+  acto 16   warrant_pricing_venture_debt                       mixtos 1  dentro 1  fuera 1  NO CALZA
+  acto 16   warrants_financiamiento                            mixtos 1  dentro 1  fuera 0  CALZA
+  acto 17   conocer_limites_peso_tamano_courier                mixtos 1  dentro 1  fuera 0  CALZA
+  acto 17   medir_paquete_redondeando_hacia_arriba             mixtos 1  dentro 1  fuera 0  CALZA
+  acto 18   definir_limites_huella_carbono                     mixtos 1  dentro 1  fuera 0  CALZA
+  acto 18   medir_huella_carbono_corporativa                   mixtos 1  dentro 1  fuera 0  CALZA
+  acto 19   evaluacion_mercados_objetivo                       mixtos 1  dentro 1  fuera 0  CALZA
+  acto 19   screening_mercados_potenciales                     mixtos 1  dentro 1  fuera 0  CALZA
+  acto 20   costos_preparacion_franquicia                      mixtos 1  dentro 1  fuera 0  CALZA
+  acto 20   estimacion_inversion_inicial_franquiciador         mixtos 1  dentro 1  fuera 0  CALZA
+  acto 21   contratar_abogado_franquicias                      mixtos 1  dentro 1  fuera 0  CALZA
+  acto 21   eleccion_abogado_franquicias                       mixtos 1  dentro 1  fuera 0  CALZA
+  acto 22   deteccion_franquicia_inadvertida                   mixtos 1  dentro 1  fuera 0  CALZA
+  acto 22   prevenir_franquicias_inadvertidas                  mixtos 1  dentro 1  fuera 0  CALZA
+  acto 24   eliminacion_gestion_por_objetivos_y_numeros        mixtos 1  dentro 1  fuera 0  CALZA
+  acto 24   eliminar_metas_numericas_gerencia                  mixtos 1  dentro 1  fuera 0  CALZA
+  acto 26   analisis_pareto_de_proveedores                     mixtos 1  dentro 1  fuera 0  CALZA
+  acto 26   principio_pareto                                   mixtos 1  dentro 1  fuera 0  CALZA
+  acto 27   error_proofing_servicio                            mixtos 1  dentro 1  fuera 0  CALZA
+  acto 27   poka_yoke_a_prueba_de_errores                      mixtos 1  dentro 1  fuera 0  CALZA
+  acto 28   criterios_seleccion_proyectos_calidad              mixtos 1  dentro 1  fuera 0  CALZA
+  acto 28   dmaic_fase_select                                  mixtos 1  dentro 1  fuera 0  CALZA
+
+  combinaciones que CALZAN con la cuenta del encargo: 46
+  combinaciones que NO CALZAN                        : 5

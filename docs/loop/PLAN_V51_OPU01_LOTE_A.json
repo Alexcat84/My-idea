@@ -1,0 +1,125 @@
+{
+ "operacion": "OP-U-01",
+ "tramo": "1, P.12, LOTE A DE LA VUELTA 51: los actos 1 y 4 de la nomina de la apertura",
+ "fecha": "2026-08-20",
+ "vuelta": 51,
+ "estado": "SELLADO",
+ "nomina": "docs/loop/RECOMPUTO_V51_APERTURA.jsonl",
+ "dossier": "docs/loop/SALIDA_V51_DOSSIER_01_05.txt",
+ "vara": "P.12 con la receta RATIFICADA por el acta de la vuelta 50, pregunta 1: dado un superviviente S, PARTE A = S mas los miembros con arista A contra S; MIXTOS = los miembros sin arista A contra S; S es VIABLE si su parte A es clique A y deja al menos un mixto fuera. Entre los viables elige el CONTENIDO (las dos reglas de 03_FUSIONES.md mas P.8 con la vara de las puertas). Cada MIXTO se lee contra el superviviente y se decide ENTRA o CONTINUA.",
+ "viabilidad": "docs/loop/SALIDA_V51_VIABLES.txt, corrida sobre la nomina de la apertura de esta vuelta.",
+ "colisiones_esperadas": "docs/loop/SALIDA_V51_COLISIONES_ESPERADAS.txt, medidas ANTES de tocar un nodo con scripts/loop/vuelta51_colisiones_esperadas.py sobre EL ARCHIVO ENTERO. Los DOS actos de este lote esperan UNA colision cada uno y las dos DENTRO del acto, que es la cuenta que el encargo exige. CERO colisiones fuera del acto en los dos.",
+ "vara_de_las_puertas": "Medida hoy con vuelta48_puertas_en_el_lote.py sobre la nomina de la apertura (docs/loop/SALIDA_V51_PUERTAS_APERTURA.txt). Los actos 1 y 5 no aparecen ni entre los 30 SALVABLES ni entre los 2 IMPOSIBLES: la guarda 1B pasa por vacio. El acto 4 SI es SALVABLE y su puerta es scorecards_criterios_gate, que en este plan es el MIXTO y NO se absorbe: la puerta sobrevive y la guarda pasa con contenido, no por vacio.",
+ "politica_del_reparto": "REGLA DE ESTE LOTE, escrita para poder discutirla: una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene (un rango, una escala, una procedencia) va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND. Es lectura del ejecutor y va marcada como discutible.",
+ "lecturas_p12": [
+  {
+   "acto": 1,
+   "mixto": "accion_correctiva_crosby",
+   "superviviente_contra_el_que_se_lee": "accion_correctiva_sistematica",
+   "veredicto": "CONTINUA",
+   "citas": "El puesto 2805 es el veredicto DIRECTO del par y ya trae su relectura conjunta escrita (bucle vuelta 5): dice, con estas palabras, que NINGUNO DE LOS DOS CABE ENTERO EN EL OTRO. accion_correctiva_crosby trae CUATRO pasos enteros que accion_correctiva_sistematica no tiene, y los cuatro son UN CANAL DE DETECCION: investigar las causas raiz CONSULTANDO DIRECTAMENTE AL PERSONAL OPERATIVO, auditorias INDEPENDIENTES PERIODICAS POR DEPARTAMENTO, documentar en REPORTES FORMALES DE INGENIERIA DE CALIDAD y planes de accion POR DEPARTAMENTO RESPONSABLE. accion_correctiva_sistematica trae los suyos, que son UN APARATO DE SEGUIMIENTO: la ficha por problema, la escalada de la revision diaria a la semanal y de ahi a una mensual que decide si amerita esfuerzo dedicado, el grupo de trabajo puntual con regla de disolucion, y ordenar por gravedad. Lo que comparten es LA IDEA, el sistema de accion correctiva del Paso 6 de Crosby, y esa idea le cabe al mixto en lineas. Lo suyo propio no es un paso del procedimiento del otro: es de donde salen los problemas, que el otro da por dado. P.12 lo llama CONTINUA: enlace mas poda del solape, no fusion. Y el mismo archivo ya corta por esa linea en el puesto 2496, accion_correctiva_5 contra accion_correctiva_crosby, D, sano, ARISTA QUE FALTA."
+  },
+  {
+   "acto": 4,
+   "mixto": "scorecards_criterios_gate",
+   "superviviente_contra_el_que_se_lee": "scorecard_de_seleccion_de_proyectos",
+   "veredicto": "CONTINUA",
+   "citas": "El puesto 1201 es el veredicto DIRECTO del par y lo escribe entero: EL INSTRUMENTO ES EL MISMO Y EL MOMENTO Y EL RITUAL NO SE TOCAN. scorecard_de_seleccion_de_proyectos sirve para ORDENAR LA CARTERA: definir los seis criterios, decidir como puntuar, evaluar cada proyecto activo, COMPARAR LOS PUNTAJES ENTRE PROYECTOS para decidir donde invertir primero, y revisar la lista con lo aprendido. scorecards_criterios_gate sirve para UNA PUERTA: disenar la tabla ponderada, aplicarla en las puertas tempranas 1, 2 y 3, pedir la AUTOEVALUACION DEL EQUIPO ANTES DE LA REUNION para evitar el sesgo del que presenta, COMPARAR LAS PUNTUACIONES DEL EQUIPO CONTRA LAS DE QUIENES DECIDEN y discutir las diferencias en la mesa, e integrar valor presente neto, valor comercial esperado y plazo de recuperacion. Uno compara proyectos entre si; el otro enfrenta DOS LECTURAS DEL MISMO PROYECTO. Los dos mecanismos anti sesgo del mixto no son pasos del procedimiento del superviviente: son un ritual de puerta entero. Comparten LA IDEA de puntuar con criterios visibles y esa idea cabe en lineas: CONTINUA. Y el propio 1201 declara que este par CIERRA UNA ESTRELLA del banco 9.23 y sale SANO, que es la misma lectura por el otro lado."
+  },
+  {
+   "acto": 5,
+   "mixto": "teoria_equidad_split_equity",
+   "superviviente_contra_el_que_se_lee": "criterios_equity_split",
+   "veredicto": "CONTINUA",
+   "citas": "El puesto 871 es el veredicto DIRECTO del par y lo dice sin rodeos: EL SEGUNDO ES LA PREGUNTA PREVIA DEL PRIMERO Y NO ESTA CONTENIDO EN EL, porque el checklist SUPONE YA ELEGIDA la logica de negocio. criterios_equity_split es el checklist para repartir: listar contribuciones pasadas, documentar el capital exacto, calcular el costo de oportunidad, estimar contribuciones futuras, considerar la prima de idea de diez a quince puntos, discutir motivaciones y tolerancia al conflicto, ajustar proporcionalmente por dedicacion y registrar por escrito la logica. teoria_equidad_split_equity decide ANTES QUE LOGICA SE USA: determinar si el equipo opera bajo logica social o de negocio segun sus relaciones previas, aceptar el reparto igualitario con su coste si es social, disenar el proporcional si es de negocio, y evaluar el riesgo de la asimetria entre contribucion real y equity si se elige la logica equivocada. Son dos procedimientos distintos sobre la misma idea y en dos momentos distintos: CONTINUA. NOTA DE ESTE PAR, que lo separa de los otros dos del lote: LA ARISTA QUE P.12 MANDA DECLARAR YA EXISTE EN LOS DOS SENTIDOS (criterios_equity_split.nodos_siguientes a teoria_equidad_split_equity y teoria_equidad_split_equity.nodos_previos a criterios_equity_split, impresas en el dossier), asi que aqui no hay arista que declarar y lo que queda es SOLO la poda del solape para la fase 04."
+  }
+ ],
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "accion_correctiva_5",
+    "accion_correctiva_6",
+    "accion_correctiva_sistematica"
+   ],
+   "superviviente": "accion_correctiva_sistematica",
+   "motivo": "CONTENIDO, con el veredicto DIRECTO del par mas disputado a favor. Los tres viables medidos son accion_correctiva_5, accion_correctiva_crosby y accion_correctiva_sistematica (docs/loop/SALIDA_V51_VIABLES.txt); accion_correctiva_6 no es viable porque no deja ningun mixto fuera. accion_correctiva_crosby cae por contenido sin discusion: CUATRO pasos, DOS condiciones y un resumen de 292 caracteres contra los SEIS, TRES y 535 del elegido, y ademas elegirlo dejaria DOS mixtos. Entre los otros dos el contenido esta empatado en las dos primeras varas (SEIS pasos y TRES condiciones cada uno) y solo el resumen separa (672 de accion_correctiva_5 contra 535). LO QUE DECIDE ES EL VEREDICTO DIRECTO DEL PAR, que es lo que P.12 parte 2 manda: el puesto 2431 leyo los dos textos y cierra con Sobrevive accion_correctiva_sistematica, y nombra lo que solo el elegido trae: UNA CADENCIA DE TRES NIVELES CON ENTREGAS EXPLICITAS (diaria, lo que no se resuelve pasa a semanal a fondo, y lo que sigue vivo pasa a una mensual que decide si merece esfuerzo dedicado), UN GRUPO DE TRABAJO PUNTUAL PARA LOS COMPLEJOS CON RESPONSABLE CLARO Y REGLA DE DISOLUCION, y ORDENAR POR GRAVEDAD PARA ATACAR PRIMERO LOS MAS GRANDES. Del otro dice que sus pasos van uno a uno dentro y que le queda UNA linea propia. Y la cadena de los otros dos veredictos A del acto apunta al mismo sitio: el 2418 cierra con Sobrevive accion_correctiva_5 y el 2431 hace morir a accion_correctiva_5 en accion_correctiva_sistematica. DISCUTIBLE MARCADO Y DECLARADO AQUI: el 2431 mapea el paso 5 de accion_correctiva_5 (escalar a un NIVEL DE DECISION SUPERIOR para que los problemas no se acepten como normales) contra el paso 3 del elegido (pasar de la revision diaria a la semanal). No es la misma escalada: una es de AUTORIDAD y la otra de CALENDARIO. Por eso ese paso viaja de APPEND y no de CUBIERTO, y el solape queda declarado para la poda de la fase 04.",
+   "absorbidos": [
+    "accion_correctiva_5",
+    "accion_correctiva_6"
+   ],
+   "pasos": {
+    "accion_correctiva_5": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:1",
+     "4": "APPEND",
+     "5": "APPEND",
+     "6": "CUBIERTO:4"
+    },
+    "accion_correctiva_6": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:1",
+     "3": "CUBIERTO:1",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "accion_correctiva_5": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND",
+     "3": "APPEND"
+    },
+    "accion_correctiva_6": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:3"
+    }
+   },
+   "nota_del_reparto": "EL REPARTO DE accion_correctiva_5 LO ESCRIBE EL PUESTO 2431 Y AQUI SE EJECUTA: su ficha con problema, gravedad, causa y responsable es el paso 1 del elegido con una columna mas, el para cuando (CUBIERTO:1 desde sus pasos 1 y 3); su revision diaria junto a quien apoya en calidad es el paso 2 (CUBIERTO:2); su seguimiento hasta el cierre definitivo es el paso 4, la revision mensual de lo que sigue sin resolverse (CUBIERTO:4). Y el propio 2431 le reconoce UNA linea propia, que las acciones corrijan la causa raiz y prevengan la recurrencia y no solo alivien la presion del momento, que es un criterio y viaja entera (APPEND). LA SEGUNDA QUE VIAJA ENTERA ES DECISION DEL EJECUTOR Y VA DECLARADA: el paso 5, escalar los problemas mas sutiles o de largo plazo A UN NIVEL DE DECISION SUPERIOR con frecuencia regular PARA QUE NO SE ACEPTEN COMO NORMALES. El 2431 lo da por cubierto por el paso 3 del elegido, y el 2418 lo llama LO UNICO DEL PAR QUE IMPIDE QUE UN PROBLEMA CRONICO SE VUELVA PAISAJE. Los dos veredictos no dicen lo mismo, y la diferencia es que la escalada del elegido es de CALENDARIO (de diaria a semanal a mensual) y la de este paso es de AUTORIDAD. Se elige no perderla: APPEND, con el solape declarado para la poda de la fase 04. EL REPARTO DE accion_correctiva_6 lo escriben el 2418, el 2426 y el 2701, que coinciden: sus cuatro pasos son LA VERSION GENERICA de los del cumulo. Documentar los problemas, investigar la causa raiz de forma sistematica y asignar responsables y plazos estan los tres dentro del paso 1 del elegido, que pide en una sola ficha que paso, que tan grave es, POR QUE PASO, QUIEN SE ENCARGA Y PARA CUANDO (CUBIERTO:1 los tres). Su paso 4, DAR SEGUIMIENTO Y VERIFICAR QUE LA ACCION IMPLEMENTADA HAYA ELIMINADO EL PROBLEMA, viaja entero: verificar que la accion ELIMINO el problema es un gesto que ninguno de los seis pasos del elegido tiene, porque el paso 4 del elegido revisa lo que SIGUE SIN RESOLVERSE y no cierra el lazo sobre lo que se dio por resuelto. PERDIDA NOMBRADA, MOTIVO DESTINO, y se dice en vez de callarla: la procedencia del paso 1 de accion_correctiva_6, que los problemas vengan DE AUDITORIAS DE CALIDAD, no cabe limpia en el paso 1 del elegido y no se adosa. El 2418 la llama LINEA y no procedimiento. Y NO SE PIERDE DEL CATALOGO: el mixto accion_correctiva_crosby, que esta lectura P.12 deja VIVO, manda con esas palabras REALIZAR AUDITORIAS INDEPENDIENTES PERIODICAS POR DEPARTAMENTO, que es la misma procedencia dicha con mas aparato. Las condiciones: la primera de cada absorbido es la recurrencia de defectos, que es la condicion 1 del elegido (CUBIERTO de la condicion 1); la segunda de accion_correctiva_6, carecer de un sistema formal para resolver causas raiz, es la condicion 3 del elegido, necesitar una forma ordenada de escalar y cerrar problemas (CUBIERTO de la condicion 3); y las dos ultimas de accion_correctiva_5 viajan enteras porque ninguna de las tres del elegido las dice: pasar de la sola concientizacion a la solucion estructurada, y detectar problemas sutiles o de largo plazo QUE CORREN EL RIESGO DE ACEPTARSE COMO NORMALES, que es la condicion gemela del paso 5 que viaja de APPEND."
+  },
+  {
+   "orden": 2,
+   "miembros": [
+    "scorecard_de_seleccion_de_proyectos",
+    "scoring_model_scorecard"
+   ],
+   "superviviente": "scorecard_de_seleccion_de_proyectos",
+   "motivo": "CONTENIDO Y NO HAY EMPATE EN NINGUNA DE LAS TRES VARAS. Los dos viables medidos son scorecard_de_seleccion_de_proyectos y scorecards_criterios_gate (docs/loop/SALIDA_V51_VIABLES.txt); scoring_model_scorecard es el CENTRO de la estrella y NO es viable, porque absorberlo todo juntaria a los dos perifericos, que el puesto 1201 declara D. Entre los dos viables: CINCO pasos cada uno, pero TRES condiciones contra dos, resumen de 424 caracteres contra 373, y cableado de 8 contra 6. Las tres varas apuntan al mismo. Y LA VARA DE LAS PUERTAS APUNTA TAMBIEN AHI, que es lo que vuelve este acto comodo: la puerta del acto es scorecards_criterios_gate, y esta lectura lo deja VIVO como mixto, asi que la eleccion por contenido y el Gate 0 no chocan. NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X, asi que aqui no hay choque de letra contra aritmetica que registrar.",
+   "absorbidos": [
+    "scoring_model_scorecard"
+   ],
+   "pasos": {
+    "scoring_model_scorecard": {
+     "1": "INCISO:1|entre 6 y 10 preguntas sólidas, basadas en investigación|, y usa ",
+     "2": "INCISO:2|del 1 al 5 o del 0 al 10|, por ejemplo ",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:4",
+     "5": "APPEND"
+    }
+   },
+   "condiciones": {
+    "scoring_model_scorecard": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND",
+     "3": "APPEND",
+     "4": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PUESTO 820 ESCRIBE QUE SE SALVA Y AQUI SE EJECUTA. Dice que lo propio de scoring_model_scorecard son TRES cosas: el rango concreto de seis a diez preguntas, la escala simple del uno al cinco, y LA REGLA DE USAR UN SCORECARD DISTINTO SEGUN EL TIPO DE PROYECTO, y anade que ESA ULTIMA ES LA MAS UTIL Y ES LA QUE HAY QUE SALVAR. Las tres se salvan y ninguna se apila. Los pasos 1 y 2 del que muere son el mismo gesto que los pasos 1 y 2 del elegido con un PARAMETRO CONCRETO encima: los seis criterios del paso 1 son literalmente los mismos seis (encaje con la estrategia, ventaja del producto, aprovechar lo que ya sabes hacer, atractivo del mercado, viabilidad tecnica y relacion riesgo retorno) y lo unico que anade es CUANTAS preguntas y de donde salen; y el paso 2 del elegido ya manda decidir como puntuar con pesos o escala simple, y lo unico que anade es CUAL escala. Por la politica de reparto de este lote, un parametro concreto de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y los dos se leen limpios. Su paso 3, sumar las calificaciones con pesos para obtener el puntaje de atractivo, es evaluar cada proyecto con la lista (CUBIERTO:3); su paso 4, usar el puntaje para ordenar y priorizar, es comparar los puntajes entre proyectos para decidir donde invertir primero (CUBIERTO:4). Su paso 5 viaja ENTERO: usar un scorecard distinto segun el tipo de proyecto no es un parametro de ningun paso del elegido, es un gesto que el elegido no tiene, y es el que el propio veredicto manda salvar. PERDIDA NOMBRADA, MOTIVO DESTINO, la unica del reparto: el OTRO INDICADOR DE PRODUCTIVIDAD que el paso 4 del que muere manda usar junto al puntaje no cabe en el paso 4 del elegido sin ensuciarlo y no viaja; queda dicho aqui y no se descubre despues. Las condiciones: la primera es identica palabra por palabra a la primera del elegido (CUBIERTO de la condicion 1) y las OTRAS TRES VIAJAN ENTERAS, porque son las tres que explican POR QUE existe un scorecard y no una cuenta financiera: cuando los datos financieros todavia no son confiables por lo temprano del proyecto, cuando hay que evaluar proyectos audaces con mucha incertidumbre, y cuando se estan definiendo los criterios de las primeras puertas."
+  }
+ ],
+ "declarados_y_no_fundidos": [
+  {
+   "acto": 5,
+   "miembros": [
+    "criterios_equity_split",
+    "split_igual_vs_desigual",
+    "teoria_equidad_split_equity"
+   ],
+   "superviviente_que_el_contenido_elige": "criterios_equity_split",
+   "motivo": "DETENIDO POR LA GUARDA DE LA CUENTA DE COLISIONES DEL ENCARGO, y el acto estaba escrito entero. Con criterios_equity_split de superviviente la fusion fabrica UNA colision DENTRO del acto (la que el encargo predice, el puesto 502 contra el 871) y DOS FUERA de el, contra nodos que no son miembros: el puesto 266 (reparto_inicial_equity contra split_igual_vs_desigual, clase B) cae sobre el par del puesto 754 (criterios_equity_split contra reparto_inicial_equity, clase D), y el puesto 246 (split_igual_vs_desigual contra timing_equity_split, clase C) cae sobre el par del puesto 688 (criterios_equity_split contra timing_equity_split, clase D). Tres colisiones para una CONTINUA: la cuenta NO calza y el encargo manda detener. El superviviente alternativo teoria_equidad_split_equity SI calza, pero el CONTENIDO lo descarta por el margen mas ancho del tramo (ocho pasos contra cuatro, tres condiciones contra dos, 1.134 caracteres de resumen contra 586 y cableado de 20 contra 4), y elegirlo para hacer calzar la guarda seria dejar que la aritmetica de las colisiones decida el superviviente, que ninguna regla escrita permite. Va al auditor con la lectura P.12 hecha y las cuatro razones leidas.",
+   "lectura_p12_hecha": "SI, y esta en lecturas_p12 de este mismo plan: teoria_equidad_split_equity CONTINUA contra criterios_equity_split.",
+   "salida_que_lo_mide": "docs/loop/SALIDA_V51_CENSO_COLISIONES_LOTE_A.txt (censo del archivo entero tras la corrida que se revirtio) y docs/loop/SALIDA_V51_COLISIONES_ESPERADAS.txt (prediccion del instrumento corregido)."
+  }
+ ]
+}

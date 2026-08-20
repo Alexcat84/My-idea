@@ -11,21 +11,48 @@
     "Si un problema no se resuelve en la revisión diaria, pásalo a una revisión semanal más a fondo",
     "Revisa una vez al mes lo que sigue sin resolverse y decide si necesita un esfuerzo dedicado aparte",
     "Para los problemas más complejos, junta puntualmente a las personas involucradas en un grupo de trabajo con un responsable claro, y disuélvelo en cuanto el problema quede resuelto",
-    "Ordena los problemas por gravedad y ataca primero los más grandes"
+    "Ordena los problemas por gravedad y ataca primero los más grandes",
+    "Define acciones que corrijan la causa raíz y prevengan la recurrencia, no solo alivien la presión del momento",
+    "Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular, para que no se acepten como normales",
+    "Dar seguimiento y verificar que la acción implementada haya eliminado el problema"
   ],
   "entregable_esperado": "Un sistema documentado de seguimiento de problemas, con fichas de control en tres ritmos (diario, semanal, mensual) y un registro claro de cuándo se cierra cada problema",
   "nodos_previos": [
     "metodologia_medicion_copq",
-    "muestreo_de_aceptacion"
+    "muestreo_de_aceptacion",
+    "cero_defectos",
+    "conciencia_calidad",
+    "programa_mejora_calidad_14_pasos"
   ],
   "nodos_siguientes": [
     "planificacion_cero_defectos",
-    "auditoria_calidad_proveedores"
+    "auditoria_calidad_proveedores",
+    "cero_defectos",
+    "consejo_de_calidad",
+    "eliminacion_causas_error"
   ],
   "condiciones_activacion": [
     "Cuando se detectan defectos que se repiten y no se resuelven de forma definitiva",
     "Cuando hay descoordinación entre distintas partes del proceso que genera errores repetidos",
-    "Si necesitas una forma ordenada de escalar y cerrar problemas de calidad"
+    "Si necesitas una forma ordenada de escalar y cerrar problemas de calidad",
+    "Cuando necesitas pasar de la sola concientización a la solución estructurada de problemas",
+    "Cuando detectas problemas sutiles o de largo plazo que corren el riesgo de aceptarse como normales sin resolverse"
   ],
-  "etiqueta_arbol": "Establece Niveles de Acción Correctiva"
+  "etiqueta_arbol": "Establece Niveles de Acción Correctiva",
+  "ids_alias": [
+    "accion_correctiva_5",
+    "accion_correctiva_6"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "accion_correctiva_5",
+      "titulo": "Acción Correctiva (Corrective Action)",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    },
+    {
+      "node_id": "accion_correctiva_6",
+      "titulo": "Acción Correctiva (Destapar Causas — Rolling Over the Rocks)",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ]
 }

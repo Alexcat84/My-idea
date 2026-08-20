@@ -6,17 +6,21 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Es una forma de puntuar tus proyectos usando seis criterios que estudios sobre éxito y fracaso de nuevos productos identificaron como clave: qué tan alineado está con tu estrategia, la ventaja que ofrece frente a la competencia, qué tan atractivo es el mercado, si aprovecha lo que ya sabes hacer, si es viable técnicamente y la relación entre riesgo y retorno. Te sirve para comparar proyectos y decidir en cuáles invertir.",
   "pasos_accionables": [
-    "Define los seis criterios que vas a usar: qué tan alineado está con tu estrategia, la ventaja frente a la competencia, qué tan atractivo es el mercado, si aprovecha lo que ya sabes hacer, si es viable técnicamente y la relación entre riesgo y retorno",
-    "Decide cómo vas a puntuar cada criterio, con pesos o una escala simple",
+    "Define los seis criterios que vas a usar: qué tan alineado está con tu estrategia, la ventaja frente a la competencia, qué tan atractivo es el mercado, si aprovecha lo que ya sabes hacer, si es viable técnicamente y la relación entre riesgo y retorno, y usa entre 6 y 10 preguntas sólidas, basadas en investigación",
+    "Decide cómo vas a puntuar cada criterio, con pesos o una escala simple, por ejemplo del 1 al 5 o del 0 al 10",
     "Evalúa cada proyecto que tengas activo con esa lista",
     "Compara los puntajes entre proyectos para decidir dónde invertir primero",
-    "Revisa y actualiza tu lista de tanto en tanto usando lo que aprendiste de proyectos anteriores"
+    "Revisa y actualiza tu lista de tanto en tanto usando lo que aprendiste de proyectos anteriores",
+    "Usa un scorecard distinto según el tipo de proyecto: no es lo mismo un producto estándar nuevo que una tecnología avanzada"
   ],
   "entregable_esperado": "Una lista o tabla completa con el puntaje de cada proyecto que estás considerando",
   "nodos_previos": [
     "sistema_de_gates_go_kill",
     "proceso_ideacion_modelo_negocio",
-    "sistema_gates_go_kill"
+    "sistema_gates_go_kill",
+    "data_integrity_forecasting",
+    "expected_commercial_value_ecv",
+    "testing_process_completo"
   ],
   "nodos_siguientes": [
     "portfolio_management",
@@ -24,12 +28,30 @@
     "monte_carlo_simulation_model",
     "seleccion_proyectos_agile",
     "analisis_de_capacidad_de_recursos",
-    "apalancamiento_de_competencias_centrales"
+    "apalancamiento_de_competencias_centrales",
+    "governance_integration_gates_portfolio_roadmap",
+    "portfolio_management_triangulation",
+    "product_roadmap_estrategico",
+    "revision_portafolio_periodica",
+    "technology_platform_evaluation"
   ],
   "condiciones_activacion": [
     "Si usas o evalúas este tipo de instrumento de puntaje",
     "Cuando tienes varios proyectos compitiendo por el mismo tiempo o dinero",
-    "Cuando decides en qué invertir por intuición o por presión de otros, sin criterios claros"
+    "Cuando decides en qué invertir por intuición o por presión de otros, sin criterios claros",
+    "Cuando los datos financieros todavía no son confiables porque el proyecto está en una etapa temprana",
+    "Cuando necesitas evaluar proyectos audaces o innovadores con mucha incertidumbre",
+    "Cuando estás definiendo los criterios para tus primeros puntos de decisión sobre seguir o frenar un proyecto"
   ],
-  "etiqueta_arbol": "Puntúa Tus Proyectos Clave"
+  "etiqueta_arbol": "Puntúa Tus Proyectos Clave",
+  "ids_alias": [
+    "scoring_model_scorecard"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "scoring_model_scorecard",
+      "titulo": "Modelo de puntuación para elegir qué proyectos seguir (Scorecard)",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }
