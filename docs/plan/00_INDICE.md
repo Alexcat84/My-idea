@@ -571,8 +571,8 @@ sola.**
 | reglas del banco del plan | **15** | **20** (`P.1` a `P.20`) |
 | fronteras declaradas | **5** | **5**, sin cambio |
 | entradas del inventario | **336** | **672** |
-| lecturas dirigidas **hechas** | **65** | no lo mide este instrumento: **a verificar** |
-| lecturas dirigidas **encargadas y sin hacer** | **CERO** | no lo mide este instrumento: **a verificar** |
+| lecturas dirigidas **hechas** | **65** | ~~no lo mide este instrumento: **a verificar**~~ **MEDIDO el 19 ago 2026 (vuelta 48) con `scripts/loop/vuelta48_contar_ld.py` ([`../loop/SALIDA_V48_CONTAR_LD.txt`](../loop/SALIDA_V48_CONTAR_LD.txt), exit 0): 81**, contadas como las que tienen SECCION PROPIA con veredicto en `LECTURAS_DIRIGIDAS.md` (38) y en las seis `LD_*.md` (43). **La cifra vieja de 65 no se borra: era exacta al corte del 12 ago 2026**; la diferencia son las tandas escritas despues, hasta `LD-98` |
+| lecturas dirigidas **encargadas y sin hacer** | **CERO** | ~~no lo mide este instrumento: **a verificar**~~ **MEDIDO el 19 ago 2026 (vuelta 48), misma corrida: CERO, y la cifra vieja aguanta.** El barrido halla **2** numeros nombrados sin seccion propia, `LD-71` y `LD-99`, y **ninguno de los dos es trabajo pendiente**: `LD-71` esta ADJUDICADO COMO NO ACUNADO (`../loop/ACTA_AUDITOR.md` linea **4234**, *`LD-71` NO se acuna*, porque el par ya estaba leido como `LD-04`) y `LD-99` fue una propuesta del instrumento que el ejecutor no uso (`../loop/ACTA_AUDITOR.md` linea **7906**, *el ejecutor uso 96 a 98*) |
 | **corte del archivo** | **2.117 de 3.388** | **3.388 de 3.388**, el cribado cerrado |
 
 **Las cifras de la columna nueva salen de
@@ -581,9 +581,19 @@ sola.**
 secciones 2 y 4**, salvo el corte del archivo, que sale de
 `python scripts/loop/vuelta31_estado.py`
 ([`../loop/SALIDA_V47_APERTURA.txt`](../loop/SALIDA_V47_APERTURA.txt)): **n 3.388, cero
-huecos y cero duplicados**. **Las dos filas de lecturas dirigidas se marcan A VERIFICAR
+huecos y cero duplicados**. ~~**Las dos filas de lecturas dirigidas se marcan A VERIFICAR
 en vez de repetirse**, porque ningun instrumento corrido en esta vuelta las cuenta y
-una cifra sin medicion de hoy no se republica.
+una cifra sin medicion de hoy no se republica.~~
+
+> **CORRECCION DECLARADA, 19 ago 2026 (vuelta 48), y el texto de arriba se queda porque
+> describe lo que era cierto en la vuelta 47: LAS DOS FILAS YA NO ESTAN A VERIFICAR.**
+> El instrumento que faltaba se escribio en esta vuelta,
+> `python scripts/loop/vuelta48_contar_ld.py`
+> ([`../loop/SALIDA_V48_CONTAR_LD.txt`](../loop/SALIDA_V48_CONTAR_LD.txt), exit 0), y las dos
+> celdas de arriba salen de esa corrida: **81 hechas** (contra 65 al corte del 12 ago 2026) y
+> **CERO encargadas sin hacer** (sin cambio). **El criterio de conteo va escrito en el
+> docstring del instrumento para que se pueda discutir**: una lectura dirigida esta HECHA
+> cuando tiene seccion propia con veredicto, no cuando su numero se menciona.
 
 > ~~**`OP-U-02` no espera una decision: espera un puesto.**~~ **Y el puesto llego.**
 

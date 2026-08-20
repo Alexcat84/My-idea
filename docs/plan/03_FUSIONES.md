@@ -297,7 +297,7 @@ una.** Son tres, y **las tres estan escritas en sitios distintos del repo**:
 |---|---:|
 | **actos CERRADOS a fundir** | **270** |
 | nodos implicados | **579** |
-| **nodos que MUERIRIAN** si se funden los 270 (tamano menos 1 por acto) | **309** |
+| **nodos que MORIRIAN** si se funden los 270 (tamano menos 1 por acto) | **309** |
 | por tamano | **235** de dos, **31** de tres, **4** de cuatro |
 
 **LA GUARDA DE LOS CUATRO AJENOS, EN VERDE.** Esta pagina declara desde el 11 ago 2026

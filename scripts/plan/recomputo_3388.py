@@ -2,9 +2,25 @@
 # -*- coding: utf-8 -*-
 """recomputo_3388.py . EL RECOMPUTO DE LA FASE II, LOS CUATRO PASOS EN ORDEN.
 
-ESTRICTAMENTE DE SOLO LECTURA. No escribe ni un nodo, ni un veredicto, ni una
-operacion. Solo imprime y, si se pide, vuelca su propio jsonl de salida bajo
-docs/plan/.
+CORRECCION DECLARADA, 19 ago 2026 (vuelta 48), y el texto viejo se queda delante
+porque una correccion que tapa lo que corrige no se puede auditar. Lo que este
+docstring decia era:
+
+    ESTRICTAMENTE DE SOLO LECTURA. No escribe ni un nodo, ni un veredicto, ni
+    una operacion. Solo imprime y, si se pide, vuelca su propio jsonl de salida
+    bajo docs/plan/.
+
+Y NO ERA CIERTO: --salida traia un default apuntando a
+docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl, asi que la corrida desnuda PISABA
+ese fichero SELLADO sin pedir nada. Le paso a la vuelta 47 (332 lineas bajadas a
+324, restauradas con git checkout; reporte de la vuelta 47, seccion 6). Es la
+especie del canon 9 del banco (fallar ruidoso, no mentir calladito): un
+instrumento que se anuncia de solo lectura y escribe NO DEJA SINTOMA.
+
+LO QUE ES DE VERDAD, hoy: NO TOCA NI UN NODO, NI UN VEREDICTO, NI UNA OPERACION,
+y ESCRIBE EXACTAMENTE UN FICHERO, el que se le nombre en --salida, que ahora es
+OBLIGATORIO Y SIN DEFAULT. Sin --salida la corrida FALLA VISIBLE en vez de pisar
+nada. Elegir donde escribe es de quien lo corre, no del instrumento.
 
 Disparador cumplido: el cribado intra-dominio llego al puesto 3.388 (banco
 9.21, OP-U-02). Es la UNICA recomputacion general del plan.
@@ -22,8 +38,11 @@ auto-aristas via alias.
 EL ORDEN NO ES DE COMODIDAD: cada paso usa la salida del anterior
 (08_VERIFICACION.md).
 
-Uso:  python scripts/plan/recomputo_3388.py
-      python scripts/plan/recomputo_3388.py --salida docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl
+Uso:  python scripts/plan/recomputo_3388.py --salida docs/loop/RECOMPUTO_VXX.jsonl
+
+      La forma sin --salida ya no existe: falla con codigo 2 y lo dice.
+      Y la salida NO se apunta a docs/plan/ salvo que el encargo mande
+      re-sellar la nomina: ese fichero esta sellado.
 """
 import argparse
 import collections
@@ -47,7 +66,12 @@ def main():
     ap.add_argument("--cola", default=str(RAIZ / "docs" / "INTRA_DOMINIO_PARES.jsonl"))
     ap.add_argument("--corte-viejo", type=int, default=2117,
                      help="corte de la medicion anterior (OP-U-01/OP-U-02), para separar edad de las A")
-    ap.add_argument("--salida", default=str(RAIZ / "docs" / "plan" / "RECOMPUTO_3388_COMPONENTES.jsonl"))
+    # OBLIGATORIO Y SIN DEFAULT (vuelta 48, canon 9 del banco): el default viejo
+    # apuntaba a la nomina SELLADA y la corrida desnuda la pisaba en silencio.
+    ap.add_argument("--salida", required=True,
+                     help="jsonl de componentes que este instrumento ESCRIBE. "
+                          "Obligatorio: sin el, la corrida falla en vez de pisar "
+                          "la nomina sellada de docs/plan/.")
     args = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 

@@ -4476,7 +4476,7 @@ su acta detras. No se estrena aqui.**
 | `OP-D-04` | 7 | 6 | **SI**, con el encabezado de la forma anterior, linea **1614**: *`OP-D-04` CERRADA: **LAS DOS FUSIONES EJECUTADAS Y EL RESTO ENLAZADO** (19 ag* |
 | `OP-D-05` | 3 | 4 | **SI**, con el encabezado de la forma anterior, linea **1765**: *`OP-D-05` SELLADA: **LA FUSION UNICA DE LA SELECCION DEL CEO** (19 ago 2026, * |
 | `OP-D-06` | 18 | 5 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3403** |
-| `OP-D-07` | 1 | 3 | ~~**NINGUNO**~~ **CORREGIDO el 19 ago 2026 (vuelta 47), remedido con el mismo instrumento: SI**, con el encabezado de la forma anterior, linea **4578**: *`OP-D-07` SELLADA: **LA RUTA DECIDIDA POR EL FUNDADOR Y LA CIRUGIA CONSUMIDA** (19 ago * |
+| `OP-D-07` | 1 | 3 | ~~**NINGUNO**~~ **CORREGIDO el 19 ago 2026 (vuelta 47), remedido con el mismo instrumento: SI**, con el encabezado de la forma anterior, ~~linea **4578**~~ **CORRECCION DECLARADA el 19 ago 2026 (vuelta 48): linea **4591****, re-medida con `scripts/loop/vuelta48_registros_lineas.py` DESPUES de la ultima edicion del fichero. **Motivo:** el commit `62c10658` que escribio el sello inserto ademas **13 lineas por encima de el** (9 en el hunk de la 4476 y 4 en el de la 4517, medidos con `git show`), y la cita se tomo antes de esa insercion: *`OP-D-07` SELLADA: **LA RUTA DECIDIDA POR EL FUNDADOR Y LA CIRUGIA CONSUMIDA** (19 ago * |
 | `OP-D-08` | 1 | 9 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3829** |
 | `OP-D-09` | 1 | 7 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **4115** |
 
