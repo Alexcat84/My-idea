@@ -1,0 +1,373 @@
+==============================================================================
+OP-U-01, TRAMO 6, LOTE A: LOS ONCE PRIMEROS ACTOS DEL TRAMO EN SU ORDEN IMPRESO (1 a 11), SIN APARTAR NINGUNO. Es el primer lote de un tramo que el acta 61 declaro TRAMO FINAL POR AGOTAMIENTO: veintiuno, no cincuenta. Y ES EL PRIMER LOTE DE LA CAMPANA QUE NACE CON EL CONTRATO DE LA PERDIDA SELLADA EN CAMPO PROPIO (CAMPO PROPIO v1): cada acto trae su lista perdidas, y la lista vacia es una DECLARACION de cero perdidas, no un silencio . MODO EJECUTAR
+plan: docs/loop/PLAN_V62_OPU01_LOTE_A.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3295 vivos, 558 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive gestion_miedo_reportes . absorbe administracion_sin_miedo
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['administracion_sin_miedo']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive contacto_con_el_cliente . absorbe contacto_con_el_cliente_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de contacto_con_el_cliente_2 al PASO 1 del superviviente
+        inciso VERBATIM: 'aunque seas tu mismo'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tu mismo
+     del paso 2 de contacto_con_el_cliente_2 al PASO 3 del superviviente
+        inciso VERBATIM: 'manejar situaciones dificiles'
+        nexo (lo unico de cosecha propia): ', incluido '
+        paso resultante: Capacitar específicamente a los 'contact men' en manejo de clientes, incluido manejar situaciones dificiles
+  alias del superviviente: ['contacto_con_el_cliente_2']
+
+------------------------------------------------------------------------------
+ACTO 3 . sobrevive analisis_de_sistemas_de_medicion_msa . absorbe errores_de_medicion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 5 de errores_de_medicion al PASO 6 del superviviente
+        inciso VERBATIM: 'respecto a estándares de medida reconocidos'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Ajustar o calibrar el instrumento si se detecta sesgo sistemático, respecto a estándares de medida reconocidos
+  alias del superviviente: ['errores_de_medicion']
+
+------------------------------------------------------------------------------
+ACTO 4 . sobrevive definicion_problema_moms_2 . absorbe definicion_problema_moms
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['definicion_problema_moms']
+
+------------------------------------------------------------------------------
+ACTO 5 . sobrevive planificacion_gobierno_organizaciones_familiares . absorbe gobierno_corporativo_juntas_directivas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 5 de gobierno_corporativo_juntas_directivas al PASO 4 del superviviente
+        inciso VERBATIM: 'respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación'
+        nexo (lo unico de cosecha propia): ': busca '
+        paso resultante: Decide qué necesitas para sumar a la junta a personas externas independientes: busca respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación
+  alias del superviviente: ['gobierno_corporativo_juntas_directivas']
+
+------------------------------------------------------------------------------
+ACTO 6 . sobrevive falacia_recompensa_loteria . absorbe sistemas_recompensa_aleatorios
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 3 -> 4 (anadidas 1)
+  alias del superviviente: ['sistemas_recompensa_aleatorios']
+
+------------------------------------------------------------------------------
+ACTO 7 . sobrevive riesgos_consenso_inspeccion . absorbe comparacion_inspectores_independientes
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['comparacion_inspectores_independientes']
+
+------------------------------------------------------------------------------
+ACTO 8 . sobrevive revision_progreso . absorbe revision_progreso_breakthrough
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de revision_progreso_breakthrough al PASO 1 del superviviente
+        inciso VERBATIM: 'por ejemplo cada trimestre'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Establecer puntos de revisión específicos y planificados para cada proyecto, por ejemplo cada trimestre
+  alias del superviviente: ['revision_progreso_breakthrough']
+
+------------------------------------------------------------------------------
+ACTO 9 . sobrevive rol_tactico_estrategico_oficina . absorbe gestion_estrategica_de_calidad_sqm
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['gestion_estrategica_de_calidad_sqm']
+
+------------------------------------------------------------------------------
+ACTO 10 . sobrevive roadmap_despliegue_lean_six_sigma . absorbe juran_transformation_roadmap
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 9 -> 10 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 4
+     del paso 1 de juran_transformation_roadmap al PASO 1 del superviviente
+        inciso VERBATIM: 'lealtad de cliente, COPQ, revisión de calidad de clase mundial'
+        nexo (lo unico de cosecha propia): ', recopilando '
+        paso resultante: Evaluar si Six Sigma encaja con la direccion que le quieres dar a tu negocio (fase Decide), recopilando lealtad de cliente, COPQ, revisión de calidad de clase mundial
+     del paso 3 de juran_transformation_roadmap al PASO 6 del superviviente
+        inciso VERBATIM: 'charter, equipo y revisión de progreso'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Ejecutar los primeros proyectos con mentoria y formas de reconocer los avances (fase Launch), con charter, equipo y revisión de progreso
+     del paso 4 de juran_transformation_roadmap al PASO 7 del superviviente
+        inciso VERBATIM: 'unidad por unidad durante 3-5 años'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Llevar la metodologia a otras areas y procesos mas grandes de tu negocio (fase Expand), unidad por unidad durante 3-5 años
+     del paso 5 de juran_transformation_roadmap al PASO 9 del superviviente
+        inciso VERBATIM: 'integrar completamente la mejora en la operación, alinear compensación y realizar auditorías regulares'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Establecer revisiones regulares y capacitacion básica para todas las personas que trabajan contigo (fase Sustain), integrar completamente la mejora en la operación, alinear compensación y realizar auditorías regulares
+  alias del superviviente: ['juran_transformation_roadmap']
+
+------------------------------------------------------------------------------
+ACTO 11 . sobrevive orgullo_por_el_trabajo . absorbe eliminacion_barreras_orgullo_del_trabajo
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de eliminacion_barreras_orgullo_del_trabajo al PASO 3 del superviviente
+        inciso VERBATIM: 'pago por pieza o incentivos individuales'
+        nexo (lo unico de cosecha propia): ', incluidos el '
+        paso resultante: Eliminar evaluaciones que generen miedo y no reflejen como funciona realmente el trabajo, incluidos el pago por pieza o incentivos individuales
+  alias del superviviente: ['eliminacion_barreras_orgullo_del_trabajo']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 33
+   administracion_de_inspeccion                         nodos_previos     administracion_sin_miedo -> gestion_miedo_reportes
+   aim_of_leadership                                    nodos_siguientes  administracion_sin_miedo -> gestion_miedo_reportes
+   analisis_causa_raiz_despido_ejecutivo                nodos_previos     eliminacion_barreras_orgullo_del_trabajo -> orgullo_por_el_trabajo
+   analisis_de_sistemas_de_medicion_msa                 nodos_siguientes  errores_de_medicion -> analisis_de_sistemas_de_medicion_msa
+   analisis_diagnostico_causa                           nodos_previos     definicion_problema_moms -> definicion_problema_moms_2
+   analisis_sintomas                                    nodos_previos     definicion_problema_moms -> definicion_problema_moms_2
+   benchmarking_proceso                                 nodos_siguientes  juran_transformation_roadmap -> roadmap_despliegue_lean_six_sigma
+   circulos_calidad_qc                                  nodos_siguientes  eliminacion_barreras_orgullo_del_trabajo -> orgullo_por_el_trabajo
+   consejo_de_calidad_y_rol_del_director                nodos_siguientes  gestion_estrategica_de_calidad_sqm -> rol_tactico_estrategico_oficina
+   control_estadistico_de_procesos                      nodos_siguientes  administracion_sin_miedo -> gestion_miedo_reportes
+   decide_phase_roadmap                                 nodos_previos     juran_transformation_roadmap -> roadmap_despliegue_lean_six_sigma
+   deteccion_de_lideres_y_rezagados                     nodos_siguientes  administracion_sin_miedo -> gestion_miedo_reportes
+   deteccion_de_mentiras_organizacionales               nodos_previos     administracion_sin_miedo -> gestion_miedo_reportes
+   distincion_causas_comunes_especiales                 nodos_siguientes  administracion_sin_miedo -> gestion_miedo_reportes
+   eliminacion_gestion_por_objetivos_y_numeros          nodos_siguientes  eliminacion_barreras_orgullo_del_trabajo -> orgullo_por_el_trabajo
+   enfoque_en_procesos_no_en_problemas                  nodos_previos     revision_progreso_breakthrough -> revision_progreso
+   estudio_lealtad_cliente                              nodos_siguientes  juran_transformation_roadmap -> roadmap_despliegue_lean_six_sigma
+   evaluacion_desempeno_junta_directiva                 nodos_previos     gobierno_corporativo_juntas_directivas -> planificacion_gobierno_organizaciones_familiares
+   evaluacion_desempeno_proyectos                       nodos_previos     revision_progreso_breakthrough -> revision_progreso
+   familia_normas_iso_9000                              nodos_previos     gobierno_corporativo_juntas_directivas -> planificacion_gobierno_organizaciones_familiares
+   formacion_seleccion_y_retencion_de_personal          nodos_previos     gestion_estrategica_de_calidad_sqm -> rol_tactico_estrategico_oficina
+   gobierno_corporativo_y_calidad                       nodos_siguientes  gobierno_corporativo_juntas_directivas -> planificacion_gobierno_organizaciones_familiares
+   herramientas_analisis_causa_raiz                     nodos_siguientes  definicion_problema_moms -> definicion_problema_moms_2
+   importancia_de_la_capacitacion                       nodos_siguientes  administracion_sin_miedo -> gestion_miedo_reportes
+   inspeccion_automatizada                              nodos_siguientes  errores_de_medicion -> analisis_de_sistemas_de_medicion_msa
+   institucionalizar_breakthrough                       nodos_siguientes  revision_progreso_breakthrough -> revision_progreso
+   juran_rcca_metodo                                    nodos_siguientes  definicion_problema_moms -> definicion_problema_moms_2
+   procedimientos_definidos_en_servicios                nodos_siguientes  contacto_con_el_cliente_2 -> contacto_con_el_cliente
+   punto_equilibrio_calidad_inspeccion                  nodos_previos     errores_de_medicion -> analisis_de_sistemas_de_medicion_msa
+   responsabilidad_gerencial_causas_comunes             nodos_previos     sistemas_recompensa_aleatorios -> falacia_recompensa_loteria
+   retroalimentacion_cliente_mejora_servicio            nodos_previos     contacto_con_el_cliente_2 -> contacto_con_el_cliente
+   riesgos_consenso_inspeccion                          nodos_siguientes  comparacion_inspectores_independientes -> riesgos_consenso_inspeccion
+   sistema_estable_causas_comunes                       nodos_siguientes  sistemas_recompensa_aleatorios -> falacia_recompensa_loteria
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 6
+   benchmarking_mejores_practicas                       nodos_siguientes  juran_transformation_roadmap (registro historico)
+   control_estadistico_de_procesos_2                    nodos_siguientes  administracion_sin_miedo (registro historico)
+   economia_de_la_inspeccion                            nodos_previos     errores_de_medicion (registro historico)
+   iso_9000_sistema_gestion_calidad                     nodos_previos     gobierno_corporativo_juntas_directivas (registro historico)
+   preparacion_gerencial_antes_de_circulos_de_calidad   nodos_siguientes  eliminacion_barreras_orgullo_del_trabajo (registro historico)
+   sistema_estable_variacion                            nodos_siguientes  sistemas_recompensa_aleatorios (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 5
+   analisis_sintomas                                    nodos_previos
+   gobierno_corporativo_y_calidad                       nodos_siguientes
+   herramientas_analisis_causa_raiz                     nodos_siguientes
+   procedimientos_definidos_en_servicios                nodos_siguientes
+   retroalimentacion_cliente_mejora_servicio            nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 2
+   analisis_de_sistemas_de_medicion_msa                 nodos_siguientes
+   riesgos_consenso_inspeccion                          nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 914   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 912   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 2, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 55 de 55
+guarda D, los 11 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (69 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 administracion_sin_miedo                     paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar patrones de datos sospechosamente uniformes o con distribuciones anómalas cerca de límites de especificación
+    1 administracion_sin_miedo                     paso         2  ya lo dice el PASO 2 del superviviente
+        Investigar si existe temor a represalias que esté distorsionando los reportes
+    1 administracion_sin_miedo                     paso         3  ya lo dice el PASO 3 del superviviente
+        Eliminar políticas que castiguen a los empleados por reportar problemas reales
+    1 administracion_sin_miedo                     paso         4  ya lo dice el PASO 4 del superviviente
+        Fomentar una cultura donde reportar problemas sea seguro y valorado
+    1 administracion_sin_miedo                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando los datos de calidad muestran patrones anómalos o poco creíbles
+    1 administracion_sin_miedo                     condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se sospecha que empleados ocultan información por temor a sanciones
+    2 contacto_con_el_cliente_2                    paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar quien en tu negocio tiene contacto directo con los clientes, aunque seas tu mismo
+    2 contacto_con_el_cliente_2                    paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Preparar una forma clara de atender, ser cortes y manejar situaciones dificiles
+    2 contacto_con_el_cliente_2                    paso         3  ya lo dice el PASO 4 del superviviente
+        Tener presente que esa persona, o tu mismo, es en la practica quien construye la reputación del negocio ante el cliente
+    2 contacto_con_el_cliente_2                    paso         4  PASO 5 del superviviente
+        Revisar cada cierto tiempo que percepción tiene el cliente sobre el trato que recibe
+    2 contacto_con_el_cliente_2                    condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando tu reputación depende de la percepción directa del cliente
+    2 contacto_con_el_cliente_2                    condicion    2  CONDICION 3 del superviviente
+        Si recibes quejas relacionadas con la actitud o el trato de quien atiende al cliente
+    3 errores_de_medicion                          paso         1  ya lo dice el PASO 1 del superviviente
+        Definir formalmente el método de prueba paso a paso
+    3 errores_de_medicion                          paso         2  ya lo dice el PASO 2 del superviviente
+        Identificar las fuentes de variabilidad (operador, equipo, día, laboratorio)
+    3 errores_de_medicion                          paso         3  ya lo dice el PASO 3 del superviviente
+        Verificar la estabilidad del proceso de medición mediante carta de control
+    3 errores_de_medicion                          paso         4  ya lo dice el PASO 4 del superviviente
+        Calcular bias y repetibilidad del instrumento de medición
+    3 errores_de_medicion                          paso         5  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Calibrar el equipo respecto a estándares de medida reconocidos
+    3 errores_de_medicion                          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se requieren niveles de defectos bajo enfoque Six Sigma
+    3 errores_de_medicion                          condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando existen discrepancias entre mediciones repetidas del mismo producto
+    4 definicion_problema_moms                     paso         1  ya lo dice el PASO 2 del superviviente
+        Seleccionar el problema usando datos y análisis de Pareto
+    4 definicion_problema_moms                     paso         2  ya lo dice el PASO 3 del superviviente
+        Redactar el enunciado del problema asegurando que sea Medible
+    4 definicion_problema_moms                     paso         3  ya lo dice el PASO 4 del superviviente
+        Verificar que el problema sea Observable mediante síntomas
+    4 definicion_problema_moms                     paso         4  ya lo dice el PASO 4 del superviviente
+        Confirmar que el problema es Manejable dentro del alcance del equipo
+    4 definicion_problema_moms                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se inicia un esfuerzo de resolución de problemas y se requiere formular correctamente el problema a abordar
+    5 gobierno_corporativo_juntas_directivas       paso         1  ya lo dice el PASO 6 del superviviente
+        Evaluar si la organización necesita transicionar de una junta informal a una estructura formal
+    5 gobierno_corporativo_juntas_directivas       paso         2  ya lo dice el PASO 6 del superviviente
+        Crear una junta asesora como primer paso antes de establecer una junta legal formal
+    5 gobierno_corporativo_juntas_directivas       paso         3  ya lo dice el PASO 2 del superviviente
+        Establecer un consejo familiar con reglas claras de participación y comunicación
+    5 gobierno_corporativo_juntas_directivas       paso         4  ya lo dice el PASO 1 del superviviente
+        Definir un master plan con la colaboración de un consultor externo que incluya nuevos miembros, consejo familiar y junta profesional
+    5 gobierno_corporativo_juntas_directivas       paso         5  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Seleccionar directores independientes con las cualidades adecuadas: respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la
+    5 gobierno_corporativo_juntas_directivas       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando una organización familiar está en proceso de sucesión o retiro del fundador
+    5 gobierno_corporativo_juntas_directivas       condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Si la organización no tiene una estructura formal de gobierno corporativo
+    5 gobierno_corporativo_juntas_directivas       condicion    3  ya lo dice la CONDICION 3 del superviviente
+        Cuando se requiere profesionalizar la toma de decisiones estratégicas
+    6 sistemas_recompensa_aleatorios               paso         1  PASO 5 del superviviente
+        Calcular la probabilidad de obtener 'cero incidencias' dado el promedio histórico de cada trabajador (ej. usando distribución de Poisson)
+    6 sistemas_recompensa_aleatorios               paso         2  ya lo dice el PASO 2 del superviviente
+        Verificar si el sistema de premios está simplemente premiando la varianza aleatoria y no el desempeño real
+    6 sistemas_recompensa_aleatorios               paso         3  ya lo dice el PASO 3 del superviviente
+        Reemplazar el reconocimiento por desempeño puntual con análisis de tendencias en gráficos de control individuales
+    6 sistemas_recompensa_aleatorios               paso         4  PASO 6 del superviviente
+        Comunicar a la organización que el mérito debe basarse en mejoras sostenidas, no en resultados de un solo período
+    6 sistemas_recompensa_aleatorios               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la empresa usa premios individuales mensuales (empleado del mes) basados en métricas de quejas o errores
+    6 sistemas_recompensa_aleatorios               condicion    2  CONDICION 4 del superviviente
+        Cuando el sistema de reconocimiento ha perdido efectividad motivacional con el tiempo
+    7 comparacion_inspectores_independientes       paso         1  PASO 6 del superviviente
+        Definir un esquema de muestreo mecánico (no aleatorio) para que cada inspector seleccione ítems de diferentes partes del lote.
+    7 comparacion_inspectores_independientes       paso         2  ya lo dice el PASO 1 del superviviente
+        Hacer que cada inspector examine y registre resultados de forma independiente.
+    7 comparacion_inspectores_independientes       paso         3  PASO 7 del superviviente
+        Programar inspecciones conjuntas periódicas (ej. cada 20° ítem) donde ambos evalúen el mismo ítem.
+    7 comparacion_inspectores_independientes       paso         4  ya lo dice el PASO 3 del superviviente
+        Graficar los resultados de ambos inspectores a lo largo del tiempo.
+    7 comparacion_inspectores_independientes       paso         5  ya lo dice el PASO 4 del superviviente
+        Analizar discrepancias para determinar si provienen de diferencias entre inspectores o entre muestras.
+    7 comparacion_inspectores_independientes       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando múltiples inspectores o certificadores deben garantizar consistencia en la calificación de productos.
+    7 comparacion_inspectores_independientes       condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se sospecha de sesgo o divergencia sistemática entre evaluadores.
+    8 revision_progreso_breakthrough               paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Fijar fechas periódicas (por ejemplo cada trimestre) para revisar tus proyectos de mejora
+    8 revision_progreso_breakthrough               paso         2  PASO 6 del superviviente
+        Crear un formato simple y estándar para reportar cada proyecto
+    8 revision_progreso_breakthrough               paso         3  PASO 7 del superviviente
+        Reunir en ese formato el costo, la inversión y el ahorro neto de cada proyecto
+    8 revision_progreso_breakthrough               paso         4  PASO 8 del superviviente
+        Revisar este proceso de seguimiento como parte de tu control de calidad general
+    8 revision_progreso_breakthrough               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si tienes varios proyectos de mejora en marcha que necesitan seguimiento
+    9 gestion_estrategica_de_calidad_sqm           paso         1  ya lo dice el PASO 1 del superviviente
+        Evalúa si quien maneja la calidad en tu negocio piensa solo en lo técnico o también tiene visión de conjunto
+    9 gestion_estrategica_de_calidad_sqm           paso         2  ya lo dice el PASO 1 del superviviente
+        Separa las tareas técnicas de calidad, como inspección y auditoría, de las decisiones estratégicas de calidad
+    9 gestion_estrategica_de_calidad_sqm           paso         3  PASO 5 del superviviente
+        Si tu negocio crece, define con claridad quién se encarga de la ingeniería de calidad y quién de la gestión estratégica de calidad
+    9 gestion_estrategica_de_calidad_sqm           paso         4  ya lo dice el PASO 3 del superviviente
+        Conecta la planificación de calidad con la planificación general de tu negocio, para que vayan en la misma dirección
+    9 gestion_estrategica_de_calidad_sqm           condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando la calidad necesita tener más peso en las decisiones grandes de tu negocio
+    9 gestion_estrategica_de_calidad_sqm           condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando hay confusión entre las tareas técnicas de calidad y las decisiones estratégicas de calidad
+   10 juran_transformation_roadmap                 paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Fase Decide: recopilar información nueva (lealtad de cliente, COPQ, revisión de calidad de clase mundial) y definir plan de implementación
+   10 juran_transformation_roadmap                 paso         2  PASO 10 del superviviente
+        Fase Prepare: desplegar el plan, identificar procesos clave, seleccionar proyectos piloto
+   10 juran_transformation_roadmap                 paso         3  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Fase Launch: lanzar proyectos piloto con charter, equipo y revisión de progreso
+   10 juran_transformation_roadmap                 paso         4  INCISO ADOSADO al PASO 7 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Fase Expand: expandir la implementación unidad por unidad durante 3-5 años
+   10 juran_transformation_roadmap                 paso         5  INCISO ADOSADO al PASO 9 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Fase Sustain: integrar completamente la mejora en la operación, alinear compensación y realizar auditorías regulares
+   10 juran_transformation_roadmap                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la organización decide emprender una transformación de calidad a gran escala (ej. Six Sigma)
+   10 juran_transformation_roadmap                 condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si se requiere un marco estructurado de largo plazo para institucionalizar la calidad
+   11 eliminacion_barreras_orgullo_del_trabajo     paso         1  ya lo dice el PASO 2 del superviviente
+        Reunir los reportes que te hacen de forma repetida sobre problemas sin resolver, por ejemplo una maquina que falla una y otra vez y nadie arregla
+   11 eliminacion_barreras_orgullo_del_trabajo     paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Revisar tus sistemas de evaluación de desempeño, pago por pieza o incentivos individuales
+   11 eliminacion_barreras_orgullo_del_trabajo     paso         3  PASO 6 del superviviente
+        Armar un plan para eliminar estas barreras poco a poco, con responsables y plazos claros
+   11 eliminacion_barreras_orgullo_del_trabajo     paso         4  ya lo dice el PASO 5 del superviviente
+        Cambiar los discursos motivacionales y los carteles por acciones concretas que la gente pueda ver
+   11 eliminacion_barreras_orgullo_del_trabajo     condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando te llegan reportes repetidos de problemas que no has resuelto
+   11 eliminacion_barreras_orgullo_del_trabajo     condicion    2  CONDICION 4 del superviviente
+        Cuando todavia pagas por pieza o evaluas a las personas de forma individual y punitiva
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 11
+  nodos implicados    : 22
+  nodos que MUEREN    : 11
+  piezas repartidas   : 69 (14 viajan enteras, 45 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 53
+censo DESPUES: 3853 ficheros, 3284 vivos, 569 deprecados
+censo ANTES  : 3853 ficheros, 3295 vivos, 558 deprecados
+delta deprecados: +11 (esperado +11): OK

@@ -9,17 +9,33 @@
     "Analizar estadísticamente si el desempeño del grupo constituye un sistema estable (causas comunes) mediante cartas de control.",
     "Determinar si el 'mejor' desempeño corresponde a una causa especial identificable o a variación aleatoria.",
     "Si es variación aleatoria, evitar otorgar premios de mérito individual; considerar mejoras al sistema en su conjunto.",
-    "Si existe una causa especial genuina, investigarla y usarla como oportunidad de aprendizaje para todo el grupo."
+    "Si existe una causa especial genuina, investigarla y usarla como oportunidad de aprendizaje para todo el grupo.",
+    "Calcular la probabilidad de obtener 'cero incidencias' dado el promedio histórico de cada trabajador (ej. usando distribución de Poisson)",
+    "Comunicar a la organización que el mérito debe basarse en mejoras sostenidas, no en resultados de un solo período"
   ],
   "entregable_esperado": "Un análisis de control estadístico del desempeño grupal que determine si las diferencias individuales son causas comunes o especiales, antes de diseñar cualquier sistema de reconocimiento.",
   "nodos_previos": [
-    "gestion_miedo_reportes"
+    "gestion_miedo_reportes",
+    "sistema_estable_causas_comunes"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "responsabilidad_gerencial_causas_comunes"
+  ],
   "condiciones_activacion": [
     "Antes de implementar sistemas de premios o reconocimientos basados en rankings individuales.",
     "Cuando se observa alta variabilidad en el desempeño reportado de un grupo de trabajadores.",
-    "Al diseñar políticas de incentivos en producción."
+    "Al diseñar políticas de incentivos en producción.",
+    "Cuando el sistema de reconocimiento ha perdido efectividad motivacional con el tiempo"
   ],
-  "etiqueta_arbol": "No Premies al Azar"
+  "etiqueta_arbol": "No Premies al Azar",
+  "ids_alias": [
+    "sistemas_recompensa_aleatorios"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "sistemas_recompensa_aleatorios",
+      "titulo": "Sistemas de Reconocimiento como Lotería Estadística",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

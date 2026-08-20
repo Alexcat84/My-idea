@@ -11,19 +11,30 @@
     "Verificar que el proceso de medición esté bajo control estadístico mediante carta de control",
     "Realizar un estudio Gauge R&R con múltiples apraisers, partes y repeticiones",
     "Calcular 5.15σ y compararlo con el rango de especificación (aceptable si es ≤10%)",
-    "Ajustar o calibrar el instrumento si se detecta sesgo sistemático"
+    "Ajustar o calibrar el instrumento si se detecta sesgo sistemático, respecto a estándares de medida reconocidos"
   ],
   "entregable_esperado": "Informe de estudio MSA/Gauge R&R con estimaciones de repetibilidad, reproducibilidad y determinación de aceptabilidad del sistema de medición",
   "nodos_previos": [
-    "diseno_de_metodos_de_recoleccion_de_datos"
+    "diseno_de_metodos_de_recoleccion_de_datos",
+    "inspeccion_automatizada"
   ],
   "nodos_siguientes": [
     "cribado_de_datos",
-    "errores_de_medicion"
+    "punto_equilibrio_calidad_inspeccion"
   ],
   "condiciones_activacion": [
     "Cuando se necesite validar la precisión de instrumentos antes de tomar decisiones de calidad",
     "Si existen dudas sobre la exactitud de las mediciones que afectan decisiones de aceptación/rechazo"
   ],
-  "etiqueta_arbol": "Confía en tus Mediciones"
+  "etiqueta_arbol": "Confía en tus Mediciones",
+  "ids_alias": [
+    "errores_de_medicion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "errores_de_medicion",
+      "titulo": "Errores de Medición: Sesgo y Repetibilidad",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

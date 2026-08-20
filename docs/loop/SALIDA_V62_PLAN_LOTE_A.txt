@@ -1,0 +1,86 @@
+==============================================================================
+GENERADOR DEL PLAN DEL LOTE A DEL TRAMO 6 (vuelta 62)
+  fichero del tramo: docs/loop/TRAMO6_V61.jsonl
+==============================================================================
+
+  acto 2   INCISO al paso 1
+      trozo pedido en ASCII : 'aunque seas tu mismo'
+      trozo EXTRAIDO del nodo: 'aunque seas tu mismo'
+      paso resultante        : Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tu mismo
+  acto 2   INCISO al paso 3
+      trozo pedido en ASCII : 'manejar situaciones dificiles'
+      trozo EXTRAIDO del nodo: 'manejar situaciones dificiles'
+      paso resultante        : Capacitar específicamente a los 'contact men' en manejo de clientes, incluido manejar situaciones dificiles
+  acto 3   INCISO al paso 6
+      trozo pedido en ASCII : 'respecto a estandares de medida reconocidos'
+      trozo EXTRAIDO del nodo: 'respecto a estándares de medida reconocidos'
+      paso resultante        : Ajustar o calibrar el instrumento si se detecta sesgo sistemático, respecto a estándares de medida reconocidos
+  acto 5   INCISO al paso 4
+      trozo pedido en ASCII : 'respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestion sin confrontacion'
+      trozo EXTRAIDO del nodo: 'respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación'
+      paso resultante        : Decide qué necesitas para sumar a la junta a personas externas independientes: busca respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación
+  acto 8   INCISO al paso 1
+      trozo pedido en ASCII : 'por ejemplo cada trimestre'
+      trozo EXTRAIDO del nodo: 'por ejemplo cada trimestre'
+      paso resultante        : Establecer puntos de revisión específicos y planificados para cada proyecto, por ejemplo cada trimestre
+  acto 10  INCISO al paso 1
+      trozo pedido en ASCII : 'lealtad de cliente, COPQ, revision de calidad de clase mundial'
+      trozo EXTRAIDO del nodo: 'lealtad de cliente, COPQ, revisión de calidad de clase mundial'
+      paso resultante        : Evaluar si Six Sigma encaja con la direccion que le quieres dar a tu negocio (fase Decide), recopilando lealtad de cliente, COPQ, revisión de calidad de clase mundial
+  acto 10  INCISO al paso 6
+      trozo pedido en ASCII : 'charter, equipo y revision de progreso'
+      trozo EXTRAIDO del nodo: 'charter, equipo y revisión de progreso'
+      paso resultante        : Ejecutar los primeros proyectos con mentoria y formas de reconocer los avances (fase Launch), con charter, equipo y revisión de progreso
+  acto 10  INCISO al paso 7
+      trozo pedido en ASCII : 'unidad por unidad durante 3-5 anos'
+      trozo EXTRAIDO del nodo: 'unidad por unidad durante 3-5 años'
+      paso resultante        : Llevar la metodologia a otras areas y procesos mas grandes de tu negocio (fase Expand), unidad por unidad durante 3-5 años
+  acto 10  INCISO al paso 9
+      trozo pedido en ASCII : 'integrar completamente la mejora en la operacion, alinear compensacion y realizar auditorias regulares'
+      trozo EXTRAIDO del nodo: 'integrar completamente la mejora en la operación, alinear compensación y realizar auditorías regulares'
+      paso resultante        : Establecer revisiones regulares y capacitacion básica para todas las personas que trabajan contigo (fase Sustain), integrar completamente la mejora en la operación, alinear compensación y realizar auditorías regulares
+  acto 11  INCISO al paso 3
+      trozo pedido en ASCII : 'pago por pieza o incentivos individuales'
+      trozo EXTRAIDO del nodo: 'pago por pieza o incentivos individuales'
+      paso resultante        : Eliminar evaluaciones que generen miedo y no reflejen como funciona realmente el trabajo, incluidos el pago por pieza o incentivos individuales
+
+  las 11 fichas del lote A: TODAS en verde
+  guarda 1B: ningun absorbido es puerta
+  cobertura: cada paso y cada condicion de cada absorbido con marca UNICA
+  incisos: todos EXTRAIDOS del nodo y comprobados VERBATIM dentro del paso
+
+  RESUMEN DEL REPARTO POR ACTO:
+     acto 1   sobrevive gestion_miedo_reportes                         piezas  6 (enteras 0, ya dichas 6, de INCISO 0)
+     acto 2   sobrevive contacto_con_el_cliente                        piezas  6 (enteras 2, ya dichas 2, de INCISO 2)
+     acto 3   sobrevive analisis_de_sistemas_de_medicion_msa           piezas  7 (enteras 0, ya dichas 6, de INCISO 1)
+     acto 4   sobrevive definicion_problema_moms_2                     piezas  5 (enteras 0, ya dichas 5, de INCISO 0)
+     acto 5   sobrevive planificacion_gobierno_organizaciones_familiares piezas  8 (enteras 0, ya dichas 7, de INCISO 1)
+     acto 6   sobrevive falacia_recompensa_loteria                     piezas  6 (enteras 3, ya dichas 3, de INCISO 0)
+     acto 7   sobrevive riesgos_consenso_inspeccion                    piezas  7 (enteras 2, ya dichas 5, de INCISO 0)
+     acto 8   sobrevive revision_progreso                              piezas  5 (enteras 3, ya dichas 1, de INCISO 1)
+     acto 9   sobrevive rol_tactico_estrategico_oficina                piezas  6 (enteras 1, ya dichas 5, de INCISO 0)
+     acto 10  sobrevive roadmap_despliegue_lean_six_sigma              piezas  7 (enteras 1, ya dichas 2, de INCISO 4)
+     acto 11  sobrevive orgullo_por_el_trabajo                         piezas  6 (enteras 2, ya dichas 3, de INCISO 1)
+     TOTAL del lote A: piezas 69 (enteras 14, ya dichas 45, de INCISO 10)
+
+  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato CAMPO PROPIO v1):
+     actos con el campo perdidas presente: 11 de 11 (el campo va SIEMPRE)
+     actos que DECLARAN cero perdidas    : 3
+     actos con al menos una perdida      : 8
+     perdidas selladas, en total         : 12
+        acto 1   DE PARAMETRO DE PASO   el escenario del limite DE ESPECIFICACION como sitio donde mirar la concentracion anomala de datos; el superviviente solo nombra el limite regulatorio y el de aceptacion
+        acto 3   DE PARAMETRO DE PASO   el LABORATORIO como fuente de variabilidad del sistema de medicion; el superviviente lista material, analistas, aparatos y dias, y no lo incluye
+        acto 3   DE CONDICIONES         el disparador de estar bajo enfoque Six Sigma con niveles de defectos exigidos; el superviviente dispara por validar la precision antes de decidir y por dudas sobre la exactitud, y no nombra el programa
+        acto 4   DE PARAMETRO DE PASO   MEDIANTE SINTOMAS, que es como se comprueba la O de observable; el superviviente enumera las cuatro letras del criterio y no dice con que se verifica cada una
+        acto 4   DE PARAMETRO DE PASO   DENTRO DEL ALCANCE DEL EQUIPO, que es la vara con la que se confirma la M de manejable en el paso 4 del absorbido
+        acto 5   DE CONDICIONES         el disparador de querer PROFESIONALIZAR LA TOMA DE DECISIONES ESTRATEGICAS; el superviviente dispara por el retiro del fundador, por varias generaciones en la gestion y por una junta que solo firma
+        acto 6   DE PARAMETRO DE PASO   el REEMPLAZO del reconocimiento por desempeno puntual con ANALISIS DE TENDENCIAS EN GRAFICOS DE CONTROL INDIVIDUALES; el superviviente dice evitar el premio individual y mejorar el sistema, y no nombra ese mecanismo
+        acto 7   DE PARAMETRO DE PASO   el seguimiento A LO LARGO DEL TIEMPO del grafico de los inspectores; el grafico del superviviente organiza acuerdos y desacuerdos POR TIPO DE CASO, que no es lo mismo que la serie longitudinal
+        acto 7   DE PARAMETRO DE PASO   la particion diagnostica de la discrepancia, si viene de diferencias ENTRE INSPECTORES o ENTRE MUESTRAS; el superviviente investiga el desacuerdo para pedir mejores definiciones o entrenamiento y no hace esa separacion
+        acto 7   DE CONDICIONES         el disparador de la sospecha de sesgo o divergencia sistematica entre evaluadores SIN relacion jerarquica de por medio; la condicion 2 del superviviente exige esa relacion jerarquica
+        acto 9   DE PARAMETRO DE PASO   la mirada sobre QUIEN MANEJA LA CALIDAD, si piensa solo en lo tecnico o tambien tiene vision de conjunto; el superviviente clasifica actividades en tacticas o estrategicas y no evalua a la persona
+        acto 11  DE PARAMETRO DE PASO   CAMBIAR LOS DISCURSOS MOTIVACIONALES Y LOS CARTELES, o sea la mitad de RETIRAR los lemas; el superviviente hace la mitad de PONER accion visible sobre las sugerencias y no nombra los carteles
+
+  plan escrito: docs\loop\PLAN_V62_OPU01_LOTE_A.json
+
+FIN

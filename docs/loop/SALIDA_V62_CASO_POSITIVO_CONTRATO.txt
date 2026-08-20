@@ -1,0 +1,39 @@
+==============================================================================
+CASO POSITIVO DEL CONTRATO CAMPO PROPIO v1: LA GUARDA QUE ESTE TRAMO
+ESTRENA, PUESTA A FALLAR
+==============================================================================
+
+  LAS MENTIRAS VAN SOBRE UN ACTO QUE ESTA VUELTA NO TOCA (acta 54, pregunta 7):
+  el acto 37 del tramo 3, DECLARADO, superviviente seis_herramientas_comunicacion_celebracion, absorbido seis_herramientas_comunicacion_fase_activate
+  LA FIGURA DEL ACTO, MEDIDA HOY:
+     seis_herramientas_comunicacion_celebracion     pasos 5 | condiciones 1 | deprecado False
+     seis_herramientas_comunicacion_fase_activate   pasos 5 | condiciones 1 | deprecado False
+     la nomina fijada del tramo 6 tiene 42 ids; de los dos de arriba, dentro: NINGUNO
+     NINGUNO DE LOS DOS ENTRA EN EL TRAMO 6: SI
+
+  1. ESPECIE DESCONOCIDA al SELLAR (guarda NUEVA de este tramo)
+     exit=1 | aborta sin escribir: SI
+     ROJO, 1 fallos y NO se escribe nada:
+     acto 37: especie de perdida desconocida 'DE COLOR'. Las escritas son: DE PARAMETRO DE PASO, DE CONDICIONES, DE NOMBRE
+     VEREDICTO: LA GUARDA MUERDE
+
+  2. CLAVE QUE FALTA al SELLAR (falta enrutada_a)
+     exit=1 | aborta sin escribir: SI
+     ROJO, 1 fallos y NO se escribe nada:
+     acto 37: a una perdida le faltan las claves enrutada_a
+     VEREDICTO: LA GUARDA MUERDE
+
+  3. LA MISMA PERDIDA, BIEN FORMADA: LA GUARDA TIENE QUE DEJARLA PASAR
+     exit=0 | sella: SI
+     actos con el campo perdidas presente: 1 de 1 (el campo va SIEMPRE)
+     perdidas selladas, en total         : 1
+     VEREDICTO: LA GUARDA NO ES UN SELLO DE GOMA
+
+  4. CAMPO AUSENTE con el contrato declarado, visto por el TALLADOR
+     exit=1 | no emite tabla: SI
+     docs\loop\_caso_positivo_contrato_sin_campo.json acto 37: el plan declara el contrato y el acto NO trae el campo perdidas. Lista vacia y campo ausente NO son lo mismo.
+     VEREDICTO: LA GUARDA MUERDE
+
+  ficheros de mentira borrados: _caso_positivo_contrato_perdidas.py, _caso_positivo_contrato_sin_campo.json, _caso_positivo_contrato_nomina.jsonl, _caso_positivo_contrato_sellado_ZZZZ.json, _caso_positivo_contrato_perdidas.cpython-312.pyc
+
+RESULTADO: LAS CUATRO PRUEBAS EN VERDE, LA GUARDA NUEVA MUERDE Y NO SOBREMUERDE

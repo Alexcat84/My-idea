@@ -6,24 +6,40 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Un proceso formal y eficiente de revisión aumenta la probabilidad de alcanzar las metas al identificar brechas entre el estado actual y el objetivo buscado. Requiere un ciclo de retroalimentación claro con responsabilidad y autoridad definidas para actuar sobre las diferencias detectadas, incluyendo puntos de revisión planificados para cada proyecto.",
   "pasos_accionables": [
-    "Establecer puntos de revisión específicos y planificados para cada proyecto",
+    "Establecer puntos de revisión específicos y planificados para cada proyecto, por ejemplo cada trimestre",
     "Comparar el estado actual medido contra el objetivo establecido",
     "Identificar brechas (gaps) que requieren atención",
     "Asignar responsabilidad y autoridad clara para actuar sobre las brechas identificadas",
-    "Documentar y comunicar resultados de forma gráfica y periódica"
+    "Documentar y comunicar resultados de forma gráfica y periódica",
+    "Crear un formato simple y estándar para reportar cada proyecto",
+    "Reunir en ese formato el costo, la inversión y el ahorro neto de cada proyecto",
+    "Revisar este proceso de seguimiento como parte de tu control de calidad general"
   ],
   "entregable_esperado": "Un calendario de revisiones con actas que documenten brechas identificadas y acciones correctivas asignadas",
   "nodos_previos": [
     "sistema_medicion_kpi",
-    "diagrama_arbol_despliegue"
+    "diagrama_arbol_despliegue",
+    "institucionalizar_breakthrough"
   ],
   "nodos_siguientes": [
     "tablero_control_scorecard",
-    "auditoria_negocio"
+    "auditoria_negocio",
+    "enfoque_en_procesos_no_en_problemas",
+    "evaluacion_desempeno_proyectos"
   ],
   "condiciones_activacion": [
     "Cuando un proyecto de calidad está en ejecución y requiere seguimiento continuo",
     "Cuando se detectan desviaciones entre lo planificado y lo ejecutado"
   ],
-  "etiqueta_arbol": "Revisa tu Progreso Formalmente"
+  "etiqueta_arbol": "Revisa tu Progreso Formalmente",
+  "ids_alias": [
+    "revision_progreso_breakthrough"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "revision_progreso_breakthrough",
+      "titulo": "Revisión Periódica del Progreso de Breakthrough",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

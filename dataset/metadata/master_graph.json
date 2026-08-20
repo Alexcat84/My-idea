@@ -1869,7 +1869,7 @@
       "entregable_esperado": "Un protocolo de inspección al 100% con roles independientes definidos y manejo de excepciones",
       "nodos_previos": [
         "definiciones_operacionales",
-        "administracion_sin_miedo",
+        "gestion_miedo_reportes",
         "control_estadistico_de_procesos_en_tiempo_real",
         "definiciones_operacionales_2"
       ],
@@ -1913,7 +1913,8 @@
         "Cuando los datos de calidad muestran patrones anómalos o poco creíbles",
         "Cuando se sospecha que empleados ocultan información por temor a sanciones"
       ],
-      "etiqueta_arbol": "Elimina el Miedo Organizacional"
+      "etiqueta_arbol": "Elimina el Miedo Organizacional",
+      "deprecado": true
     },
     "adn_de_innovacion_organizacional": {
       "node_id": "adn_de_innovacion_organizacional",
@@ -2295,7 +2296,7 @@
       ],
       "nodos_siguientes": [
         "distincion_causas_comunes_especiales",
-        "administracion_sin_miedo",
+        "gestion_miedo_reportes",
         "entrenamiento_y_control_estadistico",
         "gobierno_corporativo_y_calidad"
       ],
@@ -3283,7 +3284,7 @@
       ],
       "entregable_esperado": "Informe de causa raíz del fallo de contratación ejecutiva con recomendaciones para el próximo proceso de selección",
       "nodos_previos": [
-        "eliminacion_barreras_orgullo_del_trabajo",
+        "orgullo_por_el_trabajo",
         "proceso_contratacion_ejecutivos_sin_experiencia"
       ],
       "nodos_siguientes": [
@@ -3777,21 +3778,32 @@
         "Verificar que el proceso de medición esté bajo control estadístico mediante carta de control",
         "Realizar un estudio Gauge R&R con múltiples apraisers, partes y repeticiones",
         "Calcular 5.15σ y compararlo con el rango de especificación (aceptable si es ≤10%)",
-        "Ajustar o calibrar el instrumento si se detecta sesgo sistemático"
+        "Ajustar o calibrar el instrumento si se detecta sesgo sistemático, respecto a estándares de medida reconocidos"
       ],
       "entregable_esperado": "Informe de estudio MSA/Gauge R&R con estimaciones de repetibilidad, reproducibilidad y determinación de aceptabilidad del sistema de medición",
       "nodos_previos": [
-        "diseno_de_metodos_de_recoleccion_de_datos"
+        "diseno_de_metodos_de_recoleccion_de_datos",
+        "inspeccion_automatizada"
       ],
       "nodos_siguientes": [
         "cribado_de_datos",
-        "errores_de_medicion"
+        "punto_equilibrio_calidad_inspeccion"
       ],
       "condiciones_activacion": [
         "Cuando se necesite validar la precisión de instrumentos antes de tomar decisiones de calidad",
         "Si existen dudas sobre la exactitud de las mediciones que afectan decisiones de aceptación/rechazo"
       ],
-      "etiqueta_arbol": "Confía en tus Mediciones"
+      "etiqueta_arbol": "Confía en tus Mediciones",
+      "ids_alias": [
+        "errores_de_medicion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "errores_de_medicion",
+          "titulo": "Errores de Medición: Sesgo y Repetibilidad",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "analisis_de_variancia": {
       "node_id": "analisis_de_variancia",
@@ -3861,7 +3873,7 @@
       ],
       "entregable_esperado": "Causa raíz identificada y confirmada mediante datos",
       "nodos_previos": [
-        "definicion_problema_moms",
+        "definicion_problema_moms_2",
         "juran_rcca_metodo"
       ],
       "nodos_siguientes": [
@@ -4503,7 +4515,6 @@
       ],
       "entregable_esperado": "Un análisis documentado de síntomas que describe claramente la situación actual del problema (frecuencia, severidad, ubicación).",
       "nodos_previos": [
-        "definicion_problema_moms",
         "definicion_problema_moms_2",
         "herramientas_analisis_causa_raiz"
       ],
@@ -8265,7 +8276,7 @@
         "clasificacion_benchmarking",
         "recoleccion_validacion_datos_benchmarking",
         "decide_phase_roadmap",
-        "juran_transformation_roadmap"
+        "roadmap_despliegue_lean_six_sigma"
       ],
       "condiciones_activacion": [
         "Cuando necesitas establecer metas creíbles basadas en referencias externas para tu planificación estratégica",
@@ -14612,7 +14623,7 @@
       ],
       "nodos_siguientes": [
         "falsos_comienzos_mejora_calidad",
-        "eliminacion_barreras_orgullo_del_trabajo"
+        "orgullo_por_el_trabajo"
       ],
       "condiciones_activacion": [
         "Si quieres involucrar a las personas que trabajan contigo en la mejora de la calidad",
@@ -16460,7 +16471,8 @@
         "Cuando múltiples inspectores o certificadores deben garantizar consistencia en la calificación de productos.",
         "Cuando se sospecha de sesgo o divergencia sistemática entre evaluadores."
       ],
-      "etiqueta_arbol": "Compara Tus Inspectores Independientes"
+      "etiqueta_arbol": "Compara Tus Inspectores Independientes",
+      "deprecado": true
     },
     "comparacion_metodos_inspeccion": {
       "node_id": "comparacion_metodos_inspeccion",
@@ -19519,7 +19531,7 @@
       ],
       "nodos_siguientes": [
         "transferencia_de_actividades_a_departamentos_de_linea",
-        "gestion_estrategica_de_calidad_sqm"
+        "rol_tactico_estrategico_oficina"
       ],
       "condiciones_activacion": [
         "Cuando tu negocio no tiene una forma clara de liderar el tema calidad",
@@ -20679,10 +20691,11 @@
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
       "resumen_teorico": "En muchas organizaciones, solo algunos empleados (vendedores, cajeros, técnicos) tienen contacto directo con el cliente, y estos son quienes moldean la percepción del cliente sobre la empresa. Deming subraya que la capacidad de agradar al cliente debería ser prioridad máxima en la contratación y capacitación de estos 'hombres de contacto', pues son ellos quienes sostienen el negocio.",
       "pasos_accionables": [
-        "Identificar quiénes en la organización tienen contacto directo con el cliente",
+        "Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tu mismo",
         "Priorizar en la contratación la capacidad de trato y servicio al cliente",
-        "Capacitar específicamente a los 'contact men' en manejo de clientes",
-        "Reconocer que toda la organización, vea o no al cliente, contribuye a construir la calidad del servicio"
+        "Capacitar específicamente a los 'contact men' en manejo de clientes, incluido manejar situaciones dificiles",
+        "Reconocer que toda la organización, vea o no al cliente, contribuye a construir la calidad del servicio",
+        "Revisar cada cierto tiempo que percepción tiene el cliente sobre el trato que recibe"
       ],
       "entregable_esperado": "Plan de selección y capacitación específico para personal de contacto directo con clientes",
       "nodos_previos": [
@@ -20699,9 +20712,20 @@
       ],
       "condiciones_activacion": [
         "Cuando la organización tiene personal de atención directa al público",
-        "Al diseñar procesos de contratación y capacitación en servicio al cliente"
+        "Al diseñar procesos de contratación y capacitación en servicio al cliente",
+        "Si recibes quejas relacionadas con la actitud o el trato de quien atiende al cliente"
       ],
-      "etiqueta_arbol": "Cuida a Quien Atiende Clientes"
+      "etiqueta_arbol": "Cuida a Quien Atiende Clientes",
+      "ids_alias": [
+        "contacto_con_el_cliente_2"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "contacto_con_el_cliente_2",
+          "titulo": "Rol del Personal de Contacto con el Cliente",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "contacto_con_el_cliente_2": {
       "node_id": "contacto_con_el_cliente_2",
@@ -20727,7 +20751,8 @@
         "Cuando tu reputación depende de la percepción directa del cliente",
         "Si recibes quejas relacionadas con la actitud o el trato de quien atiende al cliente"
       ],
-      "etiqueta_arbol": "Forma a tu Personal de Contacto"
+      "etiqueta_arbol": "Forma a tu Personal de Contacto",
+      "deprecado": true
     },
     "contacto_evaluacion_representantes_extranjeros": {
       "node_id": "contacto_evaluacion_representantes_extranjeros",
@@ -21627,7 +21652,7 @@
         "mejora_continua_del_proceso",
         "pruebas_destructivas",
         "punto_equilibrio_calidad_inspeccion",
-        "administracion_sin_miedo",
+        "gestion_miedo_reportes",
         "distincion_causas_comunes_especiales"
       ],
       "condiciones_activacion": [
@@ -28841,7 +28866,7 @@
       ],
       "entregable_esperado": "Plan de implementación con infraestructura, metodología, metas y milestones definidos",
       "nodos_previos": [
-        "juran_transformation_roadmap",
+        "roadmap_despliegue_lean_six_sigma",
         "benchmarking_proceso",
         "estudio_lealtad_cliente"
       ],
@@ -30725,7 +30750,8 @@
       "condiciones_activacion": [
         "Cuando se inicia un esfuerzo de resolución de problemas y se requiere formular correctamente el problema a abordar"
       ],
-      "etiqueta_arbol": "Define tu Problema con Claridad"
+      "etiqueta_arbol": "Define tu Problema con Claridad",
+      "deprecado": true
     },
     "definicion_problema_moms_2": {
       "node_id": "definicion_problema_moms_2",
@@ -30743,16 +30769,28 @@
       ],
       "entregable_esperado": "Un enunciado de problema claro y validado según los criterios MOMS, listo para iniciar el análisis de causa raíz.",
       "nodos_previos": [
-        "herramientas_analisis_causa_raiz"
+        "herramientas_analisis_causa_raiz",
+        "juran_rcca_metodo"
       ],
       "nodos_siguientes": [
-        "analisis_sintomas"
+        "analisis_sintomas",
+        "analisis_diagnostico_causa"
       ],
       "condiciones_activacion": [
         "Cuando existe un problema de calidad recurrente o crítico que requiere ser abordado formalmente.",
         "Cuando el equipo necesita enfocar sus esfuerzos en un problema bien delimitado."
       ],
-      "etiqueta_arbol": "Selecciona y Redacta el Problema"
+      "etiqueta_arbol": "Selecciona y Redacta el Problema",
+      "ids_alias": [
+        "definicion_problema_moms"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "definicion_problema_moms",
+          "titulo": "Definición del Problema mediante Criterio MOMS",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "definicion_producto_proyecto": {
       "node_id": "definicion_producto_proyecto",
@@ -33650,7 +33688,7 @@
         "control_estadistico_de_procesos"
       ],
       "nodos_siguientes": [
-        "administracion_sin_miedo"
+        "gestion_miedo_reportes"
       ],
       "condiciones_activacion": [
         "Cuando se evalúa el desempeño de un grupo de trabajadores realizando tareas similares",
@@ -33673,7 +33711,7 @@
       ],
       "entregable_esperado": "Lista de narrativas de riesgo identificadas y proceso de validación cruzada con datos externos",
       "nodos_previos": [
-        "administracion_sin_miedo"
+        "gestion_miedo_reportes"
       ],
       "nodos_siguientes": [
         "lead_bullets_no_silver_bullets",
@@ -37629,7 +37667,7 @@
       ],
       "nodos_siguientes": [
         "importancia_de_la_capacitacion",
-        "administracion_sin_miedo",
+        "gestion_miedo_reportes",
         "mal_uso_histograma_vs_carta_control",
         "mejora_del_sistema_responsabilidad_gerencial",
         "sistema_responsabilidad_gerencial_2"
@@ -41360,7 +41398,8 @@
         "Cuando te llegan reportes repetidos de problemas que no has resuelto",
         "Cuando todavia pagas por pieza o evaluas a las personas de forma individual y punitiva"
       ],
-      "etiqueta_arbol": "Deja que tu Gente se Enorgullezca"
+      "etiqueta_arbol": "Deja que tu Gente se Enorgullezca",
+      "deprecado": true
     },
     "eliminacion_causas_error": {
       "node_id": "eliminacion_causas_error",
@@ -41655,7 +41694,7 @@
         "control_estadistico_de_procesos_en_tiempo_real"
       ],
       "nodos_siguientes": [
-        "eliminacion_barreras_orgullo_del_trabajo"
+        "orgullo_por_el_trabajo"
       ],
       "condiciones_activacion": [
         "Cuando la organización utiliza cuotas, presupuestos de rework o metas de ventas como principal herramienta de gestión"
@@ -43228,7 +43267,7 @@
       ],
       "entregable_esperado": "Mapa de procesos con causas raíz identificadas y plan de mejora estructural",
       "nodos_previos": [
-        "revision_progreso_breakthrough"
+        "revision_progreso"
       ],
       "nodos_siguientes": [
         "control_estadistico_de_procesos_en_tiempo_real"
@@ -45430,7 +45469,8 @@
         "Cuando se requieren niveles de defectos bajo enfoque Six Sigma",
         "Cuando existen discrepancias entre mediciones repetidas del mismo producto"
       ],
-      "etiqueta_arbol": "Mide con Precisión, Evita Sesgos"
+      "etiqueta_arbol": "Mide con Precisión, Evita Sesgos",
+      "deprecado": true
     },
     "escala_actitud_cierre": {
       "node_id": "escala_actitud_cierre",
@@ -49197,7 +49237,7 @@
       ],
       "nodos_siguientes": [
         "decide_phase_roadmap",
-        "juran_transformation_roadmap"
+        "roadmap_despliegue_lean_six_sigma"
       ],
       "condiciones_activacion": [
         "Cuando necesitas entender a fondo por qué se pierden o se quedan tus clientes",
@@ -50228,7 +50268,7 @@
       ],
       "entregable_esperado": "Un formulario de evaluación completado con la calificación de cada uno de los ocho puntos de contribución de la junta, junto con un plan de mejora con prioridades claras.",
       "nodos_previos": [
-        "gobierno_corporativo_juntas_directivas"
+        "planificacion_gobierno_organizaciones_familiares"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -50253,7 +50293,7 @@
       ],
       "entregable_esperado": "Tablero de métricas de desempeño de proyectos de mejora por gerente/área",
       "nodos_previos": [
-        "revision_progreso_breakthrough",
+        "revision_progreso",
         "team_performance_assessment"
       ],
       "nodos_siguientes": [
@@ -53105,19 +53145,35 @@
         "Analizar estadísticamente si el desempeño del grupo constituye un sistema estable (causas comunes) mediante cartas de control.",
         "Determinar si el 'mejor' desempeño corresponde a una causa especial identificable o a variación aleatoria.",
         "Si es variación aleatoria, evitar otorgar premios de mérito individual; considerar mejoras al sistema en su conjunto.",
-        "Si existe una causa especial genuina, investigarla y usarla como oportunidad de aprendizaje para todo el grupo."
+        "Si existe una causa especial genuina, investigarla y usarla como oportunidad de aprendizaje para todo el grupo.",
+        "Calcular la probabilidad de obtener 'cero incidencias' dado el promedio histórico de cada trabajador (ej. usando distribución de Poisson)",
+        "Comunicar a la organización que el mérito debe basarse en mejoras sostenidas, no en resultados de un solo período"
       ],
       "entregable_esperado": "Un análisis de control estadístico del desempeño grupal que determine si las diferencias individuales son causas comunes o especiales, antes de diseñar cualquier sistema de reconocimiento.",
       "nodos_previos": [
-        "gestion_miedo_reportes"
+        "gestion_miedo_reportes",
+        "sistema_estable_causas_comunes"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "responsabilidad_gerencial_causas_comunes"
+      ],
       "condiciones_activacion": [
         "Antes de implementar sistemas de premios o reconocimientos basados en rankings individuales.",
         "Cuando se observa alta variabilidad en el desempeño reportado de un grupo de trabajadores.",
-        "Al diseñar políticas de incentivos en producción."
+        "Al diseñar políticas de incentivos en producción.",
+        "Cuando el sistema de reconocimiento ha perdido efectividad motivacional con el tiempo"
       ],
-      "etiqueta_arbol": "No Premies al Azar"
+      "etiqueta_arbol": "No Premies al Azar",
+      "ids_alias": [
+        "sistemas_recompensa_aleatorios"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "sistemas_recompensa_aleatorios",
+          "titulo": "Sistemas de Reconocimiento como Lotería Estadística",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "falacia_redundancia_social": {
       "node_id": "falacia_redundancia_social",
@@ -53470,7 +53526,7 @@
       "entregable_esperado": "Un sistema de gestion de calidad documentado, con politica y mapeo de procesos, conforme a ISO 9001:2015 y listo para auditoria de certificacion.",
       "nodos_previos": [
         "certificacion_registro_sistemas_calidad",
-        "gobierno_corporativo_juntas_directivas",
+        "planificacion_gobierno_organizaciones_familiares",
         "certificacion_registro_sistema_calidad"
       ],
       "nodos_siguientes": [
@@ -55997,7 +56053,7 @@
       "entregable_esperado": "Programa integral de selección, capacitación y retención con métricas de efectividad",
       "nodos_previos": [
         "rol_del_equipo_de_trabajo_en_calidad",
-        "gestion_estrategica_de_calidad_sqm",
+        "rol_tactico_estrategico_oficina",
         "organizacion_liderazgo_estadistico"
       ],
       "nodos_siguientes": [
@@ -59514,7 +59570,8 @@
         "Cuando la calidad necesita tener más peso en las decisiones grandes de tu negocio",
         "Cuando hay confusión entre las tareas técnicas de calidad y las decisiones estratégicas de calidad"
       ],
-      "etiqueta_arbol": "Eleva la Calidad a Estrategia"
+      "etiqueta_arbol": "Eleva la Calidad a Estrategia",
+      "deprecado": true
     },
     "gestion_expectativas_equity_empleados": {
       "node_id": "gestion_expectativas_equity_empleados",
@@ -59875,18 +59932,35 @@
       ],
       "entregable_esperado": "Un diagnóstico de sesgos en el reporte de datos y un plan de acción para eliminar el miedo como fuente de distorsión de la información.",
       "nodos_previos": [
-        "ausencia_valor_verdadero"
+        "ausencia_valor_verdadero",
+        "aim_of_leadership",
+        "control_estadistico_de_procesos",
+        "deteccion_de_lideres_y_rezagados",
+        "distincion_causas_comunes_especiales",
+        "importancia_de_la_capacitacion"
       ],
       "nodos_siguientes": [
         "falacia_recompensa_loteria",
-        "eliminar_metas_numericas_gerencia"
+        "eliminar_metas_numericas_gerencia",
+        "administracion_de_inspeccion",
+        "deteccion_de_mentiras_organizacionales"
       ],
       "condiciones_activacion": [
         "Cuando los datos reportados muestran concentraciones sospechosas cerca de límites de aceptación.",
         "Cuando los trabajadores evitan reportar fallas por temor a ser culpados.",
         "Al diseñar sistemas de evaluación de desempeño individual."
       ],
-      "etiqueta_arbol": "Elimina el Miedo al Reportar"
+      "etiqueta_arbol": "Elimina el Miedo al Reportar",
+      "ids_alias": [
+        "administracion_sin_miedo"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "administracion_sin_miedo",
+          "titulo": "Administración sin Miedo",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "gestion_multiples_term_sheets": {
       "node_id": "gestion_multiples_term_sheets",
@@ -61323,7 +61397,8 @@
         "Si la organización no tiene una estructura formal de gobierno corporativo",
         "Cuando se requiere profesionalizar la toma de decisiones estratégicas"
       ],
-      "etiqueta_arbol": "Organiza tu Junta Directiva"
+      "etiqueta_arbol": "Organiza tu Junta Directiva",
+      "deprecado": true
     },
     "gobierno_corporativo_y_calidad": {
       "node_id": "gobierno_corporativo_y_calidad",
@@ -61347,8 +61422,7 @@
         "aim_of_leadership"
       ],
       "nodos_siguientes": [
-        "planificacion_gobierno_organizaciones_familiares",
-        "gobierno_corporativo_juntas_directivas"
+        "planificacion_gobierno_organizaciones_familiares"
       ],
       "condiciones_activacion": [
         "Cuando buscas alinear los intereses de todos los que dependen de tu negocio con su sostenibilidad a largo plazo",
@@ -62536,9 +62610,8 @@
         "diagrama_arbol_despliegue"
       ],
       "nodos_siguientes": [
-        "definicion_problema_moms",
-        "analisis_sintomas",
         "definicion_problema_moms_2",
+        "analisis_sintomas",
         "tipos_benchmarking_por_participante"
       ],
       "condiciones_activacion": [
@@ -65449,7 +65522,7 @@
         "distincion_causas_comunes_especiales"
       ],
       "nodos_siguientes": [
-        "administracion_sin_miedo"
+        "gestion_miedo_reportes"
       ],
       "condiciones_activacion": [
         "Cuando se evalúa si continuar entrenando a un empleado",
@@ -66719,7 +66792,7 @@
         "clasificacion_seriedad"
       ],
       "nodos_siguientes": [
-        "errores_de_medicion",
+        "analisis_de_sistemas_de_medicion_msa",
         "punto_equilibrio_calidad_inspeccion"
       ],
       "condiciones_activacion": [
@@ -66909,7 +66982,7 @@
         "diagnostico_antes_remedio"
       ],
       "nodos_siguientes": [
-        "revision_progreso_breakthrough"
+        "revision_progreso"
       ],
       "condiciones_activacion": [
         "Si has logrado mejoras puntuales pero no las has sostenido en el tiempo"
@@ -68902,7 +68975,7 @@
         "analisis_diagnostico_causa"
       ],
       "nodos_siguientes": [
-        "definicion_problema_moms",
+        "definicion_problema_moms_2",
         "analisis_diagnostico_causa"
       ],
       "condiciones_activacion": [
@@ -68936,7 +69009,8 @@
         "Cuando la organización decide emprender una transformación de calidad a gran escala (ej. Six Sigma)",
         "Si se requiere un marco estructurado de largo plazo para institucionalizar la calidad"
       ],
-      "etiqueta_arbol": "Transforma tu Calidad en Fases"
+      "etiqueta_arbol": "Transforma tu Calidad en Fases",
+      "deprecado": true
     },
     "juran_trilogy": {
       "node_id": "juran_trilogy",
@@ -82209,24 +82283,39 @@
       "pasos_accionables": [
         "Hablar directamente con las personas que hacen el trabajo día a día para identificar que barreras concretas les impiden hacerlo bien",
         "Crear una forma simple para que quien trabaja contigo pueda reportar fallas de herramientas o materiales, y asegurarte de darle seguimiento real",
-        "Eliminar evaluaciones que generen miedo y no reflejen como funciona realmente el trabajo",
+        "Eliminar evaluaciones que generen miedo y no reflejen como funciona realmente el trabajo, incluidos el pago por pieza o incentivos individuales",
         "Si alguien supervisa a otros, asegurarte de que conozca bien el trabajo tecnico que supervisa, no solo el trato humano",
-        "Actuar de forma visible sobre las sugerencias de mejora para que los espacios de participación no se conviertan en frustración vacia"
+        "Actuar de forma visible sobre las sugerencias de mejora para que los espacios de participación no se conviertan en frustración vacia",
+        "Armar un plan para eliminar estas barreras poco a poco, con responsables y plazos claros"
       ],
       "entregable_esperado": "Un sistema de reporte y seguimiento de problemas operativos con evidencia de acciones tomadas sobre las quejas de las personas que trabajan contigo",
       "nodos_previos": [
-        "inventario_conocimiento_estadistico_personal"
+        "inventario_conocimiento_estadistico_personal",
+        "circulos_calidad_qc",
+        "eliminacion_gestion_por_objetivos_y_numeros"
       ],
       "nodos_siguientes": [
         "fomento_educacion_autoeducacion",
-        "enfermedades_mortales_gestion"
+        "enfermedades_mortales_gestion",
+        "analisis_causa_raiz_despido_ejecutivo"
       ],
       "condiciones_activacion": [
         "Cuando existe alto ausentismo o rotación entre las personas que trabajan contigo",
         "Cuando te reportan los mismos problemas repetidamente sin que actues",
-        "Si notas que los espacios de participación o grupos de mejora se estan frustrando sin resultados"
+        "Si notas que los espacios de participación o grupos de mejora se estan frustrando sin resultados",
+        "Cuando todavia pagas por pieza o evaluas a las personas de forma individual y punitiva"
       ],
-      "etiqueta_arbol": "Fomenta el Orgullo por el Trabajo"
+      "etiqueta_arbol": "Fomenta el Orgullo por el Trabajo",
+      "ids_alias": [
+        "eliminacion_barreras_orgullo_del_trabajo"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "eliminacion_barreras_orgullo_del_trabajo",
+          "titulo": "Eliminación de Barreras al Orgullo del Trabajo",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "original_issue_discount_oid": {
       "node_id": "original_issue_discount_oid",
@@ -86170,7 +86259,7 @@
         "Busca a alguien externo que te ayude a planear la sucesión y el mando",
         "Diseña un consejo familiar (family council) que represente a los familiares que son dueños",
         "Define reglas claras de cómo participa tu familia y qué esperas de la junta directiva",
-        "Decide qué necesitas para sumar a la junta a personas externas independientes",
+        "Decide qué necesitas para sumar a la junta a personas externas independientes: busca respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación",
         "Evita que los directores se metan en el día a día de tu negocio",
         "Si todavía no estás listo para una junta formal, empieza con un consejo asesor (advisory board) como paso intermedio"
       ],
@@ -86178,13 +86267,26 @@
       "nodos_previos": [
         "gobierno_corporativo_y_calidad"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "evaluacion_desempeno_junta_directiva",
+        "familia_normas_iso_9000"
+      ],
       "condiciones_activacion": [
         "Cuando empiezas a planear tu retiro de un negocio familiar",
         "Cuando hay varias generaciones de tu familia metidas en la gestión del negocio",
         "Cuando tu junta actual solo firma sin supervisar de verdad"
       ],
-      "etiqueta_arbol": "Organiza el Gobierno Familiar"
+      "etiqueta_arbol": "Organiza el Gobierno Familiar",
+      "ids_alias": [
+        "gobierno_corporativo_juntas_directivas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "gobierno_corporativo_juntas_directivas",
+          "titulo": "Gobierno Corporativo y Estructura de Juntas Directivas",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "planificacion_inicial_calidad": {
       "node_id": "planificacion_inicial_calidad",
@@ -90293,8 +90395,7 @@
       ],
       "nodos_siguientes": [
         "contacto_con_el_cliente",
-        "adaptacion_14_puntos_servicio_medico",
-        "contacto_con_el_cliente_2"
+        "adaptacion_14_puntos_servicio_medico"
       ],
       "condiciones_activacion": [
         "Cuando una organización de servicio presenta errores recurrentes sin causa clara",
@@ -94647,7 +94748,7 @@
         "costo_de_mala_calidad_copq",
         "clasificacion_seriedad_defectos",
         "control_estadistico_de_procesos",
-        "errores_de_medicion",
+        "analisis_de_sistemas_de_medicion_msa",
         "inspeccion_automatizada",
         "relacion_largo_plazo_proveedor_unico"
       ],
@@ -99865,7 +99966,7 @@
         "abolir_inspeccion_masiva",
         "causas_comunes_vs_especiales",
         "eliminar_trabajo_a_destajo",
-        "sistemas_recompensa_aleatorios",
+        "falacia_recompensa_loteria",
         "trampa_del_promedio_como_estandar"
       ],
       "nodos_siguientes": [],
@@ -100450,8 +100551,7 @@
       ],
       "entregable_esperado": "Un informe con los hallazgos de campo, las causas reales identificadas y un plan de acción para corregirlas",
       "nodos_previos": [
-        "contacto_con_el_cliente",
-        "contacto_con_el_cliente_2"
+        "contacto_con_el_cliente"
       ],
       "nodos_siguientes": [
         "eliminacion_firmas_redundantes"
@@ -101055,26 +101155,42 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Un proceso formal y eficiente de revisión aumenta la probabilidad de alcanzar las metas al identificar brechas entre el estado actual y el objetivo buscado. Requiere un ciclo de retroalimentación claro con responsabilidad y autoridad definidas para actuar sobre las diferencias detectadas, incluyendo puntos de revisión planificados para cada proyecto.",
       "pasos_accionables": [
-        "Establecer puntos de revisión específicos y planificados para cada proyecto",
+        "Establecer puntos de revisión específicos y planificados para cada proyecto, por ejemplo cada trimestre",
         "Comparar el estado actual medido contra el objetivo establecido",
         "Identificar brechas (gaps) que requieren atención",
         "Asignar responsabilidad y autoridad clara para actuar sobre las brechas identificadas",
-        "Documentar y comunicar resultados de forma gráfica y periódica"
+        "Documentar y comunicar resultados de forma gráfica y periódica",
+        "Crear un formato simple y estándar para reportar cada proyecto",
+        "Reunir en ese formato el costo, la inversión y el ahorro neto de cada proyecto",
+        "Revisar este proceso de seguimiento como parte de tu control de calidad general"
       ],
       "entregable_esperado": "Un calendario de revisiones con actas que documenten brechas identificadas y acciones correctivas asignadas",
       "nodos_previos": [
         "sistema_medicion_kpi",
-        "diagrama_arbol_despliegue"
+        "diagrama_arbol_despliegue",
+        "institucionalizar_breakthrough"
       ],
       "nodos_siguientes": [
         "tablero_control_scorecard",
-        "auditoria_negocio"
+        "auditoria_negocio",
+        "enfoque_en_procesos_no_en_problemas",
+        "evaluacion_desempeno_proyectos"
       ],
       "condiciones_activacion": [
         "Cuando un proyecto de calidad está en ejecución y requiere seguimiento continuo",
         "Cuando se detectan desviaciones entre lo planificado y lo ejecutado"
       ],
-      "etiqueta_arbol": "Revisa tu Progreso Formalmente"
+      "etiqueta_arbol": "Revisa tu Progreso Formalmente",
+      "ids_alias": [
+        "revision_progreso_breakthrough"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "revision_progreso_breakthrough",
+          "titulo": "Revisión Periódica del Progreso de Breakthrough",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "revision_progreso_breakthrough": {
       "node_id": "revision_progreso_breakthrough",
@@ -101100,7 +101216,8 @@
       "condiciones_activacion": [
         "Si tienes varios proyectos de mejora en marcha que necesitan seguimiento"
       ],
-      "etiqueta_arbol": "Revisa Periódicamente tus Avances Clave"
+      "etiqueta_arbol": "Revisa Periódicamente tus Avances Clave",
+      "deprecado": true
     },
     "revisiones_regulares_desempeno_ceo": {
       "node_id": "revisiones_regulares_desempeno_ceo",
@@ -101689,21 +101806,31 @@
         "Comparar los registros posteriormente en un ambiente sin jerarquía o temor.",
         "Usar un gráfico simple (como el de Fig. 51/52) para visualizar acuerdos y desacuerdos por tipo de caso.",
         "Investigar los casos de desacuerdo para identificar necesidad de mejores definiciones o entrenamiento.",
-        "Recordar que el acuerdo entre inspectores no garantiza que el juicio sea correcto, solo que existe un sistema consistente."
+        "Recordar que el acuerdo entre inspectores no garantiza que el juicio sea correcto, solo que existe un sistema consistente.",
+        "Definir un esquema de muestreo mecánico (no aleatorio) para que cada inspector seleccione ítems de diferentes partes del lote.",
+        "Programar inspecciones conjuntas periódicas (ej. cada 20° ítem) donde ambos evalúen el mismo ítem."
       ],
       "entregable_esperado": "Sistema de registro independiente y comparación posterior implementado entre inspectores/certificadores, con gráfico de seguimiento de acuerdos/desacuerdos.",
       "nodos_previos": [
         "administracion_de_inspeccion",
         "gestion_testimonios"
       ],
-      "nodos_siguientes": [
-        "comparacion_inspectores_independientes"
-      ],
+      "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando dos o más personas deben emitir un juicio de calidad conjunto sobre un mismo ítem o caso.",
         "Cuando existe una relación jerárquica entre los evaluadores que podría sesgar el consenso."
       ],
-      "etiqueta_arbol": "Cuestiona el Consenso al Inspeccionar"
+      "etiqueta_arbol": "Cuestiona el Consenso al Inspeccionar",
+      "ids_alias": [
+        "comparacion_inspectores_independientes"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "comparacion_inspectores_independientes",
+          "titulo": "Comparación Sistemática de Dos o Más Inspectores Independientes",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "riesgos_del_enfoque_en_error_humano": {
       "node_id": "riesgos_del_enfoque_en_error_humano",
@@ -101943,29 +102070,43 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Desplegar Six Sigma con exito requiere avanzar por fases: Decide (evaluar si la metodologia encaja en tu negocio y elegir con quien capacitarte), Prepare (definir el soporte necesario, quien va a guiar el proceso, los Champions, y capacitar la primera ola de Belts), Launch (ejecutar los primeros proyectos con mentoria y crear formas de reconocer y dar seguimiento), Expand (llevar la metodologia a otras areas y procesos mas grandes) y Sustain (consolidar resultados con revisiones periodicas y una cultura que se mantenga en el tiempo). Empezar en pequeno y crecer poco a poco ha demostrado ser mas efectivo.",
       "pasos_accionables": [
-        "Evaluar si Six Sigma encaja con la direccion que le quieres dar a tu negocio (fase Decide)",
+        "Evaluar si Six Sigma encaja con la direccion que le quieres dar a tu negocio (fase Decide), recopilando lealtad de cliente, COPQ, revisión de calidad de clase mundial",
         "Elegir con quien te vas a capacitar, alguien que encaje con tu forma de trabajar",
         "Decidir que iniciativas actuales conviene pausar para no chocar por recursos",
         "Definir quien va a guiar el proceso, tanto en lo general como en cada area (fase Prepare)",
         "Capacitar a la primera ola de responsables y especialistas (Champions, Green Belts y Black Belts)",
-        "Ejecutar los primeros proyectos con mentoria y formas de reconocer los avances (fase Launch)",
-        "Llevar la metodologia a otras areas y procesos mas grandes de tu negocio (fase Expand)",
+        "Ejecutar los primeros proyectos con mentoria y formas de reconocer los avances (fase Launch), con charter, equipo y revisión de progreso",
+        "Llevar la metodologia a otras areas y procesos mas grandes de tu negocio (fase Expand), unidad por unidad durante 3-5 años",
         "Comparar tus resultados con los de otros negocios para llegar a un nivel de clase mundial",
-        "Establecer revisiones regulares y capacitacion básica para todas las personas que trabajan contigo (fase Sustain)"
+        "Establecer revisiones regulares y capacitacion básica para todas las personas que trabajan contigo (fase Sustain), integrar completamente la mejora en la operación, alinear compensación y realizar auditorías regulares",
+        "Fase Prepare: desplegar el plan, identificar procesos clave, seleccionar proyectos piloto"
       ],
       "entregable_esperado": "Un plan de despliegue documentado con las fases definidas, los responsables de guiar el proceso establecidos y la primera ola de proyectos completada",
       "nodos_previos": [
-        "roles_six_sigma"
+        "roles_six_sigma",
+        "benchmarking_proceso",
+        "estudio_lealtad_cliente"
       ],
       "nodos_siguientes": [
         "rol_black_belt_six_sigma",
-        "dmaic_fase_select"
+        "dmaic_fase_select",
+        "decide_phase_roadmap"
       ],
       "condiciones_activacion": [
         "Cuando decides implementar Six Sigma o Lean Six Sigma como una transformacion de fondo en tu negocio",
         "Cuando necesitas una hoja de ruta estructurada para escalar la metodologia en tu negocio"
       ],
-      "etiqueta_arbol": "Planifica tu Camino Six Sigma"
+      "etiqueta_arbol": "Planifica tu Camino Six Sigma",
+      "ids_alias": [
+        "juran_transformation_roadmap"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "juran_transformation_roadmap",
+          "titulo": "Hoja de Ruta de Transformación Juran (5 Fases)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "roadmap_proyectos_operacionales_12_meses": {
       "node_id": "roadmap_proyectos_operacionales_12_meses",
@@ -102463,21 +102604,34 @@
         "Auditar las actividades actuales de la Oficina y clasificarlas en tácticas o estratégicas",
         "Identificar brechas donde la Oficina podría aportar valor estratégico y no lo está haciendo",
         "Incluir a la Oficina en el proceso de planificación estratégica anual de la organización",
-        "Definir métricas e indicadores que vinculen calidad con resultados de negocio (costos, crecimiento, satisfacción del cliente)"
+        "Definir métricas e indicadores que vinculen calidad con resultados de negocio (costos, crecimiento, satisfacción del cliente)",
+        "Si tu negocio crece, define con claridad quién se encarga de la ingeniería de calidad y quién de la gestión estratégica de calidad"
       ],
       "entregable_esperado": "Informe de posicionamiento de la Oficina con actividades tácticas y estratégicas mapeadas y plan de expansión de su rol",
       "nodos_previos": [
         "oficina_calidad_y_excelencia",
-        "organizaciones_paralelas_cambio"
+        "organizaciones_paralelas_cambio",
+        "consejo_de_calidad_y_rol_del_director"
       ],
       "nodos_siguientes": [
-        "desarrollo_expertos_capaces"
+        "desarrollo_expertos_capaces",
+        "formacion_seleccion_y_retencion_de_personal"
       ],
       "condiciones_activacion": [
         "Cuando la Oficina de Calidad es percibida solo como función de inspección/control",
         "Si se busca elevar el rol de calidad a un nivel de asesoría ejecutiva"
       ],
-      "etiqueta_arbol": "Balancea lo Táctico y Estratégico"
+      "etiqueta_arbol": "Balancea lo Táctico y Estratégico",
+      "ids_alias": [
+        "gestion_estrategica_de_calidad_sqm"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "gestion_estrategica_de_calidad_sqm",
+          "titulo": "Gestión Estratégica de la Calidad",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "role_playing": {
       "node_id": "role_playing",
@@ -107433,7 +107587,7 @@
         "inspeccion_optima_proceso",
         "eliminar_cuotas_numericas_trabajadores",
         "falacia_meta_numerica_sin_metodo",
-        "sistemas_recompensa_aleatorios",
+        "falacia_recompensa_loteria",
         "trampa_del_promedio_como_estandar"
       ],
       "condiciones_activacion": [
@@ -108350,7 +108504,8 @@
         "Cuando la empresa usa premios individuales mensuales (empleado del mes) basados en métricas de quejas o errores",
         "Cuando el sistema de reconocimiento ha perdido efectividad motivacional con el tiempo"
       ],
-      "etiqueta_arbol": "Duda de tu Empleado del Mes"
+      "etiqueta_arbol": "Duda de tu Empleado del Mes",
+      "deprecado": true
     },
     "sistemas_sabios_vs_ignorantes": {
       "node_id": "sistemas_sabios_vs_ignorantes",
@@ -126373,7 +126528,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 201,
+    "nodos_sin_enlaces_entrantes": 208,
     "enlaces_rotos_en_grafo": 0
   }
 }

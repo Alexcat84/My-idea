@@ -10,19 +10,29 @@
     "Comparar los registros posteriormente en un ambiente sin jerarquía o temor.",
     "Usar un gráfico simple (como el de Fig. 51/52) para visualizar acuerdos y desacuerdos por tipo de caso.",
     "Investigar los casos de desacuerdo para identificar necesidad de mejores definiciones o entrenamiento.",
-    "Recordar que el acuerdo entre inspectores no garantiza que el juicio sea correcto, solo que existe un sistema consistente."
+    "Recordar que el acuerdo entre inspectores no garantiza que el juicio sea correcto, solo que existe un sistema consistente.",
+    "Definir un esquema de muestreo mecánico (no aleatorio) para que cada inspector seleccione ítems de diferentes partes del lote.",
+    "Programar inspecciones conjuntas periódicas (ej. cada 20° ítem) donde ambos evalúen el mismo ítem."
   ],
   "entregable_esperado": "Sistema de registro independiente y comparación posterior implementado entre inspectores/certificadores, con gráfico de seguimiento de acuerdos/desacuerdos.",
   "nodos_previos": [
     "administracion_de_inspeccion",
     "gestion_testimonios"
   ],
-  "nodos_siguientes": [
-    "comparacion_inspectores_independientes"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando dos o más personas deben emitir un juicio de calidad conjunto sobre un mismo ítem o caso.",
     "Cuando existe una relación jerárquica entre los evaluadores que podría sesgar el consenso."
   ],
-  "etiqueta_arbol": "Cuestiona el Consenso al Inspeccionar"
+  "etiqueta_arbol": "Cuestiona el Consenso al Inspeccionar",
+  "ids_alias": [
+    "comparacion_inspectores_independientes"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "comparacion_inspectores_independientes",
+      "titulo": "Comparación Sistemática de Dos o Más Inspectores Independientes",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

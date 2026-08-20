@@ -14,14 +14,26 @@
   ],
   "entregable_esperado": "Un enunciado de problema claro y validado según los criterios MOMS, listo para iniciar el análisis de causa raíz.",
   "nodos_previos": [
-    "herramientas_analisis_causa_raiz"
+    "herramientas_analisis_causa_raiz",
+    "juran_rcca_metodo"
   ],
   "nodos_siguientes": [
-    "analisis_sintomas"
+    "analisis_sintomas",
+    "analisis_diagnostico_causa"
   ],
   "condiciones_activacion": [
     "Cuando existe un problema de calidad recurrente o crítico que requiere ser abordado formalmente.",
     "Cuando el equipo necesita enfocar sus esfuerzos en un problema bien delimitado."
   ],
-  "etiqueta_arbol": "Selecciona y Redacta el Problema"
+  "etiqueta_arbol": "Selecciona y Redacta el Problema",
+  "ids_alias": [
+    "definicion_problema_moms"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "definicion_problema_moms",
+      "titulo": "Definición del Problema mediante Criterio MOMS",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

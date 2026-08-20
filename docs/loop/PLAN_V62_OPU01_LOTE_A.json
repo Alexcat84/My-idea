@@ -1,0 +1,465 @@
+{
+ "operacion": "OP-U-01",
+ "fecha": "2026-08-20",
+ "estado": "SELLADO",
+ "nomina": "docs/loop/_v62_componentes.jsonl, el recomputo corrido ANTES de la primera operacion de la vuelta 62",
+ "tramo_definido_en": "docs/loop/TRAMO6_V61.jsonl, abierto con scripts/loop/abrir_tramo_de_opu01.py en la vuelta 61 y FIJADO ahi. EL INSUMO NO SE RE-MIDE: 21 actos, puestos 30 a 50 de hoy y 250 a 270 en la nomina de la 48, todos PURO A y fusion pura, solape con los tramos 1 a 5 CERO. ES UN TRAMO CORTO POR AGOTAMIENTO Y ES EL ULTIMO DE OP-U-01: la vara del tramo es un PREFIJO CON TOPE de cincuenta y no un minimo (acta 61, D1 y pregunta 1, registrada en docs/plan/03_FUSIONES.md). COTEJADO CONTRA LOS NODOS DE HOY antes de escribir una linea de este plan: 21 actos mirados, 21 vivos, 0 ya fundidos, DESCALCES 0 (docs/loop/SALIDA_V62_COTEJO_INSUMO.txt).",
+ "dossier": "docs/loop/SALIDA_V61_DOSSIER_TRAMO6.txt (P.5, el acto leido entero con su razon entera pegada, 848 lineas) mas docs/loop/SALIDA_V61_VARAS_TRAMO6.txt",
+ "vara": "LOS 21 ACTOS DEL TRAMO 6 SON DE FUSION PURA (medido por la vuelta 61: tamano 2 y PURO A, 21 de 21): un acto de dos miembros con UN par A directo y ningun mixto. No hay lectura P.12 que hacer. El superviviente lo elige el CONTENIDO como P.8 lo define; UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4); si TODAS las varas de contenido concuerdan se funde a su lado; si el contenido EMPATA ENTERO, EL CABLEADO DECIDE SOLO (P.8); si dos varas de contenido CHOCAN decide la pieza DECLARADA (acta 53 pregunta 3, y tambien contra DOS conteos por acta 59 pregunta 2), y si la declarada esta a los dos lados se DECLARA (acto 29 del tramo 5). Y LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1, registrada en 03_FUSIONES.md): en un acto de dos donde el unico candidato limpio es la puerta, LA PUERTA SOBREVIVE y el choque se registra en el motivo. EL ROTULO SOLO (LINEA contra PASOS) NUNCA DECIDE, y LA RAMA DE LA CANTIDAD COMO VARA SIGUE NO ADOPTADA y no se usa en ningun acto de este plan.",
+ "varas_impresas": "docs/loop/SALIDA_V61_VARAS_TRAMO6.txt, una fila por acto con pasos, condiciones y cableado contados por maquina y la FORMA del veredicto impresa: 12 de UNA SOLA VARA, 5 de TODAS DE ACUERDO y 4 de CONTENIDO EMPATA. NI UN CHOCAN Y NI UN EMPATE SIN VARA en el tramo entero, que es lo que lo hace, por forma, el tramo mas limpio de la campana. El auditor lo re-corrio en la vuelta 61 y dio diff VACIO (acta 61, seccion 1). Ninguna cifra de este plan esta tecleada. LA FORMA IMPRESA ES MEDICION DE LOS TRES CONTEOS Y NO ADJUDICACION: no conoce la pieza declarada ni la guarda 1B, y por eso un acto puede salir de la tabla apuntando a un lado y decidirse al otro, que es exactamente lo que pasa en el acto 20.",
+ "colisiones_esperadas": "docs/loop/SALIDA_V61_COLISIONES_ESPERADAS_TRAMO6.txt, medidas por la vuelta 61 ANTES de tocar un nodo sobre EL ARCHIVO ENTERO, por PAR RESUELTO: 42 combinaciones simuladas y CERO que fabriquen colision, con cualquiera de los dos supervivientes en cualquiera de los 21 actos. El censo esperado de cada lote es CERO y una colision real DETIENE.",
+ "vara_de_las_puertas": "GUARDA 1B: ningun absorbido de este plan es semilla de entrada ni extremo de puente aprobado, comprobado por el generador y otra vez por el ejecutor. EN EL TRAMO 6 HAY UN SOLO ACTO CON MIEMBRO PUERTA, EL 20 (mantenimiento_sistema_cui, leido del dossier y de la columna puerta del cuadro de varas), Y AHI LA PUERTA NO ES LA QUE EL CONTENIDO ELIGE: el choque se registra en el motivo por acta 54, pregunta 1.",
+ "politica_del_reparto": "LA HEREDADA Y CITADA, no reinventada (acta 51 D3; acta 52 D5 y D10; acta 54 pregunta 5; acta 55 preguntas 3, 4 y 5; registros de las vueltas 53 a 57 y 60): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND, y una pieza mitad propia mitad ya dicha va de APPEND ENTERO con el solape declarado para la poda de la fase 04. CUANDO LA RAZON DECLARA COMPARTIDO UN GESTO QUE EL TEXTO NO DICE, PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3). LAS PERDIDAS DE CONDICIONES NO VAN DE APPEND POR DEFECTO: se NOMBRAN mientras el INCISO de condiciones no exista (acta 55, pregunta 5), y solo van de APPEND cuando la condicion es un DISPARADOR DISTINTO y no un matiz del que el superviviente ya tiene. El INCISO es siempre TROZO VERBATIM del paso que muere, y se EXTRAE del nodo en vez de teclearse. Y LA NOVEDAD DE ESTE TRAMO: TODA perdida nombrada va ADEMAS sellada en el campo perdidas de su acto, con su especie, donde vive y a quien se enruta.",
+ "contrato_de_perdidas": "CAMPO PROPIO v1",
+ "vuelta": 62,
+ "tramo": "6, LOTE A: LOS ONCE PRIMEROS ACTOS DEL TRAMO EN SU ORDEN IMPRESO (1 a 11), SIN APARTAR NINGUNO. Es el primer lote de un tramo que el acta 61 declaro TRAMO FINAL POR AGOTAMIENTO: veintiuno, no cincuenta. Y ES EL PRIMER LOTE DE LA CAMPANA QUE NACE CON EL CONTRATO DE LA PERDIDA SELLADA EN CAMPO PROPIO (CAMPO PROPIO v1): cada acto trae su lista perdidas, y la lista vacia es una DECLARACION de cero perdidas, no un silencio",
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "gestion_miedo_reportes",
+    "administracion_sin_miedo"
+   ],
+   "miembros_del_acto_entero": [
+    "administracion_sin_miedo",
+    "gestion_miedo_reportes"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "gestion_miedo_reportes",
+   "motivo": "UNA SOLA VARA DE CONTENIDO NO EMPATADA, Y BASTA (acta 53, pregunta 4). El cuadro de varas fijado (fila 1) mide pasos 4 contra 4, o sea EMPATE, y condiciones 2 contra 3, que apunta a gestion_miedo_reportes: esa es la unica vara de contenido que separa y decide sola. EL CABLEADO NO ENTRA Y SE DICE POR QUE, porque apunta al otro lado con la diferencia mas ancha del acto (7 contra 3): por P.8 el cableado solo habla a contenido EMPATADO, y aqui el contenido no empata entero, lo rompe la cuenta de condiciones. La razon del puesto 2705 dice A POR CONTENCION y NO NOMBRA superviviente, asi que no hay pieza declarada que pese contra la vara. LA RAZON ADEMAS EMPAREJA LOS PASOS UNO A UNO con todas sus letras (detectar el patron anomalo cerca de limites, investigar el temor, quitar el castigo, dar seguridad o empoderar), y ese emparejamiento es el que este reparto sigue.",
+   "absorbidos": [
+    "administracion_sin_miedo"
+   ],
+   "pasos": {
+    "administracion_sin_miedo": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:4"
+    }
+   },
+   "condiciones": {
+    "administracion_sin_miedo": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "Las seis piezas del absorbido estaban ya dichas por el superviviente, una a una y en el mismo orden. SE PIERDE UN PARAMETRO Y VA SELLADO EN EL CAMPO: el escenario del LIMITE DE ESPECIFICACION del paso 1 de administracion_sin_miedo. El superviviente habla de limites REGULATORIOS en su paso 1 y de limites DE ACEPTACION en su condicion 1, que es el mismo fenomeno en otro escenario, tal como la propia razon lo dice; pero la palabra especificacion no queda en el nodo vivo y por eso se declara en vez de darla por cubierta. NO SE ADOSA DE INCISO porque el paso 1 del superviviente cierra en punto y el inciso tendria que abrir frase nueva, que ya no es un inciso.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "el escenario del limite DE ESPECIFICACION como sitio donde mirar la concentracion anomala de datos; el superviviente solo nombra el limite regulatorio y el de aceptacion",
+     "donde": "paso 1 de administracion_sin_miedo",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    }
+   ]
+  },
+  {
+   "orden": 2,
+   "miembros": [
+    "contacto_con_el_cliente",
+    "contacto_con_el_cliente_2"
+   ],
+   "miembros_del_acto_entero": [
+    "contacto_con_el_cliente",
+    "contacto_con_el_cliente_2"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "contacto_con_el_cliente",
+   "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO (P.8). El cuadro de varas fijado (fila 2) mide pasos 4 contra 4 y condiciones 2 contra 2: las DOS varas de contenido empatan al digito, que es exactamente el caso en que P.8 le da la palabra al cableado. El cableado marca 8 contra 2 a favor de contacto_con_el_cliente. Y LA PIEZA DECLARADA APUNTA AL MISMO LADO, asi que no hay choque que resolver: la razon del puesto 2709 escribe superviviente POR ELEGIR y entre parentesis nombra contacto_con_el_cliente, el mas completo. Las dos vias coinciden.",
+   "absorbidos": [
+    "contacto_con_el_cliente_2"
+   ],
+   "pasos": {
+    "contacto_con_el_cliente_2": {
+     "1": "INCISO:1|aunque seas tu mismo|, ",
+     "2": "INCISO:3|manejar situaciones dificiles|, incluido ",
+     "3": "CUBIERTO:4",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "contacto_con_el_cliente_2": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL ACTO CIERRA CON CERO PERDIDAS Y ESO SE DECLARA, no se calla: las cuatro piezas que no estaban ya dichas viajan, dos de INCISO y dos enteras. La revision periodica de la percepcion del cliente (paso 4 del absorbido) es un GESTO DISTINTO que el superviviente no hace en ningun grado y por eso va de APPEND; la propia razon la llama cierre del ciclo. La condicion 2 va de APPEND porque es un DISPARADOR DISTINTO y no un matiz (recibir quejas por el trato, contra tener personal de atencion o estar disenando la contratacion), que es la vara del acta 55, pregunta 5.",
+   "perdidas": []
+  },
+  {
+   "orden": 3,
+   "miembros": [
+    "analisis_de_sistemas_de_medicion_msa",
+    "errores_de_medicion"
+   ],
+   "miembros_del_acto_entero": [
+    "analisis_de_sistemas_de_medicion_msa",
+    "errores_de_medicion"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "analisis_de_sistemas_de_medicion_msa",
+   "motivo": "UNA SOLA VARA DE CONTENIDO NO EMPATADA, Y BASTA, Y LA PIEZA DECLARADA APUNTA AL MISMO LADO. El cuadro fijado (fila 3) mide pasos 6 contra 5 hacia el MSA, condiciones 2 contra 2 empatadas y cableado 3 contra 3 empatado: la cuenta de pasos es la unica vara que separa y decide sola. La razon del puesto 2727 NOMBRA superviviente con todas sus letras, A por contencion, superviviente el MSA (que carga la denominacion), y anade la lectura entera: errores_de_medicion es la parte de sesgo y repetibilidad CONTENIDA en el MSA completo, que ademas trae el Gauge R&R y la comparacion 5.15 sigma. Vara y pieza declarada coinciden.",
+   "absorbidos": [
+    "errores_de_medicion"
+   ],
+   "pasos": {
+    "errores_de_medicion": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:4",
+     "5": "INCISO:6|respecto a estándares de medida reconocidos|, "
+    }
+   },
+   "condiciones": {
+    "errores_de_medicion": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "DOS PERDIDAS SELLADAS EN EL CAMPO, y las dos son de especie distinta. La primera es DE PARAMETRO DE PASO: laboratorio como fuente de variabilidad del paso 2 del absorbido, que el superviviente no lista (el suyo dice material, analistas, aparatos y dias, donde operador calza con analistas, equipo con aparatos y dia con dias, pero laboratorio no tiene contraparte). No se adosa de INCISO porque el paso 2 del superviviente cierra su lista entre parentesis y meter un cuarto elemento fuera del parentesis no se lee limpio. La segunda es DE CONDICIONES: el disparador del enfoque Six Sigma con niveles de defectos exigidos, que es un contexto que el superviviente no nombra; se NOMBRA en vez de ir de APPEND porque es un matiz del disparador que el superviviente ya tiene (validar la precision antes de decidir) y no un disparador distinto, que es la vara del acta 55, pregunta 5. El paso 5 SI viaja de INCISO porque el paso 6 del superviviente no cierra en punto y la calibracion contra estandares reconocidos se adosa limpia.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "el LABORATORIO como fuente de variabilidad del sistema de medicion; el superviviente lista material, analistas, aparatos y dias, y no lo incluye",
+     "donde": "paso 2 de errores_de_medicion",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "el disparador de estar bajo enfoque Six Sigma con niveles de defectos exigidos; el superviviente dispara por validar la precision antes de decidir y por dudas sobre la exactitud, y no nombra el programa",
+     "donde": "condicion 1 de errores_de_medicion",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    }
+   ]
+  },
+  {
+   "orden": 4,
+   "miembros": [
+    "definicion_problema_moms_2",
+    "definicion_problema_moms"
+   ],
+   "miembros_del_acto_entero": [
+    "definicion_problema_moms",
+    "definicion_problema_moms_2"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "definicion_problema_moms_2",
+   "motivo": "TODAS LAS VARAS DE CONTENIDO DE ACUERDO, Y SE FUNDE A SU LADO. El cuadro fijado (fila 4) mide pasos 4 contra 5 y condiciones 1 contra 2, y LAS DOS apuntan a definicion_problema_moms_2: no hay nada que desempatar. EL CABLEADO NO ENTRA porque el contenido no empata (apunta al otro lado, 4 contra 2, y por P.8 solo habla a contenido empatado). La razon del puesto 2744 escribe superviviente POR ELEGIR, o sea que NO nombra pieza declarada, y por eso mandan las varas de contenido. La razon ademas describe lo que el superviviente trae de mas: la regla de no incluir causas, culpas ni soluciones, y la S de especifico.",
+   "absorbidos": [
+    "definicion_problema_moms"
+   ],
+   "pasos": {
+    "definicion_problema_moms": {
+     "1": "CUBIERTO:2",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:4",
+     "4": "CUBIERTO:4"
+    }
+   },
+   "condiciones": {
+    "definicion_problema_moms": {
+     "1": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "Las cinco piezas del absorbido estaban ya dichas. DOS PERDIDAS DE PARAMETRO SELLADAS EN EL CAMPO, las dos del criterio MOMS y las dos porque el paso 4 del superviviente enumera las letras sin decir COMO se comprueba cada una: la O se verificaba MEDIANTE SINTOMAS en el absorbido, y la M de manejable se confirmaba DENTRO DEL ALCANCE DEL EQUIPO. No se adosan de INCISO porque el paso 4 del superviviente cierra en punto y las dos precisiones tendrian que abrir frase nueva. Se dice ademas lo que NO se pierde: el alcance del equipo sigue vivo en la condicion 2 del superviviente, que habla del equipo enfocando esfuerzos en un problema bien delimitado.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "MEDIANTE SINTOMAS, que es como se comprueba la O de observable; el superviviente enumera las cuatro letras del criterio y no dice con que se verifica cada una",
+     "donde": "paso 3 de definicion_problema_moms",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "DENTRO DEL ALCANCE DEL EQUIPO, que es la vara con la que se confirma la M de manejable en el paso 4 del absorbido",
+     "donde": "paso 4 de definicion_problema_moms",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    }
+   ]
+  },
+  {
+   "orden": 5,
+   "miembros": [
+    "planificacion_gobierno_organizaciones_familiares",
+    "gobierno_corporativo_juntas_directivas"
+   ],
+   "miembros_del_acto_entero": [
+    "gobierno_corporativo_juntas_directivas",
+    "planificacion_gobierno_organizaciones_familiares"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "planificacion_gobierno_organizaciones_familiares",
+   "motivo": "UNA SOLA VARA DE CONTENIDO NO EMPATADA, Y BASTA. El cuadro fijado (fila 5) mide pasos 5 contra 6 hacia planificacion_gobierno_organizaciones_familiares y condiciones 3 contra 3 empatadas: la cuenta de pasos separa y decide sola. EL CABLEADO NO ENTRA Y SE DICE, porque apunta al otro lado y con ventaja (4 contra 1, y el superviviente elegido no tiene ni un siguiente): por P.8 el cableado solo habla a contenido EMPATADO y aqui el contenido no empata. La razon del puesto 2760 escribe A por fusion mutua, superviviente POR ELEGIR, o sea que NO nombra pieza declarada. VA MARCADO COMO DISCUTIBLE en el reporte precisamente por eso: es el acto del lote donde la vara de contenido y el cableado apuntan mas lejos uno del otro.",
+   "absorbidos": [
+    "gobierno_corporativo_juntas_directivas"
+   ],
+   "pasos": {
+    "gobierno_corporativo_juntas_directivas": {
+     "1": "CUBIERTO:6",
+     "2": "CUBIERTO:6",
+     "3": "CUBIERTO:2",
+     "4": "CUBIERTO:1",
+     "5": "INCISO:4|respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación|: busca "
+    }
+   },
+   "condiciones": {
+    "gobierno_corporativo_juntas_directivas": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:3"
+    }
+   },
+   "nota_del_reparto": "La pieza mas cargada del acto, LAS CUALIDADES DEL DIRECTOR INDEPENDIENTE, viaja ENTERA de INCISO al paso 4 del superviviente, que dice a quien sumar y no decia con que vara elegirlo. UNA PERDIDA DE CONDICIONES SELLADA: el disparador de querer PROFESIONALIZAR LA TOMA DE DECISIONES ESTRATEGICAS, que el superviviente no nombra (los suyos son el retiro, las varias generaciones y la junta que solo firma). Se NOMBRA y no va de APPEND porque es un matiz de la junta que solo firma sin supervisar de verdad, no un disparador distinto (acta 55, pregunta 5).",
+   "perdidas": [
+    {
+     "especie": "DE CONDICIONES",
+     "que": "el disparador de querer PROFESIONALIZAR LA TOMA DE DECISIONES ESTRATEGICAS; el superviviente dispara por el retiro del fundador, por varias generaciones en la gestion y por una junta que solo firma",
+     "donde": "condicion 3 de gobierno_corporativo_juntas_directivas",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    }
+   ]
+  },
+  {
+   "orden": 6,
+   "miembros": [
+    "falacia_recompensa_loteria",
+    "sistemas_recompensa_aleatorios"
+   ],
+   "miembros_del_acto_entero": [
+    "falacia_recompensa_loteria",
+    "sistemas_recompensa_aleatorios"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "falacia_recompensa_loteria",
+   "motivo": "UNA SOLA VARA DE CONTENIDO NO EMPATADA, Y BASTA. El cuadro fijado (fila 6) mide pasos 4 contra 4, empate, y condiciones 3 contra 2 hacia falacia_recompensa_loteria: esa es la unica vara de contenido que separa. EL CABLEADO NO ENTRA porque el contenido no empata entero, y apunta al otro lado (1 contra 2), que se dice en vez de callarse. La razon del puesto 2762 escribe A por fusion mutua, superviviente POR ELEGIR: NO nombra pieza declarada. Y la razon marca ella misma su discutible, que se trae sin tocar: el segundo trae el calculo Poisson y el primero la rama de la causa especial como aprendizaje.",
+   "absorbidos": [
+    "sistemas_recompensa_aleatorios"
+   ],
+   "pasos": {
+    "sistemas_recompensa_aleatorios": {
+     "1": "APPEND",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:3",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "sistemas_recompensa_aleatorios": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL CALCULO DE POISSON VIAJA ENTERO Y NO SE PIERDE: es un GESTO DISTINTO del analisis de estabilidad del grupo con cartas de control, porque se calcula POR TRABAJADOR y sobre su promedio historico, no sobre el sistema. Lo mismo la comunicacion del criterio de merito, que el superviviente no hace en ningun grado. UNA PERDIDA DE PARAMETRO SELLADA: el REEMPLAZO del reconocimiento puntual por analisis de tendencias en graficos de control individuales; el superviviente si dice que hacer (evitar los premios de merito individual y mejorar el sistema), pero no nombra ese mecanismo concreto, y el paso 3 cierra en punto y coma dentro de una frase que ya lleva dos ramas, asi que un INCISO no se leeria limpio. La condicion 2 va de APPEND por ser DISPARADOR DISTINTO: un sistema de reconocimiento que YA existe y perdio efectividad no es ninguno de los tres del superviviente, que miran ANTES de implementar, la alta variabilidad y el diseno de incentivos. EL ACTO CRECE DE 4 A 6 PASOS Y SE DECLARA EL SOLAPE para la poda de la fase 04.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "el REEMPLAZO del reconocimiento por desempeno puntual con ANALISIS DE TENDENCIAS EN GRAFICOS DE CONTROL INDIVIDUALES; el superviviente dice evitar el premio individual y mejorar el sistema, y no nombra ese mecanismo",
+     "donde": "paso 3 de sistemas_recompensa_aleatorios",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    }
+   ]
+  },
+  {
+   "orden": 7,
+   "miembros": [
+    "riesgos_consenso_inspeccion",
+    "comparacion_inspectores_independientes"
+   ],
+   "miembros_del_acto_entero": [
+    "comparacion_inspectores_independientes",
+    "riesgos_consenso_inspeccion"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "riesgos_consenso_inspeccion",
+   "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO (P.8). El cuadro fijado (fila 7) mide pasos 5 contra 5 y condiciones 2 contra 2: las DOS varas de contenido empatan al digito. El cableado marca 1 contra 3 a favor de riesgos_consenso_inspeccion y decide solo. NO ES UN EMPATE SIN VARA y se dice por que: el empate sin vara es cuando TODO empata, cableado incluido (acta 53, pregunta 4), y aqui el cableado separa. La razon del puesto 2773 escribe superviviente POR ELEGIR, o sea que no hay pieza declarada que pese contra el cableado. VA MARCADO COMO DISCUTIBLE porque la propia razon trae un discutible fuerte: uno es un PROCEDIMIENTO de medicion de la variacion entre inspectores y el otro una ADVERTENCIA conceptual sobre el consenso.",
+   "absorbidos": [
+    "comparacion_inspectores_independientes"
+   ],
+   "pasos": {
+    "comparacion_inspectores_independientes": {
+     "1": "APPEND",
+     "2": "CUBIERTO:1",
+     "3": "APPEND",
+     "4": "CUBIERTO:3",
+     "5": "CUBIERTO:4"
+    }
+   },
+   "condiciones": {
+    "comparacion_inspectores_independientes": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "EL PROCEDIMIENTO VIAJA Y LA ADVERTENCIA SOBREVIVE, que es lo que hace que este acto no pierda el lado que el cableado no eligio: el esquema de muestreo mecanico y las inspecciones conjuntas periodicas son GESTOS DISTINTOS que el superviviente no hace en ningun grado, y van de APPEND. TRES PERDIDAS SELLADAS EN EL CAMPO, dos de parametro y una de condiciones, y ninguna se calla: el grafico del superviviente es POR TIPO DE CASO y el del absorbido era A LO LARGO DEL TIEMPO; la investigacion del desacuerdo del superviviente busca mejores definiciones o entrenamiento y no la particion diagnostica entre diferencias de INSPECTORES y diferencias de MUESTRAS; y la condicion 2 del superviviente exige RELACION JERARQUICA mientras la del absorbido dispara con cualquier sospecha de sesgo o divergencia sistematica. Ninguna de las tres se adosa de INCISO porque los tres pasos del superviviente cierran en punto.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "el seguimiento A LO LARGO DEL TIEMPO del grafico de los inspectores; el grafico del superviviente organiza acuerdos y desacuerdos POR TIPO DE CASO, que no es lo mismo que la serie longitudinal",
+     "donde": "paso 4 de comparacion_inspectores_independientes",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "la particion diagnostica de la discrepancia, si viene de diferencias ENTRE INSPECTORES o ENTRE MUESTRAS; el superviviente investiga el desacuerdo para pedir mejores definiciones o entrenamiento y no hace esa separacion",
+     "donde": "paso 5 de comparacion_inspectores_independientes",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "el disparador de la sospecha de sesgo o divergencia sistematica entre evaluadores SIN relacion jerarquica de por medio; la condicion 2 del superviviente exige esa relacion jerarquica",
+     "donde": "condicion 2 de comparacion_inspectores_independientes",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    }
+   ]
+  },
+  {
+   "orden": 8,
+   "miembros": [
+    "revision_progreso",
+    "revision_progreso_breakthrough"
+   ],
+   "miembros_del_acto_entero": [
+    "revision_progreso",
+    "revision_progreso_breakthrough"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "revision_progreso",
+   "motivo": "TODAS LAS VARAS DE CONTENIDO DE ACUERDO, Y SE FUNDE A SU LADO. El cuadro fijado (fila 8) mide pasos 5 contra 4 y condiciones 2 contra 1, y LAS DOS apuntan a revision_progreso; el cableado, que ni siquiera hace falta, apunta al mismo sitio (4 contra 3). No hay nada que desempatar ni choque que registrar. La razon del puesto 2780 escribe A por fusion mutua, superviviente POR ELEGIR, o sea que no nombra pieza declarada, y las varas mandan solas.",
+   "absorbidos": [
+    "revision_progreso_breakthrough"
+   ],
+   "pasos": {
+    "revision_progreso_breakthrough": {
+     "1": "INCISO:1|por ejemplo cada trimestre|, ",
+     "2": "APPEND",
+     "3": "APPEND",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "revision_progreso_breakthrough": {
+     "1": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "EL ACTO CIERRA CON CERO PERDIDAS Y ESO SE DECLARA. Es el reparto mas ancho del lote y se dice entero: TRES de las cinco piezas viajan enteras, porque son gestos que el superviviente no hace en ningun grado. El FORMATO SIMPLE Y ESTANDAR es un artefacto distinto del acto de documentar y comunicar; el COSTO, LA INVERSION Y EL AHORRO NETO son la unica linea financiera del acto entero y el superviviente no tiene ninguna; y REVISAR EL PROPIO PROCESO DE SEGUIMIENTO como parte del control de calidad general es un paso META que ningun paso del superviviente cubre. EL ACTO CRECE DE 5 A 8 PASOS Y SE DECLARA EL SOLAPE para la poda de la fase 04, que es la via del D9 de la vuelta 60.",
+   "perdidas": []
+  },
+  {
+   "orden": 9,
+   "miembros": [
+    "rol_tactico_estrategico_oficina",
+    "gestion_estrategica_de_calidad_sqm"
+   ],
+   "miembros_del_acto_entero": [
+    "gestion_estrategica_de_calidad_sqm",
+    "rol_tactico_estrategico_oficina"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "rol_tactico_estrategico_oficina",
+   "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO (P.8). El cuadro fijado (fila 9) mide pasos 4 contra 4 y condiciones 2 contra 2: las DOS varas de contenido empatan al digito, y el cableado marca 2 contra 3 a favor de rol_tactico_estrategico_oficina. NO ES EMPATE SIN VARA porque el cableado separa (acta 53, pregunta 4). La razon del puesto 2787 escribe A por fusion mutua, superviviente POR ELEGIR, sin nombrar pieza declarada. La diferencia del cableado es la mas estrecha del lote, UNA arista, y por eso VA MARCADO COMO DISCUTIBLE en el reporte.",
+   "absorbidos": [
+    "gestion_estrategica_de_calidad_sqm"
+   ],
+   "pasos": {
+    "gestion_estrategica_de_calidad_sqm": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:1",
+     "3": "APPEND",
+     "4": "CUBIERTO:3"
+    }
+   },
+   "condiciones": {
+    "gestion_estrategica_de_calidad_sqm": {
+     "1": "CUBIERTO:2",
+     "2": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "EL REPARTO DE ROLES CUANDO EL NEGOCIO CRECE viaja entero: separar quien lleva la ingenieria de calidad de quien lleva la gestion estrategica es un GESTO DISTINTO que el superviviente no hace, porque el suyo audita ACTIVIDADES y no reparte PERSONAS. UNA PERDIDA DE PARAMETRO SELLADA por la misma razon vista del otro lado: el paso 1 del absorbido mira a QUIEN MANEJA LA CALIDAD y pregunta si piensa solo en lo tecnico o tiene vision de conjunto, y el paso 1 del superviviente clasifica las ACTIVIDADES en tacticas o estrategicas. La razon empareja los dos pasos con todas sus letras, asi que el gesto esta cubierto; lo que no queda es la mirada sobre la persona, y por eso se sella en vez de darse por dicha.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "la mirada sobre QUIEN MANEJA LA CALIDAD, si piensa solo en lo tecnico o tambien tiene vision de conjunto; el superviviente clasifica actividades en tacticas o estrategicas y no evalua a la persona",
+     "donde": "paso 1 de gestion_estrategica_de_calidad_sqm",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    }
+   ]
+  },
+  {
+   "orden": 10,
+   "miembros": [
+    "roadmap_despliegue_lean_six_sigma",
+    "juran_transformation_roadmap"
+   ],
+   "miembros_del_acto_entero": [
+    "juran_transformation_roadmap",
+    "roadmap_despliegue_lean_six_sigma"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "roadmap_despliegue_lean_six_sigma",
+   "motivo": "UNA SOLA VARA DE CONTENIDO NO EMPATADA, Y BASTA. El cuadro fijado (fila 10) mide pasos 5 contra 9 hacia roadmap_despliegue_lean_six_sigma, condiciones 2 contra 2 empatadas y cableado 3 contra 3 empatado: la cuenta de pasos es la unica vara que separa, y separa por la diferencia mas ancha del lote. La razon del puesto 2811 escribe A por equivalencia del roadmap y describe el segundo como el primero con pasos mas granulares y vocabulario Six Sigma, no una iniciativa distinta, con las CINCO FASES coincidiendo una a una. VA MARCADO COMO DISCUTIBLE en el reporte porque la propia razon lo marca fuerte: uno se rotula transformacion Juran y el otro despliegue Lean Six Sigma.",
+   "absorbidos": [
+    "juran_transformation_roadmap"
+   ],
+   "pasos": {
+    "juran_transformation_roadmap": {
+     "1": "INCISO:1|lealtad de cliente, COPQ, revisión de calidad de clase mundial|, recopilando ",
+     "2": "APPEND",
+     "3": "INCISO:6|charter, equipo y revisión de progreso|, con ",
+     "4": "INCISO:7|unidad por unidad durante 3-5 años|, ",
+     "5": "INCISO:9|integrar completamente la mejora en la operación, alinear compensación y realizar auditorías regulares|, "
+    }
+   },
+   "condiciones": {
+    "juran_transformation_roadmap": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "EL ACTO CIERRA CON CERO PERDIDAS Y ESO SE DECLARA, y es el acto de los INCISOS del lote: CUATRO de las cinco piezas de paso se adosan verbatim a la fase que les toca, porque los pasos del superviviente nombran las fases y cierran entre parentesis, asi que el contenido concreto de cada fase se adosa limpio detras. La quinta viaja entera: IDENTIFICAR LOS PROCESOS CLAVE Y SELECCIONAR LOS PROYECTOS PILOTO es un GESTO DISTINTO, porque el superviviente define QUIEN guia en la fase Prepare y ejecuta los primeros proyectos en la Launch, pero en ningun paso dice como se ELIGEN. Las cinco fases del absorbido quedan las cinco nombradas dentro del superviviente.",
+   "perdidas": []
+  },
+  {
+   "orden": 11,
+   "miembros": [
+    "orgullo_por_el_trabajo",
+    "eliminacion_barreras_orgullo_del_trabajo"
+   ],
+   "miembros_del_acto_entero": [
+    "eliminacion_barreras_orgullo_del_trabajo",
+    "orgullo_por_el_trabajo"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "orgullo_por_el_trabajo",
+   "motivo": "TODAS LAS VARAS DE CONTENIDO DE ACUERDO, Y SE FUNDE A SU LADO. El cuadro fijado (fila 11) mide pasos 4 contra 5 y condiciones 2 contra 3, y LAS DOS apuntan a orgullo_por_el_trabajo; el cableado empata 3 contra 3 y por P.8 no habla, que aqui da igual porque el contenido ya decidio. La razon del puesto 2816 escribe A por fusion mutua sin nombrar superviviente, asi que mandan las varas. La razon marca su propio discutible fuerte y se trae sin tocar: orgullo trae que el supervisor conozca el trabajo tecnico, que roza el Punto 7 de Deming, y eliminacion trae revisar el pago por pieza, que roza el Punto 11.",
+   "absorbidos": [
+    "eliminacion_barreras_orgullo_del_trabajo"
+   ],
+   "pasos": {
+    "eliminacion_barreras_orgullo_del_trabajo": {
+     "1": "CUBIERTO:2",
+     "2": "INCISO:3|pago por pieza o incentivos individuales|, incluidos el ",
+     "3": "APPEND",
+     "4": "CUBIERTO:5"
+    }
+   },
+   "condiciones": {
+    "eliminacion_barreras_orgullo_del_trabajo": {
+     "1": "CUBIERTO:2",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PLAN CON RESPONSABLES Y PLAZOS viaja entero: es un GESTO DISTINTO, porque el superviviente habla, escucha y actua, pero en ningun paso ARMA UN PLAN con quien se encarga de cada barrera y para cuando. El pago por pieza se adosa de INCISO al paso 3 del superviviente, que ya elimina evaluaciones y no nombraba el destajo, y ademas su condicion viaja entera por ser DISPARADOR DISTINTO (todavia pagas por pieza, contra el ausentismo, los reportes repetidos y la participacion frustrada del superviviente). UNA PERDIDA DE PARAMETRO SELLADA: CAMBIAR LOS DISCURSOS MOTIVACIONALES Y LOS CARTELES, la mitad de RETIRAR los lemas. El superviviente hace la mitad de PONER accion visible sobre las sugerencias, que es donde el paso queda cubierto, pero no dice que haya que quitar los carteles, y esa es la letra del Punto 10 de Deming que se declara en vez de darse por dicha.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "CAMBIAR LOS DISCURSOS MOTIVACIONALES Y LOS CARTELES, o sea la mitad de RETIRAR los lemas; el superviviente hace la mitad de PONER accion visible sobre las sugerencias y no nombra los carteles",
+     "donde": "paso 4 de eliminacion_barreras_orgullo_del_trabajo",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    }
+   ]
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

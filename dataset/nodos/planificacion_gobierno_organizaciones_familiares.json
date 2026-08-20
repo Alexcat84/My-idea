@@ -9,7 +9,7 @@
     "Busca a alguien externo que te ayude a planear la sucesión y el mando",
     "Diseña un consejo familiar (family council) que represente a los familiares que son dueños",
     "Define reglas claras de cómo participa tu familia y qué esperas de la junta directiva",
-    "Decide qué necesitas para sumar a la junta a personas externas independientes",
+    "Decide qué necesitas para sumar a la junta a personas externas independientes: busca respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación",
     "Evita que los directores se metan en el día a día de tu negocio",
     "Si todavía no estás listo para una junta formal, empieza con un consejo asesor (advisory board) como paso intermedio"
   ],
@@ -17,11 +17,24 @@
   "nodos_previos": [
     "gobierno_corporativo_y_calidad"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "evaluacion_desempeno_junta_directiva",
+    "familia_normas_iso_9000"
+  ],
   "condiciones_activacion": [
     "Cuando empiezas a planear tu retiro de un negocio familiar",
     "Cuando hay varias generaciones de tu familia metidas en la gestión del negocio",
     "Cuando tu junta actual solo firma sin supervisar de verdad"
   ],
-  "etiqueta_arbol": "Organiza el Gobierno Familiar"
+  "etiqueta_arbol": "Organiza el Gobierno Familiar",
+  "ids_alias": [
+    "gobierno_corporativo_juntas_directivas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "gobierno_corporativo_juntas_directivas",
+      "titulo": "Gobierno Corporativo y Estructura de Juntas Directivas",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

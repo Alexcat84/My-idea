@@ -13,16 +13,33 @@
   ],
   "entregable_esperado": "Un diagnóstico de sesgos en el reporte de datos y un plan de acción para eliminar el miedo como fuente de distorsión de la información.",
   "nodos_previos": [
-    "ausencia_valor_verdadero"
+    "ausencia_valor_verdadero",
+    "aim_of_leadership",
+    "control_estadistico_de_procesos",
+    "deteccion_de_lideres_y_rezagados",
+    "distincion_causas_comunes_especiales",
+    "importancia_de_la_capacitacion"
   ],
   "nodos_siguientes": [
     "falacia_recompensa_loteria",
-    "eliminar_metas_numericas_gerencia"
+    "eliminar_metas_numericas_gerencia",
+    "administracion_de_inspeccion",
+    "deteccion_de_mentiras_organizacionales"
   ],
   "condiciones_activacion": [
     "Cuando los datos reportados muestran concentraciones sospechosas cerca de límites de aceptación.",
     "Cuando los trabajadores evitan reportar fallas por temor a ser culpados.",
     "Al diseñar sistemas de evaluación de desempeño individual."
   ],
-  "etiqueta_arbol": "Elimina el Miedo al Reportar"
+  "etiqueta_arbol": "Elimina el Miedo al Reportar",
+  "ids_alias": [
+    "administracion_sin_miedo"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "administracion_sin_miedo",
+      "titulo": "Administración sin Miedo",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }
