@@ -531,6 +531,212 @@ LOTES["B"] = {
 }
 
 
+
+LOTES["C"] = {
+    "titulo": "3, LOTE C DE LA VUELTA 56: LOS ACTOS 35 A 50 EN EL ORDEN IMPRESO DEL TRAMO, apartando el 37 y el 45, que quedan DECLARADOS por EMPATE SIN VARA (ni el contenido ni el cableado separan)",
+    "actos": [
+        {
+            "orden": 35,
+            "superviviente": "alineacion_de_objetivos_en_sistemas",
+            "motivo": "LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1, registrada en 03_FUSIONES.md), Y AQUI EL CONTENIDO NO TIENE ENTRE QUIEN ELEGIR. alineacion_de_objetivos_en_sistemas ES PUERTA (extremo de puente aprobado) y la guarda 1B exige que sobreviva: es el UNICO candidato limpio del acto. EL CHOQUE SE REGISTRA CON SUS CIFRAS Y ES DE CONTENIDO: pasos 4 contra 4, empatados, y condiciones 1 contra 2 A FAVOR DEL OTRO, que es la unica vara de contenido no empatada del acto; el cableado tambien apunta al otro (4 contra 5). MISMA FIGURA QUE LOS ACTOS 1 Y 15 DEL TRAMO 2, y distinta de la del acto 8 de este tramo, donde el contenido empataba entero y el choque era de cableado. LO QUE PROTEGE EL CONTENIDO QUE EL CONTEO PREFIRIO ES EL REPARTO, y se mide abajo.",
+            "pasos": {
+                "1": ["INCISO", 1, "no solo a quien usa el servicio", ", "],
+                "2": ["APPEND"],
+                "3": ["CUBIERTO", 3],
+                "4": ["INCISO", 4, "en lugar de imponer una regla desde arriba", ", "],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente la que la razon del puesto 1034 declara propia del que muere: redisenar el recorrido y el espacio fisico para darle mas informacion a cada participante. DOS INCISOS: el no solo a quien usa el servicio, que es el alcance del paso 1 del superviviente, y el en lugar de imponer una regla desde arriba, que es el contraste del paso 4. Su condicion 2 (las soluciones de hoy son solo reglas administrativas sin diseno de experiencia) viaja entera por ser un disparador distinto. UNA PERDIDA NOMBRADA: su condicion 1 acota el disparador a que el problema involucre VARIAS ORGANIZACIONES O ENTIDADES DEL GOBIERNO, y la condicion 1 del superviviente habla de un sistema grande con distintos tipos de usuarios en conflicto, que no lo dice; el INCISO para condiciones no existe en el instrumento (pendiente de doctrina heredado) y por eso la perdida se nombra.",
+        },
+        {
+            "orden": 36,
+            "superviviente": "esfuerzo_voluntario_vs_urge_espontaneo",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA. Pasos 3 contra 4 a favor de esfuerzo_voluntario_vs_urge_espontaneo y condiciones 2 contra 2, empatadas: una sola vara de contenido no empatada BASTA, asi que el cableado NO habla, y se dice que apuntaba al mismo lado (3 contra 4). La razon del puesto 1059 reconoce propio a los DOS lados (un gesto mental concreto y un criterio en control_voluntario_del_pensamiento; los rituales y senales para concentrarse a voluntad en el otro), asi que esa vara EMPATA y la que decide es la de los pasos.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["APPEND"],
+                "3": ["CUBIERTO", 3],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"]},
+            "nota": "DOS PASOS VIAJAN ENTEROS y son exactamente los dos que la razon declara propios del que muere: el criterio de controlar mas cuando se esta aprendiendo una forma nueva de pensar y menos cuando la tarea ya se domina, y el gesto mental de sostener o desviar a proposito una idea que promete. Su tercer paso (no forzarte a corregir lo que ya dominas) queda cubierto por el paso 3 del superviviente, que manda dejar espacios donde la curiosidad aparezca sin que la ahogue la rigidez. Su condicion 2 (la discusion sobre cuanta estructura poner en una sesion de ideas) viaja entera por ser un disparador distinto. UNA PERDIDA NOMBRADA: su condicion 1 dispara al ESTAR APRENDIENDO una habilidad nueva de pensamiento o creacion, y la condicion 1 del superviviente dispara al DEPENDER SOLO DE LA INSPIRACION ESPONTANEA, que es otro estado; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra.",
+        },
+        {
+            "orden": 38,
+            "superviviente": "cuatro_etapas_del_pensamiento_creativo",
+            "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO, Y LA PUERTA APUNTA AL MISMO LADO. Pasos 6 contra 4 y condiciones 4 contra 1, las dos a favor de cuatro_etapas_del_pensamiento_creativo; el cableado apunta al mismo lado y por mucho (22 contra 6). Y LA SEGUNDA VARA APUNTA IGUAL: cuatro_etapas_del_pensamiento_creativo ES PUERTA y la guarda 1B exige que sobreviva. AQUI NO HAY CHOQUE. Y LA PIEZA DECLARADA APUNTA IGUAL, y es la mas fuerte del acto: la razon del puesto 1109 escribe que LA MADRE YA SE HABIA TRAGADO AL HIJO, que sus seis pasos para cuatro etapas incluyen justamente los dos del hijo, y que por la prueba del banco 9.12 EL ESCALON NO PIDE NADA QUE EL PRIMERO NO PIDA YA.",
+            "pasos": {
+                "1": ["CUBIERTO", 3],
+                "2": ["INCISO", 3, "como indicio de Intimacion", ", "],
+                "3": ["CUBIERTO", 4],
+                "4": ["INCISO", 2, "silencio, actividad relajada", ", creando condiciones de "],
+            },
+            "condiciones": {"1": ["APPEND"]},
+            "nota": "NINGUNA PIEZA DE PASO VIAJA ENTERA Y LA UNICA PERDIDA QUE LA RAZON PROPONIA SE SALVA. La razon del puesto 1109 proponia perder EL NOMBRE TECNICO DE WALLAS, LA INTIMACION, que el hijo usa en su paso 2 y la madre describe sin nombrar: aqui ese nombre va de INCISO adosado al paso 3 del superviviente, asi que NO se pierde. El segundo inciso son las condiciones concretas (silencio, actividad relajada), parametro del paso 2 del superviviente, que manda alejarse, dormir, caminar o trabajar en otra cosa. Su condicion viaja entera por ser un disparador distinto de las cuatro del superviviente: la idea repentina que llega EN un momento de relajacion, contra el bloqueo, el inicio de la ideacion, la necesidad de estructurar y la presion constante. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 39,
+            "superviviente": "practica_de_observacion_atenta",
+            "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO. Pasos 4 contra 3 y condiciones 2 contra 1, las dos a favor de practica_de_observacion_atenta; el cableado apunta al mismo lado (8 contra 3). LA RAZON DEL PUESTO 1120 DEJA UNA COSA SIN ADJUDICAR Y AQUI SE ADJUDICA, con la vara escrita y no a ojo: escribe que los dos nodos SE CONTRADICEN en el momento de interpretar, uno manda preguntarse el porque MIENTRAS se observa y el otro manda SUSPENDER EL JUICIO y anotar primero, que el superviviente NO PUEDE LLEVAR LAS DOS, y cierra con queda anotado para quien haga la cura, no lo adjudico. LA CURA ES ESTA, asi que la remision es al ejecutor y no a una mesa: por la marca operativa registrada esta vuelta (acta 55, pregunta 1), una remision a una INSTANCIA NOMBRADA bloquea, y aqui la instancia nombrada es quien hace la cura. SE ADJUDICA POR LA TABLA DE LOS SEIS MOTIVOS DE PERDIDA DE LINEA, que es la vara escrita para este caso exacto: una linea que CONTRADIRIA al superviviente va de PERDIDA NOMBRADA antes que de inciso que miente, que es la misma vara con la que se resolvio el acto 45 del tramo 2. VA MARCADO COMO DISCUTIBLE EN EL REPORTE.",
+            "pasos": {
+                "1": ["INCISO", 4, "el habito diario", " Y hazlo con "],
+                "2": ["CUBIERTO", 3],
+                "3": ["CUBIERTO", 2],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1]},
+            "nota": "NINGUNA PIEZA VIAJA ENTERA. UN INCISO: el habito DIARIO, cadencia concreta que el paso 4 del superviviente no pone al hablar de disciplina regular. UNA PERDIDA NOMBRADA, Y NO ES DE CONDICIONES SINO DE MOMENTO DE UN PASO, que es la especie del acto 45 de la vuelta 55 y se dice para no mezclarlas: el paso 2 del que muere manda PREGUNTARSE EL PORQUE detras de objetos y comportamientos triviales MIENTRAS se observa, y el paso 2 del superviviente manda SUSPENDER EL JUICIO INMEDIATO, anotar primero e interpretar despues. La interpretacion NO se pierde del nodo, porque el paso 3 del superviviente busca patrones que revelen necesidades no declaradas; LO QUE SE PIERDE ES EL MOMENTO, y un INCISO ahi DIRIA LO CONTRARIO de lo que el paso que protege manda. La tabla de los seis motivos manda perdida NOMBRADA antes que inciso que miente.",
+        },
+        {
+            "orden": 40,
+            "superviviente": "bullseye_framework",
+            "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO, Y ADEMAS LA PIEZA DECLARADA APUNTA IGUAL. Pasos 11 contra 5 y condiciones 3 contra 2, las dos a favor de bullseye_framework; el cableado apunta al mismo lado (12 contra 6). La razon del puesto 1142 escribe que EL ANILLO INTERMEDIO ES LA DIANA MISMA, que CUATRO de los cinco pasos del hijo estan dentro de la madre y en el mismo orden, y que EL ESCALON BAJA EN VEZ DE SUBIR: donde la madre dice menos de mil dolares y un mes, el hijo dice baratas y de corto plazo. Ademas la razon cuenta CUATRO piezas que se perderian del lado de la madre contra UNA del lado del hijo, y por eso escribe que la direccion de la fusion esta casi decidida.",
+            "pasos": {
+                "1": ["CUBIERTO", 2],
+                "2": ["INCISO", 3, "en AdWords, pregunta el precio en tu mercado", " Prueba "],
+                "3": ["CUBIERTO", 4],
+                "4": ["APPEND"],
+                "5": ["INCISO", 5, "para pasar a las pruebas del anillo interno", " Es el paso previo "],
+            },
+            "condiciones": {"1": ["CUBIERTO", 3], "2": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente el UNICO gesto que la razon declara propio del hijo: comparar los resultados de las estrategias probadas EN UNA HOJA DE CALCULO. DOS INCISOS, y el segundo salva LA OTRA MITAD de la perdida que la razon proponia: el nombre del anillo interno como destino, adosado al paso 5 del superviviente. El primero es el ejemplo de canal barato (AdWords) del paso 3. Su condicion 2 (recursos limitados que impiden probar todos los canales a la vez) viaja entera por ser un disparador distinto. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 41,
+            "superviviente": "diseno_consecuencias_no_intencionadas",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA. Pasos 5 contra 4 a favor de diseno_consecuencias_no_intencionadas y condiciones 3 contra 3, empatadas: una sola vara de contenido no empatada BASTA, asi que el cableado NO habla, y se dice que EMPATABA (5 contra 5). Y LA PIEZA DECLARADA APUNTA AL MISMO LADO: la razon del puesto 1230 nombra TRES piezas que se perderian de diseno_consecuencias_no_intencionadas contra DOS del otro, y subraya que una de las tres, DISENAR SALVAGUARDAS, LIMITES DE USO Y MECANISMOS DE REVERSION, es EL UNICO PASO DEL PAR QUE REMEDIA en vez de solo anticipar: esa pieza esta a salvo por construccion.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["APPEND"],
+                "3": ["INCISO", 2, "no esta en la sala de diseno pero sera afectado", " Incluye a quien "],
+                "4": ["INCISO", 5, "mecanismos de monitoreo post-lanzamiento", " Establece "],
+            },
+            "condiciones": {"1": ["CUBIERTO", 2], "2": ["CUBIERTO", 1], "3": ["APPEND"]},
+            "nota": "DOS PASOS VIAJAN ENTEROS y son exactamente los dos que la razon declara propios del que muere: el encuadre de efectos de SEGUNDO Y TERCER ORDEN, y las dos preguntas que lo operan (que comportamientos nuevos habilita esto y que sistemas existentes altera). DOS INCISOS: quien no esta en la sala de diseno, alcance concreto del paso 2 del superviviente, que habla de quien se beneficia y quien se perjudica; y los mecanismos de monitoreo POST-LANZAMIENTO, momento concreto del paso 5, que manda revisitar los riesgos periodicamente. Su condicion 3 (ignorar los efectos sistemicos por mirar solo la funcionalidad inmediata) viaja entera por ser un disparador distinto. UNA PERDIDA NOMBRADA: su condicion 2 incluye los SISTEMAS QUE APRENDEN Y SE RETROALIMENTAN junto a los datos y la IA, y la condicion 1 del superviviente enumera IA, datos personales y biotecnologia sin nombrarlos; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra.",
+        },
+        {
+            "orden": 42,
+            "superviviente": "arquitectura_tecnica_modular",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA PUERTA APUNTA AL MISMO LADO. Pasos 4 contra 5 a favor de arquitectura_tecnica_modular y condiciones 2 contra 2, empatadas: una sola vara no empatada BASTA, asi que el cableado NO habla, y se dice que apuntaba al mismo lado (2 contra 3). Y LA SEGUNDA VARA APUNTA IGUAL: arquitectura_tecnica_modular ES PUERTA y la guarda 1B exige que sobreviva. AQUI NO HAY CHOQUE. La razon del puesto 1257 cuenta ademas DOS piezas propias del que sobrevive contra UNA del que muere.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["CUBIERTO", 2],
+                "3": ["CUBIERTO", 4],
+                "4": ["INCISO", 3, "APIs abiertas para facilitar integraciones futuras", ", y que sean "],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["CUBIERTO", 2]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente la que la razon declara propia del que muere: AUDITAR primero las soluciones tecnologicas que ya existen en el mercado (nube y programas por suscripcion), que la razon llama el unico paso que manda mirar afuera ANTES de decidir nada. UN INCISO: las APIs ABIERTAS para facilitar integraciones futuras, matiz del paso 3 del superviviente, que manda conectar via APIs sin pedir que sean abiertas. Su condicion 1 (el equipo evalua construir tecnologia propia contra usar soluciones existentes) viaja entera por ser un disparador distinto. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 43,
+            "superviviente": "entrenamiento_funcional_empleados",
+            "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO. Pasos 4 contra 4 y condiciones 2 contra 2: las dos varas de contenido empatan al digito, y la razon del puesto 1387 reconoce DOS piezas propias a cada lado, asi que tampoco la pieza declarada desempata. Con el contenido callado entero, EL CABLEADO DECIDE SOLO y apunta a entrenamiento_funcional_empleados, 2 contra 3. NO es empate sin vara porque el cableado no empata.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["INCISO", 2, "para roles clave (ventas, ingenieria, gestion)", " Hazlo "],
+                "3": ["APPEND"],
+                "4": ["INCISO", 3, "con seguimiento de cumplimiento", " Y hazlo "],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["CUBIERTO", 2]},
+            "nota": "DOS PASOS VIAJAN ENTEROS y son exactamente los dos que la razon declara propios del que muere: NO ASUMIR que la inteligencia o la experiencia previa reemplazan el entrenamiento propio de la empresa, que la razon llama la unica linea que ataca el motivo por el que no se entrena; y EXIGIR QUE LOS LIDERES DE AREA DOCUMENTEN Y ENSENEN sus procesos en vez de ejecutarlos por intuicion, la unica que pone la carga sobre quien ya sabe. DOS INCISOS: los roles clave con nombre (ventas, ingenieria, gestion), parametro del paso 2 del superviviente, y el seguimiento de cumplimiento, parametro de la obligatoriedad del paso 3. UNA PERDIDA NOMBRADA: su condicion 2 dispara al detectar que los empleados nuevos NO COMPRENDEN EL CONTEXTO COMPLETO de su trabajo, y la condicion 2 del superviviente habla de alta rotacion o baja productividad, que es otro sintoma; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra.",
+        },
+        {
+            "orden": 44,
+            "superviviente": "convertir_necesidad_en_demanda",
+            "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO. Pasos 4 contra 4 y condiciones 2 contra 2: las dos varas de contenido empatan al digito, y la razon del puesto 1421 reconoce DOS piezas propias a cada lado, asi que tampoco la pieza declarada desempata. Con el contenido callado entero, EL CABLEADO DECIDE SOLO y apunta a convertir_necesidad_en_demanda, 5 contra 3. NO es empate sin vara porque el cableado no empata.",
+            "pasos": {
+                "1": ["INCISO", 2, "no solo preguntarles que quieren", ", y "],
+                "2": ["APPEND"],
+                "3": ["APPEND"],
+                "4": ["CUBIERTO", 3],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"]},
+            "nota": "DOS PASOS VIAJAN ENTEROS y son exactamente los dos que la razon declara propios del que muere: los ACTOS SIN PENSAR (thoughtless acts), las soluciones improvisadas que la gente usa para adaptarse a productos mal disenados, que la razon llama el unico nombre propio que el catalogo le da a esa senal; y evitar depender solo de encuestas o datos cuantitativos que confirman lo que ya se sabe. UN INCISO: el no solo preguntarles que quieren, contraste del paso 2 del superviviente, que manda investigacion etnografica o cualitativa sin decir contra que. SUS DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos: contar solo con datos convencionales (encuestas, focus groups), e iniciar la fase de inspiracion de un proyecto de diseno centrado en las personas; las dos del superviviente hablan del mercado estancado y de la dependencia de la innovacion tecnologica incremental. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 46,
+            "superviviente": "business_model_canvas_scorecard",
+            "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO. Pasos 5 contra 5 y condiciones 3 contra 3: las dos varas de contenido empatan al digito, y la razon del puesto 1468 reconoce DOS piezas propias a cada lado, asi que tampoco la pieza declarada desempata. Con el contenido callado entero, EL CABLEADO DECIDE SOLO y apunta a business_model_canvas_scorecard, 14 contra 8. NO es empate sin vara porque el cableado no empata.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["APPEND"],
+                "3": ["INCISO", 2, "cada vez que obtengas nueva evidencia", ", y ademas "],
+                "4": ["APPEND"],
+                "5": ["APPEND"],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"], "3": ["APPEND"]},
+            "nota": "TRES PASOS VIAJAN ENTEROS: los DOS que la razon declara propios del que muere (conservar todas las versiones como un CUADERNO DE HOJEAR que documente la evolucion, y EVITAR convertir el lienzo en un plan operativo prematuro basado en suposiciones sin validar, que la razon llama la unica linea que pone un limite al uso del lienzo) mas salir a validar cada hipotesis con clientes reales cara a cara, que ninguno de los cinco pasos del superviviente dice, medido paso a paso. UN INCISO: la cadencia POR EVIDENCIA, adosada al paso 2 del superviviente, que solo trae la cadencia SEMANAL: el nodo queda con las dos, que es lo que la razon pedia salvar de los dos lados. SUS TRES CONDICIONES VIAJAN ENTERAS por ser disparadores distintos de las tres del superviviente, que hablan de rastrear cambios de hipotesis, de falta de claridad y de customer discovery, no del plan de negocio estatico ni de escribirlo para pedir financiamiento. EL SOLAPE QUE ESTO FABRICA SE DECLARA para la poda de la fase 04: el superviviente queda con SEIS condiciones y las tres nuevas son de la misma familia (el plan de negocio como documento rigido). CERO perdidas nombradas.",
+        },
+        {
+            "orden": 47,
+            "superviviente": "bucle_retroalimentacion_autoajustable",
+            "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO. Pasos 4 contra 4 y condiciones 2 contra 2: las dos varas de contenido empatan al digito, y la razon del puesto 1552 reconoce UNA pieza propia a cada lado, asi que tampoco la pieza declarada desempata. Con el contenido callado entero, EL CABLEADO DECIDE SOLO y apunta a bucle_retroalimentacion_autoajustable, 6 contra 2. NO es empate sin vara porque el cableado no empata.",
+            "pasos": {
+                "1": ["INCISO", 1, "para los equipos operativos", ", "],
+                "2": ["APPEND"],
+                "3": ["CUBIERTO", 2],
+                "4": ["INCISO", 3, "no solo periodicamente", ", y "],
+            },
+            "condiciones": {"1": ["CUBIERTO", 2], "2": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente la que la razon declara propia del que muere: ESTABLECER RECOMPENSAS O INCENTIVOS ligados al cumplimiento de las metas, que la razon llama la unica que engancha el lazo a la motivacion de las personas. DOS INCISOS: el destinatario de las metas (para los equipos operativos), parametro del paso 1 del superviviente, y la cadencia del ajuste (no solo periodicamente), matiz del paso 3. Su condicion 2 (buscar resiliencia y adaptabilidad ante un entorno VUCA) viaja entera por ser un disparador distinto. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 48,
+            "superviviente": "evitar_greenwashing",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA. Pasos 5 contra 3 a favor de evitar_greenwashing y condiciones 2 contra 2, empatadas: una sola vara de contenido no empatada BASTA, asi que el cableado NO habla, y se dice que apuntaba al mismo lado (4 contra 2). Y LA PIEZA DECLARADA APUNTA IGUAL: la razon del puesto 1776 escribe que evitar_greenwashing_2 es un SUBCONJUNTO ESTRICTO, que sus TRES pasos tienen su correspondiente en el otro, y cuenta TRES perdidas del lado de evitar_greenwashing contra UNA del lado del que muere.",
+            "pasos": {
+                "1": ["INCISO", 4, "tres veces", ", verificando "],
+                "2": ["CUBIERTO", 4],
+                "3": ["CUBIERTO", 2],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"]},
+            "nota": "NINGUNA PIEZA DE PASO VIAJA ENTERA Y LA UNICA PERDIDA QUE LA RAZON PROPONIA SE SALVA: la razon proponia perder EL VERIFICAR TRES VECES antes de publicar, que llama la unica linea del dominio que pone un numero a la comprobacion, y aqui va de INCISO adosado al paso 4 del superviviente, que manda sustentar cada reclamo con datos verificables o certificaciones de terceros. Su condicion 2 (presion de marketing para exagerar logros ambientales) viaja entera por ser un disparador distinto del riesgo de escrutinio de ONGs o consumidores. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 49,
+            "superviviente": "contabilidad_ambiental",
+            "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO. Pasos 4 contra 4 y condiciones 2 contra 2: las dos varas de contenido empatan al digito, y la razon del puesto 1789 reconoce UNA pieza propia a un lado y DOS al otro, pero material propio declarado a LOS DOS lados EMPATA (acta 54, pregunta 4), asi que tampoco la pieza declarada desempata. Con el contenido callado entero, EL CABLEADO DECIDE SOLO y apunta a contabilidad_ambiental, 4 contra 2. NO es empate sin vara porque el cableado no empata.",
+            "pasos": {
+                "1": ["CUBIERTO", 2],
+                "2": ["INCISO", 3, "full cost accounting, EMA", ", como "],
+                "3": ["INCISO", 4, "un equipo interdisciplinario (cientificos, ingenieros, contadores)", ", o a "],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["CUBIERTO", 2], "2": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es una de las dos que la razon declara propias del que muere: REPORTAR LOS RESULTADOS TAMBIEN HACIA AFUERA, a los interesados externos, que la razon llama la unica linea que saca el ejercicio de la contabilidad interna. LA OTRA SE SALVA CON INCISO: el NOMBRE DE LAS HERRAMIENTAS (full cost accounting, EMA), que la razon llama lo unico que convierte la instruccion en algo buscable, adosado al paso 3 del superviviente, que manda elegir las herramientas sin nombrarlas. UN SEGUNDO INCISO: el equipo interdisciplinario con sus tres perfiles, alternativa concreta a la persona de sostenibilidad del paso 4. Su condicion 2 (reportar sostenibilidad a inversionistas o reguladores) viaja entera por ser un disparador distinto. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 50,
+            "superviviente": "reduccion_cargas_regulatorias",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA. Pasos 4 contra 4, empatados, y condiciones 1 contra 2 a favor de reduccion_cargas_regulatorias: una sola vara de contenido no empatada BASTA, asi que el cableado NO habla, y se dice que apuntaba al mismo lado (2 contra 3). Y LA PIEZA DECLARADA APUNTA IGUAL: la razon del puesto 1791 cuenta DOS perdidas del lado de reduccion_cargas_regulatorias (el encuadre POSITIVO de priorizar los materiales mejor calificados en nuevos productos, y el nombre de la herramienta, LA LISTA VERDE) contra UNA del lado del que muere.",
+            "pasos": {
+                "1": ["INCISO", 1, "procesos de manufactura", ", y tambien en los "],
+                "2": ["CUBIERTO", 2],
+                "3": ["APPEND"],
+                "4": ["CUBIERTO", 4],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente la que la razon declara propia del que muere: el encuadre NEGATIVO, priorizar el rediseno de productos para ELIMINAR los materiales de alto riesgo regulatorio, que la razon llama la unica formulacion que ataca lo que YA ESTA en el producto. El nodo queda con los dos encuadres, el positivo del superviviente y el negativo del que muere. UN INCISO: el alcance del mapeo (y procesos de manufactura), que el paso 1 del superviviente acota a cada producto. Su unica condicion queda cubierta. CERO perdidas nombradas.",
+        },
+    ],
+    "declarados": [
+        {
+            "orden": 37,
+            "miembros": ["seis_herramientas_comunicacion_celebracion",
+                         "seis_herramientas_comunicacion_fase_activate"],
+            "especie": "EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN",
+            "motivo": "LAS DOS VARAS DE CONTENIDO EMPATAN AL DIGITO (pasos 5 contra 5 y condiciones 1 contra 1) Y EL CABLEADO TAMBIEN EMPATA (2 contra 2 en el cuadro de varas). El empate sin vara exige exactamente eso, que TAMBIEN el cableado empate (acta 53, pregunta 4), y aqui se cumple. Y LA PIEZA DECLARADA NO DESEMPATA porque hay material propio declarado a LOS DOS lados: la razon del puesto 1068 escribe que lo propio de seis_herramientas_comunicacion_celebracion es atarlo al logro (disenar el mensaje para el hito concreto y enviarlo justo tras confirmarlo) y que lo propio de seis_herramientas_comunicacion_fase_activate son DOS gestos de diagnostico (identificar cual es el primer contacto real despues de la compra, y ponerle una nota del uno al diez a la experiencia actual antes de mejorarla). Sin vara que separe, el acto SE DECLARA y acumula.",
+            "acumula_para": "LA MESA. Y con un dato de familia que la propia razon aporta y conviene que la mesa tenga delante: este par cierra el tratamiento de la serie de los seis medios de Coleman, porque prueba que LAS INSTANCIAS POR FASE TAMBIEN SE REPITEN ENTRE ELLAS, no solo los dos nodos generales. La serie esta duplicada tantas veces como fases la instancien, y eso es una decision de catalogo, no de par.",
+        },
+        {
+            "orden": 45,
+            "miembros": ["framework_flujos_de_datos_ppp", "framework_ppph_flujos"],
+            "especie": "EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN",
+            "motivo": "LAS DOS VARAS DE CONTENIDO EMPATAN AL DIGITO (pasos 5 contra 5 y condiciones 2 contra 2) Y EL CABLEADO TAMBIEN EMPATA (3 contra 3). Se cumple la exigencia del empate sin vara (acta 53, pregunta 4). Y LA PIEZA DECLARADA NO DESEMPATA porque hay material propio declarado a LOS DOS lados, y ademas en la misma cantidad: la razon del puesto 1438 nombra DOS perdidas de cada lado (de framework_flujos_de_datos_ppp, QUIEN CONTROLA cada parte y si el ritmo beneficia a los usuarios O SOLO AL SISTEMA; de framework_ppph_flujos, si el proposito tiene PROPOSITOS SECUNDARIOS EN CONFLICTO y que pasa cuando alguien opera FUERA DEL RITMO ESPERADO). Sin vara que separe, el acto SE DECLARA y acumula.",
+            "acumula_para": "LA MESA. La propia razon lo llama la trampa de identificador MAS LIMPIA de todas: son el mismo marco, uno nombrado por las tres primeras letras y el otro por las cuatro, con LOS CINCO PASOS CORRESPONDIENDOSE UNO A UNO en el mismo orden y con los mismos nombres. Que un par tan limpio no se pueda fundir por falta de vara es exactamente el caso que hace visible el pendiente de doctrina 1.",
+        },
+    ],
+}
+
+
 def cargar_jsonl(p):
     return [json.loads(l) for l in io.open(p, encoding="utf-8") if l.strip()]
 

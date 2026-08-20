@@ -8,15 +8,16 @@
   "pasos_accionables": [
     "Lista los 19 canales de tracción posibles y evalúa cuáles podrían aplicar a tu negocio sin descartar ninguno por default.",
     "Selecciona 3 a 5 canales prometedores según tu contexto, industria y modelo de negocio.",
-    "Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo.",
+    "Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado",
     "Mide en cada experimento el costo de adquisición, el volumen disponible y la calidad de esos clientes.",
-    "Elige el canal con mejores resultados como tu canal núcleo y concentra ahí la mayoría de tus recursos.",
+    "Elige el canal con mejores resultados como tu canal núcleo y concentra ahí la mayoría de tus recursos. Es el paso previo para pasar a las pruebas del anillo interno",
     "Si ningún canal funciona, repite el proceso o revisa tu producto.",
     "Haz una lista de los 19 canales de tracción posibles para tu negocio",
     "Diseña una prueba barata y corta para cada canal que te haga sentido, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes",
     "Corre las pruebas en paralelo o por lotes y mide resultados concretos, no solo clics o vistas",
     "Compara los resultados entre canales y elige el o los que más prometan para invertirles más recursos",
-    "Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos"
+    "Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos",
+    "Compara los resultados de las distintas estrategias que probaste en una hoja de cálculo"
   ],
   "entregable_esperado": "Matriz de los 19 canales con ideas de brainstorm, resultados de los experimentos del anillo medio y el canal núcleo elegido para escalar.",
   "nodos_previos": [
@@ -27,27 +28,37 @@
     "definir_meta_de_traccion",
     "fases_traccion_producto",
     "estrategia_plataformas_existentes",
-    "programa_afiliados"
+    "programa_afiliados",
+    "critical_path",
+    "traction_channel_bias",
+    "traction_goal"
   ],
   "nodos_siguientes": [
     "critical_path",
     "canales_distribucion",
-    "middle_ring_testing",
-    "anillo_interior_explotar_el_canal_nucleo"
+    "anillo_interior_explotar_el_canal_nucleo",
+    "targeting_blogs_traccion"
   ],
   "condiciones_activacion": [
     "Cuando tienes un producto validado pero no sabes qué canal de marketing o distribución usar.",
     "Cuando tus canales actuales no generan crecimiento suficiente.",
-    "Cuando estás dispersando recursos en múltiples canales sin resultados claros."
+    "Cuando estás dispersando recursos en múltiples canales sin resultados claros.",
+    "Cuando tienes recursos limitados y no puedes probar todos los canales al mismo tiempo"
   ],
   "etiqueta_arbol": "Encuentra tu Canal Ganador",
   "ids_alias": [
-    "framework_bullseye"
+    "framework_bullseye",
+    "middle_ring_testing"
   ],
   "merged_originals": [
     {
       "node_id": "framework_bullseye",
       "titulo": "Framework Bullseye para Canales de Tracción",
+      "fuente": "Traction - Gabriel Weinberg"
+    },
+    {
+      "node_id": "middle_ring_testing",
+      "titulo": "Probar tus canales candidatos (anillo intermedio del Bullseye)",
       "fuente": "Traction - Gabriel Weinberg"
     }
   ]

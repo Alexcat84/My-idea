@@ -7,10 +7,13 @@
   "resumen_teorico": "El Business Model Canvas de Osterwalder, además de ser una foto estática del negocio, se usa en Customer Discovery como un scorecard semanal para rastrear el progreso en la búsqueda del modelo de negocio. Cada semana actualizas el canvas reflejando pivotes e iteraciones, resaltando en rojo los cambios respecto a la semana anterior. Esto permite ver claramente qué hipótesis cambiaron y cuáles se mantienen, generando un historial que documenta cómo evoluciona tu entendimiento del negocio con el tiempo. Es especialmente útil cuando no tienes claridad propia sobre tu modelo de negocio o necesitas visualizar tu progreso semana a semana de forma tangible.",
   "pasos_accionables": [
     "Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos",
-    "Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho",
+    "Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia",
     "Resaltar en rojo los cambios respecto a la semana anterior",
     "Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana",
-    "Repetir este proceso de forma continua durante todo tu customer discovery"
+    "Repetir este proceso de forma continua durante todo tu customer discovery",
+    "Sal a validar cada hipótesis con clientes reales cara a cara.",
+    "Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.",
+    "Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar."
   ],
   "entregable_esperado": "Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.",
   "nodos_previos": [
@@ -18,7 +21,10 @@
     "hipotesis_de_tamano_de_mercado",
     "producto_minimo_viable",
     "lienzo_modelo_negocio",
-    "pivotes_e_iteraciones"
+    "pivotes_e_iteraciones",
+    "business_model_environment_mapping",
+    "business_plan_cinco_secciones",
+    "search_for_business_model"
   ],
   "nodos_siguientes": [
     "customer_validation",
@@ -29,21 +35,33 @@
     "intimacion_emocional_como_senal_de_verdad",
     "startup_como_experimento_cientifico",
     "usuarios_extremos_edge_cases",
-    "diseno_experimentos_hipotesis"
+    "diseno_experimentos_hipotesis",
+    "customer_discovery",
+    "modelo_customer_development",
+    "pivote_startup"
   ],
   "condiciones_activacion": [
     "Cuando necesitas rastrear cómo cambian tus hipótesis de negocio a lo largo del tiempo",
     "Cuando no tienes claridad o un entendimiento consolidado de tu propio modelo de negocio",
-    "Cuando estás en pleno proceso de customer discovery y haces pivotes frecuentes"
+    "Cuando estás en pleno proceso de customer discovery y haces pivotes frecuentes",
+    "Si tienes un plan de negocio estático y rígido en lugar de un modelo dinámico.",
+    "Si confundes el plan de negocio con un manual de ejecución.",
+    "Si estás a punto de escribir un plan de negocio tradicional para pedir financiamiento."
   ],
   "etiqueta_arbol": "Registra tu Progreso Semanal",
   "ids_alias": [
-    "business_model_canvas_como_scorecard"
+    "business_model_canvas_como_scorecard",
+    "business_model_canvas_vs_plan"
   ],
   "merged_originals": [
     {
       "node_id": "business_model_canvas_como_scorecard",
       "titulo": "Business Model Canvas como Scorecard de Customer Discovery",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "business_model_canvas_vs_plan",
+      "titulo": "Business Model Canvas como Reemplazo del Plan de Negocio",
       "fuente": "The Startup Owner's Manual - Steve Blank"
     }
   ]

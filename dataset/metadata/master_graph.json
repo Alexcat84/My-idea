@@ -2508,24 +2508,41 @@
       "fuente": "Change by Design, Revised and U - Tim Brown",
       "resumen_teorico": "Cuando diseñas un sistema grande (como uno de seguridad en un aeropuerto), tu tarea es asegurarte de que los objetivos de las distintas personas involucradas estén alineados. Si te fijas bien, quienes parecen tener intereses opuestos (los pasajeros y los oficiales de seguridad) en realidad buscan lo mismo. Diseña pensando en eso: así logras soluciones que benefician a todos, con menos fricción y mejores resultados.",
       "pasos_accionables": [
-        "Identifica a todas las personas involucradas en el sistema y qué objetivo parece tener cada una",
+        "Identifica a todas las personas involucradas en el sistema y qué objetivo parece tener cada una, no solo a quien usa el servicio",
         "Busca el objetivo compartido que hay debajo, entre los grupos que parecen tener intereses opuestos",
         "Cambia cómo planteas el problema para reflejar esa alineación (por ejemplo, pasar de 'detectar objetos' a 'detectar intención hostil')",
-        "Diseña intervenciones que reduzcan el estrés y la fricción entre las personas que usan el sistema"
+        "Diseña intervenciones que reduzcan el estrés y la fricción entre las personas que usan el sistema, en lugar de imponer una regla desde arriba",
+        "Rediseña el recorrido y el espacio físico para darle más información a cada participante."
       ],
       "entregable_esperado": "Un mapa de las personas involucradas con sus objetivos alineados y una nueva forma de plantear el problema",
       "nodos_previos": [
         "how_might_we_framing",
-        "analisis_y_sintesis"
+        "analisis_y_sintesis",
+        "diseno_sistemico_partes_interesadas",
+        "mastery_sensibilidades_diseno",
+        "transformacion_organizacional_diseno",
+        "transicion_producto_a_experiencia"
       ],
       "nodos_siguientes": [
         "empoderamiento_de_participantes",
-        "liderazgo_gerencial_seguridad"
+        "liderazgo_gerencial_seguridad",
+        "case_study_sistema_servicio_completo"
       ],
       "condiciones_activacion": [
-        "Cuando tu proyecto involucra un sistema grande con distintos tipos de usuarios que parecen estar en conflicto"
+        "Cuando tu proyecto involucra un sistema grande con distintos tipos de usuarios que parecen estar en conflicto",
+        "Si las soluciones que existen hoy son solo reglas administrativas, sin diseño de experiencia"
       ],
-      "etiqueta_arbol": "Alinea Objetivos entre Actores"
+      "etiqueta_arbol": "Alinea Objetivos entre Actores",
+      "ids_alias": [
+        "diseno_de_sistemas_a_escala"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "diseno_de_sistemas_a_escala",
+          "titulo": "Diseño de Sistemas Complejos a Gran Escala",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "alineacion_engagement_estrategia_general": {
       "node_id": "alineacion_engagement_estrategia_general",
@@ -4776,7 +4793,6 @@
       ],
       "entregable_esperado": "Tu canal nucleo con todos los recursos concentrados en el, un calendario de pruebas sobre sus variables clave con sus resultados documentados, y el criterio escrito de cuando lo consideras saturado para repetir el Bullseye",
       "nodos_previos": [
-        "middle_ring_testing",
         "bullseye_framework",
         "enfoque_motor_unico_crecimiento"
       ],
@@ -5664,7 +5680,8 @@
         "Cuando el equipo evalúa construir tecnología propia vs. usar soluciones existentes.",
         "Cuando se busca reducir tiempo y costo de desarrollo tecnológico."
       ],
-      "etiqueta_arbol": "Aprovecha lo que Ya Existe"
+      "etiqueta_arbol": "Aprovecha lo que Ya Existe",
+      "deprecado": true
     },
     "arquitectura_tecnica_modular": {
       "node_id": "arquitectura_tecnica_modular",
@@ -5676,23 +5693,37 @@
       "pasos_accionables": [
         "Identificar las funciones core que generan el valor diferencial de tu negocio",
         "Mapear qué funciones de soporte (pagos, mapas, comunicaciones, hosting) pueden resolverse con servicios SaaS existentes",
-        "Conectar estos servicios vía APIs en lugar de desarrollarlos internamente",
+        "Conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y que sean APIs abiertas para facilitar integraciones futuras",
         "Enfocar el desarrollo propio exclusivamente en la capa de coordinación/colaboración que es tu propuesta de valor única",
-        "Diseñar la arquitectura para que sea fácilmente escalable y sustituible por componente"
+        "Diseñar la arquitectura para que sea fácilmente escalable y sustituible por componente",
+        "Auditar las soluciones tecnológicas ya existentes en el mercado (cloud, SaaS)."
       ],
       "entregable_esperado": "Diagrama de arquitectura modular mostrando servicios de terceros integrados vía API y el componente propietario central",
       "nodos_previos": [
-        "definicion_alineacion_cadena_suministro"
+        "definicion_alineacion_cadena_suministro",
+        "iota_analysis"
       ],
       "nodos_siguientes": [
         "diseno_conceptual_sistema",
-        "funcion_identify_inventario_activos"
+        "funcion_identify_inventario_activos",
+        "gestion_visual_del_pipeline_de_desarrollo"
       ],
       "condiciones_activacion": [
         "Cuando se necesita construir rápidamente una plataforma de colaboración sin invertir en infraestructura pesada",
-        "Si el presupuesto de tecnología es limitado y se prioriza velocidad de lanzamiento"
+        "Si el presupuesto de tecnología es limitado y se prioriza velocidad de lanzamiento",
+        "Cuando el equipo evalúa construir tecnología propia vs. usar soluciones existentes."
       ],
-      "etiqueta_arbol": "Construye tu Arquitectura Modular"
+      "etiqueta_arbol": "Construye tu Arquitectura Modular",
+      "ids_alias": [
+        "arquitectura_flexible_soa"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "arquitectura_flexible_soa",
+          "titulo": "Aprovechar Aplicaciones Existentes (SOA/EAI/API)",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        }
+      ]
     },
     "arrendamiento_verde": {
       "node_id": "arrendamiento_verde",
@@ -8995,30 +9026,42 @@
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
       "resumen_teorico": "Un mecanismo donde el sistema compara continuamente su estado actual con el objetivo deseado y toma acciones correctivas para minimizar la diferencia, como un termostato o el control de crucero de un auto. Aplicado a cadenas de suministro, permite que empresas y sus socios ajusten su comportamiento en tiempo real (hora a hora) para mantenerse alineados con metas de desempeño, controlando efectos como el 'bullwhip effect' y generando eficiencias acumulativas similares al interés compuesto.",
       "pasos_accionables": [
-        "Definir claramente el objetivo de desempeño (meta) que el sistema debe alcanzar",
+        "Definir claramente el objetivo de desempeño (meta) que el sistema debe alcanzar, para los equipos operativos",
         "Establecer mecanismos de medición continua del estado actual vs. el deseado",
-        "Diseñar reglas de acción correctiva automática o semi-automática ante desviaciones",
-        "Compartir datos en tiempo real entre los actores de la cadena para habilitar el ajuste colectivo"
+        "Diseñar reglas de acción correctiva automática o semi-automática ante desviaciones, y no solo periódicamente",
+        "Compartir datos en tiempo real entre los actores de la cadena para habilitar el ajuste colectivo",
+        "Establecer recompensas o incentivos ligados al cumplimiento de esas metas."
       ],
       "entregable_esperado": "Un sistema de monitoreo con indicadores en tiempo real y reglas de ajuste automático definidas para al menos un proceso clave de la cadena de suministro",
       "nodos_previos": [
         "definicion_alineacion_cadena_suministro",
         "gestion_beneficios_alianza_sostenible",
         "key_process_product_characteristics",
-        "roadmap_proyectos_operacionales_12_meses"
+        "roadmap_proyectos_operacionales_12_meses",
+        "division_trabajo_humano_ia"
       ],
       "nodos_siguientes": [
         "requisitos_sistema_retroalimentacion",
-        "ooda_loop_decision"
+        "ooda_loop_decision",
+        "graficos_control_individuales_operarios"
       ],
       "condiciones_activacion": [
         "Cuando la empresa opera en tiempo real con múltiples socios de cadena de suministro",
-        "Cuando existe volatilidad de demanda o efecto bullwhip que requiere corrección continua"
+        "Cuando existe volatilidad de demanda o efecto bullwhip que requiere corrección continua",
+        "Cuando se busca mayor resiliencia y adaptabilidad ante un entorno VUCA (volátil, incierto, complejo, ambiguo)."
       ],
       "ids_alias": [
-        "ciclo_retroalimentacion_autoajuste"
+        "ciclo_retroalimentacion_autoajuste",
+        "ciclos_retroalimentacion_autoajuste"
       ],
-      "etiqueta_arbol": "Ajusta tu Cadena Sola"
+      "etiqueta_arbol": "Ajusta tu Cadena Sola",
+      "merged_originals": [
+        {
+          "node_id": "ciclos_retroalimentacion_autoajuste",
+          "titulo": "Ciclos de Retroalimentación Auto-ajustables",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        }
+      ]
     },
     "bucle_retroalimentacion_control": {
       "node_id": "bucle_retroalimentacion_control",
@@ -9225,15 +9268,16 @@
       "pasos_accionables": [
         "Lista los 19 canales de tracción posibles y evalúa cuáles podrían aplicar a tu negocio sin descartar ninguno por default.",
         "Selecciona 3 a 5 canales prometedores según tu contexto, industria y modelo de negocio.",
-        "Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo.",
+        "Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado",
         "Mide en cada experimento el costo de adquisición, el volumen disponible y la calidad de esos clientes.",
-        "Elige el canal con mejores resultados como tu canal núcleo y concentra ahí la mayoría de tus recursos.",
+        "Elige el canal con mejores resultados como tu canal núcleo y concentra ahí la mayoría de tus recursos. Es el paso previo para pasar a las pruebas del anillo interno",
         "Si ningún canal funciona, repite el proceso o revisa tu producto.",
         "Haz una lista de los 19 canales de tracción posibles para tu negocio",
         "Diseña una prueba barata y corta para cada canal que te haga sentido, por ejemplo contactar a diez blogs de tu nicho, correr unos anuncios pagados o escribir un artículo semanal durante un mes",
         "Corre las pruebas en paralelo o por lotes y mide resultados concretos, no solo clics o vistas",
         "Compara los resultados entre canales y elige el o los que más prometan para invertirles más recursos",
-        "Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos"
+        "Anota lo que aprendes de cada prueba, incluidas las que fallaron, para mejorar tus próximos intentos",
+        "Compara los resultados de las distintas estrategias que probaste en una hoja de cálculo"
       ],
       "entregable_esperado": "Matriz de los 19 canales con ideas de brainstorm, resultados de los experimentos del anillo medio y el canal núcleo elegido para escalar.",
       "nodos_previos": [
@@ -9244,27 +9288,37 @@
         "definir_meta_de_traccion",
         "fases_traccion_producto",
         "estrategia_plataformas_existentes",
-        "programa_afiliados"
+        "programa_afiliados",
+        "critical_path",
+        "traction_channel_bias",
+        "traction_goal"
       ],
       "nodos_siguientes": [
         "critical_path",
         "canales_distribucion",
-        "middle_ring_testing",
-        "anillo_interior_explotar_el_canal_nucleo"
+        "anillo_interior_explotar_el_canal_nucleo",
+        "targeting_blogs_traccion"
       ],
       "condiciones_activacion": [
         "Cuando tienes un producto validado pero no sabes qué canal de marketing o distribución usar.",
         "Cuando tus canales actuales no generan crecimiento suficiente.",
-        "Cuando estás dispersando recursos en múltiples canales sin resultados claros."
+        "Cuando estás dispersando recursos en múltiples canales sin resultados claros.",
+        "Cuando tienes recursos limitados y no puedes probar todos los canales al mismo tiempo"
       ],
       "etiqueta_arbol": "Encuentra tu Canal Ganador",
       "ids_alias": [
-        "framework_bullseye"
+        "framework_bullseye",
+        "middle_ring_testing"
       ],
       "merged_originals": [
         {
           "node_id": "framework_bullseye",
           "titulo": "Framework Bullseye para Canales de Tracción",
+          "fuente": "Traction - Gabriel Weinberg"
+        },
+        {
+          "node_id": "middle_ring_testing",
+          "titulo": "Probar tus canales candidatos (anillo intermedio del Bullseye)",
           "fuente": "Traction - Gabriel Weinberg"
         }
       ]
@@ -9559,10 +9613,13 @@
       "resumen_teorico": "El Business Model Canvas de Osterwalder, además de ser una foto estática del negocio, se usa en Customer Discovery como un scorecard semanal para rastrear el progreso en la búsqueda del modelo de negocio. Cada semana actualizas el canvas reflejando pivotes e iteraciones, resaltando en rojo los cambios respecto a la semana anterior. Esto permite ver claramente qué hipótesis cambiaron y cuáles se mantienen, generando un historial que documenta cómo evoluciona tu entendimiento del negocio con el tiempo. Es especialmente útil cuando no tienes claridad propia sobre tu modelo de negocio o necesitas visualizar tu progreso semana a semana de forma tangible.",
       "pasos_accionables": [
         "Llenar el canvas inicial con tus hipótesis en las 9 áreas: segmentos, propuesta de valor, canales, relaciones, recursos, socios e ingresos",
-        "Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho",
+        "Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia",
         "Resaltar en rojo los cambios respecto a la semana anterior",
         "Una vez que confirmes los cambios, integrarlos como el nuevo canvas base en negro para la siguiente semana",
-        "Repetir este proceso de forma continua durante todo tu customer discovery"
+        "Repetir este proceso de forma continua durante todo tu customer discovery",
+        "Sal a validar cada hipótesis con clientes reales cara a cara.",
+        "Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.",
+        "Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar."
       ],
       "entregable_esperado": "Serie histórica de canvases semanales que documenta la evolución de tu modelo de negocio.",
       "nodos_previos": [
@@ -9570,7 +9627,10 @@
         "hipotesis_de_tamano_de_mercado",
         "producto_minimo_viable",
         "lienzo_modelo_negocio",
-        "pivotes_e_iteraciones"
+        "pivotes_e_iteraciones",
+        "business_model_environment_mapping",
+        "business_plan_cinco_secciones",
+        "search_for_business_model"
       ],
       "nodos_siguientes": [
         "customer_validation",
@@ -9581,21 +9641,33 @@
         "intimacion_emocional_como_senal_de_verdad",
         "startup_como_experimento_cientifico",
         "usuarios_extremos_edge_cases",
-        "diseno_experimentos_hipotesis"
+        "diseno_experimentos_hipotesis",
+        "customer_discovery",
+        "modelo_customer_development",
+        "pivote_startup"
       ],
       "condiciones_activacion": [
         "Cuando necesitas rastrear cómo cambian tus hipótesis de negocio a lo largo del tiempo",
         "Cuando no tienes claridad o un entendimiento consolidado de tu propio modelo de negocio",
-        "Cuando estás en pleno proceso de customer discovery y haces pivotes frecuentes"
+        "Cuando estás en pleno proceso de customer discovery y haces pivotes frecuentes",
+        "Si tienes un plan de negocio estático y rígido en lugar de un modelo dinámico.",
+        "Si confundes el plan de negocio con un manual de ejecución.",
+        "Si estás a punto de escribir un plan de negocio tradicional para pedir financiamiento."
       ],
       "etiqueta_arbol": "Registra tu Progreso Semanal",
       "ids_alias": [
-        "business_model_canvas_como_scorecard"
+        "business_model_canvas_como_scorecard",
+        "business_model_canvas_vs_plan"
       ],
       "merged_originals": [
         {
           "node_id": "business_model_canvas_como_scorecard",
           "titulo": "Business Model Canvas como Scorecard de Customer Discovery",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        },
+        {
+          "node_id": "business_model_canvas_vs_plan",
+          "titulo": "Business Model Canvas como Reemplazo del Plan de Negocio",
           "fuente": "The Startup Owner's Manual - Steve Blank"
         }
       ]
@@ -9643,7 +9715,8 @@
           "titulo": "Business Model Canvas vs. Plan de Negocio Tradicional",
           "fuente": "The Startup Owner's Manual - Steve Blank"
         }
-      ]
+      ],
+      "deprecado": true
     },
     "business_model_canvas_vs_plan_negocio": {
       "node_id": "business_model_canvas_vs_plan_negocio",
@@ -9700,7 +9773,7 @@
       "nodos_siguientes": [
         "caso_taobao_evolucion_modelo",
         "future_scenarios_planning",
-        "business_model_canvas_vs_plan",
+        "business_model_canvas_scorecard",
         "determinacion_tamano_cubetas",
         "economia_circular_como_modelo_de_negocio",
         "pricing_models_selection",
@@ -9763,7 +9836,7 @@
         "runway_como_numero_de_pivotes",
         "schedule_management_plan",
         "modelo_estrella_alineacion_organizacional",
-        "business_model_canvas_vs_plan"
+        "business_model_canvas_scorecard"
       ],
       "condiciones_activacion": [
         "Cuando necesitas mostrar tu modelo de negocio a alguien que pueda invertir",
@@ -11785,7 +11858,7 @@
       "nodos_previos": [
         "deep_dive_workshop",
         "prototipado_rapido",
-        "diseno_de_sistemas_a_escala"
+        "alineacion_de_objetivos_en_sistemas"
       ],
       "nodos_siguientes": [
         "fase_implementacion_modelo"
@@ -13979,7 +14052,8 @@
         "Cuando la operación sufre de ciclos de sobre/sub-reacción similares al efecto bullwhip.",
         "Cuando se busca mayor resiliencia y adaptabilidad ante un entorno VUCA (volátil, incierto, complejo, ambiguo)."
       ],
-      "etiqueta_arbol": "Motiva con Metas Visibles"
+      "etiqueta_arbol": "Motiva con Metas Visibles",
+      "deprecado": true
     },
     "cierre_de_ciclos_industriales": {
       "node_id": "cierre_de_ciclos_industriales",
@@ -20134,12 +20208,15 @@
       "pasos_accionables": [
         "Identificar los costos ambientales ocultos en tu forma actual de llevar las cuentas",
         "Definir que costos internos y externos vas a incluir en el análisis",
-        "Elegir las herramientas de contabilidad ambiental mas adecuadas para tu negocio",
-        "Buscar a la persona que te ayuda en temas de sostenibilidad para poner en marcha estas herramientas"
+        "Elegir las herramientas de contabilidad ambiental mas adecuadas para tu negocio, como full cost accounting, EMA",
+        "Buscar a la persona que te ayuda en temas de sostenibilidad para poner en marcha estas herramientas, o a un equipo interdisciplinario (científicos, ingenieros, contadores)",
+        "Reportar resultados tanto para uso interno como para stakeholders externos"
       ],
       "entregable_esperado": "Un marco de contabilidad ambiental documentado que identifique costos y beneficios ambientales relevantes para tus decisiones.",
       "nodos_previos": [
-        "accountability_incentivos"
+        "accountability_incentivos",
+        "contabilidad_basada_actividades",
+        "lente_sostenibilidad_finanzas"
       ],
       "nodos_siguientes": [
         "costeo_ciclo_de_vida",
@@ -20148,9 +20225,20 @@
       ],
       "condiciones_activacion": [
         "Si tomas decisiones de inversion sin considerar costos ambientales ocultos",
-        "Si descartas iniciativas sostenibles por parecer demasiado caras bajo la contabilidad tradicional"
+        "Si descartas iniciativas sostenibles por parecer demasiado caras bajo la contabilidad tradicional",
+        "Si se requiere reportar sostenibilidad a inversionistas o reguladores"
       ],
-      "etiqueta_arbol": "Mide tus Costos Ambientales Reales"
+      "etiqueta_arbol": "Mide tus Costos Ambientales Reales",
+      "ids_alias": [
+        "herramientas_contabilidad_ambiental"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "herramientas_contabilidad_ambiental",
+          "titulo": "Herramientas de Contabilidad Ambiental y de Gestión Sostenible",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ]
     },
     "contabilidad_basada_actividades": {
       "node_id": "contabilidad_basada_actividades",
@@ -20170,7 +20258,7 @@
         "lente_sostenibilidad_finanzas"
       ],
       "nodos_siguientes": [
-        "herramientas_contabilidad_ambiental"
+        "contabilidad_ambiental"
       ],
       "condiciones_activacion": [
         "Si los costos ambientales de la empresa están ocultos en gastos generales sin trazabilidad clara"
@@ -20891,7 +20979,7 @@
       ],
       "nodos_siguientes": [
         "entrenamiento_gerencial",
-        "entrenamiento_empleados_startup"
+        "entrenamiento_funcional_empleados"
       ],
       "condiciones_activacion": [
         "Cuando necesitas contratar a alguien clave para una función crítica en un momento de alta presión competitiva.",
@@ -21665,7 +21753,8 @@
         "Cuando estás aprendiendo una habilidad nueva de pensamiento o creación y no sabes si debes forzar las ideas o dejarlas venir solas.",
         "Cuando tú y quien te acompaña discuten si conviene poner más estructura o dar más libertad durante una sesión de ideas."
       ],
-      "etiqueta_arbol": "Decide Cuánto Dirigir tus Ideas"
+      "etiqueta_arbol": "Decide Cuánto Dirigir tus Ideas",
+      "deprecado": true
     },
     "controles_no_rutinarias_emergencias": {
       "node_id": "controles_no_rutinarias_emergencias",
@@ -21852,25 +21941,42 @@
       "resumen_teorico": "El design thinking exitoso no parte de especificaciones técnicas o investigación de mercado tradicional, sino de una exploración profunda de las necesidades humanas latentes, incluso entre personas que no son clientes actuales. El caso Shimano ilustra cómo explorar por qué el 90% de los adultos estadounidenses no monta bicicleta (a pesar de haberlo hecho de niños) reveló un mercado completamente nuevo ('coasting') que las especificaciones técnicas nunca hubieran descubierto.",
       "pasos_accionables": [
         "Salir del segmento de clientes actuales y estudiar también a los no-clientes o ex-clientes",
-        "Realizar investigación etnográfica/cualitativa para descubrir barreras emocionales, sociales o funcionales",
+        "Realizar investigación etnográfica/cualitativa para descubrir barreras emocionales, sociales o funcionales, y no solo preguntarles qué quieren",
         "Buscar patrones de nostalgia, frustración o deseo no articulado en las conversaciones con usuarios",
-        "Traducir el insight humano en un concepto de producto/servicio memorable y simple"
+        "Traducir el insight humano en un concepto de producto/servicio memorable y simple",
+        "Buscar 'actos sin pensar' (thoughtless acts): soluciones improvisadas que la gente usa para adaptarse a productos mal diseñados.",
+        "Evitar depender únicamente de encuestas o datos cuantitativos que confirman lo que ya se sabe."
       ],
       "entregable_esperado": "Un insight humano documentado (basado en investigación cualitativa) que identifique una necesidad no atendida y un concepto inicial de solución que la aborde.",
       "nodos_previos": [
         "design_thinking_fundamentos",
-        "diseno_estrategico_vs_tactico"
+        "diseno_estrategico_vs_tactico",
+        "espacios_fisicos_de_innovacion"
       ],
       "nodos_siguientes": [
         "storyboard",
         "empathy_map",
-        "amar_las_restricciones"
+        "amar_las_restricciones",
+        "personalizacion_investigacion_prospecto",
+        "usuarios_extremos_edge_cases"
       ],
       "condiciones_activacion": [
         "Cuando el crecimiento del mercado tradicional se ha estancado",
-        "Cuando la empresa depende exclusivamente de innovación tecnológica incremental"
+        "Cuando la empresa depende exclusivamente de innovación tecnológica incremental",
+        "Cuando el equipo solo cuenta con datos de mercado convencionales (encuestas, focus groups) y necesita insights más profundos.",
+        "Al iniciar la fase de inspiración de un proyecto de diseño centrado en las personas."
       ],
-      "etiqueta_arbol": "Pon a las Personas Primero"
+      "etiqueta_arbol": "Pon a las Personas Primero",
+      "ids_alias": [
+        "insight_observacion_empatia"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "insight_observacion_empatia",
+          "titulo": "Insight, Observación y Empatía: Convertir Necesidad en Demanda",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "convertir_unknown_unknowns_en_known_unknowns": {
       "node_id": "convertir_unknown_unknowns_en_known_unknowns",
@@ -24654,11 +24760,10 @@
       "nodos_previos": [
         "traction_goal",
         "bullseye_framework",
-        "law_of_shitty_click_throughs",
-        "middle_ring_testing"
+        "law_of_shitty_click_throughs"
       ],
       "nodos_siguientes": [
-        "middle_ring_testing",
+        "bullseye_framework",
         "traction_channel_bias",
         "alineacion_bd_metricas_core"
       ],
@@ -25504,8 +25609,8 @@
       "resumen_teorico": "Todo proceso de pensamiento creativo o resolución de problemas, sea científico, artístico o de negocios, atraviesa cuatro etapas que no son estrictamente lineales y pueden solaparse cuando trabajas en varios problemas a la vez. Preparación: investigas el problema en profundidad y de forma consciente, reuniendo toda la información relevante. Incubación: dejas de pensar conscientemente en el problema mientras descansas o haces otra cosa, pero el trabajo mental inconsciente sigue activo. Iluminación: aparece de golpe la idea o solución feliz, a menudo precedida por señales sutiles de que algo se está formando, llamadas intimación. Verificación: sometes la idea a un análisis lógico riguroso y a pruebas antes de implementarla. Este modelo es la base histórica de casi todos los procesos modernos de pensamiento de diseño e ideación.",
       "pasos_accionables": [
         "Preparación: define claramente el problema e investígalo a fondo, reuniendo toda la información relevante posible",
-        "Incubación: aléjate deliberadamente del problema (duerme, camina, trabaja en otra cosa) sin forzar conscientemente una solución",
-        "Lleva contigo una libreta o notas de voz para capturar cualquier señal sutil de que una idea se está formando, o el momento en que llega completa",
+        "Incubación: aléjate deliberadamente del problema (duerme, camina, trabaja en otra cosa) sin forzar conscientemente una solución, creando condiciones de silencio, actividad relajada",
+        "Lleva contigo una libreta o notas de voz para capturar cualquier señal sutil de que una idea se está formando, o el momento en que llega completa, como indicio de Intimación",
         "Iluminación: cuando llegue el destello de la idea, captúralo de inmediato sin filtrarlo con crítica",
         "Verificación: somete la idea capturada a un análisis lógico riguroso y a pruebas antes de implementarla",
         "Anota en qué etapa se encuentra cada idea que estés trabajando, preparación, incubación, iluminación o verificación, para no perder el hilo"
@@ -25515,13 +25620,16 @@
         "Cuando estás bloqueado buscando una solución creativa y llevas tiempo forzando el pensamiento sin resultados",
         "Al iniciar la fase de ideación de un proyecto de innovación o diseño",
         "Cuando necesitas estructurar un proceso creativo caótico o intuitivo en pasos gestionables",
-        "Cuando no entiendes por qué las ideas no te llegan a pesar de la presión constante"
+        "Cuando no entiendes por qué las ideas no te llegan a pesar de la presión constante",
+        "Cuando surge una idea repentina durante un momento de relajación o distracción del problema original."
       ],
       "node_id": "cuatro_etapas_del_pensamiento_creativo",
       "nodos_previos": [
         "concepcion_hormica_del_pensamiento",
         "pensamiento_autoiniciado",
-        "superacion_accidia_creativa"
+        "superacion_accidia_creativa",
+        "ruptura_de_habitos_para_estimulo",
+        "wallas_etapa_incubacion"
       ],
       "nodos_siguientes": [
         "prototipado_rapido",
@@ -25542,19 +25650,25 @@
         "ruptura_de_habitos_para_estimulo",
         "wallas_etapa_preparacion",
         "wallas_etapa_incubacion",
-        "wallas_etapa_iluminacion",
         "wallas_etapa_verificacion",
         "prototipar_con_medios_no_convencionales",
-        "sentido_del_humor_como_herramienta_de_pensamiento"
+        "sentido_del_humor_como_herramienta_de_pensamiento",
+        "wallas_intimacion_fringe_consciousness"
       ],
       "etiqueta_arbol": "Sigue las Etapas de tu Creatividad",
       "ids_alias": [
-        "wallas_cuatro_etapas_pensamiento_creativo"
+        "wallas_cuatro_etapas_pensamiento_creativo",
+        "wallas_etapa_iluminacion"
       ],
       "merged_originals": [
         {
           "node_id": "wallas_cuatro_etapas_pensamiento_creativo",
           "titulo": "Las Cuatro Etapas del Pensamiento Creativo",
+          "fuente": "The Art of Thought - Wallas, Graham"
+        },
+        {
+          "node_id": "wallas_etapa_iluminacion",
+          "titulo": "Etapa de Iluminación",
           "fuente": "The Art of Thought - Wallas, Graham"
         }
       ]
@@ -26212,7 +26326,7 @@
       "entregable_esperado": "Plan de desarrollo cultural que incluya mecanismos de transición de autoridad y fomento de diversidad de equipos",
       "nodos_previos": [
         "organizaciones_alta_confiabilidad_hro",
-        "entrenamiento_empleados_startup",
+        "entrenamiento_funcional_empleados",
         "programacion_cultura_empresarial"
       ],
       "nodos_siguientes": [
@@ -27339,7 +27453,7 @@
         "seleccion_estrategia_pricing",
         "sintesis_hipotesis_modelo_negocio",
         "search_for_business_model",
-        "business_model_canvas_vs_plan"
+        "business_model_canvas_scorecard"
       ],
       "nodos_siguientes": [
         "customer_validation",
@@ -29751,9 +29865,9 @@
       "resumen_teorico": "Una cadena de suministro es la red de empresas y actividades necesarias para diseñar, fabricar, entregar y usar un producto o servicio. Toda empresa participa en una o más cadenas de suministro y debe entender el rol que juega en ellas. La gestión de la cadena de suministro (SCM) es la coordinación sistémica de producción, inventario, ubicación y transporte entre los participantes para lograr el mejor balance entre capacidad de respuesta y eficiencia según el mercado servido. La estrategia de la empresa (competir por precio vs. por servicio/conveniencia) debe determinar el diseño de su cadena de suministro.",
       "pasos_accionables": [
         "Mapear todas las empresas y actividades que participan en la cadena de suministro de tu producto/servicio.",
-        "Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.)., y sus core competencies",
+        "Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.), y sus core competencies",
         "Definir si tu estrategia competitiva se basa en precio bajo (requiere eficiencia) o en servicio/conveniencia (requiere capacidad de respuesta).",
-        "Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida., que son los 5 drivers (producción, inventario, ubicación, transporte, información)",
+        "Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida, que son los 5 drivers (producción, inventario, ubicación, transporte, información)",
         "Identificar en qué categoría(s) participa tu empresa: productor, distribuidor, minorista, proveedor de servicios",
         "Mapear todos los participantes de tu cadena de suministro actual, incluyendo proveedores del proveedor y clientes del cliente",
         "Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia operativa",
@@ -32833,7 +32947,7 @@
         "prototipado_rapido",
         "stage_gate_td_tecnologia",
         "asignacion_agil_de_recursos",
-        "diseno_fugitivo_runaway_design",
+        "diseno_consecuencias_no_intencionadas",
         "diseno_imperfeccion_intencional"
       ],
       "condiciones_activacion": [
@@ -33336,8 +33450,7 @@
       ],
       "entregable_esperado": "Un sistema de monitoreo regulatorio con alertas tempranas y un plan de contingencia para las sustancias que corren riesgo",
       "nodos_previos": [
-        "reduccion_cargas_regulatorias",
-        "reduccion_cargas_cumplimiento"
+        "reduccion_cargas_regulatorias"
       ],
       "nodos_siguientes": [
         "uso_regulaciones_como_espada"
@@ -35060,7 +35173,7 @@
       ],
       "node_id": "disenar_para_sanacion",
       "nodos_previos": [
-        "diseno_fugitivo_runaway_design",
+        "diseno_consecuencias_no_intencionadas",
         "pensamiento_de_conexiones_ripple_effect",
         "diseno_imperfeccion_intencional",
         "consecuencias_no_intencionadas_sistemicas",
@@ -35404,28 +35517,46 @@
       "resumen_teorico": "Todo diseño, por bien intencionado que sea, puede generar efectos secundarios imprevistos a lo largo del tiempo (ambientales, sociales, psicológicos) que superan el control del creador original. Este concepto invita a los diseñadores y emprendedores a incorporar de forma proactiva el ejercicio de imaginar escenarios futuros extremos (positivos y negativos) de su creación, y a diseñar con humildad, previendo mecanismos de corrección, reversión o mitigación antes de escalar una solución.",
       "pasos_accionables": [
         "Reúne al equipo y plantea escenarios especulativos a 10, 50 y 100 años sobre el uso masivo de tu producto o servicio.",
-        "Identifica quién se beneficia y quién podría ser perjudicado si tu solución escala sin control.",
+        "Identifica quién se beneficia y quién podría ser perjudicado si tu solución escala sin control. Incluye a quien no está en la sala de diseño pero será afectado",
         "Pregunta explícitamente: '¿Qué pasaría si esto se usa de forma opuesta a la intención original?'",
         "Diseña salvaguardas, límites de uso o 'mecanismos de reversión' incorporados desde el inicio.",
-        "Documenta los riesgos identificados y revisítalos periódicamente conforme el producto evoluciona."
+        "Documenta los riesgos identificados y revisítalos periódicamente conforme el producto evoluciona. Establece mecanismos de monitoreo post-lanzamiento",
+        "Antes de lanzar un producto o servicio, mapear posibles efectos de segundo y tercer orden (no solo el uso directo)",
+        "Preguntar '¿qué comportamientos nuevos habilitará esto?' y '¿qué sistemas existentes alterará?'"
       ],
       "entregable_esperado": "Un documento de 'escenarios especulativos y riesgos' con al menos tres consecuencias no intencionadas plausibles y las salvaguardas o mecanismos de mitigación propuestos para cada una.",
       "nodos_previos": [
         "mapeo_capas_diseno",
-        "diseno_imperfeccion_intencional"
+        "diseno_imperfeccion_intencional",
+        "design_thinking_proceso",
+        "empathy_map",
+        "pensamiento_de_conexiones_ripple_effect"
       ],
       "nodos_siguientes": [
         "definicion_startup",
         "prototipado_rapido",
         "antigoals_framework",
-        "search_for_business_model"
+        "search_for_business_model",
+        "disenar_para_sanacion",
+        "protocepto"
       ],
       "condiciones_activacion": [
         "Cuando el proyecto involucra tecnologías emergentes (IA, datos personales, biotecnología) con alto potencial de impacto sistémico.",
         "Si el equipo está a punto de escalar una solución sin haber evaluado riesgos a largo plazo.",
-        "Cuando se requiere justificar decisiones de diseño ético frente a inversionistas o reguladores."
+        "Cuando se requiere justificar decisiones de diseño ético frente a inversionistas o reguladores.",
+        "Cuando se ignoran los efectos sistémicos por enfocarse solo en la funcionalidad inmediata"
       ],
-      "etiqueta_arbol": "Anticipa Efectos No Intencionados"
+      "etiqueta_arbol": "Anticipa Efectos No Intencionados",
+      "ids_alias": [
+        "diseno_fugitivo_runaway_design"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "diseno_fugitivo_runaway_design",
+          "titulo": "Diseño Fugitivo (Runaway Design)",
+          "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+        }
+      ]
     },
     "diseno_controles_proceso_mejorado": {
       "node_id": "diseno_controles_proceso_mejorado",
@@ -35815,7 +35946,8 @@
         "Cuando el problema involucra a varias organizaciones o entidades del gobierno",
         "Si las soluciones que existen hoy son solo reglas administrativas, sin diseño de experiencia"
       ],
-      "etiqueta_arbol": "Diseña Sistemas Complejos a Escala"
+      "etiqueta_arbol": "Diseña Sistemas Complejos a Escala",
+      "deprecado": true
     },
     "diseno_de_sistemas_institucionales": {
       "node_id": "diseno_de_sistemas_institucionales",
@@ -36084,9 +36216,8 @@
       "entregable_esperado": "Protocolo de experimento documentado con criterio de éxito o fracaso definido antes de ejecutarlo",
       "nodos_previos": [
         "business_model_canvas_como_scorecard",
-        "business_model_canvas_vs_plan",
-        "fracaso_como_aprendizaje_startup",
-        "business_model_canvas_scorecard"
+        "business_model_canvas_scorecard",
+        "fracaso_como_aprendizaje_startup"
       ],
       "nodos_siguientes": [
         "determinar_tipo_de_mercado",
@@ -36172,7 +36303,8 @@
         "Si el producto involucra datos, IA, o sistemas que aprenden y se retroalimentan",
         "Cuando se ignoran los efectos sistémicos por enfocarse solo en la funcionalidad inmediata"
       ],
-      "etiqueta_arbol": "Anticipa Efectos Fuera de Control"
+      "etiqueta_arbol": "Anticipa Efectos Fuera de Control",
+      "deprecado": true
     },
     "diseno_imperfeccion_intencional": {
       "node_id": "diseno_imperfeccion_intencional",
@@ -36981,7 +37113,7 @@
       ],
       "nodos_siguientes": [
         "etnografia_de_proyecto",
-        "diseno_de_sistemas_a_escala"
+        "alineacion_de_objetivos_en_sistemas"
       ],
       "condiciones_activacion": [
         "Cuando tu proyecto involucra ecosistemas, comunidades o sistemas complejos con muchos actores.",
@@ -37780,7 +37912,7 @@
         "riesgo_control_algoritmico"
       ],
       "nodos_siguientes": [
-        "ciclos_retroalimentacion_autoajuste",
+        "bucle_retroalimentacion_autoajustable",
         "automatizacion_tareas_aburridas"
       ],
       "condiciones_activacion": [
@@ -41885,7 +42017,7 @@
         "ciclo_circunstancias_sentimientos_ideas",
         "diseno_basado_en_comportamientos_existentes",
         "economia_de_la_experiencia",
-        "diseno_fugitivo_runaway_design",
+        "diseno_consecuencias_no_intencionadas",
         "elementos_creadores_valor",
         "escenarios_diseno_modelo_negocio",
         "prototipado_modelos_negocio",
@@ -43363,7 +43495,8 @@
         "Cuando la startup empieza a escalar el equipo y necesita consistencia en la ejecución.",
         "Cuando se detecta que empleados nuevos no comprenden el contexto completo de su trabajo."
       ],
-      "etiqueta_arbol": "Entrena a tu Equipo desde Ya"
+      "etiqueta_arbol": "Entrena a tu Equipo desde Ya",
+      "deprecado": true
     },
     "entrenamiento_en_sitio": {
       "node_id": "entrenamiento_en_sitio",
@@ -43400,23 +43533,37 @@
       "resumen_teorico": "El entrenamiento funcional enseña a los empleados el conocimiento y las habilidades específicas necesarias para su puesto. Es una de las actividades de mayor apalancamiento que un manager puede realizar: pequeñas mejoras en el desempeño de muchos empleados generan enormes ganancias de productividad. Además, mejora la calidad del producto, facilita la gestión del desempeño y aumenta la retención.",
       "pasos_accionables": [
         "Identifica las competencias clave necesarias para cada rol crítico en la empresa.",
-        "Crea documentos o programas de entrenamiento específicos (ej. 'Good PM/Bad PM').",
-        "Haz obligatorio el entrenamiento antes de aprobar nuevas contrataciones para un equipo.",
-        "Mide la productividad de los nuevos empleados antes y después del entrenamiento."
+        "Crea documentos o programas de entrenamiento específicos (ej. 'Good PM/Bad PM'). Hazlo para roles clave (ventas, ingeniería, gestión)",
+        "Haz obligatorio el entrenamiento antes de aprobar nuevas contrataciones para un equipo. Y hazlo con seguimiento de cumplimiento",
+        "Mide la productividad de los nuevos empleados antes y después del entrenamiento.",
+        "No asumas que la inteligencia o experiencia previa reemplaza la necesidad de entrenamiento específico de la empresa.",
+        "Exige que los líderes de área (ej: VP de ventas) documenten y enseñen sus procesos, no solo los ejecuten intuitivamente."
       ],
       "entregable_esperado": "Programa de entrenamiento funcional documentado y obligatorio para cada rol clave.",
       "nodos_previos": [
-        "cultura_de_buena_empresa"
+        "cultura_de_buena_empresa",
+        "contratar_por_fortaleza"
       ],
       "nodos_siguientes": [
         "entrenamiento_gerencial",
-        "framework_good_bad_product_manager"
+        "framework_good_bad_product_manager",
+        "cultura_flexible_organizacional"
       ],
       "condiciones_activacion": [
         "Cuando la empresa crece rápido y contrata nuevos empleados sin procesos claros de onboarding",
         "Cuando existe alta rotación o baja productividad en nuevos empleados"
       ],
-      "etiqueta_arbol": "Enseña las Habilidades del Puesto"
+      "etiqueta_arbol": "Enseña las Habilidades del Puesto",
+      "ids_alias": [
+        "entrenamiento_empleados_startup"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "entrenamiento_empleados_startup",
+          "titulo": "Entrenar a los Empleados desde el Inicio",
+          "fuente": "The Hard Thing About Hard Thing - Ben Horowitz"
+        }
+      ]
     },
     "entrenamiento_gerencial": {
       "node_id": "entrenamiento_gerencial",
@@ -45114,23 +45261,39 @@
         "Revisa si tus ideas nacen solo de la inspiración espontánea o si tienes una manera consciente de forzarlas cuando las necesitas",
         "Crea rituales o señales que te ayuden a concentrarte a voluntad, como bloques de tiempo fijos o un ambiente especial, para no depender solo del ánimo del momento",
         "Deja espacios donde tu curiosidad espontánea pueda aparecer sin que la ahogue la rigidez de un proceso formal",
-        "Combina sesiones estructuradas de pensamiento forzado con momentos libres de exploración sin rumbo fijo"
+        "Combina sesiones estructuradas de pensamiento forzado con momentos libres de exploración sin rumbo fijo",
+        "Identifica si estás aprendiendo una forma nueva de pensar (ahí te conviene controlar más conscientemente) o si ya dominas esa habilidad (ahí conviene interferir menos).",
+        "Cuando sientas que una idea puede llevarte a algo, intenta sostenerla o desviarla a propósito."
       ],
       "entregable_esperado": "Tu propia manera de generar ideas, que combine sesiones estructuradas de esfuerzo consciente con momentos libres de exploración espontánea.",
       "nodos_previos": [
         "equilibrio_habito_estimulo",
-        "ruptura_de_habitos_para_estimulo"
+        "ruptura_de_habitos_para_estimulo",
+        "intimation_illumination",
+        "poder_a_traves_de_la_accion"
       ],
       "nodos_siguientes": [
         "wallas_etapa_incubacion",
         "reglas_brainstorming",
-        "deteccion_efecto_hawthorne"
+        "deteccion_efecto_hawthorne",
+        "wallas_etapa_verificacion"
       ],
       "condiciones_activacion": [
         "Cuando dependes solo de la inspiración espontánea y no consigues resultados consistentes",
-        "Si necesitas armar un proceso creativo que puedas repetir para generar ideas"
+        "Si necesitas armar un proceso creativo que puedas repetir para generar ideas",
+        "Cuando tú y quien te acompaña discuten si conviene poner más estructura o dar más libertad durante una sesión de ideas."
       ],
-      "etiqueta_arbol": "Equilibra Esfuerzo y Espontaneidad"
+      "etiqueta_arbol": "Equilibra Esfuerzo y Espontaneidad",
+      "ids_alias": [
+        "control_voluntario_del_pensamiento"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "control_voluntario_del_pensamiento",
+          "titulo": "Cuánto debes controlar tu propio pensamiento",
+          "fuente": "The Art of Thought - Wallas, Graham"
+        }
+      ]
     },
     "esfuerzo_y_energia_intelectual": {
       "node_id": "esfuerzo_y_energia_intelectual",
@@ -45255,7 +45418,7 @@
         "cultura_de_innovacion_y_juego_serio"
       ],
       "nodos_siguientes": [
-        "insight_observacion_empatia"
+        "convertir_necesidad_en_demanda"
       ],
       "condiciones_activacion": [
         "Cuando un equipo trabaja proyectos complejos y necesita sintetizar información dispersa.",
@@ -51075,13 +51238,14 @@
         "Revisar todo mensaje verde en busca de vaguedad o falta de especificidad",
         "Verificar que las imágenes usadas no exageren beneficios ambientales",
         "Confirmar que toda la cadena de suministro respalde la afirmación verde",
-        "Sustentar cada reclamo con datos verificables o certificaciones de terceros",
+        "Sustentar cada reclamo con datos verificables o certificaciones de terceros, verificando tres veces",
         "Evitar reclamos irrelevantes que solo cumplen con regulación mínima"
       ],
       "entregable_esperado": "Checklist de revisión anti-greenwashing aplicado antes de publicar cualquier comunicación ambiental",
       "nodos_previos": [
         "solidificar_defensa_ambiental",
-        "principio_green_tercer_boton"
+        "principio_green_tercer_boton",
+        "vinculacion_reporte_financiero"
       ],
       "nodos_siguientes": [
         "diseno_mensaje_verde",
@@ -51089,9 +51253,20 @@
       ],
       "condiciones_activacion": [
         "Antes de publicar cualquier afirmación ambiental en marketing",
-        "Si existe riesgo de escrutinio por parte de ONGs o consumidores"
+        "Si existe riesgo de escrutinio por parte de ONGs o consumidores",
+        "Si existe presión de marketing para exagerar logros ambientales"
       ],
-      "etiqueta_arbol": "Evita las Fallas del Greenwashing"
+      "etiqueta_arbol": "Evita las Fallas del Greenwashing",
+      "ids_alias": [
+        "evitar_greenwashing_2"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "evitar_greenwashing_2",
+          "titulo": "Evitar el Greenwashing (Riesgo de Credibilidad)",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ]
     },
     "evitar_greenwashing_2": {
       "node_id": "evitar_greenwashing_2",
@@ -51116,7 +51291,8 @@
         "Antes de publicar cualquier claim ambiental o de sostenibilidad",
         "Si existe presión de marketing para exagerar logros ambientales"
       ],
-      "etiqueta_arbol": "Cuida tu Credibilidad Ambiental"
+      "etiqueta_arbol": "Cuida tu Credibilidad Ambiental",
+      "deprecado": true
     },
     "evitar_lenguaje_juzgador": {
       "node_id": "evitar_lenguaje_juzgador",
@@ -53968,9 +54144,9 @@
       "resumen_teorico": "Antes de que una tecnología o una decisión de diseño exista, puedes contarte una historia sobre cómo sería vivir con ella. Imagina escenarios extremos, llevados al límite, para descubrir tensiones y dilemas que hoy no ves: qué pasaría si existiera un sistema que puntuara el comportamiento de la gente, o una forma de criar hijos entre varias personas, o una donación genética regulada. Este ejercicio te ayuda a anticipar efectos secundarios no deseados y a cuestionar si lo que estás construyendo realmente representa progreso.",
       "pasos_accionables": [
         "Elige una tendencia tecnológica o social emergente que se relacione con lo que estás construyendo.",
-        "Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real., en 10-15 años, del tipo usuarios, empresas, reguladores",
+        "Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real, en 10-15 años, del tipo usuarios, empresas, reguladores",
         "Identifica qué tensiones éticas, sociales o de fondo aparecen en ese escenario.",
-        "Usa la historia para conversar con quien te acompaña o con las personas involucradas, y anticipar consecuencias que no querrías., y antes de definir requisitos del producto",
+        "Usa la historia para conversar con quien te acompaña o con las personas involucradas, y anticipar consecuencias que no querrías, y antes de definir requisitos del producto",
         "Saca de ahí principios de diseño que te ayuden a evitar los riesgos que descubriste en la historia."
       ],
       "entregable_esperado": "Un relato breve (1 a 2 páginas) que explore cómo sería el futuro con la tecnología o el sistema que estás pensando, más una lista de las tensiones éticas que descubriste al escribirlo.",
@@ -59770,7 +59946,7 @@
         "fase_gestion_continua_modelo",
         "automatizacion_software_gestion_innovacion",
         "sprint_board_burn_down",
-        "arquitectura_flexible_soa"
+        "arquitectura_tecnica_modular"
       ],
       "nodos_siguientes": [
         "pruning_portafolio",
@@ -59998,7 +60174,7 @@
         "reglas_brainstorming",
         "gamificacion_onboarding_visual",
         "mapeo_de_patrones",
-        "observar_lo_ordinario"
+        "practica_de_observacion_atenta"
       ],
       "nodos_siguientes": [
         "storyboard",
@@ -60824,7 +61000,7 @@
       "nodos_previos": [
         "politica_no_culpar_trabajador",
         "gestion_participativa_qc_circle_supervisores",
-        "ciclos_retroalimentacion_autoajuste"
+        "bucle_retroalimentacion_autoajustable"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -61756,7 +61932,8 @@
         "Si la empresa necesita justificar inversiones ambientales que no cumplen los criterios financieros tradicionales",
         "Si se requiere reportar sostenibilidad a inversionistas o reguladores"
       ],
-      "etiqueta_arbol": "Mide tu Impacto Ambiental"
+      "etiqueta_arbol": "Mide tu Impacto Ambiental",
+      "deprecado": true
     },
     "herramientas_de_activacion_web": {
       "node_id": "herramientas_de_activacion_web",
@@ -63000,7 +63177,7 @@
       "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
       "resumen_teorico": "Estudios muestran que la IA beneficia proporcionalmente más a quienes tienen menor desempeño en una tarea, acercando su resultado al de los más hábiles. Por ejemplo, en consultoría la brecha de desempeño bajó de 22% a 4%, y en escritura creativa o derecho los resultados se equipararon. Para ti como emprendedor con recursos limitados, esto significa que la IA no solo potencia tus fortalezas sino que eleva el piso en las tareas donde tienes menos experiencia o donde tus colaboradores o freelancers rinden de forma desigual. Esto permite escalar sin depender exclusivamente de contratar talento senior, usando la IA como herramienta para nivelar capacidades en las áreas más débiles del negocio.",
       "pasos_accionables": [
-        "Identificar las tareas de tu negocio donde exista mayor variabilidad de desempeño, sea tuya o de colaboradores y freelancers., como memos, informes, comunicados",
+        "Identificar las tareas de tu negocio donde exista mayor variabilidad de desempeño, sea tuya o de colaboradores y freelancers, como memos, informes, comunicados",
         "Implementar herramientas de IA específicamente en esas tareas y anotar el resultado antes y después.",
         "Priorizar el uso de IA en las áreas donde tienes menos habilidad o donde tus colaboradores rinden por debajo del promedio, ya que ahí el beneficio es mayor.",
         "Medir el cambio en la brecha de desempeño comparando resultados de baja y alta capacidad previa.",
@@ -65770,7 +65947,8 @@
         "Cuando el equipo solo cuenta con datos de mercado convencionales (encuestas, focus groups) y necesita insights más profundos.",
         "Al iniciar la fase de inspiración de un proyecto de diseño centrado en las personas."
       ],
-      "etiqueta_arbol": "Observa lo que Nadie Dice"
+      "etiqueta_arbol": "Observa lo que Nadie Dice",
+      "deprecado": true
     },
     "inspeccion_automatizada": {
       "node_id": "inspeccion_automatizada",
@@ -66539,7 +66717,7 @@
       "nodos_siguientes": [
         "wallas_etapa_verificacion",
         "reglas_brainstorming",
-        "control_voluntario_del_pensamiento",
+        "esfuerzo_voluntario_vs_urge_espontaneo",
         "emocion_e_imagen_en_el_pensamiento",
         "proteccion_del_tren_asociativo",
         "sentido_del_humor_como_herramienta_de_pensamiento"
@@ -67482,7 +67660,7 @@
         "analisis_competitivo",
         "future_scenarios_planning",
         "innovacion_abierta",
-        "arquitectura_flexible_soa"
+        "arquitectura_tecnica_modular"
       ],
       "condiciones_activacion": [
         "Cuando se han realizado múltiples análisis estratégicos y se necesita sintetizarlos en acciones concretas",
@@ -69181,7 +69359,7 @@
       ],
       "nodos_siguientes": [
         "contabilidad_basada_actividades",
-        "herramientas_contabilidad_ambiental"
+        "contabilidad_ambiental"
       ],
       "condiciones_activacion": [
         "Si el área financiera de la empresa no ha integrado criterios de sostenibilidad en su análisis"
@@ -69821,7 +69999,7 @@
         "business_model_environment_mapping",
         "blue_ocean_four_actions",
         "business_model_canvas_como_scorecard",
-        "business_model_canvas_vs_plan",
+        "business_model_canvas_scorecard",
         "business_plan_cinco_secciones",
         "convertible_debt_fundamentos",
         "search_for_business_model",
@@ -69873,7 +70051,6 @@
         "modelo_cuatro_cuadrantes_mercado",
         "scor_model_operaciones",
         "simulacion_de_operaciones_supply_chain",
-        "business_model_canvas_scorecard",
         "decision_pivotar_o_proceder",
         "clasificacion_mercados_cadena_suministro"
       ],
@@ -70392,8 +70569,7 @@
       ],
       "entregable_esperado": "Un glosario o lista de 'palabras nuevas' que nombren gaps, sensaciones o fenómenos antes invisibles en el proyecto",
       "nodos_previos": [
-        "practica_de_observacion_atenta",
-        "observar_lo_ordinario"
+        "practica_de_observacion_atenta"
       ],
       "nodos_siguientes": [
         "nombrar_los_monstruos",
@@ -72611,7 +72787,7 @@
         "categorizacion_ranking_proyectos_cubetas"
       ],
       "nodos_siguientes": [
-        "diseno_de_sistemas_a_escala",
+        "alineacion_de_objetivos_en_sistemas",
         "identificacion_talento_design_thinking",
         "transformacion_organizacional_diseno",
         "identificar_pensadores_de_diseno_internos"
@@ -75657,7 +75833,8 @@
         "Cuando ya identificaste varias estrategias de canal candidatas y necesitas decidir en cuál enfocarte",
         "Cuando tienes recursos limitados y no puedes probar todos los canales al mismo tiempo"
       ],
-      "etiqueta_arbol": "Prueba tus Mejores Canales"
+      "etiqueta_arbol": "Prueba tus Mejores Canales",
+      "deprecado": true
     },
     "mide_lo_que_de_verdad_mueve_la_aguja": {
       "node_id": "mide_lo_que_de_verdad_mueve_la_aguja",
@@ -76612,7 +76789,7 @@
         "busqueda_vs_ejecucion",
         "pivote_startup",
         "search_for_business_model",
-        "business_model_canvas_vs_plan"
+        "business_model_canvas_scorecard"
       ],
       "nodos_siguientes": [
         "customer_discovery",
@@ -79704,7 +79881,8 @@
       "condiciones_activacion": [
         "Durante la fase de investigación e inspiración de un proyecto de design thinking"
       ],
-      "etiqueta_arbol": "Observa lo Ordinario con Atención"
+      "etiqueta_arbol": "Observa lo Ordinario con Atención",
+      "deprecado": true
     },
     "obstaculos_innovacion_modelo_negocio": {
       "node_id": "obstaculos_innovacion_modelo_negocio",
@@ -82424,7 +82602,7 @@
         "pensamiento_visual_modelos_negocio"
       ],
       "nodos_siguientes": [
-        "diseno_fugitivo_runaway_design",
+        "diseno_consecuencias_no_intencionadas",
         "patron_free_business_model",
         "disenar_para_sanacion"
       ],
@@ -82989,7 +83167,7 @@
       ],
       "entregable_esperado": "Una plantilla en tu sistema de clientes con campos para personalizar cada contacto, y una lista de gestos de bajo costo para sorprender a las personas con las que hablas.",
       "nodos_previos": [
-        "insight_observacion_empatia"
+        "convertir_necesidad_en_demanda"
       ],
       "nodos_siguientes": [
         "preframing_expectativas"
@@ -83637,7 +83815,7 @@
       "nodos_previos": [
         "customer_discovery",
         "customer_validation",
-        "business_model_canvas_vs_plan",
+        "business_model_canvas_scorecard",
         "contabilidad_innovacion",
         "decisiones_reversibles_irreversibles",
         "desarrollo_de_clientes_customer_development",
@@ -85619,7 +85797,7 @@
       "nodos_siguientes": [
         "wallas_etapa_verificacion",
         "afinar_frente_difuso_innovacion",
-        "control_voluntario_del_pensamiento",
+        "esfuerzo_voluntario_vs_urge_espontaneo",
         "fracaso_como_aprendizaje_startup"
       ],
       "condiciones_activacion": [
@@ -86298,11 +86476,12 @@
         "Dedica tiempo a observar espacios cotidianos sin un objetivo predefinido (una calle, una estación, un parque).",
         "Suspende el juicio inmediato sobre lo que ves; anota primero, interpreta después.",
         "Busca patrones de comportamiento repetidos que revelen necesidades no declaradas.",
-        "Practica la observación en diferentes contextos para entrenar el hábito como una disciplina regular."
+        "Practica la observación en diferentes contextos para entrenar el hábito como una disciplina regular. Y hazlo con el hábito diario"
       ],
       "entregable_esperado": "Un diario de observación con notas de campo sobre comportamientos, rutinas y momentos cotidianos relevantes para el problema de diseño.",
       "nodos_previos": [
-        "buscar_armonia_diseno"
+        "buscar_armonia_diseno",
+        "preguntar_por_que_no_que"
       ],
       "nodos_siguientes": [
         "identificar_brechas_gaps",
@@ -86311,13 +86490,24 @@
         "aprender_desde_el_amor_empatia",
         "deep_dive_workshop",
         "llamar_lo_que_falta",
-        "storytelling_como_herramienta_diseno"
+        "storytelling_como_herramienta_diseno",
+        "get_visual"
       ],
       "condiciones_activacion": [
         "Si el usuario está en la fase de investigación exploratoria antes de definir un problema.",
         "Si el equipo tiende a saltar directamente a soluciones sin entender el contexto real de los usuarios."
       ],
-      "etiqueta_arbol": "Observa Atentamente tu Presente"
+      "etiqueta_arbol": "Observa Atentamente tu Presente",
+      "ids_alias": [
+        "observar_lo_ordinario"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "observar_lo_ordinario",
+          "titulo": "Observar lo Ordinario (Open Your Eyes)",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "practica_deliberada_asistida_ia": {
       "node_id": "practica_deliberada_asistida_ia",
@@ -86673,7 +86863,7 @@
         "analisis_y_sintesis"
       ],
       "nodos_siguientes": [
-        "observar_lo_ordinario",
+        "practica_de_observacion_atenta",
         "diseno_de_sistemas_institucionales"
       ],
       "condiciones_activacion": [
@@ -92411,7 +92601,7 @@
       "entregable_esperado": "Una serie de versiones intermedias de tu producto, una tras otra, con el feedback del cliente y los ajustes tecnicos que hiciste en cada ciclo.",
       "nodos_previos": [
         "definicion_sprint_terminado",
-        "diseno_fugitivo_runaway_design",
+        "diseno_consecuencias_no_intencionadas",
         "definicion_sprint_terminado_fisico"
       ],
       "nodos_siguientes": [
@@ -95617,7 +95807,8 @@
       "condiciones_activacion": [
         "Cuando el proceso de manufactura usa materiales peligrosos con seguimiento regulatorio complejo"
       ],
-      "etiqueta_arbol": "Reduce tus Cargas de Cumplimiento"
+      "etiqueta_arbol": "Reduce tus Cargas de Cumplimiento",
+      "deprecado": true
     },
     "reduccion_cargas_regulatorias": {
       "node_id": "reduccion_cargas_regulatorias",
@@ -95627,10 +95818,11 @@
       "fuente": "The Green to Gold Business Play - Daniel C. Esty",
       "resumen_teorico": "Estrategia intermedia que consiste en analizar las obligaciones de cumplimiento ambiental para identificar cuáles podrían eliminarse mediante el rediseño de productos o procesos de manufactura. Si un proceso usa materiales peligrosos no esenciales que requieren seguimiento regulatorio complejo, conviene rediseñarlo para eliminarlos, reduciendo así la carga regulatoria y el riesgo legal.",
       "pasos_accionables": [
-        "Mapear todos los materiales usados en cada producto para identificar sustancias sensibles",
+        "Mapear todos los materiales usados en cada producto para identificar sustancias sensibles, y tambien en los procesos de manufactura",
         "Clasificar materias primas según su impacto en salud y ambiente (ej. escala 0-3 tipo 'green list')",
         "Priorizar el uso de materiales mejor calificados en nuevos productos o reformulaciones",
-        "Evaluar la descentralización de equipos de cumplimiento regulatorio si hay heterogeneidad normativa entre regiones"
+        "Evaluar la descentralización de equipos de cumplimiento regulatorio si hay heterogeneidad normativa entre regiones",
+        "Priorizar el rediseño de productos para eliminar materiales de alto riesgo regulatorio"
       ],
       "entregable_esperado": "Un mapa de materiales por producto con clasificación de riesgo y un plan de rediseño para eliminar sustancias peligrosas no esenciales",
       "nodos_previos": [
@@ -95644,7 +95836,17 @@
         "Si la empresa enfrenta cargas de cumplimiento complejas por uso de materiales peligrosos",
         "Si existen múltiples estándares regulatorios divergentes entre regiones"
       ],
-      "etiqueta_arbol": "Rediseña para Reducir Cargas Regulatorias"
+      "etiqueta_arbol": "Rediseña para Reducir Cargas Regulatorias",
+      "ids_alias": [
+        "reduccion_cargas_cumplimiento"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "reduccion_cargas_cumplimiento",
+          "titulo": "Reducción Proactiva de Cargas de Cumplimiento Regulatorio",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ]
     },
     "reduccion_de_tiempo_de_ciclo": {
       "node_id": "reduccion_de_tiempo_de_ciclo",
@@ -96669,7 +96871,7 @@
       "pasos_accionables": [
         "Reunir al equipo en un espacio dedicado sin distracciones, formando grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.",
         "Definir un enunciado claro del problema centrado en necesidad del cliente",
-        "Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada., en sesiones de construcción colectiva ('yes, and...')",
+        "Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada, en sesiones de construcción colectiva ('yes, and...')",
         "Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)",
         "Usar Post-it notes o pizarra para capturar y mover las ideas visualmente",
         "Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo",
@@ -101551,7 +101753,7 @@
         "fase_entendimiento_investigacion_mercado"
       ],
       "nodos_siguientes": [
-        "wallas_etapa_iluminacion",
+        "cuatro_etapas_del_pensamiento_creativo",
         "wallas_etapa_verificacion",
         "distincion_esfuerzo_energia",
         "esfuerzo_voluntario_vs_urge_espontaneo"
@@ -102482,7 +102684,7 @@
         "vision_estrategia_producto_pivote",
         "gestion_intraemprendedora_experimentacion",
         "desarrollo_de_clientes_customer_development",
-        "business_model_canvas_vs_plan",
+        "business_model_canvas_scorecard",
         "diez_principios_testing"
       ],
       "condiciones_activacion": [
@@ -106327,7 +106529,6 @@
         "cumplimiento_normativo_ambiental"
       ],
       "nodos_siguientes": [
-        "reduccion_cargas_cumplimiento",
         "reduccion_cargas_regulatorias"
       ],
       "condiciones_activacion": [
@@ -108647,9 +108848,8 @@
         "disciplina_atencion_dirigida"
       ],
       "nodos_siguientes": [
-        "wallas_etapa_iluminacion",
-        "encontrar_el_golpe_mental",
-        "cuatro_etapas_del_pensamiento_creativo"
+        "cuatro_etapas_del_pensamiento_creativo",
+        "encontrar_el_golpe_mental"
       ],
       "condiciones_activacion": [
         "Si el emprendedor reporta pérdida de motivación o deseo recurrente de abandonar el proyecto sin razón concreta de mercado",
@@ -109184,7 +109384,7 @@
       "nodos_previos": [
         "customer_profile",
         "value_proposition_startup",
-        "middle_ring_testing",
+        "bullseye_framework",
         "traction_channel_bias"
       ],
       "nodos_siguientes": [
@@ -111686,7 +111886,7 @@
         "critical_path"
       ],
       "nodos_siguientes": [
-        "middle_ring_testing",
+        "bullseye_framework",
         "targeting_blogs_traccion"
       ],
       "condiciones_activacion": [
@@ -111715,7 +111915,7 @@
       ],
       "nodos_siguientes": [
         "critical_path",
-        "middle_ring_testing"
+        "bullseye_framework"
       ],
       "condiciones_activacion": [
         "Al iniciar cualquier esfuerzo de crecimiento o tracción",
@@ -112071,7 +112271,7 @@
       ],
       "nodos_siguientes": [
         "identificacion_talento_design_thinking",
-        "diseno_de_sistemas_a_escala",
+        "alineacion_de_objetivos_en_sistemas",
         "navegacion_politica_organizacional",
         "identificar_pensadores_de_diseno_internos"
       ],
@@ -112210,7 +112410,7 @@
         "prototipar_con_medios_no_convencionales"
       ],
       "nodos_siguientes": [
-        "diseno_de_sistemas_a_escala",
+        "alineacion_de_objetivos_en_sistemas",
         "validar_posicionamiento_con_analistas",
         "calidad_del_servicio",
         "servicio_postventa_internacional",
@@ -113613,7 +113813,7 @@
       ],
       "entregable_esperado": "Un perfil de usuarios extremos documentado con insights aplicables al diseño general del producto o servicio.",
       "nodos_previos": [
-        "insight_observacion_empatia",
+        "convertir_necesidad_en_demanda",
         "prototipado_de_experiencias",
         "business_model_canvas_scorecard",
         "enfoque_centrado_humano_organizacional"
@@ -113836,7 +114036,6 @@
       "entregable_esperado": "Sello o carta de validación de un tercero reconocido para el reporte o producto",
       "nodos_previos": [
         "evitar_greenwashing",
-        "evitar_greenwashing_2",
         "reporte_sostenibilidad_digital",
         "vinculacion_reporte_financiero"
       ],
@@ -115799,7 +115998,7 @@
       ],
       "nodos_siguientes": [
         "validacion_externa_reportes",
-        "evitar_greenwashing_2"
+        "evitar_greenwashing"
       ],
       "condiciones_activacion": [
         "Cuando la empresa busca demostrar el retorno de inversión (ROI) de sus iniciativas de Eco-Advantage a inversionistas"
@@ -116499,7 +116698,8 @@
       "condiciones_activacion": [
         "Cuando surge una idea repentina durante un momento de relajación o distracción del problema original."
       ],
-      "etiqueta_arbol": "Espera el Momento de Iluminación"
+      "etiqueta_arbol": "Espera el Momento de Iluminación",
+      "deprecado": true
     },
     "wallas_etapa_incubacion": {
       "node_id": "wallas_etapa_incubacion",
@@ -116524,7 +116724,7 @@
         "esfuerzo_voluntario_vs_urge_espontaneo"
       ],
       "nodos_siguientes": [
-        "wallas_etapa_iluminacion",
+        "cuatro_etapas_del_pensamiento_creativo",
         "reglas_brainstorming",
         "second_wind_energia_mental",
         "sistema_captura_ideas"
@@ -116590,16 +116790,15 @@
       ],
       "entregable_esperado": "Una idea validada, documentada de forma precisa y lista para implementación o para el siguiente ciclo de desarrollo.",
       "nodos_previos": [
-        "wallas_etapa_iluminacion",
-        "control_voluntario_del_pensamiento",
+        "cuatro_etapas_del_pensamiento_creativo",
+        "esfuerzo_voluntario_vs_urge_espontaneo",
         "eleccion_del_lenguaje_para_pensar",
         "intimation_illumination",
         "poder_a_traves_de_la_accion",
         "proteccion_del_tren_asociativo",
         "ruptura_de_habitos_para_estimulo",
         "wallas_cuatro_etapas_pensamiento_creativo",
-        "wallas_intimacion_fringe_consciousness",
-        "cuatro_etapas_del_pensamiento_creativo"
+        "wallas_intimacion_fringe_consciousness"
       ],
       "nodos_siguientes": [
         "intimacion_emocional_como_senal_de_verdad",
@@ -116626,7 +116825,7 @@
       ],
       "entregable_esperado": "Una práctica personal o de equipo para reconocer y aprovechar señales tempranas de ideas emergentes antes del insight completo.",
       "nodos_previos": [
-        "wallas_etapa_iluminacion"
+        "cuatro_etapas_del_pensamiento_creativo"
       ],
       "nodos_siguientes": [
         "wallas_etapa_verificacion",
@@ -124940,7 +125139,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 118,
+    "nodos_sin_enlaces_entrantes": 129,
     "enlaces_rotos_en_grafo": 0
   }
 }

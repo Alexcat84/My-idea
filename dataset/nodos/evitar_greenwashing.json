@@ -9,13 +9,14 @@
     "Revisar todo mensaje verde en busca de vaguedad o falta de especificidad",
     "Verificar que las imágenes usadas no exageren beneficios ambientales",
     "Confirmar que toda la cadena de suministro respalde la afirmación verde",
-    "Sustentar cada reclamo con datos verificables o certificaciones de terceros",
+    "Sustentar cada reclamo con datos verificables o certificaciones de terceros, verificando tres veces",
     "Evitar reclamos irrelevantes que solo cumplen con regulación mínima"
   ],
   "entregable_esperado": "Checklist de revisión anti-greenwashing aplicado antes de publicar cualquier comunicación ambiental",
   "nodos_previos": [
     "solidificar_defensa_ambiental",
-    "principio_green_tercer_boton"
+    "principio_green_tercer_boton",
+    "vinculacion_reporte_financiero"
   ],
   "nodos_siguientes": [
     "diseno_mensaje_verde",
@@ -23,7 +24,18 @@
   ],
   "condiciones_activacion": [
     "Antes de publicar cualquier afirmación ambiental en marketing",
-    "Si existe riesgo de escrutinio por parte de ONGs o consumidores"
+    "Si existe riesgo de escrutinio por parte de ONGs o consumidores",
+    "Si existe presión de marketing para exagerar logros ambientales"
   ],
-  "etiqueta_arbol": "Evita las Fallas del Greenwashing"
+  "etiqueta_arbol": "Evita las Fallas del Greenwashing",
+  "ids_alias": [
+    "evitar_greenwashing_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "evitar_greenwashing_2",
+      "titulo": "Evitar el Greenwashing (Riesgo de Credibilidad)",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ]
 }

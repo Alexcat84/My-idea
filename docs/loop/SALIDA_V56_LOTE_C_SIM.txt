@@ -1,0 +1,493 @@
+==============================================================================
+OP-U-01, TRAMO 3, LOTE C DE LA VUELTA 56: LOS ACTOS 35 A 50 EN EL ORDEN IMPRESO DEL TRAMO, apartando el 37 y el 45, que quedan DECLARADOS por EMPATE SIN VARA (ni el contenido ni el cableado separan) . MODO SIMULAR
+plan: docs/loop/PLAN_V56_OPU01_LOTE_C.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3399 vivos, 454 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 35 . sobrevive alineacion_de_objetivos_en_sistemas . absorbe diseno_de_sistemas_a_escala
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de diseno_de_sistemas_a_escala al PASO 1 del superviviente
+        inciso VERBATIM: 'no solo a quien usa el servicio'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Identifica a todas las personas involucradas en el sistema y qué objetivo parece tener cada una, no solo a quien usa el servicio
+     del paso 4 de diseno_de_sistemas_a_escala al PASO 4 del superviviente
+        inciso VERBATIM: 'en lugar de imponer una regla desde arriba'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Diseña intervenciones que reduzcan el estrés y la fricción entre las personas que usan el sistema, en lugar de imponer una regla desde arriba
+  alias del superviviente: ['diseno_de_sistemas_a_escala']
+
+------------------------------------------------------------------------------
+ACTO 36 . sobrevive esfuerzo_voluntario_vs_urge_espontaneo . absorbe control_voluntario_del_pensamiento
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['control_voluntario_del_pensamiento']
+
+------------------------------------------------------------------------------
+ACTO 38 . sobrevive cuatro_etapas_del_pensamiento_creativo . absorbe wallas_etapa_iluminacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 4 -> 5 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 2 de wallas_etapa_iluminacion al PASO 3 del superviviente
+        inciso VERBATIM: 'como indicio de Intimación'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Lleva contigo una libreta o notas de voz para capturar cualquier señal sutil de que una idea se está formando, o el momento en que llega completa, como indicio de Intimación
+     del paso 4 de wallas_etapa_iluminacion al PASO 2 del superviviente
+        inciso VERBATIM: 'silencio, actividad relajada'
+        nexo (lo unico de cosecha propia): ', creando condiciones de '
+        paso resultante: Incubación: aléjate deliberadamente del problema (duerme, camina, trabaja en otra cosa) sin forzar conscientemente una solución, creando condiciones de silencio, actividad relajada
+  alias del superviviente: ['wallas_cuatro_etapas_pensamiento_creativo', 'wallas_etapa_iluminacion']
+
+------------------------------------------------------------------------------
+ACTO 39 . sobrevive practica_de_observacion_atenta . absorbe observar_lo_ordinario
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de observar_lo_ordinario al PASO 4 del superviviente
+        inciso VERBATIM: 'el hábito diario'
+        nexo (lo unico de cosecha propia): ' Y hazlo con '
+        paso resultante: Practica la observación en diferentes contextos para entrenar el hábito como una disciplina regular. Y hazlo con el hábito diario
+  alias del superviviente: ['observar_lo_ordinario']
+
+------------------------------------------------------------------------------
+ACTO 40 . sobrevive bullseye_framework . absorbe middle_ring_testing
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 11 -> 12 (anadidos 1) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 2 de middle_ring_testing al PASO 3 del superviviente
+        inciso VERBATIM: 'en AdWords, pregunta el precio en tu mercado'
+        nexo (lo unico de cosecha propia): ' Prueba '
+        paso resultante: Diseña experimentos baratos, de menos de 1000 dólares y un mes de duración, para testear cada canal seleccionado en paralelo. Prueba en AdWords, pregunta el precio en tu mercado
+     del paso 5 de middle_ring_testing al PASO 5 del superviviente
+        inciso VERBATIM: 'para pasar a las pruebas del anillo interno'
+        nexo (lo unico de cosecha propia): ' Es el paso previo '
+        paso resultante: Elige el canal con mejores resultados como tu canal núcleo y concentra ahí la mayoría de tus recursos. Es el paso previo para pasar a las pruebas del anillo interno
+  alias del superviviente: ['framework_bullseye', 'middle_ring_testing']
+
+------------------------------------------------------------------------------
+ACTO 41 . sobrevive diseno_consecuencias_no_intencionadas . absorbe diseno_fugitivo_runaway_design
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 3 de diseno_fugitivo_runaway_design al PASO 2 del superviviente
+        inciso VERBATIM: 'no está en la sala de diseño pero será afectado'
+        nexo (lo unico de cosecha propia): ' Incluye a quien '
+        paso resultante: Identifica quién se beneficia y quién podría ser perjudicado si tu solución escala sin control. Incluye a quien no está en la sala de diseño pero será afectado
+     del paso 4 de diseno_fugitivo_runaway_design al PASO 5 del superviviente
+        inciso VERBATIM: 'mecanismos de monitoreo post-lanzamiento'
+        nexo (lo unico de cosecha propia): ' Establece '
+        paso resultante: Documenta los riesgos identificados y revisítalos periódicamente conforme el producto evoluciona. Establece mecanismos de monitoreo post-lanzamiento
+  alias del superviviente: ['diseno_fugitivo_runaway_design']
+
+------------------------------------------------------------------------------
+ACTO 42 . sobrevive arquitectura_tecnica_modular . absorbe arquitectura_flexible_soa
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 4 de arquitectura_flexible_soa al PASO 3 del superviviente
+        inciso VERBATIM: 'APIs abiertas para facilitar integraciones futuras'
+        nexo (lo unico de cosecha propia): ', y que sean '
+        paso resultante: Conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y que sean APIs abiertas para facilitar integraciones futuras
+  alias del superviviente: ['arquitectura_flexible_soa']
+
+------------------------------------------------------------------------------
+ACTO 43 . sobrevive entrenamiento_funcional_empleados . absorbe entrenamiento_empleados_startup
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 2 de entrenamiento_empleados_startup al PASO 2 del superviviente
+        inciso VERBATIM: 'para roles clave (ventas, ingeniería, gestión)'
+        nexo (lo unico de cosecha propia): ' Hazlo '
+        paso resultante: Crea documentos o programas de entrenamiento específicos (ej. 'Good PM/Bad PM'). Hazlo para roles clave (ventas, ingeniería, gestión)
+     del paso 4 de entrenamiento_empleados_startup al PASO 3 del superviviente
+        inciso VERBATIM: 'con seguimiento de cumplimiento'
+        nexo (lo unico de cosecha propia): ' Y hazlo '
+        paso resultante: Haz obligatorio el entrenamiento antes de aprobar nuevas contrataciones para un equipo. Y hazlo con seguimiento de cumplimiento
+  alias del superviviente: ['entrenamiento_empleados_startup']
+
+------------------------------------------------------------------------------
+ACTO 44 . sobrevive convertir_necesidad_en_demanda . absorbe insight_observacion_empatia
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 1 de insight_observacion_empatia al PASO 2 del superviviente
+        inciso VERBATIM: 'no solo preguntarles qué quieren'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Realizar investigación etnográfica/cualitativa para descubrir barreras emocionales, sociales o funcionales, y no solo preguntarles qué quieren
+  alias del superviviente: ['insight_observacion_empatia']
+
+------------------------------------------------------------------------------
+ACTO 46 . sobrevive business_model_canvas_scorecard . absorbe business_model_canvas_vs_plan
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 3 -> 6 (anadidas 3)
+  INCISOS ADOSADOS: 1
+     del paso 3 de business_model_canvas_vs_plan al PASO 2 del superviviente
+        inciso VERBATIM: 'cada vez que obtengas nueva evidencia'
+        nexo (lo unico de cosecha propia): ', y ademas '
+        paso resultante: Actualizar el canvas cada semana reflejando los pivotes o iteraciones que hayas hecho, y ademas cada vez que obtengas nueva evidencia
+  alias del superviviente: ['business_model_canvas_como_scorecard', 'business_model_canvas_vs_plan']
+
+------------------------------------------------------------------------------
+ACTO 47 . sobrevive bucle_retroalimentacion_autoajustable . absorbe ciclos_retroalimentacion_autoajuste
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de ciclos_retroalimentacion_autoajuste al PASO 1 del superviviente
+        inciso VERBATIM: 'para los equipos operativos'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Definir claramente el objetivo de desempeño (meta) que el sistema debe alcanzar, para los equipos operativos
+     del paso 4 de ciclos_retroalimentacion_autoajuste al PASO 3 del superviviente
+        inciso VERBATIM: 'no solo periódicamente'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Diseñar reglas de acción correctiva automática o semi-automática ante desviaciones, y no solo periódicamente
+  alias del superviviente: ['ciclo_retroalimentacion_autoajuste', 'ciclos_retroalimentacion_autoajuste']
+
+------------------------------------------------------------------------------
+ACTO 48 . sobrevive evitar_greenwashing . absorbe evitar_greenwashing_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de evitar_greenwashing_2 al PASO 4 del superviviente
+        inciso VERBATIM: 'tres veces'
+        nexo (lo unico de cosecha propia): ', verificando '
+        paso resultante: Sustentar cada reclamo con datos verificables o certificaciones de terceros, verificando tres veces
+  alias del superviviente: ['evitar_greenwashing_2']
+
+------------------------------------------------------------------------------
+ACTO 49 . sobrevive contabilidad_ambiental . absorbe herramientas_contabilidad_ambiental
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 2 de herramientas_contabilidad_ambiental al PASO 3 del superviviente
+        inciso VERBATIM: 'full cost accounting, EMA'
+        nexo (lo unico de cosecha propia): ', como '
+        paso resultante: Elegir las herramientas de contabilidad ambiental mas adecuadas para tu negocio, como full cost accounting, EMA
+     del paso 3 de herramientas_contabilidad_ambiental al PASO 4 del superviviente
+        inciso VERBATIM: 'un equipo interdisciplinario (científicos, ingenieros, contadores)'
+        nexo (lo unico de cosecha propia): ', o a '
+        paso resultante: Buscar a la persona que te ayuda en temas de sostenibilidad para poner en marcha estas herramientas, o a un equipo interdisciplinario (científicos, ingenieros, contadores)
+  alias del superviviente: ['herramientas_contabilidad_ambiental']
+
+------------------------------------------------------------------------------
+ACTO 50 . sobrevive reduccion_cargas_regulatorias . absorbe reduccion_cargas_cumplimiento
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de reduccion_cargas_cumplimiento al PASO 1 del superviviente
+        inciso VERBATIM: 'procesos de manufactura'
+        nexo (lo unico de cosecha propia): ', y tambien en los '
+        paso resultante: Mapear todos los materiales usados en cada producto para identificar sustancias sensibles, y tambien en los procesos de manufactura
+  alias del superviviente: ['reduccion_cargas_cumplimiento']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 52
+   anillo_interior_explotar_el_canal_nucleo             nodos_previos     middle_ring_testing -> bullseye_framework
+   bullseye_framework                                   nodos_siguientes  middle_ring_testing -> bullseye_framework
+   business_model_environment_mapping                   nodos_siguientes  business_model_canvas_vs_plan -> business_model_canvas_scorecard
+   business_plan_cinco_secciones                        nodos_siguientes  business_model_canvas_vs_plan -> business_model_canvas_scorecard
+   case_study_sistema_servicio_completo                 nodos_previos     diseno_de_sistemas_a_escala -> alineacion_de_objetivos_en_sistemas
+   contabilidad_basada_actividades                      nodos_siguientes  herramientas_contabilidad_ambiental -> contabilidad_ambiental
+   contratar_por_fortaleza                              nodos_siguientes  entrenamiento_empleados_startup -> entrenamiento_funcional_empleados
+   critical_path                                        nodos_previos     middle_ring_testing -> bullseye_framework
+   critical_path                                        nodos_siguientes  middle_ring_testing -> bullseye_framework
+   cuatro_etapas_del_pensamiento_creativo               nodos_siguientes  wallas_etapa_iluminacion -> cuatro_etapas_del_pensamiento_creativo
+   cultura_flexible_organizacional                      nodos_previos     entrenamiento_empleados_startup -> entrenamiento_funcional_empleados
+   customer_discovery                                   nodos_previos     business_model_canvas_vs_plan -> business_model_canvas_scorecard
+   design_thinking_proceso                              nodos_siguientes  diseno_fugitivo_runaway_design -> diseno_consecuencias_no_intencionadas
+   deteccion_temprana_regulatoria                       nodos_previos     reduccion_cargas_cumplimiento -> reduccion_cargas_regulatorias
+   disenar_para_sanacion                                nodos_previos     diseno_fugitivo_runaway_design -> diseno_consecuencias_no_intencionadas
+   diseno_experimentos_hipotesis                        nodos_previos     business_model_canvas_vs_plan -> business_model_canvas_scorecard
+   diseno_sistemico_partes_interesadas                  nodos_siguientes  diseno_de_sistemas_a_escala -> alineacion_de_objetivos_en_sistemas
+   division_trabajo_humano_ia                           nodos_siguientes  ciclos_retroalimentacion_autoajuste -> bucle_retroalimentacion_autoajustable
+   empathy_map                                          nodos_siguientes  diseno_fugitivo_runaway_design -> diseno_consecuencias_no_intencionadas
+   espacios_fisicos_de_innovacion                       nodos_siguientes  insight_observacion_empatia -> convertir_necesidad_en_demanda
+   gestion_visual_del_pipeline_de_desarrollo            nodos_previos     arquitectura_flexible_soa -> arquitectura_tecnica_modular
+   get_visual                                           nodos_previos     observar_lo_ordinario -> practica_de_observacion_atenta
+   graficos_control_individuales_operarios              nodos_previos     ciclos_retroalimentacion_autoajuste -> bucle_retroalimentacion_autoajustable
+   intimation_illumination                              nodos_siguientes  control_voluntario_del_pensamiento -> esfuerzo_voluntario_vs_urge_espontaneo
+   iota_analysis                                        nodos_siguientes  arquitectura_flexible_soa -> arquitectura_tecnica_modular
+   lente_sostenibilidad_finanzas                        nodos_siguientes  herramientas_contabilidad_ambiental -> contabilidad_ambiental
+   lienzo_modelo_negocio                                nodos_siguientes  business_model_canvas_vs_plan -> business_model_canvas_scorecard
+   llamar_lo_que_falta                                  nodos_previos     observar_lo_ordinario -> practica_de_observacion_atenta
+   mastery_sensibilidades_diseno                        nodos_siguientes  diseno_de_sistemas_a_escala -> alineacion_de_objetivos_en_sistemas
+   modelo_customer_development                          nodos_previos     business_model_canvas_vs_plan -> business_model_canvas_scorecard
+   pensamiento_de_conexiones_ripple_effect              nodos_siguientes  diseno_fugitivo_runaway_design -> diseno_consecuencias_no_intencionadas
+   personalizacion_investigacion_prospecto              nodos_previos     insight_observacion_empatia -> convertir_necesidad_en_demanda
+   pivote_startup                                       nodos_previos     business_model_canvas_vs_plan -> business_model_canvas_scorecard
+   poder_a_traves_de_la_accion                          nodos_siguientes  control_voluntario_del_pensamiento -> esfuerzo_voluntario_vs_urge_espontaneo
+   preguntar_por_que_no_que                             nodos_siguientes  observar_lo_ordinario -> practica_de_observacion_atenta
+   protocepto                                           nodos_previos     diseno_fugitivo_runaway_design -> diseno_consecuencias_no_intencionadas
+   ruptura_de_habitos_para_estimulo                     nodos_siguientes  wallas_etapa_iluminacion -> cuatro_etapas_del_pensamiento_creativo
+   search_for_business_model                            nodos_siguientes  business_model_canvas_vs_plan -> business_model_canvas_scorecard
+   sistema_gestion_cumplimiento_ambiental               nodos_siguientes  reduccion_cargas_cumplimiento -> reduccion_cargas_regulatorias
+   superacion_accidia_creativa                          nodos_siguientes  wallas_etapa_iluminacion -> cuatro_etapas_del_pensamiento_creativo
+   targeting_blogs_traccion                             nodos_previos     middle_ring_testing -> bullseye_framework
+   traction_channel_bias                                nodos_siguientes  middle_ring_testing -> bullseye_framework
+   traction_goal                                        nodos_siguientes  middle_ring_testing -> bullseye_framework
+   transformacion_organizacional_diseno                 nodos_siguientes  diseno_de_sistemas_a_escala -> alineacion_de_objetivos_en_sistemas
+   transicion_producto_a_experiencia                    nodos_siguientes  diseno_de_sistemas_a_escala -> alineacion_de_objetivos_en_sistemas
+   usuarios_extremos_edge_cases                         nodos_previos     insight_observacion_empatia -> convertir_necesidad_en_demanda
+   validacion_externa_reportes                          nodos_previos     evitar_greenwashing_2 -> evitar_greenwashing
+   vinculacion_reporte_financiero                       nodos_siguientes  evitar_greenwashing_2 -> evitar_greenwashing
+   wallas_etapa_incubacion                              nodos_siguientes  wallas_etapa_iluminacion -> cuatro_etapas_del_pensamiento_creativo
+   wallas_etapa_verificacion                            nodos_previos     control_voluntario_del_pensamiento -> esfuerzo_voluntario_vs_urge_espontaneo
+   wallas_etapa_verificacion                            nodos_previos     wallas_etapa_iluminacion -> cuatro_etapas_del_pensamiento_creativo
+   wallas_intimacion_fringe_consciousness               nodos_previos     wallas_etapa_iluminacion -> cuatro_etapas_del_pensamiento_creativo
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 5
+   busqueda_vs_ejecucion                                nodos_siguientes  business_model_canvas_vs_plan (registro historico)
+   framework_bullseye                                   nodos_siguientes  middle_ring_testing (registro historico)
+   pensamiento_visual                                   nodos_previos     observar_lo_ordinario (registro historico)
+   targeting_blogs_channel                              nodos_previos     middle_ring_testing (registro historico)
+   wallas_cuatro_etapas_pensamiento_creativo            nodos_siguientes  wallas_etapa_iluminacion (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 10
+   anillo_interior_explotar_el_canal_nucleo             nodos_previos
+   critical_path                                        nodos_previos
+   deteccion_temprana_regulatoria                       nodos_previos
+   diseno_experimentos_hipotesis                        nodos_previos
+   lienzo_modelo_negocio                                nodos_siguientes
+   llamar_lo_que_falta                                  nodos_previos
+   sistema_gestion_cumplimiento_ambiental               nodos_siguientes
+   superacion_accidia_creativa                          nodos_siguientes
+   validacion_externa_reportes                          nodos_previos
+   wallas_etapa_verificacion                            nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 2
+   bullseye_framework                                   nodos_siguientes
+   cuatro_etapas_del_pensamiento_creativo               nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 964   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 957   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 7, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 70 de 70
+guarda D, los 14 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (82 filas)
+ acto de que nodo                                  que          n  a donde va
+   35 diseno_de_sistemas_a_escala                  paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identifica a todos los que participan en el sistema, no solo a quien usa el servicio.
+   35 diseno_de_sistemas_a_escala                  paso         2  PASO 5 del superviviente
+        Rediseña el recorrido y el espacio físico para darle más información a cada participante.
+   35 diseno_de_sistemas_a_escala                  paso         3  ya lo dice el PASO 3 del superviviente
+        Cambia el objetivo: en vez de buscar objetos o aplicar reglas rígidas, busca detectar la intención o el comportamiento que hay detrás de la acción.
+   35 diseno_de_sistemas_a_escala                  paso         4  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseña una experiencia compartida en lugar de imponer una regla desde arriba.
+   35 diseno_de_sistemas_a_escala                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el problema involucra a varias organizaciones o entidades del gobierno
+   35 diseno_de_sistemas_a_escala                  condicion    2  CONDICION 2 del superviviente
+        Si las soluciones que existen hoy son solo reglas administrativas, sin diseño de experiencia
+   36 control_voluntario_del_pensamiento           paso         1  PASO 5 del superviviente
+        Identifica si estás aprendiendo una forma nueva de pensar (ahí te conviene controlar más conscientemente) o si ya dominas esa habilidad (ahí conviene 
+   36 control_voluntario_del_pensamiento           paso         2  PASO 6 del superviviente
+        Cuando sientas que una idea puede llevarte a algo, intenta sostenerla o desviarla a propósito.
+   36 control_voluntario_del_pensamiento           paso         3  ya lo dice el PASO 3 del superviviente
+        No te fuerces a corregir tu pensamiento si esa tarea ya la dominas de forma natural.
+   36 control_voluntario_del_pensamiento           condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando estás aprendiendo una habilidad nueva de pensamiento o creación y no sabes si debes forzar las ideas o dejarlas venir solas.
+   36 control_voluntario_del_pensamiento           condicion    2  CONDICION 3 del superviviente
+        Cuando tú y quien te acompaña discuten si conviene poner más estructura o dar más libertad durante una sesión de ideas.
+   38 wallas_etapa_iluminacion                     paso         1  ya lo dice el PASO 3 del superviviente
+        Mantener siempre a mano una libreta o medio de registro para capturar ideas repentinas.
+   38 wallas_etapa_iluminacion                     paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Prestar atención a señales sutiles (sensación de que 'algo se acerca') como indicio de Intimación.
+   38 wallas_etapa_iluminacion                     paso         3  ya lo dice el PASO 4 del superviviente
+        No descartar ideas por parecer incompletas o extrañas en el momento del 'flash'.
+   38 wallas_etapa_iluminacion                     paso         4  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Crear condiciones (silencio, actividad relajada) que favorezcan la aparición de estos momentos.
+   38 wallas_etapa_iluminacion                     condicion    1  CONDICION 5 del superviviente
+        Cuando surge una idea repentina durante un momento de relajación o distracción del problema original.
+   39 observar_lo_ordinario                        paso         1  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer el hábito diario de detenerse a examinar una situación cotidiana como si fuera nueva.
+   39 observar_lo_ordinario                        paso         2  ya lo dice el PASO 3 del superviviente
+        Preguntarse el 'por qué' detrás de objetos y comportamientos aparentemente triviales.
+   39 observar_lo_ordinario                        paso         3  ya lo dice el PASO 2 del superviviente
+        Registrar estas observaciones para nutrir futuras ideas de diseño.
+   39 observar_lo_ordinario                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Durante la fase de investigación e inspiración de un proyecto de design thinking
+   40 middle_ring_testing                          paso         1  ya lo dice el PASO 2 del superviviente
+        Elige la estrategia de canal más prometedora de tu lista inicial de ideas
+   40 middle_ring_testing                          paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseña pruebas baratas (por ejemplo en AdWords, pregunta el precio en tu mercado) y de corto plazo, de menos de un mes
+   40 middle_ring_testing                          paso         3  ya lo dice el PASO 4 del superviviente
+        Mide cuánto te cuesta conseguir un cliente, cuántos clientes hay disponibles en ese canal y si son los correctos en este momento
+   40 middle_ring_testing                          paso         4  PASO 12 del superviviente
+        Compara los resultados de las distintas estrategias que probaste en una hoja de cálculo
+   40 middle_ring_testing                          paso         5  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Elige la estrategia ganadora para pasar a las pruebas del anillo interno
+   40 middle_ring_testing                          condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Cuando ya identificaste varias estrategias de canal candidatas y necesitas decidir en cuál enfocarte
+   40 middle_ring_testing                          condicion    2  CONDICION 4 del superviviente
+        Cuando tienes recursos limitados y no puedes probar todos los canales al mismo tiempo
+   41 diseno_fugitivo_runaway_design               paso         1  PASO 6 del superviviente
+        Antes de lanzar un producto o servicio, mapear posibles efectos de segundo y tercer orden (no solo el uso directo)
+   41 diseno_fugitivo_runaway_design               paso         2  PASO 7 del superviviente
+        Preguntar '¿qué comportamientos nuevos habilitará esto?' y '¿qué sistemas existentes alterará?'
+   41 diseno_fugitivo_runaway_design               paso         3  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar quién no está en la sala de diseño pero será afectado por el producto
+   41 diseno_fugitivo_runaway_design               paso         4  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer mecanismos de monitoreo post-lanzamiento para detectar efectos imprevistos temprano
+   41 diseno_fugitivo_runaway_design               condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando el equipo está a punto de lanzar una innovación con potencial de escala masiva
+   41 diseno_fugitivo_runaway_design               condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si el producto involucra datos, IA, o sistemas que aprenden y se retroalimentan
+   41 diseno_fugitivo_runaway_design               condicion    3  CONDICION 4 del superviviente
+        Cuando se ignoran los efectos sistémicos por enfocarse solo en la funcionalidad inmediata
+   42 arquitectura_flexible_soa                    paso         1  PASO 6 del superviviente
+        Auditar las soluciones tecnológicas ya existentes en el mercado (cloud, SaaS).
+   42 arquitectura_flexible_soa                    paso         2  ya lo dice el PASO 2 del superviviente
+        Identificar qué funcionalidades pueden resolverse con herramientas existentes vía integración.
+   42 arquitectura_flexible_soa                    paso         3  ya lo dice el PASO 4 del superviviente
+        Reservar el desarrollo propio únicamente para el valor diferencial único del negocio.
+   42 arquitectura_flexible_soa                    paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseñar la arquitectura con APIs abiertas para facilitar integraciones futuras.
+   42 arquitectura_flexible_soa                    condicion    1  CONDICION 3 del superviviente
+        Cuando el equipo evalúa construir tecnología propia vs. usar soluciones existentes.
+   42 arquitectura_flexible_soa                    condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se busca reducir tiempo y costo de desarrollo tecnológico.
+   43 entrenamiento_empleados_startup              paso         1  PASO 5 del superviviente
+        No asumas que la inteligencia o experiencia previa reemplaza la necesidad de entrenamiento específico de la empresa.
+   43 entrenamiento_empleados_startup              paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseña programas de entrenamiento formal para roles clave (ventas, ingeniería, gestión).
+   43 entrenamiento_empleados_startup              paso         3  PASO 6 del superviviente
+        Exige que los líderes de área (ej: VP de ventas) documenten y enseñen sus procesos, no solo los ejecuten intuitivamente.
+   43 entrenamiento_empleados_startup              paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Haz del entrenamiento una expectativa explícita para todos los managers, con seguimiento de cumplimiento.
+   43 entrenamiento_empleados_startup              condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la startup empieza a escalar el equipo y necesita consistencia en la ejecución.
+   43 entrenamiento_empleados_startup              condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se detecta que empleados nuevos no comprenden el contexto completo de su trabajo.
+   44 insight_observacion_empatia                  paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Salir al campo a observar el comportamiento real de las personas en su contexto natural, no solo preguntarles qué quieren.
+   44 insight_observacion_empatia                  paso         2  PASO 5 del superviviente
+        Buscar 'actos sin pensar' (thoughtless acts): soluciones improvisadas que la gente usa para adaptarse a productos mal diseñados.
+   44 insight_observacion_empatia                  paso         3  PASO 6 del superviviente
+        Evitar depender únicamente de encuestas o datos cuantitativos que confirman lo que ya se sabe.
+   44 insight_observacion_empatia                  paso         4  ya lo dice el PASO 3 del superviviente
+        Sintetizar las observaciones en insights que revelen necesidades latentes no articuladas.
+   44 insight_observacion_empatia                  condicion    1  CONDICION 3 del superviviente
+        Cuando el equipo solo cuenta con datos de mercado convencionales (encuestas, focus groups) y necesita insights más profundos.
+   44 insight_observacion_empatia                  condicion    2  CONDICION 4 del superviviente
+        Al iniciar la fase de inspiración de un proyecto de diseño centrado en las personas.
+   46 business_model_canvas_vs_plan                paso         1  ya lo dice el PASO 1 del superviviente
+        Dibuja el Business Model Canvas inicial con hipótesis para cada uno de los 9 bloques (propuesta de valor, segmentos de clientes, canales, relaciones, 
+   46 business_model_canvas_vs_plan                paso         2  PASO 6 del superviviente
+        Sal a validar cada hipótesis con clientes reales cara a cara.
+   46 business_model_canvas_vs_plan                paso         3  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Revisa y redibuja el canvas cada vez que obtengas nueva evidencia, ya sea para iterar o pivotar.
+   46 business_model_canvas_vs_plan                paso         4  PASO 7 del superviviente
+        Conserva todas las versiones del canvas como un flip book que documente la evolución de tu modelo de negocio.
+   46 business_model_canvas_vs_plan                paso         5  PASO 8 del superviviente
+        Evita convertir el canvas en un plan operativo prematuro basado en suposiciones sin validar.
+   46 business_model_canvas_vs_plan                condicion    1  CONDICION 4 del superviviente
+        Si tienes un plan de negocio estático y rígido en lugar de un modelo dinámico.
+   46 business_model_canvas_vs_plan                condicion    2  CONDICION 5 del superviviente
+        Si confundes el plan de negocio con un manual de ejecución.
+   46 business_model_canvas_vs_plan                condicion    3  CONDICION 6 del superviviente
+        Si estás a punto de escribir un plan de negocio tradicional para pedir financiamiento.
+   47 ciclos_retroalimentacion_autoajuste          paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir metas de desempeño claras y medibles para los equipos operativos.
+   47 ciclos_retroalimentacion_autoajuste          paso         2  PASO 5 del superviviente
+        Establecer recompensas o incentivos ligados al cumplimiento de esas metas.
+   47 ciclos_retroalimentacion_autoajuste          paso         3  ya lo dice el PASO 2 del superviviente
+        Proveer información en tiempo real sobre el progreso hacia las metas.
+   47 ciclos_retroalimentacion_autoajuste          paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Ajustar continuamente las operaciones en base a los datos entrantes, no solo periódicamente.
+   47 ciclos_retroalimentacion_autoajuste          condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando la operación sufre de ciclos de sobre/sub-reacción similares al efecto bullwhip.
+   47 ciclos_retroalimentacion_autoajuste          condicion    2  CONDICION 3 del superviviente
+        Cuando se busca mayor resiliencia y adaptabilidad ante un entorno VUCA (volátil, incierto, complejo, ambiguo).
+   48 evitar_greenwashing_2                        paso         1  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Verificar tres veces cualquier afirmación de sostenibilidad antes de publicarla
+   48 evitar_greenwashing_2                        paso         2  ya lo dice el PASO 4 del superviviente
+        Incluir justificaciones o citas para cualquier reclamo que pueda ser disputado
+   48 evitar_greenwashing_2                        paso         3  ya lo dice el PASO 2 del superviviente
+        Evitar exagerar atributos ambientales de productos o servicios
+   48 evitar_greenwashing_2                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Antes de publicar cualquier claim ambiental o de sostenibilidad
+   48 evitar_greenwashing_2                        condicion    2  CONDICION 3 del superviviente
+        Si existe presión de marketing para exagerar logros ambientales
+   49 herramientas_contabilidad_ambiental          paso         1  ya lo dice el PASO 2 del superviviente
+        Determinar el alcance del análisis (costos internos vs. externos/sociales)
+   49 herramientas_contabilidad_ambiental          paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Seleccionar herramientas de contabilidad ambiental adecuadas (full cost accounting, EMA, etc.)
+   49 herramientas_contabilidad_ambiental          paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Involucrar a un equipo interdisciplinario (científicos, ingenieros, contadores)
+   49 herramientas_contabilidad_ambiental          paso         4  PASO 5 del superviviente
+        Reportar resultados tanto para uso interno como para stakeholders externos
+   49 herramientas_contabilidad_ambiental          condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Si la empresa necesita justificar inversiones ambientales que no cumplen los criterios financieros tradicionales
+   49 herramientas_contabilidad_ambiental          condicion    2  CONDICION 3 del superviviente
+        Si se requiere reportar sostenibilidad a inversionistas o reguladores
+   50 reduccion_cargas_cumplimiento                paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Mapear todos los materiales usados en productos y procesos de manufactura
+   50 reduccion_cargas_cumplimiento                paso         2  ya lo dice el PASO 2 del superviviente
+        Clasificar materiales según su impacto ambiental y de salud (ej. escala 0-3)
+   50 reduccion_cargas_cumplimiento                paso         3  PASO 5 del superviviente
+        Priorizar el rediseño de productos para eliminar materiales de alto riesgo regulatorio
+   50 reduccion_cargas_cumplimiento                paso         4  ya lo dice el PASO 4 del superviviente
+        Considerar la descentralización de equipos de cumplimiento si hay heterogeneidad regulatoria regional
+   50 reduccion_cargas_cumplimiento                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el proceso de manufactura usa materiales peligrosos con seguimiento regulatorio complejo
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 14
+  nodos implicados    : 28
+  nodos que MUEREN    : 14
+  piezas repartidas   : 82 (31 viajan enteras, 31 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 2
+
+SIMULACION: cero escrituras.

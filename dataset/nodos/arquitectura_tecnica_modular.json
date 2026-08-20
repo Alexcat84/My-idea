@@ -8,21 +8,35 @@
   "pasos_accionables": [
     "Identificar las funciones core que generan el valor diferencial de tu negocio",
     "Mapear qué funciones de soporte (pagos, mapas, comunicaciones, hosting) pueden resolverse con servicios SaaS existentes",
-    "Conectar estos servicios vía APIs en lugar de desarrollarlos internamente",
+    "Conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y que sean APIs abiertas para facilitar integraciones futuras",
     "Enfocar el desarrollo propio exclusivamente en la capa de coordinación/colaboración que es tu propuesta de valor única",
-    "Diseñar la arquitectura para que sea fácilmente escalable y sustituible por componente"
+    "Diseñar la arquitectura para que sea fácilmente escalable y sustituible por componente",
+    "Auditar las soluciones tecnológicas ya existentes en el mercado (cloud, SaaS)."
   ],
   "entregable_esperado": "Diagrama de arquitectura modular mostrando servicios de terceros integrados vía API y el componente propietario central",
   "nodos_previos": [
-    "definicion_alineacion_cadena_suministro"
+    "definicion_alineacion_cadena_suministro",
+    "iota_analysis"
   ],
   "nodos_siguientes": [
     "diseno_conceptual_sistema",
-    "funcion_identify_inventario_activos"
+    "funcion_identify_inventario_activos",
+    "gestion_visual_del_pipeline_de_desarrollo"
   ],
   "condiciones_activacion": [
     "Cuando se necesita construir rápidamente una plataforma de colaboración sin invertir en infraestructura pesada",
-    "Si el presupuesto de tecnología es limitado y se prioriza velocidad de lanzamiento"
+    "Si el presupuesto de tecnología es limitado y se prioriza velocidad de lanzamiento",
+    "Cuando el equipo evalúa construir tecnología propia vs. usar soluciones existentes."
   ],
-  "etiqueta_arbol": "Construye tu Arquitectura Modular"
+  "etiqueta_arbol": "Construye tu Arquitectura Modular",
+  "ids_alias": [
+    "arquitectura_flexible_soa"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "arquitectura_flexible_soa",
+      "titulo": "Aprovechar Aplicaciones Existentes (SOA/EAI/API)",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }
