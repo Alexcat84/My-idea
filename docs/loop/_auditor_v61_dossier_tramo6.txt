@@ -1,0 +1,848 @@
+==============================================================================
+DOSSIER DEL TRAMO 6: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+==============================================================================
+  nodos leidos de: el arbol de trabajo
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+
+##############################################################################
+# ACTO 1 del tramo 6 (puesto 30 de hoy, 250 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2705, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): administracion_sin_miedo
+  nodo_b (EL SEGUNDO de la razon): gestion_miedo_reportes
+
+  RAZON ENTERA, sin recortar:
+    administracion_sin_miedo (Deming Punto 8: identificar datos sospechosamente uniformes cerca de limites de especificacion, investigar temor a represalias que distorsiona reportes, eliminar politicas que castiguen reportar, fomentar cultura donde reportar sea seguro) contra gestion_miedo_reportes (auditar la distribucion de datos por concentracion anomala cerca de limites regulatorios, investigar si evitan reportar extremos por temor, redisenar la evaluacion de desempeno para no penalizar el reporte honesto, empoderar a actuar segun criterio tecnico sin temor). MISMA FUENTE, Deming, sin arista, sim_tit 40,6. Es el mismo acto, expulsar el miedo del reporte de datos: los pasos calzan uno a uno, detectar el patron anomalo cerca de limites, investigar el temor, quitar el castigo, dar seguridad o empoderar. La diferencia limite de especificacion contra limite regulatorio es el mismo fenomeno en dos escenarios, no dos actos. A por contencion. DISCUTIBLE MARCADO: sim_tit baja (40,6) y el segundo enfatiza el limite regulatorio; quien lea el angulo regulatorio como caso distinto dira D.
+
+  --- administracion_sin_miedo
+      titulo    : Administración sin Miedo
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 2 | previos 5 | siguientes 2 | cableado 7
+      paso 1: Identificar patrones de datos sospechosamente uniformes o con distribuciones anómalas cerca de límites de especificación
+      paso 2: Investigar si existe temor a represalias que esté distorsionando los reportes
+      paso 3: Eliminar políticas que castiguen a los empleados por reportar problemas reales
+      paso 4: Fomentar una cultura donde reportar problemas sea seguro y valorado
+      cond 1: Cuando los datos de calidad muestran patrones anómalos o poco creíbles
+      cond 2: Cuando se sospecha que empleados ocultan información por temor a sanciones
+      previos   : ['distincion_causas_comunes_especiales', 'aim_of_leadership', 'control_estadistico_de_procesos', 'deteccion_de_lideres_y_rezagados', 'importancia_de_la_capacitacion']
+      siguientes: ['administracion_de_inspeccion', 'deteccion_de_mentiras_organizacionales']
+      entregable: Un diagnóstico de cultura organizacional identificando fuentes de miedo que distorsionan datos, con plan de mitigación
+
+  --- gestion_miedo_reportes
+      titulo    : Gestión del Miedo en el Reporte de Datos
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 3 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Auditar la distribución de datos reportados en busca de patrones anómalos de concentración cerca de límites regulatorios.
+      paso 2: Investigar si el personal evita reportar valores extremos por temor a consecuencias.
+      paso 3: Rediseñar los sistemas de evaluación de desempeño para que no penalicen el reporte honesto de problemas.
+      paso 4: Empoderar a los trabajadores para actuar según el criterio técnico sin temor a represalias por afectar metas de producción.
+      cond 1: Cuando los datos reportados muestran concentraciones sospechosas cerca de límites de aceptación.
+      cond 2: Cuando los trabajadores evitan reportar fallas por temor a ser culpados.
+      cond 3: Al diseñar sistemas de evaluación de desempeño individual.
+      previos   : ['ausencia_valor_verdadero']
+      siguientes: ['falacia_recompensa_loteria', 'eliminar_metas_numericas_gerencia']
+      entregable: Un diagnóstico de sesgos en el reporte de datos y un plan de acción para eliminar el miedo como fuente de distorsión de la información.
+
+##############################################################################
+# ACTO 2 del tramo 6 (puesto 31 de hoy, 251 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2709, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): contacto_con_el_cliente
+  nodo_b (EL SEGUNDO de la razon): contacto_con_el_cliente_2
+
+  RAZON ENTERA, sin recortar:
+    contacto_con_el_cliente (Gestion del Contacto en Servicio: identificar quien tiene contacto directo, priorizar en la contratacion la capacidad de trato, capacitar a los contact men, reconocer que toda la organizacion contribuye) contra contacto_con_el_cliente_2 (Rol del Personal de Contacto: identificar quien tiene contacto directo aunque seas tu, preparar una forma clara de atender y ser cortes, esa persona construye la reputacion, revisar la percepcion del cliente cada cierto tiempo). MISMA FUENTE, Deming, sin arista, sim_tit 68,5. Es el mismo acto, gestionar al personal de contacto con el cliente: identificar el contacto, prepararlo o capacitarlo para el buen trato, y reconocer que ese contacto construye la calidad o reputacion del servicio. Los actos calzan; la revision de percepcion del segundo cabe como cierre del ciclo. A por contencion, superviviente POR ELEGIR (contacto_con_el_cliente, el mas completo). DISCUTIBLE MARCADO: el primero carga contratacion y entrenamiento, el segundo preparacion del trato y revision de percepcion; quien pese esas dos como caras distintas (RH contra operacion) dira D. Ojo: 2688 contacto_con_el_cliente vs empoderamiento_personal_frontline D, pero ese es otro nodo.
+
+  --- contacto_con_el_cliente
+      titulo    : Gestión del Contacto con el Cliente en Organizaciones de Servicio
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 2 | previos 5 | siguientes 3 | cableado 8
+      paso 1: Identificar quiénes en la organización tienen contacto directo con el cliente
+      paso 2: Priorizar en la contratación la capacidad de trato y servicio al cliente
+      paso 3: Capacitar específicamente a los 'contact men' en manejo de clientes
+      paso 4: Reconocer que toda la organización, vea o no al cliente, contribuye a construir la calidad del servicio
+      cond 1: Cuando la organización tiene personal de atención directa al público
+      cond 2: Al diseñar procesos de contratación y capacitación en servicio al cliente
+      previos   : ['calidad_del_servicio', 'procedimientos_definidos_en_servicios', 'experiencia_del_cliente_proactiva', 'persuasion_directivos_prioridad_cliente', 'rediseno_procesos_negocio_cx']
+      siguientes: ['retroalimentacion_cliente_mejora_servicio', 'rediseno_procesos_negocio_cx', 'punto_unico_contacto_proveedores']
+      entregable: Plan de selección y capacitación específico para personal de contacto directo con clientes
+
+  --- contacto_con_el_cliente_2
+      titulo    : Rol del Personal de Contacto con el Cliente
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Identificar quien en tu negocio tiene contacto directo con los clientes, aunque seas tu mismo
+      paso 2: Preparar una forma clara de atender, ser cortes y manejar situaciones dificiles
+      paso 3: Tener presente que esa persona, o tu mismo, es en la practica quien construye la reputación del negocio ante el cliente
+      paso 4: Revisar cada cierto tiempo que percepción tiene el cliente sobre el trato que recibe
+      cond 1: Cuando tu reputación depende de la percepción directa del cliente
+      cond 2: Si recibes quejas relacionadas con la actitud o el trato de quien atiende al cliente
+      previos   : ['procedimientos_definidos_en_servicios']
+      siguientes: ['retroalimentacion_cliente_mejora_servicio']
+      entregable: Una forma de atender al cliente ya definida y puesta en practica por quien tiene contacto directo con el, seas tu o alguien que te ayuda
+
+##############################################################################
+# ACTO 3 del tramo 6 (puesto 32 de hoy, 252 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2727, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): analisis_de_sistemas_de_medicion_msa
+  nodo_b (EL SEGUNDO de la razon): errores_de_medicion
+
+  RAZON ENTERA, sin recortar:
+    analisis_de_sistemas_de_medicion_msa (MSA: definir el metodo de prueba paso a paso, identificar el sistema de causas de variabilidad material, analistas, aparatos, dias, verificar el proceso de medicion bajo control con carta, hacer Gauge R&R con varios apraisers, partes y repeticiones, calcular 5.15 sigma contra el rango de especificacion, calibrar si hay sesgo) contra errores_de_medicion (Sesgo y Repetibilidad: definir el metodo de prueba paso a paso, identificar las fuentes de variabilidad operador, equipo, dia, laboratorio, verificar la estabilidad con carta, calcular bias y repetibilidad, calibrar contra estandares reconocidos). MISMA FUENTE, Juran, CON ARISTA, sim_tit 45,0. Es el mismo procedimiento de analisis del sistema de medicion: los pasos calzan uno a uno, definir metodo, identificar fuentes de variabilidad, verificar control con carta, calcular error (el bias y repetibilidad del segundo es el R&R del primero), calibrar. errores_de_medicion es la parte de sesgo y repetibilidad contenida en el MSA completo, que ademas trae el Gauge R&R y la comparacion 5.15 sigma. A por contencion, superviviente el MSA (que carga la denominacion). DISCUTIBLE MARCADO: quien lea errores_de_medicion como el CONCEPTO de los dos tipos de error (cara distinta) contra el procedimiento MSA dira D.
+
+  --- analisis_de_sistemas_de_medicion_msa
+      titulo    : Análisis de Sistemas de Medición (MSA)
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 6 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Definir el método de prueba con procedimiento paso a paso, equipo y condiciones
+      paso 2: Identificar el sistema de causas de variabilidad (material, analistas, aparatos, días)
+      paso 3: Verificar que el proceso de medición esté bajo control estadístico mediante carta de control
+      paso 4: Realizar un estudio Gauge R&R con múltiples apraisers, partes y repeticiones
+      paso 5: Calcular 5.15σ y compararlo con el rango de especificación (aceptable si es ≤10%)
+      paso 6: Ajustar o calibrar el instrumento si se detecta sesgo sistemático
+      cond 1: Cuando se necesite validar la precisión de instrumentos antes de tomar decisiones de calidad
+      cond 2: Si existen dudas sobre la exactitud de las mediciones que afectan decisiones de aceptación/rechazo
+      previos   : ['diseno_de_metodos_de_recoleccion_de_datos']
+      siguientes: ['cribado_de_datos', 'errores_de_medicion']
+      entregable: Informe de estudio MSA/Gauge R&R con estimaciones de repetibilidad, reproducibilidad y determinación de aceptabilidad del sistema de medición
+
+  --- errores_de_medicion
+      titulo    : Errores de Medición: Sesgo y Repetibilidad
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Definir formalmente el método de prueba paso a paso
+      paso 2: Identificar las fuentes de variabilidad (operador, equipo, día, laboratorio)
+      paso 3: Verificar la estabilidad del proceso de medición mediante carta de control
+      paso 4: Calcular bias y repetibilidad del instrumento de medición
+      paso 5: Calibrar el equipo respecto a estándares de medida reconocidos
+      cond 1: Cuando se requieren niveles de defectos bajo enfoque Six Sigma
+      cond 2: Cuando existen discrepancias entre mediciones repetidas del mismo producto
+      previos   : ['inspeccion_automatizada', 'analisis_de_sistemas_de_medicion_msa']
+      siguientes: ['punto_equilibrio_calidad_inspeccion']
+      entregable: Estudio de Análisis del Sistema de Medición (MSA) documentado con bias y repetibilidad calculados
+
+##############################################################################
+# ACTO 4 del tramo 6 (puesto 33 de hoy, 253 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2744, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): definicion_problema_moms
+  nodo_b (EL SEGUNDO de la razon): definicion_problema_moms_2
+
+  RAZON ENTERA, sin recortar:
+    definicion_problema_moms (Definicion del Problema mediante Criterio MOMS: seleccionar el problema con datos y Pareto, redactar el enunciado asegurando que sea Medible, verificar que sea Observable por sintomas, confirmar que sea Manejable dentro del alcance del equipo) contra definicion_problema_moms_2 (Definicion y Seleccion del Problema, Criterios MOMS: recolectar datos de problemas potenciales, aplicar Pareto, redactar el enunciado por MOMS, verificar medible, observable, manejable y especifico, evitar incluir causas, culpas o soluciones). MISMA FUENTE, Juran, sin arista, sim_tit 81,6. Es el mismo acto, definir el problema con el criterio MOMS: seleccionar con datos y Pareto, redactar el enunciado, verificar los criterios M, O, M. El segundo anade la regla de no incluir causas ni culpas ni soluciones y la S de especifico, pero cabe como detalle del mismo enunciado MOMS. A por contencion, superviviente POR ELEGIR. DISCUTIBLE MARCADO: el segundo suma la regla no causas ni soluciones y la S; quien lea eso como cara distinta dira D.
+
+  --- definicion_problema_moms
+      titulo    : Definición del Problema mediante Criterio MOMS
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 4 | condiciones 1 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Seleccionar el problema usando datos y análisis de Pareto
+      paso 2: Redactar el enunciado del problema asegurando que sea Medible
+      paso 3: Verificar que el problema sea Observable mediante síntomas
+      paso 4: Confirmar que el problema es Manejable dentro del alcance del equipo
+      cond 1: Cuando se inicia un esfuerzo de resolución de problemas y se requiere formular correctamente el problema a abordar
+      previos   : ['juran_rcca_metodo', 'herramientas_analisis_causa_raiz']
+      siguientes: ['analisis_diagnostico_causa', 'analisis_sintomas']
+      entregable: Enunciado de problema claro, medible, observable y manejable
+
+  --- definicion_problema_moms_2
+      titulo    : Definición y Selección del Problema (Criterios MOMS)
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Recolectar datos e información sobre problemas potenciales.
+      paso 2: Aplicar análisis de Pareto para identificar los problemas más importantes.
+      paso 3: Redactar el enunciado del problema siguiendo los criterios MOMS.
+      paso 4: Verificar que el problema sea medible, observable, manejable y específico.
+      paso 5: Evitar incluir causas, culpas o soluciones en el enunciado.
+      cond 1: Cuando existe un problema de calidad recurrente o crítico que requiere ser abordado formalmente.
+      cond 2: Cuando el equipo necesita enfocar sus esfuerzos en un problema bien delimitado.
+      previos   : ['herramientas_analisis_causa_raiz']
+      siguientes: ['analisis_sintomas']
+      entregable: Un enunciado de problema claro y validado según los criterios MOMS, listo para iniciar el análisis de causa raíz.
+
+##############################################################################
+# ACTO 5 del tramo 6 (puesto 34 de hoy, 254 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2760, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): gobierno_corporativo_juntas_directivas
+  nodo_b (EL SEGUNDO de la razon): planificacion_gobierno_organizaciones_familiares
+
+  RAZON ENTERA, sin recortar:
+    gobierno_corporativo_juntas_directivas (Gobierno Corporativo y Estructura de Juntas: evaluar transicionar de junta informal a formal, crear una junta asesora como primer paso, establecer un consejo familiar con reglas, definir un master plan con consultor externo, seleccionar directores independientes con las cualidades adecuadas) contra planificacion_gobierno_organizaciones_familiares (organizar el mando y la sucesion en un negocio familiar: buscar ayuda externa para la sucesion, disenar un consejo familiar que represente a los duenos, definir reglas de participacion de la familia, decidir a que independientes sumar, evitar que los directores se metan en el dia a dia, empezar con un consejo asesor si no hay junta formal). MISMA FUENTE, Juran, sin arista, sim_tit 42,3. Es el mismo acto, estructurar el gobierno de un negocio familiar: consultor externo, consejo familiar, junta asesora como paso intermedio hacia la formal, directores independientes con reglas. Los pasos calzan uno a uno. A por fusion mutua, superviviente POR ELEGIR. DISCUTIBLE MARCADO: el segundo enfatiza la SUCESION y evitar directores en el dia a dia; quien lea el angulo de sucesion como cara distinta dira D.
+
+  --- gobierno_corporativo_juntas_directivas
+      titulo    : Gobierno Corporativo y Estructura de Juntas Directivas
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 3 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Evaluar si la organización necesita transicionar de una junta informal a una estructura formal
+      paso 2: Crear una junta asesora como primer paso antes de establecer una junta legal formal
+      paso 3: Establecer un consejo familiar con reglas claras de participación y comunicación
+      paso 4: Definir un master plan con la colaboración de un consultor externo que incluya nuevos miembros, consejo familiar y junta profesional
+      paso 5: Seleccionar directores independientes con las cualidades adecuadas: respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación
+      cond 1: Cuando una organización familiar está en proceso de sucesión o retiro del fundador
+      cond 2: Si la organización no tiene una estructura formal de gobierno corporativo
+      cond 3: Cuando se requiere profesionalizar la toma de decisiones estratégicas
+      previos   : ['gobierno_corporativo_y_calidad']
+      siguientes: ['evaluacion_desempeno_junta_directiva', 'iso_9000_sistema_gestion_calidad', 'familia_normas_iso_9000']
+      entregable: Un master plan documentado de gobierno corporativo con estructura de junta directiva, consejo familiar (si aplica) y criterios de selección de directores independientes
+
+  --- planificacion_gobierno_organizaciones_familiares
+      titulo    : Cómo organizar el mando y la sucesión en un negocio familiar (gobierno corporativo)
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 6 | condiciones 3 | previos 1 | siguientes 0 | cableado 1
+      paso 1: Busca a alguien externo que te ayude a planear la sucesión y el mando
+      paso 2: Diseña un consejo familiar (family council) que represente a los familiares que son dueños
+      paso 3: Define reglas claras de cómo participa tu familia y qué esperas de la junta directiva
+      paso 4: Decide qué necesitas para sumar a la junta a personas externas independientes
+      paso 5: Evita que los directores se metan en el día a día de tu negocio
+      paso 6: Si todavía no estás listo para una junta formal, empieza con un consejo asesor (advisory board) como paso intermedio
+      cond 1: Cuando empiezas a planear tu retiro de un negocio familiar
+      cond 2: Cuando hay varias generaciones de tu familia metidas en la gestión del negocio
+      cond 3: Cuando tu junta actual solo firma sin supervisar de verdad
+      previos   : ['gobierno_corporativo_y_calidad']
+      siguientes: []
+      entregable: Un plan maestro de sucesión y de mando familiar, con el consejo familiar y la junta directiva ya definidos
+
+##############################################################################
+# ACTO 6 del tramo 6 (puesto 35 de hoy, 255 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2762, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): falacia_recompensa_loteria
+  nodo_b (EL SEGUNDO de la razon): sistemas_recompensa_aleatorios
+
+  RAZON ENTERA, sin recortar:
+    falacia_recompensa_loteria (Falacia de la Recompensa por Desempeno Individual, Efecto Loteria: analizar con cartas de control si el desempeno del grupo es sistema estable, determinar si el mejor desempeno es causa especial o variacion aleatoria, si es aleatoria evitar premios de merito individual y mejorar el sistema, si hay causa especial genuina investigarla como aprendizaje) contra sistemas_recompensa_aleatorios (Sistemas de Reconocimiento como Loteria Estadistica: calcular la probabilidad de cero incidencias segun el promedio historico de cada trabajador con Poisson, verificar si el sistema premia la varianza aleatoria y no el desempeno real, reemplazar el reconocimiento puntual con analisis de tendencias en graficos de control individuales, comunicar que el merito debe basarse en mejoras sostenidas no en un solo periodo). MISMA FUENTE, Deming, sin arista, sim_tit 46,2. Es la misma tesis, el efecto loteria del reconocimiento: usar estadistica y cartas de control para mostrar que el mejor suele ser variacion aleatoria, no premiar la varianza, basar el merito en mejora sostenida o del sistema. Los actos calzan. A por fusion mutua, superviviente POR ELEGIR. DISCUTIBLE MARCADO: el segundo trae el calculo Poisson y el primero la rama de la causa especial como aprendizaje; quien lea esas como caras distintas dira D.
+
+  --- falacia_recompensa_loteria
+      titulo    : Falacia de la Recompensa por Desempeño Individual (Efecto Lotería)
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 3 | previos 1 | siguientes 0 | cableado 1
+      paso 1: Analizar estadísticamente si el desempeño del grupo constituye un sistema estable (causas comunes) mediante cartas de control.
+      paso 2: Determinar si el 'mejor' desempeño corresponde a una causa especial identificable o a variación aleatoria.
+      paso 3: Si es variación aleatoria, evitar otorgar premios de mérito individual; considerar mejoras al sistema en su conjunto.
+      paso 4: Si existe una causa especial genuina, investigarla y usarla como oportunidad de aprendizaje para todo el grupo.
+      cond 1: Antes de implementar sistemas de premios o reconocimientos basados en rankings individuales.
+      cond 2: Cuando se observa alta variabilidad en el desempeño reportado de un grupo de trabajadores.
+      cond 3: Al diseñar políticas de incentivos en producción.
+      previos   : ['gestion_miedo_reportes']
+      siguientes: []
+      entregable: Un análisis de control estadístico del desempeño grupal que determine si las diferencias individuales son causas comunes o especiales, antes de diseñar cualquier sistema de reconocimiento.
+
+  --- sistemas_recompensa_aleatorios
+      titulo    : Sistemas de Reconocimiento como Lotería Estadística
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Calcular la probabilidad de obtener 'cero incidencias' dado el promedio histórico de cada trabajador (ej. usando distribución de Poisson)
+      paso 2: Verificar si el sistema de premios está simplemente premiando la varianza aleatoria y no el desempeño real
+      paso 3: Reemplazar el reconocimiento por desempeño puntual con análisis de tendencias en gráficos de control individuales
+      paso 4: Comunicar a la organización que el mérito debe basarse en mejoras sostenidas, no en resultados de un solo período
+      cond 1: Cuando la empresa usa premios individuales mensuales (empleado del mes) basados en métricas de quejas o errores
+      cond 2: Cuando el sistema de reconocimiento ha perdido efectividad motivacional con el tiempo
+      previos   : ['sistema_estable_variacion', 'sistema_estable_causas_comunes']
+      siguientes: ['responsabilidad_gerencial_causas_comunes']
+      entregable: Evaluación estadística de validez del sistema de reconocimiento actual y recomendación de rediseño basado en control estadístico
+
+##############################################################################
+# ACTO 7 del tramo 6 (puesto 36 de hoy, 256 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2773, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): comparacion_inspectores_independientes
+  nodo_b (EL SEGUNDO de la razon): riesgos_consenso_inspeccion
+
+  RAZON ENTERA, sin recortar:
+    comparacion_inspectores_independientes (Comparacion Sistematica de Dos o Mas Inspectores: esquema de muestreo mecanico para que cada inspector tome items de distintas partes del lote, examinar y registrar de forma independiente, inspecciones conjuntas periodicas cada 20 item donde ambos evaluen el mismo, graficar los resultados en el tiempo, analizar discrepancias para ver si vienen de inspectores o de muestras) contra riesgos_consenso_inspeccion (Riesgos del Consenso: que cada inspector registre su juicio de forma independiente sin conocer el del otro, comparar los registros en un ambiente sin jerarquia, usar un grafico simple para ver acuerdos y desacuerdos por tipo de caso, investigar los desacuerdos para mejores definiciones o entrenamiento, recordar que el acuerdo no garantiza que el juicio sea correcto). MISMA FUENTE, Deming, CON ARISTA, sim_tit 48,3. Es el mismo acto: hacer que los inspectores juzguen de forma INDEPENDIENTE, graficar y comparar, e investigar las discrepancias del sistema de medicion. Los pasos calzan. A por fusion mutua, superviviente POR ELEGIR. DISCUTIBLE MARCADO fuerte: el primero es un PROCEDIMIENTO de medicion de la variacion entre inspectores y el segundo una ADVERTENCIA conceptual sobre el consenso con remedio en las definiciones; por el patron metodo contra encuadre quien los lea como caras distintas dira D.
+
+  --- comparacion_inspectores_independientes
+      titulo    : Comparación Sistemática de Dos o Más Inspectores Independientes
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 5 | condiciones 2 | previos 1 | siguientes 0 | cableado 1
+      paso 1: Definir un esquema de muestreo mecánico (no aleatorio) para que cada inspector seleccione ítems de diferentes partes del lote.
+      paso 2: Hacer que cada inspector examine y registre resultados de forma independiente.
+      paso 3: Programar inspecciones conjuntas periódicas (ej. cada 20° ítem) donde ambos evalúen el mismo ítem.
+      paso 4: Graficar los resultados de ambos inspectores a lo largo del tiempo.
+      paso 5: Analizar discrepancias para determinar si provienen de diferencias entre inspectores o entre muestras.
+      cond 1: Cuando múltiples inspectores o certificadores deben garantizar consistencia en la calificación de productos.
+      cond 2: Cuando se sospecha de sesgo o divergencia sistemática entre evaluadores.
+      previos   : ['riesgos_consenso_inspeccion']
+      siguientes: []
+      entregable: Gráfico de seguimiento longitudinal de resultados de dos o más inspectores, con protocolo de verificación cruzada periódica implementado.
+
+  --- riesgos_consenso_inspeccion
+      titulo    : Riesgos del Consenso en la Inspección y Certificación
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 5 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Solicitar a cada inspector o certificador que registre su juicio de forma independiente, sin conocer el del otro.
+      paso 2: Comparar los registros posteriormente en un ambiente sin jerarquía o temor.
+      paso 3: Usar un gráfico simple (como el de Fig. 51/52) para visualizar acuerdos y desacuerdos por tipo de caso.
+      paso 4: Investigar los casos de desacuerdo para identificar necesidad de mejores definiciones o entrenamiento.
+      paso 5: Recordar que el acuerdo entre inspectores no garantiza que el juicio sea correcto, solo que existe un sistema consistente.
+      cond 1: Cuando dos o más personas deben emitir un juicio de calidad conjunto sobre un mismo ítem o caso.
+      cond 2: Cuando existe una relación jerárquica entre los evaluadores que podría sesgar el consenso.
+      previos   : ['administracion_de_inspeccion', 'gestion_testimonios']
+      siguientes: ['comparacion_inspectores_independientes']
+      entregable: Sistema de registro independiente y comparación posterior implementado entre inspectores/certificadores, con gráfico de seguimiento de acuerdos/desacuerdos.
+
+##############################################################################
+# ACTO 8 del tramo 6 (puesto 37 de hoy, 257 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2780, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): revision_progreso
+  nodo_b (EL SEGUNDO de la razon): revision_progreso_breakthrough
+
+  RAZON ENTERA, sin recortar:
+    revision_progreso (Proceso Formal de Revision de Progreso: establecer puntos de revision planificados por proyecto, comparar el estado actual contra el objetivo, identificar brechas, asignar responsabilidad y autoridad para actuar, documentar y comunicar de forma grafica y periodica) contra revision_progreso_breakthrough (Revision Periodica del Progreso de Breakthrough: fijar fechas periodicas por ejemplo cada trimestre, crear un formato simple y estandar, reunir el costo, la inversion y el ahorro neto de cada proyecto, revisar este seguimiento como parte del control de calidad general). MISMA FUENTE, Juran, sin arista, sim_tit 70,6. Es el mismo acto, la revision periodica del progreso de los proyectos: puntos o fechas periodicas, comparar el avance contra objetivo o resultado, documentar en un formato. A por fusion mutua, superviviente POR ELEGIR. DISCUTIBLE MARCADO: el primero enfatiza brechas y responsabilidad, el segundo el costo y el ahorro; quien lea el enfoque financiero del breakthrough como cara distinta dira D.
+
+  --- revision_progreso
+      titulo    : Proceso Formal de Revisión de Progreso
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Establecer puntos de revisión específicos y planificados para cada proyecto
+      paso 2: Comparar el estado actual medido contra el objetivo establecido
+      paso 3: Identificar brechas (gaps) que requieren atención
+      paso 4: Asignar responsabilidad y autoridad clara para actuar sobre las brechas identificadas
+      paso 5: Documentar y comunicar resultados de forma gráfica y periódica
+      cond 1: Cuando un proyecto de calidad está en ejecución y requiere seguimiento continuo
+      cond 2: Cuando se detectan desviaciones entre lo planificado y lo ejecutado
+      previos   : ['sistema_medicion_kpi', 'diagrama_arbol_despliegue']
+      siguientes: ['tablero_control_scorecard', 'auditoria_negocio']
+      entregable: Un calendario de revisiones con actas que documenten brechas identificadas y acciones correctivas asignadas
+
+  --- revision_progreso_breakthrough
+      titulo    : Revisión Periódica del Progreso de Breakthrough
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 4 | condiciones 1 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Fijar fechas periódicas (por ejemplo cada trimestre) para revisar tus proyectos de mejora
+      paso 2: Crear un formato simple y estándar para reportar cada proyecto
+      paso 3: Reunir en ese formato el costo, la inversión y el ahorro neto de cada proyecto
+      paso 4: Revisar este proceso de seguimiento como parte de tu control de calidad general
+      cond 1: Si tienes varios proyectos de mejora en marcha que necesitan seguimiento
+      previos   : ['institucionalizar_breakthrough']
+      siguientes: ['evaluacion_desempeno_proyectos', 'enfoque_en_procesos_no_en_problemas']
+      entregable: Un calendario de revisiones y un formato estándar para reportar tus proyectos de forma consolidada
+
+##############################################################################
+# ACTO 9 del tramo 6 (puesto 38 de hoy, 258 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2787, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): gestion_estrategica_de_calidad_sqm
+  nodo_b (EL SEGUNDO de la razon): rol_tactico_estrategico_oficina
+
+  RAZON ENTERA, sin recortar:
+    gestion_estrategica_de_calidad_sqm (Gestion Estrategica de la Calidad: evaluar si quien maneja la calidad piensa solo en lo tecnico o tiene vision de conjunto, separar las tareas tecnicas de calidad de las decisiones estrategicas, definir quien se encarga de la ingenieria de calidad y quien de la gestion estrategica, conectar la planificacion de calidad con la del negocio) contra rol_tactico_estrategico_oficina (Rol Tactico contra Estrategico de la Oficina de Calidad: auditar las actividades de la Oficina y clasificarlas en tacticas o estrategicas, identificar brechas donde podria aportar valor estrategico, incluir a la Oficina en la planificacion estrategica anual, definir metricas que vinculen calidad con resultados de negocio). MISMA FUENTE, Juran, sin arista, sim_tit 63,6. Es el mismo acto: separar lo TACTICO O TECNICO de lo ESTRATEGICO en la calidad y conectar la calidad con la planificacion del negocio. Los pasos calzan (separar tecnico de estrategico, incluir en la planificacion, vincular con resultados). A por fusion mutua, superviviente POR ELEGIR. DISCUTIBLE MARCADO: el primero lo encuadra en la vision del gestor y el split ingenieria contra estrategia, el segundo en la auditoria de la Oficina; quien lea esos encuadres como caras distintas dira D.
+
+  --- gestion_estrategica_de_calidad_sqm
+      titulo    : Gestión Estratégica de la Calidad
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Evalúa si quien maneja la calidad en tu negocio piensa solo en lo técnico o también tiene visión de conjunto
+      paso 2: Separa las tareas técnicas de calidad, como inspección y auditoría, de las decisiones estratégicas de calidad
+      paso 3: Si tu negocio crece, define con claridad quién se encarga de la ingeniería de calidad y quién de la gestión estratégica de calidad
+      paso 4: Conecta la planificación de calidad con la planificación general de tu negocio, para que vayan en la misma dirección
+      cond 1: Cuando la calidad necesita tener más peso en las decisiones grandes de tu negocio
+      cond 2: Cuando hay confusión entre las tareas técnicas de calidad y las decisiones estratégicas de calidad
+      previos   : ['consejo_de_calidad_y_rol_del_director']
+      siguientes: ['formacion_seleccion_y_retencion_de_personal']
+      entregable: Un esquema claro de qué tareas de calidad son técnicas y cuáles son decisiones estratégicas, con roles diferenciados si tienes personas ayudándote
+
+  --- rol_tactico_estrategico_oficina
+      titulo    : Rol Táctico versus Estratégico de la Oficina de Calidad
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Auditar las actividades actuales de la Oficina y clasificarlas en tácticas o estratégicas
+      paso 2: Identificar brechas donde la Oficina podría aportar valor estratégico y no lo está haciendo
+      paso 3: Incluir a la Oficina en el proceso de planificación estratégica anual de la organización
+      paso 4: Definir métricas e indicadores que vinculen calidad con resultados de negocio (costos, crecimiento, satisfacción del cliente)
+      cond 1: Cuando la Oficina de Calidad es percibida solo como función de inspección/control
+      cond 2: Si se busca elevar el rol de calidad a un nivel de asesoría ejecutiva
+      previos   : ['oficina_calidad_y_excelencia', 'organizaciones_paralelas_cambio']
+      siguientes: ['desarrollo_expertos_capaces']
+      entregable: Informe de posicionamiento de la Oficina con actividades tácticas y estratégicas mapeadas y plan de expansión de su rol
+
+##############################################################################
+# ACTO 10 del tramo 6 (puesto 39 de hoy, 259 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2811, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): juran_transformation_roadmap
+  nodo_b (EL SEGUNDO de la razon): roadmap_despliegue_lean_six_sigma
+
+  RAZON ENTERA, sin recortar:
+    juran_transformation_roadmap (Hoja de Ruta de Transformacion Juran, 5 Fases Decide Prepare Launch Expand Sustain: recopilar lealtad y COPQ, desplegar y elegir pilotos, lanzar con charter y revision, expandir unidad por unidad 3 a 5 anos, integrar y auditar) contra roadmap_despliegue_lean_six_sigma (Roadmap de Despliegue Lean Six Sigma, Decide Prepare Launch Expand Sustain: evaluar si Six Sigma encaja, elegir con quien capacitarte, pausar iniciativas, definir quien guia, capacitar la primera ola de Champions y Belts, ejecutar con mentoria, llevar a otras areas, comparar con clase mundial, revisiones regulares). MISMA FUENTE Juran, sin arista, sim_tit 34,7 solo por los titulos. Es EL MISMO ROADMAP DPLES: las cinco fases coinciden una a una y los actos calzan (Decide recopilar y evaluar, Prepare pilotos y lideres, Launch ejecutar los primeros, Expand a otras areas en anos, Sustain integrar y auditar). El segundo es el primero con pasos mas granulares y vocabulario Six Sigma, no una iniciativa distinta. A por equivalencia del roadmap. Ojo: juran_transformation_roadmap =D= sus fichas de fase (2678, 2707) y =D= modelo_transformacion_juran (2748, que es el modelo de cinco breakthroughs), pero ESTE es otro roadmap DPLES entero, no una fase ni el modelo. A. DISCUTIBLE MARCADO fuerte: uno se rotula transformacion Juran y el otro despliegue Lean Six Sigma; quien los lea como iniciativas distintas dira D.
+
+  --- juran_transformation_roadmap
+      titulo    : Hoja de Ruta de Transformación Juran (5 Fases)
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Fase Decide: recopilar información nueva (lealtad de cliente, COPQ, revisión de calidad de clase mundial) y definir plan de implementación
+      paso 2: Fase Prepare: desplegar el plan, identificar procesos clave, seleccionar proyectos piloto
+      paso 3: Fase Launch: lanzar proyectos piloto con charter, equipo y revisión de progreso
+      paso 4: Fase Expand: expandir la implementación unidad por unidad durante 3-5 años
+      paso 5: Fase Sustain: integrar completamente la mejora en la operación, alinear compensación y realizar auditorías regulares
+      cond 1: Cuando la organización decide emprender una transformación de calidad a gran escala (ej. Six Sigma)
+      cond 2: Si se requiere un marco estructurado de largo plazo para institucionalizar la calidad
+      previos   : ['estudio_lealtad_cliente', 'benchmarking_proceso']
+      siguientes: ['decide_phase_roadmap']
+      entregable: Plan de transformación documentado con las cinco fases, hitos y responsables definidos para cada una
+
+  --- roadmap_despliegue_lean_six_sigma
+      titulo    : Roadmap de Despliegue Lean Six Sigma (Decide-Prepare-Launch-Expand-Sustain)
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 9 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Evaluar si Six Sigma encaja con la direccion que le quieres dar a tu negocio (fase Decide)
+      paso 2: Elegir con quien te vas a capacitar, alguien que encaje con tu forma de trabajar
+      paso 3: Decidir que iniciativas actuales conviene pausar para no chocar por recursos
+      paso 4: Definir quien va a guiar el proceso, tanto en lo general como en cada area (fase Prepare)
+      paso 5: Capacitar a la primera ola de responsables y especialistas (Champions, Green Belts y Black Belts)
+      paso 6: Ejecutar los primeros proyectos con mentoria y formas de reconocer los avances (fase Launch)
+      paso 7: Llevar la metodologia a otras areas y procesos mas grandes de tu negocio (fase Expand)
+      paso 8: Comparar tus resultados con los de otros negocios para llegar a un nivel de clase mundial
+      paso 9: Establecer revisiones regulares y capacitacion básica para todas las personas que trabajan contigo (fase Sustain)
+      cond 1: Cuando decides implementar Six Sigma o Lean Six Sigma como una transformacion de fondo en tu negocio
+      cond 2: Cuando necesitas una hoja de ruta estructurada para escalar la metodologia en tu negocio
+      previos   : ['roles_six_sigma']
+      siguientes: ['rol_black_belt_six_sigma', 'dmaic_fase_select']
+      entregable: Un plan de despliegue documentado con las fases definidas, los responsables de guiar el proceso establecidos y la primera ola de proyectos completada
+
+##############################################################################
+# ACTO 11 del tramo 6 (puesto 40 de hoy, 260 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2816, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): eliminacion_barreras_orgullo_del_trabajo
+  nodo_b (EL SEGUNDO de la razon): orgullo_por_el_trabajo
+
+  RAZON ENTERA, sin recortar:
+    eliminacion_barreras_orgullo_del_trabajo (Eliminacion de Barreras al Orgullo del Trabajo, Punto 12 de Deming: reunir los reportes repetidos de problemas sin resolver, revisar los sistemas de evaluacion y pago por pieza, plan para eliminar barreras con responsables y plazos, cambiar los discursos y carteles por acciones concretas) contra orgullo_por_el_trabajo (Orgullo por el Trabajo, Pride of Workmanship, Deming: hablar con las personas para identificar barreras concretas, crear una forma simple de reportar fallas con seguimiento, eliminar evaluaciones que generen miedo, que quien supervisa conozca el trabajo tecnico, actuar visible sobre las sugerencias). MISMA FUENTE Deming, sim_tit 50,5. Es el MISMO Punto 12: quitar las barreras al orgullo del trabajo. El acto entero coincide: identificar las barreras desde la gente y los reportes, quitar el miedo y las evaluaciones que lo generan, reemplazar los lemas por accion. Cada uno pone su ejemplo (pago por pieza en uno, canal de reporte en el otro) pero es el mismo acto, no dos caras. A por fusion mutua. DISCUTIBLE MARCADO fuerte: orgullo trae que el supervisor conozca el trabajo tecnico (roza el Punto 7) y eliminacion trae revisar el pago por pieza (roza el Punto 11); quien lea esos como pasos enteros propios dira D.
+
+  --- eliminacion_barreras_orgullo_del_trabajo
+      titulo    : Eliminación de Barreras al Orgullo del Trabajo
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Reunir los reportes que te hacen de forma repetida sobre problemas sin resolver, por ejemplo una maquina que falla una y otra vez y nadie arregla
+      paso 2: Revisar tus sistemas de evaluación de desempeño, pago por pieza o incentivos individuales
+      paso 3: Armar un plan para eliminar estas barreras poco a poco, con responsables y plazos claros
+      paso 4: Cambiar los discursos motivacionales y los carteles por acciones concretas que la gente pueda ver
+      cond 1: Cuando te llegan reportes repetidos de problemas que no has resuelto
+      cond 2: Cuando todavia pagas por pieza o evaluas a las personas de forma individual y punitiva
+      previos   : ['eliminacion_gestion_por_objetivos_y_numeros', 'circulos_calidad_qc']
+      siguientes: ['analisis_causa_raiz_despido_ejecutivo']
+      entregable: Un plan con las barreras identificadas, quien se encarga de cada una y el cronograma para resolverlas
+
+  --- orgullo_por_el_trabajo
+      titulo    : Orgullo por el Trabajo (Pride of Workmanship)
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 5 | condiciones 3 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Hablar directamente con las personas que hacen el trabajo día a día para identificar que barreras concretas les impiden hacerlo bien
+      paso 2: Crear una forma simple para que quien trabaja contigo pueda reportar fallas de herramientas o materiales, y asegurarte de darle seguimiento real
+      paso 3: Eliminar evaluaciones que generen miedo y no reflejen como funciona realmente el trabajo
+      paso 4: Si alguien supervisa a otros, asegurarte de que conozca bien el trabajo tecnico que supervisa, no solo el trato humano
+      paso 5: Actuar de forma visible sobre las sugerencias de mejora para que los espacios de participación no se conviertan en frustración vacia
+      cond 1: Cuando existe alto ausentismo o rotación entre las personas que trabajan contigo
+      cond 2: Cuando te reportan los mismos problemas repetidamente sin que actues
+      cond 3: Si notas que los espacios de participación o grupos de mejora se estan frustrando sin resultados
+      previos   : ['inventario_conocimiento_estadistico_personal']
+      siguientes: ['fomento_educacion_autoeducacion', 'enfermedades_mortales_gestion']
+      entregable: Un sistema de reporte y seguimiento de problemas operativos con evidencia de acciones tomadas sobre las quejas de las personas que trabajan contigo
+
+##############################################################################
+# ACTO 12 del tramo 6 (puesto 41 de hoy, 261 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2825, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): cinco_suposiciones_erroneas_calidad
+  nodo_b (EL SEGUNDO de la razon): concepto_supuestos_erroneos_sobre_calidad
+
+  RAZON ENTERA, sin recortar:
+    cinco_suposiciones_erroneas_calidad (Las Cinco Suposiciones Erroneas sobre la Calidad, Crosby: revisar cuales estan presentes, aprender la definicion correcta y medirla por costos, buscar el origen real de los defectos, redefinir el rol de quien revisa la calidad) contra concepto_supuestos_erroneos_sobre_calidad (Supuestos Erroneos Convencionales sobre la Calidad, Crosby: entrevistar a los gerentes para identificar sus supuestos, confrontar cada supuesto con su contraparte correcta calidad igual conformidad, es medible, el error no es inevitable, la gente si puede, disenar sesiones de sensibilizacion, usar testimonios de gerentes que cambiaron). MISMA FUENTE Crosby, sim_tit 73,5. Es el MISMO concepto de Crosby, los supuestos erroneos convencionales sobre la calidad: identificar los supuestos presentes y confrontarlos con su contraparte correcta es el acto entero compartido (revisar cuales estan presentes igual entrevistar para identificarlos; aprender la definicion correcta igual confrontar con la contraparte). A por fusion mutua, superviviente POR ELEGIR. DISCUTIBLE MARCADO fuerte: concepto trae las sesiones y los testimonios como despliegue y cinco trae buscar el origen real de los defectos; quien lea esos como pasos enteros propios que rompen la contencion dira D, distinto de su vecino Deming del 2806 que si es D.
+
+  --- cinco_suposiciones_erroneas_calidad
+      titulo    : Las Cinco Suposiciones Erróneas sobre la Calidad
+      fuente    : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+      pasos 4 | condiciones 3 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Revisa cuales de estas suposiciones erroneas estan presentes en como piensas y manejas tu negocio
+      paso 2: Aprende la definición correcta de calidad y como medirla a traves de sus costos
+      paso 3: Busca el origen real de los defectos, ya sea en el diseño, la planeación o la forma de administrar, y no solo en quien produce
+      paso 4: Redefine el rol de quien revisa la calidad: que mida y reporte, y no que cargue solo con la responsabilidad de resolverlo todo
+      cond 1: Cuando culpas siempre a quienes producen o fabrican por los defectos
+      cond 2: Cuando dejas toda la responsabilidad de la calidad en una sola persona o area
+      cond 3: Al empezar a poner en marcha un programa de calidad en tu negocio
+      previos   : ['definicion_calidad_conformidad_requisitos', 'definicion_calidad_conformidad']
+      siguientes: ['quality_management_maturity_grid', 'rejilla_madurez_gestion_calidad']
+      entregable: Un diagnostico honesto de que suposiciones erroneas estan afectando tu negocio, con un plan para corregirlas
+
+  --- concepto_supuestos_erroneos_sobre_calidad
+      titulo    : Supuestos Erróneos Convencionales sobre la Calidad
+      fuente    : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Realizar entrevistas o encuestas a gerentes para identificar sus supuestos actuales sobre la calidad.
+      paso 2: Confrontar cada supuesto erróneo con su contraparte correcta (calidad = conformidad con requisitos, es medible, el error no es inevitable, la gente sí se preocupa).
+      paso 3: Diseñar sesiones de sensibilización o seminarios para dirección basados en estas correcciones conceptuales.
+      paso 4: Usar testimonios de gerentes que ya cambiaron su percepción como agentes de cambio interno.
+      cond 1: Cuando existe resistencia cultural o escepticismo directivo hacia los programas de calidad.
+      cond 2: Cuando se inicia un proyecto de transformación de calidad en una organización sin experiencia previa.
+      previos   : ['definiciones_operacionales']
+      siguientes: ['concepto_haciendo_la_calidad_cierta']
+      entregable: Un diagnóstico de las creencias actuales de la dirección sobre calidad y un material de sensibilización que corrija los supuestos erróneos identificados.
+
+##############################################################################
+# ACTO 13 del tramo 6 (puesto 42 de hoy, 262 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2891, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): estadistico_competente_organizacion
+  nodo_b (EL SEGUNDO de la razon): organizacion_liderazgo_estadistico
+
+  RAZON ENTERA, sin recortar:
+    estadistico_competente_organizacion (Rol del Estadistico Competente en la Organizacion, Deming: evaluar si hay personal capacitado en estadistica, otorgar autoridad transversal para investigar cualquier proceso, programas de capacitacion en pensamiento estadistico para todos, integrar al estadistico en decisiones de diseno compras y control) contra organizacion_liderazgo_estadistico (Organizacion para el Liderazgo de Metodologia Estadistica, Deming: definir quien es responsable del metodo estadistico con autoridad para revisar cualquier area, exigir dominio real, que cada quien responda por su dia a dia ante su area pero por el metodo ante el lider estadistico, asegurar su presencia en las decisiones importantes, no dejar que las decisiones con datos las juzgue solo el criterio del area). MISMA FUENTE Deming, sim_tit 53,1. A POR FUSION MUTUA: el acto entero compartido es instalar a un lider estadistico competente con autoridad transversal sobre todas las areas e integrado en las decisiones importantes; eso es el nodo entero en ambos. Cada uno pone su linea propia (la capacitacion para todos en uno, la doble linea de reporte en el otro), en los dos sentidos. NUEVO CASO DE FUSION MUTUA, superviviente POR ELEGIR fuera de cumulo contado: mueve el contador a DIECIOCHO (el anterior fue el 2.666). DISCUTIBLE MARCADO fuerte: la capacitacion para todos y la doble linea de reporte son pasos enteros propios; quien pese eso por la vara del paso entero dira D.
+
+  --- estadistico_competente_organizacion
+      titulo    : Rol del Estadístico Competente en la Organización
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 4 | condiciones 1 | previos 2 | siguientes 0 | cableado 2
+      paso 1: Evaluar si la organización cuenta con personal capacitado en estadística aplicada
+      paso 2: Otorgar autoridad transversal al estadístico para investigar cualquier proceso
+      paso 3: Establecer programas de capacitación en pensamiento estadístico para todo el personal
+      paso 4: Integrar al estadístico en decisiones de diseño, compras y control de calidad
+      cond 1: Cuando la empresa carece de análisis estadístico riguroso en sus procesos
+      previos   : ['sistema_estable_deming', 'sistema_estable_causas_comunes']
+      siguientes: []
+      entregable: Rol y mandato formal del estadístico dentro de la estructura organizacional
+
+  --- organizacion_liderazgo_estadistico
+      titulo    : Organización para la Mejora de la Calidad: Liderazgo de Metodología Estadística
+      fuente    : Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev
+      pasos 5 | condiciones 3 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Define quien en tu negocio, tu mismo o alguien que contrates, sera responsable del método estadístico, con autoridad para revisar cualquier área que lo necesite
+      paso 2: Exige que esa persona tenga dominio real: formación seria, experiencia práctica, trabajo demostrable y capacidad de explicarlo con claridad
+      paso 3: Si tienes colaboradores en distintas áreas, que cada uno responda por su trabajo diario ante quien lleva esa área, pero en método y desarrollo profesional responda ante la persona experta en estadística
+      paso 4: Asegurate de que esa persona este presente cuando se toman decisiones importantes del negocio
+      paso 5: No dejes que las decisiones basadas en datos se evaluen solo con el criterio de quien lleva el día a día de esa área
+      cond 1: Cuando los esfuerzos de mejora en tu negocio están dispersos y sin ninguna coordinación
+      cond 2: Cuando quieres que el uso de datos y método se mantenga consistente en todo el negocio y no solo en un área
+      cond 3: Cuando necesitas equilibrar la autoridad de quien sabe de método con la autoridad de quien lleva el día a día
+      previos   : ['control_estadistico_proceso', 'breakthrough_cultural']
+      siguientes: ['formacion_seleccion_y_retencion_de_personal', 'relacion_doble_reporte_dotted_line', 'introduccion_lean']
+      entregable: Un esquema simple que muestre quien es responsable del método estadístico en tu negocio y como se conecta esa persona con quienes manejan las áreas del día a día
+
+##############################################################################
+# ACTO 14 del tramo 6 (puesto 43 de hoy, 263 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2917, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): kanban_pull_system
+  nodo_b (EL SEGUNDO de la razon): sistema_pull_push
+
+  RAZON ENTERA, sin recortar:
+    kanban_pull_system (definir puntos de consumo, diseñar el tipo de señal kanban tarjeta/espacio/contenedor, establecer niveles de reposicion segun consumo real, implementar y capacitar a los operadores, monitorear y ajustar segun variacion de demanda) contra sistema_pull_push (evaluar si la operacion funciona bajo push o pull, identificar los cuellos de botella que el push ignora, rediseñar el flujo para que la produccion se autorice por demanda real, IMPLEMENTAR KANBANS Y SEÑALES DE REPOSICION basadas en consumo, monitorear la reduccion del tiempo de entrega). MISMA FUENTE Juran, CON ARISTA, sim_tit 38,8. A POR CONTENCION: el acto entero de kanban_pull_system cabe completo en el paso 4 y 5 de sistema_pull_push, y el propio entregable de sistema_pull_push lo dice: sistema de produccion rediseñado bajo logica pull CON KANBANS IMPLEMENTADOS. Lo que le queda propio a sistema_pull_push es el DIAGNOSTICO PREVIO (evaluar push/pull, cuellos de botella) y el REDISEÑO DEL FLUJO, pasos que ANTECEDEN a la implementacion del kanban, no actos alternativos. A, superviviente sistema_pull_push. DISCUTIBLE MARCADO fuerte: quien pese el diagnostico previo y el rediseño del flujo como paso entero propio dominante dira D.
+
+  --- kanban_pull_system
+      titulo    : Kanban – Señal para Producir
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 2 | previos 6 | siguientes 1 | cableado 7
+      paso 1: Definir puntos de consumo donde se necesita reposición
+      paso 2: Diseñar el tipo de señal kanban (tarjeta, espacio, contenedor)
+      paso 3: Establecer niveles de reposición basados en consumo real
+      paso 4: Implementar el sistema y capacitar a los operadores
+      paso 5: Monitorear y ajustar los niveles de kanban según variación de demanda
+      cond 1: Cuando se busca implementar un sistema pull de producción
+      cond 2: Si hay sobreproducción o exceso de transporte en el proceso
+      previos   : ['pull_vs_push_systems', 'inventory_analysis_lean', 'constraint_management', 'value_stream_mapping_2', 'mapeo_flujo_valor', 'sistema_pull_push']
+      siguientes: ['smed_setup_reduction']
+      entregable: Sistema kanban funcionando con señales visuales de reposición implementadas
+
+  --- sistema_pull_push
+      titulo    : Sistemas Pull versus Push en Producción
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 3 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Evaluar si tu operacion actual funciona bajo un esquema push o pull
+      paso 2: Identificar los cuellos de botella que el sistema push esta ignorando en tu proceso
+      paso 3: Rediseñar el flujo para que la produccion se autorice segun demanda real y consumo del cliente
+      paso 4: Implementar kanbans y señales de reposicion basadas en consumo
+      paso 5: Monitorear la reduccion del tiempo de entrega y la mejora en confiabilidad
+      cond 1: Cuando tienes exceso de inventario en proceso (WIP)
+      cond 2: Cuando tu flujo de produccion esta desbalanceado
+      cond 3: Cuando enfrentas fluctuaciones de demanda que generan desbalance de capacidad
+      previos   : ['mapeo_flujo_valor', 'tres_tipos_desperdicio_tps']
+      siguientes: ['eventos_kaizen_rie', 'kanban_pull_system', 'constraint_management']
+      entregable: Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.
+
+##############################################################################
+# ACTO 15 del tramo 6 (puesto 44 de hoy, 264 en la de la 48)
+##############################################################################
+  [PAR A] puesto 2952, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): cultura_integridad_objetividad_resolucion_problemas
+  nodo_b (EL SEGUNDO de la razon): manejo_problemas
+
+  RAZON ENTERA, sin recortar:
+    cultura_integridad_objetividad_resolucion_problemas (Crosby: politica de que los problemas se discuten abiertamente sin culpables individuales, dirigir preguntas y analisis al proceso no a la persona, comunicar que el objetivo es mejorar el sistema, dar a los involucrados oportunidad de mejorar bajo condiciones distintas si el ajuste persona-tarea fue inadecuado) contra manejo_problemas (Crosby: fomentar cultura de integridad donde hacer las cosas bien sea la norma explicita, enfocar la investigacion en el proceso/trabajo no en culpar individuos, resolver el mayor numero de problemas en el primer nivel de supervision, escalar solo cuando sea necesario documentando el plan con cronograma). MISMA FUENTE Crosby, CON ARISTA, sim_tit 70,8. A POR FUSION MUTUA: los resumenes teoricos de los dos nodos son casi el mismo texto ('integridad: hacer las cosas bien porque es la politica correcta' aparece literal en los dos), y sus dos primeros pasos son el mismo acto (politica abierta sin culpar individuos, preguntas dirigidas al proceso). Cada uno pone encima su linea propia, en los dos sentidos: cultura_integridad trae la OPORTUNIDAD DE MEJORA BAJO CONDICIONES DISTINTAS si el ajuste persona-tarea fallo (paso entero que manejo_problemas no tiene); manejo_problemas trae el PROTOCOLO DE ESCALAMIENTO por niveles con cronograma documentado (paso entero que cultura_integridad no tiene, con la cifra propia del 85/13/2 por ciento por nivel en el resumen). NUEVO CASO DE FUSION MUTUA, superviviente POR ELEGIR fuera de cumulo contado: mueve el contador de fusiones mutuas a DIECINUEVE (el anterior fue el 2891). DISCUTIBLE MARCADO fuerte: la oportunidad de mejora y el protocolo de escalamiento son pasos enteros propios; quien pese eso por la vara del paso entero sin ver el nucleo casi verbatim compartido dira D.
+
+  --- cultura_integridad_objetividad_resolucion_problemas
+      titulo    : Cultura de Integridad y Objetividad en la Resolución de Problemas
+      fuente    : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+      pasos 4 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Establecer como política que los problemas se discuten abiertamente sin buscar culpables individuales
+      paso 2: Dirigir las preguntas y el análisis hacia el proceso o tarea, no hacia la persona
+      paso 3: Comunicar que el objetivo es mejorar el sistema, no señalar responsables
+      paso 4: Dar a los involucrados la oportunidad de mejorar bajo condiciones distintas si el ajuste persona-tarea fue inadecuado
+      cond 1: Cuando existe un clima de culpa o temor que impide identificar causas reales de los defectos
+      cond 2: Cuando los supervisores evitan reportar problemas por miedo a ser señalados
+      previos   : ['manejo_problemas']
+      siguientes: ['analisis_causa_raiz_defectos', 'resolucion_problemas_niveles_supervision']
+      entregable: Política escrita o comunicada de manejo de problemas basada en integridad y objetividad, aceptada por los supervisores del área.
+
+  --- manejo_problemas
+      titulo    : Manejo de Problemas con Integridad y Objetividad
+      fuente    : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+      pasos 4 | condiciones 2 | previos 3 | siguientes 1 | cableado 4
+      paso 1: Fomentar una cultura de integridad donde 'hacer las cosas bien' sea la norma explícita
+      paso 2: Enfocar la investigación de problemas en el proceso/trabajo, no en culpar individuos
+      paso 3: Resolver el mayor número de problemas en el primer nivel de supervisión posible
+      paso 4: Escalar solo cuando sea estrictamente necesario, documentando el plan de acción con cronograma
+      cond 1: Cuando surgen conflictos o problemas recurrentes que afectan la operación
+      cond 2: Ante crisis de calidad que requieren manejo organizacional maduro
+      previos   : ['seguridad_producto', 'accion_correctiva', 'accion_correctiva_2']
+      siguientes: ['cultura_integridad_objetividad_resolucion_problemas']
+      entregable: Cultura y proceso de resolución de problemas basado en niveles de escalamiento definidos y enfoque objetivo
+
+##############################################################################
+# ACTO 16 del tramo 6 (puesto 45 de hoy, 265 en la de la 48)
+##############################################################################
+  [PAR A] puesto 3064, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): cambio_actitud_gerencial
+  nodo_b (EL SEGUNDO de la razon): seminario_de_exito_para_gerencia
+
+  RAZON ENTERA, sin recortar:
+    cambio_actitud_gerencial (Crosby, Cambio de Actitudes mediante Pares y Pilotos: identificar la parte del negocio o persona mas abierta para un piloto, acompanar de forma discreta la planificacion y puesta en marcha sin protagonizar, organizar un encuentro donde los protagonistas del piloto cuenten su experiencia directamente a las demas personas involucradas, cerrar pidiendo compromisos explicitos y publicos, repetir el proceso reconociendo logros y dando seguimiento) contra seminario_de_exito_para_gerencia (Crosby, Testimonios de Exito: identificar la parte o grupo mas abierto a probar algo nuevo, apoyar sin llamar la atencion la planificacion y puesta en marcha de un programa piloto de calidad, organizar un encuentro bien planificado con la participacion de quienes deciden, pedir a quienes vivieron el cambio en primera linea, no a los expertos en calidad, que cuenten su experiencia, pedir compromisos publicos y visibles al final, repetir el proceso y extenderlo a los espacios donde se revisa la calidad). MISMA FUENTE Crosby, sim_tit 44,2, sin arista. REPITE: los cinco pasos de cambio_actitud_gerencial calzan uno a uno con los seis de seminario_de_exito_para_gerencia (identificar la parte abierta al piloto; acompanar discretamente sin protagonizar; encuentro donde los protagonistas cuentan su experiencia directa a los involucrados, aqui con la precision de que sean quienes vivieron el cambio y no los expertos de calidad, y con la participacion de quienes deciden; pedir compromisos explicitos y publicos; repetir el proceso). Es la misma tecnica del testimonio de pares para vencer el escepticismo gerencial, descrita dos veces del mismo libro. A, superviviente seminario_de_exito_para_gerencia, que trae de mas la precision de quien debe hablar (los protagonistas del cambio, no los expertos), la presencia explicita de quienes deciden, y extender el proceso a los espacios de revision de calidad. PERDIDA NOMBRADA CANDIDATA, no verificada contra el grafo entero: 'reconociendo logros' como frase explicita del paso de repeticion en cambio_actitud_gerencial, que seminario_de_exito_para_gerencia no nombra igual (dice 'extenderlo', no 'reconocer logros'); queda como candidata por la disciplina del dictado. DISCUTIBLE MARCADO fuerte: es la unica A del tramo y depende de leer el nucleo compartido, testimonio de pares mas compromiso publico, como el mismo acto y no como dos tecnicas de motivacion distintas; quien pese 'compromiso publico' de un lado y 'programa piloto de calidad' del otro como enfasis distintos dira D.
+
+  --- cambio_actitud_gerencial
+      titulo    : Cambio de Actitudes mediante Pares y Pilotos
+      fuente    : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+      pasos 5 | condiciones 2 | previos 5 | siguientes 2 | cableado 7
+      paso 1: Identificar la parte de tu negocio o la persona más abierta a probar algo nuevo para hacer ahí una prueba piloto
+      paso 2: Acompañar de forma discreta la planificación y puesta en marcha del piloto, sin que tú seas quien protagoniza
+      paso 3: Una vez logrados resultados, organizar un encuentro donde los protagonistas del piloto cuenten su experiencia directamente a las demás personas involucradas
+      paso 4: Cerrar el encuentro pidiendo compromisos explícitos y públicos (firmar, levantar la mano) de quienes participan
+      paso 5: Repetir el proceso de manera recurrente, reconociendo logros y dando seguimiento
+      cond 1: Cuando las personas con las que trabajas son escépticas ante tus recomendaciones directas
+      cond 2: Cuando necesitas expandir una mejora probada en una parte pequeña de tu negocio a todo el resto
+      previos   : ['quality_management_maturity_grid', 'responsabilidad_personal_en_gestion', 'quality_management_maturity_grid_3', 'principio_reflexivo_contratacion', 'rejilla_madurez_gestion_calidad']
+      siguientes: ['compromiso_gerencial_calidad', 'persuasion_directivos_prioridad_cliente']
+      entregable: Prueba piloto documentada con resultados medibles y un encuentro de difusión con compromisos firmados de otras personas involucradas en tu negocio
+
+  --- seminario_de_exito_para_gerencia
+      titulo    : Testimonios de Exito para Sumar a Quienes Aun Dudan
+      fuente    : Quality is free _ the art of making quality certain -- Philip B_ Crosby
+      pasos 6 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Identificar la parte de tu negocio o el grupo mas abierto a probar algo nuevo.
+      paso 2: Apoyar sin llamar mucho la atención la planificación y puesta en marcha de un programa piloto de calidad ahi.
+      paso 3: Organizar un encuentro bien planificado con la participación de quienes deciden.
+      paso 4: Pedir a las personas que vivieron el cambio en primera línea (no a los expertos en calidad) que cuenten su experiencia y sus resultados.
+      paso 5: Pedir compromisos publicos y visibles a quienes participan al final del encuentro.
+      paso 6: Repetir el proceso cada tanto y extenderlo a los espacios donde revisas la calidad.
+      cond 1: Cuando hay resistencia o desconfianza hacia una iniciativa de calidad.
+      cond 2: Cuando necesitas evidencia practica y testimonios reales para llevar un programa de calidad a otras partes de tu negocio.
+      previos   : ['politica_formal_de_calidad']
+      siguientes: ['reconocimiento_crosby']
+      entregable: Un programa piloto documentado con resultados medibles y un encuentro realizado con compromisos firmados por quienes participaron.
+
+##############################################################################
+# ACTO 17 del tramo 6 (puesto 46 de hoy, 266 en la de la 48)
+##############################################################################
+  [PAR A] puesto 3165, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): evaluacion_organizacional_calidad
+  nodo_b (EL SEGUNDO de la razon): evaluacion_riesgo_calidad_organizacional
+
+  RAZON ENTERA, sin recortar:
+    evaluacion_organizacional_calidad (Juran: definir el alcance de la evaluacion, revisar el enfoque/despliegue/resultados en cada area clave, recopilar informacion observando/conversando/revisando documentos, anotar fortalezas y debilidades con detalle, integrar en un analisis FODA) contra evaluacion_riesgo_calidad_organizacional (Juran: definir el equipo evaluador y sus roles, establecer objetivos claros, definir el alcance y los criterios enfoque/despliegue/resultados, crear un plan de comunicacion entre equipo y liderazgo, realizar una pre-evaluacion generalizada version resumida del OHC, recolectar datos por observacion/entrevistas/revision de resultados operativos, documentar fortalezas y debilidades por categoria y asignar puntaje, integrar en un analisis FODA formal). MISMA FUENTE Juran, sim_tit 75,9, el mas alto del checkpoint, sin arista. DISCUTIBLE MARCADO fuerte, marca fuerte por ser A: verificado paso por paso, LOS CINCO PASOS de evaluacion_organizacional_calidad caben ENTEROS dentro de evaluacion_riesgo_calidad_organizacional (alcance=paso3 con las mismas palabras enfoque/despliegue/resultados; recopilar observando/conversando/documentos=paso6; anotar fortalezas y debilidades=paso7; FODA=paso8); no queda ni un paso propio de evaluacion_organizacional_calidad fuera. evaluacion_riesgo_calidad_organizacional trae ademas CUATRO pasos enteros que el otro no tiene (definir equipo y roles, establecer objetivos, plan de comunicacion con liderazgo, pre-evaluacion abreviada tipo OHC) y un puntaje formal por categoria. A POR CONTENCION, superviviente evaluacion_riesgo_calidad_organizacional, el procedimiento mas completo y formal para el mismo acto de evaluacion integral del negocio en calidad. Entregables compatibles (los dos terminan en informe con FODA; el puntaje sobre 1000 puntos es un refinamiento del mismo artefacto, no uno distinto). Barrido de familia: ninguno de los dos nodos tenia una A previa (2.658 y 3.138 son D contra otros vecinos), asi que no reabre ningun cumulo. No mueve el contador de fusiones mutuas (es contencion, no mutua).
+
+  --- evaluacion_organizacional_calidad
+      titulo    : Evaluación Integral de tu Negocio (Quality Risk Assessment)
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 5 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Definir el alcance de la evaluación (todo tu negocio, un área, una planta o un proceso puntual)
+      paso 2: Revisar el enfoque, el despliegue y los resultados en cada área clave (alineación estratégica, sistema de calidad, medición, procesos, empleados, proveedores, resultados)
+      paso 3: Recopilar información observando, conversando con las personas involucradas y revisando documentos
+      paso 4: Anotar fortalezas y debilidades con el nivel de detalle necesario en cada dimensión
+      paso 5: Integrar lo que encontraste en un análisis FODA de tu negocio
+      cond 1: Cuando decides empezar una transformación hacia la calidad en tu negocio
+      cond 2: Si necesitas establecer un punto de partida claro sobre cómo está tu negocio en calidad
+      previos   : ['acceptance_control']
+      siguientes: ['alineacion_estrategica_despliegue', 'costo_pobre_calidad', 'costo_de_mala_calidad_copq']
+      entregable: Un informe de evaluación de tu negocio en calidad, con una visión clara por área y el análisis FODA que resulta de ahí
+
+  --- evaluacion_riesgo_calidad_organizacional
+      titulo    : Evaluación de Riesgo de Calidad (Quality Risk Assessment)
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 8 | condiciones 3 | previos 1 | siguientes 4 | cableado 5
+      paso 1: Definir el equipo evaluador y sus roles
+      paso 2: Establecer objetivos claros de la evaluación
+      paso 3: Definir el alcance y los criterios de evaluación (enfoque, despliegue, resultados)
+      paso 4: Crear un plan de comunicación entre el equipo y el liderazgo
+      paso 5: Realizar una pre-evaluación generalizada (versión resumida del OHC)
+      paso 6: Recolectar datos mediante observación, entrevistas y revisión de resultados operativos
+      paso 7: Documentar fortalezas y debilidades por categoría y asignar puntaje
+      paso 8: Integrar los resultados en un análisis FODA formal de la organización
+      cond 1: Cuando la organización necesita un diagnóstico integral del estado de su sistema de calidad
+      cond 2: Cuando se requiere alinear la calidad con la estrategia general del negocio
+      cond 3: Antes de definir un plan estratégico de calidad
+      previos   : ['planificacion_estrategica_despliegue_2']
+      siguientes: ['costo_de_mala_calidad', 'estudio_mercado_calidad', 'costo_de_mala_calidad_3', 'costo_de_mala_calidad_copq']
+      entregable: Informe de evaluación de riesgo de calidad con puntaje por categoría (sobre 1000 puntos) y su integración al análisis FODA organizacional
+
+##############################################################################
+# ACTO 18 del tramo 6 (puesto 47 de hoy, 267 en la de la 48)
+##############################################################################
+  [PAR A] puesto 3182, clase A, dominio quality
+  nodo_a (EL PRIMERO de la razon): control_del_proceso_del_proveedor
+  nodo_b (EL SEGUNDO de la razon): planificacion_tecnologica_conjunta
+
+  RAZON ENTERA, sin recortar:
+    control_del_proceso_del_proveedor (Juran: solicitar al proveedor un plan escrito de control del proceso de manufactura, incluir requisitos de SPC para deteccion temprana, definir tareas especiales y buenas practicas de manufactura, clasificar la seriedad de los defectos para priorizar esfuerzos, establecer estandares sensoriales fisicos cuando se requiera juicio humano, estandarizar metodos y condiciones de prueba entre proveedor y comprador) contra planificacion_tecnologica_conjunta (Juran: acordar el significado exacto de los requisitos de desempeno en las especificaciones, cuantificar requisitos de confiabilidad y mantenibilidad, solicitar al proveedor un plan de control de proceso con tecnicas de SPC, clasificar la seriedad de los defectos para enfocar esfuerzos, estandarizar metodos y condiciones de prueba entre comprador y proveedor, establecer sistema de trazabilidad de lotes). MISMA FUENTE Juran, sim_tit 53,3, sin arista. DISCUTIBLE MARCADO fuerte, marca fuerte por ser A: TRES pasos son casi verbatim compartidos, 'solicitar al proveedor un plan de control de proceso con tecnicas de SPC', 'clasificar la seriedad de los defectos' y 'estandarizar metodos y condiciones de prueba entre proveedor y comprador'; el acto compartido es el plan conjunto de control de proceso del proveedor con SPC. Y cada uno anade LINEAS PROPIAS, en los dos sentidos: control_del_proceso_del_proveedor anade definir tareas especiales/buenas practicas de manufactura y estandares sensoriales fisicos; planificacion_tecnologica_conjunta anade acordar el significado exacto de los requisitos, cuantificar confiabilidad/mantenibilidad, y trazabilidad de lotes. Ninguno domina el nucleo compartido de tres pasos casi identicos. Barrido de familia: ningun eslabon previo toca a ninguno de los dos nodos con A (2.863 y 3.025 son D contra otros vecinos), asi que no es reformulacion transitiva de un cumulo contado. A POR FUSION MUTUA, NUEVO CASO segun el criterio de la TAREA 1.1: MUEVE EL CONTADOR DE FUSIONES MUTUAS de VEINTISEIS a VEINTISIETE (el anterior fue el 2.952, item 26 de la serie renumerada en 98.1). Superviviente POR ELEGIR. Entregables compatibles: los dos son plan de control de proceso del proveedor con SPC y pruebas estandarizadas.
+
+  --- control_del_proceso_del_proveedor
+      titulo    : Plan de Control de Proceso del Proveedor
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 6 | condiciones 2 | previos 3 | siguientes 4 | cableado 7
+      paso 1: Solicitar al proveedor un plan escrito de control del proceso de manufactura
+      paso 2: Incluir requisitos de SPC para detección temprana de defectos
+      paso 3: Definir tareas especiales y buenas prácticas de manufactura requeridas
+      paso 4: Clasificar la seriedad de los defectos para priorizar esfuerzos
+      paso 5: Establecer estándares sensoriales físicos cuando se requiera juicio humano
+      paso 6: Estandarizar métodos y condiciones de prueba entre proveedor y comprador
+      cond 1: Cuando se inicia una relación contractual con un nuevo proveedor de manufactura
+      cond 2: Cuando existen discrepancias recurrentes en mediciones entre proveedor y comprador
+      previos   : ['planificacion_cadena_suministro', 'dmadv_design_for_six_sigma', 'design_for_six_sigma_dfss']
+      siguientes: ['certificacion_de_proveedores', 'clasificacion_de_seriedad_de_defectos', 'clasificacion_de_seriedad_de_defectos_2', 'error_proofing_servicio']
+      entregable: Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de SPC, clasificación de defectos y métodos de prueba estandarizados
+
+  --- planificacion_tecnologica_conjunta
+      titulo    : Planificación Tecnológica Conjunta con Proveedores
+      fuente    : Juran's Quality Handbook_ The C - Joseph A. Defeo
+      pasos 6 | condiciones 1 | previos 2 | siguientes 0 | cableado 2
+      paso 1: Acordar el significado exacto de los requisitos de desempeño en las especificaciones
+      paso 2: Cuantificar requisitos de confiabilidad y mantenibilidad, evitando errores como aplicar la regla de multiplicación incorrectamente
+      paso 3: Solicitar al proveedor un plan de control de proceso con técnicas de SPC
+      paso 4: Clasificar la seriedad de los defectos para enfocar esfuerzos
+      paso 5: Estandarizar métodos y condiciones de prueba entre comprador y proveedor
+      paso 6: Establecer sistema de trazabilidad de lotes
+      cond 1: Cuando se establece una relación de partnership técnico con un proveedor clave
+      previos   : ['planificacion_economica_conjunta', 'planificacion_cadena_suministro']
+      siguientes: []
+      entregable: Plan de control de proceso y protocolo de pruebas acordado conjuntamente con el proveedor
+
+##############################################################################
+# ACTO 19 del tramo 6 (puesto 48 de hoy, 268 en la de la 48)
+##############################################################################
+  [PAR A] puesto 3363, clase A, dominio seguridad_digital
+  nodo_a (EL PRIMERO de la razon): getting_started_incident_response
+  nodo_b (EL SEGUNDO de la razon): respuesta_incidentes_cui
+
+  RAZON ENTERA, sin recortar:
+    getting_started_incident_response (NIST SP1318 Protecting CUI, capitulo introductorio: designar un responsable -business champion- del plan de respuesta a incidentes, elaborar lista de contactos clave con roles/responsabilidades/datos de contacto, definir que/cuando/como reportar segun leyes/regulaciones/contratos en general, incluir requisitos especificos de reporte de contratos federales) contra respuesta_incidentes_cui (NIST SP1318, nodo especifico de respuesta a incidentes para CUI: designar un responsable -business champion- del plan de respuesta a incidentes [TEXTO CASI VERBATIM], crear lista de contactos con roles y responsabilidades detallados -lider de negocio, contacto tecnico, policia, FBI, banco, legal, seguro-, documentar requisitos especificos de reporte de contratos federales, PROBAR LA EFECTIVIDAD DEL PLAN mediante ejercicios de mesa/tabletop, simulaciones o listas de verificacion). MISMA FUENTE NIST SP1318, sim_tit 87.0, EL SEGUNDO MAS ALTO DE TODA LA COLA RESTANTE segun el aviso del encargo, sim_sem 0.898, sin arista. DISCUTIBLE MARCADO fuerte, el mas contestado del dominio nuevo y el primero que cruza a A: el paso 1 de los dos nodos es TEXTO CASI IDENTICO (designar un responsable business champion del plan de respuesta a incidentes). Verificado paso por paso si alguno domina al otro ENTERO: NO. getting_started_incident_response trae un PASO PROPIO que respuesta_incidentes_cui no tiene en ningun grado (definir el criterio GENERAL de que/cuando/como reportar segun CUALQUIER ley, regulacion o contrato aplicable, no solo el federal); respuesta_incidentes_cui trae un PASO PROPIO que getting_started_incident_response no tiene en ningun grado (probar la efectividad del plan con ejercicios de mesa, simulaciones o listas de verificacion). Los otros dos pasos de cada lado (contactos, requisitos de reporte federal) son la misma mecanica, uno mas elaborado que el otro pero no una pieza nueva. FUSION MUTUA: mismo acto (construir y mantener el plan de respuesta a incidentes de la organizacion, aplicado al universo de sistemas que procesan CUI), CADA UNO ANADE UNA LINEA PROPIA, NINGUNO DOMINA AL OTRO ENTERO. Entregable como prueba negativa NO aplica aqui como negacion: los dos entregables son casi identicos ('Plan de respuesta a incidentes documentado con tabla de contactos y procedimientos de notificacion' contra 'Plan de respuesta a incidentes documentado con lista de contactos y procedimientos de prueba periodicos'), lo que es consistente con la fusion, no la decide por si solo (la decision la dan los pasos). A por fusion mutua, superviviente POR ELEGIR. MUEVE EL CONTADOR DE FUSIONES MUTUAS: SI. Criterio de la vuelta 7 aplicado: (a) mismo acto sin dominancia, verificado arriba; (b) no es reformulacion transitiva de una fusion ya contada (ninguno de los dos nodos ha aparecido antes en la serie ni en ningun cumulo previo, es la primera fusion mutua de seguridad_digital, un dominio que no comparte nodos con quality/risk_management/etc.). El contador pasa de VEINTISIETE a VEINTIOCHO.
+
+  --- getting_started_incident_response
+      titulo    : Plan de Respuesta a Incidentes
+      fuente    : NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer
+      pasos 4 | condiciones 1 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Designar un responsable (business champion) del plan de respuesta a incidentes.
+      paso 2: Elaborar una lista de contactos clave con roles, responsabilidades y datos de contacto.
+      paso 3: Definir qué, cuándo y cómo reportar incidentes según leyes, regulaciones y contratos.
+      paso 4: Incluir requisitos específicos de reporte exigidos por contratos federales.
+      cond 1: Cuando la empresa aún no cuenta con un procedimiento formal ante brechas de seguridad.
+      previos   : ['gestion_contrasenas_cui']
+      siguientes: ['getting_started_maintenance', 'getting_started_risk_assessment']
+      entregable: Plan de respuesta a incidentes documentado con tabla de contactos y procedimientos de notificación.
+
+  --- respuesta_incidentes_cui
+      titulo    : Plan de Respuesta a Incidentes para CUI
+      fuente    : NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Designar un responsable (business champion) del plan de respuesta a incidentes
+      paso 2: Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro)
+      paso 3: Documentar requisitos específicos de reporte según contratos federales
+      paso 4: Probar la efectividad del plan mediante ejercicios de mesa (tabletop), simulaciones o listas de verificación
+      cond 1: Cuando se implementan los requisitos de la familia Incident Response de SP 800-171
+      cond 2: Si la organización aún no tiene un plan formal de respuesta ante incidentes de seguridad
+      previos   : ['identificacion_autenticacion_mfa', 'concientizacion_entrenamiento_cui']
+      siguientes: ['mantenimiento_sistema_cui']
+      entregable: Plan de respuesta a incidentes documentado con lista de contactos y procedimientos de prueba periódicos
+
+##############################################################################
+# ACTO 20 del tramo 6 (puesto 49 de hoy, 269 en la de la 48)
+##############################################################################
+  [PAR A] puesto 3364, clase A, dominio seguridad_digital
+  nodo_a (EL PRIMERO de la razon): getting_started_maintenance
+  nodo_b (EL SEGUNDO de la razon): mantenimiento_sistema_cui
+
+  RAZON ENTERA, sin recortar:
+    getting_started_maintenance (NIST SP1318, capitulo introductorio de mantenimiento: identificar herramientas de diagnostico/reparacion, establecer calendario de mantenimiento regular y verificar cumplimiento, habilitar actualizaciones automaticas, planificar reemplazo de hardware/software a fin de vida util, exigir MFA en mantenimiento remoto y terminar la sesion al finalizar, SANITIZAR O DESTRUIR EQUIPOS CON CUI ANTES DE RETIRARLOS DE LAS INSTALACIONES) contra mantenimiento_sistema_cui (NIST SP1318, nodo especifico de mantenimiento de sistemas que procesan CUI: identificar herramientas de diagnostico/reparacion [VERBATIM], determinar cronograma regular de mantenimiento y verificar cumplimiento [VERBATIM], habilitar actualizaciones automaticas donde sea apropiado [VERBATIM], planificar actualizaciones de hardware/software a fin de vida util [VERBATIM], para mantenimiento remoto asegurar MFA en la sesion y terminar la conexion al finalizar [VERBATIM]). MISMA FUENTE NIST SP1318, sim_tit 74.6, sim_sem 0.869, sin arista. DISCUTIBLE MARCADO fuerte: verificados los CINCO pasos de mantenimiento_sistema_cui uno por uno contra los seis de getting_started_maintenance, LOS CINCO TIENEN CONTRAPARTE CASI VERBATIM en getting_started_maintenance (herramientas, calendario, auto-actualizaciones, fin de vida util, MFA remoto). mantenimiento_sistema_cui NO TRAE NINGUN PASO PROPIO que getting_started_maintenance no tenga ya. getting_started_maintenance SI trae un paso propio que mantenimiento_sistema_cui no cubre: sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones (la unica linea con nombre explicito de CUI en toda la comparacion, y curiosamente falta en el nodo nominalmente 'de CUI'). REPITE, mantenimiento_sistema_cui cabe casi entero dentro de getting_started_maintenance. Entregables, prueba negativa que no contradice: 'Plan de mantenimiento con calendario, procedimientos para personal autorizado y protocolo de mantenimiento remoto seguro' (getting_started_maintenance) contra 'Plan de mantenimiento documentado con cronograma, herramientas autorizadas y procedimientos para mantenimiento remoto seguro' (mantenimiento_sistema_cui), practicamente el mismo artefacto descrito con otras palabras, consistente con la fusion pero sin decidirla por si solo. A por REPITE, SUPERVIVIENTE POR DOMINANCIA: getting_started_maintenance (trae el paso extra de sanitizacion de equipos con CUI que el otro no tiene). NO MUEVE EL CONTADOR DE FUSIONES MUTUAS (falla el criterio (a), hay dominancia clara, no es 'ninguno domina').
+
+  --- getting_started_maintenance
+      titulo    : Mantenimiento de Sistemas
+      fuente    : NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer
+      pasos 6 | condiciones 1 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Identificar herramientas usadas para diagnóstico y reparación de sistemas.
+      paso 2: Establecer un calendario de mantenimiento regular y verificar su cumplimiento.
+      paso 3: Habilitar actualizaciones automáticas cuando sea posible.
+      paso 4: Planificar reemplazo de hardware/software próximos a fin de vida útil.
+      paso 5: Exigir autenticación multifactor en sesiones de mantenimiento remoto y terminarlas al finalizar.
+      paso 6: Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones.
+      cond 1: Cuando los sistemas que procesan CUI requieren actualizaciones o reparaciones periódicas.
+      previos   : ['getting_started_incident_response', 'gestion_contrasenas_cui']
+      siguientes: ['getting_started_media_protection']
+      entregable: Plan de mantenimiento con calendario, procedimientos para personal autorizado y protocolo de mantenimiento remoto seguro.
+
+  --- mantenimiento_sistema_cui   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Mantenimiento de Sistemas que Procesan CUI
+      fuente    : NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer
+      pasos 5 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Identificar las herramientas usadas para diagnóstico y reparación del sistema
+      paso 2: Determinar un cronograma regular de mantenimiento y verificar su cumplimiento
+      paso 3: Habilitar actualizaciones automáticas donde sea apropiado
+      paso 4: Planificar actualizaciones para hardware o software que llegará a fin de vida útil
+      paso 5: Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar
+      cond 1: Cuando se implementan los requisitos de la familia Maintenance de SP 800-171
+      previos   : ['respuesta_incidentes_cui']
+      siguientes: ['que_es_cui']
+      entregable: Plan de mantenimiento documentado con cronograma, herramientas autorizadas y procedimientos para mantenimiento remoto seguro
+
+##############################################################################
+# ACTO 21 del tramo 6 (puesto 50 de hoy, 270 en la de la 48)
+##############################################################################
+  [PAR A] puesto 3367, clase A, dominio seguridad_digital
+  nodo_a (EL PRIMERO de la razon): funcion_protect_politica_seguridad
+  nodo_b (EL SEGUNDO de la razon): protect_medidas_tecnicas
+
+  RAZON ENTERA, sin recortar:
+    funcion_protect_politica_seguridad (Cybersecurity for Small Business: REDACTAR UNA POLITICA DE CIBERSEGURIDAD CON ROLES Y RESPONSABILIDADES, implementar control de acceso a red y dispositivos, instalar y mantener software de seguridad actualizado [VERBATIM], cifrar datos sensibles en reposo y en transito [VERBATIM], configurar respaldos regulares de datos, automatizar actualizaciones de seguridad cuando sea posible [VERBATIM], establecer procedimientos formales de disposicion segura de archivos/dispositivos antiguos, CAPACITAR A TODO EL PERSONAL SOBRE CIBERSEGURIDAD Y RIESGOS PERSONALES) contra protect_medidas_tecnicas (Getting Started with the NIST Privacy Framework: implementar controles de acceso para redes/computadoras/dispositivos, instalar y mantener software de seguridad actualizado [VERBATIM], cifrar datos sensibles en reposo y en transito [VERBATIM], establecer rutina de respaldos regulares de datos, automatizar actualizaciones de seguridad cuando sea posible [VERBATIM], redactar politicas formales de disposicion segura de datos y equipos). DISTINTA FUENTE, sim_tit 48.1, sim_sem 0.858, sin arista. DISCUTIBLE MARCADO fuerte: verificados los SEIS pasos de protect_medidas_tecnicas uno por uno, LOS SEIS TIENEN CONTRAPARTE CASI VERBATIM en funcion_protect_politica_seguridad (acceso, software de seguridad, cifrado, respaldos, auto-actualizaciones, disposicion segura). protect_medidas_tecnicas NO TRAE NINGUN PASO PROPIO que funcion_protect_politica_seguridad no tenga ya. funcion_protect_politica_seguridad SI trae DOS pasos propios que protect_medidas_tecnicas no cubre: redactar la POLITICA misma con roles y responsabilidades (un documento de gobernanza, distinto de la mera disposicion tecnica de datos), y capacitar a todo el personal. REPITE, protect_medidas_tecnicas cabe casi entero dentro de funcion_protect_politica_seguridad. Entregables, consistentes sin decidir por si solos: funcion_protect_politica_seguridad entrega 'politica de ciberseguridad escrita y comunicada, junto con controles tecnicos implementados (cifrado, respaldos, actualizaciones)' y protect_medidas_tecnicas entrega 'conjunto de controles tecnicos de proteccion de datos implementados y documentados (cifrado, backups, control de acceso, politicas de disposicion)': el segundo entregable es un subconjunto tecnico del primero, que ademas incluye la politica escrita. A por REPITE, SUPERVIVIENTE POR DOMINANCIA: funcion_protect_politica_seguridad. NO MUEVE EL CONTADOR DE FUSIONES MUTUAS (hay dominancia clara).
+
+  --- funcion_protect_politica_seguridad
+      titulo    : Función Proteger: Política de Ciberseguridad y Controles
+      fuente    : Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)
+      pasos 8 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Redactar una política de ciberseguridad con roles y responsabilidades claros
+      paso 2: Implementar control de acceso a la red y dispositivos
+      paso 3: Instalar y mantener software de seguridad actualizado
+      paso 4: Cifrar datos sensibles en reposo y en tránsito
+      paso 5: Configurar respaldos regulares de datos
+      paso 6: Automatizar actualizaciones de seguridad cuando sea posible
+      paso 7: Establecer procedimientos formales para disposición segura de archivos y dispositivos antiguos
+      paso 8: Capacitar a todo el personal sobre ciberseguridad y riesgos personales
+      cond 1: Cuando ya existe un inventario de activos
+      cond 2: Cuando la empresa carece de políticas formales de seguridad
+      previos   : ['funcion_identify_inventario_activos', 'marco_nist_cybersecurity_framework']
+      siguientes: ['funcion_detect_monitoreo_red']
+      entregable: Política de ciberseguridad escrita y comunicada, junto con controles técnicos implementados (cifrado, respaldos, actualizaciones)
+
+  --- protect_medidas_tecnicas
+      titulo    : Protect: Medidas Técnicas de Protección de Datos
+      fuente    : Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses
+      pasos 6 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Implementar controles de acceso para redes, computadoras y dispositivos
+      paso 2: Instalar y mantener software de seguridad actualizado
+      paso 3: Cifrar datos sensibles tanto en reposo como en tránsito
+      paso 4: Establecer rutina de respaldos regulares de datos
+      paso 5: Automatizar actualizaciones de seguridad cuando sea posible
+      paso 6: Redactar políticas formales de disposición segura de datos y equipos
+      cond 1: Cuando se requiere implementar salvaguardas técnicas concretas
+      cond 2: Si la organización maneja datos sensibles sin protecciones técnicas actuales
+      previos   : ['control_minimizacion_datos']
+      siguientes: ['communicate_transparencia', 'go_plan_de_accion']
+      entregable: Conjunto de controles técnicos de protección de datos implementados y documentados (cifrado, backups, control de acceso, políticas de disposición)
+
+FIN

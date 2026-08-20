@@ -15686,3 +15686,284 @@ seguidas son parada). CLASE O CIFRA EN CERO (quinta tanda limpia).
 EL BUCLE SIGUE: encargo escrito en PROMPT_SIGUIENTE.md (los 35 AMBAR
 como TAREA 1 y la apertura del tramo 6 con su abridor de nombre estable
 como TAREA 2).
+
+# ACTA DE LA VUELTA 61 DEL AUDITOR (20 ago 2026, Fable 5)
+
+SIN HUECO DE ACTA: la ultima acta cubre la vuelta 60 y esta cubre la 61,
+que es la inmediatamente anterior a la actual. Vuelta auditada: hash final
+7682b973 mas el commit de cabecera 78f1c581, los dos en
+origin/pasada-unica (rama al dia con origin, git status -sb sin ahead ni
+behind), arbol limpio al abrir y al cerrar mi corrida, seis commits en el
+rango eda42bc2..78f1c581 leidos por git log, que son los cinco de la
+cabecera mas el que la escribe, tal como el reporte lo dice. La vuelta
+trae la TAREA 1 entera (los 35 AMBAR triados con rotulo cotejado por
+maquina y la unica cita envejecida corregida), la APERTURA ENTERA del
+tramo 6 con sus cuatro piezas y el contrato de la perdida sellada en
+campo propio, y el hallazgo de fondo: OP-U-01 tiene 21 actos de vida, no
+50. EL LOTE A NO SE EJECUTO y el reporte lo dice primero, que es la via
+que el encargo dejaba escrita (acta 58, pregunta 6). NINGUN NODO SE TOCO
+y el grafo cierra celda por celda igual que abrio, verificado por mi.
+
+## 1. VERIFICACION POR CORRIDA PROPIA: TODO AL DIGITO
+
+Cada cifra sale de un instrumento corrido HOY por mi (salidas propias en
+docs/loop/_auditor_v61_*, committeadas con esta acta). La verificacion es
+COMPLETA porque la vuelta trae un PENDIENTE DE DOCTRINA, que convoca al
+auditor con verificacion completa (seccion 3 del protocolo).
+
+- CABECERA: tallar_cabecera_reporte.py --vuelta 61 corrido por mi da la
+  tabla IDENTICA a la publicada, las catorce filas, cero distintas
+  (_auditor_v61_cabecera.txt).
+- MARCADOR: recomputar_marcador.py 3388 da diff VACIO contra
+  SALIDA_V61_MARCADOR_CIERRE.txt: n 3388, cero huecos, cero duplicados,
+  A 551 B 72 C 5 D 2760, tasa por dominio identica al digito. Ademas lo
+  recompute con python propio desde INTRA_DOMINIO_VEREDICTOS.jsonl y da
+  lo mismo: las dos vias calzan.
+- RECOMPUTO: recomputo_3388.py con salida propia da diff de UNA linea
+  contra SALIDA_V61_RECOMPUTO_CIERRE.txt, la de la ruta del --salida,
+  exactamente como el reporte lo declara. Grafo 3853/3295/558/17449,
+  retrato 551/254/297, actos 103 con 50 CERRADOS y 53 ABIERTOS sobre
+  109/240 nodos, y las cuatro comprobaciones de 08_VERIFICACION OK
+  (349 igual a 349, 297 igual a 297).
+- COLA: costuras_internas.py, diff VACIO, 1460, y el arbol quedo limpio
+  tras la corrida (salidas idempotentes).
+- COLISIONES: vuelta51_censo_colisiones.py, diff VACIO, 0 vigentes y 232
+  auto-pares. DUPLICADAS: aristas_duplicadas_tras_resolver.py, diff
+  VACIO, 935 grupos y 741 nodos. ESTADO: vuelta31_estado.py CIERRE, diff
+  VACIO, 71 operaciones todas LISTA con 0 dependencias rotas y 672
+  entradas del inventario.
+- BARRIDO: barrido_titulos_tallados.py corrido por mi sobre el arbol
+  final da el resumen EXACTO del reporte: 380 barridos, 184 con
+  hallazgo, 196 limpios, ROJO 32, AMBAR 0, ROTULADO 34, CENSO 214,
+  ILEGIBLE 1. Los 32 ROJO contra la apertura: mismos 15 ficheros y
+  mismas 32 menciones; las dos unicas lineas distintas son numeros de
+  linea DENTRO de dos literales (115 a 116 y 84 a 85), que es el
+  corrimiento por rotulos insertados que el reporte declara. Ni un ROJO
+  pagado ni uno nuevo, comprobado por mi.
+- TRIAGE: triage_ambar_titulos.py --vuelta 61 re-corrido da YA ESTA con
+  0 escrituras y exit 0 (idempotente), resumen 10 claves SELLO_FIJO, 15
+  PROCEDENCIA, 1 ENVEJECIDA, 25 lineas de rotulo ya escritas. La
+  correccion de vuelta56_varas_tramo3.py verificada por git log
+  --diff-filter=A: nacio en 2743bd88 (vuelta 56), la nota cita el texto
+  viejo entero y el TRAMO 3 de la misma linea sigue en ROJO sin tocar.
+- LA GUARDA DEL ROTULO, PROBADA POR MI SEMBRANDO: puse sujeto=tramo:9 en
+  el rotulo de vuelta48_registro_tramo.py y el barrido dio ROTULO
+  HUERFANO en ROJO (33) con el AMBAR de vuelta (1); restaure con git
+  checkout y el barrido volvio a 32/0/34 con arbol limpio
+  (_auditor_v61_averia_rotulo_sembrada.txt). La guarda muerde.
+- TRAMO 6, LA CIFRA POR CUENTA PROPIA E INDEPENDIENTE
+  (_auditor_v61_cuenta_tramo6.txt, script embebido): CERRADOS hoy 50;
+  fuera de los tramos 1 a 5 quedan 21; los 21 son el MISMO conjunto por
+  miembros que TRAMO6_V61.jsonl; por la nomina de la 48 tambien 21; los
+  21 de tamano 2 y PURO A. La cifra del hallazgo esta verificada por
+  tres caminos (el del abridor, el del reporte y el mio).
+- LAS CUATRO PIEZAS RE-CORRIDAS: el abridor con --tramo-numero 6 y
+  salida propia reproduce la nomina IDENTICA por diff a TRAMO6_V61.jsonl
+  (la cabecera de su salida difiere porque el censo ya ve el tramo 6
+  fijado y dice que el siguiente es el 7: eso es la guarda del censo
+  funcionando, no una discrepancia); el modo --fijado da diff VACIO; las
+  varas (12 UNA SOLA VARA, 5 TODAS DE ACUERDO, 4 CONTENIDO EMPATA, ni un
+  CHOCAN ni un EMPATE SIN VARA), el dossier (848 lineas, 256 ids del
+  universo protegido) y las colisiones esperadas (42 combinaciones, 0
+  fabrican) dan diff VACIO los tres. El sha1 del ancestro
+  vuelta58_tramo5_nomina.py medido por mi: 7d70bcfbc56a, el del reporte.
+- TALLADOR DE PERDIDAS: los seis planes de prueba re-corridos por mi dan
+  lo publicado (bueno talla con 1 perdida exit 0; sin_campo, especie,
+  cruce y viejo en ROJO exit 1; repone en 0 perdidas exit 0; --por-token
+  sobre plan con contrato en ROJO), y el contraste heredado sobre los
+  lotes B y C del tramo 5 da 1 perdida sobre 31 actos, la cifra
+  publicada.
+- GATE 0 Y SUITES, CORRIDA MIA: run_phase1.py --reaplico-curaduria OK
+  con simetrizacion 0; ciclo de tres entero (71 etiquetas re-aplicadas,
+  6 assets, manifest) y arbol limpio tras restaurar phase1_run_log.json
+  (mi log, mismo manejo declarado que el ejecutor); motor 25/25; web 80
+  ficheros, 1030 pasadas, 3 saltadas; tsc CERO lineas.
+
+## 2. RELECTURA CIEGA: EL TRIAGE DE LOS 35 AMBAR, 26 DE 26 CLAVES
+
+El producto de ojo de esta vuelta no es un cribado ni una fusion: es el
+triage. La ciega se hizo asi: imprimi la seccion AMBAR del barrido de
+APERTURA (sin veredictos), lei cada fichero EN EL ARBOL DE APERTURA
+(git show 027606a6:, que no tiene rotulos), adjudique mi especie por
+clave, y SOLO DESPUES destape los 25 rotulos escritos y la tabla del
+triador.
+
+- COINCIDEN: 26 de 26 claves (las 35 menciones). Mis diez SELLO_FIJO son
+  sus diez (los registros de tramo 1/2/2/3/4, los deshacer y registro y
+  relectura del acto 23 y del acto 32, tallar_planes con su TRAMO 4
+  fijo: todos de sujeto fijo, comprobado ademas por grep de que ninguno
+  recibe el tramo por argumento). Mis quince PROCEDENCIA son sus quince
+  (las citas de actas de otra vuelta, la propuesta de la 35, los
+  ancestros de aritmetica como vuelta55_tramo2_nomina.py y
+  vuelta48_contar_ld.py). DISCREPANCIAS: CERO, dentro y fuera del
+  marcado.
+- NO ESTRICTA EN UNA y se declara: la ENVEJECIDA
+  (vuelta56_varas_tramo3.py) venia destapada en la seccion 1.4 del
+  reporte antes de que yo pudiera adjudicarla a ciegas. La verifique por
+  la via del instrumento (git log --diff-filter=A da vuelta 56, el
+  titulo decia 54, el ancestro donde el 54 es verdad existe y contiene
+  el literal) en vez de por eleccion ciega.
+- El credito de la tanda queda LIMPIO: ninguna discrepancia fuera del
+  marcado, ningun tramo a releer al doble.
+
+## 3. CAIDAS DE ESTA TANDA: CERO DE CLASE, CERO DE CIFRA, CERO DE REPORTE
+
+Busque la tercera caida de reporte con la lupa que la racha en dos
+merece, cifra por cifra (fecha por dos relojes, hashes, commits, las
+catorce filas, el barrido en sus cinco celdas y su fila de contraste sin
+rotulos, el reparto 10/17 15/17 1/1, el sha1 del ancestro, los puestos
+30 a 50 y 250 a 270, las 848 lineas, los 256 ids, el 42/0, el 12/5/4,
+los siete casos del tallador, el 1 sobre 31, los cuatro ROJO propios con
+sus dos mitades, el 377 del barrido intermedio). NO HAY CAIDA: todo lo
+que el reporte afirma se sostuvo en mi corrida. LA RACHA DE REPORTE SE
+ROMPE Y VUELVE A CERO. La de clase o cifra sigue en cero: sexta tanda
+limpia.
+
+## 4. ADJUDICACION DE LOS SIETE DISCUTIBLES
+
+- D1, ABRIR EL TRAMO 6 CON 21: A FAVOR, y la doctrina NO es nueva, es
+  extension citable. La vara vigente (03_FUSIONES.md, linea 360,
+  cabecera del registro del tramo 1: EL TRAMO SON LOS CINCUENTA PRIMEROS
+  ACTOS CERRADOS DE LA NOMINA RE-MEDIDA AL ABRIRLO, EN EL ORDEN EN QUE
+  EL INSTRUMENTO LOS IMPRIME) define un PREFIJO con TOPE de cincuenta,
+  no un minimo: fija el orden y corta en cincuenta. El prefijo de una
+  nomina de veintiuno son los veintiuno. Ninguna regla exige que existan
+  cincuenta, y la lectura de prefijo es la unica de las tres salidas de
+  la pregunta 1 que no necesita regla nueva: declararlo cierre en vez de
+  tramo, o darle otra vara, si la necesitarian. El ejecutor ademas obro
+  por la letra de EJECUTOR regla 5 (registrar lo mejor sostenido y
+  marcar PENDIENTE DE DOCTRINA), y la cifra esta medida por dos caminos
+  suyos y uno mio. VEREDICTO: un tramo corto POR AGOTAMIENTO es un
+  tramo. Agotarse no es truncar: no queda ni un acto detras del corte,
+  comprobado por mi cuenta.
+- D2, LA GUARDA QUE CRECE EN EL SUCESOR: A FAVOR. El contrato del
+  sucesor es copia byte a byte MAS lo declarado, y lo declarado admite
+  una guarda que crece SI va enumerada en el docstring y marcada
+  discutible, que es lo que paso. La constante (1, 2, 3) tallada a mano
+  era exactamente la especie que la campana persigue (dejo fuera el
+  tramo 4 al abrir el 5), y una guarda que mira TODOS los previos
+  medidos es la correccion de esa especie, no una mutacion callada. Lo
+  que NO cubre esta adjudicacion: crecer una guarda sin declararla.
+- D3, SELLO_FIJO COMO AUTODECLARACION: A FAVOR, Y BASTA LA GUARDA. El
+  barrido no le cree a la palabra: le cree a la estructura, que es la
+  MISMA distincion que ya separa ROJO de CENSO (sujeto repuntable por
+  argumento contra sujeto fijo). SELLO_FIJO es el CENSO declarado para
+  titulos cuyo numero la maquina no tenia con que cotejar, y sus tres
+  dientes (sin argumento que repunte, numero cotejado, huerfano si no
+  casa) los probe sembrando mi propia averia. Exigirle ademas una fuente
+  externa como a PROCEDENCIA seria regla nueva sin necesidad: la fuente
+  de un sujeto fijo es el propio fichero.
+- D4, EXTENDER EL BARRIDO LA VUELTA QUE PUBLICA SU CIFRA: A FAVOR por la
+  adjudicacion ya escrita (D7 de la vuelta 60, las cuatro condiciones),
+  cumplidas y re-verificadas por mi: el contraste sin rotulos dio
+  identico linea a linea salvo la fila nueva del resumen, y los 32 ROJO
+  son los mismos.
+- D5, DOS SUCESORES NO PEDIDOS: A FAVOR. El encargo pedia el dossier y
+  las tablas POR INSTRUMENTO y con salida publicada; correr los
+  ancestros habria publicado titulos mintiendo (la especie exacta que la
+  racha de reporte pago en la 59 y la 60) o pagado un ROJO que el
+  encargo prohibia pagar. Dos ficheros de mas es el precio de no
+  mentir, y los ancestros quedan intactos y citados.
+- D6, LA EXCLUSION DE LOS DOS FICHEROS QUE HABLAN LA GRAMATICA: A
+  FAVOR. La verifique en el codigo: es una tupla de DOS rutas nombradas
+  (el barrido y el triador), solo para el cotejo de rotulos, con las dos
+  mediciones que la levantaron escritas encima, y los dos ficheros se
+  siguen barriendo por titulos. Alcance minimo y motivo medido: es una
+  puerta con bisagra a la vista, no un boquete.
+- D7, EL LOTE A SIN EJECUTAR: A FAVOR. El encargo lo permitia
+  expresamente y mandaba decirlo primero, y se dijo primero. Fundir 21
+  actos bajo una vara aun no adjudicada habria sido decidir en silencio
+  lo que el D1 traia a la mesa: parar el brazo y traer la pregunta era
+  la conducta correcta.
+
+## 5. LAS CINCO PREGUNTAS, CONTESTADAS SIN DOCTRINA NUEVA
+
+1. SI: un tramo corto por agotamiento ES un tramo, por la extension de
+   prefijo del D1. Y es EL ULTIMO TRAMO DE OP-U-01: cuando el tramo 6
+   quede ejecutado y registrado, el universo de OP-U-01 esta agotado y
+   su registro final lo declara con la cifra. El registro del tramo 6
+   abre declarando TRAMO FINAL POR AGOTAMIENTO: VEINTIUNO, NO CINCUENTA,
+   con esta acta citada.
+2. SI, con las dos condiciones del D2: declarada en la lista de cambios
+   del sucesor y marcada discutible. Una guarda que crece callando
+   queda fuera de esta adjudicacion.
+3. BASTA LA GUARDA (D3). SELLO_FIJO no necesita fuente externa: su
+   sujeto es el propio fichero y la maquina coteja estructura, no
+   palabra. PROCEDENCIA si la necesita porque su sujeto vive fuera.
+4. Los 29 vivos de los tramos 1 a 5 son ACTOS DECLARADOS: cosa juzgada
+   de los registros de sus tramos, cada uno con su motivo citado. Los
+   quince de la mesa siguen la via de la mesa; los otros catorce no
+   tienen cola pendiente NI la necesitan: su declaracion es su estado
+   final mientras ninguna regla nueva los nombre. Ocupan los puestos 1
+   a 29 como prefijo para las guardas de solape y nada mas. No se
+   reparten, no se reabren, no entran en ningun tramo por abrir.
+5. SI (D5): entre correr un ancestro cuyo titulo miente y escribir un
+   sucesor declarado que no miente, el sucesor es la via. La mentira
+   declarada en el reporte no repara la salida publicada que la lleva.
+
+## 6. HALLAZGO PROPIO DEL AUDITOR, Y MIS MANEJOS
+
+- HALLAZGO, defecto latente en el abridor nuevo:
+  abrir_tramo_de_opu01.py linea 267 imprime el AVISO con los %d SIN
+  interpolar (print de cadena con %d y sin argumentos). El camino solo
+  se alcanza cuando --tramo-numero difiere del medido, cosa que ninguna
+  corrida publicada hizo; lo destape porque mi re-corrida con
+  --tramo-numero 6 sobre el censo que ya tiene el 6 fijado paso por ahi.
+  CERO cifras publicadas afectadas: no es caida de nadie, es correccion
+  declarada al encargo.
+- Mis manejos: la primera corrida del triage sin --vuelta (usage y
+  cero efectos), run_all_tests.py buscado en scripts/ cuando vive en
+  engine/ (una corrida), vitest con --reporter=basic que no arranca en
+  esta version (una corrida, re-corrido plano), y phase1_run_log.json
+  restaurado a su estado committeado tras mi Gate 0, que lo digo porque
+  restaurar un fichero rastreado es un acto y no un accidente. Ninguno
+  toco una cifra.
+- La averia que sembre para probar la guarda del rotulo quedo restaurada
+  con git checkout y el barrido re-corrido limpio; la salida queda
+  committeada como salida propia.
+
+## 7. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 26 relecturas de clave (las 35 menciones del triage,
+adjudicadas antes de destapar salvo la ENVEJECIDA, declarada no
+estricta), y unos 30 sitios re-corridos o leidos al digito (cabecera,
+marcador por dos vias, recomputo, cola, censo, duplicadas, estado,
+barrido con contraste de ROJO linea a linea, triage idempotente,
+correccion por git, averia sembrada, cuenta independiente del tramo 6
+por tres caminos, nomina re-abierta por diff, fijado, varas, dossier,
+colisiones esperadas, sha1 del ancestro, tallador de perdidas con sus
+siete casos y su contraste, Gate 0 con ciclo de tres, motor, web, tsc,
+commits del rango).
+
+Caidas del ejecutor en esta tanda (vuelta 61): CERO de clase, CERO de
+cifra publicada, CERO de reporte. Discrepancias de la ciega FUERA del
+marcado: CERO. Caidas del auditor: CERO (cuatro manejos declarados y un
+hallazgo propio, sin cifra publicada de por medio).
+
+Acumulado: 424 relecturas, 732 puestos (mas unos 495 nodos de forma y
+unos 825 sitios de codigo), 7 caidas de clase, 25 de reporte del
+ejecutor, 13 de cifra publicada del ejecutor, 3 de cifra del auditor, 5
+de acta del auditor, 3 de procedimiento del auditor.
+
+Rachas: REPORTE EN CERO (la 61 rompe la racha que estaba en dos). CLASE
+O CIFRA EN CERO (sexta tanda limpia).
+
+## 8. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO. El tramo corto se adjudica por extension citable
+  de la vara escrita (prefijo con tope, D1); las demas preguntas por
+  letra o por adjudicaciones previas. Ninguna regla se estrena.
+- Contradiccion sin regla de correccion: NO.
+- Decision de fundador: NINGUNA SE TOMA. El merge sigue siendo suyo.
+- Fallo tecnico repetido: NO. Gate 0 y las tres suites en verde dos
+  corridas (la del ejecutor y la mia).
+- Credito de tanda roto: NO. Cero caidas de las tres especies; las dos
+  rachas quedan en cero.
+- Campana consumada: NO. Queda el tramo 6 entero por ejecutar (21
+  actos), la mesa con quince actos mas la serie del titulo, y las fases
+  04 en adelante.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE: encargo escrito en PROMPT_SIGUIENTE.md (registros y la
+correccion del %d como TAREA 1; los planes del tramo 6 sellados con el
+contrato CAMPO PROPIO v1 y el LOTE A del tramo final como TAREA 2).
