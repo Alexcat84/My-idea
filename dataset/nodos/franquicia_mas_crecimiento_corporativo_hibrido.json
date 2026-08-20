@@ -8,21 +8,35 @@
   "pasos_accionables": [
     "Enfocar los primeros recursos en perfeccionar el prototipo corporativo",
     "Priorizar el crecimiento vía franquicia hasta lograr flujo de caja excedente",
-    "Definir en qué mercados o situaciones se justificaría abrir unidades corporativas adicionales",
+    "Definir en qué mercados o situaciones se justificaría abrir unidades corporativas adicionales, y cuándo el programa de franquicias genera suficiente caja",
     "Establecer un plan de staffing que soporte la doble estrategia sin sacrificar velocidad de expansión de franquicias"
   ],
   "entregable_esperado": "Plan de crecimiento híbrido con fases claras de expansión franquicia + corporativa",
   "nodos_previos": [
     "decision_segunda_unidad_operativa",
     "analisis_estrategia_crecimiento_franquicia_vs_corporativo",
-    "decision_franquiciar_vs_expansion_propia"
+    "decision_franquiciar_vs_expansion_propia",
+    "definir_meta_a_5_anos_antes_de_franquiciar"
   ],
   "nodos_siguientes": [
-    "principio_apalancamiento_numero_magico"
+    "principio_apalancamiento_numero_magico",
+    "combinar_crecimiento_corporativo_y_franquicia"
   ],
   "condiciones_activacion": [
     "Cuando el usuario busca maximizar la valoración de la empresa combinando ambos modelos de crecimiento",
-    "Cuando el franquiciador ya genera flujo de caja excedente y considera reinvertir en unidades propias"
+    "Cuando el franquiciador ya genera flujo de caja excedente y considera reinvertir en unidades propias",
+    "Si la empresa ya opera algunas unidades propias y planea escalar usando ambos canales",
+    "Si el usuario no tiene claro en qué orden priorizar apertura corporativa vs franquicia"
   ],
-  "etiqueta_arbol": "Crece con Ambos Modelos"
+  "etiqueta_arbol": "Crece con Ambos Modelos",
+  "ids_alias": [
+    "estrategia_multicanal_expansion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "estrategia_multicanal_expansion",
+      "titulo": "Estrategia Multicanal de Expansión (Franquicia + Corporativo)",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ]
 }

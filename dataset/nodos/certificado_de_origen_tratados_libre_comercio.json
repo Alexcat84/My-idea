@@ -7,20 +7,33 @@
   "resumen_teorico": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el mercado destino tiene un tratado de libre comercio vigente con Estados Unidos",
-    "Determinar la regla de origen aplicable al producto (tariff shift, RVC, wholly obtained)",
-    "Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost)",
-    "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque",
-    "Conservar la documentación de respaldo por el periodo requerido por la aduana"
+    "Determinar la regla de origen aplicable al producto (tariff shift, RVC, wholly obtained), que son las cuatro reglas de origen del Artículo 401",
+    "Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost), con los umbrales de 60% método de transacción o 50% método de costo neto",
+    "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque, en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen",
+    "Conservar la documentación de respaldo por el periodo requerido por la aduana, y disponible para el importador"
   ],
   "entregable_esperado": "Certificado de Origen firmado y cálculo de RVC documentado que respalde el trato arancelario preferencial",
   "nodos_previos": [
     "documentacion_exportacion_basica",
-    "documentacion_exportacion"
+    "documentacion_exportacion",
+    "import_regulations_foreign_governments"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "foreign_trade_zones"
+  ],
   "condiciones_activacion": [
     "Cuando el mercado destino forma parte de un tratado de libre comercio con EE.UU.",
     "Si el comprador solicita trato arancelario preferencial para el producto"
   ],
-  "etiqueta_arbol": "Aprovecha Tratados de Libre Comercio"
+  "etiqueta_arbol": "Aprovecha Tratados de Libre Comercio",
+  "ids_alias": [
+    "nafta_free_trade_agreements"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "nafta_free_trade_agreements",
+      "titulo": "Aprovechamiento de NAFTA y Tratados de Libre Comercio",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

@@ -11,7 +11,8 @@
     "Detalla en tu carta de instrucciones qué documentos vas a adjuntar: factura, conocimiento de embarque, lista de empaque, certificados.",
     "Indica si entregas los documentos solo contra el pago (sight draft) o contra la aceptación de pago futuro (time draft).",
     "Decide quién paga los costos del banco y si quieres pedir protesto formal en caso de que no te paguen o no acepten.",
-    "Envía la letra y los documentos al banco corresponsal o al banco del comprador, siguiendo las instrucciones que él te dio."
+    "Envía la letra y los documentos al banco corresponsal o al banco del comprador, siguiendo las instrucciones que él te dio.",
+    "Evaluar el riesgo de no pago, especialmente en envíos aéreos con sight draft"
   ],
   "entregable_esperado": "Tu letra de cambio y tu carta de instrucciones completas y firmadas, listas para enviar al banco junto con los documentos de embarque que te pidieron.",
   "nodos_previos": [
@@ -24,7 +25,19 @@
   "condiciones_activacion": [
     "Cuando cobras mediante cobro documentario (documentary collection) en lugar de carta de crédito.",
     "Cuando necesitas dejarle instrucciones claras al banco sobre cómo entregar los documentos y cobrar.",
-    "Si existe riesgo de que no te paguen y quieres tener la opción de un protesto formal."
+    "Si existe riesgo de que no te paguen y quieres tener la opción de un protesto formal.",
+    "Cuando existe cierta confianza en el comprador pero se desea mantener control sobre el título de la mercancía",
+    "Cuando se busca un método más económico que la carta de crédito"
   ],
-  "etiqueta_arbol": "Ordena el Pago con Letra"
+  "etiqueta_arbol": "Ordena el Pago con Letra",
+  "ids_alias": [
+    "documentary_collections"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "documentary_collections",
+      "titulo": "Cobranzas Documentarias (Documentary Collections)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

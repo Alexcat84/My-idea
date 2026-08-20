@@ -1,0 +1,479 @@
+==============================================================================
+OP-U-01, TRAMO 4, LOTE B DE LA VUELTA 57: LOS ACTOS 18 A 34 EN EL ORDEN IMPRESO DEL TRAMO, apartando el 24 por EMPATE SIN VARA, el 31 por CONTEOS QUE CHOCAN SIN PIEZA QUE DESEMPATE, y el 25 por una especie que la campana no habia visto: LOS DOS MIEMBROS SON PUERTA . MODO EJECUTAR
+plan: docs/loop/PLAN_V57_OPU01_LOTE_B.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3371 vivos, 482 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 18 . sobrevive certificado_de_origen_tratados_libre_comercio . absorbe nafta_free_trade_agreements
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 4
+     del paso 1 de nafta_free_trade_agreements al PASO 2 del superviviente
+        inciso VERBATIM: 'las cuatro reglas de origen del Artículo 401'
+        nexo (lo unico de cosecha propia): ', que son '
+        paso resultante: Determinar la regla de origen aplicable al producto (tariff shift, RVC, wholly obtained), que son las cuatro reglas de origen del Artículo 401
+     del paso 2 de nafta_free_trade_agreements al PASO 3 del superviviente
+        inciso VERBATIM: '60% método de transacción o 50% método de costo neto'
+        nexo (lo unico de cosecha propia): ', con los umbrales de '
+        paso resultante: Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost), con los umbrales de 60% método de transacción o 50% método de costo neto
+     del paso 3 de nafta_free_trade_agreements al PASO 4 del superviviente
+        inciso VERBATIM: 'CF 434, Form B-232, o Certificado de Origen'
+        nexo (lo unico de cosecha propia): ', en el formulario que corresponda: '
+        paso resultante: Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque, en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen
+     del paso 5 de nafta_free_trade_agreements al PASO 5 del superviviente
+        inciso VERBATIM: 'disponible para el importador'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Conservar la documentación de respaldo por el periodo requerido por la aduana, y disponible para el importador
+  alias del superviviente: ['nafta_free_trade_agreements']
+
+------------------------------------------------------------------------------
+ACTO 19 . sobrevive uso_intermediarios_exportacion . absorbe intermediarios_exportacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 3
+     del paso 2 de intermediarios_exportacion al PASO 1 del superviviente
+        inciso VERBATIM: 'especializado en la industria o región objetivo'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Identificar el tipo de intermediario más adecuado según producto y mercado (EMC, ETC, agente, confirming house), y especializado en la industria o región objetivo
+     del paso 3 de intermediarios_exportacion al PASO 5 del superviviente
+        inciso VERBATIM: 'comisión, salario o retención'
+        nexo (lo unico de cosecha propia): ', y el modelo de compensacion entre '
+        paso resultante: Formalizar el acuerdo especificando comisión, exclusividad y duración, y el modelo de compensacion entre comisión, salario o retención
+     del paso 4 de intermediarios_exportacion al PASO 3 del superviviente
+        inciso VERBATIM: 'el alcance de responsabilidades delegadas'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Negociar el nivel de control que la empresa retendrá (reportes, aprobación de publicidad), y el alcance de responsabilidades delegadas
+  alias del superviviente: ['intermediarios_exportacion']
+
+------------------------------------------------------------------------------
+ACTO 20 . sobrevive seleccion_canales_distribucion . absorbe seleccion_canales_exportacion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de seleccion_canales_exportacion al PASO 2 del superviviente
+        inciso VERBATIM: 'e-commerce propio o de terceros, franquicia'
+        nexo (lo unico de cosecha propia): ', y tambien '
+        paso resultante: Comparar opciones: representante, agente, distribuidor, minorista o venta directa, y tambien e-commerce propio o de terceros, franquicia
+     del paso 2 de seleccion_canales_exportacion al PASO 4 del superviviente
+        inciso VERBATIM: 'velocidad de entrada'
+        nexo (lo unico de cosecha propia): ', y la '
+        paso resultante: Seleccionar el canal más adecuado según nivel de control deseado y recursos disponibles, y la velocidad de entrada
+  alias del superviviente: ['seleccion_canales_exportacion']
+
+------------------------------------------------------------------------------
+ACTO 21 . sobrevive ecosistema_global_emprendimiento_gee . absorbe recursos_apoyo_pymes_sba
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 7 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['recursos_apoyo_pymes_sba']
+
+------------------------------------------------------------------------------
+ACTO 22 . sobrevive letra_de_cambio_bill_of_exchange . absorbe documentary_collections
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 7 (anadidos 1) | condiciones 3 -> 5 (anadidas 2)
+  alias del superviviente: ['documentary_collections']
+
+------------------------------------------------------------------------------
+ACTO 23 . sobrevive seleccion_de_metodo_de_pago . absorbe prevencion_problemas_de_pago
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 3
+     del paso 1 de prevencion_problemas_de_pago al PASO 1 del superviviente
+        inciso VERBATIM: 'verificaciones de crédito exhaustivas antes de cada transacción'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Evaluar la solvencia del comprador usando un perfil de crédito comercial u otras fuentes disponibles en tu mercado, con verificaciones de crédito exhaustivas antes de cada transacción, como el International Company Profile (ICP) del U.S. Commercial Service
+     del paso 3 de prevencion_problemas_de_pago al PASO 5 del superviviente
+        inciso VERBATIM: 'ante circunstancias inusuales'
+        nexo (lo unico de cosecha propia): ', tambien '
+        paso resultante: Consultar con la persona que te ayuda en el banco sobre las implicaciones y costos de cada método, tambien ante circunstancias inusuales
+     del paso 4 de prevencion_problemas_de_pago al PASO 1 del superviviente
+        inciso VERBATIM: 'International Company Profile (ICP) del U.S. Commercial Service'
+        nexo (lo unico de cosecha propia): ', como el '
+        paso resultante: Evaluar la solvencia del comprador usando un perfil de crédito comercial u otras fuentes disponibles en tu mercado, con verificaciones de crédito exhaustivas antes de cada transacción, como el International Company Profile (ICP) del U.S. Commercial Service
+  alias del superviviente: ['prevencion_problemas_de_pago']
+
+------------------------------------------------------------------------------
+ACTO 26 . sobrevive uso_del_us_commercial_service . absorbe consejos_distrito_exportacion_dec
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 4 -> 4 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 1 de consejos_distrito_exportacion_dec al PASO 1 del superviviente
+        inciso VERBATIM: 'afiliada a un DEC'
+        nexo (lo unico de cosecha propia): ', incluida la '
+        paso resultante: Contacta la oficina local del U.S. Commercial Service más cercana a ti, incluida la afiliada a un DEC
+     del paso 2 de consejos_distrito_exportacion_dec al PASO 4 del superviviente
+        inciso VERBATIM: 'talleres o seminarios organizados por el DEC, como Export University'
+        nexo (lo unico de cosecha propia): ', y en '
+        paso resultante: Participa en seminarios, ferias comerciales, misiones comerciales o el International Buyer Program, y en talleres o seminarios organizados por el DEC, como Export University
+  alias del superviviente: ['asistencia_us_commercial_service', 'consejos_distrito_exportacion_dec']
+
+------------------------------------------------------------------------------
+ACTO 27 . sobrevive preparar_fdd . absorbe elaboracion_fdd
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 3 de elaboracion_fdd al PASO 5 del superviviente
+        inciso VERBATIM: 'cualquier firma o cobro'
+        nexo (lo unico de cosecha propia): ', y antes de '
+        paso resultante: Establecer el proceso interno para presentar el FDD al menos 14 días antes de la venta, y antes de cualquier firma o cobro
+  alias del superviviente: ['elaboracion_fdd']
+
+------------------------------------------------------------------------------
+ACTO 28 . sobrevive franquicia_mas_crecimiento_corporativo_hibrido . absorbe estrategia_multicanal_expansion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 3 de estrategia_multicanal_expansion al PASO 3 del superviviente
+        inciso VERBATIM: 'cuándo el programa de franquicias genera suficiente caja'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Definir en qué mercados o situaciones se justificaría abrir unidades corporativas adicionales, y cuándo el programa de franquicias genera suficiente caja
+  alias del superviviente: ['estrategia_multicanal_expansion']
+
+------------------------------------------------------------------------------
+ACTO 29 . sobrevive proceso_llamada_inicial_venta . absorbe proceso_primera_llamada
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 8 -> 9 (anadidos 1) | condiciones 1 -> 1 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 2 de proceso_primera_llamada al PASO 2 del superviviente
+        inciso VERBATIM: 'en los primeros 5 minutos'
+        nexo (lo unico de cosecha propia): ', y hazlo '
+        paso resultante: Calificar financieramente al candidato, y hazlo en los primeros 5 minutos
+     del paso 6 de proceso_primera_llamada al PASO 8 del superviviente
+        inciso VERBATIM: 'agenda la siguiente llamada'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Explicar el proceso y cronograma, y solicitar un avance (ej. completar el CIRF), y agenda la siguiente llamada
+  alias del superviviente: ['proceso_primera_llamada']
+
+------------------------------------------------------------------------------
+ACTO 30 . sobrevive sitio_web_franquicia . absorbe sitio_web_captura_leads
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de sitio_web_captura_leads al PASO 2 del superviviente
+        inciso VERBATIM: 'formularios, descargas, videos'
+        nexo (lo unico de cosecha propia): ', del tipo '
+        paso resultante: Incluir mecanismos de captura de contacto visibles a un clic de distancia en cada página, del tipo formularios, descargas, videos
+     del paso 3 de sitio_web_captura_leads al PASO 3 del superviviente
+        inciso VERBATIM: 'información financiera o de soporte'
+        nexo (lo unico de cosecha propia): ', en especial la '
+        paso resultante: Evitar dar información excesiva que permita al prospecto autoeliminarse sin contactar, en especial la información financiera o de soporte
+  alias del superviviente: ['sitio_web_captura_leads']
+
+------------------------------------------------------------------------------
+ACTO 32 . sobrevive referidos_franquiciados_existentes . absorbe programa_de_referidos_de_franquiciados
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 2 de programa_de_referidos_de_franquiciados al PASO 3 del superviviente
+        inciso VERBATIM: 'destacando su rol como embajadores de marca'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Preguntar directamente si conocen referidos calificados para el territorio, destacando su rol como embajadores de marca
+     del paso 4 de programa_de_referidos_de_franquiciados al PASO 4 del superviviente
+        inciso VERBATIM: 'desde el inicio de la relación'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Entrenar al equipo de soporte de campo para discutir opciones de expansión multi-unidad regularmente, y desde el inicio de la relación
+  alias del superviviente: ['programa_de_referidos_de_franquiciados']
+
+------------------------------------------------------------------------------
+ACTO 33 . sobrevive motivated_management_franquiciado . absorbe mito_control_calidad_corporativo
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 1 de mito_control_calidad_corporativo al PASO 2 del superviviente
+        inciso VERBATIM: 'ingresos, gestión de gastos'
+        nexo (lo unico de cosecha propia): ', incluidos '
+        paso resultante: Comparar métricas de desempeño (ventas, limpieza, rotación de personal) entre unidades propias y franquiciadas si existen datos, incluidos ingresos, gestión de gastos
+  alias del superviviente: ['mito_control_calidad_corporativo']
+
+------------------------------------------------------------------------------
+ACTO 34 . sobrevive desarrollar_manual_operaciones . absorbe confidencialidad_manual_operaciones
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 2 de confidencialidad_manual_operaciones al PASO 5 del superviviente
+        inciso VERBATIM: 'mantener el manual bajo resguardo controlado'
+        nexo (lo unico de cosecha propia): ', exigiendo a los franquiciados '
+        paso resultante: Vincula legalmente el manual al contrato de franquicia como estandar de cumplimiento obligatorio, manteniendolo fuera del contrato mismo y confidencial, divulgando solo el indice en el FDD, exigiendo a los franquiciados mantener el manual bajo resguardo controlado, y limitando su divulgacion a los empleados solo según necesidad de entrenamiento
+     del paso 3 de confidencialidad_manual_operaciones al PASO 5 del superviviente
+        inciso VERBATIM: 'solo según necesidad de entrenamiento'
+        nexo (lo unico de cosecha propia): ', y limitando su divulgacion a los empleados '
+        paso resultante: Vincula legalmente el manual al contrato de franquicia como estandar de cumplimiento obligatorio, manteniendolo fuera del contrato mismo y confidencial, divulgando solo el indice en el FDD, exigiendo a los franquiciados mantener el manual bajo resguardo controlado, y limitando su divulgacion a los empleados solo según necesidad de entrenamiento
+  alias del superviviente: ['manual_operaciones_desarrollo', 'confidencialidad_manual_operaciones']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 32
+   cadencia_seguimiento_prospectos                      nodos_previos     proceso_primera_llamada -> proceso_llamada_inicial_venta
+   calificacion_prospectos_marketing                    nodos_siguientes  sitio_web_captura_leads -> sitio_web_franquicia
+   clasificacion_abc_prospectos                         nodos_siguientes  proceso_primera_llamada -> proceso_llamada_inicial_venta
+   combinar_crecimiento_corporativo_y_franquicia        nodos_previos     estrategia_multicanal_expansion -> franquicia_mas_crecimiento_corporativo_hibrido
+   consultores_comercio_internacional                   nodos_previos     intermediarios_exportacion -> uso_intermediarios_exportacion
+   control_responsabilidad_manual                       nodos_siguientes  mito_control_calidad_corporativo -> motivated_management_franquiciado
+   decision_fpr                                         nodos_previos     elaboracion_fdd -> preparar_fdd
+   definir_meta_a_5_anos_antes_de_franquiciar           nodos_siguientes  estrategia_multicanal_expansion -> franquicia_mas_crecimiento_corporativo_hibrido
+   desarrollar_manual_operaciones                       nodos_previos     elaboracion_fdd -> preparar_fdd
+   ecosistema_global_emprendimiento_gee                 nodos_siguientes  seleccion_canales_exportacion -> seleccion_canales_distribucion
+   eleccion_abogado_franquicias                         nodos_siguientes  elaboracion_fdd -> preparar_fdd
+   elementos_plan_exportacion_ejemplo                   nodos_siguientes  recursos_apoyo_pymes_sba -> ecosistema_global_emprendimiento_gee
+   estrategia_redes_sociales_franquicias                nodos_siguientes  programa_de_referidos_de_franquiciados -> referidos_franquiciados_existentes
+   foreign_trade_zones                                  nodos_previos     nafta_free_trade_agreements -> certificado_de_origen_tratados_libre_comercio
+   gestion_riesgo_cambiario                             nodos_previos     documentary_collections -> letra_de_cambio_bill_of_exchange
+   gestion_riesgo_cambiario                             nodos_siguientes  prevencion_problemas_de_pago -> seleccion_de_metodo_de_pago
+   import_regulations_foreign_governments               nodos_siguientes  nafta_free_trade_agreements -> certificado_de_origen_tratados_libre_comercio
+   instituciones_financieras_bancos                     nodos_previos     recursos_apoyo_pymes_sba -> ecosistema_global_emprendimiento_gee
+   instituciones_financieras_bancos                     nodos_siguientes  intermediarios_exportacion -> uso_intermediarios_exportacion
+   manual_online_lms                                    nodos_siguientes  confidencialidad_manual_operaciones -> desarrollar_manual_operaciones
+   metodos_exportacion_directa_indirecta_2              nodos_previos     intermediarios_exportacion -> uso_intermediarios_exportacion
+   multiples_compradores_influyentes                    nodos_siguientes  sitio_web_captura_leads -> sitio_web_franquicia
+   pilares_control_calidad                              nodos_previos     mito_control_calidad_corporativo -> motivated_management_franquiciado
+   principio_apalancamiento_numero_magico               nodos_siguientes  programa_de_referidos_de_franquiciados -> referidos_franquiciados_existentes
+   programa_entrenamiento_franquiciados                 nodos_previos     confidencialidad_manual_operaciones -> desarrollar_manual_operaciones
+   recursos_apoyo_gubernamental_exportacion             nodos_previos     recursos_apoyo_pymes_sba -> ecosistema_global_emprendimiento_gee
+   reduccion_riesgo_percibido                           nodos_previos     sitio_web_captura_leads -> sitio_web_franquicia
+   registro_estatal_franquicia                          nodos_previos     elaboracion_fdd -> preparar_fdd
+   seguro_de_credito_a_la_exportacion                   nodos_previos     prevencion_problemas_de_pago -> seleccion_de_metodo_de_pago
+   seleccion_de_metodo_de_pago                          nodos_siguientes  documentary_collections -> letra_de_cambio_bill_of_exchange
+   seleccion_de_metodo_de_pago                          nodos_siguientes  prevencion_problemas_de_pago -> seleccion_de_metodo_de_pago
+   soporte_continuo_franquicia                          nodos_siguientes  programa_de_referidos_de_franquiciados -> referidos_franquiciados_existentes
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 4
+   contratacion_abogado_franquicia                      nodos_siguientes  elaboracion_fdd (registro historico)
+   contratar_abogado_especializado_franquicias          nodos_siguientes  elaboracion_fdd (registro historico)
+   leverage_una_sola_franquicia                         nodos_siguientes  programa_de_referidos_de_franquiciados (registro historico)
+   manual_operaciones_desarrollo                        nodos_previos     elaboracion_fdd (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 4
+   decision_fpr                                         nodos_previos
+   gestion_riesgo_cambiario                             nodos_previos
+   programa_entrenamiento_franquiciados                 nodos_previos
+   seleccion_de_metodo_de_pago                          nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   seleccion_de_metodo_de_pago                          nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 950   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 947   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 3, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 70 de 70
+guarda D, los 14 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (78 filas)
+ acto de que nodo                                  que          n  a donde va
+   18 nafta_free_trade_agreements                  paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Determinar si el producto califica bajo alguna de las cuatro reglas de origen del Artículo 401
+   18 nafta_free_trade_agreements                  paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Calcular el valor regional del contenido (60% método de transacción o 50% método de costo neto) si aplica
+   18 nafta_free_trade_agreements                  paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Completar el certificado de origen correspondiente (CF 434, Form B-232, o Certificado de Origen)
+   18 nafta_free_trade_agreements                  paso         4  ya lo dice el PASO 1 del superviviente
+        Verificar si existe un FTA aplicable al país de destino (ver Apéndice B)
+   18 nafta_free_trade_agreements                  paso         5  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Mantener el certificado de origen disponible para el importador
+   18 nafta_free_trade_agreements                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el país destino es Canadá, México u otro país con FTA vigente con EE.UU.
+   19 intermediarios_exportacion                   paso         1  PASO 6 del superviviente
+        Evaluar si la empresa tiene recursos internos para exportar directamente
+   19 intermediarios_exportacion                   paso         2  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Buscar un intermediario especializado en la industria o región objetivo
+   19 intermediarios_exportacion                   paso         3  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Negociar el modelo de compensación (comisión, salario o retención)
+   19 intermediarios_exportacion                   paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir el alcance de responsabilidades delegadas al intermediario
+   19 intermediarios_exportacion                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la empresa carece de recursos o experiencia para gestionar la exportación directamente
+   20 seleccion_canales_exportacion                paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Enumerar los canales de venta disponibles según el tipo de producto/servicio (directo, distribuidor, e-commerce propio o de terceros, franquicia, etc.
+   20 seleccion_canales_exportacion                paso         2  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar ventajas y costos de cada canal para la empresa (control, inversión, velocidad de entrada)
+   20 seleccion_canales_exportacion                paso         3  PASO 5 del superviviente
+        Seleccionar uno o más canales complementarios en lugar de depender de un único mercado/canal
+   20 seleccion_canales_exportacion                paso         4  PASO 6 del superviviente
+        Definir un plan de expansión gradual a múltiples mercados usando los canales elegidos
+   20 seleccion_canales_exportacion                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si la empresa ya decidió exportar pero no ha definido cómo llegará a los compradores internacionales
+   20 seleccion_canales_exportacion                condicion    2  CONDICION 2 del superviviente
+        Si la empresa exporta actualmente solo a un mercado y busca diversificar
+   21 recursos_apoyo_pymes_sba                     paso         1  ya lo dice el PASO 3 del superviviente
+        Buscar la oficina local del organismo de apoyo a pequeños negocios en tu país
+   21 recursos_apoyo_pymes_sba                     paso         2  ya lo dice el PASO 3 del superviviente
+        Pedir orientación a un especialista en comercio internacional de esa oficina
+   21 recursos_apoyo_pymes_sba                     paso         3  ya lo dice el PASO 3 del superviviente
+        Acudir a un centro de desarrollo empresarial para armar tu estrategia de exportación
+   21 recursos_apoyo_pymes_sba                     paso         4  PASO 7 del superviviente
+        Consultar a un asesor voluntario con experiencia para evaluar tu potencial exportador
+   21 recursos_apoyo_pymes_sba                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando eres nuevo en la exportación y necesitas orientación básica
+   21 recursos_apoyo_pymes_sba                     condicion    2  CONDICION 3 del superviviente
+        Cuando necesitas financiamiento comercial de bajo costo o asesoría gratuita
+   22 documentary_collections                      paso         1  ya lo dice el PASO 4 del superviviente
+        Decidir entre sight draft (pago contra documentos) o time draft (pago a plazo tras aceptación)
+   22 documentary_collections                      paso         2  ya lo dice el PASO 6 del superviviente
+        Enviar los documentos de título (bill of lading) junto con el draft a través del banco remitente
+   22 documentary_collections                      paso         3  ya lo dice el PASO 3 del superviviente
+        Verificar que el comprador acepte o pague según las instrucciones de la carta de transmisión
+   22 documentary_collections                      paso         4  PASO 7 del superviviente
+        Evaluar el riesgo de no pago, especialmente en envíos aéreos con sight draft
+   22 documentary_collections                      condicion    1  CONDICION 4 del superviviente
+        Cuando existe cierta confianza en el comprador pero se desea mantener control sobre el título de la mercancía
+   22 documentary_collections                      condicion    2  CONDICION 5 del superviviente
+        Cuando se busca un método más económico que la carta de crédito
+   23 prevencion_problemas_de_pago                 paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Realizar verificaciones de crédito exhaustivas antes de cada transacción, especialmente con nuevos clientes
+   23 prevencion_problemas_de_pago                 paso         2  PASO 6 del superviviente
+        Monitorear continuamente los patrones de pago de clientes existentes
+   23 prevencion_problemas_de_pago                 paso         3  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Aplicar prácticas comerciales prudentes y consultar con el banquero internacional ante circunstancias inusuales
+   23 prevencion_problemas_de_pago                 paso         4  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Utilizar el International Company Profile (ICP) del U.S. Commercial Service para verificar la solvencia de compradores
+   23 prevencion_problemas_de_pago                 condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando el exportador está estableciendo relaciones de crédito con compradores extranjeros nuevos o recurrentes
+   23 prevencion_problemas_de_pago                 condicion    2  CONDICION 3 del superviviente
+        Cuando se busca reducir el riesgo de cuentas incobrables en mercados internacionales
+   26 consejos_distrito_exportacion_dec            paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Contactar la oficina del U.S. Commercial Service afiliada a un DEC
+   26 consejos_distrito_exportacion_dec            paso         2  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Participar en talleres o seminarios organizados por el DEC, como Export University
+   26 consejos_distrito_exportacion_dec            paso         3  ya lo dice el PASO 3 del superviviente
+        Solicitar asesoría personalizada sobre estrategias de mercado y contactos comerciales
+   26 consejos_distrito_exportacion_dec            condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando tienes poca experiencia exportando y necesitas mentoría práctica
+   27 elaboracion_fdd                              paso         1  ya lo dice el PASO 1 del superviviente
+        Trabajar con el abogado de franquicias para redactar las 23 secciones requeridas del FDD
+   27 elaboracion_fdd                              paso         2  PASO 6 del superviviente
+        Asegurar que todas las cuotas y fuentes de ingresos estén completamente divulgadas
+   27 elaboracion_fdd                              paso         3  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer un proceso interno para entregar el FDD 14 días antes de cualquier firma o cobro
+   27 elaboracion_fdd                              paso         4  PASO 7 del superviviente
+        Documentar la entrega del FDD mediante la página de recibo (Item 23)
+   27 elaboracion_fdd                              condicion    1  CONDICION 3 del superviviente
+        Cuando el negocio ya tiene un abogado de franquicias y necesita el documento legal para vender franquicias
+   28 estrategia_multicanal_expansion              paso         1  ya lo dice el PASO 1 del superviviente
+        Desarrollar y perfeccionar el prototipo corporativo antes de escalar
+   28 estrategia_multicanal_expansion              paso         2  ya lo dice el PASO 2 del superviviente
+        Enfocar recursos exclusivamente en franquiciar hasta generar flujo de caja excedente
+   28 estrategia_multicanal_expansion              paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar cuándo el programa de franquicias genera suficiente caja para reabrir el canal corporativo
+   28 estrategia_multicanal_expansion              paso         4  ya lo dice el PASO 2 del superviviente
+        Separar temporalmente el crecimiento corporativo del lanzamiento del programa de franquicias
+   28 estrategia_multicanal_expansion              condicion    1  CONDICION 3 del superviviente
+        Si la empresa ya opera algunas unidades propias y planea escalar usando ambos canales
+   28 estrategia_multicanal_expansion              condicion    2  CONDICION 4 del superviviente
+        Si el usuario no tiene claro en qué orden priorizar apertura corporativa vs franquicia
+   29 proceso_primera_llamada                      paso         1  ya lo dice el PASO 1 del superviviente
+        Obten la información de contacto del candidato y de donde llego
+   29 proceso_primera_llamada                      paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Calificalo financieramente en los primeros 5 minutos
+   29 proceso_primera_llamada                      paso         3  ya lo dice el PASO 4 del superviviente
+        Detecta su urgencia, sus motivos y sus puntos sensibles
+   29 proceso_primera_llamada                      paso         4  ya lo dice el PASO 6 del superviviente
+        Preguntale que otras franquicias esta considerando, para saber donde te ubicas
+   29 proceso_primera_llamada                      paso         5  ya lo dice el PASO 7 del superviviente
+        Dale un panorama breve de la oportunidad resaltando lo que mas le importa a el
+   29 proceso_primera_llamada                      paso         6  INCISO ADOSADO al PASO 8 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Pidele un avance concreto, como completar el CIRF, y agenda la siguiente llamada
+   29 proceso_primera_llamada                      paso         7  PASO 9 del superviviente
+        Si no califica, rechazalo con amabilidad y sugierele como resolver su situacion
+   29 proceso_primera_llamada                      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        En cada primera interaccion telefonica con un nuevo candidato a franquicia
+   30 sitio_web_captura_leads                      paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseñar múltiples mecanismos de captura de contacto (formularios, descargas, videos)
+   30 sitio_web_captura_leads                      paso         2  PASO 6 del superviviente
+        Definir la 'oferta de valor' que se entrega a cambio del contacto (ej. reporte, video)
+   30 sitio_web_captura_leads                      paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evitar publicar toda la información financiera o de soporte que elimine la necesidad de contacto
+   30 sitio_web_captura_leads                      condicion    1  CONDICION 2 del superviviente
+        Al lanzar o rediseñar el sitio web de reclutamiento de franquiciados
+   32 programa_de_referidos_de_franquiciados       paso         1  PASO 6 del superviviente
+        Informar a empleados, proveedores y socios sobre el perfil de franquiciado buscado y los beneficios del programa.
+   32 programa_de_referidos_de_franquiciados       paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Solicitar activamente referencias a franquiciados exitosos, destacando su rol como embajadores de marca.
+   32 programa_de_referidos_de_franquiciados       paso         3  ya lo dice el PASO 1 del superviviente
+        Contactar proactivamente a franquiciados existentes al expandirse a territorios cercanos, ofreciendo oportunidad de crecimiento multi-unidad.
+   32 programa_de_referidos_de_franquiciados       paso         4  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Capacitar al equipo de soporte de campo para discutir oportunidades de expansión con franquiciados desde el inicio de la relación.
+   32 programa_de_referidos_de_franquiciados       paso         5  ya lo dice el PASO 5 del superviviente
+        Establecer incentivos formales para franquiciados que generen referidos calificados.
+   32 programa_de_referidos_de_franquiciados       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando ya existe una base de franquiciados operando con éxito.
+   32 programa_de_referidos_de_franquiciados       condicion    2  CONDICION 3 del superviviente
+        Cuando se busca reducir el costo por lead aprovechando canales de alta credibilidad.
+   33 mito_control_calidad_corporativo             paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Comparar métricas de desempeño (ingresos, gestión de gastos) entre ubicaciones corporativas y franquiciadas si existen ambas
+   33 mito_control_calidad_corporativo             paso         2  PASO 5 del superviviente
+        Reconocer que la falta de control operativo directo no implica menor calidad, sino que requiere mecanismos alternativos de control
+   33 mito_control_calidad_corporativo             paso         3  ya lo dice el PASO 3 del superviviente
+        Diseñar el sistema de franquicia asumiendo que el franquiciado motivado por su inversión será el principal garante de calidad
+   33 mito_control_calidad_corporativo             condicion    1  CONDICION 3 del superviviente
+        Cuando el fundador del negocio duda si franquiciar reducirá la calidad de las operaciones
+   33 mito_control_calidad_corporativo             condicion    2  CONDICION 4 del superviviente
+        Al presentar el caso de negocio para franquiciar a inversionistas o socios
+   34 confidencialidad_manual_operaciones          paso         1  ya lo dice el PASO 5 del superviviente
+        Denominar el documento explícitamente como confidencial en los acuerdos legales
+   34 confidencialidad_manual_operaciones          paso         2  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Exigir a los franquiciados mantener el manual bajo resguardo controlado
+   34 confidencialidad_manual_operaciones          paso         3  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Limitar la divulgación de partes del manual a empleados solo según necesidad de entrenamiento
+   34 confidencialidad_manual_operaciones          condicion    1  CONDICION 4 del superviviente
+        Cuando se distribuye el manual a franquiciados y se requiere proteger la propiedad intelectual del sistema
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 14
+  nodos implicados    : 28
+  nodos que MUEREN    : 14
+  piezas repartidas   : 78 (25 viajan enteras, 28 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 3
+
+ESCRITO. ficheros tocados: 54
+censo DESPUES: 3853 ficheros, 3357 vivos, 496 deprecados
+censo ANTES  : 3853 ficheros, 3371 vivos, 482 deprecados
+delta deprecados: +14 (esperado +14): OK

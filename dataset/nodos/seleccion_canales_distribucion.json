@@ -7,21 +7,35 @@
   "resumen_teorico": "Para cada mercado exterior debe elegirse cuidadosamente un canal de distribución adecuado: representantes de ventas, agentes, distribuidores, minoristas o ventas directas a usuarios finales. Cada canal implica diferentes niveles de control, riesgo, servicio postventa y estructura de compensación. Los distribuidores son el canal más común y consistente entre pequeños exportadores estadounidenses.",
   "pasos_accionables": [
     "Analizar las características del producto y del mercado objetivo",
-    "Comparar opciones: representante, agente, distribuidor, minorista o venta directa",
+    "Comparar opciones: representante, agente, distribuidor, minorista o venta directa, y tambien e-commerce propio o de terceros, franquicia",
     "Determinar responsabilidades logísticas, de inventario y servicio postventa de cada canal",
-    "Seleccionar el canal más adecuado según nivel de control deseado y recursos disponibles"
+    "Seleccionar el canal más adecuado según nivel de control deseado y recursos disponibles, y la velocidad de entrada",
+    "Seleccionar uno o más canales complementarios en lugar de depender de un único mercado/canal",
+    "Definir un plan de expansión gradual a múltiples mercados usando los canales elegidos"
   ],
   "entregable_esperado": "Matriz comparativa de canales de distribución con la decisión final documentada para cada mercado.",
   "nodos_previos": [
     "organizacion_interna_exportacion",
     "seleccion_canal_distribucion",
-    "hipotesis_de_canales"
+    "hipotesis_de_canales",
+    "ecosistema_global_emprendimiento_gee"
   ],
   "nodos_siguientes": [
     "contacto_evaluacion_representantes_extranjeros"
   ],
   "condiciones_activacion": [
-    "Si la empresa ya decidió exportar directamente y necesita definir cómo llegará al cliente final en el mercado extranjero"
+    "Si la empresa ya decidió exportar directamente y necesita definir cómo llegará al cliente final en el mercado extranjero",
+    "Si la empresa exporta actualmente solo a un mercado y busca diversificar"
   ],
-  "etiqueta_arbol": "Elige tus Canales de Distribución"
+  "etiqueta_arbol": "Elige tus Canales de Distribución",
+  "ids_alias": [
+    "seleccion_canales_exportacion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "seleccion_canales_exportacion",
+      "titulo": "Selección de Canales de Venta Internacional",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

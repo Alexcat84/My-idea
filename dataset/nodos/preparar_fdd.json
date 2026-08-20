@@ -10,11 +10,14 @@
     "Reunir los 23 ítems de divulgación requeridos por la FTC",
     "Incluir el contrato de franquicia y documentos legales ancilares (acuerdos de financiamiento, desarrollo de área, etc.)",
     "Preparar o crear una entidad corporativa nueva con estados financieros auditados si no se cuenta con ellos",
-    "Establecer el proceso interno para presentar el FDD al menos 14 días antes de la venta"
+    "Establecer el proceso interno para presentar el FDD al menos 14 días antes de la venta, y antes de cualquier firma o cobro",
+    "Asegurar que todas las cuotas y fuentes de ingresos estén completamente divulgadas",
+    "Documentar la entrega del FDD mediante la página de recibo (Item 23)"
   ],
   "entregable_esperado": "FDD completo, legalmente compilado y listo para ser presentado a prospectos de franquicia",
   "nodos_previos": [
-    "comprender_definicion_legal_franquicia"
+    "comprender_definicion_legal_franquicia",
+    "eleccion_abogado_franquicias"
   ],
   "nodos_siguientes": [
     "cumplir_leyes_estatales_franquicia",
@@ -22,11 +25,24 @@
     "calificacion_candidatos_franquicia",
     "decision_fpr",
     "proceso_llamada_inicial_venta",
-    "calificacion_prospectos_award"
+    "calificacion_prospectos_award",
+    "desarrollar_manual_operaciones",
+    "registro_estatal_franquicia"
   ],
   "condiciones_activacion": [
     "Cuando el negocio ha confirmado que operará bajo el modelo de franquicia",
-    "Antes de ofrecer o vender cualquier franquicia a un prospecto"
+    "Antes de ofrecer o vender cualquier franquicia a un prospecto",
+    "Cuando el negocio ya tiene un abogado de franquicias y necesita el documento legal para vender franquicias"
   ],
-  "etiqueta_arbol": "Redacta tu Documento de Divulgación"
+  "etiqueta_arbol": "Redacta tu Documento de Divulgación",
+  "ids_alias": [
+    "elaboracion_fdd"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "elaboracion_fdd",
+      "titulo": "Elaboración del Franchise Disclosure Document (FDD)",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ]
 }

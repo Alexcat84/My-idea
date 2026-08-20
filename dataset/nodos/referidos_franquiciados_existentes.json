@@ -8,13 +8,17 @@
   "pasos_accionables": [
     "Llamar a franquiciados existentes antes de identificar prospectos en su región para discutir planes de expansión",
     "Educar a los franquiciados sobre los beneficios del crecimiento del sistema (poder de compra, publicidad, marca)",
-    "Preguntar directamente si conocen referidos calificados para el territorio",
-    "Entrenar al equipo de soporte de campo para discutir opciones de expansión multi-unidad regularmente",
-    "Evaluar cuidadosamente con el abogado franquiciador la posibilidad de pagar comisiones por referidos, dado el riesgo de conflicto de interés"
+    "Preguntar directamente si conocen referidos calificados para el territorio, destacando su rol como embajadores de marca",
+    "Entrenar al equipo de soporte de campo para discutir opciones de expansión multi-unidad regularmente, y desde el inicio de la relación",
+    "Evaluar cuidadosamente con el abogado franquiciador la posibilidad de pagar comisiones por referidos, dado el riesgo de conflicto de interés",
+    "Informar a empleados, proveedores y socios sobre el perfil de franquiciado buscado y los beneficios del programa."
   ],
   "entregable_esperado": "Sistema formal de solicitud y seguimiento de referidos de franquiciados actuales, con protocolo de comunicación previo a la venta de territorios adyacentes",
   "nodos_previos": [
-    "validacion_con_franquiciados"
+    "validacion_con_franquiciados",
+    "estrategia_redes_sociales_franquicias",
+    "principio_apalancamiento_numero_magico",
+    "soporte_continuo_franquicia"
   ],
   "nodos_siguientes": [
     "proceso_venta_franquicias",
@@ -22,7 +26,18 @@
   ],
   "condiciones_activacion": [
     "Cuando el franquiciador ya cuenta con varios franquiciados operativos",
-    "Cuando se planea vender un territorio cercano a un franquiciado existente"
+    "Cuando se planea vender un territorio cercano a un franquiciado existente",
+    "Cuando se busca reducir el costo por lead aprovechando canales de alta credibilidad."
   ],
-  "etiqueta_arbol": "Aprovecha tus Franquiciados Actuales"
+  "etiqueta_arbol": "Aprovecha tus Franquiciados Actuales",
+  "ids_alias": [
+    "programa_de_referidos_de_franquiciados"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "programa_de_referidos_de_franquiciados",
+      "titulo": "Programa de Referidos para Venta de Franquicias",
+      "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ]
 }

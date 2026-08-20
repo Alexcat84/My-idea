@@ -10170,7 +10170,7 @@
       ],
       "entregable_esperado": "Protocolo documentado de cadencia de seguimiento con timetables claros",
       "nodos_previos": [
-        "proceso_primera_llamada",
+        "proceso_llamada_inicial_venta",
         "clasificacion_abc_prospectos"
       ],
       "nodos_siguientes": [],
@@ -10783,7 +10783,7 @@
         "posicionamiento_est"
       ],
       "nodos_siguientes": [
-        "sitio_web_captura_leads"
+        "sitio_web_franquicia"
       ],
       "condiciones_activacion": [
         "Al recibir muchos leads no calificados o al diseñar anuncios y landing pages"
@@ -13145,22 +13145,35 @@
       "resumen_teorico": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
         "Identificar si el mercado destino tiene un tratado de libre comercio vigente con Estados Unidos",
-        "Determinar la regla de origen aplicable al producto (tariff shift, RVC, wholly obtained)",
-        "Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost)",
-        "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque",
-        "Conservar la documentación de respaldo por el periodo requerido por la aduana"
+        "Determinar la regla de origen aplicable al producto (tariff shift, RVC, wholly obtained), que son las cuatro reglas de origen del Artículo 401",
+        "Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost), con los umbrales de 60% método de transacción o 50% método de costo neto",
+        "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque, en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen",
+        "Conservar la documentación de respaldo por el periodo requerido por la aduana, y disponible para el importador"
       ],
       "entregable_esperado": "Certificado de Origen firmado y cálculo de RVC documentado que respalde el trato arancelario preferencial",
       "nodos_previos": [
         "documentacion_exportacion_basica",
-        "documentacion_exportacion"
+        "documentacion_exportacion",
+        "import_regulations_foreign_governments"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "foreign_trade_zones"
+      ],
       "condiciones_activacion": [
         "Cuando el mercado destino forma parte de un tratado de libre comercio con EE.UU.",
         "Si el comprador solicita trato arancelario preferencial para el producto"
       ],
-      "etiqueta_arbol": "Aprovecha Tratados de Libre Comercio"
+      "etiqueta_arbol": "Aprovecha Tratados de Libre Comercio",
+      "ids_alias": [
+        "nafta_free_trade_agreements"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "nafta_free_trade_agreements",
+          "titulo": "Aprovechamiento de NAFTA y Tratados de Libre Comercio",
+          "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        }
+      ]
     },
     "certificados_genericos_de_origen": {
       "node_id": "certificados_genericos_de_origen",
@@ -14650,7 +14663,7 @@
         "calificacion_prospectos_award"
       ],
       "nodos_siguientes": [
-        "proceso_primera_llamada",
+        "proceso_llamada_inicial_venta",
         "cadencia_seguimiento_prospectos"
       ],
       "condiciones_activacion": [
@@ -16006,7 +16019,7 @@
       ],
       "entregable_esperado": "Un plan de gobernanza que defina reglas de territorio, marketing compartido y estándares entre unidades corporativas y franquiciadas",
       "nodos_previos": [
-        "estrategia_multicanal_expansion",
+        "franquicia_mas_crecimiento_corporativo_hibrido",
         "prevenir_franquicias_inadvertidas",
         "alternativa_operaciones_propias"
       ],
@@ -18695,7 +18708,8 @@
       "condiciones_activacion": [
         "Cuando se distribuye el manual a franquiciados y se requiere proteger la propiedad intelectual del sistema"
       ],
-      "etiqueta_arbol": "Protege tu Manual como Secreto"
+      "etiqueta_arbol": "Protege tu Manual como Secreto",
+      "deprecado": true
     },
     "confidencialidad_nda_adquisicion": {
       "node_id": "confidencialidad_nda_adquisicion",
@@ -19393,7 +19407,8 @@
       "condiciones_activacion": [
         "Cuando tienes poca experiencia exportando y necesitas mentoría práctica"
       ],
-      "etiqueta_arbol": "Consulta a Expertos Voluntarios"
+      "etiqueta_arbol": "Consulta a Expertos Voluntarios",
+      "deprecado": true
     },
     "consideraciones_instalacion_internacional": {
       "node_id": "consideraciones_instalacion_internacional",
@@ -20147,7 +20162,7 @@
       ],
       "entregable_esperado": "Consultor de comercio internacional contratado con alcance de trabajo definido",
       "nodos_previos": [
-        "intermediarios_exportacion"
+        "uso_intermediarios_exportacion"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -21733,7 +21748,7 @@
       ],
       "nodos_siguientes": [
         "actualizacion_manual_operaciones",
-        "mito_control_calidad_corporativo"
+        "motivated_management_franquiciado"
       ],
       "condiciones_activacion": [
         "Cuando se redactan secciones del manual que involucran seguridad, empleo o procedimientos operativos sensibles a litigios"
@@ -29126,7 +29141,6 @@
       ],
       "entregable_esperado": "Decisión documentada sobre inclusión o no de FPR, con la información de respaldo si aplica",
       "nodos_previos": [
-        "elaboracion_fdd",
         "preparar_fdd"
       ],
       "nodos_siguientes": [
@@ -31053,7 +31067,7 @@
       ],
       "nodos_siguientes": [
         "preguntas_clave_decision_franquiciar",
-        "estrategia_multicanal_expansion",
+        "franquicia_mas_crecimiento_corporativo_hibrido",
         "decision_franquiciar_vs_expansion_propia",
         "evaluacion_necesidad_franquiciar",
         "analisis_estrategia_crecimiento_franquicia_vs_corporativo"
@@ -31893,7 +31907,7 @@
         "Diferencia claramente los estandares de marca de control estricto de las areas operativas flexibles",
         "Incluye politicas de cumplimiento legal como leyes laborales, EEOC y ADA, sin dictar politicas internas de empleo del franquiciado",
         "Redacta el manual evitando lenguaje absoluto de obligaciones, sustituyendolo por terminos flexibles",
-        "Vincula legalmente el manual al contrato de franquicia como estandar de cumplimiento obligatorio, manteniendolo fuera del contrato mismo y confidencial, divulgando solo el indice en el FDD",
+        "Vincula legalmente el manual al contrato de franquicia como estandar de cumplimiento obligatorio, manteniendolo fuera del contrato mismo y confidencial, divulgando solo el indice en el FDD, exigiendo a los franquiciados mantener el manual bajo resguardo controlado, y limitando su divulgacion a los empleados solo según necesidad de entrenamiento",
         "Contrata a un profesional con experiencia legal en franquicias para redactarlo y haz que tu abogado lo revise antes de implementarlo"
       ],
       "entregable_esperado": "Un manual de operaciones completo, redactado y revisado legalmente, vinculado al contrato de franquicia y listo para servir como base de capacitacion y estandar de cumplimiento.",
@@ -31901,7 +31915,8 @@
         "pilares_control_calidad",
         "gestion_responsabilidad_vicaria",
         "contratar_abogado_franquicias",
-        "elaboracion_fdd"
+        "preparar_fdd",
+        "manual_online_lms"
       ],
       "nodos_siguientes": [
         "programa_entrena_al_entrenador",
@@ -31914,16 +31929,23 @@
       "condiciones_activacion": [
         "Cuando tu negocio ya tiene sistemas operativos probados listos para documentar",
         "Antes de comenzar a vender franquicias formalmente",
-        "Si detectas riesgo de responsabilidad por falta de claridad en tus procesos documentados"
+        "Si detectas riesgo de responsabilidad por falta de claridad en tus procesos documentados",
+        "Cuando se distribuye el manual a franquiciados y se requiere proteger la propiedad intelectual del sistema"
       ],
       "etiqueta_arbol": "Redacta tu Manual de Operaciones",
       "ids_alias": [
-        "manual_operaciones_desarrollo"
+        "manual_operaciones_desarrollo",
+        "confidencialidad_manual_operaciones"
       ],
       "merged_originals": [
         {
           "node_id": "manual_operaciones_desarrollo",
           "titulo": "Desarrollo del Manual de Operaciones",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        },
+        {
+          "node_id": "confidencialidad_manual_operaciones",
+          "titulo": "Confidencialidad del Manual como Secreto Comercial",
           "fuente": "Franchise Your Business - Mark Siebert"
         }
       ]
@@ -38534,7 +38556,8 @@
         "Cuando existe cierta confianza en el comprador pero se desea mantener control sobre el título de la mercancía",
         "Cuando se busca un método más económico que la carta de crédito"
       ],
-      "etiqueta_arbol": "Cobra tu Venta con el Banco"
+      "etiqueta_arbol": "Cobra tu Venta con el Banco",
+      "deprecado": true
     },
     "documento_alcance_servicio": {
       "node_id": "documento_alcance_servicio",
@@ -39683,21 +39706,36 @@
         "Localizar el centro de desarrollo de pequeños negocios de tu zona y verificar si tiene un asesor especializado en exportacion",
         "Investigar bancos locales con area de comercio internacional",
         "Sumarte a grupos de comercio internacional en redes profesionales como LinkedIn",
-        "Armar un directorio de contactos del GEE con nombres, roles y datos de contacto"
+        "Armar un directorio de contactos del GEE con nombres, roles y datos de contacto",
+        "Consultar a un asesor voluntario con experiencia para evaluar tu potencial exportador"
       ],
       "entregable_esperado": "Directorio documentado de al menos 5 a 8 organizaciones o contactos de apoyo (lista de verificacion GEE) que tienes disponibles",
       "nodos_previos": [
         "decision_estrategica_exportar",
-        "desmitificacion_barreras_exportacion"
+        "desmitificacion_barreras_exportacion",
+        "elementos_plan_exportacion_ejemplo"
       ],
       "nodos_siguientes": [
-        "seleccion_canales_exportacion"
+        "seleccion_canales_distribucion",
+        "instituciones_financieras_bancos",
+        "recursos_apoyo_gubernamental_exportacion"
       ],
       "condiciones_activacion": [
         "Si no sabes donde buscar ayuda para empezar a exportar",
-        "Si ya decidiste exportar pero te falta una red de apoyo"
+        "Si ya decidiste exportar pero te falta una red de apoyo",
+        "Cuando necesitas financiamiento comercial de bajo costo o asesoría gratuita"
       ],
-      "etiqueta_arbol": "Conecta con tu Red de Apoyo"
+      "etiqueta_arbol": "Conecta con tu Red de Apoyo",
+      "ids_alias": [
+        "recursos_apoyo_pymes_sba"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "recursos_apoyo_pymes_sba",
+          "titulo": "Recursos de apoyo público para negocios que exportan",
+          "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        }
+      ]
     },
     "ecuacion_de_valor": {
       "node_id": "ecuacion_de_valor",
@@ -40457,7 +40495,8 @@
       "condiciones_activacion": [
         "Cuando el negocio ya tiene un abogado de franquicias y necesita el documento legal para vender franquicias"
       ],
-      "etiqueta_arbol": "Elabora tu Documento de Divulgación"
+      "etiqueta_arbol": "Elabora tu Documento de Divulgación",
+      "deprecado": true
     },
     "elaboracion_pro_forma_invoice": {
       "node_id": "elaboracion_pro_forma_invoice",
@@ -40547,7 +40586,7 @@
       "nodos_siguientes": [
         "criterio_bazooka_peashooter",
         "gestion_tiempo_lanzamiento_franquicia",
-        "elaboracion_fdd"
+        "preparar_fdd"
       ],
       "condiciones_activacion": [
         "Cuando ya decidiste franquiciar y ya trabajaste con un consultor de franquicias",
@@ -40902,7 +40941,7 @@
         "asistencia_agencias_minoritarias_mbda",
         "financiamiento_exim_bank_3",
         "internacionalizacion_sitio_web_exportacion",
-        "recursos_apoyo_pymes_sba",
+        "ecosistema_global_emprendimiento_gee",
         "programas_ex_im_bank"
       ],
       "condiciones_activacion": [
@@ -47766,7 +47805,8 @@
         "Si la empresa ya opera algunas unidades propias y planea escalar usando ambos canales",
         "Si el usuario no tiene claro en qué orden priorizar apertura corporativa vs franquicia"
       ],
-      "etiqueta_arbol": "Combina Franquicia y Propio"
+      "etiqueta_arbol": "Combina Franquicia y Propio",
+      "deprecado": true
     },
     "estrategia_plataformas_existentes": {
       "node_id": "estrategia_plataformas_existentes",
@@ -47914,7 +47954,7 @@
         "seo_para_captacion_de_franquiciados"
       ],
       "nodos_siguientes": [
-        "programa_de_referidos_de_franquiciados"
+        "referidos_franquiciados_existentes"
       ],
       "condiciones_activacion": [
         "Cuando el franquiciador cuenta con capacidad de generar contenido de forma sostenida.",
@@ -55319,7 +55359,7 @@
       ],
       "entregable_esperado": "Evaluación de viabilidad de usar una FTZ y, si aplica, solicitud de uso de una zona específica",
       "nodos_previos": [
-        "nafta_free_trade_agreements"
+        "certificado_de_origen_tratados_libre_comercio"
       ],
       "nodos_siguientes": [
         "customs_bonded_warehouses"
@@ -56496,23 +56536,37 @@
       "pasos_accionables": [
         "Enfocar los primeros recursos en perfeccionar el prototipo corporativo",
         "Priorizar el crecimiento vía franquicia hasta lograr flujo de caja excedente",
-        "Definir en qué mercados o situaciones se justificaría abrir unidades corporativas adicionales",
+        "Definir en qué mercados o situaciones se justificaría abrir unidades corporativas adicionales, y cuándo el programa de franquicias genera suficiente caja",
         "Establecer un plan de staffing que soporte la doble estrategia sin sacrificar velocidad de expansión de franquicias"
       ],
       "entregable_esperado": "Plan de crecimiento híbrido con fases claras de expansión franquicia + corporativa",
       "nodos_previos": [
         "decision_segunda_unidad_operativa",
         "analisis_estrategia_crecimiento_franquicia_vs_corporativo",
-        "decision_franquiciar_vs_expansion_propia"
+        "decision_franquiciar_vs_expansion_propia",
+        "definir_meta_a_5_anos_antes_de_franquiciar"
       ],
       "nodos_siguientes": [
-        "principio_apalancamiento_numero_magico"
+        "principio_apalancamiento_numero_magico",
+        "combinar_crecimiento_corporativo_y_franquicia"
       ],
       "condiciones_activacion": [
         "Cuando el usuario busca maximizar la valoración de la empresa combinando ambos modelos de crecimiento",
-        "Cuando el franquiciador ya genera flujo de caja excedente y considera reinvertir en unidades propias"
+        "Cuando el franquiciador ya genera flujo de caja excedente y considera reinvertir en unidades propias",
+        "Si la empresa ya opera algunas unidades propias y planea escalar usando ambos canales",
+        "Si el usuario no tiene claro en qué orden priorizar apertura corporativa vs franquicia"
       ],
-      "etiqueta_arbol": "Crece con Ambos Modelos"
+      "etiqueta_arbol": "Crece con Ambos Modelos",
+      "ids_alias": [
+        "estrategia_multicanal_expansion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "estrategia_multicanal_expansion",
+          "titulo": "Estrategia Multicanal de Expansión (Franquicia + Corporativo)",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ]
     },
     "franquicia_representante_area": {
       "node_id": "franquicia_representante_area",
@@ -59714,14 +59768,13 @@
       "nodos_previos": [
         "letters_of_credit",
         "open_account",
-        "documentary_collections",
+        "letra_de_cambio_bill_of_exchange",
         "cash_in_advance",
         "consignment",
-        "metodos_de_pago_internacional",
-        "letra_de_cambio_bill_of_exchange"
+        "metodos_de_pago_internacional"
       ],
       "nodos_siguientes": [
-        "prevencion_problemas_de_pago",
+        "seleccion_de_metodo_de_pago",
         "resolucion_problemas_de_pago"
       ],
       "condiciones_activacion": [
@@ -64804,7 +64857,7 @@
         "foreign_corrupt_practices_act"
       ],
       "nodos_siguientes": [
-        "nafta_free_trade_agreements",
+        "certificado_de_origen_tratados_libre_comercio",
         "documentacion_viaje_internacional"
       ],
       "condiciones_activacion": [
@@ -66311,10 +66364,10 @@
       "entregable_esperado": "Relación bancaria establecida con servicios de financiamiento y cobro internacional",
       "nodos_previos": [
         "seguro_de_credito_a_la_exportacion",
-        "recursos_apoyo_pymes_sba"
+        "ecosistema_global_emprendimiento_gee"
       ],
       "nodos_siguientes": [
-        "intermediarios_exportacion"
+        "uso_intermediarios_exportacion"
       ],
       "condiciones_activacion": [
         "Cuando se requiere gestionar cobros o pagos internacionales",
@@ -66555,7 +66608,8 @@
       "condiciones_activacion": [
         "Cuando la empresa carece de recursos o experiencia para gestionar la exportación directamente"
       ],
-      "etiqueta_arbol": "Delega tu Exportación a Intermediarios"
+      "etiqueta_arbol": "Delega tu Exportación a Intermediarios",
+      "deprecado": true
     },
     "internacionalizacion_sitio_web_exportacion": {
       "node_id": "internacionalizacion_sitio_web_exportacion",
@@ -69509,7 +69563,8 @@
         "Detalla en tu carta de instrucciones qué documentos vas a adjuntar: factura, conocimiento de embarque, lista de empaque, certificados.",
         "Indica si entregas los documentos solo contra el pago (sight draft) o contra la aceptación de pago futuro (time draft).",
         "Decide quién paga los costos del banco y si quieres pedir protesto formal en caso de que no te paguen o no acepten.",
-        "Envía la letra y los documentos al banco corresponsal o al banco del comprador, siguiendo las instrucciones que él te dio."
+        "Envía la letra y los documentos al banco corresponsal o al banco del comprador, siguiendo las instrucciones que él te dio.",
+        "Evaluar el riesgo de no pago, especialmente en envíos aéreos con sight draft"
       ],
       "entregable_esperado": "Tu letra de cambio y tu carta de instrucciones completas y firmadas, listas para enviar al banco junto con los documentos de embarque que te pidieron.",
       "nodos_previos": [
@@ -69522,9 +69577,21 @@
       "condiciones_activacion": [
         "Cuando cobras mediante cobro documentario (documentary collection) en lugar de carta de crédito.",
         "Cuando necesitas dejarle instrucciones claras al banco sobre cómo entregar los documentos y cobrar.",
-        "Si existe riesgo de que no te paguen y quieres tener la opción de un protesto formal."
+        "Si existe riesgo de que no te paguen y quieres tener la opción de un protesto formal.",
+        "Cuando existe cierta confianza en el comprador pero se desea mantener control sobre el título de la mercancía",
+        "Cuando se busca un método más económico que la carta de crédito"
       ],
-      "etiqueta_arbol": "Ordena el Pago con Letra"
+      "etiqueta_arbol": "Ordena el Pago con Letra",
+      "ids_alias": [
+        "documentary_collections"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "documentary_collections",
+          "titulo": "Cobranzas Documentarias (Documentary Collections)",
+          "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        }
+      ]
     },
     "letter_of_intent_negociacion": {
       "node_id": "letter_of_intent_negociacion",
@@ -71778,7 +71845,7 @@
         "actualizacion_manual_operaciones"
       ],
       "nodos_siguientes": [
-        "confidencialidad_manual_operaciones"
+        "desarrollar_manual_operaciones"
       ],
       "condiciones_activacion": [
         "Cuando el franquiciante busca reducir costos de distribución y mejorar el control de versiones del manual"
@@ -75440,7 +75507,7 @@
       ],
       "entregable_esperado": "Documento de decisión estratégica indicando el método (directo, indirecto o mixto) elegido para cada mercado objetivo, con justificación basada en recursos y riesgo.",
       "nodos_previos": [
-        "intermediarios_exportacion",
+        "uso_intermediarios_exportacion",
         "evaluacion_mercados_objetivo"
       ],
       "nodos_siguientes": [
@@ -76323,7 +76390,8 @@
         "Cuando el fundador del negocio duda si franquiciar reducirá la calidad de las operaciones",
         "Al presentar el caso de negocio para franquiciar a inversionistas o socios"
       ],
-      "etiqueta_arbol": "Rompe el Mito del Control"
+      "etiqueta_arbol": "Rompe el Mito del Control",
+      "deprecado": true
     },
     "mito_departamento_control_calidad": {
       "node_id": "mito_departamento_control_calidad",
@@ -77817,22 +77885,37 @@
       "resumen_teorico": "Un franquiciado, al invertir su propio capital y a menudo sus ahorros, tiene un compromiso a largo plazo, mejor desempeño operativo, mayor innovación y mejor gestión de gastos que un gerente contratado. Estudios de caso (Texaco UK, Sterling Optical) muestran incrementos de ventas de 20-30% al convertir gerentes en propietarios franquiciados, con las mismas condiciones de ubicación, personal e inventario.",
       "pasos_accionables": [
         "Identificar ubicaciones actuales gestionadas por gerentes contratados que podrían convertirse en franquicias",
-        "Comparar métricas de desempeño (ventas, limpieza, rotación de personal) entre unidades propias y franquiciadas si existen datos",
+        "Comparar métricas de desempeño (ventas, limpieza, rotación de personal) entre unidades propias y franquiciadas si existen datos, incluidos ingresos, gestión de gastos",
         "Diseñar un esquema de incentivos que replique la motivación de propiedad en las unidades franquiciadas",
-        "Documentar innovaciones que podrían surgir de franquiciados (como sucedió con productos de McDonald's)"
+        "Documentar innovaciones que podrían surgir de franquiciados (como sucedió con productos de McDonald's)",
+        "Reconocer que la falta de control operativo directo no implica menor calidad, sino que requiere mecanismos alternativos de control"
       ],
       "entregable_esperado": "Justificación cuantitativa del valor de convertir gerentes en franquiciados, con proyección de mejora de desempeño",
       "nodos_previos": [
-        "franquicia_como_capital_alternativo"
+        "franquicia_como_capital_alternativo",
+        "control_responsabilidad_manual"
       ],
       "nodos_siguientes": [
-        "apalancamiento_personal_franquicia"
+        "apalancamiento_personal_franquicia",
+        "pilares_control_calidad"
       ],
       "condiciones_activacion": [
         "Si el negocio depende de gerentes contratados difíciles de retener",
-        "Si se busca mejorar el desempeño operativo de unidades existentes"
+        "Si se busca mejorar el desempeño operativo de unidades existentes",
+        "Cuando el fundador del negocio duda si franquiciar reducirá la calidad de las operaciones",
+        "Al presentar el caso de negocio para franquiciar a inversionistas o socios"
       ],
-      "etiqueta_arbol": "Confía en Dueños Motivados"
+      "etiqueta_arbol": "Confía en Dueños Motivados",
+      "ids_alias": [
+        "mito_control_calidad_corporativo"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "mito_control_calidad_corporativo",
+          "titulo": "Desmitificando el Control de Calidad Corporativo vs Franquiciado",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ]
     },
     "motor_crecimiento_pago": {
       "node_id": "motor_crecimiento_pago",
@@ -78406,7 +78489,7 @@
         "tipos_de_clientes"
       ],
       "nodos_siguientes": [
-        "sitio_web_captura_leads",
+        "sitio_web_franquicia",
         "mensaje_emocional_racional",
         "mensaje_marketing_franquicia"
       ],
@@ -78587,7 +78670,8 @@
       "condiciones_activacion": [
         "Si el país destino es Canadá, México u otro país con FTA vigente con EE.UU."
       ],
-      "etiqueta_arbol": "Aprovecha los Tratados Comerciales"
+      "etiqueta_arbol": "Aprovecha los Tratados Comerciales",
+      "deprecado": true
     },
     "narrativa_como_herramienta_de_sentido": {
       "node_id": "narrativa_como_herramienta_de_sentido",
@@ -83540,7 +83624,7 @@
       ],
       "entregable_esperado": "Plan estructurado con presupuesto asignado para cada uno de los cuatro pilares: selección, documentación, capacitación/soporte y legal",
       "nodos_previos": [
-        "mito_control_calidad_corporativo"
+        "motivated_management_franquiciado"
       ],
       "nodos_siguientes": [
         "desarrollar_manual_operaciones",
@@ -87710,11 +87794,14 @@
         "Reunir los 23 ítems de divulgación requeridos por la FTC",
         "Incluir el contrato de franquicia y documentos legales ancilares (acuerdos de financiamiento, desarrollo de área, etc.)",
         "Preparar o crear una entidad corporativa nueva con estados financieros auditados si no se cuenta con ellos",
-        "Establecer el proceso interno para presentar el FDD al menos 14 días antes de la venta"
+        "Establecer el proceso interno para presentar el FDD al menos 14 días antes de la venta, y antes de cualquier firma o cobro",
+        "Asegurar que todas las cuotas y fuentes de ingresos estén completamente divulgadas",
+        "Documentar la entrega del FDD mediante la página de recibo (Item 23)"
       ],
       "entregable_esperado": "FDD completo, legalmente compilado y listo para ser presentado a prospectos de franquicia",
       "nodos_previos": [
-        "comprender_definicion_legal_franquicia"
+        "comprender_definicion_legal_franquicia",
+        "eleccion_abogado_franquicias"
       ],
       "nodos_siguientes": [
         "cumplir_leyes_estatales_franquicia",
@@ -87722,13 +87809,26 @@
         "calificacion_candidatos_franquicia",
         "decision_fpr",
         "proceso_llamada_inicial_venta",
-        "calificacion_prospectos_award"
+        "calificacion_prospectos_award",
+        "desarrollar_manual_operaciones",
+        "registro_estatal_franquicia"
       ],
       "condiciones_activacion": [
         "Cuando el negocio ha confirmado que operará bajo el modelo de franquicia",
-        "Antes de ofrecer o vender cualquier franquicia a un prospecto"
+        "Antes de ofrecer o vender cualquier franquicia a un prospecto",
+        "Cuando el negocio ya tiene un abogado de franquicias y necesita el documento legal para vender franquicias"
       ],
-      "etiqueta_arbol": "Redacta tu Documento de Divulgación"
+      "etiqueta_arbol": "Redacta tu Documento de Divulgación",
+      "ids_alias": [
+        "elaboracion_fdd"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "elaboracion_fdd",
+          "titulo": "Elaboración del Franchise Disclosure Document (FDD)",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ]
     },
     "preparate_para_marcharte_del_trato": {
       "node_id": "preparate_para_marcharte_del_trato",
@@ -88475,7 +88575,8 @@
         "Cuando el exportador está estableciendo relaciones de crédito con compradores extranjeros nuevos o recurrentes",
         "Cuando se busca reducir el riesgo de cuentas incobrables en mercados internacionales"
       ],
-      "etiqueta_arbol": "Previene Problemas de Cobro"
+      "etiqueta_arbol": "Previene Problemas de Cobro",
+      "deprecado": true
     },
     "prevencion_versus_control_de_calidad": {
       "node_id": "prevencion_versus_control_de_calidad",
@@ -88653,7 +88754,7 @@
       ],
       "nodos_siguientes": [
         "preguntas_clave_decision_franquiciar",
-        "programa_de_referidos_de_franquiciados"
+        "referidos_franquiciados_existentes"
       ],
       "condiciones_activacion": [
         "Cuando dudas de si franquiciar es rentable con pocas unidades vendidas",
@@ -89868,31 +89969,44 @@
       "resumen_teorico": "La venta de franquicias es un cortejo, no una venta rápida. Los mejores vendedores escuchan más de lo que hablan en la primera llamada, evitando abrumar al prospecto con información. La llamada inicial sigue una agenda estructurada: obtener datos de contacto, calificar financieramente, calificar por otros criterios, determinar urgencia y motivos, entender el proceso de compra del candidato y posicionar frente a competidores, dar una visión general, explicar próximos pasos y pedir un avance (advance).",
       "pasos_accionables": [
         "Obtener información de contacto y fuente del lead",
-        "Calificar financieramente al candidato",
+        "Calificar financieramente al candidato, y hazlo en los primeros 5 minutos",
         "Calificar según experiencia, territorio deseado, etc.",
         "Determinar urgencia y motivos para franquiciar",
         "Identificar por qué considera tu franquicia específicamente (hot buttons)",
         "Entender su proceso de decisión y qué otras franquicias evalúa",
         "Dar overview breve enfatizando hot buttons",
-        "Explicar el proceso y cronograma, y solicitar un avance (ej. completar el CIRF)"
+        "Explicar el proceso y cronograma, y solicitar un avance (ej. completar el CIRF), y agenda la siguiente llamada",
+        "Si no califica, rechazalo con amabilidad y sugierele como resolver su situacion"
       ],
       "entregable_esperado": "Guion estructurado de primera llamada con checklist de calificación y objetivos de avance definidos",
       "nodos_previos": [
         "preparar_fdd",
         "enfoque_integrado_marketing_franquicia",
         "decision_fpr",
-        "estrategia_ventas_enterprise"
+        "estrategia_ventas_enterprise",
+        "clasificacion_abc_prospectos"
       ],
       "nodos_siguientes": [
         "gestion_seguimiento_prospectos",
         "concepto_de_advances",
         "manejo_objeciones_venta_franquicia",
-        "rechazo_gentil_prospecto"
+        "rechazo_gentil_prospecto",
+        "cadencia_seguimiento_prospectos"
       ],
       "condiciones_activacion": [
         "Cuando el usuario recibe su primer lead de franquicia y necesita estructurar la llamada inicial"
       ],
-      "etiqueta_arbol": "Domina tu Primera Llamada"
+      "etiqueta_arbol": "Domina tu Primera Llamada",
+      "ids_alias": [
+        "proceso_primera_llamada"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "proceso_primera_llamada",
+          "titulo": "Agenda de la Primera Llamada de Ventas",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ]
     },
     "proceso_nominacion_seleccion": {
       "node_id": "proceso_nominacion_seleccion",
@@ -89949,7 +90063,8 @@
       "condiciones_activacion": [
         "En cada primera interaccion telefonica con un nuevo candidato a franquicia"
       ],
-      "etiqueta_arbol": "Sigue la Agenda de Llamada"
+      "etiqueta_arbol": "Sigue la Agenda de Llamada",
+      "deprecado": true
     },
     "proceso_rmf_siete_pasos": {
       "node_id": "proceso_rmf_siete_pasos",
@@ -91006,7 +91121,8 @@
         "Cuando ya existe una base de franquiciados operando con éxito.",
         "Cuando se busca reducir el costo por lead aprovechando canales de alta credibilidad."
       ],
-      "etiqueta_arbol": "Activa Referidos de Franquiciados"
+      "etiqueta_arbol": "Activa Referidos de Franquiciados",
+      "deprecado": true
     },
     "programa_do_one_thing": {
       "node_id": "programa_do_one_thing",
@@ -91104,9 +91220,8 @@
       ],
       "entregable_esperado": "Currículo maestro de entrenamiento con agenda detallada, métodos y pruebas de evaluación",
       "nodos_previos": [
-        "confidencialidad_manual_operaciones",
-        "manual_operaciones_desarrollo",
-        "desarrollar_manual_operaciones"
+        "desarrollar_manual_operaciones",
+        "manual_operaciones_desarrollo"
       ],
       "nodos_siguientes": [
         "entrenamiento_oficina_central",
@@ -95417,7 +95532,7 @@
       ],
       "entregable_esperado": "Lista de agencias y programas de apoyo que contactaste, con registro en plataformas de oportunidades (FedBizOpps, BIDS) y reuniones o solicitudes iniciadas.",
       "nodos_previos": [
-        "recursos_apoyo_pymes_sba",
+        "ecosistema_global_emprendimiento_gee",
         "evaluacion_mercados_objetivo",
         "trade_missions"
       ],
@@ -95475,7 +95590,8 @@
         "Cuando eres nuevo en la exportación y necesitas orientación básica",
         "Cuando necesitas financiamiento comercial de bajo costo o asesoría gratuita"
       ],
-      "etiqueta_arbol": "Busca Apoyo para Pymes"
+      "etiqueta_arbol": "Busca Apoyo para Pymes",
+      "deprecado": true
     },
     "recursos_clave": {
       "node_id": "recursos_clave",
@@ -96095,7 +96211,7 @@
       ],
       "entregable_esperado": "Plan de construcción de credibilidad de marca con hitos concretos (equipo, afiliaciones, imagen, FPR)",
       "nodos_previos": [
-        "sitio_web_captura_leads",
+        "sitio_web_franquicia",
         "analisis_competencia_franquicias",
         "ventaja_competitiva_producto"
       ],
@@ -96468,13 +96584,17 @@
       "pasos_accionables": [
         "Llamar a franquiciados existentes antes de identificar prospectos en su región para discutir planes de expansión",
         "Educar a los franquiciados sobre los beneficios del crecimiento del sistema (poder de compra, publicidad, marca)",
-        "Preguntar directamente si conocen referidos calificados para el territorio",
-        "Entrenar al equipo de soporte de campo para discutir opciones de expansión multi-unidad regularmente",
-        "Evaluar cuidadosamente con el abogado franquiciador la posibilidad de pagar comisiones por referidos, dado el riesgo de conflicto de interés"
+        "Preguntar directamente si conocen referidos calificados para el territorio, destacando su rol como embajadores de marca",
+        "Entrenar al equipo de soporte de campo para discutir opciones de expansión multi-unidad regularmente, y desde el inicio de la relación",
+        "Evaluar cuidadosamente con el abogado franquiciador la posibilidad de pagar comisiones por referidos, dado el riesgo de conflicto de interés",
+        "Informar a empleados, proveedores y socios sobre el perfil de franquiciado buscado y los beneficios del programa."
       ],
       "entregable_esperado": "Sistema formal de solicitud y seguimiento de referidos de franquiciados actuales, con protocolo de comunicación previo a la venta de territorios adyacentes",
       "nodos_previos": [
-        "validacion_con_franquiciados"
+        "validacion_con_franquiciados",
+        "estrategia_redes_sociales_franquicias",
+        "principio_apalancamiento_numero_magico",
+        "soporte_continuo_franquicia"
       ],
       "nodos_siguientes": [
         "proceso_venta_franquicias",
@@ -96482,9 +96602,20 @@
       ],
       "condiciones_activacion": [
         "Cuando el franquiciador ya cuenta con varios franquiciados operativos",
-        "Cuando se planea vender un territorio cercano a un franquiciado existente"
+        "Cuando se planea vender un territorio cercano a un franquiciado existente",
+        "Cuando se busca reducir el costo por lead aprovechando canales de alta credibilidad."
       ],
-      "etiqueta_arbol": "Aprovecha tus Franquiciados Actuales"
+      "etiqueta_arbol": "Aprovecha tus Franquiciados Actuales",
+      "ids_alias": [
+        "programa_de_referidos_de_franquiciados"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "programa_de_referidos_de_franquiciados",
+          "titulo": "Programa de Referidos para Venta de Franquicias",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ]
     },
     "refinar_sales_roadmap": {
       "node_id": "refinar_sales_roadmap",
@@ -96702,7 +96833,7 @@
       ],
       "entregable_esperado": "Mapa de estados donde se puede vender legalmente la franquicia, con registros completados donde sea necesario",
       "nodos_previos": [
-        "elaboracion_fdd",
+        "preparar_fdd",
         "decision_fpr"
       ],
       "nodos_siguientes": [
@@ -103577,7 +103708,7 @@
       "nodos_previos": [
         "seguro_exportacion",
         "garantia_capital_trabajo",
-        "prevencion_problemas_de_pago",
+        "seleccion_de_metodo_de_pago",
         "financiamiento_exim_bank_3",
         "programas_ex_im_bank"
       ],
@@ -104052,23 +104183,37 @@
       "resumen_teorico": "Para cada mercado exterior debe elegirse cuidadosamente un canal de distribución adecuado: representantes de ventas, agentes, distribuidores, minoristas o ventas directas a usuarios finales. Cada canal implica diferentes niveles de control, riesgo, servicio postventa y estructura de compensación. Los distribuidores son el canal más común y consistente entre pequeños exportadores estadounidenses.",
       "pasos_accionables": [
         "Analizar las características del producto y del mercado objetivo",
-        "Comparar opciones: representante, agente, distribuidor, minorista o venta directa",
+        "Comparar opciones: representante, agente, distribuidor, minorista o venta directa, y tambien e-commerce propio o de terceros, franquicia",
         "Determinar responsabilidades logísticas, de inventario y servicio postventa de cada canal",
-        "Seleccionar el canal más adecuado según nivel de control deseado y recursos disponibles"
+        "Seleccionar el canal más adecuado según nivel de control deseado y recursos disponibles, y la velocidad de entrada",
+        "Seleccionar uno o más canales complementarios en lugar de depender de un único mercado/canal",
+        "Definir un plan de expansión gradual a múltiples mercados usando los canales elegidos"
       ],
       "entregable_esperado": "Matriz comparativa de canales de distribución con la decisión final documentada para cada mercado.",
       "nodos_previos": [
         "organizacion_interna_exportacion",
         "seleccion_canal_distribucion",
-        "hipotesis_de_canales"
+        "hipotesis_de_canales",
+        "ecosistema_global_emprendimiento_gee"
       ],
       "nodos_siguientes": [
         "contacto_evaluacion_representantes_extranjeros"
       ],
       "condiciones_activacion": [
-        "Si la empresa ya decidió exportar directamente y necesita definir cómo llegará al cliente final en el mercado extranjero"
+        "Si la empresa ya decidió exportar directamente y necesita definir cómo llegará al cliente final en el mercado extranjero",
+        "Si la empresa exporta actualmente solo a un mercado y busca diversificar"
       ],
-      "etiqueta_arbol": "Elige tus Canales de Distribución"
+      "etiqueta_arbol": "Elige tus Canales de Distribución",
+      "ids_alias": [
+        "seleccion_canales_exportacion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "seleccion_canales_exportacion",
+          "titulo": "Selección de Canales de Venta Internacional",
+          "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        }
+      ]
     },
     "seleccion_canales_exportacion": {
       "node_id": "seleccion_canales_exportacion",
@@ -104092,7 +104237,8 @@
         "Si la empresa ya decidió exportar pero no ha definido cómo llegará a los compradores internacionales",
         "Si la empresa exporta actualmente solo a un mercado y busca diversificar"
       ],
-      "etiqueta_arbol": "Elige tus Canales de Venta"
+      "etiqueta_arbol": "Elige tus Canales de Venta",
+      "deprecado": true
     },
     "seleccion_ceo_fundador": {
       "node_id": "seleccion_ceo_fundador",
@@ -104258,32 +104404,44 @@
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
       "resumen_teorico": "Existen cinco métodos principales de pago en comercio internacional, ordenados de mayor a menor seguridad para ti como quien vende: pago por adelantado, carta de crédito, cobranza documentaria, cuenta abierta y consignación. La elección depende de cuánto confíes en quien compra, la relación comercial que tengan, el riesgo del país de destino y cuánto necesitas competir en precio y condiciones. Antes de definir los términos de crédito, conviene evaluar la solvencia del comprador consultando fuentes de información comercial disponibles en tu mercado.",
       "pasos_accionables": [
-        "Evaluar la solvencia del comprador usando un perfil de crédito comercial u otras fuentes disponibles en tu mercado",
+        "Evaluar la solvencia del comprador usando un perfil de crédito comercial u otras fuentes disponibles en tu mercado, con verificaciones de crédito exhaustivas antes de cada transacción, como el International Company Profile (ICP) del U.S. Commercial Service",
         "Definir cuánto riesgo estás dispuesto a asumir según la relación con el comprador y el país al que exportas",
         "Comparar los cinco métodos de pago según seguridad, costo y competitividad",
         "Negociar con el comprador el método de pago y dejarlo claro por escrito en el contrato de venta",
-        "Consultar con la persona que te ayuda en el banco sobre las implicaciones y costos de cada método"
+        "Consultar con la persona que te ayuda en el banco sobre las implicaciones y costos de cada método, tambien ante circunstancias inusuales",
+        "Monitorear continuamente los patrones de pago de clientes existentes"
       ],
       "entregable_esperado": "Los términos de pago definidos y por escrito en el contrato de venta o en la factura pro forma",
       "nodos_previos": [
-        "incoterms_reglas_comerciales_internacionales"
+        "incoterms_reglas_comerciales_internacionales",
+        "gestion_riesgo_cambiario"
       ],
       "nodos_siguientes": [
         "letters_of_credit",
-        "documentary_collections",
+        "letra_de_cambio_bill_of_exchange",
         "open_account",
         "consignment",
         "cash_in_advance",
         "carta_de_credito_letter_of_credit",
         "incoterms_reglas_comerciales_internacionales",
-        "letra_de_cambio_bill_of_exchange",
-        "prevencion_problemas_de_pago"
+        "seguro_de_credito_a_la_exportacion"
       ],
       "condiciones_activacion": [
         "Cuando tienes que decidir cómo vas a cobrar una venta internacional",
-        "Cuando negocias con un comprador extranjero desconocido o con poco historial contigo"
+        "Cuando negocias con un comprador extranjero desconocido o con poco historial contigo",
+        "Cuando se busca reducir el riesgo de cuentas incobrables en mercados internacionales"
       ],
-      "etiqueta_arbol": "Elige tu Método de Pago"
+      "etiqueta_arbol": "Elige tu Método de Pago",
+      "ids_alias": [
+        "prevencion_problemas_de_pago"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "prevencion_problemas_de_pago",
+          "titulo": "Prevención de Problemas de Pago en Exportación",
+          "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        }
+      ]
     },
     "seleccion_de_proveedores_por_costo_total": {
       "node_id": "seleccion_de_proveedores_por_costo_total",
@@ -107439,7 +107597,8 @@
       "condiciones_activacion": [
         "Al lanzar o rediseñar el sitio web de reclutamiento de franquiciados"
       ],
-      "etiqueta_arbol": "Diseña tu Sitio para Captar"
+      "etiqueta_arbol": "Diseña tu Sitio para Captar",
+      "deprecado": true
     },
     "sitio_web_franquicia": {
       "node_id": "sitio_web_franquicia",
@@ -107450,23 +107609,38 @@
       "resumen_teorico": "El sitio web es el punto de entrada más importante para prospectos de franquicia. Debe funcionar como parte anuncio y parte material de apoyo, con el objetivo principal de capturar información de contacto del prospecto, no de responder todas sus preguntas. Un exceso de información puede permitir que el prospecto decida sin necesidad de contactar al franquiciador, eliminando oportunidades de venta.",
       "pasos_accionables": [
         "Diseñar una sección de oportunidad de franquicia separada de la sección al consumidor",
-        "Incluir mecanismos de captura de contacto visibles a un clic de distancia en cada página",
-        "Evitar dar información excesiva que permita al prospecto autoeliminarse sin contactar",
+        "Incluir mecanismos de captura de contacto visibles a un clic de distancia en cada página, del tipo formularios, descargas, videos",
+        "Evitar dar información excesiva que permita al prospecto autoeliminarse sin contactar, en especial la información financiera o de soporte",
         "Optimizar el sitio tanto para consumidores como para marketing de franquicia (SEO)",
-        "Usar llamados a la acción claros y persuasivos"
+        "Usar llamados a la acción claros y persuasivos",
+        "Definir la 'oferta de valor' que se entrega a cambio del contacto (ej. reporte, video)"
       ],
       "entregable_esperado": "Sitio web profesional con sección de franquicia optimizada para captura de leads",
       "nodos_previos": [
-        "propuesta_valor_franquicia"
+        "propuesta_valor_franquicia",
+        "calificacion_prospectos_marketing",
+        "multiples_compradores_influyentes"
       ],
       "nodos_siguientes": [
         "tasa_captura_leads",
-        "video_marketing_franquicia"
+        "video_marketing_franquicia",
+        "reduccion_riesgo_percibido"
       ],
       "condiciones_activacion": [
-        "Cuando se inicia la comercialización activa de la franquicia a nuevos prospectos"
+        "Cuando se inicia la comercialización activa de la franquicia a nuevos prospectos",
+        "Al lanzar o rediseñar el sitio web de reclutamiento de franquiciados"
       ],
-      "etiqueta_arbol": "Convierte tu Sitio en Imán"
+      "etiqueta_arbol": "Convierte tu Sitio en Imán",
+      "ids_alias": [
+        "sitio_web_captura_leads"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "sitio_web_captura_leads",
+          "titulo": "Diseñar el Sitio Web como Herramienta de Captura de Leads (No de Venta)",
+          "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ]
     },
     "six_sigma_dmaic": {
       "node_id": "six_sigma_dmaic",
@@ -107766,7 +107940,7 @@
         "visitas_soporte_campo",
         "programas_compra_franquicia",
         "investigacion_desarrollo_concepto",
-        "programa_de_referidos_de_franquiciados",
+        "referidos_franquiciados_existentes",
         "soporte_publicidad_marketing"
       ],
       "condiciones_activacion": [
@@ -113817,10 +113991,10 @@
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
       "resumen_teorico": "El U.S. Commercial Service es una red de especialistas comerciales del gobierno de Estados Unidos que te ayuda a evaluar tu potencial como exportador, identificar mercados y localizar distribuidores o socios en el extranjero. Tiene presencia en más de 75 países, con oficinas locales e internacionales que funcionan como ventanilla única. La asesoría es gratuita o de bajo costo, ideal si estás empezando a exportar o no tienes contactos en mercados en desarrollo. Además de la orientación inicial, puedes acceder a programas como el International Buyer Program, participar en ferias y misiones comerciales, y pedir una investigación a fondo de distribuidores potenciales antes de cerrar un acuerdo. Un caso real muestra que usar este servicio de forma constante permite expandirse a mercados en desarrollo con bajo costo y alto impacto.",
       "pasos_accionables": [
-        "Contacta la oficina local del U.S. Commercial Service más cercana a ti",
+        "Contacta la oficina local del U.S. Commercial Service más cercana a ti, incluida la afiliada a un DEC",
         "Pide una evaluación de tu potencial exportador y define qué requisitos técnicos y comerciales buscas en un distribuidor",
         "Solicita apoyo para identificar mercados y encontrar compradores o distribuidores en el extranjero",
-        "Participa en seminarios, ferias comerciales, misiones comerciales o el International Buyer Program",
+        "Participa en seminarios, ferias comerciales, misiones comerciales o el International Buyer Program, y en talleres o seminarios organizados por el DEC, como Export University",
         "Pide que investiguen a fondo a los distribuidores potenciales a través de las oficinas en el extranjero",
         "Da seguimiento a los contactos que generes y evalúa qué oportunidades de distribución te convienen"
       ],
@@ -113843,12 +114017,18 @@
       ],
       "etiqueta_arbol": "Aprovecha el Servicio Comercial",
       "ids_alias": [
-        "asistencia_us_commercial_service"
+        "asistencia_us_commercial_service",
+        "consejos_distrito_exportacion_dec"
       ],
       "merged_originals": [
         {
           "node_id": "asistencia_us_commercial_service",
           "titulo": "Asistencia del U.S. Commercial Service y Oficinas Locales",
+          "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        },
+        {
+          "node_id": "consejos_distrito_exportacion_dec",
+          "titulo": "Consejos de Distrito de Exportación (District Export Councils)",
           "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
         }
       ]
@@ -113886,24 +114066,38 @@
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
       "resumen_teorico": "Las empresas pequeñas y medianas pueden apoyarse en intermediarios especializados —Export Management Companies (EMC), Export Trading Companies (ETC), casas de confirmación (confirming houses), agentes de exportación o remarketers— para acceder a mercados extranjeros sin asumir toda la complejidad y riesgo de la exportación directa. Cada tipo de intermediario ofrece distintas ventajas: acceso inmediato a redes de distribución, manejo de pagos, especialización por producto o mercado, pero también implica pérdida parcial de control sobre la marca y la relación con el cliente final.",
       "pasos_accionables": [
-        "Identificar el tipo de intermediario más adecuado según producto y mercado (EMC, ETC, agente, confirming house)",
+        "Identificar el tipo de intermediario más adecuado según producto y mercado (EMC, ETC, agente, confirming house), y especializado en la industria o región objetivo",
         "Solicitar referencias comerciales y bancarias del intermediario",
-        "Negociar el nivel de control que la empresa retendrá (reportes, aprobación de publicidad)",
+        "Negociar el nivel de control que la empresa retendrá (reportes, aprobación de publicidad), y el alcance de responsabilidades delegadas",
         "Evaluar si el intermediario tomará título de la mercancía o actuará solo como comisionista",
-        "Formalizar el acuerdo especificando comisión, exclusividad y duración"
+        "Formalizar el acuerdo especificando comisión, exclusividad y duración, y el modelo de compensacion entre comisión, salario o retención",
+        "Evaluar si la empresa tiene recursos internos para exportar directamente"
       ],
       "entregable_esperado": "Contrato o acuerdo firmado con el intermediario seleccionado, incluyendo términos de comisión, territorio y mecanismos de control y reporte.",
       "nodos_previos": [
-        "metodos_exportacion_directa_indirecta_2"
+        "metodos_exportacion_directa_indirecta_2",
+        "instituciones_financieras_bancos"
       ],
       "nodos_siguientes": [
-        "negociacion_acuerdo_representante_extranjero"
+        "negociacion_acuerdo_representante_extranjero",
+        "consultores_comercio_internacional",
+        "metodos_exportacion_directa_indirecta_2"
       ],
       "condiciones_activacion": [
         "Si la empresa es nueva en exportación y no puede comprometer personal ni fondos a actividades complejas",
         "Si la empresa busca entrar rápido a un mercado sin desarrollar infraestructura propia"
       ],
-      "etiqueta_arbol": "Usa Intermediarios de Exportación"
+      "etiqueta_arbol": "Usa Intermediarios de Exportación",
+      "ids_alias": [
+        "intermediarios_exportacion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "intermediarios_exportacion",
+          "titulo": "Intermediarios de Exportación (EMC/ETC)",
+          "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        }
+      ]
     },
     "uso_preguntas_necesidad_beneficio": {
       "node_id": "uso_preguntas_necesidad_beneficio",
@@ -125308,7 +125502,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 140,
+    "nodos_sin_enlaces_entrantes": 151,
     "enlaces_rotos_en_grafo": 0
   }
 }
