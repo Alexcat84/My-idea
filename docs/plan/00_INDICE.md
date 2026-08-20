@@ -6,7 +6,16 @@ pasada **no haya que volver a pensar nada**, solo aplicar.
 > **MODO DE CIERRE VIGENTE. Aqui no se repara ni un nodo.** Todo lo que sigue es
 > documentacion.
 
-**EL PLAN ESTA CERRADO: ONCE FASES, 69 OPERACIONES, 68 LISTAS, Y QUINCE REGLAS EN SU BANCO. QUEDA UNA SOLA PENDIENTE, `OP-U-02`, Y NO ES UNA DECISION: ES UNA ESPERA CON DISPARADOR. LA SESION B QUEDA EN ESPERA FORMAL.**
+~~**EL PLAN ESTA CERRADO: ONCE FASES, 69 OPERACIONES, 68 LISTAS, Y QUINCE REGLAS EN SU BANCO. QUEDA UNA SOLA PENDIENTE, `OP-U-02`, Y NO ES UNA DECISION: ES UNA ESPERA CON DISPARADOR. LA SESION B QUEDA EN ESPERA FORMAL.**~~ (linea del **12 ago 2026**, no se borra)
+
+> **CORREGIDA CON INSTRUMENTO el 19 ago 2026 (vuelta 47), y las cifras nuevas salen de
+> `python scripts/loop/vuelta47_marcador_indice.py`
+> ([`../loop/SALIDA_V47_MARCADOR_INDICE.txt`](../loop/SALIDA_V47_MARCADOR_INDICE.txt), exit 0),
+> no de un recuerdo: **EL PLAN ESTA CERRADO: ONCE FASES, 71 OPERACIONES, 71 LISTAS, CERO
+> PENDIENTES, Y VEINTE REGLAS EN SU BANCO** (`P.1` a `P.20`, contadas en
+> [`BANCO_DEL_PLAN.md`](BANCO_DEL_PLAN.md) por el mismo instrumento). `OP-U-02` **paso a
+> LISTA en la vuelta 12** y su espera con disparador ya se cumplio: el archivo llego al
+> puesto **3.388**.
 
 > **SEGUNDA PASADA, 11 ago 2026: las QUINCE ADJUDICACIONES DEL AUDITOR estan
 > aplicadas**, cada una escrita dentro de su operacion en el campo `adjudicacion`.
@@ -114,27 +123,86 @@ el JSONL discrepan, manda el JSONL.
 
 ## EL MARCADOR
 
+### EL MARCADOR VIGENTE . corte **19 ago 2026** (vuelta 47)
+
+> **ESTA TABLA NO SE TECLEA: SE IMPRIME.** Sale entera de
+> `python scripts/loop/vuelta47_marcador_indice.py`
+> (salida completa en [`../loop/SALIDA_V47_MARCADOR_INDICE.txt`](../loop/SALIDA_V47_MARCADOR_INDICE.txt),
+> exit 0, instrumento de solo lectura), que cuenta
+> [`OPERACIONES.jsonl`](OPERACIONES.jsonl) fase por fase y estado por estado. **Es el
+> cuarto renglon de la regla 1 de `docs/loop/EJECUTOR.md` aplicado a la tabla que lo
+> pedia a gritos**: era una tabla de prosa que ningun instrumento validaba, y **cuatro
+> de sus filas llevaban desde el 12 de agosto sin calzar con el fichero.**
+
 | | |
 |---|---:|
-| operaciones | **69** |
-| **LISTAS** | **68** |
-| **DECISION PENDIENTE** | **1** |
+| operaciones | **71** |
+| **LISTAS** | **71** |
+| **DECISION PENDIENTE** | **0** |
 
 | fase | operaciones | LISTAS | pendientes |
 |---|---:|---:|---:|
-| **0 CODIGO** | 5 | **5** | 0 |
+| **0 CODIGO** | 7 | **7** | 0 |
 | **01 FUENTES** | 7 | **7** | 0 |
-| **02 DESTEJIDOS** | 7 | **7** | 0 |
-| **03 FUSIONES** | 16 | **15** | 1 |
+| **02 DESTEJIDOS** | 9 | **9** | 0 |
+| **03 FUSIONES** | 16 | **16** | 0 |
 | **04 ENLACES** | 10 | **10** | 0 |
-| **05 SANEO** | 12 | **12** | 0 |
-| **06 MESAS** | 5 | **5** | **0** |
+| **05 SANEO** | 10 | **10** | 0 |
+| **06 MESAS** | 5 | **5** | 0 |
 | **07 ADUANA** | 2 | **2** | 0 |
 | **08 VERIFICACION** | 1 | **1** | 0 |
 | **09 LECTURAS DIRIGIDAS** | 3 | **3** | 0 |
 | **10 INVENTARIO** | 1 | **1** | 0 |
 
-> **LAS TRES PENDIENTES SON UNA ESPERA Y DOS QUE ESPERAN LECTURAS**, no decisiones.
+**LAS CUATRO FILAS QUE NO CALZABAN, con las dos cifras delante**, tal como el propio
+instrumento las imprime en su seccion 3 (el auditor las midio y las confirmo en la
+vuelta 46, y aqui se **re-miden**, no se copian):
+
+| fila | publicaba el marcador viejo | **medido el 19 ago 2026** | por que se movio |
+|---|---:|---:|---|
+| **operaciones** | 69 | **71** | nacieron `OP-D-08` y `OP-D-09` el 14 ago 2026 |
+| **0 CODIGO** | 5 | **7** | `OP-S-06` y `OP-S-07` entraron a la fase 0 en los puestos 4 y 5 (ver la nota de `OP-C-05`) |
+| **02 DESTEJIDOS** | 7 | **9** | las mismas dos operaciones nuevas |
+| **05 SANEO** | 12 | **10** | las dos que se fueron a la fase 0 |
+
+**Y DOS CELDAS MAS QUE TAMPOCO CALZABAN, dichas aunque el conteo de filas no las
+cuente**, porque estaban en las columnas y no en la primera: **`03 FUSIONES` publicaba
+15 LISTAS y 1 pendiente, y hoy son 16 y 0**; en consecuencia el total de LISTAS pasa de
+**68 a 71** y el de `DECISION PENDIENTE` de **1 a 0**. `OP-U-02` **paso a LISTA en la
+vuelta 12**, con su correccion declarada escrita en su propio campo `adjudicacion`, y
+el marcador no se entero.
+
+### EL MARCADOR VIEJO, TACHADO Y NO BORRADO . corte **12 ago 2026**
+
+> **Una correccion que tapa lo que corrige no se puede auditar**, asi que la tabla vieja
+> se queda entera aqui debajo con su fecha. **Era exacta el 12 de agosto de 2026.**
+
+| | |
+|---|---:|
+| ~~operaciones~~ | ~~**69**~~ |
+| ~~**LISTAS**~~ | ~~**68**~~ |
+| ~~**DECISION PENDIENTE**~~ | ~~**1**~~ |
+
+| ~~fase~~ | ~~operaciones~~ | ~~LISTAS~~ | ~~pendientes~~ |
+|---|---:|---:|---:|
+| ~~**0 CODIGO**~~ | ~~5~~ | ~~**5**~~ | ~~0~~ |
+| ~~**01 FUENTES**~~ | ~~7~~ | ~~**7**~~ | ~~0~~ |
+| ~~**02 DESTEJIDOS**~~ | ~~7~~ | ~~**7**~~ | ~~0~~ |
+| ~~**03 FUSIONES**~~ | ~~16~~ | ~~**15**~~ | ~~1~~ |
+| ~~**04 ENLACES**~~ | ~~10~~ | ~~**10**~~ | ~~0~~ |
+| ~~**05 SANEO**~~ | ~~12~~ | ~~**12**~~ | ~~0~~ |
+| ~~**06 MESAS**~~ | ~~5~~ | ~~**5**~~ | ~~**0**~~ |
+| ~~**07 ADUANA**~~ | ~~2~~ | ~~**2**~~ | ~~0~~ |
+| ~~**08 VERIFICACION**~~ | ~~1~~ | ~~**1**~~ | ~~0~~ |
+| ~~**09 LECTURAS DIRIGIDAS**~~ | ~~3~~ | ~~**3**~~ | ~~0~~ |
+| ~~**10 INVENTARIO**~~ | ~~1~~ | ~~**1**~~ | ~~0~~ |
+
+> ~~**LAS TRES PENDIENTES SON UNA ESPERA Y DOS QUE ESPERAN LECTURAS**, no decisiones.~~
+> **CORREGIDO el 19 ago 2026: HOY NO HAY NINGUNA PENDIENTE. Las 71 estan en `LISTA`**,
+> medido en esta vuelta con el instrumento citado arriba. El parrafo que sigue se queda
+> escrito porque su contenido (las mesas adjudicadas, las dos lecturas del 12 que
+> cambiaron dos operaciones, el disparador de `OP-U-02`) **sigue siendo cierto**; lo
+> unico que envejecio es la cuenta de pendientes.
 > **LAS CINCO MESAS QUEDARON ADJUDICADAS** entre el 11 y el 12 de agosto, y las dos
 > lecturas del 12 (`LD-58` y `LD-59`) **cambiaron la forma de dos operaciones**: hoy
 > `OP-M-01-FUSION` y `OP-M-01-TRIO` son **una sola fusion de seis** a la que le faltan
@@ -334,7 +402,7 @@ orden, que espera a que, y **como se sabe que cada una esta HECHA.**
 |---:|---|---|---|
 | **0** | **CODIGO** | nada. **Va primera y bloquea todo lo que mueve un id** | las **cinco guardas** pasan en verde **y cada una fallo primero en su caso positivo**. Una guarda que nunca fallo no esta probada |
 | **1** | **FUENTES** | fase 0 | los **55 libros canonicos** normalizados, los **67 injertos** repartidos, y **ningun nodo con dos obras sin declarar** |
-| **2** | **DESTEJIDOS** | fase 1 | las **siete cirugias** hechas, cada una con su corte en el paso que la ficha nombra, y **el campo fuente con una sola obra** en cada nodo tocado |
+| **2** | **DESTEJIDOS** | fase 1 | ~~las **siete cirugias** hechas~~ **CORREGIDO el 19 ago 2026 (vuelta 47), medido con `scripts/loop/vuelta47_marcador_indice.py`: las NUEVE operaciones de la fase**, cada una con su corte en el paso que la ficha nombra, y **el campo fuente con una sola obra** en cada nodo tocado. La cifra de siete es del **12 ago 2026**, anterior a `OP-D-08` y `OP-D-09`. **Y la palabra *cirugias* tampoco calza ya con las nueve**, medido en la propia pagina de la fase: `OP-D-05` y `OP-D-07` quedaron **`SELLADA`s con su destejido CONSUMIDO por la fase 01**, sin cirugia propia que hacer |
 | **3** | **FUSIONES** | fase 2, **y cada acto su lectura de P.5** | **cada fusion simulada antes**, sus perdidas comprobadas **una por una** en el texto final, y **su alias cargando los ids que mueren** |
 | **4** | **ENLACES** | fase 3 | las aristas escritas **con ids RESUELTOS**, **una sola direccion** salvo los dos enlaces mutuos, y **cero aristas por alias nuevas** |
 | **5** | **SANEO** | fases 1 a 4 **enteras** | `OP-S-12` da **cero duplicadas** y el **vecindario resuelto de cada nodo no cambia** |
@@ -487,21 +555,37 @@ sola.**
 > ejecuta.** Todo lo que ha quedado LISTO lo esta **porque alguien mas lo adjudico**, y
 > lo que no, **esta escrito como pregunta con sus opciones.**
 
-## EL ESTADO EN QUE QUEDA TODO
+## EL ESTADO EN QUE QUEDA TODO . **cierre de la sesion B, corte 12 ago 2026**
 
-| | |
-|---|---:|
-| operaciones | **69** |
-| **LISTAS** | **68** |
-| pendientes | **1**, `OP-U-02` |
-| reglas del banco del plan | **15** |
-| fronteras declaradas | **5** |
-| entradas del inventario | **336** |
-| lecturas dirigidas **hechas** | **65** |
-| lecturas dirigidas **encargadas y sin hacer** | **CERO** |
-| **corte del archivo** | **2.117 de 3.388** |
+> **AVISO DE CORTE anadido el 19 ago 2026 (vuelta 47): esta tabla es el CIERRE DE
+> AQUELLA SESION y su corte es el suyo, el puesto 2.117.** Se deja escrita porque es un
+> registro fechado y no un marcador vigente. **El marcador vigente vive arriba, en la
+> seccion `EL MARCADOR`, impreso con instrumento.** Las cinco filas cuya cifra ha
+> cambiado desde entonces llevan su correccion al lado, **medida hoy y no recordada**.
 
-> **`OP-U-02` no espera una decision: espera un puesto.**
+| | | **medido el 19 ago 2026** |
+|---|---:|---|
+| operaciones | **69** | **71** |
+| **LISTAS** | **68** | **71** |
+| pendientes | **1**, `OP-U-02` | **0** |
+| reglas del banco del plan | **15** | **20** (`P.1` a `P.20`) |
+| fronteras declaradas | **5** | **5**, sin cambio |
+| entradas del inventario | **336** | **672** |
+| lecturas dirigidas **hechas** | **65** | no lo mide este instrumento: **a verificar** |
+| lecturas dirigidas **encargadas y sin hacer** | **CERO** | no lo mide este instrumento: **a verificar** |
+| **corte del archivo** | **2.117 de 3.388** | **3.388 de 3.388**, el cribado cerrado |
+
+**Las cifras de la columna nueva salen de
+`python scripts/loop/vuelta47_marcador_indice.py`
+([`../loop/SALIDA_V47_MARCADOR_INDICE.txt`](../loop/SALIDA_V47_MARCADOR_INDICE.txt), exit 0),
+secciones 2 y 4**, salvo el corte del archivo, que sale de
+`python scripts/loop/vuelta31_estado.py`
+([`../loop/SALIDA_V47_APERTURA.txt`](../loop/SALIDA_V47_APERTURA.txt)): **n 3.388, cero
+huecos y cero duplicados**. **Las dos filas de lecturas dirigidas se marcan A VERIFICAR
+en vez de repetirse**, porque ningun instrumento corrido en esta vuelta las cuenta y
+una cifra sin medicion de hoy no se republica.
+
+> ~~**`OP-U-02` no espera una decision: espera un puesto.**~~ **Y el puesto llego.**
 
 ## CONFIRMACION FINAL, 12 ago 2026
 

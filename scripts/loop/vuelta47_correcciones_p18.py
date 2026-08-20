@@ -193,7 +193,7 @@ def main():
     nuevo_raw = "\n".join(salida)
     print("  lineas antes: %d   lineas despues: %d" % (len(lineas), len(salida)))
     print("  campos escritos: %d" % len(cambios))
-    for mal, nombre in ((u"—", "guion largo"), (u"–", "guion medio")):
+    for mal, nombre in ((u"\u2014", "guion largo"), (u"\u2013", "guion medio")):
         print("  %s en el fichero entero: %d" % (nombre, nuevo_raw.count(mal)))
     antes = {json.loads(l)["id_op"]: l for l in lineas if l.strip()}
     despues = {json.loads(l)["id_op"]: l for l in salida if l.strip()}
