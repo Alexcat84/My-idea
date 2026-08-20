@@ -1,0 +1,171 @@
+==============================================================================
+OP-U-01, TRAMO 1, P.12, LOTE A DE LA VUELTA 53: los actos 7, 8, 9 y 11 de la nomina del cierre de la vuelta 52 (el LIENZO DE PROPUESTA DE VALOR, los PROMPTS, los WARRANTS y la HUELLA DE CARBONO) . MODO SIMULAR
+plan: docs/loop/PLAN_V53_OPU01_LOTE_A.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3489 vivos, 364 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive value_proposition_canvas . absorbe customer_profile_value_map
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de customer_profile_value_map al PASO 2 del superviviente
+        inciso VERBATIM: 'los jobs, pains y gains del cliente'
+        nexo (lo unico de cosecha propia): ', especificando en él '
+        paso resultante: Dibujar el círculo del Customer Profile a la derecha, especificando en él los jobs, pains y gains del cliente
+     del paso 2 de customer_profile_value_map al PASO 3 del superviviente
+        inciso VERBATIM: 'cómo tu producto/servicio alivia pains y crea gains'
+        nexo (lo unico de cosecha propia): ', documentando en él '
+        paso resultante: Dibujar el cuadrado del Value Map a la izquierda, documentando en él cómo tu producto/servicio alivia pains y crea gains
+  alias del superviviente: ['customer_profile_value_map']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive ingenieria_de_prompts_efectiva . absorbe asignacion_persona_ia
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 1 de asignacion_persona_ia al PASO 1 del superviviente
+        inciso VERBATIM: "(ej. 'actúa como director de marketing de una startup B2B')"
+        nexo (lo unico de cosecha propia): ' '
+        paso resultante: Definir qué 'tipo de persona' o rol debe adoptar la IA antes de hacer la solicitud (ej. 'actúa como director de marketing de una startup B2B')
+     del paso 3 de asignacion_persona_ia al PASO 4 del superviviente
+        inciso VERBATIM: 'refinando el output paso a paso en vez de pedir la respuesta final de una sola vez'
+        nexo (lo unico de cosecha propia): ', y en modo conversación, '
+        paso resultante: Iterar el prompt si la respuesta es genérica, agregando más especificidad, y en modo conversación, refinando el output paso a paso en vez de pedir la respuesta final de una sola vez
+  alias del superviviente: ['asignacion_persona_ia']
+
+------------------------------------------------------------------------------
+ACTO 3 . sobrevive warrant_pricing_venture_debt . absorbe warrants_deuda_convertible
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 1 -> 3 (anadidas 2)
+  alias del superviviente: ['warrants_deuda_convertible']
+
+------------------------------------------------------------------------------
+ACTO 4 . sobrevive medir_huella_carbono_corporativa . absorbe huella_carbono_empresarial
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 3 -> 5 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 1 de huella_carbono_empresarial al PASO 1 del superviviente
+        inciso VERBATIM: '(qué divisiones, filiales o franquicias incluir)'
+        nexo (lo unico de cosecha propia): ' Define el límite organizacional '
+        paso resultante: Identifica todas las fuentes de emisión dentro de tu operación. Define el límite organizacional (qué divisiones, filiales o franquicias incluir)
+  alias del superviviente: ['evaluar_huella_carbono', 'huella_carbono_empresarial']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 14
+   convertible_debt_fundamentos                         nodos_siguientes  warrants_deuda_convertible -> warrant_pricing_venture_debt
+   definir_limites_huella_carbono                       nodos_previos     huella_carbono_empresarial -> medir_huella_carbono_corporativa
+   design_test_repeat                                   nodos_previos     customer_profile_value_map -> value_proposition_canvas
+   fit_problema_solucion                                nodos_previos     customer_profile_value_map -> value_proposition_canvas
+   human_in_the_loop_ia                                 nodos_siguientes  asignacion_persona_ia -> ingenieria_de_prompts_efectiva
+   innovation_games_speedboat                           nodos_previos     customer_profile_value_map -> value_proposition_canvas
+   metricas_impacto_ambiental                           nodos_siguientes  huella_carbono_empresarial -> medir_huella_carbono_corporativa
+   priorizacion_issues                                  nodos_siguientes  huella_carbono_empresarial -> medir_huella_carbono_corporativa
+   prototyping_possibilities                            nodos_previos     customer_profile_value_map -> value_proposition_canvas
+   seis_formas_innovar_perfil_cliente                   nodos_siguientes  customer_profile_value_map -> value_proposition_canvas
+   simulacion_clientes_ia                               nodos_previos     asignacion_persona_ia -> ingenieria_de_prompts_efectiva
+   understanding_customers_tecnicas                     nodos_previos     customer_profile_value_map -> value_proposition_canvas
+   warrant_pricing_venture_debt                         nodos_previos     warrants_deuda_convertible -> warrant_pricing_venture_debt
+   warrants_financiamiento                              nodos_siguientes  warrants_deuda_convertible -> warrant_pricing_venture_debt
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 0
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 0
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   warrant_pricing_venture_debt                         nodos_previos
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 999
+  duplicadas tras resolver DESPUES del tramo                          : 999
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 0, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 20 de 20
+guarda D, los 4 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (28 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 customer_profile_value_map                   paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Especificar los jobs, pains y gains del cliente en el Customer Profile.
+    1 customer_profile_value_map                   paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Documentar cómo tu producto/servicio alivia pains y crea gains en el Value Map.
+    1 customer_profile_value_map                   paso         3  PASO 5 del superviviente
+        Comunicar ambos documentos a toda la organización para crear entendimiento compartido.
+    1 customer_profile_value_map                   paso         4  PASO 6 del superviviente
+        Usar los documentos como scoreboard durante conversaciones reales con clientes.
+    1 customer_profile_value_map                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se inicia el diseño de una propuesta de valor.
+    1 customer_profile_value_map                   condicion    2  CONDICION 2 del superviviente
+        Cuando el equipo no tiene un entendimiento compartido del cliente.
+    2 asignacion_persona_ia                        paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir un rol específico y relevante para la tarea antes de escribir el prompt (ej. 'actúa como director de marketing de una startup B2B')
+    2 asignacion_persona_ia                        paso         2  ya lo dice el PASO 2 del superviviente
+        Dar contexto y restricciones claras junto con la persona asignada
+    2 asignacion_persona_ia                        paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Iterar en modo conversación, refinando el output paso a paso en vez de pedir la respuesta final de una sola vez
+    2 asignacion_persona_ia                        paso         4  ya lo dice el PASO 1 del superviviente
+        Probar múltiples personas para la misma tarea y comparar la calidad de las respuestas
+    2 asignacion_persona_ia                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando las respuestas genéricas de la IA no aportan valor diferencial
+    2 asignacion_persona_ia                        condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Al iniciar sesiones de brainstorming o generación de contenido con IA
+    3 warrants_deuda_convertible                   paso         1  PASO 5 del superviviente
+        Evalúa si te conviene usar warrants en lugar de un descuento simple; normalmente esto aplica más en rondas posteriores, no en las primeras.
+    3 warrants_deuda_convertible                   paso         2  ya lo dice el PASO 1 del superviviente
+        Define qué porcentaje del monto de la nota cubrirán los warrants (por ejemplo, un 20%).
+    3 warrants_deuda_convertible                   paso         3  ya lo dice el PASO 4 del superviviente
+        Decide el precio al que se podrán ejercer y si será sobre acciones comunes o preferentes.
+    3 warrants_deuda_convertible                   paso         4  PASO 6 del superviviente
+        Fija el plazo para ejercer los warrants (entre 5 y 10 años) y qué pasa con ellos si tu negocio se fusiona con otro.
+    3 warrants_deuda_convertible                   paso         5  PASO 7 del superviviente
+        Pide que el pago de los warrants quede separado del resto, para evitar problemas contables (Original Issue Discount, OID).
+    3 warrants_deuda_convertible                   condicion    1  CONDICION 2 del superviviente
+        Si quien te presta insiste en warrants en lugar de descuento.
+    3 warrants_deuda_convertible                   condicion    2  CONDICION 3 del superviviente
+        Si estás levantando deuda convertible en una etapa más avanzada de tu negocio.
+    4 huella_carbono_empresarial                   paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir el límite organizacional (qué divisiones, filiales o franquicias incluir)
+    4 huella_carbono_empresarial                   paso         2  ya lo dice el PASO 2 del superviviente
+        Definir el límite operacional según scope 1 (emisiones directas), scope 2 (electricidad comprada) y scope 3 (cadena de suministro y empleados)
+    4 huella_carbono_empresarial                   paso         3  ya lo dice el PASO 3 del superviviente
+        Recolectar datos de consumo energético y actividades relacionadas con emisiones
+    4 huella_carbono_empresarial                   paso         4  PASO 6 del superviviente
+        Convertir todos los GEI a CO2 equivalente usando factores de potencial de calentamiento global
+    4 huella_carbono_empresarial                   paso         5  PASO 7 del superviviente
+        Establecer un año base y período de medición para comparaciones futuras
+    4 huella_carbono_empresarial                   paso         6  ya lo dice el PASO 4 del superviviente
+        Aplicar el estándar Greenhouse Gas Protocol para garantizar comparabilidad
+    4 huella_carbono_empresarial                   condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando la empresa necesita reportar emisiones de GEI de forma voluntaria u obligatoria
+    4 huella_carbono_empresarial                   condicion    2  CONDICION 4 del superviviente
+        Si se busca identificar oportunidades de ahorro energético mediante análisis de emisiones
+    4 huella_carbono_empresarial                   condicion    3  CONDICION 5 del superviviente
+        Cuando se planea establecer metas de neutralidad de carbono
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 4
+  nodos implicados    : 8
+  nodos que MUEREN    : 4
+  piezas repartidas   : 28 (12 viajan enteras, 11 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.

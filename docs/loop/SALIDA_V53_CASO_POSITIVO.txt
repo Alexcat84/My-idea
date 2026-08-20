@@ -1,0 +1,29 @@
+==============================================================================
+CASO POSITIVO DE LA VUELTA 53: LAS CUATRO GUARDAS PUESTAS A FALLAR
+==============================================================================
+
+  1. GUARDA 1B con un absorbido que es PUERTA
+     exit=1 | aborta sin escribir: SI
+     guarda 1B, ningun absorbido es semilla ni extremo de puente: ROJO
+     VEREDICTO: LA GUARDA MUERDE
+
+  2. GUARDA DE COBERTURA con un paso olvidado
+     exit=1 | aborta sin escribir: SI
+     guarda 2, cobertura exacta de indices (cero olvidos): ROJO
+     [ROJO] acto 1, pasos de customer_profile_value_map: faltan ['3'], sobran []
+     [ROJO] acto 1: marca desconocida ''
+     VEREDICTO: LA GUARDA MUERDE
+
+  3. GUARDA DEL INCISO VERBATIM con una parafrasis en vez de un trozo literal
+     exit=1 | aborta sin escribir: SI
+     OP-U-01, TRAMO CASO POSITIVO inciso: el inciso NO es trozo verbatim . MODO SIMULAR
+     [ROJO] acto 1: el inciso 'las tareas, dolores y alegrias del cliente' NO es trozo verbatim del paso 1 de customer_profile_value_map
+     VEREDICTO: LA GUARDA MUERDE
+
+  4. GUARDA DE COLISIONES contra una cuenta esperada FALSA
+     CUENTA ESPERADA: 9 | MEDIDA: 0 | CALZA: NO
+     VEREDICTO: LA GUARDA MUERDE
+
+  planes de mentira borrados: _caso_positivo_v53_1b.json, _caso_positivo_v53_cobertura.json, _caso_positivo_v53_inciso.json
+
+RESULTADO: LAS CUATRO GUARDAS MUERDEN

@@ -9,12 +9,16 @@
     "Revisa cómo aparece la cobertura del warrant en el documento de términos (term sheet): como porcentaje del préstamo, como valor económico, o como puntos base de propiedad diluida.",
     "Compara el valor económico real entre las distintas propuestas que recibas, usando como referencia el porcentaje de propiedad totalmente diluida.",
     "Negocia sobre qué tipo de acción se va a ejercer el warrant, preferente o común, y revisa las protecciones contra dilución.",
-    "Negocia el precio de ejercicio (strike price) tratando de anclarlo a la valuación de tu próxima ronda si esperas que suba bastante."
+    "Negocia el precio de ejercicio (strike price) tratando de anclarlo a la valuación de tu próxima ronda si esperas que suba bastante.",
+    "Evalúa si te conviene usar warrants en lugar de un descuento simple; normalmente esto aplica más en rondas posteriores, no en las primeras.",
+    "Fija el plazo para ejercer los warrants (entre 5 y 10 años) y qué pasa con ellos si tu negocio se fusiona con otro.",
+    "Pide que el pago de los warrants quede separado del resto, para evitar problemas contables (Original Issue Discount, OID)."
   ],
   "entregable_esperado": "Una tabla donde compares los términos del warrant entre los distintos prestamistas: cobertura, valor económico, tipo de acción y precio de ejercicio.",
   "nodos_previos": [
     "fuentes_financiamiento_startup",
-    "warrants_deuda_convertible"
+    "convertible_debt_fundamentos",
+    "warrants_financiamiento"
   ],
   "nodos_siguientes": [
     "amortizacion_y_periodo_de_gracia",
@@ -22,7 +26,19 @@
     "seleccion_prestamista_relacion_vs_transaccion"
   ],
   "condiciones_activacion": [
-    "Si estás evaluando pedir deuda de riesgo (venture debt) como complemento al capital que ya levantaste."
+    "Si estás evaluando pedir deuda de riesgo (venture debt) como complemento al capital que ya levantaste.",
+    "Si quien te presta insiste en warrants en lugar de descuento.",
+    "Si estás levantando deuda convertible en una etapa más avanzada de tu negocio."
   ],
-  "etiqueta_arbol": "Fija el Precio de tus Opciones"
+  "etiqueta_arbol": "Fija el Precio de tus Opciones",
+  "ids_alias": [
+    "warrants_deuda_convertible"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "warrants_deuda_convertible",
+      "titulo": "Los warrants como alternativa al descuento (warrants)",
+      "fuente": "Venture Deals - Brad Feld"
+    }
+  ]
 }

@@ -1,0 +1,154 @@
+{
+ "operacion": "OP-U-01",
+ "tramo": "1, P.12, LOTE A DE LA VUELTA 53: los actos 7, 8, 9 y 11 de la nomina del cierre de la vuelta 52 (el LIENZO DE PROPUESTA DE VALOR, los PROMPTS, los WARRANTS y la HUELLA DE CARBONO)",
+ "fecha": "2026-08-20",
+ "vuelta": 53,
+ "estado": "SELLADO",
+ "nomina": "docs/loop/RECOMPUTO_V52_CIERRE.jsonl",
+ "dossier": "docs/loop/SALIDA_V53_DOSSIER_01_23.txt",
+ "vara": "P.12 con la receta RATIFICADA (acta de la vuelta 50, preguntas 1 a 3; acta de la vuelta 51; acta de la vuelta 52, pregunta 1): dado un superviviente S, PARTE A = S mas los miembros con arista A contra S; MIXTOS = los miembros sin arista A contra S; S es VIABLE si su parte A es clique A y deja al menos un mixto fuera. Entre los viables elige el CONTENIDO como P.8 lo define: el texto de los pasos y las condiciones, el material propio, el padre declarado y el ALCANCE DEL ROL, todo EN LAS RAZONES del archivo; el conteo de caracteres del resumen NO desempata. Si el contenido calla, el CABLEADO decide solo. Si tambien empata, se DECLARA el acto como empate sin vara.",
+ "viabilidad": "docs/loop/SALIDA_V53_VIABLES.txt, corrida sobre la nomina del cierre de la vuelta 52. Los cuatro actos salen VARIOS VIABLES con dos cada uno, y en los cuatro el CENTRO de la estrella no es viable porque no deja ningun mixto fuera.",
+ "colisiones_esperadas": "docs/loop/SALIDA_V53_COLISIONES_ESPERADAS.txt, medidas ANTES de tocar un nodo sobre EL ARCHIVO ENTERO, por PAR RESUELTO. Una colision real fuera de esa prediccion detiene.",
+ "carril_de_colisiones": "CARRIL GENERAL DE COLISIONES, adjudicado en el acta de la vuelta 52, pregunta 4, y registrado en docs/plan/03_FUSIONES.md por la TAREA 1.4.b de esta vuelta: volteo por maquina SOLO para el A ARRASTRADO contra un DIRECTO D, citando el directo y pegando la razon vieja entera; cualquier veredicto DEL FILO (B o C) en CUALQUIERA de los dos lados se RELEE EN EL MISMO ACTO con el otro como contraste, LA RELECTURA DECIDE CUAL SE MUEVE, y si destapa politica el acto se declara.",
+ "vara_de_las_puertas": "Medida hoy con el instrumento reparado en la TAREA 1.3 (docs/loop/SALIDA_V53_PUERTAS_APERTURA.txt, 31 actos con puerta dentro: 26 salvables, 2 imposibles por nomina, 3 por estructura, 0 sin receta). Ninguno de los absorbidos de este lote es semilla ni extremo de puente aprobado.",
+ "politica_del_reparto": "LA MISMA DEL LOTE B DE LA VUELTA 52, heredada y citada, no reinventada (acta 51, D3, y acta 52, D5 y D10): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND. Y una pieza cuya linea vive ENTERA en un vecino VIVO del racimo (el mixto que sobrevive, o un nodo de fuera que un veredicto declara su dueno) va de CUBIERTO con la perdida NOMBRADA, que es la vara del D6 del acta 51.",
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "value_proposition_canvas",
+    "customer_profile_value_map"
+   ],
+   "miembros_del_acto_entero": [
+    "customer_profile",
+    "customer_profile_value_map",
+    "value_proposition_canvas"
+   ],
+   "mixto_que_queda_fuera": "customer_profile",
+   "superviviente": "value_proposition_canvas",
+   "motivo": "CONTENIDO, Y LO DECIDE EL ALCANCE DEL ROL MAS EL PADRE DECLARADO, que P.8 nombra como contenido con el mismo peso que los pasos. Los dos viables medidos hoy son value_proposition_canvas y customer_profile; customer_profile_value_map es el CENTRO de la estrella y no es viable porque no deja ningun mixto fuera. Entre los dos viables el conteo apunta a customer_profile (5 pasos contra 4, 2 condiciones contra 1) Y EL CONTENIDO APUNTA AL OTRO, asi que el conteo no manda: el puesto 705, que es el veredicto DIRECTO del par mixto, escribe el alcance de cada uno sin rodeos, value_proposition_canvas es EL INSTRUMENTO ENTERO en cuatro instrucciones de montaje y customer_profile es EL CIRCULO DE LA DERECHA trabajado a fondo, o sea el continente y UNA DE SUS DOS MITADES. Y el puesto 477 declara al que muere SEGUNDA VERSION DEL CENTRO SIN CASA y a value_proposition_canvas EL CENTRO DE LA FAMILIA, verificado por el grafo en la propia razon: el centro enlaza con las TRES piezas que nombra y el gemelo no enlaza con ninguna. Una cabeza que vale para las dos mitades no puede llamarse como una sola (P.8, alcance del rol): sobrevive el continente. NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X, asi que aqui no hay choque de letra contra aritmetica.",
+   "absorbidos": [
+    "customer_profile_value_map"
+   ],
+   "pasos": {
+    "customer_profile_value_map": {
+     "1": "INCISO:2|los jobs, pains y gains del cliente|, especificando en él ",
+     "2": "INCISO:3|cómo tu producto/servicio alivia pains y crea gains|, documentando en él ",
+     "3": "APPEND",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "customer_profile_value_map": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PUESTO 475 ESCRIBE LA LISTA DE LO QUE HAY QUE SALVAR Y AQUI SE SALVA PIEZA A PIEZA: dice que el paso 1 del que muere es customer_profile ENTERO y su paso 2 es value_map ENTERO, y que LO UNICO PROPIO QUE ANADE es comunicar los documentos a la organizacion y usarlos como marcador. Las DOS piezas propias viajan ENTERAS de APPEND, que es lo que la razon pide. Las otras dos van de INCISO y no de CUBIERTO, y el motivo se dice: los pasos 2 y 3 del superviviente mandan DIBUJAR el circulo del perfil y el cuadrado del mapa de valor, y no dicen QUE SE ESCRIBE DENTRO; el que muere si lo dice, y eso es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene. Los dos pasos resultantes se leen limpios. NOTA SOBRE LOS DOS NODOS VIVOS QUE LA RAZON NOMBRA, dicha en vez de callada: customer_profile es el MIXTO de este acto y SOBREVIVE, y value_map es un nodo vivo de fuera del acto; los incisos no los duplican, porque lo que adosan es el CONTENIDO del circulo y del cuadrado dentro de la instruccion de montaje, no el procedimiento entero de cada mitad. CERO PERDIDAS NOMBRADAS en este acto. Su condicion 1 esta CUBIERTA por la condicion 1 del superviviente (las dos dicen cuando se inicia el diseno de una propuesta de valor) y la 2 viaja entera porque habla de otra cosa, el entendimiento compartido del equipo."
+  },
+  {
+   "orden": 2,
+   "miembros": [
+    "ingenieria_de_prompts_efectiva",
+    "asignacion_persona_ia"
+   ],
+   "miembros_del_acto_entero": [
+    "asignacion_persona_ia",
+    "ingenieria_de_prompts_efectiva",
+    "prompting_por_persona_ia"
+   ],
+   "mixto_que_queda_fuera": "prompting_por_persona_ia",
+   "superviviente": "ingenieria_de_prompts_efectiva",
+   "motivo": "CONTENIDO, Y LO DECIDE EL PADRE DECLARADO, que P.8 nombra como contenido con el mismo peso que los pasos. Los dos viables medidos hoy son ingenieria_de_prompts_efectiva y prompting_por_persona_ia; asignacion_persona_ia es el CENTRO y no es viable porque no deja ningun mixto fuera. Entre los dos viables LAS DOS VARAS DE CONTEO EMPATAN (4 pasos cada uno, 2 condiciones cada uno) y el cableado apunta a prompting_por_persona_ia (3 contra 2), pero el cableado NO LLEGA A HABLAR porque el contenido no calla: el puesto 1144, que es el veredicto DIRECTO del par mixto, declara la jerarquia con todas las letras, ingenieria_de_prompts_efectiva es LA ANATOMIA DEL PROMPT y dice en su paso 1, EN UNA LINEA, definir que tipo de persona debe adoptar la maquina; prompting_por_persona_ia TRAE EL PROCEDIMIENTO DE ESA LINEA. Madre e hija, y el puesto 1175 lo repite: el centro que muere es LA UNION DE UNA MADRE Y DE SU HIJA y NO TIENE NADA QUE SEA SUYO. La madre absorbe al centro y la hija se queda fuera como mixto, que es la unica direccion que no invierte la jerarquia que el archivo declaro. NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X, asi que aqui no hay choque de letra contra aritmetica.",
+   "absorbidos": [
+    "asignacion_persona_ia"
+   ],
+   "pasos": {
+    "asignacion_persona_ia": {
+     "1": "INCISO:1|(ej. 'actúa como director de marketing de una startup B2B')| ",
+     "2": "CUBIERTO:2",
+     "3": "INCISO:4|refinando el output paso a paso en vez de pedir la respuesta final de una sola vez|, y en modo conversación, ",
+     "4": "CUBIERTO:1"
+    }
+   },
+   "condiciones": {
+    "asignacion_persona_ia": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "EL PUESTO 1175 ESCRIBE LA LISTA DE LO QUE HAY QUE SALVAR Y AQUI SE SALVA PIEZA A PIEZA, con la verificacion que la propia razon ya trae hecha. Su paso 2, dar contexto y restricciones claras, la razon dice que SOBREVIVE VERBATIM en los pasos 2 y 3 del superviviente (CUBIERTO:2, y la mitad de las restricciones vive en el paso 3). Su paso 1 es el paso 1 del superviviente con un EJEMPLO encima, y el ejemplo es un parametro concreto del gesto que ya existe: va de INCISO ADOSADO y el paso resultante se lee limpio. Su paso 3 NO sobrevive verbatim y la razon lo dice con precision, aquella itera EL PROMPT y esta itera LA CONVERSACION: va de INCISO ADOSADO al paso 4 para que la conversacion no se pierda, que es la figura de la SALVAGUARDA de la tabla de los seis motivos. PERDIDA NOMBRADA, UNA: su paso 4, probar multiples personas para la misma tarea y comparar la calidad de las respuestas, se marca CUBIERTO:1 Y SE DECLARA LO QUE SE PIERDE, la COMPARACION entre varias personas. NO viaja de APPEND, y el motivo es la vara del D6 del acta 51: la linea vive ENTERA en un vecino VIVO, el paso 2 de prompting_por_persona_ia, que es el MIXTO de este acto y SOBREVIVE; y ademas el puesto 1144 declara ese paso PROCEDIMIENTO PROPIO DE LA HIJA, asi que meterlo en la madre seria re-fundir por la ventana lo que el archivo separo por la puerta. Sus DOS condiciones estan CUBIERTAS por las dos del superviviente, comprobado texto contra texto: respuestas genericas contra respuestas genericas o poco utiles, y brainstorming o generacion de contenido contra analisis, redaccion o ideacion de negocio."
+  },
+  {
+   "orden": 3,
+   "miembros": [
+    "warrant_pricing_venture_debt",
+    "warrants_deuda_convertible"
+   ],
+   "miembros_del_acto_entero": [
+    "warrant_pricing_venture_debt",
+    "warrants_deuda_convertible",
+    "warrants_financiamiento"
+   ],
+   "mixto_que_queda_fuera": "warrants_financiamiento",
+   "superviviente": "warrant_pricing_venture_debt",
+   "motivo": "CONTENIDO, Y LO DECIDE EL ALCANCE DEL ROL, con la vara de conteo que no empata apuntando al otro lado y por eso VA MARCADO. Los dos viables medidos hoy son warrant_pricing_venture_debt y warrants_financiamiento; warrants_deuda_convertible es el CENTRO y no es viable porque no deja ningun mixto fuera. Entre los dos viables los PASOS EMPATAN (4 y 4) y las CONDICIONES APUNTAN A warrants_financiamiento (2 contra 1); el cableado apunta a warrant_pricing_venture_debt (5 contra 4). EL CONTENIDO NO CALLA Y POR ESO DECIDE: el puesto 1448, veredicto DIRECTO del par mixto, escribe el alcance de cada uno, warrant_pricing_venture_debt TRABAJA LA MECANICA DEL PRECIO y warrants_financiamiento TRABAJA LA DECISION DE ACEPTAR. Y lo que decide es DE QUIEN ES EL MATERIAL DEL QUE MUERE: el puesto 1028 dice que lo comun entre el centro y warrant_pricing_venture_debt es EL INSTRUMENTO ENTERO, definir que porcentaje cubren los warrants, decidir el precio de ejercicio y sobre que clase de accion se ejercen; y el entregable del centro es LOS TERMINOS DE LOS WARRANTS YA DEFINIDOS, porcentaje de cobertura, precio de ejercicio, plazo y que pasa en caso de fusion. Ese material es la MECANICA DEL PRECIO, no la DECISION DE ACEPTAR. NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X, asi que aqui no hay choque de letra contra aritmetica.",
+   "absorbidos": [
+    "warrants_deuda_convertible"
+   ],
+   "pasos": {
+    "warrants_deuda_convertible": {
+     "1": "APPEND",
+     "2": "CUBIERTO:1",
+     "3": "CUBIERTO:4",
+     "4": "APPEND",
+     "5": "APPEND"
+    }
+   },
+   "condiciones": {
+    "warrants_deuda_convertible": {
+     "1": "APPEND",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PUESTO 1028 ESCRIBE LA LISTA DE LO QUE HAY QUE SALVAR Y AQUI SE SALVA PIEZA A PIEZA: dice que lo propio de warrants_deuda_convertible son TRES, evaluar si conviene el warrant en vez de un descuento simple, fijar el plazo de ejercicio entre cinco y diez anos y que pasa si el negocio se fusiona, y pedir que el pago quede separado para evitar el problema contable del descuento de emision original. LAS TRES VIAJAN ENTERAS DE APPEND y ninguna se pierde. Las otras dos estan CUBIERTAS y la razon ya las declaraba comunes: su paso 2, definir que porcentaje del monto cubren los warrants, es el paso 1 del superviviente, revisar como aparece la cobertura en el documento de terminos, si como porcentaje del prestamo o de otra forma (CUBIERTO:1); y su paso 3, decidir el precio de ejercicio y si va sobre comunes o preferentes, vive PARTIDO EN DOS pasos del superviviente, el 4 negocia el precio de ejercicio y el 3 negocia sobre que tipo de accion se ejerce, y se marca CUBIERTO:4 por el grueso de la linea con la otra mitad dicha aqui. CERO PERDIDAS NOMBRADAS en este acto. Sus DOS condiciones viajan enteras porque hablan de otra cosa que la unica del superviviente: aquella es evaluar deuda de riesgo como complemento del capital ya levantado, y estas son que el prestamista insista en warrants en lugar de descuento y que se este levantando deuda convertible en una etapa mas avanzada."
+  },
+  {
+   "orden": 4,
+   "miembros": [
+    "medir_huella_carbono_corporativa",
+    "huella_carbono_empresarial"
+   ],
+   "miembros_del_acto_entero": [
+    "definir_limites_huella_carbono",
+    "huella_carbono_empresarial",
+    "medir_huella_carbono_corporativa"
+   ],
+   "mixto_que_queda_fuera": "definir_limites_huella_carbono",
+   "superviviente": "medir_huella_carbono_corporativa",
+   "motivo": "CONTENIDO, Y LAS TRES VARAS APUNTAN AL MISMO LADO SIN UNA SOLA EN CONTRA. Los dos viables medidos hoy son medir_huella_carbono_corporativa y definir_limites_huella_carbono; huella_carbono_empresarial es el CENTRO y no es viable porque no deja ningun mixto fuera. Entre los dos viables: PASOS 5 contra 4, CONDICIONES 3 contra 2 y CABLEADO 4 contra 3, los tres a favor de medir_huella_carbono_corporativa, que ademas es el unico de los tres que lleva alias (evaluar_huella_carbono). Y EL ALCANCE DEL ROL dice lo mismo: el entregable del centro que muere es un REPORTE DE HUELLA DE CARBONO con las emisiones de alcance 1, 2 y 3 cuantificadas en CO2 equivalente, que es un INVENTARIO COMPLETO, y ese es el entregable de medir_huella_carbono_corporativa, no el de definir_limites_huella_carbono, que entrega un DOCUMENTO DE LIMITES. NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X, asi que aqui no hay choque de letra contra aritmetica.",
+   "absorbidos": [
+    "huella_carbono_empresarial"
+   ],
+   "pasos": {
+    "huella_carbono_empresarial": {
+     "1": "INCISO:1|(qué divisiones, filiales o franquicias incluir)| Define el límite organizacional ",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:3",
+     "4": "APPEND",
+     "5": "APPEND",
+     "6": "CUBIERTO:4"
+    }
+   },
+   "condiciones": {
+    "huella_carbono_empresarial": {
+     "1": "CUBIERTO:2",
+     "2": "APPEND",
+     "3": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PUESTO 1805 ESCRIBE LA LISTA DE LO QUE HAY QUE SALVAR Y AQUI SE SALVA PIEZA A PIEZA: dice que de huella_carbono_empresarial se perderian TRES, el LIMITE ORGANIZACIONAL (que divisiones, filiales o franquicias se incluyen), CONVERTIR TODOS LOS GASES A DIOXIDO DE CARBONO EQUIVALENTE con los factores de potencial de calentamiento, y ESTABLECER UN ANO BASE y un periodo de medicion. LAS TRES SE SALVAN: las dos ultimas viajan ENTERAS de APPEND, y la primera va de INCISO ADOSADO al paso 1 del superviviente, identificar todas las fuentes de emision, porque el limite organizacional es un PARAMETRO CONCRETO de ese gesto (dice HASTA DONDE llega la operacion que se identifica) y el paso resultante se lee limpio. Las otras tres estaban ya declaradas comunes por la misma razon: su paso 2, el limite operacional por alcances, es el paso 2 del superviviente, clasificar cada emision segun los tres alcances (CUBIERTO:2); su paso 3, recolectar datos de consumo, es el paso 3 (CUBIERTO:3); y su paso 6, aplicar el estandar del protocolo de gases de efecto invernadero, es el paso 4, usar metodologias estandarizadas como las del mismo protocolo (CUBIERTO:4). CERO PERDIDAS NOMBRADAS en este acto. De sus tres condiciones, la primera esta CUBIERTA por la condicion 2 del superviviente (las dos hablan de cumplir requisitos de divulgacion o reportar), y las otras dos viajan enteras porque hablan de cosas que el superviviente no dice, el ahorro energetico y las metas de neutralidad de carbono."
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

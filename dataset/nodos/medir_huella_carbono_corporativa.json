@@ -6,34 +6,47 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Antes de definir cualquier estrategia climática necesitas entender tu exposición de carbono, es decir, identificar y cuantificar el origen de tus emisiones de gases de efecto invernadero. El Greenhouse Gas Protocol, desarrollado por el World Resources Institute y el World Business Council for Sustainable Development, es el estándar más aceptado y divide las emisiones en tres alcances: operaciones propias y combustión de combustibles fósiles, electricidad comprada, y actividades indirectas como viajes de negocios, desplazamientos de empleados y actividades de proveedores. Organizaciones como el Carbon Disclosure Project invitan a miles de empresas a reportar sus emisiones de forma voluntaria usando estas mismas metodologías. Además, si tu negocio crece, puede quedar obligado por las regulaciones de tu país o mercado a divulgar sus emisiones.",
   "pasos_accionables": [
-    "Identifica todas las fuentes de emisión dentro de tu operación.",
+    "Identifica todas las fuentes de emisión dentro de tu operación. Define el límite organizacional (qué divisiones, filiales o franquicias incluir)",
     "Clasifica cada emisión según los tres alcances del GHG Protocol.",
     "Recopila datos de consumo energético, combustibles y actividades indirectas.",
     "Usa metodologías estandarizadas como las del GHG Protocol, CDP o WRI/WBCSD para calcular tu huella total.",
-    "Revisa si debes reportar voluntariamente ante el CDP o cumplir con las regulaciones de divulgación ambiental de tu mercado."
+    "Revisa si debes reportar voluntariamente ante el CDP o cumplir con las regulaciones de divulgación ambiental de tu mercado.",
+    "Convertir todos los GEI a CO2 equivalente usando factores de potencial de calentamiento global",
+    "Establecer un año base y período de medición para comparaciones futuras"
   ],
   "entregable_esperado": "Un inventario completo de emisiones de gases de efecto invernadero clasificado por alcances (scope 1, 2 y 3).",
   "nodos_previos": [
-    "plan_cambio_climatico"
+    "plan_cambio_climatico",
+    "metricas_impacto_ambiental",
+    "priorizacion_issues"
   ],
   "nodos_siguientes": [
     "establecer_metas_reduccion_emisiones",
     "draft_plan_accion_climatico",
-    "realizar_analisis_ciclo_de_vida_lca"
+    "realizar_analisis_ciclo_de_vida_lca",
+    "definir_limites_huella_carbono"
   ],
   "condiciones_activacion": [
     "Si no conoces el origen ni el nivel actual de tus emisiones de GEI.",
     "Si necesitas cumplir con requisitos regulatorios de divulgación ambiental en tu mercado.",
-    "Si quieres o debes reportar voluntariamente ante el CDP u otro organismo."
+    "Si quieres o debes reportar voluntariamente ante el CDP u otro organismo.",
+    "Si se busca identificar oportunidades de ahorro energético mediante análisis de emisiones",
+    "Cuando se planea establecer metas de neutralidad de carbono"
   ],
   "etiqueta_arbol": "Identifica el Origen de tus Emisiones",
   "ids_alias": [
-    "evaluar_huella_carbono"
+    "evaluar_huella_carbono",
+    "huella_carbono_empresarial"
   ],
   "merged_originals": [
     {
       "node_id": "evaluar_huella_carbono",
       "titulo": "Evaluar la Huella de Carbono de la Empresa",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    },
+    {
+      "node_id": "huella_carbono_empresarial",
+      "titulo": "Medición de la Huella de Carbono Empresarial",
       "fuente": "The Green to Gold Business Play - Daniel C. Esty"
     }
   ]

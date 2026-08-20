@@ -7,16 +7,19 @@
   "resumen_teorico": "Herramienta con dos lados: el Perfil del Cliente (Customer Profile) que clarifica el entendimiento del cliente, y el Mapa de Valor (Value Map) que describe cómo se pretende crear valor para ese cliente. Se logra Fit (encaje) cuando el mapa de valor satisface el perfil del cliente. Es un plug-in que hace zoom en dos bloques del Business Model Canvas: Segmentos de Clientes y Propuesta de Valor.",
   "pasos_accionables": [
     "Descargar el template del Value Proposition Canvas",
-    "Dibujar el círculo del Customer Profile a la derecha",
-    "Dibujar el cuadrado del Value Map a la izquierda",
-    "Trabajar ambos lados iterativamente hasta encontrar Fit"
+    "Dibujar el círculo del Customer Profile a la derecha, especificando en él los jobs, pains y gains del cliente",
+    "Dibujar el cuadrado del Value Map a la izquierda, documentando en él cómo tu producto/servicio alivia pains y crea gains",
+    "Trabajar ambos lados iterativamente hasta encontrar Fit",
+    "Comunicar ambos documentos a toda la organización para crear entendimiento compartido.",
+    "Usar los documentos como scoreboard durante conversaciones reales con clientes."
   ],
   "entregable_esperado": "Canvas completo con Customer Profile y Value Map mapeados para un segmento específico",
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "empathy_map",
     "prototipado_modelos_negocio",
-    "value_proposition_startup"
+    "value_proposition_startup",
+    "seis_formas_innovar_perfil_cliente"
   ],
   "nodos_siguientes": [
     "customer_profile",
@@ -27,10 +30,26 @@
     "customer_discovery_get_out_of_building",
     "innovation_project_canvas",
     "testear_circulo_cuadrado_rectangulo",
-    "lienzo_proyecto_innovacion"
+    "lienzo_proyecto_innovacion",
+    "design_test_repeat",
+    "fit_problema_solucion",
+    "innovation_games_speedboat",
+    "prototyping_possibilities",
+    "understanding_customers_tecnicas"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita diseñar o mejorar una propuesta de valor para un segmento de clientes específico"
+    "Cuando se necesita diseñar o mejorar una propuesta de valor para un segmento de clientes específico",
+    "Cuando el equipo no tiene un entendimiento compartido del cliente."
   ],
-  "etiqueta_arbol": "Encuentra tu Encaje con Clientes"
+  "etiqueta_arbol": "Encuentra tu Encaje con Clientes",
+  "ids_alias": [
+    "customer_profile_value_map"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "customer_profile_value_map",
+      "titulo": "Perfil del Cliente y Mapa de Valor",
+      "fuente": "Value Proposition Design"
+    }
+  ]
 }

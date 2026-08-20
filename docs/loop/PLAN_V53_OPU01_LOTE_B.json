@@ -1,0 +1,150 @@
+{
+ "operacion": "OP-U-01",
+ "tramo": "1, P.12, LOTE B DE LA VUELTA 53: los actos 13, 14, 15 y 17 de la nomina del cierre de la vuelta 52 (los COSTOS DE FRANQUICIA, el ABOGADO DE FRANQUICIAS, la FRANQUICIA INADVERTIDA y la GESTION POR OBJETIVOS)",
+ "fecha": "2026-08-20",
+ "vuelta": 53,
+ "estado": "SELLADO",
+ "nomina": "docs/loop/RECOMPUTO_V52_CIERRE.jsonl",
+ "dossier": "docs/loop/SALIDA_V53_DOSSIER_01_23.txt",
+ "vara": "P.12 con la receta RATIFICADA (acta de la vuelta 50, preguntas 1 a 3; acta de la vuelta 51; acta de la vuelta 52, pregunta 1): dado un superviviente S, PARTE A = S mas los miembros con arista A contra S; MIXTOS = los miembros sin arista A contra S; S es VIABLE si su parte A es clique A y deja al menos un mixto fuera. Entre los viables elige el CONTENIDO como P.8 lo define: el texto de los pasos y las condiciones, el material propio, el padre declarado y el ALCANCE DEL ROL, todo EN LAS RAZONES del archivo; el conteo de caracteres del resumen NO desempata. Si el contenido calla, el CABLEADO decide solo. Si tambien empata, se DECLARA el acto como empate sin vara.",
+ "viabilidad": "docs/loop/SALIDA_V53_VIABLES.txt, corrida sobre la nomina del cierre de la vuelta 52. Los cuatro actos salen VARIOS VIABLES con dos cada uno, y en los cuatro el CENTRO de la estrella no es viable porque no deja ningun mixto fuera.",
+ "colisiones_esperadas": "docs/loop/SALIDA_V53_COLISIONES_ESPERADAS.txt, medidas ANTES de tocar un nodo sobre EL ARCHIVO ENTERO, por PAR RESUELTO. Una colision real fuera de esa prediccion detiene.",
+ "carril_de_colisiones": "CARRIL GENERAL DE COLISIONES, adjudicado en el acta de la vuelta 52, pregunta 4, y registrado en docs/plan/03_FUSIONES.md por la TAREA 1.4.b de esta vuelta: volteo por maquina SOLO para el A ARRASTRADO contra un DIRECTO D, citando el directo y pegando la razon vieja entera; cualquier veredicto DEL FILO (B o C) en CUALQUIERA de los dos lados se RELEE EN EL MISMO ACTO con el otro como contraste, LA RELECTURA DECIDE CUAL SE MUEVE, y si destapa politica el acto se declara.",
+ "vara_de_las_puertas": "Medida hoy con el instrumento reparado en la TAREA 1.3 (docs/loop/SALIDA_V53_PUERTAS_APERTURA.txt, 31 actos con puerta dentro: 26 salvables, 2 imposibles por nomina, 3 por estructura, 0 sin receta). Ninguno de los absorbidos de este lote es semilla ni extremo de puente aprobado.",
+ "politica_del_reparto": "LA MISMA DEL LOTE B DE LA VUELTA 52, heredada y citada, no reinventada (acta 51, D3, y acta 52, D5 y D10): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND. Y una pieza cuya linea vive ENTERA en un vecino VIVO del racimo (el mixto que sobrevive, o un nodo de fuera que un veredicto declara su dueno) va de CUBIERTO con la perdida NOMBRADA, que es la vara del D6 del acta 51.",
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "estimacion_inversion_inicial_franquiciador",
+    "cinco_categorias_costos_franquicia"
+   ],
+   "miembros_del_acto_entero": [
+    "cinco_categorias_costos_franquicia",
+    "costos_preparacion_franquicia",
+    "estimacion_inversion_inicial_franquiciador"
+   ],
+   "mixto_que_queda_fuera": "costos_preparacion_franquicia",
+   "superviviente": "estimacion_inversion_inicial_franquiciador",
+   "motivo": "CONTENIDO, Y LO DECIDE EL ALCANCE DEL ROL con los pasos de acuerdo. Los dos viables medidos hoy son estimacion_inversion_inicial_franquiciador y costos_preparacion_franquicia; cinco_categorias_costos_franquicia es el CENTRO y no es viable porque no deja ningun mixto fuera. Entre los dos viables: PASOS 5 contra 4 a favor de estimacion, CONDICIONES EMPATADAS (2 y 2) y CABLEADO 3 contra 2 a favor de costos_preparacion. EL CONTENIDO NO CALLA Y POR ESO EL CABLEADO NO LLEGA A HABLAR: el centro que muere es EL PRESUPUESTO ENTERO DE LAS CINCO CATEGORIAS y su entregable lo dice, un presupuesto detallado Y SUMADO del programa de franquicia dividido en las cinco categorias. El entregable de estimacion_inversion_inicial_franquiciador es UN PRESUPUESTO DETALLADO DE LA INVERSION INICIAL para lanzar el sistema, y su paso 5 es DEFINIR EL CAPITAL TOTAL antes de lanzar; el de costos_preparacion_franquicia es UNA LISTA DE COSTOS DE PREPARACION, que es UNA de las cinco categorias, la que el propio centro presupuesta en su paso 6. Una cabeza que vale para las cinco categorias no puede llamarse como una sola (P.8, alcance del rol). NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X, asi que aqui no hay choque de letra contra aritmetica.",
+   "absorbidos": [
+    "cinco_categorias_costos_franquicia"
+   ],
+   "pasos": {
+    "cinco_categorias_costos_franquicia": {
+     "1": "APPEND",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:2",
+     "4": "CUBIERTO:4",
+     "5": "APPEND",
+     "6": "APPEND",
+     "7": "CUBIERTO:5"
+    }
+   },
+   "condiciones": {
+    "cinco_categorias_costos_franquicia": {
+     "1": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "EL PUESTO 2074 ESCRIBE EL MAPA AL REVES Y AQUI SE USA EN SU SENTIDO: dice que CUATRO Y MEDIO de los cinco pasos del superviviente viven dentro del centro, y nombra la correspondencia una por una, asi que las mismas lineas leidas del lado del centro estan CUBIERTAS. Su paso 2, presupuestar los costos de desarrollo con el documento de divulgacion, el contrato y EL MANUAL DE OPERACIONES, es el paso 3 del superviviente, presupuestar el desarrollo del manual de operaciones y los materiales de entrenamiento (CUBIERTO:3); su paso 3, los costos legales, es el paso 2, cotizar el costo de armar los documentos legales (CUBIERTO:2); su paso 4, el marketing para atraer compradores de franquicia, es el paso 4 (CUBIERTO:4); y su paso 7, sumar todo en un solo presupuesto antes de arrancar, es el paso 5, definir el capital total antes de lanzar (CUBIERTO:5). Y EL PUESTO 2074 ESCRIBE ADEMAS LAS TRES COSAS PROPIAS DEL CENTRO, que son las que hay que salvar: CUANTAS FRANQUICIAS SE QUIEREN VENDER EL PRIMER ANO, que es lo que dimensiona todo el presupuesto; LA CATEGORIA DE PERSONAL; y PREGUNTAR EL PRECIO PROMEDIO POR FRANQUICIA VENDIDA EN EL MERCADO. Las dos primeras viajan ENTERAS de APPEND (sus pasos 1 y 5) y la tercera viaja dentro del paso 6 que tambien va de APPEND, los costos de preparacion, junto con la nueva entidad legal, duplicar materiales y viajes y equipo nuevo. SE DICE LO QUE ESO ULTIMO SIGNIFICA EN VEZ DE CALLARLO: el paso 6 del centro es la categoria que el MIXTO desarrolla entera, y el puesto 2092 declara que las dos categorias NO SE PISAN, asi que el APPEND mete en el superviviente el RENGLON de la categoria y no su procedimiento, que sigue vivo y entero en costos_preparacion_franquicia. El puesto 2074 ya lo habia escrito de la otra forma: en el centro la entidad es UN RENGLON DE UNA LISTA y en el mixto es UNA DECISION. CERO PERDIDAS NOMBRADAS. Su unica condicion esta CUBIERTA por la condicion 2 del superviviente, las dos dicen cuando hay que planificar el capital que se va a necesitar para franquiciar."
+  },
+  {
+   "orden": 2,
+   "miembros": [
+    "eleccion_abogado_franquicias",
+    "contratar_abogado_especializado_franquicias"
+   ],
+   "miembros_del_acto_entero": [
+    "contratar_abogado_especializado_franquicias",
+    "contratar_abogado_franquicias",
+    "eleccion_abogado_franquicias"
+   ],
+   "mixto_que_queda_fuera": "contratar_abogado_franquicias",
+   "superviviente": "eleccion_abogado_franquicias",
+   "motivo": "CONTENIDO, Y LO DECIDE EL CONTEO DE PASOS CON EL ALCANCE DEL ROL DE ACUERDO, con el material propio apuntando al otro lado y por eso VA MARCADO. Los dos viables medidos hoy son eleccion_abogado_franquicias y contratar_abogado_franquicias; contratar_abogado_especializado_franquicias es el CENTRO (aqui el nodo CORTO contenido en los dos largos, la estrella INVERTIDA que el puesto 2090 nombra) y no es viable porque no deja ningun mixto fuera. Entre los dos viables: PASOS 6 contra 5 a favor de eleccion, CONDICIONES EMPATADAS (2 y 2), CABLEADO 5 contra 4 a favor de eleccion, y eleccion es ademas el unico de los tres con alias (contratacion_abogado_franquicia). EN CONTRA: el puesto 2086 declara CUATRO cosas propias de contratar_abogado_franquicias y TRES de eleccion_abogado_franquicias, y esa vara apunta al otro lado. LO QUE DESEMPATA ES EL ALCANCE DEL ROL: el entregable del centro que muere es un contrato firmado CON EL PLAN DE NEGOCIO COMPLETO ENTREGADO PREVIAMENTE, y esa condicion previa es el paso 1 de eleccion_abogado_franquicias (confirmar primero con el consultor que franquiciar es la estrategia correcta), que contratar_abogado_franquicias no tiene. NINGUN VEREDICTO A DEL ACTO ESCRIBE LA FORMULA Sobrevive X, asi que aqui no hay choque de letra contra aritmetica.",
+   "absorbidos": [
+    "contratar_abogado_especializado_franquicias"
+   ],
+   "pasos": {
+    "contratar_abogado_especializado_franquicias": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:2",
+     "4": "CUBIERTO:2"
+    }
+   },
+   "condiciones": {
+    "contratar_abogado_especializado_franquicias": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PUESTO 2076 ESCRIBE LA CORRESPONDENCIA UNA POR UNA Y AQUI SE EJECUTA TAL CUAL: su paso 1, completar la planificacion de negocio antes de buscar asesoria legal, ES EL PASO 1 DEL SUPERVIVIENTE, confirmar primero con el consultor que franquiciar es la estrategia correcta (CUBIERTO:1); su paso 2, verificar la experiencia real en franquicias y no la general, esta en los pasos 2 y 6 del superviviente y se marca por el grueso (CUBIERTO:2); y su paso 4, confirmar que se dedica activamente a la practica privada de franquicias, es TAMBIEN el paso 2 (CUBIERTO:2). PERDIDA NOMBRADA, UNA, Y ES LA QUE EL PROPIO PUESTO 2076 ANUNCIA: su paso 3, SOLICITAR REFERENCIAS DE OTROS FRANQUICIANTES que hayan trabajado con el abogado, es LO UNICO QUE QUEDA FUERA del superviviente. Se marca CUBIERTO:2 Y SE DECLARA LO QUE SE PIERDE, LAS REFERENCIAS. NO viaja de APPEND, y el motivo es la vara del D6 del acta 51 mas la del D5 del acta 52: la linea vive ENTERA en un vecino VIVO, el paso 1 de contratar_abogado_franquicias (buscar referencias en consultoras de franquicia y en otros franquiciadores), que es el MIXTO de este acto y SOBREVIVE; y el puesto 2086, que es el veredicto DIRECTO del par mixto, la declara EXPRESAMENTE una de las CUATRO cosas propias de ese nodo. Meterla en el superviviente seria vaciar por la ventana lo que el D declara propio del otro. De sus dos condiciones, la primera esta CUBIERTA (su primera mitad, el plan de negocio terminado, es la condicion 1 del superviviente, y su segunda mitad, que se necesita documentacion legal, es la condicion 2, antes de elaborar el documento de divulgacion o los contratos) y la segunda viaja entera porque es la unica del acto que nombra el error a evitar, contratar al primer abogado disponible sin verificar su experiencia."
+  },
+  {
+   "orden": 3,
+   "miembros": [
+    "prevenir_franquicias_inadvertidas",
+    "estructuras_combinadas_franquicia"
+   ],
+   "miembros_del_acto_entero": [
+    "deteccion_franquicia_inadvertida",
+    "estructuras_combinadas_franquicia",
+    "prevenir_franquicias_inadvertidas"
+   ],
+   "mixto_que_queda_fuera": "deteccion_franquicia_inadvertida",
+   "superviviente": "prevenir_franquicias_inadvertidas",
+   "motivo": "CONTENIDO, Y TRES VARAS APUNTAN AL MISMO LADO CON LA CUARTA EMPATADA. Los dos viables medidos hoy son prevenir_franquicias_inadvertidas y deteccion_franquicia_inadvertida; estructuras_combinadas_franquicia es el CENTRO y no es viable porque no deja ningun mixto fuera; ademas los puestos 2181 y 2207 lo declaran DOS VECES sin nada propio, sus tres pasos NO TRAEN NADA SUYO y lo unico propio es EL MOMENTO, y eso CABE EN UNA LINEA. Entre los dos viables: PASOS EMPATADOS (4 y 4), CONDICIONES 2 contra 1, CABLEADO 3 contra 1 y MATERIAL PROPIO 3 contra 2, los tres desempates a favor de prevenir_franquicias_inadvertidas. El material propio lo cuenta el puesto 2073, que es el veredicto DIRECTO del par mixto: prevenir_franquicias_inadvertidas TRAE LA LETRA (nombra los tres elementos legales, verifica los umbrales de tarifa y las definiciones estado por estado, y documenta la naturaleza de cada relacion) y deteccion_franquicia_inadvertida TRAE EL TIEMPO (llamarle licencia no libra, y auditar cada cierto tiempo). LOS DOS VEREDICTOS A DEL ACTO NOMBRAN SUPERVIVIENTE Y LOS DOS NOMBRAN A UN VIABLE, cada uno al suyo (2181 nombra deteccion_franquicia_inadvertida y 2207 nombra prevenir_franquicias_inadvertidas), asi que NO HAY CHOQUE de letra contra estructura: los dos coinciden en que el que muere es el centro, y el desempate entre los dos viables lo hace el contenido.",
+   "absorbidos": [
+    "estructuras_combinadas_franquicia"
+   ],
+   "pasos": {
+    "estructuras_combinadas_franquicia": {
+     "1": "INCISO:1|cada estructura de negocio diseñada|, y aplica la misma prueba a ",
+     "2": "CUBIERTO:1",
+     "3": "CUBIERTO:2"
+    }
+   },
+   "condiciones": {
+    "estructuras_combinadas_franquicia": {
+     "1": "APPEND",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL PUESTO 2181 ESCRIBE LA RECETA DEL REPARTO Y AQUI SE EJECUTA AL PIE: dice que lo unico propio del centro es EL MOMENTO, aplicarlo a una estructura que aun estas disenando en vez de a una que ya opera, y que ESO CABE EN UNA LINEA y SE ABSORBE COMO UNA LINEA SUYA. Eso es exactamente un INCISO ADOSADO: su paso 1, aplicar la prueba de tres elementos a cada estructura de negocio disenada, se adosa al paso 1 del superviviente, que aplica los mismos elementos legales a los acuerdos EXISTENTES, y el paso resultante se lee limpio y guarda los dos momentos. Los otros dos estaban ya declarados sin nada propio por el puesto 2207: su paso 2, revisar si se combinan accidentalmente marca, control y tarifa, ES ESA MISMA PRUEBA dicha de otro modo (CUBIERTO:1); y su paso 3, validar legalmente cada estructura antes de lanzarla, es el paso 2 del superviviente DICHO IGUAL, consultar a un abogado especializado antes de estructurar cualquier relacion (CUBIERTO:2). CERO PERDIDAS NOMBRADAS en este acto. Sus DOS condiciones viajan enteras porque las dos del superviviente hablan de otra cosa: aquellas hablan de acuerdos ya existentes con terceros que usan la marca y de evitar INTENCIONALMENTE el nombre de franquicia, y estas hablan del momento de DISENAR una estructura alternativa y del riesgo de haberla creado INADVERTIDAMENTE, que es justo la diferencia entre lo intencional y lo inadvertido."
+  },
+  {
+   "orden": 4,
+   "miembros": [
+    "eliminar_metas_numericas_gerencia",
+    "critica_gestion_por_objetivos"
+   ],
+   "miembros_del_acto_entero": [
+    "critica_gestion_por_objetivos",
+    "eliminacion_gestion_por_objetivos_y_numeros",
+    "eliminar_metas_numericas_gerencia"
+   ],
+   "mixto_que_queda_fuera": "eliminacion_gestion_por_objetivos_y_numeros",
+   "superviviente": "eliminar_metas_numericas_gerencia",
+   "motivo": "CONTENIDO, Y LO DECIDE LA UNICA VARA QUE NO EMPATA, y por eso VA MARCADO. Los dos viables medidos hoy son eliminar_metas_numericas_gerencia y eliminacion_gestion_por_objetivos_y_numeros; critica_gestion_por_objetivos es el CENTRO y no es viable porque no deja ningun mixto fuera. Entre los dos viables casi todo EMPATA: PASOS 4 y 4, CABLEADO 2 y 2, y MATERIAL PROPIO 2 y 2 contado por el puesto 2534, que es el veredicto DIRECTO del par mixto y escribe los dos bloques al digito. LA UNICA VARA QUE NO EMPATA SON LAS CONDICIONES, 2 contra 1, a favor de eliminar_metas_numericas_gerencia, y las condiciones son contenido por la letra del encargo. SE DICE LO QUE ESTA VARA NO DECIDE, porque seria facil colarlo: LA PERDIDA DE NOMBRE NO DISCRIMINA AQUI, y el motivo es que los DOS viables sobreviven a este acto (uno como superviviente y el otro como mixto), asi que la denominacion GESTION POR OBJETIVOS se queda en el catalogo dentro del titulo de eliminacion_gestion_por_objetivos_y_numeros elija quien elija. LOS DOS VEREDICTOS A DEL ACTO NOMBRAN SUPERVIVIENTE Y LOS DOS NOMBRAN A UN VIABLE, cada uno al suyo (2488 nombra eliminacion y 2477 nombra eliminar_metas), asi que NO HAY CHOQUE de letra contra estructura.",
+   "absorbidos": [
+    "critica_gestion_por_objetivos"
+   ],
+   "pasos": {
+    "critica_gestion_por_objetivos": {
+     "1": "CUBIERTO:3",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:4",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "critica_gestion_por_objetivos": {
+     "1": "CUBIERTO:2"
+    }
+   },
+   "nota_del_reparto": "EL PUESTO 2477 ESCRIBE LA CORRESPONDENCIA UNA POR UNA Y AQUI SE EJECUTA TAL CUAL: su paso 1, evaluar si las metas se basan en la capacidad real, es el paso 3 del superviviente, DETERMINAR LA CAPACIDAD REAL DEL SISTEMA MEDIANTE ANALISIS ESTADISTICO ANTES DE FIJAR CUALQUIER META (CUBIERTO:3); su paso 2, eliminar las arbitrarias, es el paso 2 (CUBIERTO:2); y su paso 3, cambiar el manejo por objetivos por mejora continua, es el paso 4 (CUBIERTO:4). Y AQUI SE SALVA LO QUE DOS VEREDICTOS DIERON POR PERDIDO, que es el dato de este acto: su paso 4, RECONOCER EL COSTO OCULTO DE MANEJAR EL NEGOCIO POR MIEDO A LOS NUMEROS, esta declarado SALVAGUARDA y PERDIDA NOMBRADA por el puesto 2477 y el puesto 2488 dice que NINGUNO DE LOS DOS SUPERVIVIENTES LO RECOGE. Es un GESTO DISTINTO y no un parametro de nada: VIAJA ENTERO DE APPEND, y con eso la salvaguarda deja de ser una perdida. CERO PERDIDAS NOMBRADAS DE PASO en este acto. Su unica condicion esta CUBIERTA por la condicion 2 del superviviente, las dos dicen lo mismo, que se exigen metas numericas fijas sin base real ni comprension del proceso. LA PERDIDA DE NOMBRE QUE DOS VEREDICTOS DAN POR SEGURA NO EXISTE, Y SE DICE PORQUE LA REGLA 9 OBLIGA A RE-VERIFICAR TODA PERDIDA DECLARADA CONTRA EL GRAFO: el puesto 2488 escribe que el ACRONIMO MBO SOLO APARECE EN EL NODO QUE CAE, y el puesto 2477 escribe que el superviviente NO NOMBRA EL MBO EN NINGUN SITIO. Medido HOY sobre los 3.489 nodos vivos, campo por campo (docs/loop/SALIDA_V53_MBO.txt), EL ACRONIMO VIVE EN DOS NODOS y no en uno: critica_gestion_por_objetivos, que muere aqui, Y eliminacion_gestion_por_objetivos_y_numeros, que es el MIXTO de este acto y SOBREVIVE, en su resumen teorico (LA GESTION POR OBJETIVOS (MBO) Y POR NUMEROS IGNORA LA VARIACION NATURAL DEL SISTEMA). Es la clase VIVE DENTRO de P.13: la perdida era real contra aquel par y es FALSA contra esta nomina. Se declara la discrepancia en vez de resolverla copiando, que es lo que manda la regla 2 del EJECUTOR; las dos razones viejas NO se tocan. La denominacion en castellano GESTION POR OBJETIVOS vive ademas en un tercer nodo vivo, cuestionario_autoevaluacion_gerencial_calidad."
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

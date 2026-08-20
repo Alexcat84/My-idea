@@ -1,0 +1,28 @@
+==============================================================================
+TRAS EL LOTE A DE LA VUELTA 53
+==============================================================================
+  veredictos leidos                       : 3388
+  pares resueltos distintos               : 3304
+  AUTO-PARES (los dos lados al mismo vivo): 43
+  COLISIONES DE CLASE VIGENTES            : 6
+
+  par resuelto: customer_profile contra value_proposition_canvas
+     puesto 475    A | crudo: customer_profile + customer_profile_value_map
+     puesto 705    D | crudo: customer_profile + value_proposition_canvas
+  par resuelto: definir_limites_huella_carbono contra medir_huella_carbono_corporativa
+     puesto 1855   D | crudo: definir_limites_huella_carbono + medir_huella_carbono_corporativa
+     puesto 1865   A | crudo: definir_limites_huella_carbono + huella_carbono_empresarial
+  par resuelto: ingenieria_de_prompts_efectiva contra prompting_por_persona_ia
+     puesto 1144   D | crudo: ingenieria_de_prompts_efectiva + prompting_por_persona_ia
+     puesto 1175   A | crudo: asignacion_persona_ia + prompting_por_persona_ia
+  par resuelto: value_map contra value_proposition_canvas
+     puesto 250    D | crudo: value_map + value_proposition_canvas
+     puesto 360    C | crudo: customer_profile_value_map + value_map
+  par resuelto: venture_debt_terminos_economicos contra warrant_pricing_venture_debt
+     puesto 204    B | crudo: venture_debt_terminos_economicos + warrant_pricing_venture_debt
+     puesto 1521   D | crudo: venture_debt_terminos_economicos + warrants_deuda_convertible
+  par resuelto: warrant_pricing_venture_debt contra warrants_financiamiento
+     puesto 559    A | crudo: warrants_deuda_convertible + warrants_financiamiento
+     puesto 1448   D | crudo: warrant_pricing_venture_debt + warrants_financiamiento
+
+  CUENTA ESPERADA: 6 | MEDIDA: 6 | CALZA: SI

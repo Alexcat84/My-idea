@@ -5734,7 +5734,8 @@
         "Cuando las respuestas genéricas de la IA no aportan valor diferencial",
         "Al iniciar sesiones de brainstorming o generación de contenido con IA"
       ],
-      "etiqueta_arbol": "Dale una Identidad a tu IA"
+      "etiqueta_arbol": "Dale una Identidad a tu IA",
+      "deprecado": true
     },
     "asignacion_recursos_en_gates": {
       "node_id": "asignacion_recursos_en_gates",
@@ -21580,7 +21581,7 @@
         "mecanica_conversion_deuda",
         "terminos_adicionales_deuda_convertible",
         "valuation_cap_deuda_convertible",
-        "warrants_deuda_convertible"
+        "warrant_pricing_venture_debt"
       ],
       "etiqueta_arbol": "Entiende la Deuda Convertible"
     },
@@ -27502,7 +27503,8 @@
         "Cuando se inicia el diseño de una propuesta de valor.",
         "Cuando el equipo no tiene un entendimiento compartido del cliente."
       ],
-      "etiqueta_arbol": "Conecta Cliente y Valor Ofrecido"
+      "etiqueta_arbol": "Conecta Cliente y Valor Ofrecido",
+      "deprecado": true
     },
     "customer_retention_metrics_webmobile": {
       "node_id": "customer_retention_metrics_webmobile",
@@ -30540,7 +30542,7 @@
       ],
       "entregable_esperado": "Un documento donde definas los límites organizacionales, operacionales y temporales de tu análisis de huella de carbono",
       "nodos_previos": [
-        "huella_carbono_empresarial"
+        "medir_huella_carbono_corporativa"
       ],
       "nodos_siguientes": [
         "estrategia_recoleccion_datos_carbono",
@@ -32400,7 +32402,7 @@
       ],
       "entregable_esperado": "Un ciclo documentado de iteraciones de prototipo-prueba-aprendizaje.",
       "nodos_previos": [
-        "customer_profile_value_map",
+        "value_proposition_canvas",
         "fit_problema_solucion",
         "prototyping_possibilities"
       ],
@@ -53901,7 +53903,7 @@
       ],
       "entregable_esperado": "Evidencia documentada de al menos el problem-solution fit antes de escalar.",
       "nodos_previos": [
-        "customer_profile_value_map",
+        "value_proposition_canvas",
         "presales",
         "testing_process_completo",
         "understanding_customers_tecnicas"
@@ -62077,7 +62079,8 @@
         "Si se busca identificar oportunidades de ahorro energético mediante análisis de emisiones",
         "Cuando se planea establecer metas de neutralidad de carbono"
       ],
-      "etiqueta_arbol": "Define los Límites Organizacionales de Emisión"
+      "etiqueta_arbol": "Define los Límites Organizacionales de Emisión",
+      "deprecado": true
     },
     "human_error_como_sintoma": {
       "node_id": "human_error_como_sintoma",
@@ -62128,7 +62131,7 @@
       ],
       "nodos_siguientes": [
         "deteccion_alucinaciones_ia",
-        "asignacion_persona_ia",
+        "ingenieria_de_prompts_efectiva",
         "construccion_experticia_era_ia",
         "principio_mejora_continua_ia"
       ],
@@ -64547,23 +64550,35 @@
       "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
       "resumen_teorico": "La ingeniería de prompts consiste en dar contexto, restricciones y una identidad clara a la IA para romper sus patrones genéricos de respuesta. Al tratar a la IA como una persona con un rol específico y proporcionar instrucciones claras y lógicas ('programar en prosa'), se obtienen resultados mucho más útiles e interesantes que con preguntas simples y directas.",
       "pasos_accionables": [
-        "Definir qué 'tipo de persona' o rol debe adoptar la IA antes de hacer la solicitud",
+        "Definir qué 'tipo de persona' o rol debe adoptar la IA antes de hacer la solicitud (ej. 'actúa como director de marketing de una startup B2B')",
         "Proporcionar contexto específico sobre el objetivo de negocio o proyecto",
         "Añadir restricciones claras (formato, extensión, público objetivo)",
-        "Iterar el prompt si la respuesta es genérica, agregando más especificidad"
+        "Iterar el prompt si la respuesta es genérica, agregando más especificidad, y en modo conversación, refinando el output paso a paso en vez de pedir la respuesta final de una sola vez"
       ],
       "entregable_esperado": "Una plantilla de prompts reutilizable con rol, contexto y restricciones definidas para tareas recurrentes del negocio",
       "nodos_previos": [
-        "desafios_implementacion_ia"
+        "desafios_implementacion_ia",
+        "human_in_the_loop_ia"
       ],
       "nodos_siguientes": [
-        "prompting_cadena_de_pensamiento"
+        "prompting_cadena_de_pensamiento",
+        "simulacion_clientes_ia"
       ],
       "condiciones_activacion": [
         "Cuando el emprendedor obtiene respuestas genéricas o poco útiles de una IA",
         "Cuando se necesita usar IA para tareas de análisis, redacción o ideación de negocio"
       ],
-      "etiqueta_arbol": "Domina tus Instrucciones a la IA"
+      "etiqueta_arbol": "Domina tus Instrucciones a la IA",
+      "ids_alias": [
+        "asignacion_persona_ia"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "asignacion_persona_ia",
+          "titulo": "Asignar Persona a la IA para Mejorar Resultados",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        }
+      ]
     },
     "ingenieria_inversa_metas": {
       "node_id": "ingenieria_inversa_metas",
@@ -64830,7 +64845,7 @@
       ],
       "entregable_esperado": "Mapa visual de pains priorizados según su intensidad, validado con clientes.",
       "nodos_previos": [
-        "customer_profile_value_map",
+        "value_proposition_canvas",
         "product_box_game"
       ],
       "nodos_siguientes": [
@@ -72602,34 +72617,47 @@
       "fuente": "The Green to Gold Business Play - Daniel C. Esty",
       "resumen_teorico": "Antes de definir cualquier estrategia climática necesitas entender tu exposición de carbono, es decir, identificar y cuantificar el origen de tus emisiones de gases de efecto invernadero. El Greenhouse Gas Protocol, desarrollado por el World Resources Institute y el World Business Council for Sustainable Development, es el estándar más aceptado y divide las emisiones en tres alcances: operaciones propias y combustión de combustibles fósiles, electricidad comprada, y actividades indirectas como viajes de negocios, desplazamientos de empleados y actividades de proveedores. Organizaciones como el Carbon Disclosure Project invitan a miles de empresas a reportar sus emisiones de forma voluntaria usando estas mismas metodologías. Además, si tu negocio crece, puede quedar obligado por las regulaciones de tu país o mercado a divulgar sus emisiones.",
       "pasos_accionables": [
-        "Identifica todas las fuentes de emisión dentro de tu operación.",
+        "Identifica todas las fuentes de emisión dentro de tu operación. Define el límite organizacional (qué divisiones, filiales o franquicias incluir)",
         "Clasifica cada emisión según los tres alcances del GHG Protocol.",
         "Recopila datos de consumo energético, combustibles y actividades indirectas.",
         "Usa metodologías estandarizadas como las del GHG Protocol, CDP o WRI/WBCSD para calcular tu huella total.",
-        "Revisa si debes reportar voluntariamente ante el CDP o cumplir con las regulaciones de divulgación ambiental de tu mercado."
+        "Revisa si debes reportar voluntariamente ante el CDP o cumplir con las regulaciones de divulgación ambiental de tu mercado.",
+        "Convertir todos los GEI a CO2 equivalente usando factores de potencial de calentamiento global",
+        "Establecer un año base y período de medición para comparaciones futuras"
       ],
       "entregable_esperado": "Un inventario completo de emisiones de gases de efecto invernadero clasificado por alcances (scope 1, 2 y 3).",
       "nodos_previos": [
-        "plan_cambio_climatico"
+        "plan_cambio_climatico",
+        "metricas_impacto_ambiental",
+        "priorizacion_issues"
       ],
       "nodos_siguientes": [
         "establecer_metas_reduccion_emisiones",
         "draft_plan_accion_climatico",
-        "realizar_analisis_ciclo_de_vida_lca"
+        "realizar_analisis_ciclo_de_vida_lca",
+        "definir_limites_huella_carbono"
       ],
       "condiciones_activacion": [
         "Si no conoces el origen ni el nivel actual de tus emisiones de GEI.",
         "Si necesitas cumplir con requisitos regulatorios de divulgación ambiental en tu mercado.",
-        "Si quieres o debes reportar voluntariamente ante el CDP u otro organismo."
+        "Si quieres o debes reportar voluntariamente ante el CDP u otro organismo.",
+        "Si se busca identificar oportunidades de ahorro energético mediante análisis de emisiones",
+        "Cuando se planea establecer metas de neutralidad de carbono"
       ],
       "etiqueta_arbol": "Identifica el Origen de tus Emisiones",
       "ids_alias": [
-        "evaluar_huella_carbono"
+        "evaluar_huella_carbono",
+        "huella_carbono_empresarial"
       ],
       "merged_originals": [
         {
           "node_id": "evaluar_huella_carbono",
           "titulo": "Evaluar la Huella de Carbono de la Empresa",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        },
+        {
+          "node_id": "huella_carbono_empresarial",
+          "titulo": "Medición de la Huella de Carbono Empresarial",
           "fuente": "The Green to Gold Business Play - Daniel C. Esty"
         }
       ]
@@ -74488,7 +74516,7 @@
         "programa_reciclaje_integral"
       ],
       "nodos_siguientes": [
-        "huella_carbono_empresarial",
+        "medir_huella_carbono_corporativa",
         "commuting_teletrabajo_sostenible",
         "estrategias_seleccion_preferencial",
         "movilidad_verde_empleados",
@@ -87915,7 +87943,7 @@
         "stakeholder_mapping_wheel"
       ],
       "nodos_siguientes": [
-        "huella_carbono_empresarial",
+        "medir_huella_carbono_corporativa",
         "metricas_impacto_ambiental"
       ],
       "condiciones_activacion": [
@@ -91692,7 +91720,7 @@
       ],
       "entregable_esperado": "Conjunto de prototipos alternativos (sketches, ad-libs, canvases) listos para exponer a feedback.",
       "nodos_previos": [
-        "customer_profile_value_map",
+        "value_proposition_canvas",
         "design_test_repeat"
       ],
       "nodos_siguientes": [
@@ -102171,7 +102199,7 @@
       ],
       "nodos_siguientes": [
         "understanding_customers_tecnicas",
-        "customer_profile_value_map",
+        "value_proposition_canvas",
         "identificacion_problema_cliente",
         "proteccion_del_tren_asociativo"
       ],
@@ -104518,7 +104546,7 @@
       ],
       "entregable_esperado": "Guion de entrevista simulada con IA y lista de hipótesis a validar con clientes reales",
       "nodos_previos": [
-        "asignacion_persona_ia",
+        "ingenieria_de_prompts_efectiva",
         "deteccion_alucinaciones_ia"
       ],
       "nodos_siguientes": [
@@ -111789,7 +111817,7 @@
       "entregable_esperado": "Perfil de cliente enriquecido con evidencia de al menos 2-3 técnicas distintas de investigación.",
       "nodos_previos": [
         "seis_formas_innovar_perfil_cliente",
-        "customer_profile_value_map",
+        "value_proposition_canvas",
         "starting_points_innovacion",
         "seis_medios_comunicacion_cliente"
       ],
@@ -113155,16 +113183,19 @@
       "resumen_teorico": "Herramienta con dos lados: el Perfil del Cliente (Customer Profile) que clarifica el entendimiento del cliente, y el Mapa de Valor (Value Map) que describe cómo se pretende crear valor para ese cliente. Se logra Fit (encaje) cuando el mapa de valor satisface el perfil del cliente. Es un plug-in que hace zoom en dos bloques del Business Model Canvas: Segmentos de Clientes y Propuesta de Valor.",
       "pasos_accionables": [
         "Descargar el template del Value Proposition Canvas",
-        "Dibujar el círculo del Customer Profile a la derecha",
-        "Dibujar el cuadrado del Value Map a la izquierda",
-        "Trabajar ambos lados iterativamente hasta encontrar Fit"
+        "Dibujar el círculo del Customer Profile a la derecha, especificando en él los jobs, pains y gains del cliente",
+        "Dibujar el cuadrado del Value Map a la izquierda, documentando en él cómo tu producto/servicio alivia pains y crea gains",
+        "Trabajar ambos lados iterativamente hasta encontrar Fit",
+        "Comunicar ambos documentos a toda la organización para crear entendimiento compartido.",
+        "Usar los documentos como scoreboard durante conversaciones reales con clientes."
       ],
       "entregable_esperado": "Canvas completo con Customer Profile y Value Map mapeados para un segmento específico",
       "nodos_previos": [
         "lienzo_modelo_negocio",
         "empathy_map",
         "prototipado_modelos_negocio",
-        "value_proposition_startup"
+        "value_proposition_startup",
+        "seis_formas_innovar_perfil_cliente"
       ],
       "nodos_siguientes": [
         "customer_profile",
@@ -113175,12 +113206,28 @@
         "customer_discovery_get_out_of_building",
         "innovation_project_canvas",
         "testear_circulo_cuadrado_rectangulo",
-        "lienzo_proyecto_innovacion"
+        "lienzo_proyecto_innovacion",
+        "design_test_repeat",
+        "fit_problema_solucion",
+        "innovation_games_speedboat",
+        "prototyping_possibilities",
+        "understanding_customers_tecnicas"
       ],
       "condiciones_activacion": [
-        "Cuando se necesita diseñar o mejorar una propuesta de valor para un segmento de clientes específico"
+        "Cuando se necesita diseñar o mejorar una propuesta de valor para un segmento de clientes específico",
+        "Cuando el equipo no tiene un entendimiento compartido del cliente."
       ],
-      "etiqueta_arbol": "Encuentra tu Encaje con Clientes"
+      "etiqueta_arbol": "Encuentra tu Encaje con Clientes",
+      "ids_alias": [
+        "customer_profile_value_map"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "customer_profile_value_map",
+          "titulo": "Perfil del Cliente y Mapa de Valor",
+          "fuente": "Value Proposition Design"
+        }
+      ]
     },
     "value_proposition_startup": {
       "node_id": "value_proposition_startup",
@@ -115391,12 +115438,16 @@
         "Revisa cómo aparece la cobertura del warrant en el documento de términos (term sheet): como porcentaje del préstamo, como valor económico, o como puntos base de propiedad diluida.",
         "Compara el valor económico real entre las distintas propuestas que recibas, usando como referencia el porcentaje de propiedad totalmente diluida.",
         "Negocia sobre qué tipo de acción se va a ejercer el warrant, preferente o común, y revisa las protecciones contra dilución.",
-        "Negocia el precio de ejercicio (strike price) tratando de anclarlo a la valuación de tu próxima ronda si esperas que suba bastante."
+        "Negocia el precio de ejercicio (strike price) tratando de anclarlo a la valuación de tu próxima ronda si esperas que suba bastante.",
+        "Evalúa si te conviene usar warrants en lugar de un descuento simple; normalmente esto aplica más en rondas posteriores, no en las primeras.",
+        "Fija el plazo para ejercer los warrants (entre 5 y 10 años) y qué pasa con ellos si tu negocio se fusiona con otro.",
+        "Pide que el pago de los warrants quede separado del resto, para evitar problemas contables (Original Issue Discount, OID)."
       ],
       "entregable_esperado": "Una tabla donde compares los términos del warrant entre los distintos prestamistas: cobertura, valor económico, tipo de acción y precio de ejercicio.",
       "nodos_previos": [
         "fuentes_financiamiento_startup",
-        "warrants_deuda_convertible"
+        "convertible_debt_fundamentos",
+        "warrants_financiamiento"
       ],
       "nodos_siguientes": [
         "amortizacion_y_periodo_de_gracia",
@@ -115404,9 +115455,21 @@
         "seleccion_prestamista_relacion_vs_transaccion"
       ],
       "condiciones_activacion": [
-        "Si estás evaluando pedir deuda de riesgo (venture debt) como complemento al capital que ya levantaste."
+        "Si estás evaluando pedir deuda de riesgo (venture debt) como complemento al capital que ya levantaste.",
+        "Si quien te presta insiste en warrants en lugar de descuento.",
+        "Si estás levantando deuda convertible en una etapa más avanzada de tu negocio."
       ],
-      "etiqueta_arbol": "Fija el Precio de tus Opciones"
+      "etiqueta_arbol": "Fija el Precio de tus Opciones",
+      "ids_alias": [
+        "warrants_deuda_convertible"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "warrants_deuda_convertible",
+          "titulo": "Los warrants como alternativa al descuento (warrants)",
+          "fuente": "Venture Deals - Brad Feld"
+        }
+      ]
     },
     "warrants_deuda_convertible": {
       "node_id": "warrants_deuda_convertible",
@@ -115434,7 +115497,8 @@
         "Si quien te presta insiste en warrants en lugar de descuento.",
         "Si estás levantando deuda convertible en una etapa más avanzada de tu negocio."
       ],
-      "etiqueta_arbol": "Usa Opciones en vez de Descuento"
+      "etiqueta_arbol": "Usa Opciones en vez de Descuento",
+      "deprecado": true
     },
     "warrants_financiamiento": {
       "fase_proyecto": "planificacion",
@@ -115459,7 +115523,7 @@
       ],
       "nodos_siguientes": [
         "convertible_debt_fundamentos",
-        "warrants_deuda_convertible",
+        "warrant_pricing_venture_debt",
         "derechos_de_registro"
       ],
       "etiqueta_arbol": "Usa Opciones para Bajar la Valoración"
@@ -123538,7 +123602,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 51,
+    "nodos_sin_enlaces_entrantes": 55,
     "enlaces_rotos_en_grafo": 0
   }
 }
