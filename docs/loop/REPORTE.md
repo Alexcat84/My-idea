@@ -13,8 +13,8 @@ miembros son PUERTA**, donde la guarda 1B no deja fundir en ninguna direccion.
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `c0e8041a` (la decision del fundador), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** |
-| **hash final** | `PENDIENTE` (el commit del cierre) mas este mismo commit, que solo escribe esta cabecera |
-| **commits de la vuelta** | **PENDIENTE** |
+| **hash final** | `66c36215` (el cierre) mas este mismo commit, que solo escribe esta cabecera, **pusheados a `origin/pasada-unica`** |
+| **commits de la vuelta** | **6**, leidos de `git log --oneline -7` al escribir esta cabecera: `27a401d3` (apertura medida y TAREA 1 entera), `75863aee` (el tramo 4 abierto), `0481113f` (lote A), `a1d7269d` (lote B), `706397c7` (lote C), `66c36215` (el cierre), **mas este**, que solo escribe esta cabecera porque el commit del cierre no podia contener su propio hash |
 | **arbol al cierre** | limpio tras el commit del cierre |
 
 ---
