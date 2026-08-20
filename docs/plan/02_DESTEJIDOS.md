@@ -2568,6 +2568,8 @@ El par **361** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 
 **Y AQUI SI VUELVE UN PAR A LA COLA, el primero de esta vuelta:** el puesto **599**, `asociaciones_clave` con `key_partners_hypothesis`, es **clase B**, y su nodo **cambia de texto al absorber**, asi que **se relee al cierre del acto** como manda `08_VERIFICACION`. Los cuatro actos anteriores de la vuelta (331, 341, 344 y el propio 285 de la vuelta 42 aparte) salieron todos en **CERO**; este no.
 
+> **RETRATO CON CORTE DECLARADO (9.10), rotulado el 20 ago 2026 en la vuelta 58 (TAREA 1.2).** `ROTULO puesto=599 cita=B vigente=D corte=2026-08-19 commit=76c9fadc` . La linea de arriba dice `clase B` porque esa ERA la clase cuando el acto se planeo, y la misma linea declara su propio corte al anunciar que el par **se relee al cierre del acto**. Esa relectura se ejecuto, y es justo la que lo dejo en `D`: el commit `76c9fadc` del 19 ago 2026 se titula *LA RELECTURA DEL 599 de B a D*. Escribir `D` arriba dejaria la frase diciendo que un par ya releido se relee, que es al reves de lo que paso. Este rotulo lo coteja `scripts/loop/vuelta58_puestos_volteados.py` contra el archivo en cada corrida y cae en ROJO si deja de calzar.
+
 **LA FUENTE, DICHA COMO SE MIDE:** el instrumento imprime **FUENTE UNICA (1 fuente distinta medida)**, porque las dos cadenas son **IDENTICAS**: *The Startup Owner's Manual - Steve Blank*. **Es el primer acto de `OP-D-06` en el que la etiqueta sale UNICA**, y se deja escrito porque los tres anteriores (**331**, **341** y **344**) salieron **MIXTA por diferencias de forma y no de libro**. **Aqui se ve que la etiqueta funciona cuando las cadenas calzan, que es lo que da sentido a haber declarado las tres anteriores como forma.**
 
 ### `P.8` EN ORDEN: **manda el CONTENIDO, y esta vez el cableado NO PUEDE DECIDIR NADA**
@@ -3247,6 +3249,8 @@ El par **969** es **clase A** y su razon **NO nombra ganador**: la vara del verb
 
 **Y AQUI SI VUELVE UN PAR A LA COLA, el segundo de toda la operacion despues del 599:** el puesto **233**, `analisis_de_cohortes` con `retention_metrics`, es **clase B** y su nodo **cambia de texto al absorber**, asi que **se relee al cierre del acto** como manda `08_VERIFICACION`. Los actos **392** y **711** de esta misma vuelta salieron los dos en **CERO**; este no.
 
+> **RETRATO CON CORTE DECLARADO (9.10), rotulado el 20 ago 2026 en la vuelta 58 (TAREA 1.2).** `ROTULO puesto=233 cita=B vigente=D corte=2026-08-19 commit=15d42eef` . Mismo caso que el del **599**, tres secciones mas arriba: la linea declara su corte al anunciar la relectura del cierre, y esa relectura es la que lo dejo en `D`, en el commit `15d42eef` del 19 ago 2026, titulado *LA RELECTURA DEL 233 de B a D*. Este rotulo lo coteja `scripts/loop/vuelta58_puestos_volteados.py` contra el archivo en cada corrida y cae en ROJO si deja de calzar.
+
 **LA FUENTE, DICHA COMO SE MIDE:** el instrumento imprime **FUENTE UNICA (1 fuente distinta medida)**, porque las dos cadenas son **IDENTICAS**: *The Startup Owner's Manual - Steve Blank*. **Es el SEGUNDO acto de `OP-D-06` con etiqueta unica**, despues del 361. **Y se deja escrito porque en esta misma vuelta el 711 salio MIXTA DE VERDAD, con dos libros**: la etiqueta del instrumento **distingue las tres situaciones** (unica, mixta por forma, mixta por libro) **y las tres estan ahora registradas con nombre**.
 
 ### `P.8` EN ORDEN: **manda el CONTENIDO, y el cableado EMPATA por segunda vez en la operacion**
@@ -3741,6 +3745,8 @@ OP-D-02  (02_DESTEJIDOS, tipo DESTEJIDO)
 FIN DE LA VERIFICACION MEDIDA
 ==============================================================================
 ```
+
+> **RETRATO CON CORTE DECLARADO (9.10), rotulado el 20 ago 2026 en la vuelta 58 (TAREA 1.2).** `ROTULO puesto=784 cita=B vigente=D corte=2026-08-19 commit=c8172126` . La cita vive DENTRO de un bloque de codigo que es una salida de instrumento pegada verbatim, con su propio corte medido dentro (*pares de clase A vigentes en el archivo hoy: 575*, *nodos 3853, vivos 3524*). Editar una letra ahi seria maquillar la foto, que es lo mismo que el discutible D6 de la vuelta 57 dejo adjudicado A FAVOR para la seccion PASO 3 de `RECOMPUTO_3388.md`. El par paso de `B` a `D` el 19 ago 2026 en el commit `c8172126`, titulado *LA RELECTURA DEL 784 de B a D*. El rotulo va DESPUES del cierre del bloque, para no entrar en la salida. Este rotulo lo coteja `scripts/loop/vuelta58_puestos_volteados.py` contra el archivo en cada corrida y cae en ROJO si deja de calzar.
 
 ### LO QUE ESE BLOQUE CONTESTA, y las TRES cosas que el bloque NO alcanza a ver
 

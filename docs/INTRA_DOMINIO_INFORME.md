@@ -261,11 +261,13 @@ sentidos:**
 
 | puesto | el hijo | la madre | paso | arista | clase que dicta la regla |
 |---:|---|---|---:|:---:|---|
-| 393 | `evaluacion_capital_para_cofundadores` | `busqueda_cofundador_complementario` | 1 | **NO** | **A**, duplicacion |
-| 395 | `proceso_ideacion_modelo_negocio` | `proceso_diseno_modelo_negocio_5_fases` | 3 | **NO** | **A**, duplicacion |
-| 396 | `elevator_pitch_inversion` | `preparacion_materiales_fundraising` | 1 | **NO** | **A**, duplicacion |
+| 393 | `evaluacion_capital_para_cofundadores` | `busqueda_cofundador_complementario` | 1 | **NO** | ~~**A**~~ **D**, duplicacion |
+| 395 | `proceso_ideacion_modelo_negocio` | `proceso_diseno_modelo_negocio_5_fases` | 3 | **NO** | ~~**A**~~ **D**, duplicacion |
+| 396 | `elevator_pitch_inversion` | `preparacion_materiales_fundraising` | 1 | **NO** | ~~**A**~~ **D**, duplicacion |
 | 409 | `drag_along_agreement` | `co_sale_drag_along_agreements` | 4 | **SI** | **D**, jerarquia sana |
 | 402 | `acuerdo_de_co_venta_y_votacion` | `co_sale_drag_along_agreements` | 6 | **SI** | **D**, jerarquia sana |
+
+> **CORRECCION DECLARADA (20 ago 2026, vuelta 58, TAREA 1.2, por el carril del banco `9.10`).** **LAS TRES CELDAS DE `393`, `395` Y `396` ESTABAN ENVEJECIDAS, y no por un teclado: envejecieron solas.** Los tres pares se releyeron despues de escribirse esta tabla y los tres pasaron de `A` a `D`: el **393** y el **396** el 10 ago 2026 en el commit `3e2e2d32` (*la medicion de los veinte*), y el **395** el 11 ago 2026 en el commit `3896c57c` (*R22 con la primera discrepancia*). **LO QUE LA TABLA ARGUMENTA NO CAMBIA Y POR ESO NO SE REESCRIBE**: lo unico que se mueve es el veredicto de esa fila, igual que en la correccion del **203** de la vuelta 57. La regla de la arista sigue diciendo lo que dice y sigue repartiendo en los dos sentidos; lo que cambio es la clase de esos tres pares, no la regla. Medido HOY con `python scripts/loop/vuelta58_triage_heredadas.py` ([`loop/SALIDA_V58_TRIAGE_HEREDADAS.txt`](loop/SALIDA_V58_TRIAGE_HEREDADAS.txt)) y cotejado con `python scripts/loop/vuelta58_puestos_volteados.py --base 06b89c74`: [`loop/SALIDA_V58_PUESTOS_VOLTEADOS_ANTES.txt`](loop/SALIDA_V58_PUESTOS_VOLTEADOS_ANTES.txt) da esta celda envejecida y [`loop/SALIDA_V58_PUESTOS_VOLTEADOS_DESPUES.txt`](loop/SALIDA_V58_PUESTOS_VOLTEADOS_DESPUES.txt) la da VERDE.
 
 > **SEGUNDA MADRE DE DOS CON ARISTAS, y esta si lo es**: `co_sale_drag_along_agreements`
 > reparte sus dos mitades en dos hijos y **enlaza a los dos**. El drag-along vive
@@ -6594,7 +6596,9 @@ primer tramo que se lee con la regla LA MAYORIA MANDA del banco 9.6.1 delante.**
 | **670** | `customer_discovery_overview` | **4** | **1** | mitad o menos | **D** |
 | **676** | `customer_discovery_overview` | **4** | **1** | mitad o menos | **D** |
 | **689** | `esfuerzo_y_energia_intelectual` | **2** | **1** | mitad exacta | **D** |
-| **658**, **678** | dos madres distintas | 6 y 3 | **0** | **la figura no aplica** | **A** |
+| **658**, **678** | dos madres distintas | 6 y 3 | **0** | **la figura no aplica** | ~~**A**~~ **D** |
+
+> **CORRECCION DECLARADA (20 ago 2026, vuelta 58, TAREA 1.2, por el carril del banco `9.10`).** **LA CELDA DEL `658` Y EL `678` ESTABA ENVEJECIDA.** Los dos pares pasaron de `A` a `D` el 10 ago 2026 en el commit `59414fc7` (*la vara ejecutada: diecinueve de veintitres caen*). **LO QUE LA TABLA ARGUMENTA NO CAMBIA Y POR ESO NO SE REESCRIBE**: lo unico que se mueve es el veredicto de esa fila, igual que en la correccion del **203** de la vuelta 57. **El limite que la seccion declara debajo no se toca**: cuando la madre enlaza a CERO hijos la figura sigue sin aplicar, y esa es la frase que esta tabla existe para sostener. Medido HOY con `python scripts/loop/vuelta58_triage_heredadas.py` ([`loop/SALIDA_V58_TRIAGE_HEREDADAS.txt`](loop/SALIDA_V58_TRIAGE_HEREDADAS.txt)) y cotejado con `python scripts/loop/vuelta58_puestos_volteados.py --base 06b89c74`: [`loop/SALIDA_V58_PUESTOS_VOLTEADOS_ANTES.txt`](loop/SALIDA_V58_PUESTOS_VOLTEADOS_ANTES.txt) da esta celda envejecida y [`loop/SALIDA_V58_PUESTOS_VOLTEADOS_DESPUES.txt`](loop/SALIDA_V58_PUESTOS_VOLTEADOS_DESPUES.txt) la da VERDE.
 
 #### El limite que puse yo, y lo declaro porque no esta en la regla
 
@@ -9986,8 +9990,10 @@ los separa queda escrito porque va a hacer falta otra vez.**
 
 | puesto | que comparten | clase | por que |
 |---:|---|:---:|---|
-| **1222** | los **dos primeros pasos enteros**: definir que informacion guardar y meterla en el sistema de clientes. **Es el acto que los dos titulos nombran** | **A** | lo compartido **es el acto** |
+| **1222** | los **dos primeros pasos enteros**: definir que informacion guardar y meterla en el sistema de clientes. **Es el acto que los dos titulos nombran** | ~~**A**~~ **D** | lo compartido **es el acto** |
 | **1224** | **un solo paso**: limitar cuantos directores ponen los inversionistas. Todo lo que cuelga de el es distinto en cada uno | **D** | lo compartido **es por donde se entra** |
+
+> **CORRECCION DECLARADA (20 ago 2026, vuelta 58, TAREA 1.2, por el carril del banco `9.10`).** **LA CELDA DEL `1222` ESTABA ENVEJECIDA.** El par paso de `A` a `D` el 20 ago 2026 en el commit `90bb930c`, el lote C de la vuelta 53. **LO QUE LA TABLA ARGUMENTA NO CAMBIA Y POR ESO NO SE REESCRIBE**: lo unico que se mueve es el veredicto de esa fila, igual que en la correccion del **203** de la vuelta 57. **La regla que esta seccion deja escrita sigue en pie**: cuando lo compartido es el acto es `A` y cuando es solo el marco de entrada es sano. Lo que este par ya no es, es su ejemplar del lado `A`. Medido HOY con `python scripts/loop/vuelta58_triage_heredadas.py` ([`loop/SALIDA_V58_TRIAGE_HEREDADAS.txt`](loop/SALIDA_V58_TRIAGE_HEREDADAS.txt)) y cotejado con `python scripts/loop/vuelta58_puestos_volteados.py --base 06b89c74`: [`loop/SALIDA_V58_PUESTOS_VOLTEADOS_ANTES.txt`](loop/SALIDA_V58_PUESTOS_VOLTEADOS_ANTES.txt) da esta celda envejecida y [`loop/SALIDA_V58_PUESTOS_VOLTEADOS_DESPUES.txt`](loop/SALIDA_V58_PUESTOS_VOLTEADOS_DESPUES.txt) la da VERDE.
 
 > **CUANDO LO COMPARTIDO ES EL ACTO, ES A. CUANDO ES SOLO EL MARCO DE ENTRADA, ES
 > SANO.** Y la misma regla explica el **1214**: los cuatro tipos de mercado son un
@@ -11740,7 +11746,9 @@ huella de carbono, da resultados opuestos y por un motivo verificable:**
 | puesto | contra | clase | por que |
 |---:|---|:---:|---|
 | **1855** | `medir_huella_carbono_corporativa` | **D** | ese nodo **no tiene** ni la frontera organizacional ni el ano base |
-| **1865** | `huella_carbono_empresarial` | **A** | ese nodo **si los tiene**, con las mismas palabras |
+| **1865** | `huella_carbono_empresarial` | ~~**A**~~ **D** | ese nodo **si los tiene**, con las mismas palabras |
+
+> **CORRECCION DECLARADA (20 ago 2026, vuelta 58, TAREA 1.2, por el carril del banco `9.10`).** **LA CELDA DEL `1865` ESTABA ENVEJECIDA.** El par paso de `A` a `D` el 20 ago 2026 en el commit `cadc9977`, el lote A de la vuelta 53. **LO QUE LA TABLA ARGUMENTA NO CAMBIA Y POR ESO NO SE REESCRIBE**: lo unico que se mueve es el veredicto de esa fila, igual que en la correccion del **203** de la vuelta 57. **La discriminacion medida sigue siendo cierta como lectura**: los dos nodos de huella difieren en la frontera organizacional y el ano base, y por eso el tercero se lee distinto contra cada uno. Lo que cambio es donde acabo el veredicto del `1865`. Medido HOY con `python scripts/loop/vuelta58_triage_heredadas.py` ([`loop/SALIDA_V58_TRIAGE_HEREDADAS.txt`](loop/SALIDA_V58_TRIAGE_HEREDADAS.txt)) y cotejado con `python scripts/loop/vuelta58_puestos_volteados.py --base 06b89c74`: [`loop/SALIDA_V58_PUESTOS_VOLTEADOS_ANTES.txt`](loop/SALIDA_V58_PUESTOS_VOLTEADOS_ANTES.txt) da esta celda envejecida y [`loop/SALIDA_V58_PUESTOS_VOLTEADOS_DESPUES.txt`](loop/SALIDA_V58_PUESTOS_VOLTEADOS_DESPUES.txt) la da VERDE.
 
 > **No es una inconsistencia: es la vara funcionando.** Dos nodos que parecen
 > hermanos difieren en dos pasos, y esos dos pasos deciden la clase de un tercero

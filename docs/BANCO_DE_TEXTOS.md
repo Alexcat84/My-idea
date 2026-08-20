@@ -2911,9 +2911,13 @@ de cada fusion no busca solo nombres propios e instrumentos.
 
 | puesto | el nombre largo (sobrevive) | la denominacion que se pierde | clase |
 |---:|---|---|:---:|
-| **2.477 / 2.488** | gestion por objetivos (en el titulo) | **MBO**, el acronimo | A |
+| ~~**2.477 / 2.488**~~ | ~~gestion por objetivos (en el titulo)~~ | ~~**MBO**, el acronimo~~ | ~~A~~ |
+| **2.477** | gestion por objetivos (en el titulo) | **MBO**, el acronimo | A |
+| **2.488** | gestion por objetivos (en el titulo) | **MBO**, el acronimo | **D** |
 | **2.517** | histograma (todo el nodo) | **box plot**, el instrumento en su nombre en ingles | A |
 | **2.548** | voz del cliente (vive: `design_for_six_sigma_dfss` la nombra) | **VOC**, el acronimo | A |
+
+> **CORRECCION DECLARADA (20 ago 2026, vuelta 58, TAREA 1.2, por el carril del banco `9.10`).** **LA FILA DEL `2.477 / 2.488` PUBLICABA UNA SOLA LETRA PARA DOS PUESTOS QUE HOY YA NO LA COMPARTEN, y por eso se parte en dos en vez de corregirse en su sitio.** Medido hoy sobre el archivo: el **2.477** sigue en `A` y el **2.488** esta en `D` desde el 20 ago 2026, commit `04bd56de`, el lote B de la vuelta 53. La fila vieja queda entera y tachada. **El ejemplar de la doctrina no se cae**: el `2.477` lo sostiene con las mismas palabras, y el acta 53 (pregunta 7) ya dejo dicho que las razones del `2.477` y del `2.488` eran ciertas contra su par y no se tocan. Lo que el `2.488` ya no es, es ejemplar de una fusion. Medido HOY con `python scripts/loop/vuelta58_triage_heredadas.py` ([`loop/SALIDA_V58_TRIAGE_HEREDADAS.txt`](loop/SALIDA_V58_TRIAGE_HEREDADAS.txt)) y cotejado con `python scripts/loop/vuelta58_puestos_volteados.py --base 06b89c74`: [`loop/SALIDA_V58_PUESTOS_VOLTEADOS_ANTES.txt`](loop/SALIDA_V58_PUESTOS_VOLTEADOS_ANTES.txt) da esta celda envejecida y [`loop/SALIDA_V58_PUESTOS_VOLTEADOS_DESPUES.txt`](loop/SALIDA_V58_PUESTOS_VOLTEADOS_DESPUES.txt) la da VERDE.
 
 > **La forma es siempre la misma: el nombre largo sobrevive y la sigla o el termino en el
 > otro idioma se pierde.** Y el remedio es de una linea: la denominacion **viaja entre
