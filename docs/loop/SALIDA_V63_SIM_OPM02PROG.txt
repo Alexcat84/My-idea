@@ -1,0 +1,26 @@
+==============================================================================
+SIMULACION DE FUSION, sobre copia en memoria. NADA SE ESCRIBE.
+==============================================================================
+
+### ocho_fases_experiencia_cliente  <==  fases_de_retencion_de_clientes
+  1. DESEMPATE POR CABLEADO
+     ocho_fases_experiencia_cliente               pasos  4 | nombra 12 | LO NOMBRAN 12
+     fases_de_retencion_de_clientes               pasos  3 | nombra  3 | LO NOMBRAN  3
+     >>> gana ocho_fases_experiencia_cliente por 12 contra 3
+  2. ALIAS DEL SUPERVIVIENTE TRAS LA FUSION
+     ['fases_de_retencion_de_clientes']
+  3. ENTRADAS QUE SE REDIRIGEN
+     estrategia_de_ventas                         nodos_previos     -> ocho_fases_experiencia_cliente
+     ocho_fases_experiencia_cliente               nodos_siguientes  -> ocho_fases_experiencia_cliente
+     pensamiento_h2h                              nodos_siguientes  -> ocho_fases_experiencia_cliente
+
+### 4. DUPLICADAS QUE LA FUSION FABRICA (clase OP-S-12)
+    Solo las NUEVAS: se cuentan las duplicadas antes y despues, y se resta.
+     pensamiento_h2h                              nodos_siguientes  -> ocho_fases_experiencia_cliente
+     TOTAL NUEVAS: 1
+
+### 5. AUTO-ARISTAS QUE LA FUSION CREARIA (clase OP-S-07)
+     ocho_fases_experiencia_cliente nodos_siguientes -> fases_de_retencion_de_clientes resuelve a si mismo
+
+### 6. ARISTAS INTERNAS DEL ACTO QUE SOBREVIVEN, con su direccion resuelta
+     NINGUNA: el acto queda sin aristas internas tras la fusion

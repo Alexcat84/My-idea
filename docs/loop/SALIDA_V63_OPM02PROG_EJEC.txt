@@ -1,0 +1,68 @@
+==============================================================================
+OP-M-02-PROG . EL PROGRAMA UNICO: ocho_fases_experiencia_cliente absorbe fases_de_retencion_de_clientes. Es la SEGUNDA fusion de mesa de la campana y la segunda operacion del puesto 1 del orden adjudicado en la vuelta 47. LAS DOS PRIORIDADES VIAJAN, que es lo unico que la ficha manda preservar . MODO EJECUTAR
+plan: docs/loop/PLAN_V63_OPM02PROG.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3273 vivos, 580 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive ocho_fases_experiencia_cliente . absorbe fases_de_retencion_de_clientes
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 1 -> 2 (anadidas 1)
+  alias del superviviente: ['fases_de_retencion_de_clientes']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 3
+   estrategia_de_ventas                                 nodos_previos     fases_de_retencion_de_clientes -> ocho_fases_experiencia_cliente
+   ocho_fases_experiencia_cliente                       nodos_siguientes  fases_de_retencion_de_clientes -> ocho_fases_experiencia_cliente
+   pensamiento_h2h                                      nodos_siguientes  fases_de_retencion_de_clientes -> ocho_fases_experiencia_cliente
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 0
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 1
+   pensamiento_h2h                                      nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   ocho_fases_experiencia_cliente                       nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 906   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 906   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 0, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 1 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (5 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 fases_de_retencion_de_clientes               paso         1  ya lo dice el PASO 1 del superviviente
+        Mapear en qué fase se encuentra actualmente cada segmento de clientes.
+    1 fases_de_retencion_de_clientes               paso         2  ya lo dice el PASO 2 del superviviente
+        Diseñar acciones específicas de la empresa para cada una de las 8 fases (no solo para Assess y Admit).
+    1 fases_de_retencion_de_clientes               paso         3  PASO 5 del superviviente
+        Priorizar el diseño de experiencia en las fases Affirm y Activate, que suelen ser las más descuidadas y donde ocurre la mayor deserción.
+    1 fases_de_retencion_de_clientes               condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la empresa solo tiene procesos diseñados para atraer y cerrar ventas, pero no para después de la compra.
+    1 fases_de_retencion_de_clientes               condicion    2  CONDICION 2 del superviviente
+        Cuando se busca reducir la tasa de abandono temprano de clientes.
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 1
+  nodos implicados    : 2
+  nodos que MUEREN    : 1
+  piezas repartidas   : 5 (2 viajan enteras, 3 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 4
+censo DESPUES: 3853 ficheros, 3272 vivos, 581 deprecados
+censo ANTES  : 3853 ficheros, 3273 vivos, 580 deprecados
+delta deprecados: +1 (esperado +1): OK

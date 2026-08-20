@@ -3155,3 +3155,101 @@ Sale de [`../loop/SALIDA_V63_VERIFICAR_OPM03I.txt`](../loop/SALIDA_V63_VERIFICAR
 
 La ficha de esta operacion **no manda nada sobre duplicadas**; la de `OP-M-02-PROG` si, y dice que **las duplicadas que la fusion fabrique quedan para `OP-S-12`**. **`P.16` (adoptada el 14 ago 2026, decision del fundador) dice lo contrario: quien fabrica, limpia, en el mismo commit**, y su punto 3 convierte a `OP-S-12` en **VERIFICACION DE CERO**. **La divergencia la declaro el instrumento de fundir desde la vuelta 48 y con ella se ejecutaron los seis tramos de `OP-U-01`**, auditados vuelta a vuelta. **Aqui no hizo falta**: esta fusion fabrico **CERO** duplicadas y **CERO** auto-aristas, medido antes de limpiar.
 
+
+---
+
+## `OP-M-02-PROG`: EL REGISTRO DE LA FUSION (2026-08-20, vuelta 63)
+
+**Cada celda de este registro sale de un instrumento corrido en la vuelta 63 y pegada entera**, con el comando citado al lado. **El registro se adosa al final de la pagina y NO reescribe ni una linea de arriba.**
+
+| | |
+|---|---|
+| **la ficha** | `docs/plan/OPERACIONES.jsonl`, tipo **FUSION DE MESA**, estado **LISTA**, fecha de corte **2026-08-12** |
+| **superviviente** | `ocho_fases_experiencia_cliente` |
+| **absorbe** | `fases_de_retencion_de_clientes` |
+| **plan sellado** | [`../loop/PLAN_V63_OPM02PROG.json`](../loop/PLAN_V63_OPM02PROG.json), contrato **`CAMPO PROPIO v1`** |
+| **censo del catalogo** | ANTES 3853 ficheros, 3273 vivos, 580 deprecados . DESPUES 3853 ficheros, 3272 vivos, 581 deprecados . **delta de deprecados +1 (esperado +1): OK** |
+| **el superviviente** | 4 -> 5 (anadidos 1), condiciones 1 -> 2 (anadidas 1) |
+| **piezas repartidas** | **5 (2 viajan enteras, 3 ya estaban dichas)** |
+
+**LA ADJUDICACION, COPIADA VERBATIM DE LA FICHA Y NO REDACTADA AQUI:**
+
+> EL PROGRAMA UNICO. Sobrevive ocho_fases_experiencia_cliente POR CABLEADO SIN EMPATE. SIMULADO el 12 ago 2026: lo nombran 13 nodos contra 3, y tiene 4 pasos contra 3. LAS DOS PRIORIDADES VIAJAN al superviviente.
+
+### EL REPARTO, PIEZA A PIEZA, TALLADO DEL PLAN SELLADO
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `fases_de_retencion_de_clientes` | `CUBIERTO` | ya lo dice el paso **1** del superviviente |
+| paso **2** de `fases_de_retencion_de_clientes` | `CUBIERTO` | ya lo dice el paso **2** del superviviente |
+| paso **3** de `fases_de_retencion_de_clientes` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `fases_de_retencion_de_clientes` | `CUBIERTO` | ya lo dice la condicion **1** del superviviente |
+| condicion **2** de `fases_de_retencion_de_clientes` | `APPEND` | **viaja ENTERA** al superviviente |
+
+### LAS PERDIDAS, SELLADAS EN CAMPO PROPIO (`CAMPO PROPIO v1`)
+
+| especie | que se pierde | donde vivia | enrutada a |
+|---|---|---|---|
+| **DE PARAMETRO DE PASO** | el parentesis NO SOLO PARA ASSESS Y ADMIT, que es la advertencia de que el diseno no puede pararse en las dos fases previas a la venta; y el encuadre de ACCIONES ESPECIFICAS DE LA EMPRESA frente al de EXPERIENCIA EMOCIONAL DESEADA del paso 2 del superviviente. SE DICE LO QUE NO SE PIERDE: el gesto de disenar para CADA UNA DE LAS OCHO FASES esta entero en ese paso 2, y el plan de accion concreto es el paso 4 del superviviente. NO SE ADOSA DE INCISO porque el paso 2 del superviviente cierra en punto y la guarda de la juntura lo rechaza | paso 2 de fases_de_retencion_de_clientes | la fase 04, que redacta y afina los pasos del superviviente |
+
+### LAS REDIRECCIONES Y LAS GUARDAS, LEIDAS DE LA SALIDA DE LA EJECUCION
+
+**Redirecciones sobre nodos VIVOS: 3.** Salen enteras de [`../loop/SALIDA_V63_OPM02PROG_EJEC.txt`](../loop/SALIDA_V63_OPM02PROG_EJEC.txt):
+
+| nodo que nombraba al que muere | campo | pasa a nombrar |
+|---|---|---|
+| `estrategia_de_ventas` | `nodos_previos` | `ocho_fases_experiencia_cliente` |
+| `ocho_fases_experiencia_cliente` | `nodos_siguientes` | `ocho_fases_experiencia_cliente` |
+| `pensamiento_h2h` | `nodos_siguientes` | `ocho_fases_experiencia_cliente` |
+
+| guarda | resultado |
+|---|---|
+| **`P.16`, duplicadas que la propia fusion fabrica** | **1** |
+| **auto-aristas que la fusion habria creado** | **1** |
+| **guarda A**, cero auto-aristas nuevas | **OK (0)** |
+| **guarda B**, cero duplicadas nuevas tras resolver | **OK (0)** |
+| **guarda C**, los cinco campos que la operacion NO redacta, intactos | **5 de 5** |
+| **guarda D**, el absorbido conserva su texto INTACTO | **OK** |
+
+### LO QUE LA FICHA MANDABA COMPROBAR DESPUES DE FUNDIR, COMPROBADO
+
+Sale de [`../loop/SALIDA_V63_VERIFICAR_OPM02PROG.txt`](../loop/SALIDA_V63_VERIFICAR_OPM02PROG.txt), corrida en esta vuelta:
+
+```
+1. LAS DOS PRIORIDADES, EN EL TEXTO DEL SUPERVIVIENTE
+   Affirm       OK   paso [5]
+   Activate     OK   paso [5]
+   el superviviente queda con 5 pasos y 2 condiciones (antes 4 y 1)
+2. LAS PIEZAS PROPIAS DEL QUE MUERE, UNA POR UNA
+   paso 3, la priorizacion de Affirm y Activate   OK   indice [5]
+   condicion 2, reducir el abandono temprano      OK   indice [2]
+3. LAS DOS PIEZAS QUE VIVEN DENTRO, INTACTAS Y NO TOCADAS
+   detectar en que fase se atascan      OK   hoy en el paso [3] (antes [3])
+   el plan de avance                    OK   hoy en el paso [4] (antes [4])
+4. EL ALIAS DEL SUPERVIVIENTE CARGA EL ID QUE MUERE
+   ids_alias: ['fases_de_retencion_de_clientes'] | merged_originals: ['fases_de_retencion_de_clientes']
+5. EL ABSORBIDO, DEPRECADO Y CON SU TEXTO INTACTO
+   deprecado: SI | texto y aristas INTACTOS: SI
+6. LA DUPLICADA QUE LA FUSION FABRICABA, MEDIDA EN EL TESTIGO
+   ANTES, pensamiento_h2h en nodos_siguientes nombraba a los DOS miembros: True
+   HOY  : lo nombra 1 vez(veces) y al muerto 0
+   AUTO-ARISTA: el superviviente se nombra a si mismo: False (tiene que ser False)
+```
+
+### LA DIVERGENCIA CON LA LETRA DE LA FICHA, DECLARADA: `P.16` CONTRA *QUEDAN PARA `OP-S-12`*
+
+**LA FICHA DICE, en su campo `verificacion`:** *las duplicadas que la fusion fabrica quedan para `OP-S-12`, que corre despues*. **`P.16`, adoptada el 14 ago 2026 por decision del fundador y por tanto DOS DIAS POSTERIOR a esta ficha, dice lo contrario y con todas sus letras:** *toda operacion de fusion retira, en su mismo commit, la arista interna del par que su propia simulacion reporta*; y **su punto 3 convierte a `OP-S-12` en VERIFICACION DE CERO** en vez de en limpieza.
+
+**QUE SE HIZO, y por que no es una parada:** se siguio **`P.16`**, que es la regla mas reciente. **No es una decision de esta vuelta: es el carril que el instrumento de fundir declara desde la vuelta 48 y con el que se ejecutaron los SEIS tramos de `OP-U-01`**, auditados vuelta a vuelta. Ademas, **`AUDITOR.md` seccion 3 pone como guarda obligatoria de la fase III *cero duplicadas o auto-aristas tras resolver***, que es lo mismo que `P.16` pide. **VA MARCADO COMO DISCUTIBLE EN LA SECCION 6 DEL REPORTE DE ESTA VUELTA.**
+
+**LO QUE SE MIDIO, y es lo que hace verificable la eleccion:**
+
+| | |
+|---|---|
+| **la duplicada que la fusion fabricaba** | `pensamiento_h2h` en `nodos_siguientes`, que nombraba a los DOS miembros. **Medida ANTES de limpiarla** |
+| **la auto-arista que la fusion creaba** | `ocho_fases_experiencia_cliente` en `nodos_siguientes`, que se nombraba a si mismo por alias. **Medida ANTES de retirarla** |
+| **las dos, despues** | el testigo nombra al superviviente **UNA sola vez** y al muerto **CERO**; el superviviente **NO** se nombra a si mismo |
+| **el pasivo historico ajeno** | **NO SE TOCA**: 927 grupos antes y 927 despues, con el `diff` por resolutor dando **CERO fabricados y CERO renombrados** |
+
+**Y UNA COSA QUE PARECE UNA DISCREPANCIA ENTRE DOS INSTRUMENTOS Y NO LO ES, dicha porque leerla mal cuesta una vuelta:** `simular_fusion.py` reporta **UNA duplicada nueva** y `retirar_duplicada_por_resolutor.py` (el instrumento de `P.16` que corre ANTES de fundir) reporta **NINGUNA**. **No se contradicen: el segundo dice en su propio docstring que SALTA A PROPOSITO el caso que el ejecutor de fusiones deduplica solo**, y persigue unicamente las que llegan por una cadena de alias y sobrevivirian. Esta es de las primeras: `pensamiento_h2h` trae los dos ids **literalmente** en su lista, asi que la sustitucion del ejecutor la funde y la dedupica en el sitio. **El ejecutor la conto y la imprimio antes de limpiarla**, que es lo que `P.16` exige.
+

@@ -1,0 +1,32 @@
+==============================================================================
+VERIFICACION DE OP-M-02-PROG, LO QUE LA FICHA MANDA COMPROBAR
+  arbol de ANTES: commit HEAD (por git show)
+==============================================================================
+
+1. LAS DOS PRIORIDADES, EN EL TEXTO DEL SUPERVIVIENTE
+   Affirm       OK   paso [5]
+   Activate     OK   paso [5]
+   el superviviente queda con 5 pasos y 2 condiciones (antes 4 y 1)
+
+2. LAS PIEZAS PROPIAS DEL QUE MUERE, UNA POR UNA
+   paso 3, la priorizacion de Affirm y Activate   OK   indice [5]
+   condicion 2, reducir el abandono temprano      OK   indice [2]
+
+3. LAS DOS PIEZAS QUE VIVEN DENTRO, INTACTAS Y NO TOCADAS
+   detectar en que fase se atascan      OK   hoy en el paso [3] (antes [3])
+   el plan de avance                    OK   hoy en el paso [4] (antes [4])
+
+4. EL ALIAS DEL SUPERVIVIENTE CARGA EL ID QUE MUERE
+   ids_alias: ['fases_de_retencion_de_clientes'] | merged_originals: ['fases_de_retencion_de_clientes']
+
+5. EL ABSORBIDO, DEPRECADO Y CON SU TEXTO INTACTO
+   deprecado: SI | texto y aristas INTACTOS: SI
+
+6. LA DUPLICADA QUE LA FUSION FABRICABA, MEDIDA EN EL TESTIGO
+   ANTES, pensamiento_h2h en nodos_siguientes nombraba a los DOS miembros: True
+   HOY  : lo nombra 1 vez(veces) y al muerto 0
+   AUTO-ARISTA: el superviviente se nombra a si mismo: False (tiene que ser False)
+
+==============================================================================
+LAS SEIS EN VERDE.
+==============================================================================

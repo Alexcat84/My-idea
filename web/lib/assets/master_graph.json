@@ -47927,7 +47927,7 @@
         "mapa_de_acceso_al_cliente",
         "lienzo_modelo_negocio",
         "refinar_sales_roadmap",
-        "fases_de_retencion_de_clientes",
+        "ocho_fases_experiencia_cliente",
         "evaluacion_vp_ventas"
       ],
       "nodos_siguientes": [
@@ -54539,7 +54539,8 @@
         "Cuando la empresa solo tiene procesos diseñados para atraer y cerrar ventas, pero no para después de la compra.",
         "Cuando se busca reducir la tasa de abandono temprano de clientes."
       ],
-      "etiqueta_arbol": "Guía las Fases del Cliente"
+      "etiqueta_arbol": "Guía las Fases del Cliente",
+      "deprecado": true
     },
     "fases_traccion_producto": {
       "node_id": "fases_traccion_producto",
@@ -81208,7 +81209,8 @@
         "Identificar en qué fase se encuentra actualmente cada segmento de clientes.",
         "Diseñar la experiencia emocional deseada para cada una de las ocho fases.",
         "Detectar en qué fase se están 'atascando' la mayoría de los clientes actuales.",
-        "Crear un plan de acción específico para avanzar a los clientes de una fase a la siguiente."
+        "Crear un plan de acción específico para avanzar a los clientes de una fase a la siguiente.",
+        "Priorizar el diseño de experiencia en las fases Affirm y Activate, que suelen ser las más descuidadas y donde ocurre la mayor deserción."
       ],
       "entregable_esperado": "Un diagrama del recorrido del cliente con las ocho fases identificadas y el estado actual de los clientes en cada una.",
       "nodos_previos": [
@@ -81225,13 +81227,24 @@
         "fase_adopt",
         "advocacy_customer_journey",
         "estrategia_multicanal_bienvenida",
-        "fases_de_retencion_de_clientes",
-        "fase_affirm_buyers_remorse"
+        "fase_affirm_buyers_remorse",
+        "estrategia_de_ventas"
       ],
       "condiciones_activacion": [
-        "Cuando el usuario necesita una estructura sistemática para gestionar la experiencia del cliente después de la venta."
+        "Cuando el usuario necesita una estructura sistemática para gestionar la experiencia del cliente después de la venta.",
+        "Cuando se busca reducir la tasa de abandono temprano de clientes."
       ],
-      "etiqueta_arbol": "Recorre las Ocho Fases del Cliente"
+      "etiqueta_arbol": "Recorre las Ocho Fases del Cliente",
+      "ids_alias": [
+        "fases_de_retencion_de_clientes"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "fases_de_retencion_de_clientes",
+          "titulo": "Las 8 Fases del Viaje del Cliente (Assess-Advocate)",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "oficina_calidad_y_excelencia": {
       "node_id": "oficina_calidad_y_excelencia",
@@ -83736,8 +83749,7 @@
         "empathy_map"
       ],
       "nodos_siguientes": [
-        "ocho_fases_experiencia_cliente",
-        "fases_de_retencion_de_clientes"
+        "ocho_fases_experiencia_cliente"
       ],
       "condiciones_activacion": [
         "Cuando divides tu estrategia rígidamente entre 'vender a empresas' o 'vender a personas' sin pensar en el humano detrás de la decisión.",
@@ -126683,7 +126695,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 215,
+    "nodos_sin_enlaces_entrantes": 216,
     "enlaces_rotos_en_grafo": 0
   }
 }
