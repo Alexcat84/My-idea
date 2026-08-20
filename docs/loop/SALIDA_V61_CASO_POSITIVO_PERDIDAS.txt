@@ -1,0 +1,47 @@
+==================================================================================================
+CASO POSITIVO DEL CONTRATO DE LA PERDIDA SELLADA: SEIS PLANES DE PRUEBA, UNO POR GUARDA
+==================================================================================================
+
+--- PLAN DE PRUEBA: bueno ---
+| _v61_plan_prueba_bueno.json | 2 | DE NOMBRE | el nombre TAGUCHI, que vive solo en el titulo | titulo_concepto del absorbido | fase 04, que redacta titulos |
+  perdidas nombradas : 1
+  por especie        : {'DE NOMBRE': 1}
+FIN
+    exit=0
+
+--- PLAN DE PRUEBA: sin_campo ---
+--- ROJO: 1, Y NO SE EMITE TABLA ---
+FIN
+    exit=1
+
+--- PLAN DE PRUEBA: especie ---
+--- ROJO: 1, Y NO SE EMITE TABLA ---
+FIN
+    exit=1
+
+--- PLAN DE PRUEBA: cruce ---
+--- ROJO: 1, Y NO SE EMITE TABLA ---
+FIN
+    exit=1
+
+--- PLAN DE PRUEBA: repone ---
+  perdidas nombradas : 0
+  por especie        : {}
+FIN
+    exit=0
+
+--- PLAN DE PRUEBA: viejo ---
+--- ROJO: 1, Y NO SE EMITE TABLA ---
+FIN
+    exit=1
+
+--- EL MODO HEREDADO PEDIDO SOBRE UN PLAN QUE SI DECLARA EL CONTRATO ---
+--- ROJO: 1, Y NO SE EMITE TABLA ---
+    el plan docs\loop\_v61_plan_prueba_bueno.json SI declara el contrato y se pidio --por-token: el modo no se elige en silencio, se lee por campo
+
+--- CONTRASTE CONTRA LA CIFRA YA PUBLICADA: LOS LOTES B Y C DEL TRAMO 5 POR TOKEN ---
+  planes leidos      : 2
+  actos leidos       : 31
+  perdidas nombradas : 1
+  la cifra que el registro del tramo 5 publico es 1
+FIN
