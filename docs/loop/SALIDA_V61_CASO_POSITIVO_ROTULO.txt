@@ -1,0 +1,35 @@
+==================================================================================================
+CASO POSITIVO DEL ROTULO: TRES AVERIAS SEMBRADAS A PROPOSITO, UNA POR GUARDA
+Cada averia se siembra, se corre el barrido, se lee la clase, y se restaura con git checkout.
+==================================================================================================
+
+--- AVERIA 1: PROCEDENCIA cuyo literal de prueba deja de existir en la fuente ---
+    scripts/loop/_v41_patch_costuras.py:1  [CABECERA]  'vuelta 40'
+        el rotulo de la linea 11 dice que docs/loop/ACTA_AUDITOR.md contiene 'ACTA DE LA VUELTA 40 QUE NO EXISTE' y HOY no lo contiene
+RESUMEN: 377 ficheros barridos, 184 con hallazgo, 193 limpios | ROJO 33, AMBAR 0, ROTULADO 33, CENSO 214, ILEGIBLE 1
+  restaurado
+
+--- AVERIA 2: SELLO_FIJO en un fichero al que se le anade el argumento que lo repunta ---
+    scripts/loop/vuelta54_registro_tramo.py:1  [CABECERA]  'TRAMO 2'
+        recibe el sujeto por --tramo y el titulo no se entera
+    scripts/loop/vuelta54_registro_tramo.py:14  [ROTULO HUERFANO]  'especie=SELLO_FIJO sujeto/cita=tramo:2'
+        el rotulo no casa con ningun AMBAR vivo de este fichero: o el titulo que cubria ya se corrigio, o el rotulo esta mal escrito
+  restaurado
+
+--- AVERIA 3: ROTULO HUERFANO, el que cubria un titulo que ya se corrigio ---
+    scripts/loop/vuelta48_registro_tramo.py:10  [ROTULO HUERFANO]  'especie=SELLO_FIJO sujeto/cita=tramo:9'
+        el rotulo no casa con ningun AMBAR vivo de este fichero: o el titulo que cubria ya se corrigio, o el rotulo esta mal escrito
+--
+    scripts/loop/vuelta48_registro_tramo.py:1  [CABECERA]  'TRAMO 1'
+        nada en el fichero declara un tramo: el numero no tiene con que cotejarse, asi que ni se confirma ni se desmiente por maquina
+--
+    scripts/loop/vuelta48_registro_tramo.py              vuelta 48 (linea 1)
+    scripts/loop/vuelta48_registros_lineas.py            vuelta 48 (linea 1)
+  restaurado
+
+--- EL ARBOL, TRAS LAS TRES RESTAURACIONES ---
+  (vacio = limpio)
+
+--- EL BARRIDO, RE-CORRIDO TRAS RESTAURAR ---
+RESUMEN: 377 ficheros barridos, 184 con hallazgo, 193 limpios | ROJO 32, AMBAR 0, ROTULADO 34, CENSO 214, ILEGIBLE 1
+FIN
