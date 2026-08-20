@@ -13,20 +13,35 @@
     "Decide si tu producto va a competir por precio bajo con muchas funciones, o como algo premium",
     "Si eliges precio bajo, arma tu discurso de venta enumerando características",
     "Si eliges premium, no enumeres características; habla de los beneficios que resuelven necesidades concretas de tu cliente",
-    "Si sumas vendedores que vienen de una empresa con otro posicionamiento de precio, revisa que no repitan el estilo equivocado"
+    "Si sumas vendedores que vienen de una empresa con otro posicionamiento de precio, revisa que no repitan el estilo equivocado",
+    "Si todavía no la expresó, no presentes la característica: vuelve a preguntas de Implicación o de Necesidad y Beneficio",
+    "Evita abrir la conversación presentando Ventajas genéricas de tu producto"
   ],
   "entregable_esperado": "Checklist o guía de clasificación de mensajes de venta (Características/Ventajas/Beneficios) aplicada a la propuesta de valor propia",
   "nodos_previos": [
     "uso_preguntas_necesidad_beneficio",
     "value_proposition_startup",
-    "preguntas_need_payoff"
+    "preguntas_need_payoff",
+    "modelo_spin_preguntas"
   ],
   "nodos_siguientes": [
-    "lanzamiento_nuevos_productos_enfoque_problema"
+    "lanzamiento_nuevos_productos_enfoque_problema",
+    "prevencion_objeciones_vs_manejo"
   ],
   "condiciones_activacion": [
     "Cuando se diseña o revisa un discurso o presentación de ventas",
-    "En ventas grandes/complejas donde el enfoque en el producto (bells and whistles) puede resultar contraproducente"
+    "En ventas grandes/complejas donde el enfoque en el producto (bells and whistles) puede resultar contraproducente",
+    "Cuando recibes objeciones justo después de mencionar una capacidad de tu producto"
   ],
-  "etiqueta_arbol": "Vende Beneficios, No Características"
+  "etiqueta_arbol": "Vende Beneficios, No Características",
+  "ids_alias": [
+    "diferencia_ventaja_beneficio"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "diferencia_ventaja_beneficio",
+      "titulo": "La diferencia entre mostrar una ventaja y mostrar un beneficio (FAB)",
+      "fuente": "SPIN Selling - Neil Rackham"
+    }
+  ]
 }

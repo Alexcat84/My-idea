@@ -7,22 +7,34 @@
   "resumen_teorico": "Cuando una empresa enfrenta una amenaza existencial (un competidor superior en velocidad, funcionalidad o recursos), la tentación es buscar atajos o 'balas de plata': pivotar, ir a nichos más pequeños, usar partners en vez de competir directamente. Sin embargo, la única solución real suele ser el trabajo duro y sostenido para resolver el problema de fondo (ej: mejorar el producto). No hay atajos mágicos para los problemas fundamentales del negocio.",
   "pasos_accionables": [
     "Identifica si el problema es de mercado (no hay demanda) o de producto/ejecución (hay demanda pero tu producto pierde frente a competencia).",
-    "Si es un problema de producto, resiste la tentación de buscar mercados alternativos o modelos de negocio distintos como escape.",
-    "Enfoca los recursos de ingeniería/equipo directamente en resolver la debilidad competitiva central.",
+    "Si es un problema de producto, resiste la tentación de buscar mercados alternativos o modelos de negocio distintos como escape., y lo mismo con asociaciones o adquisiciones",
+    "Enfoca los recursos de ingeniería/equipo directamente en resolver la debilidad competitiva central., con múltiples mejoras incrementales",
     "Comunica claramente al equipo que no hay atajos: se requiere trabajo sostenido ('balas de plomo') para ganar.",
     "Persiste en el ciclo de mejora del producto hasta recuperar la ventaja competitiva."
   ],
   "entregable_esperado": "Plan de acción centrado en resolver la debilidad competitiva central del producto, sin desviarse hacia soluciones tangenciales.",
   "nodos_previos": [
     "analisis_competitivo",
-    "producto_minimo_viable"
+    "producto_minimo_viable",
+    "deteccion_de_mentiras_organizacionales"
   ],
   "nodos_siguientes": [
-    "pivote_estrategico"
+    "pivote_estrategico",
+    "ventaja_competitiva_producto"
   ],
   "condiciones_activacion": [
     "Cuando la empresa enfrenta una amenaza existencial de un competidor con ventaja clara (precio, velocidad, features).",
     "Cuando el equipo propone múltiples 'soluciones alternativas' que evitan enfrentar el problema central del producto."
   ],
-  "etiqueta_arbol": "Ejecuta, no Busques Atajos"
+  "etiqueta_arbol": "Ejecuta, no Busques Atajos",
+  "ids_alias": [
+    "estrategia_de_balas_de_plomo"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "estrategia_de_balas_de_plomo",
+      "titulo": "Estrategia de 'Balas de Plomo' frente a Desventajas Estructurales",
+      "fuente": "The Hard Thing About Hard Thing - Ben Horowitz"
+    }
+  ]
 }

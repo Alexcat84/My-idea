@@ -1,0 +1,384 @@
+==============================================================================
+OP-U-01, TRAMO 2, LOTE B DE LA VUELTA 55: LOS DOCE ACTOS VIVOS QUE QUEDAN DEL TRAMO EN SU ORDEN IMPRESO (37 a 41, 43 a 48 y 50), incluidos el 44, que se funde tras la relectura del filo, y el 45, donde la contencion declarada y la puerta apuntan al mismo lado . MODO SIMULAR
+plan: docs/loop/PLAN_V55_OPU01_LOTE_B.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3444 vivos, 409 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 37 . sobrevive desirability_feasibility_viability . absorbe triada_restricciones_diseno
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de triada_restricciones_diseno al PASO 1 del superviviente
+        inciso VERBATIM: '¿es deseable para las personas?, ¿es viable como negocio?, ¿es técnicamente factible?'
+        nexo (lo unico de cosecha propia): ': '
+        paso resultante: Evaluar cada idea de innovación en los tres ejes simultáneamente: ¿es deseable para las personas?, ¿es viable como negocio?, ¿es técnicamente factible?
+  alias del superviviente: ['triada_restricciones_diseno']
+
+------------------------------------------------------------------------------
+ACTO 38 . sobrevive fase_admit_celebracion . absorbe fase_admit
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 9 -> 11 (anadidos 2) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['fase_admit']
+
+------------------------------------------------------------------------------
+ACTO 39 . sobrevive usuarios_extremos_edge_cases . absorbe usuarios_extremos_insights
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 1 de usuarios_extremos_insights al PASO 1 del superviviente
+        inciso VERBATIM: 'los que más o menos usan el producto/servicio'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Identificar usuarios en los márgenes: expertos extremos, principiantes totales, o personas con necesidades atípicas., y los que más o menos usan el producto/servicio
+     del paso 2 de usuarios_extremos_insights al PASO 2 del superviviente
+        inciso VERBATIM: 'entrevistas o inmersiones etnográficas'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Estudiar cómo estos usuarios extremos interactúan con el producto o problema, aunque no sean el mercado objetivo directo., con entrevistas o inmersiones etnográficas
+  alias del superviviente: ['usuarios_extremos_insights']
+
+------------------------------------------------------------------------------
+ACTO 40 . sobrevive jerarquia_datos_scor . absorbe business_intelligence_niveles_datos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['business_intelligence_niveles_datos']
+
+------------------------------------------------------------------------------
+ACTO 41 . sobrevive compatibilidad_motivaciones_riqueza_control . absorbe alineacion_motivacional_cofundadores
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de alineacion_motivacional_cofundadores al PASO 2 del superviviente
+        inciso VERBATIM: 'cada fork de decisión (financiamiento, equity, roles)'
+        nexo (lo unico de cosecha propia): ', y sobre '
+        paso resultante: Habla abiertamente de tu motivacion con tu posible socio antes de lanzar el proyecto juntos, y sobre cada fork de decisión (financiamiento, equity, roles)
+  alias del superviviente: ['evaluar_motivaciones_cofundadores', 'alineacion_motivacional_cofundadores']
+
+------------------------------------------------------------------------------
+ACTO 43 . sobrevive lead_bullets_no_silver_bullets . absorbe estrategia_de_balas_de_plomo
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 2 de estrategia_de_balas_de_plomo al PASO 3 del superviviente
+        inciso VERBATIM: 'múltiples mejoras incrementales'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Enfoca los recursos de ingeniería/equipo directamente en resolver la debilidad competitiva central., con múltiples mejoras incrementales
+     del paso 4 de estrategia_de_balas_de_plomo al PASO 2 del superviviente
+        inciso VERBATIM: 'asociaciones o adquisiciones'
+        nexo (lo unico de cosecha propia): ', y lo mismo con '
+        paso resultante: Si es un problema de producto, resiste la tentación de buscar mercados alternativos o modelos de negocio distintos como escape., y lo mismo con asociaciones o adquisiciones
+  alias del superviviente: ['estrategia_de_balas_de_plomo']
+
+------------------------------------------------------------------------------
+ACTO 44 . sobrevive reparto_inicial_equity . absorbe formalizacion_acuerdo_equity
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de formalizacion_acuerdo_equity al PASO 3 del superviviente
+        inciso VERBATIM: 'con ayuda de alguien con conocimiento legal'
+        nexo (lo unico de cosecha propia): ', idealmente '
+        paso resultante: Escribe los acuerdos a los que llegaste para evitar malentendidos más adelante, idealmente con ayuda de alguien con conocimiento legal
+  alias del superviviente: ['formalizacion_acuerdo_equity']
+
+------------------------------------------------------------------------------
+ACTO 45 . sobrevive programacion_entregas_delivery_scheduling . absorbe milk_run_deliveries
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['milk_run_deliveries']
+
+------------------------------------------------------------------------------
+ACTO 46 . sobrevive contratar_ambicion_correcta . absorbe screening_ambicion_organizacional
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 10 -> 10 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de screening_ambicion_organizacional al PASO 2 del superviviente
+        inciso VERBATIM: 'los impostores no pueden explicar el proceso'
+        nexo (lo unico de cosecha propia): ': '
+        paso resultante: Pedir al candidato que explique en detalle cómo se ganó un trato o proyecto, no solo que reclame el crédito.: los impostores no pueden explicar el proceso
+  alias del superviviente: ['screening_ambicion_organizacional']
+
+------------------------------------------------------------------------------
+ACTO 47 . sobrevive wallas_etapa_incubacion . absorbe periodo_incubacion_mental
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['periodo_incubacion_mental']
+
+------------------------------------------------------------------------------
+ACTO 48 . sobrevive framework_caracteristicas_ventajas_beneficios . absorbe diferencia_ventaja_beneficio
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 8 -> 10 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['diferencia_ventaja_beneficio']
+
+------------------------------------------------------------------------------
+ACTO 50 . sobrevive reunion_conclusion_proyecto . absorbe encuesta_satisfaccion_postproyecto
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 12 -> 13 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de encuesta_satisfaccion_postproyecto al PASO 3 del superviviente
+        inciso VERBATIM: 'estrellas o NPS'
+        nexo (lo unico de cosecha propia): ', con una calificación inicial de '
+        paso resultante: Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos, con una calificación inicial de estrellas o NPS
+  alias del superviviente: ['encuesta_satisfaccion_postproyecto']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 41
+   brief_de_diseno                                      nodos_previos     triada_restricciones_diseno -> desirability_feasibility_viability
+   business_model_canvas_scorecard                      nodos_siguientes  usuarios_extremos_insights -> usuarios_extremos_edge_cases
+   circulos_busqueda_cofundadores                       nodos_siguientes  alineacion_motivacional_cofundadores -> compatibilidad_motivaciones_riqueza_control
+   colaboracion_transporte_ctm                          nodos_previos     milk_run_deliveries -> programacion_entregas_delivery_scheduling
+   criterios_equity_split                               nodos_siguientes  formalizacion_acuerdo_equity -> reparto_inicial_equity
+   crossdocking                                         nodos_previos     milk_run_deliveries -> programacion_entregas_delivery_scheduling
+   cuatro_etapas_del_pensamiento_creativo               nodos_siguientes  triada_restricciones_diseno -> desirability_feasibility_viability
+   cultura_feedback_alta_frecuencia                     nodos_siguientes  encuesta_satisfaccion_postproyecto -> reunion_conclusion_proyecto
+   cultura_organizacional_calidad                       nodos_siguientes  screening_ambicion_organizacional -> contratar_ambicion_correcta
+   desconexion_ventas_experiencia                       nodos_siguientes  fase_admit -> fase_admit_celebracion
+   deteccion_de_mentiras_organizacionales               nodos_siguientes  estrategia_de_balas_de_plomo -> lead_bullets_no_silver_bullets
+   dilema_riqueza_vs_control                            nodos_previos     alineacion_motivacional_cofundadores -> compatibilidad_motivaciones_riqueza_control
+   driver_transporte                                    nodos_previos     milk_run_deliveries -> programacion_entregas_delivery_scheduling
+   enfoque_centrado_humano_organizacional               nodos_siguientes  usuarios_extremos_insights -> usuarios_extremos_edge_cases
+   esfuerzo_voluntario_vs_urge_espontaneo               nodos_siguientes  periodo_incubacion_mental -> wallas_etapa_incubacion
+   fase_accomplish                                      nodos_previos     encuesta_satisfaccion_postproyecto -> reunion_conclusion_proyecto
+   fase_affirm_buyers_remorse                           nodos_previos     fase_admit -> fase_admit_celebracion
+   fase_assess                                          nodos_siguientes  fase_admit -> fase_admit_celebracion
+   fase_assess_ciclo_cliente                            nodos_siguientes  fase_admit -> fase_admit_celebracion
+   fundamentos_inteligencia_financiera                  nodos_previos     business_intelligence_niveles_datos -> jerarquia_datos_scor
+   gestion_inventario                                   nodos_siguientes  milk_run_deliveries -> programacion_entregas_delivery_scheduling
+   how_might_we_briefs                                  nodos_previos     usuarios_extremos_insights -> usuarios_extremos_edge_cases
+   investigacion_etnografica_ideacion                   nodos_siguientes  triada_restricciones_diseno -> desirability_feasibility_viability
+   modelo_spin_preguntas                                nodos_siguientes  diferencia_ventaja_beneficio -> framework_caracteristicas_ventajas_beneficios
+   ocho_fases_experiencia_cliente                       nodos_siguientes  fase_admit -> fase_admit_celebracion
+   pensamiento_convergente_divergente                   nodos_previos     usuarios_extremos_insights -> usuarios_extremos_edge_cases
+   preframing_expectativas                              nodos_siguientes  fase_admit -> fase_admit_celebracion
+   prevencion_objeciones_vs_manejo                      nodos_previos     diferencia_ventaja_beneficio -> framework_caracteristicas_ventajas_beneficios
+   proceso_de_promocion_disciplinado                    nodos_previos     screening_ambicion_organizacional -> contratar_ambicion_correcta
+   prototipado_rapido                                   nodos_previos     triada_restricciones_diseno -> desirability_feasibility_viability
+   reglas_brainstorming                                 nodos_previos     periodo_incubacion_mental -> wallas_etapa_incubacion
+   reparto_inicial_equity                               nodos_previos     alineacion_motivacional_cofundadores -> compatibilidad_motivaciones_riqueza_control
+   reunion_conclusion_proyecto                          nodos_siguientes  encuesta_satisfaccion_postproyecto -> reunion_conclusion_proyecto
+   riesgo_split_51_49                                   nodos_siguientes  formalizacion_acuerdo_equity -> reparto_inicial_equity
+   scor_model_operaciones                               nodos_siguientes  business_intelligence_niveles_datos -> jerarquia_datos_scor
+   second_wind_energia_mental                           nodos_previos     periodo_incubacion_mental -> wallas_etapa_incubacion
+   seis_canales_comunicacion_assess                     nodos_siguientes  fase_admit -> fase_admit_celebracion
+   sistema_captura_ideas                                nodos_previos     periodo_incubacion_mental -> wallas_etapa_incubacion
+   ventaja_competitiva_producto                         nodos_previos     estrategia_de_balas_de_plomo -> lead_bullets_no_silver_bullets
+   vesting_dinamico                                     nodos_previos     formalizacion_acuerdo_equity -> reparto_inicial_equity
+   wallas_etapa_preparacion                             nodos_siguientes  periodo_incubacion_mental -> wallas_etapa_incubacion
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 6
+   brainstorming_efectivo                               nodos_previos     periodo_incubacion_mental (registro historico)
+   business_model_canvas_como_scorecard                 nodos_siguientes  usuarios_extremos_insights (registro historico)
+   fase_affirm                                          nodos_previos     fase_admit (registro historico)
+   framework_scor_plan_source_make_deliver              nodos_siguientes  business_intelligence_niveles_datos (registro historico)
+   split_igual_vs_desigual                              nodos_siguientes  formalizacion_acuerdo_equity (registro historico)
+   traspaso_ventas_cuentas                              nodos_siguientes  fase_admit (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 8
+   criterios_equity_split                               nodos_siguientes
+   fase_accomplish                                      nodos_previos
+   fase_affirm_buyers_remorse                           nodos_previos
+   fase_assess_ciclo_cliente                            nodos_siguientes
+   preframing_expectativas                              nodos_siguientes
+   reparto_inicial_equity                               nodos_previos
+   vesting_dinamico                                     nodos_previos
+   wallas_etapa_preparacion                             nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   reunion_conclusion_proyecto                          nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 974   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 972   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 2, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 60 de 60
+guarda D, los 12 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (68 filas)
+ acto de que nodo                                  que          n  a donde va
+   37 triada_restricciones_diseno                  paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar cada idea de producto o servicio contra los tres criterios: ¿es deseable para las personas?, ¿es viable como negocio?, ¿es técnicamente factib
+   37 triada_restricciones_diseno                  paso         2  ya lo dice el PASO 2 del superviviente
+        Identificar qué restricción domina el proyecto actual (tecnología, presupuesto o factores humanos) según el tipo de organización
+   37 triada_restricciones_diseno                  paso         3  PASO 6 del superviviente
+        Evitar enfocarse solo en la viabilidad a corto plazo, ya que esto puede sacrificar innovación por incrementalismo
+   37 triada_restricciones_diseno                  paso         4  PASO 7 del superviviente
+        Iterar entre las tres restricciones durante todo el ciclo de vida del proyecto, no de forma lineal
+   37 triada_restricciones_diseno                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el equipo está evaluando múltiples conceptos de producto y necesita priorizar
+   37 triada_restricciones_diseno                  condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si la organización tiende a enfocarse solo en tecnología o solo en negocio, ignorando al usuario
+   38 fase_admit                                   paso         1  ya lo dice el PASO 1 del superviviente
+        Diseñar un momento de celebración o reconocimiento inmediato tras la compra.
+   38 fase_admit                                   paso         2  ya lo dice el PASO 2 del superviviente
+        Reforzar la decisión del cliente con un mensaje de bienvenida personalizado.
+   38 fase_admit                                   paso         3  PASO 10 del superviviente
+        Evitar caer en el silencio post-venta; mantener el contacto activo justo después del cierre.
+   38 fase_admit                                   paso         4  PASO 11 del superviviente
+        Capturar y asociar la emoción positiva del momento de compra con la marca.
+   38 fase_admit                                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando un cliente acaba de completar una compra o firmar un contrato.
+   39 usuarios_extremos_insights                   paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar usuarios en los extremos del espectro (los que más o menos usan el producto/servicio).
+   39 usuarios_extremos_insights                   paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Realizar entrevistas o inmersiones etnográficas con estos usuarios específicos.
+   39 usuarios_extremos_insights                   paso         3  ya lo dice el PASO 3 del superviviente
+        Extraer patrones o necesidades extremas que puedan aplicarse a la mayoría de usuarios.
+   39 usuarios_extremos_insights                   paso         4  PASO 5 del superviviente
+        Documentar estos hallazgos como 'activos creativos' para futuras iteraciones.
+   39 usuarios_extremos_insights                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la investigación de usuarios estándar (promedio) no arroja ideas innovadoras suficientes.
+   40 business_intelligence_niveles_datos          paso         1  ya lo dice el PASO 1 del superviviente
+        Define qué datos estratégicos, operativos y tácticos son relevantes para tu negocio
+   40 business_intelligence_niveles_datos          paso         2  PASO 5 del superviviente
+        Construye o consigue un almacén de datos (data warehouse) que centralice la información de tus sistemas operativos y contables
+   40 business_intelligence_niveles_datos          paso         3  PASO 6 del superviviente
+        Automatiza la captura de datos y evita meterlos a mano
+   40 business_intelligence_niveles_datos          paso         4  PASO 7 del superviviente
+        Crea reportes fijos según el tipo de decisión que necesites tomar (grandes decisiones, decisiones de cómo ejecutar, o resolver problemas puntuales) y 
+   40 business_intelligence_niveles_datos          condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando tu negocio está saturado de datos pero no logras convertirlos en decisiones
+   40 business_intelligence_niveles_datos          condicion    2  CONDICION 3 del superviviente
+        Si necesitas ver tu negocio de forma distinta según el tipo de decisión que estés tomando en ese momento
+   41 alineacion_motivacional_cofundadores         paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Realizar sesiones de discusión explícita con cofundadores potenciales sobre cada fork de decisión (financiamiento, equity, roles).
+   41 alineacion_motivacional_cofundadores         paso         2  PASO 6 del superviviente
+        Usar una matriz tipo Figura 11.1 para simular escenarios futuros y verificar consenso.
+   41 alineacion_motivacional_cofundadores         paso         3  PASO 7 del superviviente
+        Decidir explícitamente, antes de fundar, si existe compatibilidad motivacional suficiente para evitar conflictos destructivos.
+   41 alineacion_motivacional_cofundadores         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se está por formar un equipo fundador con más de una persona.
+   41 alineacion_motivacional_cofundadores         condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando existen señales tempranas de desacuerdo sobre el rumbo estratégico del startup.
+   43 estrategia_de_balas_de_plomo                 paso         1  ya lo dice el PASO 4 del superviviente
+        Aceptar que no existe una solución única e inmediata para desventajas estructurales graves
+   43 estrategia_de_balas_de_plomo                 paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar múltiples mejoras incrementales que en conjunto cierren la brecha competitiva
+   43 estrategia_de_balas_de_plomo                 paso         3  ya lo dice el PASO 5 del superviviente
+        Priorizar y ejecutar estas mejoras de forma sostenida en el tiempo
+   43 estrategia_de_balas_de_plomo                 paso         4  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evitar buscar exclusivamente asociaciones o adquisiciones como solución mágica
+   43 estrategia_de_balas_de_plomo                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la empresa enfrenta una desventaja competitiva estructural severa sin solución rápida evidente
+   44 formalizacion_acuerdo_equity                 paso         1  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Pon por escrito el acuerdo de reparto de participaciones (equity), idealmente con ayuda de alguien con conocimiento legal
+   44 formalizacion_acuerdo_equity                 paso         2  ya lo dice el PASO 4 del superviviente
+        Incluye condiciones que permitan ajustes futuros, sin volverlas demasiado rígidas
+   44 formalizacion_acuerdo_equity                 paso         3  PASO 5 del superviviente
+        Pregunta por las implicaciones fiscales y legales del acuerdo en tu mercado
+   44 formalizacion_acuerdo_equity                 condicion    1  CONDICION 3 del superviviente
+        Cuando tú y tus socios ya acordaron de palabra el reparto de participaciones y necesitan hacerlo vinculante
+   45 milk_run_deliveries                          paso         1  ya lo dice el PASO 3 del superviviente
+        Identificar ubicaciones de origen y destino que puedan consolidarse en una sola ruta
+   45 milk_run_deliveries                          paso         2  ya lo dice el PASO 1 del superviviente
+        Calcular las cantidades económicas de pedido (EOQ) de cada producto por ubicación
+   45 milk_run_deliveries                          paso         3  ya lo dice el PASO 4 del superviviente
+        Elegir la técnica de ruteo (matriz de ahorros o asignación generalizada) según las restricciones existentes (ventanas de tiempo, capacidad de vehículo
+   45 milk_run_deliveries                          paso         4  PASO 6 del superviviente
+        Diseñar la secuencia de recogidas/entregas y validar con software de ruteo
+   45 milk_run_deliveries                          paso         5  PASO 7 del superviviente
+        Medir el ahorro en costo de transporte y recepción tras implementar la ruta consolidada
+   45 milk_run_deliveries                          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando existen múltiples clientes o proveedores con volúmenes menores a carga completa
+   45 milk_run_deliveries                          condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se busca reducir costos de transporte consolidando envíos
+   46 screening_ambicion_organizacional            paso         1  ya lo dice el PASO 1 del superviviente
+        Durante la entrevista, observa si el candidato atribuye éxitos al equipo o solo a sí mismo
+   46 screening_ambicion_organizacional            paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Pide detalles específicos de cómo se orquestó un logro; los impostores no pueden explicar el proceso
+   46 screening_ambicion_organizacional            paso         3  ya lo dice el PASO 3 del superviviente
+        Verifica referencias cruzadas con otros involucrados en los mismos deals o proyectos
+   46 screening_ambicion_organizacional            paso         4  ya lo dice el PASO 4 del superviviente
+        Evalúa si el candidato pregunta primero por la estrategia de la empresa antes que por compensación
+   46 screening_ambicion_organizacional            condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si estás contratando un líder de ventas u otro puesto con fuertes incentivos individuales
+   46 screening_ambicion_organizacional            condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si sospechas que un ejecutivo actual está optimizando para sí mismo en detrimento de la empresa
+   47 periodo_incubacion_mental                    paso         1  ya lo dice el PASO 3 del superviviente
+        Tras un período de trabajo intenso y concentrado en un problema, programar deliberadamente tiempo de descanso real (sin estímulos relacionados a la ta
+   47 periodo_incubacion_mental                    paso         2  ya lo dice el PASO 4 del superviviente
+        Evitar llenar cada momento disponible con tareas asignadas; dejar espacios de ocio genuino
+   47 periodo_incubacion_mental                    paso         3  PASO 6 del superviviente
+        Registrar en qué momentos de descanso o distracción surgen ideas nuevas para identificar patrones personales de incubación
+   47 periodo_incubacion_mental                    paso         4  ya lo dice el PASO 1 del superviviente
+        Alternar entre esfuerzo intenso y descanso prolongado en lugar de trabajo continuo de baja intensidad
+   47 periodo_incubacion_mental                    condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el equipo está estancado tras un esfuerzo intenso de ideación y no logra nuevas soluciones
+   47 periodo_incubacion_mental                    condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si el proceso de innovación se ha vuelto puramente mecánico o de 'trabajo forzado' sin resultados creativos
+   48 diferencia_ventaja_beneficio                 paso         1  ya lo dice el PASO 2 del superviviente
+        Antes de mencionar una capacidad de tu producto, revisa si tu cliente ya expresó una Necesidad Explícita relacionada
+   48 diferencia_ventaja_beneficio                 paso         2  PASO 9 del superviviente
+        Si todavía no la expresó, no presentes la característica: vuelve a preguntas de Implicación o de Necesidad y Beneficio
+   48 diferencia_ventaja_beneficio                 paso         3  ya lo dice el PASO 3 del superviviente
+        Guarda frases como 'esto le ayudará a...' (Beneficio) para después de que tu cliente diga 'quiero X' o 'necesito X'
+   48 diferencia_ventaja_beneficio                 paso         4  PASO 10 del superviviente
+        Evita abrir la conversación presentando Ventajas genéricas de tu producto
+   48 diferencia_ventaja_beneficio                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando tu material de ventas o tu discurso se centra en características y ventajas genéricas
+   48 diferencia_ventaja_beneficio                 condicion    2  CONDICION 3 del superviviente
+        Cuando recibes objeciones justo después de mencionar una capacidad de tu producto
+   50 encuesta_satisfaccion_postproyecto           paso         1  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseña una encuesta breve con una calificación inicial (por ejemplo estrellas o NPS)
+   50 encuesta_satisfaccion_postproyecto           paso         2  ya lo dice el PASO 4 del superviviente
+        Divide las preguntas según el resultado, positivo o negativo
+   50 encuesta_satisfaccion_postproyecto           paso         3  ya lo dice el PASO 4 del superviviente
+        Si es positivo, pide un testimonio o una reseña
+   50 encuesta_satisfaccion_postproyecto           paso         4  ya lo dice el PASO 4 del superviviente
+        Si es negativo, da espacio para que exprese su frustración y propón una solución
+   50 encuesta_satisfaccion_postproyecto           paso         5  ya lo dice el PASO 2 del superviviente
+        Aplica la encuesta tanto a tu equipo como a tu cliente
+   50 encuesta_satisfaccion_postproyecto           paso         6  PASO 13 del superviviente
+        Usa los resultados para ajustar tus procesos futuros
+   50 encuesta_satisfaccion_postproyecto           condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando termines una entrega, un proyecto o una interacción importante con tu cliente
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 12
+  nodos implicados    : 24
+  nodos que MUEREN    : 12
+  piezas repartidas   : 68 (20 viajan enteras, 39 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.

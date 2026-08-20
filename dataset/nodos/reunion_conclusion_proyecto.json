@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Programar una Reunión de Conclusión al finalizar el proyecto, revisando los objetivos y métricas definidos en el kickoff",
     "Diseñar una encuesta interna para el equipo: satisfacción de trabajar con el cliente, disposición a repetir, comentarios abiertos",
-    "Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos",
+    "Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos, con una calificación inicial de estrellas o NPS",
     "Ramificar las preguntas según el puntaje recibido (alta satisfacción → pedir testimonio; baja satisfacción → espacio para desahogo y solución)",
     "Establecer un periodo de monitoreo posterior (ej. 3 meses) para mitigar el 'remordimiento post-lanzamiento' del cliente",
     "Solicitar testimonios y referidos solo después de dar valor y feedback positivo primero",
@@ -17,16 +17,17 @@
     "Solicitar feedback del cliente sobre esas métricas",
     "Atender cualquier deficiencia pendiente antes de cerrar",
     "Compartir testimonios y reconocimientos mutuos",
-    "Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)"
+    "Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)",
+    "Usa los resultados para ajustar tus procesos futuros"
   ],
   "entregable_esperado": "Protocolo de cierre de proyecto con encuestas internas/externas y plan de monitoreo post-entrega documentado",
   "nodos_previos": [
-    "fase_accomplish_experiencia_cliente"
+    "fase_accomplish_experiencia_cliente",
+    "cultura_feedback_alta_frecuencia"
   ],
   "nodos_siguientes": [
     "gestion_testimonios",
     "fase_adopt_ciclo_cliente",
-    "encuesta_satisfaccion_postproyecto",
     "fase_accomplish"
   ],
   "condiciones_activacion": [
@@ -34,5 +35,15 @@
     "Cuando se busca sistematizar la recolección de testimonios y mejorar la retención",
     "Cuando existe riesgo de que el cliente sienta que el proyecto no cerró satisfactoriamente pese a estar 'técnicamente' terminado"
   ],
-  "etiqueta_arbol": "Cierra tu Proyecto con Balance"
+  "etiqueta_arbol": "Cierra tu Proyecto con Balance",
+  "ids_alias": [
+    "encuesta_satisfaccion_postproyecto"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "encuesta_satisfaccion_postproyecto",
+      "titulo": "Encuesta de Satisfacción Post-Entrega",
+      "fuente": "Never Lose a Customer Again - Joey Coleman"
+    }
+  ]
 }

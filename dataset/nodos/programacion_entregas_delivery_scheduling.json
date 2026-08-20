@@ -10,19 +10,35 @@
     "Si coincide, implementar entregas directas por su simplicidad",
     "Si no coincide, diseñar rutas milk run combinando pedidos",
     "Seleccionar técnica de ruteo: matriz de ahorros (savings matrix) para múltiples restricciones o técnica de asignación generalizada cuando la única restricción es capacidad del vehículo",
-    "Decidir entre entregas desde ubicaciones de producto único o desde centros de distribución"
+    "Decidir entre entregas desde ubicaciones de producto único o desde centros de distribución",
+    "Diseñar la secuencia de recogidas/entregas y validar con software de ruteo",
+    "Medir el ahorro en costo de transporte y recepción tras implementar la ruta consolidada"
   ],
   "entregable_esperado": "Plan de logística de entregas con método seleccionado (directo/milk run) y rutas optimizadas",
   "nodos_previos": [
-    "gestion_pedidos_order_management"
+    "gestion_pedidos_order_management",
+    "gestion_inventario"
   ],
   "nodos_siguientes": [
     "customer_retention_strategy",
-    "customer_retention_tactics"
+    "customer_retention_tactics",
+    "colaboracion_transporte_ctm",
+    "crossdocking",
+    "driver_transporte"
   ],
   "condiciones_activacion": [
     "Cuando el negocio tiene múltiples puntos de entrega y busca reducir costos logísticos",
     "Si los costos de transporte o recepción son elevados por entregas fragmentadas"
   ],
-  "etiqueta_arbol": "Elige cómo Programar tus Entregas"
+  "etiqueta_arbol": "Elige cómo Programar tus Entregas",
+  "ids_alias": [
+    "milk_run_deliveries"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "milk_run_deliveries",
+      "titulo": "Entregas Milk Run",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }

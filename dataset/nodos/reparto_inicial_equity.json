@@ -8,17 +8,18 @@
   "pasos_accionables": [
     "Espera a que la estrategia de tu negocio y quiénes forman tu equipo se estabilicen antes de cerrar el reparto final",
     "Usa una plantilla estructurada (como la de UpDown) para hablar con tus socios sobre lo que cada uno aportó y lo que va a aportar",
-    "Escribe los acuerdos a los que llegaste para evitar malentendidos más adelante",
-    "Incluye siempre una parte que pueda ajustarse, como vesting o cláusulas de recompra, nunca lo dejes fijo para siempre"
+    "Escribe los acuerdos a los que llegaste para evitar malentendidos más adelante, idealmente con ayuda de alguien con conocimiento legal",
+    "Incluye siempre una parte que pueda ajustarse, como vesting o cláusulas de recompra, nunca lo dejes fijo para siempre",
+    "Pregunta por las implicaciones fiscales y legales del acuerdo en tu mercado"
   ],
   "entregable_esperado": "Un documento firmado por todos los socios con el reparto de la propiedad (equity), incluyendo cláusulas que permitan ajustarlo con el tiempo",
   "nodos_previos": [
     "decision_fundador_solo_vs_equipo",
     "criterios_equity_split",
-    "alineacion_motivacional_cofundadores",
     "compatibilidad_motivaciones_riqueza_control",
     "decision_egalitaria_vs_jerarquica",
-    "seleccion_ceo_fundador"
+    "seleccion_ceo_fundador",
+    "riesgo_split_51_49"
   ],
   "nodos_siguientes": [
     "vesting_dinamico",
@@ -26,7 +27,18 @@
   ],
   "condiciones_activacion": [
     "Si todavía no has definido con tus socios cómo repartir la propiedad de tu negocio",
-    "Si se acerca una ronda de inversión externa que va a exigir que tengas clara la tabla de propiedad (cap table)"
+    "Si se acerca una ronda de inversión externa que va a exigir que tengas clara la tabla de propiedad (cap table)",
+    "Cuando tú y tus socios ya acordaron de palabra el reparto de participaciones y necesitan hacerlo vinculante"
   ],
-  "etiqueta_arbol": "Reparte el Equity con Cuidado"
+  "etiqueta_arbol": "Reparte el Equity con Cuidado",
+  "ids_alias": [
+    "formalizacion_acuerdo_equity"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "formalizacion_acuerdo_equity",
+      "titulo": "Cómo formalizar el reparto de participaciones entre socios (equity)",
+      "fuente": "The Founder's Dilemmas"
+    }
+  ]
 }

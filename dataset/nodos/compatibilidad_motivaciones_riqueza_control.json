@@ -7,23 +7,27 @@
   "resumen_teorico": "Cuando piensas en asociarte con alguien, tienes una motivacion de fondo que casi nunca dices en voz alta: buscas riqueza (te importa el valor final del negocio, no quien tenga el mando) o buscas control (te importa mantener autoridad y direccion sobre tu proyecto aunque eso signifique un valor final menor). Esa motivacion define buena parte de si tu sociedad va a aguantar. Si tu y tu socio buscan control, es probable que compitan por liderar y eso genera inestabilidad. Si ambos buscan riqueza, suelen alinearse mejor. Un mix funciona cuando tu, motivado por riqueza, confias de verdad en la capacidad de tu socio motivado por control para liderar. Evita salidas ambiguas como repartir el liderazgo entre dos personas fuertemente motivadas por control: eso no resuelve la competencia de fondo, solo la esconde.",
   "pasos_accionables": [
     "Pregúntate honestamente si lo que mas te importa es la riqueza o el control antes de asociarte con alguien",
-    "Habla abiertamente de tu motivacion con tu posible socio antes de lanzar el proyecto juntos",
+    "Habla abiertamente de tu motivacion con tu posible socio antes de lanzar el proyecto juntos, y sobre cada fork de decisión (financiamiento, equity, roles)",
     "Detecta si hay una fuente de conflicto por el rol de liderazgo cuando las motivaciones no calzan",
     "Si ambos buscan control, anticipa el choque de poder y define desde el inicio como lo van a resolver, sin caer en un liderazgo compartido ambiguo",
-    "Si hay un mix de motivaciones, confirma que de verdad confias en la capacidad de tu socio antes de cederle esa autoridad"
+    "Si hay un mix de motivaciones, confirma que de verdad confias en la capacidad de tu socio antes de cederle esa autoridad",
+    "Usar una matriz tipo Figura 11.1 para simular escenarios futuros y verificar consenso.",
+    "Decidir explícitamente, antes de fundar, si existe compatibilidad motivacional suficiente para evitar conflictos destructivos."
   ],
   "entregable_esperado": "Una conversacion documentada o un acuerdo informal sobre la motivacion de cada uno y el análisis de si son compatibles como equipo",
   "nodos_previos": [
     "seleccion_relaciones_cofundadores",
     "dilema_riqueza_vs_control",
-    "decision_fundador_solo_vs_equipo"
+    "decision_fundador_solo_vs_equipo",
+    "circulos_busqueda_cofundadores"
   ],
   "nodos_siguientes": [
     "reparto_inicial_equity",
     "decision_egalitaria_vs_jerarquica",
     "seleccion_ceo_fundador",
     "criterios_equity_split",
-    "timing_equity_split"
+    "timing_equity_split",
+    "dilema_riqueza_vs_control"
   ],
   "condiciones_activacion": [
     "Antes de formalizar una sociedad con un socio",
@@ -32,12 +36,18 @@
   ],
   "etiqueta_arbol": "Elige Riqueza o Control",
   "ids_alias": [
-    "evaluar_motivaciones_cofundadores"
+    "evaluar_motivaciones_cofundadores",
+    "alineacion_motivacional_cofundadores"
   ],
   "merged_originals": [
     {
       "node_id": "evaluar_motivaciones_cofundadores",
       "titulo": "Evaluación de Motivaciones de los Cofundadores",
+      "fuente": "The Founder's Dilemmas"
+    },
+    {
+      "node_id": "alineacion_motivacional_cofundadores",
+      "titulo": "Diagnóstico de Alineación Motivacional entre Cofundadores",
       "fuente": "The Founder's Dilemmas"
     }
   ]

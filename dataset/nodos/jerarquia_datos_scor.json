@@ -9,19 +9,35 @@
     "Define qué datos necesitas ver tú a nivel estratégico, cuáles a nivel operativo y cuáles a nivel táctico, siguiendo el modelo SCOR",
     "Organiza la recolección de datos según quién los usa: tú, quien coordina el día a día, o quien resuelve problemas en el terreno",
     "Suma datos externos, como el tamaño de tu mercado, indicadores económicos y comparaciones con otros negocios de tu sector, al nivel estratégico",
-    "Revisa que cada persona en tu negocio tenga acceso solo a la información que necesita para su función"
+    "Revisa que cada persona en tu negocio tenga acceso solo a la información que necesita para su función",
+    "Construye o consigue un almacén de datos (data warehouse) que centralice la información de tus sistemas operativos y contables",
+    "Automatiza la captura de datos y evita meterlos a mano",
+    "Crea reportes fijos según el tipo de decisión que necesites tomar (grandes decisiones, decisiones de cómo ejecutar, o resolver problemas puntuales) y deja abierta la posibilidad de hacer consultas puntuales cuando las necesites"
   ],
   "entregable_esperado": "Mapa de tus métricas clasificado en los tres niveles del modelo SCOR, con claridad de quién usa cada uno",
   "nodos_previos": [
-    "lienzo_modelo_negocio"
+    "lienzo_modelo_negocio",
+    "scor_model_operaciones"
   ],
   "nodos_siguientes": [
     "creacion_data_warehouse",
-    "diseno_dashboards"
+    "diseno_dashboards",
+    "fundamentos_inteligencia_financiera"
   ],
   "condiciones_activacion": [
     "Cuando tu negocio tiene distintos niveles de responsabilidad y necesitas organizar cómo fluye la información",
-    "Si sientes que hay demasiados datos sin una estructura clara de para qué sirve cada uno"
+    "Si sientes que hay demasiados datos sin una estructura clara de para qué sirve cada uno",
+    "Si necesitas ver tu negocio de forma distinta según el tipo de decisión que estés tomando en ese momento"
   ],
-  "etiqueta_arbol": "Ordena tus Datos por Nivel"
+  "etiqueta_arbol": "Ordena tus Datos por Nivel",
+  "ids_alias": [
+    "business_intelligence_niveles_datos"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "business_intelligence_niveles_datos",
+      "titulo": "Sistema de inteligencia de negocio en tres niveles",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }
