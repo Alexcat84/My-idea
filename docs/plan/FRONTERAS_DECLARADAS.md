@@ -72,14 +72,14 @@ mas Traction** contra **Blank**.
 
 | el lado | donde vive tras la mesa | que manda |
 |---|---|---|
-| **el punto brillante** | **la puerta de metricas**, `pivotar_o_perseverar` | buscar evidencia de clientes genuinamente comprometidos aunque sean pocos, analizar que tienen en comun, evaluar si son adoptantes tempranos o valores atipicos, mirar si el problema es el momento del mercado, y **PIVOTAR SOLO SI NO APARECE NINGUN PUNTO BRILLANTE** |
+| **el punto brillante** | ~~**la puerta de metricas**, `pivotar_o_perseverar`~~ **CORREGIDO el 19 ago 2026: su nodo propio, `puntos_brillantes_antes_del_pivote`.** Ver la re-declaracion, debajo | buscar evidencia de clientes genuinamente comprometidos aunque sean pocos, analizar que tienen en comun, evaluar si son adoptantes tempranos o valores atipicos, mirar si el problema es el momento del mercado, y **PIVOTAR SOLO SI NO APARECE NINGUN PUNTO BRILLANTE** |
 | **decidir rapido** | **el acto**, `pivote_estrategico` | **DECIDIR CON RAPIDEZ Y SIN MIEDO AL FRACASO** |
 
 **LOS DOS LADOS SE QUEDAN**, y **cada uno en el nodo que le toca tras las fusiones**:
 
 | | |
 |---|---|
-| el bloque del punto brillante | llega por el **destejido `OP-D-07`** y **se conserva entero** en el superviviente del acto I |
+| el bloque del punto brillante | ~~llega por el **destejido `OP-D-07`** y **se conserva entero** en el superviviente del acto I~~ **CORREGIDO el 19 ago 2026 (vuelta 47), decision del fundador, citando `P.18` punto 3: NO llega por ahi, porque ya no sale de ahi.** Se lo llevo `OP-F-04-WEI` el **14 ago 2026** (commit `1eef1c6b`) y **SE QUEDA ENTERO** en su nodo propio `puntos_brillantes_antes_del_pivote`. Ver la re-declaracion, debajo |
 | decidir con rapidez y sin miedo | es una de las **cuatro perdidas que viajan** en `OP-M-03-III`, **y no se poda aunque parezca redundante** |
 
 > **EL MOTIVO, escrito para que nadie lo pode despues: uno empuja a QUEDARSE hasta
@@ -90,6 +90,49 @@ mas Traction** contra **Blank**.
 > RACIMO.** Las dos anteriores viven entre dos nodos hermanos; esta vive **entre una
 > puerta y el acto que le sigue**. **Eso la hace mas facil de perder**, porque los
 > dos lados **ya no estan uno al lado del otro**.
+
+#### RE-DECLARACION DE LA FRONTERA DEL 1298 (**19 ago 2026, vuelta 47**)
+
+> **CORRECCION DECLARADA, DECISION DEL FUNDADOR. El texto de arriba se queda entero
+> delante y no se reescribe**: una correccion que tapa lo que corrige no se puede
+> auditar. Lo unico que se tacha son las **dos celdas** que nombran la sede vieja del
+> lado del punto brillante.
+
+**EL CRITERIO, escrito por el fundador el 19 ago 2026**
+([`../loop/paradas/2026-08-19-punto-brillante-DECISION.md`](../loop/paradas/2026-08-19-punto-brillante-DECISION.md),
+**rama a**): **cuando dos textos sellados chocan, GANA EL QUE APLICO LA REGLA MAS
+RECIENTE DEL FUNDADOR, y el perdedor se corrige.** Aqui gana la **fase 01 del 14 ago
+2026**, que aplico **`P.18` punto 3** y **formo nodo propio**; pierden los **cuatro
+textos del 12 ago 2026** (la `verificacion` 2 de `OP-D-07`, el `preservar` y la
+`verificacion` 3 de `OP-M-03-I`, y la linea de esta pagina, corregida arriba).
+
+**LO QUE CAMBIA ES UNA SOLA COSA: LA SEDE DEL LADO DEL PUNTO BRILLANTE.** No cambia la
+frontera entre libros, no cambia el otro lado, y **no se mueve ni un paso de
+contenido**. Medido con `python scripts/loop/vuelta47_frontera_1298.py`
+(`docs/loop/SALIDA_V47_FRONTERA_1298.txt`, exit 0, instrumento de solo lectura), corte
+**19 ago 2026**:
+
+| | lo que decia el texto del **12 ago 2026** | **la sede MEDIDA HOY** |
+|---|---|---|
+| **lado del punto brillante** | ~~la puerta de metricas, `pivotar_o_perseverar`~~ | **`puntos_brillantes_antes_del_pivote`**, nodo propio creado por `OP-F-04-WEI` el **14 ago 2026** (commit `1eef1c6b`) por `P.18` punto 3, con su lectura publicada en [`01_FUENTES.md`](01_FUENTES.md) linea **982**. **5 de 5 huellas del bloque**, contra **0 de 5** en la puerta y **0 de 5** en el sujeto |
+| **lado de decidir rapido** | el acto, `pivote_estrategico`, por las cuatro perdidas que viajan en `OP-M-03-III` | **SIN CAMBIO, y no se toca aqui.** Vive hoy en el **paso 3** de `pivote_startup` (*Decide con rapidez y sin miedo al fracaso si toca pivotar*), y viaja al acto por `OP-M-03-III`, que es de la **fase 03** y **no se ha ejecutado** |
+| **entre libros** | **Ries mas Traction** contra **Blank** | **SIN CAMBIO, y medido**: el nodo propio declara `Traction - Gabriel Weinberg` **sola**, y `pivote_startup` declara `The Startup Owner's Manual - Steve Blank` |
+
+**Y LA PUERTA NO SALE DE LA FRONTERA: ES EL NODO QUE LA VA A SOSTENER EN EL GRAFO.** La
+decision del fundador dice *la frontera del 1298 se re-declara entre ese nodo y la
+puerta*, y esto es lo que eso obliga, **medido y no supuesto**:
+`puntos_brillantes_antes_del_pivote` **cuelga hoy del sujeto** (el sujeto lo nombra en
+`nodos_siguientes` y el nodo propio nombra al sujeto en `nodos_previos`, comprobado en
+los dos sentidos), y `pivotar_o_perseverar` **todavia no lo nombra en ningun campo**.
+**Cuando `OP-M-03-I` mate al sujeto, esa arista se REDIRIGE a la puerta** como
+cualquier otra entrada del que muere, y desde ese dia el nodo propio cuelga de la
+puerta. **La frontera queda conectada sin mover contenido.**
+
+> **LO QUE LA RE-DECLARACION PROHIBE, escrito para que nadie lo deshaga despues: EL
+> BLOQUE NO SE METE DENTRO DE LA PUERTA.** Lo que separa al nodo propio de la puerta es
+> **que son dos nodos y siguen siendo dos**. Absorberlo en la fusion del acto I seria
+> deshacer `P.18` punto 3, **que es la regla mas reciente del fundador sobre este
+> bloque**, y es exactamente lo que el criterio de arriba manda no hacer.
 
 ### 4. LA FRONTERA DE LOS DOS NIVELES . adoptada el **12 ago 2026**
 

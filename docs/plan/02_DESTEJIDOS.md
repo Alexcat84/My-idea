@@ -4476,14 +4476,23 @@ su acta detras. No se estrena aqui.**
 | `OP-D-04` | 7 | 6 | **SI**, con el encabezado de la forma anterior, linea **1614**: *`OP-D-04` CERRADA: **LAS DOS FUSIONES EJECUTADAS Y EL RESTO ENLAZADO** (19 ag* |
 | `OP-D-05` | 3 | 4 | **SI**, con el encabezado de la forma anterior, linea **1765**: *`OP-D-05` SELLADA: **LA FUSION UNICA DE LA SELECCION DEL CEO** (19 ago 2026, * |
 | `OP-D-06` | 18 | 5 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3403** |
-| `OP-D-07` | 1 | 3 | **NINGUNO** |
+| `OP-D-07` | 1 | 3 | ~~**NINGUNO**~~ **CORREGIDO el 19 ago 2026 (vuelta 47), remedido con el mismo instrumento: SI**, con el encabezado de la forma anterior, linea **4578**: *`OP-D-07` SELLADA: **LA RUTA DECIDIDA POR EL FUNDADOR Y LA CIRUGIA CONSUMIDA** (19 ago * |
 | `OP-D-08` | 1 | 9 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **3829** |
 | `OP-D-09` | 1 | 7 | **SI**, con la frase `REGISTRO DE OPERACION HECHA` (forma de la vuelta 30), linea **4115** |
 
-**8 de 9 tienen registro de cierre escrito en esta pagina**, en una de las dos
+~~**8 de 9 tienen registro de cierre escrito en esta pagina**~~, en una de las dos
 formas que la campana ha usado: la frase `REGISTRO DE OPERACION HECHA` acunada en la vuelta 30,
-o el encabezado `CERRADA` o `SELLADA` de la forma anterior. **La unica sin registro previo era
-`OP-D-07`, y lo acaba de recibir arriba.**
+o el encabezado `CERRADA` o `SELLADA` de la forma anterior. ~~**La unica sin registro previo era
+`OP-D-07`, y lo acaba de recibir arriba.**~~
+
+> **CORRECCION DECLARADA, 19 ago 2026 (vuelta 47), y la cifra vieja se queda delante: HOY SON
+> 9 DE 9.** No es una relectura de la misma medicion: **es que la vuelta 47 escribio el registro
+> que faltaba** (`OP-D-07` SELLADA, al final de esta pagina), y la tabla de arriba **se
+> recomputo al cierre con el mismo instrumento**, `python scripts/loop/vuelta46_cierre_fase02.py`
+> (`docs/loop/SALIDA_V47_CIERRE_FASE02_REMEDIDO.txt`, exit 0). **El reparto por formas, medido
+> hoy: 5 de 9 con la frase de la vuelta 30 y 5 de 9 con el encabezado `CERRADA` o `SELLADA`,
+> con `OP-D-06` en las dos.** **La cifra de 8 de 9 era exacta el 19 ago 2026 en la vuelta 46 y
+> por eso no se borra: describe el estado que motivo el sello.**
 
 ### EL CRITERIO DE HECHO DE `08_VERIFICACION`, CONTRA LA FASE
 
@@ -4517,8 +4526,12 @@ el criterio nombra estan releidos.
 
 **El encargo manda declarar lo que no cierre en vez de declararlo cerrado. Son dos cosas:**
 
-1. **LA MITAD DIFERIDA DE LA VERIFICACION 2 DE `OP-D-07`**, arriba, en **PARADA**. Es de la
-   fase 03 y de la mesa, no de esta pagina.
+1. ~~**LA MITAD DIFERIDA DE LA VERIFICACION 2 DE `OP-D-07`**, arriba, en **PARADA**. Es de la
+   fase 03 y de la mesa, no de esta pagina.~~ **RESUELTA el 19 ago 2026 (vuelta 47) por
+   DECISION DEL FUNDADOR**, rama **a**: el bloque se queda en su nodo propio, los cuatro textos
+   del 12 ago quedan corregidos citando `P.18`, la frontera del 1298 esta re-declarada y
+   `OP-D-07` esta **SELLADA** al final de esta pagina. **El texto viejo no se borra porque
+   describe por que la vuelta 46 no sello.**
 2. **EL MARCADOR DEL `00_INDICE` ESTA RANCIO, y no lo toco yo.** Es una tabla de prosa que
    **ningun instrumento valida**, que es la especie exacta contra la que se escribio el cuarto
    renglon de la regla 1. **Contrastada hoy, fila por fila, contra `OPERACIONES.jsonl`:**
@@ -4572,3 +4585,73 @@ mismo metodo que use yo** (medir el nodo de hoy, hallar la operacion que se llev
 > **`OP-M-03-I` y `FRONTERAS_DECLARADAS.md` escriben, los dos, que el bloque sale del nodo que
 > muere en el acto I**, y hoy no sale de ahi. **El precedente cierra la cirugia; NO cierra la
 > ruta.** Esa mitad sigue en **PARADA** y sigue sin arreglarse aqui.
+
+---
+
+## `OP-D-07` SELLADA: **LA RUTA DECIDIDA POR EL FUNDADOR Y LA CIRUGIA CONSUMIDA** (19 ago 2026, vuelta 47)
+
+**La PARADA que la seccion de arriba dejo abierta la cerro el fundador el 19 ago 2026**
+([`../loop/paradas/2026-08-19-punto-brillante-DECISION.md`](../loop/paradas/2026-08-19-punto-brillante-DECISION.md),
+**rama a**). **Nada de lo escrito arriba se borra ni se reescribe**: esta seccion se anade debajo,
+con su fecha, que es como una correccion se puede auditar.
+
+### LA VIA, CITADA POR SU NOMBRE: **`OP-D-05` SELLADA**
+
+**Es la forma que la propia campana ya uso, no una estrenada hoy.** El precedente esta escrito en
+esta misma pagina, **linea 1765** (encabezado *`OP-D-05` SELLADA: LA FUSION UNICA DE LA SELECCION
+DEL CEO*, 19 ago 2026, vuelta 40) y **linea 1773** (*de las seis huellas del bloque 5 a 12
+sobreviven CERO. Ya se lo llevo `OP-F-04-HOR`, commit `2bd8dd76`, medido con `git log --follow` y no
+supuesto*).
+
+> **La vara de esa via, en una linea: un destejido CONSUMIDO POR LA FASE 01, medido contra el nodo
+> de hoy y con el commit que se lo llevo nombrado, es una forma ya escrita de cerrar.**
+
+**AQUI PASA LO MISMO, con su medicion delante:** la cirugia que `OP-D-07` legisla la consumio
+`OP-F-04-WEI` el **14 ago 2026**, commit **`1eef1c6b`**, **DOS DIAS DESPUES** de la `fecha_corte`
+de esta operacion (**2026-08-12**).
+
+### LAS TRES VERIFICACIONES, AL CIERRE
+
+| # | como queda | con que |
+|---:|---|---|
+| **1** | **CUMPLE**, medida en la vuelta 46 | el corte cae entre el paso 4 y el 5: el nodo pasa de **9** pasos a **4**, con prefijo VERBATIM comun de **4** |
+| **2** | **CUMPLE ENTERA**, y esto es lo que hoy cambia | su mitad material ya cumplia (**5 de 5** pasos byte a byte en el nodo propio, **0 de 5** en la puerta y **0 de 5** en el sujeto). **Su mitad de RUTA dejo de estar en PARADA**: el fundador la decidio, y el propio campo `verificacion` de `OP-D-07` **ya lo dice corregido**, con el texto viejo tachado y sin borrar |
+| **3** | **CUMPLE**, medida en la vuelta 46 | el campo `fuente` queda con **UNA** sola obra, `The Lean Startup - Eric Ries`, de **2** que declaraba |
+
+**Instrumento de las correcciones**: `python scripts/loop/vuelta47_correcciones_p18.py --escribir`
+(`docs/loop/SALIDA_V47_CORRECCIONES_P18.txt`, exit 0). **Escribio 4 campos en 2 operaciones y dejo
+69 de 71 lineas de `OPERACIONES.jsonl` intactas byte a byte.**
+
+### LA DIFERENCIA CON `OP-D-05`, DICHA EN VEZ DE TAPADA
+
+**En `OP-D-03` y en `OP-D-05` nada aguas abajo dependia de DONDE aterrizara el bloque consumido, y
+aqui SI dependia.** Esa es la razon por la que la vuelta 46 se detuvo y no sello. **Lo que cambia
+hoy no es esa lectura: es que lo que dependia de la sede YA ESTA CORREGIDO en el mismo acto**, con
+la pluma que le tocaba, que era la del fundador y no la del bucle:
+
+| lo que dependia de la sede | como queda hoy |
+|---|---|
+| `OP-D-07`, `verificacion` punto 2 | corregido con tachado y fecha, citando `P.18` |
+| `OP-M-03-I`, campo `preservar` | corregido con tachado y fecha, citando `P.18` |
+| `OP-M-03-I`, `verificacion` punto 3 | corregido con tachado y fecha, citando `P.18` |
+| [`FRONTERAS_DECLARADAS.md`](FRONTERAS_DECLARADAS.md), la fila del bloque | corregida, **y la frontera del 1298 RE-DECLARADA** en su propia pagina con su medicion |
+
+> **Y una diferencia a favor, no en contra: aqui el bloque NO se disolvio dentro de otro nodo. Fue
+> a NODO PROPIO**, que es **mas** trazable como lado de una frontera, no menos.
+
+### LO QUE ESTE SELLO NO HACE
+
+- **NO toca el campo `estado`**: sigue **`LISTA`**, por el mismo motivo escrito en las notas de
+  `OP-F-02` y de `OP-D-04`. Ninguna pagina del plan define otro valor para ese campo, y estrenar
+  uno seria **doctrina de esquema, no registro**.
+- **NO estrena la palabra `HECHA`.** El registro dice **`SELLADA`**, que es la forma que `OP-D-05`
+  ya uso, y **NO la frase acunada en la vuelta 30** para las operaciones que quedan hechas.
+  **Esa frase NO se escribe aqui a proposito, y se dice por que:** el localizador de
+  `scripts/loop/vuelta46_cierre_fase02.py` la busca como texto plano dentro de la seccion, asi que
+  escribirla, aunque fuera para negarla, **haria que esta seccion se contara en las DOS formas** y
+  la cuenta de la tabla del cierre mentiria. **Una seccion, una forma.**
+- **NO toca un solo nodo**, ni en la vuelta 46 ni en la 47. **Volver a cortar un nodo ya cortado no
+  es ejecutar la operacion: es fabricar.**
+
+**CON ESTO, LAS NUEVE OPERACIONES DE LA FASE 02 TIENEN REGISTRO DE CIERRE ESCRITO EN ESTA PAGINA**,
+y la unica que faltaba deja de faltar. **La cifra se recomputa en la tabla del cierre, no aqui.**

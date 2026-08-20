@@ -1,0 +1,75 @@
+
+==============================================================================
+1. LAS OPERACIONES DE LA FASE 02, CONTADAS DEL FICHERO
+==============================================================================
+  operaciones con fase == 02_DESTEJIDOS: 9
+
+  op         orden  estado   nodos  verif  arist_nue
+  OP-D-01    1      LISTA    2      5      0       
+  OP-D-02    2      LISTA    4      5      0       
+  OP-D-03    3      LISTA    6      5      0       
+  OP-D-04    4      LISTA    7      6      0       
+  OP-D-05    5      LISTA    3      4      0       
+  OP-D-06    6      LISTA    18     5      0       
+  OP-D-07    7      LISTA    1      3      0       
+  OP-D-08    8      LISTA    1      9      0       
+  OP-D-09    9      LISTA    1      7      0       
+
+==============================================================================
+2. EL REGISTRO ESCRITO DE CADA UNA, BUSCADO EN 02_DESTEJIDOS.md
+==============================================================================
+  patron buscado: un encabezado que nombre la operacion, y la frase
+  'REGISTRO DE OPERACION HECHA' en el cuerpo que le sigue.
+
+  op         linea del   frase de   lineas   encabezado CERRADA o SELLADA
+             encabezado  la v30     seccion  (la forma anterior a la v30)
+  OP-D-01    3581        SI         248      (ninguno)
+  OP-D-02    3581        SI         248      (ninguno)
+  OP-D-03    1197        NO         417      ## `OP-D-03` CERRADA: **DESTEJIDO HECHO Y SIN FUSION** (18 ago 2
+  OP-D-04    1614        NO         151      ## `OP-D-04` CERRADA: **LAS DOS FUSIONES EJECUTADAS Y EL RESTO E
+  OP-D-05    1765        NO         227      ## `OP-D-05` SELLADA: **LA FUSION UNICA DE LA SELECCION DEL CEO*
+  OP-D-06    3403        SI         178      ## `OP-D-06` CERRADA: **LOS NUEVE ACTOS, OCHO FUNDIDOS Y UNO DEC
+  OP-D-07    4578        NO         68       ## `OP-D-07` SELLADA: **LA RUTA DECIDIDA POR EL FUNDADOR Y LA CI
+  OP-D-08    3829        SI         286      (ninguno)
+  OP-D-09    4115        SI         267      (ninguno)
+
+  con la frase REGISTRO DE OPERACION HECHA (forma de la v30) : 5 de 9
+  con encabezado CERRADA o SELLADA (forma anterior)          : 5 de 9
+  CON REGISTRO DE CIERRE EN ALGUNA DE LAS DOS FORMAS         : 9 de 9
+  SIN NINGUN REGISTRO DE CIERRE: ninguna
+
+  LIMITE DECLARADO DEL LOCALIZADOR: OP-D-01 y OP-D-02 comparten UNA
+  SOLA seccion (la de la vuelta 45, que las verifica juntas), asi que
+  las dos apuntan a la misma linea. No son dos secciones contadas una.
+
+==============================================================================
+3. EL CRITERIO DE HECHO DE LA FASE 02, COPIADO DE 08_VERIFICACION.md
+==============================================================================
+  linea 25: | **02 DESTEJIDOS** | los **quince congelados** releidos; **cada perdida en el bloque del que proviene** |
+  linea 9: > **UNA FASE ESTA HECHA CUANDO SU VERIFICACION SE CAERIA SI EL FALLO VOLVIERA.**
+
+==============================================================================
+4. LOS CONGELADOS QUE QUEDAN HOY EN EL ARCHIVO
+==============================================================================
+  marca: la razon ABRE con NO SE JUZGA, NO PUEDO JUZGAR o CONGELAD
+  (el mismo detector de scripts/loop/vuelta45_verificar_opd01_opd02.py)
+
+  veredictos en el archivo: 3388
+  CONGELADOS HOY          : 1
+    puesto 1190   clase D   formalize_advisory_board  contra  identificar_consejo_asesores
+      razon (primeras 220): CONGELADO. Identificar contra formalizar el consejo asesor, del mismo libro y sin arista entre ellos, y lo traigo porque choca de frente con una A ya registrada. identificar_consejo_asesores dice en su paso 6, en UNA LIN
+
+==============================================================================
+5. LOS NODOS SUJETOS DE LA FASE, Y SI SIGUEN VIVOS
+==============================================================================
+  parejas operacion/nodo declaradas: 43
+  nodos sujetos que existen como fichero: 43
+  vivos 28  deprecados 15  ausentes 0
+
+==============================================================================
+6. LO QUE ESTE INSTRUMENTO NO DECIDE
+==============================================================================
+  No decide si la fase esta CERRADA. Cuenta lo que hay y lo publica.
+  La adjudicacion de si OP-D-07 cuenta como HECHA cuando su cirugia la
+  ejecuto OTRA fase va al reporte como DISCUTIBLE MARCADO, no aqui.
+  nodos tocados por ESTA corrida: 0 (instrumento de solo lectura)

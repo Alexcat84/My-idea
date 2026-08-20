@@ -1,0 +1,57 @@
+
+==============================================================================
+1. LOS CINCO NODOS DE LA FRONTERA DEL 1298, LEIDOS DEL GRAFO DE HOY
+==============================================================================
+  decision_pivote_perseverar               pasos  4   deprecado False   fuente: The Lean Startup - Eric Ries
+  pivotar_o_perseverar                     pasos  5   deprecado False   fuente: The Lean Startup - Eric Ries
+  puntos_brillantes_antes_del_pivote       pasos  5   deprecado False   fuente: Traction - Gabriel Weinberg
+  pivote_startup                           pasos  5   deprecado False   fuente: The Startup Owner's Manual - Steve Blank
+  pivote_estrategico                       pasos  5   deprecado False   fuente: The Lean Startup - Eric Ries
+
+==============================================================================
+2. EL LADO DEL PUNTO BRILLANTE: DONDE VIVEN SUS CINCO PASOS
+==============================================================================
+  se buscan las CINCO huellas del bloque en cada uno de los tres nodos
+  candidatos, sin decidir de antemano cual las tiene
+
+  nodo                                     huellas del bloque halladas
+  puntos_brillantes_antes_del_pivote       5 de 5
+  pivotar_o_perseverar                     0 de 5
+  decision_pivote_perseverar               0 de 5
+
+  los pasos del nodo propio, en su orden de hoy:
+    1. Busca evidencia de clientes genuinamente comprometidos, aunque sean pocos
+    2. Analiza qué característica común tienen esos clientes leales
+    3. Evalúa si son adoptadores tempranos de un mercado grande o simples valores atípicos
+    4. Considera si el timing de mercado es el problema (llegaste temprano) en vez del producto
+    5. Solo pivota si no encuentras ningún punto brillante tras análisis profundo
+
+==============================================================================
+3. EL LADO DE DECIDIR RAPIDO: DONDE VIVE SU FRASE
+==============================================================================
+  nodo                                     trae la frase
+  pivote_startup                           SI, paso 3
+  pivote_estrategico                       no
+  pivotar_o_perseverar                     no
+  decision_pivote_perseverar               no
+  puntos_brillantes_antes_del_pivote       no
+
+    literal del paso 3: Decide con rapidez y sin miedo al fracaso si toca pivotar
+
+==============================================================================
+4. LA ARISTA QUE SOSTIENE LA FRONTERA, MEDIDA EN LOS DOS SENTIDOS
+==============================================================================
+  decision_pivote_perseverar nombra a puntos_brillantes_antes_del_pivote en nodos_siguientes: True
+  puntos_brillantes_antes_del_pivote nombra a decision_pivote_perseverar en nodos_previos   : True
+  pivotar_o_perseverar nombra a puntos_brillantes_antes_del_pivote en algun campo     : False
+
+  LECTURA: el nodo propio cuelga HOY del sujeto. Cuando OP-M-03-I mate
+  al sujeto, esa entrada se redirige al superviviente (la puerta), que
+  es lo que la re-declaracion de la frontera escribe.
+
+==============================================================================
+5. EL PAR 1298 EN EL ARCHIVO, LEIDO HOY
+==============================================================================
+  puesto 1298   clase B
+  nodos : decision_pivote_perseverar  contra  pivote_startup
+  razon (primeras 320): LA MISMA PUERTA EN DOS LIBROS, Y CON DISPOSICIONES OPUESTAS: es la pregunta abierta de la mesa del pivote y le traigo la evidencia mas afilada que ha salido. Los dos nodos deciden lo mismo, si se pivota o se sigue, y comparten el arranque, revisar los resultados de las pruebas y decidir con ellos. decision_pivote_perse
