@@ -7,11 +7,13 @@
   "pasos_accionables": [
     "Al constituir legalmente tu empresa, formaliza la emisión de tus acciones de fundador a un precio bajo, completando toda la documentación de compra y pago",
     "Presenta la eleccion fiscal 83(b) dentro de los 30 días siguientes a la emisión de tus acciones",
-    "Establece un cronograma de vesting estándar: 1 año de espera inicial (cliff) con 25% al cumplirlo, y el resto en adquisicion mensual durante los siguientes 3 años",
+    "Establece un cronograma de vesting estándar: 1 año de espera inicial (cliff) con 25% al cumplirlo, y el resto en adquisicion mensual durante los siguientes 3 años, y distínguelo del tuyo como fundador",
     "Negocia crédito de vesting retroactivo si ya trabajaste en la empresa antes de recibir inversion externa",
     "Documenta el derecho de la empresa a recomprar las acciones no adquiridas si alguien se va antes de tiempo",
     "Negocia si aplican clausulas de aceleracion ante un cambio de control, prefiriendo la de doble gatillo (cambio de control mas despido sin causa) sobre la de un solo gatillo, ya que esta ultima puede desincentivar a compradores potenciales",
-    "Documenta claramente que constituye 'causa' y 'razon justificada' de terminacion para efectos de la aceleracion"
+    "Documenta claramente que constituye 'causa' y 'razon justificada' de terminacion para efectos de la aceleracion",
+    "Decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
+    "Deja por escrito las condiciones de cada persona de forma consistente, para evitar conflictos futuros si vendes el negocio o sales a bolsa"
   ],
   "entregable_esperado": "Acuerdo de vesting firmado por ti y tus socios o empleados clave (incluido en el acuerdo de compra de acciones), con cronograma, clausula de recompra, eleccion 83(b) presentada y condiciones de aceleracion claramente definidas",
   "condiciones_activacion": [
@@ -19,7 +21,9 @@
     "Si estas estructurando la distribucion de acciones entre fundadores",
     "Si un inversionista de capital de riesgo exige vesting como condicion de inversion",
     "Si necesitas proteger tu empresa de la salida temprana de un cofundador o empleado clave",
-    "Si estas negociando una posible venta de tu empresa"
+    "Si estas negociando una posible venta de tu empresa",
+    "Cuando estás definiendo cómo pagarás a las primeras personas que contrates",
+    "Cuando formalizas la oferta de acciones a un nuevo ejecutivo"
   ],
   "node_id": "vesting_acciones_fundadores",
   "nodos_previos": [
@@ -28,7 +32,11 @@
     "seleccion_estructura_corporativa",
     "employee_pool_esop",
     "contratar_cerrador_de_ventas",
-    "founders_activities_clause"
+    "founders_activities_clause",
+    "contratacion_experiencia_vs_potencial",
+    "reasignacion_equity_fundadores",
+    "reducir_playing_with_fire_gap",
+    "seesaw_salario_equity"
   ],
   "nodos_siguientes": [
     "employee_pool_esop",
@@ -38,7 +46,18 @@
     "eleccion_83b",
     "term_sheet_negociacion",
     "acuerdo_de_co_venta_y_votacion",
-    "clasificacion_consultores_empleados"
+    "clasificacion_consultores_empleados",
+    "control_del_board_startup"
   ],
-  "etiqueta_arbol": "Gana tus Acciones con el Tiempo"
+  "etiqueta_arbol": "Gana tus Acciones con el Tiempo",
+  "ids_alias": [
+    "eleccion_estructura_vesting_founder"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "eleccion_estructura_vesting_founder",
+      "titulo": "Cómo repartir las acciones en el tiempo entre fundadores y contrataciones (vesting)",
+      "fuente": "The Founder's Dilemmas"
+    }
+  ]
 }

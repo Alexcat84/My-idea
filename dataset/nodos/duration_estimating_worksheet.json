@@ -8,20 +8,37 @@
   "pasos_accionables": [
     "Para estimación paramétrica: calcular horas de esfuerzo, dividir por cantidad de recursos y porcentaje de disponibilidad, ajustar por factor de rendimiento",
     "Para estimación análoga: comparar tamaño del trabajo actual con trabajo previo similar y aplicar multiplicador",
-    "Para estimación de tres puntos: obtener valores optimista, más probable y pesimista, y calcular duración esperada usando distribución Beta",
+    "Para estimación de tres puntos: obtener valores optimista, más probable y pesimista, y calcular duración esperada usando distribución Beta, con la fórmula de ponderación Beta",
     "Registrar los resultados en la hoja de trabajo correspondiente"
   ],
   "entregable_esperado": "Hoja de cálculo completa con estimaciones de duración usando el método apropiado",
   "nodos_previos": [
     "activity_resource_requirements",
     "project_scope_statement",
-    "activity_duration_estimates"
+    "activity_duration_estimates",
+    "actividades_clave",
+    "estimacion_costos_actividad",
+    "work_breakdown_structure"
   ],
   "nodos_siguientes": [
-    "activity_duration_estimates"
+    "activity_duration_estimates",
+    "cronograma_proyecto",
+    "linea_base_costos"
   ],
   "condiciones_activacion": [
-    "Cuando se requiere una estimación cuantitativa y detallada de la duración de las actividades usando métodos formales"
+    "Cuando se requiere una estimación cuantitativa y detallada de la duración de las actividades usando métodos formales",
+    "Cuando existe incertidumbre significativa en la duración o costo de una actividad",
+    "Cuando se requiere un análisis cuantitativo de riesgo en la planificación"
   ],
-  "etiqueta_arbol": "Calcula la Duración de Tareas"
+  "etiqueta_arbol": "Calcula la Duración de Tareas",
+  "ids_alias": [
+    "estimacion_tres_puntos"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "estimacion_tres_puntos",
+      "titulo": "Estimación de Tres Puntos (Beta Distribution)",
+      "fuente": "A Project Manager's Book of Forms"
+    }
+  ]
 }

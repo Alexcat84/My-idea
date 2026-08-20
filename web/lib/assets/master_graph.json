@@ -1060,7 +1060,7 @@
         "medir_lo_que_importa_no_solo_lo_facil",
         "mercados_multilaterales",
         "roles_product_owner_scrum_master",
-        "estimacion_tres_puntos",
+        "duration_estimating_worksheet",
         "key_resources_hypothesis"
       ],
       "condiciones_activacion": [
@@ -2373,7 +2373,7 @@
         "democratizacion_de_herramientas_creativas"
       ],
       "nodos_siguientes": [
-        "anticipar_consecuencias_negativas",
+        "planificacion_consecuencias_no_intencionadas",
         "bundle_ideas",
         "gates_tempranos_flexibles",
         "prototipar_con_medios_no_convencionales",
@@ -2712,7 +2712,7 @@
         "analogos_antilogos",
         "leap_of_faith_assumptions",
         "produccion_scheduling_balance_objetivos",
-        "simulacion_diseno_cadena_suministro",
+        "simulacion_de_operaciones_supply_chain",
         "construccion_experticia_era_ia",
         "preservar_efectivo_buscar_modelo"
       ],
@@ -2924,7 +2924,7 @@
       ],
       "entregable_esperado": "Tu lista de restricciones, las que te vienen dadas y las que eliges tú, con la respuesta de diseño que le diste a cada una.",
       "nodos_previos": [
-        "anticipar_consecuencias_negativas",
+        "planificacion_consecuencias_no_intencionadas",
         "convertir_necesidad_en_demanda"
       ],
       "nodos_siguientes": [
@@ -3710,7 +3710,7 @@
         "demand_curve_pricing",
         "evaluacion_amazon_case",
         "evitar_paralisis_por_analisis",
-        "genchi_gembutsu",
+        "genchi_gembutsu_salir_del_edificio",
         "stage4_testing_validation",
         "etapa_testing_validation"
       ],
@@ -4910,7 +4910,8 @@
         "Cuando tienes una visión muy optimista de tu proyecto y no has pensado en los riesgos.",
         "Antes de llevar tu solución a mucha más gente."
       ],
-      "etiqueta_arbol": "Piensa en lo que Falla"
+      "etiqueta_arbol": "Piensa en lo que Falla",
+      "deprecado": true
     },
     "antidilucion_provisiones": {
       "fase_proyecto": "planificacion",
@@ -5460,7 +5461,8 @@
         "Cuando los números de la startup son pequeños y se corre el riesgo de perder la confianza de inversores o equipo",
         "Cuando el equipo está tentado a usar tácticas de marketing para 'aparentar' tracción"
       ],
-      "etiqueta_arbol": "No te Fíes de Cifras Vanas"
+      "etiqueta_arbol": "No te Fíes de Cifras Vanas",
+      "deprecado": true
     },
     "aprobacion_alta_direccion": {
       "node_id": "aprobacion_alta_direccion",
@@ -6730,7 +6732,8 @@
         "Cuando quieras arrancar un proceso de mejora continua en cómo innovas.",
         "Cuando necesites justificar, con datos concretos, una inversión mayor en investigación y desarrollo frente a quien decide o financia."
       ],
-      "etiqueta_arbol": "Compara tu Innovación con el Mercado"
+      "etiqueta_arbol": "Compara tu Innovación con el Mercado",
+      "deprecado": true
     },
     "auditoria_energetica_sistematica": {
       "node_id": "auditoria_energetica_sistematica",
@@ -10870,7 +10873,7 @@
         "customer_segments_hypothesis",
         "elementos_creadores_valor",
         "estrategia_plataformas_existentes",
-        "eventos_offline_propios",
+        "eventos_offline_como_canal_traccion",
         "framework_bullseye",
         "bullseye_framework"
       ],
@@ -15739,23 +15742,41 @@
       "pasos_accionables": [
         "Identificar empresas con envíos complementarios (peso, volumen, destino) para colaborar",
         "Modelar matemáticamente la red de distribución óptima (número de puntos de consolidación)",
-        "Establecer un hub de información común para compartir datos entre colaboradores",
+        "Establecer un hub de información común para compartir datos entre colaboradores, en tiempo real",
         "Definir reglas claras de expectativas, beneficios compartidos y resolución de conflictos",
-        "Medir ahorros logrados en costo de transporte tras la colaboración"
+        "Medir ahorros logrados en costo de transporte tras la colaboración",
+        "Definir el nivel de colaboración deseado y el intercambio de información asociado"
       ],
       "entregable_esperado": "Acuerdo de colaboración de transporte (CTM) con socios definidos, modelo de red optimizado y métricas de ahorro esperado",
       "nodos_previos": [
         "outsourcing_cadena_suministro",
-        "programacion_entregas_delivery_scheduling"
+        "programacion_entregas_delivery_scheduling",
+        "collaboration_roadblocks",
+        "definicion_alineacion_cadena_suministro",
+        "stakeholder_mapping_wheel"
       ],
       "nodos_siguientes": [
-        "equipo_conjunto_de_mejora_con_proveedores"
+        "equipo_conjunto_de_mejora_con_proveedores",
+        "collaboration_enablers",
+        "scorecard_desempeno_cadena_suministro"
       ],
       "condiciones_activacion": [
         "Cuando una empresa pequeña compite contra rivales más grandes con mayores economías de escala",
-        "Cuando existen sinergias de peso/volumen con otras empresas del mismo sector"
+        "Cuando existen sinergias de peso/volumen con otras empresas del mismo sector",
+        "Si la empresa opera en una cadena de suministro con múltiples transportistas o socios logísticos",
+        "Si se busca reducir costos de transporte mediante colaboración"
       ],
-      "etiqueta_arbol": "Une Fuerzas para Transportar"
+      "etiqueta_arbol": "Une Fuerzas para Transportar",
+      "ids_alias": [
+        "collaborative_transportation_management"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "collaborative_transportation_management",
+          "titulo": "Collaborative Transportation Management (CTM)",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        }
+      ]
     },
     "collaboration_enablers": {
       "node_id": "collaboration_enablers",
@@ -15773,7 +15794,7 @@
       ],
       "entregable_esperado": "Checklist de habilitadores presentes/ausentes y plan de acción para fortalecer los débiles",
       "nodos_previos": [
-        "collaborative_transportation_management"
+        "colaboracion_transporte_ctm"
       ],
       "nodos_siguientes": [
         "collaboration_roadblocks",
@@ -15803,7 +15824,7 @@
         "collaboration_enablers"
       ],
       "nodos_siguientes": [
-        "collaborative_transportation_management"
+        "colaboracion_transporte_ctm"
       ],
       "condiciones_activacion": [
         "Antes de firmar acuerdos de colaboración con socios externos",
@@ -15838,7 +15859,8 @@
         "Si la empresa opera en una cadena de suministro con múltiples transportistas o socios logísticos",
         "Si se busca reducir costos de transporte mediante colaboración"
       ],
-      "etiqueta_arbol": "Comparte tu Red de Transporte"
+      "etiqueta_arbol": "Comparte tu Red de Transporte",
+      "deprecado": true
     },
     "colocar_etiquetas_de_manejo_correctamente": {
       "node_id": "colocar_etiquetas_de_manejo_correctamente",
@@ -16037,7 +16059,7 @@
       ],
       "nodos_siguientes": [
         "customer_retention_strategy",
-        "eventos_offline_propios",
+        "eventos_offline_como_canal_traccion",
         "customer_retention_tactics",
         "comunidad_como_activo_estrategico",
         "gestion_calidad_comunidad_a_escala"
@@ -20309,7 +20331,7 @@
       "nodos_siguientes": [
         "decision_pivote_perseverar",
         "reunion_pivotar_o_perseverar",
-        "customer_development_vs_business_plan"
+        "search_for_business_model"
       ],
       "condiciones_activacion": [
         "Cuando el equipo tiene datos de varios ciclos de Construir-Medir-Aprender y necesita decidir el rumbo",
@@ -20699,7 +20721,7 @@
       ],
       "nodos_siguientes": [
         "diseno_compensacion_equidad",
-        "eleccion_estructura_vesting_founder",
+        "vesting_acciones_fundadores",
         "seesaw_salario_equity"
       ],
       "condiciones_activacion": [
@@ -21130,7 +21152,7 @@
       ],
       "entregable_esperado": "Estructura de tu junta directiva definida por escrito, con claridad sobre los tipos de asientos y quién los ocupa en cada ronda de financiamiento",
       "nodos_previos": [
-        "eleccion_estructura_vesting_founder",
+        "vesting_acciones_fundadores",
         "dilucion_propiedad_por_ronda",
         "perdida_control_junta_directiva",
         "entender_term_sheet",
@@ -24688,7 +24710,7 @@
       ],
       "entregable_esperado": "Cronograma del proyecto completo en formato de diagrama de Gantt o gráfico de hitos, con fechas de inicio/fin, dependencias y recursos asignados",
       "nodos_previos": [
-        "estimacion_tres_puntos",
+        "duration_estimating_worksheet",
         "plan_gestion_costos",
         "wbs_dictionary",
         "activity_list",
@@ -25405,7 +25427,7 @@
         "clasificacion_mercados_cadena_suministro",
         "modelo_cuatro_cuadrantes_mercado",
         "big_data_ia_cadena_suministro",
-        "simulacion_diseno_cadena_suministro"
+        "simulacion_de_operaciones_supply_chain"
       ],
       "nodos_siguientes": [
         "metricas_servicio_cliente_bts_bto",
@@ -27191,9 +27213,8 @@
       ],
       "entregable_esperado": "Un mapa de en que etapa de este proceso estas tu y que preguntas todavia tienes que responder en esa etapa",
       "nodos_previos": [
-        "customer_development_vs_business_plan",
-        "definicion_startup",
-        "search_for_business_model"
+        "search_for_business_model",
+        "definicion_startup"
       ],
       "nodos_siguientes": [
         "build_measure_learn",
@@ -27259,7 +27280,8 @@
         "Cuando el usuario está iniciando un proyecto en un entorno de alta incertidumbre",
         "Si el usuario insiste en escribir un plan de negocio extenso antes de validar nada"
       ],
-      "etiqueta_arbol": "Experimenta en Vez de Planificar"
+      "etiqueta_arbol": "Experimenta en Vez de Planificar",
+      "deprecado": true
     },
     "customer_development_weekly_lessons_learned": {
       "node_id": "customer_development_weekly_lessons_learned",
@@ -27887,7 +27909,7 @@
         "embudo_get_keep_grow",
         "community_building_estrategia",
         "customer_appreciation_pr",
-        "eventos_offline_propios",
+        "eventos_offline_como_canal_traccion",
         "cierre_satisfaccion_postventa",
         "gestion_pedidos_order_management",
         "programacion_entregas_delivery_scheduling",
@@ -29751,7 +29773,7 @@
         "driver_produccion",
         "arquitectura_tecnica_modular",
         "bucle_retroalimentacion_autoajustable",
-        "collaborative_transportation_management",
+        "colaboracion_transporte_ctm",
         "cuatro_capacidades_mercado",
         "gestion_procurement_consumo",
         "gestion_riesgo_cadena_suministro",
@@ -30321,7 +30343,7 @@
       ],
       "nodos_siguientes": [
         "spiral_development",
-        "anticipar_consecuencias_negativas",
+        "planificacion_consecuencias_no_intencionadas",
         "perseguir_multiples_nortes",
         "desarrollo_en_espiral"
       ],
@@ -31507,7 +31529,7 @@
         "alineacion_etica_ia_negocio",
         "amara_law_expectativas_tecnologia",
         "gestion_riesgo_seguridad_ia",
-        "ia_colaborador_productividad",
+        "ia_como_nivelador_habilidades",
         "mitigar_falling_asleep_wheel",
         "principio_mejora_continua_ia",
         "shadow_ia_organizacional"
@@ -33582,7 +33604,7 @@
       ],
       "entregable_esperado": "Un monto específico de financiamiento, con la justificación de tu gasto mensual y del hito al que apunta",
       "nodos_previos": [
-        "proteccion_propiedad_intelectual"
+        "intellectual_property_strategy"
       ],
       "nodos_siguientes": [
         "preparacion_materiales_fundraising"
@@ -34380,7 +34402,7 @@
       ],
       "node_id": "diamante_de_innovacion",
       "nodos_previos": [
-        "auditoria_desempeno_new_products"
+        "mantener_puntaje_innovacion"
       ],
       "nodos_siguientes": [
         "stage_gate_system",
@@ -34524,7 +34546,7 @@
       ],
       "entregable_esperado": "Checklist de principios aplicados antes de diseñar cualquier experimento",
       "nodos_previos": [
-        "customer_development_vs_business_plan"
+        "search_for_business_model"
       ],
       "nodos_siguientes": [
         "extraer_priorizar_hipotesis",
@@ -37682,7 +37704,8 @@
         "Cuando estás armando tu equipo fundador desde cero",
         "Cuando estás por sumar a un nuevo cofundador"
       ],
-      "etiqueta_arbol": "Busca Diversidad, no Solo Similitud"
+      "etiqueta_arbol": "Busca Diversidad, no Solo Similitud",
+      "deprecado": true
     },
     "dividends_terms": {
       "node_id": "dividends_terms",
@@ -38844,22 +38867,39 @@
       "pasos_accionables": [
         "Para estimación paramétrica: calcular horas de esfuerzo, dividir por cantidad de recursos y porcentaje de disponibilidad, ajustar por factor de rendimiento",
         "Para estimación análoga: comparar tamaño del trabajo actual con trabajo previo similar y aplicar multiplicador",
-        "Para estimación de tres puntos: obtener valores optimista, más probable y pesimista, y calcular duración esperada usando distribución Beta",
+        "Para estimación de tres puntos: obtener valores optimista, más probable y pesimista, y calcular duración esperada usando distribución Beta, con la fórmula de ponderación Beta",
         "Registrar los resultados en la hoja de trabajo correspondiente"
       ],
       "entregable_esperado": "Hoja de cálculo completa con estimaciones de duración usando el método apropiado",
       "nodos_previos": [
         "activity_resource_requirements",
         "project_scope_statement",
-        "activity_duration_estimates"
+        "activity_duration_estimates",
+        "actividades_clave",
+        "estimacion_costos_actividad",
+        "work_breakdown_structure"
       ],
       "nodos_siguientes": [
-        "activity_duration_estimates"
+        "activity_duration_estimates",
+        "cronograma_proyecto",
+        "linea_base_costos"
       ],
       "condiciones_activacion": [
-        "Cuando se requiere una estimación cuantitativa y detallada de la duración de las actividades usando métodos formales"
+        "Cuando se requiere una estimación cuantitativa y detallada de la duración de las actividades usando métodos formales",
+        "Cuando existe incertidumbre significativa en la duración o costo de una actividad",
+        "Cuando se requiere un análisis cuantitativo de riesgo en la planificación"
       ],
-      "etiqueta_arbol": "Calcula la Duración de Tareas"
+      "etiqueta_arbol": "Calcula la Duración de Tareas",
+      "ids_alias": [
+        "estimacion_tres_puntos"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "estimacion_tres_puntos",
+          "titulo": "Estimación de Tres Puntos (Beta Distribution)",
+          "fuente": "A Project Manager's Book of Forms"
+        }
+      ]
     },
     "dysfunctional_organizational_culture_patterns": {
       "node_id": "dysfunctional_organizational_culture_patterns",
@@ -40389,7 +40429,8 @@
         "term_sheet_negociacion",
         "control_del_board_startup"
       ],
-      "etiqueta_arbol": "Diseña el Vesting de tu Equipo"
+      "etiqueta_arbol": "Diseña el Vesting de tu Equipo",
+      "deprecado": true
     },
     "eleccion_ritmo_crecimiento": {
       "node_id": "eleccion_ritmo_crecimiento",
@@ -41612,22 +41653,37 @@
         "Mapear en qué etapa de madurez se encuentra el startup actualmente",
         "Determinar qué tipo de inversor es adecuado según el monto y validación necesarios",
         "Planificar una estrategia de fundraising escalonada en el tiempo",
-        "Preparar métricas de tracción específicas para pasar de una etapa de inversor a la siguiente"
+        "Preparar métricas de tracción específicas para pasar de una etapa de inversor a la siguiente",
+        "Investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
+        "Descarta a los inversores cuyo perfil no coincide con tu etapa actual"
       ],
       "entregable_esperado": "Roadmap de fundraising que indique la secuencia esperada de rondas (F&F, angel, Serie A, etc.) y los hitos necesarios para cada transición",
       "nodos_previos": [
-        "producto_minimo_viable"
+        "producto_minimo_viable",
+        "search_for_business_model"
       ],
       "nodos_siguientes": [
         "financiamiento_amigos_y_familia",
         "financiamiento_angel_investors",
-        "financiamiento_venture_capital"
+        "financiamiento_venture_capital",
+        "gestion_sindicato_inversores",
+        "jerarquia_firma_vc"
       ],
       "condiciones_activacion": [
         "El fundador está diseñando su estrategia general de captación de capital",
         "Se requiere claridad sobre qué inversor buscar en cada etapa del startup"
       ],
-      "etiqueta_arbol": "Recorre las Etapas de Inversión"
+      "etiqueta_arbol": "Recorre las Etapas de Inversión",
+      "ids_alias": [
+        "seleccion_etapa_fondo_vc"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "seleccion_etapa_fondo_vc",
+          "titulo": "Identificar el Tipo de Inversor Adecuado según tu Etapa",
+          "fuente": "Venture Deals"
+        }
+      ]
     },
     "embudo_ventas_franquicia": {
       "node_id": "embudo_ventas_franquicia",
@@ -46537,7 +46593,7 @@
         "pensamiento_no_guiado_vs_regulado"
       ],
       "nodos_siguientes": [
-        "customer_development_vs_business_plan",
+        "search_for_business_model",
         "project_charter"
       ],
       "condiciones_activacion": [
@@ -46568,7 +46624,7 @@
       ],
       "nodos_siguientes": [
         "linea_base_costos",
-        "estimacion_tres_puntos",
+        "duration_estimating_worksheet",
         "hoja_estimacion_costos"
       ],
       "condiciones_activacion": [
@@ -46677,7 +46733,8 @@
         "Cuando existe incertidumbre significativa en la duración o costo de una actividad",
         "Cuando se requiere un análisis cuantitativo de riesgo en la planificación"
       ],
-      "etiqueta_arbol": "Estima con Tres Escenarios"
+      "etiqueta_arbol": "Estima con Tres Escenarios",
+      "deprecado": true
     },
     "estimate_at_completion_eac": {
       "node_id": "estimate_at_completion_eac",
@@ -47422,10 +47479,11 @@
       "resumen_teorico": "Coleman propone usar sistemáticamente seis canales de comunicación —en persona, email, correo postal, teléfono, video y regalo/presente— para reforzar la relación con el cliente recién adquirido. No es necesario usar los seis, pero evaluar cada uno genera ideas de touchpoints que la mayoría de competidores ignoran, generando una diferenciación notable. Ejemplo: Zogics logró triplicar su tasa de apertura de email y quintuplicar la tasa de reproducción de video simplemente personalizando el thumbnail con el nombre del cliente y una imagen genuina del empleado.",
       "pasos_accionables": [
         "Auditar qué canales de comunicación se usan actualmente tras una compra",
-        "Diseñar al menos un touchpoint personalizado por canal (video corto, llamada de agradecimiento, nota escrita a mano, empaque temático)",
-        "Personalizar cada touchpoint con el nombre del cliente y detalles específicos de su compra",
+        "Diseñar al menos un touchpoint personalizado por canal (video corto, llamada de agradecimiento, nota escrita a mano, empaque temático), incluidos los medios subutilizados como correo físico, video personalizado o regalos significativos",
+        "Personalizar cada touchpoint con el nombre del cliente y detalles específicos de su compra, y Evitar gestos genéricos (cupones, tazas con logo)",
         "Medir tasas de apertura, reproducción o respuesta antes y después de implementar la personalización",
-        "Iterar el mensaje y el canal según los resultados obtenidos"
+        "Iterar el mensaje y el canal según los resultados obtenidos",
+        "Seleccionar deliberadamente qué medio usar según la fase del cliente y el efecto emocional deseado."
       ],
       "entregable_esperado": "Un mapa de touchpoints por canal (email, video, llamada, correo, presente, interacción en persona) con plantillas y responsables asignados.",
       "nodos_previos": [
@@ -47433,13 +47491,24 @@
         "ocho_fases_experiencia_cliente"
       ],
       "nodos_siguientes": [
-        "eventos_offline_como_canal_traccion"
+        "eventos_offline_como_canal_traccion",
+        "understanding_customers_tecnicas"
       ],
       "condiciones_activacion": [
         "Cuando la empresa solo envía una confirmación de compra genérica y automatizada",
         "Si se busca aumentar el engagement inicial del cliente sin gran inversión"
       ],
-      "etiqueta_arbol": "Da la Bienvenida Multicanal"
+      "etiqueta_arbol": "Da la Bienvenida Multicanal",
+      "ids_alias": [
+        "seis_medios_comunicacion_cliente"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "seis_medios_comunicacion_cliente",
+          "titulo": "Los Seis Medios de Comunicación con el Cliente",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "estrategia_multicanal_expansion": {
       "node_id": "estrategia_multicanal_expansion",
@@ -50800,30 +50869,50 @@
       "resumen_teorico": "Los eventos presenciales, como conferencias, encuentros o fiestas, son una forma poderosa de conseguir clientes, sobre todo si vendes a otras empresas (B2B) o si tu comunidad comparte intereses fuertes. Te dejan hablar directamente con quien podría comprarte, generan confianza en tu marca y crean vínculos que los canales digitales masivos no logran. Funcionan mejor cuando puedes identificar con claridad a tu mercado y este tiene necesidad de encontrarse con otros parecidos.",
       "pasos_accionables": [
         "Piensa si las personas a las que quieres llegar comparten intereses o buscan comunidad",
-        "Empieza con un evento pequeño y de bajo costo, como una mini charla de un día; pregunta el precio en tu mercado",
-        "Invita a tres emprendedores o expertos locales relevantes para que den charlas cortas",
+        "Empieza con un evento pequeño y de bajo costo, como una mini charla de un día; pregunta el precio en tu mercado, o un evento lujoso multi-día para decision makers de alto nivel",
+        "Invita a tres emprendedores o expertos locales relevantes para que den charlas cortas, y sin que el evento parezca un pitch de ventas",
         "Busca un espacio accesible, como una universidad, para reducir gastos",
         "Si el evento pequeño funciona, anímate a organizar uno más grande con auspiciantes",
         "Mantén el precio de entrada relativamente alto para asegurar que quien va realmente esté interesado",
-        "Facilita que los que dan charlas y los asistentes se conecten entre sí, con almuerzos compartidos o mesas de conversación"
+        "Facilita que los que dan charlas y los asistentes se conecten entre sí, con almuerzos compartidos o mesas de conversación",
+        "Validar la demanda del evento preguntando directamente a tu audiencia (encuesta, venta anticipada de entradas).",
+        "Usar transmisión en vivo o meetups satélite para expandir el alcance sin aumentar costos de viaje.",
+        "Repetir el evento anualmente una vez validado, ajustando precio y escala según la demanda comprobada."
       ],
       "entregable_esperado": "Un evento presencial piloto (encuentro o mini charla) que planeaste y realizaste, con la asistencia y el interés generado anotados",
       "nodos_previos": [
         "canales_distribucion",
         "arquetipos_de_cliente",
-        "estrategia_multicanal_bienvenida"
+        "estrategia_multicanal_bienvenida",
+        "community_building_estrategia",
+        "introduccion_validacion_clientes"
       ],
       "nodos_siguientes": [
         "speaking_engagements_estrategia",
         "community_building_estrategia",
-        "meetups_bootstrapping_comunidad"
+        "meetups_bootstrapping_comunidad",
+        "canales_distribucion",
+        "customer_retention_tactics"
       ],
       "condiciones_activacion": [
         "Si vendes a otras empresas o a un grupo de personas fácil de identificar",
         "Si otros canales digitales, como anuncios o buscadores, ya no te dan resultado",
-        "Si tu producto necesita que lo expliques o lo muestres en persona para que se entienda"
+        "Si tu producto necesita que lo expliques o lo muestres en persona para que se entienda",
+        "Cuando los clientes objetivo comparten intereses y tienen necesidad de comunidad.",
+        "Cuando no existe un evento de industria adecuado para llegar a los tomadores de decisión.",
+        "Cuando se busca posicionamiento de marca como líder de pensamiento en la industria."
       ],
-      "etiqueta_arbol": "Usa Eventos para Atraer Clientes"
+      "etiqueta_arbol": "Usa Eventos para Atraer Clientes",
+      "ids_alias": [
+        "eventos_offline_propios"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "eventos_offline_propios",
+          "titulo": "Organización de Eventos Offline Propios",
+          "fuente": "Traction - Gabriel Weinberg"
+        }
+      ]
     },
     "eventos_offline_propios": {
       "node_id": "eventos_offline_propios",
@@ -50854,7 +50943,8 @@
         "Cuando no existe un evento de industria adecuado para llegar a los tomadores de decisión.",
         "Cuando se busca posicionamiento de marca como líder de pensamiento en la industria."
       ],
-      "etiqueta_arbol": "Crea tu Propio Evento"
+      "etiqueta_arbol": "Crea tu Propio Evento",
+      "deprecado": true
     },
     "eventos_reuniones_verdes": {
       "node_id": "eventos_reuniones_verdes",
@@ -54706,7 +54796,8 @@
         "Cuando el proyecto es de investigación/tecnología con alta incertidumbre financiera",
         "Si los business cases tradicionales han demostrado ser poco confiables en el pasado"
       ],
-      "etiqueta_arbol": "Flexibiliza tus Criterios de Decisión"
+      "etiqueta_arbol": "Flexibiliza tus Criterios de Decisión",
+      "deprecado": true
     },
     "flujo_de_caja_libre": {
       "node_id": "flujo_de_caja_libre",
@@ -57359,7 +57450,8 @@
         "Cuando las decisiones del producto se basan solo en investigación de mercado indirecta",
         "Cuando el equipo fundador no tiene experiencia directa con el mercado objetivo"
       ],
-      "etiqueta_arbol": "Ve y Compruébalo tú Mismo"
+      "etiqueta_arbol": "Ve y Compruébalo tú Mismo",
+      "deprecado": true
     },
     "genchi_gembutsu_salir_del_edificio": {
       "node_id": "genchi_gembutsu_salir_del_edificio",
@@ -57370,15 +57462,18 @@
       "resumen_teorico": "Principio del Sistema de Producción Toyota que significa 'ir y ver por uno mismo'. Establece que las decisiones estratégicas deben basarse en conocimiento directo y firsthand de los clientes, no en reportes de terceros ni suposiciones de escritorio. Steve Blank popularizó esto para startups como 'get out of the building': los hechos sobre clientes, mercados, proveedores y canales solo existen fuera de la oficina.",
       "pasos_accionables": [
         "Identificar las preguntas de fe (leap-of-faith questions) más críticas del negocio",
-        "Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas",
+        "Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building",
         "Observar el comportamiento real de los usuarios en su contexto natural",
         "Evitar tomar decisiones basadas únicamente en reportes de segunda mano",
-        "Documentar los hallazgos firsthand para contrastarlos con las hipótesis iniciales"
+        "Documentar los hallazgos firsthand para contrastarlos con las hipótesis iniciales",
+        "Usar estas observaciones para ajustar el diseño del producto o servicio"
       ],
       "entregable_esperado": "Registro de conversaciones y observaciones directas con clientes potenciales que validen o invaliden las hipótesis iniciales del negocio",
       "nodos_previos": [
         "hipotesis_valor_crecimiento",
-        "actualizar_business_model_canvas_tuneup"
+        "actualizar_business_model_canvas_tuneup",
+        "analisis_de_sensibilidad_riesgo",
+        "leap_of_faith_assumptions"
       ],
       "nodos_siguientes": [
         "arquetipos_de_cliente",
@@ -57388,9 +57483,20 @@
       ],
       "condiciones_activacion": [
         "Cuando el emprendedor tiene solo intuición o corazonadas sin datos reales",
-        "Si las decisiones se están tomando solo con información de terceros o reportes internos"
+        "Si las decisiones se están tomando solo con información de terceros o reportes internos",
+        "Cuando el equipo fundador no tiene experiencia directa con el mercado objetivo"
       ],
-      "etiqueta_arbol": "Sal del Edificio y Observa"
+      "etiqueta_arbol": "Sal del Edificio y Observa",
+      "ids_alias": [
+        "genchi_gembutsu"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "genchi_gembutsu",
+          "titulo": "Genchi Gembutsu: Ir y Ver por Ti Mismo",
+          "fuente": "The Lean Startup - Eric Ries"
+        }
+      ]
     },
     "generacion_ingresos_verdes": {
       "node_id": "generacion_ingresos_verdes",
@@ -57553,7 +57659,7 @@
       "nodos_siguientes": [
         "introduccion_validacion_clientes",
         "ia_generacion_ideas_negocio",
-        "ia_colaborador_productividad",
+        "ia_como_nivelador_habilidades",
         "simulacion_clientes_ia"
       ],
       "condiciones_activacion": [
@@ -59540,7 +59646,7 @@
       "nodos_previos": [
         "term_sheet_negociacion",
         "shareholder_representative_role",
-        "seleccion_etapa_fondo_vc"
+        "embudo_secuencial_de_inversores"
       ],
       "nodos_siguientes": [
         "seleccion_abogado_venture",
@@ -62499,14 +62605,17 @@
         "Identificar si el equipo fundador actual es homogéneo en habilidades, formación, experiencia funcional o redes sociales",
         "Hacer un análisis estructurado de las necesidades de capital humano, social y financiero del proyecto para detectar brechas críticas (por ejemplo, conocimiento de industria, técnico o comercial)",
         "Considerar activamente ampliar la búsqueda de cofundadores fuera del círculo social inmediato para lograr diversidad de perspectivas y habilidades",
-        "Evaluar también factores 'blandos' (tolerancia al riesgo, valores, estilo de trabajo) antes de comprometerse con un cofundador",
-        "Sopesar los beneficios de cohesión (homogeneidad) contra los beneficios de perspectiva amplia (diversidad) según el contexto del proyecto"
+        "Evaluar también factores 'blandos' (tolerancia al riesgo, valores, estilo de trabajo) antes de comprometerse con un cofundador, y cuánto compromiso espera cada uno",
+        "Sopesar los beneficios de cohesión (homogeneidad) contra los beneficios de perspectiva amplia (diversidad) según el contexto del proyecto",
+        "No caigas en el default de elegir a alguien solo porque se parece a ti o te da comodidad"
       ],
       "entregable_esperado": "Matriz de habilidades y redes del equipo fundador con brechas identificadas y un plan para cubrirlas con cofundadores complementarios",
       "condiciones_activacion": [
         "Si el equipo fundador tiene backgrounds muy similares (misma escuela, misma industria)",
         "Si el startup enfrenta un contexto turbulento o cambiante que requiere adaptabilidad",
-        "Cuando el equipo fundador está compuesto por personas muy similares entre sí"
+        "Cuando el equipo fundador está compuesto por personas muy similares entre sí",
+        "Cuando estás armando tu equipo fundador desde cero",
+        "Cuando estás por sumar a un nuevo cofundador"
       ],
       "node_id": "homogeneidad_vs_diversidad_equipo",
       "nodos_previos": [
@@ -62517,9 +62626,19 @@
         "cofundar_con_amigos_familia_riesgos",
         "criterios_equity_split",
         "seleccion_relaciones_cofundadores",
+        "prueba_antes_de_comprometerse"
+      ],
+      "etiqueta_arbol": "Balancea tu Equipo Fundador",
+      "ids_alias": [
         "diversidad_vs_homogeneidad_equipo"
       ],
-      "etiqueta_arbol": "Balancea tu Equipo Fundador"
+      "merged_originals": [
+        {
+          "node_id": "diversidad_vs_homogeneidad_equipo",
+          "titulo": "Capacidades diversas, valores parecidos en tu equipo fundador",
+          "fuente": "The Founder's Dilemmas"
+        }
+      ]
     },
     "hoshin_kanri": {
       "node_id": "hoshin_kanri",
@@ -62870,7 +62989,8 @@
         "Si el equipo dedica mucho tiempo a redacción de informes, propuestas o comunicaciones internas",
         "Si existe disparidad de habilidades de redacción/análisis entre miembros del equipo"
       ],
-      "etiqueta_arbol": "Potencia tu Productividad con IA"
+      "etiqueta_arbol": "Potencia tu Productividad con IA",
+      "deprecado": true
     },
     "ia_como_nivelador_habilidades": {
       "node_id": "ia_como_nivelador_habilidades",
@@ -62880,34 +63000,44 @@
       "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
       "resumen_teorico": "Estudios muestran que la IA beneficia proporcionalmente más a quienes tienen menor desempeño en una tarea, acercando su resultado al de los más hábiles. Por ejemplo, en consultoría la brecha de desempeño bajó de 22% a 4%, y en escritura creativa o derecho los resultados se equipararon. Para ti como emprendedor con recursos limitados, esto significa que la IA no solo potencia tus fortalezas sino que eleva el piso en las tareas donde tienes menos experiencia o donde tus colaboradores o freelancers rinden de forma desigual. Esto permite escalar sin depender exclusivamente de contratar talento senior, usando la IA como herramienta para nivelar capacidades en las áreas más débiles del negocio.",
       "pasos_accionables": [
-        "Identificar las tareas de tu negocio donde exista mayor variabilidad de desempeño, sea tuya o de colaboradores y freelancers.",
+        "Identificar las tareas de tu negocio donde exista mayor variabilidad de desempeño, sea tuya o de colaboradores y freelancers., como memos, informes, comunicados",
         "Implementar herramientas de IA específicamente en esas tareas y anotar el resultado antes y después.",
         "Priorizar el uso de IA en las áreas donde tienes menos habilidad o donde tus colaboradores rinden por debajo del promedio, ya que ahí el beneficio es mayor.",
         "Medir el cambio en la brecha de desempeño comparando resultados de baja y alta capacidad previa.",
-        "Usar esta evidencia de nivelación como argumento para justificar la inversión en IA cuando tus recursos son limitados."
+        "Usar esta evidencia de nivelación como argumento para justificar la inversión en IA cuando tus recursos son limitados.",
+        "Establecer un proceso de revisión humana rápida antes de enviar cualquier documento generado con asistencia de IA"
       ],
       "entregable_esperado": "Un reporte simple con la comparación de desempeño antes y después de usar IA en las tareas clave de tu negocio.",
       "nodos_previos": [
         "sistemas_organizacionales_ia",
-        "construccion_experticia_era_ia"
+        "construccion_experticia_era_ia",
+        "gestion_alucinaciones_ia"
       ],
       "nodos_siguientes": [
-        "rotacion_de_puestos_para_mejora_calidad"
+        "rotacion_de_puestos_para_mejora_calidad",
+        "desafios_implementacion_ia"
       ],
       "condiciones_activacion": [
         "Cuando detectas alta variabilidad de desempeño entre tareas propias o de colaboradores y freelancers.",
         "Si buscas escalar el negocio sin depender de contratar solo talento senior.",
         "Cuando quieres justificar la inversión en herramientas de IA con recursos limitados.",
-        "Al evaluar si la IA está mejorando la productividad general del negocio."
+        "Al evaluar si la IA está mejorando la productividad general del negocio.",
+        "Si el equipo dedica mucho tiempo a redacción de informes, propuestas o comunicaciones internas"
       ],
       "etiqueta_arbol": "La IA Nivela tus Talentos",
       "ids_alias": [
-        "efecto_nivelador_ia"
+        "efecto_nivelador_ia",
+        "ia_colaborador_productividad"
       ],
       "merged_originals": [
         {
           "node_id": "efecto_nivelador_ia",
           "titulo": "Efecto Nivelador de la IA en el Desempeño de los Equipos",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        },
+        {
+          "node_id": "ia_colaborador_productividad",
+          "titulo": "IA como Colaborador de Productividad en Trabajo de Conocimiento",
           "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
         }
       ]
@@ -64840,9 +64970,8 @@
       ],
       "entregable_esperado": "Una ficha propia con los cinco puntos evaluados, un puntaje y un plan de soporte o mejora hasta que el producto termine su vida útil.",
       "nodos_previos": [
-        "anticipar_consecuencias_negativas",
-        "checklist_sistema_stage_gate_primera_clase",
         "planificacion_consecuencias_no_intencionadas",
+        "checklist_sistema_stage_gate_primera_clase",
         "disenar_para_sanacion"
       ],
       "nodos_siguientes": [
@@ -66057,25 +66186,42 @@
       "pasos_accionables": [
         "Identificar qué activos requieren trademark, copyright o patente",
         "Presentar patentes provisionales tempranamente para invenciones clave",
-        "Crear acuerdos de cesión de invención con empleados y contratistas",
-        "Documentar cadena de título de la propiedad intelectual",
-        "Evitar divulgaciones públicas antes de proteger la invención"
+        "Crear acuerdos de cesión de invención con empleados y contratistas, incluido el acuerdo de 'work for hire'",
+        "Documentar cadena de título de la propiedad intelectual, desde que fundas tu empresa",
+        "Evitar divulgaciones públicas antes de proteger la invención",
+        "Busca a alguien con buen criterio legal antes de avanzar más en construir tu negocio"
       ],
       "entregable_esperado": "Mapa de estrategia de IP con activos identificados, tipo de protección y cronograma de registro",
       "nodos_previos": [
-        "key_resources_hypothesis"
+        "key_resources_hypothesis",
+        "preparacion_due_diligence",
+        "restricciones_reputacionales"
       ],
       "nodos_siguientes": [
         "key_partners_hypothesis",
         "proteccion_propiedad_intelectual_internacional",
         "licenciamiento_tecnologia",
         "proteccion_propiedad_intelectual_franq",
-        "licenciamiento_tecnologico"
+        "licenciamiento_tecnologico",
+        "determinar_monto_a_levantar",
+        "marcas_registradas",
+        "patentes_startup"
       ],
       "condiciones_activacion": [
-        "Si la startup depende de tecnología, marca o contenido creativo propio como ventaja competitiva"
+        "Si la startup depende de tecnología, marca o contenido creativo propio como ventaja competitiva",
+        "Si estás empezando tu negocio y ya compartiste tu idea con otros o contrataste a alguien para desarrollarla"
       ],
-      "etiqueta_arbol": "Protege tu Propiedad Intelectual"
+      "etiqueta_arbol": "Protege tu Propiedad Intelectual",
+      "ids_alias": [
+        "proteccion_propiedad_intelectual"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "proteccion_propiedad_intelectual",
+          "titulo": "Protege la propiedad de tu idea desde el principio (IP)",
+          "fuente": "Venture Deals"
+        }
+      ]
     },
     "intercambio_de_roles_para_motivacion": {
       "node_id": "intercambio_de_roles_para_motivacion",
@@ -66457,7 +66603,7 @@
         "filosofia_validacion_clientes",
         "customer_validation_sell_phase",
         "realizar_pruebas_pasa_no_pasa",
-        "eventos_offline_propios",
+        "eventos_offline_como_canal_traccion",
         "coraje_decision_ceo"
       ],
       "condiciones_activacion": [
@@ -67699,7 +67845,7 @@
       "entregable_esperado": "Mapa de contactos clave dentro de cada firma VC objetivo, identificando quién tiene poder de decisión real",
       "nodos_previos": [
         "como_ganan_dinero_los_vc",
-        "seleccion_etapa_fondo_vc"
+        "embudo_secuencial_de_inversores"
       ],
       "nodos_siguientes": [
         "entender_term_sheet",
@@ -68773,7 +68919,7 @@
         "producto_minimo_viable",
         "concierge_mvp",
         "contabilidad_innovacion",
-        "genchi_gembutsu",
+        "genchi_gembutsu_salir_del_edificio",
         "wizard_of_oz_testing",
         "tecnicas_para_sacar_riesgos_a_la_luz"
       ],
@@ -69678,7 +69824,7 @@
         "business_model_canvas_vs_plan",
         "business_plan_cinco_secciones",
         "convertible_debt_fundamentos",
-        "customer_development_vs_business_plan",
+        "search_for_business_model",
         "customer_development_weekly_lessons_learned",
         "customer_discovery_cuatro_fases",
         "customer_discovery_get_out_of_building",
@@ -69714,7 +69860,6 @@
         "prototipado_modelos_negocio",
         "prototipado_organizacional_estrategico",
         "revalidar_modelo_negocio",
-        "search_for_business_model",
         "sistemas_sabios_vs_ignorantes",
         "storytelling_modelo_negocio",
         "swot_business_model_canvas",
@@ -69727,7 +69872,7 @@
         "jerarquia_datos_scor",
         "modelo_cuatro_cuadrantes_mercado",
         "scor_model_operaciones",
-        "simulacion_diseno_cadena_suministro",
+        "simulacion_de_operaciones_supply_chain",
         "business_model_canvas_scorecard",
         "decision_pivotar_o_proceder",
         "clasificacion_mercados_cadena_suministro"
@@ -69766,7 +69911,7 @@
         "project_schedule"
       ],
       "nodos_siguientes": [
-        "flexible_go_kill_criteria",
+        "technology_platform_evaluation",
         "modelo_hibrido_agile_stage_gate"
       ],
       "condiciones_activacion": [
@@ -70167,7 +70312,7 @@
         "cronograma_proyecto",
         "activity_duration_estimates",
         "cost_management_plan",
-        "estimacion_tres_puntos",
+        "duration_estimating_worksheet",
         "hoja_estimacion_costos",
         "plan_gestion_costos"
       ],
@@ -71116,22 +71261,38 @@
         "Definir y registrar la tasa de éxito vs. fracaso en el lanzamiento.",
         "Registrar las tasas de atrición en cada etapa del proceso de innovación.",
         "Medir qué proporción de recursos se destina a proyectos ganadores, perdedores y cancelados.",
-        "Medir qué proporción de proyectos cumple con los objetivos de tiempo, ganancia y ventas."
+        "Medir qué proporción de proyectos cumple con los objetivos de tiempo, ganancia y ventas.",
+        "Calcula qué porcentaje de tus ventas actuales viene de productos que lanzaste en los últimos tres años.",
+        "Calcula tu tasa de atraso: compara cuándo pensabas lanzar cada producto contra cuándo lo lanzaste de verdad.",
+        "Compara estos resultados con el estándar de tu industria, para ver si estás entre los mejores o entre los que se quedan atrás."
       ],
       "entregable_esperado": "Un dashboard o reporte periódico de KPIs de innovación (éxito, atrición, recursos, cumplimiento de metas).",
       "nodos_previos": [
         "embudo_atricion_nuevos_productos",
         "curva_atricion_optima",
-        "contabilidad_innovacion_largo_plazo"
+        "contabilidad_innovacion_largo_plazo",
+        "ocho_factores_exito_criticos"
       ],
       "nodos_siguientes": [
-        "portfolio_management"
+        "portfolio_management",
+        "diamante_de_innovacion"
       ],
       "condiciones_activacion": [
         "Si la empresa no tiene métricas históricas de innovación",
-        "Al iniciar un proceso de mejora continua en desarrollo de productos"
+        "Al iniciar un proceso de mejora continua en desarrollo de productos",
+        "Cuando necesites justificar, con datos concretos, una inversión mayor en investigación y desarrollo frente a quien decide o financia."
       ],
-      "etiqueta_arbol": "Lleva el Marcador de tu Innovación"
+      "etiqueta_arbol": "Lleva el Marcador de tu Innovación",
+      "ids_alias": [
+        "auditoria_desempeno_new_products"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "auditoria_desempeno_new_products",
+          "titulo": "Compara el desempeño de tus productos nuevos con el resto del mercado (benchmarking)",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        }
+      ]
     },
     "mantenimiento_preventivo_orientado_al_cliente": {
       "node_id": "mantenimiento_preventivo_orientado_al_cliente",
@@ -71913,7 +72074,7 @@
       "entregable_esperado": "Marca registrada o en proceso de registro ante la oficina correspondiente en tu país",
       "nodos_previos": [
         "patentes_startup",
-        "proteccion_propiedad_intelectual"
+        "intellectual_property_strategy"
       ],
       "nodos_siguientes": [
         "temas_legales_empleo"
@@ -75032,45 +75193,57 @@
       "fuente": "The Lean Startup - Eric Ries",
       "resumen_teorico": "Las métricas de vanidad (usuarios totales, ingresos brutos, hits al sitio) suben y generan sensación de progreso, pero no muestran relación causa efecto ni guían decisiones. Son peligrosas porque explotan un sesgo humano: cuando los números suben te atribuyes el mérito, cuando bajan culpas a factores externos. Las métricas accionables, en cambio, muestran con claridad qué acción específica generó qué resultado, permitiendo aprendizaje real. Deben ser comprensibles y accesibles para ti y cualquiera que revise tus reportes, y auditables. El análisis de cohortes, en lugar de gráficos de línea acumulativa, revela el progreso real del negocio en vez de esconder estancamiento detrás de números brutos que solo crecen.",
       "pasos_accionables": [
-        "Evitar guiarte por números brutos acumulativos (usuarios totales, ingresos totales) como única señal de éxito",
+        "Evitar guiarte por números brutos acumulativos (usuarios totales, ingresos totales) como única señal de éxito, distinguiendo entre métricas de vanidad (visitas, descargas) y métricas accionables (retención, conversión, recompra)",
         "Para cada métrica que uses, preguntarte si sube o baja, sabes exactamente qué acción lo causó",
         "Diseñar métricas que muestren relación causal clara entre los cambios que haces y el comportamiento del cliente",
         "Reemplazar gráficos de línea acumulativa por análisis de cohortes para evaluar el progreso real",
         "Eliminar o sustituir cualquier métrica que no permita esta trazabilidad",
-        "Validar que las métricas que sigues sean comprensibles y accesibles, no solo datos crudos de un dashboard"
+        "Validar que las métricas que sigues sean comprensibles y accesibles, no solo datos crudos de un dashboard",
+        "Definir qué hipótesis de negocio se quiere validar antes de buscar crecimiento en números brutos",
+        "Evitar campañas de marketing o PR diseñadas solo para inflar métricas superficiales",
+        "Presentar a inversores y stakeholders el aprendizaje validado (curvas de comportamiento real de clientes) en lugar de cifras aisladas"
       ],
       "entregable_esperado": "Una lista de tus métricas actuales clasificadas como vanidad o accionables, con plan de reemplazo y usadas de forma consistente en tus decisiones, evitando el success theater",
       "nodos_previos": [
         "analisis_de_cohortes",
         "contabilidad_innovacion",
         "tres_as_de_metricas",
-        "medir_lo_que_importa_no_solo_lo_facil"
+        "medir_lo_que_importa_no_solo_lo_facil",
+        "producto_minimo_viable"
       ],
       "nodos_siguientes": [
         "pivotar_o_perseverar",
-        "aprendizaje_validado_vs_metricas_vanidad",
         "coraje_para_pivotar",
         "contabilidad_innovacion_pivote",
         "motor_de_crecimiento",
         "reunion_pivotar_o_perseverar",
         "riesgo_no_pivotar_a_tiempo",
         "analisis_de_cohortes",
-        "split_testing_experimentos_ab"
+        "split_testing_experimentos_ab",
+        "pivote_estrategico"
       ],
       "condiciones_activacion": [
         "Cuando tú o tus inversionistas se enfocan en métricas de crecimiento bruto sin evidencia de aprendizaje real",
         "Si sientes que estás progresando pero no puedes explicar por qué",
         "Si tus métricas suben y bajan sin relación clara con tus acciones",
-        "Al inicio de cualquier proceso de medición de un MVP o producto en mercado"
+        "Al inicio de cualquier proceso de medición de un MVP o producto en mercado",
+        "Cuando los números de la startup son pequeños y se corre el riesgo de perder la confianza de inversores o equipo",
+        "Cuando el equipo está tentado a usar tácticas de marketing para 'aparentar' tracción"
       ],
       "etiqueta_arbol": "Persigue Métricas Que Sí Importan",
       "ids_alias": [
-        "vanity_metrics_vs_accionables"
+        "vanity_metrics_vs_accionables",
+        "aprendizaje_validado_vs_metricas_vanidad"
       ],
       "merged_originals": [
         {
           "node_id": "vanity_metrics_vs_accionables",
           "titulo": "Métricas de Vanidad vs Métricas Accionables",
+          "fuente": "The Lean Startup - Eric Ries"
+        },
+        {
+          "node_id": "aprendizaje_validado_vs_metricas_vanidad",
+          "titulo": "Aprendizaje Validado vs. Métricas de Vanidad",
           "fuente": "The Lean Startup - Eric Ries"
         }
       ]
@@ -76571,7 +76744,7 @@
       "nodos_previos": [
         "mitos_stage_gate",
         "innovation_project_canvas",
-        "flexible_go_kill_criteria",
+        "technology_platform_evaluation",
         "seleccion_proyectos_agile",
         "analisis_flujo_de_valor",
         "equipos_dedicados_de_proyecto",
@@ -79792,7 +79965,7 @@
       "nodos_siguientes": [
         "producto_unico_superior",
         "stage_gate_system",
-        "auditoria_desempeno_new_products"
+        "mantener_puntaje_innovacion"
       ],
       "condiciones_activacion": [
         "Si el usuario necesita un marco de evaluación integral antes de avanzar con el desarrollo",
@@ -79829,7 +80002,6 @@
         "advocacy_customer_journey",
         "estrategia_multicanal_bienvenida",
         "fases_de_retencion_de_clientes",
-        "seis_medios_comunicacion_cliente",
         "fase_affirm_buyers_remorse"
       ],
       "condiciones_activacion": [
@@ -81779,7 +81951,7 @@
       ],
       "entregable_esperado": "Solicitud de patente, provisional o completa, presentada ante la oficina de patentes de tu país (en Estados Unidos es el USPTO; averigua cuál es la equivalente donde vives)",
       "nodos_previos": [
-        "proteccion_propiedad_intelectual"
+        "intellectual_property_strategy"
       ],
       "nodos_siguientes": [
         "marcas_registradas"
@@ -83394,7 +83566,7 @@
         "hablar_con_clientes_desmontar_supuestos",
         "valor_vs_desperdicio",
         "aprendizaje_validado",
-        "aprendizaje_validado_vs_metricas_vanidad",
+        "metricas_accionables",
         "manejo_de_incertidumbre_proyectos_innovadores",
         "mvp_concierge",
         "producto_como_experimento",
@@ -84467,7 +84639,7 @@
         "project_charter",
         "stakeholder_register",
         "aceptar_la_imperfeccion_del_diseno",
-        "anticipar_consecuencias_negativas",
+        "planificacion_consecuencias_no_intencionadas",
         "nombrar_los_monstruos"
       ],
       "nodos_siguientes": [
@@ -84727,26 +84899,44 @@
       "resumen_teorico": "La parábola de los apicultores que modifican genéticamente abejas muestra que tener buenas intenciones no garantiza buenos resultados: cada solución que aplicas a un problema (hacer abejas 'sedentarias' para cuidarlas mejor) puede traer efectos secundarios que no viste venir (abejas alcohólicas que hacen colapsar la colmena) al chocar con variables del entorno que no controlaste (calor, humedad, fermentación). La idea es que mapees activamente los efectos de segundo y tercer orden de tu solución antes de aplicarla, sobre todo cuando trabajas con sistemas vivos o complejos.",
       "pasos_accionables": [
         "Lista los efectos directos que quieres lograr con tu solución.",
-        "Para cada efecto directo, pregúntate '¿qué otras variables del sistema podrían cruzarse con este cambio?'",
+        "Para cada efecto directo, pregúntate '¿qué otras variables del sistema podrían cruzarse con este cambio?', o sea los que aparecen después del primer impacto",
         "Identifica variables del ambiente, la sociedad o el tiempo que no controlas y que podrían amplificar o distorsionar el efecto que buscas.",
         "Diseña alguna forma de detectar temprano comportamientos que no esperabas.",
-        "Ten pensado un plan para frenar o revertir la solución si genera daños que no previste."
+        "Ten pensado un plan para frenar o revertir la solución si genera daños que no previste.",
+        "Describe cómo se ve el éxito total de tu proyecto.",
+        "Pregúntate: si esto funciona exactamente como lo imaginé, ¿qué podría salir mal?",
+        "Anota los riesgos que encuentres y piensa cómo reducirlos desde ahora."
       ],
       "entregable_esperado": "Un mapa de efectos de segundo orden y un plan de monitoreo y contingencia para detectar consecuencias no intencionadas antes de escalar tu solución.",
       "nodos_previos": [
         "ejercicio_retrospectivo_proyecto",
         "suenos_completos_diseno_responsable",
-        "consecuencias_no_intencionadas_sistemicas"
+        "consecuencias_no_intencionadas_sistemicas",
+        "alfabetizacion_en_materiales_maliciosos",
+        "definicion_producto_proyecto"
       ],
       "nodos_siguientes": [
         "diseno_reparabilidad_cultura_arreglo",
-        "indice_de_reparabilidad"
+        "indice_de_reparabilidad",
+        "amar_las_restricciones",
+        "plan_gestion_riesgos"
       ],
       "condiciones_activacion": [
         "Si tu proyecto interviene en sistemas complejos, vivos o ecológicos.",
-        "Si estás por escalar una solución tecnológica sin haber probado sus efectos colaterales."
+        "Si estás por escalar una solución tecnológica sin haber probado sus efectos colaterales.",
+        "Cuando tienes una visión muy optimista de tu proyecto y no has pensado en los riesgos."
       ],
-      "etiqueta_arbol": "Anticipa Efectos No Deseados"
+      "etiqueta_arbol": "Anticipa Efectos No Deseados",
+      "ids_alias": [
+        "anticipar_consecuencias_negativas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "anticipar_consecuencias_negativas",
+          "titulo": "¿Qué saldrá mal cuando todo salga bien?",
+          "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+        }
+      ]
     },
     "planificacion_de_la_inspeccion": {
       "node_id": "planificacion_de_la_inspeccion",
@@ -85807,7 +85997,7 @@
         "definicion_tipos_nuevo_producto",
         "embudo_atricion_nuevos_productos",
         "estrategia_innovacion_producto",
-        "flexible_go_kill_criteria",
+        "technology_platform_evaluation",
         "innovacion_como_apuesta_incremental",
         "mantener_puntaje_innovacion",
         "metas_objetivos_smart_innovacion",
@@ -87016,7 +87206,7 @@
         "cierre_term_sheet"
       ],
       "nodos_siguientes": [
-        "proteccion_propiedad_intelectual"
+        "intellectual_property_strategy"
       ],
       "condiciones_activacion": [
         "Antes de iniciar reuniones formales con inversores",
@@ -90009,7 +90199,6 @@
         "customer_discovery_overview",
         "evitar_paralisis_por_analisis",
         "experiment_library",
-        "genchi_gembutsu",
         "genchi_gembutsu_salir_del_edificio",
         "get_out_of_the_building",
         "hipotesis_relacion_clientes_web",
@@ -90032,7 +90221,7 @@
         "customer_validation",
         "customer_validation_sales_roadmap",
         "acquisicion_viral_engineering",
-        "aprendizaje_validado_vs_metricas_vanidad",
+        "metricas_accionables",
         "ciclo_crear_medir_aprender",
         "contabilidad_innovacion_pivote",
         "customer_acquisition_activation_web",
@@ -91993,7 +92182,8 @@
       "condiciones_activacion": [
         "Si estás empezando tu negocio y ya compartiste tu idea con otros o contrataste a alguien para desarrollarla"
       ],
-      "etiqueta_arbol": "Protege tu Propiedad Intelectual Pronto"
+      "etiqueta_arbol": "Protege tu Propiedad Intelectual Pronto",
+      "deprecado": true
     },
     "proteccion_propiedad_intelectual_2": {
       "node_id": "proteccion_propiedad_intelectual_2",
@@ -92652,7 +92842,7 @@
       "entregable_esperado": "Registro de un ejercicio de colaboración previa completado, con conclusiones documentadas sobre compatibilidad de valores y capacidad de trabajo conjunto",
       "nodos_previos": [
         "cofundar_con_amigos_familia_riesgos",
-        "diversidad_vs_homogeneidad_equipo"
+        "homogeneidad_vs_diversidad_equipo"
       ],
       "nodos_siguientes": [
         "cofundar_con_amigos_familia_riesgos"
@@ -94312,7 +94502,7 @@
       ],
       "nodos_siguientes": [
         "perdida_control_junta_directiva",
-        "eleccion_estructura_vesting_founder"
+        "vesting_acciones_fundadores"
       ],
       "condiciones_activacion": [
         "Si el equipo fundador tiene un split de equity no formalizado",
@@ -95802,7 +95992,7 @@
         "playing_with_fire_gap"
       ],
       "nodos_siguientes": [
-        "eleccion_estructura_vesting_founder"
+        "vesting_acciones_fundadores"
       ],
       "condiciones_activacion": [
         "Cuando el equipo fundador incluye familiares o amigos cercanos",
@@ -98848,7 +99038,7 @@
         "costos_agencia_asimetria_informacion"
       ],
       "nodos_siguientes": [
-        "proteccion_propiedad_intelectual",
+        "intellectual_property_strategy",
         "manejo_crisis_auditoria_contable"
       ],
       "condiciones_activacion": [
@@ -102097,7 +102287,7 @@
       "nodos_previos": [
         "ciclo_virtuoso_datos_electronicos",
         "collaboration_enablers",
-        "collaborative_transportation_management",
+        "colaboracion_transporte_ctm",
         "sistema_visibilidad_cadena_suministro_low_cost"
       ],
       "nodos_siguientes": [
@@ -102244,7 +102434,9 @@
         "Aplica el proceso de Customer Development para salir a probar cada hipótesis con clientes reales",
         "Evita montar estructuras o roles de ejecución antes de validar el modelo",
         "Itera y pivota según la evidencia recogida hasta encontrar un modelo repetible y escalable",
-        "Adopta una mentalidad de aprendizaje y experimentación en vez de miedo al fracaso"
+        "Adopta una mentalidad de aprendizaje y experimentación en vez de miedo al fracaso",
+        "Abandonar la idea de escribir un plan de negocio detallado al inicio",
+        "Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible"
       ],
       "entregable_esperado": "Un lienzo de hipótesis de modelo de negocio marcado explícitamente como no probado, junto con evidencia de que el modelo es repetible y escalable o una decisión clara de pivote.",
       "nodos_previos": [
@@ -102257,7 +102449,10 @@
         "vision_estrategia_producto_pivote",
         "descomposicion_tareas_trabajo",
         "buscar_armonia_diseno",
-        "modelo_tradicional_introduccion_producto"
+        "modelo_tradicional_introduccion_producto",
+        "contabilidad_innovacion_pivote",
+        "estilos_pensamiento_intuitivo_vs_logico",
+        "value_proposition_canvas"
       ],
       "nodos_siguientes": [
         "customer_development_process",
@@ -102274,7 +102469,7 @@
         "how_might_we_briefs",
         "mapeo_capas_diseno",
         "pensamiento_espacial_mapeo",
-        "seleccion_etapa_fondo_vc",
+        "embudo_secuencial_de_inversores",
         "value_proposition_startup",
         "waterfall_vs_agile_development",
         "customer_development_modelo",
@@ -102287,7 +102482,8 @@
         "vision_estrategia_producto_pivote",
         "gestion_intraemprendedora_experimentacion",
         "desarrollo_de_clientes_customer_development",
-        "business_model_canvas_vs_plan"
+        "business_model_canvas_vs_plan",
+        "diez_principios_testing"
       ],
       "condiciones_activacion": [
         "Al inicio de cualquier proyecto, antes de tener un modelo de negocio comprobado",
@@ -102301,7 +102497,8 @@
         "definicion_startup",
         "definicion_startup_busqueda_modelo_negocio",
         "definicion_startup_incertidumbre",
-        "startup_como_busqueda_vs_ejecucion"
+        "startup_como_busqueda_vs_ejecucion",
+        "customer_development_vs_business_plan"
       ],
       "merged_originals": [
         {
@@ -102328,6 +102525,11 @@
           "node_id": "startup_como_busqueda_vs_ejecucion",
           "titulo": "Definición de Startup: Búsqueda vs. Ejecución",
           "fuente": "The Startup Owner's Manual - Steve Blank"
+        },
+        {
+          "node_id": "customer_development_vs_business_plan",
+          "titulo": "De Plan de Negocio a Experimentación",
+          "fuente": "Value Proposition Design"
         }
       ]
     },
@@ -102543,7 +102745,7 @@
       ],
       "nodos_siguientes": [
         "creacion_option_pool",
-        "eleccion_estructura_vesting_founder"
+        "vesting_acciones_fundadores"
       ],
       "condiciones_activacion": [
         "Cuando estás negociando una oferta con un ejecutivo o empleado clave.",
@@ -103248,7 +103450,8 @@
       "condiciones_activacion": [
         "Cuando el usuario necesita diversificar y personalizar la forma en que se comunica con sus clientes en cada etapa del ciclo de vida."
       ],
-      "etiqueta_arbol": "Elige tu Medio de Contacto"
+      "etiqueta_arbol": "Elige tu Medio de Contacto",
+      "deprecado": true
     },
     "seis_sigma_servicios": {
       "node_id": "seis_sigma_servicios",
@@ -103944,7 +104147,8 @@
         "Cuando arrancas a buscar capital",
         "Cuando no tienes claro a qué inversores acercarte"
       ],
-      "etiqueta_arbol": "Identifica el Fondo Adecuado"
+      "etiqueta_arbol": "Identifica el Fondo Adecuado",
+      "deprecado": true
     },
     "seleccion_fuente_unica_multiple": {
       "node_id": "seleccion_fuente_unica_multiple",
@@ -105548,27 +105752,46 @@
         "Recopilar datos de ERP/SCM sobre productos, plantas, costos y restricciones de capacidad",
         "Definir el horizonte de decisión (estratégico, táctico u operativo) y la pregunta a responder",
         "Construir el modelo de simulación representando la red actual o propuesta",
-        "Ejecutar el modelo bajo distintos escenarios y variables de incertidumbre (demanda, tráfico, procesos)",
+        "Ejecutar el modelo bajo distintos escenarios y variables de incertidumbre (demanda, tráfico, procesos), y no solo optimizar lo existente",
         "Comparar resultados de escenarios para seleccionar el diseño con mejor relación costo-servicio",
-        "Validar la solución antes de implementarla físicamente para minimizar riesgo"
+        "Validar la solución antes de implementarla físicamente para minimizar riesgo",
+        "Definir la estrategia de negocio antes de diseñar la cadena de suministro",
+        "Probar combinaciones de tecnologías (robots, manufactura aditiva, vehículos autónomos) en el modelo",
+        "Repetir el proceso de simulación periódicamente para adaptarse a cambios del mercado global"
       ],
       "entregable_esperado": "Modelo de simulación validado con recomendación de diseño de red, layout o política de inventario respaldada por datos",
       "nodos_previos": [
         "definicion_alineacion_cadena_suministro",
         "ia_en_supply_chain",
         "manufactura_aditiva_bajo_demanda",
-        "vehiculos_autonomos_drones_supply_chain"
+        "vehiculos_autonomos_drones_supply_chain",
+        "alineacion_ti_negocio",
+        "lienzo_modelo_negocio"
       ],
       "nodos_siguientes": [
         "vehiculos_autonomos_drones_supply_chain",
-        "ia_en_supply_chain"
+        "ia_en_supply_chain",
+        "cuatro_categorias_desempeno_cadena_suministro",
+        "tecnologias_emergentes_cadena_suministro"
       ],
       "condiciones_activacion": [
         "Cuando se debe decidir la ubicación de una nueva planta, centro de distribución o terminal",
         "Si existe alta incertidumbre en demanda o procesos y se requiere probar diseños antes de invertir",
-        "Cuando se busca optimizar niveles de stock de seguridad sin sacrificar nivel de servicio"
+        "Cuando se busca optimizar niveles de stock de seguridad sin sacrificar nivel de servicio",
+        "Cuando la empresa busca rediseñar su cadena de suministro para escalar",
+        "Cuando el crecimiento de ventas exige repensar la logística existente"
       ],
-      "etiqueta_arbol": "Simula tu Cadena de Suministro"
+      "etiqueta_arbol": "Simula tu Cadena de Suministro",
+      "ids_alias": [
+        "simulacion_diseno_cadena_suministro"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "simulacion_diseno_cadena_suministro",
+          "titulo": "Simulación para Diseño de Cadena de Suministro",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        }
+      ]
     },
     "simulacion_diseno_cadena_suministro": {
       "node_id": "simulacion_diseno_cadena_suministro",
@@ -105598,7 +105821,8 @@
         "Cuando la empresa busca rediseñar su cadena de suministro para escalar",
         "Cuando el crecimiento de ventas exige repensar la logística existente"
       ],
-      "etiqueta_arbol": "Prueba Nuevos Diseños de Suministro"
+      "etiqueta_arbol": "Prueba Nuevos Diseños de Suministro",
+      "deprecado": true
     },
     "simular_riesgos_transito_antes_de_enviar": {
       "node_id": "simular_riesgos_transito_antes_de_enviar",
@@ -107837,7 +108061,7 @@
       ],
       "nodos_siguientes": [
         "advances_vs_continuations",
-        "collaborative_transportation_management",
+        "colaboracion_transporte_ctm",
         "plataforma_colaboracion_masiva",
         "seguimiento_tendencias_sostenibilidad",
         "priorizacion_issues"
@@ -109264,24 +109488,40 @@
       "pasos_accionables": [
         "Identifica si tu proyecto es una plataforma tecnológica o una innovación radical (idealmente el 10-20% de tu conjunto de proyectos)",
         "No fuerces estos proyectos por el proceso de etapas y filtros regular; usa uno especial para desarrollo tecnológico (Stage-Gate-TD)",
-        "Aplica una tabla de evaluación específica centrada en criterios estratégicos y cualitativos, no financieros",
-        "Evalúa la recompensa potencial con estimaciones amplias, no con cifras financieras precisas"
+        "Aplica una tabla de evaluación específica centrada en criterios estratégicos y cualitativos, no financieros, que son ajuste estratégico, ventaja competitiva, potencial de mercado",
+        "Evalúa la recompensa potencial con estimaciones amplias, no con cifras financieras precisas",
+        "Considerar métodos financieros más sofisticados para riesgo: opciones reales, Monte Carlo, Valor Comercial Esperado",
+        "Integrar las decisiones de gate con revisiones periódicas de portafolio (trimestrales)"
       ],
       "entregable_esperado": "Una tabla de evaluación adaptada para proyectos de tecnología avanzada, integrada en un proceso separado de desarrollo tecnológico (Stage-Gate-TD)",
       "nodos_previos": [
         "scorecard_de_seleccion_de_proyectos",
         "testing_process_completo",
-        "resource_assessment"
+        "resource_assessment",
+        "lienzo_proyecto_innovacion",
+        "tipos_de_clientes"
       ],
       "nodos_siguientes": [
         "product_roadmap_estrategico",
-        "revision_portafolio_periodica"
+        "revision_portafolio_periodica",
+        "modelo_hibrido_agile_stage_gate",
+        "portfolio_management"
       ],
       "condiciones_activacion": [
         "Cuando tu proyecto es de innovación disruptiva, radical o plataforma tecnológica de base",
         "Cuando los criterios financieros tradicionales no aplican por alta incertidumbre"
       ],
-      "etiqueta_arbol": "Evalúa tus Plataformas Tecnológicas"
+      "etiqueta_arbol": "Evalúa tus Plataformas Tecnológicas",
+      "ids_alias": [
+        "flexible_go_kill_criteria"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "flexible_go_kill_criteria",
+          "titulo": "Criterios Flexibles de Decisión Go/Kill",
+          "fuente": "Winning at New Products - Robert G. Cooper"
+        }
+      ]
     },
     "tecnica_anclaje_negociacion": {
       "node_id": "tecnica_anclaje_negociacion",
@@ -109572,7 +109812,7 @@
       ],
       "entregable_esperado": "Un plan de implementación tecnológica combinada con al menos 2 tecnologías integradas y métricas de impacto esperado",
       "nodos_previos": [
-        "simulacion_diseno_cadena_suministro"
+        "simulacion_de_operaciones_supply_chain"
       ],
       "nodos_siguientes": [
         "big_data_ia_cadena_suministro"
@@ -110010,7 +110250,7 @@
         "convertible_debt_fundamentos",
         "creacion_option_pool",
         "diagnostico_motivacion_para_contrataciones_inversores",
-        "eleccion_estructura_vesting_founder",
+        "vesting_acciones_fundadores",
         "encontrar_lead_vc",
         "evaluacion_tipos_inversores",
         "factores_valoracion_startup",
@@ -110026,7 +110266,6 @@
         "seleccion_abogado_venture",
         "seleccion_estructura_corporativa",
         "valuation_cap_deuda_convertible",
-        "vesting_acciones_fundadores",
         "vesting_dinamico",
         "warrant_pricing_venture_debt"
       ],
@@ -110872,7 +111111,7 @@
         "mapa_organizacional_influencia",
         "segmentar_clientes_nivel_servicio",
         "consecuencias_no_intencionadas_sistemicas",
-        "flexible_go_kill_criteria",
+        "technology_platform_evaluation",
         "manejo_de_incertidumbre_proyectos_innovadores",
         "pensar_en_grande_empezar_pequeno",
         "investigar_datos_cliente",
@@ -112869,7 +113108,7 @@
         "seis_formas_innovar_perfil_cliente",
         "value_proposition_canvas",
         "starting_points_innovacion",
-        "seis_medios_comunicacion_cliente"
+        "estrategia_multicanal_bienvenida"
       ],
       "nodos_siguientes": [
         "fit_problema_solucion",
@@ -114268,7 +114507,7 @@
         "value_map",
         "fit_value_proposition",
         "alineacion_con_canvas",
-        "customer_development_vs_business_plan",
+        "search_for_business_model",
         "customer_discovery_get_out_of_building",
         "innovation_project_canvas",
         "testear_circulo_cuadrado_rectangulo",
@@ -115319,11 +115558,13 @@
       "pasos_accionables": [
         "Al constituir legalmente tu empresa, formaliza la emisión de tus acciones de fundador a un precio bajo, completando toda la documentación de compra y pago",
         "Presenta la eleccion fiscal 83(b) dentro de los 30 días siguientes a la emisión de tus acciones",
-        "Establece un cronograma de vesting estándar: 1 año de espera inicial (cliff) con 25% al cumplirlo, y el resto en adquisicion mensual durante los siguientes 3 años",
+        "Establece un cronograma de vesting estándar: 1 año de espera inicial (cliff) con 25% al cumplirlo, y el resto en adquisicion mensual durante los siguientes 3 años, y distínguelo del tuyo como fundador",
         "Negocia crédito de vesting retroactivo si ya trabajaste en la empresa antes de recibir inversion externa",
         "Documenta el derecho de la empresa a recomprar las acciones no adquiridas si alguien se va antes de tiempo",
         "Negocia si aplican clausulas de aceleracion ante un cambio de control, prefiriendo la de doble gatillo (cambio de control mas despido sin causa) sobre la de un solo gatillo, ya que esta ultima puede desincentivar a compradores potenciales",
-        "Documenta claramente que constituye 'causa' y 'razon justificada' de terminacion para efectos de la aceleracion"
+        "Documenta claramente que constituye 'causa' y 'razon justificada' de terminacion para efectos de la aceleracion",
+        "Decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
+        "Deja por escrito las condiciones de cada persona de forma consistente, para evitar conflictos futuros si vendes el negocio o sales a bolsa"
       ],
       "entregable_esperado": "Acuerdo de vesting firmado por ti y tus socios o empleados clave (incluido en el acuerdo de compra de acciones), con cronograma, clausula de recompra, eleccion 83(b) presentada y condiciones de aceleracion claramente definidas",
       "condiciones_activacion": [
@@ -115331,7 +115572,9 @@
         "Si estas estructurando la distribucion de acciones entre fundadores",
         "Si un inversionista de capital de riesgo exige vesting como condicion de inversion",
         "Si necesitas proteger tu empresa de la salida temprana de un cofundador o empleado clave",
-        "Si estas negociando una posible venta de tu empresa"
+        "Si estas negociando una posible venta de tu empresa",
+        "Cuando estás definiendo cómo pagarás a las primeras personas que contrates",
+        "Cuando formalizas la oferta de acciones a un nuevo ejecutivo"
       ],
       "node_id": "vesting_acciones_fundadores",
       "nodos_previos": [
@@ -115340,7 +115583,11 @@
         "seleccion_estructura_corporativa",
         "employee_pool_esop",
         "contratar_cerrador_de_ventas",
-        "founders_activities_clause"
+        "founders_activities_clause",
+        "contratacion_experiencia_vs_potencial",
+        "reasignacion_equity_fundadores",
+        "reducir_playing_with_fire_gap",
+        "seesaw_salario_equity"
       ],
       "nodos_siguientes": [
         "employee_pool_esop",
@@ -115350,9 +115597,20 @@
         "eleccion_83b",
         "term_sheet_negociacion",
         "acuerdo_de_co_venta_y_votacion",
-        "clasificacion_consultores_empleados"
+        "clasificacion_consultores_empleados",
+        "control_del_board_startup"
       ],
-      "etiqueta_arbol": "Gana tus Acciones con el Tiempo"
+      "etiqueta_arbol": "Gana tus Acciones con el Tiempo",
+      "ids_alias": [
+        "eleccion_estructura_vesting_founder"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "eleccion_estructura_vesting_founder",
+          "titulo": "Cómo repartir las acciones en el tiempo entre fundadores y contrataciones (vesting)",
+          "fuente": "The Founder's Dilemmas"
+        }
+      ]
     },
     "vesting_dinamico": {
       "fase_proyecto": "planificacion",
@@ -116870,7 +117128,7 @@
         "wbs_dictionary",
         "activity_list",
         "activity_duration_estimates",
-        "estimacion_tres_puntos",
+        "duration_estimating_worksheet",
         "matriz_asignacion_responsabilidades"
       ],
       "condiciones_activacion": [
@@ -124682,7 +124940,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 105,
+    "nodos_sin_enlaces_entrantes": 118,
     "enlaces_rotos_en_grafo": 0
   }
 }

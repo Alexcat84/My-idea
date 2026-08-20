@@ -9,20 +9,36 @@
     "Definir y registrar la tasa de éxito vs. fracaso en el lanzamiento.",
     "Registrar las tasas de atrición en cada etapa del proceso de innovación.",
     "Medir qué proporción de recursos se destina a proyectos ganadores, perdedores y cancelados.",
-    "Medir qué proporción de proyectos cumple con los objetivos de tiempo, ganancia y ventas."
+    "Medir qué proporción de proyectos cumple con los objetivos de tiempo, ganancia y ventas.",
+    "Calcula qué porcentaje de tus ventas actuales viene de productos que lanzaste en los últimos tres años.",
+    "Calcula tu tasa de atraso: compara cuándo pensabas lanzar cada producto contra cuándo lo lanzaste de verdad.",
+    "Compara estos resultados con el estándar de tu industria, para ver si estás entre los mejores o entre los que se quedan atrás."
   ],
   "entregable_esperado": "Un dashboard o reporte periódico de KPIs de innovación (éxito, atrición, recursos, cumplimiento de metas).",
   "nodos_previos": [
     "embudo_atricion_nuevos_productos",
     "curva_atricion_optima",
-    "contabilidad_innovacion_largo_plazo"
+    "contabilidad_innovacion_largo_plazo",
+    "ocho_factores_exito_criticos"
   ],
   "nodos_siguientes": [
-    "portfolio_management"
+    "portfolio_management",
+    "diamante_de_innovacion"
   ],
   "condiciones_activacion": [
     "Si la empresa no tiene métricas históricas de innovación",
-    "Al iniciar un proceso de mejora continua en desarrollo de productos"
+    "Al iniciar un proceso de mejora continua en desarrollo de productos",
+    "Cuando necesites justificar, con datos concretos, una inversión mayor en investigación y desarrollo frente a quien decide o financia."
   ],
-  "etiqueta_arbol": "Lleva el Marcador de tu Innovación"
+  "etiqueta_arbol": "Lleva el Marcador de tu Innovación",
+  "ids_alias": [
+    "auditoria_desempeno_new_products"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "auditoria_desempeno_new_products",
+      "titulo": "Compara el desempeño de tus productos nuevos con el resto del mercado (benchmarking)",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }

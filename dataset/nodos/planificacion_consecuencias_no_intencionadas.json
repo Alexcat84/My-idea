@@ -7,24 +7,42 @@
   "resumen_teorico": "La parábola de los apicultores que modifican genéticamente abejas muestra que tener buenas intenciones no garantiza buenos resultados: cada solución que aplicas a un problema (hacer abejas 'sedentarias' para cuidarlas mejor) puede traer efectos secundarios que no viste venir (abejas alcohólicas que hacen colapsar la colmena) al chocar con variables del entorno que no controlaste (calor, humedad, fermentación). La idea es que mapees activamente los efectos de segundo y tercer orden de tu solución antes de aplicarla, sobre todo cuando trabajas con sistemas vivos o complejos.",
   "pasos_accionables": [
     "Lista los efectos directos que quieres lograr con tu solución.",
-    "Para cada efecto directo, pregúntate '¿qué otras variables del sistema podrían cruzarse con este cambio?'",
+    "Para cada efecto directo, pregúntate '¿qué otras variables del sistema podrían cruzarse con este cambio?', o sea los que aparecen después del primer impacto",
     "Identifica variables del ambiente, la sociedad o el tiempo que no controlas y que podrían amplificar o distorsionar el efecto que buscas.",
     "Diseña alguna forma de detectar temprano comportamientos que no esperabas.",
-    "Ten pensado un plan para frenar o revertir la solución si genera daños que no previste."
+    "Ten pensado un plan para frenar o revertir la solución si genera daños que no previste.",
+    "Describe cómo se ve el éxito total de tu proyecto.",
+    "Pregúntate: si esto funciona exactamente como lo imaginé, ¿qué podría salir mal?",
+    "Anota los riesgos que encuentres y piensa cómo reducirlos desde ahora."
   ],
   "entregable_esperado": "Un mapa de efectos de segundo orden y un plan de monitoreo y contingencia para detectar consecuencias no intencionadas antes de escalar tu solución.",
   "nodos_previos": [
     "ejercicio_retrospectivo_proyecto",
     "suenos_completos_diseno_responsable",
-    "consecuencias_no_intencionadas_sistemicas"
+    "consecuencias_no_intencionadas_sistemicas",
+    "alfabetizacion_en_materiales_maliciosos",
+    "definicion_producto_proyecto"
   ],
   "nodos_siguientes": [
     "diseno_reparabilidad_cultura_arreglo",
-    "indice_de_reparabilidad"
+    "indice_de_reparabilidad",
+    "amar_las_restricciones",
+    "plan_gestion_riesgos"
   ],
   "condiciones_activacion": [
     "Si tu proyecto interviene en sistemas complejos, vivos o ecológicos.",
-    "Si estás por escalar una solución tecnológica sin haber probado sus efectos colaterales."
+    "Si estás por escalar una solución tecnológica sin haber probado sus efectos colaterales.",
+    "Cuando tienes una visión muy optimista de tu proyecto y no has pensado en los riesgos."
   ],
-  "etiqueta_arbol": "Anticipa Efectos No Deseados"
+  "etiqueta_arbol": "Anticipa Efectos No Deseados",
+  "ids_alias": [
+    "anticipar_consecuencias_negativas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "anticipar_consecuencias_negativas",
+      "titulo": "¿Qué saldrá mal cuando todo salga bien?",
+      "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+    }
+  ]
 }

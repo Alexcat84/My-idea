@@ -301,6 +301,236 @@ LOTES["A"] = {
 }
 
 
+
+LOTES["B"] = {
+    "titulo": "3, LOTE B DE LA VUELTA 56: LOS ACTOS 18 A 34 EN EL ORDEN IMPRESO DEL TRAMO, apartando SOLO el 27, que queda DECLARADO porque sus dos varas de contenido CHOCAN y la pieza declarada no desempata",
+    "actos": [
+        {
+            "orden": 18,
+            "superviviente": "embudo_secuencial_de_inversores",
+            "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO. Pasos 4 contra 4 y condiciones 2 contra 2: las dos varas de contenido empatan al digito, y la razon del puesto 752 reconoce material propio a los DOS lados (lo propio de seleccion_etapa_fondo_vc es investigar el tamano de fondo y el foco de etapa; lo propio de embudo_secuencial_de_inversores son la planificacion escalonada y las metricas de traccion de paso), asi que tampoco la pieza declarada desempata. Con el contenido callado entero, EL CABLEADO DECIDE SOLO y apunta a embudo_secuencial_de_inversores, 4 contra 3. NO es empate sin vara porque el cableado no empata. Y SE DICE QUE LA ELECCION COINCIDE CON LO QUE LA RAZON LLAMA LO MAS CARO DE PERDER: las METRICAS DE TRACCION de paso, que son del que sobrevive.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["APPEND"],
+                "3": ["APPEND"],
+                "4": ["CUBIERTO", 2],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["CUBIERTO", 2]},
+            "nota": "DOS PASOS VIAJAN ENTEROS y son exactamente lo que la razon declara propio del que muere, que ademas llama LO UNICO ACCIONABLE DEL PAR: investigar el tamano de fondo y el foco de etapa de cada inversor de la lista, y descartar a los que no coinciden con tu etapa. Los otros dos son la etapa actual y el enfoque del esfuerzo, que el superviviente ya tiene. Sus dos condiciones quedan cubiertas una a una. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 19,
+            "superviviente": "vesting_acciones_fundadores",
+            "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO. Pasos 7 contra 5 y condiciones 5 contra 4, las dos a favor de vesting_acciones_fundadores; el cableado apunta al mismo lado (14 contra 7). Y LA PIEZA DECLARADA APUNTA IGUAL: la razon del puesto 776 nombra LOS TREINTA DIAS DEL 83(b) Y EL DOBLE DISPARO como lo mas caro de perder porque son plazos y clausulas, no consejos, y las dos piezas son de vesting_acciones_fundadores: estan a salvo por construccion.",
+            "pasos": {
+                "1": ["INCISO", 3, "distinguelo del tuyo como fundador", ", y "],
+                "2": ["CUBIERTO", 4],
+                "3": ["APPEND"],
+                "4": ["APPEND"],
+                "5": ["CUBIERTO", 6],
+            },
+            "condiciones": {"1": ["CUBIERTO", 3], "2": ["APPEND"], "3": ["APPEND"],
+                            "4": ["CUBIERTO", 5]},
+            "nota": "DOS PASOS VIAJAN ENTEROS: decidir si cada rol consolida solo por tiempo o tambien por desempeno, que es lo que la razon declara propio del que muere, y dejar por escrito las condiciones de cada persona de forma consistente. ESTE SEGUNDO SE DICE APARTE porque la razon lo da por compartido y EL TEXTO NO LO DICE: los siete pasos del superviviente documentan la recompra, la causa y la razon justificada, pero NINGUNO manda dejar por escrito las condiciones de CADA PERSONA de forma consistente, medido paso a paso. PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3). UN INCISO: distinguir el plazo del equipo del tuyo como fundador, parametro concreto del cronograma del paso 3. DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos (definir como pagaras a las primeras contrataciones, y formalizar la oferta a un nuevo ejecutivo). Y SE DICE UNA COSA MEDIDA EN VEZ DE CALLARLA: su condicion 4 junta recibir inversion Y vender, y la condicion 5 del superviviente solo habla de negociar una venta; el otro medio disparador NO se pierde del nodo porque la condicion 3 del superviviente nombra al inversionista que exige vesting. Se marca CUBIERTO y NO se cuenta perdida, con la comprobacion escrita. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 20,
+            "superviviente": "homogeneidad_vs_diversidad_equipo",
+            "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO. Pasos 5 contra 4 y condiciones 3 contra 2, las dos a favor de homogeneidad_vs_diversidad_equipo; el cableado apunta al mismo lado (6 contra 2). La razon del puesto 782 reconoce propio a los dos lados (el analisis estructurado de capital humano, social y financiero y la balanza cohesion contra perspectiva en uno; la formula corta de habilidades distintas y valores parecidos en el otro), asi que esa vara empata y las que deciden son las contables.",
+            "pasos": {
+                "1": ["CUBIERTO", 2],
+                "2": ["CUBIERTO", 3],
+                "3": ["INCISO", 4, "cuanto compromiso espera cada uno", ", y "],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA: no caer en el default de elegir a alguien solo porque se parece a ti o te da comodidad, que es el aviso que ninguno de los cinco pasos del superviviente da. UN INCISO: cuanto compromiso espera cada uno, que es un factor blando que el paso 4 del superviviente no nombra entre los suyos (tolerancia al riesgo, valores, estilo de trabajo). SUS DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos: armar el equipo fundador DESDE CERO y estar POR SUMAR a un nuevo cofundador, dos momentos que las tres del superviviente no dicen, porque las tres describen un equipo YA formado y parecido. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 21,
+            "superviviente": "ia_como_nivelador_habilidades",
+            "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO. Pasos 5 contra 4 y condiciones 4 contra 2, las dos a favor de ia_como_nivelador_habilidades; el cableado apunta al mismo lado (3 contra 2). Y LA PIEZA DECLARADA APUNTA IGUAL: la razon del puesto 783 dice que lo propio de ia_como_nivelador_habilidades es MEDIR EL CAMBIO EN LA BRECHA, que es LA UNICA FORMA DE COMPROBAR QUE LA IA NIVELA Y NO SOLO MEJORA, y esa pieza es del que sobrevive.",
+            "pasos": {
+                "1": ["INCISO", 1, "memos, informes, comunicados", ", como "],
+                "2": ["CUBIERTO", 2],
+                "3": ["CUBIERTO", 3],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["CUBIERTO", 1]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente la que la razon declara propia del que muere: la revision humana rapida antes de enviar cualquier documento generado con asistencia de IA. UN INCISO: los ejemplos de tarea (memos, informes, comunicados), parametro concreto del paso 1 del superviviente, que habla de tareas con mayor variabilidad sin nombrar ninguna. Su condicion 1 (el equipo dedica mucho tiempo a redaccion de informes, propuestas o comunicaciones internas) viaja entera por ser un disparador distinto. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 22,
+            "superviviente": "mantener_puntaje_innovacion",
+            "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO. Pasos 4 contra 4 y condiciones 2 contra 2: las dos varas de contenido empatan al digito, y la razon del puesto 789 reconoce material propio a los DOS lados (dos cifras de comparacion hacia afuera en auditoria_desempeno_new_products; la proporcion de RECURSOS por resultado en mantener_puntaje_innovacion, que la razon subraya como la unica que mira el dinero), asi que tampoco la pieza declarada desempata. Con el contenido callado entero, EL CABLEADO DECIDE SOLO y apunta a mantener_puntaje_innovacion, 4 contra 2.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["CUBIERTO", 1],
+                "3": ["APPEND"],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["CUBIERTO", 2], "2": ["APPEND"]},
+            "nota": "TRES PASOS VIAJAN ENTEROS y son exactamente las TRES CIFRAS que la razon dice que hay que salvar del que muere: el porcentaje de las ventas actuales que viene de productos lanzados en los ultimos tres anos, la tasa de atraso entre lo planeado y lo real, y la comparacion contra el estandar de la industria. Ninguna de las tres esta en los cuatro pasos del superviviente, medido paso a paso. Su condicion 2 (justificar con datos una inversion mayor en investigacion y desarrollo) viaja entera por ser un disparador distinto. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 23,
+            "superviviente": "duration_estimating_worksheet",
+            "motivo": "CONTEOS DE CONTENIDO CONTRA PIEZA DECLARADA, Y DECIDE LA PIEZA DECLARADA (acta 53, pregunta 3, y acta 54, pregunta 2). ES EL PRIMER ACTO DEL TRAMO DONDE LAS DOS COSAS NO APUNTAN AL MISMO LADO, y por eso el motivo lo dice entero. LOS CONTEOS APUNTAN AL OTRO: pasos 4 contra 5 y condiciones 1 contra 2, las dos a favor de estimacion_tres_puntos, y el cableado tambien (3 contra 5). LA PIEZA DECLARADA APUNTA AQUI, Y ES LA MAS ESPECIFICA DEL ACTO: la razon del puesto 793 escribe que duration_estimating_worksheet OFRECE TRES METODOS DE ESTIMACION y que el tercero ES el de tres puntos; que estimacion_tres_puntos DESARROLLA ESE TERCER METODO; que sus tres primeros pasos son el mismo paso partido en tres, el cuarto es el CALCULAR que la madre ya manda y el quinto es el REGISTRAR que la madre ya manda; y que LO QUE ANADE CABE EN UNA LINEA, el nombre de la ponderacion Beta. Por la vara del banco 9.6.1 la razon concluye REPITE. El padre declarado es parte del CONTENIDO que P.8 pesa, no un extra: cuando choca con los conteos, decide el declarado. Y SE DICE LA CONSECUENCIA MEDIDA QUE HACE LA ELECCION SOSTENIBLE: la madre tiene TRES metodos y el hijo solo desarrolla UNO; si sobreviviera el hijo, los metodos parametrico y analogo tendrian que viajar de APPEND a un nodo titulado Estimacion de Tres Puntos, y esta operacion NO redacta titulos. VA MARCADO COMO DISCUTIBLE EN EL REPORTE.",
+            "pasos": {
+                "1": ["CUBIERTO", 3],
+                "2": ["CUBIERTO", 3],
+                "3": ["CUBIERTO", 3],
+                "4": ["INCISO", 3, "la formula de ponderacion Beta", ", con "],
+                "5": ["CUBIERTO", 4],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"]},
+            "nota": "NINGUNA PIEZA DE PASO VIAJA ENTERA Y NINGUNA SE PIERDE: los tres primeros pasos del que muere son el paso 3 del superviviente partido en tres (optimista, mas probable y pesimista) y su paso 5 es el paso 4 del superviviente (registrar). UN INCISO, y es exactamente LA UNICA LINEA que la razon dice que el hijo anade: el nombre de la ponderacion Beta, adosado al paso 3 del superviviente, que ya manda calcular la duracion esperada usando distribucion Beta pero no nombra la formula de ponderacion. SUS DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos del suyo: la incertidumbre significativa en duracion o costo, y el analisis cuantitativo de riesgo en la planificacion; la unica condicion del superviviente habla de requerir una estimacion cuantitativa y detallada con metodos formales, que es otra cosa. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 24,
+            "superviviente": "eventos_offline_como_canal_traccion",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA. Pasos 7 contra 5 a favor de eventos_offline_como_canal_traccion y condiciones 3 contra 3, empatadas: una sola vara de contenido no empatada BASTA, asi que el cableado NO habla, y se dice que apuntaba al mismo lado (6 contra 5). La razon del puesto 804 reconoce propio a los DOS lados y nombra como lo que hay que salvar EL PRECIO ALTO COMO FILTRO, que es del que sobrevive, y LOS MEETUPS SATELITE, que son del que muere y viajan enteros en el reparto.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["INCISO", 2, "evento lujoso multi-dia para decision makers de alto nivel", ", o un "],
+                "3": ["INCISO", 3, "sin que el evento parezca un pitch de ventas", ", y "],
+                "4": ["APPEND"],
+                "5": ["APPEND"],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"], "3": ["APPEND"]},
+            "nota": "TRES PASOS VIAJAN ENTEROS: validar la demanda del evento preguntando a la audiencia o vendiendo entradas por anticipado, y los DOS que la razon declara propios del que muere, la transmision en vivo o los meetups satelite y la repeticion anual ajustando precio y escala. EL PRIMERO SE DICE APARTE porque la razon lo da por compartido y EL TEXTO NO LO DICE: el paso 1 del superviviente manda PENSAR si la gente comparte intereses, no PREGUNTARLE ni vender entradas por anticipado, medido paso a paso. PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3). DOS INCISOS: el formato caro de varios dias para decision makers, alternativa concreta del evento pequeno del paso 2, y el aviso de que el evento no parezca un pitch de ventas, parametro del paso 3. SUS TRES CONDICIONES VIAJAN ENTERAS por ser disparadores distintos de los tres del superviviente, que hablan de a quien vendes y de que otros canales fallan, no de si existe evento de industria ni de posicionamiento de marca. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 25,
+            "superviviente": "genchi_gembutsu_salir_del_edificio",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA. Pasos 5 contra 4 a favor de genchi_gembutsu_salir_del_edificio y condiciones 2 contra 2, empatadas: una sola vara de contenido no empatada BASTA, asi que el cableado NO habla, y se dice que apuntaba al mismo lado (6 contra 3). La razon del puesto 840 reconoce a cada uno UN SOLO gesto propio, asi que esa vara EMPATA y la que decide es la de los pasos.",
+            "pasos": {
+                "1": ["INCISO", 2, "get out of the building", ", lo que se llama "],
+                "2": ["CUBIERTO", 4],
+                "3": ["CUBIERTO", 5],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["CUBIERTO", 2], "2": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente el unico gesto que la razon declara propio del que muere: usar las observaciones para ajustar el diseno del producto o servicio. UN INCISO: el nombre en ingles del principio, get out of the building, que el paso 2 del superviviente no trae y que es lo que lo hace buscable. Su condicion 2 (el equipo fundador sin experiencia directa con el mercado objetivo) viaja entera por ser un disparador distinto del de tener solo intuicion o corazonadas. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 26,
+            "superviviente": "technology_platform_evaluation",
+            "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO. Pasos 4 contra 4 y condiciones 2 contra 2: las dos varas de contenido empatan al digito, y la razon del puesto 852 reconoce material propio a los DOS lados (dos piezas en flexible_go_kill_criteria, tres en technology_platform_evaluation), asi que tampoco la pieza declarada desempata. Con el contenido callado entero, EL CABLEADO DECIDE SOLO y apunta a technology_platform_evaluation, 4 contra 5 en el cuadro de varas. Y SE DECLARA UN CONTRASTE DE CONTEO EN VEZ DE TAPARLO: el dossier imprime el cableado CRUDO del fichero (6 contra 5) y el cuadro de varas lo imprime RESUELTO (4 contra 5); la vara que decide es la del cuadro, que es la que pasa por el resolutor de P.1, y la direccion NO es la misma en los dos, asi que se dice cual se usa y por que.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["INCISO", 3, "ajuste estrategico, ventaja competitiva, potencial de mercado", ", que son "],
+                "3": ["APPEND"],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["CUBIERTO", 2]},
+            "nota": "DOS PASOS VIAJAN ENTEROS y son exactamente los dos que la razon declara propios del que muere: los metodos financieros sofisticados para riesgo (opciones reales, Monte Carlo y valor comercial esperado) y la integracion de las decisiones de puerta con revisiones trimestrales de portafolio. UN INCISO: los TRES criterios de la tabla de evaluacion (ajuste estrategico, ventaja competitiva, potencial de mercado), que el paso 3 del superviviente pide sin nombrarlos. Sus dos condiciones quedan cubiertas una a una. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 28,
+            "superviviente": "simulacion_de_operaciones_supply_chain",
+            "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO. Pasos 6 contra 5 y condiciones 3 contra 2, las dos a favor de simulacion_de_operaciones_supply_chain; el cableado EMPATA (4 contra 4) y por eso no habria decidido nada aunque le tocara, y se dice. La razon del puesto 868 reconoce propio a los DOS lados (los datos de ERP y SCM y el horizonte de decision en uno; la estrategia previa, las tecnologias y la repeticion periodica en el otro), asi que esa vara empata y las que deciden son las contables.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["INCISO", 4, "no solo optimizar lo existente", ", y "],
+                "3": ["APPEND"],
+                "4": ["CUBIERTO", 5],
+                "5": ["APPEND"],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"]},
+            "nota": "TRES PASOS VIAJAN ENTEROS y son exactamente los tres que la razon declara propios del que muere: definir la estrategia de negocio ANTES de disenar la cadena, probar combinaciones de tecnologias (robots, manufactura aditiva, vehiculos autonomos) y repetir la simulacion de forma periodica para adaptarse a cambios del mercado global. UN INCISO: el no solo optimizar lo existente, que es el matiz que separa simular escenarios de optimizar la red actual y que el paso 4 del superviviente no dice. SUS DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos: redisenar la cadena para ESCALAR y el crecimiento de ventas que exige repensar la logistica; las tres del superviviente hablan de ubicacion de planta, incertidumbre de demanda y stock de seguridad. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 29,
+            "superviviente": "colaboracion_transporte_ctm",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA. Pasos 5 contra 4 a favor de colaboracion_transporte_ctm y condiciones 2 contra 2, empatadas: una sola vara de contenido no empatada BASTA, asi que el cableado NO habla, y SE DICE QUE APUNTABA AL OTRO (3 contra 5), porque el cableado solo decide cuando el contenido calla ENTERO y aqui no calla. La razon del puesto 883 reconoce DOS piezas propias concretas a colaboracion_transporte_ctm (el modelo matematico de la red y las reglas de expectativas y reparto de beneficios) y UNA a collaborative_transportation_management, y ademas avisa con todas sus letras que HAY QUE LEER CUAL DE LOS DOS TRAE MAS ANTES DE FUSIONAR: leido, trae mas el de nombre en espanol.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["INCISO", 3, "en tiempo real", ", "],
+                "3": ["APPEND"],
+                "4": ["CUBIERTO", 5],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente la que la razon declara propia del que muere: definir el NIVEL de colaboracion deseado y el intercambio de informacion asociado. UN INCISO: el en tiempo real del hub de informacion comun, que es un parametro concreto del paso 3 del superviviente. SUS DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos: operar con multiples transportistas o socios logisticos, y buscar reducir costos de transporte mediante colaboracion; las dos del superviviente hablan de competir contra rivales mas grandes y de sinergias de peso o volumen. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 30,
+            "superviviente": "search_for_business_model",
+            "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO, Y ADEMAS LA PIEZA DECLARADA APUNTA IGUAL. Pasos 6 contra 4 y condiciones 4 contra 2, las dos a favor de search_for_business_model; el cableado apunta al mismo lado y por mucho (35 contra 6). La razon del puesto 905 escribe que LO PROPIO DE customer_development_vs_business_plan ES UNA LINEA, el lienzo como herramienta de planificacion flexible, y que por la vara del banco 9.6.1 eso es REPITE; y nombra como lo que hay que salvar la distincion BUSQUEDA contra EJECUCION y el aviso de no montar estructura antes de tiempo, que son las dos del que sobrevive.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["CUBIERTO", 3],
+                "3": ["APPEND"],
+                "4": ["CUBIERTO", 5],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1], "2": ["CUBIERTO", 2]},
+            "nota": "DOS PASOS VIAJAN ENTEROS: usar el Business Model Canvas y el Value Proposition Canvas como herramientas de planificacion flexible, que es LA LINEA que la razon declara propia del que muere; y abandonar la idea de escribir un plan de negocio detallado al inicio. ESTE SEGUNDO SE DICE APARTE porque la razon lo da por compartido y EL TEXTO NO LO DICE: los seis pasos del superviviente mandan determinar el modo, listar hipotesis marcadas como no probadas, salir a probarlas, no montar estructura, iterar y adoptar mentalidad de aprendizaje, y NINGUNO manda abandonar el plan de negocio, medido paso a paso. PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3), y APPEND no pierde nada. Sus dos condiciones quedan cubiertas una a una. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 31,
+            "superviviente": "planificacion_consecuencias_no_intencionadas",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA. Pasos 5 contra 4 a favor de planificacion_consecuencias_no_intencionadas y condiciones 2 contra 2, empatadas: una sola vara de contenido no empatada BASTA, asi que el cableado NO habla, y SE DICE QUE APUNTABA AL OTRO (5 contra 4 en el cuadro de varas). Y LA PIEZA DECLARADA APUNTA AL MISMO LADO QUE LOS PASOS: la razon del puesto 928 dice que LAS DOS PIEZAS OPERATIVAS QUE HAY QUE SALVAR, detectar temprano los comportamientos no esperados y tener un plan para frenar o revertir, son de planificacion_consecuencias_no_intencionadas: estan a salvo por construccion.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["APPEND"],
+                "3": ["INCISO", 2, "los que aparecen despues del primer impacto", ", o sea "],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["CUBIERTO", 2]},
+            "nota": "TRES PASOS VIAJAN ENTEROS: los DOS que la razon declara propios del que muere y que son su punto de entrada (describir como se ve el exito total, y preguntarse que sale mal si funciona exactamente como se imagino), mas anotar los riesgos y pensar como reducirlos desde ahora. ESTE TERCERO SE DICE APARTE porque la razon lo da por compartido y EL TEXTO NO LO DICE: los cinco pasos del superviviente listan efectos, cruzan variables, identifican lo que no se controla, disenan la deteccion temprana y preparan la reversion, y NINGUNO manda ANOTAR los riesgos encontrados, medido paso a paso. PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3). UN INCISO: la definicion de efecto indirecto (los que aparecen despues del primer impacto), parametro del paso 2 del superviviente. Su condicion 1 (vision muy optimista y sin pensar en los riesgos) viaja entera por ser un disparador distinto. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 32,
+            "superviviente": "estrategia_multicanal_bienvenida",
+            "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO. Pasos 5 contra 4 y condiciones 2 contra 1, las dos a favor de estrategia_multicanal_bienvenida; el cableado apunta al mismo lado (3 contra 2). La razon del puesto 948 reconoce propio a los dos lados (dos piezas de ejecucion en estrategia_multicanal_bienvenida, la personalizacion con el nombre y los detalles de la compra y la MEDICION antes y despues; una de criterio en seis_medios_comunicacion_cliente, elegir el medio segun la fase y el efecto emocional), asi que esa vara empata y las que deciden son las contables.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["APPEND"],
+                "3": ["INCISO", 2, "correo fisico, video personalizado o regalos significativos", ", incluidos los medios subutilizados como "],
+                "4": ["INCISO", 3, "Evitar gestos genericos (cupones, tazas con logo)", ", y "],
+            },
+            "condiciones": {"1": ["CUBIERTO", 1]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente la que la razon declara propia del que muere: seleccionar deliberadamente que medio usar segun la FASE en que esta el cliente y el efecto emocional que se busca. DOS INCISOS: los medios subutilizados con nombre (correo fisico, video personalizado, regalos significativos), que el paso 2 del superviviente lista de otra manera, y el aviso de evitar gestos genericos con sus dos ejemplos (cupones, tazas con logo), adosado al paso de la personalizacion. UNA PERDIDA NOMBRADA: su condicion 1 pide diversificar y personalizar la comunicacion EN CADA ETAPA DEL CICLO DE VIDA, y la condicion 1 del superviviente acota el disparador a la confirmacion de compra generica y automatizada, que es solo la bienvenida; el INCISO para condiciones no existe en el instrumento (pendiente de doctrina heredado) y por eso la perdida se nombra.",
+        },
+        {
+            "orden": 33,
+            "superviviente": "intellectual_property_strategy",
+            "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA PUERTA APUNTA AL MISMO LADO. Pasos 5 contra 4 a favor de intellectual_property_strategy y condiciones 1 contra 1, empatadas: una sola vara no empatada BASTA, asi que el cableado NO habla, y se dice que EMPATABA (5 contra 5). Y LA SEGUNDA VARA APUNTA IGUAL: intellectual_property_strategy ES PUERTA (extremo de puente aprobado) y la guarda 1B exige que sobreviva. AQUI NO HAY CHOQUE, las dos varas coinciden. La razon del puesto 978 lo confirma por el lado del contenido: TRES de los cuatro pasos del corto estan dentro del largo y lo que el corto anade CABE EN UNA LINEA, con lo que la vara del banco 9.6.1 devuelve REPITE.",
+            "pasos": {
+                "1": ["INCISO", 4, "desde que fundas tu empresa", ", "],
+                "2": ["INCISO", 3, "acuerdo de 'work for hire'", ", incluido el "],
+                "3": ["CUBIERTO", 5],
+                "4": ["APPEND"],
+            },
+            "condiciones": {"1": ["APPEND"]},
+            "nota": "UNA PIEZA VIAJA ENTERA y es exactamente LA LINEA que la razon dice que hay que salvar del corto: buscar a alguien con buen criterio legal antes de avanzar mas en construir el negocio. DOS INCISOS: el momento (desde que fundas tu empresa), parametro de la cadena de titulo del paso 4, y el nombre del acuerdo (work for hire), parametro del acuerdo de cesion del paso 3. Su condicion viaja entera por ser un disparador distinto: haber compartido ya la idea o haber contratado a alguien para desarrollarla, contra depender de tecnologia, marca o contenido propio como ventaja competitiva. CERO perdidas nombradas.",
+        },
+        {
+            "orden": 34,
+            "superviviente": "metricas_accionables",
+            "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO, Y LA PUERTA APUNTA AL MISMO LADO. Pasos 6 contra 4 y condiciones 4 contra 2, las dos a favor de metricas_accionables; el cableado apunta al mismo lado (12 contra 3). Y LA SEGUNDA VARA APUNTA IGUAL: metricas_accionables ES PUERTA (extremo de puente aprobado) y la guarda 1B exige que sobreviva. AQUI NO HAY CHOQUE. La razon del puesto 1031 reconoce propio a los dos lados y nombra como lo que hay que salvar LA INSTRUCCION SOBRE QUE ENSENARLE AL INVERSIONISTA, que es del que muere y viaja entera en el reparto.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["APPEND"],
+                "3": ["APPEND"],
+                "4": ["INCISO", 1, "metricas de vanidad (visitas, descargas) y metricas accionables (retencion, conversion, recompra)", ", distinguiendo entre "],
+            },
+            "condiciones": {"1": ["APPEND"], "2": ["APPEND"]},
+            "nota": "TRES PASOS VIAJAN ENTEROS: los DOS que la razon declara propios del que muere (evitar campanas de marketing o prensa disenadas solo para inflar metricas superficiales, y presentar al inversionista el APRENDIZAJE VALIDADO con curvas de comportamiento real en vez de cifras aisladas) mas definir que hipotesis se quiere validar antes de buscar crecimiento en numeros brutos, que es un gesto que ninguno de los seis pasos del superviviente dice. UN INCISO: la lista de las dos familias con sus ejemplos (visitas y descargas contra retencion, conversion y recompra), adosada al paso 1 del superviviente, que evita los numeros brutos sin nombrar ninguna. SUS DOS CONDICIONES VIAJAN ENTERAS por ser disparadores distintos de las cuatro del superviviente: numeros pequenos con riesgo de perder la confianza, y la tentacion de aparentar traccion con marketing. CERO perdidas nombradas.",
+        },
+    ],
+    "declarados": [
+        {
+            "orden": 27,
+            "miembros": ["decision_pivote_perseverar", "pivotar_o_perseverar"],
+            "especie": "CONTEOS DE CONTENIDO QUE CHOCAN Y LA PIEZA DECLARADA NO DESEMPATA",
+            "motivo": "LAS DOS VARAS DE CONTENIDO APUNTAN A LADOS DISTINTOS: pasos 4 contra 5 a favor de pivotar_o_perseverar y condiciones 3 contra 2 a favor de decision_pivote_perseverar. Por el acta 53 pregunta 3 y el acta 54 pregunta 2, cuando dos varas de contenido CHOCAN decide LA PIEZA DECLARADA, y si no hay ninguna el acto SE DECLARA y acumula para la mesa. AQUI LA PIEZA DECLARADA NO DESEMPATA PORQUE HAY MATERIAL PROPIO DECLARADO A LOS DOS LADOS: la razon del puesto 860 escribe que lo propio de pivotar_o_perseverar son DOS (establecer una linea base NUEVA despues de pivotar, y comprobar que las acciones nuevas rinden mas que las viejas) y que lo propio del bloque de Ries del otro es evaluar si el equipo esta racionalizando el fracaso en vez de aceptarlo. EL MATERIAL PROPIO DECLARADO DE UN SOLO LADO ES UNA VARA (acta 54, pregunta 4), y de LOS DOS lados EMPATA. Y EL CABLEADO NO PUEDE HABLAR: solo decide cuando el contenido calla ENTERO, y aqui el contenido no calla, CHOCA. MISMA ESPECIE que los actos 4, 20 y 42 del tramo 2, con el pendiente de doctrina nombrado en 03_FUSIONES.md: la mesa tiene que elegir una PRELACION ENTRE CONTEOS DE CONTENIDO o una AMPLIACION de donde vive la pieza declarada.",
+            "acumula_para": "LA MESA, con el pendiente de doctrina 1 de la vuelta 55, ahora con CUATRO actos y no tres",
+        },
+    ],
+}
+
+
 def cargar_jsonl(p):
     return [json.loads(l) for l in io.open(p, encoding="utf-8") if l.strip()]
 

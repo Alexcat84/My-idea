@@ -6,45 +6,57 @@
   "fuente": "The Lean Startup - Eric Ries",
   "resumen_teorico": "Las métricas de vanidad (usuarios totales, ingresos brutos, hits al sitio) suben y generan sensación de progreso, pero no muestran relación causa efecto ni guían decisiones. Son peligrosas porque explotan un sesgo humano: cuando los números suben te atribuyes el mérito, cuando bajan culpas a factores externos. Las métricas accionables, en cambio, muestran con claridad qué acción específica generó qué resultado, permitiendo aprendizaje real. Deben ser comprensibles y accesibles para ti y cualquiera que revise tus reportes, y auditables. El análisis de cohortes, en lugar de gráficos de línea acumulativa, revela el progreso real del negocio en vez de esconder estancamiento detrás de números brutos que solo crecen.",
   "pasos_accionables": [
-    "Evitar guiarte por números brutos acumulativos (usuarios totales, ingresos totales) como única señal de éxito",
+    "Evitar guiarte por números brutos acumulativos (usuarios totales, ingresos totales) como única señal de éxito, distinguiendo entre métricas de vanidad (visitas, descargas) y métricas accionables (retención, conversión, recompra)",
     "Para cada métrica que uses, preguntarte si sube o baja, sabes exactamente qué acción lo causó",
     "Diseñar métricas que muestren relación causal clara entre los cambios que haces y el comportamiento del cliente",
     "Reemplazar gráficos de línea acumulativa por análisis de cohortes para evaluar el progreso real",
     "Eliminar o sustituir cualquier métrica que no permita esta trazabilidad",
-    "Validar que las métricas que sigues sean comprensibles y accesibles, no solo datos crudos de un dashboard"
+    "Validar que las métricas que sigues sean comprensibles y accesibles, no solo datos crudos de un dashboard",
+    "Definir qué hipótesis de negocio se quiere validar antes de buscar crecimiento en números brutos",
+    "Evitar campañas de marketing o PR diseñadas solo para inflar métricas superficiales",
+    "Presentar a inversores y stakeholders el aprendizaje validado (curvas de comportamiento real de clientes) en lugar de cifras aisladas"
   ],
   "entregable_esperado": "Una lista de tus métricas actuales clasificadas como vanidad o accionables, con plan de reemplazo y usadas de forma consistente en tus decisiones, evitando el success theater",
   "nodos_previos": [
     "analisis_de_cohortes",
     "contabilidad_innovacion",
     "tres_as_de_metricas",
-    "medir_lo_que_importa_no_solo_lo_facil"
+    "medir_lo_que_importa_no_solo_lo_facil",
+    "producto_minimo_viable"
   ],
   "nodos_siguientes": [
     "pivotar_o_perseverar",
-    "aprendizaje_validado_vs_metricas_vanidad",
     "coraje_para_pivotar",
     "contabilidad_innovacion_pivote",
     "motor_de_crecimiento",
     "reunion_pivotar_o_perseverar",
     "riesgo_no_pivotar_a_tiempo",
     "analisis_de_cohortes",
-    "split_testing_experimentos_ab"
+    "split_testing_experimentos_ab",
+    "pivote_estrategico"
   ],
   "condiciones_activacion": [
     "Cuando tú o tus inversionistas se enfocan en métricas de crecimiento bruto sin evidencia de aprendizaje real",
     "Si sientes que estás progresando pero no puedes explicar por qué",
     "Si tus métricas suben y bajan sin relación clara con tus acciones",
-    "Al inicio de cualquier proceso de medición de un MVP o producto en mercado"
+    "Al inicio de cualquier proceso de medición de un MVP o producto en mercado",
+    "Cuando los números de la startup son pequeños y se corre el riesgo de perder la confianza de inversores o equipo",
+    "Cuando el equipo está tentado a usar tácticas de marketing para 'aparentar' tracción"
   ],
   "etiqueta_arbol": "Persigue Métricas Que Sí Importan",
   "ids_alias": [
-    "vanity_metrics_vs_accionables"
+    "vanity_metrics_vs_accionables",
+    "aprendizaje_validado_vs_metricas_vanidad"
   ],
   "merged_originals": [
     {
       "node_id": "vanity_metrics_vs_accionables",
       "titulo": "Métricas de Vanidad vs Métricas Accionables",
+      "fuente": "The Lean Startup - Eric Ries"
+    },
+    {
+      "node_id": "aprendizaje_validado_vs_metricas_vanidad",
+      "titulo": "Aprendizaje Validado vs. Métricas de Vanidad",
       "fuente": "The Lean Startup - Eric Ries"
     }
   ]

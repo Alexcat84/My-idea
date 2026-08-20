@@ -9,25 +9,44 @@
     "Recopilar datos de ERP/SCM sobre productos, plantas, costos y restricciones de capacidad",
     "Definir el horizonte de decisión (estratégico, táctico u operativo) y la pregunta a responder",
     "Construir el modelo de simulación representando la red actual o propuesta",
-    "Ejecutar el modelo bajo distintos escenarios y variables de incertidumbre (demanda, tráfico, procesos)",
+    "Ejecutar el modelo bajo distintos escenarios y variables de incertidumbre (demanda, tráfico, procesos), y no solo optimizar lo existente",
     "Comparar resultados de escenarios para seleccionar el diseño con mejor relación costo-servicio",
-    "Validar la solución antes de implementarla físicamente para minimizar riesgo"
+    "Validar la solución antes de implementarla físicamente para minimizar riesgo",
+    "Definir la estrategia de negocio antes de diseñar la cadena de suministro",
+    "Probar combinaciones de tecnologías (robots, manufactura aditiva, vehículos autónomos) en el modelo",
+    "Repetir el proceso de simulación periódicamente para adaptarse a cambios del mercado global"
   ],
   "entregable_esperado": "Modelo de simulación validado con recomendación de diseño de red, layout o política de inventario respaldada por datos",
   "nodos_previos": [
     "definicion_alineacion_cadena_suministro",
     "ia_en_supply_chain",
     "manufactura_aditiva_bajo_demanda",
-    "vehiculos_autonomos_drones_supply_chain"
+    "vehiculos_autonomos_drones_supply_chain",
+    "alineacion_ti_negocio",
+    "lienzo_modelo_negocio"
   ],
   "nodos_siguientes": [
     "vehiculos_autonomos_drones_supply_chain",
-    "ia_en_supply_chain"
+    "ia_en_supply_chain",
+    "cuatro_categorias_desempeno_cadena_suministro",
+    "tecnologias_emergentes_cadena_suministro"
   ],
   "condiciones_activacion": [
     "Cuando se debe decidir la ubicación de una nueva planta, centro de distribución o terminal",
     "Si existe alta incertidumbre en demanda o procesos y se requiere probar diseños antes de invertir",
-    "Cuando se busca optimizar niveles de stock de seguridad sin sacrificar nivel de servicio"
+    "Cuando se busca optimizar niveles de stock de seguridad sin sacrificar nivel de servicio",
+    "Cuando la empresa busca rediseñar su cadena de suministro para escalar",
+    "Cuando el crecimiento de ventas exige repensar la logística existente"
   ],
-  "etiqueta_arbol": "Simula tu Cadena de Suministro"
+  "etiqueta_arbol": "Simula tu Cadena de Suministro",
+  "ids_alias": [
+    "simulacion_diseno_cadena_suministro"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "simulacion_diseno_cadena_suministro",
+      "titulo": "Simulación para Diseño de Cadena de Suministro",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }

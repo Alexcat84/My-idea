@@ -1,0 +1,543 @@
+==============================================================================
+OP-U-01, TRAMO 3, LOTE B DE LA VUELTA 56: LOS ACTOS 18 A 34 EN EL ORDEN IMPRESO DEL TRAMO, apartando SOLO el 27, que queda DECLARADO porque sus dos varas de contenido CHOCAN y la pieza declarada no desempata . MODO EJECUTAR
+plan: docs/loop/PLAN_V56_OPU01_LOTE_B.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3415 vivos, 438 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 18 . sobrevive embudo_secuencial_de_inversores . absorbe seleccion_etapa_fondo_vc
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['seleccion_etapa_fondo_vc']
+
+------------------------------------------------------------------------------
+ACTO 19 . sobrevive vesting_acciones_fundadores . absorbe eleccion_estructura_vesting_founder
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 9 (anadidos 2) | condiciones 5 -> 7 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 1 de eleccion_estructura_vesting_founder al PASO 3 del superviviente
+        inciso VERBATIM: 'distínguelo del tuyo como fundador'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Establece un cronograma de vesting estándar: 1 año de espera inicial (cliff) con 25% al cumplirlo, y el resto en adquisicion mensual durante los siguientes 3 años, y distínguelo del tuyo como fundador
+  alias del superviviente: ['eleccion_estructura_vesting_founder']
+
+------------------------------------------------------------------------------
+ACTO 20 . sobrevive homogeneidad_vs_diversidad_equipo . absorbe diversidad_vs_homogeneidad_equipo
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 5 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 3 de diversidad_vs_homogeneidad_equipo al PASO 4 del superviviente
+        inciso VERBATIM: 'cuánto compromiso espera cada uno'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Evaluar también factores 'blandos' (tolerancia al riesgo, valores, estilo de trabajo) antes de comprometerse con un cofundador, y cuánto compromiso espera cada uno
+  alias del superviviente: ['diversidad_vs_homogeneidad_equipo']
+
+------------------------------------------------------------------------------
+ACTO 21 . sobrevive ia_como_nivelador_habilidades . absorbe ia_colaborador_productividad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 4 -> 5 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de ia_colaborador_productividad al PASO 1 del superviviente
+        inciso VERBATIM: 'memos, informes, comunicados'
+        nexo (lo unico de cosecha propia): ', como '
+        paso resultante: Identificar las tareas de tu negocio donde exista mayor variabilidad de desempeño, sea tuya o de colaboradores y freelancers., como memos, informes, comunicados
+  alias del superviviente: ['efecto_nivelador_ia', 'ia_colaborador_productividad']
+
+------------------------------------------------------------------------------
+ACTO 22 . sobrevive mantener_puntaje_innovacion . absorbe auditoria_desempeno_new_products
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['auditoria_desempeno_new_products']
+
+------------------------------------------------------------------------------
+ACTO 23 . sobrevive duration_estimating_worksheet . absorbe estimacion_tres_puntos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 1 -> 3 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 4 de estimacion_tres_puntos al PASO 3 del superviviente
+        inciso VERBATIM: 'la fórmula de ponderación Beta'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Para estimación de tres puntos: obtener valores optimista, más probable y pesimista, y calcular duración esperada usando distribución Beta, con la fórmula de ponderación Beta
+  alias del superviviente: ['estimacion_tres_puntos']
+
+------------------------------------------------------------------------------
+ACTO 24 . sobrevive eventos_offline_como_canal_traccion . absorbe eventos_offline_propios
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 10 (anadidos 3) | condiciones 3 -> 6 (anadidas 3)
+  INCISOS ADOSADOS: 2
+     del paso 2 de eventos_offline_propios al PASO 2 del superviviente
+        inciso VERBATIM: 'evento lujoso multi-día para decision makers de alto nivel'
+        nexo (lo unico de cosecha propia): ', o un '
+        paso resultante: Empieza con un evento pequeño y de bajo costo, como una mini charla de un día; pregunta el precio en tu mercado, o un evento lujoso multi-día para decision makers de alto nivel
+     del paso 3 de eventos_offline_propios al PASO 3 del superviviente
+        inciso VERBATIM: 'sin que el evento parezca un pitch de ventas'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Invita a tres emprendedores o expertos locales relevantes para que den charlas cortas, y sin que el evento parezca un pitch de ventas
+  alias del superviviente: ['eventos_offline_propios']
+
+------------------------------------------------------------------------------
+ACTO 25 . sobrevive genchi_gembutsu_salir_del_edificio . absorbe genchi_gembutsu
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de genchi_gembutsu al PASO 2 del superviviente
+        inciso VERBATIM: 'get out of the building'
+        nexo (lo unico de cosecha propia): ', lo que se llama '
+        paso resultante: Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building
+  alias del superviviente: ['genchi_gembutsu']
+
+------------------------------------------------------------------------------
+ACTO 26 . sobrevive technology_platform_evaluation . absorbe flexible_go_kill_criteria
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de flexible_go_kill_criteria al PASO 3 del superviviente
+        inciso VERBATIM: 'ajuste estratégico, ventaja competitiva, potencial de mercado'
+        nexo (lo unico de cosecha propia): ', que son '
+        paso resultante: Aplica una tabla de evaluación específica centrada en criterios estratégicos y cualitativos, no financieros, que son ajuste estratégico, ventaja competitiva, potencial de mercado
+  alias del superviviente: ['flexible_go_kill_criteria']
+
+------------------------------------------------------------------------------
+ACTO 28 . sobrevive simulacion_de_operaciones_supply_chain . absorbe simulacion_diseno_cadena_suministro
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 9 (anadidos 3) | condiciones 3 -> 5 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 2 de simulacion_diseno_cadena_suministro al PASO 4 del superviviente
+        inciso VERBATIM: 'no solo optimizar lo existente'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Ejecutar el modelo bajo distintos escenarios y variables de incertidumbre (demanda, tráfico, procesos), y no solo optimizar lo existente
+  alias del superviviente: ['simulacion_diseno_cadena_suministro']
+
+------------------------------------------------------------------------------
+ACTO 29 . sobrevive colaboracion_transporte_ctm . absorbe collaborative_transportation_management
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 2 de collaborative_transportation_management al PASO 3 del superviviente
+        inciso VERBATIM: 'en tiempo real'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Establecer un hub de información común para compartir datos entre colaboradores, en tiempo real
+  alias del superviviente: ['collaborative_transportation_management']
+
+------------------------------------------------------------------------------
+ACTO 30 . sobrevive search_for_business_model . absorbe customer_development_vs_business_plan
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 8 (anadidos 2) | condiciones 4 -> 4 (anadidas 0)
+  alias del superviviente: ['busqueda_vs_ejecucion', 'definicion_startup', 'definicion_startup_busqueda_modelo_negocio', 'definicion_startup_incertidumbre', 'startup_como_busqueda_vs_ejecucion', 'customer_development_vs_business_plan']
+
+------------------------------------------------------------------------------
+ACTO 31 . sobrevive planificacion_consecuencias_no_intencionadas . absorbe anticipar_consecuencias_negativas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 3 de anticipar_consecuencias_negativas al PASO 2 del superviviente
+        inciso VERBATIM: 'los que aparecen después del primer impacto'
+        nexo (lo unico de cosecha propia): ', o sea '
+        paso resultante: Para cada efecto directo, pregúntate '¿qué otras variables del sistema podrían cruzarse con este cambio?', o sea los que aparecen después del primer impacto
+  alias del superviviente: ['anticipar_consecuencias_negativas']
+
+------------------------------------------------------------------------------
+ACTO 32 . sobrevive estrategia_multicanal_bienvenida . absorbe seis_medios_comunicacion_cliente
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 3 de seis_medios_comunicacion_cliente al PASO 2 del superviviente
+        inciso VERBATIM: 'correo físico, video personalizado o regalos significativos'
+        nexo (lo unico de cosecha propia): ', incluidos los medios subutilizados como '
+        paso resultante: Diseñar al menos un touchpoint personalizado por canal (video corto, llamada de agradecimiento, nota escrita a mano, empaque temático), incluidos los medios subutilizados como correo físico, video personalizado o regalos significativos
+     del paso 4 de seis_medios_comunicacion_cliente al PASO 3 del superviviente
+        inciso VERBATIM: 'Evitar gestos genéricos (cupones, tazas con logo)'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Personalizar cada touchpoint con el nombre del cliente y detalles específicos de su compra, y Evitar gestos genéricos (cupones, tazas con logo)
+  alias del superviviente: ['seis_medios_comunicacion_cliente']
+
+------------------------------------------------------------------------------
+ACTO 33 . sobrevive intellectual_property_strategy . absorbe proteccion_propiedad_intelectual
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de proteccion_propiedad_intelectual al PASO 4 del superviviente
+        inciso VERBATIM: 'desde que fundas tu empresa'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Documentar cadena de título de la propiedad intelectual, desde que fundas tu empresa
+     del paso 2 de proteccion_propiedad_intelectual al PASO 3 del superviviente
+        inciso VERBATIM: "acuerdo de 'work for hire'"
+        nexo (lo unico de cosecha propia): ', incluido el '
+        paso resultante: Crear acuerdos de cesión de invención con empleados y contratistas, incluido el acuerdo de 'work for hire'
+  alias del superviviente: ['proteccion_propiedad_intelectual']
+
+------------------------------------------------------------------------------
+ACTO 34 . sobrevive metricas_accionables . absorbe aprendizaje_validado_vs_metricas_vanidad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 9 (anadidos 3) | condiciones 4 -> 6 (anadidas 2)
+  INCISOS ADOSADOS: 1
+     del paso 4 de aprendizaje_validado_vs_metricas_vanidad al PASO 1 del superviviente
+        inciso VERBATIM: 'métricas de vanidad (visitas, descargas) y métricas accionables (retención, conversión, recompra)'
+        nexo (lo unico de cosecha propia): ', distinguiendo entre '
+        paso resultante: Evitar guiarte por números brutos acumulativos (usuarios totales, ingresos totales) como única señal de éxito, distinguiendo entre métricas de vanidad (visitas, descargas) y métricas accionables (retención, conversión, recompra)
+  alias del superviviente: ['vanity_metrics_vs_accionables', 'aprendizaje_validado_vs_metricas_vanidad']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 61
+   actividades_clave                                    nodos_siguientes  estimacion_tres_puntos -> duration_estimating_worksheet
+   alfabetizacion_en_materiales_maliciosos              nodos_siguientes  anticipar_consecuencias_negativas -> planificacion_consecuencias_no_intencionadas
+   alineacion_ti_negocio                                nodos_siguientes  simulacion_diseno_cadena_suministro -> simulacion_de_operaciones_supply_chain
+   amar_las_restricciones                               nodos_previos     anticipar_consecuencias_negativas -> planificacion_consecuencias_no_intencionadas
+   analisis_de_sensibilidad_riesgo                      nodos_siguientes  genchi_gembutsu -> genchi_gembutsu_salir_del_edificio
+   canales_distribucion                                 nodos_previos     eventos_offline_propios -> eventos_offline_como_canal_traccion
+   collaboration_enablers                               nodos_previos     collaborative_transportation_management -> colaboracion_transporte_ctm
+   collaboration_roadblocks                             nodos_siguientes  collaborative_transportation_management -> colaboracion_transporte_ctm
+   community_building_estrategia                        nodos_siguientes  eventos_offline_propios -> eventos_offline_como_canal_traccion
+   contabilidad_innovacion_pivote                       nodos_siguientes  customer_development_vs_business_plan -> search_for_business_model
+   contratacion_experiencia_vs_potencial                nodos_siguientes  eleccion_estructura_vesting_founder -> vesting_acciones_fundadores
+   control_del_board_startup                            nodos_previos     eleccion_estructura_vesting_founder -> vesting_acciones_fundadores
+   cronograma_proyecto                                  nodos_previos     estimacion_tres_puntos -> duration_estimating_worksheet
+   cuatro_categorias_desempeno_cadena_suministro        nodos_previos     simulacion_diseno_cadena_suministro -> simulacion_de_operaciones_supply_chain
+   customer_development_process                         nodos_previos     customer_development_vs_business_plan -> search_for_business_model
+   customer_retention_tactics                           nodos_previos     eventos_offline_propios -> eventos_offline_como_canal_traccion
+   definicion_alineacion_cadena_suministro              nodos_siguientes  collaborative_transportation_management -> colaboracion_transporte_ctm
+   definicion_producto_proyecto                         nodos_siguientes  anticipar_consecuencias_negativas -> planificacion_consecuencias_no_intencionadas
+   desafios_implementacion_ia                           nodos_previos     ia_colaborador_productividad -> ia_como_nivelador_habilidades
+   determinar_monto_a_levantar                          nodos_previos     proteccion_propiedad_intelectual -> intellectual_property_strategy
+   diamante_de_innovacion                               nodos_previos     auditoria_desempeno_new_products -> mantener_puntaje_innovacion
+   diez_principios_testing                              nodos_previos     customer_development_vs_business_plan -> search_for_business_model
+   estilos_pensamiento_intuitivo_vs_logico              nodos_siguientes  customer_development_vs_business_plan -> search_for_business_model
+   estimacion_costos_actividad                          nodos_siguientes  estimacion_tres_puntos -> duration_estimating_worksheet
+   gestion_alucinaciones_ia                             nodos_siguientes  ia_colaborador_productividad -> ia_como_nivelador_habilidades
+   gestion_sindicato_inversores                         nodos_previos     seleccion_etapa_fondo_vc -> embudo_secuencial_de_inversores
+   homogeneidad_vs_diversidad_equipo                    nodos_siguientes  diversidad_vs_homogeneidad_equipo -> homogeneidad_vs_diversidad_equipo
+   indice_de_reparabilidad                              nodos_previos     anticipar_consecuencias_negativas -> planificacion_consecuencias_no_intencionadas
+   introduccion_validacion_clientes                     nodos_siguientes  eventos_offline_propios -> eventos_offline_como_canal_traccion
+   jerarquia_firma_vc                                   nodos_previos     seleccion_etapa_fondo_vc -> embudo_secuencial_de_inversores
+   leap_of_faith_assumptions                            nodos_siguientes  genchi_gembutsu -> genchi_gembutsu_salir_del_edificio
+   lienzo_modelo_negocio                                nodos_siguientes  customer_development_vs_business_plan -> search_for_business_model
+   lienzo_modelo_negocio                                nodos_siguientes  simulacion_diseno_cadena_suministro -> simulacion_de_operaciones_supply_chain
+   lienzo_proyecto_innovacion                           nodos_siguientes  flexible_go_kill_criteria -> technology_platform_evaluation
+   linea_base_costos                                    nodos_previos     estimacion_tres_puntos -> duration_estimating_worksheet
+   marcas_registradas                                   nodos_previos     proteccion_propiedad_intelectual -> intellectual_property_strategy
+   metricas_accionables                                 nodos_siguientes  aprendizaje_validado_vs_metricas_vanidad -> metricas_accionables
+   modelo_hibrido_agile_stage_gate                      nodos_previos     flexible_go_kill_criteria -> technology_platform_evaluation
+   ocho_factores_exito_criticos                         nodos_siguientes  auditoria_desempeno_new_products -> mantener_puntaje_innovacion
+   ocho_fases_experiencia_cliente                       nodos_siguientes  seis_medios_comunicacion_cliente -> estrategia_multicanal_bienvenida
+   patentes_startup                                     nodos_previos     proteccion_propiedad_intelectual -> intellectual_property_strategy
+   pivote_estrategico                                   nodos_previos     aprendizaje_validado_vs_metricas_vanidad -> metricas_accionables
+   plan_gestion_riesgos                                 nodos_previos     anticipar_consecuencias_negativas -> planificacion_consecuencias_no_intencionadas
+   portfolio_management                                 nodos_previos     flexible_go_kill_criteria -> technology_platform_evaluation
+   preparacion_due_diligence                            nodos_siguientes  proteccion_propiedad_intelectual -> intellectual_property_strategy
+   producto_minimo_viable                               nodos_previos     genchi_gembutsu -> genchi_gembutsu_salir_del_edificio
+   producto_minimo_viable                               nodos_siguientes  aprendizaje_validado_vs_metricas_vanidad -> metricas_accionables
+   prueba_antes_de_comprometerse                        nodos_previos     diversidad_vs_homogeneidad_equipo -> homogeneidad_vs_diversidad_equipo
+   reasignacion_equity_fundadores                       nodos_siguientes  eleccion_estructura_vesting_founder -> vesting_acciones_fundadores
+   reducir_playing_with_fire_gap                        nodos_siguientes  eleccion_estructura_vesting_founder -> vesting_acciones_fundadores
+   restricciones_reputacionales                         nodos_siguientes  proteccion_propiedad_intelectual -> intellectual_property_strategy
+   scorecard_desempeno_cadena_suministro                nodos_previos     collaborative_transportation_management -> colaboracion_transporte_ctm
+   search_for_business_model                            nodos_siguientes  seleccion_etapa_fondo_vc -> embudo_secuencial_de_inversores
+   seesaw_salario_equity                                nodos_siguientes  eleccion_estructura_vesting_founder -> vesting_acciones_fundadores
+   stakeholder_mapping_wheel                            nodos_siguientes  collaborative_transportation_management -> colaboracion_transporte_ctm
+   tecnologias_emergentes_cadena_suministro             nodos_previos     simulacion_diseno_cadena_suministro -> simulacion_de_operaciones_supply_chain
+   term_sheet_negociacion                               nodos_previos     eleccion_estructura_vesting_founder -> vesting_acciones_fundadores
+   tipos_de_clientes                                    nodos_siguientes  flexible_go_kill_criteria -> technology_platform_evaluation
+   understanding_customers_tecnicas                     nodos_previos     seis_medios_comunicacion_cliente -> estrategia_multicanal_bienvenida
+   value_proposition_canvas                             nodos_siguientes  customer_development_vs_business_plan -> search_for_business_model
+   work_breakdown_structure                             nodos_siguientes  estimacion_tres_puntos -> duration_estimating_worksheet
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 7
+   customer_retention_strategy                          nodos_previos     eventos_offline_propios (registro historico)
+   customer_types_mapping                               nodos_siguientes  flexible_go_kill_criteria (registro historico)
+   definicion_startup                                   nodos_siguientes  seleccion_etapa_fondo_vc (registro historico)
+   diseno_compensacion_equidad                          nodos_siguientes  eleccion_estructura_vesting_founder (registro historico)
+   innovation_project_canvas                            nodos_siguientes  flexible_go_kill_criteria (registro historico)
+   manejo_syndicate_inversion                           nodos_previos     seleccion_etapa_fondo_vc (registro historico)
+   metricas_desempeno_cadena_suministro                 nodos_previos     simulacion_diseno_cadena_suministro (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 6
+   customer_development_process                         nodos_previos
+   indice_de_reparabilidad                              nodos_previos
+   lienzo_modelo_negocio                                nodos_siguientes
+   ocho_fases_experiencia_cliente                       nodos_siguientes
+   producto_minimo_viable                               nodos_previos
+   term_sheet_negociacion                               nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 2
+   homogeneidad_vs_diversidad_equipo                    nodos_siguientes
+   metricas_accionables                                 nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 970   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 964   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 6, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 80 de 80
+guarda D, los 16 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (101 filas)
+ acto de que nodo                                  que          n  a donde va
+   18 seleccion_etapa_fondo_vc                     paso         1  ya lo dice el PASO 1 del superviviente
+        Determina en qué etapa está tu negocio ahora mismo (arranque, semilla, primera ronda seria, etc.)
+   18 seleccion_etapa_fondo_vc                     paso         2  PASO 5 del superviviente
+        Investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira
+   18 seleccion_etapa_fondo_vc                     paso         3  PASO 6 del superviviente
+        Descarta a los inversores cuyo perfil no coincide con tu etapa actual
+   18 seleccion_etapa_fondo_vc                     paso         4  ya lo dice el PASO 2 del superviviente
+        Enfoca tu esfuerzo de conseguir capital en los que sí están alineados con tu momento
+   18 seleccion_etapa_fondo_vc                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando arrancas a buscar capital
+   18 seleccion_etapa_fondo_vc                     condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando no tienes claro a qué inversores acercarte
+   19 eleccion_estructura_vesting_founder          paso         1  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Define el plazo estándar (usualmente 4 años) para que las nuevas contrataciones ejecutivas consoliden sus acciones, y distínguelo del tuyo como fundad
+   19 eleccion_estructura_vesting_founder          paso         2  ya lo dice el PASO 4 del superviviente
+        Negocia con quien invierte que te reconozcan el tiempo que ya trabajaste en el negocio antes de recibir la inversión
+   19 eleccion_estructura_vesting_founder          paso         3  PASO 8 del superviviente
+        Decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte
+   19 eleccion_estructura_vesting_founder          paso         4  PASO 9 del superviviente
+        Deja por escrito las condiciones de cada persona de forma consistente, para evitar conflictos futuros si vendes el negocio o sales a bolsa
+   19 eleccion_estructura_vesting_founder          paso         5  ya lo dice el PASO 6 del superviviente
+        Evalúa incluir una cláusula que acelere la consolidación de acciones si cambia quien controla el negocio
+   19 eleccion_estructura_vesting_founder          condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Cuando alguien invierte en tu negocio y te pide este tipo de condiciones
+   19 eleccion_estructura_vesting_founder          condicion    2  CONDICION 6 del superviviente
+        Cuando estás definiendo cómo pagarás a las primeras personas que contrates
+   19 eleccion_estructura_vesting_founder          condicion    3  CONDICION 7 del superviviente
+        Cuando formalizas la oferta de acciones a un nuevo ejecutivo
+   19 eleccion_estructura_vesting_founder          condicion    4  ya lo dice la CONDICION 5 del superviviente
+        Cuando preparas tu negocio para recibir inversión o para venderlo
+   20 diversidad_vs_homogeneidad_equipo            paso         1  ya lo dice el PASO 2 del superviviente
+        Piensa con calma qué habilidades le faltan a tu negocio, no elijas socios solo porque te resultan cómodos
+   20 diversidad_vs_homogeneidad_equipo            paso         2  ya lo dice el PASO 3 del superviviente
+        Sal a buscar cofundadores con habilidades y contactos distintos a los tuyos
+   20 diversidad_vs_homogeneidad_equipo            paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Habla con quien consideres sumar y pon sobre la mesa si comparten valores, cuánto compromiso espera cada uno y cuánto riesgo está dispuesto a tolerar
+   20 diversidad_vs_homogeneidad_equipo            paso         4  PASO 6 del superviviente
+        No caigas en el default de elegir a alguien solo porque se parece a ti o te da comodidad
+   20 diversidad_vs_homogeneidad_equipo            condicion    1  CONDICION 4 del superviviente
+        Cuando estás armando tu equipo fundador desde cero
+   20 diversidad_vs_homogeneidad_equipo            condicion    2  CONDICION 5 del superviviente
+        Cuando estás por sumar a un nuevo cofundador
+   21 ia_colaborador_productividad                 paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar tareas de escritura y análisis con 'margen de interpretación' y fácil verificación (memos, informes, comunicados) para delegar a IA
+   21 ia_colaborador_productividad                 paso         2  ya lo dice el PASO 2 del superviviente
+        Medir tiempos de ejecución antes y después de incorporar IA en tareas repetitivas de redacción/análisis
+   21 ia_colaborador_productividad                 paso         3  ya lo dice el PASO 3 del superviviente
+        Priorizar el uso de IA en los miembros del equipo con menor desempeño relativo en tareas de escritura/análisis para nivelar capacidades
+   21 ia_colaborador_productividad                 paso         4  PASO 6 del superviviente
+        Establecer un proceso de revisión humana rápida antes de enviar cualquier documento generado con asistencia de IA
+   21 ia_colaborador_productividad                 condicion    1  CONDICION 5 del superviviente
+        Si el equipo dedica mucho tiempo a redacción de informes, propuestas o comunicaciones internas
+   21 ia_colaborador_productividad                 condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si existe disparidad de habilidades de redacción/análisis entre miembros del equipo
+   22 auditoria_desempeno_new_products             paso         1  PASO 5 del superviviente
+        Calcula qué porcentaje de tus ventas actuales viene de productos que lanzaste en los últimos tres años.
+   22 auditoria_desempeno_new_products             paso         2  ya lo dice el PASO 1 del superviviente
+        Mide cuántos de los proyectos que arrancaste realmente llegaron a mercado con éxito.
+   22 auditoria_desempeno_new_products             paso         3  PASO 6 del superviviente
+        Calcula tu tasa de atraso: compara cuándo pensabas lanzar cada producto contra cuándo lo lanzaste de verdad.
+   22 auditoria_desempeno_new_products             paso         4  PASO 7 del superviviente
+        Compara estos resultados con el estándar de tu industria, para ver si estás entre los mejores o entre los que se quedan atrás.
+   22 auditoria_desempeno_new_products             condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando quieras arrancar un proceso de mejora continua en cómo innovas.
+   22 auditoria_desempeno_new_products             condicion    2  CONDICION 3 del superviviente
+        Cuando necesites justificar, con datos concretos, una inversión mayor en investigación y desarrollo frente a quien decide o financia.
+   23 estimacion_tres_puntos                       paso         1  ya lo dice el PASO 3 del superviviente
+        Determinar la duración/costo optimista asumiendo que todo sale bien
+   23 estimacion_tres_puntos                       paso         2  ya lo dice el PASO 3 del superviviente
+        Determinar la duración/costo más probable asumiendo retrasos normales
+   23 estimacion_tres_puntos                       paso         3  ya lo dice el PASO 3 del superviviente
+        Determinar la duración/costo pesimista asumiendo riesgos materializados
+   23 estimacion_tres_puntos                       paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Aplicar la fórmula de ponderación Beta para calcular el valor esperado
+   23 estimacion_tres_puntos                       paso         5  ya lo dice el PASO 4 del superviviente
+        Documentar el resultado en el registro de estimaciones
+   23 estimacion_tres_puntos                       condicion    1  CONDICION 2 del superviviente
+        Cuando existe incertidumbre significativa en la duración o costo de una actividad
+   23 estimacion_tres_puntos                       condicion    2  CONDICION 3 del superviviente
+        Cuando se requiere un análisis cuantitativo de riesgo en la planificación
+   24 eventos_offline_propios                      paso         1  PASO 8 del superviviente
+        Validar la demanda del evento preguntando directamente a tu audiencia (encuesta, venta anticipada de entradas).
+   24 eventos_offline_propios                      paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Definir el formato según el objetivo: evento corto y económico para audiencia amplia, o evento lujoso multi-día para decision makers de alto nivel.
+   24 eventos_offline_propios                      paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Invitar oradores reconocidos o founders exitosos para atraer asistentes calificados sin que el evento parezca un pitch de ventas.
+   24 eventos_offline_propios                      paso         4  PASO 9 del superviviente
+        Usar transmisión en vivo o meetups satélite para expandir el alcance sin aumentar costos de viaje.
+   24 eventos_offline_propios                      paso         5  PASO 10 del superviviente
+        Repetir el evento anualmente una vez validado, ajustando precio y escala según la demanda comprobada.
+   24 eventos_offline_propios                      condicion    1  CONDICION 4 del superviviente
+        Cuando los clientes objetivo comparten intereses y tienen necesidad de comunidad.
+   24 eventos_offline_propios                      condicion    2  CONDICION 5 del superviviente
+        Cuando no existe un evento de industria adecuado para llegar a los tomadores de decisión.
+   24 eventos_offline_propios                      condicion    3  CONDICION 6 del superviviente
+        Cuando se busca posicionamiento de marca como líder de pensamiento en la industria.
+   25 genchi_gembutsu                              paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Salir físicamente a observar e interactuar con los clientes reales en su contexto (get out of the building)
+   25 genchi_gembutsu                              paso         2  ya lo dice el PASO 4 del superviviente
+        Evitar basar decisiones estratégicas únicamente en reportes de investigación de mercado de terceros
+   25 genchi_gembutsu                              paso         3  ya lo dice el PASO 5 del superviviente
+        Documentar observaciones directas y contrastarlas con los supuestos del plan de negocio
+   25 genchi_gembutsu                              paso         4  PASO 6 del superviviente
+        Usar estas observaciones para ajustar el diseño del producto o servicio
+   25 genchi_gembutsu                              condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando las decisiones del producto se basan solo en investigación de mercado indirecta
+   25 genchi_gembutsu                              condicion    2  CONDICION 3 del superviviente
+        Cuando el equipo fundador no tiene experiencia directa con el mercado objetivo
+   26 flexible_go_kill_criteria                    paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar si el proyecto es de alta incertidumbre/innovación radical
+   26 flexible_go_kill_criteria                    paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Reemplazar o complementar métricas financieras puras con un scorecard multicriterio (ajuste estratégico, ventaja competitiva, potencial de mercado)
+   26 flexible_go_kill_criteria                    paso         3  PASO 5 del superviviente
+        Considerar métodos financieros más sofisticados para riesgo: opciones reales, Monte Carlo, Valor Comercial Esperado
+   26 flexible_go_kill_criteria                    paso         4  PASO 6 del superviviente
+        Integrar las decisiones de gate con revisiones periódicas de portafolio (trimestrales)
+   26 flexible_go_kill_criteria                    condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el proyecto es de investigación/tecnología con alta incertidumbre financiera
+   26 flexible_go_kill_criteria                    condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si los business cases tradicionales han demostrado ser poco confiables en el pasado
+   28 simulacion_diseno_cadena_suministro          paso         1  PASO 7 del superviviente
+        Definir la estrategia de negocio antes de diseñar la cadena de suministro
+   28 simulacion_diseno_cadena_suministro          paso         2  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Crear modelos de simulación de distintos escenarios de cadena (no solo optimizar lo existente)
+   28 simulacion_diseno_cadena_suministro          paso         3  PASO 8 del superviviente
+        Probar combinaciones de tecnologías (robots, manufactura aditiva, vehículos autónomos) en el modelo
+   28 simulacion_diseno_cadena_suministro          paso         4  ya lo dice el PASO 5 del superviviente
+        Comparar resultados de simulación contra el desempeño actual antes de invertir en cambios reales
+   28 simulacion_diseno_cadena_suministro          paso         5  PASO 9 del superviviente
+        Repetir el proceso de simulación periódicamente para adaptarse a cambios del mercado global
+   28 simulacion_diseno_cadena_suministro          condicion    1  CONDICION 4 del superviviente
+        Cuando la empresa busca rediseñar su cadena de suministro para escalar
+   28 simulacion_diseno_cadena_suministro          condicion    2  CONDICION 5 del superviviente
+        Cuando el crecimiento de ventas exige repensar la logística existente
+   29 collaborative_transportation_management      paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar socios potenciales de la cadena de suministro con intereses complementarios
+   29 collaborative_transportation_management      paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer un hub de información común para compartir datos en tiempo real
+   29 collaborative_transportation_management      paso         3  PASO 6 del superviviente
+        Definir el nivel de colaboración deseado y el intercambio de información asociado
+   29 collaborative_transportation_management      paso         4  ya lo dice el PASO 5 del superviviente
+        Medir el valor generado por la red colaborativa expandida
+   29 collaborative_transportation_management      condicion    1  CONDICION 3 del superviviente
+        Si la empresa opera en una cadena de suministro con múltiples transportistas o socios logísticos
+   29 collaborative_transportation_management      condicion    2  CONDICION 4 del superviviente
+        Si se busca reducir costos de transporte mediante colaboración
+   30 customer_development_vs_business_plan        paso         1  PASO 7 del superviviente
+        Abandonar la idea de escribir un plan de negocio detallado al inicio
+   30 customer_development_vs_business_plan        paso         2  ya lo dice el PASO 3 del superviviente
+        Adoptar una actitud de aprendizaje: salir del edificio y hablar con clientes y socios
+   30 customer_development_vs_business_plan        paso         3  PASO 8 del superviviente
+        Usar el Business Model Canvas y Value Proposition Canvas como herramientas de planificación flexible
+   30 customer_development_vs_business_plan        paso         4  ya lo dice el PASO 5 del superviviente
+        Basar decisiones en evidencia y hechos obtenidos de experimentos, no en suposiciones
+   30 customer_development_vs_business_plan        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el usuario está iniciando un proyecto en un entorno de alta incertidumbre
+   30 customer_development_vs_business_plan        condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si el usuario insiste en escribir un plan de negocio extenso antes de validar nada
+   31 anticipar_consecuencias_negativas            paso         1  PASO 6 del superviviente
+        Describe cómo se ve el éxito total de tu proyecto.
+   31 anticipar_consecuencias_negativas            paso         2  PASO 7 del superviviente
+        Pregúntate: si esto funciona exactamente como lo imaginé, ¿qué podría salir mal?
+   31 anticipar_consecuencias_negativas            paso         3  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Busca efectos indirectos, los que aparecen después del primer impacto.
+   31 anticipar_consecuencias_negativas            paso         4  PASO 8 del superviviente
+        Anota los riesgos que encuentres y piensa cómo reducirlos desde ahora.
+   31 anticipar_consecuencias_negativas            condicion    1  CONDICION 3 del superviviente
+        Cuando tienes una visión muy optimista de tu proyecto y no has pensado en los riesgos.
+   31 anticipar_consecuencias_negativas            condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Antes de llevar tu solución a mucha más gente.
+   32 seis_medios_comunicacion_cliente             paso         1  ya lo dice el PASO 1 del superviviente
+        Auditar qué medios de comunicación se están usando actualmente con los clientes.
+   32 seis_medios_comunicacion_cliente             paso         2  PASO 6 del superviviente
+        Seleccionar deliberadamente qué medio usar según la fase del cliente y el efecto emocional deseado.
+   32 seis_medios_comunicacion_cliente             paso         3  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Incorporar medios subutilizados como correo físico, video personalizado o regalos significativos.
+   32 seis_medios_comunicacion_cliente             paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evitar gestos genéricos (cupones, tazas con logo) y priorizar la personalización real.
+   32 seis_medios_comunicacion_cliente             condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el usuario necesita diversificar y personalizar la forma en que se comunica con sus clientes en cada etapa del ciclo de vida.
+   33 proteccion_propiedad_intelectual             paso         1  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Deja documentada por escrito, desde que fundas tu empresa, quién es dueño de lo que se crea
+   33 proteccion_propiedad_intelectual             paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Si contratas a alguien para programar, asegúrate de firmar con esa persona que lo que hace es tuyo (acuerdo de 'work for hire')
+   33 proteccion_propiedad_intelectual             paso         3  ya lo dice el PASO 5 del superviviente
+        Piensa bien a quién le cuentas información sensible y qué te puede costar si esa persona la usa mal
+   33 proteccion_propiedad_intelectual             paso         4  PASO 6 del superviviente
+        Busca a alguien con buen criterio legal antes de avanzar más en construir tu negocio
+   33 proteccion_propiedad_intelectual             condicion    1  CONDICION 2 del superviviente
+        Si estás empezando tu negocio y ya compartiste tu idea con otros o contrataste a alguien para desarrollarla
+   34 aprendizaje_validado_vs_metricas_vanidad     paso         1  PASO 7 del superviviente
+        Definir qué hipótesis de negocio se quiere validar antes de buscar crecimiento en números brutos
+   34 aprendizaje_validado_vs_metricas_vanidad     paso         2  PASO 8 del superviviente
+        Evitar campañas de marketing o PR diseñadas solo para inflar métricas superficiales
+   34 aprendizaje_validado_vs_metricas_vanidad     paso         3  PASO 9 del superviviente
+        Presentar a inversores y stakeholders el aprendizaje validado (curvas de comportamiento real de clientes) en lugar de cifras aisladas
+   34 aprendizaje_validado_vs_metricas_vanidad     paso         4  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Distinguir explícitamente entre métricas de vanidad (visitas, descargas) y métricas accionables (retención, conversión, recompra)
+   34 aprendizaje_validado_vs_metricas_vanidad     condicion    1  CONDICION 5 del superviviente
+        Cuando los números de la startup son pequeños y se corre el riesgo de perder la confianza de inversores o equipo
+   34 aprendizaje_validado_vs_metricas_vanidad     condicion    2  CONDICION 6 del superviviente
+        Cuando el equipo está tentado a usar tácticas de marketing para 'aparentar' tracción
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 16
+  nodos implicados    : 32
+  nodos que MUEREN    : 16
+  piezas repartidas   : 101 (49 viajan enteras, 36 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 1
+
+ESCRITO. ficheros tocados: 88
+censo DESPUES: 3853 ficheros, 3399 vivos, 454 deprecados
+censo ANTES  : 3853 ficheros, 3415 vivos, 438 deprecados
+delta deprecados: +16 (esperado +16): OK

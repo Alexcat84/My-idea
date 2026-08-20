@@ -7,15 +7,18 @@
   "resumen_teorico": "Principio del Sistema de Producción Toyota que significa 'ir y ver por uno mismo'. Establece que las decisiones estratégicas deben basarse en conocimiento directo y firsthand de los clientes, no en reportes de terceros ni suposiciones de escritorio. Steve Blank popularizó esto para startups como 'get out of the building': los hechos sobre clientes, mercados, proveedores y canales solo existen fuera de la oficina.",
   "pasos_accionables": [
     "Identificar las preguntas de fe (leap-of-faith questions) más críticas del negocio",
-    "Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas",
+    "Salir físicamente a hablar con clientes potenciales reales, no solo encuestas remotas, lo que se llama get out of the building",
     "Observar el comportamiento real de los usuarios en su contexto natural",
     "Evitar tomar decisiones basadas únicamente en reportes de segunda mano",
-    "Documentar los hallazgos firsthand para contrastarlos con las hipótesis iniciales"
+    "Documentar los hallazgos firsthand para contrastarlos con las hipótesis iniciales",
+    "Usar estas observaciones para ajustar el diseño del producto o servicio"
   ],
   "entregable_esperado": "Registro de conversaciones y observaciones directas con clientes potenciales que validen o invaliden las hipótesis iniciales del negocio",
   "nodos_previos": [
     "hipotesis_valor_crecimiento",
-    "actualizar_business_model_canvas_tuneup"
+    "actualizar_business_model_canvas_tuneup",
+    "analisis_de_sensibilidad_riesgo",
+    "leap_of_faith_assumptions"
   ],
   "nodos_siguientes": [
     "arquetipos_de_cliente",
@@ -25,7 +28,18 @@
   ],
   "condiciones_activacion": [
     "Cuando el emprendedor tiene solo intuición o corazonadas sin datos reales",
-    "Si las decisiones se están tomando solo con información de terceros o reportes internos"
+    "Si las decisiones se están tomando solo con información de terceros o reportes internos",
+    "Cuando el equipo fundador no tiene experiencia directa con el mercado objetivo"
   ],
-  "etiqueta_arbol": "Sal del Edificio y Observa"
+  "etiqueta_arbol": "Sal del Edificio y Observa",
+  "ids_alias": [
+    "genchi_gembutsu"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "genchi_gembutsu",
+      "titulo": "Genchi Gembutsu: Ir y Ver por Ti Mismo",
+      "fuente": "The Lean Startup - Eric Ries"
+    }
+  ]
 }

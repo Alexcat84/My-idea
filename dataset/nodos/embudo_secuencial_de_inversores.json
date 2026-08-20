@@ -9,20 +9,35 @@
     "Mapear en qué etapa de madurez se encuentra el startup actualmente",
     "Determinar qué tipo de inversor es adecuado según el monto y validación necesarios",
     "Planificar una estrategia de fundraising escalonada en el tiempo",
-    "Preparar métricas de tracción específicas para pasar de una etapa de inversor a la siguiente"
+    "Preparar métricas de tracción específicas para pasar de una etapa de inversor a la siguiente",
+    "Investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
+    "Descarta a los inversores cuyo perfil no coincide con tu etapa actual"
   ],
   "entregable_esperado": "Roadmap de fundraising que indique la secuencia esperada de rondas (F&F, angel, Serie A, etc.) y los hitos necesarios para cada transición",
   "nodos_previos": [
-    "producto_minimo_viable"
+    "producto_minimo_viable",
+    "search_for_business_model"
   ],
   "nodos_siguientes": [
     "financiamiento_amigos_y_familia",
     "financiamiento_angel_investors",
-    "financiamiento_venture_capital"
+    "financiamiento_venture_capital",
+    "gestion_sindicato_inversores",
+    "jerarquia_firma_vc"
   ],
   "condiciones_activacion": [
     "El fundador está diseñando su estrategia general de captación de capital",
     "Se requiere claridad sobre qué inversor buscar en cada etapa del startup"
   ],
-  "etiqueta_arbol": "Recorre las Etapas de Inversión"
+  "etiqueta_arbol": "Recorre las Etapas de Inversión",
+  "ids_alias": [
+    "seleccion_etapa_fondo_vc"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "seleccion_etapa_fondo_vc",
+      "titulo": "Identificar el Tipo de Inversor Adecuado según tu Etapa",
+      "fuente": "Venture Deals"
+    }
+  ]
 }

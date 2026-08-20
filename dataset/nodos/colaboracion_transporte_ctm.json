@@ -8,21 +8,39 @@
   "pasos_accionables": [
     "Identificar empresas con envíos complementarios (peso, volumen, destino) para colaborar",
     "Modelar matemáticamente la red de distribución óptima (número de puntos de consolidación)",
-    "Establecer un hub de información común para compartir datos entre colaboradores",
+    "Establecer un hub de información común para compartir datos entre colaboradores, en tiempo real",
     "Definir reglas claras de expectativas, beneficios compartidos y resolución de conflictos",
-    "Medir ahorros logrados en costo de transporte tras la colaboración"
+    "Medir ahorros logrados en costo de transporte tras la colaboración",
+    "Definir el nivel de colaboración deseado y el intercambio de información asociado"
   ],
   "entregable_esperado": "Acuerdo de colaboración de transporte (CTM) con socios definidos, modelo de red optimizado y métricas de ahorro esperado",
   "nodos_previos": [
     "outsourcing_cadena_suministro",
-    "programacion_entregas_delivery_scheduling"
+    "programacion_entregas_delivery_scheduling",
+    "collaboration_roadblocks",
+    "definicion_alineacion_cadena_suministro",
+    "stakeholder_mapping_wheel"
   ],
   "nodos_siguientes": [
-    "equipo_conjunto_de_mejora_con_proveedores"
+    "equipo_conjunto_de_mejora_con_proveedores",
+    "collaboration_enablers",
+    "scorecard_desempeno_cadena_suministro"
   ],
   "condiciones_activacion": [
     "Cuando una empresa pequeña compite contra rivales más grandes con mayores economías de escala",
-    "Cuando existen sinergias de peso/volumen con otras empresas del mismo sector"
+    "Cuando existen sinergias de peso/volumen con otras empresas del mismo sector",
+    "Si la empresa opera en una cadena de suministro con múltiples transportistas o socios logísticos",
+    "Si se busca reducir costos de transporte mediante colaboración"
   ],
-  "etiqueta_arbol": "Une Fuerzas para Transportar"
+  "etiqueta_arbol": "Une Fuerzas para Transportar",
+  "ids_alias": [
+    "collaborative_transportation_management"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "collaborative_transportation_management",
+      "titulo": "Collaborative Transportation Management (CTM)",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }

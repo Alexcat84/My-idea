@@ -8,22 +8,38 @@
   "pasos_accionables": [
     "Identifica si tu proyecto es una plataforma tecnológica o una innovación radical (idealmente el 10-20% de tu conjunto de proyectos)",
     "No fuerces estos proyectos por el proceso de etapas y filtros regular; usa uno especial para desarrollo tecnológico (Stage-Gate-TD)",
-    "Aplica una tabla de evaluación específica centrada en criterios estratégicos y cualitativos, no financieros",
-    "Evalúa la recompensa potencial con estimaciones amplias, no con cifras financieras precisas"
+    "Aplica una tabla de evaluación específica centrada en criterios estratégicos y cualitativos, no financieros, que son ajuste estratégico, ventaja competitiva, potencial de mercado",
+    "Evalúa la recompensa potencial con estimaciones amplias, no con cifras financieras precisas",
+    "Considerar métodos financieros más sofisticados para riesgo: opciones reales, Monte Carlo, Valor Comercial Esperado",
+    "Integrar las decisiones de gate con revisiones periódicas de portafolio (trimestrales)"
   ],
   "entregable_esperado": "Una tabla de evaluación adaptada para proyectos de tecnología avanzada, integrada en un proceso separado de desarrollo tecnológico (Stage-Gate-TD)",
   "nodos_previos": [
     "scorecard_de_seleccion_de_proyectos",
     "testing_process_completo",
-    "resource_assessment"
+    "resource_assessment",
+    "lienzo_proyecto_innovacion",
+    "tipos_de_clientes"
   ],
   "nodos_siguientes": [
     "product_roadmap_estrategico",
-    "revision_portafolio_periodica"
+    "revision_portafolio_periodica",
+    "modelo_hibrido_agile_stage_gate",
+    "portfolio_management"
   ],
   "condiciones_activacion": [
     "Cuando tu proyecto es de innovación disruptiva, radical o plataforma tecnológica de base",
     "Cuando los criterios financieros tradicionales no aplican por alta incertidumbre"
   ],
-  "etiqueta_arbol": "Evalúa tus Plataformas Tecnológicas"
+  "etiqueta_arbol": "Evalúa tus Plataformas Tecnológicas",
+  "ids_alias": [
+    "flexible_go_kill_criteria"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "flexible_go_kill_criteria",
+      "titulo": "Criterios Flexibles de Decisión Go/Kill",
+      "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ]
 }
