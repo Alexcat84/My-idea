@@ -7,13 +7,13 @@
   "resumen_teorico": "Modelo organizacional donde cada función, departamento o individuo actúa simultáneamente como proveedor, procesador y cliente. Las organizaciones son sistemas abiertos cuya vida depende de transacciones exitosas con el entorno externo y de la coordinación adecuada de sus funciones internas. Los roles se mantienen mediante expectativas mutuas (especificaciones, órdenes de trabajo) y retroalimentación (quejas, reportes de calidad, reconocimientos).",
   "pasos_accionables": [
     "Mapear las transacciones repetitivas entre proveedores, procesadores y clientes en cada proceso clave",
-    "Identificar expectativas mutuas explícitas (especificaciones, procedimientos) entre cada par de roles",
-    "Establecer bucles de retroalimentación claros para medir cumplimiento de expectativas",
+    "Identificar expectativas mutuas explícitas (especificaciones, procedimientos) entre cada par de roles, estableciendo canales claros de comunicación de requisitos entre proveedor y procesador",
+    "Establecer bucles de retroalimentación claros para medir cumplimiento de expectativas, entre cliente y procesador",
     "Aplicar pensamiento sistémico antes de implementar cualquier cambio, evaluando el impacto en todas las funciones interrelacionadas"
   ],
   "entregable_esperado": "Mapa de roles triples (proveedor-procesador-cliente) con expectativas y mecanismos de retroalimentación documentados para los procesos críticos de la organización",
   "nodos_previos": [
-    "pensamiento_sistemico_rol_triple"
+    "modelo_transformacion_juran"
   ],
   "nodos_siguientes": [
     "planificacion_estrategica_despliegue",
@@ -21,7 +21,18 @@
   ],
   "condiciones_activacion": [
     "Cuando se necesita diagnosticar causas raíz de defectos o errores que cruzan múltiples funciones",
-    "Cuando se busca implementar breakthroughs organizacionales que requieren pensamiento sistémico"
+    "Cuando se busca implementar breakthroughs organizacionales que requieren pensamiento sistémico",
+    "Cuando un cambio organizacional aislado ha generado más problemas de los que resolvió"
   ],
-  "etiqueta_arbol": "Asume tu Triple Rol"
+  "etiqueta_arbol": "Asume tu Triple Rol",
+  "ids_alias": [
+    "pensamiento_sistemico_rol_triple"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "pensamiento_sistemico_rol_triple",
+      "titulo": "Pensamiento Sistémico y el Rol Triple (Proveedor-Procesador-Cliente)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Define el proyecto y sus metas claras",
     "Identifica a tus clientes internos y externos y descubre sus necesidades",
-    "Lista verticalmente esas necesidades y horizontalmente los medios técnicos para satisfacerlas",
+    "Lista verticalmente esas necesidades y horizontalmente los medios técnicos para satisfacerlas, desglosadas en niveles de especificidad, de lo general a lo particular",
     "Califica la relación entre cada necesidad y cada medio dentro de la matriz",
     "Encadena matrices sucesivas usando el cómo de una como el qué de la siguiente, hasta llegar a los controles de proceso",
     "Actualiza la matriz continuamente para hacer seguimiento del análisis de brechas y transferir los resultados a operaciones"
@@ -19,7 +19,8 @@
     "dfss_metodologia",
     "design_for_six_sigma_dmadv",
     "design_for_six_sigma_dmadv_2",
-    "design_for_six_sigma_dfss"
+    "design_for_six_sigma_dfss",
+    "descubrir_necesidades_del_cliente"
   ],
   "nodos_siguientes": [
     "design_scorecard",
@@ -33,12 +34,18 @@
   ],
   "etiqueta_arbol": "Traduce las Necesidades del Cliente",
   "ids_alias": [
-    "qfd_matriz_calidad"
+    "qfd_matriz_calidad",
+    "spreadsheet_diseno_para_la_calidad"
   ],
   "merged_originals": [
     {
       "node_id": "qfd_matriz_calidad",
       "titulo": "Quality Function Deployment (QFD) - Matriz de Planificación de Calidad",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "spreadsheet_diseno_para_la_calidad",
+      "titulo": "Hojas de cálculo de Diseño para la Calidad (QFD)",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
     }
   ]

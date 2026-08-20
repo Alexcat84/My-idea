@@ -7,14 +7,14 @@
   "resumen_teorico": "La función de pérdida (basada en el trabajo de Taguchi y ejemplificada por Ross) permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de reparación bajo garantía. En lugar de fijar límites arbitrarios, se determinan matemáticamente igualando ambos costos, minimizando la pérdida total para el productor y el cliente.",
   "pasos_accionables": [
     "Determinar el costo de ajuste en campo/garantía cuando el cliente detecta la desviación",
-    "Determinar el costo de ajuste en fábrica antes del envío",
-    "Calcular la constante de la función de pérdida usando la desviación promedio que genera quejas del cliente",
+    "Determinar el costo de ajuste en fábrica antes del envío, que es usualmente menor",
+    "Calcular la constante de la función de pérdida usando la desviación promedio que genera quejas del cliente, el llamado coeficiente k",
     "Igualar la función de pérdida al costo de ajuste en fábrica y despejar el límite de especificación",
     "Establecer los límites de especificación resultantes alrededor del valor nominal"
   ],
   "entregable_esperado": "Documento con los límites de especificación calculados matemáticamente y justificados económicamente",
   "nodos_previos": [
-    "funcion_perdida_taguchi"
+    "limites_especificacion_funcionales"
   ],
   "nodos_siguientes": [
     "tolerancia_estadistica_dimensiones_interactuantes",
@@ -25,5 +25,15 @@
     "Cuando se necesita justificar límites de especificación con base económica en vez de arbitraria",
     "Cuando existen costos de garantía vs costos de ajuste en fábrica cuantificables"
   ],
-  "etiqueta_arbol": "Calcula tus Límites de Especificación"
+  "etiqueta_arbol": "Calcula tus Límites de Especificación",
+  "ids_alias": [
+    "funcion_perdida_taguchi"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "funcion_perdida_taguchi",
+      "titulo": "Función de Pérdida de Taguchi para Definir Especificaciones",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

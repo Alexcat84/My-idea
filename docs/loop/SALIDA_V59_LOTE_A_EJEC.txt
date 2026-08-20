@@ -1,0 +1,525 @@
+==============================================================================
+OP-U-01, TRAMO 5, LOTE A DE LA VUELTA 59: LOS DIECISIETE PRIMEROS ACTOS DEL TRAMO EN SU ORDEN IMPRESO (1 a 17), apartando el 13 por EMPATE SIN VARA. Lo encabeza EL ACTO 1, que es el unico choque de puerta del lote: la razon declara superviviente a un nodo que la guarda 1B no permite absorber por el otro lado . MODO EJECUTAR
+plan: docs/loop/PLAN_V59_OPU01_LOTE_A.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3342 vivos, 511 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive programa_mejora_calidad_14_pasos . absorbe programa_de_mejora_de_calidad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 8 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 5 de programa_de_mejora_de_calidad al PASO 7 del superviviente
+        inciso VERBATIM: 'a quienes coordinan equipos'
+        nexo (lo unico de cosecha propia): ', entrenando '
+        paso resultante: Fijar metas, eliminar las causas de los errores, reconocer los logros y repetir el ciclo, entrenando a quienes coordinan equipos
+  alias del superviviente: ['programa_de_mejora_de_calidad']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive sostener_las_ganancias . absorbe mantener_las_ganancias
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 3 de mantener_las_ganancias al PASO 4 del superviviente
+        inciso VERBATIM: 'responsables de supervisión que verifiquen el cumplimiento del control'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Auditar periódicamente que los controles se estén cumpliendo, con responsables de supervisión que verifiquen el cumplimiento del control
+  alias del superviviente: ['mantener_las_ganancias']
+
+------------------------------------------------------------------------------
+ACTO 3 . sobrevive innovacion_tipo_ii . absorbe tipos_innovacion_i_ii
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['tipos_innovacion_i_ii']
+
+------------------------------------------------------------------------------
+ACTO 4 . sobrevive funcion_perdida_limites_especificacion . absorbe funcion_perdida_taguchi
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 3 de funcion_perdida_taguchi al PASO 3 del superviviente
+        inciso VERBATIM: 'coeficiente k'
+        nexo (lo unico de cosecha propia): ', el llamado '
+        paso resultante: Calcular la constante de la función de pérdida usando la desviación promedio que genera quejas del cliente, el llamado coeficiente k
+     del paso 4 de funcion_perdida_taguchi al PASO 2 del superviviente
+        inciso VERBATIM: 'usualmente menor'
+        nexo (lo unico de cosecha propia): ', que es '
+        paso resultante: Determinar el costo de ajuste en fábrica antes del envío, que es usualmente menor
+  alias del superviviente: ['funcion_perdida_taguchi']
+
+------------------------------------------------------------------------------
+ACTO 5 . sobrevive enfermedades_mortales_gestion . absorbe las_siete_enfermedades_mortales
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 4 (anadidas 2)
+  INCISOS ADOSADOS: 2
+     del paso 2 de las_siete_enfermedades_mortales al PASO 2 del superviviente
+        inciso VERBATIM: 'en la cultura de tu negocio'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Pensar qué impacto tiene cada una en tus números y en cómo trabajas día a día, y en la cultura de tu negocio
+     del paso 3 de las_siete_enfermedades_mortales al PASO 3 del superviviente
+        inciso VERBATIM: 'empezando por la que genera mayor dano de fondo'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Elegir cuál de esas enfermedades te urge resolver primero según tu situación, empezando por la que genera mayor dano de fondo
+  alias del superviviente: ['las_siete_enfermedades_mortales']
+
+------------------------------------------------------------------------------
+ACTO 6 . sobrevive eliminar_trabajo_a_destajo . absorbe eliminacion_pago_destajo
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['eliminacion_pago_destajo']
+
+------------------------------------------------------------------------------
+ACTO 7 . sobrevive adaptaciones_sectoriales_iso . absorbe estandares_especificos_industria
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 4 de estandares_especificos_industria al PASO 4 del superviviente
+        inciso VERBATIM: 'AS9100, cGMP, ISO 14000'
+        nexo (lo unico de cosecha propia): ', por ejemplo '
+        paso resultante: Certifica bajo la norma sectorial correspondiente en lugar de quedarte solo con ISO 9001 generico, por ejemplo AS9100, cGMP, ISO 14000
+  alias del superviviente: ['estandares_especificos_industria']
+
+------------------------------------------------------------------------------
+ACTO 8 . sobrevive estilo_gerencial_ballet_vs_hockey . absorbe estilo_gerencial_hockey_vs_ballet
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 8 (anadidos 2) | condiciones 4 -> 5 (anadidas 1)
+  alias del superviviente: ['crosby_estilo_ballet_vs_hockey', 'estilo_gerencial_hockey_vs_ballet']
+
+------------------------------------------------------------------------------
+ACTO 9 . sobrevive roi_proyectos_calidad . absorbe roi_breakthrough
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 2 -> 4 (anadidas 2)
+  alias del superviviente: ['roi_breakthrough']
+
+------------------------------------------------------------------------------
+ACTO 10 . sobrevive teoria_triple_rol_sistemas_abiertos . absorbe pensamiento_sistemico_rol_triple
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 2 de pensamiento_sistemico_rol_triple al PASO 2 del superviviente
+        inciso VERBATIM: 'canales claros de comunicación de requisitos entre proveedor y procesador'
+        nexo (lo unico de cosecha propia): ', estableciendo '
+        paso resultante: Identificar expectativas mutuas explícitas (especificaciones, procedimientos) entre cada par de roles, estableciendo canales claros de comunicación de requisitos entre proveedor y procesador
+     del paso 3 de pensamiento_sistemico_rol_triple al PASO 3 del superviviente
+        inciso VERBATIM: 'entre cliente y procesador'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Establecer bucles de retroalimentación claros para medir cumplimiento de expectativas, entre cliente y procesador
+  alias del superviviente: ['pensamiento_sistemico_rol_triple']
+
+------------------------------------------------------------------------------
+ACTO 11 . sobrevive descubrir_necesidades_del_cliente . absorbe descubrir_necesidades_cliente
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 2 de descubrir_necesidades_cliente al PASO 3 del superviviente
+        inciso VERBATIM: 'por cada segmento de cliente'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Distinguir entre necesidades declaradas, reales, percibidas y culturales, por cada segmento de cliente
+     del paso 3 de descubrir_necesidades_cliente al PASO 5 del superviviente
+        inciso VERBATIM: 'de forma consensuada, sin asumir jerarquías automáticas por tipo de cliente'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Analizar y priorizar las necesidades identificadas, de forma consensuada, sin asumir jerarquías automáticas por tipo de cliente
+  alias del superviviente: ['descubrir_necesidades_cliente']
+
+------------------------------------------------------------------------------
+ACTO 12 . sobrevive qfd_matriz . absorbe spreadsheet_diseno_para_la_calidad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 4 -> 4 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de spreadsheet_diseno_para_la_calidad al PASO 3 del superviviente
+        inciso VERBATIM: 'en niveles de especificidad, de lo general a lo particular'
+        nexo (lo unico de cosecha propia): ', desglosadas '
+        paso resultante: Lista verticalmente esas necesidades y horizontalmente los medios técnicos para satisfacerlas, desglosadas en niveles de especificidad, de lo general a lo particular
+  alias del superviviente: ['qfd_matriz_calidad', 'spreadsheet_diseno_para_la_calidad']
+
+------------------------------------------------------------------------------
+ACTO 14 . sobrevive reinicio_programa_calidad . absorbe repeticion_programa
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['repeticion_programa']
+
+------------------------------------------------------------------------------
+ACTO 15 . sobrevive eliminar_slogans_y_exhortaciones . absorbe eliminar_slogans_metas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de eliminar_slogans_metas al PASO 1 del superviviente
+        inciso VERBATIM: 'y metas numéricas que le exiges solo a quienes ejecutan el trabajo'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Revisar los carteles, lemas o mensajes motivacionales que usas en tu negocio, y metas numéricas que le exiges solo a quienes ejecutan el trabajo
+  alias del superviviente: ['eliminar_slogans_metas']
+
+------------------------------------------------------------------------------
+ACTO 16 . sobrevive rol_black_belt_six_sigma . absorbe rol_black_belt
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['rol_black_belt']
+
+------------------------------------------------------------------------------
+ACTO 17 . sobrevive mapeo_flujo_valor . absorbe value_stream_mapping
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 7 (anadidos 2) | condiciones 4 -> 4 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 1 de value_stream_mapping al PASO 2 del superviviente
+        inciso VERBATIM: 'el flujo actual de materiales e información en el proceso'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y el flujo actual de materiales e información en el proceso
+  alias del superviviente: ['mapeo_flujo_valor_2', 'value_stream_mapping_2', 'value_stream_mapping']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 54
+   accion_correctiva                                    nodos_previos     programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+   analisis_causa_raiz_diagnostico                      nodos_siguientes  mantener_las_ganancias -> sostener_las_ganancias
+   barreras_orgullo_trabajo                             nodos_previos     eliminacion_pago_destajo -> eliminar_trabajo_a_destajo
+   brecha_de_calidad_cuatro_gaps                        nodos_siguientes  descubrir_necesidades_cliente -> descubrir_necesidades_del_cliente
+   cero_defectos                                        nodos_previos     estilo_gerencial_hockey_vs_ballet -> estilo_gerencial_ballet_vs_hockey
+   certificacion_belts_six_sigma                        nodos_previos     rol_black_belt -> rol_black_belt_six_sigma
+   compromiso_gerencial_calidad                         nodos_previos     programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+   conciencia_calidad                                   nodos_previos     programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+   consejo_de_calidad_3                                 nodos_siguientes  programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+   consejo_de_calidad_3                                 nodos_siguientes  repeticion_programa -> reinicio_programa_calidad
+   consejos_de_calidad                                  nodos_previos     programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+   constraint_management                                nodos_previos     value_stream_mapping -> mapeo_flujo_valor
+   costo_de_mala_calidad_copq                           nodos_siguientes  programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+   costo_de_mala_calidad_copq                           nodos_siguientes  roi_breakthrough -> roi_proyectos_calidad
+   desarrollar_caracteristicas_producto                 nodos_previos     descubrir_necesidades_cliente -> descubrir_necesidades_del_cliente
+   descubrir_necesidades_del_cliente                    nodos_siguientes  spreadsheet_diseno_para_la_calidad -> qfd_matriz
+   design_for_six_sigma_dfss                            nodos_previos     descubrir_necesidades_cliente -> descubrir_necesidades_del_cliente
+   design_for_six_sigma_dmadv                           nodos_siguientes  tipos_innovacion_i_ii -> innovacion_tipo_ii
+   design_for_six_sigma_dmadv_2                         nodos_siguientes  tipos_innovacion_i_ii -> innovacion_tipo_ii
+   eliminacion_causas_error                             nodos_previos     programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+   eliminar_barreras_departamentales                    nodos_siguientes  eliminar_slogans_metas -> eliminar_slogans_y_exhortaciones
+   eliminar_slogans_y_exhortaciones                     nodos_previos     eliminar_slogans_metas -> eliminar_slogans_y_exhortaciones
+   enfasis_en_utilidades_corto_plazo                    nodos_previos     las_siete_enfermedades_mortales -> enfermedades_mortales_gestion
+   entrenamiento_para_breakthrough                      nodos_previos     rol_black_belt -> rol_black_belt_six_sigma
+   equipo_mejora_calidad                                nodos_previos     programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+   estilo_gerencial_calidad                             nodos_previos     repeticion_programa -> reinicio_programa_calidad
+   evaluacion_de_desempeno_merito                       nodos_previos     las_siete_enfermedades_mortales -> enfermedades_mortales_gestion
+   falta_de_constancia_de_proposito                     nodos_previos     las_siete_enfermedades_mortales -> enfermedades_mortales_gestion
+   familia_normas_iso_9000                              nodos_siguientes  estandares_especificos_industria -> adaptaciones_sectoriales_iso
+   fitness_for_use_purpose                              nodos_siguientes  descubrir_necesidades_cliente -> descubrir_necesidades_del_cliente
+   funcion_perdida_limites_especificacion               nodos_previos     funcion_perdida_taguchi -> funcion_perdida_limites_especificacion
+   identificar_clientes_diseno                          nodos_siguientes  descubrir_necesidades_cliente -> descubrir_necesidades_del_cliente
+   inhibidores_del_breakthrough                         nodos_siguientes  roi_breakthrough -> roi_proyectos_calidad
+   innovacion_tipo_ii                                   nodos_previos     tipos_innovacion_i_ii -> innovacion_tipo_ii
+   introduccion_lean                                    nodos_siguientes  value_stream_mapping -> mapeo_flujo_valor
+   inventory_analysis_lean                              nodos_previos     value_stream_mapping -> mapeo_flujo_valor
+   kaizen_mejora_continua                               nodos_previos     value_stream_mapping -> mapeo_flujo_valor
+   limites_especificacion_funcionales                   nodos_siguientes  funcion_perdida_taguchi -> funcion_perdida_limites_especificacion
+   los_14_puntos_deming                                 nodos_siguientes  las_siete_enfermedades_mortales -> enfermedades_mortales_gestion
+   make_certain_programa                                nodos_previos     programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+   medicion_calidad                                     nodos_previos     programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+   medicion_calidad                                     nodos_previos     repeticion_programa -> reinicio_programa_calidad
+   modelo_transformacion_juran                          nodos_siguientes  pensamiento_sistemico_rol_triple -> teoria_triple_rol_sistemas_abiertos
+   organizacion_independiente_de_calidad                nodos_siguientes  estilo_gerencial_hockey_vs_ballet -> estilo_gerencial_ballet_vs_hockey
+   programa_mejora_calidad_14_pasos                     nodos_previos     estilo_gerencial_hockey_vs_ballet -> estilo_gerencial_ballet_vs_hockey
+   rol_facilitador_equipos_mejora                       nodos_siguientes  rol_black_belt -> rol_black_belt_six_sigma
+   satisfaccion_vs_insatisfaccion_kano                  nodos_siguientes  descubrir_necesidades_cliente -> descubrir_necesidades_del_cliente
+   sistema_pull_push                                    nodos_previos     value_stream_mapping -> mapeo_flujo_valor
+   six_sigma_dmaic_2                                    nodos_previos     descubrir_necesidades_cliente -> descubrir_necesidades_del_cliente
+   supervision_a_liderazgo                              nodos_siguientes  eliminacion_pago_destajo -> eliminar_trabajo_a_destajo
+   teoria_triple_rol_sistemas_abiertos                  nodos_previos     pensamiento_sistemico_rol_triple -> teoria_triple_rol_sistemas_abiertos
+   trilogia_de_juran                                    nodos_previos     mantener_las_ganancias -> sostener_las_ganancias
+   value_non_value_added_analysis                       nodos_previos     value_stream_mapping -> mapeo_flujo_valor
+   zero_defects_concepto                                nodos_siguientes  programa_de_mejora_de_calidad -> programa_mejora_calidad_14_pasos
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 13
+   categorias_costo_de_calidad                          nodos_siguientes  programa_de_mejora_de_calidad (registro historico)
+   conciencia_de_calidad                                nodos_previos     programa_de_mejora_de_calidad (registro historico)
+   conformance_to_requirements                          nodos_siguientes  programa_de_mejora_de_calidad (registro historico)
+   costo_de_calidad_crosby                              nodos_siguientes  programa_de_mejora_de_calidad (registro historico)
+   costo_de_la_calidad_coq                              nodos_siguientes  programa_de_mejora_de_calidad (registro historico)
+   costo_mala_calidad_copq                              nodos_siguientes  roi_breakthrough (registro historico)
+   dmadv_design_for_six_sigma                           nodos_previos     descubrir_necesidades_cliente (registro historico)
+   falta_de_constancia_de_proposito_2                   nodos_previos     las_siete_enfermedades_mortales (registro historico)
+   iso_9000_sistema_gestion_calidad                     nodos_siguientes  estandares_especificos_industria (registro historico)
+   juran_trilogy                                        nodos_previos     mantener_las_ganancias (registro historico)
+   medicion_de_calidad                                  nodos_previos     programa_de_mejora_de_calidad (registro historico)
+   pull_vs_push_systems                                 nodos_previos     value_stream_mapping (registro historico)
+   takt_time_demand                                     nodos_previos     value_stream_mapping (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 6
+   cero_defectos                                        nodos_previos
+   costo_de_mala_calidad_copq                           nodos_siguientes
+   eliminacion_causas_error                             nodos_previos
+   falta_de_constancia_de_proposito                     nodos_previos
+   sistema_pull_push                                    nodos_previos
+   value_non_value_added_analysis                       nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 4
+   eliminar_slogans_y_exhortaciones                     nodos_previos
+   funcion_perdida_limites_especificacion               nodos_previos
+   innovacion_tipo_ii                                   nodos_previos
+   teoria_triple_rol_sistemas_abiertos                  nodos_previos
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 940   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 926   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 14, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 80 de 80
+guarda D, los 16 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (97 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 programa_de_mejora_de_calidad                paso         1  ya lo dice el PASO 1 del superviviente
+        Asume el compromiso personal con la mejora de calidad y comunicalo a las personas con las que trabajas.
+    1 programa_de_mejora_de_calidad                paso         2  ya lo dice el PASO 2 del superviviente
+        Forma un equipo de mejora de calidad con representantes de cada area de tu negocio.
+    1 programa_de_mejora_de_calidad                paso         3  PASO 8 del superviviente
+        Establece medidas de calidad en todas las areas, incluidas las que no son de producción, y calcula el costo de la calidad con apoyo de quien lleve tus
+    1 programa_de_mejora_de_calidad                paso         4  ya lo dice el PASO 4 del superviviente
+        Comparte las mediciones para generar conciencia de calidad entre quienes trabajan contigo y aplica un sistema de acción correctiva para resolver los p
+    1 programa_de_mejora_de_calidad                paso         5  INCISO ADOSADO al PASO 7 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Planifica y ejecuta un día de Cero Defectos, entrena a quienes coordinan equipos, fija metas claras y promueve la eliminación de causas de error.
+    1 programa_de_mejora_de_calidad                paso         6  ya lo dice el PASO 7 del superviviente
+        Reconoce los logros, crea un espacio de seguimiento de calidad y repite el ciclo completo de los catorce pasos.
+    1 programa_de_mejora_de_calidad                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando decides iniciar formalmente un esfuerzo de mejora de calidad a largo plazo en tu negocio.
+    1 programa_de_mejora_de_calidad                condicion    2  CONDICION 3 del superviviente
+        Cuando buscas un marco estructurado en lugar de campanas motivacionales temporales.
+    1 programa_de_mejora_de_calidad                condicion    3  ya lo dice la CONDICION 2 del superviviente
+        Cuando quieres instalar una cultura de calidad probada en todo tu negocio.
+    2 mantener_las_ganancias                       paso         1  ya lo dice el PASO 5 del superviviente
+        Documentar formalmente el plan de control de la mejora implementada
+    2 mantener_las_ganancias                       paso         2  ya lo dice el PASO 3 del superviviente
+        Establecer un programa de entrenamiento obligatorio para nuevos empleados
+    2 mantener_las_ganancias                       paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Asignar responsables de supervisión que verifiquen el cumplimiento del control
+    2 mantener_las_ganancias                       paso         4  ya lo dice el PASO 4 del superviviente
+        Auditar periódicamente que los controles sigan vigentes
+    2 mantener_las_ganancias                       paso         5  PASO 6 del superviviente
+        Revisar el sistema tras rotación de personal para asegurar continuidad
+    2 mantener_las_ganancias                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se ha implementado una mejora y se requiere asegurar su sostenibilidad
+    2 mantener_las_ganancias                       condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando hay riesgo de rotación de personal que ponga en peligro los resultados
+    3 tipos_innovacion_i_ii                        paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar el producto, servicio o proceso a innovar
+    3 tipos_innovacion_i_ii                        paso         2  ya lo dice el PASO 2 del superviviente
+        Generar ideas bajo el encabezado 'hacerlo más grande'
+    3 tipos_innovacion_i_ii                        paso         3  ya lo dice el PASO 2 del superviviente
+        Generar ideas bajo el encabezado 'hacerlo más pequeño'
+    3 tipos_innovacion_i_ii                        paso         4  ya lo dice el PASO 2 del superviviente
+        Generar ideas bajo el encabezado 'combinarlo con'
+    3 tipos_innovacion_i_ii                        paso         5  ya lo dice el PASO 3 del superviviente
+        Diferir la crítica hasta finalizar la generación de ideas
+    3 tipos_innovacion_i_ii                        paso         6  ya lo dice el PASO 4 del superviviente
+        Refinar y convertir las ideas más prometedoras en propuestas viables
+    3 tipos_innovacion_i_ii                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el equipo necesita generar ideas innovadoras para un producto, servicio o estrategia
+    3 tipos_innovacion_i_ii                        condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se busca superar el bloqueo creativo mediante un método estructurado
+    3 tipos_innovacion_i_ii                        condicion    3  CONDICION 3 del superviviente
+        Cuando no se dispone de recursos para innovación tipo I (revolucionaria) y se busca innovación incremental efectiva
+    4 funcion_perdida_taguchi                      paso         1  ya lo dice el PASO 1 del superviviente
+        Determinar el costo de reparación o ajuste bajo garantía/campo cuando el producto se desvía del target
+    4 funcion_perdida_taguchi                      paso         2  ya lo dice el PASO 3 del superviviente
+        Determinar el punto de desviación en el cual el cliente promedio reclamaría
+    4 funcion_perdida_taguchi                      paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Calcular el coeficiente k de la función de pérdida usando estos dos datos
+    4 funcion_perdida_taguchi                      paso         4  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Determinar el costo de ajuste en fábrica (usualmente menor)
+    4 funcion_perdida_taguchi                      paso         5  ya lo dice el PASO 4 del superviviente
+        Despejar los límites de especificación óptimos igualando el costo de fábrica a la función de pérdida
+    4 funcion_perdida_taguchi                      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se busca optimizar límites de especificación considerando el impacto económico de la variación respecto al valor nominal, más allá del cumplimi
+    5 las_siete_enfermedades_mortales              paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar cuales de las siete enfermedades estan presentes en tu negocio
+    5 las_siete_enfermedades_mortales              paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar el impacto de cada enfermedad en la cultura de tu negocio
+    5 las_siete_enfermedades_mortales              paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Priorizar cual erradicar primero, empezando por la que genera mayor dano de fondo
+    5 las_siete_enfermedades_mortales              paso         4  ya lo dice el PASO 4 del superviviente
+        Tener claro que necesitas una transformación profunda, no parches superficiales, antes de decidir el siguiente paso
+    5 las_siete_enfermedades_mortales              condicion    1  CONDICION 3 del superviviente
+        Cuando tu negocio muestra resistencia constante a mejorar
+    5 las_siete_enfermedades_mortales              condicion    2  CONDICION 4 del superviviente
+        Cuando los 14 puntos no logran aplicarse pese a intentos repetidos
+    6 eliminacion_pago_destajo                     paso         1  ya lo dice el PASO 1 del superviviente
+        Auditar los esquemas de pago por incentivo o destajo existentes
+    6 eliminacion_pago_destajo                     paso         2  ya lo dice el PASO 2 del superviviente
+        Rediseñar la compensación para priorizar calidad sobre volumen
+    6 eliminacion_pago_destajo                     paso         3  PASO 5 del superviviente
+        Comunicar el cambio de enfoque a los trabajadores y sindicatos
+    6 eliminacion_pago_destajo                     paso         4  ya lo dice el PASO 4 del superviviente
+        Monitorear el impacto en calidad tras el cambio de esquema
+    6 eliminacion_pago_destajo                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la empresa usa pago por pieza o bonos por volumen de producción
+    7 estandares_especificos_industria             paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar el estándar específico aplicable según el sector industrial de la organización
+    7 estandares_especificos_industria             paso         2  ya lo dice el PASO 2 del superviviente
+        Comparar los requisitos suplementarios del estándar sectorial con el sistema ISO 9000 ya implementado
+    7 estandares_especificos_industria             paso         3  ya lo dice el PASO 3 del superviviente
+        Adaptar procesos internos para cumplir con las extensiones específicas de la industria
+    7 estandares_especificos_industria             paso         4  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Buscar certificación en el estándar sectorial correspondiente (ej. AS9100, cGMP, ISO 14000)
+    7 estandares_especificos_industria             condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si la organización opera en industria automotriz, farmacéutica, aeroespacial o de defensa
+    7 estandares_especificos_industria             condicion    2  CONDICION 2 del superviviente
+        Cuando se requiere cumplimiento regulatorio adicional más allá del estándar genérico ISO 9000
+    8 estilo_gerencial_hockey_vs_ballet            paso         1  ya lo dice el PASO 1 del superviviente
+        Evaluar si el estilo de liderazgo actual se basa en detectar y corregir errores después de que ocurren (hockey) o en prevenirlos (ballet)
+    8 estilo_gerencial_hockey_vs_ballet            paso         2  PASO 7 del superviviente
+        Fomentar la comunicación clara y coordinada entre los niveles de la organización
+    8 estilo_gerencial_hockey_vs_ballet            paso         3  ya lo dice el PASO 6 del superviviente
+        Sustituir prácticas reactivas por prácticas preventivas en la gestión diaria
+    8 estilo_gerencial_hockey_vs_ballet            paso         4  PASO 8 del superviviente
+        Capacitar a los supervisores en técnicas de comunicación y coordinación de equipo
+    8 estilo_gerencial_hockey_vs_ballet            condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando la organización presenta un estilo de gestión reactivo centrado en corregir errores en lugar de prevenirlos
+    8 estilo_gerencial_hockey_vs_ballet            condicion    2  CONDICION 5 del superviviente
+        Cuando existen conflictos de comunicación entre departamentos que afectan la calidad
+    9 roi_breakthrough                             paso         1  ya lo dice el PASO 3 del superviviente
+        Calcular el costo estimado de diagnóstico y remedio de un proyecto de mejora
+    9 roi_breakthrough                             paso         2  ya lo dice el PASO 4 del superviviente
+        Comparar dicho costo con el ahorro esperado por reducción de desperdicio crónico
+    9 roi_breakthrough                             paso         3  PASO 6 del superviviente
+        Documentar el ROI del proyecto para reportarlo a la dirección
+    9 roi_breakthrough                             paso         4  PASO 7 del superviviente
+        Usar casos de éxito (benchmarks como Samsung Six Sigma) para justificar la inversión continua en breakthrough
+    9 roi_breakthrough                             condicion    1  CONDICION 3 del superviviente
+        Cuando se necesita justificar financieramente la continuidad de un programa de mejora
+    9 roi_breakthrough                             condicion    2  CONDICION 4 del superviviente
+        Cuando la dirección solicita evidencia cuantitativa del valor de las iniciativas de calidad
+   10 pensamiento_sistemico_rol_triple             paso         1  ya lo dice el PASO 1 del superviviente
+        Mapear las relaciones de proveedor-procesador-cliente dentro de cada función u organización
+   10 pensamiento_sistemico_rol_triple             paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer canales claros de comunicación de requisitos entre proveedor y procesador
+   10 pensamiento_sistemico_rol_triple             paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Implementar mecanismos de retroalimentación (loops de control) entre cliente y procesador
+   10 pensamiento_sistemico_rol_triple             paso         4  ya lo dice el PASO 4 del superviviente
+        Evitar el cambio organizacional aislado; abordar la transformación con visión de sistema completo
+   10 pensamiento_sistemico_rol_triple             condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se busca entender las interdependencias entre departamentos o funciones
+   10 pensamiento_sistemico_rol_triple             condicion    2  CONDICION 3 del superviviente
+        Cuando un cambio organizacional aislado ha generado más problemas de los que resolvió
+   11 descubrir_necesidades_cliente                paso         1  ya lo dice el PASO 1 del superviviente
+        Recolectar voz del cliente mediante entrevistas, encuestas abiertas y observación
+   11 descubrir_necesidades_cliente                paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar necesidades explícitas e implícitas por cada segmento de cliente
+   11 descubrir_necesidades_cliente                paso         3  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Priorizar necesidades de forma consensuada, sin asumir jerarquías automáticas por tipo de cliente
+   11 descubrir_necesidades_cliente                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Después de identificar el cast de clientes
+   11 descubrir_necesidades_cliente                condicion    2  CONDICION 2 del superviviente
+        Cuando existan requisitos regulatorios o técnicos que puedan bloquear el proyecto si se ignoran
+   12 spreadsheet_diseno_para_la_calidad           paso         1  ya lo dice el PASO 2 del superviviente
+        Elabora la hoja de necesidades del cliente listando a tus clientes y priorizando sus necesidades
+   12 spreadsheet_diseno_para_la_calidad           paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Desglosa las necesidades amplias en niveles de especificidad, de lo general a lo particular
+   12 spreadsheet_diseno_para_la_calidad           paso         3  ya lo dice el PASO 4 del superviviente
+        Construye la hoja de diseño de producto vinculando cada necesidad con una característica técnica
+   12 spreadsheet_diseno_para_la_calidad           paso         4  ya lo dice el PASO 5 del superviviente
+        Extiende el análisis a las hojas de diseño y control de proceso
+   12 spreadsheet_diseno_para_la_calidad           condicion    1  ya lo dice la CONDICION 4 del superviviente
+        Cuando ya tienes una lista de necesidades del cliente y necesitas traducirlas en especificaciones de diseño de producto y de proceso
+   14 repeticion_programa                          paso         1  ya lo dice el PASO 1 del superviviente
+        Formar un nuevo equipo de representantes tras 12-18 meses
+   14 repeticion_programa                          paso         2  ya lo dice el PASO 2 del superviviente
+        Conmemorar el aniversario del Día de Cero Defectos
+   14 repeticion_programa                          paso         3  ya lo dice el PASO 5 del superviviente
+        Reiniciar el ciclo de los 14 pasos con nuevos objetivos
+   14 repeticion_programa                          condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando el programa de calidad muestra señales de estancamiento o pérdida de impulso tras su primer ciclo
+   15 eliminar_slogans_metas                       paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Eliminar los carteles, lemas y metas numéricas que le exiges solo a quienes ejecutan el trabajo
+   15 eliminar_slogans_metas                       paso         2  ya lo dice el PASO 3 del superviviente
+        Calcular qué proporción de los defectos viene del sistema que tú controlas y cuál de las personas
+   15 eliminar_slogans_metas                       paso         3  ya lo dice el PASO 4 del superviviente
+        Cambiar las exhortaciones por acciones concretas tuyas para mejorar el sistema
+   15 eliminar_slogans_metas                       paso         4  PASO 5 del superviviente
+        Trabajar con tus proveedores de forma colaborativa en lugar de exigirles cambios abruptos sin apoyo
+   15 eliminar_slogans_metas                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando usas lemas de 'cero defectos' sin atacar las causas de raíz del sistema
+   15 eliminar_slogans_metas                       condicion    2  CONDICION 3 del superviviente
+        Cuando responsabilizas a quien te ayuda por fallas que en realidad vienen de materiales o procesos deficientes
+   16 rol_black_belt                               paso         1  ya lo dice el PASO 1 del superviviente
+        Seleccionar candidatos para certificación Black Belt (hasta 6 semanas de entrenamiento)
+   16 rol_black_belt                               paso         2  ya lo dice el PASO 4 del superviviente
+        Encargar al Black Belt la selección y nominación de proyectos
+   16 rol_black_belt                               paso         3  PASO 5 del superviviente
+        Definir responsabilidades de coordinación entre equipos y análisis complejos
+   16 rol_black_belt                               paso         4  PASO 6 del superviviente
+        Certificar competencias mediante organismos reconocidos en tu mercado, como ASQ
+   16 rol_black_belt                               condicion    1  CONDICION 3 del superviviente
+        Si buscas institucionalizar breakthrough a gran escala en tu negocio
+   17 value_stream_mapping                         paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Documentar el flujo actual de materiales e información en el proceso
+   17 value_stream_mapping                         paso         2  PASO 6 del superviviente
+        Registrar métricas de tiempo de ciclo y costo en cada etapa
+   17 value_stream_mapping                         paso         3  ya lo dice el PASO 3 del superviviente
+        Identificar los puntos de desperdicio dentro del flujo mapeado
+   17 value_stream_mapping                         paso         4  PASO 7 del superviviente
+        Priorizar los problemas detectados como proyectos de mejora
+   17 value_stream_mapping                         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se necesita visibilidad completa de un proceso para identificar cuellos de botella
+   17 value_stream_mapping                         condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se inicia un proyecto de mejora de procesos bajo enfoque Lean
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 16
+  nodos implicados    : 32
+  nodos que MUEREN    : 16
+  piezas repartidas   : 97 (24 viajan enteras, 59 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 1
+
+ESCRITO. ficheros tocados: 77
+censo DESPUES: 3853 ficheros, 3326 vivos, 527 deprecados
+censo ANTES  : 3853 ficheros, 3342 vivos, 511 deprecados
+delta deprecados: +16 (esperado +16): OK

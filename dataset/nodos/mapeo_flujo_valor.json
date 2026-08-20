@@ -7,16 +7,19 @@
   "resumen_teorico": "El mapeo de flujo de valor documenta todas las actividades, con y sin valor agregado, necesarias para llevar un producto desde la concepción hasta la comercialización, incluyendo el flujo de materiales e información. Permite distinguir actividades de valor agregado, actividades sin valor agregado pero necesarias, y desperdicio puro mediante un análisis de descomposición del proceso. Se elabora primero un mapa del estado actual, registrando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y luego un mapa del estado futuro que incorpora las mejoras deseadas. Este par de mapas guía la implementación de cambios y sirve de base para definir mecanismos de control que verifiquen si el proceso avanza hacia el estado deseado.",
   "pasos_accionables": [
     "Repasa los conceptos clave de Lean y Value Stream Mapping antes de empezar",
-    "Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad",
+    "Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y el flujo actual de materiales e información en el proceso",
     "Clasifica cada actividad en valor agregado, no valor agregado pero necesaria, o desperdicio puro",
     "Diseña y documenta el mapa del estado futuro con las mejoras que quieres lograr",
-    "Implementa los cambios y define mecanismos de control para validar el avance contra el mapa futuro"
+    "Implementa los cambios y define mecanismos de control para validar el avance contra el mapa futuro",
+    "Registrar métricas de tiempo de ciclo y costo en cada etapa",
+    "Priorizar los problemas detectados como proyectos de mejora"
   ],
   "entregable_esperado": "Mapa de flujo de valor del estado actual y del estado futuro, con métricas de proceso, plan de implementación y mecanismos de control.",
   "nodos_previos": [
     "ocho_desperdicios_lean",
     "takt_time",
-    "planificacion_economica_conjunta"
+    "planificacion_economica_conjunta",
+    "introduccion_lean"
   ],
   "nodos_siguientes": [
     "sistema_pull_push",
@@ -25,7 +28,10 @@
     "tres_tipos_desperdicio_tps",
     "value_non_value_added_analysis",
     "takt_time_demand",
-    "kanban_pull_system"
+    "kanban_pull_system",
+    "constraint_management",
+    "inventory_analysis_lean",
+    "kaizen_mejora_continua"
   ],
   "condiciones_activacion": [
     "Cuando necesitas entender el estado actual de un proceso para identificar oportunidades de mejora",
@@ -36,7 +42,8 @@
   "etiqueta_arbol": "Documenta el Camino del Producto",
   "ids_alias": [
     "mapeo_flujo_valor_2",
-    "value_stream_mapping_2"
+    "value_stream_mapping_2",
+    "value_stream_mapping"
   ],
   "merged_originals": [
     {
@@ -47,6 +54,11 @@
     {
       "node_id": "value_stream_mapping_2",
       "titulo": "Value Stream Mapping (Distinguir Valor de Desperdicio)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "value_stream_mapping",
+      "titulo": "Value Stream Mapping (Métricas del Proceso)",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
     }
   ]

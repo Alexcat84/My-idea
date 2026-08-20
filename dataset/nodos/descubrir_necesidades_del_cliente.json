@@ -8,25 +8,43 @@
   "pasos_accionables": [
     "Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc.",
     "Recopilar la lista de necesidades en el lenguaje propio del cliente",
-    "Distinguir entre necesidades declaradas, reales, percibidas y culturales",
+    "Distinguir entre necesidades declaradas, reales, percibidas y culturales, por cada segmento de cliente",
     "Investigar posibles usos no previstos del producto y sus riesgos de seguridad",
-    "Analizar y priorizar las necesidades identificadas",
+    "Analizar y priorizar las necesidades identificadas, de forma consensuada, sin asumir jerarquías automáticas por tipo de cliente",
     "Traducir las necesidades priorizadas al lenguaje técnico de la organización"
   ],
   "entregable_esperado": "Lista de necesidades del cliente priorizadas y traducidas al lenguaje de la organización, lista para su análisis en spreadsheet",
   "nodos_previos": [
-    "identificar_clientes_externos_e_internos"
+    "identificar_clientes_externos_e_internos",
+    "brecha_de_calidad_cuatro_gaps",
+    "fitness_for_use_purpose",
+    "identificar_clientes_diseno",
+    "satisfaccion_vs_insatisfaccion_kano"
   ],
   "nodos_siguientes": [
-    "spreadsheet_diseno_para_la_calidad",
+    "qfd_matriz",
     "diseno_de_procesos_por_caracteristicas",
     "diseno_servicio_calidad",
     "gestion_de_quejas_y_fidelizacion",
     "herramientas_de_diseno_de_calidad",
-    "sistema_manejo_quejas"
+    "sistema_manejo_quejas",
+    "desarrollar_caracteristicas_producto",
+    "design_for_six_sigma_dfss",
+    "six_sigma_dmaic_2"
   ],
   "condiciones_activacion": [
-    "Cuando ya se han identificado los clientes y se requiere entender a profundidad qué esperan del producto o servicio"
+    "Cuando ya se han identificado los clientes y se requiere entender a profundidad qué esperan del producto o servicio",
+    "Cuando existan requisitos regulatorios o técnicos que puedan bloquear el proyecto si se ignoran"
   ],
-  "etiqueta_arbol": "Descubre lo que Realmente Quieren"
+  "etiqueta_arbol": "Descubre lo que Realmente Quieren",
+  "ids_alias": [
+    "descubrir_necesidades_cliente"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "descubrir_necesidades_cliente",
+      "titulo": "Descubrir las Necesidades del Cliente",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

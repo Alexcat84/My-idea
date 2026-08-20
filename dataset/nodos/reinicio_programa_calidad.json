@@ -15,15 +15,28 @@
   "entregable_esperado": "Plan de reinicio del programa de calidad con nuevo equipo asignado, cronograma anual y mecanismo de rotación de liderazgo",
   "nodos_previos": [
     "consejos_de_calidad",
-    "reconocimiento_al_desempeno"
+    "reconocimiento_al_desempeno",
+    "consejo_de_calidad_3"
   ],
   "nodos_siguientes": [
-    "programa_make_certain"
+    "programa_make_certain",
+    "estilo_gerencial_calidad",
+    "medicion_calidad"
   ],
   "condiciones_activacion": [
     "Cuando el equipo ha alcanzado las metas iniciales de reducción de costo de calidad",
     "Si existe riesgo de que el programa se abandone tras el éxito inicial",
     "Cuando se busca institucionalizar la mejora continua como cultura organizacional"
   ],
-  "etiqueta_arbol": "Hazlo de Nuevo, Siempre"
+  "etiqueta_arbol": "Hazlo de Nuevo, Siempre",
+  "ids_alias": [
+    "repeticion_programa"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "repeticion_programa",
+      "titulo": "Hacerlo de Nuevo (Paso 14)",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ]
 }

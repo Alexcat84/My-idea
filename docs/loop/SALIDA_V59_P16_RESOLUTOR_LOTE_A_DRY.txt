@@ -1,0 +1,15 @@
+==============================================================================
+P.16 POR EL RESOLUTOR: LAS DUPLICADAS QUE ESTA FUSION FABRICARIA
+MODO SIMULAR
+==============================================================================
+  plan: docs/loop/PLAN_V59_OPU01_LOTE_A.json | actos: 16
+
+  DUPLICADAS QUE LA FUSION FABRICARIA: 1
+    takt_time | nodos_previos
+       la fabrica el acto 17: value_stream_mapping pasa a resolver a mapeo_flujo_valor
+       el camino que YA existia y se conserva: value_stream_mapping_2
+       SE RETIRA la entrada value_stream_mapping, y la reciproca en value_stream_mapping.nodos_siguientes
+
+  MODO SIMULAR: no se escribe nada.
+
+FIN

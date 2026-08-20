@@ -9,19 +9,32 @@
     "Auditar los esquemas de compensación vigentes para identificar pago por pieza o metas de volumen que penalicen la calidad",
     "Rediseñar el sistema de compensación para desvincular el pago de la cantidad de piezas producidas",
     "Implementar un nuevo modelo de capacitación y supervisión enfocado en calidad, no en velocidad",
-    "Establecer control estadístico de proceso para dar seguimiento objetivo al desempeño sin presión de producción"
+    "Establecer control estadístico de proceso para dar seguimiento objetivo al desempeño sin presión de producción",
+    "Comunicar el cambio de enfoque a los trabajadores y sindicatos"
   ],
   "entregable_esperado": "Nuevo esquema de compensación e incentivos alineado con calidad, junto con plan de capacitación de supervisores",
   "nodos_previos": [
-    "reporte_gerencial_diagnostico_calidad"
+    "reporte_gerencial_diagnostico_calidad",
+    "supervision_a_liderazgo"
   ],
   "nodos_siguientes": [
     "responsabilidad_gerencial_causas_comunes",
-    "abolir_inspeccion_masiva"
+    "abolir_inspeccion_masiva",
+    "barreras_orgullo_trabajo"
   ],
   "condiciones_activacion": [
     "Cuando la organización utiliza pago por pieza como esquema de compensación principal",
     "Cuando los operadores reportan presión de producción que compromete la calidad"
   ],
-  "etiqueta_arbol": "Elimina el Pago a Destajo"
+  "etiqueta_arbol": "Elimina el Pago a Destajo",
+  "ids_alias": [
+    "eliminacion_pago_destajo"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "eliminacion_pago_destajo",
+      "titulo": "Eliminación del Pago a Destajo e Incentivos por Producción",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

@@ -9,15 +9,27 @@
     "Identifica la norma sectorial especifica que te aplica (cGMP, ISO/TS 16949 u otra según tu mercado)",
     "Mapea los requisitos sectoriales adicionales sobre la base de ISO 9001",
     "Actualiza tus procesos y tecnologia para cumplir con el caracter actualizado que exigen regulaciones como cGMP",
-    "Certifica bajo la norma sectorial correspondiente en lugar de quedarte solo con ISO 9001 generico"
+    "Certifica bajo la norma sectorial correspondiente en lugar de quedarte solo con ISO 9001 generico, por ejemplo AS9100, cGMP, ISO 14000"
   ],
   "entregable_esperado": "Sistema de calidad certificado bajo la norma sectorial especifica de tu industria",
   "nodos_previos": [
-    "conformidad_comercio_internacional"
+    "conformidad_comercio_internacional",
+    "familia_normas_iso_9000"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando tu negocio pertenece a un sector altamente regulado como farmaceutico, dispositivos medicos o automotriz"
+    "Cuando tu negocio pertenece a un sector altamente regulado como farmaceutico, dispositivos medicos o automotriz",
+    "Cuando se requiere cumplimiento regulatorio adicional más allá del estándar genérico ISO 9000"
   ],
-  "etiqueta_arbol": "Cumple Normas de tu Sector"
+  "etiqueta_arbol": "Cumple Normas de tu Sector",
+  "ids_alias": [
+    "estandares_especificos_industria"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "estandares_especificos_industria",
+      "titulo": "Estándares de Calidad Específicos por Industria (Adopciones ISO 9000)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

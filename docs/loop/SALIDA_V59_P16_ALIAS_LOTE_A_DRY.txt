@@ -1,0 +1,30 @@
+==============================================================================
+P.16 POR EL RESOLUTOR: LAS DUPLICADAS QUE ESTA FUSION FABRICARIA
+MODO SIMULAR
+==============================================================================
+  plan: docs/loop/PLAN_V59_OPU01_LOTE_A.json | actos: 16
+
+  DUPLICADAS QUE LA FUSION FABRICARIA: 5
+    consejo_de_calidad_3 | nodos_siguientes
+       la fabrica el acto 1: programa_de_mejora_de_calidad pasa a resolver a programa_mejora_calidad_14_pasos
+       el camino que YA existia y se conserva: programa_catorce_pasos_crosby
+       SE RETIRA la entrada programa_de_mejora_de_calidad, y la reciproca en programa_de_mejora_de_calidad.nodos_previos
+    consejos_de_calidad | nodos_previos
+       la fabrica el acto 1: programa_de_mejora_de_calidad pasa a resolver a programa_mejora_calidad_14_pasos
+       el camino que YA existia y se conserva: programa_catorce_pasos_crosby
+       SE RETIRA la entrada programa_de_mejora_de_calidad, y la reciproca en programa_de_mejora_de_calidad.nodos_siguientes
+    make_certain_programa | nodos_previos
+       la fabrica el acto 1: programa_de_mejora_de_calidad pasa a resolver a programa_mejora_calidad_14_pasos
+       el camino que YA existia y se conserva: programa_catorce_pasos_crosby
+       SE RETIRA la entrada programa_de_mejora_de_calidad, y la reciproca en programa_de_mejora_de_calidad.nodos_siguientes
+    takt_time | nodos_previos
+       la fabrica el acto 17: value_stream_mapping pasa a resolver a mapeo_flujo_valor
+       el camino que YA existia y se conserva: value_stream_mapping_2
+       SE RETIRA la entrada value_stream_mapping, y la reciproca en value_stream_mapping.nodos_siguientes
+    zero_defects_concepto | nodos_siguientes
+       la fabrica el acto 1: programa_de_mejora_de_calidad pasa a resolver a programa_mejora_calidad_14_pasos
+       el camino que YA existia y se conserva: programa_catorce_pasos_crosby
+       SE RETIRA la entrada programa_de_mejora_de_calidad, y la reciproca en programa_de_mejora_de_calidad.nodos_previos
+
+  ROJO: 1 duplicadas que este plan NO fabrica del todo. No se escribe nada:
+    definicion_calidad_conformidad | nodos_siguientes | resuelven a programa_mejora_calidad_14_pasos: ['programa_catorce_pasos_crosby', 'programa_mejora_calidad_14_pasos']

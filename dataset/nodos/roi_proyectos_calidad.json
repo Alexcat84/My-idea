@@ -10,19 +10,35 @@
     "Estima la reducción de costos potencial si el proyecto tiene éxito",
     "Estima los costos de diagnóstico e implementación del remedio",
     "Calcula el ROI como la razón entre la ganancia estimada y los recursos necesarios",
-    "Revisa el cálculo con la persona que te ayuda con las finanzas para que el número sea sólido antes de decidir"
+    "Revisa el cálculo con la persona que te ayuda con las finanzas para que el número sea sólido antes de decidir",
+    "Documentar el ROI del proyecto para reportarlo a la dirección",
+    "Usar casos de éxito (benchmarks como Samsung Six Sigma) para justificar la inversión continua en breakthrough"
   ],
   "entregable_esperado": "Un cálculo de ROI documentado y validado para el proyecto de mejora propuesto, listo para que decidas si vale la pena avanzar",
   "nodos_previos": [
     "estrategias_estimacion_costos",
-    "pruning_portafolio"
+    "pruning_portafolio",
+    "costo_de_mala_calidad_copq",
+    "inhibidores_del_breakthrough"
   ],
   "nodos_siguientes": [
     "seleccion_proyectos_six_sigma_basada_en_copq"
   ],
   "condiciones_activacion": [
     "Cuando necesitas decidir si vale la pena lanzar un proyecto de mejora importante",
-    "Cuando comparas invertir en calidad contra otras opciones para tu negocio"
+    "Cuando comparas invertir en calidad contra otras opciones para tu negocio",
+    "Cuando se necesita justificar financieramente la continuidad de un programa de mejora",
+    "Cuando la dirección solicita evidencia cuantitativa del valor de las iniciativas de calidad"
   ],
-  "etiqueta_arbol": "Calcula el Retorno de Calidad"
+  "etiqueta_arbol": "Calcula el Retorno de Calidad",
+  "ids_alias": [
+    "roi_breakthrough"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "roi_breakthrough",
+      "titulo": "Retorno de Inversión (ROI) de Proyectos de Breakthrough",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

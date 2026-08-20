@@ -432,7 +432,7 @@
         "costo_de_calidad_4",
         "costo_de_calidad_6",
         "ingenieria_calidad",
-        "programa_de_mejora_de_calidad",
+        "programa_mejora_calidad_14_pasos",
         "programa_make_certain_3",
         "rework_por_el_causante",
         "decision_aptitud_para_uso",
@@ -1772,17 +1772,29 @@
         "Identifica la norma sectorial especifica que te aplica (cGMP, ISO/TS 16949 u otra según tu mercado)",
         "Mapea los requisitos sectoriales adicionales sobre la base de ISO 9001",
         "Actualiza tus procesos y tecnologia para cumplir con el caracter actualizado que exigen regulaciones como cGMP",
-        "Certifica bajo la norma sectorial correspondiente en lugar de quedarte solo con ISO 9001 generico"
+        "Certifica bajo la norma sectorial correspondiente en lugar de quedarte solo con ISO 9001 generico, por ejemplo AS9100, cGMP, ISO 14000"
       ],
       "entregable_esperado": "Sistema de calidad certificado bajo la norma sectorial especifica de tu industria",
       "nodos_previos": [
-        "conformidad_comercio_internacional"
+        "conformidad_comercio_internacional",
+        "familia_normas_iso_9000"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
-        "Cuando tu negocio pertenece a un sector altamente regulado como farmaceutico, dispositivos medicos o automotriz"
+        "Cuando tu negocio pertenece a un sector altamente regulado como farmaceutico, dispositivos medicos o automotriz",
+        "Cuando se requiere cumplimiento regulatorio adicional más allá del estándar genérico ISO 9000"
       ],
-      "etiqueta_arbol": "Cumple Normas de tu Sector"
+      "etiqueta_arbol": "Cumple Normas de tu Sector",
+      "ids_alias": [
+        "estandares_especificos_industria"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "estandares_especificos_industria",
+          "titulo": "Estándares de Calidad Específicos por Industria (Adopciones ISO 9000)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "adaptar_empaque_segun_tipo_de_articulo": {
       "node_id": "adaptar_empaque_segun_tipo_de_articulo",
@@ -3304,7 +3316,7 @@
         "dmaic_fase_analyze"
       ],
       "nodos_siguientes": [
-        "mantener_las_ganancias",
+        "sostener_las_ganancias",
         "enfoque_proyecto_por_proyecto",
         "diagnostico_sintoma_vs_causa_ventas"
       ],
@@ -7934,7 +7946,7 @@
       ],
       "entregable_esperado": "Listado de barreras identificadas y plan de remoción",
       "nodos_previos": [
-        "eliminacion_pago_destajo"
+        "eliminar_trabajo_a_destajo"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -8906,7 +8918,7 @@
       ],
       "nodos_siguientes": [
         "modelo_quality_by_design_juran",
-        "descubrir_necesidades_cliente",
+        "descubrir_necesidades_del_cliente",
         "juran_quality_by_design"
       ],
       "condiciones_activacion": [
@@ -12743,13 +12755,12 @@
       "entregable_esperado": "Declaración personal de compromiso con Cero Defectos, con fecha de lanzamiento, mecanismo de reconocimiento no monetario y plan de refuerzo periódico documentado.",
       "nodos_previos": [
         "costo_de_calidad",
-        "estilo_gerencial_hockey_vs_ballet",
+        "estilo_gerencial_ballet_vs_hockey",
         "accion_correctiva_sistematica",
         "conciencia_de_calidad_2",
         "programa_mejora_calidad_14_pasos",
         "programa_make_certain",
         "costo_de_calidad_5",
-        "estilo_gerencial_ballet_vs_hockey",
         "programa_make_certain_2",
         "concepto_programa_catorce_pasos",
         "definicion_calidad_conformidad_requisitos",
@@ -12848,7 +12859,7 @@
       ],
       "entregable_esperado": "Un plan de certificación y desarrollo de tus propias competencias, o las de la persona que te ayuda con la mejora continua en tu negocio",
       "nodos_previos": [
-        "rol_black_belt"
+        "rol_black_belt_six_sigma"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -17054,7 +17065,7 @@
       "entregable_esperado": "Una postura de calidad clara, escrita y comunicada a las personas involucradas en los próximos días",
       "nodos_previos": [
         "cambio_actitud_gerencial",
-        "programa_de_mejora_de_calidad",
+        "programa_mejora_calidad_14_pasos",
         "quality_management_maturity_grid_3",
         "rejilla_madurez_gestion_calidad"
       ],
@@ -18290,7 +18301,7 @@
         "costo_de_la_calidad_coq",
         "medicion_de_calidad",
         "costo_de_calidad_4",
-        "programa_de_mejora_de_calidad",
+        "programa_mejora_calidad_14_pasos",
         "rotacion_de_puestos_para_mejora_calidad",
         "costo_de_mala_calidad_copq"
       ],
@@ -19355,9 +19366,9 @@
         "reconocimiento_crosby"
       ],
       "nodos_siguientes": [
-        "repeticion_programa",
+        "reinicio_programa_calidad",
         "programa_catorce_pasos_crosby",
-        "programa_de_mejora_de_calidad"
+        "programa_mejora_calidad_14_pasos"
       ],
       "condiciones_activacion": [
         "Cuando se ha completado un primer ciclo del programa de mejora de calidad",
@@ -19459,7 +19470,7 @@
         "programa_catorce_pasos_crosby",
         "reconocimiento_crosby",
         "eliminacion_causas_error_4",
-        "programa_de_mejora_de_calidad"
+        "programa_mejora_calidad_14_pasos"
       ],
       "nodos_siguientes": [
         "reinicio_programa_calidad"
@@ -19669,7 +19680,7 @@
       ],
       "entregable_esperado": "Restricción del sistema identificada con plan de acción de las 5 etapas de TOC",
       "nodos_previos": [
-        "value_stream_mapping",
+        "mapeo_flujo_valor",
         "takt_time_demand",
         "littles_law",
         "pull_vs_push_systems",
@@ -23236,7 +23247,7 @@
         "perfeccionismo_vs_valor_2",
         "trilogia_de_juran",
         "metodologia_medicion_copq",
-        "roi_breakthrough",
+        "roi_proyectos_calidad",
         "secuencia_universal_breakthrough",
         "calculo_roi_calidad",
         "programa_mejora_calidad_14_pasos",
@@ -23249,7 +23260,6 @@
         "control_estadistico_de_procesos",
         "identificacion_causa_raiz_no_culpa_individual",
         "costo_optimo_calidad",
-        "programa_de_mejora_de_calidad",
         "costo_de_calidad_2",
         "conciencia_de_calidad",
         "conciencia_calidad",
@@ -31945,7 +31955,7 @@
       ],
       "entregable_esperado": "Lista optimizada y priorizada de características del producto/servicio con metas definidas",
       "nodos_previos": [
-        "descubrir_necesidades_cliente",
+        "descubrir_necesidades_del_cliente",
         "fitness_for_use_purpose"
       ],
       "nodos_siguientes": [
@@ -32638,7 +32648,8 @@
         "Después de identificar el cast de clientes",
         "Cuando existan requisitos regulatorios o técnicos que puedan bloquear el proyecto si se ignoran"
       ],
-      "etiqueta_arbol": "Escucha la Voz del Cliente"
+      "etiqueta_arbol": "Escucha la Voz del Cliente",
+      "deprecado": true
     },
     "descubrir_necesidades_del_cliente": {
       "node_id": "descubrir_necesidades_del_cliente",
@@ -32650,27 +32661,45 @@
       "pasos_accionables": [
         "Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc.",
         "Recopilar la lista de necesidades en el lenguaje propio del cliente",
-        "Distinguir entre necesidades declaradas, reales, percibidas y culturales",
+        "Distinguir entre necesidades declaradas, reales, percibidas y culturales, por cada segmento de cliente",
         "Investigar posibles usos no previstos del producto y sus riesgos de seguridad",
-        "Analizar y priorizar las necesidades identificadas",
+        "Analizar y priorizar las necesidades identificadas, de forma consensuada, sin asumir jerarquías automáticas por tipo de cliente",
         "Traducir las necesidades priorizadas al lenguaje técnico de la organización"
       ],
       "entregable_esperado": "Lista de necesidades del cliente priorizadas y traducidas al lenguaje de la organización, lista para su análisis en spreadsheet",
       "nodos_previos": [
-        "identificar_clientes_externos_e_internos"
+        "identificar_clientes_externos_e_internos",
+        "brecha_de_calidad_cuatro_gaps",
+        "fitness_for_use_purpose",
+        "identificar_clientes_diseno",
+        "satisfaccion_vs_insatisfaccion_kano"
       ],
       "nodos_siguientes": [
-        "spreadsheet_diseno_para_la_calidad",
+        "qfd_matriz",
         "diseno_de_procesos_por_caracteristicas",
         "diseno_servicio_calidad",
         "gestion_de_quejas_y_fidelizacion",
         "herramientas_de_diseno_de_calidad",
-        "sistema_manejo_quejas"
+        "sistema_manejo_quejas",
+        "desarrollar_caracteristicas_producto",
+        "design_for_six_sigma_dfss",
+        "six_sigma_dmaic_2"
       ],
       "condiciones_activacion": [
-        "Cuando ya se han identificado los clientes y se requiere entender a profundidad qué esperan del producto o servicio"
+        "Cuando ya se han identificado los clientes y se requiere entender a profundidad qué esperan del producto o servicio",
+        "Cuando existan requisitos regulatorios o técnicos que puedan bloquear el proyecto si se ignoran"
       ],
-      "etiqueta_arbol": "Descubre lo que Realmente Quieren"
+      "etiqueta_arbol": "Descubre lo que Realmente Quieren",
+      "ids_alias": [
+        "descubrir_necesidades_cliente"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "descubrir_necesidades_cliente",
+          "titulo": "Descubrir las Necesidades del Cliente",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "descubrir_necesidades_ocultas": {
       "node_id": "descubrir_necesidades_ocultas",
@@ -32878,7 +32907,7 @@
         "innovacion_tipo_ii",
         "quality_by_design",
         "six_sigma_dmaic",
-        "descubrir_necesidades_cliente",
+        "descubrir_necesidades_del_cliente",
         "six_sigma_dmaic_2"
       ],
       "nodos_siguientes": [
@@ -32933,7 +32962,7 @@
       ],
       "nodos_siguientes": [
         "qfd_matriz_calidad",
-        "tipos_innovacion_i_ii",
+        "innovacion_tipo_ii",
         "qfd_matriz"
       ],
       "condiciones_activacion": [
@@ -32962,7 +32991,7 @@
       ],
       "nodos_siguientes": [
         "qfd_matriz_calidad",
-        "tipos_innovacion_i_ii",
+        "innovacion_tipo_ii",
         "qfd_matriz"
       ],
       "condiciones_activacion": [
@@ -41189,8 +41218,7 @@
         "make_certain_programa",
         "programa_catorce_pasos_crosby",
         "programa_mejora_calidad_14_pasos",
-        "zero_defects_concepto",
-        "programa_de_mejora_de_calidad"
+        "zero_defects_concepto"
       ],
       "nodos_siguientes": [
         "reconocimiento",
@@ -41504,7 +41532,8 @@
       "condiciones_activacion": [
         "Cuando la empresa usa pago por pieza o bonos por volumen de producción"
       ],
-      "etiqueta_arbol": "Evita Pagar por Pieza"
+      "etiqueta_arbol": "Evita Pagar por Pieza",
+      "deprecado": true
     },
     "eliminacion_planes_muestreo_estandar": {
       "node_id": "eliminacion_planes_muestreo_estandar",
@@ -41552,7 +41581,7 @@
         "adopcion_liderazgo"
       ],
       "nodos_siguientes": [
-        "eliminar_slogans_metas"
+        "eliminar_slogans_y_exhortaciones"
       ],
       "condiciones_activacion": [
         "Cuando cada parte de tu negocio parece funcionar bien por separado, pero el negocio en conjunto no",
@@ -41706,7 +41735,8 @@
         "Cuando usas lemas de 'cero defectos' sin atacar las causas de raíz del sistema",
         "Cuando responsabilizas a quien te ayuda por fallas que en realidad vienen de materiales o procesos deficientes"
       ],
-      "etiqueta_arbol": "Quita Carteles y Metas Vacías"
+      "etiqueta_arbol": "Quita Carteles y Metas Vacías",
+      "deprecado": true
     },
     "eliminar_slogans_y_exhortaciones": {
       "node_id": "eliminar_slogans_y_exhortaciones",
@@ -41716,14 +41746,15 @@
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
       "resumen_teorico": "Deming plantea que los carteles y frases motivacionales que piden mejorar la calidad o el esfuerzo son ineficaces y hasta contraproducentes, porque asumen que el problema es falta de empeño cuando en realidad la mayoría de los problemas vienen del sistema, es decir, de las herramientas, procesos y decisiones que tú controlas. Estas campañas generan frustración y desconfianza, porque dejan ver que no entendiste las trabas reales que impiden un buen resultado, como materiales defectuosos, máquinas descalibradas o instrumentos poco confiables.",
       "pasos_accionables": [
-        "Revisar los carteles, lemas o mensajes motivacionales que usas en tu negocio",
+        "Revisar los carteles, lemas o mensajes motivacionales que usas en tu negocio, y metas numéricas que le exiges solo a quienes ejecutan el trabajo",
         "Eliminar toda frase que pida mejorar sin venir acompañada de un método o plan concreto",
         "Calcular qué parte de los errores viene del sistema (herramientas, proveedores, procesos) y qué parte de las personas",
-        "Reemplazar los carteles genéricos por comunicación clara sobre qué estás haciendo para mejorar el sistema"
+        "Reemplazar los carteles genéricos por comunicación clara sobre qué estás haciendo para mejorar el sistema",
+        "Trabajar con tus proveedores de forma colaborativa en lugar de exigirles cambios abruptos sin apoyo"
       ],
       "entregable_esperado": "Revisión de tu comunicación interna con identificación de frases vacías y un plan para reemplazarlas por acciones concretas y medibles",
       "nodos_previos": [
-        "eliminar_slogans_metas"
+        "eliminar_barreras_departamentales"
       ],
       "nodos_siguientes": [
         "sistema_estable_variacion",
@@ -41732,9 +41763,20 @@
       ],
       "condiciones_activacion": [
         "Cuando usas carteles o frases motivacionales sin cambios reales de fondo",
-        "Cuando notas desánimo o abandono después de campañas de calidad que no funcionaron"
+        "Cuando notas desánimo o abandono después de campañas de calidad que no funcionaron",
+        "Cuando responsabilizas a quien te ayuda por fallas que en realidad vienen de materiales o procesos deficientes"
       ],
-      "etiqueta_arbol": "Evita Lemas y Exhortaciones"
+      "etiqueta_arbol": "Evita Lemas y Exhortaciones",
+      "ids_alias": [
+        "eliminar_slogans_metas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "eliminar_slogans_metas",
+          "titulo": "Eliminar Slogans, Exhortaciones y Metas Numéricas (Punto 10)",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "eliminar_trabajo_a_destajo": {
       "node_id": "eliminar_trabajo_a_destajo",
@@ -41747,21 +41789,34 @@
         "Auditar los esquemas de compensación vigentes para identificar pago por pieza o metas de volumen que penalicen la calidad",
         "Rediseñar el sistema de compensación para desvincular el pago de la cantidad de piezas producidas",
         "Implementar un nuevo modelo de capacitación y supervisión enfocado en calidad, no en velocidad",
-        "Establecer control estadístico de proceso para dar seguimiento objetivo al desempeño sin presión de producción"
+        "Establecer control estadístico de proceso para dar seguimiento objetivo al desempeño sin presión de producción",
+        "Comunicar el cambio de enfoque a los trabajadores y sindicatos"
       ],
       "entregable_esperado": "Nuevo esquema de compensación e incentivos alineado con calidad, junto con plan de capacitación de supervisores",
       "nodos_previos": [
-        "reporte_gerencial_diagnostico_calidad"
+        "reporte_gerencial_diagnostico_calidad",
+        "supervision_a_liderazgo"
       ],
       "nodos_siguientes": [
         "responsabilidad_gerencial_causas_comunes",
-        "abolir_inspeccion_masiva"
+        "abolir_inspeccion_masiva",
+        "barreras_orgullo_trabajo"
       ],
       "condiciones_activacion": [
         "Cuando la organización utiliza pago por pieza como esquema de compensación principal",
         "Cuando los operadores reportan presión de producción que compromete la calidad"
       ],
-      "etiqueta_arbol": "Elimina el Pago a Destajo"
+      "etiqueta_arbol": "Elimina el Pago a Destajo",
+      "ids_alias": [
+        "eliminacion_pago_destajo"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "eliminacion_pago_destajo",
+          "titulo": "Eliminación del Pago a Destajo e Incentivos por Producción",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "email_marketing_activacion": {
       "node_id": "email_marketing_activacion",
@@ -42873,7 +42928,7 @@
       "nodos_previos": [
         "falta_de_constancia_de_proposito",
         "falta_de_constancia_de_proposito_2",
-        "las_siete_enfermedades_mortales",
+        "enfermedades_mortales_gestion",
         "garantia_devolucion_dinero"
       ],
       "nodos_siguientes": [
@@ -42894,25 +42949,40 @@
       "resumen_teorico": "Deming identifica siete 'enfermedades mortales' que afectan a la mayoría de los negocios y que impiden avanzar hacia la calidad: falta de constancia en el propósito, obsesión con las ganancias de corto plazo, evaluación de desempeño basada en méritos, cambios frecuentes de responsables, gestión que solo mira las cifras visibles, costos médicos excesivos y costos excesivos por responsabilidad legal. Curarlas exige reconstruir por completo la forma en que gestionas.",
       "pasos_accionables": [
         "Revisar tu negocio e identificar cuáles de las siete enfermedades reconoces en él",
-        "Pensar qué impacto tiene cada una en tus números y en cómo trabajas día a día",
-        "Elegir cuál de esas enfermedades te urge resolver primero según tu situación",
+        "Pensar qué impacto tiene cada una en tus números y en cómo trabajas día a día, y en la cultura de tu negocio",
+        "Elegir cuál de esas enfermedades te urge resolver primero según tu situación, empezando por la que genera mayor dano de fondo",
         "Comprometerte tú, quien decide, con un cambio de fondo a largo plazo en vez de buscar un arreglo rápido"
       ],
       "entregable_esperado": "Un diagnóstico escrito de las enfermedades mortales que ves en tu negocio, con ejemplos concretos y una prioridad clara de por dónde empezar",
       "nodos_previos": [
-        "orgullo_por_el_trabajo"
+        "orgullo_por_el_trabajo",
+        "los_14_puntos_deming"
       ],
       "nodos_siguientes": [
         "falta_de_constancia_de_proposito",
         "enfasis_en_ganancias_corto_plazo",
         "plan_de_accion_transformacion",
-        "cuestionario_autoevaluacion_gerencial_calidad"
+        "cuestionario_autoevaluacion_gerencial_calidad",
+        "enfasis_en_utilidades_corto_plazo",
+        "evaluacion_de_desempeno_merito"
       ],
       "condiciones_activacion": [
         "Cuando estás armando un diagnóstico antes de aplicar esta forma de gestionar la calidad",
-        "Si tu negocio tiene calidad baja de forma constante aunque ya inviertes en controlarla"
+        "Si tu negocio tiene calidad baja de forma constante aunque ya inviertes en controlarla",
+        "Cuando tu negocio muestra resistencia constante a mejorar",
+        "Cuando los 14 puntos no logran aplicarse pese a intentos repetidos"
       ],
-      "etiqueta_arbol": "Detecta las Enfermedades Gerenciales"
+      "etiqueta_arbol": "Detecta las Enfermedades Gerenciales",
+      "ids_alias": [
+        "las_siete_enfermedades_mortales"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "las_siete_enfermedades_mortales",
+          "titulo": "Las Enfermedades Mortales de la Gestion (Bloqueo de los 14 Puntos)",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "enfoque_centrado_humano_organizacional": {
       "node_id": "enfoque_centrado_humano_organizacional",
@@ -43857,7 +43927,7 @@
       ],
       "entregable_esperado": "Plan de capacitación anual con niveles de certificación definidos y presupuesto asignado",
       "nodos_previos": [
-        "rol_black_belt",
+        "rol_black_belt_six_sigma",
         "evaluacion_desempeno_proyectos"
       ],
       "nodos_siguientes": [
@@ -44366,7 +44436,7 @@
         "costo_de_la_no_calidad",
         "definicion_calidad_conformidad_requisitos_3",
         "filosofia_zero_defectos",
-        "programa_de_mejora_de_calidad",
+        "programa_mejora_calidad_14_pasos",
         "programa_zero_defects",
         "cero_defectos",
         "definicion_calidad_conformidad",
@@ -46677,7 +46747,8 @@
         "Si la organización opera en industria automotriz, farmacéutica, aeroespacial o de defensa",
         "Cuando se requiere cumplimiento regulatorio adicional más allá del estándar genérico ISO 9000"
       ],
-      "etiqueta_arbol": "Adopta Estándares de tu Industria"
+      "etiqueta_arbol": "Adopta Estándares de tu Industria",
+      "deprecado": true
     },
     "estandares_voluntarios": {
       "node_id": "estandares_voluntarios",
@@ -46850,33 +46921,44 @@
         "Presenta evidencia clara y objetiva sobre la causa del problema, sin dramatismo ni urgencia artificial.",
         "Deja que el análisis conjunto llegue a la causa raíz antes de decidir la solución.",
         "Acuerda un seguimiento regular para asegurar que el problema no vuelva a repetirse.",
-        "Mide tu gestión por la cantidad de problemas que evitas, no solo por los que resuelves."
+        "Mide tu gestión por la cantidad de problemas que evitas, no solo por los que resuelves.",
+        "Fomentar la comunicación clara y coordinada entre los niveles de la organización",
+        "Capacitar a los supervisores en técnicas de comunicación y coordinación de equipo"
       ],
       "entregable_esperado": "Un diagnóstico de tu estilo de gestión actual (reactivo o preventivo) junto con un protocolo de resolución de problemas basado en reuniones planificadas, evidencia objetiva y seguimiento continuo.",
       "nodos_previos": [
         "definicion_calidad_conformidad",
-        "crosby_liderazgo_abierto"
+        "crosby_liderazgo_abierto",
+        "organizacion_independiente_de_calidad"
       ],
       "nodos_siguientes": [
         "programa_make_certain",
         "cero_defectos_zd",
         "crosby_programa_14_pasos_introduccion",
-        "cero_defectos"
+        "cero_defectos",
+        "programa_mejora_calidad_14_pasos"
       ],
       "condiciones_activacion": [
         "Cuando vives en modo de crisis constante resolviendo los mismos problemas una y otra vez.",
         "Cuando dedicas más tiempo y recursos a corregir errores que a prevenirlos.",
         "Cuando quieres justificar un cambio hacia un estilo de gestión más preventivo.",
-        "Cuando te exigen, o te exiges, que la calidad se prevenga en lugar de solo corregirse."
+        "Cuando te exigen, o te exiges, que la calidad se prevenga en lugar de solo corregirse.",
+        "Cuando existen conflictos de comunicación entre departamentos que afectan la calidad"
       ],
       "etiqueta_arbol": "Diferencia el Estilo Reactivo",
       "ids_alias": [
-        "crosby_estilo_ballet_vs_hockey"
+        "crosby_estilo_ballet_vs_hockey",
+        "estilo_gerencial_hockey_vs_ballet"
       ],
       "merged_originals": [
         {
           "node_id": "crosby_estilo_ballet_vs_hockey",
           "titulo": "Estilo Gerencial: Ballet (Prevención) vs. Hockey (Detección)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "estilo_gerencial_hockey_vs_ballet",
+          "titulo": "Estilo Gerencial: Hockey vs. Ballet",
           "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
         }
       ]
@@ -46896,7 +46978,7 @@
       ],
       "entregable_esperado": "Autoevaluación de estilo gerencial completada con plan de desarrollo personal.",
       "nodos_previos": [
-        "repeticion_programa"
+        "reinicio_programa_calidad"
       ],
       "nodos_siguientes": [
         "crosby_habilidad_transmision",
@@ -46932,7 +47014,8 @@
         "Cuando la organización presenta un estilo de gestión reactivo centrado en corregir errores en lugar de prevenirlos",
         "Cuando existen conflictos de comunicación entre departamentos que afectan la calidad"
       ],
-      "etiqueta_arbol": "Compara tu Estilo de Gestión"
+      "etiqueta_arbol": "Compara tu Estilo de Gestión",
+      "deprecado": true
     },
     "estilos_de_negociacion": {
       "node_id": "estilos_de_negociacion",
@@ -49856,7 +49939,7 @@
       "entregable_esperado": "Rediseño del sistema de evaluación de desempeño orientado a la mejora del sistema, no del individuo",
       "nodos_previos": [
         "enfasis_en_utilidades_corto_plazo",
-        "las_siete_enfermedades_mortales"
+        "enfermedades_mortales_gestion"
       ],
       "nodos_siguientes": [
         "variacion_del_sistema_vs_individuo"
@@ -53067,8 +53150,7 @@
       ],
       "entregable_esperado": "Una declaración escrita de constancia de propósito que guía tus decisiones de largo plazo.",
       "nodos_previos": [
-        "enfermedades_mortales_gestion",
-        "las_siete_enfermedades_mortales"
+        "enfermedades_mortales_gestion"
       ],
       "nodos_siguientes": [
         "enfasis_en_ganancias_corto_plazo",
@@ -53145,7 +53227,7 @@
         "certificacion_registro_sistema_calidad",
         "diferencia_iso9001_iso9004",
         "auditorias_vigilancia_certificacion",
-        "estandares_especificos_industria",
+        "adaptaciones_sectoriales_iso",
         "iso_ts_16949_automotriz"
       ],
       "condiciones_activacion": [
@@ -55115,7 +55197,7 @@
         "doble_significado_calidad"
       ],
       "nodos_siguientes": [
-        "descubrir_necesidades_cliente",
+        "descubrir_necesidades_del_cliente",
         "desarrollar_caracteristicas_producto",
         "satisfaccion_vs_insatisfaccion_kano"
       ],
@@ -57039,14 +57121,14 @@
       "resumen_teorico": "La función de pérdida (basada en el trabajo de Taguchi y ejemplificada por Ross) permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de reparación bajo garantía. En lugar de fijar límites arbitrarios, se determinan matemáticamente igualando ambos costos, minimizando la pérdida total para el productor y el cliente.",
       "pasos_accionables": [
         "Determinar el costo de ajuste en campo/garantía cuando el cliente detecta la desviación",
-        "Determinar el costo de ajuste en fábrica antes del envío",
-        "Calcular la constante de la función de pérdida usando la desviación promedio que genera quejas del cliente",
+        "Determinar el costo de ajuste en fábrica antes del envío, que es usualmente menor",
+        "Calcular la constante de la función de pérdida usando la desviación promedio que genera quejas del cliente, el llamado coeficiente k",
         "Igualar la función de pérdida al costo de ajuste en fábrica y despejar el límite de especificación",
         "Establecer los límites de especificación resultantes alrededor del valor nominal"
       ],
       "entregable_esperado": "Documento con los límites de especificación calculados matemáticamente y justificados económicamente",
       "nodos_previos": [
-        "funcion_perdida_taguchi"
+        "limites_especificacion_funcionales"
       ],
       "nodos_siguientes": [
         "tolerancia_estadistica_dimensiones_interactuantes",
@@ -57057,7 +57139,17 @@
         "Cuando se necesita justificar límites de especificación con base económica en vez de arbitraria",
         "Cuando existen costos de garantía vs costos de ajuste en fábrica cuantificables"
       ],
-      "etiqueta_arbol": "Calcula tus Límites de Especificación"
+      "etiqueta_arbol": "Calcula tus Límites de Especificación",
+      "ids_alias": [
+        "funcion_perdida_taguchi"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "funcion_perdida_taguchi",
+          "titulo": "Función de Pérdida de Taguchi para Definir Especificaciones",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "funcion_perdida_taguchi": {
       "node_id": "funcion_perdida_taguchi",
@@ -57083,7 +57175,8 @@
       "condiciones_activacion": [
         "Cuando se busca optimizar límites de especificación considerando el impacto económico de la variación respecto al valor nominal, más allá del cumplimiento binario de especificaciones"
       ],
-      "etiqueta_arbol": "Toda Desviación Cuesta Dinero"
+      "etiqueta_arbol": "Toda Desviación Cuesta Dinero",
+      "deprecado": true
     },
     "funcion_protect_politica_seguridad": {
       "node_id": "funcion_protect_politica_seguridad",
@@ -64339,7 +64432,7 @@
         "juran_quality_by_design"
       ],
       "nodos_siguientes": [
-        "descubrir_necesidades_cliente"
+        "descubrir_necesidades_del_cliente"
       ],
       "condiciones_activacion": [
         "Cuando se inicia la fase de análisis de requerimientos de un proyecto de diseño",
@@ -65936,7 +66029,7 @@
         "aprobacion_alta_direccion"
       ],
       "nodos_siguientes": [
-        "roi_breakthrough",
+        "roi_proyectos_calidad",
         "rediseno_tras_fracaso_proyecto"
       ],
       "condiciones_activacion": [
@@ -66067,7 +66160,8 @@
       ],
       "entregable_esperado": "Lista de ideas de innovación categorizadas y priorizadas, lista para pasar a evaluación de viabilidad",
       "nodos_previos": [
-        "tipos_innovacion_i_ii"
+        "design_for_six_sigma_dmadv",
+        "design_for_six_sigma_dmadv_2"
       ],
       "nodos_siguientes": [
         "dfss_metodologia",
@@ -66076,9 +66170,20 @@
       ],
       "condiciones_activacion": [
         "Cuando el equipo necesita generar ideas innovadoras para un nuevo producto o servicio",
-        "Cuando se requiere romper esquemas mentales limitantes ('pensar fuera de la caja')"
+        "Cuando se requiere romper esquemas mentales limitantes ('pensar fuera de la caja')",
+        "Cuando no se dispone de recursos para innovación tipo I (revolucionaria) y se busca innovación incremental efectiva"
       ],
-      "etiqueta_arbol": "Agranda, Achica o Combina"
+      "etiqueta_arbol": "Agranda, Achica o Combina",
+      "ids_alias": [
+        "tipos_innovacion_i_ii"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "tipos_innovacion_i_ii",
+          "titulo": "Dos Tipos de Innovación (Tipo I y Tipo II)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "innovacion_tras_control_estadistico": {
       "node_id": "innovacion_tras_control_estadistico",
@@ -67045,7 +67150,7 @@
         "organizacion_liderazgo_estadistico"
       ],
       "nodos_siguientes": [
-        "value_stream_mapping",
+        "mapeo_flujo_valor",
         "metodologia_6s",
         "kaizen_mejora_continua",
         "premio_shingo"
@@ -67130,7 +67235,7 @@
       ],
       "entregable_esperado": "Un plan con niveles de inventario optimizados y un sistema de conteo por ciclos en marcha",
       "nodos_previos": [
-        "value_stream_mapping"
+        "mapeo_flujo_valor"
       ],
       "nodos_siguientes": [
         "littles_law",
@@ -68588,7 +68693,7 @@
       "entregable_esperado": "Reporte de evento kaizen con mejoras implementadas y métricas de antes/después",
       "nodos_previos": [
         "introduccion_lean",
-        "value_stream_mapping",
+        "mapeo_flujo_valor",
         "pdsa_shewhart_cycle"
       ],
       "nodos_siguientes": [
@@ -69102,7 +69207,8 @@
         "Cuando tu negocio muestra resistencia constante a mejorar",
         "Cuando los 14 puntos no logran aplicarse pese a intentos repetidos"
       ],
-      "etiqueta_arbol": "Evita las Enfermedades Mortales de Gestión"
+      "etiqueta_arbol": "Evita las Enfermedades Mortales de Gestión",
+      "deprecado": true
     },
     "launch_phase_roadmap": {
       "node_id": "launch_phase_roadmap",
@@ -70764,7 +70870,7 @@
       ],
       "nodos_siguientes": [
         "limites_tolerancia_estadistica",
-        "funcion_perdida_taguchi"
+        "funcion_perdida_limites_especificacion"
       ],
       "condiciones_activacion": [
         "Cuando estás definiendo las especificaciones de diseño de un producto nuevo o un rediseño"
@@ -71140,7 +71246,7 @@
         "cese_dependencia_inspeccion_masiva",
         "fin_precio_como_criterio_unico",
         "cuestionario_autoevaluacion_gerencial_calidad",
-        "las_siete_enfermedades_mortales",
+        "enfermedades_mortales_gestion",
         "abolir_inspeccion_masiva"
       ],
       "condiciones_activacion": [
@@ -71303,7 +71409,7 @@
       "nodos_previos": [
         "programa_catorce_pasos_crosby",
         "zero_defects_concepto",
-        "programa_de_mejora_de_calidad"
+        "programa_mejora_calidad_14_pasos"
       ],
       "nodos_siguientes": [
         "eliminacion_causas_error"
@@ -71764,7 +71870,8 @@
         "Cuando se ha implementado una mejora y se requiere asegurar su sostenibilidad",
         "Cuando hay riesgo de rotación de personal que ponga en peligro los resultados"
       ],
-      "etiqueta_arbol": "Asegura tus Mejoras Logradas"
+      "etiqueta_arbol": "Asegura tus Mejoras Logradas",
+      "deprecado": true
     },
     "mantener_puntaje_innovacion": {
       "node_id": "mantener_puntaje_innovacion",
@@ -72420,16 +72527,19 @@
       "resumen_teorico": "El mapeo de flujo de valor documenta todas las actividades, con y sin valor agregado, necesarias para llevar un producto desde la concepción hasta la comercialización, incluyendo el flujo de materiales e información. Permite distinguir actividades de valor agregado, actividades sin valor agregado pero necesarias, y desperdicio puro mediante un análisis de descomposición del proceso. Se elabora primero un mapa del estado actual, registrando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y luego un mapa del estado futuro que incorpora las mejoras deseadas. Este par de mapas guía la implementación de cambios y sirve de base para definir mecanismos de control que verifiquen si el proceso avanza hacia el estado deseado.",
       "pasos_accionables": [
         "Repasa los conceptos clave de Lean y Value Stream Mapping antes de empezar",
-        "Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad",
+        "Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y el flujo actual de materiales e información en el proceso",
         "Clasifica cada actividad en valor agregado, no valor agregado pero necesaria, o desperdicio puro",
         "Diseña y documenta el mapa del estado futuro con las mejoras que quieres lograr",
-        "Implementa los cambios y define mecanismos de control para validar el avance contra el mapa futuro"
+        "Implementa los cambios y define mecanismos de control para validar el avance contra el mapa futuro",
+        "Registrar métricas de tiempo de ciclo y costo en cada etapa",
+        "Priorizar los problemas detectados como proyectos de mejora"
       ],
       "entregable_esperado": "Mapa de flujo de valor del estado actual y del estado futuro, con métricas de proceso, plan de implementación y mecanismos de control.",
       "nodos_previos": [
         "ocho_desperdicios_lean",
         "takt_time",
-        "planificacion_economica_conjunta"
+        "planificacion_economica_conjunta",
+        "introduccion_lean"
       ],
       "nodos_siguientes": [
         "sistema_pull_push",
@@ -72438,7 +72548,10 @@
         "tres_tipos_desperdicio_tps",
         "value_non_value_added_analysis",
         "takt_time_demand",
-        "kanban_pull_system"
+        "kanban_pull_system",
+        "constraint_management",
+        "inventory_analysis_lean",
+        "kaizen_mejora_continua"
       ],
       "condiciones_activacion": [
         "Cuando necesitas entender el estado actual de un proceso para identificar oportunidades de mejora",
@@ -72449,7 +72562,8 @@
       "etiqueta_arbol": "Documenta el Camino del Producto",
       "ids_alias": [
         "mapeo_flujo_valor_2",
-        "value_stream_mapping_2"
+        "value_stream_mapping_2",
+        "value_stream_mapping"
       ],
       "merged_originals": [
         {
@@ -72460,6 +72574,11 @@
         {
           "node_id": "value_stream_mapping_2",
           "titulo": "Value Stream Mapping (Distinguir Valor de Desperdicio)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "value_stream_mapping",
+          "titulo": "Value Stream Mapping (Métricas del Proceso)",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
         }
       ]
@@ -73551,8 +73670,8 @@
         "concepto_vs_tecnica",
         "filosofia_zero_defectos",
         "involucramiento_sindical_calidad",
-        "repeticion_programa",
-        "programa_de_mejora_de_calidad"
+        "reinicio_programa_calidad",
+        "programa_mejora_calidad_14_pasos"
       ],
       "nodos_siguientes": [
         "costo_de_calidad",
@@ -77744,7 +77863,7 @@
         "cultura_organizacional_calidad"
       ],
       "nodos_siguientes": [
-        "pensamiento_sistemico_rol_triple"
+        "teoria_triple_rol_sistemas_abiertos"
       ],
       "condiciones_activacion": [
         "Cuando la organización busca alcanzar un estado de excelencia sostenible a largo plazo",
@@ -81526,7 +81645,7 @@
       ],
       "nodos_siguientes": [
         "funciones_del_departamento_de_calidad",
-        "estilo_gerencial_hockey_vs_ballet",
+        "estilo_gerencial_ballet_vs_hockey",
         "logistica_inversa_retornos"
       ],
       "condiciones_activacion": [
@@ -83165,7 +83284,8 @@
         "Cuando se busca entender las interdependencias entre departamentos o funciones",
         "Cuando un cambio organizacional aislado ha generado más problemas de los que resolvió"
       ],
-      "etiqueta_arbol": "Sé Proveedor, Procesador y Cliente"
+      "etiqueta_arbol": "Sé Proveedor, Procesador y Cliente",
+      "deprecado": true
     },
     "pensamiento_visual": {
       "node_id": "pensamiento_visual",
@@ -91265,7 +91385,8 @@
           "titulo": "Los Catorce Pasos de Mejora de Calidad de Crosby",
           "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
         }
-      ]
+      ],
+      "deprecado": true
     },
     "programa_de_referidos_de_franquiciados": {
       "node_id": "programa_de_referidos_de_franquiciados",
@@ -91511,7 +91632,8 @@
         "Generar conciencia de calidad en todos los que trabajan contigo",
         "Aplicar acción correctiva de forma sistemática cuando detectes fallas",
         "Planificar y llevar a cabo un Día de Cero Defectos",
-        "Fijar metas, eliminar las causas de los errores, reconocer los logros y repetir el ciclo"
+        "Fijar metas, eliminar las causas de los errores, reconocer los logros y repetir el ciclo, entrenando a quienes coordinan equipos",
+        "Establece medidas de calidad en todas las areas, incluidas las que no son de producción, y calcula el costo de la calidad con apoyo de quien lleve tus números."
       ],
       "entregable_esperado": "Plan de implementación de los 14 pasos documentado con responsables y cronograma",
       "nodos_previos": [
@@ -91520,23 +91642,43 @@
         "costo_de_calidad_6",
         "costo_de_calidad_diagnostico",
         "definicion_calidad_conformidad_requisitos_2",
-        "estilo_gerencial_hockey_vs_ballet",
+        "estilo_gerencial_ballet_vs_hockey",
         "quality_management_maturity_grid_2",
         "definicion_calidad_conformidad",
-        "costo_de_mala_calidad_copq"
+        "costo_de_mala_calidad_copq",
+        "consejo_de_calidad_3",
+        "zero_defects_concepto"
       ],
       "nodos_siguientes": [
         "cero_defectos",
         "consejo_de_calidad",
         "eliminacion_causas_error",
         "accion_correctiva_sistematica",
-        "consejo_de_calidad_3"
+        "consejo_de_calidad_3",
+        "accion_correctiva",
+        "compromiso_gerencial_calidad",
+        "conciencia_calidad",
+        "consejos_de_calidad",
+        "equipo_mejora_calidad",
+        "make_certain_programa",
+        "medicion_calidad"
       ],
       "condiciones_activacion": [
         "Cuando decides formalizar un programa integral de mejora de calidad en tu negocio",
-        "Cuando buscas instalar una cultura de prevención en todo lo que haces"
+        "Cuando buscas instalar una cultura de prevención en todo lo que haces",
+        "Cuando buscas un marco estructurado en lugar de campanas motivacionales temporales."
       ],
-      "etiqueta_arbol": "Cumple los Catorce Pasos"
+      "etiqueta_arbol": "Cumple los Catorce Pasos",
+      "ids_alias": [
+        "programa_de_mejora_de_calidad"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "programa_de_mejora_de_calidad",
+          "titulo": "Programa de Mejora de Calidad (Los Catorce Pasos)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        }
+      ]
     },
     "programa_mentoria_proveedores": {
       "node_id": "programa_mentoria_proveedores",
@@ -94312,7 +94454,7 @@
       "pasos_accionables": [
         "Define el proyecto y sus metas claras",
         "Identifica a tus clientes internos y externos y descubre sus necesidades",
-        "Lista verticalmente esas necesidades y horizontalmente los medios técnicos para satisfacerlas",
+        "Lista verticalmente esas necesidades y horizontalmente los medios técnicos para satisfacerlas, desglosadas en niveles de especificidad, de lo general a lo particular",
         "Califica la relación entre cada necesidad y cada medio dentro de la matriz",
         "Encadena matrices sucesivas usando el cómo de una como el qué de la siguiente, hasta llegar a los controles de proceso",
         "Actualiza la matriz continuamente para hacer seguimiento del análisis de brechas y transferir los resultados a operaciones"
@@ -94323,7 +94465,8 @@
         "dfss_metodologia",
         "design_for_six_sigma_dmadv",
         "design_for_six_sigma_dmadv_2",
-        "design_for_six_sigma_dfss"
+        "design_for_six_sigma_dfss",
+        "descubrir_necesidades_del_cliente"
       ],
       "nodos_siguientes": [
         "design_scorecard",
@@ -94337,12 +94480,18 @@
       ],
       "etiqueta_arbol": "Traduce las Necesidades del Cliente",
       "ids_alias": [
-        "qfd_matriz_calidad"
+        "qfd_matriz_calidad",
+        "spreadsheet_diseno_para_la_calidad"
       ],
       "merged_originals": [
         {
           "node_id": "qfd_matriz_calidad",
           "titulo": "Quality Function Deployment (QFD) - Matriz de Planificación de Calidad",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "spreadsheet_diseno_para_la_calidad",
+          "titulo": "Hojas de cálculo de Diseño para la Calidad (QFD)",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
         }
       ]
@@ -97682,17 +97831,30 @@
       "entregable_esperado": "Plan de reinicio del programa de calidad con nuevo equipo asignado, cronograma anual y mecanismo de rotación de liderazgo",
       "nodos_previos": [
         "consejos_de_calidad",
-        "reconocimiento_al_desempeno"
+        "reconocimiento_al_desempeno",
+        "consejo_de_calidad_3"
       ],
       "nodos_siguientes": [
-        "programa_make_certain"
+        "programa_make_certain",
+        "estilo_gerencial_calidad",
+        "medicion_calidad"
       ],
       "condiciones_activacion": [
         "Cuando el equipo ha alcanzado las metas iniciales de reducción de costo de calidad",
         "Si existe riesgo de que el programa se abandone tras el éxito inicial",
         "Cuando se busca institucionalizar la mejora continua como cultura organizacional"
       ],
-      "etiqueta_arbol": "Hazlo de Nuevo, Siempre"
+      "etiqueta_arbol": "Hazlo de Nuevo, Siempre",
+      "ids_alias": [
+        "repeticion_programa"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "repeticion_programa",
+          "titulo": "Hacerlo de Nuevo (Paso 14)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        }
+      ]
     },
     "reinvencion_constante": {
       "node_id": "reinvencion_constante",
@@ -98319,7 +98481,8 @@
       "condiciones_activacion": [
         "Cuando el programa de calidad muestra señales de estancamiento o pérdida de impulso tras su primer ciclo"
       ],
-      "etiqueta_arbol": "Repite el Ciclo de Mejora"
+      "etiqueta_arbol": "Repite el Ciclo de Mejora",
+      "deprecado": true
     },
     "replicar_resultados": {
       "node_id": "replicar_resultados",
@@ -101445,7 +101608,8 @@
         "Cuando se necesita justificar financieramente la continuidad de un programa de mejora",
         "Cuando la dirección solicita evidencia cuantitativa del valor de las iniciativas de calidad"
       ],
-      "etiqueta_arbol": "Calcula el Retorno de Mejoras"
+      "etiqueta_arbol": "Calcula el Retorno de Mejoras",
+      "deprecado": true
     },
     "roi_proyectos_calidad": {
       "node_id": "roi_proyectos_calidad",
@@ -101459,21 +101623,37 @@
         "Estima la reducción de costos potencial si el proyecto tiene éxito",
         "Estima los costos de diagnóstico e implementación del remedio",
         "Calcula el ROI como la razón entre la ganancia estimada y los recursos necesarios",
-        "Revisa el cálculo con la persona que te ayuda con las finanzas para que el número sea sólido antes de decidir"
+        "Revisa el cálculo con la persona que te ayuda con las finanzas para que el número sea sólido antes de decidir",
+        "Documentar el ROI del proyecto para reportarlo a la dirección",
+        "Usar casos de éxito (benchmarks como Samsung Six Sigma) para justificar la inversión continua en breakthrough"
       ],
       "entregable_esperado": "Un cálculo de ROI documentado y validado para el proyecto de mejora propuesto, listo para que decidas si vale la pena avanzar",
       "nodos_previos": [
         "estrategias_estimacion_costos",
-        "pruning_portafolio"
+        "pruning_portafolio",
+        "costo_de_mala_calidad_copq",
+        "inhibidores_del_breakthrough"
       ],
       "nodos_siguientes": [
         "seleccion_proyectos_six_sigma_basada_en_copq"
       ],
       "condiciones_activacion": [
         "Cuando necesitas decidir si vale la pena lanzar un proyecto de mejora importante",
-        "Cuando comparas invertir en calidad contra otras opciones para tu negocio"
+        "Cuando comparas invertir en calidad contra otras opciones para tu negocio",
+        "Cuando se necesita justificar financieramente la continuidad de un programa de mejora",
+        "Cuando la dirección solicita evidencia cuantitativa del valor de las iniciativas de calidad"
       ],
-      "etiqueta_arbol": "Calcula el Retorno de Calidad"
+      "etiqueta_arbol": "Calcula el Retorno de Calidad",
+      "ids_alias": [
+        "roi_breakthrough"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "roi_breakthrough",
+          "titulo": "Retorno de Inversión (ROI) de Proyectos de Breakthrough",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "rol_alta_direccion_benchmarking": {
       "node_id": "rol_alta_direccion_benchmarking",
@@ -101561,7 +101741,8 @@
       "condiciones_activacion": [
         "Si buscas institucionalizar breakthrough a gran escala en tu negocio"
       ],
-      "etiqueta_arbol": "Nombra tu Experto en Mejora"
+      "etiqueta_arbol": "Nombra tu Experto en Mejora",
+      "deprecado": true
     },
     "rol_black_belt_six_sigma": {
       "node_id": "rol_black_belt_six_sigma",
@@ -101574,23 +101755,39 @@
         "Elige a alguien con potencial de liderazgo y conocimiento técnico para que asuma el rol de Black Belt",
         "Dale una capacitación intensiva en 4 sesiones semanales, con intervalos para que aplique lo aprendido en la práctica",
         "Asígnale proyectos con un objetivo de retorno mínimo de $250,000",
-        "Acuerda con esa persona cómo te va a asesorar en la priorización y el lanzamiento de proyectos"
+        "Acuerda con esa persona cómo te va a asesorar en la priorización y el lanzamiento de proyectos",
+        "Definir responsabilidades de coordinación entre equipos y análisis complejos",
+        "Certificar competencias mediante organismos reconocidos en tu mercado, como ASQ"
       ],
       "entregable_esperado": "Cuentas con una persona certificada como Black Belt, liderando activamente proyectos de mejora con métricas de retorno definidas",
       "nodos_previos": [
         "mejora_continua_del_proceso",
-        "roadmap_despliegue_lean_six_sigma"
+        "roadmap_despliegue_lean_six_sigma",
+        "rol_facilitador_equipos_mejora"
       ],
       "nodos_siguientes": [
         "rol_green_belt_six_sigma",
         "dmaic_fase_select",
-        "roles_equipo_proyecto_six_sigma"
+        "roles_equipo_proyecto_six_sigma",
+        "certificacion_belts_six_sigma",
+        "entrenamiento_para_breakthrough"
       ],
       "condiciones_activacion": [
         "Cuando decides implementar Six Sigma como método de mejora en tu negocio",
-        "Cuando necesitas liderazgo técnico especializado para proyectos de alto impacto financiero"
+        "Cuando necesitas liderazgo técnico especializado para proyectos de alto impacto financiero",
+        "Si buscas institucionalizar breakthrough a gran escala en tu negocio"
       ],
-      "etiqueta_arbol": "Asigna tu Experto Six Sigma"
+      "etiqueta_arbol": "Asigna tu Experto Six Sigma",
+      "ids_alias": [
+        "rol_black_belt"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "rol_black_belt",
+          "titulo": "Rol del Black Belt en Six Sigma (Especialista en Breakthrough)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "rol_de_la_fuerza_laboral_en_calidad": {
       "node_id": "rol_de_la_fuerza_laboral_en_calidad",
@@ -101740,7 +101937,7 @@
         "concepto_proyecto_breakthrough"
       ],
       "nodos_siguientes": [
-        "rol_black_belt",
+        "rol_black_belt_six_sigma",
         "diagnostico_antes_remedio"
       ],
       "condiciones_activacion": [
@@ -102687,7 +102884,7 @@
         "fitness_for_use_purpose"
       ],
       "nodos_siguientes": [
-        "descubrir_necesidades_cliente"
+        "descubrir_necesidades_del_cliente"
       ],
       "condiciones_activacion": [
         "Cuando los resultados de encuestas de satisfacción no correlacionan con ventas o lealtad",
@@ -107276,8 +107473,7 @@
       "entregable_esperado": "Sistema de produccion rediseñado bajo logica pull con kanbans implementados y metricas de flujo mejoradas.",
       "nodos_previos": [
         "mapeo_flujo_valor",
-        "tres_tipos_desperdicio_tps",
-        "value_stream_mapping"
+        "tres_tipos_desperdicio_tps"
       ],
       "nodos_siguientes": [
         "eventos_kaizen_rie",
@@ -107918,7 +108114,7 @@
       "entregable_esperado": "Un proyecto Six Sigma DMAIC completado con métricas de sigma level, causas raíz identificadas, soluciones implementadas y un plan de control documentado",
       "nodos_previos": [
         "mistake_proofing_poka_yoke",
-        "descubrir_necesidades_cliente",
+        "descubrir_necesidades_del_cliente",
         "error_proofing_servicio"
       ],
       "nodos_siguientes": [
@@ -108244,22 +108440,35 @@
         "Diseñar e implementar controles formales y documentados",
         "Aplicar técnicas de a prueba de errores (mistake-proofing) donde sea posible",
         "Establecer un programa de entrenamiento formal para nuevos empleados",
-        "Auditar periódicamente que los controles se estén cumpliendo",
-        "Documentar el plan de control por escrito para evitar dependencia de la memoria individual"
+        "Auditar periódicamente que los controles se estén cumpliendo, con responsables de supervisión que verifiquen el cumplimiento del control",
+        "Documentar el plan de control por escrito para evitar dependencia de la memoria individual",
+        "Revisar el sistema tras rotación de personal para asegurar continuidad"
       ],
       "entregable_esperado": "Plan de control documentado, auditado periódicamente, con programa de entrenamiento asociado",
       "nodos_previos": [
         "viaje_diagnostico_remedial",
-        "six_sigma_dmaic"
+        "six_sigma_dmaic",
+        "analisis_causa_raiz_diagnostico"
       ],
       "nodos_siguientes": [
-        "replicar_resultados"
+        "replicar_resultados",
+        "trilogia_de_juran"
       ],
       "condiciones_activacion": [
         "Cuando se ha implementado un remedio exitoso y se requiere asegurar su permanencia en el tiempo",
         "Cuando hay rotación de personal que podría erosionar las mejoras logradas"
       ],
-      "etiqueta_arbol": "Sostén las Mejoras Logradas"
+      "etiqueta_arbol": "Sostén las Mejoras Logradas",
+      "ids_alias": [
+        "mantener_las_ganancias"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "mantener_las_ganancias",
+          "titulo": "Mantener las Ganancias (Hold the Gains)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "sostenibilidad_agil": {
       "node_id": "sostenibilidad_agil",
@@ -108513,7 +108722,8 @@
       "condiciones_activacion": [
         "Cuando ya tienes una lista de necesidades del cliente y necesitas traducirlas en especificaciones de diseño de producto y de proceso"
       ],
-      "etiqueta_arbol": "Organiza tu Diseño de Calidad"
+      "etiqueta_arbol": "Organiza tu Diseño de Calidad",
+      "deprecado": true
     },
     "sprint_board_burn_down": {
       "node_id": "sprint_board_burn_down",
@@ -109510,7 +109720,7 @@
         "eliminacion_estandares_trabajo"
       ],
       "nodos_siguientes": [
-        "eliminacion_pago_destajo"
+        "eliminar_trabajo_a_destajo"
       ],
       "condiciones_activacion": [
         "Cuando los supervisores solo vigilan cumplimiento de metas sin entender el proceso"
@@ -109785,7 +109995,6 @@
       "nodos_previos": [
         "ocho_desperdicios",
         "lean_manufacturing",
-        "value_stream_mapping",
         "value_stream_mapping_2",
         "ocho_desperdicios_lean"
       ],
@@ -110912,13 +111121,13 @@
       "resumen_teorico": "Modelo organizacional donde cada función, departamento o individuo actúa simultáneamente como proveedor, procesador y cliente. Las organizaciones son sistemas abiertos cuya vida depende de transacciones exitosas con el entorno externo y de la coordinación adecuada de sus funciones internas. Los roles se mantienen mediante expectativas mutuas (especificaciones, órdenes de trabajo) y retroalimentación (quejas, reportes de calidad, reconocimientos).",
       "pasos_accionables": [
         "Mapear las transacciones repetitivas entre proveedores, procesadores y clientes en cada proceso clave",
-        "Identificar expectativas mutuas explícitas (especificaciones, procedimientos) entre cada par de roles",
-        "Establecer bucles de retroalimentación claros para medir cumplimiento de expectativas",
+        "Identificar expectativas mutuas explícitas (especificaciones, procedimientos) entre cada par de roles, estableciendo canales claros de comunicación de requisitos entre proveedor y procesador",
+        "Establecer bucles de retroalimentación claros para medir cumplimiento de expectativas, entre cliente y procesador",
         "Aplicar pensamiento sistémico antes de implementar cualquier cambio, evaluando el impacto en todas las funciones interrelacionadas"
       ],
       "entregable_esperado": "Mapa de roles triples (proveedor-procesador-cliente) con expectativas y mecanismos de retroalimentación documentados para los procesos críticos de la organización",
       "nodos_previos": [
-        "pensamiento_sistemico_rol_triple"
+        "modelo_transformacion_juran"
       ],
       "nodos_siguientes": [
         "planificacion_estrategica_despliegue",
@@ -110926,9 +111135,20 @@
       ],
       "condiciones_activacion": [
         "Cuando se necesita diagnosticar causas raíz de defectos o errores que cruzan múltiples funciones",
-        "Cuando se busca implementar breakthroughs organizacionales que requieren pensamiento sistémico"
+        "Cuando se busca implementar breakthroughs organizacionales que requieren pensamiento sistémico",
+        "Cuando un cambio organizacional aislado ha generado más problemas de los que resolvió"
       ],
-      "etiqueta_arbol": "Asume tu Triple Rol"
+      "etiqueta_arbol": "Asume tu Triple Rol",
+      "ids_alias": [
+        "pensamiento_sistemico_rol_triple"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "pensamiento_sistemico_rol_triple",
+          "titulo": "Pensamiento Sistémico y el Rol Triple (Proveedor-Procesador-Cliente)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "term_sheet_disposiciones_vinculantes": {
       "node_id": "term_sheet_disposiciones_vinculantes",
@@ -112070,7 +112290,8 @@
         "Cuando se busca superar el bloqueo creativo mediante un método estructurado",
         "Cuando no se dispone de recursos para innovación tipo I (revolucionaria) y se busca innovación incremental efectiva"
       ],
-      "etiqueta_arbol": "Elige tu Tipo de Innovación"
+      "etiqueta_arbol": "Elige tu Tipo de Innovación",
+      "deprecado": true
     },
     "tipos_planes_muestreo_atributos_variables": {
       "node_id": "tipos_planes_muestreo_atributos_variables",
@@ -113473,7 +113694,7 @@
         "costo_de_mala_calidad_copq_2",
         "enfoques_gurus_calidad",
         "vacios_conocimiento_cliente",
-        "mantener_las_ganancias"
+        "sostener_las_ganancias"
       ],
       "nodos_siguientes": [
         "doble_significado_calidad",
@@ -115228,9 +115449,8 @@
       ],
       "entregable_esperado": "Tabla de clasificación VA/NVA de todos los pasos del proceso con plan de eliminación de desperdicio",
       "nodos_previos": [
-        "value_stream_mapping",
-        "value_stream_mapping_2",
-        "mapeo_flujo_valor"
+        "mapeo_flujo_valor",
+        "value_stream_mapping_2"
       ],
       "nodos_siguientes": [
         "constraint_management",
@@ -115412,14 +115632,14 @@
         "pull_vs_push_systems",
         "takt_time_demand",
         "value_non_value_added_analysis",
-        "sistema_pull_push",
-        "takt_time"
+        "sistema_pull_push"
       ],
       "condiciones_activacion": [
         "Cuando se necesita visibilidad completa de un proceso para identificar cuellos de botella",
         "Cuando se inicia un proyecto de mejora de procesos bajo enfoque Lean"
       ],
-      "etiqueta_arbol": "Mide tu Flujo de Valor"
+      "etiqueta_arbol": "Mide tu Flujo de Valor",
+      "deprecado": true
     },
     "value_stream_mapping_2": {
       "node_id": "value_stream_mapping_2",
@@ -117972,7 +118192,7 @@
         "eliminacion_causas_error_3",
         "make_certain_programa",
         "eliminacion_causas_error_4",
-        "programa_de_mejora_de_calidad"
+        "programa_mejora_calidad_14_pasos"
       ],
       "condiciones_activacion": [
         "Cuando usas niveles de calidad aceptables como estándar",
@@ -125723,7 +125943,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 163,
+    "nodos_sin_enlaces_entrantes": 176,
     "enlaces_rotos_en_grafo": 0
   }
 }
