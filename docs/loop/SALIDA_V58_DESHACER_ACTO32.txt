@@ -1,0 +1,43 @@
+==============================================================================
+DESHACER EL ACTO 32 DEL TRAMO 4 . MODO EJECUTAR
+==============================================================================
+
+  ficheros de nodos que el lote B (a1d7269d) toco: 54
+  de esos, los que el ACTO 32 toco: 5
+     dataset/nodos/estrategia_redes_sociales_franquicias.json
+     dataset/nodos/principio_apalancamiento_numero_magico.json
+     dataset/nodos/programa_de_referidos_de_franquiciados.json
+     dataset/nodos/referidos_franquiciados_existentes.json
+     dataset/nodos/soporte_continuo_franquicia.json
+  el alcance medido calza con el declarado: SI
+
+  tocados DESPUES del lote B (van por PARCHE INVERSO): 1
+     dataset/nodos/principio_apalancamiento_numero_magico.json
+        lo movio: 706397c7 VUELTA 57, LOTE C DEL TRAMO 4: LOS DIECISEIS QUE QUEDABAN, SIN APARTAR NINGUNO, Y CUATRO ACTOS DONDE LA PIEZA DECLARADA GANA A UN CONTEO
+  la clasificacion medida calza con la declarada: SI
+
+  los cinco, sucios en el arbol de trabajo: 0 []
+
+  parche inverso de principio_apalancamiento_numero_magico.json: APLICA LIMPIO
+
+  ESTADO DE HOY, antes de deshacer:
+     referidos_franquiciados_existentes         deprecado False  pasos 6 cond 3 ids_alias ['programa_de_referidos_de_franquiciados']
+     programa_de_referidos_de_franquiciados     deprecado True   pasos 5 cond 2 ids_alias None
+
+  RESTAURADOS al blob de 0481113f: 4 ficheros
+  PARCHE INVERSO aplicado a principio_apalancamiento_numero_magico.json
+
+  ESTADO TRAS DESHACER:
+     referidos_franquiciados_existentes         vivo True   pasos 5 cond 2 ids_alias []
+        campo a campo contra el blob pre fusion 0481113f: IDENTICO
+     programa_de_referidos_de_franquiciados     vivo True   pasos 5 cond 2 ids_alias []
+        campo a campo contra el blob pre fusion 0481113f: IDENTICO
+  LOS DOS VIVOS, SIN ALIAS CRUZADO Y CON SUS CAMPOS INTACTOS: SI
+
+  LOS TRES VECINOS, EL CABLEADO DE VUELTA:
+     estrategia_redes_sociales_franquicias.json           al absorbido 1 | al superviviente 0
+     principio_apalancamiento_numero_magico.json          al absorbido 1 | al superviviente 0
+     soporte_continuo_franquicia.json                     al absorbido 1 | al superviviente 0
+  EL CABLEADO VUELVE AL ABSORBIDO EN LOS TRES: SI
+
+FIN
