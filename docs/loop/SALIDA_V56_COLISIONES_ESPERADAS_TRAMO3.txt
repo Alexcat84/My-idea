@@ -1,0 +1,374 @@
+==============================================================================
+COLISIONES DE CLASE ESPERADAS DEL TRAMO 3, SOBRE EL ARCHIVO ENTERO
+nomina: docs/loop/RECOMPUTO_V56_APERTURA.jsonl | tramo: docs/loop/TRAMO3_V56.jsonl | actos: 50
+colisiones VIGENTES antes de tocar nada: 0
+==============================================================================
+
+--- ACTO 1 del tramo 3  tam 2  FUSION PURA
+      miembros: diseno_de_experiencias_participativas, economia_de_la_experiencia
+      SUPERVIVIENTE diseno_de_experiencias_participativas          mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE economia_de_la_experiencia                     mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 2 del tramo 3  tam 2  FUSION PURA
+      miembros: evaluacion_vp_ventas, framework_evaluacion_director_ventas
+      SUPERVIVIENTE evaluacion_vp_ventas                           mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE framework_evaluacion_director_ventas           mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 3 del tramo 3  tam 2  FUSION PURA
+      miembros: plan_a_b_c_soft_landing, restructuracion_deuda_soft_landing
+      SUPERVIVIENTE plan_a_b_c_soft_landing                        mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE restructuracion_deuda_soft_landing             mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 4 del tramo 3  tam 2  FUSION PURA
+      miembros: publicidad_offline_pruebas_locales, tracking_publicidad_offline
+      SUPERVIVIENTE publicidad_offline_pruebas_locales             mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE tracking_publicidad_offline                    mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 5 del tramo 3  tam 2  FUSION PURA
+      miembros: desarrollo_presentacion_problema, presentacion_problema_tres_columnas
+      SUPERVIVIENTE desarrollo_presentacion_problema               mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE presentacion_problema_tres_columnas            mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 6 del tramo 3  tam 2  FUSION PURA
+      miembros: gamificacion_onboarding_visual, visualizacion_progreso_onboarding
+      SUPERVIVIENTE gamificacion_onboarding_visual                 mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE visualizacion_progreso_onboarding              mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 7 del tramo 3  tam 2  FUSION PURA
+      miembros: construir_sobre_ideas_ajenas, reglas_brainstorming
+      SUPERVIVIENTE construir_sobre_ideas_ajenas                   mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE reglas_brainstorming                           mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 8 del tramo 3  tam 2  FUSION PURA
+      miembros: five_whys_inversion_proporcional, tecnica_cinco_porques
+      SUPERVIVIENTE five_whys_inversion_proporcional               mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE tecnica_cinco_porques                          mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 9 del tramo 3  tam 2  FUSION PURA
+      miembros: fase_accomplish, fase_accomplish_experiencia_cliente
+      SUPERVIVIENTE fase_accomplish                                mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE fase_accomplish_experiencia_cliente            mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 10 del tramo 3  tam 2  FUSION PURA
+      miembros: acquisicion_viral_engineering, herramientas_adquisicion_viral
+      SUPERVIVIENTE acquisicion_viral_engineering                  mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE herramientas_adquisicion_viral                 mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 11 del tramo 3  tam 2  FUSION PURA
+      miembros: ficcion_especulativa_como_metodo, historia_del_futuro_escenarios_especulativos
+      SUPERVIVIENTE ficcion_especulativa_como_metodo               mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE historia_del_futuro_escenarios_especulativos   mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 12 del tramo 3  tam 2  FUSION PURA
+      miembros: analisis_disrupciones_mercado, evaluacion_industria_cliente
+      SUPERVIVIENTE analisis_disrupciones_mercado                  mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE evaluacion_industria_cliente                   mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 13 del tramo 3  tam 2  FUSION PURA
+      miembros: alineacion_cadena_estrategia_negocio, definicion_alineacion_cadena_suministro
+      SUPERVIVIENTE alineacion_cadena_estrategia_negocio           mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE definicion_alineacion_cadena_suministro        mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 14 del tramo 3  tam 2  FUSION PURA
+      miembros: creacion_data_warehouse, data_warehouse_como_fundamento
+      SUPERVIVIENTE creacion_data_warehouse                        mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE data_warehouse_como_fundamento                 mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 15 del tramo 3  tam 2  FUSION PURA
+      miembros: ciclo_de_conversion_de_efectivo, dso_dpo_gestion_capital_trabajo
+      SUPERVIVIENTE ciclo_de_conversion_de_efectivo                mixtos 0 | colisiones DENTRO 0, FUERA 1
+          [FUERA DEL ACTO] ciclo_de_conversion_de_efectivo contra gestion_cuentas_por_pagar_dpo
+              puesto 203    C | crudo: dso_dpo_gestion_capital_trabajo + gestion_cuentas_por_pagar_dpo
+              puesto 813    D | crudo: ciclo_de_conversion_de_efectivo + gestion_cuentas_por_pagar_dpo
+      SUPERVIVIENTE dso_dpo_gestion_capital_trabajo                mixtos 0 | colisiones DENTRO 0, FUERA 1
+          [FUERA DEL ACTO] dso_dpo_gestion_capital_trabajo contra gestion_cuentas_por_pagar_dpo
+              puesto 203    C | crudo: dso_dpo_gestion_capital_trabajo + gestion_cuentas_por_pagar_dpo
+              puesto 813    D | crudo: ciclo_de_conversion_de_efectivo + gestion_cuentas_por_pagar_dpo
+
+--- ACTO 16 del tramo 3  tam 2  FUSION PURA
+      miembros: fase_mobilizacion_equipo_multifuncional, fase_mobilizar_modelo_negocio
+      SUPERVIVIENTE fase_mobilizacion_equipo_multifuncional        mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE fase_mobilizar_modelo_negocio                  mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 17 del tramo 3  tam 2  FUSION PURA
+      miembros: community_building_estrategia, construccion_de_comunidad_como_canal_traccion
+      SUPERVIVIENTE community_building_estrategia                  mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE construccion_de_comunidad_como_canal_traccion  mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 18 del tramo 3  tam 2  FUSION PURA
+      miembros: embudo_secuencial_de_inversores, seleccion_etapa_fondo_vc
+      SUPERVIVIENTE embudo_secuencial_de_inversores                mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE seleccion_etapa_fondo_vc                       mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 19 del tramo 3  tam 2  FUSION PURA
+      miembros: eleccion_estructura_vesting_founder, vesting_acciones_fundadores
+      SUPERVIVIENTE eleccion_estructura_vesting_founder            mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE vesting_acciones_fundadores                    mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 20 del tramo 3  tam 2  FUSION PURA
+      miembros: diversidad_vs_homogeneidad_equipo, homogeneidad_vs_diversidad_equipo
+      SUPERVIVIENTE diversidad_vs_homogeneidad_equipo              mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE homogeneidad_vs_diversidad_equipo              mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 21 del tramo 3  tam 2  FUSION PURA
+      miembros: ia_colaborador_productividad, ia_como_nivelador_habilidades
+      SUPERVIVIENTE ia_colaborador_productividad                   mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE ia_como_nivelador_habilidades                  mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 22 del tramo 3  tam 2  FUSION PURA
+      miembros: auditoria_desempeno_new_products, mantener_puntaje_innovacion
+      SUPERVIVIENTE auditoria_desempeno_new_products               mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE mantener_puntaje_innovacion                    mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 23 del tramo 3  tam 2  FUSION PURA
+      miembros: duration_estimating_worksheet, estimacion_tres_puntos
+      SUPERVIVIENTE duration_estimating_worksheet                  mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE estimacion_tres_puntos                         mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 24 del tramo 3  tam 2  FUSION PURA
+      miembros: eventos_offline_como_canal_traccion, eventos_offline_propios
+      SUPERVIVIENTE eventos_offline_como_canal_traccion            mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE eventos_offline_propios                        mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 25 del tramo 3  tam 2  FUSION PURA
+      miembros: genchi_gembutsu, genchi_gembutsu_salir_del_edificio
+      SUPERVIVIENTE genchi_gembutsu                                mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE genchi_gembutsu_salir_del_edificio             mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 26 del tramo 3  tam 2  FUSION PURA
+      miembros: flexible_go_kill_criteria, technology_platform_evaluation
+      SUPERVIVIENTE flexible_go_kill_criteria                      mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE technology_platform_evaluation                 mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 27 del tramo 3  tam 2  FUSION PURA
+      miembros: decision_pivote_perseverar, pivotar_o_perseverar
+      SUPERVIVIENTE decision_pivote_perseverar                     mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE pivotar_o_perseverar                           mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 28 del tramo 3  tam 2  FUSION PURA
+      miembros: simulacion_de_operaciones_supply_chain, simulacion_diseno_cadena_suministro
+      SUPERVIVIENTE simulacion_de_operaciones_supply_chain         mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE simulacion_diseno_cadena_suministro            mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 29 del tramo 3  tam 2  FUSION PURA
+      miembros: colaboracion_transporte_ctm, collaborative_transportation_management
+      SUPERVIVIENTE colaboracion_transporte_ctm                    mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE collaborative_transportation_management        mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 30 del tramo 3  tam 2  FUSION PURA
+      miembros: customer_development_vs_business_plan, search_for_business_model
+      SUPERVIVIENTE customer_development_vs_business_plan          mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE search_for_business_model                      mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 31 del tramo 3  tam 2  FUSION PURA
+      miembros: anticipar_consecuencias_negativas, planificacion_consecuencias_no_intencionadas
+      SUPERVIVIENTE anticipar_consecuencias_negativas              mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE planificacion_consecuencias_no_intencionadas   mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 32 del tramo 3  tam 2  FUSION PURA
+      miembros: estrategia_multicanal_bienvenida, seis_medios_comunicacion_cliente
+      SUPERVIVIENTE estrategia_multicanal_bienvenida               mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE seis_medios_comunicacion_cliente               mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 33 del tramo 3  tam 2  FUSION PURA
+      miembros: intellectual_property_strategy, proteccion_propiedad_intelectual
+      SUPERVIVIENTE intellectual_property_strategy                 mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE proteccion_propiedad_intelectual               mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 34 del tramo 3  tam 2  FUSION PURA
+      miembros: aprendizaje_validado_vs_metricas_vanidad, metricas_accionables
+      SUPERVIVIENTE aprendizaje_validado_vs_metricas_vanidad       mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE metricas_accionables                           mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 35 del tramo 3  tam 2  FUSION PURA
+      miembros: alineacion_de_objetivos_en_sistemas, diseno_de_sistemas_a_escala
+      SUPERVIVIENTE alineacion_de_objetivos_en_sistemas            mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE diseno_de_sistemas_a_escala                    mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 36 del tramo 3  tam 2  FUSION PURA
+      miembros: control_voluntario_del_pensamiento, esfuerzo_voluntario_vs_urge_espontaneo
+      SUPERVIVIENTE control_voluntario_del_pensamiento             mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE esfuerzo_voluntario_vs_urge_espontaneo         mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 37 del tramo 3  tam 2  FUSION PURA
+      miembros: seis_herramientas_comunicacion_celebracion, seis_herramientas_comunicacion_fase_activate
+      SUPERVIVIENTE seis_herramientas_comunicacion_celebracion     mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE seis_herramientas_comunicacion_fase_activate   mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 38 del tramo 3  tam 2  FUSION PURA
+      miembros: cuatro_etapas_del_pensamiento_creativo, wallas_etapa_iluminacion
+      SUPERVIVIENTE cuatro_etapas_del_pensamiento_creativo         mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE wallas_etapa_iluminacion                       mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 39 del tramo 3  tam 2  FUSION PURA
+      miembros: observar_lo_ordinario, practica_de_observacion_atenta
+      SUPERVIVIENTE observar_lo_ordinario                          mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE practica_de_observacion_atenta                 mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 40 del tramo 3  tam 2  FUSION PURA
+      miembros: bullseye_framework, middle_ring_testing
+      SUPERVIVIENTE bullseye_framework                             mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE middle_ring_testing                            mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 41 del tramo 3  tam 2  FUSION PURA
+      miembros: diseno_consecuencias_no_intencionadas, diseno_fugitivo_runaway_design
+      SUPERVIVIENTE diseno_consecuencias_no_intencionadas          mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE diseno_fugitivo_runaway_design                 mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 42 del tramo 3  tam 2  FUSION PURA
+      miembros: arquitectura_flexible_soa, arquitectura_tecnica_modular
+      SUPERVIVIENTE arquitectura_flexible_soa                      mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE arquitectura_tecnica_modular                   mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 43 del tramo 3  tam 2  FUSION PURA
+      miembros: entrenamiento_empleados_startup, entrenamiento_funcional_empleados
+      SUPERVIVIENTE entrenamiento_empleados_startup                mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE entrenamiento_funcional_empleados              mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 44 del tramo 3  tam 2  FUSION PURA
+      miembros: convertir_necesidad_en_demanda, insight_observacion_empatia
+      SUPERVIVIENTE convertir_necesidad_en_demanda                 mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE insight_observacion_empatia                    mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 45 del tramo 3  tam 2  FUSION PURA
+      miembros: framework_flujos_de_datos_ppp, framework_ppph_flujos
+      SUPERVIVIENTE framework_flujos_de_datos_ppp                  mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE framework_ppph_flujos                          mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 46 del tramo 3  tam 2  FUSION PURA
+      miembros: business_model_canvas_scorecard, business_model_canvas_vs_plan
+      SUPERVIVIENTE business_model_canvas_scorecard                mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE business_model_canvas_vs_plan                  mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 47 del tramo 3  tam 2  FUSION PURA
+      miembros: bucle_retroalimentacion_autoajustable, ciclos_retroalimentacion_autoajuste
+      SUPERVIVIENTE bucle_retroalimentacion_autoajustable          mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE ciclos_retroalimentacion_autoajuste            mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 48 del tramo 3  tam 2  FUSION PURA
+      miembros: evitar_greenwashing, evitar_greenwashing_2
+      SUPERVIVIENTE evitar_greenwashing                            mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE evitar_greenwashing_2                          mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 49 del tramo 3  tam 2  FUSION PURA
+      miembros: contabilidad_ambiental, herramientas_contabilidad_ambiental
+      SUPERVIVIENTE contabilidad_ambiental                         mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE herramientas_contabilidad_ambiental            mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+--- ACTO 50 del tramo 3  tam 2  FUSION PURA
+      miembros: reduccion_cargas_cumplimiento, reduccion_cargas_regulatorias
+      SUPERVIVIENTE reduccion_cargas_cumplimiento                  mixtos 0 | colisiones DENTRO 0, FUERA 0
+      SUPERVIVIENTE reduccion_cargas_regulatorias                  mixtos 0 | colisiones DENTRO 0, FUERA 0
+
+==============================================================================
+RESUMEN: acto del tramo 3, superviviente, mixtos, colisiones dentro y fuera
+==============================================================================
+  acto 1    diseno_de_experiencias_participativas                mixtos 0  dentro 0  fuera 0
+  acto 1    economia_de_la_experiencia                           mixtos 0  dentro 0  fuera 0
+  acto 2    evaluacion_vp_ventas                                 mixtos 0  dentro 0  fuera 0
+  acto 2    framework_evaluacion_director_ventas                 mixtos 0  dentro 0  fuera 0
+  acto 3    plan_a_b_c_soft_landing                              mixtos 0  dentro 0  fuera 0
+  acto 3    restructuracion_deuda_soft_landing                   mixtos 0  dentro 0  fuera 0
+  acto 4    publicidad_offline_pruebas_locales                   mixtos 0  dentro 0  fuera 0
+  acto 4    tracking_publicidad_offline                          mixtos 0  dentro 0  fuera 0
+  acto 5    desarrollo_presentacion_problema                     mixtos 0  dentro 0  fuera 0
+  acto 5    presentacion_problema_tres_columnas                  mixtos 0  dentro 0  fuera 0
+  acto 6    gamificacion_onboarding_visual                       mixtos 0  dentro 0  fuera 0
+  acto 6    visualizacion_progreso_onboarding                    mixtos 0  dentro 0  fuera 0
+  acto 7    construir_sobre_ideas_ajenas                         mixtos 0  dentro 0  fuera 0
+  acto 7    reglas_brainstorming                                 mixtos 0  dentro 0  fuera 0
+  acto 8    five_whys_inversion_proporcional                     mixtos 0  dentro 0  fuera 0
+  acto 8    tecnica_cinco_porques                                mixtos 0  dentro 0  fuera 0
+  acto 9    fase_accomplish                                      mixtos 0  dentro 0  fuera 0
+  acto 9    fase_accomplish_experiencia_cliente                  mixtos 0  dentro 0  fuera 0
+  acto 10   acquisicion_viral_engineering                        mixtos 0  dentro 0  fuera 0
+  acto 10   herramientas_adquisicion_viral                       mixtos 0  dentro 0  fuera 0
+  acto 11   ficcion_especulativa_como_metodo                     mixtos 0  dentro 0  fuera 0
+  acto 11   historia_del_futuro_escenarios_especulativos         mixtos 0  dentro 0  fuera 0
+  acto 12   analisis_disrupciones_mercado                        mixtos 0  dentro 0  fuera 0
+  acto 12   evaluacion_industria_cliente                         mixtos 0  dentro 0  fuera 0
+  acto 13   alineacion_cadena_estrategia_negocio                 mixtos 0  dentro 0  fuera 0
+  acto 13   definicion_alineacion_cadena_suministro              mixtos 0  dentro 0  fuera 0
+  acto 14   creacion_data_warehouse                              mixtos 0  dentro 0  fuera 0
+  acto 14   data_warehouse_como_fundamento                       mixtos 0  dentro 0  fuera 0
+  acto 15   ciclo_de_conversion_de_efectivo                      mixtos 0  dentro 0  fuera 1
+  acto 15   dso_dpo_gestion_capital_trabajo                      mixtos 0  dentro 0  fuera 1
+  acto 16   fase_mobilizacion_equipo_multifuncional              mixtos 0  dentro 0  fuera 0
+  acto 16   fase_mobilizar_modelo_negocio                        mixtos 0  dentro 0  fuera 0
+  acto 17   community_building_estrategia                        mixtos 0  dentro 0  fuera 0
+  acto 17   construccion_de_comunidad_como_canal_traccion        mixtos 0  dentro 0  fuera 0
+  acto 18   embudo_secuencial_de_inversores                      mixtos 0  dentro 0  fuera 0
+  acto 18   seleccion_etapa_fondo_vc                             mixtos 0  dentro 0  fuera 0
+  acto 19   eleccion_estructura_vesting_founder                  mixtos 0  dentro 0  fuera 0
+  acto 19   vesting_acciones_fundadores                          mixtos 0  dentro 0  fuera 0
+  acto 20   diversidad_vs_homogeneidad_equipo                    mixtos 0  dentro 0  fuera 0
+  acto 20   homogeneidad_vs_diversidad_equipo                    mixtos 0  dentro 0  fuera 0
+  acto 21   ia_colaborador_productividad                         mixtos 0  dentro 0  fuera 0
+  acto 21   ia_como_nivelador_habilidades                        mixtos 0  dentro 0  fuera 0
+  acto 22   auditoria_desempeno_new_products                     mixtos 0  dentro 0  fuera 0
+  acto 22   mantener_puntaje_innovacion                          mixtos 0  dentro 0  fuera 0
+  acto 23   duration_estimating_worksheet                        mixtos 0  dentro 0  fuera 0
+  acto 23   estimacion_tres_puntos                               mixtos 0  dentro 0  fuera 0
+  acto 24   eventos_offline_como_canal_traccion                  mixtos 0  dentro 0  fuera 0
+  acto 24   eventos_offline_propios                              mixtos 0  dentro 0  fuera 0
+  acto 25   genchi_gembutsu                                      mixtos 0  dentro 0  fuera 0
+  acto 25   genchi_gembutsu_salir_del_edificio                   mixtos 0  dentro 0  fuera 0
+  acto 26   flexible_go_kill_criteria                            mixtos 0  dentro 0  fuera 0
+  acto 26   technology_platform_evaluation                       mixtos 0  dentro 0  fuera 0
+  acto 27   decision_pivote_perseverar                           mixtos 0  dentro 0  fuera 0
+  acto 27   pivotar_o_perseverar                                 mixtos 0  dentro 0  fuera 0
+  acto 28   simulacion_de_operaciones_supply_chain               mixtos 0  dentro 0  fuera 0
+  acto 28   simulacion_diseno_cadena_suministro                  mixtos 0  dentro 0  fuera 0
+  acto 29   colaboracion_transporte_ctm                          mixtos 0  dentro 0  fuera 0
+  acto 29   collaborative_transportation_management              mixtos 0  dentro 0  fuera 0
+  acto 30   customer_development_vs_business_plan                mixtos 0  dentro 0  fuera 0
+  acto 30   search_for_business_model                            mixtos 0  dentro 0  fuera 0
+  acto 31   anticipar_consecuencias_negativas                    mixtos 0  dentro 0  fuera 0
+  acto 31   planificacion_consecuencias_no_intencionadas         mixtos 0  dentro 0  fuera 0
+  acto 32   estrategia_multicanal_bienvenida                     mixtos 0  dentro 0  fuera 0
+  acto 32   seis_medios_comunicacion_cliente                     mixtos 0  dentro 0  fuera 0
+  acto 33   intellectual_property_strategy                       mixtos 0  dentro 0  fuera 0
+  acto 33   proteccion_propiedad_intelectual                     mixtos 0  dentro 0  fuera 0
+  acto 34   aprendizaje_validado_vs_metricas_vanidad             mixtos 0  dentro 0  fuera 0
+  acto 34   metricas_accionables                                 mixtos 0  dentro 0  fuera 0
+  acto 35   alineacion_de_objetivos_en_sistemas                  mixtos 0  dentro 0  fuera 0
+  acto 35   diseno_de_sistemas_a_escala                          mixtos 0  dentro 0  fuera 0
+  acto 36   control_voluntario_del_pensamiento                   mixtos 0  dentro 0  fuera 0
+  acto 36   esfuerzo_voluntario_vs_urge_espontaneo               mixtos 0  dentro 0  fuera 0
+  acto 37   seis_herramientas_comunicacion_celebracion           mixtos 0  dentro 0  fuera 0
+  acto 37   seis_herramientas_comunicacion_fase_activate         mixtos 0  dentro 0  fuera 0
+  acto 38   cuatro_etapas_del_pensamiento_creativo               mixtos 0  dentro 0  fuera 0
+  acto 38   wallas_etapa_iluminacion                             mixtos 0  dentro 0  fuera 0
+  acto 39   observar_lo_ordinario                                mixtos 0  dentro 0  fuera 0
+  acto 39   practica_de_observacion_atenta                       mixtos 0  dentro 0  fuera 0
+  acto 40   bullseye_framework                                   mixtos 0  dentro 0  fuera 0
+  acto 40   middle_ring_testing                                  mixtos 0  dentro 0  fuera 0
+  acto 41   diseno_consecuencias_no_intencionadas                mixtos 0  dentro 0  fuera 0
+  acto 41   diseno_fugitivo_runaway_design                       mixtos 0  dentro 0  fuera 0
+  acto 42   arquitectura_flexible_soa                            mixtos 0  dentro 0  fuera 0
+  acto 42   arquitectura_tecnica_modular                         mixtos 0  dentro 0  fuera 0
+  acto 43   entrenamiento_empleados_startup                      mixtos 0  dentro 0  fuera 0
+  acto 43   entrenamiento_funcional_empleados                    mixtos 0  dentro 0  fuera 0
+  acto 44   convertir_necesidad_en_demanda                       mixtos 0  dentro 0  fuera 0
+  acto 44   insight_observacion_empatia                          mixtos 0  dentro 0  fuera 0
+  acto 45   framework_flujos_de_datos_ppp                        mixtos 0  dentro 0  fuera 0
+  acto 45   framework_ppph_flujos                                mixtos 0  dentro 0  fuera 0
+  acto 46   business_model_canvas_scorecard                      mixtos 0  dentro 0  fuera 0
+  acto 46   business_model_canvas_vs_plan                        mixtos 0  dentro 0  fuera 0
+  acto 47   bucle_retroalimentacion_autoajustable                mixtos 0  dentro 0  fuera 0
+  acto 47   ciclos_retroalimentacion_autoajuste                  mixtos 0  dentro 0  fuera 0
+  acto 48   evitar_greenwashing                                  mixtos 0  dentro 0  fuera 0
+  acto 48   evitar_greenwashing_2                                mixtos 0  dentro 0  fuera 0
+  acto 49   contabilidad_ambiental                               mixtos 0  dentro 0  fuera 0
+  acto 49   herramientas_contabilidad_ambiental                  mixtos 0  dentro 0  fuera 0
+  acto 50   reduccion_cargas_cumplimiento                        mixtos 0  dentro 0  fuera 0
+  acto 50   reduccion_cargas_regulatorias                        mixtos 0  dentro 0  fuera 0
+
+  combinaciones simuladas          : 100
+  combinaciones que FABRICAN alguna: 2
+
+  EL CENSO ESPERADO DE CADA LOTE ES LA SUMA DE LAS COLISIONES DE LAS
+  ELECCIONES QUE EL PLAN SELLE, y una colision real fuera de esa
+  prediccion DETIENE.
+
+FIN

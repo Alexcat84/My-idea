@@ -1,0 +1,136 @@
+==============================================================================
+EL ABRIDOR DEL TRAMO 3 DE OP-U-01 (vuelta 56)
+identidad POR MIEMBROS del sucesor de la 55; ordinal del ABRIDOR de la 54
+==============================================================================
+
+  nomina de hoy   : docs/loop/RECOMPUTO_V56_APERTURA.jsonl (187 actos CERRADOS)
+  nomina de la 48 : docs\loop\RECOMPUTO_V48_COMPONENTES.jsonl (270 actos CERRADOS)
+
+--- LOS TRAMOS YA ABIERTOS, IDENTIFICADOS POR SUS MIEMBROS ---
+  tramo 1: 50 actos en la 48, 139 miembros, 11 vivos hoy en los puestos [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  tramo 2: 50 actos en la 48, 100 miembros, 5 vivos hoy en los puestos [12, 13, 14, 15, 16]
+
+--- GUARDA DEL PREFIJO (el 16 se MIDE, no se teclea) ---
+  actos vivos de los tramos 1 y 2 : 16
+  puestos que ocupan hoy          : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  ocupan los puestos 1 a 16 sin huecos: SI
+
+--- LECTURA A: los 50 CERRADOS siguientes en el orden impreso de HOY ---
+  actos CERRADOS fuera de los tramos 1 y 2: 171
+  puestos de hoy del tramo 3: del 17 al 66
+
+--- LECTURA B: los que ocupaban los puestos 101 a 150 de la nomina de la 48 ---
+  actos que definen el tramo 3: 50
+
+  VIVOS hoy   : 50
+  FUNDIDOS    : 0
+  suma        : 50 de 50
+
+--- LAS DOS LECTURAS, COMPARADAS EN CONJUNTO Y EN ORDEN ---
+  LECTURA A (orden de HOY) y LECTURA B (orden de la 48): NO CALZAN
+  solo en A: 1 | solo en B: 1
+
+  --- LA DIVERGENCIA, DIAGNOSTICADA CON EL FICHERO DELANTE ---
+    SOLO EN A: construir_sobre_ideas_ajenas, reglas_brainstorming
+       construir_sobre_ideas_ajenas               en la nomina de la 48: componente 62, ABIERTO, tamano 3: construir_sobre_ideas_ajenas, pensamiento_convergente_divergente, reglas_brainstorming
+       reglas_brainstorming                       en la nomina de la 48: componente 62, ABIERTO, tamano 3: construir_sobre_ideas_ajenas, pensamiento_convergente_divergente, reglas_brainstorming
+       EXPLICADO: CERRADO NACIDO DESPUES de la nomina de la 48.
+    SOLO EN B: crecimiento_ingresos_verdes, generacion_ingresos_verdes
+       puesto en la nomina de la 48: [150]
+       puesto HOY                  : [67] (el corte acaba en el 66)
+       EXPLICADO: DESPLAZADO al tramo siguiente, no perdido.
+
+  DIVERGENCIA EXPLICADA ENTERA. El tramo se toma por la VARA VIGENTE, que es
+  la LECTURA A (03_FUSIONES.md, cabecera del registro del tramo 1, vuelta 48:
+  la nomina RE-MEDIDA AL ABRIRLO). La lectura B queda como contraste, con su
+  desfase medido y nombrado, y NO se elige entre las dos a ojo.
+
+--- GUARDA DE LOS CUATRO AJENOS (03_FUSIONES.md, 11 ago 2026) ---
+   CAMINO 1, EL LITERAL, que es el que corrian los abridores de los tramos 1 y 2:
+     gates_go_kill_decision_points          en el TRAMO 3: NO                     en el lote CERRADO entero: NO
+     customer_discovery                     en el TRAMO 3: NO                     en el lote CERRADO entero: NO
+     ab_testing_optimizacion                en el TRAMO 3: NO                     en el lote CERRADO entero: NO
+     brainstorming_divergente               en el TRAMO 3: NO                     en el lote CERRADO entero: NO
+   CAMINO 1: VERDE, ninguno de los cuatro entra
+
+   CAMINO 2, POR EL RESOLUTOR (regla 9 del EJECUTOR, P.1): un ajeno deprecado
+   vive hoy dentro del ids_alias de su superviviente, y el camino literal no lo ve.
+     gates_go_kill_decision_points          deprecado: None   resuelve a gates_go_kill_decision_points    en el TRAMO 3: NO
+     customer_discovery                     deprecado: None   resuelve a customer_discovery               en el TRAMO 3: NO
+     ab_testing_optimizacion                deprecado: None   resuelve a ab_testing_optimizacion          en el TRAMO 3: NO
+     brainstorming_divergente               deprecado: True   resuelve a reglas_brainstorming             en el TRAMO 3: SI, actos [7]
+   CAMINO 2: MUERDE DONDE EL LITERAL PASABA POR VACIO:
+     el ajeno brainstorming_divergente esta hoy dentro de reglas_brainstorming, que es miembro del acto [7]
+   ESTE INSTRUMENTO MIDE Y NO DECIDE si eso bloquea: la decision va escrita
+   con su vara en el registro y marcada como discutible en el reporte.
+
+--- GUARDA DE SOLAPE CON LOS TRAMOS 1 Y 2 ---
+   actos del tramo 3 que tocan un miembro de un tramo anterior: 0
+   GUARDA: VERDE, ningun solape
+
+--- EL TRAMO 3, EN EL ORDEN IMPRESO ---
+
+  acto hoy   en 48  tamano  clases internas      miembros
+  1    17    101    2       {'A': 1}             diseno_de_experiencias_participativas, economia_de_la_experiencia
+  2    18    102    2       {'A': 1}             evaluacion_vp_ventas, framework_evaluacion_director_ventas
+  3    19    103    2       {'A': 1}             plan_a_b_c_soft_landing, restructuracion_deuda_soft_landing
+  4    20    104    2       {'A': 1}             publicidad_offline_pruebas_locales, tracking_publicidad_offline
+  5    21    105    2       {'A': 1}             desarrollo_presentacion_problema, presentacion_problema_tres_columnas
+  6    22    106    2       {'A': 1}             gamificacion_onboarding_visual, visualizacion_progreso_onboarding
+  7    23    nuevo  2       {'A': 1}             construir_sobre_ideas_ajenas, reglas_brainstorming
+  8    24    107    2       {'A': 1}             five_whys_inversion_proporcional, tecnica_cinco_porques
+  9    25    108    2       {'A': 1}             fase_accomplish, fase_accomplish_experiencia_cliente
+  10   26    109    2       {'A': 1}             acquisicion_viral_engineering, herramientas_adquisicion_viral
+  11   27    110    2       {'A': 1}             ficcion_especulativa_como_metodo, historia_del_futuro_escenarios_especulativos
+  12   28    111    2       {'A': 1}             analisis_disrupciones_mercado, evaluacion_industria_cliente
+  13   29    112    2       {'A': 1}             alineacion_cadena_estrategia_negocio, definicion_alineacion_cadena_suministro
+  14   30    113    2       {'A': 1}             creacion_data_warehouse, data_warehouse_como_fundamento
+  15   31    114    2       {'A': 1}             ciclo_de_conversion_de_efectivo, dso_dpo_gestion_capital_trabajo
+  16   32    115    2       {'A': 1}             fase_mobilizacion_equipo_multifuncional, fase_mobilizar_modelo_negocio
+  17   33    116    2       {'A': 1}             community_building_estrategia, construccion_de_comunidad_como_canal_traccion
+  18   34    117    2       {'A': 1}             embudo_secuencial_de_inversores, seleccion_etapa_fondo_vc
+  19   35    118    2       {'A': 1}             eleccion_estructura_vesting_founder, vesting_acciones_fundadores
+  20   36    119    2       {'A': 1}             diversidad_vs_homogeneidad_equipo, homogeneidad_vs_diversidad_equipo
+  21   37    120    2       {'A': 1}             ia_colaborador_productividad, ia_como_nivelador_habilidades
+  22   38    121    2       {'A': 1}             auditoria_desempeno_new_products, mantener_puntaje_innovacion
+  23   39    122    2       {'A': 1}             duration_estimating_worksheet, estimacion_tres_puntos
+  24   40    123    2       {'A': 1}             eventos_offline_como_canal_traccion, eventos_offline_propios
+  25   41    124    2       {'A': 1}             genchi_gembutsu, genchi_gembutsu_salir_del_edificio
+  26   42    125    2       {'A': 1}             flexible_go_kill_criteria, technology_platform_evaluation
+  27   43    126    2       {'A': 1}             decision_pivote_perseverar, pivotar_o_perseverar
+  28   44    127    2       {'A': 1}             simulacion_de_operaciones_supply_chain, simulacion_diseno_cadena_suministro
+  29   45    128    2       {'A': 1}             colaboracion_transporte_ctm, collaborative_transportation_management
+  30   46    129    2       {'A': 1}             customer_development_vs_business_plan, search_for_business_model
+  31   47    130    2       {'A': 1}             anticipar_consecuencias_negativas, planificacion_consecuencias_no_intencionadas
+  32   48    131    2       {'A': 1}             estrategia_multicanal_bienvenida, seis_medios_comunicacion_cliente
+  33   49    132    2       {'A': 1}             intellectual_property_strategy, proteccion_propiedad_intelectual
+  34   50    133    2       {'A': 1}             aprendizaje_validado_vs_metricas_vanidad, metricas_accionables
+  35   51    134    2       {'A': 1}             alineacion_de_objetivos_en_sistemas, diseno_de_sistemas_a_escala
+  36   52    135    2       {'A': 1}             control_voluntario_del_pensamiento, esfuerzo_voluntario_vs_urge_espontaneo
+  37   53    136    2       {'A': 1}             seis_herramientas_comunicacion_celebracion, seis_herramientas_comunicacion_fase_activate
+  38   54    137    2       {'A': 1}             cuatro_etapas_del_pensamiento_creativo, wallas_etapa_iluminacion
+  39   55    138    2       {'A': 1}             observar_lo_ordinario, practica_de_observacion_atenta
+  40   56    139    2       {'A': 1}             bullseye_framework, middle_ring_testing
+  41   57    140    2       {'A': 1}             diseno_consecuencias_no_intencionadas, diseno_fugitivo_runaway_design
+  42   58    141    2       {'A': 1}             arquitectura_flexible_soa, arquitectura_tecnica_modular
+  43   59    142    2       {'A': 1}             entrenamiento_empleados_startup, entrenamiento_funcional_empleados
+  44   60    143    2       {'A': 1}             convertir_necesidad_en_demanda, insight_observacion_empatia
+  45   61    144    2       {'A': 1}             framework_flujos_de_datos_ppp, framework_ppph_flujos
+  46   62    145    2       {'A': 1}             business_model_canvas_scorecard, business_model_canvas_vs_plan
+  47   63    146    2       {'A': 1}             bucle_retroalimentacion_autoajustable, ciclos_retroalimentacion_autoajuste
+  48   64    147    2       {'A': 1}             evitar_greenwashing, evitar_greenwashing_2
+  49   65    148    2       {'A': 1}             contabilidad_ambiental, herramientas_contabilidad_ambiental
+  50   66    149    2       {'A': 1}             reduccion_cargas_cumplimiento, reduccion_cargas_regulatorias
+
+  actos del tramo 3      : 50
+  por tamano             : {2: 50}
+  por figura             : {'PURO A': 50, 'MIXTO': 0}
+  nodos implicados       : 100
+  nodos que MORIRIAN si se funden todos: 50
+
+--- LOS QUE NO SON DE FUSION PURA (tamano 2 y PURO A), NOMBRADOS ---
+   NINGUNO: los 50 son de fusion pura, tamano 2 y PURO A.
+
+  escrito: docs/loop/TRAMO3_V56.jsonl
+
+FIN
