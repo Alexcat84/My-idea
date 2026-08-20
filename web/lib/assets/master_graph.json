@@ -18250,7 +18250,7 @@
       ],
       "entregable_esperado": "Un esquema de diseño bioclimático que detalle la orientación, ventilación y estrategias pasivas de climatización del edificio.",
       "nodos_previos": [
-        "diversidad_como_fortaleza_ecosistemica"
+        "respeto_a_la_diversidad"
       ],
       "nodos_siguientes": [
         "transicion_energia_diversa_renovable"
@@ -21522,7 +21522,7 @@
         "diseno_estrategico_vs_tactico"
       ],
       "nodos_siguientes": [
-        "storyboard_prototipado",
+        "storyboard",
         "empathy_map",
         "amar_las_restricciones"
       ],
@@ -37168,7 +37168,8 @@
         "Si el usuario está diseñando un producto o infraestructura genérica sin considerar el contexto geográfico.",
         "Cuando se busca justificar la necesidad de soluciones descentralizadas frente a las centralizadas."
       ],
-      "etiqueta_arbol": "Aprovecha la Diversidad como Fortaleza"
+      "etiqueta_arbol": "Aprovecha la Diversidad como Fortaleza",
+      "deprecado": true
     },
     "diversidad_en_diseno": {
       "node_id": "diversidad_en_diseno",
@@ -52671,7 +52672,7 @@
         "productos_de_servicio"
       ],
       "nodos_siguientes": [
-        "respetar_la_diversidad"
+        "respeto_a_la_diversidad"
       ],
       "condiciones_activacion": [
         "Si la empresa maneja materiales tóxicos o peligrosos sin solución de reciclaje actual",
@@ -56722,7 +56723,7 @@
         "encuadre_desafio_diseno"
       ],
       "nodos_siguientes": [
-        "storyboard_prototipado",
+        "storyboard",
         "ways_to_grow_framework"
       ],
       "condiciones_activacion": [
@@ -68749,7 +68750,7 @@
         "estructura_de_costos",
         "flujos_de_ingresos",
         "customer_segments_hypothesis",
-        "storyboard_prototipado",
+        "storyboard",
         "create_a_concept",
         "rapid_prototyping",
         "busqueda_vs_ejecucion",
@@ -97130,7 +97131,7 @@
       "entregable_esperado": "Matriz de recursos, actividades y responsabilidades con brechas identificadas",
       "nodos_previos": [
         "lienzo_modelo_negocio",
-        "storyboard_prototipado"
+        "storyboard"
       ],
       "nodos_siguientes": [
         "ways_to_grow_framework",
@@ -97193,7 +97194,8 @@
         "Si el usuario planea expandir un producto o proceso a múltiples regiones o culturas",
         "Si se busca evitar la homogeneización o estandarización excesiva en el diseño"
       ],
-      "etiqueta_arbol": "Evita la Homogeneización del Diseño"
+      "etiqueta_arbol": "Evita la Homogeneización del Diseño",
+      "deprecado": true
     },
     "respeto_a_la_diversidad": {
       "node_id": "respeto_a_la_diversidad",
@@ -97206,21 +97208,45 @@
         "Analizar el contexto local (clima, cultura, recursos disponibles) antes de aplicar una solución de diseño",
         "Evitar soluciones universales 'talla única' que ignoren las condiciones específicas del lugar",
         "Diseñar sistemas con múltiples funciones y relaciones (como policultivos) en vez de sistemas de un solo propósito",
-        "Evaluar la resiliencia del sistema propuesto ante cambios o perturbaciones"
+        "Evaluar la resiliencia del sistema propuesto ante cambios o perturbaciones",
+        "Identificar los 'nichos' funcionales que un producto o servicio puede ocupar sin desplazar recursos existentes.",
+        "Diseñar considerando flujos de energía y materiales propios del entorno específico"
       ],
       "entregable_esperado": "Un análisis de contexto local y una propuesta de diseño adaptada a las condiciones específicas del entorno, evitando la estandarización excesiva.",
       "nodos_previos": [
         "desperdicio_es_alimento",
-        "eco_efectividad_2"
+        "eco_efectividad_2",
+        "fase_de_eliminacion_de_no_comercializables"
       ],
       "nodos_siguientes": [
-        "diversidad_como_fortaleza_ecosistemica"
+        "conexion_flujos_energia_natural",
+        "sostenibilidad_local_y_materiales",
+        "volverse_nativo_del_lugar"
       ],
       "condiciones_activacion": [
         "Cuando se replica una solución de diseño en múltiples geografías o mercados",
-        "Cuando se evalúa la resiliencia a largo plazo de un sistema productivo"
+        "Cuando se evalúa la resiliencia a largo plazo de un sistema productivo",
+        "Si el usuario está diseñando un producto o infraestructura genérica sin considerar el contexto geográfico.",
+        "Cuando se busca justificar la necesidad de soluciones descentralizadas frente a las centralizadas.",
+        "Si se busca evitar la homogeneización o estandarización excesiva en el diseño"
       ],
-      "etiqueta_arbol": "Adapta tu Solución al Contexto"
+      "etiqueta_arbol": "Adapta tu Solución al Contexto",
+      "ids_alias": [
+        "diversidad_como_fortaleza_ecosistemica",
+        "respetar_la_diversidad"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "diversidad_como_fortaleza_ecosistemica",
+          "titulo": "Diversidad como Fortaleza (Fitting)",
+          "fuente": "Cradle to Cradle - Michael Braungart"
+        },
+        {
+          "node_id": "respetar_la_diversidad",
+          "titulo": "Respetar la Diversidad (Biológica, Cultural y de Lugar)",
+          "fuente": "Cradle to Cradle - Michael Braungart"
+        }
+      ]
     },
     "responsabilidad_de_seguridad_en_linea": {
       "node_id": "responsabilidad_de_seguridad_en_linea",
@@ -106133,7 +106159,7 @@
       ],
       "entregable_esperado": "Una lista de materiales de origen local aprobados para el proyecto, junto con un plan de involucramiento de mano de obra especializada de la zona.",
       "nodos_previos": [
-        "diversidad_como_fortaleza_ecosistemica"
+        "respeto_a_la_diversidad"
       ],
       "nodos_siguientes": [
         "bioremediacion_living_machines"
@@ -106734,21 +106760,37 @@
         "Determinar qué parte de la idea se quiere representar en el storyboard",
         "Dedicar 30-45 minutos a dibujar cómo funciona la idea en una serie de viñetas",
         "No preocuparse por la calidad del dibujo, priorizar la claridad de la narrativa",
-        "Actuar o presentar el storyboard al equipo para recibir feedback"
+        "Actuar o presentar el storyboard al equipo para recibir feedback, y compartirlo con usuarios o el equipo para retroalimentación",
+        "Dividir la idea en escenas o momentos clave",
+        "Titular cada escena y describir qué está pasando"
       ],
       "entregable_esperado": "Un storyboard completo que narra la experiencia del usuario paso a paso",
       "nodos_previos": [
         "determine_what_to_prototype",
-        "get_visual"
+        "get_visual",
+        "convertir_necesidad_en_demanda",
+        "generar_insights_how_might_we"
       ],
       "nodos_siguientes": [
         "rapid_prototyping",
-        "desarrollo_en_espiral"
+        "desarrollo_en_espiral",
+        "lienzo_modelo_negocio",
+        "resource_assessment"
       ],
       "condiciones_activacion": [
         "Cuando se necesita visualizar y comunicar una experiencia o proceso de usuario de forma tangible antes de construir un prototipo más costoso"
       ],
-      "etiqueta_arbol": "Dibuja tu Idea en Viñetas"
+      "etiqueta_arbol": "Dibuja tu Idea en Viñetas",
+      "ids_alias": [
+        "storyboard_prototipado"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "storyboard_prototipado",
+          "titulo": "Storyboard para Prototipado de Ideas",
+          "fuente": "The field guide to human-centered design"
+        }
+      ]
     },
     "storyboard_prototipado": {
       "node_id": "storyboard_prototipado",
@@ -106776,7 +106818,8 @@
         "Cuando se necesita comunicar una idea de servicio de forma tangible",
         "Antes de construir prototipos físicos costosos"
       ],
-      "etiqueta_arbol": "Narra tu Idea en Escenas"
+      "etiqueta_arbol": "Narra tu Idea en Escenas",
+      "deprecado": true
     },
     "storytelling_como_herramienta_de_diseno": {
       "node_id": "storytelling_como_herramienta_de_diseno",
@@ -114688,7 +114731,7 @@
       ],
       "entregable_esperado": "Plan de manejo de recursos locales inspirado en prácticas regenerativas, con métricas de largo plazo (ej. stock forestal, biodiversidad)",
       "nodos_previos": [
-        "respetar_la_diversidad"
+        "respeto_a_la_diversidad"
       ],
       "nodos_siguientes": [
         "nuevo_encargo_de_diseno"
@@ -123302,7 +123345,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 37,
+    "nodos_sin_enlaces_entrantes": 40,
     "enlaces_rotos_en_grafo": 0
   }
 }

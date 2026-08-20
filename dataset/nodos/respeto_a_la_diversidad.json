@@ -9,19 +9,43 @@
     "Analizar el contexto local (clima, cultura, recursos disponibles) antes de aplicar una solución de diseño",
     "Evitar soluciones universales 'talla única' que ignoren las condiciones específicas del lugar",
     "Diseñar sistemas con múltiples funciones y relaciones (como policultivos) en vez de sistemas de un solo propósito",
-    "Evaluar la resiliencia del sistema propuesto ante cambios o perturbaciones"
+    "Evaluar la resiliencia del sistema propuesto ante cambios o perturbaciones",
+    "Identificar los 'nichos' funcionales que un producto o servicio puede ocupar sin desplazar recursos existentes.",
+    "Diseñar considerando flujos de energía y materiales propios del entorno específico"
   ],
   "entregable_esperado": "Un análisis de contexto local y una propuesta de diseño adaptada a las condiciones específicas del entorno, evitando la estandarización excesiva.",
   "nodos_previos": [
     "desperdicio_es_alimento",
-    "eco_efectividad_2"
+    "eco_efectividad_2",
+    "fase_de_eliminacion_de_no_comercializables"
   ],
   "nodos_siguientes": [
-    "diversidad_como_fortaleza_ecosistemica"
+    "conexion_flujos_energia_natural",
+    "sostenibilidad_local_y_materiales",
+    "volverse_nativo_del_lugar"
   ],
   "condiciones_activacion": [
     "Cuando se replica una solución de diseño en múltiples geografías o mercados",
-    "Cuando se evalúa la resiliencia a largo plazo de un sistema productivo"
+    "Cuando se evalúa la resiliencia a largo plazo de un sistema productivo",
+    "Si el usuario está diseñando un producto o infraestructura genérica sin considerar el contexto geográfico.",
+    "Cuando se busca justificar la necesidad de soluciones descentralizadas frente a las centralizadas.",
+    "Si se busca evitar la homogeneización o estandarización excesiva en el diseño"
   ],
-  "etiqueta_arbol": "Adapta tu Solución al Contexto"
+  "etiqueta_arbol": "Adapta tu Solución al Contexto",
+  "ids_alias": [
+    "diversidad_como_fortaleza_ecosistemica",
+    "respetar_la_diversidad"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "diversidad_como_fortaleza_ecosistemica",
+      "titulo": "Diversidad como Fortaleza (Fitting)",
+      "fuente": "Cradle to Cradle - Michael Braungart"
+    },
+    {
+      "node_id": "respetar_la_diversidad",
+      "titulo": "Respetar la Diversidad (Biológica, Cultural y de Lugar)",
+      "fuente": "Cradle to Cradle - Michael Braungart"
+    }
+  ]
 }

@@ -1,0 +1,113 @@
+==============================================================================
+OP-U-01, TRAMO 1, CIERRE: los dos empates de P.8 fila tres adjudicados por el auditor . MODO EJECUTAR
+plan: docs/loop/PLAN_V49_OPU01_EMPATES.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3504 vivos, 349 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 20 . sobrevive respeto_a_la_diversidad . absorbe diversidad_como_fortaleza_ecosistemica, respetar_la_diversidad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 5 (anadidas 3)
+  alias del superviviente: ['diversidad_como_fortaleza_ecosistemica', 'respetar_la_diversidad']
+
+------------------------------------------------------------------------------
+ACTO 34 . sobrevive storyboard . absorbe storyboard_prototipado
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 1 -> 1 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 4 de storyboard_prototipado al PASO 4 del superviviente
+        inciso VERBATIM: 'con usuarios o el equipo para retroalimentación'
+        nexo (lo unico de cosecha propia): ', y compartirlo '
+        paso resultante: Actuar o presentar el storyboard al equipo para recibir feedback, y compartirlo con usuarios o el equipo para retroalimentación
+  alias del superviviente: ['storyboard_prototipado']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 9
+   conexion_flujos_energia_natural                      nodos_previos     diversidad_como_fortaleza_ecosistemica -> respeto_a_la_diversidad
+   convertir_necesidad_en_demanda                       nodos_siguientes  storyboard_prototipado -> storyboard
+   fase_de_eliminacion_de_no_comercializables           nodos_siguientes  respetar_la_diversidad -> respeto_a_la_diversidad
+   generar_insights_how_might_we                        nodos_siguientes  storyboard_prototipado -> storyboard
+   lienzo_modelo_negocio                                nodos_previos     storyboard_prototipado -> storyboard
+   resource_assessment                                  nodos_previos     storyboard_prototipado -> storyboard
+   respeto_a_la_diversidad                              nodos_siguientes  diversidad_como_fortaleza_ecosistemica -> respeto_a_la_diversidad
+   sostenibilidad_local_y_materiales                    nodos_previos     diversidad_como_fortaleza_ecosistemica -> respeto_a_la_diversidad
+   volverse_nativo_del_lugar                            nodos_previos     respetar_la_diversidad -> respeto_a_la_diversidad
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 0
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 0
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   respeto_a_la_diversidad                              nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 1004
+  duplicadas tras resolver DESPUES del tramo                          : 1004
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 0, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 10 de 10
+guarda D, los 3 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (18 filas)
+ acto de que nodo                                  que          n  a donde va
+   20 diversidad_como_fortaleza_ecosistemica       paso         1  ya lo dice el PASO 1 del superviviente
+        Analizar el ecosistema local (biológico, cultural, económico) antes de diseñar una solución.
+   20 diversidad_como_fortaleza_ecosistemica       paso         2  PASO 5 del superviviente
+        Identificar los 'nichos' funcionales que un producto o servicio puede ocupar sin desplazar recursos existentes.
+   20 diversidad_como_fortaleza_ecosistemica       paso         3  ya lo dice el PASO 2 del superviviente
+        Evitar la implementación de soluciones estandarizadas ('talla única') que ignoren las particularidades del entorno.
+   20 diversidad_como_fortaleza_ecosistemica       paso         4  ya lo dice el PASO 3 del superviviente
+        Fomentar la interdependencia entre los diferentes elementos del sistema de diseño.
+   20 diversidad_como_fortaleza_ecosistemica       condicion    1  CONDICION 3 del superviviente
+        Si el usuario está diseñando un producto o infraestructura genérica sin considerar el contexto geográfico.
+   20 diversidad_como_fortaleza_ecosistemica       condicion    2  CONDICION 4 del superviviente
+        Cuando se busca justificar la necesidad de soluciones descentralizadas frente a las centralizadas.
+   20 respetar_la_diversidad                       paso         1  ya lo dice el PASO 1 del superviviente
+        Analizar el contexto local (ecológico, cultural, social) donde se implementará el diseño o producto
+   20 respetar_la_diversidad                       paso         2  ya lo dice el PASO 2 del superviviente
+        Evitar soluciones estandarizadas globales; adaptar el diseño a las condiciones específicas del lugar
+   20 respetar_la_diversidad                       paso         3  ya lo dice el PASO 3 del superviviente
+        Fomentar relaciones interdependientes con los ecosistemas y comunidades locales en vez de operar como entidad autónoma
+   20 respetar_la_diversidad                       paso         4  PASO 6 del superviviente
+        Diseñar considerando flujos de energía y materiales propios del entorno específico
+   20 respetar_la_diversidad                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el usuario planea expandir un producto o proceso a múltiples regiones o culturas
+   20 respetar_la_diversidad                       condicion    2  CONDICION 5 del superviviente
+        Si se busca evitar la homogeneización o estandarización excesiva en el diseño
+   34 storyboard_prototipado                       paso         1  PASO 5 del superviviente
+        Dividir la idea en escenas o momentos clave
+   34 storyboard_prototipado                       paso         2  ya lo dice el PASO 2 del superviviente
+        Dibujar o colocar representaciones visuales (post-its) para cada escena
+   34 storyboard_prototipado                       paso         3  PASO 6 del superviviente
+        Titular cada escena y describir qué está pasando
+   34 storyboard_prototipado                       paso         4  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Compartir el storyboard con usuarios o el equipo para retroalimentación
+   34 storyboard_prototipado                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se necesita comunicar una idea de servicio de forma tangible
+   34 storyboard_prototipado                       condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Antes de construir prototipos físicos costosos
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 2
+  nodos implicados    : 5
+  nodos que MUEREN    : 3
+  piezas repartidas   : 18 (7 viajan enteras, 10 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 13
+censo DESPUES: 3853 ficheros, 3501 vivos, 352 deprecados
+censo ANTES  : 3853 ficheros, 3504 vivos, 349 deprecados
+delta deprecados: +3 (esperado +3): OK

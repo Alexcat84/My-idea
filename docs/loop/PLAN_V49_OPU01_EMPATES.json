@@ -1,0 +1,83 @@
+{
+  "operacion": "OP-U-01",
+  "tramo": "1, CIERRE: los dos empates de P.8 fila tres adjudicados por el auditor",
+  "fecha": "2026-08-19",
+  "vuelta": 49,
+  "estado": "SELLADO",
+  "nomina": "docs/loop/RECOMPUTO_V49_COMPONENTES.jsonl",
+  "dossier": "docs/loop/SALIDA_V49_DOSSIER_20.txt y docs/loop/SALIDA_V49_DOSSIER_34.txt",
+  "vara": "ACTA_AUDITOR.md, acta de la vuelta 48, seccion 5: LOS DOS EMPATES TRAIDOS AL AUDITOR (P.8 fila tres), ADJUDICADOS. El auditor re-midio el empate en los dos y escribio el caso del superviviente. El ejecutor verifica cada caso contra el grafo y ejecuta; si al verificar asoma evidencia que contradiga el caso escrito, no funde: para y lo trae.",
+  "nota_de_texto": "Ningun texto se teclea aqui. Los pasos y las condiciones se toman VERBATIM del fichero del nodo por su INDICE. La UNICA excepcion es el NEXO de un INCISO, que va escrito y se imprime aparte.",
+  "vara_de_las_puertas": "Verificado hoy con vuelta48_puertas_en_el_lote.py sobre la nomina de hoy (docs/loop/SALIDA_V49_PUERTAS_EN_EL_LOTE.txt): NI el acto 20 NI el acto 34 aparecen entre los 30 SALVABLES ni entre los 2 IMPOSIBLES. Ninguno de sus cinco miembros es semilla de entrada ni extremo de puente aprobado, asi que la vara de las puertas no muerde en estos dos y la guarda 1B pasa por vacio.",
+  "actos": [
+    {
+      "orden": 20,
+      "orden_en_el_tramo_1_de_la_vuelta_48": 22,
+      "miembros": [
+        "diversidad_como_fortaleza_ecosistemica",
+        "respetar_la_diversidad",
+        "respeto_a_la_diversidad"
+      ],
+      "superviviente": "respeto_a_la_diversidad",
+      "motivo": "ADJUDICADO POR EL AUDITOR (acta de la vuelta 48, seccion 5), y VERIFICADO HOY CONTRA EL GRAFO Y CONTRA LOS TRES VEREDICTOS, los tres reproducidos verbatim en el dossier de hoy. (a) EL ARCHIVO YA LE DIO EL ROL: el puesto 1792 escribe, con estas palabras, la familia del respeto a la diversidad pasa de DOS a TRES nodos por cierre transitivo, con respeto_a_la_diversidad DE CENTRO. (b) SU LINEA PROPIA ES LA UNICA PRUEBA DEL ACTO: el puesto 1779 llama a evaluar la resiliencia del sistema propuesto ante cambios o perturbaciones la unica que pone una prueba al diseno en vez de una regla. (c) EL NOMBRE ES EL PRINCIPIO SIN CALIFICAR, la misma figura del nombre que P.8 usa: Respeto a la Diversidad, contra Diversidad como Fortaleza (Fitting), que es el angulo del encaje, y contra Respetar la Diversidad (Biologica, Cultural y de Lugar), que es el principio con tres calificativos. EL CONTENIDO ESTA EMPATADO Y EL CABLEADO TAMBIEN, re-medidos hoy: cuatro pasos y dos condiciones cada uno, y el cableado 3 a 3 entre los dos punteros. Por eso el caso NO lo decide el conteo sino las tres razones de arriba, que es exactamente lo que P.8 fila tres manda hacer con un empate doble: traerlo al auditor.",
+      "absorbidos": [
+        "diversidad_como_fortaleza_ecosistemica",
+        "respetar_la_diversidad"
+      ],
+      "pasos": {
+        "diversidad_como_fortaleza_ecosistemica": {
+          "1": "CUBIERTO:1",
+          "2": "APPEND",
+          "3": "CUBIERTO:2",
+          "4": "CUBIERTO:3"
+        },
+        "respetar_la_diversidad": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2",
+          "3": "CUBIERTO:3",
+          "4": "APPEND"
+        }
+      },
+      "condiciones": {
+        "diversidad_como_fortaleza_ecosistemica": {
+          "1": "APPEND",
+          "2": "APPEND"
+        },
+        "respetar_la_diversidad": {
+          "1": "CUBIERTO:1",
+          "2": "APPEND"
+        }
+      },
+      "nota_del_reparto": "LAS DOS LINEAS PROPIAS QUE EL AUDITOR MANDA VIAJAR SON LOS DOS UNICOS APPEND DE PASO: el paso 2 de diversidad_como_fortaleza_ecosistemica (los nichos funcionales sin desplazar recursos, la unica condicion de no dano al entrar, segun los puestos 1792 y 1857) y el paso 4 de respetar_la_diversidad (los flujos de energia y materiales del entorno, la unica que baja del principio a la fisica del lugar, segun los puestos 1779 y 1857). LOS CUBIERTO NO SE INVENTAN: los tres veredictos dicen, los tres, que TRES de los cuatro pasos se corresponden, y nombran cuales. LAS CONDICIONES SE REPARTEN CON MAS MANO SUELTA Y SE DICE POR QUE: solo UNA calza de verdad (la 1 de respetar_la_diversidad, expandir a multiples regiones o culturas, contra la 1 del superviviente, replicar en multiples geografias o mercados); las otras TRES dicen cosas que el superviviente no dice (disenar generico sin contexto geografico, justificar lo descentralizado frente a lo centralizado, y evitar la homogeneizacion) y por la regla de la pagina, cada perdida al superviviente, viajan enteras. Una perdida sin destino no es una perdida, es un olvido."
+    },
+    {
+      "orden": 34,
+      "orden_en_el_tramo_1_de_la_vuelta_48": 42,
+      "miembros": [
+        "storyboard",
+        "storyboard_prototipado"
+      ],
+      "superviviente": "storyboard",
+      "motivo": "ADJUDICADO POR EL AUDITOR (acta de la vuelta 48, seccion 5), y VERIFICADO HOY CONTRA EL GRAFO Y CONTRA EL VEREDICTO 179, reproducido verbatim en el dossier de hoy. (a) EL NOMBRE DEL CONCEPTO SIN CALIFICAR, la misma figura del nombre: storyboard contra storyboard_prototipado, que es el base mas un sufijo tematico, y el propio veredicto 179 lo dice asi. (b) SU MECANICA DE SESION ES LO QUE HACE EJECUTABLE LA PRACTICA: el time-box de 30 a 45 minutos, no preocuparse por la calidad del dibujo y priorizar la claridad de la narrativa, y actuar o presentar al equipo. Ninguna de las tres esta en el otro. (c) LA ANATOMIA DEL OTRO VIAJA LIMPIA COMO PIEZAS. EL CONTENIDO ESTA EMPATADO Y EL CABLEADO TAMBIEN, re-medidos hoy: cuatro pasos cada uno y el cableado 4 a 4, sin ninguna arista interna entre ellos. P.8 fila tres, y el auditor lo adjudico.",
+      "absorbidos": [
+        "storyboard_prototipado"
+      ],
+      "pasos": {
+        "storyboard_prototipado": {
+          "1": "APPEND",
+          "2": "CUBIERTO:2",
+          "3": "APPEND",
+          "4": "INCISO:4|con usuarios o el equipo para retroalimentación|, y compartirlo "
+        }
+      },
+      "condiciones": {
+        "storyboard_prototipado": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:1"
+        }
+      },
+      "nota_del_reparto": "EL PASO 4 VA POR INCISO Y NO POR APPEND, Y ES UNA DECISION DEL EJECUTOR QUE SE MARCA COMO DISCUTIBLE. El auditor escribio que la anatomia del otro viaja limpia como piezas y nombro tres, la tercera compartir con USUARIOS ademas del equipo. APPEND entero habria dejado al superviviente con dos pasos que mandan lo mismo (su paso 4 ya dice presentar al equipo para recibir feedback), y CUBIERTO habria perdido la palabra usuarios, que es lo unico que el otro anade. Es LA MISMA FORMA que el auditor corrigio en el acto 49 dos secciones antes, y el remedio escrito de la casa para esa forma es el INCISO ADOSADO. La pieza viaja: no se pierde ni una palabra de lo que el auditor mando viajar. LA CONDICION 2 DEL QUE MUERE, antes de construir prototipos fisicos costosos, LA DICE YA la condicion 1 del superviviente, antes de construir un prototipo mas costoso, y el auditor lo escribio asi. La condicion 1, comunicar una idea de servicio de forma tangible, tambien la dice: visualizar y comunicar una experiencia o proceso de usuario de forma tangible."
+    }
+  ],
+  "declarados_y_no_fundidos": []
+}
