@@ -1183,7 +1183,7 @@ lectura.
 | el acto, por sus MIEMBROS | especie | por que NO se funde | se acumula para |
 |---|---|---|---|
 | `mission_and_operations_planning`, `proceso_sop_mop`, `sop_colaborativo` | **PREGUNTA DE POLITICA DE CATALOGO CONGELADA EN UNA B** | EL PROPIO VEREDICTO DEL PAR MIXTO ESCRIBE LA PREGUNTA Y LA MANDA A LA MESA | LA MESA |
-| `founder_ceo_succession_process`, `identificacion_necesidad_sucesion_ceo`, `sucesion_iniciada_por_fundador` | **EL CONTENIDO NO ALCANZA A ELEGIR Y LA RECETA NO TIENE CARRIL PARA LO QUE LA LECTURA ENCUENTRA** | SE DECLARA POR DOS MOTIVOS Y LOS DOS SE ESCRIBEN, porque cada uno por separado ya bastaria | LA MESA y el PARA_ALEXIS del cierre |
+| `founder_ceo_succession_process`, `identificacion_necesidad_sucesion_ceo`, `sucesion_iniciada_por_fundador` | **EL CONTENIDO NO ALCANZA A ELEGIR Y LA RECETA NO TIENE CARRIL PARA LO QUE LA LECTURA ENCUENTRA** **[ESPECIE ADJUDICADA Y REGISTRADA, 20 ago 2026 (vuelta 53, TAREA 1.4.a): el acto queda DECLARADO POR EMPATE SIN VARA, que es el carril del encargo 2.4 de la vuelta 52; el `ENTRA` que la lectura ademas destapo es real y REFUERZA la declaracion, pero NO hace falta para sostenerla. Ver el registro entero mas abajo]** | SE DECLARA POR DOS MOTIVOS Y LOS DOS SE ESCRIBEN, porque cada uno por separado ya bastaria | LA MESA y el PARA_ALEXIS del cierre |
 | `decision_cuando_fundar`, `evaluacion_capacidades_fundador`, `tres_preguntas_carrera` | **IMPOSIBLE POR PUERTA (por estructura)** | DOS PUERTAS DENTRO Y UNA OBLIGADA A MORIR | el PARA_ALEXIS del cierre |
 | `enfoque_paso_a_paso_investigacion_mercado`, `evaluacion_mercados_objetivo`, `screening_mercados_potenciales` | **IMPOSIBLE POR PUERTA (por estructura)** | MISMA FIGURA EXACTA QUE EL ACTO 8 | el PARA_ALEXIS del cierre |
 | `calcular_peso_dimensional_antes_cotizar`, `conocer_limites_peso_tamano_courier`, `medir_paquete_redondeando_hacia_arriba` | **IMPOSIBLE POR PUERTA (por estructura), Y EL ENCARGO NO LO NOMBRABA** | EL TERCERO QUE LA VARA REPARADA ENCUENTRA Y QUE NADIE HABIA CONTADO, y se dice asi en vez de colarlo con los otros dos | el PARA_ALEXIS del cierre |
@@ -1236,3 +1236,49 @@ FUSION PURA vivos*, corrida DESPUES del ultimo movimiento de la vuelta).
 | mixtos del tramo 1 pendientes de `P.12` | 21 | **18** |
 | las cuatro comprobaciones de [`08_VERIFICACION.md`](08_VERIFICACION.md) | | **TODAS OK** |
 | duplicadas tras resolver **NUEVAS** / auto-aristas **NUEVAS** | | **CERO** / **CERO** |
+
+### LAS TRES ADJUDICACIONES DEL ACTA DE LA VUELTA 52, REGISTRADAS AQUI PARA QUE EL REGISTRO NO DEPENDA DEL ACTA (20 ago 2026, vuelta 53, TAREA 1.4 del encargo)
+
+**Las tres se adjudicaron DESPUES de que esta seccion quedara escrita**, y por eso se adosan al
+final de ella en vez de reescribirla. **Ninguna cifra de arriba se toca.**
+
+**a) EL ACTO DE LA SUCESION DEL CEO QUEDA DECLARADO POR EMPATE SIN VARA** (acta de la vuelta
+52, `D2` y pregunta 2; el carril es el del encargo 2.4 de aquella vuelta, cumplido al pie).
+**El contenido NO ELIGE y hay una vara para cada lado**: las condiciones apuntan a
+`identificacion_necesidad_sucesion_ceo` (2 contra 1) y el **PADRE DECLARADO** del puesto 612
+apunta a `sucesion_iniciada_por_fundador`. **El cableado EMPATA 3 contra 3.** Cuando el
+contenido no elige y el cableado tampoco, **el acto se DECLARA como empate sin vara y se
+acumula para la mesa con los demas declarados**, y eso basta por si solo. **EL `ENTRA` QUE LA
+LECTURA DESTAPO ES REAL Y VA DICHO, pero no es lo que sostiene la declaracion**: los dos
+veredictos `A` del acto (puestos **256** y **354**) declaran a los dos viables contenidos
+ENTEROS en el centro que moriria. **Y la frontera de parada queda trazada** (acta 52, pregunta
+2): si algun dia un acto NO se puede ni fundir ni declarar sin resolver un `ENTRA`, ese dia es
+PARADA por doctrina nueva. **Hoy ninguno lo necesita.**
+
+**b) EL CARRIL GENERAL DE COLISIONES DE CLASE, ADJUDICADO Y REGISTRADO** (acta de la vuelta 52,
+pregunta 4). **Piezas: acta 51 pregunta 2b, [`08_VERIFICACION.md`](08_VERIFICACION.md), `P.12`
+y `P.16`.**
+
+| la forma del par resuelto | que se hace |
+|---|---|
+| **`A` ARRASTRADO contra un DIRECTO `D`** | **VOLTEO POR MAQUINA**, citando el directo y pegando la razon vieja entera. Es la figura de la vuelta 51 y **es el UNICO caso mecanico** |
+| **un veredicto DEL FILO (`B` o `C`) en CUALQUIERA de los dos lados**, arrastrado O directo | **NADA se voltea por maquina.** El disparador de `08_VERIFICACION` ya mete el par en la cola (nodo muerto o texto cambiado): **se RELEE EN EL MISMO ACTO** con el otro veredicto como contraste, **LA RELECTURA DECIDE CUAL DE LOS DOS SE MUEVE**, y la correccion CITA esa relectura con la razon vieja entera |
+| la relectura destapa **POLITICA DE CATALOGO** | **el acto NO se funde: se DECLARA** y se acumula para la mesa |
+
+**LA FIGURA DEL CARRIL ES EL `243` DE LA VUELTA 52**, y por eso se nombra: alli el arrastrado
+era una `D` (el 563) y el directo una `B` (el 243), que es al reves de los dos carriles que
+habia escritos, **y la relectura movio el `B` DIRECTO porque sostuvo la `D` por su cuenta**.
+**El carril general dice que eso no fue una excepcion sino la regla: la LECTURA decide, no la
+direccion del arrastre.**
+
+**c) EL CRITERIO DEL MIXTO QUE QUEDA CONTENIDO TRAS LA FUSION, ADJUDICADO Y REGISTRADO** (acta
+de la vuelta 52, pregunta 1). **EL VEREDICTO DIRECTO MANDA.**
+
+| el par mixto directo | que se hace |
+|---|---|
+| **`D`** | **MANTIENE `CONTINUA`.** La aritmetica del solape que una fusion fabrica NO tumba una lectura real del archivo. **El unico carril para moverlo es una relectura declarada**: el par entra a la cola de relectura post fusion de `08_VERIFICACION` cuando el superviviente cambia de texto, y **si ESA relectura encuentra que el mixto quedo sin nada propio, lo mueve POR LECTURA con correccion declarada, nunca por aritmetica** |
+| **`B`** | **SE LEE ANTES DE FUNDIR** (acta 51, pregunta 5), y esa lectura decide su carril: si es CONDICION DE TEXTO se resuelve y el acto se funde; si es PREGUNTA DE POLITICA el acto se DECLARA |
+
+**EL CRITERIO ASIMETRICO QUEDA RATIFICADO CON ESA FORMA**, y se dice porque la vuelta 52 lo
+aplico a los dos lados en la misma tanda y lo trajo marcado: **ni el acto de los regalos (`D`,
+`CONTINUA`) ni el de la sucesion (`B`, declarado) estaban mal.**

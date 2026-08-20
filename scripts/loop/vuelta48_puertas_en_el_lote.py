@@ -33,11 +33,33 @@ ruidoso, no mentir calladito): una guarda que tranquiliza sin mirar.
 
 FALTABA EL TERCER CASO, y es el que se anade:
 
-  c) MAS DE UNA PUERTA, CON ALGUNA OBLIGADA A MORIR POR LA ESTRUCTURA DEL ACTO.
+  c) ALGUNA PUERTA OBLIGADA A MORIR POR LA ESTRUCTURA DEL ACTO, CUALQUIERA SEA
+     SU CUENTA.
      No es que todos los miembros sean puerta (caso b): es que NINGUNA eleccion
      de superviviente que la receta `P.12` permita deja vivas a todas las
      puertas del acto. El acto no se funde y queda DECLARADO IMPOSIBLE POR
      PUERTA.
+
+     CORRECCION DE ROTULO DECLARADA, 20 ago 2026 (vuelta 53, TAREA 1.3 del
+     encargo; adjudicacion del acta de la vuelta 52, pregunta 5 y seccion 3.2).
+     EL TEXTO VIEJO VA DELANTE ENTERO, porque una correccion que tapa lo que
+     corrige no se puede auditar. Este caso decia:
+
+         c) MAS DE UNA PUERTA, CON ALGUNA OBLIGADA A MORIR POR LA ESTRUCTURA
+            DEL ACTO.
+
+     Y ESE ROTULO REPETIA EL SINTOMA EN VEZ DE DECIR LA VARA. La vara
+     implementada abajo (un candidato es LIMPIO si ninguno de sus absorbidos es
+     puerta; el acto es SALVABLE si tiene al menos un candidato limpio) NO
+     CUENTA PUERTAS, y esta bien asi: la vuelta 52 encontro un tercer acto
+     imposible por estructura con UNA SOLA puerta (calcular_peso_dimensional_
+     antes_cotizar y hermanos), cuya unica puerta es el CENTRO de la estrella y
+     por eso no puede sobrevivir. El listado imprimia "puertas (1)" justo
+     debajo del rotulo que decia "mas de una". LA LETRA DEL SINTOMA NACE DEL
+     ENCARGO 1.5 DE LA VUELTA 52, y su autor la declara suya en el acta 52,
+     seccion 3.2: el ejecutor heredo esa letra, no la fabrico. La vara buena es
+     la del acta 51, pregunta 3: un acto es IMPOSIBLE POR PUERTA cuando NINGUNA
+     fusion posible respeta la guarda 1B.
 
 LA VARA, escrita entera para poder discutirla, y no es nueva: es la de
 `scripts/loop/vuelta50_supervivientes_viables.py`, que la saco del unico acto
@@ -191,7 +213,13 @@ def main():
     print("    SALVABLES (hay al menos un superviviente que no absorbe ninguna puerta): %d"
           % len(salvables))
     print("    IMPOSIBLES POR NOMINA (todos sus miembros son puerta): %d" % len(imp_nomina))
-    print("    IMPOSIBLES POR ESTRUCTURA (mas de una puerta, alguna obligada a morir): %d"
+    # CORRECCION DE ROTULO DECLARADA, 20 ago 2026 (vuelta 53, TAREA 1.3 del
+    # encargo). EL TEXTO VIEJO VA DELANTE ENTERO: este parentesis decia
+    # "(mas de una puerta, alguna obligada a morir)", que es el SINTOMA y no
+    # la vara, y el listado de abajo imprime "puertas (1)" en uno de los tres.
+    # El motivo entero esta en el caso c del docstring.
+    print("    IMPOSIBLES POR ESTRUCTURA (alguna puerta obligada a morir por la"
+          " estructura del acto, cualquiera sea su cuenta): %d"
           % len(imp_estructura))
     print("    SIN RECETA (ningun superviviente viable; no lo decide la puerta): %d"
           % len(sin_receta))

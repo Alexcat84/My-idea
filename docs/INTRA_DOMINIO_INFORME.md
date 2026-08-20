@@ -16482,9 +16482,9 @@ Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 
 
 | dominio | n | A | tasa |
 |---|---:|---:|---:|
-| core | 1.445 | ~~344~~ ~~343~~ ~~342~~ ~~337~~ **336** | ~~23,8 %~~ ~~23,7 %~~ **23,3 %** |
-| health_safety | 192 | 45 | 23,4 % |
-| quality | 844 | 126 | 14,9 % (CERRADO) |
+| core | 1.445 | ~~344~~ ~~343~~ ~~342~~ ~~337~~ ~~336~~ **329** | ~~23,8 %~~ ~~23,7 %~~ ~~23,3 %~~ **22,8 %** |
+| health_safety | 192 | ~~45~~ **43** | ~~23,4 %~~ **22,4 %** |
+| quality | 844 | ~~126~~ **123** | ~~14,9 %~~ **14,6 %** (CERRADO) |
 | environmental | 170 | 29 | 17,1 % |
 | franquicias | 148 | 18 | 12,2 % |
 | exportacion | 130 | 15 | 11,5 % |
@@ -16548,6 +16548,14 @@ Suma 3.388, calza con el total del archivo. Los diez dominios del catalogo estan
 > DOCTRINA:** ninguna pagina dice hasta donde atras alcanza el barrido del `9.10` cuando la cifra
 > volteada vivia ya en checkpoints cerrados y fechados. **Lo que si se corrige es toda tabla que
 > se presenta como el estado VIGENTE del archivo**, y esas son las dos de la seccion 100.
+
+> **CUARTA CORRECCION DECLARADA (20 ago 2026, vuelta 53, TAREA 1.1 del encargo, que la manda citando la adjudicacion del acta de la vuelta 52, seccion 3.1). ESTA VEZ SE MUEVEN TRES FILAS Y NO UNA, Y LA DIVERGENCIA ES ANTERIOR A ESTA VUELTA.** El auditor la levanto midiendo: esta tabla se venia manteniendo A MEDIAS como vigente. **La fila de `core` tenia cadena de tachados** (344, 343, 342, 337) con **336** visible y **su ultimo mantenimiento es de la era de la vuelta 36**; **`quality` publicaba 126 y `health_safety` 45**, las dos **sin tocar desde sus volteos**. **NINGUNA VUELTA LA HABIA VISTO, y el motivo se dice en vez de callarse: el barrido `9.10` busca de forma LEXICA las cifras que se le pasan, y 336, 126 y 45 nunca se le pasaron.** Es la misma especie que el `D7` de la vuelta 52 corrigio en la tabla hermana del `RECOMPUTO`, pero en esta casa.
+>
+> **LAS TRES CIFRAS NUEVAS SON DE LA CORRIDA DEL DIA**, no de un acta ni de un reporte: `python scripts/recomputar_marcador.py 3388` ([`loop/SALIDA_V53_MARCADOR_APERTURA.txt`](loop/SALIDA_V53_MARCADOR_APERTURA.txt), bloque *TASA POR DOMINIO*), corrida el 20 ago 2026 ANTES de la primera operacion de la vuelta 53. Mide **`core` 329 (22,8 %)**, **`quality` 123 (14,6 %)** y **`health_safety` 43 (22,4 %)**. **LOS OTROS SIETE DOMINIOS DE LA TABLA MIDEN EXACTOS HOY Y NO SE TOCAN**, comprobado en la misma salida: `entrega` 2, `environmental` 29, `franquicias` 18, `exportacion` 15, `compras` 1, `risk_management` 0 y `seguridad_digital` 3. **LA SUMA DE LA COLUMNA CUADRA CON EL MARCADOR**, comprobado hoy: 329 mas 123 mas 43 mas 2 mas 29 mas 1 mas 18 mas 0 mas 15 mas 3 son **563**, que es la `A` global de la misma corrida. **La columna `n` no se mueve** y su suma sigue siendo 3.388: lo que cambio es el reparto, no el censo.
+>
+> **LAS DOS TABLAS POR DOMINIO SON HERMANAS Y SE MUEVEN JUNTAS, y esto queda escrito en las DOS sedes para que no dependa de ningun acta:** la **100.2** de `docs/INTRA_DOMINIO_INFORME.md` y la **tabla por dominio de la seccion `a`** de `docs/plan/RECOMPUTO_3388.md` miden LO MISMO (los diez dominios al corte 3.388, que es el catalogo entero y no una fecha) y las dos se presentan como el estado VIGENTE del archivo. **QUIEN CORRIJA UNA, CORRIGE LA OTRA EN EL MISMO ACTO.** La tabla hermana se corrigio el 20 ago 2026 en la vuelta 52 y hoy mide lo mismo que esta al digito; **desde hoy las dos llevan escrita la hermandad**, que es lo que el encargo manda para que un barrido futuro no vuelva a mover una sola.
+>
+> **NADA SE BORRA Y NINGUNA NOTA VIEJA SE REESCRIBE:** las tres correcciones de arriba (vueltas 33, 34 y 36) siguen enteras con su fecha, y las TRECE filas de checkpoints anteriores que citan `core` con `A 344` **siguen sin tocarse**, por el motivo que la correccion de la vuelta 36 ya escribio: cada una es la foto de su propio corte.
 
 ### 100.3 RACHAS DE 0,0 % RECOMPUTADAS SOBRE EL ARCHIVO ENTERO (TAREA 1.1, verificacion propia)
 
