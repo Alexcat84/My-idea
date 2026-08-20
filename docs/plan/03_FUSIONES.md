@@ -2466,6 +2466,8 @@ y su motivo entero, porque reescribir un plan sellado taparia lo que se corrige.
 |---:|:---:|---|---|
 | **32** | B | LOS TRES CONTEOS EMPATAN y decide la pieza declarada POR CANTIDAD | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** |
 
+> **RATIFICADA POR CORRIDA PROPIA DEL AUDITOR (21 ago 2026, vuelta 59, TAREA 1.2 del encargo).** El acta 58 **re-derivo el cuadro de varas del tramo con codigo propio y las 50 filas calzan al digito, `DISTINTAS 0`** (`../loop/ACTA_AUDITOR.md` linea **14735**, leida hoy), y **re-midio este acto 32 sobre los ficheros de hoy: pasos 5 contra 5, condiciones 2 contra 2, cableado 3 contra 3, `EMPATE SIN VARA`** (linea **14743**). **Nada de lo sellado se reescribe: la correccion de arriba queda como esta y esta linea solo dice que un segundo instrumento la midio y la sostiene.**
+
 ---
 
 ### LA ADJUDICACION DEL ACTA 57 SOBRE EL **ACTO 25**: **EL CARRIL YA ESTABA ESCRITO** (20 ago 2026, vuelta 58, TAREA 1.4 del encargo)
