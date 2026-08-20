@@ -1,0 +1,41 @@
+
+---
+
+## `OP-U-01`, TRAMO 1: **DIECISEIS ACTOS FUNDIDOS Y CINCO DECLARADOS** (19 ago 2026, vuelta 48)
+
+**El tramo son los CINCUENTA primeros actos `CERRADOS` de la nomina re-medida al abrirlo**,
+en el orden en que el instrumento los imprime, que es la vara que el auditor adjudico. Se
+leyeron los cincuenta (`P.5`, acto leido entero) con
+`python scripts/loop/vuelta48_dossier_actos.py`
+([`../loop/SALIDA_V48_DOSSIER_1_50.txt`](../loop/SALIDA_V48_DOSSIER_1_50.txt), 369 KB, de solo
+lectura), **se fundieron dieciseis y se declararon los demas con su motivo citado.**
+
+### LA CIFRA DEL TRAMO, impresa por el instrumento
+
+| | |
+|---|---:|
+| actos **leidos** del tramo | **50** |
+| actos **FUNDIDOS** | **16** |
+| actos **DECLARADOS y no fundidos** | **5** |
+| actos **MIXTOS** que quedan a la espera de la lectura de `P.12` | **27** |
+| nodos implicados en lo fundido | **36** |
+| **nodos DEPRECADOS CON ALIAS** | **20** |
+| piezas repartidas (pasos y condiciones de los que mueren) | **123**: **39** viajan enteras al superviviente y **84** ya las decia |
+
+**Y las cifras del censo, del propio instrumento** (`vuelta48_fundir_tramo.py --ejecutar`,
+[`../loop/SALIDA_V48_EJECUCION_TRAMO1.txt`](../loop/SALIDA_V48_EJECUCION_TRAMO1.txt), exit 0):
+
+> `censo ANTES  : 3853 ficheros, 3524 vivos, 329 deprecados`
+>
+> `censo DESPUES: 3853 ficheros, 3504 vivos, 349 deprecados`
+>
+> `delta deprecados: +20 (esperado +20): OK`
+
+### LO QUE QUEDA DEL LOTE, medido antes y despues
+
+| | al **ABRIR** el tramo | al **CE
+... (150 lineas, 11741 caracteres)
+
+guiones largos en el bloque: 0 | guiones medios: 0
+ESCRITO. lineas antes 340, despues 490
+guiones largos en el fichero 0, medios 0

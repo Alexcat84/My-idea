@@ -272,7 +272,7 @@ una.** Son tres, y **las tres estan escritas en sitios distintos del repo**:
 |---|---:|---:|---:|---:|---:|
 | **lo que publica `OP-U-01`** en su `nota` y su `evidencia` (corte 3.388, vuelta 12) | **335** | **854** | **280** | **600** | **55** |
 | **lo que trae hoy el fichero sellado** [`RECOMPUTO_3388_COMPONENTES.jsonl`](RECOMPUTO_3388_COMPONENTES.jsonl), contado linea a linea | **332** | **838** | **278** | **595** | **54** |
-| **lo que mido HOY** contra el grafo de hoy, 19 ago 2026 | **324** | **822** | **270** | **579** | **54** |
+| ~~**lo que mido HOY** contra el grafo de hoy, 19 ago 2026~~ **AL ABRIR EL TRAMO 1** (vuelta 48) | **324** | **822** | **270** | **579** | **54** |
 
 **LA SEGUNDA DIFERENCIA ESTA EXPLICADA Y MEDIDA; LA PRIMERA NO.**
 
@@ -295,10 +295,14 @@ una.** Son tres, y **las tres estan escritas en sitios distintos del repo**:
 
 | | |
 |---|---:|
-| **actos CERRADOS a fundir** | **270** |
-| nodos implicados | **579** |
-| **nodos que MORIRIAN** si se funden los 270 (tamano menos 1 por acto) | **309** |
-| por tamano | **235** de dos, **31** de tres, **4** de cuatro |
+| ~~**actos CERRADOS a fundir**~~ **al ABRIR el tramo 1** | ~~**270**~~ |
+| ~~nodos implicados~~ **al ABRIR el tramo 1** | ~~**579**~~ |
+| ~~**nodos que MORIRIAN** si se funden los 270 (tamano menos 1 por acto)~~ **al ABRIR el tramo 1** | ~~**309**~~ |
+| ~~por tamano~~ **al ABRIR el tramo 1** | ~~**235** de dos, **31** de tres, **4** de cuatro~~ |
+| **CORRECCION DECLARADA, barrido 9.10 del 19 ago 2026 (vuelta 48), y las cuatro cifras viejas se quedan delante porque describen el lote QUE ESTA VUELTA ENCONTRO. Recomputado AL CERRAR el tramo 1 con `python scripts/plan/recomputo_3388.py --salida docs/loop/RECOMPUTO_V48_CIERRE.jsonl`. actos CERRADOS a fundir** | **254** |
+| **nodos implicados** | **543** |
+| **nodos que MORIRIAN si se funden los 254** | **289** |
+| **por tamano** | **223** de dos, **27** de tres, **4** de cuatro |
 
 **LA GUARDA DE LOS CUATRO AJENOS, EN VERDE.** Esta pagina declara desde el 11 ago 2026
 que cuatro actos **no se resuelven aqui nunca**. Medido hoy: `ab_testing_optimizacion`
@@ -326,7 +330,7 @@ con la lectura escrita entera**, tal como `OP-D-04` y `OP-D-05` la aplicaron en 
 
 **ESTA VUELTA ENTREGA EL PRIMERO DE ESOS PASOS Y LO DICE ASI EN VEZ DE DECLARARLA
 ABIERTA Y HECHA:** `OP-U-01` **queda ABIERTA con su lectura de cero publicada, su lote
-re-medido y su guarda de ajenos en verde. CERO fusiones ejecutadas.** El lote de hoy
+re-medido y su guarda de ajenos en verde. ~~CERO fusiones ejecutadas.~~** **CORRECCION DECLARADA, barrido 9.10 del 19 ago 2026 (vuelta 48): la frase era exacta el dia que se escribio y hoy no lo es. El tramo 1 fundio DIECISEIS actos, y su registro esta al final de esta pagina.** El lote de hoy
 vive en [`../loop/RECOMPUTO_V47_COMPONENTES.jsonl`](../loop/RECOMPUTO_V47_COMPONENTES.jsonl),
 **fuera de `docs/plan/`, para no pisar la nomina sellada.**
 
@@ -338,3 +342,153 @@ vive en [`../loop/RECOMPUTO_V47_COMPONENTES.jsonl`](../loop/RECOMPUTO_V47_COMPON
 > se repitio con `--salida` apuntando fuera de `docs/plan/`. **El fichero sellado no
 > aparece en el `git status` de esta vuelta.** Va como **discutible marcado**, y con una
 > recomendacion: **ese instrumento deberia exigir `--salida` en vez de traerla puesta.**
+
+---
+
+## `OP-U-01`, TRAMO 1: **DIECISEIS ACTOS FUNDIDOS Y CINCO DECLARADOS** (19 ago 2026, vuelta 48)
+
+**El tramo son los CINCUENTA primeros actos `CERRADOS` de la nomina re-medida al abrirlo**,
+en el orden en que el instrumento los imprime, que es la vara que el auditor adjudico. Se
+leyeron los cincuenta (`P.5`, acto leido entero) con
+`python scripts/loop/vuelta48_dossier_actos.py`
+([`../loop/SALIDA_V48_DOSSIER_1_50.txt`](../loop/SALIDA_V48_DOSSIER_1_50.txt), 369 KB, de solo
+lectura), **se fundieron dieciseis y se declararon los demas con su motivo citado.**
+
+### LA CIFRA DEL TRAMO, impresa por el instrumento
+
+| | |
+|---|---:|
+| actos **leidos** del tramo | **50** |
+| actos **FUNDIDOS** | **16** |
+| actos **DECLARADOS y no fundidos** | **5** |
+| actos **MIXTOS** que quedan a la espera de la lectura de `P.12` | **27** |
+| nodos implicados en lo fundido | **36** |
+| **nodos DEPRECADOS CON ALIAS** | **20** |
+| piezas repartidas (pasos y condiciones de los que mueren) | **123**: **39** viajan enteras al superviviente y **84** ya las decia |
+
+**Y las cifras del censo, del propio instrumento** (`vuelta48_fundir_tramo.py --ejecutar`,
+[`../loop/SALIDA_V48_EJECUCION_TRAMO1.txt`](../loop/SALIDA_V48_EJECUCION_TRAMO1.txt), exit 0):
+
+> `censo ANTES  : 3853 ficheros, 3524 vivos, 329 deprecados`
+>
+> `censo DESPUES: 3853 ficheros, 3504 vivos, 349 deprecados`
+>
+> `delta deprecados: +20 (esperado +20): OK`
+
+### LO QUE QUEDA DEL LOTE, medido antes y despues
+
+| | al **ABRIR** el tramo | al **CERRAR** el tramo |
+|---|---:|---:|
+| actos (componentes) | **324** | **308** |
+| nodos dentro de actos | **822** | **786** |
+| **`CERRADOS`, que es el lote de esta operacion** | **270** | **254** |
+| nodos en `CERRADOS` | **579** | **543** |
+| `ABIERTOS` | **54** | **54** |
+| nodos en `ABIERTOS` | **243** | **243** |
+
+**Los `ABIERTOS` no se mueven ni un digito**, que es exactamente lo que cabe esperar de una
+operacion que solo toca `CERRADOS`. **Y los `CERRADOS` bajan en 16, uno por acto fundido.**
+Las cuatro comprobaciones de [`08_VERIFICACION.md`](08_VERIFICACION.md) salen **TODAS OK** en
+la corrida de cierre ([`../loop/SALIDA_V48_RECOMPUTO_CIERRE.txt`](../loop/SALIDA_V48_RECOMPUTO_CIERRE.txt)).
+
+### LOS DIECISEIS ACTOS, uno por uno, con su superviviente y su motivo
+
+| # | sobrevive | absorbe | por que sobrevive, en una linea |
+|---:|---|---|---|
+| **9** | `determinar_tipo_de_mercado` | `hipotesis_tipo_mercado`, `tipo_de_mercado_estrategia_competitiva` | CONTENIDO |
+| **15** | `diferencia_ganancia_flujo_caja` | `cash_is_king`, `profit_vs_cash` | CONTENIDO |
+| **23** | `critica_eco_eficiencia` | `eco_eficiencia_critica`, `limites_de_la_eco_eficiencia` | CONTENIDO |
+| **30** | `punto_equilibrio_calidad_inspeccion` | `economia_de_la_inspeccion`, `regla_todo_o_nada_inspeccion` | CONTENIDO, y lo escribe el archivo: los veredictos 2473 y 2467 dicen los dos, con esas palabras, Sobrevive punto_equilibrio_calidad_inspeccion, y el 2480 lo llama GANADOR LIMPIO porque se llevo los dos pares directos |
+| **37** | `gestion_sindicato_inversores` | `manejo_syndicate_inversion` | CONTENIDO |
+| **38** | `asignacion_agil_de_recursos` | `presupuesto_agil_innovacion` | CONTENIDO, y por margen corto que se declara: mismo numero de pasos (cuatro y cuatro) y el cableado empatado a 3, asi que por P |
+| **39** | `estrategia_plataformas_existentes` | `existing_platforms_leverage` | CONTENIDO |
+| **41** | `targeting_blogs_traccion` | `targeting_blogs_channel` | CONTENIDO EMPATADO Y EL VEREDICTO LO DICE: el puesto 176 escribe que los cinco pasos son los mismos reordenados |
+| **43** | `comunicacion_transparente_en_crisis` | `liderazgo_frente_crisis_competitiva` | CONTENIDO EMPATADO Y EL VEREDICTO LO DICE: el puesto 182 escribe que los cuatro pasos coinciden |
+| **44** | `fase_activate_primera_impresion` | `fase_activate` | CONTENIDO |
+| **45** | `proceso_decision_vc` | `proceso_diligencia_vc` | CONTENIDO, y contra el cableado, que es exactamente lo que P |
+| **46** | `business_model_environment_mapping` | `analisis_entorno_modelo_negocio` | CONTENIDO CASI EMPATADO Y EL CABLEADO DESEMPATA (P |
+| **47** | `three_rs_equilibrium` | `sistema_tres_rs_alineacion` | CONTENIDO |
+| **48** | `framework_excelencia_operacional` | `preguntas_excelencia_operacional` | CONTENIDO, y por el margen mas ancho del tramo: diez pasos contra cuatro |
+| **49** | `storytelling_como_herramienta_de_diseno` | `storytelling_para_el_cambio` | CONTENIDO |
+| **50** | `compromiso_linea_tiempo_cliente` | `tacticas_cierre_ventas` | CONTENIDO |
+
+**El plan sellado, con la marca de CADA paso y CADA condicion de CADA nodo que muere, vive en**
+[`../loop/PLAN_V48_OPU01_TRAMO1.json`](../loop/PLAN_V48_OPU01_TRAMO1.json). **No trae texto: trae
+INDICES**, y el instrumento lee cada pieza verbatim del fichero del nodo. La guarda de cobertura
+comprueba que **cada indice aparezca exactamente una vez y que no sobre ninguno**: una perdida sin
+destino no es una perdida, es un olvido.
+
+### LOS CINCO DECLARADOS Y NO FUNDIDOS, con su motivo citado
+
+| # | el acto | por que NO se funde |
+|---:|---|---|
+| **36** | `domina_lo_que_compras`, `investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor` | LA PUERTA DE UN MUNDO NO SE ABSORBE. El absorbido que este plan traia, investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor, es SEMILLA DE ENTRADA del mundo compras y ademas DESTINO DE UN PUENTE APROBADO. La primera corrida --ejecutar de esta vuelta lo depreco y GATE 0 SALIO EN ROJO por dos chequeos a la vez (Ninguna semilla de entrada esta deprecada, y Ningun puente aprobado apunta a un nodo deprecado). El dataset se restauro con git checkout, el acto sale del lote, y la guarda que faltaba (1B) queda escrita en el instrumento para que ningun tramo futuro pueda deprecar una puerta en silencio. La lectura y el superviviente del acto siguen siendo validos y quedan escritos aqui para cuando alguien decida que hacer con la semilla: sobrevive domina_lo_que_compras. |
+| **22** | `diversidad_como_fortaleza_ecosistemica`, `respetar_la_diversidad`, `respeto_a_la_diversidad` | CONTENIDO EMPATADO Y EL CABLEADO TAMBIEN. Los tres veredictos (1857, 1792, 1779) dicen lo mismo de los tres pares: TRES de los cuatro pasos se corresponden y a cada nodo le queda EXACTAMENTE UNA linea propia. Cuatro pasos y dos condiciones cada uno. El cableado empata a 3 entre diversidad_como_fortaleza_ecosistemica y respeto_a_la_diversidad. P.8, fila tres de su tabla: empatado el contenido y empatado el cableado, SE TRAE AL AUDITOR. No se fuerza. |
+| **29** | `mejora_del_sistema_responsabilidad_gerencial`, `sistema_estable_causas_comunes`, `sistema_estable_responsabilidad_gerencial` | EL PROPIO VEREDICTO MARCA AL GANADOR COMO PROVISIONAL. El puesto 2572 escribe una NOTA GRAVE DE FAMILIA: mejora_del_sistema queda arriba y sin perder, ganador PROVISIONAL, pero el cumulo pasa de diez nodos por raiz y no esta leido entero, y sistema_estable_causas_comunes gano el 2453 y perdio el 2537, que es la firma de POR ELEGIR. Fundir sobre un ganador que el archivo llama provisional es decidir lo que el archivo dejo sin decidir. Se declara. |
+| **32** | `dia_cero_defectos`, `dia_cero_defectos_2`, `dia_cero_defectos_3` | EL VEREDICTO 2525 DEJA UN AVISO EXPRESO PARA ESTA OPERACION: los dos dan CADENAS DE FIRMA DISTINTAS, firmar contigo uno a uno contra firmar con su supervisor, y dice con esas palabras que la fusion TIENE QUE DECIDIRLO, NO APILARLO. Decidirlo es quedarse con una y borrar la otra, y borrar contenido que ninguna regla ordena esta reservado al fundador (AUDITOR.md seccion 4). Apilarlas dejaria el nodo mandando dos cosas incompatibles. Se declara y no se funde. |
+| **42** | `storyboard`, `storyboard_prototipado` | CONTENIDO EMPATADO Y EL CABLEADO TAMBIEN. El veredicto 179 lee los dos como la misma cosa en tres gestos. Cuatro pasos cada uno, y el cableado empata a 4. P.8, fila tres: SE TRAE AL AUDITOR. |
+
+### LOS VEINTISIETE MIXTOS, y por que esta vuelta NO los funde
+
+**De los 270 actos `CERRADOS` del lote, VEINTISIETE tienen dentro un par que NO es `A`** (4 de
+tamano cuatro y 23 de tamano tres), **y los veintisiete caen dentro de estos primeros 50**: el
+orden impreso pone los duros por delante. Medido en
+[`../loop/SALIDA_V48_COLISION_1_50.txt`](../loop/SALIDA_V48_COLISION_1_50.txt).
+
+> **`P.12` prohibe fundirlos por transitividad**: *el cierre transitivo CONVOCA, la lectura
+> DECIDE*, y *NI TRANSITIVIDAD AUTOMATICA NI MAYORIA*. El nodo mixto **se lee CONTRA EL
+> SUPERVIVIENTE** y se decide `ENTRA` (comparte procedimiento) o `CONTINUA` (comparte la idea
+> en lineas: enlace mas poda del solape).
+
+**Esa lectura se hizo ENTERA para UNO, el acto 1**, y se deja escrita como ejemplar: el mixto es
+`metodologia_spin_selling`, cuyos dos veredictos `D` (puestos **625** y **764**) dicen los dos, con
+esa palabra, **CONTINUA**, porque su paso 3 es *una linea que ademas remite fuera* mientras los
+otros traen *el PROCEDIMIENTO entero*. **`CONTINUA` no es fusion: es enlace**, y el enlace es de la
+fase 04. **Los otros veintiseis NO se leyeron en esta vuelta, y se dice en vez de callarse.**
+
+### LA GUARDA QUE FALTABA, y el `GATE 0` en rojo que la trajo
+
+> **Se cuenta con nombre porque un fallo que no deja sintoma es la especie del canon 9.**
+
+**La primera corrida `--ejecutar` de este tramo llevaba el acto 36**, que absorbia
+`investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor`. Ese nodo es **SEMILLA DE ENTRADA**
+del mundo `compras` **y ademas DESTINO DE UN PUENTE APROBADO**, asi que `run_phase1.py` dio
+**`GATE 0: FALLIDO`** por **dos** chequeos a la vez. **El dataset se restauro entero con
+`git checkout` y el acto salio del lote.**
+
+**Y la pregunta no era del acto 36: era de la operacion entera.** Medido con
+`python scripts/loop/vuelta48_puertas_en_el_lote.py`
+([`../loop/SALIDA_V48_PUERTAS_EN_EL_LOTE.txt`](../loop/SALIDA_V48_PUERTAS_EN_EL_LOTE.txt), exit 0):
+
+| | |
+|---|---:|
+| semillas de entrada (20 del core mas las de los mundos) | **85** |
+| nodos que son extremo de un puente aprobado | **185** |
+| **el universo PROTEGIDO, la union** | **256** |
+| actos `CERRADOS` con **al menos una puerta dentro** | **31** de 270 |
+| de esos, **SALVABLES** (una sola puerta: el acto se funde **si la puerta sobrevive**) | **29** |
+| de esos, **IMPOSIBLES** (todos sus miembros son puerta: alguien tendria que morir) | **2**, los actos **36** y **174** |
+
+> **LO QUE ESTO DEJA ABIERTO, y va como PREGUNTA y no como decision: en esos 29 actos la eleccion
+> de superviviente YA NO ES LIBRE.** La regla de esta pagina dice que **sobrevive por CONTENIDO**;
+> si el contenido apunta al que **no** es puerta, **hay choque entre la vara de la fase y el
+> `GATE 0`**, y **ninguna regla escrita hoy lo resuelve.**
+
+**La guarda `1B` queda escrita en `scripts/loop/vuelta48_fundir_tramo.py`** y lee las mismas
+fuentes que el `GATE 0`: **ningun absorbido puede ser semilla ni extremo de puente**. Con ella el
+tramo **aborta antes de escribir** en vez de romper.
+
+### GATE 0 Y SUITES TRAS EL TRAMO
+
+| que | como salio |
+|---|---|
+| `run_phase1.py --reaplico-curaduria` | **`GATE 0: OK`**, exit 0 |
+| `etiquetas_de_cara.py --aplicar` | **71** etiquetas, exit 0 |
+| `sync_assets_web.py` | **6** assets, exit 0 |
+| suite del motor | **25 de 25**, exit 0 |
+| suite web | **80** ficheros, **1.030** pasadas y **3** saltadas, exit 0 |
+| `tsc --noEmit` | **CERO** lineas, exit 0 |
+| marcador del archivo | **575 / 79 / 8 / 2.726**, `n` **3.388**, cero huecos y cero duplicados: **SIN MOVER** |
+| duplicadas tras resolver | **1.010** antes y **1.004** despues: **CERO nuevas**, y el tramo **baja el pasivo historico en 6** por `P.16` |
+| auto-aristas | **CERO** nuevas; **3** que la fusion habria creado, retiradas en el acto |
+
