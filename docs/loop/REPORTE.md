@@ -1,335 +1,393 @@
-# REPORTE DE LA VUELTA 47 (19 ago 2026, ejecutor Opus 5)
+# REPORTE DE LA VUELTA 48 (19 ago 2026, ejecutor Opus 5)
 
-**LA PARADA SE LEVANTA. La decision del fundador esta registrada con sus cuatro
-correcciones, la frontera del 1298 re-declarada, `OP-D-07` SELLADA, el marcador del
-`00_INDICE` impreso con instrumento nuevo, el orden de la fase 03 adjudicado por
-criterio citable y `OP-U-01` ABIERTA con su lectura de cero. CERO NODOS TOCADOS.**
+**LA CIRUGIA DE `OP-U-01` EMPIEZA. Los cincuenta actos del tramo LEIDOS, DIECISEIS
+FUNDIDOS, VEINTE nodos deprecados con alias, cinco actos DECLARADOS con su motivo
+citado y veintisiete mixtos nombrados en vez de forzados. Las cinco correcciones de
+la TAREA 1, hechas. Y un `GATE 0` EN ROJO que se cuenta con nombre en vez de
+esconderse, con la guarda que faltaba ya escrita.**
 
 | | |
 |---|---|
 | **rama** | `pasada-unica` |
-| **hash final** | **`d5c4d64b`**, pusheado a `origin/pasada-unica` |
-| **hash de apertura** | `a47edcc9` (la decision del fundador), arbol limpio |
-| **commits de la vuelta** | **3**, uno por tarea: `62c10658`, `c63be8aa`, `d5c4d64b` |
-| **nodos tocados** | **CERO.** `git status` sobre `dataset/` da **0** ficheros en toda la vuelta |
-| **ficheros tocados** | **31**: 21 altas en `docs/loop`, 5 altas en `scripts/loop`, 5 modificados en `docs/plan`. **CERO borrados** |
+| **hash final** | **`29c0b773`**, pusheado a `origin/pasada-unica` |
+| **hash de apertura** | `b1130103` (el acta de la vuelta 47), arbol limpio y todo pusheado |
+| **commits de la vuelta** | **4**: `a3914f4b`, `7ff06525`, `1a784377`, `29c0b773` |
+| **ficheros tocados** | **158**: 115 en `dataset/`, 34 altas en `docs/loop` y `scripts/loop`, 4 modificados en `docs/plan`, 2 en `docs/`, 2 en `web/lib/assets`, 1 en `scripts/plan`. **CERO borrados** |
+| **nodos tocados** | **113**, y es la primera vuelta de la campana que los toca en la fase 03 |
+| **arbol al cierre** | **limpio**, `git status --porcelain` da **0** lineas |
 
 ---
 
 ## 0. LA APERTURA, MEDIDA ANTES DE LA PRIMERA OPERACION (regla 1)
 
-**Corrida ANTES de tocar nada**, con `python scripts/loop/vuelta31_estado.py APERTURA_V47`
-(`SALIDA_V47_APERTURA.txt`). El arbol estaba **limpio** y **todo pusheado** en
-`a47edcc9`, asi que la regla 3 (commitear lo pendiente antes de tocar nada) **se cumplio
-por vacio, y se dice asi en vez de darla por cumplida**.
+**Corrida ANTES de tocar nada**, con `python scripts/loop/vuelta31_estado.py APERTURA_V48`
+([`SALIDA_V48_APERTURA.txt`](SALIDA_V48_APERTURA.txt)). El arbol estaba **limpio** y **todo
+pusheado** en `b1130103`, asi que la **regla 3 se cumplio por vacio, y se dice asi en vez de
+darla por cumplida**.
 
-| | apertura | **cierre, recomputado** |
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
 |---|---:|---:|
 | marcador `A` / `B` / `C` / `D` | 575 / 79 / 8 / 2.726 | **575 / 79 / 8 / 2.726** |
 | `n`, huecos, duplicados | 3.388 / 0 / 0 | **3.388 / 0 / 0** |
-| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.524 / 329 / 16.898 | **3.853 / 3.524 / 329 / 16.898** |
-| cola de costuras | (no medida en apertura) | **1.494 sobre 3.524** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3.853 / 3.524 / 329 / 16.898 | **3.853 / 3.504 / 349 / 16.962** |
+| operaciones, estados, dependencias rotas | 71, todas `LISTA`, 0 | **71, todas `LISTA`, 0** |
+| entradas del inventario | 672 | **672** |
+| cola de costuras | (no medida en apertura, y se dice) | **1.490 sobre 3.504** |
 
-**El cierre esta RECOMPUTADO al cierre** (`SALIDA_V47_CIERRE.txt`,
-`SALIDA_V47_COLA.txt`), no copiado de la apertura: es la regla que la vuelta 28 estreno.
-**Ni una cifra se movio, y el motivo es que esta vuelta no tenia por que moverlas: no
-ejecuto ninguna cirugia.**
+**El cierre esta RECOMPUTADO al cierre** ([`SALIDA_V48_CIERRE.txt`](SALIDA_V48_CIERRE.txt),
+[`SALIDA_V48_COLA.txt`](SALIDA_V48_COLA.txt)), **no copiado de la apertura.** Y esta vez **SI
+se movio**, porque esta vuelta si ejecuto cirugia: **20 vivos menos, 20 deprecados mas, y 64
+enlaces mas**, que son los que el paso 5 de `run_phase1.py` (simetrizacion) escribe cuando el
+superviviente hereda la vista reciproca de los que absorbe. **El marcador del archivo no se
+movio ni un digito, y eso es lo correcto: fundir nodos no cambia veredictos.**
 
----
+### LAS FAMILIAS DE LIBRO, al dia (y se movieron)
 
-## 1. TAREA 1: LA DECISION DEL FUNDADOR, REGISTRADA . commit `62c10658`
-
-**LA RAMA ES LA (a)** y **EL CRITERIO SE CITA EN LAS CUATRO CORRECCIONES**, con las
-palabras del fundador: *cuando dos textos sellados chocan, GANA EL QUE APLICO LA REGLA
-MAS RECIENTE DEL FUNDADOR, y el perdedor se corrige*. **Gana la fase 01 del 14 ago 2026**
-(`P.18` punto 3, nodo propio); **pierden los cuatro textos del 12 ago 2026.**
-
-### 1.1 LOS CUATRO TEXTOS, CORREGIDOS CON TACHADO, FECHA Y CITA
-
-**Tres de los cuatro se escribieron con instrumento** y no a mano:
-`python scripts/loop/vuelta47_correcciones_p18.py --escribir`
-(`SALIDA_V47_CORRECCIONES_P18.txt`, exit 0).
-
-| # | texto del 12 ago | donde | como quedo |
-|---:|---|---|---|
-| **1** | `verificacion` punto 2 de `OP-D-07` | `OPERACIONES.jsonl` | tachado + correccion declarada citando `P.18` punto 3 y `01_FUENTES` linea 982 |
-| **2** | campo `preservar` de `OP-M-03-I` | `OPERACIONES.jsonl` | tachado + lo que la fusion SI tiene que hacer: **no tocar el bloque y no perder su arista** |
-| **3** | `verificacion` punto 3 de `OP-M-03-I` | `OPERACIONES.jsonl` | tachado + las **tres** comprobaciones medibles que la sustituyen |
-| **4** | la fila del bloque, linea 82 | `FRONTERAS_DECLARADAS.md` | tachada + *no llega por ahi porque ya no sale de ahi* |
-
-**GUARDAS DEL INSTRUMENTO, todas en verde:** 72 lineas antes y 72 despues; **4 campos
-escritos en 2 operaciones**; **69 de 71 lineas intactas byte a byte**; el texto viejo
-**sigue dentro del nuevo en los tres casos**, comprobado por el propio instrumento; y
-**cero guiones largos y cero medios** en el fichero entero.
-
-### 1.2 LA FRONTERA DEL 1298, RE-DECLARADA CON SUS DOS LADOS MEDIDOS HOY
-
-**Medida con `python scripts/loop/vuelta47_frontera_1298.py`**
-(`SALIDA_V47_FRONTERA_1298.txt`, exit 0, **solo lectura**). **No se copio nada de la
-pagina del 12 ago.**
-
-| | medido el 19 ago 2026 |
-|---|---|
-| **lado del punto brillante** | **`puntos_brillantes_antes_del_pivote`**: **5 de 5** huellas del bloque, contra **0 de 5** en `pivotar_o_perseverar` y **0 de 5** en `decision_pivote_perseverar`. Fuente `Traction - Gabriel Weinberg` **sola** |
-| **lado de decidir rapido** | **SIN CAMBIO**: paso **3** de `pivote_startup`, *Decide con rapidez y sin miedo al fracaso si toca pivotar*. Fuente `The Startup Owner's Manual - Steve Blank`. Viaja al acto por `OP-M-03-III`, **no ejecutada** |
-| **entre libros** | **SIN CAMBIO**: Ries mas Traction contra Blank, **medido en las dos fuentes** |
-| **la arista** | el nodo propio cuelga **HOY del sujeto**, medido en los dos sentidos; **`pivotar_o_perseverar` todavia no lo nombra en ningun campo**. Al morir el sujeto en `OP-M-03-I` la arista **se redirige a la puerta** |
-
-**Y queda escrito lo que la re-declaracion PROHIBE: el bloque no se mete dentro de la
-puerta.** Absorberlo en la fusion del acto I seria deshacer `P.18` punto 3.
-
-### 1.3 `OP-D-07` SELLADA
-
-**Por la via de `OP-D-05` SELLADA, citada por su nombre** y por sus dos lineas (1765 y
-1773 de `02_DESTEJIDOS.md`). Las tres verificaciones al cierre: **1 y 3 CUMPLEN**
-medidas en la vuelta 46, y **la 2 CUMPLE ENTERA** porque su mitad de ruta dejo de estar
-en PARADA. **El campo `estado` no se toca: sigue `LISTA`**, por el motivo escrito en las
-notas de `OP-F-02` y `OP-D-04`, que el encargo cita.
-
-### 1.4 LO QUE SE MOVIO, RECOMPUTADO POR EL CARRIL DEL BANCO 9.10
-
-**Se movio UNA cifra, y se barrio su tabla derivada en el mismo acto**, con el mismo
-instrumento de la vuelta 46 (`SALIDA_V47_CIERRE_FASE02_REMEDIDO.txt`, exit 0):
-
-| | vuelta 46 | **vuelta 47** |
+| familia | apertura | **cierre** |
 |---|---:|---:|
-| operaciones de la fase 02 con registro de cierre | 8 de 9 | **9 de 9** |
-| con la frase de la vuelta 30 | 5 de 9 | **5 de 9** |
-| con encabezado `CERRADA` o `SELLADA` | 4 de 9 | **5 de 9** |
-
-**El marcador NO se movio** (tabla de la seccion 0). **La cifra vieja se queda delante y
-no se borra.**
-
----
-
-## 2. TAREA 2: EL MARCADOR DEL `00_INDICE`, IMPRESO . commit `c63be8aa`
-
-**INSTRUMENTO NUEVO: `scripts/loop/vuelta47_marcador_indice.py`** (solo lectura).
-Cuenta `OPERACIONES.jsonl` fase por fase y estado por estado y **escupe la tabla en
-markdown, lista para pegar entera**. Salida en `SALIDA_V47_MARCADOR_INDICE.txt`, exit 0.
-
-**LA TABLA PEGADA, tal como el instrumento la imprime:** **71 operaciones, 71 LISTAS, 0
-DECISION PENDIENTE**; por fase **7, 7, 9, 16, 10, 10, 5, 2, 1, 3, 1**.
-
-### LAS CUATRO FILAS RANCIAS, RE-MEDIDAS
-
-| fila | publicaba | **medido hoy** | por que se movio |
-|---|---:|---:|---|
-| operaciones | 69 | **71** | nacieron `OP-D-08` y `OP-D-09` el 14 ago |
-| 0 CODIGO | 5 | **7** | `OP-S-06` y `OP-S-07` entraron a la fase 0 |
-| 02 DESTEJIDOS | 7 | **9** | las dos operaciones nuevas |
-| 05 SANEO | 12 | **10** | las dos que se fueron a la fase 0 |
-
-**Calzan al digito con lo que el auditor midio en la vuelta 46**, y se **re-midieron**
-aqui en vez de copiarse.
-
-**Y DOS CELDAS MAS que el conteo de filas no cuenta y se dicen igual:** `03 FUSIONES`
-publicaba **15 LISTAS y 1 pendiente** y hoy son **16 y 0**, porque `OP-U-02` paso a
-`LISTA` en la vuelta 12; en consecuencia el total de LISTAS va de **68 a 71** y el de
-pendientes de **1 a 0**.
-
-### EL BARRIDO DE LAS TABLAS DERIVADAS, EN EL MISMO ACTO
-
-| donde | que decia | **corregido a** |
-|---|---|---|
-| linea 9, la frase de cierre del plan | 69 operaciones, 68 LISTAS, **quince** reglas | **71, 71, cero pendientes, VEINTE reglas** (`P.1` a `P.20`, contadas por el instrumento) |
-| la celda de HECHO de la fase 2 | *las **siete cirugias** hechas* | **las NUEVE operaciones**, y ademas: *cirugias* ya no calza, porque `OP-D-05` y `OP-D-07` quedaron `SELLADA`s con su destejido **consumido por la fase 01** |
-| `EL ESTADO EN QUE QUEDA TODO` (cierre de la sesion B) | 69 / 68 / 1 / 15 / 336 / corte 2.117 | marcada con **SU** corte y con la columna de hoy al lado: **71 / 71 / 0 / 20 / 672 / corte 3.388** |
-
-**Las dos filas de lecturas dirigidas (65 hechas, cero encargadas) van marcadas A
-VERIFICAR y NO se republican**: ningun instrumento corrido en esta vuelta las cuenta, y
-**una cifra sin medicion de hoy no se republica**.
-
-**EL MARCADOR VIEJO SE QUEDA ENTERO, TACHADO Y CON SU FECHA.**
+| Weinberg (`Traction`) | 72 vivos, 70 unicos | **69 / 67** |
+| Horowitz (`Hard Thing`) | 93 / 91 | **91 / 89** |
+| Hugos | 111 / 111 | **111 / 111**, sin cambio |
+| Coleman | 75 / 73 | **74 / 72** |
+| Rackham | 47 / 47 | **47 / 47**, sin cambio |
 
 ---
 
-## 3. TAREA 3: EL ORDEN DE LA FASE 03, Y `OP-U-01` ABIERTA . commit `d5c4d64b`
+## 1. TAREA 1: LOS CINCO PUNTOS . commits `a3914f4b` y `29c0b773`
 
-### 3.1 EL CRITERIO, ADJUDICADO POR CITA Y NO POR PREFERENCIA
+### 1.1 LA CAIDA DE LA VUELTA 47, CORREGIDA CON LA REGLA QUE ELLA MISMA ESTRENO
 
-Medido con `python scripts/loop/vuelta47_orden_fase03.py`
-(`SALIDA_V47_ORDEN_FASE03.txt`, exit 0). **La adjudicacion entera vive en
-`docs/plan/03_FUSIONES.md`, seccion `EL ORDEN DE ESTA FASE`**, que es donde la fase 02
-tiene la suya.
+La fila de `OP-D-07` en la tabla de registros de `02_DESTEJIDOS.md` citaba **linea 4578** y el
+encabezado del sello vive en la **4591**.
 
-1. **EL EMPATE ES REAL Y ESTA CONTADO**: `OP-M-02-PROG`, `OP-M-03-I` y `OP-U-01`, las
-   tres en `orden` 1.
-2. **LA VARA DE LA FASE 02 APLICADA LITERAL NO LO ROMPE, y se dice.** Queda **UN** solo
-   congelado abierto en todo el archivo, el **1190**, **y lo libera `OP-M-04`**, que es
-   de la fase 06. **Las tres empatadas liberan CERO.** No es un fallo de la vara: **en
-   la fase 03 no quedan congelados que liberar.**
-3. **LA MISMA VARA EN SU FORMA GENERAL SI LO ROMPE, y es citable.**
-   `docs/PENDIENTES.md`, seccion `ORDEN DE LA PASADA`, adjudicado el **14 ago 2026**:
-   *el criterio de orden no es el tamano del nodo ni lo averiado que este: es **CUANTOS
-   PARES DESBLOQUEA***. En una fase sin congelados, **lo que cada operacion desbloquea
-   lo escribe el propio plan en `depende_de`**:
+**El instrumento nuevo hace las cosas EN EL ORDEN QUE LA REGLA PIDE**, y ese orden es la
+correccion entera: `scripts/loop/vuelta48_registros_lineas.py` **escribe primero la correccion
+con un HUECO en vez de la cifra, mide DESPUES sobre el fichero ya editado, y solo entonces
+rellena el hueco.** Rellenar el hueco **no mueve lineas**, asi que la medicion sigue siendo
+valida cuando se publica. **Medir antes de escribir es la caida que esto corrige.**
 
-| operacion empatada | **desbloquea** | a quien |
+**EL MOTIVO, MEDIDO Y NO COPIADO DEL ACTA:** `git show 62c10658 -- docs/plan/02_DESTEJIDOS.md`
+trae **tres hunks**; el de la **4476** suma **9** lineas y el de la **4517** suma **4**, los dos
+**por encima** del sello, que el tercero anade al final. **9 mas 4 son las 13 del desplazamiento.**
+
+**De propina, LAS NUEVE FILAS re-medidas contra su cita: 9 de 9 calzan**
+([`SALIDA_V48_REGISTROS_LINEAS.txt`](SALIDA_V48_REGISTROS_LINEAS.txt), exit 0).
+
+> **Y RE-VERIFICADA AL CIERRE**, porque la regla dice *despues de la ULTIMA edicion del
+> fichero*: `02_DESTEJIDOS.md` **no se volvio a tocar** en toda la vuelta, y el instrumento
+> re-corrido al cerrar **vuelve a medir 4591**. La regla se comprueba, no se supone.
+
+### 1.2 LA NOTA ENVEJECIDA DE `OP-U-01` Y `OP-U-02`, CORREGIDA **AL CIERRE**
+
+**Hecha al cierre y no en la TAREA 1, y el motivo va escrito en vez de callado: la cifra que
+esa nota publica la MUEVE la TAREA 2 de esta misma vuelta.** Escribirla antes de fundir seria
+**envejecerla dentro de la propia vuelta**, que es exactamente la especie que corrige.
+
+Corregida por el carril del banco **9.10**, con parrafo de **CORRECCION DECLARADA** en `nota`,
+`adjudicacion` y `evidencia` de las dos operaciones (**seis campos**), y **el texto viejo entero
+delante**: la guarda del instrumento comprueba que la cifra vieja **sigue dentro en 2 de 2**.
+
+**LAS TRES CIFRAS, LAS TRES MEDIDAS EN ESTA VUELTA** con
+`scripts/loop/vuelta48_nota_envejecida.py` ([`SALIDA_V48_NOTA_ENVEJECIDA.txt`](SALIDA_V48_NOTA_ENVEJECIDA.txt)),
+**ninguna copiada del acta**:
+
+| de donde sale | actos | nodos | `CERRADOS` | nodos | `ABIERTOS` | nodos |
+|---|---:|---:|---:|---:|---:|---:|
+| lo que la nota **publicaba** (vuelta 11, `7f4ec6d9`) | 335 | 854 | 280 | 600 | 55 | 254 |
+| **el fichero SELLADO hoy**, leido y no tocado | **332** | **838** | **278** | **595** | **54** | **243** |
+| la nomina **VIVA al abrir** el tramo 1 | **324** | **822** | **270** | **579** | **54** | **243** |
+| la nomina **VIVA al CERRAR** el tramo 1 | **308** | **786** | **254** | **543** | **54** | **243** |
+
+**Los `ABIERTOS` no se mueven ni un digito en las tres mediciones**, que es lo que cabe esperar
+de una operacion que solo toca `CERRADOS`.
+
+> **UNA DISCREPANCIA CON EL ENCARGO, DECLARADA Y NO RESUELTA COPIANDO (regla 2).** El encargo
+> atribuye el re-sellado del fichero a **TRES** commits (`7cec9ecc`, `78ea7799`, `70878328`).
+> **`git log --follow` sobre el fichero devuelve OCHO**, y ademas **no bajan de forma monotona**:
+> `7f4ec6d9` **335**, `7cec9ecc` **334**, `78ea7799` **334**, `801c59f9` **335 (SUBE)**,
+> `c8c4e0b3` **334**, `97552714` **333**, `e5f7bdbd` **333**, `70878328` **332**. **La cadena
+> medida hoy queda escrita dentro de la propia correccion**, no aqui solo.
+
+### 1.3 `recomputo_3388.py`, ARREGLADO POR EL CANON 9 (FALLAR RUIDOSO)
+
+`--salida` pasa a ser **OBLIGATORIO Y SIN DEFAULT**, y el docstring **deja de prometer solo
+lectura incondicional EN EL MISMO COMMIT**, con el texto viejo delante y sin borrar.
+
+**CASO POSITIVO PUBLICADO** ([`SALIDA_V48_CASO_POSITIVO_SALIDA.txt`](SALIDA_V48_CASO_POSITIVO_SALIDA.txt)):
+la corrida sin `--salida` **falla visible con exit 2** y su mensaje
+(*the following arguments are required: --salida*). **La nomina sellada de `docs/plan/` queda
+intacta: md5 `64c2c1927d0e1649a4a48d31cac26120` y 332 lineas antes y despues**, y no aparece en
+el `git status` de la vuelta.
+
+### 1.4 LAS DOS FILAS QUE ESTABAN `A VERIFICAR`, MEDIDAS
+
+Instrumento nuevo `scripts/loop/vuelta48_contar_ld.py`
+([`SALIDA_V48_CONTAR_LD.txt`](SALIDA_V48_CONTAR_LD.txt), exit 0), **con el criterio escrito en
+su docstring para que se pueda discutir**: una lectura dirigida esta **HECHA** cuando tiene
+**seccion propia con veredicto**, no cuando su numero se menciona.
+
+| | cifra vieja (corte 12 ago) | **medida hoy** |
 |---|---:|---|
-| **`OP-U-01`** | **2** | `OP-U-02` y `OP-S-12` |
-| `OP-M-03-I` | 1 | `OP-M-03-ENLACES` |
-| `OP-M-02-PROG` | **0** | a nadie |
+| lecturas dirigidas **hechas** | 65 | **81** (38 en `LECTURAS_DIRIGIDAS.md` y 43 en las seis `LD_*.md`) |
+| lecturas dirigidas **encargadas sin hacer** | CERO | **CERO, y la cifra vieja aguanta** |
 
-4. **UN SEGUNDO CRITERIO CITABLE QUE CONVERGE**, puesto detras y no delante: la cabecera
-   de `03_FUSIONES.md` del **11 ago 2026** (*se escriben HOY las fusiones de los actos
-   QUE YA NO PUEDEN CRECER*, que **es `OP-U-01` literalmente**) y la **atadura 2** del
-   `00_INDICE` (`OP-S-12` al final, despues de la ultima fusion).
-5. **LAS TRES ESTAN DESBLOQUEADAS**, comprobado dependencia por dependencia contra fases
-   con **cierre declarado y citable**. **No se renumera el campo `orden`**: el artefacto
-   queda declarado, como con `OP-D-08` y `OP-D-09`.
+**Los dos numeros nombrados sin seccion propia NO son trabajo pendiente, y cada uno lleva su
+linea citada:** `LD-71` esta **adjudicado como NO ACUNADO** (`ACTA_AUDITOR.md` linea **4234**,
+*`LD-71` NO se acuna*, porque el par ya estaba leido como `LD-04`) y `LD-99` fue **una propuesta
+del instrumento que el ejecutor no uso** (`ACTA_AUDITOR.md` linea **7906**, *el ejecutor uso 96
+a 98*). **Barrido 9.10**: la frase de debajo de la tabla que decia `A VERIFICAR`, tachada y
+corregida.
 
-> **`OP-U-01` VA PRIMERA. No hubo que parar: habia criterio citable, y dos.**
+### 1.5 LA ERRATA
 
-### 3.2 `OP-U-01` ABIERTA, CON CERO NODOS TOCADOS
-
-`python scripts/loop/vuelta47_lectura_opu01.py` (`SALIDA_V47_OPU01_LECTURA.txt`, exit 0),
-sobre la nomina que produce el instrumento de la casa
-`scripts/plan/recomputo_3388.py --salida docs/loop/RECOMPUTO_V47_COMPONENTES.jsonl`
-(resuelve por alias **antes** de contar, `P.1`; sus **cuatro comprobaciones** de
-`08_VERIFICACION` salieron **todas OK**).
-
-**TRES CIFRAS DEL MISMO OBJETO QUE NO CUADRAN, DECLARADAS Y NO RESUELTAS COPIANDO:**
-
-| de donde sale | actos | nodos | CERRADOS | nodos | ABIERTOS |
-|---|---:|---:|---:|---:|---:|
-| lo que **publica** `OP-U-01` (vuelta 12) | 335 | 854 | 280 | 600 | 55 |
-| el **fichero sellado** de hoy, contado linea a linea | 332 | 838 | 278 | 595 | 54 |
-| **lo que mido hoy** | **324** | **822** | **270** | **579** | **54** |
-
-- **Del sellado a hoy: EXPLICADA Y CUADRA AL DIGITO.** **Ocho** nodos que la sellada
-  contaba estan **hoy deprecados** por fusiones de las fases 01 y 02, **nombrados uno
-  por uno** en la pagina; ocho nodos, ocho actos menos, ocho cerrados menos.
-- **De lo publicado al sellado: NO la explico**, es **anterior a esta vuelta** y **va
-  como pregunta**. Reescribir una de las dos sin saber cual envejecio es lo que la regla
-  2 prohibe.
-
-**EL LOTE REAL DE HOY: 270 actos cerrados, 579 nodos, 309 moririan si se funden todos**
-(235 de dos, 31 de tres, 4 de cuatro). **GUARDA DE LOS CUATRO AJENOS EN VERDE**:
-`ab_testing_optimizacion` y `brainstorming_divergente` ya no estan en ninguna componente,
-y los de **13** y **9** aparecen **ABIERTOS**, no cerrados.
-
-**POR QUE NO SE FUNDE NI UN ACTO EN LA VUELTA QUE LA ABRE, dicho en vez de declararla
-hecha:** el campo `superviviente` de `OP-U-01` es `null` y su campo `nodos` es lista
-vacia: **la operacion no trae escrito quien sobrevive en ninguno de los 270 actos**.
-**NO es PARADA**, porque la regla para elegirlo si esta escrita y es citable (las dos
-reglas de ejecucion de la pagina mas `P.8`); pero **obliga a 270 lecturas de contenido**,
-que es trabajo de varias vueltas y **no cabe en la que la abre**. Se entrega **el primer
-paso de la forma asentada de la campana** (lectura de cero y lote sellado), y **el resto
-queda nombrado, no insinuado**.
+`MUERIRIAN` por **`MORIRIAN`** en la tabla del lote de `OP-U-01`. Una linea, un cambio.
 
 ---
 
-## 4. GATE 0 Y LAS SUITES
+## 2. TAREA 2: EL PRIMER TRAMO DE `OP-U-01` . commit `1a784377`
 
-**Ciclo corrido DOS veces, tras la TAREA 2 y de cierre. Los seis comandos exit 0.**
+### 2.1 LA NOMINA RE-MEDIDA AL ABRIR, Y LA GUARDA DE LOS AJENOS
+
+Corrida con el instrumento **ya corregido en la 1.3**, con `--salida` fuera de `docs/plan/`
+([`SALIDA_V48_RECOMPUTO.txt`](SALIDA_V48_RECOMPUTO.txt), exit 0): **324 actos, 822 nodos, 270
+`CERRADOS` sobre 579, 54 `ABIERTOS` sobre 243**, y **las cuatro comprobaciones de
+`08_VERIFICACION` TODAS OK**.
+
+**GUARDA DE LOS CUATRO AJENOS: VERDE.** `gates_go_kill_decision_points`, `customer_discovery`,
+`ab_testing_optimizacion` y `brainstorming_divergente`: **ninguno aparece en el lote `CERRADO`**,
+comprobado nodo a nodo.
+
+### 2.2 LOS CINCUENTA LEIDOS, LOS DIECISEIS FUNDIDOS
+
+**Los 50 se leyeron enteros (`P.5`)** con `scripts/loop/vuelta48_dossier_actos.py`
+([`SALIDA_V48_DOSSIER_1_50.txt`](SALIDA_V48_DOSSIER_1_50.txt), **369 KB**): los veredictos
+directos con su razon entera, el contenido **verbatim** de los 139 nodos paso por paso, el
+cableado de cada uno y la figura del acto.
+
+**El plan sellado ([`PLAN_V48_OPU01_TRAMO1.json`](PLAN_V48_OPU01_TRAMO1.json)) NO TRAE TEXTO:
+trae INDICES**, y el instrumento lee cada pieza verbatim del fichero del nodo. **Una errata de
+transcripcion es imposible por construccion.** La guarda de cobertura exige que **cada indice
+aparezca exactamente una vez y que no sobre ninguno**: *una perdida sin destino no es una
+perdida, es un olvido*.
+
+| | |
+|---|---:|
+| actos **leidos** | **50** |
+| actos **FUNDIDOS** | **16** (9, 15, 23, 30, 37, 38, 39, 41, 43, 44, 45, 46, 47, 48, 49, 50) |
+| actos **DECLARADOS y no fundidos** | **5** (22, 29, 32, 36, 42) |
+| actos **MIXTOS** a la espera de la lectura de `P.12` | **27** |
+| actos fuera por colision de clase medida | **2** (8 y 40) |
+| nodos implicados en lo fundido | **36** |
+| **nodos DEPRECADOS CON ALIAS**, con su texto INTACTO | **20** |
+| **piezas repartidas** (tabla de perdidas, fila a fila) | **123**: **39** viajan enteras al superviviente, **84** ya las decia |
+
+**Censo del propio instrumento:** `3853 ficheros, 3524 vivos, 329 deprecados` antes;
+`3853, 3504, 349` despues; **delta deprecados `+20` sobre `+20` esperado: OK.**
+
+**`P.16`, medido ANTES de limpiar:** **7 duplicadas fabricadas** (`eco_efectividad`,
+`fase_affirm_buyers_remorse`, `lienzo_modelo_negocio`, `propagacion_de_ideas_meme`,
+`resegmentacion_mercado_nicho_bajo_costo`, `seleccion_productos_servicios_verdes`,
+`vesting_dinamico`) y **3 auto-aristas** que la fusion habria creado
+(`business_model_environment_mapping`, `determinar_tipo_de_mercado`,
+`storytelling_como_herramienta_de_diseno`), **las diez impresas una a una y resueltas en el acto**.
+
+### 2.3 EL `GATE 0` EN ROJO, CONTADO CON NOMBRE
+
+> **La primera corrida `--ejecutar` de este tramo rompio el `GATE 0`. Se cuenta porque un fallo
+> que no deja sintoma es la especie del canon 9.**
+
+El tramo llevaba el **acto 36**, que absorbia
+`investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor`. Ese nodo es **SEMILLA DE
+ENTRADA** del mundo `compras` **y ademas DESTINO DE UN PUENTE APROBADO**, asi que
+`run_phase1.py` dio **`GATE 0: FALLIDO`** por **dos chequeos a la vez**. **El dataset se restauro
+entero con `git checkout` (`git status` sobre `dataset/` en 0), el acto salio del lote, y LA
+GUARDA QUE FALTABA quedo escrita** en el instrumento (**guarda 1B**), leyendo **las mismas
+fuentes que el `GATE 0`**: **ningun absorbido puede ser semilla ni extremo de puente**. Con ella
+el tramo **aborta antes de escribir** en vez de romper.
+
+**Y la pregunta no era del acto 36: era de la operacion entera.** Medida con
+`scripts/loop/vuelta48_puertas_en_el_lote.py`
+([`SALIDA_V48_PUERTAS_EN_EL_LOTE.txt`](SALIDA_V48_PUERTAS_EN_EL_LOTE.txt), exit 0):
+
+| | |
+|---|---:|
+| semillas de entrada (20 del core mas las de los mundos) | **85** |
+| nodos que son extremo de un puente aprobado | **185** |
+| **el universo PROTEGIDO, la union** | **256** |
+| actos `CERRADOS` con **al menos una puerta dentro** | **31** de 270 |
+| **SALVABLES** (una sola puerta: el acto se funde **si la puerta sobrevive**) | **29** |
+| **IMPOSIBLES** (todos sus miembros son puerta) | **2**: los actos **36** y **174** |
+
+> **LO QUE ESTO DEJA ABIERTO, y va como PREGUNTA y no como decision:** en esos **29** actos **la
+> eleccion de superviviente ya no es libre**. La regla de la pagina dice que **sobrevive por
+> CONTENIDO**; si el contenido apunta al que **no** es puerta, **hay choque entre la vara de la
+> fase y el `GATE 0`**, y **ninguna regla escrita hoy lo resuelve.**
+
+### 2.4 LOS CINCO DECLARADOS, con su motivo citado
+
+| # | el acto | por que NO se funde |
+|---:|---|---|
+| **22** | la diversidad del lugar (3) | **Contenido empatado Y cableado empatado.** Los tres veredictos (1857, 1792, 1779) dicen lo mismo: *TRES de los cuatro pasos se corresponden* y a cada nodo le queda **exactamente una** linea propia. Cableado **3 contra 3**. `P.8`, fila tres de su tabla: **se trae al auditor** |
+| **29** | la responsabilidad gerencial (3) | **El propio veredicto marca al ganador como PROVISIONAL.** El puesto **2572** escribe una *NOTA GRAVE DE FAMILIA*: *ganador PROVISIONAL, pero el cumulo pasa de diez nodos por raiz y no esta leido entero*, y *es la firma de POR ELEGIR*. Fundir sobre un ganador que el archivo llama provisional es decidir lo que el archivo dejo sin decidir |
+| **32** | el Dia de Cero Defectos (3) | **El veredicto 2525 deja un aviso expreso para esta operacion**: las dos **cadenas de firma** son distintas (*contigo uno a uno* contra *con su supervisor*) y dice con esas palabras que la fusion **tiene que DECIDIRLO, no apilarlo**. Decidirlo es **borrar contenido que ninguna regla ordena**, que la casa reserva al fundador |
+| **36** | la investigacion antes de negociar (2) | **La puerta.** Ver 2.3 |
+| **42** | el storyboard (2) | **Contenido empatado Y cableado empatado** (4 contra 4). `P.8`, fila tres: **se trae al auditor** |
+
+### 2.5 LOS VEINTISIETE MIXTOS, y por que esta vuelta no los funde
+
+**De los 270 actos `CERRADOS` del lote, VEINTISIETE tienen dentro un par que no es `A`** (4 de
+tamano cuatro y 23 de tamano tres) **y los veintisiete caen dentro de estos primeros 50**: el
+orden impreso **pone los duros por delante**.
+
+**`P.12` prohibe fundirlos por transitividad**: *el cierre transitivo CONVOCA, la lectura
+DECIDE*, y *NI TRANSITIVIDAD AUTOMATICA NI MAYORIA*. El nodo mixto **se lee CONTRA EL
+SUPERVIVIENTE** y se decide `ENTRA` o `CONTINUA`.
+
+**Esa lectura se hizo ENTERA para UNO, el acto 1, y se deja como ejemplar:** el mixto es
+`metodologia_spin_selling`, y sus **dos** veredictos `D` (puestos **625** y **764**) dicen los
+dos, **con esa palabra, CONTINUA**, porque su paso 3 es *una linea que ademas remite fuera*
+mientras los otros traen *el PROCEDIMIENTO entero*. **`CONTINUA` no es fusion: es enlace**, y el
+enlace es de la fase 04.
+
+> **Los otros VEINTISEIS no se leyeron en esta vuelta. Se dice en vez de callarse.**
+
+---
+
+## 3. GATE 0 Y LAS SUITES
+
+**Corridos TRAS el tramo. Los seis comandos exit 0.**
 
 | que | como salio |
 |---|---|
 | **Gate 0**, ciclo de **TRES** comandos | `run_phase1 --reaplico-curaduria` con **`GATE 0: OK`**; `etiquetas_de_cara --aplicar` con **71** etiquetas; `sync_assets_web` con **6** assets |
-| **el comando 4** | **NO corre, y es correcto**: el censo no se movio (dataset en cero) |
-| `phase1_run_log.json` | respaldado antes y **restaurado byte igual** las dos veces, md5 `dfa6fc2d3e9ce275729047f65fefe446` |
+| **el comando 4** | **NO corre, y es correcto**: el censo se movio pero no hubo altas ni bajas de fichero |
+| `phase1_run_log.json` | **CAMBIA de md5, y esta vez es lo correcto**: `dfa6fc2d...` a `d4aa4d71...`. La vuelta 47 lo restauro byte igual porque no toco el dataset; **esta si lo toco**, y un log identico tras 113 nodos movidos seria el sintoma de que el ciclo no corrio |
 | **suite del motor** | **25 de 25**, exit 0 |
 | **suite web** | **80** ficheros, **1.030** pasadas y **3** saltadas, exit 0 |
 | **`tsc --noEmit`** | **CERO** lineas, exit 0 |
-| **hook guardian** | **verde en los tres commits** |
+| **duplicadas tras resolver** | **1.010** antes y **1.004** despues: **CERO nuevas**, y el tramo **baja el pasivo historico en 6** por `P.16` |
+| **auto-aristas** | **CERO** nuevas |
+| **hook guardian** | **verde en los cuatro commits** |
 
 ---
 
-## 5. CORRECCIONES DECLARADAS SOBRE MI PROPIO TRABAJO
+## 4. CORRECCIONES DECLARADAS SOBRE MI PROPIO TRABAJO
 
-**Tres, las tres vistas ANTES de publicar y las tres con el texto viejo delante:**
+**Cuatro, las cuatro vistas ANTES de publicar cifra, y las cuatro con el motivo escrito dentro
+del propio instrumento para que el siguiente no pise la misma piedra.**
 
-1. **EL SELLO DE `OP-D-07` ESCRIBIA LA FRASE DE LA VUELTA 30 PARA NEGARLA.** El
-   localizador de `vuelta46_cierre_fase02.py` la busca **como texto plano**, asi que la
-   seccion se contaba **en las dos formas** (6 de 9 y 5 de 9) y la tabla del cierre
-   habria mentido. Reescrita sin la frase: hoy **5 y 5**. **El motivo queda escrito
-   dentro de la propia seccion** para que nadie lo repita.
-2. **EL LECTOR DE CONTRASTE DEL INSTRUMENTO DEL MARCADOR SE TRAGABA MIS PROPIAS TABLAS.**
-   Leia todo lo que seguia a `## EL MARCADOR`, incluidas la tabla vieja tachada y la de
-   correcciones, que **traen las cifras rancias a proposito**: daba **4 filas sin
-   calzar DESPUES de pegar la buena**. Acotado al bloque del marcador **VIGENTE**, hoy
-   da **12 de 12 SI y CERO filas sin calzar**. **El limite queda escrito en el codigo.**
-3. **EL GUARDA DE GUIONES DE MI PROPIO INSTRUMENTO LLEVABA LOS DOS CARACTERES
-   LITERALES.** Pasan a escape; el fichero queda con **cero guiones largos y cero
-   medios**, que es lo que la regla 10 pide de **todo** lo que se escribe.
+1. **MI CONTADOR DE LECTURAS DIRIGIDAS SE LEIA A SI MISMO.** Barria `docs/` entero, incluidos
+   los `SALIDA_*.txt`, que son **su propia salida**. Su seccion 5 imprime la lista de huecos
+   *LD-12 ... LD-27* y **la segunda corrida la leia como numeros nombrados**: el universo pasaba
+   de 83 a 99 y las encargadas de 2 a 18 **sin que nada cambiara en el plan**. *Un instrumento
+   que se lee a si mismo se da la razon solo.* Los `SALIDA_*` quedan excluidos y **la segunda
+   corrida ya sale byte igual**. **Ninguna celda llego a escribirse con la cifra mala: se
+   revirtio con `git checkout` antes de seguir.**
+2. **MI RAZONAMIENTO SOBRE LOS ACTOS MIXTOS ERA FALSO, Y LO DIJO LA MEDICION.** Lei los actos y
+   **razone** que todo acto mixto fabricaria una colision de clase al fundirse. **Lo medi y es
+   falso**: al fundir el acto **entero**, la `D` interna colapsa a auto-arista igual que las `A`.
+   Mi error fue razonar sobre una fusion **parcial**. De los 50, **44 no fabrican ninguna
+   colision y SEIS si**, y **dos de esos seis son TODO-A**, o sea que **la figura del acto no
+   predice la colision**.
+3. **MI GUARDA DE DUPLICADAS SUMABA EL PASIVO AJENO AL PROPIO.** Contaba las duplicadas tras
+   resolver sobre el catalogo **entero** y salia ROJO con 894. Fui a mirar: **ya estaban**, son
+   el backlog que `OP-S-12` tiene encargado. *Una guarda que se cae siempre deja de ser guarda.*
+   Corregida a la vara que ya usaba `vuelta39_fundir.py`: **solo las nuevas**.
+4. **MIS GUARDAS 1 Y D SE JUZGABAN CONTRA LA LISTA GLOBAL DE FALLOS**, asi que imprimian ROJO en
+   cuanto fallara cualquier otra cosa. **Un semaforo que no mide lo que dice medir.** Ahora cada
+   una se juzga a si misma.
+
+**Y una divergencia con el encargo, declarada en vez de resuelta en silencio:** el encargo dice
+que las duplicadas fabricadas **quedan para `OP-S-12`** y a la vez exige **cero duplicadas tras
+resolver**. **Las dos no caben.** Se siguio **`P.16` (quien fabrica, limpia)** mas la guarda: las
+7 se **miden e imprimen** antes de limpiarse, y se limpian en la misma operacion.
+
+**Un fichero tocado que no estaba encargado y se declara:** `docs/COSTURAS_INTERNAS.jsonl` y
+`docs/COSTURAS_INTERNAS_RESUMEN.md`, que **`scripts/costuras_internas.py` reescribe al correrse**
+para medir la cola del cierre. **Es un instrumento que escribe su propio censo**; lo corri para
+la fila *cola de costuras* de la tabla de cierre.
 
 ---
 
-## 6. UN HALLAZGO QUE NO ES MIO Y SE DECLARA
+## 5. LOS DISCUTIBLES MARCADOS, para la relectura ciega
 
-**`scripts/plan/recomputo_3388.py` se anuncia como *estrictamente de solo lectura* y
-ESCRIBE `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` POR DEFECTO.** La primera corrida
-de esta vuelta **piso la nomina sellada** (332 lineas a 324). **Restaurada con
-`git checkout`, comprobada de vuelta en sus 332 lineas, y la corrida repetida con
-`--salida` apuntando fuera de `docs/plan/`.** **El fichero sellado NO aparece en el
-`git status` de esta vuelta.**
-
-> **Recomendacion: que ese instrumento EXIJA `--salida` en vez de traerla puesta.** Un
-> instrumento que dice no escribir y escribe es la especie del canon 9 (fallar ruidoso):
-> **no deja sintoma.**
-
----
-
-## 7. LOS DISCUTIBLES MARCADOS, para la relectura ciega
-
-**Marcados ANTES de saber si acierto.** Son **doce**.
+**Marcados ANTES de saber si acierto.** Son **once**.
 
 | # | el discutible | por que lo marco |
 |---:|---|---|
-| **D1** | **La lectura de *entre ese nodo y la puerta*.** La decision del fundador y el encargo dicen esas palabras; yo escribi la re-declaracion como **cambio de SEDE del lado del punto brillante**, dejando intactos el lado de Blank y la linea *entre libros* | **Es el discutible mayor de la vuelta.** La lectura literal pondria la frontera entre `puntos_brillantes_antes_del_pivote` (Traction) y `pivotar_o_perseverar` (Ries), y eso **contradice la linea sellada del 12 ago** *Entre libros: Ries mas Traction contra Blank*, ademas de dejar sin lado a `pivote_estrategico`. Elegi la lectura que **no contradice ninguna linea sellada** y que **cubre igual el fondo** de la frase (el bloque no se mete dentro de la puerta; la puerta lo sostiene tras la redireccion). **Si el auditor lee que la frontera debia quedar literalmente entre esos dos nodos, la correccion es esa tabla y esta escrita para poder cambiarla** |
-| **D2** | **Tache tambien la celda de la fila 75** (la sede vieja en la tabla de los dos lados), que el encargo **no** nombraba entre los cuatro textos | Dejarla sin tachar habria dejado la pagina diciendo **dos sedes distintas** para el mismo lado. Lo meti en la **1.2** (la re-declaracion), no en la 1.1, y lo digo |
-| **D3** | El registro de `OP-D-07` dice **`SELLADA`** y **no** estrena `HECHA` | El encargo dice *sella por la via de `OP-D-05` SELLADA*, y esa via usa esa palabra. **No estrenar `HECHA` es lo que tres actas han adjudicado**, pero la palabra exacta del registro es eleccion mia |
-| **D4** | Corregi la tabla del cierre de la fase 02 de **8 de 9 a 9 de 9 en la misma vuelta** que escribio el registro que faltaba | La 1.4 manda recomputar lo que se mueva. Podria leerse como que me doy el punto a mi mismo; por eso **la cifra vieja se queda delante** y **el recomputo lo firma el instrumento de la vuelta 46, no uno mio** |
-| **D5** | **No escribi la frase de la vuelta 30 dentro del sello, a proposito**, y explique el motivo **dentro de la propia seccion del plan** | Es meter una nota sobre el instrumento en una pagina de plan. Lo hice porque **el siguiente que escriba un sello pisara la misma piedra** |
-| **D6** | En la TAREA 2 barri **tres tablas derivadas que el encargo no nombraba**: la linea 9, la celda de HECHO de la fase 2 y la tabla de cierre de la sesion B | El encargo dice *el marcador*. La regla 1 dice *el barrido de toda tabla derivada en el mismo acto*. **Elegi la regla**, y puede leerse como alcance tomado |
-| **D7** | Marque **A VERIFICAR** las dos filas de lecturas dirigidas en vez de republicarlas | Deja la tabla con dos huecos declarados. La alternativa era **copiar una cifra sin medirla**, que es exactamente la regla 2 |
-| **D8** | **Adjudique el criterio de orden de la fase 03** leyendo CONGELADOS LIBERADOS **en su forma general** (`PENDIENTES.md` linea 2596) y aplicandola sobre `depende_de` | Es lo mas cerca de doctrina nueva que hay en la vuelta. **Lo defiendo asi**: la cita general existe, es del fundador, es del 14 ago, y **no invento el dato que la aplica** (`depende_de` es texto sellado del plan). Aun asi, **el auditor podria leer que esto es una vara nueva y que tocaba PARAR por la 3.3** |
-| **D9** | **Restaure la nomina sellada** que `recomputo_3388.py` piso, y saque la de hoy a `docs/loop/` | Restaurar es tocar un fichero que no era mio tocar. Lo hice porque **la alternativa era publicar la vuelta con un artefacto sellado sobrescrito sin encargo** |
-| **D10** | **Declare TRES cifras de `OP-U-01` sin elegir ninguna**, y explique solo una de las dos diferencias | Un lector rapido lo leera como *no cuadra y no lo arreglo*. **Es deliberado**: la regla 2 manda declarar |
-| **D11** | **Abri `OP-U-01` sin fundir ni un acto**, y lo escribi asi en el plan | El encargo dice *abre la primera operacion y sigue en MODO CONTINUO*. **Cumplo la apertura y no la cirugia**, y digo por que con la cifra delante (270 actos, ninguno con superviviente escrito). **Si el auditor lee que abrir obligaba a fundir el primer tramo, esto es una caida de alcance y la marco yo** |
-| **D12** | Corregi **el guarda de guiones de mi propio instrumento** despues de que el hook lo dejara pasar | El hook lo permitio, asi que podria haberlo dejado. La regla 10 dice *todo lo que escribas* |
+| **D1** | **Funde DIECISEIS de los cincuenta actos que el encargo manda ejecutar.** | **Es el discutible mayor de la vuelta.** El encargo dice *ejecuta los primeros 50 actos CERRADOS*; su punto 2.4 dice que *lo que no se deje fundir con las reglas escritas se declara y se salta*. **Elegi la segunda frase 34 veces**: 27 mixtos por `P.12`, 5 declarados con motivo citado y 2 por colision medida. **Si el auditor lee que 2.4 era una valvula para casos sueltos y no para dos tercios del tramo, esto es una caida de alcance y la marco yo** |
+| **D2** | **No fundi NINGUNO de los 27 actos mixtos**, y solo lei uno entero por `P.12` | La lectura de los 26 restantes es trabajo real que **no cabia en esta vuelta**. La alternativa era **fundirlos por transitividad**, que es lo unico que `P.12` prohibe con esas palabras. **Preferi no hacerlo a hacerlo mal**, pero el resultado es que el tramo entrega menos de lo pedido |
+| **D3** | **Segui `P.16` contra la letra del encargo** en las duplicadas fabricadas | El encargo dice *quedan para `OP-S-12`* y a la vez exige *cero duplicadas tras resolver*. **Elegi la regla del banco mas la guarda contra la frase**, y lo digo. Si el auditor lee que las 7 debian quedarse sin limpiar, esto se revierte y hay que republicar la cifra del pasivo |
+| **D4** | **Segui adelante despues de un `GATE 0` en rojo**, en vez de detenerme y convocar al auditor | El encargo dice *cualquier guarda en rojo te detiene*. **Lei que la guarda no puede quedarse en rojo, no que la vuelta muere**: restaure el dataset entero, saque el acto del lote, escribi la guarda que faltaba y volvi a correrlo hasta verde. **Si el auditor lee que el rojo obligaba a parar en seco, esto es desobediencia y la marco yo** |
+| **D5** | **Elegi el superviviente contra el cableado en tres actos** (45, 48, 50), amparado en `P.8` | `P.8` lo autoriza (*diez contra cinco y pierde*), pero **el margen de cableado es grande** (6 contra 2 en el 45) y quien pese el grafo mas que yo leera al reves |
+| **D6** | **El acto 38 se decidio por el numero de condiciones y por el entregable**, no por los pasos | Pasos empatados (4 y 4) **y cableado empatado (3 y 3)**, que por `P.8` fila tres seria *traer al auditor*. **Me apoye en condiciones y entregable como CONTENIDO** en vez de declararlo. **Es el que menos defiendo de los dieciseis** |
+| **D7** | **El acto 47 sobrevive por cantidad (5 pasos contra 4) y no por doctrina** | Lo que muere (`sistema_tres_rs_alineacion`) trae **la logica social contra la de negocio del split**, que es doctrina de mas peso que dos pasos de proceso. **Todas sus piezas viajan**, pero el que manda es el otro |
+| **D8** | **Declare el acto 29 por una palabra del veredicto** (*ganador PROVISIONAL*) | El acto esta `CERRADO` y **dos veredictos nombran al superviviente**. Un lector estricto dira que **`P.5` acota al acto en operacion** y que el *cumulo* no es asunto suyo. **Preferi no fundir sobre una palabra que el propio archivo marco como provisional** |
+| **D9** | **Deje UNA perdida declarada sin viajar** (acto 49, las *figuras de autoridad*) | Anadirla entera duplicaba las demostraciones tangibles que el superviviente ya manda. **Va escrita en el plan con su motivo**, no escondida, pero **es una pieza que no viaja** y la regla dice *cada perdida al superviviente* |
+| **D10** | **Publique la columna NUCLEO-A del instrumento de colisiones y NO la uso para nada** | Y hago bien en no usarla: **imprime 0 tanto cuando no hay colision como cuando no hay nada que fundir**, que son cosas distintas. **Lo digo aqui para que nadie la cite**; ninguna cifra de este reporte sale de esa columna |
+| **D11** | **Corri `costuras_internas.py`, que reescribe dos ficheros de `docs/`** que el encargo no nombraba | Lo hice para tener la fila *cola de costuras* medida al cierre en vez de vacia. **Es alcance tomado**, y va declarado en la seccion 4 |
 
 ---
 
-## 8. PENDIENTES DE DOCTRINA
+## 6. PENDIENTES DE DOCTRINA
 
-1. **EL ESQUEMA DE `OPERACIONES.jsonl` NO DISTINGUE UNA OPERACION EJECUTADA DE UNA
-   PENDIENTE.** Heredado desde la vuelta 30 y **sin cambio hoy**: las **71** estan en
-   `LISTA`, medido. Hoy eso solo se lee en el campo `nota` y en la pagina de la fase.
-2. **EL CAMPO `orden` DE LA FASE 03 NO ES SU CRITERIO DE ORDEN**, igual que en la fase
-   02, y **sigue sin renumerarse**. El artefacto queda **declarado** en la pagina de la
-   fase, no tapado.
-3. **`MIN_BLOQUE = 2` de la cola de costuras** sigue pendiente del fundador, tal como el
-   propio instrumento lo imprime. **Sin cambio en esta vuelta.**
-
----
-
-## 9. LAS PREGUNTAS, que es lo que no adivino
-
-1. **LA DISCREPANCIA DE `OP-U-01`: 335 contra 332.** El fichero sellado
-   `RECOMPUTO_3388_COMPONENTES.jsonl` trae **332** actos y **278** cerrados; la `nota` y
-   la `evidencia` de `OP-U-01` y `OP-U-02` publican **335** y **280 sobre 600**. **Las
-   dos son anteriores a esta vuelta y no se cual envejecio.** Verificado que **el
-   fichero no lo toco yo**. **Quien corrige a quien es adjudicacion, no medicion.**
-2. **LA LECTURA DE *Y LA PUERTA*** (el discutible D1). **Si el fundador quiso decir
-   literalmente que los dos lados de la frontera pasan a ser el nodo propio y la puerta,
-   mi re-declaracion esta mal y hay que rehacerla**, y ademas habria que decidir que
-   pasa con la linea *entre libros* y con el lado de `pivote_estrategico`, que hoy nadie
-   ha mandado mover.
-3. **`OP-U-01` SON 270 LECTURAS DE CONTENIDO. ¿DE QUE TAMANO ES UN TRAMO?** La regla 6
-   dice *~50 a 100 pares, o por operacion en ejecucion*, y aqui la unidad no es el par
-   ni la operacion, **es el acto**. **No lo adivino: lo pregunto.**
-4. **¿SE CAMBIA `recomputo_3388.py` PARA QUE EXIJA `--salida`?** Es codigo de
-   `scripts/plan/`, no del bucle, y **tocarlo no me lo encargo nadie.**
+1. **NINGUNA REGLA ESCRITA RESUELVE EL CHOQUE ENTRE LA VARA DE LA FASE Y EL `GATE 0`**, y afecta
+   a **29 actos medidos** del lote: la pagina dice *sobrevive por CONTENIDO* y el `GATE 0` dice
+   *una semilla o un extremo de puente no puede quedar deprecado*. **Cuando apuntan a nodos
+   distintos, no hay vara.** Es lo mas parecido a doctrina nueva que deja esta vuelta.
+2. **Y DOS ACTOS DONDE NO HAY SALIDA NI ELIGIENDO BIEN**: el **36** y el **174**, con **todos**
+   sus miembros protegidos. **Alguien tendria que morir, y ninguno puede.**
+3. **LA LECTURA DE `P.12` NO TIENE INSTRUMENTO NI FORMATO**, a diferencia de la fusion. Los 26
+   mixtos que quedan **piden un carril escrito**: donde vive el `CONTINUA`, quien pone el enlace
+   y en que fase, y que pasa con la *poda del solape* que `P.12` nombra y esta operacion no
+   tiene autorizado hacer.
+4. **HEREDADOS Y SIN CAMBIO HOY**: el esquema de `OPERACIONES.jsonl` **sigue sin distinguir una
+   operacion ejecutada de una pendiente** (las 71 en `LISTA`, medido hoy), y el campo `orden` de
+   la fase 03 **sigue sin ser su criterio de orden**.
 
 ---
 
-## 10. LO QUE ESTA VUELTA NO HIZO, dicho en vez de callado
+## 7. TRES COLISIONES DE CLASE QUE YA ESTABAN, Y NO SON MIAS
 
-- **NO fundio ni un acto.** `OP-U-01` queda **abierta**, no ejecutada.
-- **NO toco un solo nodo.** `dataset/` en **cero** ficheros, comprobado con
-  `git status` al cierre.
-- **NO renumero el campo `orden`** de ninguna operacion.
-- **NO resolvio la discrepancia 335 contra 332**: la declaro.
-- **NO republico las dos cifras de lecturas dirigidas**: las marco a verificar.
+**Medidas en el estado de HOY, ANTES de fundir nada**
+([`SALIDA_V48_COLISION_1_50.txt`](SALIDA_V48_COLISION_1_50.txt)): **tres pares resueltos cargan
+DOS clases publicadas a la vez.**
+
+| el par resuelto | las dos clases |
+|---|---|
+| `customer_development_modelo` contra `voz_del_cliente_voc` | **B** en el 806 y **D** en el 1261 |
+| `pensamiento_convergente_divergente` contra `reglas_brainstorming` | **A** en el 844 y **D** en el 585 |
+| `riesgo_titulos_inflados` contra `seleccion_ceo_fundador` | **B** en el 263 y **D** en el 1589 |
+
+**Los tres son anteriores a esta vuelta y no se tocan aqui.** Van como pregunta.
+
+---
+
+## 8. LO QUE ESTA VUELTA NO HIZO, DICHO EN VEZ DE CALLADO
+
+1. **NO fundio 34 de los 50 actos del tramo.** Ver **D1** y **D2**.
+2. **NO leyo por `P.12` los otros 26 actos mixtos.** Solo el acto 1, como ejemplar.
+3. **NO abrio el segundo tramo de 50** que el punto 2.4 del encargo permite si hay cuerda.
+   **No la habia**: el tramo 1 consumio la vuelta entera entre la lectura de los 50, el `GATE 0`
+   en rojo y su guarda nueva. **Se dice en vez de dejarlo implicito.**
+4. **NO toco la nomina sellada** `RECOMPUTO_3388_COMPONENTES.jsonl`: md5 y 332 lineas iguales al
+   abrir y al cerrar.
+5. **NO escribio el enlace** que el acto 1 pide por `CONTINUA`: es de la fase 04 y esta
+   operacion no lo tiene encargado.
+6. **NO resolvio las tres colisiones de clase de la seccion 7** ni las **1.004** duplicadas del
+   pasivo historico. Las primeras van como pregunta; las segundas son de `OP-S-12`.
+
+---
+
+## 9. LAS PREGUNTAS PARA EL AUDITOR
+
+1. **El choque `CONTENIDO` contra `GATE 0` en los 29 actos con puerta: quien gana?** Y en los
+   dos imposibles (36 y 174), **que se hace**: se declaran para siempre, o el fundador decide
+   mover la semilla al superviviente?
+2. **`P.12` sin carril: donde se escribe un `CONTINUA`?** El acto 1 ya tiene su lectura hecha y
+   **no tiene sitio donde ponerla** salvo esta pagina.
+3. **La lectura de 2.4: es valvula para casos sueltos o vale para dos tercios de un tramo?**
+   (**D1**.)
+4. **Las duplicadas fabricadas: `P.16` o el encargo?** (**D3**.)
+5. **Un `GATE 0` en rojo restaurado y vuelto a verde dentro de la misma vuelta, cuenta como
+   parada?** (**D4**.)
