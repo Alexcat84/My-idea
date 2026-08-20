@@ -26,8 +26,8 @@ la seccion 7 y no escondidos aqui.**
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `630c6d19` (el commit del acta 62), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** (`git status --porcelain` VACIO, comprobado) |
-| **hash final** | el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas el que escribe esta celda, porque el commit del reporte no podia contener su propio hash |
-| **commits de la vuelta** | **5** hasta aqui, leidos de `git log --format=%h 630c6d19..HEAD`: `8d3c34cc` (apertura medida), `0f7d2ef0` (TAREA 1 entera), `f5e9a72b` (`OP-M-03-I`), `e55252dc` (el primer `ROJO` propio del barrido), `0f692945` (`OP-M-02-PROG`), **mas el de este reporte y el que escribe esta celda** |
+| **hash final** | **`0d394454`**, el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas este ultimo, que solo escribe esta celda y la de abajo porque el commit del reporte no podia contener su propio hash |
+| **commits de la vuelta** | **6**, leidos de `git log --format=%h 630c6d19..HEAD`: `8d3c34cc` (apertura medida), `0f7d2ef0` (TAREA 1 entera), `f5e9a72b` (`OP-M-03-I`), `e55252dc` (el primer `ROJO` propio del barrido), `0f692945` (`OP-M-02-PROG`), `0d394454` (este reporte), **mas el que escribe esta celda** |
 | **arbol al cierre** | limpio tras el commit del reporte |
 
 ---
