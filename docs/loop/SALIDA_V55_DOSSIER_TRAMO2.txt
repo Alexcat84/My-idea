@@ -1,0 +1,1167 @@
+==============================================================================
+DOSSIER DEL TRAMO 2: EL ACTO LEIDO ENTERO (P.5) CON SU RAZON
+==============================================================================
+  nodos leidos de: el arbol de trabajo
+  universo PROTEGIDO (semillas mas extremos de puente): 256 ids
+
+##############################################################################
+# ACTO 1 del tramo 2 (puesto 12 de hoy, 51 en la de la 48)
+##############################################################################
+  [PAR A] puesto 227, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): balance_eficiencia_responsividad
+  nodo_b (EL SEGUNDO de la razon): trade_off_responsividad_eficiencia
+
+  RAZON ENTERA, sin recortar:
+    REPITE con trade_off_responsividad_eficiencia. Los dos mandan situar la cadena en un punto del continuo entre eficiencia y capacidad de respuesta segun lo que valore tu cliente y la estabilidad del entorno, y revisarlo periodicamente porque el mercado cambia. FIGURA: ids casi identicos con las palabras permutadas. Candidato a fusion.
+
+  --- balance_eficiencia_responsividad
+      titulo    : Balance entre Eficiencia y Responsividad en la Cadena de Suministro
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 6 | condiciones 3 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas
+      paso 2: Evaluar la confiabilidad de los pronósticos y datos disponibles
+      paso 3: Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)
+      paso 4: Posicionar la estrategia de la cadena en el punto del continuum que mejor se ajuste a las circunstancias actuales
+      paso 5: Reevaluar y reposicionar continuamente conforme cambian las circunstancias del mercado
+      paso 6: Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)
+      cond 1: Cuando la empresa enfrenta presión de reducir costos versus mantener capacidad de respuesta
+      cond 2: Si el mercado está cambiando y la empresa sigue optimizando solo por eficiencia
+      cond 3: Al diseñar la estrategia de sourcing, manufactura y distribución
+      previos   : ['gestion_riesgo_cadena_suministro']
+      siguientes: ['coordinacion_colaboracion_cadena_suministro']
+      entregable: Definición estratégica documentada de dónde se ubica la empresa en el continuum eficiencia-responsividad, con justificación basada en volatilidad del mercado
+
+  --- trade_off_responsividad_eficiencia   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Balance entre Capacidad de Respuesta y Eficiencia
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 4 | condiciones 2 | previos 2 | siguientes 4 | cableado 6
+      paso 1: Analizar qué valora más tu segmento de clientes: precio bajo o rapidez/servicio.
+      paso 2: Evaluar el nivel de exceso de capacidad, inventario y flexibilidad de transporte actuales.
+      paso 3: Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.
+      paso 4: Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.
+      cond 1: Cuando existen conflictos aparentes entre nivel de servicio y costos operativos.
+      cond 2: Cuando el usuario debe decidir entre invertir en flexibilidad o en reducción de costos.
+      previos   : ['definicion_alineacion_cadena_suministro', 'information_driver_supply_chain']
+      siguientes: ['driver_produccion', 'driver_ubicacion', 'driver_transporte', 'alineacion_cadena_estrategia_negocio']
+      entregable: Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.
+
+##############################################################################
+# ACTO 4 del tramo 2 (puesto 13 de hoy, 54 en la de la 48)
+##############################################################################
+  [PAR A] puesto 249, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): hr_calidad_gestion
+  nodo_b (EL SEGUNDO de la razon): hr_como_control_de_calidad_gerencial
+
+  RAZON ENTERA, sin recortar:
+    REPITE con hr_como_control_de_calidad_gerencial. Los dos mandan definir el ciclo de vida completo del empleado, poner preguntas de revision y metricas objetivas por cada fase, y usar lo que encuentres para corregir la calidad de la gestion. Candidato a fusion.
+
+  --- hr_calidad_gestion
+      titulo    : Cuidar la calidad de cómo gestionas a tu equipo (employee life cycle)
+      fuente    : The Hard Thing About Hard Thing - Ben Horowitz
+      pasos 6 | condiciones 1 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Evalúa cada etapa del recorrido de una persona en tu equipo: reclutamiento, compensación, integración, desempeño, motivación
+      paso 2: Pregunta si quienes hacen las entrevistas están bien preparados y llegan a tiempo
+      paso 3: Compara los paquetes de compensación y participación (stock options) con lo que ofrece la competencia por talento
+      paso 4: Mide cuánto tarda alguien nuevo en volverse productivo
+      paso 5: Evalúa el compromiso: ¿las personas creen en lo que estás construyendo, disfrutan venir a trabajar, o están desconectadas?
+      paso 6: Contrata a alguien que sepa diseñar procesos de primer nivel para cuidar a tu equipo, igual que quien lidera el control de calidad (QA) de un producto
+      cond 1: Cuando necesitas ir más allá de la administración básica de personas y empezar a cuidar en serio cómo se gestiona a tu equipo
+      previos   : ['gestion_desempeno_feedback', 'deuda_de_gestion']
+      siguientes: ['organizacion_equipos_calidad_servicio']
+      entregable: Un mapa de revisión del recorrido completo de una persona en tu negocio, con métricas por etapa: reclutamiento, compensación, entrenamiento, desempeño y motivación
+
+  --- hr_como_control_de_calidad_gerencial
+      titulo    : El área de personas como control de calidad de tus gerentes
+      fuente    : The Hard Thing About Hard Things - Ben Horowitz
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Define el ciclo de vida completo del empleado en tu negocio (reclutamiento, compensación, integración, desempeño, motivación).
+      paso 2: Establece preguntas de revisión para cada fase, por ejemplo: ¿tus gerentes dan retroalimentación consistente? ¿las revisiones de desempeño llegan a tiempo?
+      paso 3: Diseña métricas objetivas para monitorear la calidad de gestión en cada fase.
+      paso 4: Usa lo que encuentres para corregir directamente a tus gerentes antes de que el problema escale.
+      cond 1: Cuando tu negocio supera los 30 o 50 empleados y necesitas formalizar tu área de personas
+      cond 2: Cuando sientes que la calidad de gestión se está deteriorando pero no tienes datos objetivos para confirmarlo
+      previos   : ['definicion_startup_busqueda_modelo_negocio', 'search_for_business_model']
+      siguientes: ['requisitos_lider_de_rrhh']
+      entregable: Un marco de evaluación del ciclo de vida del empleado con métricas de calidad de gestión por fase.
+
+##############################################################################
+# ACTO 6 del tramo 2 (puesto 14 de hoy, 56 en la de la 48)
+##############################################################################
+  [PAR A] puesto 268, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): pivotar_o_proceder
+  nodo_b (EL SEGUNDO de la razon): pivote_o_proceder
+
+  RAZON ENTERA, sin recortar:
+    REPITE con pivote_o_proceder. Los dos mandan la misma decision y con los mismos gestos: sentarse con el socio o el inversor en vez de decidirlo solo en la cabeza, mirar evidencia real de clientes y no opiniones, decidir entre cambiar de rumbo o seguir adelante, y dejar la decision por escrito con sus criterios. El segundo anade dibujar como trabaja el cliente tipico y comparar ese mapa con lo supuesto, que es material propio, pero el nucleo de la instruccion es el mismo y los ids son el mismo nombre en dos formas.
+
+  --- pivotar_o_proceder
+      titulo    : La decisión de cambiar de rumbo o seguir adelante (pivot or proceed)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 2 | previos 8 | siguientes 4 | cableado 12
+      paso 1: Siéntate con quien te acompañe en esto, sea socio o inversor, a evaluar con calma en qué punto estás
+      paso 2: Revisa evidencia real, no opiniones, sobre qué tan entusiasmados están tus clientes
+      paso 3: Clasifica las respuestas de tus clientes según su nivel de entusiasmo, desde amor total hasta indiferencia
+      paso 4: Decide con claridad: cambias de rumbo y vuelves al inicio, o sigues adelante hacia la validación con clientes
+      paso 5: Documenta tu decisión y los criterios que usaste para tomarla
+      cond 1: Después de cada fase de descubrimiento de clientes (Customer Discovery), antes de invertir más en desarrollo
+      cond 2: Cuando no tienes claro si tu producto resuelve un problema real
+      previos   : ['mapa_flujo_trabajo_cliente', 'scorecard_descubrimiento_cliente', 'categorias_entusiasmo_cliente', 'revalidacion_modelo_negocio', 'validar_posicionamiento_con_analistas', 'verificar_modelo_rentable', 'decision_pivotar_o_proceder', 'verificar_modelo_ingresos']
+      siguientes: ['presentacion_solucion_producto', 'product_market_fit', 'checkpoints_validacion', 'filosofia_validacion_clientes']
+      entregable: Un documento con tu decisión de cambiar de rumbo o seguir adelante, los criterios que usaste para llegar a ella, y tu lienzo de negocio (Business Model Canvas) actualizado
+
+  --- pivote_o_proceder
+      titulo    : El momento de decidir: pivotar o seguir adelante (Pivote o Proceder)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 7 | condiciones 1 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Siéntate con quien te acompaña en esto, no lo decidas solo en tu cabeza, y si tienes inversores, súmalos también
+      paso 2: Dibuja cómo trabaja realmente tu cliente típico, basándote en datos reales que hayas recogido
+      paso 3: Compara ese mapa real con lo que habías supuesto al armar tu modelo de negocio
+      paso 4: Pregúntate qué tan bien lo que estás construyendo resuelve el problema real de tu cliente
+      paso 5: Si la respuesta es 'no del todo', decide si el problema está en que elegiste el cliente equivocado o en las funciones de tu producto
+      paso 6: Reduce tu lista de funciones a algo que puedas contar en un párrafo y vender a miles de personas, no a una lista larguísima pensada para diez clientes
+      paso 7: Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante
+      cond 1: Cuando terminaste de poner a prueba el problema con clientes reales y necesitas decidir si sigues con tus hipótesis actuales o las cambias
+      previos   : ['captura_conocimiento_mercado', 'business_model_canvas_como_scorecard', 'scorecard_descubrimiento_cliente', 'business_model_canvas_scorecard']
+      siguientes: ['presentacion_solucion_producto', 'identificar_earlyvangelists']
+      entregable: Una decisión clara y por escrito: pivotar o seguir, con tu modelo de negocio actualizado y tu lista de funciones ordenada y reducida
+
+##############################################################################
+# ACTO 15 del tramo 2 (puesto 15 de hoy, 65 en la de la 48)
+##############################################################################
+  [PAR A] puesto 307, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): apertura_efectiva_llamada_venta
+  nodo_b (EL SEGUNDO de la razon): apertura_llamada_venta_grande
+
+  RAZON ENTERA, sin recortar:
+    REPITE con apertura_llamada_venta_grande. Los dos mandan lo mismo sobre la apertura de la llamada en venta grande: no repetir siempre la misma formula de apertura, no gastar demasiado tiempo en los preliminares, pasar rapido a las preguntas de descubrimiento, y poner el esfuerzo de preparacion en la calidad de las preguntas y no en pulir la entrada. Es la misma tesis de Rackham contra el mito de la primera impresion.
+
+  --- apertura_efectiva_llamada_venta
+      titulo    : Apertura Efectiva de la Llamada de Ventas (Preliminares)
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 5 | condiciones 2 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Al iniciar la llamada, establece claramente quién eres, por qué estás ahí (sin dar detalles de producto) y tu derecho a hacer preguntas.
+      paso 2: Evita usar siempre la misma frase de apertura, especialmente con el mismo cliente en múltiples visitas.
+      paso 3: No dediques más del 20% del tiempo total de la llamada a las Preliminares.
+      paso 4: Resiste la tentación de hablar de tu producto o solución en la primera mitad de la llamada.
+      paso 5: Si el comprador te hace preguntas de producto muy pronto, retoma el control redirigiendo hacia preguntas sobre sus necesidades.
+      cond 1: Cuando estás preparando el guion de apertura para una venta compleja o de ciclo largo (large sale).
+      cond 2: Si tu equipo de ventas usa siempre el mismo discurso de apertura y las tasas de éxito son bajas.
+      previos   : ['apertura_llamada_venta_grande', 'analisis_de_cohortes']
+      siguientes: ['modelo_spin_secuencia_preguntas', 'enfoque_etapa_investigacion', 'modelo_spin_preguntas']
+      entregable: Un guion flexible de apertura de llamada que deja claro que tu rol es preguntar, sin caer en declaraciones de beneficio repetitivas ni en detalles prematuros de producto.
+
+  --- apertura_llamada_venta_grande   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Abrir la llamada en ventas grandes: el mito de la primera impresión
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: No gastes demasiado tiempo abriendo con temas personales o triviales cuando vendes algo grande o le hablas a alguien senior
+      paso 2: No repitas siempre la misma fórmula de apertura con una frase de beneficio como si fuera un truco garantizado
+      paso 3: Ajusta tu apertura a cada situación y pasa rápido a hacer preguntas de descubrimiento
+      paso 4: Pon tu esfuerzo de preparación en la calidad de tus preguntas, no en pulir una apertura elegante
+      cond 1: Cuando le vendes a alguien senior o estás en un ciclo de venta grande y complejo
+      cond 2: Cuando sientes que gastas demasiado esfuerzo en romper el hielo y no ves resultado
+      previos   : ['ventaja_competitiva_producto']
+      siguientes: ['modelo_spin_preguntas', 'apertura_efectiva_llamada_venta', 'reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor']
+      entregable: Guion de apertura breve y flexible para tus llamadas de venta, con transición rápida hacia preguntas de descubrimiento
+
+##############################################################################
+# ACTO 18 del tramo 2 (puesto 16 de hoy, 68 en la de la 48)
+##############################################################################
+  [PAR A] puesto 322, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): desconexion_ventas_experiencia
+  nodo_b (EL SEGUNDO de la razon): traspaso_ventas_cuentas
+
+  RAZON ENTERA, sin recortar:
+    REPITE con traspaso_ventas_cuentas. Los dos mandan lo mismo contra el mismo problema, que quien vende y quien entrega funcionen como mundos separados: trazar como pasa hoy la informacion desde la venta hasta la atencion, anotar lo prometido y las preferencias del cliente antes del traspaso, montar un paso fijo de entrega para los clientes importantes, y revisar cada tanto si lo prometido coincide con lo entregado. El primero anade revisar como se incentiva a quien vende, que es su unico gesto propio.
+
+  --- desconexion_ventas_experiencia
+      titulo    : La desconexion entre vender y cumplir lo prometido después
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 4 | condiciones 3 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Traza el camino que sigue un cliente entre la venta y la entrega, y anota que información se pierde en ese traspaso
+      paso 2: Revisa como te pagas o incentivas a quien vende, para que también le importe que el cliente se quede contento y se quede contigo, no solo cerrar cuentas nuevas
+      paso 3: Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después
+      paso 4: Crea un protocolo claro de traspaso: una reunion conjunta entre el cliente, quien vendio y quien sigue atendiendolo
+      cond 1: Cuando recibes quejas frecuentes de clientes nuevos porque no se cumplio lo que se les prometio
+      cond 2: Si quien vende y quien atiende o entrega funcionan como mundos separados
+      cond 3: Cuando notas que muchos clientes se van en los primeros meses después de comprar
+      previos   : ['preframing_expectativas']
+      siguientes: ['welcome_call_cliente_veterano']
+      entregable: Un proceso documentado de traspaso del cliente (de la venta a la entrega), con una herramienta (CRM) configurada y con metas de retencion ligadas a la venta
+
+  --- traspaso_ventas_cuentas
+      titulo    : Que lo que prometes al vender sea lo que realmente entregas
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 4 | condiciones 3 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Revisa cómo pasa hoy la información desde que cierras una venta hasta que alguien atiende a ese cliente
+      paso 2: Anota siempre lo que el cliente necesita, qué le prometiste y sus preferencias antes de dar la venta por cerrada
+      paso 3: Para tus clientes más importantes, ten una conversación o un paso fijo donde entregues esa información a quien seguirá atendiéndolos
+      paso 4: De vez en cuando revisa si lo que prometiste al vender coincide con lo que de verdad estás entregando
+      cond 1: Cuando recibes quejas repetidas de clientes porque no cumpliste lo prometido
+      cond 2: Si una persona vende y otra distinta atiende después al cliente
+      cond 3: En ventas de alto valor o contratos largos (seguros, software, servicios)
+      previos   : ['preframing_expectativas']
+      siguientes: ['fase_admit']
+      entregable: Un método simple y por escrito para pasar la información del cliente desde la venta hasta la atención, con una lista de chequeo para verificarlo
+
+##############################################################################
+# ACTO 20 del tramo 2 (puesto 17 de hoy, 70 en la de la 48)
+##############################################################################
+  [PAR A] puesto 326, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): fases_de_retencion_de_clientes
+  nodo_b (EL SEGUNDO de la razon): ocho_fases_experiencia_cliente
+
+  RAZON ENTERA, sin recortar:
+    REPITE con ocho_fases_experiencia_cliente. Los dos mandan lo mismo sobre el mismo mapa de ocho fases del viaje del cliente: ubicar en que fase esta hoy cada segmento, disenar la experiencia de cada una de las ocho y no solo de las de captacion, y armar el plan que empuja al cliente de una fase a la siguiente. El primero senala Affirm y Activate como las mas descuidadas y el segundo manda detectar donde se atascan, que es la misma deteccion por dos caminos. Nota: esta familia de la experiencia es la del racimo costurado transversal numero 1 de la ficha de costuras.
+
+  --- fases_de_retencion_de_clientes
+      titulo    : Las 8 Fases del Viaje del Cliente (Assess-Advocate)
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 3 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Mapear en qué fase se encuentra actualmente cada segmento de clientes.
+      paso 2: Diseñar acciones específicas de la empresa para cada una de las 8 fases (no solo para Assess y Admit).
+      paso 3: Priorizar el diseño de experiencia en las fases Affirm y Activate, que suelen ser las más descuidadas y donde ocurre la mayor deserción.
+      cond 1: Cuando la empresa solo tiene procesos diseñados para atraer y cerrar ventas, pero no para después de la compra.
+      cond 2: Cuando se busca reducir la tasa de abandono temprano de clientes.
+      previos   : ['pensamiento_h2h', 'ocho_fases_experiencia_cliente']
+      siguientes: ['estrategia_de_ventas']
+      entregable: Mapa del viaje del cliente con las 8 fases y acciones concretas asignadas a cada una.
+
+  --- ocho_fases_experiencia_cliente
+      titulo    : Las Ocho Fases de la Experiencia del Cliente
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 4 | condiciones 1 | previos 2 | siguientes 12 | cableado 14
+      paso 1: Identificar en qué fase se encuentra actualmente cada segmento de clientes.
+      paso 2: Diseñar la experiencia emocional deseada para cada una de las ocho fases.
+      paso 3: Detectar en qué fase se están 'atascando' la mayoría de los clientes actuales.
+      paso 4: Crear un plan de acción específico para avanzar a los clientes de una fase a la siguiente.
+      cond 1: Cuando el usuario necesita una estructura sistemática para gestionar la experiencia del cliente después de la venta.
+      previos   : ['categorias_entusiasmo_cliente', 'pensamiento_h2h']
+      siguientes: ['fase_assess', 'fase_admit', 'fase_affirm', 'fase_activate_primera_impresion', 'fase_acclimate', 'fase_accomplish', 'fase_adopt', 'advocacy_customer_journey', 'estrategia_multicanal_bienvenida', 'fases_de_retencion_de_clientes', 'seis_medios_comunicacion_cliente', 'fase_affirm_buyers_remorse']
+      entregable: Un diagrama del recorrido del cliente con las ocho fases identificadas y el estado actual de los clientes en cada una.
+
+##############################################################################
+# ACTO 28 del tramo 2 (puesto 18 de hoy, 78 en la de la 48)
+##############################################################################
+  [PAR A] puesto 364, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): rediseno_procesos_negocio_cliente
+  nodo_b (EL SEGUNDO de la razon): rediseno_procesos_negocio_cx
+
+  RAZON ENTERA, sin recortar:
+    REPITE con rediseno_procesos_negocio_cx. Los ids son casi el mismo nombre y los dos mandan lo mismo: revisar que procesos internos generan friccion al cliente sin beneficio para el, reconocer que estan disenados por conveniencia operativa propia, rediseniarlos para resolver en un solo contacto y poner a alguien con vision de todo el recorrido a cargo. El primero anade la compensacion automatica cuando la empresa incumple y las metricas antes y despues; el segundo anade reducir la cantidad de herramientas y sostener el presupuesto varios anos.
+
+  --- rediseno_procesos_negocio_cliente
+      titulo    : Rediseño de Procesos de Negocio para Eliminar Fricciones Autoinfligidas
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 9 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Mapear los procesos internos que generan quejas recurrentes de clientes
+      paso 2: Identificar políticas o estructuras internas que crean fricción sin beneficio para el cliente
+      paso 3: Rediseñar procesos clave (ej: agendamiento, atención telefónica) para resolución en un solo contacto
+      paso 4: Implementar compensaciones automáticas cuando la empresa incumple su promesa de servicio
+      paso 5: Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)
+      paso 6: Simplifica los procesos administrativos (formularios, papeleo) con herramientas digitales para reducir la fricción
+      paso 7: Identificar y mapear los distintos journeys del cliente (facturación, soporte, onboarding, percepción)
+      paso 8: Diagnosticar en qué punto los departamentos se pasan la responsabilidad del cliente sin resolución
+      paso 9: Medir el impacto cuantitativo del mal servicio (llamadas repetidas, visitas técnicas, tasa de abandono)
+      cond 1: Cuando existen altos volúmenes de quejas o llamadas repetidas de clientes
+      cond 2: Cuando los procesos internos están diseñados por conveniencia operativa y no por el cliente
+      previos   : ['contacto_con_el_cliente']
+      siguientes: ['transparencia_facturacion', 'cultura_de_experiencia']
+      entregable: Mapa de procesos rediseñados con métricas de impacto esperado y mecanismos de compensación automática
+
+  --- rediseno_procesos_negocio_cx
+      titulo    : Rediseño de Procesos de Negocio Centrado en el Cliente
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 9 | condiciones 2 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Revisa qué procesos internos le generan fricción innecesaria a tu cliente (números distintos, sistemas duplicados)
+      paso 2: Enseña a todas las personas que trabajan contigo, no solo a quien atiende al cliente, cuál es su papel en la experiencia que vive
+      paso 3: Reduce la cantidad de herramientas o sistemas que usas para atender a tu cliente
+      paso 4: Ponte tú, o quien tenga visión de todo el proceso, a cargo de la experiencia del cliente, no solo para reaccionar cuando algo falla
+      paso 5: Destina presupuesto sostenido durante varios años para esta transformación, en lugar de soluciones rápidas y parciales
+      paso 6: Diagnosticar si los empleados saben que la experiencia del cliente es parte de su trabajo
+      paso 7: Diseñar un programa de capacitación peer-to-peer a gran escala con plazos definidos
+      paso 8: Unificar las herramientas internas de información del cliente para reducir errores y fricción
+      paso 9: Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas
+      cond 1: Cuando descubres que la causa del mal servicio está en cómo tú mismo organizaste tu negocio
+      cond 2: Cuando necesitas un cambio profundo en cómo trabajas, no solo un arreglo cosmético
+      previos   : ['customer_journey_mapping', 'advocacy_customer_journey', 'conexion_personal_emocional', 'adquisicion_estrategica_resolver_crisis']
+      siguientes: ['contacto_con_el_cliente', 'conexion_personal_emocional']
+      entregable: Un plan de transformación de tus procesos, con formación para tu gente, menos herramientas duplicadas y presupuesto pensado para varios años
+
+##############################################################################
+# ACTO 29 del tramo 2 (puesto 19 de hoy, 79 en la de la 48)
+##############################################################################
+  [PAR A] puesto 366, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): deep_dive_workshop
+  nodo_b (EL SEGUNDO de la razon): metodologia_deep_dive
+
+  RAZON ENTERA, sin recortar:
+    REPITE con metodologia_deep_dive. Los dos mandan el mismo taller de IDEO y con los mismos cuatro gestos: reunir en un mismo espacio a un equipo interdisciplinario que incluya a quien vive el problema, observar el problema en el terreno real antes o durante, prototipar de baja fidelidad ahi mismo sin salir del taller, y probar el resultado con las mismas personas presentes y ajustar en el momento. El primero anade formular la pregunta central como Como podriamos, que es su unico gesto propio.
+
+  --- deep_dive_workshop
+      titulo    : Deep Dive (Taller Intensivo de Design Thinking)
+      fuente    : Change by Design, Revised and U - Tim Brown
+      pasos 5 | condiciones 2 | previos 2 | siguientes 0 | cableado 2
+      paso 1: Reúne un equipo con quienes diseñan y quienes conocen el problema o lo viven de cerca
+      paso 2: Define la pregunta central en formato '¿Cómo podríamos...?'
+      paso 3: Observa el problema en el terreno o simula la situación antes del taller
+      paso 4: Arma prototipos físicos o de proceso durante el taller
+      paso 5: Prueba los resultados con las personas presentes y ajusta en el momento
+      cond 1: Cuando necesitas resolver un problema complejo con varias personas involucradas y poco tiempo
+      cond 2: Si necesitas validar rápido con quien conoce el problema antes de construir la solución completa
+      previos   : ['practica_de_observacion_atenta', 'ways_to_grow_matrix']
+      siguientes: []
+      entregable: Prototipos probados y validados por usuarios o expertos reales en poco tiempo
+
+  --- metodologia_deep_dive
+      titulo    : El Método 'Deep Dive' (Inmersión Profunda)
+      fuente    : Change by Design
+      pasos 4 | condiciones 2 | previos 2 | siguientes 4 | cableado 6
+      paso 1: Reunir a un equipo interdisciplinario (técnicos, diseñadores, usuarios finales) en un mismo espacio físico.
+      paso 2: Realizar observación de campo directa en el entorno real del problema (ej. un hospital).
+      paso 3: Prototipar soluciones físicas de baja fidelidad de manera inmediata durante el taller.
+      paso 4: Evaluar los resultados con los mismos usuarios presentes en la sesión.
+      cond 1: Cuando el problema es complejo y sistémico (no solo de un objeto)
+      cond 2: Si se necesita involucrar a múltiples stakeholders con conocimientos técnicos distintos
+      previos   : ['investigacion_etnografica_ideacion', 'how_might_we_hmw']
+      siguientes: ['prototipado_rapido', 'adn_de_innovacion_organizacional', 'case_study_sistema_servicio_completo', 'deriva_deliberada']
+      entregable: Un prototipo funcional de baja fidelidad y una lista de insights validados sobre el problema sistémico.
+
+##############################################################################
+# ACTO 30 del tramo 2 (puesto 20 de hoy, 80 en la de la 48)
+##############################################################################
+  [PAR A] puesto 373, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): fase_assess_ciclo_cliente
+  nodo_b (EL SEGUNDO de la razon): fase_assess_experiencia_cliente
+
+  RAZON ENTERA, sin recortar:
+    REPITE con fase_assess_experiencia_cliente. Los dos trabajan la misma fase Assess y mandan lo mismo: medir cuanto dura el momento en que el prospecto te evalua, revisar si lo que dices para vender comunica como se va a sentir en vez de beneficios genericos, y disenar al menos una mejora concreta de esa etapa. El segundo anade crear algo tangible, muestra, historia o testimonio, que de un anticipo; el primero anade calificar del 1 al 10 y los seis canales de comunicacion. Esta familia es la del racimo costurado transversal numero 1 de la ficha de costuras.
+
+  --- fase_assess_ciclo_cliente
+      titulo    : La etapa en que el cliente te evalúa (Assess)
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 5 | condiciones 3 | previos 2 | siguientes 4 | cableado 6
+      paso 1: Revisa tus materiales de marketing y comprueba si comunican cómo se va a sentir el cliente, no solo qué va a recibir
+      paso 2: Mide cuánto tiempo tardan tus prospectos típicos en decidir comprarte
+      paso 3: Evalúa si tú, o quien vende por ti, está registrando bien lo que el cliente necesita
+      paso 4: Califica del 1 al 10 la experiencia que hoy le das al prospecto en esta etapa
+      paso 5: Diseña al menos una mejora inmediata usando uno de los seis canales de comunicación: en persona, correo electrónico, correo físico, teléfono, video o un regalo
+      cond 1: Cuando quieras diseñar o mejorar la forma en que consigues nuevos clientes
+      cond 2: Si buscas diferenciarte antes de que te compren
+      cond 3: Cuando empieces a revisar toda la experiencia de tu cliente de principio a fin
+      previos   : ['arquetipos_de_cliente', 'value_proposition_startup']
+      siguientes: ['fase_admit', 'preframing_expectativas', 'fase_admit_celebracion', 'seis_canales_comunicacion_assess']
+      entregable: Un diagnóstico de cómo estás manejando hoy esta etapa de evaluación, con un plan concreto de mejora usando al menos un canal de comunicación
+
+  --- fase_assess_experiencia_cliente
+      titulo    : Antes de comprarte: el momento en que te evalúan
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 4 | condiciones 3 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Identifica cuánto dura ese momento de evaluación para lo que vendes: puede ser segundos, días o meses
+      paso 2: Diseña tu manera de mostrarte y de vender para que transmita, incluso emocionalmente, cómo será la relación una vez que te compren
+      paso 3: Revisa lo que dices o muestras hoy para vender: ¿hablas solo de beneficios genéricos ('te vamos a cuidar') o das detalles concretos de cómo es el proceso después de la compra?
+      paso 4: Crea algo tangible (una muestra, una historia, un testimonio) que le dé a la persona un anticipo real de cómo será la experiencia después de comprarte
+      cond 1: Cuando estás enfocado solo en cerrar la venta y no en mostrar cómo será la experiencia después
+      cond 2: Cuando necesitas diseñar tu manera de conseguir clientes
+      cond 3: Si te cancelan seguido poco después de comprarte aunque cierras bien las ventas
+      previos   : ['arquetipos_de_cliente']
+      siguientes: ['preframing_expectativas', 'welcome_call_cliente_veterano', 'fase_acclimate_experiencia_cliente']
+      entregable: Un mapa de ese momento de evaluación previa a la compra con los puntos donde tu marketing y tu venta tocan a la persona, más un guion o protocolo que anticipe cómo será la experiencia después de la venta
+
+##############################################################################
+# ACTO 31 del tramo 2 (puesto 21 de hoy, 81 en la de la 48)
+##############################################################################
+  [PAR A] puesto 380, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): test_socios_de_trafico
+  nodo_b (EL SEGUNDO de la razon): traffic_partners_hypothesis
+
+  RAZON ENTERA, sin recortar:
+    REPITE con traffic_partners_hypothesis. Los dos mandan lo mismo: identificar que socios de trafico hacen falta, definir que se espera de cada uno y que se le da a cambio, ordenarlos por lo criticos que son, y preparar las reuniones. El primero anade el correo de presentacion centrado en lo que gana el socio y la ficha de resultados despues de cada reunion; el segundo anade donde buscarlos, tiendas de aplicaciones, marketplaces y emisores de tarjetas. Misma hipotesis, mismos gestos.
+
+  --- test_socios_de_trafico
+      titulo    : Prueba de Socios de Tráfico (Traffic Partners)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 6 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Identifica los socios que podrían traerte tráfico y encajan con tu idea
+      paso 2: Prepara un correo de presentación centrado en lo que el socio gana con la alianza
+      paso 3: Agenda reuniones exploratorias con los candidatos
+      paso 4: Propón intercambios: contenido, listas de correo, anuncios, mini sitios
+      paso 5: Después de cada reunión, arma una ficha de resultados (report card) para estimar qué tan grande es la oportunidad
+      paso 6: Cierra acuerdos o compromisos firmes con los socios de tráfico
+      cond 1: Cuando tu negocio depende de tráfico externo y no tienes un canal propio de adquisición fuerte
+      previos   : ['optimizacion_mercado_multilado']
+      siguientes: ['desarrollo_posicionamiento_producto']
+      entregable: Acuerdos o compromisos firmes con socios de tráfico, documentados en tu ficha de resultados
+
+  --- traffic_partners_hypothesis
+      titulo    : Los socios que te traen tráfico (Traffic Partners)
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 1 | previos 3 | siguientes 1 | cableado 4
+      paso 1: Identifica que socios de trafico necesitas si o si, y cuales te gustaria tener
+      paso 2: Define que esperas de cada uno y que le vas a dar a cambio, en dinero o en especie
+      paso 3: Ordena tu lista de socios según cuales son mas criticos para ti
+      paso 4: Investiga tiendas de aplicaciones, marketplaces y emisores de tarjetas de crédito como posibles socios clave
+      paso 5: Prepara reuniones con estos socios cuando llegues a la fase de validación con clientes (Customer Validation)
+      cond 1: Cuando tu negocio es web o movil y depende de traer trafico externo para conseguir usuarios o clientes
+      previos   : ['key_resources_hypothesis', 'key_partners_hypothesis', 'bd_bajo_contacto_escalable']
+      siguientes: ['revenue_pricing_hypothesis']
+      entregable: Tu lista de socios de trafico ordenada por prioridad, con lo que le ofreces a cada uno a cambio
+
+##############################################################################
+# ACTO 32 del tramo 2 (puesto 22 de hoy, 82 en la de la 48)
+##############################################################################
+  [PAR A] puesto 387, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): fallo_como_aprendizaje_startup
+  nodo_b (EL SEGUNDO de la razon): fracaso_como_aprendizaje_startup
+
+  RAZON ENTERA, sin recortar:
+    REPITE con fracaso_como_aprendizaje_startup. Los ids son el mismo nombre con un sinonimo, fallo y fracaso, y los dos mandan lo mismo: hacer muchas pruebas con criterio claro de si funciona o no, reorientarse rapido hacia los hechos nuevos cuando algo falla y decidir que corregir sin darle vueltas, y quitarle la culpa al fallo tratandolo como dato. El segundo anade documentar cada fracaso como insumo de la decision de pivotar y no penalizar al equipo, que es lo mismo dicho para el equipo en vez de para uno.
+
+  --- fallo_como_aprendizaje_startup
+      titulo    : Fallar como Parte de la Búsqueda
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 4 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Acepta que vas a hacer docenas de pruebas simples de si algo funciona o no, sobre tu propuesta, tus funciones y tus precios
+      paso 2: Cuando algo no funcione, cambia rápido de rumbo con los hechos nuevos que tienes
+      paso 3: Decide qué corregir y actúa sin darle más vueltas
+      paso 4: Quítale el peso de la culpa al fallo: trátalo como un dato más
+      cond 1: Si te da miedo contar cuando algo salió mal
+      cond 2: Si estás empezando a hablar con clientes para validar tu idea
+      previos   : ['emocion_como_motor_pensamiento']
+      siguientes: ['pivotes_e_iteraciones', 'diseno_experimentos_hipotesis']
+      entregable: Una forma de pensar, tuya y de quien trabaje contigo, donde los fallos se anotan como aprendizajes válidos y no como culpas
+
+  --- fracaso_como_aprendizaje_startup
+      titulo    : El Fracaso es Parte Integral de la Búsqueda
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 3 | previos 5 | siguientes 3 | cableado 8
+      paso 1: Diseñar experimentos con criterios claros de éxito y fracaso (para mensajes, características, precios, etc.), aceptando de antemano que varios fallarán
+      paso 2: Cambiar la cultura del equipo de 'miedo al fracaso' a 'aprendizaje y descubrimiento'
+      paso 3: Cuando algo no funciona, reorientarse rápidamente hacia los nuevos hechos y decidir qué corregir
+      paso 4: Documentar cada fracaso como aprendizaje válido que alimenta la decisión de pivotar
+      paso 5: Evitar penalizar al equipo por hipótesis fallidas; en su lugar, ajustar el modelo
+      cond 1: Si el equipo tiene miedo de experimentar por temor a equivocarse
+      cond 2: Al establecer la cultura inicial de un proyecto en etapa de búsqueda
+      cond 3: En las primeras fases de descubrimiento de clientes
+      previos   : ['busqueda_vs_ejecucion', 'buscar_armonia_diseno', 'manifiesto_regla1_hechos_fuera_del_edificio', 'poder_a_traves_de_la_accion', 'search_for_business_model']
+      siguientes: ['pivote_startup', 'manifiesto_regla4_iteraciones_pivotes', 'pivotes_e_iteraciones']
+      entregable: Una cultura de equipo documentada que registra y aprende de los experimentos fallidos como parte normal del proceso de descubrimiento, en vez de penalizarlos
+
+##############################################################################
+# ACTO 33 del tramo 2 (puesto 23 de hoy, 83 en la de la 48)
+##############################################################################
+  [PAR A] puesto 389, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): leap_of_faith_assumptions
+  nodo_b (EL SEGUNDO de la razon): leap_of_faith_questions
+
+  RAZON ENTERA, sin recortar:
+    REPITE con leap_of_faith_questions. Los dos mandan lo mismo: repasar el plan y el modelo para separar lo comprobado de lo supuesto, hacer explicitos los supuestos criticos, y ordenarlos por el riesgo que representan para el negocio. El primero anade reescribir las comparaciones con otros negocios en terminos verificables; el segundo anade disenar el experimento que valida cada uno antes de construir. Es el mismo inventario de saltos de fe.
+
+  --- leap_of_faith_assumptions   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Supuestos de salto de fe (leap-of-faith assumptions)
+      fuente    : The Lean Startup - Eric Ries
+      pasos 4 | condiciones 2 | previos 2 | siguientes 7 | cableado 9
+      paso 1: Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado
+      paso 2: Identifica cuáles suposiciones son de bajo riesgo y cuáles son verdaderos saltos de fe
+      paso 3: Reescribe tus comparaciones con otros negocios en términos concretos y verificables, evitando analogías que te oculten el riesgo real
+      paso 4: Ordena tus supuestos según el riesgo que representan para que tu negocio funcione
+      cond 1: Cuando tienes un plan pero no has diferenciado qué partes son hechos y cuáles son suposiciones riesgosas
+      cond 2: Cuando necesitas justificar por qué te conviene probar antes de construir el producto completo
+      previos   : ['alineacion_ti_negocio', 'analogos_antilogos']
+      siguientes: ['hipotesis_valor_crecimiento', 'producto_minimo_viable', 'concierge_mvp', 'contabilidad_innovacion', 'genchi_gembutsu', 'wizard_of_oz_testing', 'tecnicas_para_sacar_riesgos_a_la_luz']
+      entregable: Lista priorizada de tus supuestos de salto de fe, separados de los hechos comprobados de tu plan
+
+  --- leap_of_faith_questions
+      titulo    : Preguntas de Salto de Fe (Leap-of-Faith Questions)
+      fuente    : The Lean Startup - Eric Ries
+      pasos 4 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Revisar el modelo de negocio y el spreadsheet financiero para identificar supuestos numéricos clave
+      paso 2: Hacer explícitas las suposiciones críticas (ej: porcentaje de conversión, retención)
+      paso 3: Priorizar cuál de estas suposiciones representa el mayor riesgo para el negocio
+      paso 4: Diseñar experimentos específicos para validar cada leap-of-faith question antes de construir el producto completo
+      cond 1: Antes de comenzar a construir cualquier producto o funcionalidad
+      cond 2: Cuando el modelo de negocio tiene supuestos financieros sin validar
+      previos   : ['genchi_gembutsu_salir_del_edificio', 'actualizar_modelo_de_negocio_pivot_o_proceed']
+      siguientes: ['producto_minimo_viable']
+      entregable: Lista priorizada de hipótesis críticas (leap-of-faith) con su nivel de riesgo e incertidumbre
+
+##############################################################################
+# ACTO 34 del tramo 2 (puesto 24 de hoy, 84 en la de la 48)
+##############################################################################
+  [PAR A] puesto 406, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): key_resources_hypothesis
+  nodo_b (EL SEGUNDO de la razon): recursos_clave
+
+  RAZON ENTERA, sin recortar:
+    REPITE con recursos_clave. Los dos mandan el mismo inventario del mismo bloque del lienzo y con las mismas cuatro categorias: los recursos fisicos, instalaciones y equipo; los intelectuales, marca, patentes y saber hacer, que el primero llama propiedad intelectual que vale la pena proteger; las personas criticas; y el dinero que hace falta. El primero anade revisar de que se depende que esta fuera del propio control, y es su unico gesto propio.
+
+  --- key_resources_hypothesis
+      titulo    : Hipótesis de Recursos Clave
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 5 | condiciones 1 | previos 2 | siguientes 4 | cableado 6
+      paso 1: Lista los recursos físicos que necesitas: instalaciones, insumos, equipo
+      paso 2: Busca de dónde puede venir el dinero: inversión de capital de riesgo (VC), subsidios o fondos no reembolsables (grants), venta de facturas (factoring) o arrendamiento de equipo (leasing)
+      paso 3: Define qué talento necesitas ahora y cuál vas a necesitar más adelante
+      paso 4: Identifica qué ideas, marcas o desarrollos tuyos valen la pena proteger como propiedad intelectual
+      paso 5: Revisa qué dependes de otros que está fuera de tu control
+      cond 1: Cuando estés definiendo tu modelo de negocio y necesites saber qué recursos externos son indispensables para lograrlo
+      previos   : ['estrategia_crecimiento_clientes', 'lienzo_modelo_negocio']
+      siguientes: ['intellectual_property_strategy', 'key_partners_hypothesis', 'dependency_analysis', 'traffic_partners_hypothesis']
+      entregable: Un documento con tu hipótesis de recursos clave: qué necesitas, cuánto cuesta, dónde conseguirlo y cómo asegurarlo, integrado a tu modelo de negocio (Business Model Canvas)
+
+  --- recursos_clave
+      titulo    : Bloque de Recursos Clave
+      fuente    : Business Model Generation - Osterwalder
+      pasos 4 | condiciones 1 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Haz una lista de los recursos físicos que necesitas (instalaciones, equipos, redes de distribución)
+      paso 2: Identifica tus recursos intelectuales (marca, patentes, bases de datos, saber hacer)
+      paso 3: Determina qué personas son críticas para que tu negocio funcione
+      paso 4: Calcula qué recursos financieros necesitas (efectivo, líneas de crédito)
+      cond 1: Cuando necesitas identificar qué activos son indispensables para operar tu negocio
+      previos   : ['flujos_de_ingresos', 'actividades_clave']
+      siguientes: ['actividades_clave', 'asociaciones_clave', 'estructura_de_costos']
+      entregable: Un inventario clasificado de los recursos clave que necesitas para operar tu negocio
+
+##############################################################################
+# ACTO 35 del tramo 2 (puesto 25 de hoy, 85 en la de la 48)
+##############################################################################
+  [PAR A] puesto 410, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): planificacion_preguntas_implicacion
+  nodo_b (EL SEGUNDO de la razon): preguntas_implicacion
+
+  RAZON ENTERA, sin recortar:
+    REPITE con preguntas_implicacion. Los dos mandan lo mismo: mapear las consecuencias que cada problema del cliente arrastra, financieras, operativas o de satisfaccion, y formular con ellas las preguntas que conectan el problema con impactos que el cliente no ve solo. El primero lo convierte en ejercicio previo a la llamada, escribir tres problemas y bajar de cada uno a sus dificultades y de cada dificultad a su pregunta; el segundo manda practicarlas porque exigen mas habilidad. Mismo gesto, uno como plantilla y otro como consejo.
+
+  --- planificacion_preguntas_implicacion
+      titulo    : Planificación Anticipada de Preguntas de Implicación
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 3 | previos 3 | siguientes 2 | cableado 5
+      paso 1: Antes de la llamada, escribe al menos tres problemas potenciales que el comprador podría tener y que tu producto o servicio puede resolver
+      paso 2: Para cada problema, anota las dificultades relacionadas o consecuencias que podría generar
+      paso 3: Para cada dificultad, redacta preguntas de implicación específicas que la hagan evidente al cliente
+      paso 4: Evita empezar la llamada solo con preguntas de situación; avanza rápido hacia problema e implicación
+      cond 1: Antes de cualquier llamada de ventas compleja o de cuenta grande
+      cond 2: Cuando el vendedor tiene dificultad para formular preguntas de implicación de manera espontánea
+      cond 3: Cuando se requiere elevar la percepción de urgencia del problema en el cliente
+      previos   : ['preguntas_problema_2', 'modelo_spin_preguntas', 'preparacion_preguntas_problema_precall']
+      siguientes: ['preguntas_need_payoff', 'uso_preguntas_necesidad_beneficio']
+      entregable: Guion o mapa de preguntas de implicación preparado antes de cada llamada de ventas, vinculando problemas potenciales con consecuencias y preguntas específicas
+
+  --- preguntas_implicacion
+      titulo    : Preguntas de Implicación
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 3 | condiciones 1 | previos 3 | siguientes 5 | cableado 8
+      paso 1: Mapear las consecuencias potenciales (financieras, operativas, de satisfacción) de cada problema identificado
+      paso 2: Formular preguntas que conecten el problema con impactos en áreas críticas del negocio del cliente
+      paso 3: Practicar y refinar estas preguntas ya que requieren mayor habilidad y preparación
+      cond 1: En ventas grandes o complejas donde el cliente no percibe la urgencia del problema
+      previos   : ['preguntas_problema_2', 'necesidades_implicitas_vs_explicitas', 'modelo_spin_preguntas']
+      siguientes: ['preguntas_necesidad_beneficio', 'preguntas_beneficio', 'ecuacion_de_valor', 'ecuacion_de_valor_venta', 'preguntas_need_payoff']
+      entregable: Set de preguntas de implicación que conecten cada problema detectado con consecuencias de negocio medibles
+
+##############################################################################
+# ACTO 36 del tramo 2 (puesto 26 de hoy, 86 en la de la 48)
+##############################################################################
+  [PAR A] puesto 417, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): blogging_como_canal_de_traccion
+  nodo_b (EL SEGUNDO de la razon): content_marketing_blog
+
+  RAZON ENTERA, sin recortar:
+    REPITE con content_marketing_blog. Los dos mandan lo mismo y hasta con la misma frase peculiar: escribir contenido que revele problemas que el lector no ha articulado y no solo soluciones. Ademas los dos mandan sostener un calendario de publicacion constante, hacer guest posting en blogs establecidos del sector para ganar audiencia, interactuar con influencers pidiendoles feedback, y mirar la analitica para ver que contenido tira. El primero pone el plazo de seis meses antes de evaluar; el segundo anade las infografias y los lead magnets.
+
+  --- blogging_como_canal_de_traccion
+      titulo    : Blog Corporativo como Canal de Tracción
+      fuente    : Traction - Gabriel Weinberg
+      pasos 6 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Dedica al menos seis meses consistentes de publicación antes de evaluar resultados
+      paso 2: Escribe contenido que muestre problemas no articulados por tu audiencia objetivo, no solo soluciones
+      paso 3: Haz guest posting en blogs populares del sector desde los primeros meses
+      paso 4: Contacta e interactúa con influencers de Twitter en tu nicho pidiendo feedback
+      paso 5: Monitorea menciones sociales y analítica para identificar qué contenido resuena
+      paso 6: Mantén un calendario de publicación regular
+      cond 1: Si el startup necesita construir autoridad de marca a largo plazo
+      cond 2: Si el equipo tiene capacidad de producir contenido de calidad de forma sostenida
+      previos   : ['customer_profile', 'value_proposition_startup']
+      siguientes: ['email_marketing_para_captacion', 'canales_de_traccion_19']
+      entregable: Un blog corporativo activo con calendario editorial, métricas de tráfico establecidas y al menos 3 guest posts publicados en blogs externos
+
+  --- content_marketing_blog
+      titulo    : Marketing de Contenidos como Canal de Tracción
+      fuente    : Traction - Gabriel Weinberg
+      pasos 8 | condiciones 2 | previos 5 | siguientes 2 | cableado 7
+      paso 1: Definir los problemas centrales que enfrenta tu cliente objetivo
+      paso 2: Establecer un calendario de publicación consistente (ej. quincenal)
+      paso 3: Escribir contenido que revele problemas no articulados por el lector, no solo soluciones
+      paso 4: Usar infografías y contenido visual (comparten ~20x más que posts regulares)
+      paso 5: Hacer guest posting en blogs establecidos de la industria para ganar audiencia inicial
+      paso 6: Interactuar con influencers en redes sociales pidiendo feedback sobre publicaciones
+      paso 7: Monitorear analíticas para identificar qué tipo de contenido genera más tracción
+      paso 8: Capturar leads mediante lead magnets (ebooks, infografías) para construir lista de email
+      cond 1: Cuando se busca un canal de adquisición de bajo costo y sostenible en el tiempo
+      cond 2: Cuando el equipo tiene expertise de industria para compartir insights valiosos
+      previos   : ['arquetipos_de_cliente', 'seo_estrategia_fat_head', 'publicidad_offline_pruebas_locales', 'seo_link_building', 'seo_long_tail']
+      siguientes: ['email_marketing_para_captacion', 'creacion_contenido_compartible']
+      entregable: Blog activo con calendario editorial, al menos 10-15 publicaciones iniciales y sistema de captura de leads
+
+##############################################################################
+# ACTO 37 del tramo 2 (puesto 27 de hoy, 87 en la de la 48)
+##############################################################################
+  [PAR A] puesto 419, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): desirability_feasibility_viability
+  nodo_b (EL SEGUNDO de la razon): triada_restricciones_diseno
+
+  RAZON ENTERA, sin recortar:
+    REPITE con triada_restricciones_diseno. Los dos mandan la misma triada y los mismos cuatro gestos: evaluar cada idea contra los tres ejes a la vez, deseabilidad, factibilidad y viabilidad; identificar desde cual arranca de forma natural la organizacion o cual domina el proyecto; no apoyarse solo en la superioridad tecnica ni solo en la viabilidad de corto plazo; e ir iterando entre los tres durante todo el ciclo en vez de tratarlos en fila. Es el mismo marco de IDEO con dos redacciones.
+
+  --- desirability_feasibility_viability
+      titulo    : Tríada Deseabilidad-Factibilidad-Viabilidad
+      fuente    : Change by Design, Revised and U - Tim Brown
+      pasos 5 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Evaluar cada idea de innovación en los tres ejes simultáneamente
+      paso 2: Identificar desde qué ángulo natural parte la organización (tecnología, mercado o negocio)
+      paso 3: Ajustar los factores más débiles conforme se descubre nueva información
+      paso 4: Evitar depender exclusivamente de la superioridad técnica como ventaja competitiva
+      paso 5: Aprovechar activos existentes (marca, base de clientes, distribución) cuando se parte de deseabilidad
+      cond 1: Al evaluar cualquier nueva iniciativa de innovación
+      cond 2: Cuando una empresa confía solo en su tecnología sin validar mercado o negocio
+      previos   : ['diseno_activismo_social']
+      siguientes: ['ways_to_grow_matrix', 'construir_mvp_baja_fidelidad', 'voz_del_cliente_voc']
+      entregable: Una evaluación documentada de la idea/proyecto en los tres ejes con plan de ajuste para el eje más débil
+
+  --- triada_restricciones_diseno
+      titulo    : Las Tres Restricciones del Diseño: Viabilidad, Factibilidad y Deseabilidad
+      fuente    : Change by Design
+      pasos 4 | condiciones 2 | previos 2 | siguientes 2 | cableado 4
+      paso 1: Evaluar cada idea de producto o servicio contra los tres criterios: ¿es deseable para las personas?, ¿es viable como negocio?, ¿es técnicamente factible?
+      paso 2: Identificar qué restricción domina el proyecto actual (tecnología, presupuesto o factores humanos) según el tipo de organización
+      paso 3: Evitar enfocarse solo en la viabilidad a corto plazo, ya que esto puede sacrificar innovación por incrementalismo
+      paso 4: Iterar entre las tres restricciones durante todo el ciclo de vida del proyecto, no de forma lineal
+      cond 1: Si el equipo está evaluando múltiples conceptos de producto y necesita priorizar
+      cond 2: Si la organización tiende a enfocarse solo en tecnología o solo en negocio, ignorando al usuario
+      previos   : ['investigacion_etnografica_ideacion', 'cuatro_etapas_del_pensamiento_creativo']
+      siguientes: ['brief_de_diseno', 'prototipado_rapido']
+      entregable: Matriz o diagrama de Venn del proyecto marcando el nivel de cumplimiento de factibilidad, viabilidad y deseabilidad para cada concepto evaluado
+
+##############################################################################
+# ACTO 38 del tramo 2 (puesto 28 de hoy, 88 en la de la 48)
+##############################################################################
+  [PAR A] puesto 421, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): fase_admit
+  nodo_b (EL SEGUNDO de la razon): fase_admit_celebracion
+
+  RAZON ENTERA, sin recortar:
+    REPITE con fase_admit_celebracion. Los dos trabajan la misma fase Admit y mandan lo mismo: disenar un momento de celebracion o reconocimiento inmediato al cerrar la compra, dejar un artefacto o un mensaje personalizado que lo memorialice, y no caer en el silencio post-venta. El segundo anade la co-creacion cuando se pueda y el cuidado de que la celebracion no venga solo del vendedor. Esta familia es la del racimo costurado transversal numero 1 de la ficha de costuras.
+
+  --- fase_admit
+      titulo    : Fase 2: Admit (Admitir)
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 4 | condiciones 1 | previos 6 | siguientes 2 | cableado 8
+      paso 1: Diseñar un momento de celebración o reconocimiento inmediato tras la compra.
+      paso 2: Reforzar la decisión del cliente con un mensaje de bienvenida personalizado.
+      paso 3: Evitar caer en el silencio post-venta; mantener el contacto activo justo después del cierre.
+      paso 4: Capturar y asociar la emoción positiva del momento de compra con la marca.
+      cond 1: Cuando un cliente acaba de completar una compra o firmar un contrato.
+      previos   : ['fase_assess', 'fase_assess_ciclo_cliente', 'ocho_fases_experiencia_cliente', 'preframing_expectativas', 'seis_canales_comunicacion_assess', 'traspaso_ventas_cuentas']
+      siguientes: ['fase_affirm', 'fase_affirm_buyers_remorse']
+      entregable: Un protocolo de bienvenida inmediato posterior a la compra (email, llamada, mensaje) diseñado para prolongar la euforia inicial.
+
+  --- fase_admit_celebracion
+      titulo    : Fase Admit: Celebrar el Momento de la Compra
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 9 | condiciones 3 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Diseñar un ritual o momento de celebración compartido con el cliente al cerrar la compra
+      paso 2: Crear un artefacto físico o digital que memorialice el momento (certificado, mensaje personalizado, video)
+      paso 3: Involucrar al cliente en la co-creación de su producto/servicio cuando sea posible
+      paso 4: Alinear la comunicación de celebración interna de la empresa con una comunicación externa hacia el cliente
+      paso 5: Evitar que la única interacción de celebración provenga únicamente del vendedor (para no generar desconfianza)
+      paso 6: Identifica el momento exacto en que tu prospecto se convierte oficialmente en cliente (el pago, la firma del contrato, etc.)
+      paso 7: Diseña un ritual o una celebración específica para ese momento (un anuncio público, mencionarlo por nombre, entregarle algo simbólico)
+      paso 8: Crea un recuerdo físico o digital que tu cliente pueda conservar de la decisión que tomó
+      paso 9: Involucra a las personas que trabajan contigo en la celebración para reforzar el mensaje de bienvenida
+      cond 1: Inmediatamente después de cerrar una venta o firma de contrato
+      cond 2: Cuando se busca reducir la sensación de abandono post-compra
+      cond 3: Al diseñar experiencias de onboarding memorables
+      previos   : ['fase_assess_ciclo_cliente', 'preframing_expectativas']
+      siguientes: ['fase_affirm', 'welcome_call_cliente_veterano', 'fase_affirm_buyers_remorse']
+      entregable: Diseño de un momento de celebración/bienvenida tangible para el cliente en el instante de la compra
+
+##############################################################################
+# ACTO 39 del tramo 2 (puesto 29 de hoy, 89 en la de la 48)
+##############################################################################
+  [PAR A] puesto 426, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): usuarios_extremos_edge_cases
+  nodo_b (EL SEGUNDO de la razon): usuarios_extremos_insights
+
+  RAZON ENTERA, sin recortar:
+    REPITE con usuarios_extremos_insights. Los dos mandan la misma investigacion: buscar a los usuarios de los extremos del espectro, los que mas y los que menos usan, los expertos totales y los principiantes; observarlos o entrevistarlos aunque no sean el cliente objetivo; y extraer de su comportamiento exagerado los patrones que iluminan necesidades que el usuario promedio no revela. El primero anade no rendirse a la solucion estandar cuando los extremos apuntan a otra cosa; el segundo anade documentarlo como activo creativo para iteraciones futuras.
+
+  --- usuarios_extremos_edge_cases
+      titulo    : Investigación con Usuarios Extremos (Edge Cases)
+      fuente    : Change by Design
+      pasos 4 | condiciones 2 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Identificar usuarios en los márgenes: expertos extremos, principiantes totales, o personas con necesidades atípicas.
+      paso 2: Estudiar cómo estos usuarios extremos interactúan con el producto o problema, aunque no sean el mercado objetivo directo.
+      paso 3: Extraer patrones de sus comportamientos exagerados que iluminen problemas ocultos en el diseño para el usuario promedio.
+      paso 4: Evitar la ortodoxia de soluciones 'estándar' cuando los extremos sugieren necesidades diferenciadas.
+      cond 1: Cuando la investigación de mercado convencional solo confirma lo ya conocido.
+      cond 2: Si se busca innovación disruptiva en vez de mejoras incrementales.
+      previos   : ['insight_observacion_empatia', 'prototipado_de_experiencias']
+      siguientes: ['etnografia_aplicada_en_equipos_multidisciplinarios', 'biomimicry_conexiones_naturales', 'reconocer_sesgo_de_apofenia']
+      entregable: Un perfil de usuarios extremos documentado con insights aplicables al diseño general del producto o servicio.
+
+  --- usuarios_extremos_insights
+      titulo    : Usuarios Extremos como Fuente de Inspiración
+      fuente    : Change by Design
+      pasos 4 | condiciones 1 | previos 3 | siguientes 2 | cableado 5
+      paso 1: Identificar usuarios en los extremos del espectro (los que más o menos usan el producto/servicio).
+      paso 2: Realizar entrevistas o inmersiones etnográficas con estos usuarios específicos.
+      paso 3: Extraer patrones o necesidades extremas que puedan aplicarse a la mayoría de usuarios.
+      paso 4: Documentar estos hallazgos como 'activos creativos' para futuras iteraciones.
+      cond 1: Cuando la investigación de usuarios estándar (promedio) no arroja ideas innovadoras suficientes.
+      previos   : ['enfoque_centrado_humano_organizacional', 'business_model_canvas_como_scorecard', 'business_model_canvas_scorecard']
+      siguientes: ['how_might_we_briefs', 'pensamiento_convergente_divergente']
+      entregable: Un reporte de investigación de 'usuarios extremos' con insights no obvios.
+
+##############################################################################
+# ACTO 40 del tramo 2 (puesto 30 de hoy, 90 en la de la 48)
+##############################################################################
+  [PAR A] puesto 434, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): business_intelligence_niveles_datos
+  nodo_b (EL SEGUNDO de la razon): jerarquia_datos_scor
+
+  RAZON ENTERA, sin recortar:
+    REPITE con jerarquia_datos_scor. Los dos mandan la misma jerarquia de tres niveles y con los mismos nombres, estrategico, operativo y tactico: definir que dato pertenece a cada nivel, organizar la recoleccion segun quien lo usa, y dar a cada persona la vista que su funcion necesita. El primero anade el almacen de datos y automatizar la captura para no meterlos a mano; el segundo anade sumar datos externos de mercado y economia. Misma estructura, distinto acento.
+
+  --- business_intelligence_niveles_datos
+      titulo    : Sistema de inteligencia de negocio en tres niveles
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Define qué datos estratégicos, operativos y tácticos son relevantes para tu negocio
+      paso 2: Construye o consigue un almacén de datos (data warehouse) que centralice la información de tus sistemas operativos y contables
+      paso 3: Automatiza la captura de datos y evita meterlos a mano
+      paso 4: Crea reportes fijos según el tipo de decisión que necesites tomar (grandes decisiones, decisiones de cómo ejecutar, o resolver problemas puntuales) y deja abierta la posibilidad de hacer consultas puntuales cuando las necesites
+      cond 1: Cuando tu negocio está saturado de datos pero no logras convertirlos en decisiones
+      cond 2: Si necesitas ver tu negocio de forma distinta según el tipo de decisión que estés tomando en ese momento
+      previos   : ['scor_model_operaciones']
+      siguientes: ['fundamentos_inteligencia_financiera']
+      entregable: Un sistema de reportes y paneles (dashboards) organizado en tres niveles (estratégico, operativo, táctico) conectado a un almacén de datos (data warehouse)
+
+  --- jerarquia_datos_scor
+      titulo    : Los tres niveles de datos de tu negocio: estratégicos, operativos y tácticos (modelo SCOR)
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 4 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Define qué datos necesitas ver tú a nivel estratégico, cuáles a nivel operativo y cuáles a nivel táctico, siguiendo el modelo SCOR
+      paso 2: Organiza la recolección de datos según quién los usa: tú, quien coordina el día a día, o quien resuelve problemas en el terreno
+      paso 3: Suma datos externos, como el tamaño de tu mercado, indicadores económicos y comparaciones con otros negocios de tu sector, al nivel estratégico
+      paso 4: Revisa que cada persona en tu negocio tenga acceso solo a la información que necesita para su función
+      cond 1: Cuando tu negocio tiene distintos niveles de responsabilidad y necesitas organizar cómo fluye la información
+      cond 2: Si sientes que hay demasiados datos sin una estructura clara de para qué sirve cada uno
+      previos   : ['lienzo_modelo_negocio']
+      siguientes: ['creacion_data_warehouse', 'diseno_dashboards']
+      entregable: Mapa de tus métricas clasificado en los tres niveles del modelo SCOR, con claridad de quién usa cada uno
+
+##############################################################################
+# ACTO 41 del tramo 2 (puesto 31 de hoy, 91 en la de la 48)
+##############################################################################
+  [PAR A] puesto 440, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): alineacion_motivacional_cofundadores
+  nodo_b (EL SEGUNDO de la razon): compatibilidad_motivaciones_riqueza_control
+
+  RAZON ENTERA, sin recortar:
+    REPITE con compatibilidad_motivaciones_riqueza_control. Los dos mandan la misma conversacion previa a fundar y con el mismo eje de Wasserman: hablar de forma explicita de las motivaciones con el socio potencial antes de lanzar nada, detectar el choque cuando las motivaciones no calzan, y decidir antes de fundar si hay compatibilidad suficiente. El primero lo instrumenta con una matriz que simula escenarios futuros; el segundo nombra el eje de frente, riqueza contra control, y anticipa el choque de poder si los dos quieren mandar. Mismo diagnostico, distinta herramienta.
+
+  --- alineacion_motivacional_cofundadores
+      titulo    : Diagnóstico de Alineación Motivacional entre Cofundadores
+      fuente    : The Founder's Dilemmas
+      pasos 3 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Realizar sesiones de discusión explícita con cofundadores potenciales sobre cada fork de decisión (financiamiento, equity, roles).
+      paso 2: Usar una matriz tipo Figura 11.1 para simular escenarios futuros y verificar consenso.
+      paso 3: Decidir explícitamente, antes de fundar, si existe compatibilidad motivacional suficiente para evitar conflictos destructivos.
+      cond 1: Cuando se está por formar un equipo fundador con más de una persona.
+      cond 2: Cuando existen señales tempranas de desacuerdo sobre el rumbo estratégico del startup.
+      previos   : ['circulos_busqueda_cofundadores']
+      siguientes: ['dilema_riqueza_vs_control', 'reparto_inicial_equity']
+      entregable: Acuerdo de fundadores (founders' agreement) que documente expectativas compartidas sobre control, equity y financiamiento futuro.
+
+  --- compatibilidad_motivaciones_riqueza_control
+      titulo    : Compatibilidad de motivaciones: riqueza contra control
+      fuente    : The Founder's Dilemmas
+      pasos 5 | condiciones 3 | previos 3 | siguientes 5 | cableado 8
+      paso 1: Pregúntate honestamente si lo que mas te importa es la riqueza o el control antes de asociarte con alguien
+      paso 2: Habla abiertamente de tu motivacion con tu posible socio antes de lanzar el proyecto juntos
+      paso 3: Detecta si hay una fuente de conflicto por el rol de liderazgo cuando las motivaciones no calzan
+      paso 4: Si ambos buscan control, anticipa el choque de poder y define desde el inicio como lo van a resolver, sin caer en un liderazgo compartido ambiguo
+      paso 5: Si hay un mix de motivaciones, confirma que de verdad confias en la capacidad de tu socio antes de cederle esa autoridad
+      cond 1: Antes de formalizar una sociedad con un socio
+      cond 2: Si sientes tension recurrente sobre hacia donde va el negocio o quien tiene el control
+      cond 3: Si hay tension sobre quien debe liderar tu startup
+      previos   : ['seleccion_relaciones_cofundadores', 'dilema_riqueza_vs_control', 'decision_fundador_solo_vs_equipo']
+      siguientes: ['reparto_inicial_equity', 'decision_egalitaria_vs_jerarquica', 'seleccion_ceo_fundador', 'criterios_equity_split', 'timing_equity_split']
+      entregable: Una conversacion documentada o un acuerdo informal sobre la motivacion de cada uno y el análisis de si son compatibles como equipo
+
+##############################################################################
+# ACTO 42 del tramo 2 (puesto 32 de hoy, 92 en la de la 48)
+##############################################################################
+  [PAR A] puesto 447, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): fase_acclimate_experiencia_cliente
+  nodo_b (EL SEGUNDO de la razon): fase_acclimate_mapa_de_proceso
+
+  RAZON ENTERA, sin recortar:
+    REPITE con fase_acclimate_mapa_de_proceso. Los dos trabajan la misma fase Acclimate y mandan lo mismo: mapear todo el recorrido desde la compra hasta que el cliente logra su objetivo y desde la perspectiva del cliente, detectar donde se pierde, se confunde o se calla antes de que abandone, atar comunicaciones recurrentes a hitos o micro-logros, y partir lo complejo en pasos pequenos. El primero anade medir la aclimatacion con encuestas rapidas; el segundo anade el mapa visual que le dice al cliente en que etapa esta. Esta familia es la del racimo costurado transversal numero 1 de la ficha de costuras.
+
+  --- fase_acclimate_experiencia_cliente
+      titulo    : Fase de Aclimatación del Cliente (Acclimate Phase)
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 5 | condiciones 2 | previos 5 | siguientes 6 | cableado 11
+      paso 1: Mapear todos los puntos de contacto entre la primera compra y el logro del objetivo del cliente.
+      paso 2: Identificar momentos de fricción, confusión o estrés potencial en ese recorrido.
+      paso 3: Diseñar herramientas de comunicación (email, presencial, video, correo físico, teléfono, regalos) para cada etapa del proceso.
+      paso 4: Establecer hitos claros y celebrarlos para mantener el compromiso del cliente.
+      paso 5: Medir el nivel de aclimatación con encuestas rápidas o check-ins regulares.
+      cond 1: Cuando el negocio tiene alta tasa de abandono en los primeros meses tras la venta
+      cond 2: Cuando el proceso de implementación o uso del producto es complejo y requiere aprendizaje
+      previos   : ['fase_assess_experiencia_cliente', 'welcome_call_cliente_veterano', 'fase_affirm_reduccion_incertidumbre', 'investigar_datos_cliente', 'fase_affirm_buyers_remorse']
+      siguientes: ['fase_accomplish_experiencia_cliente', 'celebracion_hitos_cliente', 'comunicacion_proactiva_puntos_estres', 'documento_quien_es_quien_equipo', 'onboarding_comunitario_y_lenguaje_propio', 'visualizacion_progreso_onboarding']
+      entregable: Mapa de la fase de aclimatación con puntos de contacto, riesgos de abandono y acciones diseñadas para cada etapa del proceso de onboarding.
+
+  --- fase_acclimate_mapa_de_proceso
+      titulo    : Fase Acclimate: Familiarizar al Cliente con el Proceso
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 8 | condiciones 1 | previos 3 | siguientes 1 | cableado 4
+      paso 1: Mapear todos los pasos del proceso de entrega/servicio desde la perspectiva del cliente
+      paso 2: Crear un documento o gráfico visual (mapa) que muestre en qué etapa está el cliente en cada momento
+      paso 3: Establecer comunicaciones recurrentes atadas a micro-logros o hitos del proceso
+      paso 4: Detectar señales silenciosas de desconexión del cliente antes de que se quejen o abandonen
+      paso 5: Simplificar procesos complejos dividiéndolos en pasos pequeños y digeribles
+      paso 6: Haz una lista de todos los puntos de contacto que atraviesa un cliente nuevo entre la compra y el día 100
+      paso 7: Establece hitos de comunicación proactiva (bienvenida, chequeos de progreso, celebración de logros tempranos) distribuidos en ese periodo
+      paso 8: Asigna un responsable claro para cada punto de contacto y mide qué tan consistente es la ejecución
+      cond 1: Cuando los clientes se pierden, dejan de responder o preguntan '¿qué sigue?' durante la implementación o entrega del servicio
+      previos   : ['kit_shock_and_awe_bienvenida', 'seis_herramientas_comunicacion_fase_activate', 'shock_and_awe_kit_bienvenida']
+      siguientes: ['gamificacion_onboarding_visual']
+      entregable: Un mapa visual del proceso de onboarding/entrega y un calendario de comunicaciones por hito
+
+##############################################################################
+# ACTO 43 del tramo 2 (puesto 33 de hoy, 93 en la de la 48)
+##############################################################################
+  [PAR A] puesto 450, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): estrategia_de_balas_de_plomo
+  nodo_b (EL SEGUNDO de la razon): lead_bullets_no_silver_bullets
+
+  RAZON ENTERA, sin recortar:
+    REPITE con lead_bullets_no_silver_bullets. Los ids son el mismo nombre en dos idiomas, balas de plomo y lead bullets, y los dos mandan lo mismo de Horowitz: aceptar que no hay solucion magica para una desventaja estructural, resistir la tentacion de escaparse hacia mercados o modelos alternativos, concentrar el esfuerzo en la debilidad competitiva central, y sostenerlo en el tiempo hasta cerrar la brecha. El segundo antepone el diagnostico de si el problema es de mercado o de producto, que es su unico gesto propio.
+
+  --- estrategia_de_balas_de_plomo
+      titulo    : Estrategia de 'Balas de Plomo' frente a Desventajas Estructurales
+      fuente    : The Hard Thing About Hard Thing - Ben Horowitz
+      pasos 4 | condiciones 1 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Aceptar que no existe una solución única e inmediata para desventajas estructurales graves
+      paso 2: Identificar múltiples mejoras incrementales que en conjunto cierren la brecha competitiva
+      paso 3: Priorizar y ejecutar estas mejoras de forma sostenida en el tiempo
+      paso 4: Evitar buscar exclusivamente asociaciones o adquisiciones como solución mágica
+      cond 1: Cuando la empresa enfrenta una desventaja competitiva estructural severa sin solución rápida evidente
+      previos   : ['deteccion_de_mentiras_organizacionales']
+      siguientes: ['ventaja_competitiva_producto']
+      entregable: Lista priorizada de mejoras incrementales ('balas de plomo') con plan de ejecución continua
+
+  --- lead_bullets_no_silver_bullets
+      titulo    : Balas de Plomo, No Balas de Plata
+      fuente    : The Hard Thing About Hard Thing - Ben Horowitz
+      pasos 5 | condiciones 2 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Identifica si el problema es de mercado (no hay demanda) o de producto/ejecución (hay demanda pero tu producto pierde frente a competencia).
+      paso 2: Si es un problema de producto, resiste la tentación de buscar mercados alternativos o modelos de negocio distintos como escape.
+      paso 3: Enfoca los recursos de ingeniería/equipo directamente en resolver la debilidad competitiva central.
+      paso 4: Comunica claramente al equipo que no hay atajos: se requiere trabajo sostenido ('balas de plomo') para ganar.
+      paso 5: Persiste en el ciclo de mejora del producto hasta recuperar la ventaja competitiva.
+      cond 1: Cuando la empresa enfrenta una amenaza existencial de un competidor con ventaja clara (precio, velocidad, features).
+      cond 2: Cuando el equipo propone múltiples 'soluciones alternativas' que evitan enfrentar el problema central del producto.
+      previos   : ['analisis_competitivo', 'producto_minimo_viable']
+      siguientes: ['pivote_estrategico']
+      entregable: Plan de acción centrado en resolver la debilidad competitiva central del producto, sin desviarse hacia soluciones tangenciales.
+
+##############################################################################
+# ACTO 44 del tramo 2 (puesto 34 de hoy, 94 en la de la 48)
+##############################################################################
+  [PAR A] puesto 453, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): formalizacion_acuerdo_equity
+  nodo_b (EL SEGUNDO de la razon): reparto_inicial_equity
+
+  RAZON ENTERA, sin recortar:
+    REPITE con reparto_inicial_equity. Los dos mandan lo mismo sobre el mismo acuerdo: ponerlo por escrito para evitar malentendidos, y dejar dentro una parte que pueda ajustarse, vesting o clausulas de recompra, en vez de cerrarlo rigido. El primero anade preguntar por las implicaciones fiscales y legales del mercado propio; el segundo anade esperar a que la estrategia y el equipo se estabilicen y usar una plantilla estructurada. Con los puestos 246 y 266, la familia del reparto de equity entre fundadores llega a CINCO nodos del nucleo.
+
+  --- formalizacion_acuerdo_equity
+      titulo    : Cómo formalizar el reparto de participaciones entre socios (equity)
+      fuente    : The Founder's Dilemmas
+      pasos 3 | condiciones 1 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Pon por escrito el acuerdo de reparto de participaciones (equity), idealmente con ayuda de alguien con conocimiento legal
+      paso 2: Incluye condiciones que permitan ajustes futuros, sin volverlas demasiado rígidas
+      paso 3: Pregunta por las implicaciones fiscales y legales del acuerdo en tu mercado
+      cond 1: Cuando tú y tus socios ya acordaron de palabra el reparto de participaciones y necesitan hacerlo vinculante
+      previos   : ['criterios_equity_split', 'riesgo_split_51_49']
+      siguientes: ['vesting_dinamico']
+      entregable: Un documento firmado que deje claro el reparto de participaciones (equity) entre tú y tus socios
+
+  --- reparto_inicial_equity
+      titulo    : Cómo repartir la propiedad (equity) inicial entre los socios fundadores
+      fuente    : The Founder's Dilemmas
+      pasos 4 | condiciones 2 | previos 6 | siguientes 2 | cableado 8
+      paso 1: Espera a que la estrategia de tu negocio y quiénes forman tu equipo se estabilicen antes de cerrar el reparto final
+      paso 2: Usa una plantilla estructurada (como la de UpDown) para hablar con tus socios sobre lo que cada uno aportó y lo que va a aportar
+      paso 3: Escribe los acuerdos a los que llegaste para evitar malentendidos más adelante
+      paso 4: Incluye siempre una parte que pueda ajustarse, como vesting o cláusulas de recompra, nunca lo dejes fijo para siempre
+      cond 1: Si todavía no has definido con tus socios cómo repartir la propiedad de tu negocio
+      cond 2: Si se acerca una ronda de inversión externa que va a exigir que tengas clara la tabla de propiedad (cap table)
+      previos   : ['decision_fundador_solo_vs_equipo', 'criterios_equity_split', 'alineacion_motivacional_cofundadores', 'compatibilidad_motivaciones_riqueza_control', 'decision_egalitaria_vs_jerarquica', 'seleccion_ceo_fundador']
+      siguientes: ['vesting_dinamico', 'timing_equity_split']
+      entregable: Un documento firmado por todos los socios con el reparto de la propiedad (equity), incluyendo cláusulas que permitan ajustarlo con el tiempo
+
+##############################################################################
+# ACTO 45 del tramo 2 (puesto 35 de hoy, 95 en la de la 48)
+##############################################################################
+  [PAR A] puesto 474, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): milk_run_deliveries
+  nodo_b (EL SEGUNDO de la razon): programacion_entregas_delivery_scheduling
+
+  RAZON ENTERA, sin recortar:
+    EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA. milk_run_deliveries es el paso 3 de programacion_entregas_delivery_scheduling desarrollado, la rama de disenar rutas milk run cuando el lote economico no llena camion, y repite ademas dos pasos mas de la madre, el calculo del EOQ por ubicacion y la eleccion de la tecnica de ruteo entre matriz de ahorros y asignacion generalizada. La madre es la decision entre entrega directa y milk run; el hijo es una de las dos ramas contada aparte con tres de sus cinco pasos ya dichos arriba. Ninguno enlaza al otro. Detalle anotado: en las aristas de este par hay un nodo DEPRECADO. MEDICION DEL 12 ago 2026, LA MEDICION DE LOS VEINTE, con la regla LA MAYORIA MANDA del banco 9.6.1: FORMA medida: RADIOS. El unico hijo de paso vivo de programacion_entregas_delivery_scheduling es milk_run_deliveries, por el paso 3; ni la matriz de ahorros ni la asignacion generalizada ni las entregas directas tienen nodo propio. PROPORCION: CERO enlazados, o sea que no hay hermanos enlazados y la figura NO APLICA: manda la regla original. Y el texto lo confirma por su cuenta: este hijo no solo desarrolla el paso 3, REPITE ademas dos pasos mas de la madre, asi que repite y no continua. LA CLASE A SE SOSTIENE.
+
+  --- milk_run_deliveries
+      titulo    : Entregas Milk Run
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 5 | condiciones 2 | previos 1 | siguientes 3 | cableado 4
+      paso 1: Identificar ubicaciones de origen y destino que puedan consolidarse en una sola ruta
+      paso 2: Calcular las cantidades económicas de pedido (EOQ) de cada producto por ubicación
+      paso 3: Elegir la técnica de ruteo (matriz de ahorros o asignación generalizada) según las restricciones existentes (ventanas de tiempo, capacidad de vehículo)
+      paso 4: Diseñar la secuencia de recogidas/entregas y validar con software de ruteo
+      paso 5: Medir el ahorro en costo de transporte y recepción tras implementar la ruta consolidada
+      cond 1: Cuando existen múltiples clientes o proveedores con volúmenes menores a carga completa
+      cond 2: Cuando se busca reducir costos de transporte consolidando envíos
+      previos   : ['gestion_inventario']
+      siguientes: ['crossdocking', 'driver_transporte', 'colaboracion_transporte_ctm']
+      entregable: Plan de ruta de entrega consolidada (milk run) con secuencia de paradas, cantidades por parada y técnica de ruteo seleccionada
+
+  --- programacion_entregas_delivery_scheduling   [PUERTA: TIENE QUE SOBREVIVIR]
+      titulo    : Programación de Entregas: Directas vs. Milk Run
+      fuente    : Essentials of Supply Chain Management - Michael H. Hugos
+      pasos 5 | condiciones 2 | previos 1 | siguientes 2 | cableado 3
+      paso 1: Evaluar si el EOQ de cada ubicación receptora coincide con cargas completas de transporte
+      paso 2: Si coincide, implementar entregas directas por su simplicidad
+      paso 3: Si no coincide, diseñar rutas milk run combinando pedidos
+      paso 4: Seleccionar técnica de ruteo: matriz de ahorros (savings matrix) para múltiples restricciones o técnica de asignación generalizada cuando la única restricción es capacidad del vehículo
+      paso 5: Decidir entre entregas desde ubicaciones de producto único o desde centros de distribución
+      cond 1: Cuando el negocio tiene múltiples puntos de entrega y busca reducir costos logísticos
+      cond 2: Si los costos de transporte o recepción son elevados por entregas fragmentadas
+      previos   : ['gestion_pedidos_order_management']
+      siguientes: ['customer_retention_strategy', 'customer_retention_tactics']
+      entregable: Plan de logística de entregas con método seleccionado (directo/milk run) y rutas optimizadas
+
+##############################################################################
+# ACTO 46 del tramo 2 (puesto 36 de hoy, 96 en la de la 48)
+##############################################################################
+  [PAR A] puesto 479, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): contratar_ambicion_correcta
+  nodo_b (EL SEGUNDO de la razon): screening_ambicion_organizacional
+
+  RAZON ENTERA, sin recortar:
+    REPITE con screening_ambicion_organizacional. Los dos mandan el mismo filtro de Horowitz y con los mismos gestos: fijarse en si el candidato dice yo o dice nosotros al contar sus logros, pedirle el detalle de como se orquesto un trato porque el impostor no sabe explicar el proceso, cruzar referencias con otros que estuvieron en el mismo trato, y preferir a quien pregunta primero por la estrategia de la empresa antes que por su compensacion. El primero anade ser mas riguroso en ventas, donde los incentivos locales tiran mas fuerte.
+
+  --- contratar_ambicion_correcta
+      titulo    : Contratar el Tipo Correcto de Ambición
+      fuente    : The Hard Thing About Hard Things - Ben Horowitz
+      pasos 10 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: En entrevistas, prestar atención al uso de 'yo/mi' vs 'nosotros/el equipo' al describir logros y fracasos pasados.
+      paso 2: Pedir al candidato que explique en detalle cómo se ganó un trato o proyecto, no solo que reclame el crédito.
+      paso 3: Verificar mediante referencias si la narrativa del candidato coincide con la de otros involucrados en los mismos logros.
+      paso 4: Priorizar candidatos que muestren gran interés en cómo ganará la empresa por sobre su propia compensación o carrera.
+      paso 5: Ser especialmente riguroso en este filtro para roles de ventas, dado que ahí los incentivos locales son más fuertes.
+      paso 6: Evalúa si está acostumbrado a actuar por iniciativa propia o si espera que le asignen las tareas
+      paso 7: Pregúntale qué hará en su primer mes contigo y desconfía si solo habla de 'aprender'
+      paso 8: Verifica que tenga conciencia real de en qué se diferencia su rol anterior de este nuevo
+      paso 9: Pregúntale por qué quiere unirse a un negocio pequeño y desconfía si la única motivación es la participación accionaria (equity)
+      paso 10: Busca a alguien motivado por crear más que por administrar
+      cond 1: Cuando se está contratando un ejecutivo senior o gerente clave
+      cond 2: Cuando la empresa sufre alta rotación o desmotivación relacionada con liderazgo egocéntrico
+      previos   : ['minimizar_politica_organizacional']
+      siguientes: ['evaluacion_capacidades_fundador']
+      entregable: Guía de entrevista con preguntas y señales específicas para detectar el tipo de ambición del candidato ejecutivo.
+
+  --- screening_ambicion_organizacional
+      titulo    : Filtro de Ambición por la Compañía vs. Ambición Personal
+      fuente    : The Hard Thing About Hard Thing - Ben Horowitz
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Durante la entrevista, observa si el candidato atribuye éxitos al equipo o solo a sí mismo
+      paso 2: Pide detalles específicos de cómo se orquestó un logro; los impostores no pueden explicar el proceso
+      paso 3: Verifica referencias cruzadas con otros involucrados en los mismos deals o proyectos
+      paso 4: Evalúa si el candidato pregunta primero por la estrategia de la empresa antes que por compensación
+      cond 1: Si estás contratando un líder de ventas u otro puesto con fuertes incentivos individuales
+      cond 2: Si sospechas que un ejecutivo actual está optimizando para sí mismo en detrimento de la empresa
+      previos   : ['cultura_organizacional_calidad']
+      siguientes: ['proceso_de_promocion_disciplinado']
+      entregable: Checklist de evaluación de candidatos senior con criterio de 'ambición por la compañía' documentado
+
+##############################################################################
+# ACTO 47 del tramo 2 (puesto 37 de hoy, 97 en la de la 48)
+##############################################################################
+  [PAR A] puesto 489, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): periodo_incubacion_mental
+  nodo_b (EL SEGUNDO de la razon): wallas_etapa_incubacion
+
+  RAZON ENTERA, sin recortar:
+    REPITE con wallas_etapa_incubacion. Los dos mandan la misma etapa de Wallas y con los mismos gestos: despues de un periodo intenso de trabajo sobre el problema, alejarse de el a proposito; programar descanso mental de verdad y no llenar cada hueco con tareas rutinarias; y confiar en que esa inactividad aparente es parte productiva del proceso. El primero anade registrar en que momentos de distraccion aparecen las ideas; el segundo anade alternar entre varios problemas en vez de agotar uno solo.
+
+  --- periodo_incubacion_mental
+      titulo    : Período de Incubación antes de la Iluminación
+      fuente    : The Art of Thought - Wallas, Graham
+      pasos 4 | condiciones 2 | previos 2 | siguientes 3 | cableado 5
+      paso 1: Tras un período de trabajo intenso y concentrado en un problema, programar deliberadamente tiempo de descanso real (sin estímulos relacionados a la tarea)
+      paso 2: Evitar llenar cada momento disponible con tareas asignadas; dejar espacios de ocio genuino
+      paso 3: Registrar en qué momentos de descanso o distracción surgen ideas nuevas para identificar patrones personales de incubación
+      paso 4: Alternar entre esfuerzo intenso y descanso prolongado en lugar de trabajo continuo de baja intensidad
+      cond 1: Cuando el equipo está estancado tras un esfuerzo intenso de ideación y no logra nuevas soluciones
+      cond 2: Si el proceso de innovación se ha vuelto puramente mecánico o de 'trabajo forzado' sin resultados creativos
+      previos   : ['wallas_etapa_preparacion', 'esfuerzo_voluntario_vs_urge_espontaneo']
+      siguientes: ['sistema_captura_ideas', 'reglas_brainstorming', 'second_wind_energia_mental']
+      entregable: Un calendario o rutina de trabajo que alterne bloques de concentración intensa con períodos de descanso real, y un registro de ideas surgidas durante la incubación.
+
+  --- wallas_etapa_incubacion
+      titulo    : Etapa de Incubación y Abstención Voluntaria
+      fuente    : The Art of Thought - Wallas, Graham
+      pasos 5 | condiciones 2 | previos 3 | siguientes 1 | cableado 4
+      paso 1: Tras un periodo intenso de Preparación, alejarse conscientemente del problema.
+      paso 2: Alternar entre varios problemas en desarrollo en vez de agotar cada uno de una sola vez.
+      paso 3: Programar tiempo de relajación mental real (caminatas, ejercicio, descanso) sin lectura ni estímulos que ocupen la mente.
+      paso 4: Evitar saturar la agenda con tareas administrativas rutinarias que impidan la incubación.
+      paso 5: Confiar en que la 'inactividad' aparente es parte productiva del proceso creativo.
+      cond 1: Cuando el equipo lleva mucho tiempo atascado en un problema sin avanzar y necesita un descanso estratégico.
+      cond 2: Cuando la presión de productividad constante está bloqueando la generación de ideas nuevas.
+      previos   : ['wallas_etapa_preparacion', 'wallas_cuatro_etapas_pensamiento_creativo', 'cuatro_etapas_del_pensamiento_creativo']
+      siguientes: ['wallas_etapa_iluminacion']
+      entregable: Un plan de trabajo que incluya bloques explícitos de descanso o cambio de tarea después de sesiones de trabajo profundo.
+
+##############################################################################
+# ACTO 48 del tramo 2 (puesto 38 de hoy, 98 en la de la 48)
+##############################################################################
+  [PAR A] puesto 531, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): diferencia_ventaja_beneficio
+  nodo_b (EL SEGUNDO de la razon): framework_caracteristicas_ventajas_beneficios
+
+  RAZON ENTERA, sin recortar:
+    REPITE con framework_caracteristicas_ventajas_beneficios. Los dos mandan la misma disciplina de Rackham sobre el marco FAB: no presentar caracteristicas ni ventajas antes de que el cliente haya verbalizado una necesidad explicita, guardar el beneficio para cuando esa necesidad ya este dicha, y revisar las propias llamadas para medir en que proporcion se usa cada cosa. El primero anade que hacer cuando la necesidad todavia no aparecio, volver a preguntas de implicacion, y el aviso de no abrir la conversacion con ventajas genericas; el segundo anade clasificar cada afirmacion del discurso en una de las tres categorias.
+
+  --- diferencia_ventaja_beneficio
+      titulo    : La diferencia entre mostrar una ventaja y mostrar un beneficio (FAB)
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 4 | condiciones 2 | previos 1 | siguientes 1 | cableado 2
+      paso 1: Antes de mencionar una capacidad de tu producto, revisa si tu cliente ya expresó una Necesidad Explícita relacionada
+      paso 2: Si todavía no la expresó, no presentes la característica: vuelve a preguntas de Implicación o de Necesidad y Beneficio
+      paso 3: Guarda frases como 'esto le ayudará a...' (Beneficio) para después de que tu cliente diga 'quiero X' o 'necesito X'
+      paso 4: Evita abrir la conversación presentando Ventajas genéricas de tu producto
+      cond 1: Cuando tu material de ventas o tu discurso se centra en características y ventajas genéricas
+      cond 2: Cuando recibes objeciones justo después de mencionar una capacidad de tu producto
+      previos   : ['modelo_spin_preguntas']
+      siguientes: ['prevencion_objeciones_vs_manejo']
+      entregable: Tu lista de mensajes de venta, reclasificados como Ventaja o Beneficio, con el momento exacto de la conversación en que debes usar cada uno
+
+  --- framework_caracteristicas_ventajas_beneficios
+      titulo    : Marco de Características, Ventajas y Beneficios (FAB)
+      fuente    : SPIN Selling - Neil Rackham
+      pasos 8 | condiciones 2 | previos 3 | siguientes 1 | cableado 4
+      paso 1: Clasificar cada afirmación sobre tu producto en Característica, Ventaja o Beneficio
+      paso 2: Evitar presentar Características y Ventajas antes de haber desarrollado necesidades explícitas
+      paso 3: Asegurarse de que las presentaciones de Beneficio respondan directamente a una Necesidad Explícita verbalizada por el cliente
+      paso 4: Revisar transcripciones de llamadas propias para medir la proporción de Características/Ventajas/Beneficios usados
+      paso 5: Decide si tu producto va a competir por precio bajo con muchas funciones, o como algo premium
+      paso 6: Si eliges precio bajo, arma tu discurso de venta enumerando características
+      paso 7: Si eliges premium, no enumeres características; habla de los beneficios que resuelven necesidades concretas de tu cliente
+      paso 8: Si sumas vendedores que vienen de una empresa con otro posicionamiento de precio, revisa que no repitan el estilo equivocado
+      cond 1: Cuando se diseña o revisa un discurso o presentación de ventas
+      cond 2: En ventas grandes/complejas donde el enfoque en el producto (bells and whistles) puede resultar contraproducente
+      previos   : ['uso_preguntas_necesidad_beneficio', 'value_proposition_startup', 'preguntas_need_payoff']
+      siguientes: ['lanzamiento_nuevos_productos_enfoque_problema']
+      entregable: Checklist o guía de clasificación de mensajes de venta (Características/Ventajas/Beneficios) aplicada a la propuesta de valor propia
+
+##############################################################################
+# ACTO 49 del tramo 2 (puesto 39 de hoy, 99 en la de la 48)
+##############################################################################
+  [PAR A] puesto 536, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): fit_problema_solucion
+  nodo_b (EL SEGUNDO de la razon): problem_solution_fit
+
+  RAZON ENTERA, sin recortar:
+    FAMILIA DECLARADA: este par vive entero dentro del racimo nuevo A del informe intra, la puerta del ajuste, y por la regla operativa registrada en la seccion 9 no se pelea la clase aqui. Se anota como A porque la silueta es la ya conocida y SIN ARISTA, verificado resolviendo a nodo vivo. LO NUEVO, que si se anota: problem_solution_fit es el TERCER hijo sin arista de fit_problema_solucion. Con los puestos 490 y 497, la misma madre tiene TRES nodos que desarrollan sus pasos 1 y 2 y no enlaza con ninguno de los tres. Eso confirma la forma del racimo que el barrido de la seccion 6 midio como SUELTO con cero aristas, y lo agrava: no es que falten enlaces entre hermanos, es que la madre no enlaza a nadie.
+
+  --- fit_problema_solucion
+      titulo    : Los Tres Tipos de Fit (Problem-Solution, Product-Market, Business Model)
+      fuente    : Value Proposition Design
+      pasos 3 | condiciones 1 | previos 4 | siguientes 2 | cableado 6
+      paso 1: Validar que los jobs, pains y gains identificados realmente importan a los clientes.
+      paso 2: Testear si los clientes quieren tu propuesta de valor concreta.
+      paso 3: Evaluar si el modelo de negocio asociado es escalable y rentable.
+      cond 1: Cuando se necesita saber en qué etapa de validación se encuentra el proyecto.
+      previos   : ['value_proposition_canvas', 'presales', 'testing_process_completo', 'understanding_customers_tecnicas']
+      siguientes: ['design_test_repeat', 'circulos_busqueda_cofundadores']
+      entregable: Evidencia documentada de al menos el problem-solution fit antes de escalar.
+
+  --- problem_solution_fit
+      titulo    : Búsqueda del Problem/Solution Fit
+      fuente    : The Startup Owner's Manual - Steve Blank
+      pasos 4 | condiciones 2 | previos 3 | siguientes 4 | cableado 7
+      paso 1: Validar que el problema identificado sea doloroso para un segmento amplio de clientes
+      paso 2: Probar si la solución propuesta resuelve el problema de forma convincente
+      paso 3: Verificar alineación entre modelo de ingresos, precio y necesidades del cliente
+      paso 4: Considerar mercados multi-sided donde puede haber múltiples propuestas de valor
+      cond 1: Cuando se ha probado el MVP con earlyvangelists y se necesita confirmar el ajuste
+      cond 2: Antes de pasar a customer validation
+      previos   : ['producto_minimo_viable', 'customer_discovery_get_out_of_building', 'customer_discovery_phase2_problem_test']
+      siguientes: ['business_model_canvas_scorecard', 'earlyvangelists_identificacion', 'producto_minimo_viable', 'identificar_earlyvangelists']
+      entregable: Evidencia documentada de que el problema y la solución encajan con el segmento objetivo
+
+##############################################################################
+# ACTO 50 del tramo 2 (puesto 40 de hoy, 100 en la de la 48)
+##############################################################################
+  [PAR A] puesto 541, clase A, dominio core
+  nodo_a (EL PRIMERO de la razon): encuesta_satisfaccion_postproyecto
+  nodo_b (EL SEGUNDO de la razon): reunion_conclusion_proyecto
+
+  RAZON ENTERA, sin recortar:
+    REPITE con reunion_conclusion_proyecto. Los dos mandan lo mismo al terminar un proyecto: pasar encuesta al cliente Y al propio equipo, ramificar las preguntas segun la nota recibida, pedir testimonio o resena si la nota es alta y dar espacio a la frustracion con una solucion si es baja, y usar los resultados para ajustar procesos. El segundo anade la reunion de conclusion propiamente dicha, el periodo de monitoreo posterior de tres meses contra el remordimiento post-compra, y el orden de pedir testimonios solo despues de haber dado valor.
+
+  --- encuesta_satisfaccion_postproyecto
+      titulo    : Encuesta de Satisfacción Post-Entrega
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 6 | condiciones 1 | previos 2 | siguientes 1 | cableado 3
+      paso 1: Diseña una encuesta breve con una calificación inicial (por ejemplo estrellas o NPS)
+      paso 2: Divide las preguntas según el resultado, positivo o negativo
+      paso 3: Si es positivo, pide un testimonio o una reseña
+      paso 4: Si es negativo, da espacio para que exprese su frustración y propón una solución
+      paso 5: Aplica la encuesta tanto a tu equipo como a tu cliente
+      paso 6: Usa los resultados para ajustar tus procesos futuros
+      cond 1: Cuando termines una entrega, un proyecto o una interacción importante con tu cliente
+      previos   : ['reunion_conclusion_proyecto', 'cultura_feedback_alta_frecuencia']
+      siguientes: ['fase_accomplish']
+      entregable: Una encuesta con ramas según la respuesta y un reporte de resultados (como el NPS u otro indicador)
+
+  --- reunion_conclusion_proyecto
+      titulo    : Reunión de Conclusión con Encuestas Internas y Externas
+      fuente    : Never Lose a Customer Again - Joey Coleman
+      pasos 12 | condiciones 3 | previos 1 | siguientes 4 | cableado 5
+      paso 1: Programar una Reunión de Conclusión al finalizar el proyecto, revisando los objetivos y métricas definidos en el kickoff
+      paso 2: Diseñar una encuesta interna para el equipo: satisfacción de trabajar con el cliente, disposición a repetir, comentarios abiertos
+      paso 3: Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos
+      paso 4: Ramificar las preguntas según el puntaje recibido (alta satisfacción → pedir testimonio; baja satisfacción → espacio para desahogo y solución)
+      paso 5: Establecer un periodo de monitoreo posterior (ej. 3 meses) para mitigar el 'remordimiento post-lanzamiento' del cliente
+      paso 6: Solicitar testimonios y referidos solo después de dar valor y feedback positivo primero
+      paso 7: Revisar los objetivos organizacionales y métricas de éxito definidas en el kickoff
+      paso 8: Realizar una evaluación honesta del nivel de éxito en cada métrica
+      paso 9: Solicitar feedback del cliente sobre esas métricas
+      paso 10: Atender cualquier deficiencia pendiente antes de cerrar
+      paso 11: Compartir testimonios y reconocimientos mutuos
+      paso 12: Establecer un plan de monitoreo post-entrega (ej. 3 meses de seguimiento)
+      cond 1: Al finalizar cualquier proyecto de entrega con cliente (ej. desarrollo web, consultoría)
+      cond 2: Cuando se busca sistematizar la recolección de testimonios y mejorar la retención
+      cond 3: Cuando existe riesgo de que el cliente sienta que el proyecto no cerró satisfactoriamente pese a estar 'técnicamente' terminado
+      previos   : ['fase_accomplish_experiencia_cliente']
+      siguientes: ['gestion_testimonios', 'fase_adopt_ciclo_cliente', 'encuesta_satisfaccion_postproyecto', 'fase_accomplish']
+      entregable: Protocolo de cierre de proyecto con encuestas internas/externas y plan de monitoreo post-entrega documentado
+
+FIN
