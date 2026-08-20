@@ -16337,9 +16337,12 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 |---|---:|
 | **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
 | **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ ~~566 (16,7 %)~~ ~~563 (16,6 %)~~ **551** (16,3 %), ver las correcciones declaradas debajo |
-| **B** | ~~89~~ ~~87~~ ~~84~~ ~~83~~ ~~82~~ ~~81~~ ~~80~~ ~~79~~ ~~77~~ ~~75~~ **73** |
+| **B** | ~~89~~ ~~87~~ ~~84~~ ~~83~~ ~~82~~ ~~81~~ ~~80~~ ~~79~~ ~~77~~ ~~75~~ ~~73~~ **72** |
 | **C** | ~~7~~ ~~8~~ ~~7~~ **6** |
-| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ ~~2.737 (80,8 %)~~ ~~2.743 (81,0 %)~~ **2.758** (81,4 %) |
+| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ ~~2.737 (80,8 %)~~ ~~2.743 (81,0 %)~~ ~~2.758~~ **2.759** (81,4 %) |
+
+> **CORRECCION DECLARADA (20 ago 2026, vuelta 55, barrido `9.10` del cierre, corrido DESPUES del ultimo movimiento de la vuelta). SE MUEVEN `B` Y `D`, Y NO SE MUEVEN `A` NI `C`.** La vuelta 55 corrigio UN veredicto por la RELECTURA DEL FILO que el acto 44 del tramo 2 de `OP-U-01` obligaba: el **puesto 218** (`reparto_inicial_equity` contra `timing_equity_split`) paso de **`B` a `D`** con correccion declarada y la razon vieja entera pegada por maquina. **`B` baja de 73 a 72 y `D` sube de 2.758 a 2.759**; **`A` sigue en 551 y `C` en 6**, porque un volteo de `B` a `D` no toca ninguna de las dos. **POR ESO LAS DOS TABLAS POR DOMINIO HERMANAS NO SE MUEVEN Y NO ES UN OLVIDO:** esas tablas publican la `A` de cada dominio, y la `A` de los diez es la misma al digito en las dos corridas del marcador de esta vuelta. **La hermandad se cumple POR VACIO y se dice, en vez de darse por cumplida.** Medido con `python scripts/recomputar_marcador.py 3388` ([`loop/SALIDA_V55_MARCADOR_CIERRE.txt`](loop/SALIDA_V55_MARCADOR_CIERRE.txt)). **Las veinticinco fusiones de esta vuelta NO movieron el marcador por si solas: son de fusion pura y ninguna fabrico colision, asi que `P.16` no tuvo nada que limpiar.**
+
 
 > **CORRECCION DECLARADA (19 ago 2026, vuelta 50). LA TABLA VOLVIO A QUEDARSE ATRAS, Y ESTA
 > VEZ DENTRO DE LA MISMA VUELTA QUE LA ACABABA DE CORREGIR.** La correccion de la vuelta 49

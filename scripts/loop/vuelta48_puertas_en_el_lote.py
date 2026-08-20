@@ -268,6 +268,25 @@ def main():
     print("que sobrevive por CONTENIDO; si el contenido apunta al que NO es puerta,")
     print("hay choque entre la vara de la fase y el Gate 0, y eso no lo resuelve")
     print("ninguna regla escrita hoy. Va como pregunta al auditor, no como decision.")
+    # ROTULO ADOSADO EL 20 ago 2026 (vuelta 55, TAREA 1.2 del encargo). EL TEXTO
+    # VIEJO QUEDA DELANTE ENTERO Y NO SE TOCA, porque fue verdad desde la vuelta
+    # 48 hasta la 54 y una correccion que tapa lo que corrige no se puede
+    # auditar (banco 9.10). LA LOGICA DE ESTE INSTRUMENTO TAMPOCO SE TOCA: aqui
+    # solo se anaden lineas de print, y el diff por git lo enseña.
+    print("ADOSADO EL 20 ago 2026 (vuelta 55): LA PREGUNTA DE ARRIBA YA ESTA")
+    print("CONTESTADA Y ESTE ROTULO QUEDA VIEJO. El acta de la vuelta 54,")
+    print("pregunta 1, la adjudico SIN DOCTRINA NUEVA y el registro del tramo 2")
+    print("de docs/plan/03_FUSIONES.md la deja escrita: LA GUARDA RESTRINGE Y EL")
+    print("CONTENIDO ELIGE ENTRE LO PERMITIDO. Las piezas: la receta ratificada")
+    print("elige entre VIABLES; la vara del acta 51 pregunta 3 define al")
+    print("candidato limpio; la precision de la estrella del banco 9.3.1 dice la")
+    print("figura entera; y el acta 50 adjudicacion 3 manda la aritmetica y")
+    print("obliga a registrar el choque. EN UN ACTO DE DOS DONDE EL UNICO")
+    print("CANDIDATO LIMPIO ES LA PUERTA, LA PUERTA SOBREVIVE, el choque de")
+    print("conteos se registra en el motivo y las piezas propias del absorbido")
+    print("viajan enteras por el reparto. Ejecutado en la vuelta 55 sobre los")
+    print("actos 1 y 15 del tramo 2. LO QUE NO CAMBIA: los IMPOSIBLES POR")
+    print("ESTRUCTURA siguen siendo un cierre y se siguen DECLARANDO.")
     print("Y LOS IMPOSIBLES POR ESTRUCTURA NO SON UN CHOQUE SINO UN CIERRE: ninguna")
     print("eleccion permitida los salva, asi que se DECLARAN y no se funden.")
     return 0
