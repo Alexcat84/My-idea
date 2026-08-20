@@ -1,0 +1,26 @@
+==============================================================================
+DIFF DEL CENSO DE DUPLICADAS, CON NODO Y DESTINO RESUELTOS POR EL ALIAS
+  EL CIERRE DE LA VUELTA 60 contra su APERTURA
+  antes  : 7938d4b4:docs/plan/ARISTAS_DUPLICADAS.jsonl
+  despues: docs/plan/ARISTAS_DUPLICADAS.jsonl
+==============================================================================
+
+  grupos por rotulo CRUDO   : antes 946 | despues 935
+  grupos ya RESUELTOS       : antes 943 | despues 935
+
+  RENOMBRADOS (aparecen con rotulo nuevo pero son el MISMO grupo): 1
+     control_mantener_ganancias | nodos_siguientes | ciclo_shewhart_pdsa   -> resuelve a ciclo_shewhart_pdsa
+
+  GRUPOS FABRICADOS DE VERDAD: 0
+
+  grupos que DESAPARECEN: 8
+     cero_defectos | nodos_previos | perfeccionismo_vs_valor
+     equipo_mejora_calidad_2 | nodos_previos | definicion_calidad_conformidad
+     equipo_mejora_calidad_2 | nodos_siguientes | medicion_calidad
+     identificar_clientes_externos_e_internos | nodos_previos | juran_quality_by_design
+     intercambio_de_roles_para_motivacion | nodos_previos | ia_como_nivelador_habilidades
+     intercambio_de_roles_para_motivacion | nodos_siguientes | conciencia_calidad
+     juran_quality_by_design | nodos_siguientes | design_for_six_sigma_dfss
+     medicion_calidad | nodos_previos | cero_defectos
+
+  VERDE: CERO grupos fabricados.

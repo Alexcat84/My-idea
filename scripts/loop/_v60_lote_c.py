@@ -1,0 +1,284 @@
+# -*- coding: utf-8 -*-
+"""_v60_lote_c.py . EL CONTENIDO EDITORIAL DEL LOTE C DEL TRAMO, EN UN FICHERO
+APARTE, CON EL MISMO CONTRATO QUE SU HERMANO.
+
+NO ES UN INSTRUMENTO: no mide, no escribe y no decide nada por si mismo. Es EL
+TEXTO del lote. Lo importa scripts/loop/vuelta59_planes.py, que es quien pone LA
+ARITMETICA Y LAS GUARDAS y quien sella el plan. La razon de vivir aparte esta
+escrita entera en su hermano _v60_lote_b.py y no se repite.
+
+LO QUE ESTE LOTE TIENE DE PROPIO, dicho aqui porque es lo que un lector querra
+saber antes de leer cincuenta parrafos: CIERRA EL TRAMO Y NO DECLARA NI UN ACTO.
+Los dieciseis se funden. Trae ademas LOS DOS CHOQUES DE PUERTA del tramo que
+faltaban (los actos 36 y 43, donde el miembro que la guarda 1B protege es
+tambien el que sobrevive) y LA UNICA FUSION DEL TRAMO QUE VA CONTRA UN CONTEO DE
+PASOS POR UNA FIGURA CON NOMBRE (el acto 41, EL CASO NO ES LA CASA).
+"""
+
+LOTE_C = {
+    "titulo": "LOTE C: LOS DIECISEIS ULTIMOS ACTOS DEL TRAMO EN SU ORDEN IMPRESO (35 a 50), Y CIERRAN EL TRAMO 5. NINGUNO SE APARTA: los dieciseis se funden. Lo encabezan los DOS CHOQUES DE PUERTA que faltaban (actos 36 y 43), donde el miembro protegido por la guarda 1B es tambien el que sobrevive, y lo cierra el unico acto del tramo que se funde CONTRA un conteo de pasos por una figura con nombre escrita en el informe (el acto 41, EL CASO NO ES LA CASA)",
+    "declarados": [],
+    "actos": [
+        {
+            "orden": 35,
+            "superviviente": "ciclo_shewhart_pdsa",
+            "motivo": "LA PIEZA DECLARADA DECIDE, QUE ES LA VARA ESCRITA PARA CUANDO DOS VARAS DE CONTENIDO CHOCAN (acta 53, pregunta 3; acta 54, pregunta 2). Pasos 5 contra 4 apunta a ciclo_shewhart_pdsa y condiciones 2 contra 4 apunta a pdsa_shewhart_cycle: CHOCAN (cuadro de varas, fila 35). El cableado empata 4 contra 4 y ademas NO entra, porque el contenido no empata (P.8). LA PIEZA DECLARADA ESTA DE UN SOLO LADO: la razon del puesto 2579 escribe Sobrevive ciclo_shewhart_pdsa y le reconoce UN QUINTO PASO que el otro no tiene, REPETIR EL CICLO BAJO CONDICIONES AMBIENTALES DIFERENTES PARA CONFIRMAR LA VALIDEZ, que es LA REPLICACION DE SHEWHART y, en palabras de la razon, LO UNICO QUE DISTINGUE UNA PRUEBA DE UNA CASUALIDAD; y de pdsa_shewhart_cycle escribe que SE QUEDA EN LOS CUATRO PASOS y que su Act ya esta en el Act mas el quinto paso del otro, o sea que no le reconoce propio ninguno. NOTA DE FAMILIA QUE LA RAZON APORTA Y SE TRAE SIN TOCAR: ciclo_pdca_pdsa dio D contra los dos (2483 y 2506) porque mezcla PDCA con PDSA; entre los dos PDSA puros este es el primer par y sale A. LA RAZON MARCO SU PROPIO DISCUTIBLE LEVE: quien no cuente la replicacion como paso propio leera fusion mutua o D.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 2],
+                "3": ["CUBIERTO", 3],
+                "4": ["CUBIERTO", 4],
+            },
+            "condiciones": {
+                "1": ["APPEND"],
+                "2": ["CUBIERTO", 1],
+                "3": ["APPEND"],
+                "4": ["CUBIERTO", 1],
+            },
+            "nota": "LOS CUATRO PASOS DEL QUE MUERE VAN UNO A UNO Y NO SE PIERDE NI UNO: Plan es su paso 1, Do es su paso 2, Study es su paso 3 y Act es su paso 4, y el Act del que muere (decidir que se implementa de forma permanente y que necesita mas pruebas) esta repartido entre ese paso 4 y el paso 5 propio del superviviente, como la razon escribe. LA VARA QUE ESTE ACTO PIERDE ES LA DE CONDICIONES, Y POR ESO SE REPONE LO QUE DE VERDAD SEPARA: de las CUATRO condiciones del que muere viajan DOS de APPEND por ser DISPARADORES DISTINTOS, y las otras dos no. Viaja PROBAR EXPERIMENTALMENTE SI UN CAMBIO PROPUESTO GENERA UNA MEJORA ANTES DE INSTITUCIONALIZARLO, que es la puerta del experimento y que las dos del superviviente no tienen (las suyas son mejorar una etapa de un proceso, y haber detectado una causa especial por control estadistico). Y viaja NO CONOCER CON CERTEZA LA CAUSA RAIZ Y PREFERIR PROBAR CAMBIOS DIRECTAMENTE, que es el ESPEJO EXACTO de la condicion 2 del superviviente: aquella entra cuando la causa especial YA se detecto y esta entra cuando NO se sabe. NO VIAJAN, y se dice por que en vez de callarlo: TRABAJAR EN UN ENTORNO DE MEJORA CONTINUA ITERATIVA es matiz de la condicion 1 del superviviente y por acta 55 pregunta 5 se NOMBRA y no se apila; y VALIDAR SOLUCIONES BASANDOSE EN PRUEBAS EMPIRICAS ES LA MISMA PUERTA QUE LA CONDICION 1 DEL QUE MUERE, redactada otra vez, asi que se marca CUBIERTO en vez de plantar dos condiciones casi identicas en el superviviente. Esa es una decision de higiene y va dicha: la guarda de repetidos literales no la habria cazado, porque las dos redacciones no son literalmente iguales.",
+        },
+        {
+            "orden": 36,
+            "superviviente": "control_estadistico_de_procesos",
+            "motivo": "UNA SOLA VARA DE CONTENIDO NO EMPATADA, Y BASTA, Y ADEMAS LA GUARDA Y EL CONTENIDO APUNTAN AL MISMO SITIO. Pasos 10 contra 5 apunta a control_estadistico_de_procesos, condiciones 2 contra 2 empatan, y el cableado 15 contra 4 acompana al mismo lado. Y ESTE ES UN CHOQUE DE PUERTA QUE NO CHOCA: control_estadistico_de_procesos ES PUERTA (extremo de puente aprobado, leido del dossier), asi que la guarda 1B prohibe absorberlo, y resulta que la vara de contenido elige exactamente ese. Por el acta 54, pregunta 1, LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO: aqui lo permitido es uno solo y ademas es el que el contenido queria. SE DICE ASI, Y NO SE PRESENTA LA GUARDA COMO SI HUBIERA DECIDIDO ALGO, que es la trampa que el acto 1 del lote A obligo a declarar. La razon del puesto 2590 escribe Sobrevive control_estadistico_de_procesos y lo llama EL MONTAJE COMPLETO DEL SPC EN DIEZ PASOS frente a LA CONSTRUCCION BASICA EN CINCO del otro, y anade que los cinco pasos del segundo CABEN ENTEROS en los diez del primero. LA RAZON MARCO SU PROPIO DISCUTIBLE Y SE TRAE SIN TOCAR: el cumulo de las cartas ha dado D varias veces (2413, 2518 y 2567) porque emparejaba caras distintas, construccion contra interpretacion o contra retiro; este par es GENERAL CONTRA BASICO DEL MISMO ASPECTO, la construccion, y por eso la razon lo lee A por contencion.",
+            "pasos": {
+                "1": ["INCISO", 7, "n=4 o n=5", ", por ejemplo "],
+                "2": ["CUBIERTO", 9],
+                "3": ["INCISO", 6, "a partir del rango promedio", ", calculados "],
+                "4": ["CUBIERTO", 10],
+                "5": ["CUBIERTO", 9],
+            },
+            "condiciones": {
+                "1": ["CUBIERTO", 2],
+                "2": ["APPEND"],
+            },
+            "nota": "LA UNICA PERDIDA NOMBRADA SE REPONE DE INCISO, y este acto cierra con CERO perdidas. EL CALCULO DE LOS LIMITES DESDE EL RANGO PROMEDIO, que es el metodo R-barra, es lo que la razon nombro con motivo PROCEDIMIENTO NOMBRADO EN UNA LINEA y lo que dice que el superviviente NO EXPLICITA: es un PARAMETRO CONCRETO del gesto que el superviviente ya tiene en su paso 6 (decidir la linea central y los limites de control, usualmente mas menos tres sigma), asi que se adosa ahi y el paso resultante se lee limpio. SE REPONE ADEMAS UN SEGUNDO PARAMETRO QUE LA RAZON NO NOMBRO PERO QUE VALE LO MISMO: el tamano de muestra n igual a 4 o 5, que es la unica cifra ejecutable del par y que el superviviente, con sus subgrupos racionales, deja sin numero; va de INCISO a su paso 7. Los otros tres pasos del que muere estan dichos y se cotejan uno a uno: calcular el promedio y el rango de cada muestra es su paso 9, calcular limites de control y definir instrucciones; graficar los puntos en el tiempo y ver si permanecen dentro de los limites es su paso 10; e investigar cualquier punto fuera de los limites como posible causa especial es tambien su paso 9, que es donde viven las INSTRUCCIONES DE INTERPRETACION Y ACCION. SE DECLARA QUE DOS PIEZAS DEL QUE MUERE APUNTAN AL PASO 9, que es legitimo: la guarda de cobertura pide marca UNICA por pieza del que muere, no por paso del superviviente. LA CONDICION 2 VA DE APPEND POR DISPARADOR DISTINTO Y ES LA MAS DEMING DE LAS CUATRO: ANTES DE DECIDIR SI INTERVENIR INDIVIDUALMENTE O MEJORAR EL SISTEMA no se parece a ninguna de las dos del superviviente (monitorear y predecir el desempeno; distinguir variacion normal de variacion por causas especiales), y es la puerta por la que se entra a no culpar a una persona de una causa comun. SE NOMBRA EL MATIZ QUE NO VIAJA EN LA CONDICION 1: el que muere dice si un proceso O TRABAJADOR esta en control estadistico, y el superviviente solo habla del proceso; es matiz y no disparador, asi que se nombra y no se apila.",
+        },
+        {
+            "orden": 37,
+            "superviviente": "evaluacion_gestion_riesgos",
+            "motivo": "UNA SOLA VARA DE CONTENIDO NO EMPATADA, Y BASTA. Pasos 6 contra 5 apunta a evaluacion_gestion_riesgos, condiciones 2 contra 2 empatan y el cableado 5 contra 5 TAMBIEN empata, o sea que la vara de pasos es la unica que habla en todo el acto. La razon del puesto 2593 escribe Sobrevive evaluacion_gestion_riesgos y le reconoce dos cosas de mas: EL IMPACTO SOBRE LA FLEXIBILIDAD DEL NEGOCIO, y REEVALUAR EL PROCESO DE RIESGO AL MENOS ANUALMENTE, que la razon llama LA UNICA LINEA DEL PAR QUE LO VUELVE UN CICLO Y NO UN EJERCICIO DE UNA VEZ. La pieza declarada esta del mismo lado que la vara.",
+            "pasos": {
+                "1": ["INCISO", 1, "lo que te preocupa (concerns) de cada riesgo que priorizaste", ", o sea "],
+                "2": ["CUBIERTO", 1],
+                "3": ["CUBIERTO", 2],
+                "4": ["CUBIERTO", 4],
+                "5": ["CUBIERTO", 5],
+            },
+            "condiciones": {
+                "1": ["APPEND"],
+                "2": ["CUBIERTO", 2],
+            },
+            "nota": "LA PERDIDA DE NOMBRE SE REPONE A MEDIAS, Y LA MITAD QUE NO SE PUEDE REPONER SE NOMBRA EN VEZ DE FINGIRSE. La razon declaro PERDIDA DE NOMBRE sobre CONCERNS, OPTIONS, CONSEQUENCES, la sigla y el termino en ingles que titula al que muere, y dijo que por el 9.28.1 la sigla y el termino en otro idioma son denominacion aparte y VIAJAN EN LA FUSION (otro ejemplar de la senal del idioma, que sube la cifra de la quinta cara a cinco al corte 2.600, tras el 2.464, MBO, box plot y VOC). LO QUE SE PUEDE MOVER SE MUEVE: la palabra CONCERNS aparece VERBATIM dentro del paso 1 del que muere y viaja de INCISO al paso 1 del superviviente. LO QUE NO SE PUEDE MOVER SE DICE: OPTIONS y CONSEQUENCES, en ingles, NO APARECEN EN NINGUN PASO del que muere; viven solo en su TITULO, y el contrato de este ejecutor NO TOCA titulo_concepto, asi que no hay trozo verbatim que mover. QUEDA COMO PERDIDA DE NOMBRE PARCIAL Y NOMBRADA, y va marcada como DISCUTIBLE en el reporte: es la misma figura que el acta 59 dejo abierta con TAGUCHI en el acto 4 del lote A, y esta es su segunda aparicion. Los otros cuatro pasos estan dichos y se cotejan uno a uno: generar la lista amplia de opciones sin restricciones es su paso 1, que ya pide riesgos Y OPCIONES; evaluar las consecuencias de actuar y de no actuar con los efectos secundarios inesperados es su paso 2, que ademas los nombra en ingles, revenge effects; analizar el costo, el beneficio y el impacto futuro de cada opcion es sus pasos 3 y 4; y definir acciones concretas con responsable y fecha es su paso 5. LA CONDICION 1 VA DE APPEND POR DISPARADOR DISTINTO: las dos del superviviente son de INCERTIDUMBRE y de REPARTO (el proyecto implica incertidumbre significativa; hay que priorizar recursos limitados entre varias areas) y HABER EVALUADO Y PRIORIZADO YA LOS RIESGOS PERO NO TENER TODAVIA ACCIONES CONCRETAS es un momento posterior y concreto del ciclo. La condicion 2 esta dicha: antes de destinar presupuesto y recursos a mitigar un riesgo es su condicion 2.",
+        },
+        {
+            "orden": 38,
+            "superviviente": "enfasis_en_utilidades_corto_plazo",
+            "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO. Pasos 4 contra 4 y condiciones 2 contra 2: las dos varas de contenido empatan al digito (cuadro de varas, fila 38). Y LA PIEZA DECLARADA TAMPOCO SEPARA, porque la razon del puesto 2597 escribe REPITE POR FUSION MUTUA, DECIMOCUARTO CASO DEL ARCHIVO, y NINGUNO DOMINA, reconociendo propio a los dos lados. Con el contenido callado entero, por P.8 EL CABLEADO DECIDE SOLO, y apunta a enfasis_en_utilidades_corto_plazo, 2 contra 4. NO ES EMPATE SIN VARA: el empate sin vara exige que TAMBIEN el cableado empate (acta 53, pregunta 4), y aqui no empata. LA RAZON MARCO SU PROPIO DISCUTIBLE Y SE TRAE ENTERO: quien pese los TRES anadidos de ganancias por encima de los DOS de utilidades dira que ganancias domina y es A plana; la defensa de la razon es que la contabilidad creativa y la banca no estan en el otro. NO SE USA NINGUNA DE LAS DOS CUENTAS PARA DECIDIR, y se dice: contar cuantos propios tiene cada lado es LA RAMA DE LA CANTIDAD COMO VARA, que sigue NO ADOPTADA por el acta 58 y que el encargo de esta vuelta prohibe usar. Decide el cableado, que es lo escrito.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["APPEND"],
+                "3": ["APPEND"],
+                "4": ["CUBIERTO", 2],
+            },
+            "condiciones": {
+                "1": ["APPEND"],
+                "2": ["APPEND"],
+            },
+            "nota": "LAS TRES LINEAS PROPIAS DEL QUE MUERE VIAJAN LAS TRES, y por eso este acto cierra con CERO perdidas pese a ser fusion mutua decidida por cableado: el nodo resultante se queda con las CINCO lineas del par, las tres de ganancias y las dos de utilidades, que es exactamente lo que la razon queria de la fusion. AUDITAR LAS PRACTICAS DE FIN DE TRIMESTRE QUE PUEDAN ESTAR SACRIFICANDO CALIDAD POR APARIENCIA FINANCIERA es un GESTO DISTINTO de EVITAR LA CONTABILIDAD CREATIVA que el superviviente ya tiene: aquel MIDE lo que pasa y este PROHIBE una practica, y los dos hacen falta. REVISAR SI SE ESTAN RECORTANDO PRESUPUESTOS DE INVESTIGACION, EDUCACION O MANTENIMIENTO POR PRESION DE RESULTADOS INMEDIATOS es la unica linea del par que nombra QUE se sacrifica, y va entera. ESTABLECER INDICADORES DE DESEMPENO QUE BALANCEEN EL CORTO Y EL LARGO PLAZO es el unico remedio estructural del par, frente al resto que son diagnosticos. El cuarto paso del que muere si esta dicho: educar a la junta directiva e inversionistas sobre el costo oculto de la gestion cortoplacista es su paso 2, educar a inversionistas y directivos sobre el valor de la mejora continua sobre la ganancia inmediata. LAS DOS CONDICIONES VAN DE APPEND POR SER DISPARADORES DISTINTOS, y aqui la diferencia es de ESCALA DE NEGOCIO y conviene decirlo: las dos del superviviente son de EMPRESA PUBLICA (presion de accionistas por dividendos inmediatos; temor a una adquisicion hostil) y las dos del que muere valen para cualquiera (se detectan practicas de manipulacion de cifras de fin de periodo; la inversion en investigacion y capacitacion se recorta sistematicamente bajo presion financiera). Dejarlas fuera habria dejado el nodo escrito solo para quien cotiza en bolsa.",
+        },
+        {
+            "orden": 39,
+            "superviviente": "grafico_de_corrida_run_chart",
+            "motivo": "TODAS LAS VARAS DE CONTENIDO DE ACUERDO, y el cableado tambien: pasos 5 contra 4, condiciones 3 contra 1 y cableado 4 contra 2, las tres apuntan a grafico_de_corrida_run_chart (cuadro de varas, fila 39). La razon del puesto 2598 escribe Sobrevive grafico_de_corrida_run_chart y le reconoce dos cosas de mas: LAS REGLAS DE PATRON NOMBRADAS (seis puntos consecutivos en tendencia, siete a ocho por encima o por debajo del promedio) y LA COMPUERTA, determinar el control estadistico ANTES de calcular media, desviacion o capacidad, y si hay inestabilidad investigar la causa antes de calcular capacidad. Y dice ademas lo que este acto tiene de comodo: SIN PERDIDA PROPIA, EL DE JURAN ES UN SUBCONJUNTO. LA RAZON MARCO SU DISCUTIBLE LEVE Y SE TRAE SIN TOCAR: el cumulo de las cartas ha dado D por caras distintas, construccion contra interpretacion, pero este par es EL MISMO GRAFICO DE CORRIDA basico contra el detallado, y por eso lo lee A por contencion.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 2],
+                "3": ["CUBIERTO", 3],
+                "4": ["CUBIERTO", 5],
+            },
+            "condiciones": {
+                "1": ["CUBIERTO", 2],
+            },
+            "nota": "ES EL ACTO MAS LIMPIO DEL TRAMO Y SE DICE CON ESAS PALABRAS: CERO piezas viajan, CERO perdidas se nombran, y no porque se haya elegido dejar algo fuera sino porque el que muere es un SUBCONJUNTO ESTRICTO del que vive, comprobado paso a paso. Recolectar datos del proceso en orden cronologico es su paso 1, registrar cada medicion junto con su orden secuencial de produccion. Graficar los valores en el eje Y y el tiempo en el eje X es su paso 2, que ademas dice lo que hay que EVITAR, no solo tabular la distribucion. Identificar tendencias, ciclos o patrones inusuales es su paso 3, que ademas trae LAS REGLAS NUMERICAS que el otro no tiene. Y usar los hallazgos para investigar causas especiales de variacion es su paso 5, si se detecta inestabilidad investigar la causa antes de intentar calcular capacidad de proceso. LA UNICA CONDICION DEL QUE MUERE ESTA DICHA: analizar la evolucion de un proceso a lo largo del tiempo es su condicion 2, cuando se sospecha que un proceso puede no ser estable en el tiempo. Al superviviente le quedan ademas dos condiciones que el otro no tenia y que son LA COMPUERTA en forma de disparador: antes de calcular estadisticas descriptivas de cualquier proceso, y si se requiere establecer la capacidad de un proceso.",
+        },
+        {
+            "orden": 40,
+            "superviviente": "evaluacion_alternativas_solucion",
+            "motivo": "LA PIEZA DECLARADA DECIDE, Y ES VARA PORQUE LA RAZON LA RECONOCE ASIMETRICA (acta 54, pregunta 4). LOS TRES CONTEOS EMPATAN AL DIGITO: pasos 4 contra 4, condiciones 1 contra 1 y cableado 2 contra 2, y por eso el cuadro de varas imprime este acto como EMPATE SIN VARA en su fila 40. ES EL SEGUNDO ACTO DE ESTA VUELTA EN QUE UN EMPATE SIN VARA IMPRESO SE FUNDE, tras el 32 del lote B, y va marcado como DISCUTIBLE igual que aquel. SE DICE POR QUE NO ES EMPATE, y se dice AL LADO DE LOS DOS QUE SI SE DECLARARON, que es la unica forma de que la linea sea auditable: en el acto 34 la razon escribio NINGUNO DOMINA, no nombro superviviente, y le reconocio a cada lado UNA LINEA PROPIA Y SOLO UNA; aqui la razon del puesto 2601 SI NOMBRA SUPERVIVIENTE, escribe Sobrevive evaluacion_alternativas_solucion, QUE TRAE LA MATRIZ DE SELECCION Y EL DIAGRAMA DE FLUJO, y del otro lado dice literalmente que EL PESO POR CRITERIO ES LINEA A REPONER. Acto contra linea no es empate de piezas declaradas. LA LECTURA CONTRARIA ESTA ESCRITA POR LA PROPIA RAZON Y SE TRAE ENTERA: quien lea el diagrama de flujo y el peso por criterio como DOS PASOS ENTEROS PROPIOS dira FUSION MUTUA, POR ELEGIR. La razon anade ademas que sim_tit es 83,7, EL MAS ALTO DEL TRAMO.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["INCISO", 3, "cuanto pesa cada uno", " Define "],
+                "3": ["CUBIERTO", 3],
+                "4": ["CUBIERTO", 4],
+            },
+            "condiciones": {
+                "1": ["APPEND"],
+            },
+            "nota": "LA LINEA A REPONER SE REPONE DE INCISO, que es justo lo que la razon pedia con esas palabras, y por eso este acto cierra con CERO perdidas. CUANTO PESA CADA UNO es un PARAMETRO CONCRETO de la matriz de seleccion basada en criterios que el superviviente ya tiene en su paso 3: la matriz existe, lo que le falta es la ponderacion, y adosarla deja el paso leyendose limpio. Los otros tres pasos estan dichos y se cotejan uno a uno: buscar varias posibles mejoras sin quedarse con la primera idea es su paso 1, la lluvia de ideas para generar multiples alternativas; comparar cada mejora con esos criterios es su paso 3; y elegir la mejora o combinacion que mejor funcione es su paso 4, seleccionar la solucion optima o combinacion de soluciones. LA UNICA CONDICION DEL QUE MUERE VA DE APPEND POR DISPARADOR DISTINTO Y TRAE ADEMAS EL CRITERIO QUE FALTABA: la del superviviente exige que LA CAUSA RAIZ YA ESTE IDENTIFICADA, y la del que muere entra antes, cuando solo tienes varias opciones; y encima anade que la que se elige tiene que funcionar TECNICA Y CULTURALMENTE, que es lo unico del par que dice que una solucion puede ser correcta y aun asi no caber en el negocio.",
+        },
+        {
+            "orden": 41,
+            "superviviente": "definiciones_operacionales",
+            "motivo": "UNA FIGURA CON NOMBRE VENCE AL CONTEO DE PASOS, Y ES LA UNICA VEZ DEL TRAMO. Pasos 5 contra 4 apunta a caso_definicion_arruga, condiciones 2 contra 2 empatan, y el cableado 1 contra 14 apunta a definiciones_operacionales con la diferencia mas ancha de los cincuenta actos. LA RAZON DEL PUESTO 2620 NO DECIDE POR CONTEO SINO POR UNA FIGURA ESCRITA: EL CASO NO ES LA CASA (informe 78.2, el par 2.335), por la cual EL CASO CUYOS PASOS CALZAN UNO A UNO CON EL GENERAL REPITE Y SOBREVIVE EL GENERAL POR ALCANCE DE ROL (P.8). Y comprueba que calzan uno a uno: juntar a todos los que revisan, pedir EJEMPLOS FISICOS del defecto, acordar una misma definicion, escribirla y compartirla, y MEDIR LA TASA DE DEFECTOS ANTES Y DESPUES son los mismos que los cuatro del general. Escribe ademas que LO UNICO PROPIO DEL CASO ES LA ARRUGA, QUE ES LA INSTANCIA NOMBRADA, COMO LA FECHA DE 1916 DE NAKINA, NO UN PROCEDIMIENTO, o sea que NO le reconoce pieza declarada propia: el conteo de pasos de este acto mide la INSTANCIACION, no la sustancia. VA MARCADO COMO DISCUTIBLE en el reporte, porque es la unica fusion del tramo que va contra una vara de conteo apoyandose en una figura del informe y no en una vara de las actas, y quien no admita la figura leera que el conteo de pasos mandaba. SE ANOTA ADEMAS QUE ESTE PAR VA CON ARISTA (el caso declara al general como su unico previo) y que la razon marco su propio discutible: quien lea el caso de la arruga como una ilustracion que merece quedar aparte dira D.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 2],
+                "3": ["CUBIERTO", 2],
+                "4": ["CUBIERTO", 3],
+                "5": ["CUBIERTO", 4],
+            },
+            "condiciones": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 2],
+            },
+            "nota": "NINGUNA PIEZA VIAJA, Y ESO ES LO QUE LA FIGURA PREDICE: si el caso es el general instanciado, no hay nada suyo que reponer. Se cotejan las siete piezas una a una. Juntar a todas las personas que participan en revisar el producto es su paso 1, reunir a supervisores, inspectores y trabajadores para identificar ambiguedades. Pedir ejemplos fisicos reales del defecto es su paso 2, desarrollar las definiciones CON EJEMPLOS FISICOS O VISUALES de productos conformes y no conformes. Buscar que todos definan el defecto de la misma manera con ejemplos concretos que todos acepten es tambien su paso 2, que es donde vive el acuerdo. Escribir la definicion acordada y compartirla es su paso 3, publicar y difundir en el area de trabajo. Medir la tasa de defectos antes y despues es su paso 4. Y las dos condiciones: que distintas personas clasifiquen el mismo producto de forma diferente es su condicion 1, alta variabilidad en la aceptacion entre inspectores o turnos; y que la tasa de defectos sea alta sin causa clara es su condicion 2, el porcentaje estable pero elevado sin que se hayan clarificado criterios. LA UNICA PERDIDA ES DE NOMBRE Y EL INSTRUMENTO NO PUEDE REPONERLA, y se dice en vez de fingirse: LA ARRUGA, que es la instancia que da titulo al caso, NO APARECE EN NINGUN PASO del que muere (sus pasos dicen EL DEFECTO EN DISCUSION), vive solo en su titulo_concepto, y el contrato de este ejecutor no toca ese campo. Es la misma figura que el acta 59 dejo abierta con TAGUCHI, y es su tercera aparicion de la campana contando la de CONCERNS del acto 37 de este mismo lote. QUEDA NOMBRADA PARA LA FASE 04 y marcada como discutible.",
+        },
+        {
+            "orden": 42,
+            "superviviente": "formula_exponencial_confiabilidad",
+            "motivo": "LA PIEZA DECLARADA DECIDE, QUE ES LA VARA ESCRITA PARA CUANDO DOS VARAS DE CONTENIDO CHOCAN (acta 53, pregunta 3). Pasos 4 contra 5 apunta a formula_exponencial_confiabilidad y condiciones 2 contra 1 apunta a distribucion_exponencial: CHOCAN (cuadro de varas, fila 42). El cableado 2 contra 3 acompana al primero pero NO entra, porque el contenido no empata (P.8). LA PIEZA DECLARADA ESTA DE UN SOLO LADO: la razon del puesto 2624 escribe Sobrevive formula_exponencial_confiabilidad, QUE TRAE LA VERIFICACION DE TASA CONSTANTE Y LA GUARDA DE NO CONFUNDIR CON VIDA DE SERVICIO, y del otro lado dice que LA TABLA Y LA FORMULA DAN LA MISMA PROBABILIDAD DE SUPERVIVENCIA, ES LA MISMA CUENTA, o sea que la tabla no es propio sino la misma cosa por otra via. NOTA DE FAMILIA QUE LA RAZON APORTA Y SE TRAE SIN TOCAR: esto es distinto del 2503, donde la exponencial contra la Weibull son DISTRIBUCIONES DISTINTAS y dio D; aqui las dos son la exponencial. La razon marco su discutible: quien lea la via de la tabla y la via de la formula como dos procedimientos distintos dira D.",
+            "pasos": {
+                "1": ["CUBIERTO", 2],
+                "2": ["CUBIERTO", 3],
+                "3": ["INCISO", 3, "tabla de area exponencial", ", o la "],
+                "4": ["APPEND"],
+            },
+            "condiciones": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 1],
+            },
+            "nota": "LA VIA DE LA TABLA SE REPONE DE INCISO AUNQUE LA RAZON NO LA CONTARA COMO PROPIA, y se dice por que: la razon tiene razon en que da LA MISMA CUENTA, pero para quien no puede aplicar la formula la tabla es la unica via ejecutable, y adosarla cuesta cuatro palabras. Va de INCISO al paso 3 del superviviente, que es donde vive la formula, y el paso resultante ofrece las dos vias en una linea. USAR EL RESULTADO PARA PLANIFICAR MANTENIMIENTO PREVENTIVO O GARANTIAS VA DE APPEND, y esta es la pieza que de verdad se habria perdido: es un GESTO DISTINTO y es EL UNICO DEL PAR QUE DICE PARA QUE SIRVE EL NUMERO. El superviviente calcula, interpreta y evalua el impacto de cambios en el MTBF, pero en ningun paso dice que se hace con la confiabilidad una vez conocida; la razon no lo nombro como perdida y aqui se repone igual, porque para el reparto manda el texto (acta 55, pregunta 3). Los otros dos pasos estan dichos: estimar el MTBF del equipo o proceso es su paso 2, calcularlo a partir de datos historicos de fallos; y calcular la razon X sobre mu para el valor de interes es su paso 3, aplicar la formula para el tiempo de interes, que es la misma cuenta escrita como formula. LAS DOS CONDICIONES DEL QUE MUERE CAEN EN LA UNICA DEL SUPERVIVIENTE, y se declara: analizar el tiempo entre fallos de equipos reparables y predecir la confiabilidad de un componente son las dos puertas de PREDECIR LA PROBABILIDAD DE OPERACION SIN FALLO DE UN PRODUCTO REPARABLE CON TASA DE FALLO CONSTANTE, que es su condicion 1 y que ademas trae la guarda de la tasa constante dentro.",
+        },
+        {
+            "orden": 43,
+            "superviviente": "medicion_calidad",
+            "motivo": "LA GUARDA RESTRINGE Y LA PUERTA SOBREVIVE, CON EL CHOQUE REGISTRADO, Y AQUI EL CHOQUE ES SOLO CON LA RAZON. medicion_calidad ES PUERTA (extremo de puente aprobado, leido del dossier y confirmado en la columna del cuadro de varas), asi que absorberlo esta PROHIBIDO por la guarda 1B y el unico candidato limpio del acto es el. Por el acta 54, pregunta 1, registrada en 03_FUSIONES.md, LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO: aqui lo permitido es uno solo. LO QUE SE DICE EN VEZ DE CALLARSE, y es lo que separa este acto del acto 1 del lote A: AQUI LOS CONTEOS SI ACOMPANAN A LA GUARDA. Pasos 5 contra 5 empatan, pero condiciones 3 contra 2 y cableado 18 contra 8 apuntan LOS DOS a medicion_calidad, o sea a la puerta (cuadro de varas, fila 43); en el acto 1 los conteos chocaban entre si. QUIEN APUNTA AL OTRO LADO ES LA RAZON: el puesto 2638 escribe Sobrevive medicion_calidad_2, EL MAS OPERATIVO, POR ELEGIR, tras leer el par como FUSION MUTUA DEL MISMO PASO 3 en la que cada uno trae una tactica propia (medicion_calidad, INVOLUCRAR A LOS RESPONSABLES en definir sus propios indicadores y registrar la LINEA BASE; medicion_calidad_2, CLASIFICAR LOS DEFECTOS por gravedad, causa y responsabilidad, y que EL INGENIERO DE CALIDAD REVISE A DIARIO los mas frecuentes). Una fusion mutua POR ELEGIR es justamente la que la guarda puede resolver sin quitarle nada a nadie, porque las tacticas del que muere se reponen enteras. La razon marco su discutible: quien lea definir-metricas contra recolectar-y-clasificar-defectos como dos sub-actos distintos, como el 2605 separo el comite de planificacion, dira D.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["APPEND"],
+                "3": ["INCISO", 5, "semanal o mensualmente", ", "],
+                "4": ["APPEND"],
+                "5": ["APPEND"],
+            },
+            "condiciones": {
+                "1": ["APPEND"],
+                "2": ["CUBIERTO", 1],
+            },
+            "nota": "LAS TRES TACTICAS PROPIAS DEL QUE MUERE VIAJAN ENTERAS, y es lo que hace legitimo fundir hacia la puerta en una fusion mutua: el nodo resultante se queda con las tacticas de los dos lados y nadie pierde. CLASIFICAR LOS DEFECTOS POR GRAVEDAD, CAUSA Y RESPONSABILIDAD es la pieza que la razon nombro como propia del que muere y es un GESTO DISTINTO: el superviviente IDENTIFICA metricas y REGISTRA la linea base, pero no clasifica lo que encuentra. ESTABLECER METAS DE MEJORA VISIBLES JUNTO A LOS GRAFICOS es la unica linea del par que cierra el lazo entre medir y mejorar, y va entera. ASEGURAR QUE EL INGENIERO DE CALIDAD REVISE DIARIAMENTE LOS DEFECTOS MAS FRECUENTES es la segunda pieza que la razon le reconoce, y es la que le pone DUENO Y FRECUENCIA a la revision. LA CADENCIA DE LOS GRAFICOS SE REPONE DE INCISO: el superviviente ya PUBLICA los resultados en graficos visibles y lo unico que le falta es CADA CUANTO, asi que semanal o mensualmente se adosa a su paso 5. El primer paso del que muere si esta dicho: recolectar datos de inspeccion y prueba por area operativa es su paso 1, identificar metricas de calidad para cada area del negocio. LA CONDICION 1 VA DE APPEND POR DISPARADOR DISTINTO Y ES LA QUE ANCLA EL NODO A SU SITIO EN EL PROGRAMA: AL INICIAR EL PASO DE MEDICION DENTRO DEL PROGRAMA DE 14 PASOS no se parece a ninguna de las tres del superviviente, que son estados del negocio (no hay metricas en areas no productivas; hace falta linea base antes de mejorar; hace falta linea base antes de calcular el costo de calidad). La condicion 2 esta dicha: no tener visibilidad clara de las tasas de defectos es su condicion 1.",
+        },
+        {
+            "orden": 44,
+            "superviviente": "analisis_reporte_benchmarking",
+            "motivo": "UNA SOLA VARA DE CONTENIDO NO EMPATADA, Y BASTA. Pasos 7 contra 5 apunta a analisis_reporte_benchmarking, condiciones 2 contra 2 empatan, y el cableado 5 contra 3 acompana al mismo lado. La razon del puesto 2645 escribe Sobrevive analisis_reporte_benchmarking, EL QUE ANALIZA Y REPORTA, y le reconoce LO PROPIO QUE EL OTRO NO TIENE: el ANALISIS previo, determinar brechas, VERIFICAR LA SIGNIFICANCIA ESTADISTICA, comparar contra top quartile y mejor de la clase, y ponderar factores contextuales; mientras que del otro dice que LO UNICO PROPIO ES UNA LINEA LOGISTICA, decidir la via de entrega. La pieza declarada esta del mismo lado que la vara. LA RAZON MARCO SU DISCUTIBLE Y SE TRAE SIN TOCAR: la familia del benchmarking es D pesada, y quien lea el analisis y la entrega como dos etapas distintas del reporte dira D.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["CUBIERTO", 5],
+                "3": ["CUBIERTO", 5],
+                "4": ["CUBIERTO", 6],
+                "5": ["CUBIERTO", 7],
+            },
+            "condiciones": {
+                "1": ["CUBIERTO", 2],
+                "2": ["APPEND"],
+            },
+            "nota": "LA LINEA LOGISTICA SE REPONE ENTERA DE APPEND, y este acto cierra con CERO perdidas. DEFINIR COMO Y POR DONDE VAS A ENTREGAR EL REPORTE, ELECTRONICO O FISICO, SEGUN LO QUE ACORDASTE AL INICIO es un GESTO DISTINTO de todo lo que el superviviente hace, que analiza, compara, elabora, anonimiza y revisa el cumplimiento legal, pero nunca ENTREGA; y la razon la llamo linea a reponer con esas palabras. Los otros cuatro pasos estan dichos y se cotejan uno a uno: presentar los hallazgos con graficos, tablas y diagramas y sumar recomendaciones concretas son los dos su paso 5, elaborar el reporte con hallazgos claros, graficos y recomendaciones de mejora; decidir cuanto anonimizar equilibrando confidencialidad y valor de aprendizaje es su paso 6; y revisar el cumplimiento de los acuerdos de confidencialidad y la normativa antimonopolio es su paso 7. SE DECLARA QUE DOS PIEZAS DEL QUE MUERE APUNTAN AL PASO 5, que es legitimo por la guarda de cobertura. LA CONDICION 2 VA DE APPEND POR DISPARADOR DISTINTO: las dos del superviviente son de ESTADO DEL DATO Y DE ENCARGO (los datos ya estan validados y normalizados; hay que comunicar resultados a los participantes) y TENER QUE EQUILIBRAR PROTEGER DATOS SENSIBLES CON QUE EL REPORTE SIGA SIENDO UTIL PARA APRENDER es una TENSION, no un estado, y es exactamente la puerta del paso 6 del superviviente, que sin ella se queda sin disparador.",
+        },
+        {
+            "orden": 45,
+            "superviviente": "gestion_efectiva_benchmarking",
+            "motivo": "UNA SOLA VARA DE CONTENIDO NO EMPATADA, Y BASTA. Pasos 7 contra 6 apunta a gestion_efectiva_benchmarking, condiciones 2 contra 2 empatan, y el cableado 2 contra 4 apunta al OTRO lado y NO se usa, porque el contenido no empata (P.8); se dice en vez de callarlo. La razon del puesto 2664 escribe Sobrevive gestion_efectiva_benchmarking, QUE SUMA EL EQUIPO, y describe el par como EL MISMO COMPROMISO DE LIDERAZGO CASI PASO POR PASO: definir y documentar la politica, integrarlo al plan estrategico, mostrar compromiso quitando obstaculos y destinando recursos, crear un ambiente abierto al cambio, dar capacitacion y reconocimiento, y hacer seguimiento SIN SANCIONAR de forma punitiva el bajo desempeno. LO UNICO DE MAS es ESTABLECER EL EQUIPO MULTIDISCIPLINARIO CON UN PROJECT OWNER AL FRENTE, y la razon escribe que EL RESTO ES IDENTICO. Distinto de los D de la familia del benchmarking, que separaban proposito o etapa; aqui es el mismo contenido de liderazgo. La razon marco su discutible leve: la familia del benchmarking es D pesada.",
+            "pasos": {
+                "1": ["CUBIERTO", 2],
+                "2": ["CUBIERTO", 3],
+                "3": ["CUBIERTO", 4],
+                "4": ["CUBIERTO", 5],
+                "5": ["CUBIERTO", 6],
+                "6": ["CUBIERTO", 7],
+            },
+            "condiciones": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 2],
+            },
+            "nota": "SEGUNDO ACTO DEL LOTE SIN NI UNA PIEZA QUE VIAJE, tras el 39, y por el mismo motivo: el que muere es un SUBCONJUNTO del que vive, comprobado pieza a pieza y no supuesto. Definir y documentar una politica clara de como haras benchmarking es su paso 2, que ademas pide METAS CLARAS dentro. Integrar el benchmarking a tu plan de negocio es su paso 3, integrar los hallazgos en el plan estrategico organizacional. Mostrar compromiso real quitando obstaculos y destinando tiempo y dinero es su paso 4, que la alta gerencia actue como modelo removiendo obstaculos y comprometiendo recursos. Crear un ambiente abierto al cambio es su paso 5, crear un entorno de cambio que acepte y actue sobre los hallazgos. Dar capacitacion, reconocimiento y recursos es su paso 6, que ademas anade recompensas. Y hacer seguimiento sin usar los hallazgos de forma punitiva es su paso 7, monitorear el progreso continuamente y evitar sancionar el bajo desempeno detectado. LAS DOS CONDICIONES ESTAN DICHAS: decidir iniciar un proceso formal de benchmarking es su condicion 1, lanzar o mantener un programa continuo; y que los hallazgos anteriores no se tradujeran en mejoras por falta de compromiso real es su condicion 2, requerir compromiso y patrocinio de la alta gerencia para sostener el esfuerzo. AL SUPERVIVIENTE LE QUEDA SU PASO 1 PROPIO, el equipo multidisciplinario con project owner, que es justo lo que la vara midio.",
+        },
+        {
+            "orden": 46,
+            "superviviente": "consumidor_como_eje_de_produccion",
+            "motivo": "UNA SOLA VARA DE CONTENIDO NO EMPATADA, Y BASTA, Y ES LA QUE DECIDE PORQUE LA RAZON NO DECIDE. Pasos 4 contra 4 empatan, y condiciones 2 contra 1 apunta a consumidor_como_eje_de_produccion (cuadro de varas, fila 46); el cableado 5 contra 2 acompana al mismo lado. LA RAZON DEL PUESTO 2666 NO NOMBRA SUPERVIVIENTE: lee el par como REPITE POR FUSION MUTUA DEL MISMO CONCEPTO DE DEMING (El Consumidor en la Linea de Produccion, sim_tit 73,7) y escribe SOBREVIVE POR ELEGIR, reconociendo a cada uno UNA LINEA PROPIA (a consumidor_como_eje_de_produccion la CAPACIDAD DE PAGO del cliente antes de disenar; a consumidor_parte_linea_produccion los MECANISMOS DE ESCUCHA CONTINUA y meter la retroalimentacion como parte formal del ciclo). CUANDO LA RAZON DEJA LA ELECCION ABIERTA Y QUEDA UNA VARA DE CONTENIDO SIN EMPATAR, DECIDE LA VARA: no es empate sin vara, porque el empate sin vara exige que TODO empate (acta 53, pregunta 4), y aqui las condiciones no empatan. La razon marco su discutible: quien lea la investigacion del consumidor contra la extension de la linea como dos caras distintas dira D.",
+            "pasos": {
+                "1": ["APPEND"],
+                "2": ["CUBIERTO", 4],
+                "3": ["APPEND"],
+                "4": ["CUBIERTO", 4],
+            },
+            "condiciones": {
+                "1": ["APPEND"],
+            },
+            "nota": "LAS DOS LINEAS PROPIAS DEL QUE MUERE VIAJAN LAS DOS, y por eso este acto cierra con CERO perdidas pese a ser fusion mutua: el nodo resultante se queda con la CAPACIDAD DE PAGO del que vive y con LA ESCUCHA del que muere, que son las dos mitades que la razon queria juntar. INCLUIR LA RETROALIMENTACION DEL CONSUMIDOR COMO PARTE FORMAL DEL CICLO DE PRODUCCION es un GESTO DISTINTO y es ademas LA IDEA QUE DA TITULO AL PAR: el superviviente INVESTIGA al consumidor antes de disenar, y esta linea lo mete DENTRO del ciclo, que es la extension de la linea de Deming. ESTABLECER MECANISMOS DE ESCUCHA CONTINUA, NO SOLO ENCUESTAS PUNTUALES, es la unica linea del par que dice COMO se sostiene esa escucha, y trae su propia advertencia dentro. Los otros dos pasos estan dichos y los dos en el mismo: distinguir entre lo que el cliente pide hoy y lo que podria necesitar en el futuro, y fomentar la innovacion proactiva de diseno mas alla de lo solicitado, son las dos mitades de su paso 4, disenar el producto o servicio PENSANDO EN MEJORAR LA VIDA FUTURA DEL CONSUMIDOR. LA UNICA CONDICION DEL QUE MUERE VA DE APPEND POR DISPARADOR DISTINTO: las dos del superviviente son de ARRANQUE Y DE IGNORANCIA (inicias el diseno de un producto nuevo; desconoces las verdaderas necesidades de tu cliente) y TOMAR DECISIONES DE PRODUCTO SIN CONSIDERAR EL IMPACTO FUTURO EN EL CLIENTE es un ERROR EN CURSO, que es otra puerta y la unica del par que entra por el fallo.",
+        },
+        {
+            "orden": 47,
+            "superviviente": "identificar_clientes_externos_e_internos",
+            "motivo": "LA PIEZA DECLARADA DECIDE, QUE ES LA VARA ESCRITA PARA CUANDO DOS VARAS DE CONTENIDO CHOCAN (acta 53, pregunta 3). Pasos 3 contra 4 apunta a identificar_clientes_externos_e_internos y condiciones 2 contra 1 apunta a identificar_clientes_diseno: CHOCAN (cuadro de varas, fila 47). El cableado 5 contra 3 acompana al segundo pero NO entra, porque el contenido no empata (P.8). LA PIEZA DECLARADA APUNTA AL PRIMERO Y LA RAZON LO ADJUDICA: el puesto 2673 escribe Sobrevive identificar_clientes_externos_e_internos, EL MAS DETALLADO, y le reconoce TRES piezas de acto (el DIAGRAMA DE FLUJO del proceso, la lista de TIPOS DE CLIENTES EXTERNOS uno por uno (compradores, usuarios, comerciantes, ocultos), y DISTINGUIR QUIEN ORDENA de quien usa), mientras que del otro escribe que LA PRIORIZACION ES LINEA A REPONER. Acto contra linea, igual que en el acto 40. NO SE CUENTA CUANTOS PROPIOS TIENE CADA LADO, tres contra uno, PORQUE ESA ES LA RAMA NO ADOPTADA: lo que decide es que la razon clasifica lo del que muere como LINEA y lo del que vive como piezas de acto. LA RAZON MARCO SU PROPIO DISCUTIBLE Y SE TRAE ENTERO: quien lea el diagrama de flujo y la distincion ordena-usa como pasos enteros que hacen el par POR ELEGIR dira fusion mutua, y quien los separe en clasificar contra listar-tipos dira D.",
+            "pasos": {
+                "1": ["CUBIERTO", 2],
+                "2": ["CUBIERTO", 3],
+                "3": ["APPEND"],
+            },
+            "condiciones": {
+                "1": ["CUBIERTO", 1],
+                "2": ["APPEND"],
+            },
+            "nota": "LA LINEA A REPONER SE REPONE ENTERA DE APPEND, y este acto cierra con CERO perdidas. PRIORIZAR EL ELENCO DE CLIENTES DE FORMA CONSENSUADA POR EL EQUIPO es un GESTO DISTINTO: el superviviente MAPEA, LISTA, IDENTIFICA y DISTINGUE, pero en ningun paso ORDENA por importancia, y sin ese paso el elenco completo se vuelve inmanejable para un negocio pequeno, que es justo lo contrario de lo que el detalle del superviviente busca. Los otros dos pasos estan dichos: mapear todos los actores que interactuan con el producto, servicio o proceso es su paso 2, listar clientes externos con sus siete tipos nombrados; y clasificar a los clientes internos y externos relevantes es su paso 3, identificar clientes internos analizando las relaciones proveedor, procesador y cliente dentro de la organizacion. LA CONDICION 2 VA DE APPEND POR DISPARADOR DISTINTO Y ES LA MEJOR DEL PAR: la unica del superviviente es de ARRANQUE (se inicia el diseno y no esta claro quienes son los clientes) y SI EL EQUIPO SOLO HA CONSIDERADO AL COMPRADOR FINAL E IGNORA OTROS STAKEHOLDERS es un ERROR EN CURSO, la puerta por la que entra quien ya se equivoco. La condicion 1 esta dicha: iniciar la fase de analisis de requerimientos de un proyecto de diseno es su condicion 1.",
+        },
+        {
+            "orden": 48,
+            "superviviente": "juran_quality_by_design",
+            "motivo": "TODAS LAS VARAS DE CONTENIDO DE ACUERDO, y el cableado tambien: pasos 6 contra 4, condiciones 3 contra 2 y cableado 10 contra 3, las tres apuntan a juran_quality_by_design (cuadro de varas, fila 48). La razon del puesto 2674 escribe Sobrevive juran_quality_by_design, EL MODELO ENTERO, y explica la figura: EL CORTO VA DENTRO DEL LARGO, porque los cuatro pasos de quality_by_design (definir requisitos operacionales, traducirlos a requisitos de diseno y validar que la produccion los cumpla) son EL NUCLEO DESARROLLAR-CARACTERISTICAS-Y-CONTROLES del modelo de seis pasos. La razon marco su discutible leve: quien pese el arranque temprano del corto como distinto del modelo dira D.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 5],
+                "3": ["CUBIERTO", 5],
+                "4": ["CUBIERTO", 6],
+            },
+            "condiciones": {
+                "1": ["CUBIERTO", 1],
+                "2": ["APPEND"],
+            },
+            "nota": "NINGUN PASO VIAJA Y NO SE NOMBRA NI UNA PERDIDA DE PASO, porque el corto cabe entero en el largo, comprobado uno a uno. Incorporar consideraciones de calidad desde las etapas iniciales del diseno es su paso 1, decidir si usaras el modelo de forma continua o para un proyecto puntual, que es donde el modelo se instala antes de empezar. Definir los requisitos operacionales antes de desarrollar y traducirlos a requisitos de diseno concretos son los dos su paso 5, desarrollar las caracteristicas del nuevo diseno Y LOS PROCESOS NECESARIOS PARA PRODUCIRLAS. Y validar que el proceso de produccion pueda cumplirlos consistentemente es su paso 6, desarrollar CONTROLES DE PROCESO, documentar cada etapa y transferir el diseno a operaciones. SE DECLARA QUE DOS PASOS DEL QUE MUERE APUNTAN AL PASO 5, que es legitimo por la guarda de cobertura. LA CONDICION 2 SI VIAJA, Y ES LO UNICO QUE ESTE ACTO ANADE: las tres del superviviente son PROACTIVAS (necesitas disenar algo desde cero; buscas un metodo simple y economico sin estadistica compleja; necesitas redisenar un proceso existente de forma estructurada) y ENFRENTAR CRISIS DE CALIDAD RECURRENTES ORIGINADAS EN EL DISENO es REACTIVA: es la puerta por la que entra quien ya tiene el problema encima, y el modelo entero no la tenia. La condicion 1 esta dicha: prevenir problemas de calidad futuros mediante planificacion temprana es su condicion 1, disenar un nuevo producto, servicio o proceso desde cero.",
+        },
+        {
+            "orden": 49,
+            "superviviente": "definiciones_operacionales_3",
+            "motivo": "LAS DOS VIAS ESCRITAS APUNTAN AL MISMO LADO, Y SE DICEN LAS DOS. Pasos 5 contra 5 y condiciones 3 contra 3: las dos varas de contenido empatan al digito (cuadro de varas, fila 49). PRIMERA VIA, LA PIEZA DECLARADA: la razon del puesto 2686 escribe que LO UNICO QUE LOS DISTINGUE ES UN MATIZ DE REDACCION, que definiciones_operacionales_3 NOMBRA LA REGLA DE DECISION SI O NO COMO PASO APARTE, y que lo de definiciones_operacionales_4, escribir el procedimiento con detalle suficiente para reproducibilidad, ES IMPLICITO EN EL OTRO. Un propio explicito de un lado contra un implicito del otro es propio declarado DE UN SOLO LADO, que por acta 54 pregunta 4 es vara. SEGUNDA VIA, EL CABLEADO: con las dos varas de contenido empatadas, por P.8 el cableado decide solo, y apunta 4 contra 3 al MISMO nodo. LAS DOS VIAS COINCIDEN, asi que la eleccion no depende de cual se prefiera, y por eso este acto NO va marcado como discutible aunque la razon escriba SOBREVIVE POR ELEGIR sin nombrar a nadie. LA RAZON MARCO UN DISCUTIBLE FUERTE DE PAR, NO DE FUSION, y se trae entero: la familia de definiciones operacionales es D pesada (2455, 2495, 2610, 2668), asi que quien aplique ese prior SIN VER QUE AQUI NO HAY EJE DISTINTO dira D; la defensa de la razon es que a diferencia del resto de la familia, que se separa por un eje real (el 2455 adentro contra afuera, el 2610 inspectores contra comprador y vendedor), estos dos estan EN EL MISMO EJE, traducir una palabra vaga a una prueba operativa con validacion externa. Este par va CON ARISTA.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 2],
+                "3": ["CUBIERTO", 3],
+                "4": ["APPEND"],
+                "5": ["CUBIERTO", 5],
+            },
+            "condiciones": {
+                "1": ["CUBIERTO", 1],
+                "2": ["CUBIERTO", 2],
+                "3": ["CUBIERTO", 3],
+            },
+            "nota": "EL PASO QUE LA RAZON LLAMA IMPLICITO VIAJA IGUAL, Y LA REGLA QUE LO PERMITE ESTA CITADA: acta 55, pregunta 3, CUANDO LA RAZON DECLARA COMPARTIDO UN GESTO QUE EL TEXTO NO DICE, PARA EL REPARTO MANDA EL TEXTO. ESCRIBIR EL PROCEDIMIENTO CON EL DETALLE SUFICIENTE PARA QUE CUALQUIER PERSONA QUE LO SIGA LLEGUE AL MISMO RESULTADO es un GESTO DISTINTO de DEFINIR UNA PRUEBA ESPECIFICA Y REPRODUCIBLE: uno define y el otro REDACTA, y la reproducibilidad que el superviviente pide como propiedad de la prueba, el que muere la pide como propiedad del DOCUMENTO. Cuesta un APPEND y sin el la unica diferencia real que el par tenia se pierde. SE DECLARA LA TENSION SIN TAPARLA: la razon uso ese mismo paso, llamandolo implicito, para justificar que el superviviente domine; reponerlo NO deshace la eleccion (que ademas la sostiene el cableado por si sola) y si mejora el nodo. Los otros cuatro pasos estan dichos y se cotejan uno a uno: revisar la especificacion y marcar las palabras ambiguas es su paso 1, identificar el adjetivo o concepto ambiguo, con los mismos ejemplos, limpio y seguro; definir un procedimiento de prueba especifico y repetible es su paso 2; fijar un criterio numerico de aceptacion o rechazo es su paso 3, establecer un criterio de juicio claro y cuantificable; y confirmarlo con todas las partes antes de aplicarlo es su paso 5, validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definicion. LAS TRES CONDICIONES ESTAN DICHAS UNA A UNA: escribir una especificacion con adjetivos subjetivos es su condicion 1, redactar especificaciones de calidad para contratos con proveedores; la disputa sobre que cuenta como defecto es su condicion 2; y redactar un contrato o una regla exigible con claridad es su condicion 3, disenar regulaciones gubernamentales o estandares industriales. AL SUPERVIVIENTE LE QUEDA SU PASO 4 PROPIO, la regla de decision si o no, que es lo que la pieza declarada midio.",
+        },
+        {
+            "orden": 50,
+            "superviviente": "fijacion_de_metas",
+            "motivo": "TODAS LAS VARAS DE CONTENIDO DE ACUERDO, y el cableado tambien: pasos 3 contra 5, condiciones 1 contra 2 y cableado 2 contra 6, las tres apuntan a fijacion_de_metas (cuadro de varas, fila 50). La razon del puesto 2699 escribe Sobrevive fijacion_de_metas, EL MAS COMPLETO, y describe la figura: los dos son el Paso 10 de Crosby (fijar metas), establecimiento_metas es EL ESQUELETO (reuniones de equipo, metas a 30, 60 y 90 dias, especificas y medibles) y fijacion_de_metas es EL MISMO PASO 10 DETALLADO, con dos metas medibles y RETADORAS por grupo, publicarlas, RECONOCER EN PUBLICO a los grupos que logran (bordes dorados, estacionamiento preferencial) y usar MEDIDAS DE CORTO PLAZO como horas sin defectos. EL ESQUELETO VA DENTRO DEL DETALLADO. La razon marco su discutible leve: quien lea el reconocimiento y las medidas de corto plazo como pasos enteros propios dira fusion mutua, por elegir.",
+            "pasos": {
+                "1": ["CUBIERTO", 1],
+                "2": ["INCISO", 1, "a 30, 60 y 90 dias", " Fíjalas "],
+                "3": ["CUBIERTO", 1],
+            },
+            "condiciones": {
+                "1": ["CUBIERTO", 1],
+            },
+            "nota": "LO UNICO QUE EL ESQUELETO TIENE Y EL DETALLADO NO ES UN HORIZONTE, Y SE REPONE DE INCISO, asi que el ultimo acto del tramo cierra con CERO perdidas. LAS METAS A 30, 60 Y 90 DIAS son un PARAMETRO CONCRETO del gesto que el superviviente ya tiene en su paso 1, pedir a cada grupo dos metas especificas y medibles una semana despues del Dia ZD: el superviviente dice CUANDO EMPIEZA el ciclo pero no HASTA CUANDO llega cada meta, y el que muere trae justamente eso. Se adosa a su paso 1 y el paso resultante se lee limpio. Los otros dos pasos estan dichos y los dos en el mismo: realizar reuniones de equipo para definir metas de calidad y asegurar que las metas sean especificas y medibles son las dos mitades de su paso 1, que ademas fija la cantidad, DOS metas, y el arranque, una semana despues del Dia ZD; y el superviviente sube la vara en su paso 2 exigiendo que sean RETADORAS, que el esqueleto no pedia. SE DECLARA QUE DOS PASOS DEL QUE MUERE APUNTAN AL PASO 1, que es legitimo por la guarda de cobertura. LA UNICA CONDICION DEL QUE MUERE ESTA DICHA: traducir el compromiso de calidad en objetivos concretos es su condicion 1, haber lanzado ya el programa Cero Defectos y necesitar traducir el compromiso general en acciones medibles por equipo.",
+        },
+    ],
+}

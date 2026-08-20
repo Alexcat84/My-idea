@@ -7,194 +7,179 @@
   "final_cleanup_removed": [],
   "symmetrize_added": [
     {
-      "node": "autocontrol_y_controlabilidad",
+      "node": "analisis_reporte_benchmarking",
       "key": "nodos_siguientes",
-      "added": "autocontrol_planificacion_servicio"
+      "added": "aprendizaje_institucionalizado_benchmarking"
     },
     {
-      "node": "autocontrol_y_controlabilidad",
-      "key": "nodos_siguientes",
-      "added": "feedback_supervisores_trabajadores"
-    },
-    {
-      "node": "autocontrol_y_controlabilidad",
-      "key": "nodos_siguientes",
-      "added": "mantenimiento_productivo_total"
-    },
-    {
-      "node": "autocontrol_y_controlabilidad",
+      "node": "analisis_reporte_benchmarking",
       "key": "nodos_previos",
-      "added": "validacion_sistema_medicion"
+      "added": "analisis_identificacion_mejores_practicas"
     },
     {
-      "node": "autocontrol_y_controlabilidad",
+      "node": "analisis_reporte_benchmarking",
       "key": "nodos_previos",
-      "added": "validacion_sistema_medicion_2"
+      "added": "diseno_dashboards"
     },
     {
-      "node": "benchmarking_proceso",
+      "node": "ciclo_shewhart_pdsa",
       "key": "nodos_siguientes",
-      "added": "decide_phase_roadmap"
+      "added": "just_do_its"
     },
     {
-      "node": "benchmarking_proceso",
+      "node": "ciclo_shewhart_pdsa",
       "key": "nodos_siguientes",
-      "added": "juran_transformation_roadmap"
+      "added": "kaizen_mejora_continua"
     },
     {
-      "node": "benchmarking_proceso",
+      "node": "ciclo_shewhart_pdsa",
       "key": "nodos_previos",
-      "added": "ciclo_adaptativo_inteligencia"
+      "added": "analisis_diagnostico_causa"
     },
     {
-      "node": "cero_defectos",
-      "key": "nodos_siguientes",
-      "added": "concepto_vs_tecnica"
-    },
-    {
-      "node": "cero_defectos",
-      "key": "nodos_siguientes",
-      "added": "medicion_calidad"
-    },
-    {
-      "node": "cero_defectos",
+      "node": "ciclo_shewhart_pdsa",
       "key": "nodos_previos",
-      "added": "perfeccionismo_vs_valor"
+      "added": "control_mantener_ganancias"
     },
     {
-      "node": "circulos_calidad_qc",
+      "node": "consumidor_como_eje_de_produccion",
       "key": "nodos_siguientes",
-      "added": "eliminacion_barreras_orgullo_del_trabajo"
+      "added": "investigacion_necesidades_consumidor"
     },
     {
-      "node": "circulos_calidad_qc",
+      "node": "consumidor_como_eje_de_produccion",
       "key": "nodos_previos",
-      "added": "transformacion_gerencial_para_la_calidad"
+      "added": "definicion_calidad_segun_agente"
     },
     {
-      "node": "comunicar_politicas_organizacionales",
+      "node": "control_estadistico_de_procesos",
       "key": "nodos_siguientes",
-      "added": "consejo_de_calidad_y_rol_del_director"
+      "added": "administracion_sin_miedo"
     },
     {
-      "node": "comunicar_politicas_organizacionales",
+      "node": "control_estadistico_de_procesos",
       "key": "nodos_siguientes",
-      "added": "normas_culturales_calidad"
+      "added": "distincion_causas_comunes_especiales"
     },
     {
-      "node": "comunicar_politicas_organizacionales",
+      "node": "definiciones_operacionales_3",
       "key": "nodos_siguientes",
-      "added": "recursos_humanos_cultura"
+      "added": "control_estadistico_metodo_medicion"
     },
     {
-      "node": "comunicar_politicas_organizacionales",
+      "node": "definiciones_operacionales_3",
       "key": "nodos_siguientes",
-      "added": "sostenibilidad_agil"
+      "added": "estandares_voluntarios"
     },
     {
-      "node": "comunicar_politicas_organizacionales",
+      "node": "evaluacion_alternativas_solucion",
+      "key": "nodos_siguientes",
+      "added": "diseno_de_mejoras_para_clientes"
+    },
+    {
+      "node": "evaluacion_alternativas_solucion",
       "key": "nodos_previos",
-      "added": "codigo_conducta_orientado_cliente"
+      "added": "diseno_experimentos_doe_mejora"
     },
     {
-      "node": "control_estadistico_del_proceso",
+      "node": "evaluacion_gestion_riesgos",
       "key": "nodos_siguientes",
-      "added": "estudio_mezclas_multiples_fuentes"
+      "added": "aceptacion_de_fallas_como_inevitables"
     },
     {
-      "node": "eliminacion_causas_error_4",
-      "key": "nodos_previos",
-      "added": "fijacion_de_metas"
-    },
-    {
-      "node": "eliminacion_planes_muestreo_estandar",
+      "node": "evaluacion_gestion_riesgos",
       "key": "nodos_siguientes",
-      "added": "mito_departamento_control_calidad"
+      "added": "equipo_de_gestion_de_crisis"
     },
     {
-      "node": "eliminacion_planes_muestreo_estandar",
-      "key": "nodos_previos",
-      "added": "limitaciones_intervalos_confianza"
-    },
-    {
-      "node": "equipo_mejora_calidad_2",
+      "node": "evaluacion_gestion_riesgos",
       "key": "nodos_siguientes",
-      "added": "consejo_de_calidad_2"
+      "added": "plan_b_antes_de_necesitarlo"
     },
     {
-      "node": "equipo_mejora_calidad_2",
+      "node": "evaluacion_gestion_riesgos",
+      "key": "nodos_previos",
+      "added": "evaluacion_de_factores_de_riesgo"
+    },
+    {
+      "node": "evaluacion_gestion_riesgos",
+      "key": "nodos_previos",
+      "added": "matriz_riesgo_conocido_desconocido"
+    },
+    {
+      "node": "formula_exponencial_confiabilidad",
       "key": "nodos_siguientes",
-      "added": "medicion_calidad"
+      "added": "distribucion_weibull"
     },
     {
-      "node": "equipo_mejora_calidad_2",
+      "node": "formula_exponencial_confiabilidad",
       "key": "nodos_previos",
-      "added": "compromiso_gerencial_calidad"
+      "added": "distribucion_normal_probabilidad"
     },
     {
-      "node": "equipo_mejora_calidad_2",
-      "key": "nodos_previos",
-      "added": "definicion_calidad_conformidad"
-    },
-    {
-      "node": "equipo_mejora_calidad_2",
-      "key": "nodos_previos",
-      "added": "programa_mejora_calidad_14_pasos"
-    },
-    {
-      "node": "histograma",
+      "node": "gestion_efectiva_benchmarking",
       "key": "nodos_siguientes",
+      "added": "benchmarking_estrategia"
+    },
+    {
+      "node": "gestion_efectiva_benchmarking",
+      "key": "nodos_siguientes",
+      "added": "caso_estudio_benchmarking_terminal"
+    },
+    {
+      "node": "gestion_efectiva_benchmarking",
+      "key": "nodos_siguientes",
+      "added": "monitoreo_continuo_benchmarking"
+    },
+    {
+      "node": "gestion_efectiva_benchmarking",
+      "key": "nodos_previos",
+      "added": "tipos_benchmarking_por_participante"
+    },
+    {
+      "node": "grafico_de_corrida_run_chart",
+      "key": "nodos_previos",
       "added": "concepto_variacion_estadistica"
     },
     {
-      "node": "histograma",
+      "node": "identificar_clientes_externos_e_internos",
+      "key": "nodos_previos",
+      "added": "establecer_proyecto_y_metas_diseno"
+    },
+    {
+      "node": "identificar_clientes_externos_e_internos",
+      "key": "nodos_previos",
+      "added": "goal_statement_smart"
+    },
+    {
+      "node": "identificar_clientes_externos_e_internos",
+      "key": "nodos_previos",
+      "added": "juran_quality_by_design"
+    },
+    {
+      "node": "juran_quality_by_design",
       "key": "nodos_siguientes",
-      "added": "distribuciones_probabilidad"
+      "added": "concurrent_engineering"
     },
     {
-      "node": "histograma",
-      "key": "nodos_previos",
-      "added": "visualizacion_datos_deteccion_outliers"
-    },
-    {
-      "node": "indice_cpk",
-      "key": "nodos_previos",
-      "added": "analisis_capacidad_proceso"
-    },
-    {
-      "node": "intercambio_de_roles_para_motivacion",
+      "node": "juran_quality_by_design",
       "key": "nodos_siguientes",
-      "added": "conciencia_calidad"
+      "added": "design_for_six_sigma_dfss"
     },
     {
-      "node": "intercambio_de_roles_para_motivacion",
+      "node": "juran_quality_by_design",
       "key": "nodos_previos",
-      "added": "empoderamiento_empleados"
+      "added": "innovacion_tipo_ii"
     },
     {
-      "node": "intercambio_de_roles_para_motivacion",
-      "key": "nodos_previos",
-      "added": "ia_como_nivelador_habilidades"
+      "node": "medicion_calidad",
+      "key": "nodos_siguientes",
+      "added": "entrenamiento_supervisores_calidad"
     },
     {
-      "node": "recoleccion_validacion_datos_benchmarking",
+      "node": "medicion_calidad",
       "key": "nodos_previos",
-      "added": "proceso_benchmarking_juran_7pasos"
-    },
-    {
-      "node": "remover_barreras_orgullo_trabajo",
-      "key": "nodos_previos",
-      "added": "eliminar_trabajo_a_destajo"
-    },
-    {
-      "node": "rol_facilitador_equipos_mejora",
-      "key": "nodos_previos",
-      "added": "formacion_equipo_proyecto"
-    },
-    {
-      "node": "rol_facilitador_equipos_mejora",
-      "key": "nodos_previos",
-      "added": "rol_lider_equipo_calidad"
+      "added": "programa_make_certain_2"
     }
   ]
 }

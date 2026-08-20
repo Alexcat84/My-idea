@@ -9,21 +9,36 @@
     "Identifica quién es realmente el consumidor final de tu producto o servicio",
     "Investiga qué necesita tu cliente y qué cree que necesita",
     "Evalúa la capacidad de pago de tu cliente antes de diseñar soluciones",
-    "Diseña tu producto o servicio pensando en mejorar la vida futura del consumidor"
+    "Diseña tu producto o servicio pensando en mejorar la vida futura del consumidor",
+    "Incluir retroalimentación del consumidor como parte formal del ciclo de producción",
+    "Establecer mecanismos de escucha continua (no solo encuestas puntuales)"
   ],
   "entregable_esperado": "Perfil de necesidades y capacidad de pago del consumidor objetivo",
   "nodos_previos": [
-    "revolucion_relaciones_proveedores"
+    "revolucion_relaciones_proveedores",
+    "definicion_calidad_segun_agente"
   ],
   "nodos_siguientes": [
     "investigacion_del_consumidor",
     "triangulo_de_interaccion_calidad",
     "identificacion_del_verdadero_cliente",
-    "quejas_llegan_tarde"
+    "quejas_llegan_tarde",
+    "investigacion_necesidades_consumidor"
   ],
   "condiciones_activacion": [
     "Cuando inicias el diseño de un nuevo producto o servicio",
-    "Cuando desconoces las verdaderas necesidades de tu cliente"
+    "Cuando desconoces las verdaderas necesidades de tu cliente",
+    "Cuando la empresa toma decisiones de producto sin considerar impacto futuro en el cliente"
   ],
-  "etiqueta_arbol": "Escucha al Consumidor en tu Producción"
+  "etiqueta_arbol": "Escucha al Consumidor en tu Producción",
+  "ids_alias": [
+    "consumidor_parte_linea_produccion"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "consumidor_parte_linea_produccion",
+      "titulo": "El Consumidor en la Línea de Producción (Extensión de la Línea)",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

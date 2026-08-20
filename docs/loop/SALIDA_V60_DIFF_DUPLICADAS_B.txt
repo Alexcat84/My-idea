@@ -1,0 +1,22 @@
+==============================================================================
+DIFF DEL CENSO DE DUPLICADAS, CON NODO Y DESTINO RESUELTOS POR EL ALIAS
+  LOTE B contra la APERTURA de la vuelta 60
+  antes  : 7938d4b4:docs/plan/ARISTAS_DUPLICADAS.jsonl
+  despues: 02384c6a:docs/plan/ARISTAS_DUPLICADAS.jsonl
+==============================================================================
+
+  grupos por rotulo CRUDO   : antes 946 | despues 938
+  grupos ya RESUELTOS       : antes 943 | despues 938
+
+  RENOMBRADOS (aparecen con rotulo nuevo pero son el MISMO grupo): 0
+
+  GRUPOS FABRICADOS DE VERDAD: 0
+
+  grupos que DESAPARECEN: 5
+     cero_defectos | nodos_previos | perfeccionismo_vs_valor
+     equipo_mejora_calidad_2 | nodos_previos | definicion_calidad_conformidad
+     equipo_mejora_calidad_2 | nodos_siguientes | medicion_calidad
+     intercambio_de_roles_para_motivacion | nodos_previos | ia_como_nivelador_habilidades
+     intercambio_de_roles_para_motivacion | nodos_siguientes | conciencia_calidad
+
+  VERDE: CERO grupos fabricados.

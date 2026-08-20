@@ -15,7 +15,8 @@
   "entregable_esperado": "Gráfico de corrida documentado con análisis de estabilidad del proceso previo a cualquier análisis estadístico adicional",
   "nodos_previos": [
     "causas_comunes_causas_especiales",
-    "causas_comunes_vs_especiales"
+    "causas_comunes_vs_especiales",
+    "concepto_variacion_estadistica"
   ],
   "nodos_siguientes": [
     "capacidad_del_proceso",
@@ -26,5 +27,15 @@
     "Cuando se sospecha que un proceso puede no ser estable en el tiempo",
     "Si se requiere establecer la capacidad de un proceso de manufactura o servicio"
   ],
-  "etiqueta_arbol": "Observa tus Datos en Orden"
+  "etiqueta_arbol": "Observa tus Datos en Orden",
+  "ids_alias": [
+    "run_chart_datos_temporales"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "run_chart_datos_temporales",
+      "titulo": "Run Chart (Gráfico de Corrida)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

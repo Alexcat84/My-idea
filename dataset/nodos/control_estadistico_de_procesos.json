@@ -11,8 +11,8 @@
     "Verificar que el sistema de medición tenga precisión y exactitud suficientes",
     "Determinar el punto más temprano de prueba para detectar causas asignables",
     "Elegir el tipo de gráfico de control adecuado (variables o atributos)",
-    "Decidir la línea central y los límites de control (usualmente ±3σ)",
-    "Elegir subgrupos racionales para las muestras",
+    "Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio",
+    "Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5",
     "Establecer un sistema simple y confiable de recolección de datos",
     "Calcular límites de control y definir instrucciones de interpretación y acción",
     "Graficar los datos e interpretar los resultados"
@@ -35,11 +35,24 @@
     "graficos_control_defectos_raros",
     "mejora_continua_del_proceso",
     "pruebas_destructivas",
-    "punto_equilibrio_calidad_inspeccion"
+    "punto_equilibrio_calidad_inspeccion",
+    "administracion_sin_miedo",
+    "distincion_causas_comunes_especiales"
   ],
   "condiciones_activacion": [
     "Cuando se necesita monitorear y predecir el desempeño de un proceso en el tiempo",
-    "Cuando se busca distinguir variación normal de variación por causas especiales"
+    "Cuando se busca distinguir variación normal de variación por causas especiales",
+    "Antes de decidir si intervenir individualmente o mejorar el sistema"
   ],
-  "etiqueta_arbol": "Distingue Causas de Variación"
+  "etiqueta_arbol": "Distingue Causas de Variación",
+  "ids_alias": [
+    "control_estadistico_de_procesos_2"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "control_estadistico_de_procesos_2",
+      "titulo": "Control Estadístico de Procesos mediante Gráficos de Control",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

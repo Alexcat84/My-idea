@@ -9,18 +9,33 @@
     "Elaborar un diagrama de flujo del proceso relacionado al producto",
     "Listar clientes externos: compradores, usuarios finales, comerciantes, procesadores, proveedores, potenciales y ocultos",
     "Identificar clientes internos analizando las relaciones proveedor-procesador-cliente dentro de la organización",
-    "Distinguir entre quien ordena el producto y quien lo usa"
+    "Distinguir entre quien ordena el producto y quien lo usa",
+    "Priorizar el elenco de clientes de forma consensuada por el equipo"
   ],
   "entregable_esperado": "Lista completa y clasificada de clientes externos e internos, con diagrama de flujo del proceso",
   "nodos_previos": [
-    "establecer_equipo_multifuncional"
+    "establecer_equipo_multifuncional",
+    "establecer_proyecto_y_metas_diseno",
+    "goal_statement_smart",
+    "juran_quality_by_design"
   ],
   "nodos_siguientes": [
     "descubrir_necesidades_del_cliente",
     "customer_needs_spreadsheet"
   ],
   "condiciones_activacion": [
-    "Cuando se inicia el diseño de un nuevo producto o servicio y no está claro quiénes son todos los clientes involucrados"
+    "Cuando se inicia el diseño de un nuevo producto o servicio y no está claro quiénes son todos los clientes involucrados",
+    "Si el equipo solo ha considerado al comprador final e ignora otros stakeholders"
   ],
-  "etiqueta_arbol": "Distingue Clientes Externos e Internos"
+  "etiqueta_arbol": "Distingue Clientes Externos e Internos",
+  "ids_alias": [
+    "identificar_clientes_diseno"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "identificar_clientes_diseno",
+      "titulo": "Identificar a los Clientes (Cast de Clientes)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

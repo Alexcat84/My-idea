@@ -10,7 +10,10 @@
     "Revisa las métricas que ya existan y crea nuevas donde falten, incluyendo áreas administrativas",
     "Involucra a las personas responsables de cada área en la definición de sus propios indicadores",
     "Registra el estado actual como línea base documentada",
-    "Publica los resultados en gráficos visibles para toda la organización"
+    "Publica los resultados en gráficos visibles para toda la organización, semanal o mensualmente",
+    "Clasificar los defectos por gravedad, causa y responsabilidad",
+    "Establecer metas de mejora visibles junto a los gráficos",
+    "Asegurar que el ingeniero de calidad revise diariamente los defectos más frecuentes"
   ],
   "entregable_esperado": "Sistema de medición de calidad documentado por área, con línea base registrada y visible, listo para calcular el costo de la calidad.",
   "nodos_previos": [
@@ -20,7 +23,8 @@
     "cero_defectos",
     "involucramiento_sindical_calidad",
     "reinicio_programa_calidad",
-    "programa_mejora_calidad_14_pasos"
+    "programa_mejora_calidad_14_pasos",
+    "programa_make_certain_2"
   ],
   "nodos_siguientes": [
     "costo_de_calidad",
@@ -33,21 +37,29 @@
     "costo_de_la_calidad_coq",
     "conciencia_de_calidad",
     "costo_de_calidad_4",
-    "costo_de_mala_calidad_copq"
+    "costo_de_mala_calidad_copq",
+    "entrenamiento_supervisores_calidad"
   ],
   "condiciones_activacion": [
     "Cuando tu negocio no tiene métricas claras de calidad en áreas no productivas",
     "Cuando necesitas una línea base antes de iniciar mejoras",
-    "Cuando necesitas establecer una línea base objetiva antes de calcular el costo de calidad"
+    "Cuando necesitas establecer una línea base objetiva antes de calcular el costo de calidad",
+    "Al iniciar el paso de medición dentro del programa de 14 pasos"
   ],
   "etiqueta_arbol": "Mide tu Calidad Actual",
   "ids_alias": [
-    "medicion_de_calidad"
+    "medicion_de_calidad",
+    "medicion_calidad_2"
   ],
   "merged_originals": [
     {
       "node_id": "medicion_de_calidad",
       "titulo": "Paso Tres: Medición de Calidad",
+      "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    },
+    {
+      "node_id": "medicion_calidad_2",
+      "titulo": "Paso 3: Medición de la Calidad",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
     }
   ]

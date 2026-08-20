@@ -861,7 +861,7 @@
       "entregable_esperado": "Un análisis de costo beneficio que te diga qué tasa de falla puedes aceptar, y una forma activa de detectar fallas.",
       "nodos_previos": [
         "equipo_de_gestion_de_crisis",
-        "plan_de_gestion_de_riesgos"
+        "evaluacion_gestion_riesgos"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -1901,7 +1901,7 @@
       "nodos_previos": [
         "distincion_causas_comunes_especiales",
         "aim_of_leadership",
-        "control_estadistico_de_procesos_2",
+        "control_estadistico_de_procesos",
         "deteccion_de_lideres_y_rezagados",
         "importancia_de_la_capacitacion"
       ],
@@ -3867,7 +3867,7 @@
       "nodos_siguientes": [
         "juran_rcca_metodo",
         "error_proofing_servicio",
-        "pdsa_shewhart_cycle"
+        "ciclo_shewhart_pdsa"
       ],
       "condiciones_activacion": [
         "Cuando se ha definido un problema y se requiere identificar su causa antes de proponer un remedio"
@@ -4145,7 +4145,7 @@
         "normalizacion_datos_benchmarking_2"
       ],
       "nodos_siguientes": [
-        "desarrollo_reporte_benchmarking",
+        "analisis_reporte_benchmarking",
         "aprendizaje_institucionalizado_benchmarking"
       ],
       "condiciones_activacion": [
@@ -4455,23 +4455,38 @@
         "Considerar factores contextuales (geografía, tipo de cambio, regulación) que expliquen diferencias",
         "Elaborar el reporte con hallazgos claros, gráficos y recomendaciones de mejora",
         "Definir el nivel de anonimización de datos balanceando confidencialidad y potencial de aprendizaje",
-        "Asegurar cumplimiento de acuerdos de confidencialidad y legislación antitrust en el reporte"
+        "Asegurar cumplimiento de acuerdos de confidencialidad y legislación antitrust en el reporte",
+        "Define cómo y por dónde vas a entregar el reporte (electrónico o físico), según lo que acordaste al inicio"
       ],
       "entregable_esperado": "Reporte de benchmarking completo con hallazgos, brechas cuantificadas y recomendaciones de mejora",
       "nodos_previos": [
         "normalizacion_de_datos",
         "recoleccion_validacion_datos_benchmarking",
-        "normalizacion_datos_benchmarking"
+        "normalizacion_datos_benchmarking",
+        "analisis_identificacion_mejores_practicas",
+        "diseno_dashboards"
       ],
       "nodos_siguientes": [
         "identificacion_practicas_lideres",
-        "comprension_brechas_desempeno"
+        "comprension_brechas_desempeno",
+        "aprendizaje_institucionalizado_benchmarking"
       ],
       "condiciones_activacion": [
         "Cuando los datos ya han sido validados y normalizados",
-        "Si se requiere comunicar resultados a los participantes del estudio de benchmarking"
+        "Si se requiere comunicar resultados a los participantes del estudio de benchmarking",
+        "Cuando tienes que equilibrar proteger datos sensibles con que el reporte siga siendo útil para aprender"
       ],
-      "etiqueta_arbol": "Reporta tus Hallazgos Comparativos"
+      "etiqueta_arbol": "Reporta tus Hallazgos Comparativos",
+      "ids_alias": [
+        "desarrollo_reporte_benchmarking"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "desarrollo_reporte_benchmarking",
+          "titulo": "Cómo armar tu reporte de comparación con otros (benchmarking)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "analisis_sintomas": {
       "node_id": "analisis_sintomas",
@@ -5401,7 +5416,7 @@
       "entregable_esperado": "Plan de capacitación institucional documentado y roadmap actualizado con las mejores prácticas incorporadas a la cultura organizacional",
       "nodos_previos": [
         "analisis_identificacion_mejores_practicas",
-        "desarrollo_reporte_benchmarking",
+        "analisis_reporte_benchmarking",
         "estructura_competencias_six_sigma_lean"
       ],
       "nodos_siguientes": [
@@ -8159,7 +8174,7 @@
         "benchmarking_trilogia_juran",
         "business_excellence_models",
         "generic_benchmarking",
-        "rol_alta_direccion_benchmarking"
+        "gestion_efectiva_benchmarking"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -12046,7 +12061,8 @@
         "Cuando distintas personas clasifican el mismo producto de forma diferente.",
         "Cuando la tasa de defectos es alta pero no está claro cuál es la causa real."
       ],
-      "etiqueta_arbol": "Define Qué Es un Defecto"
+      "etiqueta_arbol": "Define Qué Es un Defecto",
+      "deprecado": true
     },
     "caso_descarrilamiento_nakina": {
       "node_id": "caso_descarrilamiento_nakina",
@@ -12091,7 +12107,7 @@
       ],
       "entregable_esperado": "Plan de acción de mejora basado en hallazgos de benchmarking, con métricas de seguimiento anual",
       "nodos_previos": [
-        "rol_alta_direccion_benchmarking"
+        "gestion_efectiva_benchmarking"
       ],
       "nodos_siguientes": [
         "monitoreo_continuo_benchmarking"
@@ -12810,12 +12826,11 @@
         "accion_correctiva_sistematica",
         "eliminacion_causas_error_4",
         "programa_make_certain_3",
-        "medicion_calidad_2",
+        "medicion_calidad",
         "concepto_reconocimiento_ring_of_quality",
         "equipo_mejora_calidad_2",
         "consejo_de_calidad",
-        "concepto_vs_tecnica",
-        "medicion_calidad"
+        "concepto_vs_tecnica"
       ],
       "condiciones_activacion": [
         "Cuando aceptas el error como algo inevitable en tu forma de trabajar",
@@ -13974,18 +13989,34 @@
       ],
       "entregable_esperado": "Un registro documentado de al menos un ciclo PDSA completo aplicado a una etapa de proceso, incluyendo hipótesis, datos y conclusiones",
       "nodos_previos": [
-        "plan_de_accion_transformacion"
+        "plan_de_accion_transformacion",
+        "analisis_diagnostico_causa",
+        "control_mantener_ganancias"
       ],
       "nodos_siguientes": [
         "proceso_como_cadena_de_etapas",
         "falacia_meta_numerica_sin_metodo",
-        "ooda_loop_decision"
+        "ooda_loop_decision",
+        "just_do_its",
+        "kaizen_mejora_continua"
       ],
       "condiciones_activacion": [
         "Cuando se requiere mejorar sistemáticamente una etapa de un proceso",
-        "Si se ha detectado una causa especial mediante control estadístico de procesos"
+        "Si se ha detectado una causa especial mediante control estadístico de procesos",
+        "Cuando quieres probar experimentalmente si un cambio propuesto genera una mejora antes de institucionalizarlo.",
+        "Cuando no conoces con certeza la causa raíz de un problema y prefieres probar cambios directamente."
       ],
-      "etiqueta_arbol": "Investiga Causas y Mejora"
+      "etiqueta_arbol": "Investiga Causas y Mejora",
+      "ids_alias": [
+        "pdsa_shewhart_cycle"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "pdsa_shewhart_cycle",
+          "titulo": "Ciclo PDSA (Plan-Do-Study-Act)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "ciclo_venta_calidad_franquicia": {
       "node_id": "ciclo_venta_calidad_franquicia",
@@ -18285,7 +18316,7 @@
         "frecuencia_distribucion",
         "boxplot_resumen_datos",
         "distorsion_muestreo_mecanico",
-        "run_chart_datos_temporales"
+        "grafico_de_corrida_run_chart"
       ],
       "condiciones_activacion": [
         "Cuando se necesita tomar decisiones sobre un proceso basado en datos",
@@ -18570,7 +18601,7 @@
       ],
       "entregable_esperado": "Configuración de producto validada por un equipo multifuncional con estimaciones de costo tempranas",
       "nodos_previos": [
-        "quality_by_design"
+        "juran_quality_by_design"
       ],
       "nodos_siguientes": [
         "design_for_manufacture",
@@ -20352,23 +20383,38 @@
         "Identifica quién es realmente el consumidor final de tu producto o servicio",
         "Investiga qué necesita tu cliente y qué cree que necesita",
         "Evalúa la capacidad de pago de tu cliente antes de diseñar soluciones",
-        "Diseña tu producto o servicio pensando en mejorar la vida futura del consumidor"
+        "Diseña tu producto o servicio pensando en mejorar la vida futura del consumidor",
+        "Incluir retroalimentación del consumidor como parte formal del ciclo de producción",
+        "Establecer mecanismos de escucha continua (no solo encuestas puntuales)"
       ],
       "entregable_esperado": "Perfil de necesidades y capacidad de pago del consumidor objetivo",
       "nodos_previos": [
-        "revolucion_relaciones_proveedores"
+        "revolucion_relaciones_proveedores",
+        "definicion_calidad_segun_agente"
       ],
       "nodos_siguientes": [
         "investigacion_del_consumidor",
         "triangulo_de_interaccion_calidad",
         "identificacion_del_verdadero_cliente",
-        "quejas_llegan_tarde"
+        "quejas_llegan_tarde",
+        "investigacion_necesidades_consumidor"
       ],
       "condiciones_activacion": [
         "Cuando inicias el diseño de un nuevo producto o servicio",
-        "Cuando desconoces las verdaderas necesidades de tu cliente"
+        "Cuando desconoces las verdaderas necesidades de tu cliente",
+        "Cuando la empresa toma decisiones de producto sin considerar impacto futuro en el cliente"
       ],
-      "etiqueta_arbol": "Escucha al Consumidor en tu Producción"
+      "etiqueta_arbol": "Escucha al Consumidor en tu Producción",
+      "ids_alias": [
+        "consumidor_parte_linea_produccion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "consumidor_parte_linea_produccion",
+          "titulo": "El Consumidor en la Línea de Producción (Extensión de la Línea)",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "consumidor_parte_linea_produccion": {
       "node_id": "consumidor_parte_linea_produccion",
@@ -20393,7 +20439,8 @@
       "condiciones_activacion": [
         "Cuando la empresa toma decisiones de producto sin considerar impacto futuro en el cliente"
       ],
-      "etiqueta_arbol": "Integra al Cliente en tu Línea"
+      "etiqueta_arbol": "Integra al Cliente en tu Línea",
+      "deprecado": true
     },
     "contabilidad_ambiental": {
       "node_id": "contabilidad_ambiental",
@@ -21555,8 +21602,8 @@
         "Verificar que el sistema de medición tenga precisión y exactitud suficientes",
         "Determinar el punto más temprano de prueba para detectar causas asignables",
         "Elegir el tipo de gráfico de control adecuado (variables o atributos)",
-        "Decidir la línea central y los límites de control (usualmente ±3σ)",
-        "Elegir subgrupos racionales para las muestras",
+        "Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio",
+        "Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5",
         "Establecer un sistema simple y confiable de recolección de datos",
         "Calcular límites de control y definir instrucciones de interpretación y acción",
         "Graficar los datos e interpretar los resultados"
@@ -21579,13 +21626,26 @@
         "graficos_control_defectos_raros",
         "mejora_continua_del_proceso",
         "pruebas_destructivas",
-        "punto_equilibrio_calidad_inspeccion"
+        "punto_equilibrio_calidad_inspeccion",
+        "administracion_sin_miedo",
+        "distincion_causas_comunes_especiales"
       ],
       "condiciones_activacion": [
         "Cuando se necesita monitorear y predecir el desempeño de un proceso en el tiempo",
-        "Cuando se busca distinguir variación normal de variación por causas especiales"
+        "Cuando se busca distinguir variación normal de variación por causas especiales",
+        "Antes de decidir si intervenir individualmente o mejorar el sistema"
       ],
-      "etiqueta_arbol": "Distingue Causas de Variación"
+      "etiqueta_arbol": "Distingue Causas de Variación",
+      "ids_alias": [
+        "control_estadistico_de_procesos_2"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "control_estadistico_de_procesos_2",
+          "titulo": "Control Estadístico de Procesos mediante Gráficos de Control",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "control_estadistico_de_procesos_2": {
       "node_id": "control_estadistico_de_procesos_2",
@@ -21614,7 +21674,8 @@
         "Cuando se necesita determinar si un proceso o trabajador está en control estadístico",
         "Antes de decidir si intervenir individualmente o mejorar el sistema"
       ],
-      "etiqueta_arbol": "Fija Límites de Control"
+      "etiqueta_arbol": "Fija Límites de Control",
+      "deprecado": true
     },
     "control_estadistico_de_procesos_en_tiempo_real": {
       "node_id": "control_estadistico_de_procesos_en_tiempo_real",
@@ -21710,7 +21771,7 @@
       "entregable_esperado": "Un reporte de control estadístico del sistema de medición que confirme la validez y reproducibilidad del método de prueba antes de usarlo en producción o inspección.",
       "nodos_previos": [
         "control_estadistico_proceso",
-        "definiciones_operacionales_4",
+        "definiciones_operacionales_3",
         "administracion_de_inspeccion",
         "definiciones_operacionales_2"
       ],
@@ -21787,7 +21848,6 @@
         "estandarizacion_industrial_voluntaria",
         "grafico_de_corrida_run_chart",
         "histograma_analisis",
-        "run_chart_datos_temporales",
         "sistema_responsabilidad_gerencial",
         "causas_comunes_vs_especiales"
       ],
@@ -21851,7 +21911,7 @@
       ],
       "nodos_siguientes": [
         "ciclo_pdsa",
-        "pdsa_shewhart_cycle"
+        "ciclo_shewhart_pdsa"
       ],
       "condiciones_activacion": [
         "Cuando se ha implementado un remedio y se necesita garantizar que el problema no vuelva a ocurrir."
@@ -22773,7 +22833,6 @@
         "buyer_rating_system",
         "definicion_calidad_conformidad",
         "medicion_calidad",
-        "medicion_calidad_2",
         "medicion_servicios",
         "rejilla_madurez_gestion_calidad"
       ],
@@ -30443,7 +30502,7 @@
         "doble_significado_calidad"
       ],
       "nodos_siguientes": [
-        "consumidor_parte_linea_produccion",
+        "consumidor_como_eje_de_produccion",
         "investigacion_necesidades_consumidor"
       ],
       "condiciones_activacion": [
@@ -31049,7 +31108,6 @@
         "costo_de_la_mala_calidad",
         "administracion_de_inspeccion",
         "ausencia_valor_verdadero",
-        "caso_definicion_arruga",
         "claridad_especificaciones_instrucciones",
         "estandares_voluntarios",
         "muestreo_aleatorio_operacional",
@@ -31062,7 +31120,17 @@
         "Cuando existe alta variabilidad en la aceptación de productos entre inspectores o turnos.",
         "Cuando el porcentaje de defectos es estable pero elevado y no se ha intentado clarificar criterios."
       ],
-      "etiqueta_arbol": "Aclara qué es Aceptable"
+      "etiqueta_arbol": "Aclara qué es Aceptable",
+      "ids_alias": [
+        "caso_definicion_arruga"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "caso_definicion_arruga",
+          "titulo": "Caso Práctico: Definición Operacional de una 'Arruga'",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "definiciones_operacionales_2": {
       "node_id": "definiciones_operacionales_2",
@@ -31104,7 +31172,8 @@
         "Definir una prueba específica y reproducible para evaluar dicho concepto.",
         "Establecer un criterio de juicio claro y cuantificable.",
         "Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.",
-        "Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición."
+        "Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición.",
+        "Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú."
       ],
       "entregable_esperado": "Un documento de especificación técnica que contenga la definición operacional completa: prueba, criterio y regla de decisión para cada característica de calidad relevante.",
       "nodos_previos": [
@@ -31113,14 +31182,25 @@
       "nodos_siguientes": [
         "ausencia_valor_verdadero",
         "definiciones_operacionales_2",
-        "definiciones_operacionales_4"
+        "control_estadistico_metodo_medicion",
+        "estandares_voluntarios"
       ],
       "condiciones_activacion": [
         "Cuando se redactan especificaciones de calidad para contratos con proveedores.",
         "Cuando existen disputas entre departamentos sobre qué constituye un defecto.",
         "Al diseñar regulaciones gubernamentales o estándares industriales."
       ],
-      "etiqueta_arbol": "Traduce lo Abstracto en Pruebas"
+      "etiqueta_arbol": "Traduce lo Abstracto en Pruebas",
+      "ids_alias": [
+        "definiciones_operacionales_4"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "definiciones_operacionales_4",
+          "titulo": "Ponle una prueba clara a cada palabra vaga (definición operacional)",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "definiciones_operacionales_4": {
       "node_id": "definiciones_operacionales_4",
@@ -31149,7 +31229,8 @@
         "Cuando tienes una disputa sobre qué cuenta como defecto.",
         "Cuando redactas un contrato o una regla que necesitas poder exigir con claridad."
       ],
-      "etiqueta_arbol": "Dale Significado Comunicable"
+      "etiqueta_arbol": "Dale Significado Comunicable",
+      "deprecado": true
     },
     "definiciones_operacionales_de_calidad": {
       "node_id": "definiciones_operacionales_de_calidad",
@@ -32587,7 +32668,8 @@
         "Cuando ya terminaste de comparar tu negocio con otros y necesitas comunicar lo que encontraste",
         "Cuando tienes que equilibrar proteger datos sensibles con que el reporte siga siendo útil para aprender"
       ],
-      "etiqueta_arbol": "Comparte tus Hallazgos Claramente"
+      "etiqueta_arbol": "Comparte tus Hallazgos Claramente",
+      "deprecado": true
     },
     "desarrollo_value_proposition_usp": {
       "node_id": "desarrollo_value_proposition_usp",
@@ -32762,7 +32844,6 @@
         "identificar_clientes_externos_e_internos",
         "brecha_de_calidad_cuatro_gaps",
         "fitness_for_use_purpose",
-        "identificar_clientes_diseno",
         "satisfaccion_vs_insatisfaccion_kano"
       ],
       "nodos_siguientes": [
@@ -32996,7 +33077,7 @@
         "herramientas_de_diseno_de_calidad",
         "diseno_de_procesos_por_caracteristicas",
         "innovacion_tipo_ii",
-        "quality_by_design",
+        "juran_quality_by_design",
         "six_sigma_dmaic",
         "descubrir_necesidades_del_cliente",
         "six_sigma_dmaic_2"
@@ -33566,8 +33647,7 @@
       ],
       "entregable_esperado": "Un análisis de desempeño grupal con identificación de casos individuales que requieren atención o reconocimiento",
       "nodos_previos": [
-        "control_estadistico_de_procesos",
-        "control_estadistico_de_procesos_2"
+        "control_estadistico_de_procesos"
       ],
       "nodos_siguientes": [
         "administracion_sin_miedo"
@@ -34203,10 +34283,9 @@
         "planificacion_cero_defectos"
       ],
       "nodos_siguientes": [
-        "establecimiento_metas",
+        "fijacion_de_metas",
         "eliminacion_causas_error_4",
         "entrenamiento_supervisores_2",
-        "fijacion_de_metas",
         "programa_ecr_causa_de_error",
         "reconocimiento_al_desempeno",
         "entrenamiento_supervisores_calidad"
@@ -35892,7 +35971,7 @@
         "jerarquia_datos_scor"
       ],
       "nodos_siguientes": [
-        "desarrollo_reporte_benchmarking"
+        "analisis_reporte_benchmarking"
       ],
       "condiciones_activacion": [
         "Cuando los distintos niveles de la organización no tienen visibilidad clara de su desempeño",
@@ -36130,7 +36209,7 @@
       ],
       "entregable_esperado": "Diseño de mejora validado con plan de implementación y gestión del cambio",
       "nodos_previos": [
-        "evaluacion_seleccion_alternativas_mejora"
+        "evaluacion_alternativas_solucion"
       ],
       "nodos_siguientes": [
         "diseno_controles_proceso_mejorado"
@@ -36480,7 +36559,7 @@
         "dmaic_fase_improve"
       ],
       "nodos_siguientes": [
-        "evaluacion_seleccion_alternativas_mejora"
+        "evaluacion_alternativas_solucion"
       ],
       "condiciones_activacion": [
         "Cuando se han identificado los Xs vitales y se requiere modelar matemáticamente su relación con los Ys para optimizar el proceso"
@@ -37544,7 +37623,7 @@
       "entregable_esperado": "Un gráfico de control interpretado correctamente que distinga causas comunes de especiales",
       "nodos_previos": [
         "aim_of_leadership",
-        "control_estadistico_de_procesos_2",
+        "control_estadistico_de_procesos",
         "estudio_mezclas_multiples_fuentes",
         "limites_control_por_juicio_error"
       ],
@@ -37856,7 +37935,8 @@
         "Cuando se analiza el tiempo entre fallos de equipos reparables",
         "Cuando se requiere predecir confiabilidad de un componente"
       ],
-      "etiqueta_arbol": "Predice Fallos con Exponencial"
+      "etiqueta_arbol": "Predice Fallos con Exponencial",
+      "deprecado": true
     },
     "distribucion_normal_probabilidad": {
       "node_id": "distribucion_normal_probabilidad",
@@ -37880,7 +37960,7 @@
         "analisis_capacidad_proceso",
         "histograma_analisis",
         "analisis_capacidad_procesos",
-        "distribucion_exponencial",
+        "formula_exponencial_confiabilidad",
         "distribucion_poisson"
       ],
       "condiciones_activacion": [
@@ -37942,7 +38022,7 @@
       ],
       "entregable_esperado": "Gráfico de probabilidad Weibull con predicción de porcentaje de fallos y parámetros estimados",
       "nodos_previos": [
-        "distribucion_exponencial"
+        "formula_exponencial_confiabilidad"
       ],
       "nodos_siguientes": [
         "gestion_riesgo_identificacion",
@@ -41297,13 +41377,12 @@
       ],
       "entregable_esperado": "Sistema de reporte y resolución de causas de error funcionando activamente.",
       "nodos_previos": [
-        "establecimiento_metas",
+        "fijacion_de_metas",
         "accion_correctiva_sistematica",
         "accion_correctiva_crosby",
         "cero_defectos",
         "dia_cero_defectos_3",
         "entrenamiento_supervisores_calidad",
-        "fijacion_de_metas",
         "make_certain_programa",
         "programa_catorce_pasos_crosby",
         "programa_mejora_calidad_14_pasos",
@@ -43018,7 +43097,8 @@
         "Cuando se detectan prácticas de manipulación de cifras de fin de periodo",
         "Si la inversión en investigación y capacitación se recorta sistemáticamente en momentos de presión financiera"
       ],
-      "etiqueta_arbol": "No Persigas Solo lo Inmediato"
+      "etiqueta_arbol": "No Persigas Solo lo Inmediato",
+      "deprecado": true
     },
     "enfasis_en_utilidades_corto_plazo": {
       "node_id": "enfasis_en_utilidades_corto_plazo",
@@ -43031,7 +43111,10 @@
         "Revisar si las decisiones gerenciales se basan en resultados trimestrales o en visión de largo plazo",
         "Educar a inversionistas y directivos sobre el valor de la mejora continua sobre la ganancia inmediata",
         "Evitar prácticas de 'contabilidad creativa' que maquillan resultados de corto plazo",
-        "Fortalecer la relación con la banca para que apoye planificación a largo plazo en vez de recortes inmediatos"
+        "Fortalecer la relación con la banca para que apoye planificación a largo plazo en vez de recortes inmediatos",
+        "Auditar prácticas de fin de trimestre que puedan estar sacrificando calidad por apariencia financiera",
+        "Revisar si se están recortando presupuestos de investigación, educación o mantenimiento por presión de resultados inmediatos",
+        "Establecer indicadores de desempeño que balanceen el corto y el largo plazo"
       ],
       "entregable_esperado": "Política interna que priorice indicadores de sostenibilidad y calidad sobre utilidades trimestrales",
       "nodos_previos": [
@@ -43045,9 +43128,21 @@
       ],
       "condiciones_activacion": [
         "Cuando la empresa es pública y enfrenta presión de accionistas por dividendos inmediatos",
-        "Cuando existe temor a una adquisición hostil"
+        "Cuando existe temor a una adquisición hostil",
+        "Cuando se detectan prácticas de manipulación de cifras de fin de periodo",
+        "Si la inversión en investigación y capacitación se recorta sistemáticamente en momentos de presión financiera"
       ],
-      "etiqueta_arbol": "Evita Pensar Solo en lo Inmediato"
+      "etiqueta_arbol": "Evita Pensar Solo en lo Inmediato",
+      "ids_alias": [
+        "enfasis_en_ganancias_corto_plazo"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "enfasis_en_ganancias_corto_plazo",
+          "titulo": "Énfasis en Ganancias de Corto Plazo",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ]
     },
     "enfermedades_mortales_gestion": {
       "node_id": "enfermedades_mortales_gestion",
@@ -43069,10 +43164,9 @@
       ],
       "nodos_siguientes": [
         "falta_de_constancia_de_proposito",
-        "enfasis_en_ganancias_corto_plazo",
+        "enfasis_en_utilidades_corto_plazo",
         "plan_de_accion_transformacion",
         "cuestionario_autoevaluacion_gerencial_calidad",
-        "enfasis_en_utilidades_corto_plazo",
         "evaluacion_de_desempeno_merito"
       ],
       "condiciones_activacion": [
@@ -44122,7 +44216,7 @@
       "entregable_esperado": "Tu mismo y quienes te ayudan, capacitados y evaluados con un test, capaces de explicar y sostener correctamente el programa de calidad y Cero Defectos.",
       "nodos_previos": [
         "conciencia_de_calidad",
-        "medicion_calidad_2",
+        "medicion_calidad",
         "dia_cero_defectos",
         "planificacion_cero_defectos",
         "identificacion_empleado_con_el_trabajo",
@@ -44401,7 +44495,7 @@
       ],
       "entregable_esperado": "Protocolo escrito de respuesta a crisis con roles, tiempos de reacción y plantilla de documentación de eventos.",
       "nodos_previos": [
-        "plan_de_gestion_de_riesgos",
+        "evaluacion_gestion_riesgos",
         "mentor_dos_tipos_de_amigos"
       ],
       "nodos_siguientes": [
@@ -46470,7 +46564,7 @@
         "juran_quality_by_design"
       ],
       "nodos_siguientes": [
-        "identificar_clientes_diseno",
+        "identificar_clientes_externos_e_internos",
         "goal_statement_smart"
       ],
       "condiciones_activacion": [
@@ -46616,7 +46710,8 @@
       "condiciones_activacion": [
         "Cuando se busca traducir el compromiso de calidad en objetivos concretos"
       ],
-      "etiqueta_arbol": "Fija Metas a 30-60-90 Días"
+      "etiqueta_arbol": "Fija Metas a 30-60-90 Días",
+      "deprecado": true
     },
     "establecimiento_metas_de_calidad": {
       "node_id": "establecimiento_metas_de_calidad",
@@ -46893,7 +46988,7 @@
       "entregable_esperado": "Documento de estándar de industria desarrollado por consenso, con especificaciones operacionales claras.",
       "nodos_previos": [
         "definiciones_operacionales",
-        "definiciones_operacionales_4"
+        "definiciones_operacionales_3"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -49705,20 +49800,33 @@
       "pasos_accionables": [
         "Realizar lluvia de ideas para generar múltiples alternativas de solución.",
         "Construir diagramas de flujo para visualizar la implementación de cada alternativa.",
-        "Usar una matriz de selección basada en criterios para evaluar las opciones.",
+        "Usar una matriz de selección basada en criterios para evaluar las opciones. Define cuánto pesa cada uno",
         "Seleccionar la solución óptima o combinación de soluciones."
       ],
       "entregable_esperado": "Una matriz de selección de soluciones con la alternativa (o combinación) elegida para implementar.",
       "nodos_previos": [
-        "prueba_teorias_causa_raiz"
+        "prueba_teorias_causa_raiz",
+        "diseno_experimentos_doe_mejora"
       ],
       "nodos_siguientes": [
-        "diseno_implementacion_remedio"
+        "diseno_implementacion_remedio",
+        "diseno_de_mejoras_para_clientes"
       ],
       "condiciones_activacion": [
-        "Cuando se ha identificado la causa raíz y se requiere decidir la mejor solución para eliminarla."
+        "Cuando se ha identificado la causa raíz y se requiere decidir la mejor solución para eliminarla.",
+        "Cuando tienes varias opciones de solución y necesitas elegir la que realmente funcione, técnica y culturalmente"
       ],
-      "etiqueta_arbol": "Compara tus Alternativas de Solución"
+      "etiqueta_arbol": "Compara tus Alternativas de Solución",
+      "ids_alias": [
+        "evaluacion_seleccion_alternativas_mejora"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "evaluacion_seleccion_alternativas_mejora",
+          "titulo": "Evaluación y Selección de Alternativas de Mejora",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "evaluacion_amazon_case": {
       "node_id": "evaluacion_amazon_case",
@@ -50096,7 +50204,7 @@
       ],
       "nodos_siguientes": [
         "matriz_riesgo_conocido_desconocido",
-        "plan_de_gestion_de_riesgos"
+        "evaluacion_gestion_riesgos"
       ],
       "condiciones_activacion": [
         "Cuando ya tienes una lista de riesgos pero no sabes cuál atender primero.",
@@ -50329,7 +50437,7 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Proceso estructurado para identificar riesgos potenciales, evaluar su severidad y probabilidad, y definir acciones concretas para minimizarlos o eliminarlos. Incluye el análisis de consecuencias de actuar o no actuar, el impacto futuro de las decisiones, y el balance costo/beneficio. El objetivo final no es solo evaluar sino generar una lista de acciones ejecutables con responsables y fechas.",
       "pasos_accionables": [
-        "Hacer una lluvia de ideas exhaustiva de todos los riesgos y opciones posibles sin restricciones",
+        "Hacer una lluvia de ideas exhaustiva de todos los riesgos y opciones posibles sin restricciones, o sea lo que te preocupa (concerns) de cada riesgo que priorizaste",
         "Evaluar consecuencias de actuar vs no actuar, incluyendo efectos secundarios inesperados (revenge effects)",
         "Analizar el impacto futuro de la decisión sobre la flexibilidad del negocio",
         "Calcular el costo/beneficio de cada opción de mitigación",
@@ -50339,18 +50447,34 @@
       "entregable_esperado": "Lista priorizada de riesgos con score de severidad x probabilidad, acciones concretas asignadas con responsable y fecha límite",
       "nodos_previos": [
         "gestion_riesgo_identificacion",
-        "identificacion_de_riesgos"
+        "identificacion_de_riesgos",
+        "evaluacion_de_factores_de_riesgo",
+        "matriz_riesgo_conocido_desconocido"
       ],
       "nodos_siguientes": [
         "gestion_del_cambio",
         "comunicacion_del_riesgo",
-        "evitacion_del_riesgo"
+        "evitacion_del_riesgo",
+        "aceptacion_de_fallas_como_inevitables",
+        "equipo_de_gestion_de_crisis",
+        "plan_b_antes_de_necesitarlo"
       ],
       "condiciones_activacion": [
         "Cuando el proyecto o proceso implica incertidumbre significativa",
-        "Cuando se necesita priorizar recursos limitados entre múltiples plantas o áreas de riesgo"
+        "Cuando se necesita priorizar recursos limitados entre múltiples plantas o áreas de riesgo",
+        "Cuando ya evaluaste y priorizaste tus riesgos pero todavia no tienes acciones concretas definidas."
       ],
-      "etiqueta_arbol": "Gestiona tus Riesgos a Tiempo"
+      "etiqueta_arbol": "Gestiona tus Riesgos a Tiempo",
+      "ids_alias": [
+        "plan_de_gestion_de_riesgos"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "plan_de_gestion_de_riesgos",
+          "titulo": "Plan para manejar un riesgo: preocupaciones, opciones y consecuencias (Concerns, Options, Consequences)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "evaluacion_industria_cliente": {
       "node_id": "evaluacion_industria_cliente",
@@ -51060,7 +51184,8 @@
       "condiciones_activacion": [
         "Cuando tienes varias opciones de solución y necesitas elegir la que realmente funcione, técnica y culturalmente"
       ],
-      "etiqueta_arbol": "Elige tu Mejor Alternativa"
+      "etiqueta_arbol": "Elige tu Mejor Alternativa",
+      "deprecado": true
     },
     "evaluacion_tecnologias_disruptivas": {
       "node_id": "evaluacion_tecnologias_disruptivas",
@@ -53279,7 +53404,6 @@
         "enfermedades_mortales_gestion"
       ],
       "nodos_siguientes": [
-        "enfasis_en_ganancias_corto_plazo",
         "enfasis_en_utilidades_corto_plazo",
         "ejecucion_rapida_de_despidos"
       ],
@@ -54685,7 +54809,7 @@
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
       "resumen_teorico": "Después del Día Cero Defectos (Día ZD), tienes que convertir los compromisos verbales en acciones concretas: pon metas de mejora específicas y medibles, y mejor si las define quien hace el trabajo, no tú desde arriba. Evita metas de cronograma y enfócate en reducir defectos, porque la mejora en los tiempos llega sola cuando bajan los errores.",
       "pasos_accionables": [
-        "Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles.",
+        "Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles. Fíjalas a 30, 60 y 90 días",
         "Asegúrate de que las metas sean retadoras, no fáciles de alcanzar.",
         "Publica las metas en un lugar visible para todo el equipo.",
         "Reconoce públicamente a los grupos que logran mejoras (por ejemplo, bordes dorados en las pizarras o un lugar de estacionamiento preferencial).",
@@ -54706,7 +54830,17 @@
         "Cuando ya lanzaste el programa Cero Defectos y necesitas traducir el compromiso general en acciones medibles por equipo.",
         "Si tu equipo no tiene claro cómo medir su progreso diario en calidad."
       ],
-      "etiqueta_arbol": "Fija Metas de Mejora Concretas"
+      "etiqueta_arbol": "Fija Metas de Mejora Concretas",
+      "ids_alias": [
+        "establecimiento_metas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "establecimiento_metas",
+          "titulo": "Establecimiento de Metas (Paso 10)",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        }
+      ]
     },
     "fijacion_precio_exportacion": {
       "node_id": "fijacion_precio_exportacion",
@@ -56140,22 +56274,35 @@
       "pasos_accionables": [
         "Verificar que la tasa de fallo del producto sea constante (periodo de vida útil)",
         "Calcular el MTBF a partir de datos históricos de fallos",
-        "Aplicar la fórmula R = e^(-t/μ) para el tiempo de interés",
+        "Aplicar la fórmula R = e^(-t/μ) para el tiempo de interés, o la tabla de área exponencial",
         "Interpretar correctamente el resultado evitando la confusión con vida útil o vida de servicio",
-        "Evaluar el impacto de cambios en MTBF sobre la confiabilidad real del sistema"
+        "Evaluar el impacto de cambios en MTBF sobre la confiabilidad real del sistema",
+        "Usar el resultado para planificar mantenimiento preventivo o garantías"
       ],
       "entregable_esperado": "Cálculo de confiabilidad del producto para un tiempo específico de operación, con MTBF documentado",
       "nodos_previos": [
-        "curva_banera_periodos_fallo"
+        "curva_banera_periodos_fallo",
+        "distribucion_normal_probabilidad"
       ],
       "nodos_siguientes": [
         "relacion_confiabilidad_sistema_partes",
-        "prediccion_confiabilidad_diseno"
+        "prediccion_confiabilidad_diseno",
+        "distribucion_weibull"
       ],
       "condiciones_activacion": [
         "Cuando se necesita predecir la probabilidad de operación sin fallo de un producto reparable con tasa de fallo constante"
       ],
-      "etiqueta_arbol": "Calcula la Confiabilidad Exponencial"
+      "etiqueta_arbol": "Calcula la Confiabilidad Exponencial",
+      "ids_alias": [
+        "distribucion_exponencial"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "distribucion_exponencial",
+          "titulo": "Distribución Exponencial para Análisis de Confiabilidad",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "formulacion_teorias_causa": {
       "node_id": "formulacion_teorias_causa",
@@ -59240,16 +59387,30 @@
       ],
       "entregable_esperado": "Estructura organizacional y de gobernanza establecida para sostener el programa de benchmarking en el tiempo",
       "nodos_previos": [
-        "aspectos_legales_eticos_benchmarking"
+        "aspectos_legales_eticos_benchmarking",
+        "tipos_benchmarking_por_participante"
       ],
       "nodos_siguientes": [
-        "recoleccion_validacion_datos_benchmarking"
+        "recoleccion_validacion_datos_benchmarking",
+        "benchmarking_estrategia",
+        "caso_estudio_benchmarking_terminal",
+        "monitoreo_continuo_benchmarking"
       ],
       "condiciones_activacion": [
         "Cuando la organización decide lanzar o mantener un programa continuo de benchmarking",
         "Si se requiere compromiso y patrocinio de la alta gerencia para sostener el esfuerzo"
       ],
-      "etiqueta_arbol": "Lidera tu Comparación con Método"
+      "etiqueta_arbol": "Lidera tu Comparación con Método",
+      "ids_alias": [
+        "rol_alta_direccion_benchmarking"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "rol_alta_direccion_benchmarking",
+          "titulo": "Tu compromiso al liderar un benchmarking",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "gestion_empleados_brillantes_problematicos": {
       "node_id": "gestion_empleados_brillantes_problematicos",
@@ -61126,7 +61287,7 @@
         "establecer_proyecto_y_metas_diseno"
       ],
       "nodos_siguientes": [
-        "identificar_clientes_diseno"
+        "identificar_clientes_externos_e_internos"
       ],
       "condiciones_activacion": [
         "Al redactar la carta de cualquier proyecto de diseño de calidad",
@@ -61381,7 +61542,8 @@
       "entregable_esperado": "Gráfico de corrida documentado con análisis de estabilidad del proceso previo a cualquier análisis estadístico adicional",
       "nodos_previos": [
         "causas_comunes_causas_especiales",
-        "causas_comunes_vs_especiales"
+        "causas_comunes_vs_especiales",
+        "concepto_variacion_estadistica"
       ],
       "nodos_siguientes": [
         "capacidad_del_proceso",
@@ -61392,7 +61554,17 @@
         "Cuando se sospecha que un proceso puede no ser estable en el tiempo",
         "Si se requiere establecer la capacidad de un proceso de manufactura o servicio"
       ],
-      "etiqueta_arbol": "Observa tus Datos en Orden"
+      "etiqueta_arbol": "Observa tus Datos en Orden",
+      "ids_alias": [
+        "run_chart_datos_temporales"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "run_chart_datos_temporales",
+          "titulo": "Run Chart (Gráfico de Corrida)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "grafico_media_movil_ewma": {
       "node_id": "grafico_media_movil_ewma",
@@ -64581,7 +64753,8 @@
         "Cuando se inicia la fase de análisis de requerimientos de un proyecto de diseño",
         "Si el equipo solo ha considerado al comprador final e ignora otros stakeholders"
       ],
-      "etiqueta_arbol": "Reconoce a Todos tus Clientes"
+      "etiqueta_arbol": "Reconoce a Todos tus Clientes",
+      "deprecado": true
     },
     "identificar_clientes_externos_e_internos": {
       "node_id": "identificar_clientes_externos_e_internos",
@@ -64594,20 +64767,35 @@
         "Elaborar un diagrama de flujo del proceso relacionado al producto",
         "Listar clientes externos: compradores, usuarios finales, comerciantes, procesadores, proveedores, potenciales y ocultos",
         "Identificar clientes internos analizando las relaciones proveedor-procesador-cliente dentro de la organización",
-        "Distinguir entre quien ordena el producto y quien lo usa"
+        "Distinguir entre quien ordena el producto y quien lo usa",
+        "Priorizar el elenco de clientes de forma consensuada por el equipo"
       ],
       "entregable_esperado": "Lista completa y clasificada de clientes externos e internos, con diagrama de flujo del proceso",
       "nodos_previos": [
-        "establecer_equipo_multifuncional"
+        "establecer_equipo_multifuncional",
+        "establecer_proyecto_y_metas_diseno",
+        "goal_statement_smart",
+        "juran_quality_by_design"
       ],
       "nodos_siguientes": [
         "descubrir_necesidades_del_cliente",
         "customer_needs_spreadsheet"
       ],
       "condiciones_activacion": [
-        "Cuando se inicia el diseño de un nuevo producto o servicio y no está claro quiénes son todos los clientes involucrados"
+        "Cuando se inicia el diseño de un nuevo producto o servicio y no está claro quiénes son todos los clientes involucrados",
+        "Si el equipo solo ha considerado al comprador final e ignora otros stakeholders"
       ],
-      "etiqueta_arbol": "Distingue Clientes Externos e Internos"
+      "etiqueta_arbol": "Distingue Clientes Externos e Internos",
+      "ids_alias": [
+        "identificar_clientes_diseno"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "identificar_clientes_diseno",
+          "titulo": "Identificar a los Clientes (Cast de Clientes)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ]
     },
     "identificar_consejo_asesores": {
       "node_id": "identificar_consejo_asesores",
@@ -66323,7 +66511,7 @@
       ],
       "nodos_siguientes": [
         "dfss_metodologia",
-        "quality_by_design",
+        "juran_quality_by_design",
         "design_for_six_sigma_dfss"
       ],
       "condiciones_activacion": [
@@ -67912,7 +68100,7 @@
       ],
       "entregable_esperado": "Estudio de necesidades futuras del consumidor y estimación de pérdida por insatisfacción silenciosa",
       "nodos_previos": [
-        "consumidor_parte_linea_produccion",
+        "consumidor_como_eje_de_produccion",
         "definicion_calidad_segun_agente"
       ],
       "nodos_siguientes": [],
@@ -68134,8 +68322,7 @@
         "consejo_de_calidad_2"
       ],
       "nodos_siguientes": [
-        "medicion_calidad",
-        "medicion_calidad_2"
+        "medicion_calidad"
       ],
       "condiciones_activacion": [
         "Si tu negocio tiene personal sindicalizado",
@@ -68660,7 +68847,8 @@
         "desarrollo_capacidades_expertos_calidad",
         "diferencia_planeacion_mejora",
         "brecha_de_calidad_cuatro_gaps",
-        "comprender_alineacion_etica_ia"
+        "comprender_alineacion_etica_ia",
+        "innovacion_tipo_ii"
       ],
       "nodos_siguientes": [
         "design_for_six_sigma_dmadv",
@@ -68668,21 +68856,30 @@
         "ingenieria_calidad_proveedores",
         "secuencia_universal_breakthrough",
         "establecer_proyecto_y_metas_diseno",
-        "identificar_clientes_diseno"
+        "identificar_clientes_externos_e_internos",
+        "concurrent_engineering",
+        "design_for_six_sigma_dfss"
       ],
       "condiciones_activacion": [
         "Cuando necesitas diseñar un nuevo producto, servicio o proceso desde cero",
         "Cuando buscas un método simple y económico, sin estadística compleja, para diseñar calidad",
-        "Cuando necesitas rediseñar un proceso existente de forma estructurada y económica"
+        "Cuando necesitas rediseñar un proceso existente de forma estructurada y económica",
+        "Cuando enfrentas crisis de calidad recurrentes originadas en el diseño"
       ],
       "etiqueta_arbol": "Diseña Calidad desde el Inicio",
       "ids_alias": [
-        "modelo_quality_by_design_juran"
+        "modelo_quality_by_design_juran",
+        "quality_by_design"
       ],
       "merged_originals": [
         {
           "node_id": "modelo_quality_by_design_juran",
           "titulo": "Modelo Universal de Quality by Design (Juran)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "quality_by_design",
+          "titulo": "Calidad por Diseño (Quality by Design)",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
         }
       ]
@@ -68784,7 +68981,7 @@
       ],
       "entregable_esperado": "Una acción correctiva implementada rápidamente con justificación de urgencia, bajo costo de fallo y alto beneficio potencial",
       "nodos_previos": [
-        "pdsa_shewhart_cycle"
+        "ciclo_shewhart_pdsa"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -68866,7 +69063,7 @@
       "nodos_previos": [
         "introduccion_lean",
         "mapeo_flujo_valor",
-        "pdsa_shewhart_cycle"
+        "ciclo_shewhart_pdsa"
       ],
       "nodos_siguientes": [
         "poka_yoke_a_prueba_de_errores",
@@ -73561,8 +73758,7 @@
         "matriz_de_planificacion_arbol"
       ],
       "nodos_siguientes": [
-        "control_estadistico_de_procesos",
-        "control_estadistico_de_procesos_2"
+        "control_estadistico_de_procesos"
       ],
       "condiciones_activacion": [
         "Cuando se ha completado una mejora de proceso y se necesita sostenerla en el tiempo",
@@ -73705,7 +73901,7 @@
         "evaluacion_de_factores_de_riesgo"
       ],
       "nodos_siguientes": [
-        "plan_de_gestion_de_riesgos"
+        "evaluacion_gestion_riesgos"
       ],
       "condiciones_activacion": [
         "Cuando tienes dudas sobre si la información que manejas es suficiente para tomar una decisión de riesgo.",
@@ -73833,7 +74029,10 @@
         "Revisa las métricas que ya existan y crea nuevas donde falten, incluyendo áreas administrativas",
         "Involucra a las personas responsables de cada área en la definición de sus propios indicadores",
         "Registra el estado actual como línea base documentada",
-        "Publica los resultados en gráficos visibles para toda la organización"
+        "Publica los resultados en gráficos visibles para toda la organización, semanal o mensualmente",
+        "Clasificar los defectos por gravedad, causa y responsabilidad",
+        "Establecer metas de mejora visibles junto a los gráficos",
+        "Asegurar que el ingeniero de calidad revise diariamente los defectos más frecuentes"
       ],
       "entregable_esperado": "Sistema de medición de calidad documentado por área, con línea base registrada y visible, listo para calcular el costo de la calidad.",
       "nodos_previos": [
@@ -73843,7 +74042,8 @@
         "cero_defectos",
         "involucramiento_sindical_calidad",
         "reinicio_programa_calidad",
-        "programa_mejora_calidad_14_pasos"
+        "programa_mejora_calidad_14_pasos",
+        "programa_make_certain_2"
       ],
       "nodos_siguientes": [
         "costo_de_calidad",
@@ -73856,21 +74056,29 @@
         "costo_de_la_calidad_coq",
         "conciencia_de_calidad",
         "costo_de_calidad_4",
-        "costo_de_mala_calidad_copq"
+        "costo_de_mala_calidad_copq",
+        "entrenamiento_supervisores_calidad"
       ],
       "condiciones_activacion": [
         "Cuando tu negocio no tiene métricas claras de calidad en áreas no productivas",
         "Cuando necesitas una línea base antes de iniciar mejoras",
-        "Cuando necesitas establecer una línea base objetiva antes de calcular el costo de calidad"
+        "Cuando necesitas establecer una línea base objetiva antes de calcular el costo de calidad",
+        "Al iniciar el paso de medición dentro del programa de 14 pasos"
       ],
       "etiqueta_arbol": "Mide tu Calidad Actual",
       "ids_alias": [
-        "medicion_de_calidad"
+        "medicion_de_calidad",
+        "medicion_calidad_2"
       ],
       "merged_originals": [
         {
           "node_id": "medicion_de_calidad",
           "titulo": "Paso Tres: Medición de Calidad",
+          "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+        },
+        {
+          "node_id": "medicion_calidad_2",
+          "titulo": "Paso 3: Medición de la Calidad",
           "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
         }
       ]
@@ -73905,7 +74113,8 @@
         "Al iniciar el paso de medición dentro del programa de 14 pasos",
         "Cuando la organización no tiene visibilidad clara de sus tasas de defectos"
       ],
-      "etiqueta_arbol": "Mide la Calidad, Paso Tres"
+      "etiqueta_arbol": "Mide la Calidad, Paso Tres",
+      "deprecado": true
     },
     "medicion_capacidad_servicio": {
       "node_id": "medicion_capacidad_servicio",
@@ -74157,7 +74366,6 @@
       "entregable_esperado": "Sistema de medición de errores administrativos y de servicio implementado con datos iniciales de referencia",
       "nodos_previos": [
         "medicion_calidad",
-        "medicion_calidad_2",
         "voice_of_customer_homework"
       ],
       "nodos_siguientes": [
@@ -78193,7 +78401,7 @@
       "entregable_esperado": "Sistema de benchmarking recurrente con métricas comparativas históricas",
       "nodos_previos": [
         "caso_estudio_benchmarking_terminal",
-        "rol_alta_direccion_benchmarking"
+        "gestion_efectiva_benchmarking"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -83054,7 +83262,8 @@
           "titulo": "Ciclo Plan-Do-Study-Act (PDSA / Ciclo de Shewhart-Deming)",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
         }
-      ]
+      ],
+      "deprecado": true
     },
     "peligro_capital_barato": {
       "node_id": "peligro_capital_barato",
@@ -84706,7 +84915,7 @@
         "el_riesgo_eres_tu",
         "guarda_un_colchon_de_tiempo_y_dinero",
         "transfiere_lo_que_no_debes_cargar",
-        "plan_de_gestion_de_riesgos"
+        "evaluacion_gestion_riesgos"
       ],
       "nodos_siguientes": [
         "cuando_el_riesgo_se_vuelve_realidad",
@@ -85142,7 +85351,8 @@
         "Cuando ya evaluaste y priorizaste tus riesgos pero todavia no tienes acciones concretas definidas.",
         "Antes de destinar presupuesto y recursos a mitigar un riesgo especifico."
       ],
-      "etiqueta_arbol": "Enfrenta tus Riesgos con Plan"
+      "etiqueta_arbol": "Enfrenta tus Riesgos con Plan",
+      "deprecado": true
     },
     "plan_de_implementacion_de_venta": {
       "node_id": "plan_de_implementacion_de_venta",
@@ -91754,7 +91964,7 @@
       ],
       "nodos_siguientes": [
         "cero_defectos_zd",
-        "medicion_calidad_2",
+        "medicion_calidad",
         "cero_defectos"
       ],
       "condiciones_activacion": [
@@ -94779,7 +94989,8 @@
         "Cuando buscas prevenir problemas de calidad futuros mediante planificación temprana",
         "Cuando enfrentas crisis de calidad recurrentes originadas en el diseño"
       ],
-      "etiqueta_arbol": "Diseña la Calidad desde Inicio"
+      "etiqueta_arbol": "Diseña la Calidad desde Inicio",
+      "deprecado": true
     },
     "quality_control_vs_quality_assurance": {
       "node_id": "quality_control_vs_quality_assurance",
@@ -101882,7 +102093,8 @@
         "Cuando decides iniciar un proceso formal de benchmarking",
         "Si los hallazgos anteriores no se tradujeron en mejoras por falta de compromiso real"
       ],
-      "etiqueta_arbol": "Lidera la Comparación con Líderes"
+      "etiqueta_arbol": "Lidera la Comparación con Líderes",
+      "deprecado": true
     },
     "rol_alta_direccion_calidad": {
       "node_id": "rol_alta_direccion_calidad",
@@ -102548,7 +102760,8 @@
       "condiciones_activacion": [
         "Si se necesita analizar la evolución de un proceso a lo largo del tiempo"
       ],
-      "etiqueta_arbol": "Grafica tus Datos en el Tiempo"
+      "etiqueta_arbol": "Grafica tus Datos en el Tiempo",
+      "deprecado": true
     },
     "runway_como_numero_de_pivotes": {
       "node_id": "runway_como_numero_de_pivotes",
@@ -112217,7 +112430,7 @@
       "nodos_siguientes": [
         "fuentes_datos_benchmarking",
         "proceso_benchmarking_juran_7pasos",
-        "rol_alta_direccion_benchmarking"
+        "gestion_efectiva_benchmarking"
       ],
       "condiciones_activacion": [
         "Cuando la organización desea iniciar un proceso de comparación de desempeño con otras entidades.",
@@ -126160,7 +126373,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 187,
+    "nodos_sin_enlaces_entrantes": 201,
     "enlaces_rotos_en_grafo": 0
   }
 }

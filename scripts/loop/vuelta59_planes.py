@@ -106,6 +106,11 @@ except ImportError:  # corrido desde otra carpeta
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from _v60_lote_b import LOTE_B
 LOTES["B"] = LOTE_B
+try:
+    from _v60_lote_c import LOTE_C
+except ImportError:
+    from _v60_lote_c import LOTE_C
+LOTES["C"] = LOTE_C
 
 LOTES["A"] = {
     "titulo": "LOTE A DE LA VUELTA 59: LOS DIECISIETE PRIMEROS ACTOS DEL TRAMO EN SU ORDEN IMPRESO (1 a 17), apartando el 13 por EMPATE SIN VARA. Lo encabeza EL ACTO 1, que es el unico choque de puerta del lote: la razon declara superviviente a un nodo que la guarda 1B no permite absorber por el otro lado",

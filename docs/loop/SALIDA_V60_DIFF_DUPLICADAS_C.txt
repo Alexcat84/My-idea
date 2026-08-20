@@ -1,0 +1,21 @@
+==============================================================================
+DIFF DEL CENSO DE DUPLICADAS, CON NODO Y DESTINO RESUELTOS POR EL ALIAS
+  LOTE C contra el cierre del LOTE B
+  antes  : 02384c6a:docs/plan/ARISTAS_DUPLICADAS.jsonl
+  despues: docs/plan/ARISTAS_DUPLICADAS.jsonl
+==============================================================================
+
+  grupos por rotulo CRUDO   : antes 938 | despues 935
+  grupos ya RESUELTOS       : antes 938 | despues 935
+
+  RENOMBRADOS (aparecen con rotulo nuevo pero son el MISMO grupo): 1
+     control_mantener_ganancias | nodos_siguientes | ciclo_shewhart_pdsa   -> resuelve a ciclo_shewhart_pdsa
+
+  GRUPOS FABRICADOS DE VERDAD: 0
+
+  grupos que DESAPARECEN: 3
+     identificar_clientes_externos_e_internos | nodos_previos | juran_quality_by_design
+     juran_quality_by_design | nodos_siguientes | design_for_six_sigma_dfss
+     medicion_calidad | nodos_previos | cero_defectos
+
+  VERDE: CERO grupos fabricados.

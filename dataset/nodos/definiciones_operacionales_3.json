@@ -10,7 +10,8 @@
     "Definir una prueba específica y reproducible para evaluar dicho concepto.",
     "Establecer un criterio de juicio claro y cuantificable.",
     "Definir la regla de decisión (sí/no) sobre el cumplimiento del criterio.",
-    "Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición."
+    "Validar que comprador y vendedor, o distintos departamentos, entiendan y acepten la misma definición.",
+    "Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú."
   ],
   "entregable_esperado": "Un documento de especificación técnica que contenga la definición operacional completa: prueba, criterio y regla de decisión para cada característica de calidad relevante.",
   "nodos_previos": [
@@ -19,12 +20,23 @@
   "nodos_siguientes": [
     "ausencia_valor_verdadero",
     "definiciones_operacionales_2",
-    "definiciones_operacionales_4"
+    "control_estadistico_metodo_medicion",
+    "estandares_voluntarios"
   ],
   "condiciones_activacion": [
     "Cuando se redactan especificaciones de calidad para contratos con proveedores.",
     "Cuando existen disputas entre departamentos sobre qué constituye un defecto.",
     "Al diseñar regulaciones gubernamentales o estándares industriales."
   ],
-  "etiqueta_arbol": "Traduce lo Abstracto en Pruebas"
+  "etiqueta_arbol": "Traduce lo Abstracto en Pruebas",
+  "ids_alias": [
+    "definiciones_operacionales_4"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "definiciones_operacionales_4",
+      "titulo": "Ponle una prueba clara a cada palabra vaga (definición operacional)",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ]
 }

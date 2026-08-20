@@ -14,16 +14,32 @@
   ],
   "entregable_esperado": "Un registro documentado de al menos un ciclo PDSA completo aplicado a una etapa de proceso, incluyendo hipótesis, datos y conclusiones",
   "nodos_previos": [
-    "plan_de_accion_transformacion"
+    "plan_de_accion_transformacion",
+    "analisis_diagnostico_causa",
+    "control_mantener_ganancias"
   ],
   "nodos_siguientes": [
     "proceso_como_cadena_de_etapas",
     "falacia_meta_numerica_sin_metodo",
-    "ooda_loop_decision"
+    "ooda_loop_decision",
+    "just_do_its",
+    "kaizen_mejora_continua"
   ],
   "condiciones_activacion": [
     "Cuando se requiere mejorar sistemáticamente una etapa de un proceso",
-    "Si se ha detectado una causa especial mediante control estadístico de procesos"
+    "Si se ha detectado una causa especial mediante control estadístico de procesos",
+    "Cuando quieres probar experimentalmente si un cambio propuesto genera una mejora antes de institucionalizarlo.",
+    "Cuando no conoces con certeza la causa raíz de un problema y prefieres probar cambios directamente."
   ],
-  "etiqueta_arbol": "Investiga Causas y Mejora"
+  "etiqueta_arbol": "Investiga Causas y Mejora",
+  "ids_alias": [
+    "pdsa_shewhart_cycle"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "pdsa_shewhart_cycle",
+      "titulo": "Ciclo PDSA (Plan-Do-Study-Act)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

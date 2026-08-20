@@ -8,18 +8,31 @@
   "pasos_accionables": [
     "Realizar lluvia de ideas para generar múltiples alternativas de solución.",
     "Construir diagramas de flujo para visualizar la implementación de cada alternativa.",
-    "Usar una matriz de selección basada en criterios para evaluar las opciones.",
+    "Usar una matriz de selección basada en criterios para evaluar las opciones. Define cuánto pesa cada uno",
     "Seleccionar la solución óptima o combinación de soluciones."
   ],
   "entregable_esperado": "Una matriz de selección de soluciones con la alternativa (o combinación) elegida para implementar.",
   "nodos_previos": [
-    "prueba_teorias_causa_raiz"
+    "prueba_teorias_causa_raiz",
+    "diseno_experimentos_doe_mejora"
   ],
   "nodos_siguientes": [
-    "diseno_implementacion_remedio"
+    "diseno_implementacion_remedio",
+    "diseno_de_mejoras_para_clientes"
   ],
   "condiciones_activacion": [
-    "Cuando se ha identificado la causa raíz y se requiere decidir la mejor solución para eliminarla."
+    "Cuando se ha identificado la causa raíz y se requiere decidir la mejor solución para eliminarla.",
+    "Cuando tienes varias opciones de solución y necesitas elegir la que realmente funcione, técnica y culturalmente"
   ],
-  "etiqueta_arbol": "Compara tus Alternativas de Solución"
+  "etiqueta_arbol": "Compara tus Alternativas de Solución",
+  "ids_alias": [
+    "evaluacion_seleccion_alternativas_mejora"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "evaluacion_seleccion_alternativas_mejora",
+      "titulo": "Evaluación y Selección de Alternativas de Mejora",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ]
 }

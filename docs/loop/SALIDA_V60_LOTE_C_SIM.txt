@@ -1,0 +1,489 @@
+==============================================================================
+OP-U-01, TRAMO 5, LOTE C: LOS DIECISEIS ULTIMOS ACTOS DEL TRAMO EN SU ORDEN IMPRESO (35 a 50), Y CIERRAN EL TRAMO 5. NINGUNO SE APARTA: los dieciseis se funden. Lo encabezan los DOS CHOQUES DE PUERTA que faltaban (actos 36 y 43), donde el miembro protegido por la guarda 1B es tambien el que sobrevive, y lo cierra el unico acto del tramo que se funde CONTRA un conteo de pasos por una figura con nombre escrita en el informe (el acto 41, EL CASO NO ES LA CASA) . MODO SIMULAR
+plan: docs/loop/PLAN_V60_OPU01_LOTE_C.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3311 vivos, 542 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 35 . sobrevive ciclo_shewhart_pdsa . absorbe pdsa_shewhart_cycle
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 4 (anadidas 2)
+  alias del superviviente: ['pdsa_shewhart_cycle']
+
+------------------------------------------------------------------------------
+ACTO 36 . sobrevive control_estadistico_de_procesos . absorbe control_estadistico_de_procesos_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 10 -> 10 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de control_estadistico_de_procesos_2 al PASO 7 del superviviente
+        inciso VERBATIM: 'n=4 o n=5'
+        nexo (lo unico de cosecha propia): ', por ejemplo '
+        paso resultante: Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5
+     del paso 3 de control_estadistico_de_procesos_2 al PASO 6 del superviviente
+        inciso VERBATIM: 'a partir del rango promedio'
+        nexo (lo unico de cosecha propia): ', calculados '
+        paso resultante: Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio
+  alias del superviviente: ['control_estadistico_de_procesos_2']
+
+------------------------------------------------------------------------------
+ACTO 37 . sobrevive evaluacion_gestion_riesgos . absorbe plan_de_gestion_de_riesgos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de plan_de_gestion_de_riesgos al PASO 1 del superviviente
+        inciso VERBATIM: 'lo que te preocupa (concerns) de cada riesgo que priorizaste'
+        nexo (lo unico de cosecha propia): ', o sea '
+        paso resultante: Hacer una lluvia de ideas exhaustiva de todos los riesgos y opciones posibles sin restricciones, o sea lo que te preocupa (concerns) de cada riesgo que priorizaste
+  alias del superviviente: ['plan_de_gestion_de_riesgos']
+
+------------------------------------------------------------------------------
+ACTO 38 . sobrevive enfasis_en_utilidades_corto_plazo . absorbe enfasis_en_ganancias_corto_plazo
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 2 -> 4 (anadidas 2)
+  alias del superviviente: ['enfasis_en_ganancias_corto_plazo']
+
+------------------------------------------------------------------------------
+ACTO 39 . sobrevive grafico_de_corrida_run_chart . absorbe run_chart_datos_temporales
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['run_chart_datos_temporales']
+
+------------------------------------------------------------------------------
+ACTO 40 . sobrevive evaluacion_alternativas_solucion . absorbe evaluacion_seleccion_alternativas_mejora
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 1 -> 2 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de evaluacion_seleccion_alternativas_mejora al PASO 3 del superviviente
+        inciso VERBATIM: 'cuánto pesa cada uno'
+        nexo (lo unico de cosecha propia): ' Define '
+        paso resultante: Usar una matriz de selección basada en criterios para evaluar las opciones. Define cuánto pesa cada uno
+  alias del superviviente: ['evaluacion_seleccion_alternativas_mejora']
+
+------------------------------------------------------------------------------
+ACTO 41 . sobrevive definiciones_operacionales . absorbe caso_definicion_arruga
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['caso_definicion_arruga']
+
+------------------------------------------------------------------------------
+ACTO 42 . sobrevive formula_exponencial_confiabilidad . absorbe distribucion_exponencial
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 1 -> 1 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 3 de distribucion_exponencial al PASO 3 del superviviente
+        inciso VERBATIM: 'tabla de área exponencial'
+        nexo (lo unico de cosecha propia): ', o la '
+        paso resultante: Aplicar la fórmula R = e^(-t/μ) para el tiempo de interés, o la tabla de área exponencial
+  alias del superviviente: ['distribucion_exponencial']
+
+------------------------------------------------------------------------------
+ACTO 43 . sobrevive medicion_calidad . absorbe medicion_calidad_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 8 (anadidos 3) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 3 de medicion_calidad_2 al PASO 5 del superviviente
+        inciso VERBATIM: 'semanal o mensualmente'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Publica los resultados en gráficos visibles para toda la organización, semanal o mensualmente
+  alias del superviviente: ['medicion_de_calidad', 'medicion_calidad_2']
+
+------------------------------------------------------------------------------
+ACTO 44 . sobrevive analisis_reporte_benchmarking . absorbe desarrollo_reporte_benchmarking
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 8 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['desarrollo_reporte_benchmarking']
+
+------------------------------------------------------------------------------
+ACTO 45 . sobrevive gestion_efectiva_benchmarking . absorbe rol_alta_direccion_benchmarking
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 7 -> 7 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['rol_alta_direccion_benchmarking']
+
+------------------------------------------------------------------------------
+ACTO 46 . sobrevive consumidor_como_eje_de_produccion . absorbe consumidor_parte_linea_produccion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['consumidor_parte_linea_produccion']
+
+------------------------------------------------------------------------------
+ACTO 47 . sobrevive identificar_clientes_externos_e_internos . absorbe identificar_clientes_diseno
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 1 -> 2 (anadidas 1)
+  alias del superviviente: ['identificar_clientes_diseno']
+
+------------------------------------------------------------------------------
+ACTO 48 . sobrevive juran_quality_by_design . absorbe quality_by_design
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 4 (anadidas 1)
+  alias del superviviente: ['modelo_quality_by_design_juran', 'quality_by_design']
+
+------------------------------------------------------------------------------
+ACTO 49 . sobrevive definiciones_operacionales_3 . absorbe definiciones_operacionales_4
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['definiciones_operacionales_4']
+
+------------------------------------------------------------------------------
+ACTO 50 . sobrevive fijacion_de_metas . absorbe establecimiento_metas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 1
+     del paso 2 de establecimiento_metas al PASO 1 del superviviente
+        inciso VERBATIM: 'a 30, 60 y 90 días'
+        nexo (lo unico de cosecha propia): ' Fíjalas '
+        paso resultante: Una semana después del Día ZD, pide a cada grupo que proponga dos metas específicas y medibles. Fíjalas a 30, 60 y 90 días
+  alias del superviviente: ['establecimiento_metas']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 49
+   aceptacion_de_fallas_como_inevitables                nodos_previos     plan_de_gestion_de_riesgos -> evaluacion_gestion_riesgos
+   administracion_sin_miedo                             nodos_previos     control_estadistico_de_procesos_2 -> control_estadistico_de_procesos
+   analisis_diagnostico_causa                           nodos_siguientes  pdsa_shewhart_cycle -> ciclo_shewhart_pdsa
+   analisis_identificacion_mejores_practicas            nodos_siguientes  desarrollo_reporte_benchmarking -> analisis_reporte_benchmarking
+   aprendizaje_institucionalizado_benchmarking          nodos_previos     desarrollo_reporte_benchmarking -> analisis_reporte_benchmarking
+   benchmarking_estrategia                              nodos_previos     rol_alta_direccion_benchmarking -> gestion_efectiva_benchmarking
+   caso_estudio_benchmarking_terminal                   nodos_previos     rol_alta_direccion_benchmarking -> gestion_efectiva_benchmarking
+   cero_defectos                                        nodos_siguientes  medicion_calidad_2 -> medicion_calidad
+   concepto_variacion_estadistica                       nodos_siguientes  run_chart_datos_temporales -> grafico_de_corrida_run_chart
+   concurrent_engineering                               nodos_previos     quality_by_design -> juran_quality_by_design
+   control_estadistico_metodo_medicion                  nodos_previos     definiciones_operacionales_4 -> definiciones_operacionales_3
+   control_estadistico_proceso                          nodos_previos     run_chart_datos_temporales -> grafico_de_corrida_run_chart
+   control_mantener_ganancias                           nodos_siguientes  pdsa_shewhart_cycle -> ciclo_shewhart_pdsa
+   costo_de_calidad                                     nodos_previos     medicion_calidad_2 -> medicion_calidad
+   definicion_calidad_segun_agente                      nodos_siguientes  consumidor_parte_linea_produccion -> consumidor_como_eje_de_produccion
+   definiciones_operacionales                           nodos_siguientes  caso_definicion_arruga -> definiciones_operacionales
+   definiciones_operacionales_3                         nodos_siguientes  definiciones_operacionales_4 -> definiciones_operacionales_3
+   descubrir_necesidades_del_cliente                    nodos_previos     identificar_clientes_diseno -> identificar_clientes_externos_e_internos
+   design_for_six_sigma_dfss                            nodos_previos     quality_by_design -> juran_quality_by_design
+   deteccion_de_lideres_y_rezagados                     nodos_previos     control_estadistico_de_procesos_2 -> control_estadistico_de_procesos
+   dia_cero_defectos                                    nodos_siguientes  establecimiento_metas -> fijacion_de_metas
+   diseno_dashboards                                    nodos_siguientes  desarrollo_reporte_benchmarking -> analisis_reporte_benchmarking
+   diseno_de_mejoras_para_clientes                      nodos_previos     evaluacion_seleccion_alternativas_mejora -> evaluacion_alternativas_solucion
+   diseno_experimentos_doe_mejora                       nodos_siguientes  evaluacion_seleccion_alternativas_mejora -> evaluacion_alternativas_solucion
+   distincion_causas_comunes_especiales                 nodos_previos     control_estadistico_de_procesos_2 -> control_estadistico_de_procesos
+   distribucion_normal_probabilidad                     nodos_siguientes  distribucion_exponencial -> formula_exponencial_confiabilidad
+   distribucion_weibull                                 nodos_previos     distribucion_exponencial -> formula_exponencial_confiabilidad
+   eliminacion_causas_error                             nodos_previos     establecimiento_metas -> fijacion_de_metas
+   enfermedades_mortales_gestion                        nodos_siguientes  enfasis_en_ganancias_corto_plazo -> enfasis_en_utilidades_corto_plazo
+   entrenamiento_supervisores_calidad                   nodos_previos     medicion_calidad_2 -> medicion_calidad
+   equipo_de_gestion_de_crisis                          nodos_previos     plan_de_gestion_de_riesgos -> evaluacion_gestion_riesgos
+   establecer_proyecto_y_metas_diseno                   nodos_siguientes  identificar_clientes_diseno -> identificar_clientes_externos_e_internos
+   estandares_voluntarios                               nodos_previos     definiciones_operacionales_4 -> definiciones_operacionales_3
+   evaluacion_de_factores_de_riesgo                     nodos_siguientes  plan_de_gestion_de_riesgos -> evaluacion_gestion_riesgos
+   falta_de_constancia_de_proposito                     nodos_siguientes  enfasis_en_ganancias_corto_plazo -> enfasis_en_utilidades_corto_plazo
+   goal_statement_smart                                 nodos_siguientes  identificar_clientes_diseno -> identificar_clientes_externos_e_internos
+   innovacion_tipo_ii                                   nodos_siguientes  quality_by_design -> juran_quality_by_design
+   investigacion_necesidades_consumidor                 nodos_previos     consumidor_parte_linea_produccion -> consumidor_como_eje_de_produccion
+   involucramiento_sindical_calidad                     nodos_siguientes  medicion_calidad_2 -> medicion_calidad
+   juran_quality_by_design                              nodos_siguientes  identificar_clientes_diseno -> identificar_clientes_externos_e_internos
+   just_do_its                                          nodos_previos     pdsa_shewhart_cycle -> ciclo_shewhart_pdsa
+   kaizen_mejora_continua                               nodos_previos     pdsa_shewhart_cycle -> ciclo_shewhart_pdsa
+   matriz_de_control_de_proceso                         nodos_siguientes  control_estadistico_de_procesos_2 -> control_estadistico_de_procesos
+   matriz_riesgo_conocido_desconocido                   nodos_siguientes  plan_de_gestion_de_riesgos -> evaluacion_gestion_riesgos
+   medicion_servicios                                   nodos_previos     medicion_calidad_2 -> medicion_calidad
+   monitoreo_continuo_benchmarking                      nodos_previos     rol_alta_direccion_benchmarking -> gestion_efectiva_benchmarking
+   plan_b_antes_de_necesitarlo                          nodos_previos     plan_de_gestion_de_riesgos -> evaluacion_gestion_riesgos
+   programa_make_certain_2                              nodos_siguientes  medicion_calidad_2 -> medicion_calidad
+   tipos_benchmarking_por_participante                  nodos_siguientes  rol_alta_direccion_benchmarking -> gestion_efectiva_benchmarking
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 5
+   cero_defectos_zd                                     nodos_siguientes  medicion_calidad_2 (registro historico)
+   descubrir_necesidades_cliente                        nodos_previos     identificar_clientes_diseno (registro historico)
+   dfss_metodologia                                     nodos_previos     quality_by_design (registro historico)
+   filosofia_zero_defectos                              nodos_siguientes  medicion_calidad_2 (registro historico)
+   modelo_quality_by_design_juran                       nodos_siguientes  identificar_clientes_diseno (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 12
+   cero_defectos                                        nodos_siguientes
+   control_estadistico_proceso                          nodos_previos
+   costo_de_calidad                                     nodos_previos
+   descubrir_necesidades_del_cliente                    nodos_previos
+   deteccion_de_lideres_y_rezagados                     nodos_previos
+   dia_cero_defectos                                    nodos_siguientes
+   eliminacion_causas_error                             nodos_previos
+   enfermedades_mortales_gestion                        nodos_siguientes
+   falta_de_constancia_de_proposito                     nodos_siguientes
+   involucramiento_sindical_calidad                     nodos_siguientes
+   matriz_de_control_de_proceso                         nodos_siguientes
+   medicion_servicios                                   nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 2
+   definiciones_operacionales                           nodos_siguientes
+   definiciones_operacionales_3                         nodos_siguientes
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 918   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 914   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 4, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 80 de 80
+guarda D, los 16 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (101 filas)
+ acto de que nodo                                  que          n  a donde va
+   35 pdsa_shewhart_cycle                          paso         1  ya lo dice el PASO 1 del superviviente
+        Plan: define el objetivo del cambio que quieres probar y diseña el experimento.
+   35 pdsa_shewhart_cycle                          paso         2  ya lo dice el PASO 2 del superviviente
+        Do: ejecuta el plan experimental y recolecta los datos.
+   35 pdsa_shewhart_cycle                          paso         3  ya lo dice el PASO 3 del superviviente
+        Study: analiza los datos obtenidos y resume lo que aprendiste.
+   35 pdsa_shewhart_cycle                          paso         4  ya lo dice el PASO 4 del superviviente
+        Act: decide qué cambios implementas de forma permanente y cuáles necesitan más pruebas.
+   35 pdsa_shewhart_cycle                          condicion    1  CONDICION 3 del superviviente
+        Cuando quieres probar experimentalmente si un cambio propuesto genera una mejora antes de institucionalizarlo.
+   35 pdsa_shewhart_cycle                          condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando trabajas en un entorno de mejora continua iterativa.
+   35 pdsa_shewhart_cycle                          condicion    3  CONDICION 4 del superviviente
+        Cuando no conoces con certeza la causa raíz de un problema y prefieres probar cambios directamente.
+   35 pdsa_shewhart_cycle                          condicion    4  ya lo dice la CONDICION 1 del superviviente
+        Cuando necesitas validar soluciones basándote en pruebas empíricas.
+   36 control_estadistico_de_procesos_2            paso         1  INCISO ADOSADO al PASO 7 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Recolectar datos de desempeño en muestras (por ejemplo, n=4 o n=5)
+   36 control_estadistico_de_procesos_2            paso         2  ya lo dice el PASO 9 del superviviente
+        Calcular el promedio y rango de cada muestra
+   36 control_estadistico_de_procesos_2            paso         3  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer límites de control superior e inferior (típicamente 3 sigma) a partir del rango promedio
+   36 control_estadistico_de_procesos_2            paso         4  ya lo dice el PASO 10 del superviviente
+        Graficar los puntos en el tiempo y observar si permanecen dentro de los límites
+   36 control_estadistico_de_procesos_2            paso         5  ya lo dice el PASO 9 del superviviente
+        Investigar cualquier punto fuera de los límites como posible causa especial
+   36 control_estadistico_de_procesos_2            condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando se necesita determinar si un proceso o trabajador está en control estadístico
+   36 control_estadistico_de_procesos_2            condicion    2  CONDICION 3 del superviviente
+        Antes de decidir si intervenir individualmente o mejorar el sistema
+   37 plan_de_gestion_de_riesgos                   paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Haz una lluvia de ideas exhaustiva sobre lo que te preocupa (concerns) de cada riesgo que priorizaste.
+   37 plan_de_gestion_de_riesgos                   paso         2  ya lo dice el PASO 1 del superviviente
+        Genera una lista amplia de opciones para minimizar o eliminar el riesgo, sin restricciones iniciales.
+   37 plan_de_gestion_de_riesgos                   paso         3  ya lo dice el PASO 2 del superviviente
+        Evalua las consecuencias de actuar y de no actuar, incluyendo posibles efectos secundarios que no esperabas.
+   37 plan_de_gestion_de_riesgos                   paso         4  ya lo dice el PASO 4 del superviviente
+        Analiza el costo y el beneficio, y el impacto futuro de cada opcion.
+   37 plan_de_gestion_de_riesgos                   paso         5  ya lo dice el PASO 5 del superviviente
+        Define acciones concretas, quien las hace y para cuando.
+   37 plan_de_gestion_de_riesgos                   condicion    1  CONDICION 3 del superviviente
+        Cuando ya evaluaste y priorizaste tus riesgos pero todavia no tienes acciones concretas definidas.
+   37 plan_de_gestion_de_riesgos                   condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Antes de destinar presupuesto y recursos a mitigar un riesgo especifico.
+   38 enfasis_en_ganancias_corto_plazo             paso         1  PASO 5 del superviviente
+        Auditar prácticas de fin de trimestre que puedan estar sacrificando calidad por apariencia financiera
+   38 enfasis_en_ganancias_corto_plazo             paso         2  PASO 6 del superviviente
+        Revisar si se están recortando presupuestos de investigación, educación o mantenimiento por presión de resultados inmediatos
+   38 enfasis_en_ganancias_corto_plazo             paso         3  PASO 7 del superviviente
+        Establecer indicadores de desempeño que balanceen el corto y el largo plazo
+   38 enfasis_en_ganancias_corto_plazo             paso         4  ya lo dice el PASO 2 del superviviente
+        Educar a la junta directiva e inversionistas sobre el costo oculto de la gestión cortoplacista
+   38 enfasis_en_ganancias_corto_plazo             condicion    1  CONDICION 3 del superviviente
+        Cuando se detectan prácticas de manipulación de cifras de fin de periodo
+   38 enfasis_en_ganancias_corto_plazo             condicion    2  CONDICION 4 del superviviente
+        Si la inversión en investigación y capacitación se recorta sistemáticamente en momentos de presión financiera
+   39 run_chart_datos_temporales                   paso         1  ya lo dice el PASO 1 del superviviente
+        Recolectar datos del proceso en orden cronológico
+   39 run_chart_datos_temporales                   paso         2  ya lo dice el PASO 2 del superviviente
+        Graficar los valores en el eje Y y el tiempo en el eje X
+   39 run_chart_datos_temporales                   paso         3  ya lo dice el PASO 3 del superviviente
+        Identificar tendencias, ciclos o patrones inusuales en la serie temporal
+   39 run_chart_datos_temporales                   paso         4  ya lo dice el PASO 5 del superviviente
+        Usar los hallazgos para investigar causas especiales de variación
+   39 run_chart_datos_temporales                   condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Si se necesita analizar la evolución de un proceso a lo largo del tiempo
+   40 evaluacion_seleccion_alternativas_mejora     paso         1  ya lo dice el PASO 1 del superviviente
+        Busca varias posibles mejoras, sin quedarte con la primera idea
+   40 evaluacion_seleccion_alternativas_mejora     paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Define los criterios que usarás para comparar y cuánto pesa cada uno
+   40 evaluacion_seleccion_alternativas_mejora     paso         3  ya lo dice el PASO 3 del superviviente
+        Compara cada mejora con esos criterios
+   40 evaluacion_seleccion_alternativas_mejora     paso         4  ya lo dice el PASO 4 del superviviente
+        Elige la mejora, o combinación de mejoras, que mejor funcione
+   40 evaluacion_seleccion_alternativas_mejora     condicion    1  CONDICION 2 del superviviente
+        Cuando tienes varias opciones de solución y necesitas elegir la que realmente funcione, técnica y culturalmente
+   41 caso_definicion_arruga                       paso         1  ya lo dice el PASO 1 del superviviente
+        Junta a todas las personas que participan en revisar el producto: tú, quien te ayuda, quien lo fabrica o lo vende.
+   41 caso_definicion_arruga                       paso         2  ya lo dice el PASO 2 del superviviente
+        Pide ejemplos físicos reales del defecto en discusión.
+   41 caso_definicion_arruga                       paso         3  ya lo dice el PASO 2 del superviviente
+        Busca que todos definan el defecto de la misma manera, con ejemplos concretos que todos acepten.
+   41 caso_definicion_arruga                       paso         4  ya lo dice el PASO 3 del superviviente
+        Escribe la definición acordada y compártela con quien te ayude, para que todos la usen igual.
+   41 caso_definicion_arruga                       paso         5  ya lo dice el PASO 4 del superviviente
+        Mide la tasa de defectos antes y después de aplicar la definición para ver el impacto real.
+   41 caso_definicion_arruga                       condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando distintas personas clasifican el mismo producto de forma diferente.
+   41 caso_definicion_arruga                       condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando la tasa de defectos es alta pero no está claro cuál es la causa real.
+   42 distribucion_exponencial                     paso         1  ya lo dice el PASO 2 del superviviente
+        Estimar el tiempo medio entre fallos (MTBF) del equipo o proceso
+   42 distribucion_exponencial                     paso         2  ya lo dice el PASO 3 del superviviente
+        Calcular la razón X/μ para el valor de interés
+   42 distribucion_exponencial                     paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Consultar tabla de área exponencial para obtener la probabilidad de superar cierto tiempo sin fallo
+   42 distribucion_exponencial                     paso         4  PASO 6 del superviviente
+        Usar el resultado para planificar mantenimiento preventivo o garantías
+   42 distribucion_exponencial                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se analiza el tiempo entre fallos de equipos reparables
+   42 distribucion_exponencial                     condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando se requiere predecir confiabilidad de un componente
+   43 medicion_calidad_2                           paso         1  ya lo dice el PASO 1 del superviviente
+        Recolectar datos de inspección y prueba por área operativa
+   43 medicion_calidad_2                           paso         2  PASO 6 del superviviente
+        Clasificar los defectos por gravedad, causa y responsabilidad
+   43 medicion_calidad_2                           paso         3  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Crear gráficos de tendencia visibles semanal o mensualmente en cada área
+   43 medicion_calidad_2                           paso         4  PASO 7 del superviviente
+        Establecer metas de mejora visibles junto a los gráficos
+   43 medicion_calidad_2                           paso         5  PASO 8 del superviviente
+        Asegurar que el ingeniero de calidad revise diariamente los defectos más frecuentes
+   43 medicion_calidad_2                           condicion    1  CONDICION 4 del superviviente
+        Al iniciar el paso de medición dentro del programa de 14 pasos
+   43 medicion_calidad_2                           condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando la organización no tiene visibilidad clara de sus tasas de defectos
+   44 desarrollo_reporte_benchmarking              paso         1  PASO 8 del superviviente
+        Define cómo y por dónde vas a entregar el reporte (electrónico o físico), según lo que acordaste al inicio
+   44 desarrollo_reporte_benchmarking              paso         2  ya lo dice el PASO 5 del superviviente
+        Presenta los hallazgos con gráficos, tablas y diagramas explicados
+   44 desarrollo_reporte_benchmarking              paso         3  ya lo dice el PASO 5 del superviviente
+        Suma recomendaciones concretas para cerrar las brechas de desempeño que encontraste
+   44 desarrollo_reporte_benchmarking              paso         4  ya lo dice el PASO 6 del superviviente
+        Decide cuánto anonimizar los datos, equilibrando confidencialidad y valor de aprendizaje
+   44 desarrollo_reporte_benchmarking              paso         5  ya lo dice el PASO 7 del superviviente
+        Revisa que cumplas los acuerdos de confidencialidad y la normativa antimonopolio antes de publicar
+   44 desarrollo_reporte_benchmarking              condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando ya terminaste de comparar tu negocio con otros y necesitas comunicar lo que encontraste
+   44 desarrollo_reporte_benchmarking              condicion    2  CONDICION 3 del superviviente
+        Cuando tienes que equilibrar proteger datos sensibles con que el reporte siga siendo útil para aprender
+   45 rol_alta_direccion_benchmarking              paso         1  ya lo dice el PASO 2 del superviviente
+        Definir y documentar una política clara de cómo harás benchmarking
+   45 rol_alta_direccion_benchmarking              paso         2  ya lo dice el PASO 3 del superviviente
+        Integrar el benchmarking a tu plan de negocio y tener clara la dirección a seguir
+   45 rol_alta_direccion_benchmarking              paso         3  ya lo dice el PASO 4 del superviviente
+        Mostrar compromiso real quitando obstáculos y destinando tiempo y dinero
+   45 rol_alta_direccion_benchmarking              paso         4  ya lo dice el PASO 5 del superviviente
+        Crear un ambiente abierto al cambio, tanto en ti como en quien te acompañe
+   45 rol_alta_direccion_benchmarking              paso         5  ya lo dice el PASO 6 del superviviente
+        Dar capacitación, reconocimiento y recursos a quien te ayude en el proceso
+   45 rol_alta_direccion_benchmarking              paso         6  ya lo dice el PASO 7 del superviviente
+        Hacer seguimiento al progreso sin usar los hallazgos para evaluar de forma punitiva a las personas que colaboran contigo
+   45 rol_alta_direccion_benchmarking              condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando decides iniciar un proceso formal de benchmarking
+   45 rol_alta_direccion_benchmarking              condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si los hallazgos anteriores no se tradujeron en mejoras por falta de compromiso real
+   46 consumidor_parte_linea_produccion            paso         1  PASO 5 del superviviente
+        Incluir retroalimentación del consumidor como parte formal del ciclo de producción
+   46 consumidor_parte_linea_produccion            paso         2  ya lo dice el PASO 4 del superviviente
+        Distinguir entre lo que el cliente pide hoy y lo que podría necesitar en el futuro
+   46 consumidor_parte_linea_produccion            paso         3  PASO 6 del superviviente
+        Establecer mecanismos de escucha continua (no solo encuestas puntuales)
+   46 consumidor_parte_linea_produccion            paso         4  ya lo dice el PASO 4 del superviviente
+        Fomentar la innovación proactiva de diseño más allá de lo solicitado explícitamente por el cliente
+   46 consumidor_parte_linea_produccion            condicion    1  CONDICION 3 del superviviente
+        Cuando la empresa toma decisiones de producto sin considerar impacto futuro en el cliente
+   47 identificar_clientes_diseno                  paso         1  ya lo dice el PASO 2 del superviviente
+        Mapear todos los actores que interactúan con el producto/servicio/proceso
+   47 identificar_clientes_diseno                  paso         2  ya lo dice el PASO 3 del superviviente
+        Clasificar a los clientes internos y externos relevantes
+   47 identificar_clientes_diseno                  paso         3  PASO 5 del superviviente
+        Priorizar el elenco de clientes de forma consensuada por el equipo
+   47 identificar_clientes_diseno                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se inicia la fase de análisis de requerimientos de un proyecto de diseño
+   47 identificar_clientes_diseno                  condicion    2  CONDICION 2 del superviviente
+        Si el equipo solo ha considerado al comprador final e ignora otros stakeholders
+   48 quality_by_design                            paso         1  ya lo dice el PASO 1 del superviviente
+        Incorpora consideraciones de calidad desde las etapas iniciales del diseño de tu producto
+   48 quality_by_design                            paso         2  ya lo dice el PASO 5 del superviviente
+        Define los requisitos operacionales de tu producto antes de empezar a desarrollarlo
+   48 quality_by_design                            paso         3  ya lo dice el PASO 5 del superviviente
+        Traduce esos requisitos operacionales en requisitos de diseño concretos
+   48 quality_by_design                            paso         4  ya lo dice el PASO 6 del superviviente
+        Valida que tu proceso de producción pueda cumplir consistentemente estos requisitos
+   48 quality_by_design                            condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando buscas prevenir problemas de calidad futuros mediante planificación temprana
+   48 quality_by_design                            condicion    2  CONDICION 4 del superviviente
+        Cuando enfrentas crisis de calidad recurrentes originadas en el diseño
+   49 definiciones_operacionales_4                 paso         1  ya lo dice el PASO 1 del superviviente
+        Revisa tu especificación y marca las palabras ambiguas o los adjetivos vagos que usaste (por ejemplo 'limpio', 'seguro', 'representativo').
+   49 definiciones_operacionales_4                 paso         2  ya lo dice el PASO 2 del superviviente
+        Define un procedimiento de prueba específico y repetible para medir ese atributo.
+   49 definiciones_operacionales_4                 paso         3  ya lo dice el PASO 3 del superviviente
+        Fija un criterio numérico claro que te diga cuándo aceptas y cuándo rechazas según el resultado de la prueba.
+   49 definiciones_operacionales_4                 paso         4  PASO 6 del superviviente
+        Escribe el procedimiento con el detalle suficiente para que cualquier persona que lo siga llegue al mismo resultado que tú.
+   49 definiciones_operacionales_4                 paso         5  ya lo dice el PASO 5 del superviviente
+        Antes de aplicar el criterio, confírmalo con todas las partes involucradas para que todos midan lo mismo de la misma forma.
+   49 definiciones_operacionales_4                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando escribes una especificación de calidad usando adjetivos subjetivos sin criterios medibles.
+   49 definiciones_operacionales_4                 condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando tienes una disputa sobre qué cuenta como defecto.
+   49 definiciones_operacionales_4                 condicion    3  ya lo dice la CONDICION 3 del superviviente
+        Cuando redactas un contrato o una regla que necesitas poder exigir con claridad.
+   50 establecimiento_metas                        paso         1  ya lo dice el PASO 1 del superviviente
+        Realizar reuniones de equipo para definir metas de calidad
+   50 establecimiento_metas                        paso         2  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer metas a 30, 60 y 90 días
+   50 establecimiento_metas                        paso         3  ya lo dice el PASO 1 del superviviente
+        Asegurar que las metas sean específicas y medibles
+   50 establecimiento_metas                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se busca traducir el compromiso de calidad en objetivos concretos
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 16
+  nodos implicados    : 32
+  nodos que MUEREN    : 16
+  piezas repartidas   : 101 (24 viajan enteras, 70 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.
