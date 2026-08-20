@@ -53,6 +53,139 @@ CABECERA = {
 # y el tercero el NEXO que la une al paso del superviviente.
 # --------------------------------------------------------------------------
 LOTES = {
+    "B": {
+        "titulo": "2, LOTE B DE LA VUELTA 54: los actos 16, 17, 19, 21, 22, 23, 24, 25, 26 y 27 del tramo 2 (los DIEZ siguientes sin puerta en juego y sin colision prevista, incluidos los TRES que el contenido empata y decide el cableado solo, y UNO de conteos que chocan con pieza declarada)",
+        "actos": [
+            {
+                "orden": 16,
+                "superviviente": "produccion_scheduling_balance_objetivos",
+                "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos empatan 4 contra 4 y las CONDICIONES apuntan a produccion_scheduling_balance_objetivos, 3 contra 2. El cableado esta de acuerdo (4 contra 2). La razon del 312 dice que el primero ANTEPONE ELEGIR CUAL DE LOS TRES OBJETIVOS MANDA, que es su gesto propio y es el elegido.",
+                "pasos": {
+                    "1": ["INCISO", 2, "balanceando costos de setup e inventario", ", "],
+                    "2": ["INCISO", 3, "inventario disponible / demanda esperada", ", que es "],
+                    "3": ["CUBIERTO", 3],
+                    "4": ["CUBIERTO", 4],
+                },
+                "condiciones": {"1": ["CUBIERTO", 2], "2": ["CUBIERTO", 3]},
+                "nota": "NINGUNA PIEZA VIAJA ENTERA Y NINGUNA SE PIERDE: los cuatro pasos del que muere son los mismos cuatro gestos del superviviente y lo unico propio son DOS PARAMETROS (que el lote economico balancea setup contra inventario, y la formula del run-out time), que van de INCISO. CERO perdidas nombradas.",
+            },
+            {
+                "orden": 17,
+                "superviviente": "social_ads_indirect_response",
+                "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos apuntan a social_ads_indirect_response (5 contra 4), las condiciones empatan 2 contra 2 y EL CABLEADO TAMBIEN EMPATA (2 contra 2), asi que si el contenido no hablara esto seria empate sin vara. Habla: la razon del 320 le reconoce al elegido el gesto propio de MEDIR EN VENTANAS DE TIEMPO MAS LARGAS QUE EN BUSCADORES.",
+                "pasos": {
+                    "1": ["CUBIERTO", 1],
+                    "2": ["CUBIERTO", 2],
+                    "3": ["CUBIERTO", 4],
+                    "4": ["APPEND"],
+                },
+                "condiciones": {"1": ["APPEND"], "2": ["CUBIERTO", 1]},
+                "nota": "EL PASO 4 DEL QUE MUERE VIAJA ENTERO: migrar gradualmente la audiencia hacia un objetivo de conversion es un gesto que el superviviente no tiene (el suyo es DEFINIR el objetivo de largo plazo, que es otra cosa). Su condicion 1 (buscar traccion via redes sociales) tampoco la dice ninguna de las dos del superviviente. CERO perdidas nombradas.",
+            },
+            {
+                "orden": 19,
+                "superviviente": "get_visual",
+                "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos apuntan a get_visual (4 contra 3) y las condiciones empatan 2 contra 2. EL CABLEADO APUNTA AL OTRO (7 contra 6) y no manda, porque el contenido no calla. La razon del 325 dice que los titulos son LA MISMA ORDEN EN DOS FORMAS.",
+                "pasos": {
+                    "1": ["INCISO", 1, "una libreta de bocetos o herramienta digital equivalente", ", o bien "],
+                    "2": ["INCISO", 2, "mapas mentales o fotografías", ", incluidos "],
+                    "3": ["CUBIERTO", 3],
+                },
+                "condiciones": {"1": ["APPEND"], "2": ["CUBIERTO", 1]},
+                "nota": "LOS TRES PASOS DEL QUE MUERE SON LOS MISMOS TRES GESTOS y lo propio son DOS SOPORTES (la libreta o la herramienta digital, y los mapas mentales o las fotografias), que van de INCISO. Su condicion 1 (documentar hallazgos de investigacion) viaja entera porque ninguna de las dos del superviviente habla de documentar. CERO perdidas nombradas.",
+            },
+            {
+                "orden": 21,
+                "superviviente": "prototipado_de_experiencias",
+                "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO: pasos 5 contra 5, condiciones 2 contra 2, y la razon del 335 dice SON EL MISMO NODO ESCRITO DOS VECES, con el mismo taller y hasta el mismo material. El cableado apunta a prototipado_de_experiencias, 8 contra 5. NO es empate sin vara porque el cableado no empata.",
+                "pasos": {
+                    "1": ["INCISO", 1, "en un lugar de bajo costo", ", y montarla "],
+                    "2": ["CUBIERTO", 2],
+                    "3": ["CUBIERTO", 3],
+                    "4": ["CUBIERTO", 4],
+                    "5": ["CUBIERTO", 3],
+                },
+                "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"]},
+                "nota": "NINGUN PASO VIAJA ENTERO porque los cinco son los cinco del superviviente, uno a uno. Lo unico propio es DONDE se monta la maqueta, que va de INCISO. Su condicion 2 (que las encuestas tradicionales no capturan la dimension emocional) SI viaja entera: es un disparador que el superviviente no tiene. PERDIDA NOMBRADA, UNA: el matiz EMOCIONALES Y FUNCIONALES de los insights de su paso 5, que el paso 3 del superviviente documenta como REACCIONES Y SUGERENCIAS.",
+            },
+            {
+                "orden": 22,
+                "superviviente": "entender_term_sheet",
+                "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos empatan 3 contra 3 y las CONDICIONES apuntan a entender_term_sheet, 2 contra 1. El cableado esta de acuerdo (6 contra 3). La razon del 339 le reconoce al elegido PEDIR ASESORIA LEGAL ESPECIALIZADA EN CAPITAL DE RIESGO.",
+                "pasos": {
+                    "1": ["CUBIERTO", 1],
+                    "2": ["APPEND"],
+                    "3": ["CUBIERTO", 2],
+                },
+                "condiciones": {"1": ["CUBIERTO", 1]},
+                "nota": "EL PASO 2 DEL QUE MUERE VIAJA ENTERO y es justo lo que la razon del 339 le reconoce como propio: NOMBRAR LAS CLAUSULAS NEUTRAS COMO POSIBLES TACTICAS DE DISTRACCION. El superviviente manda no distraerse con las secundarias, pero no manda IDENTIFICARLAS, que es el gesto. CERO perdidas nombradas.",
+            },
+            {
+                "orden": 23,
+                "superviviente": "modelo_cascada_desarrollo_producto",
+                "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO: pasos 4 contra 4, condiciones 2 contra 2, y la razon del 340 le reconoce a cada uno lo suyo. El cableado apunta a modelo_cascada_desarrollo_producto, 5 contra 2. NO es empate sin vara porque el cableado no empata. LO MARCO COMO DISCUTIBLE EN EL REPORTE, porque la razon del 340 llama al gesto propio del OTRO (no contratar estructuras completas antes de validar) SU UNICO GESTO PROPIO, y una pieza declarada pesa mas que el cableado: aqui ese gesto propio VIAJA ENTERO al superviviente y no se pierde, que es lo que hace la eleccion sostenible.",
+                "pasos": {
+                    "1": ["CUBIERTO", 1],
+                    "2": ["CUBIERTO", 3],
+                    "3": ["APPEND"],
+                    "4": ["APPEND"],
+                },
+                "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"]},
+                "nota": "DOS GESTOS VIAJAN ENTEROS: reemplazar los hitos rigidos por ciclos de aprendizaje validado (el superviviente solo manda DETENER la ejecucion ciega, que es la mitad) y no contratar VP de ventas ni equipos completos antes de validar, que es el gesto propio que la razon nombra. Su condicion 2 (inversionistas que exigen plan detallado sin margen a pivotar) tambien viaja entera. CERO perdidas nombradas.",
+            },
+            {
+                "orden": 24,
+                "superviviente": "scor_model_operaciones",
+                "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos empatan 4 contra 4, EL CABLEADO EMPATA 3 contra 3, y las CONDICIONES apuntan a scor_model_operaciones, 3 contra 2. VA MARCADO COMO DISCUTIBLE, y se dice por que: la razon del 342 escribe que el OTRO BAJA A METRICAS DE NIVEL 2 Y DE DIAGNOSTICO DE NIVEL 3 y que este SE QUEDA EN LOS KPI DE NIVEL 1, y cierra llamandolo EL MISMO MAPEO CON DISTINTA PROFUNDIDAD DE METRICA, o sea que le reconoce material propio a cada lado y NO declara contencion en ninguna direccion. Con material propio declarado en los dos lados, la unica vara de contenido que no empata es la de las condiciones. Y LO QUE HACE LA ELECCION SOSTENIBLE ES EL REPARTO: los niveles 2 y 3 VIAJAN ENTEROS.",
+                "pasos": {
+                    "1": ["CUBIERTO", 1],
+                    "2": ["APPEND"],
+                    "3": ["APPEND"],
+                    "4": ["APPEND"],
+                },
+                "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"]},
+                "nota": "TRES DE LOS CUATRO PASOS DEL QUE MUERE VIAJAN ENTEROS, y son justo los que la razon le reconoce: las metricas de nivel 2 con sus cuatro ejemplos, el nivel 3 de diagnostico cuando hay desviacion, y vincular cada operacion con la categoria de desempeno que mas impacta. LA PROFUNDIDAD DE METRICA QUE LA RAZON LE RECONOCE AL QUE MUERE NO SE PIERDE: se muda entera al superviviente. CERO perdidas nombradas.",
+            },
+            {
+                "orden": 25,
+                "superviviente": "senales_de_compra_en_venta_grande",
+                "motivo": "LOS DOS CONTEOS DE CONTENIDO CHOCAN Y DECIDE LA PIEZA DECLARADA (acta 53, pregunta 3): los pasos apuntan a senales_de_compra_en_venta_grande (4 contra 3) y las condiciones al otro (2 contra 1), con el cableado empatado (2 contra 2). La pieza declarada la escribe el propio 346: el anadido del que muere (si solo hubo problemas, planear otra conversacion) es LA CONSECUENCIA PRACTICA DE LO QUE EL PRIMERO AVISA. Una consecuencia practica de un aviso ajeno no funda la cabeza: la funda el aviso.",
+                "pasos": {
+                    "1": ["CUBIERTO", 3],
+                    "2": ["CUBIERTO", 1],
+                    "3": ["APPEND"],
+                },
+                "condiciones": {"1": ["CUBIERTO", 1], "2": ["APPEND"]},
+                "nota": "LA CONSECUENCIA PRACTICA VIAJA ENTERA, que es lo que la hace ejecutable: el paso 3 del que muere (planear otra conversacion antes de asumir oportunidad real) es APPEND. Su condicion 2 (calificar de forma objetiva que tan avanzada esta cada oportunidad) tambien viaja entera. CERO perdidas nombradas.",
+            },
+            {
+                "orden": 26,
+                "superviviente": "analisis_de_cohortes",
+                "motivo": "CONTENIDO, LAS DOS VARAS DE ACUERDO: pasos 5 contra 4 y condiciones 3 contra 2, las dos hacia analisis_de_cohortes, con el cableado de acuerdo y con margen ancho (13 contra 3). La razon del 353 le reconoce al elegido detectar QUE CANAL TRAE CLIENTES MAS LEALES y disenar la retencion por cohorte problematica.",
+                "pasos": {
+                    "1": ["CUBIERTO", 1],
+                    "2": ["INCISO", 2, "registro, activación, retención, conversión", ", y también "],
+                    "3": ["CUBIERTO", 2],
+                    "4": ["CUBIERTO", 3],
+                },
+                "condiciones": {"1": ["CUBIERTO", 3], "2": ["APPEND"]},
+                "nota": "EL PASO 2 DEL QUE MUERE VA DE INCISO porque su unico contenido propio es OTRA LISTA DE COMPORTAMIENTOS para el mismo gesto que el paso 2 del superviviente ya manda. Su condicion 2 (evaluar el impacto real de cambios en el producto) viaja entera. CERO perdidas nombradas.",
+            },
+            {
+                "orden": 27,
+                "superviviente": "gestion_alucinaciones_ia",
+                "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO: pasos 4 contra 4, condiciones 2 contra 2, y la razon del 363 dice ES LA MISMA POLITICA, con un gesto propio para cada lado. El cableado apunta a gestion_alucinaciones_ia, 5 contra 2. NO es empate sin vara porque el cableado no empata.",
+                "pasos": {
+                    "1": ["CUBIERTO", 1],
+                    "2": ["CUBIERTO", 2],
+                    "3": ["APPEND"],
+                    "4": ["CUBIERTO", 1],
+                },
+                "condiciones": {"1": ["CUBIERTO", 1], "2": ["CUBIERTO", 2]},
+                "nota": "EL PASO 3 DEL QUE MUERE VIAJA ENTERO y es el gesto propio que la razon le reconoce: REPETIR LA PREGUNTA DE VARIAS FORMAS para cazar inconsistencias. Sus pasos 1 y 4 dicen los dos lo que el paso 1 del superviviente ya manda como POLITICA INTERNA (ningun dato de IA sin verificacion en fuente original). CERO perdidas nombradas.",
+            },
+        ],
+    },
     "A": {
         "titulo": "2, LOTE A DE LA VUELTA 54: los actos 2, 3, 5, 7, 8, 9, 10, 11, 12, 13 y 14 del tramo 2 (los ONCE primeros del tramo cuyo superviviente elige el contenido sin choque, sin puerta en juego y sin colision prevista)",
         "actos": [

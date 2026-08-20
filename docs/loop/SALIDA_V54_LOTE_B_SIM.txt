@@ -1,0 +1,313 @@
+==============================================================================
+OP-U-01, TRAMO 2, LOTE B DE LA VUELTA 54: los actos 16, 17, 19, 21, 22, 23, 24, 25, 26 y 27 del tramo 2 (los DIEZ siguientes sin puerta en juego y sin colision prevista, incluidos los TRES que el contenido empata y decide el cableado solo, y UNO de conteos que chocan con pieza declarada) . MODO SIMULAR
+plan: docs/loop/PLAN_V54_OPU01_LOTE_B.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3466 vivos, 387 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 16 . sobrevive produccion_scheduling_balance_objetivos . absorbe programacion_produccion
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 1 de programacion_produccion al PASO 2 del superviviente
+        inciso VERBATIM: 'balanceando costos de setup e inventario'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Calcular el lote económico de producción (economic lot size) para cada producto, balanceando costos de setup e inventario
+     del paso 2 de programacion_produccion al PASO 3 del superviviente
+        inciso VERBATIM: 'inventario disponible / demanda esperada'
+        nexo (lo unico de cosecha propia): ', que es '
+        paso resultante: Determinar la secuencia de producción usando el concepto de 'run-out time' (tiempo de agotamiento de inventario), que es inventario disponible / demanda esperada
+  alias del superviviente: ['programacion_produccion']
+
+------------------------------------------------------------------------------
+ACTO 17 . sobrevive social_ads_indirect_response . absorbe estrategia_anuncios_sociales_respuesta_indirecta
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['estrategia_anuncios_sociales_respuesta_indirecta']
+
+------------------------------------------------------------------------------
+ACTO 19 . sobrevive get_visual . absorbe pensamiento_visual
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de pensamiento_visual al PASO 1 del superviviente
+        inciso VERBATIM: 'una libreta de bocetos o herramienta digital equivalente'
+        nexo (lo unico de cosecha propia): ', o bien '
+        paso resultante: Mantener post-its, papel y lápices siempre a mano durante todo el proceso, o bien una libreta de bocetos o herramienta digital equivalente
+     del paso 2 de pensamiento_visual al PASO 2 del superviviente
+        inciso VERBATIM: 'mapas mentales o fotografías'
+        nexo (lo unico de cosecha propia): ', incluidos '
+        paso resultante: Dibujar, graficar o construir cualquier idea que surja, sin preocuparse por la calidad artística, incluidos mapas mentales o fotografías
+  alias del superviviente: ['pensamiento_visual']
+
+------------------------------------------------------------------------------
+ACTO 21 . sobrevive prototipado_de_experiencias . absorbe prototipado_experiencial_servicios
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de prototipado_experiencial_servicios al PASO 1 del superviviente
+        inciso VERBATIM: 'en un lugar de bajo costo'
+        nexo (lo unico de cosecha propia): ', y montarla '
+        paso resultante: Construir una maqueta física aproximada del espacio o servicio (ej. foam core), y montarla en un lugar de bajo costo
+  alias del superviviente: ['prototipado_experiencial_servicios']
+
+------------------------------------------------------------------------------
+ACTO 22 . sobrevive entender_term_sheet . absorbe term_sheet_overview
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 3 -> 4 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['term_sheet_overview']
+
+------------------------------------------------------------------------------
+ACTO 23 . sobrevive modelo_cascada_desarrollo_producto . absorbe modelo_tradicional_introduccion_producto
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  alias del superviviente: ['modelo_tradicional_introduccion_producto']
+
+------------------------------------------------------------------------------
+ACTO 24 . sobrevive scor_model_operaciones . absorbe framework_scor_plan_source_make_deliver
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 7 (anadidos 3) | condiciones 3 -> 4 (anadidas 1)
+  alias del superviviente: ['framework_scor_plan_source_make_deliver']
+
+------------------------------------------------------------------------------
+ACTO 25 . sobrevive senales_de_compra_en_venta_grande . absorbe senales_de_compra_reales
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 1 -> 2 (anadidas 1)
+  alias del superviviente: ['senales_de_compra_reales']
+
+------------------------------------------------------------------------------
+ACTO 26 . sobrevive analisis_de_cohortes . absorbe metricas_cohortes
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de metricas_cohortes al PASO 2 del superviviente
+        inciso VERBATIM: 'registro, activación, retención, conversión'
+        nexo (lo unico de cosecha propia): ', y también '
+        paso resultante: Mide el comportamiento de cada cohorte a lo largo del tiempo: frecuencia de uso, duración, gasto, y también registro, activación, retención, conversión
+  alias del superviviente: ['cohort_analysis_retencion', 'metricas_cohortes']
+
+------------------------------------------------------------------------------
+ACTO 27 . sobrevive gestion_alucinaciones_ia . absorbe deteccion_alucinaciones_ia
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  alias del superviviente: ['gestion_alucinaciones_ia_2', 'deteccion_alucinaciones_ia']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 31
+   business_intelligence_niveles_datos                  nodos_previos     framework_scor_plan_source_make_deliver -> scor_model_operaciones
+   butterfly_test_convergencia                          nodos_previos     pensamiento_visual -> get_visual
+   cierre_term_sheet                                    nodos_siguientes  term_sheet_overview -> entender_term_sheet
+   construir_sobre_ideas_ajenas                         nodos_previos     pensamiento_visual -> get_visual
+   creacion_contenido_compartible                       nodos_previos     estrategia_anuncios_sociales_respuesta_indirecta -> social_ads_indirect_response
+   customer_development_modelo                          nodos_previos     modelo_tradicional_introduccion_producto -> modelo_cascada_desarrollo_producto
+   customer_journey_mapping                             nodos_siguientes  prototipado_experiencial_servicios -> prototipado_de_experiencias
+   diseno_producto_cadena_suministro                    nodos_siguientes  programacion_produccion -> produccion_scheduling_balance_objetivos
+   espacios_de_diseno_superpuestos                      nodos_previos     prototipado_experiencial_servicios -> prototipado_de_experiencias
+   gestion_inventario                                   nodos_previos     programacion_produccion -> produccion_scheduling_balance_objetivos
+   get_visual                                           nodos_previos     pensamiento_visual -> get_visual
+   herramientas_online_canal_fisico                     nodos_siguientes  estrategia_anuncios_sociales_respuesta_indirecta -> social_ads_indirect_response
+   human_in_the_loop_ia                                 nodos_siguientes  deteccion_alucinaciones_ia -> gestion_alucinaciones_ia
+   investigacion_etnografica_ideacion                   nodos_siguientes  prototipado_experiencial_servicios -> prototipado_de_experiencias
+   mapeo_de_patrones                                    nodos_siguientes  pensamiento_visual -> get_visual
+   medicion_de_calidad_en_manufactura                   nodos_siguientes  framework_scor_plan_source_make_deliver -> scor_model_operaciones
+   metricas_accionables                                 nodos_siguientes  metricas_cohortes -> analisis_de_cohortes
+   metricas_servicio_cliente_bts_bto                    nodos_siguientes  framework_scor_plan_source_make_deliver -> scor_model_operaciones
+   necesidades_implicitas_vs_explicitas                 nodos_siguientes  senales_de_compra_reales -> senales_de_compra_en_venta_grande
+   observar_lo_ordinario                                nodos_siguientes  pensamiento_visual -> get_visual
+   pensamiento_convergente_divergente                   nodos_previos     pensamiento_visual -> get_visual
+   presales                                             nodos_previos     senales_de_compra_reales -> senales_de_compra_en_venta_grande
+   proceso_decision_vc                                  nodos_siguientes  term_sheet_overview -> entender_term_sheet
+   prototipado_en_lo_salvaje                            nodos_previos     prototipado_experiencial_servicios -> prototipado_de_experiencias
+   reglas_brainstorming                                 nodos_siguientes  pensamiento_visual -> get_visual
+   simulacion_clientes_ia                               nodos_previos     deteccion_alucinaciones_ia -> gestion_alucinaciones_ia
+   split_testing_experimentos_ab                        nodos_siguientes  metricas_cohortes -> analisis_de_cohortes
+   stage_gate_system                                    nodos_siguientes  modelo_tradicional_introduccion_producto -> modelo_cascada_desarrollo_producto
+   tres_as_de_metricas                                  nodos_previos     metricas_cohortes -> analisis_de_cohortes
+   tres_espacios_innovacion_prototipado                 nodos_siguientes  prototipado_experiencial_servicios -> prototipado_de_experiencias
+   valuacion_pre_post_money                             nodos_previos     term_sheet_overview -> entender_term_sheet
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 5
+   brainstorming_efectivo                               nodos_siguientes  pensamiento_visual (registro historico)
+   generar_multiples_opciones                           nodos_previos     pensamiento_visual (registro historico)
+   proceso_diligencia_vc                                nodos_siguientes  term_sheet_overview (registro historico)
+   tres_espacios_innovacion                             nodos_previos     prototipado_experiencial_servicios (registro historico)
+   vanity_metrics_vs_accionables                        nodos_siguientes  metricas_cohortes (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 3
+   customer_journey_mapping                             nodos_siguientes
+   necesidades_implicitas_vs_explicitas                 nodos_siguientes
+   reglas_brainstorming                                 nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   get_visual                                           nodos_previos
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 979   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 977   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 2, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 50 de 50
+guarda D, los 10 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (57 filas)
+ acto de que nodo                                  que          n  a donde va
+   16 programacion_produccion                      paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Calcular el tamaño de lote económico para cada producto balanceando costos de setup e inventario
+   16 programacion_produccion                      paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Calcular el run-out time de cada producto (inventario disponible / demanda esperada)
+   16 programacion_produccion                      paso         3  ya lo dice el PASO 3 del superviviente
+        Priorizar la secuencia de producción según menor run-out time relativo
+   16 programacion_produccion                      paso         4  ya lo dice el PASO 4 del superviviente
+        Ajustar la programación para balancear utilización, inventario y servicio al cliente
+   16 programacion_produccion                      condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando se fabrican múltiples productos en una misma línea o instalación
+   16 programacion_produccion                      condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando se busca optimizar el balance entre inventario y costos de producción
+   17 estrategia_anuncios_sociales_respuesta_indirecta paso         1  ya lo dice el PASO 1 del superviviente
+        Definir el objetivo del anuncio social como awareness, no como conversión inmediata
+   17 estrategia_anuncios_sociales_respuesta_indirecta paso         2  ya lo dice el PASO 2 del superviviente
+        Crear contenido que genere afinidad con la marca antes de pedir una acción
+   17 estrategia_anuncios_sociales_respuesta_indirecta paso         3  ya lo dice el PASO 4 del superviviente
+        Construir audiencia y engagement a lo largo del tiempo
+   17 estrategia_anuncios_sociales_respuesta_indirecta paso         4  PASO 6 del superviviente
+        Migrar gradualmente a esa audiencia hacia un objetivo de conversión (compra, registro, uso)
+   17 estrategia_anuncios_sociales_respuesta_indirecta condicion    1  CONDICION 3 del superviviente
+        Cuando el usuario busca traction vía redes sociales
+   17 estrategia_anuncios_sociales_respuesta_indirecta condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si el producto es nuevo y desconocido para la audiencia objetivo
+   19 pensamiento_visual                           paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Llevar siempre una libreta de bocetos o herramienta digital equivalente.
+   19 pensamiento_visual                           paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Traducir ideas y observaciones en dibujos rápidos, mapas mentales o fotografías.
+   19 pensamiento_visual                           paso         3  ya lo dice el PASO 3 del superviviente
+        Usar estas imágenes como base para compartir y desarrollar ideas con el equipo.
+   19 pensamiento_visual                           condicion    1  CONDICION 3 del superviviente
+        Al documentar hallazgos de investigación
+   19 pensamiento_visual                           condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Al comunicar ideas complejas a un equipo o cliente
+   21 prototipado_experiencial_servicios           paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Construir un mock-up a escala real del espacio de servicio (ej: con foam core) en un lugar de bajo costo.
+   21 prototipado_experiencial_servicios           paso         2  ya lo dice el PASO 2 del superviviente
+        Invitar a diseñadores, clientes y stakeholders a actuar diferentes escenarios de uso dentro del prototipo.
+   21 prototipado_experiencial_servicios           paso         3  ya lo dice el PASO 3 del superviviente
+        Usar Post-its para que los visitantes sugieran cambios directamente sobre el prototipo.
+   21 prototipado_experiencial_servicios           paso         4  ya lo dice el PASO 4 del superviviente
+        Entrenar al equipo en técnicas de improvisación teatral para sentirse cómodos actuando ideas.
+   21 prototipado_experiencial_servicios           paso         5  ya lo dice el PASO 3 del superviviente
+        Documentar los insights emocionales y funcionales que surgen de la actuación en vivo.
+   21 prototipado_experiencial_servicios           condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el proyecto involucra una experiencia de servicio compleja (hotelería, salud, atención al cliente).
+   21 prototipado_experiencial_servicios           condicion    2  CONDICION 3 del superviviente
+        Cuando las encuestas tradicionales no logran capturar la dimensión emocional/social de la experiencia.
+   22 term_sheet_overview                          paso         1  ya lo dice el PASO 1 del superviviente
+        Clasificar cada cláusula del term sheet como relacionada a 'economía' o 'control'.
+   22 term_sheet_overview                          paso         2  PASO 4 del superviviente
+        Identificar cláusulas que no afectan ni economía ni control (posibles tácticas de distracción).
+   22 term_sheet_overview                          paso         3  ya lo dice el PASO 2 del superviviente
+        Priorizar la negociación en los términos que impactan retorno financiero y poder de decisión.
+   22 term_sheet_overview                          condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el usuario recibe su primer term sheet y no sabe qué cláusulas priorizar.
+   23 modelo_tradicional_introduccion_producto     paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar si tu equipo está usando un proceso waterfall rígido de especificación-desarrollo-lanzamiento
+   23 modelo_tradicional_introduccion_producto     paso         2  ya lo dice el PASO 3 del superviviente
+        Evaluar si las especificaciones del producto se basan en suposiciones no validadas
+   23 modelo_tradicional_introduccion_producto     paso         3  PASO 5 del superviviente
+        Reemplazar los hitos rígidos de este modelo por ciclos iterativos de aprendizaje validado
+   23 modelo_tradicional_introduccion_producto     paso         4  PASO 6 del superviviente
+        Evitar contratar estructuras organizacionales (VP Ventas, equipos completos) antes de validar el modelo de negocio
+   23 modelo_tradicional_introduccion_producto     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el equipo está usando un plan de negocio y cronograma de lanzamiento rígido sin haber hablado con clientes
+   23 modelo_tradicional_introduccion_producto     condicion    2  CONDICION 3 del superviviente
+        Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar
+   24 framework_scor_plan_source_make_deliver      paso         1  ya lo dice el PASO 1 del superviviente
+        Mapear las actividades de tu cadena de suministro en las cuatro categorías: Plan, Source, Make, Deliver
+   24 framework_scor_plan_source_make_deliver      paso         2  PASO 5 del superviviente
+        Definir métricas de nivel 2 para cada categoría (ej. costo de planificación, tiempo de ciclo de abastecimiento, defectos de producto, tasa de retorno)
+   24 framework_scor_plan_source_make_deliver      paso         3  PASO 6 del superviviente
+        Cuando se detecten desviaciones, profundizar con métricas de diagnóstico de nivel 3
+   24 framework_scor_plan_source_make_deliver      paso         4  PASO 7 del superviviente
+        Vincular cada operación con la categoría de desempeño que más impacta (servicio, eficiencia, flexibilidad, desarrollo)
+   24 framework_scor_plan_source_make_deliver      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando la empresa necesita estructurar su operación de cadena de suministro de forma sistemática
+   24 framework_scor_plan_source_make_deliver      condicion    2  CONDICION 4 del superviviente
+        Si hay problemas recurrentes sin causa raíz identificada
+   25 senales_de_compra_reales                     paso         1  ya lo dice el PASO 3 del superviviente
+        Durante y después de cada reunión de ventas, clasifica lo que dijo el cliente: ¿mencionó solo problemas o habló de acciones futuras concretas?
+   25 senales_de_compra_reales                     paso         2  ya lo dice el PASO 1 del superviviente
+        No declares una conversación como buena solo porque el cliente reconoció problemas; espera que hable de acciones.
+   25 senales_de_compra_reales                     paso         3  PASO 5 del superviviente
+        Si solo hay problemas mencionados, planea otra conversación para profundizar antes de asumir que hay una oportunidad real de venta.
+   25 senales_de_compra_reales                     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando estás sobreestimando la probabilidad de cerrar una venta basándote en señales débiles.
+   25 senales_de_compra_reales                     condicion    2  CONDICION 2 del superviviente
+        Cuando necesitas calificar de forma objetiva qué tan avanzada está cada oportunidad en tu proceso de ventas.
+   26 metricas_cohortes                            paso         1  ya lo dice el PASO 1 del superviviente
+        Definir un periodo de tiempo para agrupar usuarios (cohortes) según su fecha de ingreso
+   26 metricas_cohortes                            paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar comportamientos clave a medir (registro, activación, retención, conversión)
+   26 metricas_cohortes                            paso         3  ya lo dice el PASO 2 del superviviente
+        Medir el porcentaje de cada cohorte que cumple cada comportamiento
+   26 metricas_cohortes                            paso         4  ya lo dice el PASO 3 del superviviente
+        Comparar cohortes a lo largo del tiempo para ver si las mejoras del producto generan cambios reales
+   26 metricas_cohortes                            condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Si las métricas totales (vanity metrics) suben pero no se sabe la causa real
+   26 metricas_cohortes                            condicion    2  CONDICION 4 del superviviente
+        Si se necesita evaluar el impacto real de cambios en el producto sobre el comportamiento del usuario
+   27 deteccion_alucinaciones_ia                   paso         1  ya lo dice el PASO 1 del superviviente
+        Contrastar toda cifra, cita o dato generado por IA con una fuente primaria verificable
+   27 deteccion_alucinaciones_ia                   paso         2  ya lo dice el PASO 2 del superviviente
+        Pedir a la IA que cite sus fuentes y verificar que existan realmente
+   27 deteccion_alucinaciones_ia                   paso         3  PASO 5 del superviviente
+        Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas
+   27 deteccion_alucinaciones_ia                   paso         4  ya lo dice el PASO 1 del superviviente
+        Nunca usar output de IA sin verificación en documentos legales, financieros o contractuales
+   27 deteccion_alucinaciones_ia                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se usa IA para investigación de mercado, redacción de propuestas o análisis de datos
+   27 deteccion_alucinaciones_ia                   condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si el usuario detecta información sospechosamente precisa pero sin fuente clara
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 10
+  nodos implicados    : 20
+  nodos que MUEREN    : 10
+  piezas repartidas   : 57 (16 viajan enteras, 35 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.

@@ -8,7 +8,8 @@
   "pasos_accionables": [
     "Antes de negociar, identificar qué cláusulas del term sheet afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)",
     "Priorizar la negociación en estos dos ejes y no distraerse con cláusulas secundarias",
-    "Solicitar asesoría legal especializada en VC para revisar el documento completo"
+    "Solicitar asesoría legal especializada en VC para revisar el documento completo",
+    "Identificar cláusulas que no afectan ni economía ni control (posibles tácticas de distracción)."
   ],
   "entregable_esperado": "Checklist personal de términos de economía y control identificados antes de firmar cualquier term sheet",
   "nodos_previos": [
@@ -16,14 +17,27 @@
     "gestion_angel_investors",
     "jerarquia_firma_vc",
     "gestion_sindicato_inversores",
-    "seleccion_abogado_venture"
+    "seleccion_abogado_venture",
+    "cierre_term_sheet",
+    "proceso_decision_vc"
   ],
   "nodos_siguientes": [
-    "control_del_board_startup"
+    "control_del_board_startup",
+    "valuacion_pre_post_money"
   ],
   "condiciones_activacion": [
     "Cuando el emprendedor recibe una oferta de inversión de capital de riesgo",
     "Cuando se prepara para negociar una ronda de financiamiento"
   ],
-  "etiqueta_arbol": "Domina tu Term Sheet"
+  "etiqueta_arbol": "Domina tu Term Sheet",
+  "ids_alias": [
+    "term_sheet_overview"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "term_sheet_overview",
+      "titulo": "Economía y Control en el Term Sheet",
+      "fuente": "Venture Deals - Brad Feld"
+    }
+  ]
 }

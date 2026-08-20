@@ -9,20 +9,37 @@
     "Mapear las operaciones actuales de tu empresa según las categorías Plan-Source-Make-Deliver (y Return/Enable si aplica)",
     "Definir métricas KPI de nivel 1 para cada categoría (confiabilidad, agilidad, costo)",
     "Comparar (benchmark) tu desempeño contra estándares de la industria",
-    "Identificar cuellos de botella u operaciones no optimizadas usando el marco común"
+    "Identificar cuellos de botella u operaciones no optimizadas usando el marco común",
+    "Definir métricas de nivel 2 para cada categoría (ej. costo de planificación, tiempo de ciclo de abastecimiento, defectos de producto, tasa de retorno)",
+    "Cuando se detecten desviaciones, profundizar con métricas de diagnóstico de nivel 3",
+    "Vincular cada operación con la categoría de desempeño que más impacta (servicio, eficiencia, flexibilidad, desarrollo)"
   ],
   "entregable_esperado": "Mapa de procesos de cadena de suministro clasificado bajo el modelo SCOR con métricas base definidas",
   "nodos_previos": [
-    "lienzo_modelo_negocio"
+    "lienzo_modelo_negocio",
+    "medicion_de_calidad_en_manufactura",
+    "metricas_servicio_cliente_bts_bto"
   ],
   "nodos_siguientes": [
     "planificacion_cadena_suministro",
-    "pronostico_de_demanda_variables"
+    "pronostico_de_demanda_variables",
+    "business_intelligence_niveles_datos"
   ],
   "condiciones_activacion": [
     "Cuando la empresa ya tiene operaciones activas y necesita evaluarlas sistemáticamente",
     "Si se busca comparar desempeño contra competidores o estándares de industria",
-    "Cuando se planea escalar operaciones y se requiere un lenguaje común entre equipos"
+    "Cuando se planea escalar operaciones y se requiere un lenguaje común entre equipos",
+    "Si hay problemas recurrentes sin causa raíz identificada"
   ],
-  "etiqueta_arbol": "Estandariza tu Desempeño Logístico"
+  "etiqueta_arbol": "Estandariza tu Desempeño Logístico",
+  "ids_alias": [
+    "framework_scor_plan_source_make_deliver"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "framework_scor_plan_source_make_deliver",
+      "titulo": "Framework SCOR: Plan, Source, Make, Deliver",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }

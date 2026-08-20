@@ -9,7 +9,8 @@
     "No celebres antes de tiempo cuando tu cliente menciona problemas: eso es solo materia prima, no una venta",
     "Escucha con atención las frases donde tu cliente dice qué va a hacer o qué busca ('vamos a...', 'buscamos un sistema con...'): esas sí son señales de compra reales",
     "Distingue entre que no haya problemas (mala señal) y que sí los haya (señal insuficiente por sí sola): ninguna de las dos te dice que vas a cerrar la venta",
-    "Espera a escuchar necesidades explícitas claras antes de decidir si la conversación fue un éxito"
+    "Espera a escuchar necesidades explícitas claras antes de decidir si la conversación fue un éxito",
+    "Si solo hay problemas mencionados, planea otra conversación para profundizar antes de asumir que hay una oportunidad real de venta."
   ],
   "entregable_esperado": "Un criterio claro y por escrito para reconocer cuáles son señales de compra reales y cuáles no, que puedas usar tú y quien te ayude en ventas en cada conversación",
   "nodos_previos": [
@@ -17,10 +18,22 @@
   ],
   "nodos_siguientes": [
     "gestion_de_quejas_y_fidelizacion",
-    "sistema_manejo_quejas"
+    "sistema_manejo_quejas",
+    "presales"
   ],
   "condiciones_activacion": [
-    "Cuando tú o quien te ayuda en ventas confunden el interés superficial de un cliente con una intención real de compra, en procesos de venta largos"
+    "Cuando tú o quien te ayuda en ventas confunden el interés superficial de un cliente con una intención real de compra, en procesos de venta largos",
+    "Cuando necesitas calificar de forma objetiva qué tan avanzada está cada oportunidad en tu proceso de ventas."
   ],
-  "etiqueta_arbol": "Distingue Señales Reales de Compra"
+  "etiqueta_arbol": "Distingue Señales Reales de Compra",
+  "ids_alias": [
+    "senales_de_compra_reales"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "senales_de_compra_reales",
+      "titulo": "Señales de Compra Reales vs Falsas",
+      "fuente": "SPIN Selling - Neil Rackham"
+    }
+  ]
 }

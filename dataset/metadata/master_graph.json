@@ -3538,7 +3538,7 @@
       "resumen_teorico": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo, como ocurre al comparar clientes en prueba gratis versus quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
       "pasos_accionables": [
         "Agrupa tus usuarios según un atributo relevante: fuente de referencia, fecha de activación o tipo de oferta aceptada",
-        "Mide el comportamiento de cada cohorte a lo largo del tiempo: frecuencia de uso, duración, gasto",
+        "Mide el comportamiento de cada cohorte a lo largo del tiempo: frecuencia de uso, duración, gasto, y también registro, activación, retención, conversión",
         "Compara las cohortes entre sí para detectar patrones de abandono y señales de alerta temprana",
         "Determina si algún canal de adquisición te está trayendo clientes más leales que otros",
         "Diseña y ajusta tus estrategias de retención según los hallazgos de cada cohorte problemática"
@@ -3547,7 +3547,9 @@
       "nodos_previos": [
         "plan_de_adquisicion_acquire",
         "funnel_get_customers_optimizacion",
-        "ab_testing_optimizacion"
+        "ab_testing_optimizacion",
+        "metricas_accionables",
+        "split_testing_experimentos_ab"
       ],
       "nodos_siguientes": [
         "optimizacion_metricas_crecimiento",
@@ -3559,22 +3561,30 @@
         "preguntas_situacion",
         "optimizacion_keep_retencion",
         "hablar_con_clientes_desmontar_supuestos",
-        "war_room_pivot_proceed"
+        "war_room_pivot_proceed",
+        "tres_as_de_metricas"
       ],
       "condiciones_activacion": [
         "Cuando ya tienes al menos varios miles de clientes para poder segmentar con sentido",
         "Cuando necesitas mejorar la retención de tus usuarios",
-        "Cuando tus métricas de retención promedio parecen saludables pero sospechas que ocultan problemas en ciertos grupos"
+        "Cuando tus métricas de retención promedio parecen saludables pero sospechas que ocultan problemas en ciertos grupos",
+        "Si se necesita evaluar el impacto real de cambios en el producto sobre el comportamiento del usuario"
       ],
       "etiqueta_arbol": "Agrupa Clientes por Cohortes",
       "ids_alias": [
-        "cohort_analysis_retencion"
+        "cohort_analysis_retencion",
+        "metricas_cohortes"
       ],
       "merged_originals": [
         {
           "node_id": "cohort_analysis_retencion",
           "titulo": "Análisis de Cohortes para Retención de Clientes",
           "fuente": "The Startup Owner's Manual - Steve Blank"
+        },
+        {
+          "node_id": "metricas_cohortes",
+          "titulo": "Métricas de Cohortes (Cohort-Based Metrics)",
+          "fuente": "The Lean Startup - Eric Ries"
         }
       ]
     },
@@ -9414,7 +9424,7 @@
       ],
       "entregable_esperado": "Un sistema de reportes y paneles (dashboards) organizado en tres niveles (estratégico, operativo, táctico) conectado a un almacén de datos (data warehouse)",
       "nodos_previos": [
-        "framework_scor_plan_source_make_deliver"
+        "scor_model_operaciones"
       ],
       "nodos_siguientes": [
         "fundamentos_inteligencia_financiera"
@@ -9838,7 +9848,7 @@
       "entregable_esperado": "Lista reducida y priorizada de ideas seleccionadas por consenso grupal para avanzar a prototipado",
       "nodos_previos": [
         "reglas_brainstorming",
-        "pensamiento_visual"
+        "get_visual"
       ],
       "nodos_siguientes": [
         "prototipado_rapido",
@@ -14091,7 +14101,7 @@
         "mercado_de_uno_fundraising"
       ],
       "nodos_siguientes": [
-        "term_sheet_overview",
+        "entender_term_sheet",
         "preparacion_due_diligence",
         "company_building"
       ],
@@ -19927,7 +19937,7 @@
       ],
       "entregable_esperado": "Un repositorio de ideas compartido y en evolución continua accesible a todo el equipo.",
       "nodos_previos": [
-        "pensamiento_visual",
+        "get_visual",
         "asociacion_de_ideas",
         "reglas_brainstorming"
       ],
@@ -23546,7 +23556,7 @@
       ],
       "entregable_esperado": "Pieza de contenido validada orgánicamente lista para amplificación paga",
       "nodos_previos": [
-        "estrategia_anuncios_sociales_respuesta_indirecta",
+        "social_ads_indirect_response",
         "content_marketing_blog"
       ],
       "nodos_siguientes": [
@@ -27035,7 +27045,7 @@
       "entregable_esperado": "Un registro de conversaciones con clientes, hechas de forma repetida, que te confirme o te tumbe las hipótesis con las que arrancaste",
       "nodos_previos": [
         "definicion_startup_busqueda_modelo_negocio",
-        "modelo_tradicional_introduccion_producto",
+        "modelo_cascada_desarrollo_producto",
         "tipos_de_riesgo_invencion_vs_mercado",
         "search_for_business_model"
       ],
@@ -27487,7 +27497,6 @@
         "prototipado_de_experiencias",
         "co_creation_session",
         "economia_de_la_experiencia",
-        "prototipado_experiencial_servicios",
         "rediseno_procesos_negocio_cx",
         "investigar_datos_cliente",
         "silla_vacia_del_cliente_en_decisiones",
@@ -32923,7 +32932,8 @@
         "Cuando se usa IA para investigación de mercado, redacción de propuestas o análisis de datos",
         "Si el usuario detecta información sospechosamente precisa pero sin fuente clara"
       ],
-      "etiqueta_arbol": "Detecta cuando la IA Inventa"
+      "etiqueta_arbol": "Detecta cuando la IA Inventa",
+      "deprecado": true
     },
     "deteccion_de_lideres_y_rezagados": {
       "node_id": "deteccion_de_lideres_y_rezagados",
@@ -36572,7 +36582,7 @@
         "etapa_development"
       ],
       "nodos_siguientes": [
-        "programacion_produccion",
+        "produccion_scheduling_balance_objetivos",
         "adaptacion_producto_mercado_exterior",
         "disenar_empaque_logistica"
       ],
@@ -42893,7 +42903,8 @@
       "pasos_accionables": [
         "Antes de negociar, identificar qué cláusulas del term sheet afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)",
         "Priorizar la negociación en estos dos ejes y no distraerse con cláusulas secundarias",
-        "Solicitar asesoría legal especializada en VC para revisar el documento completo"
+        "Solicitar asesoría legal especializada en VC para revisar el documento completo",
+        "Identificar cláusulas que no afectan ni economía ni control (posibles tácticas de distracción)."
       ],
       "entregable_esperado": "Checklist personal de términos de economía y control identificados antes de firmar cualquier term sheet",
       "nodos_previos": [
@@ -42901,16 +42912,29 @@
         "gestion_angel_investors",
         "jerarquia_firma_vc",
         "gestion_sindicato_inversores",
-        "seleccion_abogado_venture"
+        "seleccion_abogado_venture",
+        "cierre_term_sheet",
+        "proceso_decision_vc"
       ],
       "nodos_siguientes": [
-        "control_del_board_startup"
+        "control_del_board_startup",
+        "valuacion_pre_post_money"
       ],
       "condiciones_activacion": [
         "Cuando el emprendedor recibe una oferta de inversión de capital de riesgo",
         "Cuando se prepara para negociar una ronda de financiamiento"
       ],
-      "etiqueta_arbol": "Domina tu Term Sheet"
+      "etiqueta_arbol": "Domina tu Term Sheet",
+      "ids_alias": [
+        "term_sheet_overview"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "term_sheet_overview",
+          "titulo": "Economía y Control en el Term Sheet",
+          "fuente": "Venture Deals - Brad Feld"
+        }
+      ]
     },
     "entendiendo_balance_general_basico": {
       "node_id": "entendiendo_balance_general_basico",
@@ -44919,7 +44943,7 @@
       "nodos_previos": [
         "colaboracion_creador_consumidor",
         "investigacion_etnografica_ideacion",
-        "prototipado_experiencial_servicios",
+        "prototipado_de_experiencias",
         "storytelling_modelo_negocio"
       ],
       "nodos_siguientes": [
@@ -46499,7 +46523,8 @@
         "Cuando el usuario busca traction vía redes sociales",
         "Si el producto es nuevo y desconocido para la audiencia objetivo"
       ],
-      "etiqueta_arbol": "Construye Audiencia Antes de Vender"
+      "etiqueta_arbol": "Construye Audiencia Antes de Vender",
+      "deprecado": true
     },
     "estrategia_captura_mercado_crecimiento": {
       "node_id": "estrategia_captura_mercado_crecimiento",
@@ -55548,7 +55573,8 @@
         "Cuando la empresa necesita estructurar su operación de cadena de suministro de forma sistemática",
         "Si hay problemas recurrentes sin causa raíz identificada"
       ],
-      "etiqueta_arbol": "Ordena tu Cadena de Suministro"
+      "etiqueta_arbol": "Ordena tu Cadena de Suministro",
+      "deprecado": true
     },
     "framework_spin_selling": {
       "node_id": "framework_spin_selling",
@@ -57132,27 +57158,38 @@
         "Establecer como política interna que ningún dato, cifra o cita generado por IA se use en documentos externos (pitch decks, reportes, contratos) sin verificación humana en fuente original.",
         "Pedir a la IA que cite fuentes verificables y luego contrastar manualmente esas fuentes.",
         "Usar la IA para generar borradores o hipótesis, nunca como fuente final de verdad.",
-        "Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza."
+        "Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza.",
+        "Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas"
       ],
       "entregable_esperado": "Un protocolo de verificación de contenido generado por IA antes de su uso en decisiones de negocio o comunicaciones externas.",
       "nodos_previos": [
         "prompting_por_persona_ia",
         "automatizacion_software_gestion_innovacion",
-        "ia_generacion_ideas_negocio"
+        "ia_generacion_ideas_negocio",
+        "human_in_the_loop_ia"
       ],
       "nodos_siguientes": [
         "introduccion_validacion_clientes",
         "ia_generacion_ideas_negocio",
-        "ia_colaborador_productividad"
+        "ia_colaborador_productividad",
+        "simulacion_clientes_ia"
       ],
       "condiciones_activacion": [
         "Cuando el equipo usa IA para generar informes, datos de mercado o contenido que será presentado a terceros (inversionistas, clientes, reguladores).",
         "Si se detectan inconsistencias entre lo que la IA afirma y la realidad verificable."
       ],
       "ids_alias": [
-        "gestion_alucinaciones_ia_2"
+        "gestion_alucinaciones_ia_2",
+        "deteccion_alucinaciones_ia"
       ],
-      "etiqueta_arbol": "Verifica lo que Dice la IA"
+      "etiqueta_arbol": "Verifica lo que Dice la IA",
+      "merged_originals": [
+        {
+          "node_id": "deteccion_alucinaciones_ia",
+          "titulo": "Detección y Manejo de Alucinaciones de IA",
+          "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+        }
+      ]
     },
     "gestion_angel_investors": {
       "node_id": "gestion_angel_investors",
@@ -58374,7 +58411,7 @@
         "clasificacion_mercados_cadena_suministro",
         "metodos_de_pronostico",
         "metricas_servicio_cliente_bts_bto",
-        "programacion_produccion"
+        "produccion_scheduling_balance_objetivos"
       ],
       "nodos_siguientes": [
         "ciclo_de_conversion_de_efectivo",
@@ -59463,27 +59500,42 @@
       "fuente": "The field guide to human-centered design",
       "resumen_teorico": "Incorporar dibujo, escultura y construcción durante la ideación para desbloquear soluciones innovadoras. Hacer las ideas tangibles mediante representaciones visuales ayuda a clarificar el pensamiento propio y facilita que el equipo entienda y construya sobre las ideas de otros, incluso con dibujos de baja resolución.",
       "pasos_accionables": [
-        "Mantener post-its, papel y lápices siempre a mano durante todo el proceso",
-        "Dibujar, graficar o construir cualquier idea que surja, sin preocuparse por la calidad artística",
+        "Mantener post-its, papel y lápices siempre a mano durante todo el proceso, o bien una libreta de bocetos o herramienta digital equivalente",
+        "Dibujar, graficar o construir cualquier idea que surja, sin preocuparse por la calidad artística, incluidos mapas mentales o fotografías",
         "Explicar los dibujos al equipo para complementar la comunicación visual",
         "Si cuesta explicar una idea verbalmente, intentar dibujarla para clarificarla"
       ],
       "entregable_esperado": "Representaciones visuales (dibujos, esquemas, maquetas) de las ideas clave del equipo",
       "nodos_previos": [
         "reglas_brainstorming",
-        "pensamiento_visual",
-        "gamificacion_onboarding_visual"
+        "gamificacion_onboarding_visual",
+        "mapeo_de_patrones",
+        "observar_lo_ordinario"
       ],
       "nodos_siguientes": [
         "storyboard",
         "create_a_concept",
-        "diseno_activismo_social"
+        "diseno_activismo_social",
+        "butterfly_test_convergencia",
+        "construir_sobre_ideas_ajenas",
+        "pensamiento_convergente_divergente"
       ],
       "condiciones_activacion": [
         "Cuando el equipo tiene dificultad para comunicar o entender una idea abstracta",
-        "Si se necesita cuantificar o visualizar datos cualitativos de forma más intuitiva (ej. proporciones)"
+        "Si se necesita cuantificar o visualizar datos cualitativos de forma más intuitiva (ej. proporciones)",
+        "Al documentar hallazgos de investigación"
       ],
-      "etiqueta_arbol": "Dibuja tus Ideas Primero"
+      "etiqueta_arbol": "Dibuja tus Ideas Primero",
+      "ids_alias": [
+        "pensamiento_visual"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "pensamiento_visual",
+          "titulo": "Hacerlo Visual (Make It Visual)",
+          "fuente": "Change by Design"
+        }
+      ]
     },
     "getting_started_incident_response": {
       "node_id": "getting_started_incident_response",
@@ -61323,7 +61375,7 @@
       ],
       "nodos_siguientes": [
         "plan_de_adquisicion_acquire",
-        "estrategia_anuncios_sociales_respuesta_indirecta",
+        "social_ads_indirect_response",
         "tracking_publicidad_offline",
         "decidir_vender_solo_online_o_tambien_tienda_fisica"
       ],
@@ -62371,7 +62423,7 @@
         "oficina_digital_sin_papel_2"
       ],
       "nodos_siguientes": [
-        "deteccion_alucinaciones_ia",
+        "gestion_alucinaciones_ia",
         "ingenieria_de_prompts_efectiva",
         "construccion_experticia_era_ia",
         "principio_mejora_continua_ia"
@@ -66384,7 +66436,7 @@
         "customer_journey_mapping",
         "diseno_basado_en_comportamientos_existentes",
         "metodologia_deep_dive",
-        "prototipado_experiencial_servicios",
+        "prototipado_de_experiencias",
         "reformular_problema_mas_alla_del_producto",
         "sintesis_de_insights_en_principios_de_diseno",
         "tecnica_perder_objeto",
@@ -71233,7 +71285,7 @@
       "nodos_siguientes": [
         "pensamiento_espacial_mapeo",
         "pensamiento_serial_vs_espacial",
-        "pensamiento_visual"
+        "get_visual"
       ],
       "condiciones_activacion": [
         "Si el equipo solo ha analizado el problema de una manera (ej: solo con datos cuantitativos).",
@@ -72532,7 +72584,7 @@
       ],
       "nodos_siguientes": [
         "enfoque_mejora_continua_operaciones",
-        "framework_scor_plan_source_make_deliver",
+        "scor_model_operaciones",
         "mejora_continua_operaciones"
       ],
       "condiciones_activacion": [
@@ -74560,7 +74612,7 @@
         "motor_de_crecimiento",
         "reunion_pivotar_o_perseverar",
         "riesgo_no_pivotar_a_tiempo",
-        "metricas_cohortes",
+        "analisis_de_cohortes",
         "split_testing_experimentos_ab"
       ],
       "condiciones_activacion": [
@@ -74633,7 +74685,8 @@
         "Si las métricas totales (vanity metrics) suben pero no se sabe la causa real",
         "Si se necesita evaluar el impacto real de cambios en el producto sobre el comportamiento del usuario"
       ],
-      "etiqueta_arbol": "Analiza tus Clientes por Grupos"
+      "etiqueta_arbol": "Analiza tus Clientes por Grupos",
+      "deprecado": true
     },
     "metricas_como_validacion_cuantitativa": {
       "node_id": "metricas_como_validacion_cuantitativa",
@@ -74867,7 +74920,7 @@
       ],
       "nodos_siguientes": [
         "gestion_inventario",
-        "framework_scor_plan_source_make_deliver"
+        "scor_model_operaciones"
       ],
       "condiciones_activacion": [
         "Cuando el usuario gestiona inventario o pedidos personalizados",
@@ -75719,24 +75772,39 @@
         "Identificar si tu startup está usando este modelo por defecto (heredado de grandes empresas).",
         "Reconocer las 4 etapas: Concepto, Desarrollo, Alpha/Beta, Lanzamiento.",
         "Evaluar si el mercado y el cliente son realmente 'conocidos' o son solo hipótesis.",
-        "Detener la ejecución ciega si no hay contacto continuo con el cliente."
+        "Detener la ejecución ciega si no hay contacto continuo con el cliente.",
+        "Reemplazar los hitos rígidos de este modelo por ciclos iterativos de aprendizaje validado",
+        "Evitar contratar estructuras organizacionales (VP Ventas, equipos completos) antes de validar el modelo de negocio"
       ],
       "entregable_esperado": "Un diagnóstico claro de si el proyecto está operando bajo supuestos no validados (modo ejecución) en lugar de modo búsqueda.",
       "nodos_previos": [
         "build_measure_learn",
-        "curva_atricion_optima"
+        "curva_atricion_optima",
+        "stage_gate_system"
       ],
       "nodos_siguientes": [
         "desarrollo_de_clientes_customer_development",
         "startup_como_busqueda_vs_ejecucion",
         "nueve_pecados_capitales_lanzamiento",
-        "search_for_business_model"
+        "search_for_business_model",
+        "customer_development_modelo"
       ],
       "condiciones_activacion": [
         "Si el equipo está construyendo un producto completo antes de hablar con clientes.",
-        "Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback."
+        "Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback.",
+        "Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar"
       ],
-      "etiqueta_arbol": "Evita el Modelo Lineal Tradicional"
+      "etiqueta_arbol": "Evita el Modelo Lineal Tradicional",
+      "ids_alias": [
+        "modelo_tradicional_introduccion_producto"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "modelo_tradicional_introduccion_producto",
+          "titulo": "El Modelo Tradicional de Introducción de Nuevos Productos (Anti-patrón)",
+          "fuente": "The Startup Owner's Manual - Blank, Steve"
+        }
+      ]
     },
     "modelo_contingencia_riesgo": {
       "node_id": "modelo_contingencia_riesgo",
@@ -76493,7 +76561,8 @@
         "Cuando el equipo está usando un plan de negocio y cronograma de lanzamiento rígido sin haber hablado con clientes",
         "Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar"
       ],
-      "etiqueta_arbol": "Evita el Viejo Modelo en Cascada"
+      "etiqueta_arbol": "Evita el Viejo Modelo en Cascada",
+      "deprecado": true
     },
     "modelo_transformacion_juran": {
       "node_id": "modelo_transformacion_juran",
@@ -77769,8 +77838,7 @@
         "preguntas_implicacion",
         "preguntas_beneficio",
         "preguntas_need_payoff",
-        "senales_de_compra_en_venta_grande",
-        "senales_de_compra_reales"
+        "senales_de_compra_en_venta_grande"
       ],
       "condiciones_activacion": [
         "Cuando el usuario vende soluciones complejas o de alto valor y necesita diferenciar entre quejas superficiales y necesidades reales de compra"
@@ -79013,7 +79081,7 @@
         "preguntar_por_que_no_que"
       ],
       "nodos_siguientes": [
-        "pensamiento_visual",
+        "get_visual",
         "llamar_lo_que_falta"
       ],
       "condiciones_activacion": [
@@ -81688,7 +81756,7 @@
         "usuarios_extremos_insights",
         "analisis_y_sintesis",
         "construir_sobre_ideas_ajenas",
-        "pensamiento_visual"
+        "get_visual"
       ],
       "nodos_siguientes": [
         "analisis_y_sintesis",
@@ -81946,7 +82014,8 @@
         "Al documentar hallazgos de investigación",
         "Al comunicar ideas complejas a un equipo o cliente"
       ],
-      "etiqueta_arbol": "Dibuja para Entender Mejor"
+      "etiqueta_arbol": "Dibuja para Entender Mejor",
+      "deprecado": true
     },
     "pensamiento_visual_modelos_negocio": {
       "node_id": "pensamiento_visual_modelos_negocio",
@@ -86757,7 +86826,7 @@
       "nodos_previos": [
         "mock_sales",
         "split_testing",
-        "senales_de_compra_reales"
+        "senales_de_compra_en_venta_grande"
       ],
       "nodos_siguientes": [
         "testing_process_completo",
@@ -88673,7 +88742,7 @@
         "term_sheet_negociacion",
         "estrategia_competencia_vcs",
         "term_sheet_disposiciones_vinculantes",
-        "term_sheet_overview"
+        "entender_term_sheet"
       ],
       "condiciones_activacion": [
         "Cuando un VC inicia un proceso de diligencia informal",
@@ -89112,25 +89181,37 @@
       "resumen_teorico": "La programación de producción asigna la capacidad disponible (equipo, mano de obra, instalaciones) al trabajo que debe realizarse, buscando el equilibrio óptimo entre tres objetivos que compiten entre sí: altas tasas de utilización (economías de escala mediante corridas largas), bajos niveles de inventario (corridas cortas y entrega justo a tiempo) y altos niveles de servicio al cliente (evitar quiebres de stock). No es posible maximizar los tres simultáneamente, por lo que la gestión de operaciones consiste en encontrar el balance adecuado según la estrategia del negocio.",
       "pasos_accionables": [
         "Identificar cuáles de los tres objetivos (utilización, inventario, servicio) son prioritarios para tu modelo de negocio",
-        "Calcular el lote económico de producción (economic lot size) para cada producto",
-        "Determinar la secuencia de producción usando el concepto de 'run-out time' (tiempo de agotamiento de inventario)",
+        "Calcular el lote económico de producción (economic lot size) para cada producto, balanceando costos de setup e inventario",
+        "Determinar la secuencia de producción usando el concepto de 'run-out time' (tiempo de agotamiento de inventario), que es inventario disponible / demanda esperada",
         "Revisar continuamente el inventario resultante contra la demanda real y ajustar"
       ],
       "entregable_esperado": "Un calendario de producción documentado con lotes económicos calculados y secuencia de corridas basada en run-out time",
       "nodos_previos": [
         "alineacion_ti_negocio",
-        "modelo_simulacion_cadena_suministro_circular"
+        "modelo_simulacion_cadena_suministro_circular",
+        "diseno_producto_cadena_suministro"
       ],
       "nodos_siguientes": [
         "gestion_instalaciones",
-        "gestion_pedidos_order_management"
+        "gestion_pedidos_order_management",
+        "gestion_inventario"
       ],
       "condiciones_activacion": [
         "Cuando el startup pasa de producción artesanal a producción en volumen",
         "Si el usuario fabrica múltiples productos en una misma línea o instalación",
         "Cuando hay tensión entre costos de inventario y nivel de servicio al cliente"
       ],
-      "etiqueta_arbol": "Equilibra tus Objetivos de Producción"
+      "etiqueta_arbol": "Equilibra tus Objetivos de Producción",
+      "ids_alias": [
+        "programacion_produccion"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "programacion_produccion",
+          "titulo": "Programación de Producción y Lote Económico",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        }
+      ]
     },
     "produccion_y_proteccion": {
       "node_id": "produccion_y_proteccion",
@@ -90555,7 +90636,8 @@
         "Cuando se fabrican múltiples productos en una misma línea o instalación",
         "Cuando se busca optimizar el balance entre inventario y costos de producción"
       ],
-      "etiqueta_arbol": "Programa tu Producción y Lotes"
+      "etiqueta_arbol": "Programa tu Producción y Lotes",
+      "deprecado": true
     },
     "programas_5s_verdes": {
       "node_id": "programas_5s_verdes",
@@ -91708,7 +91790,7 @@
       "fuente": "Change by Design, Revised and U - Tim Brown",
       "resumen_teorico": "Extiende el concepto de prototipado más allá de objetos físicos hacia servicios, experiencias virtuales o sistemas organizacionales. Usa técnicas como escenarios narrativos, maquetas a escala real (foam core), y actuación/role-play para explorar cómo se sentiría una experiencia antes de construirla completamente. Permite a equipos y clientes 'actuar' situaciones en tiempo real y espacio real, generando insights que ninguna encuesta o simulación virtual lograría.",
       "pasos_accionables": [
-        "Construir una maqueta física aproximada del espacio o servicio (ej. foam core)",
+        "Construir una maqueta física aproximada del espacio o servicio (ej. foam core), y montarla en un lugar de bajo costo",
         "Invitar a miembros del equipo, clientes y stakeholders a actuar situaciones reales dentro de la maqueta",
         "Documentar reacciones y sugerencias mediante post-its u observación directa",
         "Aplicar técnicas de improvisación teatral básicas para facilitar la actuación grupal",
@@ -91719,19 +91801,34 @@
         "customer_journey_mapping",
         "principio_enough_is_enough",
         "diseno_basado_en_comportamientos_existentes",
-        "prototipado_rapido"
+        "prototipado_rapido",
+        "investigacion_etnografica_ideacion",
+        "tres_espacios_innovacion_prototipado"
       ],
       "nodos_siguientes": [
         "usuarios_extremos_edge_cases",
         "diseno_de_experiencias_participativas",
         "diseno_en_la_cuarta_dimension",
-        "storytelling_como_herramienta_de_diseno"
+        "storytelling_como_herramienta_de_diseno",
+        "espacios_de_diseno_superpuestos",
+        "prototipado_en_lo_salvaje"
       ],
       "condiciones_activacion": [
         "Cuando el proyecto involucra un servicio, experiencia o sistema organizacional en lugar de un producto físico",
-        "Cuando se necesita validar una experiencia completa antes de invertir en su implementación real"
+        "Cuando se necesita validar una experiencia completa antes de invertir en su implementación real",
+        "Cuando las encuestas tradicionales no logran capturar la dimensión emocional/social de la experiencia."
       ],
-      "etiqueta_arbol": "Prototipa Experiencias, No Solo Objetos"
+      "etiqueta_arbol": "Prototipa Experiencias, No Solo Objetos",
+      "ids_alias": [
+        "prototipado_experiencial_servicios"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "prototipado_experiencial_servicios",
+          "titulo": "Prototipado Experiencial de Servicios",
+          "fuente": "Change by Design, Revised and U - Tim Brown"
+        }
+      ]
     },
     "prototipado_en_lo_salvaje": {
       "node_id": "prototipado_en_lo_salvaje",
@@ -91749,7 +91846,7 @@
       ],
       "entregable_esperado": "Evidencia empírica de uso real que indique qué variante del servicio es más efectiva y por qué, basada en comportamiento genuino de usuarios.",
       "nodos_previos": [
-        "prototipado_experiencial_servicios"
+        "prototipado_de_experiencias"
       ],
       "nodos_siguientes": [
         "producto_minimo_viable",
@@ -91790,7 +91887,8 @@
         "Cuando el proyecto involucra una experiencia de servicio compleja (hotelería, salud, atención al cliente).",
         "Cuando las encuestas tradicionales no logran capturar la dimensión emocional/social de la experiencia."
       ],
-      "etiqueta_arbol": "Actúa la Experiencia del Servicio"
+      "etiqueta_arbol": "Actúa la Experiencia del Servicio",
+      "deprecado": true
     },
     "prototipado_modelos_negocio": {
       "fase_proyecto": "ideacion",
@@ -95896,7 +95994,6 @@
         "deriva_deliberada",
         "etnografia_investigacion_usuario",
         "ideacion_con_ia_en_la_sesion",
-        "pensamiento_visual",
         "prototipado_rapido",
         "tecnica_perder_objeto",
         "construir_sobre_ideas_ajenas"
@@ -101300,22 +101397,39 @@
         "Mapear las operaciones actuales de tu empresa según las categorías Plan-Source-Make-Deliver (y Return/Enable si aplica)",
         "Definir métricas KPI de nivel 1 para cada categoría (confiabilidad, agilidad, costo)",
         "Comparar (benchmark) tu desempeño contra estándares de la industria",
-        "Identificar cuellos de botella u operaciones no optimizadas usando el marco común"
+        "Identificar cuellos de botella u operaciones no optimizadas usando el marco común",
+        "Definir métricas de nivel 2 para cada categoría (ej. costo de planificación, tiempo de ciclo de abastecimiento, defectos de producto, tasa de retorno)",
+        "Cuando se detecten desviaciones, profundizar con métricas de diagnóstico de nivel 3",
+        "Vincular cada operación con la categoría de desempeño que más impacta (servicio, eficiencia, flexibilidad, desarrollo)"
       ],
       "entregable_esperado": "Mapa de procesos de cadena de suministro clasificado bajo el modelo SCOR con métricas base definidas",
       "nodos_previos": [
-        "lienzo_modelo_negocio"
+        "lienzo_modelo_negocio",
+        "medicion_de_calidad_en_manufactura",
+        "metricas_servicio_cliente_bts_bto"
       ],
       "nodos_siguientes": [
         "planificacion_cadena_suministro",
-        "pronostico_de_demanda_variables"
+        "pronostico_de_demanda_variables",
+        "business_intelligence_niveles_datos"
       ],
       "condiciones_activacion": [
         "Cuando la empresa ya tiene operaciones activas y necesita evaluarlas sistemáticamente",
         "Si se busca comparar desempeño contra competidores o estándares de industria",
-        "Cuando se planea escalar operaciones y se requiere un lenguaje común entre equipos"
+        "Cuando se planea escalar operaciones y se requiere un lenguaje común entre equipos",
+        "Si hay problemas recurrentes sin causa raíz identificada"
       ],
-      "etiqueta_arbol": "Estandariza tu Desempeño Logístico"
+      "etiqueta_arbol": "Estandariza tu Desempeño Logístico",
+      "ids_alias": [
+        "framework_scor_plan_source_make_deliver"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "framework_scor_plan_source_make_deliver",
+          "titulo": "Framework SCOR: Plan, Source, Make, Deliver",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        }
+      ]
     },
     "scorecard_de_seleccion_de_proyectos": {
       "node_id": "scorecard_de_seleccion_de_proyectos",
@@ -103934,7 +104048,8 @@
         "No celebres antes de tiempo cuando tu cliente menciona problemas: eso es solo materia prima, no una venta",
         "Escucha con atención las frases donde tu cliente dice qué va a hacer o qué busca ('vamos a...', 'buscamos un sistema con...'): esas sí son señales de compra reales",
         "Distingue entre que no haya problemas (mala señal) y que sí los haya (señal insuficiente por sí sola): ninguna de las dos te dice que vas a cerrar la venta",
-        "Espera a escuchar necesidades explícitas claras antes de decidir si la conversación fue un éxito"
+        "Espera a escuchar necesidades explícitas claras antes de decidir si la conversación fue un éxito",
+        "Si solo hay problemas mencionados, planea otra conversación para profundizar antes de asumir que hay una oportunidad real de venta."
       ],
       "entregable_esperado": "Un criterio claro y por escrito para reconocer cuáles son señales de compra reales y cuáles no, que puedas usar tú y quien te ayude en ventas en cada conversación",
       "nodos_previos": [
@@ -103942,12 +104057,24 @@
       ],
       "nodos_siguientes": [
         "gestion_de_quejas_y_fidelizacion",
-        "sistema_manejo_quejas"
+        "sistema_manejo_quejas",
+        "presales"
       ],
       "condiciones_activacion": [
-        "Cuando tú o quien te ayuda en ventas confunden el interés superficial de un cliente con una intención real de compra, en procesos de venta largos"
+        "Cuando tú o quien te ayuda en ventas confunden el interés superficial de un cliente con una intención real de compra, en procesos de venta largos",
+        "Cuando necesitas calificar de forma objetiva qué tan avanzada está cada oportunidad en tu proceso de ventas."
       ],
-      "etiqueta_arbol": "Distingue Señales Reales de Compra"
+      "etiqueta_arbol": "Distingue Señales Reales de Compra",
+      "ids_alias": [
+        "senales_de_compra_reales"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "senales_de_compra_reales",
+          "titulo": "Señales de Compra Reales vs Falsas",
+          "fuente": "SPIN Selling - Neil Rackham"
+        }
+      ]
     },
     "senales_de_compra_reales": {
       "node_id": "senales_de_compra_reales",
@@ -103972,7 +104099,8 @@
         "Cuando estás sobreestimando la probabilidad de cerrar una venta basándote en señales débiles.",
         "Cuando necesitas calificar de forma objetiva qué tan avanzada está cada oportunidad en tu proceso de ventas."
       ],
-      "etiqueta_arbol": "Reconoce Señales Reales de Compra"
+      "etiqueta_arbol": "Reconoce Señales Reales de Compra",
+      "deprecado": true
     },
     "senalizacion_de_salidas": {
       "node_id": "senalizacion_de_salidas",
@@ -104844,7 +104972,7 @@
       "entregable_esperado": "Guion de entrevista simulada con IA y lista de hipótesis a validar con clientes reales",
       "nodos_previos": [
         "ingenieria_de_prompts_efectiva",
-        "deteccion_alucinaciones_ia"
+        "gestion_alucinaciones_ia"
       ],
       "nodos_siguientes": [
         "prueba_solucion_con_cliente",
@@ -106364,20 +106492,34 @@
         "Crea contenido que explique la misión o el propósito de tu marca, no solo tu producto",
         "Dirige tus anuncios sociales hacia contenido de valor en lugar de páginas de venta directa",
         "Alimenta a tu audiencia con contenido recurrente antes de pedirle que compre",
-        "Mide la conversión en ventanas de tiempo más largas que las que usarías en publicidad de buscadores"
+        "Mide la conversión en ventanas de tiempo más largas que las que usarías en publicidad de buscadores",
+        "Migrar gradualmente a esa audiencia hacia un objetivo de conversión (compra, registro, uso)"
       ],
       "entregable_esperado": "Una campaña de anuncios en redes sociales con contenido de marca y un plan de al menos 3 etapas para acompañar a tu audiencia antes de pedirle la conversión.",
       "nodos_previos": [
-        "retargeting_display"
+        "retargeting_display",
+        "herramientas_online_canal_fisico"
       ],
       "nodos_siguientes": [
-        "sistema_manejo_quejas"
+        "sistema_manejo_quejas",
+        "creacion_contenido_compartible"
       ],
       "condiciones_activacion": [
         "Cuando tu producto necesita que la gente lo entienda o confíe en ti antes de comprar",
-        "Cuando ya tienes optimizada tu publicidad en buscadores y quieres ampliar por dónde te llegan clientes"
+        "Cuando ya tienes optimizada tu publicidad en buscadores y quieres ampliar por dónde te llegan clientes",
+        "Cuando el usuario busca traction vía redes sociales"
       ],
-      "etiqueta_arbol": "Construye Marca en Redes Sociales"
+      "etiqueta_arbol": "Construye Marca en Redes Sociales",
+      "ids_alias": [
+        "estrategia_anuncios_sociales_respuesta_indirecta"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "estrategia_anuncios_sociales_respuesta_indirecta",
+          "titulo": "Publicidad Social con Respuesta Indirecta",
+          "fuente": "Traction - Gabriel Weinberg"
+        }
+      ]
     },
     "solicitud_cambio": {
       "node_id": "solicitud_cambio",
@@ -106832,7 +106974,7 @@
         "metricas_accionables"
       ],
       "nodos_siguientes": [
-        "metricas_cohortes",
+        "analisis_de_cohortes",
         "kanban_validacion_aprendizaje"
       ],
       "condiciones_activacion": [
@@ -106990,7 +107132,7 @@
       ],
       "nodos_siguientes": [
         "build_measure_learn",
-        "modelo_tradicional_introduccion_producto",
+        "modelo_cascada_desarrollo_producto",
         "estrategia_innovacion_producto",
         "calidad_de_ejecucion_proceso_innovacion",
         "estructura_gates",
@@ -109387,7 +109529,8 @@
       "condiciones_activacion": [
         "Cuando el usuario recibe su primer term sheet y no sabe qué cláusulas priorizar."
       ],
-      "etiqueta_arbol": "Entiende Economía y Control"
+      "etiqueta_arbol": "Entiende Economía y Control",
+      "deprecado": true
     },
     "terminacion_franquiciado_causas": {
       "node_id": "terminacion_franquiciado_causas",
@@ -111530,7 +111673,7 @@
       ],
       "entregable_esperado": "Un sistema de reportes que cumpla las tres condiciones (accionable, accesible, auditable) y que cualquiera que trabaje contigo pueda consultar",
       "nodos_previos": [
-        "metricas_cohortes",
+        "analisis_de_cohortes",
         "kanban_validacion_aprendizaje",
         "framework_excelencia_operacional"
       ],
@@ -111599,7 +111742,7 @@
         "espacios_de_diseno_superpuestos"
       ],
       "nodos_siguientes": [
-        "prototipado_experiencial_servicios",
+        "prototipado_de_experiencias",
         "producto_minimo_viable"
       ],
       "condiciones_activacion": [
@@ -113394,7 +113537,7 @@
       ],
       "entregable_esperado": "Cálculo claro y documentado del porcentaje de dilución esperado en la ronda.",
       "nodos_previos": [
-        "term_sheet_overview",
+        "entender_term_sheet",
         "option_pool_negociacion"
       ],
       "nodos_siguientes": [
@@ -123920,7 +124063,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 67,
+    "nodos_sin_enlaces_entrantes": 74,
     "enlaces_rotos_en_grafo": 0
   }
 }

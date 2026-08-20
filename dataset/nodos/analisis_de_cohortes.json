@@ -7,7 +7,7 @@
   "resumen_teorico": "El análisis de cohortes agrupa a tus clientes según características compartidas, como fuente de adquisición, fecha de registro o tipo de plan, para estudiar patrones de retención con más precisión que los promedios generales. Estos promedios pueden ocultar problemas graves: la retención global puede parecer saludable mientras ciertos grupos abandonan rápidamente y otros permanecen mucho tiempo, como ocurre al comparar clientes en prueba gratis versus quienes pagan desde el día uno. Comparando cohortes puedes detectar señales de alerta tempranas, descubrir qué canales de adquisición generan clientes más leales, y entender qué segmentos necesitan estrategias específicas de mejora, en lugar de aplicar la misma táctica a toda tu base de clientes por igual.",
   "pasos_accionables": [
     "Agrupa tus usuarios según un atributo relevante: fuente de referencia, fecha de activación o tipo de oferta aceptada",
-    "Mide el comportamiento de cada cohorte a lo largo del tiempo: frecuencia de uso, duración, gasto",
+    "Mide el comportamiento de cada cohorte a lo largo del tiempo: frecuencia de uso, duración, gasto, y también registro, activación, retención, conversión",
     "Compara las cohortes entre sí para detectar patrones de abandono y señales de alerta temprana",
     "Determina si algún canal de adquisición te está trayendo clientes más leales que otros",
     "Diseña y ajusta tus estrategias de retención según los hallazgos de cada cohorte problemática"
@@ -16,7 +16,9 @@
   "nodos_previos": [
     "plan_de_adquisicion_acquire",
     "funnel_get_customers_optimizacion",
-    "ab_testing_optimizacion"
+    "ab_testing_optimizacion",
+    "metricas_accionables",
+    "split_testing_experimentos_ab"
   ],
   "nodos_siguientes": [
     "optimizacion_metricas_crecimiento",
@@ -28,22 +30,30 @@
     "preguntas_situacion",
     "optimizacion_keep_retencion",
     "hablar_con_clientes_desmontar_supuestos",
-    "war_room_pivot_proceed"
+    "war_room_pivot_proceed",
+    "tres_as_de_metricas"
   ],
   "condiciones_activacion": [
     "Cuando ya tienes al menos varios miles de clientes para poder segmentar con sentido",
     "Cuando necesitas mejorar la retención de tus usuarios",
-    "Cuando tus métricas de retención promedio parecen saludables pero sospechas que ocultan problemas en ciertos grupos"
+    "Cuando tus métricas de retención promedio parecen saludables pero sospechas que ocultan problemas en ciertos grupos",
+    "Si se necesita evaluar el impacto real de cambios en el producto sobre el comportamiento del usuario"
   ],
   "etiqueta_arbol": "Agrupa Clientes por Cohortes",
   "ids_alias": [
-    "cohort_analysis_retencion"
+    "cohort_analysis_retencion",
+    "metricas_cohortes"
   ],
   "merged_originals": [
     {
       "node_id": "cohort_analysis_retencion",
       "titulo": "Análisis de Cohortes para Retención de Clientes",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    },
+    {
+      "node_id": "metricas_cohortes",
+      "titulo": "Métricas de Cohortes (Cohort-Based Metrics)",
+      "fuente": "The Lean Startup - Eric Ries"
     }
   ]
 }

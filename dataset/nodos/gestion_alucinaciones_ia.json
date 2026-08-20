@@ -9,25 +9,36 @@
     "Establecer como política interna que ningún dato, cifra o cita generado por IA se use en documentos externos (pitch decks, reportes, contratos) sin verificación humana en fuente original.",
     "Pedir a la IA que cite fuentes verificables y luego contrastar manualmente esas fuentes.",
     "Usar la IA para generar borradores o hipótesis, nunca como fuente final de verdad.",
-    "Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza."
+    "Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza.",
+    "Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas"
   ],
   "entregable_esperado": "Un protocolo de verificación de contenido generado por IA antes de su uso en decisiones de negocio o comunicaciones externas.",
   "nodos_previos": [
     "prompting_por_persona_ia",
     "automatizacion_software_gestion_innovacion",
-    "ia_generacion_ideas_negocio"
+    "ia_generacion_ideas_negocio",
+    "human_in_the_loop_ia"
   ],
   "nodos_siguientes": [
     "introduccion_validacion_clientes",
     "ia_generacion_ideas_negocio",
-    "ia_colaborador_productividad"
+    "ia_colaborador_productividad",
+    "simulacion_clientes_ia"
   ],
   "condiciones_activacion": [
     "Cuando el equipo usa IA para generar informes, datos de mercado o contenido que será presentado a terceros (inversionistas, clientes, reguladores).",
     "Si se detectan inconsistencias entre lo que la IA afirma y la realidad verificable."
   ],
   "ids_alias": [
-    "gestion_alucinaciones_ia_2"
+    "gestion_alucinaciones_ia_2",
+    "deteccion_alucinaciones_ia"
   ],
-  "etiqueta_arbol": "Verifica lo que Dice la IA"
+  "etiqueta_arbol": "Verifica lo que Dice la IA",
+  "merged_originals": [
+    {
+      "node_id": "deteccion_alucinaciones_ia",
+      "titulo": "Detección y Manejo de Alucinaciones de IA",
+      "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    }
+  ]
 }
