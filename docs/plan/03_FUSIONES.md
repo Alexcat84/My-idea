@@ -1282,3 +1282,167 @@ de la vuelta 52, pregunta 1). **EL VEREDICTO DIRECTO MANDA.**
 **EL CRITERIO ASIMETRICO QUEDA RATIFICADO CON ESA FORMA**, y se dice porque la vuelta 52 lo
 aplico a los dos lados en la misma tanda y lo trajo marcado: **ni el acto de los regalos (`D`,
 `CONTINUA`) ni el de la sucesion (`B`, declarado) estaban mal.**
+
+---
+
+## `OP-U-01`, TRAMO 1, LA VUELTA 53: **EL TRAMO 1 QUEDA CERRADO. DOCE ACTOS FUNDIDOS, UN ACTO MAS DECLARADO Y CERO LECTURAS `P.12` PENDIENTES** (20 ago 2026, vuelta 53)
+
+**Al abrir esta vuelta el tramo 1 tenia DIECIOCHO actos mixtos vivos: 13 sin mirar, 2 ya
+declarados y 3 bloqueados por la vara de las puertas. Al cerrarla NO QUEDA NINGUNA LECTURA
+PENDIENTE: doce de los trece se leyeron y se FUNDIERON, y el decimotercero se leyo y se DECLARO
+porque su veredicto manda la pregunta a la mesa.** Los seis actos mixtos que siguen vivos son
+exactamente los que ninguna lectura puede mover: dos declarados por politica, uno por empate sin
+vara y tres imposibles por puerta.
+
+### LAS DOCE LECTURAS `P.12` EJECUTADAS, con el veredicto DIRECTO de cada par leido del archivo
+
+**Tabla generada leyendo los tres planes sellados y `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`**, no
+tecleada (`python scripts/loop/vuelta53_registro_tramo.py`). **LA CLASE QUE SE IMPRIME ES LA DE
+HOY, DESPUES de `P.16`**, y por eso las cuatro relecturas del filo aparecen ya en su clase nueva.
+
+| el mixto | leido contra | veredicto `P.12` | estado | el veredicto DIRECTO del par, que es el que manda |
+|---|---|---|---|---|
+| `customer_profile` | `value_proposition_canvas` | **`CONTINUA`** | EJECUTADA | lote A. Puesto **705**, clase **D** hoy. FAMILIA DECLARADA: los dos son miembros del racimo del lienzo de propuesta de valor, remedido a SIETE miembros en la seccion 14, asi que no se pelea la clase |
+| `prompting_por_persona_ia` | `ingenieria_de_prompts_efectiva` | **`CONTINUA`** | EJECUTADA | lote A. Puesto **1144**, clase **D** hoy. La anatomia del prompt contra el procedimiento de su primera linea, del mismo libro y sin arista entre ellos, y es el segundo par de la familia del prompting |
+| `warrants_financiamiento` | `warrant_pricing_venture_debt` | **`CONTINUA`** | EJECUTADA | lote A. Puesto **1448**, clase **D** hoy. Como se pone el precio contra si conviene aceptarlo, del mismo libro y sin arista entre ellos, y este par CIERRA la cobertura de su familia |
+| `definir_limites_huella_carbono` | `medir_huella_carbono_corporativa` | **`CONTINUA`** | EJECUTADA | lote A. Puesto **1855**, clase **D** hoy. La medicion de la huella contra la definicion de sus limites, MISMA FUENTE y sin arista entre ellos, y aqui la lectura depende de CON CUAL de los dos nodos de huella se compara |
+| `costos_preparacion_franquicia` | `estimacion_inversion_inicial_franquiciador` | **`CONTINUA`** | EJECUTADA | lote B. Puesto **2092**, clase **D** hoy. Dos categorias distintas del mismo presupuesto, MISMA FUENTE y sin arista entre ellas, Y CIERRA UNA ESTRELLA |
+| `contratar_abogado_franquicias` | `eleccion_abogado_franquicias` | **`CONTINUA`** | EJECUTADA | lote B. Puesto **2086**, clase **D** hoy. Dos maneras de elegir abogado que no se contienen, MISMA FUENTE y sin arista entre ellos |
+| `deteccion_franquicia_inadvertida` | `prevenir_franquicias_inadvertidas` | **`CONTINUA`** | EJECUTADA | lote B. Puesto **2073**, clase **D** hoy. Prevenir la franquicia sin querer contra detectarla, MISMA FUENTE y sin arista entre ellos, y es la PRIMERA TRAMPA DE IDENTIFICADOR del dominio: dos nombres casi gemelos, deteccion_franquicia_inadvertida y prevenir_franquicias_inadvertidas, que leidos por los pasos NO se repiten |
+| `eliminacion_gestion_por_objetivos_y_numeros` | `eliminar_metas_numericas_gerencia` | **`CONTINUA`** | EJECUTADA | lote B. Puesto **2534**, clase **D** hoy. Y ESTE PAR CIERRA EL HUECO QUE EL CHECKPOINT 2.500 DEJO ABIERTO PARA P.13: son los dos supervivientes del 2477 y del 2488, que nunca se habian leido entre si, y la cola si los trae |
+| `principio_pareto` | `analisis_pareto_de_proveedores` | **`CONTINUA`** | EJECUTADA | lote C. Puesto **3087**, clase **D** hoy. analisis_pareto_de_proveedores (Juran: recopilar datos de defectos y rechazos por proveedor/parte/proceso, clasificar perdidas con el principio 80/20, identificar los pocos proveedores que concentran los problemas, enfocar recursos en los elementos vitales, repetir el analisis por distintas dimen... |
+| `poka_yoke_a_prueba_de_errores` | `error_proofing_servicio` | **`CONTINUA`** | EJECUTADA | lote C. Puesto **2931**, clase **D** hoy. error_proofing_servicio (Juran: identificar actividades propensas a error, evaluar si se elimina, buscar sustitutos mas confiables, simplificar el trabajo, implementar deteccion temprana, disenar mecanismos para minimizar el impacto) contra poka_yoke_a_prueba_de_errores (Juran: identificar los pu... |
+| `dmaic_fase_select` | `criterios_seleccion_proyectos_calidad` | **`CONTINUA`** | EJECUTADA | lote C. Puesto **2933**, clase **D** hoy. criterios_seleccion_proyectos_calidad (Juran: listar las nominaciones, evaluar por ROI/potencial de breakthrough/urgencia/viabilidad/salud del producto/resistencia, construir una matriz de evaluacion compuesta, presentar el listado priorizado al consejo de calidad) contra dmaic_fase_select (Juran... |
+| `personalizacion_investigacion_prospecto` | `investigar_datos_cliente` | **`CONTINUA`** | EJECUTADA | lote C. Puesto **811**, clase **D** hoy. CORRECCION DECLARADA EL 20 ago 2026 (vuelta 53), Y LA COLISION QUE LA OBLIGA LA FABRICO ESTA MISMA VUELTA: SE DICE ASI EN VEZ DE PRESENTARLA COMO HALLAZGO |
+
+**LAS DOCE SALIERON `CONTINUA`, y el criterio es el adjudicado en el acta de la vuelta 52,
+pregunta 1, registrado en esta misma pagina por la TAREA 1.4.c de esta vuelta: EL VEREDICTO
+DIRECTO MANDA.** **Las aristas de las doce quedan DECLARADAS con id resuelto (`P.9`) y SIN
+ejecutarse**, y la poda de sus solapes queda anotada para la fase 04.
+
+### LOS DOCE ACTOS FUNDIDOS, con su reparto contado por el instrumento
+
+| lote | superviviente | absorbe | el mixto que queda vivo | piezas del reparto |
+|---|---|---|---|---|
+| **A** | `value_proposition_canvas` | `customer_profile_value_map` | `customer_profile` | **6**: 3 enteras, 2 de INCISO, 1 ya dichas |
+| **A** | `ingenieria_de_prompts_efectiva` | `asignacion_persona_ia` | `prompting_por_persona_ia` | **6**: 0 enteras, 2 de INCISO, 4 ya dichas |
+| **A** | `warrant_pricing_venture_debt` | `warrants_deuda_convertible` | `warrants_financiamiento` | **7**: 5 enteras, 0 de INCISO, 2 ya dichas |
+| **A** | `medir_huella_carbono_corporativa` | `huella_carbono_empresarial` | `definir_limites_huella_carbono` | **9**: 4 enteras, 1 de INCISO, 4 ya dichas |
+| **B** | `estimacion_inversion_inicial_franquiciador` | `cinco_categorias_costos_franquicia` | `costos_preparacion_franquicia` | **8**: 3 enteras, 0 de INCISO, 5 ya dichas |
+| **B** | `eleccion_abogado_franquicias` | `contratar_abogado_especializado_franquicias` | `contratar_abogado_franquicias` | **6**: 1 enteras, 0 de INCISO, 5 ya dichas |
+| **B** | `prevenir_franquicias_inadvertidas` | `estructuras_combinadas_franquicia` | `deteccion_franquicia_inadvertida` | **5**: 2 enteras, 1 de INCISO, 2 ya dichas |
+| **B** | `eliminar_metas_numericas_gerencia` | `critica_gestion_por_objetivos` | `eliminacion_gestion_por_objetivos_y_numeros` | **5**: 1 enteras, 0 de INCISO, 4 ya dichas |
+| **C** | `analisis_pareto_de_proveedores` | `analisis_pareto` | `principio_pareto` | **9**: 5 enteras, 2 de INCISO, 2 ya dichas |
+| **C** | `error_proofing_servicio` | `mistake_proofing_poka_yoke_2` | `poka_yoke_a_prueba_de_errores` | **8**: 6 enteras, 1 de INCISO, 1 ya dichas |
+| **C** | `criterios_seleccion_proyectos_calidad` | `proceso_nominacion_seleccion` | `dmaic_fase_select` | **7**: 3 enteras, 2 de INCISO, 2 ya dichas |
+| **C** | `investigar_datos_cliente` | `seguimiento_informacion_cliente` | `personalizacion_investigacion_prospecto` | **9**: 5 enteras, 1 de INCISO, 3 ya dichas |
+
+**EN LOS DOCE MUERE EL CENTRO DE LA ESTRELLA Y SOBREVIVE UN PERIFERICO**, que es la figura que
+las vueltas 51 y 52 ya habian ejecutado cinco veces. **Y EN LOS DOCE EL SUPERVIVIENTE LO ELIGIO EL
+CONTENIDO**, con el motivo escrito entero en el plan de cada acto: **en SEIS** lo decide el
+ALCANCE DEL ROL o el PADRE DECLARADO que `P.8` nombra como contenido (el lienzo, los prompts, los
+warrants, los costos de franquicia, el abogado y el dmaic select), **en CINCO** el conteo de pasos
+y condiciones apuntando al mismo lado que el material propio (la huella, la franquicia
+inadvertida, el pareto, el poka yoke y la investigacion del cliente) y **en UNO** la UNICA vara que
+no empata (la gestion por objetivos). **En SIETE de los doce alguna vara apunta al otro lado, y en
+los siete va dicho en el motivo del plan y marcado en el reporte:** el conteo en el lienzo, el
+cableado en los prompts, en los costos de franquicia y en el pareto, las condiciones en los
+warrants, el material propio en el abogado y los pasos en el dmaic select.
+
+### EL CARRIL GENERAL DE COLISIONES, ESTRENADO EN SUS DOS FORMAS
+
+**El carril quedo adjudicado en el acta de la vuelta 52, pregunta 4, y esta vuelta lo REGISTRO en
+esta pagina (TAREA 1.4.b) para que no dependa del acta.** Las 15 correcciones de esta
+vuelta se reparten en sus dos especies: **11 VOLTEOS POR MAQUINA** (`A` arrastrada contra un
+directo `D`, el unico caso mecanico) y **4 RELECTURAS EN EL MISMO ACTO** (un veredicto del
+filo en alguno de los dos lados). **Todas llevan la razon vieja pegada ENTERA.**
+
+| lote | puesto | de | a | el par CRUDO | especie del carril |
+|---|---:|:---:|:---:|---|---|
+| **A** | **475** | A | D | `customer_profile` contra `customer_profile_value_map` | **VOLTEO POR MAQUINA** |
+| **A** | **1175** | A | D | `asignacion_persona_ia` contra `prompting_por_persona_ia` | **VOLTEO POR MAQUINA** |
+| **A** | **559** | A | D | `warrants_deuda_convertible` contra `warrants_financiamiento` | **VOLTEO POR MAQUINA** |
+| **A** | **1865** | A | D | `definir_limites_huella_carbono` contra `huella_carbono_empresarial` | **VOLTEO POR MAQUINA** |
+| **A** | **360** | C | D | `customer_profile_value_map` contra `value_map` | **RELECTURA EN EL MISMO ACTO** |
+| **A** | **204** | B | D | `venture_debt_terminos_economicos` contra `warrant_pricing_venture_debt` | **RELECTURA EN EL MISMO ACTO** |
+| **B** | **2075** | A | D | `cinco_categorias_costos_franquicia` contra `costos_preparacion_franquicia` | **VOLTEO POR MAQUINA** |
+| **B** | **2090** | A | D | `contratar_abogado_especializado_franquicias` contra `contratar_abogado_franquicias` | **VOLTEO POR MAQUINA** |
+| **B** | **2181** | A | D | `deteccion_franquicia_inadvertida` contra `estructuras_combinadas_franquicia` | **VOLTEO POR MAQUINA** |
+| **B** | **2488** | A | D | `critica_gestion_por_objetivos` contra `eliminacion_gestion_por_objetivos_y_numeros` | **VOLTEO POR MAQUINA** |
+| **C** | **2551** | A | D | `analisis_pareto` contra `principio_pareto` | **VOLTEO POR MAQUINA** |
+| **C** | **2613** | A | D | `mistake_proofing_poka_yoke_2` contra `poka_yoke_a_prueba_de_errores` | **VOLTEO POR MAQUINA** |
+| **C** | **2742** | A | D | `dmaic_fase_select` contra `proceso_nominacion_seleccion` | **VOLTEO POR MAQUINA** |
+| **C** | **811** | B | D | `investigar_datos_cliente` contra `personalizacion_investigacion_prospecto` | **RELECTURA EN EL MISMO ACTO** |
+| **C** | **1222** | A | D | `personalizacion_investigacion_prospecto` contra `seguimiento_informacion_cliente` | **RELECTURA EN EL MISMO ACTO** |
+
+**LA GUARDA DE COLISIONES CUMPLIO AL DIGITO EN LOS TRES LOTES**: el lote A predijo SEIS y midio
+SEIS, el B predijo CUATRO y midio CUATRO, y el C predijo CUATRO y midio CUATRO, **siempre las
+mismas**. **Tras cada limpieza `P.16` el censo vuelve a CERO.**
+
+### EL CHOQUE DE LETRA CONTRA ARITMETICA: LOS TRES CONOCIDOS, EJECUTADOS
+
+**Los TRES choques que el instrumento venia midiendo desde la vuelta 50 caen en actos de esta
+tanda, y esta vuelta los ejecuta y los registra con sus puestos**
+([`../loop/SALIDA_V53_VIABLES.txt`](../loop/SALIDA_V53_VIABLES.txt)):
+
+| el acto | el nodo que la letra nombra | los puestos que lo escriben | que paso con el |
+|---|---|---|---|
+| acto **19** de la nomina de apertura | `analisis_pareto` | **2546,2551** | **NO ES VIABLE por la estructura del acto y MUERE ABSORBIDO**: manda la aritmetica (acta de la vuelta 50, adjudicacion 3) |
+| acto **20** de la nomina de apertura | `mistake_proofing_poka_yoke_2` | **2613** | **NO ES VIABLE por la estructura del acto y MUERE ABSORBIDO**: manda la aritmetica (acta de la vuelta 50, adjudicacion 3) |
+| acto **21** de la nomina de apertura | `proceso_nominacion_seleccion` | **2627** | **NO ES VIABLE por la estructura del acto y MUERE ABSORBIDO**: manda la aritmetica (acta de la vuelta 50, adjudicacion 3) |
+
+> **LO QUE ESTOS TRES TIENEN DE NUEVO, y va dicho en vez de colado con los cinco anteriores.** El
+> acta de la vuelta 50 adjudico que manda la aritmetica y escribio que *la letra se honra en lo
+> que puede: X sigue VIVO en los cinco casos*. **En estos tres NO sigue vivo: MUERE, porque el
+> nodo que la letra nombra es el CENTRO de la estrella y el centro es justamente el que la receta
+> no deja sobrevivir.** La adjudicacion se cumple igual en lo que si dice (nadie funde a X en
+> contra de su par: los pares que lo absorben son sus dos `A`), **pero el consuelo que la
+> adjudicacion escribia no aplica aqui, y por eso se marca.**
+
+### LOS ACTOS QUE ESTA VUELTA NO FUNDE
+
+| el acto, por sus MIEMBROS | especie | por que NO se funde | se acumula para |
+|---|---|---|---|
+| `influence_map_organizacional`, `mapa_de_influencia`, `mapa_organizacional_influencia` | **PREGUNTA DE POLITICA DE CATALOGO CONGELADA EN UNA B** | ES UNO DE LOS DOS ACTOS CON PAR MIXTO EN B Y SU RAZON SE LEYO ANTES DE FUNDIR, que es lo que el acta 51, pregunta 5, manda | LA MESA |
+
+**Y LOS CINCO DECLARADOS DE SIEMPRE SIGUEN DECLARADOS, ninguno se toca**, identificados por sus
+MIEMBROS y no por su numero: `obtencion_compromiso` y hermanos;
+`mejora_del_sistema_responsabilidad_gerencial` y hermanos; `dia_cero_defectos` y hermanos;
+`domina_lo_que_compras` con `investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor`; y
+`cultura_climatica_innovacion` con `cultura_de_innovacion`. **Al cerrar la vuelta 53 son los actos
+2, 8, 9, 10 y 11**, leidos del bloque *actos de FUSION PURA vivos* de
+[`../loop/SALIDA_V53_TRAMO1_CIERRE.txt`](../loop/SALIDA_V53_TRAMO1_CIERRE.txt), corrida DESPUES
+del ultimo movimiento de la vuelta. **Y los CINCO que no son de fusion pura tambien siguen
+declarados**: el del S&OP (politica del 703), el de la sucesion del CEO (empate sin vara), el del
+mapa de influencia (politica del 604, declarado ESTA vuelta) y los TRES imposibles por puerta, que
+al cerrar son los actos 5, 6 y 7 de la nomina de hoy.
+
+### EL CIERRE DE LA SECCION, MEDIDO AL CERRAR
+
+| | al abrir la vuelta 53 | **al cerrarla** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 563 / 75 / 7 / 2743 | **551 / 73 / 6 / 2758** |
+| grafo: ficheros / vivos / deprecados / enlaces | 3853 / 3489 / 364 / 17011 | **3853 / 3477 / 376 / 17052** |
+| retrato: `A` crudas / colapsos / pares distintos | 563 / 60 / 503 | **551 / 72 / 479** |
+| actos `CERRADOS` / `ABIERTOS` | 244 / 53 | **232 / 53** |
+| nodos en `CERRADOS` / `ABIERTOS` | 509 / 240 | **473 / 240** |
+| cola de costuras | 1488 | **1483** |
+| colisiones de clase vigentes | 0 | **0**, censo propio sobre el archivo entero |
+| mixtos del tramo 1 pendientes de `P.12` | 18 | **6**, y los 6 DECLARADOS o BLOQUEADOS |
+| actos de FUSION PURA vivos del tramo 1 (los cinco declarados de siempre) | 5 | **5** |
+| las cuatro comprobaciones de [`08_VERIFICACION.md`](08_VERIFICACION.md) | | **TODAS OK** |
+| duplicadas tras resolver **NUEVAS** / auto-aristas **NUEVAS** | | **CERO** / **CERO** |
+
+> **DE DONDE SALE CADA COLUMNA, dicho para que se pueda auditar.** La columna de APERTURA del
+> marcador y del grafo sale de las dos corridas propias de esta vuelta hechas ANTES de la primera
+> operacion ([`../loop/SALIDA_V53_MARCADOR_APERTURA.txt`](../loop/SALIDA_V53_MARCADOR_APERTURA.txt)
+> y [`../loop/SALIDA_V53_APERTURA.txt`](../loop/SALIDA_V53_APERTURA.txt)). **Las filas de retrato,
+> cola y tramo 1 de esa columna NO se re-corrieron antes de la primera operacion y se dice en vez
+> de callarse: son las del CIERRE de la vuelta 52**
+> ([`../loop/SALIDA_V52_RECOMPUTO_CIERRE.txt`](../loop/SALIDA_V52_RECOMPUTO_CIERRE.txt),
+> [`../loop/SALIDA_V52_COLA_CIERRE.txt`](../loop/SALIDA_V52_COLA_CIERRE.txt) y
+> [`../loop/SALIDA_V52_TRAMO1_CIERRE.txt`](../loop/SALIDA_V52_TRAMO1_CIERRE.txt)), y valen como
+> apertura porque entre el cierre de aquella vuelta y la primera operacion de esta NO se movio
+> ningun nodo ni ningun veredicto, comprobado por las dos corridas propias que SI se hicieron y que
+> reproducen el cierre de la 52 al digito. **La columna de CIERRE esta RECOMPUTADA AL CIERRE**,
+> despues del ultimo movimiento.

@@ -47,15 +47,15 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 
 ## Conteos
 
-**1488 nodos** en la cola, sobre 3489 activos.
+**1483 nodos** en la cola, sobre 3477 activos.
 
 | dominio | nodos |
 |---|---:|
-| core | 649 |
-| quality | 387 |
+| core | 647 |
+| quality | 385 |
 | health_safety | 112 |
 | environmental | 86 |
-| franquicias | 77 |
+| franquicias | 76 |
 | exportacion | 72 |
 | compras | 33 |
 | seguridad_digital | 30 |
@@ -68,14 +68,14 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 |---|---:|---:|
 | p50 | 50.5 | 45.8 |
 | p90 | 57.7 | 51.4 |
-| p99 | 66.2 | 56.6 |
+| p99 | 66.0 | 56.6 |
 | maximo | 86.6 | 72.6 |
 
-Nodos evaluados por bloques (4 pasos o mas): **2224**. Los de menos dan **NO APLICA**, que no es cero.
+Nodos evaluados por bloques (4 pasos o mas): **2218**. Los de menos dan **NO APLICA**, que no es cero.
 
 ## La franja 44 a 45: lo que el umbral viejo dejaba fuera
 
-**214 citas** entraron al bajar el umbral de bloque de 45 a 44. **Van juntas aqui a proposito**, para que la lectura del auditor las encuentre sin rastrearlas por la cola.
+**213 citas** entraron al bajar el umbral de bloque de 45 a 44. **Van juntas aqui a proposito**, para que la lectura del auditor las encuentre sin rastrearlas por la cola.
 
 | # | dominio | nodo | pasos | bloque | corte |
 |---:|---|---|---:|---:|---:|
@@ -197,102 +197,101 @@ Nodos evaluados por bloques (4 pasos o mas): **2224**. Los de menos dan **NO APL
 | 116 | core | `proteccion_organizacion_matriz_experimentos` | 5 | 44.4 | 2 |
 | 117 | quality | `analisis_variacion_desempeno_servicio` | 5 | 44.4 | 2 |
 | 118 | core | `optimizacion_embudo_get_customers` | 5 | 44.4 | 3 |
-| 119 | quality | `criterios_seleccion_proyectos_calidad` | 4 | 44.4 | 2 |
-| 120 | quality | `lean_six_sigma_roadmap` | 5 | 44.4 | 3 |
-| 121 | core | `gates_tempranos_flexibles` | 4 | 44.4 | 2 |
-| 122 | core | `innovacion_abierta` | 7 | 44.4 | 3 |
-| 123 | environmental | `eficiencia_energetica_almacenes` | 4 | 44.4 | 2 |
-| 124 | core | `transparencia_facturacion` | 4 | 44.4 | 2 |
-| 125 | franquicias | `venta_primer_franquiciado` | 4 | 44.4 | 2 |
-| 126 | core | `requirements_management_plan` | 5 | 44.4 | 3 |
-| 127 | environmental | `metricas_impacto_ambiental` | 5 | 44.4 | 2 |
-| 128 | core | `experiment_library` | 5 | 44.4 | 3 |
-| 129 | core | `sintesis_hipotesis_modelo_negocio` | 5 | 44.3 | 3 |
-| 130 | exportacion | `metodos_de_pago_internacional` | 4 | 44.3 | 2 |
-| 131 | quality | `consejo_ejecutivo_calidad` | 5 | 44.3 | 2 |
-| 132 | core | `genchi_gembutsu_salir_del_edificio` | 5 | 44.3 | 2 |
-| 133 | quality | `establecer_proyecto_y_metas_diseno` | 5 | 44.3 | 2 |
-| 134 | health_safety | `enfoque_find_and_fix` | 4 | 44.3 | 2 |
-| 135 | seguridad_digital | `que_es_cui` | 4 | 44.3 | 2 |
-| 136 | core | `analisis_flujo_de_valor` | 6 | 44.3 | 4 |
-| 137 | core | `deep_dive_workshop` | 5 | 44.3 | 2 |
-| 138 | core | `gate_0_evaluacion_wishlist` | 5 | 44.3 | 3 |
-| 139 | quality | `concepto_supuestos_erroneos_sobre_calidad` | 4 | 44.3 | 2 |
-| 140 | core | `problem_recognition_scale` | 4 | 44.3 | 2 |
-| 141 | quality | `eliminar_slogans_y_exhortaciones` | 4 | 44.3 | 2 |
-| 142 | health_safety | `new_view_vs_old_view_de_error_humano` | 5 | 44.3 | 3 |
-| 143 | exportacion | `documentacion_exportacion` | 6 | 44.3 | 4 |
-| 144 | core | `gestion_equilibrio_familia_startup` | 4 | 44.3 | 2 |
-| 145 | core | `seo_link_building` | 5 | 44.3 | 3 |
-| 146 | core | `tipos_criterios_gate` | 5 | 44.3 | 2 |
-| 147 | core | `contratar_cerrador_de_ventas` | 5 | 44.3 | 3 |
-| 148 | health_safety | `equipos_alto_desempeno` | 4 | 44.3 | 2 |
-| 149 | core | `linea_base_costos` | 4 | 44.3 | 2 |
-| 150 | core | `option_pool_negociacion` | 4 | 44.3 | 2 |
-| 151 | environmental | `energia_eolica_distribuida` | 4 | 44.3 | 2 |
-| 152 | health_safety | `self_regulation_deregulation_tradeoffs` | 4 | 44.3 | 2 |
-| 153 | core | `senales_de_compra_en_venta_grande` | 4 | 44.3 | 2 |
-| 154 | quality | `mantenimiento_preventivo_orientado_al_cliente` | 5 | 44.3 | 3 |
-| 155 | core | `plan_de_materiales_colaterales` | 5 | 44.3 | 3 |
-| 156 | quality | `evaluacion_gestion_riesgos` | 6 | 44.3 | 4 |
-| 157 | quality | `dmaic_fase_measure` | 7 | 44.3 | 4 |
-| 158 | quality | `tipos_benchmarking_por_participante` | 4 | 44.2 | 2 |
-| 159 | quality | `capacidad_proceso_concepto` | 6 | 44.2 | 2 |
-| 160 | core | `economia_circular_como_modelo_de_negocio` | 5 | 44.2 | 3 |
-| 161 | franquicias | `validacion_con_franquiciados` | 4 | 44.2 | 2 |
-| 162 | core | `ways_to_grow_matrix` | 5 | 44.2 | 3 |
-| 163 | environmental | `mitigacion_riesgos_ambientales` | 4 | 44.2 | 2 |
-| 164 | franquicias | `contratar_abogado_franquicias` | 5 | 44.2 | 3 |
-| 165 | quality | `diseno_implementacion_remedio` | 6 | 44.2 | 4 |
-| 166 | franquicias | `desarrollo_value_proposition_usp` | 5 | 44.2 | 2 |
-| 167 | health_safety | `organizaciones_alta_confiabilidad_hro` | 4 | 44.2 | 2 |
-| 168 | core | `backlog_evolutivo_y_cronograma_flexible` | 5 | 44.2 | 2 |
-| 169 | quality | `secuencia_universal_para_el_breakthrough` | 6 | 44.2 | 4 |
-| 170 | health_safety | `sesgo_retrospectivo` | 4 | 44.2 | 2 |
-| 171 | health_safety | `reporte_casi_accidentes` | 4 | 44.2 | 2 |
-| 172 | core | `diseno_fugitivo_runaway_design` | 4 | 44.2 | 2 |
-| 173 | exportacion | `international_partner_search` | 6 | 44.2 | 2 |
-| 174 | environmental | `canales_comunicacion_estrategicos` | 4 | 44.2 | 2 |
-| 175 | core | `gestion_de_las_cuatro_fases_del_negocio` | 4 | 44.2 | 2 |
-| 176 | franquicias | `estrategia_redes_sociales_franquicias` | 5 | 44.2 | 2 |
-| 177 | core | `mecanica_conversion_deuda` | 4 | 44.2 | 2 |
-| 178 | risk_management | `anota_por_que_decidiste_asi` | 4 | 44.2 | 2 |
-| 179 | environmental | `sistema_gestion_cumplimiento_ambiental` | 4 | 44.2 | 2 |
-| 180 | franquicias | `metodologias_analisis_territorio` | 5 | 44.2 | 3 |
-| 181 | quality | `juran_transformation_roadmap` | 5 | 44.1 | 3 |
-| 182 | core | `global_vs_local_maximum` | 4 | 44.1 | 2 |
-| 183 | core | `activity_resource_requirements` | 4 | 44.1 | 2 |
-| 184 | core | `calidad_de_ejecucion_proceso_innovacion` | 5 | 44.1 | 2 |
-| 185 | environmental | `critica_del_pib_como_metrica_de_progreso` | 6 | 44.1 | 3 |
-| 186 | quality | `gestion_resistencia_cultural_cambio` | 5 | 44.1 | 3 |
-| 187 | quality | `spreadsheet_diseno_para_la_calidad` | 4 | 44.1 | 2 |
-| 188 | quality | `reporte_gerencial_diagnostico_calidad` | 5 | 44.1 | 2 |
-| 189 | seguridad_digital | `identify_mapeo_datos` | 5 | 44.1 | 3 |
-| 190 | quality | `concepto_vs_tecnica` | 4 | 44.1 | 2 |
-| 191 | franquicias | `consejo_asesor_franquiciados_fac` | 6 | 44.1 | 2 |
-| 192 | core | `ciclo_construir_medir_aprender` | 4 | 44.1 | 2 |
-| 193 | core | `pensamiento_visual_modelos_negocio` | 5 | 44.1 | 2 |
-| 194 | core | `stage_gate_td_tecnologia` | 5 | 44.1 | 3 |
-| 195 | quality | `organizacion_independiente_de_calidad` | 4 | 44.1 | 2 |
-| 196 | core | `estrategia_crecimiento_clientes` | 6 | 44.1 | 3 |
-| 197 | quality | `fomento_educacion_autoeducacion` | 4 | 44.1 | 2 |
-| 198 | core | `customer_discovery_cuatro_fases` | 4 | 44.1 | 2 |
-| 199 | core | `equity_crowdfunding` | 4 | 44.1 | 2 |
-| 200 | core | `burn_rate_por_etapa` | 4 | 44.1 | 2 |
-| 201 | franquicias | `decision_diy_vs_consultor_franquicia` | 5 | 44.1 | 2 |
-| 202 | core | `community_building_estrategia` | 7 | 44.1 | 5 |
-| 203 | core | `pivotar_o_proceder` | 5 | 44.0 | 3 |
-| 204 | quality | `hojas_de_verificacion` | 5 | 44.0 | 2 |
-| 205 | core | `vehiculos_autonomos_drones_supply_chain` | 5 | 44.0 | 3 |
-| 206 | compras | `reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor` | 5 | 44.0 | 2 |
-| 207 | environmental | `nutrientes_biologicos` | 4 | 44.0 | 2 |
-| 208 | core | `hoja_estimacion_costos` | 5 | 44.0 | 3 |
-| 209 | quality | `caso_estudio_benchmarking_terminal` | 6 | 44.0 | 2 |
-| 210 | core | `term_sheet_disposiciones_vinculantes` | 5 | 44.0 | 3 |
-| 211 | quality | `equipos_ruptura_vet` | 4 | 44.0 | 2 |
-| 212 | quality | `estimacion_intervalos_confianza` | 5 | 44.0 | 3 |
-| 213 | core | `pensar_en_grande_empezar_pequeno` | 4 | 44.0 | 2 |
-| 214 | health_safety | `burocracia_de_seguridad` | 5 | 44.0 | 3 |
+| 119 | quality | `lean_six_sigma_roadmap` | 5 | 44.4 | 3 |
+| 120 | core | `gates_tempranos_flexibles` | 4 | 44.4 | 2 |
+| 121 | core | `innovacion_abierta` | 7 | 44.4 | 3 |
+| 122 | environmental | `eficiencia_energetica_almacenes` | 4 | 44.4 | 2 |
+| 123 | core | `transparencia_facturacion` | 4 | 44.4 | 2 |
+| 124 | franquicias | `venta_primer_franquiciado` | 4 | 44.4 | 2 |
+| 125 | core | `requirements_management_plan` | 5 | 44.4 | 3 |
+| 126 | environmental | `metricas_impacto_ambiental` | 5 | 44.4 | 2 |
+| 127 | core | `experiment_library` | 5 | 44.4 | 3 |
+| 128 | core | `sintesis_hipotesis_modelo_negocio` | 5 | 44.3 | 3 |
+| 129 | exportacion | `metodos_de_pago_internacional` | 4 | 44.3 | 2 |
+| 130 | quality | `consejo_ejecutivo_calidad` | 5 | 44.3 | 2 |
+| 131 | core | `genchi_gembutsu_salir_del_edificio` | 5 | 44.3 | 2 |
+| 132 | quality | `establecer_proyecto_y_metas_diseno` | 5 | 44.3 | 2 |
+| 133 | health_safety | `enfoque_find_and_fix` | 4 | 44.3 | 2 |
+| 134 | seguridad_digital | `que_es_cui` | 4 | 44.3 | 2 |
+| 135 | core | `analisis_flujo_de_valor` | 6 | 44.3 | 4 |
+| 136 | core | `deep_dive_workshop` | 5 | 44.3 | 2 |
+| 137 | core | `gate_0_evaluacion_wishlist` | 5 | 44.3 | 3 |
+| 138 | quality | `concepto_supuestos_erroneos_sobre_calidad` | 4 | 44.3 | 2 |
+| 139 | core | `problem_recognition_scale` | 4 | 44.3 | 2 |
+| 140 | quality | `eliminar_slogans_y_exhortaciones` | 4 | 44.3 | 2 |
+| 141 | health_safety | `new_view_vs_old_view_de_error_humano` | 5 | 44.3 | 3 |
+| 142 | exportacion | `documentacion_exportacion` | 6 | 44.3 | 4 |
+| 143 | core | `gestion_equilibrio_familia_startup` | 4 | 44.3 | 2 |
+| 144 | core | `seo_link_building` | 5 | 44.3 | 3 |
+| 145 | core | `tipos_criterios_gate` | 5 | 44.3 | 2 |
+| 146 | core | `contratar_cerrador_de_ventas` | 5 | 44.3 | 3 |
+| 147 | health_safety | `equipos_alto_desempeno` | 4 | 44.3 | 2 |
+| 148 | core | `linea_base_costos` | 4 | 44.3 | 2 |
+| 149 | core | `option_pool_negociacion` | 4 | 44.3 | 2 |
+| 150 | environmental | `energia_eolica_distribuida` | 4 | 44.3 | 2 |
+| 151 | health_safety | `self_regulation_deregulation_tradeoffs` | 4 | 44.3 | 2 |
+| 152 | core | `senales_de_compra_en_venta_grande` | 4 | 44.3 | 2 |
+| 153 | quality | `mantenimiento_preventivo_orientado_al_cliente` | 5 | 44.3 | 3 |
+| 154 | core | `plan_de_materiales_colaterales` | 5 | 44.3 | 3 |
+| 155 | quality | `evaluacion_gestion_riesgos` | 6 | 44.3 | 4 |
+| 156 | quality | `dmaic_fase_measure` | 7 | 44.3 | 4 |
+| 157 | quality | `tipos_benchmarking_por_participante` | 4 | 44.2 | 2 |
+| 158 | quality | `capacidad_proceso_concepto` | 6 | 44.2 | 2 |
+| 159 | core | `economia_circular_como_modelo_de_negocio` | 5 | 44.2 | 3 |
+| 160 | franquicias | `validacion_con_franquiciados` | 4 | 44.2 | 2 |
+| 161 | core | `ways_to_grow_matrix` | 5 | 44.2 | 3 |
+| 162 | environmental | `mitigacion_riesgos_ambientales` | 4 | 44.2 | 2 |
+| 163 | franquicias | `contratar_abogado_franquicias` | 5 | 44.2 | 3 |
+| 164 | quality | `diseno_implementacion_remedio` | 6 | 44.2 | 4 |
+| 165 | franquicias | `desarrollo_value_proposition_usp` | 5 | 44.2 | 2 |
+| 166 | health_safety | `organizaciones_alta_confiabilidad_hro` | 4 | 44.2 | 2 |
+| 167 | core | `backlog_evolutivo_y_cronograma_flexible` | 5 | 44.2 | 2 |
+| 168 | quality | `secuencia_universal_para_el_breakthrough` | 6 | 44.2 | 4 |
+| 169 | health_safety | `sesgo_retrospectivo` | 4 | 44.2 | 2 |
+| 170 | health_safety | `reporte_casi_accidentes` | 4 | 44.2 | 2 |
+| 171 | core | `diseno_fugitivo_runaway_design` | 4 | 44.2 | 2 |
+| 172 | exportacion | `international_partner_search` | 6 | 44.2 | 2 |
+| 173 | environmental | `canales_comunicacion_estrategicos` | 4 | 44.2 | 2 |
+| 174 | core | `gestion_de_las_cuatro_fases_del_negocio` | 4 | 44.2 | 2 |
+| 175 | franquicias | `estrategia_redes_sociales_franquicias` | 5 | 44.2 | 2 |
+| 176 | core | `mecanica_conversion_deuda` | 4 | 44.2 | 2 |
+| 177 | risk_management | `anota_por_que_decidiste_asi` | 4 | 44.2 | 2 |
+| 178 | environmental | `sistema_gestion_cumplimiento_ambiental` | 4 | 44.2 | 2 |
+| 179 | franquicias | `metodologias_analisis_territorio` | 5 | 44.2 | 3 |
+| 180 | quality | `juran_transformation_roadmap` | 5 | 44.1 | 3 |
+| 181 | core | `global_vs_local_maximum` | 4 | 44.1 | 2 |
+| 182 | core | `activity_resource_requirements` | 4 | 44.1 | 2 |
+| 183 | core | `calidad_de_ejecucion_proceso_innovacion` | 5 | 44.1 | 2 |
+| 184 | environmental | `critica_del_pib_como_metrica_de_progreso` | 6 | 44.1 | 3 |
+| 185 | quality | `gestion_resistencia_cultural_cambio` | 5 | 44.1 | 3 |
+| 186 | quality | `spreadsheet_diseno_para_la_calidad` | 4 | 44.1 | 2 |
+| 187 | quality | `reporte_gerencial_diagnostico_calidad` | 5 | 44.1 | 2 |
+| 188 | seguridad_digital | `identify_mapeo_datos` | 5 | 44.1 | 3 |
+| 189 | quality | `concepto_vs_tecnica` | 4 | 44.1 | 2 |
+| 190 | franquicias | `consejo_asesor_franquiciados_fac` | 6 | 44.1 | 2 |
+| 191 | core | `ciclo_construir_medir_aprender` | 4 | 44.1 | 2 |
+| 192 | core | `pensamiento_visual_modelos_negocio` | 5 | 44.1 | 2 |
+| 193 | core | `stage_gate_td_tecnologia` | 5 | 44.1 | 3 |
+| 194 | quality | `organizacion_independiente_de_calidad` | 4 | 44.1 | 2 |
+| 195 | core | `estrategia_crecimiento_clientes` | 6 | 44.1 | 3 |
+| 196 | quality | `fomento_educacion_autoeducacion` | 4 | 44.1 | 2 |
+| 197 | core | `customer_discovery_cuatro_fases` | 4 | 44.1 | 2 |
+| 198 | core | `equity_crowdfunding` | 4 | 44.1 | 2 |
+| 199 | core | `burn_rate_por_etapa` | 4 | 44.1 | 2 |
+| 200 | franquicias | `decision_diy_vs_consultor_franquicia` | 5 | 44.1 | 2 |
+| 201 | core | `community_building_estrategia` | 7 | 44.1 | 5 |
+| 202 | core | `pivotar_o_proceder` | 5 | 44.0 | 3 |
+| 203 | quality | `hojas_de_verificacion` | 5 | 44.0 | 2 |
+| 204 | core | `vehiculos_autonomos_drones_supply_chain` | 5 | 44.0 | 3 |
+| 205 | compras | `reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor` | 5 | 44.0 | 2 |
+| 206 | environmental | `nutrientes_biologicos` | 4 | 44.0 | 2 |
+| 207 | core | `hoja_estimacion_costos` | 5 | 44.0 | 3 |
+| 208 | quality | `caso_estudio_benchmarking_terminal` | 6 | 44.0 | 2 |
+| 209 | core | `term_sheet_disposiciones_vinculantes` | 5 | 44.0 | 3 |
+| 210 | quality | `equipos_ruptura_vet` | 4 | 44.0 | 2 |
+| 211 | quality | `estimacion_intervalos_confianza` | 5 | 44.0 | 3 |
+| 212 | core | `pensar_en_grande_empezar_pequeno` | 4 | 44.0 | 2 |
+| 213 | health_safety | `burocracia_de_seguridad` | 5 | 44.0 | 3 |
 
 **El motivo del cambio fue un FALSO NEGATIVO medido**: `nucleo/propuesta_gasto_capital`, con costura confirmada por lectura, quedaba fuera por **0,9 puntos** (bloque 44,1). **La señal si lo habia visto**: su corte propuesto es tras el paso 5, exactamente donde la lectura encontro la costura.
 
@@ -325,17 +324,17 @@ Nodos evaluados por bloques (4 pasos o mas): **2224**. Los de menos dan **NO APL
 | 7 | core | `fases_traccion_producto` | 7 | 76.3 | 72.6 | 4 | bloque |
 | 8 | core | `reunion_conclusion_proyecto` | 12 | 72.6 | 52.8 | 6 | bloque |
 | 9 | core | `producto_como_servicio_de_acceso` | 8 | 71.0 | 67.0 | 4 | bloque |
-| 10 | core | `investigar_datos_cliente` | 11 | 70.5 | 63.2 | 8 | bloque |
-| 11 | core | `efecto_bullwhip` | 6 | 69.7 | 53.0 | 3 | bloque |
-| 12 | core | `blue_ocean_four_actions` | 7 | 68.4 | 66.1 | 3 | bloque |
-| 13 | core | `objetivos_de_llamada_orientados_a_avance` | 4 | 67.9 | 49.5 | 2 | bloque |
-| 14 | quality | `smed_setup_reduction` | 5 | 67.9 | 54.0 | 3 | bloque |
-| 15 | core | `reporte_estado_miembro_equipo` | 6 | 67.2 | 57.8 | 4 | bloque |
-| 16 | quality | `modelo_transformacion_juran` | 4 | 67.1 | 51.2 | 2 | bloque |
-| 17 | core | `activity_attributes` | 5 | 66.7 | 58.1 | 3 | bloque |
-| 18 | core | `ejecucion_incremental_transicion_tecnologica` | 16 | 66.7 | 55.9 | 7 | bloque |
-| 19 | quality | `implementacion_monitoreo_controles` | 6 | 66.7 | 46.6 | 3 | bloque |
-| 20 | quality | `product_design_spreadsheet` | 5 | 66.3 | 49.7 | 2 | bloque |
+| 10 | core | `efecto_bullwhip` | 6 | 69.7 | 53.0 | 3 | bloque |
+| 11 | core | `blue_ocean_four_actions` | 7 | 68.4 | 66.1 | 3 | bloque |
+| 12 | core | `objetivos_de_llamada_orientados_a_avance` | 4 | 67.9 | 49.5 | 2 | bloque |
+| 13 | quality | `smed_setup_reduction` | 5 | 67.9 | 54.0 | 3 | bloque |
+| 14 | core | `reporte_estado_miembro_equipo` | 6 | 67.2 | 57.8 | 4 | bloque |
+| 15 | quality | `modelo_transformacion_juran` | 4 | 67.1 | 51.2 | 2 | bloque |
+| 16 | core | `activity_attributes` | 5 | 66.7 | 58.1 | 3 | bloque |
+| 17 | core | `ejecucion_incremental_transicion_tecnologica` | 16 | 66.7 | 55.9 | 7 | bloque |
+| 18 | quality | `implementacion_monitoreo_controles` | 6 | 66.7 | 46.6 | 3 | bloque |
+| 19 | quality | `product_design_spreadsheet` | 5 | 66.3 | 49.7 | 2 | bloque |
+| 20 | quality | `mapa_satisfaccion_importancia` | 4 | 65.9 | 54.0 | 2 | bloque |
 
 La cola completa, con los dos pasos de cada pareja, en `COSTURAS_INTERNAS.jsonl`.
 <!-- MANUAL -->

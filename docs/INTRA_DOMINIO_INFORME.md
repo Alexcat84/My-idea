@@ -16336,10 +16336,10 @@ completa vive en `docs/loop/REPORTE.md` en git; esta seccion fija cifras y commi
 | | |
 |---|---:|
 | **veredictos** | **3.388**, hasta el puesto 3.388, cero huecos ni duplicados |
-| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ ~~566 (16,7 %)~~ **563** (16,6 %), ver las correcciones declaradas debajo |
-| **B** | ~~89~~ ~~87~~ ~~84~~ ~~83~~ ~~82~~ ~~81~~ ~~80~~ ~~79~~ ~~77~~ **75** |
-| **C** | ~~7~~ ~~8~~ **7** |
-| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ ~~2.737 (80,8 %)~~ **2.743** (81,0 %) |
+| **A** | ~~**583** (17,2 %)~~ ~~582~~ ~~581~~ ~~576~~ ~~575 (17,0 %)~~ ~~574~~ ~~573~~ ~~571 (16,9 %)~~ ~~566 (16,7 %)~~ ~~563 (16,6 %)~~ **551** (16,3 %), ver las correcciones declaradas debajo |
+| **B** | ~~89~~ ~~87~~ ~~84~~ ~~83~~ ~~82~~ ~~81~~ ~~80~~ ~~79~~ ~~77~~ ~~75~~ **73** |
+| **C** | ~~7~~ ~~8~~ ~~7~~ **6** |
+| **D** | ~~**2.709** (80,0 %)~~ ~~2.711~~ ~~2.714~~ ~~2.716~~ ~~2.721~~ ~~2.722~~ ~~2.723~~ ~~2.724~~ ~~2.725~~ ~~2.726~~ ~~2.729~~ ~~2.730~~ ~~2.732~~ ~~2.737 (80,8 %)~~ ~~2.743 (81,0 %)~~ **2.758** (81,4 %) |
 
 > **CORRECCION DECLARADA (19 ago 2026, vuelta 50). LA TABLA VOLVIO A QUEDARSE ATRAS, Y ESTA
 > VEZ DENTRO DE LA MISMA VUELTA QUE LA ACABABA DE CORREGIR.** La correccion de la vuelta 49
@@ -16482,11 +16482,11 @@ Contra el checkpoint 3.300 (99.1: A 580, D 2.624): **+3 A y +85 D** en el tramo 
 
 | dominio | n | A | tasa |
 |---|---:|---:|---:|
-| core | 1.445 | ~~344~~ ~~343~~ ~~342~~ ~~337~~ ~~336~~ **329** | ~~23,8 %~~ ~~23,7 %~~ ~~23,3 %~~ **22,8 %** |
+| core | 1.445 | ~~344~~ ~~343~~ ~~342~~ ~~337~~ ~~336~~ ~~329~~ **325** | ~~23,8 %~~ ~~23,7 %~~ ~~23,3 %~~ ~~22,8 %~~ **22,5 %** |
 | health_safety | 192 | ~~45~~ **43** | ~~23,4 %~~ **22,4 %** |
-| quality | 844 | ~~126~~ **123** | ~~14,9 %~~ **14,6 %** (CERRADO) |
-| environmental | 170 | 29 | 17,1 % |
-| franquicias | 148 | 18 | 12,2 % |
+| quality | 844 | ~~126~~ ~~123~~ **119** | ~~14,9 %~~ ~~14,6 %~~ **14,1 %** (CERRADO) |
+| environmental | 170 | ~~29~~ **28** | ~~17,1 %~~ **16,5 %** |
+| franquicias | 148 | ~~18~~ **15** | ~~12,2 %~~ **10,1 %** |
 | exportacion | 130 | 15 | 11,5 % |
 | entrega | 171 | 2 | 1,2 % |
 | compras | 155 | 1 | 0,6 % |
@@ -16556,6 +16556,8 @@ Suma 3.388, calza con el total del archivo. Los diez dominios del catalogo estan
 > **LAS DOS TABLAS POR DOMINIO SON HERMANAS Y SE MUEVEN JUNTAS, y esto queda escrito en las DOS sedes para que no dependa de ningun acta:** la **100.2** de `docs/INTRA_DOMINIO_INFORME.md` y la **tabla por dominio de la seccion `a`** de `docs/plan/RECOMPUTO_3388.md` miden LO MISMO (los diez dominios al corte 3.388, que es el catalogo entero y no una fecha) y las dos se presentan como el estado VIGENTE del archivo. **QUIEN CORRIJA UNA, CORRIGE LA OTRA EN EL MISMO ACTO.** La tabla hermana se corrigio el 20 ago 2026 en la vuelta 52 y hoy mide lo mismo que esta al digito; **desde hoy las dos llevan escrita la hermandad**, que es lo que el encargo manda para que un barrido futuro no vuelva a mover una sola.
 >
 > **NADA SE BORRA Y NINGUNA NOTA VIEJA SE REESCRIBE:** las tres correcciones de arriba (vueltas 33, 34 y 36) siguen enteras con su fecha, y las TRECE filas de checkpoints anteriores que citan `core` con `A 344` **siguen sin tocarse**, por el motivo que la correccion de la vuelta 36 ya escribio: cada una es la foto de su propio corte.
+
+> **QUINTA CORRECCION DECLARADA (20 ago 2026, vuelta 53, barrido `9.10` DEL CIERRE, corrido DESPUES del ultimo movimiento de la vuelta), Y ES LA PRIMERA QUE SE HACE EN EL MISMO ACTO QUE SU TABLA HERMANA.** La vuelta 53 fundio doce actos de `op-u-01` en tres lotes (el lienzo de propuesta de valor, los prompts, los warrants, la huella de carbono, los costos de franquicia, el abogado de franquicias, la franquicia inadvertida, la gestion por objetivos, el pareto, el poka yoke, el dmaic select y la investigacion del cliente) y corrigio quince veredictos por `p.16`: once volteos por maquina (475, 1175, 559, 1865, 2075, 2090, 2181, 2488, 2551, 2613 y 2742) y cuatro relecturas del filo (360, 204, 811 y 1222). **CUATRO FILAS SE MUEVEN Y SEIS NO**: `core` de 329 a **325**, `quality` de 123 a **119**, `environmental` de 29 a **28** y `franquicias` de 18 a **15**, que es el dominio que mas se mueve porque TRES de los doce actos fundidos son suyos. **Quedan identicos al digito** `health_safety` 43, `exportacion` 15, `entrega` 2, `compras` 1, `risk_management` 0 y `seguridad_digital` 3. Todo Medido HOY con `python scripts/plan/recomputo_3388.py` y `python scripts/recomputar_marcador.py 3388` DESPUES del ultimo movimiento de la vuelta 53 (`loop/SALIDA_V53_RECOMPUTO_CIERRE.txt` y `loop/SALIDA_V53_MARCADOR_CIERRE.txt`). **LA SUMA DE LA COLUMNA CUADRA CON EL MARCADOR**, comprobado hoy: 325 mas 119 mas 43 mas 2 mas 28 mas 1 mas 15 mas 0 mas 15 mas 3 son **551**, que es la `A` global de la misma corrida. **Y LA TABLA HERMANA DE `docs/plan/RECOMPUTO_3388.md` SE MOVIO EN ESTE MISMO ACTO, que es para lo que la hermandad se escribio en la TAREA 1.1 de esta vuelta.** Las cuatro correcciones de arriba no se reescriben.
 
 ### 100.3 RACHAS DE 0,0 % RECOMPUTADAS SOBRE EL ARCHIVO ENTERO (TAREA 1.1, verificacion propia)
 
