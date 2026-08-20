@@ -1,0 +1,28 @@
+==============================================================================
+DESHACER EL ACTO 23 DEL TRAMO 2 . MODO EJECUTAR
+==============================================================================
+
+  ficheros de nodos que el lote B (ca191ee6) toco: 50
+  de esos, los que el ACTO 23 toco: 4
+     dataset/nodos/customer_development_modelo.json
+     dataset/nodos/modelo_cascada_desarrollo_producto.json
+     dataset/nodos/modelo_tradicional_introduccion_producto.json
+     dataset/nodos/stage_gate_system.json
+  el alcance medido calza con el declarado: SI
+
+  ficheros tocados DESPUES del lote B: 0 []
+
+  esos cuatro, sucios en el arbol de trabajo: 0 []
+
+  ESTADO DE HOY, antes de deshacer:
+     modelo_cascada_desarrollo_producto             deprecado False  pasos 6 cond 3 ids_alias ['modelo_tradicional_introduccion_producto']
+     modelo_tradicional_introduccion_producto       deprecado True   pasos 4 cond 2 ids_alias None
+
+  RESTAURADOS los cuatro ficheros al blob de 0feef54e
+
+  ESTADO TRAS DESHACER:
+     modelo_cascada_desarrollo_producto             vivo True   pasos 4 cond 2 ids_alias []
+     modelo_tradicional_introduccion_producto       vivo True   pasos 4 cond 2 ids_alias []
+  LOS DOS VIVOS Y SIN ALIAS CRUZADO: SI
+
+FIN

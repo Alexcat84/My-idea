@@ -9141,7 +9141,7 @@
         "learning_card",
         "producto_minimo_viable",
         "cycle_time",
-        "modelo_cascada_desarrollo_producto"
+        "modelo_tradicional_introduccion_producto"
       ],
       "condiciones_activacion": [
         "Cuando el usuario tiene una hipótesis de negocio o producto que necesita validar rápidamente"
@@ -26709,7 +26709,7 @@
       "nodos_siguientes": [
         "requisitos_gates_con_dientes",
         "mantener_puntaje_innovacion",
-        "modelo_cascada_desarrollo_producto"
+        "modelo_tradicional_introduccion_producto"
       ],
       "condiciones_activacion": [
         "Cuando necesitas definir cómo medir si tu proceso de revisión por etapas está funcionando",
@@ -27045,7 +27045,7 @@
       "entregable_esperado": "Un registro de conversaciones con clientes, hechas de forma repetida, que te confirme o te tumbe las hipótesis con las que arrancaste",
       "nodos_previos": [
         "definicion_startup_busqueda_modelo_negocio",
-        "modelo_cascada_desarrollo_producto",
+        "modelo_tradicional_introduccion_producto",
         "tipos_de_riesgo_invencion_vs_mercado",
         "search_for_business_model"
       ],
@@ -31773,7 +31773,7 @@
       "entregable_esperado": "Un ciclo de retroalimentación de clientes documentado que valide o invalide las hipótesis iniciales del modelo de negocio.",
       "nodos_previos": [
         "startup_como_busqueda_vs_ejecucion",
-        "modelo_cascada_desarrollo_producto",
+        "modelo_tradicional_introduccion_producto",
         "nueve_pecados_capitales_lanzamiento",
         "search_for_business_model"
       ],
@@ -32113,22 +32113,35 @@
       "pasos_accionables": [
         "Traza el camino que sigue un cliente entre la venta y la entrega, y anota que información se pierde en ese traspaso",
         "Revisa como te pagas o incentivas a quien vende, para que también le importe que el cliente se quede contento y se quede contigo, no solo cerrar cuentas nuevas",
-        "Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después",
-        "Crea un protocolo claro de traspaso: una reunion conjunta entre el cliente, quien vendio y quien sigue atendiendolo"
+        "Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después, en concreto lo que el cliente necesita, qué le prometiste y sus preferencias",
+        "Crea un protocolo claro de traspaso: una reunion conjunta entre el cliente, quien vendio y quien sigue atendiendolo, empezando por tus clientes más importantes",
+        "De vez en cuando revisa si lo que prometiste al vender coincide con lo que de verdad estás entregando"
       ],
       "entregable_esperado": "Un proceso documentado de traspaso del cliente (de la venta a la entrega), con una herramienta (CRM) configurada y con metas de retencion ligadas a la venta",
       "nodos_previos": [
         "preframing_expectativas"
       ],
       "nodos_siguientes": [
-        "welcome_call_cliente_veterano"
+        "welcome_call_cliente_veterano",
+        "fase_admit"
       ],
       "condiciones_activacion": [
         "Cuando recibes quejas frecuentes de clientes nuevos porque no se cumplio lo que se les prometio",
         "Si quien vende y quien atiende o entrega funcionan como mundos separados",
-        "Cuando notas que muchos clientes se van en los primeros meses después de comprar"
+        "Cuando notas que muchos clientes se van en los primeros meses después de comprar",
+        "En ventas de alto valor o contratos largos (seguros, software, servicios)"
       ],
-      "etiqueta_arbol": "Conecta Ventas y Postventa"
+      "etiqueta_arbol": "Conecta Ventas y Postventa",
+      "ids_alias": [
+        "traspaso_ventas_cuentas"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "traspaso_ventas_cuentas",
+          "titulo": "Que lo que prometes al vender sea lo que realmente entregas",
+          "fuente": "Never Lose a Customer Again - Joey Coleman"
+        }
+      ]
     },
     "descubrir_necesidades_cliente": {
       "node_id": "descubrir_necesidades_cliente",
@@ -52667,7 +52680,7 @@
         "ocho_fases_experiencia_cliente",
         "preframing_expectativas",
         "seis_canales_comunicacion_assess",
-        "traspaso_ventas_cuentas"
+        "desconexion_ventas_experiencia"
       ],
       "nodos_siguientes": [
         "fase_affirm",
@@ -75772,39 +75785,25 @@
         "Identificar si tu startup está usando este modelo por defecto (heredado de grandes empresas).",
         "Reconocer las 4 etapas: Concepto, Desarrollo, Alpha/Beta, Lanzamiento.",
         "Evaluar si el mercado y el cliente son realmente 'conocidos' o son solo hipótesis.",
-        "Detener la ejecución ciega si no hay contacto continuo con el cliente.",
-        "Reemplazar los hitos rígidos de este modelo por ciclos iterativos de aprendizaje validado",
-        "Evitar contratar estructuras organizacionales (VP Ventas, equipos completos) antes de validar el modelo de negocio"
+        "Detener la ejecución ciega si no hay contacto continuo con el cliente."
       ],
       "entregable_esperado": "Un diagnóstico claro de si el proyecto está operando bajo supuestos no validados (modo ejecución) en lugar de modo búsqueda.",
       "nodos_previos": [
         "build_measure_learn",
-        "curva_atricion_optima",
-        "stage_gate_system"
+        "curva_atricion_optima"
       ],
       "nodos_siguientes": [
         "desarrollo_de_clientes_customer_development",
         "startup_como_busqueda_vs_ejecucion",
         "nueve_pecados_capitales_lanzamiento",
-        "search_for_business_model",
-        "customer_development_modelo"
+        "search_for_business_model"
       ],
       "condiciones_activacion": [
         "Si el equipo está construyendo un producto completo antes de hablar con clientes.",
-        "Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback.",
-        "Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar"
+        "Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback."
       ],
       "etiqueta_arbol": "Evita el Modelo Lineal Tradicional",
-      "ids_alias": [
-        "modelo_tradicional_introduccion_producto"
-      ],
-      "merged_originals": [
-        {
-          "node_id": "modelo_tradicional_introduccion_producto",
-          "titulo": "El Modelo Tradicional de Introducción de Nuevos Productos (Anti-patrón)",
-          "fuente": "The Startup Owner's Manual - Blank, Steve"
-        }
-      ]
+      "deprecado": true
     },
     "modelo_contingencia_riesgo": {
       "node_id": "modelo_contingencia_riesgo",
@@ -76545,24 +76544,41 @@
       "fuente": "The Startup Owner's Manual - Blank, Steve",
       "resumen_teorico": "Modelo heredado de la manufactura del siglo XX que sigue una secuencia lineal tipo 'cascada' (waterfall): concepto/semilla, desarrollo de producto, alpha/beta test, lanzamiento. Funciona bien en empresas establecidas con clientes conocidos y mercados definidos, pero es fatal para startups porque asume que las características del producto pueden especificarse por adelantado sin retroalimentación real del cliente. El caso Webvan (quiebra tras gastar más de 800 millones de dólares) ilustra cómo seguir este modelo perfectamente puede llevar al fracaso total si no se valida el mercado.",
       "pasos_accionables": [
-        "Identificar si tu equipo está usando un proceso waterfall rígido de especificación-desarrollo-lanzamiento",
-        "Evaluar si las especificaciones del producto se basan en suposiciones no validadas",
+        "Identificar si tu equipo está usando un proceso waterfall rígido de especificación-desarrollo-lanzamiento, heredado de grandes empresas",
+        "Evaluar si las especificaciones del producto se basan en suposiciones no validadas, y si el mercado y el cliente son realmente 'conocidos' o son solo hipótesis",
         "Reemplazar los hitos rígidos de este modelo por ciclos iterativos de aprendizaje validado",
-        "Evitar contratar estructuras organizacionales (VP Ventas, equipos completos) antes de validar el modelo de negocio"
+        "Evitar contratar estructuras organizacionales (VP Ventas, equipos completos) antes de validar el modelo de negocio",
+        "Reconocer las 4 etapas: Concepto, Desarrollo, Alpha/Beta, Lanzamiento.",
+        "Detener la ejecución ciega si no hay contacto continuo con el cliente."
       ],
       "entregable_esperado": "Un diagnóstico de qué partes del proceso actual de desarrollo de producto siguen el patrón waterfall riesgoso, y un plan para sustituirlas por iteración",
       "nodos_previos": [
-        "stage_gate_system"
+        "stage_gate_system",
+        "build_measure_learn",
+        "curva_atricion_optima"
       ],
       "nodos_siguientes": [
-        "customer_development_modelo"
+        "customer_development_modelo",
+        "desarrollo_de_clientes_customer_development",
+        "nueve_pecados_capitales_lanzamiento",
+        "search_for_business_model"
       ],
       "condiciones_activacion": [
         "Cuando el equipo está usando un plan de negocio y cronograma de lanzamiento rígido sin haber hablado con clientes",
-        "Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar"
+        "Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar",
+        "Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback."
       ],
       "etiqueta_arbol": "Evita el Viejo Modelo en Cascada",
-      "deprecado": true
+      "ids_alias": [
+        "modelo_cascada_desarrollo_producto"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "modelo_cascada_desarrollo_producto",
+          "titulo": "El Modelo Tradicional en Cascada (Waterfall)",
+          "fuente": "The Startup Owner's Manual - Steve Blank"
+        }
+      ]
     },
     "modelo_transformacion_juran": {
       "node_id": "modelo_transformacion_juran",
@@ -78943,7 +78959,7 @@
       ],
       "entregable_esperado": "Un checklist de riesgos identificados en el proyecto actual comparado con el caso Webvan.",
       "nodos_previos": [
-        "modelo_cascada_desarrollo_producto",
+        "modelo_tradicional_introduccion_producto",
         "desarrollo_posicionamiento_producto",
         "audacia_del_cero"
       ],
@@ -85960,8 +85976,7 @@
         "desconexion_ventas_experiencia",
         "welcome_call_cliente_veterano",
         "fase_admit",
-        "fase_admit_celebracion",
-        "traspaso_ventas_cuentas"
+        "fase_admit_celebracion"
       ],
       "condiciones_activacion": [
         "Cuando se quiere diferenciar la propuesta de venta mediante experiencia emocional",
@@ -101704,7 +101719,7 @@
         "vision_estrategia_producto_pivote",
         "descomposicion_tareas_trabajo",
         "buscar_armonia_diseno",
-        "modelo_cascada_desarrollo_producto"
+        "modelo_tradicional_introduccion_producto"
       ],
       "nodos_siguientes": [
         "customer_development_process",
@@ -107132,7 +107147,7 @@
       ],
       "nodos_siguientes": [
         "build_measure_learn",
-        "modelo_cascada_desarrollo_producto",
+        "modelo_tradicional_introduccion_producto",
         "estrategia_innovacion_producto",
         "calidad_de_ejecucion_proceso_innovacion",
         "estructura_gates",
@@ -111547,7 +111562,8 @@
         "Si una persona vende y otra distinta atiende después al cliente",
         "En ventas de alto valor o contratos largos (seguros, software, servicios)"
       ],
-      "etiqueta_arbol": "Cuida el Traspaso entre Equipos"
+      "etiqueta_arbol": "Cuida el Traspaso entre Equipos",
+      "deprecado": true
     },
     "tratar_las_historias_como_herramientas": {
       "node_id": "tratar_las_historias_como_herramientas",
@@ -124063,7 +124079,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 74,
+    "nodos_sin_enlaces_entrantes": 75,
     "enlaces_rotos_en_grafo": 0
   }
 }

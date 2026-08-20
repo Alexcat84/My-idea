@@ -1,0 +1,34 @@
+==============================================================================
+GENERADOR DEL PLAN DEL LOTE T1 DEL TRAMO 2 (vuelta 55)
+==============================================================================
+
+  acto 18  INCISO al paso 3
+      trozo pedido en ASCII : 'lo que el cliente necesita, que le prometiste y sus preferencias'
+      trozo EXTRAIDO del nodo: 'lo que el cliente necesita, qué le prometiste y sus preferencias'
+      paso resultante        : Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después, en concreto lo que el cliente necesita, qué le prometiste y sus preferencias
+  acto 18  INCISO al paso 4
+      trozo pedido en ASCII : 'tus clientes mas importantes'
+      trozo EXTRAIDO del nodo: 'tus clientes más importantes'
+      paso resultante        : Crea un protocolo claro de traspaso: una reunion conjunta entre el cliente, quien vendio y quien sigue atendiendolo, empezando por tus clientes más importantes
+  acto 23  INCISO al paso 1
+      trozo pedido en ASCII : 'heredado de grandes empresas'
+      trozo EXTRAIDO del nodo: 'heredado de grandes empresas'
+      paso resultante        : Identificar si tu equipo está usando un proceso waterfall rígido de especificación-desarrollo-lanzamiento, heredado de grandes empresas
+  acto 23  INCISO al paso 2
+      trozo pedido en ASCII : "el mercado y el cliente son realmente 'conocidos' o son solo hipotesis"
+      trozo EXTRAIDO del nodo: "el mercado y el cliente son realmente 'conocidos' o son solo hipótesis"
+      paso resultante        : Evaluar si las especificaciones del producto se basan en suposiciones no validadas, y si el mercado y el cliente son realmente 'conocidos' o son solo hipótesis
+
+  las 2 fichas del lote T1: TODAS en verde
+  guarda 1B: ningun absorbido es puerta
+  cobertura: cada paso y cada condicion de cada absorbido con marca UNICA
+  incisos: todos EXTRAIDOS del nodo y comprobados VERBATIM dentro del paso
+
+  RESUMEN DEL REPARTO POR ACTO:
+     acto 18  sobrevive desconexion_ventas_experiencia                 piezas  7 (enteras 2, ya dichas 3, de INCISO 2)
+     acto 23  sobrevive modelo_tradicional_introduccion_producto       piezas  6 (enteras 3, ya dichas 1, de INCISO 2)
+     TOTAL del lote T1: piezas 13 (enteras 5, ya dichas 4, de INCISO 4)
+
+  plan escrito: docs\loop\PLAN_V55_OPU01_LOTE_T1.json
+
+FIN

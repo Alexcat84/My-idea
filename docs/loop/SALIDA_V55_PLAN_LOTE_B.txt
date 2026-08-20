@@ -1,0 +1,64 @@
+==============================================================================
+GENERADOR DEL PLAN DEL LOTE B DEL TRAMO 2 (vuelta 55)
+==============================================================================
+
+  acto 37  INCISO al paso 1
+      trozo pedido en ASCII : '¿es deseable para las personas?, ¿es viable como negocio?, ¿es tecnicamente factible?'
+      trozo EXTRAIDO del nodo: '¿es deseable para las personas?, ¿es viable como negocio?, ¿es técnicamente factible?'
+      paso resultante        : Evaluar cada idea de innovación en los tres ejes simultáneamente: ¿es deseable para las personas?, ¿es viable como negocio?, ¿es técnicamente factible?
+  acto 39  INCISO al paso 1
+      trozo pedido en ASCII : 'los que mas o menos usan el producto/servicio'
+      trozo EXTRAIDO del nodo: 'los que más o menos usan el producto/servicio'
+      paso resultante        : Identificar usuarios en los márgenes: expertos extremos, principiantes totales, o personas con necesidades atípicas., y los que más o menos usan el producto/servicio
+  acto 39  INCISO al paso 2
+      trozo pedido en ASCII : 'entrevistas o inmersiones etnograficas'
+      trozo EXTRAIDO del nodo: 'entrevistas o inmersiones etnográficas'
+      paso resultante        : Estudiar cómo estos usuarios extremos interactúan con el producto o problema, aunque no sean el mercado objetivo directo., con entrevistas o inmersiones etnográficas
+  acto 41  INCISO al paso 2
+      trozo pedido en ASCII : 'cada fork de decision (financiamiento, equity, roles)'
+      trozo EXTRAIDO del nodo: 'cada fork de decisión (financiamiento, equity, roles)'
+      paso resultante        : Habla abiertamente de tu motivacion con tu posible socio antes de lanzar el proyecto juntos, y sobre cada fork de decisión (financiamiento, equity, roles)
+  acto 43  INCISO al paso 3
+      trozo pedido en ASCII : 'multiples mejoras incrementales'
+      trozo EXTRAIDO del nodo: 'múltiples mejoras incrementales'
+      paso resultante        : Enfoca los recursos de ingeniería/equipo directamente en resolver la debilidad competitiva central., con múltiples mejoras incrementales
+  acto 43  INCISO al paso 2
+      trozo pedido en ASCII : 'asociaciones o adquisiciones'
+      trozo EXTRAIDO del nodo: 'asociaciones o adquisiciones'
+      paso resultante        : Si es un problema de producto, resiste la tentación de buscar mercados alternativos o modelos de negocio distintos como escape., y lo mismo con asociaciones o adquisiciones
+  acto 44  INCISO al paso 3
+      trozo pedido en ASCII : 'con ayuda de alguien con conocimiento legal'
+      trozo EXTRAIDO del nodo: 'con ayuda de alguien con conocimiento legal'
+      paso resultante        : Escribe los acuerdos a los que llegaste para evitar malentendidos más adelante, idealmente con ayuda de alguien con conocimiento legal
+  acto 46  INCISO al paso 2
+      trozo pedido en ASCII : 'los impostores no pueden explicar el proceso'
+      trozo EXTRAIDO del nodo: 'los impostores no pueden explicar el proceso'
+      paso resultante        : Pedir al candidato que explique en detalle cómo se ganó un trato o proyecto, no solo que reclame el crédito.: los impostores no pueden explicar el proceso
+  acto 50  INCISO al paso 3
+      trozo pedido en ASCII : 'estrellas o NPS'
+      trozo EXTRAIDO del nodo: 'estrellas o NPS'
+      paso resultante        : Diseñar una encuesta externa para el cliente: satisfacción, probabilidad de recomendar, comentarios abiertos, con una calificación inicial de estrellas o NPS
+
+  las 12 fichas del lote B: TODAS en verde
+  guarda 1B: ningun absorbido es puerta
+  cobertura: cada paso y cada condicion de cada absorbido con marca UNICA
+  incisos: todos EXTRAIDOS del nodo y comprobados VERBATIM dentro del paso
+
+  RESUMEN DEL REPARTO POR ACTO:
+     acto 37  sobrevive desirability_feasibility_viability             piezas  6 (enteras 2, ya dichas 3, de INCISO 1)
+     acto 38  sobrevive fase_admit_celebracion                         piezas  5 (enteras 2, ya dichas 3, de INCISO 0)
+     acto 39  sobrevive usuarios_extremos_edge_cases                   piezas  5 (enteras 1, ya dichas 2, de INCISO 2)
+     acto 40  sobrevive jerarquia_datos_scor                           piezas  6 (enteras 4, ya dichas 2, de INCISO 0)
+     acto 41  sobrevive compatibilidad_motivaciones_riqueza_control    piezas  5 (enteras 2, ya dichas 2, de INCISO 1)
+     acto 43  sobrevive lead_bullets_no_silver_bullets                 piezas  5 (enteras 0, ya dichas 3, de INCISO 2)
+     acto 44  sobrevive reparto_inicial_equity                         piezas  4 (enteras 2, ya dichas 1, de INCISO 1)
+     acto 45  sobrevive programacion_entregas_delivery_scheduling      piezas  7 (enteras 2, ya dichas 5, de INCISO 0)
+     acto 46  sobrevive contratar_ambicion_correcta                    piezas  6 (enteras 0, ya dichas 5, de INCISO 1)
+     acto 47  sobrevive wallas_etapa_incubacion                        piezas  6 (enteras 1, ya dichas 5, de INCISO 0)
+     acto 48  sobrevive framework_caracteristicas_ventajas_beneficios  piezas  6 (enteras 3, ya dichas 3, de INCISO 0)
+     acto 50  sobrevive reunion_conclusion_proyecto                    piezas  7 (enteras 1, ya dichas 5, de INCISO 1)
+     TOTAL del lote B: piezas 68 (enteras 20, ya dichas 39, de INCISO 9)
+
+  plan escrito: docs\loop\PLAN_V55_OPU01_LOTE_B.json
+
+FIN

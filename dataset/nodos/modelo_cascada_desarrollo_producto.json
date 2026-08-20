@@ -9,37 +9,23 @@
     "Identificar si tu startup está usando este modelo por defecto (heredado de grandes empresas).",
     "Reconocer las 4 etapas: Concepto, Desarrollo, Alpha/Beta, Lanzamiento.",
     "Evaluar si el mercado y el cliente son realmente 'conocidos' o son solo hipótesis.",
-    "Detener la ejecución ciega si no hay contacto continuo con el cliente.",
-    "Reemplazar los hitos rígidos de este modelo por ciclos iterativos de aprendizaje validado",
-    "Evitar contratar estructuras organizacionales (VP Ventas, equipos completos) antes de validar el modelo de negocio"
+    "Detener la ejecución ciega si no hay contacto continuo con el cliente."
   ],
   "entregable_esperado": "Un diagnóstico claro de si el proyecto está operando bajo supuestos no validados (modo ejecución) en lugar de modo búsqueda.",
   "nodos_previos": [
     "build_measure_learn",
-    "curva_atricion_optima",
-    "stage_gate_system"
+    "curva_atricion_optima"
   ],
   "nodos_siguientes": [
     "desarrollo_de_clientes_customer_development",
     "startup_como_busqueda_vs_ejecucion",
     "nueve_pecados_capitales_lanzamiento",
-    "search_for_business_model",
-    "customer_development_modelo"
+    "search_for_business_model"
   ],
   "condiciones_activacion": [
     "Si el equipo está construyendo un producto completo antes de hablar con clientes.",
-    "Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback.",
-    "Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar"
+    "Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback."
   ],
   "etiqueta_arbol": "Evita el Modelo Lineal Tradicional",
-  "ids_alias": [
-    "modelo_tradicional_introduccion_producto"
-  ],
-  "merged_originals": [
-    {
-      "node_id": "modelo_tradicional_introduccion_producto",
-      "titulo": "El Modelo Tradicional de Introducción de Nuevos Productos (Anti-patrón)",
-      "fuente": "The Startup Owner's Manual - Blank, Steve"
-    }
-  ]
+  "deprecado": true
 }

@@ -6,22 +6,39 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Modelo heredado de la manufactura del siglo XX que sigue una secuencia lineal tipo 'cascada' (waterfall): concepto/semilla, desarrollo de producto, alpha/beta test, lanzamiento. Funciona bien en empresas establecidas con clientes conocidos y mercados definidos, pero es fatal para startups porque asume que las características del producto pueden especificarse por adelantado sin retroalimentación real del cliente. El caso Webvan (quiebra tras gastar más de 800 millones de dólares) ilustra cómo seguir este modelo perfectamente puede llevar al fracaso total si no se valida el mercado.",
   "pasos_accionables": [
-    "Identificar si tu equipo está usando un proceso waterfall rígido de especificación-desarrollo-lanzamiento",
-    "Evaluar si las especificaciones del producto se basan en suposiciones no validadas",
+    "Identificar si tu equipo está usando un proceso waterfall rígido de especificación-desarrollo-lanzamiento, heredado de grandes empresas",
+    "Evaluar si las especificaciones del producto se basan en suposiciones no validadas, y si el mercado y el cliente son realmente 'conocidos' o son solo hipótesis",
     "Reemplazar los hitos rígidos de este modelo por ciclos iterativos de aprendizaje validado",
-    "Evitar contratar estructuras organizacionales (VP Ventas, equipos completos) antes de validar el modelo de negocio"
+    "Evitar contratar estructuras organizacionales (VP Ventas, equipos completos) antes de validar el modelo de negocio",
+    "Reconocer las 4 etapas: Concepto, Desarrollo, Alpha/Beta, Lanzamiento.",
+    "Detener la ejecución ciega si no hay contacto continuo con el cliente."
   ],
   "entregable_esperado": "Un diagnóstico de qué partes del proceso actual de desarrollo de producto siguen el patrón waterfall riesgoso, y un plan para sustituirlas por iteración",
   "nodos_previos": [
-    "stage_gate_system"
+    "stage_gate_system",
+    "build_measure_learn",
+    "curva_atricion_optima"
   ],
   "nodos_siguientes": [
-    "customer_development_modelo"
+    "customer_development_modelo",
+    "desarrollo_de_clientes_customer_development",
+    "nueve_pecados_capitales_lanzamiento",
+    "search_for_business_model"
   ],
   "condiciones_activacion": [
     "Cuando el equipo está usando un plan de negocio y cronograma de lanzamiento rígido sin haber hablado con clientes",
-    "Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar"
+    "Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar",
+    "Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback."
   ],
   "etiqueta_arbol": "Evita el Viejo Modelo en Cascada",
-  "deprecado": true
+  "ids_alias": [
+    "modelo_cascada_desarrollo_producto"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "modelo_cascada_desarrollo_producto",
+      "titulo": "El Modelo Tradicional en Cascada (Waterfall)",
+      "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ]
 }

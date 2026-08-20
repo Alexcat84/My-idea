@@ -1,0 +1,379 @@
+{
+ "operacion": "OP-U-01",
+ "fecha": "2026-08-20",
+ "vuelta": 55,
+ "estado": "SELLADO",
+ "nomina": "docs/loop/RECOMPUTO_V55_APERTURA.jsonl mas la re-medicion tras deshacer el acto 23",
+ "tramo_definido_en": "docs/loop/SALIDA_V55_TRAMO2_TRAS_DESHACER.txt, con scripts/loop/vuelta55_tramo2_nomina.py (sucesor declarado del de la vuelta 54, que cae en ROJO al continuar un tramo ya consumido): 30 VIVOS y 20 FUNDIDOS de 50, las dos lecturas calzando en conjunto y en orden y los supervivientes siendo PREFIJO de la lectura A",
+ "dossier": "docs/loop/SALIDA_V55_DOSSIER_TRAMO2.txt (P.5, el acto leido entero con su razon entera pegada) mas docs/loop/SALIDA_V55_MESA_TRAMO2.txt y docs/loop/SALIDA_V55_VARAS_TRAMO2.txt",
+ "vara": "TODOS los actos del tramo 2 son de FUSION PURA (medido): un acto de dos miembros con UN par A directo y ningun mixto. No hay lectura P.12 que hacer. El superviviente lo elige el CONTENIDO como P.8 lo define (pasos y condiciones, material propio y padre declarado EN LAS RAZONES); UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4), y EL MATERIAL PROPIO DECLARADO DE UN SOLO LADO ES UNA VARA (acta 54, pregunta 4); si dos varas de contenido CHOCAN decide la pieza DECLARADA y si no hay ninguna se DECLARA y acumula para la mesa (acta 54, pregunta 2); si el contenido calla entero, EL CABLEADO DECIDE SOLO; si tambien empata, se DECLARA. Y LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1): en un acto de dos donde el unico candidato limpio es la puerta, LA PUERTA SOBREVIVE y el choque de conteos se registra en el motivo.",
+ "varas_impresas": "docs/loop/SALIDA_V55_VARAS_TRAMO2.txt, una fila por acto con pasos, condiciones y cableado contados por maquina y la FORMA del veredicto impresa. Ninguna cifra de este plan esta tecleada.",
+ "colisiones_esperadas": "docs/loop/SALIDA_V55_COLISIONES_ESPERADAS_TRAMO2.txt, medidas ANTES de tocar un nodo sobre EL ARCHIVO ENTERO, por PAR RESUELTO, con scripts/loop/vuelta54_colisiones_esperadas.py. Una colision real fuera de esa prediccion detiene.",
+ "vara_de_las_puertas": "docs/loop/SALIDA_V55_PUERTAS_APERTURA.txt. GUARDA 1B: ningun absorbido de este plan es semilla de entrada ni extremo de puente aprobado, comprobado por el generador y otra vez por el ejecutor.",
+ "politica_del_reparto": "LA HEREDADA Y CITADA, no reinventada (acta 51 D3; acta 52 D5 y D10; acta 54 pregunta 5; registros de las vueltas 53 y 54): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND, y una pieza mitad propia mitad ya dicha va de APPEND ENTERO con el solape declarado para la poda de la fase 04 (acta 54, pregunta 5). El INCISO es siempre TROZO VERBATIM del paso que muere, y en este generador se EXTRAE del nodo en vez de teclearse.",
+ "tramo": "2, LOTE A DE LA VUELTA 55: LOS ONCE PRIMEROS ACTOS VIVOS DEL TRAMO EN SU ORDEN IMPRESO (1, 15, 28 a 36), incluidos LOS DOS DEL CHOQUE DE LA PUERTA que el acta 54 adjudico a favor de la puerta",
+ "actos": [
+  {
+   "orden": 1,
+   "miembros": [
+    "trade_off_responsividad_eficiencia",
+    "balance_eficiencia_responsividad"
+   ],
+   "miembros_del_acto_entero": [
+    "balance_eficiencia_responsividad",
+    "trade_off_responsividad_eficiencia"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "trade_off_responsividad_eficiencia",
+   "motivo": "LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1, adjudicada). EL CHOQUE, CON LOS CONTEOS IMPRESOS: las varas de contenido apuntan al OTRO, pasos 6 contra 4 y condiciones 3 contra 2 a favor de balance_eficiencia_responsividad, y el cableado apunta a la puerta, 2 contra 6. trade_off_responsividad_eficiencia ES PUERTA (extremo de puente aprobado, medido en docs/loop/SALIDA_V55_PUERTAS_APERTURA.txt) y la guarda 1B exige que sobreviva: en un acto de dos, el unico candidato LIMPIO es la puerta, asi que el contenido no tiene entre quien elegir. LA PUERTA SOBREVIVE y el choque de conteos queda REGISTRADO AQUI, no resuelto en silencio. LO QUE PROTEGE EL CONTENIDO QUE EL CONTEO PREFIRIO ES EL REPARTO: las piezas propias del absorbido viajan enteras.",
+   "absorbidos": [
+    "balance_eficiencia_responsividad"
+   ],
+   "pasos": {
+    "balance_eficiencia_responsividad": {
+     "1": "APPEND",
+     "2": "APPEND",
+     "3": "APPEND",
+     "4": "CUBIERTO:3",
+     "5": "CUBIERTO:4",
+     "6": "APPEND"
+    }
+   },
+   "condiciones": {
+    "balance_eficiencia_responsividad": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND",
+     "3": "APPEND"
+    }
+   },
+   "nota_del_reparto": "CUATRO PASOS Y DOS CONDICIONES VIAJAN ENTEROS, que es mucho y se dice por que: el absorbido es el lado que el conteo prefirio, con seis pasos contra cuatro, y la adjudicacion de la puerta obliga a que muera. Viajan enteros el monitoreo de los factores clave (demanda, precios, tasas de produccion, frecuencia de entregas), la evaluacion de la confiabilidad de los pronosticos, la determinacion de si el entorno es estable o volatil, y el aviso de no optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos. Los dos gestos que SI estan en la puerta son posicionar la estrategia en el continuo y revisarla periodicamente. CERO perdidas nombradas."
+  },
+  {
+   "orden": 15,
+   "miembros": [
+    "apertura_llamada_venta_grande",
+    "apertura_efectiva_llamada_venta"
+   ],
+   "miembros_del_acto_entero": [
+    "apertura_efectiva_llamada_venta",
+    "apertura_llamada_venta_grande"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "apertura_llamada_venta_grande",
+   "motivo": "LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1, adjudicada). EL CHOQUE, CON LOS CONTEOS IMPRESOS: la unica vara de contenido que no empata son los pasos, 5 contra 4 a favor de apertura_efectiva_llamada_venta; las condiciones empatan 2 contra 2 y el cableado tambien, 4 contra 4. apertura_llamada_venta_grande ES PUERTA y la guarda 1B exige que sobreviva. LA PUERTA SOBREVIVE y el choque queda REGISTRADO. Las piezas propias del absorbido viajan por el reparto.",
+   "absorbidos": [
+    "apertura_efectiva_llamada_venta"
+   ],
+   "pasos": {
+    "apertura_efectiva_llamada_venta": {
+     "1": "APPEND",
+     "2": "INCISO:2|con el mismo cliente en múltiples visitas|, y menos ",
+     "3": "INCISO:1|más del 20% del tiempo total de la llamada|, nunca ",
+     "4": "APPEND",
+     "5": "APPEND"
+    }
+   },
+   "condiciones": {
+    "apertura_efectiva_llamada_venta": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "TRES PASOS VIAJAN ENTEROS: establecer quien eres, por que estas ahi y tu derecho a preguntar; resistir la tentacion de hablar de producto en la primera mitad; y retomar el control cuando el comprador pregunta por producto muy pronto. Ninguno de los tres esta en la puerta. DOS INCISOS salvan los dos parametros concretos que si tenian sitio: el limite del 20 por ciento del tiempo, que es la cifra del gesto de no gastar demasiado tiempo, y el aviso del mismo cliente en varias visitas, que es el alcance del gesto de no repetir la formula. Su condicion 2 (mismo discurso y tasas de exito bajas) viaja entera. CERO perdidas nombradas."
+  },
+  {
+   "orden": 28,
+   "miembros": [
+    "rediseno_procesos_negocio_cx",
+    "rediseno_procesos_negocio_cliente"
+   ],
+   "miembros_del_acto_entero": [
+    "rediseno_procesos_negocio_cliente",
+    "rediseno_procesos_negocio_cx"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "rediseno_procesos_negocio_cx",
+   "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO: pasos 9 contra 9 y condiciones 2 contra 2, al digito. La razon del 364 le reconoce material propio A LOS DOS LADOS (al primero la compensacion automatica y las metricas antes y despues; al segundo reducir herramientas y sostener el presupuesto varios anos), asi que tampoco el material propio declarado separa. El cableado apunta a rediseno_procesos_negocio_cx, 3 contra 5. NO es empate sin vara porque el cableado no empata.",
+   "absorbidos": [
+    "rediseno_procesos_negocio_cliente"
+   ],
+   "pasos": {
+    "rediseno_procesos_negocio_cliente": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:1",
+     "3": "APPEND",
+     "4": "APPEND",
+     "5": "APPEND",
+     "6": "APPEND",
+     "7": "APPEND",
+     "8": "APPEND",
+     "9": "APPEND"
+    }
+   },
+   "condiciones": {
+    "rediseno_procesos_negocio_cliente": {
+     "1": "APPEND",
+     "2": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "SIETE PASOS VIAJAN ENTEROS Y ES EL REPARTO MAS PESADO DEL LOTE, y se dice en vez de disimularse: los dos nodos tienen NUEVE pasos cada uno y solo DOS del que muere estan dichos por el superviviente (mapear los procesos que generan quejas e identificar las politicas que crean friccion, los dos cubiertos por su paso 1). Los otros siete son gestos que el superviviente no tiene: resolver en un solo contacto, las compensaciones automaticas, las metricas antes y despues, simplificar el papeleo con herramientas digitales, mapear los distintos journeys, diagnosticar donde se pasan la responsabilidad, y medir el impacto cuantitativo del mal servicio. SOLAPE INTERNO DECLARADO, y lo fabrica el propio absorbido y no yo: sus pasos 5 y 9 miden los dos el impacto con metricas distintas, y los dos viajan porque ninguno esta cubierto; queda para la poda de la fase 04. La razon del 364 da por compartido resolver en un solo contacto y el texto del superviviente NO lo dice, medido paso a paso: se reparte contra el texto. CERO perdidas nombradas."
+  },
+  {
+   "orden": 29,
+   "miembros": [
+    "deep_dive_workshop",
+    "metodologia_deep_dive"
+   ],
+   "miembros_del_acto_entero": [
+    "deep_dive_workshop",
+    "metodologia_deep_dive"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "deep_dive_workshop",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y ADEMAS EL MATERIAL PROPIO DECLARADO APUNTA AL MISMO LADO: los pasos apuntan a deep_dive_workshop, 5 contra 4, y las condiciones empatan 2 contra 2. La razon del 366 dice que El primero anade formular la pregunta central como Como podriamos, QUE ES SU UNICO GESTO PROPIO, y el primero es deep_dive_workshop. Las dos varas de contenido que hablan apuntan al mismo sitio. El cableado apunta al otro (2 contra 6) y NO manda, porque el contenido no calla.",
+   "absorbidos": [
+    "metodologia_deep_dive"
+   ],
+   "pasos": {
+    "metodologia_deep_dive": {
+     "1": "INCISO:1|en un mismo espacio físico|, ",
+     "2": "CUBIERTO:3",
+     "3": "INCISO:4|de baja fidelidad|, y que sean ",
+     "4": "CUBIERTO:5"
+    }
+   },
+   "condiciones": {
+    "metodologia_deep_dive": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "NINGUN PASO VIAJA ENTERO porque los cuatro del que muere son cuatro de los cinco del superviviente, uno a uno, y lo propio son DOS PARAMETROS: que el equipo se reuna en un mismo espacio fisico y que los prototipos sean de baja fidelidad. Los dos van de INCISO. Su condicion 2 (involucrar a multiples stakeholders con conocimientos tecnicos distintos) SI viaja entera: es un disparador distinto del de las varias personas y el poco tiempo. CERO perdidas nombradas."
+  },
+  {
+   "orden": 30,
+   "miembros": [
+    "fase_assess_ciclo_cliente",
+    "fase_assess_experiencia_cliente"
+   ],
+   "miembros_del_acto_entero": [
+    "fase_assess_ciclo_cliente",
+    "fase_assess_experiencia_cliente"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "fase_assess_ciclo_cliente",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos apuntan a fase_assess_ciclo_cliente, 5 contra 4, y las condiciones empatan 3 contra 3. El cableado esta de acuerdo (6 contra 4). La razon del 373 reconoce propio a los dos lados (al segundo lo tangible que da un anticipo; al primero la calificacion del 1 al 10 y los seis canales), asi que el material propio declarado EMPATA y no desempata: quien decide es la vara de los pasos, que no empata.",
+   "absorbidos": [
+    "fase_assess_experiencia_cliente"
+   ],
+   "pasos": {
+    "fase_assess_experiencia_cliente": {
+     "1": "INCISO:2|puede ser segundos, días o meses|: ",
+     "2": "CUBIERTO:1",
+     "3": "CUBIERTO:1",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "fase_assess_experiencia_cliente": {
+     "1": "APPEND",
+     "2": "CUBIERTO:1",
+     "3": "APPEND"
+    }
+   },
+   "nota_del_reparto": "UN PASO VIAJA ENTERO, el que la razon declara propio del que muere: crear algo tangible (una muestra, una historia, un testimonio) que de un anticipo real de como sera la experiencia. UN INCISO salva la escala del tiempo de evaluacion (segundos, dias o meses), que es el parametro del gesto de medir cuanto tardan en decidir. DOS CONDICIONES VIAJAN ENTERAS: estar enfocado solo en cerrar la venta, y que te cancelen poco despues de comprarte; ninguna de las tres del superviviente las dice. CERO perdidas nombradas."
+  },
+  {
+   "orden": 31,
+   "miembros": [
+    "test_socios_de_trafico",
+    "traffic_partners_hypothesis"
+   ],
+   "miembros_del_acto_entero": [
+    "test_socios_de_trafico",
+    "traffic_partners_hypothesis"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "test_socios_de_trafico",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos apuntan a test_socios_de_trafico, 6 contra 5, y las condiciones empatan 1 contra 1. El cableado apunta al otro (2 contra 4) y NO manda, porque el contenido no calla. La razon del 380 reconoce propio a los dos lados (al primero el correo de presentacion y la ficha de resultados; al segundo donde buscarlos), asi que el propio declarado EMPATA y decide la vara de los pasos.",
+   "absorbidos": [
+    "traffic_partners_hypothesis"
+   ],
+   "pasos": {
+    "traffic_partners_hypothesis": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:4",
+     "3": "APPEND",
+     "4": "INCISO:1|tiendas de aplicaciones, marketplaces y emisores de tarjetas de crédito|, mirando en ",
+     "5": "INCISO:3|cuando llegues a la fase de validación con clientes (Customer Validation)|, "
+    }
+   },
+   "condiciones": {
+    "traffic_partners_hypothesis": {
+     "1": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "UN PASO VIAJA ENTERO: ordenar la lista de socios segun cuales son mas criticos, que el superviviente no manda en ningun paso. DOS INCISOS salvan los dos parametros concretos: DONDE buscar a los socios (tiendas de aplicaciones, marketplaces y emisores de tarjetas), que es el parametro del gesto de identificarlos, y CUANDO preparar las reuniones (al llegar a Customer Validation), que es el parametro del gesto de agendarlas. PERDIDA NOMBRADA, UNA: su condicion 1 acota el disparador a los negocios WEB O MOVIL y la del superviviente no lo acota; el INCISO para condiciones no existe en el instrumento y la perdida se nombra."
+  },
+  {
+   "orden": 32,
+   "miembros": [
+    "fracaso_como_aprendizaje_startup",
+    "fallo_como_aprendizaje_startup"
+   ],
+   "miembros_del_acto_entero": [
+    "fallo_como_aprendizaje_startup",
+    "fracaso_como_aprendizaje_startup"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "fracaso_como_aprendizaje_startup",
+   "motivo": "CONTENIDO, TODAS LAS VARAS DE ACUERDO: los pasos apuntan a fracaso_como_aprendizaje_startup (4 contra 5), las condiciones tambien (2 contra 3) y el cableado tambien (3 contra 8). La razon del 387 dice que El segundo anade documentar cada fracaso como insumo de la decision de pivotar y no penalizar al equipo, y el segundo es el elegido: el material propio declarado apunta al mismo lado. No hay nada que desempatar.",
+   "absorbidos": [
+    "fallo_como_aprendizaje_startup"
+   ],
+   "pasos": {
+    "fallo_como_aprendizaje_startup": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:2"
+    }
+   },
+   "condiciones": {
+    "fallo_como_aprendizaje_startup": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:3"
+    }
+   },
+   "nota_del_reparto": "NINGUNA PIEZA VIAJA Y NINGUNA SE PIERDE: los cuatro pasos y las dos condiciones del que muere son los mismos gestos del superviviente, uno a uno, y el superviviente los dice con MAS material (cinco pasos y tres condiciones). Es el reparto mas limpio del lote. CERO perdidas nombradas y CERO incisos."
+  },
+  {
+   "orden": 33,
+   "miembros": [
+    "leap_of_faith_assumptions",
+    "leap_of_faith_questions"
+   ],
+   "miembros_del_acto_entero": [
+    "leap_of_faith_assumptions",
+    "leap_of_faith_questions"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "leap_of_faith_assumptions",
+   "motivo": "EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO: pasos 4 contra 4 y condiciones 2 contra 2, al digito, y la razon del 389 reconoce propio A LOS DOS LADOS (al primero reescribir las comparaciones en terminos verificables; al segundo disenar el experimento que valida cada uno), asi que tampoco el propio declarado separa. El cableado apunta a leap_of_faith_assumptions, 9 contra 3. Y AQUI LA GUARDA Y EL CONTENIDO NO CHOCAN: leap_of_faith_assumptions ES PUERTA (extremo de puente aprobado) y es el que el cableado elige, asi que la guarda 1B se cumple sin conflicto. Se dice porque en los actos 1 y 15 si chocaban.",
+   "absorbidos": [
+    "leap_of_faith_questions"
+   ],
+   "pasos": {
+    "leap_of_faith_questions": {
+     "1": "INCISO:1|el modelo de negocio y el spreadsheet financiero|, incluidos ",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:4",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "leap_of_faith_questions": {
+     "1": "CUBIERTO:2",
+     "2": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "UN PASO VIAJA ENTERO, el que la razon declara propio del que muere: disenar experimentos especificos para validar cada leap-of-faith question antes de construir el producto completo. UN INCISO salva DONDE mirar los supuestos (el modelo de negocio y el spreadsheet financiero), que es el parametro del gesto de revisar el plan. PERDIDA NOMBRADA, UNA: su condicion 2 acota el disparador a los SUPUESTOS FINANCIEROS sin validar y la condicion 1 del superviviente habla de suposiciones sin acotar; el INCISO para condiciones no existe en el instrumento y la perdida se nombra."
+  },
+  {
+   "orden": 34,
+   "miembros": [
+    "key_resources_hypothesis",
+    "recursos_clave"
+   ],
+   "miembros_del_acto_entero": [
+    "key_resources_hypothesis",
+    "recursos_clave"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "key_resources_hypothesis",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y ADEMAS EL MATERIAL PROPIO DECLARADO APUNTA AL MISMO LADO: los pasos apuntan a key_resources_hypothesis, 5 contra 4, y las condiciones empatan 1 contra 1. La razon del 406 dice que El primero anade revisar de que se depende que esta fuera del propio control, Y ES SU UNICO GESTO PROPIO, y el primero es key_resources_hypothesis. El cableado esta de acuerdo (6 contra 5).",
+   "absorbidos": [
+    "recursos_clave"
+   ],
+   "pasos": {
+    "recursos_clave": {
+     "1": "INCISO:1|redes de distribución|, ",
+     "2": "INCISO:4|marca, patentes, bases de datos, saber hacer|: ",
+     "3": "CUBIERTO:3",
+     "4": "INCISO:2|efectivo, líneas de crédito|, y calcula cuánto hace falta en "
+    }
+   },
+   "condiciones": {
+    "recursos_clave": {
+     "1": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "NINGUNA PIEZA VIAJA ENTERA porque los cuatro pasos del que muere son las cuatro categorias del mismo bloque del lienzo que el superviviente ya recorre, y lo propio son TRES LISTAS DE EJEMPLOS que van de INCISO: las redes de distribucion entre los recursos fisicos, la marca, las patentes, las bases de datos y el saber hacer entre los intelectuales, y el efectivo y las lineas de credito entre los financieros. CERO perdidas nombradas."
+  },
+  {
+   "orden": 35,
+   "miembros": [
+    "planificacion_preguntas_implicacion",
+    "preguntas_implicacion"
+   ],
+   "miembros_del_acto_entero": [
+    "planificacion_preguntas_implicacion",
+    "preguntas_implicacion"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "planificacion_preguntas_implicacion",
+   "motivo": "CONTENIDO, LAS DOS VARAS DE ACUERDO: los pasos apuntan a planificacion_preguntas_implicacion (4 contra 3) y las condiciones tambien (3 contra 1). El cableado apunta al otro (4 contra 6) y NO manda, porque el contenido no calla. La razon del 410 reconoce propio a los dos lados (al primero el ejercicio previo a la llamada; al segundo el consejo de practicarlas), asi que el propio declarado EMPATA y deciden los conteos, que apuntan los dos al mismo sitio.",
+   "absorbidos": [
+    "preguntas_implicacion"
+   ],
+   "pasos": {
+    "preguntas_implicacion": {
+     "1": "INCISO:2|financieras, operativas, de satisfacción|, sean ",
+     "2": "CUBIERTO:3",
+     "3": "APPEND"
+    }
+   },
+   "condiciones": {
+    "preguntas_implicacion": {
+     "1": "CUBIERTO:3"
+    }
+   },
+   "nota_del_reparto": "UN PASO VIAJA ENTERO, el que la razon declara propio del que muere: practicar y refinar estas preguntas porque requieren mayor habilidad y preparacion. UN INCISO salva los tres tipos de consecuencia (financieras, operativas, de satisfaccion), que son el parametro del gesto de anotar las consecuencias. CERO perdidas nombradas."
+  },
+  {
+   "orden": 36,
+   "miembros": [
+    "content_marketing_blog",
+    "blogging_como_canal_de_traccion"
+   ],
+   "miembros_del_acto_entero": [
+    "blogging_como_canal_de_traccion",
+    "content_marketing_blog"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "content_marketing_blog",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA: los pasos apuntan a content_marketing_blog, 6 contra 8, y las condiciones empatan 2 contra 2. El cableado esta de acuerdo (4 contra 7). La razon del 417 reconoce propio a los dos lados (al primero el plazo de seis meses; al segundo las infografias y los lead magnets), asi que el propio declarado EMPATA y decide la vara de los pasos.",
+   "absorbidos": [
+    "blogging_como_canal_de_traccion"
+   ],
+   "pasos": {
+    "blogging_como_canal_de_traccion": {
+     "1": "APPEND",
+     "2": "CUBIERTO:3",
+     "3": "INCISO:5|desde los primeros meses|, ",
+     "4": "INCISO:6|influencers de Twitter en tu nicho|, en especial ",
+     "5": "INCISO:7|menciones sociales|, sin dejar fuera las ",
+     "6": "CUBIERTO:2"
+    }
+   },
+   "condiciones": {
+    "blogging_como_canal_de_traccion": {
+     "1": "APPEND",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "UN PASO VIAJA ENTERO, el que la razon declara propio del que muere: dedicar al menos seis meses consistentes de publicacion antes de evaluar resultados, que es un horizonte y no un parametro de otro gesto. TRES INCISOS salvan tres parametros: desde cuando hacer guest posting, en que red y nicho estan los influencers, y que ademas de la analitica hay que mirar las menciones sociales. DOS CONDICIONES VIAJAN ENTERAS porque dicen cosas distintas de las del superviviente: construir autoridad de marca a largo plazo (contra un canal de bajo costo) y tener capacidad de producir contenido de forma sostenida (contra tener expertise de industria). CERO perdidas nombradas."
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

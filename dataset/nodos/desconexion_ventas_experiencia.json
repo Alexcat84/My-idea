@@ -8,20 +8,33 @@
   "pasos_accionables": [
     "Traza el camino que sigue un cliente entre la venta y la entrega, y anota que información se pierde en ese traspaso",
     "Revisa como te pagas o incentivas a quien vende, para que también le importe que el cliente se quede contento y se quede contigo, no solo cerrar cuentas nuevas",
-    "Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después",
-    "Crea un protocolo claro de traspaso: una reunion conjunta entre el cliente, quien vendio y quien sigue atendiendolo"
+    "Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después, en concreto lo que el cliente necesita, qué le prometiste y sus preferencias",
+    "Crea un protocolo claro de traspaso: una reunion conjunta entre el cliente, quien vendio y quien sigue atendiendolo, empezando por tus clientes más importantes",
+    "De vez en cuando revisa si lo que prometiste al vender coincide con lo que de verdad estás entregando"
   ],
   "entregable_esperado": "Un proceso documentado de traspaso del cliente (de la venta a la entrega), con una herramienta (CRM) configurada y con metas de retencion ligadas a la venta",
   "nodos_previos": [
     "preframing_expectativas"
   ],
   "nodos_siguientes": [
-    "welcome_call_cliente_veterano"
+    "welcome_call_cliente_veterano",
+    "fase_admit"
   ],
   "condiciones_activacion": [
     "Cuando recibes quejas frecuentes de clientes nuevos porque no se cumplio lo que se les prometio",
     "Si quien vende y quien atiende o entrega funcionan como mundos separados",
-    "Cuando notas que muchos clientes se van en los primeros meses después de comprar"
+    "Cuando notas que muchos clientes se van en los primeros meses después de comprar",
+    "En ventas de alto valor o contratos largos (seguros, software, servicios)"
   ],
-  "etiqueta_arbol": "Conecta Ventas y Postventa"
+  "etiqueta_arbol": "Conecta Ventas y Postventa",
+  "ids_alias": [
+    "traspaso_ventas_cuentas"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "traspaso_ventas_cuentas",
+      "titulo": "Que lo que prometes al vender sea lo que realmente entregas",
+      "fuente": "Never Lose a Customer Again - Joey Coleman"
+    }
+  ]
 }

@@ -1,0 +1,83 @@
+{
+ "operacion": "OP-U-01",
+ "fecha": "2026-08-20",
+ "vuelta": 55,
+ "estado": "SELLADO",
+ "nomina": "docs/loop/RECOMPUTO_V55_APERTURA.jsonl mas la re-medicion tras deshacer el acto 23",
+ "tramo_definido_en": "docs/loop/SALIDA_V55_TRAMO2_TRAS_DESHACER.txt, con scripts/loop/vuelta55_tramo2_nomina.py (sucesor declarado del de la vuelta 54, que cae en ROJO al continuar un tramo ya consumido): 30 VIVOS y 20 FUNDIDOS de 50, las dos lecturas calzando en conjunto y en orden y los supervivientes siendo PREFIJO de la lectura A",
+ "dossier": "docs/loop/SALIDA_V55_DOSSIER_TRAMO2.txt (P.5, el acto leido entero con su razon entera pegada) mas docs/loop/SALIDA_V55_MESA_TRAMO2.txt y docs/loop/SALIDA_V55_VARAS_TRAMO2.txt",
+ "vara": "TODOS los actos del tramo 2 son de FUSION PURA (medido): un acto de dos miembros con UN par A directo y ningun mixto. No hay lectura P.12 que hacer. El superviviente lo elige el CONTENIDO como P.8 lo define (pasos y condiciones, material propio y padre declarado EN LAS RAZONES); UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4), y EL MATERIAL PROPIO DECLARADO DE UN SOLO LADO ES UNA VARA (acta 54, pregunta 4); si dos varas de contenido CHOCAN decide la pieza DECLARADA y si no hay ninguna se DECLARA y acumula para la mesa (acta 54, pregunta 2); si el contenido calla entero, EL CABLEADO DECIDE SOLO; si tambien empata, se DECLARA. Y LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1): en un acto de dos donde el unico candidato limpio es la puerta, LA PUERTA SOBREVIVE y el choque de conteos se registra en el motivo.",
+ "varas_impresas": "docs/loop/SALIDA_V55_VARAS_TRAMO2.txt, una fila por acto con pasos, condiciones y cableado contados por maquina y la FORMA del veredicto impresa. Ninguna cifra de este plan esta tecleada.",
+ "colisiones_esperadas": "docs/loop/SALIDA_V55_COLISIONES_ESPERADAS_TRAMO2.txt, medidas ANTES de tocar un nodo sobre EL ARCHIVO ENTERO, por PAR RESUELTO, con scripts/loop/vuelta54_colisiones_esperadas.py. Una colision real fuera de esa prediccion detiene.",
+ "vara_de_las_puertas": "docs/loop/SALIDA_V55_PUERTAS_APERTURA.txt. GUARDA 1B: ningun absorbido de este plan es semilla de entrada ni extremo de puente aprobado, comprobado por el generador y otra vez por el ejecutor.",
+ "politica_del_reparto": "LA HEREDADA Y CITADA, no reinventada (acta 51 D3; acta 52 D5 y D10; acta 54 pregunta 5; registros de las vueltas 53 y 54): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND, y una pieza mitad propia mitad ya dicha va de APPEND ENTERO con el solape declarado para la poda de la fase 04 (acta 54, pregunta 5). El INCISO es siempre TROZO VERBATIM del paso que muere, y en este generador se EXTRAE del nodo en vez de teclearse.",
+ "tramo": "2, LOTE T1 DE LA VUELTA 55: LOS DOS ACTOS DE LA RELECTURA CONJUNTA DEL ACTA 54 (el 18, que la vuelta 54 declaro empate sin vara, y el 23, cuya fusion se DESHIZO y se rehace en la direccion contraria con correccion declarada)",
+ "actos": [
+  {
+   "orden": 18,
+   "miembros": [
+    "desconexion_ventas_experiencia",
+    "traspaso_ventas_cuentas"
+   ],
+   "miembros_del_acto_entero": [
+    "desconexion_ventas_experiencia",
+    "traspaso_ventas_cuentas"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "desconexion_ventas_experiencia",
+   "motivo": "CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA VARA ES EL MATERIAL PROPIO DECLARADO DE UN SOLO LADO (acta 54, pregunta 4). LAS TRES VARAS CONTABLES EMPATAN AL DIGITO: pasos 4 contra 4, condiciones 3 contra 3 y cableado 2 contra 2, y por eso la vuelta 54 lo declaro EMPATE SIN VARA. LO QUE AQUELLA LECTURA NO PESO es lo que la razon del puesto 322 declara con todas sus letras: El primero anade revisar como se incentiva a quien vende, QUE ES SU UNICO GESTO PROPIO. El primero es desconexion_ventas_experiencia, y ese gesto esta en su paso 2, verificado contra el grafo. Material propio declarado de UN SOLO LADO es una vara de contenido NO empatada, y una vara no empatada BASTA (acta 53, pregunta 4): el contenido NO empataba y el acto era FUSIBLE. La razon enumera ademas los CUATRO gestos que declara compartidos y los cuatro son los cuatro pasos de traspaso_ventas_cuentas, asi que del otro lado no queda propio declarado. RELECTURA CONJUNTA CONFIRMADA: el caso del auditor se sostiene leyendo el grafo.",
+   "absorbidos": [
+    "traspaso_ventas_cuentas"
+   ],
+   "pasos": {
+    "traspaso_ventas_cuentas": {
+     "1": "CUBIERTO:1",
+     "2": "INCISO:3|lo que el cliente necesita, qué le prometiste y sus preferencias|, en concreto ",
+     "3": "INCISO:4|tus clientes más importantes|, empezando por ",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "traspaso_ventas_cuentas": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2",
+     "3": "APPEND"
+    }
+   },
+   "nota_del_reparto": "UNA PIEZA VIAJA ENTERA Y SE DICE POR QUE, aunque la razon la de por compartida: el paso 4 del que muere, De vez en cuando revisa si lo que prometiste al vender coincide con lo que de verdad estas entregando, NO ESTA en ninguno de los cuatro pasos del superviviente, medido paso a paso. La razon lo enumera entre los compartidos, pero el reparto se hace contra EL TEXTO y no contra la razon, y APPEND no pierde nada. Su condicion 3 (ventas de alto valor o contratos largos) tambien viaja entera. DOS INCISOS: que anotar antes del traspaso, que es un parametro del CRM del paso 3, y el alcance de los clientes mas importantes, que es un parametro del protocolo del paso 4. UNA PERDIDA NOMBRADA: su condicion 1 habla de quejas de CLIENTES y la condicion 1 del superviviente dice CLIENTES NUEVOS, que es mas estrecho; el INCISO para condiciones no existe en el instrumento (pendiente de doctrina heredado) y por eso la perdida se nombra en vez de repararse."
+  },
+  {
+   "orden": 23,
+   "miembros": [
+    "modelo_tradicional_introduccion_producto",
+    "modelo_cascada_desarrollo_producto"
+   ],
+   "miembros_del_acto_entero": [
+    "modelo_cascada_desarrollo_producto",
+    "modelo_tradicional_introduccion_producto"
+   ],
+   "figura": "FUSION PURA, un solo par A directo y ningun mixto",
+   "superviviente": "modelo_tradicional_introduccion_producto",
+   "motivo": "CORRECCION DECLARADA DE LA FUSION EJECUTADA EN LA VUELTA 54, que fundio este mismo acto en la direccion CONTRARIA. CONTENIDO, UNA SOLA VARA NO EMPATADA, Y LA VARA ES EL MATERIAL PROPIO DECLARADO DE UN SOLO LADO (acta 54, pregunta 4). La razon del puesto 340 dice con todas sus letras: El segundo anade no contratar estructuras completas, VP de ventas y equipos, antes de validar, QUE ES EL UNICO GESTO PROPIO. El segundo es modelo_tradicional_introduccion_producto, y ese gesto es su paso 4, verificado contra el grafo. UN SOLO LADO CON PROPIO DECLARADO ES UNA VARA NO EMPATADA Y BASTA: el contenido no empataba y el cableado no tenia que hablar. EL MOTIVO VIEJO, ENTERO Y SIN TAPAR, era este: EL CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO: pasos 4 contra 4, condiciones 2 contra 2, y la razon del 340 le reconoce a cada uno lo suyo. El cableado apunta a modelo_cascada_desarrollo_producto, 5 contra 2. NO es empate sin vara porque el cableado no empata. LO MARCO COMO DISCUTIBLE EN EL REPORTE, porque la razon del 340 llama al gesto propio del OTRO (no contratar estructuras completas antes de validar) SU UNICO GESTO PROPIO, y una pieza declarada pesa mas que el cableado: aqui ese gesto propio VIAJA ENTERO al superviviente y no se pierde, que es lo que hace la eleccion sostenible. FIN DEL MOTIVO VIEJO. LO QUE ESTABA MAL EN EL: la frase la razon del 340 le reconoce a cada uno lo suyo NO es lo que la razon dice; la razon reconoce UN SOLO gesto propio y del lado del segundo, y llamarlo UNICO cierra la puerta al empate. La fusion vieja se DESHIZO restaurando los cuatro ficheros que toco (scripts/loop/vuelta55_deshacer_acto23.py, con el alcance medido por git y no supuesto) y se rehace aqui.",
+   "absorbidos": [
+    "modelo_cascada_desarrollo_producto"
+   ],
+   "pasos": {
+    "modelo_cascada_desarrollo_producto": {
+     "1": "INCISO:1|heredado de grandes empresas|, ",
+     "2": "APPEND",
+     "3": "INCISO:2|el mercado y el cliente son realmente 'conocidos' o son solo hipótesis|, y si ",
+     "4": "APPEND"
+    }
+   },
+   "condiciones": {
+    "modelo_cascada_desarrollo_producto": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    }
+   },
+   "nota_del_reparto": "EL REPARTO ES EL ESPEJO EXACTO DEL QUE LA VUELTA 54 SELLO EN LA OTRA DIRECCION, y por eso las cuentas calzan: alli el superviviente pasaba de 4 a 6 pasos y de 2 a 3 condiciones, y aqui tambien. DOS GESTOS VIAJAN ENTEROS: reconocer las cuatro etapas del modelo (Concepto, Desarrollo, Alpha/Beta, Lanzamiento), que el superviviente no enumera, y detener la ejecucion ciega si no hay contacto continuo con el cliente, que es la mitad que al superviviente le falta de su paso 3. Su condicion 2 (fecha de lanzamiento fija e inamovible sin importar el feedback) viaja entera, igual que en la direccion contraria viajaba la del inversionista que exige plan detallado. DOS INCISOS QUE LA DIRECCION VIEJA NO TENIA, y se declaran: la herencia de la empresa grande y el mercado y el cliente como hipotesis eran material propio que aquel reparto perdio sin nombrarlo; aqui se salvan. CERO perdidas nombradas."
+  }
+ ],
+ "declarados_y_no_fundidos": []
+}

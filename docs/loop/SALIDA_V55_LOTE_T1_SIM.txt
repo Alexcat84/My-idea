@@ -1,0 +1,112 @@
+==============================================================================
+OP-U-01, TRAMO 2, LOTE T1 DE LA VUELTA 55: LOS DOS ACTOS DE LA RELECTURA CONJUNTA DEL ACTA 54 (el 18, que la vuelta 54 declaro empate sin vara, y el 23, cuya fusion se DESHIZO y se rehace en la direccion contraria con correccion declarada) . MODO SIMULAR
+plan: docs/loop/PLAN_V55_OPU01_LOTE_T1.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3457 vivos, 396 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 18 . sobrevive desconexion_ventas_experiencia . absorbe traspaso_ventas_cuentas
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 2 de traspaso_ventas_cuentas al PASO 3 del superviviente
+        inciso VERBATIM: 'lo que el cliente necesita, qué le prometiste y sus preferencias'
+        nexo (lo unico de cosecha propia): ', en concreto '
+        paso resultante: Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después, en concreto lo que el cliente necesita, qué le prometiste y sus preferencias
+     del paso 3 de traspaso_ventas_cuentas al PASO 4 del superviviente
+        inciso VERBATIM: 'tus clientes más importantes'
+        nexo (lo unico de cosecha propia): ', empezando por '
+        paso resultante: Crea un protocolo claro de traspaso: una reunion conjunta entre el cliente, quien vendio y quien sigue atendiendolo, empezando por tus clientes más importantes
+  alias del superviviente: ['traspaso_ventas_cuentas']
+
+------------------------------------------------------------------------------
+ACTO 23 . sobrevive modelo_tradicional_introduccion_producto . absorbe modelo_cascada_desarrollo_producto
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 6 (anadidos 2) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de modelo_cascada_desarrollo_producto al PASO 1 del superviviente
+        inciso VERBATIM: 'heredado de grandes empresas'
+        nexo (lo unico de cosecha propia): ', '
+        paso resultante: Identificar si tu equipo está usando un proceso waterfall rígido de especificación-desarrollo-lanzamiento, heredado de grandes empresas
+     del paso 3 de modelo_cascada_desarrollo_producto al PASO 2 del superviviente
+        inciso VERBATIM: "el mercado y el cliente son realmente 'conocidos' o son solo hipótesis"
+        nexo (lo unico de cosecha propia): ', y si '
+        paso resultante: Evaluar si las especificaciones del producto se basan en suposiciones no validadas, y si el mercado y el cliente son realmente 'conocidos' o son solo hipótesis
+  alias del superviviente: ['modelo_cascada_desarrollo_producto']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 7
+   build_measure_learn                                  nodos_siguientes  modelo_cascada_desarrollo_producto -> modelo_tradicional_introduccion_producto
+   curva_atricion_optima                                nodos_siguientes  modelo_cascada_desarrollo_producto -> modelo_tradicional_introduccion_producto
+   desarrollo_de_clientes_customer_development          nodos_previos     modelo_cascada_desarrollo_producto -> modelo_tradicional_introduccion_producto
+   fase_admit                                           nodos_previos     traspaso_ventas_cuentas -> desconexion_ventas_experiencia
+   nueve_pecados_capitales_lanzamiento                  nodos_previos     modelo_cascada_desarrollo_producto -> modelo_tradicional_introduccion_producto
+   preframing_expectativas                              nodos_siguientes  traspaso_ventas_cuentas -> desconexion_ventas_experiencia
+   search_for_business_model                            nodos_previos     modelo_cascada_desarrollo_producto -> modelo_tradicional_introduccion_producto
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 1
+   startup_como_busqueda_vs_ejecucion                   nodos_previos     modelo_cascada_desarrollo_producto (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 1
+   preframing_expectativas                              nodos_siguientes
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 977   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 976   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 1, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 10 de 10
+guarda D, los 2 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (13 filas)
+ acto de que nodo                                  que          n  a donde va
+   18 traspaso_ventas_cuentas                      paso         1  ya lo dice el PASO 1 del superviviente
+        Revisa cómo pasa hoy la información desde que cierras una venta hasta que alguien atiende a ese cliente
+   18 traspaso_ventas_cuentas                      paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Anota siempre lo que el cliente necesita, qué le prometiste y sus preferencias antes de dar la venta por cerrada
+   18 traspaso_ventas_cuentas                      paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Para tus clientes más importantes, ten una conversación o un paso fijo donde entregues esa información a quien seguirá atendiéndolos
+   18 traspaso_ventas_cuentas                      paso         4  PASO 5 del superviviente
+        De vez en cuando revisa si lo que prometiste al vender coincide con lo que de verdad estás entregando
+   18 traspaso_ventas_cuentas                      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando recibes quejas repetidas de clientes porque no cumpliste lo prometido
+   18 traspaso_ventas_cuentas                      condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si una persona vende y otra distinta atiende después al cliente
+   18 traspaso_ventas_cuentas                      condicion    3  CONDICION 4 del superviviente
+        En ventas de alto valor o contratos largos (seguros, software, servicios)
+   23 modelo_cascada_desarrollo_producto           paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar si tu startup está usando este modelo por defecto (heredado de grandes empresas).
+   23 modelo_cascada_desarrollo_producto           paso         2  PASO 5 del superviviente
+        Reconocer las 4 etapas: Concepto, Desarrollo, Alpha/Beta, Lanzamiento.
+   23 modelo_cascada_desarrollo_producto           paso         3  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar si el mercado y el cliente son realmente 'conocidos' o son solo hipótesis.
+   23 modelo_cascada_desarrollo_producto           paso         4  PASO 6 del superviviente
+        Detener la ejecución ciega si no hay contacto continuo con el cliente.
+   23 modelo_cascada_desarrollo_producto           condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el equipo está construyendo un producto completo antes de hablar con clientes.
+   23 modelo_cascada_desarrollo_producto           condicion    2  CONDICION 3 del superviviente
+        Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback.
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 2
+  nodos implicados    : 4
+  nodos que MUEREN    : 2
+  piezas repartidas   : 13 (5 viajan enteras, 4 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+SIMULACION: cero escrituras.
