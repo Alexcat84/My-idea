@@ -1,0 +1,315 @@
+=== Paso 1: Normalizacion ASCII ===
+  0 archivo(s) renombrado(s).
+=== Paso 2: Redireccion de nodos fusionados ===
+  0 nodo(s) actualizado(s).
+=== Paso 3: Aliases restantes (capa B / capa C / auto) ===
+  0 nodo(s) actualizado(s).
+=== Paso 4: Limpieza final de referencias rotas ===
+  0 nodo(s) actualizado(s).
+=== Paso 5: Simetrizacion de enlaces ===
+  0 nodo(s) actualizado(s). Vistas completadas: 0 en nodos_siguientes, 0 en nodos_previos.
+=== Paso 6: Compilacion de master_graph.json ===
+  3853 nodos compilados.
+  Log escrito en dataset\metadata\phase1_run_log.json
+
+=== Paso 7: Validador Gate 0 ===
+
+--- Resumen Gate 0 ---
+  [OK] Enlaces rotos en dataset == 0 (valor: 0)
+  [OK] Todos los nodos tienen dominio valido (['compras', 'core', 'entrega', 'environmental', 'exportacion', 'franquicias', 'health_safety', 'quality', 'risk_management', 'seguridad_digital']) (valor: 0)
+  [OK] Archivos con nombre no-ASCII == 0 (valor: 0)
+  [OK] Nodos en master_graph.json == archivos en disco (valor: 3853 vs 3853)
+  [OK] Componentes conexos <= 2 (valor: 1)
+  [OK] Cobertura del componente principal >= 99% (valor: 100.0)
+  [OK] Todos los JSON parsean sin error (valor: 0)
+  [OK] Cero grupos con titulo_concepto exacto duplicado (valor: 0)
+  [OK] Cero aristas con vista reciproca faltante (simetria) (valor: 0 (sin previo reciproco: 0, sin siguiente reciproco: 0))
+  [OK] Universo: activos / deprecados (valor: 3341 activos, 512 deprecados (siguen en el grafo))
+  [OK] Ningun nodo ACTIVO cuya unica entrada este deprecada (valor: 0 fantasmas)
+  [OK] Todo nodo ACTIVO tiene vector en el indice semantico (valor: 0 activos sin vector | 198 vectores de nodos que ya no son ofrecibles | 18 ROJO DECLARADO (docs\plan\INDICE_ROJO_DECLARADO.jsonl):
+      anillo_interior_explotar_el_canal_nucleo (OP-F-04-WEI, 2026-08-14)
+      autoservicio_y_autosanacion_del_producto (OP-F-04-COL, 2026-08-14)
+      critica_del_plan_con_ia (OP-F-02, 2026-08-14)
+      driver_de_inventario (OP-F-03, 2026-08-14)
+      escenarios_de_evolucion_de_la_ia (OP-F-02, 2026-08-14)
+      estar_listo_para_ser_publica (OP-F-04-HOR, 2026-08-14)
+      estrategia_circular_y_mecanismo_de_retorno (OP-F-03, 2026-08-14)
+      formalizar_un_proceso_ad_hoc (OP-F-04-HOR, 2026-08-14)
+      ideacion_con_ia_en_la_sesion (OP-F-02, 2026-08-14)
+      incentivos_internos_alineados_a_retencion (OP-F-04-COL, 2026-08-14)
+      inteligencia_de_anuncios_de_la_competencia (OP-F-04-WEI, 2026-08-14)
+      la_historia_de_la_empresa (OP-F-04-HOR, 2026-08-14)
+      observar_al_cliente_en_su_contexto (OP-F-04-COL, 2026-08-14)
+      personalizacion_guiada_por_el_cliente (OP-F-04-COL, 2026-08-14)
+      producto_como_servicio_de_acceso (OP-F-03, 2026-08-14)
+      puntos_brillantes_antes_del_pivote (OP-F-04-WEI, 2026-08-14)
+      seleccion_de_proveedores_por_costo_total (OP-F-03, 2026-08-14)
+      silla_vacia_del_cliente_en_decisiones (OP-F-04-COL, 2026-08-14))
+  [OK] Ningun nodo lleva su propio id en su ids_alias (auto-alias) (valor: 0 auto-alias)
+  [OK] Ningun alias es reclamado por dos nodos distintos (valor: 0 con dos duenos)
+  [OK] Los dos master_graph (dataset y web) dicen lo mismo (valor: 0 nodos divergentes)
+  [OK] Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista via alias) (valor: 0 auto-aristas)
+  [OK] Ninguna clave de nodo fuera de la lista blanca del esquema (valor: 0 renegadas)
+  [OK] Ninguna semilla de entrada esta deprecada (valor: 0 deprecadas)
+  [OK] Ningun puente aprobado apunta a un nodo deprecado (valor: 0 rotos)
+  [OK] Alcanzabilidad dirigida >= 99.5% desde entry_seeds.json (valor: 100.0% (3341/3341 activos, semillas validas: 85))
+
+--- Estadisticas del grafo ---
+{
+  "componentes_conexos": 1,
+  "tamano_componente_principal": 3853,
+  "cobertura_componente_principal_pct": 100.0,
+  "nodos_sin_enlaces_entrantes": 163,
+  "enlaces_rotos_en_grafo": 0
+}
+
+--- Warning informativo: pares de titulo con similitud >= 95 (13) ---
+  [99.2] crosby_estilo_ballet_vs_hockey  <->  estilo_gerencial_ballet_vs_hockey
+  [98.7] ciclo_venta_calidad_franquicia  <->  ciclo_ventas_calidad_franquicia
+  [97.6] capacidad_de_proceso  <->  capacidad_del_proceso
+  [97.3] control_estadistico_de_procesos  <->  control_estadistico_del_proceso
+  [97.2] carta_de_credito_letter_of_credit  <->  letters_of_credit
+  [97.1] costo_de_mala_calidad_3  <->  costo_mala_calidad_copq
+  [97.0] vehiculos_combustibles_alternativos  <->  vehiculos_combustibles_alternativos_2
+  [96.8] causas_comunes_causas_especiales  <->  causas_comunes_vs_especiales
+  [96.7] investigacion_incidentes  <->  investigacion_incidentes_2
+  [96.4] definicion_calidad_conformidad_requisitos_2  <->  definicion_calidad_conformidad_requisitos_3
+  [96.3] involucramiento_sindical  <->  involucramiento_sindical_calidad
+  [96.1] decision_aptitud_para_uso  <->  decision_aptitud_uso
+  [95.7] eliminacion_causas_error_3  <->  eliminacion_causas_error_4
+
+GATE 0: OK
+run_phase1 exit 0
+etiquetas_de_cara_v1.json: 68 etiquetas
+etiquetas_de_cara_v1_casa.json: 1 etiquetas
+etiquetas_de_cara_v1_curaduria_final.json: 4 etiquetas
+total a aplicar: 71
+
+  actualizar_business_model_canvas_discovery
+      - Actualiza tu Canvas tras Descubrir
+      + Actualiza tu Mapa tras Descubrir
+  actualizar_business_model_canvas_tuneup
+      - Ajusta tu Canvas Constantemente
+      + Ajusta tu Mapa Constantemente
+  actualizar_modelo_de_negocio_pivot_o_proceed
+      - Decide Pivotar o Continuar
+      + Decide si Cambias de Rumbo
+  alineacion_con_canvas
+      - Alinea tu Equipo con Canvas
+      + Alinea tu Equipo con el Mapa
+  business_model_canvas_como_scorecard
+      - Usa tu Canvas como Marcador
+      + Usa tu Mapa como Marcador
+  business_model_canvas_vs_plan
+      - Cambia el Plan por el Canvas
+      + Cambia el Plan por el Mapa
+  business_model_canvas_vs_plan_negocio
+      - Prefiere el Canvas al Plan
+      + Prefiere el Mapa al Plan
+  revalidar_modelo_negocio
+      - Revisa tu Canvas Antes de Ejecutar
+      + Revisa tu Mapa Antes de Ejecutar
+  swot_business_model_canvas
+      - Cruza tu SWOT con tu Canvas
+      + Cruza tus Fortalezas con tu Mapa
+  catalogo_pivotes
+      - Conoce los Tipos de Pivote
+      + Conoce los Cambios de Rumbo
+  tipos_de_pivote
+      - Elige tu Tipo de Pivote
+      + Elige tu Cambio de Rumbo
+  pivot_como_hipotesis_estrategica
+      - Convierte tu Pivote en Hipótesis
+      + Tu Cambio de Rumbo como Hipótesis
+  contabilidad_innovacion_pivote
+      - Evalúa tus Pivotes con Datos
+      + Evalúa tus Cambios con Datos
+  coraje_para_pivotar
+      - Ten el Coraje de Pivotar
+      + Ten Coraje para Cambiar Rumbo
+  riesgo_no_pivotar_a_tiempo
+      - No Ignores Señales de Pivote
+      + No Ignores Señales de Cambio
+  manifiesto_regla4_iteraciones_pivotes
+      - Itera o Pivota sin Miedo
+      + Itera y Cambia sin Miedo
+  runway_como_numero_de_pivotes
+      - Cuenta tus Pivotes Disponibles
+      + Cuenta tus Intentos Disponibles
+  reconstruccion_de_equipo_ejecutivo
+      - Renueva tu Equipo tras el Pivote
+      + Renueva tu Equipo tras el Cambio
+  ciclo_construir_medir_aprender
+      - Decide si Pivotar o Perseverar
+      + Recorre el Ciclo de Aprendizaje
+  decision_pivotar_o_proceder
+      - Decide Pivotar o Avanzar
+      + Cambiar de Rumbo o Avanzar
+  decision_pivote_perseverar
+      - Decide Pivotar o Perseverar
+      + Cambiar de Rumbo o Perseverar
+  pivotar_o_perseverar
+      - Decide: Pivotar o Perseverar
+      + Sostener el Rumbo o Cambiarlo
+  pivot_o_proceder
+      - Decide: Pivotar o Proceder
+      + La Decisión de Cambiar Rumbo
+  pivotar_o_proceder
+      - Decide Pivotar o Seguir
+      + Cambiar de Rumbo o Seguir
+  reunion_pivotar_o_perseverar
+      - Institucionaliza la Reunión de Pivote
+      + Institucionaliza la Reunión de Rumbo
+  war_room_pivot_proceed
+      - Decide si Pivotar o Seguir
+      + Reúnete para Decidir el Rumbo
+  ceo_equity_premium
+      - Paga la Prima al CEO
+      + Paga la Prima al CEO Fundador
+  compensacion_fundadores_cash_vs_equity
+      - Decide entre Salario y Equity
+      + Decide entre Salario y Acciones
+  compensacion_service_providers
+      - Paga Servicios con Equity
+      + Paga Servicios con Acciones
+  creacion_option_pool
+      - Reserva Equity para Futuros Talentos
+      + Reserva Acciones para Futuros Talentos
+  criterios_equity_split
+      - Divide el Equity con Justicia
+      + Divide las Acciones con Justicia
+  formalizacion_acuerdo_equity
+      - Formaliza tu Acuerdo de Equity
+      + Formaliza tu Acuerdo de Acciones
+  gestion_expectativas_equity_empleados
+      - Aclara las Expectativas de Equity
+      + Aclara las Expectativas de Acciones
+  reparto_inicial_equity
+      - Reparte el Equity con Cuidado
+      + Reparte las Acciones con Cuidado
+  teoria_equidad_split_equity
+      - Decide Cómo Repartir el Equity
+      + Decide Cómo Repartir las Acciones
+  timing_equity_split
+      - Elige cuándo Repartir el Equity
+      + Elige Cuándo Repartir las Acciones
+  crowdfunding_de_producto
+      - Financia tu Producto sin Ceder Equity
+      + Financia tu Producto sin Ceder Acciones
+  crowdfunding_legal_exemptions_jobs_act
+      - Conoce las Reglas del Crowdfunding
+      + Conoce las Reglas del Financiamiento Colectivo
+  cultura_feedback_alta_frecuencia
+      - Da Feedback Todo el Tiempo
+      + Cultiva el Hablar Claro Siempre
+  feedback_efectivo_liderazgo
+      - Da Feedback Honesto Siempre
+      + Da Opiniones Honestas Siempre
+  gestion_desempeno_feedback
+      - Formaliza tu Feedback de Desempeño
+      + Formaliza las Conversaciones de Desempeño
+  clasificacion_leads_abc
+      - Prioriza tus Leads en A/B/C
+      + Prioriza a tus Posibles Clientes
+  mini_folleto_franquicia
+      - Crea tu Mini-Folleto de Leads
+      + Crea tu Folleto para Prospectos
+  benchmarking_trilogia_juran
+      - Conecta Benchmarking con tu Calidad
+      + Compárate con los Mejores en Calidad
+  gestion_efectiva_benchmarking
+      - Lidera tu Benchmarking con Método
+      + Lidera tu Comparación con Método
+  gamificacion_onboarding_visual
+      - Vuelve Lúdico el Onboarding
+      + Vuelve Lúdica la Bienvenida
+  crear_pitch
+      - Prepara tu Pitch Clave
+      + Prepara tu Presentación Clave
+  introduccion_lean
+      - Elimina el Desperdicio, Piensa Lean
+      + Elimina el Desperdicio de Raíz
+  background_startup_vs_corporativo
+      - Elige entre Talento Corporativo o Startup
+      + Elige entre Talento Corporativo o Emprendedor
+  decision_de_vender_startup
+      - Decide si Vender tu Startup
+      + Decide si Vender tu Empresa
+  definicion_startup
+      - Entiende qué es una Startup
+      + Entiende qué Empresa Estás Creando
+  emprendimiento_como_disciplina_de_gestion
+      - Gestiona tu Startup con Método
+      + Gestiona tu Empresa Naciente con Método
+  gestion_equilibrio_familia_startup
+      - Equilibra tu Startup y Familia
+      + Equilibra tu Negocio y Familia
+  metricas_de_startup
+      - No Midas tu Startup Como Grande
+      + No Midas tu Negocio Como Grande
+  ingenieria_de_prompts_efectiva
+      - Domina tus Prompts de IA
+      + Domina tus Instrucciones a la IA
+  medicion_kpi
+      - Mide tu Progreso con KPI
+      + Elige tus Indicadores Clave
+  erp_systems
+      - Conecta tu Empresa con un ERP
+      + Conecta Toda tu Operación
+  jerarquia_firma_vc
+      - Conoce Quién Decide en el VC
+      + Conoce Quién Decide en los Fondos
+  hipotesis_relacion_clientes_web
+      - Formula tu Hipótesis de Funnel
+      + Formula tu Hipótesis de Embudo
+  metodologia_spin_selling
+      - Aplica las Preguntas SPIN
+      + Aplica las Preguntas que Venden
+  modelo_spin
+      - Entiende el Modelo SPIN
+      + Entiende las Preguntas que Venden
+  modelo_spin_preguntas
+      - Sigue la Secuencia SPIN
+      + Sigue la Secuencia de Preguntas
+  sipoc
+      - Mapea tu Proceso con SIPOC
+      + Mapea tu Proceso Completo
+  six_sigma_dmaic
+      - Mejora con el Modelo DMAIC
+      + Mejora en Cinco Pasos
+  six_sigma_dmaic_2
+      - Aplica DMAIC para Reducir Defectos
+      + Reduce Defectos en Cinco Pasos
+  ooda_loop_decision
+      - Decide Rápido con el Ciclo OODA
+      + Decide Rápido en el Caos
+  riesgo_contra_valor_vale_la_pena
+      - Riesgo Contra Valor: ¿Vale la Pena?
+      + ¿El Valor Compensa el Riesgo?
+  duos_vs_trios_fundadores
+      - Decide: Dúo o Trío
+      + Decide entre Dúo o Trío
+  disenar_prompts_efectivos_para_ia
+      - Diseña Prompts que Funcionen
+      + Diseña Instrucciones que Funcionen
+  mitos_stage_gate
+      - Entiende lo que Stage-Gate No Es
+      + Entiende los Puntos de Control
+  stage_gate_tipos_proyectos
+      - Adapta Stage-Gate a tu Proyecto
+      + Adapta tus Puntos de Control
+
+71 etiquetas cambian; 0 ya estaban en su forma final.
+escrito: dataset\metadata\master_graph.json (71 etiquetas)
+escrito: web\lib\assets\master_graph.json (0 etiquetas)
+etiquetas exit 0
+  master_graph.json: 8274337 bytes, sha256=a0c96aa5c4d8...
+  preguntas_cache.json: 1484340 bytes, sha256=e5f641feaa66...
+  node_families.json: 177925 bytes, sha256=7a98d1852fd0...
+  entry_seeds.json: 1074 bytes, sha256=b67df7584ce5...
+  prompts.json: 60059 bytes, sha256=26e0ff92ad0a... (12 prompts)
+  semantic_index.json: 24282332 bytes, sha256=d70adc1db255...
+
+Manifest escrito en web\lib\assets\manifest.json
+Assets sincronizados: ['master_graph.json', 'preguntas_cache.json', 'node_families.json', 'entry_seeds.json', 'prompts.json', 'semantic_index.json']
+sync exit 0
