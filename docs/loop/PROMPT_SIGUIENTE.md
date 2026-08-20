@@ -2,154 +2,135 @@ Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 SESION EJECUTORA. FASE III, EJECUCION. RAMA pasada-unica. MODO DE
 EJECUCION CONTINUA (AUDITOR.md seccion 3), con las guardas obligatorias
 por operacion: simulacion previa sobre copia en memoria, Gate 0 y las
-suites en verde tras cada tramo, caso positivo (las CUATRO guardas,
-incluida la del INCISO VERBATIM, que se queda), la guarda 1B (ningun
-absorbido puede ser semilla ni extremo de puente), y cero duplicadas o
-auto-aristas NUEVAS tras resolver. Cualquier guarda en rojo, o
-cualquier operacion cuyo texto no alcance para ejecutarse sin decidir,
-te detiene y convoca al auditor.
+suites en verde tras cada lote, caso positivo (las CUATRO guardas,
+incluida la del INCISO VERBATIM), la guarda 1B (ningun absorbido puede
+ser semilla ni extremo de puente), y cero duplicadas o auto-aristas
+NUEVAS tras resolver. Cualquier guarda en rojo, o cualquier operacion
+cuyo texto no alcance para ejecutarse sin decidir, te detiene y convoca
+al auditor.
 
-ESTADO DEL CREDITO, del acta de la vuelta 53: TANDA LIMPIA, cero caidas
-de clase, de cifra y de reporte; la racha de clase o cifra sigue en
-CERO (segunda tanda limpia seguida). Los ONCE discutibles adjudicados A
-FAVOR y las OCHO preguntas contestadas sin doctrina nueva. Las reglas
-de siempre siguen al pie: toda cifra publicada se lee de la salida del
-instrumento QUE LA CELDA CITA, corrida DESPUES del ultimo movimiento;
-quien corrige una celda con contador CUADRA EL CONTADOR y ADOSA la nota
-fechada; los rotulos se fechan a su corrida desde el principio; quien
-mueve una clase o funde un acto corre el barrido 9.10 antes de cerrar,
-moviendo JUNTAS las dos tablas por dominio hermanas. Y LA REGLA DE LA
-APERTURA, del D1 de la vuelta 53: TODA fila que publiques como apertura
-se corre EN LA APERTURA, o se rotula desde el principio como herencia
-del cierre anterior con la verificacion que la sostiene.
-
-====================================================================
-TAREA 1: registros adjudicados (cuatro puntos, acta de la vuelta 53)
-====================================================================
-1.1. LA PRECISION DE LA ESTRELLA, ADOSADA AL 9.3.1 DEL BANCO
-(docs/BANCO_DE_TEXTOS.md, seccion 9.3.1; acta 53, pregunta 1): nota
-NUEVA fechada, sin tachar nada del 9.3.1, que diga: cuando el GANADOR
-POR DERECHO de sus pares A es el CENTRO de una estrella cuyas puntas
-son D entre si, manda la receta de P.12 y el centro muere absorbido
-por el viable que el contenido elija. Piezas: adjudicacion 2 del acta
-50 (en la estrella el centro muere UNA vez), adjudicacion 3 del acta
-50 (la formula Sobrevive X es el cierre de una razon de PAR y el
-racimo decide, archivo 2237), acta 53 pregunta 1. El 9.3.1 fija al
-ganador DE SUS PARES cuando el acto se funde entero, que es lo que sus
-dos ejemplares hacen; no legisla la estrella que deja mixto fuera. Los
-tres ejemplares medidos que la nota cita: el pareto (2546, 2551), el
-poka yoke (2613) y el dmaic select (2627), los tres con el centro
-muerto en la vuelta 53 y registrados en el registro del tramo.
-
-1.2. LAS DOS AMPLIACIONES DEL CARRIL GENERAL DE COLISIONES, registradas
-en docs/plan/03_FUSIONES.md junto al registro 1.4.b de la vuelta 53
-(acta 53, preguntas 5 y 6), cada una con su figura:
-  a) CONDICION DE CONTEO O DE COBERTURA en un veredicto del filo: se
-     DESCARGA POR MEDICION antes de fundir, con el instrumento y su
-     salida citados, y es carril de TEXTO en sentido amplio (la
-     casilla de texto cubre toda afirmacion verificable, se lea en el
-     nodo o se mida en el grafo). POLITICA sigue declarando el acto.
-     La figura es el 811 de la vuelta 53 (la cuenta Coleman, 6 de 6).
-  b) CUANDO MOVER UN SOLO VEREDICTO DEJA LA COLISION VIVA, LA
-     RELECTURA MUEVE LOS DOS y lo dice en las dos correcciones con la
-     razon vieja entera: la vara del carril es el censo de colisiones
-     en CERO, no la letra del singular. La figura es el par 811/1222.
-
-1.3. EL ROTULO DEL CENSO DE DUPLICADAS DEL INSTRUMENTO DE FUNDIR
-(scripts/loop/vuelta48_fundir_tramo.py, los dos print de "duplicadas
-tras resolver", hoy lineas 418 a 421): su censo cuenta con OTRA
-semantica que el instrumento publicado de OP-S-12 (resuelve solo alias
-de nodos VIVOS y excluye el destino igual al propio nodo;
-scripts/plan/aristas_duplicadas_tras_resolver.py resuelve alias de
-TODOS los nodos y cuenta el self). Por eso midio 999 donde la cifra
-publicada de la vuelta 52 era 1.000, con la unica diferencia en el
-grupo (conciencia_calidad, nodos_siguientes,
-accion_correctiva_sistematica), medida por el auditor en el commit
-d88c42bb (acta 53, seccion 3.1). Adosa a esos rotulos, texto viejo
-delante, la frase: CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA
-PUBLICA aristas_duplicadas_tras_resolver.py. Ninguna cifra publicada
-estaba mal y ninguna se toca. La logica del instrumento NO se cambia.
-
-1.4. LA NOTA DE LOS 41 ENLACES, adosada al registro del tramo de la
-vuelta 53 en docs/plan/03_FUSIONES.md, fechada y citando el acta 53
-seccion 3.2: el grafo gano 41 enlaces con 45 vistas completadas por la
-simetrizacion (13 en el lote A, 9 en el B, 23 en el C) porque la
-redireccion de la fusion retiro CUATRO instancias: DOS auto-aristas
-(warrant_pricing_venture_debt.nodos_previos hacia
-warrants_deuda_convertible en el lote A;
-criterios_seleccion_proyectos_calidad.nodos_previos hacia
-proceso_nominacion_seleccion en el lote C) y DOS colapsos de duplicada
-en el lote B (elaboracion_fdd.nodos_previos y
-sistema_estable_causas_comunes.nodos_siguientes, que ya apuntaban al
-superviviente). 45 menos 4 son 41, medido commit a commit.
+ESTADO DEL CREDITO, del acta de la vuelta 54: CERO caidas de clase y de
+cifra publicada (la racha sigue en CERO, tercera tanda limpia), UNA
+caida de reporte nombrada (la tabla de formas del reporte contra tus
+propios planes sellados: racha de reporte en 1 de 3) y DOS discrepancias
+de la ciega en relectura conjunta (actos 18 y 23, TAREA 1.1). Los doce
+discutibles: diez A FAVOR, el D5 sostenido a relectura conjunta y el D3
+RESUELTO A FUNDIR. Las siete preguntas contestadas sin doctrina nueva.
+Las reglas de siempre siguen al pie: toda cifra publicada se lee de la
+salida del instrumento QUE LA CELDA CITA, corrida DESPUES del ultimo
+movimiento; quien corrige una celda con contador CUADRA EL CONTADOR y
+ADOSA la nota fechada; los rotulos se fechan a su corrida; quien funde o
+voltea corre el barrido 9.10 antes de cerrar, moviendo JUNTAS las dos
+tablas por dominio hermanas; y TODA fila publicada como apertura se
+corre EN LA APERTURA o se rotula herencia verificada. REGLAS DE TRABAJO
+NUEVAS DEL ACTA 54: el lote se forma EN EL ORDEN del tramo y solo se
+aparta el acto con bloqueo declarado; el caso positivo se fabrica sobre
+un acto que la propia vuelta NO vaya a tocar; y una tabla del reporte
+que resuma tus decisiones se talla DE LOS PLANES SELLADOS, no de
+memoria.
 
 ====================================================================
-TAREA 2: OP-U-01, ABRIR EL TRAMO 2 (50 actos), por la vara del
-encargo 2.5 de la vuelta 53, hoy mandatoria
+TAREA 1: relectura conjunta y registros adjudicados (acta 54)
 ====================================================================
-2.1. LA NOMINA RE-MEDIDA AL ABRIRLO: recomputo_3388.py con --salida
-fuera de docs/plan, el orden impreso, y la guarda de los cuatro ajenos
-como en los encargos anteriores. El tramo 2 son los 50 actos
-siguientes de la definicion vigente del tramo. P.5 por acto (el acto
-leido entero tras destejidos) y P.8 en orden.
+1.1. LA RELECTURA CONJUNTA DE LOS ACTOS 18 Y 23 (acta 54, secciones 2 y
+3; la vara es la pregunta 4 del acta 54: el material propio que P.8
+pesa es SOLO el declarado en las razones, y UNA vara de contenido no
+empatada BASTA). El caso del auditor, resumido: en el 23 la razon del
+340 declara UN SOLO gesto propio (el de
+modelo_tradicional_introduccion_producto: no contratar estructuras
+completas antes de validar) y en el 18 la razon del 322 declara UN SOLO
+gesto propio (el de desconexion_ventas_experiencia: revisar como se
+incentiva a quien vende). Un solo lado con propio declarado es una vara
+de contenido NO empatada, y entonces ni el 23 era contenido-empata ni
+el 18 era empate sin vara. TU PARTE: lee los dos actos contra el grafo
+(pasos enteros de los dos lados y la razon entera) y decide CON esa
+vara.
+  a) Si confirmas la vara en el 18: fundelo con
+     desconexion_ventas_experiencia de superviviente, reparto completo,
+     guardas completas.
+  b) Si confirmas la vara en el 23: correccion declarada de la fusion
+     ejecutada (la razon vieja y el motivo viejo enteros, pegados), la
+     fusion rehecha hacia modelo_tradicional_introduccion_producto con
+     el reparto rehecho, y el registro del tramo corregido con nota
+     fechada. Recomputo y barrido tras el movimiento.
+  c) Si al leer sostienes OTRA lectura con la vara en la mano, NO
+     ejecutas: la traes escrita con su evidencia.
+1.2. EL REGISTRO DE LA ADJUDICACION DE LAS PUERTAS (acta 54, pregunta
+1): adosar en docs/plan/03_FUSIONES.md, junto al registro del tramo 2,
+la nota fechada LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO
+PERMITIDO, con sus piezas (la receta ratificada elige entre VIABLES; la
+vara del acta 51 pregunta 3; la precision de la estrella del 9.3.1; el
+acta 50 adjudicacion 3: manda la aritmetica y el choque se registra), y
+adosar la respuesta al rotulo del instrumento de las puertas
+(scripts/loop/vuelta48_puertas_en_el_lote.py, el print que dice que
+ninguna regla escrita lo resuelve hoy), TEXTO VIEJO DELANTE ENTERO,
+misma forma que la TAREA 1.3 de la vuelta 54. La logica NO se toca.
+1.3. EL REGISTRO DE LA ADJUDICACION DEL CHOQUE SIN PIEZA (acta 54,
+pregunta 2): adosar al registro del tramo 2 la nota fechada de que los
+actos 4, 20 y 42 quedan DECLARADOS Y ACUMULAN PARA LA MESA por el
+carril ya escrito (el entregable_esperado NO es razon; el pendiente de
+doctrina queda abierto para la mesa: o una prelacion entre conteos de
+contenido, o una ampliacion de donde vive la pieza declarada). Ninguno
+de los tres se toca.
 
-2.2. LA GUARDA DE COLISIONES, igual que las vueltas 52 y 53: antes de
-cada lote corres scripts/loop/vuelta51_colisiones_esperadas.py sobre
-la nomina re-medida del dia; el censo esperado es el que la simulacion
-imprime, por PAR RESUELTO; tras ejecutar, el censo real del archivo
-entero tiene que calzar con la prediccion; una colision real fuera de
-la prediccion te detiene.
-
-2.3. LA LIMPIEZA P.16 CON EL CARRIL GENERAL COMPLETO (el registrado en
-03_FUSIONES mas las dos ampliaciones de la TAREA 1.2): A arrastrado
-contra directo D se voltea por maquina citando el directo, razon vieja
-entera pegada; cualquier colision con un veredicto del filo en
-cualquier lado va a relectura EN EL MISMO ACTO y la relectura decide
-QUE se mueve, uno o los dos, diciendolo; condicion de conteo o
-cobertura se descarga midiendo ANTES de fundir; politica declara el
-acto. Marcador recomputado y barrido de la regla del aviso tras cada
-volteo.
-
-2.4. LAS LECTURAS P.12 DEL TRAMO 2, por la receta RATIFICADA: viables
-por parte A clique con mixto fuera; entre viables elige el CONTENIDO
-como P.8 lo define (pasos y condiciones, material propio y padre
-declarado EN LAS RAZONES; el conteo de caracteres del resumen NO
-desempata); si el contenido calla, EL CABLEADO DECIDE SOLO; si TODO
-empata, DECLARAS el acto como empate sin vara. Con las notas del acta
-53:
-  - UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (pregunta 4): el
-    empate sin vara exige TODAS empatadas.
-  - CUANDO DOS CONTEOS DE CONTENIDO CHOCAN, decide la pieza DECLARADA
-    de mayor peso en las razones (padre declarado, contencion
-    declarada, alcance del rol; pregunta 3). Si chocan SIN ninguna
-    pieza declarada, PARAS y lo traes como pregunta antes de fundir.
-  - LA ESTRELLA CON PUNTAS D FUNDE Y EL CENTRO MUERE aunque sea
-    ganador por derecho (pregunta 1, TAREA 1.1): el choque con la
-    letra se registra con sus puestos, manda la aritmetica, y el
-    consuelo del X vivo NO es condicion (pregunta 2).
-  - PARES EN B: la razon del B se lee ANTES de fundir. Texto o conteo
-    verificable se descarga y se corrige citando; politica DECLARA.
-  - MIXTO QUE QUEDE CONTENIDO TRAS LA FUSION: el D directo mantiene
-    CONTINUA; solo la relectura post fusion puede moverlo POR LECTURA.
-2.5. LOS DECLARADOS SE ACUMULAN Y NINGUNO SE TOCA: los cinco de fusion
-pura (hoy actos 2, 8, 9, 10 y 11, por miembros), el S&OP (politica del
-703), la sucesion del CEO (empate sin vara), el mapa de influencia
-(politica del 604) y los tres imposibles por puerta (por miembros). Al
-cerrar, sus ordinales se leen de la salida del dia QUE LA CELDA CITE.
-
+====================================================================
+TAREA 2: OP-U-01, CONTINUAR EL TRAMO 2, en orden
+====================================================================
+2.1. LA APERTURA MEDIDA: todas las filas corridas en la apertura (o
+rotuladas herencia verificada), nomina re-medida con recomputo_3388.py
+con --salida fuera de docs/plan, tramo re-identificado POR MIEMBROS con
+vuelta54_tramo2_nomina.py, y la guarda de los cuatro ajenos.
+2.2. LOS ACTOS 1 Y 15, FUNDIDOS HACIA LA PUERTA (adjudicacion de la
+pregunta 1 del acta 54): trade_off_responsividad_eficiencia sobrevive
+en el 1 y apertura_llamada_venta_grande sobrevive en el 15. EL CHOQUE
+CON EL CONTEO SE REGISTRA EN EL MOTIVO con los conteos impresos (pasos
+6 contra 4 y condiciones 3 contra 2 en el 1; pasos 5 contra 4 en el
+15), citando el acta 54 pregunta 1, y las piezas propias del absorbido
+viajan por el reparto como siempre (APPEND, INCISO o CUBIERTO con
+perdida nombrada). Guardas completas.
+2.3. LAS CINCO RELECTURAS DEL FILO de los actos 6, 44 y 49, que estan
+predichas y nombradas (668/1312, 968/1305, 218/1008, 338/490,
+297/497), por el carril general completo de 03_FUSIONES (con sus dos
+ampliaciones): la relectura decide QUE se mueve, uno o los dos,
+diciendolo, razon vieja entera pegada; condicion de conteo o cobertura
+se descarga midiendo ANTES; politica declara el acto. Tras las
+relecturas, si los tres actos quedan limpios se funden por P.8, con el
+censo esperado del sucesor (vuelta54_colisiones_esperadas.py) corrido
+ANTES por lote y el censo real calzando DESPUES; una colision real
+fuera de la prediccion te detiene. Marcador recomputado y barrido de la
+regla del aviso tras cada volteo.
+2.4. LA COLA DEL TRAMO EN ORDEN: los veinte sin tocar (28 a 41, 43, 45
+a 48 y 50), recorridos EN EL ORDEN impreso del tramo, apartando SOLO el
+acto con bloqueo declarado y diciendo su especie. P.5 por acto (el acto
+leido entero tras destejidos) y P.8 con la receta ratificada y las
+notas vigentes: una vara de contenido no empatada BASTA (y el material
+propio declarado DE UN SOLO LADO es una vara, acta 54 pregunta 4);
+conteos que chocan los decide la pieza DECLARADA y sin pieza PARAS y lo
+declaras (acumula para la mesa, acta 54 pregunta 2); contenido que
+empata lo decide el cableado solo; todo empatado se declara. OJO con el
+acto 45 (milk_run_deliveries contra su madre puente): la razon del 474
+declara contencion (el hijo desarrolla el paso 3 de la madre y repite
+dos mas), la madre es extremo de puente, y las dos varas apuntan al
+mismo lado.
+2.5. LOS DECLARADOS SE ACUMULAN Y NINGUNO SE TOCA: los del tramo 1 (los
+cinco de fusion pura, el S&OP del 703, la sucesion del CEO, el mapa de
+influencia del 604 y los tres imposibles por puerta) y los tres del
+choque sin pieza del tramo 2 (4, 20 y 42). El 18 solo se mueve por la
+TAREA 1.1. Al cerrar, sus ordinales se leen de la salida del dia QUE LA
+CELDA CITE.
 2.6. AL CIERRE: Gate 0 por el ciclo escrito y las suites en verde, el
-marcador recomputado del archivo, EL BARRIDO DE LA REGLA DEL AVISO
-corrido despues del ultimo movimiento (contadores cuadrados, notas
-fechadas, y las DOS tablas por dominio hermanas movidas JUNTAS si
-algun dominio se movio), y el registro del tramo en 03_FUSIONES.md con
-sus cifras LEIDAS DE LA SALIDA QUE CADA CELDA CITA y sus rotulos
-fechados a su corrida.
+marcador recomputado del archivo, el barrido de la regla del aviso
+corrido DESPUES del ultimo movimiento (contadores cuadrados, notas
+fechadas, las DOS tablas por dominio hermanas movidas JUNTAS si algun
+dominio se movio), y el registro del tramo en 03_FUSIONES.md con sus
+cifras LEIDAS DE LA SALIDA QUE CADA CELDA CITA. El caso positivo se
+fabrica sobre un acto que ESTA vuelta no vaya a tocar y se re-corre
+ANTES de ejecutar nada.
 
-Reporte con la apertura medida antes de la primera operacion (TODAS
-las filas que publiques como apertura: corridas en la apertura o
-rotuladas herencia verificada desde el principio), los discutibles
-marcados ANTES de saber si aciertas, y lo que la vuelta NO hizo dicho
-en vez de callado.
+Reporte con la apertura medida antes de la primera operacion, TODA
+tabla que resuma tus decisiones tallada DE LOS PLANES SELLADOS con su
+comando, los discutibles marcados ANTES de saber si aciertas, y lo que
+la vuelta NO hizo dicho en vez de callado.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.

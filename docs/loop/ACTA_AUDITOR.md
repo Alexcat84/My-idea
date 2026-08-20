@@ -13121,3 +13121,367 @@ adjudicados (la precision de la estrella en el 9.3.1, las dos
 ampliaciones del carril, el rotulo del censo del instrumento de fundir,
 y la nota de los 41 enlaces) como TAREA 1, y la apertura del TRAMO 2 de
 OP-U-01 con las guardas de siempre como TAREA 2.
+
+# ACTA DE LA VUELTA 54 DEL AUDITOR (20 ago 2026, Fable 5)
+
+SIN HUECO DE ACTA: la ultima acta cubre la vuelta 53 y esta cubre la 54,
+que es la inmediatamente anterior a la actual. Vuelta auditada: hash final
+29ac3675 mas el commit del reporte 7384ceef, los dos en
+origin/pasada-unica, arbol limpio al abrir y al cerrar mi propia corrida.
+La convocatoria es de verificacion COMPLETA: el reporte trae doce
+discutibles, siete preguntas y cinco pendientes de doctrina, y seis actos
+declarados detuvieron al ejecutor.
+
+## 1. VERIFICACION POR CORRIDA PROPIA: TODO AL DIGITO
+
+Cada cifra de esta seccion sale de un instrumento corrido HOY por mi, con
+el comando dicho; el reporte se uso como contraste, no como fuente.
+
+- MARCADOR (recomputar_marcador.py 3388): A 551, B 73, C 6, D 2.758 sobre
+  n 3.388, cero huecos, cero duplicados, tasa 16,3. Los diez dominios:
+  core 325, quality 119, health_safety 43, entrega 2, environmental 28,
+  compras 1, franquicias 15, risk_management 0, exportacion 15,
+  seguridad_digital 3. La suma cuadra: 551. LA A DE CADA DOMINIO ES LA DEL
+  ACTA 53 AL DIGITO: la hermandad de las dos tablas se cumple POR VACIO,
+  como el reporte dice.
+- GRAFO (vuelta31_estado.py): 3.853 ficheros, 3.456 vivos, 397 deprecados
+  (376 mas los 21 fundidos), 17.118 enlaces (17.052 mas 66). Operaciones
+  71 todas LISTA, dependencias rotas 0, inventario 672.
+- RETRATO Y ACTOS (recomputo_3388.py con salida propia): 551 crudas, 93
+  colapsos (72 mas 21, uno por acto fundido), 458 pares distintos (551
+  menos 93, la resta exacta); componentes 264; actos 211 CERRADOS sobre
+  431 nodos y 53 ABIERTOS sobre 240; LAS CUATRO comprobaciones OK (671
+  igual a 671, 458 igual a 458).
+- COLA (costuras_internas.py): 1.489. CENSO DE COLISIONES
+  (vuelta51_censo_colisiones.py): CERO vigentes, 72 auto-pares (51 mas
+  21). DUPLICADAS (aristas_duplicadas_tras_resolver.py): 988 grupos sobre
+  779 nodos, que es lo que el cierre del reporte publica.
+- EL TRAMO 2, RE-MEDIDO POR MI: monte un worktree en e30e2ccb (el estado
+  pre fusion), corri recomputo_3388.py ahi con salida propia y le pase esa
+  nomina a vuelta54_tramo2_nomina.py. LAS DOS LECTURAS COINCIDEN AL ACTO Y
+  AL ORDEN (los once del tramo 1 en los puestos 1 a 11; el tramo 2 del 12
+  al 61, los mismos que los puestos 51 a 100 de la 48), 50 actos, todos de
+  tamano 2, PURO A los 50, 100 nodos, guarda de los cuatro ajenos VERDE y
+  solape con el tramo 1 CERO. La frontera esta determinada por medicion,
+  como el reporte afirma.
+- EL HALLAZGO DE LA GUARDA, VERIFICADO EN SU CODIGO: la linea 130 de
+  vuelta51_colisiones_esperadas.py salta la fusion pura (continue, fusion
+  pura, no pide P.12), asi que sobre un tramo entero de fusion pura no
+  imprime nada. El SUCESOR (vuelta54_colisiones_esperadas.py) re-corrido
+  POR MI en el worktree pre fusion: 100 combinaciones simuladas, 6 que
+  fabrican colision, SOLO los actos 6 (dos), 44 (una) y 49 (dos), y los
+  diez puestos del filo leidos de mi salida: 668/1312, 968/1305, 218/1008,
+  338/490, 297/497. Todas B directo contra D y fuera del acto. Calza con
+  el reporte al digito.
+- LOS 21 ABSORBIDOS, campo a campo contra el worktree pre fusion: los 21
+  deprecados y los NUEVE campos de contenido INTACTOS, 21 de 21. Los cinco
+  campos que la operacion no redacta en los supervivientes: 105 de 105
+  intactos.
+- EL REPARTO, tallado por mi de los dos planes sellados: lote A 70 piezas
+  (19 APPEND, 38 CUBIERTO, 13 INCISO), lote B 57 (16, 35, 6). Calza al
+  digito con el registro.
+- CASO POSITIVO: re-corrido POR MI en el worktree pre fusion (donde el
+  acto 10 sigue vivo): LAS CUATRO GUARDAS MUERDEN, cada una por su motivo,
+  y las tres mentiras se borran sin escribir.
+- LOS 41 ENLACES (vuelta54_41_enlaces.py re-corrido): los tres lotes de la
+  vuelta 53 calzan uno a uno (13 menos 1, 9 menos 2, 23 menos 1) y 45
+  menos 4 son 41.
+- LOS TRES EJEMPLARES DE LA ESTRELLA (vuelta54_ejemplares_estrella.py
+  re-corrido): los tres centros ganadores por derecho, muertos, y los tres
+  supervivientes vivos con el alias izado.
+- TAREA 1 SITIO A SITIO: la PRECISION DE LA ESTRELLA adosada al 9.3.1 del
+  banco sin tachar nada; las DOS AMPLIACIONES del carril general junto al
+  1.4.b en 03_FUSIONES con la tabla vieja entera; la NOTA DE LOS 41
+  adosada y re-medida; los rotulos del censo en vuelta48_fundir_tramo.py Y
+  en vuelta49_fundir_tramo.py con el texto viejo delante. El diff por git
+  de los dos instrumentos: SOLO comentario y rotulo, CERO lineas de
+  logica. El D1 queda verificado en su letra.
+- LAS CELDAS DEL 9.10: la 246 (crudas) intacta en 551 con contador DIEZ,
+  que es lo correcto porque ningun veredicto se movio; la 247 con su
+  OCTAVA correccion (72 a 93) y contador cuadrado; la 248 con su UNDECIMA
+  (479 a 458, la resta exacta) y contador cuadrado; el checkpoint ii en
+  458 igual a 458 con su nota fechada.
+- GATE 0 Y SUITES, corrida entera mia: run_phase1.py --reaplico-curaduria
+  con GATE 0: OK; etiquetas_de_cara --aplicar con 71; sync_assets_web con
+  6 assets; suite del motor 25 de 25; suite web 80 ficheros, 1.030 pasadas
+  y 3 saltadas; tsc --noEmit CERO lineas; arbol limpio antes y despues de
+  mi corrida, verificado con git status.
+
+## 2. RELECTURA CIEGA: 50 DE 50 RELEIDOS, 28 COINCIDEN, 2 DISCREPAN
+
+Empece por los doce discutibles marcados. Del worktree pre fusion imprimi
+PRIMERO, con instrumento propio y sin mirar mesas ni planes, la estructura
+de los CINCUENTA actos del tramo: miembros, puertas (semillas y extremos
+de puente leidos de las mismas fuentes que Gate 0), conteos de pasos,
+condiciones y cableado crudo, y la razon de archivo del par A. Adjudique
+mi eleccion por la receta ratificada y SOLO DESPUES destape el cuadro de
+varas, la mesa y los planes sellados. Doce actos ademas con el texto
+entero de pasos y condiciones.
+
+- MIS CONTEOS contra el cuadro de varas del ejecutor: identicos en pasos y
+  condiciones en los 50; el cableado crudo difiere en dos actos (el 6, mi
+  12/6 contra su 10/5; el 10, mi 5/21 contra su 5/20) por criterio de
+  conteo, con la DIRECCION identica: contraste declarado con su comando,
+  no caida, igual que en las actas 49 a 53.
+- LAS 21 ELECCIONES DE SUPERVIVIENTE: COINCIDEN VEINTE. Discrepa UNA, el
+  acto 23, que esta DENTRO del marcado (D5): mi caso en la seccion 3.
+- LOS 9 NO FUNDIDOS: COINCIDEN OCHO (los actos 1 y 15 con el choque de la
+  puerta bien leido; el 4, el 20 y el 42 con el choque sin pieza declarada
+  bien leido, incluida la frase del 326 que iguala los dos anadidos; los
+  actos 6, 44 y 49 con su colision prevista). Discrepa UNO, el acto 18,
+  que esta FUERA del marcado: mi caso en la seccion 3.
+- LA REGLA DEL CREDITO SE APLICA: una discrepancia FUERA de los
+  discutibles marcados baja el credito de toda la tanda y el tramo se
+  relee al doble. LO DIGO Y LO HICE: la ciega cubrio los CINCUENTA actos
+  del tramo, no solo los veintiuno tocados, con el texto entero en doce.
+
+## 3. LO QUE LA CIEGA DESTAPO: LOS ACTOS 18 Y 23, EL MISMO PLIEGUE
+
+EL CASO, escrito con su evidencia para la relectura conjunta que el carril
+manda (mi caso; el ejecutor verifica contra el grafo y decide con la
+vara):
+
+1. LA VARA: la receta ratificada define el contenido como pasos y
+   condiciones, MATERIAL PROPIO y padre declarado EN LAS RAZONES, y el
+   acta 53 (pregunta 4) dice que UNA SOLA VARA DE CONTENIDO NO EMPATADA
+   BASTA y que el empate sin vara exige TODAS empatadas. El propio
+   ejecutor peso el material propio declarado en los actos 8 y 27 (declara
+   que los dos lados anaden y por eso NO separa) y lo cito al decidir el
+   17.
+2. EL ACTO 23 (D5, marcado): la razon del 340 dice EL SEGUNDO ANADE no
+   contratar estructuras completas ANTES DE VALIDAR, QUE ES EL UNICO GESTO
+   PROPIO. Un solo lado con material propio declarado es una vara de
+   contenido NO empatada: apunta a
+   modelo_tradicional_introduccion_producto. El ejecutor la trato como que
+   los dos anaden, dejo el contenido en empate y el cableado (5 contra 2)
+   eligio al reves: modelo_cascada_desarrollo_producto sobrevivio y la
+   fusion quedo EJECUTADA en esa direccion. El motivo sellado dice que la
+   razon le reconoce a cada uno lo suyo, y la razon NO lo dice: solo
+   reconoce el gesto del segundo.
+3. EL ACTO 18 (FUERA del marcado): la razon del 322 dice EL PRIMERO ANADE
+   revisar como se incentiva a quien vende, QUE ES SU UNICO GESTO PROPIO.
+   Misma figura: la vara declarada apunta a desconexion_ventas_experiencia
+   y el acto era FUSIBLE. El ejecutor lo declaro EMPATE SIN VARA (pasos,
+   condiciones y cableado empatan, y ESO es cierto al digito), sin pesar
+   el material propio declarado. Ningun dato se movio: la falla es de
+   clasificacion conservadora, no de cirugia.
+4. LO QUE PIDO: relectura conjunta de los dos actos en la vuelta 55
+   (TAREA 1 del encargo). Si el ejecutor, leyendo el grafo y la razon
+   entera, confirma la vara: el 18 se funde con
+   desconexion_ventas_experiencia de superviviente, y el 23 lleva
+   correccion declarada con la fusion rehecha hacia
+   modelo_tradicional_introduccion_producto, reparto rehecho, razon vieja
+   entera pegada, recomputo y barrido. Si al leer sostiene otra lectura
+   CON la vara en la mano, la trae escrita.
+
+## 4. LA CAIDA DE REPORTE DE LA TANDA, NOMBRADA
+
+LA TABLA 2.5 DEL REPORTE (columna de los fundidos por forma) NO CALZA CON
+SUS PROPIOS PLANES SELLADOS: publica TODAS DE ACUERDO 7 y CONTENIDO
+EMPATA 3 (21, 23, 27). Tallado por mi de los motivos sellados: LAS DOS
+VARAS DE ACUERDO son CUATRO (7, 10, 12, 26), UNA SOLA VARA son DIEZ, la
+CONTENCION DECLARADA es UNA (el 3), la PIEZA DECLARADA en choque es UNA
+(el 25) y EL CABLEADO DECIDIO EN CINCO (9 y 14 en el lote A, 21, 23 y 27
+en el B): los motivos de los actos 9 y 14 dicen con todas sus letras EL
+CONTENIDO EMPATA ENTERO Y EL CABLEADO DECIDE SOLO. La suma 21 esta bien y
+NINGUNA cifra de docs/plan esta mal (el registro del tramo no trae esa
+columna). ES CAIDA DE REPORTE: se registra con nombre, disparo la
+relectura al doble (hecha, seccion 2) y NO acumula para la parada. RACHA
+DE REPORTE: 1. RACHA DE CLASE O CIFRA: SIGUE EN CERO, tercera tanda
+limpia seguida.
+
+## 5. LOS DOCE DISCUTIBLES, ADJUDICADOS
+
+1. D1, EL ADOSADO AL INSTRUMENTO DE LA 49: A FAVOR. El que ejecuta los
+   tramos desde la vuelta 49 es el sucesor, el rotulo vivia identico en
+   sus lineas, y reparar solo el ancestro dejaba el sintoma donde la cifra
+   se publica. El diff por git confirma cero logica tocada. Alcance
+   declarado y marcado es la conducta pedida.
+2. D2, LOS TRES DECLARADOS SIN PIEZA (4, 20, 42): A FAVOR EN LA CONDUCTA.
+   El acta 53 (pregunta 3) manda PARAR y traerlo, y eso se hizo. La
+   pregunta se contesta en la seccion 6, punto 2.
+3. D3, LOS DOS DEL CHOQUE DE LA PUERTA (1, 15): A FAVOR EN LA CONDUCTA.
+   El instrumento de las puertas dice desde la vuelta 48 que ese choque va
+   como pregunta al auditor, no como decision, y traerlo era lo escrito.
+   La pregunta se contesta en la seccion 6, punto 1, Y QUEDA RESUELTA.
+4. D4, EL SCOR (acto 24): A FAVOR. La razon del 342 reconoce material
+   propio A LOS DOS LADOS (los niveles 2 y 3 a un lado, el benchmark al
+   otro): no hay contencion declarada, y con la vara declarada empatada
+   decide el conteo (condiciones 3 contra 2). Mi ciega llego a
+   scor_model_operaciones por esa misma via, y los niveles viajan enteros.
+5. D5, LA CASCADA (acto 23): DISCREPANCIA SOSTENIDA, a relectura conjunta
+   (seccion 3). El marcado estuvo bien puesto: el ejecutor vio el pliegue
+   y lo trajo.
+6. D6, EL APPEND DEL PASO 4 (acto 2): A FAVOR. La operacion mueve piezas
+   enteras y no parte pasos; la mitad propia (documentar) no la dice
+   nadie; el solape fabricado queda declarado para la poda de la fase 04,
+   que es exactamente el carril del D7 de la vuelta 53.
+7. D7, EL CUBIERTO CON PERDIDA (acto 7): A FAVOR. El inciso encadenado
+   habria dicho OTRA COSA (hacerlo cada mes o contra el periodo anterior)
+   y la tabla de los seis motivos manda perdida NOMBRADA antes que inciso
+   que miente. Nombrada esta.
+8. D8, EL SUCESOR DEL INSTRUMENTO: A FAVOR. Es la MISMA vara de la TAREA
+   1.3 de esta vuelta: un instrumento cuyas cifras ya citan registros no
+   cambia de logica; se le adosa rotulo o se le escribe sucesor declarado
+   con la aritmetica copiada. El precedente de la vuelta 51 (reparar) fue
+   sobre un instrumento recien nacido sin registros que lo citaran. Las
+   dos vias conviven y la eleccion quedo declarada.
+9. D9, LA COLUMNA DE SOLAPE LEXICO: A FAVOR de retirarla de las varas y
+   rotularla contraste. La pregunta 4 se contesta en la seccion 6 y la
+   consecuencia (los actos 18 y 23) esta en la seccion 3.
+10. D10, LOS LOTES POR ESPECIE: A FAVOR COMO DECISION DE TRABAJO
+    DECLARADA. Nadie se salto en silencio: cada acto no fundido quedo con
+    su especie escrita, y la vuelta 53 ya formo lotes por especie con el
+    auditor a favor. PARA LA PROXIMA queda la regla de trabajo: el lote se
+    forma EN EL ORDEN del tramo y solo se aparta el acto con bloqueo
+    declarado (seccion 6, punto 6).
+11. D11, EL MATIZ DEL ACTO 21: A FAVOR. La perdida quedo NOMBRADA en el
+    carril de la tabla (el matiz emocionales y funcionales contra
+    reacciones y sugerencias), y ninguna regla obliga al inciso cuando el
+    ejecutor juzga que el paso resultante no se lee limpio. En el limite
+    era inciso viable: se dice, y no es caida.
+12. D12, EL CASO POSITIVO SOBRE EL ACTO 10: A FAVOR. Corrio ANTES de
+    fundir sobre un acto vivo, que es lo pedido, y yo lo re-corri en el
+    worktree pre fusion con las cuatro guardas mordiendo. La caducidad es
+    real y la regla de trabajo nueva va en el encargo: se fabrica sobre un
+    acto que la propia vuelta NO vaya a tocar.
+
+## 6. LAS SIETE PREGUNTAS, CONTESTADAS SIN DOCTRINA NUEVA
+
+1. QUIEN MANDA CUANDO EL CONTENIDO ELIGE AL QUE NO ES PUERTA: LA GUARDA
+   RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO, por extension
+   citable y sin doctrina nueva. Las piezas: la receta ratificada ya tiene
+   esa arquitectura (VIABLES por estructura PRIMERO, y entre viables elige
+   el contenido); la guarda 1B es obligatoria y define al candidato LIMPIO
+   (vara del acta 51, pregunta 3: imposible por puerta es solo el acto
+   donde NINGUNA fusion la respeta); y la PRECISION DE LA ESTRELLA,
+   registrada en el 9.3.1 ESTA MISMA VUELTA, dice la figura entera: el
+   preferido que no es viable muere absorbido por el viable, el choque con
+   la letra se registra con sus puestos y MANDA LA ARITMETICA (acta 50,
+   adjudicacion 3). En un acto de dos donde el unico candidato limpio es
+   la puerta, el contenido no tiene entre quien elegir: LA PUERTA
+   SOBREVIVE, el choque de conteos se registra en el motivo, y las piezas
+   propias del absorbido viajan enteras por el reparto, que es lo que
+   protege el contenido que el conteo prefirio. LOS ACTOS 1 Y 15 ESTABAN
+   LISTOS y se funden en la vuelta 55 con la puerta de superviviente. El
+   rotulo del instrumento de las puertas (eso no lo resuelve ninguna regla
+   escrita hoy) queda VIEJO y se le adosa la respuesta, texto viejo
+   delante, misma forma que la TAREA 1.3.
+2. EL ENTREGABLE_ESPERADO COMO PIEZA DECLARADA: NO. La letra de la receta
+   dice EN LAS RAZONES, y el entregable es campo del nodo, no razon.
+   Leerlo como pieza seria doctrina nueva y no la escribo: la decide el
+   fundador si quiere. Con conteos que chocan y CERO piezas declaradas,
+   los actos 4, 20 y 42 quedan DECLARADOS Y ACUMULAN PARA LA MESA, que es
+   el carril ya escrito para el acto que las reglas vigentes no pueden
+   fundir (politica del 703 y del 604, empate sin vara del CEO, imposibles
+   por puerta): se declara, se acumula, el bucle sigue. El pendiente de
+   doctrina queda ABIERTO para la mesa con nombre propio: o una prelacion
+   entre conteos de contenido, o una ampliacion de donde vive la pieza
+   declarada.
+3. REPARAR O SUCEDER UN INSTRUMENTO DE GUARDA: LAS DOS VIAS EXISTEN Y LA
+   VARA ES LA DE LA TAREA 1.3: si sus cifras ya estan citadas por
+   registros, la logica NO se toca y se escribe sucesor declarado con la
+   aritmetica copiada (o se adosa rotulo); si esta recien nacido y nada lo
+   cita, se repara con correccion declarada, que fue la vuelta 51. El
+   sucesor de esta vuelta esta bien elegido.
+4. EL MATERIAL PROPIO QUE P.8 PESA ES SOLO EL DECLARADO EN LAS RAZONES.
+   Letra de la receta: pasos y condiciones, material propio y padre
+   declarado EN LAS RAZONES; el conteo de caracteres no desempata y el
+   solape lexico es contraste de maquina, no vara. CONSECUENCIA YA
+   COBRADA: el propio declarado de UN SOLO LADO es una vara no empatada, y
+   por eso los actos 18 y 23 van a relectura conjunta (seccion 3).
+5. LA PIEZA MITAD PROPIA MITAD DICHA: APPEND ENTERO. La operacion mueve
+   piezas enteras y no parte pasos, y el solape fabricado se declara y
+   queda para la poda de la fase 04 (D7 de la vuelta 53, D6 de esta). La
+   perdida nombrada es para cuando el inciso o el append DIRIAN OTRA COSA,
+   no para ahorrarse un solape.
+6. EL LOTE SE FORMA POR ORDEN. La letra del encargo es P.8 EN ORDEN: el
+   lote recorre el tramo en su orden impreso y aparta SOLO el acto con
+   bloqueo declarado (colision prevista, choque traido, declarado), cada
+   uno con su especie escrita. Lo de esta vuelta fue decision de trabajo
+   declarada y no se castiga; la regla queda escrita para la 55.
+7. EL CASO POSITIVO SE FABRICA SOBRE UN ACTO QUE LA PROPIA VUELTA NO VAYA
+   A TOCAR (un declarado o uno fuera de la cuerda del dia), y se re-corre
+   al abrir la vuelta siguiente. Asi deja de caducar cada vuelta. Regla de
+   trabajo, no doctrina, y va en el encargo.
+
+Pendientes de doctrina del reporte: el 1 RESUELTO (pregunta 1); el 2
+queda ABIERTO PARA LA MESA con sus tres actos declarados (pregunta 2); el
+3 RESUELTO (pregunta 3); el 4 (quien contesta una pregunta de politica de
+catalogo) sigue HEREDADO, con el S&OP y el mapa de influencia acumulados;
+los heredados del 5 siguen sin cambio (el INCISO de condiciones, el
+esquema de OPERACIONES.jsonl, el campo orden de la fase 03).
+
+## 7. MIS PROPIOS MANEJOS Y TROPIEZOS, declarados
+
+- Use un worktree en e30e2ccb para toda la medicion pre fusion (nomina,
+  tramo, ciega, caso positivo, colisiones esperadas); queda borrado al
+  cerrar el acta.
+- Mi primer intento de correr vuelta54_tramo2_nomina.py fallo dos veces
+  por manejo mio (el script no existia en el commit del worktree y un pipe
+  de PowerShell corto al recomputo antes de escribir su salida): se
+  declaran porque costaron una corrida repetida, no una cifra.
+- Mis conteos crudos de cableado difieren de los del cuadro en dos actos
+  por criterio de conteo, con la direccion identica: contraste declarado,
+  no medicion enfrentada.
+- Mi corrida de Gate 0 y las suites dejo el arbol limpio, verificado con
+  git status antes y despues.
+
+## 8. METRICA DE CREDITO ACUMULADA
+
+Esta tanda: 50 relecturas ciegas de fondo (las 21 elecciones de
+superviviente y los 9 no fundidos adjudicados con estructura, conteos y
+razon derivados por mi del worktree pre fusion, y los 20 sin tocar
+releidos en estructura y razon), 12 actos con el texto entero de pasos y
+condiciones, 60 puestos leidos al digito con su razon (los 50 pares A del
+tramo y los diez del filo), y unos 30 sitios re-corridos o leidos al
+digito (marcador con dominios, estado, recomputo con salida propia, cola,
+censo, duplicadas, tramo por dos lecturas, colisiones esperadas viejas y
+sucesor, caso positivo en worktree, 41 enlaces, ejemplares estrella, los
+21 absorbidos campo a campo, los 105 campos de supervivientes, el reparto
+tallado, las celdas 246 a 248 y 528, los cuatro sitios de la TAREA 1 con
+diff por git, Gate 0 con las tres suites).
+
+Caidas del ejecutor en esta tanda (vuelta 54): CERO de clase, CERO de
+cifra publicada, UNA de reporte (la tabla 2.5, seccion 4). Discrepancias
+de la ciega: DOS (actos 23 y 18), una dentro y UNA FUERA del marcado, las
+dos pendientes de relectura conjunta: se contaran como caida o como
+lectura sostenida cuando esa relectura cierre.
+
+Acumulado: 197 relecturas, 613 puestos (mas 401 nodos de forma y 570
+sitios de codigo), 7 caidas de clase, 21 de reporte del ejecutor, 12 de
+cifra publicada del ejecutor, 3 de cifra del auditor, 4 de acta del
+auditor, 2 de procedimiento del auditor.
+
+Rachas: CLASE O CIFRA SIGUE EN CERO (tercera tanda limpia seguida).
+REPORTE: 1.
+
+## 9. CONDICIONES DE PARADA, RECORRIDAS: NINGUNA SE CUMPLE
+
+- Doctrina nueva: NO SE ESCRIBE NINGUNA. La pregunta 1 se adjudica por
+  extension citable (receta, vara del acta 51, precision de la estrella);
+  la pregunta 2 se contesta por la letra (NO es razon) y sus tres actos
+  toman el carril ya escrito de declarar y acumular; el resto son vara de
+  trabajo o letra existente.
+- Contradiccion sin regla de correccion: NO. El caso de los actos 18 y 23
+  tiene carril escrito (relectura conjunta, correccion declarada y
+  recomputo) y esta encargado.
+- Decision de fundador: NINGUNA SE TOMA. Acumulan para la mesa del
+  PARA_ALEXIS del cierre: el S&OP (703), el mapa de influencia (604), la
+  sucesion del CEO, los tres imposibles por puerta del tramo 1, los cinco
+  de fusion pura declarados del tramo 1, y AHORA los tres del choque sin
+  pieza (4, 20, 42) con su pendiente de doctrina nombrado.
+- Fallo tecnico repetido: NO. Gate 0 y las tres suites en verde dos
+  corridas (la del ejecutor y la mia), arbol limpio.
+- Credito de tanda roto: NO. Cero de clase o cifra (racha en cero); una de
+  reporte (racha 1 de 3), con la relectura al doble hecha.
+- Campana consumada: NO. Quedan 29 actos del tramo 2 (mas los dos de la
+  pregunta 1 que entran a cuerda), los tramos siguientes y las fases 04 en
+  adelante.
+- Credenciales: no hicieron falta.
+
+EL BUCLE SIGUE. PROMPT_SIGUIENTE.md escrito completo: la relectura
+conjunta de los actos 18 y 23 y los registros de las adjudicaciones como
+TAREA 1, y la continuacion del tramo 2 (los actos 1 y 15 hacia la puerta,
+las cinco relecturas del filo, y la cola en orden) como TAREA 2.
+
