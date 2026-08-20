@@ -1,0 +1,24 @@
+==============================================================================
+LAS PERDIDAS NOMBRADAS DE LA VUELTA 60, TALLADAS DE LOS PLANES SELLADOS
+==============================================================================
+
+  planes leidos       : PLAN_V60_OPU01_LOTE_B.json, PLAN_V60_OPU01_LOTE_C.json
+  perdidas encontradas: 1
+  APARICIONES DEL TOKEN QUE NO SON PERDIDA (la frase dice que se repone): 5
+     lote B acto 20: PERDIDA NOMBRADA QUE LA RAZON MARCO NO SE PIERDE EN ESTA DIRECCION: EL REPORTE A LOS CONSEJOS DE CALIDAD, que la razon llama la salida hacia quien dec
+     lote B acto 28: PERDIDA NOMBRADA SE REPONE DE APPEND, Y LA RAZON DEJO ESCRITO POR QUE NO ERA NEGOCIABLE
+     lote B acto 31: PERDIDA NOMBRADA SE REPONE DE APPEND
+     lote B acto 32: PERDIDA NOMBRADA SE REPONE DE APPEND
+     lote C acto 36: PERDIDA NOMBRADA SE REPONE DE INCISO, y este acto cierra con CERO perdidas
+  por especie         : {'DE PARAMETRO DE PASO': 1}
+
+--- TABLA: LAS PERDIDAS NOMBRADAS DE LA VUELTA 60, CON SU ESPECIE ---
+
+| acto | lote | el nodo que muere | **ESPECIE** | por que se perdio | la frase del plan sellado que lo dice |
+|---:|:---:|---|---|---|---|
+| **19** | B | `equipo_mejora_calidad` | **DE PARAMETRO DE PASO** | el inciso MENTIRIA contra la unica restriccion del paso que protege | *PERDIDA NOMBRADA QUE LA RAZON MARCO, motivo ALCANCE, y se NOMBRA en vez de reponerse: no es un gesto suelto sino una MANERA de entender el rol que ya define el paso 5 del superviviente (hasta donde puede llegar este grupo para proponer y ejecutar acciones correctivas), y adosarla de inciso a ese paso convertiria un ...* |
+| **suma** | | | **1 DE PARAMETRO DE PASO** | | |
+
+  actos con perdida: 1 | de condiciones: 0 | de parametro de paso: 1
+
+FIN
