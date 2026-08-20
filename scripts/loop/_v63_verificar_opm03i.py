@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# ROTULO titulo especie=SELLO_FIJO sujeto=acta:63 corte=2026-08-20 motivo="el numero del titulo es la vuelta propia del fichero y no entra por argumento"
 """_v63_verificar_opm03i.py . COMPRUEBA, UNA POR UNA, LAS CINCO COSAS QUE LA
 FICHA DE OP-M-03-I MANDA COMPROBAR DESPUES DE FUNDIR.
 
