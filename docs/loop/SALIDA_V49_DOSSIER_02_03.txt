@@ -1,0 +1,235 @@
+==============================================================================
+DOSSIER DE LECTURA, actos 1 a 2 del lote CERRADO de OP-U-01
+nomina: docs/loop/RECOMPUTO_V49_TRAS_ACTO1.jsonl (253 actos CERRADOS)
+==============================================================================
+
+GUARDA DE LOS CUATRO AJENOS (03_FUSIONES.md, 11 ago 2026):
+   gates_go_kill_decision_points          en el lote CERRADO: NO
+   customer_discovery                     en el lote CERRADO: NO
+   ab_testing_optimizacion                en el lote CERRADO: NO
+   brainstorming_divergente               en el lote CERRADO: NO
+   GUARDA: VERDE, ninguno de los cuatro entra
+
+##############################################################################
+# ACTO 1 de 253 . tamano 4 . clases internas {'D': 2, 'A': 4}
+# framework_spin_selling, metodologia_spin_selling, modelo_spin, modelo_spin_preguntas
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [D] puesto 625   framework_spin_selling + metodologia_spin_selling
+      EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado resolviendo a nodo vivo. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA de [...]
+  [A] puesto 856   framework_spin_selling + modelo_spin
+      LA SECUENCIA SPIN CONTADA POR EL QUE LA CITA, y con eso la familia de SPIN queda LEIDA ENTERA. Lo comun es el metodo completo: preguntas de Situacion pocas y para calificar rapido, preguntas de Problema sin abusar de ellas, preguntas de Implicacion para ampliar la percepcion de urgencia, y cerrar con Necesidad-beneficio conectando el problema con los beneficios de la solucion. Lo propio de modelo_ [...]
+  [A] puesto 248   framework_spin_selling + modelo_spin_preguntas
+      REPITE con modelo_spin_preguntas. Los dos recorren la misma secuencia SPIN en el mismo orden: pocas preguntas de situacion, preguntas de problema, preguntas de implicacion para ampliar la percepcion y cierre con necesidad-beneficio para que el cliente articule el valor. Candidato a fusion.
+  [A] puesto 305   metodologia_spin_selling + modelo_spin
+      REPITE con modelo_spin. Los dos mandan la misma metodologia de Rackham: dejar las tecnicas de cierre agresivo cuando la venta es grande, disenar las preguntas siguiendo el orden Situacion, Problema, Implicacion y Necesidad-beneficio, practicar el paso de un tipo al siguiente en llamadas reales y revisar despues donde se atasca la secuencia. El primero anade el diagnostico previo de venta pequena o [...]
+  [D] puesto 764   metodologia_spin_selling + modelo_spin_preguntas
+      LA VARA DEL BANCO 9.6.1 otra vez, y con la misma madre del puesto 625. metodologia_spin_selling tiene DOS hijos de paso vivos por su paso 3, framework_spin_selling y modelo_spin_preguntas, mas diferencias_venta_pequena_venta_grande por su paso 1, y enlaza solo a ese ultimo: UNO de TRES, o sea mitad o menos, y manda el contenido. JUZGADO POR EL TEXTO: el paso 3 de la madre es una linea que ademas r [...]
+  [A] puesto 401   modelo_spin + modelo_spin_preguntas
+      REPITE con modelo_spin_preguntas. Los dos mandan la misma secuencia de Rackham: disenar las preguntas en el orden Situacion, Problema, Implicacion y Necesidad-beneficio, pasar de un tipo al siguiente sin forzar el orden rigido, y no presentar la solucion hasta que el cliente haya articulado la necesidad explicita. El segundo detalla que hace cada tipo de pregunta y el primero manda revisar las lla [...]
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## framework_spin_selling
+     titulo    : Framework SPIN Selling
+     fuente    : Traction - Gabriel Weinberg
+     dominio   : core | fase: ejecucion
+     etiqueta  : Pregunta con Método Spin
+     entregable: Guion de llamada de ventas estructurado bajo el modelo SPIN
+     alias     : []
+     resumen   : 434 caracteres
+     PASOS (4):
+       1. Formular 1-2 preguntas de situación para calificar rápidamente al prospecto
+       2. Preguntar sobre problemas actuales sin abusar de estas preguntas
+       3. Usar preguntas de implicación para ampliar la percepción de urgencia del problema
+       4. Cerrar con preguntas de need-payoff que conecten el problema con los beneficios de tu solución
+     CONDICIONES (1):
+       1. Cuando se realizan llamadas de ventas consultivas con prospectos B2B
+
+  ## metodologia_spin_selling
+     titulo    : Metodología SPIN Selling
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: ejecucion
+     etiqueta  : Aplica las Preguntas SPIN
+     entregable: Diagnóstico escrito de qué tipo de venta maneja el usuario (pequeña vs grande) y decisión de adoptar el enfoque SPIN en lugar de técnicas tradicionales
+     alias     : []
+     resumen   : 494 caracteres
+     PASOS (4):
+       1. Diagnosticar si tu venta es 'pequeña' (una sola llamada, bajo valor) o 'grande' (ciclo largo, alto valor, decisión pública)
+       2. Abandonar el enfoque en cierres agresivos y manejo de objeciones si vendes productos/servicios de alto valor
+       3. Prepararse para usar preguntas de Situación, Problema, Implicación y Necesidad-Beneficio (se detallan en capítulos posteriores)
+       4. Medir el impacto de la investigación mejorada: los estudios muestran incrementos de más del 20% en volumen de ventas
+     CONDICIONES (2):
+       1. Si el usuario vende productos o servicios de alto valor con ciclos de venta largos y múltiples llamadas
+       2. Si las técnicas tradicionales de venta (cierre, manejo de objeciones) no están funcionando
+
+  ## modelo_spin
+     titulo    : Las preguntas que abren una venta grande (método SPIN)
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: ejecucion
+     etiqueta  : Entiende el Modelo SPIN
+     entregable: Tu propio banco de preguntas SPIN para lo que vendes, organizado en las cuatro categorías
+     alias     : ['modelo_spin_2']
+     resumen   : 528 caracteres
+     PASOS (4):
+       1. Deja de entrenarte en distinguir preguntas abiertas de cerradas; ese no es el factor que marca la diferencia
+       2. Diseña tus preguntas siguiendo el orden Situación, Problema, Implicación, Necesidad-beneficio
+       3. Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales
+       4. Revisa tus llamadas o tus notas para detectar en qué parte de la secuencia te trabas
+     CONDICIONES (2):
+       1. Cuando quieras mejorar tus resultados en ventas grandes o complejas
+       2. Si estás usando técnicas de cierre agresivas y no te están dando resultado
+
+  ## modelo_spin_preguntas
+     titulo    : Modelo SPIN: Secuencia de Preguntas de Venta
+     fuente    : SPIN Selling - Neil Rackham
+     dominio   : core | fase: validacion
+     etiqueta  : Sigue la Secuencia SPIN
+     entregable: Guion o banco de preguntas SPIN personalizado por cliente o producto, listo para tu próxima llamada de venta clave
+     alias     : ['modelo_spin_secuencia_preguntas', 'framework_spin_selling', 'modelo_spin']
+     resumen   : 709 caracteres
+     PASOS (9):
+       1. Prepara preguntas de Situación mínimas y específicas sobre el contexto del cliente, usándolas con moderación
+       2. Formula preguntas de Problema para identificar dificultades o insatisfacciones del cliente
+       3. Desarrolla preguntas de Implicación que conecten el problema con consecuencias mayores no obvias
+       4. Cierra con preguntas de Necesidad-Beneficio para que el cliente exprese el valor de resolver el problema
+       5. Ajusta la secuencia según el flujo natural de la conversación sin forzar el orden rígido
+       6. Presenta tu solución recién cuando el cliente haya articulado la Necesidad Explícita
+       7. Deja de entrenarte en distinguir preguntas abiertas de cerradas; ese no es el factor que marca la diferencia
+       8. Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales
+       9. Revisa tus llamadas o tus notas para detectar en qué parte de la secuencia te trabas
+     CONDICIONES (5):
+       1. Cuando estés preparando una llamada de venta consultiva, grande o compleja con ciclo largo
+       2. Cuando tiendas a presentar tu solución antes de entender bien el problema del cliente
+       3. Cuando quieras que el propio cliente articule la urgencia y el valor de resolver su problema
+       4. Cuando se realizan llamadas de ventas consultivas con prospectos B2B
+       5. Si estás usando técnicas de cierre agresivas y no te están dando resultado
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  framework_spin_selling                              4        7        7
+  metodologia_spin_selling                            4        7        7
+  modelo_spin                                         4        9        9
+  modelo_spin_preguntas                               6       15       15
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  ACTO MIXTO: 2 par(es) interno(s) NO en A.
+     [D] framework_spin_selling + metodologia_spin_selling
+     [D] metodologia_spin_selling + modelo_spin_preguntas
+  P.12 MANDA: el cierre transitivo CONVOCA, la lectura DECIDE. El nodo
+  mixto se lee CONTRA EL SUPERVIVIENTE: si comparte PROCEDIMIENTO,
+  ENTRA; si comparte LA IDEA EN LINEAS, CONTINUA (enlace mas poda del
+  solape). NI transitividad automatica NI mayoria.
+
+##############################################################################
+# ACTO 2 de 253 . tamano 4 . clases internas {'D': 3, 'A': 3}
+# deriva_hacia_el_fallo, drift_hacia_el_fallo, drift_hacia_el_fallo_2, normalizacion_de_la_desviacion
+##############################################################################
+
+--- 1. VEREDICTOS DIRECTOS DE LOS PARES INTERNOS (P.12: mandan estos) ---
+  [D] puesto 2271  deriva_hacia_el_fallo + drift_hacia_el_fallo
+      Los dos gemelos ricos de la deriva, MISMA FUENTE, Dekker, y sin arista entre ellos, y cada uno trae un instrumento que el otro no tiene. deriva_hacia_el_fallo aporta LA TEORIA ESTRUCTURAL: como los sistemas complejos y FUERTEMENTE ACOPLADOS elevan el riesgo de fallo aunque nadie se equivoque, y la lectura de la exploracion organizacional en busca de eficiencia contra los limites de seguridad. drif [...]
+  [A] puesto 2222  deriva_hacia_el_fallo + drift_hacia_el_fallo_2
+      REPITE. drift_hacia_el_fallo_2 contra deriva_hacia_el_fallo, MISMA FUENTE y sin arista, y son el mismo concepto extraido dos veces. Sus pasos 1 y 3 son los pasos 1 y 2 del otro: revisar el historial de pequenos cambios acumulados es mapear la historia de decisiones incrementales, y evaluar si la puntualidad se volvio la norma a costa de los margenes es identificar practicas normalizadas sin evalua [...]
+  [D] puesto 2275  deriva_hacia_el_fallo + normalizacion_de_la_desviacion
+      La estructura contra el calendario, DOS FUENTES, Dekker y Reason, y sin arista entre ellos. deriva_hacia_el_fallo explica POR QUE PASA: decisiones incrementales, practicas normalizadas, ACOPLAMIENTO FUERTE que eleva el riesgo estructural, y exploracion organizacional hacia la eficiencia contra los limites de seguridad. normalizacion_de_la_desviacion dice COMO SE PARA, y trae contramedidas que el o [...]
+  [A] puesto 2226  drift_hacia_el_fallo + drift_hacia_el_fallo_2
+      REPITE, y es la SEGUNDA vez que este nodo repite en el dominio. drift_hacia_el_fallo_2 contra drift_hacia_el_fallo, MISMA FUENTE y sin arista. Su paso 1 es historial de cambios acumulados, que es la brecha entre procedimiento escrito y practica real del otro; su paso 3, la puntualidad convertida en norma, es el paso 2 del otro, las metas de eficiencia local que compiten con la seguridad, con un ej [...]
+  [D] puesto 2394  drift_hacia_el_fallo + normalizacion_de_la_desviacion
+      Por que deriva contra como se para, DOS FUENTES, Dekker y Reason, y sin arista entre ellos, mismo reparto que el puesto 2275 con el otro nodo de deriva. drift_hacia_el_fallo VIGILA: MONITOREAR LA BRECHA ENTRE PROCEDIMIENTO ESCRITO Y PRACTICA REAL DE FORMA SISTEMATICA Y NO SOLO CUANDO HAY ACCIDENTES, y CUESTIONAR SI EL EXITO RECIENTE ES SEGURIDAD REAL O SOLO AUSENCIA DE CONSECUENCIAS. normalizacion [...]
+  [A] puesto 2237  drift_hacia_el_fallo_2 + normalizacion_de_la_desviacion
+      REPITE, y es la TERCERA vez que este nodo repite en el dominio, ahora cruzando fuentes. drift_hacia_el_fallo_2, de Dekker, contra normalizacion_de_la_desviacion, de Reason, sin arista. Su paso 1, el historial de pequenos cambios acumulados, es el paso 1 del otro, auditar las anomalias e incidentes menores tolerados sin corregir; su paso 3, la puntualidad vuelta norma a costa de los margenes, es un [...]
+
+--- 2. EL CONTENIDO DE CADA MIEMBRO, verbatim del fichero ---
+
+  ## deriva_hacia_el_fallo
+     titulo    : Drift into Failure (Deriva hacia el fallo)
+     fuente    : The Field Guide to Understandin - Dekker, Sidney;
+     dominio   : health_safety | fase: validacion
+     etiqueta  : Frena tu Deriva al Fallo
+     entregable: Análisis histórico de la deriva organizacional hacia condiciones de riesgo, identificando puntos de normalización de desviaciones
+     alias     : []
+     resumen   : 466 caracteres
+     PASOS (4):
+       1. Mapear la historia de decisiones incrementales que llevaron a la condición actual de riesgo
+       2. Identificar prácticas que fueron 'normalizadas' con el tiempo sin evaluación crítica
+       3. Revisar cómo los sistemas complejos y fuertemente acoplados (tight coupling) elevan el riesgo estructural de fallo
+       4. Evaluar la exploración y experimentación organizacional en busca de eficiencia frente a los límites de seguridad
+     CONDICIONES (2):
+       1. Cuando se sospecha que el riesgo actual es resultado de una deriva gradual y no de un evento único
+       2. Al evaluar sistemas complejos y altamente acoplados (Perrow) en busca de vulnerabilidades estructurales
+
+  ## drift_hacia_el_fallo
+     titulo    : Drift: Desviación Incremental hacia el Fallo
+     fuente    : The Field Guide to Understandin - Dekker, Sidney;
+     dominio   : health_safety | fase: ejecucion
+     etiqueta  : Evita el Desvío al Fallo
+     entregable: Sistema de monitoreo continuo de la brecha procedimiento-práctica con indicadores de alerta temprana de drift
+     alias     : []
+     resumen   : 458 caracteres
+     PASOS (4):
+       1. Monitorear sistemáticamente la brecha entre procedimiento escrito y práctica real (no solo cuando hay accidentes)
+       2. Identificar qué metas de eficiencia local están compitiendo con la seguridad
+       3. Cuestionar si el éxito reciente refleja seguridad real o simplemente ausencia de consecuencias adversas hasta ahora
+       4. Establecer mecanismos de retroalimentación que detecten normalización de desviaciones antes de que se consoliden
+     CONDICIONES (2):
+       1. Cuando una organización lleva tiempo operando sin incidentes graves y desea evaluar su riesgo real
+       2. Cuando se investigan las causas raíz sistémicas de un accidente
+
+  ## drift_hacia_el_fallo_2
+     titulo    : Drift into Failure (Normalización de la Desviación)
+     fuente    : The Field Guide to Understandin - Dekker, Sidney;
+     dominio   : health_safety | fase: ejecucion
+     etiqueta  : Detén la Normalización del Riesgo
+     entregable: Informe de análisis de tendencias históricas de desviaciones incrementales respecto a normas de seguridad originales
+     alias     : []
+     resumen   : 574 caracteres
+     PASOS (4):
+       1. Revisar el historial de pequeños cambios y ajustes acumulados en procedimientos operativos
+       2. Identificar señales de riesgo que fueron descartadas o no reportadas como 'malas noticias'
+       3. Evaluar si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad
+       4. Fomentar una cultura donde las pequeñas desviaciones sean visibles y cuestionadas, no normalizadas
+     CONDICIONES (2):
+       1. Cuando se investigan accidentes que parecen surgir de la 'nada' tras un largo periodo de operación exitosa
+       2. Cuando la organización ha experimentado presión sostenida de producción o puntualidad
+
+  ## normalizacion_de_la_desviacion
+     titulo    : Normalización de la Desviación
+     fuente    : Managing the Risks of Organizat - Reason, J. T_
+     dominio   : health_safety | fase: ejecucion
+     etiqueta  : Cuidado con Normalizar el Riesgo
+     entregable: Informe personal de auditoría que identifique patrones de desviación normalizada y recomendaciones concretas para revertirlos.
+     alias     : ['regulador_fallas_sistemicas']
+     resumen   : 711 caracteres
+     PASOS (6):
+       1. Audita tu historial de anomalías o incidentes menores que has tolerado sin corregir
+       2. Identifica el lenguaje que usas para minimizar riesgos crecientes en tu negocio
+       3. Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente
+       4. Establece puntos de control periódicos en tu calendario para cuestionar la aceptación acumulada de desviaciones
+       5. Evalúa si estás ignorando tus propias señales de alerta o el feedback sobre calidad
+       6. Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna
+     CONDICIONES (4):
+       1. Cuando tienes un historial de incidentes menores tolerados sin corrección
+       2. Cuando detectas en ti mismo lenguaje que trivializa riesgos crecientes
+       3. Cuando justificas decisiones de mayor riesgo apoyándote en éxitos pasados sin revisarlos
+       4. Cuando sospechas que tu percepción de cómo opera tu negocio se ha desconectado de la realidad
+
+--- 3. EL CABLEADO (P.8: solo habla a contenido empatado) ---
+  nodo                                            pasos   nombra LO NOMBRAN
+  deriva_hacia_el_fallo                               4        2        2
+  drift_hacia_el_fallo                                4        5        5
+  drift_hacia_el_fallo_2                              4        2        2
+  normalizacion_de_la_desviacion                      6        4        4
+  aristas INTERNAS del acto: ninguna
+
+--- 4. LA FIGURA DEL ACTO ---
+  ACTO MIXTO: 3 par(es) interno(s) NO en A.
+     [D] deriva_hacia_el_fallo + drift_hacia_el_fallo
+     [D] deriva_hacia_el_fallo + normalizacion_de_la_desviacion
+     [D] drift_hacia_el_fallo + normalizacion_de_la_desviacion
+  P.12 MANDA: el cierre transitivo CONVOCA, la lectura DECIDE. El nodo
+  mixto se lee CONTRA EL SUPERVIVIENTE: si comparte PROCEDIMIENTO,
+  ENTRA; si comparte LA IDEA EN LINEAS, CONTINUA (enlace mas poda del
+  solape). NI transitividad automatica NI mayoria.

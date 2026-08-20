@@ -13817,7 +13817,7 @@
       ],
       "nodos_siguientes": [
         "customer_retention_strategy",
-        "framework_spin_selling",
+        "modelo_spin_preguntas",
         "calibracion_intensidad_celebracion",
         "fase_affirm_buyers_remorse",
         "customer_retention_tactics"
@@ -13845,7 +13845,7 @@
       "entregable_esperado": "Una estrategia de ventas diferenciada según el tipo de venta (transaccional vs. consultiva/compleja)",
       "nodos_previos": [
         "escala_actitud_cierre",
-        "modelo_spin",
+        "modelo_spin_preguntas",
         "preguntas_beneficio",
         "preguntas_need_payoff"
       ],
@@ -13884,7 +13884,7 @@
         "reuniones_diarias_eliminar_bloqueos"
       ],
       "nodos_siguientes": [
-        "framework_spin_selling",
+        "modelo_spin_preguntas",
         "cierre_sofisticacion_comprador"
       ],
       "condiciones_activacion": [
@@ -13911,7 +13911,7 @@
         "cierre_segun_tamano_decision"
       ],
       "nodos_siguientes": [
-        "framework_spin_selling",
+        "modelo_spin_preguntas",
         "cierre_satisfaccion_postventa"
       ],
       "condiciones_activacion": [
@@ -16695,10 +16695,10 @@
         "diseno_embudo_ventas_cliente",
         "cierre_segun_complejidad_venta",
         "contract_close_out",
-        "framework_spin_selling"
+        "modelo_spin_preguntas"
       ],
       "nodos_siguientes": [
-        "framework_spin_selling",
+        "modelo_spin_preguntas",
         "rendicion_de_cuentas_del_equipo"
       ],
       "condiciones_activacion": [
@@ -25205,7 +25205,7 @@
       "nodos_siguientes": [
         "necesidades_implicitas_vs_explicitas",
         "obtencion_de_compromiso",
-        "modelo_spin",
+        "modelo_spin_preguntas",
         "obtencion_compromiso",
         "etapa_investigacion_ventas",
         "investigacion_como_habilidad_clave"
@@ -35438,7 +35438,7 @@
       ],
       "nodos_siguientes": [
         "compromiso_linea_tiempo_cliente",
-        "framework_spin_selling"
+        "modelo_spin_preguntas"
       ],
       "condiciones_activacion": [
         "Si estás perdiendo muchos prospectos durante el proceso de venta",
@@ -44180,8 +44180,7 @@
       "entregable_esperado": "Puntaje individual de actitud hacia el cierre, con diagnóstico de si el vendedor necesita reorientar su enfoque hacia técnicas consultivas (SPIN) en vez de cierre agresivo.",
       "nodos_previos": [
         "modelo_spin_preguntas",
-        "ineficacia_cierre_ventas_grandes",
-        "modelo_spin"
+        "ineficacia_cierre_ventas_grandes"
       ],
       "nodos_siguientes": [
         "metodologia_evaluacion_entrenamiento_ventas",
@@ -47177,7 +47176,7 @@
         "value_proposition_startup"
       ],
       "nodos_siguientes": [
-        "framework_spin_selling",
+        "modelo_spin_preguntas",
         "proceso_llamada_inicial_venta"
       ],
       "condiciones_activacion": [
@@ -48072,7 +48071,7 @@
         "cuatro_etapas_llamada_de_ventas"
       ],
       "nodos_siguientes": [
-        "modelo_spin"
+        "modelo_spin_preguntas"
       ],
       "condiciones_activacion": [
         "Cuando las ventas complejas no están cerrando",
@@ -55246,7 +55245,8 @@
       "condiciones_activacion": [
         "Cuando se realizan llamadas de ventas consultivas con prospectos B2B"
       ],
-      "etiqueta_arbol": "Pregunta con Método Spin"
+      "etiqueta_arbol": "Pregunta con Método Spin",
+      "deprecado": true
     },
     "framework_tareas_ia_humano": {
       "node_id": "framework_tareas_ia_humano",
@@ -75934,7 +75934,8 @@
       "ids_alias": [
         "modelo_spin_2"
       ],
-      "etiqueta_arbol": "Entiende las Preguntas que Venden"
+      "etiqueta_arbol": "Entiende las Preguntas que Venden",
+      "deprecado": true
     },
     "modelo_spin_preguntas": {
       "node_id": "modelo_spin_preguntas",
@@ -75949,7 +75950,10 @@
         "Desarrolla preguntas de Implicación que conecten el problema con consecuencias mayores no obvias",
         "Cierra con preguntas de Necesidad-Beneficio para que el cliente exprese el valor de resolver el problema",
         "Ajusta la secuencia según el flujo natural de la conversación sin forzar el orden rígido",
-        "Presenta tu solución recién cuando el cliente haya articulado la Necesidad Explícita"
+        "Presenta tu solución recién cuando el cliente haya articulado la Necesidad Explícita",
+        "Deja de entrenarte en distinguir preguntas abiertas de cerradas; ese no es el factor que marca la diferencia",
+        "Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales",
+        "Revisa tus llamadas o tus notas para detectar en qué parte de la secuencia te trabas"
       ],
       "entregable_esperado": "Guion o banco de preguntas SPIN personalizado por cliente o producto, listo para tu próxima llamada de venta clave",
       "nodos_previos": [
@@ -75958,7 +75962,15 @@
         "ecuacion_de_valor_cliente",
         "enfoque_resolucion_problemas_lanzamiento_producto",
         "apertura_efectiva_llamada_venta",
-        "lanzamiento_nuevos_productos_enfoque_problema"
+        "lanzamiento_nuevos_productos_enfoque_problema",
+        "cierre_satisfaccion_postventa",
+        "cierre_segun_tamano_decision",
+        "cierre_sofisticacion_comprador",
+        "compromiso_linea_tiempo_cliente",
+        "cuatro_etapas_llamada_de_ventas",
+        "diseno_embudo_ventas_cliente",
+        "estrategia_ventas_enterprise",
+        "etapa_investigacion_ventas"
       ],
       "nodos_siguientes": [
         "ecuacion_de_valor_cliente",
@@ -75972,21 +75984,43 @@
         "analisis_capacidad_proceso",
         "obtencion_compromiso_venta",
         "enfoque_etapa_investigacion",
-        "reglas_aprendizaje_habilidades_venta"
+        "reglas_aprendizaje_habilidades_venta",
+        "cierre_segun_complejidad_venta",
+        "compromiso_linea_tiempo_cliente",
+        "planificacion_preguntas_implicacion",
+        "preguntas_implicacion",
+        "preguntas_need_payoff",
+        "preguntas_problema_2",
+        "preguntas_situacion",
+        "shock_and_awe_kit_bienvenida"
       ],
       "condiciones_activacion": [
         "Cuando estés preparando una llamada de venta consultiva, grande o compleja con ciclo largo",
         "Cuando tiendas a presentar tu solución antes de entender bien el problema del cliente",
-        "Cuando quieras que el propio cliente articule la urgencia y el valor de resolver su problema"
+        "Cuando quieras que el propio cliente articule la urgencia y el valor de resolver su problema",
+        "Cuando se realizan llamadas de ventas consultivas con prospectos B2B",
+        "Si estás usando técnicas de cierre agresivas y no te están dando resultado"
       ],
       "etiqueta_arbol": "Sigue la Secuencia de Preguntas",
       "ids_alias": [
-        "modelo_spin_secuencia_preguntas"
+        "modelo_spin_secuencia_preguntas",
+        "framework_spin_selling",
+        "modelo_spin"
       ],
       "merged_originals": [
         {
           "node_id": "modelo_spin_secuencia_preguntas",
           "titulo": "Modelo SPIN: Secuencia de Preguntas para Ventas Grandes",
+          "fuente": "SPIN Selling - Neil Rackham"
+        },
+        {
+          "node_id": "framework_spin_selling",
+          "titulo": "Framework SPIN Selling",
+          "fuente": "Traction - Gabriel Weinberg"
+        },
+        {
+          "node_id": "modelo_spin",
+          "titulo": "Las preguntas que abren una venta grande (método SPIN)",
           "fuente": "SPIN Selling - Neil Rackham"
         }
       ]
@@ -84043,7 +84077,7 @@
       "entregable_esperado": "Guion o mapa de preguntas de implicación preparado antes de cada llamada de ventas, vinculando problemas potenciales con consecuencias y preguntas específicas",
       "nodos_previos": [
         "preguntas_problema_2",
-        "modelo_spin",
+        "modelo_spin_preguntas",
         "preparacion_preguntas_problema_precall"
       ],
       "nodos_siguientes": [
@@ -85698,7 +85732,7 @@
       "nodos_previos": [
         "preguntas_problema_2",
         "necesidades_implicitas_vs_explicitas",
-        "modelo_spin"
+        "modelo_spin_preguntas"
       ],
       "nodos_siguientes": [
         "preguntas_necesidad_beneficio",
@@ -85789,7 +85823,7 @@
       "nodos_previos": [
         "preguntas_implicacion",
         "necesidades_implicitas_vs_explicitas",
-        "modelo_spin",
+        "modelo_spin_preguntas",
         "planificacion_preguntas_implicacion",
         "ecuacion_de_valor_venta"
       ],
@@ -85876,7 +85910,7 @@
       "nodos_previos": [
         "preguntas_situacion",
         "understanding_customers_tecnicas",
-        "modelo_spin"
+        "modelo_spin_preguntas"
       ],
       "nodos_siguientes": [
         "preguntas_implicacion",
@@ -85903,7 +85937,7 @@
       ],
       "entregable_esperado": "Tu lista corta y priorizada de preguntas de situación para el cliente que vas a contactar",
       "nodos_previos": [
-        "modelo_spin",
+        "modelo_spin_preguntas",
         "analisis_de_cohortes",
         "estudio_mercado_calidad"
       ],
@@ -104207,7 +104241,7 @@
       "nodos_previos": [
         "fase_activate_primera_impresion",
         "cierre_segun_complejidad_venta",
-        "framework_spin_selling"
+        "modelo_spin_preguntas"
       ],
       "nodos_siguientes": [
         "customer_appreciation_pr",
@@ -123345,7 +123379,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 40,
+    "nodos_sin_enlaces_entrantes": 42,
     "enlaces_rotos_en_grafo": 0
   }
 }

@@ -1,0 +1,105 @@
+
+ RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
+
+·······stderr | lib/rateLimit.test.ts > verificarFusibleGlobal (tope diario de TODA la app) > dev user exento fuera de producción; Upstash caído permite
+rateLimit: INCR fallo (500); se permite la solicitud
+
+················································································································································································································································································································································································································································································································································································································stderr | app/api/organizer/route.test.ts > POST /api/organizer > organiza la idea, persiste proyecto/sesion/plan, y actualiza la fase detectada
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/organizer/route.test.ts > POST /api/organizer > organiza la idea, persiste proyecto/sesion/plan, y actualiza la fase detectada
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/organizer/route.test.ts > POST /api/organizer > 502 si Claude falla, pero aun asi cierra la sesion con el costo acumulado hasta ese punto
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/organizer/route.test.ts > POST /api/organizer > 502 si Claude falla, pero aun asi cierra la sesion con el costo acumulado hasta ese punto
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+·····stderr | app/api/organizer/route.test.ts > POST /api/organizer > 502 si Claude falla, pero aun asi cierra la sesion con el costo acumulado hasta ese punto
+[organizer:json] falló {
+  projectId: 'project-1',
+  error: Error: fallo de red simulado
+      at C:/Users/AlexDesk/Documents/I have an idea/web/app/api/organizer/route.test.ts:192:47
+      at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:302:11
+      at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:26
+      at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:2326:20
+      at new Promise (<anonymous>)
+      at runWithCancel (file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:2323:10)
+      at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:2305:20
+      at new Promise (<anonymous>)
+      at runWithTimeout (file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:2272:10)
+      at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:2955:64
+}
+
+···················································································································································stderr | app/api/session/start/route.test.ts > POST /api/session/start > clasifica, crea proyecto+sesion, y devuelve la primera pregunta
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > clasifica, crea proyecto+sesion, y devuelve la primera pregunta
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > tipo=salio cierra la sesion y mergea numeros_proyecto/tipo_oferta detectados
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > tipo=salio cierra la sesion y mergea numeros_proyecto/tipo_oferta detectados
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > tipo=error_temporal responde 502 sin cerrar la sesion
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+stderr | app/api/session/start/route.test.ts > POST /api/session/start > tipo=error_temporal responde 502 sin cerrar la sesion
+rateLimit: UPSTASH_REDIS_REST_URL/TOKEN ausentes; limite desactivado
+
+·············stderr | app/api/session/[id]/plan/route.test.ts > POST /api/session/[id]/plan > un hipo transitorio a mitad de stream se REINTENTA y el plan sale igual
+[plan] intento 1/3 fallo: Error: overload simulado
+    at Object.finalMessage (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:75:13)
+    at generarTextoPlan (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:107:41)
+    at Object.start (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:231:85)
+    at setupReadableStreamDefaultController (node:internal/webstreams/readablestream:2464:23)
+    at setupReadableStreamDefaultControllerFromSource (node:internal/webstreams/readablestream:2496:3)
+    at new ReadableStream (node:internal/webstreams/readablestream:279:7)
+    at Module.POST (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:208:18)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:204:17
+    at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20
+
+·····································································································································stderr | app/api/session/[id]/plan/route.test.ts > POST /api/session/[id]/plan > agotados los reintentos: error honesto y la sesion NO se cierra (se puede reintentar)
+[plan] intento 1/3 fallo: Error: overload persistente
+    at Object.finalMessage (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:75:13)
+    at generarTextoPlan (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:107:41)
+    at Object.start (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:231:85)
+    at setupReadableStreamDefaultController (node:internal/webstreams/readablestream:2464:23)
+    at setupReadableStreamDefaultControllerFromSource (node:internal/webstreams/readablestream:2496:3)
+    at new ReadableStream (node:internal/webstreams/readablestream:279:7)
+    at Module.POST (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:208:18)
+    at C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:222:17
+    at file:///C:/Users/AlexDesk/Documents/I%20have%20an%20idea/web/node_modules/.pnpm/@vitest+runner@4.1.10/node_modules/@vitest/runner/dist/chunk-artifact.js:1903:20
+
+····················································································stderr | app/api/session/[id]/plan/route.test.ts > POST /api/session/[id]/plan > agotados los reintentos: error honesto y la sesion NO se cierra (se puede reintentar)
+[plan] intento 2/3 fallo: Error: overload persistente
+    at Object.finalMessage (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:75:13)
+    at generarTextoPlan (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:107:41)
+    at Object.start (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:231:79)
+
+stderr | app/api/session/[id]/plan/route.test.ts > POST /api/session/[id]/plan > agotados los reintentos: error honesto y la sesion NO se cierra (se puede reintentar)
+[plan] intento 3/3 fallo: Error: overload persistente
+    at Object.finalMessage (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:75:13)
+    at generarTextoPlan (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:107:41)
+    at Object.start (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:231:79)
+[plan] redactor agotado tras reintentos {
+  ultimoError: Error: overload persistente
+      at Object.finalMessage (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.test.ts:75:13)
+      at generarTextoPlan (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:107:41)
+      at Object.start (C:/Users/AlexDesk/Documents/I have an idea/web/app/api/session/[id]/plan/route.ts:231:79)
+}
+
+··········································stderr | lib/compass.test.ts > buscarAfines: fallback silencioso sin VOYAGE_API_KEY > devuelve [] sin lanzar si falta la API key (navegacion solo local)
+  (brujula semantica no disponible, navegacion solo local: falta VOYAGE_API_KEY)
+
+·····---··
+
+ Test Files  80 passed (80)
+      Tests  1030 passed | 3 skipped (1033)
+   Start at  23:11:32
+   Duration  18.52s (transform 41.05s, setup 0ms, import 130.75s, tests 8.83s, environment 15ms)
+

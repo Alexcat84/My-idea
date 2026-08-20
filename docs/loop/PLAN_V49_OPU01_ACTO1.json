@@ -1,0 +1,69 @@
+{
+  "operacion": "OP-U-01",
+  "tramo": "1, P.12: EL ACTO 1, cuya lectura ya estaba hecha",
+  "fecha": "2026-08-19",
+  "vuelta": 49,
+  "estado": "SELLADO",
+  "nomina": "docs/loop/RECOMPUTO_V49_COMPONENTES.jsonl",
+  "dossier": "docs/loop/SALIDA_V49_DOSSIER_01.txt",
+  "vara": "P.12: el cierre transitivo CONVOCA, la lectura DECIDE. Se elige el superviviente de la PARTE A por las dos reglas de 03_FUSIONES.md (sobrevive por CONTENIDO; a contenido empatado desempata el grafo, P.8) mas la vara de las puertas; se lee el nodo MIXTO contra ese superviviente y se decide ENTRA o CONTINUA; y se funde EN UNA SOLA operacion la parte A mas el mixto si ENTRA.",
+  "nota_de_texto": "Ningun texto se teclea aqui: INDICES. La unica excepcion es el NEXO de un INCISO, y este plan no lleva ninguno.",
+  "vara_de_las_puertas": "Medida hoy con vuelta48_puertas_en_el_lote.py sobre la nomina de hoy (docs/loop/SALIDA_V49_PUERTAS_EN_EL_LOTE.txt): el acto 1 NO aparece entre los 30 SALVABLES ni entre los 2 IMPOSIBLES. Ninguno de sus cuatro miembros es semilla de entrada ni extremo de puente aprobado. La vara no muerde y la guarda 1B pasa por vacio.",
+  "lectura_p12": {
+    "mixto": "metodologia_spin_selling",
+    "superviviente_contra_el_que_se_leyo": "modelo_spin_preguntas",
+    "veredicto": "CONTINUA",
+    "citas": "El puesto 764 lo dice con esa palabra y con los dos textos delante: el paso 3 de la madre es UNA LINEA QUE ADEMAS REMITE FUERA (prepararse para usar las preguntas de Situacion, Problema, Implicacion y Necesidad-Beneficio, que se detallan en capitulos posteriores) y modelo_spin_preguntas trae el PROCEDIMIENTO ENTERO, los seis pasos. No cabe en una linea: CONTINUA. Y el puesto 625 dice lo mismo con el otro miembro de la parte A, framework_spin_selling: el paso 3 de la madre es una linea que ademas remite fuera y el hijo es ese detalle. CONTINUA, no repite. LOS DOS VEREDICTOS D DEL ACTO DICEN CONTINUA CON ESA PALABRA.",
+    "lo_propio_del_mixto_que_no_es_de_las_preguntas": "diagnosticar si la venta es pequena o grande (material del racimo del cierre en venta grande, y con hijo propio vivo, diferencias_venta_pequena_venta_grande) y la cifra de mas del veinte por ciento de mejora que muestran los estudios. Ninguna de las dos es del procedimiento de las preguntas.",
+    "arista_declarada_para_la_fase_04": {
+      "de": "metodologia_spin_selling",
+      "a": "modelo_spin_preguntas",
+      "sentido": "de la madre al hijo (metodologia_spin_selling nombra en su paso 3 lo que modelo_spin_preguntas desarrolla)",
+      "ids_resueltos_P9": "los dos ids son ids VIVOS y RESUELTOS al escribir esta arista: metodologia_spin_selling esta vivo y modelo_spin_preguntas es el superviviente de la parte A de este mismo acto, o sea el id que quedara vivo tras la fusion.",
+      "medida_hoy": "SIN ARISTA en ninguno de los dos sentidos, buscada hoy resolviendo por alias.",
+      "no_se_ejecuta_aqui": "La escribe la fase 04. Figura: 02_DESTEJIDOS.md linea 3521, la misma que se uso con las aristas de los pares 599 y 233.",
+      "poda_del_solape": "PENDIENTE DE LA FASE QUE EJECUTE EL ENLACE. Esta operacion NO la tiene autorizada. El solape a podar es el paso 3 de metodologia_spin_selling, que es la linea que remite fuera."
+    }
+  },
+  "actos": [
+    {
+      "orden": 1,
+      "miembros": [
+        "framework_spin_selling",
+        "modelo_spin",
+        "modelo_spin_preguntas"
+      ],
+      "superviviente": "modelo_spin_preguntas",
+      "motivo": "CONTENIDO, Y NO ESTA EMPATADO, asi que el cableado no habla (P.8). SEIS pasos contra CUATRO y CUATRO, TRES condiciones contra UNA y DOS, y el resumen mas largo de los cuatro miembros del acto (709 caracteres). Es el unico que trae las DOS piezas que cierran el metodo y que ninguno de los otros dos tiene: ajustar la secuencia al flujo natural de la conversacion sin forzar el orden rigido (paso 5) y NO presentar la solucion hasta que el cliente haya articulado la Necesidad Explicita (paso 6), que es la regla que hace que SPIN sea SPIN. Y LO ESCRIBEN LOS DOS VEREDICTOS A: el 248 dice que los dos recorren la misma secuencia y el 401 dice que EL SEGUNDO, modelo_spin_preguntas, DETALLA QUE HACE CADA TIPO DE PREGUNTA. El cableado converge y por eso no hace falta que hable: 15 contra 9 y 7, el mas alto de los cuatro. NOTA DE FUENTE, que no decide pero se dice: framework_spin_selling declara Traction de Weinberg y los otros dos SPIN Selling de Rackham; el veredicto 625 lo llama EL FORASTERO. El superviviente es de Rackham, que es la casa del metodo.",
+      "absorbidos": [
+        "framework_spin_selling",
+        "modelo_spin"
+      ],
+      "pasos": {
+        "framework_spin_selling": {
+          "1": "CUBIERTO:1",
+          "2": "CUBIERTO:2",
+          "3": "CUBIERTO:3",
+          "4": "CUBIERTO:4"
+        },
+        "modelo_spin": {
+          "1": "APPEND",
+          "2": "CUBIERTO:5",
+          "3": "APPEND",
+          "4": "APPEND"
+        }
+      },
+      "condiciones": {
+        "framework_spin_selling": {
+          "1": "APPEND"
+        },
+        "modelo_spin": {
+          "1": "CUBIERTO:1",
+          "2": "APPEND"
+        }
+      },
+      "nota_del_reparto": "LOS CUATRO PASOS DE framework_spin_selling CAEN UNO A UNO SOBRE LOS CUATRO PRIMEROS DEL SUPERVIVIENTE, EN EL MISMO ORDEN, y el puesto 248 lo escribe asi: los dos recorren la misma secuencia SPIN en el mismo orden, pocas preguntas de situacion, preguntas de problema, preguntas de implicacion para ampliar la percepcion y cierre con necesidad-beneficio. VIAJAN ENTEROS LOS TRES GESTOS DE ENTRENAMIENTO DE modelo_spin que el puesto 856 nombra uno a uno como lo propio de ese nodo: dejar de entrenarse en distinguir preguntas abiertas de cerradas porque ese no es el factor, practicar el paso de un tipo al siguiente sin que se note en llamadas reales, y revisar las llamadas o las notas para detectar donde uno se traba. SU PASO 2 VA A CUBIERTO:5 Y SE EXPLICA POR QUE ESE Y NO OTRO: lo que ese paso manda es el ORDEN de la secuencia, y el paso del superviviente que habla de la SECUENCIA como tal es el 5, ajustar la secuencia al flujo natural sin forzar el orden rigido. La marca apunta a un solo paso por contrato del instrumento; lo que el orden S-P-I-N describe son los cuatro primeros del superviviente en bloque, y se dice aqui para que nadie lea la celda como una equivalencia paso a paso. LA CONDICION 1 DE framework_spin_selling VIAJA ENTERA aunque se parezca: la del superviviente dice llamada de venta consultiva, grande o compleja con ciclo largo, y NO dice prospectos B2B, que es el unico calificativo que el otro trae."
+    }
+  ],
+  "declarados_y_no_fundidos": []
+}

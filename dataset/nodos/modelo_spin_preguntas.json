@@ -11,7 +11,10 @@
     "Desarrolla preguntas de Implicación que conecten el problema con consecuencias mayores no obvias",
     "Cierra con preguntas de Necesidad-Beneficio para que el cliente exprese el valor de resolver el problema",
     "Ajusta la secuencia según el flujo natural de la conversación sin forzar el orden rígido",
-    "Presenta tu solución recién cuando el cliente haya articulado la Necesidad Explícita"
+    "Presenta tu solución recién cuando el cliente haya articulado la Necesidad Explícita",
+    "Deja de entrenarte en distinguir preguntas abiertas de cerradas; ese no es el factor que marca la diferencia",
+    "Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales",
+    "Revisa tus llamadas o tus notas para detectar en qué parte de la secuencia te trabas"
   ],
   "entregable_esperado": "Guion o banco de preguntas SPIN personalizado por cliente o producto, listo para tu próxima llamada de venta clave",
   "nodos_previos": [
@@ -20,7 +23,15 @@
     "ecuacion_de_valor_cliente",
     "enfoque_resolucion_problemas_lanzamiento_producto",
     "apertura_efectiva_llamada_venta",
-    "lanzamiento_nuevos_productos_enfoque_problema"
+    "lanzamiento_nuevos_productos_enfoque_problema",
+    "cierre_satisfaccion_postventa",
+    "cierre_segun_tamano_decision",
+    "cierre_sofisticacion_comprador",
+    "compromiso_linea_tiempo_cliente",
+    "cuatro_etapas_llamada_de_ventas",
+    "diseno_embudo_ventas_cliente",
+    "estrategia_ventas_enterprise",
+    "etapa_investigacion_ventas"
   ],
   "nodos_siguientes": [
     "ecuacion_de_valor_cliente",
@@ -34,21 +45,43 @@
     "analisis_capacidad_proceso",
     "obtencion_compromiso_venta",
     "enfoque_etapa_investigacion",
-    "reglas_aprendizaje_habilidades_venta"
+    "reglas_aprendizaje_habilidades_venta",
+    "cierre_segun_complejidad_venta",
+    "compromiso_linea_tiempo_cliente",
+    "planificacion_preguntas_implicacion",
+    "preguntas_implicacion",
+    "preguntas_need_payoff",
+    "preguntas_problema_2",
+    "preguntas_situacion",
+    "shock_and_awe_kit_bienvenida"
   ],
   "condiciones_activacion": [
     "Cuando estés preparando una llamada de venta consultiva, grande o compleja con ciclo largo",
     "Cuando tiendas a presentar tu solución antes de entender bien el problema del cliente",
-    "Cuando quieras que el propio cliente articule la urgencia y el valor de resolver su problema"
+    "Cuando quieras que el propio cliente articule la urgencia y el valor de resolver su problema",
+    "Cuando se realizan llamadas de ventas consultivas con prospectos B2B",
+    "Si estás usando técnicas de cierre agresivas y no te están dando resultado"
   ],
   "etiqueta_arbol": "Sigue la Secuencia SPIN",
   "ids_alias": [
-    "modelo_spin_secuencia_preguntas"
+    "modelo_spin_secuencia_preguntas",
+    "framework_spin_selling",
+    "modelo_spin"
   ],
   "merged_originals": [
     {
       "node_id": "modelo_spin_secuencia_preguntas",
       "titulo": "Modelo SPIN: Secuencia de Preguntas para Ventas Grandes",
+      "fuente": "SPIN Selling - Neil Rackham"
+    },
+    {
+      "node_id": "framework_spin_selling",
+      "titulo": "Framework SPIN Selling",
+      "fuente": "Traction - Gabriel Weinberg"
+    },
+    {
+      "node_id": "modelo_spin",
+      "titulo": "Las preguntas que abren una venta grande (método SPIN)",
       "fuente": "SPIN Selling - Neil Rackham"
     }
   ]

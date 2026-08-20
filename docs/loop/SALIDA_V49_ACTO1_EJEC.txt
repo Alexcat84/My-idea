@@ -1,0 +1,96 @@
+==============================================================================
+OP-U-01, TRAMO 1, P.12: EL ACTO 1, cuya lectura ya estaba hecha . MODO EJECUTAR
+plan: docs/loop/PLAN_V49_OPU01_ACTO1.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3501 vivos, 352 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive modelo_spin_preguntas . absorbe framework_spin_selling, modelo_spin
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 9 (anadidos 3) | condiciones 3 -> 5 (anadidas 2)
+  alias del superviviente: ['modelo_spin_secuencia_preguntas', 'framework_spin_selling', 'modelo_spin']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 17
+   cierre_satisfaccion_postventa                        nodos_siguientes  framework_spin_selling -> modelo_spin_preguntas
+   cierre_segun_complejidad_venta                       nodos_previos     modelo_spin -> modelo_spin_preguntas
+   cierre_segun_tamano_decision                         nodos_siguientes  framework_spin_selling -> modelo_spin_preguntas
+   cierre_sofisticacion_comprador                       nodos_siguientes  framework_spin_selling -> modelo_spin_preguntas
+   compromiso_linea_tiempo_cliente                      nodos_previos     framework_spin_selling -> modelo_spin_preguntas
+   compromiso_linea_tiempo_cliente                      nodos_siguientes  framework_spin_selling -> modelo_spin_preguntas
+   cuatro_etapas_llamada_de_ventas                      nodos_siguientes  modelo_spin -> modelo_spin_preguntas
+   diseno_embudo_ventas_cliente                         nodos_siguientes  framework_spin_selling -> modelo_spin_preguntas
+   escala_actitud_cierre                                nodos_previos     modelo_spin -> modelo_spin_preguntas
+   estrategia_ventas_enterprise                         nodos_siguientes  framework_spin_selling -> modelo_spin_preguntas
+   etapa_investigacion_ventas                           nodos_siguientes  modelo_spin -> modelo_spin_preguntas
+   planificacion_preguntas_implicacion                  nodos_previos     modelo_spin -> modelo_spin_preguntas
+   preguntas_implicacion                                nodos_previos     modelo_spin -> modelo_spin_preguntas
+   preguntas_need_payoff                                nodos_previos     modelo_spin -> modelo_spin_preguntas
+   preguntas_problema_2                                 nodos_previos     modelo_spin -> modelo_spin_preguntas
+   preguntas_situacion                                  nodos_previos     modelo_spin -> modelo_spin_preguntas
+   shock_and_awe_kit_bienvenida                         nodos_previos     framework_spin_selling -> modelo_spin_preguntas
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 3
+   kit_shock_and_awe_bienvenida                         nodos_previos     framework_spin_selling (registro historico)
+   preguntas_necesidad_beneficio                        nodos_previos     modelo_spin (registro historico)
+   tacticas_cierre_ventas                               nodos_previos     framework_spin_selling (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 1
+   escala_actitud_cierre                                nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 0
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 1004
+  duplicadas tras resolver DESPUES del tramo                          : 1002
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 2, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 2 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (11 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 framework_spin_selling                       paso         1  ya lo dice el PASO 1 del superviviente
+        Formular 1-2 preguntas de situación para calificar rápidamente al prospecto
+    1 framework_spin_selling                       paso         2  ya lo dice el PASO 2 del superviviente
+        Preguntar sobre problemas actuales sin abusar de estas preguntas
+    1 framework_spin_selling                       paso         3  ya lo dice el PASO 3 del superviviente
+        Usar preguntas de implicación para ampliar la percepción de urgencia del problema
+    1 framework_spin_selling                       paso         4  ya lo dice el PASO 4 del superviviente
+        Cerrar con preguntas de need-payoff que conecten el problema con los beneficios de tu solución
+    1 framework_spin_selling                       condicion    1  CONDICION 4 del superviviente
+        Cuando se realizan llamadas de ventas consultivas con prospectos B2B
+    1 modelo_spin                                  paso         1  PASO 7 del superviviente
+        Deja de entrenarte en distinguir preguntas abiertas de cerradas; ese no es el factor que marca la diferencia
+    1 modelo_spin                                  paso         2  ya lo dice el PASO 5 del superviviente
+        Diseña tus preguntas siguiendo el orden Situación, Problema, Implicación, Necesidad-beneficio
+    1 modelo_spin                                  paso         3  PASO 8 del superviviente
+        Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales
+    1 modelo_spin                                  paso         4  PASO 9 del superviviente
+        Revisa tus llamadas o tus notas para detectar en qué parte de la secuencia te trabas
+    1 modelo_spin                                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando quieras mejorar tus resultados en ventas grandes o complejas
+    1 modelo_spin                                  condicion    2  CONDICION 5 del superviviente
+        Si estás usando técnicas de cierre agresivas y no te están dando resultado
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 1
+  nodos implicados    : 3
+  nodos que MUEREN    : 2
+  piezas repartidas   : 11 (5 viajan enteras, 6 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 0
+
+ESCRITO. ficheros tocados: 19
+censo DESPUES: 3853 ficheros, 3499 vivos, 354 deprecados
+censo ANTES  : 3853 ficheros, 3501 vivos, 352 deprecados
+delta deprecados: +2 (esperado +2): OK

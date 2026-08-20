@@ -1,0 +1,92 @@
+==============================================================================
+LA FORMA QUE FABRICA COLISION, medida sobre TODOS los mixtos pendientes
+==============================================================================
+
+QUE SE MIDE: un acto mixto tiene la forma si algun miembro carga a la vez
+un par A y un par NO-A dentro del acto. Al fundir la parte A, el par A
+resuelve sobre el mismo par que el NO-A y nacen dos clases sobre un par.
+
+MIXTOS CON LA FORMA (fundir la parte A fabrica colision): 26
+   acto 1    tam 4  deriva_hacia_el_fallo, drift_hacia_el_fallo, drift_hacia_el_fallo_2, normalizacion_de_la_desviacion
+        deriva_hacia_el_fallo                                carga ['A', 'D']
+        drift_hacia_el_fallo                                 carga ['A', 'D']
+        normalizacion_de_la_desviacion                       carga ['A', 'D']
+   acto 2    tam 4  accion_correctiva_5, accion_correctiva_6, accion_correctiva_crosby, accion_correctiva_sistematica
+        accion_correctiva_5                                  carga ['A', 'D']
+        accion_correctiva_crosby                             carga ['A', 'D']
+        accion_correctiva_sistematica                        carga ['A', 'D']
+   acto 3    tam 4  consejo_calidad, consejo_calidad_2, consejo_de_calidad, consejo_de_calidad_3
+        consejo_de_calidad                                   carga ['A', 'D']
+        consejo_de_calidad_3                                 carga ['A', 'D']
+   acto 4    tam 3  mission_and_operations_planning, proceso_sop_mop, sop_colaborativo
+        mission_and_operations_planning                      carga ['A', 'B']
+        sop_colaborativo                                     carga ['A', 'B']
+   acto 5    tam 3  scorecard_de_seleccion_de_proyectos, scorecards_criterios_gate, scoring_model_scorecard
+        scorecard_de_seleccion_de_proyectos                  carga ['A', 'D']
+        scorecards_criterios_gate                            carga ['A', 'D']
+   acto 6    tam 3  criterios_equity_split, split_igual_vs_desigual, teoria_equidad_split_equity
+        criterios_equity_split                               carga ['A', 'D']
+        teoria_equidad_split_equity                          carga ['A', 'D']
+   acto 8    tam 3  regalos_estrategicos_personalizados, regalos_estrategicos_sorpresa, sorprender_cliente_estrategico
+        regalos_estrategicos_personalizados                  carga ['A', 'D']
+        sorprender_cliente_estrategico                       carga ['A', 'D']
+   acto 9    tam 3  founder_ceo_succession_process, identificacion_necesidad_sucesion_ceo, sucesion_iniciada_por_fundador
+        identificacion_necesidad_sucesion_ceo                carga ['A', 'B']
+        sucesion_iniciada_por_fundador                       carga ['A', 'B']
+   acto 10   tam 3  formacion_de_habitos_de_pensamiento, formacion_de_habitos_de_trabajo_creativo, gestion_de_habitos_mentales_para_pensar
+        formacion_de_habitos_de_trabajo_creativo             carga ['A', 'D']
+        gestion_de_habitos_mentales_para_pensar              carga ['A', 'D']
+   acto 11   tam 3  influence_map_organizacional, mapa_de_influencia, mapa_organizacional_influencia
+        mapa_de_influencia                                   carga ['A', 'B']
+        mapa_organizacional_influencia                       carga ['A', 'B']
+   acto 12   tam 3  decision_cuando_fundar, evaluacion_capacidades_fundador, tres_preguntas_carrera
+        evaluacion_capacidades_fundador                      carga ['A', 'D']
+        tres_preguntas_carrera                               carga ['A', 'D']
+   acto 13   tam 3  cofundar_con_amigos_familia_riesgos, riesgo_cofundadores_relacion_previa, seleccion_relaciones_cofundadores
+        cofundar_con_amigos_familia_riesgos                  carga ['A', 'D']
+        seleccion_relaciones_cofundadores                    carga ['A', 'D']
+   acto 14   tam 3  investigar_datos_cliente, personalizacion_investigacion_prospecto, seguimiento_informacion_cliente
+        investigar_datos_cliente                             carga ['A', 'B']
+        personalizacion_investigacion_prospecto              carga ['A', 'B']
+   acto 15   tam 3  customer_profile, customer_profile_value_map, value_proposition_canvas
+        customer_profile                                     carga ['A', 'D']
+        value_proposition_canvas                             carga ['A', 'D']
+   acto 16   tam 3  asignacion_persona_ia, ingenieria_de_prompts_efectiva, prompting_por_persona_ia
+        ingenieria_de_prompts_efectiva                       carga ['A', 'D']
+        prompting_por_persona_ia                             carga ['A', 'D']
+   acto 17   tam 3  warrant_pricing_venture_debt, warrants_deuda_convertible, warrants_financiamiento
+        warrant_pricing_venture_debt                         carga ['A', 'D']
+        warrants_financiamiento                              carga ['A', 'D']
+   acto 18   tam 3  calcular_peso_dimensional_antes_cotizar, conocer_limites_peso_tamano_courier, medir_paquete_redondeando_hacia_arriba
+        conocer_limites_peso_tamano_courier                  carga ['A', 'D']
+        medir_paquete_redondeando_hacia_arriba               carga ['A', 'D']
+   acto 19   tam 3  definir_limites_huella_carbono, huella_carbono_empresarial, medir_huella_carbono_corporativa
+        definir_limites_huella_carbono                       carga ['A', 'D']
+        medir_huella_carbono_corporativa                     carga ['A', 'D']
+   acto 20   tam 3  enfoque_paso_a_paso_investigacion_mercado, evaluacion_mercados_objetivo, screening_mercados_potenciales
+        evaluacion_mercados_objetivo                         carga ['A', 'D']
+        screening_mercados_potenciales                       carga ['A', 'D']
+   acto 21   tam 3  cinco_categorias_costos_franquicia, costos_preparacion_franquicia, estimacion_inversion_inicial_franquiciador
+        costos_preparacion_franquicia                        carga ['A', 'D']
+        estimacion_inversion_inicial_franquiciador           carga ['A', 'D']
+   acto 22   tam 3  contratar_abogado_especializado_franquicias, contratar_abogado_franquicias, eleccion_abogado_franquicias
+        contratar_abogado_franquicias                        carga ['A', 'D']
+        eleccion_abogado_franquicias                         carga ['A', 'D']
+   acto 23   tam 3  deteccion_franquicia_inadvertida, estructuras_combinadas_franquicia, prevenir_franquicias_inadvertidas
+        deteccion_franquicia_inadvertida                     carga ['A', 'D']
+        prevenir_franquicias_inadvertidas                    carga ['A', 'D']
+   acto 25   tam 3  critica_gestion_por_objetivos, eliminacion_gestion_por_objetivos_y_numeros, eliminar_metas_numericas_gerencia
+        eliminacion_gestion_por_objetivos_y_numeros          carga ['A', 'D']
+        eliminar_metas_numericas_gerencia                    carga ['A', 'D']
+   acto 27   tam 3  analisis_pareto, analisis_pareto_de_proveedores, principio_pareto
+        analisis_pareto_de_proveedores                       carga ['A', 'D']
+        principio_pareto                                     carga ['A', 'D']
+   acto 28   tam 3  error_proofing_servicio, mistake_proofing_poka_yoke_2, poka_yoke_a_prueba_de_errores
+        error_proofing_servicio                              carga ['A', 'D']
+        poka_yoke_a_prueba_de_errores                        carga ['A', 'D']
+   acto 29   tam 3  criterios_seleccion_proyectos_calidad, dmaic_fase_select, proceso_nominacion_seleccion
+        criterios_seleccion_proyectos_calidad                carga ['A', 'D']
+        dmaic_fase_select                                    carga ['A', 'D']
+
+MIXTOS SIN LA FORMA (cada miembro carga una sola clase): 1
+   acto 46   tam 2  metodologia_spin_selling, modelo_spin_preguntas

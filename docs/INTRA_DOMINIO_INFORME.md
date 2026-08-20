@@ -341,7 +341,7 @@ que la relectura las encuentre hechas.
 | la palanca frente a los inversionistas | **4** | 334, 394, 413 |
 | las cabezas de Customer Discovery | **4** | 269, 276, 291, 415 |
 | el modelo financiero del fin de la validacion | 3 | 371, 404 |
-| SPIN | 3 | 305, 401 |
+| SPIN | 3 | ~~305~~, 401 **[CORREGIDA el 19 ago 2026 (vuelta 49): el `305` paso de `A` a `D`. La colision la FABRICO la propia fusion de la parte A del acto 1 de `OP-U-01`, que depreco `modelo_spin` con alias a `modelo_spin_preguntas` y dejo a este puesto resolviendo sobre el mismo par que el `764`, que es `D`. Limpiada por `P.16` en el mismo acto, con la relectura conjunta escrita dentro de la razon del veredicto]** |
 
 > **La de innovacion es la mas grave despues de la del Stage-Gate**: **seis
 > nodos**, y **tres de sus ids son el mismo nombre con y sin preposiciones**
@@ -1693,7 +1693,7 @@ cierre en venta grande.**
 | pares posibles | **6** |
 | **en la cola** | **6**, o sea **todos** |
 | leidos | **5** |
-| clases | **A** (248), **A** (305), **A** (401), **D** (625), **D** (764) |
+| clases | **A** (248), ~~**A** (305)~~ **D** (305), **A** (401), **D** (625), **D** (764) **[CORREGIDA el 19 ago 2026 (vuelta 49): el `305` paso de `A` a `D`. La colision la FABRICO la propia fusion de la parte A del acto 1 de `OP-U-01`, que depreco `modelo_spin` con alias a `modelo_spin_preguntas` y dejo a este puesto resolviendo sobre el mismo par que el `764`, que es `D`. Limpiada por `P.16` en el mismo acto, con la relectura conjunta escrita dentro de la razon del veredicto]** |
 | **pendiente** | **UNO**, el puesto **856** |
 | solape con el racimo del cierre | **NINGUNO**, cero miembros compartidos |
 
@@ -8181,7 +8181,7 @@ leidos**, y los seis estaban en la cola.
 | miembros | **4**: `metodologia_spin_selling`, `framework_spin_selling`, `modelo_spin`, `modelo_spin_preguntas` |
 | pares posibles | **6** |
 | **leidos** | **6**, todos |
-| saldo | **4 A** (248, 305, 401, 856) y **2 D** (625, 764) |
+| saldo | ~~**4 A** (248, 305, 401, 856) y **2 D** (625, 764)~~ **3 A** (248, 401, 856) y **3 D** (305, 625, 764) **[CORREGIDA el 19 ago 2026 (vuelta 49): el `305` paso de `A` a `D`. La colision la FABRICO la propia fusion de la parte A del acto 1 de `OP-U-01`, que depreco `modelo_spin` con alias a `modelo_spin_preguntas` y dejo a este puesto resolviendo sobre el mismo par que el `764`, que es `D`. Limpiada por `P.16` en el mismo acto, con la relectura conjunta escrita dentro de la razon del veredicto]** |
 
 > **MEZCLADA COMPLETA, y por eso NO pide mesa: pide redactor.** La familia esta
 > cerrada, se sabe exactamente que repite y que no, y **no hay ninguna pregunta de
