@@ -1271,6 +1271,21 @@ habia escritos, **y la relectura movio el `B` DIRECTO porque sostuvo la `D` por 
 **El carril general dice que eso no fue una excepcion sino la regla: la LECTURA decide, no la
 direccion del arrastre.**
 
+**LAS DOS AMPLIACIONES DEL CARRIL, ADJUDICADAS Y REGISTRADAS EL 20 ago 2026** (vuelta 54,
+TAREA 1.2 del encargo; acta de la vuelta 53, preguntas 5 y 6). **Se adosan aqui, al carril que
+amplian, y NO reescriben la tabla de arriba: la tabla se queda entera.**
+
+| la forma que la tabla de arriba no cubria | que se hace | la figura |
+|---|---|---|
+| **CONDICION DE CONTEO O DE COBERTURA en un veredicto del filo** (el veredicto no afirma un texto: afirma una CUENTA, o pide contar antes de decidir) | **SE DESCARGA POR MEDICION ANTES DE FUNDIR**, con el instrumento y su salida CITADOS en la correccion. **Es carril de TEXTO EN SENTIDO AMPLIO**: la casilla de texto cubre TODA afirmacion verificable del veredicto, se lea en el nodo o se mida en el grafo, porque **la medicion es la lectura del grafo**. **POLITICA sigue siendo lo que pide decision de mesa, y sigue DECLARANDO el acto** | **EL `811` DE LA VUELTA 53**: su razon pedia contar la familia Coleman antes de decidir (*ya lleva cuatro nodos vistos y los pares se contradicen*). **La cuenta se corrio ANTES de fundir y dio COBERTURA 6 DE 6, CERO pares pendientes**, y contada no habia contradiccion |
+| **CUANDO MOVER UN SOLO VEREDICTO DEJA LA COLISION VIVA** | **LA RELECTURA MUEVE LOS DOS**, y **lo dice en LAS DOS correcciones con la razon vieja entera**. **La vara del carril es su proposito escrito: el censo de colisiones en CERO** (`P.16` y la guarda), **no la letra del singular**. El *CUAL se mueve* de la tabla de arriba presupone que mover uno basta; cuando no basta, **la relectura, que es el mismo organo, decide QUE se mueve, uno o los dos** | **EL PAR `811` CONTRA `1222` DE LA VUELTA 53**: los dos veredictos caian sobre el MISMO par resuelto, uno `B` DIRECTO y la otra `A` arrastrada. **Dejar uno en `B` y el otro en `D` deja la colision viva**, porque `B` contra `D` sigue siendo colision de clase. **Se movieron los dos** |
+
+**LAS DOS SON AMPLIACION Y NO EXCEPCION**, y se dice con la vara de cada una: la primera
+porque **la casilla de TEXTO ya cubria toda afirmacion verificable** y lo unico que faltaba era
+decirlo con esas palabras; la segunda porque **el proposito del carril es el censo en CERO**, y
+un carril que dejara la colision viva no cumpliria el suyo. **NINGUNA CREA DOCTRINA NUEVA**
+(acta de la vuelta 53, seccion 5, preguntas 5 y 6).
+
 **c) EL CRITERIO DEL MIXTO QUE QUEDA CONTENIDO TRAS LA FUSION, ADJUDICADO Y REGISTRADO** (acta
 de la vuelta 52, pregunta 1). **EL VEREDICTO DIRECTO MANDA.**
 
@@ -1446,3 +1461,44 @@ al cerrar son los actos 5, 6 y 7 de la nomina de hoy.
 > ningun nodo ni ningun veredicto, comprobado por las dos corridas propias que SI se hicieron y que
 > reproducen el cierre de la 52 al digito. **La columna de CIERRE esta RECOMPUTADA AL CIERRE**,
 > despues del ultimo movimiento.
+
+### LA NOTA DE LOS 41 ENLACES, ADOSADA AL CIERRE DE ESTA SECCION (20 ago 2026, vuelta 54, TAREA 1.4 del encargo)
+
+**El reporte de la vuelta 53 publico que el grafo GANA 41 enlaces y escribio que la resta exacta
+entre las 45 vistas y los 41 no la habia derivado y no la inventaba. El acta de la vuelta 53
+(seccion 3, punto 2) la derivo commit a commit. ESTA NOTA NO COPIA ESA DERIVACION: LA VUELVE A
+MEDIR**, con `python scripts/loop/vuelta54_41_enlaces.py`
+([`../loop/SALIDA_V54_41_ENLACES.txt`](../loop/SALIDA_V54_41_ENLACES.txt)), corrido el 20 ago
+2026 en la vuelta 54, **porque la regla 2 del `EJECUTOR` dice que un acta previa nunca es fuente
+de una cifra nueva: se cita como contraste. Las dos coinciden al digito.**
+
+| commit de la vuelta 53 | enlaces MEDIDOS | delta | vistas de la simetrizacion | instancias retiradas |
+|---|---:|---:|---:|---:|
+| `d88c42bb`, cierre de la vuelta 52 | **17.011** | | | |
+| `49ae6eef`, TAREA 1 | **17.011** | **+0** | 0 | 0 |
+| `cadc9977`, LOTE A | **17.023** | **+12** | **13** | **1** |
+| `04bd56de`, LOTE B | **17.030** | **+7** | **9** | **2** |
+| `90bb930c`, LOTE C | **17.052** | **+22** | **23** | **1** |
+| `be5d152b`, el cierre | **17.052** | **+0** | 0 | 0 |
+| **la vuelta entera** | | **+41** | **45** | **4** |
+
+**LOS TRES LOTES CALZAN UNO A UNO** (vistas menos retiros igual al delta medido: 13 menos 1 son
+12; 9 menos 2 son 7; 23 menos 1 son 22), **y eso es mas fino que la resta global**: no solo 45
+menos 4 son 41, sino que **cada lote cuadra por separado**. Las vistas se leen del
+`symmetrize_added` horneado en `dataset/metadata/phase1_run_log.json` de cada commit; los
+enlaces, con la vara de `vuelta31_estado.py` (nodos previos mas nodos siguientes sobre los 3.853
+ficheros, deprecados incluidos).
+
+**LAS CUATRO INSTANCIAS RETIRADAS, NOMBRADAS Y VERIFICADAS UNA A UNA** (el id absorbido estaba
+en el campo ANTES del lote y ya no esta DESPUES):
+
+| lote | el campo | el id absorbido que desaparece | especie | por que se retira |
+|---|---|---|---|---|
+| **A** | `warrant_pricing_venture_debt.nodos_previos` | `warrants_deuda_convertible` | **AUTO-ARISTA** | el absorbido redirige AL PROPIO NODO, y una arista a si mismo no se escribe |
+| **C** | `criterios_seleccion_proyectos_calidad.nodos_previos` | `proceso_nominacion_seleccion` | **AUTO-ARISTA** | igual: el absorbido redirige al propio nodo |
+| **B** | `elaboracion_fdd.nodos_previos` | `contratar_abogado_especializado_franquicias` | **COLAPSO DE DUPLICADA** | el superviviente `eleccion_abogado_franquicias` **YA ESTABA en el campo**, verificado, y las dos instancias colapsan en una |
+| **B** | `sistema_estable_causas_comunes.nodos_siguientes` | `critica_gestion_por_objetivos` | **COLAPSO DE DUPLICADA** | el superviviente `eliminar_metas_numericas_gerencia` **YA ESTABA en el campo**, verificado |
+
+**45 MENOS 4 SON 41, medido commit a commit y lote a lote.** **La frase del reporte de la vuelta
+53 (*`P.16` retiro por su lado duplicadas y dos auto-aristas*) queda CONFIRMADA y ahora con los
+cuatro nombres.**

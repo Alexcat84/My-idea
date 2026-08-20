@@ -415,9 +415,42 @@ def main():
         fallos.append("DUPLICADA NUEVA: %s en %s resuelve dos veces a %s" % (nid, campo, x))
     for nid, campo in nuevas_auto:
         fallos.append("AUTO-ARISTA NUEVA: %s en %s" % (nid, campo))
+    # CORRECCION DE ROTULO DECLARADA, 20 ago 2026 (vuelta 54, TAREA 1.3 del
+    # encargo; acta de la vuelta 53, seccion 3, punto 1). EL TEXTO VIEJO VA
+    # DELANTE ENTERO, porque una correccion que tapa lo que corrige no se
+    # puede auditar. Los dos rotulos decian:
+    #
+    #     print("  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): %d"
+    #           % len(dup0))
+    #     print("  duplicadas tras resolver DESPUES del tramo                          : %d"
+    #           % len(dup1))
+    #
+    # Y ESE ROTULO INVITA A LEER SU CIFRA COMO LA DE OP-S-12, QUE ES OTRA. El
+    # censo de aqui y el de scripts/plan/aristas_duplicadas_tras_resolver.py
+    # (el instrumento publicado de OP-S-12) NO CUENTAN LO MISMO:
+    #
+    #   - el de aqui resuelve alias SOLO de nodos VIVOS y EXCLUYE el destino
+    #     igual al propio nodo;
+    #   - el de OP-S-12 resuelve alias de TODOS los nodos y CUENTA el self.
+    #
+    # Por eso este midio 999 donde la cifra publicada de la vuelta 52 era
+    # 1.000, con la UNICA diferencia en el grupo (conciencia_calidad,
+    # nodos_siguientes, accion_correctiva_sistematica), que solo aparece
+    # resolviendo un alias de un nodo DEPRECADO. Medido por el auditor en el
+    # commit d88c42bb (acta de la vuelta 53, seccion 3, punto 1). NINGUNA
+    # CIFRA PUBLICADA ESTABA MAL Y NINGUNA SE TOCA.
+    #
+    # LA LOGICA NO SE CAMBIA, y se dice: lo que este censo mide es lo que la
+    # guarda necesita (las duplicadas NUEVAS que el propio tramo fabrica), y
+    # para eso los alias de nodos deprecados no cuentan. Lo que cambia es el
+    # ROTULO, para que su cifra no se lea como la de OP-S-12.
     print("  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): %d"
+          "   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA"
+          " aristas_duplicadas_tras_resolver.py]"
           % len(dup0))
     print("  duplicadas tras resolver DESPUES del tramo                          : %d"
+          "   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA"
+          " aristas_duplicadas_tras_resolver.py]"
           % len(dup1))
     print("guarda A, cero AUTO-ARISTAS nuevas             : %s (%d)"
           % ("OK" if not nuevas_auto else "ROJO", len(nuevas_auto)))

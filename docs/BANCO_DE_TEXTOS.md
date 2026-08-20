@@ -791,6 +791,50 @@ parte de la doctrina):
 > mutua) **es acto de tres y es POR ELEGIR**, segundo ejemplar de la especie tras
 > `accion_correctiva`.
 
+#### PRECISIÓN ADJUDICADA EL 20 ago 2026 (vuelta 54, TAREA 1.1 del encargo; acta de la vuelta 53, pregunta 1): **EL GANADOR POR DERECHO QUE ES CENTRO DE UNA ESTRELLA MUERE**
+
+**Nada de lo de arriba se tacha ni se corrige: esta precisión NO dice que el 9.3.1 estuviera
+mal. Dice dónde termina lo que legisla.**
+
+> **CUANDO EL GANADOR POR DERECHO DE SUS PARES `A` ES EL CENTRO DE UNA ESTRELLA CUYAS PUNTAS
+> SON `D` ENTRE SÍ, MANDA LA RECETA DE `P.12`: EL CENTRO NO ES VIABLE Y MUERE ABSORBIDO POR
+> EL VIABLE QUE EL CONTENIDO ELIJA.**
+
+**LAS PIEZAS, y ninguna es nueva:**
+
+| pieza | lo que aporta |
+|---|---|
+| **adjudicación 2 del acta de la vuelta 50** | **en la estrella el centro muere UNA vez**, absorbido por el viable que el contenido elija, y las puntas se leen por `P.12` contra ese superviviente. **No excluye a ningún centro por su historial de pares** |
+| **adjudicación 3 del acta de la vuelta 50** | el motivo de fondo: la fórmula *Sobrevive X* es **el cierre de una razón de PAR**, y el racimo, no el par, decide. **Lo escribe el propio archivo en el puesto 2.237** |
+| **acta de la vuelta 53, pregunta 1** | la adjudicación, por extensión citable y **sin doctrina nueva**: los tres actos NO se deshacen |
+
+**POR QUÉ NO HAY CONTRADICCIÓN.** El 9.3.1 fija al ganador **DE SUS PARES** para poder
+escribir la operación **cuando el acto se funde entero**, que es lo que hacen sus dos
+ejemplares (la regla kp y la ISO sectorial). **No legisla la estrella que deja un mixto
+fuera**, que es figura posterior y específica. **La frase *no hay lectura pendiente ni futura
+que pueda moverlo* sigue siendo cierta de lo que habla: ninguna LECTURA lo mueve. Lo que lo
+mueve no es una lectura, es la ARITMÉTICA de la receta.**
+
+**LOS TRES EJEMPLARES MEDIDOS, los tres con el centro muerto en la vuelta 53 y registrados en
+el registro del tramo de [`plan/03_FUSIONES.md`](plan/03_FUSIONES.md).** **Las clases, los
+nombres y el estado de cada centro se leyeron del archivo el 20 ago 2026 (vuelta 54) con
+corrida propia**, `python scripts/loop/vuelta54_ejemplares_estrella.py`
+([`loop/SALIDA_V54_EJEMPLARES_ESTRELLA.txt`](loop/SALIDA_V54_EJEMPLARES_ESTRELLA.txt)), **y no
+se copiaron de ningún acta ni de ningún reporte.** La columna de los pares dice la clase que
+cada par tenía **al abrir la vuelta 53** (commit `d88c42bb`), que es con la que se leyó:
+
+| acto | el centro, GANADOR POR DERECHO | sus pares `A` al abrir la 53 | qué le pasó |
+|---|---|---|---|
+| **el pareto** | `analisis_pareto` | **2.546 `A`** (*Sobrevive analisis_pareto*) y **2.551 `A`** (*Sobrevive analisis_pareto*). **No pierde ninguno** | **NO ES VIABLE y MUERE ABSORBIDO** por `analisis_pareto_de_proveedores`. Hoy `deprecado: true` |
+| **el poka yoke** | `mistake_proofing_poka_yoke_2` | **2.613 `A`** (*Sobrevive mistake_proofing_poka_yoke_2*) y **2.737 `A`**, que no nombra superviviente. **No pierde ninguno** | **NO ES VIABLE y MUERE ABSORBIDO** por `error_proofing_servicio`. Hoy `deprecado: true` |
+| **el dmaic select** | `proceso_nominacion_seleccion` | **2.627 `A`** (*Sobrevive proceso_nominacion_seleccion, el mas completo*) y **2.742 `A`**, que no nombra superviviente. **No pierde ninguno** | **NO ES VIABLE y MUERE ABSORBIDO** por `criterios_seleccion_proyectos_calidad`. Hoy `deprecado: true` |
+
+**LO QUE ESTA PRECISIÓN NO CAMBIA, dicho para que nadie lo lea de más:** el 9.3.1 sigue
+entero para lo suyo, **la prueba de contar solo los pares `A` sigue siendo la buena**, y un
+ganador por derecho que **no** es centro de estrella sigue teniendo **el superviviente
+fijado**. **Lo único que esta nota añade es la frontera: si el acto no se funde entero porque
+hay mixto fuera, la especie del 9.3.1 no decide quién sobrevive.**
+
 ---
 
 ### 9.3 Una dirección de fusión decidida sobre un par no sobrevive a su familia

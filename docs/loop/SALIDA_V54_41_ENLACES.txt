@@ -1,0 +1,68 @@
+==============================================================================
+LOS 41 ENLACES, RE-MEDIDOS COMMIT A COMMIT (vuelta 54, TAREA 1.4)
+==============================================================================
+
+--- 1. LOS ENLACES EN LOS SEIS COMMITS (vara de vuelta31_estado.py) ---
+
+  commit     que es                                      enlaces    delta
+  d88c42bb   cierre de la vuelta 52 (acta del auditor)     17011            (ficheros: 3853)
+  49ae6eef   vuelta 53, TAREA 1                            17011       +0   (ficheros: 3853)
+  cadc9977   vuelta 53, LOTE A                             17023      +12   (ficheros: 3853)
+  04bd56de   vuelta 53, LOTE B                             17030       +7   (ficheros: 3853)
+  90bb930c   vuelta 53, LOTE C                             17052      +22   (ficheros: 3853)
+  be5d152b   vuelta 53, el cierre                          17052       +0   (ficheros: 3853)
+
+  LO QUE EL GRAFO GANA EN LA VUELTA 53: +41 enlaces
+
+--- 2. LAS VISTAS DE LA SIMETRIZACION, del phase1_run_log de cada commit ---
+
+  d88c42bb   cierre de la vuelta 52 (acta del auditor)  vistas anadidas: 0
+  49ae6eef   vuelta 53, TAREA 1                         vistas anadidas: 0
+  cadc9977   vuelta 53, LOTE A                          vistas anadidas: 13
+  04bd56de   vuelta 53, LOTE B                          vistas anadidas: 9
+  90bb930c   vuelta 53, LOTE C                          vistas anadidas: 23
+  be5d152b   vuelta 53, el cierre                       vistas anadidas: 0
+
+  SUMA DE VISTAS DE LOS CINCO COMMITS DE LA VUELTA 53: 45
+
+--- 3. LAS CUATRO INSTANCIAS RETIRADAS, una a una ---
+
+  warrant_pricing_venture_debt.nodos_previos (AUTO-ARISTA, cadc9977)
+     el ABSORBIDO warrants_deuda_convertible estaba ANTES: True | esta DESPUES: False
+     el SUPERVIVIENTE warrant_pricing_venture_debt estaba ANTES: False | esta DESPUES: False
+     instancia RETIRADA: SI
+
+  criterios_seleccion_proyectos_calidad.nodos_previos (AUTO-ARISTA, 90bb930c)
+     el ABSORBIDO proceso_nominacion_seleccion estaba ANTES: True | esta DESPUES: False
+     el SUPERVIVIENTE criterios_seleccion_proyectos_calidad estaba ANTES: False | esta DESPUES: False
+     instancia RETIRADA: SI
+
+  elaboracion_fdd.nodos_previos (COLAPSO DE DUPLICADA, 04bd56de)
+     el ABSORBIDO contratar_abogado_especializado_franquicias estaba ANTES: True | esta DESPUES: False
+     el SUPERVIVIENTE eleccion_abogado_franquicias estaba ANTES: True | esta DESPUES: True
+     instancia RETIRADA: SI
+
+  sistema_estable_causas_comunes.nodos_siguientes (COLAPSO DE DUPLICADA, 04bd56de)
+     el ABSORBIDO critica_gestion_por_objetivos estaba ANTES: True | esta DESPUES: False
+     el SUPERVIVIENTE eliminar_metas_numericas_gerencia estaba ANTES: True | esta DESPUES: True
+     instancia RETIRADA: SI
+
+  INSTANCIAS RETIRADAS, contadas una a una: 4
+
+--- 4. LA CUENTA POR LOTE: vistas menos retiros contra el delta medido ---
+
+  commit     lote       vistas  retiros   esperado   medido
+  cadc9977   LOTE A         13        1        +12      +12   CALZA
+  04bd56de   LOTE B          9        2         +7       +7   CALZA
+  90bb930c   LOTE C         23        1        +22      +22   CALZA
+
+  LOTES QUE CALZAN: 3 de 3
+
+--- LA RESTA ---
+  vistas completadas por la simetrizacion : 45
+  instancias retiradas por la redireccion : 4
+  45 menos 4 son 41
+  ganancia MEDIDA de enlaces en la vuelta 53: +41
+  CALZA: SI
+
+FIN

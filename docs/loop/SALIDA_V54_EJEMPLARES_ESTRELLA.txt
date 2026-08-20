@@ -1,0 +1,54 @@
+==============================================================================
+LOS TRES EJEMPLARES DE LA PRECISION DE LA ESTRELLA (vuelta 54, TAREA 1.1)
+==============================================================================
+
+  clase ANTES = la del commit d88c42bb (cierre de la vuelta 52), que es con la
+  que la vuelta 53 leyo los tres actos. clase HOY = la del archivo vigente.
+
+------------------------------------------------------------------------------
+ACTO: el pareto   |   CENTRO: analisis_pareto
+------------------------------------------------------------------------------
+  puesto 2546   clase ANTES: A            clase HOY: A    contra analisis_pareto_de_proveedores
+     la letra cierra con: Sobrevive analisis_pareto
+  puesto 2551   clase ANTES: A            clase HOY: D    contra principio_pareto
+     la letra cierra con: Sobrevive analisis_pareto
+  puesto 3027   clase ANTES: D            clase HOY: D    contra pocos_vitales_muchos_utiles
+     la letra cierra con: (no nombra superviviente)
+
+  pares A al abrir la vuelta 53 : [2546, 2551] (son 2)
+  pares A que el centro PIERDE  : NINGUNO
+  GANADOR POR DERECHO de sus pares A (9.3.1 corregido, solo cuenta las A): SI
+  el CENTRO hoy       : analisis_pareto | deprecado: True
+  el SUPERVIVIENTE hoy: analisis_pareto_de_proveedores | deprecado: None | lleva el alias del centro: True
+
+------------------------------------------------------------------------------
+ACTO: el poka yoke   |   CENTRO: mistake_proofing_poka_yoke_2
+------------------------------------------------------------------------------
+  puesto 2613   clase ANTES: A            clase HOY: D    contra poka_yoke_a_prueba_de_errores
+     la letra cierra con: Sobrevive mistake_proofing_poka_yoke_2
+  puesto 2737   clase ANTES: A            clase HOY: A    contra error_proofing_servicio
+     la letra cierra con: (no nombra superviviente)
+
+  pares A al abrir la vuelta 53 : [2613, 2737] (son 2)
+  pares A que el centro PIERDE  : NINGUNO
+  GANADOR POR DERECHO de sus pares A (9.3.1 corregido, solo cuenta las A): SI
+  el CENTRO hoy       : mistake_proofing_poka_yoke_2 | deprecado: True
+  el SUPERVIVIENTE hoy: error_proofing_servicio | deprecado: None | lleva el alias del centro: True
+
+------------------------------------------------------------------------------
+ACTO: el dmaic select   |   CENTRO: proceso_nominacion_seleccion
+------------------------------------------------------------------------------
+  puesto 2627   clase ANTES: A            clase HOY: A    contra criterios_seleccion_proyectos_calidad
+     la letra cierra con: Sobrevive proceso_nominacion_seleccion
+  puesto 2742   clase ANTES: A            clase HOY: D    contra dmaic_fase_select
+     la letra cierra con: (no nombra superviviente)
+
+  pares A al abrir la vuelta 53 : [2627, 2742] (son 2)
+  pares A que el centro PIERDE  : NINGUNO
+  GANADOR POR DERECHO de sus pares A (9.3.1 corregido, solo cuenta las A): SI
+  el CENTRO hoy       : proceso_nominacion_seleccion | deprecado: True
+  el SUPERVIVIENTE hoy: criterios_seleccion_proyectos_calidad | deprecado: None | lleva el alias del centro: True
+
+==============================================================================
+LOS TRES CENTROS MUERTOS Y LOS TRES SUPERVIVIENTES VIVOS: SI
+FIN
