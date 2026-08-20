@@ -2202,3 +2202,145 @@ nodo** ([`../loop/SALIDA_V56_COLISIONES_ESPERADAS_TRAMO3.txt`](../loop/SALIDA_V5
 > DISTINTOS**, y el del **acto 7** cae sobre uno que YA EXISTIA, el de `reglas_brainstorming`, que
 > hoy recoge **CUATRO** veredictos crudos distintos resueltos al mismo nodo. **Es el mismo acto 7
 > del ajeno bajo el resolutor**, y por eso la cuenta baja en uno.
+
+
+---
+
+## `OP-U-01`, TRAMO 4: EL REGISTRO DEL CIERRE (20 ago 2026, vuelta 57)
+
+**LA VARA QUE FIJA EL TRAMO ES LA MISMA DESDE LA VUELTA 48**, escrita en la cabecera del registro
+del tramo 1: *los CINCUENTA primeros actos CERRADOS de la NOMINA RE-MEDIDA AL ABRIRLO*. Aqui, por
+primera vez desde el tramo 2, **LAS DOS LECTURAS CALZAN**, mismo conjunto y mismo orden, sin
+ninguna divergencia que diagnosticar
+([`../loop/SALIDA_V57_TRAMO4_NOMINA.txt`](../loop/SALIDA_V57_TRAMO4_NOMINA.txt)).
+
+> **LA LECTURA B DE ESTE TRAMO YA NO ES UN BLOQUE FIJO DE LA NOMINA DE LA 48, y el motivo esta
+> MEDIDO por el propio abridor:** el tramo 3 realmente abierto NO es el bloque 101 a 150, porque un
+> `CERRADO` nacido despues se colo y el acto del puesto 150 quedo desplazado. Tomar el bloque 151 a
+> 200 dejaria ese acto **fuera de las DOS lecturas**, y la comprobacion se volveria ciega justo
+> donde la vuelta anterior encontro algo. La lectura B es **la nomina de la 48 EN SU ORDEN,
+> saltando los tramos FIJADOS**.
+
+**GUARDA DEL PREFIJO:** los vivos de los tramos 1, 2 y 3 son **19** y ocupan los puestos
+**1 a 19 sin huecos**, medido y no tecleado. **El tramo 4 son los puestos 20 a
+69 de hoy.** **Guarda de los CUATRO AJENOS: VERDE POR LOS DOS CAMINOS**, el literal y el del
+resolutor. **Solape con los tramos anteriores: CERO.**
+
+**LAS COLISIONES ESPERADAS DEL TRAMO ENTERO, medidas ANTES de tocar un nodo** sobre el archivo
+entero y por par resuelto
+([`../loop/SALIDA_V57_COLISIONES_ESPERADAS_TRAMO4.txt`](../loop/SALIDA_V57_COLISIONES_ESPERADAS_TRAMO4.txt)):
+**100 combinaciones simuladas y 0 que fabriquen colision.** Ni una. **Por eso esta
+vuelta NO volteo ningun veredicto y el marcador queda identico al abrir y al cerrar.**
+
+### EL ESTADO, MEDIDO AL ABRIR Y RECOMPUTADO AL CERRAR
+
+| | **apertura** | **cierre, RECOMPUTADO** |
+|---|---:|---:|
+| marcador `A` / `B` / `C` / `D` | 551 / 72 / 5 / 2760 | **551 / 72 / 5 / 2760** |
+| grafo: vivos / deprecados / enlaces | 3385 / 468 / 17290 | **3341 / 512 / 17369** |
+| retrato: colapsos / pares distintos | 164 / 387 | **208 / 343** |
+| actos (componentes) / `CERRADOS` | 193 / 140 | **149 / 96** |
+| actos del tramo 4 fundidos / vivos | 0 / 50 | **44 / 6, los 6 DECLARADOS** |
+
+### EL REPARTO, TALLADO DE LOS PLANES SELLADOS
+
+**Ninguna de estas tablas esta tecleada:** salen enteras de
+`python scripts/loop/vuelta57_tallar_planes.py`
+([`../loop/SALIDA_V57_TALLAR_PLANES.txt`](../loop/SALIDA_V57_TALLAR_PLANES.txt)), que las cuenta de
+los `PLAN_V57_*.json` **SELLADOS** y **cae en ROJO con el acto nombrado si un motivo no encaja en
+ninguna forma conocida**.
+
+| lote | actos | fundidos | mueren | piezas | enteras | ya dichas | de `INCISO` | perdidas nombradas |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| **A** | 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 16, 17 | **14** | **14** | **74** | 16 | 36 | **22** | **2** |
+| **B** | 18, 19, 20, 21, 22, 23, 26, 27, 28, 29, 30, 32, 33, 34 | **14** | **14** | **78** | 25 | 28 | **25** | **1** |
+| **C** | 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 | **16** | **16** | **93** | 27 | 41 | **25** | **0** |
+| **los tres** | | **44** | **44** | **245** | **68** | **105** | **72** | **3** |
+
+| la forma, leida del motivo sellado | cuantos | los actos |
+|---|---:|---|
+| **UNA SOLA VARA de contenido no empatada, y BASTA** | **18** | 3, 6, 8, 10, 16, 18, 21, 23, 29, 30, 33, 35, 37, 40, 44, 46, 48, 49 |
+| **TODAS LAS VARAS de contenido de acuerdo** | **15** | 2, 4, 5, 7, 9, 12, 15, 17, 19, 22, 26, 27, 34, 36, 39 |
+| **LA PIEZA DECLARADA GANA A UN CONTEO de contenido** | **4** | 41, 45, 47, 50 |
+| **LA PUERTA SOBREVIVE, con el choque registrado** | **2** | 20, 38 |
+| **LOS CONTEOS EMPATAN y la PIEZA DECLARADA decide** | **2** | 28, 42 |
+| **EL CONTENIDO EMPATA y EL CABLEADO DECIDE SOLO** | **1** | 1 |
+| **LA PUERTA SOBREVIVE y los conteos concuerdan, contra la razon declarada** | **1** | 43 |
+| **LOS TRES CONTEOS EMPATAN y decide la pieza declarada POR CANTIDAD** | **1** | 32 |
+| **suma** | **44** | |
+
+| acto | lote | sobrevive | absorbe | piezas | enteras | ya dichas | `INCISO` |
+|---:|:---:|---|---|---:|---:|---:|---:|
+| **1** | A | `crecimiento_ingresos_verdes` | `generacion_ingresos_verdes` | 6 | 1 | 2 | 3 |
+| **2** | A | `critica_del_pib_como_metrica_de_progreso` | `critica_al_pib_como_metrica` | 4 | 0 | 4 | 0 |
+| **3** | A | `manejo_de_hibridos_monstruosos` | `hibridos_monstruosos` | 5 | 2 | 2 | 1 |
+| **4** | A | `vision_alineacion_sostenibilidad` | `liderazgo_ceo_sostenibilidad` | 5 | 1 | 3 | 1 |
+| **5** | A | `incentivos_reconocimiento_sostenibilidad` | `accountability_incentivos` | 6 | 2 | 1 | 3 |
+| **6** | A | `menos_malo_vs_bueno` | `ser_menos_malo_vs_ser_bueno` | 5 | 2 | 2 | 1 |
+| **7** | A | `diseno_mensaje_verde` | `mensajeria_creativa_positiva` | 4 | 1 | 0 | 3 |
+| **8** | A | `unirse_organizacion_rsc_ambiental` | `unirse_grupo_lideres_climaticos` | 5 | 0 | 2 | 3 |
+| **9** | A | `compra_offsets_carbono` | `neutralidad_carbono` | 5 | 1 | 2 | 2 |
+| **10** | A | `eco_efectividad_2` | `eco_efectividad_re_evolucion_industrial` | 6 | 2 | 2 | 2 |
+| **12** | A | `eco_eficiencia` | `eco_eficiencia_costos` | 6 | 1 | 3 | 2 |
+| **15** | A | `export_administration_regulations` | `regulaciones_exportacion_ear` | 6 | 1 | 5 | 0 |
+| **16** | A | `seguro_exportacion` | `seguro_de_carga_transporte` | 6 | 2 | 3 | 1 |
+| **17** | A | `incoterms_reglas_comerciales_internacionales` | `terminos_de_venta_incoterms` | 5 | 0 | 5 | 0 |
+| **18** | B | `certificado_de_origen_tratados_libre_comercio` | `nafta_free_trade_agreements` | 6 | 0 | 2 | 4 |
+| **19** | B | `uso_intermediarios_exportacion` | `intermediarios_exportacion` | 5 | 1 | 1 | 3 |
+| **20** | B | `seleccion_canales_distribucion` | `seleccion_canales_exportacion` | 6 | 3 | 1 | 2 |
+| **21** | B | `ecosistema_global_emprendimiento_gee` | `recursos_apoyo_pymes_sba` | 6 | 2 | 4 | 0 |
+| **22** | B | `letra_de_cambio_bill_of_exchange` | `documentary_collections` | 6 | 3 | 3 | 0 |
+| **23** | B | `seleccion_de_metodo_de_pago` | `prevencion_problemas_de_pago` | 6 | 2 | 1 | 3 |
+| **26** | B | `uso_del_us_commercial_service` | `consejos_distrito_exportacion_dec` | 4 | 0 | 2 | 2 |
+| **27** | B | `preparar_fdd` | `elaboracion_fdd` | 5 | 3 | 1 | 1 |
+| **28** | B | `franquicia_mas_crecimiento_corporativo_hibrido` | `estrategia_multicanal_expansion` | 6 | 2 | 3 | 1 |
+| **29** | B | `proceso_llamada_inicial_venta` | `proceso_primera_llamada` | 8 | 1 | 5 | 2 |
+| **30** | B | `sitio_web_franquicia` | `sitio_web_captura_leads` | 4 | 2 | 0 | 2 |
+| **32** | B | `referidos_franquiciados_existentes` | `programa_de_referidos_de_franquiciados` | 7 | 2 | 3 | 2 |
+| **33** | B | `motivated_management_franquiciado` | `mito_control_calidad_corporativo` | 5 | 3 | 1 | 1 |
+| **34** | B | `desarrollar_manual_operaciones` | `confidencialidad_manual_operaciones` | 4 | 1 | 1 | 2 |
+| **35** | C | `ferias_comerciales_franquicia` | `marketing_en_ferias_comerciales_de_franquicias` | 7 | 2 | 1 | 4 |
+| **36** | C | `mix_ubicaciones_corporativas_franquicia` | `combinar_crecimiento_corporativo_y_franquicia` | 6 | 1 | 1 | 4 |
+| **37** | C | `rutas_salida_planificacion_emergencias` | `rutas_de_salida_y_puertas_de_emergencia` | 7 | 2 | 3 | 2 |
+| **38** | C | `responsabilidad_prospectiva` | `rendicion_cuentas_prospectiva` | 6 | 4 | 2 | 0 |
+| **39** | C | `capacitacion_educacion_seguridad` | `capacitacion_conciencia_programa` | 6 | 1 | 4 | 1 |
+| **40** | C | `confusion_de_modos_automatizacion` | `confusion_modos_automatizacion` | 5 | 0 | 3 | 2 |
+| **41** | C | `clasificacion_sistemas_por_nivel_seguridad` | `niveles_de_madurez_de_seguridad` | 6 | 2 | 3 | 1 |
+| **42** | C | `accident_proneness_fallacy` | `declive_teoria_manzana_podrida` | 5 | 1 | 2 | 2 |
+| **43** | C | `cultura_justa` | `cultura_justa_organizacional` | 6 | 2 | 3 | 1 |
+| **44** | C | `vulnerabilidad_instalacion` | `omisiones_en_mantenimiento` | 5 | 0 | 2 | 3 |
+| **45** | C | `clasificacion_riesgos_por_dominio` | `areas_riesgo_primario` | 7 | 2 | 5 | 0 |
+| **46** | C | `evitar_perdida_situacion_awareness` | `critica_perdida_de_conciencia_situacional` | 6 | 1 | 5 | 0 |
+| **47** | C | `sesgo_retrospectivo_hindsight_2` | `sesgo_retrospectivo_hindsight` | 5 | 3 | 1 | 1 |
+| **48** | C | `limite_busqueda_causas_pendulo` | `reglas_parada_investigacion_accidentes` | 5 | 2 | 3 | 0 |
+| **49** | C | `condiciones_latentes_largo_plazo` | `caso_descarrilamiento_nakina` | 4 | 2 | 1 | 1 |
+| **50** | C | `cultura_de_aprendizaje` | `ingenieria_cultura_aprendizaje` | 7 | 2 | 2 | 3 |
+
+| acto | lote | sus miembros | especie | se acumula para |
+|---:|:---:|---|---|---|
+| **11** | A | `disruptores_endocrinos_y_salud_industrial`, `quimicos_toxicos_en_diseno` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA. Y con un dato que la propia razon aporta y que conviene que la mesa tenga delante: la pieza de disruptores_endocrinos_y_salud_industrial que la razon llama LA UNICA REGLA PRECAUTORIA DEL CATALOGO (no basta con quitar lo que se sabe malo, hay que desconfiar de lo que nadie ha mirado) no tiene equivalente en ningun otro nodo del par. Un empate de conteos que pone en riesgo una regla unica del catalogo es el caso que hace visible el pendiente de doctrina 1 desde otro angulo que el del acto 45 de la vuelta 56. |
+| **13** | A | `desperdicio_es_alimento`, `metabolismo_biologico_y_tecnico` | **CONTEOS QUE CHOCAN Y LA PIEZA DECLARADA NO DESEMPATA** | LA MESA. Con un dato de familia: los dos nodos son el eje del que cuelga media seccion del libro (el paso 5 de metabolismo_biologico_y_tecnico nombra el upcycling sobre el downcycling y el paso 6 de desperdicio_es_alimento cambia el MODELO DE NEGOCIO en vez del producto), y ninguno de los dos es la madre del otro. Es el segundo ejemplar de conteos que chocan sin pieza que desempate, y el primero fuera del dominio core. |
+| **14** | A | `carta_de_credito_letter_of_credit`, `letters_of_credit` | **CONTEOS QUE CHOCAN Y LA PIEZA DECLARADA NO DESEMPATA** | LA MESA. Y con una observacion medida que la mesa deberia tener delante porque no es de conteo: los dos nodos cubren ETAPAS DISTINTAS del mismo tramite, uno la negociacion previa a que la carta exista y el otro la revision de la carta ya recibida, y la razon lo dice con esas palabras. Es el PRIMER PAR DEL DOMINIO DE EXPORTACION que entra a la mesa, y entra por la misma puerta por la que entro el ambiental. |
+| **24** | B | `barreras_comerciales_no_arancelarias`, `cumplimiento_acuerdos_comerciales_tanc` | **EMPATE SIN VARA: NI EL CONTENIDO NI EL CABLEADO SEPARAN** | LA MESA. Y con el dato que la propia razon subraya y que hace este empate distinto de los demas: LAS DOS PIEZAS PROPIAS SON LAS DOS RESPUESTAS OPUESTAS AL MISMO PROBLEMA. Un nodo termina CEDIENDO ante la barrera (ajustar el producto) y el otro INSISTIENDO (dar seguimiento hasta que se resuelva), y la razon escribe que la fusion tiene que conservar las dos porque son las dos salidas legitimas. Un empate cuyas dos mitades son opuestas no se rompe eligiendo la mas larga, y por eso este ejemplar merece llegar a la mesa con esa frase delante. |
+| **25** | B | `licenciamiento_tecnologico`, `proteccion_propiedad_intelectual_internacional` | **LOS DOS MIEMBROS SON PUERTA: NO HAY ABSORBIDO POSIBLE** | LA MESA, Y CON UNA PREGUNTA QUE NO ES DE PAR SINO DE CATALOGO: que se hace con un acto CERRADO cuyos DOS miembros son puertas. La vara del acta 54 pregunta 1 esta escrita para el acto con UNA puerta y no dice nada de este caso. Hay al menos dos salidas imaginables y ninguna esta escrita, asi que NO se elige aqui: fundir moviendo antes el puente o la semilla al superviviente, o dejar el par como enlace permanente. Va marcado como PENDIENTE DE DOCTRINA en el reporte, con el aviso de que el tramo 4 lo destapa pero no lo inventa: la figura estaba esperando desde que existen las puertas. |
+| **31** | B | `comprender_definicion_legal_franquicia`, `marco_name_system_fee` | **CONTEOS QUE CHOCAN Y LA PIEZA DECLARADA NO DESEMPATA** | LA MESA. Con un dato que la razon aporta y que a la mesa le sirve para no leer este empate como los otros: la unica diferencia real entre los dos nodos ES EL MODO, uno pregunta si YA se es franquicia y el otro si se QUIERE serlo, y la razon deja escrito que la clase se decide leyendo los pasos y no el modo. Es el TERCER ejemplar de conteos que chocan de este tramo, y el primero en el que lo que chocan son cuatro contra cinco pasos y tres contra dos condiciones sobre un test de tres elementos identico. |
+| **suma** | | **6 declarados** | | |
+
+### LAS PERDIDAS NOMBRADAS
+
+**Talladas de los planes sellados** con
+`python scripts/loop/vuelta56_tallar_perdidas_v55.py --vuelta 57 --lotes A,B,C`
+([`../loop/SALIDA_V57_TALLAR_PERDIDAS.txt`](../loop/SALIDA_V57_TALLAR_PERDIDAS.txt)), que **lee la
+especie del propio plan y no tiene rama por defecto**. Son **3, LAS TRES DE CONDICIONES**, y
+las tres por la misma causa heredada: **el `INCISO` de condiciones no existe en el instrumento**.
+
+| acto | lote | el nodo que muere | **ESPECIE** | por que se perdio | la frase del plan sellado que lo dice |
+|---:|:---:|---|---|---|---|
+| **12** | A | `eco_eficiencia_costos` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 acota el disparador a UN CONTEXTO DE RECESION ECONOMICA y la condicion 1 del superviviente solo dice buscar reducir costos operativos; el INCISO para condiciones no existe en el instrumento (pendiente de doctrina heredado) y por eso la perdida se nombra en vez de repararse* |
+| **16** | A | `seguro_de_carga_transporte` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 dispara ante CUALQUIER envio internacional que necesite definir cobertura de riesgos de transporte, y la condicion 1 del superviviente acota a MERCANCIA DE ALTO VALOR; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **23** | B | `prevencion_problemas_de_pago` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 dispara con compradores nuevos O RECURRENTES, y la condicion 2 del superviviente solo habla del comprador DESCONOCIDO O CON POCO HISTORIAL; el recurrente que ya tiene historial se queda fuera* |
+| **suma** | | | **3 DE CONDICIONES** | | |
+
+> **UNA CIFRA QUE CONVIENE DEJAR DICHA PORQUE ES LA QUE MIDE EL REPARTO:** de las **245**
+> piezas repartidas en los tres lotes, **3** se pierden. El resto viaja entera, esta ya dicha
+> en el superviviente, o se salva de `INCISO` adosado.

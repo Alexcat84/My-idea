@@ -1,0 +1,20 @@
+==============================================================================
+LAS PERDIDAS NOMBRADAS DE LA VUELTA 57, TALLADAS DE LOS PLANES SELLADOS
+==============================================================================
+
+  planes leidos       : PLAN_V57_OPU01_LOTE_A.json, PLAN_V57_OPU01_LOTE_B.json, PLAN_V57_OPU01_LOTE_C.json
+  perdidas encontradas: 3
+  por especie         : {'DE CONDICIONES': 3}
+
+--- TABLA: LAS PERDIDAS NOMBRADAS DE LA VUELTA 57, CON SU ESPECIE ---
+
+| acto | lote | el nodo que muere | **ESPECIE** | por que se perdio | la frase del plan sellado que lo dice |
+|---:|:---:|---|---|---|---|
+| **12** | A | `eco_eficiencia_costos` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 acota el disparador a UN CONTEXTO DE RECESION ECONOMICA y la condicion 1 del superviviente solo dice buscar reducir costos operativos; el INCISO para condiciones no existe en el instrumento (pendiente de doctrina heredado) y por eso la perdida se nombra en vez de repararse* |
+| **16** | A | `seguro_de_carga_transporte` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 dispara ante CUALQUIER envio internacional que necesite definir cobertura de riesgos de transporte, y la condicion 1 del superviviente acota a MERCANCIA DE ALTO VALOR; el INCISO para condiciones no existe en el instrumento y por eso la perdida se nombra* |
+| **23** | B | `prevencion_problemas_de_pago` | **DE CONDICIONES** | el `INCISO` de condiciones no existe en el instrumento | *PERDIDA NOMBRADA: su condicion 1 dispara con compradores nuevos O RECURRENTES, y la condicion 2 del superviviente solo habla del comprador DESCONOCIDO O CON POCO HISTORIAL; el recurrente que ya tiene historial se queda fuera* |
+| **suma** | | | **3 DE CONDICIONES** | | |
+
+  actos con perdida: 3 | de condiciones: 3 | de parametro de paso: 0
+
+FIN
