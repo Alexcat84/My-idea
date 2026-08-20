@@ -1,0 +1,467 @@
+==============================================================================
+OP-U-01, TRAMO 4, LOTE A DE LA VUELTA 57: LOS DIECISIETE PRIMEROS ACTOS DEL TRAMO EN SU ORDEN IMPRESO (1 a 17), apartando el 11 por EMPATE SIN VARA y el 13 y el 14 por CONTEOS QUE CHOCAN SIN PIEZA QUE DESEMPATE. Lo encabeza EL ACTO 1, que es el acto que la vuelta 56 dejo DESPLAZADO al tramo siguiente y nombrado en su reporte . MODO EJECUTAR
+plan: docs/loop/PLAN_V57_OPU01_LOTE_A.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3385 vivos, 468 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 1 . sobrevive crecimiento_ingresos_verdes . absorbe generacion_ingresos_verdes
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 3
+     del paso 1 de generacion_ingresos_verdes al PASO 1 del superviviente
+        inciso VERBATIM: 'nichos de mercado desatendidos'
+        nexo (lo unico de cosecha propia): ', incluidos los '
+        paso resultante: Identifica las necesidades no satisfechas de tus clientes relacionadas con eficiencia y sostenibilidad, incluidos los nichos de mercado desatendidos
+     del paso 2 de generacion_ingresos_verdes al PASO 2 del superviviente
+        inciso VERBATIM: 'sin sacrificar precio ni desempeño'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Rediseña o desarrolla tus líneas de producto para que tengan un menor impacto ambiental medible, y sin sacrificar precio ni desempeño, con ejemplos como el modelo EcoLogical de CardPak, Green Works de Clorox
+     del paso 4 de generacion_ingresos_verdes al PASO 2 del superviviente
+        inciso VERBATIM: 'modelo EcoLogical de CardPak, Green Works de Clorox'
+        nexo (lo unico de cosecha propia): ', con ejemplos como el '
+        paso resultante: Rediseña o desarrolla tus líneas de producto para que tengan un menor impacto ambiental medible, y sin sacrificar precio ni desempeño, con ejemplos como el modelo EcoLogical de CardPak, Green Works de Clorox
+  alias del superviviente: ['generacion_ingresos_verdes']
+
+------------------------------------------------------------------------------
+ACTO 2 . sobrevive critica_del_pib_como_metrica_de_progreso . absorbe critica_al_pib_como_metrica
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['pib_como_medida_erronea_de_progreso', 'critica_al_pib_como_metrica']
+
+------------------------------------------------------------------------------
+ACTO 3 . sobrevive manejo_de_hibridos_monstruosos . absorbe hibridos_monstruosos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de hibridos_monstruosos al PASO 2 del superviviente
+        inciso VERBATIM: 'mono-materiales'
+        nexo (lo unico de cosecha propia): ', o pasar a '
+        paso resultante: Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica, o pasar a mono-materiales
+  alias del superviviente: ['hibridos_monstruosos']
+
+------------------------------------------------------------------------------
+ACTO 4 . sobrevive vision_alineacion_sostenibilidad . absorbe liderazgo_ceo_sostenibilidad
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 1 de liderazgo_ceo_sostenibilidad al PASO 2 del superviviente
+        inciso VERBATIM: 'públicamente'
+        nexo (lo unico de cosecha propia): ', y articulala '
+        paso resultante: Redacta una declaración de visión de sostenibilidad clara y fácil de comunicar, y articulala públicamente
+  alias del superviviente: ['vision_clara_sostenibilidad', 'liderazgo_ceo_sostenibilidad']
+
+------------------------------------------------------------------------------
+ACTO 5 . sobrevive incentivos_reconocimiento_sostenibilidad . absorbe accountability_incentivos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 7 (anadidos 1) | condiciones 3 -> 4 (anadidas 1)
+  INCISOS ADOSADOS: 3
+     del paso 2 de accountability_incentivos al PASO 5 del superviviente
+        inciso VERBATIM: 'bonos y promociones'
+        nexo (lo unico de cosecha propia): ', incluidos '
+        paso resultante: Vincula el desempeño ambiental a la compensación o al presupuesto que asignas, incluidos bonos y promociones
+     del paso 3 de accountability_incentivos al PASO 1 del superviviente
+        inciso VERBATIM: 'premios de reconocimiento anual'
+        nexo (lo unico de cosecha propia): ', por ejemplo '
+        paso resultante: Establece un sistema de reconocimiento público regular para quienes logren avances en sostenibilidad, por ejemplo premios de reconocimiento anual
+     del paso 4 de accountability_incentivos al PASO 3 del superviviente
+        inciso VERBATIM: 'reuniones de staff y sitios web corporativos'
+        nexo (lo unico de cosecha propia): ', en '
+        paso resultante: Publica datos de desempeño ambiental de forma transparente y accesible, en tiempo real si es posible, en reuniones de staff y sitios web corporativos
+  alias del superviviente: ['incentivar_reconocer_recompensar', 'accountability_incentivos']
+
+------------------------------------------------------------------------------
+ACTO 6 . sobrevive menos_malo_vs_bueno . absorbe ser_menos_malo_vs_ser_bueno
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 5 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 2 de ser_menos_malo_vs_ser_bueno al PASO 3 del superviviente
+        inciso VERBATIM: 'al menos una meta ambiental'
+        nexo (lo unico de cosecha propia): ', empezando por '
+        paso resultante: Redefinir los objetivos del proyecto desde 'reducir impacto negativo' hacia 'generar impacto positivo', empezando por al menos una meta ambiental
+  alias del superviviente: ['ser_menos_malo_vs_ser_bueno']
+
+------------------------------------------------------------------------------
+ACTO 7 . sobrevive diseno_mensaje_verde . absorbe mensajeria_creativa_positiva
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 5 (anadidos 0) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 3
+     del paso 1 de mensajeria_creativa_positiva al PASO 4 del superviviente
+        inciso VERBATIM: 'humor o historias atractivas'
+        nexo (lo unico de cosecha propia): ', con '
+        paso resultante: Usar tono creativo, positivo y práctico en lugar de culpabilizador, con humor o historias atractivas, apoyandote en conceptos pragmáticos como innovación o progreso
+     del paso 2 de mensajeria_creativa_positiva al PASO 5 del superviviente
+        inciso VERBATIM: 'ahorro, calidad de vida'
+        nexo (lo unico de cosecha propia): ', del tipo '
+        paso resultante: Enfocar beneficios locales y tangibles en vez de abstracciones globales, del tipo ahorro, calidad de vida
+     del paso 3 de mensajeria_creativa_positiva al PASO 4 del superviviente
+        inciso VERBATIM: 'conceptos pragmáticos como innovación o progreso'
+        nexo (lo unico de cosecha propia): ', apoyandote en '
+        paso resultante: Usar tono creativo, positivo y práctico en lugar de culpabilizador, con humor o historias atractivas, apoyandote en conceptos pragmáticos como innovación o progreso
+  alias del superviviente: ['mensajeria_creativa_positiva']
+
+------------------------------------------------------------------------------
+ACTO 8 . sobrevive unirse_organizacion_rsc_ambiental . absorbe unirse_grupo_lideres_climaticos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 4 -> 4 (anadidos 0) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 3
+     del paso 1 de unirse_grupo_lideres_climaticos al PASO 1 del superviviente
+        inciso VERBATIM: 'ONGs o iniciativas'
+        nexo (lo unico de cosecha propia): ', incluidas '
+        paso resultante: Investigar organizaciones de RSC ambiental relevantes para el sector de la empresa, incluidas ONGs o iniciativas
+     del paso 2 de unirse_grupo_lideres_climaticos al PASO 2 del superviviente
+        inciso VERBATIM: 'compromisos'
+        nexo (lo unico de cosecha propia): ', y sus '
+        paso resultante: Evaluar los requisitos de membresía y beneficios ofrecidos, y sus compromisos
+     del paso 4 de unirse_grupo_lideres_climaticos al PASO 3 del superviviente
+        inciso VERBATIM: 'el intercambio de mejores prácticas'
+        nexo (lo unico de cosecha propia): ', incluido '
+        paso resultante: Formalizar la afiliación y participar activamente en sus iniciativas, incluido el intercambio de mejores prácticas
+  alias del superviviente: ['unirse_grupo_lideres_climaticos']
+
+------------------------------------------------------------------------------
+ACTO 9 . sobrevive compra_offsets_carbono . absorbe neutralidad_carbono
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 2 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 2 de neutralidad_carbono al PASO 4 del superviviente
+        inciso VERBATIM: 'antes de recurrir a compensaciones'
+        nexo (lo unico de cosecha propia): ' El plan de reduccion se establece '
+        paso resultante: Combinar la compra de offsets con metas de reducción interna real. El plan de reduccion se establece antes de recurrir a compensaciones
+     del paso 4 de neutralidad_carbono al PASO 5 del superviviente
+        inciso VERBATIM: 'el alcance real de la declaración de neutralidad'
+        nexo (lo unico de cosecha propia): ' Se comunica igualmente '
+        paso resultante: Comunicar de forma transparente el uso de offsets como parte de la estrategia climática. Se comunica igualmente el alcance real de la declaración de neutralidad
+  alias del superviviente: ['neutralidad_carbono']
+
+------------------------------------------------------------------------------
+ACTO 10 . sobrevive eco_efectividad_2 . absorbe eco_efectividad_re_evolucion_industrial
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 2
+     del paso 1 de eco_efectividad_re_evolucion_industrial al PASO 2 del superviviente
+        inciso VERBATIM: 'si realmente regenera el entorno'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Cuestiona si tu diseño actual es el correcto, no solo si puede ser más eficiente, y si realmente regenera el entorno
+     del paso 4 de eco_efectividad_re_evolucion_industrial al PASO 5 del superviviente
+        inciso VERBATIM: 'regeneración positiva'
+        nexo (lo unico de cosecha propia): ', y en concreto la de '
+        paso resultante: Establece metas positivas de diseño, qué quieres lograr, en vez de solo metas negativas, qué quieres evitar, y en concreto la de regeneración positiva
+  alias del superviviente: ['eco_efectividad_vs_eco_eficiencia', 'eco_efectividad_re_evolucion_industrial']
+
+------------------------------------------------------------------------------
+ACTO 12 . sobrevive eco_eficiencia . absorbe eco_eficiencia_costos
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 3 -> 3 (anadidas 0)
+  INCISOS ADOSADOS: 2
+     del paso 1 de eco_eficiencia_costos al PASO 1 del superviviente
+        inciso VERBATIM: 'en cada etapa de tu proceso'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Realizar una auditoría energética y de recursos (agua, materiales) de todas las operaciones, y en cada etapa de tu proceso
+     del paso 2 de eco_eficiencia_costos al PASO 2 del superviviente
+        inciso VERBATIM: 'rediseña el proceso para reducirlo'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Aplicar frameworks de identificación de desperdicio como AUDIO assessment o Lean/Green Six Sigma, y rediseña el proceso para reducirlo
+  alias del superviviente: ['eco_eficiencia_costos']
+
+------------------------------------------------------------------------------
+ACTO 15 . sobrevive export_administration_regulations . absorbe regulaciones_exportacion_ear
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 4 (anadidas 1)
+  alias del superviviente: ['regulaciones_exportacion_ear']
+
+------------------------------------------------------------------------------
+ACTO 16 . sobrevive seguro_exportacion . absorbe seguro_de_carga_transporte
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 6 (anadidos 1) | condiciones 2 -> 3 (anadidas 1)
+  INCISOS ADOSADOS: 1
+     del paso 3 de seguro_de_carga_transporte al PASO 3 del superviviente
+        inciso VERBATIM: 'verificar documentación'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad, y verificar documentación
+  alias del superviviente: ['seguro_de_carga_transporte']
+
+------------------------------------------------------------------------------
+ACTO 17 . sobrevive incoterms_reglas_comerciales_internacionales . absorbe terminos_de_venta_incoterms
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 6 (anadidos 0) | condiciones 3 -> 3 (anadidas 0)
+  alias del superviviente: ['definicion_terminos_de_venta', 'glosario_terminos_incoterms', 'terminos_de_venta_incoterms']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 35
+   antiboycott_regulations                              nodos_previos     regulaciones_exportacion_ear -> export_administration_regulations
+   canales_comunicacion_estrategicos                    nodos_previos     mensajeria_creativa_positiva -> diseno_mensaje_verde
+   chief_sustainability_officer                         nodos_previos     liderazgo_ceo_sostenibilidad -> vision_alineacion_sostenibilidad
+   cinco_pasos_eco_efectividad                          nodos_previos     eco_efectividad_re_evolucion_industrial -> eco_efectividad_2
+   clausula_antidesviacion                              nodos_previos     regulaciones_exportacion_ear -> export_administration_regulations
+   contabilidad_ambiental                               nodos_previos     accountability_incentivos -> incentivos_reconocimiento_sostenibilidad
+   conversion_datos_co2e                                nodos_siguientes  neutralidad_carbono -> compra_offsets_carbono
+   crecimiento_ingresos_verdes                          nodos_previos     eco_eficiencia_costos -> eco_eficiencia
+   critica_eco_eficiencia                               nodos_siguientes  critica_al_pib_como_metrica -> critica_del_pib_como_metrica_de_progreso
+   critica_eco_eficiencia                               nodos_siguientes  ser_menos_malo_vs_ser_bueno -> menos_malo_vs_bueno
+   dar_forma_politica_climatica                         nodos_previos     unirse_grupo_lideres_climaticos -> unirse_organizacion_rsc_ambiental
+   documentacion_exportacion                            nodos_previos     seguro_de_carga_transporte -> seguro_exportacion
+   eco_advantage                                        nodos_siguientes  eco_eficiencia_costos -> eco_eficiencia
+   eco_efectividad                                      nodos_previos     ser_menos_malo_vs_ser_bueno -> menos_malo_vs_bueno
+   eco_eficiencia                                       nodos_siguientes  generacion_ingresos_verdes -> crecimiento_ingresos_verdes
+   export_administration_regulations                    nodos_previos     regulaciones_exportacion_ear -> export_administration_regulations
+   exportacion_de_servicios                             nodos_siguientes  regulaciones_exportacion_ear -> export_administration_regulations
+   green_team_oficina                                   nodos_previos     accountability_incentivos -> incentivos_reconocimiento_sostenibilidad
+   incoterms_reglas_comerciales_internacionales         nodos_siguientes  seguro_de_carga_transporte -> seguro_exportacion
+   inversion_capacitacion_sostenibilidad                nodos_previos     accountability_incentivos -> incentivos_reconocimiento_sostenibilidad
+   lente_sostenibilidad_finanzas                        nodos_previos     accountability_incentivos -> incentivos_reconocimiento_sostenibilidad
+   licencia_para_danar                                  nodos_siguientes  ser_menos_malo_vs_ser_bueno -> menos_malo_vs_bueno
+   marketing_verde_autentico                            nodos_siguientes  mensajeria_creativa_positiva -> diseno_mensaje_verde
+   metabolismo_biologico_y_tecnico                      nodos_siguientes  hibridos_monstruosos -> manejo_de_hibridos_monstruosos
+   mitigacion_riesgos_ambientales                       nodos_siguientes  eco_eficiencia_costos -> eco_eficiencia
+   modelo_lubin_esty_4_etapas                           nodos_previos     liderazgo_ceo_sostenibilidad -> vision_alineacion_sostenibilidad
+   modos_de_entrada_intermediarios                      nodos_siguientes  terminos_de_venta_incoterms -> incoterms_reglas_comerciales_internacionales
+   nutrientes_biologicos                                nodos_previos     hibridos_monstruosos -> manejo_de_hibridos_monstruosos
+   resolver_problemas_climaticos_clientes               nodos_siguientes  unirse_grupo_lideres_climaticos -> unirse_organizacion_rsc_ambiental
+   seguro_de_credito_a_la_exportacion                   nodos_previos     seguro_de_carga_transporte -> seguro_exportacion
+   seleccion_mensajeros_creibles                        nodos_previos     mensajeria_creativa_positiva -> diseno_mensaje_verde
+   seleccion_metodo_transporte_internacional            nodos_siguientes  seguro_de_carga_transporte -> seguro_exportacion
+   sistema_gestion_ambiental                            nodos_siguientes  accountability_incentivos -> incentivos_reconocimiento_sostenibilidad
+   triple_top_line                                      nodos_siguientes  eco_efectividad_re_evolucion_industrial -> eco_efectividad_2
+   valor_intangible_sostenibilidad                      nodos_previos     generacion_ingresos_verdes -> crecimiento_ingresos_verdes
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 8
+   construccion_valor_intangible                        nodos_previos     generacion_ingresos_verdes (registro historico)
+   definicion_terminos_de_venta                         nodos_siguientes  seguro_de_carga_transporte (registro historico)
+   documentacion_exportacion_basica                     nodos_previos     seguro_de_carga_transporte (registro historico)
+   documentacion_exportacion_basica                     nodos_previos     terminos_de_venta_incoterms (registro historico)
+   eco_eficiencia_critica                               nodos_siguientes  ser_menos_malo_vs_ser_bueno (registro historico)
+   formar_equipo_verde_oficina                          nodos_previos     accountability_incentivos (registro historico)
+   regulaciones_antiboicot                              nodos_previos     regulaciones_exportacion_ear (registro historico)
+   seleccion_metodo_envio_internacional                 nodos_siguientes  seguro_de_carga_transporte (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 6
+   antiboycott_regulations                              nodos_previos
+   clausula_antidesviacion                              nodos_previos
+   metabolismo_biologico_y_tecnico                      nodos_siguientes
+   modelo_lubin_esty_4_etapas                           nodos_previos
+   seleccion_metodo_transporte_internacional            nodos_siguientes
+   valor_intangible_sostenibilidad                      nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   export_administration_regulations                    nodos_previos
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES del tramo (pasivo historico, OP-S-12): 956   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES del tramo                          : 950   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y el tramo BAJA el pasivo historico en 6, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 70 de 70
+guarda D, los 14 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (74 filas)
+ acto de que nodo                                  que          n  a donde va
+    1 generacion_ingresos_verdes                   paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar nichos de mercado desatendidos con necesidades ambientales no satisfechas
+    1 generacion_ingresos_verdes                   paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Rediseñar productos o servicios existentes para reducir su impacto ambiental sin sacrificar precio ni desempeño
+    1 generacion_ingresos_verdes                   paso         3  PASO 5 del superviviente
+        Validar que el producto verde cumple primero con expectativas de precio y calidad antes de comunicar atributos ambientales
+    1 generacion_ingresos_verdes                   paso         4  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Desarrollar líneas de producto diferenciadas (ej. modelo EcoLogical de CardPak, Green Works de Clorox)
+    1 generacion_ingresos_verdes                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el usuario busca diferenciación de mercado o nuevos segmentos de clientes
+    1 generacion_ingresos_verdes                   condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si existe demanda creciente de consumidores por productos sostenibles en su industria
+    2 critica_al_pib_como_metrica                  paso         1  ya lo dice el PASO 2 del superviviente
+        Cuestionar el uso exclusivo de indicadores económicos tradicionales para medir éxito o progreso
+    2 critica_al_pib_como_metrica                  paso         2  ya lo dice el PASO 5 del superviviente
+        Explorar métricas alternativas que incorporen capital natural y social
+    2 critica_al_pib_como_metrica                  paso         3  ya lo dice el PASO 4 del superviviente
+        Diferenciar entre crecimiento económico que genera valor real versus el que solo compensa daños previos
+    2 critica_al_pib_como_metrica                  condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando se define el éxito de un proyecto exclusivamente en términos financieros o de crecimiento
+    3 hibridos_monstruosos                         paso         1  ya lo dice el PASO 1 del superviviente
+        Auditar el producto actual identificando combinaciones de materiales técnicos y biológicos mezclados de forma permanente
+    3 hibridos_monstruosos                         paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Sustituir procesos de mezcla irreversible por diseños desmontables o mono-materiales
+    3 hibridos_monstruosos                         paso         3  PASO 5 del superviviente
+        Evaluar la toxicidad de los aditivos usados (curtientes, tintes, adhesivos) en cada componente
+    3 hibridos_monstruosos                         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando un producto no puede reciclarse ni biodegradarse tras su vida útil
+    3 hibridos_monstruosos                         condicion    2  CONDICION 3 del superviviente
+        Cuando se detectan materiales tóxicos ocultos en combinaciones de manufactura
+    4 liderazgo_ceo_sostenibilidad                 paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        El CEO debe articular públicamente una visión de sostenibilidad
+    4 liderazgo_ceo_sostenibilidad                 paso         2  ya lo dice el PASO 2 del superviviente
+        Crear una declaración de misión simple sobre el enfoque ambiental de la empresa
+    4 liderazgo_ceo_sostenibilidad                 paso         3  ya lo dice el PASO 6 del superviviente
+        Diseminar la visión a todos los niveles de la organización
+    4 liderazgo_ceo_sostenibilidad                 condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Si la empresa no tiene una estrategia de sostenibilidad formal
+    4 liderazgo_ceo_sostenibilidad                 condicion    2  CONDICION 4 del superviviente
+        Si el impulso de sostenibilidad viene solo de mandos medios sin respaldo ejecutivo
+    5 accountability_incentivos                    paso         1  PASO 7 del superviviente
+        Incorporar KPIs de sostenibilidad en las evaluaciones de desempeño de gerentes
+    5 accountability_incentivos                    paso         2  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Vincular bonos y promociones al cumplimiento de metas ambientales
+    5 accountability_incentivos                    paso         3  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Crear premios de reconocimiento anual para contribuciones notables a sostenibilidad
+    5 accountability_incentivos                    paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Publicar resultados de progreso en reuniones de staff y sitios web corporativos
+    5 accountability_incentivos                    condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si los gerentes no tienen incentivos claros para actuar en sostenibilidad
+    5 accountability_incentivos                    condicion    2  CONDICION 4 del superviviente
+        Si las metas ambientales no se traducen en resultados concretos
+    6 ser_menos_malo_vs_ser_bueno                  paso         1  ya lo dice el PASO 4 del superviviente
+        Revisar el lenguaje de las metas de sostenibilidad de la organización (¿son negativas como 'reducir', 'menos', 'cero'?)
+    6 ser_menos_malo_vs_ser_bueno                  paso         2  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Reformular al menos una meta ambiental en términos positivos y regenerativos
+    6 ser_menos_malo_vs_ser_bueno                  paso         3  PASO 5 del superviviente
+        Presentar a stakeholders la visión de 'ser 100% bueno' como alternativa a las metas actuales
+    6 ser_menos_malo_vs_ser_bueno                  condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando las metas de sostenibilidad de la empresa se centran solo en reducción de daño
+    6 ser_menos_malo_vs_ser_bueno                  condicion    2  CONDICION 3 del superviviente
+        Si el equipo necesita una visión inspiradora en lugar de una lista de restricciones
+    7 mensajeria_creativa_positiva                 paso         1  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Diseñar campañas con tono positivo, humor o historias atractivas en lugar de miedo o culpa
+    7 mensajeria_creativa_positiva                 paso         2  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Enfocar el mensaje en beneficios prácticos (ahorro, calidad de vida) más que en sacrificio ambiental
+    7 mensajeria_creativa_positiva                 paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar el uso de conceptos pragmáticos como innovación o progreso en lugar de 'salvar la tierra'
+    7 mensajeria_creativa_positiva                 condicion    1  CONDICION 3 del superviviente
+        Cuando se busca ampliar el alcance de un mensaje verde a audiencias no comprometidas con el ambientalismo
+    8 unirse_grupo_lideres_climaticos              paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar ONGs o iniciativas relevantes para el sector de la empresa.
+    8 unirse_grupo_lideres_climaticos              paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Evaluar los requisitos y compromisos de membresía.
+    8 unirse_grupo_lideres_climaticos              paso         3  ya lo dice el PASO 3 del superviviente
+        Establecer una colaboración formal con la organización elegida.
+    8 unirse_grupo_lideres_climaticos              paso         4  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Participar activamente en el intercambio de mejores prácticas.
+    8 unirse_grupo_lideres_climaticos              condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si la empresa busca reconocimiento externo y mejores prácticas compartidas en sostenibilidad climática.
+    9 neutralidad_carbono                          paso         1  PASO 6 del superviviente
+        Definir qué alcances de emisiones se incluirán en la meta de neutralidad
+    9 neutralidad_carbono                          paso         2  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Establecer un plan de reducción de emisiones antes de recurrir a compensaciones
+    9 neutralidad_carbono                          paso         3  ya lo dice el PASO 2 del superviviente
+        Evaluar proveedores confiables de créditos de carbono/offsets
+    9 neutralidad_carbono                          paso         4  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Comunicar de forma transparente el alcance real de la declaración de neutralidad
+    9 neutralidad_carbono                          condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Si la empresa desea comunicar públicamente un compromiso de carbono neutral
+   10 eco_efectividad_re_evolucion_industrial      paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Cuestionar si el diseño actual solo busca 'reducir daño' o si realmente regenera el entorno
+   10 eco_efectividad_re_evolucion_industrial      paso         2  ya lo dice el PASO 4 del superviviente
+        Identificar qué 'nutrientes' (biológicos o técnicos) puede devolver el sistema al entorno
+   10 eco_efectividad_re_evolucion_industrial      paso         3  PASO 6 del superviviente
+        Diseñar sistemas que se autorregulen, inspirados en ciclos naturales (agua, nutrientes, energía)
+   10 eco_efectividad_re_evolucion_industrial      paso         4  INCISO ADOSADO al PASO 5 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Reemplazar la meta de 'sostenibilidad' (mantener el daño constante) por la de 'regeneración positiva'
+   10 eco_efectividad_re_evolucion_industrial      condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el usuario solo plantea reducir emisiones o desechos sin buscar un aporte positivo neto
+   10 eco_efectividad_re_evolucion_industrial      condicion    2  CONDICION 3 del superviviente
+        Si el proyecto busca diferenciarse de estrategias convencionales de 'sostenibilidad'
+   12 eco_eficiencia_costos                        paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Mide cuánta energía y materiales usas en cada etapa de tu proceso
+   12 eco_eficiencia_costos                        paso         2  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identifica dónde se genera desperdicio (scrap) y rediseña el proceso para reducirlo
+   12 eco_eficiencia_costos                        paso         3  PASO 6 del superviviente
+        Implementa un sistema de seguimiento ambiental con métricas que puedas ir ampliando (panel de control digital)
+   12 eco_eficiencia_costos                        paso         4  ya lo dice el PASO 3 del superviviente
+        Calcula cuánto te devuelve la inversión en las mejoras de eficiencia que encontraste
+   12 eco_eficiencia_costos                        condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando buscas reducir tus costos operativos en un contexto de recesión económica
+   12 eco_eficiencia_costos                        condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si tu proceso productivo consume mucha energía o genera mucho desperdicio
+   15 regulaciones_exportacion_ear                 paso         1  ya lo dice el PASO 1 del superviviente
+        Determinar la clasificación técnica (ECCN) del producto a exportar
+   15 regulaciones_exportacion_ear                 paso         2  ya lo dice el PASO 2 del superviviente
+        Usar el chart de las EAR para verificar si se requiere licencia según destino, uso y usuario final
+   15 regulaciones_exportacion_ear                 paso         3  ya lo dice el PASO 4 del superviviente
+        Solicitar una clasificación de mercancía u opinión consultiva si hay dudas
+   15 regulaciones_exportacion_ear                 paso         4  ya lo dice el PASO 6 del superviviente
+        Contactar a la oficina local del U.S. Commercial Service para asesoría sobre licencias
+   15 regulaciones_exportacion_ear                 condicion    1  CONDICION 4 del superviviente
+        Antes de realizar cualquier embarque de exportación desde EE.UU.
+   15 regulaciones_exportacion_ear                 condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando el producto tiene aplicaciones potencialmente sensibles (dual-use, tecnología, defensa)
+   16 seguro_de_carga_transporte                   paso         1  ya lo dice el PASO 1 del superviviente
+        Determinar según los términos de venta (Incoterms) quién es responsable del seguro de carga.
+   16 seguro_de_carga_transporte                   paso         2  ya lo dice el PASO 2 del superviviente
+        Si el vendedor es responsable, contratar una póliza propia o asegurar la carga bajo la póliza del freight forwarder.
+   16 seguro_de_carga_transporte                   paso         3  INCISO ADOSADO al PASO 3 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Si el comprador es responsable, no asumir que ha contratado cobertura adecuada; verificar documentación.
+   16 seguro_de_carga_transporte                   paso         4  PASO 6 del superviviente
+        Consultar con aseguradoras internacionales o freight forwarders para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP).
+   16 seguro_de_carga_transporte                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando el usuario está preparando un envío internacional y necesita definir la cobertura de riesgos de transporte.
+   16 seguro_de_carga_transporte                   condicion    2  CONDICION 3 del superviviente
+        Si el término de venta acordado responsabiliza al exportador por el seguro.
+   17 terminos_de_venta_incoterms                  paso         1  ya lo dice el PASO 2 del superviviente
+        Seleccionar el Incoterm apropiado (EXW, FCA, CPT, CIP, FOB, CIF, etc.) según el modo de transporte y nivel de servicio deseado
+   17 terminos_de_venta_incoterms                  paso         2  ya lo dice el PASO 4 del superviviente
+        Especificar el Incoterm elegido claramente en la Pro Forma Invoice y en la Commercial Invoice
+   17 terminos_de_venta_incoterms                  paso         3  ya lo dice el PASO 3 del superviviente
+        Comunicar al comprador y al freight forwarder el Incoterm acordado para evitar disputas sobre riesgo y costos
+   17 terminos_de_venta_incoterms                  condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Al negociar los términos de una venta de exportación
+   17 terminos_de_venta_incoterms                  condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando existe ambigüedad sobre quién asume el riesgo y costo del transporte
+
+RESUMEN DEL TRAMO
+  actos fundidos      : 14
+  nodos implicados    : 28
+  nodos que MUEREN    : 14
+  piezas repartidas   : 74 (16 viajan enteras, 36 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 3
+
+ESCRITO. ficheros tocados: 58
+censo DESPUES: 3853 ficheros, 3371 vivos, 482 deprecados
+censo ANTES  : 3853 ficheros, 3385 vivos, 468 deprecados
+delta deprecados: +14 (esperado +14): OK

@@ -7,9 +7,10 @@
   "resumen_teorico": "Son productos que combinan materiales biológicos y técnicos de forma inseparable, impidiendo que puedan reingresar limpiamente a cualquiera de los dos metabolismos (ej. zapatillas deportivas con suela tóxica y parte superior técnica). Mientras se logra su rediseño completo, requieren ingeniosas soluciones intermedias como el desensamble parcial o el diseño de componentes separables por metabolismo.",
   "pasos_accionables": [
     "Identificar productos actuales que mezclan materiales biológicos y técnicos sin separación posible",
-    "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica",
+    "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica, o pasar a mono-materiales",
     "Facilitar el desensamble para reciclar cada componente en su metabolismo correspondiente",
-    "Comunicar y capitalizar (marketing) la recuperación de materiales como ventaja competitiva"
+    "Comunicar y capitalizar (marketing) la recuperación de materiales como ventaja competitiva",
+    "Evaluar la toxicidad de los aditivos usados (curtientes, tintes, adhesivos) en cada componente"
   ],
   "entregable_esperado": "Rediseño conceptual del producto híbrido separando claramente componentes biológicos y técnicos, con mecanismo de desensamble",
   "nodos_previos": [
@@ -19,11 +20,23 @@
     "metabolismo_biologico_y_tecnico"
   ],
   "nodos_siguientes": [
-    "fase_de_eliminacion_de_no_comercializables"
+    "fase_de_eliminacion_de_no_comercializables",
+    "nutrientes_biologicos"
   ],
   "condiciones_activacion": [
     "Si el producto actual no puede clasificarse limpiamente como nutriente biológico o técnico",
-    "Si se necesita una solución de transición mientras se logra el rediseño ideal"
+    "Si se necesita una solución de transición mientras se logra el rediseño ideal",
+    "Cuando se detectan materiales tóxicos ocultos en combinaciones de manufactura"
   ],
-  "etiqueta_arbol": "Rediseña tus Híbridos Imposibles"
+  "etiqueta_arbol": "Rediseña tus Híbridos Imposibles",
+  "ids_alias": [
+    "hibridos_monstruosos"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "hibridos_monstruosos",
+      "titulo": "Híbridos Monstruosos (Monstrous Hybrids)",
+      "fuente": "Cradle to Cradle - Michael Braungart"
+    }
+  ]
 }

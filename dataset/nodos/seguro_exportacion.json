@@ -8,19 +8,35 @@
   "pasos_accionables": [
     "Determinar según términos de venta quién es responsable del seguro de carga",
     "Contratar póliza propia o asegurar bajo la póliza del freight forwarder",
-    "No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad",
+    "No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad, y verificar documentación",
     "Evaluar contratación de seguro de crédito a la exportación para cubrir riesgo de impago",
-    "Verificar requisitos de instituciones financieras del comprador sobre seguro de crédito"
+    "Verificar requisitos de instituciones financieras del comprador sobre seguro de crédito",
+    "Consultar con aseguradoras internacionales o freight forwarders para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP)."
   ],
   "entregable_esperado": "Pólizas de seguro de carga y/o crédito contratadas antes del embarque",
   "nodos_previos": [
     "seleccion_metodo_transporte_internacional",
-    "documentacion_exportacion"
+    "documentacion_exportacion",
+    "incoterms_reglas_comerciales_internacionales"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "documentacion_exportacion",
+    "seguro_de_credito_a_la_exportacion"
+  ],
   "condiciones_activacion": [
     "Antes de cualquier embarque de mercancía de alto valor",
-    "Si existe riesgo de impago por parte del comprador extranjero"
+    "Si existe riesgo de impago por parte del comprador extranjero",
+    "Si el término de venta acordado responsabiliza al exportador por el seguro."
   ],
-  "etiqueta_arbol": "Contrata Seguros de Exportación"
+  "etiqueta_arbol": "Contrata Seguros de Exportación",
+  "ids_alias": [
+    "seguro_de_carga_transporte"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "seguro_de_carga_transporte",
+      "titulo": "Seguro de Carga (Cargo Insurance)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }

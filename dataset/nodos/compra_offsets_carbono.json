@@ -9,12 +9,14 @@
     "Determinar qué porcentaje de emisiones no puede reducirse internamente.",
     "Investigar proveedores certificados de offsets de carbono.",
     "Verificar la validez y trazabilidad de los proyectos de compensación.",
-    "Combinar la compra de offsets con metas de reducción interna real.",
-    "Comunicar de forma transparente el uso de offsets como parte de la estrategia climática."
+    "Combinar la compra de offsets con metas de reducción interna real. El plan de reduccion se establece antes de recurrir a compensaciones",
+    "Comunicar de forma transparente el uso de offsets como parte de la estrategia climática. Se comunica igualmente el alcance real de la declaración de neutralidad",
+    "Definir qué alcances de emisiones se incluirán en la meta de neutralidad"
   ],
   "entregable_esperado": "Un plan de compensación de carbono con proveedores verificados y porcentaje de emisiones cubiertas.",
   "nodos_previos": [
-    "reducciones_cadena_suministro"
+    "reducciones_cadena_suministro",
+    "conversion_datos_co2e"
   ],
   "nodos_siguientes": [
     "resolver_problemas_climaticos_clientes"
@@ -23,5 +25,15 @@
     "Si la empresa ha agotado opciones internas de reducción costo-efectivas.",
     "Si la empresa busca posicionarse como 'carbono neutral' en el mercado."
   ],
-  "etiqueta_arbol": "Compra Offsets de Carbono"
+  "etiqueta_arbol": "Compra Offsets de Carbono",
+  "ids_alias": [
+    "neutralidad_carbono"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "neutralidad_carbono",
+      "titulo": "Neutralidad de Carbono",
+      "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ]
 }

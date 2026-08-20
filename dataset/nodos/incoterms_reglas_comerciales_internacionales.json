@@ -19,14 +19,15 @@
     "documentacion_exportacion_basica",
     "fijacion_precio_exportacion",
     "evaluacion_mercados_objetivo",
-    "documentacion_exportacion"
+    "documentacion_exportacion",
+    "modos_de_entrada_intermediarios"
   ],
   "nodos_siguientes": [
     "letters_of_credit",
     "seleccion_metodo_envio_internacional",
     "seleccion_de_metodo_de_pago",
     "elaboracion_pro_forma_invoice",
-    "seguro_de_carga_transporte",
+    "seguro_exportacion",
     "certificado_de_origen_coo",
     "documentacion_exportacion_basica",
     "seleccion_metodo_transporte_internacional"
@@ -39,7 +40,8 @@
   "etiqueta_arbol": "Define Quién Asume Cada Riesgo",
   "ids_alias": [
     "definicion_terminos_de_venta",
-    "glosario_terminos_incoterms"
+    "glosario_terminos_incoterms",
+    "terminos_de_venta_incoterms"
   ],
   "merged_originals": [
     {
@@ -50,6 +52,11 @@
     {
       "node_id": "glosario_terminos_incoterms",
       "titulo": "Términos de Comercio Internacional (Incoterms)",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    },
+    {
+      "node_id": "terminos_de_venta_incoterms",
+      "titulo": "Términos de Venta / Incoterms",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
     }
   ]

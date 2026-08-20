@@ -1,0 +1,15 @@
+==============================================================================
+P.16 POR EL RESOLUTOR: LAS DUPLICADAS QUE ESTA FUSION FABRICARIA
+MODO SIMULAR
+==============================================================================
+  plan: docs/loop/PLAN_V57_OPU01_LOTE_A.json | actos: 14
+
+  DUPLICADAS QUE LA FUSION FABRICARIA: 1
+    documentacion_exportacion | nodos_previos
+       la fabrica el acto 17: terminos_de_venta_incoterms pasa a resolver a incoterms_reglas_comerciales_internacionales
+       el camino que YA existia y se conserva: glosario_terminos_incoterms
+       SE RETIRA la entrada terminos_de_venta_incoterms, y la reciproca en terminos_de_venta_incoterms.nodos_siguientes
+
+  MODO SIMULAR: no se escribe nada.
+
+FIN

@@ -742,7 +742,8 @@
         "Si los gerentes no tienen incentivos claros para actuar en sostenibilidad",
         "Si las metas ambientales no se traducen en resultados concretos"
       ],
-      "etiqueta_arbol": "Premia la Sostenibilidad en tu Equipo"
+      "etiqueta_arbol": "Premia la Sostenibilidad en tu Equipo",
+      "deprecado": true
     },
     "accruals_y_activos_prepagados": {
       "node_id": "accruals_y_activos_prepagados",
@@ -4850,8 +4851,7 @@
       "entregable_esperado": "Un proceso propio de revision de contratos internacionales para detectar clausulas de boicot, con los reportes presentados a la autoridad correspondiente si aplica",
       "nodos_previos": [
         "export_administration_regulations",
-        "clausula_antidesviacion",
-        "regulaciones_exportacion_ear"
+        "clausula_antidesviacion"
       ],
       "nodos_siguientes": [
         "foreign_corrupt_practices_act"
@@ -10890,7 +10890,7 @@
       "entregable_esperado": "Plan de canales de comunicación con al menos una activación creativa diferenciadora",
       "nodos_previos": [
         "seleccion_mensajeros_creibles",
-        "mensajeria_creativa_positiva"
+        "diseno_mensaje_verde"
       ],
       "nodos_siguientes": [
         "validacion_certificaciones_terceros",
@@ -13467,7 +13467,7 @@
       ],
       "entregable_esperado": "Un responsable de sostenibilidad definido, con apoyo de otras personas y una forma clara de coordinarse entre areas",
       "nodos_previos": [
-        "liderazgo_ceo_sostenibilidad"
+        "vision_alineacion_sostenibilidad"
       ],
       "nodos_siguientes": [
         "sistema_recoleccion_datos",
@@ -14310,7 +14310,7 @@
       ],
       "entregable_esperado": "Plan de transición organizacional con espacio de colaboración definido, métricas mixtas y un piloto inicial identificado",
       "nodos_previos": [
-        "eco_efectividad_re_evolucion_industrial",
+        "eco_efectividad_2",
         "triple_top_line"
       ],
       "nodos_siguientes": [
@@ -15086,7 +15086,6 @@
       ],
       "entregable_esperado": "Documentos de embarque (factura comercial y bill of lading) con la declaracion antidesviacion correctamente incluida.",
       "nodos_previos": [
-        "regulaciones_exportacion_ear",
         "export_administration_regulations"
       ],
       "nodos_siguientes": [
@@ -16752,12 +16751,14 @@
         "Determinar qué porcentaje de emisiones no puede reducirse internamente.",
         "Investigar proveedores certificados de offsets de carbono.",
         "Verificar la validez y trazabilidad de los proyectos de compensación.",
-        "Combinar la compra de offsets con metas de reducción interna real.",
-        "Comunicar de forma transparente el uso de offsets como parte de la estrategia climática."
+        "Combinar la compra de offsets con metas de reducción interna real. El plan de reduccion se establece antes de recurrir a compensaciones",
+        "Comunicar de forma transparente el uso de offsets como parte de la estrategia climática. Se comunica igualmente el alcance real de la declaración de neutralidad",
+        "Definir qué alcances de emisiones se incluirán en la meta de neutralidad"
       ],
       "entregable_esperado": "Un plan de compensación de carbono con proveedores verificados y porcentaje de emisiones cubiertas.",
       "nodos_previos": [
-        "reducciones_cadena_suministro"
+        "reducciones_cadena_suministro",
+        "conversion_datos_co2e"
       ],
       "nodos_siguientes": [
         "resolver_problemas_climaticos_clientes"
@@ -16766,7 +16767,17 @@
         "Si la empresa ha agotado opciones internas de reducción costo-efectivas.",
         "Si la empresa busca posicionarse como 'carbono neutral' en el mercado."
       ],
-      "etiqueta_arbol": "Compra Offsets de Carbono"
+      "etiqueta_arbol": "Compra Offsets de Carbono",
+      "ids_alias": [
+        "neutralidad_carbono"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "neutralidad_carbono",
+          "titulo": "Neutralidad de Carbono",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ]
     },
     "compra_por_precio_mas_bajo_como_error": {
       "node_id": "compra_por_precio_mas_bajo_como_error",
@@ -20214,7 +20225,7 @@
       ],
       "entregable_esperado": "Un marco de contabilidad ambiental documentado que identifique costos y beneficios ambientales relevantes para tus decisiones.",
       "nodos_previos": [
-        "accountability_incentivos",
+        "incentivos_reconocimiento_sostenibilidad",
         "contabilidad_basada_actividades",
         "lente_sostenibilidad_finanzas"
       ],
@@ -21836,7 +21847,7 @@
       ],
       "nodos_siguientes": [
         "medir_residuos_empresa",
-        "neutralidad_carbono"
+        "compra_offsets_carbono"
       ],
       "condiciones_activacion": [
         "Cuando ya tienes los datos crudos de energia y combustible listos para procesar"
@@ -24069,14 +24080,15 @@
       "fuente": "The Green to Gold Business Play - Daniel C. Esty",
       "resumen_teorico": "Si diseñas y comercializas productos con atributos ambientales superiores (mayor eficiencia energética, menor huella de contaminación, mejor productividad de recursos), puedes capturar nuevos segmentos de mercado y crecer en ingresos. El caso de la línea ecomagination de GE, que genera más de 20 mil millones de dólares anuales con un crecimiento del 20%, muestra cómo la innovación verde puede convertirse en un motor de crecimiento de alto margen.",
       "pasos_accionables": [
-        "Identifica las necesidades no satisfechas de tus clientes relacionadas con eficiencia y sostenibilidad",
-        "Rediseña o desarrolla tus líneas de producto para que tengan un menor impacto ambiental medible",
+        "Identifica las necesidades no satisfechas de tus clientes relacionadas con eficiencia y sostenibilidad, incluidos los nichos de mercado desatendidos",
+        "Rediseña o desarrolla tus líneas de producto para que tengan un menor impacto ambiental medible, y sin sacrificar precio ni desempeño, con ejemplos como el modelo EcoLogical de CardPak, Green Works de Clorox",
         "Crea mensajes de marketing basados en beneficios ambientales tangibles y verificables",
-        "Define métricas de crecimiento específicas para tu línea de productos verdes"
+        "Define métricas de crecimiento específicas para tu línea de productos verdes",
+        "Validar que el producto verde cumple primero con expectativas de precio y calidad antes de comunicar atributos ambientales"
       ],
       "entregable_esperado": "Una línea de producto o servicio con una propuesta de valor ambiental clara y un plan para comercializarla",
       "nodos_previos": [
-        "eco_eficiencia_costos",
+        "eco_eficiencia",
         "eco_advantage",
         "estrategia_de_innovacion_producto"
       ],
@@ -24087,7 +24099,17 @@
         "Cuando buscas diferenciarte en el mercado con innovación ambiental",
         "Si tienes clientes empresariales o consumidores que te piden alternativas más sostenibles"
       ],
-      "etiqueta_arbol": "Vende lo Verde, Crece Más"
+      "etiqueta_arbol": "Vende lo Verde, Crece Más",
+      "ids_alias": [
+        "generacion_ingresos_verdes"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "generacion_ingresos_verdes",
+          "titulo": "Generación de Ingresos mediante Innovación Verde",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ]
     },
     "cribado_de_datos": {
       "node_id": "cribado_de_datos",
@@ -24470,7 +24492,8 @@
       "condiciones_activacion": [
         "Cuando se define el éxito de un proyecto exclusivamente en términos financieros o de crecimiento"
       ],
-      "etiqueta_arbol": "Mide Más Allá del PIB"
+      "etiqueta_arbol": "Mide Más Allá del PIB",
+      "deprecado": true
     },
     "critica_behavior_based_safety": {
       "node_id": "critica_behavior_based_safety",
@@ -24535,7 +24558,8 @@
       "nodos_previos": [
         "eficiencia_hidrica_edificios",
         "modelo_cradle_to_grave",
-        "eficiencia_hidrica_edificios_2"
+        "eficiencia_hidrica_edificios_2",
+        "critica_eco_eficiencia"
       ],
       "nodos_siguientes": [
         "estrategia_de_tragedia_vs_estrategia_de_cambio",
@@ -24548,12 +24572,18 @@
       ],
       "etiqueta_arbol": "El PIB Oculta el Daño Real",
       "ids_alias": [
-        "pib_como_medida_erronea_de_progreso"
+        "pib_como_medida_erronea_de_progreso",
+        "critica_al_pib_como_metrica"
       ],
       "merged_originals": [
         {
           "node_id": "pib_como_medida_erronea_de_progreso",
           "titulo": "El PIB como Medida Errónea del Progreso ('Activity Equals Prosperity')",
+          "fuente": "Cradle to Cradle - Michael Braungart"
+        },
+        {
+          "node_id": "critica_al_pib_como_metrica",
+          "titulo": "Limitaciones del PIB como Métrica de Progreso",
           "fuente": "Cradle to Cradle - Michael Braungart"
         }
       ]
@@ -24606,12 +24636,12 @@
       ],
       "nodos_siguientes": [
         "eco_efectividad",
-        "critica_al_pib_como_metrica",
+        "critica_del_pib_como_metrica_de_progreso",
         "eco_efectividad_2",
         "disruptores_endocrinos_y_salud_industrial",
         "downcycling_problema",
         "licencia_para_danar",
-        "ser_menos_malo_vs_ser_bueno"
+        "menos_malo_vs_bueno"
       ],
       "condiciones_activacion": [
         "Cuando la organización cree que reciclar o reducir consumo es suficiente para ser sostenible",
@@ -28322,7 +28352,7 @@
       ],
       "entregable_esperado": "Participación activa en una coalición de política climática con objetivos de incidencia definidos.",
       "nodos_previos": [
-        "unirse_grupo_lideres_climaticos"
+        "unirse_organizacion_rsc_ambiental"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -36503,22 +36533,37 @@
         "Alinear el mensaje verde con lo que realmente le importa al cliente objetivo",
         "Asegurar consistencia entre el mensaje y la identidad histórica de la marca",
         "Seleccionar mensajeros creíbles (empleados, historias reales) en vez de solo celebridades",
-        "Usar tono creativo, positivo y práctico en lugar de culpabilizador",
-        "Enfocar beneficios locales y tangibles en vez de abstracciones globales"
+        "Usar tono creativo, positivo y práctico en lugar de culpabilizador, con humor o historias atractivas, apoyandote en conceptos pragmáticos como innovación o progreso",
+        "Enfocar beneficios locales y tangibles en vez de abstracciones globales, del tipo ahorro, calidad de vida"
       ],
       "entregable_esperado": "Pieza de comunicación/campaña de marketing verde validada en tono, mensajero y relevancia",
       "nodos_previos": [
         "evitar_greenwashing",
         "principio_green_tercer_boton",
         "construir_fortalezas_verdes",
-        "segmentacion_consumidor_verde"
+        "segmentacion_consumidor_verde",
+        "marketing_verde_autentico"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "canales_comunicacion_estrategicos",
+        "seleccion_mensajeros_creibles"
+      ],
       "condiciones_activacion": [
         "Cuando se ha validado el atributo verde y se procede a comunicar al mercado",
-        "Si campañas anteriores no han generado conexión emocional con el cliente"
+        "Si campañas anteriores no han generado conexión emocional con el cliente",
+        "Cuando se busca ampliar el alcance de un mensaje verde a audiencias no comprometidas con el ambientalismo"
       ],
-      "etiqueta_arbol": "Comunica tu Mensaje Verde"
+      "etiqueta_arbol": "Comunica tu Mensaje Verde",
+      "ids_alias": [
+        "mensajeria_creativa_positiva"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "mensajeria_creativa_positiva",
+          "titulo": "Comunicación Creativa y Positiva en Marketing Verde",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ]
     },
     "diseno_metricas_lideres_rezagados": {
       "node_id": "diseno_metricas_lideres_rezagados",
@@ -38301,9 +38346,8 @@
         "autocertificacion_del_exportador",
         "certificados_genericos_de_origen",
         "elaboracion_pro_forma_invoice",
-        "seguro_de_carga_transporte",
-        "seleccion_metodo_envio_internacional",
-        "terminos_de_venta_incoterms"
+        "seguro_exportacion",
+        "seleccion_metodo_envio_internacional"
       ],
       "nodos_siguientes": [
         "seguro_exportacion",
@@ -39216,7 +39260,7 @@
       ],
       "nodos_siguientes": [
         "mitigacion_riesgos_ambientales",
-        "eco_eficiencia_costos",
+        "eco_eficiencia",
         "crecimiento_ingresos_verdes",
         "valor_intangible_sostenibilidad",
         "modelo_eco_criterios_ponderados"
@@ -39243,7 +39287,7 @@
       "nodos_previos": [
         "critica_eco_eficiencia",
         "downcycling_problema",
-        "ser_menos_malo_vs_ser_bueno",
+        "menos_malo_vs_bueno",
         "licencia_para_danar",
         "modelo_cradle_to_grave"
       ],
@@ -39267,34 +39311,44 @@
       "resumen_teorico": "La eco-efectividad es un paradigma de diseño que busca rediseñar tus procesos y productos por completo, en lugar de solo minimizar el daño como hace la eco-eficiencia. Se inspira en los ciclos naturales, donde el desperdicio de un organismo alimenta a otro y un cerezo produce abundancia sin agotar su entorno. El objetivo no es hacer menos mal sino hacer las cosas correctas: integrar placer, funcionalidad y regeneración ambiental en el mismo diseño, generando valor positivo para los ecosistemas y tu negocio a la vez. Esto implica cuestionar el propósito completo de tu sistema, cultural, comercial y ecológico, antes de simplemente optimizar lo que ya existe.",
       "pasos_accionables": [
         "Analiza el ciclo de vida completo de tu producto o proceso identificando todos los flujos de materiales",
-        "Cuestiona si tu diseño actual es el correcto, no solo si puede ser más eficiente",
+        "Cuestiona si tu diseño actual es el correcto, no solo si puede ser más eficiente, y si realmente regenera el entorno",
         "Identifica el propósito completo de tu sistema: cultural, comercial y ecológico",
         "Rediseña para que los materiales se conviertan en nutrientes biológicos o técnicos que generen efectos positivos",
-        "Establece metas positivas de diseño, qué quieres lograr, en vez de solo metas negativas, qué quieres evitar"
+        "Establece metas positivas de diseño, qué quieres lograr, en vez de solo metas negativas, qué quieres evitar, y en concreto la de regeneración positiva",
+        "Diseñar sistemas que se autorregulen, inspirados en ciclos naturales (agua, nutrientes, energía)"
       ],
       "entregable_esperado": "Un diagnóstico del sistema actual con una propuesta de objetivo positivo de diseño que redefina el propósito del producto desde una lógica de abundancia y regeneración.",
       "nodos_previos": [
         "critica_eco_eficiencia",
-        "materiales_ciclicos_infinitamente_reciclables"
+        "materiales_ciclicos_infinitamente_reciclables",
+        "triple_top_line"
       ],
       "nodos_siguientes": [
         "desperdicio_es_alimento",
         "respeto_a_la_diversidad",
         "diseno_biomimetico_de_edificios",
-        "concepto_de_crecimiento_regenerativo"
+        "concepto_de_crecimiento_regenerativo",
+        "cinco_pasos_eco_efectividad"
       ],
       "condiciones_activacion": [
         "Cuando solo buscas reducir emisiones o desperdicios sin cuestionar el diseño base de tu producto",
-        "Cuando inicias un proyecto de diseño sostenible desde cero"
+        "Cuando inicias un proyecto de diseño sostenible desde cero",
+        "Si el proyecto busca diferenciarse de estrategias convencionales de 'sostenibilidad'"
       ],
       "etiqueta_arbol": "Inspírate en Ciclos Naturales",
       "ids_alias": [
-        "eco_efectividad_vs_eco_eficiencia"
+        "eco_efectividad_vs_eco_eficiencia",
+        "eco_efectividad_re_evolucion_industrial"
       ],
       "merged_originals": [
         {
           "node_id": "eco_efectividad_vs_eco_eficiencia",
           "titulo": "Eco-efectividad vs. Eco-eficiencia",
+          "fuente": "Cradle to Cradle - Michael Braungart"
+        },
+        {
+          "node_id": "eco_efectividad_re_evolucion_industrial",
+          "titulo": "Eco-Efectividad como Re-Evolución Industrial",
           "fuente": "Cradle to Cradle - Michael Braungart"
         }
       ]
@@ -39323,7 +39377,8 @@
         "Si el usuario solo plantea reducir emisiones o desechos sin buscar un aporte positivo neto",
         "Si el proyecto busca diferenciarse de estrategias convencionales de 'sostenibilidad'"
       ],
-      "etiqueta_arbol": "Asóciate con la Naturaleza"
+      "etiqueta_arbol": "Asóciate con la Naturaleza",
+      "deprecado": true
     },
     "eco_efectividad_vs_eco_eficiencia": {
       "node_id": "eco_efectividad_vs_eco_eficiencia",
@@ -39361,20 +39416,23 @@
       "fuente": "The Green to Gold Business Play - Daniel C. Esty",
       "resumen_teorico": "La eco-eficiencia consiste en incorporar un enfoque de sostenibilidad a la estrategia corporativa para identificar y eliminar desperdicio e ineficiencia, generando ahorros sustanciales. Las mayores ganancias suelen provenir de la gestión energética, pero también del consumo de agua y la eliminación de desperdicio en procesos de producción. Requiere un enfoque estructurado y basado en datos (ej. herramientas como AUDIO assessment, Lean Six Sigma) para identificar oportunidades de ahorro, con retornos de inversión frecuentemente muy altos y rápidos.",
       "pasos_accionables": [
-        "Realizar una auditoría energética y de recursos (agua, materiales) de todas las operaciones",
-        "Aplicar frameworks de identificación de desperdicio como AUDIO assessment o Lean/Green Six Sigma",
+        "Realizar una auditoría energética y de recursos (agua, materiales) de todas las operaciones, y en cada etapa de tu proceso",
+        "Aplicar frameworks de identificación de desperdicio como AUDIO assessment o Lean/Green Six Sigma, y rediseña el proceso para reducirlo",
         "Priorizar inversiones en eficiencia con mayor retorno (HVAC, iluminación, automatización)",
         "Revisar la utilización de activos fijos (edificios, espacio) para eliminar excedentes",
-        "Medir y reportar ahorros logrados para justificar expansión del programa"
+        "Medir y reportar ahorros logrados para justificar expansión del programa",
+        "Implementa un sistema de seguimiento ambiental con métricas que puedas ir ampliando (panel de control digital)"
       ],
       "entregable_esperado": "Plan de eco-eficiencia con auditoría energética completada, iniciativas priorizadas por ROI, y métricas de ahorro proyectado (energía, agua, desperdicio)",
       "nodos_previos": [
         "gestion_eco_riesgos",
         "modelo_green_wave",
-        "responsabilidad_extendida_productor"
+        "responsabilidad_extendida_productor",
+        "eco_advantage",
+        "mitigacion_riesgos_ambientales"
       ],
       "nodos_siguientes": [
-        "generacion_ingresos_verdes",
+        "crecimiento_ingresos_verdes",
         "construccion_valor_intangible",
         "valor_intangible_sostenibilidad"
       ],
@@ -39383,7 +39441,17 @@
         "Si existen altos costos energéticos o de desperdicio en producción",
         "Si el usuario necesita resultados rápidos y de bajo riesgo en sostenibilidad"
       ],
-      "etiqueta_arbol": "Reduce Costos con Sostenibilidad"
+      "etiqueta_arbol": "Reduce Costos con Sostenibilidad",
+      "ids_alias": [
+        "eco_eficiencia_costos"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "eco_eficiencia_costos",
+          "titulo": "Gasta menos mirando tu negocio con ojos ambientales (eco-eficiencia)",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ]
     },
     "eco_eficiencia_costos": {
       "node_id": "eco_eficiencia_costos",
@@ -39410,7 +39478,8 @@
         "Cuando buscas reducir tus costos operativos en un contexto de recesión económica",
         "Si tu proceso productivo consume mucha energía o genera mucho desperdicio"
       ],
-      "etiqueta_arbol": "Elimina Desperdicios Operativos Ya"
+      "etiqueta_arbol": "Elimina Desperdicios Operativos Ya",
+      "deprecado": true
     },
     "eco_eficiencia_critica": {
       "node_id": "eco_eficiencia_critica",
@@ -52126,7 +52195,7 @@
       ],
       "entregable_esperado": "Clasificacion ECCN de tu producto y determinacion documentada de si necesitas licencia de exportacion, junto con la licencia obtenida si aplica",
       "nodos_previos": [
-        "regulaciones_exportacion_ear"
+        "exportacion_de_servicios"
       ],
       "nodos_siguientes": [
         "antidiversion_clause",
@@ -52137,9 +52206,20 @@
       "condiciones_activacion": [
         "Si vas a exportar un producto por primera vez",
         "Si tu producto tiene aplicaciones de doble uso (civil/militar)",
-        "Si el destino de exportacion es un pais con restricciones"
+        "Si el destino de exportacion es un pais con restricciones",
+        "Antes de realizar cualquier embarque de exportación desde EE.UU."
       ],
-      "etiqueta_arbol": "Cumple las Normas de Exportación"
+      "etiqueta_arbol": "Cumple las Normas de Exportación",
+      "ids_alias": [
+        "regulaciones_exportacion_ear"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "regulaciones_exportacion_ear",
+          "titulo": "Regulaciones de Administración de Exportaciones (EAR) y Licencias",
+          "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        }
+      ]
     },
     "exportacion_de_servicios": {
       "node_id": "exportacion_de_servicios",
@@ -52160,7 +52240,7 @@
         "garantias_producto_internacional"
       ],
       "nodos_siguientes": [
-        "regulaciones_exportacion_ear"
+        "export_administration_regulations"
       ],
       "condiciones_activacion": [
         "Cuando la empresa ofrece servicios en lugar de (o además de) productos físicos",
@@ -57699,7 +57779,8 @@
         "Si el usuario busca diferenciación de mercado o nuevos segmentos de clientes",
         "Si existe demanda creciente de consumidores por productos sostenibles en su industria"
       ],
-      "etiqueta_arbol": "Gana Clientes con lo Verde"
+      "etiqueta_arbol": "Gana Clientes con lo Verde",
+      "deprecado": true
     },
     "generalistas_vs_especialistas": {
       "node_id": "generalistas_vs_especialistas",
@@ -61245,7 +61326,7 @@
       "entregable_esperado": "Un equipo verde constituido con mandato claro, cronograma de reuniones y primer plan de acción de sostenibilidad de oficina.",
       "nodos_previos": [
         "vincular_compensacion_sostenibilidad",
-        "accountability_incentivos"
+        "incentivos_reconocimiento_sostenibilidad"
       ],
       "nodos_siguientes": [
         "cultura_reduce_reuse_recycle",
@@ -62073,7 +62154,8 @@
         "Cuando un producto no puede reciclarse ni biodegradarse tras su vida útil",
         "Cuando se detectan materiales tóxicos ocultos en combinaciones de manufactura"
       ],
-      "etiqueta_arbol": "Evita Mezclas Imposibles de Separar"
+      "etiqueta_arbol": "Evita Mezclas Imposibles de Separar",
+      "deprecado": true
     },
     "hipotesis_de_canales": {
       "node_id": "hipotesis_de_canales",
@@ -64876,38 +64958,51 @@
       "fuente": "The Green to Gold Business Play - Daniel C. Esty",
       "resumen_teorico": "Crear la mezcla correcta de incentivos y reconocimientos es clave para sostener comportamientos sostenibles. Se combinan seis enfoques: reconocimiento público y premios, concursos y competencias internas, transparencia de datos de desempeño ambiental en tiempo real, beneficios ecológicos concretos, vinculación del desempeño ambiental al presupuesto y a la compensación, y comparativas de resultados entre equipos o sedes. Estas tácticas van desde simples agradecimientos públicos hasta sistemas más elaborados de premios y rankings, aprovechando tanto la motivación intrínseca como la presión social positiva. Es útil cuando ya existe una estrategia de sostenibilidad pero falta motivación real para participar, o cuando quieres escalar un compromiso que empezó pequeño hacia el resto de tu operación o colaboradores.",
       "pasos_accionables": [
-        "Establece un sistema de reconocimiento público regular para quienes logren avances en sostenibilidad",
+        "Establece un sistema de reconocimiento público regular para quienes logren avances en sostenibilidad, por ejemplo premios de reconocimiento anual",
         "Organiza concursos o competencias con premios tangibles ligados a metas ambientales concretas",
-        "Publica datos de desempeño ambiental de forma transparente y accesible, en tiempo real si es posible",
+        "Publica datos de desempeño ambiental de forma transparente y accesible, en tiempo real si es posible, en reuniones de staff y sitios web corporativos",
         "Ofrece beneficios ecológicos concretos como incentivos para vehículos híbridos o eficiencia energética",
-        "Vincula el desempeño ambiental a la compensación o al presupuesto que asignas",
-        "Comparte comparativas o rankings de desempeño ambiental entre equipos, sedes o periodos"
+        "Vincula el desempeño ambiental a la compensación o al presupuesto que asignas, incluidos bonos y promociones",
+        "Comparte comparativas o rankings de desempeño ambiental entre equipos, sedes o periodos",
+        "Incorporar KPIs de sostenibilidad en las evaluaciones de desempeño de gerentes"
       ],
       "entregable_esperado": "Sistema de incentivos y reconocimiento implementado, comunicado y con métricas de participación y resultados ambientales asociados",
       "nodos_previos": [
         "alineacion_engagement_estrategia_general",
         "pilotos_estrategia_sostenibilidad",
         "evaluacion_actitudes_empleados",
-        "valor_intangible_sostenibilidad"
+        "valor_intangible_sostenibilidad",
+        "sistema_gestion_ambiental"
       ],
       "nodos_siguientes": [
         "programa_referidos_exclusividad",
         "vincular_compensacion_sostenibilidad",
-        "compartir_lecciones_aprendidas"
+        "compartir_lecciones_aprendidas",
+        "contabilidad_ambiental",
+        "green_team_oficina",
+        "inversion_capacitacion_sostenibilidad",
+        "lente_sostenibilidad_finanzas"
       ],
       "condiciones_activacion": [
         "Cuando ya tienes una estrategia de sostenibilidad pero no logras que se sienta motivación real para participar",
         "Cuando buscas sostener el compromiso a largo plazo mediante recompensas tangibles",
-        "Cuando quieres escalar una iniciativa sostenible que empezó pequeña hacia el resto de tu operación"
+        "Cuando quieres escalar una iniciativa sostenible que empezó pequeña hacia el resto de tu operación",
+        "Si las metas ambientales no se traducen en resultados concretos"
       ],
       "etiqueta_arbol": "Diseña tus Incentivos Verdes",
       "ids_alias": [
-        "incentivar_reconocer_recompensar"
+        "incentivar_reconocer_recompensar",
+        "accountability_incentivos"
       ],
       "merged_originals": [
         {
           "node_id": "incentivar_reconocer_recompensar",
           "titulo": "Incentivar, Reconocer y Recompensar el Comportamiento Sostenible",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        },
+        {
+          "node_id": "accountability_incentivos",
+          "titulo": "Establecer Accountability con Incentivos Apropiados",
           "fuente": "The Green to Gold Business Play - Daniel C. Esty"
         }
       ]
@@ -64958,14 +65053,15 @@
         "documentacion_exportacion_basica",
         "fijacion_precio_exportacion",
         "evaluacion_mercados_objetivo",
-        "documentacion_exportacion"
+        "documentacion_exportacion",
+        "modos_de_entrada_intermediarios"
       ],
       "nodos_siguientes": [
         "letters_of_credit",
         "seleccion_metodo_envio_internacional",
         "seleccion_de_metodo_de_pago",
         "elaboracion_pro_forma_invoice",
-        "seguro_de_carga_transporte",
+        "seguro_exportacion",
         "certificado_de_origen_coo",
         "documentacion_exportacion_basica",
         "seleccion_metodo_transporte_internacional"
@@ -64978,7 +65074,8 @@
       "etiqueta_arbol": "Define Quién Asume Cada Riesgo",
       "ids_alias": [
         "definicion_terminos_de_venta",
-        "glosario_terminos_incoterms"
+        "glosario_terminos_incoterms",
+        "terminos_de_venta_incoterms"
       ],
       "merged_originals": [
         {
@@ -64989,6 +65086,11 @@
         {
           "node_id": "glosario_terminos_incoterms",
           "titulo": "Términos de Comercio Internacional (Incoterms)",
+          "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        },
+        {
+          "node_id": "terminos_de_venta_incoterms",
+          "titulo": "Términos de Venta / Incoterms",
           "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
         }
       ]
@@ -66857,7 +66959,7 @@
       ],
       "entregable_esperado": "Programa de capacitación en sostenibilidad implementado para todos los niveles de empleados",
       "nodos_previos": [
-        "accountability_incentivos"
+        "incentivos_reconocimiento_sostenibilidad"
       ],
       "nodos_siguientes": [
         "comunicacion_reporte_sostenibilidad",
@@ -69355,7 +69457,7 @@
       ],
       "entregable_esperado": "Un diagnóstico financiero inicial que identifique riesgos, oportunidades de ahorro y fuentes de capital verde",
       "nodos_previos": [
-        "accountability_incentivos"
+        "incentivos_reconocimiento_sostenibilidad"
       ],
       "nodos_siguientes": [
         "contabilidad_basada_actividades",
@@ -69616,7 +69718,7 @@
       ],
       "nodos_siguientes": [
         "eco_efectividad",
-        "ser_menos_malo_vs_ser_bueno"
+        "menos_malo_vs_bueno"
       ],
       "condiciones_activacion": [
         "Cuando el cumplimiento normativo se percibe como el techo de la sostenibilidad de la empresa",
@@ -69770,7 +69872,8 @@
         "Si la empresa no tiene una estrategia de sostenibilidad formal",
         "Si el impulso de sostenibilidad viene solo de mandos medios sin respaldo ejecutivo"
       ],
-      "etiqueta_arbol": "Lidera la Sostenibilidad desde Arriba"
+      "etiqueta_arbol": "Lidera la Sostenibilidad desde Arriba",
+      "deprecado": true
     },
     "liderazgo_ejecutivo_innovacion": {
       "node_id": "liderazgo_ejecutivo_innovacion",
@@ -71050,9 +71153,10 @@
       "resumen_teorico": "Son productos que combinan materiales biológicos y técnicos de forma inseparable, impidiendo que puedan reingresar limpiamente a cualquiera de los dos metabolismos (ej. zapatillas deportivas con suela tóxica y parte superior técnica). Mientras se logra su rediseño completo, requieren ingeniosas soluciones intermedias como el desensamble parcial o el diseño de componentes separables por metabolismo.",
       "pasos_accionables": [
         "Identificar productos actuales que mezclan materiales biológicos y técnicos sin separación posible",
-        "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica",
+        "Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica, o pasar a mono-materiales",
         "Facilitar el desensamble para reciclar cada componente en su metabolismo correspondiente",
-        "Comunicar y capitalizar (marketing) la recuperación de materiales como ventaja competitiva"
+        "Comunicar y capitalizar (marketing) la recuperación de materiales como ventaja competitiva",
+        "Evaluar la toxicidad de los aditivos usados (curtientes, tintes, adhesivos) en cada componente"
       ],
       "entregable_esperado": "Rediseño conceptual del producto híbrido separando claramente componentes biológicos y técnicos, con mecanismo de desensamble",
       "nodos_previos": [
@@ -71062,13 +71166,25 @@
         "metabolismo_biologico_y_tecnico"
       ],
       "nodos_siguientes": [
-        "fase_de_eliminacion_de_no_comercializables"
+        "fase_de_eliminacion_de_no_comercializables",
+        "nutrientes_biologicos"
       ],
       "condiciones_activacion": [
         "Si el producto actual no puede clasificarse limpiamente como nutriente biológico o técnico",
-        "Si se necesita una solución de transición mientras se logra el rediseño ideal"
+        "Si se necesita una solución de transición mientras se logra el rediseño ideal",
+        "Cuando se detectan materiales tóxicos ocultos en combinaciones de manufactura"
       ],
-      "etiqueta_arbol": "Rediseña tus Híbridos Imposibles"
+      "etiqueta_arbol": "Rediseña tus Híbridos Imposibles",
+      "ids_alias": [
+        "hibridos_monstruosos"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "hibridos_monstruosos",
+          "titulo": "Híbridos Monstruosos (Monstrous Hybrids)",
+          "fuente": "Cradle to Cradle - Michael Braungart"
+        }
+      ]
     },
     "manejo_de_incertidumbre_proyectos_innovadores": {
       "node_id": "manejo_de_incertidumbre_proyectos_innovadores",
@@ -72704,7 +72820,7 @@
         "identificar_oportunidades_sostenibilidad"
       ],
       "nodos_siguientes": [
-        "mensajeria_creativa_positiva",
+        "diseno_mensaje_verde",
         "validacion_certificaciones_terceros"
       ],
       "condiciones_activacion": [
@@ -74274,21 +74390,36 @@
       "pasos_accionables": [
         "Evaluar si las mejoras actuales del producto son solo reducciones de daño o transformaciones reales",
         "Identificar métricas de 'eficiencia' que puedan estar optimizando el aspecto equivocado del problema",
-        "Redefinir los objetivos del proyecto desde 'reducir impacto negativo' hacia 'generar impacto positivo'",
-        "Evitar el lenguaje de culpa (cero emisiones, huella cero) y sustituirlo por lenguaje de calidad de vida y abundancia"
+        "Redefinir los objetivos del proyecto desde 'reducir impacto negativo' hacia 'generar impacto positivo', empezando por al menos una meta ambiental",
+        "Evitar el lenguaje de culpa (cero emisiones, huella cero) y sustituirlo por lenguaje de calidad de vida y abundancia",
+        "Presentar a stakeholders la visión de 'ser 100% bueno' como alternativa a las metas actuales"
       ],
       "entregable_esperado": "Un documento de reformulación de objetivos ambientales del proyecto, pasando de métricas de reducción a métricas de beneficio positivo",
       "nodos_previos": [
-        "cradle_to_cradle_concepto"
+        "cradle_to_cradle_concepto",
+        "critica_eco_eficiencia",
+        "licencia_para_danar"
       ],
       "nodos_siguientes": [
-        "diversidad_activa"
+        "diversidad_activa",
+        "eco_efectividad"
       ],
       "condiciones_activacion": [
         "Si el usuario está enfocado únicamente en reducir emisiones o residuos sin cuestionar el diseño base",
-        "Cuando el equipo usa lenguaje de culpa o minimización como estrategia central de sostenibilidad"
+        "Cuando el equipo usa lenguaje de culpa o minimización como estrategia central de sostenibilidad",
+        "Si el equipo necesita una visión inspiradora en lugar de una lista de restricciones"
       ],
-      "etiqueta_arbol": "Busca Hacer el Bien"
+      "etiqueta_arbol": "Busca Hacer el Bien",
+      "ids_alias": [
+        "ser_menos_malo_vs_ser_bueno"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "ser_menos_malo_vs_ser_bueno",
+          "titulo": "Ser Menos Malo vs. Ser 100% Bueno",
+          "fuente": "Cradle to Cradle - Michael Braungart"
+        }
+      ]
     },
     "mensaje_desarrolladores_area": {
       "node_id": "mensaje_desarrolladores_area",
@@ -74436,7 +74567,8 @@
       "condiciones_activacion": [
         "Cuando se busca ampliar el alcance de un mensaje verde a audiencias no comprometidas con el ambientalismo"
       ],
-      "etiqueta_arbol": "Comunica lo Verde con Positividad"
+      "etiqueta_arbol": "Comunica lo Verde con Positividad",
+      "deprecado": true
     },
     "mental_trial_and_error": {
       "node_id": "mental_trial_and_error",
@@ -74600,10 +74732,9 @@
       ],
       "nodos_siguientes": [
         "nutrientes_biologicos",
-        "hibridos_monstruosos",
+        "manejo_de_hibridos_monstruosos",
         "productos_de_servicio",
-        "energia_eolica_distribuida",
-        "manejo_de_hibridos_monstruosos"
+        "energia_eolica_distribuida"
       ],
       "condiciones_activacion": [
         "Si diseñas empaques, textiles o productos de consumo de vida corta",
@@ -76134,7 +76265,7 @@
         "proteccion_organizacion_matriz_experimentos"
       ],
       "nodos_siguientes": [
-        "eco_eficiencia_costos"
+        "eco_eficiencia"
       ],
       "condiciones_activacion": [
         "Si la empresa maneja materiales peligrosos, tóxicos o cadenas de suministro complejas",
@@ -76957,10 +77088,9 @@
       ],
       "entregable_esperado": "Un diagnóstico de tu etapa de madurez en sostenibilidad junto con una hoja de ruta hacia la siguiente etapa.",
       "nodos_previos": [
-        "liderazgo_ceo_sostenibilidad",
+        "vision_alineacion_sostenibilidad",
         "vision_clara_sostenibilidad",
-        "plan_accion_corto_mediano_largo_plazo",
-        "vision_alineacion_sostenibilidad"
+        "plan_accion_corto_mediano_largo_plazo"
       ],
       "nodos_siguientes": [
         "innovar_transformar_mercados"
@@ -77456,7 +77586,7 @@
         "investigacion_mercado_primaria_secundaria_2"
       ],
       "nodos_siguientes": [
-        "terminos_de_venta_incoterms"
+        "incoterms_reglas_comerciales_internacionales"
       ],
       "condiciones_activacion": [
         "Cuando la empresa no cuenta con presencia ni red de contactos en el mercado destino",
@@ -78948,7 +79078,8 @@
       "condiciones_activacion": [
         "Si la empresa desea comunicar públicamente un compromiso de carbono neutral"
       ],
-      "etiqueta_arbol": "Compensa tus Emisiones de Carbono"
+      "etiqueta_arbol": "Compensa tus Emisiones de Carbono",
+      "deprecado": true
     },
     "new_technology_error_pathways": {
       "node_id": "new_technology_error_pathways",
@@ -79792,7 +79923,7 @@
       ],
       "entregable_esperado": "Prototipo o especificación de material biodegradable certificado, con protocolo de compostaje o retorno al suelo",
       "nodos_previos": [
-        "hibridos_monstruosos",
+        "manejo_de_hibridos_monstruosos",
         "metabolismo_biologico_y_tecnico",
         "waste_equals_food",
         "desperdicio_es_alimento"
@@ -97158,7 +97289,8 @@
         "Antes de realizar cualquier embarque de exportación desde EE.UU.",
         "Cuando el producto tiene aplicaciones potencialmente sensibles (dual-use, tecnología, defensa)"
       ],
-      "etiqueta_arbol": "Tramita tus Licencias de Exportación"
+      "etiqueta_arbol": "Tramita tus Licencias de Exportación",
+      "deprecado": true
     },
     "regulador_fallas_sistemicas": {
       "node_id": "regulador_fallas_sistemicas",
@@ -98605,7 +98737,7 @@
         "compra_offsets_carbono"
       ],
       "nodos_siguientes": [
-        "unirse_grupo_lideres_climaticos"
+        "unirse_organizacion_rsc_ambiental"
       ],
       "condiciones_activacion": [
         "Si el mayor impacto ambiental del producto ocurre durante su uso por el cliente, no en su producción."
@@ -103424,7 +103556,8 @@
         "Cuando el usuario está preparando un envío internacional y necesita definir la cobertura de riesgos de transporte.",
         "Si el término de venta acordado responsabiliza al exportador por el seguro."
       ],
-      "etiqueta_arbol": "Asegura tu Carga en Tránsito"
+      "etiqueta_arbol": "Asegura tu Carga en Tránsito",
+      "deprecado": true
     },
     "seguro_de_credito_a_la_exportacion": {
       "node_id": "seguro_de_credito_a_la_exportacion",
@@ -103442,7 +103575,7 @@
       ],
       "entregable_esperado": "Póliza de seguro de crédito a la exportación contratada, con documentación de cobertura para tus cuentas por cobrar en el extranjero.",
       "nodos_previos": [
-        "seguro_de_carga_transporte",
+        "seguro_exportacion",
         "garantia_capital_trabajo",
         "prevencion_problemas_de_pago",
         "financiamiento_exim_bank_3",
@@ -103478,21 +103611,37 @@
       "pasos_accionables": [
         "Determinar según términos de venta quién es responsable del seguro de carga",
         "Contratar póliza propia o asegurar bajo la póliza del freight forwarder",
-        "No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad",
+        "No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad, y verificar documentación",
         "Evaluar contratación de seguro de crédito a la exportación para cubrir riesgo de impago",
-        "Verificar requisitos de instituciones financieras del comprador sobre seguro de crédito"
+        "Verificar requisitos de instituciones financieras del comprador sobre seguro de crédito",
+        "Consultar con aseguradoras internacionales o freight forwarders para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP)."
       ],
       "entregable_esperado": "Pólizas de seguro de carga y/o crédito contratadas antes del embarque",
       "nodos_previos": [
         "seleccion_metodo_transporte_internacional",
-        "documentacion_exportacion"
+        "documentacion_exportacion",
+        "incoterms_reglas_comerciales_internacionales"
       ],
-      "nodos_siguientes": [],
+      "nodos_siguientes": [
+        "documentacion_exportacion",
+        "seguro_de_credito_a_la_exportacion"
+      ],
       "condiciones_activacion": [
         "Antes de cualquier embarque de mercancía de alto valor",
-        "Si existe riesgo de impago por parte del comprador extranjero"
+        "Si existe riesgo de impago por parte del comprador extranjero",
+        "Si el término de venta acordado responsabiliza al exportador por el seguro."
       ],
-      "etiqueta_arbol": "Contrata Seguros de Exportación"
+      "etiqueta_arbol": "Contrata Seguros de Exportación",
+      "ids_alias": [
+        "seguro_de_carga_transporte"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "seguro_de_carga_transporte",
+          "titulo": "Seguro de Carga (Cargo Insurance)",
+          "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        }
+      ]
     },
     "seguro_inversion_opic": {
       "node_id": "seguro_inversion_opic",
@@ -104446,7 +104595,7 @@
       ],
       "entregable_esperado": "Plan de habilitación de mensajeros internos y externos con materiales de comunicación simplificados",
       "nodos_previos": [
-        "mensajeria_creativa_positiva"
+        "diseno_mensaje_verde"
       ],
       "nodos_siguientes": [
         "canales_comunicacion_estrategicos"
@@ -104510,7 +104659,6 @@
       ],
       "nodos_siguientes": [
         "seguro_exportacion",
-        "seguro_de_carga_transporte",
         "documentacion_exportacion_basica"
       ],
       "condiciones_activacion": [
@@ -105406,7 +105554,8 @@
         "Cuando las metas de sostenibilidad de la empresa se centran solo en reducción de daño",
         "Si el equipo necesita una visión inspiradora en lugar de una lista de restricciones"
       ],
-      "etiqueta_arbol": "Sé Bueno, no Menos Malo"
+      "etiqueta_arbol": "Sé Bueno, no Menos Malo",
+      "deprecado": true
     },
     "servicio_postventa_internacional": {
       "node_id": "servicio_postventa_internacional",
@@ -106473,7 +106622,7 @@
         "chief_sustainability_officer"
       ],
       "nodos_siguientes": [
-        "accountability_incentivos"
+        "incentivos_reconocimiento_sostenibilidad"
       ],
       "condiciones_activacion": [
         "Si la empresa necesita estructura formal para gestionar su desempeño ambiental",
@@ -110620,14 +110769,14 @@
       ],
       "nodos_siguientes": [
         "documentacion_exportacion_basica",
-        "seguro_de_carga_transporte",
-        "documentacion_exportacion"
+        "seguro_de_carga_transporte"
       ],
       "condiciones_activacion": [
         "Al negociar los términos de una venta de exportación",
         "Cuando existe ambigüedad sobre quién asume el riesgo y costo del transporte"
       ],
-      "etiqueta_arbol": "Define tus Términos de Venta"
+      "etiqueta_arbol": "Define tus Términos de Venta",
+      "deprecado": true
     },
     "tesis_boulder_compromiso_largo_plazo": {
       "node_id": "tesis_boulder_compromiso_largo_plazo",
@@ -113077,7 +113226,7 @@
         "estrategias_seleccion_preferencial"
       ],
       "nodos_siguientes": [
-        "eco_efectividad_re_evolucion_industrial",
+        "eco_efectividad_2",
         "cinco_pasos_eco_efectividad"
       ],
       "condiciones_activacion": [
@@ -113426,7 +113575,8 @@
       "condiciones_activacion": [
         "Si la empresa busca reconocimiento externo y mejores prácticas compartidas en sostenibilidad climática."
       ],
-      "etiqueta_arbol": "Únete a Líderes en Cambio Climático"
+      "etiqueta_arbol": "Únete a Líderes en Cambio Climático",
+      "deprecado": true
     },
     "unirse_organizacion_rsc_ambiental": {
       "node_id": "unirse_organizacion_rsc_ambiental",
@@ -113436,23 +113586,35 @@
       "fuente": "The Green to Gold Business Play - Daniel C. Esty",
       "resumen_teorico": "Consiste en afiliarse a redes u organizaciones especializadas (como Ceres, EDF, NRDC, WWF) que ayudan a las empresas a integrar la sostenibilidad en sus operaciones y reportes. Estas organizaciones ofrecen asesoría experta, acceso a redes de inversionistas responsables y credibilidad externa.",
       "pasos_accionables": [
-        "Investigar organizaciones de RSC ambiental relevantes para el sector de la empresa",
-        "Evaluar los requisitos de membresía y beneficios ofrecidos",
-        "Formalizar la afiliación y participar activamente en sus iniciativas",
+        "Investigar organizaciones de RSC ambiental relevantes para el sector de la empresa, incluidas ONGs o iniciativas",
+        "Evaluar los requisitos de membresía y beneficios ofrecidos, y sus compromisos",
+        "Formalizar la afiliación y participar activamente en sus iniciativas, incluido el intercambio de mejores prácticas",
         "Aprovechar el acceso a redes de inversionistas o certificaciones asociadas"
       ],
       "entregable_esperado": "Membresía activa en al menos una red o organización de sostenibilidad reconocida",
       "nodos_previos": [
-        "apoyar_una_causa"
+        "apoyar_una_causa",
+        "resolver_problemas_climaticos_clientes"
       ],
       "nodos_siguientes": [
-        "identificar_evaluar_socios_estrategicos"
+        "identificar_evaluar_socios_estrategicos",
+        "dar_forma_politica_climatica"
       ],
       "condiciones_activacion": [
         "Si la empresa busca credibilidad externa y acceso a mejores prácticas de la industria",
         "Si se necesita apoyo experto para el reporte de sostenibilidad"
       ],
-      "etiqueta_arbol": "Únete a una Red Ambiental Responsable"
+      "etiqueta_arbol": "Únete a una Red Ambiental Responsable",
+      "ids_alias": [
+        "unirse_grupo_lideres_climaticos"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "unirse_grupo_lideres_climaticos",
+          "titulo": "Unirse a un Grupo de Líderes en Cambio Climático",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ]
     },
     "unstabilized_approach_go_around": {
       "node_id": "unstabilized_approach_go_around",
@@ -114380,7 +114542,6 @@
       "nodos_previos": [
         "crecimiento_ingresos_verdes",
         "eco_advantage",
-        "generacion_ingresos_verdes",
         "eco_eficiencia",
         "ventaja_competitiva_producto"
       ],
@@ -116140,7 +116301,7 @@
       "resumen_teorico": "Una iniciativa de sostenibilidad solo funciona si nace de una visión clara, coherente con tu estrategia de negocio y comunicada con convicción. Elige el marco conceptual (sostenibilidad, medio ambiente, responsabilidad social) que mejor encaje con tu forma de operar y tu propósito como fundador. La evidencia muestra que estas iniciativas prosperan cuando surgen de tu liderazgo directo, no como esfuerzos aislados de algún colaborador. Combina una meta aspiracional de largo plazo ('North Star', como el 'zero waste' de DuPont) que inspire innovación, con objetivos operativos concretos y medibles de corto plazo. La consistencia entre lo que dices sobre sostenibilidad y tus prioridades reales de negocio (costos, crecimiento) evita contradicciones internas y da credibilidad a tu propuesta.",
       "pasos_accionables": [
         "Elige el marco conceptual que mejor se ajuste a tu forma de operar (sostenibilidad, medio ambiente, responsabilidad social, stewardship)",
-        "Redacta una declaración de visión de sostenibilidad clara y fácil de comunicar",
+        "Redacta una declaración de visión de sostenibilidad clara y fácil de comunicar, y articulala públicamente",
         "Verifica que esa visión sea coherente con tu estrategia de negocio y no genere contradicciones",
         "Define una meta aspiracional de largo plazo ('North Star') que motive innovación",
         "Establece metas operativas concretas y medibles de corto plazo",
@@ -116156,21 +116317,29 @@
         "diseno_para_el_ambiente_dfe",
         "equipos_multifuncionales_dfe",
         "etapas_creacion_valor_sostenibilidad",
-        "modelo_lubin_esty_4_etapas"
+        "modelo_lubin_esty_4_etapas",
+        "chief_sustainability_officer"
       ],
       "condiciones_activacion": [
         "Si notas desalineación entre tu discurso de sostenibilidad y tus otras prioridades estratégicas",
         "Cuando necesitas movilizar a tu equipo o colaboradores en torno a un objetivo común",
-        "Si sientes que tu negocio carece de dirección clara en su estrategia de sostenibilidad"
+        "Si sientes que tu negocio carece de dirección clara en su estrategia de sostenibilidad",
+        "Si el impulso de sostenibilidad viene solo de mandos medios sin respaldo ejecutivo"
       ],
       "etiqueta_arbol": "Alinea tu Visión Sostenible",
       "ids_alias": [
-        "vision_clara_sostenibilidad"
+        "vision_clara_sostenibilidad",
+        "liderazgo_ceo_sostenibilidad"
       ],
       "merged_originals": [
         {
           "node_id": "vision_clara_sostenibilidad",
           "titulo": "Visión y Marco Claro para la Acción Sostenible",
+          "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        },
+        {
+          "node_id": "liderazgo_ceo_sostenibilidad",
+          "titulo": "Liderazgo Top-Down en Sostenibilidad",
           "fuente": "The Green to Gold Business Play - Daniel C. Esty"
         }
       ]
@@ -125139,7 +125308,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 129,
+    "nodos_sin_enlaces_entrantes": 140,
     "enlaces_rotos_en_grafo": 0
   }
 }

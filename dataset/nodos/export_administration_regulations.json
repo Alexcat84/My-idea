@@ -15,7 +15,7 @@
   ],
   "entregable_esperado": "Clasificacion ECCN de tu producto y determinacion documentada de si necesitas licencia de exportacion, junto con la licencia obtenida si aplica",
   "nodos_previos": [
-    "regulaciones_exportacion_ear"
+    "exportacion_de_servicios"
   ],
   "nodos_siguientes": [
     "antidiversion_clause",
@@ -26,7 +26,18 @@
   "condiciones_activacion": [
     "Si vas a exportar un producto por primera vez",
     "Si tu producto tiene aplicaciones de doble uso (civil/militar)",
-    "Si el destino de exportacion es un pais con restricciones"
+    "Si el destino de exportacion es un pais con restricciones",
+    "Antes de realizar cualquier embarque de exportación desde EE.UU."
   ],
-  "etiqueta_arbol": "Cumple las Normas de Exportación"
+  "etiqueta_arbol": "Cumple las Normas de Exportación",
+  "ids_alias": [
+    "regulaciones_exportacion_ear"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "regulaciones_exportacion_ear",
+      "titulo": "Regulaciones de Administración de Exportaciones (EAR) y Licencias",
+      "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ]
 }
