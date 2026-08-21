@@ -1,0 +1,82 @@
+==============================================================================
+D10, RELECTURA CONJUNTA: LA CONDICION 1 CUBIERTA SIN PERDIDA SELLADA
+  operacion: OP-M-02-PROG | plan: docs/loop/PLAN_V63_OPM02PROG.json
+==============================================================================
+
+--- 1. EL TEXTO DE HOY, LEIDO DEL GRAFO VIVO ---
+
+  ocho_fases_experiencia_cliente  (deprecado: False)
+     paso      1. Identificar en qué fase se encuentra actualmente cada segmento de clientes.
+     paso      2. Diseñar la experiencia emocional deseada para cada una de las ocho fases.
+     paso      3. Detectar en qué fase se están 'atascando' la mayoría de los clientes actuales.
+     paso      4. Crear un plan de acción específico para avanzar a los clientes de una fase a la siguiente.
+     paso      5. Priorizar el diseño de experiencia en las fases Affirm y Activate, que suelen ser las más descuidadas y donde ocurre la mayor deserción.
+     condicion 1. Cuando el usuario necesita una estructura sistemática para gestionar la experiencia del cliente después de la venta.
+     condicion 2. Cuando se busca reducir la tasa de abandono temprano de clientes.
+
+  fases_de_retencion_de_clientes  (deprecado: True)
+     paso      1. Mapear en qué fase se encuentra actualmente cada segmento de clientes.
+     paso      2. Diseñar acciones específicas de la empresa para cada una de las 8 fases (no solo para Assess y Admit).
+     paso      3. Priorizar el diseño de experiencia en las fases Affirm y Activate, que suelen ser las más descuidadas y donde ocurre la mayor deserción.
+     condicion 1. Cuando la empresa solo tiene procesos diseñados para atraer y cerrar ventas, pero no para después de la compra.
+     condicion 2. Cuando se busca reducir la tasa de abandono temprano de clientes.
+
+--- 2. EL PAR EN DISPUTA, UNO SOBRE OTRO ---
+  MUERE     (condicion 1 de fases_de_retencion_de_clientes): Cuando la empresa solo tiene procesos diseñados para atraer y cerrar ventas, pero no para después de la compra.
+  SOBREVIVE (condicion 1 de ocho_fases_experiencia_cliente): Cuando el usuario necesita una estructura sistemática para gestionar la experiencia del cliente después de la venta.
+
+--- 3. LA MISMA ESPECIE, SELLADA EL MISMO DIA POR OP-M-03-I ---
+  perdidas DE CONDICIONES en el plan hermano: 2
+     condicion 1 de decision_pivote_perseverar | el disparador de que los experimentos de producto muestren efectividad DECRECIENTE; la condicion 1 del superviviente dispara porque las metricas clave NO MEJORAN tras varios ciclos, que es e
+     condicion 3 de decision_pivote_perseverar | la imagen de la startup ATRAPADA EN LA TIERRA DE LOS MUERTOS VIVIENTES, que es el estado de ni crecer ni morir; la condicion 2 del superviviente dispara por haber agotado las mejoras posible
+
+--- 3b. LA BUSQUEDA NEGATIVA, CORRIDA Y NO CITADA ---
+  json ENTERO de ocho_fases_experiencia_cliente: 2297 caracteres
+     atraer                 AUSENTE
+     cerrar venta           AUSENTE
+     cerrar la venta        AUSENTE
+     solo tiene proceso     AUSENTE
+     procesos dise          AUSENTE
+  agujas del encuadre del sintoma halladas: 0 de 5
+
+--- 4. EL TEXTO VIEJO, EXTRAIDO VERBATIM DEL PLAN (no resumido) ---
+  La condicion 1 del que muere SI es el mismo disparador dicho desde el lado del sintoma (solo hay procesos para atraer y cerrar ventas, y nada para despues de la compra) y por eso va CUBIERTA y SIN perdida: lo operativo, el DESPUES DE LA VENTA, esta en el texto del superviviente con todas sus letras.
+
+--- 5. EL ESTADO DEL CAMPO perdidas ANTES ---
+  contrato: CAMPO PROPIO v1 | perdidas selladas: 1
+     DE PARAMETRO DE PASO   paso 2 de fases_de_retencion_de_clientes
+
+--- 6. LA DECISION, CON SU VARA ---
+  LA VARA es la del acta 55, pregunta 5, con su letra: LAS PERDIDAS DE
+  CONDICIONES NO VAN DE APPEND POR DEFECTO, y LA PERDIDA NOMBRADA ES EL
+  CARRIL MIENTRAS EL PENDIENTE DEL INCISO DE CONDICIONES SIGA ABIERTO.
+  Esa vara reparte DOS marcas, no una: APPEND cuando el disparador es
+  DISTINTO, y CUBIERTO CON LA PERDIDA NOMBRADA cuando es el MISMO
+  disparador con un matiz que muere. Lo que la vara no contempla en
+  ninguna de sus dos ramas es CUBIERTO CON SILENCIO.
+
+  MEDIDO ARRIBA, y esto es lo que decide: el disparador operativo (el
+  DESPUES DE LA VENTA) esta en las dos condiciones, asi que el CUBIERTO
+  se sostiene y no se toca; y el encuadre del sintoma (SOLO TIENE
+  PROCESOS PARA ATRAER Y CERRAR VENTAS) NO esta en ningun paso ni en
+  ninguna condicion del superviviente de hoy, o sea que muere.
+
+  SE SELLA. Es la misma especie que las dos hermanas de OP-M-03-I
+  (el fenomeno sin la pendiente, el callejon sin la imagen), y tratar
+  igual lo medido igual en la misma vuelta es lo que el acta 55,
+  pregunta 4, llama regla de trabajo DECLARADA Y UNIFORME.
+
+--- 7. LO QUE SE ESCRIBE ---
+  perdidas del acto: 2 (antes 1)
+  perdida nueva: DE CONDICIONES | condicion 1 de fases_de_retencion_de_clientes
+
+GUARDAS TRAS ESCRIBIR
+  el plan vuelve a parsear y sigue con 1 acto(s)
+  contrato intacto: CAMPO PROPIO v1
+  perdidas selladas: 2
+  las CUATRO claves y las tres especies: OK
+  el texto viejo sigue dentro: True
+  las marcas del acto no se han movido: pasos {'fases_de_retencion_de_clientes': {'1': 'CUBIERTO:1', '2': 'CUBIERTO:2', '3': 'APPEND'}} | condiciones {'fases_de_retencion_de_clientes': {'1': 'CUBIERTO:1', '2': 'APPEND'}}
+  guiones largos 0, guiones medios 0
+
+VERDE: la perdida sellada, el texto viejo entero y el grafo intacto.
