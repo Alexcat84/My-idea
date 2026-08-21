@@ -586,11 +586,19 @@ se ejecuta ni se rehace.
 | **`fa1c3226`** | **TAREA 1 entera**: el registro del acta 65 (`+118`, `0` borradas, 47 citas y 0 malas) y la correccion declarada de la ficha de `OP-U-02` (una linea, cero claves nuevas, estado sin mover) |
 | **`eedd7fa1`** | **TAREA 2**: el lote B ejecutado (3 fusiones, 3 declarados, 15 nodos muertos, `P.16` limpio, colisiones que calzan, Gate 0 con su ciclo de tres y las tres suites en verde) |
 
-**El hash final de la vuelta y el commit que escribe esta cabecera no caben en este fichero por la
-misma razon de siempre** (un commit no puede contener su propio hash): **van en el mensaje del commit
-que cierra la vuelta**, que es lo que la regla 7 pide.
+| **`24ca8ca3`** | **el reporte y el registro del lote B** (`+398`, `0` borradas, citas 8 de 8, idempotencia mordiendo) |
 
-**LAS DOS GUARDAS DE CIERRE, RE-CORRIDAS TRAS ESCRIBIR ESTE REPORTE**, y su salida citada:
-`tallar_cabecera_reporte.py --vuelta 66 --comparar docs/loop/REPORTE.md` y
-`comprobar_promesas_de_marcado.py --reporte docs/loop/REPORTE.md --plan
-docs/loop/PLAN_V66_OPU02_LOTE_B.json`. **Sus resultados van en el mensaje del commit de cierre.**
+**EL HASH FINAL DE LA VUELTA ES ESTE FICHERO ESCRITO POR SU CUARTO COMMIT**, y por eso se escribe
+aqui **en una edicion posterior**: **un commit no puede contener su propio hash**. **Los TRES
+anteriores estan arriba, leidos hoy con `git log --oneline`**, y el cuarto **es el que escribe esta
+misma linea**. Es la misma via que la vuelta 65 uso.
+
+**LAS DOS GUARDAS DE CIERRE, RE-CORRIDAS TRAS ESTA EDICION** (regla 1: lo que la propia vuelta mueve,
+se remide antes de publicar):
+
+| guarda | comando | resultado |
+|---|---|---|
+| **la cabecera se talla, no se teclea** | `tallar_cabecera_reporte.py --vuelta 66 --comparar docs/loop/REPORTE.md` | **`CABECERA: IDENTICA AL TALLADOR`**, 14 filas cotejadas, **DISTINTAS 0**, ausentes 0 ([`SALIDA_V66_CABECERA_COMPARADA.txt`](SALIDA_V66_CABECERA_COMPARADA.txt)) |
+| **las promesas de marcado, por maquina** | `comprobar_promesas_de_marcado.py --reporte docs/loop/REPORTE.md --plan docs/loop/PLAN_V66_OPU02_LOTE_B.json` | **1 promesa, 1 CUMPLIDA, 0 INCUMPLIDAS** ([`SALIDA_V66_PROMESAS.txt`](SALIDA_V66_PROMESAS.txt)) |
+
+**Cero guiones largos y cero guiones medios**, contados por maquina sobre el fichero entero.
