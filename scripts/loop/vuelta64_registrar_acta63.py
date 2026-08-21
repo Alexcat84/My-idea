@@ -20,7 +20,6 @@ de scripts/loop/vuelta64_consumidas.py, las dos IMPORTADAS, no copiadas.
 Uso:
   python scripts/loop/vuelta64_registrar_acta63.py [--simular]
 """
-# ROTULO titulo especie=PROCEDENCIA cita=vuelta:63 fuente=docs/loop/ACTA_AUDITOR.md prueba="ACTA DE LA VUELTA 63 DEL AUDITOR" corte=2026-08-20 motivo="el titulo nombra el ACTA que este registro transcribe, que es de la vuelta 63; el fichero es de la vuelta 64 y por eso el numero no calza con su propia vuelta a proposito"
 import argparse
 import io
 import os
@@ -307,7 +306,15 @@ def main():
             print("ROJO: el texto trae un %s. PARADA." % nombre)
             return 1
 
-    antes = len(io.open(PAGINA, encoding="utf-8").read().split(NL))
+    # GUARDA DE IDEMPOTENCIA: adosar dos veces publicaria la misma seccion dos
+    # veces, y una pagina con la adjudicacion duplicada no falla, dice que si.
+    crudo = io.open(PAGINA, encoding="utf-8").read()
+    if "LAS ADJUDICACIONES DEL ACTA DE LA VUELTA 63" in crudo:
+        print()
+        print("YA ADOSADA: la seccion del acta 63 ya esta en la pagina. No se escribe nada.")
+        return 0
+
+    antes = len(crudo.split(NL))
     print()
     print("  la pagina tiene %d lineas y el texto anade %d" % (antes, t.count(NL)))
     print("  la primera ejecutable del puesto 2, medida: %s" % primera)

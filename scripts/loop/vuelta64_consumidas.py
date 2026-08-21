@@ -43,6 +43,8 @@ REG = os.path.join(RAIZ, "docs", "plan", "03_FUSIONES.md")
 CONSUMIDAS = ["OP-M-02-MEDIOS", "OP-M-02-ASSESS", "OP-M-02-ADMIT",
               "OP-M-02-ACTIVATE", "OP-M-02-ACCOMPLISH"]
 SIN_COLUMNA = "NO HAY COLUMNA %s EN ESTA TABLA"
+# La cabecera bajo la que vive el REGISTRO DE LA FUSION de un tramo.
+SEDE_FUSION = chr(96) + "OP-U-01" + chr(96) + ", TRAMO"
 
 
 def medir():
@@ -111,13 +113,26 @@ def medir():
         # casualidad.
         def cita(m):
             return chr(96) + m + chr(96)
-        hits = []
+        crudos = []
         for i, ln in enumerate(lineas, 1):
             if all(cita(m) in ln for m in miembros):
-                hits.append((i, ln))
+                sede_i, sede_t = 0, "?"
+                for j in range(i, 0, -1):
+                    if lineas[j - 1].startswith("## "):
+                        sede_i, sede_t = j, lineas[j - 1].strip()
+                        break
+                crudos.append((i, ln, sede_i, sede_t))
+        # EL SITIO QUE VALE ES EL REGISTRO DE LA FUSION, o sea el que vive bajo
+        # una cabecera de TRAMO DE OP-U-01. Los demas se DECLARAN en vez de
+        # descartarse en silencio, y hay uno seguro desde la vuelta 64: la propia
+        # tabla de esta seccion, que nombra los dos miembros de cada par. Un
+        # instrumento que se cuenta a si mismo como fuente es la averia que este
+        # filtro evita, y por eso el filtro se nombra en vez de esconderse.
+        hits = [(i, ln) for i, ln, _si, st in crudos if SEDE_FUSION in st]
+        otros = [(i, st) for i, _ln, _si, st in crudos if SEDE_FUSION not in st]
         if len(hits) != 1:
-            fallos.append("%s: %d lineas del registro nombran a los dos miembros, "
-                          "y la correccion necesita UNA" % (id_op, len(hits)))
+            fallos.append("%s: %d lineas bajo una cabecera de tramo de OP-U-01 nombran "
+                          "a los dos miembros, y la correccion necesita UNA" % (id_op, len(hits)))
         sitios = []
         for i, ln in hits:
             sede_i, sede_t = 0, "?"
@@ -157,7 +172,7 @@ def medir():
             "id_op": id_op, "miembros": miembros, "estados": estados,
             "sup_real": sup_real, "sup_ficha": sup_ficha, "muerto": muerto,
             "divergen": sup_real != sup_ficha, "sitios": sitios,
-            "solo_muerto": solo_muerto,
+            "otros_sitios": otros, "solo_muerto": solo_muerto,
         })
     return filas, fallos, contexto
 
@@ -211,6 +226,10 @@ def main():
             print("      sobrevive (de su columna): %s" % s["sobrevive"])
             print("      absorbe   (de su columna): %s" % s["absorbe"])
             print("      linea %-6d | %s" % (s["linea"], s["texto"][:130]))
+        print("   OTROS sitios que nombran el par y NO son registro de fusion: %d"
+              % len(f["otros_sitios"]))
+        for i, st in f["otros_sitios"]:
+            print("      linea %-6d bajo %s" % (i, st[:110]))
         print("   lineas que nombran solo al que murio (%s): %d %s"
               % (", ".join(f["muerto"]), len(f["solo_muerto"]), f["solo_muerto"][:12]))
     print()

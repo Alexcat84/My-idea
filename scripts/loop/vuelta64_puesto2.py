@@ -17,6 +17,7 @@ QUE SE MIDE, todo de docs/plan/OPERACIONES.jsonl y nada de un acta:
 
 Uso: python scripts/loop/vuelta64_puesto2.py
 """
+# ROTULO titulo especie=PROCEDENCIA cita=vuelta:47 fuente=docs/plan/03_FUSIONES.md prueba="adjudicado el 19 ago 2026 (vuelta 47)" corte=2026-08-20 motivo="el titulo nombra LA VARA DEL ORDEN DE LA FASE 03, que se adjudico en la vuelta 47 y no en esta; el numero es del ancestro a proposito y no envejece con el fichero, que es de la vuelta 64"
 import io
 import json
 import os
