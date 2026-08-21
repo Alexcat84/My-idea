@@ -1,0 +1,45 @@
+==============================================================================
+EL TRAMO UNICO DE OP-U-02: LA NOMINA COTEJADA CONTRA EL GRAFO DE HOY
+  nomina fijada : docs/loop/NOMINA_OPU02_V63.jsonl (53 filas)
+  componentes   : docs/loop/_v64_componentes_cierre.jsonl (79, de ellas 53 ABIERTAS)
+  alias del arbol de hoy: 659 | nodos deprecados: 582
+==============================================================================
+
+  la nomina dice: 47 abren, 6 quedan fuera, 53 en total
+
+--- GUARDA 1: IDENTIDAD CONTRA LAS COMPONENTES ABIERTAS DE HOY ---
+   filas que calzan con una componente ABIERTA de hoy: 53 de 53
+   componentes ABIERTAS de hoy sin fila en la nomina: 0
+
+--- GUARDA 2: NINGUN MIEMBRO QUE ABRE ESTA DEPRECADO HOY ---
+   miembros deprecados entre los 47 actos que abren: 0
+
+--- GUARDA 3: LOS QUE QUEDAN FUERA SIGUEN TENIENDO DUENO HOY ---
+   orden_universo 2   tamano 13  duenos de mesa o destejido HOY: OP-M-01, OP-M-01-FUSION
+      la nomina decia: OP-M-01, OP-M-01-FUSION
+   orden_universo 4   tamano 9   duenos de mesa o destejido HOY: OP-M-05, OP-M-05-EDIFICIO, OP-M-05-INDICE
+      la nomina decia: OP-M-05, OP-M-05-EDIFICIO, OP-M-05-INDICE
+   orden_universo 6   tamano 7   duenos de mesa o destejido HOY: OP-M-05-APERTURA
+      la nomina decia: OP-M-05-APERTURA
+   orden_universo 28  tamano 4   duenos de mesa o destejido HOY: OP-M-04
+      la nomina decia: OP-M-04
+   orden_universo 48  tamano 3   duenos de mesa o destejido HOY: OP-D-02
+      la nomina decia: OP-D-02
+   orden_universo 52  tamano 3   duenos de mesa o destejido HOY: OP-M-03-III
+      la nomina decia: OP-M-03-III
+   los 6 de fuera siguen con dueno: SI
+
+--- GUARDA 4: EL TOPE, Y POR QUE EL TRAMO ES UNO ---
+   actos que abren: 47 | tope del tramo: 50 | caben: SI
+   El acta 63, pregunta 5, adjudica que el tramo es PREFIJO CON TOPE y
+   NO minimo. Como los 47 caben bajo el tope, el prefijo es el universo
+   ENTERO: TRAMO UNICO Y FINAL POR AGOTAMIENTO, declarado al abrirlo.
+
+   nodos en los actos que abren : 201
+   nodos en los que quedan fuera: 39
+   por tamano de acto: {3: 23, 4: 10, 5: 7, 6: 4, 8: 1, 10: 1, 15: 1}
+
+==============================================================================
+TRAMO FIJADO: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl, 47 filas en su orden_universo.
+NI UN ACTO SE FUNDE AQUI: este fichero solo dice quien entra y en que orden.
+==============================================================================

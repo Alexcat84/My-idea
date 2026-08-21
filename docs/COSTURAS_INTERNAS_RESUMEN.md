@@ -47,11 +47,11 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 
 ## Conteos
 
-**1456 nodos** en la cola, sobre 3272 activos.
+**1455 nodos** en la cola, sobre 3271 activos.
 
 | dominio | nodos |
 |---|---:|
-| core | 637 |
+| core | 636 |
 | quality | 371 |
 | health_safety | 112 |
 | environmental | 85 |
@@ -71,11 +71,11 @@ El motivo es que esas dos costuras son **parafrasis con cola distinta**, no copi
 | p99 | 65.9 | 56.6 |
 | maximo | 86.6 | 72.6 |
 
-Nodos evaluados por bloques (4 pasos o mas): **2147**. Los de menos dan **NO APLICA**, que no es cero.
+Nodos evaluados por bloques (4 pasos o mas): **2146**. Los de menos dan **NO APLICA**, que no es cero.
 
 ## La franja 44 a 45: lo que el umbral viejo dejaba fuera
 
-**211 citas** entraron al bajar el umbral de bloque de 45 a 44. **Van juntas aqui a proposito**, para que la lectura del auditor las encuentre sin rastrearlas por la cola.
+**210 citas** entraron al bajar el umbral de bloque de 45 a 44. **Van juntas aqui a proposito**, para que la lectura del auditor las encuentre sin rastrearlas por la cola.
 
 | # | dominio | nodo | pasos | bloque | corte |
 |---:|---|---|---:|---:|---:|
@@ -276,20 +276,19 @@ Nodos evaluados por bloques (4 pasos o mas): **2147**. Los de menos dan **NO APL
 | 195 | core | `equity_crowdfunding` | 4 | 44.1 | 2 |
 | 196 | core | `burn_rate_por_etapa` | 4 | 44.1 | 2 |
 | 197 | franquicias | `decision_diy_vs_consultor_franquicia` | 5 | 44.1 | 2 |
-| 198 | core | `pivotar_o_proceder` | 5 | 44.0 | 3 |
-| 199 | quality | `hojas_de_verificacion` | 5 | 44.0 | 2 |
-| 200 | core | `vehiculos_autonomos_drones_supply_chain` | 5 | 44.0 | 3 |
-| 201 | compras | `reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor` | 5 | 44.0 | 2 |
-| 202 | environmental | `nutrientes_biologicos` | 4 | 44.0 | 2 |
-| 203 | core | `hoja_estimacion_costos` | 5 | 44.0 | 3 |
-| 204 | quality | `caso_estudio_benchmarking_terminal` | 6 | 44.0 | 2 |
-| 205 | core | `innovacion_abierta` | 8 | 44.0 | 6 |
-| 206 | core | `term_sheet_disposiciones_vinculantes` | 5 | 44.0 | 3 |
-| 207 | quality | `equipos_ruptura_vet` | 4 | 44.0 | 2 |
-| 208 | quality | `estimacion_intervalos_confianza` | 5 | 44.0 | 3 |
-| 209 | core | `pensar_en_grande_empezar_pequeno` | 4 | 44.0 | 2 |
-| 210 | health_safety | `burocracia_de_seguridad` | 5 | 44.0 | 3 |
-| 211 | core | `estrategia_multicanal_bienvenida` | 6 | 44.0 | 4 |
+| 198 | quality | `hojas_de_verificacion` | 5 | 44.0 | 2 |
+| 199 | core | `vehiculos_autonomos_drones_supply_chain` | 5 | 44.0 | 3 |
+| 200 | compras | `reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor` | 5 | 44.0 | 2 |
+| 201 | environmental | `nutrientes_biologicos` | 4 | 44.0 | 2 |
+| 202 | core | `hoja_estimacion_costos` | 5 | 44.0 | 3 |
+| 203 | quality | `caso_estudio_benchmarking_terminal` | 6 | 44.0 | 2 |
+| 204 | core | `innovacion_abierta` | 8 | 44.0 | 6 |
+| 205 | core | `term_sheet_disposiciones_vinculantes` | 5 | 44.0 | 3 |
+| 206 | quality | `equipos_ruptura_vet` | 4 | 44.0 | 2 |
+| 207 | quality | `estimacion_intervalos_confianza` | 5 | 44.0 | 3 |
+| 208 | core | `pensar_en_grande_empezar_pequeno` | 4 | 44.0 | 2 |
+| 209 | health_safety | `burocracia_de_seguridad` | 5 | 44.0 | 3 |
+| 210 | core | `estrategia_multicanal_bienvenida` | 6 | 44.0 | 4 |
 
 **El motivo del cambio fue un FALSO NEGATIVO medido**: `nucleo/propuesta_gasto_capital`, con costura confirmada por lectura, quedaba fuera por **0,9 puntos** (bloque 44,1). **La señal si lo habia visto**: su corte propuesto es tras el paso 5, exactamente donde la lectura encontro la costura.
 

@@ -3480,3 +3480,129 @@ del auditor pasan de 5 a 6.**
 **LO QUE ESTA SECCION NO HACE, dicho para que nadie se lo atribuya: NO toca ni una cifra publicada
 arriba, NO elige ningun superviviente, NO funde nada y NO deshace ninguna fusion.** Registra
 adjudicaciones y corrige por declaracion.
+
+---
+
+## `OP-M-03-II`: EL REGISTRO DE LA FUSION (2026-08-20, vuelta 64)
+
+**Cada celda de este registro sale de un instrumento corrido en la vuelta 64 y pegada entera**, con el comando citado al lado. **El registro se adosa al final de la pagina y NO reescribe ni una linea de arriba.**
+
+| | |
+|---|---|
+| **la ficha** | `docs/plan/OPERACIONES.jsonl`, tipo **FUSION DE MESA**, estado **LISTA**, fecha de corte **2026-08-12** |
+| **superviviente** | `pivote_o_proceder` |
+| **absorbe** | `pivotar_o_proceder` |
+| **plan sellado** | [`../loop/PLAN_V64_OPM03II.json`](../loop/PLAN_V64_OPM03II.json), contrato **`CAMPO PROPIO v1`** |
+| **censo del catalogo** | ANTES 3853 ficheros, 3272 vivos, 581 deprecados . DESPUES 3853 ficheros, 3271 vivos, 582 deprecados . **delta de deprecados +1 (esperado +1): OK** |
+| **el superviviente** | 7 -> 9 (anadidos 2), condiciones 1 -> 2 (anadidas 1) |
+| **piezas repartidas** | **7 (3 viajan enteras, 3 ya estaban dichas)** |
+
+**LA ADJUDICACION, COPIADA VERBATIM DE LA FICHA Y NO REDACTADA AQUI:**
+
+> ACTO II, LA PUERTA DE LA REUNION DEL DESCUBRIMIENTO, DE BLANK. Sobrevive pivote_o_proceder POR CONTENIDO, y es la aplicacion mas dura de P.8 que hay en el plan: EL CABLEADO DICE LO CONTRARIO Y POR MUCHO, 10 contra 5 a favor de pivotar_o_proceder. Gana el contenido porque pivote_o_proceder lleva el material propio, el mapa del cliente y el resumen en un parrafo, y el otro no tiene nada que el superviviente no diga. LOS IDS SON EL MISMO NOMBRE EN DOS FORMAS Y VAN A LA DECISION 4.
+
+### EL REPARTO, PIEZA A PIEZA, TALLADO DEL PLAN SELLADO
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `pivotar_o_proceder` | `CUBIERTO` | ya lo dice el paso **1** del superviviente |
+| paso **2** de `pivotar_o_proceder` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **3** de `pivotar_o_proceder` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `pivotar_o_proceder` | `INCISO` | **`INCISO` ADOSADO** al paso 7: *hacia la validación con clientes* |
+| paso **5** de `pivotar_o_proceder` | `CUBIERTO` | ya lo dice el paso **7** del superviviente |
+| condicion **1** de `pivotar_o_proceder` | `CUBIERTO` | ya lo dice la condicion **1** del superviviente |
+| condicion **2** de `pivotar_o_proceder` | `APPEND` | **viaja ENTERA** al superviviente |
+
+### LAS PERDIDAS, SELLADAS EN CAMPO PROPIO (`CAMPO PROPIO v1`)
+
+| especie | que se pierde | donde vivia | enrutada a |
+|---|---|---|---|
+| **DE PARAMETRO DE PASO** | el proposito declarado de la reunion, A EVALUAR CON CALMA EN QUE PUNTO ESTAS, y el rotulo de SOCIO O INVERSOR como quienes se sientan; el paso 1 del superviviente convoca a quien te acompana y suma a los inversores, pero no dice A QUE se sientan ni pide calma. SE DICE LO QUE NO SE PIERDE: el gesto de no decidirlo solo esta entero en ese paso 1, y a que se sientan lo dicen los seis pasos que siguen. NO SE ADOSA DE INCISO porque el paso 1 del superviviente cierra en una subordinada sobre los inversores y el inciso quedaria colgando de ella | paso 1 de pivotar_o_proceder | la fase 04, que redacta y afina los pasos del superviviente |
+| **DE PARAMETRO DE PASO** | el destino de la rama que pivota, Y VUELVES AL INICIO; la mitad de PROCEDER si viaja, adosada de INCISO al paso 7, pero la de PIVOTAR muere: el paso 7 del superviviente dice CAMBIAS DE RUMBO (PIVOTAS) y no dice adonde te lleva ese cambio. SE DICE LO QUE NO SE PIERDE: la decision misma y su registro por escrito estan enteros en ese paso 7 | paso 4 de pivotar_o_proceder | la fase 04, que redacta y afina los pasos del superviviente |
+| **DE PARAMETRO DE PASO** | LOS CRITERIOS QUE USASTE PARA TOMARLA, que es lo que hace auditable la decision; el paso 7 del superviviente manda anotar la decision final pero no manda anotar con que se decidio. SE DICE LO QUE NO SE PIERDE: el entregable_esperado del superviviente pide el modelo de negocio actualizado y la lista de funciones reducida, que son el rastro de la decision aunque no sean sus criterios. NO SE ADOSA DE INCISO porque el paso 7 ya recibe el del paso 4 y dos incisos sin coordinar dejan el paso diciendo otra cosa | paso 5 de pivotar_o_proceder | la fase 04, que redacta y afina los pasos del superviviente |
+| **DE CONDICIONES** | LA CADENCIA y LA PUERTA DE GASTO: que el alto se hace DESPUES DE CADA fase de descubrimiento de clientes, o sea que se repite y no ocurre una sola vez, y que se hace ANTES DE INVERTIR MAS EN DESARROLLO, que es lo que convierte el alto en una puerta de dinero. La condicion 1 del superviviente dispara por HABER TERMINADO de poner a prueba el problema con clientes reales, que es el mismo momento dicho una sola vez y sin la puerta | condicion 1 de pivotar_o_proceder | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+
+### LAS REDIRECCIONES Y LAS GUARDAS, LEIDAS DE LA SALIDA DE LA EJECUCION
+
+**Redirecciones sobre nodos VIVOS: 10.** Salen enteras de [`../loop/SALIDA_V64_OPM03II_EJEC.txt`](../loop/SALIDA_V64_OPM03II_EJEC.txt):
+
+| nodo que nombraba al que muere | campo | pasa a nombrar |
+|---|---|---|
+| `categorias_entusiasmo_cliente` | `nodos_siguientes` | `pivote_o_proceder` |
+| `checkpoints_validacion` | `nodos_previos` | `pivote_o_proceder` |
+| `decision_pivotar_o_proceder` | `nodos_siguientes` | `pivote_o_proceder` |
+| `filosofia_validacion_clientes` | `nodos_previos` | `pivote_o_proceder` |
+| `mapa_flujo_trabajo_cliente` | `nodos_siguientes` | `pivote_o_proceder` |
+| `presentacion_solucion_producto` | `nodos_previos` | `pivote_o_proceder` |
+| `product_market_fit` | `nodos_previos` | `pivote_o_proceder` |
+| `scorecard_descubrimiento_cliente` | `nodos_siguientes` | `pivote_o_proceder` |
+| `validar_posicionamiento_con_analistas` | `nodos_siguientes` | `pivote_o_proceder` |
+| `verificar_modelo_ingresos` | `nodos_siguientes` | `pivote_o_proceder` |
+
+| guarda | resultado |
+|---|---|
+| **`P.16`, duplicadas que la propia fusion fabrica** | **2** |
+| **auto-aristas que la fusion habria creado** | **0** |
+| **guarda A**, cero auto-aristas nuevas | **OK (0)** |
+| **guarda B**, cero duplicadas nuevas tras resolver | **OK (0)** |
+| **guarda C**, los cinco campos que la operacion NO redacta, intactos | **5 de 5** |
+| **guarda D**, el absorbido conserva su texto INTACTO | **OK** |
+
+### LO QUE LA FICHA MANDABA COMPROBAR DESPUES DE FUNDIR, COMPROBADO
+
+Sale de [`../loop/SALIDA_V64_VERIFICAR_OPM03II.txt`](../loop/SALIDA_V64_VERIFICAR_OPM03II.txt), corrida en esta vuelta:
+
+```
+1. LA CLASIFICACION AMOR TOTAL A INDIFERENCIA, EN EL TEXTO FINAL
+   pasos del superviviente HOY: 9 (antes 7)
+   la frase vive en el paso: [9]
+   texto: Clasifica las respuestas de tus clientes según su nivel de entusiasmo, desde amor total hasta indiferencia
+2. EL ALIAS DEL SUPERVIVIENTE CARGA EL ID QUE MUERE
+   ids_alias       : ['pivotar_o_proceder']
+   merged_originals: forma diccionarios | ids ['pivotar_o_proceder']
+   merged_originals en crudo: [{'node_id': 'pivotar_o_proceder', 'titulo': 'La decisión de cambiar de rumbo o seguir adelante (pivot or proceed)', 'fuente': "The Startup Owner's Manual - Steve Blank"}]
+3. LAS DOS DUPLICADAS QUE LA FICHA NOMBRA, MEDIDAS HOY (P.16 manda)
+   presentacion_solucion_producto     nodos_previos     entradas 4 | resuelven a pivote_o_proceder: 1
+      entradas: ['mapa_flujo_trabajo_cliente', 'pivote_o_proceder', 'captura_conocimiento_mercado', 'preguntas_ipo_dolor_cliente']
+   scorecard_descubrimiento_cliente   nodos_siguientes  entradas 8 | resuelven a pivote_o_proceder: 1
+      entradas: ['identificar_earlyvangelists', 'pivote_o_proceder', 'ganar_comprension_del_cliente', 'identificacion_problema_cliente', 'mapa_de_canal_de_ventas', 'mapa_flujo_trabajo_cliente', 'verificar_product_market_fit', 'voc_temprano_en_agile_stage_gate']
+   LAS DOS EN CERO: la duplicada que la fusion fabrico esta LIMPIA, que
+   es lo que P.16 manda y lo contrario de lo que la ficha del 12 ago decia.
+4. EL ABSORBIDO, DEPRECADO Y CON SU TEXTO INTACTO
+   deprecado: SI | texto y aristas INTACTOS: SI
+5. LAS DOS PIEZAS QUE LA FICHA RECLASIFICA COMO QUE VIVEN DENTRO
+   paso 2, dibujar como trabaja el cliente tipico: INTACTO SI
+      Dibuja cómo trabaja realmente tu cliente típico, basándote en datos reales que hayas recogido
+   paso 6, reducir la lista de funciones a un parrafo: INTACTO SI
+      Reduce tu lista de funciones a algo que puedas contar en un párrafo y vender a miles de personas, no a una lista larguísima pensada para diez clientes
+6. EL INCISO ADOSADO, VERBATIM DEL PASO 4 DEL QUE MUERE
+   paso 7 ANTES : Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante
+   paso 7 HOY   : Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes
+   lo anadido   : 'hacia la validación con clientes'
+   es subcadena LITERAL del paso 4 del que muere: True
+   El diff dice que el censo baja de 927 a 925 y que DESAPARECEN DOS
+   grupos, y NO son los dos que P.16 limpio. Se mide de donde salen.
+   grupos que desaparecen: 2
+      pivotar_o_proceder       nodos_previos     -> decision_pivotar_o_proceder        | vive en el nodo QUE MUERE: SI
+         entradas: ['revalidacion_modelo_negocio', 'decision_pivotar_o_proceder']
+      pivotar_o_proceder       nodos_previos     -> verificar_modelo_ingresos          | vive en el nodo QUE MUERE: SI
+         entradas: ['verificar_modelo_rentable', 'verificar_modelo_ingresos']
+   LOS 2 SON DEL NODO QUE MUERE: 2 de 2.
+   LA EXPLICACION MEDIDA, y no es que P.16 los limpiara: el censo de
+   aristas_duplicadas_tras_resolver.py solo revisa NODOS VIVOS (3272
+   antes, 3271 despues), y estos dos eran duplicadas HISTORICAS DENTRO
+   de pivotar_o_proceder. Al quedar deprecado, SALEN DEL CENSO. No se
+   han reparado: siguen enteras en su nodo, que conserva su texto
+   intacto (comprobacion 4). LAS DOS QUE P.16 SI LIMPIO nunca entraron
+   en el censo porque nacieron y murieron dentro de la misma corrida,
+   y por eso el diff da CERO grupos fabricados.
+   contraprueba: las entradas ['revalidacion_modelo_negocio', 'decision_pivotar_o_proceder'] siguen en pivotar_o_proceder.nodos_previos: SI
+   contraprueba: las entradas ['verificar_modelo_rentable', 'verificar_modelo_ingresos'] siguen en pivotar_o_proceder.nodos_previos: SI
+```
+
+LA CELDA DE PIEZAS REPARTIDAS DICE 7 (3 ENTERAS, 3 YA DICHAS) Y NO SUMA, Y SE DICE EN VEZ DE RETOCARLA: la celda sale literal del resumen del fundidor, que enumera solo las dos marcas viejas; LA SEPTIMA ES EL INCISO, y esta en su fila de la tabla del reparto. El instrumento no la corrige aqui porque la celda es suya y no mia.
+
+DOS COLISIONES DE CLASE FABRICADAS, PREDICHAS Y NO TOCADAS. Medidas con scripts/loop/vuelta64_colisiones_opm03ii.py sobre el arbol de ANTES y sobre el de HOY (../loop/SALIDA_V64_COLISIONES_OPM03II.txt): ESPERADAS 2, MEDIDAS 2, LAS MISMAS, y antes de fundir habia CERO. Son pivote_o_proceder contra pivote_startup (puestos 668 en B y 1312 en D) y pivote_o_proceder contra reunion_pivotar_o_perseverar (968 en B y 1305 en D). NO SE TOCA NI UN VEREDICTO Y SE DICE POR QUE: el 668 es uno de los SIETE dudosos que la ficha de OP-M-03 nombra literalmente y cuyo expediente del 12 ago ya posiciona como PUERTA CONTRA ACTO CON ENLACE, y el 1312 es uno de sus TRES sanos; ademas pivote_startup es miembro de OP-M-03-III, que sigue pendiente. Re-leerlos seria decidir cosa de mesa, que es lo que AUDITOR.md seccion 3 llama improvisacion. Y NO SE RESUELVEN SOLAS: simulada la ejecucion de OP-M-03-III sobre el arbol de hoy, las colisiones pasan de DOS a TRES en vez de a cero. VAN A LA MESA OP-M-03 CON SU MEDICION.
+
+EL CASO POSITIVO DE MESA DE LA VUELTA 63 CADUCO EN ESTA OPERACION, y la caducidad es la que su propia regla predecia: la regla del acta 54 pregunta 7 manda fabricarlo sobre un acto que la vuelta no toque, y el ancestro eligio OP-M-03-II, que es justo lo que esta vuelta ejecuta. Re-corrido hoy da ROJO en cuatro de nueve, no porque las guardas se rompan sino porque el absorbido ya esta deprecado y el generador cae antes en la guarda de miembro vivo. Nace scripts/loop/caso_positivo_de_fusion_de_mesa.py, de nombre estable, con --id-op requerido y una guarda que cae en ROJO si el sujeto esta consumido: LAS NUEVE MUERDEN sobre OP-M-02-ACCLIMATE.
+
