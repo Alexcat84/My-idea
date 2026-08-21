@@ -34,8 +34,8 @@ enteras en la seccion 7, **todas cazadas antes de que llegaran a una cifra publi
 |---|---|
 | **rama** | `pasada-unica` |
 | **hash de apertura** | `b93c28f6` (el commit del acta 64), **arbol limpio y todo pusheado; la regla 3 se cumplio POR VACIO y se dice asi en vez de darla por cumplida** (`git status --porcelain` VACIO, comprobado) |
-| **hash final** | el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas el ultimo, que **solo escribe esta celda y la de abajo** porque el commit del reporte no podia contener su propio hash |
-| **commits de la vuelta** | **8**, leidos de `git log --format=%h b93c28f6..HEAD`: `7897d0e8` (apertura medida), `ae539bb5` (TAREA 1 entera), `c8c6b685` (correccion de los dos instrumentos de tramo), `1ac8c2c4` (la lectura `P.5` y `P.10` del tramo), `a0d6873c` (el LOTE A ejecutado), `778815fd` (el registro del tramo), `a1ca38d0` (medicion de cierre y el `AMBAR` rotulado), mas el de este reporte **y el que escribe esta celda** |
+| **hash final** | **`f2e4ce31`**, el commit de este reporte, **pusheado a `origin/pasada-unica`**, mas este ultimo, que **solo escribe esta celda y la de abajo** porque el commit del reporte no podia contener su propio hash |
+| **commits de la vuelta** | **8**, leidos de `git log --format=%h b93c28f6..HEAD`: `7897d0e8` (apertura medida), `ae539bb5` (TAREA 1 entera), `c8c6b685` (correccion de los dos instrumentos de tramo), `1ac8c2c4` (la lectura `P.5` y `P.10` del tramo), `a0d6873c` (el LOTE A ejecutado), `778815fd` (el registro del tramo), `a1ca38d0` (medicion de cierre y el `AMBAR` rotulado), `f2e4ce31` (este reporte), **mas el que escribe esta celda** |
 | **arbol al cierre** | limpio tras el commit del reporte |
 
 ---
