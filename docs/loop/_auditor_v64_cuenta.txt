@@ -1,0 +1,48 @@
+=== OP-M-03-II: EL ESTADO FINAL CONTRA EL PLAN ===
+OK    | superviviente vivo
+OK    | absorbido deprecado
+OK    | superviviente 9 pasos | mide 9
+OK    | superviviente 2 condiciones | mide 2
+OK    | pasos 1-6 del superviviente intactos
+OK    | paso 7 = viejo mas el INCISO verbatim del paso 4 del muerto
+OK    | paso 8 = paso 2 del muerto VERBATIM (evidencia real, no opiniones)
+OK    | paso 9 = paso 3 del muerto VERBATIM (amor total a indiferencia)
+OK    | condicion 1 del superviviente intacta
+OK    | condicion 2 = condicion 2 del muerto VERBATIM
+OK    | absorbido con sus 5 pasos INTACTOS al byte
+OK    | absorbido con sus 2 condiciones INTACTAS
+OK    | alias/merged_originals carga al muerto | merged_originals forma: dicts
+OK    | superviviente sin auto-arista
+
+=== EL CABLEADO POR LAS DOS VARAS, SOBRE EL ARBOL DE APERTURA ===
+OK    | vara del instrumento: 10 contra 5 | mide 10 contra 5
+OK    | vara cruda declarada: 12 contra 6 | mide 12 contra 6
+
+=== LAS DIEZ REDIRECCIONES Y LOS DOS TESTIGOS DE P.16, EN EL GRAFO DE HOY ===
+OK    | las 10 nombran al superviviente y ninguna al muerto | []
+OK    | P.16 limpio: presentacion_solucion_producto.previos UNA sola vez
+OK    | P.16 limpio: scorecard.siguientes UNA sola vez
+
+=== EL D10 SELLADO EN PLAN_V63_OPM02PROG.json ===
+OK    | la perdida DE CONDICIONES del D10 existe en el plan 63
+OK    | el texto viejo citado sigue dentro (correccion declarada, no tachadura)
+
+=== LAS CINCO CONSUMIDAS EN OPERACIONES.jsonl ===
+OK    | 71 fichas | mide 71
+OK    | las 18 claves y ninguna nueva | mide 18: ['adjudicacion', 'aristas_nuevas', 'bloquea_a', 'depende_de', 'eliminar', 'estado', 'evidencia', 'fase', 'fecha_corte', 'id_op', 'nodos', 'nota', 'orden', 'pregunta_pendiente', 'preservar', 'superviviente', 'tipo', 'verificacion']
+OK    | nota de consumida en OP-M-02-MEDIOS cita TRAMO 3 y linea 2091
+OK    | nota de consumida en OP-M-02-ASSESS cita TRAMO 2 y linea 1832
+OK    | nota de consumida en OP-M-02-ADMIT cita TRAMO 2 y linea 1840
+OK    | nota de consumida en OP-M-02-ACTIVATE cita TRAMO 1 y linea 417
+OK    | nota de consumida en OP-M-02-ACCOMPLISH cita TRAMO 3 y linea 2069
+OK    | MEDIOS y ADMIT declaran la divergencia como contraste | []
+
+=== EL TRAMO UNICO DE OP-U-02 CONTRA MI RECOMPUTO ===
+OK    | 47 filas | mide 47
+OK    | 201 nodos | mide 201
+OK    | tamanos 3:23 4:10 5:7 6:4 8:1 10:1 15:1 | {15: 1, 10: 1, 8: 1, 6: 4, 5: 7, 4: 10, 3: 23}
+OK    | 53 componentes ABIERTAS en mi recomputo | mide 53
+OK    | las 47 filas del tramo son componentes ABIERTAS de mi recomputo (P.1) | calzan 47 de 47
+OK    | las 6 de fuera suman 39 nodos | 6 componentes, 39 nodos
+
+RESULTADO: 35 comprobaciones, 0 fallos
