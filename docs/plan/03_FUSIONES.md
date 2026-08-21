@@ -3725,3 +3725,233 @@ correccion declarada con caso positivo en dos mitades.
 
 **NO toca ni una cifra publicada arriba, NO elige ningun superviviente, NO funde nada, NO deshace
 ninguna fusion y NO re-lee ni un veredicto de las dos colisiones vigentes.** Registra adjudicaciones.
+
+
+---
+
+## `OP-U-02, TRAMO UNICO Y FINAL POR AGOTAMIENTO: EL REGISTRO DEL LOTE A` (2026-08-20, vuelta 65)
+
+**Cada celda y cada tabla de este registro sale del PLAN SELLADO
+[`../loop/PLAN_V65_OPU02_LOTE_A.json`](../loop/PLAN_V65_OPU02_LOTE_A.json) o de una salida de esta
+vuelta, generada y pegada entera con `python scripts/loop/vuelta65_registro_tramo.py`.** **El
+registro se adosa al final de la pagina y NO reescribe ni una linea de arriba.**
+
+**EL LOTE SE DECLARO AL ABRIRLO Y ES PREFIJO SIN SALTOS** del `orden_universo` del tramo fijado en
+[`../loop/TRAMO_UNICO_OPU02_V64.jsonl`](../loop/TRAMO_UNICO_OPU02_V64.jsonl): **los actos 1 y 3**,
+que son **los dos primeros**. **Los dos CIERRAN ENTEROS en esta vuelta**, uno declarado y el otro
+fundido.
+
+### a) **EL ACTO 1: `DECLARADO Y NO FUNDIDO` POR `P.10`, Y ES LA PRIMERA VEZ QUE LA CAMPANA LO HACE**
+
+`P.10` del banco del plan dice, con todas sus letras, que **un NODO PUENTE es el que tiene `A` con
+dos nodos que entre si son `D`**, que **la componente que forma puede ser UNA familia o DOS pegadas
+por el**, que **el cierre transitivo no lo distingue porque no lee sino que cuenta**, y que **si
+aparece, LA COMPONENTE NO SE FUNDE HASTA QUE ESE TRIANGULO SE CIERRE**. **Lo que `P.10` llama *lo que
+nunca es salida* es exactamente fundir la componente entera porque el cierre transitivo la junta.**
+
+**LA MEDICION VA DELANTE DE LA DECISION**, y sale de
+`python scripts/loop/vuelta65_puentes_del_tramo.py`, con los ids pasados por el resolutor (`P.1`):
+
+| | |
+|---|---|
+| **acto** | **1** del `orden_universo`, el PRIMERO del prefijo |
+| **miembros** | **15**, y **NINGUNO se toca** |
+| **combinaciones internas** | 105 |
+| **pares `A` internos** | 20 |
+| **pares `D` internos** | **10**, leidos y declarados DISTINTOS |
+| **pares sin veredicto escrito** | 75 |
+| **NODOS PUENTE** | **3** |
+| **TRIANGULOS PUENTE** (`A` mas `A` mas `D`) | **6** |
+| **PUERTAS dentro del acto** | **2**: `enfoque_situacional_vs_personal`, `fallas_activas_condiciones_latentes` |
+| **instrumento** | [`../loop/SALIDA_V65_PUENTES_TRAMO.txt`](../loop/SALIDA_V65_PUENTES_TRAMO.txt) |
+
+**LOS TRES NODOS PUENTE Y SUS SEIS TRIANGULOS, leidos de la salida:**
+`errores_como_consecuencia` hace de puente en **cuatro** (contra `error_humano_vs_falla_mecanica` y
+`falla_sistemica_vs_error_individual`, que son `D` en el puesto **2403**; contra
+`new_view_human_error` y `riesgos_del_enfoque_en_error_humano`, `D` en el **2299**; contra
+`new_view_human_error` y `seduccion_modelo_persona`, `D` en el **2331**; y contra
+`riesgos_del_enfoque_en_error_humano` y `seduccion_modelo_persona`, `D` en el **2228**);
+`human_error_como_sintoma` en **uno** (el **2403**); y `vieja_vision_vs_nueva_vision_seguridad` en
+**uno** (`new_view_human_error` contra `new_view_vs_old_view`, `D` en el **2220**).
+
+**LAS TRES SALIDAS DE `P.10`, RECORRIDAS UNA A UNA en vez de elegir la comoda:** *leer el par que
+falta* es la unica que resuelve de verdad, **y quedan 75 combinaciones sin veredicto escrito**, que
+es trabajo de cribado y no de esta operacion; *releer contra el superviviente* **no aplica**, porque
+aqui no hay superviviente elegido ni nodo que vaya a cambiar; y *fundir solo el subconjunto CERRADO y
+enlazar el resto* **pide que TODAS las lecturas esten hechas, y no lo estan**.
+
+> **Y HAY UNA SEGUNDA RAZON INDEPENDIENTE, TAMBIEN MEDIDA, que sola bastaria: DOS de los quince
+> miembros son PUERTA** con la marca *TIENE QUE SOBREVIVIR* (`enfoque_situacional_vs_personal` y
+> `fallas_activas_condiciones_latentes`, leidas de la salida del dossier). **La GUARDA 1B dice que un
+> nodo que es semilla de entrada o extremo de puente aprobado NO SE ABSORBE**, y una fusion a un solo
+> superviviente tendria que absorber una de las dos.
+
+**EL ACTO QUEDA VIVO Y ENTERO: no se toca ni un nodo, no se depreca ninguno y no se elige
+superviviente.** El motivo entero esta sellado en el campo `declarados_y_no_fundidos` del plan.
+
+### b) **EL ACTO 3: LA PRIMERA FUSION DE MAS DE DOS MIEMBROS DE LA CAMPANA**
+
+| | |
+|---|---|
+| **superviviente** | `causas_comunes_vs_especiales` |
+| **absorbidos** | **9** |
+| **nodos implicados / nodos que MUEREN** | 10 / 9 |
+| **plan sellado** | [`../loop/PLAN_V65_OPU02_LOTE_A.json`](../loop/PLAN_V65_OPU02_LOTE_A.json), contrato **`CAMPO PROPIO v1`** |
+| **figura** | ACTO DE 10 MIEMBROS, clases internas {'A': 14} medidas en el fichero del tramo |
+
+**LA PREGUNTA DE `P.5`, UNA FAMILIA O DOS, CONTESTADA CON MEDICION Y NO CON IMPRESION:** los **diez**
+miembros salen del **mismo libro** (*Out of the Crisis*, Deming), **los 14 pares internos con
+veredicto escrito son TODOS de clase `A`**, hay **CERO pares `D` internos** y **CERO nodos puente**.
+**`P.10` solo detiene una componente cuando aparece un triangulo `A` mas `A` mas `D`, y aqui no hay
+ninguno.**
+
+**EL SUPERVIVIENTE LO ELIGE EL CONTENIDO, CON LAS TRES VARAS POR FORMA A SU LADO Y NINGUNA EN CONTRA**
+(`TODAS DE ACUERDO`, que funde a su lado): **6 pasos contra un maximo de 5**, **3 condiciones contra
+2** y **cableado 14 contra un maximo de 9**. **NI EL ROTULO SOLO NI LA CANTIDAD DECIDEN**: decide que
+es el unico del acto que trae el procedimiento entero de punta a punta, del dato en orden cronologico
+a la accion distinta por tipo de causa. **NINGUN MIEMBRO DE ESTE ACTO ES PUERTA**, medido al sellar.
+
+#### EL REPARTO POR ABSORBIDO, TALLADO DEL PLAN SELLADO
+
+| absorbido | pasos | condiciones | enteras | ya dichas | de `INCISO` |
+|---|---:|---:|---:|---:|---:|
+| `distincion_causas_comunes_especiales` | 4 | 2 | 1 | 4 | 1 |
+| `distincion_causas_comunes_especiales_2` | 4 | 2 | 1 | 5 | 0 |
+| `distincion_causas_comunes_especiales_incidentes` | 5 | 2 | 1 | 4 | 2 |
+| `distincion_causas_especiales_comunes` | 4 | 2 | 1 | 5 | 0 |
+| `identificacion_causa_raiz_no_culpa_individual` | 5 | 2 | 4 | 3 | 0 |
+| `moral_y_sistema_no_individuo` | 4 | 2 | 3 | 3 | 0 |
+| `politica_no_culpar_trabajador` | 5 | 2 | 2 | 5 | 0 |
+| `trampa_del_promedio_como_estandar` | 4 | 2 | 2 | 4 | 0 |
+| `variacion_del_sistema_vs_individuo` | 5 | 2 | 1 | 6 | 0 |
+| **los 9 juntos** | **40** | **18** | **16** | **39** | **3** |
+
+#### EL REPARTO, PIEZA A PIEZA, TALLADO DEL PLAN SELLADO
+
+| pieza del que muere | marca | a donde va |
+|---|---|---|
+| paso **1** de `distincion_causas_comunes_especiales` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **2** de `distincion_causas_comunes_especiales` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| paso **3** de `distincion_causas_comunes_especiales` | `INCISO` | **`INCISO` ADOSADO** al paso 4: *ayudar al trabajador a identificarla y eliminarla* |
+| paso **4** de `distincion_causas_comunes_especiales` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| condicion **1** de `distincion_causas_comunes_especiales` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **2** de `distincion_causas_comunes_especiales` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **1** de `distincion_causas_comunes_especiales_2` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **2** de `distincion_causas_comunes_especiales_2` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| paso **3** de `distincion_causas_comunes_especiales_2` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `distincion_causas_comunes_especiales_2` | `CUBIERTO` | ya lo dice el **paso 6** del superviviente |
+| condicion **1** de `distincion_causas_comunes_especiales_2` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| condicion **2** de `distincion_causas_comunes_especiales_2` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `distincion_causas_comunes_especiales_incidentes` | `INCISO` | **`INCISO` ADOSADO** al paso 1: *de incidentes o accidentes* |
+| paso **2** de `distincion_causas_comunes_especiales_incidentes` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `distincion_causas_comunes_especiales_incidentes` | `CUBIERTO` | ya lo dice la **condicion 1** del superviviente |
+| paso **4** de `distincion_causas_comunes_especiales_incidentes` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **5** de `distincion_causas_comunes_especiales_incidentes` | `INCISO` | **`INCISO` ADOSADO** al paso 6: *la proporción estimada de causas sistémicas vs especiales* |
+| condicion **1** de `distincion_causas_comunes_especiales_incidentes` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| condicion **2** de `distincion_causas_comunes_especiales_incidentes` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **1** de `distincion_causas_especiales_comunes` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **2** de `distincion_causas_especiales_comunes` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **3** de `distincion_causas_especiales_comunes` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `distincion_causas_especiales_comunes` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| condicion **1** de `distincion_causas_especiales_comunes` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| condicion **2** de `distincion_causas_especiales_comunes` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **1** de `identificacion_causa_raiz_no_culpa_individual` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **2** de `identificacion_causa_raiz_no_culpa_individual` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `identificacion_causa_raiz_no_culpa_individual` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `identificacion_causa_raiz_no_culpa_individual` | `CUBIERTO` | ya lo dice el **paso 6** del superviviente |
+| paso **5** de `identificacion_causa_raiz_no_culpa_individual` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `identificacion_causa_raiz_no_culpa_individual` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **2** de `identificacion_causa_raiz_no_culpa_individual` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **1** de `moral_y_sistema_no_individuo` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **2** de `moral_y_sistema_no_individuo` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **3** de `moral_y_sistema_no_individuo` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **4** de `moral_y_sistema_no_individuo` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **1** de `moral_y_sistema_no_individuo` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `moral_y_sistema_no_individuo` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **1** de `politica_no_culpar_trabajador` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **2** de `politica_no_culpar_trabajador` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **3** de `politica_no_culpar_trabajador` | `CUBIERTO` | ya lo dice el **paso 6** del superviviente |
+| paso **4** de `politica_no_culpar_trabajador` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| paso **5** de `politica_no_culpar_trabajador` | `CUBIERTO` | ya lo dice el **paso 6** del superviviente |
+| condicion **1** de `politica_no_culpar_trabajador` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| condicion **2** de `politica_no_culpar_trabajador` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `trampa_del_promedio_como_estandar` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **2** de `trampa_del_promedio_como_estandar` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `trampa_del_promedio_como_estandar` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `trampa_del_promedio_como_estandar` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| condicion **1** de `trampa_del_promedio_como_estandar` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **2** de `trampa_del_promedio_como_estandar` | `APPEND` | **viaja ENTERA** al superviviente |
+| paso **1** de `variacion_del_sistema_vs_individuo` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+| paso **2** de `variacion_del_sistema_vs_individuo` | `CUBIERTO` | ya lo dice el **paso 2** del superviviente |
+| paso **3** de `variacion_del_sistema_vs_individuo` | `CUBIERTO` | ya lo dice el **paso 3** del superviviente |
+| paso **4** de `variacion_del_sistema_vs_individuo` | `CUBIERTO` | ya lo dice el **paso 5** del superviviente |
+| paso **5** de `variacion_del_sistema_vs_individuo` | `CUBIERTO` | ya lo dice el **paso 4** del superviviente |
+| condicion **1** de `variacion_del_sistema_vs_individuo` | `APPEND` | **viaja ENTERA** al superviviente |
+| condicion **2** de `variacion_del_sistema_vs_individuo` | `CUBIERTO` | ya lo dice el **paso 1** del superviviente |
+
+#### LAS PERDIDAS, SELLADAS EN CAMPO PROPIO (`CAMPO PROPIO v1`)
+
+**Son 13**, y la tabla sale entera de
+`python scripts/loop/tallar_perdidas_del_plan.py --plan docs/loop/PLAN_V65_OPU02_LOTE_A.json`
+([`../loop/SALIDA_V65_TALLAR_PERDIDAS.txt`](../loop/SALIDA_V65_TALLAR_PERDIDAS.txt)). **Por especie:
+{'DE CONDICIONES': 3, 'DE PARAMETRO DE PASO': 10}.**
+
+| plan | acto | especie | que se pierde | donde vive | enrutada a |
+|---|---:|---|---|---|---|
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE PARAMETRO DE PASO | la instruccion explicita de NO INFORMAR SOBRE DEFECTOS INDIVIDUALES cuando el proceso esta en control estadistico. El paso 5 del superviviente manda listar las causas comunes y asumir la responsabilidad sobre ellas, que es enfocar el esfuerzo en el sistema, pero NO dice que haya que dejar de reportar el defecto de cada uno | paso 2 de distincion_causas_comunes_especiales | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE PARAMETRO DE PASO | la prohibicion explicita de SANCIONAR AL TRABAJADOR por fallas atribuibles al sistema. SE DICE LO QUE NO SE PIERDE: la condicion 1 del superviviente ya dispara cuando estas por culparte a ti o a alguien sin verificar si es del sistema, y el paso de rediseñar el proceso en lugar de sancionar al individuo VIAJA ENTERO de APPEND desde distincion_causas_comunes_especiales_incidentes | paso 4 de distincion_causas_comunes_especiales | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE PARAMETRO DE PASO | que la accion para las causas comunes sea UN CAMBIO ESTRUCTURAL DEL SISTEMA y no el rastreo caso por caso. El paso 6 del superviviente manda definir una accion distinta para cada tipo de causa pero NO dice cual es la de las comunes | paso 4 de distincion_causas_comunes_especiales_2 | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE CONDICIONES | que el disparador incluya ACCIDENTES, FALLAS O RESULTADOS DESFAVORABLES RECURRENTES. La condicion 2 del superviviente nombra indicadores de desempeño, ventas, calidad o quejas, y ninguna de las cuatro es un accidente | condicion 1 de distincion_causas_comunes_especiales_incidentes | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE PARAMETRO DE PASO | la remision al CAPITULO 11 de la fuente como el metodo estadistico con el que se decide si una intervencion es necesaria. El paso 3 del superviviente manda aplicar reglas simples y las nombra, pero no remite a ese capitulo | paso 4 de distincion_causas_especiales_comunes | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE CONDICIONES | el disparador del CONFLICTO INTERNO YA INSTALADO por errores o tasas de rechazo, que no es el momento de culpar sino el estado que deja el haber culpado. ATENUANTE DECLARADO, y se dice para que la perdida se pueda pesar: la condicion 1 de identificacion_causa_raiz_no_culpa_individual viaja ENTERA de APPEND y nombra el conflicto interno y la baja moral | condicion 1 de moral_y_sistema_no_individuo | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE CONDICIONES | que el disparador sea LA MORAL DEL EQUIPO YA AFECTADA por señalamientos de culpa. ATENUANTE DECLARADO: la condicion 1 de identificacion_causa_raiz_no_culpa_individual viaja entera de APPEND y nombra la baja moral por atribucion de culpas | condicion 2 de moral_y_sistema_no_individuo | la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5) |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE PARAMETRO DE PASO | que el punto que excede el limite superior sea UNA PERSONA y que antes de actuar se investigue SU CONTEXTO. El paso 3 del superviviente detecta posibles causas especiales con reglas sobre los puntos, y el paso 4 manda investigar la señal, pero ninguno de los dos dice que el punto pueda ser alguien ni manda mirar su contexto antes de actuar | paso 2 de politica_no_culpar_trabajador | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE PARAMETRO DE PASO | la prohibicion de las SANCIONES UNIFORMES Y LOS MENSAJES ESTANDAR para todos los niveles de error. El paso 6 del superviviente manda definir una accion distinta para cada tipo de causa, que es la forma positiva de lo mismo, pero no prohibe la respuesta uniforme | paso 3 de politica_no_culpar_trabajador | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE PARAMETRO DE PASO | EL PROMEDIO SIMPLE COMO LINEA DE CORTE, nombrado como el error que se abandona. El paso 2 del superviviente manda construir el grafico con limites calculados estadisticamente, que es lo que sustituye al promedio, pero NO nombra al promedio ni dice que dejarlo es el punto. Es el titulo entero del nodo que muere | paso 1 de trampa_del_promedio_como_estandar | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE PARAMETRO DE PASO | los ejemplos concretos de causa especial, PROBLEMAS DE VISION O DE CAPACITACION, que es lo que convierte la busqueda en algo que se puede hacer. NO SE ADOSA DE INCISO Y SE DICE POR QUE: el paso 4 del superviviente YA recibe el inciso del paso 3 de distincion_causas_comunes_especiales, y no se apila mas de un INCISO sobre el mismo paso (acta 64, pregunta 5) | paso 4 de trampa_del_promedio_como_estandar | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE PARAMETRO DE PASO | que los datos sean DE UN GRUPO DE PERSONAS QUE HACEN UN TRABAJO SIMILAR. El paso 1 del superviviente recopila los datos DEL PROCESO. ATENUANTE DECLARADO: el paso 1 de politica_no_culpar_trabajador viaja ENTERO de APPEND y analiza la distribucion de errores ENTRE TODAS LAS PERSONAS con limites de control | paso 1 de variacion_del_sistema_vs_individuo | la fase 04, que redacta y afina los pasos del superviviente |
+| PLAN_V65_OPU02_LOTE_A.json | 3 | DE PARAMETRO DE PASO | que el caer fuera de los limites cuente TAMBIEN PARA BIEN y no solo para mal, que es lo que impide leer el grafico como una lista de culpables. El paso 3 del superviviente detecta posibles causas especiales sin decir que el punto alto tambien es una señal que se investiga | paso 3 de variacion_del_sistema_vs_individuo | la fase 04, que redacta y afina los pasos del superviviente |
+
+> **LAS TRES COSAS QUE EL REPARTO DICE EN VEZ DE CALLAR, y las tres tienen letra citable.**
+> **PRIMERA, POR QUE HAY TRES `INCISO` Y NO SEIS:** el paso **4** del superviviente recibe **UN**
+> inciso y **NO** recibe el segundo que pedia `trampa_del_promedio_como_estandar` con sus ejemplos de
+> vision y capacitacion, **porque NO SE APILA MAS DE UN `INCISO` SOBRE EL MISMO PASO** (acta 64,
+> pregunta 5, registrada en esta misma vuelta unas lineas mas arriba); esa pieza va `CUBIERTO` con la
+> perdida **nombrada y enrutada**. **SEGUNDA, LAS ADVERTENCIAS NO SON PASOS** (`P.11`): *evitar
+> sanciones*, *evitar conclusiones apresuradas*, *evitar tratar cada defecto como causa especial* y
+> *dejar de usar el promedio como linea de corte* **califican el acto y no lo constituyen**, asi que
+> van `CUBIERTO` con su perdida nombrada en vez de `APPEND`. **TERCERA, LOS SOLAPES VAN DECLARADOS**
+> para la poda de la fase 04: dos piezas de comunicacion viajan enteras diciendo casi lo mismo, y las
+> piezas del eje de la persona van `CUBIERTO` **con el atenuante dicho**, porque ese eje llega entero
+> en el `APPEND` del paso 1 de `politica_no_culpar_trabajador`.
+
+#### LAS GUARDAS, LEIDAS DE LA SALIDA DE LA EJECUCION
+
+Salen de [`../loop/SALIDA_V65_LOTE_A_EJEC.txt`](../loop/SALIDA_V65_LOTE_A_EJEC.txt):
+
+| guarda | resultado |
+|---|---|
+| **`P.16`, duplicadas que la propia fusion fabrica** | **6**, limpiadas en el mismo commit |
+| **guarda A**, cero auto-aristas nuevas | **OK (0)** |
+| **guarda B**, cero duplicadas nuevas tras resolver | **OK (0)** |
+| **guarda C**, los cinco campos que la operacion NO redacta, intactos | **5 de 5** |
+| **guarda D**, los absorbidos conservan su texto INTACTO | **OK** |
+| **`P.16` por instrumento**, grupos FABRICADOS de verdad | **0** (y 4 grupos que DESAPARECEN) |
+
+#### LA CUENTA ESPERADA DE COLISIONES, MEDIDA **ANTES** DE FUNDIR
+
+**Se mide antes y no despues, y esa es la mitad del punto**: es la leccion del `D5` de la vuelta 64,
+que el acta 64 registro como caida de procedimiento autodeclarada. **La linea base es `2` y esta
+DECLARADA** (acta 64, pregunta 3, registrada en esta pagina unas lineas mas arriba): **las dos
+colisiones vigentes son de la mesa `OP-M-03` y NO SE TOCAN.**
+
+**Simulacion en memoria sobre el arbol de ANTES de fundir**
+([`../loop/SALIDA_V65_COLISIONES_ESPERADAS.txt`](../loop/SALIDA_V65_COLISIONES_ESPERADAS.txt)):
+**colisiones NUEVAS que la fusion fabricaria: 0.** **Censo de cierre con la esperada MEDIDA:
+2 | MEDIDA: 2 | CALZA: SI** ([`../loop/SALIDA_V65_CENSO_COLISIONES_LOTE_A.txt`](../loop/SALIDA_V65_CENSO_COLISIONES_LOTE_A.txt)).
+
+### c) **LO QUE ESTE REGISTRO NO HACE**
+
+**NO toca ni una cifra publicada arriba, NO re-lee ni un veredicto de las dos colisiones vigentes de
+la mesa `OP-M-03`, NO ejecuta ningun acto con dueno de otra operacion y NO rehace ninguna de las
+cinco fichas `OP-M-02` consumidas.**
