@@ -22,6 +22,29 @@ promesa: describir una razon como discutible es una lectura, prometer que va
 marcado es un compromiso sobre otro fichero. Cuenta como CUMPLIDA si la seccion 6
 del reporte nombra el acto por su orden o por el id de alguno de sus miembros.
 
+CORRECCION DECLARADA (2026-08-20, vuelta 65, TAREA 1.b del encargo, por el carril
+del banco 9.10 y por el de la correccion de instrumento estable; EL TEXTO VIEJO
+SE QUEDA ENTERO ARRIBA Y NO SE TACHA, que es lo que hace auditable la
+correccion). El parrafo de LA VARA de aqui arriba dice, verbatim: "Cuenta como
+PROMESA la frase VA MARCADO COMO DISCUTIBLE (comparada sin distinguir
+mayusculas)". LA AGUJA ERA SOLO SINGULAR Y AHORA TAMBIEN ES PLURAL: se anade la
+forma VAN MARCADAS COMO DISCUTIBLES a la singular, SIN QUITAR NADA. Un campo que
+traiga CUALQUIERA de las dos formas, o las dos, cuenta como UNA sola promesa, que
+es lo que deja el conteo viejo intacto.
+
+POR QUE SE ENSANCHA, y es una averia MEDIDA y no un capricho: la vuelta 64 sello
+en PLAN_V64_OPM03II.json una nota que decia LAS DOS VAN MARCADAS COMO
+DISCUTIBLES, en plural, y el propio ejecutor tuvo que escribir la forma singular
+DENTRO de la nota para que este instrumento la viera. Lo adjudico el acta 64,
+pregunta 6 (linea 16947): UNA PROMESA INVISIBLE ES PEOR QUE UNA INCUMPLIDA
+PORQUE NO SALE EN ROJO.
+
+LO QUE SE MIDIO ANTES DE ENSANCHAR, porque el acta mandaba PARAR si aparecia una
+promesa INCUMPLIDA hoy invisible: barridos los 62 PLAN_*.json de docs/loop, la
+forma plural aparece en UNO solo (PLAN_V64_OPM03II.json, acto 1,
+nota_del_reparto) y ESE MISMO campo ya trae la singular. CERO promesas nuevas y
+CERO incumplidas destapadas: el ensanche no es regresion ni hallazgo, es aguja.
+
 DE SOLO LECTURA ENTERO.
 
 Uso:
@@ -38,6 +61,11 @@ import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PROMESA = "va marcado como discutible"
+# ENSANCHE DE LA VUELTA 65 (acta 64, pregunta 6): la forma PLURAL se ANADE a la
+# singular y no la sustituye. La constante vieja se queda con su nombre y su
+# valor intactos, y las dos entran juntas en FORMAS.
+PROMESA_PLURAL = "van marcadas como discutibles"
+FORMAS = (PROMESA, PROMESA_PLURAL)
 NL = chr(10)
 
 
@@ -60,6 +88,10 @@ def main():
     print("  reporte  : %s (cabecera: %s)" % (a.reporte, rep.split(NL)[0]))
     print("  seccion 6 leida: %d caracteres" % len(s6))
     print("  planes   : %d" % len(a.plan))
+    print("  agujas   : %d, y se imprimen para que la vara no dependa del docstring:"
+          % len(FORMAS))
+    for f in FORMAS:
+        print("     %s" % f.upper())
     print("=" * 78)
     if not s6:
         print()
@@ -73,16 +105,20 @@ def main():
             for campo in ("motivo", "nota_del_reparto"):
                 t = acto.get(campo) or ""
                 bajo = t.lower()
-                if PROMESA not in bajo:
+                # UN campo con CUALQUIERA de las dos formas, o con las dos, es
+                # UNA sola promesa: se toma la que aparece ANTES para recortar
+                # la frase, y se declaran todas las formas halladas.
+                presentes = [f for f in FORMAS if f in bajo]
+                if not presentes:
                     continue
-                i = bajo.index(PROMESA)
+                i = min(bajo.index(f) for f in presentes)
                 ini = bajo.rfind(".", 0, i) + 1
                 fin = bajo.find(".", i)
                 frase = t[ini:fin + 1 if fin > 0 else len(t)].strip()
                 agujas = ["acto %d" % acto["orden"]] + list(acto["miembros"])
                 halladas = [x for x in agujas if x.lower() in s6.lower()]
                 filas.append((os.path.basename(p), acto["orden"], campo, frase,
-                              halladas, agujas))
+                              halladas, agujas, presentes))
 
     print()
     if not filas:
@@ -92,12 +128,14 @@ def main():
         return 0
 
     incumplidas = []
-    for fichero, orden, campo, frase, halladas, agujas in filas:
+    for fichero, orden, campo, frase, halladas, agujas, presentes in filas:
         ok = bool(halladas)
         if not ok:
             incumplidas.append((fichero, orden, campo))
         print("  %-32s acto %-3d campo %-16s %s"
               % (fichero, orden, campo, "CUMPLIDA" if ok else "INCUMPLIDA"))
+        print("     forma hallada: %s"
+              % ", ".join("SINGULAR" if f == PROMESA else "PLURAL" for f in presentes))
         print("     promete: %s" % frase[:150])
         print("     hallado en la seccion 6 por: %s"
               % (", ".join(halladas) if halladas else
