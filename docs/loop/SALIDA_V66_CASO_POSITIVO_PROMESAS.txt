@@ -1,0 +1,57 @@
+==============================================================================
+CASO POSITIVO DEL ENSANCHE DE LA AGUJA DEL COMPROBADOR DE PROMESAS
+  instrumento : scripts/loop/comprobar_promesas_de_marcado.py
+  formas      : VA MARCADO COMO DISCUTIBLE, VAN MARCADAS COMO DISCUTIBLES
+==============================================================================
+
+==============================================================================
+MITAD 1: NO REGRESION. Las dos corridas selladas, re-corridas con la
+aguja ENSANCHADA, contra el reporte de SU PROPIA vuelta sacado de git.
+==============================================================================
+
+  --- VUELTA 63 ---
+     reporte sacado de git 3f5f33da, cabecera: # REPORTE DE LA VUELTA 63 (20 ago 2026, ejecutor Opus 5)
+     comando: python scripts/loop/comprobar_promesas_de_marcado.py --reporte docs/loop/_v65_reporte_63.md --plan docs/loop/PLAN_V63_OPM03I.json --plan docs/loop/PLAN_V63_OPM02PROG.json
+     exit 0
+     sellada  (SALIDA_V63_PROMESAS_CUMPLIDAS.txt): {'medidas': 2, 'cumplidas': 2, 'incumplidas': 0}
+     hoy, con la aguja ensanchada : {'medidas': 2, 'cumplidas': 2, 'incumplidas': 0}
+     CALZA AL DIGITO y exit 0: NO HAY REGRESION
+
+  --- VUELTA 64 ---
+     reporte sacado de git 10186e4f, cabecera: # REPORTE DE LA VUELTA 64 (20 ago 2026, ejecutor Opus 5)
+     comando: python scripts/loop/comprobar_promesas_de_marcado.py --reporte docs/loop/_v65_reporte_64.md --plan docs/loop/PLAN_V64_OPM03II.json --plan docs/loop/PLAN_V63_OPM02PROG.json
+     exit 0
+     sellada  (SALIDA_V64_PROMESAS_CUMPLIDAS.txt): {'medidas': 2, 'cumplidas': 2, 'incumplidas': 0}
+     hoy, con la aguja ensanchada : {'medidas': 2, 'cumplidas': 2, 'incumplidas': 0}
+     CALZA AL DIGITO y exit 0: NO HAY REGRESION
+
+  los 2 reportes temporales BORRADOS: SI
+
+==============================================================================
+MITAD 2: VISIBILIDAD. Un plan de mentira con la nota SOLO en PLURAL.
+==============================================================================
+
+  plan de mentira escrito en docs/loop/_v65_plan_de_mentira.json
+     el motivo dice: ACTO DE MENTIRA PARA PROBAR LA AGUJA. Las dos piezas de abajo VAN MARCADAS COMO DISCUTIBLES en la seccion 6 del reporte de esta vuelta.
+     trae la forma SINGULAR: False
+     trae la forma PLURAL  : True
+
+  seccion 6 del reporte vigente: 5132 caracteres
+     AGUJA VIEJA (solo singular)          ve 0 promesa(s)
+     AGUJA NUEVA (singular mas plural)    ve 1 promesa(s)
+
+  Y AHORA POR EL INSTRUMENTO ENTERO, no por su constante:
+     comando: python scripts/loop/comprobar_promesas_de_marcado.py --reporte docs/loop/REPORTE.md --plan docs/loop/_v65_plan_de_mentira.json
+     exit 1
+     {'medidas': 1, 'cumplidas': 0, 'incumplidas': 1}
+     MUERDE: la promesa en plural PASA A VERSE y sale en ROJO (exit 1) porque la seccion 6 no nombra ese acto inventado
+     | _v65_plan_de_mentira.json        acto 999 campo motivo           INCUMPLIDA
+     | forma hallada: PLURAL
+     | hallado en la seccion 6 por: NADA de: acto 999, nodo_que_no_existe_de_mentira_v65
+     | _v65_plan_de_mentira.json acto 999 campo motivo
+
+  el plan de mentira BORRADO: SI
+
+==============================================================================
+VERDE: LAS DOS MITADES MUERDEN. No hay regresion (2 de 2 y 2 de 2 al
+digito contra las salidas selladas) y la forma plural PASA A VERSE.

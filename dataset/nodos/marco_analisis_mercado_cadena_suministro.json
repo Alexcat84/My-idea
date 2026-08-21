@@ -7,23 +7,94 @@
   "resumen_teorico": "Antes de decidir dónde enfocar tus esfuerzos, necesitas entender en qué tipo de mercado te mueves: uno maduro, uno en desarrollo o uno estable. Cada tipo te exige destacar en algo distinto: atención al cliente, eficiencia interna, capacidad de adaptarte a la demanda o desarrollo de producto. Tu tarea es identificar en cuál de estas áreas necesitas ser mejor que tu competencia.",
   "pasos_accionables": [
     "Identifica los mercados en los que trabajas y quiénes participan en ellos: quienes producen, distribuyen, hacen la logística y venden al público",
-    "Define en qué tipo de mercado está cada línea de tu negocio hoy y en qué tipo estará en dos años",
+    "Define en qué tipo de mercado está cada línea de tu negocio hoy y en qué tipo estará en dos años, de entre los cuadrantes desarrollo, crecimiento, estable o maduro",
     "Compara tu desempeño con el de tu competencia en cuatro áreas: atención al cliente, eficiencia interna, capacidad de adaptarte a cambios en la demanda y desarrollo de producto",
     "Decide si en cada área necesitas liderar, igualar o superar a tu competencia",
-    "Fija metas concretas de desempeño que respondan a lo que tu mercado te exige"
+    "Fija metas concretas de desempeño que respondan a lo que tu mercado te exige",
+    "Analizar la relación actual entre oferta y demanda en tu industria",
+    "Determinar qué oportunidades específicas ofrece ese cuadrante: alianzas, servicio al cliente, eficiencia o flexibilidad",
+    "Ajustar tu estrategia de inventario, precios y cadena de suministro según el cuadrante identificado",
+    "Revisar periódicamente el cuadrante de cada mercado, ya que puede cambiar con el tiempo",
+    "Invierte recursos en reforzar esa fortaleza en vez de corregir debilidades menores no críticas",
+    "Define métricas concretas para cada una de las cuatro categorías: servicio, eficiencia, flexibilidad y desarrollo de producto",
+    "Determina cuál o cuáles categorías son críticas según el cuadrante de mercado en el que operas",
+    "Recolecta tus datos de desempeño de forma diaria o continua",
+    "Usa los datos para detectar problemas y oportunidades de mejora",
+    "Calcular la rotación de inventario actual de la empresa",
+    "Calcular el retorno sobre ventas (return on sales)",
+    "Calcular el ciclo de conversión de efectivo (cash-to-cash cycle time)",
+    "Identificar oportunidades de mejora en cuentas por cobrar/pagar antes que en niveles de inventario",
+    "Seleccionar 1-2 capacidades de mercado donde concentrarás inversión (no todas a la vez).",
+    "Evitar invertir en eficiencia interna si compites en mercado de crecimiento; prioriza servicio y producto.",
+    "Presta atención a señales de que tu mercado está cambiando de cuadrante para anticiparte"
   ],
   "entregable_esperado": "Un mapa claro de en qué necesitas destacar frente a tu competencia, con metas de desempeño definidas para cada una de las cuatro áreas",
   "nodos_previos": [
-    "market_type_revenue_growth"
+    "market_type_revenue_growth",
+    "arquetipos_de_cliente",
+    "big_data_ia_cadena_suministro",
+    "definicion_alineacion_cadena_suministro",
+    "estudio_mercado_calidad",
+    "lienzo_modelo_negocio",
+    "simulacion_de_operaciones_supply_chain"
   ],
   "nodos_siguientes": [
     "creacion_estrategia_cadena_suministro",
     "investigacion_mercado_paso_a_paso",
-    "enfoque_paso_a_paso_investigacion_mercado"
+    "enfoque_paso_a_paso_investigacion_mercado",
+    "compartir_datos_cadena_suministro",
+    "creacion_data_warehouse",
+    "equipo_conjunto_de_mejora_con_proveedores",
+    "estrategia_captura_mercado_crecimiento",
+    "gestion_inventario",
+    "key_process_product_characteristics",
+    "medicion_de_calidad_en_manufactura",
+    "metricas_servicio_cliente_bts_bto",
+    "product_roadmap_estrategico",
+    "roadmap_proyectos_operacionales_12_meses"
   ],
   "condiciones_activacion": [
     "Cuando empiezas a definir oportunidades para tu cadena de suministro",
-    "Cuando no tienes claro en qué áreas debes enfocar tus recursos para competir"
+    "Cuando no tienes claro en qué áreas debes enfocar tus recursos para competir",
+    "Cuando atiendes varios mercados con dinámicas distintas de oferta y demanda",
+    "Cuando existe la tentación de igualar a competidores en eficiencia interna en vez de diferenciarse",
+    "Cuando quieres justificar una inversión en mejoras de operación logística",
+    "Cuando la empresa entra en un mercado de rápido crecimiento y debe decidir dónde invertir recursos limitados.",
+    "Cuando existe confusión sobre si competir por precio o por servicio/innovación."
   ],
-  "etiqueta_arbol": "Analiza tu Mercado de Cadena"
+  "etiqueta_arbol": "Analiza tu Mercado de Cadena",
+  "ids_alias": [
+    "clasificacion_mercados_cadena_suministro",
+    "cuatro_capacidades_mercado",
+    "cuatro_categorias_desempeno_cadena_suministro",
+    "estrategia_cuatro_capacidades_mercado",
+    "modelo_cuadrantes_mercado"
+  ],
+  "merged_originals": [
+    {
+      "node_id": "clasificacion_mercados_cadena_suministro",
+      "titulo": "Clasificación de Mercados por Oferta y Demanda",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    },
+    {
+      "node_id": "cuatro_capacidades_mercado",
+      "titulo": "Las Cuatro Capacidades de Mercado en la Cadena de Suministro",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    },
+    {
+      "node_id": "cuatro_categorias_desempeno_cadena_suministro",
+      "titulo": "Cuatro Categorías de Desempeño de la Cadena de Suministro",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    },
+    {
+      "node_id": "estrategia_cuatro_capacidades_mercado",
+      "titulo": "Las Cuatro Capacidades de Mercado (Customer Service, Product Development, Internal Efficiency, Demand Flexibility)",
+      "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos"
+    },
+    {
+      "node_id": "modelo_cuadrantes_mercado",
+      "titulo": "Modelo de los Cuatro Cuadrantes de Mercado (Desarrollo, Crecimiento, Estable, Maduro)",
+      "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ]
 }

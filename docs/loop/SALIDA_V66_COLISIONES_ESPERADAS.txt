@@ -1,0 +1,35 @@
+==============================================================================
+LA CUENTA ESPERADA DE COLISIONES, SIMULADA ANTES DE FUNDIR
+  plan       : docs/loop/PLAN_V66_OPU02_LOTE_B.json
+  operacion  : OP-U-02
+  linea base : 2, DECLARADA (acta 64, pregunta 3)
+==============================================================================
+
+  ANTES DE FUNDIR (el arbol tal como esta, medido ahora):
+     COLISIONES DE CLASE VIGENTES : 2
+     AUTO-PARES                   : 257
+        pivote_o_proceder contra pivote_startup | clases ['B', 'D']
+        pivote_o_proceder contra reunion_pivotar_o_perseverar | clases ['B', 'D']
+
+  LA SIMULACION EN MEMORIA: 15 absorbido(s) de 3 acto(s) pasan a resolver a su superviviente. NO SE TOCA NI UN NODO.
+
+  DESPUES DE FUNDIR (simulado):
+     COLISIONES DE CLASE VIGENTES : 4
+     AUTO-PARES                   : 260
+        cierre_satisfaccion_postventa contra cierre_segun_complejidad_venta | clases ['B', 'D']
+        cierre_segun_complejidad_venta contra obtencion_compromiso | clases ['B', 'D']
+        pivote_o_proceder contra pivote_startup | clases ['B', 'D']
+        pivote_o_proceder contra reunion_pivotar_o_perseverar | clases ['B', 'D']
+
+  EL DELTA, QUE ES LO QUE LA GUARDA MIRA:
+     colisiones NUEVAS que la fusion fabricaria : 2
+        cierre_satisfaccion_postventa contra cierre_segun_complejidad_venta | clases ['B', 'D']
+        cierre_segun_complejidad_venta contra obtencion_compromiso | clases ['B', 'D']
+     colisiones que DESAPARECERIAN              : 0
+     auto-pares NUEVOS (pares internos del acto): 3
+
+  ESPERADAS TRAS FUNDIR = 4, y es 2 de base mas 2 nuevas menos 0 idas
+
+LA FUSION FABRICA COLISIONES Y HAY QUE PREDECIRLAS EN EL PLAN.
+
+FIN

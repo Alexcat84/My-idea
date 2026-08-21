@@ -1,0 +1,372 @@
+==============================================================================
+OP-U-02 . UNICO Y FINAL POR AGOTAMIENTO, LOTE B DEL TRAMO UNICO DE OP-U-02, PREFIJO SIN SALTOS DEL orden_universo DE LO QUE QUEDA: LOS ACTOS 5, 7, 8, 9, 10 Y 11, SEIS ACTOS Y 37 NODOS. Los actos 7, 8 y 9 cierran FUNDIDOS; los actos 5, 10 y 11 cierran DECLARADOS Y NO FUNDIDOS con motivo sellado. El acto 9 lleva el PRIMER CHOQUE DE PUERTA del tramo (la puerta sobrevive por la guarda 1B contra la vara de contenido) y el acto 5 es el PRIMER acto de la campana declarado por la pregunta de P.5 y no por el triangulo de P.10 . MODO SIMULAR
+plan: docs/loop/PLAN_V66_OPU02_LOTE_B.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3262 vivos, 591 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 7 . sobrevive six_sigma_dmaic . absorbe breakthrough_desempeno_actual, secuencia_universal_breakthrough, secuencia_universal_para_el_breakthrough, seis_sigma_servicios, six_sigma_dmaic_2
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 12 (anadidos 6) | condiciones 3 -> 8 (anadidas 5)
+  alias del superviviente: ['dmaic_six_sigma', 'breakthrough_desempeno_actual', 'secuencia_universal_breakthrough', 'secuencia_universal_para_el_breakthrough', 'seis_sigma_servicios', 'six_sigma_dmaic_2']
+
+------------------------------------------------------------------------------
+ACTO 8 . sobrevive cierre_segun_complejidad_venta . absorbe cierre_segun_tamano_decision, cierre_sofisticacion_comprador, diferencias_venta_pequena_venta_grande, ineficacia_cierre_ventas_grandes, riesgo_tecnicas_cierre_venta_compleja
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 12 (anadidos 7) | condiciones 3 -> 7 (anadidas 4)
+  INCISOS ADOSADOS: 1
+     del paso 1 de diferencias_venta_pequena_venta_grande al PASO 1 del superviviente
+        inciso VERBATIM: 'su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión'
+        nexo (lo unico de cosecha propia): ', y tambien por '
+        paso resultante: Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión
+  alias del superviviente: ['cierre_segun_tamano_decision', 'cierre_sofisticacion_comprador', 'diferencias_venta_pequena_venta_grande', 'ineficacia_cierre_ventas_grandes', 'riesgo_tecnicas_cierre_venta_compleja']
+
+------------------------------------------------------------------------------
+ACTO 9 . sobrevive marco_analisis_mercado_cadena_suministro . absorbe clasificacion_mercados_cadena_suministro, cuatro_capacidades_mercado, cuatro_categorias_desempeno_cadena_suministro, estrategia_cuatro_capacidades_mercado, modelo_cuadrantes_mercado
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 5 -> 21 (anadidos 16) | condiciones 2 -> 7 (anadidas 5)
+  INCISOS ADOSADOS: 1
+     del paso 1 de clasificacion_mercados_cadena_suministro al PASO 2 del superviviente
+        inciso VERBATIM: 'desarrollo, crecimiento, estable o maduro'
+        nexo (lo unico de cosecha propia): ', de entre los cuadrantes '
+        paso resultante: Define en qué tipo de mercado está cada línea de tu negocio hoy y en qué tipo estará en dos años, de entre los cuadrantes desarrollo, crecimiento, estable o maduro
+  alias del superviviente: ['clasificacion_mercados_cadena_suministro', 'cuatro_capacidades_mercado', 'cuatro_categorias_desempeno_cadena_suministro', 'estrategia_cuatro_capacidades_mercado', 'modelo_cuadrantes_mercado']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 55
+   arquetipos_de_cliente                                nodos_siguientes  estrategia_cuatro_capacidades_mercado -> marco_analisis_mercado_cadena_suministro
+   auditorias_calidad_proceso                           nodos_siguientes  seis_sigma_servicios -> six_sigma_dmaic
+   big_data_ia_cadena_suministro                        nodos_siguientes  cuatro_categorias_desempeno_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+   breakthrough_cultural                                nodos_previos     breakthrough_desempeno_actual -> six_sigma_dmaic
+   cierre_satisfaccion_postventa                        nodos_previos     cierre_sofisticacion_comprador -> cierre_segun_complejidad_venta
+   compartir_datos_cadena_suministro                    nodos_previos     modelo_cuadrantes_mercado -> marco_analisis_mercado_cadena_suministro
+   comunicacion_honesta_en_crisis_al_equipo             nodos_siguientes  cierre_segun_tamano_decision -> cierre_segun_complejidad_venta
+   consejo_ejecutivo_calidad                            nodos_previos     secuencia_universal_para_el_breakthrough -> six_sigma_dmaic
+   construccion_de_valor_percibido                      nodos_previos     diferencias_venta_pequena_venta_grande -> cierre_segun_complejidad_venta
+   control_calidad_operaciones_servicio                 nodos_siguientes  seis_sigma_servicios -> six_sigma_dmaic
+   costo_de_mala_calidad_copq                           nodos_siguientes  secuencia_universal_breakthrough -> six_sigma_dmaic
+   creacion_data_warehouse                              nodos_previos     cuatro_capacidades_mercado -> marco_analisis_mercado_cadena_suministro
+   definicion_alineacion_cadena_suministro              nodos_siguientes  cuatro_capacidades_mercado -> marco_analisis_mercado_cadena_suministro
+   desarrollo_de_controles_de_proceso                   nodos_siguientes  secuencia_universal_para_el_breakthrough -> six_sigma_dmaic
+   descubrir_necesidades_del_cliente                    nodos_siguientes  six_sigma_dmaic_2 -> six_sigma_dmaic
+   design_for_six_sigma_dfss                            nodos_previos     six_sigma_dmaic_2 -> six_sigma_dmaic
+   diferencia_planeacion_mejora                         nodos_siguientes  secuencia_universal_breakthrough -> six_sigma_dmaic
+   equipo_conjunto_de_mejora_con_proveedores            nodos_previos     cuatro_categorias_desempeno_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+   equipos_autodirigidos_servicio                       nodos_siguientes  seis_sigma_servicios -> six_sigma_dmaic
+   equipos_blitz                                        nodos_siguientes  breakthrough_desempeno_actual -> six_sigma_dmaic
+   equipos_ruptura_vet                                  nodos_siguientes  breakthrough_desempeno_actual -> six_sigma_dmaic
+   error_proofing_servicio                              nodos_siguientes  six_sigma_dmaic_2 -> six_sigma_dmaic
+   escala_actitud_cierre                                nodos_previos     ineficacia_cierre_ventas_grandes -> cierre_segun_complejidad_venta
+   estrategia_captura_mercado_crecimiento               nodos_previos     estrategia_cuatro_capacidades_mercado -> marco_analisis_mercado_cadena_suministro
+   estudio_mercado_calidad                              nodos_siguientes  clasificacion_mercados_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+   estudio_mercado_calidad                              nodos_siguientes  modelo_cuadrantes_mercado -> marco_analisis_mercado_cadena_suministro
+   gestion_inventario                                   nodos_previos     clasificacion_mercados_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+   gratificacion_inmediata_producto                     nodos_siguientes  riesgo_tecnicas_cierre_venta_compleja -> cierre_segun_complejidad_venta
+   juran_quality_by_design                              nodos_siguientes  secuencia_universal_breakthrough -> six_sigma_dmaic
+   key_process_product_characteristics                  nodos_previos     estrategia_cuatro_capacidades_mercado -> marco_analisis_mercado_cadena_suministro
+   lienzo_modelo_negocio                                nodos_siguientes  clasificacion_mercados_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+   marco_avances_continuaciones                         nodos_previos     riesgo_tecnicas_cierre_venta_compleja -> cierre_segun_complejidad_venta
+   market_type_revenue_growth                           nodos_siguientes  clasificacion_mercados_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+   market_type_revenue_growth                           nodos_siguientes  estrategia_cuatro_capacidades_mercado -> marco_analisis_mercado_cadena_suministro
+   market_type_revenue_growth                           nodos_siguientes  modelo_cuadrantes_mercado -> marco_analisis_mercado_cadena_suministro
+   medicion_capacidad_servicio                          nodos_previos     seis_sigma_servicios -> six_sigma_dmaic
+   medicion_de_calidad_en_manufactura                   nodos_previos     cuatro_categorias_desempeno_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+   metodologia_spin_selling                             nodos_previos     ineficacia_cierre_ventas_grandes -> cierre_segun_complejidad_venta
+   metodologia_spin_selling                             nodos_siguientes  diferencias_venta_pequena_venta_grande -> cierre_segun_complejidad_venta
+   metricas_servicio_cliente_bts_bto                    nodos_previos     cuatro_categorias_desempeno_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+   modelo_spin_preguntas                                nodos_previos     cierre_segun_tamano_decision -> cierre_segun_complejidad_venta
+   modelo_spin_preguntas                                nodos_previos     cierre_sofisticacion_comprador -> cierre_segun_complejidad_venta
+   modelo_spin_preguntas                                nodos_siguientes  riesgo_tecnicas_cierre_venta_compleja -> cierre_segun_complejidad_venta
+   nobody_cares_just_run_company                        nodos_siguientes  cierre_segun_tamano_decision -> cierre_segun_complejidad_venta
+   objetivos_de_llamada_orientados_a_avance             nodos_previos     riesgo_tecnicas_cierre_venta_compleja -> cierre_segun_complejidad_venta
+   organizacion_equipos_calidad_servicio                nodos_siguientes  seis_sigma_servicios -> six_sigma_dmaic
+   product_roadmap_estrategico                          nodos_previos     estrategia_cuatro_capacidades_mercado -> marco_analisis_mercado_cadena_suministro
+   relacion_continua_con_cliente                        nodos_previos     diferencias_venta_pequena_venta_grande -> cierre_segun_complejidad_venta
+   reuniones_diarias_eliminar_bloqueos                  nodos_siguientes  cierre_segun_tamano_decision -> cierre_segun_complejidad_venta
+   roadmap_proyectos_operacionales_12_meses             nodos_previos     estrategia_cuatro_capacidades_mercado -> marco_analisis_mercado_cadena_suministro
+   roles_six_sigma                                      nodos_previos     six_sigma_dmaic_2 -> six_sigma_dmaic
+   simulacion_de_operaciones_supply_chain               nodos_siguientes  cuatro_categorias_desempeno_cadena_suministro -> marco_analisis_mercado_cadena_suministro
+   six_sigma_dmaic                                      nodos_previos     secuencia_universal_breakthrough -> six_sigma_dmaic
+   six_sigma_dmaic                                      nodos_previos     secuencia_universal_para_el_breakthrough -> six_sigma_dmaic
+   viaje_diagnostico_remedial                           nodos_previos     secuencia_universal_breakthrough -> six_sigma_dmaic
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 13
+   costo_de_mala_calidad_copq_2                         nodos_siguientes  secuencia_universal_breakthrough (registro historico)
+   customer_archetypes                                  nodos_siguientes  estrategia_cuatro_capacidades_mercado (registro historico)
+   data_warehouse_como_fundamento                       nodos_previos     cuatro_capacidades_mercado (registro historico)
+   descubrir_necesidades_cliente                        nodos_siguientes  six_sigma_dmaic_2 (registro historico)
+   dmadv_design_for_six_sigma                           nodos_previos     six_sigma_dmaic_2 (registro historico)
+   dmaic_six_sigma                                      nodos_previos     secuencia_universal_para_el_breakthrough (registro historico)
+   framework_spin_selling                               nodos_previos     cierre_segun_tamano_decision (registro historico)
+   framework_spin_selling                               nodos_previos     cierre_sofisticacion_comprador (registro historico)
+   metricas_desempeno_cadena_suministro                 nodos_previos     clasificacion_mercados_cadena_suministro (registro historico)
+   mistake_proofing_poka_yoke                           nodos_siguientes  six_sigma_dmaic_2 (registro historico)
+   mistake_proofing_poka_yoke_2                         nodos_siguientes  six_sigma_dmaic_2 (registro historico)
+   modelo_cuatro_cuadrantes_mercado                     nodos_siguientes  cuatro_categorias_desempeno_cadena_suministro (registro historico)
+   simulacion_diseno_cadena_suministro                  nodos_siguientes  cuatro_categorias_desempeno_cadena_suministro (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 10
+   consejo_ejecutivo_calidad                            nodos_previos
+   costo_de_mala_calidad_copq                           nodos_siguientes
+   design_for_six_sigma_dfss                            nodos_previos
+   error_proofing_servicio                              nodos_siguientes
+   estudio_mercado_calidad                              nodos_siguientes
+   market_type_revenue_growth                           nodos_siguientes
+   modelo_spin_preguntas                                nodos_previos
+   modelo_spin_preguntas                                nodos_siguientes
+   roles_six_sigma                                      nodos_previos
+   six_sigma_dmaic                                      nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 2
+   six_sigma_dmaic                                      nodos_previos
+   six_sigma_dmaic                                      nodos_previos
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 900   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 892   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 8, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 15 de 15
+guarda D, los 15 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (107 filas)
+ acto de que nodo                                  que          n  a donde va
+    7 breakthrough_desempeno_actual                paso         1  ya lo dice el PASO 2 del superviviente
+        Define el problema con apoyo de quien te asesore
+    7 breakthrough_desempeno_actual                paso         2  ya lo dice el PASO 3 del superviviente
+        Mide el desempeño actual del proceso
+    7 breakthrough_desempeno_actual                paso         3  ya lo dice el PASO 4 del superviviente
+        Analiza las causas raíz de los problemas crónicos
+    7 breakthrough_desempeno_actual                paso         4  ya lo dice el PASO 5 del superviviente
+        Diseña e implementa mejoras (Improve)
+    7 breakthrough_desempeno_actual                paso         5  ya lo dice el PASO 6 del superviviente
+        Establece controles para sostener la mejora (Control)
+    7 breakthrough_desempeno_actual                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando existen defectos, retrasos o costos crónicos que afectan la satisfacción del cliente
+    7 breakthrough_desempeno_actual                condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Cuando se requiere un enfoque sistemático de mejora de procesos
+    7 secuencia_universal_breakthrough             paso         1  PASO 7 del superviviente
+        Establecer la creencia de que el cambio es deseable y factible
+    7 secuencia_universal_breakthrough             paso         2  PASO 8 del superviviente
+        Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales
+    7 secuencia_universal_breakthrough             paso         3  PASO 9 del superviviente
+        Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)
+    7 secuencia_universal_breakthrough             paso         4  ya lo dice el PASO 4 del superviviente
+        Recolectar y analizar hechos para lograr un breakthrough en el conocimiento
+    7 secuencia_universal_breakthrough             paso         5  PASO 10 del superviviente
+        Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia
+    7 secuencia_universal_breakthrough             paso         6  ya lo dice el PASO 6 del superviviente
+        Implementar controles para sostener el nuevo nivel de desempeño
+    7 secuencia_universal_breakthrough             condicion    1  CONDICION 4 del superviviente
+        Cuando la organización necesita un cambio radical de desempeño, no solo mejora incremental
+    7 secuencia_universal_breakthrough             condicion    2  CONDICION 5 del superviviente
+        Cuando existe resistencia cultural anticipada a los cambios propuestos
+    7 secuencia_universal_para_el_breakthrough     paso         1  ya lo dice el PASO 1 del superviviente
+        Nominar e identificar problemas prioritarios a nivel de gerencia.
+    7 secuencia_universal_para_el_breakthrough     paso         2  PASO 11 del superviviente
+        Establecer un proyecto formal con equipo asignado.
+    7 secuencia_universal_para_el_breakthrough     paso         3  ya lo dice el PASO 4 del superviviente
+        Diagnosticar la(s) causa(s) raíz mediante el viaje diagnóstico (síntomas, teorías, pruebas, causa raíz).
+    7 secuencia_universal_para_el_breakthrough     paso         4  ya lo dice el PASO 5 del superviviente
+        Diseñar y probar remedios bajo condiciones operativas reales (viaje remedial).
+    7 secuencia_universal_para_el_breakthrough     paso         5  ya lo dice el PASO 6 del superviviente
+        Establecer controles nuevos para mantener las ganancias logradas.
+    7 secuencia_universal_para_el_breakthrough     paso         6  PASO 12 del superviviente
+        Replicar los resultados exitosos y nominar nuevos proyectos de mejora.
+    7 secuencia_universal_para_el_breakthrough     condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando la organización busca una mejora significativa (no incremental) en el desempeño de un proceso
+    7 secuencia_universal_para_el_breakthrough     condicion    2  CONDICION 6 del superviviente
+        Cuando existen altos costos de mala calidad recurrentes
+    7 seis_sigma_servicios                         paso         1  ya lo dice el PASO 2 del superviviente
+        Definir el proyecto y el problema específico a resolver (ej. reducir ciclo de emisión de crédito)
+    7 seis_sigma_servicios                         paso         2  ya lo dice el PASO 3 del superviviente
+        Medir el estado actual del proceso con datos cuantitativos
+    7 seis_sigma_servicios                         paso         3  ya lo dice el PASO 4 del superviviente
+        Analizar causas raíz de la variación o defectos
+    7 seis_sigma_servicios                         paso         4  ya lo dice el PASO 5 del superviviente
+        Mejorar el proceso implementando cambios basados en el análisis
+    7 seis_sigma_servicios                         paso         5  ya lo dice el PASO 6 del superviviente
+        Controlar el proceso mejorado para sostener las ganancias en el tiempo
+    7 seis_sigma_servicios                         condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando existe un problema crónico de calidad cuantificable en un proceso de servicio
+    7 seis_sigma_servicios                         condicion    2  CONDICION 7 del superviviente
+        Si la organización busca institucionalizar una cultura de mejora continua basada en datos
+    7 six_sigma_dmaic_2                            paso         1  ya lo dice el PASO 2 del superviviente
+        Define: Definir claramente el problema y los objetivos del proyecto mediante un charter
+    7 six_sigma_dmaic_2                            paso         2  ya lo dice el PASO 3 del superviviente
+        Measure: Medir el desempeño actual del proceso y recopilar la voz del cliente (VOC)
+    7 six_sigma_dmaic_2                            paso         3  ya lo dice el PASO 4 del superviviente
+        Analyze: Analizar los datos recolectados para determinar las causas raíz del problema
+    7 six_sigma_dmaic_2                            paso         4  ya lo dice el PASO 5 del superviviente
+        Improve: Seleccionar e implementar las soluciones adecuadas para resolver el problema
+    7 six_sigma_dmaic_2                            paso         5  ya lo dice el PASO 6 del superviviente
+        Control: Establecer mecanismos de control para sostener las mejoras logradas en el tiempo
+    7 six_sigma_dmaic_2                            condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se necesita resolver un problema crónico de calidad con causas no evidentes
+    7 six_sigma_dmaic_2                            condicion    2  CONDICION 8 del superviviente
+        Cuando se requiere alcanzar niveles de calidad cercanos a la perfección (ppm)
+    7 six_sigma_dmaic_2                            condicion    3  ya lo dice la CONDICION 2 del superviviente
+        Cuando la organización busca una mejora de tipo breakthrough en procesos críticos para el cliente
+    8 cierre_segun_tamano_decision                 paso         1  ya lo dice el PASO 1 del superviviente
+        Clasificar tu portafolio de productos/servicios por tamaño de decisión (precio, riesgo, impacto organizacional)
+    8 cierre_segun_tamano_decision                 paso         2  ya lo dice el PASO 2 del superviviente
+        Aplicar técnicas de cierre directo solo en transacciones de bajo valor o decisión rápida
+    8 cierre_segun_tamano_decision                 paso         3  ya lo dice el PASO 3 del superviviente
+        Para ventas de alto valor, sustituir el cierre por técnicas de indagación y construcción de valor (ej. SPIN)
+    8 cierre_segun_tamano_decision                 paso         4  PASO 6 del superviviente
+        Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque
+    8 cierre_segun_tamano_decision                 condicion    1  CONDICION 4 del superviviente
+        Si el usuario tiene un portafolio mixto de productos de distinto valor/complejidad
+    8 cierre_segun_tamano_decision                 condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si se busca optimizar la estrategia comercial según el ticket promedio
+    8 cierre_sofisticacion_comprador               paso         1  ya lo dice el PASO 1 del superviviente
+        Identificar el nivel de sofisticación del comprador (comprador profesional vs. consumidor ocasional)
+    8 cierre_sofisticacion_comprador               paso         2  ya lo dice el PASO 3 del superviviente
+        Evitar tácticas de presión con compradores corporativos, procurement o ejecutivos experimentados
+    8 cierre_sofisticacion_comprador               paso         3  ya lo dice el PASO 3 del superviviente
+        Reemplazar el cierre por preguntas que exploren necesidades reales (enfoque consultivo)
+    8 cierre_sofisticacion_comprador               paso         4  PASO 7 del superviviente
+        Construir la relación en base a confianza y transparencia en lugar de tácticas de persuasión
+    8 cierre_sofisticacion_comprador               condicion    1  CONDICION 5 del superviviente
+        Si el cliente objetivo es un comprador profesional o departamento de compras
+    8 cierre_sofisticacion_comprador               condicion    2  CONDICION 6 del superviviente
+        Si las ventas son B2B con procesos de decisión formales
+    8 diferencias_venta_pequena_venta_grande       paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Clasificar cada oportunidad de venta según su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión para el cliente
+    8 diferencias_venta_pequena_venta_grande       paso         2  ya lo dice el PASO 3 del superviviente
+        Si es venta grande, evitar presión y cierre agresivo entre llamadas, ya que reduce la probabilidad de éxito final
+    8 diferencias_venta_pequena_venta_grande       paso         3  PASO 8 del superviviente
+        Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente
+    8 diferencias_venta_pequena_venta_grande       paso         4  PASO 9 del superviviente
+        Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes
+    8 diferencias_venta_pequena_venta_grande       condicion    1  CONDICION 7 del superviviente
+        Cuando el equipo comercial aplica la misma técnica a todas las ventas sin distinguir tamaño o complejidad
+    8 ineficacia_cierre_ventas_grandes             paso         1  ya lo dice el PASO 1 del superviviente
+        Evaluar si tu ciclo de venta es una venta pequeña (transaccional) o una venta grande/compleja (relacional)
+    8 ineficacia_cierre_ventas_grandes             paso         2  PASO 10 del superviviente
+        Auditar el uso de técnicas de cierre en tu equipo comercial mediante observación de llamadas reales
+    8 ineficacia_cierre_ventas_grandes             paso         3  PASO 11 del superviviente
+        Comparar tasas de éxito entre vendedores que usan muchas técnicas de cierre vs. pocas
+    8 ineficacia_cierre_ventas_grandes             paso         4  ya lo dice el PASO 3 del superviviente
+        Eliminar el uso de técnicas de presión de cierre en ventas de alto valor o ciclo largo
+    8 ineficacia_cierre_ventas_grandes             condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Si el usuario vende productos/servicios de alto valor o con ciclos de venta largos
+    8 ineficacia_cierre_ventas_grandes             condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Si el equipo comercial usa técnicas de cierre tradicionales sin resultados
+    8 riesgo_tecnicas_cierre_venta_compleja        paso         1  ya lo dice el PASO 1 del superviviente
+        Evaluar si tu venta es de bajo valor/simple o de alto valor/compleja antes de decidir tu estrategia de cierre.
+    8 riesgo_tecnicas_cierre_venta_compleja        paso         2  ya lo dice el PASO 3 del superviviente
+        Si vendes a compradores profesionales o buscas relaciones de largo plazo, evita presionar con técnicas de cierre agresivas.
+    8 riesgo_tecnicas_cierre_venta_compleja        paso         3  ya lo dice el PASO 3 del superviviente
+        Enfoca el esfuerzo en las etapas previas de investigación y desarrollo de necesidades, no en frases de cierre.
+    8 riesgo_tecnicas_cierre_venta_compleja        paso         4  PASO 12 del superviviente
+        Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente.
+    8 riesgo_tecnicas_cierre_venta_compleja        condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando el usuario vende productos o servicios de alto valor con relación continua post-venta.
+    8 riesgo_tecnicas_cierre_venta_compleja        condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando el equipo comercial usa scripts de cierre agresivo y presenta baja satisfacción de clientes.
+    9 clasificacion_mercados_cadena_suministro     paso         1  INCISO ADOSADO al PASO 2 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Identificar en qué cuadrante opera cada mercado que atiendes: desarrollo, crecimiento, estable o maduro
+    9 clasificacion_mercados_cadena_suministro     paso         2  PASO 6 del superviviente
+        Analizar la relación actual entre oferta y demanda en tu industria
+    9 clasificacion_mercados_cadena_suministro     paso         3  PASO 7 del superviviente
+        Determinar qué oportunidades específicas ofrece ese cuadrante: alianzas, servicio al cliente, eficiencia o flexibilidad
+    9 clasificacion_mercados_cadena_suministro     paso         4  PASO 8 del superviviente
+        Ajustar tu estrategia de inventario, precios y cadena de suministro según el cuadrante identificado
+    9 clasificacion_mercados_cadena_suministro     paso         5  PASO 9 del superviviente
+        Revisar periódicamente el cuadrante de cada mercado, ya que puede cambiar con el tiempo
+    9 clasificacion_mercados_cadena_suministro     condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando necesitas definir tu estrategia de cadena de suministro
+    9 clasificacion_mercados_cadena_suministro     condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si hay incertidumbre sobre cómo priorizar recursos según el tipo de mercado
+    9 clasificacion_mercados_cadena_suministro     condicion    3  CONDICION 3 del superviviente
+        Cuando atiendes varios mercados con dinámicas distintas de oferta y demanda
+    9 cuatro_capacidades_mercado                   paso         1  ya lo dice el PASO 3 del superviviente
+        Evalúa el desempeño actual de la empresa en las cuatro capacidades frente a competidores
+    9 cuatro_capacidades_mercado                   paso         2  ya lo dice el PASO 4 del superviviente
+        Identifica en qué capacidad la empresa ya tiene ventaja competitiva
+    9 cuatro_capacidades_mercado                   paso         3  PASO 10 del superviviente
+        Invierte recursos en reforzar esa fortaleza en vez de corregir debilidades menores no críticas
+    9 cuatro_capacidades_mercado                   paso         4  ya lo dice el PASO 5 del superviviente
+        Define métricas de desempeño específicas para cada capacidad elegida (ej. fill rate, tiempo de entrega)
+    9 cuatro_capacidades_mercado                   condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando se define la estrategia de inversión en operaciones
+    9 cuatro_capacidades_mercado                   condicion    2  CONDICION 4 del superviviente
+        Cuando existe la tentación de igualar a competidores en eficiencia interna en vez de diferenciarse
+    9 cuatro_categorias_desempeno_cadena_suministro paso         1  PASO 11 del superviviente
+        Define métricas concretas para cada una de las cuatro categorías: servicio, eficiencia, flexibilidad y desarrollo de producto
+    9 cuatro_categorias_desempeno_cadena_suministro paso         2  PASO 12 del superviviente
+        Determina cuál o cuáles categorías son críticas según el cuadrante de mercado en el que operas
+    9 cuatro_categorias_desempeno_cadena_suministro paso         3  PASO 13 del superviviente
+        Recolecta tus datos de desempeño de forma diaria o continua
+    9 cuatro_categorias_desempeno_cadena_suministro paso         4  ya lo dice el PASO 5 del superviviente
+        Establece objetivos de desempeño alineados a esas prioridades
+    9 cuatro_categorias_desempeno_cadena_suministro paso         5  ya lo dice el PASO 3 del superviviente
+        Compara tu desempeño actual contra los estándares esperados para tu tipo de mercado
+    9 cuatro_categorias_desempeno_cadena_suministro paso         6  PASO 14 del superviviente
+        Usa los datos para detectar problemas y oportunidades de mejora
+    9 cuatro_categorias_desempeno_cadena_suministro paso         7  PASO 15 del superviviente
+        Calcular la rotación de inventario actual de la empresa
+    9 cuatro_categorias_desempeno_cadena_suministro paso         8  PASO 16 del superviviente
+        Calcular el retorno sobre ventas (return on sales)
+    9 cuatro_categorias_desempeno_cadena_suministro paso         9  PASO 17 del superviviente
+        Calcular el ciclo de conversión de efectivo (cash-to-cash cycle time)
+    9 cuatro_categorias_desempeno_cadena_suministro paso        10  PASO 18 del superviviente
+        Identificar oportunidades de mejora en cuentas por cobrar/pagar antes que en niveles de inventario
+    9 cuatro_categorias_desempeno_cadena_suministro condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando necesitas establecer KPIs de cadena de suministro
+    9 cuatro_categorias_desempeno_cadena_suministro condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si no sabes en qué área enfocar tus esfuerzos operativos
+    9 cuatro_categorias_desempeno_cadena_suministro condicion    3  ya lo dice la CONDICION 2 del superviviente
+        Cuando necesitas evaluar objetivamente el desempeño de tu cadena de suministro
+    9 cuatro_categorias_desempeno_cadena_suministro condicion    4  CONDICION 5 del superviviente
+        Cuando quieres justificar una inversión en mejoras de operación logística
+    9 estrategia_cuatro_capacidades_mercado        paso         1  ya lo dice el PASO 2 del superviviente
+        Diagnosticar en qué etapa de madurez está tu mercado (emergente, crecimiento, estable, maduro).
+    9 estrategia_cuatro_capacidades_mercado        paso         2  ya lo dice el PASO 3 del superviviente
+        Identificar en qué capacidad tu empresa ya tiene fortalezas relativas frente a competidores.
+    9 estrategia_cuatro_capacidades_mercado        paso         3  PASO 19 del superviviente
+        Seleccionar 1-2 capacidades de mercado donde concentrarás inversión (no todas a la vez).
+    9 estrategia_cuatro_capacidades_mercado        paso         4  PASO 20 del superviviente
+        Evitar invertir en eficiencia interna si compites en mercado de crecimiento; prioriza servicio y producto.
+    9 estrategia_cuatro_capacidades_mercado        condicion    1  CONDICION 6 del superviviente
+        Cuando la empresa entra en un mercado de rápido crecimiento y debe decidir dónde invertir recursos limitados.
+    9 estrategia_cuatro_capacidades_mercado        condicion    2  CONDICION 7 del superviviente
+        Cuando existe confusión sobre si competir por precio o por servicio/innovación.
+    9 modelo_cuadrantes_mercado                    paso         1  ya lo dice el PASO 2 del superviviente
+        Diagnostica en qué cuadrante está tu mercado ahora mismo, comparando oferta y demanda
+    9 modelo_cuadrantes_mercado                    paso         2  ya lo dice el PASO 4 del superviviente
+        Identifica qué capacidades necesitas reforzar en ese cuadrante: servicio, eficiencia, flexibilidad o desarrollo de producto
+    9 modelo_cuadrantes_mercado                    paso         3  PASO 21 del superviviente
+        Presta atención a señales de que tu mercado está cambiando de cuadrante para anticiparte
+    9 modelo_cuadrantes_mercado                    paso         4  ya lo dice el PASO 4 del superviviente
+        Ajusta la mezcla de capacidades que trabajas según el cuadrante que detectes
+    9 modelo_cuadrantes_mercado                    condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando necesitas decidir qué prioridades estratégicas seguir según cómo se mueve tu mercado
+    9 modelo_cuadrantes_mercado                    condicion    2  ya lo dice la CONDICION 2 del superviviente
+        Si no tienes claro qué priorizar: servicio, eficiencia, flexibilidad o innovación
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 3
+  nodos implicados    : 18
+  nodos que MUEREN    : 15
+  piezas repartidas   : 107 (43 viajan enteras, 62 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 3
+
+SIMULACION: cero escrituras.

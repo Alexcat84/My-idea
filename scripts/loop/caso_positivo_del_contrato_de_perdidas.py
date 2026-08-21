@@ -139,7 +139,20 @@ def escribir_modulo(perdidas_literal):
 
 
 def generar(destino_prefijo, simular):
-    argv = [GEN, "--lote", "Z", "--vuelta", "62", "--tramo",
+    # CORRECCION DECLARADA (2026-08-20, vuelta 66, carril del banco 9.10; el texto
+    # viejo va aqui verbatim y no se tacha). LA LINEA VIEJA ERA:
+    #   argv = [GEN, "--lote", "Z", "--vuelta", "62", "--tramo",
+    #           os.path.relpath(TMP_NOMINA, RAIZ).replace(os.sep, "/"),
+    #           "--contenido", MOD, "--prefijo", destino_prefijo]
+    # o sea SIN --operacion. Desde la vuelta 63 ese argumento es REQUERIDO en
+    # generar_plan_del_lote.py, asi que las tres llamadas de este caso positivo
+    # morian en argparse con exit 2 y este fichero LEIA ESE 2 COMO SI LA GUARDA NO
+    # MORDIERA: daba "ROJO: 4 de 4 fallan" contra unas guardas que estan sanas.
+    # MEDIDO EN LA VUELTA 66 al re-correrlo (docs/loop/_v66/, averia declarada en
+    # el reporte): un caso positivo que acusa en falso es tan malo como uno que
+    # calla, porque la proxima vez que acuse nadie le va a creer. La operacion que
+    # se le pasa es OP-U-01, que es la del tramo del que sale su fixture.
+    argv = [GEN, "--lote", "Z", "--vuelta", "62", "--operacion", "OP-U-01", "--tramo",
             os.path.relpath(TMP_NOMINA, RAIZ).replace(os.sep, "/"),
             "--contenido", MOD, "--prefijo", destino_prefijo]
     if simular:

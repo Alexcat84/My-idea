@@ -5687,7 +5687,7 @@
         "content_marketing_blog",
         "cuatro_etapas_llamada_de_ventas",
         "enfoque_en_superfans",
-        "estrategia_cuatro_capacidades_mercado",
+        "marco_analisis_mercado_cadena_suministro",
         "eventos_offline_como_canal_traccion",
         "fase_adopt_ciclo_cliente",
         "fase_assess_ciclo_cliente",
@@ -7078,7 +7078,7 @@
         "autocontrol_planificacion_servicio"
       ],
       "nodos_siguientes": [
-        "seis_sigma_servicios"
+        "six_sigma_dmaic"
       ],
       "condiciones_activacion": [
         "Cuando se necesita verificar cumplimiento de procedimientos operativos establecidos",
@@ -8399,7 +8399,7 @@
       ],
       "nodos_siguientes": [
         "metricas_desempeno_cadena_suministro",
-        "cuatro_categorias_desempeno_cadena_suministro"
+        "marco_analisis_mercado_cadena_suministro"
       ],
       "condiciones_activacion": [
         "Cuando la empresa genera grandes volúmenes de datos operativos",
@@ -8862,7 +8862,7 @@
       ],
       "entregable_esperado": "Plan de transformación cultural con las formas de elegir, formar y reconocer a tu gente alineadas, y con mecanismos de refuerzo definidos",
       "nodos_previos": [
-        "breakthrough_desempeno_actual",
+        "six_sigma_dmaic",
         "proceso_despidos_responsables"
       ],
       "nodos_siguientes": [
@@ -8902,7 +8902,8 @@
         "Cuando existen defectos, retrasos o costos crónicos que afectan la satisfacción del cliente",
         "Cuando se requiere un enfoque sistemático de mejora de procesos"
       ],
-      "etiqueta_arbol": "Ataca tus Problemas Crónicos"
+      "etiqueta_arbol": "Ataca tus Problemas Crónicos",
+      "deprecado": true
     },
     "breakup_fee_evaluation": {
       "node_id": "breakup_fee_evaluation",
@@ -14323,7 +14324,7 @@
       ],
       "entregable_esperado": "Reporte de correlación entre estilo de venta (cierre vs. consultivo) y métricas de satisfacción/retención post-venta",
       "nodos_previos": [
-        "cierre_sofisticacion_comprador",
+        "cierre_segun_complejidad_venta",
         "investigar_datos_cliente"
       ],
       "nodos_siguientes": [
@@ -14347,32 +14348,90 @@
       "fuente": "SPIN Selling - Neil Rackham",
       "resumen_teorico": "Concepto central de la investigación de Rackham: la efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso frecuente de técnicas de cierre puede mejorar resultados. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
       "pasos_accionables": [
-        "Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa",
+        "Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión",
         "Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción",
         "Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)",
         "Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito",
-        "Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan"
+        "Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan",
+        "Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque",
+        "Construir la relación en base a confianza y transparencia en lugar de tácticas de persuasión",
+        "Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente",
+        "Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes",
+        "Auditar el uso de técnicas de cierre en tu equipo comercial mediante observación de llamadas reales",
+        "Comparar tasas de éxito entre vendedores que usan muchas técnicas de cierre vs. pocas",
+        "Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente."
       ],
       "entregable_esperado": "Una estrategia de ventas diferenciada según el tipo de venta (transaccional vs. consultiva/compleja)",
       "nodos_previos": [
         "escala_actitud_cierre",
         "modelo_spin_preguntas",
         "preguntas_beneficio",
-        "preguntas_need_payoff"
+        "preguntas_need_payoff",
+        "comunicacion_honesta_en_crisis_al_equipo",
+        "gratificacion_inmediata_producto",
+        "metodologia_spin_selling",
+        "nobody_cares_just_run_company",
+        "reuniones_diarias_eliminar_bloqueos"
       ],
       "nodos_siguientes": [
         "compromiso_linea_tiempo_cliente",
         "fase_affirm_reducir_remordimiento",
         "kit_shock_and_awe_bienvenida",
         "fase_affirm_buyers_remorse",
-        "shock_and_awe_kit_bienvenida"
+        "shock_and_awe_kit_bienvenida",
+        "cierre_satisfaccion_postventa",
+        "construccion_de_valor_percibido",
+        "escala_actitud_cierre",
+        "marco_avances_continuaciones",
+        "metodologia_spin_selling",
+        "modelo_spin_preguntas",
+        "objetivos_de_llamada_orientados_a_avance",
+        "relacion_continua_con_cliente"
       ],
       "condiciones_activacion": [
         "Cuando la empresa vende productos o servicios de alto valor con ciclos de venta largos",
         "Cuando existe una relación continua con el cliente después de la venta",
-        "Cuando los resultados de cierre agresivo no mejoran las ventas complejas"
+        "Cuando los resultados de cierre agresivo no mejoran las ventas complejas",
+        "Si el usuario tiene un portafolio mixto de productos de distinto valor/complejidad",
+        "Si el cliente objetivo es un comprador profesional o departamento de compras",
+        "Si las ventas son B2B con procesos de decisión formales",
+        "Cuando el equipo comercial aplica la misma técnica a todas las ventas sin distinguir tamaño o complejidad"
       ],
-      "etiqueta_arbol": "Ajusta el Cierre a la Venta"
+      "etiqueta_arbol": "Ajusta el Cierre a la Venta",
+      "ids_alias": [
+        "cierre_segun_tamano_decision",
+        "cierre_sofisticacion_comprador",
+        "diferencias_venta_pequena_venta_grande",
+        "ineficacia_cierre_ventas_grandes",
+        "riesgo_tecnicas_cierre_venta_compleja"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "cierre_segun_tamano_decision",
+          "titulo": "Relación entre Presión de Cierre y Tamaño de la Decisión",
+          "fuente": "SPIN Selling - Neil Rackham"
+        },
+        {
+          "node_id": "cierre_sofisticacion_comprador",
+          "titulo": "Rechazo de Compradores Sofisticados a las Técnicas de Cierre",
+          "fuente": "SPIN Selling - Neil Rackham"
+        },
+        {
+          "node_id": "diferencias_venta_pequena_venta_grande",
+          "titulo": "Diferencias psicológicas entre venta pequeña y venta grande",
+          "fuente": "SPIN Selling - Neil Rackham"
+        },
+        {
+          "node_id": "ineficacia_cierre_ventas_grandes",
+          "titulo": "Ineficacia de las Técnicas de Cierre en Ventas Grandes",
+          "fuente": "SPIN Selling - Neil Rackham"
+        },
+        {
+          "node_id": "riesgo_tecnicas_cierre_venta_compleja",
+          "titulo": "Riesgo de las Técnicas de Cierre en Ventas Complejas",
+          "fuente": "SPIN Selling - Neil Rackham"
+        }
+      ]
     },
     "cierre_segun_tamano_decision": {
       "node_id": "cierre_segun_tamano_decision",
@@ -14402,7 +14461,8 @@
         "Si el usuario tiene un portafolio mixto de productos de distinto valor/complejidad",
         "Si se busca optimizar la estrategia comercial según el ticket promedio"
       ],
-      "etiqueta_arbol": "No Presiones Decisiones Grandes"
+      "etiqueta_arbol": "No Presiones Decisiones Grandes",
+      "deprecado": true
     },
     "cierre_sofisticacion_comprador": {
       "node_id": "cierre_sofisticacion_comprador",
@@ -14429,7 +14489,8 @@
         "Si el cliente objetivo es un comprador profesional o departamento de compras",
         "Si las ventas son B2B con procesos de decisión formales"
       ],
-      "etiqueta_arbol": "Evita Trucos con Compradores Expertos"
+      "etiqueta_arbol": "Evita Trucos con Compradores Expertos",
+      "deprecado": true
     },
     "cierre_term_sheet": {
       "node_id": "cierre_term_sheet",
@@ -15157,7 +15218,8 @@
           "titulo": "Modelo de los Cuatro Cuadrantes de Mercado para Cadena de Suministro",
           "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
         }
-      ]
+      ],
+      "deprecado": true
     },
     "clasificacion_riesgos_por_dominio": {
       "node_id": "clasificacion_riesgos_por_dominio",
@@ -16652,7 +16714,7 @@
       ],
       "entregable_esperado": "Acuerdo de intercambio de datos con al menos un socio clave de la cadena de suministro",
       "nodos_previos": [
-        "modelo_cuadrantes_mercado",
+        "marco_analisis_mercado_cadena_suministro",
         "creacion_data_warehouse"
       ],
       "nodos_siguientes": [
@@ -17701,7 +17763,7 @@
         "revisiones_regulares_desempeno_ceo"
       ],
       "nodos_siguientes": [
-        "cierre_segun_tamano_decision"
+        "cierre_segun_complejidad_venta"
       ],
       "condiciones_activacion": [
         "Cuando la empresa enfrenta una amenaza existencial y se requiere un esfuerzo extraordinario del equipo",
@@ -19664,7 +19726,6 @@
       "nodos_previos": [
         "desarrollar_metas_anuales",
         "dmaic_six_sigma",
-        "secuencia_universal_para_el_breakthrough",
         "six_sigma_dmaic"
       ],
       "nodos_siguientes": [
@@ -20058,7 +20119,7 @@
       ],
       "entregable_esperado": "Argumentario de valor cuantificado para la oferta, ligado a los problemas reales del segmento de cliente",
       "nodos_previos": [
-        "diferencias_venta_pequena_venta_grande",
+        "cierre_segun_complejidad_venta",
         "value_proposition_startup",
         "metodologia_spin_selling"
       ],
@@ -21559,7 +21620,7 @@
       ],
       "nodos_siguientes": [
         "auditorias_calidad_proceso",
-        "seis_sigma_servicios",
+        "six_sigma_dmaic",
         "programa_auditoria_calidad"
       ],
       "condiciones_activacion": [
@@ -23544,7 +23605,7 @@
         "trilogia_de_juran",
         "metodologia_medicion_copq",
         "roi_proyectos_calidad",
-        "secuencia_universal_breakthrough",
+        "six_sigma_dmaic",
         "calculo_roi_calidad",
         "programa_mejora_calidad_14_pasos",
         "accion_correctiva",
@@ -23568,7 +23629,6 @@
         "impacto_calidad_ingresos_costos",
         "dmaic_six_sigma",
         "carryover_fallas_producto",
-        "six_sigma_dmaic",
         "medidas_productividad_no_mejoran"
       ],
       "condiciones_activacion": [
@@ -24232,7 +24292,7 @@
       "entregable_esperado": "Un repositorio de datos (data warehouse) que funciona, conectado automáticamente a tus sistemas de origen, con reportes básicos de tu operación",
       "nodos_previos": [
         "jerarquia_datos_scor",
-        "cuatro_capacidades_mercado"
+        "marco_analisis_mercado_cadena_suministro"
       ],
       "nodos_siguientes": [
         "diseno_dashboards",
@@ -25942,7 +26002,8 @@
         "Cuando se define la estrategia de inversión en operaciones",
         "Cuando existe la tentación de igualar a competidores en eficiencia interna en vez de diferenciarse"
       ],
-      "etiqueta_arbol": "Elige tus Ventajas de Mercado"
+      "etiqueta_arbol": "Elige tus Ventajas de Mercado",
+      "deprecado": true
     },
     "cuatro_categorias_desempeno_cadena_suministro": {
       "node_id": "cuatro_categorias_desempeno_cadena_suministro",
@@ -25991,7 +26052,8 @@
           "titulo": "Categorías de Métricas de Desempeño de Cadena de Suministro",
           "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
         }
-      ]
+      ],
+      "deprecado": true
     },
     "cuatro_costos_de_calidad": {
       "node_id": "cuatro_costos_de_calidad",
@@ -30356,7 +30418,7 @@
         "arquitectura_tecnica_modular",
         "bucle_retroalimentacion_autoajustable",
         "colaboracion_transporte_ctm",
-        "cuatro_capacidades_mercado",
+        "marco_analisis_mercado_cadena_suministro",
         "gestion_procurement_consumo",
         "gestion_riesgo_cadena_suministro",
         "ia_en_supply_chain",
@@ -32608,7 +32670,7 @@
       ],
       "nodos_siguientes": [
         "auditoria_calidad",
-        "secuencia_universal_para_el_breakthrough"
+        "six_sigma_dmaic"
       ],
       "condiciones_activacion": [
         "Cuando el diseño del proceso está completo y debe pasar a producción/operaciones"
@@ -33015,7 +33077,7 @@
         "sistema_manejo_quejas",
         "desarrollar_caracteristicas_producto",
         "design_for_six_sigma_dfss",
-        "six_sigma_dmaic_2"
+        "six_sigma_dmaic"
       ],
       "condiciones_activacion": [
         "Cuando ya se han identificado los clientes y se requiere entender a profundidad qué esperan del producto o servicio",
@@ -33239,8 +33301,7 @@
         "innovacion_tipo_ii",
         "juran_quality_by_design",
         "six_sigma_dmaic",
-        "descubrir_necesidades_del_cliente",
-        "six_sigma_dmaic_2"
+        "descubrir_necesidades_del_cliente"
       ],
       "nodos_siguientes": [
         "establecer_capacidad_del_proceso",
@@ -35291,7 +35352,7 @@
         "calidad_de_diseno_vs_produccion"
       ],
       "nodos_siguientes": [
-        "secuencia_universal_breakthrough",
+        "six_sigma_dmaic",
         "juran_quality_by_design",
         "auditoria_de_producto",
         "gobierno_corporativo_y_calidad"
@@ -35460,7 +35521,8 @@
       "condiciones_activacion": [
         "Cuando el equipo comercial aplica la misma técnica a todas las ventas sin distinguir tamaño o complejidad"
       ],
-      "etiqueta_arbol": "Reconoce la Venta Grande"
+      "etiqueta_arbol": "Reconoce la Venta Grande",
+      "deprecado": true
     },
     "dilema_riqueza_vs_control": {
       "fase_proyecto": "planificacion",
@@ -44601,7 +44663,7 @@
         "colaboracion_transporte_ctm",
         "logistica_inversa_retornos",
         "metricas_desempeno_cadena_suministro",
-        "cuatro_categorias_desempeno_cadena_suministro"
+        "marco_analisis_mercado_cadena_suministro"
       ],
       "nodos_siguientes": [
         "planificacion_de_la_inspeccion",
@@ -44979,7 +45041,7 @@
         "normas_culturales_calidad"
       ],
       "nodos_siguientes": [
-        "seis_sigma_servicios"
+        "six_sigma_dmaic"
       ],
       "condiciones_activacion": [
         "Cuando la organización de servicio busca empoderar equipos de línea frontal para mejorar calidad y autonomía operativa"
@@ -45006,7 +45068,7 @@
       ],
       "nodos_siguientes": [
         "equipos_ruptura_vet",
-        "breakthrough_desempeno_actual"
+        "six_sigma_dmaic"
       ],
       "condiciones_activacion": [
         "Cuando se requiere resolver un problema de calidad de forma urgente",
@@ -45161,7 +45223,7 @@
         "sistemas_sociotecnicos"
       ],
       "nodos_siguientes": [
-        "breakthrough_desempeno_actual"
+        "six_sigma_dmaic"
       ],
       "condiciones_activacion": [
         "Cuando los equipos existentes carecen de claridad de objetivos",
@@ -45403,7 +45465,6 @@
         "medicion_capacidad_servicio",
         "control_estadistico_de_procesos",
         "six_sigma_dmaic",
-        "six_sigma_dmaic_2",
         "validacion_sistema_medicion"
       ],
       "condiciones_activacion": [
@@ -45614,7 +45675,7 @@
       "entregable_esperado": "Puntaje individual de actitud hacia el cierre, con diagnóstico de si el vendedor necesita reorientar su enfoque hacia técnicas consultivas (SPIN) en vez de cierre agresivo.",
       "nodos_previos": [
         "modelo_spin_preguntas",
-        "ineficacia_cierre_ventas_grandes"
+        "cierre_segun_complejidad_venta"
       ],
       "nodos_siguientes": [
         "metodologia_evaluacion_entrenamiento_ventas",
@@ -47671,7 +47732,7 @@
       ],
       "entregable_esperado": "Tu plan de acción para los próximos 12 meses, con hitos de alianzas, capacitación, inventario e indicadores de percepción de marca.",
       "nodos_previos": [
-        "estrategia_cuatro_capacidades_mercado",
+        "marco_analisis_mercado_cadena_suministro",
         "market_type_revenue_growth"
       ],
       "nodos_siguientes": [
@@ -47824,7 +47885,8 @@
         "Cuando la empresa entra en un mercado de rápido crecimiento y debe decidir dónde invertir recursos limitados.",
         "Cuando existe confusión sobre si competir por precio o por servicio/innovación."
       ],
-      "etiqueta_arbol": "Elige tu Capacidad de Mercado"
+      "etiqueta_arbol": "Elige tu Capacidad de Mercado",
+      "deprecado": true
     },
     "estrategia_de_balas_de_plomo": {
       "node_id": "estrategia_de_balas_de_plomo",
@@ -49399,8 +49461,7 @@
         "analisis_licitaciones_no_ganadas",
         "establecer_metas_de_calidad_basadas_en_mercado",
         "preguntas_situacion",
-        "clasificacion_mercados_cadena_suministro",
-        "modelo_cuadrantes_mercado",
+        "marco_analisis_mercado_cadena_suministro",
         "pronostico_de_demanda_variables"
       ],
       "condiciones_activacion": [
@@ -59941,7 +60002,7 @@
       "nodos_previos": [
         "gestion_capital_trabajo",
         "clasificacion_tipos_activos",
-        "clasificacion_mercados_cadena_suministro",
+        "marco_analisis_mercado_cadena_suministro",
         "metodos_de_pronostico",
         "metricas_servicio_cliente_bts_bto",
         "produccion_scheduling_balance_objetivos"
@@ -62063,7 +62124,7 @@
         "fase_activate_primera_impresion"
       ],
       "nodos_siguientes": [
-        "riesgo_tecnicas_cierre_venta_compleja"
+        "cierre_segun_complejidad_venta"
       ],
       "condiciones_activacion": [
         "Cuando el producto requiere configuración, carga o activación antes de poder usarse",
@@ -66191,7 +66252,8 @@
         "Si el usuario vende productos/servicios de alto valor o con ciclos de venta largos",
         "Si el equipo comercial usa técnicas de cierre tradicionales sin resultados"
       ],
-      "etiqueta_arbol": "No Fuerces el Cierre"
+      "etiqueta_arbol": "No Fuerces el Cierre",
+      "deprecado": true
     },
     "infection_control_plan": {
       "node_id": "infection_control_plan",
@@ -69084,7 +69146,7 @@
         "design_for_six_sigma_dmadv",
         "design_for_six_sigma_dmadv_2",
         "ingenieria_calidad_proveedores",
-        "secuencia_universal_breakthrough",
+        "six_sigma_dmaic",
         "establecer_proyecto_y_metas_diseno",
         "identificar_clientes_externos_e_internos",
         "concurrent_engineering",
@@ -69477,7 +69539,7 @@
       "nodos_previos": [
         "qfd_matriz_calidad",
         "fmea_analisis_de_modos_de_falla",
-        "estrategia_cuatro_capacidades_mercado",
+        "marco_analisis_mercado_cadena_suministro",
         "planificacion_inicial_calidad",
         "qfd_matriz"
       ],
@@ -71072,7 +71134,7 @@
         "scor_model_operaciones",
         "simulacion_de_operaciones_supply_chain",
         "decision_pivotar_o_proceder",
-        "clasificacion_mercados_cadena_suministro"
+        "marco_analisis_mercado_cadena_suministro"
       ],
       "condiciones_activacion": [
         "Cuando el usuario necesita una visión holística del negocio antes de pasar a validación o ejecución",
@@ -73354,25 +73416,96 @@
       "resumen_teorico": "Antes de decidir dónde enfocar tus esfuerzos, necesitas entender en qué tipo de mercado te mueves: uno maduro, uno en desarrollo o uno estable. Cada tipo te exige destacar en algo distinto: atención al cliente, eficiencia interna, capacidad de adaptarte a la demanda o desarrollo de producto. Tu tarea es identificar en cuál de estas áreas necesitas ser mejor que tu competencia.",
       "pasos_accionables": [
         "Identifica los mercados en los que trabajas y quiénes participan en ellos: quienes producen, distribuyen, hacen la logística y venden al público",
-        "Define en qué tipo de mercado está cada línea de tu negocio hoy y en qué tipo estará en dos años",
+        "Define en qué tipo de mercado está cada línea de tu negocio hoy y en qué tipo estará en dos años, de entre los cuadrantes desarrollo, crecimiento, estable o maduro",
         "Compara tu desempeño con el de tu competencia en cuatro áreas: atención al cliente, eficiencia interna, capacidad de adaptarte a cambios en la demanda y desarrollo de producto",
         "Decide si en cada área necesitas liderar, igualar o superar a tu competencia",
-        "Fija metas concretas de desempeño que respondan a lo que tu mercado te exige"
+        "Fija metas concretas de desempeño que respondan a lo que tu mercado te exige",
+        "Analizar la relación actual entre oferta y demanda en tu industria",
+        "Determinar qué oportunidades específicas ofrece ese cuadrante: alianzas, servicio al cliente, eficiencia o flexibilidad",
+        "Ajustar tu estrategia de inventario, precios y cadena de suministro según el cuadrante identificado",
+        "Revisar periódicamente el cuadrante de cada mercado, ya que puede cambiar con el tiempo",
+        "Invierte recursos en reforzar esa fortaleza en vez de corregir debilidades menores no críticas",
+        "Define métricas concretas para cada una de las cuatro categorías: servicio, eficiencia, flexibilidad y desarrollo de producto",
+        "Determina cuál o cuáles categorías son críticas según el cuadrante de mercado en el que operas",
+        "Recolecta tus datos de desempeño de forma diaria o continua",
+        "Usa los datos para detectar problemas y oportunidades de mejora",
+        "Calcular la rotación de inventario actual de la empresa",
+        "Calcular el retorno sobre ventas (return on sales)",
+        "Calcular el ciclo de conversión de efectivo (cash-to-cash cycle time)",
+        "Identificar oportunidades de mejora en cuentas por cobrar/pagar antes que en niveles de inventario",
+        "Seleccionar 1-2 capacidades de mercado donde concentrarás inversión (no todas a la vez).",
+        "Evitar invertir en eficiencia interna si compites en mercado de crecimiento; prioriza servicio y producto.",
+        "Presta atención a señales de que tu mercado está cambiando de cuadrante para anticiparte"
       ],
       "entregable_esperado": "Un mapa claro de en qué necesitas destacar frente a tu competencia, con metas de desempeño definidas para cada una de las cuatro áreas",
       "nodos_previos": [
-        "market_type_revenue_growth"
+        "market_type_revenue_growth",
+        "arquetipos_de_cliente",
+        "big_data_ia_cadena_suministro",
+        "definicion_alineacion_cadena_suministro",
+        "estudio_mercado_calidad",
+        "lienzo_modelo_negocio",
+        "simulacion_de_operaciones_supply_chain"
       ],
       "nodos_siguientes": [
         "creacion_estrategia_cadena_suministro",
         "investigacion_mercado_paso_a_paso",
-        "enfoque_paso_a_paso_investigacion_mercado"
+        "enfoque_paso_a_paso_investigacion_mercado",
+        "compartir_datos_cadena_suministro",
+        "creacion_data_warehouse",
+        "equipo_conjunto_de_mejora_con_proveedores",
+        "estrategia_captura_mercado_crecimiento",
+        "gestion_inventario",
+        "key_process_product_characteristics",
+        "medicion_de_calidad_en_manufactura",
+        "metricas_servicio_cliente_bts_bto",
+        "product_roadmap_estrategico",
+        "roadmap_proyectos_operacionales_12_meses"
       ],
       "condiciones_activacion": [
         "Cuando empiezas a definir oportunidades para tu cadena de suministro",
-        "Cuando no tienes claro en qué áreas debes enfocar tus recursos para competir"
+        "Cuando no tienes claro en qué áreas debes enfocar tus recursos para competir",
+        "Cuando atiendes varios mercados con dinámicas distintas de oferta y demanda",
+        "Cuando existe la tentación de igualar a competidores en eficiencia interna en vez de diferenciarse",
+        "Cuando quieres justificar una inversión en mejoras de operación logística",
+        "Cuando la empresa entra en un mercado de rápido crecimiento y debe decidir dónde invertir recursos limitados.",
+        "Cuando existe confusión sobre si competir por precio o por servicio/innovación."
       ],
-      "etiqueta_arbol": "Analiza tu Mercado de Cadena"
+      "etiqueta_arbol": "Analiza tu Mercado de Cadena",
+      "ids_alias": [
+        "clasificacion_mercados_cadena_suministro",
+        "cuatro_capacidades_mercado",
+        "cuatro_categorias_desempeno_cadena_suministro",
+        "estrategia_cuatro_capacidades_mercado",
+        "modelo_cuadrantes_mercado"
+      ],
+      "merged_originals": [
+        {
+          "node_id": "clasificacion_mercados_cadena_suministro",
+          "titulo": "Clasificación de Mercados por Oferta y Demanda",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        },
+        {
+          "node_id": "cuatro_capacidades_mercado",
+          "titulo": "Las Cuatro Capacidades de Mercado en la Cadena de Suministro",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        },
+        {
+          "node_id": "cuatro_categorias_desempeno_cadena_suministro",
+          "titulo": "Cuatro Categorías de Desempeño de la Cadena de Suministro",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        },
+        {
+          "node_id": "estrategia_cuatro_capacidades_mercado",
+          "titulo": "Las Cuatro Capacidades de Mercado (Customer Service, Product Development, Internal Efficiency, Demand Flexibility)",
+          "fuente": "Essentials of Supply Chain Mana - Michael H. Hugos"
+        },
+        {
+          "node_id": "modelo_cuadrantes_mercado",
+          "titulo": "Modelo de los Cuatro Cuadrantes de Mercado (Desarrollo, Crecimiento, Estable, Maduro)",
+          "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+        }
+      ]
     },
     "marco_avances_continuaciones": {
       "node_id": "marco_avances_continuaciones",
@@ -73389,7 +73522,7 @@
       ],
       "entregable_esperado": "Sistema de seguimiento de llamadas de venta que registre el tipo de resultado obtenido en cada interacción con el cliente.",
       "nodos_previos": [
-        "riesgo_tecnicas_cierre_venta_compleja",
+        "cierre_segun_complejidad_venta",
         "escala_actitud_cierre"
       ],
       "nodos_siguientes": [
@@ -73688,11 +73821,8 @@
       ],
       "nodos_siguientes": [
         "metrics_that_matter_framework",
-        "clasificacion_mercados_cadena_suministro",
-        "estrategia_captura_mercado_crecimiento",
-        "estrategia_cuatro_capacidades_mercado",
         "marco_analisis_mercado_cadena_suministro",
-        "modelo_cuadrantes_mercado",
+        "estrategia_captura_mercado_crecimiento",
         "revalidar_modelo_negocio",
         "revalidacion_modelo_negocio"
       ],
@@ -74392,7 +74522,7 @@
       "nodos_previos": [
         "reduccion_tiempo_ciclo",
         "error_proofing_servicio",
-        "seis_sigma_servicios"
+        "six_sigma_dmaic"
       ],
       "nodos_siguientes": [
         "mejora_continua_del_proceso",
@@ -74455,7 +74585,7 @@
         "auditoria_de_producto",
         "auditoria_de_proceso",
         "auditoria_de_producto_2",
-        "cuatro_categorias_desempeno_cadena_suministro"
+        "marco_analisis_mercado_cadena_suministro"
       ],
       "nodos_siguientes": [
         "enfoque_mejora_continua_operaciones",
@@ -76275,13 +76405,13 @@
       "nodos_previos": [
         "analisis_de_cohortes",
         "value_proposition_startup",
-        "ineficacia_cierre_ventas_grandes"
+        "cierre_segun_complejidad_venta"
       ],
       "nodos_siguientes": [
         "necesidades_implicitas_vs_explicitas",
         "construccion_de_valor_percibido",
         "cuatro_etapas_llamada_de_ventas",
-        "diferencias_venta_pequena_venta_grande"
+        "cierre_segun_complejidad_venta"
       ],
       "condiciones_activacion": [
         "Si el usuario vende productos o servicios de alto valor con ciclos de venta largos y múltiples llamadas",
@@ -76816,7 +76946,7 @@
       ],
       "entregable_esperado": "Sistema de medición de servicio al cliente implementado según el modelo operativo (BTS o BTO)",
       "nodos_previos": [
-        "cuatro_categorias_desempeno_cadena_suministro",
+        "marco_analisis_mercado_cadena_suministro",
         "value_proposition_startup"
       ],
       "nodos_siguientes": [
@@ -77834,7 +77964,8 @@
         "Cuando necesitas decidir qué prioridades estratégicas seguir según cómo se mueve tu mercado",
         "Si no tienes claro qué priorizar: servicio, eficiencia, flexibilidad o innovación"
       ],
-      "etiqueta_arbol": "Ubica tu Cuadrante de Mercado"
+      "etiqueta_arbol": "Ubica tu Cuadrante de Mercado",
+      "deprecado": true
     },
     "modelo_cuatro_cuadrantes_mercado": {
       "node_id": "modelo_cuatro_cuadrantes_mercado",
@@ -78345,8 +78476,7 @@
         "enfoque_resolucion_problemas_lanzamiento_producto",
         "lanzamiento_nuevos_productos_enfoque_problema",
         "cierre_satisfaccion_postventa",
-        "cierre_segun_tamano_decision",
-        "cierre_sofisticacion_comprador",
+        "cierre_segun_complejidad_venta",
         "compromiso_linea_tiempo_cliente",
         "cuatro_etapas_llamada_de_ventas",
         "diseno_embudo_ventas_cliente",
@@ -78361,12 +78491,11 @@
         "metodologia_evaluacion_entrenamiento_ventas",
         "prevencion_de_objeciones",
         "prevencion_objeciones_vs_manejo",
-        "riesgo_tecnicas_cierre_venta_compleja",
+        "cierre_segun_complejidad_venta",
         "analisis_capacidad_proceso",
         "obtencion_compromiso_venta",
         "enfoque_etapa_investigacion",
         "reglas_aprendizaje_habilidades_venta",
-        "cierre_segun_complejidad_venta",
         "compromiso_linea_tiempo_cliente",
         "planificacion_preguntas_implicacion",
         "preguntas_need_payoff",
@@ -80487,7 +80616,7 @@
         "equipo_de_gestion_de_crisis"
       ],
       "nodos_siguientes": [
-        "cierre_segun_tamano_decision"
+        "cierre_segun_complejidad_venta"
       ],
       "condiciones_activacion": [
         "Cuando el fundador/CEO enfrenta un contexto adverso fuera de su control (crisis de mercado, recesión).",
@@ -80961,7 +81090,7 @@
       "entregable_esperado": "Plantilla de planificación de llamadas de venta con objetivo de Avance definido para cada interacción con el cliente.",
       "nodos_previos": [
         "marco_avances_continuaciones",
-        "riesgo_tecnicas_cierre_venta_compleja"
+        "cierre_segun_complejidad_venta"
       ],
       "nodos_siguientes": [
         "enfoque_etapa_investigacion"
@@ -82265,7 +82394,7 @@
         "hr_calidad_gestion"
       ],
       "nodos_siguientes": [
-        "seis_sigma_servicios"
+        "six_sigma_dmaic"
       ],
       "condiciones_activacion": [
         "Cuando arrancas un programa de calidad en tu negocio de servicios",
@@ -91523,7 +91652,7 @@
         "scorecard_de_seleccion_de_proyectos",
         "technology_platform_evaluation",
         "estrategia_captura_mercado_crecimiento",
-        "estrategia_cuatro_capacidades_mercado"
+        "marco_analisis_mercado_cadena_suministro"
       ],
       "nodos_siguientes": [
         "stage_gate_system",
@@ -98792,7 +98921,7 @@
       ],
       "entregable_esperado": "Plan de relación con el cliente que incluya puntos de contacto durante el ciclo de venta y después de cerrada",
       "nodos_previos": [
-        "diferencias_venta_pequena_venta_grande"
+        "cierre_segun_complejidad_venta"
       ],
       "nodos_siguientes": [
         "revolucion_relaciones_proveedores"
@@ -101004,7 +101133,7 @@
         "descubrir_valor_inesperado_cliente"
       ],
       "nodos_siguientes": [
-        "cierre_segun_tamano_decision"
+        "cierre_segun_complejidad_venta"
       ],
       "condiciones_activacion": [
         "Cuando existe un plazo crítico de supervivencia empresarial",
@@ -102025,7 +102154,8 @@
         "Cuando el usuario vende productos o servicios de alto valor con relación continua post-venta.",
         "Cuando el equipo comercial usa scripts de cierre agresivo y presenta baja satisfacción de clientes."
       ],
-      "etiqueta_arbol": "Cuida tus Técnicas de Cierre"
+      "etiqueta_arbol": "Cuida tus Técnicas de Cierre",
+      "deprecado": true
     },
     "riesgo_titulos_inflados": {
       "node_id": "riesgo_titulos_inflados",
@@ -102380,7 +102510,7 @@
       ],
       "entregable_esperado": "Un cronograma de proyectos a 12 meses con responsables, las operaciones de tu negocio que se verán impactadas y las métricas de éxito.",
       "nodos_previos": [
-        "estrategia_cuatro_capacidades_mercado",
+        "marco_analisis_mercado_cadena_suministro",
         "estrategia_captura_mercado_crecimiento"
       ],
       "nodos_siguientes": [
@@ -103017,7 +103147,6 @@
       "nodos_previos": [
         "dmadv_design_for_six_sigma",
         "six_sigma_dmaic",
-        "six_sigma_dmaic_2",
         "design_for_six_sigma_dfss"
       ],
       "nodos_siguientes": [
@@ -104287,7 +104416,8 @@
         "Cuando la organización necesita un cambio radical de desempeño, no solo mejora incremental",
         "Cuando existe resistencia cultural anticipada a los cambios propuestos"
       ],
-      "etiqueta_arbol": "Sigue la Ruta del Avance"
+      "etiqueta_arbol": "Sigue la Ruta del Avance",
+      "deprecado": true
     },
     "secuencia_universal_para_el_breakthrough": {
       "node_id": "secuencia_universal_para_el_breakthrough",
@@ -104317,7 +104447,8 @@
         "Cuando la organización busca una mejora significativa (no incremental) en el desempeño de un proceso",
         "Cuando existen altos costos de mala calidad recurrentes"
       ],
-      "etiqueta_arbol": "Los Seis Pasos del Avance"
+      "etiqueta_arbol": "Los Seis Pasos del Avance",
+      "deprecado": true
     },
     "seduccion_modelo_persona": {
       "node_id": "seduccion_modelo_persona",
@@ -105200,7 +105331,8 @@
       "ids_alias": [
         "seis_sigma_servicios_2"
       ],
-      "etiqueta_arbol": "Aplica Six Sigma en Servicios"
+      "etiqueta_arbol": "Aplica Six Sigma en Servicios",
+      "deprecado": true
     },
     "seleccion_abogado_venture": {
       "fase_proyecto": "planificacion",
@@ -107539,7 +107671,7 @@
       "nodos_siguientes": [
         "vehiculos_autonomos_drones_supply_chain",
         "ia_en_supply_chain",
-        "cuatro_categorias_desempeno_cadena_suministro",
+        "marco_analisis_mercado_cadena_suministro",
         "tecnologias_emergentes_cadena_suministro"
       ],
       "condiciones_activacion": [
@@ -108922,40 +109054,92 @@
         "Mide la magnitud real de los síntomas con datos, no con impresiones.",
         "Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.",
         "Implementa un remedio dirigido específicamente a esa causa raíz.",
-        "Controla los resultados periódicamente para asegurar que la mejora se mantenga."
+        "Controla los resultados periódicamente para asegurar que la mejora se mantenga.",
+        "Establecer la creencia de que el cambio es deseable y factible",
+        "Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales",
+        "Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)",
+        "Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia",
+        "Establecer un proyecto formal con equipo asignado.",
+        "Replicar los resultados exitosos y nominar nuevos proyectos de mejora."
       ],
       "entregable_esperado": "Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
       "nodos_previos": [
-        "secuencia_universal_breakthrough",
         "viaje_diagnostico_remedial",
         "analisis_pareto_priorizacion",
         "error_proofing_servicio",
-        "secuencia_universal_para_el_breakthrough",
         "dmaic_fase_improve",
         "impacto_calidad_en_costos",
         "analisis_pareto_de_proveedores",
-        "costo_de_mala_calidad_copq"
+        "costo_de_mala_calidad_copq",
+        "auditorias_calidad_proceso",
+        "control_calidad_operaciones_servicio",
+        "desarrollo_de_controles_de_proceso",
+        "descubrir_necesidades_del_cliente",
+        "diferencia_planeacion_mejora",
+        "equipos_autodirigidos_servicio",
+        "equipos_blitz",
+        "equipos_ruptura_vet",
+        "juran_quality_by_design",
+        "organizacion_equipos_calidad_servicio"
       ],
       "nodos_siguientes": [
         "sostener_las_ganancias",
         "dmadv_design_for_six_sigma",
         "roles_six_sigma",
         "consejo_ejecutivo_calidad",
-        "design_for_six_sigma_dfss"
+        "design_for_six_sigma_dfss",
+        "breakthrough_cultural",
+        "medicion_capacidad_servicio",
+        "viaje_diagnostico_remedial"
       ],
       "condiciones_activacion": [
         "Cuando enfrentas un problema crónico de calidad que ya intentaste resolver sin éxito duradero.",
         "Cuando necesitas un método estructurado y probado para mejorar un proceso con métricas cuantificables.",
-        "Cuando quieres asegurar que una mejora se mantenga en el tiempo y no se revierta a los pocos meses."
+        "Cuando quieres asegurar que una mejora se mantenga en el tiempo y no se revierta a los pocos meses.",
+        "Cuando la organización necesita un cambio radical de desempeño, no solo mejora incremental",
+        "Cuando existe resistencia cultural anticipada a los cambios propuestos",
+        "Cuando existen altos costos de mala calidad recurrentes",
+        "Si la organización busca institucionalizar una cultura de mejora continua basada en datos",
+        "Cuando se requiere alcanzar niveles de calidad cercanos a la perfección (ppm)"
       ],
       "etiqueta_arbol": "Mejora en Cinco Pasos",
       "ids_alias": [
-        "dmaic_six_sigma"
+        "dmaic_six_sigma",
+        "breakthrough_desempeno_actual",
+        "secuencia_universal_breakthrough",
+        "secuencia_universal_para_el_breakthrough",
+        "seis_sigma_servicios",
+        "six_sigma_dmaic_2"
       ],
       "merged_originals": [
         {
           "node_id": "dmaic_six_sigma",
           "titulo": "Modelo de Mejora DMAIC de Six Sigma",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "breakthrough_desempeno_actual",
+          "titulo": "Ruptura en el Desempeño Actual (Breakthrough in Current Performance)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "secuencia_universal_breakthrough",
+          "titulo": "Secuencia Universal para el Breakthrough",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "secuencia_universal_para_el_breakthrough",
+          "titulo": "Secuencia Universal de Juran para el Breakthrough (Mejora Radical)",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "seis_sigma_servicios",
+          "titulo": "Aplicación de Six Sigma en Industrias de Servicio",
+          "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        },
+        {
+          "node_id": "six_sigma_dmaic_2",
+          "titulo": "Six Sigma - Metodología DMAIC",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
         }
       ]
@@ -108990,7 +109174,8 @@
         "Cuando se requiere alcanzar niveles de calidad cercanos a la perfección (ppm)",
         "Cuando la organización busca una mejora de tipo breakthrough en procesos críticos para el cliente"
       ],
-      "etiqueta_arbol": "Reduce Defectos en Cinco Pasos"
+      "etiqueta_arbol": "Reduce Defectos en Cinco Pasos",
+      "deprecado": true
     },
     "skunk_works_proyectos_paralelos": {
       "node_id": "skunk_works_proyectos_paralelos",
@@ -117521,7 +117706,7 @@
       ],
       "entregable_esperado": "Documento de causa raíz validada y plan de remedio probado con controles de sostenimiento",
       "nodos_previos": [
-        "secuencia_universal_breakthrough",
+        "six_sigma_dmaic",
         "analisis_pareto_priorizacion",
         "establecer_proyecto_mejora",
         "analisis_pareto_de_proveedores"
@@ -126809,7 +126994,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 222,
+    "nodos_sin_enlaces_entrantes": 230,
     "enlaces_rotos_en_grafo": 0
   }
 }

@@ -11,40 +11,92 @@
     "Mide la magnitud real de los síntomas con datos, no con impresiones.",
     "Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.",
     "Implementa un remedio dirigido específicamente a esa causa raíz.",
-    "Controla los resultados periódicamente para asegurar que la mejora se mantenga."
+    "Controla los resultados periódicamente para asegurar que la mejora se mantenga.",
+    "Establecer la creencia de que el cambio es deseable y factible",
+    "Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales",
+    "Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)",
+    "Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia",
+    "Establecer un proyecto formal con equipo asignado.",
+    "Replicar los resultados exitosos y nominar nuevos proyectos de mejora."
   ],
   "entregable_esperado": "Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
   "nodos_previos": [
-    "secuencia_universal_breakthrough",
     "viaje_diagnostico_remedial",
     "analisis_pareto_priorizacion",
     "error_proofing_servicio",
-    "secuencia_universal_para_el_breakthrough",
     "dmaic_fase_improve",
     "impacto_calidad_en_costos",
     "analisis_pareto_de_proveedores",
-    "costo_de_mala_calidad_copq"
+    "costo_de_mala_calidad_copq",
+    "auditorias_calidad_proceso",
+    "control_calidad_operaciones_servicio",
+    "desarrollo_de_controles_de_proceso",
+    "descubrir_necesidades_del_cliente",
+    "diferencia_planeacion_mejora",
+    "equipos_autodirigidos_servicio",
+    "equipos_blitz",
+    "equipos_ruptura_vet",
+    "juran_quality_by_design",
+    "organizacion_equipos_calidad_servicio"
   ],
   "nodos_siguientes": [
     "sostener_las_ganancias",
     "dmadv_design_for_six_sigma",
     "roles_six_sigma",
     "consejo_ejecutivo_calidad",
-    "design_for_six_sigma_dfss"
+    "design_for_six_sigma_dfss",
+    "breakthrough_cultural",
+    "medicion_capacidad_servicio",
+    "viaje_diagnostico_remedial"
   ],
   "condiciones_activacion": [
     "Cuando enfrentas un problema crónico de calidad que ya intentaste resolver sin éxito duradero.",
     "Cuando necesitas un método estructurado y probado para mejorar un proceso con métricas cuantificables.",
-    "Cuando quieres asegurar que una mejora se mantenga en el tiempo y no se revierta a los pocos meses."
+    "Cuando quieres asegurar que una mejora se mantenga en el tiempo y no se revierta a los pocos meses.",
+    "Cuando la organización necesita un cambio radical de desempeño, no solo mejora incremental",
+    "Cuando existe resistencia cultural anticipada a los cambios propuestos",
+    "Cuando existen altos costos de mala calidad recurrentes",
+    "Si la organización busca institucionalizar una cultura de mejora continua basada en datos",
+    "Cuando se requiere alcanzar niveles de calidad cercanos a la perfección (ppm)"
   ],
   "etiqueta_arbol": "Mejora con el Modelo DMAIC",
   "ids_alias": [
-    "dmaic_six_sigma"
+    "dmaic_six_sigma",
+    "breakthrough_desempeno_actual",
+    "secuencia_universal_breakthrough",
+    "secuencia_universal_para_el_breakthrough",
+    "seis_sigma_servicios",
+    "six_sigma_dmaic_2"
   ],
   "merged_originals": [
     {
       "node_id": "dmaic_six_sigma",
       "titulo": "Modelo de Mejora DMAIC de Six Sigma",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "breakthrough_desempeno_actual",
+      "titulo": "Ruptura en el Desempeño Actual (Breakthrough in Current Performance)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "secuencia_universal_breakthrough",
+      "titulo": "Secuencia Universal para el Breakthrough",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "secuencia_universal_para_el_breakthrough",
+      "titulo": "Secuencia Universal de Juran para el Breakthrough (Mejora Radical)",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "seis_sigma_servicios",
+      "titulo": "Aplicación de Six Sigma en Industrias de Servicio",
+      "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    },
+    {
+      "node_id": "six_sigma_dmaic_2",
+      "titulo": "Six Sigma - Metodología DMAIC",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
     }
   ]

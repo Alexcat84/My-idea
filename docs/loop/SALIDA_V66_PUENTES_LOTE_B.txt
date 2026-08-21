@@ -1,0 +1,75 @@
+==============================================================================
+LOS NODOS PUENTE DEL TRAMO, ACTO POR ACTO (P.10, la mitad diagnostica de P.5)
+  tramo      : docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+  clave      : orden_universo
+  veredictos : 3168 pares indexados por par RESUELTO (P.1)
+==============================================================================
+
+------------------------------------------------------------------------------
+ACTO 5 | miembros 8 | combinaciones 28 | A 9 | D 0 | SIN VEREDICTO 19
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 19 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 7 | miembros 6 | combinaciones 15 | A 7 | D 0 | SIN VEREDICTO 8
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 8 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 8 | miembros 6 | combinaciones 15 | A 9 | D 0 | SIN VEREDICTO 6
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 6 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 9 | miembros 6 | combinaciones 15 | A 7 | D 0 | SIN VEREDICTO 8
+  NODOS PUENTE: 0 | TRIANGULOS PUENTE (A mas A mas D): 0
+  pares D internos, que son los que la fusion entera desmentiria:
+  pares SIN VEREDICTO ESCRITO: 8 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 10 | miembros 6 | combinaciones 15 | A 6 | D 4 | SIN VEREDICTO 5
+  NODOS PUENTE: 2 | TRIANGULOS PUENTE (A mas A mas D): 3
+     refinar_sales_roadmap hace de puente en 2 triangulo(s):
+        A con hoja_de_ruta_de_ventas y A con sales_roadmap_vs_sales_force, y esos dos son D entre si (puesto 1330)
+        A con sales_roadmap y A con sales_roadmap_vs_sales_force, y esos dos son D entre si (puesto 1306)
+     sales_roadmap_vs_sales_force hace de puente en 1 triangulo(s):
+        A con customer_validation_sales_roadmap y A con refinar_sales_roadmap, y esos dos son D entre si (puesto 1023)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 872    customer_validation_sales_roadmap  contra  hoja_de_ruta_de_ventas
+     puesto 1023   customer_validation_sales_roadmap  contra  refinar_sales_roadmap
+     puesto 1306   sales_roadmap  contra  sales_roadmap_vs_sales_force
+     puesto 1330   hoja_de_ruta_de_ventas  contra  sales_roadmap_vs_sales_force
+  pares SIN VEREDICTO ESCRITO: 5 (la primera salida de P.10 es leerlos)
+
+------------------------------------------------------------------------------
+ACTO 11 | miembros 5 | combinaciones 10 | A 5 | D 2 | SIN VEREDICTO 3
+  NODOS PUENTE: 2 | TRIANGULOS PUENTE (A mas A mas D): 2
+     human_in_the_loop_ia hace de puente en 1 triangulo(s):
+        A con mitigar_falling_asleep_wheel y A con principio_humano_en_el_loop, y esos dos son D entre si (puesto 1541)
+     mitigar_falling_asleep_wheel hace de puente en 1 triangulo(s):
+        A con human_in_the_loop_ia y A con riesgo_sobredependencia_ia, y esos dos son D entre si (puesto 1496)
+  pares D internos, que son los que la fusion entera desmentiria:
+     puesto 1496   human_in_the_loop_ia  contra  riesgo_sobredependencia_ia
+     puesto 1541   mitigar_falling_asleep_wheel  contra  principio_humano_en_el_loop
+  pares SIN VEREDICTO ESCRITO: 3 (la primera salida de P.10 es leerlos)
+
+==============================================================================
+RESUMEN DEL TRAMO
+acto   miem   combin   A     D     sin_ver  puentes  triangulos
+5      8      28       9     0     19       0        0
+7      6      15       7     0     8        0        0
+8      6      15       9     0     6        0        0
+9      6      15       7     0     8        0        0
+10     6      15       6     4     5        2        3
+11     5      10       5     2     3        2        2
+
+  actos mirados                         : 6
+  actos CON al menos un nodo puente     : 2
+  actos SIN ningun nodo puente          : 4
+  actos con algun par SIN veredicto     : 6
+
+LO QUE ESTO NO HACE: no elige salida de P.10 ni funde ni declara nada.
+FIN

@@ -46,6 +46,40 @@ LA FORMA que imprime por acto, que es lo que la receta ratificada distingue:
   CONTENIDO EMPATA   ninguna vara de contenido separa. Decide EL CABLEADO SOLO.
   EMPATE SIN VARA    tampoco el cableado separa. Se DECLARA.
 
+CORRECCION DECLARADA (2026-08-20, vuelta 66, TAREA 2 del encargo, por el carril
+del banco 9.10 y por el MISMO con el que la vuelta 65 corrigio a sus dos
+hermanos, generar_plan_del_lote.py y dossier_del_tramo.py; EL TEXTO VIEJO SE
+QUEDA ENTERO EN EL SITIO DONDE MUERDE Y NO SE TACHA). SON DOS CAMBIOS Y LOS DOS
+VAN MARCADOS DISCUTIBLES EN EL REPORTE por las dos condiciones del acta 61 (D2 y
+pregunta 2: una guarda o una capacidad puede crecer SI va enumerada aqui y
+marcada discutible).
+
+  1. EL DESCUBRIMIENTO DEL ORDINAL CONOCE DOS PREFIJOS Y NO UNO. El texto viejo
+     esta citado verbatim en el comentario del sitio: solo aceptaba orden_tramo.
+     MEDIDO ANTES DE TOCAR NADA: corrido sobre
+     docs/loop/TRAMO_UNICO_OPU02_V64.jsonl, cuya clave es orden_universo, este
+     cuadro daba "ROJO: el fichero del tramo tiene 0 claves de ordinal ([]).
+     PARADA" (salida committeada en docs/loop/_v66/varas_lote_b.txt de la
+     corrida de apertura). ES LA TERCERA VEZ que la campana paga esta misma
+     especie en un instrumento de nombre estable. LA RAMA orden_tramo SALE
+     IDENTICA, digito final incluido, y un tramo sin numero NO SE NUMERA: su
+     rotulo se lee del campo tramo del propio fichero (acta 65, D4).
+
+  2. UN ACTO DE MAS DE DOS MIEMBROS ES ROJO EN VEZ DE RECORTE MUDO. Este cuadro
+     compara d[0] contra d[1] sobre sorted(act["miembros"]) y NO SE LE TOCA UNA
+     SOLA CONDICION: la aritmetica de las flechas y de la FORMA queda tal cual.
+     Lo que se anade es la guarda que dice lo que el fichero es. Sin ella, sobre
+     el tramo unico de OP-U-02 (actos de 3 a 15 miembros) habria publicado una
+     fila de DOS por acto con los demas desaparecidos en silencio, que es la
+     especie que el acta 65 llamo la peor. EL INSTRUMENTO QUE SI LEE UN ACTO DE
+     N es scripts/loop/varas_n_arias_del_tramo.py, que COPIA de aqui la
+     aritmetica de la FORMA en vez de reteclearla.
+
+  LA PRUEBA DE QUE NO HAY REGRESION es
+  scripts/loop/vuelta66_caso_positivo_varas.py, que corre EL ANCESTRO (sacado de
+  git) Y ESTE FICHERO sobre el MISMO tramo de actos de dos miembros y exige que
+  las dos salidas sean IDENTICAS linea a linea.
+
 Uso:
   python scripts/loop/vuelta58_varas_tramo.py --tramo docs/loop/TRAMO5_V58.jsonl --vuelta 58
 """
@@ -118,17 +152,77 @@ def main():
     prot = protegidos()
     tramo = cargar(a.tramo)
     # LO UNICO QUE NO ES COPIA: la clave del ordinal se descubre del fichero.
-    claves = sorted({k for k in tramo[0] if k.startswith("orden_tramo")}) if tramo else []
-    if len(claves) != 1:
-        print("ROJO: el fichero del tramo tiene %d claves de ordinal (%s). PARADA."
-              % (len(claves), claves))
+    # CORRECCION DECLARADA (2026-08-20, vuelta 66, TAREA 2 del encargo, carril del
+    # banco 9.10, y es LA TERCERA VEZ que la campana corrige ESTA MISMA especie en
+    # un instrumento de nombre estable: la vuelta 65 la corrigio en
+    # generar_plan_del_lote.py (cambio 6 de su docstring) y en dossier_del_tramo.py,
+    # y las dos correcciones estan verificadas por el acta 65). EL TEXTO VIEJO,
+    # VERBATIM, ERA:
+    #   claves = sorted({k for k in tramo[0] if k.startswith("orden_tramo")}) if tramo else []
+    #   if len(claves) != 1:
+    #       print("ROJO: el fichero del tramo tiene %d claves de ordinal (%s). PARADA."
+    #             % (len(claves), claves))
+    #       return 1
+    #   ORD = claves[0]
+    #   m = re.search(r"(\d+)$", ORD)
+    #   num_tramo = m.group(1) if m else "SIN NUMERO EN LA CLAVE %s" % ORD
+    # y con el este cuadro daba "ROJO: el fichero del tramo tiene 0 claves de
+    # ordinal ([]). PARADA" sobre docs/loop/TRAMO_UNICO_OPU02_V64.jsonl, cuya clave
+    # es orden_universo (MEDIDO en esta vuelta antes de tocar nada, y la salida esta
+    # committeada en docs/loop/_v66/varas_lote_b.txt de la corrida de apertura).
+    # LA RAMA orden_tramo SALE IDENTICA A COMO ESTABA, incluida la extraccion del
+    # digito final con la misma expresion regular, y por eso las cifras que el
+    # registro del tramo 5 ya cita no se mueven. Y UN TRAMO SIN NUMERO NO SE NUMERA
+    # (acta 65, D4, A FAVOR): su rotulo se lee del campo tramo del propio fichero o
+    # se declara ausente, que es exactamente lo que las otras dos correcciones
+    # hermanas hacen.
+    ORD = num_tramo = None
+    for prefijo in ("orden_tramo", "orden_universo"):
+        claves = sorted({k for k in tramo[0] if k.startswith(prefijo)}) if tramo else []
+        if len(claves) > 1:
+            print("ROJO: el fichero del tramo tiene %d claves de ordinal con el prefijo %s "
+                  "(%s). PARADA." % (len(claves), prefijo, claves))
+            return 1
+        if len(claves) == 1:
+            ORD = claves[0]
+            if prefijo == "orden_tramo":
+                # LO UNICO QUE CAMBIA: el numero de tramo sale de la clave del ordinal
+                # que el propio fichero trae (orden_tramo4 dice tramo 4), no de una
+                # constante. Si la clave no lleva numero, el titulo lo dice en vez de
+                # inventarse uno.
+                m = re.search(r"(\d+)$", ORD)
+                num_tramo = m.group(1) if m else "SIN NUMERO EN LA CLAVE %s" % ORD
+            else:
+                num_tramo = str(tramo[0].get("tramo") or "SIN ROTULO EN EL FICHERO DEL TRAMO")
+            break
+    if ORD is None:
+        print("ROJO: el fichero del tramo no trae ninguna clave de ordinal de las conocidas "
+              "(orden_tramo, orden_universo). Las que trae son: %s. PARADA."
+              % (sorted(tramo[0]) if tramo else []))
         return 1
-    ORD = claves[0]
-    # LO UNICO QUE CAMBIA: el numero de tramo sale de la clave del ordinal que el
-    # propio fichero trae (orden_tramo4 dice tramo 4), no de una constante. Si la
-    # clave no lleva numero, el titulo lo dice en vez de inventarse uno.
-    m = re.search(r"(\d+)$", ORD)
-    num_tramo = m.group(1) if m else "SIN NUMERO EN LA CLAVE %s" % ORD
+
+    # GUARDA QUE CRECE, ESCRITA EN LA VUELTA 66 Y MARCADA DISCUTIBLE EN EL REPORTE
+    # (acta 61, D2 y pregunta 2: una guarda puede crecer dentro de una correccion
+    # declarada SI va enumerada en el docstring y marcada discutible). ESTE CUADRO
+    # ES DE PARES Y SOLO DE PARES: su cuerpo compara d[0] contra d[1] sobre
+    # sorted(act["miembros"]), asi que sobre un acto de N miembros publicaria una
+    # fila con DOS y los otros N menos 2 DESAPARECIDOS EN SILENCIO. Esa es la misma
+    # especie que el acta 65 llamo "la peor, la que MIENTE" cuando el generador
+    # viejo sellaba quince miembros con un absorbido. AQUI NO SE RECORTA EN MUDO:
+    # se cae en ROJO y se nombra al instrumento que si sabe leer un acto de N,
+    # scripts/loop/varas_n_arias_del_tramo.py, que COPIA de este fichero la
+    # aritmetica de la FORMA para que dos instrumentos de la campana no la calculen
+    # distinto en silencio. La rama de los actos de DOS sale IDENTICA.
+    gordos = [a_ for a_ in tramo if len(sorted(a_["miembros"])) > 2]
+    if gordos:
+        print("ROJO: %d de los %d actos de este tramo tienen MAS DE DOS miembros y este "
+              "cuadro es de pares: publicarlo dejaria fuera a los demas en silencio. "
+              "PARADA." % (len(gordos), len(tramo)))
+        print("   el instrumento para un acto de N miembros es "
+              "scripts/loop/varas_n_arias_del_tramo.py")
+        print("   los actos gordos son: %s"
+              % ", ".join(str(a_[ORD]) for a_ in gordos[:20]))
+        return 1
 
     print("=" * 110)
     print("EL CUADRO DE VARAS DE LOS %d ACTOS DEL TRAMO %s%s"
