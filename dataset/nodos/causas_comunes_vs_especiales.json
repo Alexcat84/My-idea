@@ -6,20 +6,40 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
   "pasos_accionables": [
-    "Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada",
+    "Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes",
     "Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos",
     "Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales",
-    "Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia",
+    "Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla",
     "Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas",
-    "Documentar los hallazgos y definir una acción distinta para cada tipo de causa"
+    "Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales",
+    "Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo",
+    "Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros",
+    "Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).",
+    "Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.",
+    "Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.",
+    "Comunicar a los equipos que el objetivo es identificar problemas, no culpables",
+    "Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo",
+    "Fomentar la colaboración entre turnos y departamentos para resolver causas comunes",
+    "Analizar la distribución de errores o defectos entre todas las personas usando limites de control"
   ],
   "entregable_esperado": "Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.",
   "nodos_previos": [
     "limites_de_especificacion_vs_limites_de_control",
     "estandarizacion_industrial_voluntaria",
     "falacia_meta_numerica_sin_metodo",
-    "trampa_del_promedio_como_estandar",
-    "carta_de_control_shewhart"
+    "carta_de_control_shewhart",
+    "aim_of_leadership",
+    "capacidad_de_proceso",
+    "capacidad_de_proceso_2",
+    "control_estadistico_de_procesos",
+    "costo_de_mala_calidad_copq",
+    "estudio_mezclas_multiples_fuentes",
+    "evaluacion_de_desempeno_merito",
+    "limites_control_por_juicio_error",
+    "mejora_continua_del_proceso",
+    "mejora_del_sistema_responsabilidad_gerencial",
+    "sistema_estable_causas_comunes",
+    "sistema_estable_responsabilidad_gerencial"
   ],
   "nodos_siguientes": [
     "experimento_cuentas_rojas",
@@ -30,17 +50,43 @@
     "capacidad_del_proceso",
     "grafico_de_corrida_run_chart",
     "sistema_responsabilidad_gerencial",
-    "mejora_del_sistema_responsabilidad_gerencial"
+    "mejora_del_sistema_responsabilidad_gerencial",
+    "adopcion_liderazgo",
+    "aim_of_leadership",
+    "eliminacion_firmas_redundantes",
+    "gestion_miedo_reportes",
+    "graficos_control_individuales_operarios",
+    "importancia_de_la_capacitacion",
+    "mal_uso_histograma_vs_carta_control",
+    "mejora_continua_del_proceso",
+    "muestreo_con_seguimiento_no_respondientes",
+    "sistema_responsabilidad_gerencial_2"
   ],
   "condiciones_activacion": [
     "Cuando estás por culparte a ti mismo o a alguien que te ayuda por un defecto o error sin haber verificado si es del sistema",
     "Cuando observas variaciones inusuales en tus indicadores de desempeño, ventas, calidad o quejas",
-    "Cuando necesitas decidir si conviene intervenir sobre el proceso completo o sobre un caso puntual"
+    "Cuando necesitas decidir si conviene intervenir sobre el proceso completo o sobre un caso puntual",
+    "Cuando se evalúa el desempeño individual de un trabajador",
+    "Cuando el nivel de defectos se mantenga igual a pesar de tus esfuerzos continuos de corrección puntual",
+    "Si existe conflicto interno o baja moral por atribución de culpas ante errores recurrentes.",
+    "Cuando hay alta rotación o desmotivación por politicas de error que se sienten injustas",
+    "Cuando usas el promedio del grupo como criterio para intervenir con una persona en particular",
+    "Cuando cambia cada semana quien es la persona 'señalada' sin que haya mejora real",
+    "Cuando necesitas determinar si las diferencias de desempeño entre las personas que trabajan contigo son reales o producto del azar del sistema"
   ],
   "etiqueta_arbol": "Diferencia Variación Común y Especial",
   "ids_alias": [
     "causas_comunes_causas_especiales",
-    "distincion_causas_comunes_especiales_3"
+    "distincion_causas_comunes_especiales_3",
+    "distincion_causas_comunes_especiales",
+    "distincion_causas_comunes_especiales_2",
+    "distincion_causas_comunes_especiales_incidentes",
+    "distincion_causas_especiales_comunes",
+    "identificacion_causa_raiz_no_culpa_individual",
+    "moral_y_sistema_no_individuo",
+    "politica_no_culpar_trabajador",
+    "trampa_del_promedio_como_estandar",
+    "variacion_del_sistema_vs_individuo"
   ],
   "merged_originals": [
     {
@@ -51,6 +97,51 @@
     {
       "node_id": "distincion_causas_comunes_especiales_3",
       "titulo": "Distinción entre Causas Comunes y Causas Especiales de Variación",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "distincion_causas_comunes_especiales",
+      "titulo": "Distinción entre Causas Comunes y Especiales de Variación",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "distincion_causas_comunes_especiales_2",
+      "titulo": "Distinción entre Causas Comunes y Causas Especiales",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "distincion_causas_comunes_especiales_incidentes",
+      "titulo": "Distinción entre Causas Comunes y Especiales en el Análisis de Accidentes",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "distincion_causas_especiales_comunes",
+      "titulo": "Distinción entre Causas Especiales y Comunes (Teorema de Nelson)",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "identificacion_causa_raiz_no_culpa_individual",
+      "titulo": "Identificación de la causa raíz del problema en lugar de culpar al individuo",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "moral_y_sistema_no_individuo",
+      "titulo": "Enfoque en el Problema, no en el Individuo",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "politica_no_culpar_trabajador",
+      "titulo": "Evitar Culpar al Trabajador por Fallos del Sistema",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "trampa_del_promedio_como_estandar",
+      "titulo": "La Trampa del Promedio como Estándar de Desempeño",
+      "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    },
+    {
+      "node_id": "variacion_del_sistema_vs_individuo",
+      "titulo": "Cuando la diferencia entre personas es el sistema, no la persona (límites de control)",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
     }
   ]

@@ -1,0 +1,32 @@
+==============================================================================
+LA CUENTA ESPERADA DE COLISIONES, SIMULADA ANTES DE FUNDIR
+  plan       : docs/loop/PLAN_V65_OPU02_LOTE_A.json
+  operacion  : OP-U-02
+  linea base : 2, DECLARADA (acta 64, pregunta 3)
+==============================================================================
+
+  ANTES DE FUNDIR (el arbol tal como esta, medido ahora):
+     COLISIONES DE CLASE VIGENTES : 2
+     AUTO-PARES                   : 256
+        pivote_o_proceder contra pivote_startup | clases ['B', 'D']
+        pivote_o_proceder contra reunion_pivotar_o_perseverar | clases ['B', 'D']
+
+  LA SIMULACION EN MEMORIA: 9 absorbido(s) de 1 acto(s) pasan a resolver a su superviviente. NO SE TOCA NI UN NODO.
+
+  DESPUES DE FUNDIR (simulado):
+     COLISIONES DE CLASE VIGENTES : 2
+     AUTO-PARES                   : 257
+        pivote_o_proceder contra pivote_startup | clases ['B', 'D']
+        pivote_o_proceder contra reunion_pivotar_o_perseverar | clases ['B', 'D']
+
+  EL DELTA, QUE ES LO QUE LA GUARDA MIRA:
+     colisiones NUEVAS que la fusion fabricaria : 0
+     colisiones que DESAPARECERIAN              : 0
+     auto-pares NUEVOS (pares internos del acto): 1
+
+  ESPERADAS TRAS FUNDIR = 2, y es 2 de base mas 0 nuevas menos 0 idas
+
+LA FUSION NO FABRICA NI UNA COLISION: la cuenta esperada del censo de cierre
+es la linea base, 2.
+
+FIN

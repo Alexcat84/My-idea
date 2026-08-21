@@ -1,0 +1,222 @@
+==============================================================================
+OP-U-02 . UNICO Y FINAL POR AGOTAMIENTO, LOTE A DEL TRAMO UNICO DE OP-U-02, PREFIJO SIN SALTOS DEL orden_universo: LOS ACTOS 1 Y 3. El 1 cierra DECLARADO Y NO FUNDIDO por P.10 y el 3 cierra FUNDIDO, y es la PRIMERA fusion de mas de dos miembros de la campana . MODO SIMULAR
+plan: docs/loop/PLAN_V65_OPU02_LOTE_A.json (SELLADO)
+==============================================================================
+censo ANTES: 3853 ficheros, 3271 vivos, 582 deprecados
+semillas de entrada cargadas: 85 | extremos de puente aprobado: 185
+
+------------------------------------------------------------------------------
+ACTO 3 . sobrevive causas_comunes_vs_especiales . absorbe distincion_causas_comunes_especiales, distincion_causas_comunes_especiales_2, distincion_causas_comunes_especiales_incidentes, distincion_causas_especiales_comunes, identificacion_causa_raiz_no_culpa_individual, moral_y_sistema_no_individuo, politica_no_culpar_trabajador, trampa_del_promedio_como_estandar, variacion_del_sistema_vs_individuo
+  guarda 1, miembros vivos y nomina completa: OK
+  guarda 1B, ningun absorbido es semilla ni extremo de puente: OK
+  guarda 2, cobertura exacta de indices (cero olvidos): OK
+  guarda 3, cero repetidos literales en el resultado: OK
+  pasos 6 -> 15 (anadidos 9) | condiciones 3 -> 10 (anadidas 7)
+  INCISOS ADOSADOS: 3
+     del paso 3 de distincion_causas_comunes_especiales al PASO 4 del superviviente
+        inciso VERBATIM: 'ayudar al trabajador a identificarla y eliminarla'
+        nexo (lo unico de cosecha propia): ', y '
+        paso resultante: Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+     del paso 1 de distincion_causas_comunes_especiales_incidentes al PASO 1 del superviviente
+        inciso VERBATIM: 'de incidentes o accidentes'
+        nexo (lo unico de cosecha propia): ', incluidos los '
+        paso resultante: Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+     del paso 5 de distincion_causas_comunes_especiales_incidentes al PASO 6 del superviviente
+        inciso VERBATIM: 'la proporción estimada de causas sistémicas vs especiales'
+        nexo (lo unico de cosecha propia): ', incluida '
+        paso resultante: Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+  alias del superviviente: ['causas_comunes_causas_especiales', 'distincion_causas_comunes_especiales_3', 'distincion_causas_comunes_especiales', 'distincion_causas_comunes_especiales_2', 'distincion_causas_comunes_especiales_incidentes', 'distincion_causas_especiales_comunes', 'identificacion_causa_raiz_no_culpa_individual', 'moral_y_sistema_no_individuo', 'politica_no_culpar_trabajador', 'trampa_del_promedio_como_estandar', 'variacion_del_sistema_vs_individuo']
+
+==============================================================================
+REDIRECCIONES Y P.16, sobre el catalogo entero
+==============================================================================
+redirecciones sobre nodos VIVOS: 29
+   adopcion_liderazgo                                   nodos_previos     distincion_causas_especiales_comunes -> causas_comunes_vs_especiales
+   aim_of_leadership                                    nodos_previos     moral_y_sistema_no_individuo -> causas_comunes_vs_especiales
+   aim_of_leadership                                    nodos_siguientes  distincion_causas_comunes_especiales -> causas_comunes_vs_especiales
+   capacidad_de_proceso                                 nodos_siguientes  moral_y_sistema_no_individuo -> causas_comunes_vs_especiales
+   capacidad_de_proceso_2                               nodos_siguientes  moral_y_sistema_no_individuo -> causas_comunes_vs_especiales
+   carta_de_control_shewhart                            nodos_siguientes  distincion_causas_comunes_especiales_incidentes -> causas_comunes_vs_especiales
+   causas_comunes_vs_especiales                         nodos_previos     trampa_del_promedio_como_estandar -> causas_comunes_vs_especiales
+   control_estadistico_de_procesos                      nodos_siguientes  distincion_causas_comunes_especiales -> causas_comunes_vs_especiales
+   costo_de_mala_calidad_copq                           nodos_siguientes  identificacion_causa_raiz_no_culpa_individual -> causas_comunes_vs_especiales
+   eliminacion_firmas_redundantes                       nodos_previos     identificacion_causa_raiz_no_culpa_individual -> causas_comunes_vs_especiales
+   estudio_mezclas_multiples_fuentes                    nodos_siguientes  distincion_causas_comunes_especiales -> causas_comunes_vs_especiales
+   evaluacion_de_desempeno_merito                       nodos_siguientes  variacion_del_sistema_vs_individuo -> causas_comunes_vs_especiales
+   gestion_miedo_reportes                               nodos_previos     distincion_causas_comunes_especiales -> causas_comunes_vs_especiales
+   graficos_control_individuales_operarios              nodos_previos     politica_no_culpar_trabajador -> causas_comunes_vs_especiales
+   importancia_de_la_capacitacion                       nodos_previos     distincion_causas_comunes_especiales -> causas_comunes_vs_especiales
+   limites_control_por_juicio_error                     nodos_siguientes  distincion_causas_comunes_especiales -> causas_comunes_vs_especiales
+   limites_control_por_juicio_error                     nodos_siguientes  distincion_causas_comunes_especiales_2 -> causas_comunes_vs_especiales
+   mal_uso_histograma_vs_carta_control                  nodos_previos     distincion_causas_comunes_especiales -> causas_comunes_vs_especiales
+   mejora_continua_del_proceso                          nodos_previos     distincion_causas_comunes_especiales_incidentes -> causas_comunes_vs_especiales
+   mejora_continua_del_proceso                          nodos_siguientes  distincion_causas_especiales_comunes -> causas_comunes_vs_especiales
+   mejora_del_sistema_responsabilidad_gerencial         nodos_previos     distincion_causas_comunes_especiales -> causas_comunes_vs_especiales
+   mejora_del_sistema_responsabilidad_gerencial         nodos_siguientes  politica_no_culpar_trabajador -> causas_comunes_vs_especiales
+   muestreo_con_seguimiento_no_respondientes            nodos_previos     moral_y_sistema_no_individuo -> causas_comunes_vs_especiales
+   reporte_gerencial_diagnostico_calidad                nodos_previos     trampa_del_promedio_como_estandar -> causas_comunes_vs_especiales
+   responsabilidad_gerencial_causas_comunes             nodos_previos     trampa_del_promedio_como_estandar -> causas_comunes_vs_especiales
+   sistema_estable_causas_comunes                       nodos_siguientes  trampa_del_promedio_como_estandar -> causas_comunes_vs_especiales
+   sistema_estable_responsabilidad_gerencial            nodos_siguientes  identificacion_causa_raiz_no_culpa_individual -> causas_comunes_vs_especiales
+   sistema_responsabilidad_gerencial                    nodos_previos     distincion_causas_comunes_especiales_2 -> causas_comunes_vs_especiales
+   sistema_responsabilidad_gerencial_2                  nodos_previos     distincion_causas_comunes_especiales -> causas_comunes_vs_especiales
+
+nodos DEPRECADOS que nombran a un absorbido y NO se tocan: 7
+   administracion_sin_miedo                             nodos_previos     distincion_causas_comunes_especiales (registro historico)
+   control_estadistico_de_procesos_2                    nodos_siguientes  distincion_causas_comunes_especiales (registro historico)
+   costos_de_calidad_cuatro_categorias                  nodos_siguientes  identificacion_causa_raiz_no_culpa_individual (registro historico)
+   cuatro_costos_de_calidad                             nodos_siguientes  identificacion_causa_raiz_no_culpa_individual (registro historico)
+   eliminacion_de_firmas_duplicadas_responsabilidad_unica nodos_previos     identificacion_causa_raiz_no_culpa_individual (registro historico)
+   liderazgo_para_mejora_continua                       nodos_previos     moral_y_sistema_no_individuo (registro historico)
+   sistema_estable_variacion                            nodos_siguientes  trampa_del_promedio_como_estandar (registro historico)
+
+P.16, DUPLICADAS QUE LA PROPIA FUSION FABRICA, medidas antes de limpiarlas: 6
+   carta_de_control_shewhart                            nodos_siguientes
+   limites_control_por_juicio_error                     nodos_siguientes
+   mejora_del_sistema_responsabilidad_gerencial         nodos_previos
+   reporte_gerencial_diagnostico_calidad                nodos_previos
+   responsabilidad_gerencial_causas_comunes             nodos_previos
+   sistema_responsabilidad_gerencial                    nodos_previos
+
+AUTO-ARISTAS que la fusion habria creado y se retiran: 1
+   causas_comunes_vs_especiales                         nodos_previos
+
+==============================================================================
+GUARDAS FINALES sobre la copia en memoria
+==============================================================================
+  duplicadas tras resolver ANTES de la operacion (pasivo historico, OP-S-12): 904   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+  duplicadas tras resolver DESPUES de la operacion                       : 900   [CENSO PROPIO DE LA GUARDA; LA CIFRA DE OP-S-12 LA PUBLICA aristas_duplicadas_tras_resolver.py]
+guarda A, cero AUTO-ARISTAS nuevas             : OK (0)
+guarda B, cero DUPLICADAS nuevas tras resolver : OK (0)
+  y la operacion BAJA el pasivo historico en 4, porque P.16 limpia lo que
+  la propia sustitucion toca. Ni una duplicada ajena se toca de mas.
+guarda C, los CINCO campos que esta operacion NO redacta, intactos: 5 de 5
+guarda D, los 9 absorbidos conservan su texto INTACTO: OK
+
+TABLA DE PERDIDAS, pieza por pieza (58 filas)
+ acto de que nodo                                  que          n  a donde va
+    3 distincion_causas_comunes_especiales         paso         1  ya lo dice el PASO 2 del superviviente
+        Determinar si el trabajo del empleado está en estado de control estadístico usando gráficos de control
+    3 distincion_causas_comunes_especiales         paso         2  ya lo dice el PASO 5 del superviviente
+        Si está en control, no informar sobre defectos individuales; enfocar el esfuerzo en el sistema
+    3 distincion_causas_comunes_especiales         paso         3  INCISO ADOSADO al PASO 4 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Si hay una causa especial detectada, ayudar al trabajador a identificarla y eliminarla
+    3 distincion_causas_comunes_especiales         paso         4  ya lo dice el PASO 5 del superviviente
+        Evitar sanciones a trabajadores por fallas atribuibles al sistema
+    3 distincion_causas_comunes_especiales         condicion    1  CONDICION 4 del superviviente
+        Cuando se evalúa el desempeño individual de un trabajador
+    3 distincion_causas_comunes_especiales         condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Cuando se detectan defectos y se debe decidir si corregir al individuo o al sistema
+    3 distincion_causas_comunes_especiales_2       paso         1  ya lo dice el PASO 2 del superviviente
+        Antes de investigar un defecto puntual, revisa si tu proceso esta en control estadistico usando una carta de control
+    3 distincion_causas_comunes_especiales_2       paso         2  ya lo dice el PASO 5 del superviviente
+        Si el proceso esta en control, reconoce que las variaciones, incluidos los defectos, vienen de causas comunes del sistema
+    3 distincion_causas_comunes_especiales_2       paso         3  ya lo dice el PASO 3 del superviviente
+        Evita investigar cada caso como si fuera una causa especial cuando el proceso es estable
+    3 distincion_causas_comunes_especiales_2       paso         4  ya lo dice el PASO 6 del superviviente
+        Dirige tu esfuerzo de mejora hacia un cambio estructural del sistema, no hacia rastrear caso por caso
+    3 distincion_causas_comunes_especiales_2       condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Cuando estes investigando cada defecto por separado sin haber revisado antes si el proceso esta en control
+    3 distincion_causas_comunes_especiales_2       condicion    2  CONDICION 5 del superviviente
+        Cuando el nivel de defectos se mantenga igual a pesar de tus esfuerzos continuos de corrección puntual
+    3 distincion_causas_comunes_especiales_incidentes paso         1  INCISO ADOSADO al PASO 1 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Recopilar datos históricos de incidentes o accidentes en un gráfico de control
+    3 distincion_causas_comunes_especiales_incidentes paso         2  ya lo dice el PASO 3 del superviviente
+        Determinar si los eventos caen dentro de los límites de variación esperada del sistema
+    3 distincion_causas_comunes_especiales_incidentes paso         3  ya lo dice la CONDICION 1 del superviviente
+        Evitar conclusiones apresuradas atribuyendo el evento a negligencia individual sin análisis estadístico
+    3 distincion_causas_comunes_especiales_incidentes paso         4  PASO 7 del superviviente
+        Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo
+    3 distincion_causas_comunes_especiales_incidentes paso         5  INCISO ADOSADO al PASO 6 del superviviente (SALVAGUARDA, tabla de los seis motivos)
+        Documentar la proporción estimada de causas sistémicas vs especiales para guiar la mejora
+    3 distincion_causas_comunes_especiales_incidentes condicion    1  ya lo dice la CONDICION 2 del superviviente
+        Cuando ocurren accidentes, fallas o resultados desfavorables recurrentes en un proceso u organización
+    3 distincion_causas_comunes_especiales_incidentes condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Si existe la tentación de culpar directamente a un trabajador sin análisis previo
+    3 distincion_causas_especiales_comunes         paso         1  ya lo dice el PASO 2 del superviviente
+        Antes de ajustar un proceso, verificar si está en control estadístico
+    3 distincion_causas_especiales_comunes         paso         2  PASO 8 del superviviente
+        Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+    3 distincion_causas_especiales_comunes         paso         3  ya lo dice el PASO 3 del superviviente
+        Evitar tratar cada defecto individual como causa especial si el sistema es estable
+    3 distincion_causas_especiales_comunes         paso         4  ya lo dice el PASO 3 del superviviente
+        Usar métodos estadísticos (Cap. 11) para decidir si una intervención es necesaria
+    3 distincion_causas_especiales_comunes         condicion    1  ya lo dice la CONDICION 3 del superviviente
+        Cuando se detecta un defecto y se quiere ajustar el proceso inmediatamente sin análisis previo
+    3 distincion_causas_especiales_comunes         condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando un supervisor reacciona a cada error individual sin evaluar si el sistema es estable
+    3 identificacion_causa_raiz_no_culpa_individual paso         1  PASO 9 del superviviente
+        Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).
+    3 identificacion_causa_raiz_no_culpa_individual paso         2  ya lo dice el PASO 3 del superviviente
+        Analizar los datos para distinguir entre variación común del sistema y causas especiales atribuibles a un caso puntual.
+    3 identificacion_causa_raiz_no_culpa_individual paso         3  PASO 10 del superviviente
+        Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.
+    3 identificacion_causa_raiz_no_culpa_individual paso         4  ya lo dice el PASO 6 del superviviente
+        Diseñar acciones correctivas dirigidas a la causa estructural identificada.
+    3 identificacion_causa_raiz_no_culpa_individual paso         5  PASO 11 del superviviente
+        Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.
+    3 identificacion_causa_raiz_no_culpa_individual condicion    1  CONDICION 6 del superviviente
+        Si existe conflicto interno o baja moral por atribución de culpas ante errores recurrentes.
+    3 identificacion_causa_raiz_no_culpa_individual condicion    2  ya lo dice la CONDICION 3 del superviviente
+        Si se necesita implementar un sistema de mejora continua basado en datos en lugar de sanciones.
+    3 moral_y_sistema_no_individuo                 paso         1  ya lo dice el PASO 2 del superviviente
+        Implementar métodos estadísticos que permitan rastrear el origen real de una desviación
+    3 moral_y_sistema_no_individuo                 paso         2  PASO 12 del superviviente
+        Comunicar a los equipos que el objetivo es identificar problemas, no culpables
+    3 moral_y_sistema_no_individuo                 paso         3  PASO 13 del superviviente
+        Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo
+    3 moral_y_sistema_no_individuo                 paso         4  PASO 14 del superviviente
+        Fomentar la colaboración entre turnos y departamentos para resolver causas comunes
+    3 moral_y_sistema_no_individuo                 condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando existe conflicto interno por errores o tasas de rechazo
+    3 moral_y_sistema_no_individuo                 condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando la moral del equipo se ve afectada por señalamientos de culpa
+    3 politica_no_culpar_trabajador                paso         1  PASO 15 del superviviente
+        Analizar la distribución de errores o defectos entre todas las personas usando limites de control
+    3 politica_no_culpar_trabajador                paso         2  ya lo dice el PASO 3 del superviviente
+        Identificar quien excede el limite superior como posible causa especial e investigar el contexto antes de actuar
+    3 politica_no_culpar_trabajador                paso         3  ya lo dice el PASO 6 del superviviente
+        Evitar sanciones uniformes o mensajes estándar para todos los niveles de error
+    3 politica_no_culpar_trabajador                paso         4  ya lo dice el PASO 5 del superviviente
+        Comunicar que el sistema, no la persona, es el principal responsable de la variación comun
+    3 politica_no_culpar_trabajador                paso         5  ya lo dice el PASO 6 del superviviente
+        Diseñar respuestas diferenciadas según lo que muestre el análisis de los datos
+    3 politica_no_culpar_trabajador                condicion    1  ya lo dice la CONDICION 1 del superviviente
+        Cuando aplicas sanciones o advertencias uniformes sin analizar antes los datos
+    3 politica_no_culpar_trabajador                condicion    2  CONDICION 7 del superviviente
+        Cuando hay alta rotación o desmotivación por politicas de error que se sienten injustas
+    3 trampa_del_promedio_como_estandar            paso         1  ya lo dice el PASO 2 del superviviente
+        Dejar de usar el promedio simple como línea de corte para intervenciones individuales
+    3 trampa_del_promedio_como_estandar            paso         2  ya lo dice el PASO 2 del superviviente
+        Construir un grafico de control con limites superior e inferior calculados estadisticamente
+    3 trampa_del_promedio_como_estandar            paso         3  ya lo dice el PASO 3 del superviviente
+        Identificar solo los puntos que caen fuera de los limites de control como candidatos a intervención
+    3 trampa_del_promedio_como_estandar            paso         4  ya lo dice el PASO 4 del superviviente
+        Investigar causas especiales (por ejemplo problemas de visión o de capacitación) solo en esos casos atipicos
+    3 trampa_del_promedio_como_estandar            condicion    1  CONDICION 8 del superviviente
+        Cuando usas el promedio del grupo como criterio para intervenir con una persona en particular
+    3 trampa_del_promedio_como_estandar            condicion    2  CONDICION 9 del superviviente
+        Cuando cambia cada semana quien es la persona 'señalada' sin que haya mejora real
+    3 variacion_del_sistema_vs_individuo           paso         1  ya lo dice el PASO 1 del superviviente
+        Recopila datos de desempeño de un grupo de personas que hacen un trabajo similar para ti
+    3 variacion_del_sistema_vs_individuo           paso         2  ya lo dice el PASO 2 del superviviente
+        Calcula los límites de variación atribuibles al sistema usando teoría estadística básica
+    3 variacion_del_sistema_vs_individuo           paso         3  ya lo dice el PASO 3 del superviviente
+        Determina si alguien cae fuera de esos límites, ya sea para bien o para mal
+    3 variacion_del_sistema_vs_individuo           paso         4  ya lo dice el PASO 5 del superviviente
+        Para quienes están dentro de los límites, mejora el sistema en vez de calificar a la persona individualmente
+    3 variacion_del_sistema_vs_individuo           paso         5  ya lo dice el PASO 4 del superviviente
+        Para quienes están fuera del límite, investiga las causas específicas antes de actuar
+    3 variacion_del_sistema_vs_individuo           condicion    1  CONDICION 10 del superviviente
+        Cuando necesitas determinar si las diferencias de desempeño entre las personas que trabajan contigo son reales o producto del azar del sistema
+    3 variacion_del_sistema_vs_individuo           condicion    2  ya lo dice la CONDICION 1 del superviviente
+        Cuando quieres evitar decisiones injustas sobre las personas basadas en variación normal del sistema
+
+RESUMEN DE LO EJECUTADO
+  actos fundidos      : 1
+  nodos implicados    : 10
+  nodos que MUEREN    : 9
+  piezas repartidas   : 58 (16 viajan enteras, 39 ya estaban dichas)
+  actos DECLARADOS y no fundidos: 1
+
+SIMULACION: cero escrituras.

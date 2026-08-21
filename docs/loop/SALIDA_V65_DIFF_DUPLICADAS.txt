@@ -1,0 +1,21 @@
+==============================================================================
+DIFF DEL CENSO DE DUPLICADAS, CON NODO Y DESTINO RESUELTOS POR EL ALIAS
+  LOTE A DE OP-U-02, vuelta 65
+  antes  : 1ac8c2c4:docs/plan/ARISTAS_DUPLICADAS.jsonl
+  despues: docs/plan/ARISTAS_DUPLICADAS.jsonl
+==============================================================================
+
+  grupos por rotulo CRUDO   : antes 925 | despues 921
+  grupos ya RESUELTOS       : antes 925 | despues 921
+
+  RENOMBRADOS (aparecen con rotulo nuevo pero son el MISMO grupo): 0
+
+  GRUPOS FABRICADOS DE VERDAD: 0
+
+  grupos que DESAPARECEN: 4
+     causas_comunes_vs_especiales | nodos_previos | costo_de_mala_calidad_copq
+     causas_comunes_vs_especiales | nodos_previos | sistema_estable_causas_comunes
+     causas_comunes_vs_especiales | nodos_siguientes | aim_of_leadership
+     causas_comunes_vs_especiales | nodos_siguientes | eliminacion_firmas_redundantes
+
+  VERDE: CERO grupos fabricados.

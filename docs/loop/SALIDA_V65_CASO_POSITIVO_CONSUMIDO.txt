@@ -1,0 +1,17 @@
+==============================================================================
+CASO POSITIVO DE LOS INSTRUMENTOS DE FUSION DE MESA
+  sujeto: OP-M-03-II
+  el fundidor se llama SIEMPRE en modo SIMULAR: ni en el peor caso toca un nodo
+==============================================================================
+
+  --- GUARDA DE SUJETO VIVO, la que el ancestro no tenia ---
+     superviviente de la ficha: pivote_o_proceder
+     absorbidos de la ficha   : pivotar_o_proceder
+     pivote_o_proceder                      VIVO
+     pivotar_o_proceder                     DEPRECADO
+
+     ROJO: EL SUJETO ESTA CONSUMIDO (pivotar_o_proceder). Un caso positivo sobre un par
+     ya fundido no prueba nada: el generador cae en la guarda de miembro
+     vivo y NUNCA llega a las guardas de cobertura, inciso y perdida, que
+     quedarian dadas por no mordidas. Apunta el instrumento a un par que
+     esta vuelta NO ejecute (acta 54, pregunta 7). PARADA.

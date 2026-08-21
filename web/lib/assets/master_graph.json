@@ -1960,7 +1960,7 @@
       "entregable_esperado": "Una forma de liderar centrada en apoyar y mejorar el sistema, dejando atras las metricas puramente numericas para juzgar el desempeno",
       "nodos_previos": [
         "institucionalizar_capacitacion",
-        "distincion_causas_especiales_comunes",
+        "causas_comunes_vs_especiales",
         "entrenamiento_gerencial",
         "framework_good_bad_product_manager",
         "gestion_de_problemas_sin_receta",
@@ -2289,13 +2289,13 @@
       "entregable_esperado": "Un plan de liderazgo enfocado en mejorar el sistema, con identificación de casos individuales fuera de lo esperado y acciones de apoyo basadas en datos.",
       "nodos_previos": [
         "control_estadistico_de_procesos",
-        "moral_y_sistema_no_individuo",
+        "causas_comunes_vs_especiales",
         "capacidad_de_proceso_2",
         "circulos_de_calidad_para_mejora_operativa",
         "mantenimiento_preventivo_orientado_al_cliente"
       ],
       "nodos_siguientes": [
-        "distincion_causas_comunes_especiales",
+        "causas_comunes_vs_especiales",
         "gestion_miedo_reportes",
         "entrenamiento_y_control_estadistico",
         "gobierno_corporativo_y_calidad"
@@ -11143,7 +11143,7 @@
         "circulos_de_calidad_para_mejora_operativa",
         "cuatro_costos_de_calidad",
         "entrenamiento_y_control_estadistico",
-        "moral_y_sistema_no_individuo",
+        "causas_comunes_vs_especiales",
         "costo_de_mala_calidad_copq"
       ],
       "condiciones_activacion": [
@@ -11171,7 +11171,7 @@
         "calidad_de_diseno_vs_produccion"
       ],
       "nodos_siguientes": [
-        "moral_y_sistema_no_individuo",
+        "causas_comunes_vs_especiales",
         "liderazgo_para_mejora_continua",
         "aim_of_leadership"
       ],
@@ -11830,7 +11830,6 @@
       "nodos_siguientes": [
         "analisis_variacion_desempeno_servicio",
         "distincion_causas_comunes_especiales_3",
-        "distincion_causas_comunes_especiales_incidentes",
         "causas_comunes_vs_especiales"
       ],
       "condiciones_activacion": [
@@ -12473,20 +12472,40 @@
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
       "resumen_teorico": "Las causas comunes son fallas propias del sistema (diseño de producto, materiales, instrucción, condiciones de trabajo) y representan la mayoría de los problemas, entre el 80% y el 94% según Deming; son responsabilidad tuya, de quien maneja el proceso, no de quien lo ejecuta. Las causas especiales son eventos aislados atribuibles a una circunstancia puntual y se detectan cuando un punto cae fuera de los límites de control o aparecen patrones inusuales en un gráfico de corrida. Confundir ambas genera dos errores costosos: ajustar de más el sistema por algo puntual, o dejar de investigar una señal real pensando que es variación normal. Esta distinción evita culpar injustamente a las personas por fallas que son del sistema.",
       "pasos_accionables": [
-        "Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada",
+        "Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes",
         "Graficar los datos en un gráfico de corrida o de control y calcular los límites estadísticos",
         "Aplicar reglas simples (como puntos consecutivos fuera de límite o por debajo del promedio) para detectar posibles causas especiales",
-        "Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia",
+        "Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla",
         "Listar las causas comunes propias de tu sistema (diseño, materiales, instrucción, condiciones) y asumir tu responsabilidad sobre ellas",
-        "Documentar los hallazgos y definir una acción distinta para cada tipo de causa"
+        "Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales",
+        "Si la causa es del sistema, rediseñar el proceso en lugar de sancionar al individuo",
+        "Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros",
+        "Implementar registros estadísticos que permitan rastrear el origen de cada error (turno, máquina, operador, departamento).",
+        "Comunicar los hallazgos enfocándose en 'el problema', no en 'quién lo causó'.",
+        "Dar seguimiento a la moral del equipo y la tasa de errores tras el cambio de enfoque.",
+        "Comunicar a los equipos que el objetivo es identificar problemas, no culpables",
+        "Dar seguimiento y apoyo a quienes caen fuera de las tolerancias del grupo",
+        "Fomentar la colaboración entre turnos y departamentos para resolver causas comunes",
+        "Analizar la distribución de errores o defectos entre todas las personas usando limites de control"
       ],
       "entregable_esperado": "Gráfico de corrida o de control con los puntos clasificados como causa común o especial y un plan de acción diferenciado para cada tipo.",
       "nodos_previos": [
         "limites_de_especificacion_vs_limites_de_control",
         "estandarizacion_industrial_voluntaria",
         "falacia_meta_numerica_sin_metodo",
-        "trampa_del_promedio_como_estandar",
-        "carta_de_control_shewhart"
+        "carta_de_control_shewhart",
+        "aim_of_leadership",
+        "capacidad_de_proceso",
+        "capacidad_de_proceso_2",
+        "control_estadistico_de_procesos",
+        "costo_de_mala_calidad_copq",
+        "estudio_mezclas_multiples_fuentes",
+        "evaluacion_de_desempeno_merito",
+        "limites_control_por_juicio_error",
+        "mejora_continua_del_proceso",
+        "mejora_del_sistema_responsabilidad_gerencial",
+        "sistema_estable_causas_comunes",
+        "sistema_estable_responsabilidad_gerencial"
       ],
       "nodos_siguientes": [
         "experimento_cuentas_rojas",
@@ -12497,17 +12516,43 @@
         "capacidad_del_proceso",
         "grafico_de_corrida_run_chart",
         "sistema_responsabilidad_gerencial",
-        "mejora_del_sistema_responsabilidad_gerencial"
+        "mejora_del_sistema_responsabilidad_gerencial",
+        "adopcion_liderazgo",
+        "aim_of_leadership",
+        "eliminacion_firmas_redundantes",
+        "gestion_miedo_reportes",
+        "graficos_control_individuales_operarios",
+        "importancia_de_la_capacitacion",
+        "mal_uso_histograma_vs_carta_control",
+        "mejora_continua_del_proceso",
+        "muestreo_con_seguimiento_no_respondientes",
+        "sistema_responsabilidad_gerencial_2"
       ],
       "condiciones_activacion": [
         "Cuando estás por culparte a ti mismo o a alguien que te ayuda por un defecto o error sin haber verificado si es del sistema",
         "Cuando observas variaciones inusuales en tus indicadores de desempeño, ventas, calidad o quejas",
-        "Cuando necesitas decidir si conviene intervenir sobre el proceso completo o sobre un caso puntual"
+        "Cuando necesitas decidir si conviene intervenir sobre el proceso completo o sobre un caso puntual",
+        "Cuando se evalúa el desempeño individual de un trabajador",
+        "Cuando el nivel de defectos se mantenga igual a pesar de tus esfuerzos continuos de corrección puntual",
+        "Si existe conflicto interno o baja moral por atribución de culpas ante errores recurrentes.",
+        "Cuando hay alta rotación o desmotivación por politicas de error que se sienten injustas",
+        "Cuando usas el promedio del grupo como criterio para intervenir con una persona en particular",
+        "Cuando cambia cada semana quien es la persona 'señalada' sin que haya mejora real",
+        "Cuando necesitas determinar si las diferencias de desempeño entre las personas que trabajan contigo son reales o producto del azar del sistema"
       ],
       "etiqueta_arbol": "Diferencia Variación Común y Especial",
       "ids_alias": [
         "causas_comunes_causas_especiales",
-        "distincion_causas_comunes_especiales_3"
+        "distincion_causas_comunes_especiales_3",
+        "distincion_causas_comunes_especiales",
+        "distincion_causas_comunes_especiales_2",
+        "distincion_causas_comunes_especiales_incidentes",
+        "distincion_causas_especiales_comunes",
+        "identificacion_causa_raiz_no_culpa_individual",
+        "moral_y_sistema_no_individuo",
+        "politica_no_culpar_trabajador",
+        "trampa_del_promedio_como_estandar",
+        "variacion_del_sistema_vs_individuo"
       ],
       "merged_originals": [
         {
@@ -12518,6 +12563,51 @@
         {
           "node_id": "distincion_causas_comunes_especiales_3",
           "titulo": "Distinción entre Causas Comunes y Causas Especiales de Variación",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "distincion_causas_comunes_especiales",
+          "titulo": "Distinción entre Causas Comunes y Especiales de Variación",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "distincion_causas_comunes_especiales_2",
+          "titulo": "Distinción entre Causas Comunes y Causas Especiales",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "distincion_causas_comunes_especiales_incidentes",
+          "titulo": "Distinción entre Causas Comunes y Especiales en el Análisis de Accidentes",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "distincion_causas_especiales_comunes",
+          "titulo": "Distinción entre Causas Especiales y Comunes (Teorema de Nelson)",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "identificacion_causa_raiz_no_culpa_individual",
+          "titulo": "Identificación de la causa raíz del problema en lugar de culpar al individuo",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "moral_y_sistema_no_individuo",
+          "titulo": "Enfoque en el Problema, no en el Individuo",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "politica_no_culpar_trabajador",
+          "titulo": "Evitar Culpar al Trabajador por Fallos del Sistema",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "trampa_del_promedio_como_estandar",
+          "titulo": "La Trampa del Promedio como Estándar de Desempeño",
+          "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        },
+        {
+          "node_id": "variacion_del_sistema_vs_individuo",
+          "titulo": "Cuando la diferencia entre personas es el sistema, no la persona (límites de control)",
           "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
         }
       ]
@@ -21684,7 +21774,7 @@
         "pruebas_destructivas",
         "punto_equilibrio_calidad_inspeccion",
         "gestion_miedo_reportes",
-        "distincion_causas_comunes_especiales"
+        "causas_comunes_vs_especiales"
       ],
       "condiciones_activacion": [
         "Cuando se necesita monitorear y predecir el desempeño de un proceso en el tiempo",
@@ -23464,7 +23554,7 @@
         "punto_equilibrio_calidad_inspeccion",
         "calidad_de_diseno_vs_produccion",
         "control_estadistico_de_procesos",
-        "identificacion_causa_raiz_no_culpa_individual",
+        "causas_comunes_vs_especiales",
         "costo_optimo_calidad",
         "costo_de_calidad_2",
         "conciencia_de_calidad",
@@ -37708,7 +37798,8 @@
         "Cuando se evalúa el desempeño individual de un trabajador",
         "Cuando se detectan defectos y se debe decidir si corregir al individuo o al sistema"
       ],
-      "etiqueta_arbol": "Identifica el Origen del Defecto"
+      "etiqueta_arbol": "Identifica el Origen del Defecto",
+      "deprecado": true
     },
     "distincion_causas_comunes_especiales_2": {
       "node_id": "distincion_causas_comunes_especiales_2",
@@ -37734,7 +37825,8 @@
         "Cuando estes investigando cada defecto por separado sin haber revisado antes si el proceso esta en control",
         "Cuando el nivel de defectos se mantenga igual a pesar de tus esfuerzos continuos de corrección puntual"
       ],
-      "etiqueta_arbol": "No Culpes al Sistema Equivocado"
+      "etiqueta_arbol": "No Culpes al Sistema Equivocado",
+      "deprecado": true
     },
     "distincion_causas_comunes_especiales_3": {
       "node_id": "distincion_causas_comunes_especiales_3",
@@ -37789,7 +37881,8 @@
         "Cuando ocurren accidentes, fallas o resultados desfavorables recurrentes en un proceso u organización",
         "Si existe la tentación de culpar directamente a un trabajador sin análisis previo"
       ],
-      "etiqueta_arbol": "Analiza Bien Cada Accidente"
+      "etiqueta_arbol": "Analiza Bien Cada Accidente",
+      "deprecado": true
     },
     "distincion_causas_especiales_comunes": {
       "node_id": "distincion_causas_especiales_comunes",
@@ -37815,7 +37908,8 @@
         "Cuando se detecta un defecto y se quiere ajustar el proceso inmediatamente sin análisis previo",
         "Cuando un supervisor reacciona a cada error individual sin evaluar si el sistema es estable"
       ],
-      "etiqueta_arbol": "No Ajustes sin Necesidad"
+      "etiqueta_arbol": "No Ajustes sin Necesidad",
+      "deprecado": true
     },
     "distincion_cogs_gastos_operativos": {
       "node_id": "distincion_cogs_gastos_operativos",
@@ -41685,7 +41779,7 @@
       "entregable_esperado": "Un proceso administrativo rediseñado con un único responsable claro por documento y una tasa de error reducida y documentada.",
       "nodos_previos": [
         "retroalimentacion_cliente_mejora_servicio",
-        "identificacion_causa_raiz_no_culpa_individual"
+        "causas_comunes_vs_especiales"
       ],
       "nodos_siguientes": [
         "adaptacion_14_puntos_servicio_medico",
@@ -49334,7 +49428,7 @@
         "control_estadistico_del_proceso"
       ],
       "nodos_siguientes": [
-        "distincion_causas_comunes_especiales",
+        "causas_comunes_vs_especiales",
         "limites_control_por_juicio_error"
       ],
       "condiciones_activacion": [
@@ -50249,7 +50343,7 @@
         "enfermedades_mortales_gestion"
       ],
       "nodos_siguientes": [
-        "variacion_del_sistema_vs_individuo"
+        "causas_comunes_vs_especiales"
       ],
       "condiciones_activacion": [
         "Cuando la organización usa calificaciones anuales o management by objectives",
@@ -59996,7 +60090,7 @@
         "aim_of_leadership",
         "control_estadistico_de_procesos",
         "deteccion_de_lideres_y_rezagados",
-        "distincion_causas_comunes_especiales",
+        "causas_comunes_vs_especiales",
         "importancia_de_la_capacitacion"
       ],
       "nodos_siguientes": [
@@ -61802,7 +61896,7 @@
       ],
       "entregable_esperado": "Sistema de gráficos de control individuales implementado, con seguimiento de mejora continua y hallazgos documentados",
       "nodos_previos": [
-        "politica_no_culpar_trabajador",
+        "causas_comunes_vs_especiales",
         "gestion_participativa_qc_circle_supervisores",
         "bucle_retroalimentacion_autoajustable"
       ],
@@ -64278,7 +64372,8 @@
         "Si existe conflicto interno o baja moral por atribución de culpas ante errores recurrentes.",
         "Si se necesita implementar un sistema de mejora continua basado en datos en lugar de sanciones."
       ],
-      "etiqueta_arbol": "Busca la Causa Real"
+      "etiqueta_arbol": "Busca la Causa Real",
+      "deprecado": true
     },
     "identificacion_de_riesgos": {
       "node_id": "identificacion_de_riesgos",
@@ -65581,7 +65676,7 @@
       ],
       "entregable_esperado": "Un plan de capacitación basado en el estado de control estadístico del trabajador, con decisiones de reasignación cuando corresponda",
       "nodos_previos": [
-        "distincion_causas_comunes_especiales"
+        "causas_comunes_vs_especiales"
       ],
       "nodos_siguientes": [
         "gestion_miedo_reportes"
@@ -71226,8 +71321,7 @@
         "estudio_mezclas_multiples_fuentes"
       ],
       "nodos_siguientes": [
-        "distincion_causas_comunes_especiales",
-        "distincion_causas_comunes_especiales_2"
+        "causas_comunes_vs_especiales"
       ],
       "condiciones_activacion": [
         "Cuando se detecte que los límites de una carta de control fueron fijados arbitrariamente o por juicio",
@@ -71941,7 +72035,7 @@
       ],
       "entregable_esperado": "Reemplazo de herramientas de reporte (histogramas simples) por cartas de control con límites estadísticamente calculados",
       "nodos_previos": [
-        "distincion_causas_comunes_especiales"
+        "causas_comunes_vs_especiales"
       ],
       "nodos_siguientes": [
         "sistema_responsabilidad_gerencial"
@@ -74991,14 +75085,14 @@
         "aprendizaje_institucionalizado_benchmarking",
         "auditoria_de_producto",
         "circulos_de_calidad_qc_circles",
-        "distincion_causas_comunes_especiales_incidentes",
+        "causas_comunes_vs_especiales",
         "medicion_capacidad_servicio",
         "modelo_shingo_evaluacion_excelencia",
         "calidad_de_ejecucion_proceso_innovacion"
       ],
       "nodos_siguientes": [
         "institucionalizar_capacitacion",
-        "distincion_causas_especiales_comunes",
+        "causas_comunes_vs_especiales",
         "rol_black_belt_six_sigma"
       ],
       "condiciones_activacion": [
@@ -75174,14 +75268,13 @@
       ],
       "entregable_esperado": "Informe de causa raiz a nivel de sistema y evidencia de mejora tras el cambio implementado por ti",
       "nodos_previos": [
-        "distincion_causas_comunes_especiales",
+        "causas_comunes_vs_especiales",
         "analisis_distribucion_poisson_para_capacidad",
         "distincion_causas_comunes_especiales_3",
-        "eliminar_slogans_y_exhortaciones",
-        "causas_comunes_vs_especiales"
+        "eliminar_slogans_y_exhortaciones"
       ],
       "nodos_siguientes": [
-        "politica_no_culpar_trabajador"
+        "causas_comunes_vs_especiales"
       ],
       "condiciones_activacion": [
         "Cuando un proceso esta en control estadistico pero la tasa de defectos sigue siendo inaceptable",
@@ -78652,7 +78745,8 @@
         "Cuando existe conflicto interno por errores o tasas de rechazo",
         "Cuando la moral del equipo se ve afectada por señalamientos de culpa"
       ],
-      "etiqueta_arbol": "No Culpes a las Personas"
+      "etiqueta_arbol": "No Culpes a las Personas",
+      "deprecado": true
     },
     "motivaciones_psicologicas_cofundadores": {
       "node_id": "motivaciones_psicologicas_cofundadores",
@@ -79104,7 +79198,7 @@
       ],
       "entregable_esperado": "Un diseño de encuesta con muestra representativa y protocolo de seguimiento a no respondientes, junto con resultados con nivel de confianza estadística documentado.",
       "nodos_previos": [
-        "moral_y_sistema_no_individuo"
+        "causas_comunes_vs_especiales"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -87110,7 +87204,8 @@
         "Cuando aplicas sanciones o advertencias uniformes sin analizar antes los datos",
         "Cuando hay alta rotación o desmotivación por politicas de error que se sienten injustas"
       ],
-      "etiqueta_arbol": "No Culpes al Trabajador"
+      "etiqueta_arbol": "No Culpes al Trabajador",
+      "deprecado": true
     },
     "pool_opciones_empleados": {
       "node_id": "pool_opciones_empleados",
@@ -99338,7 +99433,6 @@
       ],
       "entregable_esperado": "Un documento de diagnostico con los datos de auditoria, las causas raiz identificadas y un plan de acción para rediseñar tu sistema de calidad",
       "nodos_previos": [
-        "trampa_del_promedio_como_estandar",
         "causas_comunes_vs_especiales"
       ],
       "nodos_siguientes": [
@@ -100117,8 +100211,7 @@
         "abolir_inspeccion_masiva",
         "causas_comunes_vs_especiales",
         "eliminar_trabajo_a_destajo",
-        "falacia_recompensa_loteria",
-        "trampa_del_promedio_como_estandar"
+        "falacia_recompensa_loteria"
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
@@ -107766,7 +107859,7 @@
         "eliminar_cuotas_numericas_trabajadores",
         "falacia_meta_numerica_sin_metodo",
         "falacia_recompensa_loteria",
-        "trampa_del_promedio_como_estandar"
+        "causas_comunes_vs_especiales"
       ],
       "condiciones_activacion": [
         "Cuando culpas a la persona que te ayuda por defectos o errores recurrentes en su trabajo.",
@@ -107840,7 +107933,7 @@
         "diseno_de_calidad_desde_planificacion"
       ],
       "nodos_siguientes": [
-        "identificacion_causa_raiz_no_culpa_individual"
+        "causas_comunes_vs_especiales"
       ],
       "condiciones_activacion": [
         "Si existe la tentacion de culpar a una persona por problemas que vienen del sistema.",
@@ -108336,9 +108429,8 @@
       "entregable_esperado": "Mapa o diagrama de tu sistema de negocio identificando que elementos controlas tu directamente y cuales quedan fuera de tu alcance",
       "nodos_previos": [
         "causas_comunes_causas_especiales",
-        "distincion_causas_comunes_especiales_2",
-        "mal_uso_histograma_vs_carta_control",
-        "causas_comunes_vs_especiales"
+        "causas_comunes_vs_especiales",
+        "mal_uso_histograma_vs_carta_control"
       ],
       "nodos_siguientes": [
         "control_estadistico_proceso",
@@ -108367,7 +108459,7 @@
       ],
       "entregable_esperado": "Diagnostico del sistema completo (procesos, personas, entrenamiento) y plan de mejora que tu lideras",
       "nodos_previos": [
-        "distincion_causas_comunes_especiales"
+        "causas_comunes_vs_especiales"
       ],
       "nodos_siguientes": [
         "mejora_continua_del_sistema"
@@ -113658,7 +113750,8 @@
         "Cuando usas el promedio del grupo como criterio para intervenir con una persona en particular",
         "Cuando cambia cada semana quien es la persona 'señalada' sin que haya mejora real"
       ],
-      "etiqueta_arbol": "No Uses el Promedio como Meta"
+      "etiqueta_arbol": "No Uses el Promedio como Meta",
+      "deprecado": true
     },
     "transferencia_de_actividades_a_departamentos_de_linea": {
       "node_id": "transferencia_de_actividades_a_departamentos_de_linea",
@@ -116524,7 +116617,8 @@
         "Cuando necesitas determinar si las diferencias de desempeño entre las personas que trabajan contigo son reales o producto del azar del sistema",
         "Cuando quieres evitar decisiones injustas sobre las personas basadas en variación normal del sistema"
       ],
-      "etiqueta_arbol": "Mira el Sistema, no al Individuo"
+      "etiqueta_arbol": "Mira el Sistema, no al Individuo",
+      "deprecado": true
     },
     "variance_analysis": {
       "node_id": "variance_analysis",
@@ -126715,7 +126809,7 @@
     "componentes_conexos": 1,
     "tamano_componente_principal": 3853,
     "cobertura_componente_principal_pct": 100.0,
-    "nodos_sin_enlaces_entrantes": 216,
+    "nodos_sin_enlaces_entrantes": 222,
     "enlaces_rotos_en_grafo": 0
   }
 }

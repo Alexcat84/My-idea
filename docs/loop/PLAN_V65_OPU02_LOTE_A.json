@@ -1,0 +1,278 @@
+{
+ "operacion": "OP-U-02",
+ "fecha": "2026-08-20",
+ "estado": "SELLADO",
+ "nomina": "docs/loop/_v65_componentes.jsonl (80 lineas, medidas al sellar). Es el recomputo del que sale la nomina de los actos.",
+ "tramo_definido_en": "docs/loop/TRAMO_UNICO_OPU02_V64.jsonl. EL INSUMO NO SE RE-MIDE, SE COTEJA: 47 actos, el fichero del tramo no trae puesto_hoy y este plan no lo inventa y el fichero del tramo no trae puesto de nomina previa, 0 de figura PURO A y 0 de tamano dos, TODO MEDIDO AL SELLAR sobre ese mismo fichero. La vara del tramo es un PREFIJO CON TOPE y no un minimo (acta 61, D1 y pregunta 1, registrada en docs/plan/03_FUSIONES.md). COTEJADO CONTRA LOS NODOS DE HOY antes de escribir una linea de este plan: 47 actos mirados, 47 vivos, 0 ya fundidos, DESCALCES 0, contados al sellar sobre dataset/nodos.",
+ "dossier": "docs/loop/SALIDA_V65_DOSSIER_ACTO3.txt (244 lineas, medidas al sellar). Es la lectura P.5, el acto leido entero con su razon entera pegada.",
+ "vara": "DE LOS 47 ACTOS DEL TRAMO, 0 SON DE FUSION PURA, medido al sellar sobre el fichero del tramo (figura PURO A y tamano dos): un acto de dos miembros con UN par A directo y ningun mixto. El superviviente lo elige el CONTENIDO como P.8 lo define; UNA SOLA VARA DE CONTENIDO NO EMPATADA BASTA (acta 53, pregunta 4); si TODAS las varas de contenido concuerdan se funde a su lado; si el contenido EMPATA ENTERO, EL CABLEADO DECIDE SOLO (P.8); si dos varas de contenido CHOCAN decide la pieza DECLARADA (acta 53 pregunta 3, y tambien contra DOS conteos por acta 59 pregunta 2), y si la declarada esta a los dos lados se DECLARA. Y LA GUARDA RESTRINGE Y EL CONTENIDO ELIGE ENTRE LO PERMITIDO (acta 54, pregunta 1, registrada en docs/plan/03_FUSIONES.md): en un acto de dos donde el unico candidato limpio es la puerta, LA PUERTA SOBREVIVE y el choque se registra en el motivo. EL ROTULO SOLO (LINEA contra PASOS) NUNCA DECIDE, y LA RAMA DE LA CANTIDAD COMO VARA SIGUE NO ADOPTADA.",
+ "varas_impresas": "NO ENTRO NINGUN FICHERO DE CUADRO DE VARAS A ESTE GENERADOR, y por eso este plan NO LO DECLARA en vez de suponerlo. Es una fila por acto con pasos, condiciones y cableado contados por maquina y la FORMA del veredicto impresa. ESTE GENERADOR NO RE-CUENTA ESA FORMA Y POR ESO NO PUBLICA SU REPARTO: quien la quiera, la lee de ese fichero. LA FORMA IMPRESA ES MEDICION DE LOS TRES CONTEOS Y NO ADJUDICACION: no conoce la pieza declarada ni la guarda 1B, y por eso un acto puede salir de la tabla apuntando a un lado y decidirse al otro.",
+ "colisiones_esperadas": "NO ENTRO NINGUN FICHERO DE COLISIONES ESPERADAS A ESTE GENERADOR, y por eso este plan NO LO DECLARA en vez de suponerlo. Es el censo por PAR RESUELTO sobre el archivo entero, medido ANTES de tocar un nodo. COMBINACIONES POSIBLES DE SUPERVIVIENTE EN ESTE TRAMO: 201, contadas al sellar como la suma de los miembros de los 47 actos. El censo esperado de cada lote lo fija ese fichero y una colision real DETIENE.",
+ "vara_de_las_puertas": "GUARDA 1B: ningun absorbido de este plan es semilla de entrada ni extremo de puente aprobado, comprobado por el generador y otra vez por el ejecutor. EN ESTE TRAMO HAY 11 ACTO(S) CON MIEMBRO PUERTA, MEDIDO AL SELLAR CONTRA entry_seeds.json Y LOS PUENTES APROBADOS: acto 1, acto 9, acto 13, acto 15, acto 17, acto 25, acto 26, acto 31, acto 44, acto 46, acto 51. Donde la puerta no sea la que el contenido elige, el choque se registra en el motivo por acta 54, pregunta 1.",
+ "politica_del_reparto": "LA HEREDADA Y CITADA, no reinventada (acta 51 D3; acta 52 D5 y D10; acta 54 pregunta 5; acta 55 preguntas 3, 4 y 5; registros de las vueltas 53 a 57 y 60): una pieza del absorbido cuyo unico contenido propio es un PARAMETRO CONCRETO de un gesto que el superviviente ya tiene va de INCISO ADOSADO cuando el paso resultante se lee limpio, y de CUBIERTO con la perdida NOMBRADA cuando no. Una pieza que es un GESTO DISTINTO va de APPEND, y una pieza mitad propia mitad ya dicha va de APPEND ENTERO con el solape declarado para la poda de la fase 04. CUANDO LA RAZON DECLARA COMPARTIDO UN GESTO QUE EL TEXTO NO DICE, PARA EL REPARTO MANDA EL TEXTO (acta 55, pregunta 3). LAS PERDIDAS DE CONDICIONES NO VAN DE APPEND POR DEFECTO: se NOMBRAN mientras el INCISO de condiciones no exista (acta 55, pregunta 5), y solo van de APPEND cuando la condicion es un DISPARADOR DISTINTO y no un matiz del que el superviviente ya tiene. El INCISO es siempre TROZO VERBATIM del paso que muere, y se EXTRAE del nodo en vez de teclearse. Y BAJO EL CONTRATO CAMPO PROPIO v1: TODA perdida nombrada va ADEMAS sellada en el campo perdidas de su acto, con su especie, donde vive y a quien se enruta.",
+ "contrato_de_perdidas": "CAMPO PROPIO v1",
+ "vuelta": 65,
+ "tramo": "UNICO Y FINAL POR AGOTAMIENTO, LOTE A DEL TRAMO UNICO DE OP-U-02, PREFIJO SIN SALTOS DEL orden_universo: LOS ACTOS 1 Y 3. El 1 cierra DECLARADO Y NO FUNDIDO por P.10 y el 3 cierra FUNDIDO, y es la PRIMERA fusion de mas de dos miembros de la campana",
+ "actos": [
+  {
+   "orden": 3,
+   "miembros": [
+    "causas_comunes_vs_especiales",
+    "distincion_causas_comunes_especiales",
+    "distincion_causas_comunes_especiales_2",
+    "distincion_causas_comunes_especiales_incidentes",
+    "distincion_causas_especiales_comunes",
+    "identificacion_causa_raiz_no_culpa_individual",
+    "moral_y_sistema_no_individuo",
+    "politica_no_culpar_trabajador",
+    "trampa_del_promedio_como_estandar",
+    "variacion_del_sistema_vs_individuo"
+   ],
+   "miembros_del_acto_entero": [
+    "causas_comunes_vs_especiales",
+    "distincion_causas_comunes_especiales",
+    "distincion_causas_comunes_especiales_2",
+    "distincion_causas_comunes_especiales_incidentes",
+    "distincion_causas_especiales_comunes",
+    "identificacion_causa_raiz_no_culpa_individual",
+    "moral_y_sistema_no_individuo",
+    "politica_no_culpar_trabajador",
+    "trampa_del_promedio_como_estandar",
+    "variacion_del_sistema_vs_individuo"
+   ],
+   "figura": "ACTO DE 10 MIEMBROS, clases internas {'A': 14} medidas en el fichero del tramo",
+   "superviviente": "causas_comunes_vs_especiales",
+   "motivo": "ACTO 3 DEL TRAMO UNICO DE OP-U-02, LA FAMILIA DE LAS CAUSAS COMUNES Y ESPECIALES. UNA SOLA FAMILIA, Y LA PREGUNTA DE P.5 SE CONTESTA CON MEDICION Y NO CON IMPRESION: los DIEZ miembros salen del MISMO libro (Out of the Crisis, Deming), los 14 pares internos con veredicto escrito son TODOS de clase A, hay CERO pares D internos y CERO nodos puente, medido con scripts/loop/vuelta65_puentes_del_tramo.py. P.10 solo detiene una componente cuando aparece un triangulo A mas A mas D, y aqui no hay ninguno. SOBREVIVE causas_comunes_vs_especiales POR CONTENIDO, con las TRES varas por forma a su lado y ninguna en contra (TODAS DE ACUERDO, que funde a su lado): 6 pasos contra un maximo de 5, 3 condiciones contra 2 y cableado 14 contra un maximo de 9. NO DECIDE EL ROTULO NI LA CANTIDAD SOLA: decide que es el unico del acto que trae el procedimiento entero de punta a punta, del dato en orden cronologico a la accion distinta por tipo de causa, y los otros nueve traen tramos de ese mismo camino o su aplicacion a un sujeto concreto. NINGUN MIEMBRO DE ESTE ACTO ES PUERTA, medido al sellar. LO QUE ESTE ACTO SI ESTRENA Y VA MARCADO COMO DISCUTIBLE EN LA SECCION 6 DEL REPORTE DE ESTA VUELTA: es la PRIMERA fusion de la campana con mas de dos miembros, o sea el primer uso del reparto POR ABSORBIDO.",
+   "absorbidos": [
+    "distincion_causas_comunes_especiales",
+    "distincion_causas_comunes_especiales_2",
+    "distincion_causas_comunes_especiales_incidentes",
+    "distincion_causas_especiales_comunes",
+    "identificacion_causa_raiz_no_culpa_individual",
+    "moral_y_sistema_no_individuo",
+    "politica_no_culpar_trabajador",
+    "trampa_del_promedio_como_estandar",
+    "variacion_del_sistema_vs_individuo"
+   ],
+   "pasos": {
+    "distincion_causas_comunes_especiales": {
+     "1": "CUBIERTO:2",
+     "2": "CUBIERTO:5",
+     "3": "INCISO:4|ayudar al trabajador a identificarla y eliminarla|, y ",
+     "4": "CUBIERTO:5"
+    },
+    "distincion_causas_comunes_especiales_2": {
+     "1": "CUBIERTO:2",
+     "2": "CUBIERTO:5",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:6"
+    },
+    "distincion_causas_comunes_especiales_incidentes": {
+     "1": "INCISO:1|de incidentes o accidentes|, incluidos los ",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO_COND:1",
+     "4": "APPEND",
+     "5": "INCISO:6|la proporción estimada de causas sistémicas vs especiales|, incluida "
+    },
+    "distincion_causas_especiales_comunes": {
+     "1": "CUBIERTO:2",
+     "2": "APPEND",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:3"
+    },
+    "identificacion_causa_raiz_no_culpa_individual": {
+     "1": "APPEND",
+     "2": "CUBIERTO:3",
+     "3": "APPEND",
+     "4": "CUBIERTO:6",
+     "5": "APPEND"
+    },
+    "moral_y_sistema_no_individuo": {
+     "1": "CUBIERTO:2",
+     "2": "APPEND",
+     "3": "APPEND",
+     "4": "APPEND"
+    },
+    "politica_no_culpar_trabajador": {
+     "1": "APPEND",
+     "2": "CUBIERTO:3",
+     "3": "CUBIERTO:6",
+     "4": "CUBIERTO:5",
+     "5": "CUBIERTO:6"
+    },
+    "trampa_del_promedio_como_estandar": {
+     "1": "CUBIERTO:2",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:4"
+    },
+    "variacion_del_sistema_vs_individuo": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:2",
+     "3": "CUBIERTO:3",
+     "4": "CUBIERTO:5",
+     "5": "CUBIERTO:4"
+    }
+   },
+   "condiciones": {
+    "distincion_causas_comunes_especiales": {
+     "1": "APPEND",
+     "2": "CUBIERTO:3"
+    },
+    "distincion_causas_comunes_especiales_2": {
+     "1": "CUBIERTO:3",
+     "2": "APPEND"
+    },
+    "distincion_causas_comunes_especiales_incidentes": {
+     "1": "CUBIERTO:2",
+     "2": "CUBIERTO:1"
+    },
+    "distincion_causas_especiales_comunes": {
+     "1": "CUBIERTO:3",
+     "2": "CUBIERTO:1"
+    },
+    "identificacion_causa_raiz_no_culpa_individual": {
+     "1": "APPEND",
+     "2": "CUBIERTO:3"
+    },
+    "moral_y_sistema_no_individuo": {
+     "1": "CUBIERTO:1",
+     "2": "CUBIERTO:1"
+    },
+    "politica_no_culpar_trabajador": {
+     "1": "CUBIERTO:1",
+     "2": "APPEND"
+    },
+    "trampa_del_promedio_como_estandar": {
+     "1": "APPEND",
+     "2": "APPEND"
+    },
+    "variacion_del_sistema_vs_individuo": {
+     "1": "APPEND",
+     "2": "CUBIERTO:1"
+    }
+   },
+   "nota_del_reparto": "EL REPARTO, Y LAS TRES COSAS QUE SE DICEN EN VEZ DE CALLARSE. PRIMERA, LOS SOLAPES DECLARADOS PARA LA PODA DE LA FASE 04: dos piezas viajan de APPEND diciendo casi lo mismo, la de comunicar los hallazgos centrados en el problema y no en quien lo causo (identificacion_causa_raiz_no_culpa_individual, paso 3) y la de comunicar a los equipos que el objetivo es identificar problemas y no culpables (moral_y_sistema_no_individuo, paso 2). Van las dos ENTERAS con el solape DECLARADO, que es el carril escrito para la pieza mitad propia y mitad ya dicha; la fase 04 poda. Lo mismo con el eje de la persona: politica_no_culpar_trabajador paso 1 trae de APPEND el analisis de la distribucion de errores ENTRE PERSONAS con limites de control, y por eso las piezas de variacion_del_sistema_vs_individuo que dicen ese mismo eje van CUBIERTO con su perdida nombrada Y CON EL ATENUANTE DICHO. SEGUNDA, POR QUE HAY TRES INCISOS Y NO SEIS: el paso 4 del superviviente recibe UN inciso (ayudar al trabajador a identificarla y eliminarla) y NO recibe el segundo que pedia trampa_del_promedio_como_estandar paso 4 con sus ejemplos de vision y capacitacion, porque NO SE APILA MAS DE UN INCISO SOBRE EL MISMO PASO (acta 64, pregunta 5, registrada en esta vuelta): esa pieza va CUBIERTO con la perdida nombrada y enrutada. TERCERA, LAS ADVERTENCIAS NO SON PASOS (P.11): evitar sanciones, evitar conclusiones apresuradas, evitar tratar cada defecto como causa especial y dejar de usar el promedio como linea de corte CALIFICAN el acto y no lo constituyen, asi que van CUBIERTO con la perdida nombrada en vez de APPEND. EL SUPERVIVIENTE PASA DE 6 A 15 PASOS Y DE 3 A 10 CONDICIONES, y esa cifra se dice aqui porque es la mas alta de la campana y es consecuencia de fundir DIEZ nodos, no de repartir mal: 16 piezas viajan enteras, 39 estaban ya dichas y 3 van de inciso.",
+   "perdidas": [
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "la instruccion explicita de NO INFORMAR SOBRE DEFECTOS INDIVIDUALES cuando el proceso esta en control estadistico. El paso 5 del superviviente manda listar las causas comunes y asumir la responsabilidad sobre ellas, que es enfocar el esfuerzo en el sistema, pero NO dice que haya que dejar de reportar el defecto de cada uno",
+     "donde": "paso 2 de distincion_causas_comunes_especiales",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "la prohibicion explicita de SANCIONAR AL TRABAJADOR por fallas atribuibles al sistema. SE DICE LO QUE NO SE PIERDE: la condicion 1 del superviviente ya dispara cuando estas por culparte a ti o a alguien sin verificar si es del sistema, y el paso de rediseñar el proceso en lugar de sancionar al individuo VIAJA ENTERO de APPEND desde distincion_causas_comunes_especiales_incidentes",
+     "donde": "paso 4 de distincion_causas_comunes_especiales",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "que la accion para las causas comunes sea UN CAMBIO ESTRUCTURAL DEL SISTEMA y no el rastreo caso por caso. El paso 6 del superviviente manda definir una accion distinta para cada tipo de causa pero NO dice cual es la de las comunes",
+     "donde": "paso 4 de distincion_causas_comunes_especiales_2",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "que el disparador incluya ACCIDENTES, FALLAS O RESULTADOS DESFAVORABLES RECURRENTES. La condicion 2 del superviviente nombra indicadores de desempeño, ventas, calidad o quejas, y ninguna de las cuatro es un accidente",
+     "donde": "condicion 1 de distincion_causas_comunes_especiales_incidentes",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "la remision al CAPITULO 11 de la fuente como el metodo estadistico con el que se decide si una intervencion es necesaria. El paso 3 del superviviente manda aplicar reglas simples y las nombra, pero no remite a ese capitulo",
+     "donde": "paso 4 de distincion_causas_especiales_comunes",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "el disparador del CONFLICTO INTERNO YA INSTALADO por errores o tasas de rechazo, que no es el momento de culpar sino el estado que deja el haber culpado. ATENUANTE DECLARADO, y se dice para que la perdida se pueda pesar: la condicion 1 de identificacion_causa_raiz_no_culpa_individual viaja ENTERA de APPEND y nombra el conflicto interno y la baja moral",
+     "donde": "condicion 1 de moral_y_sistema_no_individuo",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    },
+    {
+     "especie": "DE CONDICIONES",
+     "que": "que el disparador sea LA MORAL DEL EQUIPO YA AFECTADA por señalamientos de culpa. ATENUANTE DECLARADO: la condicion 1 de identificacion_causa_raiz_no_culpa_individual viaja entera de APPEND y nombra la baja moral por atribucion de culpas",
+     "donde": "condicion 2 de moral_y_sistema_no_individuo",
+     "enrutada_a": "la fase 04, mientras el INCISO de condiciones no exista (acta 55, pregunta 5)"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "que el punto que excede el limite superior sea UNA PERSONA y que antes de actuar se investigue SU CONTEXTO. El paso 3 del superviviente detecta posibles causas especiales con reglas sobre los puntos, y el paso 4 manda investigar la señal, pero ninguno de los dos dice que el punto pueda ser alguien ni manda mirar su contexto antes de actuar",
+     "donde": "paso 2 de politica_no_culpar_trabajador",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "la prohibicion de las SANCIONES UNIFORMES Y LOS MENSAJES ESTANDAR para todos los niveles de error. El paso 6 del superviviente manda definir una accion distinta para cada tipo de causa, que es la forma positiva de lo mismo, pero no prohibe la respuesta uniforme",
+     "donde": "paso 3 de politica_no_culpar_trabajador",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "EL PROMEDIO SIMPLE COMO LINEA DE CORTE, nombrado como el error que se abandona. El paso 2 del superviviente manda construir el grafico con limites calculados estadisticamente, que es lo que sustituye al promedio, pero NO nombra al promedio ni dice que dejarlo es el punto. Es el titulo entero del nodo que muere",
+     "donde": "paso 1 de trampa_del_promedio_como_estandar",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "los ejemplos concretos de causa especial, PROBLEMAS DE VISION O DE CAPACITACION, que es lo que convierte la busqueda en algo que se puede hacer. NO SE ADOSA DE INCISO Y SE DICE POR QUE: el paso 4 del superviviente YA recibe el inciso del paso 3 de distincion_causas_comunes_especiales, y no se apila mas de un INCISO sobre el mismo paso (acta 64, pregunta 5)",
+     "donde": "paso 4 de trampa_del_promedio_como_estandar",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "que los datos sean DE UN GRUPO DE PERSONAS QUE HACEN UN TRABAJO SIMILAR. El paso 1 del superviviente recopila los datos DEL PROCESO. ATENUANTE DECLARADO: el paso 1 de politica_no_culpar_trabajador viaja ENTERO de APPEND y analiza la distribucion de errores ENTRE TODAS LAS PERSONAS con limites de control",
+     "donde": "paso 1 de variacion_del_sistema_vs_individuo",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    },
+    {
+     "especie": "DE PARAMETRO DE PASO",
+     "que": "que el caer fuera de los limites cuente TAMBIEN PARA BIEN y no solo para mal, que es lo que impide leer el grafico como una lista de culpables. El paso 3 del superviviente detecta posibles causas especiales sin decir que el punto alto tambien es una señal que se investiga",
+     "donde": "paso 3 de variacion_del_sistema_vs_individuo",
+     "enrutada_a": "la fase 04, que redacta y afina los pasos del superviviente"
+    }
+   ]
+  }
+ ],
+ "declarados_y_no_fundidos": [
+  {
+   "acto": 1,
+   "miembros": [
+    "cultura_de_seguridad_interpretivista_funcionalista",
+    "enfoque_situacional_vs_personal",
+    "error_humano_vs_falla_mecanica",
+    "errores_como_consecuencia",
+    "falla_sistemica_vs_error_individual",
+    "fallas_activas_condiciones_latentes",
+    "human_error_como_sintoma",
+    "new_view_human_error",
+    "new_view_vs_old_view",
+    "nueva_vision_organizacion_linea_seguridad",
+    "old_view_vs_new_view_human_error",
+    "preguntar_que_no_quien",
+    "riesgos_del_enfoque_en_error_humano",
+    "seduccion_modelo_persona",
+    "vieja_vision_vs_nueva_vision_seguridad"
+   ],
+   "superviviente_que_el_contenido_elige": "NINGUNO SE ELIGE, Y ESA ES LA DECISION. No se elige superviviente porque el acto no se funde: elegirlo seria decidir la fusion y dejarla a medias.",
+   "motivo": "DECLARADO Y NO FUNDIDO POR P.10, LA MITAD DIAGNOSTICA DE P.5, Y LA MEDICION VA DELANTE DE LA DECISION. P.10 dice con todas sus letras que UN NODO PUENTE es el que tiene A con dos nodos que entre si son D, que la componente que forma puede ser UNA familia o DOS pegadas por el, que el cierre transitivo no lo distingue porque no lee sino que cuenta, y que SI APARECE, LA COMPONENTE NO SE FUNDE HASTA QUE ESE TRIANGULO SE CIERRE. MEDIDO EN ESTA VUELTA con scripts/loop/vuelta65_puentes_del_tramo.py sobre el acto entero, con los ids pasados por el resolutor (P.1): 15 miembros, 105 combinaciones, 20 pares A, DIEZ pares D internos ya leidos y declarados DISTINTOS, TRES NODOS PUENTE y SEIS TRIANGULOS PUENTE. errores_como_consecuencia hace de puente en cuatro (contra error_humano_vs_falla_mecanica y falla_sistemica_vs_error_individual, que son D en el puesto 2403; contra new_view_human_error y riesgos_del_enfoque_en_error_humano, D en el 2299; contra new_view_human_error y seduccion_modelo_persona, D en el 2331; y contra riesgos_del_enfoque_en_error_humano y seduccion_modelo_persona, D en el 2228). human_error_como_sintoma hace de puente en uno (el 2403) y vieja_vision_vs_nueva_vision_seguridad en uno (new_view_human_error contra new_view_vs_old_view, D en el puesto 2220). FUNDIR LA COMPONENTE ENTERA DESMENTIRIA DIEZ LECTURAS QUE YA ESTAN ESCRITAS, y P.10 llama a eso exactamente lo que nunca es salida. Y HAY UNA SEGUNDA RAZON INDEPENDIENTE, TAMBIEN MEDIDA, que sola bastaria: DOS de los 15 miembros son PUERTA con la marca TIENE QUE SOBREVIVIR, enfoque_situacional_vs_personal y fallas_activas_condiciones_latentes, leidas de la salida del dossier. La GUARDA 1B dice que un nodo que es semilla de entrada o extremo de puente aprobado NO SE ABSORBE, y una fusion a un solo superviviente tendria que absorber una de las dos. LAS TRES SALIDAS DE P.10, RECORRIDAS UNA A UNA EN VEZ DE ELEGIR LA COMODA: leer el par que falta es la unica que resuelve de verdad, y quedan 75 combinaciones sin veredicto escrito, que es trabajo de cribado y no de esta operacion; releer contra el superviviente no aplica, porque aqui no hay superviviente elegido ni nodo que vaya a cambiar; y fundir solo el subconjunto CERRADO y enlazar el resto pide que TODAS las lecturas esten hechas, y no lo estan. ASI QUE NO SE FUNDE NADA Y SE DECLARA, que es lo que la letra deja. EL ACTO QUEDA VIVO Y ENTERO: no se toca ni un nodo, no se deprecia ninguno y no se elige superviviente. VA MARCADO COMO DISCUTIBLE EN LA SECCION 6 DEL REPORTE DE ESTA VUELTA, porque es la primera vez que la campana declara un acto por P.10 y porque el primer acto del prefijo del tramo unico se cierra sin fundir.",
+   "medicion": {
+    "instrumento": "scripts/loop/vuelta65_puentes_del_tramo.py",
+    "salida": "docs/loop/SALIDA_V65_PUENTES_TRAMO.txt",
+    "dossier": "docs/loop/SALIDA_V65_DOSSIER_ACTO1.txt",
+    "miembros": 15,
+    "combinaciones": 105,
+    "pares_A": 20,
+    "pares_D": 10,
+    "pares_sin_veredicto": 75,
+    "nodos_puente": 3,
+    "triangulos_puente": 6,
+    "puertas_dentro": [
+     "enfoque_situacional_vs_personal",
+     "fallas_activas_condiciones_latentes"
+    ]
+   }
+  }
+ ]
+}

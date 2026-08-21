@@ -1,0 +1,49 @@
+==============================================================================
+GENERADOR DEL PLAN DEL LOTE A DEL TRAMO UNICO Y FINAL POR AGOTAMIENTO (vuelta 65)
+  fichero del tramo: docs/loop/TRAMO_UNICO_OPU02_V64.jsonl
+==============================================================================
+
+  acto 3   INCISO al paso 4
+      trozo pedido en ASCII : 'ayudar al trabajador a identificarla y eliminarla'
+      trozo EXTRAIDO del nodo: 'ayudar al trabajador a identificarla y eliminarla'
+      paso resultante        : Investigar de inmediato cualquier señal de causa especial antes de perder el rastro de la evidencia, y ayudar al trabajador a identificarla y eliminarla
+  acto 3   INCISO al paso 1
+      trozo pedido en ASCII : 'de incidentes o accidentes'
+      trozo EXTRAIDO del nodo: 'de incidentes o accidentes'
+      paso resultante        : Recopilar los datos de tu proceso en orden cronológico, no como distribución agregada, incluidos los de incidentes o accidentes
+  acto 3   INCISO al paso 6
+      trozo pedido en ASCII : 'la proporcion estimada de causas sistemicas vs especiales'
+      trozo EXTRAIDO del nodo: 'la proporción estimada de causas sistémicas vs especiales'
+      paso resultante        : Documentar los hallazgos y definir una acción distinta para cada tipo de causa, incluida la proporción estimada de causas sistémicas vs especiales
+
+  las 1 fichas del lote A: TODAS en verde
+  guarda 1B: ningun absorbido es puerta
+  cobertura: cada paso y cada condicion de cada absorbido con marca UNICA
+  incisos: todos EXTRAIDOS del nodo y comprobados VERBATIM dentro del paso
+
+  RESUMEN DEL REPARTO POR ACTO:
+     acto 3   sobrevive causas_comunes_vs_especiales                   piezas 58 (enteras 16, ya dichas 39, de INCISO 3)
+     TOTAL del lote A: piezas 58 (enteras 16, ya dichas 39, de INCISO 3)
+
+  LAS PERDIDAS SELLADAS EN CAMPO PROPIO (contrato CAMPO PROPIO v1):
+     actos con el campo perdidas presente: 1 de 1 (el campo va SIEMPRE)
+     actos que DECLARAN cero perdidas    : 0
+     actos con al menos una perdida      : 1
+     perdidas selladas, en total         : 13
+        acto 3   DE PARAMETRO DE PASO   la instruccion explicita de NO INFORMAR SOBRE DEFECTOS INDIVIDUALES cuando el proceso esta en control estadistico. El paso 5 del superviviente manda listar las causas comunes y asumir la responsabilidad sobre ellas, que es enfocar el esfuerzo en el sistema, pero NO dice que haya que dejar de reportar el defecto de cada uno
+        acto 3   DE PARAMETRO DE PASO   la prohibicion explicita de SANCIONAR AL TRABAJADOR por fallas atribuibles al sistema. SE DICE LO QUE NO SE PIERDE: la condicion 1 del superviviente ya dispara cuando estas por culparte a ti o a alguien sin verificar si es del sistema, y el paso de rediseñar el proceso en lugar de sancionar al individuo VIAJA ENTERO de APPEND desde distincion_causas_comunes_especiales_incidentes
+        acto 3   DE PARAMETRO DE PASO   que la accion para las causas comunes sea UN CAMBIO ESTRUCTURAL DEL SISTEMA y no el rastreo caso por caso. El paso 6 del superviviente manda definir una accion distinta para cada tipo de causa pero NO dice cual es la de las comunes
+        acto 3   DE CONDICIONES         que el disparador incluya ACCIDENTES, FALLAS O RESULTADOS DESFAVORABLES RECURRENTES. La condicion 2 del superviviente nombra indicadores de desempeño, ventas, calidad o quejas, y ninguna de las cuatro es un accidente
+        acto 3   DE PARAMETRO DE PASO   la remision al CAPITULO 11 de la fuente como el metodo estadistico con el que se decide si una intervencion es necesaria. El paso 3 del superviviente manda aplicar reglas simples y las nombra, pero no remite a ese capitulo
+        acto 3   DE CONDICIONES         el disparador del CONFLICTO INTERNO YA INSTALADO por errores o tasas de rechazo, que no es el momento de culpar sino el estado que deja el haber culpado. ATENUANTE DECLARADO, y se dice para que la perdida se pueda pesar: la condicion 1 de identificacion_causa_raiz_no_culpa_individual viaja ENTERA de APPEND y nombra el conflicto interno y la baja moral
+        acto 3   DE CONDICIONES         que el disparador sea LA MORAL DEL EQUIPO YA AFECTADA por señalamientos de culpa. ATENUANTE DECLARADO: la condicion 1 de identificacion_causa_raiz_no_culpa_individual viaja entera de APPEND y nombra la baja moral por atribucion de culpas
+        acto 3   DE PARAMETRO DE PASO   que el punto que excede el limite superior sea UNA PERSONA y que antes de actuar se investigue SU CONTEXTO. El paso 3 del superviviente detecta posibles causas especiales con reglas sobre los puntos, y el paso 4 manda investigar la señal, pero ninguno de los dos dice que el punto pueda ser alguien ni manda mirar su contexto antes de actuar
+        acto 3   DE PARAMETRO DE PASO   la prohibicion de las SANCIONES UNIFORMES Y LOS MENSAJES ESTANDAR para todos los niveles de error. El paso 6 del superviviente manda definir una accion distinta para cada tipo de causa, que es la forma positiva de lo mismo, pero no prohibe la respuesta uniforme
+        acto 3   DE PARAMETRO DE PASO   EL PROMEDIO SIMPLE COMO LINEA DE CORTE, nombrado como el error que se abandona. El paso 2 del superviviente manda construir el grafico con limites calculados estadisticamente, que es lo que sustituye al promedio, pero NO nombra al promedio ni dice que dejarlo es el punto. Es el titulo entero del nodo que muere
+        acto 3   DE PARAMETRO DE PASO   los ejemplos concretos de causa especial, PROBLEMAS DE VISION O DE CAPACITACION, que es lo que convierte la busqueda en algo que se puede hacer. NO SE ADOSA DE INCISO Y SE DICE POR QUE: el paso 4 del superviviente YA recibe el inciso del paso 3 de distincion_causas_comunes_especiales, y no se apila mas de un INCISO sobre el mismo paso (acta 64, pregunta 5)
+        acto 3   DE PARAMETRO DE PASO   que los datos sean DE UN GRUPO DE PERSONAS QUE HACEN UN TRABAJO SIMILAR. El paso 1 del superviviente recopila los datos DEL PROCESO. ATENUANTE DECLARADO: el paso 1 de politica_no_culpar_trabajador viaja ENTERO de APPEND y analiza la distribucion de errores ENTRE TODAS LAS PERSONAS con limites de control
+        acto 3   DE PARAMETRO DE PASO   que el caer fuera de los limites cuente TAMBIEN PARA BIEN y no solo para mal, que es lo que impide leer el grafico como una lista de culpables. El paso 3 del superviviente detecta posibles causas especiales sin decir que el punto alto tambien es una señal que se investiga
+
+  plan escrito: docs\loop\PLAN_V65_OPU02_LOTE_A.json
+
+FIN
