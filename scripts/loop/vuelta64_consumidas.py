@@ -162,6 +162,26 @@ def medir():
     return filas, fallos, contexto
 
 
+def tabla_markdown(filas):
+    """LA TABLA SE IMPRIME, NO SE TECLEA (regla 1). El registro de la TAREA 1.a
+    pega esta salida entera en vez de reteclear las celdas."""
+    nl = chr(10)
+    out = ["| ficha | superviviente de la **ficha** (12 ago) | el que quedo **VIVO** | "
+           "coinciden | quien la consumio | linea |",
+           "|---|---|---|:---:|---|---:|"]
+    for f in filas:
+        s = f["sitios"][0]
+        sede = s["sede"]
+        tramo = sede.split("**")[0].replace("## ", "").strip().rstrip(":").rstrip(",")
+        vuelta = sede.split("vuelta ")[-1].rstrip(")") if "vuelta " in sede else "?"
+        lote = ("" if s["lote"].startswith("NO HAY COLUMNA") else ", lote %s" % s["lote"])
+        out.append("| `%s` | `%s` | `%s` | %s | %s, vuelta %s, acto %s%s | **%d** |"
+                   % (f["id_op"], f["sup_ficha"], f["sup_real"],
+                      "**NO**" if f["divergen"] else "si",
+                      tramo, vuelta, s["acto"], lote, s["linea"]))
+    return nl.join(out)
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     filas, fallos, ctx = medir()
@@ -200,6 +220,10 @@ def main():
         for x in fallos:
             print("   %s" % x)
         return 1
+    print()
+    print("--- LA TABLA, PARA PEGARLA ENTERA ---")
+    print(tabla_markdown(filas))
+    print()
     print("VERDE: las cinco resuelven a UN solo vivo y las cinco tienen UN registro.")
     return 0
 

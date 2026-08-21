@@ -1,0 +1,20 @@
+==============================================================================
+EL PUESTO 2 DE LA FASE 03, MEDIDO CON LA VARA GENERAL DE LA VUELTA 47
+  fichas leidas de docs/plan/OPERACIONES.jsonl: 71
+  empatadas por el campo orden == 2 en fase 03_FUSIONES: 3
+==============================================================================
+
+  OP-M-02-MEDIOS     desbloquea 5 ['OP-M-02-ASSESS', 'OP-M-02-ADMIT', 'OP-M-02-ACTIVATE', 'OP-M-02-ACCLIMATE', 'OP-M-02-ACCOMPLISH'] | CONSUMIDA
+  OP-M-03-II         desbloquea 4 ['OP-M-03-ENLACES', 'OP-M-05-INDICE', 'OP-M-05-EDIFICIO', 'OP-M-05-APERTURA'] | ejecutable, 2 miembros a 2 vivos
+  OP-U-02            desbloquea 1 ['OP-E-03'] | ejecutable, SIN nomina de nodos en su ficha
+
+--- LA TABLA, PARA PEGARLA ENTERA ---
+| puesto | operacion | **desbloquea** | cuales, leidas de su `depende_de` | estado HOY |
+|---:|---|---:|---|---|
+| **1.a** | `OP-M-02-MEDIOS` | **5** | `OP-M-02-ASSESS`, `OP-M-02-ADMIT`, `OP-M-02-ACTIVATE`, `OP-M-02-ACCLIMATE`, `OP-M-02-ACCOMPLISH` | **CONSUMIDA**, su par ya resuelve a un solo vivo |
+| **2.a** | `OP-M-03-II` | **4** | `OP-M-03-ENLACES`, `OP-M-05-INDICE`, `OP-M-05-EDIFICIO`, `OP-M-05-APERTURA` | ejecutable, 2 miembros a 2 vivos |
+| **3.a** | `OP-U-02` | **1** | `OP-E-03` | ejecutable; **SIN nomina de nodos en su ficha**, su universo se abre aparte |
+
+  LA PRIMERA EJECUTABLE DEL PUESTO: OP-M-03-II (desbloquea 4)
+
+FIN

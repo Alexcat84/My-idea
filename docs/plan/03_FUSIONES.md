@@ -3300,3 +3300,183 @@ Sale de [`../loop/SALIDA_V63_VERIFICAR_OPM02PROG.txt`](../loop/SALIDA_V63_VERIFI
 
 > **LO QUE ESTA APERTURA NO HACE, dicho para que nadie se lo atribuya: NO elige superviviente, NO reparte piezas, NO declara ningun acto y NO funde nada.** Fija quien entra en el universo y quien no, con su motivo citado. **La fusion de esos 47 actos es trabajo de la vuelta que la ejecute.**
 
+
+
+---
+
+## LAS ADJUDICACIONES DEL ACTA DE LA VUELTA 63, REGISTRADAS AQUI PARA QUE EL REGISTRO NO DEPENDA DEL ACTA (20 ago 2026, vuelta 64, TAREA 1 del encargo)
+
+**Se adosan al final del documento y NO reescriben ni una linea de las secciones de arriba**, que es
+la via que esta pagina ya uso **CUATRO** veces: las tres adjudicaciones del acta 52 (linea **1250**),
+la del acta 57 sobre el acto 25 (**2475**), las del acta 61 (**2689**) y las del acta 62 (**2933**),
+**las cuatro cotejadas HOY abriendo el fichero**. **Ninguna cifra publicada se toca.** **Cada cita
+lleva la linea LEIDA HOY**, no recordada, y **las treinta y tres se imprimieron y se compararon antes
+de escribir esta seccion** con `python scripts/loop/vuelta64_registrar_acta63.py --simular`, que cae
+en `ROJO` sin escribir si una sola no calza: el acta de la vuelta 63 abre en la linea **16274** de
+[`../loop/ACTA_AUDITOR.md`](../loop/ACTA_AUDITOR.md), su seccion de adjudicaciones en la **16432**,
+la de las cinco preguntas en la **16502**, la del hallazgo de las consumidas en la **16547** y la
+del orden del puesto 2 en la **16583**.
+
+### a) **LOS NUEVE DISCUTIBLES ADJUDICADOS `A FAVOR`, CADA UNO CON LA VARA QUE LO SOSTIENE**
+
+**Fueron DIEZ los marcados y NUEVE los adjudicados**: el decimo, el `D10`, quedo a **relectura
+conjunta** y se resuelve en el apartado **e)** de aqui abajo. La columna de la vara **no es una
+glosa: es la regla citable con la que el auditor lo adjudico**, y va copiada de su linea.
+
+| | lo discutible, tal como el ejecutor lo marco | **la vara que lo sostiene** | linea |
+|---|---|---|---:|
+| **`D1`** | **exigio `--operacion` y declaro los insumos en un generador de nombre estable**, con lo que el comando viejo cae en `ROJO` | **acta 61, `D2`**, con sus dos condiciones comprobadas (docstring enumerado con nota fechada, marcado discutible). Y **que el comando viejo caiga en `ROJO` es fallar ruidoso**, canon de la casa (banco seccion 9): *un generador que sella planes no puede adivinar la operacion* | **16434** |
+| **`D2`** | **corrigio el sellador dos vueltas seguidas** | **la prueba 2 del caso positivo lo mide**: la cabecera corregida da **21 y 42 IDENTICOS** a los planes ya sellados, o sea que **la correccion honra el conteo**. El riesgo de tocar el sellador es real **y la mitigacion tambien esta medida**: el censo re-corrido da cero tallados y el texto viejo queda citado entero | **16440** |
+| **`D3`** | **estreno DOS instrumentos estables y los uso el mismo dia** | `fundir_por_plan.py` es **sucesor declarado POR EXTRACCION con un `assert` por cambio** (sha1 del ancestro medido por el auditor), y el caso positivo nuevo **aisla NUEVE guardas y las nueve muerden**. **La alternativa real era correr el ancestro con `OP-U-01` TALLADO en el titulo**, que es la especie que la regla 1 prohibe | **16446** |
+| **`D4`** | **ejecuto `OP-M-03-I` con una ficha cuya medicion habia envejecido** | **las dos vias convergen medidas hoy**: el `CHOCAN` de las varas por forma lo decide **la pieza declarada** (acta 53, pregunta 3), que es la adjudicacion sellada, y nombra al mismo nodo. **La regla general queda escrita en el apartado b)** | **16452** |
+| **`D5`** | **siguio `P.16` contra la letra de la ficha Y del encargo** | **`P.16` es posterior** (14 contra 12 de ago), **es decision del fundador**, su punto 3 hace de `OP-S-12` una verificacion de cero, y `AUDITOR.md` seccion 3 exige cero duplicadas tras resolver como guarda de la fase III. **Una linea de encargo no deroga doctrina del fundador** | **16457** |
+| **`D6`** | **ejecuto con las simulaciones selladas descuadradas** | **la regla 1 leida entera**: la simulacion sellada es una nota vieja, se cita como contraste, y la de HOY se corrio y se cotejo **con las tres diferencias medidas y explicadas**, y ninguna cambia superviviente ni reparto. **Re-sellar fichas no es del ejecutor** | **16464** |
+| **`D7`** | **sello una perdida que su ficha NIEGA** | el parentesis **no esta en ningun paso del superviviente de hoy**, medido sobre el json vivo, y la pasada de perdidas de la ficha es del **12 ago**, ANTERIOR al contrato `CAMPO PROPIO v1`. **La cifra de perdidas se mide contra el texto de hoy**; la afirmacion vieja se declara como contraste. **Eso no es re-abrir la ficha: es no copiarla** | **16471** |
+| **`D8`** | **marco `CUBIERTO` con perdida sellada por el calificativo ACCIONABLES** | `A FAVOR` **con el limite dicho**: la perdida SELLADA es la mitad auditable y esta; el atenuante de grafo (`metricas_accionables` es nodo previo del superviviente) **es contraste medido y NO descuenta el sello**. *Una perdida con atenuante declarado es mas auditable que un silencio, no menos* | **16477** |
+| **`D9`** | **cambio la vara del censo despues de ver su resultado** | `A FAVOR` **con la guarda cumplida**: la vara final es mas estrecha, **la lista `DEBIL` publica todo lo que la estrecha deja fuera**, el unico `TALLADO` de la vara nueva tambien estaba entre los once de la vieja, y **es medicion re-corrible, no doctrina**. *Lo que la salva es la publicacion de la lista `DEBIL`: sin ella seria fabricar la vara* | **16483** |
+
+### b) **LA REGLA DE LA FICHA ENVEJECIDA**, escrita entera porque manda sobre todas las mesas que quedan
+
+**No es doctrina nueva y el acta lo dice al adjudicarla** (linea **16504**): sale por extension
+citable de **la regla 1 de `EJECUTOR.md`** (*una nota vieja NUNCA es fuente: se cita como contraste y
+la discrepancia se declara*) y del **acta 53, pregunta 3** (*el `CHOCAN` lo decide la pieza
+declarada*). **Su letra, tal como la vuelta 64 la aplica:**
+
+> **Las mediciones selladas de una ficha se RE-CORREN el dia de la ejecucion.**
+>
+> - **Si TODAS las vias medidas hoy** (varas por forma, pieza declarada, correccion declarada si la
+>   hay) **convergen en el MISMO superviviente y el MISMO reparto: SE EJECUTA**, con la divergencia
+>   **declarada en el motivo** del plan.
+> - **Si CUALQUIER via cambia el superviviente**, o **la pieza declarada ya no existe medida hoy**, o
+>   **el objeto de la ficha ya fue consumado por otra operacion ejecutada y auditada: NO SE EJECUTA.**
+>   Se trae al auditor con la medicion.
+> - **Y si lo consumado es el caso, la ficha no se ejecuta ni se rehace: se declara CONSUMIDA por
+>   correccion declarada** citando el registro que la consumio (carril del banco `9.10`), **porque
+>   deshacer una fusion registrada y auditada seria decision de fundador.**
+
+**Vale para las fusiones de mesa restantes con fichas del 12 ago 2026**, que son todas las que
+quedan. **La vuelta 64 la aplica dos veces**: en las cinco consumidas del apartado **d)** y en
+`OP-M-03-II`, cuya ejecucion re-corrio sus mediciones antes de fundir.
+
+### c) **EL ORDEN DEL PUESTO 2 DE LA FASE 03, ADJUDICADO CON LA VARA DE LA VUELTA 47**
+
+**Le tocaba al auditor por la decision del fundador del 19 ago 2026** (linea **64** de este mismo
+documento) **y habia criterio citable**, asi que se adjudico en vez de subir a mesa. **La vara es la
+general de la vuelta 47: lo que cada operacion desbloquea, escrito en el `depende_de` de las demas.**
+`CONGELADOS LIBERADOS` literal **empata a las tres en cero** y por eso no separa.
+
+**LA TABLA NO ESTA TECLEADA: sale entera de `python scripts/loop/vuelta64_puesto2.py`**
+([`../loop/SALIDA_V64_PUESTO2.txt`](../loop/SALIDA_V64_PUESTO2.txt)), **que la mide de
+`OPERACIONES.jsonl` en esta vuelta y no la copia del acta**:
+
+| puesto | operacion | **desbloquea** | cuales, leidas de su `depende_de` | estado HOY |
+|---:|---|---:|---|---|
+| **1.a** | `OP-M-02-MEDIOS` | **5** | `OP-M-02-ASSESS`, `OP-M-02-ADMIT`, `OP-M-02-ACTIVATE`, `OP-M-02-ACCLIMATE`, `OP-M-02-ACCOMPLISH` | **CONSUMIDA**, su par ya resuelve a un solo vivo |
+| **2.a** | `OP-M-03-II` | **4** | `OP-M-03-ENLACES`, `OP-M-05-INDICE`, `OP-M-05-EDIFICIO`, `OP-M-05-APERTURA` | ejecutable, 2 miembros a 2 vivos |
+| **3.a** | `OP-U-02` | **1** | `OP-E-03` | ejecutable; **SIN nomina de nodos en su ficha**, su universo se abre aparte |
+
+**EL PUESTO 2 QUEDA: `OP-M-02-MEDIOS`, despues `OP-M-03-II`, despues `OP-U-02`.** Y como
+`OP-M-02-MEDIOS` **esta CONSUMIDA** (apartado **d**), **su resolucion es la correccion declarada y
+LA PRIMERA FUSION EJECUTABLE DEL PUESTO ES `OP-M-03-II`**, que es la que esta vuelta ejecuta.
+**Medido por el propio instrumento:** `OP-M-03-II`.
+
+### d) **EL HALLAZGO PROPIO DEL AUDITOR: CINCO FUSIONES DE MESA YA CONSUMIDAS POR LOS TRAMOS DE `OP-U-01`, DOS CON EL SUPERVIVIENTE OPUESTO**
+
+**El auditor lo midio con instrumento propio** (acta 63, seccion 6, linea **16547**) **y el ejecutor
+lo volvio a medir por camino propio antes de escribir una sola correccion**, que es lo que el
+protocolo de relectura conjunta pide. **LA TABLA SALE ENTERA de
+`python scripts/loop/vuelta64_consumidas.py`**
+([`../loop/SALIDA_V64_CONSUMIDAS.txt`](../loop/SALIDA_V64_CONSUMIDAS.txt)), **con los alias
+resueltos por `P.1` y con las celdas de `acto`, `lote`, `sobrevive` y `absorbe` leidas POR EL NOMBRE
+DE SU COLUMNA en la cabecera de cada tabla citada, nunca de la prosa de alrededor**:
+
+| ficha | superviviente de la **ficha** (12 ago) | el que quedo **VIVO** | coinciden | quien la consumio | linea |
+|---|---|---|:---:|---|---:|
+| `OP-M-02-MEDIOS` | `seis_medios_comunicacion_cliente` | `estrategia_multicanal_bienvenida` | **NO** | `OP-U-01`, TRAMO 3, vuelta 56, acto 32, lote B | **2091** |
+| `OP-M-02-ASSESS` | `fase_assess_ciclo_cliente` | `fase_assess_ciclo_cliente` | si | `OP-U-01`, TRAMO 2, vuelta 55, acto 30, lote A | **1832** |
+| `OP-M-02-ADMIT` | `fase_admit` | `fase_admit_celebracion` | **NO** | `OP-U-01`, TRAMO 2, vuelta 55, acto 38, lote B | **1840** |
+| `OP-M-02-ACTIVATE` | `fase_activate_primera_impresion` | `fase_activate_primera_impresion` | si | `OP-U-01`, TRAMO 1, vuelta 48, acto 44 | **417** |
+| `OP-M-02-ACCOMPLISH` | `fase_accomplish_experiencia_cliente` | `fase_accomplish_experiencia_cliente` | si | `OP-U-01`, TRAMO 3, vuelta 56, acto 9, lote A | **2069** |
+
+**LAS DOS MEDICIONES CALZAN.** La del auditor situa `OP-M-02-MEDIOS` en el tramo 3, vuelta 56, lote
+B, acto 32, linea **2091**, con su perdida sellada en la **2132**; **la corrida propia da lo mismo al
+digito**, y las otras cuatro quedan situadas por el mismo camino.
+
+**LA ADJUDICACION, con las reglas ya escritas y sin estrenar ninguna:** las fusiones de los tramos
+son **cosa juzgada** (planes sellados, verificadas por las actas 56 a 62); **deshacerlas seria
+decision de fundador y nadie la pide**. **Las cinco fichas NO SE EJECUTAN NI SE REHACEN: se declaran
+CONSUMIDAS por correccion declarada** (banco `9.10`) **en el campo `nota` de cada una**, citando el
+registro del tramo que la consumio. **Y la divergencia de superviviente de `MEDIOS` y `ADMIT` se
+DECLARA como contraste en vez de resolverse copiando** (regla 1): **la adjudicacion del 12 ago queda
+entera y sin tachar, y lo que se declara es que NO FUE LA QUE SE EJECUTO.** **NADA DEL GRAFO SE
+TOCA**: la correccion es de registro.
+
+> **POR QUE LA CORRECCION VA EN EL CAMPO `nota` Y NO EN UNA CLAVE NUEVA, dicho para que no parezca
+> descuido:** el esquema de `OPERACIONES.jsonl` es **un pendiente de doctrina heredado** (acta 55,
+> seccion 5, cierre) y **estrenar clave en 5 de las 71 fichas seria decidirlo de tapadillo**. El
+> campo `nota` es ademas el sitio que estas mismas fichas ya usan: `OP-F-01`, `OP-D-01`, `OP-D-03`,
+> `OP-D-04`, `OP-S-06`, `OP-S-07`, `OP-C-04` y `OP-U-01` traen ahi su correccion declarada.
+
+> **LA PREGUNTA QUE EL AUDITOR DEJO MEDIDA PERO NO CERRADA, y que se registra para que el cierre de
+> la fase 03 la tenga delante:** la nomina de la vuelta 48 incluyo **cinco pares con dueno de mesa**,
+> y **no hay regla escrita que mandara excluirlos de `OP-U-01`**. No es caida de nadie. Queda dicha.
+
+### e) **`D10`, LA RELECTURA CONJUNTA: SE SELLA**
+
+**El caso del auditor** (linea **16489**): la condicion 1 de `fases_de_retencion_de_clientes` quedo
+`CUBIERTO:1` **sin perdida sellada**, y **ese mismo dia `OP-M-03-I` sello DOS perdidas `DE
+CONDICIONES` por la misma especie**, el matiz del disparador que muere sin sello. **El auditor no
+adjudico: mando verificar contra el grafo y decidir con la vara** del acta 55, pregunta 5.
+
+**MEDIDO HOY sobre el json vivo** con `python scripts/loop/vuelta64_d10.py`
+([`../loop/SALIDA_V64_D10.txt`](../loop/SALIDA_V64_D10.txt)):
+
+| | el texto de HOY |
+|---|---|
+| **muere** (condicion 1 de `fases_de_retencion_de_clientes`) | *Cuando la empresa solo tiene procesos disenados para atraer y cerrar ventas, pero no para despues de la compra* |
+| **sobrevive** (condicion 1 de `ocho_fases_experiencia_cliente`) | *Cuando el usuario necesita una estructura sistematica para gestionar la experiencia del cliente despues de la venta* |
+
+**LA BUSQUEDA NEGATIVA SE CORRIO EN VEZ DE CITARSE** (regla 9): las **cinco** agujas del encuadre del
+sintoma (*atraer*, *cerrar venta*, *cerrar la venta*, *solo tiene proceso*, *procesos dise*) salen
+**AUSENTES sobre el json ENTERO del superviviente**, no solo sobre sus condiciones.
+
+**LA DECISION: SE SELLA.** **Y el `CUBIERTO` se sostiene y no se remarca**, que es la mitad que el
+auditor ya daba por buena: el disparador operativo, **el DESPUES DE LA VENTA**, esta en la condicion
+1 del superviviente con todas sus letras. **Lo que se anade es el sello de la mitad que muere**, el
+**encuadre del sintoma**, que es el diagnostico por el que un lector se reconoce a si mismo.
+
+**LA VARA, leida entera** (acta 55, pregunta 5): *las perdidas de condiciones no van de `APPEND` por
+defecto, y la perdida NOMBRADA es el carril mientras el pendiente del `INCISO` de condiciones siga
+abierto*. **Esa vara reparte DOS marcas y no una**: `APPEND` cuando el disparador es **distinto**, y
+`CUBIERTO` **con la perdida nombrada** cuando es el **mismo** disparador con un matiz que muere.
+**Lo que la vara no contempla en ninguna de sus dos ramas es el `CUBIERTO` CON SILENCIO.** Y es **la
+misma especie** que las dos hermanas que `OP-M-03-I` sello el mismo dia (*el mismo fenomeno sin la
+pendiente*, *el mismo callejon sin la imagen*): **tratar igual lo medido igual dentro de la misma
+vuelta** es la regla de trabajo **declarada y uniforme** del acta 55, pregunta 4.
+
+> **CORRECCION DECLARADA (2026-08-20, vuelta 64, TAREA 1.b del encargo, por el carril del banco
+> `9.10`; el texto viejo se queda entero y no se tacha).** **La seccion `LAS PERDIDAS, SELLADAS EN
+> CAMPO PROPIO` del registro de `OP-M-02-PROG` (linea 3189) publica UNA sola fila, la `DE PARAMETRO
+> DE PASO` de la linea 3193. HOY SON DOS.** La segunda es **`DE CONDICIONES`**, vive en la
+> **condicion 1 de `fases_de_retencion_de_clientes`** y va **enrutada a la fase 04, mientras el
+> `INCISO` de condiciones no exista**. **La fila vieja no se toca y la tabla de arriba no se
+> reescribe: esta nota la corrige.** El sello esta ademas en el campo `perdidas` del plan
+> ([`../loop/PLAN_V63_OPM02PROG.json`](../loop/PLAN_V63_OPM02PROG.json)), con su correccion declarada
+> adosada a `nota_del_reparto` **citando verbatim la frase que decia lo contrario**, y el tallador lo
+> confirma por maquina: `python scripts/loop/tallar_perdidas_del_plan.py --plan ...` da **5 perdidas
+> nombradas en los dos planes de la vuelta 63** (**3 `DE CONDICIONES`, 2 `DE PARAMETRO DE PASO`**),
+> donde antes daba 4 ([`../loop/SALIDA_V64_TALLAR_PERDIDAS_V63.txt`](../loop/SALIDA_V64_TALLAR_PERDIDAS_V63.txt)).
+
+### f) **LA CAIDA DE ACTA DEL AUDITOR, REGISTRADA CON SU NOMBRE**
+
+**No se registra solo lo del ejecutor, y por eso esta aqui** (acta 63, seccion 3, linea **16416**).
+**El encargo que el acta 62 dejo escrito decia con todas sus letras que en `OP-M-02-PROG` la
+duplicada que la fusion fabrica quedaba para `OP-S-12`**, repitiendo la letra de una ficha del 12 ago
+que **`P.16` (decision del fundador, 14 ago) contradice**; y **el MISMO encargo pedia en otra linea
+el diff de duplicadas con CERO fabricadas**. **El ejecutor resolvio bien** (es el `D5` del apartado
+**a**) **y ningun dato se movio**, pero **la linea era un error del encargo**. **Las caidas de acta
+del auditor pasan de 5 a 6.**
+
+**LO QUE ESTA SECCION NO HACE, dicho para que nadie se lo atribuya: NO toca ni una cifra publicada
+arriba, NO elige ningun superviviente, NO funde nada y NO deshace ninguna fusion.** Registra
+adjudicaciones y corrige por declaracion.
